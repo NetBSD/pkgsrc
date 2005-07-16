@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2005/05/22 20:07:47 jlam Exp $
+# $NetBSD: Makefile.common,v 1.29 2005/07/16 01:19:08 jlam Exp $
 #
 
 DISTNAME=		GConf-2.10.0
@@ -22,8 +22,7 @@ PATCHDIR=		${.CURDIR}/../GConf2/patches
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-USE_PERL5=		build
+USE_TOOLS+=		gmake perl
 
 PKGCONFIG_OVERRIDE=	gconf-2.0.pc.in
 

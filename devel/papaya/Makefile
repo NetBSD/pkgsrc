@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/10 10:32:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:09 jlam Exp $
 #
 
 DISTNAME=	papaya-0.1.7
@@ -15,12 +15,11 @@ BUILD_DEPENDS+=	texi2html>=1.76:../../textproc/texi2html
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PERL5=	run
 USE_LANGUAGES=	# empty
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	sh_command=${TOOLS_SH}
 CONFIGURE_ENV+=	tar_command=${TOOLS_TAR}
-USE_TOOLS+=	sh tar
+USE_TOOLS+=	sh perl:run tar
 INFO_FILES=	papaya.info
 
 CONFIGURE_ENV+=	perl_command=${PERL5:Q}

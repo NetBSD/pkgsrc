@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/02 12:12:33 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/16 01:19:19 jlam Exp $
 #
 
 DISTNAME=	framework-2.4
@@ -22,7 +22,7 @@ MSFDOC?=	${PREFIX}/share/doc/msf
 MESSAGE_SUBST+= MSFDIR=${MSFDIR}
 
 PERL5_REQD=	5.6.0
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 PERL_FILES=	msfcli msfconsole msfencode msflogdump msfpayload \
 		msfpescan msfweb msfupdate msfelfscan
 REPLACE_PERL+=	${PERL_FILES} tools/socketNinja.pl sdk/formatGen.pl \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/16 01:19:18 jlam Exp $
 #
 
 DISTNAME=	gpg2dot-1.4
@@ -11,7 +11,7 @@ HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Converts your GnuPG keyring to a graph of associations
 
 USE_LANGUAGES=	# empty
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes

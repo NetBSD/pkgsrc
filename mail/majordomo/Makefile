@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/03 15:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/16 01:19:13 jlam Exp $
 
 DISTNAME=		majordomo-1.94.5
 CATEGORIES=		mail
@@ -21,7 +21,7 @@ ADDUSER=		${LOCALBASE}/sbin/useradd
 ADDGROUP=		${LOCALBASE}/sbin/groupadd
 .endif
 
-USE_PERL5=		yes
+USE_TOOLS+=		perl:run
 
 NO_BIN_ON_FTP=		requires compiled-in hardcoded uid/gid
 NO_BIN_ON_CDROM=	${NO_BIN_ON_FTP}

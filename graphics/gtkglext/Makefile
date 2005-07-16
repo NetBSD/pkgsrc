@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/01 18:02:56 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/07/16 01:19:11 jlam Exp $
 
 DISTNAME=	gtkglext-1.0.6
 CATEGORIES=	graphics
@@ -10,9 +10,8 @@ HOMEPAGE=	http://gtkglext.sourceforge.net/
 COMMENT=	OpenGL extension to GTK
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		yes
-USE_PERL5=		build
 
 PKGCONFIG_OVERRIDE=	gdkglext.pc.in
 PKGCONFIG_OVERRIDE+=	gtkglext.pc.in

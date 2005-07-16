@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:06 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/16 01:19:18 jlam Exp $
 #
 
 DISTNAME=		revbump-1.0
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
-USE_PERL5=	run
+USE_TOOLS+=	perl:run
 USE_LANGUAGES=	# empty
 
 INSTALLATION_DIRS=	bin man/man8
