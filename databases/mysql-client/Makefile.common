@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2005/05/22 20:07:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.43.2.1 2005/07/16 04:34:33 snj Exp $
 
 DISTNAME=		mysql-4.0.24
 CATEGORIES=		databases
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
-CONFIGURE_ARGS+=        --with-openssl
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-vio
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
@@ -66,10 +66,8 @@ CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
 
 # force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.
-.if ${OPSYS} == "SunOS"
-CFLAGS+=		-DHAVE_CURSES_H
-CXXFLAGS+=		-DHAVE_CURSES_H
-.endif
+CFLAGS.SunOS+=		-DHAVE_CURSES_H
+CXXFLAGS.SunOS+=	-DHAVE_CURSES_H
 
 .include "../../mk/pthread.buildlink3.mk"
 
