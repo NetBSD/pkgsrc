@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/16 19:10:40 jlam Exp $
 #
 
 DISTNAME=	mudsh
@@ -13,6 +13,7 @@ COMMENT=	M.U.D. game-like shell
 
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
+USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS=	bin
 
@@ -24,5 +25,4 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mudsh ${PREFIX}/bin
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

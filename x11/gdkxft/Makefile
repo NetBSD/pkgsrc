@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/31 22:12:18 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2005/07/16 19:10:41 jlam Exp $
 #
 
 DISTNAME=		gdkxft-1.5
@@ -19,6 +19,7 @@ PKG_FAIL_REASON=	"${PKGNAME} requires XFree86-4.0 or higher"
 USE_DIRS+=		xdg-1.1
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		perl:run
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-static
@@ -35,7 +36,6 @@ post-install:
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../x11/control-center/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 

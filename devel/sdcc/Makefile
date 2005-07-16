@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/22 20:28:47 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/07/16 19:10:38 jlam Exp $
 
 DISTNAME=	sdcc-2.4.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -14,6 +14,8 @@ COMMENT=	Cross compile 8051 code
 # XXX - building process of sdcc.  Use of bison fixes this problem for now.
 #
 USE_TOOLS+=	bison
+
+USE_TOOLS+=	perl:run
 
 BUILD_TARGET=	dep all
 
@@ -54,5 +56,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/z80/README ${PREFIX}/share/doc/sdcc/z80
 
 .include "../../devel/boehm-gc/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

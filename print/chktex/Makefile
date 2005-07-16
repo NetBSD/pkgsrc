@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/24 22:23:05 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/16 19:10:40 jlam Exp $
 #
 
 DISTNAME=	chktex-1.6.1
@@ -12,12 +12,11 @@ COMMENT=	LaTeX semantic checker
 
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl:run
 GNU_CONFIGURE=	YES
 CFLAGS+=	-D__unix__
 CONFIGURE_ENV+=	PERL5="${PERL5}"
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

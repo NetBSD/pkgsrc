@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 05:35:32 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/16 19:10:38 jlam Exp $
 #
 
 DISTNAME=	automake-1.4-p6
@@ -19,10 +19,10 @@ CONFLICTS=	automake<1.6
 GNU_CONFIGURE=		YES
 _STRIPFLAG_INSTALL=	# none
 
+USE_TOOLS+=		perl:run
 USE_MAKEINFO=		YES
 INFO_FILES=		automake14.info
 
 TEST_TARGET=		check
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

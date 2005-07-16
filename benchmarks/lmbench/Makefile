@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/16 19:10:38 jlam Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -12,7 +12,7 @@ COMMENT=		Complete benchmark that gives a large amount of information
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 BUILD_TARGET=		build
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
@@ -60,5 +60,4 @@ results:
 	-@cd ${PREFIX}/share/lmbench ; \
 	tar -cf /tmp/benches/`domainname`/lmbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

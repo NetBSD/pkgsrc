@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/16 19:10:38 jlam Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	1
@@ -20,6 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 BUILD_DEFS+=	USE_INET6
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+USE_TOOLS+=	perl:run
 SIRC_SCRIPTS= \
 		adcc.pl				\
 		akickban.pl			\
@@ -78,5 +79,4 @@ do-install:
 		${ECHO} installing $$i ; \
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${PREFIX}/lib/sirc/scripts/$$i ; done
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

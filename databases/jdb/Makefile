@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:11 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/16 19:10:38 jlam Exp $
 
 DISTNAME=	jdb-1.13
 CATEGORIES=	databases
@@ -9,9 +9,9 @@ HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/JDB/index.html
 COMMENT=	Commands for manipulating flat-ASCII databases
 
 GNU_CONFIGURE=		# defined
+USE_TOOLS+=		perl:run
 
 CONFIGURE_ARGS+=	--with-perl=${LOCALBASE}/bin
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/jdb
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

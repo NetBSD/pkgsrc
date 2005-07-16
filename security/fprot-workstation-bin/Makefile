@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/16 19:10:40 jlam Exp $
 #
 
 DISTNAME=		#defined
@@ -25,6 +25,7 @@ LICENSE=		fprot-workstation-license
 WRKSRC=			${WRKDIR}/f-prot
 NO_BUILD=		yes
 USE_PKGINSTALL=		yes
+USE_TOOLS+=		perl:run
 
 DATDIR=			${PREFIX}/share/fprot-workstation-bin
 DOCDIR=			${PREFIX}/share/doc/fprot-workstation-bin
@@ -85,5 +86,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ENGLISH.TX0 ${FPDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/f-prot ${FPDIR}
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

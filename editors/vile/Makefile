@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/04/11 21:45:42 tv Exp $
+# $NetBSD: Makefile,v 1.40 2005/07/16 19:10:38 jlam Exp $
 
 DISTNAME=		vile-9.4
 PKGREVISION=	1
@@ -15,6 +15,7 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR}
+USE_TOOLS+=		perl:run
 
 # Until the source catches up to the current Perl API, we need PERL_POLLUTE
 # to look like an older perl.
@@ -37,5 +38,4 @@ post-install:
 	done
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

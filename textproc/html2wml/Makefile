@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/16 19:10:40 jlam Exp $
 
 DISTNAME=	html2wml-0.4.8r2
 PKGNAME=	html2wml-0.4.8.2
@@ -17,6 +17,7 @@ DEPENDS+=	p5-XML-LibXML>=1.31:../../textproc/p5-XML-LibXML
 
 NO_BUILD=	# defined
 
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	${WRKSRC}/html2wml.cgi
 
 INSTALLATION_DIRS=	bin man/man1
@@ -25,5 +26,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/html2wml.cgi ${PREFIX}/bin/html2wml
 	${INSTALL_MAN} ${WRKSRC}/doc/html2wml.man ${PREFIX}/man/man1/html2wml.1
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

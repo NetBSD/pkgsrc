@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2005/07/16 01:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2005/07/16 19:10:39 jlam Exp $
 
 DISTNAME=		openoffice-1.1.4
 PKGREVISION=		2
@@ -114,7 +114,6 @@ PLIST_SRC+=		PLIST.common_end
 
 .include "../../mk/compiler.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

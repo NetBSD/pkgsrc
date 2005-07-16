@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/07/13 18:01:34 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/07/16 19:10:40 jlam Exp $
 
 DISTNAME=	net-snmp-5.2.1.2
 CATEGORIES=	net
@@ -107,7 +107,6 @@ OWN_DIRS=	${PREFIX}/share/snmp
 RCD_SCRIPTS=	snmpd snmptrapd
 
 .include "../../lang/perl5/module.mk"
-.include "../../lang/perl5/buildlink3.mk"
 
 post-wrapper:
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.5.[123]*-i386)

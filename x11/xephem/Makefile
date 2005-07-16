@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/20 13:17:11 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2005/07/16 19:10:41 jlam Exp $
 
 DISTNAME=	xephem-3.6.4
 CATEGORIES=	x11
@@ -13,6 +13,7 @@ LICENSE=	no-commercial-use
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 USE_IMAKE=	yes
+USE_TOOLS+=	perl:run
 
 LIBSRC1=	${WRKDIR}/${DISTNAME}/libastro
 LIBSRC2=	${WRKDIR}/${DISTNAME}/libip
@@ -34,6 +35,5 @@ post-install:
 		${PREFIX}/share/xephem
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

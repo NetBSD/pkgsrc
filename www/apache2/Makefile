@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2005/05/21 04:10:18 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2005/07/16 19:10:40 jlam Exp $
 
 .include "Makefile.common"
 
@@ -13,6 +13,7 @@ CONFLICTS=	apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 
 BUILD_DEFS+=	USE_INET6
 
+USE_TOOLS+=		perl:run
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
@@ -29,7 +30,6 @@ CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/apr/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 
