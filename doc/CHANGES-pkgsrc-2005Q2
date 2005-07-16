@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.28 2005/07/16 04:27:58 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.29 2005/07/16 04:34:44 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -61,3 +61,5 @@ Pullup ticket 604 - requested by Adrian Portelli
 security update for net-snmp
 Pullup ticket 609 - requested by Thomas Klausner
 security update for postgresql74
+Pullup ticket 586 - requested by grant beattie
+portability fix for mysql-client
