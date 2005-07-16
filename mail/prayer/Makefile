@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/22 20:08:12 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/16 01:19:13 jlam Exp $
 #
 
 DISTNAME=	prayer-1.0.12
@@ -10,8 +10,7 @@ HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
 
 USE_PKGINSTALL=	yes
-USE_TOOLS+=	gmake
-USE_PERL5=	build
+USE_TOOLS+=	gmake perl
 PRAYER_USER=	prayer
 PRAYER_GROUP=	prayer
 PKG_GROUPS=	${PRAYER_GROUP}
@@ -47,7 +46,6 @@ post-patch:
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mail/imap-uw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 

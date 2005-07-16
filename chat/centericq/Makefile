@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/05/22 20:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2005/07/16 01:19:07 jlam Exp $
 #
 
 DISTNAME=	centericq-4.20.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://konst.org.ua/eng/software/centericq/info.html
 COMMENT=	Instant Messenger interface supporting many protocols
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
@@ -20,7 +20,6 @@ CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=      	--with-gpgme=${BUILDLINK_PREFIX.gpgme}/bin/gpgme-config
 LIBS=			${LDFLAGS}
 
-USE_PERL5=		run
 REPLACE_PERL=		misc/cicqconv
 
 INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
@@ -45,7 +44,6 @@ GCC_REQD+=    3.0			# see PR 29185
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

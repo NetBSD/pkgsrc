@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/16 01:19:24 jlam Exp $
 #
 
 DISTNAME=	pekwm-0.1.3
@@ -12,8 +12,7 @@ HOMEPAGE=	http://pekwm.org/
 COMMENT=	Window manager based on aewm++
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-USE_PERL5=	run
+USE_TOOLS+=	gmake perl:run
 USE_PKGINSTALL=	YES
 USE_LANGUAGES+=	c++
 
@@ -38,6 +37,5 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .undef f
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/16 01:19:12 jlam Exp $
 #
 
 DISTNAME=	fromto-1.5
@@ -12,7 +12,7 @@ COMMENT=	Sendmail logfile viewer
 RESTRICTED=	"Redistribution allowed for non-commercial purposes only"
 
 WRKSRC=		${WRKDIR}
-USE_PERL5=	yes
+USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:26 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:16 jlam Exp $
 
 DISTNAME=	oinkmaster-1.2
 PKGREVISION=	1
@@ -13,16 +13,16 @@ DEPENDS+=	wget>=1.00:../../net/wget
 DEPENDS+=	snort{,-mysql,-pgsql}-[0-9]*:../../net/snort
 
 USE_PKGINSTALL=	yes
-USE_PERL5=	yes
 NO_BUILD=	yes
 
 CONF_FILES=	${PREFIX}/share/examples/oinkmaster/oinkmaster.conf \
 		${PKG_SYSCONFDIR}/oinkmaster.conf
-PERL5_REQD+=	5.6.1
 EGDIR=		${PREFIX}/share/examples/oinkmaster
 DOCDIR=		${PREFIX}/share/doc/oinkmaster
 DOCS=		INSTALL LICENSE README README.templates UPGRADING FAQ
 
+USE_TOOLS+=	perl:run
+PERL5_REQD+=	5.6.1
 REPLACE_PERL+=	${WRKSRC}/oinkmaster.pl
 
 PKG_SYSCONFSUBDIR=	snort

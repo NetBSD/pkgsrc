@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/29 16:35:15 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:18 jlam Exp $
 #
 
 DISTNAME=		yup-r1-rel
@@ -12,7 +12,7 @@ COMMENT=		Print multiple PostScript/ASCII pages per sheet
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PERL5=		# defined
+USE_TOOLS+=		perl:run
 
 WRKSRC=			${WRKDIR}/yup-r1
 NO_CONFIGURE=		# defined

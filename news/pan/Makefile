@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/05/09 05:27:58 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2005/07/16 01:19:17 jlam Exp $
 #
 
 DISTNAME=		pan-0.14.2
@@ -13,7 +13,7 @@ COMMENT=		Newsreader for GTK2
 
 BUILD_USES_MSGFMT=	YES
 
-USE_PERL5=		build
+USE_TOOLS+=		perl
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2005/06/03 19:22:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.39 2005/07/16 01:19:26 jlam Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake	# Needed for some combinations of options...
 W3M_VERS=	0.5.1
 
 # For w3mman, xface2xpm, cgi scripts.
-USE_PERL5=	run
+USE_TOOLS+=	perl:run
 
 DOCDIR=		share/doc/w3m
 
