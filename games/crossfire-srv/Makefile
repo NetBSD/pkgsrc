@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/07/15 18:27:50 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/16 01:19:10 jlam Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -17,9 +17,8 @@ EXTRACT_ONLY=	${CF_SRC}
 CF_SRC=		crossfire-1.0.0.tar.bz2
 CF_MAPS=	crossfire-1.0.0-maps.tar.bz2
 
-USE_TOOLS+=	gmake gtar
+USE_TOOLS+=	gmake gtar perl:run
 GNU_CONFIGURE=	yes
-USE_PERL5=	yes
 CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include
 
 MAKE_ENV+=	EXTRA_INCLUDES=-I${LOCALBASE}/include

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/17 03:50:37 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:24 jlam Exp $
 #
 
 DISTNAME=	rfc-3.2
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	#
 
 NO_BUILD=	YES
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	rfc
 
 INSTALLATION_DIRS=	bin

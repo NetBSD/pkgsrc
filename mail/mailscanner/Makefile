@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/16 01:19:12 jlam Exp $
 #
 
 DISTNAME=		MailScanner-4.30.3-2
@@ -23,7 +23,7 @@ DEPENDS+=		p5-MIME-tools>=0:../../mail/p5-MIME-tools
 DEPENDS+=		tnef>=1.0:../../mail/tnef
 
 NO_BUILD=		YES
-USE_PERL5=		YES
+USE_TOOLS=		perl:run
 REPLACE_PERL=		bin/MailScanner
 
 DOCSDIR=		${LOCALBASE}/share/doc/MailScanner

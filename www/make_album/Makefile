@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:41 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:25 jlam Exp $
 #
 
 DISTNAME=	make_album_1_6
@@ -15,7 +15,7 @@ DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 MY_SCRIPTS=	index_albums ingest make_album newimagedir populate_master
 
-USE_PERL5=	# defined
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	${MY_SCRIPTS}
 
 NO_CONFIGURE=	# defined

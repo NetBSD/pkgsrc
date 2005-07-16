@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:58:00 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:11 jlam Exp $
 #
 
 DISTNAME=       parrot-0.0.1
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.python.org/parrot.html
 COMMENT=	Bytecode language possibly to be used by Perl/Python
 
-USE_PERL5=	# defined
+USE_TOOLS+=	perl:run
 
 BUILD_TARGET=	test_prog
 

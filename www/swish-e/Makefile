@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:48:02 tv Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/16 01:19:26 jlam Exp $
 
 DISTNAME=	swish-e-2.4.1
 PKGREVISION=	4
@@ -11,13 +11,13 @@ COMMENT= 	Simple web indexing for humans - enhanced
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_PERL5=	yes
 
 CONFIGURE_ARGS+=	--with-libxml2=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
-REPLACE_PERL=		prog-bin/*.pl conf/*.pl filter-bin/*.pl html/*.pl
+USE_TOOLS+=	perl:run
+REPLACE_PERL=	prog-bin/*.pl conf/*.pl filter-bin/*.pl html/*.pl
 
 .include "../../mk/bsd.prefs.mk"
 

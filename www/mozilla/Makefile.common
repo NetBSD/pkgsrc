@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2005/06/03 14:41:19 wiz Exp $
+# $NetBSD: Makefile.common,v 1.59 2005/07/16 01:19:25 jlam Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -15,8 +15,7 @@ BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 
 WRKSRC=		${WRKDIR}/mozilla
 USE_LANGUAGES=	c c++
-USE_PERL5=	build
-USE_TOOLS+=	autoconf213 gmake
+USE_TOOLS+=	autoconf213 gmake perl
 GNU_CONFIGURE=	yes
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess

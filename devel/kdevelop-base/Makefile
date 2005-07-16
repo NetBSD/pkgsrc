@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/05/31 15:14:04 markd Exp $
+# $NetBSD: Makefile,v 1.43 2005/07/16 01:19:09 jlam Exp $
 
 DISTNAME=	kdevelop-3.2.1
 PKGNAME=	kdevelop-base-3.2.1
@@ -22,7 +22,7 @@ DEPENDS+=		qt3-tools>=3.1.1:../../x11/qt3-tools
 
 CONFLICTS+=	kdevelop<=1.3
 
-USE_PERL5=	run
+USE_TOOLS+=	perl:run
 
 REPLACE_PERL= \
 	kdevprj2kdevelop \

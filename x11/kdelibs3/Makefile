@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2005/06/26 23:46:11 markd Exp $
+# $NetBSD: Makefile,v 1.89 2005/07/16 01:19:27 jlam Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	1
@@ -10,7 +10,7 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 CONFLICTS+=	koffice3<=1.1.1
 
 USE_DIRS+=		xdg-1.2
-USE_PERL5=		run
+USE_TOOLS+=		perl:run
 USE_PKGINSTALL=		YES
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/menus

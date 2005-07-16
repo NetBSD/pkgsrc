@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:17 jlam Exp $
 
 DISTNAME=	wol-0.7.1
 CATEGORIES=	net
@@ -9,10 +9,9 @@ HOMEPAGE=	http://ahh.sourceforge.net/wol/
 COMMENT=	Small Wake On Lan client
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_PKGLOCALEDIR=	yes
 INFO_FILES=		wol.info
-USE_PERL5=		build
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

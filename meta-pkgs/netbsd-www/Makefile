@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/03/02 18:00:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/16 01:19:14 jlam Exp $
 #
 
 DISTNAME=	netbsd-www-1.3
@@ -20,7 +20,7 @@ DEPENDS+=	xearth>=1.1:../../x11/xearth
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
 DEPENDS+=	w3m>=0.4:../../www/w3m
 
-USE_PERL5=	run
+USE_TOOLS+=	perl:run
 EXTRACT_ONLY=	# defined
 NO_CHECKSUM=	# defined
 NO_CONFIGURE=	# defined

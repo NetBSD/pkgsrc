@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 23:02:08 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:20 jlam Exp $
 
 DISTNAME=		cdbkup-1.0
 PKGREVISION=		3
@@ -16,8 +16,7 @@ COMMENT=		CD-R(W) backup/restore system
 DEPENDS+=		cdrecord>=1.10:../../sysutils/cdrecord
 
 GNU_CONFIGURE=		YES
-USE_PERL5=		YES
-USE_TOOLS+=		cat date gtar
+USE_TOOLS+=		cat date gtar perl:run
 CONFIGURE_ENV+=		CAT="${TOOLS_CAT}"
 CONFIGURE_ENV+=		DATE="${TOOLS_DATE}"
 CONFIGURE_ENV+=		GNUTAR="${TOOLS_TAR}"
