@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/26 16:45:57 rxg Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/16 19:10:39 jlam Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -15,6 +15,7 @@ WRKSRC=			${WRKDIR}/xcin
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		perl:run
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db3}/lib
@@ -31,7 +32,6 @@ post-install:
 .include "../../databases/db3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../inputmethod/libtabe/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 

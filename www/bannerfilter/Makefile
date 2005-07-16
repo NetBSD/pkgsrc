@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:40 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/16 19:10:41 jlam Exp $
 #
 
 DISTNAME=	bannerfilter-1.31
@@ -11,6 +11,7 @@ COMMENT=	Blocks advertising banners as squid redirector script
 
 USE_PKGINSTALL=	YES
 NO_BUILD=	YES
+USE_TOOLS+=	perl:run
 
 SHAREDIR=	${PREFIX}/share/bannerfilter
 CONF_FILES=	${SHAREDIR}/bannerfilter.conf ${PKG_SYSCONFDIR}/bannerfilter.conf
@@ -32,5 +33,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/bannerfilter.conf ${SHAREDIR}/
 	${INSTALL_SCRIPT} ${WRKSRC}/redirector.pl ${PREFIX}/bin/bannerfilter-redirector.pl
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

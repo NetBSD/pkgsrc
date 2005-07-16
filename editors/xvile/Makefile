@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/06/01 18:02:46 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2005/07/16 19:10:38 jlam Exp $
 
 DISTNAME=		vile-9.4
 PKGNAME=		xvile-9.4
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR}
+USE_TOOLS+=		perl:run
 
 MAKEFILE=		makefile
 INSTALL_TARGET=		install install-perl
@@ -46,7 +47,6 @@ post-install:
 	done
 
 .include "../../graphics/xpm/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
