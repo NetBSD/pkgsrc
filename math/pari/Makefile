@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/07/08 22:10:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/16 19:10:39 jlam Exp $
 
 DISTNAME=		pari-2.1.5
 PKGREVISION=		5
@@ -14,6 +14,7 @@ BUILD_DEPENDS+= 	teTeX-[0-9]*:../../print/teTeX
 
 USE_LIBTOOL=		yes
 USE_GNU_READLINE=	# rl_save_prompt
+USE_TOOLS+=		perl:run
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
@@ -27,6 +28,5 @@ TEST_TARGET=		test-compat bench
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
