@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:18 jlam Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -37,7 +37,7 @@ CONFLICTS+=	amavis-perl-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_PERL5=		yes
+USE_TOOLS+=		perl:run
 PERL5_REQD=		5.8.2
 REPLACE_PERL+=		amavisd amavisd-nanny
 

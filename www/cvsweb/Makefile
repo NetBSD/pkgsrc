@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.25 2005/04/11 21:47:52 tv Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/16 01:19:25 jlam Exp $
 #
 
 DISTNAME=		cvsweb-3.0.5
@@ -20,7 +20,7 @@ DEPENDS+=		rcs-[0-9]*:../../devel/rcs
 .endif
 
 NO_BUILD=		YES
-USE_PERL5=		# defined
+USE_TOOLS+=		perl:run
 USE_PKGINSTALL=		YES
 
 PERL5_REQD+=		5.6

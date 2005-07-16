@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/16 01:19:16 jlam Exp $
 
 DISTNAME=	smokeping-1.37
 CATEGORIES=	net
@@ -13,7 +13,7 @@ DEPENDS+=	fping>=2.4b2:../../net/fping
 DEPENDS+=	p5-Digest-MD5>=2.20:../../security/p5-Digest-MD5
 DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 PERL5_REQD+=	5.6.0
 USE_PKGINSTALL=	YES
 NO_BUILD=	YES

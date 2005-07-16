@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2005/07/05 08:49:44 grant Exp $
+# $NetBSD: Makefile.common,v 1.46 2005/07/16 01:19:08 jlam Exp $
 
 DISTNAME=		mysql-4.0.24
 CATEGORIES=		databases
@@ -79,8 +79,7 @@ CONFIGURE_ENV+=	ac_cv_func_pthread_attr_setschedparam=no
 .endif
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
-USE_PERL5=		yes
+USE_TOOLS+=		gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 SUBST_CLASSES+=		mk scripts

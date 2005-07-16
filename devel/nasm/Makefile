@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/05/22 20:07:53 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/16 01:19:09 jlam Exp $
 
 DISTNAME=	nasm-0.98.39
 PKGREVISION=	1
@@ -12,10 +12,9 @@ COMMENT=	General-purpose x86 assembler
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 GCC_REQD+=		3.0
 USE_MAKEINFO=		yes
-USE_PERL5=		build
 GNU_CONFIGURE=		yes
 
 INFO_FILES=		nasm.info

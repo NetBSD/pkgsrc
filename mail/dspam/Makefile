@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/06/15 16:26:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.35 2005/07/16 01:19:12 jlam Exp $
 
 DISTNAME=	dspam-3.4.8
 CATEGORIES=	mail
@@ -11,7 +11,7 @@ COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-USE_PERL5=		yes
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		tools/dspam_genaliases.in			\
 			tools/dspam_corpus.in				\
 			cgi/*.cgi cgi/configure.pl.in

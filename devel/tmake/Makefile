@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:09 jlam Exp $
 #
 
 DISTNAME=	tmake-1.11
@@ -13,7 +13,7 @@ RESTRICTED=		No paid redistribution
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
-USE_PERL5=		YES
+USE_TOOLS+=	perl:run
 
 TMAKEPATH=	${PREFIX}/lib/tmake/netbsd-g++
 GLBASE=		${X11BASE}

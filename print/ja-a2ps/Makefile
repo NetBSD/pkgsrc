@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:18 jlam Exp $
 
 DISTNAME=	a2ps.pl-1.45
 PKGNAME=	ja-a2ps-1.45
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Text file to postscript converter (with Japanese support)
 
 WRKSRC=		${WRKDIR}
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} .
 NO_BUILD=	yes

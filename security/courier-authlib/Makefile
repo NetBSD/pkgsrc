@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/24 17:31:28 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/16 01:19:19 jlam Exp $
 
 .include "Makefile.common"
 
@@ -17,11 +17,10 @@ CONFLICTS+=	courier-authldap-[0-9]*
 CONFLICTS+=	courier-authmysql-[0-9]*
 CONFLICTS+=	courier-authpgsql-[0-9]*
 
-USE_TOOLS+=		cat gmake
+USE_TOOLS+=		cat gmake perl:run
 USE_LIBTOOL=		yes
 PKG_SYSCONFSUBDIR=	authlib
 
-USE_PERL5=		run
 REPLACE_PERL=		sysconftool
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}

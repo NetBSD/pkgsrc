@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:18 jlam Exp $
 #
 
 DISTNAME=		antonym-1.9
@@ -13,9 +13,9 @@ DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		pgp-2.*:../../security/pgp2
 
 WRKSRC=			${WRKDIR}/antonym
-USE_PERL5=		yes
-
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		antonym
+
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 INSTALLATION_DIRS=	bin
 

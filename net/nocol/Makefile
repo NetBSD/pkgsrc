@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/07/10 20:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/16 01:19:16 jlam Exp $
 #
 
 DISTNAME=		nocol-4.3.1
@@ -14,7 +14,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	< ${WRKSRC}/answers
 
-USE_PERL5=		yes
+USE_TOOLS+=		perl:run
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/cmu-snmp/snmp/libtool \
 			${WRKSRC}/cmu-snmp/snmpapps/libtool

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/16 01:19:24 jlam Exp $
 #
 
 DISTNAME=	waimea-0.4.0
@@ -11,8 +11,7 @@ HOMEPAGE=	http://www.waimea.org/
 COMMENT=	Fast and highly customizable virtual window manager
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-USE_PERL5=	run
+USE_TOOLS+=	gmake perl:run
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,5 +38,4 @@ REPLACE_PERL = \
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

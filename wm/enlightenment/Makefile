@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/06/01 18:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/16 01:19:24 jlam Exp $
 
 DISTNAME=	enlightenment-0.16.7.2
 CATEGORIES=	x11 gnome wm
@@ -8,8 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Highly themeable and configurable window manager
 
-USE_TOOLS+=		bison
-USE_PERL5=		YES
+USE_TOOLS+=		bison perl:run
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-fsstd

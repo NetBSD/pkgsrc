@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:47 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/16 01:19:09 jlam Exp $
 
 DISTNAME=	fuse-0.7.0
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fuse-emulator.sourceforge.net/
 COMMENT=	ZX Spectrum Emulator
 
-USE_PERL5=		build
+USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gtk2
 LIBS+=	${LIBOSSAUDIO}

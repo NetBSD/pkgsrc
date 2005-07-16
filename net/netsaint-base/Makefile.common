@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/07/16 01:19:16 jlam Exp $
 #
 
 CATEGORIES=		net sysutils
@@ -16,9 +16,7 @@ PKG_USERS+=	${NETSAINT_USER}:${NETSAINT_GROUP}::NetSaint\\ Runtime\\ User
 PKG_USERS+=	${NETSTADM_USER}:${NETSTADM_GROUP}::NetSaint\\ Administrator:${PREFIX}/etc/netsaint:${SH}
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
-
-USE_PERL5=		YES
+USE_TOOLS+=		gmake perl:run
 
 PKG_SYSCONFSUBDIR=	netsaint
 

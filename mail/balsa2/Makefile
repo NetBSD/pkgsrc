@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/06/26 18:45:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2005/07/16 01:19:12 jlam Exp $
 
 DISTNAME=	balsa-2.2.6
 PKGREVISION=	2
@@ -14,12 +14,11 @@ COMMENT=	GNOME2 EMail client
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_PERL5=		build
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
 CONFIGURE_ARGS=		--with-gpgme=${BUILDLINK_PREFIX.gpgme}/bin/gpgme-config
 CONFIGURE_ARGS+=	--disable-more-warnings

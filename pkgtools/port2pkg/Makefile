@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/17 03:50:29 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/16 01:19:18 jlam Exp $
 #
 
 DISTNAME=	port2pkg-1.11
@@ -13,12 +13,11 @@ COMMENT=	Convert from a FreeBSD port to a NetBSD package
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 
 WRKSRC=		${WRKDIR}
-USE_PERL5=	YES
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
-USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar perl:run
 
 .include "../../mk/bsd.prefs.mk"
 

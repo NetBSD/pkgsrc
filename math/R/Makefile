@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2005/06/24 12:28:31 markd Exp $
+# $NetBSD: Makefile,v 1.72 2005/07/16 01:19:13 jlam Exp $
 
 DISTNAME=		R-2.1.1
 CATEGORIES=		math
@@ -15,8 +15,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 TEST_TARGET=		check
-USE_PERL5=		# defined
-USE_TOOLS+=		gmake xmkmf sed
+USE_TOOLS+=		gmake perl:run sed xmkmf
 USE_GNU_READLINE=	# uses callback interface
 USE_LANGUAGES=		c fortran
 USE_MAKEINFO=		# defined

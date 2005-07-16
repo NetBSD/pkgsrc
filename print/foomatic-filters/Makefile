@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/16 01:19:18 jlam Exp $
 
 DISTNAME=	foomatic-filters-3.0.2
 CATEGORIES=	print
@@ -25,8 +25,7 @@ CONFIGURE_ENV+= 	CUPS=${LOCALBASE}/share/cups
 CONFIGURE_ENV+= 	CUPS_FILTERS=${LOCALBASE}/lib/cups/filter
 CONFIGURE_ENV+= 	PRINTCAP=/etc/printcap
 
-USE_TOOLS+=	gmake
-USE_PERL5=	yes
+USE_TOOLS+=	gmake perl:run
 USE_PKGINSTALL=	yes
 PERL5_REQD=	5.6
 INSTALL_TARGET=	install-bin install-man

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/15 18:27:52 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:14 jlam Exp $
 #
 
 DISTNAME=	colorize_0.3.0
@@ -13,9 +13,8 @@ COMMENT=	Log colorize perl script
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 NO_BUILD=	yes
-USE_PERL5=	yes
 
-USE_TOOLS+=		gunzip
+USE_TOOLS+=		gunzip perl:run
 INSTALLATION_DIRS=	bin man/man1
 
 post-patch:

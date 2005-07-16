@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/07/12 19:41:43 kristerw Exp $
+# $NetBSD: Makefile,v 1.38 2005/07/16 01:19:17 jlam Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		1
@@ -16,7 +16,7 @@ DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 
 BUILD_TARGET=		ALL examples
 INSTALL_TARGET=		install-all
-USE_PERL5=		yes
+USE_TOOLS+=		perl:run
 HAS_CONFIGURE=		yes
 USE_FORTRAN=		yes
 PKG_SYSCONFSUBDIR=	mpi-ch

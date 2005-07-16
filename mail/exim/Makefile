@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/07/12 04:07:41 grant Exp $
+# $NetBSD: Makefile,v 1.59 2005/07/16 01:19:12 jlam Exp $
 
 DISTNAME=	exim-4.51
 CATEGORIES=	mail net
@@ -13,7 +13,7 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
 CONFLICTS+=	exim-exiscan-[0-9]*
 
-USE_PERL5=	yes
+USE_TOOLS+=	perl:run
 USE_PKGINSTALL=	yes
 
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/06/10 09:21:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.49 2005/07/16 01:19:09 jlam Exp $
 #
 
 DISTNAME=		gedit-2.10.3
@@ -12,10 +12,9 @@ COMMENT=		Lightweight GNOME2 text editor
 
 BUILD_USES_MSGFMT=	YES
 
-USE_PERL5=		build
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES
 USE_MSGFMT_PLURALS=	YES
 GNU_CONFIGURE=		YES

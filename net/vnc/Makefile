@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/07/16 01:19:17 jlam Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -22,7 +22,7 @@ WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes
-USE_PERL5=		yes
+USE_TOOLS+=		perl:run
 BUILD_DEFS+=		USE_INET6
 
 BUILD_TARGET=		World

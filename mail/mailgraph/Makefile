@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:13 jlam Exp $
 #
 
 DISTNAME=	mailgraph-1.10
@@ -10,14 +10,11 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://people.ee.ethz.ch/~dws/software/mailgraph/
 COMMENT=	RRDtool frontend for mail statistics
 
-USE_PKGINSTALL=	yes
-USE_PERL5=	yes
-
 DEPENDS+=	rrdtool-1*:../../databases/rrdtool
 DEPENDS+=	p5-File-Tail-[0-9]*:../../misc/p5-File-Tail
 
-USE_LANGUAGES=	yes
-USE_PERL5=	# defined
+USE_PKGINSTALL=	yes
+USE_TOOLS+=	perl:run
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -62,5 +59,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/$i ${PREFIX}/${DOCDIR}/$i
 .endfor
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

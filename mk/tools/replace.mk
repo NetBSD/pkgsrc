@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.109 2005/07/15 20:14:04 jlam Exp $
+# $NetBSD: replace.mk,v 1.110 2005/07/16 01:19:27 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,17 +74,6 @@
 #
 #	USE_TOOLS+=	perl:run
 #
-
-# Continue to allow USE_PERL5 until packages have been taught to use the
-# new syntax.
-#
-.if defined(USE_PERL5)
-.  if empty(USE_PERL5:Mbuild)
-USE_TOOLS+=	perl:run
-.  else
-USE_TOOLS+=	perl
-.  endif
-.endif
 
 # XXX Keep this hack here until the day that msgfmt and msgfmt-plurals
 # XXX is handled directly by the tools framework.

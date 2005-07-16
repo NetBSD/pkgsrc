@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:10 jlam Exp $
 #
 
 DISTNAME=	raines-0.40.2
@@ -15,10 +15,9 @@ COMMENT=	680x0 Arcade Emulator
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/raine
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl:run
 MAKEFILE=	makefile
 MAKE_ENV+=	OSTYPE=linux
-USE_PERL5=	run
 REPLACE_PERL=	makedep
 PTHREAD_OPTS+=	require
 

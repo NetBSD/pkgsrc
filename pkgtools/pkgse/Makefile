@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/12 13:15:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:17 jlam Exp $
 #
 
 DISTNAME=	pkgse-0.2
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_PERL5=	yes
+USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS=	bin
 

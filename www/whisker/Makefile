@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:26 jlam Exp $
 
 DISTNAME=	whisker-2.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	URL scanner used to search for known vulnerable CGIs on websites
 
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 
-USE_PERL5=      YES
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	whisker.pl
 
 INSTALLATION_DIRS=	bin

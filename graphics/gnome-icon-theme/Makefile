@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 20:08:05 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/16 01:19:11 jlam Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.10.1
@@ -14,8 +14,7 @@ BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
-USE_PERL5=		build
+USE_TOOLS+=		gmake perl
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in
@@ -24,6 +23,5 @@ BUILDLINK_DEPENDS.hicolor-icon-theme=	hicolor-icon-theme>=0.5
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

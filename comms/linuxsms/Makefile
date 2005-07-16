@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:07 jlam Exp $
 #
 
 DISTNAME=	linuxsms-0.65
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://linuxsms.sourceforge.net/
 COMMENT=	Perl script to send short messages to GSM phones
 
-USE_PERL5=	yes
+USE_TOOLS+=	perl:run
 NO_BUILD=	yes
 
 REPLACE_PERL=	linuxsms
@@ -25,5 +25,4 @@ do-install:
 .endfor
 .undef f
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/12 04:07:41 grant Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/16 01:19:12 jlam Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	4
@@ -13,7 +13,6 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
 CONFLICTS+=	exim-exiscan-[0-9]*
 
-USE_PERL5=	YES
 USE_PKGINSTALL=	YES
 
 BUILD_DEFS+=		EXIM_USER EXIM_GROUP
@@ -35,7 +34,7 @@ PKG_GROUPS=		${EXIM_GROUP}
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		gzip gzcat
+USE_TOOLS+=		gzip gzcat perl:run
 FILES_SUBST+=		GZIP_CMD="${GZIP_CMD:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"
 FILES_SUBST+=		GZCAT="${GZCAT}"
 

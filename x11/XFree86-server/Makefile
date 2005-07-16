@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:26 jlam Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-server-${XF_VER}
@@ -43,7 +43,7 @@ SUBST_MESSAGE.stubs=	"Fixing stubs Makefile."
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "NetBSD"
-USE_PERL5=	build # Yeah, we need this :-)
+USE_TOOLS+=	perl	# Yeah, we need this :-)
 .endif
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:25 jlam Exp $
 #
 
 DISTNAME=	calamaris-2.58
@@ -9,7 +9,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://cord.de/tools/squid/calamaris/
 COMMENT=	Squid logfile analyzer
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	calamaris
 NO_BUILD=	YES
 

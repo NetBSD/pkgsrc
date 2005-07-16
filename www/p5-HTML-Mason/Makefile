@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/13 18:01:46 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/16 01:19:26 jlam Exp $
 
 DISTNAME=		HTML-Mason-1.28
 PKGNAME=		p5-${DISTNAME}
@@ -17,10 +17,6 @@ DEPENDS+=		p5-Exception-Class>=1.14:../../devel/p5-Exception-Class
 DEPENDS+=		p5-Class-Container>=0.10:../../devel/p5-Class-Container
 
 PERL5_PACKLIST=		auto/HTML/Mason/.packlist
-
-# In case apache.mk is included below which will result in USE_PERL5
-# being set to 'build' explicitly set it to 'run' here.
-USE_PERL5=		run
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-HTML-Mason
 PKG_SUPPORTED_OPTIONS=	modperl

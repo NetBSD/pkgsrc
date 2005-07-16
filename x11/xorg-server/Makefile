@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/16 01:19:27 jlam Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -47,7 +47,7 @@ SUBST_MESSAGE.stubs=	"Fixing stubs Makefile."
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "NetBSD"
-USE_PERL5=	build # Yeah, we need this :-)
+USE_TOOLS+=	perl	# Yeah, we need this :-)
 .endif
 
 .if ${OPSYS} == "Darwin"
