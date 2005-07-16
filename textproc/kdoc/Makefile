@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/08 20:53:49 kristerw Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/16 19:10:40 jlam Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
@@ -13,12 +13,12 @@ MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/3.0/src/ \
 MAINTAINER=	wulf@NetBSD.org
 COMMENT=	C++ and IDL Class Documentation Tool
 
+USE_TOOLS+=		perl:run
+
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
 SUBST_FILES.vars=	Makefile.in
 SUBST_SED.vars=		-e 's|@perl@|${PERL5}|g'
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
-
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
