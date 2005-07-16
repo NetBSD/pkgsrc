@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:43 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/16 19:10:38 jlam Exp $
 
 DISTNAME=	txt2html-1.28
 CATEGORIES=	converters www
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.aigeek.com/txt2html/
 COMMENT=	Text to HTML converter
 
 NO_BUILD=	YES
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	txt2html.pl
 
 INSTALLATION_DIRS=	bin
@@ -25,5 +26,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/sample.html ${PREFIX}/share/txt2html
 	${INSTALL_DATA} ${WRKSRC}/sample.txt ${PREFIX}/share/txt2html
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/05/21 01:24:34 rh Exp $
+# $NetBSD: Makefile,v 1.56 2005/07/16 19:10:40 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.117
@@ -20,6 +20,7 @@ NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
+USE_TOOLS+=	perl:run
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
@@ -78,5 +79,4 @@ do-install:
 .   endif
 .endfor
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

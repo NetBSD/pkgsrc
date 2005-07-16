@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:45 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/16 19:10:40 jlam Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.alvestrand.no/domen/titrax/TimeTracker.html
 COMMENT=		Little X11 tool to track project times
 
 USE_IMAKE=		YES
+USE_TOOLS+=		perl:run
 
 RESTRICTED=		"Do not sell for profit"
 
@@ -23,5 +24,4 @@ post-patch:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/titrax
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

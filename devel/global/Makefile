@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:24 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/16 19:10:38 jlam Exp $
 #
 
 DISTNAME=	global-4.8
@@ -11,6 +11,7 @@ COMMENT=	Source code tag system including web browser output
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
+USE_TOOLS+=		perl:run
 INFO_FILES=		global.info
 
 LDFLAGS+=	-L../libutil
@@ -22,5 +23,4 @@ MAKE_ENV+=      BINDIR="${PREFIX}/bin"
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libdata/lint
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

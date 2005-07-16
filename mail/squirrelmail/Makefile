@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2005/07/07 08:32:51 martti Exp $
+# $NetBSD: Makefile,v 1.55 2005/07/16 19:10:39 jlam Exp $
 
 DISTNAME=	squirrelmail-1.4.4
 PKGREVISION=	1
@@ -19,6 +19,7 @@ DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
 USE_LANGUAGES=	# empty
 USE_PKGINSTALL=	yes
 NO_BUILD=	yes
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	config/conf.pl config/ri_once.pl
 
 .include "../../mk/bsd.prefs.mk"
@@ -73,5 +74,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
 	${INSTALL_DATA} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
