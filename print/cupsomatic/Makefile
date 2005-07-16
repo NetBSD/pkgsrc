@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/17 03:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/16 01:19:18 jlam Exp $
 
 DISTNAME=	cupsomatic
 PKGNAME=	${DISTNAME}-2.2
@@ -31,7 +31,7 @@ DEPENDS+=	cups>=1.1.14nb1:../../print/cups
 DEPENDS+=	foomatic-gswrapper>=1.2:../../print/foomatic-gswrapper
 DEPENDS+=	mpage-[0-9]*:../../print/mpage
 
-USE_PERL5=	yes
+USE_TOOLS+=	perl:run
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
 
 FILTERDIR=	${PREFIX}/libexec/cups/filter

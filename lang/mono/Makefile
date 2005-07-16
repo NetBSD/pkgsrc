@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/07/16 01:19:11 jlam Exp $
 
 DISTNAME=	mono-1.1.6
 CATEGORIES=	lang
@@ -22,7 +22,7 @@ NOT_FOR_PLATFORM+=	NetBSD-2.9*-* NetBSD-3.*-*
 # LP64 problems
 NOT_FOR_PLATFORM+=	*-*-alpha *-*-sparc64
 
-USE_TOOLS+=		bison gmake
+USE_TOOLS+=		bison gmake perl
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 
@@ -42,7 +42,6 @@ PKGCONFIG_OVERRIDE+=	mono.pc.in
 PKGCONFIG_OVERRIDE+=	scripts/mono-nunit.pc.in
 #PKG_SYSCONFSUBDIR=	mono
 
-USE_PERL5=	build
 REPLACE_PERL=	mcs/errors/do-tests.pl
 REPLACE_PERL+=	mcs/mbas/Test/test-mbas.pl
 REPLACE_PERL+=	mcs/tools/scan-tests.pl

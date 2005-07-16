@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/03 15:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/16 01:19:11 jlam Exp $
 #
 
 DISTNAME=		fort77-1.14a
@@ -23,8 +23,7 @@ PKG_SKIP_REASON=	"${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 BUILD_TARGET=		test
-
-USE_PERL5=		YES
+USE_TOOLS+=		perl:run
 
 post-patch:
 	for f in `${FIND} ${WRKDIR} -type f -print | ${XARGS} ${GREP} -l '/usr'`; \

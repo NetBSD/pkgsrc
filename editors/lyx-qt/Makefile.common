@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2005/06/01 18:02:45 jlam Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/07/16 01:19:09 jlam Exp $
 #
 
 DISTNAME=		lyx-1.3.5
@@ -25,9 +25,8 @@ UNLIMIT_RESOURCES+=	datasize
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_LIBTOOL=		YES
-USE_PERL5=		YES
 USE_PKGLOCALEDIR=	YES
 GCC_REQD+=		2.95
 

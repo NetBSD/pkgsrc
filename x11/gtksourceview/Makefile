@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/05/22 20:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/16 01:19:26 jlam Exp $
 #
 
 DISTNAME=	gtksourceview-1.2.0
@@ -14,9 +14,8 @@ BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_PERL5=		build
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
 PKGCONFIG_OVERRIDE=	gtksourceview-1.0.pc.in
 

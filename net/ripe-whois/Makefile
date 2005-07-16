@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:22:21 agc Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:16 jlam Exp $
 #
 
 DISTNAME=	ripe-whois-3.1.1v6
@@ -12,7 +12,7 @@ COMMENT=	RIPE very simple and generic whois client
 
 WRKSRC=		${WRKDIR}/whois-3.1.1v6
 GNU_CONFIGURE=	YES
-USE_PERL5=	build
+USE_TOOLS+=	perl
 MAKE_ENV+=	PERL5=${PERL5}
 BUILD_DEFS+=	USE_INET6
 

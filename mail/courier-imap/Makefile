@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/05/22 20:08:11 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/07/16 01:19:12 jlam Exp $
 
 DISTNAME=	courier-imap-4.0.2
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
@@ -12,11 +12,9 @@ HOMEPAGE=	http://www.courier-mta.org/imap/
 
 DEPENDS+=	courier-maildir>=0.48.2:../../mail/courier-maildir
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		env gmake perl
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_PERL5=		build
-USE_TOOLS+=		env
 
 .include "../../mail/courier-maildir/Makefile.common"
 

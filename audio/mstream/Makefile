@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/24 13:45:14 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/16 01:19:06 jlam Exp $
 #
 
 DISTNAME=	mstream-1.0
@@ -13,7 +13,7 @@ DEPENDS+=	ices-mp3>=0.3:../../audio/ices-mp3
 DEPENDS+=	p5-MP3-Info>=1.0:../../audio/p5-MP3-Info
 
 NO_CONFIGURE=	yes
-USE_PERL5=	# defined
+USE_TOOLS+=	perl:run
 
 MODDIR=		${PREFIX}/share/ices-mp3
 

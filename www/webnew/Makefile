@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/16 01:19:26 jlam Exp $
 #
 
 DISTNAME=		webnew-1.3
@@ -9,7 +9,7 @@ MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.tac.nyc.ny.us/kim/webnew/
 COMMENT=		Retrieve modification times of web documents
 
-USE_PERL5=		# defined
+USE_TOOLS+=		perl:run
 
 NO_CONFIGURE=		yes
 BUILD_TARGET=		all DEST=${PREFIX} PERL=${PERL5}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/16 01:19:19 jlam Exp $
 
 DISTNAME=	tinyca-0.6.8
 CATEGORIES=	security
@@ -15,10 +15,11 @@ DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 NO_BUILD=	YES
-USE_PERL5=	YES
 CADIR=		${PREFIX}/share/tinyca
 
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	tinyca
+
 BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7d
 
 SUBST_CLASSES+=		script

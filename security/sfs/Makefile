@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:47:19 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/16 01:19:19 jlam Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-uvfs
 
 USE_PKGINSTALL=		yes
 USE_LANGUAGES=		c c++
-USE_PERL5=		yes
+USE_TOOLS+=		perl:run
 
 GCC_REQD+=		2.95.3
 

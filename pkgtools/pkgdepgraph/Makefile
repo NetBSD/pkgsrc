@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/26 17:34:19 atatat Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/16 01:19:17 jlam Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.8
@@ -14,7 +14,7 @@ COMMENT=	Visual representation of installed NetBSD packages
 # DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
 WRKSRC=		${WRKDIR}
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
