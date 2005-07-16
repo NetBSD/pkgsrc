@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.111 2005/07/16 05:34:59 jlam Exp $
+# $NetBSD: replace.mk,v 1.112 2005/07/16 22:33:18 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -114,9 +114,13 @@ MAKEVARS+=	_USE_TOOLS
 
 ######################################################################
 
-# Set the type of dependency requested for the tool.
+# Set the type of dependency requested for the tool.  The type of
+# dependency is determined by the modifier specified for each tool:
 #
-.for _t_ in ${USE_TOOLS:N*\:*} ${USE_TOOLS:M*\:build}
+#    BUILD_DEPENDS:	:build (default), :pkgsrc
+#    DEPENDS:		:run
+#
+.for _t_ in ${USE_TOOLS:N*\:*} ${USE_TOOLS:M*\:build} ${USE_TOOLS:M*\:pkgsrc}
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BUILD_DEPENDS
 .endfor
 .for _t_ in ${USE_TOOLS:M*\:run}
@@ -1226,11 +1230,11 @@ ${_TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
 
 ######################################################################
 
-# For each tool, make sure that the "TOOL" name points to the real
-# command, e.g., AWK, SED, etc., provided that "TOOL" has been
-# associated with <tool>.
+# For each tool that pkgsrc requires, make sure that the "TOOL" name
+# points to the real command, e.g., AWK, SED, etc., provided that
+# "TOOL" has been associated with <tool>.
 #
-.for _t_ in ${_USE_TOOLS}
+.for _t_ in ${USE_TOOLS:M*\:pkgsrc:C/:.*//:O:u}
 _TOOLS_USE_PKGSRC.${_t_}?=	no
 .  if defined(_TOOLS_VARNAME.${_t_})
 .    if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[nN][oO])
