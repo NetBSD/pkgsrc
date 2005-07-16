@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/16 03:44:31 snj Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/16 20:27:10 dillo Exp $
 
 DISTNAME=		VisualBoyAdvance-src-1.6a
 PKGNAME=		vba-1.6.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vba/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://vboy.emuhq.com/
 COMMENT=		Gameboy advance emulator
 
