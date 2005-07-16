@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:25 jlam Exp $
 #
 
 DISTNAME=		htmlfix-1.03
@@ -10,7 +10,7 @@ COMMENT=		Fix latin1 to html entities and/or line endings
 
 DEPENDS+=	p5-HTML-FixEntities-[0-9]*:../../www/p5-HTML-FixEntities
 
-USE_PERL5=		YES
+USE_TOOLS+=		perl:run
 INSTALLATION_DIRS=	bin man/man1
 
 do-install:

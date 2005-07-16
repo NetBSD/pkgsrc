@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/08 20:42:35 kristerw Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/16 01:19:17 jlam Exp $
 
 DISTNAME=		trn-4.0-test76
 PKGNAME=		trn-4.76
@@ -29,13 +29,11 @@ DEPENDS=		nntpclnt>=1.6.1:../nntpclnt
 # foo.y.z.com for the purposes of allowing cancels.
 TRN_HOSTBITS?=		0
 
-USE_PERL5=		# defined
-
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ENV=		PREFIX=${PREFIX}
 USE_TOOLS+=		awk basename cat cp diff echo egrep expr grep mkdir mv
-USE_TOOLS+=		rm sed tail tr
+USE_TOOLS+=		perl:run rm sed tail tr
 CONFIGURE_ENV+=		TOOLS_AWK="${TOOLS_AWK}"
 CONFIGURE_ENV+=		TOOLS_BASENAME="${TOOLS_BASENAME}"
 CONFIGURE_ENV+=		TOOLS_CAT="${TOOLS_CAT}"

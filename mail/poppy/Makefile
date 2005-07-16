@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:58:03 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:13 jlam Exp $
 #
 
 DISTNAME=	poppy-3.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.cnpbagwell.com/projects.html
 COMMENT=	Client to perform simple tasks with a POP3/IMAP server
 
 NO_BUILD=	YES
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	poppy
 
 INSTALLATION_DIRS=	bin man/man1

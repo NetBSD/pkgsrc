@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:14 jlam Exp $
 #
 
 DISTNAME=	loco-0.32
@@ -9,7 +9,7 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://zjuul.net/~jules/loco/
 COMMENT=	Colorize file or standard input and print on the standard output
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	loco
 
 BUILD_TARGET=	# defined

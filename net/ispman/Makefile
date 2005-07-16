@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/07 05:37:47 rh Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/16 01:19:16 jlam Exp $
 #
 
 DISTNAME=	ispman-0.5
@@ -18,7 +18,7 @@ DEPENDS+=	p5-ispman>=0.5:../../net/p5-ispman
 DEPENDS+=	{postfix>=20010228,postfix-1.*,postfix-2.*}:../../mail/postfix
 .endif
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 
 WRKSRC=		${WRKDIR}/ispman
 ISPMAN_HTDOCS?=	${PREFIX}/share/ispman/virtual

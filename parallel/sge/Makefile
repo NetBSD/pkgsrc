@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:29 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:17 jlam Exp $
 #
 
 DISTNAME=		sge-5.3p6
@@ -13,8 +13,7 @@ COMMENT=		Sun Grid Engine distributed resource management system
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
-USE_PERL5=		YES
+USE_TOOLS+=		gmake perl:run
 
 CFLAGS+=		-D${UPPER_OPSYS}
 CONFIGURE_ENV+=		REMOTE=sge

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:12 jlam Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.foretune.co.jp/people/shigeya/distribute/
 COMMENT=	Mail dispatcher for mailing list.  Fits nicely with majordomo
 
 WRKSRC=		${WRKDIR}/distribute-pl19
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 
 MAN1=		distribute.1
 DIST_SUBDIR=	distribute

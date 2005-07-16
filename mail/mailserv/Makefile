@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:12 jlam Exp $
 #
 
 DISTNAME=	mailserv
@@ -13,7 +13,7 @@ COMMENT=	WWW interface to several types of mailing list servers
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 USE_PKGINSTALL=	YES
 NO_BUILD=	YES
 

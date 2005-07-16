@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/16 01:19:07 jlam Exp $
 #
 
 DISTNAME=	2vcard-0.5
@@ -10,7 +10,7 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.netmeister.org/apps/2vcard/
 COMMENT=	Convert an addressbook to the popular VCARD file format
 
-USE_PERL5=	run
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	src/2vcard
 
 NO_BUILD=	yes

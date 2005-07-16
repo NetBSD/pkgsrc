@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:04 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/16 01:19:14 jlam Exp $
 #
 
 DISTNAME=	yacas-1.0.57
@@ -11,9 +11,8 @@ COMMENT=	Yet Another Computer Algebra System
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 USE_LIBTOOL=	YES
-USE_PERL5=	build
 
 TEST_TARGET=	test
 

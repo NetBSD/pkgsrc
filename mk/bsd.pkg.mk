@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1707 2005/07/15 18:27:54 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1708 2005/07/16 01:19:27 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4225,7 +4225,7 @@ pre-install-fake-pkg:
 .  if !empty(USE_LANGUAGES)
 	@${ECHO} "CC_VERSION=${CC_VERSION}" >> ${BUILD_INFO_FILE}
 .  endif
-.  if defined(USE_PERL5) && (${USE_PERL5} == "run")
+.  if !empty(USE_TOOLS:Mperl\:run)
 	@${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .  endif
 .  if defined(_USE_GMAKE) || !empty(USE_TOOLS:Mgmake)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/16 01:19:16 jlam Exp $
 
 DISTNAME=		repackaged-${PKGNAME}
 PKGNAME=		nasd-1.3
@@ -12,7 +12,7 @@ COMMENT=		Prototype storage implementation
 ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-* Linux-*-*
 
 USE_IMAKE=		yes
-USE_PERL5=		build
+USE_TOOLS+=		perl
 WRKSRC=			${WRKDIR}/${PKGNAME}
 
 pre-patch:

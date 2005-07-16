@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:46:23 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/16 01:19:13 jlam Exp $
 #
 
 DISTNAME=		qgreylist-0.2
@@ -14,7 +14,7 @@ DEPENDS+=		${DEPENDS_QMAIL}
 
 WRKSRC=			${WRKDIR}/qgreylist
 
-USE_PERL5=		run
+USE_TOOLS+=		perl:run
 USE_PKGINSTALL=		yes
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/greylist qmaild wheel 0755
 NO_BUILD=		# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/27 10:32:01 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:18 jlam Exp $
 #
 
 DISTNAME=	apg-2.2.3
@@ -11,7 +11,7 @@ COMMENT=	Tool set for random password generation
 
 MAKE_ENV+=	FLAGS="${CFLAGS}" INSTALL_PREFIX="${PREFIX}"
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	perl/apgcli.pl
 
 OPSYSVARS+=	CS_LIBS

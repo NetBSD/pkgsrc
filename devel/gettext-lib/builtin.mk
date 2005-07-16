@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.25 2005/06/05 09:25:37 jlam Exp $
+# $NetBSD: builtin.mk,v 1.26 2005/07/16 01:19:08 jlam Exp $
 
 BUILTIN_PKG:=	gettext
 
@@ -210,7 +210,7 @@ CONFIGURE_ARGS+=	--without-libintl-prefix
 .  endif
 
 .  if defined(USE_MSGFMT_PLURALS) && !empty(USE_MSGFMT_PLURALS:M[Yy][Ee][Ss])
-USE_PERL5?=		build
+USE_TOOLS+=		perl
 CONFIGURE_ENV+=		MSGFMT=${BUILDLINK_DIR}/bin/msgfmt
 
 # XXX _USE_NEW_TOOLS=yes should make "msgfmt" and "msgfmt-plural" into

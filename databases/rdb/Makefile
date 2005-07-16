@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/17 19:25:28 snj Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:08 jlam Exp $
 
 DISTNAME=	RDB-2.6d
 PKGNAME=	rdb-2.6.4
@@ -12,7 +12,7 @@ COMMENT=	Relational database system that uses standard filters via pipes
 WRKSRC=		${WRKDIR}/rdb
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
-USE_PERL5=	yes
+USE_TOOLS+=	perl:run
 
 REPLACE_PERL=	column compute dataent etbl headchg jointbl lst2tbl mergetbl
 REPLACE_PERL+=	mktbl ptbl rdb rdbt repair reporttbl row search sorttbl

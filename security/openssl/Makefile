@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2005/06/11 22:16:15 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2005/07/16 01:19:18 jlam Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -39,9 +39,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-USE_PERL5=		build	# perl is used throughout the build
 USE_PKGINSTALL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 TEST_TARGET=		tests
 
 HAS_CONFIGURE=		yes

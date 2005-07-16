@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:32 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:27 jlam Exp $
 #
 
 DISTNAME=	xkbset-0.3
@@ -10,8 +10,8 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.math.missouri.edu/~stephen/software/#xkbset
 COMMENT=	Manages XKB features of the X window system
 
-USE_PERL5=	build
 USE_X11BASE=	yes
+USE_TOOLS+=	perl
 REPLACE_PERL=	mskacc-gui
 
 .include "../../mk/x11.buildlink3.mk"

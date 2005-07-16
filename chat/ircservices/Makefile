@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/21 16:18:52 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:07 jlam Exp $
 #
 
 DISTNAME=	ircservices-5.0.49
@@ -14,8 +14,7 @@ COMMENT=	Services for IRC networks
 
 HAS_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
-USE_TOOLS+=	gmake grep gsed
-USE_PERL5=	build
+USE_TOOLS+=	gmake grep gsed perl
 RCD_SCRIPTS=	ircservices
 
 CONFIGURE_ARGS=	-prefix ${PREFIX}
@@ -79,5 +78,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/example-modules.conf \
 		${PREFIX}/share/examples/ircservices/modules.conf
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

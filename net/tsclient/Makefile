@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/16 01:19:17 jlam Exp $
 #
 
 DISTNAME=		tsclient-0.132
@@ -15,14 +15,12 @@ DEPENDS+=       	vncviewer-[0-9]*:../../net/vncviewer
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_PKGLOCALEDIR=	yes
-USE_PERL5=		run
 GNU_CONFIGURE=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

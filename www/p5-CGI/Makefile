@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/07/13 18:01:46 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/07/16 01:19:25 jlam Exp $
 #
 
 VERS=			3.10
@@ -11,10 +11,6 @@ MASTER_SITES+=		${MASTER_SITE_PERL_CPAN:=CGI/}
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://stein.cshl.org/WWW/software/CGI/
 COMMENT=		Perl5 module for writing forms-based CGI programs
-
-# Some perl packages install their own versions of this module.
-# Can't simply define USE_PERL5.
-BUILDLINK_DEPENDS.perl=	{perl-5.0*,perl-5.6.0nb2,perl-base>=5.6.0,perl{,-thread}>=5.6.1nb2}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

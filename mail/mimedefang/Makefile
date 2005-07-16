@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/20 10:20:45 markd Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/16 01:19:13 jlam Exp $
 
 DISTNAME=		mimedefang-2.52
 PKGREVISION=		1
@@ -18,7 +18,7 @@ DEPENDS+=		p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
 
-USE_PERL5=		YES
+USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR?=	mimedefang
 

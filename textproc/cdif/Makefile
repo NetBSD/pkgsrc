@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:23 jlam Exp $
 #
 
 DISTNAME=		cdif-1.15
@@ -12,7 +12,7 @@ COMMENT=		Word context diff
 LICENSE=		no-commercial-use
 
 WRKSRC=			${WRKDIR}
-USE_PERL5=		# defined
+USE_TOOLS+=		perl:run
 
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined

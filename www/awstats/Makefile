@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:51 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:25 jlam Exp $
 #
 
 DISTNAME=	awstats-6.3
@@ -13,12 +13,10 @@ COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
 DIST_SUBDIR=	${PKGNAME}
 NO_BUILD=	YES
-USE_PERL5=	run
 
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	tools/*.pl		\
 		wwwroot/cgi-bin/*.pl
-
-.include "../../lang/perl5/buildlink3.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/awstats

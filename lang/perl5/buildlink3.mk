@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2005/07/15 20:14:03 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2005/07/16 01:19:11 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -18,10 +18,6 @@ TOOLS_DEPENDS.perl=		# buildlink3 will handle the dependency
 BUILDLINK_DEPENDS.perl+=	{perl>=${PERL5_REQD},perl-thread>=${PERL5_REQD}}
 BUILDLINK_RECOMMENDED.perl+=	perl>=5.8.5nb6
 BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
-
-.if defined(USE_PERL5) && !empty(USE_PERL5:Mbuild)
-BUILDLINK_DEPMETHOD.perl?=	build
-.endif
 
 PERL5_OPTIONS?=		# empty
 .if !empty(PERL5_OPTIONS:Mthreads)

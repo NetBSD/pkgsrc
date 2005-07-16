@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:24 jlam Exp $
 #
 
 DISTNAME=	igerman98-20030222
@@ -14,8 +14,7 @@ COMMENT=	German dictionary for interactive spelling checker
 DEPENDS+=	ispell-base>=3.1.20nb1:../../textproc/ispell-base
 
 BUILD_TARGET=	german.hash
-USE_TOOLS+=	gmake
-USE_PERL5=	build
+USE_TOOLS+=	gmake perl
 REPLACE_PERL=	bin/dic2iso.pl bin/grepl bin/sq.pl bin/myspellfixprefix.pl \
 		bin/clear_affix.pl bin/unsq.pl bin/uniqflag.pl
 

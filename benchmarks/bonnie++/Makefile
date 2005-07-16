@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/23 08:51:46 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/16 01:19:07 jlam Exp $
 #
 
 DISTNAME=       bonnie++-1.03a
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 REPLACE_PERL=		bon_csv2txt.in bon_csv2html.in
 
 INSTALLATION_DIRS=	bin man/man1 man/man8 sbin
@@ -26,5 +26,4 @@ results:
 	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/bonnie.out /tmp/benches/`domainname`/bonnie++.`uname`-`uname -m`-`uname -r`.`hostname`
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

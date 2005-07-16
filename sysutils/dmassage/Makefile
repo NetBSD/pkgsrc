@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/07 18:36:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/16 01:19:20 jlam Exp $
 #
 
 DISTNAME=	dmassage-0.6
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*
 
 NO_BUILD=	yes
-USE_PERL5=	run
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	dmassage
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
@@ -23,5 +23,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dmassage ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
 
-.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

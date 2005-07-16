@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/27 11:41:03 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/16 01:19:13 jlam Exp $
 #
 
 DISTNAME=	MHonArc-2.6.11
@@ -11,8 +11,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.mhonarc.org/
 COMMENT=	Mailbox to HTML converter, suitable for list archives
 
-USE_PERL5=	YES
-
+USE_TOOLS+=	perl:run
 NO_BUILD=	YES
 
 pre-install:

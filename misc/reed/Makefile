@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:22 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:15 jlam Exp $
 
 DISTNAME=	reed-5.4
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	Auto-scrolling file viewer
 CONFIGURE_SCRIPT=	./configures
 CONFIGURE_ARGS+=	-p ${PREFIX}
 HAS_CONFIGURE=		YES
-USE_PERL5=		YES
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		breed fix_bookmarks.pl wrap
 
 # wgetnstr()

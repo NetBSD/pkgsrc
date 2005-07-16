@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.9 2005/04/11 21:45:39 tv Exp $
+# $NetBSD: Makefile-example,v 1.10 2005/07/16 01:19:09 jlam Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -30,7 +30,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews	# needed for package views-ready pack
 # Fifth paragraph - all build definitions that describe things used by
 # the package.  These include: WRKSRC, GNU_CONFIGURE,
 # HAS_CONFIGURE, USE_PKGLOCALEDIR, USE_INSTALL, TEXINFO_REQD, USE_JAVA,
-# USE_PERL5, INFO_FILES, DIST_SUBDIR, etc.
+# INFO_FILES, DIST_SUBDIR, etc.
 DIST_SUBDIR=		gmake
 GNU_CONFIGURE=		yes
 INFO_FILES=		make.info	# any info files, whitespace delimited

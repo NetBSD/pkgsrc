@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/22 20:08:23 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/16 01:19:15 jlam Exp $
 #
 
 DISTNAME=	dctc-0.85.4
@@ -11,10 +11,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	Direct Connect clone (Direct Connect Text Client)
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
-USE_PERL5=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake perl:run
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
 

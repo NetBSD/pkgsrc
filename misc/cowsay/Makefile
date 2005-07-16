@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:14 jlam Exp $
 
 DISTNAME=		cowsay-3.03
 PKGREVISION=		1
@@ -9,7 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.nog.net/~tony/warez/cowsay.shtml
 COMMENT=		Configurable talking cow
 
-USE_PERL5=		# defined
+USE_TOOLS+=		perl:run
 
 SUBST_CLASSES+=		pap
 SUBST_STAGE.pap=	pre-install # after patch to avoid sneaking into patches

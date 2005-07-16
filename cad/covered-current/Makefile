@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:07 jlam Exp $
 #
 
 DISTNAME=	covered-${SNAPDATE}
@@ -18,10 +18,9 @@ DEPENDS+=	verilog{,-current}-[0-9]*:../../cad/verilog
 CONFLICTS+=     covered-[0-9]*
 
 SNAPDATE=	20040325
-USE_PERL5=	YES
 REPLACE_PERL=	diags/verilog/check_test
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl:run
 TEST_DIRS=	${WRKSRC}/diags/regress
 TEST_TARGET=	iverilog
 

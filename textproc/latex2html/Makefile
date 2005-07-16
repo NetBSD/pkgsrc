@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/01/06 03:59:31 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/16 01:19:24 jlam Exp $
 
 DISTNAME=	latex2html-2002-2-1
 PKGNAME=	latex2html-2002.2.1
@@ -13,7 +13,7 @@ COMMENT=	LaTeX to HTML converter
 DEPENDS+=       teTeX-bin>=1.0.6:../../print/teTeX-bin
 DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 
-USE_PERL5=		# defined
+USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.prefs.mk"

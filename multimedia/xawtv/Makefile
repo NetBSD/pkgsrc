@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/11 16:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/16 01:19:15 jlam Exp $
 #
 
 DISTNAME=	xawtv_3.90
@@ -13,8 +13,7 @@ COMMENT=	TV application for Brooktree 848 compatible cards
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
-USE_PERL5=		build
+USE_TOOLS+=		gmake perl
 
 CONFIGURE_ARGS+=	--disable-aalib
 CONFIGURE_ARGS+=	--disable-motif

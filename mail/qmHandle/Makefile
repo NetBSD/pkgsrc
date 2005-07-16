@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:58:08 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/16 01:19:13 jlam Exp $
 #
 
 DISTNAME=	qmhandle-1.2.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://qmhandle.sourceforge.net/
 COMMENT=	Tool to view and manage the qmail message queue
 
 WRKSRC=		${WRKDIR}
-USE_PERL5=	YES
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	qmHandle
 NO_BUILD=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:00 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/16 01:19:16 jlam Exp $
 #
 
 DISTNAME=	spread-src-3.17.3
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.spread.org/
 COMMENT=	Group communication system providing a number of messaging services
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_PERL5=	build
+USE_TOOLS+=	perl
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include/spread

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:29 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:26 jlam Exp $
 
 DISTNAME=	gtkmm-2.4.8
 PKGNAME=	gtkmm24-2.4.8
@@ -10,10 +10,9 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
 COMMENT=	C++ interface to Gtk+ v2
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	atk/atkmm-1.6.pc.in

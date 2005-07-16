@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/26 09:30:09 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/07/16 01:19:15 jlam Exp $
 #
 
 .include "Makefile.common"
@@ -6,7 +6,7 @@
 PKGREVISION=		1
 COMMENT+=		base plugins
 
-USE_PERL5=		run
+USE_TOOLS+=		perl:run
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-gconf.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-interfaces.pc.in

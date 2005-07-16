@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/07/13 18:01:45 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/16 01:19:25 jlam Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.9.1
@@ -21,7 +21,6 @@ DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 DEPENDS+=	p5-libapreq{,2}-[0-9]*:../../www/${LIBAPREQ}
 
 USE_PKGINSTALL=		YES
-USE_PERL5=		run
 PERL5_PACKLIST=		auto/Apache/Gallery/.packlist
 
 .include "../../mk/bsd.prefs.mk"

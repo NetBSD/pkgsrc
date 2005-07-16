@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:43 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/16 01:19:08 jlam Exp $
 #
 
 DISTNAME=	code2html-0.9.1
@@ -11,7 +11,7 @@ COMMENT=	Convert a program source code to syntax highlighted HTML
 
 NO_BUILD=	# defined
 REPLACE_PERL=	code2html
-USE_PERL5=	run
+USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS=	bin man/man1
 
