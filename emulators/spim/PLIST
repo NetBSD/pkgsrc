@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:26 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/17 21:38:45 kristerw Exp $
 bin/spim
 bin/xspim
-share/doc/spim/spim.ps.gz
-share/doc/spim/cycle.ps.gz
-share/spim/trap.handler
-@dirrm share/doc/spim
+share/doc/spim/cause_reg.id
+share/doc/spim/cycle.ps
+share/doc/spim/io_reg.id
+share/doc/spim/mem.id
+share/doc/spim/mips.id
+share/doc/spim/spim.tex
+share/doc/spim/stack-frame.id
+share/doc/spim/status_reg.id
+share/doc/spim/xinterface.id
+share/spim/exceptions.s
 @dirrm share/spim
+@dirrm share/doc/spim
