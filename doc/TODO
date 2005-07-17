@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3722 2005/07/16 12:58:42 wiz Exp $
+$NetBSD: TODO,v 1.3723 2005/07/17 12:35:24 markd Exp $
 
 Suggested new packages
 ======================
@@ -596,6 +596,7 @@ Suggested package updates
 	o kaffe-nox11-1.1.5 [pkg/30017]
 	o kajaani-kombat-0.7
 	o kapooka-0.3
+	o kdbg-2.0.0
 	o kdrill-6.4
 	o keychain-2.5.3.1
 	o kinput2-3.1
