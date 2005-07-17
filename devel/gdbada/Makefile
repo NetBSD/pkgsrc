@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:51 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/17 19:03:34 kristerw Exp $
 
 DISTNAME=	gdbada-5.3
 PKGREVISION=	1
@@ -10,8 +10,8 @@ MAINTAINER=	john@johnrshannon.com
 HOMEPAGE=	http://libre.act-europe.fr/GDB/
 COMMENT=        GNAT GDB : An Ada 95 Debugger
 
-# Not yet ported to AMD 64-bit machines
-NOT_FOR_PLATFORM=	*-*-x86_64
+# Not yet ported to AMD 64-bit machines or Darwin
+NOT_FOR_PLATFORM=	*-*-x86_64 Darwin-*-*
 
 WRKSRC=		${WRKDIR}/gdb-5.3
 USE_LIBTOOL=		yes
