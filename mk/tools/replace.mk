@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.112 2005/07/16 22:33:18 jlam Exp $
+# $NetBSD: replace.mk,v 1.113 2005/07/17 20:51:04 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -93,7 +93,9 @@ USE_TOOLS+=	bison-yacc
 # ones that are overridden by superseding ones.
 #
 .if !defined(_USE_TOOLS)
-_USE_TOOLS=	${USE_TOOLS:C/:.*//:O:u}
+.  for _t_ in ${USE_TOOLS:C/:.*//:O:u}
+_USE_TOOLS+=	${_t_}
+.  endfor
 .  if !empty(_USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
 _USE_TOOLS:=	${_USE_TOOLS:Nyacc}
 .  endif
