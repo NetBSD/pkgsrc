@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2003/07/22 14:05:19 wiz Exp $
+$NetBSD: patch-ae,v 1.3 2005/07/17 23:12:00 kristerw Exp $
 
---- ../testing/Makefile.orig
-+++ ../testing/Makefile
-@@ -14,7 +14,6 @@
+--- ../testing/Makefile.orig	Sat Feb 22 16:23:04 2003
++++ ../testing/Makefile	Mon Jul 18 01:06:18 2005
+@@ -14,4 +14,3 @@
 -CC=cc
 -DIR=..
 -INCLUDE=-I$(DIR)/include 
@@ -10,14 +10,5 @@ $NetBSD: patch-ae,v 1.2 2003/07/22 14:05:19 wiz Exp $
 +DIR=../lib
 +INCLUDE=-I../include
 +LIB= -R$(DIR)/libvsip -L$(DIR)/libvsip -R$(DIR)/libVU -L$(DIR)/libVU
- VLIB = -lvsip
- VULIB=-lVU
- FFTWLIB=
-@@ -724,6 +723,7 @@
- 
- test_all: test_all.c $(SOURCE)
- 	$(CC) -o test_all test_all.c $(LIB) $(INCLUDE) $(VULIB) $(VLIB) $(FFTWLIB) -lm 
+@@ -726,0 +726 @@
 +	./test_all
- 
- clean:
- 	rm -f atest test_all
