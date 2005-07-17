@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.55 2005/05/19 20:56:36 kristerw Exp $
+# $NetBSD: post-build,v 1.56 2005/07/17 13:38:01 ben Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -541,6 +541,7 @@ sub getBroken {
 		'broken' => [],
 		'broken depends' => [],
 		'not packaged' => [],
+		'topten' => []
 	};
 
 	open (BF, $vars{BROKENFILE}) || return $res;
