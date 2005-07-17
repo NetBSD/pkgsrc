@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:18 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/17 15:58:55 kristerw Exp $
 
 DISTNAME=	binutils-2.15
 PKGNAME=	binutils-2.15.0.0
@@ -11,7 +11,7 @@ COMMENT=	GNU binary utilities
 
 CONFLICTS=	avr-binutils<2.13.2.1nb1
 
-NOT_FOR_PLATFORM=	Interix-*-*
+NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-*
 
 USE_PKGLOCALEDIR=	yes
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
