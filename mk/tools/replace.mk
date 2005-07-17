@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.114 2005/07/17 21:36:24 jlam Exp $
+# $NetBSD: replace.mk,v 1.115 2005/07/17 22:07:49 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1287,6 +1287,9 @@ TOOLS_${_TOOLS_VARNAME.${_t_}}=	${_TOOLS_VARNAME.${_t_}}_not_defined_
 .    endif
 .  endif
 .  if defined(_TOOLS_VARNAME.${_t_})
+.    if defined(TOOLS_PATH.${_t_})
+TOOLS_${_TOOLS_VARNAME.${_t_}}_PATH?=	${TOOLS_PATH.${_t_}}
+.    endif
 .    if defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
 .      for _v_ in ${_TOOLS_VARNAME.${_t_}}
 ${_v_}?=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
