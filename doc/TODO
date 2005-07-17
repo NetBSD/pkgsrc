@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3723 2005/07/17 12:35:24 markd Exp $
+$NetBSD: TODO,v 1.3724 2005/07/17 21:41:03 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -1028,7 +1028,6 @@ Suggested package updates
 	o source-highlight-2.1
 	o spamassassin-3.0.4 [pkg/30452]
 	o spamprobe-1.2a
-	o spim-7.1
 	o spruce-0.6.5
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
