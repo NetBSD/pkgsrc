@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/03/24 21:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/17 15:11:36 kristerw Exp $
 
 DISTNAME=		scsh-0.6.6
 CATEGORIES=		shells lang
@@ -17,6 +17,10 @@ TEST_TARGET=		check
 
 USE_PKGINSTALL=		yes
 PKG_SHELL=		${PREFIX}/bin/scsh
+
+# Build references from dumped environment variables is not a problem.
+CHECK_WRKREF_SKIP+=	${PREFIX}/lib/scsh/scsh.image
+CHECK_WRKREF_SKIP+=	${PREFIX}/lib/scsh/stripped-scsh.image
 
 post-configure:
 	cd ${WRKSRC}/scsh/bsd; ${SED} -e '/LIBGEN/d' sysdep.h >xx ; ${MV} xx sysdep.h
