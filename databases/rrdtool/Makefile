@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/07/13 18:01:22 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/07/17 16:29:56 kristerw Exp $
 #
 
 DISTNAME=	rrdtool-1.2.10
@@ -16,6 +16,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS= --enable-shared
 
@@ -29,4 +30,5 @@ PERL5_PACKLIST+=	auto/RRDs/.packlist
 .include "../../www/cgilib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
