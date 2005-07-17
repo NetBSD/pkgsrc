@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/06/23 16:59:09 taca Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/17 14:39:21 taca Exp $
 
-DISTNAME=	RMagick-1.8.3
+DISTNAME=	RMagick-1.9.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/4940/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/5225/
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://rmagick.rubyforge.org/
