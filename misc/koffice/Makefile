@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2005/06/27 02:06:45 markd Exp $
+# $NetBSD: Makefile,v 1.60 2005/07/17 12:24:20 markd Exp $
 
 DISTNAME=	koffice-1.4.0a
 CATEGORIES=	misc kde
@@ -39,6 +39,14 @@ REPLACE_PERL+=		kpresenter/kprconverter.pl
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "options.mk"
+
+# fix odd broken untaring on NetBSD 1.6
+post-extract:
+	cd ${WRKSRC}/krita/plugins/convolutionfilters; \
+	if [ -f kis_custom_convolution_filter_configuration_widget. ]; then \
+		${MV} kis_custom_convolution_filter_configuration_widget. \
+		kis_custom_convolution_filter_configuration_widget.h; \
+	fi
 
 post-install:
 	@# The global desktop template files need to be user-writeable, or
