@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.15 2005/07/15 20:14:04 jlam Exp $
+# $NetBSD: automake.mk,v 1.16 2005/07/17 21:36:24 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -123,10 +123,10 @@ ${_TOOLS_DEPMETHOD.automake}+=	${TOOLS_DEPENDS.automake}
 EVAL_PREFIX+=			_TOOLS_AM_PREFIX=automake
 
 _TOOLS_AM_TYPE.aclocal=		TOOLS_CREATE
-TOOLS_REAL_CMD.aclocal=		${_TOOLS_AM_PREFIX}/bin/aclocal
+TOOLS_PATH.aclocal=		${_TOOLS_AM_PREFIX}/bin/aclocal
 
 _TOOLS_AM_TYPE.automake=	TOOLS_CREATE
-TOOLS_REAL_CMD.automake=	${_TOOLS_AM_PREFIX}/bin/automake
+TOOLS_PATH.automake=		${_TOOLS_AM_PREFIX}/bin/automake
 .  endif
 .endif
 
@@ -150,12 +150,12 @@ EVAL_PREFIX+=			_TOOLS_AM_PREFIX=automake14
 
 _TOOLS_AM_TYPE.aclocal-1.4=	TOOLS_CREATE
 _TOOLS_AM_TYPE.aclocal=		# empty
-TOOLS_REAL_CMD.aclocal-1.4=	${_TOOLS_AM_PREFIX}/bin/aclocal-1.4
+TOOLS_PATH.aclocal-1.4=	${_TOOLS_AM_PREFIX}/bin/aclocal-1.4
 TOOLS_ALIASES.aclocal-1.4=	aclocal
 
 _TOOLS_AM_TYPE.automake-1.4=	TOOLS_CREATE
 _TOOLS_AM_TYPE.automake=	# empty
-TOOLS_REAL_CMD.automake-1.4=	${_TOOLS_AM_PREFIX}/bin/automake-1.4
+TOOLS_PATH.automake-1.4=	${_TOOLS_AM_PREFIX}/bin/automake-1.4
 TOOLS_ALIASES.automake-1.4=	automake
 .  endif
 .endif
