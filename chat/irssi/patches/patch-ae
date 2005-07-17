@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.4 2005/07/17 14:32:46 dillo Exp $
+
+--- src/core/network.c.orig	2003-10-11 04:00:02.000000000 +0200
++++ src/core/network.c
+@@ -389,7 +389,7 @@ int net_transmit(GIOChannel *handle, con
+ 
+ 	err = g_io_channel_write(handle, (char *) data, len, &ret);
+ 	if (err == G_IO_ERROR_AGAIN ||
+-	    (err != 0 && (errno == EINTR || errno == EPIPE)))
++	    (err != 0 && (errno == EINTR || errno == EPIPE || errno == ENOTCONN)))
+ 		return 0;
+ 
+ 	return err == 0 ? (int)ret : -1;
