@@ -1,4 +1,4 @@
-# $NetBSD: rpcgen.mk,v 1.9 2005/07/17 21:36:24 jlam Exp $
+# $NetBSD: rpcgen.mk,v 1.10 2005/07/17 23:19:04 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,8 +54,7 @@ TOOLS_CMD.rpcgen=	${TOOLS_DIR}/bin/rpcgen
 .if ${OPSYS} == "NetBSD"
 TOOLS_ARGS.rpcgen?=	-b
 .endif
-TOOLS_CMDLINE.rpcgen=	\
-	CPP=${WRAPPER_BINDIR:Q}/cpp ${TOOLS_PATH.rpcgen} ${TOOLS_ARGS.rpcgen} "$$@"
+TOOLS_SCRIPT.rpcgen=	CPP=${WRAPPER_BINDIR:Q}/cpp ${TOOLS_SCRIPT_DFLT.rpcgen}
 
 # Make ${RPCGEN} call the "rpcgen" through the PATH, which should find
 # the rpcgen tool wrapper.
