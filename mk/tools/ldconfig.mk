@@ -1,4 +1,4 @@
-# $NetBSD: ldconfig.mk,v 1.4 2005/06/24 20:40:53 jlam Exp $
+# $NetBSD: ldconfig.mk,v 1.5 2005/07/17 21:36:24 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -44,12 +44,12 @@
 # commands that can be embedded into packages.
 #
 .if !defined(TOOLS_PLATFORM.ldconfig)
-TOOLS_NOOP+=			ldconfig
-TOOLS_LDCONFIG?=		${TRUE}
+TOOLS_NOOP+=		ldconfig
+TOOLS_LDCONFIG?=	${TRUE}
 .else
-TOOLS_CREATE+=			ldconfig
-TOOLS_REAL_CMD.ldconfig=	${TOOLS_PLATFORM.ldconfig}
-TOOLS_LDCONFIG?=		${TOOLS_REAL_CMD.ldconfig}
+TOOLS_CREATE+=		ldconfig
+TOOLS_PATH.ldconfig=	${TOOLS_PLATFORM.ldconfig}
+TOOLS_LDCONFIG?=	${TOOLS_PATH.ldconfig}
 .endif
 
 LDCONFIG?=	${TOOLS_LDCONFIG}
