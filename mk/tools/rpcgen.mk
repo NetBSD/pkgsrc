@@ -1,4 +1,4 @@
-# $NetBSD: rpcgen.mk,v 1.8 2005/06/11 05:22:03 jlam Exp $
+# $NetBSD: rpcgen.mk,v 1.9 2005/07/17 21:36:24 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,21 +41,21 @@
 # the real rpcgen.
 #
 TOOLS_CREATE+=		rpcgen
-.if !defined(TOOLS_REAL_CMD.rpcgen)
+.if !defined(TOOLS_PATH.rpcgen)
 TOOLS_EXECDIRS.rpcgen?=	/bin /sbin /usr/bin /usr/sbin
 .  for _d_ in ${TOOLS_EXECDIRS.rpcgen}
 .    if exists(${_d_}/rpcgen)
-TOOLS_REAL_CMD.rpcgen?=	${_d_}/rpcgen
+TOOLS_PATH.rpcgen?=	${_d_}/rpcgen
 .    endif
 .  endfor
-TOOLS_REAL_CMD.rpcgen?=	${FALSE}
+TOOLS_PATH.rpcgen?=	${FALSE}
 .endif
 TOOLS_CMD.rpcgen=	${TOOLS_DIR}/bin/rpcgen
 .if ${OPSYS} == "NetBSD"
-TOOLS_REAL_ARGS.rpcgen?=	-b
+TOOLS_ARGS.rpcgen?=	-b
 .endif
-TOOLS_REAL_CMDLINE.rpcgen=	\
-	CPP=${WRAPPER_BINDIR:Q}/cpp ${TOOLS_REAL_CMD.rpcgen} ${TOOLS_REAL_ARGS.rpcgen} "$$@"
+TOOLS_CMDLINE.rpcgen=	\
+	CPP=${WRAPPER_BINDIR:Q}/cpp ${TOOLS_PATH.rpcgen} ${TOOLS_ARGS.rpcgen} "$$@"
 
 # Make ${RPCGEN} call the "rpcgen" through the PATH, which should find
 # the rpcgen tool wrapper.
