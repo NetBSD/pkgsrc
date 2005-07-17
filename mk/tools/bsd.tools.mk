@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.30 2005/07/17 21:36:24 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.31 2005/07/17 23:19:04 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,7 +57,7 @@
 #	invoked when ${TOOLS_CMD.<tool>} is called.  If <tool> should
 #	be a symlink, then this variable is required and should be a
 #	full path.  If <tool> should be a wrapper, then this variable
-#	is required unless TOOLS_CMDLINE.<tool> is defined (see below).
+#	is required unless TOOLS_SCRIPT.<tool> is defined (see below).
 #
 # The following variables specify further details of each <tool> and
 # if set, cause a wrapper script to be created.
@@ -66,10 +66,11 @@
 #	command ahead of any command-line arguments.  This variable is
 #	optional.
 #
-#    TOOLS_CMDLINE.<tool> specifies the full command-line to invoke in
-#	the wrapper script when <tool> is called.  This variable is
-#	optional, and if left unspecified, then this is built up from
-#	TOOLS_PATH.<tool> and TOOLS_ARGS.<tool> by default.
+#    TOOLS_SCRIPT.<tool> specifies the Bourne-shell scriptlet to embed
+#	in the wrapper script that is executed when <tool> is called.
+# 	This variable is optional, and if left unspecified, then this
+# 	is built up from TOOLS_PATH.<tool> and TOOLS_ARGS.<tool> by
+# 	default.
 #
 # The following variables provide shortcuts for creating certain classes
 # of tools:
@@ -121,19 +122,19 @@ USE_TOOLS?=		# empty
 ######################################################################
 
 .for _t_ in ${TOOLS_NOOP}
-TOOLS_CREATE+=			${_t_}
-TOOLS_CMDLINE.${_t_}?=	exit 0
+TOOLS_CREATE+=		${_t_}
+TOOLS_SCRIPT.${_t_}?=	exit 0
 .endfor
 
 .for _t_ in ${TOOLS_BROKEN}
-TOOLS_CREATE+=			${_t_}
-TOOLS_CMDLINE.${_t_}?=	exit 1
+TOOLS_CREATE+=		${_t_}
+TOOLS_SCRIPT.${_t_}?=	exit 1
 .endfor
 
 .for _t_ in ${TOOLS_GNU_MISSING}
-TOOLS_CREATE+=			${_t_}
-TOOLS_PATH.${_t_}?=		${PKGSRCDIR}/mk/gnu-config/missing
-TOOLS_CMDLINE.${_t_}?=	${TOOLS_PATH.${_t_}} ${_t_:T:C/-[0-9].*$//}
+TOOLS_CREATE+=		${_t_}
+TOOLS_PATH.${_t_}?=	${PKGSRCDIR}/mk/gnu-config/missing
+TOOLS_SCRIPT.${_t_}?=	${TOOLS_PATH.${_t_}} ${_t_:T:C/-[0-9].*$//}
 .endfor
 
 ######################################################################
@@ -166,7 +167,7 @@ MKDIR?=         mkdir -p
 .for _t_ in ${TOOLS_CREATE}
 TOOLS_CMD.${_t_}?=		${TOOLS_DIR}/bin/${_t_}
 TOOLS_PATH.${_t_}?=		${FALSE}
-TOOLS_CMDLINE_DFLT.${_t_}= \
+TOOLS_SCRIPT_DFLT.${_t_}=	\
 	${TOOLS_PATH.${_t_}} ${TOOLS_ARGS.${_t_}} "$$@"
 
 override-tools: ${TOOLS_CMD.${_t_}}
@@ -175,18 +176,18 @@ ${TOOLS_CMD.${_t_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -d ${.TARGET:H:Q} ||		\
 		${MKDIR} ${.TARGET:H:Q}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} -n ${TOOLS_CMDLINE.${_t_}:Q}""; then			\
+	if ${TEST} -n ${TOOLS_SCRIPT.${_t_}:Q}""; then			\
 		create=wrapper;						\
-		cmdline=${TOOLS_CMDLINE.${_t_}:Q};			\
+		script=${TOOLS_SCRIPT.${_t_}:Q};			\
 	elif ${TEST} -n ${TOOLS_PATH.${_t_}:Q}""; then			\
 		if ${TEST} -n ${TOOLS_ARGS.${_t_}:Q}""; then		\
 			create=wrapper;					\
-			cmdline=${TOOLS_CMDLINE_DFLT.${_t_}:Q};		\
+			script=${TOOLS_SCRIPT_DFLT.${_t_}:Q};		\
 		else							\
 			case ${TOOLS_PATH.${_t_}:Q}"" in		\
 			/*)	create=symlink ;;			\
 			*)	create=wrapper;				\
-				cmdline=${TOOLS_CMDLINE_DFLT.${_t_}:Q}; \
+				script=${TOOLS_SCRIPT_DFLT.${_t_}:Q};	\
 			esac;						\
 		fi;							\
 	else								\
@@ -197,8 +198,8 @@ ${TOOLS_CMD.${_t_}}:
 		{ ${ECHO} '#!'${TOOLS_SHELL:Q};				\
 		  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
 		  ${ECHO} '${ECHO} "[*] "'${.TARGET:Q}'" $$@" >> $$wrapperlog'; \
-		  ${ECHO} "${ECHO} \"<.> $$cmdline\" >> \$$wrapperlog"; \
-		  ${ECHO} "$$cmdline";					\
+		  ${ECHO} "${ECHO} \"<.> $$script\" >> \$$wrapperlog";	\
+		  ${ECHO} "$$script";					\
 		} > ${.TARGET:Q};					\
 		${CHMOD} +x ${.TARGET:Q};				\
 		;;							\
