@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10617 2005/07/17 12:32:56 markd Exp $
+$NetBSD: CHANGES,v 1.10618 2005/07/17 14:34:09 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3221,3 +3221,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/centericq to 4.20.0nb1 [adrianp 2005-07-16]
 	Updated archivers/archangel to 20050716 [agc 2005-07-16]
 	Updated misc/koffice to 1.4.0b [markd 2005-07-17]
+	Updated chat/irssi to 0.8.9nb5 [dillo 2005-07-17]
