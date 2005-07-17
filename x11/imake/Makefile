@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/07/17 21:47:00 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/17 21:57:52 rillig Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -64,16 +64,13 @@ post-install:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	hostdef=${X11ROOT:Q}/lib/X11/config/host.def;			\
 	hosttmp=${WRKSRC:Q}/host.def.tmp;				\
-	${SED} -e "s|\#define ProjectRoot ${X11ROOT}||"			\
-		"$${hostdef}" > "$${hosttmp}";				\
+	(${SED} -e "s|\#define ProjectRoot ${X11ROOT}||" "$${hostdef}";	\
+	 ${ECHO} "";							\
+	 ${ECHO} "#ifdef BeforeVendorCF";				\
+	 ${ECHO} "#define ProjectRoot ${X11ROOT}";			\
+	 ${ECHO} "#endif";						\
+	)> "$${hosttmp}";						\
 	${INSTALL_DATA} "$${hosttmp}" "$${hostdef}";			\
 	${RM} -f "$${hosttmp}"
-
-	@( \
-	${ECHO};					\
-	${ECHO} "#ifdef BeforeVendorCF";		\
-	${ECHO} "#define ProjectRoot ${X11ROOT}";	\
-	${ECHO} "#endif";				\
-	) >> ${X11ROOT}/lib/X11/config/host.def
 
 .include "../../mk/bsd.pkg.mk"
