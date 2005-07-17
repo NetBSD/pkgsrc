@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.1 2005/07/17 22:53:06 kristerw Exp $
+
+--- gui/gdmlogin.c.orig	Mon Jul 18 00:39:23 2005
++++ gui/gdmlogin.c	Mon Jul 18 00:39:49 2005
+@@ -342,11 +342,11 @@
+ static void 
+ back_prog_launch_after_timeout ()
+ {
++	int timeout;
+ 	g_assert (back_prog_timeout_event_id == -1);
+ 	g_assert (back_prog_watcher_event_id == -1);
+ 	g_assert (back_prog_pid == -1);
+ 	
+-	int timeout;
+ 	
+ 	/* No program to run. */
+ 	if (! back_prog_get_path ())
