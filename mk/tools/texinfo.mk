@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.7 2005/05/21 04:53:17 jlam Exp $
+# $NetBSD: texinfo.mk,v 1.8 2005/07/17 21:36:24 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,13 +47,13 @@ MAKE_ENV+=		INSTALL_INFO=${TOOLS_CMD.install-info:Q}
 # if USE_MAKEINFO is "yes" or will exit on error if not.  MAKEINFO is
 # defined by mk/texinfo.mk if USE_MAKEINFO is "yes".
 #
-USE_MAKEINFO?=			no
+USE_MAKEINFO?=		no
 .if empty(USE_MAKEINFO:M[nN][oO])
-TOOLS_CREATE+=			makeinfo
-TOOLS_REAL_CMD.makeinfo=	${MAKEINFO:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-TOOLS_REAL_ARGS.makeinfo=	${MAKEINFO:C/^/_asdf_/1:N_asdf_*}
+TOOLS_CREATE+=		makeinfo
+TOOLS_PATH.makeinfo=	${MAKEINFO:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+TOOLS_ARGS.makeinfo=	${MAKEINFO:C/^/_asdf_/1:N_asdf_*}
 .else
-TOOLS_BROKEN+=			makeinfo
+TOOLS_BROKEN+=		makeinfo
 .endif
-CONFIGURE_ENV+=			MAKEINFO=${TOOLS_CMD.makeinfo:Q}
-MAKE_ENV+=			MAKEINFO=${TOOLS_CMD.makeinfo:Q}
+CONFIGURE_ENV+=		MAKEINFO=${TOOLS_CMD.makeinfo:Q}
+MAKE_ENV+=		MAKEINFO=${TOOLS_CMD.makeinfo:Q}

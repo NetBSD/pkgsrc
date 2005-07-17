@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.16 2005/07/15 18:27:55 jlam Exp $
+# $NetBSD: imake.mk,v 1.17 2005/07/17 21:36:24 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -73,8 +73,8 @@ USE_TOOLS+=	imake xmkmf
 USE_TOOLS+=	${IMAKE_TOOLS:Nimake}
 .endif
 
-TOOLS_REAL_ARGS.imake?=	${IMAKEOPTS}
-TOOLS_REAL_ARGS.xmkmf?=	${XMKMF_FLAGS}
+TOOLS_ARGS.imake?=	${IMAKEOPTS}
+TOOLS_ARGS.xmkmf?=	${XMKMF_FLAGS}
 
 TOOLS_XMKMF=		${${_TOOLS_VARNAME.xmkmf}} -a
 XMKMF=			${${_TOOLS_VARNAME.xmkmf}} -a
