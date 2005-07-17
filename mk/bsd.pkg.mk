@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1708 2005/07/16 01:19:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1709 2005/07/17 04:17:09 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -422,6 +422,7 @@ _PKG_DEBUG_SCRIPT=	${SH} -x
 .endif
 
 # A few aliases for *-install targets
+INSTALL=		${TOOLS_INSTALL}	# XXX override sys.mk
 INSTALL_PROGRAM?= 	\
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_GAME?=		\
