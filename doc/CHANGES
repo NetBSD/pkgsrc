@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10618 2005/07/17 14:34:09 dillo Exp $
+$NetBSD: CHANGES,v 1.10619 2005/07/17 14:40:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3222,3 +3222,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/archangel to 20050716 [agc 2005-07-16]
 	Updated misc/koffice to 1.4.0b [markd 2005-07-17]
 	Updated chat/irssi to 0.8.9nb5 [dillo 2005-07-17]
+	Updated graphics/ruby-RMagick to 1.9.0 [taca 2005-07-17]
