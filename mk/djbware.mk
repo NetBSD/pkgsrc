@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.4 2005/05/17 08:42:24 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.5 2005/07/18 18:26:47 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -59,6 +59,10 @@ do-configure:
 		${ECHO} ${DJB_CONFIG_PREFIX}/man > conf-man;		\
 	[ -f conf-qmail ] && \
 		${ECHO} ${QMAILDIR} > conf-qmail;			\
+	[ -f conf-bgincs ] && \
+		${ECHO} ${LOCALBASE}/include/bglibs > conf-bgincs;	\
+	[ -f conf-bglibs ] && \
+		${ECHO} ${LOCALBASE}/lib/bglibs > conf-bglibs;		\
 	${DJB_CONFIG_CMDS}
 .endif
 
