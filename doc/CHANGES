@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10622 2005/07/18 07:04:42 martti Exp $
+$NetBSD: CHANGES,v 1.10623 2005/07/18 13:47:58 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3228,3 +3228,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/ja-squirrelmail to 1.4.5 [martti 2005-07-18]
 	Updated mail/squirrelmail to 1.4.5 [martti 2005-07-18]
 	Updated mail/squirrelmail-locales to 1.4.5 [martti 2005-07-18]
+	Updated textproc/rubber to 1.0 [tonio 2005-07-18]
