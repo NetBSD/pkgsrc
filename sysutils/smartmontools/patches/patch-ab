@@ -1,15 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2005/07/15 07:49:50 martin Exp $
+$NetBSD: patch-ab,v 1.3 2005/07/18 09:26:30 rillig Exp $
 
 --- os_netbsd.c.orig	2004-04-20 06:53:26.000000000 +0200
 +++ os_netbsd.c	2005-07-15 09:37:42.000000000 +0200
-@@ -21,6 +21,7 @@
+@@ -21,4 +21,5 @@
  #include "scsicmds.h"
  #include "utility.h"
  #include "os_netbsd.h"
 +#include <unistd.h>
  
- const char *os_XXXX_c_cvsid = "$Id: patch-ab,v 1.2 2005/07/15 07:49:50 martin Exp $" \
- ATACMDS_H_CVSID OS_NETBSD_H_CVSID SCSICMDS_H_CVSID UTILITY_H_CVSID;
 @@ -381,7 +382,7 @@
    sc.databuf = iop->dxferp;
    sc.datalen = iop->dxfer_len;
