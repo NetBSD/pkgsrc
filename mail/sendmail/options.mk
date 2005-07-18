@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.8 2005/07/16 01:19:13 jlam Exp $
+# $NetBSD: options.mk,v 1.9 2005/07/18 21:33:24 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
-PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl starttls tcpwrappers \
-			socketmap
+PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers socketmap
 PKG_SUGGESTED_OPTIONS=	tcpwrappers
+
+PKG_OPTIONS_LEGACY_OPTS=	starttls:tls
 
 .include "../../mk/bsd.options.mk"
 
@@ -33,7 +34,7 @@ PKG_SUGGESTED_OPTIONS=	tcpwrappers
 ###
 ### Use OpenSSL libraries for SMTP STARTTLS support
 ###
-.if !empty(PKG_OPTIONS:Mstarttls)
+.if !empty(PKG_OPTIONS:Mtls)
 .  include "../../security/openssl/buildlink3.mk"
 .endif
 
