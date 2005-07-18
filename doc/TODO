@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3724 2005/07/17 21:41:03 kristerw Exp $
+$NetBSD: TODO,v 1.3725 2005/07/18 07:04:42 martti Exp $
 
 Suggested new packages
 ======================
@@ -1032,7 +1032,6 @@ Suggested package updates
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
 	o squid-2.5.10
-	o squirrelmail-1.4.5
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1

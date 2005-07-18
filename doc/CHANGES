@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10621 2005/07/18 00:08:55 seb Exp $
+$NetBSD: CHANGES,v 1.10622 2005/07/18 07:04:42 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3225,3 +3225,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/ruby-RMagick to 1.9.0 [taca 2005-07-17]
 	Updated emulators/spim to 7.1 [kristerw 2005-07-17]
 	Updated mail/bogofilter to 0.92.8nb3 [seb 2005-07-18]
+	Updated mail/ja-squirrelmail to 1.4.5 [martti 2005-07-18]
+	Updated mail/squirrelmail to 1.4.5 [martti 2005-07-18]
+	Updated mail/squirrelmail-locales to 1.4.5 [martti 2005-07-18]
