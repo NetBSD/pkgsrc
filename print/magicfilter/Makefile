@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/07/07 21:18:08 tron Exp $
+# $NetBSD: Makefile,v 1.42 2005/07/18 02:37:22 jlam Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	4
@@ -18,7 +18,7 @@ DEPENDS+=	papersize-[0-9]*:../../print/papersize
 USE_TOOLS+=	gmake gzip
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GHOSTSCRIPT=${LOCALBASE}/bin/gs
-CONFIGURE_ENV+= GZIP=${TOOLS_GZIP_CMD:C/ .*//W:Q}
+CONFIGURE_ENV+= GZIP=${TOOLS_GZIP_CMD:Q}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
