@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/18 20:00:22 hubertf Exp $
 #
 
 DISTNAME=	rfc-3.2
 PKGNAME=	rfcutil-3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.dewn.com/rfc/
 EXTRACT_SUFX=	#
@@ -24,7 +24,9 @@ REPLACE_PERL=	rfc
 INSTALLATION_DIRS=	bin
 
 do-extract:
-	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}/rfc
+	${SED} \
+		-e 's,/usr/local,${PREFIX},' \
+		<${DISTDIR}/${DISTNAME} >${WRKSRC}/rfc
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rfc ${PREFIX}/bin/rfc
