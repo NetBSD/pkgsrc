@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 23:11:59 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/07/18 01:24:02 kristerw Exp $
 
 SHA1 (imaze-sounds.tar) = 976b1acb2da35f5c69c4d867873f65162ae33ecc
 RMD160 (imaze-sounds.tar) = 6e6ea9313ab9c733486f11f2c6a9e8e09f97401e
@@ -9,3 +9,4 @@ Size (imaze1.3.tar.Z) = 233695 bytes
 SHA1 (patch-aa) = cd2fa9e2d93e2f2ee1845c9c4fc3fc66ffd23711
 SHA1 (patch-ab) = 19f3dfafa9126b3352b938610f77f1b7144a1aa3
 SHA1 (patch-ac) = dcd117f666f7f5b489e8469ca5e19c9d8464264f
+SHA1 (patch-ad) = df3416e378d17152ffc1dbb8f9b61645d92c015c
