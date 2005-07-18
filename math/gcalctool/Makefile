@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/06/21 18:18:57 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/07/18 00:09:38 kristerw Exp $
 #
 
 DISTNAME=		gcalctool-5.5.42
@@ -20,6 +20,14 @@ USE_TOOLS+=		bison gmake
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		gcalctool.schemas
+
+# The sources assume <malloc.h> exists.  Create a fake one for platforms
+# that don't have it.
+post-wrapper:
+	if ${TEST} ! -f /usr/include/malloc.h; then		\
+		${ECHO} "#include <stdlib.h>"			\
+			> ${BUILDLINK_DIR}/include/malloc.h;	\
+	fi
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/atk/buildlink3.mk"

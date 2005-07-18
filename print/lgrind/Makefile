@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:20 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/18 00:15:13 kristerw Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
@@ -36,5 +36,13 @@ pre-install:
 
 post-install:
 	${PREFIX}/bin/texconfig rehash
+
+# The sources assume <malloc.h> exists.  Create a fake one for platforms
+# that don't have it.
+post-wrapper:
+	if ${TEST} ! -f /usr/include/malloc.h; then		\
+		${ECHO} "#include <stdlib.h>"			\
+			> ${BUILDLINK_DIR}/include/malloc.h;	\
+	fi
 
 .include "../../mk/bsd.pkg.mk"
