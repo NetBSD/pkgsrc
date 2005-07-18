@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10620 2005/07/17 21:41:03 kristerw Exp $
+$NetBSD: CHANGES,v 1.10621 2005/07/18 00:08:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3224,3 +3224,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/irssi to 0.8.9nb5 [dillo 2005-07-17]
 	Updated graphics/ruby-RMagick to 1.9.0 [taca 2005-07-17]
 	Updated emulators/spim to 7.1 [kristerw 2005-07-17]
+	Updated mail/bogofilter to 0.92.8nb3 [seb 2005-07-18]
