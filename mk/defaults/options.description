@@ -1,6 +1,7 @@
 2ch_dict	
 a52	
 aac	
+aalib			Enable aalib support.
 ac3_passthrough	
 ads	
 alsa	

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/06/08 16:18:44 dillo Exp $
+# $NetBSD: options.mk,v 1.5 2005/07/18 12:07:33 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -15,7 +15,7 @@ PKG_SUPPORTED_OPTIONS=	gif jpeg mad dv dvdread oss png theora vorbis
 
 # Set options based on the specific package being built.
 .if !empty(PKGNAME:M*mplayer*)
-PKG_SUPPORTED_OPTIONS+=	esound mplayer-menu nas sdl
+PKG_SUPPORTED_OPTIONS+=	aalib esound mplayer-menu nas sdl
 
 .  if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=	arts
@@ -45,7 +45,7 @@ PKG_SUPPORTED_OPTIONS+=	mplayer-real
 # Define PKG_SUGGESTED_OPTIONS.
 # -------------------------------------------------------------------------
 
-.for _o_ in arts cdparanoia dv dvdread esound gif jpeg \
+.for _o_ in aalib arts cdparanoia dv dvdread esound gif jpeg \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-runtime-cpudetection mplayer-win32 \
 	    nas oss png sdl theora vorbis xvid 
@@ -77,6 +77,13 @@ PKG_OPTIONS_LEGACY_VARS+=	MPLAYER_USE_MEDIALIB:mlib
 # -------------------------------------------------------------------------
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Maalib)
+CONFIGURE_ARGS+=	--enable-aa
+.  include "../../graphics/aalib-x11/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-aa
+.endif
 
 .if !empty(PKG_OPTIONS:Marts)
 CONFIGURE_ARGS+=	--enable-arts
