@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2005/06/30 15:14:07 adam Exp $
+# $NetBSD: Makefile,v 1.122 2005/07/18 19:13:37 reed Exp $
 
 DISTNAME=	gimp-2.2.8
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.2/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.2/ \
@@ -44,7 +45,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-gimpprint-prefix=${BUILDLINK_PREFIX.gimp-print-lib}
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0
-.for f in controllerrc gimprc gtkrc ps-menurc sessionrc templaterc unionrc
+.for f in controllerrc gimprc gtkrc ps-menurc sessionrc templaterc unitrc
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
