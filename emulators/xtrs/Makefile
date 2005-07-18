@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/18 00:50:21 kristerw Exp $
 #
 
 DISTNAME=	xtrs-4.9
@@ -27,6 +27,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.hex ${PREFIX}/lib/xtrs/romimage.m4p
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xtrs
 	${INSTALL_DATA} ${WRKSRC}/xtrsrom4p.README ${PREFIX}/share/doc/xtrs
+
+# The sources assume <malloc.h> exists.  Create a fake one for platforms
+# that don't have it.
+post-wrapper:
+	if ${TEST} ! -f /usr/include/malloc.h; then		\
+		${ECHO} "#include <stdlib.h>"			\
+			> ${BUILDLINK_DIR}/include/malloc.h;	\
+	fi
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
