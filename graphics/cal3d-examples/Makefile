@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/18 01:31:54 kristerw Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -39,7 +39,7 @@ post-patch:
 	for f in ${PATCHDATA}; do \
 		${CP} ${WRKDATADIR}/$$f ${WRKDATADIR}/$$f.pkgsrc && \
 		${SED} -e 's|@@DATADIR@@|${DATADIR}|g' ${WRKDATADIR}/$$f.pkgsrc > \
-			${WRKDATADIR}/$$f; && \
+			${WRKDATADIR}/$$f && \
 		${RM} ${WRKDATADIR}/$$f.pkgsrc; \
 		${RM} ${WRKDATADIR}/$$f.orig; \
 		done
