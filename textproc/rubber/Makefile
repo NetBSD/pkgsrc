@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:35 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/18 13:46:45 tonio Exp $
 #
 
-DISTNAME=		rubber-0.99.8
-PKGREVISION=		1
+DISTNAME=		rubber-1.0
 CATEGORIES=		textproc
 MASTER_SITES=		http://ebeffara.free.fr/pub/
 
-MAINTAINER=		reilles@loria.fr
-HOMEPAGE=		http://rubber.sourceforge.net/
+MAINTAINER=		tonio@NetBSD.org
+HOMEPAGE=		http://www.pps.jussieu.fr/~beffara/soft/rubber/
 COMMENT=		Automated system for building LaTeX documents
 
 DEPENDS+=		teTeX-bin-[0-9]*:../../print/teTeX-bin
@@ -18,7 +17,7 @@ USE_TOOLS+=         gmake
 USE_MAKEINFO=           yes
 INFO_FILES=             rubber.info
 TEXINFO_REQD=		4.6
-PYTHON_VERSIONS_ACCEPTED=	23
+PYTHON_VERSIONS_ACCEPTED=	24 23
 
 CONFIGURE_ARGS=		--python=${PYTHONBIN} --prefix=${PREFIX} \
 			--datadir=${PREFIX}/share
