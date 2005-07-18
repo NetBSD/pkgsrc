@@ -5,7 +5,7 @@ aalib			Enable aalib support.
 ac3_passthrough	
 ads	
 alsa	
-althash	
+althash			ezmlm patch to hash subscriber db case-insensitively.
 anthy			Use Anthy as Japanese conversion program.
 antialias	
 apm	
@@ -26,10 +26,10 @@ avifile
 awl-sql-tests	
 backend-mysql	
 backend-pgsql	
-badrcptto	
+badrcptto		qmail patch to SMTP-reject certain envelope recipients.
 bayes-sql-tests	
 bdb	
-bigdns	
+bigdns			qmail patch to handle oversized responses to MX queries.
 bktr	
 blender-exppython	Enable the Experimental Python support.
 bpf	
@@ -47,7 +47,7 @@ cups
 curl	
 curses	
 cyrix	
-darwin	
+darwin			Build and/or run on Darwin and Mac OS X.
 db	
 db2	
 db4	
@@ -106,7 +106,7 @@ iconv
 id3	
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 ifevents	
-ignoreip2	
+ignoreip2		djbdns patch to treat certain responses as NXDOMAIN.
 imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
 imstt	
@@ -167,12 +167,11 @@ native
 ncurses	
 neomagic	
 net-tests	
-netqmail	
+netqmail		qmail patch collection from respected list members.
 newport	
 nogui	
 nospoof	
 nsc	
-nullenvsender	
 nv	
 ogg			Enable Ogg support.
 okinawa_dict	
@@ -181,7 +180,7 @@ opengl			Use OpenGL as display library.
 openldap	
 openssl	
 oss			Enable support for the Open Sound System audio library.
-outgoingip	
+outgoingip		qmail patch to force a particular source IP address.
 pam			Enable PAM support.
 patchviewer	
 pcre	
@@ -201,13 +200,13 @@ postgresql74
 prefix-cmds	
 python	
 qpopper-servermode	Enable server mode.
-qregex	
+qregex			qmail patch to SMTP-reject customizable patterns.
 qt	
 quota	
 radius	
 rc5	
 readline	
-realrcptto	
+realrcptto		qmail patch to SMTP-reject nonexistent recipients.
 recommended-db	
 remoteinc	
 rendition	
@@ -215,7 +214,7 @@ rrdtool
 s3	
 s3virge	
 samba	
-sasl	
+sasl			Enable SASL support.
 savage	
 sdl			Use SDL as display library.
 siliconmotion	
@@ -229,20 +228,20 @@ socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 sqlite	
 ssl			Enable SSL support.
-starttls	
+starttls		Enable TLS support.
 static	
 subshell	
 suexec	
 svn	
-syncdir	
+syncdir			Force synchronous link() and related syscalls.
 tcpd	
 tcpwrappers	
 tdb	
 tdfx	
 tga	
 theora			Use the theora codecs.
-tinydns64	
-tls	
+tinydns64		djbdns patch to fix tinydns-data on 64-bit platforms.
+tls			Enable TLS support.
 trident	
 truetype	
 tseng	
@@ -254,7 +253,7 @@ vfs
 vga	
 via	
 virtualchroot	
-viruscan	
+viruscan		qmail patch to SMTP-reject certain MIME attachments.
 vmware	
 vorbis			Enable Ogg Vorbis support.
 vpop	
