@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.31 2005/06/10 01:37:21 dmcmahill Exp $	*/
+/*	$NetBSD: perform.c,v 1.32 2005/07/18 09:14:04 hubertf Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.31 2005/06/10 01:37:21 dmcmahill Exp $");
+__RCSID("$NetBSD: perform.c,v 1.32 2005/07/18 09:14:04 hubertf Exp $");
 #endif
 #endif
 
@@ -446,17 +446,8 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 
 	if (buildinfo[BI_IGNORE_RECOMMENDED] != NULL &&
 	    strcasecmp(buildinfo[BI_IGNORE_RECOMMENDED], "NO") != 0) {
-		warnx("Package `%s' has", pkg);
-		warnx("IGNORE_RECOMMENDED set: This package was built with");
-		warnx("dependency recommendations ignored.  It may have been");
-		warnx("built against a set of installed packages that is");
-		warnx("different from the recommended set of pre-requisites.");
-		warnx("As a consequence, this package may not work on this");
-		warnx("or other systems with a different set of packages.");
-		if (!Force && !getenv("PKG_IGNORE_RECOMMENDED")) {
-			    warnx("aborting.");
-			    goto bomb;
-		}
+		warnx("%s was built", pkg);
+		warnx("\t to ignore recommended dependencies, this may cause problems!\n");
 	}
 
 	/*
