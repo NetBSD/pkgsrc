@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.117 2005/07/18 02:33:27 jlam Exp $
+# $NetBSD: replace.mk,v 1.118 2005/07/18 21:40:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1174,8 +1174,12 @@ TOOLS_ARGS.${_t_}?=	\
 ### For each tool, TOOLS_CMDLINE.<tool> is the full command (path and
 ### arguments) that should be run to properly execute the tool.
 ###
-.  if defined(TOOLS_PATH.${_t_})
+.  if defined(TOOLS_PATH.${_t_}) && !empty(TOOLS_PATH.${_t_})
+.    if defined(TOOLS_ARGS.${_t_}) && !empty(TOOLS_ARGS.${_t_})
 TOOLS_CMDLINE.${_t_}?=	${TOOLS_PATH.${_t_}} ${TOOLS_ARGS.${_t_}}
+.    else
+TOOLS_CMDLINE.${_t_}?=	${TOOLS_PATH.${_t_}}
+.    endif
 .  endif
 ###
 ### If a "TOOL" name is associated with the tool, then export two
