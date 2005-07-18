@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:23 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/18 18:28:23 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.0
@@ -33,8 +33,6 @@ BUILD_TARGET=		all
 
 DJB_RESTRICTED=		NO
 BGWARE_INSTALLER=	YES
-DJB_CONFIG_CMDS=	${ECHO} ${PREFIX}/include/bglibs > ${WRKSRC}/conf-bgincs;
-DJB_CONFIG_CMDS+=	${ECHO} ${PREFIX}/lib/bglibs > ${WRKSRC}/conf-bglibs
 
 .include "../../mk/bsd.prefs.mk"
 
