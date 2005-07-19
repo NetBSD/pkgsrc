@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2004/12/21 07:00:52 martti Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2005/07/19 17:49:33 drochner Exp $
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/lyx.mo
@@ -14,6 +14,7 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/lyx.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/lyx.mo
 bin/lyx
 bin/noweb2lyx
 bin/reLyX
@@ -40,7 +41,6 @@ share/lyx/bind/xemacs.bind
 share/lyx/chkconfig.ltx
 share/lyx/clipart/platypus.eps
 share/lyx/configure
-share/lyx/configure.cmd
 share/lyx/doc/Customization.lyx
 share/lyx/doc/DocStyle.lyx
 share/lyx/doc/Extended.lyx
@@ -845,22 +845,20 @@ share/lyx/layouts/svglobal.layout
 share/lyx/layouts/svjog.layout
 share/lyx/layouts/svjour.inc
 share/lyx/layouts/svprobth.layout
-share/lyx/lyx2lyx/error.py
-share/lyx/lyx2lyx/error.pyc
+share/lyx/lyx2lyx/LyX.py
+share/lyx/lyx2lyx/lyx_0_12.py
+share/lyx/lyx2lyx/lyx_1_0_0.py
+share/lyx/lyx2lyx/lyx_1_0_1.py
+share/lyx/lyx2lyx/lyx_1_1_4.py
+share/lyx/lyx2lyx/lyx_1_1_5.py
+share/lyx/lyx2lyx/lyx_1_1_6.py
+share/lyx/lyx2lyx/lyx_1_1_6fix3.py
+share/lyx/lyx2lyx/lyx_1_2.py
+share/lyx/lyx2lyx/lyx_1_3.py
+share/lyx/lyx2lyx/lyx_1_4.py
 share/lyx/lyx2lyx/lyx2lyx
-share/lyx/lyx2lyx/lyxconvert_210.py
-share/lyx/lyx2lyx/lyxconvert_215.py
-share/lyx/lyx2lyx/lyxconvert_215.pyc
-share/lyx/lyx2lyx/lyxconvert_216.py
-share/lyx/lyx2lyx/lyxconvert_216.pyc
-share/lyx/lyx2lyx/lyxconvert_217.py
-share/lyx/lyx2lyx/lyxconvert_217.pyc
-share/lyx/lyx2lyx/lyxconvert_218.py
-share/lyx/lyx2lyx/lyxconvert_218.pyc
-share/lyx/lyx2lyx/lyxconvert_220.py
-share/lyx/lyx2lyx/lyxconvert_220.pyc
 share/lyx/lyx2lyx/parser_tools.py
-share/lyx/lyx2lyx/parser_tools.pyc
+share/lyx/lyx2lyx/profiling.py
 share/lyx/lyxrc.defaults
 share/lyx/lyxrc.example
 share/lyx/packages.lst
