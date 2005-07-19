@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:07:42 agc Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/19 10:22:33 grant Exp $
 
 DISTNAME=	en1-980910
 PKGNAME=	mbrolavox-en1-980910
@@ -11,7 +11,7 @@ MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.festvox.org/mbrola/
 COMMENT=	British English male voice for MBROLA
 
-DEPENDS+=	mbrola-301h:../mbrola
+DEPENDS+=	mbrola-301h:../../audio/mbrola
 
 LICENSE=	no-commercial-use
 

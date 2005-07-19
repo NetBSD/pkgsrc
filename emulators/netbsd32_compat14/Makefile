@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/23 10:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/19 10:23:42 grant Exp $
 #
 
 DISTNAME=		compat14-${MACHINE32_ARCH}-${VERSION}
@@ -15,10 +15,10 @@ PKGREVISION=		1
 
 .if ${MACHINE_ARCH} == "sparc64"
 MACHINE32_ARCH=	sparc
-DEPENDS+=		netbsd32_compat15>=1.0:../netbsd32_compat15
+DEPENDS+=		netbsd32_compat15>=1.0:../../emulators/netbsd32_compat15
 .elif ${MACHINE_ARCH} == "x86_64"
 MACHINE32_ARCH=	i386
-DEPENDS+=		netbsd32_compat16>=1.0:../netbsd32_compat16
+DEPENDS+=		netbsd32_compat16>=1.0:../../emulators/netbsd32_compat16
 .else
 MACHINE32_ARCH=	${MACHINE_ARCH}
 .endif
