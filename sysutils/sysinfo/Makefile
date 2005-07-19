@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/19 14:05:27 wiz Exp $
 #
 
 DISTNAME=		sysinfo-3.5.1
@@ -9,7 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.magnicomp.com/
 COMMENT=		Displays system hardware and software information and configuration
 
-LICENSE=		shareware
+LICENSE=		no-commercial-use
 
 ONLY_FOR_PLATFORM=	SunOS-*-*      # only for Solaris, at the moment
 
