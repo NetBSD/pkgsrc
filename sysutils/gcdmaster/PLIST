@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.7 2005/07/19 16:36:51 drochner Exp $
+bin/gcdmaster
+man/man1/gcdmaster.1
+share/applications/gcdmaster.desktop
+share/gcdmaster/glade/ProjectChooser.glade
+share/pixmaps/gcdmaster.png
+@dirrm share/gcdmaster/glade
+@dirrm share/gcdmaster
