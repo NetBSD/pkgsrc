@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/13 18:01:19 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/19 10:21:01 grant Exp $
 #
 
 DISTNAME=	Device-Modem-1.36
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Device/}
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl module to talk to modem devices connected via serial port
 
-DEPENDS+=	p5-Device-SerialPort-[0-9]*:../p5-Device-SerialPort
+DEPENDS+=	p5-Device-SerialPort-[0-9]*:../../comms/p5-Device-SerialPort
 
 PERL5_PACKLIST=		auto/Device/Modem/.packlist
 
