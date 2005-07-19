@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/07/19 10:02:11 grant Exp $
 
 DISTNAME=	ruby-${RUBY_VERSION}
 PKGREVISION=	2
@@ -18,7 +18,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../${RUBY_PKGPREFIX}-base
+DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../../lang/${RUBY_PKGPREFIX}-base
 
 RUBY_COMMANDS=	irb ruby
 .if ${RUBY_VER} >= 18
