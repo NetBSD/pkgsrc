@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.197 2005/07/16 22:33:18 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.198 2005/07/19 22:31:01 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -567,7 +567,7 @@ PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 # Make variable definitions cache
 .include "${PKGSRCDIR}/mk/bsd.makevars.mk"
 
-_PKGSRC_USE_TOOLS=	awk cut echo pwd sed tr uname
-USE_TOOLS+=		${_PKGSRC_USE_TOOLS:S/$/:pkgsrc/}
+USE_TOOLS+=		awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc	\
+			sed:pkgsrc tr:pkgsrc uname:pkgsrc
 
 .endif	# BSD_PKG_MK
