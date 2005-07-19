@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/07/19 15:23:36 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/07/19 15:25:33 wiz Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -14,7 +14,7 @@ COMMENT=	3D shoot-em-up for 8-bit X11 displays
 
 BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
 
-LICENSE=	shareware
+LICENSE=	xdoom-license
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	doomsrc.zip
