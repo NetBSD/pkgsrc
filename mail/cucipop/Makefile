@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/19 14:00:35 wiz Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -15,7 +15,7 @@ COMMENT=	The Cubic Circle POP3 mail server
 
 USE_PKGINSTALL=	YES
 
-LICENSE=	shareware
+LICENSE=	cucipop-license
 
 MAKE_ENV+=	ROOT_USER="${ROOT_USER}"
 MAKE_ENV+=	ROOT_GROUP="${ROOT_GROUP}"
