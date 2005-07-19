@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/26 10:30:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/07/19 11:11:58 adam Exp $
 bin/tclsh
 bin/tclsh8.4
 include/tcl.h
@@ -165,6 +165,7 @@ man/man3/Tcl_ChannelName.3
 man/man3/Tcl_ChannelOutputProc.3
 man/man3/Tcl_ChannelSeekProc.3
 man/man3/Tcl_ChannelSetOptionProc.3
+man/man3/Tcl_ChannelThreadActionProc.3
 man/man3/Tcl_ChannelVersion.3
 man/man3/Tcl_ChannelWatchProc.3
 man/man3/Tcl_ChannelWideSeekProc.3
