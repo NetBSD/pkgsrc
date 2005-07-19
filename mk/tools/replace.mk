@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.118 2005/07/18 21:40:55 jlam Exp $
+# $NetBSD: replace.mk,v 1.119 2005/07/19 03:01:13 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -272,7 +272,7 @@ TOOLS_DEPENDS.bison-yacc?=	bison>=1.0:../../devel/bison
 TOOLS_CREATE+=			bison-yacc
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bison-yacc=bison
 TOOLS_PATH.bison-yacc=		${TOOLS_PREFIX.bison-yacc}/bin/bison
-TOOLS_ARGS.bison-yacc=	-y
+TOOLS_ARGS.bison-yacc=		-y
 .  endif
 TOOLS_CMD.bison-yacc=		${TOOLS_DIR}/bin/yacc
 .endif
