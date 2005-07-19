@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3725 2005/07/18 07:04:42 martti Exp $
+$NetBSD: TODO,v 1.3726 2005/07/19 08:31:00 adam Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ Suggested package updates
 	o jdbc-postgresql-7.3.9
 	o jessie-1.0.0
 	o jftpgw-0.13.5
-	o joe-3.3
 	o john-1.6.37
 	o jove-4.16.0.65
 	o jpegpixi-1.1.0
