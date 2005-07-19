@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.6 2005/04/15 05:17:02 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.7 2005/07/19 21:06:39 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -80,7 +80,7 @@ qmailpop3d_cont()
 
 qmailpop3d_cdb()
 {
-	echo "Reloading @PKG_SYSCONFDIR@/tcp.pop3."
+	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.pop3."
 	@LOCALBASE@/bin/tcprules @PKG_SYSCONFDIR@/tcp.pop3.cdb @PKG_SYSCONFDIR@/tcp.pop3.tmp < @PKG_SYSCONFDIR@/tcp.pop3
 	@CHMOD@ 644 @PKG_SYSCONFDIR@/tcp.pop3.cdb
 }
