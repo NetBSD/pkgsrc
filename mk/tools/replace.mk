@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.119 2005/07/19 03:01:13 jlam Exp $
+# $NetBSD: replace.mk,v 1.120 2005/07/19 04:18:51 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -275,6 +275,13 @@ TOOLS_PATH.bison-yacc=		${TOOLS_PREFIX.bison-yacc}/bin/bison
 TOOLS_ARGS.bison-yacc=		-y
 .  endif
 TOOLS_CMD.bison-yacc=		${TOOLS_DIR}/bin/yacc
+#
+# bison/yacc is typically a build tool whose path is not embedded in
+# any scripts or config files.  In this case, pass the full command
+# line (path and arguments) of the tool to the GNU configure script
+# so that bison will be correctly invoked in yacc-compatilility mode.
+#
+TOOLS_VALUE_GNU.bison-yacc=	${TOOLS_CMDLINE.bison-yacc}
 .endif
 
 .if !defined(TOOLS_IGNORE.bzcat) && !empty(_USE_TOOLS:Mbzcat)
@@ -1226,18 +1233,25 @@ ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 
 ######################################################################
 
-# For packages that use GNU configure scripts, pass the real command
-# paths for the tools that the package uses through the shell environment.
-# We do this since these paths may be hardcoded into package scripts,
-# and if they're not pre-specified, then they'll be searched for in the
-# PATH, which would find the ones in ${TOOLS_DIR}.
+# For packages that use GNU configure scripts, pass the appropriate
+# environment variables to ensure the proper command is invoked for
+# each tool.  We do this since these paths may be hardcoded into
+# package scripts, and if they're not pre-specified, then they'll be
+# searched for in the PATH, which would find the ones in ${TOOLS_DIR}.
 #
-.if defined(GNU_CONFIGURE)
-.  for _t_ in ${_USE_TOOLS}
+# The value passed via the shell environment is stored in
+# TOOLS_VALUE_GNU.<tool>, which defaults to just the path to the
+# tool.
+#
+.for _t_ in ${_USE_TOOLS}
+.  if defined(GNU_CONFIGURE)
 .    if defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
+TOOLS_VALUE_GNU.${_t_}?=	${TOOLS_PATH.${_t_}}
+.    endif
+.    if defined(TOOLS_VALUE_GNU.${_t_})
 .      for _v_ in ${_TOOLS_VARNAME_GNU.${_t_}}
-CONFIGURE_ENV+=		${_v_}=${TOOLS_${_TOOLS_VARNAME.${_t_}}:Q}
+CONFIGURE_ENV+=		${_v_}=${TOOLS_VALUE_GNU.${_t_}:Q}
 .      endfor
 .    endif
-.  endfor
-.endif
+.  endif
+.endfor
