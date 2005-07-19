@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.42 2005/06/11 16:12:13 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.43 2005/07/19 09:28:50 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -198,7 +198,6 @@ _old_:= ${_m_:C/:.*//}
 _new_:= ${_m_:C/.*://}
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_new_})
 _PKG_LEGACY_OPTMAP.${_old_}:=${_new_}
-PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated option "${_old_:Q}" used, use option "${_new_:Q}" instead."
 .  endif
 .endfor
 .undef _old_
@@ -229,6 +228,7 @@ _OPTIONS_UNSUPPORTED:=	#empty
 _opt_:=		${_o_}
 _popt_:=	${_o_:C/^-//}	# positive option
 .  if defined(_PKG_LEGACY_OPTMAP.${_popt_})
+PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated option "${_popt_:Q}" used, use option "${_PKG_LEGACY_OPTMAP.${_popt_}:Q}" instead."
 _popt_:=	${_PKG_LEGACY_OPTMAP.${_popt_}}
 .    if empty(_opt_:M-*)
 _opt_:=		${_popt_}
