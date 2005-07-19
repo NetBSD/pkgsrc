@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.18 2004/11/26 10:31:09 adam Exp $
+$NetBSD: patch-ab,v 1.19 2005/07/19 11:12:25 adam Exp $
 
---- configure.orig	2004-11-19 18:50:17.000000000 +0000
+--- configure.orig	2005-06-29 16:43:10.000000000 +0000
 +++ configure
-@@ -1815,12 +1815,13 @@ fi
+@@ -1910,12 +1910,13 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.18 2004/11/26 10:31:09 adam Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = "yes" ; then
-@@ -2522,7 +2523,6 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -2585,7 +2586,6 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.18 2004/11/26 10:31:09 adam Exp $
  		SHLIB_LD_LIBS=""
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
-@@ -2543,13 +2543,23 @@ EOF
+@@ -2606,13 +2606,23 @@ EOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -51,7 +51,7 @@ $NetBSD: patch-ab,v 1.18 2004/11/26 10:31:09 adam Exp $
  fi
  rm -f conftest*
  
-@@ -3163,16 +3173,16 @@ fi
+@@ -3539,16 +3549,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -65,14 +65,14 @@ $NetBSD: patch-ab,v 1.18 2004/11/26 10:31:09 adam Exp $
  
      if test "${SHARED_BUILD}" = "1" && test "${SHLIB_SUFFIX}" != "" ; then
          LIB_SUFFIX=${SHARED_LIB_SUFFIX}
--        MAKE_LIB='${SHLIB_LD} -o $@ ${SHLIB_LD_FLAGS} ${OBJS} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS}'
+-        MAKE_LIB='${SHLIB_LD} -o $@ ${OBJS} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS}'
 -        INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) $(LIB_INSTALL_DIR)/$(LIB_FILE)'
-+        MAKE_LIB='${SHLIB_LD} -o $@ ${SHLIB_LD_FLAGS} ${OBJS:.o=.lo} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS} -version-info 1:0'
++        MAKE_LIB='${SHLIB_LD} -o $@ ${OBJS:.o=.lo} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS} -version-info 1:0'
 +        INSTALL_LIB='$(INSTALL_LIBRARY) $(TK_LA_FILE) $(LIB_INSTALL_DIR)/$(LIB_FILE)'
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -4526,7 +4536,11 @@ echo "configure:4524: checking for X11 l
+@@ -5091,7 +5101,11 @@ echo "configure:5089: checking for X11 l
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		echo "$ac_t""$i" 1>&6
@@ -85,7 +85,7 @@ $NetBSD: patch-ab,v 1.18 2004/11/26 10:31:09 adam Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -4535,7 +4549,11 @@ echo "configure:4524: checking for X11 l
+@@ -5100,7 +5114,11 @@ echo "configure:5089: checking for X11 l
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -98,7 +98,7 @@ $NetBSD: patch-ab,v 1.18 2004/11/26 10:31:09 adam Exp $
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -4605,6 +4623,10 @@ if test "x${x_libraries}" != "x"; then
+@@ -5172,6 +5190,10 @@ if test "x${x_libraries}" != "x"; then
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
@@ -109,23 +109,23 @@ $NetBSD: patch-ab,v 1.18 2004/11/26 10:31:09 adam Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -5156,11 +5178,18 @@ eval "TK_LIB_FILE=${TK_LIB_FILE}"
- if test "$SHARED_BUILD" = 0 -o $TCL_NEEDS_EXP_FILE = 0; then
-     if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
- 	eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
-+	eval TK_BUILD_LIB_SPEC="libtk${VERSION}\${TK_DBGX}.la"
+@@ -5823,11 +5845,18 @@ else
+     if test "$SHARED_BUILD" = "0" || test "$TCL_NEEDS_EXP_FILE" = "0"; then
+         if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+             eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
++	    eval TK_BUILD_LIB_SPEC="libtk${VERSION}\${TK_DBGX}.la"
+         else
+             eval TK_LIB_FLAG="-ltk`echo ${VERSION} | tr -d .`\${TK_DBGX}"
++	    eval TK_BUILD_LIB_SPEC="libtk`echo ${VERSION} | tr -d .`\${TK_DBGX}.la"
+         fi
+-        TK_BUILD_LIB_SPEC="-L`pwd` ${TK_LIB_FLAG}"
+         TK_LIB_SPEC="-L${libdir} ${TK_LIB_FLAG}"
++	if test "${RPATH_FLAG}" != ""; then
++	    TK_LIB_SPEC_RPATH="${RPATH_FLAG}${exec_prefix}/lib"
++	else
++	    TK_LIB_SPEC_RPATH=""
++	fi
++	TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_SPEC_RPATH} ${TK_LIB_FLAG}"
      else
- 	eval TK_LIB_FLAG="-ltk`echo ${VERSION} | tr -d .`\${TK_DBGX}"
-+	eval TK_BUILD_LIB_SPEC="libtk`echo ${VERSION} | tr -d .`\${TK_DBGX}.la"
-     fi
--    TK_BUILD_LIB_SPEC="-L`pwd` ${TK_LIB_FLAG}"
-     TK_LIB_SPEC="-L${libdir} ${TK_LIB_FLAG}"
-+    if test "${RPATH_FLAG}" != ""; then
-+	TK_LIB_SPEC_RPATH="${RPATH_FLAG}${exec_prefix}/lib"
-+    else
-+	TK_LIB_SPEC_RPATH=""
-+    fi
-+    TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_SPEC_RPATH} ${TK_LIB_FLAG}"
-     TK_BUILD_EXP_FILE=""
-     TK_EXP_FILE=""
- else
+         TK_BUILD_EXP_FILE="lib.exp"
+         eval "TK_EXP_FILE=libtk${TCL_EXPORT_FILE_SUFFIX}"
