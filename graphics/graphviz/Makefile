@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/06/07 16:07:14 minskim Exp $
+# $NetBSD: Makefile,v 1.37 2005/07/19 14:45:52 gdt Exp $
 #
 
 DISTNAME=	graphviz-2.2.1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
-
-LICENSE=	graphviz-license
 
 BUILDLINK_DEPENDS.gd+=	gd>=2.0.33nb1
 
