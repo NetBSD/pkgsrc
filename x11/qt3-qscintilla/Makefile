@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:44 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/19 17:41:47 drochner Exp $
 #
 
-DISTNAME=		qscintilla-1.62-gpl-1.5
-PKGNAME=		qt3-qscintilla-1.5
+DISTNAME=		qscintilla-1.62-gpl-1.5.1
+PKGNAME=		qt3-qscintilla-1.5.1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.river-bank.demon.co.uk/download/QScintilla/
 
