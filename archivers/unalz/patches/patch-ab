@@ -1,12 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2005/07/12 13:55:26 minskim Exp $
-
-This patch assumes that on NetBSD, every <iconv.h> has the non-const
-prototype argument for the second parameter of iconv(). This is true for
-all but some release candidates of NetBSD-2.0, because either the
-package converters/libiconv is used or there's a current <iconv.h>.
+$NetBSD: patch-ab,v 1.5 2005/07/19 13:51:52 minskim Exp $
 
 --- UnAlz.cpp.orig	2005-06-17 22:31:33.000000000 -0500
 +++ UnAlz.cpp
+@@ -1,6 +1,6 @@
+ //#include "stdafx.h"
+-#include "zlib/zlib.h"
+-#include "bzip2/bzlib.h"
++#include <zlib.h>
++#include <bzlib.h>
+ #include "UnAlz.h"
+ 
+ // mkdir
 @@ -18,6 +18,10 @@
  #	include <errno.h>		// iconv.h 때문에 필요 
  #endif
