@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/19 10:16:09 grant Exp $
 
 DISTNAME=		trn-4.0-test76
 PKGNAME=		trn-4.76
@@ -18,9 +18,9 @@ PKG_SYSCONFSUBDIR=	nntp
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INN) && ${USE_INN} == YES
-DEPENDS=		inn>=2.2:../inn
+DEPENDS=		inn>=2.2:../../news/inn
 .else
-DEPENDS=		nntpclnt>=1.6.1:../nntpclnt
+DEPENDS=		nntpclnt>=1.6.1:../../news/nntpclnt
 .endif
 
 # TRN_HOSTBITS determines the number of "name segments" (x.y.z.com), counting

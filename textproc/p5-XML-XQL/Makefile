@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/13 18:01:44 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/19 10:11:48 grant Exp $
 #
 
 DISTNAME=	XML-XQL-0.68
@@ -11,8 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl module to perform XQL queries on XML object trees
 
-DEPENDS+=	p5-XML-DOM>=1.29:../p5-XML-DOM
-DEPENDS+=	p5-XML-Parser>=2.30:../p5-XML-Parser
+DEPENDS+=	p5-XML-DOM>=1.29:../../textproc/p5-XML-DOM
+DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Date-Manip>=5.33:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Parse-Yapp-[0-9]*:../../devel/p5-Parse-Yapp
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww

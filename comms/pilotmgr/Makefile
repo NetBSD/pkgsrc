@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/06/24 06:43:43 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/07/19 10:21:01 grant Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 PKGNAME=	pilotmgr-1.107.2
@@ -13,7 +13,7 @@ COMMENT=	Synchronize databases on any 3Com Palm device
 
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
-DEPENDS+=	p5-pilot-link-[0-9]*:../p5-pilot-link
+DEPENDS+=	p5-pilot-link-[0-9]*:../../comms/p5-pilot-link
 DEPENDS+=	{p5-Data-Dumper-[0-9]*,perl>=5.6.1nb2}:../../lang/perl5
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*$//}

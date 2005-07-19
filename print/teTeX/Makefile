@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/05/14 02:26:50 reed Exp $
+# $NetBSD: Makefile,v 1.39 2005/07/19 10:15:29 grant Exp $
 #
 
 DISTNAME=	teTeX-2.0.2
@@ -11,8 +11,8 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems, version 2
 
-DEPENDS+=	teTeX-bin>=2.0.2:../teTeX-bin
-DEPENDS+=	teTeX-sharesrc>=2.0.2:../teTeX-sharesrc
+DEPENDS+=	teTeX-bin>=2.0.2:../../print/teTeX-bin
+DEPENDS+=	teTeX-sharesrc>=2.0.2:../../print/teTeX-sharesrc
 DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
 
 CONFLICTS+=	teTeX2-[0-9]*

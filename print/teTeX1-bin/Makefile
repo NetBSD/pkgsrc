@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/01 18:03:20 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/19 10:15:30 grant Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - executables
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	teTeX-share-1.0.[2-9]*:../teTeX1-share
+DEPENDS+=	teTeX-share-1.0.[2-9]*:../../print/teTeX1-share
 DEPENDS+=	dialog-0.6z*:../../misc/dialog
 
 # games/omega previously installed an omega executable too

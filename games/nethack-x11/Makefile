@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/14 17:24:12 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/07/19 10:17:59 grant Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -8,7 +8,7 @@ COMMENT=		The X11 version of NetHack
 
 CATEGORIES+=		x11
 
-DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../nethack-lib
+DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../../games/nethack-lib
 
 
 BUILD_TARGET=		x11tiles nethack

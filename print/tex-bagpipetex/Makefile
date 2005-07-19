@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/02/11 00:51:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/19 10:15:30 grant Exp $
 #
 
 DISTNAME=	bagpipetex-3.01
@@ -12,7 +12,7 @@ MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://www.stanford.edu/~wrinnes/bagpipe.tex/
 COMMENT=	MusixTeX macros to typeset bagpipe music
 
-DEPENDS+=	tex-musixtex>=112:../tex-musixtex
+DEPENDS+=	tex-musixtex>=112:../../print/tex-musixtex
 
 WRKSRC=         ${WRKDIR}
 NO_CONFIGURE=   yes
