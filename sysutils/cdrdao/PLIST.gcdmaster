@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.gcdmaster,v 1.1 2005/06/04 19:05:38 adrianp Exp $
-bin/gcdmaster
-man/man1/gcdmaster.1
-share/applications/gcdmaster.desktop
-share/pixmaps/gcdmaster.png

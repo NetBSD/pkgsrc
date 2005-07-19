@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2005/06/04 19:05:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2005/07/19 16:33:57 drochner Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
+
+PKGREVISION=		2
 
 PKGNAME=		cdrdao-${CDRDAO_VER}
 
 COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
-PKGDIR=			${.CURDIR}/../../sysutils/cdrdao
-FILESDIR=		${PKGDIR}/files
-PATCHDIR=		${PKGDIR}/patches
-DISTINFO_FILE=		${PKGDIR}/distinfo
-PLIST_SRC=		${PKGDIR}/PLIST.cdrdao
 CONFIGURE_ARGS+=	--without-xdao
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
