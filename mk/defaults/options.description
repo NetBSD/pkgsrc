@@ -5,7 +5,6 @@ aalib			Enable aalib support.
 ac3_passthrough	
 ads	
 alsa	
-althash			ezmlm patch to hash subscriber db case-insensitively.
 anthy			Use Anthy as Japanese conversion program.
 antialias	
 apm	
@@ -26,10 +25,8 @@ avifile
 awl-sql-tests	
 backend-mysql	
 backend-pgsql	
-badrcptto		qmail patch to SMTP-reject certain envelope recipients.
 bayes-sql-tests	
 bdb	
-bigdns			qmail patch to handle oversized responses to MX queries.
 bktr	
 blender-exppython	Enable the Experimental Python support.
 bpf	
@@ -53,6 +50,8 @@ db2
 db4	
 debug	
 deliver-suid		Install deliver executable setuid root.
+djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
+djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
 domainscale	
 drac			Enable DRAC support.
 dummy	
@@ -63,6 +62,7 @@ eb			Enable EB dictionary library support.
 edit	
 emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 esound			Enable support for the Enlightment Sound Daemon.
+ezmlm-althash		Patch to hash subscriber list case-insensitively.
 faac	
 faad	
 fam	
@@ -106,7 +106,6 @@ iconv
 id3	
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 ifevents	
-ignoreip2		djbdns patch to treat certain responses as NXDOMAIN.
 imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
 imstt	
@@ -167,7 +166,6 @@ native
 ncurses	
 neomagic	
 net-tests	
-netqmail		qmail patch collection from respected list members.
 newport	
 nogui	
 nospoof	
@@ -180,7 +178,6 @@ opengl			Use OpenGL as display library.
 openldap	
 openssl	
 oss			Enable support for the Open Sound System audio library.
-outgoingip		qmail patch to force a particular source IP address.
 pam			Enable PAM support.
 patchviewer	
 pcre	
@@ -199,14 +196,19 @@ postgresql73
 postgresql74	
 prefix-cmds	
 python	
+qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
+qmail-bigdns		Patch to handle oversized responses to MX queries.
+qmail-netqmail		Patch collection prepared by respected list members.
+qmail-outgoingip	Patch to force a particular source IP address.
+qmail-qregex		Patch to SMTP-reject customizable patterns.
+qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
+qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
-qregex			qmail patch to SMTP-reject customizable patterns.
 qt	
 quota	
 radius	
 rc5	
 readline	
-realrcptto		qmail patch to SMTP-reject nonexistent recipients.
 recommended-db	
 remoteinc	
 rendition	
@@ -240,7 +242,6 @@ tdb
 tdfx	
 tga	
 theora			Use the theora codecs.
-tinydns64		djbdns patch to fix tinydns-data on 64-bit platforms.
 tls			Enable TLS support.
 trident	
 truetype	
@@ -253,7 +254,6 @@ vfs
 vga	
 via	
 virtualchroot	
-viruscan		qmail patch to SMTP-reject certain MIME attachments.
 vmware	
 vorbis			Enable Ogg Vorbis support.
 vpop	
