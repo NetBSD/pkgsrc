@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:59 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/19 04:25:43 kristerw Exp $
 
 DISTNAME=	radiusd-cistron-1.6.7
 PKGREVISION=	1
@@ -52,5 +52,13 @@ post-install:
 .for i in	radiusd.8 radrelay.8 radwatch.8
 	${INSTALL_MAN} ${WRKSRC}/doc/${i} ${PREFIX}/man/man8/
 .endfor
+
+# The sources assume <malloc.h> exists.  Create a fake one for platforms
+# that don't have it.
+post-wrapper:
+	if ${TEST} ! -f /usr/include/malloc.h; then		\
+		${ECHO} "#include <stdlib.h>"			\
+			> ${BUILDLINK_DIR}/include/malloc.h;	\
+	fi
 
 .include "../../mk/bsd.pkg.mk"
