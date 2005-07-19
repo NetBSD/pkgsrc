@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10626 2005/07/19 11:13:40 adam Exp $
+$NetBSD: CHANGES,v 1.10627 2005/07/19 16:27:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3233,3 +3233,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Update www/visitors from 0.4a to 0.5 [abs 2005-07-19]
 	Updated lang/tcl to 8.4.11 [adam 2005-07-19]
 	Updated x11/tk to 8.4.11 [adam 2005-07-19]
+	Updated wm/3ddesktop to 0.2.8nb1 [wiz 2005-07-19]
