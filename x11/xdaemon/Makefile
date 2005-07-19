@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:45 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/19 02:29:50 grant Exp $
 
 DISTNAME=	xdaemon-1.0
 CATEGORIES=	games x11
@@ -9,7 +9,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
 COMMENT=	BSD Daemon sticking on your desktop (like xteddy)
 
-DEPENDS+=	xteddy-1.*:../xteddy
+DEPENDS+=	xteddy-1.*:../../x11/xteddy
 
 CONFLICT+=	xdaemon-2.*
 
