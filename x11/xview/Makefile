@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:48:17 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/19 02:29:35 grant Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -10,9 +10,9 @@ DISTFILES=	# empty
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	OpenLook Toolkit meta-package
 
-DEPENDS+=	xview-config>=3.2.1:../xview-config
-DEPENDS+=	xview-lib>=3.2.1:../xview-lib
-DEPENDS+=	xview-clients>=3.2.1:../xview-clients
+DEPENDS+=	xview-config>=3.2.1:../../x11/xview-config
+DEPENDS+=	xview-lib>=3.2.1:../../x11/xview-lib
+DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
 
 NOT_FOR_PLATFORM=       *-*-alpha       # broken va_arg handling in xview-lib
 
