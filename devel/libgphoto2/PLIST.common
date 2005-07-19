@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2005/03/29 13:24:11 markd Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2005/07/19 17:24:27 drochner Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -19,6 +19,7 @@ include/gphoto2/gphoto2-setting.h
 include/gphoto2/gphoto2-version.h
 include/gphoto2/gphoto2-widget.h
 include/gphoto2/gphoto2.h
+lib/gphoto2/${PKGVERSION}/libgphoto2_adc65.la
 lib/gphoto2/${PKGVERSION}/libgphoto2_agfa_cl20.la
 lib/gphoto2/${PKGVERSION}/libgphoto2_aox.la
 lib/gphoto2/${PKGVERSION}/libgphoto2_barbie.la
@@ -99,6 +100,8 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgphoto2-2.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgphoto2_port-0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgphoto2-2.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgphoto2_port-0.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libgphoto2-2.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libgphoto2_port-0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgphoto2-2.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgphoto2_port-0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgphoto2-2.mo
@@ -106,6 +109,8 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgphoto2-2.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgphoto2_port-0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgphoto2-2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgphoto2_port-0.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libgphoto2-2.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libgphoto2_port-0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgphoto2_port-0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgphoto2-2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgphoto2_port-0.mo
