@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:07:41 agc Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/19 10:22:32 grant Exp $
 
 DISTNAME=	festlex_POSLEX
 PKGNAME=	festlex-poslex-1.4.0
@@ -10,7 +10,7 @@ MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	English lexicon suitable for use with Festival
 
-DEPENDS+=	festival>=1.4.0:../festival
+DEPENDS+=	festival>=1.4.0:../../audio/festival
 
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes

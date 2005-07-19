@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:07:42 agc Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/19 10:22:33 grant Exp $
 
 DISTNAME=	festvox_en1
 PKGNAME=	festvox-en1-1.4.0
@@ -10,11 +10,11 @@ MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	MBROLA based British English male voice for festival
 
-DEPENDS+=	festival>=1.4.0:../festival
-DEPENDS+=	festlex-poslex>=1.4.0:../festlex-poslex
-DEPENDS+=	festlex-oald>=1.4.0:../festlex-oald
-DEPENDS+=	mbrola-301h:../mbrola
-DEPENDS+=	mbrolavox-en1-980910:../mbrolavox-en1
+DEPENDS+=	festival>=1.4.0:../../audio/festival
+DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
+DEPENDS+=	festlex-oald>=1.4.0:../../audio/festlex-oald
+DEPENDS+=	mbrola-301h:../../audio/mbrola
+DEPENDS+=	mbrolavox-en1-980910:../../audio/mbrolavox-en1
 
 LICENSE=	no-commercial-use
 
