@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2005/04/29 16:14:41 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2005/07/19 18:07:59 drochner Exp $
 
---- Makefile.in.orig	2005-03-07 05:27:01.000000000 +0100
+--- Makefile.in.orig	2005-07-08 21:20:57.000000000 +0200
 +++ Makefile.in
 @@ -137,14 +137,14 @@ insmulti%: dropbearmulti
  inst_dropbear: dropbear
@@ -21,3 +21,12 @@ $NetBSD: patch-aa,v 1.6 2005/04/29 16:14:41 drochner Exp $
  
  
  # for some reason the rule further down doesn't like $($@objs) as a prereq.
+@@ -181,7 +181,7 @@ link%:
+ 	-ln -s dropbearmulti$(EXEEXT) $*$(EXEEXT)
+ 
+ $(LTC): options.h
+-	cd libtomcrypt && $(MAKE) clean && $(MAKE)
++	cd libtomcrypt && $(MAKE)
+ 
+ $(LTM): options.h
+ 	cd libtommath && $(MAKE)
