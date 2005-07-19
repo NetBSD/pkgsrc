@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.6 2005/04/15 05:17:02 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.7 2005/07/19 21:06:39 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -80,7 +80,7 @@ qmailsmtpd_cont()
 
 qmailsmtpd_cdb()
 {
-	echo "Reloading @PKG_SYSCONFDIR@/tcp.smtp."
+	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.smtp."
 	@LOCALBASE@/bin/tcprules @PKG_SYSCONFDIR@/tcp.smtp.cdb @PKG_SYSCONFDIR@/tcp.smtp.tmp < @PKG_SYSCONFDIR@/tcp.smtp
 	@CHMOD@ 644 @PKG_SYSCONFDIR@/tcp.smtp.cdb
 }
