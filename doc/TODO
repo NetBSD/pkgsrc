@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3728 2005/07/19 17:47:33 minskim Exp $
+$NetBSD: TODO,v 1.3729 2005/07/19 18:30:53 drochner Exp $
 
 Suggested new packages
 ======================
@@ -301,7 +301,6 @@ Suggested package updates
 	o MyPasswordSafe-20041210
 	o PAM-0.78
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.5.5
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
@@ -422,7 +421,6 @@ Suggested package updates
 	o cygwin_lib-1.5.18.1
 	o dact-0.8.37
 	o dante-1.1.17
-	o darcs-1.0.3
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -436,7 +434,6 @@ Suggested package updates
 	o dnstracer-1.8
 	o dpkg-1.13.3
 	o drivel-2.0.2
-	o dropbear-0.46
 	o dvdrip-0.52.5
 	o dvipdfmx-20050201
 	o dvipng-1.6 [http://sourceforge.net/projects/dvipng/]
@@ -456,7 +453,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enigma-0.92
 	o enscript-1.6.4
-	o eric3-3.7.1
 	o erlang-10b-6
 	o esh-0.8.5
 	o et-2.60
@@ -466,7 +462,6 @@ Suggested package updates
 	o fakeroot-1.3 [pkg/30015]
 	o fd-2.06c
 	o fdgw-20040609
-	o feh-1.3.3
 	o fhist-1.14
 	o fidogate-4.4.10
 	o file-4.14
@@ -487,7 +482,6 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
-	o galeon-1.3.21
 	o gap-4r4p3
 	o garmin-utils-2.2
 	o gated-3.6
@@ -527,7 +521,6 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o grace-5.1.18
-	o gramps-2.0.2 [2.0.0 does not work with newer py-gtk]
 	o grap-1.32
 	o grep-2.5.1a
 	o grepmail-5.3031
@@ -543,7 +536,6 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o guile-pg-0.27
 	o guile-www-1.1.1
-	o gwenview-1.2.0 [pkg/29878]
 	o gzrecover-0.3
 	o hackbot-2.21
 	o hashcash-1.16
@@ -710,7 +702,6 @@ Suggested package updates
 	o neverball-1.4.0
 	o newmail-1.0.2
 	o ng-1.4.4
-	o ngrep-1.44
 	o ns-2.28
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
@@ -920,11 +911,9 @@ Suggested package updates
 	o py-imaging-1.1.5c2
 	o py-kenosis-0.95
 	o py-ldap-2.0.8
-	o py-libxml2-2.6.18
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
 	o py-mad-0.5.3
-	o py-matplotlib-0.71
 	o py-mysqldb-1.1.7
 	o py-psycopg-1.1.19
 	o py-rpy-0.4.0
@@ -947,7 +936,6 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
-	o qt3-qscintilla-1.5.1
 	o quake2forge-0.3
 	o qvplay-0.95
 	o qwspritefield-1.7
@@ -998,7 +986,6 @@ Suggested package updates
 	o sawfish-replibs-1.3
 	o scew-0.4.0
 	o scilab-3.1
-	o scribus-1.2.2.1
 	o scrollz-1.9.4
 	o sdig-0.40
 	o seahorse-0.7.6
@@ -1193,7 +1180,6 @@ Suggested package updates
 	o yamt-0.6
 	o yasm-0.4.0 [pkg/30445]
 	o yencode-0.46
-	o yorick-1.5.15
 	o ysm-2.9.6
 	o ytalk-3.2.0 [pkg/28840]
 	o yudit-2.7.8
