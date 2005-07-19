@@ -1,0 +1,19 @@
+$NetBSD: patch-aj,v 1.1 2005/07/19 17:49:33 drochner Exp $
+
+--- src/support/Makefile.in.orig	2005-07-18 18:00:23.000000000 +0200
++++ src/support/Makefile.in
+@@ -651,12 +651,11 @@ package.lo: ../config.h \
+ 	$(top_srcdir)/src/BoostFormat.h $(top_srcdir)/src/debug.h \
+ 	$(top_srcdir)/src/gettext.h $(top_srcdir)/src/Lsstream.h \
+ 	$(top_srcdir)/src/LString.h
+-	$(CXXCOMPILE) \
++	$(LTCXXCOMPILE) \
+ 		-DLYX_DIR=\"$(pkgdatadir)\" \
+ 		-DTOP_SRCDIR=\"$(top_srcdir)\" \
+ 		-DLOCALEDIR=\"$(localedir)\" \
+-		-c $(top_srcdir)/src/support/package.C && \
+-	echo "timestamp" > $@
++		-c $(top_srcdir)/src/support/package.C
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
