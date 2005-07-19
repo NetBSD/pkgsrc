@@ -1,0 +1,185 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/19 17:10:36 drochner Exp $
+bin/krecipes
+share/doc/kde/HTML/da/krecipes/common
+share/doc/kde/HTML/da/krecipes/index.cache.bz2
+share/doc/kde/HTML/da/krecipes/index.docbook
+share/doc/kde/HTML/en/krecipes/adv-cat-search.png
+share/doc/kde/HTML/en/krecipes/adv-recipe-found.png
+share/doc/kde/HTML/en/krecipes/adv-search-parts.png
+share/doc/kde/HTML/en/krecipes/adv-srch-multi.png
+share/doc/kde/HTML/en/krecipes/authors-adding.png
+share/doc/kde/HTML/en/krecipes/back.png
+share/doc/kde/HTML/en/krecipes/categories.png
+share/doc/kde/HTML/en/krecipes/clear_left.png
+share/doc/kde/HTML/en/krecipes/common
+share/doc/kde/HTML/en/krecipes/computer3.png
+share/doc/kde/HTML/en/krecipes/configure-shortcuts-adv.png
+share/doc/kde/HTML/en/krecipes/configure-shortcuts-basic.png
+share/doc/kde/HTML/en/krecipes/configure-shortcuts.png
+share/doc/kde/HTML/en/krecipes/configure-toolbars.png
+share/doc/kde/HTML/en/krecipes/diet-help.png
+share/doc/kde/HTML/en/krecipes/down.png
+share/doc/kde/HTML/en/krecipes/enter-recipe-tabs.png
+share/doc/kde/HTML/en/krecipes/filenew.png
+share/doc/kde/HTML/en/krecipes/formatting.png
+share/doc/kde/HTML/en/krecipes/forward.png
+share/doc/kde/HTML/en/krecipes/import-other-sql.png
+share/doc/kde/HTML/en/krecipes/import-recipe-screen.png
+share/doc/kde/HTML/en/krecipes/import-settings.png
+share/doc/kde/HTML/en/krecipes/import-sqlite.png
+share/doc/kde/HTML/en/krecipes/index.cache.bz2
+share/doc/kde/HTML/en/krecipes/index.docbook
+share/doc/kde/HTML/en/krecipes/ingredient-match.png
+share/doc/kde/HTML/en/krecipes/ingredients.png
+share/doc/kde/HTML/en/krecipes/krecipes-main.png
+share/doc/kde/HTML/en/krecipes/krectip.png
+share/doc/kde/HTML/en/krecipes/locationbar_erase.png
+share/doc/kde/HTML/en/krecipes/menu.png
+share/doc/kde/HTML/en/krecipes/no.png
+share/doc/kde/HTML/en/krecipes/page-setup.png
+share/doc/kde/HTML/en/krecipes/performance.png
+share/doc/kde/HTML/en/krecipes/prep-method.png
+share/doc/kde/HTML/en/krecipes/properties.png
+share/doc/kde/HTML/en/krecipes/recipe-description-tab.png
+share/doc/kde/HTML/en/krecipes/recipe-ingredients-tab.png
+share/doc/kde/HTML/en/krecipes/recipe-instructions-tab.png
+share/doc/kde/HTML/en/krecipes/server-settings.png
+share/doc/kde/HTML/en/krecipes/shop-list.png
+share/doc/kde/HTML/en/krecipes/unit-conversions.png
+share/doc/kde/HTML/en/krecipes/units.png
+share/doc/kde/HTML/en/krecipes/up.png
+share/doc/kde/HTML/et/krecipes/common
+share/doc/kde/HTML/et/krecipes/index.cache.bz2
+share/doc/kde/HTML/et/krecipes/index.docbook
+share/doc/kde/HTML/pt/krecipes/common
+share/doc/kde/HTML/pt/krecipes/index.cache.bz2
+share/doc/kde/HTML/pt/krecipes/index.docbook
+share/doc/kde/HTML/sv/krecipes/adv-recipe-found.png
+share/doc/kde/HTML/sv/krecipes/authors-adding.png
+share/doc/kde/HTML/sv/krecipes/categories.png
+share/doc/kde/HTML/sv/krecipes/common
+share/doc/kde/HTML/sv/krecipes/configure-shortcuts-adv.png
+share/doc/kde/HTML/sv/krecipes/configure-shortcuts-basic.png
+share/doc/kde/HTML/sv/krecipes/configure-shortcuts.png
+share/doc/kde/HTML/sv/krecipes/configure-toolbars.png
+share/doc/kde/HTML/sv/krecipes/diet-help.png
+share/doc/kde/HTML/sv/krecipes/enter-recipe-tabs.png
+share/doc/kde/HTML/sv/krecipes/formatting.png
+share/doc/kde/HTML/sv/krecipes/import-other-sql.png
+share/doc/kde/HTML/sv/krecipes/import-recipe-screen.png
+share/doc/kde/HTML/sv/krecipes/import-settings.png
+share/doc/kde/HTML/sv/krecipes/import-sqlite.png
+share/doc/kde/HTML/sv/krecipes/index.cache.bz2
+share/doc/kde/HTML/sv/krecipes/index.docbook
+share/doc/kde/HTML/sv/krecipes/ingredient-match.png
+share/doc/kde/HTML/sv/krecipes/ingredients.png
+share/doc/kde/HTML/sv/krecipes/krecipes-main.png
+share/doc/kde/HTML/sv/krecipes/menu.png
+share/doc/kde/HTML/sv/krecipes/page-setup.png
+share/doc/kde/HTML/sv/krecipes/prep-method.png
+share/doc/kde/HTML/sv/krecipes/properties.png
+share/doc/kde/HTML/sv/krecipes/recipe-description-tab.png
+share/doc/kde/HTML/sv/krecipes/recipe-ingredients-tab.png
+share/doc/kde/HTML/sv/krecipes/recipe-instructions-tab.png
+share/doc/kde/HTML/sv/krecipes/server-settings.png
+share/doc/kde/HTML/sv/krecipes/shop-list.png
+share/doc/kde/HTML/sv/krecipes/unit-conversions.png
+share/doc/kde/HTML/sv/krecipes/units.png
+share/kde/applnk/Utilities/krecipes.desktop
+share/kde/apps/krecipes/data/abbrev.txt
+share/kde/apps/krecipes/data/data.sql
+share/kde/apps/krecipes/data/samples-cs_CZ.kreml
+share/kde/apps/krecipes/data/samples-en_US.kreml
+share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/categories.png
+share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/diet.png
+share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/ingredients.png
+share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/properties.png
+share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/trolley.png
+share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/units.png
+share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/categories.png
+share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/diet.png
+share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/ingredients.png
+share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/properties.png
+share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/trolley.png
+share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/units.png
+share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/categories.png
+share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/diet.png
+share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/ingredients.png
+share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/krectip.png
+share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/properties.png
+share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/trolley.png
+share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/units.png
+share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/categories.png
+share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/diet.png
+share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/ingredients.png
+share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/properties.png
+share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/trolley.png
+share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/units.png
+share/kde/apps/krecipes/krecipesui.rc
+share/kde/apps/krecipes/layouts/default.klo
+share/kde/apps/krecipes/layouts/one_column.klo
+share/kde/apps/krecipes/pics/dbpermissions.png
+share/kde/apps/krecipes/pics/menubg.png
+share/kde/apps/krecipes/pics/network.png
+share/kde/apps/krecipes/pics/recipes.png
+share/kde/apps/krecipes/pics/save.png
+share/kde/apps/krecipes/pics/startlogo.png
+share/kde/apps/krecipes/pics/wizard.png
+share/kde/icons/hicolor/128x128/apps/krecipes.png
+share/kde/icons/hicolor/16x16/apps/krecipes.png
+share/kde/icons/hicolor/22x22/apps/krecipes.png
+share/kde/icons/hicolor/32x32/apps/krecipes.png
+share/kde/icons/hicolor/48x48/apps/krecipes.png
+share/kde/icons/hicolor/64x64/apps/krecipes.png
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/mt/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/krecipes.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/krecipes.mo
+@dirrm share/kde/apps/krecipes/pics
+@dirrm share/kde/apps/krecipes/layouts
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/48x48/actions
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/48x48
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/32x32/actions
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/32x32
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/22x22/actions
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/22x22
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/16x16/actions
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/16x16
+@dirrm share/kde/apps/krecipes/icons/crystalsvg
+@dirrm share/kde/apps/krecipes/icons
+@dirrm share/kde/apps/krecipes/data
+@dirrm share/kde/apps/krecipes
+@dirrm share/doc/kde/HTML/sv/krecipes
+@dirrm share/doc/kde/HTML/pt/krecipes
+@dirrm share/doc/kde/HTML/et/krecipes
+@dirrm share/doc/kde/HTML/en/krecipes
+@dirrm share/doc/kde/HTML/da/krecipes
