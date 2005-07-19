@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/19 21:15:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/19 21:18:31 schmonz Exp $
 #
 
 DISTNAME=		qmail-run-20050415
@@ -35,8 +35,7 @@ INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
 INSTALLED_QMAIL!= ${PKG_BEST_EXISTS} ${DEPENDS_QMAIL:C/:.*$//:Q:S/\ / /g}
 .  if empty(INSTALLED_QMAIL:M*_not_found_)
 .    if !defined(PKG_SYSCONFDIR.qmail-run)
-PKG_SYSCONFDIR.qmail-run!= \
-	${PKG_INFO} -Q PKG_SYSCONFDIR ${INSTALLED_QMAIL}
+PKG_SYSCONFDIR.qmail-run!= ${PKG_INFO} -Q PKG_SYSCONFDIR ${INSTALLED_QMAIL}
 .    endif
 .  endif
 .endif
