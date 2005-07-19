@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/06/01 18:03:23 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/07/19 10:12:14 grant Exp $
 
 DISTNAME=	xcdroast-0.98alpha15
 PKGNAME=	xcdroast-0.98a15
@@ -12,7 +12,7 @@ COMMENT=	Graphical user interface for the command-line cdrecord-tools
 
 BUILD_USES_MSGFMT=	YES
 
-DEPENDS+=		cdrecord-xcdroast-0.98a15.*:../cdrecord-xcdroast
+DEPENDS+=		cdrecord-xcdroast-0.98a15.*:../../sysutils/cdrecord-xcdroast
 
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		YES
