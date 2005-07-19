@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/24 20:27:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/07/19 17:45:03 drochner Exp $
 bin/eric3
 bin/eric3-api
 bin/eric3-doc
@@ -21,20 +21,35 @@ ${PYSITELIB}/eric3/Checks/TabnannyForm.pyc
 ${PYSITELIB}/eric3/Checks/__init__.py
 ${PYSITELIB}/eric3/Checks/__init__.pyc
 ${PYSITELIB}/eric3/DTDs/Project-3.5.dtd
+${PYSITELIB}/eric3/DTDs/Project-3.6.dtd
+${PYSITELIB}/eric3/DTDs/Project-3.7.dtd
 ${PYSITELIB}/eric3/DTDs/Session-3.5.dtd
 ${PYSITELIB}/eric3/DTDs/Session-3.6.dtd
+${PYSITELIB}/eric3/DTDs/Session-3.7.dtd
 ${PYSITELIB}/eric3/DTDs/Shortcuts-3.5.dtd
 ${PYSITELIB}/eric3/DTDs/Shortcuts-3.6.dtd
+${PYSITELIB}/eric3/DTDs/Tasks-3.7.dtd
+${PYSITELIB}/eric3/DebugClients/Ruby/AsyncFile.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/AsyncIO.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/Completer.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/Config.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/DebugClient.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/DebugClientBaseModule.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/DebugClientCapabilities.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/DebugProtocol.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/DebugQuit.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/Debuggee.rb
+${PYSITELIB}/eric3/DebugClients/Ruby/__init__.rb
+${PYSITELIB}/eric3/DebugClients/__init__.py
+${PYSITELIB}/eric3/DebugClients/__init__.pyc
 ${PYSITELIB}/eric3/Debugger/AsyncFile.py
 ${PYSITELIB}/eric3/Debugger/AsyncFile.pyc
 ${PYSITELIB}/eric3/Debugger/AsyncIO.py
 ${PYSITELIB}/eric3/Debugger/AsyncIO.pyc
 ${PYSITELIB}/eric3/Debugger/AsyncIOBase.py
 ${PYSITELIB}/eric3/Debugger/AsyncIOBase.pyc
-${PYSITELIB}/eric3/Debugger/BreakpointDialog.py
-${PYSITELIB}/eric3/Debugger/BreakpointDialog.pyc
-${PYSITELIB}/eric3/Debugger/BreakpointForm.py
-${PYSITELIB}/eric3/Debugger/BreakpointForm.pyc
+${PYSITELIB}/eric3/Debugger/BreakPointViewer.py
+${PYSITELIB}/eric3/Debugger/BreakPointViewer.pyc
 ${PYSITELIB}/eric3/Debugger/Config.py
 ${PYSITELIB}/eric3/Debugger/Config.pyc
 ${PYSITELIB}/eric3/Debugger/Cyclops/Cyclops.py
@@ -53,6 +68,8 @@ ${PYSITELIB}/eric3/Debugger/DebugClient.py
 ${PYSITELIB}/eric3/Debugger/DebugClient.pyc
 ${PYSITELIB}/eric3/Debugger/DebugClientBase.py
 ${PYSITELIB}/eric3/Debugger/DebugClientBase.pyc
+${PYSITELIB}/eric3/Debugger/DebugClientCapabilities.py
+${PYSITELIB}/eric3/Debugger/DebugClientCapabilities.pyc
 ${PYSITELIB}/eric3/Debugger/DebugClientNoQt.py
 ${PYSITELIB}/eric3/Debugger/DebugClientNoQt.pyc
 ${PYSITELIB}/eric3/Debugger/DebugClientThreads.py
@@ -69,6 +86,10 @@ ${PYSITELIB}/eric3/Debugger/EditBreakpointDialog.py
 ${PYSITELIB}/eric3/Debugger/EditBreakpointDialog.pyc
 ${PYSITELIB}/eric3/Debugger/EditBreakpointForm.py
 ${PYSITELIB}/eric3/Debugger/EditBreakpointForm.pyc
+${PYSITELIB}/eric3/Debugger/EditWatchpointDialog.py
+${PYSITELIB}/eric3/Debugger/EditWatchpointDialog.pyc
+${PYSITELIB}/eric3/Debugger/EditWatchpointForm.py
+${PYSITELIB}/eric3/Debugger/EditWatchpointForm.pyc
 ${PYSITELIB}/eric3/Debugger/ExceptionLogger.py
 ${PYSITELIB}/eric3/Debugger/ExceptionLogger.pyc
 ${PYSITELIB}/eric3/Debugger/ExceptionsFilterDialog.py
@@ -95,6 +116,8 @@ ${PYSITELIB}/eric3/Debugger/VariablesFilterForm.py
 ${PYSITELIB}/eric3/Debugger/VariablesFilterForm.pyc
 ${PYSITELIB}/eric3/Debugger/VariablesViewer.py
 ${PYSITELIB}/eric3/Debugger/VariablesViewer.pyc
+${PYSITELIB}/eric3/Debugger/WatchPointViewer.py
+${PYSITELIB}/eric3/Debugger/WatchPointViewer.pyc
 ${PYSITELIB}/eric3/Debugger/__init__.py
 ${PYSITELIB}/eric3/Debugger/__init__.pyc
 ${PYSITELIB}/eric3/Debugger/eric3dbgstub.py
@@ -120,11 +143,21 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Checks.SyntaxCheckerForm.
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Checks.Tabnanny.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Checks.TabnannyDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Checks.TabnannyForm.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.AsyncFile.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.AsyncIO.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.Completer.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.Config.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.DebugClient.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.DebugClientBaseModule.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.DebugClientCapabilities.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.DebugProtocol.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.DebugQuit.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.Debuggee.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DebugClients.Ruby.__init__.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.AsyncFile.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.AsyncIO.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.AsyncIOBase.html
-${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.BreakpointDialog.html
-${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.BreakpointForm.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.BreakPointViewer.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.Config.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.Cyclops.Cyclops.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.Cyclops.HTMLCyclops.html
@@ -133,6 +166,7 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DCTestResult.htm
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugBase.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugClient.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugClientBase.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugClientCapabilities.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugClientNoQt.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugClientThreads.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugProtocol.html
@@ -141,6 +175,8 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugThread.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.DebugUI.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.EditBreakpointDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.EditBreakpointForm.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.EditWatchpointDialog.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.EditWatchpointForm.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.ExceptionLogger.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.ExceptionsFilterDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.ExceptionsFilterForm.html
@@ -154,6 +190,7 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.VariableDetailFo
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.VariablesFilterDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.VariablesFilterForm.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.VariablesViewer.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.WatchPointViewer.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.eric3dbgstub.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Debugger.getpass.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.DocumentationTools.APIGenerator.html
@@ -239,8 +276,10 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerHTML.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerIDL.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerJava.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerJavaScript.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerLua.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerPerl.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerPython.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerRuby.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.LexerSQL.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.Printer.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.QScintilla.QextScintillaCompat.html
@@ -289,14 +328,21 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.PyProfileDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.PyProfileForm.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.SBVviewer.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.SplashScreen.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.TaskPropertiesDialog.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.TaskPropertiesForm.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.TaskViewer.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.ToolConfigurationDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.ToolConfigurationForm.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.UI.UserInterface.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.ClassBrowsers.ClbrBaseClasses.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.ClassBrowsers.__init__.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.ClassBrowsers.idlclbr.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.ClassBrowsers.pyclbr.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.ClassBrowsers.rbclbr.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.ModuleParser.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.SingleApplication.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.Startup.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.__init__.html
-${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.Utilities.pyclbr.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.CommandOptionsDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.CommandOptionsForm.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.Config.html
@@ -352,6 +398,8 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.Pro
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.PropListForm.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.PropSetDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.PropSetForm.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.RevisionSelectionDialog.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.RevisionSelectionForm.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.StatusDialog.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.StatusForm.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.VCS.subversionPackage.SvnDialog.html
@@ -409,6 +457,8 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.SessionHandler.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.SessionWriter.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.ShortcutsHandler.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.ShortcutsWriter.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.TasksHandler.html
+${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.TasksWriter.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.XMLEntityResolver.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.XMLErrorHandler.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.XML.XMLHandlerBase.html
@@ -431,6 +481,8 @@ ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.install.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.patch_modpython.html
 ${PYSITELIB}/eric3/Documentation/Source/eric3doc-eric3.uninstall.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.Checks.html
+${PYSITELIB}/eric3/Documentation/Source/index-eric3.DebugClients.Ruby.html
+${PYSITELIB}/eric3/Documentation/Source/index-eric3.DebugClients.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.Debugger.Cyclops.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.Debugger.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.DocumentationTools.html
@@ -445,6 +497,7 @@ ${PYSITELIB}/eric3/Documentation/Source/index-eric3.Refactoring.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.Scripting.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.Tools.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.UI.html
+${PYSITELIB}/eric3/Documentation/Source/index-eric3.Utilities.ClassBrowsers.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.Utilities.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.VCS.cvsPackage.html
 ${PYSITELIB}/eric3/Documentation/Source/index-eric3.VCS.html
@@ -658,10 +711,14 @@ ${PYSITELIB}/eric3/QScintilla/LexerJava.py
 ${PYSITELIB}/eric3/QScintilla/LexerJava.pyc
 ${PYSITELIB}/eric3/QScintilla/LexerJavaScript.py
 ${PYSITELIB}/eric3/QScintilla/LexerJavaScript.pyc
+${PYSITELIB}/eric3/QScintilla/LexerLua.py
+${PYSITELIB}/eric3/QScintilla/LexerLua.pyc
 ${PYSITELIB}/eric3/QScintilla/LexerPerl.py
 ${PYSITELIB}/eric3/QScintilla/LexerPerl.pyc
 ${PYSITELIB}/eric3/QScintilla/LexerPython.py
 ${PYSITELIB}/eric3/QScintilla/LexerPython.pyc
+${PYSITELIB}/eric3/QScintilla/LexerRuby.py
+${PYSITELIB}/eric3/QScintilla/LexerRuby.pyc
 ${PYSITELIB}/eric3/QScintilla/LexerSQL.py
 ${PYSITELIB}/eric3/QScintilla/LexerSQL.pyc
 ${PYSITELIB}/eric3/QScintilla/Printer.py
@@ -836,6 +893,12 @@ ${PYSITELIB}/eric3/UI/SBVviewer.py
 ${PYSITELIB}/eric3/UI/SBVviewer.pyc
 ${PYSITELIB}/eric3/UI/SplashScreen.py
 ${PYSITELIB}/eric3/UI/SplashScreen.pyc
+${PYSITELIB}/eric3/UI/TaskPropertiesDialog.py
+${PYSITELIB}/eric3/UI/TaskPropertiesDialog.pyc
+${PYSITELIB}/eric3/UI/TaskPropertiesForm.py
+${PYSITELIB}/eric3/UI/TaskPropertiesForm.pyc
+${PYSITELIB}/eric3/UI/TaskViewer.py
+${PYSITELIB}/eric3/UI/TaskViewer.pyc
 ${PYSITELIB}/eric3/UI/ToolConfigurationDialog.py
 ${PYSITELIB}/eric3/UI/ToolConfigurationDialog.pyc
 ${PYSITELIB}/eric3/UI/ToolConfigurationForm.py
@@ -844,6 +907,16 @@ ${PYSITELIB}/eric3/UI/UserInterface.py
 ${PYSITELIB}/eric3/UI/UserInterface.pyc
 ${PYSITELIB}/eric3/UI/__init__.py
 ${PYSITELIB}/eric3/UI/__init__.pyc
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/ClbrBaseClasses.py
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/ClbrBaseClasses.pyc
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/__init__.py
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/__init__.pyc
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/idlclbr.py
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/idlclbr.pyc
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/pyclbr.py
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/pyclbr.pyc
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/rbclbr.py
+${PYSITELIB}/eric3/Utilities/ClassBrowsers/rbclbr.pyc
 ${PYSITELIB}/eric3/Utilities/ModuleParser.py
 ${PYSITELIB}/eric3/Utilities/ModuleParser.pyc
 ${PYSITELIB}/eric3/Utilities/SingleApplication.py
@@ -852,8 +925,6 @@ ${PYSITELIB}/eric3/Utilities/Startup.py
 ${PYSITELIB}/eric3/Utilities/Startup.pyc
 ${PYSITELIB}/eric3/Utilities/__init__.py
 ${PYSITELIB}/eric3/Utilities/__init__.pyc
-${PYSITELIB}/eric3/Utilities/pyclbr.py
-${PYSITELIB}/eric3/Utilities/pyclbr.pyc
 ${PYSITELIB}/eric3/VCS/CommandOptionsDialog.py
 ${PYSITELIB}/eric3/VCS/CommandOptionsDialog.pyc
 ${PYSITELIB}/eric3/VCS/CommandOptionsForm.py
@@ -966,6 +1037,10 @@ ${PYSITELIB}/eric3/VCS/subversionPackage/PropSetDialog.py
 ${PYSITELIB}/eric3/VCS/subversionPackage/PropSetDialog.pyc
 ${PYSITELIB}/eric3/VCS/subversionPackage/PropSetForm.py
 ${PYSITELIB}/eric3/VCS/subversionPackage/PropSetForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/RevisionSelectionDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/RevisionSelectionDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/RevisionSelectionForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/RevisionSelectionForm.pyc
 ${PYSITELIB}/eric3/VCS/subversionPackage/StatusDialog.py
 ${PYSITELIB}/eric3/VCS/subversionPackage/StatusDialog.pyc
 ${PYSITELIB}/eric3/VCS/subversionPackage/StatusForm.py
@@ -1098,6 +1173,10 @@ ${PYSITELIB}/eric3/XML/ShortcutsHandler.py
 ${PYSITELIB}/eric3/XML/ShortcutsHandler.pyc
 ${PYSITELIB}/eric3/XML/ShortcutsWriter.py
 ${PYSITELIB}/eric3/XML/ShortcutsWriter.pyc
+${PYSITELIB}/eric3/XML/TasksHandler.py
+${PYSITELIB}/eric3/XML/TasksHandler.pyc
+${PYSITELIB}/eric3/XML/TasksWriter.py
+${PYSITELIB}/eric3/XML/TasksWriter.pyc
 ${PYSITELIB}/eric3/XML/XMLEntityResolver.py
 ${PYSITELIB}/eric3/XML/XMLEntityResolver.pyc
 ${PYSITELIB}/eric3/XML/XMLErrorHandler.py
@@ -1136,6 +1215,7 @@ ${PYSITELIB}/eric3/eric3-unittest.pyc
 ${PYSITELIB}/eric3/eric3.api
 ${PYSITELIB}/eric3/eric3.py
 ${PYSITELIB}/eric3/eric3.pyc
+${PYSITELIB}/eric3/eric3.pyw
 ${PYSITELIB}/eric3/icons/default/addBookmark.png
 ${PYSITELIB}/eric3/icons/default/altn.png
 ${PYSITELIB}/eric3/icons/default/anychar.png
@@ -1154,6 +1234,7 @@ ${PYSITELIB}/eric3/icons/default/breakDisabled.png
 ${PYSITELIB}/eric3/icons/default/breakpointNext.png
 ${PYSITELIB}/eric3/icons/default/breakpointPrevious.png
 ${PYSITELIB}/eric3/icons/default/breakpointToggle.png
+${PYSITELIB}/eric3/icons/default/breakpoints.png
 ${PYSITELIB}/eric3/icons/default/browser.png
 ${PYSITELIB}/eric3/icons/default/cBreak.png
 ${PYSITELIB}/eric3/icons/default/cBreakpointToggle.png
@@ -1205,6 +1286,7 @@ ${PYSITELIB}/eric3/icons/default/filePixmap.png
 ${PYSITELIB}/eric3/icons/default/fileProject.png
 ${PYSITELIB}/eric3/icons/default/filePython.png
 ${PYSITELIB}/eric3/icons/default/filePython2.png
+${PYSITELIB}/eric3/icons/default/fileRuby.png
 ${PYSITELIB}/eric3/icons/default/fileSave.png
 ${PYSITELIB}/eric3/icons/default/fileSaveAll.png
 ${PYSITELIB}/eric3/icons/default/fileSaveAs.png
@@ -1219,11 +1301,14 @@ ${PYSITELIB}/eric3/icons/default/gotoBrace.png
 ${PYSITELIB}/eric3/icons/default/group.png
 ${PYSITELIB}/eric3/icons/default/home.png
 ${PYSITELIB}/eric3/icons/default/importShortcuts.png
+${PYSITELIB}/eric3/icons/default/led_green.png
+${PYSITELIB}/eric3/icons/default/led_red.png
 ${PYSITELIB}/eric3/icons/default/linguist.png
 ${PYSITELIB}/eric3/icons/default/localVariables.png
 ${PYSITELIB}/eric3/icons/default/method.png
 ${PYSITELIB}/eric3/icons/default/method_private.png
 ${PYSITELIB}/eric3/icons/default/method_protected.png
+${PYSITELIB}/eric3/icons/default/module.png
 ${PYSITELIB}/eric3/icons/default/namedgroup.png
 ${PYSITELIB}/eric3/icons/default/namedreference.png
 ${PYSITELIB}/eric3/icons/default/neglookahead.png
@@ -1240,6 +1325,32 @@ ${PYSITELIB}/eric3/icons/default/openQM.png
 ${PYSITELIB}/eric3/icons/default/openUI.png
 ${PYSITELIB}/eric3/icons/default/poslookahead.png
 ${PYSITELIB}/eric3/icons/default/poslookbehind.png
+${PYSITELIB}/eric3/icons/default/preferences-api.png
+${PYSITELIB}/eric3/icons/default/preferences-application.png
+${PYSITELIB}/eric3/icons/default/preferences-autocompletion.png
+${PYSITELIB}/eric3/icons/default/preferences-calltips.png
+${PYSITELIB}/eric3/icons/default/preferences-colours.png
+${PYSITELIB}/eric3/icons/default/preferences-debugger.png
+${PYSITELIB}/eric3/icons/default/preferences-editor.png
+${PYSITELIB}/eric3/icons/default/preferences-general.png
+${PYSITELIB}/eric3/icons/default/preferences-help.png
+${PYSITELIB}/eric3/icons/default/preferences-highlighter-association.png
+${PYSITELIB}/eric3/icons/default/preferences-highlighting-styles.png
+${PYSITELIB}/eric3/icons/default/preferences-icons.png
+${PYSITELIB}/eric3/icons/default/preferences-interface.png
+${PYSITELIB}/eric3/icons/default/preferences-mail_generic.png
+${PYSITELIB}/eric3/icons/default/preferences-orbit.png
+${PYSITELIB}/eric3/icons/default/preferences-printer.png
+${PYSITELIB}/eric3/icons/default/preferences-project.png
+${PYSITELIB}/eric3/icons/default/preferences-properties.png
+${PYSITELIB}/eric3/icons/default/preferences-pyDebugger.png
+${PYSITELIB}/eric3/icons/default/preferences-python.png
+${PYSITELIB}/eric3/icons/default/preferences-qtlogo.png
+${PYSITELIB}/eric3/icons/default/preferences-rbDebugger.png
+${PYSITELIB}/eric3/icons/default/preferences-refactoring.png
+${PYSITELIB}/eric3/icons/default/preferences-styles.png
+${PYSITELIB}/eric3/icons/default/preferences-vcs.png
+${PYSITELIB}/eric3/icons/default/preferences-viewmanager.png
 ${PYSITELIB}/eric3/icons/default/print.png
 ${PYSITELIB}/eric3/icons/default/profileProject.png
 ${PYSITELIB}/eric3/icons/default/profileScript.png
@@ -1254,6 +1365,10 @@ ${PYSITELIB}/eric3/icons/default/projectProps.png
 ${PYSITELIB}/eric3/icons/default/projectSave.png
 ${PYSITELIB}/eric3/icons/default/projectSaveAs.png
 ${PYSITELIB}/eric3/icons/default/projectSources.png
+${PYSITELIB}/eric3/icons/default/projectSourcesPy.png
+${PYSITELIB}/eric3/icons/default/projectSourcesPyMixed.png
+${PYSITELIB}/eric3/icons/default/projectSourcesRb.png
+${PYSITELIB}/eric3/icons/default/projectSourcesRbMixed.png
 ${PYSITELIB}/eric3/icons/default/projectTranslations.png
 ${PYSITELIB}/eric3/icons/default/reload.png
 ${PYSITELIB}/eric3/icons/default/remsplitHorizontal.png
@@ -1274,6 +1389,11 @@ ${PYSITELIB}/eric3/icons/default/syntaxError.png
 ${PYSITELIB}/eric3/icons/default/syntaxErrorGoto.png
 ${PYSITELIB}/eric3/icons/default/tBreak.png
 ${PYSITELIB}/eric3/icons/default/tCBreak.png
+${PYSITELIB}/eric3/icons/default/task.png
+${PYSITELIB}/eric3/icons/default/taskCompleted.png
+${PYSITELIB}/eric3/icons/default/taskPrioHigh.png
+${PYSITELIB}/eric3/icons/default/taskPrioLow.png
+${PYSITELIB}/eric3/icons/default/taskPriority.png
 ${PYSITELIB}/eric3/icons/default/toolsConfigure.png
 ${PYSITELIB}/eric3/icons/default/trPreviewer.png
 ${PYSITELIB}/eric3/icons/default/uiPreviewer.png
@@ -1284,6 +1404,7 @@ ${PYSITELIB}/eric3/icons/default/unittestRestart.png
 ${PYSITELIB}/eric3/icons/default/unittestScript.png
 ${PYSITELIB}/eric3/icons/default/viewProfileDebug.png
 ${PYSITELIB}/eric3/icons/default/viewProfileEdit.png
+${PYSITELIB}/eric3/icons/default/watchpoints.png
 ${PYSITELIB}/eric3/icons/default/whatsThis.png
 ${PYSITELIB}/eric3/icons/default/wordboundary.png
 ${PYSITELIB}/eric3/icons/default/zoomIn.png
@@ -1296,6 +1417,7 @@ ${PYSITELIB}/eric3/install.pyc
 ${PYSITELIB}/eric3/patch_modpython.py
 ${PYSITELIB}/eric3/patch_modpython.pyc
 ${PYSITELIB}/eric3/pixmaps/aboutEric.png
+${PYSITELIB}/eric3/pixmaps/eric.ico
 ${PYSITELIB}/eric3/pixmaps/eric.png
 ${PYSITELIB}/eric3/pixmaps/listspace.png
 ${PYSITELIB}/eric3/pixmaps/tabview.png
@@ -1308,6 +1430,8 @@ ${PYSITELIB}/sitecustomize.pyc
 @dirrm ${PYSITELIB}/eric3/pixmaps
 @dirrm ${PYSITELIB}/eric3/icons/default
 @dirrm ${PYSITELIB}/eric3/icons
+@exec ${MKDIR} %D/lib/python2.3/site-packages/eric3/i18n
+@dirrm ${PYSITELIB}/eric3/i18n
 @dirrm ${PYSITELIB}/eric3/XML
 @dirrm ${PYSITELIB}/eric3/Wizards/QRegExpWizard
 @dirrm ${PYSITELIB}/eric3/Wizards/PyRegExpWizard
@@ -1321,6 +1445,7 @@ ${PYSITELIB}/sitecustomize.pyc
 @dirrm ${PYSITELIB}/eric3/VCS/subversionPackage
 @dirrm ${PYSITELIB}/eric3/VCS/cvsPackage
 @dirrm ${PYSITELIB}/eric3/VCS
+@dirrm ${PYSITELIB}/eric3/Utilities/ClassBrowsers
 @dirrm ${PYSITELIB}/eric3/Utilities
 @dirrm ${PYSITELIB}/eric3/UI
 @dirrm ${PYSITELIB}/eric3/Tools
@@ -1349,6 +1474,8 @@ ${PYSITELIB}/sitecustomize.pyc
 @dirrm ${PYSITELIB}/eric3/DesignerTemplates
 @dirrm ${PYSITELIB}/eric3/Debugger/Cyclops
 @dirrm ${PYSITELIB}/eric3/Debugger
+@dirrm ${PYSITELIB}/eric3/DebugClients/Ruby
+@dirrm ${PYSITELIB}/eric3/DebugClients
 @dirrm ${PYSITELIB}/eric3/DTDs
 @dirrm ${PYSITELIB}/eric3/Checks
 @dirrm ${PYSITELIB}/eric3
