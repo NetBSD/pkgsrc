@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/13 18:01:39 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/19 10:13:08 grant Exp $
 #
 
 DISTNAME=		Digest-HMAC-1.01
@@ -12,8 +12,8 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Digest-HMAC/
 COMMENT=		Perl5 module for HMAC
 
-DEPENDS+=		p5-Digest-SHA1>=1.00:../p5-Digest-SHA1
-DEPENDS+=		p5-Digest-MD5>=2.00:../p5-Digest-MD5
+DEPENDS+=		p5-Digest-SHA1>=1.00:../../security/p5-Digest-SHA1
+DEPENDS+=		p5-Digest-MD5>=2.00:../../security/p5-Digest-MD5
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

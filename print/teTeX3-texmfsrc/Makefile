@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/17 22:00:13 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/19 10:15:30 grant Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	kei@NetBSD.org,hubertf@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Sources for machine-independent part of teTeX
 
-DEPENDS+=	teTeX-texmf>=3.0:../teTeX3-texmf
+DEPENDS+=	teTeX-texmf>=3.0:../../print/teTeX3-texmf
 
 CONFLICTS+=	teTeX-sharesrc-[0-9]*
 

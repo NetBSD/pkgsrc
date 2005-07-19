@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/13 18:01:23 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/19 10:20:07 grant Exp $
 #
 
 DISTNAME=		Class-ReturnValue-0.52
@@ -14,8 +14,8 @@ COMMENT=		Perl5 module for return-value object
 
 PERL5_PACKLIST=		auto/Class/ReturnValue/.packlist
 
-DEPENDS+=		p5-Devel-StackTrace-[0-9]*:../p5-Devel-StackTrace
-DEPENDS+=		p5-Test-Inline-[0-9]*:../p5-Test-Inline
+DEPENDS+=		p5-Devel-StackTrace-[0-9]*:../../devel/p5-Devel-StackTrace
+DEPENDS+=		p5-Test-Inline-[0-9]*:../../devel/p5-Test-Inline
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

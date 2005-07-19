@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/19 10:20:36 grant Exp $
 
 DISTNAME=	vapor-0.81
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Ruby transparent persistence to postgresql
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+=	${RUBY_PKGPREFIX}-DBD-postgresql>=0.0.20:../ruby-DBD-postgresql
+DEPENDS+=	${RUBY_PKGPREFIX}-DBD-postgresql>=0.0.20:../../databases/ruby-DBD-postgresql
 .if ${RUBY_VER} == 16
 DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=2.4.0:../../textproc/ruby-rexml
 DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.4.3:../../devel/ruby-racc

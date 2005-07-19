@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:11 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/19 10:17:17 grant Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.sony.co.jp/pub/unsupported/src/	\
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Japanese input method (dictionary)
 
-BUILD_DEPENDS+=	sj3-server-bin>=2.0.1.20nb1:../sj3-server-bin
+BUILD_DEPENDS+=	sj3-server-bin>=2.0.1.20nb1:../../inputmethod/sj3-server-bin
 
 FILESDIR=	${.CURDIR}/../sj3-lib/files
 DISTINFO_FILE=	${.CURDIR}/../sj3-lib/distinfo
