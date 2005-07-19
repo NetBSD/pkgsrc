@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.25 2005/06/17 03:50:34 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/19 16:36:51 drochner Exp $
 #
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
+PKGREVISION=		3
+
 PKGNAME=		gcdmaster-${CDRDAO_VER}
 COMMENT=		Gnome UI frontend to cdrdao
 
-DEPENDS+=		cdrdao-${PKGVERSION}:../../sysutils/cdrdao
+DEPENDS+=		cdrdao-${CDRDAO_VER}{,nb*}:../../sysutils/cdrdao
 
-PKGDIR=         	${.CURDIR}/../../sysutils/cdrdao
-FILESDIR=       	${PKGDIR}/files
-PATCHDIR=       	${PKGDIR}/patches
-DISTINFO_FILE=  	${PKGDIR}/distinfo
-PLIST_SRC=		${PKGDIR}/PLIST.gcdmaster
 WRKSRC=			${WRKDIR}/cdrdao-${CDRDAO_VER}
 
 USE_X11BASE=		YES
@@ -29,6 +26,9 @@ do-install:
 		${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/xdao/gcdmaster.png \
 		${PREFIX}/share/pixmaps
+	${INSTALL_DATA_DIR} ${PREFIX}/share/gcdmaster/glade
+	${INSTALL_DATA} ${WRKSRC}/xdao/glade/ProjectChooser.glade \
+		${PREFIX}/share/gcdmaster/glade
 
 .include "../../devel/libgnomeuimm26/buildlink3.mk"
 .include "../../devel/libgnomemm26/buildlink3.mk"
