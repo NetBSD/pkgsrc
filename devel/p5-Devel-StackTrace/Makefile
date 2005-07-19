@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/13 18:01:24 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/19 10:20:07 grant Exp $
 #
 
 DISTNAME=		Devel-StackTrace-1.11
@@ -14,7 +14,7 @@ COMMENT=		Perl5 module for stack trace and stack trace frame objects
 
 PERL5_PACKLIST=		auto/Devel/StackTrace/.packlist
 
-DEPENDS+=	p5-Test-Simple>=0.46:../p5-Test-Simple
+DEPENDS+=	p5-Test-Simple>=0.46:../../devel/p5-Test-Simple
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
