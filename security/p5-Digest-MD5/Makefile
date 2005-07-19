@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/13 18:01:39 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/19 01:25:00 grant Exp $
 #
 
 DISTNAME=	Digest-MD5-2.33
@@ -12,7 +12,7 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Digest-MD5/
 COMMENT=	Perl5 extension interface for MD5 algorithm
 
-DEPENDS+=	p5-Digest>=1.00:../p5-Digest
+DEPENDS+=	p5-Digest>=1.00:../../security/p5-Digest
 
 CONFLICTS+=	p5-MD5-[0-9]*
 
