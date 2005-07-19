@@ -1,4 +1,4 @@
-# $NetBSD: imake-check.mk,v 1.2 2005/07/15 18:27:55 jlam Exp $
+# $NetBSD: imake-check.mk,v 1.3 2005/07/19 23:01:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,8 +58,9 @@
 #
 
 .for _pair_ in ${BUILTIN_IMAKE_CHECK}
-USE_TOOLS+=	cat echo grep imake mkdir rm	# XXX
-IMAKE?=		${X11BASE}/bin/imake		# XXX
+USE_TOOLS+=	cat:pkgsrc echo:pkgsrc grep:pkgsrc imake:pkgsrc		\
+		mkdir:pkgsrc rm:pkgsrc test:pkgsrc	# XXX
+IMAKE?=		${X11BASE}/bin/imake			# XXX
 
 .  if !defined(BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//})
 BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}!=				\
