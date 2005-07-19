@@ -1,19 +1,18 @@
-# $NetBSD: options.mk,v 1.4 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: options.mk,v 1.5 2005/07/19 19:41:19 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns
-PKG_SUPPORTED_OPTIONS=	inet6 ignoreip2 tinydns64
+PKG_SUPPORTED_OPTIONS=	inet6 djbdns-ignoreip2 djbdns-tinydns64
+PKG_OPTIONS_LEGACY_OPTS+=	ignoreip2:djbdns-ignoreip2
+PKG_OPTIONS_LEGACY_OPTS+=	tinydns64:djbdns-tinydns64
 
 .if ${MACHINE_ARCH} == "sparc64" || \
 	${MACHINE_ARCH} == "alpha" || \
 	${MACHINE_ARCH} == "amd64"
-PKG_SUGGESTED_OPTIONS=   tinydns64
+PKG_SUGGESTED_OPTIONS=   djbdns-tinydns64
 .endif
 
 .include "../../mk/bsd.options.mk"
 
-###
-### Felix von Leitner's IPv6 patch
-###
 .if !empty(PKG_OPTIONS:Minet6)
 IPV6_PATCH=			djbdns-1.05-ipv6.diff.bz2
 PATCHFILES+=			${IPV6_PATCH}
@@ -22,19 +21,13 @@ PATCH_DIST_STRIP.${IPV6_PATCH}=	-p1
 PLIST_SRC+=			${PKGDIR}/PLIST.inet6
 .endif
 
-###
-### Russ Nelson's patch to treat certain responses as NXDOMAIN
-###
-.if !empty(PKG_OPTIONS:Mignoreip2)
+.if !empty(PKG_OPTIONS:Mdjbdns-ignoreip2)
 IGNOREIP2_PATCH=		djbdns-1.05-ignoreip2.patch
 PATCHFILES+=			${IGNOREIP2_PATCH}
 SITES_${IGNOREIP2_PATCH}=	http://www.tinydns.org/
 .endif
 
-###
-### Bernhard Roth's patch to fix tinydns-data on 64-bit platforms
-###
-.if !empty(PKG_OPTIONS:Mtinydns64)
+.if !empty(PKG_OPTIONS:Mdjbdns-tinydns64)
 TINYDNS64_PATCH=		tinydns64.diff
 PATCHFILES+=			${TINYDNS64_PATCH}
 SITES_${TINYDNS64_PATCH}=	http://www.pwrlock.de/br/

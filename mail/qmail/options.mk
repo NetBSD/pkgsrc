@@ -1,8 +1,16 @@
-# $NetBSD: options.mk,v 1.13 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: options.mk,v 1.14 2005/07/19 19:41:19 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
-PKG_SUPPORTED_OPTIONS=	badrcptto bigdns darwin netqmail outgoingip
-PKG_SUPPORTED_OPTIONS+=	qregex realrcptto sasl syncdir tls viruscan
+PKG_SUPPORTED_OPTIONS=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
+PKG_SUPPORTED_OPTIONS+=	qmail-netqmail qmail-outgoingip qmail-qregex
+PKG_SUPPORTED_OPTIONS+=	qmail-realrcptto qmail-viruscan
+PKG_OPTIONS_LEGACY_OPTS+=	badrcptto:qmail-badrcptto
+PKG_OPTIONS_LEGACY_OPTS+=	bigdns:qmail-bigdns
+PKG_OPTIONS_LEGACY_OPTS+=	netqmail:qmail-netqmail
+PKG_OPTIONS_LEGACY_OPTS+=	outgoingip:qmail-outgoingip
+PKG_OPTIONS_LEGACY_OPTS+=	qregex:qmail-qregex
+PKG_OPTIONS_LEGACY_OPTS+=	realrcptto:qmail-realrcptto
+PKG_OPTIONS_LEGACY_OPTS+=	viruscan:qmail-viruscan
 
 .if ${OPSYS} == "Darwin"
 PKG_SUGGESTED_OPTIONS=	darwin
@@ -10,29 +18,20 @@ PKG_SUGGESTED_OPTIONS=	darwin
 
 .include "../../mk/bsd.options.mk"
 
-###
-### reject messages with bad envelope recipients
-###
-.if !empty(PKG_OPTIONS:Mbadrcptto)
+.if !empty(PKG_OPTIONS:Mqmail-badrcptto)
 BADRCPTTO_PATCH=	badrcptto.patch
 PATCHFILES+=		${BADRCPTTO_PATCH}
 SITES_${BADRCPTTO_PATCH}=	http://patch.be/qmail/
 PATCH_DIST_STRIP.${BADRCPTTO_PATCH}=	-p2
 .endif
 
-###
-### handle oversized responses to MX queries
-###
-.if !empty(PKG_OPTIONS:Mbigdns)
+.if !empty(PKG_OPTIONS:Mqmail-bigdns)
 BIGDNS_PATCH=		qmail-103.patch
 PATCHFILES+=		${BIGDNS_PATCH}
 SITES_${BIGDNS_PATCH}=	http://www.ckdhr.com/ckd/
 PATCH_DIST_STRIP.${BIGDNS_PATCH}=	-p1
 .endif
 
-###
-### build and run on Mac OS X
-###
 .if !empty(PKG_OPTIONS:Mdarwin)
 DARWIN_PATCH=		panther.patch
 PATCHFILES+=		${DARWIN_PATCH}
@@ -50,29 +49,20 @@ DARWINSUFX=		# empty
 .endif
 PLIST_SUBST+=		DARWINSUFX=${DARWINSUFX}
 
-###
-### "netqmail" patch collection
-###
-.if !empty(PKG_OPTIONS:Mnetqmail)
+.if !empty(PKG_OPTIONS:Mqmail-netqmail)
 NETQMAIL_PATCH=		netqmail-1.05.tar.gz
 PATCHFILES+=		${NETQMAIL_PATCH}
 PATCH_DIST_CAT.${NETQMAIL_PATCH}=	${CAT} ${WRKSRC}/../${DISTNAME}.patch
 PATCH_DIST_STRIP.${NETQMAIL_PATCH}=	-p1
 .endif
 
-###
-### force outgoing connections to originate from a particular IP
-###
-.if !empty(PKG_OPTIONS:Moutgoingip)
+.if !empty(PKG_OPTIONS:Mqmail-outgoingip)
 OUTGOINGIP_PATCH=	outgoingip.patch
 PATCHFILES+=		${OUTGOINGIP_PATCH}
 SITES_${OUTGOINGIP_PATCH}=	http://www.qmail.org/
 .endif
 
-###
-### reject messages matching regular expressions
-###
-.if !empty(PKG_OPTIONS:Mqregex)
+.if !empty(PKG_OPTIONS:Mqmail-qregex)
 QREGEX_PATCH=		qregex-20040725.patch
 PATCHFILES+=		${QREGEX_PATCH}
 SITES_${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
@@ -80,19 +70,13 @@ PATCH_DIST_STRIP.${QREGEX_PATCH}=	-p3
 PLIST_SRC+=             ${PKGDIR}/PLIST.qregex
 .endif
 
-###
-### reject messages that would bounce due to missing .qmail files
-###
-.if !empty(PKG_OPTIONS:Mrealrcptto)
+.if !empty(PKG_OPTIONS:Mqmail-realrcptto)
 REALRCPTTO_PATCH=	qmail-1.03-realrcptto-2004.08.20.patch
 PATCHFILES+=		${REALRCPTTO_PATCH}
 SITES_${REALRCPTTO_PATCH}=	http://code.dogmap.org/qmail/
 PATCH_DIST_STRIP.${REALRCPTTO_PATCH}=	-p1
 .endif
 
-###
-### enable STARTTLS and/or SMTP authentication
-###
 .if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mtls)
 .  if empty(PKG_OPTIONS:Msasl)
 PKG_OPTIONS+=		sasl
@@ -109,9 +93,6 @@ PLIST_SRC+=             ${PKGDIR}/PLIST.tls
 .  endif
 .endif
 
-###
-### force synchronous link() syscall
-###
 .if !empty(PKG_OPTIONS:Msyncdir)
 .  include "../../devel/syncdir/buildlink3.mk"
 SUBST_CLASSES+=		load
@@ -124,10 +105,7 @@ SUBST_SED.load+=	-e '$$s|$$| -bind_at_load|'
 SUBST_MESSAGE.load=	"Setting linker flags for syncdir."
 .endif
 
-###
-### reject messages with MIME attachments that match certain signatures
-###
-.if !empty(PKG_OPTIONS:Mviruscan)
+.if !empty(PKG_OPTIONS:Mqmail-viruscan)
 VIRUSCAN_PATCH=		qmail-smtpd-viruscan-1.3.patch
 VIRUSCAN_LOG_PATCH=	qmail-smtpd-viruscan-logging.patch
 PATCHFILES+=		${VIRUSCAN_PATCH} ${VIRUSCAN_LOG_PATCH}
