@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/07/19 11:22:00 tonio Exp $
+
+--- glib/gmain.c.orig	2005-06-07 18:31:19.000000000 +0200
++++ glib/gmain.c	2005-06-07 18:32:01.000000000 +0200
+@@ -52,7 +52,7 @@
+ /* The poll() emulation on OS/X doesn't handle fds=NULL, nfds=0,
+  * so we prefer our own poll emulation.
+  */
+-#ifdef _POLL_EMUL_H_
++#ifdef __APPLE__
+ #undef HAVE_POLL
+ #endif
+    
