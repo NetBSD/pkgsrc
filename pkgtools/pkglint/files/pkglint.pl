@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.209 2005/07/20 17:32:15 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.210 2005/07/20 18:20:27 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1297,6 +1297,29 @@ sub checklines_direct_tools($) {
 	return true;
 }
 
+sub expand_variable($$$) {
+	my ($whole, $varname, $default_value) = @_;
+	my ($value, $re);
+
+	$re = qr"\n${varname}([+:?]?)=[ \t]*([^\n#]*)";
+	$value = undef;
+	while ($whole =~ m/$re/g) {
+		my ($op, $val) = ($1, $2);
+		if ($op ne "?" || !defined($value)) {
+			$value = $val;
+		}
+	}
+	if (!defined($value)) {
+		$value = $default_value;
+	}
+	$value =~ s,\$\{\.CURDIR\},.,g;
+	$value =~ s,\$\{PKGSRCDIR\},../..,g;
+	if (defined($pkgdir)) {
+		$value =~ s,\$\{PKGDIR\},$pkgdir,g;
+	}
+	return $value;
+}
+
 sub checkfile_Makefile($$) {
 	my ($dir, $fname) = @_;
 	my ($tmp, $rawwhole, $whole, $idx, @sections);
@@ -1346,46 +1369,17 @@ sub checkfile_Makefile($$) {
 		}
 	}
 
-	#
-	# whole file: get FILESDIR, PATCHDIR, PKGDIR, SCRIPTDIR,
-	# PATCH_SUM_FILE and DIGEST_FILE
-	#
+	$distinfo_file = expand_variable($whole, "DISTINFO_FILE", "distinfo");
+	$filesdir = expand_variable($whole, "FILESDIR", "files");
+	$patchdir = expand_variable($whole, "PATCHDIR", "patches");
+	$pkgdir = expand_variable($whole, "PKGDIR", ".");
+	$scriptdir = expand_variable($whole, "SCRIPTDIR", "scripts");
 
-	$filesdir = "files";
-	$filesdir = $1 if ($whole =~ /\nFILESDIR[+?]?=[ \t]*([^\n]+)\n/);
-	$filesdir = $1 if ($whole =~ /\nFILESDIR:?=[ \t]*([^\n]+)\n/);
-	$filesdir =~ s/\$\{.CURDIR\}/./;
-
-	$patchdir = "patches";
-	$patchdir = $1 if ($whole =~ /\nPATCHDIR[+?]?=[ \t]*([^\n]+)\n/);
-	$patchdir = $1 if ($whole =~ /\nPATCHDIR:?=[ \t]*([^\n]+)\n/);
-	$patchdir =~ s/\$\{.CURDIR\}/./;
-	$patchdir =~ s/\${PKGSRCDIR}/..\/../;
-
-	if (grep { $_ !~ qr"/CVS$" } <$dir/pkg/*>) {
-		$pkgdir = "pkg";
-	}
-	$pkgdir = $1 if ($whole =~ /\nPKGDIR[+?]?=[ \t]*([^\n]+)\n/);
-	$pkgdir = $1 if ($whole =~ /\nPKGDIR:?=[ \t]*([^\n]+)\n/);
-	$pkgdir =~ s/\$\{.CURDIR\}/./;
-
-	$scriptdir = "scripts";
-	$scriptdir = $1 if ($whole =~ /\nSCRIPTDIR[+?]?=[ \t]*([^\n]+)\n/);
-	$scriptdir = $1 if ($whole =~ /\nSCRIPTDIR:?=[ \t]*([^\n]+)\n/);
-	$scriptdir =~ s/\$\{.CURDIR\}/./;
-
-	$distinfo_file = "distinfo";
-	$distinfo_file = $1 if ($whole =~ /\nDISTINFO_FILE[+?]?=[ \t]*([^\n]+)\n/);
-	$distinfo_file = $1 if ($whole =~ /\nDISTINFO_FILE:?=[ \t]*([^\n]+)\n/);
-	$distinfo_file =~ s/\$\{.CURDIR\}/./;
-	$distinfo_file =~ s/\${PKGSRCDIR}/..\/../;
-	$distinfo_file =~ s/\${PKGDIR}/$pkgdir/;
-
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PATCHDIR=$patchdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] SCRIPTDIR=$scriptdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] FILESDIR=$filesdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PKGDIR=$pkgdir");
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] DISTINFO_FILE=$distinfo_file");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] FILESDIR=$filesdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PATCHDIR=$patchdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PKGDIR=$pkgdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] SCRIPTDIR=$scriptdir");
 
 	checklines_deprecated_variables($lines);
 
