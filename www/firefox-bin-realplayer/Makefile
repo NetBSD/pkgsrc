@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:40 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/20 10:23:59 wiz Exp $
 
 DISTNAME= 		firefox-bin-realplayer-1.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www audio graphics
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -10,7 +10,7 @@ MAINTAINER=		kei@NetBSD.org
 COMMENT=		RealAudio and RealVideo player plugin for firefox-bin
 
 DEPENDS+=		firefox-bin>=0.8:../../www/firefox-bin
-DEPENDS+=		realplayer-[0-9]*:../../multimedia/realplayer
+DEPENDS+=		RealPlayerGold-[0-9]*:../../multimedia/RealPlayerGold
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
