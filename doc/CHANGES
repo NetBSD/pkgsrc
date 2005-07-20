@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10637 2005/07/20 14:49:53 adam Exp $
+$NetBSD: CHANGES,v 1.10638 2005/07/20 19:43:48 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3253,3 +3253,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added lang/yap version 4.4.4 [rillig 2005-07-20]
 	Updated chat/ekg to 1.6nb2 [adam 2005-07-20]
 	Updated chat/kadu to 0.4.1 [adam 2005-07-20]
+	Added mail/dk-milter version 0.3.0 [tv 2005-07-20]
