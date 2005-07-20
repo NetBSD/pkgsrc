@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.208 2005/07/20 17:11:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.209 2005/07/20 17:32:15 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -352,7 +352,6 @@ my $scriptdir;
 my $seen_USE_PKGLOCALEDIR;
 my $seen_Makefile_common;
 my $pkgname;
-my %make_vars_typemap;
 
 # these subroutines return C<true> if the checking succeeded (that includes
 # errors in the file) and C<false> if the file could not be checked.
@@ -383,7 +382,6 @@ sub init_global_vars() {
 	$seen_USE_PKGLOCALEDIR	= false;
 	$seen_Makefile_common	= false;
 	$pkgname		= undef;
-	%make_vars_typemap	= ();
 }
 
 sub help($$$) {
@@ -482,20 +480,23 @@ sub parse_command_line() {
 }
 
 sub load_make_vars_typemap() {
-	my ($lines) = (load_file("${conf_datadir}/makevars.map"));
-	if (!$lines) {
+	my ($lines, $vartypes);
+
+	if (!($lines = (load_file("${conf_datadir}/makevars.map")))) {
 		return false;
 	}
+	$vartypes = {};
+
 	foreach my $line (@$lines) {
 		if ($line->text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
 		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_]+)$") {
-			$make_vars_typemap{$1} = $2;
+			$vartypes->{$1} = $2;
 		} else {
 			$line->log_error("[internal] Unknown line format.");
 		}
 	}
-	return true;
+	return $vartypes;
 }
 
 sub load_predefined_sites($) {
@@ -544,9 +545,6 @@ sub check_directory($) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
 		check_category($dir);
 	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
-		if ($opt_warn_types) {
-			load_make_vars_typemap();
-		}
 		load_predefined_sites("${dir}/../..");
 		check_package($dir);
 	} else {
@@ -1118,14 +1116,14 @@ sub readmakefile($$$$) {
 	return $contents;
 }
 
-sub check_Makefile_vartype($) {
-	my ($line) = @_;
+sub check_Makefile_vartype($$) {
+	my ($line, $vartypes) = @_;
 	if ($line->text =~ qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)") {
 		my ($varname, $op, $value) = ($1, $2, $3);
 		if ($value =~ qr"\$") {
 			# ignore values that contain other variables
-		} elsif (exists($make_vars_typemap{$varname})) {
-			my ($type) = ($make_vars_typemap{$varname});
+		} elsif (exists($vartypes->{$varname})) {
+			my ($type) = ($vartypes->{$varname});
 			if ($type eq "Boolean") {
 				if ($value !~ $regex_boolean) {
 					$line->log_warning("$varname should be set to YES, yes, NO, or no.");
@@ -1150,8 +1148,17 @@ sub check_Makefile_vartype($) {
 	return true;
 }
 
+my $check_Makefile_variables_vartypes = undef;
 sub check_Makefile_variables($) {
 	my ($lines) = @_;
+
+	if (!defined($check_Makefile_variables_vartypes) && $opt_warn_types) {
+		my $vartypes = load_make_vars_typemap();
+		if ($vartypes == false) {
+			return false;
+		}
+		$check_Makefile_variables_vartypes = $vartypes;
+	}
 
 	# Check variable name quoting
 	foreach my $line (@$lines) {
@@ -1164,7 +1171,7 @@ sub check_Makefile_variables($) {
 	# Check variable types
 	if ($opt_warn_types) {
 		foreach my $line (@$lines) {
-			check_Makefile_vartype($line);
+			check_Makefile_vartype($line, $check_Makefile_variables_vartypes);
 		}
 	}
 
