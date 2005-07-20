@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2005/07/16 01:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2005/07/20 06:32:29 grant Exp $
 
-DISTNAME=	exim-4.51
+DISTNAME=	exim-4.52
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -17,6 +17,7 @@ USE_TOOLS+=	perl:run
 USE_PKGINSTALL=	yes
 
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
+MAKE_FLAGS+=	FULLECHO=''
 
 .include "../../mk/bsd.prefs.mk"
 
