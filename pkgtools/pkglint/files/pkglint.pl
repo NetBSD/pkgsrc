@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.206 2005/07/20 16:56:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.207 2005/07/20 17:08:59 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -352,7 +352,6 @@ my $scriptdir;
 my $seen_USE_PKGLOCALEDIR;
 my %seen_Makefile_include;
 my $seen_Makefile_common;
-my %predefined_sites;
 my $pkgname;
 my %make_vars_typemap;
 
@@ -374,7 +373,7 @@ sub readmakefile($$$);
 sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
-sub check_predefined_sites($);
+sub check_predefined_sites($$);
 
 sub init_global_vars() {
 	$pkgdir			= ".";
@@ -385,7 +384,6 @@ sub init_global_vars() {
 	$seen_USE_PKGLOCALEDIR	= false;
 	%seen_Makefile_include	= ();
 	$seen_Makefile_common	= false;
-	%predefined_sites	= ();
 	$pkgname		= undef;
 	%make_vars_typemap	= ();
 }
@@ -508,6 +506,7 @@ sub load_predefined_sites($) {
 	my ($lines) = load_file($fname);
 	my ($varname) = undef;
 	my ($ignoring) = false;
+	my ($predefined_sites) = {};
 
 	if (!$lines) {
 		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
@@ -522,7 +521,7 @@ sub load_predefined_sites($) {
 		} elsif ($line->text =~ qr"^\t($regex_url_directory)(?:|\s*\\)$"o) {
 			if (!$ignoring) {
 				if (defined($varname)) {
-					$predefined_sites{$1} = $varname;
+					$predefined_sites->{$1} = $varname;
 				} else {
 					$line->log_error("Lonely URL found.");
 				}
@@ -535,8 +534,8 @@ sub load_predefined_sites($) {
 			$line->log_error("Unknown line type.");
 		}
 	}
-	log_info($fname, NO_LINE_NUMBER, sprintf("Loaded %d MASTER_SITE_* definitions.", scalar(keys(%predefined_sites))));
-	return true;
+	log_info($fname, NO_LINE_NUMBER, sprintf("Loaded %d MASTER_SITE_* definitions.", scalar(keys(%{$predefined_sites}))));
+	return $predefined_sites;
 }
 
 sub check_directory($) {
@@ -1528,7 +1527,7 @@ sub checkfile_Makefile($$) {
 					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" contains ".
 						"extra \":\".");
 				}
-				check_predefined_sites($i);
+				check_predefined_sites($dir, $i);
 			} else {
 				log_info(NO_FILE, NO_LINE_NUMBER, "non-URL \"$i\" ok.");
 			}
@@ -1967,13 +1966,26 @@ sub checkearlier($@) {
 	}
 }
 
-sub check_predefined_sites($) {
-	my ($url) = @_;
+my $predefined_sites_rootdir = undef;
+my $predefined_sites = undef;
+sub check_predefined_sites($$) {
+	my ($pkgsrc_rootdir, $url) = @_;
 
-	foreach my $site (keys(%predefined_sites)) {
+	if (!defined($predefined_sites) || $predefined_sites_rootdir ne $pkgsrc_rootdir) {
+		my $sites = load_predefined_sites($pkgsrc_rootdir);
+		if ($sites != false) {
+			$predefined_sites = $sites;
+			$predefined_sites_rootdir = $pkgsrc_rootdir;
+		}
+	}
+	if (!defined($predefined_sites)) {
+		return false;
+	}
+
+	foreach my $site (keys(%{$predefined_sites})) {
 		next unless (index($url, $site) == 0);
 		my $subdir = substr($url, length($site));
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please use \${$predefined_sites{$site}:=$subdir} instead of \"$url\".");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please use \${$predefined_sites->{$site}:=$subdir} instead of \"$url\".");
 		return true;
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "URL does not match any of the predefined URLS. Good.");
