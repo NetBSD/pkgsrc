@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:25 agc Exp $
+$NetBSD: patch-aa,v 1.3 2005/07/20 16:03:24 kristerw Exp $
 
 --- xmove/Imakefile	1998/03/10 22:54:16	1.1
 +++ xmove/Imakefile	1998/03/10 23:01:21
@@ -40,26 +40,3 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:18:25 agc Exp $
 +ForceSubdirs(xmove xmovectrl)
 +InstallSubdirs(xmove xmovectrl)
 +InstallManSubdirs(xmove xmovectrl)
---- xmove/main.c	1998/03/11 01:26:12	1.1
-+++ xmove/main.c	1998/03/11 01:27:26
-@@ -79,13 +79,13 @@
- static void SignalTSTP P((int signum ));
- static void SignalCONT P((int signum ));
- #else
--static void SignalURG P((void));
--static void SignalPIPE P((void ));
--static void SignalINT P((void ));
--static void SignalQUIT P((void ));
--static void SignalTERM P((void ));
--static void SignalTSTP P((void ));
--static void SignalCONT P((void ));
-+static void SignalURG P(());
-+static void SignalPIPE P(());
-+static void SignalINT P(());
-+static void SignalQUIT P(());
-+static void SignalTERM P(());
-+static void SignalTSTP P(());
-+static void SignalCONT P(());
- #endif
- 
- extern char *getenv();
