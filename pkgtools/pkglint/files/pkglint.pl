@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.211 2005/07/20 21:04:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.212 2005/07/20 21:09:28 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -319,7 +319,7 @@ my $opt_warn_order	= true;
 my $opt_warn_paren	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
-my $opt_warn_vague	= true;
+my $opt_warn_vague	= false;
 my $opt_warn_workdir	= true;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
