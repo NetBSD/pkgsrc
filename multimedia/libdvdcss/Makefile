@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/14 03:56:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/20 15:11:55 kristerw Exp $
 #
 # Unfortunately, some reading of the United States law (DMCA) means
 # that we are not able to provide pointers to the source or homepage
@@ -23,6 +23,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+INTERACTIVE_STAGE=	fetch
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
