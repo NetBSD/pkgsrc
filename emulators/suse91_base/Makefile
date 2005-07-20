@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/09 00:06:11 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/20 15:32:50 kristerw Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		5
@@ -11,8 +11,8 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package
 
 CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 linuxppc_lib-[0-9]*
-ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386 NetBSD-[3-9]*-x86_64 \
-			FreeBSD-*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386 NetBSD-3.99*-x86_64 \
+			NetBSD-[4-9]*-x86_6 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
