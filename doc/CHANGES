@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10635 2005/07/20 13:09:09 rillig Exp $
+$NetBSD: CHANGES,v 1.10636 2005/07/20 14:27:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3251,3 +3251,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/exim to 4.52 [grant 2005-07-20]
 	Updated www/firefox-bin-realplayer to 1.0nb2 [wiz 2005-07-20]
 	Added lang/yap version 4.4.4 [rillig 2005-07-20]
+	Updated chat/ekg to 1.6nb2 [adam 2005-07-20]
