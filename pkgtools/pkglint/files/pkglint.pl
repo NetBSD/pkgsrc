@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.204 2005/07/20 16:38:10 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.205 2005/07/20 16:52:28 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -349,9 +349,6 @@ my $filesdir;
 my $patchdir;
 my $distinfo_file;
 my $scriptdir;
-my $seen_PLIST_SRC;
-my $seen_NO_PKG_REGISTER;
-my $seen_NO_CHECKSUM;
 my $seen_USE_PKGLOCALEDIR;
 my %seen_Makefile_include;
 my $seen_Makefile_common;
@@ -385,9 +382,6 @@ sub init_global_vars() {
 	$patchdir		= "patches";
 	$distinfo_file		= "distinfo";
 	$scriptdir		= "scripts";
-	$seen_PLIST_SRC		= false;
-	$seen_NO_PKG_REGISTER	= false;
-	$seen_NO_CHECKSUM	= false;
 	$seen_USE_PKGLOCALEDIR	= false;
 	%seen_Makefile_include	= ();
 	$seen_Makefile_common	= false;
@@ -644,23 +638,8 @@ sub check_package($) {
 		}
 	}
 
-	if (-f "$dir/$distinfo_file") {
-		if ( $seen_NO_CHECKSUM ) {
-			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
-		}
-	} else {
-		if ( ! $seen_NO_CHECKSUM ) {
-			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makesum'.");
-		}
-	}
 	if (grep { $_ !~ qr"/CVS$" } <$dir/scripts/*>) {
 		log_warning("$dir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
-	}
-	if (! -f "$dir/$pkgdir/PLIST"
-	    and ! -f "$dir/$pkgdir/PLIST.common"
-	    and ! $seen_PLIST_SRC
-	    and ! $seen_NO_PKG_REGISTER ) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
 	return true;
 } # check_package
@@ -1418,15 +1397,23 @@ sub checkfile_Makefile($$) {
 		}
 	}
 
-	if ($whole =~ /\nPLIST_SRC/) {
-		$seen_PLIST_SRC = true;
+	if (   $whole !~ qr"\nPLIST_SRC"
+	    && $whole !~ qr"\nNO_PKG_REGISTER"
+	    && !-f "$dir/$pkgdir/PLIST"
+	    && !-f "$dir/$pkgdir/PLIST.common") {
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
-	if ($whole =~ /\nNO_PKG_REGISTER/) {
-		$seen_NO_PKG_REGISTER = true;
+
+	if ($whole =~ qr"\nNO_CHECKSUM") {
+		if (-f "${dir}/${distinfo_file}") {
+			log_warning("${dir}/${distinfo_file}", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
+		}
+	} else {
+		if (!-f "${dir}/${distinfo_file}") {
+			log_warning("${dir}/${distinfo_file}", NO_LINE_NUMBER, "File not found. Please run '${conf_make} makesum'.");
+		}
 	}
-	if ($whole =~ /\nNO_CHECKSUM/) {
-		$seen_NO_CHECKSUM = true;
-	}
+
 	if ($whole =~ /\nUSE_PERL[^5]/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "USE_PERL found -- you probably mean USE_PERL5.");
 	}
