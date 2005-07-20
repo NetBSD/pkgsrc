@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.203 2005/07/20 16:28:32 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.204 2005/07/20 16:38:10 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -344,7 +344,6 @@ my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 
 # Global variables
-my $pkgsrc_rootdir;
 my $pkgdir;
 my $filesdir;
 my $patchdir;
@@ -381,7 +380,6 @@ sub checkearlier($@);
 sub check_predefined_sites($);
 
 sub init_global_vars() {
-	$pkgsrc_rootdir		= undef;
 	$pkgdir			= ".";
 	$filesdir		= "files";
 	$patchdir		= "patches";
@@ -510,7 +508,8 @@ sub load_make_vars_typemap() {
 	return true;
 }
 
-sub load_predefined_sites() {
+sub load_predefined_sites($) {
+	my ($pkgsrc_rootdir) = @_;
 	my ($fname) = ("$pkgsrc_rootdir/mk/bsd.sites.mk");
 	my ($lines) = load_file($fname);
 	my ($varname) = undef;
@@ -551,15 +550,13 @@ sub check_directory($) {
 
 	init_global_vars();
 	if (-f "${dir}/../mk/bsd.pkg.mk") {
-		$pkgsrc_rootdir = "${dir}/..";
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
 		check_category($dir);
 	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
-		$pkgsrc_rootdir = "${dir}/../..";
 		if ($opt_warn_types) {
 			load_make_vars_typemap();
 		}
-		load_predefined_sites();
+		load_predefined_sites("${dir}/../..");
 		check_package($dir);
 	} else {
 		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
