@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.205 2005/07/20 16:52:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.206 2005/07/20 16:56:24 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -386,7 +386,7 @@ sub init_global_vars() {
 	%seen_Makefile_include	= ();
 	$seen_Makefile_common	= false;
 	%predefined_sites	= ();
-	$pkgname		= "";
+	$pkgname		= undef;
 	%make_vars_typemap	= ();
 }
 
@@ -1565,7 +1565,7 @@ sub checkfile_Makefile($$) {
 		$extractsufx = '.tar.gz';
 	}
 
-	if ($pkgname ne '' && $pkgname eq $distname) {
+	if (defined($pkgname) && $pkgname eq $distname) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default, ".
 			"you don't need to define PKGNAME.");
 	}
@@ -1575,7 +1575,7 @@ sub checkfile_Makefile($$) {
 				"than 5 characters.");
 		}
 	}
-	my $i = ($pkgname eq '') ? $distname : $pkgname;
+	my $i = defined($pkgname) ? $pkgname : $distname;
 	$i =~ s/\${DISTNAME[^}]*}/$distname/g;
 	if ($i =~ /-([^-]+)$/) {
 		my ($j, $k) = ($`, $1);
@@ -1590,14 +1590,14 @@ sub checkfile_Makefile($$) {
 				"looks fine.");
 		} else {
 			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Version number part of PKGNAME".
-				(($pkgname eq '')
+				(!defined($pkgname)
 					? ', which is derived from DISTNAME, '
 					: ' ').
 				"looks illegal. You should modify \"-$k\".");
 		}
 	} else {
 		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "PKGNAME".
-			(($pkgname eq '')
+			(!defined($pkgname)
 				? ', which is derived from DISTNAME, '
 				: ' ').
 			"must come with version number, like \"foobaa-1.0\".");
@@ -1632,7 +1632,7 @@ sub checkfile_Makefile($$) {
 		}
 
 		# make an advice only in certain cases.
-		if ($pkgname ne '' && $distfiles =~ /^$pkgname([-\.].+)$/) {
+		if (defined($pkgname) && $distfiles =~ /^$pkgname([-\.].+)$/) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "How about \"DISTNAME=$pkgname\"".
 				(($1 eq '.tar.gz')
 					? ""
