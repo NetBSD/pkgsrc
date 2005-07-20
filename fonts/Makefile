@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2005/04/22 18:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2005/07/20 01:02:34 reed Exp $
 #
 
 COMMENT=	Fonts
@@ -51,6 +51,7 @@ SUBDIR+=	ec-fonts-mftraced
 SUBDIR+=	efont-unicode
 SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
+SUBDIR+=	freefont-ttf
 SUBDIR+=	freefonts
 SUBDIR+=	geoslab703-ttf
 SUBDIR+=	ghostscript-cidfonts
