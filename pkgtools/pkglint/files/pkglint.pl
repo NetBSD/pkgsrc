@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.207 2005/07/20 17:08:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.208 2005/07/20 17:11:56 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -350,7 +350,6 @@ my $patchdir;
 my $distinfo_file;
 my $scriptdir;
 my $seen_USE_PKGLOCALEDIR;
-my %seen_Makefile_include;
 my $seen_Makefile_common;
 my $pkgname;
 my %make_vars_typemap;
@@ -369,7 +368,7 @@ sub check_category($);
 sub check_package($);
 
 sub checkperms($);
-sub readmakefile($$$);
+sub readmakefile($$$$);
 sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
@@ -382,7 +381,6 @@ sub init_global_vars() {
 	$distinfo_file		= "distinfo";
 	$scriptdir		= "scripts";
 	$seen_USE_PKGLOCALEDIR	= false;
-	%seen_Makefile_include	= ();
 	$seen_Makefile_common	= false;
 	$pkgname		= undef;
 	%make_vars_typemap	= ();
@@ -1054,8 +1052,8 @@ sub checkfile_patches_patch($$) {
 	return true;
 }
 
-sub readmakefile($$$) {
-	my ($dir, $file, $all_lines) = @_;
+sub readmakefile($$$$) {
+	my ($dir, $file, $all_lines, $seen_Makefile_include) = @_;
 	my $contents = "";
 	my ($includefile, $dirname, $savedln, $level, $lines);
 
@@ -1076,7 +1074,7 @@ sub readmakefile($$$) {
 		# try to get any included file
 		if ($line->text =~ qr"^\.\s*include\s+\"([-./\w]+)\"$") {
 			$includefile = $1;
-			if (exists($seen_Makefile_include{$includefile})) {
+			if (exists($seen_Makefile_include->{$includefile})) {
 				$contents .= "### pkglint ### skipped $includefile\n";
 				next;
 			}
@@ -1085,7 +1083,7 @@ sub readmakefile($$$) {
 				next;
 			}
 
-			$seen_Makefile_include{$includefile} = true;
+			$seen_Makefile_include->{$includefile} = true;
 			if ($includefile =~ qr"Makefile\.common$") {
 				$seen_Makefile_common = true;
 			}
@@ -1107,7 +1105,7 @@ sub readmakefile($$$) {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
 					$line->log_info("Including $dirname/$includefile");
-					$contents .= readmakefile($dir, "$dirname/$includefile", $all_lines);
+					$contents .= readmakefile($dir, "$dirname/$includefile", $all_lines, $seen_Makefile_include);
 				}
 			}
 		} elsif ($line->text =~ qr"^\.\s*include\s+(.*)") {
@@ -1308,7 +1306,7 @@ sub checkfile_Makefile($$) {
 	checkperms($fname);
 
 	$tmp = 0;
-	$rawwhole = readmakefile($dir, $fname, $lines = []);
+	$rawwhole = readmakefile($dir, $fname, $lines = [], {});
 	if (!$rawwhole) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
