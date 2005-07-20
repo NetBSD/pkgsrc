@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/07/07 17:06:57 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2005/07/20 19:05:33 kristerw Exp $
 #
 
 DISTNAME=	epiphany-1.6.4
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
-#USE_MSGFMT_PLURALS=	YES
+USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 
 PKGCONFIG_OVERRIDE=	data/epiphany-1.6.pc.in
