@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 03:28:41 schmonz Exp $
+bin/cvm-benchclient
+bin/cvm-chain
+bin/cvm-checkpassword
+bin/cvm-pwfile
+bin/cvm-qmail
+bin/cvm-testclient
+bin/cvm-unix
+bin/cvm-v1benchclient
+bin/cvm-v1checkpassword
+bin/cvm-v1testclient
+bin/cvm-vmailmgr
+bin/cvm-vmailmgr-local
+bin/cvm-vmailmgr-udp
+include/cvm-sasl.h
+include/cvm/client.h
+include/cvm/credentials.h
+include/cvm/errors.h
+include/cvm/facts.h
+include/cvm/module.h
+include/cvm/protocol.h
+include/cvm/sasl.h
+include/cvm/v1client.h
+include/cvm/v2client.h
+lib/libcvm-client.a
+lib/libcvm-command.a
+lib/libcvm-local.a
+lib/libcvm-module.a
+lib/libcvm-sasl.a
+lib/libcvm-udp.a
+lib/libcvm-v1client.a
+lib/libcvm-v2client.a
+share/examples/rc.d/cvm
+@dirrm include/cvm
