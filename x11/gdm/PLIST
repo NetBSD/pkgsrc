@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/06/29 08:51:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2005/07/20 02:44:48 schmonz Exp $
 bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -241,7 +241,6 @@ share/xsessions/gnome.desktop
 @dirrm share/gdm/themes
 @dirrm share/gdm/BuiltInSessions
 @dirrm share/gdm
-@dirrm share/examples/rc.d
 @dirrm share/examples/gdm/modules
 @dirrm share/examples/gdm/PreSession
 @dirrm share/examples/gdm/PostSession
