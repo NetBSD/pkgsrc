@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.210 2005/07/20 18:20:27 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.211 2005/07/20 21:04:16 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1244,7 +1244,8 @@ sub checklines_direct_tools($) {
 		USE_TOOLS);
 	my @ok_shellcmds = (
 		qr"(?:\./Build|\$\{JAM_COMMAND\})\s+(?:install|test)",
-		qr"\"[^\"]*${regex_tools}[^\"]*\"");
+		qr"\"[^\"]*${regex_tools}[^\"]*\"",
+		qr"\'[^\']*${regex_tools}[^\']*\'");
 
 	my %toolvar = ();
 	foreach my $tool (@tools) {
@@ -1314,8 +1315,14 @@ sub expand_variable($$$) {
 	}
 	$value =~ s,\$\{\.CURDIR\},.,g;
 	$value =~ s,\$\{PKGSRCDIR\},../..,g;
+	$value =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,g;
 	if (defined($pkgdir)) {
 		$value =~ s,\$\{PKGDIR\},$pkgdir,g;
+	}
+	if ($value =~ qr"\$") {
+		log_warning(NO_FILE, NO_LINE_NUMBER, "The variable ${varname} could not be resolved completely.");
+		log_warning(NO_FILE, NO_LINE_NUMBER, "Its value would be \"${value}\"---using \"${default_value}\" instead.");
+		$value = $default_value;
 	}
 	return $value;
 }
@@ -1526,7 +1533,7 @@ sub checkfile_Makefile($$) {
 					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" contains ".
 						"extra \":\".");
 				}
-				check_predefined_sites($dir, $i);
+				check_predefined_sites("$dir/../..", $i);
 			} else {
 				log_info(NO_FILE, NO_LINE_NUMBER, "non-URL \"$i\" ok.");
 			}
