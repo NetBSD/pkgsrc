@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dk-milter.sh,v 1.2 2005/07/20 19:51:10 tv Exp $
+# $NetBSD: dk-milter.sh,v 1.3 2005/07/20 20:03:40 tv Exp $
 #
 # PROVIDE: dkmilter
 # REQUIRE: DAEMON
@@ -11,9 +11,9 @@ fi
 
 name="dkmilter"
 rcvar=$name
-command="@PREFIX@/sbin/dk-milter"
+command="@PREFIX@/sbin/dk-milter -P ${pidfile}"
 pidfile="/var/run/${name}.pid"
-command_args="-hl -P ${pidfile} -p ${dkmilter_socket-local:/tmp/.dkmilter.sock}"
+command_args="-h -l -p /var/run/${name}.sock"
 
 if [ -f /etc/rc.subr ]; then
         load_rc_config $name
