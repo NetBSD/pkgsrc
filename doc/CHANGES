@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10630 2005/07/20 01:02:35 reed Exp $
+$NetBSD: CHANGES,v 1.10631 2005/07/20 03:32:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3245,3 +3245,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libgphoto2 to 2.1.6 [drochner 2005-07-19]
 	Updated graphics/gphoto2 to 2.1.6 [drochner 2005-07-19]
 	Added fonts/freefont-ttf version 20050407 [reed 2005-07-20]
+	Added security/cvm version 0.71 [schmonz 2005-07-20]
+	Added mail/mailfront version 0.96 [schmonz 2005-07-20]
