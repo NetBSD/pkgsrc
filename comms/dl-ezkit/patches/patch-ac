@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/07/15 20:10:52 gmcgarry Exp $
---- lserial.c.orig	Sun Jul 15 17:27:34 2001
-+++ lserial.c	Sun Jul 15 17:27:51 2001
-@@ -331,7 +331,7 @@
+$NetBSD: patch-ac,v 1.2 2005/07/20 01:43:01 kristerw Exp $
+
+--- lserial.c.orig	Wed Dec  9 17:54:19 1998
++++ lserial.c	Wed Jul 20 03:39:32 2005
+@@ -13,7 +13,6 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+-#include <malloc.h>
+ #include <string.h>
+ #include <termios.h>
+ #include <fcntl.h>
+@@ -331,7 +330,7 @@
  
      while (len > 0)
      {
