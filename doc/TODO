@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3729 2005/07/19 18:30:53 drochner Exp $
+$NetBSD: TODO,v 1.3730 2005/07/20 08:46:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,6 +432,7 @@ Suggested package updates
 	o dirdiff-2.0
 	o dmalloc-5.4.2
 	o dnstracer-1.8
+	o docbook-xsl-1.69.0
 	o dpkg-1.13.3
 	o drivel-2.0.2
 	o dvdrip-0.52.5
