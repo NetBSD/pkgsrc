@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/20 19:39:42 drochner Exp $
+
+--- src/draw.c.orig	Thu Oct 16 08:13:22 2003
++++ src/draw.c	Sun Jan  4 12:54:16 2004
+@@ -28,7 +28,9 @@
+ 
+ #ifdef _MSC_VER
+ #pragma warning (disable:4244)
++#endif
+ 
++#if defined(_MSC_VER) || defined(__NetBSD__) || defined (__FreeBSD__)
+ float trunc(float d)
+ {
+     if (d >= 0)
