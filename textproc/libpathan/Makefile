@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/20 04:50:46 jlam Exp $
 
 DISTNAME=	libpathan-1.2-2-src
 PKGNAME=	${DISTNAME:S/-2-src/.2/}
@@ -19,7 +19,6 @@ USE_LIBTOOL=		YES
 USE_LANGUAGES=		c++
 
 CONFIGURE_ARGS+=	XERCESCROOT=${LOCALBASE}
-CONFIGURE_ARGS+=	YACC=${TOOLS_YACC:Q}
 
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
