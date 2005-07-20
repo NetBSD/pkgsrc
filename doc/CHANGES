@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10631 2005/07/20 03:32:23 schmonz Exp $
+$NetBSD: CHANGES,v 1.10632 2005/07/20 06:33:08 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3247,3 +3247,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added fonts/freefont-ttf version 20050407 [reed 2005-07-20]
 	Added security/cvm version 0.71 [schmonz 2005-07-20]
 	Added mail/mailfront version 0.96 [schmonz 2005-07-20]
+	Updated mail/exim to 4.52 [grant 2005-07-20]
