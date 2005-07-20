@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.202 2005/07/02 23:13:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.203 2005/07/20 16:28:32 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -582,36 +582,56 @@ sub main() {
 sub check_package($) {
 	my ($dir) = @_;
 
+	# FIXME: checkfile_Makefile should be split into load_package_info
+	# and checkfile_Makefile.
+
 	# we need to handle the Makefile first to get some variables
 	if (!checkfile_Makefile($dir, "${dir}/Makefile")) {
 		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
 
-	checkfile_DESCR($dir, "${dir}/${pkgdir}/DESCR");
+	my @files = <${dir}/*>;
+	if ($pkgdir ne ".") {
+		push(@files, <${dir}/${pkgdir}/*>);
+	}
+	push(@files, <${dir}/${filesdir}/*>);
+	push(@files, <${dir}/${patchdir}/*>);
+	foreach my $f (@files) {
+		if      ($f =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
+			log_warning($f, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
+		} elsif (!-f $f) {
+			# We don't have a check for non-regular files yet.
 
-	if ($opt_check_MESSAGE) {
-		foreach my $msg (<$dir/$filesdir/MESSAGE*>, <$dir/$pkgdir/MESSAGE*>) {
-			checkfile_MESSAGE($dir, $msg);
+		} elsif ($f eq "${dir}/Makefile") {
+			# has already been checked, but see the FIXME above
+
+		} elsif ($f =~ qr"/buildlink3.mk$") {
+			$opt_check_bl3 and checkfile_buildlink3_mk($dir, $f);
+
+		} elsif ($f =~ qr"/DESCR[^/]*$") {
+			checkfile_DESCR($dir, $f);
+
+		} elsif ($f =~ qr"/distinfo$") {
+			$opt_check_distinfo and checkfile_distinfo($dir, $f);
+
+		} elsif ($f =~ qr"/MESSAGE[^/]*$") {
+			$opt_check_MESSAGE and checkfile_MESSAGE($dir, $f);
+
+		} elsif ($f =~ qr"/PLIST[^/]*$") {
+			$opt_check_PLIST and checkfile_PLIST($dir, $f);
+
+		} elsif ($f =~ qr"/patches/patch-[-A-Za-z0-9]*$") {
+			$opt_check_patches and checkfile_patches_patch($dir, $f);
+
+		} elsif (-T $f) {
+			$opt_check_extra and checkfile_other($dir, $f);
+
+		} else {
+			log_warning($f, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
 		}
 	}
-	if ($opt_check_PLIST) {
-		foreach my $plist (<$dir/$filesdir/PLIST*>, <$dir/$pkgdir/PLIST*>) {
-			checkfile_PLIST($dir, $plist);
-		}
-	}
-	if ($opt_check_patches) {
-		foreach my $patch (<$dir/$patchdir/patch-*>) {
-			checkfile_patches_patch($dir, $patch);
-		}
-	}
-	if ($opt_check_distinfo) {
-		foreach my $distinfo ("$dir/$distinfo_file") {
-			if (-f $distinfo) {
-				checkfile_distinfo($dir, $distinfo);
-			}
-		}
-	}
+
 	if ($opt_check_distinfo && $opt_check_patches) {
 		# Make sure there's a distinfo if there are patches
 		my $patches = false;
@@ -624,20 +644,6 @@ sub check_package($) {
 		}
 		if ($patches && ! -f "$dir/$distinfo_file" ) {
 			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
-		}
-	}
-	if ($opt_check_bl3) {
-		foreach my $bl3 ("$dir/$pkgdir/buildlink3.mk") {
-			next unless -f $bl3;
-			checkfile_buildlink3_mk($dir, $bl3);
-		}
-	}
-	if ($opt_check_extra) {
-		foreach my $extra ((<$dir/$filesdir/*>, <$dir/$pkgdir/*>)) {
-			next if ($extra =~ qr"(?:distinfo$|Makefile$|PLIST|MESSAGE)");
-			next unless -f $extra && -T $extra;
-
-			checkfile_other($dir, $extra);
 		}
 	}
 
@@ -658,17 +664,6 @@ sub check_package($) {
 	    and ! $seen_PLIST_SRC
 	    and ! $seen_NO_PKG_REGISTER ) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
-	}
-	foreach my $wrkdir (<$dir/work*>) {
-		if ($opt_warn_workdir && -d $wrkdir) {
-			log_warning($wrkdir, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
-		}
-	}
-	foreach my $backup (<$dir/*~>, <$dir/*/*~>) {
-		log_warning($backup, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
-	}
-	foreach my $orig (<$dir/*/*.orig>, <$dir/*.orig>, <$dir/*/*.rej>, <$dir/*.rej>) {
-		log_warning($orig, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
 	}
 	return true;
 } # check_package
