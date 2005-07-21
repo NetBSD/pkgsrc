@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/07/18 12:07:33 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2005/07/21 14:24:48 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -79,10 +79,7 @@ PKG_OPTIONS_LEGACY_VARS+=	MPLAYER_USE_MEDIALIB:mlib
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Maalib)
-CONFIGURE_ARGS+=	--enable-aa
 .  include "../../graphics/aalib-x11/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-aa
 .endif
 
 .if !empty(PKG_OPTIONS:Marts)
