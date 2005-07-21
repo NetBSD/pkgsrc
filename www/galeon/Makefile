@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2005/06/03 14:41:19 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2005/07/21 13:11:43 dillo Exp $
 #
 
 DISTNAME=	galeon-1.3.21
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://galeon.sourceforge.net/
 COMMENT=	GNOME2 Web browser based on gecko
 
@@ -23,9 +23,11 @@ GNU_CONFIGURE=		yes
 _MOZILLA_USE_GTK2=	# defined
 MOZILLA_USE_XFT=	YES
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=		PKG_OPTIONS.galeon
+.include "../../www/mozilla/gecko-options.mk"
+.include "../../mk/bsd.options.mk"
 
-.if ${GECKO_PROVIDER} == "firefox"
+.if !empty(PKG_OPTIONS:Mfirefox)
 CONFIGURE_ARGS+=	--with-mozilla=firefox
 .else
 BUILDLINK_RPATHDIRS.mozilla-gtk2+=  lib/mozilla-gtk2
@@ -45,13 +47,7 @@ CONF_FILES=		${EGDIR}/sound/events/galeon.soundlist \
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.if ${GECKO_PROVIDER} == "firefox"
-# firefox didn't have a pkgconfig file before 1.0.4
-BUILDLINK_DEPENDS.firefox+= firefox>=1.0.4
-.include "../../www/firefox/buildlink3.mk"
-.else
-.include "../../www/mozilla-gtk2/buildlink3.mk"
-.endif
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../www/mozilla/gecko-depends.mk"
 .include "../../mk/bsd.pkg.mk"

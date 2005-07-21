@@ -67,6 +67,7 @@ faac
 faad	
 fam	
 ffmpeg	
+firefox			Use firefox as gecko rendering engine.
 flac	
 freetype	
 frontend-fastcgi	
@@ -154,6 +155,7 @@ mjpegtools-cmov		Enable CMOV support (i386 only).
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
 modperl	
+mozilla			Use mozilla as gecko rendering engine.
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
