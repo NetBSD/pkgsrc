@@ -7,15 +7,12 @@ SSYYNNOOPPSSIISS
      ppkkgglliinntt [--ooppttiioonnss] [_d_i_r]
 
 DDEESSCCRRIIPPTTIIOONN
-     ppkkgglliinntt tries to verify the content of a pkgsrc directory.  The purpose
-     of ppkkgglliinntt can be separated into two parts: (1) to let the submitters
-     easily polish her/his own pkgsrc directory, and (2) to decrease the labor
-     of the committers.
-
-     ppkkgglliinntt uses very simple regular-expression matching for verifying files
-     that make up a pkgsrc directory.  Note that it does NOT implement a com-
-     plete parser for those files.  Because of this the user may see some ex-
-     tra warnings, especially when checking complex _M_a_k_e_f_i_l_es.
+     ppkkgglliinntt attempts to detect features of the names pkgsrc packages that are
+     likely to be bugs, or that are simply deprecated.  The pkgsrc system is
+     changing rapidly towards even more portability.  The job of ppkkgglliinntt is to
+     define the rules that make up ``good'' packages and to allow automatic
+     conformance tests.  Packages following these rules are assumed to make
+     future changes to the pkgsrc infrastructure easier.
 
      OOppttiioonnss
 
@@ -47,8 +44,10 @@ DDEESSCCRRIIPPTTIIOONN
 
      all         Enable all checks.
 
-     none        Disable all checks.  Currently the Makefile is checked in ev-
-                 ery case to get meta information about the package structure.
+     none        Disable all checks.
+
+     [no-]Makefile
+                 Check the package Makefile, including all included files.
 
      [no-]MESSAGE
                  Check MESSAGE files.
@@ -97,45 +96,41 @@ DDEESSCCRRIIPPTTIIOONN
 
      OOtthheerr aarrgguummeennttss
 
-     dir         The pkgsrc directory to be checked.  If omitted, all checks
-                 will be performed on the current directory.
+     dir ...     The pkgsrc directories to be checked.  If omitted, the cur-
+                 rent directory is checked.
 
 FFIILLEESS
-     /usr/pkgsrc/mk/bsd.pkg.mk  master Makefile for pkgsrc
-     /usr/pkgsrc/*              pkgsrc collection
+     /usr/pkgsrc/mk/bsd.pkg.mk  The pkgsrc master Makefile
+     /usr/pkgsrc/*              The files of the NetBSD packages collection
 
 EEXXAAMMPPLLEESS
-     ppkkgglliinntt --CCnnoonnee,,ppaattcchheess.  Checks the patches of the package in the current
-     directory.  ppkkgglliinntt --WWaallll //uussrr//ppkkggssrrcc//ddeevveell Checks the category Makefile
-     and reports any warnings it can find.
+     ppkkgglliinntt --CCnnoonnee,,ppaattcchheess  ..  Checks the patches of the package in the cur-
+     rent directory.
+
+     ppkkgglliinntt --WWaallll //uussrr//ppkkggssrrcc//ddeevveell Checks the category Makefile and reports
+     any warnings it can find.
 
 DDIIAAGGNNOOSSTTIICCSS
-     Messages will be sent to standard output, not standard error.
+     Diagnostics are written to the standard output.
 
-     FATAL: ...    This type of error messages suggests that there is some fa-
-                   tal error in the pkgsrc directory.  For example, if some
-                   files need a rewrite, or if some necessary files are miss-
-                   ing, this message will show up.  This kind of error should
-                   be fixed BEFORE submitting a package via send-pr(1).
+     FATAL: ...    Fatal errors are those that must be fixed before a package
+                   may be committed to pkgsrc.
 
-     WARN: ...     This type of error messages suggests that some files may
-                   (or may not) need some fixes.  Basically, warnings are pro-
-                   duced when ppkkgglliinntt is not completely sure about the result.
-                   For example, complex _M_a_k_e_f_i_l_es may need some statements
-                   that can match the regular expression ppkkgglliinntt uses for san-
-                   ity checks.  In those cases, the user should evaluate the
-                   result manually, and obey/ignore the result.
+     WARN: ...     Warnings generally should be fixed, but they are not as
+                   critical as fatal errors.
 
-     OK: ...       This type of messages is used in verbose mode (--vv).
+     OK: ...       Informational messages are only written in verbose mode
+                   (--vv). Their main use is to aid debugging.
 
 AAUUTTHHOORRSS
      Jun-ichiro Itoh <itojun@itojun.org>, Yoshishige Arai <ryo2@on.rim.or.jp>,
-     and Roland Illig <roland.illig@gmx.de>.  Many people have contributed
-     patches and comments/suggestions.
+     Roland Illig <rillig@NetBSD.org>.  Many people have contributed patches
+     and comments/suggestions.
 
 BBUUGGSS
-     ppkkgglliinntt still emits too many false positive warnings.  Many of the warn-
-     ings concerning Makefiles do not print the file and line number where the
-     warning originated.
+     Many more checks could be added.
 
-                                 Jul 02, 2005                                3
+     If you don't understand the messages, feel free to ask on the <tech-
+     pkg@NetBSD.org> mailing list.
+
+                                 Jul 21, 2005                                3

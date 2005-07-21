@@ -1,12 +1,12 @@
-.\"	$NetBSD: pkglint.1,v 1.14 2005/07/02 14:46:06 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.15 2005/07/21 02:47:58 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
-.\" Roland Illig <roland.illig@gmx.de>, 2004.
+.\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\"
-.Dd Jul 02, 2005
+.Dd Jul 21, 2005
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -17,22 +17,16 @@
 .Op Ar dir
 .Sh DESCRIPTION
 .Nm
-tries to verify the content of a pkgsrc directory.
-The purpose of
+attempts to detect features of the names pkgsrc packages that are likely
+to be bugs, or that are simply deprecated.
+The pkgsrc system is changing rapidly towards even more portability.
+The job of
 .Nm
-can be separated into two parts:
-.Pq 1
-to let the submitters easily polish her/his own pkgsrc directory, and
-.Pq 2
-to decrease the labor of the committers.
-.Pp
-.Nm
-uses very simple regular-expression matching for verifying
-files that make up a pkgsrc directory.
-Note that it does NOT implement a complete parser for those files.
-Because of this the user may see some extra warnings,
-especially when checking complex
-.Pa Makefile Ns No s .
+is to define the rules that make up
+.Dq good
+packages and to allow automatic conformance tests.
+Packages following these rules are assumed to make future changes to the
+pkgsrc infrastructure easier.
 .Pp
 .Sy Options
 .Bl -tag -width Fl
@@ -68,8 +62,8 @@ For a list of warnings, see below.
 Enable all checks.
 .It none
 Disable all checks.
-Currently the Makefile is checked in every case to
-get meta information about the package structure.
+.It [no-]Makefile
+Check the package Makefile, including all included files.
 .It [no-]MESSAGE
 Check MESSAGE files.
 .It [no-]PLIST
@@ -116,64 +110,52 @@ They might be committed to CVS accidentally.
 .Pp
 .Bl -tag -width Fl
 .Sy Other arguments
-.It dir
-The pkgsrc directory to be checked.
-If omitted, all checks will be performed on the current directory.
+.It dir ...
+The pkgsrc directories to be checked.
+If omitted, the current directory is checked.
 .El
 .Sh FILES
-.Bl -tag -width /usr/share/mk/bsd.port.mk -compact
+.Bl -tag -width /usr/pkgsrc/mk/bsd.pkg.mk -compact
 .It Pa /usr/pkgsrc/mk/bsd.pkg.mk
-master Makefile for pkgsrc
+The pkgsrc master Makefile
 .It Pa /usr/pkgsrc/*
-pkgsrc collection
+The files of the
+.Nx
+packages collection
 .El
 .Sh EXAMPLES
 .Bl -tag -width Fl
-.Ic "pkglint -Cnone,patches ."
+.Ic pkglint \-Cnone,patches \ .
 Checks the patches of the package in the current directory.
-.Ic "pkglint -Wall /usr/pkgsrc/devel"
+.Pp
+.Ic pkglint \-Wall /usr/pkgsrc/devel
 Checks the category Makefile and reports any warnings it can find.
 .El
 .Sh DIAGNOSTICS
-Messages will be sent to standard output, not standard error.
+Diagnostics are written to the standard output.
 .Bl -tag -width "WARN: foobaa"
 .It FATAL: ...
-This type of error messages suggests that there is some fatal error
-in the pkgsrc directory.
-For example, if some files need a rewrite, or if
-some necessary files are missing, this message will show up.
-This kind of error should be fixed BEFORE submitting a package via
-.Xr send-pr 1 .
-.\"If a submitter submit it without update, committers will need to rewrite
-.\"on behalf of the submitters, which may result in delay of
-.\"the development of operating system itself.
+Fatal errors are those that must be fixed before a package may be
+committed to pkgsrc.
 .It WARN: ...
-This type of error messages suggests that some files may (or may not)
-need some fixes.
-Basically, warnings are produced when
-.Nm
-is not completely sure about the result.
-For example, complex
-.Pa Makefile Ns No s
-may need some statements that can match the regular expression
-.Nm
-uses for sanity checks.
-In those cases, the user should evaluate the result manually,
-and obey/ignore the result.
+Warnings generally should be fixed, but they are not as critical as
+fatal errors.
 .It OK: ...
-This type of messages is used in verbose mode
+Informational messages are only written in verbose mode
 .Pq Fl v .
+Their main use is to aid debugging.
 .El
 .Sh AUTHORS
 Jun-ichiro Itoh
 .Aq itojun@itojun.org ,
 Yoshishige Arai
 .Aq ryo2@on.rim.or.jp ,
-and Roland Illig
-.Aq roland.illig@gmx.de .
+Roland Illig
+.Aq rillig@NetBSD.org .
 Many people have contributed patches and comments/suggestions.
 .Sh BUGS
-.Nm
-still emits too many false positive warnings.
-Many of the warnings concerning Makefiles do not print the file
-and line number where the warning originated.
+Many more checks could be added.
+.Pp
+If you don't understand the messages, feel free to ask on the
+.Aq tech-pkg@NetBSD.org
+mailing list.
