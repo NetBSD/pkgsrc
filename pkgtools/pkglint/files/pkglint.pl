@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.212 2005/07/20 21:09:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.213 2005/07/21 00:19:11 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -115,6 +115,7 @@ sub log_message($$$$)
 		# strip "." path components
 		$file =~ s,^(?:\./)+,,;
 		$file =~ s,/(?:\./)+,/,g;
+		$file =~ s,/+,/,g;
 	}
 	if ($file eq NO_FILE) {
 		printf("%s: %s\n", $type, $message);
