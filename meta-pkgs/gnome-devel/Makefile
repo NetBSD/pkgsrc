@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/05/19 21:13:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/21 16:25:48 wiz Exp $
 
 DISTNAME=	gnome-devel-2.10.1
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs devel gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,7 +20,7 @@ DEPENDS+=	gnome-doc-utils>=0.2.0:../../textproc/gnome-doc-utils
 DEPENDS+=	gtk-doc>=1.3:../../textproc/gtk-doc
 DEPENDS+=	intltool>=0.33:../../textproc/intltool
 DEPENDS+=	libtool>=1.5.10:../../devel/libtool
-DEPENDS+=	pkgconfig>=0.15:../../devel/pkgconfig
+DEPENDS+=	pkg-config>=0.15:../../devel/pkg-config
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
