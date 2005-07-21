@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/02/13 16:19:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.9.4.1 2005/07/21 19:28:18 snj Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -36,6 +36,10 @@ man/man1/namazu.1
 share/examples/namazu/mknmzrc
 share/examples/namazu/namazurc
 @dirrm share/examples/namazu
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/namazu.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/namazu.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/namazu.mo
+${PKGLOCALEDIR}/locale/ja_JP.SJIS/LC_MESSAGES/namazu.mo
 share/namazu/doc/en/manual.html
 share/namazu/doc/en/nmz.html
 share/namazu/doc/en/tips.html
