@@ -1,6 +1,0 @@
-pkg-config is a system for managing library compile/link flags that
-works with automake and autoconf.  It replaces the ubiquitous
-*-config scripts you may have seen with a single tool.
-
-Despite its name, this project is not related to the NetBSD package
-system!
