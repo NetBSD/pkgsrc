@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2005/05/31 19:15:11 jmmv Exp $
+$NetBSD: patch-aa,v 1.12 2005/07/21 14:24:48 wiz Exp $
 
 --- configure.orig	2005-04-13 13:46:35.000000000 +0200
 +++ configure
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.11 2005/05/31 19:15:11 jmmv Exp $
      ;;
    --with-dxr2incdir=*)
      _inc_dxr2=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
-@@ -2382,7 +2383,7 @@
+@@ -2382,7 +2383,7 @@ echores "$_posix4"
  echocheck "lrintf"
  cat > $TMPC << EOF
  #include <math.h>
@@ -48,3 +48,12 @@ $NetBSD: patch-aa,v 1.11 2005/05/31 19:15:11 jmmv Exp $
  EOF
  _lrintf=no
  cc_check $_ld_lm && _lrintf=yes
+@@ -3788,7 +3789,7 @@ fi
+ if test "$_aa" = yes ; then
+   _def_aa='#define HAVE_AA 1'
+   if cygwin ; then
+-    _ld_aa=`aalib-config --libs | cut -d " " -f 2,5,6`
++    _ld_aa=`${AALIB_CONFIG} --libs | cut -d " " -f 2,5,6`
+   fi
+   _vosrc="$_vosrc vo_aa.c"
+   _vomodules="aa $_vomodules"
