@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/07/16 01:19:26 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/07/21 16:30:01 wiz Exp $
 #
 
 DISTNAME=	gtksourceview-1.2.0
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/05/22 20:08:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/07/21 16:29:56 wiz Exp $
 #
 
 # XXX Do not update to 0.30 or above yet.  The API in the 0.2x series is
@@ -78,5 +78,5 @@ BUILDLINK_DEPENDS.dbus+=	dbus>=${DBUS_VERSION}
 .  include "../../sysutils/dbus/buildlink3.mk"
 .endif
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

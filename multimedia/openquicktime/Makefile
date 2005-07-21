@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:22 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:54 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -25,6 +25,6 @@ pre-configure:
 	${CHMOD} +x ${BUILDLINK_DIR}/bin/glib-config-2.0
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

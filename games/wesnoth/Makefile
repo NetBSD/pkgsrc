@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/14 21:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:50 wiz Exp $
 #
 
 DISTNAME=	wesnoth-0.9.3
@@ -23,7 +23,7 @@ BUILDLINK_DEPENDS.SDL_mixer=	SDL_mixer>=1.2.5nb3
 # use included SDL_ttf library
 #.include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

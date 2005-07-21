@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:38 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/21 16:29:43 wiz Exp $
 #
 
 DISTNAME=	gnome-speech-0.3.6
@@ -28,7 +28,7 @@ PKGCONFIG_OVERRIDE+=    gnome-speech-1.0.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

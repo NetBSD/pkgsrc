@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/19 02:59:41 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/21 16:29:51 wiz Exp $
 #
 
 DISTNAME=	libgdiplus-1.1.5
@@ -25,7 +25,7 @@ BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
 BUILDLINK_TRANSFORM+=		rm:-Werror
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

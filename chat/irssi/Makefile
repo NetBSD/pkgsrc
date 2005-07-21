@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/07/17 14:32:46 dillo Exp $
+# $NetBSD: Makefile,v 1.36 2005/07/21 16:29:45 wiz Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		5
@@ -30,7 +30,7 @@ CONF_FILES=	${EGDIR}/irssi.conf ${PKG_SYSCONFDIR}/irssi.conf
 .include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.h ${IRSSI_CONFIG_H}

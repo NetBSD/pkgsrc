@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/21 16:29:46 wiz Exp $
 
 DISTNAME=		devhelp-0.7
 PKGREVISION=		11
@@ -25,7 +25,7 @@ BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/07/21 13:11:42 dillo Exp $
+# $NetBSD: Makefile,v 1.37 2005/07/21 16:29:59 wiz Exp $
 #
 
 DISTNAME=	epiphany-1.6.4
@@ -59,7 +59,7 @@ BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

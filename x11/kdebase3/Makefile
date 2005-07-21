@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/06/16 01:11:04 markd Exp $
+# $NetBSD: Makefile,v 1.84 2005/07/21 16:30:01 wiz Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	1
@@ -155,7 +155,7 @@ CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 .if ${OPSYS} != "SunOS"
 .include "../../devel/libusb/buildlink3.mk"
 .endif
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"

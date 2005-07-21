@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:07:51 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/21 16:29:46 wiz Exp $
 #
 
 DISTNAME=	gconfmm-2.0.2
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE=	gconf/gconfmm-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gconf/gconfmm-2.0-uninstalled.pc.in
 
 .include "../../devel/GConf2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 # gtkmm must be 2.0/2.2
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

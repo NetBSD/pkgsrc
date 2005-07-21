@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:00 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:50 wiz Exp $
 #
 
 DISTNAME=		blinkentools-2.2
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-oldtools
 
 .include "../../devel/blib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

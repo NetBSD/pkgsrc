@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/23 15:02:14 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:55 wiz Exp $
 #
 
 DISTNAME=		libsoup-1.99.28
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=    soup-2.0.pc.in
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

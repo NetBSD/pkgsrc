@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/07/21 16:29:58 wiz Exp $
 
 DISTNAME=	openbox-3.2
 PKGREVISION=	1
@@ -32,7 +32,7 @@ CONF_FILES+=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/openbox/rc.xml
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2005/07/18 19:13:37 reed Exp $
+# $NetBSD: Makefile,v 1.123 2005/07/21 16:29:51 wiz Exp $
 
 DISTNAME=	gimp-2.2.8
 PKGREVISION=	1
@@ -55,7 +55,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

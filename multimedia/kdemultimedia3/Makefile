@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/06/03 22:58:54 markd Exp $
+# $NetBSD: Makefile,v 1.29 2005/07/21 16:29:54 wiz Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
@@ -52,7 +52,7 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/tunepimp/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

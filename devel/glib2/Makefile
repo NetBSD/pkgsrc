@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2005/07/21 16:29:46 wiz Exp $
 
 DISTNAME=		glib-2.6.5
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -74,7 +74,7 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/glib$$/ \
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 

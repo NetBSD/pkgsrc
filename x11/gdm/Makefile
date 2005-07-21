@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2005/07/13 13:11:57 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2005/07/21 16:30:00 wiz Exp $
 #
 
 DISTNAME=	gdm-2.8.0.0
@@ -121,7 +121,7 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"

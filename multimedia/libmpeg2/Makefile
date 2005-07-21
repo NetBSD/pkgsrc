@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/18 07:26:02 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/21 16:29:54 wiz Exp $
 
 DISTNAME=	mpeg2dec-0.4.0b
 PKGNAME=	libmpeg2-0.4.0b
@@ -25,5 +25,5 @@ PKGCONFIG_OVERRIDE+=    libmpeg2/libmpeg2.pc.in
 CONFIGURE_ARGS+=	--enable-shared
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/19 21:08:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/21 16:29:58 wiz Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.2.0
@@ -30,7 +30,7 @@ PYTHON_PATCH_SCRIPTS+=	xml2po/xml2po.py
 BUILDLINK_DEPMETHOD.libxslt?=	build
 BUILDLINK_DEPMETHOD.libxml2?=	build
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

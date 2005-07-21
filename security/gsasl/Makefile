@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:56 wiz Exp $
 
 DISTNAME=		gsasl-0.2.5
 CATEGORIES=		security
@@ -26,7 +26,7 @@ PKGCONFIG_OVERRIDE+=    libgsasl.pc.in
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/libntlm/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../security/gss/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 

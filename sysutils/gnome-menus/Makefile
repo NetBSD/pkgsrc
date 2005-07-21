@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:32 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:57 wiz Exp $
 #
 
 DISTNAME=	gnome-menus-2.10.1
@@ -41,7 +41,7 @@ BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

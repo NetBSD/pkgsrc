@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:45 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:59 wiz Exp $
 #
 
 DISTNAME=	gtkhtml-3.0.10
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gal20/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:55 wiz Exp $
 #
 
 DISTNAME=		pan-0.14.2
@@ -25,7 +25,7 @@ LIBS+=			-lcompat
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/gnet/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

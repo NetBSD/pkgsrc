@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/05/31 21:46:38 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2005/07/21 16:29:43 wiz Exp $
 
 DISTNAME=	arts-1.4.1
 CATEGORIES=	audio
@@ -22,7 +22,7 @@ _IN_ARTS_BUILD=		yes
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"

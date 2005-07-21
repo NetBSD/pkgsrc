@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/31 17:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/21 16:29:48 wiz Exp $
 #
 
 DISTNAME=		libidn-0.5.17
@@ -22,6 +22,6 @@ INFO_FILES=		libidn.info
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

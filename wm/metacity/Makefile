@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/06/29 08:41:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2005/07/21 16:29:58 wiz Exp $
 #
 
 DISTNAME=	metacity-2.10.2
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--disable-xinerama
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

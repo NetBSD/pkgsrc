@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/07/16 01:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/21 16:29:53 wiz Exp $
 #
 
 DISTNAME=	libcdio-0.74
@@ -31,7 +31,7 @@ pre-patch:
 	${CP} ${FILESDIR}/_cdio_netbsd.c ${WRKSRC}/lib/driver/FreeBSD/freebsd.c
 .endif
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

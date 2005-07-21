@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/06/01 18:02:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/07/21 16:29:50 wiz Exp $
 #
 
 DISTNAME=	dia-0.94
@@ -45,7 +45,7 @@ BUILDLINK_DEPMETHOD.gtk2+=		build
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

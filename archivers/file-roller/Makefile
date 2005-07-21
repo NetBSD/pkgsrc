@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/06/06 14:48:05 hira Exp $
+# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:42 wiz Exp $
 #
 
 DISTNAME=	file-roller-2.10.2
@@ -46,7 +46,7 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"

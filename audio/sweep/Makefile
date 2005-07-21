@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/01 18:02:39 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/21 16:29:44 wiz Exp $
 #
 
 DISTNAME=	sweep-0.8.3
@@ -32,7 +32,7 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

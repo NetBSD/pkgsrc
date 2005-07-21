@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/07/21 16:29:56 wiz Exp $
 
 DISTNAME=	seahorse-0.7.8
 CATEGORIES=	security
@@ -32,7 +32,7 @@ BUILDLINK_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

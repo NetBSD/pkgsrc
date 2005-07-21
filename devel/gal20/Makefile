@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/01 18:02:43 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:46 wiz Exp $
 #
 
 DISTNAME=	gal-1.99.11
@@ -22,7 +22,7 @@ CONFIGURE_ARGS=		--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2005/06/06 11:43:50 tron Exp $
+# $NetBSD: Makefile.common,v 1.42 2005/07/21 16:29:45 wiz Exp $
 #
 # Please do not merge this file into "Makefile" because it is used by
 # packages in "pkgsrc-wip".
@@ -18,4 +18,4 @@ USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
