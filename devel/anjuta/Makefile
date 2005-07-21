@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/06/01 18:02:42 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/21 16:26:39 wiz Exp $
 #
 
 DISTNAME=		anjuta-1.2.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=anjuta/}
 
@@ -17,7 +17,7 @@ DEPENDS+=		glade2>=2.6.0:../../devel/glade2
 DEPENDS+=		gmake>=3.80:../../devel/gmake
 DEPENDS+=		gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
 DEPENDS+=		libtool>=1.5.2:../../devel/libtool
-DEPENDS+=		pkgconfig>=0.15.0:../../devel/pkgconfig
+DEPENDS+=		pkg-config>=0.15.0:../../devel/pkg-config
 DEPENDS+=		yelp>=2.4.2:../../misc/yelp
 
 GNU_CONFIGURE=		YES
@@ -44,7 +44,7 @@ SUBST_FILES.unused+=	tagmanager/tm_source_file.c tagmanager/tm_workspace.c
 SUBST_SED.unused=	-e 's/__unused__/_exctags_unused_/g'
 
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
