@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/21 16:29:45 wiz Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -55,6 +55,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}/muc-jcr.xml ${EGDIR}
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 

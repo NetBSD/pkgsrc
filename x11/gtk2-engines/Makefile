@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/06/01 18:03:29 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/07/21 16:30:00 wiz Exp $
 
 DISTNAME=		gtk-engines-2.6.3
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -23,6 +23,6 @@ USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	gtk-engines-2.pc.in
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

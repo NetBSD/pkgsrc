@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/03 23:02:13 markd Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/21 16:29:44 wiz Exp $
 #
 
 DISTNAME=	speex-1.0.5
@@ -24,7 +24,7 @@ CONFIGURE_ENV+=         F77=${FALSE}
 BUILDLINK_TRANSFORM+=	l:gnugetopt:getopt
 
 .include "../../devel/libgetopt/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/05/22 20:08:23 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/07/21 16:29:54 wiz Exp $
 #
 
 DISTNAME=		ORBit2-2.12.2
@@ -33,7 +33,7 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/idl$$/ \
 				  " 2>/dev/null || $${TRUE}"; next; }
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

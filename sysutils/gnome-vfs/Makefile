@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2005/07/21 16:29:57 wiz Exp $
 
 DISTNAME=		gnome-vfs-1.0.5
 PKGREVISION=		8
@@ -27,7 +27,7 @@ CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=yes
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

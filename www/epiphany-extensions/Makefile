@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/13 09:55:50 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/21 16:29:59 wiz Exp $
 #
 
 DISTNAME=	epiphany-extensions-1.6.4
@@ -38,7 +38,7 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"

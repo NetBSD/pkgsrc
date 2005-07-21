@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:45 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:59 wiz Exp $
 #
 
 DISTNAME=	gtkhtml-3.6.2
@@ -25,7 +25,7 @@ GNU_CONFIGURE=		yes
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
