@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dk-milter.sh,v 1.4 2005/07/20 20:11:53 tv Exp $
+# $NetBSD: dk-milter.sh,v 1.5 2005/07/21 16:22:04 tv Exp $
 #
 # PROVIDE: dkmilter
 # REQUIRE: DAEMON
+# BEFORE: mail
 
 dkmilter_flags="-h -l -p /var/run/dkmilter.sock"
 
