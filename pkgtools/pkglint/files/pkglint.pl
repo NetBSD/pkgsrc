@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.215 2005/07/21 01:08:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.216 2005/07/21 02:01:02 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -95,48 +95,62 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
 		NO_FILE NO_LINE_NUMBER
-		log_error log_warning log_info
+		log_error log_warning log_info log_subinfo
 		print_summary_and_exit set_verbose is_verbose
 	);
 	import PkgLint::Util qw(false true);
 }
 
-use constant NO_FILE		=> "";
-use constant NO_LINE_NUMBER	=> 0;
+use constant NO_FILE		=> undef;
+use constant NO_LINE_NUMBER	=> undef;
 
 my $errors		= 0;
 my $warnings		= 0;
 my $verbose_flag	= false;
 
-sub log_message($$$$)
+sub log_message($$$$$)
 {
-	my ($file, $lineno, $type, $message) = @_;
-	if ($file ne NO_FILE) {
+	my ($file, $subr, $lineno, $type, $message) = @_;
+	my ($text, $sep);
+
+	if (defined($file)) {
 		# strip "." path components
 		$file =~ s,^(?:\./)+,,;
 		$file =~ s,/(?:\./)+,/,g;
 		$file =~ s,/+,/,g;
 	}
-	if ($file eq NO_FILE) {
-		printf("%s: %s\n", $type, $message);
-	} elsif ($lineno == NO_LINE_NUMBER) {
-		printf("%s: %s: %s\n", $type, $file, $message);
-	} else {
-		printf("%s: %s:%d: %s\n", $type, $file, $lineno, $message);
+
+	$text = "${type}:";
+	if (defined($subr)) {
+		$text .= " [${subr}]";
 	}
+	if (defined($file) && defined($lineno)) {
+		$text .= " ${file}:${lineno}";
+		$sep = ": ";
+	} elsif (defined($file)) {
+		$text .= " ${file}";
+		$sep = ": ";
+	} else {
+		$sep = " ";
+	}
+	if (defined($message)) {
+		$text .= "${sep}${message}";
+	}
+
+	print("${text}\n");
 }
 
 sub log_error($$$)
 {
 	my ($file, $lineno, $msg) = @_;
-	log_message($file, $lineno, "FATAL", $msg);
+	log_message($file, undef, $lineno, "FATAL", $msg);
 	$errors++;
 }
 
 sub log_warning($$$)
 {
 	my ($file, $lineno, $msg) = @_;
-	log_message($file, $lineno, "WARN", $msg);
+	log_message($file, undef, $lineno, "WARN", $msg);
 	$warnings++;
 }
 
@@ -144,7 +158,15 @@ sub log_info($$$)
 {
 	my ($file, $lineno, $msg) = @_;
 	if ($verbose_flag) {
-		log_message($file, $lineno, "OK", $msg);
+		log_message($file, undef, $lineno, "OK", $msg);
+	}
+}
+
+sub log_subinfo($$$$)
+{
+	my ($subr, $file, $lineno, $msg) = @_;
+	if ($verbose_flag) {
+		log_message($file, $subr, $lineno, "OK", $msg);
 	}
 }
 
@@ -266,7 +288,7 @@ BEGIN {
 	import PkgLint::Util qw(false true);
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER
-		log_error log_warning log_info
+		log_error log_warning log_info log_subinfo
 		print_summary_and_exit
 	);
 	import PkgLint::FileUtil qw(
@@ -360,11 +382,11 @@ my $pkgname;
 # errors in the file) and C<false> if the file could not be checked.
 sub checkfile_DESCR($$);
 sub checkfile_distinfo($$);
+sub checkfile_extra($$);
 sub checkfile_package_Makefile($$$$);
 sub checkfile_MESSAGE($$);
 sub checkfile_patches_patch($$);
 sub checkfile_PLIST($$);
-sub checkfile_other($$);
 
 sub check_category($);
 sub check_package($);
@@ -613,7 +635,7 @@ sub check_package($) {
 			$opt_check_patches and checkfile_patches_patch($dir, $f);
 
 		} elsif (-T $f) {
-			$opt_check_extra and checkfile_other($dir, $f);
+			$opt_check_extra and checkfile_extra($dir, $f);
 
 		} else {
 			log_warning($f, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
@@ -728,6 +750,8 @@ sub checkfile_DESCR($$) {
 	my ($maxchars, $maxlines) = (80, 24);
 	my ($descr);
 
+	log_subinfo("checkfile_DESCR", $fname, NO_LINE_NUMBER, undef);
+
 	checkperms($fname);
 	if (!defined($descr = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
@@ -756,6 +780,8 @@ sub checkfile_distinfo($$) {
 	my ($dir, $fname) = @_;
 	my ($distinfo, %in_distinfo);
 
+	log_subinfo("checkfile_distinfo", $fname, NO_LINE_NUMBER, undef);
+
 	checkperms($fname);
 	if (!defined($distinfo = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
@@ -772,10 +798,6 @@ sub checkfile_distinfo($$) {
 	foreach my $line (@$distinfo[1 .. scalar(@$distinfo)-1]) {
 		next unless $line->text =~ /^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
 		my ($alg, $patch, $sum) = ($1, $2, $3);
-
-		if ($patch =~ /~$/) {
-			$line->log_warning("Possible backup file \"$patch\"?");
-		}
 
 		if ($patch =~ /^patch-[-A-Za-z0-9_.]+$/) {
 			if (-f "${dir}/$patchdir/$patch") {
@@ -804,6 +826,8 @@ sub checkfile_distinfo($$) {
 sub checkfile_MESSAGE($$) {
 	my ($dir, $fname) = @_;
 	my ($message);
+
+	log_subinfo("checkfile_MESSAGE", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
 	if (!defined($message = load_file($fname))) {
@@ -835,6 +859,8 @@ sub checkfile_PLIST($$) {
 	my ($dir, $fname) = @_;
 	my ($plist, $curdir, $last_file_seen);
 	
+	log_subinfo("checkfile_PLIST", $fname, NO_LINE_NUMBER, undef);
+
 	checkperms($fname);
 	if (!defined($plist = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
@@ -938,6 +964,8 @@ sub checkfile_buildlink3_mk($$) {
 	my ($dir, $fname) = @_;
 	my ($lines);
 
+	log_subinfo("checkfile_buildlink3_mk", $fname, NO_LINE_NUMBER, undef);
+
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
@@ -960,9 +988,11 @@ sub checkperms($) {
 #
 # misc files
 #
-sub checkfile_other($$) {
+sub checkfile_extra($$) {
 	my ($dir, $fname) = @_;
 	my ($lines);
+
+	log_subinfo("checkfile_extra", $fname, NO_LINE_NUMBER, undef);
 
 	$lines = load_file($fname);
 	if (!$lines) {
@@ -1024,9 +1054,7 @@ sub checkfile_patches_patch($$) {
 	my ($dir, $fname) = @_;
 	my ($lines);
 
-	if ($fname =~ /.*~$/) {
-		log_warning($fname, NO_LINE_NUMBER, "In case this is a backup file: please remove it and rerun '$conf_make makepatchsum'");
-	}
+	log_subinfo("checkfile_patches_patch", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
 	if (!defined($lines = load_file($fname))) {
@@ -1214,6 +1242,7 @@ sub checklines_deprecated_variables($) {
 }
 
 sub checklines_direct_tools($) {
+	my ($subr) = "checklines_direct_tools";
 	my ($lines) = @_;
 
 	if (!$opt_warn_directcmd) {
@@ -1261,9 +1290,10 @@ sub checklines_direct_tools($) {
 	my $regex_ok_vars = qr"^(?:${ok_vars})$";
 	my $ok_shellcmds = join("|", @ok_shellcmds);
 	my $regex_ok_shellcmds = qr"(?:${ok_shellcmds})";
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_tools=${regex_tools}");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_ok_vars=${regex_ok_vars}");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checklines_direct_tools] regex_ok_shellcmds=${regex_ok_shellcmds}");
+
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_tools=${regex_tools}");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_shellcmds=${regex_ok_shellcmds}");
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
@@ -1330,6 +1360,7 @@ sub expand_variable($$$) {
 }
 
 sub load_package_Makefile($$$$) {
+	my ($subr) = "load_package_Makefile";
 	my ($dir, $fname, $refwhole, $reflines) = @_;
 	my ($whole, $lines);
 
@@ -1353,11 +1384,11 @@ sub load_package_Makefile($$$$) {
 	$pkgdir = expand_variable($whole, "PKGDIR", ".");
 	$scriptdir = expand_variable($whole, "SCRIPTDIR", "scripts");
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] DISTINFO_FILE=$distinfo_file");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] FILESDIR=$filesdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] PATCHDIR=$patchdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] PKGDIR=$pkgdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] SCRIPTDIR=$scriptdir");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "DISTINFO_FILE=$distinfo_file");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "FILESDIR=$filesdir");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "PATCHDIR=$patchdir");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "PKGDIR=$pkgdir");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "SCRIPTDIR=$scriptdir");
 
 	${$refwhole} = $whole;
 	${$reflines} = $lines;
@@ -1373,7 +1404,7 @@ sub checkfile_package_Makefile($$$$) {
 	my ($realwrksrc, $wrksrc) = ('', '');
 	my ($category, $whole);
 
-	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
+	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
 
 	$category = basename(dirname(Cwd::abs_path($dir)));
 	$whole = "\n${rawwhole}";
