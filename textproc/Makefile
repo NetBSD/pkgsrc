@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2005/06/24 17:34:40 wiz Exp $
+# $NetBSD: Makefile,v 1.291 2005/07/21 12:14:19 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -224,6 +224,7 @@ SUBDIR+=	py-SimpleParse
 SUBDIR+=	py-csv
 SUBDIR+=	py-docutils
 SUBDIR+=	py-dtml
+SUBDIR+=	py-elementtree
 SUBDIR+=	py-expat
 SUBDIR+=	py-feedparser
 SUBDIR+=	py-gdick
