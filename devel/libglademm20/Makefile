@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:07:52 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:48 wiz Exp $
 #
 
 DISTNAME=		libglademm-2.2.0
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 # gtkmm must be 2.0/2.2
 .include "../../x11/gtkmm/buildlink3.mk"

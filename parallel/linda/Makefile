@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:04 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/21 16:29:55 wiz Exp $
 #
 
 DISTNAME=	linda-0.1.1
@@ -14,5 +14,5 @@ GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

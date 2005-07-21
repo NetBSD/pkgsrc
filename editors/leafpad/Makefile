@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:41 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:49 wiz Exp $
 #
 
 DISTNAME=	leafpad-0.7.8
@@ -15,6 +15,6 @@ USE_PKGLOCALEDIR=	YES
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

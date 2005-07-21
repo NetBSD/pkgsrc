@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/07/17 16:29:56 kristerw Exp $
+# $NetBSD: Makefile,v 1.35 2005/07/21 16:29:46 wiz Exp $
 #
 
 DISTNAME=	rrdtool-1.2.10
@@ -28,7 +28,7 @@ PERL5_PACKLIST+=	auto/RRDs/.packlist
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../www/cgilib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

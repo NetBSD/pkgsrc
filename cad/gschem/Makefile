@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/04/11 21:45:02 tv Exp $
+# $NetBSD: Makefile,v 1.33 2005/07/21 16:29:44 wiz Exp $
 #
 
 DISTNAME=		geda-gschem-${PKGVERSION}
@@ -23,5 +23,5 @@ INFO_FILES=		gschemdoc.info
 .include "../../cad/libgeda/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libstroke/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

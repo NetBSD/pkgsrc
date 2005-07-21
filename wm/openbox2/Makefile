@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:58 wiz Exp $
 #
 
 DISTNAME=	openbox-2.2.3
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	YES
 
 CPPFLAGS+=	-DHAVE_STRFTIME=1
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

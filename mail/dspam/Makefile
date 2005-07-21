@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/07/16 01:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/07/21 16:29:52 wiz Exp $
 
 DISTNAME=	dspam-3.4.8
 CATEGORIES=	mail
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
 			--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "options.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 DOCDIR=		${PREFIX}/share/doc/dspam

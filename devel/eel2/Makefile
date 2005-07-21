@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/06/01 18:02:43 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:46 wiz Exp $
 
 DISTNAME=	eel-2.10.1
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -27,7 +27,7 @@ PKGCONFIG_OVERRIDE=	eel-2.0.pc.in
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"

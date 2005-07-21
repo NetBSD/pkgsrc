@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:07:38 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/21 16:29:43 wiz Exp $
 #
 
 DISTNAME=	gkrellmms-2.1.20
@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/gkrellmms
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 		enable_nls=1
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

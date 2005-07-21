@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 18:02:44 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/21 16:29:49 wiz Exp $
 #
 
 DISTNAME=	ogre-v0-12-1
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE+=    OGRE.pc.in
 
 .include "../../devel/devIL/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

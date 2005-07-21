@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/09 21:09:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:57 wiz Exp $
 #
 
 DISTNAME=	idesk-0.7.2
@@ -19,7 +19,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/idesk
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/idesk
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"

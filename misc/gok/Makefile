@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/01 18:03:05 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/07/21 16:29:53 wiz Exp $
 #
 
 DISTNAME=		gok-1.0.3
@@ -34,7 +34,7 @@ GCONF2_SCHEMAS=		gok.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

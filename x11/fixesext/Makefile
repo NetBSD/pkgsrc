@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:03:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/21 16:30:00 wiz Exp $
 #
 
 DISTNAME=		fixesext-2.0.1
@@ -16,6 +16,6 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    fixesext.pc.in
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

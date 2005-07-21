@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/07/15 20:14:03 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/07/21 16:29:44 wiz Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
@@ -35,5 +35,5 @@ post-patch:
 .endfor
 
 .include "../../cad/libgeda/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/23 13:14:05 seb Exp $
+# $NetBSD: Makefile,v 1.10 2005/07/21 16:29:42 wiz Exp $
 
 DISTNAME=		amarok-1.2.4
 CATEGORIES=		audio kde
@@ -29,7 +29,7 @@ BUILDLINK_DEPENDS.arts+=	arts>=1.2
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/tunepimp/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../multimedia/gst-plugins/buildlink3.mk"

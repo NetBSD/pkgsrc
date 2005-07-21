@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/16 06:57:49 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/21 16:29:49 wiz Exp $
 #
 
 DISTNAME=		gice-0.6.2
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 BUILD_TARGET=		gice
 INSTALLATION_DIRS=	bin
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 do-install:

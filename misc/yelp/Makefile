@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/07/21 13:11:42 dillo Exp $
+# $NetBSD: Makefile,v 1.33 2005/07/21 16:29:53 wiz Exp $
 #
 
 DISTNAME=		yelp-2.10.0
@@ -35,7 +35,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.yelp
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

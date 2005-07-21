@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/05/22 20:07:52 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/07/21 16:29:48 wiz Exp $
 #
 
 DISTNAME=	libgnome-2.10.0
@@ -58,7 +58,7 @@ GCONF2_SCHEMAS+=	desktop_gnome_typing_break.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/13 20:09:32 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/21 16:29:58 wiz Exp $
 #
 
 DISTNAME=		enchant-1.1.6
@@ -16,6 +16,6 @@ GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

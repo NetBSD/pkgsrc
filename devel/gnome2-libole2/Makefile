@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:43 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:47 wiz Exp $
 #
 
 DISTNAME=		libole2-2.2.8
@@ -19,6 +19,6 @@ USE_LIBTOOL=		YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

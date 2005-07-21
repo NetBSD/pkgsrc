@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:54 wiz Exp $
 #
 
 DISTNAME=	libogg-1.1.2
@@ -23,6 +23,6 @@ PKGCONFIG_OVERRIDE+=	ogg.pc.in
 
 TEST_TARGET=	check
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

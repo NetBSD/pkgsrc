@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:06 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/21 16:29:51 wiz Exp $
 
 DISTNAME=	libkexif-0.2.1
 CATEGORIES=	graphics
@@ -17,7 +17,7 @@ USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool
 
 .include "../../meta-pkgs/kde3/kde3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

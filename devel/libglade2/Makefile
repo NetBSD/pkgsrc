@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/06/06 18:37:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2005/07/21 16:29:48 wiz Exp $
 #
 
 DISTNAME=		libglade-2.5.1
@@ -33,7 +33,7 @@ post-install:
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../x11/gtk2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/06/17 03:50:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/07/21 16:29:57 wiz Exp $
 #
 
 DISTNAME=		gnome-vfs-2.10.1
@@ -88,5 +88,5 @@ do-install:
 			${PREFIX}/lib/gnome-vfs-2.0/modules
 .endif
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

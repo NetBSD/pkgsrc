@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:44 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/21 16:30:00 wiz Exp $
 #
 
 DISTNAME=		gromit-20041213
@@ -16,6 +16,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gromit
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gromit
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

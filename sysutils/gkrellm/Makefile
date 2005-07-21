@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2005/07/21 16:29:57 wiz Exp $
 .include "Makefile.common"
 
 PKGREVISION=		# empty1
@@ -35,7 +35,7 @@ post-install:
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:48:08 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/21 16:30:01 wiz Exp $
 #
 
 DISTNAME=	gtkglarea-1.99.0
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-lib-GL
 CONFIGURE_ARGS+=	--with-GL-prefix=${BUILDLINK_PREFIX.MesaLib}
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

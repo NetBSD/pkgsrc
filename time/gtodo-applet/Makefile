@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:58 wiz Exp $
 #
 
 DISTNAME=	gtodo-applet-0.1
@@ -19,6 +19,6 @@ USE_LIBTOOL=		YES
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

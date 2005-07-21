@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/07/21 16:29:49 wiz Exp $
 #
 
 DISTNAME=	conglomerate-0.9.0
@@ -31,7 +31,7 @@ GCONF2_SCHEMAS=		conglomerate.schemas
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"

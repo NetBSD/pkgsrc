@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:44:54 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/21 16:29:43 wiz Exp $
 #
 
 DISTNAME=	libid3tag-0.15.1b
@@ -31,6 +31,6 @@ post-build:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/id3tag.pc ${PREFIX}/lib/pkgconfig
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

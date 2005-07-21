@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/07/16 01:19:07 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/21 16:29:44 wiz Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
@@ -42,5 +42,5 @@ REPLACE_PERL+=		scripts/pads_backannotate \
 			scripts/sarlacc_sym
 
 .include "../../cad/libgeda/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

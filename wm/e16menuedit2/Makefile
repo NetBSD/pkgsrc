@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/01 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:58 wiz Exp $
 #
 
 DISTNAME=		e16menuedit2-0.0.1
@@ -23,7 +23,7 @@ pre-configure:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

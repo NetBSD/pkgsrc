@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/07/21 16:29:46 wiz Exp $
 #
 
 DISTNAME=		mergeant-0.52
@@ -24,7 +24,7 @@ USE_LIBTOOL=		YES
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

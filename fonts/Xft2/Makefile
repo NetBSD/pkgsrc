@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2005/07/21 16:29:50 wiz Exp $
 
 DISTNAME=	libXft-2.1.6
 PKGNAME=	Xft2-2.1.6
@@ -23,7 +23,7 @@ MAKE_ENV+=		EGREP="${EGREP}"
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8.2
 BUILDLINK_DEPENDS.fontconfig+=	fontconfig>=2.2
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

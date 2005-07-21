@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2005/07/16 01:19:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.60 2005/07/21 16:29:59 wiz Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -54,7 +54,7 @@ UNLIMIT_RESOURCES=	datasize memorysize stacksize
 .include	"../../graphics/jpeg/buildlink3.mk"
 .include	"../../graphics/png/buildlink3.mk"
 .ifdef _MOZILLA_USE_GTK2
-.include	"../../devel/pkgconfig/buildlink3.mk"
+.include	"../../devel/pkg-config/buildlink3.mk"
 .include	"../../net/libIDL/buildlink3.mk"
 .include	"../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+= --enable-default-toolkit=gtk2 --disable-gnomevfs
@@ -185,7 +185,7 @@ CONFIGURE_ARGS+= --with-pthreads
 .if ${MOZILLA_USE_XFT} == "YES" && exists(${X11BASE}/include/X11/Xdefs.h)
 CONFIGURE_ARGS+=	--enable-xft
 # pkgconfig defaults to a "build" dependency, which is what we want.
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .endif
 

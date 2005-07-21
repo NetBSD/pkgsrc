@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/21 16:29:53 wiz Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
@@ -36,6 +36,6 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:54 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/21 16:29:50 wiz Exp $
 #
 
 DISTNAME=		Magnetic22Src
@@ -24,7 +24,7 @@ LIBS.SunOS+=		-lCrun
 
 INSTALLATION_DIRS=	bin
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 

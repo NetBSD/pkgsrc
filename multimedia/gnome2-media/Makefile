@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:15 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/21 16:29:53 wiz Exp $
 
 DISTNAME=		gnome-media-2.10.2
 CATEGORIES=		multimedia gnome
@@ -44,7 +44,7 @@ GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"

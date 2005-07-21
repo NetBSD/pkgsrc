@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:47 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/21 16:29:55 wiz Exp $
 #
 
 DISTNAME=		gnet-1.1.8
@@ -20,5 +20,5 @@ CONFIGURE_ARGS=		--enable-glib2
 TEST_TARGET=		check
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/06/01 18:02:44 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/07/21 16:29:47 wiz Exp $
 #
 
 DISTNAME=	libbonoboui-2.8.1
@@ -31,7 +31,7 @@ BUILDLINK_DEPENDS.libbonobo+=	libbonobo>=2.8.1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

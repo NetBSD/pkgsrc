@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2005/07/21 16:29:49 wiz Exp $
 #
 
 DISTNAME=		gedit-2.10.3
@@ -35,7 +35,7 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

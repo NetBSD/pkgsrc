@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:53 wiz Exp $
 #
 
 DISTNAME=	gkrellmlaunch-0.5
@@ -18,6 +18,6 @@ INSTALLATION_DIRS=	lib/gkrellm2/plugins
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gkrellmlaunch.so ${PREFIX}/lib/gkrellm2/plugins
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:13 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:52 wiz Exp $
 #
 
 DISTNAME=	ximian-connector-2.2.2
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/ximian-connector
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../mail/evolution/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"

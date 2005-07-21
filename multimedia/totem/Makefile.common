@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/06/01 18:03:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/07/21 16:29:54 wiz Exp $
 #
 
 DISTNAME=	totem-1.0.2
@@ -32,7 +32,7 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:24 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/21 16:29:55 wiz Exp $
 
 DISTNAME=		gkrellmwireless-2.0.3
 PKGNAME=		${DISTNAME:S/gkrellm/gkrellm-/}
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	*BSD-*-* Linux-*-*
 WRKSRC=			${WRKDIR}/gkrellmwireless
 USE_TOOLS+=		gmake
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

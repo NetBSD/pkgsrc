@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:23 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:56 wiz Exp $
 #
 
 DISTNAME=	desktop-file-utils-0.10
@@ -29,6 +29,6 @@ PRINT_PLIST_AWK+=	/^share\/applications\/mimeinfo.cache$$/ \
 				  next; }
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

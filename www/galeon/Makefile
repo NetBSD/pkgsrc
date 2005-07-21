@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2005/07/21 13:11:43 dillo Exp $
+# $NetBSD: Makefile,v 1.82 2005/07/21 16:29:59 wiz Exp $
 #
 
 DISTNAME=	galeon-1.3.21
@@ -43,7 +43,7 @@ CONF_FILES=		${EGDIR}/sound/events/galeon.soundlist \
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

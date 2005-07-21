@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/05/25 21:07:59 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/07/21 16:29:54 wiz Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.9
@@ -166,5 +166,5 @@ BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.9.1
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/gstreamer/plugins.mk"

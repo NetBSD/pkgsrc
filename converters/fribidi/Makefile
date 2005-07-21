@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:45:08 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:45 wiz Exp $
 #
 
 DISTNAME=		fribidi-0.10.4
@@ -18,5 +18,5 @@ PKGCONFIG_OVERRIDE=	fribidi.pc.in
 
 TEST_TARGET=		check
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

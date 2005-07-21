@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:52 wiz Exp $
 #
 
 .include "../../lang/sablevm-classpath/Makefile.common"
@@ -18,7 +18,7 @@ PRINT_PLIST_AWK+= \
 		{ print "@comment in sablevm-classpath: "$$0; next; }
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/java-env.mk"
