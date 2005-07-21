@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.213 2005/07/21 00:19:11 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.214 2005/07/21 01:03:34 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -301,6 +301,7 @@ my (%options) = (
 my $opt_check_distinfo	= true;
 my $opt_check_extra	= true;
 my $opt_check_bl3	= true;
+my $opt_check_Makefile	= true;
 my $opt_check_MESSAGE	= true;
 my $opt_check_patches	= true;
 my $opt_check_PLIST	= true;
@@ -308,6 +309,7 @@ my (%checks) = (
 	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
 	"bl3"		=> [\$opt_check_bl3, "check buildlink3 files"],
 	"extra"		=> [\$opt_check_extra, "check various additional files"],
+	"Makefile"	=> [\$opt_check_Makefile, "check Makefiles"],
 	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
 	"patches"	=> [\$opt_check_patches, "check patches"],
 	"PLIST"		=> [\$opt_check_PLIST, "check PLIST files"],
@@ -358,7 +360,7 @@ my $pkgname;
 # errors in the file) and C<false> if the file could not be checked.
 sub checkfile_DESCR($$);
 sub checkfile_distinfo($$);
-sub checkfile_Makefile($$);
+sub checkfile_package_Makefile($$$$);
 sub checkfile_MESSAGE($$);
 sub checkfile_patches_patch($$);
 sub checkfile_PLIST($$);
@@ -569,11 +571,10 @@ sub main() {
 sub check_package($) {
 	my ($dir) = @_;
 
-	# FIXME: checkfile_Makefile should be split into load_package_info
-	# and checkfile_Makefile.
+	my ($whole, $lines);
 
 	# we need to handle the Makefile first to get some variables
-	if (!checkfile_Makefile($dir, "${dir}/Makefile")) {
+	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$lines)) {
 		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
@@ -591,7 +592,7 @@ sub check_package($) {
 			# We don't have a check for non-regular files yet.
 
 		} elsif ($f eq "${dir}/Makefile") {
-			# has already been checked, but see the FIXME above
+			$opt_check_Makefile and checkfile_package_Makefile($dir, $f, $whole, $lines);
 
 		} elsif ($f =~ qr"/buildlink3.mk$") {
 			$opt_check_bl3 and checkfile_buildlink3_mk($dir, $f);
@@ -1328,24 +1329,14 @@ sub expand_variable($$$) {
 	return $value;
 }
 
-sub checkfile_Makefile($$) {
-	my ($dir, $fname) = @_;
-	my ($tmp, $rawwhole, $whole, $idx, @sections);
-	my (@varnames) = ();
-	my ($distfiles, $svrpkgname, $distname, $extractsufx) = ('', '', '', '', '');
-	my ($bogusdistfiles) = (0);
-	my ($realwrksrc, $wrksrc) = ('', '');
-	my ($category, $lines);
+sub load_package_Makefile($$$$) {
+	my ($dir, $fname, $refwhole, $reflines) = @_;
+	my ($whole, $lines);
 
 	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
 
-	$category = basename(dirname(Cwd::abs_path($dir)));
-
-	checkperms($fname);
-
-	$tmp = 0;
-	$rawwhole = readmakefile($dir, $fname, $lines = [], {});
-	if (!$rawwhole) {
+	$whole = readmakefile($dir, $fname, $lines = [], {});
+	if (!$whole) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
@@ -1353,27 +1344,6 @@ sub checkfile_Makefile($$) {
 		print("OK: whole Makefile (with all included files) follows:\n");
 		foreach my $line (@{$lines}) {
 			printf("%s\n", $line->to_string());
-		}
-	}
-
-	{
-		my $cont = 0;
-		foreach my $line (@{$lines}) {
-			$cont = ($line->text eq "") ? $cont + 1 : 0;
-			if ($cont == $opt_contblank + 1) {
-				$line->log_warning("${cont} contiguous blank lines, should be at most ${opt_contblank}.");
-			}
-		}
-	}
-
-	$whole = "\n" . $rawwhole;
-
-	#
-	# whole file: $(VARIABLE)
-	#
-	if ($opt_warn_paren) {
-		if ($whole =~ /[^\$]\$\([\w\d]+\)/) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use \${VARIABLE} instead of \$(VARIABLE).");
 		}
 	}
 
@@ -1388,6 +1358,48 @@ sub checkfile_Makefile($$) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PATCHDIR=$patchdir");
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PKGDIR=$pkgdir");
 	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] SCRIPTDIR=$scriptdir");
+
+	${$refwhole} = $whole;
+	${$reflines} = $lines;
+	return true;
+}
+
+sub checkfile_package_Makefile($$$$) {
+	my ($dir, $fname, $rawwhole, $lines) = @_;
+	my ($tmp, $idx, @sections);
+	my (@varnames) = ();
+	my ($distfiles, $svrpkgname, $distname, $extractsufx) = ('', '', '', '', '');
+	my ($bogusdistfiles) = (0);
+	my ($realwrksrc, $wrksrc) = ('', '');
+	my ($category, $whole);
+
+	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
+
+	$category = basename(dirname(Cwd::abs_path($dir)));
+	$whole = "\n${rawwhole}";
+
+	checkperms($fname);
+
+	$tmp = 0;
+
+	{
+		my $cont = 0;
+		foreach my $line (@{$lines}) {
+			$cont = ($line->text eq "") ? $cont + 1 : 0;
+			if ($cont == $opt_contblank + 1) {
+				$line->log_warning("${cont} contiguous blank lines, should be at most ${opt_contblank}.");
+			}
+		}
+	}
+
+	#
+	# whole file: $(VARIABLE)
+	#
+	if ($opt_warn_paren) {
+		if ($whole =~ /[^\$]\$\([\w\d]+\)/) {
+			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use \${VARIABLE} instead of \$(VARIABLE).");
+		}
+	}
 
 	checklines_deprecated_variables($lines);
 
