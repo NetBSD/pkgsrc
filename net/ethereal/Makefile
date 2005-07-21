@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2005/07/16 01:19:15 jlam Exp $
+# $NetBSD: Makefile,v 1.112 2005/07/21 16:29:54 wiz Exp $
 
 DISTNAME=		ethereal-0.10.11
 PKGREVISION=		1
@@ -53,7 +53,7 @@ pre-build:
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"

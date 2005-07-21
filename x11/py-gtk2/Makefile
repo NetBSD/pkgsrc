@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/22 20:08:49 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/21 16:30:01 wiz Exp $
 #
 
 DISTNAME=	pygtk-2.6.2
@@ -23,7 +23,7 @@ USE_TOOLS+=	gmake
 PYTHON_VERSIONS_ACCEPTED=	24 23
 
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../math/py-Numeric/buildlink3.mk"

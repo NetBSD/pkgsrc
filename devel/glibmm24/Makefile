@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:51 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:47 wiz Exp $
 
 DISTNAME=	glibmm-2.4.5
 PKGNAME=	glibmm24-2.4.5
@@ -19,5 +19,5 @@ USE_LANGUAGES=		c c++
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsigc++2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

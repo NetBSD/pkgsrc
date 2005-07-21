@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2005/06/06 01:52:39 minskim Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/07/21 16:29:43 wiz Exp $
 
 DISTNAME=	libao-0.8.6
 CATEGORIES=	audio devel
@@ -32,6 +32,6 @@ CONFIGURE_ARGS+=	ENABLE_SOLARIS=no
 
 MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"

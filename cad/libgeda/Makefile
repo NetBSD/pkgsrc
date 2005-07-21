@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:45:02 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/07/21 16:29:44 wiz Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
@@ -17,7 +17,7 @@ USE_LIBTOOL=		YES
 
 INFO_FILES=		libgedadoc.info
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgdgeda/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

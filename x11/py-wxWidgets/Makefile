@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:49 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/21 16:30:01 wiz Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
@@ -34,7 +34,7 @@ PYSETUPBUILDARGS=	NO_SCRIPTS=1 ${WXARG}
 PYSETUPINSTALLARGS=	NO_SCRIPTS=1 ${WXARG}
 PYBINMODULE=	yes
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/extension.mk"

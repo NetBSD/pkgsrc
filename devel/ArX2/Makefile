@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/12 18:57:05 recht Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:46 wiz Exp $
 #
 
 DISTNAME=	ArX-2.2.2
@@ -42,6 +42,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${DOCDIR}
 .endfor
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

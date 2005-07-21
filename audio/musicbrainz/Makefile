@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:07:39 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:44 wiz Exp $
 
 DISTNAME=	libmusicbrainz-2.1.1
 PKGNAME=	${DISTNAME:S/lib//}
@@ -21,5 +21,5 @@ PKGCONFIG_OVERRIDE=	libmusicbrainz.pc.in
 CONFIGURE_ARGS+=	--enable-cpp-headers
 
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/07/16 01:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:53 wiz Exp $
 #
 
 DISTNAME=		gnome-utils-2.10.1
@@ -34,7 +34,7 @@ BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.4
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:27 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/21 16:29:52 wiz Exp $
 #
 
 DISTNAME=	ghostscript-viewer-0.6
@@ -19,7 +19,7 @@ PLIST_SRC=	${.CURDIR}/../../mail/sylpheed-claws/PLIST.plugins
 PLIST_SUBST+=	PLUGIN_NAME=ghostscript_viewer
 MESSAGE_SRC+=	${.CURDIR}/../../mail/sylpheed-claws/MESSAGE.plugins
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mail/sylpheed-claws/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/13 18:01:30 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/21 16:29:49 wiz Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
@@ -25,6 +25,6 @@ DIST_VERSION=	1.040
 PERL5_PACKLIST=	auto/Glib/.packlist
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

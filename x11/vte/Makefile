@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/07 13:30:07 markd Exp $
+# $NetBSD: Makefile,v 1.23 2005/07/21 16:30:01 wiz Exp $
 #
 
 DISTNAME=	vte-0.11.13
@@ -31,7 +31,7 @@ BUILDLINK_DEPENDS.fontconfig+=      fontconfig>=2.1.93
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
