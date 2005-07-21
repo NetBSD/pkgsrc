@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/05/14 15:27:10 taya Exp $
+@comment $NetBSD: PLIST,v 1.15.2.1 2005/07/21 02:49:04 snj Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -291,7 +291,6 @@ lib/${MOZILLA}/res/arrow.gif
 lib/${MOZILLA}/res/arrowd.gif
 lib/${MOZILLA}/res/bloatcycle.html
 lib/${MOZILLA}/res/broken-image.gif
-lib/${MOZILLA}/res/builtin/platformHTMLBindings.xml
 lib/${MOZILLA}/res/charsetData.properties
 lib/${MOZILLA}/res/charsetalias.properties
 lib/${MOZILLA}/res/cmessage.txt
@@ -315,6 +314,7 @@ lib/${MOZILLA}/res/fonts/mathfontPUA.properties
 lib/${MOZILLA}/res/fonts/mathfontSymbol.properties
 lib/${MOZILLA}/res/forms.css
 lib/${MOZILLA}/res/grabber.gif
+lib/${MOZILLA}/res/hiddenWindow.html
 lib/${MOZILLA}/res/html.css
 lib/${MOZILLA}/res/html/gopher-audio.gif
 lib/${MOZILLA}/res/html/gopher-binary.gif
@@ -878,6 +878,7 @@ include/${MOZILLA}/dom/nsIDOMMutationListener.h
 include/${MOZILLA}/dom/nsIDOMNSDocument.h
 include/${MOZILLA}/dom/nsIDOMNSDocumentStyle.h
 include/${MOZILLA}/dom/nsIDOMNSEvent.h
+include/${MOZILLA}/dom/nsIDOMNSEventTarget.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLAnchorElement.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLAreaElement.h
 include/${MOZILLA}/dom/nsIDOMNSHTMLButtonElement.h
