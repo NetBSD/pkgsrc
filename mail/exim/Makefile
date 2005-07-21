@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/07/20 06:32:29 grant Exp $
+# $NetBSD: Makefile,v 1.61 2005/07/21 03:06:13 grant Exp $
 
 DISTNAME=	exim-4.52
 CATEGORIES=	mail net
@@ -48,19 +48,19 @@ BDB_ACCEPTED?=		db1 db2 db3 db4
 .if defined(EXIM_DB) && ${EXIM_DB} == "gdbm"
 .  include "../../databases/gdbm/buildlink3.mk"
 EXIM_USE_DB_CONFIG=	USE_GDBM=yes
-EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.gdbm} -lgdbm
+EXIM_DBMLIB=		DBMLIB=${LDFLAGS} -lgdbm
 EXIM_INCLUDE=		-I${PREFIX}/include
 .else # use native or Berkeley DB as defined by BDB_DEFAULT and BDB_ACCEPTED
 .  include "../../mk/bdb.buildlink3.mk"
 EXIM_USE_DB_CONFIG=	USE_DB=yes	# the default
 .  if ${BDB_TYPE} == "db4"
-EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db4} ${BDB_LIBS}
+EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
 EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db4}
 .  elif ${BDB_TYPE} == "db3"
-EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db3} ${BDB_LIBS}
+EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
 EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db3}
 .  elif ${BDB_TYPE} == "db2"
-EXIM_DBMLIB=		DBMLIB=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db2} ${BDB_LIBS}
+EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
 EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
 .  else # using native
 EXIM_DBMLIB=		# empty so use defaults
