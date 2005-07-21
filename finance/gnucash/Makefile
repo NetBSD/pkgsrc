@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2005/07/21 16:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2005/07/21 20:43:47 wiz Exp $
 
 DISTNAME=		gnucash-1.8.11
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 
+REPLACE_PERL=		src/quotes/dump-finance-quote
+
 # code is using char/unsigned char inconsistently
 BUILDLINK_TRANSFORM+=  rm:-Werror
 
@@ -34,15 +36,6 @@ AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS=${AM_MAKEFLAGS:Q}
 
 INFO_FILES=		gnucash-design.info
-
-.include "../../mk/bsd.prefs.mk"
-
-#.if ${OPSYS} == "NetBSD"
-#post-wrapper:
-#	if [ ! -f /usr/include/wctype.h ]; then				\
-#		${TOUCH} ${BUILDLINK_DIR}/include/wctype.h;		\
-#	fi
-#.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gal/buildlink3.mk"
