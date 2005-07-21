@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/06/01 18:02:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/07/21 16:29:46 wiz Exp $
 
 DISTNAME=	glade-2.10.0
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -21,7 +21,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

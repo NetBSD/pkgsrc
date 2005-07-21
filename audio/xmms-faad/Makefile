@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/01 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/21 16:29:44 wiz Exp $
 
 DISTNAME=		faad2-2.0
 PKGNAME=		xmms-faad-2.0
@@ -49,6 +49,6 @@ do-install:
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

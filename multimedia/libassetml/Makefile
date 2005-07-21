@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:18 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:54 wiz Exp $
 #
 
 DISTNAME=		libassetml-1.2.1
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		libassetml.info
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

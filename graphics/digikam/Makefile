@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:04 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/21 16:29:51 wiz Exp $
 
 DISTNAME=		digikam-0.7.2
 CATEGORIES=		graphics kde
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/libkexif/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"

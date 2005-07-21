@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/24 21:28:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/21 16:29:48 wiz Exp $
 #
 
 DISTNAME=	libgsf-1.12.1
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/libgsf
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

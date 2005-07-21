@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:06 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:51 wiz Exp $
 #
 
 DISTNAME=		libgnomecanvasmm-2.6.1
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtkmm24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

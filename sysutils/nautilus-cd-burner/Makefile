@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/21 16:29:57 wiz Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.10.1
@@ -42,7 +42,7 @@ GCONF2_SCHEMAS=		ncb.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2005/06/23 17:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2005/07/21 16:29:57 wiz Exp $
 
 DISTNAME=	mc-4.6.1-pre4
 PKGNAME=	mc-4.6.1rc4.1
@@ -44,5 +44,5 @@ PLIST_SRC+=	${PKGDIR}/PLIST.end
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
