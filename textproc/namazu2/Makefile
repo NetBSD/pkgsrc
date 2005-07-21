@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:47:36 tv Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2005/07/21 19:28:18 snj Exp $
 
 DISTNAME=	namazu-2.0.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	http://www.namazu.org/stable/
 
@@ -18,11 +18,12 @@ CONFLICTS+=	namazu-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes
-USE_PERL5=		run
+USE_TOOLS=		perl
+TOOLS_DEPMETHOD.perl=	DEPENDS
 GNU_CONFIGURE=		yes
 USE_LANGUAGE=		c
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+SHLIBTOOL_OVERRIDE=     libtool
 TEST_TARGET=		check
 
 CONFIGURE_ARGS+= 	--localstatedir=${DATADIR} \
@@ -38,7 +39,7 @@ EXAMPLES=		mknmzrc namazurc
 
 PKG_SYSCONFSUBDIR?=	namazu
 .for f in ${EXAMPLES}
-CONF_FILES+=		${EXAMPLESDIR}/$f	${PKG_SYSCONFDIR}/$f
+CONF_FILES+=		${EXAMPLESDIR}/${f}	${PKG_SYSCONFDIR}/${f}
 .endfor
 MAKE_DIRS+=		${DATADIR}/namazu/index
 OWN_DIRS+=		${PKG_SYSCONFDIR} ${DATADIR}/namazu
@@ -47,7 +48,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DATADIR}/namazu
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES}
-	cd ${WRKSRC}/conf; ${INSTALL_DATA} $f-sample ${EXAMPLESDIR}/$f
+	cd ${WRKSRC}/conf; ${INSTALL_DATA} ${f}-sample ${EXAMPLESDIR}/${f}
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
