@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.15 2005/07/21 02:47:58 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.16 2005/07/21 09:07:38 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -6,7 +6,7 @@
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\"
-.Dd Jul 21, 2005
+.Dd July 21, 2005
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -17,7 +17,7 @@
 .Op Ar dir
 .Sh DESCRIPTION
 .Nm
-attempts to detect features of the names pkgsrc packages that are likely
+attempts to detect features of the named pkgsrc packages that are likely
 to be bugs, or that are simply deprecated.
 The pkgsrc system is changing rapidly towards even more portability.
 The job of
@@ -29,7 +29,7 @@ Packages following these rules are assumed to make future changes to the
 pkgsrc infrastructure easier.
 .Pp
 .Sy Options
-.Bl -tag -width Fl
+.Bl -tag -width 18n -offset indent
 .It Fl B Ar n
 Set the number of contiguous blank lines allowed in
 .Pa Makefile
@@ -57,60 +57,60 @@ For a list of warnings, see below.
 .El
 .Pp
 .Sy Checks
-.Bl -tag -width Fl
-.It all
+.Bl -tag -width 18n -offset indent
+.It Cm all
 Enable all checks.
-.It none
+.It Cm none
 Disable all checks.
-.It [no-]Makefile
+.It Cm [no-]Makefile
 Check the package Makefile, including all included files.
-.It [no-]MESSAGE
+.It Cm [no-]MESSAGE
 Check MESSAGE files.
-.It [no-]PLIST
+.It Cm [no-]PLIST
 Check PLIST files.
-.It [no-]distinfo
+.It Cm [no-]distinfo
 Check the distinfo file.
-.It [no-]extra
+.It Cm [no-]extra
 Check remaining files in the package directory.
-.It [no-]patches
+.It Cm [no-]patches
 Check the pkgsrc specific patch files.
 .El
 .Pp
 .Sy Warnings
-.Bl -tag -width Fl
-.It all
+.Bl -tag -width 18n -offset indent
+.It Cm all
 Enable all warnings.
-.It none
+.It Cm none
 Disable all warnings.
-.It [no-]absname
+.It Cm [no-]absname
 Warn if a file contains an absolute pathname.
-.It [no-]directcmd
+.It Cm [no-]directcmd
 Warn if a system command name is used instead of a variable (e.g. sed
 instead of ${SED}).
-.It [no-]exec
+.It Cm [no-]exec
 Warn if a file in the package directory is executable.
 Most files should not be executable until they are installed.
-.It [no-]order
+.It Cm [no-]order
 Warn if Makefile variables are not in the preferred order.
-.It [no-]paren
+.It Cm [no-]paren
 Warn if variables are used like $(VAR) in Makefiles.
 They should always be used like ${VAR}.
-.It [no-]plist-sort
+.It Cm [no-]plist-sort
 Warn if items of a PLIST file are not sorted alphabetically.
 This warning is disabled by default.
-.It [no-]types
+.It Cm [no-]types
 Warn for some Makefile variables if their assigned values do not match
 their type.
-.It [no-]workdir
+.It Cm [no-]workdir
 Warn about existing
 .Pa work*
 directories.
 They might be committed to CVS accidentally.
 .El
 .Pp
-.Bl -tag -width Fl
+.Bl -tag -width 18n -offset indent
 .Sy Other arguments
-.It dir ...
+.It Ar dir ...
 The pkgsrc directories to be checked.
 If omitted, the current directory is checked.
 .El
@@ -125,10 +125,9 @@ packages collection
 .El
 .Sh EXAMPLES
 .Bl -tag -width Fl
-.Ic pkglint \-Cnone,patches \ .
+.It Ic pkglint \-Cnone,patches \&.
 Checks the patches of the package in the current directory.
-.Pp
-.Ic pkglint \-Wall /usr/pkgsrc/devel
+.It Ic pkglint \-Wall /usr/pkgsrc/devel
 Checks the category Makefile and reports any warnings it can find.
 .El
 .Sh DIAGNOSTICS
@@ -146,12 +145,10 @@ Informational messages are only written in verbose mode
 Their main use is to aid debugging.
 .El
 .Sh AUTHORS
-Jun-ichiro Itoh
-.Aq itojun@itojun.org ,
-Yoshishige Arai
-.Aq ryo2@on.rim.or.jp ,
-Roland Illig
-.Aq rillig@NetBSD.org .
+.An Jun-ichiro Itoh Aq itojun@itojun.org
+.An Yoshishige Arai Aq ryo2@on.rim.or.jp
+.An Roland Illig Aq rillig@NetBSD.org
+.Pp
 Many people have contributed patches and comments/suggestions.
 .Sh BUGS
 Many more checks could be added.

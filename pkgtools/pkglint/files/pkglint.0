@@ -1,4 +1,4 @@
-PKGLINT(1)                  NetBSD Reference Manual                 PKGLINT(1)
+PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
 
 NNAAMMEE
      ppkkgglliinntt - a verifier for pkgsrc directories
@@ -7,7 +7,7 @@ SSYYNNOOPPSSIISS
      ppkkgglliinntt [--ooppttiioonnss] [_d_i_r]
 
 DDEESSCCRRIIPPTTIIOONN
-     ppkkgglliinntt attempts to detect features of the names pkgsrc packages that are
+     ppkkgglliinntt attempts to detect features of the named pkgsrc packages that are
      likely to be bugs, or that are simply deprecated.  The pkgsrc system is
      changing rapidly towards even more portability.  The job of ppkkgglliinntt is to
      define the rules that make up ``good'' packages and to allow automatic
@@ -16,99 +16,95 @@ DDEESSCCRRIIPPTTIIOONN
 
      OOppttiioonnss
 
-     --BB _n        Set the number of contiguous blank lines allowed in _M_a_k_e_f_i_l_e
-                 to _n (by default, _n is 1.)
+           --BB _n                Set the number of contiguous blank lines
+                               allowed in _M_a_k_e_f_i_l_e to _n (by default, _n is 1.)
 
-     --CC{{[[nnoo--]]cchheecckk,,......}}
-                 Enable or disable specific checks. For a list of checks, see
-                 below.
+           --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks. For a list
+                               of checks, see below.
 
-     --hh|----hheellpp   Show the summary of command line options, then exit.
+           --hh|----hheellpp           Show the summary of command line options, then
+                               exit.
 
-     --II          Show the Makefile that is constructed by including all the
-                 files that are slurped in via .include directives.  This flag
-                 is mainly for debugging.
+           --II                  Show the Makefile that is constructed by
+                               including all the files that are slurped in via
+                               .include directives.  This flag is mainly for
+                               debugging.
 
-     --qq|----qquuiieett  Don't print the errors and warnings summary before terminat-
-                 ing.
+           --qq|----qquuiieett          Don't print the errors and warnings summary
+                               before terminating.
 
-     --vv|----vveerrbboossee
-                 Be verbose.  Show the progress report for items that are be-
-                 ing checked.
+           --vv|----vveerrbboossee        Be verbose.  Show the progress report for items
+                               that are being checked.
 
-     --WW{{[[nnoo--]]wwaarrnn,,......}}
-                 Enable or disable specific warnings.  For a list of warnings,
-                 see below.
+           --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a
+                               list of warnings, see below.
 
      CChheecckkss
 
-     all         Enable all checks.
+           aallll                 Enable all checks.
 
-     none        Disable all checks.
+           nnoonnee                Disable all checks.
 
-     [no-]Makefile
-                 Check the package Makefile, including all included files.
+           [[nnoo--]]MMaakkeeffiillee       Check the package Makefile, including all
+                               included files.
 
-     [no-]MESSAGE
-                 Check MESSAGE files.
+           [[nnoo--]]MMEESSSSAAGGEE        Check MESSAGE files.
 
-     [no-]PLIST  Check PLIST files.
+           [[nnoo--]]PPLLIISSTT          Check PLIST files.
 
-     [no-]distinfo
-                 Check the distinfo file.
+           [[nnoo--]]ddiissttiinnffoo       Check the distinfo file.
 
-     [no-]extra  Check remaining files in the package directory.
+           [[nnoo--]]eexxttrraa          Check remaining files in the package directory.
 
-     [no-]patches
-                 Check the pkgsrc specific patch files.
+           [[nnoo--]]ppaattcchheess        Check the pkgsrc specific patch files.
 
      WWaarrnniinnggss
 
-     all         Enable all warnings.
+           aallll                 Enable all warnings.
 
-     none        Disable all warnings.
+           nnoonnee                Disable all warnings.
 
-     [no-]absname
-                 Warn if a file contains an absolute pathname.
+           [[nnoo--]]aabbssnnaammee        Warn if a file contains an absolute pathname.
 
-     [no-]directcmd
-                 Warn if a system command name is used instead of a variable
-                 (e.g. sed instead of ${SED}).
+           [[nnoo--]]ddiirreeccttccmmdd      Warn if a system command name is used instead
+                               of a variable (e.g. sed instead of ${SED}).
 
-     [no-]exec   Warn if a file in the package directory is executable.  Most
-                 files should not be executable until they are installed.
+           [[nnoo--]]eexxeecc           Warn if a file in the package directory is exe-
+                               cutable.  Most files should not be executable
+                               until they are installed.
 
-     [no-]order  Warn if Makefile variables are not in the preferred order.
+           [[nnoo--]]oorrddeerr          Warn if Makefile variables are not in the pre-
+                               ferred order.
 
-     [no-]paren  Warn if variables are used like $(VAR) in Makefiles.  They
-                 should always be used like ${VAR}.
+           [[nnoo--]]ppaarreenn          Warn if variables are used like $(VAR) in Make-
+                               files.  They should always be used like ${VAR}.
 
-     [no-]plist-sort
-                 Warn if items of a PLIST file are not sorted alphabetically.
-                 This warning is disabled by default.
+           [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted
+                               alphabetically.  This warning is disabled by
+                               default.
 
-     [no-]types  Warn for some Makefile variables if their assigned values do
-                 not match their type.
+           [[nnoo--]]ttyyppeess          Warn for some Makefile variables if their
+                               assigned values do not match their type.
 
-     [no-]workdir
-                 Warn about existing _w_o_r_k_* directories.  They might be commit-
-                 ted to CVS accidentally.
+           [[nnoo--]]wwoorrkkddiirr        Warn about existing _w_o_r_k_* directories.  They
+                               might be committed to CVS accidentally.
 
-     OOtthheerr aarrgguummeennttss
+           OOtthheerr aarrgguummeennttss
 
-     dir ...     The pkgsrc directories to be checked.  If omitted, the cur-
-                 rent directory is checked.
+           _d_i_r _._._.             The pkgsrc directories to be checked.  If omit-
+                               ted, the current directory is checked.
 
 FFIILLEESS
      /usr/pkgsrc/mk/bsd.pkg.mk  The pkgsrc master Makefile
      /usr/pkgsrc/*              The files of the NetBSD packages collection
 
 EEXXAAMMPPLLEESS
-     ppkkgglliinntt --CCnnoonnee,,ppaattcchheess  ..  Checks the patches of the package in the cur-
-     rent directory.
+     ppkkgglliinntt --CCnnoonnee,,ppaattcchheess ..
+                 Checks the patches of the package in the current directory.
 
-     ppkkgglliinntt --WWaallll //uussrr//ppkkggssrrcc//ddeevveell Checks the category Makefile and reports
-     any warnings it can find.
+     ppkkgglliinntt --WWaallll //uussrr//ppkkggssrrcc//ddeevveell
+                 Checks the category Makefile and reports any warnings it can
+                 find.
 
 DDIIAAGGNNOOSSTTIICCSS
      Diagnostics are written to the standard output.
@@ -120,17 +116,19 @@ DDIIAAGGNNOOSSTTIICCSS
                    critical as fatal errors.
 
      OK: ...       Informational messages are only written in verbose mode
-                   (--vv). Their main use is to aid debugging.
+                   (--vv).  Their main use is to aid debugging.
 
 AAUUTTHHOORRSS
-     Jun-ichiro Itoh <itojun@itojun.org>, Yoshishige Arai <ryo2@on.rim.or.jp>,
-     Roland Illig <rillig@NetBSD.org>.  Many people have contributed patches
-     and comments/suggestions.
+     Jun-ichiro Itoh <itojun@itojun.org>
+     Yoshishige Arai <ryo2@on.rim.or.jp>
+     Roland Illig <rillig@NetBSD.org>
+
+     Many people have contributed patches and comments/suggestions.
 
 BBUUGGSS
      Many more checks could be added.
 
-     If you don't understand the messages, feel free to ask on the <tech-
-     pkg@NetBSD.org> mailing list.
+     If you don't understand the messages, feel free to ask on the
+     <tech-pkg@NetBSD.org> mailing list.
 
-                                 Jul 21, 2005                                3
+NetBSD 2.0                       July 21, 2005                      NetBSD 2.0
