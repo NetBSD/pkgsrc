@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/07/16 01:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/07/21 03:04:21 grant Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	4
@@ -58,7 +58,7 @@ MAKE_ENV+=		LOOKUP_PGSQL=YES
 
 BDB_ACCEPTED=	db1 db3 db2	# does not compile with db4
 .include "../../mk/bdb.buildlink3.mk"
-DBMLIB+=		${BDB_LIBS}
+DBMLIB+=		${LDFLAGS} ${BDB_LIBS}
 
 MAKE_ENV+=		DBMLIB=${DBMLIB:Q}
 MAKE_ENV+=		LOOKUP_INCLUDE="${LOOKUP_INCLUDE}"
