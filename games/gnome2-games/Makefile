@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/06/01 18:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2005/07/21 16:29:50 wiz Exp $
 
 DISTNAME=		gnome-games-2.10.1
 CATEGORIES=		games gnome
@@ -74,7 +74,7 @@ BUILDLINK_DEPENDS.libgnome+=	libgnome>=2.10.0
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"

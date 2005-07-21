@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/07/16 01:19:11 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2005/07/21 16:29:52 wiz Exp $
 
 DISTNAME=	mono-1.1.6
 CATEGORIES=	lang
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--with-sigaltstack=no
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

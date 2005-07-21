@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:05 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:51 wiz Exp $
 #
 
 DISTNAME=		ufraw-0.4
@@ -16,7 +16,7 @@ INSTALL_TARGET=		install-admin
 
 BUILDLINK_TRANSFORM+=	rm:-std=gnu99
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/16 01:19:26 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/21 16:30:01 wiz Exp $
 #
 
 DISTNAME=	gtkmm-2.2.12
@@ -22,6 +22,6 @@ PKGCONFIG_OVERRIDE+=	gtk/gtkmm-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	pango/pangomm-1.0.pc.in
 
 .include "../../devel/libsigc++/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

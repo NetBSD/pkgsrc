@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/21 16:30:00 wiz Exp $
 #
 
 DISTNAME=	GTK2-Wonderland-Engine-1.0
@@ -20,6 +20,6 @@ WRKSRC=			${WRKDIR}/Bluecurve
 
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

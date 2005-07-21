@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/26 16:55:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/21 16:29:59 wiz Exp $
 #
 
 DISTNAME=	drivel-2.0.1
@@ -27,7 +27,7 @@ BUILDLINK_DEPENDS.curl+=	curl>=7.14.0nb1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

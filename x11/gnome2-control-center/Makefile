@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/06/01 18:03:28 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2005/07/21 16:30:00 wiz Exp $
 #
 
 DISTNAME=	control-center-2.10.1
@@ -51,7 +51,7 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

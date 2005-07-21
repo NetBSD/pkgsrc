@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:07 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:54 wiz Exp $
 
 DISTNAME=		ed2k-gtk-gui-0.6.3
 PKGREVISION=		1
@@ -23,7 +23,7 @@ SUBST_SED.shell=	-e 's,/bin/bash,/bin/sh,g'
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/gnet/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
