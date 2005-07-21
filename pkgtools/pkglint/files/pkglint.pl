@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.214 2005/07/21 01:03:34 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.215 2005/07/21 01:08:05 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1353,11 +1353,11 @@ sub load_package_Makefile($$$$) {
 	$pkgdir = expand_variable($whole, "PKGDIR", ".");
 	$scriptdir = expand_variable($whole, "SCRIPTDIR", "scripts");
 
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] DISTINFO_FILE=$distinfo_file");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] FILESDIR=$filesdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PATCHDIR=$patchdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] PKGDIR=$pkgdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[checkfile_Makefile] SCRIPTDIR=$scriptdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] DISTINFO_FILE=$distinfo_file");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] FILESDIR=$filesdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] PATCHDIR=$patchdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] PKGDIR=$pkgdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[load_package_Makefile] SCRIPTDIR=$scriptdir");
 
 	${$refwhole} = $whole;
 	${$reflines} = $lines;
