@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:55 wiz Exp $
 #
 
 DISTNAME=	vino-2.10.0
@@ -25,7 +25,7 @@ GCONF2_SCHEMAS=		vino-server.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

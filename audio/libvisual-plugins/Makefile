@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/19 17:14:44 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:43 wiz Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 # sorry, but the bug with strtof has come, please report..
 CONFIGURE_ARGS+=	--disable-dancingparticles
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../audio/goom/buildlink3.mk"
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

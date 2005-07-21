@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/07/21 16:29:50 wiz Exp $
 #
 
 DISTNAME=	gucharmap-1.4.3
@@ -27,7 +27,7 @@ GTK2_IMMODULES=		yes
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/06/04 22:05:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2005/07/21 16:29:57 wiz Exp $
 #
 
 DISTNAME=		nautilus-2.10.1
@@ -37,7 +37,7 @@ BUILDLINK_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"

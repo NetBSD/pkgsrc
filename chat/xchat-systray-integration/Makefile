@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/06 11:47:06 tron Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/21 16:29:45 wiz Exp $
 
 DISTNAME=	xchat-systray-integration-2.4.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -19,6 +19,6 @@ CFLAGS+=	-fPIC
 
 MAKE_ENV+=	prefix=${PREFIX}
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

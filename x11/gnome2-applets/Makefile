@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/06/01 18:03:28 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2005/07/21 16:30:00 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.10.1
@@ -80,7 +80,7 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gstreamer/buildlink3.mk"
