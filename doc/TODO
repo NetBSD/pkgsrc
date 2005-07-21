@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3732 2005/07/21 09:22:17 wiz Exp $
+$NetBSD: TODO,v 1.3733 2005/07/21 12:14:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -467,7 +467,6 @@ Suggested package updates
 	o fidogate-4.4.10
 	o file-4.14
 	o findutils-4.2.23
-	o firefox-bin-1.0.6
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fluxbox-0.9.13 [pkg/30229|jmcneill]
