@@ -76,6 +76,7 @@ frontend-modperl2
 gd	
 gdbm	
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
+ggi			Enable GGI support.
 gif			Enable GIF support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
 glib1	
