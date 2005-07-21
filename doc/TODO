@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3731 2005/07/20 16:04:53 taca Exp $
+$NetBSD: TODO,v 1.3732 2005/07/21 09:22:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,7 +309,7 @@ Suggested package updates
 	o acpi-iasl-20040715
 	o advancecomp-1.14
 	o aewm++-1.0.27
-	o afterstep-2.1.1
+	o afterstep-2.1.2
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
 	o amavis-0.3.12
@@ -467,6 +467,7 @@ Suggested package updates
 	o fidogate-4.4.10
 	o file-4.14
 	o findutils-4.2.23
+	o firefox-bin-1.0.6
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fluxbox-0.9.13 [pkg/30229|jmcneill]
@@ -1058,11 +1059,11 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
-	o thunderbird-1.0.5
-	o thunderbird-gtk1-1.0.5
+	o thunderbird-1.0.6
+	o thunderbird-gtk1-1.0.6
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
-	o tkcvs-7.2.3
+	o tkcvs-7.2.4
 	o tkdesk-2.0
 	o tkdiff-4.1
 	o tkgate-1.8.5
@@ -1118,7 +1119,7 @@ Suggested package updates
 	o weechat-0.1.1
 	o weewm-0.01
 	o winbind-3.0.13
-	o windowlab-1.31
+	o windowlab-1.32
 	o wine-20050628
 	o wmbiff-0.4.26
 	o wmctrl-1.07
