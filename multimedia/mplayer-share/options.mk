@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/07/21 14:24:48 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2005/07/21 15:20:47 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -15,7 +15,7 @@ PKG_SUPPORTED_OPTIONS=	gif jpeg mad dv dvdread oss png theora vorbis
 
 # Set options based on the specific package being built.
 .if !empty(PKGNAME:M*mplayer*)
-PKG_SUPPORTED_OPTIONS+=	aalib esound mplayer-menu nas sdl
+PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas sdl
 
 .  if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=	arts
@@ -48,7 +48,7 @@ PKG_SUPPORTED_OPTIONS+=	mplayer-real
 .for _o_ in aalib arts cdparanoia dv dvdread esound gif jpeg \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-runtime-cpudetection mplayer-win32 \
-	    nas oss png sdl theora vorbis xvid 
+	    nas oss png sdl theora vorbis xvid
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_o_})
 PKG_SUGGESTED_OPTIONS+=	${_o_}
 .  endif
@@ -116,6 +116,13 @@ CONFIGURE_ARGS+=	--enable-esd
 .  include "../../audio/esound/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-esd
+.endif
+
+.if !empty(PKG_OPTIONS:Mggi)
+CONFIGURE_ARGS+=	--enable-ggi
+.  include "../../graphics/libggi/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ggi
 .endif
 
 .if !empty(PKG_OPTIONS:Mgif)
