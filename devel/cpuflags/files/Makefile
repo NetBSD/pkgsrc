@@ -1,6 +1,6 @@
-# $Id: Makefile,v 1.2 2005/05/01 22:03:37 abs Exp $
+# $Id: Makefile,v 1.3 2005/07/21 08:33:13 abs Exp $
 
-VERSION=0.87
+VERSION=0.89
 
 PREFIX?=/usr/local
 OPSYS?=`uname`
@@ -8,20 +8,22 @@ OPSYS?=`uname`
 MANDIR?=${PREFIX}/man/man1
 MKDIR?=${PREFIX}/share/mk
 BINDIR?=${PREFIX}/bin
+INSTALL?=install
+SED?=sed
 
 all:
-	sed -e 's|@PREFIX@|${PREFIX}|g' cpuflags.1 > cpuflags.1.out
-	sed -e 's|@PREFIX@|${PREFIX}|g' cpuflags.mk > cpuflags.mk.out
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' cpuflags.1 > cpuflags.1.out
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' cpuflags.mk > cpuflags.mk.out
 	
 clean:
 	rm -rf *.out out
 
 install:
-	mkdir -p ${BINDIR} ${MANDIR} ${MKDIR}
-	install cpuflags.${OPSYS} ${BINDIR}/cpuflags
-	install cpuflags.1.out 	  ${MANDIR}/cpuflags.1
-	install optimize_gcc.mk   ${MKDIR}/optimize_gcc.mk
-	install cpuflags.mk.out   ${MKDIR}/cpuflags.mk
+	mkdir -p ${BINDIR} ${MANDIR}	${MKDIR}
+	${INSTALL} cpuflags.${OPSYS}	${BINDIR}/cpuflags
+	${INSTALL} cpuflags.1.out	${MANDIR}/cpuflags.1
+	${INSTALL} optimize_gcc.mk	${MKDIR}/optimize_gcc.mk
+	${INSTALL} cpuflags.mk.out	${MKDIR}/cpuflags.mk
 
 dist:
 	mkdir -p out/cpuflags-${VERSION}
