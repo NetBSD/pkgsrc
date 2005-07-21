@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2005/01/28 14:17:27 minskim Exp $
-lib/X11/fonts/TTF/09t@rk.ttf
-lib/X11/fonts/TTF/Aqu@rk.ttf
+@comment $NetBSD: PLIST,v 1.6 2005/07/21 04:53:34 minskim Exp $
+lib/X11/fonts/TTF/0b0dkuki.ttf
 lib/X11/fonts/TTF/Bandal.ttf
+lib/X11/fonts/TTF/Bangwool.ttf
 lib/X11/fonts/TTF/Eunjin.ttf
 lib/X11/fonts/TTF/Ongdalsam.ttf
 share/doc/alee-ttf/COPYING
