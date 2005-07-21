@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:56 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/21 08:31:50 minoura Exp $
 #
 
 DISTNAME=	sl
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/
 EXTRACT_SUFX=	.tar
 
-PATCH_SITES=	http://ecssg.ec.tmit.ac.jp/~izumi/sl/
+PATCH_SITES=	http://www.linet.gr.jp/~izumi/sl/
 PATCHFILES=	sl5.patch
 PATCH_DIST_STRIP= -p1
 
