@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.30 2005/07/21 02:49:28 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.31 2005/07/21 18:33:18 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -65,3 +65,7 @@ Pullup ticket 586 - requested by grant beattie
 portability fix for mysql-client
 Pullup ticket 613 - requested by Shin'ichiro TAYA
 security update for firefox and firefox-gtk1
+Pullup ticket 619 - requested by Matthias Scheler
+security update for mozilla-bin
+Pullup ticket 618 - requested by Matthias Scheler
+update of firefox-bin
