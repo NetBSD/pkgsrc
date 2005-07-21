@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10650 2005/07/21 13:25:11 tron Exp $
+$NetBSD: CHANGES,v 1.10651 2005/07/21 16:35:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3267,3 +3267,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Added textproc/py-elementtree version 1.2.6 [wiz 2005-07-21]
 	Updated net/flow-tools to 0.68nb1 [seb 2005-07-21]
 	Updated www/mozilla-bin to 1.7.10 [tron 2005-07-21]
+	Updated pkgtools/createbuildlink to 3.9 [wiz 2005-07-21]
+	Updated meta-pkgs/gnome-devel to 2.10.1nb1 [wiz 2005-07-21]
+	Updated devel/anjuta to 1.2.2nb3 [wiz 2005-07-21]
+	Added devel/pkg-config version 0.19 [wiz 2005-07-21]
+	Removed devel/pkgconfig [wiz 2005-07-21]
