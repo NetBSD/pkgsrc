@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/07/20 19:05:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.36 2005/07/21 13:11:42 dillo Exp $
 #
 
 DISTNAME=	epiphany-1.6.4
@@ -23,9 +23,11 @@ PKGCONFIG_OVERRIDE=	data/epiphany-1.6.pc.in
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.epiphany
+.include "../../www/mozilla/gecko-options.mk"
+.include "../../mk/bsd.options.mk"
 
-.if ${GECKO_PROVIDER} == "firefox"
+.if !empty(PKG_OPTIONS:Mfirefox)
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
 CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/necko
@@ -65,12 +67,8 @@ BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.if ${GECKO_PROVIDER} == "firefox"
-.include "../../www/firefox/buildlink3.mk"
-.else
-.include "../../www/mozilla-gtk2/buildlink3.mk"
-.endif
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../www/mozilla/gecko-depends.mk"
 .include "../../mk/bsd.pkg.mk"
