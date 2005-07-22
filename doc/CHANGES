@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10657 2005/07/22 09:10:11 adam Exp $
+$NetBSD: CHANGES,v 1.10658 2005/07/22 11:25:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3279,3 +3279,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/postfix to 2.2.5 [martti 2005-07-22]
 	Added lang/js version 0.2.5 [rillig 2005-07-22]
 	Updated devel/libsigc++2 to 2.0.15 [adam 2005-07-22]
+	Updated games/asc to 1.6.1.0 [adam 2005-07-22]
