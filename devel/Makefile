@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.659 2005/07/22 21:15:22 adam Exp $
+# $NetBSD: Makefile,v 1.660 2005/07/22 21:27:05 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -141,7 +141,6 @@ SUBDIR+=	gal
 SUBDIR+=	gal2
 SUBDIR+=	gal20
 SUBDIR+=	gconfmm
-SUBDIR+=	gconfmm26
 SUBDIR+=	gcvs
 SUBDIR+=	gdb
 SUBDIR+=	gdb6
