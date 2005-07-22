@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10659 2005/07/22 12:13:47 abs Exp $
+$NetBSD: CHANGES,v 1.10660 2005/07/22 18:20:11 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3281,3 +3281,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libsigc++2 to 2.0.15 [adam 2005-07-22]
 	Updated games/asc to 1.6.1.0 [adam 2005-07-22]
 	Updated devel/cpuflags to 0.90 [abs 2005-07-22]
+	Updated mail/sylpheed-devel to 2.0.0rc [chris 2005-07-22]
