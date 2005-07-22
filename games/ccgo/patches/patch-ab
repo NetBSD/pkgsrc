@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/03/16 03:56:27 rh Exp $
+$NetBSD: patch-ab,v 1.2 2005/07/22 22:13:25 adam Exp $
 
---- igs/fork.cc.orig	2002-11-24 02:49:32.000000000 +1000
+--- igs/fork.cc.orig	2004-09-24 02:12:22.000000000 +0000
 +++ igs/fork.cc
-@@ -15,6 +15,7 @@ extern "C" {
+@@ -16,6 +16,7 @@ extern "C" {
  #include <sys/fcntl.h>
  #include <sys/wait.h>
  #include <unistd.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/03/16 03:56:27 rh Exp $
  }
  
  using namespace igs;
-@@ -143,7 +144,7 @@ bool Fork::open_conn(const std::string &
+@@ -139,7 +140,7 @@ bool Fork::open_conn(const std::string &
  		close(c2p[0]);
  		close(c2p[1]);
  		close(2); // close cerr
