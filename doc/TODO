@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3739 2005/07/22 22:10:22 adam Exp $
+$NetBSD: TODO,v 1.3740 2005/07/22 22:14:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -379,7 +379,6 @@ Suggested package updates
 	o catdoc-tk-0.93.4
 	o cbmconvert-2.1.2
 	o ccd2iso-0.2
-	o ccgo-0.3.5
 	o cdl3-1.2.6
 	o cdlabelgen-3.5.0 [pkg/30721]
 	o cdrtools-2.01
