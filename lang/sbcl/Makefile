@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/23 03:00:20 jonb Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/22 02:38:13 jonb Exp $
 
 DISTNAME=		${PKGNAME}-source
 PKGNAME=		sbcl-0.9.1
@@ -17,7 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 # In addition, SBCL should also work on Linux, Darwin, Solaris,
 # FreeBSD, OpenBSD, and possibly Win32, OSF/1, HP-UX, and Irix.
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake gtar:run
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${PKGNAME}/
@@ -42,12 +42,14 @@ PKG_SKIP_REASON=	"Sorry, need a Common Lisp system"
 .endif
 
 post-patch:
-	${MV} ${WRKSRC}/install.sh ${WRKSRC}/install.sh.dist
-	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/install.sh.dist > ${WRKSRC}/install.sh
-	${MV} ${WRKSRC}/src/runtime/runtime.c ${WRKSRC}/src/runtime/runtime.c.dist
-	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/src/runtime/runtime.c.dist > ${WRKSRC}/src/runtime/runtime.c
-	${MV} ${WRKSRC}/doc/sbcl.1 ${WRKSRC}/doc/sbcl.1.dist
-	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/doc/sbcl.1.dist > ${WRKSRC}/doc/sbcl.1
+	${MV} ${WRKSRC}install.sh ${WRKSRC}install.sh.dist
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}install.sh.dist > ${WRKSRC}install.sh
+	${MV} ${WRKSRC}src/runtime/runtime.c ${WRKSRC}src/runtime/runtime.c.dist
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}src/runtime/runtime.c.dist > ${WRKSRC}src/runtime/runtime.c
+	${MV} ${WRKSRC}doc/sbcl.1 ${WRKSRC}doc/sbcl.1.dist
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}doc/sbcl.1.dist > ${WRKSRC}doc/sbcl.1
+	${MV} ${WRKSRC}contrib/asdf-install/installer.lisp ${WRKSRC}contrib/asdf-install/installer.lisp.dist
+	${SED} -e "s,@GTAR@,${GTAR}," ${WRKSRC}contrib/asdf-install/installer.lisp.dist > ${WRKSRC}contrib/asdf-install/installer.lisp
 
 do-build:
 	cd ${WRKSRC} && ${SH} make.sh "${SBCL_BOOT_SYSTEM}"
