@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/07/22 22:24:39 adam Exp $
+
+SHA1 (libtorrent-0.7.0.tar.gz) = a14bfdb15eb078ff0ae8dc4445381c01b04486fe
+RMD160 (libtorrent-0.7.0.tar.gz) = 042911fd5d74c55320bcad85ca6a0f3058f24afa
+Size (libtorrent-0.7.0.tar.gz) = 317298 bytes
+SHA1 (patch-aa) = bb40555e2f7507879711000d510c0d3d9e3d6cd0
