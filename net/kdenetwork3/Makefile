@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.41 2005/05/31 14:34:59 markd Exp $
+# $NetBSD: Makefile,v 1.42 2005/07/22 12:56:57 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	post-3.4.1-kdenetwork-libgadu.patch
 
 CONFLICTS=	kopete-[0-9]*
 
