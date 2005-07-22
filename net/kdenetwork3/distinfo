@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.30 2005/05/31 14:34:59 markd Exp $
+$NetBSD: distinfo,v 1.30.2.1 2005/07/22 16:19:00 snj Exp $
 
 SHA1 (kdenetwork-3.4.1.tar.bz2) = b346614fa3d350ae771c975f1198427d71c18f2d
 RMD160 (kdenetwork-3.4.1.tar.bz2) = 146c851a13fc5056c530bdf4dd4326eb01dabbd5
 Size (kdenetwork-3.4.1.tar.bz2) = 7388991 bytes
+SHA1 (post-3.4.1-kdenetwork-libgadu.patch) = 2b012f496cb5c31aea913365a1bebff814277ad0
+RMD160 (post-3.4.1-kdenetwork-libgadu.patch) = cb1e395191c78eb2c5bc2eade5cf29409d87dc8d
+Size (post-3.4.1-kdenetwork-libgadu.patch) = 78433 bytes
 SHA1 (patch-aa) = 49ca3764fae7044d1170efe03b53147732e9d470
 SHA1 (patch-ac) = a0e2fbcf1348d5e91434878bac4977b649c94855
 SHA1 (patch-ad) = 916bcbe11ca71f7a0f5f03c91fa18a6af9197be2
