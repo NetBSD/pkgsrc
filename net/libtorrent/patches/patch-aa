@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/07/22 22:24:39 adam Exp $
+
+--- configure.orig	2005-07-22 20:40:20.000000000 +0000
++++ configure
+@@ -8053,7 +8053,7 @@ esac
+   echo "$as_me:$LINENO: checking for user-defined CXXFLAGS" >&5
+ echo $ECHO_N "checking for user-defined CXXFLAGS... $ECHO_C" >&6
+ 
+-  if test $CXXFLAGS; then
++  if test "$CXXFLAGS"; then
+     echo "$as_me:$LINENO: result: user-defined \"$CXXFLAGS\"" >&5
+ echo "${ECHO_T}user-defined \"$CXXFLAGS\"" >&6
+   else
