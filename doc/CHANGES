@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10661 2005/07/22 21:41:37 adam Exp $
+$NetBSD: CHANGES,v 1.10662 2005/07/22 21:58:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3292,3 +3292,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed devel/libglademm20 [adam 2005-07-22]
 	Removed devel/libglademm24 [adam 2005-07-22]
 	Updated comm/efax-gtk to 3.0.3 [adam 2005-07-22]
+	Added sysutils/gnome-vfsmm version 2.10.0 [adam 2005-07-22]
+	Removed sysutils/gnome-vfsmm26 [adam 2005-07-22]
+	Added graphics/libgnomecanvasmm version 2.10.0 [adam 2005-07-22]
+	Removed graphics/libgnomecanvasmm20 [adam 2005-07-22]
+	Removed graphics/libgnomecanvasmm26 [adam 2005-07-22]
