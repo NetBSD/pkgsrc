@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2005/03/30 13:49:28 adam Exp $
+$NetBSD: patch-ab,v 1.4 2005/07/22 21:35:27 adam Exp $
 
---- src/efax_controller.cpp.orig	2005-03-30 15:38:46.000000000 +0000
+--- src/efax_controller.cpp.orig	2005-06-14 20:37:33.000000000 +0000
 +++ src/efax_controller.cpp
-@@ -234,8 +234,8 @@ std::pair<const char*, char* const*> Efa
+@@ -229,8 +229,8 @@ std::pair<const char*, char* const*> Efa
  
    *temp_pp = 0;
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ab,v 1.3 2005/03/30 13:49:28 adam Exp $
  
    return std::pair<const char*, char* const*>(prog_name, exec_parms);
  }
-@@ -290,7 +290,7 @@ void EfaxController::sendfax_slot(void) 
+@@ -284,7 +284,7 @@ void EfaxController::sendfax_slot(void) 
  
      // if we reached this point, then the execvp() call must have failed
      // report error and exit - uses _exit() and not exit()
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.3 2005/03/30 13:49:28 adam Exp $
  		"and the PATH environmental variable\n");
      _exit(EXEC_ERROR); 
    } // end of child process
-@@ -634,8 +634,8 @@ std::pair<const char*, char* const*> Efa
+@@ -627,8 +627,8 @@ std::pair<const char*, char* const*> Efa
    
    *temp_pp = 0;
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ab,v 1.3 2005/03/30 13:49:28 adam Exp $
    
    return std::pair<const char*, char* const*>(prog_name, exec_parms);
  }
-@@ -742,7 +742,7 @@ void EfaxController::receive(State mode)
+@@ -734,7 +734,7 @@ void EfaxController::receive(State mode)
  
        // if we reached this point, then the execvp() call must have failed
        // report the error and end this process - use _exit() and not exit()
