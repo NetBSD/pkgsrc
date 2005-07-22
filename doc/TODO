@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3737 2005/07/22 21:41:37 adam Exp $
+$NetBSD: TODO,v 1.3738 2005/07/22 21:58:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -514,7 +514,6 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050325
 	o gnocatan-0.8.1.30
-	o gnome-vfsmm26-2.8.0?
 	o gnutls-1.2.6
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.40
