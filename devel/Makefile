@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.662 2005/07/22 22:03:09 adam Exp $
+# $NetBSD: Makefile,v 1.663 2005/07/22 22:06:56 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -227,8 +227,7 @@ SUBDIR+=	libglademm
 SUBDIR+=	libgnome
 SUBDIR+=	libgnomemm
 SUBDIR+=	libgnomeui
-SUBDIR+=	libgnomeuimm20
-SUBDIR+=	libgnomeuimm26
+SUBDIR+=	libgnomeuimm
 SUBDIR+=	libgphoto2
 SUBDIR+=	libgsf
 SUBDIR+=	libhfs
