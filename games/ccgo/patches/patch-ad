@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/03/16 03:56:28 rh Exp $
+$NetBSD: patch-ad,v 1.2 2005/07/22 22:13:25 adam Exp $
 
---- gmp/device.cc.orig	2002-10-31 07:25:00.000000000 +1000
+--- gmp/device.cc.orig	2004-09-24 02:12:20.000000000 +0000
 +++ gmp/device.cc
-@@ -14,6 +14,7 @@ extern "C" {
+@@ -15,6 +15,7 @@ extern "C" {
  #include <sys/fcntl.h>
  #include <sys/wait.h>
  #include <unistd.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/03/16 03:56:28 rh Exp $
  }
  
  using namespace gmp;
-@@ -356,7 +357,7 @@ bool Device::fork_child(const std::strin
+@@ -358,7 +359,7 @@ bool Device::fork_child(const std::strin
  		close(c2p[0]);
  		close(c2p[1]);
  		// close(2); // close cerr
