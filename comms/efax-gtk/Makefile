@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:45:06 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/07/22 21:35:27 adam Exp $
 
-DISTNAME=	efax-gtk-2.2.15.src
-PKGNAME=	efax-gtk-2.2.15
+DISTNAME=	efax-gtk-3.0.3.src
+PKGNAME=	efax-gtk-3.0.3
 CATEGORIES=	comms
-MASTER_SITES=	http://www.cvine.freeserve.co.uk/efax-gtk/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=efax-gtk/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.cvine.freeserve.co.uk/efax-gtk/
+HOMEPAGE=	http://efax-gtk.sourceforge.net/
 COMMENT=	GTK frontend for efax
 
 DEPENDS+=	efax>=0.9:../../comms/efax
@@ -22,8 +22,5 @@ CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/spool/efax
 EGDIR=			${PREFIX}/share/examples
 CONF_FILES=		${EGDIR}/efax-gtkrc ${PKG_SYSCONFDIR}/efax-gtkrc
 
-.include "../../devel/libsigc++2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtkmm24/buildlink3.mk"
-
+.include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
