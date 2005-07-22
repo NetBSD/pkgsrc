@@ -1,25 +1,22 @@
-# $NetBSD: Makefile,v 1.18 2005/07/21 16:29:46 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.19 2005/07/22 21:25:59 adam Exp $
 
-DISTNAME=	gconfmm-2.0.2
-PKGREVISION=	1
-CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gconfmm/2.0/}
+DISTNAME=	gconfmm-2.10.0
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gconfmm/2.10/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.gtkmm.org/
-COMMENT=	C++ interface to GConf2
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://gtkmm.sourceforge.net/
+COMMENT=	C++ bindings for gconf
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-
-PKGCONFIG_OVERRIDE=	gconf/gconfmm-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	gconf/gconfmm-2.0-uninstalled.pc.in
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/gconf/gconfmm-2.6.pc.in
+GNU_CONFIGURE=		yes
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/pkg-config/buildlink3.mk"
-# gtkmm must be 2.0/2.2
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
