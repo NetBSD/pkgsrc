@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.2.2 2005/07/22 03:00:13 snj Exp $
+
+--- messages/kdeaccessibility/kbstateapplet.po.orig	Tue May 24 01:38:09 2005
++++ messages/kdeaccessibility/kbstateapplet.po
+@@ -1,7 +1,6 @@
+ # SOME DESCRIPTIVE TITLE.
+ # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+ #
+-#, fuzzy
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: ../cy/messages//kdeaccessibility/kbstateapplet.po\n"
