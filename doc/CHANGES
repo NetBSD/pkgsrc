@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10662 2005/07/22 21:58:48 adam Exp $
+$NetBSD: CHANGES,v 1.10663 2005/07/22 22:10:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3297,3 +3297,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Added graphics/libgnomecanvasmm version 2.10.0 [adam 2005-07-22]
 	Removed graphics/libgnomecanvasmm20 [adam 2005-07-22]
 	Removed graphics/libgnomecanvasmm26 [adam 2005-07-22]
+	Added devel/libgnomemm version 2.10.0 [adam 2005-07-23]
+	Removed devel/libgnomemm20 [adam 2005-07-23]
+	Removed devel/libgnomemm26 [adam 2005-07-23]
+	Added devel/libgnomeuimm version 2.10.0 [adam 2005-07-23]
+	Removed devel/libgnomeuimm20 [adam 2005-07-23]
+	Removed devel/libgnomeuimm26 [adam 2005-07-23]

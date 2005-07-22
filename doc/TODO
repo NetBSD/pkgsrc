@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3738 2005/07/22 21:58:48 adam Exp $
+$NetBSD: TODO,v 1.3739 2005/07/22 22:10:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -612,8 +612,6 @@ Suggested package updates
 	o libetpan-0.34b
 	o libextractor-0.5.2
 	o libflash-0.4.13
-	o libgnomemm26-2.10.0
-	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
 	o libidn-0.5.18
 	o libjit-0.0.4 [pkg/30514]
