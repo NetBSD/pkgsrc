@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/07/21 16:22:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/07/22 01:57:02 grant Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PKG_CONFIG_BUILDLINK3_MK:=	${PKG_CONFIG_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npkg-config}
 BUILDLINK_PACKAGES+=	pkg-config
 
 .if !empty(PKG_CONFIG_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pkg-config+=	pkg-config>=0.15.0
+BUILDLINK_DEPENDS.pkg-config+=		pkg{,-}config>=0.15.0
 BUILDLINK_PKGSRCDIR.pkg-config?=	../../devel/pkg-config
 BUILDLINK_DEPMETHOD.pkg-config?=	build
 
