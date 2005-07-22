@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.60 2005/05/01 22:03:37 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.61 2005/07/22 12:13:12 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -83,6 +83,7 @@ case $hw_machine_arch in
 	*AMD\ K7\ \(Athlon\)\ XP\ *)	FLAGS='-march=athlon-xp'	;;
 	*AMD\ Athlon\ XP\ *)		FLAGS='-march=athlon-xp'	;;
 	*AMD\ K7*|*AMD\ Athlon*)	FLAGS='-march=athlon'		;;
+	*AMD\ Unknown\ K7\ \(Athlon\)*)	FLAGS='-march=athlon'		;;
 	*386-class*)			FLAGS='-march=i386'		;;
 	*486-class*)			FLAGS='-march=i486'		;;
 	*586-class*)			FLAGS='-march=pentium'		;;
@@ -178,7 +179,9 @@ else
 fi
 
 if [ -n "$opt_v" ] ; then
-    if [ -z "$NONE" ] ; then
+    if [ -n "$FLAGS" ]; then
+	echo "CPUFLAGS=$FLAGS"
+    elif [ -z "$NONE" ] ; then
 	echo "CPUFLAGS=Unknown"
     else
 	echo "CPUFLAGS=None"
