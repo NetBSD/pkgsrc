@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10666 2005/07/22 22:34:18 adam Exp $
+$NetBSD: CHANGES,v 1.10667 2005/07/22 23:12:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3307,3 +3307,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/gcdmaster to 1.2.0nb4 [adam 2005-07-23]
 	Added net/libtorrent version 0.7.0 [adam 2005-07-23]
 	Added net/rtorrent version 0.3.0 [adam 2005-07-23]
+	Updated graphics/inkscape to 0.41nb1 [adam 2005-07-23]
