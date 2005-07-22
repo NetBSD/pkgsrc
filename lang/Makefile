@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2005/07/21 00:14:43 rillig Exp $
+# $NetBSD: Makefile,v 1.219 2005/07/22 09:10:23 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -71,6 +71,7 @@ SUBDIR+=	jdk-openjit
 SUBDIR+=	jikes
 SUBDIR+=	jini
 SUBDIR+=	joos
+SUBDIR+=	js
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-esound
 SUBDIR+=	kaffe-x11
