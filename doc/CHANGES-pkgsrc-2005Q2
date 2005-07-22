@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.32 2005/07/21 19:31:54 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.33 2005/07/22 03:28:47 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -79,3 +79,15 @@ Pullup ticket 596 - requested by Min Sik Kim
 portability fix for umb-scheme
 Pullup ticket 597 - requested by Takahiro Kambe
 build fix for namazu2
+Pullup ticket 602 - requested by grant beattie
+portability fix for ircII
+Pullup ticket 603 - requested by grant beattie
+portability fix for libtlen
+Pullup ticket 605 - requested by Mark Davies
+portability fix for kde3-i18n-cy
+Pullup ticket 606 - requested by Mark Davies
+portability fix for kde3-i18n-eu
+Pullup ticket 607 - requested by Mark Davies
+portability fix for kde3-i18n-hi
+Pullup ticket 608 - requested by Mark Davies
+portability fix for kde3-i18n-is
