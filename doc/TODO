@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3734 2005/07/21 16:36:03 wiz Exp $
+$NetBSD: TODO,v 1.3735 2005/07/22 11:25:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ Suggested package updates
 	o arnold-20040104
 	o arpwatch-2.1a13
 	o asapm-3.0
-	o asc-1.16.1
 	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
