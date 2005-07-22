@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.4.8.1 2005/07/22 02:47:41 snj Exp $
+
+--- configure.orig	2004-07-03 20:37:00.000000000 +1000
++++ configure
+@@ -1107,9 +1107,6 @@ then
+     5.*)
+       echo "$ac_t""yes" 1>&6
+       svr4=1
+-            if test $ac_cv_prog_gcc = no; then
+-        CFLAGS="-Xc $CFLAGS"
+-      fi
+       ;;
+   esac
+ else
