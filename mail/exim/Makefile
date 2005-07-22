@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2005/05/17 17:06:11 abs Exp $
+# $NetBSD: Makefile,v 1.57.2.1 2005/07/22 16:42:27 snj Exp $
 
 DISTNAME=	exim-4.51
 CATEGORIES=	mail net
@@ -23,7 +23,7 @@ MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 BUILD_DEFS=	EXIM_USER EXIM_GROUP EXIM_DB EXIM_USE_LOOKUP_WHOSON
 
 PKG_GROUPS=	${EXIM_GROUP}
-PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}::Exim\\ mail\\ server\\ user:/var/mail:/sbin/nologin
+PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}::Exim\\ mail\\ server\\ user:/var/mail:${NOLOGIN}
 
 PKG_SYSCONFSUBDIR?=	exim
 EXAMPLESDIR=		${PREFIX}/share/examples/exim

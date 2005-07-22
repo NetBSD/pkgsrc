@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2005/07/22 16:42:27 snj Exp $
 #
 
 DISTNAME=	ircd-hybrid-6.2
@@ -107,7 +107,7 @@ FILES_SUBST+=		SYSLOG_FACILITY=${IRCD_HYBRID_SYSLOG_FACILITY}
 
 RCD_SCRIPTS=		ircd-hybrid
 
-PKG_USERS=		${IRCD_HYBRID_IRC_USER}:${IRCD_HYBRID_IRC_GROUP}::IRC\\ User::/sbin/nologin
+PKG_USERS=		${IRCD_HYBRID_IRC_USER}:${IRCD_HYBRID_IRC_GROUP}::IRC\\ User::${NOLOGIN}
 PKG_GROUPS=		${IRCD_HYBRID_IRC_GROUP}
 
 SUPPORT_FILES=		${PREFIX}/share/examples/ircd-hybrid/opers.txt \
