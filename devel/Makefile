@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.658 2005/07/21 19:45:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.659 2005/07/22 21:15:22 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -157,7 +157,7 @@ SUBDIR+=	glade2
 SUBDIR+=	glade2-gnome
 SUBDIR+=	glib
 SUBDIR+=	glib2
-SUBDIR+=	glibmm24
+SUBDIR+=	glibmm
 SUBDIR+=	global
 SUBDIR+=	gmake
 SUBDIR+=	gmp
