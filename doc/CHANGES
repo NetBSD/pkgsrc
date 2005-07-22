@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10667 2005/07/22 23:12:29 adam Exp $
+$NetBSD: CHANGES,v 1.10668 2005/07/22 23:42:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3308,3 +3308,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/libtorrent version 0.7.0 [adam 2005-07-23]
 	Added net/rtorrent version 0.3.0 [adam 2005-07-23]
 	Updated graphics/inkscape to 0.41nb1 [adam 2005-07-23]
+	Updated devel/libidn to 0.5.18 [wiz 2005-07-22]
