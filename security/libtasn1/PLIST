@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2005/01/27 15:47:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/07/22 23:49:24 wiz Exp $
 bin/libtasn1-config
 include/libtasn1.h
-lib/libtasn1.la
 info/libtasn1.info
-share/aclocal/libtasn1.m4
+lib/libtasn1.la
+lib/pkgconfig/libtasn1.pc
 man/man3/asn1_array2tree.3
 man/man3/asn1_check_version.3
 man/man3/asn1_create_element.3
@@ -25,3 +25,4 @@ man/man3/asn1_read_value.3
 man/man3/asn1_write_value.3
 man/man3/libtasn1_perror.3
 man/man3/libtasn1_strerror.3
+share/aclocal/libtasn1.m4
