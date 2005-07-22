@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.17 2005/07/21 16:29:50 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.18 2005/07/22 22:13:25 adam Exp $
 
-DISTNAME=		ccgo-0.3.4
-PKGREVISION=		2
-CATEGORIES=		games
-MASTER_SITES=		http://ccdw.org/~cjj/prog/ccgo/
+DISTNAME=	ccgo-0.3.6.2
+CATEGORIES=	games
+MASTER_SITES=	http://ccdw.org/~cjj/prog/ccgo/src/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://ccdw.org/~cjj/prog/ccgo/
-COMMENT=		Go board with IGS and gnugo interface
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://ccdw.org/~cjj/prog/ccgo/
+COMMENT=	Go board with IGS and gnugo interface
 
-DEPENDS+=		gnugo>=3.4:../../games/gnugo
-
-BUILD_USES_MSGFMT=	YES
+DEPENDS+=	gnugo>=3.4:../../games/gnugo
+BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_PKGLOCALEDIR=	YES
-GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		ccgo
 SUBST_STAGE.ccgo=	pre-configure
@@ -30,6 +27,6 @@ PREFIX.gnugo_DEFAULT=	${LOCALBASE}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gconfmm/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pkg-config/buildlink3.mk"
-.include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
