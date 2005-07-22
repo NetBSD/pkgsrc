@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.17 2005/06/25 10:50:49 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.18 2005/07/22 12:13:12 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -63,7 +63,9 @@ else
 fi
 
 if [ -n "$opt_v" ] ; then
-    if [ -z "$NONE" ] ; then
+    if [ -n "$FLAGS" ]; then
+	echo "CPUFLAGS=$FLAGS"
+    elif [ -z "$NONE" ] ; then
 	echo "CPUFLAGS=Unknown"
     else
 	echo "CPUFLAGS=None"
