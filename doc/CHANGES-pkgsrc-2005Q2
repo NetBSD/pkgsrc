@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.33 2005/07/22 03:28:47 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.34 2005/07/22 16:19:09 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -91,3 +91,5 @@ Pullup ticket 607 - requested by Mark Davies
 portability fix for kde3-i18n-hi
 Pullup ticket 608 - requested by Mark Davies
 portability fix for kde3-i18n-is
+Pullup ticket 620 - requested by Mark Davies
+security fix for kdenetwork3
