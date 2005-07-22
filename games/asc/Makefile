@@ -1,35 +1,26 @@
-# $NetBSD: Makefile,v 1.25 2005/07/21 16:29:50 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2005/07/22 11:25:02 adam Exp $
 
-DISTNAME=		asc-source-1.15.3.0
-PKGNAME=		${DISTNAME:S/-source//}
-PKGREVISION=		1
-CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asc-hq/}
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${AUDIO_FILES}
+DISTNAME=	asc-source+music-1.16.1.0
+PKGNAME=	${DISTNAME:S/-source+music//}
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asc-hq/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.asc-hq.org/
-COMMENT=		Turn based strategy game
-
-AUDIO_FILES=		frontiers.mp3 machine_wars.mp3 time_to_strike.mp3
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+MAINTAINER=	wiz@NetBSD.org
+HOMEPAGE=	http://www.asc-hq.org/
+COMMENT=	Turn based strategy game
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-CPPFLAGS.NetBSD+=		-D_UNICODE_BROKEN_
+CPPFLAGS.NetBSD+=	-D_UNICODE_BROKEN_
 
 # ../weaponguide.cpp:1205: virtual memory exhausted
 UNLIMIT_RESOURCES=	datasize
 
-post-extract:
-.for fil in ${AUDIO_FILES}
-	${CP} ${DISTDIR}/${fil} ${WRKSRC}/data/music
-.endfor
-
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDLmm/buildlink3.mk"
