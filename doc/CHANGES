@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10675 2005/07/23 18:48:40 wiz Exp $
+$NetBSD: CHANGES,v 1.10676 2005/07/23 21:35:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3315,3 +3315,20 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/docbook-xsl to 1.69.0 [wiz 2005-07-23]
 	Updated net/mldonkey to 2.6.0 [wiz 2005-07-23]
 	Updated net/mldonkey-gui to 2.6.0 [wiz 2005-07-23]
+	Removed archivers/cxunzip [wiz 2005-07-23]
+	Removed audio/gdcd [wiz 2005-07-23]
+	Removed audio/yamt [wiz 2005-07-23]
+	Removed devel/gscope [wiz 2005-07-23]
+	Removed finance/emma [wiz 2005-07-23]
+	Removed finance/gnofin [wiz 2005-07-23]
+	Removed games/copter-commander [wiz 2005-07-23]
+	Removed games/gtkgo [wiz 2005-07-23]
+	Removed graphics/gnome-iconedit [wiz 2005-07-23]
+	Removed mail/balsa [wiz 2005-07-23]
+	Removed mail/evolution12 [wiz 2005-07-23]
+	Removed mail/spruce [wiz 2005-07-23]
+	Removed misc/hitchhiker [wiz 2005-07-23]
+	Removed net/gtksamba [wiz 2005-07-23]
+	Removed wm/icewm-gnome [wiz 2005-07-23]
+	Removed x11/gdm1 [wiz 2005-07-23]
+	Removed x11/gnome-gkrellm [wiz 2005-07-23]
