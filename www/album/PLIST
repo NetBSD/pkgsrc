@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 13:37:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/07/23 10:36:18 hira Exp $
 bin/album
+man/man1/album.1
 share/doc/album/Pics/Caption.gif
 share/doc/album/Section_1.html
 share/doc/album/Section_2.html
