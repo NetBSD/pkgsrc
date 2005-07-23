@@ -1,4 +1,4 @@
-# $NetBSD $
+# $NetBSD: Makefile,v 1.6 2005/07/23 10:39:39 hira Exp $
 #
 
 DISTNAME=	album_themes
