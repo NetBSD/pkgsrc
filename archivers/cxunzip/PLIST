@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/27 11:46:58 jmmv Exp $
-bin/cxunzip
-share/gnome/apps/Utilities/cxunzip.desktop
-@comment in gnome-dirs: @dirrm share/gnome/apps/Utilities
