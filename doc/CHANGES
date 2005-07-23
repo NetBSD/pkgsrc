@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10671 2005/07/23 10:38:24 hira Exp $
+$NetBSD: CHANGES,v 1.10672 2005/07/23 10:57:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3284,14 +3284,14 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sylpheed-devel to 2.0.0rc [chris 2005-07-22]
 	Added devel/glibmm version 2.6.1 [adam 2005-07-22]
 	Removed devel/glibmm24 [adam 2005-07-22]
-	Updated x11/glibmm to 2.6.3 [adam 2005-07-22]
+	Updated devel/glibmm to 2.6.3 [adam 2005-07-22]
 	Removed x11/glimm24 [adam 2005-07-22]
 	Updated devel/gconfmm to 2.10.0 [adam 2005-07-22]
 	Removed devel/gconfmm26 [adam 2005-07-22]
 	Added devel/libglademm version 2.6.0 [adam 2005-07-22]
 	Removed devel/libglademm20 [adam 2005-07-22]
 	Removed devel/libglademm24 [adam 2005-07-22]
-	Updated comm/efax-gtk to 3.0.3 [adam 2005-07-22]
+	Updated comms/efax-gtk to 3.0.3 [adam 2005-07-22]
 	Added sysutils/gnome-vfsmm version 2.10.0 [adam 2005-07-22]
 	Removed sysutils/gnome-vfsmm26 [adam 2005-07-22]
 	Added graphics/libgnomecanvasmm version 2.10.0 [adam 2005-07-22]
