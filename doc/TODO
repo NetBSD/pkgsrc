@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3744 2005/07/23 17:54:08 wiz Exp $
+$NetBSD: TODO,v 1.3745 2005/07/23 18:42:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -433,7 +433,6 @@ Suggested package updates
 	o dirdiff-2.0
 	o dmalloc-5.4.2
 	o dnstracer-1.8
-	o docbook-xsl-1.69.0
 	o doxygen-1.4.4
 	o dpkg-1.13.3
 	o drivel-2.0.2
