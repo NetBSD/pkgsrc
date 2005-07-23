@@ -1,10 +1,10 @@
-# $NetBSD $
+# $NetBSD: Makefile,v 1.6 2005/07/23 10:36:18 hira Exp $
 #
 
 DISTNAME=	album
 ALBUMREV=	3.07
 PKGNAME=	${DISTNAME}-${ALBUMREV}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://marginalhacks.com/bin/
 
