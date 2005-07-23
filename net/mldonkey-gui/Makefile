@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/01 18:03:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/23 18:47:43 wiz Exp $
 #
 
 .include "../../net/mldonkey/Makefile.common"
@@ -6,6 +6,7 @@
 PKGNAME=		${DISTNAME:S/mldonkey/mldonkey-gui/}
 COMMENT+=		(GTK interface)
 
+DEPENDS+=		mldonkey-[0-9]*:../../net/mldonkey
 
 PRINT_PLIST_AWK+=	/^@dirrm libexec\/mldonkey$$/ \
 				{ print "@comment in mldonkey: " $$0; next }
