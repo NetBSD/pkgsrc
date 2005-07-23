@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10673 2005/07/23 15:28:51 adam Exp $
+$NetBSD: CHANGES,v 1.10674 2005/07/23 18:42:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3312,3 +3312,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libntlm to 0.3.7 [wiz 2005-07-22]
 	Updated security/libtasn1 to 0.2.14 [wiz 2005-07-22]
 	Updated www/album to 3.07nb2 [hira 2005-07-23]
+	Updated textproc/docbook-xsl to 1.69.0 [wiz 2005-07-23]
