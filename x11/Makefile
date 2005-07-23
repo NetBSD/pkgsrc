@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.398 2005/07/22 21:22:45 adam Exp $
+# $NetBSD: Makefile,v 1.399 2005/07/23 21:34:55 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -41,10 +41,8 @@ SUBDIR+=	fspanel
 SUBDIR+=	fvwm-wharf
 SUBDIR+=	gdkxft
 SUBDIR+=	gdm
-SUBDIR+=	gdm1
 SUBDIR+=	ggiterm
 SUBDIR+=	gnome-desktop
-SUBDIR+=	gnome-gkrellm
 SUBDIR+=	gnome-libs
 SUBDIR+=	gnome-mag
 SUBDIR+=	gnome-panel

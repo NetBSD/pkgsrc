@@ -1,4 +1,0 @@
-This plugin will interface GKrellM to Gnome and give you session management.
-For Gnome compliant window managers, you can set the options: ontop, sticky,
-skip winlist, and skip focus. For the Gnome panel, you can set the option:
-don't put on the tasklist.

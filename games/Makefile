@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2005/07/20 21:25:16 minskim Exp $
+# $NetBSD: Makefile,v 1.252 2005/07/23 21:34:55 wiz Exp $
 #
 
 COMMENT=	Games
@@ -31,7 +31,6 @@ SUBDIR+=	cmatrix
 SUBDIR+=	colchess
 SUBDIR+=	colchess-book-colchess
 SUBDIR+=	colchess-book-large
-SUBDIR+=	copter-commander
 SUBDIR+=	corewars
 SUBDIR+=	crack-attack
 SUBDIR+=	craft
@@ -97,7 +96,6 @@ SUBDIR+=	golddig
 SUBDIR+=	grhino
 SUBDIR+=	gtetrinet
 SUBDIR+=	gtkballs
-SUBDIR+=	gtkgo
 SUBDIR+=	gtkmagnetic
 SUBDIR+=	gturing
 SUBDIR+=	heretic2-demo
