@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2005/07/20 19:43:18 tv Exp $
+# $NetBSD: Makefile,v 1.270 2005/07/23 21:34:55 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -9,7 +9,6 @@ SUBDIR+=	YoSucker
 SUBDIR+=	anomy-sanitizer
 SUBDIR+=	archivemail
 SUBDIR+=	autorespond
-SUBDIR+=	balsa
 SUBDIR+=	balsa2
 SUBDIR+=	bbmail
 SUBDIR+=	bmf
@@ -40,7 +39,6 @@ SUBDIR+=	elmo
 SUBDIR+=	etach
 SUBDIR+=	evolution
 SUBDIR+=	evolution-data-server
-SUBDIR+=	evolution12
 SUBDIR+=	evolution14
 SUBDIR+=	exim
 SUBDIR+=	exim-html
@@ -185,7 +183,6 @@ SUBDIR+=	spamass-milter
 SUBDIR+=	spamassassin
 SUBDIR+=	spamd
 SUBDIR+=	spamprobe
-SUBDIR+=	spruce
 SUBDIR+=	squirrelmail
 SUBDIR+=	squirrelmail-locales
 SUBDIR+=	sqwebmail
