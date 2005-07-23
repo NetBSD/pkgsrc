@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10674 2005/07/23 18:42:00 wiz Exp $
+$NetBSD: CHANGES,v 1.10675 2005/07/23 18:48:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3313,3 +3313,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/libtasn1 to 0.2.14 [wiz 2005-07-22]
 	Updated www/album to 3.07nb2 [hira 2005-07-23]
 	Updated textproc/docbook-xsl to 1.69.0 [wiz 2005-07-23]
+	Updated net/mldonkey to 2.6.0 [wiz 2005-07-23]
+	Updated net/mldonkey-gui to 2.6.0 [wiz 2005-07-23]
