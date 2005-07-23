@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3746 2005/07/23 18:48:40 wiz Exp $
+$NetBSD: TODO,v 1.3747 2005/07/23 21:37:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -354,7 +354,6 @@ Suggested package updates
 	o awstats-6.4
 	o baci-20040415
 	o bacula-1.36.1
-	o balsa-1.4.4
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
@@ -495,7 +494,6 @@ Suggested package updates
 	o gcpio-2.6
 	o gcube-0.4
 	o gdb6-6.3.0
-	o gdm1-2.2.5.5
 	o gettext-0.14.5
 	o gfract-0.3.2
 	o ggiterm-0.7.1
@@ -542,7 +540,6 @@ Suggested package updates
 	o hashcash-1.16
 	o haskell-mode-1.45
 	o hercules-3.02
-	o hitchhiker-0.7
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hot-babe-0.2.2
 	o html2ps-1.0b4
@@ -1017,7 +1014,6 @@ Suggested package updates
 	o source-highlight-2.1
 	o spamassassin-3.0.4 [pkg/30452]
 	o spamprobe-1.2a
-	o spruce-0.6.5
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
 	o squid-2.5.10
@@ -1175,7 +1171,6 @@ Suggested package updates
 	o xtux-20030306
 	o xzip-182
 	o yafc-1.1
-	o yamt-0.6
 	o yasm-0.4.0 [pkg/30445]
 	o yencode-0.46
 	o ysm-2.9.6
@@ -1264,12 +1259,12 @@ Suggested cleanups in pkgsrc
 	  databases/myodbc, databases/tcl-gdbm, devel/eel, devel/glib,
 	  devel/libdockapp, devel/libproplist, devel/libsmi,
 	  devel/libstroke, devel/xdelta, editors/cooledit,
-	  finance/emma, finance/gnofin, games/xpuyopuyo, graphics/GUIlib,
+	  games/xpuyopuyo, graphics/GUIlib,
 	  graphics/SDL_image, graphics/aqsis, graphics/fnlib,
 	  graphics/freetype-lib, graphics/gphoto, graphics/librsvg,
 	  graphics/libungif, graphics/plotutils-nox11, graphics/plotutils,
 	  graphics/py-gimp, graphics/scigraphica, lang/cim, lang/gb,
-	  lang/japhar, lang/kaffe, lang/vslisp, mail/evolution12,
+	  lang/japhar, lang/kaffe, lang/vslisp,
 	  net/ja-samba, net/samba2, print/LPRng-core, print/ja-vflib-lib,
 	  print/ja-vfxdvik, security/mirrordir, sysutils/amanda-common,
 	  sysutils/medusa, textproc/chasen-base, textproc/jade,
