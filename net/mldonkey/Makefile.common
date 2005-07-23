@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.6 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/07/23 18:47:43 wiz Exp $
 #
 
-DISTNAME=	mldonkey-2.5.28
+DISTNAME=	mldonkey-2.6.0
 CATEGORIES=	net
-MASTER_SITES=	http://www.opendarwin.org/~mww/files/
-EXTRACT_SUFX=        .tar.bz2
+MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/mldonkey/
 COMMENT=	Free peer-to-peer client with eDonkey support and more
 
-DISTINFO_FILE=		${.CURDIR}/../../net/mldonkey/distinfo
-PATCHDIR=		${.CURDIR}/../../net/mldonkey/patches
+DISTINFO_FILE=	${.CURDIR}/../../net/mldonkey/distinfo
+PATCHDIR=	${.CURDIR}/../../net/mldonkey/patches
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl
