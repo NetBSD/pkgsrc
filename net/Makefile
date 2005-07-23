@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2005/07/22 22:29:06 adam Exp $
+# $NetBSD: Makefile,v 1.566 2005/07/23 21:34:55 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -119,7 +119,6 @@ SUBDIR+=	gnugk
 SUBDIR+=	gopher
 SUBDIR+=	gtk-gnutella
 SUBDIR+=	gtk_wicontrol
-SUBDIR+=	gtksamba
 SUBDIR+=	hesiod
 SUBDIR+=	hf6to4
 SUBDIR+=	hlfl
