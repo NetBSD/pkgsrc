@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.2 2005/05/16 17:54:51 jlam Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.3 2005/07/23 04:48:12 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -42,7 +42,7 @@ while ! queue_is_empty cmdbuf; do
 	case $arg in
 	##############################################################
 	# AIX xlC doesn't support -Wl,-rpath,* but accumulate them
-	# into a path collection we can later append to comand line
+	# into a path collection we can later append to command line
 	# using -blibpath.
 	##############################################################
 	-R*|-Wl,-R*|-Wl,-rpath,*|-Wl,-rpath-link,*|-Wl,--rpath,*)
