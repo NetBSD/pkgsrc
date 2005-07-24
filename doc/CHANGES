@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10680 2005/07/24 07:00:59 taya Exp $
+$NetBSD: CHANGES,v 1.10681 2005/07/24 07:44:58 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3338,3 +3338,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/thunderbird-gtk1 to 1.0.6 [taya 2005-07-24]
 	Updated www/mozilla to 1.7.10 [taya 2005-07-24]
 	Updated www/mozilla-gtk2 to 1.7.10 [taya 2005-07-24]
+	Updated archivers/archangel to 20050724 [agc 2005-07-24]
