@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3750 2005/07/24 08:45:47 wiz Exp $
+$NetBSD: TODO,v 1.3751 2005/07/24 08:54:15 recht Exp $
 
 Suggested new packages
 ======================
@@ -292,7 +292,6 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
-	o ArX2-2.2.3
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
