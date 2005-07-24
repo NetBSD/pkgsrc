@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10682 2005/07/24 08:54:15 recht Exp $
+$NetBSD: CHANGES,v 1.10683 2005/07/24 11:04:44 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3222,6 +3222,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/archangel to 20050716 [agc 2005-07-16]
 	Updated misc/koffice to 1.4.0b [markd 2005-07-17]
 	Updated chat/irssi to 0.8.9nb5 [dillo 2005-07-17]
+	Updated textproc/p5-XML-Handler-YAWriter to 0.23nb2 [heinz 2005-07-17]
 	Updated graphics/ruby-RMagick to 1.9.0 [taca 2005-07-17]
 	Updated emulators/spim to 7.1 [kristerw 2005-07-17]
 	Updated mail/bogofilter to 0.92.8nb3 [seb 2005-07-18]
