@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2005/07/13 18:01:40 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/07/24 17:19:20 kristerw Exp $
 
 DISTNAME=	eperl-2.2.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang perl5 textproc
 MASTER_SITES=	http://www.engelschall.com/sw/eperl/distrib/
 
@@ -12,6 +12,7 @@ COMMENT=	Interpreter/preprocessor for Perl embedded in text documents
 PERL5_PACKLIST=	auto/Parse/ePerl/.packlist
 
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-perl=${PERL5}
 PERL5_REQD+=		5.8.0
 PERL5_CONFIGURE=	NO
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/mod/Parse
