@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3751 2005/07/24 08:54:15 recht Exp $
+$NetBSD: TODO,v 1.3752 2005/07/24 10:30:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -433,7 +433,7 @@ Suggested package updates
 	o doxygen-1.4.4
 	o dpkg-1.13.3
 	o drivel-2.0.2
-	o dvdrip-0.52.5
+	o dvdrip-0.52.6
 	o dvipdfmx-20050201
 	o dvipng-1.6 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.4.0
@@ -601,7 +601,7 @@ Suggested package updates
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafpad-0.7.9
-	o libcddb-1.1.0
+	o libcddb-1.2.0
 	o libcomprex-0.3.3
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
@@ -795,7 +795,6 @@ Suggested package updates
 	o p5-OOTools-1.79
 	o p5-PV-1.5
 	o p5-PerlIO-via-symlink-0.03
-	o p5-PerlMagick-6.2.1.0
 	o p5-Pod-POM-0.15
 	o p5-Regexp-Common-2.120
 	o p5-SQL-Abstract-1.18
