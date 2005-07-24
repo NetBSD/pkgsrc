@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.35 2005/07/22 16:42:50 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.36 2005/07/24 22:12:30 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -97,3 +97,5 @@ Pullup ticket 585 - requested by grant beattie
 nitfixes for bind9
 Pullup ticket 594 - requested by grant beattie
 kill some hardcoded instances of /sbin/nologin
+Pullup ticket 623 - requested by Thorsten Frueauf
+security fix for fetchmail
