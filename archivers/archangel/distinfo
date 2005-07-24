@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/07/20 21:35:44 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/07/24 07:44:07 agc Exp $
 
-SHA1 (archangel-20050720.tar.gz) = 0e8de05b80dac8a9bd8e5f8534c6197a37df296b
-RMD160 (archangel-20050720.tar.gz) = 2b610fb77e0384fe0417821c9c5002805dadbe2b
-Size (archangel-20050720.tar.gz) = 673013 bytes
+SHA1 (archangel-20050724.tar.gz) = 9f29c44ed93abec60825569289edc105797bfd07
+RMD160 (archangel-20050724.tar.gz) = 0bf0fb7a81fc6043a41f7caf4de3ad98fc4be3d7
+Size (archangel-20050724.tar.gz) = 636271 bytes
