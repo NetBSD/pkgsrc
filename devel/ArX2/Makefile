@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/24 08:47:42 recht Exp $
 #
 
-DISTNAME=	ArX-2.2.2
-PKGREVISION=	1
+DISTNAME=	ArX-2.2.3
 CATEGORIES=	devel
-MASTER_SITES=	http://superbeast.ucsd.edu/~landry/ArX/
+MASTER_SITES=	http://savannah.nongnu.org/download/arx/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/arx/
