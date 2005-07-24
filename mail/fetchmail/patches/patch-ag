@@ -1,0 +1,184 @@
+$NetBSD: patch-ag,v 1.2.14.1 2005/07/24 22:12:21 snj Exp $
+
+This patch originates from
+http://download.berlios.de/fetchmail/fetchmail-patch-6.2.5.2.gz
+
+and upgrades fetchmail 6.2.5 to 6.2.5.2, which among other stuff fixes
+CAN-2005-2355: buffer overflow in "fetchmail".
+
+*** Makefile.in	Wed Oct 15 22:38:18 2003
+--- Makefile.in	Fri Jul 22 01:55:44 2005
+***************
+*** 4,10 ****
+  # So just uncomment all the lines marked QNX.
+  
+  PACKAGE = fetchmail
+! VERSION = 6.2.5
+  
+  # Ultrix 2.2 make doesn't expand the value of VPATH.
+  srcdir = @srcdir@
+--- 4,10 ----
+  # So just uncomment all the lines marked QNX.
+  
+  PACKAGE = fetchmail
+! VERSION = 6.2.5.2
+  
+  # Ultrix 2.2 make doesn't expand the value of VPATH.
+  srcdir = @srcdir@
+*** NEWS	Wed Oct 15 22:40:17 2003
+--- NEWS	Fri Jul 22 01:52:16 2005
+***************
+*** 2,7 ****
+--- 2,20 ----
+  
+  (The `lines' figures total .c, .h, .l, and .y files under version control.)
+  
++ fetchmail-6.2.5.2 (Fri Jul 22 01:52 GMT 2005):
++ 
++ * NOTE: Due to a Makefile.in bug, you may need to use GNU make.
++ * SECURITY FIX: truncate UIDL replies, lest malicious or compromised
++   POP3 servers overflow fetchmail's stack. Debian bug #212762.
++   This is a remote root exploit. CVE Name: CAN-2005-2335.
++   Thanks: Miloslav Trmac for pointing out the fix in 6.2.5.1 was buggy.
++   Thanks: Ludwig Nussel for a much simpler fix.
++ * Critical fix: omit blank between MAIL FROM: and <user@example.org>,
++   as this causes mail loss with some listeners.
++ * Fix: POP2 driver wouldn't properly check authentication failure.
++ * Sunil Shetye's fix to force fetchsizelimit to 1 for APOP and RPOP.
++ 
+  fetchmail-6.2.5 (Wed Oct 15 18:39:22 EDT 2003), 23079 lines:
+  
+  * Updated Spanish, Turkish, and German translation files.
+*** driver.c	Wed Oct 15 19:22:31 2003
+--- driver.c	Fri Jul 22 01:49:49 2005
+***************
+*** 429,436 ****
+  	/* for POP3, we can get the size of one mail only! Unfortunately, this
+  	 * protocol specific test cannot be done elsewhere as the protocol
+  	 * could be "auto". */
+! 	if (ctl->server.protocol == P_POP3)
+  	    fetchsizelimit = 1;
+  
+  	/* Time to allocate memory to store the sizes */
+  	xalloca(msgsizes, int *, sizeof(int) * fetchsizelimit);
+--- 429,439 ----
+  	/* for POP3, we can get the size of one mail only! Unfortunately, this
+  	 * protocol specific test cannot be done elsewhere as the protocol
+  	 * could be "auto". */
+! 	switch (ctl->server.protocol)
+! 	{
+! 	    case P_POP3: case P_APOP: case P_RPOP:
+  	    fetchsizelimit = 1;
++ 	}
+  
+  	/* Time to allocate memory to store the sizes */
+  	xalloca(msgsizes, int *, sizeof(int) * fetchsizelimit);
+*** pop2.c	Wed Oct 15 19:17:43 2003
+--- pop2.c	Fri Jul 22 01:47:28 2005
+***************
+*** 61,66 ****
+--- 61,67 ----
+  		  "HELO %s %s",
+  		  ctl->remotename, ctl->password);
+      shroud[0] = '\0';
++     return status;
+  }
+  
+  static int pop2_getrange(int sock, struct query *ctl, const char *folder, 
+*** pop3.c	Wed Oct 15 19:22:31 2003
+--- pop3.c	Fri Jul 22 01:44:00 2005
+***************
+*** 613,618 ****
+--- 613,620 ----
+      return 0;
+  }
+  
++ #define str(s) #s
++ #define UIDLFMT(n) "%d %" str(n) "s"
+  static int pop3_getuidl( int sock, int num , char *id)
+  {
+      int ok;
+***************
+*** 620,626 ****
+      gen_send(sock, "UIDL %d", num);
+      if ((ok = pop3_ok(sock, buf)) != 0)
+  	return(ok);
+!     if (sscanf(buf, "%d %s", &num, id) != 2)
+  	return(PS_PROTOCOL);
+      return(PS_SUCCESS);
+  }
+--- 622,628 ----
+      gen_send(sock, "UIDL %d", num);
+      if ((ok = pop3_ok(sock, buf)) != 0)
+  	return(ok);
+!     if (sscanf(buf, UIDLFMT(IDLEN), &num, id) != 2)
+  	return(PS_PROTOCOL);
+      return(PS_SUCCESS);
+  }
+***************
+*** 862,868 ****
+  		{
+   		    if (DOTLINE(buf))
+   			break;
+!  		    else if (sscanf(buf, "%d %s", &num, id) == 2)
+  		    {
+   			struct idlist	*old, *new;
+  
+--- 864,870 ----
+  		{
+   		    if (DOTLINE(buf))
+   			break;
+!  		    else if (sscanf(buf, UIDLFMT(IDLEN), &num, id) == 2)
+  		    {
+   			struct idlist	*old, *new;
+  
+*** sink.c	Fri Oct 10 22:06:36 2003
+--- sink.c	Fri Jul 22 01:42:23 2005
+***************
+*** 724,730 ****
+  
+      /* see the ap computation under the SMTP branch */
+      fprintf(sinkfp, 
+! 	    "MAIL FROM: %s", (msg->return_path[0]) ? msg->return_path : user);
+  
+      if (ctl->pass8bits || (ctl->mimemsg & MSG_IS_8BIT))
+  	fputs(" BODY=8BITMIME", sinkfp);
+--- 724,730 ----
+  
+      /* see the ap computation under the SMTP branch */
+      fprintf(sinkfp, 
+! 	    "MAIL FROM:%s", (msg->return_path[0]) ? msg->return_path : user);
+  
+      if (ctl->pass8bits || (ctl->mimemsg & MSG_IS_8BIT))
+  	fputs(" BODY=8BITMIME", sinkfp);
+*** smtp.c	Wed Aug  6 03:30:18 2003
+--- smtp.c	Fri Jul 22 01:42:23 2005
+***************
+*** 232,244 ****
+      int ok;
+      char buf[MSGBUFSIZE];
+  
+!     if (strchr(from, '<'))
+  #ifdef HAVE_SNPRINTF
+  	snprintf(buf, sizeof(buf),
+  #else
+  	sprintf(buf,
+  #endif /* HAVE_SNPRINTF */
+! 		"MAIL FROM: %s", from);
+      else
+  #ifdef HAVE_SNPRINTF
+      snprintf(buf, sizeof(buf),
+--- 232,244 ----
+      int ok;
+      char buf[MSGBUFSIZE];
+  
+!     if (from[0]=='<')
+  #ifdef HAVE_SNPRINTF
+  	snprintf(buf, sizeof(buf),
+  #else
+  	sprintf(buf,
+  #endif /* HAVE_SNPRINTF */
+! 		"MAIL FROM:%s", from);
+      else
+  #ifdef HAVE_SNPRINTF
+      snprintf(buf, sizeof(buf),
