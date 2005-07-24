@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10678 2005/07/24 00:08:45 dillo Exp $
+$NetBSD: CHANGES,v 1.10679 2005/07/24 03:06:58 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3334,3 +3334,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed x11/gnome-gkrellm [wiz 2005-07-23]
 	Removed devel/bonobo-conf [wiz 2005-07-23]
 	Updated graphics/libexif to 0.6.12nb2 [dillo 2005-07-24]
+	Updated mail/thunderbird to 1.0.6 [taya 2005-07-24]
+	Updated mail/thunderbird-gtk1 to 1.0.6 [taya 2005-07-24]
