@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10683 2005/07/24 11:04:44 heinz Exp $
+$NetBSD: CHANGES,v 1.10684 2005/07/24 14:07:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3341,3 +3341,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/mozilla-gtk2 to 1.7.10 [taya 2005-07-24]
 	Updated archivers/archangel to 20050724 [agc 2005-07-24]
 	Updated devel/ArX2 to 2.2.3 [recht 2005-07-24]
+	Added emulators/sms_sdl version 0.9.4a.7.1 [wiz 2005-07-24]
