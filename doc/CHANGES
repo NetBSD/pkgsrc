@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10681 2005/07/24 07:44:58 agc Exp $
+$NetBSD: CHANGES,v 1.10682 2005/07/24 08:54:15 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3339,3 +3339,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/mozilla to 1.7.10 [taya 2005-07-24]
 	Updated www/mozilla-gtk2 to 1.7.10 [taya 2005-07-24]
 	Updated archivers/archangel to 20050724 [agc 2005-07-24]
+	Updated devel/ArX2 to 2.2.3 [recht 2005-07-24]
