@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2004/01/10 14:23:52 recht Exp $
+$NetBSD: patch-ac,v 1.7 2005/07/24 21:14:51 wiz Exp $
 
 --- src/makelib.env.in.orig	2003-09-21 13:31:38.000000000 +0200
-+++ src/makelib.env.in	2003-09-25 00:31:25.000000000 +0200
-@@ -33,6 +33,7 @@
++++ src/makelib.env.in
+@@ -33,6 +33,7 @@ libdir = @libdir@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.6 2004/01/10 14:23:52 recht Exp $
  
  TARGETLIB_STATIC = $(TARGET_LIBNAME).a
  TARGETLIB_SHARED = $(TARGET_LIBNAME).so.$(LIBVERSION_CURRENT).$(LIBVERSION_REVISION).$(LIBVERSION_AGE)
-@@ -47,13 +48,13 @@
+@@ -47,13 +48,13 @@ LDFLAGS_VERSIONING = @LDFLAGS_VERSIONING
  .SUFFIXES: .o .c .cpp .cxx
  
  .c.o:
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.6 2004/01/10 14:23:52 recht Exp $
  
  # the comment at the end of the next line is needed because otherwise autoconf
  # would remove this line completely - it contains a built-in hack to remove
-@@ -62,40 +63,21 @@
+@@ -62,40 +63,21 @@ VPATH = @PATH_IFS@$(top_srcdir)/$(libsrc
  
  include $(top_builddir)/src/make.env
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.6 2004/01/10 14:23:52 recht Exp $
 -
 -install: install_@WX_TARGET_LIBRARY_TYPE@ install_headers
 +	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJECTS:.o=.lo} \
-+	-rpath ${PREFIX}/lib -version-info major:minor
++	-rpath ${PREFIX}/lib -version-info 0:1
  
 -install_so:
 -	$(INSTALL_PROGRAM) $(top_builddir)/lib/$(TARGETLIB_SHARED) $(libdir)/$(TARGETLIB_SHARED)
