@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/24 14:32:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/24 14:33:19 wiz Exp $
 #
 
 DISTNAME=	PyXML-0.8.4
@@ -25,7 +25,7 @@ PYXML_SCRIPTS=	scripts/xmlproc_parse \
 
 post-extract:
 .for s in ${PYXML_SCRIPTS}
-	${MV} ${WRKSRC}/$s ${WRKSRC}/$s${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/${s} ${WRKSRC}/${s}${PYVERSSUFFIX}
 .endfor
 
 PYTHON_PATCH_SCRIPTS=	${PYXML_SCRIPTS:S/$/${PYVERSSUFFIX}/g}
