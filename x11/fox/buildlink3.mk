@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2005/07/25 12:49:56 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2005/07/25 12:50:59 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FOX_BUILDLINK3_MK:=	${FOX_BUILDLINK3_MK}+
@@ -16,6 +16,7 @@ BUILDLINK_PKGSRCDIR.fox?=	../../x11/fox
 BUILDLINK_INCDIRS.fox?=		include/fox-1.4
 .endif	# FOX_BUILDLINK3_MK
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
