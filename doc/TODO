@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3752 2005/07/24 10:30:13 wiz Exp $
+$NetBSD: TODO,v 1.3753 2005/07/25 07:32:33 lukem Exp $
 
 Suggested new packages
 ======================
@@ -954,7 +954,7 @@ Suggested package updates
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rpm-4.1
-	o rsnapshot-1.2.0
+	o rsnapshot-1.2.1 [or rsnapshot-1.1.7]
 	o rt-3.4.1
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
