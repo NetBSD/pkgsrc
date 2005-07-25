@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2005/07/25 08:01:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2005/07/25 10:23:09 tron Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -156,7 +156,6 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/fuzzy-magick.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/georeviews.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/granite.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/label.gif
-share/doc/ImageMagick-${IM_MAJOR_VER}/images/logo.eps
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/logo.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/montage.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/reconstruct.jpg
@@ -171,7 +170,6 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/smile.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/sponsor.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/sprite.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/travelsur.gif
-share/doc/ImageMagick-${IM_MAJOR_VER}/images/wand.ico
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/white-highlight.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/index.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/Blob.html
