@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:36 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/07/25 10:00:12 wiz Exp $
 #
 
 DISTNAME=	Net-RawIP-0.2
@@ -13,5 +13,6 @@ COMMENT=	Perl extension to manipulate raw ip packets with interface to libpcap
 
 PERL5_PACKLIST=		auto/Net/RawIP/.packlist
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
