@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.61 2005/07/17 12:29:38 markd Exp $
+# $NetBSD: Makefile,v 1.62 2005/07/25 13:05:51 markd Exp $
 
-DISTNAME=	koffice-1.4.0a
-PKGNAME=	koffice-1.4.0b
+DISTNAME=	koffice-1.4.1
 CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.4/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.4/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.4/src/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.4.1/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.4.1/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.4.1/src/
 EXTRACT_SUFX=	.tar.bz2
-
-PATCH_SITES=	http://www.koffice.org/bugfixes/
-PATCHFILES=	koffice_1.4.0_patchset_1b.diff.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
@@ -17,6 +13,8 @@ COMMENT=	KDE Office Suite
 
 CONFLICTS+=	koffice3-[0-9]*
 
+EXTRACT_USING=		gtar # to unpack krita/plugins/convolutionfilters properly
+			     # on NetBSD 1.6
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -43,14 +41,6 @@ REPLACE_PERL+=		kpresenter/kprconverter.pl
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "options.mk"
-
-# fix odd broken untaring on NetBSD 1.6
-post-extract:
-	cd ${WRKSRC}/krita/plugins/convolutionfilters; \
-	if [ -f kis_custom_convolution_filter_configuration_widget. ]; then \
-		${MV} kis_custom_convolution_filter_configuration_widget. \
-		kis_custom_convolution_filter_configuration_widget.h; \
-	fi
 
 post-install:
 	@# The global desktop template files need to be user-writeable, or
