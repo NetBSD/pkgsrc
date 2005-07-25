@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.399 2005/07/23 21:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.400 2005/07/25 14:15:08 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -193,7 +193,6 @@ SUBDIR+=	qwt
 SUBDIR+=	randrext
 SUBDIR+=	render
 SUBDIR+=	rep-gtk
-SUBDIR+=	ruby-fox
 SUBDIR+=	ruby-gtk
 SUBDIR+=	ruby-tcltklib
 SUBDIR+=	ruby-tk
