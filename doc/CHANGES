@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10687 2005/07/25 10:36:58 tron Exp $
+$NetBSD: CHANGES,v 1.10688 2005/07/25 10:54:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3346,3 +3346,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/eperl to 2.2.14nb2 [kristerw 2005-07-24]
 	Updated graphics/ImageMagick to 6.2.3.5 [adam 2005-07-25]
 	Updated graphics/ImageMagick to 6.2.3.5nb1 [tron 2005-07-25]
+	Updated x11/fox to 1.4.16 [adam 2005-07-25]
