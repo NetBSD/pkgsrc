@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/25 10:53:43 adam Exp $
+# $NetBSD: Makefile,v 1.26 2005/07/25 12:49:56 adam Exp $
 
 DISTNAME=	fox-1.4.16
 CATEGORIES=	x11
@@ -15,6 +15,13 @@ CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-shm
 CONFIGURE_ARGS+=	--with-x
+
+.include "../../mk/bsd.prefs.mk"
+
+# NetBSD < 3.0 does not have getpwnam_r() getpwuin_r()
+.if (${OPSYS} == "NetBSD") && (${OS_VERSION:R} < 3)
+CONFIGURE_ARGS+=	--disable-threadsafe
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
