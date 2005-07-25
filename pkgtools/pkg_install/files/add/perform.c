@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.32 2005/07/18 09:14:04 hubertf Exp $	*/
+/*	$NetBSD: perform.c,v 1.33 2005/07/25 13:13:00 hubertf Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.32 2005/07/18 09:14:04 hubertf Exp $");
+__RCSID("$NetBSD: perform.c,v 1.33 2005/07/25 13:13:00 hubertf Exp $");
 #endif
 #endif
 
@@ -40,6 +40,9 @@ __RCSID("$NetBSD: perform.c,v 1.32 2005/07/18 09:14:04 hubertf Exp $");
 #endif
 #if HAVE_ERR_H
 #include <err.h>
+#endif
+#if HAVE_ERRNO_H
+#include <errno.h>
 #endif
 #include "lib.h"
 #include "add.h"
@@ -1013,8 +1016,11 @@ void
 cleanup(int signo)
 {
 	static int alreadyCleaning;
-	void    (*oldint) (int);
-	void    (*oldhup) (int);
+	void   (*oldint) (int);
+	void   (*oldhup) (int);
+	int    saved_errno;
+
+	saved_errno = errno;
 	oldint = signal(SIGINT, SIG_IGN);
 	oldhup = signal(SIGHUP, SIG_IGN);
 
@@ -1030,6 +1036,7 @@ cleanup(int signo)
 	}
 	signal(SIGINT, oldint);
 	signal(SIGHUP, oldhup);
+	errno = saved_errno;
 }
 
 int
