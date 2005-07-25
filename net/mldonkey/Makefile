@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/02/04 22:33:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.28 2005/07/25 01:39:10 kristerw Exp $
 #
 
 .include "Makefile.common"
@@ -24,4 +24,5 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/mldonkey
 	${INSTALL_PROGRAM} ${WRKSRC}/mlnet ${PREFIX}/libexec/mldonkey
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
