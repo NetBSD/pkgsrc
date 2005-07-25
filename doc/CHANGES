@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10695 2005/07/25 20:28:39 wiz Exp $
+$NetBSD: CHANGES,v 1.10696 2005/07/25 20:52:07 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3355,3 +3355,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed x11/ruby-fox [wiz 2005-07-25]
 	Updated www/lynx to 2.8.5.2nb2 [tron 2005-07-25]
 	Added x11/wxGTK-contrib version 2.4.2 [wiz 2005-07-25]
+	Updated pkgtools/x11-links to 0.26 [reed 2005-07-25]
