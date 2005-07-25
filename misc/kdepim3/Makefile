@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/06/23 14:06:17 shannonjr Exp $
+# $NetBSD: Makefile,v 1.48 2005/07/25 13:21:31 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -50,5 +50,4 @@ PLIST_SUBST+=	HAVE_SASL="@comment "
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../devel/librfuncs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
