@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:36 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/25 12:12:53 wiz Exp $
 #
 
-DISTNAME=		physfs-1.0.0
-PKGREVISION=		2
+DISTNAME=		physfs-1.0.1
 CATEGORIES=		devel
-MASTER_SITES=		http://www.icculus.org/physfs/downloads/
+MASTER_SITES=		http://offload1.icculus.org/physfs/downloads/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.icculus.org/physfs/
