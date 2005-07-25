@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.120 2005/07/19 04:18:51 jlam Exp $
+# $NetBSD: replace.mk,v 1.121 2005/07/25 21:51:19 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1152,8 +1152,8 @@ FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
 ######################################################################
 
 .for _t_ in ${_USE_TOOLS}
-.  if !defined(TOOLS_IGNORE.${_t_})
-.    if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+.  if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS]) && \
+      !defined(TOOLS_IGNORE.${_t_})
 #####
 ##### Add the dependencies for each pkgsrc-supplied tool.
 #####
@@ -1164,7 +1164,7 @@ ${_TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
 .          endif
 .        endfor
 .      endif
-.    elif defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
+.  elif defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 #####
 ##### For each system-supplied tool, break the tool down into a path
 ##### and arguments so that either a symlink or a wrapper will be
@@ -1175,7 +1175,6 @@ TOOLS_PATH.${_t_}?=	\
 	${TOOLS_PLATFORM.${_t_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 TOOLS_ARGS.${_t_}?=	\
 	${TOOLS_PLATFORM.${_t_}:C/^/_asdf_/1:N_asdf_*}
-.    endif
 .  endif
 ###
 ### For each tool, TOOLS_CMDLINE.<tool> is the full command (path and
