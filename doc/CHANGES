@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10685 2005/07/24 18:09:48 kristerw Exp $
+$NetBSD: CHANGES,v 1.10686 2005/07/25 08:03:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3344,3 +3344,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added emulators/sms_sdl version 0.9.4a.7.1 [wiz 2005-07-24]
 	Updated sysutils/amanda-server to 2.4.4p4nb1 [kristerw 2005-07-24]
 	Updated textproc/eperl to 2.2.14nb2 [kristerw 2005-07-24]
+	Updated graphics/ImageMagick to 6.2.3.5 [adam 2005-07-25]
