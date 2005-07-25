@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.9 2005/02/23 17:36:10 wiz Exp $
+$NetBSD: distinfo,v 1.10 2005/07/25 10:53:43 adam Exp $
 
-SHA1 (fox-1.0.43.tar.gz) = 1c56abb70c5d731226754808efa97bdad97a761d
-RMD160 (fox-1.0.43.tar.gz) = 8f72122c50d8595a66d189c0fb90b77ee90ee1fd
-Size (fox-1.0.43.tar.gz) = 2132787 bytes
-SHA1 (patch-aa) = 0d56368c0d106d944956bfa1a33672f141cae69b
-SHA1 (patch-ab) = 705946d84fd48666479abbd4c59c4e75ca914436
-SHA1 (patch-ac) = c338e3747b5cb717794be526837ffa70330f9069
-SHA1 (patch-ad) = 33f032fcc13c32ab5e31a3224278626b5083838d
-SHA1 (patch-ae) = df65abd799df39f109e4314f65d9c6d82aa57e31
+SHA1 (fox-1.4.16.tar.gz) = 1e1c81eabded2247e4155f2344c69c50362b7cc7
+RMD160 (fox-1.4.16.tar.gz) = 425ad42c56819eea7dd03d5806848566afb7cc2c
+Size (fox-1.4.16.tar.gz) = 3922782 bytes
+SHA1 (patch-aa) = b12d49a942ae7c2a16e1f980cdc3c1bfe00936e8
