@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2005/07/21 16:29:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.61 2005/07/25 15:47:20 adam Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -164,6 +164,7 @@ post-extract:
 pre-configure:
 	cd ${WRKSRC} && autoconf
 	cd ${WRKSRC}/nsprpub && autoconf
+	cd ${WRKSRC}/directory/c-sdk && autoconf
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> \
