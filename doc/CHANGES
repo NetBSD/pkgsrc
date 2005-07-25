@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10694 2005/07/25 15:34:01 tron Exp $
+$NetBSD: CHANGES,v 1.10695 2005/07/25 20:28:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3354,3 +3354,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/kyopon to 0.2 [itohy 2005-07-25]
 	Removed x11/ruby-fox [wiz 2005-07-25]
 	Updated www/lynx to 2.8.5.2nb2 [tron 2005-07-25]
+	Added x11/wxGTK-contrib version 2.4.2 [wiz 2005-07-25]
