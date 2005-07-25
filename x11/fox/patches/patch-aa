@@ -1,13 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2003/08/29 10:16:12 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2005/07/25 10:53:43 adam Exp $
 
---- doc/art/Makefile.in.orig	2003-08-29 10:35:39.000000000 +0200
-+++ doc/art/Makefile.in	2003-08-29 10:35:53.000000000 +0200
-@@ -87,7 +87,7 @@
- VERSION = @VERSION@
- X_BASE_LIBS = @X_BASE_LIBS@
+--- configure.orig	2005-06-12 01:29:24.000000000 +0000
++++ configure
+@@ -1845,7 +1845,6 @@ LT_AGE=`expr $FOX_INTERFACE_VERSION - $F
  
--artdir = $(prefix)/@PACKAGE@/html/art
-+artdir = $(prefix)/share/doc/html/@PACKAGE@/art
  
- ART_FILES =  	bigpenguin.png 	foxlogo.png 	foxstart.png 	freespeach.gif 	ill.gif 	ilr.gif 	innernerd.gif 	iul.gif 	iur.gif 	nerd_inside.gif 	oll.gif 	olr.gif 	opengl_logo.png 	oul.gif 	oul_grey.gif 	our.gif 	progress.png 	scribble.png 	sgitextedit.png 	slingerzbutton1.gif 	win32-libraries.png 	win32-linkoutput.png 	win32-postbuild.png 	win32-preprocessor.png 	win32-project.png 	win32-tooloptions.png 	wintextedit.png
  
+-CXXFLAGS=""
+ 
+ echo "$as_me:$LINENO: checking whether ${MAKE-make} sets \$(MAKE)" >&5
+ echo $ECHO_N "checking whether ${MAKE-make} sets \$(MAKE)... $ECHO_C" >&6
+@@ -24925,7 +24924,7 @@ fi;
+ echo "$as_me:$LINENO: result: $enable_release" >&5
+ echo "${ECHO_T}$enable_release" >&6
+ if test "x$enable_release" = "xyes" ; then
+-CXXFLAGS="${CXXFLAGS} -O2 -DNDEBUG"
++CXXFLAGS="${CXXFLAGS} -DNDEBUG"
+ if test "${GXX}" = "yes" ; then
+ CXXFLAGS="${CXXFLAGS} -Wuninitialized -ffast-math -fstrict-aliasing -finline-functions -fomit-frame-pointer -fexpensive-optimizations"
+ fi
