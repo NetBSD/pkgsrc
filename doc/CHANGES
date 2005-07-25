@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10691 2005/07/25 13:08:33 markd Exp $
+$NetBSD: CHANGES,v 1.10692 2005/07/25 13:46:25 itohy Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3351,3 +3351,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/physfs to 1.0.1 [wiz 2005-07-25]
 	Updated multimedia/kmplayer to 0.9.0a [markd 2005-07-25]
 	Updated misc/koffice to 1.4.1 [markd 2005-07-25]
+	Updated comms/kyopon to 0.2 [itohy 2005-07-25]
