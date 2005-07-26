@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.4 2005/07/26 13:43:13 gdt Exp $
+
+--- btdownloadheadless.py.orig	2005-05-24 02:06:11.000000000 -0400
++++ btdownloadheadless.py
+@@ -151,6 +151,7 @@ class HeadlessDisplayer(object):
+         print 'share rating:  ', self.shareRating
+         print 'seed status:   ', self.seedStatus
+         print 'peer status:   ', self.peerStatus
++	sys.stdout.flush()
+ 
+     def print_spew(self, spew):
+         s = StringIO()
