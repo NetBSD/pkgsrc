@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10696 2005/07/25 20:52:07 reed Exp $
+$NetBSD: CHANGES,v 1.10697 2005/07/26 04:13:40 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3356,3 +3356,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/lynx to 2.8.5.2nb2 [tron 2005-07-25]
 	Added x11/wxGTK-contrib version 2.4.2 [wiz 2005-07-25]
 	Updated pkgtools/x11-links to 0.26 [reed 2005-07-25]
+	Added emulators/ucon64 version 2.0.0 [tv 2005-07-25]
