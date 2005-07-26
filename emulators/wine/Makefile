@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.88 2005/07/26 13:24:36 adam Exp $
 
-DISTNAME=	Wine-20050524
+DISTNAME=	Wine-20050725
 PKGNAME=	${DISTNAME:S/W/w/}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
@@ -19,10 +19,10 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386 Darwin*-i386
 
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
-USE_TOOLS+=		bison gmake
 USE_LIBTOOL=		yes
+USE_TOOLS+=		bison gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-curses --disable-trace #--disable-debug
+CONFIGURE_ARGS+=	--without-curses --disable-trace --disable-debug
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
 UNLIMIT_RESOURCES=	datasize
@@ -39,13 +39,6 @@ LIBS+=			${LDFLAGS}
 
 .include "options.mk"
 
-EGDIR=			${PREFIX}/share/wine
-
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/documentation/samples/config ${EGDIR}/config
-	${RMDIR} ${PREFIX}/man/man3w
-
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
@@ -53,7 +46,6 @@ post-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
-
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
