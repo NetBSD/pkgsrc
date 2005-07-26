@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/16 19:10:37 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/26 20:02:23 jlam Exp $
 #
 
 DISTNAME=	disc-cover-1.5.4
@@ -11,7 +11,7 @@ COMMENT=	Generation of CD covers
 
 DEPENDS+=	p5-Audio-CD>=0.05:../../audio/p5-Audio-CD
 
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pod2man
 REPLACE_PERL=		disc-cover
 
 DCTMPL=	${PREFIX}/share/disc-cover/templates
@@ -19,8 +19,7 @@ DCTMPL=	${PREFIX}/share/disc-cover/templates
 INSTALLATION_DIRS=	bin man/man1
 
 do-build:
-	cd ${WRKSRC} && ${BUILDLINK_PREFIX.perl}/bin/pod2man \
-		disc-cover > disc-cover.1
+	cd ${WRKSRC} && ${POD2MAN} disc-cover > disc-cover.1
 	${SED} "s|@DCTMPL@|${DCTMPL}|g" <${WRKSRC}/disc-cover \
 		>${WRKDIR}/disc-cover
 
