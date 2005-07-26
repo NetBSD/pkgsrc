@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.44 2005/07/19 10:30:22 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.45 2005/07/26 09:00:42 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -16,7 +16,7 @@
 #		options specifically for this package.
 #
 #	PKG_OPTIONS_OPTIONAL_GROUPS
-#		This is a list names of groups of mutually exclusive
+#		This is a list of names of groups of mutually exclusive
 #		options.  The options in each group are listed in
 #		PKG_OPTIONS_GROUP.<groupname>.  The most specific
 #		setting of any option from the group takes precedence
@@ -28,6 +28,13 @@
 #		Like PKG_OPTIONS_OPTIONAL_GROUPS, but building
 #		the packages will fail if no option from the group
 #		is selected.
+#
+#	PKG_OPTIONS_NONEMPTY_SETS
+#	       This is a list of names of sets of options.  At
+#	       least one option from each set must be selected.
+#	       The options in each set are listed in
+#	       PKG_OPTIONS_SET.<setname>.  Options from the sets
+#	       will be automatically added to PKG_SUPPORTED_OPTIONS.
 #
 #	PKG_SUGGESTED_OPTIONS (defaults to empty)
 #		This is a list of build options which are enabled by default.
@@ -52,10 +59,10 @@
 #		A list of warnings about deprecated variables or
 #		options used, and what to use instead.
 #
-#       If none of PKG_SUPPORTED_OPTIONS, PKG_OPTIONS_OPTIONAL_GROUPS,
-#	and PKG_OPTIONS_REQUIRED_GROUPS are defined, PKG_OPTIONS is
-#	set to the empty list and the package is otherwise treated as
-#	not using the options framework.
+#	If none of PKG_SUPPORTED_OPTIONS, PKG_OPTIONS_OPTIONAL_GROUPS,
+#	PKG_OPTIONS_REQUIRED_GROUPS, and PKG_OPTIONS_NONEMPTY_SETS are
+#	defined, PKG_OPTIONS is set to the empty list and the package
+#	is otherwise treated as not using the options framework.
 #		
 #
 # Optionally, the user may define the following variables in /etc/mk.conf:
@@ -145,7 +152,7 @@ PKG_OPTIONS=		# empty
 # Check for variable definitions required before including this file.
 .if !defined(PKG_OPTIONS_VAR)
 PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
-.elif !defined(PKG_SUPPORTED_OPTIONS) && !defined(PKG_OPTIONS_OPTIONAL_GROUPS) && !defined(PKG_OPTIONS_REQUIRED_GROUPS)
+.elif !defined(PKG_SUPPORTED_OPTIONS) && !defined(PKG_OPTIONS_OPTIONAL_GROUPS) && !defined(PKG_OPTIONS_REQUIRED_GROUPS) && !defined(PKG_OPTIONS_NONEMPTY_SETS)
 # no supported options: set PKG_OPTIONS to empty and skip rest of file
 PKG_OPTIONS=	#empty
 .else # process the rest of the file
@@ -155,9 +162,26 @@ PKG_OPTIONS=	#empty
 #
 .for _grp_ in ${PKG_OPTIONS_OPTIONAL_GROUPS} ${PKG_OPTIONS_REQUIRED_GROUPS}
 _PKG_OPTIONS_GROUP_STACK.${_grp_}:=#empty
+.if !defined(PKT_OPTION_GROUP.${_grp_}) || empty(PKT_OPTION_GROUP.${_grp_})
+PKG_FAIL_REASON:="bsd.options.mk: PKG_OPTIONS_GROUP."${_grp_:Q}" must be non-empty."
+.endif
 .  for _opt_ in ${PKG_OPTIONS_GROUP.${_grp_}}
 PKG_SUPPORTED_OPTIONS+= ${_opt_}
 _PKG_OPTIONS_GROUP_MAP.${_opt_}=${_grp_}
+.  endfor
+.endfor
+
+#
+# add options from sets to PKG_SUPPORTED_OPTIONS
+#
+_PKG_OPTIONS_ALL_SETS:=#empty
+.for _set_ in ${PKG_OPTIONS_NONEMPTY_SETS}
+.  if !defined(PKT_OPTIONS_SET.${_set_}) || empty(PKT_OPTIONS_SET.${_set_})
+PKG_FAIL_REASON:="bsd.options.mk: PKG_OPTIONS_SET."${_set_:Q}" must be non-empty."
+.  endif
+.  for _opt_ in ${PKG_OPTIONS_SET.${_set_}}
+PKG_SUPPORTED_OPTIONS+=	${_opt_}
+_PKG_OPTIONS_ALL_SETS+=	${_opt_}
 .  endfor
 .endfor
 
@@ -167,7 +191,7 @@ _PKG_OPTIONS_GROUP_MAP.${_opt_}=${_grp_}
 .include "${.CURDIR}/../../mk/defaults/obsolete.mk"
 
 #
-# place options imlied by legacy variables in PKG_LEGACY_OPTIONS
+# place options implied by legacy variables in PKG_LEGACY_OPTIONS
 #
 .for _m_ in ${PKG_OPTIONS_LEGACY_VARS}
 _var_:=	${_m_:C/:.*//}
@@ -278,6 +302,19 @@ PKG_OPTIONS:=	${PKG_OPTIONS} ${_opt_}
 .endfor
 .undef _opt_
 
+.for _set_ in ${PKG_OPTIONS_NONEMPTY_SETS}
+_ISEMPTY:=true
+.  for _opt_ in ${PKG_OPTIONS_SET.${_set_}
+.    if !empty(PKG_OPTIONS:M${_opt_})
+_ISEMPTY:=false
+.    endif
+.  endfor
+.  if ${_ISEMPTY} == "true"
+PKG_FAIL_REASON:="At least one of the following options must be selected: "${PKG_OPTIONS_SET.${_set_}:O:u:Q}
+.  endif
+.endfor
+.undef _ISEMPTY
+
 .if !empty(_OPTIONS_UNSUPPORTED)
 PKG_FAIL_REASON:=	"The following selected options are not supported: "${_OPTIONS_UNSUPPORTED:O:u:Q}"."
 .endif
@@ -304,9 +341,9 @@ _PKG_OPTIONS_WORDWRAP_FILTER=						\
 
 .PHONY: show-options
 show-options:
-	@${ECHO} The following options are supported by this package:
+	@${ECHO} Any of the following general options may be selected:
 .for _opt_ in ${PKG_SUPPORTED_OPTIONS:O}
-.  if !defined(_PKG_OPTIONS_GROUP_MAP.${_opt_})
+.  if !defined(_PKG_OPTIONS_GROUP_MAP.${_opt_}) && empty(_PKG_OPTIONS_ALL_SETS:M${_opt_})
 	@${ECHO} "	"${_opt_:Q}"	"`${SED} -n "s/^"${_opt_:Q}"	//p" ../../mk/defaults/options.description`
 .  endif
 .endfor
@@ -319,6 +356,12 @@ show-options:
 .for _grp_ in ${PKG_OPTIONS_OPTIONAL_GROUPS}
 	@${ECHO} "At most one of the following "${_grp_:Q}" options may be selected:"
 .  for _opt_ in ${PKG_OPTIONS_GROUP.${_grp_}:O}
+	@${ECHO} "	"${_opt_:Q}"	"`${SED} -n "s/^"${_opt_:Q}"	//p" ../../mk/defaults/options.description`
+.  endfor
+.endfor
+.for _set_ in ${PKG_OPTIONS_NONEMPTY_SETS}
+	@${ECHO} "At least one of the following "${_set_:Q}" options must be selected:"
+.  for _opt_ in ${PKG_OPTIONS_SET.${_set_}:O}
 	@${ECHO} "	"${_opt_:Q}"	"`${SED} -n "s/^"${_opt_:Q}"	//p" ../../mk/defaults/options.description`
 .  endfor
 .endfor
