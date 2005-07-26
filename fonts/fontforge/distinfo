@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2005/06/30 14:36:27 adam Exp $
+$NetBSD: distinfo,v 1.9 2005/07/26 11:49:53 adam Exp $
 
-SHA1 (fontforge_full-20050624.tgz) = 25644db67e041c0d9393322d1fa08154b4869344
-RMD160 (fontforge_full-20050624.tgz) = 51780d966196c658f7a04a3161db42359dbd80bb
-Size (fontforge_full-20050624.tgz) = 4392875 bytes
+SHA1 (fontforge_full-20050719.tgz) = 5514c59782564ff4cda6fc5eb91ad0101e34b28e
+RMD160 (fontforge_full-20050719.tgz) = 116a972f4157a0f9c12e4b520a1b08bc666b728a
+Size (fontforge_full-20050719.tgz) = 4764383 bytes
 SHA1 (patch-aa) = e6886d501d73e80ed6f415916e2ee6a6f1813004
-SHA1 (patch-ab) = 8774b7b4a14b8be74fc4fb10a8897b0e579ea2c0
