@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/26 20:02:23 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/26 20:04:24 jlam Exp $
 #
 
 DISTNAME=	demime-1.1d
@@ -19,7 +19,6 @@ DEPENDS+=       p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
 DEPENDS+=       p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
-NO_BUILD=	YES
 USE_TOOLS+=	perl:run pod2man
 USE_PKGINSTALL=	YES
 
@@ -32,15 +31,15 @@ do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME:S/-/./} ${WRKSRC}/demime.stable
 
-post-patch:
+do-build:
 	${SED} -e 's|/usr/lib/majordomo/demime_junkmail.cf|${PKG_SYSCONFDIR}/demime_junkmail.cf|g' \
 	       -e 's|/usr/bin/perl|${PERL5}|g' \
 	       ${WRKSRC}/demime.stable >${WRKSRC}/demime
+	${POD2MAN} ${WRKSRC}/demime > ${WRKSRC}/demime.1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/demime ${PREFIX}/bin/demime
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/demime_junkmail.cf ${EGDIR}
-	${POD2MAN} ${WRKSRC}/demime > ${WRKSRC}/demime.1
 	${INSTALL_MAN} ${WRKSRC}/demime.1 ${PREFIX}/man/man1/demime.1
 
 .include "../../mk/bsd.pkg.mk"
