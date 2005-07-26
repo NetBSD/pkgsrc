@@ -1,4 +1,4 @@
-# $NetBSD: simple.mk,v 1.2 2005/05/31 13:33:39 dillo Exp $
+# $NetBSD: simple.mk,v 1.3 2005/07/26 16:12:56 dillo Exp $
 #
 # This file tests a very simple options configuration.
 #
@@ -13,4 +13,5 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.unused
 
 .PHONY: test
 test:
+	echo ${PKG_FAIL_REASON:M*:Q}
 	echo ${PKG_OPTIONS:M*:Q}
