@@ -1,4 +1,4 @@
-# $NetBSD: order.mk,v 1.2 2005/05/31 13:33:39 dillo Exp $
+# $NetBSD: order.mk,v 1.3 2005/07/26 16:12:56 dillo Exp $
 #
 # This file tests the effect of the PKG_DEFAULT_OPTIONS variable.
 #
@@ -14,4 +14,5 @@ PKG_DEFAULT_OPTIONS=	-b b d inet6
 
 .PHONY: test
 test:
+	echo ${PKG_FAIL_REASON:M*:Q}
 	echo ${PKG_OPTIONS:Q}

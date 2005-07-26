@@ -1,4 +1,4 @@
-# $NetBSD: all.mk,v 1.3 2005/06/01 13:40:46 dillo Exp $
+# $NetBSD: all.mk,v 1.4 2005/07/26 16:12:56 dillo Exp $
 #
 # This file tests legacy variables and precedence of the various
 # option variables.
@@ -23,4 +23,5 @@ NO_H=YES
 
 .PHONY: test
 test:
+	echo ${PKG_FAIL_REASON:M*:Q}
 	echo ${PKG_OPTIONS:M*:Q}
