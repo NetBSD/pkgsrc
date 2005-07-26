@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/28 12:43:57 peter Exp $
+# $NetBSD: Makefile,v 1.2 2005/07/26 11:13:41 peter Exp $
 
-DISTNAME=		spamd-20050624
+DISTNAME=		spamd-20050726
 CATEGORIES=		mail
 MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
