@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/08 10:30:31 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/07/26 10:47:19 wiz Exp $
 sbin/ucarp
+${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/ucarp.mo
+${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/ucarp.mo
