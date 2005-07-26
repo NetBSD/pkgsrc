@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/16 19:10:39 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/07/26 20:02:23 jlam Exp $
 #
 
 DISTNAME=	demime-1.1d
@@ -20,10 +20,8 @@ DEPENDS+=       p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_BUILD=	YES
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run pod2man
 USE_PKGINSTALL=	YES
-
-POD2MAN?=	${BUILDLINK_PREFIX.perl}/bin/pod2man
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/demime_junkmail.cf ${PKG_SYSCONFDIR}/demime_junkmail.cf
