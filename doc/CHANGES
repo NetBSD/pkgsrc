@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10699 2005/07/26 10:26:22 wiz Exp $
+$NetBSD: CHANGES,v 1.10700 2005/07/26 11:51:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3359,3 +3359,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added emulators/ucon64 version 2.0.0 [tv 2005-07-25]
 	Updated mail/clamav to 0.86.2 [grant 2005-07-26]
 	Removed devel/prc-tools [wiz 2005-07-26]
+	Updated fonts/fontforge to 20050719 [adam 2005-07-26]
