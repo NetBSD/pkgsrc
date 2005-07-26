@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.665 2005/07/23 23:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.666 2005/07/26 10:25:46 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -493,7 +493,6 @@ SUBDIR+=	pkg-config
 SUBDIR+=	ply
 SUBDIR+=	pmccabe
 SUBDIR+=	popt
-SUBDIR+=	prc-tools
 SUBDIR+=	prcs
 SUBDIR+=	pth
 SUBDIR+=	pthread-sem
