@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.35 2005/07/23 04:45:30 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.36 2005/07/26 07:36:54 grant Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -226,7 +226,7 @@ _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Micc)
-.  if !empty(CC_VERSION:M8.1)
+.  if !empty(CC_VERSION:M8.1) || !empty(CC_VERSION:M9.0)
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-icc81-cc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 .  else
