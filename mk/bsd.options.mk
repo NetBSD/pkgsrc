@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.45 2005/07/26 09:00:42 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.46 2005/07/26 16:09:34 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -162,7 +162,7 @@ PKG_OPTIONS=	#empty
 #
 .for _grp_ in ${PKG_OPTIONS_OPTIONAL_GROUPS} ${PKG_OPTIONS_REQUIRED_GROUPS}
 _PKG_OPTIONS_GROUP_STACK.${_grp_}:=#empty
-.if !defined(PKT_OPTION_GROUP.${_grp_}) || empty(PKT_OPTION_GROUP.${_grp_})
+.if !defined(PKG_OPTIONS_GROUP.${_grp_}) || empty(PKG_OPTIONS_GROUP.${_grp_})
 PKG_FAIL_REASON:="bsd.options.mk: PKG_OPTIONS_GROUP."${_grp_:Q}" must be non-empty."
 .endif
 .  for _opt_ in ${PKG_OPTIONS_GROUP.${_grp_}}
