@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10697 2005/07/26 04:13:40 tv Exp $
+$NetBSD: CHANGES,v 1.10698 2005/07/26 07:55:33 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3357,3 +3357,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added x11/wxGTK-contrib version 2.4.2 [wiz 2005-07-25]
 	Updated pkgtools/x11-links to 0.26 [reed 2005-07-25]
 	Added emulators/ucon64 version 2.0.0 [tv 2005-07-25]
+	Updated mail/clamav to 0.86.2 [grant 2005-07-26]
