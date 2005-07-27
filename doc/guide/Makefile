@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/06/11 16:26:47 dillo Exp $
+# $NetBSD: Makefile,v 1.13 2005/07/27 21:33:36 rpaulo Exp $
 #
 
-DISTNAME=		htdocs-share-20050507
+DISTNAME=		htdocs-share-20050727
 PKGNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
 MASTER_SITES=		${MASTER_SITE_LOCAL}
