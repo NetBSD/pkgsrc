@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.12.2.1 2005/07/07 20:52:10 snj Exp $
+$NetBSD: distinfo,v 1.12.2.2 2005/07/27 04:30:25 snj Exp $
 
-SHA1 (zlib-1.2.2.tar.gz) = e6ec67108bfd1f321eb4f1bd192b648725219595
-RMD160 (zlib-1.2.2.tar.gz) = 374a85839d821c75f5630c7effd7f7e2047f67bb
-Size (zlib-1.2.2.tar.gz) = 430469 bytes
+SHA1 (zlib-1.2.3.tar.gz) = 60faeaaf250642db5c0ea36cd6dcc9f99c8f3902
+RMD160 (zlib-1.2.3.tar.gz) = 89a57e336c24f7f6eebda3a1724e14b71187e117
+Size (zlib-1.2.3.tar.gz) = 496597 bytes
 SHA1 (patch-aa) = d3edeb170bf192ca986b00bc984b0de3487068b9
-SHA1 (patch-ab) = e9980a8dc5de17dffce276c147e4909867a4ef8b
