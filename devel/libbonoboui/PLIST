@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/02/06 15:35:28 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/07/27 17:23:51 drochner Exp $
 bin/bonobo-browser
 bin/test-moniker
 include/libbonoboui-2.0/bonobo.h
@@ -134,6 +134,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libbonoboui-2.0.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/libbonoboui-2.0.mo
@@ -146,6 +147,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libbonoboui-2.0.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libbonoboui-2.0.mo
