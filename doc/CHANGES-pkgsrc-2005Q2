@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.36 2005/07/24 22:12:30 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.37 2005/07/27 05:12:06 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -99,3 +99,17 @@ Pullup ticket 594 - requested by grant beattie
 kill some hardcoded instances of /sbin/nologin
 Pullup ticket 623 - requested by Thorsten Frueauf
 security fix for fetchmail
+Pullup ticket 626 - requested by Matthias Drochner
+security update for zlib
+Pullup ticket 611 - requested by grant beattie
+license fix for openssl
+Pullup ticket 612 - requested by grant beattie
+dependency form fix for p5-Digest-MD5
+Pullup ticket 614 - requested by grant beattie
+bdb infrastructure fix
+Pullup ticket 615 - requested by grant beattie
+build fix for exim3
+Pullup ticket 617 - requested by grant beattie
+infrastructure fix for sunpro
+Pullup ticket 625 - requested by Thomas Klausner
+don't assume gtar (or recent NetBSD tar) in postgresql74-client
