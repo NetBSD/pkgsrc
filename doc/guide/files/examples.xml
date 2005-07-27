@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.5 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.6 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -53,7 +53,8 @@ share/bison.hairy</programlisting>
     <sect2 id="checking-package-with-pkglint">
       <title>Checking a package with <command>pkglint</command></title>
 
-      <para>The NetBSD package system comes with <pkg>pkgtools/pkglint</pkg>
+      <para>The NetBSD package system comes with 
+        <filename role="pkg">pkgtools/pkglint</filename>
 	which helps to check the contents of these
 	files. After installation it is quite easy to use, just change to the
 	directory of the package you wish to examine and execute
