@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.13 2005/01/09 23:56:21 jlam Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.13.4.1 2005/07/27 04:53:57 snj Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  bdb.buildlink3.mk will:
@@ -62,10 +62,8 @@ BDB185_DEFAULT?=	db1
 BDB185_DEFAULT?=	${BDB_DEFAULT}
 .  endif
 
-_BDB_PKGBASE.db2=		db
 _BDB_PKGSRCDIR.db2=		../../databases/db
 .  for _bdb_ in ${_BDB_PKGS}
-_BDB_PKGBASE.${_bdb_}?=		${_bdb_}
 _BDB_PKGSRCDIR.${_bdb_}?=	../../databases/${_bdb_}
 .  endfor
 
@@ -88,8 +86,8 @@ BDB_TYPE=	none
 .  endif
 
 # Define some public variables to refer to package-specific variables.
-BDBBASE=	${BUILDLINK_PREFIX.${_BDB_PKGBASE.${BDB_TYPE}}}
-BDB_LIBS=	${BUILDLINK_LDADD.${_BDB_PKGBASE.${BDB_TYPE}}}
+BDBBASE=	${BUILDLINK_PREFIX.${BDB_TYPE}}
+BDB_LIBS=	${BUILDLINK_LDADD.${BDB_TYPE}}
 
 BUILD_DEFS+=	BDB_TYPE
 BUILD_DEFS+=	BDBBASE
