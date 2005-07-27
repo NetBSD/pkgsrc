@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2005/02/23 22:24:17 agc Exp $
+$NetBSD: distinfo,v 1.17 2005/07/27 17:23:51 drochner Exp $
 
-SHA1 (libbonoboui-2.8.1.tar.bz2) = 3ab457d79c5592a5a717290f8488d88844051980
-RMD160 (libbonoboui-2.8.1.tar.bz2) = 5773193b2c88805964bd14012b24ff15885d51ef
-Size (libbonoboui-2.8.1.tar.bz2) = 1021537 bytes
+SHA1 (libbonoboui-2.10.0.tar.bz2) = 3fa90e7efdd8d81433cc6a1d5d957264c3db319f
+RMD160 (libbonoboui-2.10.0.tar.bz2) = 3897f52cb9bd4c6ea18675997c6f1e33208a9dee
+Size (libbonoboui-2.10.0.tar.bz2) = 960616 bytes
