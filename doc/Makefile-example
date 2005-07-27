@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.10 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile-example,v 1.11 2005/07/27 10:02:17 wiz Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -67,7 +67,7 @@ BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 # sorted alphabetically.
 .include "../../devel/gettext-lib/buildlink3.mk"
 
-# The section that handles pthreads should come after all other buildlink[23]
+# The section that handles pthreads should come after all other buildlink3
 # files have been included.
 .include "../../mk/pthread.buildlink3.mk"
 .if ${PTHREAD_TYPE} == "none"
