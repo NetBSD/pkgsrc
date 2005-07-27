@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.13 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.14 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -31,7 +31,8 @@
       it. Binary packages are created by default in
       <filename>/usr/pkgsrc/packages</filename>, in the form of a
       gzipped tar file. See <xref linkend="logs.package"/> for a
-      continuation of the above <pkg>misc/figlet</pkg> example.</para>
+      continuation of the above <filename 
+      role="pkg">misc/figlet</filename> example.</para>
 
     <para>
       See <xref linkend="submit"/> for information on how to submit
@@ -316,7 +317,8 @@ fi</programlisting>
 	</step>
 
 	<step>
-	  <para><filename>/etc/resolv.conf</filename> (for <pkg>security/smtpd</pkg> and mail):</para>
+	  <para><filename>/etc/resolv.conf</filename> (for <filename 
+	    role="pkg">security/smtpd</filename> and mail):</para>
 
 	  <screen>&rprompt; <userinput>cp /etc/resolv.conf /usr/sandbox/etc</userinput></screen>
 	</step>
@@ -328,14 +330,16 @@ fi</programlisting>
 	</step>
 
 	<step>
-	  <para><filename>/etc/localtime</filename> (for <pkg>security/smtpd</pkg>):</para>
+	  <para><filename>/etc/localtime</filename> (for <filename 
+	    role="pkg">security/smtpd</filename>):</para>
 
 	  <screen>&rprompt; <userinput>ln -sf /usr/share/zoneinfo/UTC /usr/sandbox/etc/localtime</userinput></screen>
 	</step>
 
 	<step>
-	  <para><filename>/usr/src</filename> (system sources, for <pkg>sysutils/aperture</pkg>,
-	    <pkg>net/ppp-mppe</pkg>):</para>
+	  <para><filename>/usr/src</filename> (system sources, for <filename 
+	    role="pkg">sysutils/aperture</filename>,
+	    <filename role="pkg">net/ppp-mppe</filename>):</para>
 
 	  <screen>&rprompt; <userinput>ln -s ../disk1/cvs .</userinput>
 &rprompt; <userinput>ln -s cvs/src-2.0 src</userinput></screen>
@@ -562,11 +566,11 @@ nbftp% <userinput>chmod 755 .</userinput> </screen>
       After your pkgsrc bulk-build has completed, you may wish to
       create a CD-ROM set of the resulting binary packages to assist
       in installing packages on other machines.  The
-      <pkg>pkgtools/cdpack</pkg> package provides a simple tool for
-      creating the ISO 9660 images. <command>cdpack</command> arranges
-      the packages on the CD-ROMs in a way that keeps all the
-      dependencies for given package on the same CD as that
-      package.
+      <filename role="pkg">pkgtools/cdpack</filename> package provides 
+      a simple tool for creating the ISO 9660 images. 
+      <command>cdpack</command> arranges the packages on the CD-ROMs in a 
+      way that keeps all the dependencies for given package on the same 
+      CD as that package.
     </para>
 
     <sect2 id="cdpack-example">

@@ -1,4 +1,4 @@
-<!-- $NetBSD: debug.xml,v 1.1.1.1 2004/10/21 14:27:38 grant Exp $ -->
+<!-- $NetBSD: debug.xml,v 1.2 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <chapter id="debug">
   <title>Debugging</title>
@@ -15,8 +15,8 @@
     </listitem>
 
     <listitem>
-      <para>Install <pkg>pkgtools/url2pkg</pkg>, create a directory
-        for a new package, change into it, then run
+      <para>Install <filename role="pkg">pkgtools/url2pkg</filename>,
+        create a directory for a new package, change into it, then run
         <command>url2pkg</command>:</para>  
 
       <screen>&cprompt; <userinput>mkdir /usr/pkgsrc/<replaceable>category</replaceable>/<replaceable>examplepkg</replaceable></userinput>
@@ -58,7 +58,8 @@
 	shouldn't be, especially during the build
 	phase. <command>mkpatches</command>, 
 	<command>patchdiff</command> and <command>pkgvi</command> are
-	from the <pkg>pkgtools/pkgdiff</pkg> package. </para>  
+	from the <filename role="pkg">pkgtools/pkgdiff</filename>
+	package. </para>  
     </listitem>
 
     <listitem>
@@ -116,7 +117,8 @@
     </listitem>
 
     <listitem>
-      <para>Run <command>pkglint</command> from <pkg>pkgtools/pkglint</pkg>,
+      <para>Run <command>pkglint</command> from 
+        <filename role="pkg">pkgtools/pkglint</filename>,
 	and fix the problems it reports:</para>
 
       <screen>&rprompt; <userinput>pkglint</userinput></screen>
