@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2005/07/06 18:09:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2005/07/27 17:32:13 drochner Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -1588,10 +1588,23 @@ share/TeXmacs/misc/pixmaps/tm_footnote.xpm
 share/TeXmacs/misc/pixmaps/tm_forward.xpm
 share/TeXmacs/misc/pixmaps/tm_fraction.xpm
 share/TeXmacs/misc/pixmaps/tm_frak.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_cursor.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_cursorM.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_cursor_redimE.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_cursor_redimN.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_cursor_redimS.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_mask.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_maskM.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_mask_redimE.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_mask_redimN.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_mask_redimS.xpm
+share/TeXmacs/misc/pixmaps/tm_graphics_redim.xpm
 share/TeXmacs/misc/pixmaps/tm_grave.xpm
 share/TeXmacs/misc/pixmaps/tm_greek.xpm
+share/TeXmacs/misc/pixmaps/tm_group_group.xpm
 share/TeXmacs/misc/pixmaps/tm_group_move.xpm
 share/TeXmacs/misc/pixmaps/tm_group_rotate.xpm
+share/TeXmacs/misc/pixmaps/tm_group_ungroup.xpm
 share/TeXmacs/misc/pixmaps/tm_group_zoom.xpm
 share/TeXmacs/misc/pixmaps/tm_hat.xpm
 share/TeXmacs/misc/pixmaps/tm_help.xpm
@@ -1962,6 +1975,7 @@ share/TeXmacs/progs/fonts/fonts-truetype.scm
 share/TeXmacs/progs/fonts/fonts-x.scm
 share/TeXmacs/progs/generic/document-edit.scm
 share/TeXmacs/progs/generic/document-menu.scm
+share/TeXmacs/progs/generic/document-part.scm
 share/TeXmacs/progs/generic/format-edit.scm
 share/TeXmacs/progs/generic/format-menu.scm
 share/TeXmacs/progs/generic/generic-edit.scm
@@ -2041,6 +2055,7 @@ share/TeXmacs/progs/text/std-text-edit.scm
 share/TeXmacs/progs/text/std-text-kbd.scm
 share/TeXmacs/progs/text/text-kbd.scm
 share/TeXmacs/progs/text/text-menu.scm
+share/TeXmacs/progs/text/tm-structure.scm
 share/TeXmacs/progs/tm-mode.el
 share/TeXmacs/progs/utils/base/environment.scm
 share/TeXmacs/progs/utils/edit/auto-close.scm
