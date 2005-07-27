@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/03/23 09:06:38 jlam Exp $
+# $NetBSD: options.mk,v 1.1.2.1 2005/07/27 04:35:46 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
 PKG_SUPPORTED_OPTIONS=	idea mdc2 rc5
@@ -13,8 +13,8 @@ OPENSSL_LICENSE=	# empty
 ###	Japan Patent: 508119/1991
 ###
 .if !empty(PKG_OPTIONS:Midea)
-.  if empty(OPENSSL_LICENSE:Mfee-based-commercial)
-OPENSSL_LICENSE=	fee-based-commercial
+.  if empty(OPENSSL_LICENSE:Mfee-based-commercial-use)
+OPENSSL_LICENSE=	fee-based-commercial-use
 .  endif
 PLIST_SUBST+=		IDEA=
 .else
@@ -27,8 +27,8 @@ PLIST_SUBST+=		IDEA="@comment "
 ###	US Patent: 4908861
 ###
 .if !empty(PKG_OPTIONS:Mmdc2)
-.  if empty(OPENSSL_LICENSE:Mfee-based-commercial)
-OPENSSL_LICENSE=	fee-based-commercial
+.  if empty(OPENSSL_LICENSE:Mfee-based-commercial-use)
+OPENSSL_LICENSE=	fee-based-commercial-use
 .  endif
 PLIST_SUBST+=		MDC2=
 .else
@@ -41,8 +41,8 @@ PLIST_SUBST+=		MDC2="@comment "
 ###	US Patent: 5724428, 5835600, 6269163
 ###
 .if !empty(PKG_OPTIONS:Mrc5)
-.  if empty(OPENSSL_LICENSE:Mfee-based-commercial)
-OPENSSL_LICENSE=	fee-based-commercial
+.  if empty(OPENSSL_LICENSE:Mfee-based-commercial-use)
+OPENSSL_LICENSE=	fee-based-commercial-use
 .  endif
 PLIST_SUBST+=		RC5=
 .else
