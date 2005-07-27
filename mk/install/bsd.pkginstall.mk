@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.2 2005/07/20 02:51:59 schmonz Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.3 2005/07/27 04:55:43 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -126,7 +126,9 @@ INSTALL_USERGROUP_FILE=	${WRKDIR}/.install-usergroup
 INSTALL_UNPACK_TMPL+=	${INSTALL_USERGROUP_FILE}
 
 ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
-	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	eval set -- ${PKG_GROUPS} ${PKG_USERS} ;			\
+	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-usergroup";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +USERGROUP script that reference counts users"; \
@@ -154,7 +156,7 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-usergroup";				\
-	} > ${.TARGET}.tmp;						\
+	) > ${.TARGET}.tmp;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # SPECIAL_PERMS are lists that look like:
@@ -178,7 +180,9 @@ INSTALL_PERMS_FILE=	${WRKDIR}/.install-perms
 INSTALL_UNPACK_TMPL+=	${INSTALL_PERMS_FILE}
 
 ${INSTALL_PERMS_FILE}: ../../mk/install/perms
-	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	eval set -- ${SPECIAL_PERMS} ;					\
+	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-perms";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +PERMS script that sets the special";	\
@@ -202,7 +206,7 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-perms";				\
-	} > ${.TARGET}.tmp;						\
+	) > ${.TARGET}.tmp;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # CONF_FILES are pairs of example and true config files, used much like
@@ -245,7 +249,9 @@ INSTALL_FILES_FILE=	${WRKDIR}/.install-files
 INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
 
 ${INSTALL_FILES_FILE}: ../../mk/install/files
-	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	eval set -- ${CONF_FILES} ${SUPPORT_FILES} ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS} ;	\
+	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-files";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +FILES script that reference counts config"; \
@@ -282,14 +288,16 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-files";				\
-	} > ${.TARGET}.tmp;						\
+	) > ${.TARGET}.tmp;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 INSTALL_RCD_SCRIPTS_FILE=	${WRKDIR}/.install-rcd-scripts
 INSTALL_UNPACK_TMPL+=		${INSTALL_RCD_SCRIPTS_FILE}
 
 ${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
-	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	eval set -- ${RCD_SCRIPTS} ;					\
+	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-rcd-scripts";			\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +RCD_SCRIPTS script that reference counts config"; \
@@ -314,7 +322,7 @@ ${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-rcd-scripts";				\
-	} > ${.TARGET}.tmp;						\
+	) > ${.TARGET}.tmp;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # OWN_DIRS contains a list of directories for this package that should be
@@ -338,7 +346,9 @@ INSTALL_DIRS_FILE=	${WRKDIR}/.install-dirs
 INSTALL_UNPACK_TMPL+=	${INSTALL_DIRS_FILE}
 
 ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
-	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	eval set -- ${PKG_SYSCONFSUBDIR} ${CONF_FILES} ${CONF_FILES_PERMS} ${SUPPORT_FILES} ${SUPPORT_FILES_PERMS} ${RCD_SCRIPTS} ${MAKE_DIRS} ${OWN_DIRS} ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS} ; \
+	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-dirs";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +DIRS script that reference counts directories"; \
@@ -386,7 +396,7 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-dirs";				\
-	} > ${.TARGET}.tmp;						\
+	) > ${.TARGET}.tmp;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # PKG_CREATE_USERGROUP indicates whether the INSTALL script should
