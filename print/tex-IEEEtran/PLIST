@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/27 17:02:05 drochner Exp $
+share/texmf/tex/latex/IEEEtran/IEEEtran.cls
+share/texmf/tex/latex/IEEEtran/IEEEtran_HOWTO.pdf
+share/texmf/tex/latex/IEEEtran/README
+share/texmf/tex/latex/IEEEtran/bare_conf.tex
+share/texmf/tex/latex/IEEEtran/bare_jrnl.tex
+@dirrm share/texmf/tex/latex/IEEEtran
