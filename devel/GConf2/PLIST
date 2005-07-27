@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2005/03/22 15:55:26 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2005/07/27 17:11:08 drochner Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -87,6 +87,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/GConf2.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/GConf2.mo
