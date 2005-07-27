@@ -1,7 +1,7 @@
 # -*- sh -*-
 # start of install
 #
-# $NetBSD: install,v 1.38 2005/07/27 11:54:03 tron Exp $
+# $NetBSD: install,v 1.39 2005/07/27 16:18:54 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -9,15 +9,15 @@ PRE-INSTALL)
 	# Require that necessary users and groups exist or else fail the
 	# installation of the package.
 	#
-	if [ -x ./+USERGROUP ]; then
-		case ${_PKG_CREATE_USERGROUP} in
-		YES)	./+USERGROUP ADD ${PKG_METADATA_DIR} ;;
-		esac
-		if ./+USERGROUP CHECK-ADD ${PKG_METADATA_DIR}; then
+	case ${_PKG_CREATE_USERGROUP} in
+	YES)	${TEST} ! -x ./+USERGROUP ||
+			./+USERGROUP ADD ${PKG_METADATA_DIR} ;;
+	esac
+	if ${TEST} ! -x ./+USERGROUP || \
+	   ./+USERGROUP CHECK-ADD ${PKG_METADATA_DIR}; then
 		:
-		else
-			exit 1
-		fi
+	else
+		exit 1
 	fi
 	#
 	# Create package directories at pre-install time.
@@ -37,9 +37,9 @@ PRE-INSTALL)
 		fi
 	fi
 	case ${_PKG_CONFIG} in
-        YES)	${TEST} -x ./+DIRS &&
+	YES)	${TEST} ! -x ./+DIRS ||
 			./+DIRS ADD ${PKG_METADATA_DIR} ;;
-        esac
+	esac
         ;;
 
 POST-INSTALL)
@@ -47,26 +47,26 @@ POST-INSTALL)
 	# Copy configuration/support files into place.
 	#
 	case ${_PKG_CONFIG} in
-        YES)	${TEST} -x ./+FILES &&
+        YES)	${TEST} ! -x ./+FILES ||
 			./+FILES ADD ${PKG_METADATA_DIR} ;;
         esac
 	case ${_PKG_CONFIG}${_PKG_RCD_SCRIPTS} in
-	YESYES)	${TEST} -x ./+RCD_SCRIPTS &&
+	YESYES)	${TEST} ! -x ./+RCD_SCRIPTS ||
 			./+RCD_SCRIPTS ADD ${PKG_METADATA_DIR} ;;
 	esac
 	#
 	# Set special permissions on any files/directories that need them.
 	#
-	${TEST} -x ./+PERMS &&
+	${TEST} ! -x ./+PERMS ||
 		./+PERMS ${PKG_METADATA_DIR}
 
 	# Check for any missing bits after we're finished installing.
 	#
-	${TEST} -x ./+DIRS &&
+	${TEST} ! -x ./+DIRS ||
 		./+DIRS CHECK-ADD ${PKG_METADATA_DIR}
-	${TEST} -x ./+FILES &&
+	${TEST} ! -x ./+FILES ||
 		./+FILES CHECK-ADD ${PKG_METADATA_DIR}
-	${TEST} -x ./+RCD_SCRIPTS &&
+	${TEST} ! -x ./+RCD_SCRIPTS ||
 		./+RCD_SCRIPTS CHECK-ADD ${PKG_METADATA_DIR}
 	;;
 
