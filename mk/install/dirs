@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: dirs,v 1.5 2005/01/31 21:41:06 jlam Exp $
+# $NetBSD: dirs,v 1.6 2005/07/27 16:18:54 jlam Exp $
 #
 # +DIRS - reference-counted directory management script
 #
@@ -73,7 +73,7 @@ ADD)
 		token="$shadow_dir/${PKGNAME}"
 		if ${TEST} ! -d "$shadow_dir"; then
 			${MKDIR} $shadow_dir
-			${TEST} -d "$dir" &&
+			${TEST} ! -d "$dir" ||
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
 		${MKDIR} $dir
@@ -136,7 +136,7 @@ CHECK-ADD)
 	{ while read dir d_flags d_user d_group d_mode; do
 		case $dir in
 		""|[!/]*)	continue ;;
-		*)		${TEST} -d "$dir" && continue ;;
+		*)		${TEST} ! -d "$dir" || continue ;;
 		esac
 		case $d_flags in
 		*m*)	;;
@@ -180,7 +180,7 @@ CHECK-REMOVE)
 		*)	continue ;;
 		esac
 		shadow_dir="${PKG_REFCOUNT_DIRS_DBDIR}$dir"
-		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
+		${TEST} ! -d "$shadow_dir" || continue	# refcount isn't zero
 		case "$printed_header" in
 		yes)	;;
 		*)	printed_header=yes

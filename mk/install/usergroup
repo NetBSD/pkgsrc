@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: usergroup,v 1.8 2005/03/28 19:26:11 jlam Exp $
+# $NetBSD: usergroup,v 1.9 2005/07/27 16:18:54 jlam Exp $
 #
 # +USERGROUP - users and groups management script
 #
@@ -333,7 +333,7 @@ CHECK-REMOVE)
 		*)	user_exists $user || continue ;;
 		esac
 		shadow_dir="${PKG_REFCOUNT_USERS_DBDIR}/$user"
-		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
+		${TEST} ! -d "$shadow_dir" || continue	# refcount isn't zero
 		existing_users="$existing_users $user"
 	done
 	case $existing_users in
@@ -360,7 +360,7 @@ CHECK-REMOVE)
 		*)	group_exists $group || continue ;;
 		esac
 		shadow_dir="${PKG_REFCOUNT_GROUPS_DBDIR}/$group"
-		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
+		${TEST} ! -d "$shadow_dir" || continue	# refcount isn't zero
 		existing_groups="$existing_groups $group"
 	done
 	case $existing_groups in
