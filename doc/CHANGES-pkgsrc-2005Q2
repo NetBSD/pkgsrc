@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.38 2005/07/27 05:26:06 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.39 2005/07/27 08:02:56 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -115,3 +115,5 @@ Pullup ticket 625 - requested by Thomas Klausner
 don't assume gtar (or recent NetBSD tar) in postgresql74-client
 Pullup ticket 616 - requested by grant beattie
 build fix for exim
+Pullup ticket 628 - requested by grant beattie
+security update for clamav
