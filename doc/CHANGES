@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10705 2005/07/27 07:36:22 skrll Exp $
+$NetBSD: CHANGES,v 1.10706 2005/07/27 15:58:32 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3365,3 +3365,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/amavis to 0.2.1nb5 [kristerw 2005-07-26]
 	Updated editors/vim to 6.3.085 [martti 2005-07-27]
 	Updated emulators/tme to 0.4 [skrll 2005-07-27]
+	Updated x11/fspanel to 0.8.0.1nb3 [reed 2005-07-27]
