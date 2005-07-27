@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:53 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/07/27 16:21:17 wiz Exp $
 #
 
 DISTNAME=		cmatrix-1.2a
 CATEGORIES=		games
 MASTER_SITES=		http://www.asty.org/cmatrix/dist/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.asty.org/cmatrix/
 COMMENT=		Make your console feel like Nadbuchonazor's bridge
 
