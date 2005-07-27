@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:06 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/07/27 16:21:17 wiz Exp $
 #
 
 DISTNAME=		MayaVi-1.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mayavi/}
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://mayavi.sourceforge.net/
 COMMENT=		Scientific data visualizer written in Python
 

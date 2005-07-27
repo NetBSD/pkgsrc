@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:45:15 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/27 16:21:16 wiz Exp $
 #
 
 DISTNAME=		ZODB3-3.2.1
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		databases python
 MASTER_SITES=		http://zope.org/Products/ZODB3.2/3.2.1/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://zope.org/Products/ZODB3.2/3.2/
 COMMENT=		Standalone distro of Zope Object Database
 
