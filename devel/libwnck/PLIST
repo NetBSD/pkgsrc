@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/03/22 16:05:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/07/27 17:13:16 drochner Exp $
 include/libwnck-1.0/libwnck/application.h
 include/libwnck-1.0/libwnck/class-group.h
 include/libwnck-1.0/libwnck/libwnck.h
@@ -96,6 +96,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libwnck.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/libwnck.mo
@@ -108,6 +109,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libwnck.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libwnck.mo
 @dirrm share/doc/libwnck
