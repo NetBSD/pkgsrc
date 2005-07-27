@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.25 2005/07/16 19:21:50 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.26 2005/07/27 14:40:46 gdt Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -831,37 +831,50 @@ pre-configure:
     <sect2 id="handling-licenses">
       <title>Handling licenses</title>
 
-      <para>A package may underly a license which the user has or has
-        not agreed to accept. Usually, packages that underly
-        well-known Open Source licenses (e.g. the GNU Public License,
-        GPL) won't have any special license 
-        tags added in pkgsrc which require special action by the user
-        of such packages, but there are quite a number of other
-        licenses out there that pkgsrc users may not be able to
-        follow, for whatever reasons. For these cases, pkgsrc contains
-        a mechanism to note that a package underlies a certain
-        license, and the user has to accept the license before the
-        package can be installed.</para>
+      <para>A package may be covered by a license which the user has
+        or has not agreed to accept.  For these cases, pkgsrc contains
+        a mechanism to note that a package is covered by a particular
+        license, and the package cannot be built unless the user has
+        accepted the license.  (Installation of binary packages are
+        not currently subject to this mechanism.)  Packages with
+        licenses that are either Open Source according to the Open
+        Source Initiative or Free according to the Free Software
+        Foundation will not be marked with a license tag.  Packages
+        with licenses that have not been determined to meet either
+        definition will be marked with a license tag referring to the
+        license.  This will prevent building unless pkgsrc is informed
+        that the license is acceptable, and enables displaying the
+        license.</para>
+
+      <para>The license tag mechanism is intended to address
+	copyright-related issues surrounding building, installing and
+	using a package, and not to address redistribution issues (see
+	<varname>RESTRICTED</varname> and
+	<varname>NO_SRC_ON_FTP</varname>, etc.).  However, the above
+	definition of licenses for which tags are not needed implies
+	that packages with redistribution restrictions should have
+	tags.</para>
 
       <para>
-        Placing a certain package under a certain license works by
-        setting the <varname>LICENSE</varname> variable to a string
-        identifying the license, e.g. in <pkg>graphics/graphviz</pkg>:
-</para>
+        Denoting that a package is covered by a particular license is
+        done by placing the license in
+        <filename>pkgsrc/licenses</filename> and setting the
+        <varname>LICENSE</varname> variable to a string identifying
+        the license, e.g. in <pkg>graphics/xv</pkg>: </para>
 
-      <programlisting>LICENSE=        graphviz-license</programlisting>
+      <programlisting>LICENSE=        xv-license</programlisting>
 
       <para>
 	When trying to build, the user will get a notice that the
-        package underlies a license which he hasn't accepted (yet):
-</para>
+        package is covered by a license which has not been
+        accepted:</para>
 	
       <programlisting>
 &cprompt; <userinput>make</userinput>
-===> graphviz-1.12 has an unacceptable license: graphviz-license.
-===>     To build this package, add this line to your /etc/mk.conf:
-===>     ACCEPTABLE_LICENSES+=graphviz-license
+===> xv-3.10anb9 has an unacceptable license: xv-license.
 ===>     To view the license, enter "/usr/bin/make show-license".
+===>     To indicate acceptance, add this line to your /etc/mk.conf:
+===>     ACCEPTABLE_LICENSES+=xv-license
 *** Error code 1</programlisting>
 
         <para>The license can be viewed with <command>make
@@ -870,7 +883,7 @@ pre-configure:
           <filename>/etc/mk.conf</filename> to indicate acceptance of
           the particular license:</para>
 
-        <programlisting>ACCEPTABLE_LICENSES+=graphviz-license</programlisting>
+        <programlisting>ACCEPTABLE_LICENSES+=xv-license</programlisting>
 
 	<para>When adding a package with a new license, the license
           text should be added to <filename>pkgsrc/licenses</filename>
@@ -880,14 +893,16 @@ pre-configure:
           settings in
           <filename>pkgsrc/mk/defaults/mk.conf</filename>.</para>
 
-	<para>If there is a <emphasis>really</emphasis> pressing need
-          to accept all licenses at once, like when trying to download
-          or mirror all distfiles or doing a bulk build to test if all
-          packages in pkgsrc build, this can be done by setting
-          <varname>_ACCEPTABLE=yes</varname>. 
-	</para>
-      </sect2>
-    
+	<para>The use of <varname>LICENSE=shareware</varname>,
+	  <varname>LICENSE=no-commercial-use</varname>, and similar
+	  language is deprecated because it does not crisply refer to
+	  a particular license text.  Another problem with such usage
+	  is that it does not enable a user to denote acceptance of
+	  the license for a single package without accepting the same
+	  license text for another package.  In particular, this can
+	  be inappropriate when e.g. one accepts a particular license to
+	  indicate to pkgsrc that a fee has been paid.</para>
+    </sect2> 
 
     <sect2 id="installing-score-files">
       <title>Installing score files</title>
