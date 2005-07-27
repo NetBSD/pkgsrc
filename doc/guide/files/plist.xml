@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.6 2005/05/31 16:55:19 wiz Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.7 2005/07/27 21:29:51 rpaulo Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -247,8 +247,9 @@
       <listitem>
         <para> If the packages have a common dependency, the directory
           can be removed in that.  For example, see
-          <pkg>textproc/scrollkeeper</pkg>, which removes the shared
-          directory <filename>share/omf</filename>. </para>
+          <filename role="pkg">textproc/scrollkeeper</filename>, which 
+	  removes the shared directory 
+	  <filename>share/omf</filename>. </para>
       </listitem>
   
       <listitem>

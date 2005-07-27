@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.5 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.6 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <chapter id="introduction">
   <title>Introduction</title>
@@ -26,19 +26,23 @@
 
     <itemizedlist>
       <listitem>
-	<para><pkg>www/apache</pkg> - The Apache web server</para>
+	<para><filename role="pkg">www/apache</filename> - The Apache 
+	  web server</para>
       </listitem>
 
       <listitem>
-	<para><pkg>www/mozilla</pkg> - The Mozilla web browser</para>
+	<para><filename role="pkg">www/mozilla</filename> - The Mozilla 
+	  web browser</para>
       </listitem>
 
       <listitem>
-	<para><pkg>meta-pkgs/gnome</pkg> - The GNOME Desktop Environment</para>
+	<para><filename role="pkg">meta-pkgs/gnome</filename> - The GNOME 
+	  Desktop Environment</para>
       </listitem>
 
       <listitem>
-	<para><pkg>meta-pkgs/kde3</pkg> - The K Desktop Environment</para>
+	<para><filename role="pkg">meta-pkgs/kde3</filename> - The K 
+	  Desktop Environment</para>
       </listitem>
     </itemizedlist>
 

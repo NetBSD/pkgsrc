@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.26 2005/07/27 14:40:46 gdt Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.27 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -40,8 +40,8 @@
         Using <varname>CFLAGS=</varname> (i.e. without the
         <quote>+</quote>) may lead to problems with packages that need
         to add their own flags.  Also, you may want to take a look at
-        the <pkg>devel/cpuflags</pkg> package if you're interested in
-        optimization for the current CPU.</para>
+        the <filename role="pkg">devel/cpuflags</filename> package if 
+	you're interested in optimization for the current CPU.</para>
     </sect2>
 
     <sect2 id="where-to-install-documentation">
@@ -173,8 +173,8 @@
             again there is no <filename>buildlink3.mk</filename> file
             available, this is specified using the
             <varname>DEPENDS</varname> definition.  An example of this
-            is the <pkg>print/lyx</pkg> package, which uses the xpm
-            library, version 3.4j to build:</para>
+            is the <filename role="pkg">print/lyx</filename> package, 
+	    which uses the xpm library, version 3.4j to build:</para>
     
           <programlisting>DEPENDS+=       xpm-3.4j:../../graphics/xpm</programlisting>
     
@@ -250,9 +250,9 @@
             correctly and if there's no
             <filename>buildlink3.mk</filename> file, this is specified
             using the <varname>DEPENDS</varname> variable. The
-            <pkg>print/lyx</pkg> package needs to be able to execute the
-            latex binary from the teTeX package when it runs, and that
-            is specified:</para>
+            <filename role="pkg">print/lyx</filename> package needs to
+	    be able to execute the latex binary from the teTeX package
+	    when it runs, and that is specified:</para>
     
           <programlisting>DEPENDS+=        teTeX-[0-9]*:../../print/teTeX</programlisting>
     
@@ -263,8 +263,9 @@
     
       <para>If your package needs files from another package to build,
         see the first part of the <quote>do-configure</quote> target
-        <pkg>print/ghostscript5</pkg> package (it relies on the jpeg
-        sources being present in source form during the build):</para>
+        <filename role="pkg">print/ghostscript5</filename> package 
+	(it relies on the jpeg sources being present in source form 
+	during the build):</para>
     
       <programlisting>if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
           cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract;              \
@@ -282,10 +283,10 @@
         and <varname>BUILD_USES_GETTEXT_M4</varname> definitions, which
         are provided as convenience definitions.  The former works out
         whether &man.msgfmt.1; is part of the base system, and, if it isn't,
-        installs the <pkg>devel/gettext</pkg> package.  The latter adds
-        a build dependency on either an installed version of an older
-        gettext package, or if it isn't, installs the
-        <pkg>devel/gettext-m4</pkg> package.</para>
+        installs the <filename role="pkg">devel/gettext</filename> package.
+	The latter adds a build dependency on either an installed 
+	version of an older gettext package, or if it isn't, installs the
+        <filename role="pkg">devel/gettext-m4</filename> package.</para>
     </sect2>
 
 
@@ -301,7 +302,8 @@
         space separated list of packages (including version string) your
         package conflicts with.</para>
     
-      <para>For example <pkg>x11/Xaw3d</pkg> and <pkg>x11/Xaw-Xpm</pkg>
+      <para>For example <filename role="pkg">x11/Xaw3d</filename> 
+        and <filename role="pkg">x11/Xaw-Xpm</filename>
         install provide the same shared library, thus you set in
         <filename>pkgsrc/x11/Xaw3d/Makefile</filename>:</para>
     
@@ -460,7 +462,8 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
         fetch</command> will call <filename>files/getsite.sh</filename>
         with the name of each file to download as an argument, expecting
         it to output the URL of the directory from which to download
-        it. <pkg>graphics/ns-cult3d</pkg> is an example of this usage.
+        it. <filename role="pkg">graphics/ns-cult3d</filename> is an
+	example of this usage.
 </para>
     
       <para>If the download can't be automated, because the user must
@@ -472,12 +475,14 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
         shell commands, not just a message. (Generally, it executes
         <varname>${ECHO}</varname>). As of this writing, the following
         packages use this:
-        <pkg>cad/simian</pkg>, <pkg>devel/ipv6socket</pkg>,
-        <pkg>emulators/vmware-module</pkg>,
-        <pkg>fonts/acroread-jpnfont</pkg>,
-	<pkg>multimedia/realplayer</pkg>,
-        <pkg>sysutils/storage-manager</pkg>,
-        <pkg>www/ap-aolserver</pkg>, <pkg>www/openacs</pkg>. Try to be
+        <filename role="pkg">cad/simian</filename>,
+	<filename role="pkg">devel/ipv6socket</filename>,
+        <filename role="pkg">emulators/vmware-module</filename>,
+        <filename role="pkg">fonts/acroread-jpnfont</filename>,
+	<filename role="pkg">multimedia/realplayer</filename>,
+        <filename role="pkg">sysutils/storage-manager</filename>,
+        <filename role="pkg">www/ap-aolserver</filename>,
+	<filename role="pkg">www/openacs</filename>. Try to be
         consistent with them.</para>
     </sect2>
     
@@ -521,7 +526,8 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
         varying commands and options have to be passed to the
         compiler, linker, etc. to get the Right Thing, which can be
         pretty annoying especially if you don't have all the machines
-        at your hand to test things.  The <pkg>devel/libtool</pkg> pkg
+        at your hand to test things.  The 
+	<filename role="pkg">devel/libtool</filename> pkg
         can help here, as it just <quote>knows</quote> how to build
         both static and dynamic libraries from a set of source files,
         thus being platform independent.</para>
@@ -860,7 +866,8 @@ pre-configure:
         done by placing the license in
         <filename>pkgsrc/licenses</filename> and setting the
         <varname>LICENSE</varname> variable to a string identifying
-        the license, e.g. in <pkg>graphics/xv</pkg>: </para>
+        the license, e.g. in 
+	<filename role="pkg">graphics/xv</filename>: </para>
 
       <programlisting>LICENSE=        xv-license</programlisting>
 
@@ -1035,7 +1042,8 @@ pre-configure:
         default, a minimum version of 3.12 is required. If the system
         does not provide a <command>makeinfo</command> command or if it
         does not match the required minimum, a build dependency on the
-        <pkg>devel/gtexinfo</pkg> package will be added automatically.
+        <filename role="pkg">devel/gtexinfo</filename> package will
+	be added automatically.
 </para>
     
       <para>The build and installation process of the software provided

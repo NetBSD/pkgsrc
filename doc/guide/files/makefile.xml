@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.16 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.17 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -318,7 +318,7 @@ for_test:
       </programlisting>
 
       <para>For a more complex code snippet and a workaround, see the
-      package <pkg>regress/make-quoting</pkg>, testcase
+      package <filename role="pkg">regress/make-quoting</filename>, testcase
       <varname>bug1</varname>.</para>
 
     </sect2>
