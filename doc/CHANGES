@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10708 2005/07/27 19:19:59 gdt Exp $
+$NetBSD: CHANGES,v 1.10709 2005/07/27 20:26:46 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/gal2 to 2.4.3 [drochner 2005-07-27]
 	Updated chat/libotr to 2.0.2 [gdt 2005-07-27]
 	Updated chat/gaim-otr to 2.0.2 [gdt 2005-07-27]
+	Added devel/picp version 0.6.7 [dogcow 2005-07-27]
