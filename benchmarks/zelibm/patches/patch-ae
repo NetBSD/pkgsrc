@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/07/27 17:06:53 drochner Exp $
+
+--- Makefile.orig	1998-11-30 03:37:23.000000000 +0100
++++ Makefile	2004-04-16 22:14:53.000000000 +0200
+@@ -3,9 +3,9 @@
+ 	       zecos.c zecos_d.c zesinh.c zesinh_d.c zecosh.c zecosh_d.c \
+ 	       zesqrt.c zesqrt_d.c zetan.c zetan_d.c zetanh.c zetanh_d.c
+ 
+-CFLAGS = -O -g -D_GNU_SOURCE -Wall
+-INCLUDES = -I. -I/usr/local/include -I/usr/X11R6/include -I/happy/clown/H-egcs-i686-linux-gnu/include
+-LDFLAGS = -L/usr/local/lib -L/usr/X11R6/lib
++#CFLAGS = -O -g -D_GNU_SOURCE -Wall
++INCLUDES = -I.
++#LDFLAGS = -L/usr/local/lib -L/usr/X11R6/lib
+ 
+ COMPILE = $(CC) -c -o $@ $(CFLAGS) $(INCLUDES) $<
+ 
