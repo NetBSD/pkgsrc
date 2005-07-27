@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:44 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/27 16:21:16 wiz Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
@@ -9,7 +9,7 @@ MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQLCC/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQLCC/  \
 			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQLCC/
 
-MAINTAINER=		dotz@irc.pl
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 COMMENT=		MySQL Control Center
 
