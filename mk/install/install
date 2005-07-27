@@ -1,7 +1,7 @@
 # -*- sh -*-
 # start of install
 #
-# $NetBSD: install,v 1.37 2005/03/21 19:29:46 wiz Exp $
+# $NetBSD: install,v 1.38 2005/07/27 11:54:03 tron Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -9,15 +9,15 @@ PRE-INSTALL)
 	# Require that necessary users and groups exist or else fail the
 	# installation of the package.
 	#
-	case ${_PKG_CREATE_USERGROUP} in
-	YES)	${TEST} -x ./+USERGROUP &&
-			./+USERGROUP ADD ${PKG_METADATA_DIR} ;;
-	esac
-	if ${TEST} -x ./+USERGROUP &&
-	   ./+USERGROUP CHECK-ADD ${PKG_METADATA_DIR}; then
+	if [ -x ./+USERGROUP ]; then
+		case ${_PKG_CREATE_USERGROUP} in
+		YES)	./+USERGROUP ADD ${PKG_METADATA_DIR} ;;
+		esac
+		if ./+USERGROUP CHECK-ADD ${PKG_METADATA_DIR}; then
 		:
-	else
-		exit 1
+		else
+			exit 1
+		fi
 	fi
 	#
 	# Create package directories at pre-install time.
