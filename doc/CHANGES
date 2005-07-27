@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10703 2005/07/26 19:31:22 kristerw Exp $
+$NetBSD: CHANGES,v 1.10704 2005/07/27 06:30:13 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3363,3 +3363,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/wine to 20050725 [adam 2005-07-26]
 	Updated graphics/netpbm to 10.26.12 [adam 2005-07-26]
 	Updated security/amavis to 0.2.1nb5 [kristerw 2005-07-26]
+	Updated editors/vim to 6.3.085 [martti 2005-07-27]
