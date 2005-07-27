@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.32 2005/05/17 19:06:21 rillig Exp $
+# $NetBSD: sunpro.mk,v 1.32.2.1 2005/07/27 05:05:46 snj Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -32,11 +32,13 @@ PKG_CXX:=		${_SUNPRO_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_SUNPRO_VARS}
 
-# SunPro passes rpath directives to the linker using "-R".
+# The Solaris linker uses "-R" for rpath directives.
 _LINKER_RPATH_FLAG=	-R
 
-# SunPro passes rpath directives to the linker using "-R".
-_COMPILER_RPATH_FLAG=	-R
+# SunPro passes rpath directives to the linker using "-R", however
+# some packages require the "-Wl," prefix to recognize linker options.
+# This is transformed by the compiler wrapper to "-R".
+_COMPILER_RPATH_FLAG=	-Wl,-R
 
 # SunPro compiler must be passed certain flags to compile/link 64-bit code.
 _COMPILER_ABI_FLAG.64=	-xtarget=ultra -xarch=v9
