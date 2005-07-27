@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.8 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.9 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -187,15 +187,17 @@ converters    games         mbone         print         x11</programlisting>
       The digest algorithm used was, at one stage, md5, but that was felt
       lacking compared to sha1, and so sha1 is now the default algorithm.
       The distfile size is also generated and stored in new distinfo files.
-      The <pkg>pkgtools/digest</pkg> utility calculates all of the digests
-      in the distinfo file, and it provides various different algorithms.
-      At the current time, the algorithms provided are:
+      The <filename role="pkg">pkgtools/digest</filename> utility 
+      calculates all of the digests in the distinfo file, and it provides 
+      various different algorithms.  At the current time, the algorithms 
+      provided are:
       <emphasis>md5</emphasis>, <emphasis>rmd160</emphasis>,
       <emphasis>sha1</emphasis>, <emphasis>sha256</emphasis>,
       <emphasis>sha384</emphasis> and <emphasis>sha512</emphasis>.</para>
 
     <para>Some packages have different sets of distfiles on a per architecture
-      basis, for example <pkg>www/navigator</pkg>). These are kept in the
+      basis, for example <filename 
+        role="pkg">www/navigator</filename>). These are kept in the
       same distinfo file and care should be taken when upgrading such a
       package to ensure distfile information is not lost.</para>
 
@@ -236,7 +238,8 @@ converters    games         mbone         print         x11</programlisting>
       get stored in the patch files, as these will cause problems when
       later checked into the &os; CVS tree. Use the
       <command>pkgdiff</command> from the 
-      <pkg>pkgtools/pkgdiff</pkg> package to avoid these problems.</para>
+      <filename role="pkg">pkgtools/pkgdiff</filename> package to avoid 
+      these problems.</para>
 
     <para>For even more automation, we recommend using <command>mkpatches</command> from the same
       package to make a whole set of patches. You just have to backup files
@@ -361,8 +364,8 @@ converters    games         mbone         print         x11</programlisting>
     <para> If a package doesn't create a subdirectory for itself (like
       GNU software   does, for instance), but extracts itself in the
       current directory,   you should set <varname>WRKSRC</varname>
-      accordingly, e.g.   <pkg>editors/sam</pkg> again, but the quick
-      answer is: </para>
+      accordingly, e.g.   <filename role="pkg">editors/sam</filename> 
+      again, but the quick answer is: </para>
 
     <programlisting>WRKSRC=             ${WRKDIR}</programlisting>
 
@@ -371,8 +374,10 @@ converters    games         mbone         print         x11</programlisting>
       package doesn't create a subdir with the name of
       <varname>DISTNAME</varname> but some different name, set
       <varname>WRKSRC</varname> to point to the proper name in
-      <filename>${WRKDIR}</filename>. See <pkg>lang/tcl</pkg> and
-      <pkg>x11/tk</pkg> for examples, and here is another one: </para>
+      <filename>${WRKDIR}</filename>. See <filename 
+        role="pkg">lang/tcl</filename> and
+      <filename role="pkg">x11/tk</filename> for examples, and here is 
+      another one: </para>
       
     <programlisting>WRKSRC=         ${WRKDIR}/${DISTNAME}/unix</programlisting>
 
