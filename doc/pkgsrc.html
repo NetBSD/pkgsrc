@@ -3134,17 +3134,18 @@ CFLAGS= -xtarget=ultra -xarch=v9
           <span><strong class="command">make
           show-options</strong></span>, for example:</p>
           <pre class="programlisting">
-The following options are supported by this package:
-        ssl      Enable SSL support.
-Exactly one of the following gecko options is required:
-        firefox  Use firefox as gecko rendering engine.
-        mozilla  Use mozilla as gecko rendering engine.
-At most one of the following database options may be selected:
-        mysql    Enable support for MySQL database.
-        pgsql    Enable support for PostgreSQL database.
+      The following options are supported by this package:
+      ssl      Enable SSL support.
+      Exactly one of the following gecko options is required:
+      firefox  Use firefox as gecko rendering engine.
+      mozilla  Use mozilla as gecko rendering engine.
+      At most one of the following database options may be selected:
+      mysql    Enable support for MySQL database.
+      pgsql    Enable support for PostgreSQL database.
 
-These options are enabled by default: firefox
-These options are currently enabled: mozilla ssl
+      These options are enabled by default: firefox
+      These options are currently enabled: mozilla ssl
+    
 </pre>
 
           <p>The following variables can be defined in <code class=
@@ -8869,6 +8870,21 @@ CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
 
               <li>
                 <p><code class=
+                "varname">PKG_OPTIONS_NONEMPTY_SETS</code> is a
+                list of names of sets of options. At least one
+                option from each set must be selected. The options
+                in each set are listed in <code class=
+                "varname">PKG_OPTIONS_SET.<em class=
+                "replaceable"><code>setname</code></em></code>.
+                Options from the sets will be automatically added
+                to <code class=
+                "varname">PKG_SUPPORTED_OPTIONS</code>. Building
+                the package will fail if no option from the set is
+                selected.</p>
+              </li>
+
+              <li>
+                <p><code class=
                 "varname">PKG_SUGGESTED_OPTIONS</code> is a list of
                 build options which are enabled by default.</p>
               </li>
@@ -11411,40 +11427,54 @@ INTERACTIVE_STAGE= configure install
               </div>
             </div>
 
-            <p>A package may underly a license which the user has
-            or has not agreed to accept. Usually, packages that
-            underly well-known Open Source licenses (e.g. the GNU
-            Public License, GPL) won't have any special license
-            tags added in pkgsrc which require special action by
-            the user of such packages, but there are quite a number
-            of other licenses out there that pkgsrc users may not
-            be able to follow, for whatever reasons. For these
-            cases, pkgsrc contains a mechanism to note that a
-            package underlies a certain license, and the user has
-            to accept the license before the package can be
-            installed.</p>
+            <p>A package may be covered by a license which the user
+            has or has not agreed to accept. For these cases,
+            pkgsrc contains a mechanism to note that a package is
+            covered by a particular license, and the package cannot
+            be built unless the user has accepted the license.
+            (Installation of binary packages are not currently
+            subject to this mechanism.) Packages with licenses that
+            are either Open Source according to the Open Source
+            Initiative or Free according to the Free Software
+            Foundation will not be marked with a license tag.
+            Packages with licenses that have not been determined to
+            meet either definition will be marked with a license
+            tag referring to the license. This will prevent
+            building unless pkgsrc is informed that the license is
+            acceptable, and enables displaying the license.</p>
 
-            <p>Placing a certain package under a certain license
-            works by setting the <code class=
-            "varname">LICENSE</code> variable to a string
-            identifying the license, e.g. in <a xmlns=
+            <p>The license tag mechanism is intended to address
+            copyright-related issues surrounding building,
+            installing and using a package, and not to address
+            redistribution issues (see <code class=
+            "varname">RESTRICTED</code> and <code class=
+            "varname">NO_SRC_ON_FTP</code>, etc.). However, the
+            above definition of licenses for which tags are not
+            needed implies that packages with redistribution
+            restrictions should have tags.</p>
+
+            <p>Denoting that a package is covered by a particular
+            license is done by placing the license in <code class=
+            "filename">pkgsrc/licenses</code> and setting the
+            <code class="varname">LICENSE</code> variable to a
+            string identifying the license, e.g. in <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/graphviz/README.html"
-            class="pkgname">graphics/graphviz</a>:</p>
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/xv/README.html"
+            class="pkgname">graphics/xv</a>:</p>
             <pre class="programlisting">
-LICENSE=        graphviz-license
+LICENSE=        xv-license
 </pre>
 
             <p>When trying to build, the user will get a notice
-            that the package underlies a license which he hasn't
-            accepted (yet):</p>
+            that the package is covered by a license which has not
+            been accepted:</p>
             <pre class="programlisting">
 <code class="prompt">%</code> <strong class=
 "userinput"><code>make</code></strong>
-===&gt; graphviz-1.12 has an unacceptable license: graphviz-license.
-===&gt;     To build this package, add this line to your /etc/mk.conf:
-===&gt;     ACCEPTABLE_LICENSES+=graphviz-license
+===&gt; xv-3.10anb9 has an unacceptable license: xv-license.
 ===&gt;     To view the license, enter "/usr/bin/make show-license".
+===&gt;     To indicate acceptance, add this line to your /etc/mk.conf:
+===&gt;     ACCEPTABLE_LICENSES+=xv-license
 *** Error code 1
 </pre>
 
@@ -11454,7 +11484,7 @@ LICENSE=        graphviz-license
             be added to <code class="filename">/etc/mk.conf</code>
             to indicate acceptance of the particular license:</p>
             <pre class="programlisting">
-ACCEPTABLE_LICENSES+=graphviz-license
+ACCEPTABLE_LICENSES+=xv-license
 </pre>
 
             <p>When adding a package with a new license, the
@@ -11466,13 +11496,17 @@ ACCEPTABLE_LICENSES+=graphviz-license
             variable settings in <code class=
             "filename">pkgsrc/mk/defaults/mk.conf</code>.</p>
 
-            <p>If there is a <span class=
-            "emphasis"><em>really</em></span> pressing need to
-            accept all licenses at once, like when trying to
-            download or mirror all distfiles or doing a bulk build
-            to test if all packages in pkgsrc build, this can be
-            done by setting <code class=
-            "varname">_ACCEPTABLE=yes</code>.</p>
+            <p>The use of <code class=
+            "varname">LICENSE=shareware</code>, <code class=
+            "varname">LICENSE=no-commercial-use</code>, and similar
+            language is deprecated because it does not crisply
+            refer to a particular license text. Another problem
+            with such usage is that it does not enable a user to
+            denote acceptance of the license for a single package
+            without accepting the same license text for another
+            package. In particular, this can be inappropriate when
+            e.g. one accepts a particular license to indicate to
+            pkgsrc that a fee has been paid.</p>
           </div>
 
           <div class="sect2" lang="en" xml:lang="en">
