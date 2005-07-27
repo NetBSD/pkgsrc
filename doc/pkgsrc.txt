@@ -1185,17 +1185,18 @@ experimental features.
 To see which options, if any, a package supports, and which options are
 mutually exclusive, run make show-options, for example:
 
-The following options are supported by this package:
-        ssl      Enable SSL support.
-Exactly one of the following gecko options is required:
-        firefox  Use firefox as gecko rendering engine.
-        mozilla  Use mozilla as gecko rendering engine.
-At most one of the following database options may be selected:
-        mysql    Enable support for MySQL database.
-        pgsql    Enable support for PostgreSQL database.
+      The following options are supported by this package:
+      ssl      Enable SSL support.
+      Exactly one of the following gecko options is required:
+      firefox  Use firefox as gecko rendering engine.
+      mozilla  Use mozilla as gecko rendering engine.
+      At most one of the following database options may be selected:
+      mysql    Enable support for MySQL database.
+      pgsql    Enable support for PostgreSQL database.
 
-These options are enabled by default: firefox
-These options are currently enabled: mozilla ssl
+      These options are enabled by default: firefox
+      These options are currently enabled: mozilla ssl
+
 
 The following variables can be defined in /etc/mk.conf to select which options
 to enable for a package: PKG_DEFAULT_OPTIONS, which can be used to select or
@@ -3533,24 +3534,30 @@ supported by the package, and any default options settings if needed.
  4. PKG_OPTIONS_REQUIRED_GROUPS is like PKG_OPTIONS_OPTIONAL_GROUPS, but
     building the packages will fail if no option from the group is selected.
 
- 5. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
+ 5. PKG_OPTIONS_NONEMPTY_SETS is a list of names of sets of options. At least
+    one option from each set must be selected. The options in each set are
+    listed in PKG_OPTIONS_SET.setname. Options from the sets will be
+    automatically added to PKG_SUPPORTED_OPTIONS. Building the package will
+    fail if no option from the set is selected.
+
+ 6. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
     default.
 
- 6. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE: option" pairs that map
+ 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE: option" pairs that map
     legacy /etc/mk.conf variables to their option counterparts. Pairs should be
     added with "+=" to keep the listing of global legacy variables. A warning
     will be issued if the user uses a legacy variable.
 
- 7. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option: new-option" pairs that
+ 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option: new-option" pairs that
     map options that have been renamed to their new counterparts. Pairs should
     be added with "+=" to keep the listing of global legacy options. A warning
     will be issued if the user uses a legacy option.
 
- 8. PKG_LEGACY_OPTIONS is a list of options implied by deprecated variables
+ 9. PKG_LEGACY_OPTIONS is a list of options implied by deprecated variables
     used. This can be used for cases that neither PKG_OPTIONS_LEGACY_VARS nor
     PKG_OPTIONS_LEGACY_OPTS can handle, e. g. when PKG_OPTIONS_VAR is renamed.
 
- 9. PKG_OPTIONS_DEPRECATED_WARNINGS is a list of warnings about deprecated
+10. PKG_OPTIONS_DEPRECATED_WARNINGS is a list of warnings about deprecated
     variables or options used, and what to use instead.
 
 A package should never modify PKG_DEFAULT_OPTIONS or the variable named in
@@ -4638,44 +4645,58 @@ INTERACTIVE_STAGE= configure install
 
 15.5.2. Handling licenses
 
-A package may underly a license which the user has or has not agreed to accept.
-Usually, packages that underly well-known Open Source licenses (e.g. the GNU
-Public License, GPL) won't have any special license tags added in pkgsrc which
-require special action by the user of such packages, but there are quite a
-number of other licenses out there that pkgsrc users may not be able to follow,
-for whatever reasons. For these cases, pkgsrc contains a mechanism to note that
-a package underlies a certain license, and the user has to accept the license
-before the package can be installed.
+A package may be covered by a license which the user has or has not agreed to
+accept. For these cases, pkgsrc contains a mechanism to note that a package is
+covered by a particular license, and the package cannot be built unless the
+user has accepted the license. (Installation of binary packages are not
+currently subject to this mechanism.) Packages with licenses that are either
+Open Source according to the Open Source Initiative or Free according to the
+Free Software Foundation will not be marked with a license tag. Packages with
+licenses that have not been determined to meet either definition will be marked
+with a license tag referring to the license. This will prevent building unless
+pkgsrc is informed that the license is acceptable, and enables displaying the
+license.
 
-Placing a certain package under a certain license works by setting the LICENSE
-variable to a string identifying the license, e.g. in graphics/graphviz:
+The license tag mechanism is intended to address copyright-related issues
+surrounding building, installing and using a package, and not to address
+redistribution issues (see RESTRICTED and NO_SRC_ON_FTP, etc.). However, the
+above definition of licenses for which tags are not needed implies that
+packages with redistribution restrictions should have tags.
 
-LICENSE=        graphviz-license
+Denoting that a package is covered by a particular license is done by placing
+the license in pkgsrc/licenses and setting the LICENSE variable to a string
+identifying the license, e.g. in graphics/xv:
 
-When trying to build, the user will get a notice that the package underlies a
-license which he hasn't accepted (yet):
+LICENSE=        xv-license
+
+When trying to build, the user will get a notice that the package is covered by
+a license which has not been accepted:
 
 % make
-===> graphviz-1.12 has an unacceptable license: graphviz-license.
-===>     To build this package, add this line to your /etc/mk.conf:
-===>     ACCEPTABLE_LICENSES+=graphviz-license
+===> xv-3.10anb9 has an unacceptable license: xv-license.
 ===>     To view the license, enter "/usr/bin/make show-license".
+===>     To indicate acceptance, add this line to your /etc/mk.conf:
+===>     ACCEPTABLE_LICENSES+=xv-license
 *** Error code 1
 
 The license can be viewed with make show-license, and if it is considered
 appropriate, the line printed above can be added to /etc/mk.conf to indicate
 acceptance of the particular license:
 
-ACCEPTABLE_LICENSES+=graphviz-license
+ACCEPTABLE_LICENSES+=xv-license
 
 When adding a package with a new license, the license text should be added to
 pkgsrc/licenses for displaying. A list of known licenses can be seen in this
 directory as well as by looking at the list of (commented out)
 ACCEPTABLE_LICENSES variable settings in pkgsrc/mk/defaults/mk.conf.
 
-If there is a really pressing need to accept all licenses at once, like when
-trying to download or mirror all distfiles or doing a bulk build to test if all
-packages in pkgsrc build, this can be done by setting _ACCEPTABLE=yes.
+The use of LICENSE=shareware, LICENSE=no-commercial-use, and similar language
+is deprecated because it does not crisply refer to a particular license text.
+Another problem with such usage is that it does not enable a user to denote
+acceptance of the license for a single package without accepting the same
+license text for another package. In particular, this can be inappropriate when
+e.g. one accepts a particular license to indicate to pkgsrc that a fee has been
+paid.
 
 15.5.3. Installing score files
 
