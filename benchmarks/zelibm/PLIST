@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/27 17:06:53 drochner Exp $
+bin/libmtest
