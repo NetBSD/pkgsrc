@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.5 2005/06/03 16:05:30 reed Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.6 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -90,7 +90,8 @@
       <listitem>
 	<para><filename>curses.buildlink3.mk</filename> If the system
           comes with neither Curses nor NCurses, this will take care
-	  to install the <pkg>devel/ncurses</pkg> package.</para>  
+	  to install the <filename 
+	    role="pkg">devel/ncurses</filename> package.</para>  
       </listitem>
 
       <listitem>
@@ -103,8 +104,9 @@
       <listitem>
 	<para><filename>motif.buildlink3.mk</filename> checks
 	  for a system-provided
-	  Motif installation or adds a dependency on <pkg>x11/lesstif</pkg> or
-	  <pkg>x11/openmotif</pkg>;</para>
+	  Motif installation or adds a dependency on <filename 
+	    role="pkg">x11/lesstif</filename> or
+	  <filename role="pkg">x11/openmotif</filename>;</para>
       </listitem>
 
       <listitem>
@@ -122,7 +124,8 @@
       <listitem>
 	<para><filename>pthread.buildlink3.mk</filename> uses the value of
 	  <varname>PTHREAD_OPTS</varname> and checks for native pthreads or adds
-	  a dependency on <pkg>devel/pth</pkg> as needed;</para>
+	  a dependency on <filename 
+	    role="pkg">devel/pth</filename> as needed;</para>
       </listitem>
 
       <listitem>
@@ -150,7 +153,8 @@
       headers and libraries that it needs in turn.</para>
 
     <para> To generate an initial <filename>buildlink3.mk</filename>
-      file for further editing, Rene Hexel's <pkg>pkgtools/createbuildlink</pkg>
+      file for further editing, Rene Hexel's <filename 
+        role="pkg">pkgtools/createbuildlink</filename>
       package is highly recommended.  For most packages, the following
       command will generate a good starting point for
       <filename>buildlink3.mk</filename> files:</para>
