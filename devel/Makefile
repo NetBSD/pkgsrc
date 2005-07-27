@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.666 2005/07/26 10:25:46 wiz Exp $
+# $NetBSD: Makefile,v 1.667 2005/07/27 20:26:46 dogcow Exp $
 #
 
 COMMENT=	Development utilities
@@ -488,6 +488,7 @@ SUBDIR+=	php-shmop
 SUBDIR+=	php-sysvsem
 SUBDIR+=	php-sysvshm
 SUBDIR+=	physfs
+SUBDIR+=	picp
 SUBDIR+=	pilrc
 SUBDIR+=	pkg-config
 SUBDIR+=	ply
