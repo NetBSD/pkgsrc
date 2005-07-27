@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.10 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.11 2005/07/27 21:29:51 rpaulo Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -65,9 +65,9 @@
         moved, since removing them could cause missing dependencies. To
         use these packages, add the <filename>vulnerable</filename>
         directory to your <varname>PKG_PATH</varname>. However, you should run
-        <pkg>security/audit-packages</pkg> regularly, and especially after
-        installing new packages, and verify that the vulnerabilities are
-        acceptable for your configuration. An example
+        <filename role="pkg">security/audit-packages</filename> regularly, 
+	and especially after installing new packages, and verify that the 
+	vulnerabilities are acceptable for your configuration. An example
         <varname>PKG_PATH</varname> would be:
       <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</filename>
         Please note that semicolon (';') is a shell meta-character, so

@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.13 2005/06/03 12:27:48 jmmv Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.14 2005/07/27 21:29:50 rpaulo Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -81,8 +81,8 @@ with each package.</para>
 <itemizedlist>
 
   <listitem>
-    <para><pkg>pkgtools/x11-links</pkg>: Symlinks for use by
-    buildlink.</para>
+    <para><filename role="pkg">pkgtools/x11-links</filename>: 
+      Symlinks for use by buildlink.</para>
   </listitem>
 
 </itemizedlist>
@@ -92,25 +92,26 @@ with each package.</para>
 <itemizedlist>
 
   <listitem>
-    <para><pkg>pkgtools/digest</pkg>: Calculates various kinds of
-    checksums (including SHA1).</para>
+    <para><filename role="pkg">pkgtools/digest</filename>: 
+      Calculates various kinds of checksums (including SHA1).</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/libnbcompat</pkg>: Compatibility library for
-    pkgsrc tools.</para>
+    <para><filename role="pkg">pkgtools/libnbcompat</filename>: 
+      Compatibility library for pkgsrc tools.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/mtree</pkg>: Installed on non-BSD systems due to
-    lack of native mtree.
+    <para><filename role="pkg">pkgtools/mtree</filename>: Installed on 
+      non-BSD systems due to lack of native mtree.
   </para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/pkg_install</pkg>: Up-to-date replacement for
-    <filename>/usr/sbin/pkg_install</filename>, or for use on operating
-    systems where pkg_install is not present.</para>
+    <para><filename role="pkg">pkgtools/pkg_install</filename>: 
+      Up-to-date replacement for 
+      <filename>/usr/sbin/pkg_install</filename>, or for use on operating
+      systems where pkg_install is not present.</para>
   </listitem>
 
 </itemizedlist>
@@ -120,26 +121,28 @@ with each package.</para>
 <itemizedlist>
 
   <listitem>
-    <para><pkg>pkgtools/pkg_tarup</pkg>: Create a binary package from an
-    already-installed package.  Used by <command>make replace</command> to
-    save the old package.</para>
+    <para><filename role="pkg">pkgtools/pkg_tarup</filename>: 
+      Create a binary package from an
+      already-installed package.  Used by <command>make replace</command> to
+      save the old package.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/dfdisk</pkg>: Adds extra functionality to pkgsrc,
-    allowing it to fetch distfiles from multiple locations.  It currently
-    supports the following methods: multiple CD-ROMs and network FTP/HTTP
-    connections.</para>
+    <para><filename role="pkg">pkgtools/dfdisk</filename>: 
+      Adds extra functionality to pkgsrc, allowing it to fetch distfiles 
+      from multiple locations. It currently supports the following 
+      methods: multiple CD-ROMs and network FTP/HTTP connections.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/xpkgwedge</pkg>: Put X11 packages someplace else
-    (enabled by default).</para>
+    <para><filename role="pkg">pkgtools/xpkgwedge</filename>: Put X11 
+      packages someplace else (enabled by default).</para>
   </listitem>
 
   <listitem>
-    <para><pkg>devel/cpuflags</pkg>: Determine the best compiler flags
-    to optimise code for your current CPU and compiler.</para>
+    <para><filename role="pkg">devel/cpuflags</filename>: Determine the
+      best compiler flags to optimise code for your current CPU and 
+      compiler.</para>
   </listitem>
 
 </itemizedlist>
@@ -150,29 +153,32 @@ etc:</para>
 <itemizedlist>
 
   <listitem>
-    <para><pkg>pkgtools/pkg_chk</pkg>: Reports on packages whose installed
-    versions do not match the latest pkgsrc entries.</para>
+    <para><filename role="pkg">pkgtools/pkg_chk</filename>: Reports on 
+      packages whose installed versions do not match the latest pkgsrc 
+      entries.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/pkgdep</pkg>: Makes dependency graphs of packages,
-    to aid in choosing a strategy for updating.</para>
+    <para><filename role="pkg">pkgtools/pkgdep</filename>: Makes 
+      dependency graphs of packages, to aid in choosing a strategy for 
+      updating.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/pkgdepgraph</pkg>: Makes graphs from the output of
-    <pkg>pkgtools/pkgdep</pkg> (uses graphviz).</para>
+    <para><filename role="pkg">pkgtools/pkgdepgraph</filename>: Makes 
+      graphs from the output of <filename 
+        role="pkg">pkgtools/pkgdep</filename> (uses graphviz).</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/pkglint</pkg>: The pkglint(1) program checks a
-    pkgsrc entry for errors, lintpkgsrc(1) does various checks on the
-    complete pkgsrc system.</para>
+    <para><filename role="pkg">pkgtools/pkglint</filename>: The 
+      pkglint(1) program checks a pkgsrc entry for errors, lintpkgsrc(1) 
+      does various checks on the complete pkgsrc system.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/pkgsurvey</pkg>: Report what packages you have
-    installed.</para>
+    <para><filename role="pkg">pkgtools/pkgsurvey</filename>: Report what 
+      packages you have installed.</para>
   </listitem>
 
 </itemizedlist>
@@ -182,19 +188,20 @@ etc:</para>
 <itemizedlist>
 
   <listitem>
-    <para><pkg>pkgtools/pkgdiff</pkg>: Automate making and maintaining
-    patches for a package (includes pkgdiff, pkgvi, mkpatches,
-    etc.).</para>
+    <para><filename role="pkg">pkgtools/pkgdiff</filename>: Automate 
+      making and maintaining patches for a package (includes pkgdiff, 
+      pkgvi, mkpatches, etc.).</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/rpm2pkg</pkg>, <pkg>pkgtools/url2pkg</pkg>: Aids in
-    converting to pkgsrc.</para>
+    <para><filename role="pkg">pkgtools/rpm2pkg</filename>, 
+      <filename role="pkg">pkgtools/url2pkg</filename>: Aids in
+      converting to pkgsrc.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/gensolpkg</pkg>: Convert pkgsrc to a Solaris
-    package.</para>
+    <para><filename role="pkg">pkgtools/gensolpkg</filename>: Convert 
+      pkgsrc to a Solaris package.</para>
   </listitem>
 
 </itemizedlist>
@@ -205,18 +212,18 @@ utilities)</para>
 <itemizedlist>
 
   <listitem>
-    <para><pkg>pkgtools/pkgconflict</pkg>: Find packages that conflict but
-    aren't marked as such.</para>
+    <para><filename role="pkg">pkgtools/pkgconflict</filename>: Find 
+      packages that conflict but aren't marked as such.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/pkg_comp</pkg>: Build packages in a chrooted
-    area.</para>
+    <para><filename role="pkg">pkgtools/pkg_comp</filename>: Build 
+      packages in a chrooted area.</para>
   </listitem>
 
   <listitem>
-    <para><pkg>pkgtools/libkver</pkg>: Spoof kernel version for chrooted
-    cross builds.</para>
+    <para><filename role="pkg">pkgtools/libkver</filename>: Spoof 
+      kernel version for chrooted cross builds.</para>
   </listitem>
 
 </itemizedlist>
@@ -405,14 +412,15 @@ by running:</para>
 <title>What does <quote>Don't know how to make
 /usr/share/tmac/tmac.andoc</quote> mean?</title>
 
-<para>When compiling the <pkg>pkgtools/pkg_install</pkg> package, you
-get the error from make that it doesn't know how to make
+<para>When compiling the <filename role="pkg">pkgtools/pkg_install</filename>
+package, you get the error from make that it doesn't know how to make
 <filename>/usr/share/tmac/tmac.andoc</filename>? This indicates that
 you don't have installed the <quote>text</quote> set (nroff, ...) from
 the NetBSD base distribution on your machine.  It is recommended to do
 that to format manpages.</para>
 
-<para>In the case of the <pkg>pkgtools/pkg_install</pkg> package, you
+<para>In the case of the <filename 
+  role="pkg">pkgtools/pkg_install</filename> package, you
 can get away with setting <varname>NOMAN=YES</varname> either in the
 environment or in <filename>/etc/mk.conf</filename>.</para>
 
@@ -446,8 +454,8 @@ the one that corresponds to your release (determine via <command>uname
 password for each required package installed.  To avoid this, the sudo
 package can be used, which does password caching over a limited time.  To
 use it, install sudo (either as binary package or from
-<pkg>security/sudo</pkg>) and then put the following into your
-<filename>/etc/mk.conf</filename>:</para>
+<filename role="pkg">security/sudo</filename>) and then put the following 
+into your <filename>/etc/mk.conf</filename>:</para>
 
 <programlisting>.if exists(${LOCALBASE}/bin/sudo)
 SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
@@ -495,8 +503,9 @@ attackers.  In an effort to lessen the exposure, the NetBSD packages team
 maintains a database of known-exploits to packages which have at one time
 been included in pkgsrc.  The database can be downloaded automatically, and
 a security audit of all packages installed on a system can take place.  To
-do this, install the <pkg>security/audit-packages</pkg> package.  It has
-two components:</para>
+do this, install the <filename 
+  role="pkg">security/audit-packages</filename> package.  It has two 
+components:</para>
 
 <orderedlist>
 
@@ -520,8 +529,9 @@ two components:</para>
 
 </orderedlist>
 
-<para>Use of the <pkg>security/audit-packages</pkg> package is strongly
-recommended!  After <quote>audit-packages</quote> is installed, please read
+<para>Use of the <filename role="pkg">security/audit-packages</filename> 
+package is strongly recommended!  After 
+<quote>audit-packages</quote> is installed, please read
 the package's message, which you can get by running <userinput>pkg_info -D
 audit-package</userinput>.</para>
 
