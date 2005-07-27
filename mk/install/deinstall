@@ -1,7 +1,7 @@
 # -*- sh -*-
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.33 2005/03/21 19:29:46 wiz Exp $
+# $NetBSD: deinstall,v 1.34 2005/07/27 16:18:54 jlam Exp $
 
 case ${STAGE} in
 VIEW-DEINSTALL)
@@ -9,7 +9,7 @@ VIEW-DEINSTALL)
 	YES)
 		case ${PKG_SYSCONFDEPOTBASE} in
 		"")
-			${TEST} -x ./+FILES &&
+			${TEST} ! -x ./+FILES ||
 				./+FILES VIEW-REMOVE ${PREFIX} ${PKG_PREFIX}
 			;;
 		*)
@@ -33,11 +33,11 @@ DEINSTALL)
 	# config file.
 	#
 	case ${_PKG_CONFIG} in
-	YES)	${TEST} -x ./+FILES &&
+	YES)	${TEST} ! -x ./+FILES ||
 			./+FILES REMOVE ${PKG_METADATA_DIR} ;;
 	esac
 	case ${_PKG_CONFIG}${_PKG_RCD_SCRIPTS} in
-	YESYES)	${TEST} -x ./+RCD_SCRIPTS &&
+	YESYES)	${TEST} ! -x ./+RCD_SCRIPTS ||
 			./+RCD_SCRIPTS REMOVE ${PKG_METADATA_DIR} ;;
 	esac
 	;;
@@ -54,23 +54,23 @@ POST-DEINSTALL)
 	# Remove empty directories and unused users/groups.
 	#
 	case ${_PKG_CONFIG} in
-	YES)	${TEST} -x ./+DIRS &&
+	YES)	${TEST} ! -x ./+DIRS ||
 			./+DIRS REMOVE ${PKG_METADATA_DIR} ;;
 	esac
 	case ${_PKG_CREATE_USERGROUP} in
-	YES)	${TEST} -x ./+USERGROUP &&
+	YES)	${TEST} ! -x ./+USERGROUP ||
 			./+USERGROUP REMOVE ${PKG_METADATA_DIR} ;;
 	esac
 	#
 	# Check for any existing bits after we're finished de-installing.
 	#
-	${TEST} -x ./+USERGROUP &&
+	${TEST} ! -x ./+USERGROUP ||
 		./+USERGROUP CHECK-REMOVE ${PKG_METADATA_DIR}
-	${TEST} -x ./+FILES &&
+	${TEST} ! -x ./+FILES ||
 		./+FILES CHECK-REMOVE ${PKG_METADATA_DIR}
-	${TEST} -x ./+RCD_SCRIPTS &&
+	${TEST} ! -x ./+RCD_SCRIPTS ||
 		./+RCD_SCRIPTS CHECK-REMOVE ${PKG_METADATA_DIR}
-	${TEST} -x ./+DIRS &&
+	${TEST} ! -x ./+DIRS ||
 		./+DIRS CHECK-REMOVE ${PKG_METADATA_DIR}
 	;;
 esac

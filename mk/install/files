@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: files,v 1.5 2005/04/20 17:13:28 seb Exp $
+# $NetBSD: files,v 1.6 2005/07/27 16:18:54 jlam Exp $
 #
 # +FILES - reference-counted configuration file management script
 #
@@ -86,7 +86,7 @@ ADD)
 		token="$shadow_dir/${PKGNAME}"
 		if ${TEST} ! -d "$shadow_dir"; then
 			${MKDIR} $shadow_dir
-			${TEST} -f "$file" &&
+			${TEST} ! -f "$file" ||
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
 		if ${TEST} -f "$token" && \
@@ -163,7 +163,7 @@ REMOVE)
 				if ${TEST} -f "$preexist"; then
 					:
 				elif ${TEST} -f "$file" -a -f "$f_eg" && \
-					     ${CMP} -s "$file" "$f_eg"; then
+				     ${CMP} -s "$file" "$f_eg"; then
 					${RM} -f "$file"
 				fi
 				${RM} -f $perms $preexist $token $token.tmp.*
@@ -198,7 +198,7 @@ CHECK-ADD)
 	{ while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
 		""|[!/]*)	continue ;;
-		*)		${TEST} -f "$file" && continue ;;
+		*)		${TEST} ! -f "$file" || continue ;;
 		esac
 		case $f_flags in
 		*c*)	;;
@@ -226,7 +226,7 @@ CHECK-ADD)
 			${ECHO} "	$file (o=$f_user, g=$f_group, m=$f_mode)"
 			;;
 		esac
-		${TEST} -f "$f_eg" && ${ECHO} "	    [$f_eg]"
+		${TEST} ! -f "$f_eg" || ${ECHO} "	    [$f_eg]"
 	done
 	case "$printed_header" in
 	yes)	${ECHO} ""
@@ -245,7 +245,7 @@ CHECK-REMOVE)
 		*)		${TEST} -f "$file" || continue ;;
 		esac
 		shadow_dir="${PKG_REFCOUNT_FILES_DBDIR}$file"
-		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
+		${TEST} ! -d "$shadow_dir" || continue	# refcount isn't zero
 		case "$printed_header" in
 		yes)	;;
 		*)	printed_header=yes
