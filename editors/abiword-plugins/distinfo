@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2005/06/30 13:17:17 adam Exp $
+$NetBSD: distinfo,v 1.12 2005/07/28 15:21:42 adam Exp $
 
-SHA1 (abiword-2.2.8.tar.bz2) = e97aacc9b623a2ab2ff9e23502f4367072114be7
-RMD160 (abiword-2.2.8.tar.bz2) = 63df8496a609dcf3b32bdb7b377a618a67b633e6
-Size (abiword-2.2.8.tar.bz2) = 23918235 bytes
+SHA1 (abiword-2.2.9.tar.bz2) = ad7a78d179be6844542c837454f47e4efcfc195f
+RMD160 (abiword-2.2.9.tar.bz2) = a0b9d8977379b89e3388c0f4333001226e88dd88
+Size (abiword-2.2.9.tar.bz2) = 23933509 bytes
