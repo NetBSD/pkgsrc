@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3763 2005/07/26 13:25:44 adam Exp $
+$NetBSD: TODO,v 1.3764 2005/07/28 10:26:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -310,7 +310,6 @@ Suggested package updates
 	o acpi-iasl-20040715
 	o advancecomp-1.14
 	o aewm++-1.0.27
-	o afterstep-2.1.2
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
 	o amavis-0.3.12
