@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3768 2005/07/28 13:53:09 adam Exp $
+$NetBSD: TODO,v 1.3769 2005/07/28 15:15:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -718,6 +718,7 @@ Suggested package updates
 	o openssl-0.9.8
 	o openttd-0.4.0 [pkg/30238]
 	o openvpn-2.0 [pkg/30239]
+	o opera-8.02
 	o oroborus-2.0.13.1
 	o osh-050219
 	o oss-3.99.2d
@@ -1127,6 +1128,8 @@ Suggested package updates
 	o xerces-j-2.6.2
 	o xfe-0.72
 	o xfmail-1.5.4
+	o xine-lib-1.1.0
+	o xine-ui-0.99.4
 	o xkbset-0.5
 	o xlispstat-3.52.20
 	o xlog-1.2.2
