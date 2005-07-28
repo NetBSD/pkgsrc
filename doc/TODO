@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3765 2005/07/28 11:05:36 wiz Exp $
+$NetBSD: TODO,v 1.3766 2005/07/28 11:27:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1100,7 +1100,6 @@ Suggested package updates
 	o webmin-1.220
 	o weechat-0.1.1
 	o weewm-0.01
-	o wesnoth-0.9.4
 	o winbind-3.0.13
 	o windowlab-1.32
 	o wmbiff-0.4.26
