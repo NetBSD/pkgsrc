@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.47 2005/07/28 13:22:08 wiz Exp $
+# $NetBSD: bsd.options.mk,v 1.48 2005/07/28 15:17:55 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -176,7 +176,7 @@ _PKG_OPTIONS_GROUP_MAP.${_opt_}=${_grp_}
 #
 _PKG_OPTIONS_ALL_SETS:=#empty
 .for _set_ in ${PKG_OPTIONS_NONEMPTY_SETS}
-.  if !defined(PKT_OPTIONS_SET.${_set_}) || empty(PKT_OPTIONS_SET.${_set_})
+.  if !defined(PKG_OPTIONS_SET.${_set_}) || empty(PKG_OPTIONS_SET.${_set_})
 PKG_FAIL_REASON:="bsd.options.mk: PKG_OPTIONS_SET."${_set_:Q}" must be non-empty."
 .  endif
 .  for _opt_ in ${PKG_OPTIONS_SET.${_set_}}
@@ -304,7 +304,7 @@ PKG_OPTIONS:=	${PKG_OPTIONS} ${_opt_}
 
 .for _set_ in ${PKG_OPTIONS_NONEMPTY_SETS}
 _ISEMPTY:=true
-.  for _opt_ in ${PKG_OPTIONS_SET.${_set_}
+.  for _opt_ in ${PKG_OPTIONS_SET.${_set_}}
 .    if !empty(PKG_OPTIONS:M${_opt_})
 _ISEMPTY:=false
 .    endif
