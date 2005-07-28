@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 18:43:53 wiz Exp $
+$NetBSD: distinfo,v 1.9 2005/07/28 10:25:14 adam Exp $
 
-SHA1 (AfterStep-2.00.01.tar.gz) = fb75266aa3ac1634e7ad16eaf99c60e5962165f7
-RMD160 (AfterStep-2.00.01.tar.gz) = 517f755fb4d437f27e5e1815b9af7068cad7766f
-Size (AfterStep-2.00.01.tar.gz) = 4903186 bytes
+SHA1 (AfterStep-2.1.2.tar.bz2) = c367e7c73561ddf03b3725f80d2f39f50d2b45bd
+RMD160 (AfterStep-2.1.2.tar.bz2) = f891ded642b9190bd261f3e3f92cb595da2d785b
+Size (AfterStep-2.1.2.tar.bz2) = 5079333 bytes
