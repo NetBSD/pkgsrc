@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.27 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.28 2005/07/28 11:05:36 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -325,24 +325,22 @@
     <sect2 id="not-building-packages">
       <title>Packages that cannot or should not be built</title>
     
-      <para>
-        There are several reasons why a package might be instructed to not
-        build under certain circumstances. If the package builds and runs
-        on most platforms, the exceptions should be noted with
-        <varname>NOT_FOR_PLATFORM</varname>.  If the package builds and
-        runs on a small handful of platforms, set
-        <varname>ONLY_FOR_PLATFORM</varname> instead. If the package
-        should be skipped (for example, because it provides functionality
-        already provided by the system), set
-        <varname>PKG_SKIP_REASON</varname> to a descriptive message. If
-        the package should fail because some preconditions are not met,
-        set <varname>PKG_FAIL_REASON</varname> to a descriptive message.
-</para> 
-    
-      <para><varname>IGNORE</varname> is deprecated because it didn't
-        provide enough information to determine whether the build should
-        fail. 
-</para>  
+      <para>There are several reasons why a package might be
+        instructed to not build under certain circumstances. If the
+        package builds and runs on most platforms, the exceptions
+        should be noted with <varname>NOT_FOR_PLATFORM</varname>.  If
+        the package builds and runs on a small handful of platforms,
+        set <varname>ONLY_FOR_PLATFORM</varname> instead.
+	Both <varname>ONLY_FOR_PLATFORM</varname> and
+        <varname>NOT_FOR_PLATFORM</varname> are OS triples
+        (OS-version-platform) that can use glob-style
+        wildcards.</para>
+      <para>If the package should be skipped (for example, because it
+        provides functionality already provided by the system), set
+        <varname>PKG_SKIP_REASON</varname> to a descriptive message.
+        If the package should fail because some preconditions are not
+        met, set <varname>PKG_FAIL_REASON</varname> to a descriptive
+        message.</para>
     </sect2>
     
     
