@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/06/30 13:16:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/07/28 15:22:07 adam Exp $
 bin/AbiWord-2.2
 bin/abiword
 bin/ttfadmin.sh
@@ -199,6 +199,7 @@ share/AbiSuite-2.2/AbiWord/help/en-US/howtoexporthtml.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtoexporthtml.info
 share/AbiSuite-2.2/AbiWord/help/en-US/howtohistory.abw
 share/AbiSuite-2.2/AbiWord/help/en-US/howtohistory.html
+share/AbiSuite-2.2/AbiWord/help/en-US/howtohistory.info
 share/AbiSuite-2.2/AbiWord/help/en-US/howtolists.abw
 share/AbiSuite-2.2/AbiWord/help/en-US/howtolists.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtolists.info
@@ -215,6 +216,7 @@ share/AbiSuite-2.2/AbiWord/help/en-US/howtoprefs.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtoprefs.info
 share/AbiSuite-2.2/AbiWord/help/en-US/howtorevisions.abw
 share/AbiSuite-2.2/AbiWord/help/en-US/howtorevisions.html
+share/AbiSuite-2.2/AbiWord/help/en-US/howtorevisions.info
 share/AbiSuite-2.2/AbiWord/help/en-US/howtotables.abw
 share/AbiSuite-2.2/AbiWord/help/en-US/howtotables.html
 share/AbiSuite-2.2/AbiWord/help/en-US/howtotables.info
