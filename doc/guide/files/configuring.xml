@@ -1,13 +1,96 @@
-<!-- $NetBSD: configuring.xml,v 1.3 2005/07/26 17:29:13 wiz Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.4 2005/07/28 11:05:36 wiz Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
 
-  <!-- General configuration -->
-  <!--	DISTDIR -->
-  <!--	PACKAGES -->
-  <!--	WRKOBJDIR -->
-  <!--	FAILOVER_FETCH -->
+  <sect1 id="general-configuration">
+    <title>General configuration</title>
+
+    <para>In this section you can find some variables that apply all
+      pkgsrc packages.  The preferred method of setting them is by
+      setting them in <filename>/etc/mk.conf</filename>.
+      <unorderedlist>
+	<listitem><para><varname>LOCALBASE</varname>: Where
+	    packages will be installed. The default is
+	    <filename>/usr/pkg</filename>. Do not mix binary packages
+	    with different <varname>LOCALBASE</varname>s!</para>
+	</listitem>
+	<listitem><para><varname>CROSSBASE</varname>: Where
+	    <quote>cross</quote> category packages will be
+	    installed. The default is
+	    <filename>${LOCALBASE}/cross</filename>.</para>
+	</listitem>
+	<listitem><para><varname>X11BASE</varname>: Where
+	    X11 is installed on the system. The default is
+	    <filename>/usr/X11R6</filename>.</para>
+	</listitem>
+	<listitem><para><varname>DISTDIR</varname>: Where to store the
+	    downloaded copies of the original source distributions used
+	    for building pkgsrc packages. The default is
+	    <filename>${PKGSRCDIR}/distfiles</filename>.</para>
+	</listitem>
+	<listitem><para><varname>MASTER_SITE_OVERRIDE</varname>:
+	    If set, override the packages'
+	    <varname>MASTER_SITES</varname> with this value.</para>
+	</listitem>
+	<listitem><para><varname>MASTER_SITE_BACKUP</varname>:
+	    Backup location(s) for distribution files and patch files
+	    if not found locally or in
+	    <filename>${MASTER_SITES}</filename> or
+	    <filename>${PATCH_SITES}</filename> respectively.
+	    The defaults are
+	    <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/</filename>
+	    and
+	    <filename>ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/</filename>.</para>
+	</listitem>
+	<listitem><para><varname>BINPKG_SITES</varname>:
+	    List of sites carrying binary pkgs.</para>
+	</listitem>
+      </unorderedlist>
+    </para>
+  </sect1>
+
+  <sect1 tag="general-configuration">
+    <title>General configuration</title>
+    <para>XXX
+      <unorderedlist>
+	<listitem><para><varname>PACKAGES</varname>: The top level
+	    directory for the binary packages. The default is
+	    <filename>${PKGSRCDIR}/packages</filename>.</para>
+	</listitem>
+	<listitem><para><varname>WRKOBJDIR</varname>:
+	    The top level directory where, if defined, the separate
+	    working directories will get created, and symbolically
+	    linked to from <filename>${WRKDIR}</filename> (see below).
+	    This is useful for building packages on several
+	    architectures, then <filename>${PKGSRCDIR}</filename>
+	    can be NFS-mounted while <filename>${WRKOBJDIR}</filename>
+	    is local to every architecture. (It should be noted that
+	    <varname>PKGSRCDIR</varname> should not be set by the user
+	    &mdash; it is an internal definition which refers to the
+	    root of the pkgsrc tree. It is possible to have many
+	    pkgsrc tree instances.)</para>
+	</listitem>
+	<listitem><para><varname>LOCALPATCHES</varname>:
+	    Directory for local patches that aren't part of pkgsrc.
+	    See <xref linkend="components.patches" /> for more
+	    information. <replaceable>rel</replaceable> and
+	    <replaceable>arch</replaceable> are replaced with OS
+	    release (<quote>2.0</quote>, etc.) and architecture
+	    (<quote>mipsel</quote>, etc.).</para>
+	</listitem>
+	<listitem><para><varname>PKGMAKECONF</varname>: Location of
+	    the <filename>mk.conf</filename> file used by a package's
+	    BSD-style Makefile. If this is not set,
+	    <varname>MAKECONF</varname> is set to
+	    <filename>/dev/null</filename> to avoid picking up
+	    settings used by builds in <filename>/usr/src</filename>.</para>
+	</listitem>
+	<!--	DISTDIR -->
+	<!--	FAILOVER_FETCH -->
+      </unorderedlist>
+    </para>
+  </sect1>
 
   <!-- Compiler settings -->
   <!--	PKGSRC_COMPILER -->
@@ -21,15 +104,39 @@
   <!--	ALLOW_VULNERABLE_PACKAGES -->
   <!--	PKGVULNDIR -->
 
-  <!-- Developer/advanced settings -->
-  <!--	IGNORE_RECOMMENDED -->
-  <!--	PKG_DEVELOPER -->
+  <sect1 id="developer-advanced-settings">
+    <title>Developer/advanced settings</title>
+
+    <!--	IGNORE_RECOMMENDED -->
+    <para>XXX
+      <unorderedlist>
+	<listitem><para><varname>PKG_DEVELOPER</varname>:
+	    Run some sanity checks that package developers want:
+	    <unorderedlist>
+	      <listitem>make sure patches apply with zero fuzz</listitem>
+	      <listitem>run check-shlibs to see that all binaries will
+		find their shared libs.</listitem>
+	      <!-- XXX: some more stuff -->
+	    </unorderedlist></para></listitem>
+	<listitem><para><varname>PKG_DEBUG_LEVEL</varname>:
+	    The level of debugging output which is displayed whilst
+	    making and installing the package.
+	    The default value for this is 0, which will not display
+	    the commands as they are executed (normal, default, quiet
+	    operation); the value 1 will display all shell commands
+	    before their invocation, and the value 2 will display both
+	    the shell commands before their invocation, and their
+	    actual execution progress with <command>set -x</command>
+	    will be displayed.</para></listitem>
+      </unorderedlist>
+    </para>
+  </sect1>
 
   <!-- pkginstall-related variables -->
   <!--	PKG_REGISTER_SHELLS -->
   <!--	PKG_RCD_SCRIPTS -->
 
-  <sect1 id="selecting-options">
+  <sect1 id="selecting-build-options">
     <title>Selecting Build Options</title>
 
     <para>Some packages have build time options, usually to select between
@@ -93,7 +200,6 @@
       update <filename>/etc/mk.conf</filename> to use the options framework
       directly.  Support for these legacy variables will be removed
       eventually.</para>
-
   </sect1>
 
 </chapter>
