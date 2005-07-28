@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2005/07/14 21:47:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/07/28 11:26:59 wiz Exp $
 bin/wesnoth
 bin/wmlxgettext
 man/de/man6/wesnoth.6
 man/man6/wesnoth.6
+man/sv/man6/wesnoth.6
 share/wesnoth/data/campaigns/Eastern_Invasion.cfg
 share/wesnoth/data/campaigns/Heir_To_The_Throne.cfg
-share/wesnoth/data/campaigns/README
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye.cfg
 share/wesnoth/data/campaigns/The_Dark_Hordes.cfg
 share/wesnoth/data/campaigns/The_Rise_of_Wesnoth.cfg
@@ -157,8 +157,8 @@ share/wesnoth/data/scenarios/Eastern_Invasion/Undead_Border_Patrol.cfg
 share/wesnoth/data/scenarios/Eastern_Invasion/Undead_Crossing.cfg
 share/wesnoth/data/scenarios/Eastern_Invasion/Unexpected_Appearance.cfg
 share/wesnoth/data/scenarios/Eastern_Invasion/Weldyn_Attack.cfg
-share/wesnoth/data/scenarios/Eastern_Invasion/deaths.cfg
-share/wesnoth/data/scenarios/Eastern_Invasion/intro.cfg
+share/wesnoth/data/scenarios/Eastern_Invasion/utils/deaths.cfg
+share/wesnoth/data/scenarios/Eastern_Invasion/utils/intro.cfg
 share/wesnoth/data/scenarios/Heir_To_The_Throne/A_Choice_Must_Be_Made.cfg
 share/wesnoth/data/scenarios/Heir_To_The_Throne/Battle_for_Wesnoth.cfg
 share/wesnoth/data/scenarios/Heir_To_The_Throne/Bay_of_Pearls.cfg
@@ -189,8 +189,8 @@ share/wesnoth/data/scenarios/Heir_To_The_Throne/The_Siege_of_Elensefar.cfg
 share/wesnoth/data/scenarios/Heir_To_The_Throne/Valley_of_Death.cfg
 share/wesnoth/data/scenarios/Heir_To_The_Throne/Valley_of_Statues.cfg
 share/wesnoth/data/scenarios/Heir_To_The_Throne/bigmap.cfg
-share/wesnoth/data/scenarios/Heir_To_The_Throne/deaths.cfg
-share/wesnoth/data/scenarios/Heir_To_The_Throne/intro.cfg
+share/wesnoth/data/scenarios/Heir_To_The_Throne/utils/deaths.cfg
+share/wesnoth/data/scenarios/Heir_To_The_Throne/utils/intro.cfg
 share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/Black_Flag.cfg
 share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/Clash_Of_Armies.cfg
 share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/Desert_Of_Death.cfg
@@ -212,7 +212,7 @@ share/wesnoth/data/scenarios/The_Dark_Hordes/Inside_The_Tower.cfg
 share/wesnoth/data/scenarios/The_Dark_Hordes/Mages_And_Elves.cfg
 share/wesnoth/data/scenarios/The_Dark_Hordes/The_Skull_of_Agarash.cfg
 share/wesnoth/data/scenarios/The_Dark_Hordes/Underground_Pool.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/intro.cfg
+share/wesnoth/data/scenarios/The_Dark_Hordes/utils/intro.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/A_Beach.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/A_Final_Spring.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/A_Harrowing_Escape.cfg
@@ -240,12 +240,12 @@ share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/The_Plan.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/The_River_Road.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/The_Vanguard.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/Troll_Hole.cfg
-share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/trow-deaths.cfg
-share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/trow-intro.cfg
-share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/trow-macros.cfg
-share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/trow-nlmsg.cfg
-share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/trow-nohome.cfg
-share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/trow-noisle.cfg
+share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/utils/trow-deaths.cfg
+share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/utils/trow-intro.cfg
+share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/utils/trow-macros.cfg
+share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/utils/trow-nlmsg.cfg
+share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/utils/trow-nohome.cfg
+share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/utils/trow-noisle.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Blitz.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Charge.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Den_of_Onis.cfg
@@ -454,8 +454,6 @@ share/wesnoth/data/units/Merman_Netcaster.cfg
 share/wesnoth/data/units/Merman_Spearman.cfg
 share/wesnoth/data/units/Merman_Triton.cfg
 share/wesnoth/data/units/Merman_Warrior.cfg
-share/wesnoth/data/units/Mounted_Captain.cfg
-share/wesnoth/data/units/Mounted_Commander.cfg
 share/wesnoth/data/units/Mounted_Fighter.cfg
 share/wesnoth/data/units/Mounted_Warrior.cfg
 share/wesnoth/data/units/Mudcrawler.cfg
@@ -626,6 +624,7 @@ share/wesnoth/images/attacks/pike.png
 share/wesnoth/images/attacks/pincers.png
 share/wesnoth/images/attacks/pistol.png
 share/wesnoth/images/attacks/pitchfork.png
+share/wesnoth/images/attacks/plaguestaff.png
 share/wesnoth/images/attacks/rapier.png
 share/wesnoth/images/attacks/short-sword.png
 share/wesnoth/images/attacks/slam.png
@@ -654,14 +653,32 @@ share/wesnoth/images/buttons/checkbox.png
 share/wesnoth/images/buttons/downarrow-button-active.png
 share/wesnoth/images/buttons/downarrow-button-pressed.png
 share/wesnoth/images/buttons/downarrow-button.png
+share/wesnoth/images/buttons/draw_button_editor-active.png
+share/wesnoth/images/buttons/draw_button_editor-pressed.png
+share/wesnoth/images/buttons/draw_button_editor.png
 share/wesnoth/images/buttons/endturn-button-active.png
 share/wesnoth/images/buttons/endturn-button.png
+share/wesnoth/images/buttons/flip_map_button_editor-active.png
+share/wesnoth/images/buttons/flip_map_button_editor-pressed.png
+share/wesnoth/images/buttons/flip_map_button_editor.png
+share/wesnoth/images/buttons/flood_button_editor-active.png
+share/wesnoth/images/buttons/flood_button_editor-pressed.png
+share/wesnoth/images/buttons/flood_button_editor.png
 share/wesnoth/images/buttons/lite-active.png
 share/wesnoth/images/buttons/lite-pressed.png
 share/wesnoth/images/buttons/lite.png
 share/wesnoth/images/buttons/lite_small-active.png
 share/wesnoth/images/buttons/lite_small-pressed.png
 share/wesnoth/images/buttons/lite_small.png
+share/wesnoth/images/buttons/paste_button_editor-active.png
+share/wesnoth/images/buttons/paste_button_editor-pressed.png
+share/wesnoth/images/buttons/paste_button_editor.png
+share/wesnoth/images/buttons/redo_button_editor-active.png
+share/wesnoth/images/buttons/redo_button_editor-pressed.png
+share/wesnoth/images/buttons/redo_button_editor.png
+share/wesnoth/images/buttons/resize_button_editor-active.png
+share/wesnoth/images/buttons/resize_button_editor-pressed.png
+share/wesnoth/images/buttons/resize_button_editor.png
 share/wesnoth/images/buttons/scrollbottom-active.png
 share/wesnoth/images/buttons/scrollbottom.png
 share/wesnoth/images/buttons/scrollgroove-bottom.png
@@ -673,9 +690,24 @@ share/wesnoth/images/buttons/scrolltop-active.png
 share/wesnoth/images/buttons/scrolltop.png
 share/wesnoth/images/buttons/slider-selected.png
 share/wesnoth/images/buttons/slider.png
+share/wesnoth/images/buttons/start_position_button_editor-active.png
+share/wesnoth/images/buttons/start_position_button_editor-pressed.png
+share/wesnoth/images/buttons/start_position_button_editor.png
+share/wesnoth/images/buttons/toggle_grid_button_editor-active.png
+share/wesnoth/images/buttons/toggle_grid_button_editor-pressed.png
+share/wesnoth/images/buttons/toggle_grid_button_editor.png
+share/wesnoth/images/buttons/undo_button_editor-active.png
+share/wesnoth/images/buttons/undo_button_editor-pressed.png
+share/wesnoth/images/buttons/undo_button_editor.png
 share/wesnoth/images/buttons/uparrow-button-active.png
 share/wesnoth/images/buttons/uparrow-button-pressed.png
 share/wesnoth/images/buttons/uparrow-button.png
+share/wesnoth/images/buttons/zoom_in_button_editor-active.png
+share/wesnoth/images/buttons/zoom_in_button_editor-pressed.png
+share/wesnoth/images/buttons/zoom_in_button_editor.png
+share/wesnoth/images/buttons/zoom_out_button_editor-active.png
+share/wesnoth/images/buttons/zoom_out_button_editor-pressed.png
+share/wesnoth/images/buttons/zoom_out_button_editor.png
 share/wesnoth/images/campaigns/Eastern_Invasion/maps/eastern_invasion.png
 share/wesnoth/images/campaigns/Heir_To_The_Throne/story/story0a.png
 share/wesnoth/images/campaigns/Heir_To_The_Throne/story/story0b.png
@@ -887,8 +919,14 @@ share/wesnoth/images/dwarf-warrior-attack-mace.png
 share/wesnoth/images/dwarf-warrior-attack.png
 share/wesnoth/images/dwarf-warrior-defend.png
 share/wesnoth/images/dwarf-warrior.png
+share/wesnoth/images/editor/brush-1-active.png
+share/wesnoth/images/editor/brush-1-pressed.png
 share/wesnoth/images/editor/brush-1.png
+share/wesnoth/images/editor/brush-2-active.png
+share/wesnoth/images/editor/brush-2-pressed.png
 share/wesnoth/images/editor/brush-2.png
+share/wesnoth/images/editor/brush-3-active.png
+share/wesnoth/images/editor/brush-3-pressed.png
 share/wesnoth/images/editor/brush-3.png
 share/wesnoth/images/elder-mage-attack.png
 share/wesnoth/images/elder-mage-defend.png
@@ -1039,6 +1077,10 @@ share/wesnoth/images/elvish-marksman-attack4.png
 share/wesnoth/images/elvish-marksman-bow-defend.png
 share/wesnoth/images/elvish-marksman-bow.png
 share/wesnoth/images/elvish-marksman-defend.png
+share/wesnoth/images/elvish-marksman-die1.png
+share/wesnoth/images/elvish-marksman-die2.png
+share/wesnoth/images/elvish-marksman-die3.png
+share/wesnoth/images/elvish-marksman-die4.png
 share/wesnoth/images/elvish-marksman.png
 share/wesnoth/images/elvish-marshal-attack.png
 share/wesnoth/images/elvish-marshal-attack1.png
@@ -1118,6 +1160,10 @@ share/wesnoth/images/elvish-sharpshooter-attack4.png
 share/wesnoth/images/elvish-sharpshooter-bow-defend.png
 share/wesnoth/images/elvish-sharpshooter-bow.png
 share/wesnoth/images/elvish-sharpshooter-defend.png
+share/wesnoth/images/elvish-sharpshooter-die1.png
+share/wesnoth/images/elvish-sharpshooter-die2.png
+share/wesnoth/images/elvish-sharpshooter-die3.png
+share/wesnoth/images/elvish-sharpshooter-die4.png
 share/wesnoth/images/elvish-sharpshooter.png
 share/wesnoth/images/elvish-shyde-defend.png
 share/wesnoth/images/elvish-shyde-ftouch-attack1.png
@@ -2005,6 +2051,9 @@ share/wesnoth/images/portraits/Heir_To_The_Throne/delfador.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/kalenz.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/konrad.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/lisar.png
+share/wesnoth/images/portraits/The_Dark_Hordes/gwiti.png
+share/wesnoth/images/portraits/The_Dark_Hordes/gwiti_lich.png
+share/wesnoth/images/portraits/The_Dark_Hordes/nati.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/addroran.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/aethyr.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/archmage.png
@@ -2202,9 +2251,11 @@ share/wesnoth/images/skeletal-dragon.png
 share/wesnoth/images/terrain/alpha.png
 share/wesnoth/images/terrain/alphamask.png
 share/wesnoth/images/terrain/bridge-n-end.png
+share/wesnoth/images/terrain/bridge-n-s-tile.png
 share/wesnoth/images/terrain/bridge-n-s.png
 share/wesnoth/images/terrain/bridge-n.png
 share/wesnoth/images/terrain/bridge-ne-end.png
+share/wesnoth/images/terrain/bridge-ne-sw-tile.png
 share/wesnoth/images/terrain/bridge-ne-sw.png
 share/wesnoth/images/terrain/bridge-ne.png
 share/wesnoth/images/terrain/bridge-nw-end.png
@@ -2212,6 +2263,7 @@ share/wesnoth/images/terrain/bridge-nw.png
 share/wesnoth/images/terrain/bridge-s-end.png
 share/wesnoth/images/terrain/bridge-s.png
 share/wesnoth/images/terrain/bridge-se-end.png
+share/wesnoth/images/terrain/bridge-se-nw-tile.png
 share/wesnoth/images/terrain/bridge-se-nw.png
 share/wesnoth/images/terrain/bridge-se.png
 share/wesnoth/images/terrain/bridge-sw-end.png
@@ -2258,6 +2310,10 @@ share/wesnoth/images/terrain/castle-convex-nw.png
 share/wesnoth/images/terrain/castle-convex-se.png
 share/wesnoth/images/terrain/castle-convex-sw.png
 share/wesnoth/images/terrain/castle-convex-w.png
+share/wesnoth/images/terrain/castle-ruin-tile.png
+share/wesnoth/images/terrain/castle-sunken-ruin-tile.png
+share/wesnoth/images/terrain/castle-swamp-ruin-tile.png
+share/wesnoth/images/terrain/castle-tile.png
 share/wesnoth/images/terrain/castle-walls.tmpl
 share/wesnoth/images/terrain/castle.png
 share/wesnoth/images/terrain/cave-floor-n-ne-se-s.png
@@ -2438,6 +2494,7 @@ share/wesnoth/images/terrain/dwarven-doors.png
 share/wesnoth/images/terrain/dwarven-keep-floor.png
 share/wesnoth/images/terrain/dwarven-keep.png
 share/wesnoth/images/terrain/dwarven-village.png
+share/wesnoth/images/terrain/dwarven_castle-tile.png
 share/wesnoth/images/terrain/encampment-concave-e.png
 share/wesnoth/images/terrain/encampment-concave-ne.png
 share/wesnoth/images/terrain/encampment-concave-nw.png
@@ -2450,6 +2507,7 @@ share/wesnoth/images/terrain/encampment-convex-nw.png
 share/wesnoth/images/terrain/encampment-convex-se.png
 share/wesnoth/images/terrain/encampment-convex-sw.png
 share/wesnoth/images/terrain/encampment-convex-w.png
+share/wesnoth/images/terrain/encampment-tile.png
 share/wesnoth/images/terrain/flag-sotbe-1.png
 share/wesnoth/images/terrain/flag-sotbe-2.png
 share/wesnoth/images/terrain/flag-sotbe-3.png
@@ -2503,6 +2561,7 @@ share/wesnoth/images/terrain/forest-castle-s.png
 share/wesnoth/images/terrain/forest-castle-se.png
 share/wesnoth/images/terrain/forest-castle-sw.png
 share/wesnoth/images/terrain/forest-castle.png
+share/wesnoth/images/terrain/forest-tile.png
 share/wesnoth/images/terrain/forest.png
 share/wesnoth/images/terrain/forest2.png
 share/wesnoth/images/terrain/forest2_small.png
@@ -2611,6 +2670,7 @@ share/wesnoth/images/terrain/keep-keep-nw.png
 share/wesnoth/images/terrain/keep-keep-se.png
 share/wesnoth/images/terrain/keep-keep-sw.png
 share/wesnoth/images/terrain/keep-keep-w.png
+share/wesnoth/images/terrain/keep-tile.png
 share/wesnoth/images/terrain/keep-wall-0-e.png
 share/wesnoth/images/terrain/keep-wall-0-ne.png
 share/wesnoth/images/terrain/keep-wall-0-nw.png
@@ -2872,6 +2932,7 @@ share/wesnoth/images/terrain/snow-forest-castle-se.png
 share/wesnoth/images/terrain/snow-forest-castle-sw-nw.png
 share/wesnoth/images/terrain/snow-forest-castle-sw.png
 share/wesnoth/images/terrain/snow-forest-castle.png
+share/wesnoth/images/terrain/snow-forest-tile.png
 share/wesnoth/images/terrain/snow-forest.png
 share/wesnoth/images/terrain/snow-forest2.png
 share/wesnoth/images/terrain/snow-forest3.png
@@ -3172,25 +3233,37 @@ share/wesnoth/images/terrain/tropical-forest.png
 share/wesnoth/images/terrain/tropical-forest2.png
 share/wesnoth/images/terrain/tropical-forest3.png
 share/wesnoth/images/terrain/tropical-forest4.png
+share/wesnoth/images/terrain/village-cave-tile.png
 share/wesnoth/images/terrain/village-cave.png
+share/wesnoth/images/terrain/village-coast-tile.png
 share/wesnoth/images/terrain/village-coast.png
 share/wesnoth/images/terrain/village-desert-shadow.png
+share/wesnoth/images/terrain/village-desert-tile.png
 share/wesnoth/images/terrain/village-desert.png
+share/wesnoth/images/terrain/village-desert2-tile.png
 share/wesnoth/images/terrain/village-desert2.png
 share/wesnoth/images/terrain/village-dusk.png
 share/wesnoth/images/terrain/village-dusk2.png
 share/wesnoth/images/terrain/village-dusk3.png
 share/wesnoth/images/terrain/village-dusk4.png
+share/wesnoth/images/terrain/village-elven-tile.png
 share/wesnoth/images/terrain/village-elven.png
 share/wesnoth/images/terrain/village-elven2.png
 share/wesnoth/images/terrain/village-first_watch.png
+share/wesnoth/images/terrain/village-human-hills-tile.png
+share/wesnoth/images/terrain/village-human-mountain-tile.png
+share/wesnoth/images/terrain/village-human-snow-hills-tile.png
+share/wesnoth/images/terrain/village-human-tile.png
 share/wesnoth/images/terrain/village-human.png
 share/wesnoth/images/terrain/village-human2.png
 share/wesnoth/images/terrain/village-human3.png
 share/wesnoth/images/terrain/village-second_watch.png
+share/wesnoth/images/terrain/village-snow-tile.png
 share/wesnoth/images/terrain/village-snow.png
+share/wesnoth/images/terrain/village-swampwater-tile.png
 share/wesnoth/images/terrain/village-swampwater.png
 share/wesnoth/images/terrain/village-tropical-forest.png
+share/wesnoth/images/terrain/village-tropical-tile.png
 share/wesnoth/images/terrain/village.png
 share/wesnoth/images/terrain/void-n-ne-se-s.png
 share/wesnoth/images/terrain/void-n-ne-se.png
@@ -3390,7 +3463,7 @@ share/wesnoth/images/undead-skeleton-defend.png
 share/wesnoth/images/undead-skeleton-dying-2.png
 share/wesnoth/images/undead-skeleton-dying.png
 share/wesnoth/images/undead-skeleton.png
-share/wesnoth/images/undead-sorcerer-defence.png
+share/wesnoth/images/undead-sorcerer-defend.png
 share/wesnoth/images/undead-sorcerer-die-1.png
 share/wesnoth/images/undead-sorcerer-die-2.png
 share/wesnoth/images/undead-sorcerer-ranged1.png
@@ -3664,6 +3737,7 @@ share/wesnoth/sounds/zombie-hit.wav
 @dirrm share/wesnoth/images/portraits/core/James_Woo
 @dirrm share/wesnoth/images/portraits/core
 @dirrm share/wesnoth/images/portraits/The_Rise_of_Wesnoth
+@dirrm share/wesnoth/images/portraits/The_Dark_Hordes
 @dirrm share/wesnoth/images/portraits/Heir_To_The_Throne
 @dirrm share/wesnoth/images/portraits/Eastern_Invasion
 @dirrm share/wesnoth/images/portraits
@@ -3699,11 +3773,15 @@ share/wesnoth/sounds/zombie-hit.wav
 @dirrm share/wesnoth/data/terrain-graphics
 @dirrm share/wesnoth/data/scenarios/tutorial
 @dirrm share/wesnoth/data/scenarios/multiplayer
+@dirrm share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/utils
 @dirrm share/wesnoth/data/scenarios/The_Rise_of_Wesnoth
+@dirrm share/wesnoth/data/scenarios/The_Dark_Hordes/utils
 @dirrm share/wesnoth/data/scenarios/The_Dark_Hordes
 @dirrm share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/utils
 @dirrm share/wesnoth/data/scenarios/Son_Of_The_Black_Eye
+@dirrm share/wesnoth/data/scenarios/Heir_To_The_Throne/utils
 @dirrm share/wesnoth/data/scenarios/Heir_To_The_Throne
+@dirrm share/wesnoth/data/scenarios/Eastern_Invasion/utils
 @dirrm share/wesnoth/data/scenarios/Eastern_Invasion
 @dirrm share/wesnoth/data/scenarios
 @dirrm share/wesnoth/data/maps/multiplayer
@@ -3717,3 +3795,5 @@ share/wesnoth/sounds/zombie-hit.wav
 @dirrm share/wesnoth/data/campaigns
 @dirrm share/wesnoth/data
 @dirrm share/wesnoth
+@dirrm man/sv/man6
+@dirrm man/sv
