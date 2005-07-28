@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2004/11/23 12:38:00 adam Exp $
+$NetBSD: patch-ad,v 1.6 2005/07/28 15:15:18 adam Exp $
 
 --- configure.orig	2003-07-02 10:34:07.000000000 +0000
 +++ configure
@@ -11,11 +11,3 @@ $NetBSD: patch-ad,v 1.5 2004/11/23 12:38:00 adam Exp $
  
  
  ac_ext=c
-@@ -13900,6 +13900,7 @@ else
-    chmod u+w .
-    $rm conftest* out/*
-    rmdir out
-+   rm -f core core.* *.core
-    cd ..
-    rmdir conftest
-    $rm conftest*
