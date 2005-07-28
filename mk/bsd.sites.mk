@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.41 2005/07/23 04:37:39 grant Exp $
+# $NetBSD: bsd.sites.mk,v 1.42 2005/07/28 13:07:03 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -95,17 +95,18 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://citkit.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
-	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://jaist.dl.sourceforge.net/sourceforge/ \
+	http://keihanna.dl.sourceforge.net/sourceforge/ \
 	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
 	http://nchc.dl.sourceforge.net/sourceforge/ \
-	http://peterhost.dl.sourceforge.net/sourceforge/ \
+	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
+	http://peterhost.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
+	http://surfnet.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://ufpr.dl.sourceforge.net/sourceforge/ \
-	http://umn.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/
 #	ftp://ftp2.sourceforge.net/pub/sourceforge/
