@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.198 2005/07/19 22:31:01 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.199 2005/07/28 13:07:17 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -7,6 +7,11 @@
 # the system defaults (sys.mk and bsd.own.mk) are used.
 
 # Do not recursively include mk.conf, redefine OPSYS, include bsd.own.mk, etc.
+
+# Some variables defined here:
+# OPSYS
+# The operating system name, as returned by ``uname -s''.
+
 .if !defined(BSD_PKG_MK)
 
 # Let mk.conf know that this is pkgsrc.
