@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.9 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: components.xml,v 1.10 2005/07/28 11:05:36 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -37,96 +37,14 @@
       dashes, underscores, dots and plus signs.</para></listitem>
 
       <listitem><para><varname>CATEGORIES</varname> is a list of categories
-      which the package fits in. You can choose any of the top-level
-      directories of pkgsrc for it.</para></listitem>
+	    which the package fits in. You can choose any of the top-level
+	    directories of pkgsrc for it.</para>
 
-      <listitem><para><varname>MASTER_SITES</varname> is a list of URLs where
-      the distribution files can be downloaded. Each URL must end with a
-      slash.</para></listitem>
+	<para>Currently the following values are available for
+	  <varname>CATEGORIES</varname>. If more than
+	  one is used, they need to be separated by spaces:</para>
 
-      </itemizedlist>
-    </para>
-
-    <para>The second section contains the following variables.
-      <itemizedlist>
-
-      <listitem><para><varname>MAINTAINER</varname> is the mail address of the
-      package's maintainer, which is the person you can contact when the
-      package does not work.</para></listitem>
-
-      <listitem><para><varname>HOMEPAGE</varname> is a URL where users can
-      find more information about the package.</para></listitem>
-
-      <listitem><para><varname>COMMENT</varname> is a one-line comment about
-      the purpose of the package.</para></listitem>
-
-      </itemizedlist>
-    </para>
-
-    <para>The <varname>MASTER_SITES</varname> may be set to one of the
-      predefined sites:</para>
-
-<!-- sort bsd.sites.mk | sed -n 's/\(^MA[A-Z_]*\).*/        ${\1}/p' -->
-    <programlisting>
-        ${MASTER_SITE_APACHE}
-        ${MASTER_SITE_BACKUP}
-        ${MASTER_SITE_CYGWIN}
-        ${MASTER_SITE_DEBIAN}
-        ${MASTER_SITE_FREEBSD}
-        ${MASTER_SITE_FREEBSD_LOCAL}
-        ${MASTER_SITE_GNOME}
-        ${MASTER_SITE_GNU}
-        ${MASTER_SITE_GNUSTEP}
-        ${MASTER_SITE_IFARCHIVE}
-        ${MASTER_SITE_MOZILLA}
-        ${MASTER_SITE_OPENOFFICE}
-        ${MASTER_SITE_PERL_CPAN}
-        ${MASTER_SITE_R_CRAN}
-        ${MASTER_SITE_SOURCEFORGE}
-        ${MASTER_SITE_SUNSITE}
-        ${MASTER_SITE_SUSE}
-        ${MASTER_SITE_TEX_CTAN}
-        ${MASTER_SITE_XCONTRIB}
-        ${MASTER_SITE_XEMACS}
-    </programlisting>
-
-    <para>If one of these predefined sites is chosen, you may require the
-      ability to specify a subdirectory of that site.  Since these macros
-      may expand to more than one actual site, you
-      <emphasis>must</emphasis> use the following construct to specify a
-      subdirectory:</para>
-
-    <programlisting>
-        ${MASTER_SITE_GNU:=subdirectory/name/}
-        ${MASTER_SITE_SOURCEFORGE:=project_name/} </programlisting>
-
-    <para>Note the trailing slash after the subdirectory name.</para>
-
-    <note>
-      <para><varname>MASTER_SITE_SUBDIR</varname> has been deprecated and
-        <emphasis>should no longer be used</emphasis>.</para>
-    </note>
-
-    <para>If the package has multiple <varname>DISTFILES</varname> or multiple
-      <varname>PATCHFILES</varname> from different
-      sites, set <varname>SITES_foo</varname> to a list of URI's where file
-      <quote>foo</quote> may be found. <quote>foo</quote>
-      includes the suffix, e.g.</para>
-
-<programlisting>DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=     foo-file.tar.gz
-SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
-        http://www.somewhereelse.com/mirror/somehow/</programlisting>
-
-    <para>Note that the normal default setting of <varname>DISTFILES</varname>
-      must be made explicit if you want to add to it (rather than replace
-      it), as you usually would.</para>
-
-    <para>Currently the following values are available for
-      <varname>CATEGORIES</varname>. If more than
-      one is used, they need to be separated by spaces:</para>
-
-    <programlisting>
+	<programlisting>
 archivers     cross         geography     meta-pkgs     security
 audio         databases     graphics      misc          shells
 benchmarks    devel         ham           multimedia    sysutils
@@ -135,8 +53,134 @@ cad           emulators     lang          news          time
 chat          finance       mail          parallel      wm
 comms         fonts         math          pkgtools      www
 converters    games         mbone         print         x11</programlisting>
+	</listitem>
 
-    <para> Please pay attention to the following gotchas: </para>
+	<listitem><para><varname>MASTER_SITES</varname> is a list of URLs where
+	    the distribution files can be downloaded. Each URL must end with a
+	    slash.</para>
+	  <para>The <varname>MASTER_SITES</varname> may make use of
+	    the following predefined sites:</para>
+
+<!-- sort bsd.sites.mk | sed -n 's/\(^MA[A-Z_]*\).*/        ${\1}/p' -->
+	  <programlisting>
+	    ${MASTER_SITE_APACHE}
+	    ${MASTER_SITE_BACKUP}
+	    ${MASTER_SITE_CYGWIN}
+	    ${MASTER_SITE_DEBIAN}
+	    ${MASTER_SITE_FREEBSD}
+	    ${MASTER_SITE_FREEBSD_LOCAL}
+	    ${MASTER_SITE_GNOME}
+	    ${MASTER_SITE_GNU}
+	    ${MASTER_SITE_GNUSTEP}
+	    ${MASTER_SITE_IFARCHIVE}
+	    ${MASTER_SITE_MOZILLA}
+	    ${MASTER_SITE_OPENOFFICE}
+	    ${MASTER_SITE_PERL_CPAN}
+	    ${MASTER_SITE_R_CRAN}
+	    ${MASTER_SITE_SOURCEFORGE}
+	    ${MASTER_SITE_SUNSITE}
+	    ${MASTER_SITE_SUSE}
+	    ${MASTER_SITE_TEX_CTAN}
+	    ${MASTER_SITE_XCONTRIB}
+	    ${MASTER_SITE_XEMACS}
+	  </programlisting>
+
+	  <para>If one of these predefined sites is chosen, you may
+	    want to specify a subdirectory of that
+	    site.  Since these macros may expand to more than one
+	    actual site, you <emphasis>must</emphasis> use the
+	    following construct to specify a subdirectory:</para>
+
+	  <programlisting>
+	    ${MASTER_SITE_GNU:=subdirectory/name/}
+	    ${MASTER_SITE_SOURCEFORGE:=project_name/}</programlisting>
+
+	  <para>Note the trailing slash after the subdirectory name.</para>
+
+	  <para>If the package has multiple
+	    <varname>DISTFILES</varname> or multiple
+	    <varname>PATCHFILES</varname> from different
+	    sites, set <varname>SITES_foo</varname> to a list of URI's
+	    where file <quote>foo</quote> may be
+	    found. <quote>foo</quote> includes the suffix, e.g.</para>
+	  <programlisting>DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=     foo-file.tar.gz
+SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+        http://www.somewhereelse.com/mirror/somehow/</programlisting>
+	</listitem>
+
+	<listitem><para><varname>DISTFILES</varname>: Name(s)
+	    of archive file(s) containing distribution. The default is
+	    <filename>${DISTNAME}${EXTRACT_SUFX}</filename>. Should only
+	    be set if you have more than one distfile.</para>
+	  <para>Note that the normal default setting of
+	    <varname>DISTFILES</varname> must be made explicit if you
+	    want to add to it (rather than replace it), as you usually
+	    would.</para>
+	</listitem>
+
+	<listitem><para><varname>EXTRACT_SUFX</varname>: Suffix of the
+	    distribution file, will be appended to
+	    <varname>DISTNAME</varname>. Defaults to
+	    <filename>.tar.gz</filename>.
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+
+    <para>The second section contains information about separately
+      downloaded patches, if any.
+      <itemizedlist><varname>PATCHFILES</varname>
+	Name(s) of additional files that contain distribution patches.
+	There is no default. pkgsrc will look for them at
+	<varname>PATCH_SITES</varname>.
+	They will automatically be uncompressed before patching if
+	the names end with <filename>.gz</filename> or
+	<filename>.Z</filename>.
+	<listitem><para><varname>PATCH_SITES</varname>:
+	  Primary location(s) for distribution patch files (see
+	  <varname>PATCHFILES</varname> below) if not found locally.</para>
+	</listitem>
+      </itemizedlist>
+    </para>
+    <para>The third section contains the following variables.
+      <itemizedlist>
+
+      <listitem><para><varname>MAINTAINER</varname> is the email address of the
+	    contact person for this package.
+	    The person who feels responsible for this package, and who is most
+	    likely to look at problems or questions regarding this package
+	    which have been reported with &man.send-pr.1;. The right
+	    person to contact before making major changes to the
+	    package.
+	    When packaging a new program, set
+	    <varname>MAINTAINER</varname> to yourself.  If you really
+	    can't maintain the package for future updates, set it to
+	    <email>tech-pkg@NetBSD.org</email>.</para> 
+	</listitem>
+
+      <listitem><para><varname>HOMEPAGE</varname> is a URL where users can
+      find more information about the package.</para></listitem>
+
+      <listitem><para><varname>COMMENT</varname> is a one-line
+      description of the package (should not include the package
+      name).</para></listitem>
+      </itemizedlist>
+    </para>
+
+    <para>Other variables that affect the build:
+      <itemizedlist>
+	<listitem><para><varname>WRKSRC</varname>:
+	    The subdirectory of <filename>${WRKDIR}</filename> to which
+	    the distribution actually unpacks. The default is
+	    <filename>${WRKDIR}/${DISTNAME}</filename>.
+	    The value of <varname>WRKSRC</varname> should be set
+	    explicitly if the package does not follow standard
+	    conventions and include the package's name as a
+	    subdirectory.</para>
+	</listitem>
+      </itemizedlist>
+    <para>Please pay attention to the following gotchas:</para>
 
     <itemizedlist>
       <listitem>
@@ -155,23 +199,6 @@ converters    games         mbone         print         x11</programlisting>
           <xref linkend="faq.info-files"/>.</para>
       </listitem>
 
-      <listitem>
-        <para>Set <varname>MAINTAINER</varname> to be yourself. 
-          If you really can't maintain the package for future updates,
-          set it to <email>tech-pkg@NetBSD.org</email>.</para>
-      </listitem>
-
-      <listitem>
-        <para>If a home page for the software in question exists, 
-          add the variable <varname>HOMEPAGE</varname> right after
-          <varname>MAINTAINER</varname>. The value of this
-          variable should be the URL for the home page.</para>
-      </listitem>
-
-      <listitem>
-        <para>Be sure to set the <varname>COMMENT</varname> variable to a short
-          description of the package, not containing the pkg's name.</para>
-      </listitem>
     </itemizedlist>
   </sect1>
 
@@ -357,21 +384,24 @@ converters    games         mbone         print         x11</programlisting>
     <title><filename>work*</filename></title>
 
     <para>When you type <command>make</command> the distribution files are
-      unpacked into this directory. It can be removed by running
+      unpacked into the directory denoted by
+      <varname>WRKDIR</varname>. It can be removed by running
       <command>make clean</command>. Besides the sources, this
-      directory is also used to keep various timestamp files.</para>
-      
+      directory is also used to keep various timestamp files.
+      The directory gets <note>removed completely</note> on clean.
+      The default is <filename>${.CURDIR}/work</filename>
+      or <filename>${.CURDIR}/work.${MACHINE_ARCH}</filename>
+      if <varname>OBJMACHINE</varname> is set.</para>
+
     <para> If a package doesn't create a subdirectory for itself (like
-      GNU software   does, for instance), but extracts itself in the
-      current directory,   you should set <varname>WRKSRC</varname>
-      accordingly, e.g.   <filename role="pkg">editors/sam</filename> 
-      again, but the quick answer is: </para>
+      GNU software does, for instance), but extracts itself in the
+      current directory, you should set <varname>WRKSRC</varname>
+      accordingly, e.g. <filename role="pkg">editors/sam</filename> 
+      again, but the quick answer is:</para>
 
     <programlisting>WRKSRC=             ${WRKDIR}</programlisting>
 
-    <para> Please note that the old <varname>NO_WRKSUBDIR</varname>
-      has been deprecated and should not be used. Also, if your
-      package doesn't create a subdir with the name of
+    <para>If a package doesn't create a subdir with the name of
       <varname>DISTNAME</varname> but some different name, set
       <varname>WRKSRC</varname> to point to the proper name in
       <filename>${WRKDIR}</filename>. See <filename 
