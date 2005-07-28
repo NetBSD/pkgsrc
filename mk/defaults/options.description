@@ -41,7 +41,7 @@ chips
 chroot	
 cirrus	
 cups	
-curl	
+curl			Enable curl support.
 curses	
 cyrix	
 darwin			Build and/or run on Darwin and Mac OS X.
@@ -101,7 +101,7 @@ homedir
 hpn-patch	
 hub	
 i128	
-i586-optimized	
+i586-optimized		Optimize for i586 (only).
 i740	
 i810	
 iconv	
@@ -129,7 +129,7 @@ krb5
 lame			Use the lame encoder to create MP3 files.
 largefile	
 largescale	
-ldap	
+ldap			Enable LDAP support.
 ldap-compat	
 leaf	
 libcrack	
@@ -144,7 +144,7 @@ lua
 lynxkey	
 lzw	
 m17n	
-m68060-optimized	
+m68060-optimized	Optimize for m68060 (only).
 mad			Enable usage of the mad library to play MP3 files.
 magick	
 mdc2	
