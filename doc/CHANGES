@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10711 2005/07/28 11:04:56 wiz Exp $
+$NetBSD: CHANGES,v 1.10712 2005/07/28 11:27:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3385,3 +3385,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/picp version 0.6.7 [dogcow 2005-07-27]
 	Updated wm/afterstep to 2.1.2 [adam 2005-07-28]
 	Updated devel/pango to 1.8.2 [wiz 2005-07-28]
+	Updated games/wesnoth to 0.9.4 [wiz 2005-07-28]
