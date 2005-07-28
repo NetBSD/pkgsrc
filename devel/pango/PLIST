@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2005/03/05 13:49:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2005/07/28 11:04:13 wiz Exp $
 bin/pango-querymodules
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
@@ -38,6 +38,7 @@ lib/pango/1.4.0/modules/pango-basic-x.la
 lib/pango/1.4.0/modules/pango-hangul-fc.la
 lib/pango/1.4.0/modules/pango-hebrew-fc.la
 lib/pango/1.4.0/modules/pango-indic-fc.la
+lib/pango/1.4.0/modules/pango-khmer-fc.la
 lib/pango/1.4.0/modules/pango-syriac-fc.la
 lib/pango/1.4.0/modules/pango-thai-fc.la
 lib/pango/1.4.0/modules/pango-tibetan-fc.la
@@ -81,6 +82,7 @@ share/doc/pango/pango.devhelp
 share/doc/pango/pango.html
 share/doc/pango/rendering.html
 share/doc/pango/right.png
+share/doc/pango/style.css
 share/doc/pango/tools.html
 share/doc/pango/up.png
 @dirrm share/doc/pango
