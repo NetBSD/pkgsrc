@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10718 2005/07/28 15:24:05 adam Exp $
+$NetBSD: CHANGES,v 1.10719 2005/07/28 16:41:50 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3393,3 +3393,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated converters/libiconv to 1.10 [adam 2005-07-28]
 	Updated editors/abiword to 2.2.9 [adam 2005-07-28]
 	Updated editors/abiword-plugins to 2.2.9 [adam 2005-07-28]
+	Update fonts/fontconfig to 2.3.2 [reed 2005-07-28]
