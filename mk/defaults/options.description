@@ -178,7 +178,6 @@ ogg			Enable Ogg support.
 okinawa_dict	
 openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
-openldap	
 openssl	
 oss			Enable support for the Open Sound System audio library.
 pam			Enable PAM support.
