@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.12 2005/06/24 09:29:20 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.13 2005/07/28 15:14:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3289,6 +3289,7 @@ Changes to the packages collection and infrastructure in 2004:
 	bsd.pkg.mk: buildlink2 retired in favour of buildlink3 [wiz 2004-07-06]
 	Updated pkglint to 3.85 [wiz 2004-07-06]
 	Updated createbuildlink to 3.5 [wiz 2004-07-06]
+	Updated xine-ui to 0.99.2 [drochner 2004-07-06]
 	Updated musicpd to 0.11.2 [simonb 2004-07-07]
 	Updated bitlbee to 0.90a [xtraeme 2004-07-07]
 	Updated xfce4-diskperf-plugin to 1.4.1 [martti 2004-07-07]
