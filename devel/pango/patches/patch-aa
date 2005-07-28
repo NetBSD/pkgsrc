@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2005/03/05 13:49:36 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2005/07/28 11:04:13 wiz Exp $
 
---- pango/opentype/Makefile.in.orig	2005-03-04 21:08:23.000000000 +0100
+--- pango/opentype/Makefile.in.orig	2005-07-26 20:45:53.000000000 +0200
 +++ pango/opentype/Makefile.in
-@@ -280,7 +280,8 @@ ottest_SOURCES = \
+@@ -283,7 +283,8 @@ ottest_SOURCES = \
  
  ottest_LDADD = \
  	libpango-ot.la	\
