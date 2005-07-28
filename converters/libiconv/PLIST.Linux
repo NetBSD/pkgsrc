@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2003/02/28 22:15:30 grant Exp $
-lib/libiconv_plug.so
+@comment $NetBSD: PLIST.Linux,v 1.2 2005/07/28 15:15:18 adam Exp $
+lib/preloadable_libiconv.so
