@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.26 2005/05/08 13:29:09 wiz Exp $
+# $NetBSD: upload,v 1.27 2005/07/28 00:37:43 grant Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -128,7 +128,9 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 	[ -z "${SYSVSUM}" ] && SYSVSUM="echo"
 
 	for i in All/*; do
-		if ! grep -q $i $exf; then
+		if grep $i $exf >/dev/null; then
+			:
+		else
 			${BSDSUM} $i >> BSDSUM
 			${CKSUM} $i >> CKSUM
 			${MD5} $i >> MD5
@@ -157,7 +159,9 @@ fi
 
 echo "#!/bin/sh" > "$upload"
 echo "packages=$packages" >> "$upload"
-echo "if ! cd $packages ; then" >> "$upload"
+echo "if cd $packages; then" >> "$upload"
+echo "  :" >> "$upload"
+echo "else" >> "$upload"
 echo "	echo \"could not cd to $packages\"" >> "$upload"
 echo "	exit 1" >> "$upload"
 echo "fi" >> "$upload"
