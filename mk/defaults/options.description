@@ -166,7 +166,7 @@ mysql
 mysql4	
 nas			Enable usage of the Network Audio System.
 native	
-ncurses	
+ncurses			Enable ncurses support.
 neomagic	
 net-tests	
 newport	
@@ -224,7 +224,7 @@ sdl			Use SDL as display library.
 siliconmotion	
 sis	
 skey	
-slang	
+slang			Enable S-Lang support.
 slp	
 snmp	
 socketmap	
@@ -267,7 +267,7 @@ w3m-m17n		Multilingual support.
 w3m-unicode		Use Unicode characters.
 wrap	
 wx	
-x11	
+x11			Enable X11 support.
 xface	
 xft	
 xft2	
