@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2005/07/21 16:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/07/28 12:43:13 adam Exp $
 
-DISTNAME=	gtkspell-2.0.10
+DISTNAME=	gtkspell-2.0.11
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://gtkspell.sourceforge.net/download/
 
@@ -23,5 +23,4 @@ SUBST_SED.subdir=	-e 's|SUBDIRS = gtkspell examples docs|SUBDIRS = gtkspell|'
 .include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
