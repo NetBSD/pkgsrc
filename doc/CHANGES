@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10709 2005/07/27 20:26:46 dogcow Exp $
+$NetBSD: CHANGES,v 1.10710 2005/07/28 10:26:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3383,3 +3383,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/libotr to 2.0.2 [gdt 2005-07-27]
 	Updated chat/gaim-otr to 2.0.2 [gdt 2005-07-27]
 	Added devel/picp version 0.6.7 [dogcow 2005-07-27]
+	Updated wm/afterstep to 2.1.2 [adam 2005-07-28]
