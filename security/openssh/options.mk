@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/05/31 11:24:33 dillo Exp $
+# $NetBSD: options.mk,v 1.5 2005/07/28 17:54:57 reed Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,4 +29,5 @@ PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=	--with-pam
 PLIST_SRC+=		${.CURDIR}/PLIST.pam
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
 .endif
