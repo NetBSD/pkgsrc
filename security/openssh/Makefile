@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.153 2005/07/20 05:27:14 reed Exp $
+# $NetBSD: Makefile,v 1.154 2005/07/28 17:54:57 reed Exp $
 
 DISTNAME=		openssh-3.9p1
 PKGNAME=		openssh-3.9.1
-PKGREVISION=		7
+PKGREVISION=		8
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -32,14 +32,13 @@ CRYPTO=			yes
 BUILD_DEFS+=		USE_INET6
 
 INSTALL_TARGET=		install-nokeys
-MESSAGE_SRC=		${.CURDIR}/MESSAGE
 PLIST_SRC=		# empty
 
 .include "options.mk"
 
 .if ${OPSYS} == "Interix"
 
-# normal MESSAGE does not apply, as privsep is not in use
+# OpenSSH on Interix has some important caveats
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.Interix
 BUILDLINK_PASSTHRU_DIRS+= /usr/local/include/bind /usr/local/lib/bind
 CONFIGURE_ENV+=		ac_cv_func_openpty=no
@@ -144,9 +143,6 @@ RCD_SCRIPTS=		sshd
 
 PLIST_SRC+=		${.CURDIR}/PLIST
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
-MESSAGE_SUBST+=		EGDIR=${EGDIR}
-MESSAGE_SUBST+=		OPENSSH_USER=${OPENSSH_USER}
-MESSAGE_SUBST+=		OPENSSH_GROUP=${OPENSSH_GROUP}
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
