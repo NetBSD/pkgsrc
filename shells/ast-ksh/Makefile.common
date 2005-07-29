@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/07/29 18:32:17 jlam Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -34,7 +34,7 @@ MAKE_FLAGS=	CC="${CC}" CCFLAGS="${CFLAGS}"
 PDKSH=		/bin/ksh
 .endif
 
-PKG_SHELL=	${PREFIX}/bin/ksh93
+PKG_SHELL=	bin/ksh93
 
 INSTALLATION_DIRS=	bin man/man1
 
