@@ -1,7 +1,8 @@
-.\" $NetBSD: mklivecd.8,v 1.10 2005/01/11 02:25:21 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.11 2005/07/29 12:13:01 xtraeme Exp $
 .\"
-.\" mklivecd - Build a NetBSD Live CD for i386 machines
-.\" Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
+.\" mklivecd - Make your own NetBSD/i386 Live CD-ROM/DVD-ROM
+.\"
+.\" Copyright (c) 2004, 2005 Juan Romero Pardines  <xtraeme@NetBSD.org>
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -27,26 +28,42 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd January 11, 2005
+.Dd July 25, 2005
 .Dt MKLIVECD 8
 .Os
 .Sh NAME
 .Nm mklivecd
-.Nd build a
+.Nd Make your own
 .Nx
-Live CD for i386 machines
+/ i386 Live CD-ROM/DVD-ROM
 .Sh SYNOPSIS
 .Nm
 .Fl v
 .Fl c Ar conf_file
+.Fl k Ar kernel
 .Ar target
 .Sh DESCRIPTION
 .Nm
 allows you to build your own
 .Nx
-Live CD, so you don't need to install
+Live CD/DVD, so you don't need to install
 .Nx
-to any disk, because it will run directly from the CD-ROM.
+to any disk, because it will run directly from the CD-ROM/DVD-ROM.
+.Pp
+To choose different kernels when booting from the CD-ROM/DVD-ROM,
+two options for the bootloader are provided since version
+.Pa 0.12.0 :
+.Pa the GNU Grub bootloader
+or the
+.Nx
+cdboot bootloader (since 
+.Nx
+4.0). By default it will use the first option:
+.Pa the GNU Grub bootloader .
+You may want to change this by changing the option
+.Pa USE_GNU_GRUB
+to
+.Sy no .
 .Pp
 The following options are recognized:
 .Bl -tag -width XcXconf_file
@@ -56,6 +73,14 @@ Use
 as configuration file (full name expected).
 Example:
 .Fl c Ar foo.conf .
+.El
+.Bl -tag -width XkXkernel
+.It Fl k Ar kernel
+Overrides the
+.Ar BOOTKERN
+value specified in the configuration file,
+.Ar KERNEL_NAME
+will be modified automatically too.
 .El
 .Bl -tag -width XvX
 .It Fl v
@@ -76,15 +101,32 @@ issuing the
 .Ar config
 target.
 .Bl -tag -width 15n -offset indent
-.It SOURCEDIR
-The
-.Nx
-source directory.
+.It BASEDIR
+Primary directory used to store the main directories and the final ISO image.
 Defaults to
-.Pa /usr/src .
+.Pa $HOME/livecd .
+.It BASE_SETS_DIR
+The base sets directory.
+Defaults to
+.Pa $HOME/release/binary/sets .
+.It BASE_SETS
+Base sets which will be unpacked into
+.Pa $ISODIR . 
+Sets used by default are:
+.Pa etc.tgz base.tgz comp.tgz text.tgz .
+.It CHROOT_SHELL
+Default shell to use with the chroot target.
+Defaults to
+.Sy /bin/ksh .
+.It ISODIR
+Directory used to store the main
+.Nx 
+base distribution.
+Defaults to
+.Pa $BASEDIR/iso .
 .It PKGSRCDIR
-The
-.Nx
+The 
+.Nx 
 packages collection directory.
 When the
 .Ar chroot
@@ -107,90 +149,27 @@ Defaults to
 The main directory used to store the Makefiles, kernel, example configuration
 files, etc.
 Defaults to
-.Pa $PREFIX/share/mklivecd/ .
-.It BASEDIR
-Primary directory used to store the main directories and the final ISO image.
+.Pa @PREFIX@/share/mklivecd/ .
+.It SOURCEDIR
+The
+.Nx
+source directory.
 Defaults to
-.Pa $HOME/livecd .
+.Pa /usr/src .
 .It WORKDIR
 Directory used to store the object files and kernel built by the target
 .Ql kernel .
 Defaults to
 .Pa $BASEDIR/work .
-.It ISODIR
-Directory used to store the main
-.Nx
-base distribution.
-Defaults to
-.Pa $BASEDIR/iso .
-.It BASE_SETS_DIR
-The base sets directory.
-Defaults to
-.Pa $HOME/release/binary/sets .
-.It X11_SETS_DIR
-The X11 sets directory.
-Defaults to
-.Pa $BASE_SETS_DIR .
-.It BASE_SETS
-Base sets which will be unpacked into
-.Pa $ISODIR .
-Sets used by default are:
-.Pa etc.tgz base.tgz comp.tgz text.tgz .
 .It X11_SETS
 X11 sets which will be unpacked into
 .Pa $ISODIR .
 Sets used by default are:
 .Pa xbase.tgz xcomp.tgz xfont.tgz xserver.tgz .
-.It CHROOT_SHELL
-Default shell to use with the chroot target.
+.It X11_SETS_DIR
+The X11 sets directory.
 Defaults to
-.Sy /bin/ksh
-.It ENABLE_X11
-If set to
-.Sy yes
-then X11 sets and configuration files will be unpacked automatically.
-Defaults to
-.Sy no .
-.It MKISOFS_ARGS
-Arguments passed to
-.Xr mkisofs 1
-when creating the
-.Nx
-ISO image.
-Defaults to
-.Sy -nobak -J -R -v .
-.It CDRECORD_ARGS
-Arguments passed to
-.Xr cdrecord 1
-when burning the
-.Nx
-Live CD ISO image.
-Defaults to
-.Sy -v .
-.It BLANK_BEFORE_BURN
-Used in the
-.Ar burn
-target to blank a CD-RW before burning the
-.Nx
-Live CD ISO image.
-Useful if you use CD-RW.
-Defaults to
-.Sy no .
-.It CDROM_DEVICE
-Used in the target
-.Ar burn
-to specify the CD-ROM device.
-Defaults to
-.Sy 15,1,0 .
-.It PERSONAL_CONFIG
-If set to
-.Sy yes ,
-then
-.Pa personal_config
-file will be used.
-See below for details.
-Defaults to
-.Sy no .
+.Pa $BASE_SETS_DIR .
 .It BOOTKERN
 Name of the
 .Nx
@@ -204,11 +183,76 @@ kernel.
 Useful if you want to change the default behaviour of the build process.
 Defaults to
 .Sy MKLIVECD .
+.It MULTIPLE_KERNELS
+If set to
+.Sy other thing than ``no'' ,
+it will compile and install the kernels specified into
+.Pa $ISODIR/boot/grub ,
+and it will update automatically the
+.Pa menu.lst
+file for
+.Pa the GNU Grub bootloader .
+See below for details.
+.It BLANK_BEFORE_BURN
+Used in the
+.Ar burn
+target to blank a CD-RW before burning the
+.Nx
+Live CD ISO image.
+Useful if you use CD-RW.
+Defaults to
+.Sy no .
+.It CDRECORD_ARGS
+Arguments passed to
+.Xr cdrecord 1
+when burning the
+.Nx
+Live CD ISO image.
+Defaults to
+.Sy -v .
+.It CDROM_DEVICE
+Used in the target
+.Ar burn
+to specify the CD-ROM device.
+Defaults to
+.Sy 15,1,0 .
+.It ENABLE_X11
+If set to
+.Sy yes
+then X11 sets and configuration files will be unpacked automatically.
+Defaults to
+.Sy no .
+.It GRUB_FILES_DIR
+Directory where the grub files are stored.
+Defaults to
+.Sy @LOCALBASE@/lib/grub/@MACHINE_ARCH@-/ .
+.It HOSTNAME
+Hostname of the live CD-ROM/DVD-ROM, it's assigned when running the
+.Sy base
+target. Defaults to
+.Sy MKLIVECD_0x00 .
 .It IMAGE_NAME
 Name of the final ISO image, e.g.:
 .Pa My_NetBSD_Live_CD_ISO_Image.iso .
 Defaults to
 .Sy NetBSD-LiveCD .
+.It MKISOFS_ARGS
+Arguments passed to
+.Xr mkisofs 1
+when creating the
+.Nx
+ISO image.
+Defaults to
+.Sy -nobak -J -R -v .
+.It PERSONAL_CONFIG
+If set to
+.Sy yes ,
+then
+.Pa personal_config
+file will be used.
+See below for details.
+Defaults to
+.Sy no .
 .It PKG_SYSCONFDIR
 Directory where the pkgsrc settings are stored, by default
 .Nm
@@ -223,6 +267,13 @@ It could be useful if you don't want to include some directories
 on the CD, or your free space is small.
 Defaults to
 .Pa altroot rescue usr/share/info .
+.It USE_GNU_GRUB
+Used to select the bootloader for the Live CD.
+When it's disabled the
+.Nx
+CDBootloader will be used.
+Defaults to
+.Sy yes .
 .It MNT_{MOUNT_POINT}_ARGS
 This specifies the arguments passed to the
 .Xr mount 8
@@ -293,12 +344,11 @@ directory and the base
 .Nx
 tree in
 .Pa $ISODIR ,
-except the CD-ROM boot image
-.Pa /stand/cdlive-boot.fs
+except the mfs directories located in
+.Pa /stand
 and the
 .Nx
-kernel
-.Pa /netbsd .
+kernels.
 .El
 .Ss What should I do in the chroot jail?
 While working in the chroot environment, you can
@@ -323,7 +373,37 @@ to the
 .Ar $ISODIR/$HOME
 directory.
 Please take a look at the example file located in
-.Ar ${PREFIX}/share/mklivecd .
+.Ar @PREFIX@/share/mklivecd .
+.Ss How to use the MULTIPLE_KERNELS option?
+An example is provided below, we have two kernels:
+.Ar ACPIKERN
+and
+.Ar APMKERN ,
+both are kernel configuration files, you'll need
+to define the variables named
+.Ar BOOTKERN_${foo}
+and
+.Ar KERNEL_NAME_${foo}
+for every kernel specified on the
+.Pa MULTIPLE_KERNELS
+option. The following example shows that:
+.Bd -literal -offset indent
+MULTIPLE_KERNELS="ACPIKERN APMKERN"
+BOOTKERN_ACPIKERN="LIVECD_ACPI"
+BOOTKERN_APMKERN="LIVECD_APM"
+KERNEL_NAME_ACPIKERN="KERN_ACPI_LIVECD"
+KERNEL_NAME_APMKERN="KERN_APM_LIVECD"
+.Ed
+.Pp
+Note that when using this option, the
+.Pa BOOTKERN
+and
+.Pa KERNEL_NAME
+variables, will don't have any effect. After building the specified
+kernels, it will update the
+.Pa menu.lst
+file automatically for the
+.Ar GNU Grub bootloader .
 .Sh NOTES
 .Pa PKG_SYSCONFDIR
 defaults to
@@ -338,15 +418,25 @@ directory will be copied instead of the one located in
 An example kernel config file,
 .Pa KERN-LIVECD ,
 has been installed into
-.Ar ${PREFIX}/share/mklivecd ,
+.Ar @PREFIX@/share/mklivecd ,
 based on the 2.0 branch.
 You should copy your own kernel config file into
 .Ar $HOME/.mklivecd .
 The
 .Sy BOOTKERN
-variable should point at it.
+variable should point at it, if you're not using
+.Sy MULTIPLE_KERNELS .
+The important thing about the kernel is the line:
+.Bd -literal -offset indent
+config netbsd root on cd0a type cd9660 dumps on none
+.Ed
+.Pp
+This line is required in the kernel config file for
+the Live CD-ROM/DVD-ROM to boot correctly and without
+human interactivity, otherwise you'll have to enter
+the parameters manually when booting.
 .Sh EXAMPLES
-Below are the minimal steps to create your own Live CD:
+Below are the minimal steps to create your own Live CD-ROM/DVD-ROM:
 .Bd -literal -offset indent
 $ mklivecd config
   [edit the config file]
@@ -357,11 +447,14 @@ $ mklivecd chroot
 $ mklivecd iso
 $ mklivecd burn
 .Ed
+.Sh BUGS
+It is not perfect but at least it does its task correctly.
 .Sh SEE ALSO
 .Xr packages 7 ,
+.Xr mount_mfs 8 ,
 .Xr mount_null 8
 .Sh AUTHORS
 The
 .Nm
 utility was written by
-.An Juan RP Aq xtraeme@NetBSD.org .
+.An Juan Romero Pardines Aq xtraeme@NetBSD.org .
