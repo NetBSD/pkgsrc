@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/07/29 16:10:44 drochner Exp $
 #
 
-DISTNAME=		gxine-0.4.5
+DISTNAME=		gxine-0.4.6
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
