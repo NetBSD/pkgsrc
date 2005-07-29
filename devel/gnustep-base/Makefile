@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2005/06/01 18:02:43 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/07/29 12:58:37 adam Exp $
 
-DISTNAME=	gnustep-base-1.10.3
+DISTNAME=	gnustep-base-1.11.0
 CATEGORIES=	devel gnustep
-MASTER_SITES=	ftp://ftp.gnustep.org/pub/gnustep/core/
+MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
@@ -24,12 +24,6 @@ pre-configure:
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/openapp ${PREFIX}/bin
 
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/ffcall/buildlink3.mk"
-.include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/gnustep-make/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-
 .include "../../mk/compiler.mk"
 
 .if empty(CC_VERSION:Mgcc-3*)
@@ -42,6 +36,12 @@ post-install:
 PTHREAD_LIBS+=		-lpth
 .endif
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/ffcall/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/gnustep-make/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/gnustep-make/gnustep.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
