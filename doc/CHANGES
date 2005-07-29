@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10724 2005/07/29 13:00:26 adam Exp $
+$NetBSD: CHANGES,v 1.10725 2005/07/29 16:39:33 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3401,3 +3401,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/gnustep-base to 1.11.0 [adam 2005-07-29]
 	Updated x11/gnustep-gui to 0.10.0 [adam 2005-07-29]
 	Updated x11/gnustep-back to 0.10.0 [adam 2005-07-29]
+	Updated emulators/qemu to 0.7.1 [xtraeme 2005-07-29]
