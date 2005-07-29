@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: files,v 1.6 2005/07/27 16:18:54 jlam Exp $
+# $NetBSD: files,v 1.7 2005/07/29 21:41:04 jlam Exp $
 #
 # +FILES - reference-counted configuration file management script
 #
@@ -25,6 +25,9 @@
 #
 #	# FILE: /etc/bar.conf c /example/bar.conf
 #	# FILE: /etc/baz/conf c /example/baz.conf 0600 foo-user foo-group
+#
+# For each FILE entry, if the file path is relative, then it is taken to
+# be relative to ${PKG_PREFIX}.
 #
 # The second field in each FILE entry is a set of flags with the following
 # meaning:
@@ -52,6 +55,8 @@ TRUE="@TRUE@"
 SELF=$0
 ACTION=$1
 
+: ${PKG_PREFIX=@PREFIX@}
+
 case ${ACTION} in
 VIEW-REMOVE)
 	DEPOTDIR="$2"
@@ -73,11 +78,16 @@ ADD)
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -u |
 	{ while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
-		""|[!/]*)	continue ;;
+		"")	continue ;;
+		[!/]*)	file="${PKG_PREFIX}/$file" ;;
 		esac
 		case $f_flags in
 		*c*)	;;
 		*)	continue ;;
+		esac
+		case $f_eg in
+		"")	continue ;;
+		[!/]*)	f_eg="${PKG_PREFIX}/$f_eg" ;;
 		esac
 
 		shadow_dir="${PKG_REFCOUNT_FILES_DBDIR}$file"
@@ -144,12 +154,18 @@ REMOVE)
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
 	while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
-		""|[!/]*)	continue ;;
+		"")	continue ;;
+		[!/]*)	file="${PKG_PREFIX}/$file" ;;
 		esac
 		case $f_flags in
 		*c*)	;;
 		*)	continue ;;
 		esac
+		case $f_eg in
+		"")	continue ;;
+		[!/]*)	f_eg="${PKG_PREFIX}/$f_eg" ;;
+		esac
+
 		shadow_dir="${PKG_REFCOUNT_FILES_DBDIR}$file"
 		perms="$shadow_dir/+PERMISSIONS"
 		preexist="$shadow_dir/+PREEXISTING"
@@ -181,10 +197,10 @@ VIEW-REMOVE)
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
 	while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
-		${DEPOTDIR}/*)	;;
+		${DEPOTDIR}/*)	link="${VIEWDIR}/${file#${DEPOTDIR}/}" ;;
+		[!/]*)		link="${VIEWDIR}/$file" ;;
 		*)		continue ;;
 		esac
-		link="${VIEWDIR}/${file#${DEPOTDIR}/}"
 		dir="${link%[^/]*}"
 		if ${TEST} -h "$link"; then
 			${RM} -f $link
@@ -197,13 +213,19 @@ CHECK-ADD)
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
 	{ while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
-		""|[!/]*)	continue ;;
-		*)		${TEST} ! -f "$file" || continue ;;
+		"")	continue ;;
+		[!/]*)	file="${PKG_PREFIX}/$file" ;;
 		esac
+		${TEST} ! -f "$file" || continue
 		case $f_flags in
 		*c*)	;;
 		*)	continue ;;
 		esac
+		case $f_eg in
+		"")	continue ;;
+		[!/]*)	f_eg="${PKG_PREFIX}/$f_eg" ;;
+		esac
+
 		case "$printed_header" in
 		yes)	;;
 		*)	printed_header=yes
@@ -241,9 +263,10 @@ CHECK-REMOVE)
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
 	{ while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
-		""|[!/]*)	continue ;;
-		*)		${TEST} -f "$file" || continue ;;
+		"")	continue ;;
+		[!/]*)	file="${PKG_PREFIX}/$file" ;;
 		esac
+		${TEST} -f "$file" || continue
 		shadow_dir="${PKG_REFCOUNT_FILES_DBDIR}$file"
 		${TEST} ! -d "$shadow_dir" || continue	# refcount isn't zero
 		case "$printed_header" in
