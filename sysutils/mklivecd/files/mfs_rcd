@@ -1,6 +1,6 @@
-# $NetBSD: mfs_rcd,v 1.4 2004/10/29 17:47:30 xtraeme Exp $ 
+# $NetBSD: mfs_rcd,v 1.5 2005/07/29 12:13:01 xtraeme Exp $ 
 #
-# Mount mfs directories and unpack the required file
+# Mount mfs directories and unpack the required files
 # before anything.
 
 # PROVIDE: LiveCD
@@ -16,11 +16,15 @@ stop_cmd="mfsrc_stop"
 
 mfsrc_start()
 {
-	echo "=> Mounting Memory based filesystems..."
+	echo -n "=> Mounting Memory based filesystems: "
 	mount_mfs @MNT_DEV_ARGS@ swap /dev
+        echo -n "/dev, "
 	mount_mfs @MNT_ETC_ARGS@ swap /etc
+        echo -n "/etc, "
 	mount_mfs @MNT_VAR_ARGS@ swap /var
+        echo -n "/root, "
 	mount_mfs @MNT_ROOT_ARGS@ swap /root
+        echo "/tmp."
 	mount_mfs @MNT_TMP_ARGS@ swap /tmp
 	@HOME@
 	@HOMETAR@
@@ -29,9 +33,13 @@ mfsrc_start()
 
 	for f in mfs_dev mfs_etc mfs_var mfs_root
 	do
-	    @TAR@ xfzp /stand/$f.tgz -C / 
+	    @TAR@ xfzp /stand/$f.tgz -C / > /dev/null 2>&1
+            if [ "$?" -eq 0 ]; then
+                echo "=> $f unpacked successfully."
+            else
+                echo "=> $f not unpacked correctly!"
+            fi
 	done
-	echo "=> Finished successfully."
 }
 
 mfsrc_stop()
