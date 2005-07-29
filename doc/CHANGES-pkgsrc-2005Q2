@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.39 2005/07/27 08:02:56 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.40 2005/07/29 07:38:57 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -117,3 +117,11 @@ Pullup ticket 616 - requested by grant beattie
 build fix for exim
 Pullup ticket 628 - requested by grant beattie
 security update for clamav
+Pullup ticket 627 - requested by Martti Kuparinen
+security update for vim
+Pullup ticket 632 - requested by Matthias Drochner
+security update for ethereal
+Pullup ticket 629 - requested by grant beattie
+infrastructure fixes for sunpro
+Pullup ticket 630 - requested by grant beattie
+infrastructure fixes for sunpro
