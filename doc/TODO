@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3770 2005/07/28 19:09:56 wiz Exp $
+$NetBSD: TODO,v 1.3771 2005/07/29 16:13:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -367,6 +367,7 @@ Suggested package updates
 	o boaconstructor-0.3.1
 	o bochs-2.2.1
 	o bogofilter-0.94.12
+	o boolean-6.7
 	o boson-0.10
 	o browser-bookmarks-menu-0.4
 	o btparse-0.34
@@ -426,6 +427,7 @@ Suggested package updates
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.9.3
+	o dialog-1.0 [pkg/30856]
 	o diffstat-1.38
 	o dirac-0.5.2
 	o dirdiff-2.0
@@ -557,7 +559,7 @@ Suggested package updates
 	o imposter-0.3 [pkg/30700]
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
-	o ion3-devel-20050625
+	o ion3-devel-20050728
 	o iozone-3.239
 	o ipcheck-0.219
 	o ircd-hybrid-7.0.4
@@ -897,7 +899,7 @@ Suggested package updates
 	o py-gnuplot-1.7
 	o py-imaging-1.1.5c2
 	o py-kenosis-0.95
-	o py-ldap-2.0.8
+	o py-ldap-2.0.9
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
 	o py-mad-0.5.3
@@ -1026,6 +1028,7 @@ Suggested package updates
 	o swfdec-0.3.5
 	o swi-prolog-5.5.11
 	o swish-e-2.4.3
+	o sylpheed-2.0.0
 	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-4.1.5
