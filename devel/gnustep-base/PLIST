@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.11 2005/04/12 15:11:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/07/29 12:58:37 adam Exp $
 bin/openapp
+share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
+share/GNUstep/System/Library/Bundles/SSL.bundle/stamp.make
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_5.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_6.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_7.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_0.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.rnc
+share/GNUstep/System/Library/DTDs/gsdoc-1_0_2.dtd
 share/GNUstep/System/Library/DTDs/plist-0_9.dtd
 share/GNUstep/System/Library/Documentation/man/man1/autogsdoc.1
 share/GNUstep/System/Library/Documentation/man/man1/cvtenc.1
@@ -22,7 +26,6 @@ share/GNUstep/System/Library/Headers/Foundation/NSArchiver.h
 share/GNUstep/System/Library/Headers/Foundation/NSArray.h
 share/GNUstep/System/Library/Headers/Foundation/NSAttributedString.h
 share/GNUstep/System/Library/Headers/Foundation/NSAutoreleasePool.h
-share/GNUstep/System/Library/Headers/Foundation/NSBitmapCharSet.h
 share/GNUstep/System/Library/Headers/Foundation/NSBundle.h
 share/GNUstep/System/Library/Headers/Foundation/NSByteOrder.h
 share/GNUstep/System/Library/Headers/Foundation/NSCalendarDate.h
@@ -52,6 +55,7 @@ share/GNUstep/System/Library/Headers/Foundation/NSHost.h
 share/GNUstep/System/Library/Headers/Foundation/NSIndexSet.h
 share/GNUstep/System/Library/Headers/Foundation/NSInvocation.h
 share/GNUstep/System/Library/Headers/Foundation/NSKeyValueCoding.h
+share/GNUstep/System/Library/Headers/Foundation/NSKeyValueObserving.h
 share/GNUstep/System/Library/Headers/Foundation/NSKeyedArchiver.h
 share/GNUstep/System/Library/Headers/Foundation/NSLock.h
 share/GNUstep/System/Library/Headers/Foundation/NSMapTable.h
@@ -93,12 +97,15 @@ share/GNUstep/System/Library/Headers/GNUstepBase/GCObject.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GNUstep.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSCategories.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSFileHandle.h
+share/GNUstep/System/Library/Headers/GNUstepBase/GSFunctions.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSIArray.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSIMap.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSLocale.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSLock.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSMime.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSObjCRuntime.h
+share/GNUstep/System/Library/Headers/GNUstepBase/GSRunLoopCtxt.h
+share/GNUstep/System/Library/Headers/GNUstepBase/GSRunLoopWatcher.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSUnion.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSXML.h
 share/GNUstep/System/Library/Headers/GNUstepBase/Unicode.h
@@ -116,12 +123,15 @@ share/GNUstep/System/Library/Headers/gnustep/base/GCObject.h
 share/GNUstep/System/Library/Headers/gnustep/base/GNUstep.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSCategories.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSFileHandle.h
+share/GNUstep/System/Library/Headers/gnustep/base/GSFunctions.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSIArray.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSIMap.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSLocale.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSLock.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSMime.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSObjCRuntime.h
+share/GNUstep/System/Library/Headers/gnustep/base/GSRunLoopCtxt.h
+share/GNUstep/System/Library/Headers/gnustep/base/GSRunLoopWatcher.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSUnion.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSXML.h
 share/GNUstep/System/Library/Headers/gnustep/base/Unicode.h
@@ -149,21 +159,9 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Locale.a
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Locale.encodings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Russian
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Slovak
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/Spanish
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/TraditionalChinese
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages/UkraineRussian
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/alphanumericCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/controlCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/decimalDigitCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/decomposableCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/illegalCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/letterCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/lowercaseLetterCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/nonBaseCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/punctuationCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/symbolAndOperatorCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/uppercaseLetterCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/whitespaceAndNlCharSet.dat
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets/whitespaceCharSet.dat
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/GNUmakefile
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/GNUstep_zones
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/README
@@ -752,6 +750,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/W-SU
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/WET
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Zulu
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Spanish.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/TraditionalChinese.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/libgnustep-base.so
 share/GNUstep/System/Library/Libraries/libgnustep-base.so.${PKGVERSION}
@@ -771,6 +770,7 @@ share/GNUstep/System/Tools/plser
 share/GNUstep/System/Tools/sfparse
 share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/TraditionalChinese.lproj
+@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Spanish.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/US
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Pacific
@@ -795,7 +795,6 @@ share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Africa
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones
-@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSCharacterSets
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Languages
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Italian.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/German.lproj
@@ -811,3 +810,5 @@ share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Documentation/man/man8
 @dirrm share/GNUstep/System/Library/Documentation/man/man1
 @dirrm share/GNUstep/System/Library/DTDs
+@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/Resources
+@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle
