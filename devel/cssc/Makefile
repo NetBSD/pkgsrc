@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/07/08 21:00:35 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/29 04:24:03 grant Exp $
 #
 
 DISTNAME=	CSSC-1.0.1
@@ -13,13 +13,13 @@ COMMENT=	GNU workalike for the source code control system SCCS
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--enable-binary
+CONFIGURE_ARGS+=--enable-binary
 CONFIGURE_ENV+=	CONFIG_DIFF_COMMAND="${TOOLS_DIFF}"
 USE_TOOLS+=	diff
 TEST_TARGET=	check
 
-USE_MAKEINFO=		YES
-TEXINFO_REQD=		4.0
-INFO_FILES=		cssc.info
+USE_MAKEINFO=	YES
+TEXINFO_REQD=	4.0
+INFO_FILES=	cssc.info
 
 .include "../../mk/bsd.pkg.mk"
