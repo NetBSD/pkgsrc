@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10726 2005/07/29 19:34:48 chris Exp $
+$NetBSD: CHANGES,v 1.10727 2005/07/29 21:05:20 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3403,3 +3403,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gnustep-back to 0.10.0 [adam 2005-07-29]
 	Updated emulators/qemu to 0.7.1 [xtraeme 2005-07-29]
 	Updated mail/sylpheed to 2.0.0 [chris 2005-07-29]
+	Updated mysql4-client to 4.1.13 [xtraeme 2005-07-29]
+	Updated mysql4-server to 4.1.13 [xtraeme 2005-07-29]
