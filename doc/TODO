@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3772 2005/07/29 16:39:33 xtraeme Exp $
+$NetBSD: TODO,v 1.3773 2005/07/29 19:34:48 chris Exp $
 
 Suggested new packages
 ======================
@@ -1027,7 +1027,6 @@ Suggested package updates
 	o swfdec-0.3.5
 	o swi-prolog-5.5.11
 	o swish-e-2.4.3
-	o sylpheed-2.0.0
 	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-4.1.5
