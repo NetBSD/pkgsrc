@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10725 2005/07/29 16:39:33 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10726 2005/07/29 19:34:48 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3402,3 +3402,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gnustep-gui to 0.10.0 [adam 2005-07-29]
 	Updated x11/gnustep-back to 0.10.0 [adam 2005-07-29]
 	Updated emulators/qemu to 0.7.1 [xtraeme 2005-07-29]
+	Updated mail/sylpheed to 2.0.0 [chris 2005-07-29]
