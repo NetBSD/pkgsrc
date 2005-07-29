@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3771 2005/07/29 16:13:45 wiz Exp $
+$NetBSD: TODO,v 1.3772 2005/07/29 16:39:33 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -918,7 +918,6 @@ Suggested package updates
 	o pysol-4.82
 	o qDecoder-7.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
-	o qemu-0.7.1
 	o qnetwalk-1.2 [pkg/29941]
 	o qgreylist-0.3
 	o qt1-1.45
