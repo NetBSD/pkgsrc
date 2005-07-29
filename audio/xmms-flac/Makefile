@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:07:39 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/07/29 06:06:33 grant Exp $
 #
 
 DISTNAME=	flac-1.1.2
@@ -20,6 +20,13 @@ XMMS_WRKSRC=	${WRKSRC}/src/plugin_xmms
 
 # previous name of the package
 CONFLICTS=	flac-xmms-[0-9]*
+
+.include "../../mk/compiler.mk"
+
+# SunPro does not support __inline
+.if !empty(PKGSRC_COMPILER:Msunpro)
+CFLAGS+=	-D__inline=inline
+.endif
 
 #do-build:
 #	@cd ${XMMS_WRKSRC}/../plugin_common && ${SETENV} ${MAKE_ENV} \
