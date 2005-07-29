@@ -1,7 +1,7 @@
 # -*- sh -*-
 # start of install
 #
-# $NetBSD: install,v 1.39 2005/07/27 16:18:54 jlam Exp $
+# $NetBSD: install,v 1.40 2005/07/29 18:32:18 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -71,14 +71,16 @@ POST-INSTALL)
 	;;
 
 VIEW-INSTALL)
-	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
-		${ECHO} "===> Updating /etc/shells"
-		${TOUCH} /etc/shells
-		${CP} /etc/shells /etc/shells.pkgsrc."$$"
-		(${GREP} -v "^${PKG_SHELL}" /etc/shells.pkgsrc."$$" || ${TRUE}; ${ECHO} ${PKG_SHELL}) > /etc/shells
-		${RM} /etc/shells.pkgsrc."$$"
-	fi
 	#
+	# Register shells in /etc/shells.
+	#
+	case ${_PKG_REGISTER_SHELLS} in
+	YES)	${TEST} ! -x ./+SHELL ||
+			./+SHELL ADD ${PKG_METADATA_DIR} ;;
+	esac
+	${TEST} ! -x ./+SHELL ||
+		./+SHELL CHECK-ADD ${PKG_METADATA_DIR}
+
 	# If ${PKG_SYSCONFBASE} points outside of ${PREFIX}, then add the
 	# package config files to the proper view.
 	#
