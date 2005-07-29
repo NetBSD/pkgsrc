@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2005/06/14 18:39:29 minskim Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/07/29 18:32:18 jlam Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -74,7 +74,7 @@ CONFIGURE_ARGS+=--with-tcsetpgrp
 
 .undef MANZ
 
-PKG_SHELL=	${PREFIX}/bin/zsh
+PKG_SHELL=	bin/zsh
 
 INSTALL_TARGET=	install install.info
 

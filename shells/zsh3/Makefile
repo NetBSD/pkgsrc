@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:21 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/07/29 18:32:18 jlam Exp $
 #
 
 DISTNAME=       zsh-3.0.8
@@ -27,6 +27,6 @@ BUILD_DEFS+=	ZSH_STATIC
 LDFLAGS+=	-static
 .endif
 
-PKG_SHELL=	${PREFIX}/bin/zsh
+PKG_SHELL=	bin/zsh
 
 .include "../../mk/bsd.pkg.mk"

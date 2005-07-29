@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/02/24 12:19:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/07/29 18:32:18 jlam Exp $
 #
 
 NO_MTREE=		YES
 
 PKGNAME=		standalone-${DISTNAME}
-
-PKG_SHELL=		/bin/tcsh
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches

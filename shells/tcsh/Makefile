@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/04/28 23:29:06 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2005/07/29 18:32:18 jlam Exp $
 #
 
 DISTNAME=	tcsh-6.14.00
@@ -32,7 +32,7 @@ OS_VER_cmd=	${ECHO} ${OS_VERSION} | ${SED} -e 's|5\.|2.|'
 LOWER_OPSYS=	solaris${OS_VER_cmd:sh}
 .endif
 
-PKG_SHELL?=	${PREFIX}/bin/tcsh
+PKG_SHELL?=	bin/tcsh
 
 post-install:
 	@${ECHO} "Installing message catalogues"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/07 21:30:54 tron Exp $
+# $NetBSD: Makefile,v 1.11 2005/07/29 18:32:17 jlam Exp $
 
 DISTNAME=	bash-3.0
 PKGNAME=	bash-3.0pl16
@@ -30,7 +30,7 @@ TEST_TARGET=		test
 
 INFO_FILES=		bash.info
 
-PKG_SHELL=		${PREFIX}/bin/bash
+PKG_SHELL=		bin/bash
 
 # All features enabled by default.
 CONFIGURE_ARGS+=	--enable-readline
