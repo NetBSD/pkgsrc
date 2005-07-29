@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/24 21:13:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/07/29 18:32:18 jlam Exp $
 
 DISTNAME=       rc-1.6
 CATEGORIES=	shells plan9
@@ -12,6 +12,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-history
 
 USE_PKGINSTALL=	yes
-PKG_SHELL=	${PREFIX}/bin/rc
+PKG_SHELL=	bin/rc
 
 .include "../../mk/bsd.pkg.mk"

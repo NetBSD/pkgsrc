@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.32 2005/02/02 10:33:01 jlam Exp $
+# $NetBSD: header,v 1.33 2005/07/29 18:32:18 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -71,9 +71,6 @@ case ${VIEW} in
 *)	PKG_SYSCONFVIEWBASE="${PKG_SYSCONFBASE}/${VIEW}" ;;
 esac
 
-PKG_REGISTER_SHELLS="@PKG_REGISTER_SHELLS@"
-PKG_SHELL="@PKG_SHELL@"
-
 CONF_IGNORE_FILES="*[~#] *.OLD *.orig *,v .pkgsrc */.pkgsrc"
 
 PKG_INSTALLATION_TYPE="@PKG_INSTALLATION_TYPE@"
@@ -102,6 +99,15 @@ case "${PKG_RCD_SCRIPTS:-@PKG_RCD_SCRIPTS@}" in
 	;;
 [Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
 	_PKG_RCD_SCRIPTS=NO
+	;;
+esac
+
+case "${PKG_REGISTER_SHELLS:-@PKG_REGISTER_SHELLS@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_REGISTER_SHELLS=YES
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_REGISTER_SHELLS=NO
 	;;
 esac
 

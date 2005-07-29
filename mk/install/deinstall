@@ -1,7 +1,7 @@
 # -*- sh -*-
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.34 2005/07/27 16:18:54 jlam Exp $
+# $NetBSD: deinstall,v 1.35 2005/07/29 18:32:18 jlam Exp $
 
 case ${STAGE} in
 VIEW-DEINSTALL)
@@ -20,12 +20,15 @@ VIEW-DEINSTALL)
 		esac
 		;;
 	esac
-	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
-		${ECHO} "===> Updating /etc/shells"
-		${CP} /etc/shells /etc/shells.pkgsrc."$$"
-		(${GREP} -v "^${PKG_SHELL}" /etc/shells.pkgsrc."$$" || ${TRUE}) > /etc/shells
-		${RM} /etc/shells.pkgsrc."$$"
-	fi
+	#
+	# Remove shells from /etc/shells.
+	#
+	case ${_PKG_REGISTER_SHELLS} in
+	YES)	${TEST} ! -x ./+SHELL ||
+			./+SHELL REMOVE ${PKG_METADATA_DIR} ;;
+	esac
+	${TEST} ! -x ./+SHELL ||
+		./+SHELL CHECK-REMOVE ${PKG_METADATA_DIR}
 	;;
 
 DEINSTALL)

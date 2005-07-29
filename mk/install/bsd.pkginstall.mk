@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.3 2005/07/27 04:55:43 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.4 2005/07/29 18:32:18 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -399,6 +399,42 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	) > ${.TARGET}.tmp;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
+# PKG_SHELL contains the pathname of the shell that should be added or
+#	removed from the shell database, /etc/shells.  If the pathname
+#	is relative, then it is taken to be relative to ${PREFIX}.
+#
+PKG_SHELL?=		# empty
+
+INSTALL_SHELL_FILE=	${WRKDIR}/.install-shell
+INSTALL_UNPACK_TMPL+=	${INSTALL_SHELL_FILE}
+
+${INSTALL_SHELL_FILE}: ../../mk/install/shell
+	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	eval set -- ${PKG_SHELL} ;					\
+	${TEST} $$# -gt 0 || exit 0;					\
+	${ECHO} "# start of install-shell";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +SHELL script that handles shell registration."; \
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
+	${ECHO} "	\$${CAT} > ./+SHELL << 'EOF_SHELL'";		\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/shell;		\
+	${ECHO} "";							\
+	eval set -- ${PKG_SHELL} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		i="$$1"; shift;						\
+		${ECHO} "# SHELL: $$i";					\
+	done;								\
+	${ECHO} "EOF_SHELL";						\
+	${ECHO} "	\$${CHMOD} +x ./+SHELL";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-shell";				\
+	) > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
+
 # PKG_CREATE_USERGROUP indicates whether the INSTALL script should
 #	automatically add any needed users/groups to the system using
 #	useradd/groupadd.  It is either YES or NO and defaults to YES.
@@ -413,26 +449,20 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 #	to ${RCD_SCRIPTS_DIR}.  It is either YES or NO and defaults to
 #	NO.  This variable only takes effect if ${PKG_CONFIG} == "YES".
 #
+# PKG_REGISTER_SHELLS indicates whether to automatically register shells
+#	in /etc/shells.  It is either YES or NO and defaults to YES.
+#
 # These values merely set the defaults for INSTALL/DEINSTALL scripts, but
 # they may be overridden by resetting them in the environment.
 #
 PKG_CREATE_USERGROUP?=	YES
 PKG_CONFIG?=		YES
 PKG_RCD_SCRIPTS?=	NO
+PKG_REGISTER_SHELLS?=	YES
 FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP}
 FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG}
 FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS}
-
-# PKG_REGISTER_SHELLS indicates whether to automatically register shells
-#	in /etc/shells.  It is either YES or NO and defaults to YES.
-#
-# PKG_SHELL contains the full pathname of the shell being installed.
-#
-
-PKG_REGISTER_SHELLS?=	YES
-PKG_SHELL?=		# empty
 FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS}
-FILES_SUBST+=		PKG_SHELL=${PKG_SHELL:Q}
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts and
 # in the rc.d scripts.
