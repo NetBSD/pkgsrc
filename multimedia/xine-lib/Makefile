@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2005/05/26 22:47:22 reed Exp $
+# $NetBSD: Makefile,v 1.24 2005/07/29 16:09:11 drochner Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		2
 COMMENT=		Multimedia player library
 
 BUILDLINK_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
