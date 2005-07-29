@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:22 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/07/29 00:54:41 grant Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 PKGREVISION=		1
@@ -17,10 +17,11 @@ MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (binary pkg)
 
-OO_VER=		1.1.4
-PLIST_SUBST+=	VER=${OO_VER}
-MESSAGE_SUBST+=	VER=${OO_VER}
+OO_VER=			1.1.4
+PLIST_SUBST+=		VER=${OO_VER}
+MESSAGE_SUBST+=		VER=${OO_VER}
 
+NO_BUILD=		yes
 NO_CONFIGURE=           yes
 
 CONFLICTS+=		staroffice-[0-9]*
@@ -38,11 +39,6 @@ CHECK_SHLIBS=		no
 
 .include "../../mk/bsd.prefs.mk"
 
-do-build:
-# group together i386, i486, i586 and i686 (for Linux)
-#
-ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
-
 .if ${OPSYS} == "NetBSD"
 USE_PKGINSTALL=         yes
 
@@ -56,24 +52,17 @@ WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_Sparc_install
 DISTNAME=	OOo_${OO_VER}_LinuxIntel_install
 .  endif
 
-.endif
-
-.if ${OPSYS} == "Linux"
-.if ${ARCH} == "i386"
+.elif ${OPSYS} == "Linux" && ${MACHINE_ARCH} == "i386"
 DISTNAME=	OOo_${OO_VER}_LinuxIntel_install
-.endif
-.endif
 
-.if ${OPSYS} == "SunOS"
-.if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
+.elif ${OPSYS} == "SunOS"
+.  if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 DISTNAME=	OOo_${OO_VER}_SolarisSparc_install
 WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_Sparc_install
-.elif ${MACHINE_ARCH} == "i386"
+.  elif ${MACHINE_ARCH} == "i386"
 DISTNAME=	OOo_${OO_VER}_SolarisIntel_install
 WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_Intel_install
-# I don't have a Solaris/Intel box to test the PLIST out
-PKG_FAIL_REASON= '${PKGNAME} needs to have the PLIST fixed up still'
-.endif
+.  endif
 .endif
 
 INSTALLATION_DIRS=	bin
@@ -105,12 +94,12 @@ do-install:
 
 # everything specific to your OS/Arch goes into its own Makefile
 
-.if exists(Makefile.${OPSYS}.${ARCH})
-.  include "Makefile.${OPSYS}.${ARCH}"
+.if exists(Makefile.${OPSYS}.${MACHINE_ARCH})
+.  include "Makefile.${OPSYS}.${MACHINE_ARCH}"
 .endif
 
 .if defined(DISTNAME)
-.if ${DISTNAME} == "OOo_${OO_VER}_SolarisSparc_install"
+.  if ${DISTNAME} == "OOo_${OO_VER}_SolarisSparc_install"
 PLIST_SRC=	${PKGDIR}/PLIST.SolarisSparc
 .  elif ${DISTNAME} == "OOo_${OO_VER}_SolarisIntel_install"
 PLIST_SRC=	${PKGDIR}/PLIST.SolarisIntel
