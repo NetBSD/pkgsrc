@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/15 18:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/07/29 05:39:00 grant Exp $
 
 PKGNAME=		tcl-postgresql73-${BASE_VERS}
 PKGREVISION=	1
@@ -15,7 +15,8 @@ TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 USE_TOOLS+=		gtar
 
-BUILD_DIRS=		${WRKSRC}/src/interfaces/libpgtcl
+BUILD_DIRS=		${WRKSRC}/src/port
+BUILD_DIRS+=		${WRKSRC}/src/interfaces/libpgtcl
 BUILD_DIRS+=		${WRKSRC}/src/bin/pgtclsh
 
 post-install:
