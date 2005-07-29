@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.21 2005/05/06 13:54:48 tron Exp $
+@comment $NetBSD: PLIST,v 1.21.2.1 2005/07/29 07:24:39 snj Exp $
 bin/capinfos
 bin/dftest
 bin/editcap
 bin/ethereal
 bin/idl2eth
 bin/mergecap
+bin/randpkt
 bin/tethereal
 bin/text2pcap
 lib/ethereal/plugins/${PKGVERSION}/acn.la
@@ -23,6 +24,7 @@ lib/ethereal/plugins/${PKGVERSION}/mate.la
 lib/ethereal/plugins/${PKGVERSION}/megaco.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/opsi.la
+lib/ethereal/plugins/${PKGVERSION}/parlay.la
 lib/ethereal/plugins/${PKGVERSION}/pcli.la
 lib/ethereal/plugins/${PKGVERSION}/profinet.la
 lib/ethereal/plugins/${PKGVERSION}/rdm.la
@@ -30,6 +32,7 @@ lib/ethereal/plugins/${PKGVERSION}/rlm.la
 lib/ethereal/plugins/${PKGVERSION}/rtnet.la
 lib/ethereal/plugins/${PKGVERSION}/rudp.la
 lib/ethereal/plugins/${PKGVERSION}/stats_tree.la
+lib/ethereal/plugins/${PKGVERSION}/tango.la
 lib/ethereal/plugins/${PKGVERSION}/v5ua.la
 lib/ethereal/plugins/${PKGVERSION}/xml.la
 lib/libethereal.la
@@ -44,6 +47,9 @@ man/man1/text2pcap.1
 man/man4/ethereal-filter.4
 share/ethereal/AUTHORS-SHORT
 share/ethereal/capinfos.html
+share/ethereal/cfilters
+share/ethereal/colorfilters
+share/ethereal/dfilters
 share/ethereal/diameter/dictionary.dtd
 share/ethereal/diameter/dictionary.xml
 share/ethereal/diameter/imscxdx.xml
@@ -63,8 +69,70 @@ share/ethereal/help/toc
 share/ethereal/idl2eth.html
 share/ethereal/manuf
 share/ethereal/mergecap.html
+share/ethereal/radius/dictionary
+share/ethereal/radius/dictionary.3com
+share/ethereal/radius/dictionary.3gpp
+share/ethereal/radius/dictionary.3gpp2
+share/ethereal/radius/dictionary.acc
+share/ethereal/radius/dictionary.alcatel
+share/ethereal/radius/dictionary.alteon
+share/ethereal/radius/dictionary.altiga
+share/ethereal/radius/dictionary.aptis
+share/ethereal/radius/dictionary.ascend
+share/ethereal/radius/dictionary.bay
+share/ethereal/radius/dictionary.bintec
+share/ethereal/radius/dictionary.bristol
+share/ethereal/radius/dictionary.cablelabs
+share/ethereal/radius/dictionary.cabletron
+share/ethereal/radius/dictionary.cisco
+share/ethereal/radius/dictionary.cisco.bbsm
+share/ethereal/radius/dictionary.cisco.vpn3000
+share/ethereal/radius/dictionary.cisco.vpn5000
+share/ethereal/radius/dictionary.colubris
+share/ethereal/radius/dictionary.columbia_university
+share/ethereal/radius/dictionary.compat
+share/ethereal/radius/dictionary.cosine
+share/ethereal/radius/dictionary.erx
+share/ethereal/radius/dictionary.extreme
+share/ethereal/radius/dictionary.foundry
+share/ethereal/radius/dictionary.freeradius
+share/ethereal/radius/dictionary.gandalf
+share/ethereal/radius/dictionary.garderos
+share/ethereal/radius/dictionary.gemtek
+share/ethereal/radius/dictionary.itk
+share/ethereal/radius/dictionary.juniper
+share/ethereal/radius/dictionary.karlnet
+share/ethereal/radius/dictionary.livingston
+share/ethereal/radius/dictionary.localweb
+share/ethereal/radius/dictionary.merit
+share/ethereal/radius/dictionary.microsoft
+share/ethereal/radius/dictionary.mikrotik
+share/ethereal/radius/dictionary.navini
+share/ethereal/radius/dictionary.netscreen
+share/ethereal/radius/dictionary.nokia
+share/ethereal/radius/dictionary.nomadix
+share/ethereal/radius/dictionary.propel
+share/ethereal/radius/dictionary.quintum
+share/ethereal/radius/dictionary.redback
+share/ethereal/radius/dictionary.redcreek
+share/ethereal/radius/dictionary.shasta
+share/ethereal/radius/dictionary.shiva
+share/ethereal/radius/dictionary.sonicwall
+share/ethereal/radius/dictionary.springtide
+share/ethereal/radius/dictionary.t_systems_nova
+share/ethereal/radius/dictionary.telebit
+share/ethereal/radius/dictionary.trapeze
+share/ethereal/radius/dictionary.tunnel
+share/ethereal/radius/dictionary.unisphere
+share/ethereal/radius/dictionary.unix
+share/ethereal/radius/dictionary.usr
+share/ethereal/radius/dictionary.valemount
+share/ethereal/radius/dictionary.versanet
+share/ethereal/radius/dictionary.wispr
+share/ethereal/radius/dictionary.xedia
 share/ethereal/tethereal.html
 share/ethereal/text2pcap.html
+@dirrm share/ethereal/radius
 @dirrm share/ethereal/help
 @dirrm share/ethereal/diameter
 @dirrm share/ethereal
