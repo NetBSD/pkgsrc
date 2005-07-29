@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/24 01:24:31 rh Exp $
-share/GNUstep/System/.GNUsteprc
+@comment $NetBSD: PLIST,v 1.10 2005/07/29 12:57:13 adam Exp $
 share/GNUstep/System/Library/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Library/Makefiles/GNUstep.csh
 share/GNUstep/System/Library/Makefiles/GNUstep.sh
@@ -113,7 +112,6 @@ share/GNUstep/System/Library/Makefiles/transform_paths.sh
 share/GNUstep/System/Library/Makefiles/user_home
 share/GNUstep/System/Library/Makefiles/vendor.sh
 share/GNUstep/System/Library/Makefiles/which_lib
-share/GNUstep/System/Makefiles
 share/GNUstep/System/Tools/debugapp
 share/GNUstep/System/Tools/openapp
 share/GNUstep/System/Tools/opentool
