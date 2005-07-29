@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2005/06/01 18:03:00 jlam Exp $
+# $NetBSD: Makefile,v 1.78 2005/07/29 19:32:23 chris Exp $
 
-DISTNAME=	sylpheed-1.0.4
+DISTNAME=	sylpheed-2.0.0
 CATEGORIES=	mail news x11
-MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/v1.0/
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
+MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/v2.0/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	chris@NetBSD.org
@@ -16,6 +17,7 @@ CONFLICTS=		sylpheed-claws-[0-9]* sylpheed-gtk2-[0-9]*
 
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=            yes
 USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
@@ -65,10 +67,9 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
