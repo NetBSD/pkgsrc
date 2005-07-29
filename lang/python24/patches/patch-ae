@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/12/05 23:27:49 recht Exp $
+$NetBSD: patch-ae,v 1.2 2005/07/29 13:27:27 drochner Exp $
 
 --- Lib/test/test_fcntl.py.orig	Wed Aug 18 17:13:41 2004
 +++ Lib/test/test_fcntl.py
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/12/05 23:27:49 recht Exp $
      start_len = "qq"
  
 -if sys.platform in ('netbsd1', 'Darwin1.2', 'darwin',
-+if sys.platform in ('netbsd1', 'netbsd2', 'Darwin1.2', 'darwin',
++if sys.platform in ('netbsd1', 'netbsd2', 'netbsd3', 'Darwin1.2', 'darwin',
                      'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5', 'freebsd6',
                      'bsdos2', 'bsdos3', 'bsdos4',
                      'openbsd', 'openbsd2', 'openbsd3'):
