@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: dirs,v 1.6 2005/07/27 16:18:54 jlam Exp $
+# $NetBSD: dirs,v 1.7 2005/07/29 21:41:04 jlam Exp $
 #
 # +DIRS - reference-counted directory management script
 #
@@ -24,7 +24,10 @@
 #	# DIR: /etc/foo m
 #	# DIR: /var/log/foo/tmp mo foo-user foo-group 0700
 #
-# The second field in each DIRS entry is a set of flags with the following
+# For each DIR entry, if the directory path is relative, then it is taken
+# to be relative to ${PKG_PREFIX}.
+#
+# The second field in each DIR entry is a set of flags with the following
 # meaning:
 #
 #	m	create (make) the directory when ADDing
@@ -52,6 +55,7 @@ PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 : ${PKG_DBDIR=${PKG_METADATA_DIR%/*}}
 : ${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}
+: ${PKG_PREFIX=@PREFIX@}
 
 PKG_REFCOUNT_DIRS_DBDIR="${PKG_REFCOUNT_DBDIR}/dirs"
 
@@ -61,7 +65,8 @@ ADD)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -u |
 	while read dir d_flags d_user d_group d_mode; do
 		case $dir in
-		""|[!/]*)	continue ;;
+		"")	continue ;;
+		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
 		esac
 		case $d_flags in
 		*m*)	;;
@@ -102,7 +107,8 @@ REMOVE)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -ru |
 	while read dir d_flags d_user d_group d_mode; do
 		case $dir in
-		""|[!/]*)	continue ;;
+		"")	continue ;;
+		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
 		esac
 		case $d_flags in
 		*m*)	;;
@@ -135,9 +141,10 @@ CHECK-ADD)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -u |
 	{ while read dir d_flags d_user d_group d_mode; do
 		case $dir in
-		""|[!/]*)	continue ;;
-		*)		${TEST} ! -d "$dir" || continue ;;
+		"")	continue ;;
+		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
 		esac
+		${TEST} ! -d "$dir" || continue
 		case $d_flags in
 		*m*)	;;
 		*)	continue ;;
@@ -172,9 +179,10 @@ CHECK-REMOVE)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -ru |
 	{ while read dir d_flags d_user d_group d_mode; do
 		case $dir in
-		""|[!/]*)	continue ;;
-		*)		${TEST} -d "$dir" || continue ;;
+		"")	continue ;;
+		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
 		esac
+		${TEST} -d "$dir" || continue
 		case $d_flags in
 		*o*)	;;
 		*)	continue ;;

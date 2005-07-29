@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: perms,v 1.2 2005/04/20 17:13:28 seb Exp $
+# $NetBSD: perms,v 1.3 2005/07/29 21:41:04 jlam Exp $
 #
 # +PERMS - special file and directory permissions management script
 #
@@ -16,6 +16,9 @@
 #	# PERMS: /usr/pkg/bin/lppasswd 4711 lp sys
 #	# PERMS: /usr/pkg/etc/pwd.db 0600
 #
+# For each PERMS entry, if the file path is relative, then it is taken to
+# be relative to ${PKG_PREFIX}.
+#
 CHGRP="@CHGRP@"
 CHMOD="@CHMOD@"
 CHOWN="@CHOWN@"
@@ -28,13 +31,15 @@ TEST="@TEST@"
 SELF=$0
 PKG_METADATA_DIR="${1-`${PWD_CMD}`}"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKG_PREFIX=@PREFIX@}
 
 ${SED} -n "/^\# PERMS: /{s/^\# PERMS: //;p;}" ${SELF} | ${SORT} -u |
 { while read file f_mode f_user f_group; do
 	case $file in
-	""|[!/]*)	continue ;;
-	*)		${TEST} -f "$file" || continue ;;
+	"")	continue ;;
+	[!/]*)	file="${PKG_PREFIX}/$file" ;;
 	esac
+	${TEST} -f "$file" || continue
 	case "$printed_header" in
 	yes)	;;
 	*)	printed_header=yes

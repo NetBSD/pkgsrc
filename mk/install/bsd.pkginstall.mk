@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.4 2005/07/29 18:32:18 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.5 2005/07/29 21:41:04 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -162,7 +162,8 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 # SPECIAL_PERMS are lists that look like:
 #		file user group mode
 #	At post-install time, file (it may be a directory) is changed to be
-#	owned by user:group with mode permissions.
+#	owned by user:group with mode permissions.  If a file pathname
+#	is relative, then it is taken to be relative to ${PREFIX}.
 #
 # SPECIAL_PERMS should be used primarily to change permissions of files or
 # directories listed in the PLIST.  This may be used to make certain files
@@ -198,6 +199,7 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	while ${TEST} $$# -gt 0; do					\
 		file="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
+		file="$${file#${PREFIX}/}";				\
 		${ECHO} "# PERMS: $$file $$mode $$owner $$group";	\
 	done;								\
 	${ECHO} "EOF_PERMS";						\
@@ -230,6 +232,9 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 #	expected to be found in ${PREFIX}/share/examples/rc.d, and
 #	the scripts will be copied into ${RCD_SCRIPTS_DIR} with
 #	${RCD_SCRIPTS_MODE} permissions.
+#
+# If any file pathnames are relative, then they are taken to be relative
+# to ${PREFIX}.
 #
 CONF_FILES?=		# empty
 CONF_FILES_MODE?=	0644
@@ -267,12 +272,16 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
 		shift; shift;						\
+		egfile="$${egfile#${PREFIX}/}";				\
+		file="$${file#${PREFIX}/}";				\
 		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
 	done;								\
 	eval set -- ${SUPPORT_FILES} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
 		shift; shift;						\
+		egfile="$${egfile#${PREFIX}/}";				\
+		file="$${file#${PREFIX}/}";				\
 		${ECHO} "# FILE: $$file c $$egfile ${SUPPORT_FILES_MODE}"; \
 	done;								\
 	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS} ;	\
@@ -280,6 +289,8 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		egfile="$$1"; file="$$2";				\
 		owner="$$3"; group="$$4"; mode="$$5";			\
 		shift; shift; shift; shift; shift;			\
+		egfile="$${egfile#${PREFIX}/}";				\
+		file="$${file#${PREFIX}/}";				\
 		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
 	done;								\
 	${ECHO} "EOF_FILES";						\
@@ -312,8 +323,8 @@ ${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
 	eval set -- ${RCD_SCRIPTS} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		script="$$1"; shift;					\
-		file="${RCD_SCRIPTS_DIR}/$$script";			\
-		egfile="${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/$$script";	\
+		file="${RCD_SCRIPTS_DIR:S/^${PREFIX}\///}/$$script";	\
+		egfile="${RCD_SCRIPTS_EXAMPLEDIR}/$$script";		\
 		${ECHO} "# FILE: $$file c $$egfile ${RCD_SCRIPTS_MODE}"; \
 	done;								\
 	${ECHO} "EOF_RCD_SCRIPTS";					\
@@ -336,6 +347,9 @@ ${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
 #	created/destroyed by the INSTALL/DEINSTALL scripts.  MAKE_DIRS_PERMS
 #	is used the same way but the package admin isn't prompted to remove
 #	the directory at post-deinstall time if it isn't empty.
+#
+# If any directory pathnames are relative, then they are taken to be
+# relative to ${PREFIX}.
 #
 MAKE_DIRS?=		# empty
 MAKE_DIRS_PERMS?=	# empty
@@ -362,32 +376,36 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${ECHO} "";							\
 	case "${PKG_SYSCONFSUBDIR}${CONF_FILES}${CONF_FILES_PERMS}${SUPPORT_FILES}${SUPPORT_FILES_PERMS}" in \
 	"")	;;							\
-	*)	${ECHO} "# DIR: ${PKG_SYSCONFDIR} m" ;;			\
+	*)	${ECHO} "# DIR: ${PKG_SYSCONFDIR:S/${PREFIX}\///} m" ;;	\
 	esac;								\
 	case "${RCD_SCRIPTS}" in					\
 	"")	;;							\
-	*)	${ECHO} "# DIR: ${RCD_SCRIPTS_DIR} m" ;;		\
+	*)	${ECHO} "# DIR: ${RCD_SCRIPTS_DIR:S/${PREFIX}\///} m" ;; \
 	esac;								\
 	eval set -- ${MAKE_DIRS} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
+		dir="$${dir#${PREFIX}/}";				\
 		${ECHO} "# DIR: $$dir m";				\
 	done;								\
 	eval set -- ${OWN_DIRS} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
+		dir="$${dir#${PREFIX}/}";				\
 		${ECHO} "# DIR: $$dir mo";				\
 	done;								\
 	eval set -- ${MAKE_DIRS_PERMS} ;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
+		dir="$${dir#${PREFIX}/}";				\
 		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
 	done;								\
 	eval set -- ${OWN_DIRS_PERMS} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
+		dir="$${dir#${PREFIX}/}";				\
 		${ECHO} "# DIR: $$dir mo $$owner $$group $$mode";	\
 	done;								\
 	${ECHO} "EOF_DIRS";						\
@@ -400,7 +418,7 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # PKG_SHELL contains the pathname of the shell that should be added or
-#	removed from the shell database, /etc/shells.  If the pathname
+#	removed from the shell database, /etc/shells.  If a pathname
 #	is relative, then it is taken to be relative to ${PREFIX}.
 #
 PKG_SHELL?=		# empty
@@ -424,6 +442,7 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	eval set -- ${PKG_SHELL} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		i="$$1"; shift;						\
+		i="$${i#${PREFIX}/}";					\
 		${ECHO} "# SHELL: $$i";					\
 	done;								\
 	${ECHO} "EOF_SHELL";						\
@@ -592,6 +611,7 @@ install-rcd-scripts: install-rcd-${_script_}
 install-rcd-${_script_}: ${RCD_SCRIPT_WRK.${_script_}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${RCD_SCRIPT_WRK.${_script_}} ]; then			\
+		${MKDIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR};		\
 		${INSTALL_SCRIPT} ${RCD_SCRIPT_WRK.${_script_}}		\
 			${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/${_script_}; \
 	fi
