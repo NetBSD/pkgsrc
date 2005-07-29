@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2005/04/18 08:46:52 adam Exp $
-share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources/English.lproj/nfontFaceNames.strings
-share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
-share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/libgnustep-back
-share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/stamp.make
+@comment $NetBSD: PLIST,v 1.9 2005/07/29 12:59:50 adam Exp $
+share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources/English.lproj/nfontFaceNames.strings
+share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
+share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/libgnustep-back-010
+share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/stamp.make
 share/GNUstep/System/Library/Documentation/man/man1/gpbs.1
 share/GNUstep/System/Library/Fonts/Helvetica.nfont/FontInfo.plist
 share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019003l.afm
@@ -34,10 +34,10 @@ share/GNUstep/System/Tools/font_cacher
 share/GNUstep/System/Tools/gpbs
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Tools
 @comment in devel/gnustep-base: @dirrm share/GNUstep/System/Library/Documentation/man/man1
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources/Swedish.lproj
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources/English.lproj
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back.bundle
 @dirrm share/GNUstep/System/Library/Fonts/Helvetica.nfont
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Fonts
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Bundles
+@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources/Swedish.lproj
+@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources/English.lproj
+@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources
+@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle
