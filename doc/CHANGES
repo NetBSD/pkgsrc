@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10723 2005/07/29 12:52:20 wiz Exp $
+$NetBSD: CHANGES,v 1.10724 2005/07/29 13:00:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3397,3 +3397,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/openssh to 3.9.1nb8 [reed 2005-07-28]
 	Updated sysutils/mklivecd to 0.12.0 [xtraeme 2005-07-29]
 	Updated graphics/libpixman to 0.1.6 [adam 2005-07-29]
+	Updated devel/gnustep-make to 1.11.0 [adam 2005-07-29]
+	Updated devel/gnustep-base to 1.11.0 [adam 2005-07-29]
+	Updated x11/gnustep-gui to 0.10.0 [adam 2005-07-29]
+	Updated x11/gnustep-back to 0.10.0 [adam 2005-07-29]
