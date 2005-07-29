@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.216 2005/07/21 02:01:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.217 2005/07/29 16:01:13 he Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1700,7 +1700,7 @@ sub checkfile_package_Makefile($$$$) {
 	log_info($fname, NO_LINE_NUMBER, "Checking optional PATCH section.");
 	$tmp = $sections[$idx];
 
-	if ($tmp =~ /(PATCH_SITES|PATCH_SITE_SUBDIR|PATCHFILES|PATCH_DIST_STRIP)/) {
+	if ($tmp =~ /(PATCH_SITES|PATCH_SITE_SUBDIR|PATCHFILES|PATCH_DIST_STRIP|PATCH_DIST_CAT)/) {
 		&checkearlier($tmp, @varnames);
 
                 $tmp = "\n$tmp";
