@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/12/28 23:18:21 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/07/29 12:59:25 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_GUI_BUILDLINK3_MK:=	${GNUSTEP_GUI_BUILDLINK3_MK}+
@@ -45,6 +45,7 @@ PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Servic
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
