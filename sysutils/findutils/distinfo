@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/06/19 10:44:45 hira Exp $
+$NetBSD: distinfo,v 1.9 2005/07/29 12:35:07 wiz Exp $
 
 SHA1 (findutils-4.1.tar.gz) = b91cd03ca4c9659b3e5d40e841c64bfd2e7f25d8
 RMD160 (findutils-4.1.tar.gz) = b66c0aa2e72d378e8c3cb9968ceb68d9138af874
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = 59c8872a9cef3bb94e35c7eb97a9878bcdb11c51
 SHA1 (patch-aj) = 5fd1d20f75fafa01063982e2ef49f123d4cb4c7d
 SHA1 (patch-ak) = 5e47cf75a7f3bdfad6cfead06bb1643ebeee178d
 SHA1 (patch-al) = 2b75b8fc967aad1bcabee529d796bbf1b4b5a327
+SHA1 (patch-am) = 48abd78b11347cdeaa1057d85cab1931feada8e9
