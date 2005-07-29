@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.36 2005/06/05 09:33:33 jmmv Exp $
+$NetBSD: distinfo,v 1.36.2.1 2005/07/29 07:08:44 snj Exp $
 
 SHA1 (vim/vim-6.3.tar.bz2) = 76f663277140d314ecfafecb0307e832bdbbaf06
 RMD160 (vim/vim-6.3.tar.bz2) = 321c59d62f6fce99396be33875ec5a7d84944525
 Size (vim/vim-6.3.tar.bz2) = 3699397 bytes
+SHA1 (vim/vim-6.3-lang.tar.gz) = f265365b6075d7887c2000a3b90dac8c0b4222db
+RMD160 (vim/vim-6.3-lang.tar.gz) = e8e332657a4773396f143b341edaf587c1bba0c7
+Size (vim/vim-6.3-lang.tar.gz) = 1057792 bytes
 SHA1 (vim/6.3.001) = 09a75ac41d4c454092b716ff6838768ef8665e5c
 RMD160 (vim/6.3.001) = d3b36602eb6c61771df870bf1f9d0e2330fbd76b
 Size (vim/6.3.001) = 2672 bytes
@@ -192,7 +195,28 @@ Size (vim/6.3.072) = 2083 bytes
 SHA1 (vim/6.3.074) = 42d51d2e7f7db314e25e656f2154c348ee38b284
 RMD160 (vim/6.3.074) = 8f12301e801f94346c3e73b00546ae35f3e8b526
 Size (vim/6.3.074) = 2365 bytes
+SHA1 (vim/6.3.075) = c56e07b4949872c444aa40a52ebe257737758c00
+RMD160 (vim/6.3.075) = e46917ae6f15563f1ef5040501f067bfeaa6791f
+Size (vim/6.3.075) = 1745 bytes
+SHA1 (vim/6.3.076) = 1df1a0423da5fb4c90edac4848eee47b9a527548
+RMD160 (vim/6.3.076) = c6521d68e9f31af6553f92c9374fc3bba6cf8298
+Size (vim/6.3.076) = 3546 bytes
+SHA1 (vim/6.3.079) = 359e571776c085bcf1ea04417bee9f62aaafeab0
+RMD160 (vim/6.3.079) = ecce1c0acc43f02dc2c4dfb251bc8ccd0f7b3c3c
+Size (vim/6.3.079) = 1853 bytes
+SHA1 (vim/6.3.081) = 1e2b184af09ee23ffa4b1d959ed625e2ccf2e6d4
+RMD160 (vim/6.3.081) = 8f9b67208026185ff698638c9f06ff8f3eaf76d6
+Size (vim/6.3.081) = 1729 bytes
+SHA1 (vim/6.3.082) = af5f267bd2f7db970c672deea62a81c92528b3fc
+RMD160 (vim/6.3.082) = bc52881512112bcaee5c5ef80415df18ff5b08e7
+Size (vim/6.3.082) = 2102 bytes
+SHA1 (vim/6.3.083) = 8f3b78a6df68aeaef174f5fcdd99373167b76a56
+RMD160 (vim/6.3.083) = 6cd3477d2598784096d7cca2472b385fe764479d
+Size (vim/6.3.083) = 5053 bytes
+SHA1 (vim/6.3.085) = f319ec7b1d8ff7553935b8c5f1a2758e4d49cf1c
+RMD160 (vim/6.3.085) = 521b5f08b013e8b91f8324f1980ace1dc7d4af57
+Size (vim/6.3.085) = 3408 bytes
 SHA1 (patch-aa) = 226983cd130c91de83f46baa38d18b243bd029c8
 SHA1 (patch-ab) = cb8930aaeefd1ddbfa204290662078994dd985c0
-SHA1 (patch-ad) = 305b3f9cd2837482362c0176b8e2025ffb0eb254
+SHA1 (patch-ad) = 7a4eb1027a0018bdda51b1d0de9dfce60794cc02
 SHA1 (patch-zb) = 3966ea9713cbf5d26072592443080c1884f48e75
