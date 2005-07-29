@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2005/07/04 20:15:29 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.13 2005/07/29 12:16:21 adam Exp $
 
-DISTNAME=	libpixman-0.1.5
+DISTNAME=	libpixman-0.1.6
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 

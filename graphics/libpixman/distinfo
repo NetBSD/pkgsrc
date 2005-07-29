@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/07/04 20:15:29 drochner Exp $
+$NetBSD: distinfo,v 1.9 2005/07/29 12:16:21 adam Exp $
 
-SHA1 (libpixman-0.1.5.tar.gz) = 5d05aee3705a1609e7b09b6cd9d3fae443231094
-RMD160 (libpixman-0.1.5.tar.gz) = 81f03fe6ee2c986352825241cdbc75e329233080
-Size (libpixman-0.1.5.tar.gz) = 379180 bytes
-SHA1 (patch-aa) = 0172ca11ef392df251b84213295b1727e7274366
+SHA1 (libpixman-0.1.6.tar.gz) = cc596882ea8f41aada6e8d8e0e8ab2bf9303fb33
+RMD160 (libpixman-0.1.6.tar.gz) = 28f00d5d1d31fa0647e7a02c880fd06bd0d77d80
+Size (libpixman-0.1.6.tar.gz) = 387830 bytes
