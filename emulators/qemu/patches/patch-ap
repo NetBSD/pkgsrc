@@ -1,14 +1,12 @@
-$NetBSD: patch-ap,v 1.2 2005/05/03 11:18:47 xtraeme Exp $
-
---- target-sparc/cpu.h.orig	2005-04-27 22:52:05.000000000 +0200
-+++ target-sparc/cpu.h	2005-04-29 01:11:35.000000000 +0200
-@@ -194,8 +194,7 @@
- 	cpu_set_cwp(env, _tmp & PSR_CWP & (NWINDOWS - 1));		\
+--- target-sparc/cpu.h.orig	2005-07-29 18:24:50.000000000 +0200
++++ target-sparc/cpu.h	2005-07-29 18:25:12.000000000 +0200
+@@ -284,8 +284,7 @@
      } while (0)
+ #endif
  
 -struct siginfo;
 -int cpu_sparc_signal_handler(int hostsignum, struct siginfo *info, void *puc);
 +int cpu_sparc_signal_handler(int hostsignum, siginfo_t *info, void *puc);
  
- #define TARGET_PAGE_BITS 12 /* 4k */
  #include "cpu-all.h"
+ 

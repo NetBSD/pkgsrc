@@ -1,7 +1,5 @@
-$NetBSD: patch-ak,v 1.3 2005/05/03 11:18:47 xtraeme Exp $
-
---- Makefile.orig	2005-04-28 22:38:00.000000000 +0200
-+++ Makefile	2005-04-28 22:39:40.000000000 +0200
+--- Makefile.orig	2005-07-29 18:18:05.000000000 +0200
++++ Makefile	2005-07-29 18:22:06.000000000 +0200
 @@ -1,10 +1,10 @@
  -include config-host.mak
  
@@ -23,17 +21,18 @@ $NetBSD: patch-ak,v 1.3 2005/05/03 11:18:47 xtraeme Exp $
 -	install -m 755 -s $(TOOLS) "$(bindir)"
 -	mkdir -p "$(datadir)"
 -	install -m 644 pc-bios/bios.bin pc-bios/vgabios.bin \
-+	$(BSD_INSTALL_PROGRAM_DIR) "$(bindir)"
-+	$(BSD_INSTALL_PROGRAM) $(TOOLS) "$(bindir)"
-+	$(BSD_INSTALL_DATA_DIR) "$(datadir)"
++	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
++	$(BSD_INSTALL_PROGRAM) $(TOOLS) $(bindir)
++	$(BSD_INSTALL_DATA_DIR) $(datadir)
 +	$(BSD_INSTALL_DATA) pc-bios/bios.bin pc-bios/vgabios.bin \
                         pc-bios/vgabios-cirrus.bin \
-                        pc-bios/ppc_rom.bin \
+                        pc-bios/ppc_rom.bin pc-bios/video.x \
                         pc-bios/proll.elf \
-                        pc-bios/linux_boot.bin "$(datadir)"
+-                       pc-bios/linux_boot.bin "$(datadir)"
 -	mkdir -p "$(docdir)"
 -	install -m 644 qemu-doc.html  qemu-tech.html "$(docdir)"
-+	$(BSD_INSTALL_DATA_DIR) "$(docdir)"
++                       pc-bios/linux_boot.bin $(datadir)
++	$(BSD_INSTALL_DATA_DIR) $(docdir)
 +	$(BSD_INSTALL_DATA) qemu-doc.html  qemu-tech.html "$(docdir)"
  ifndef CONFIG_WIN32
  	mkdir -p "$(mandir)/man1"
