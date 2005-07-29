@@ -1,13 +1,13 @@
-$NetBSD: README.AIX,v 1.2 2005/02/16 21:38:41 reed Exp $
+$NetBSD: README.AIX,v 1.3 2005/07/29 00:56:24 grant Exp $
 
-You will need gcc.  The AIX xlC compiler doesn't work, but probably
-could be made to.  gcc-3.3.2 has been tested.
+pkgsrc has been tested on AIX 4.3 and 5.1. It will probably work on
+newer releases also.
 
-bootstrap-pkgsrc has been tested on AIX 4.3.  It will probably work on newer
-releases also.
+You will need gcc. gcc 3.3 and 3.4 have been tested. full support for
+xlC needs to be written.
 
-Please note the use of GNU binutils on AIX is not supported.
-Make sure GNU ld is not in your path.
+Please note the use of GNU binutils on AIX is not supported. You must
+not have GNU ld(1) in your path.
 
 If you are using gcc
 --------------------
@@ -42,4 +42,3 @@ MAKECONF=/usr/pkg/etc/mk.conf
 MAKESYSPATH=/usr/pkg/share/mk
 
 You'll also want to set PATH, MANPATH and LIBPATH
-
