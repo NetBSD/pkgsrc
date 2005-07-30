@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/31 15:38:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/07/30 12:49:24 markd Exp $
 share/doc/kde/HTML/sl/common/1.png
 share/doc/kde/HTML/sl/common/10.png
 share/doc/kde/HTML/sl/common/2.png
@@ -861,7 +861,6 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kwin.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kwin4.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kwin_art_clients.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kwin_clients.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kwin_lib.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kwireless.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kwordquiz.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kworldclock.mo

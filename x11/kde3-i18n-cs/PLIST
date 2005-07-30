@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/05/31 15:38:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/07/30 12:49:22 markd Exp $
 share/doc/kde/HTML/cs/common/1.png
 share/doc/kde/HTML/cs/common/10.png
 share/doc/kde/HTML/cs/common/2.png
@@ -301,6 +301,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/katepart.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/katepartkttsd.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kateprojectmanager.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/katepybrowse.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/katesnippets.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/katespell.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/katetabbarextension.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/katetextfilter.mo
@@ -661,6 +662,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/ksokoban.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kspaceduel.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/ksplash.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/ksplashthemes.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kstars.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kstart.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kstartperf.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kstyle_keramik_config.mo
@@ -728,7 +730,6 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kwin.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kwin4.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kwin_art_clients.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kwin_clients.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kwin_lib.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kwireless.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kwordquiz.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kworldclock.mo

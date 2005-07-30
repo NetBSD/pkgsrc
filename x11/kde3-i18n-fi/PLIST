@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/05/31 15:38:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/07/30 12:49:23 markd Exp $
 share/doc/kde/HTML/fi/common/1.png
 share/doc/kde/HTML/fi/common/10.png
 share/doc/kde/HTML/fi/common/2.png
@@ -56,6 +56,21 @@ share/doc/kde/HTML/fi/common/web-docbottom.png
 share/doc/kde/HTML/fi/common/web-doctop.png
 share/doc/kde/HTML/fi/common/x11-license.html
 share/doc/kde/HTML/fi/common/xml.dcl
+share/doc/kde/HTML/fi/kfind/common
+share/doc/kde/HTML/fi/kfind/index.cache.bz2
+share/doc/kde/HTML/fi/kfind/index.docbook
+share/doc/kde/HTML/fi/khelpcenter/common
+share/doc/kde/HTML/fi/khelpcenter/contact.docbook
+share/doc/kde/HTML/fi/khelpcenter/glossary/common
+share/doc/kde/HTML/fi/khelpcenter/glossary/index.cache.bz2
+share/doc/kde/HTML/fi/khelpcenter/glossary/index.docbook
+share/doc/kde/HTML/fi/khelpcenter/glossary/kdeprintingglossary.docbook
+share/doc/kde/HTML/fi/khelpcenter/help.docbook
+share/doc/kde/HTML/fi/khelpcenter/index.cache.bz2
+share/doc/kde/HTML/fi/khelpcenter/index.docbook
+share/doc/kde/HTML/fi/khelpcenter/support.docbook
+share/doc/kde/HTML/fi/khelpcenter/welcome.docbook
+share/doc/kde/HTML/fi/khelpcenter/whatiskde.docbook
 share/kde/apps/khangman/data/fi/animals.kvtml
 share/kde/apps/khangman/data/fi/easy.kvtml
 share/kde/apps/khangman/data/fi/hard.kvtml
@@ -345,6 +360,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_devices.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_finger.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_fish.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_floppy.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_groupwise.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_help.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_imap4.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_lan.mo
@@ -353,6 +369,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_mac.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_man.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_media.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_mobile.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_newimap4.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_nfs.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_nntp.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kio_pop3.mo
@@ -385,6 +402,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmail_text_calendar_plugin.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmail_text_vcard_plugin.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmailcvt.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmathapplet.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmathtool.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmcop.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmenuapplet.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmenuedit.mo
@@ -489,6 +507,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kstars.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kstart.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kstartperf.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kstyle_keramik_config.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kstyle_phase_config.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kstyle_plastik_config.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/ksvgplugin.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/ksync.mo
@@ -626,5 +645,8 @@ ${PKGLOCALEDIR}/locale/fi/flag.png
 @dirrm share/kde/apps/khangman/data/fi
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/khangman
+@dirrm share/doc/kde/HTML/fi/khelpcenter/glossary
+@dirrm share/doc/kde/HTML/fi/khelpcenter
+@dirrm share/doc/kde/HTML/fi/kfind
 @dirrm share/doc/kde/HTML/fi/common
 @comment in kde: @dirrm share/doc/kde/HTML/fi

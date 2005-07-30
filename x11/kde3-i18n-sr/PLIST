@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/05/31 15:38:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/07/30 12:49:24 markd Exp $
 share/doc/kde/HTML/sr/common/1.png
 share/doc/kde/HTML/sr/common/10.png
 share/doc/kde/HTML/sr/common/2.png
@@ -210,7 +210,6 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kcmkontactnt.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kcmktalkd.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kcmkttsd.mo
-${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kcmkttsmgr.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kcmkuick.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kcmkurifilt.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kcmkvaio.mo

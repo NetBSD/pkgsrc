@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/05/31 15:38:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/07/30 12:49:23 markd Exp $
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/akregator.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/akregator_konqplugin.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/alsaplayerui.mo
@@ -36,7 +36,6 @@ ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/ffrs.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/filetypes.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/fontinst.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/fsview.mo
-${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-applets-locations.HEAD.hi.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/htmlsearch.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/imagerename_plugin.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/imgalleryplugin.mo
@@ -98,7 +97,6 @@ ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kbstateapplet.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kbugbuster.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kcachegrind.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kcalc.mo
-${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kcardchooser.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kcm_krfb.mo
@@ -380,7 +378,6 @@ ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/korganizer.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/korn.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kpackage.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kpager.mo
-${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kpaint.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kpartapp.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kpartsaver.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kpat.mo
@@ -402,7 +399,6 @@ ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/krec.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kregexpeditor.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kres_blogging.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kres_exchange.mo
-${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kres_imap.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kres_kolab.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kres_remote.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/kres_xmlrpc.mo
