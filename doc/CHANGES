@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10733 2005/07/30 14:59:03 wiz Exp $
+$NetBSD: CHANGES,v 1.10734 2005/07/30 15:39:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3482,3 +3482,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/kdevelop-base to 3.2.2 [markd 2005-07-30]
 	Updated devel/kdevelop to 3.2.2 [markd 2005-07-30]
 	Updated x11/lablgtk to 1.2.7nb1 [tron 2005-07-30]
+	Updated math/mathomatic to 12.4.5 [minskim 2005-07-30]
