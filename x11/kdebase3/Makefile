@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2005/07/30 11:10:08 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -79,7 +78,8 @@ PKG_SUGGESTED_OPTIONS=	sasl
 
 .include "../../mk/bsd.options.mk"
 
-BUILDLINK_DEPENDS.Xrandr+=      Xrandr>=1.0
+BUILDLINK_DEPENDS.Xrandr+=	Xrandr>=1.0
+BUILDLINK_DEPENDS.kdelibs+=	kdelibs>=${_KDE_VERSION}
 
 .if !empty(PKG_OPTIONS:Msamba)
 .include "../../net/samba/buildlink3.mk"
