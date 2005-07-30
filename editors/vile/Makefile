@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/07/16 19:10:38 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/07/30 21:04:36 rillig Exp $
 
 DISTNAME=		vile-9.4
 PKGREVISION=	1
@@ -20,6 +20,7 @@ USE_TOOLS+=		perl:run
 # Until the source catches up to the current Perl API, we need PERL_POLLUTE
 # to look like an older perl.
 CPPFLAGS+=		-DPERL_POLLUTE=1
+CPPFLAGS.NetBSD+=	-DMISSING_EXTERN_ENVIRON
 
 MAKEFILE=		makefile
 INSTALL_TARGET=		install install-perl
