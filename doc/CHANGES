@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10731 2005/07/30 13:06:02 markd Exp $
+$NetBSD: CHANGES,v 1.10732 2005/07/30 13:49:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3481,3 +3481,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/kde3-i18n-zh_CN to 3.4.2 [markd 2005-07-30]
 	Updated devel/kdevelop-base to 3.2.2 [markd 2005-07-30]
 	Updated devel/kdevelop to 3.2.2 [markd 2005-07-30]
+	Updated x11/lablgtk to 1.2.7nb1 [tron 2005-07-30]
