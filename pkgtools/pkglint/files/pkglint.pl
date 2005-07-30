@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.217 2005/07/29 16:01:13 he Exp $
+# $NetBSD: pkglint.pl,v 1.218 2005/07/30 23:35:24 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -565,7 +565,6 @@ sub load_predefined_sites($) {
 sub check_directory($) {
 	my ($dir) = @_;
 
-	init_global_vars();
 	if (-f "${dir}/../mk/bsd.pkg.mk") {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
 		check_category($dir);
@@ -594,6 +593,8 @@ sub check_package($) {
 	my ($dir) = @_;
 
 	my ($whole, $lines);
+
+	init_global_vars();
 
 	# we need to handle the Makefile first to get some variables
 	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$lines)) {
