@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/30 13:48:26 tron Exp $
+# $NetBSD: Makefile,v 1.21 2005/07/30 15:45:11 tron Exp $
 
 DISTNAME=	lablgtk-1.2.7
 PKGREVISION=	1
@@ -16,7 +16,7 @@ BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.0.5
 
 .include "../../mk/bsd.prefs.mk"
 
-# currently ocamlopt is only available on i386
+# currently ocamlopt is only available on i386, sparc and powerpc.
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc")
 USE_DOTOPT=	YES
@@ -34,8 +34,7 @@ do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
 		configure USE_DOTOPT=${USE_DOTOPT} USE_CC=1 CC=${CC}
 
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc")
+.if defined(USE_DOTOPT)
 post-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
 		opt
