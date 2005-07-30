@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.3 2005/07/30 22:05:53 rillig Exp $
+
+Don't use non-constant initializers for arrays.
+
+--- subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c.orig	Tue Mar 22 15:42:12 2005
++++ subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c	Sat Jul 30 23:59:26 2005
+@@ -61,7 +61,8 @@ typedef struct hash_to_apr_hash_data_t
+ static VALUE
+ rb_ary_aref1(VALUE ary, VALUE arg)
+ {
+-  VALUE args[1] = {arg};
++  VALUE args[1];
++  args[0] = arg;
+   return rb_ary_aref(1, args, ary);
+ }
+ 
