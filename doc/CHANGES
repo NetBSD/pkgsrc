@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10727 2005/07/29 21:05:20 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10728 2005/07/30 06:56:02 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3405,3 +3405,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sylpheed to 2.0.0 [chris 2005-07-29]
 	Updated mysql4-client to 4.1.13 [xtraeme 2005-07-29]
 	Updated mysql4-server to 4.1.13 [xtraeme 2005-07-29]
+	Updated databases/rrdtool to 1.2.11 [wulf 2005-07-30]
