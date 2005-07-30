@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.218 2005/07/30 23:35:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.219 2005/07/30 23:39:33 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -462,10 +462,12 @@ sub parse_multioption($$) {
 			foreach my $key (keys %$optdefs) {
 				${$optdefs->{$key}->[0]} = false;
 			}
+
 		} elsif ($opt eq "all") {
 			foreach my $key (keys %$optdefs) {
 				${$optdefs->{$key}->[0]} = true;
 			}
+
 		} else {
 			my ($value) = (($opt =~ s/^no-//) ? false : true);
 			if (exists($optdefs->{$opt})) {
@@ -515,8 +517,10 @@ sub load_make_vars_typemap() {
 	foreach my $line (@$lines) {
 		if ($line->text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
+
 		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_]+)$") {
 			$vartypes->{$1} = $2;
+
 		} else {
 			$line->log_error("[internal] Unknown line format.");
 		}
@@ -540,8 +544,10 @@ sub load_predefined_sites($) {
 		if ($line->text =~ qr"^(MASTER_SITE_\w+)\+=\s*\\$"o) {
 			$varname = $1;
 			$ignoring = false;
+
 		} elsif ($line->text eq "MASTER_SITE_BACKUP?=\t\\") {
 			$ignoring = true;
+
 		} elsif ($line->text =~ qr"^\t($regex_url_directory)(?:|\s*\\)$"o) {
 			if (!$ignoring) {
 				if (defined($varname)) {
@@ -550,10 +556,13 @@ sub load_predefined_sites($) {
 					$line->log_error("Lonely URL found.");
 				}
 			}
+
 		} elsif ($line->text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
+
 		} elsif ($line->text =~ qr"BSD_SITES_MK") {
 			# ignore multiple inclusion guards
+
 		} else {
 			$line->log_error("Unknown line type.");
 		}
@@ -568,9 +577,11 @@ sub check_directory($) {
 	if (-f "${dir}/../mk/bsd.pkg.mk") {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
 		check_category($dir);
+
 	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
 		load_predefined_sites("${dir}/../..");
 		check_package($dir);
+
 	} else {
 		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
 	}
@@ -611,6 +622,7 @@ sub check_package($) {
 	foreach my $f (@files) {
 		if      ($f =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
 			log_warning($f, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
+
 		} elsif (!-f $f) {
 			# We don't have a check for non-regular files yet.
 
@@ -885,21 +897,28 @@ sub checkfile_PLIST($$) {
 			my ($cmd, $arg) = ($1, $2);
 			if ($cmd eq "cwd" || $cmd eq "cd") {
 				$curdir = $arg;
+
 			} elsif ($cmd eq "unexec" && $arg =~ /^rmdir/) {
 				$line->log_warning("Use \"\@dirrm\" instead of \"\@unexec rmdir\".");
+
 			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
 				if ($arg =~ /(?:install-info|\$\{INSTALL_INFO\})/) {
 					$line->log_warning("\@exec/unexec install-info is deprecated.");
+
 				} elsif ($arg =~ /ldconfig/ && $arg !~ qr"/usr/bin/true") {
 					$line->log_error("ldconfig must be used with \"||/usr/bin/true\".");
 				}
+
 			} elsif ($cmd eq "comment") {
 				# nothing to do
+
 			} elsif ($cmd eq "dirrm" || $cmd eq "option") {
 				# no check made
+
 			} elsif ($cmd eq "mode" || $cmd eq "owner" || $cmd eq "group") {
 				$line->log_warning("\"\@mode/owner/group\" are deprecated, please use chmod/".
 					"chown/chgrp in the pkg Makefile and let tar do the rest.");
+
 			} else {
 				$line->log_warning("Unknown PLIST directive \"\@$cmd\"");
 			}
@@ -1015,11 +1034,14 @@ sub check_for_multiple_patches($) {
 	foreach my $line (@$lines) {
 		if (index($line->text, "--- ") == 0 && $line->text !~ qr"^--- \d+(?:,\d+|) ----$") {
 			$line_type = "-";
+
 		} elsif (index($line->text, "*** ") == 0 && $line->text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 			$line_type = "*";
+
 		} elsif (index($line->text, "+++ ") == 0) {
 			$line_type = "+";
+
 		} else {
 			$line_type = "";
 		}
@@ -1031,6 +1053,7 @@ sub check_for_multiple_patches($) {
 			} else {
 				$line->log_error("[internal] Unknown patch format.");
 			}
+
 		} elsif ($patch_state eq "-") {
 			if ($line_type eq "+") {
 				$files_in_patch++;
@@ -1038,6 +1061,7 @@ sub check_for_multiple_patches($) {
 			} else {
 				$line->log_error("[internal] Unknown patch format.");
 			}
+
 		} elsif ($patch_state eq "") {
 			$patch_state = $line_type;
 		}
@@ -1045,6 +1069,7 @@ sub check_for_multiple_patches($) {
 
 	if ($files_in_patch > 1) {
 		log_warning($lines->[0]->file, NO_LINE_NUMBER, "Contains patches for $files_in_patch files, should be only one.");
+
 	} elsif ($files_in_patch == 0) {
 		log_error($lines->[0]->file, NO_LINE_NUMBER, "Contains no patch.");
 	}
@@ -1137,8 +1162,10 @@ sub readmakefile($$$$) {
 					$contents .= readmakefile($dir, "$dirname/$includefile", $all_lines, $seen_Makefile_include);
 				}
 			}
+
 		} elsif ($line->text =~ qr"^\.\s*include\s+(.*)") {
 			$line->log_info("Skipping include file $1");
+
 		} else {
 			$contents .= $line->text . "\n";
 		}
@@ -1153,24 +1180,29 @@ sub check_Makefile_vartype($$) {
 		my ($varname, $op, $value) = ($1, $2, $3);
 		if ($value =~ qr"\$") {
 			# ignore values that contain other variables
+
 		} elsif (exists($vartypes->{$varname})) {
 			my ($type) = ($vartypes->{$varname});
 			if ($type eq "Boolean") {
 				if ($value !~ $regex_boolean) {
 					$line->log_warning("$varname should be set to YES, yes, NO, or no.");
 				}
+
 			} elsif ($type eq "Yes_Or_Undefined") {
 				if ($value !~ $regex_yes_or_undef) {
 					$line->log_warning("$varname should be set to YES or yes.");
 				}
+
 			} elsif ($type eq "Mail_Address") {
 				if ($value !~ $regex_mail_address) {
 					$line->log_warning("\"$value\" is not a valid mail address.");
 				}
+
 			} elsif ($type eq "URL") {
 				if ($value !~ $regex_url) {
 					$line->log_warning("\"$value\" is not a valid URL.");
 				}
+
 			} else {
 				$line->log_error("[internal] Type $type unknown.");
 			}
@@ -1223,8 +1255,10 @@ sub checklines_deprecated_variables($) {
 	foreach my $line (@{$deprecated}) {
 		if ($line->text =~ qr"^#" || $line->text =~ qr"^\s*$") {
 			next;
+
 		} elsif ($line->text =~ qr"^(\S+)\s+(.*)$") {
 			$vars{$1} = $2;
+
 		} else {
 			$line->log_error("[internal] Unknown line format.");
 		}
@@ -1304,6 +1338,7 @@ sub checklines_direct_tools($) {
 
 		if ($text =~ qr"^#") {
 			# skip comments
+
 		} elsif ($text =~ qr"^([\w.]+?)\s*[?+:!]?=\s*(.*)") {
 			my ($varname, $value) = ($1, $2);
 			# process variable assignments
@@ -1312,6 +1347,7 @@ sub checklines_direct_tools($) {
 			} else {
 				$line->log_warning("Possible direct use of \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
 			}
+
 		} elsif ($text =~ qr"^\t(.*?)(?:\s*\\)?$") {
 			my ($shellcmd) = ($1);
 			# process shell commands
@@ -1320,10 +1356,13 @@ sub checklines_direct_tools($) {
 			} else {
 				$line->log_warning("Possible direct use of \"${tool}\" in shell command \"${shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
 			}
+
 		} elsif ($text =~ qr"^\.") {
 			# skip processing directives
+
 		} elsif ($text =~ qr"^([-\w.]+):") {
 			# skip dependency specifications
+
 		} else {
 			$line->log_error("[internal:checklines_direct_tools] unknown line format");
 		}
@@ -1587,6 +1626,7 @@ sub checkfile_package_Makefile($$$$) {
 				"found. Is this ok?");
 			}
 		}
+
 	} elsif ($tmp !~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "no MASTER_SITES or DYNAMIC_MASTER_SITES found. ".
 			"Is this ok?");
@@ -1783,8 +1823,10 @@ sub checkfile_package_Makefile($$$$) {
 	$tmp = "\n" . $tmp;
 	if ($tmp =~ /\nMAINTAINER=[^@]+\@netbsd.org/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\@netbsd.org should be \@NetBSD.org in MAINTAINER.");
+
 	} elsif ($tmp =~ /\nMAINTAINER=[^\n]+/) {
 		$tmp =~ s/\nMAINTAINER=[^\n]+//;
+
 	} else {
 		$opt_warn_vague && log_error($fname, NO_LINE_NUMBER, "No MAINTAINER found.");
 	}
@@ -2071,6 +2113,7 @@ sub check_category($) {
 					$line->log_warning("$subdir commented out without giving a reason.");
 				}
 				push(@makefile_subdirs, $subdir);
+
 			} elsif ($first) {
 				$first = false;
 				if ($operator ne "" && $operator ne "+") {
@@ -2078,6 +2121,7 @@ sub check_category($) {
 				}
 				push(@makefile_subdirs, $subdir);
 				$last_subdir = $subdir;
+
 			} else {
 				if ($operator ne "+") {
 					$line->log_error("SUBDIR+= expected.");
@@ -2088,6 +2132,7 @@ sub check_category($) {
 				}
 				$last_subdir = $subdir;
 			}
+
 		} elsif ($line->text =~ qr"^COMMENT\s*=\s*([^#]*?)") {
 			my ($comment) = ($1);
 			$comment_seen = true;
@@ -2105,9 +2150,11 @@ sub check_category($) {
 		if ($findex < $fmax && ($mindex == $mmax || $f lt $m)) {
 			log_error($fname, NO_LINE_NUMBER, "$f exists in the file system, but not in the Makefile.");
 			$findex++;
+
 		} elsif ($mindex < $mmax && ($findex == $fmax || $m lt $f)) {
 			log_error($fname, NO_LINE_NUMBER, "$m exists in the Makefile, but not in the file system.");
 			$mindex++;
+
 		} else { # $findex < $fmax && $mindex < $mmax && $f eq $m
 			$findex++;
 			$mindex++;
