@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3773 2005/07/29 19:34:48 chris Exp $
+$NetBSD: TODO,v 1.3774 2005/07/30 13:06:02 markd Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ Suggested package updates
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kdbg-2.0.0
-	o kde-3.4.2
 	o kdrill-6.4
 	o keychain-2.5.3.1
 	o kinput2-3.1
