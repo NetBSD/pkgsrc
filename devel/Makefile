@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.667 2005/07/27 20:26:46 dogcow Exp $
+# $NetBSD: Makefile,v 1.668 2005/07/30 11:17:15 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -468,7 +468,6 @@ SUBDIR+=	p5-glib2
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-prefork
 SUBDIR+=	p5-subversion
-SUBDIR+=	palmos-includes
 SUBDIR+=	palmpower
 SUBDIR+=	pango
 SUBDIR+=	papaya
