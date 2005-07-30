@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10729 2005/07/30 11:17:34 wiz Exp $
+$NetBSD: CHANGES,v 1.10730 2005/07/30 11:32:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3407,3 +3407,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mysql4-server to 4.1.13 [xtraeme 2005-07-29]
 	Updated databases/rrdtool to 1.2.11 [wulf 2005-07-30]
 	Removed devel/palmos-includes [wiz 2005-07-30]
+	Updated www/w3m to 0.5.1nb3 [wiz 2005-07-30]
+	Updated www/w3m-img to 0.5.1nb4 [wiz 2005-07-30]
