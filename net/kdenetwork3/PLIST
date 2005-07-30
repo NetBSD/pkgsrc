@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/05/31 14:34:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/07/30 11:19:20 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -345,7 +345,7 @@ share/kde/apps/kget/icons/crystalsvg/22x22/actions/bar3.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/bar4.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/bar5.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/bar6.png
-share/kde/apps/kget/icons/crystalsvg/22x22/actions/dock.png
+share/kde/apps/kget/icons/crystalsvg/22x22/actions/kget_dock.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_clipboard.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_delay.png
 share/kde/apps/kget/icons/crystalsvg/22x22/actions/tool_disconnect.png
