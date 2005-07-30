@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3774 2005/07/30 13:06:02 markd Exp $
+$NetBSD: TODO,v 1.3775 2005/07/30 14:59:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -642,6 +642,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
+	o mathomatic-12.4.6
 	o mdd-20050318
 	o mdf2iso-0.3.0
 	o memcached-1.1.12 [pkg/30289]
@@ -679,7 +680,7 @@ Suggested package updates
 	o muse-0.9.1
 	o mutt-devel-1.5.7
 	o nagios-2.0b3 [replacing netsaint]
-	o nail-11.24
+	o nail-11.25
 	o nano-1.2.5
 	o nap-1.5.3
 	o navi2ch-1.7.5
@@ -954,6 +955,7 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rpm-4.1
 	o rsnapshot-1.2.1 [or rsnapshot-1.1.7]
+	o rsync-2.6.6
 	o rt-3.4.1
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
@@ -1126,7 +1128,7 @@ Suggested package updates
 	o xemacs-current-21.5.20
 	o xerces-c-2.7.0 [p5-XML-Xerces requires xerces-c-2.3.0, so package old version too]
 	o xerces-j-2.4.0 [pkg/21725]
-	o xerces-j-2.6.2
+	o xerces-j-2.7.1
 	o xfe-0.72
 	o xfmail-1.5.4
 	o xine-lib-1.1.0
