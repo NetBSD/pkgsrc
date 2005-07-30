@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10732 2005/07/30 13:49:15 tron Exp $
+$NetBSD: CHANGES,v 1.10733 2005/07/30 14:59:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3403,8 +3403,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gnustep-back to 0.10.0 [adam 2005-07-29]
 	Updated emulators/qemu to 0.7.1 [xtraeme 2005-07-29]
 	Updated mail/sylpheed to 2.0.0 [chris 2005-07-29]
-	Updated mysql4-client to 4.1.13 [xtraeme 2005-07-29]
-	Updated mysql4-server to 4.1.13 [xtraeme 2005-07-29]
+	Updated databases/mysql4-client to 4.1.13 [xtraeme 2005-07-29]
+	Updated databases/mysql4-server to 4.1.13 [xtraeme 2005-07-29]
 	Updated databases/rrdtool to 1.2.11 [wulf 2005-07-30]
 	Removed devel/palmos-includes [wiz 2005-07-30]
 	Updated www/w3m to 0.5.1nb3 [wiz 2005-07-30]
