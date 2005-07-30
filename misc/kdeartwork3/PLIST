@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.16 2005/06/29 13:10:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/07/30 11:42:22 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
 bin/keuphoria.kss
+bin/kfiresaver.kss
 bin/kflux.kss
 bin/kfountain.kss
 bin/kgravity.kss
@@ -39,6 +40,7 @@ share/kde/applnk/System/ScreenSavers/KBanner.desktop
 share/kde/applnk/System/ScreenSavers/KBlob.desktop
 share/kde/applnk/System/ScreenSavers/KClock.desktop
 share/kde/applnk/System/ScreenSavers/KEuphoria.desktop
+share/kde/applnk/System/ScreenSavers/KFiresaver.desktop
 share/kde/applnk/System/ScreenSavers/KFlux.desktop
 share/kde/applnk/System/ScreenSavers/KFountain.desktop
 share/kde/applnk/System/ScreenSavers/KGravity.desktop
