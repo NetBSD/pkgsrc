@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2005/07/30 06:53:15 wulf Exp $
 #
 
-DISTNAME=	rrdtool-1.2.10
+DISTNAME=	rrdtool-1.2.11
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/pub/
 
@@ -18,11 +18,13 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 
-CONFIGURE_ARGS= --enable-shared
+CONFIGURE_ARGS= --enable-shared --enable-perl-site-install
 
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST+= 	auto/RRDp/.packlist
 PERL5_PACKLIST+=	auto/RRDs/.packlist
+
+RRDDOCDIR=		${PREFIX}/share/doc/rrdtool
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
