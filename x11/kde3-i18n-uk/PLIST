@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/05/31 15:38:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/07/30 12:49:24 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -53,63 +53,20 @@ share/doc/kde/HTML/uk/common/web-docbottom.png
 share/doc/kde/HTML/uk/common/web-doctop.png
 share/doc/kde/HTML/uk/common/x11-license.html
 share/doc/kde/HTML/uk/common/xml.dcl
-share/doc/kde/HTML/uk/kaddressbook/common
-share/doc/kde/HTML/uk/kaddressbook/index.cache.bz2
-share/doc/kde/HTML/uk/kaddressbook/index.docbook
-share/doc/kde/HTML/uk/khelpcenter/common
-share/doc/kde/HTML/uk/khelpcenter/contact.docbook
+share/doc/kde/HTML/uk/kbabel/catman.docbook
+share/doc/kde/HTML/uk/kbabel/faq.docbook
+share/doc/kde/HTML/uk/kbabel/glossary.docbook
+share/doc/kde/HTML/uk/kbabel/kbabeldict.docbook
 share/doc/kde/HTML/uk/khelpcenter/faq/about.docbook
 share/doc/kde/HTML/uk/khelpcenter/faq/getkde.docbook
-share/doc/kde/HTML/uk/khelpcenter/faq/nonkdeapps.docbook
-share/doc/kde/HTML/uk/khelpcenter/faq/tips.docbook
-share/doc/kde/HTML/uk/khelpcenter/help.docbook
-share/doc/kde/HTML/uk/khelpcenter/index.cache.bz2
-share/doc/kde/HTML/uk/khelpcenter/index.docbook
-share/doc/kde/HTML/uk/khelpcenter/links.docbook
-share/doc/kde/HTML/uk/khelpcenter/support.docbook
-share/doc/kde/HTML/uk/khelpcenter/welcome.docbook
-share/doc/kde/HTML/uk/khelpcenter/whatiskde.docbook
 share/doc/kde/HTML/uk/kinfocenter/protocols/common
 share/doc/kde/HTML/uk/kinfocenter/protocols/index.cache.bz2
 share/doc/kde/HTML/uk/kinfocenter/protocols/index.docbook
-share/doc/kde/HTML/uk/kioslave/audiocd.docbook
 share/doc/kde/HTML/uk/kioslave/bzip.docbook
 share/doc/kde/HTML/uk/kioslave/bzip2.docbook
-share/doc/kde/HTML/uk/kioslave/cgi.docbook
 share/doc/kde/HTML/uk/kioslave/file.docbook
 share/doc/kde/HTML/uk/kioslave/finger.docbook
-share/doc/kde/HTML/uk/kioslave/fish.docbook
 share/doc/kde/HTML/uk/kioslave/floppy.docbook
-share/doc/kde/HTML/uk/kioslave/ftp.docbook
-share/doc/kde/HTML/uk/kioslave/gopher.docbook
-share/doc/kde/HTML/uk/kioslave/gzip.docbook
-share/doc/kde/HTML/uk/kioslave/help.docbook
-share/doc/kde/HTML/uk/kioslave/http.docbook
-share/doc/kde/HTML/uk/kioslave/https.docbook
-share/doc/kde/HTML/uk/kioslave/imap.docbook
-share/doc/kde/HTML/uk/kioslave/imaps.docbook
-share/doc/kde/HTML/uk/kioslave/info.docbook
-share/doc/kde/HTML/uk/kioslave/lan.docbook
-share/doc/kde/HTML/uk/kioslave/ldap.docbook
-share/doc/kde/HTML/uk/kioslave/mac.docbook
-share/doc/kde/HTML/uk/kioslave/mailto.docbook
-share/doc/kde/HTML/uk/kioslave/man.docbook
-share/doc/kde/HTML/uk/kioslave/news.docbook
-share/doc/kde/HTML/uk/kioslave/nfs.docbook
-share/doc/kde/HTML/uk/kioslave/nntp.docbook
-share/doc/kde/HTML/uk/kioslave/pop3.docbook
-share/doc/kde/HTML/uk/kioslave/pop3s.docbook
-share/doc/kde/HTML/uk/kioslave/print.docbook
-share/doc/kde/HTML/uk/kioslave/rlan.docbook
-share/doc/kde/HTML/uk/kioslave/rlogin.docbook
-share/doc/kde/HTML/uk/kioslave/sftp.docbook
-share/doc/kde/HTML/uk/kioslave/smb.docbook
-share/doc/kde/HTML/uk/kioslave/smtp.docbook
-share/doc/kde/HTML/uk/kioslave/tar.docbook
-share/doc/kde/HTML/uk/kioslave/telnet.docbook
-share/doc/kde/HTML/uk/kioslave/thumbnail.docbook
-share/doc/kde/HTML/uk/kioslave/webdav.docbook
-share/doc/kde/HTML/uk/kioslave/webdavs.docbook
 share/doc/kde/HTML/uk/knotes/common
 share/doc/kde/HTML/uk/knotes/index.cache.bz2
 share/doc/kde/HTML/uk/knotes/index.docbook
@@ -398,7 +355,6 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/khtmlkttsd.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/khtmlsettingsplugin.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kicker.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kiconedit.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kig.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kimagemapeditor.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kinetd.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kio.mo
@@ -470,7 +426,6 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kmobile.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kmoon.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kmousetool.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kmouth.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kmplot.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kmrml.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/knetattach.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/knewsticker.mo
@@ -607,7 +562,6 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kviewscannerplugin.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kviewshell.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kviewtemplateplugin.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kviewviewer.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kvoctrain.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kwalletmanager.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kwatchgnupg.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kweather.mo
@@ -622,6 +576,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kwriteconfig.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kxkb.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kxmlrpcd.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kxsconfig.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kxsldbg.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libKTTSD.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libcalendarresources.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libdmctl.mo
@@ -700,6 +655,6 @@ ${PKGLOCALEDIR}/locale/uk/flag.png
 @dirrm share/doc/kde/HTML/uk/kinfocenter
 @dirrm share/doc/kde/HTML/uk/khelpcenter/faq
 @dirrm share/doc/kde/HTML/uk/khelpcenter
-@dirrm share/doc/kde/HTML/uk/kaddressbook
+@dirrm share/doc/kde/HTML/uk/kbabel
 @dirrm share/doc/kde/HTML/uk/common
 @comment in kde: @dirrm share/doc/kde/HTML/uk

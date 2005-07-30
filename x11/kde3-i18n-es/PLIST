@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/05/31 15:38:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/07/30 12:49:23 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/altntool.png
 share/doc/kde/HTML/es/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/es/KRegExpEditor/boundarytools.png
@@ -125,6 +125,7 @@ share/doc/kde/HTML/es/kamera/index.docbook
 share/doc/kde/HTML/es/kandy/common
 share/doc/kde/HTML/es/kandy/index.cache.bz2
 share/doc/kde/HTML/es/kandy/index.docbook
+share/doc/kde/HTML/es/kappfinder/man-kappfinder.1.docbook
 share/doc/kde/HTML/es/kapptemplate/man-kapptemplate.1.docbook
 share/doc/kde/HTML/es/karm/common
 share/doc/kde/HTML/es/karm/index.cache.bz2
@@ -144,11 +145,15 @@ share/doc/kde/HTML/es/kate-plugins/textfilter.docbook
 share/doc/kde/HTML/es/kate-plugins/xmlcheck.docbook
 share/doc/kde/HTML/es/kate-plugins/xmltools.docbook
 share/doc/kde/HTML/es/kate/advanced.docbook
+share/doc/kde/HTML/es/kate/common
 share/doc/kde/HTML/es/kate/configdialog01.png
 share/doc/kde/HTML/es/kate/configdialog02.png
 share/doc/kde/HTML/es/kate/configuring.docbook
 share/doc/kde/HTML/es/kate/fundamentals.docbook
+share/doc/kde/HTML/es/kate/highlighted.png
 share/doc/kde/HTML/es/kate/highlighting.docbook
+share/doc/kde/HTML/es/kate/index.cache.bz2
+share/doc/kde/HTML/es/kate/index.docbook
 share/doc/kde/HTML/es/kate/kate.png
 share/doc/kde/HTML/es/kate/mdi.docbook
 share/doc/kde/HTML/es/kate/menus.docbook
@@ -156,6 +161,7 @@ share/doc/kde/HTML/es/kate/mimetypechooser.png
 share/doc/kde/HTML/es/kate/part.docbook
 share/doc/kde/HTML/es/kate/plugins.docbook
 share/doc/kde/HTML/es/kate/regular-expressions.docbook
+share/doc/kde/HTML/es/kate/unhighlighted.png
 share/doc/kde/HTML/es/katomic/common
 share/doc/kde/HTML/es/katomic/index.cache.bz2
 share/doc/kde/HTML/es/katomic/index.docbook
@@ -180,6 +186,16 @@ share/doc/kde/HTML/es/kblackbox/index.docbook
 share/doc/kde/HTML/es/kbounce/common
 share/doc/kde/HTML/es/kbounce/index.cache.bz2
 share/doc/kde/HTML/es/kbounce/index.docbook
+share/doc/kde/HTML/es/kbruch/checked.png
+share/doc/kde/HTML/es/kbruch/common
+share/doc/kde/HTML/es/kbruch/compare.png
+share/doc/kde/HTML/es/kbruch/convert.png
+share/doc/kde/HTML/es/kbruch/factorize.png
+share/doc/kde/HTML/es/kbruch/gui_main.png
+share/doc/kde/HTML/es/kbruch/index.cache.bz2
+share/doc/kde/HTML/es/kbruch/index.docbook
+share/doc/kde/HTML/es/kbruch/reduced.png
+share/doc/kde/HTML/es/kbruch/settings.png
 share/doc/kde/HTML/es/kbugbuster/common
 share/doc/kde/HTML/es/kbugbuster/index.cache.bz2
 share/doc/kde/HTML/es/kbugbuster/index.docbook
@@ -233,6 +249,8 @@ share/doc/kde/HTML/es/kcontrol/energy/index.docbook
 share/doc/kde/HTML/es/kcontrol/filemanager/common
 share/doc/kde/HTML/es/kcontrol/filemanager/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/filemanager/index.docbook
+share/doc/kde/HTML/es/kcontrol/filemanager/kfileman1.png
+share/doc/kde/HTML/es/kcontrol/filemanager/kfileman2.png
 share/doc/kde/HTML/es/kcontrol/filetypes/common
 share/doc/kde/HTML/es/kcontrol/filetypes/index.cache.bz2
 share/doc/kde/HTML/es/kcontrol/filetypes/index.docbook
@@ -372,6 +390,11 @@ share/doc/kde/HTML/es/kdcop/index.docbook
 share/doc/kde/HTML/es/kdebugdialog/common
 share/doc/kde/HTML/es/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/es/kdebugdialog/index.docbook
+share/doc/kde/HTML/es/kdelibs/man-artsmessage.1.docbook
+share/doc/kde/HTML/es/kdelibs/man-checkXML.1.docbook
+share/doc/kde/HTML/es/kdelibs/man-dcop.1.docbook
+share/doc/kde/HTML/es/kdelibs/man-kdeoptions.7.docbook
+share/doc/kde/HTML/es/kdelibs/man-qtoptions.7.docbook
 share/doc/kde/HTML/es/kdelirc/irkick/common
 share/doc/kde/HTML/es/kdelirc/irkick/index.cache.bz2
 share/doc/kde/HTML/es/kdelirc/irkick/index.docbook
@@ -394,6 +417,7 @@ share/doc/kde/HTML/es/kdeprint/cupsserverconfiguration12_browsingtimeouts.png
 share/doc/kde/HTML/es/kdeprint/cupsserverconfiguration14_browsingrelay.png
 share/doc/kde/HTML/es/kdeprint/cupsserverconfiguration15a_resourceallprinters_defineaccess.png
 share/doc/kde/HTML/es/kdeprint/cupsserverconfiguration15b_resourceallprinters_defineaccess.png
+share/doc/kde/HTML/es/kdeprint/cupsserverconfiguration15c_resourceallprinters_defineaccess.png
 share/doc/kde/HTML/es/kdeprint/cupsserverconfiguration1_welcome.png
 share/doc/kde/HTML/es/kdeprint/cupsserverconfiguration2_general.png
 share/doc/kde/HTML/es/kdeprint/cupsserverconfiguration3_logging.png
@@ -425,7 +449,7 @@ share/doc/kde/HTML/es/kdeprint/lpd.docbook
 share/doc/kde/HTML/es/kdeprint/lpr-bsd.docbook
 share/doc/kde/HTML/es/kdeprint/lprng.docbook
 share/doc/kde/HTML/es/kdeprint/rlpr.docbook
-share/doc/kde/HTML/es/kdeprint/steinbrush_scaled.png
+share/doc/kde/HTML/es/kdeprint/steinbruch_scaled.png
 share/doc/kde/HTML/es/kdeprint/tech-overview.docbook
 share/doc/kde/HTML/es/kdeprint/theory.docbook
 share/doc/kde/HTML/es/kdesu/common
@@ -493,11 +517,14 @@ share/doc/kde/HTML/es/khangman/khangman1.png
 share/doc/kde/HTML/es/khelpcenter/common
 share/doc/kde/HTML/es/khelpcenter/contact.docbook
 share/doc/kde/HTML/es/khelpcenter/faq/about.docbook
+share/doc/kde/HTML/es/khelpcenter/faq/common
 share/doc/kde/HTML/es/khelpcenter/faq/configkde.docbook
 share/doc/kde/HTML/es/khelpcenter/faq/contrib.docbook
 share/doc/kde/HTML/es/khelpcenter/faq/desktop.docbook
 share/doc/kde/HTML/es/khelpcenter/faq/filemng.docbook
 share/doc/kde/HTML/es/khelpcenter/faq/getkde.docbook
+share/doc/kde/HTML/es/khelpcenter/faq/index.cache.bz2
+share/doc/kde/HTML/es/khelpcenter/faq/index.docbook
 share/doc/kde/HTML/es/khelpcenter/faq/install.docbook
 share/doc/kde/HTML/es/khelpcenter/faq/intro.docbook
 share/doc/kde/HTML/es/khelpcenter/faq/kdeapps.docbook
@@ -1332,7 +1359,6 @@ share/doc/kde/HTML/es/quanta/man-quanta.1.docbook
 share/doc/kde/HTML/es/quanta/q-and-a.docbook
 share/doc/kde/HTML/es/quanta/quanta-menus.docbook
 share/doc/kde/HTML/es/quanta/quanta-projects.docbook
-share/doc/kde/HTML/es/quanta/using-quanta.docbook
 share/doc/kde/HTML/es/quanta/working-with-quanta.docbook
 share/doc/kde/HTML/es/scripts/man-adddebug.1.docbook
 share/doc/kde/HTML/es/scripts/man-cheatmake.1.docbook
@@ -2163,6 +2189,7 @@ ${PKGLOCALEDIR}/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kdelirc/kcmlirc
 @dirrm share/doc/kde/HTML/es/kdelirc/irkick
 @dirrm share/doc/kde/HTML/es/kdelirc
+@dirrm share/doc/kde/HTML/es/kdelibs
 @dirrm share/doc/kde/HTML/es/kdebugdialog
 @dirrm share/doc/kde/HTML/es/kdcop
 @dirrm share/doc/kde/HTML/es/kdat
@@ -2224,6 +2251,7 @@ ${PKGLOCALEDIR}/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kcharselect
 @dirrm share/doc/kde/HTML/es/kcalc
 @dirrm share/doc/kde/HTML/es/kbugbuster
+@dirrm share/doc/kde/HTML/es/kbruch
 @dirrm share/doc/kde/HTML/es/kbounce
 @dirrm share/doc/kde/HTML/es/kblackbox
 @dirrm share/doc/kde/HTML/es/kbattleship
@@ -2235,6 +2263,7 @@ ${PKGLOCALEDIR}/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kasteroids
 @dirrm share/doc/kde/HTML/es/karm
 @dirrm share/doc/kde/HTML/es/kapptemplate
+@dirrm share/doc/kde/HTML/es/kappfinder
 @dirrm share/doc/kde/HTML/es/kandy
 @dirrm share/doc/kde/HTML/es/kamera
 @dirrm share/doc/kde/HTML/es/kalzium
