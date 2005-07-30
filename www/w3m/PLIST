@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/04/18 12:08:42 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/07/30 11:32:05 wiz Exp $
 bin/w3m
 bin/w3mman
 man/man1/w3m.1
@@ -46,6 +46,7 @@ share/doc/w3m/doc-jp/keymap.default
 share/doc/w3m/doc-jp/keymap.lynx
 share/doc/w3m/doc-jp/menu.default
 share/doc/w3m/doc-jp/menu.submenu
+${USE_IMAGE}${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/w3m.mo
 share/w3m/w3mhelp-funcdesc.en.pl
 share/w3m/w3mhelp-funcdesc.ja.pl
 share/w3m/w3mhelp-funcname.pl
