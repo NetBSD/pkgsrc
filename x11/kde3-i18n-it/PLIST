@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.17 2005/06/06 13:21:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/07/30 12:49:23 markd Exp $
 share/doc/kde/HTML/it/KRegExpEditor/common
 share/doc/kde/HTML/it/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/it/KRegExpEditor/index.docbook
 share/doc/kde/HTML/it/amor/common
 share/doc/kde/HTML/it/amor/index.cache.bz2
 share/doc/kde/HTML/it/amor/index.docbook
+share/doc/kde/HTML/it/amor/man-amor.6.docbook
 share/doc/kde/HTML/it/ark/common
 share/doc/kde/HTML/it/ark/index.cache.bz2
 share/doc/kde/HTML/it/ark/index.docbook
@@ -221,6 +222,9 @@ share/doc/kde/HTML/it/kcontrol/kcmlowbatwarn/index.docbook
 share/doc/kde/HTML/it/kcontrol/kcmnotify/common
 share/doc/kde/HTML/it/kcontrol/kcmnotify/index.cache.bz2
 share/doc/kde/HTML/it/kcontrol/kcmnotify/index.docbook
+share/doc/kde/HTML/it/kcontrol/kcmsmserver/common
+share/doc/kde/HTML/it/kcontrol/kcmsmserver/index.cache.bz2
+share/doc/kde/HTML/it/kcontrol/kcmsmserver/index.docbook
 share/doc/kde/HTML/it/kcontrol/kdm/common
 share/doc/kde/HTML/it/kcontrol/kdm/index.cache.bz2
 share/doc/kde/HTML/it/kcontrol/kdm/index.docbook
@@ -274,6 +278,9 @@ share/doc/kde/HTML/it/kcontrol/spellchecking/index.docbook
 share/doc/kde/HTML/it/kcontrol/useragent/common
 share/doc/kde/HTML/it/kcontrol/useragent/index.cache.bz2
 share/doc/kde/HTML/it/kcontrol/useragent/index.docbook
+share/doc/kde/HTML/it/kcontrol/windowmanagement/common
+share/doc/kde/HTML/it/kcontrol/windowmanagement/index.cache.bz2
+share/doc/kde/HTML/it/kcontrol/windowmanagement/index.docbook
 share/doc/kde/HTML/it/kcron/common
 share/doc/kde/HTML/it/kcron/index.cache.bz2
 share/doc/kde/HTML/it/kcron/index.docbook
@@ -467,11 +474,16 @@ share/doc/kde/HTML/it/khelpcenter/quickstart/index.cache.bz2
 share/doc/kde/HTML/it/khelpcenter/quickstart/index.docbook
 share/doc/kde/HTML/it/khelpcenter/support.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/about-desktop.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/base-kde-applications.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/burning-cds.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/creating-graphics.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/first-impressions.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/font-installation.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/getting-started.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/history.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/installation.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/intro.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/kde-as-root.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdeadmin-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdebase-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdeedu-apps.docbook
@@ -483,10 +495,21 @@ share/doc/kde/HTML/it/khelpcenter/userguide/kdepim-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdetoys-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdeutils-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/koffice-apps.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/migrator-dictionary.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/more-help.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/pdf-files.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/playing-audiocds.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/playing-movies.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/programs-controlling.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/removable-disks.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/screen-captures.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/shared-sessions.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/shortcuts.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/staff.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/switching-sessions.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/ug-faq.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/where-next.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/your-kde-account.docbook
 share/doc/kde/HTML/it/khelpcenter/visualdict/common
 share/doc/kde/HTML/it/khelpcenter/visualdict/index.cache.bz2
 share/doc/kde/HTML/it/khelpcenter/visualdict/index.docbook
@@ -530,6 +553,9 @@ share/doc/kde/HTML/it/kinfocenter/memory/index.docbook
 share/doc/kde/HTML/it/kinfocenter/nics/common
 share/doc/kde/HTML/it/kinfocenter/nics/index.cache.bz2
 share/doc/kde/HTML/it/kinfocenter/nics/index.docbook
+share/doc/kde/HTML/it/kinfocenter/opengl/common
+share/doc/kde/HTML/it/kinfocenter/opengl/index.cache.bz2
+share/doc/kde/HTML/it/kinfocenter/opengl/index.docbook
 share/doc/kde/HTML/it/kinfocenter/partitions/common
 share/doc/kde/HTML/it/kinfocenter/partitions/index.cache.bz2
 share/doc/kde/HTML/it/kinfocenter/partitions/index.docbook
@@ -2025,6 +2051,7 @@ ${PKGLOCALEDIR}/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kinfocenter/pcmcia
 @dirrm share/doc/kde/HTML/it/kinfocenter/pci
 @dirrm share/doc/kde/HTML/it/kinfocenter/partitions
+@dirrm share/doc/kde/HTML/it/kinfocenter/opengl
 @dirrm share/doc/kde/HTML/it/kinfocenter/nics
 @dirrm share/doc/kde/HTML/it/kinfocenter/memory
 @dirrm share/doc/kde/HTML/it/kinfocenter/ioports
@@ -2070,6 +2097,7 @@ ${PKGLOCALEDIR}/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kde_app_devel
 @dirrm share/doc/kde/HTML/it/kdat
 @dirrm share/doc/kde/HTML/it/kcron
+@dirrm share/doc/kde/HTML/it/kcontrol/windowmanagement
 @dirrm share/doc/kde/HTML/it/kcontrol/useragent
 @dirrm share/doc/kde/HTML/it/kcontrol/spellchecking
 @dirrm share/doc/kde/HTML/it/kcontrol/smb
@@ -2087,6 +2115,7 @@ ${PKGLOCALEDIR}/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kcontrol/keys
 @dirrm share/doc/kde/HTML/it/kcontrol/keyboard
 @dirrm share/doc/kde/HTML/it/kcontrol/kdm
+@dirrm share/doc/kde/HTML/it/kcontrol/kcmsmserver
 @dirrm share/doc/kde/HTML/it/kcontrol/kcmnotify
 @dirrm share/doc/kde/HTML/it/kcontrol/kcmlowbatwarn
 @dirrm share/doc/kde/HTML/it/kcontrol/kcmlowbatcrit
