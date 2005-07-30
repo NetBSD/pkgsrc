@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/03/23 22:17:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/07/30 11:44:19 markd Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
@@ -91,11 +91,9 @@ share/kde/icons/crystalsvg/48x48/apps/kpackage.png
 share/kde/icons/crystalsvg/48x48/apps/kuser.png
 share/kde/icons/crystalsvg/64x64/apps/kpackage.png
 share/kde/icons/crystalsvg/64x64/apps/kuser.png
-share/kde/mimelnk/application/x-debian-package.desktop
 share/kde/services/kfile_deb.desktop
 share/kde/services/kfile_rpm.desktop
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/application
 @comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
