@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10735 2005/07/30 21:28:45 wiz Exp $
+$NetBSD: CHANGES,v 1.10736 2005/07/30 21:58:11 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3484,3 +3484,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/lablgtk to 1.2.7nb1 [tron 2005-07-30]
 	Updated math/mathomatic to 12.4.5 [minskim 2005-07-30]
 	Removed pkgtools/pkgconflict [rillig 2005-07-30]
+	Updated cad/pcb-current to 20050609 [dmcmahill 2005-07-30]
