@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3777 2005/07/31 14:51:28 wiz Exp $
+$NetBSD: TODO,v 1.3778 2005/07/31 15:37:47 recht Exp $
 
 Suggested new packages
 ======================
@@ -658,7 +658,6 @@ Suggested package updates
 	o mlview-0.8
 	o mmix-20041014
 	o molden-4.3
-	o mono-1.1.8.1
 	o moscow_ml-2.01
 	o most-4.10.1
 	o mowitz-0.3.0
