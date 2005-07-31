@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10736 2005/07/30 21:58:11 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.10737 2005/07/31 01:07:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3485,3 +3485,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/mathomatic to 12.4.5 [minskim 2005-07-30]
 	Removed pkgtools/pkgconflict [rillig 2005-07-30]
 	Updated cad/pcb-current to 20050609 [dmcmahill 2005-07-30]
+	Added security/pwsafe version 0.1.6 [wiz 2005-07-31]
