@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2005/07/30 13:12:24 markd Exp $
+# $NetBSD: Makefile,v 1.45 2005/07/31 13:19:55 markd Exp $
 
 DISTNAME=	netatalk-2.0.3
+PKGREVISION=	1
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -37,7 +38,6 @@ RCD_SCRIPT_SRC.timelord=	# empty
 
 CONFIGURE_ARGS+=	--enable-netbsd \
 			--enable-overwrite \
-			--enable-srvloc \
 			--enable-timelord \
 			--libexecdir=${PREFIX}/libexec/netatalk \
 			--sbindir=${PREFIX}/libexec/netatalk \
@@ -58,7 +58,7 @@ SUBST_SED.paths=	-e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3,"
 SUBST_SED.paths+=	-e "s,\(NETBSD.*\)/etc/rc.d,\1${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR},"
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.netatalk
-PKG_SUPPORTED_OPTIONS=  cups kerberos
+PKG_SUPPORTED_OPTIONS=  cups kerberos pam slp
 
 .include "../../mk/bsd.options.mk"
 
@@ -79,11 +79,32 @@ CONFIGURE_ARGS+=	--without-gssapi
 PLIST_SUBST+=		GSSAPI="@comment "
 .endif
 
+.if !empty(PKG_OPTIONS:Mpam)
+.include "../../mk/pam.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pam
+PLIST_SUBST+=		PAM=""
+MESSAGE_SRC+=		MESSAGE MESSAGE.pam
+.else
+CONFIGURE_ARGS+=	--without-pam
+PLIST_SUBST+=		PAM="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mslp)
+.include "../../net/openslp/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-srvloc
+.else
+CONFIGURE_ARGS+=	--disable-srvloc
+.endif
+
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/psffilters
 
+.if !empty(PKG_OPTIONS:Mpam)
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/config/netatalk.pamd ${EG_DIR}
+.endif
+
 .include "../../databases/db4/buildlink3.mk"
-.include "../../net/openslp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 
