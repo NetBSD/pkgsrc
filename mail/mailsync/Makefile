@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/16 06:58:03 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/07/31 03:06:17 grant Exp $
 #
 
 DISTNAME=	mailsync_5.2.1.orig
@@ -29,8 +29,6 @@ SUBST_MESSAGE.conf=	"Fixing configure script."
 
 DOCS=	COPYING NEWS README THANKS TODO doc/ABSTRACT doc/HACKING
 
-.include "../../mk/bsd.prefs.mk"
-
 INSTALLATION_DIRS=	bin man/man1
 
 do-install:
@@ -40,10 +38,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/examples/mailsync \
 		${PREFIX}/share/examples/mailsync/dot.mailsync
 	${INSTALL_MAN} ${WRKSRC}/doc/mailsync.1 ${PREFIX}/man/man1
-.	for d in ${DOCS}
-		${INSTALL_DATA} ${WRKSRC}/${d} ${PREFIX}/share/doc/mailsync
-.	endfor
-.	undef d
+.for d in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${d} ${PREFIX}/share/doc/mailsync
+.endfor
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mail/imap-uw/buildlink3.mk"
