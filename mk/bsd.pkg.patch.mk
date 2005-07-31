@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.16 2005/07/15 18:27:55 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.17 2005/07/31 05:26:50 snj Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -201,7 +201,7 @@ _PKGSRC_PATCHES=	# empty
 _PKGSRC_PATCHES+=	${PATCHDIR}/patch-*
 .endif
 .if defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH})
-_PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/patch-*
+_PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/*
 .endif
 
 .PHONY: pkgsrc-patch-message do-pkgsrc-patch
