@@ -1,0 +1,44 @@
+--- agent/mibgroup/host/hr_network.c.orig	2005-07-30 19:20:48.000000000 +1000
++++ agent/mibgroup/host/hr_network.c	2005-07-30 19:21:25.000000000 +1000
+@@ -189,6 +189,10 @@
+ static char     HRN_name[MAX_PHYSADDR_LEN];
+ static nmapi_phystat HRN_ifnet;
+ #define M_Interface_Scan_Next(a, b, c, d)	Interface_Scan_Next(a, b, c)
++#elif defined darwin
++static char		HRN_name[IFNAMSIZ];
++static struct if_msghdr	HRN_ifnet;
++#define M_Interface_Scan_Next(a, b, c, d)	Interface_Scan_Next(a, b, c, d)
+ #else                           /* hpux11 */
+ static char     HRN_name[16];
+ static struct ifnet HRN_ifnet;
+@@ -207,7 +211,7 @@
+ void
+ Init_HR_Network(void)
+ {
+-#ifndef solaris2
++#ifndef solaris2 && 
+     Interface_Scan_Init();
+ #endif
+ }
+@@ -215,7 +219,7 @@
+ int
+ Get_Next_HR_Network(void)
+ {
+-#ifndef solaris2
++#if !(defined solaris2  && defined darwin)
+     if (M_Interface_Scan_Next(&HRN_index, HRN_name, &HRN_ifnet, NULL))
+         return (HRDEV_NETWORK << HRDEV_TYPE_SHIFT) + HRN_index;
+     else
+@@ -231,7 +235,11 @@
+     HRN_savedFlags = HRN_ifnet.if_entry.ifOper;
+     HRN_savedErrors = HRN_ifnet.if_entry.ifInErrors +
+         HRN_ifnet.if_entry.ifOutErrors;
+-#else                           /* hpux11 */
++#elif defined(__APPLE__)
++    HRN_savedFlags = HRN_ifnet.ifm_flags;
++    HRN_savedFlags = HRN_ifnet.ifm_data.ifi_ierrors +
++        HRN_ifnet.ifm_data.ifi_oerrors;
++#else
+     HRN_savedFlags = HRN_ifnet.if_flags;
+     HRN_savedErrors = HRN_ifnet.if_ierrors + HRN_ifnet.if_oerrors;
+ #endif                          /* hpux11 */
