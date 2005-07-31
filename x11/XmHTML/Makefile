@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/06/17 03:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/07/31 05:51:28 grant Exp $
 #
 
 DISTNAME=       XmHTML-1.1.7
@@ -17,7 +17,7 @@ USE_LIBTOOL=	YES
 INSTALLATION_DIRS=	lib
 
 do-install:
-	${LIBTOOL} ${LIBTOOL_FLAGS} ${INSTALL_DATA} \
+	${LIBTOOL} ${LIBTOOL_FLAGS} ${INSTALL_LIB} \
 		${WRKSRC}/lib/libXmHTML.la ${PREFIX}/lib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/XmHTML
 	${INSTALL_DATA} ${WRKSRC}/include/XmHTML/*.h ${PREFIX}/include/XmHTML
