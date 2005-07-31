@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10738 2005/07/31 15:37:47 recht Exp $
+$NetBSD: CHANGES,v 1.10739 2005/07/31 19:38:04 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3487,3 +3487,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cad/pcb-current to 20050609 [dmcmahill 2005-07-30]
 	Added security/pwsafe version 0.1.6 [wiz 2005-07-31]
 	Updated lang/mono to 1.1.8.3 [recht 2005-07-31]
+	Updated graphics/libgdiplus to 1.1.8 [recht 2005-07-31]
