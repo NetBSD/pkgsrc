@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10739 2005/07/31 19:38:04 recht Exp $
+$NetBSD: CHANGES,v 1.10740 2005/07/31 22:32:18 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3488,3 +3488,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added security/pwsafe version 0.1.6 [wiz 2005-07-31]
 	Updated lang/mono to 1.1.8.3 [recht 2005-07-31]
 	Updated graphics/libgdiplus to 1.1.8 [recht 2005-07-31]
+	Updated archivers/archangel to 20050730 [agc 2005-07-31]
