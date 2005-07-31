@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/07/31 13:32:27 grant Exp $
 #
 
 DISTNAME=	ipw-3.3a
@@ -13,6 +13,9 @@ COMMENT= 	"whois" replacement that automatically queries several databases
 WRKSRC=		${WRKDIR}
 
 INSTALLATION_DIRS=	bin share/doc
+
+LIBS.SunOS+=	-lnsl -lsocket
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ipw ${PREFIX}/bin
