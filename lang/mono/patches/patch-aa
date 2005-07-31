@@ -1,12 +1,23 @@
-$NetBSD: patch-aa,v 1.11 2005/04/05 06:45:47 recht Exp $
+$NetBSD: patch-aa,v 1.12 2005/07/31 15:26:58 recht Exp $
 
---- mono/metadata/metadata.c.orig	Wed Mar 30 23:26:16 2005
-+++ mono/metadata/metadata.c
-@@ -551,6 +551,7 @@ mono_metadata_compute_size (MonoImage *m
- 				g_assert (i == 4 || i == 5);
- 				field_size = i == 4 ? idx_size (MONO_TABLE_FIELD):
- 					idx_size(MONO_TABLE_METHOD);
-+				break;
- 			case MONO_TABLE_GENERICPARAM:
- 				g_assert (i == 2 || i == 4 || i == 5);
- 				if (i == 2)
+--- configure.in.orig	2005-07-27 02:06:43.000000000 +0200
++++ configure.in
+@@ -70,6 +70,18 @@ case "$host" in
+ 		;;
+ 	*-*-*netbsd*)
+ 		platform_win32=no
++		CPPFLAGS="$CPPFLAGS -D_REENTRANT -DGC_NETBSD_THREADS -D_GNU_SOURCE"
++		libmono_cflags="-D_REENTRANT"
++		LDFLAGS="$LDFLAGS -pthread"
++		libmono_ldflags="-pthread"
++		need_link_unlink=yes
++		libdl="-ldl /libexec/ld.elf_so"
++		libgc_threads=pthreads
++		with_tls=__thread
++		with_sigaltstack=yes
++		;;
++	*-*-*netbsd*)
++		platform_win32=no
+ 		CPPFLAGS="$CPPFLAGS -D_REENTRANT"
+ 		libmono_cflags="-D_REENTRANT"
+ 		LDFLAGS="$LDFLAGS -pthread"

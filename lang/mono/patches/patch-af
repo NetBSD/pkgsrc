@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.6 2005/04/05 06:45:47 recht Exp $
+$NetBSD: patch-af,v 1.7 2005/07/31 15:26:58 recht Exp $
 
---- mono/metadata/Makefile.in.orig	Thu Mar 31 02:49:50 2005
+--- mono/metadata/Makefile.in.orig	2005-07-27 02:08:30.000000000 +0200
 +++ mono/metadata/Makefile.in
 @@ -68,7 +68,7 @@ am__objects_1 = reflection.lo object.lo 
  am_libmonoruntime_static_la_OBJECTS = $(am__objects_1)
