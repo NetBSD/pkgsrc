@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.13 2005/05/26 05:47:40 markd Exp $
+$NetBSD: patch-aa,v 1.14 2005/07/31 13:19:55 markd Exp $
 
---- configure.orig	Thu Oct 28 03:42:21 2004
+--- configure.orig	2005-05-18 10:14:29.000000000 +1200
 +++ configure
-@@ -18190,7 +18190,7 @@
+@@ -16704,7 +16704,7 @@ fi
+ 		LIBS="$savedLIBS"
+ 	fi
+ 
+-	netatalk_cv_install_pam=yes
++	netatalk_cv_install_pam=no
+ 	if test x"$pam_found" = "xyes" -a "x$PAMDIR" = "xNONE"; then
+ 		{ echo "$as_me:$LINENO: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&5
+ echo "$as_me: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&2;}
+@@ -18190,7 +18190,7 @@ cat >>confdefs.h <<\_ACEOF
  #define NETBSD 1
  _ACEOF
  
@@ -11,7 +20,7 @@ $NetBSD: patch-aa,v 1.13 2005/05/26 05:47:40 markd Exp $
  	need_dash_r=yes
  
  
-@@ -18960,7 +18960,7 @@ if test "${enable_krbV_uam+set}" = set; 
+@@ -18961,7 +18961,7 @@ if test "${enable_krbV_uam+set}" = set; 
  		if test x"$enableval" = x"yes"; then
  
  	FOUND_GSSAPI=no
@@ -20,7 +29,7 @@ $NetBSD: patch-aa,v 1.13 2005/05/26 05:47:40 markd Exp $
  	GSSAPI_CFLAGS=""
  
  
-@@ -19175,7 +19175,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -19176,7 +19176,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  #include <$ac_header>
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
