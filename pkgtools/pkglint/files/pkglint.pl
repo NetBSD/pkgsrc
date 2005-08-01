@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.220 2005/08/01 17:06:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.221 2005/08/01 18:03:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -43,8 +43,7 @@ BEGIN {
 use constant false	=> 0;
 use constant true	=> 1;
 
-sub print_table($$)
-{
+sub print_table($$) {
 	my ($out, $table) = @_;
 	my (@width) = ();
 	foreach my $row (@{$table}) {
@@ -107,8 +106,7 @@ my $errors		= 0;
 my $warnings		= 0;
 my $verbose_flag	= false;
 
-sub log_message($$$$$)
-{
+sub log_message($$$$$) {
 	my ($file, $subr, $lineno, $type, $message) = @_;
 	my ($text, $sep);
 
@@ -139,38 +137,30 @@ sub log_message($$$$$)
 	print("${text}\n");
 }
 
-sub log_error($$$)
-{
+sub log_error($$$) {
 	my ($file, $lineno, $msg) = @_;
 	log_message($file, undef, $lineno, "FATAL", $msg);
 	$errors++;
 }
-
-sub log_warning($$$)
-{
+sub log_warning($$$) {
 	my ($file, $lineno, $msg) = @_;
 	log_message($file, undef, $lineno, "WARN", $msg);
 	$warnings++;
 }
-
-sub log_info($$$)
-{
+sub log_info($$$) {
 	my ($file, $lineno, $msg) = @_;
 	if ($verbose_flag) {
 		log_message($file, undef, $lineno, "OK", $msg);
 	}
 }
-
-sub log_subinfo($$$$)
-{
+sub log_subinfo($$$$) {
 	my ($subr, $file, $lineno, $msg) = @_;
 	if ($verbose_flag) {
 		log_message($file, $subr, $lineno, "OK", $msg);
 	}
 }
 
-sub print_summary_and_exit($)
-{
+sub print_summary_and_exit($) {
 	my ($quiet) = @_;
 
 	if (!$quiet) {
@@ -183,63 +173,66 @@ sub print_summary_and_exit($)
 	exit($errors != 0);
 }
 
-sub set_verbose($)
-{
+sub set_verbose($) {
 	my ($verbose) = @_;
 	$verbose_flag = $verbose;
 }
 
-sub is_verbose()
-{
+sub is_verbose() {
 	return $verbose_flag;
 }
 #== End of PkgLint::Logging ===============================================
 
-package PkgLint::FileUtil;
-#==========================================================================
-# This package provides some file handling subroutines. The subroutine
-# load_file reads a file into memory as an array of lines. A line is a
-# record that contains the fields C<file>, C<lineno> and C<text>.
-#==========================================================================
-
 package PkgLint::FileUtil::Line;
-	sub new($$$$) {
-		my ($class, $file, $lineno, $text) = @_;
-		my ($self) = ({});
-		bless($self, $class);
-		$self->{"file"} = $file;
-		$self->{"lineno"} = $lineno;
-		$self->{"text"} = $text;
-		return $self;
-	}
-	sub file($) {
-		return shift(@_)->{"file"};
-	}
-	sub lineno($) {
-		return shift(@_)->{"lineno"};
-	}
-	sub text($) {
-		return shift(@_)->{"text"};
-	}
-	sub log_error($$) {
-		my ($self, $text) = @_;
-		PkgLint::Logging::log_error($self->file, $self->lineno, $text);
-	}
-	sub log_warning($$) {
-		my ($self, $text) = @_;
-		PkgLint::Logging::log_warning($self->file, $self->lineno, $text);
-	}
-	sub log_info($$) {
-		my ($self, $text) = @_;
-		PkgLint::Logging::log_info($self->file, $self->lineno, $text);
-	}
-	sub to_string($) {
-		my ($self) = @_;
-		return sprintf("%s:%d: %s", $self->file, $self->lineno, $self->text);
-	}
-# end of PkgLint::FileUtil::Line
+#==========================================================================
+# A Line is a class that contains the read-only fields C<file>, C<lineno>
+# and C<text>, as well as some methods for printing diagnostics easily.
+#==========================================================================
+sub new($$$$) {
+	my ($class, $file, $lineno, $text) = @_;
+	my ($self) = ({});
+	bless($self, $class);
+	$self->{"file"} = $file;
+	$self->{"lineno"} = $lineno;
+	$self->{"text"} = $text;
+	return $self;
+}
+sub file($) {
+	return shift(@_)->{"file"};
+}
+sub lineno($) {
+	return shift(@_)->{"lineno"};
+}
+sub text($) {
+	return shift(@_)->{"text"};
+}
+
+sub log_error($$) {
+	my ($self, $text) = @_;
+	PkgLint::Logging::log_error($self->file, $self->lineno, $text);
+}
+sub log_warning($$) {
+	my ($self, $text) = @_;
+	PkgLint::Logging::log_warning($self->file, $self->lineno, $text);
+}
+sub log_info($$) {
+	my ($self, $text) = @_;
+	PkgLint::Logging::log_info($self->file, $self->lineno, $text);
+}
+sub to_string($) {
+	my ($self) = @_;
+	return sprintf("%s:%d: %s", $self->file, $self->lineno, $self->text);
+}
+#== End of PkgLint::FileUtil::Line ========================================
 
 package PkgLint::FileUtil;
+#==========================================================================
+# This package provides the subroutine load_file reads, which reads a file
+# completely into memory as an array of lines.
+#==========================================================================
+use strict;
+use warnings;
+
 BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
