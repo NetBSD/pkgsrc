@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2004/07/24 03:32:24 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2005/08/01 19:27:39 jlam Exp $
+
+XXX This patch is only necessary for gcc<3.3 on sparc64.
 
 --- libraries/liblutil/sha1.c.orig	Thu Jan  1 13:16:32 2004
 +++ libraries/liblutil/sha1.c
