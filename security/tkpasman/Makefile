@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/01 11:45:19 wiz Exp $
 #
 
 DISTNAME=	TkPasMan-2.2a
@@ -11,7 +11,6 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.xs4all.nl/~wbsoft/linux/tkpasman.html
 COMMENT=	Username and password manager that uses the Tk toolkit
 
-
 CONFIG_SUBST=		PREFIX="${PREFIX}"
 CONFIG_SUBST+=		SHELL="${SH}"
 CONFIG_SUBST+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
@@ -19,17 +18,7 @@ CONFIG_SUBST+=		TCLSH="${BUILDLINK_PREFIX.tcl}/bin/tclsh"
 CONFIG_SUBST+=		WISH="${BUILDLINK_PREFIX.tk}/bin/wish"
 CONFIG_SUBST_SED=	${CONFIG_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
-.include "../../mk/bsd.prefs.mk"
-
-# SSL support
-.if defined(TKPASMAN_USE_SSL) && ${TKPASMAN_USE_SSL} == "YES"
-.  include "../../security/openssl/buildlink3.mk"
-CONFIG_SUBST+=		USE_OPENSSL="true"
-CONFIG_SUBST+=		OPENSSL="${BUILDLINK_PREFIX.openssl}/bin/openssl"
-.else
-CONFIG_SUBST+=		USE_OPENSSL="false"
-CONFIG_SUBST+=		OPENSSL=""
-.endif
+.include "options.mk"
 
 BUILD_TARGET=		tkpasman
 INSTALLATION_DIRS=	bin
