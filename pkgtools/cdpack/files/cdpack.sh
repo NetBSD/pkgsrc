@@ -1,7 +1,7 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.9 2003/08/03 15:17:51 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.10 2005/08/01 21:47:43 dmcmahill Exp $
 #
-# Copyright (c) 2001, 2002, 2003 Dan McMahill, All rights reserved.
+# Copyright (c) 2001, 2002, 2003, 2005 Dan McMahill, All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -40,6 +40,10 @@ progver=@progver@
 
 TMPDIR=${TMPDIR:-/tmp}
 TMP=${TMPDIR}/${prog}.$$
+AWK=${AWK:-@AWK@}
+EXPR="@EXPR@"
+SORT="@SORT@"
+TSORT="@TSORT@"
 
 depf=$TMP/depf
 depf2=$TMP/depf2
@@ -59,9 +63,10 @@ touch $exclude
 usage(){
 	echo " "
 	echo "$prog - generates ISO9660 images for a multi-cd binary package collection"
-	echo "Usage:      $prog [-ac | -ec] [-af | -ef] [-dvd] [-h|--help] [-l logfile] [-dnRvV] "
+	echo "Usage:      $prog [-ac | -ec] [-af | -ef] [-dvd] [-h|--help] [-l logfile] [-dnRvV]"
+	echo "            [-o opsys] [-m machine] [-r release]"
 	echo "            [-x dir] [-X dir] packages_directory cdimage_directory"
-	echo "Example:    $prog /usr/pkgsrc/packages/netbsd-1.5/alpha/All  /images/netbsd-1.5/alpha"
+	echo "Example:    $prog /usr/pkgsrc/packages/All  /images/netbsd-1.5/alpha"
 	echo "Please refer to the manual page for complete documentation."
 	echo " "
 }
@@ -90,8 +95,11 @@ fullpath(){
 }
 
 ADD_README=no
+ARCH=`uname -m`
 DEBUG=no
 DUP=yes
+OS=`uname -s`
+RELEASE=`uname -r`
 VERBOSE=no
 VERSION=no
 USE_XTRA=no
@@ -141,8 +149,14 @@ do
 	-h|--help) usage
 	    exit 0
 	    ;;
+
 	# log file for the output of mkisofs -v -v
 	-l) mkisofslog=$2
+	    shift 2
+	    ;;
+
+	# target machine architecture for these packages
+	-m) ARCH=$2
 	    shift 2
 	    ;;
 
@@ -151,12 +165,22 @@ do
 	    shift
 	    ;;
 	   
+	# target os for these packages
+	-o) OS=$2
+	    shift 2
+	    ;;
+
+	# target os version for these packages
+	-r) RELEASE=$2
+	    shift 2
+	    ;;
+
 	# automatically generate a README.txt file for each CD-ROM
 	-R) ADD_README=yes
 	    shift
 	    ;;
 
-	# be verbose 
+	# be verbose
 	-v) VERBOSE=yes
 	    shift
 	    ;;
@@ -256,7 +280,7 @@ fi
 
 if [ "$USE_XTRA" = "yes" ]; then
     extra=`fullpath $extra`
-    XTRA_SIZE=`du -sk $extra | awk '{print $1}'`
+    XTRA_SIZE=`du -sk $extra | ${AWK} '{print $1}'`
     if [ "$VERBOSE" = "yes" ]; then
 	echo "Extra directory full path name is \"$extra\".  It contains $XTRA_SIZE kB."
     fi
@@ -272,7 +296,7 @@ fi
 
 if [ "$USE_OTHERS" = "yes" ]; then
     others=`fullpath $others`
-    OTHER_SIZE=`du -sk $others | awk '{print $1}'`
+    OTHER_SIZE=`du -sk $others | ${AWK} '{print $1}'`
     if [ "$VERBOSE" = "yes" ]; then
 	echo "Other files directory full path name is \"$others\".  It contains $OTHER_SIZE kB."
     fi
@@ -281,7 +305,7 @@ else
 fi
 
 echo " "
-echo "$prog starting: `date`" 
+echo "$prog starting: `date`"
 echo " "
 
 #
@@ -296,6 +320,14 @@ npkgs=0
 echo "Extracting all dependency information for the binary packages..."
 for pkg in $packages/*
 do
+	case $pkg in
+	# this allows foo.tgz to have a foo.txt containing some readme info
+	# about the file to exist without throwing off cdpack.
+	*.txt)
+		continue
+		;;
+	esac
+
 	if [ -f $pkg ]; then
 		# extract the packge name
 		pkgname=`basename $pkg .tgz`
@@ -304,13 +336,13 @@ do
 		cat $pkg | (cd $TMP; tar --fast-read -xzf - +BUILD_INFO +CONTENTS)
 
 		# extract the depends
-		deps=`awk '/^@pkgdep/ {printf("%s ",$2)}' $TMP/+CONTENTS`
+		deps=`${AWK} '/^@pkgdep/ {printf("%s ",$2)}' $TMP/+CONTENTS`
 
 		# extract any conflicts
-		cfls=`awk '/^@pkgcfl/ {printf("%s ",$2)}' $TMP/+CONTENTS`
+		cfls=`${AWK} '/^@pkgcfl/ {printf("%s ",$2)}' $TMP/+CONTENTS`
 
 		# check to see if we're allowed to add this package to the CD set
-		NO_BIN_ON_CDROM=`awk -F "=" '/NO_BIN_ON_CDROM/ {print $2}' $TMP/+BUILD_INFO`
+		NO_BIN_ON_CDROM=`${AWK} -F "=" '/NO_BIN_ON_CDROM/ {print $2}' $TMP/+BUILD_INFO`
 		if [ ! -z "$NO_BIN_ON_CDROM" ]; then
 		    if [ "$ALLOW_NO_BIN_ON_CDROM" = "no" ]; then
 		    	echo "EXCLUDED $pkgname:  NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM" >> $restricted
@@ -322,7 +354,7 @@ do
 		    	echo "INCLUDED $pkgname:  NO_BIN_ON_CDROM=$NO_BIN_ON_CDROM" >> $restricted
 		    fi
 		fi
-		NO_BIN_ON_FTP=`awk -F "=" '/NO_BIN_ON_FTP/ {print $2}' $TMP/+BUILD_INFO`
+		NO_BIN_ON_FTP=`${AWK} -F "=" '/NO_BIN_ON_FTP/ {print $2}' $TMP/+BUILD_INFO`
 		if [ ! -z "$NO_BIN_ON_FTP" ]; then
 		    if [ "$ALLOW_NO_BIN_ON_FTP" = "no" ]; then
 		        echo "EXCLUDED $pkgname:  NO_BIN_ON_FTP=$NO_BIN_ON_FTP" >> $restricted
@@ -337,11 +369,11 @@ do
 
 		# cleanup
 		rm $TMP/+CONTENTS $TMP/+BUILD_INFO
-		
+
 		# store the results
 		echo "$pkgname | $deps | $cfls" >> $depf
 
-		# also process all of the listed depends with 
+		# also process all of the listed depends with
 		# 'pkg_admin lsbest' to handle glob patterns
 		bestdeps=" "
 		listed=no
@@ -361,14 +393,14 @@ do
 		    done
 		fi
 		if [ "$listed" = "no" ]; then
-		    # make sure we add ourselves to the tree if we have no depends or if the 
+		    # make sure we add ourselves to the tree if we have no depends or if the
 		    # depends were not found
 		    echo "$pkgname	$pkgname" >> $deptree
 		fi
 
 		echo "$pkgname | $bestdeps | $cfls" >> $depf2
 
-		npkgs=$(($npkgs + 1))
+		npkgs=`${EXPR} $npkgs + 1`
 	else
 		# Don't bomb out on 1 package
 		echo "$prog: warning: $pkg not readable"
@@ -383,8 +415,8 @@ echo " "
 # sort the packages in dependency order
 #
 mv $deptree ${deptree}.bak
-sort -u ${deptree}.bak > ${deptree}
-tsort $deptree > $order
+${SORT} -u ${deptree}.bak > ${deptree}
+${TSORT} $deptree > $order
 
 #
 # Run the awk program which figures out which packages go on which CD.
@@ -399,9 +431,9 @@ tsort $deptree > $order
 #    cdlist   = ARGV[6];
 #
 if [ "$VERBOSE" = "yes" ]; then
-    echo "awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE dvd=$DVD $XTRA_SIZE $OTHER_SIZE"
+    echo "${AWK} -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE dvd=$DVD $XTRA_SIZE $OTHER_SIZE"
 fi
-awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE dvd=$DVD $XTRA_SIZE $OTHER_SIZE
+${AWK} -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $exclude $order $cdlist dup=$DUP verbose=$VERBOSE dvd=$DVD $XTRA_SIZE $OTHER_SIZE
 
 if [ $? -ne 0 ]; then
     echo "$prog:  ERROR:  cdgen.awk has failed"
@@ -413,36 +445,49 @@ fi
 #
 if [ "$DVD" = "yes" ]; then
     what="DVD"
+    space="   "
 else
     what="CD-ROM"
+    space=""
 fi
 
 cat <<EOF > $readme
-This $what collection contains NetBSD binary packages.  For
-information on the NetBSD package collection, please visit
-http://www.NetBSD.org/Documentation/software/packages.html.
+This is @DISKNAME@ of a @NDISKS@-disk ${what} collection
+containing binary packages for version ${RELEASE} of
+the ${OS} operating system running on a ${ARCH} platform.
 
-For more information about the NetBSD project, visit the
-project homepage at http://www.NetBSD.org
+These binary packages were created with the NetBSD packages
+colection (pkgsrc).  For information on the NetBSD package
+collection, please visit the NetBSD pkgsrc homepage at
+
+    http://www.pkgsrc.org
+
+For more information about the NetBSD project, please visit the
+project's homepage at
+
+    http://www.NetBSD.org
 
 EOF
 
 if [ "$DUP" = "yes" ]; then
 cat <<EOF >> $readme
-The packages on this $what have been arranged to eliminate all
-inter-$what dependencies.  In other words, each package on this
-$what should have all of its dependencies (if they are allowed
-to be provided on $what) present on the same $what.
+The packages on this ${what} have been arranged to eliminate all
+inter-${what} dependencies.  In other words, each package on this
+${what} should have all of its dependencies (if they are allowed
+to be provided on a ${what}) present on the same ${what}.
+Installation of an individual package on this ${what} should not
+require any swapping of media.  Some packages may be duplicated on
+multiple ${what}s.
 
 EOF
 else
 
 cat <<EOF >> $readme
-The packages on this $what have been arranged such that for a
-given package on $what number n, all of the other required
-packages are on $what number 1 through n.  This allows the 
-user to make a single pass through the $what set when installing
-a collection of packages.
+The packages on this ${what} have been arranged by order of their
+dependencies across the entire @NDISKS@ set of ${what}s.  This allows
+you to make a single pass through the ${what} set when installing
+any group of pacakges provided on the set, or when installing or
+loading the entire collection.
 
 EOF
 fi
@@ -454,14 +499,14 @@ fi
 if [ "$ALLOW_NO_BIN_ON_CDROM" = "no" ]; then
 cat <<EOF >> $readme
 All packages with NO_BIN_ON_CDROM set have been excluded from
-this cd collection.
+this ${what} collection.
 EOF
 else
 cat <<EOF >> $readme
-This $what collection includes packaged with NO_BIN_ON_CDROM set.
-Please do not violate license agreements by selling this $what
+This ${what} collection includes packages with NO_BIN_ON_CDROM set.
+Please do not violate license agreements by selling this ${what}
 without verifying that you are allowed to.  A list of these
-packages may be found in the ".restricted" file on this $what.
+packages may be found in the ".restricted" file on this ${what}.
 EOF
 fi
 
@@ -472,15 +517,15 @@ fi
 if [ "$ALLOW_NO_BIN_ON_FTP" = "no" ]; then
 cat <<EOF >> $readme
 All packages with NO_BIN_ON_FTP set have been excluded from
-this cd collection.
+this ${what} collection.
 EOF
 else
 cat <<EOF >> $readme
-This $what collection includes packages with NO_BIN_ON_FTP set.
-Please do not violate license agreements by placing this 
-image on a public FTP site without verifying that you are
+This ${what} collection includes packages with NO_BIN_ON_FTP set.
+Please do not violate license agreements by placing this image or
+its contents on a public FTP site without verifying that you are
 allowed to.  A list of these packages may be found in the
- ".restricted" file on this $what.
+".restricted" file on this ${what}.
 EOF
 fi
 
@@ -489,21 +534,22 @@ fi
 #
 cat <<EOF >> $readme
 
-This README, along with the $what layout was created using the
+This file, along with the ${what} layout was created using the
 cdpack program which is available as part of the NetBSD
 packages collection at 
-ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/cdpack
-.
+
+ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/cdpack/
 
 EOF
-    
-# 
+
+#
 # Generate an index file which lists the contents of each CD.
 #
 
-echo "Creating CD Index File"
+echo "Creating Disk Index File"
 
-for cdname in `cat $cdlist`
+numdisks=0
+for cdname in `cat ${cdlist}`
 do
     #
     # cdgen shouldn't have included any restricted pkgs, but
@@ -524,9 +570,10 @@ do
     do
 	echo "`basename $pkg`  $cdname" >> $indexf
     done
+    numdisks=`${EXPR} ${numdisks} + 1`
 done
 mv $indexf ${indexf}.tmp
-sort ${indexf}.tmp > $indexf
+${SORT} ${indexf}.tmp > $indexf
 
 #
 # Populate the cd's with the index file and readme
@@ -545,18 +592,20 @@ ncds=0
 for cdname in `cat $cdlist`
 do
     if [ -f $indexf ]; then
-	(cd ${cddir}/${cdname} && cp $indexf .index )
+	(cd ${cddir}/${cdname} && cp $indexf .index)
     fi
 
     if [ -f $indexf ]; then
-	(cd ${cddir}/${cdname} &&  cp $restricted .restricted )
+	(cd ${cddir}/${cdname} &&  cp $restricted .restricted)
     fi
 
     if [ "$ADD_README" = "yes" ]; then
 	if [ "$VERBOSE" = "yes" ]; then
 	    echo "Copying README.txt file"
 	fi
-       (cd ${cddir}/${cdname} && cp $readme README.txt)
+       (cd ${cddir}/${cdname} && sed -e "s/@DISKNAME@/$cdname/g" \
+		-e "s/@NDISKS@/${numdisks}/g" \
+		< $readme > README.txt)
     fi
 
     if [ $USE_XTRA = "yes" ]; then
@@ -566,7 +615,7 @@ do
 	done
     fi
 
-    ncds=$(($ncds + 1))
+    ncds=`${EXPR} $ncds + 1`
 done
 
 
@@ -584,7 +633,7 @@ fi
 #
 # Create the ISO Images
 #
-volid=PackagesCD
+volid=PkgsrcDisk
 #mkisofs_flags="-f -l -r -J -L -volset-size $ncds -V $volid "
 mkisofs_flags="-v -v -f -l -r -J -L "
 
@@ -611,34 +660,34 @@ if [ -f $warnings ]; then
 	cat $warnings
 fi
 
-echo "-------------------------------------------------------"
-echo "* Please note:  This CD set was created with          *"
-echo "*                                                     *"
+echo "-----------------------------------------------------------"
+echo "* Please note:  This ${what} set was created with          ${space}*"
+echo "*                                                         *"
 if [ "$ALLOW_NO_BIN_ON_CDROM" = "no" ]; then
-    echo "*   - NO_BIN_ON_CDROM packages excluded.              *"
+    echo "*   - NO_BIN_ON_CDROM packages excluded.                  *"
 else
-    echo "*   - NO_BIN_ON_CDROM packages INCLUDED.  Please      *"
-    echo "*     verify that you will not violate any licenses   *"
-    echo "*     with this CD set.  Refer to the /.restricted    *"
-    echo "*     file which has been placed on each CD in the    *"
-    echo "*     set for details.                                *"
+    echo "*   - NO_BIN_ON_CDROM packages INCLUDED.  Please          *"
+    echo "*     verify that you will not violate any licenses       *"
+    echo "*     with this ${what} set.  Refer to the /.restricted    ${space}*"
+    echo "*     file which has been placed on each ${what} in the    ${space}*"
+    echo "*     set for details.                                    *"
 fi
-echo "*                                                     *"
+echo "*                                                         *"
 if [ "$ALLOW_NO_BIN_ON_FTP" = "no" ]; then
-    echo "*   - NO_BIN_ON_FTP packages excluded.                *"
+    echo "*   - NO_BIN_ON_FTP packages excluded.                    *"
 else
-    echo "*   - NO_BIN_ON_FTP packages INCLUDED.  You should    *"
-    echo "*     not make this CD set available via FTP as it    *"
-    echo "*     would violate the license on one or more        *"
-    echo "*     packages.  Refer to the /.restricted file       *"
-    echo "*     which has been placed on each CD in the         *"
-    echo "*     set for details.                                *"
+    echo "*   - NO_BIN_ON_FTP packages INCLUDED.  You should        *"
+    echo "*     not make this ${what} set available via FTP as it    ${space}*"
+    echo "*     would violate the license on one or more            *"
+    echo "*     packages.  Refer to the /.restricted file           *"
+    echo "*     which has been placed on each ${what} in the         ${space}*"
+    echo "*     set for details.                                    *"
 fi
-echo "*                                                     *"
-echo "-------------------------------------------------------"
+echo "*                                                         *"
+echo "-----------------------------------------------------------"
 
 echo " "
-echo "$prog finished: `date`" 
+echo "$prog finished: `date`"
 echo " "
 
 if [ "x$DEBUG" = "xno" ]; then
@@ -648,4 +697,3 @@ else
 fi
 
 exit 0
-
