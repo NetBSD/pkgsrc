@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10745 2005/08/01 14:15:54 adam Exp $
+$NetBSD: CHANGES,v 1.10746 2005/08/01 14:31:46 martin Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3494,3 +3494,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/openldap to 2.2.27 [jlam 2005-08-01]
 	Updated misc/screen to 4.0.2nb2 [cube 2005-08-01]
 	Updated devel/anjuta to 1.2.3 [adam 2005-08-01]
+	Added archivers/unshield version 0.5 [martin 2005-08-01]
