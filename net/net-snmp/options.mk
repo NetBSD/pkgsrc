@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2005/08/01 11:56:17 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2005/08/01 11:58:33 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.net-snmp
-PKG_SUPPORTED_OPTIONS=	ssl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
+PKG_SUPPORTED_OPTIONS=		ssl
+# remove after pkgsrc-2005Q3
+PKG_OPTIONS_LEGACY_VARS+=	NET_SNMP_USE_SSL:ssl
 
 .include "../../mk/bsd.prefs.mk"
 
