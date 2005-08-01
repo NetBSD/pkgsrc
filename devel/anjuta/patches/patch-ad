@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2004/04/21 15:01:28 jmmv Exp $
+$NetBSD: patch-ad,v 1.5 2005/08/01 14:14:49 adam Exp $
 
---- configure.orig	2004-04-13 06:37:20.000000000 +0200
+--- configure.orig	2005-05-15 07:03:42.000000000 +0000
 +++ configure
-@@ -21414,7 +21414,7 @@ done
+@@ -22677,7 +22677,7 @@ done
  
  
  
