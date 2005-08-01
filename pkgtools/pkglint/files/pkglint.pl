@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.225 2005/08/01 22:29:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.226 2005/08/01 23:54:09 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -190,11 +190,8 @@ package PkgLint::FileUtil::Line;
 #==========================================================================
 sub new($$$$) {
 	my ($class, $file, $lineno, $text) = @_;
-	my ($self) = ([]);
+	my ($self) = ([$file, $lineno, $text]);
 	bless($self, $class);
-	$self->[0] = $file;
-	$self->[1] = $lineno;
-	$self->[2] = $text;
 	return $self;
 }
 sub file($) {
@@ -517,14 +514,16 @@ sub load_predefined_sites($) {
 		return false;
 	}
 	foreach my $line (@{$lines}) {
-		if ($line->text =~ qr"^(MASTER_SITE_\w+)\+=\s*\\$"o) {
+		my $text = $line->text;
+
+		if ($text =~ qr"^(MASTER_SITE_\w+)\+=\s*\\$"o) {
 			$varname = $1;
 			$ignoring = false;
 
-		} elsif ($line->text eq "MASTER_SITE_BACKUP?=\t\\") {
+		} elsif ($text eq "MASTER_SITE_BACKUP?=\t\\") {
 			$ignoring = true;
 
-		} elsif ($line->text =~ qr"^\t($regex_url_directory)(?:|\s*\\)$"o) {
+		} elsif ($text =~ qr"^\t($regex_url_directory)(?:|\s*\\)$"o) {
 			if (!$ignoring) {
 				if (defined($varname)) {
 					$predefined_sites->{$1} = $varname;
@@ -533,10 +532,10 @@ sub load_predefined_sites($) {
 				}
 			}
 
-		} elsif ($line->text =~ qr"^(?:#.*|\s*)$") {
+		} elsif ($text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
 
-		} elsif ($line->text =~ qr"BSD_SITES_MK") {
+		} elsif ($text =~ qr"BSD_SITES_MK") {
 			# ignore multiple inclusion guards
 
 		} else {
