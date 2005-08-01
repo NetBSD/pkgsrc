@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/08/01 14:22:02 martin Exp $
+
+--- src/unshield.c.orig	2005-07-08 16:08:37.000000000 +0200
++++ src/unshield.c	2005-08-01 15:31:14.000000000 +0200
+@@ -2,5 +2,5 @@
+ #define _BSD_SOURCE 1
+-#define _POSIX_C_SOURCE 2
++/* #define _POSIX_C_SOURCE 2 */
+ #include "../lib/libunshield.h"
+ #include <ctype.h>
+ #include <locale.h>
+@@ -278,10 +278,10 @@
+         break;
+ 
+       default:
+-        if (!isprint(*p))
++        if (!isprint((unsigned char)*p))
+           *p = '_';
+         else if (make_lowercase)
+-          *p = tolower(*p);
++          *p = tolower((unsigned char)*p);
+         break;;
+     }
+   }
+@@ -298,10 +298,10 @@
+ 
+   for (p = filename; *p != '\0'; p++)
+   {
+-    if (!isprint(*p))
++    if (!isprint((unsigned char)*p))
+       *p = '_';
+     else if (make_lowercase)
+-      *p = tolower(*p);
++      *p = tolower((unsigned char)*p);
+   }
+ 
+   printf("  extracting: %s\n", filename);
