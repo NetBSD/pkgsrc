@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.9 2005/07/18 21:33:24 adrianp Exp $
+# $NetBSD: options.mk,v 1.10 2005/08/01 15:27:00 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
-PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers socketmap
+PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers sendmail-socketmap
 PKG_SUGGESTED_OPTIONS=	tcpwrappers
 
-PKG_OPTIONS_LEGACY_OPTS=	starttls:tls
+PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls
+PKG_OPTIONS_LEGACY_OPTS+=	socketmap:sendmail-socketmap
 
 .include "../../mk/bsd.options.mk"
 
@@ -48,7 +49,7 @@ PKG_OPTIONS_LEGACY_OPTS=	starttls:tls
 ###
 ### Enable Sendmail SOCKETMAP support
 ###
-.if !empty(PKG_OPTIONS:Msocketmap)
+.if !empty(PKG_OPTIONS:Msendmail-socketmap)
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	contrib/socketmapClient.pl contrib/socketmapServer.pl
 .endif
