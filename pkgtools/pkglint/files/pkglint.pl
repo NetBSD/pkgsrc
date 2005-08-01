@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.222 2005/08/01 18:39:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.223 2005/08/01 21:02:30 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -293,10 +293,12 @@ my $conf_make		= '@MAKE@';
 my $conf_datadir	= '@DATADIR@';
 
 # Command Line Options
-my $opt_dumpmakefile	= false;
 my $opt_contblank	= 1;
+my $opt_debug		= false;
+my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
 my (%options) = (
+	"-d"		=> "Enable debugging mode",
 	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
 	"-q"		=> "don't print a summary line when finishing",
 	"-I"		=> "dump the Makefile after parsing",
@@ -468,6 +470,7 @@ sub parse_command_line() {
 		"verbose|v" => sub { PkgLint::Logging::set_verbose(true); },
 		"version|V" => sub { print("$conf_distver\n"); exit(0); },
 		"contblank|B=i" => \$opt_contblank,
+		"debug|d" => \$opt_debug,
 		"dumpmakefile|I" => \$opt_dumpmakefile,
 		"quiet|q" => \$opt_quiet,
 	);
@@ -827,12 +830,14 @@ sub checkfile_PLIST($$) {
 	$curdir = $conf_localbase;
 	line:
 	foreach my $line (@{$plist}) {
+		my $text = $line->text;
+
 		checkline_trailing_whitespace($line);
 
-		if ($line->text =~ /<\$ARCH>/) {
+		if ($text =~ /<\$ARCH>/) {
 			$line->log_warning("use of <\$ARCH> is deprecated, use \${MACHINE_ARCH} instead.");
 		}
-		if ($line->text =~ /^\@([a-z]+)\s+(.*)/) {
+		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 			if ($cmd eq "cwd" || $cmd eq "cd") {
 				$curdir = $arg;
@@ -864,49 +869,49 @@ sub checkfile_PLIST($$) {
 			next line;
 		}
 
-		if ($line->text =~ /^\//) {
+		if ($text =~ /^\//) {
 			$line->log_error("Use of full pathname disallowed.");
 		}
 
-		if ($opt_warn_plist_sort && $line->text =~ qr"^\w") {
+		if ($opt_warn_plist_sort && $text =~ qr"^\w") {
 			if (defined($last_file_seen)) {
-				if ($last_file_seen gt $line->text) {
-					$line->log_warning($line->text . " should be sorted before ${last_file_seen}.");
+				if ($last_file_seen gt $text) {
+					$line->log_warning($text . " should be sorted before ${last_file_seen}.");
 				}
 			}
-			$last_file_seen = $line->text;
+			$last_file_seen = $text;
 		}
 
-		if ($line->text =~ /^doc/) {
+		if ($text =~ /^doc/) {
 			$line->log_error("Documentation must be installed under share/doc, not doc.");
 		}
 
-		if ($line->text =~ /^etc/ && $line->text !~ /^etc\/rc.d/) {
+		if ($text =~ /^etc/ && $text !~ /^etc\/rc.d/) {
 			$line->log_error("Configuration files must not be ".
 				"registered in the PLIST. Please use the ".
 				"PKG_SYSCONFDIR framework.");
 		}
 
-		if ($line->text =~ /^etc\/rc\.d/) {
+		if ($text =~ /^etc\/rc\.d/) {
 			$line->log_error("RCD_SCRIPTS must not be ".
 				"registered in the PLIST. Please use the ".
 				"RCD_SCRIPTS framework.");
 		}
 
-		if ($line->text =~ /^info\/dir$/) {
+		if ($text =~ /^info\/dir$/) {
 			$line->log_error("\"info/dir\" should not be listed. Use install-info to add/remove an entry.");
 		}
 
-		if ($line->text =~ /^lib\/locale/) {
+		if ($text =~ /^lib\/locale/) {
 			$line->log_error("\"lib/locale\" should not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
-		if ($line->text =~ /^share\/locale/) {
+		if ($text =~ /^share\/locale/) {
 			$line->log_warning("Use of \"share/locale\" is ".
 				"deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
-		if ($line->text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
+		if ($text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
 			$line->log_warning("PLIST contains \${PKGLOCALEDIR}, ".
 				"but USE_PKGLOCALEDIR was not found.");
 		}
@@ -2110,7 +2115,14 @@ sub check_directory($) {
 #
 
 sub main() {
+	my ($startsec, $startusec, $endsec, $endusec);
+
 	parse_command_line();
+
+	if ($opt_debug) {
+		use Time::HiRes;
+		($startsec, $startusec) = Time::HiRes::gettimeofday();
+	}
 
 	if (@ARGV) {
 		foreach my $dir (@ARGV) {
@@ -2119,6 +2131,14 @@ sub main() {
 	} else {
 		check_directory(".");
 	}
+
+	if ($opt_debug) {
+		($endsec, $endusec) = Time::HiRes::gettimeofday();
+		printf STDERR ("%.0f %s\n",
+			($endsec - $startsec) * 1.0e6 + ($endusec - $startusec),
+			getcwd());
+	}
+
 	print_summary_and_exit($opt_quiet);
 }
 
