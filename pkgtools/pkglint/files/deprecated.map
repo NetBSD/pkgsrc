@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.7 2005/07/20 23:59:53 rillig Exp $
+# $NetBSD: deprecated.map,v 1.8 2005/08/01 11:37:46 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -26,14 +26,10 @@ USE_BUILDLINK3		You can just remove it.
 USE_CANNA		Use the PKG_OPTIONS framework instead.
 USE_CUPS		Use the PKG_OPTIONS framework instead.
 USE_DB4			Use the PKG_OPTIONS framework instead.
-USE_ESOUND		Use the PKG_OPTIONS framework instead.
-USE_GIF			Use the PKG_OPTIONS framework instead.
 USE_GMAKE		Use USE_TOOLS+=gmake instead.
 USE_GNU_TOOLS		Use USE_TOOLS instead.
 USE_I586		Use the PKG_OPTIONS framework instead.
 USE_IDEA		Use the PKG_OPTIONS framework instead.
-USE_LIBCRACK		Use the PKG_OPTIONS framework instead.
-USE_MMX			Use the PKG_OPTIONS framework instead.
 USE_OPENLDAP		Use the PKG_OPTIONS framework instead.
 USE_OSS			Use the PKG_OPTIONS framework instead.
 USE_RSAREF2		Use the PKG_OPTIONS framework instead.
@@ -44,7 +40,6 @@ USE_SOCKS		Use the PKG_OPTIONS framework instead.
 USE_WNN4		Use the PKG_OPTIONS framework instead.
 USE_XFACE		Use the PKG_OPTIONS framework instead.
 USE_PKGLIBTOOL		Use USE_LIBTOOL instead.
-USE_SSL			Include "../../security/openssl/buildlink3.mk" instead.
 
 # The following entries can be removed after the 2005Q4 branch.
 USE_PERL5		Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.

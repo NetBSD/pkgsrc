@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.10 2005/08/01 10:55:42 wiz Exp $
+# $NetBSD: makevars.map,v 1.11 2005/08/01 11:37:46 wiz Exp $
 #
 
 # This file tries to guess the type of some variables, according to their
@@ -30,7 +30,6 @@ USE_CUPS		Yes_Or_Undefined
 USE_I586		Boolean
 USE_INET6		Boolean
 USE_INN			Yes_Or_Undefined
-USE_MMX			Boolean
 #USE_OPENLDAP		One_Of(YES NO)
 USE_OSS			Yes_Or_Undefined
 #USE_SASL		One_Of(YES NO)
