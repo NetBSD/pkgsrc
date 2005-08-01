@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2005/04/11 21:45:12 tv Exp $
+# $NetBSD: Makefile,v 1.99 2005/08/01 09:49:37 jlam Exp $
 
-DISTNAME=	openldap-2.2.20
-PKGREVISION=	2
+DISTNAME=	openldap-2.2.27
 SVR4_PKGNAME=	oldap
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
@@ -23,15 +22,15 @@ MAKE_ENV+=		LIBMODE=${LIBMODE}
 OPENLDAP_ETCDIR=	${PKG_SYSCONFDIR}/openldap
 OPENLDAP_MODULEDIR=	${PREFIX}/lib/openldap
 OPENLDAP_VARDIR=	${VARBASE}/openldap
-FILES_SUBST+=		OPENLDAP_ETCDIR=${OPENLDAP_ETCDIR}
+FILES_SUBST+=		OPENLDAP_ETCDIR=${OPENLDAP_ETCDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 CPPFLAGS.Darwin+=	-DBIND_8_COMPAT
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${OPENLDAP_VARDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${OPENLDAP_VARDIR:Q}
 CONFIGURE_ARGS+=	--enable-dynamic   # link servers against shared libs
 CONFIGURE_ARGS+=	--with-tls=openssl
 
@@ -64,11 +63,8 @@ OWN_DIRS_PERMS=		${OPENLDAP_VARDIR}/openldap-data ${OPENLDAP_DIRPERMS}
 OWN_DIRS_PERMS+=	${OPENLDAP_VARDIR}/openldap-ldbm ${OPENLDAP_DIRPERMS}
 OWN_DIRS_PERMS+=	${OPENLDAP_VARDIR}/openldap-slurp ${OPENLDAP_DIRPERMS}
 
-CNFS=			ldap.conf					\
-			schema/corba.schema schema/core.schema		\
-			schema/java.schema schema/inetorgperson.schema	\
-			schema/cosine.schema schema/misc.schema		\
-			schema/nis.schema schema/openldap.schema
+CNFS=			ldap.conf ${CNFS_SCHEMAS_cmd:sh}
+CNFS_SCHEMAS_cmd=	${SED} -ne "/\.schema$$/{ s,share/examples/openldap/,,; p; }" ${PKGDIR}/PLIST
 CNFS_PERMS=		slapd.conf
 
 CONF_FILES=		# empty
@@ -82,19 +78,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${OPENLDAP_ETCDIR}/${FILE}	\
 .endfor
 RCD_SCRIPTS=		slapd
 
-# On some platforms, while the package does build correctly using GNU pth,
-# slapd isn't able to pass "make test".  One those platforms, don't build
-# openldap with threads support unless we're using the native thread
-# library.
-#
-OPENLDAP_PTH_BROKEN_PLATFORMS?=	# empty
-.for _pattern_ in ${OPENLDAP_PTH_BROKEN_PLATFORMS}
-.  if !empty(MACHINE_PLATFORM:M${_pattern_})
-OPENLDAP_PTHREAD_OPTS?=	native
-.  endif
-.endfor
-OPENLDAP_PTHREAD_OPTS?=	require
-PTHREAD_OPTS+=		${OPENLDAP_PTHREAD_OPTS}
+PTHREAD_OPTS+=		require
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
@@ -102,18 +86,19 @@ PTHREAD_OPTS+=		${OPENLDAP_PTHREAD_OPTS}
 
 .if ${PTHREAD_TYPE} == "native"
 CONFIGURE_ARGS+=	--with-threads
-PLIST_SUBST+=		SLURPD_COMMENT=
-RCD_SCRIPTS+=		slurpd
 .elif ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-threads=pth
-PLIST_SUBST+=		SLURPD_COMMENT=
-RCD_SCRIPTS+=		slurpd
-.else
-CONFIGURE_ARGS+=	--without-threads
-PLIST_SUBST+=		SLURPD_COMMENT="@comment "
 .endif
+RCD_SCRIPTS+=		slurpd
 
-MAKE_FLAGS+=		moduledir=${OPENLDAP_MODULEDIR}
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
+MAKE_FLAGS+=		moduledir=${OPENLDAP_MODULEDIR:Q}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+
+# Set the correct file modes for the example config files.
+post-install:
+.for _file_ in ${CNFS} ${CNFS_PERMS}
+	${CHMOD} ${SHAREMODE} ${EGDIR}/${_file_}
+	${RM} ${EGDIR}/${_file_}.default
+.endfor
 
 .include "../../mk/bsd.pkg.mk"

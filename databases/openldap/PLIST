@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2005/05/03 15:16:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2005/08/01 09:49:37 jlam Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -28,7 +28,7 @@ ${DYNAMIC_MOD}lib/openldap/back_null.la
 ${DYNAMIC_MOD}lib/openldap/back_passwd.la
 ${DYNAMIC_MOD}lib/openldap/back_shell.la
 libexec/slapd
-${SLURPD_COMMENT}libexec/slurpd
+libexec/slurpd
 man/man1/ldapadd.1
 man/man1/ldapcompare.1
 man/man1/ldapdelete.1
@@ -192,6 +192,7 @@ man/man5/ldap.conf.5
 man/man5/ldif.5
 man/man5/slapd-bdb.5
 man/man5/slapd-dnssrv.5
+man/man5/slapd-hdb.5
 man/man5/slapd-ldap.5
 man/man5/slapd-ldbm.5
 man/man5/slapd-meta.5
