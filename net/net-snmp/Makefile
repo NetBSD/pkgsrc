@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/07/31 02:30:18 rtr Exp $
+# $NetBSD: Makefile,v 1.35 2005/08/01 11:55:55 wiz Exp $
 
 DISTNAME=	net-snmp-5.2.1.2
 CATEGORIES=	net
@@ -11,15 +11,7 @@ COMMENT=	Extensible SNMP implementation
 
 CONFLICTS=	ucd-snmp-[0-9]*
 
-BUILD_DEFS+=	USE_INET6
-
-.include "../../mk/bsd.prefs.mk"
-
-NET_SNMP_SYS_CONTACT?=		default_user@contact.domain
-NET_SNMP_SYS_LOCATION?=		defaultlocation
-NET_SNMP_PERSISTENTDIR?=	${VARBASE}/net-snmp
-NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:/usr/local/share/snmp/mibs
-
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 # The self-test of Perl modules only works after installation because perl
@@ -31,31 +23,27 @@ TEST_TARGET?=		test
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
-.if ${OPSYS} == "NetBSD" && empty(CFLAGS:U:M*-Dnetbsd1*)
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+OSVERSION_SPECIFIC=	YES
+.  if empty(CFLAGS:U:M*-Dnetbsd1*)
 CFLAGS+=		-Dnetbsd1
+.  endif
 .endif
 
-GNU_CONFIGURE=		yes
+.if (${OPSYS} == "NetBSD") || !exists(/usr/bin/lpstat)
+CONFIGURE_ENV+=		ac_cv_path_LPSTAT_PATH=no
+.endif
+
+NET_SNMP_SYS_CONTACT?=		default_user@contact.domain
+NET_SNMP_SYS_LOCATION?=		defaultlocation
+NET_SNMP_PERSISTENTDIR?=	${VARBASE}/net-snmp
+NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:/usr/local/share/snmp/mibs
 
 CONFIGURE_ARGS+=	--enable-shared
-# net-snmp doesn't do IPv6 on Solaris
-.if (defined(USE_INET6) && (${USE_INET6} == "YES")) && ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	--enable-ipv6
-PLIST_SUBST+=   	IPV6H=
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-PLIST_SUBST+=   	IPV6H="@comment "
-.endif
 CONFIGURE_ARGS+=	--with-defaults
-
-.include "../../security/tcp_wrappers/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libwrap
-
-.if defined(NET_SNMP_USE_SSL) && ${NET_SNMP_USE_SSL} == "YES"
-.  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-openssl
-.endif
-
 CONFIGURE_ARGS+=	--with-sys-contact="${NET_SNMP_SYS_CONTACT}"
 CONFIGURE_ARGS+=	--with-sys-location="${NET_SNMP_SYS_LOCATION}"
 #
@@ -90,23 +78,15 @@ CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
 CONFIGURE_ARGS+=	--with-perl-modules=${MAKE_PARAMS:Q}
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST=		auto/Bundle/NetSNMP/.packlist
-
-.if (${OPSYS} == "NetBSD") || !exists(/usr/bin/lpstat)
-CONFIGURE_ENV+=		ac_cv_path_LPSTAT_PATH=no
-.endif
 CONFIGURE_ENV+=		PERLPROG="${PERL5}"
 
-.if (${OPSYS} == "NetBSD")
-OSVERSION_SPECIFIC=	YES
-.endif
+.include "options.mk"
 
 # Handle ${PREFIX}/share/snmp in the DEINSTALL script since it may contain
 # leftover config files or pidfiles after deinstallation.
 #
 OWN_DIRS=	${PREFIX}/share/snmp
 RCD_SCRIPTS=	snmpd snmptrapd
-
-.include "../../lang/perl5/module.mk"
 
 post-wrapper:
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.5.[123]*-i386)
@@ -119,4 +99,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf				\
 		${PREFIX}/share/examples/net-snmp/EXAMPLE.conf
 
+.include "../../lang/perl5/module.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
