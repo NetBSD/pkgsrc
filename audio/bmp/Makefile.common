@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/08/01 00:09:35 rillig Exp $
 #
 
 DISTNAME=	bmp-0.9.7
@@ -20,10 +20,16 @@ USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-esd
-CONFIGURE_ARGS+=	--disable-mp3
 CONFIGURE_ARGS+=	--disable-opengl
+.if defined(BMP_ENABLE_ENCODERS) && !empty(BMP_ENABLE_ENCODERS:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-mp3
+CONFIGURE_ARGS+=	--enable-ogg
+CONFIGURE_ARGS+=	--enable-vorbis
+.else
+CONFIGURE_ARGS+=	--disable-mp3
 CONFIGURE_ARGS+=	--disable-oss
 CONFIGURE_ARGS+=	--disable-vorbis
+.endif
 
 PKGCONFIG_OVERRIDE+=	bmp.pc
 
