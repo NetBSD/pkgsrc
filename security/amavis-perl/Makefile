@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/10 11:55:28 kristerw Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/01 12:18:41 wiz Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -34,11 +34,9 @@ DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
-.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
-DEPENDS+=	sendmail>=8.12.9nb1:../../mail/sendmail
-.endif
 
 VERSION=	0.1
 
@@ -53,26 +51,12 @@ USE_TOOLS+=	file
 CONFIGURE_ENV+=	file=${TOOLS_FILE_CMD}
 
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
-# XXX Milter needs pthreads, and configure fails looking for it
-# because ${PREFIX}/include is not available in the include path.
-.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
-CONFIGURE_ENV+=	CFLAGS="-I${PREFIX}/include"
-.endif
 
 CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/amavis
 CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR}
 CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO}
 CONFIGURE_ARGS+=--enable-all
 CONFIGURE_ARGS+=--with-amavisuser=amavis
-
-.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
-CONFIGURE_ARGS+=--enable-milter
-CONFIGURE_ARGS+=--with-milter-libs=${PREFIX}/lib
-CONFIGURE_ARGS+=--with-milter-includes=${PREFIX}/include
-.else
-CONFIGURE_ARGS+=--enable-smtp --with-smtp-port=${SMTPPORT}
-PLIST_SRC+=	${PKGDIR}/PLIST.nomilter
-.endif
 
 INSTALLATION_DIRS=	sbin man/man1 man/man5 man/man8
 
@@ -82,7 +66,7 @@ post-build:
 
 do-install:
 	# Program files
-.if !defined(USE_MILTER) || ${USE_MILTER} != YES
+.if empty(PKG_OPTIONS:Mmilter)
 	${INSTALL_PROGRAM} ${WRKSRC}/amavis/amavis ${PREFIX}/sbin
 .endif
 	${INSTALL_SCRIPT} ${WRKDIR}/amavisd ${PREFIX}/sbin
@@ -106,15 +90,11 @@ do-install:
 		> ${WRKDIR}/amavis.m4
 	${INSTALL_DATA} ${WRKDIR}/amavis.m4 ${PREFIX}/share/doc/amavis
 	# Man pages
-.if !defined(USE_MILTER) || ${USE_MILTER} != YES
+.if empty(PKG_OPTIONS:Mmilter)
 	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${PREFIX}/man/man1
 .endif
 	${INSTALL_DATA} ${WRKSRC}/doc/amavis-milter.1 ${PREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.conf.5 ${PREFIX}/man/man5
 	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.8 ${PREFIX}/man/man8
-
-.if defined(USE_MILTER) && ${USE_MILTER} == "YES"
-.include "../../mk/pthread.buildlink3.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
