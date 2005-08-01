@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.223 2005/08/01 21:02:30 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.224 2005/08/01 21:28:06 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -972,14 +972,16 @@ sub check_for_multiple_patches($) {
 	$files_in_patch = 0;
 	$patch_state = "";
 	foreach my $line (@{$lines}) {
-		if (index($line->text, "--- ") == 0 && $line->text !~ qr"^--- \d+(?:,\d+|) ----$") {
+		my $text = $line->text;
+
+		if (index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
 			$line_type = "-";
 
-		} elsif (index($line->text, "*** ") == 0 && $line->text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
+		} elsif (index($text, "*** ") == 0 && $text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 			$line_type = "*";
 
-		} elsif (index($line->text, "+++ ") == 0) {
+		} elsif (index($text, "+++ ") == 0) {
 			$line_type = "+";
 
 		} else {
@@ -1059,13 +1061,15 @@ sub readmakefile($$$$) {
 	}
 
 	foreach my $line (@{$lines}) {
+		my $text = $line->text;
+
 		checkline_trailing_whitespace($line);
-		if ($line->text =~ /^\040{8}/) {
+		if ($text =~ /^\040{8}/) {
 			$line->log_warning("Use tab (not spaces) to make indentation.");
 		}
 		push(@{$all_lines}, $line);
 		# try to get any included file
-		if ($line->text =~ qr"^\.\s*include\s+\"([-./\w]+)\"$") {
+		if ($text =~ qr"^\.\s*include\s+\"([-./\w]+)\"$") {
 			$includefile = $1;
 			if (exists($seen_Makefile_include->{$includefile})) {
 				$contents .= "### pkglint ### skipped $includefile\n";
@@ -1085,7 +1089,7 @@ sub readmakefile($$$$) {
 			}
 			if ($includefile =~ /\/mk\/(?:bsd|java)/) {
 				# skip these files
-				$contents .= $line->text . "\n";
+				$contents .= $text . "\n";
 			} else {
 				$dirname = dirname($file);
 				# Only look in the directory relative to the
@@ -1102,11 +1106,11 @@ sub readmakefile($$$$) {
 				}
 			}
 
-		} elsif ($line->text =~ qr"^\.\s*include\s+(.*)") {
+		} elsif ($text =~ qr"^\.\s*include\s+(.*)") {
 			$line->log_info("Skipping include file $1");
 
 		} else {
-			$contents .= $line->text . "\n";
+			$contents .= $text . "\n";
 		}
 	}
 	checklines_trailing_empty_lines($lines);
