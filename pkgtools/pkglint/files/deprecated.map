@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.8 2005/08/01 11:37:46 wiz Exp $
+# $NetBSD: deprecated.map,v 1.9 2005/08/01 11:40:56 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -29,7 +29,6 @@ USE_DB4			Use the PKG_OPTIONS framework instead.
 USE_GMAKE		Use USE_TOOLS+=gmake instead.
 USE_GNU_TOOLS		Use USE_TOOLS instead.
 USE_I586		Use the PKG_OPTIONS framework instead.
-USE_IDEA		Use the PKG_OPTIONS framework instead.
 USE_OPENLDAP		Use the PKG_OPTIONS framework instead.
 USE_OSS			Use the PKG_OPTIONS framework instead.
 USE_RSAREF2		Use the PKG_OPTIONS framework instead.
