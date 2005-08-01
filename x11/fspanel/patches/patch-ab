@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/03/17 15:49:54 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2005/08/01 17:10:32 reed Exp $
 
---- fspanel.c.orig	2002-06-23 07:12:50.000000000 +0200
-+++ fspanel.c
-@@ -559,10 +559,10 @@ gui_draw_task (task *tk)
+--- fspanel.c.orig	2002-06-22 22:12:50.000000000 -0700
++++ fspanel.c	2005-07-28 11:28:40.000000000 -0700
+@@ -559,10 +559,10 @@
  
  		/* check how many chars can fit */
  		len = strlen (tk->name);
@@ -15,3 +15,16 @@ $NetBSD: patch-ab,v 1.1 2005/03/17 15:49:54 wiz Exp $
  				break;
  			len--;
  		}
+@@ -678,7 +678,11 @@
+ 	xev.message_type = atom__NET_CURRENT_DESKTOP;
+ 	xev.format = 32;
+ 	xev.data.l[0] = new_desk;
+-	XSendEvent (dd, root_win, False, SubstructureNotifyMask, (XEvent *) &xev);
++	xev.data.l[1] = 0;
++	xev.data.l[2] = 0;
++	xev.data.l[3] = 0;
++	xev.data.l[4] = 0;
++	XSendEvent (dd, root_win, False, SubstructureRedirectMask | SubstructureNotifyMask, (XEvent *) &xev);
+ }
+ 
+ void
