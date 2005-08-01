@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/05/22 20:08:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/08/01 14:54:33 wiz Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -25,8 +25,6 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BUILDLINK_DIR="${BUILDLINK_DIR}"
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
-BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_OPENLDAP USE_DB2 \
-		USE_SASL2 USE_STARTTLS USE_DB4
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
@@ -41,7 +39,7 @@ make-sendmail-siteconfig:
 	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
 	${ECHO} '---' >>${DESCR_SRC}
 	${ECHO} -n 'compiled features:' >>${DESCR_SRC}
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if !empty(PKG_OPTIONS:Minet6)
 	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
 .if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS"
 	${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
