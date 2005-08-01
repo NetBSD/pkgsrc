@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2005/07/18 21:33:24 adrianp Exp $
+# $NetBSD: Makefile,v 1.78 2005/08/01 15:30:52 wiz Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -39,7 +39,7 @@ post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Msasl)
 	@${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
 .endif
-.if !empty(PKG_OPTIONS:Msocketmap)
+.if !empty(PKG_OPTIONS:Msendmail-socketmap)
 	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
 PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
 .endif
@@ -74,7 +74,7 @@ post-install:
 		${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
 
-.if !empty(PKG_OPTIONS:Msocketmap)
+.if !empty(PKG_OPTIONS:Msendmail-socketmap)
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapClient.pl \
 		${PREFIX}/share/examples/sendmail
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmapServer.pl \
