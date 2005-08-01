@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2005/08/01 14:14:49 adam Exp $
+# $NetBSD: Makefile,v 1.32 2005/08/01 17:17:14 drochner Exp $
 
 DISTNAME=	anjuta-1.2.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
 
@@ -12,14 +13,15 @@ DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	automake>=1.8.2:../../devel/automake
 DEPENDS+=	gettext>=0.11.5:../../devel/gettext
 DEPENDS+=	glade2>=2.6.0:../../devel/glade2
-DEPENDS+=	gmake>=3.80:../../devel/gmake
 DEPENDS+=	gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
+DEPENDS+=	libtool>=1.5.2:../../devel/libtool
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
+BUILDLINK_DEPMETHOD.pkg-config=	full
 
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake:run
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		make
