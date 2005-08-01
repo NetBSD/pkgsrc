@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10741 2005/07/31 22:46:15 agc Exp $
+$NetBSD: CHANGES,v 1.10742 2005/08/01 00:26:52 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3490,3 +3490,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/libgdiplus to 1.1.8 [recht 2005-07-31]
 	Updated archivers/archangel to 20050730 [agc 2005-07-31]
 	Updated pkgtools/digest to 20050731 [agc 2005-07-31]
+	Added textproc/ezxml version 0.8.4 [agc 2005-07-31]
