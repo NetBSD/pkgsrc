@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.95 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.96 2005/08/01 20:34:31 tron Exp $
+#
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system with Kerberos libraries
@@ -6,7 +7,7 @@
 
 DISTNAME=       imap-2004c1
 PKGNAME=        imap-uw-2004c1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -15,7 +16,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 
-USE_LIBTOOL=	# defined
+USE_LIBTOOL=	yes
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_LIB}
@@ -52,6 +53,17 @@ BUILD_TARGET+=	EXTRAAUTHENTICATORS="gss"
 MAKE_ENV+=	GSS_EXTRA_LDFLAGS="-ldes"
 .    endif
 .  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.imap-uw
+PKG_SUPPORTED_OPTIONS= 	inet6
+
+.include "../../mk/bsd.options.mk"
+
+.if empty(PKG_OPTIONS:Minet6)
+MAKE_ENV+=	IP=4
+.else
+MAKE_ENV+=	IP=6
 .endif
 
 BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT IMAP_UW_USE_WHOSON
