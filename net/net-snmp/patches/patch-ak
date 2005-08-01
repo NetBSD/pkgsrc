@@ -1,3 +1,4 @@
+$NetBSD: patch-ak,v 1.2 2005/08/01 11:56:54 wiz Exp $
 --- agent/mibgroup/ucd-snmp/disk.c.orig	2005-07-30 18:48:29.000000000 +1000
 +++ agent/mibgroup/ucd-snmp/disk.c	2005-07-30 18:49:20.000000000 +1000
 @@ -73,15 +73,17 @@
