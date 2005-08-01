@@ -1,3 +1,4 @@
+$NetBSD: patch-ag,v 1.4 2005/08/01 11:56:54 wiz Exp $
 --- agent/mibgroup/host/hr_storage.c.orig	2004-10-17 11:59:14.000000000 +1000
 +++ agent/mibgroup/host/hr_storage.c	2005-07-30 19:04:20.000000000 +1000
 @@ -164,7 +164,14 @@
