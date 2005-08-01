@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10748 2005/08/01 20:34:50 tron Exp $
+$NetBSD: CHANGES,v 1.10749 2005/08/01 21:48:48 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3497,3 +3497,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added archivers/unshield version 0.5 [martin 2005-08-01]
 	Added devel/p5-PAR version 0.89 [rillig 2005-08-01]
 	Updated mail/imap-uw to 2004c1nb3 [tron 2005-08-01]
+	Updated pkgtools/cdpack to 1.6 [dmcmahill 2005-08-01]
