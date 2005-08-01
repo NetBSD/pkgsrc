@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.39 2005/08/01 09:49:37 jlam Exp $
+$NetBSD: distinfo,v 1.40 2005/08/01 19:27:39 jlam Exp $
 
 SHA1 (openldap-2.2.27.tgz) = 0adb9cd6b229c98b7f27df2ad90489c2ea455a05
 RMD160 (openldap-2.2.27.tgz) = 75adc676024b95e25d7c82b3f048c6a28c47b39a
 Size (openldap-2.2.27.tgz) = 2628140 bytes
 SHA1 (patch-ac) = 473ad88f580ef60d520647033901d8070382ba11
-SHA1 (patch-ad) = c49ccf52a60110a6fe16afaff0d327e112216c50
+SHA1 (patch-ad) = ca8efe627797c83e97ff0f4a905b73a346d0b25a
 SHA1 (patch-af) = 7b2f7e0e6cd545a371dba06433ae306f50b40c82
 SHA1 (patch-ag) = 4221d6762ccb9e253e4ad9f98d64ad86c4c4c66b
 SHA1 (patch-ah) = b0e2a31920dd1d0a99b04e84561195d669815df7
