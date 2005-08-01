@@ -1,4 +1,4 @@
-#!@PERL@ -w
+#! @PERL@ -w
 #
 # pkglint - lint for package directory
 #
@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.219 2005/07/30 23:39:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.220 2005/08/01 17:06:56 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -47,15 +47,15 @@ sub print_table($$)
 {
 	my ($out, $table) = @_;
 	my (@width) = ();
-	foreach my $row (@$table) {
-		foreach my $i (0..(scalar(@$row)-1)) {
+	foreach my $row (@{$table}) {
+		foreach my $i (0..$#{$row}) {
 			if (!defined($width[$i]) || length($row->[$i]) > $width[$i]) {
 				$width[$i] = length($row->[$i]);
 			}
 		}
 	}
-	foreach my $row (@$table) {
-		my ($max) = (scalar(@$row) - 1);
+	foreach my $row (@{$table}) {
+		my ($max) = ($#{$row});
 		foreach my $i (0..$max) {
 			if ($i != 0) {
 				print $out ("  ");
@@ -67,7 +67,6 @@ sub print_table($$)
 		}
 		print $out ("\n");
 	}
-	return 1;
 }
 
 #== End of PkgLint::Util ==================================================
@@ -208,14 +207,10 @@ package PkgLint::FileUtil::Line;
 		my ($class, $file, $lineno, $text) = @_;
 		my ($self) = ({});
 		bless($self, $class);
-		$self->_init($file, $lineno, $text);
-		return $self;
-	}
-	sub _init($$$$) {
-		my ($self, $file, $lineno, $text) = @_;
 		$self->{"file"} = $file;
 		$self->{"lineno"} = $lineno;
 		$self->{"text"} = $text;
+		return $self;
 	}
 	sub file($) {
 		return shift(@_)->{"file"};
@@ -265,7 +260,7 @@ sub load_file($) {
 	while (defined($line = <F>)) {
 		$lineno++;
 		$seen_newline = ($line =~ s/\n$//);
-		push(@$result, PkgLint::FileUtil::Line->new($fname, $lineno, $line));
+		push(@{$result}, PkgLint::FileUtil::Line->new($fname, $lineno, $line));
 	}
 	if (!$seen_newline) {
 		$result->[-1]->log_error("File must end with a newline.");
@@ -378,8 +373,6 @@ my $seen_USE_PKGLOCALEDIR;
 my $seen_Makefile_common;
 my $pkgname;
 
-# these subroutines return C<true> if the checking succeeded (that includes
-# errors in the file) and C<false> if the file could not be checked.
 sub checkfile_DESCR($$);
 sub checkfile_distinfo($$);
 sub checkfile_extra($$);
@@ -397,17 +390,6 @@ sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
 sub check_predefined_sites($$);
-
-sub init_global_vars() {
-	$pkgdir			= ".";
-	$filesdir		= "files";
-	$patchdir		= "patches";
-	$distinfo_file		= "distinfo";
-	$scriptdir		= "scripts";
-	$seen_USE_PKGLOCALEDIR	= false;
-	$seen_Makefile_common	= false;
-	$pkgname		= undef;
-}
 
 sub help($$$) {
 	my ($out, $exitval, $show_all) = @_;
@@ -477,7 +459,6 @@ sub parse_multioption($$) {
 			}
 		}
 	}
-	return true;
 }
 
 sub parse_command_line() {
@@ -503,7 +484,6 @@ sub parse_command_line() {
 			help(*STDERR, 1, false);
 		}
 	}
-	return true;
 }
 
 sub load_make_vars_typemap() {
@@ -514,7 +494,7 @@ sub load_make_vars_typemap() {
 	}
 	$vartypes = {};
 
-	foreach my $line (@$lines) {
+	foreach my $line (@{$lines}) {
 		if ($line->text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
 
@@ -571,46 +551,24 @@ sub load_predefined_sites($) {
 	return $predefined_sites;
 }
 
-sub check_directory($) {
-	my ($dir) = @_;
-
-	if (-f "${dir}/../mk/bsd.pkg.mk") {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
-		check_category($dir);
-
-	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
-		load_predefined_sites("${dir}/../..");
-		check_package($dir);
-
-	} else {
-		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
-	}
-}
-
-sub main() {
-	parse_command_line();
-
-	if (@ARGV) {
-		foreach my $dir (@ARGV) {
-			check_directory($dir);
-		}
-	} else {
-		check_directory(".");
-	}
-	print_summary_and_exit($opt_quiet);
-}
-
 sub check_package($) {
 	my ($dir) = @_;
 
 	my ($whole, $lines);
 
-	init_global_vars();
+	$pkgdir			= ".";
+	$filesdir		= "files";
+	$patchdir		= "patches";
+	$distinfo_file		= "distinfo";
+	$scriptdir		= "scripts";
+	$seen_USE_PKGLOCALEDIR	= false;
+	$seen_Makefile_common	= false;
+	$pkgname		= undef;
 
 	# we need to handle the Makefile first to get some variables
 	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$lines)) {
 		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
-		return false;
+		return;
 	}
 
 	my @files = <${dir}/*>;
@@ -673,8 +631,7 @@ sub check_package($) {
 	if (grep { $_ !~ qr"/CVS$" } <$dir/scripts/*>) {
 		log_warning("$dir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
-	return true;
-} # check_package
+}
 
 sub is_committed($) {
 	my ($fname) = @_;
@@ -703,7 +660,6 @@ sub checkline_length($$) {
 	if (length($line->text) > $maxlength) {
 		$line->log_warning("Line too long (should be no more than $maxlength characters).");
 	}
-	return true;
 }
 
 sub checkline_valid_characters($$) {
@@ -715,7 +671,6 @@ sub checkline_valid_characters($$) {
 		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
 		$line->log_warning(sprintf("Line contains invalid characters (%s).", join(", ", @chars)));
 	}
-	return true;
 }
 
 sub checkline_trailing_whitespace($) {
@@ -723,7 +678,6 @@ sub checkline_trailing_whitespace($) {
 	if ($line->text =~ /\s+$/) {
 		$line->log_warning("Trailing white-space.");
 	}
-	return true;
 }
 
 sub checkline_rcsid_regex($$$) {
@@ -732,12 +686,11 @@ sub checkline_rcsid_regex($$$) {
 	if ($line->text !~ qr"^${prefix_regex}${regex_rcsidstr}$") {
 		$line->log_error("\"${prefix}\$${conf_rcsidstr}\$\" expected.");
 	}
-	return true;
 }
 
 sub checkline_rcsid($$) {
 	my ($line, $prefix) = @_;
-	return checkline_rcsid_regex($line, quotemeta($prefix), $prefix);
+	checkline_rcsid_regex($line, quotemeta($prefix), $prefix);
 }
 
 sub checklines_trailing_empty_lines($) {
@@ -751,7 +704,6 @@ sub checklines_trailing_empty_lines($) {
 	if ($last != $max) {
 		$lines->[$last]->log_warning("Trailing empty lines.");
 	}
-	return true;
 }
 
 #
@@ -766,27 +718,25 @@ sub checkfile_DESCR($$) {
 	log_subinfo("checkfile_DESCR", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	if (!defined($descr = load_file($fname))) {
+	if (!($descr = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return false;
+		return;
 	}
-	if (scalar(@{$descr}) == 0) {
+	if (@{$descr} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return true;
+		return;
 	}
 
-	foreach my $line (@$descr) {
+	foreach my $line (@{$descr}) {
 		checkline_length($line, $maxchars);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, $regex_validchars);
 	}
 	checklines_trailing_empty_lines($descr);
 
-	if (scalar(@$descr) > $maxlines) {
+	if (@{$descr} > $maxlines) {
 		log_warning($fname, NO_LINE_NUMBER, "File too long (should be no more than $maxlines lines).");
 	}
-
-	return true;
 }
 
 sub checkfile_distinfo($$) {
@@ -796,19 +746,19 @@ sub checkfile_distinfo($$) {
 	log_subinfo("checkfile_distinfo", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	if (!defined($distinfo = load_file($fname))) {
+	if (!($distinfo = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return false;
+		return;
 	}
 
-	if (scalar(@$distinfo) == 0) {
+	if (@{$distinfo} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return true;
+		return;
 	}
 
 	checkline_rcsid($distinfo->[0], "");
 
-	foreach my $line (@$distinfo[1 .. scalar(@$distinfo)-1]) {
+	foreach my $line (@{$distinfo}) {
 		next unless $line->text =~ /^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
 		my ($alg, $patch, $sum) = ($1, $2, $3);
 
@@ -833,7 +783,6 @@ sub checkfile_distinfo($$) {
 			log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '$conf_make makepatchsum'.");
 		}
 	}
-	return true;
 }
 
 sub checkfile_MESSAGE($$) {
@@ -845,18 +794,18 @@ sub checkfile_MESSAGE($$) {
 	checkperms($fname);
 	if (!defined($message = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return false;
+		return;
 	}
 
-	if (scalar(@$message) < 3) {
+	if (@{$message} < 3) {
 		log_warning($fname, NO_LINE_NUMBER, "File too short.");
-		return true;
+		return;
 	}
 	if ($message->[0]->text ne "=" x 75) {
 		$message->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
 	}
 	checkline_rcsid($message->[1], "");
-	foreach my $line (@$message[2 .. scalar(@$message) - 2]) {
+	foreach my $line (@{$message}[2 .. $#{$message} - 2]) {
 		checkline_length($line, 80);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, $regex_validchars);
@@ -865,7 +814,6 @@ sub checkfile_MESSAGE($$) {
 		$message->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
 	}
 	checklines_trailing_empty_lines($message);
-	return true;
 }
 
 sub checkfile_PLIST($$) {
@@ -875,19 +823,19 @@ sub checkfile_PLIST($$) {
 	log_subinfo("checkfile_PLIST", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	if (!defined($plist = load_file($fname))) {
+	if (!($plist = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return false;
+		return;
 	}
-	if (scalar(@{$plist}) == 0) {
+	if (@{$plist} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return false;
+		return;
 	}
 	checkline_rcsid($plist->[0], "\@comment ");
 
 	$curdir = $conf_localbase;
 	line:
-	foreach my $line (@$plist) {
+	foreach my $line (@{$plist}) {
 		checkline_trailing_whitespace($line);
 
 		if ($line->text =~ /<\$ARCH>/) {
@@ -977,7 +925,6 @@ sub checkfile_PLIST($$) {
 		}
 	}
 	checklines_trailing_empty_lines($plist);
-	return true;
 }
 
 sub checkfile_buildlink3_mk($$) {
@@ -988,12 +935,11 @@ sub checkfile_buildlink3_mk($$) {
 
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return false;
+		return;
 	}
 	checklines_deprecated_variables($lines);
 	checklines_trailing_empty_lines($lines);
 	checklines_direct_tools($lines);
-	return true;
 }
 
 sub checkperms($) {
@@ -1002,7 +948,6 @@ sub checkperms($) {
 	if ($opt_warn_exec && -f $fname && -x $fname && !is_committed($fname)) {
 		log_warning($fname, NO_LINE_NUMBER, "Should not be executable.");
 	}
-	return true;
 }
 
 #
@@ -1017,11 +962,10 @@ sub checkfile_extra($$) {
 	$lines = load_file($fname);
 	if (!$lines) {
 		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
-		return false;
+		return;
 	}
 	checklines_trailing_empty_lines($lines);
 	checkperms($fname);
-	return true;
 }
 
 # $lines => an array of lines as returned by load_file().
@@ -1031,7 +975,7 @@ sub check_for_multiple_patches($) {
 
 	$files_in_patch = 0;
 	$patch_state = "";
-	foreach my $line (@$lines) {
+	foreach my $line (@{$lines}) {
 		if (index($line->text, "--- ") == 0 && $line->text !~ qr"^--- \d+(?:,\d+|) ----$") {
 			$line_type = "-";
 
@@ -1073,7 +1017,6 @@ sub check_for_multiple_patches($) {
 	} elsif ($files_in_patch == 0) {
 		log_error($lines->[0]->file, NO_LINE_NUMBER, "Contains no patch.");
 	}
-	return true;
 }
 
 sub checkfile_patches_patch($$) {
@@ -1083,13 +1026,13 @@ sub checkfile_patches_patch($$) {
 	log_subinfo("checkfile_patches_patch", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	if (!defined($lines = load_file($fname))) {
+	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
-		return false;
+		return;
 	}
-	if (scalar(@{$lines}) == 0) {
+	if (@{$lines} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return true;
+		return;
 	}
 	checkline_rcsid($lines->[0], "");
 
@@ -1103,7 +1046,6 @@ sub checkfile_patches_patch($$) {
 	checklines_trailing_empty_lines($lines);
 
 	check_for_multiple_patches($lines);
-	return true;
 }
 
 sub readmakefile($$$$) {
@@ -1115,11 +1057,12 @@ sub readmakefile($$$$) {
 	if (!defined ($lines)) {
 		return false;
 	}
-	if (scalar(@{$lines}) > 0) {
+	# FIXME: move into checkfile_Makefile
+	if (@{$lines} > 0) {
 		checkline_rcsid_regex($lines->[0], qr"#\s+", "# ");
 	}
 
-	foreach my $line (@$lines) {
+	foreach my $line (@{$lines}) {
 		checkline_trailing_whitespace($line);
 		if ($line->text =~ /^\040{8}/) {
 			$line->log_warning("Use tab (not spaces) to make indentation.");
@@ -1208,7 +1151,6 @@ sub check_Makefile_vartype($$) {
 			}
 		}
 	}
-	return true;
 }
 
 my $check_Makefile_variables_vartypes = undef;
@@ -1217,14 +1159,13 @@ sub check_Makefile_variables($) {
 
 	if (!defined($check_Makefile_variables_vartypes) && $opt_warn_types) {
 		my $vartypes = load_make_vars_typemap();
-		if ($vartypes == false) {
-			return false;
-		}
+		return if (!$vartypes);
+
 		$check_Makefile_variables_vartypes = $vartypes;
 	}
 
 	# Check variable name quoting
-	foreach my $line (@$lines) {
+	foreach my $line (@{$lines}) {
 		if ($line->text =~ qr"^[^#]*[^\$]\$(\w+)") {
 			my ($varname) = ($1);
 			$line->log_warning("please write either \${$varname} or \$\$$varname instead of \$$varname.");
@@ -1233,12 +1174,10 @@ sub check_Makefile_variables($) {
 
 	# Check variable types
 	if ($opt_warn_types) {
-		foreach my $line (@$lines) {
+		foreach my $line (@{$lines}) {
 			check_Makefile_vartype($line, $check_Makefile_variables_vartypes);
 		}
 	}
-
-	return true;
 }
 
 sub checklines_deprecated_variables($) {
@@ -1249,7 +1188,7 @@ sub checklines_deprecated_variables($) {
 
 	if (!$deprecated) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return false;
+		return;
 	}
 
 	foreach my $line (@{$deprecated}) {
@@ -1272,17 +1211,14 @@ sub checklines_deprecated_variables($) {
 			}
 		}
 	}
-
-	return true;
 }
 
 sub checklines_direct_tools($) {
 	my ($subr) = "checklines_direct_tools";
 	my ($lines) = @_;
 
-	if (!$opt_warn_directcmd) {
-		return true;
-	}
+	return if (!$opt_warn_directcmd);
+
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking direct use of tool names.");
 
 	my @tools = qw(
@@ -1367,7 +1303,6 @@ sub checklines_direct_tools($) {
 			$line->log_error("[internal:checklines_direct_tools] unknown line format");
 		}
 	}
-	return true;
 }
 
 sub expand_variable($$$) {
@@ -1915,7 +1850,7 @@ sub checkfile_package_Makefile($$$$) {
 	# Makefile 6: check the rest of file
 	#
 	log_info($fname, NO_LINE_NUMBER, "Checking the rest of the file.");
-	$tmp = join("\n\n", @sections[$idx .. scalar(@sections)-1]);
+	$tmp = join("\n\n", @sections[$idx .. $#{sections}]);
 
 	$tmp = "\n" . $tmp;	# to make the begin-of-line check easier
 
@@ -1975,7 +1910,7 @@ sub checkfile_package_Makefile($$$$) {
 			"discouraged. Redefine \"do-$1\" instead.");
 	}
 
-	return check_Makefile_variables($lines);
+	check_Makefile_variables($lines);
 }
 
 sub checkextra($$) {
@@ -2003,7 +1938,7 @@ sub checkorder($$@) {
 
 	if ($seen_Makefile_common || !$opt_warn_order) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Skipping the Makefile order checks.");
-		return true;
+		return;
 	}
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking the order of $section section.");
@@ -2017,10 +1952,10 @@ sub checkorder($$@) {
 	@items = reverse(@items);
 	my $j = -1;
 	my $invalidorder = 0;
-	while (scalar(@items)) {
+	while (@items) {
 		my $i = pop(@items);
 		my $k = 0;
-		while ($k < scalar(@order) && $order[$k] ne $i) {
+		while ($k < @order && $order[$k] ne $i) {
 			$k++;
 		}
 		if ($k <= $#order) {
@@ -2048,7 +1983,7 @@ sub checkearlier($@) {
 
 	if ($seen_Makefile_common || !$opt_warn_order) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Skipping the Makefile earlier checks.");
-		return true;
+		return;
 	}
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking items that have to appear earlier.");
@@ -2079,10 +2014,9 @@ sub check_predefined_sites($$) {
 		next unless (index($url, $site) == 0);
 		my $subdir = substr($url, length($site));
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please use \${$predefined_sites->{$site}:=$subdir} instead of \"$url\".");
-		return true;
+		return;
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "URL does not match any of the predefined URLS. Good.");
-	return true;
 }
 
 sub check_category($) {
@@ -2092,20 +2026,20 @@ sub check_category($) {
 	my (@makefile_subdirs) = ();
 	my (@filesys_subdirs) = ();
 
-	if (!defined($lines = load_file($fname))) {
+	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return false;
+		return;
 	}
-	if (scalar(@$lines) == 0) {
+	if (@{$lines} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return true;
+		return;
 	}
 	checkline_rcsid($lines->[0], "# ");
 
 	@filesys_subdirs = grep { ($_ = substr($_, length($dir) + 1, -1)) ne "CVS"; } glob("${dir}/*/");
 	
 	my ($first, $last_subdir, $comment_seen) = (true, undef, false);
-	foreach my $line (@$lines) {
+	foreach my $line (@{$lines}) {
 		if ($line->text =~ qr"^(#?)SUBDIR(.*?)=\s*(\S+)\s*(?:#\s*(.*?)\s*|)$") {
 			my ($comment_flag, $operator, $subdir, $comment) = ($1, $2, $3, $4);
 			if ($comment_flag eq "#") {
@@ -2165,11 +2099,39 @@ sub check_category($) {
 		log_error($fname, NO_LINE_NUMBER, "no COMMENT line found.");
 	}
 	checklines_trailing_empty_lines($lines);
-	return true;
+}
+
+sub check_directory($) {
+	my ($dir) = @_;
+
+	if (-f "${dir}/../mk/bsd.pkg.mk") {
+		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
+		check_category($dir);
+
+	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
+		load_predefined_sites("${dir}/../..");
+		check_package($dir);
+
+	} else {
+		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
+	}
 }
 
 #
 # The main program
 #
+
+sub main() {
+	parse_command_line();
+
+	if (@ARGV) {
+		foreach my $dir (@ARGV) {
+			check_directory($dir);
+		}
+	} else {
+		check_directory(".");
+	}
+	print_summary_and_exit($opt_quiet);
+}
 
 main();
