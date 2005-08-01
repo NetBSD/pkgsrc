@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10744 2005/08/01 10:27:59 cube Exp $
+$NetBSD: CHANGES,v 1.10745 2005/08/01 14:15:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3493,3 +3493,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added textproc/ezxml version 0.8.4 [agc 2005-07-31]
 	Updated databases/openldap to 2.2.27 [jlam 2005-08-01]
 	Updated misc/screen to 4.0.2nb2 [cube 2005-08-01]
+	Updated devel/anjuta to 1.2.3 [adam 2005-08-01]
