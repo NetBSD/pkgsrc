@@ -221,13 +221,13 @@ samba
 sasl			Enable SASL support.
 savage	
 sdl			Use SDL as display library.
+sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 siliconmotion	
 sis	
 skey	
 slang			Enable S-Lang support.
 slp	
 snmp	
-socketmap	
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 sqlite	
