@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/08/01 14:14:49 adam Exp $
 bin/anjuta
 bin/anjuta_import.sh
 bin/anjuta_launcher
@@ -9,63 +9,13 @@ man/man1/anjuta.1
 man/man1/anjuta_launcher.1
 share/anjuta/README.stock_libs
 share/anjuta/anjuta_project.template
-share/anjuta/autogen.sh.generic
-share/anjuta/autogen.sh.gnome
-share/anjuta/autogen.sh.gnome2
-share/anjuta/autogen.sh.gnomemm
-share/anjuta/autogen.sh.gtk
-share/anjuta/autogen.sh.gtkmm
-share/anjuta/autogen.sh.wxwin
+share/anjuta/autogen.sh
 share/anjuta/gdb.init
 share/anjuta/gdl/glade/layout.glade
 share/anjuta/glade/anjuta.glade
 share/anjuta/glade/start-with-import.png
 share/anjuta/glade/start-with-open.png
 share/anjuta/glade/start-with-wizard.png
-share/anjuta/gnome/ChangeLog
-share/anjuta/gnome/Makefile.am
-share/anjuta/gnome/aclocal-include.m4
-share/anjuta/gnome/autogen.sh
-share/anjuta/gnome/compiler-flags.m4
-share/anjuta/gnome/curses.m4
-share/anjuta/gnome/gnome-bonobo-check.m4
-share/anjuta/gnome/gnome-common.m4
-share/anjuta/gnome/gnome-cxx-check.m4
-share/anjuta/gnome/gnome-fileutils.m4
-share/anjuta/gnome/gnome-gettext.m4
-share/anjuta/gnome/gnome-ghttp-check.m4
-share/anjuta/gnome/gnome-gnorba-check.m4
-share/anjuta/gnome/gnome-guile-checks.m4
-share/anjuta/gnome/gnome-libgtop-check.m4
-share/anjuta/gnome/gnome-objc-checks.m4
-share/anjuta/gnome/gnome-orbit-check.m4
-share/anjuta/gnome/gnome-pilot.m4
-share/anjuta/gnome/gnome-print-check.m4
-share/anjuta/gnome/gnome-pthread-check.m4
-share/anjuta/gnome/gnome-support.m4
-share/anjuta/gnome/gnome-undelfs.m4
-share/anjuta/gnome/gnome-vfs.m4
-share/anjuta/gnome/gnome-x-checks.m4
-share/anjuta/gnome/gnome-xml-check.m4
-share/anjuta/gnome/gnome.m4
-share/anjuta/gnome/gperf-check.m4
-share/anjuta/gnome/linger.m4
-share/anjuta/gnome/need-declaration.m4
-share/anjuta/gnome/psiconv.m4
-share/anjuta/gnome2/ChangeLog
-share/anjuta/gnome2/Makefile.am
-share/anjuta/gnome2/autogen.sh
-share/anjuta/gnome2/check-utmp.m4
-share/anjuta/gnome2/compiler-flags.m4
-share/anjuta/gnome2/curses.m4
-share/anjuta/gnome2/gnome-common.m4
-share/anjuta/gnome2/gnome-cxx-check.m4
-share/anjuta/gnome2/gnome-gettext.m4
-share/anjuta/gnome2/gnome-pkgconfig.m4
-share/anjuta/gnome2/gnome-platform.m4
-share/anjuta/gnome2/gnome-pthread-check.m4
-share/anjuta/gnome2/gnome-x-checks.m4
-share/anjuta/gnome2/linger.m4
 share/anjuta/header.c
 share/anjuta/properties/ada.properties
 share/anjuta/properties/anjuta.properties
@@ -318,12 +268,14 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/anjuta.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/anjuta.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/anjuta.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/anjuta.mo
@@ -487,8 +439,6 @@ share/pixmaps/anjuta/wizard.xpm
 @dirrm share/doc/anjuta
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm share/anjuta/properties
-@dirrm share/anjuta/gnome2
-@dirrm share/anjuta/gnome
 @dirrm share/anjuta/glade
 @dirrm share/anjuta/gdl/glade
 @dirrm share/anjuta/gdl
