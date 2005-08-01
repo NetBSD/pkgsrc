@@ -1,7 +1,7 @@
-#!/usr/bin/awk -f
-# $NetBSD: cdgen.awk,v 1.5 2005/01/09 15:33:09 dmcmahill Exp $
+#!@AWK@ -f
+# $NetBSD: cdgen.awk,v 1.6 2005/08/01 21:47:43 dmcmahill Exp $
 #
-# Copyright (c) 2001, 2002, 2003 Dan McMahill, All rights reserved.
+# Copyright (c) 2001, 2002, 2003, 2005 Dan McMahill, All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -224,7 +224,7 @@ BEGIN {
 		    }
 		    else{
 # the CD is full
-			printf("cd number %d is full (%g Mb)\n",cdn,
+			printf("disk number %d is full (%g Mb)\n",cdn,
 			       cdtot[cdn]/1024);
 			cdpkgs[cdn] = pkgn;
 # increment the CD counter
@@ -240,16 +240,16 @@ BEGIN {
 	
 # see if the extra files will fit on the last CD
 	if ( (cdtot[cdn] + other_size) < maxcd ){
-	    printf("cd number %d is partially full (%g Mb)\n",cdn,
+	    printf("disk number %d is partially full (%g Mb)\n",cdn,
 		   cdtot[cdn]/1024);
 	}
 	else{
-	    printf("cd number %d is full (%g Mb)\n",cdn,
+	    printf("disk number %d is full (%g Mb)\n",cdn,
 		   cdtot[cdn]/1024);
 	    cdn = cdn + 1;
 	    cdtot[cdn] = other_size;
 	    cdpkgs[cdn] = 0;
-	    printf("cd number %d is partially full (%g Mb)\n",cdn,
+	    printf("disk number %d is partially full (%g Mb)\n",cdn,
 		   cdtot[cdn]/1024);
 	}
 	
@@ -318,7 +318,7 @@ BEGIN {
 		}
 		else{
 # the CD is full
-		    printf("cd number %d is full (%g Mb)\n",cdn,
+		    printf("disk number %d is full (%g Mb)\n",cdn,
 			   cdtot[cdn]/1024);
 		    cdpkgs[cdn] = pkgn;
 		    cdn++;
@@ -337,16 +337,16 @@ BEGIN {
 
 # see if the extra files will fit on the last CD
 	if ( (cdtot[cdn] + other_size) < maxcd ){
-	    printf("cd number %d is partially full (%g Mb)\n",cdn,
+	    printf("disk number %d is partially full (%g Mb)\n",cdn,
 		   cdtot[cdn]/1024);
 	}
 	else{
-	    printf("cd number %d is full (%g Mb)\n",cdn,
+	    printf("disk number %d is full (%g Mb)\n",cdn,
 		   cdtot[cdn]/1024);
 	    cdn = cdn + 1;
 	    cdtot[cdn] = other_size;
 	    cdpkgs[cdn] = 0;
-	    printf("cd number %d is partially full (%g Mb)\n",cdn,
+	    printf("disk number %d is partially full (%g Mb)\n",cdn,
 		   cdtot[cdn]/1024);
 	}
     }
@@ -378,7 +378,7 @@ BEGIN {
     for (cdn=1; cdn<=ncd; cdn=cdn+1){
 	printf("----------- CD/DVD #%d ----------\n",cdn);
 	printf("      %3d binary packages\n",cdpkgs[cdn]);
-	outdir=cddir "/cd" cdn "/packages/All";
+	outdir=cddir "/disk" cdn "/packages/All";
 	cmd="test -d " outdir;
 	if(system(cmd) == 0){
 	    printf("%10s:  output dir \"%s\" already exists.\n",prog,outdir);
@@ -400,7 +400,7 @@ BEGIN {
 	}
 
 # add it to the cd list
-	printf("cd%d\n",cdn) > cdlist ;
+	printf("disk%d\n", cdn) > cdlist ;
 	
     }
 
