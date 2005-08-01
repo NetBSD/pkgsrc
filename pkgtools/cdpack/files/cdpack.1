@@ -1,6 +1,6 @@
-.\" $NetBSD: cdpack.1,v 1.11 2003/08/03 15:17:51 dmcmahill Exp $
+.\" $NetBSD: cdpack.1,v 1.12 2005/08/01 21:47:43 dmcmahill Exp $
 .\"
-.\" Copyright (c) 2001, 2002, 2003 Dan McMahill, All rights reserved.
+.\" Copyright (c) 2001, 2002, 2003, 2005 Dan McMahill, All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -42,6 +42,9 @@
 .Op -dvd
 .Op -h | --help
 .Op -l logfile
+.Op -m machine_architecture
+.Op -o operating_system
+.Op -r os_version
 .Op -dnRvV
 .Op -x common_directory
 .Op -X extras_directory
@@ -94,6 +97,10 @@ Displays a short usage message.
 .It Fl l Ar logfile
 Log the output of mkisofs -v -v to the file
 .Ar logfile .
+.It Fl m Ar machine_architecture
+Specifies
+.Ar machine_architecture
+as the target architecture for the binary packages in the generated README file.
 .It Fl n
 Do not duplicate packages in order to prevent inter-CD/DVD dependencies.
 The default without the
@@ -110,6 +117,14 @@ places packages which are lower in the dependency tree on lower
 numbered CD/DVD's and packages which are higher on the higher numbered
 CD/DVD's.  In this fashion, a package on CD/DVD number n
 will have all of its dependencies on CD/DVD numbers 1 through n
+.It Fl o Ar operating_system
+Specifies
+.Ar operating_system
+as the target operating system for the binary packages in the generated README file.
+.It Fl r Ar os_version
+Specifies
+.Ar os_version
+as the target operating system version for the binary packages in the generated README file.
 .It Fl R
 Generate a file,
 .Ar README.txt ,
@@ -140,6 +155,10 @@ utility exits 0 on success, and >0 if an error occurs.
 .Nm
 uses the fillowing environment variables if set.
 .Bl -tag -width "TMPDIR"
+.It Ev AWK
+awk implementation to use.
+Defaults to
+.Dq Li @AWK@ .
 .It Ev TMPDIR
 Directory for holding temporary files during the image creation.
 Defaults to
