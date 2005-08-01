@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2005/03/16 21:27:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/01 00:09:35 rillig Exp $
 #
+
+BMP_ENABLE_ENCODERS=	yes
 
 .include "Makefile.common"
 
 PKGREVISION=		1
 
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-mp3/--enable-mp3/}
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-oss/--enable-oss/}
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-vorbis/--enable-vorbis/}
 
 # XXX Workaround a crash during shutdown that happens when dlclose(3)ing
 # any open plugin.  libstdc++ gets dynamically linked in when the id3lib
