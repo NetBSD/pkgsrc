@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/10/03 00:18:37 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2005/08/01 10:42:12 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_GNOME2_BUILDLINK3_MK:=	${PY_GNOME2_BUILDLINK3_MK}+
@@ -19,11 +19,6 @@ BUILDLINK_PKGSRCDIR.pygnome2?=	../../x11/py-gnome2
 .endif	# PY_GNOME2_BUILDLINK3_MK
 
 .include "../../net/py-ORBit/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../sysutils/nautilus/buildlink3.mk"
-.include "../../www/libgtkhtml/buildlink3.mk"
-.include "../../x11/gnome-panel/buildlink3.mk"
-.include "../../x11/libzvt/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
