@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.221 2005/08/01 18:03:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.222 2005/08/01 18:39:40 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -547,7 +547,7 @@ sub load_predefined_sites($) {
 sub check_package($) {
 	my ($dir) = @_;
 
-	my ($whole, $lines);
+	my ($whole, $lines, $have_distinfo, $have_patches);
 
 	$pkgdir			= ".";
 	$filesdir		= "files";
@@ -570,6 +570,11 @@ sub check_package($) {
 	}
 	push(@files, <${dir}/${filesdir}/*>);
 	push(@files, <${dir}/${patchdir}/*>);
+	if ($distinfo_file ne "distinfo") {
+		push(@files, "${dir}/${distinfo_file}");
+	}
+	$have_distinfo = false;
+	$have_patches = false;
 	foreach my $f (@files) {
 		if      ($f =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
 			log_warning($f, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
@@ -587,6 +592,7 @@ sub check_package($) {
 			checkfile_DESCR($dir, $f);
 
 		} elsif ($f =~ qr"/distinfo$") {
+			$have_distinfo = true;
 			$opt_check_distinfo and checkfile_distinfo($dir, $f);
 
 		} elsif ($f =~ qr"/MESSAGE[^/]*$") {
@@ -596,6 +602,7 @@ sub check_package($) {
 			$opt_check_PLIST and checkfile_PLIST($dir, $f);
 
 		} elsif ($f =~ qr"/patches/patch-[-A-Za-z0-9]*$") {
+			$have_patches = true;
 			$opt_check_patches and checkfile_patches_patch($dir, $f);
 
 		} elsif (-T $f) {
@@ -607,16 +614,7 @@ sub check_package($) {
 	}
 
 	if ($opt_check_distinfo && $opt_check_patches) {
-		# Make sure there's a distinfo if there are patches
-		my $patches = false;
-		patch:
-	    	    foreach my $i (<$dir/$patchdir/patch-*>) {
-			if ( -T "$i" ) { 
-				$patches = true;
-				last patch;
-			}
-		}
-		if ($patches && ! -f "$dir/$distinfo_file" ) {
+		if ($have_patches && ! $have_distinfo) {
 			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
 		}
 	}
@@ -798,7 +796,7 @@ sub checkfile_MESSAGE($$) {
 		$message->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
 	}
 	checkline_rcsid($message->[1], "");
-	foreach my $line (@{$message}[2 .. $#{$message} - 2]) {
+	foreach my $line (@{$message}) {
 		checkline_length($line, 80);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, $regex_validchars);
@@ -1146,16 +1144,9 @@ sub check_Makefile_vartype($$) {
 	}
 }
 
-my $check_Makefile_variables_vartypes = undef;
-sub check_Makefile_variables($) {
+my $checklines_Makefile_varuse_map = undef;
+sub checklines_Makefile_varuse($) {
 	my ($lines) = @_;
-
-	if (!defined($check_Makefile_variables_vartypes) && $opt_warn_types) {
-		my $vartypes = load_make_vars_typemap();
-		return if (!$vartypes);
-
-		$check_Makefile_variables_vartypes = $vartypes;
-	}
 
 	# Check variable name quoting
 	foreach my $line (@{$lines}) {
@@ -1165,11 +1156,17 @@ sub check_Makefile_variables($) {
 		}
 	}
 
+	return if (!$opt_warn_types);
+
+	# Load variable type definitions
+	if (!defined($checklines_Makefile_varuse_map)) {
+		$checklines_Makefile_varuse_map = load_make_vars_typemap();
+	}
+	return if (!$checklines_Makefile_varuse_map);
+
 	# Check variable types
-	if ($opt_warn_types) {
-		foreach my $line (@{$lines}) {
-			check_Makefile_vartype($line, $check_Makefile_variables_vartypes);
-		}
+	foreach my $line (@{$lines}) {
+		check_Makefile_vartype($line, $checklines_Makefile_varuse_map);
 	}
 }
 
@@ -1709,9 +1706,7 @@ sub checkfile_package_Makefile($$$$) {
 	$tmp = $sections[$idx++];
 
 	# check the order of items.
-        my @tocheck = qw(MAINTAINER HOMEPAGE COMMENT);
-
-        &checkorder('MAINTAINER', $tmp, @tocheck);
+	&checkorder('MAINTAINER', $tmp, qw(MAINTAINER HOMEPAGE COMMENT));
 
 	# warnings for missing or incorrect HOMEPAGE
 	$tmp = "\n" . $tmp;
@@ -1903,7 +1898,7 @@ sub checkfile_package_Makefile($$$$) {
 			"discouraged. Redefine \"do-$1\" instead.");
 	}
 
-	check_Makefile_variables($lines);
+	checklines_Makefile_varuse($lines);
 }
 
 sub checkextra($$) {
