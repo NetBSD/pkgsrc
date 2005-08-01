@@ -1,23 +1,13 @@
-$NetBSD: patch-an,v 1.3 2005/08/01 14:14:49 adam Exp $
+$NetBSD: patch-an,v 1.4 2005/08/01 17:17:14 drochner Exp $
 
---- src/launcher.c.orig	2004-04-08 06:15:31.000000000 +0200
+--- src/launcher.c.orig	2005-04-06 11:05:44.000000000 +0200
 +++ src/launcher.c
-@@ -23,7 +23,9 @@
- #include <unistd.h>
- #include <fcntl.h>
- #include <signal.h>
-+#ifdef HAVE_PTY_H
- //#include <pty.h>
-+#endif
- #include <assert.h>
- #include <gnome.h>
- #include <termios.h>
-@@ -37,6 +39,10 @@
+@@ -37,6 +37,10 @@
  #include "anjuta-marshalers.h"
  #include "anjuta.h"
  
-+#ifndef __MAX_BAUD
-+#define __MAX_BAUD B230400
++#ifndef B460800
++#define B460800 460800
 +#endif
 +
  #define FILE_BUFFER_SIZE 1024
