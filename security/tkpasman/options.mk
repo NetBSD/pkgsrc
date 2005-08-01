@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2005/08/01 11:45:19 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/08/01 11:45:56 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tkpasman
 PKG_SUPPORTED_OPTIONS=		ssl
+PKG_SUGGESTED_OPTIONS=		ssl
+
 # remove after pkgsrc-2005Q3
 PKG_OPTIONS_LEGACY_VARS+=	TKPASMAN_USE_SSL:ssl
 
