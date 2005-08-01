@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.224 2005/08/01 21:28:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.225 2005/08/01 22:29:13 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -190,21 +190,21 @@ package PkgLint::FileUtil::Line;
 #==========================================================================
 sub new($$$$) {
 	my ($class, $file, $lineno, $text) = @_;
-	my ($self) = ({});
+	my ($self) = ([]);
 	bless($self, $class);
-	$self->{"file"} = $file;
-	$self->{"lineno"} = $lineno;
-	$self->{"text"} = $text;
+	$self->[0] = $file;
+	$self->[1] = $lineno;
+	$self->[2] = $text;
 	return $self;
 }
 sub file($) {
-	return shift(@_)->{"file"};
+	return shift(@_)->[0];
 }
 sub lineno($) {
-	return shift(@_)->{"lineno"};
+	return shift(@_)->[1];
 }
 sub text($) {
-	return shift(@_)->{"text"};
+	return shift(@_)->[2];
 }
 
 sub log_error($$) {
