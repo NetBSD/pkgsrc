@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2005/07/16 19:10:39 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/02 09:55:37 wiz Exp $
 
-DISTNAME=	ddclient-3.6.2
-PKGREVISION=	1
+DISTNAME=	ddclient-3.6.6
 CATEGORIES=	net
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ddclient/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://burry.ca:4141/ddclient/
+HOMEPAGE=	http://ddclient.sourceforge.net/
 COMMENT=	Client to update dynamic DNS entries
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -26,14 +26,14 @@ CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
 INSTALLATION_DIRS=	sbin
 
 do-configure:
-	cd ${WRKSRC}; for file in ddclient; do				\
+	cd ${WRKSRC}; for f in ddclient; do				\
 		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
 			-e "s|@PERL5@|${PERL5}|g"			\
-			$${file} > $${file}.fixed;			\
-		if [ -x $${file} ]; then				\
-			${CHMOD} +x $${file}.fixed;			\
+			$${f} > $${f}.fixed;			\
+		if [ -x $${f} ]; then				\
+			${CHMOD} +x $${f}.fixed;			\
 		fi;							\
-		${MV} -f $${file}.fixed $${file};			\
+		${MV} -f $${f}.fixed $${f};			\
 	done
 
 do-build:	# empty
