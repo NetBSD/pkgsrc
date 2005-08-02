@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10753 2005/08/02 09:29:53 seb Exp $
+$NetBSD: CHANGES,v 1.10754 2005/08/02 09:56:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/amanda-common to 2.4.4p4nb2 [seb 2005-08-02]
 	Updated sysutils/amanda-plot to 2.4.4p4nb1 [seb 2005-08-02]
 	Updated sysutils/amanda-server to 2.4.4p4nb2 [seb 2005-08-02]
+	Updated net/ddclient to 3.6.6 [wiz 2005-08-02]
