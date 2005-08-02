@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.18 2005/06/01 18:14:23 jlam Exp $
+# $NetBSD: AIX.mk,v 1.19 2005/08/02 00:23:31 reed Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -7,7 +7,7 @@ ECHO_N?=	${ECHO} -n
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# XXX: default from defaults/mk.conf.  Verify/corerct for this platform
 # and remove this comment.
 RSH?=		/usr/bin/rsh
 # AIX strip fails too easily.  Use a wrapper script instead
@@ -83,9 +83,9 @@ SERIAL_DEVICES?=	/dev/tty0 \
 #_OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
-# (it defaults to 'no' as per bsd.pkg.defaults.mk).
+# (it defaults to 'no' as per defaults/mk.conf).
 # Set the group and mode to meaningful values in that case (defaults to
-# BINOWN, BINGRP and BINMODE as per bsd.pkg.defaults.mk).
+# BINOWN, BINGRP and BINMODE as per defaults/mk.conf).
 # FIXME: Adjust to work on this system and enable the lines below.
 #.if !(empty(SETGIDGAME:M[yY][eE][sS]))
 #GAMEOWN=		games
