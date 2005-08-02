@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2005/07/21 16:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2005/08/02 09:54:52 tron Exp $
 
 DISTNAME=	gimp-2.2.8
 PKGREVISION=	1
@@ -43,6 +43,8 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-gimpprint-prefix=${BUILDLINK_PREFIX.gimp-print-lib}
+
+UNLIMIT_RESOURCES+=	datasize
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0
 .for f in controllerrc gimprc gtkrc ps-menurc sessionrc templaterc unitrc
