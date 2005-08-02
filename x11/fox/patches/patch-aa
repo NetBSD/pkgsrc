@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2005/07/25 10:53:43 adam Exp $
+$NetBSD: patch-aa,v 1.3 2005/08/02 10:26:43 adam Exp $
 
---- configure.orig	2005-06-12 01:29:24.000000000 +0000
+--- configure.orig	2005-08-02 00:16:27.000000000 +0000
 +++ configure
 @@ -1845,7 +1845,6 @@ LT_AGE=`expr $FOX_INTERFACE_VERSION - $F
  
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.2 2005/07/25 10:53:43 adam Exp $
  
  echo "$as_me:$LINENO: checking whether ${MAKE-make} sets \$(MAKE)" >&5
  echo $ECHO_N "checking whether ${MAKE-make} sets \$(MAKE)... $ECHO_C" >&6
-@@ -24925,7 +24924,7 @@ fi;
+@@ -25467,7 +25466,7 @@ fi;
  echo "$as_me:$LINENO: result: $enable_release" >&5
  echo "${ECHO_T}$enable_release" >&6
  if test "x$enable_release" = "xyes" ; then
