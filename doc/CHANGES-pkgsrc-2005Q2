@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.41 2005/08/02 04:21:18 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.42 2005/08/02 20:42:16 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -127,3 +127,5 @@ Pullup ticket 630 - requested by grant beattie
 infrastructure fixes for sunpro
 Pullup ticket 644 - requested by Takahiro Kambe
 security update for p5-Compress-Zlib
+Pullup ticket 631 - requested by Mike M. Volokhov
+update docbook dependency in netbsd-www
