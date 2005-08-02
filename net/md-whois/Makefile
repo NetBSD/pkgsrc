@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/08/02 00:23:31 reed Exp $
 #
 # todo: set location of [md-]whois.conf and fix in man page too
 # todo: build and install the po/ files and add to PLIST
-# todo: add choice for mk/bsd.pkg.defaults.mk to define name prefix
+# todo: add choice for mk/defaults/mk.conf to define name prefix
 # (defaults to "md-" to distinguish from other whois clients) and adjust PLIST
 
 DISTNAME=	whois_${VERSION}
