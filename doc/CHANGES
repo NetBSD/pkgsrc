@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10756 2005/08/02 12:24:28 seb Exp $
+$NetBSD: CHANGES,v 1.10757 2005/08/02 12:59:47 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3508,3 +3508,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ddclient to 3.6.6 [wiz 2005-08-02]
 	Updated x11/fox to 1.4.17 [adam 2005-08-02]
 	Updated pkgtools/pkgdiff to 0.118 [seb 2005-08-02]
+	Updated mail/mutt-devel to 1.5.9 [tonio 2005-08-02]
