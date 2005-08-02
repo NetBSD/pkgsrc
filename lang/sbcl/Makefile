@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/22 02:38:13 jonb Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/02 05:22:05 jonb Exp $
 
 DISTNAME=		${PKGNAME}-source
 PKGNAME=		sbcl-0.9.1
@@ -10,7 +10,7 @@ MAINTAINER=		jonb@NetBSD.org
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 # It should be possible to have SBCL working on amd64, powerpc,
 # sparc, alpha, mips, and HPPA hardware also, but they probably
 # need a bit of porting work done in SBCL itself.
