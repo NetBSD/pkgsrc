@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.19 2005/08/02 00:23:31 reed Exp $
+# $NetBSD: AIX.mk,v 1.20 2005/08/02 03:38:09 reed Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -7,7 +7,7 @@ ECHO_N?=	${ECHO} -n
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
-# XXX: default from defaults/mk.conf.  Verify/corerct for this platform
+# XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
 RSH?=		/usr/bin/rsh
 # AIX strip fails too easily.  Use a wrapper script instead

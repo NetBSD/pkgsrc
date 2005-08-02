@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.13 2005/08/02 00:23:31 reed Exp $
+# $NetBSD: Darwin.mk,v 1.14 2005/08/02 03:38:09 reed Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -10,7 +10,7 @@ LDD?=		/usr/bin/otool -L
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
-# XXX: default from defaults/mk.conf.  Verify/corerct for this platform
+# XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
 RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
