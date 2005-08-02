@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.43 2005/08/02 21:22:02 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.44 2005/08/02 22:11:08 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -131,3 +131,5 @@ Pullup ticket 631 - requested by Mike M. Volokhov
 update docbook dependency in netbsd-www
 Pullup ticket 643 - requested by Grant Beattie
 portability fixes for bsflite
+Pullup ticket 635 - requested by Grant Beattie
+portability fix for tcl-postgresql73
