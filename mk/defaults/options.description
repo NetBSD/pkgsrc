@@ -162,6 +162,7 @@ mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 multibyte	
+mutt-hcache		Enable header caching in mutt
 mysql	
 mysql4	
 nas			Enable usage of the Network Audio System.
