@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.42 2005/07/28 13:07:03 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.43 2005/08/02 14:19:13 xtraeme Exp $
 #
 # Default MASTER_SITES
 
@@ -92,7 +92,6 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/
 
 MASTER_SITE_SOURCEFORGE+=	\
-	http://citkit.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
 	http://jaist.dl.sourceforge.net/sourceforge/ \
@@ -109,6 +108,7 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://ufpr.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/
+#	http://citkit.dl.sourceforge.net/sourceforge/
 #	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://sf.gds.tuwien.ac.at/
