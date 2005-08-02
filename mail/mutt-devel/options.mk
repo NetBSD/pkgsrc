@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: options.mk,v 1.6 2005/08/02 12:57:02 tonio Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
-PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl
+PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl hcache
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
@@ -38,4 +38,15 @@ CONFIGURE_ARGS+=	--with-sasl2=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=	--without-ssl
+.endif
+
+###
+### Header cache
+###
+.if !empty(PKG_OPTIONS:Mhcache)
+BDB_ACCEPTED=		db4
+.  include "../../mk/bdb.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-hcache
+.else
+CONFIGURE_ARGS+=	--disable-hcache
 .endif
