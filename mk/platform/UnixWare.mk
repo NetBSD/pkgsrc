@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.15 2005/08/02 00:23:31 reed Exp $
+# $NetBSD: UnixWare.mk,v 1.16 2005/08/02 03:38:09 reed Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -6,7 +6,7 @@ ECHO_N?=	${ECHO} -n
 IMAKE_MAKE?=	/usr/ccs/bin/make	# program which gets invoked by imake
 PKGLOCALEDIR?=	lib
 PS?=		/usr/bin/ps
-# XXX: default from defaults/mk.conf.  Verify/corerct for this platform
+# XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
 RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
