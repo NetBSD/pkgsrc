@@ -123,7 +123,7 @@ DDIIAAGGNNOOSSTTIICCSS
                  Update the _p_k_g_t_o_o_l_s_/_p_k_g___i_n_s_t_a_l_l package.
 
 SSEEEE AALLSSOO
-     pkg_info(1), mk.conf(5), packages(7), @PKGSRCDIR@/mk/bsd.pkg.defaults.mk
+     pkg_info(1), mk.conf(5), packages(7), @PKGSRCDIR@/mk/defaults/mk.conf
      and
 
      _D_o_c_u_m_e_n_t_a_t_i_o_n _o_n _t_h_e _N_e_t_B_S_D _P_a_c_k_a_g_e _S_y_s_t_e_m.  @PKGSRCDIR@/doc/pkgsrc.txt
