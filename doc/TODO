@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3781 2005/08/02 13:03:14 tonio Exp $
+$NetBSD: TODO,v 1.3782 2005/08/02 15:24:54 tonio Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,6 @@ Suggested package updates
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o benchfft-3.1
 	o bioperl-1.5.0
-	o bitlbee-0.92 [pkg/30096]
 	o blackbox-0.70
 	o blitz++-0.8
 	o bluefish-1.0.2
