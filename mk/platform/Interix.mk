@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.37 2005/07/03 19:04:10 tv Exp $
+# $NetBSD: Interix.mk,v 1.38 2005/08/02 00:23:31 reed Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -130,9 +130,9 @@ CONFIGURE_ENV+=		${GNU_CONFIGURE:Dac_cv_header_poll_h=no ac_cv_func_poll=no}
 _OPSYS_MAX_CMDLEN_CMD=	${ECHO} 262144
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
-# (it defaults to 'no' as per bsd.pkg.defaults.mk).
+# (it defaults to 'no' as per defaults/mk.conf).
 # Set the group and mode to meaningful values in that case (defaults to
-# BINOWN, BINGRP and BINMODE as per bsd.pkg.defaults.mk).
+# BINOWN, BINGRP and BINMODE as per defaults/mk.conf).
 # FIXME: Adjust to work on this system and enable the lines below.
 #.if !(empty(SETGIDGAME:M[yY][eE][sS]))
 #GAMEOWN=		games
