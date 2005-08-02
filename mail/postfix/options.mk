@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2005/03/28 09:39:57 jlam Exp $
+# $NetBSD: options.mk,v 1.19.2.1 2005/08/02 22:42:04 salo Exp $
 
 # Global and legacy options
 
@@ -15,7 +15,7 @@ PKG_OPTIONS+=	bdb		# "hash" map type is mandatory
 .if !empty(PKG_OPTIONS:Mbdb)
 .  include "../../mk/bdb.buildlink3.mk"
 CCARGS+=	-DHAS_DB
-AUXLIBS+=	${BUILDLINK_LDFLAGS.${BDB_TYPE}} ${BDB_LIBS}
+AUXLIBS+=	${BDB_LIBS}
 .endif
 
 ###
