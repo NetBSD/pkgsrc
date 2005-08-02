@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.226 2005/08/01 23:54:09 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.227 2005/08/02 08:33:31 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1372,7 +1372,7 @@ sub checkfile_package_Makefile($$$$) {
 	my ($dir, $fname, $rawwhole, $lines) = @_;
 	my ($tmp, $idx, @sections);
 	my (@varnames) = ();
-	my ($distfiles, $svrpkgname, $distname, $extractsufx) = ('', '', '', '', '');
+	my ($distfiles, $svr4_pkgname, $distname, $extract_sufx) = ('', '', '', '', '');
 	my ($bogusdistfiles) = (0);
 	my ($realwrksrc, $wrksrc) = ('', '');
 	my ($category, $whole);
@@ -1566,34 +1566,34 @@ sub checkfile_package_Makefile($$$$) {
 	}
 
 	# check DISTFILES and related items.
-	$distname = $1 if ($tmp =~ /\nDISTNAME[+?]?=[ \t]*([^\n]+)\n/);
-	$pkgname = $1 if ($tmp =~ /\nPKGNAME[+?]?=[ \t]*([^\n]+)\n/);
-	$svrpkgname = $1 if ($tmp =~ /\nSVR4_PKGNAME[+?]?=[ \t]*([^\n]+)\n/);
-	$extractsufx = $1 if ($tmp =~ /\nEXTRACT_SUFX[+?]?=[ \t]*([^\n]+)\n/);
-	$distfiles = $1 if ($tmp =~ /\nDISTFILES[+?]?=[ \t]*([^\n]+)\n/);
+	$distname     = expand_variable($tmp, "DISTNAME", $distname);
+	$pkgname      = expand_variable($tmp, "PKGNAME", $distname);
+	$svr4_pkgname = expand_variable($tmp, "SVR4_PKGNAME", $svr4_pkgname);
+	$extract_sufx = expand_variable($tmp, "EXTRACT_SUFX", $extract_sufx);
+	$distfiles    = expand_variable($tmp, "DISTFILES", $distfiles);
 
 	# check bogus EXTRACT_SUFX.
-	if ($extractsufx ne '') {
+	if ($extract_sufx ne '') {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Seen EXTRACT_SUFX, checking value.");
-		if ($distfiles ne '' && ($extractsufx eq '.tar.gz')) {
+		if ($distfiles ne '' && ($extract_sufx eq '.tar.gz')) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "no need to define EXTRACT_SUFX if ".
 				"DISTFILES is defined.");
 		}
-		if ($extractsufx eq '.tar.gz') {
+		if ($extract_sufx eq '.tar.gz') {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "EXTRACT_SUFX is \".tar.gz.\" ".
 				"by default. You don't need to specify it.");
 		}
 	} else {
 		log_info(NO_FILE, NO_LINE_NUMBER, "No EXTRACT_SUFX seen, using default value.");
-		$extractsufx = '.tar.gz';
+		$extract_sufx = '.tar.gz';
 	}
 
 	if (defined($pkgname) && $pkgname eq $distname) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default, ".
 			"you don't need to define PKGNAME.");
 	}
-	if ($svrpkgname ne '') {
-		if (length($svrpkgname) > 5) {
+	if ($svr4_pkgname ne '') {
+		if (length($svr4_pkgname) > 5) {
 			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "SVR4_PKGNAME should not be longer ".
 				"than 5 characters.");
 		}
@@ -1649,7 +1649,7 @@ sub checkfile_package_Makefile($$$$) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use of DISTFILES with single file ".
 			"is discouraged. Distribution filename should be set by ".
 			"DISTNAME and EXTRACT_SUFX.");
-		if ($distfiles eq $distname . $extractsufx) {
+		if ($distfiles eq "${distname}${extract_sufx}") {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of DISTFILES not necessary. ".
 				"DISTFILES is \${DISTNAME}/\${EXTRACT_SUFX} by default.");
 		}
