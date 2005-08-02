@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/04/13 20:41:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.52 2005/08/02 22:37:18 seb Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -22,7 +22,10 @@ GNU_CONFIGURE=		yes
 MAKE_ENV+=		TOUCH="${TOUCH}"
 
 INSTALL_TARGET=		install
+
+# The test target gives better results when not run as root.
 TEST_TARGET=		test
+TEST_ENV+=		TZ=+0
 
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
