@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10751 2005/08/02 03:24:32 taca Exp $
+$NetBSD: CHANGES,v 1.10752 2005/08/02 05:12:12 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3500,3 +3500,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/cdpack to 1.6 [dmcmahill 2005-08-01]
 	Updated x11/fspanel to 0.8.0.1nb4 [reed 2005-08-01]
 	Updated devel/p5-Compress-Zlib to 1.35 [taca 2005-08-01]
+	Updated lang/python23 to 2.3.5nb2 [kristerw 2005-08-02]
