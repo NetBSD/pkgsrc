@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.35 2005/07/24 18:06:44 kristerw Exp $
+# $NetBSD: Makefile,v 1.36 2005/08/02 09:26:06 seb Exp $
 
 PKGNAME=		amanda-server-${VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		amase
 
 COMMENT=		Server part of Amanda, a network backup system
 
-USE_TOOLS+=		gmake perl:run tar
+USE_TOOLS+=		gmake perl:run
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
 
 CONFIGURE_ARGS+=	--without-client
-CONFIGURE_ARGS+=	--with-gnutar=${TOOLS_TAR}
 
 # Prevent configure script from finding unnecessary libraries.
 #
