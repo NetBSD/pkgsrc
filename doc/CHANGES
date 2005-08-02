@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10749 2005/08/01 21:48:48 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.10750 2005/08/02 00:15:10 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3498,3 +3498,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/p5-PAR version 0.89 [rillig 2005-08-01]
 	Updated mail/imap-uw to 2004c1nb3 [tron 2005-08-01]
 	Updated pkgtools/cdpack to 1.6 [dmcmahill 2005-08-01]
+	Updated x11/fspanel to 0.8.0.1nb4 [reed 2005-08-01]
