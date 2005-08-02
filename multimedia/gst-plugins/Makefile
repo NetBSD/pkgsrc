@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/16 01:19:15 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/08/02 14:47:01 rillig Exp $
 #
 
 .include "Makefile.common"
@@ -15,11 +15,11 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-libs.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-play.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-plugins.pc.in
 
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-gconf/--enable-gconf/}
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-gconftool/--enable-gconftool/}
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-x/--enable-x/}
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-xshm/--enable-xshm/}
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-xvideo/--enable-xvideo/}
+CONFIGURE_ARGS+=	--enable-gconf
+CONFIGURE_ARGS+=	--enable-gconftool
+CONFIGURE_ARGS+=	--enable-x
+CONFIGURE_ARGS+=	--enable-xshm
+CONFIGURE_ARGS+=	--enable-xvideo
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/gst-plugins
 
 GCONF2_SCHEMAS=		gstreamer-0.8.schemas
