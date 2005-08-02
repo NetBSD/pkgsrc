@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10750 2005/08/02 00:15:10 reed Exp $
+$NetBSD: CHANGES,v 1.10751 2005/08/02 03:24:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3499,3 +3499,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/imap-uw to 2004c1nb3 [tron 2005-08-01]
 	Updated pkgtools/cdpack to 1.6 [dmcmahill 2005-08-01]
 	Updated x11/fspanel to 0.8.0.1nb4 [reed 2005-08-01]
+	Updated devel/p5-Compress-Zlib to 1.35 [taca 2005-08-01]
