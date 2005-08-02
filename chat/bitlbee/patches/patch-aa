@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.3 2004/12/27 23:35:41 xtraeme Exp $
-
---- configure.orig	2004-12-28 00:04:47.000000000 +0100
-+++ configure	2004-12-28 00:08:13.000000000 +0100
+--- configure.orig	2005-04-29 21:47:15.000000000 +0200
++++ configure	2005-04-29 21:49:41.000000000 +0200
 @@ -14,6 +14,8 @@
  datadir='$prefix/share/bitlbee/'
  config='/var/lib/bitlbee/'
@@ -20,7 +18,7 @@ $NetBSD: patch-aa,v 1.3 2004/12/27 23:35:41 xtraeme Exp $
  --jabber=0/1	Disable/enable Jabber part		$jabber
  --oscar=0/1	Disable/enable Oscar part (ICQ, AIM)	$oscar
 @@ -100,9 +103,13 @@
- #define DATADIR "$datadir"
+ #define VARDIR "$datadir"
  #define ARCH "$arch"
  #define CPU "$cpu"
 -#define IPV6
@@ -34,7 +32,7 @@ $NetBSD: patch-aa,v 1.3 2004/12/27 23:35:41 xtraeme Exp $
  if [ "$debug" = "1" ]; then
  	echo 'CFLAGS=-g' >> Makefile.settings
  	echo 'DEBUG=1' >> Makefile.settings
-@@ -383,3 +390,9 @@
+@@ -389,3 +396,9 @@
  else
  	echo '  Building without IM-protocol support. We wish you a lot of fun...';
  fi
