@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX,v 1.4 2005/04/10 22:03:35 jschauma Exp $
+$NetBSD: README.IRIX,v 1.5 2005/08/02 00:23:31 reed Exp $
 
 You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
 compiler (cc/c89).  Please set the CC environment variable according to your
@@ -26,7 +26,7 @@ mounted filesystem.
 
 The bootstrapping process should set all the right options for programs
 such as imake(1), but you may want to set some options depending on your
-local setup.  Please see pkgsrc/mk/bsd.pkg.defaults.mk and, of course,
+local setup.  Please see pkgsrc/mk/defaults/mk.conf and, of course,
 your compilers man pages for details.
 
 If you are using SGI's MIPSPro compiler, please set
