@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.15 2005/06/01 18:14:23 jlam Exp $
+# $NetBSD: NetBSD.mk,v 1.16 2005/08/02 00:23:31 reed Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -134,9 +134,9 @@ PKG_HAVE_KQUEUE=	# defined
 _OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
-# (it defaults to 'no' as per bsd.pkg.defaults.mk).
+# (it defaults to 'no' as per defaults/mk.conf).
 # Set the group and mode to meaningful values in that case (defaults to
-# BINOWN, BINGRP and BINMODE as per bsd.pkg.defaults.mk).
+# BINOWN, BINGRP and BINMODE as per defaults/mk.conf).
 .if !(empty(SETGIDGAME:M[yY][eE][sS]))
 GAMEOWN=		games
 GAMEGRP=		games
