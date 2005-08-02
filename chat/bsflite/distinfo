@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/04/16 16:44:53 recht Exp $
+$NetBSD: distinfo,v 1.3.2.1 2005/08/02 21:21:37 salo Exp $
 
 SHA1 (bsflite-0.80.tar.gz) = 228b02851dedc44a4ee6dbc2fd5dca6ff059c4e3
 RMD160 (bsflite-0.80.tar.gz) = cec3b13fcf4afc37f4ee0a382d63f024b1f31861
 Size (bsflite-0.80.tar.gz) = 50529 bytes
+SHA1 (patch-aa) = e4afa22dab3b8538f490670c9e1474dba5eca079
+SHA1 (patch-ab) = 03dfe600654f9df4342fc7768665f5f9308e72d3
