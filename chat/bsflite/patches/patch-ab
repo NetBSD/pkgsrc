@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.2.2 2005/08/02 21:21:37 salo Exp $
+
+--- imcomm/Makefile.orig	2005-04-14 02:22:49.000000000 +1000
++++ imcomm/Makefile
+@@ -8,7 +8,7 @@ RANLIB=ranlib
+ LIB=libimcomm.a
+ #CC=i386-pc-msdosdjgpp-gcc
+ #CC=mingw32-gcc
+-CC=gcc
++#CC=gcc
+ CFLAGS=-O
+ RM=rm -f
+ #CFLAGS+=-I/usr/local/djgpp/watt/inc
