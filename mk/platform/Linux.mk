@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.17 2005/08/02 00:23:31 reed Exp $
+# $NetBSD: Linux.mk,v 1.18 2005/08/02 03:38:09 reed Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -7,7 +7,7 @@ IMAKE_MAKE?=	${GMAKE}	# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
-# XXX: default from defaults/mk.conf.  Verify/corerct for this platform
+# XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
 RSH?=		/usr/bin/rsh
 SU?=		/bin/su
