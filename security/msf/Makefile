@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/07/16 01:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/03 20:37:44 adrianp Exp $
 #
 
 DISTNAME=	framework-2.4
-PKGREVISION=	1
 PKGNAME=	msf-2.4
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.metasploit.com/tools/
 
@@ -11,11 +11,11 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.metasploit.com/
 COMMENT=	Platform for developing, testing, and using exploit code
 
-DIST_SUBDIR=	${PKGNAME}
-LICENSE=	inlineegg-license
-
 DEPENDS+=	p5-Net-SSLeay>=1.23:../../security/p5-Net-SSLeay
 DEPENDS+=	p5-Term-ReadLine>=1.14:../../devel/p5-Term-ReadLine
+
+DIST_SUBDIR=	${PKGNAME}
+LICENSE=	inlineegg-license
 
 MSFDIR?=	${PREFIX}/share/msf
 MSFDOC?=	${PREFIX}/share/doc/msf
