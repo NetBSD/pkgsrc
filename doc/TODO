@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3787 2005/08/03 17:49:24 wiz Exp $
+$NetBSD: TODO,v 1.3788 2005/08/03 19:44:35 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -528,7 +528,6 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
-	o gtk2+-2.6.9
 	o gtklife-4.2
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
