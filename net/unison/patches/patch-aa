@@ -1,14 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2005/04/24 12:48:43 adrianp Exp $
+$NetBSD: patch-aa,v 1.5 2005/08/03 12:42:13 tonio Exp $
 
---- Makefile.orig	Mon Sep  6 20:15:46 2004
+--- Makefile.orig	Sat Mar 12 16:17:58 2005
 +++ Makefile
-@@ -55,19 +55,17 @@ all:: strings.ml buildexecutable
+@@ -38,7 +38,7 @@ all:: strings.ml buildexecutable
  all:: INSTALL
  
  INSTALL: $(NAME)$(EXEC_EXT)
 -	./$(NAME) -doc install > INSTALL
 +##	./$(NAME) -doc install > INSTALL
  
+ ########################################################################
+ ## Miscellaneous developer-only switches
+@@ -67,14 +67,12 @@ include Makefile.OCaml
  ######################################################################
  # Installation
  
@@ -26,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2005/04/24 12:48:43 adrianp Exp $
  
  
  ######################################################################
-@@ -345,7 +343,7 @@ testmerge:
+@@ -352,7 +350,7 @@ testmerge:
  tags:
  	-$(ETAGS) *.mli */*.mli *.ml */*.ml *.m */*.m *.c */*.c *.txt
  
