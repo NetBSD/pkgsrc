@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2005/08/01 09:49:37 jlam Exp $
+$NetBSD: patch-am,v 1.3 2005/08/03 21:01:40 jlam Exp $
 
 --- libraries/libldap/cyrus.c.orig	2005-07-31 22:09:40.000000000 -0400
 +++ libraries/libldap/cyrus.c
@@ -7,7 +7,7 @@ $NetBSD: patch-am,v 1.2 2005/08/01 09:49:37 jlam Exp $
  	LDAPConn *conn,
  	const char * authid,
 -	ber_len_t ssf )
-+	sasl_ssf_t ssf )
++	ber_uint_t ssf )
  {
  	int sc;
  	sasl_conn_t *ctx;
@@ -61,7 +61,7 @@ $NetBSD: patch-am,v 1.2 2005/08/01 09:49:37 jlam Exp $
  			break;
  		case LDAP_OPT_X_SASL_MAXBUFSIZE:
 -			*(ber_len_t *)arg = ld->ld_options.ldo_sasl_secprops.maxbufsize;
-+			*(sasl_ssf_t *)arg = ld->ld_options.ldo_sasl_secprops.maxbufsize;
++			*(ber_uint_t *)arg = ld->ld_options.ldo_sasl_secprops.maxbufsize;
  			break;
  
  		case LDAP_OPT_X_SASL_SECPROPS:
@@ -87,7 +87,7 @@ $NetBSD: patch-am,v 1.2 2005/08/01 09:49:37 jlam Exp $
  		break;
  	case LDAP_OPT_X_SASL_MAXBUFSIZE:
 -		ld->ld_options.ldo_sasl_secprops.maxbufsize = *(ber_len_t *)arg;
-+		ld->ld_options.ldo_sasl_secprops.maxbufsize = *(sasl_ssf_t *)arg;
++		ld->ld_options.ldo_sasl_secprops.maxbufsize = *(ber_uint_t *)arg;
  		break;
  
  	case LDAP_OPT_X_SASL_SECPROPS: {
@@ -96,7 +96,7 @@ $NetBSD: patch-am,v 1.2 2005/08/01 09:49:37 jlam Exp $
  	LDAPConn *conn,
  	const char * authid,
 -	ber_len_t ssf )
-+	sasl_ssf_t ssf )
++	ber_uint_t ssf )
  { return LDAP_SUCCESS; }
  
  #endif /* HAVE_CYRUS_SASL */
