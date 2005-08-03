@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/27 10:56:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/08/03 12:45:27 tonio Exp $
 bin/unison
 share/doc/unison/BUGS.txt
 share/doc/unison/CONTRIB
 share/doc/unison/COPYING
-share/doc/unison/DEPENDENCIES.ps
 share/doc/unison/INSTALL
 share/doc/unison/NEWS
 share/doc/unison/README

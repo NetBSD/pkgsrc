@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/03 12:45:27 tonio Exp $
 
-DISTNAME=	unison-2.12.0
+DISTNAME=	unison-2.13.0
 CATEGORIES=	net
-MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/beta-test/latest/
+MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
@@ -47,7 +47,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/BUGS.txt ${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/CONTRIB ${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/DEPENDENCIES.ps ${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/NEWS ${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/unison
