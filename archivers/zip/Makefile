@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.44 2005/05/24 13:25:22 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2005/08/03 18:54:31 wiz Exp $
 
-DISTNAME=	zip-2.3
-PKGREVISION=	3
+DISTNAME=	zip231
+PKGNAME=	zip-2.31
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
-DISTFILES=	zip23.tar.gz zcrypt29.zip
+MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
+		http://ftp.info-zip.org/pub/infozip/src/ \
+		http://sunsite.cnlab-switch.ch/ftp/mirror/infozip/src/ \
+		ftp://sunsite.cnlab-switch.ch/mirror/infozip/src/ \
+		http://www.mirrorservice.org/sites/ftp.info-zip.org/pub/infozip/src/
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/Zip.html
 COMMENT=	Create/update ZIP files compatible with pkzip
 
-BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-EXTRACT_ONLY=	zip23.tar.gz
 MAKEFILE=	unix/Makefile
 MAKE_FLAGS=	LOCAL_ZIP="${CFLAGS}" LFLAGS1="${_STRIPFLAG_CC}"
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,9 +39,6 @@ CFLAGS+=	-DHAVE_DIRENT_H
 .endif
 
 INSTALLATION_DIRS=	bin man/man1
-
-post-extract:
-	@cd ${WRKSRC} && ${LOCALBASE}/bin/unzip -qo ${DISTDIR}/zcrypt29.zip
 
 do-install:
 	cd ${WRKSRC} && \
