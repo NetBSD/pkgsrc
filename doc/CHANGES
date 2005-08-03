@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10760 2005/08/03 11:59:35 adam Exp $
+$NetBSD: CHANGES,v 1.10761 2005/08/03 12:48:55 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3511,3 +3511,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mutt-devel to 1.5.9 [tonio 2005-08-02]
 	Updated chat/bitlbee to 0.92 [tonio 2005-08-02]
 	Updated graphics/blender to 2.37a [adam 2005-08-03]
+	Updated net/unison to 2.12.0 [tonio 2005-08-03]
+	Updated net/unison-devel to 2.13.0 [tonio 2005-08-03]
