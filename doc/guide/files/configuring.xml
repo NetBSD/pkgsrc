@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.4 2005/07/28 11:05:36 wiz Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.5 2005/08/03 16:34:19 wiz Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -9,7 +9,7 @@
     <para>In this section you can find some variables that apply all
       pkgsrc packages.  The preferred method of setting them is by
       setting them in <filename>/etc/mk.conf</filename>.
-      <unorderedlist>
+      <itemizedlist>
 	<listitem><para><varname>LOCALBASE</varname>: Where
 	    packages will be installed. The default is
 	    <filename>/usr/pkg</filename>. Do not mix binary packages
@@ -46,14 +46,14 @@
 	<listitem><para><varname>BINPKG_SITES</varname>:
 	    List of sites carrying binary pkgs.</para>
 	</listitem>
-      </unorderedlist>
+      </itemizedlist>
     </para>
   </sect1>
 
-  <sect1 tag="general-configuration">
-    <title>General configuration</title>
+  <sect1 id="variables-affecting-build">
+    <title>Variables affecting the build process</title>
     <para>XXX
-      <unorderedlist>
+      <itemizedlist>
 	<listitem><para><varname>PACKAGES</varname>: The top level
 	    directory for the binary packages. The default is
 	    <filename>${PKGSRCDIR}/packages</filename>.</para>
@@ -88,7 +88,7 @@
 	</listitem>
 	<!--	DISTDIR -->
 	<!--	FAILOVER_FETCH -->
-      </unorderedlist>
+      </itemizedlist>
     </para>
   </sect1>
 
@@ -109,15 +109,18 @@
 
     <!--	IGNORE_RECOMMENDED -->
     <para>XXX
-      <unorderedlist>
+      <itemizedlist>
 	<listitem><para><varname>PKG_DEVELOPER</varname>:
 	    Run some sanity checks that package developers want:
-	    <unorderedlist>
-	      <listitem>make sure patches apply with zero fuzz</listitem>
-	      <listitem>run check-shlibs to see that all binaries will
-		find their shared libs.</listitem>
+	    <itemizedlist>
+	      <listitem><para>make sure patches apply with zero fuzz</para></listitem>
+	      <listitem><para>run check-shlibs to see that all binaries will
+		find their shared libs.</para>
 	      <!-- XXX: some more stuff -->
-	    </unorderedlist></para></listitem>
+	      </listitem>
+	    </itemizedlist>
+	  </para>
+	</listitem>
 	<listitem><para><varname>PKG_DEBUG_LEVEL</varname>:
 	    The level of debugging output which is displayed whilst
 	    making and installing the package.
@@ -128,7 +131,7 @@
 	    the shell commands before their invocation, and their
 	    actual execution progress with <command>set -x</command>
 	    will be displayed.</para></listitem>
-      </unorderedlist>
+      </itemizedlist>
     </para>
   </sect1>
 
