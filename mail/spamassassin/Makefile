@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2005/06/19 22:29:35 heinz Exp $
+# $NetBSD: Makefile,v 1.56.2.1 2005/08/03 23:56:13 salo Exp $
 
 DISTNAME=	Mail-SpamAssassin-${SPAMASSASSIN_VERSION}
 PKGNAME=	spamassassin-${SPAMASSASSIN_VERSION}
 PKGREVISION=	# empty
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
-MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/} \
+MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/} \
 		http://spamassassin.apache.org/released/
 
 MAINTAINER=	heinz@NetBSD.org
