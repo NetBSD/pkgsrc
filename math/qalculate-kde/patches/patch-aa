@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/03 13:41:24 adam Exp $
+
+--- src/Makefile.in.orig	2005-06-11 09:32:35.000000000 +0000
++++ src/Makefile.in
+@@ -839,7 +839,6 @@ messages: rc.cpp
+ 	$(XGETTEXT) *.cpp -o $(podir)/qalculate_kde.pot
+ 
+ install-exec-local:
+-	cd $(DESTDIR)$(bindir) && rm -f qalculate; $(LN_S) qalculate-kde qalculate
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
