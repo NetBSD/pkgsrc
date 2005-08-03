@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2005/08/01 20:34:31 tron Exp $
+# $NetBSD: Makefile,v 1.97 2005/08/03 09:43:58 tron Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -39,24 +39,19 @@ BUILD_TARGET=	sg6
 BUILD_TARGET=	sgi
 .  endif
 .else
-# USE_KERBEROS=no is explicitly set on NetBSD 1.x due to interoperability
-# issues with later versions of OpenSSL (e.g. 0.9.7)
 BUILD_TARGET=	neb
-.  if !empty(MACHINE_PLATFORM:MNetBSD-1.*)
-USE_KERBEROS=	no
-.  endif
-.  if defined(USE_KERBEROS) && ${USE_KERBEROS} != "no"
-PKG_USE_KERBEROS=	# defined
-BUILD_TARGET+=	EXTRAAUTHENTICATORS="gss"
-.    if !empty(MACHINE_PLATFORM:MNetBSD-1.5*)
-# NetBSD-1.5 didn't have "des_new_random_key" in libcrypto
-MAKE_ENV+=	GSS_EXTRA_LDFLAGS="-ldes"
-.    endif
+
+# Kerberos is explicitly not enabled on NetBSD 1.x due to interoperability
+# issues with later versions of OpenSSL (e.g. 0.9.7)
+.  if empty(MACHINE_PLATFORM:MNetBSD-1.*)
+PKG_SUPPORTED_OPTIONS+=		kerberos
+
+PKG_OPTIONS_LEGACY_VARS+=	USE_KERBEROS:kerberos
 .  endif
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.imap-uw
-PKG_SUPPORTED_OPTIONS= 	inet6
+PKG_SUPPORTED_OPTIONS+=	inet6
 
 .include "../../mk/bsd.options.mk"
 
@@ -64,6 +59,12 @@ PKG_SUPPORTED_OPTIONS= 	inet6
 MAKE_ENV+=	IP=4
 .else
 MAKE_ENV+=	IP=6
+.endif
+
+.if !empty(PKG_OPTIONS:Mkerberos)
+PKG_USE_KERBEROS=	# defined
+
+BUILD_TARGET+=	EXTRAAUTHENTICATORS="gss"
 .endif
 
 BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT IMAP_UW_USE_WHOSON
