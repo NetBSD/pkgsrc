@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/19 12:30:08 adam Exp $
+$NetBSD: patch-aa,v 1.2 2005/08/03 13:36:05 adam Exp $
 
---- src/libqalculate/Calculator.cc.orig	2004-10-18 12:30:49.000000000 +0000
-+++ src/libqalculate/Calculator.cc
+--- libqalculate/Calculator.cc.orig	2004-10-18 12:30:49.000000000 +0000
++++ libqalculate/Calculator.cc
 @@ -33,7 +33,11 @@
  #include <sys/types.h>
  #include <sys/stat.h>

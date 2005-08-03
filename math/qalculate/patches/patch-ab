@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/11/19 12:30:08 adam Exp $
+$NetBSD: patch-ab,v 1.2 2005/08/03 13:36:05 adam Exp $
 
---- configure.orig	2004-11-19 12:07:16.000000000 +0000
+--- configure.orig	2005-06-11 08:39:34.000000000 +0000
 +++ configure
-@@ -20460,12 +20460,10 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
+@@ -20980,12 +20980,10 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
  if test "x$GCC" = "xyes"; then
  	case $CFLAGS in
  	*-Os*)
