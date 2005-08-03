@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10763 2005/08/03 14:31:54 taya Exp $
+$NetBSD: CHANGES,v 1.10764 2005/08/03 16:44:41 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added math/qalculate-kde version 0.8.1.1 [adam 2005-08-03]
 	Updated www/mozilla to 1.7.11 [taya 2005-08-03]
 	Updated www/mozilla-gtk2 to 1.7.11 [taya 2005-08-03]
+	Added www/ap2-suphp version 0.6.0 [rillig 2005-08-03]
