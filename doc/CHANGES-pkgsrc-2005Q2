@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.47 2005/08/03 23:16:32 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.48 2005/08/03 23:36:48 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -141,3 +141,5 @@ Pullup ticket 651 - requested Thomas Klausner
 security update for rsync
 Pullup ticket 652 - requested by Adrian Portelli
 security fix for msf
+Pullup ticket 653 - requested by Juan Romero Pardines
+security update for jabberd2
