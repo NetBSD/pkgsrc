@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10762 2005/08/03 13:43:45 adam Exp $
+$NetBSD: CHANGES,v 1.10763 2005/08/03 14:31:54 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3516,3 +3516,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/qalculate to 0.8.1.1 [adam 2005-08-03]
 	Added math/qalculate-gtk version 0.8.1 [adam 2005-08-03]
 	Added math/qalculate-kde version 0.8.1.1 [adam 2005-08-03]
+	Updated www/mozilla to 1.7.11 [taya 2005-08-03]
+	Updated www/mozilla-gtk2 to 1.7.11 [taya 2005-08-03]
