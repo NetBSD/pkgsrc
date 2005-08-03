@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.45 2005/06/16 06:57:57 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.46 2005/08/03 11:58:14 adam Exp $
 
-DISTNAME=		blender-2.36
-PKGREVISION=		2
-CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
-			http://download.blender.org/source/
+DISTNAME=	blender-2.37a
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
+		http://download.blender.org/source/
 
-MAINTAINER=		jschauma@NetBSD.org
-HOMEPAGE=		http://www.blender.org/
-COMMENT=		Fully integrated 3D graphics creation suite
+MAINTAINER=	jschauma@NetBSD.org
+HOMEPAGE=	http://www.blender.org/
+COMMENT=	Fully integrated 3D graphics creation suite
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 
 WRKSRC=			${WRKDIR}/blender
-
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-USE_LIBTOOL=		YES
 
 LDFLAGS+=		-lcrypto
 
@@ -39,11 +36,14 @@ do-install:
 	${CHMOD} +x ${WRKDIR}/blender/bin/blender
 	${INSTALL_PROGRAM} ${WRKSRC}/blender-bin ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/blender/scripts
-	${INSTALL_DATA} ${WRKSRC}/release/scripts/* ${PREFIX}/share/blender/scripts
+	${INSTALL_DATA} ${WRKSRC}/release/scripts/*.py \
+		${PREFIX}/share/blender/scripts
+	${INSTALL_DATA_DIR} ${PREFIX}/share/blender/scripts/bpymodules
+	${INSTALL_DATA} ${WRKSRC}/release/scripts/bpymodules/*.py \
+		${PREFIX}/share/blender/scripts/bpymodules
 	${INSTALL} ${WRKDIR}/blender/bin/blender ${PREFIX}/bin
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2005/04/11 23:01:21 reinoud Exp $
+$NetBSD: patch-ae,v 1.3 2005/08/03 11:58:14 adam Exp $
 
---- SConstruct.orig	2004-12-21 18:00:25.000000000 +0100
+--- SConstruct.orig	2005-05-29 19:14:21.000000000 +0000
 +++ SConstruct
-@@ -31,7 +31,7 @@ else:
+@@ -34,7 +34,7 @@ else:
  	playername = 'blenderplayer$PROGSUFFIX'
  
  # Build directory.
@@ -11,9 +11,9 @@ $NetBSD: patch-ae,v 1.2 2005/04/11 23:01:21 reinoud Exp $
  
  bs_config.parseOpts()
  
-@@ -50,7 +50,92 @@ sdl_env = Environment ()
- freetype_env = Environment ()
- env = Environment ()
+@@ -53,7 +53,92 @@ sdl_env = Environment (ENV = os.environ)
+ freetype_env = Environment (ENV = os.environ)
+ env = Environment (ENV = os.environ)
  
 -if sys.platform == 'linux2' or sys.platform == 'linux-i386':
 +# pkgsrc patch
@@ -33,7 +33,7 @@ $NetBSD: patch-ae,v 1.2 2005/04/11 23:01:21 reinoud Exp $
 +	build_blender_static = 'false'
 +	build_blender_player = 'false'
 +	build_blender_plugin = 'false'
-+	release_flags = ['-O2']
++	release_flags = string.split(os.environ[ 'CFLAGS' ])
 +	debug_flags = ['-O2', '-g']
 +	extra_flags = ['-pipe', '-fPIC', '-funsigned-char']
 +	cxxflags = []
@@ -102,10 +102,10 @@ $NetBSD: patch-ae,v 1.2 2005/04/11 23:01:21 reinoud Exp $
 +	print "Building for FreeBSD"
 +
 +elif sys.platform == 'linux2' or sys.platform == 'linux-i386':
- 	use_international = 'false'
+ 	use_international = 'true'
  	use_gameengine = 'true'
  	use_openal = 'false'
-@@ -591,7 +676,7 @@ elif sys.platform=='openbsd3':
+@@ -600,7 +685,7 @@ elif sys.platform=='openbsd3':
  	use_openal = 'false'
  	use_fmod = 'false'
  	use_quicktime = 'false'
