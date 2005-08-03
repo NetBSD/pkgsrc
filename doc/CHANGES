@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10768 2005/08/03 17:31:34 wiz Exp $
+$NetBSD: CHANGES,v 1.10769 2005/08/03 17:48:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3523,3 +3523,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/firefox to 1.0.6 [tron 2005-08-03]
 	Updated mail/rss2email to 2.55 [schmonz 2005-08-03]
 	Updated net/rsync to 2.6.6 [wiz 2005-08-03]
+	Updated devel/pcre to 6.2 [wiz 2005-08-03]
