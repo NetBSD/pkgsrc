@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.46 2005/08/02 22:43:15 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.47 2005/08/03 23:16:32 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -137,3 +137,7 @@ Pullup ticket 636 - requested by Grant Beattie
 build fixes for XmHTML
 Pullup ticket 637 - requested by Grant Beattie
 portability fix for postfix
+Pullup ticket 651 - requested Thomas Klausner
+security update for rsync
+Pullup ticket 652 - requested by Adrian Portelli
+security fix for msf
