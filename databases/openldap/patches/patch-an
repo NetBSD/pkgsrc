@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2005/08/01 09:49:37 jlam Exp $
+$NetBSD: patch-an,v 1.2 2005/08/03 21:01:40 jlam Exp $
 
 --- libraries/libldap/ldap-int.h.orig	2005-04-17 19:55:21.000000000 -0400
 +++ libraries/libldap/ldap-int.h
@@ -7,7 +7,7 @@ $NetBSD: patch-an,v 1.1 2005/08/01 09:49:37 jlam Exp $
  LDAP_F (int) ldap_int_sasl_external LDAP_P((
  	LDAP *ld, LDAPConn *conn,
 -	const char* authid, ber_len_t ssf ));
-+	const char* authid, sasl_ssf_t ssf ));
++	const char* authid, ber_uint_t ssf ));
  
  LDAP_F (int) ldap_int_sasl_get_option LDAP_P(( LDAP *ld,
  	int option, void *arg ));
