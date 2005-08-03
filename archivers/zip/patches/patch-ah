@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2005/03/28 18:08:12 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2005/08/03 18:54:31 wiz Exp $
 
---- unix/Makefile.orig	1999-11-29 06:22:42.000000000 +0100
+--- unix/Makefile.orig	2005-02-28 08:33:50.000000000 +0100
 +++ unix/Makefile
 @@ -12,7 +12,6 @@ all:
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ah,v 1.1 2005/03/28 18:08:12 wiz Exp $
  SHELL = /bin/sh
  LN = ln -s
  
-@@ -154,10 +153,10 @@ flags:  unix/configure
+@@ -155,10 +154,10 @@ flags:  unix/configure
  #               Generic targets:
  
  generic: flags
