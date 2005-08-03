@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/05/17 17:23:59 adrianp Exp $
+$NetBSD: distinfo,v 1.4.2.1 2005/08/03 23:15:40 salo Exp $
 
-SHA1 (framework-2.4.tar.gz) = 595f7d7af2858070de1849801a2e3cb717f47ac5
-RMD160 (framework-2.4.tar.gz) = f1c0f9c7b7b361096e320514d9900b076d696926
-Size (framework-2.4.tar.gz) = 2594132 bytes
+SHA1 (msf-2.4nb2/framework-2.4.tar.gz) = b09ec49e259d812805301dc9152175903e46beb3
+RMD160 (msf-2.4nb2/framework-2.4.tar.gz) = c2791c46d6c7b8ac9490acfb81f88f5be7105855
+Size (msf-2.4nb2/framework-2.4.tar.gz) = 2607730 bytes
+SHA1 (patch-aa) = 318c8136c22d95195ecd40071d36ae22af0807bb
