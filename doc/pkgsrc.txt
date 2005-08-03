@@ -33,7 +33,7 @@ Table of Contents
     1.3. Terminology
     1.4. Typography
 
-I. The pkgsrc user's guide
+1. The pkgsrc user's guide
 
     2. Where to get pkgsrc
 
@@ -71,7 +71,10 @@ I. The pkgsrc user's guide
 
     5. Configuring pkgsrc
 
-        5.1. Selecting Build Options
+        5.1. General configuration
+        5.2. Variables affecting the build process
+        5.3. Developer/advanced settings
+        5.4. Selecting Build Options
 
     6. Creating binary packages
 
@@ -111,7 +114,7 @@ I. The pkgsrc user's guide
         7.14. How do I change the location of configuration files?
         7.15. Automated security checks
 
-II. The pkgsrc developer's guide
+2. The pkgsrc developer's guide
 
     8. Package components - files, directories and contents
 
@@ -257,27 +260,27 @@ II. The pkgsrc developer's guide
         17.4. Updating a package to a newer version
         17.5. Moving a package in pkgsrc
 
-A. A simple example package: bison
+1. A simple example package: bison
 
-    A.1. files
+    1.1. files
 
-        A.1.1. Makefile
-        A.1.2. DESCR
-        A.1.3. PLIST
-        A.1.4. Checking a package with pkglint
+        1.1.1. Makefile
+        1.1.2. DESCR
+        1.1.3. PLIST
+        1.1.4. Checking a package with pkglint
 
-    A.2. Steps for building, installing, packaging
+    1.2. Steps for building, installing, packaging
 
-B. Build logs
+2. Build logs
 
-    B.1. Building figlet
-    B.2. Packaging figlet
+    2.1. Building figlet
+    2.2. Packaging figlet
 
-C. Layout of the FTP server's package archive
-D. Editing guidelines for the pkgsrc guide
+3. Layout of the FTP server's package archive
+4. Editing guidelines for the pkgsrc guide
 
-    D.1. Targets
-    D.2. Procedure
+    4.1. Targets
+    4.2. Procedure
 
 Chapter 1. Introduction
 
@@ -414,7 +417,7 @@ command should/can be issued as root, or if "normal" user privileges are
 sufficient. We use a # for root's shell prompt, and a % for users' shell
 prompt, assuming they use the C-shell or tcsh.
 
-The pkgsrc user's guide
+Part 1. The pkgsrc user's guide
 
 Table of Contents
 
@@ -454,7 +457,10 @@ Table of Contents
 
 5. Configuring pkgsrc
 
-    5.1. Selecting Build Options
+    5.1. General configuration
+    5.2. Variables affecting the build process
+    5.3. Developer/advanced settings
+    5.4. Selecting Build Options
 
 6. Creating binary packages
 
@@ -1032,7 +1038,7 @@ your system by indiscriminate adding of such files.
 
 4.2. Building packages from source
 
-This assumes that the package is already in pkgsrc. If it is not, see Part II,
+This assumes that the package is already in pkgsrc. If it is not, see Part 2,
 "The pkgsrc developer's guide" for instructions how to create your own
 packages.
 
@@ -1079,7 +1085,7 @@ has a just-in-time-su feature, which allows you to only become root for the
 actual installation step
 
 Taking the figlet utility as an example, we can install it on our system by
-building as shown in Appendix B, Build logs.
+building as shown in Appendix 2, Build logs.
 
 The program is installed under the default root of the packages tree - /usr/
 pkg. Should this not conform to your tastes, set the LOCALBASE variable in your
@@ -1174,9 +1180,81 @@ Chapter 5. Configuring pkgsrc
 
 Table of Contents
 
-5.1. Selecting Build Options
+5.1. General configuration
+5.2. Variables affecting the build process
+5.3. Developer/advanced settings
+5.4. Selecting Build Options
 
-5.1. Selecting Build Options
+5.1. General configuration
+
+In this section you can find some variables that apply all pkgsrc packages. The
+preferred method of setting them is by setting them in /etc/mk.conf.
+
+  * LOCALBASE: Where packages will be installed. The default is /usr/pkg. Do
+    not mix binary packages with different LOCALBASEs!
+
+  * CROSSBASE: Where "cross" category packages will be installed. The default
+    is ${LOCALBASE}/cross.
+
+  * X11BASE: Where X11 is installed on the system. The default is /usr/X11R6.
+
+  * DISTDIR: Where to store the downloaded copies of the original source
+    distributions used for building pkgsrc packages. The default is $
+    {PKGSRCDIR}/distfiles.
+
+  * MASTER_SITE_OVERRIDE: If set, override the packages' MASTER_SITES with this
+    value.
+
+  * MASTER_SITE_BACKUP: Backup location(s) for distribution files and patch
+    files if not found locally or in ${MASTER_SITES} or ${PATCH_SITES}
+    respectively. The defaults are ftp://ftp.NetBSD.org/pub/NetBSD/packages/
+    distfiles/${DIST_SUBDIR}/ and ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/$
+    {DIST_SUBDIR}/.
+
+  * BINPKG_SITES: List of sites carrying binary pkgs.
+
+5.2. Variables affecting the build process
+
+XXX
+
+  * PACKAGES: The top level directory for the binary packages. The default is $
+    {PKGSRCDIR}/packages.
+
+  * WRKOBJDIR: The top level directory where, if defined, the separate working
+    directories will get created, and symbolically linked to from ${WRKDIR}
+    (see below). This is useful for building packages on several architectures,
+    then ${PKGSRCDIR} can be NFS-mounted while ${WRKOBJDIR} is local to every
+    architecture. (It should be noted that PKGSRCDIR should not be set by the
+    user ? it is an internal definition which refers to the root of the pkgsrc
+    tree. It is possible to have many pkgsrc tree instances.)
+
+  * LOCALPATCHES: Directory for local patches that aren't part of pkgsrc. See
+    Section 8.3, "patches/*" for more information. rel and arch are replaced
+    with OS release ("2.0", etc.) and architecture ("mipsel", etc.).
+
+  * PKGMAKECONF: Location of the mk.conf file used by a package's BSD-style
+    Makefile. If this is not set, MAKECONF is set to /dev/null to avoid picking
+    up settings used by builds in /usr/src.
+
+5.3. Developer/advanced settings
+
+XXX
+
+  * PKG_DEVELOPER: Run some sanity checks that package developers want:
+
+      o make sure patches apply with zero fuzz
+
+      o run check-shlibs to see that all binaries will find their shared libs.
+
+  * PKG_DEBUG_LEVEL: The level of debugging output which is displayed whilst
+    making and installing the package. The default value for this is 0, which
+    will not display the commands as they are executed (normal, default, quiet
+    operation); the value 1 will display all shell commands before their
+    invocation, and the value 2 will display both the shell commands before
+    their invocation, and their actual execution progress with set -x will be
+    displayed.
+
+5.4. Selecting Build Options
 
 Some packages have build time options, usually to select between different
 dependencies, enable optional support for big dependencies or enable
@@ -1267,7 +1345,7 @@ and run make package:
 This will build and install your package (if not already done), and then build
 a binary package from what was installed. You can then use the pkg_* tools to
 manipulate it. Binary packages are created by default in /usr/pkgsrc/packages,
-in the form of a gzipped tar file. See Section B.2, "Packaging figlet" for a
+in the form of a gzipped tar file. See Section 2.2, "Packaging figlet" for a
 continuation of the above misc/figlet example.
 
 See Chapter 17, Submitting and Committing for information on how to submit such
@@ -1313,7 +1391,7 @@ files are generated after the build, where to mail the build report to, where
 your pkgsrc tree is located and the user to which user to su(8) to do a cvs
 update.
 
-6.3.1.3.  pre-build.local
+6.3.1.3. pre-build.local
 
 It is possible to configure the bulk build to perform certain site specific
 tasks at the end of the pre-build stage. If the file pre-build.local exists in
@@ -1946,7 +2024,7 @@ Use of the security/audit-packages package is strongly recommended! After
 "audit-packages" is installed, please read the package's message, which you can
 get by running pkg_info -D audit-package.
 
-The pkgsrc developer's guide
+Part 2. The pkgsrc developer's guide
 
 Table of Contents
 
@@ -2132,79 +2210,106 @@ exactly in the order given here.
   * CATEGORIES is a list of categories which the package fits in. You can
     choose any of the top-level directories of pkgsrc for it.
 
+    Currently the following values are available for CATEGORIES. If more than
+    one is used, they need to be separated by spaces:
+
+    archivers     cross         geography     meta-pkgs     security
+    audio         databases     graphics      misc          shells
+    benchmarks    devel         ham           multimedia    sysutils
+    biology       editors       inputmethod   net           textproc
+    cad           emulators     lang          news          time
+    chat          finance       mail          parallel      wm
+    comms         fonts         math          pkgtools      www
+    converters    games         mbone         print         x11
+
   * MASTER_SITES is a list of URLs where the distribution files can be
     downloaded. Each URL must end with a slash.
 
-The second section contains the following variables.
+    The MASTER_SITES may make use of the following predefined sites:
 
-  * MAINTAINER is the mail address of the package's maintainer, which is the
-    person you can contact when the package does not work.
+                ${MASTER_SITE_APACHE}
+                ${MASTER_SITE_BACKUP}
+                ${MASTER_SITE_CYGWIN}
+                ${MASTER_SITE_DEBIAN}
+                ${MASTER_SITE_FREEBSD}
+                ${MASTER_SITE_FREEBSD_LOCAL}
+                ${MASTER_SITE_GNOME}
+                ${MASTER_SITE_GNU}
+                ${MASTER_SITE_GNUSTEP}
+                ${MASTER_SITE_IFARCHIVE}
+                ${MASTER_SITE_MOZILLA}
+                ${MASTER_SITE_OPENOFFICE}
+                ${MASTER_SITE_PERL_CPAN}
+                ${MASTER_SITE_R_CRAN}
+                ${MASTER_SITE_SOURCEFORGE}
+                ${MASTER_SITE_SUNSITE}
+                ${MASTER_SITE_SUSE}
+                ${MASTER_SITE_TEX_CTAN}
+                ${MASTER_SITE_XCONTRIB}
+                ${MASTER_SITE_XEMACS}
+
+
+    If one of these predefined sites is chosen, you may want to specify a
+    subdirectory of that site. Since these macros may expand to more than one
+    actual site, you must use the following construct to specify a
+    subdirectory:
+
+                ${MASTER_SITE_GNU:=subdirectory/name/}
+                ${MASTER_SITE_SOURCEFORGE:=project_name/}
+
+    Note the trailing slash after the subdirectory name.
+
+    If the package has multiple DISTFILES or multiple PATCHFILES from different
+    sites, set SITES_foo to a list of URI's where file "foo" may be found.
+    "foo" includes the suffix, e.g.
+
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+    DISTFILES+=     foo-file.tar.gz
+    SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+            http://www.somewhereelse.com/mirror/somehow/
+
+  * DISTFILES: Name(s) of archive file(s) containing distribution. The default
+    is ${DISTNAME}${EXTRACT_SUFX}. Should only be set if you have more than one
+    distfile.
+
+    Note that the normal default setting of DISTFILES must be made explicit if
+    you want to add to it (rather than replace it), as you usually would.
+
+  * EXTRACT_SUFX: Suffix of the distribution file, will be appended to
+    DISTNAME. Defaults to .tar.gz.
+
+The second section contains information about separately downloaded patches, if
+any.
+
+  * PATCHFILES Name(s) of additional files that contain distribution patches.
+    There is no default. pkgsrc will look for them at PATCH_SITES. They will
+    automatically be uncompressed before patching if the names end with .gz or
+    .Z.
+
+  * PATCH_SITES: Primary location(s) for distribution patch files (see
+    PATCHFILES below) if not found locally.
+
+The third section contains the following variables.
+
+  * MAINTAINER is the email address of the contact person for this package. The
+    person who feels responsible for this package, and who is most likely to
+    look at problems or questions regarding this package which have been
+    reported with send-pr(1). The right person to contact before making major
+    changes to the package. When packaging a new program, set MAINTAINER to
+    yourself. If you really can't maintain the package for future updates, set
+    it to <tech-pkg@NetBSD.org>.
 
   * HOMEPAGE is a URL where users can find more information about the package.
 
-  * COMMENT is a one-line comment about the purpose of the package.
+  * COMMENT is a one-line description of the package (should not include the
+    package name).
 
-The MASTER_SITES may be set to one of the predefined sites:
+Other variables that affect the build:
 
-        ${MASTER_SITE_APACHE}
-        ${MASTER_SITE_BACKUP}
-        ${MASTER_SITE_CYGWIN}
-        ${MASTER_SITE_DEBIAN}
-        ${MASTER_SITE_FREEBSD}
-        ${MASTER_SITE_FREEBSD_LOCAL}
-        ${MASTER_SITE_GNOME}
-        ${MASTER_SITE_GNU}
-        ${MASTER_SITE_GNUSTEP}
-        ${MASTER_SITE_IFARCHIVE}
-        ${MASTER_SITE_MOZILLA}
-        ${MASTER_SITE_OPENOFFICE}
-        ${MASTER_SITE_PERL_CPAN}
-        ${MASTER_SITE_R_CRAN}
-        ${MASTER_SITE_SOURCEFORGE}
-        ${MASTER_SITE_SUNSITE}
-        ${MASTER_SITE_SUSE}
-        ${MASTER_SITE_TEX_CTAN}
-        ${MASTER_SITE_XCONTRIB}
-        ${MASTER_SITE_XEMACS}
-
-
-If one of these predefined sites is chosen, you may require the ability to
-specify a subdirectory of that site. Since these macros may expand to more than
-one actual site, you must use the following construct to specify a
-subdirectory:
-
-        ${MASTER_SITE_GNU:=subdirectory/name/}
-        ${MASTER_SITE_SOURCEFORGE:=project_name/}
-
-Note the trailing slash after the subdirectory name.
-
-Note
-
-MASTER_SITE_SUBDIR has been deprecated and should no longer be used.
-
-If the package has multiple DISTFILES or multiple PATCHFILES from different
-sites, set SITES_foo to a list of URI's where file "foo" may be found. "foo"
-includes the suffix, e.g.
-
-DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=     foo-file.tar.gz
-SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
-        http://www.somewhereelse.com/mirror/somehow/
-
-Note that the normal default setting of DISTFILES must be made explicit if you
-want to add to it (rather than replace it), as you usually would.
-
-Currently the following values are available for CATEGORIES. If more than one
-is used, they need to be separated by spaces:
-
-archivers     cross         geography     meta-pkgs     security
-audio         databases     graphics      misc          shells
-benchmarks    devel         ham           multimedia    sysutils
-biology       editors       inputmethod   net           textproc
-cad           emulators     lang          news          time
-chat          finance       mail          parallel      wm
-comms         fonts         math          pkgtools      www
-converters    games         mbone         print         x11
+  * WRKSRC: The subdirectory of ${WRKDIR} to which the distribution actually
+    unpacks. The default is ${WRKDIR}/${DISTNAME}. The value of WRKSRC should
+    be set explicitly if the package does not follow standard conventions and
+    include the package's name as a subdirectory.
 
 Please pay attention to the following gotchas:
 
@@ -2215,16 +2320,6 @@ Please pay attention to the following gotchas:
 
   * If the package installs any info files, see Section 15.5.7, "Packages
     installing info files".
-
-  * Set MAINTAINER to be yourself. If you really can't maintain the package for
-    future updates, set it to <tech-pkg@NetBSD.org>.
-
-  * If a home page for the software in question exists, add the variable
-    HOMEPAGE right after MAINTAINER. The value of this variable should be the
-    URL for the home page.
-
-  * Be sure to set the COMMENT variable to a short description of the package,
-    not containing the pkg's name.
 
 8.2. distinfo
 
@@ -2346,9 +2441,11 @@ MESSAGE
 
 8.6. work*
 
-When you type make the distribution files are unpacked into this directory. It
-can be removed by running make clean. Besides the sources, this directory is
-also used to keep various timestamp files.
+When you type make the distribution files are unpacked into the directory
+denoted by WRKDIR. It can be removed by running make clean. Besides the
+sources, this directory is also used to keep various timestamp files. The
+directory gets removed completely on clean. The default is ${.CURDIR}/work or $
+{.CURDIR}/work.${MACHINE_ARCH} if OBJMACHINE is set.
 
 If a package doesn't create a subdirectory for itself (like GNU software does,
 for instance), but extracts itself in the current directory, you should set
@@ -2356,10 +2453,9 @@ WRKSRC accordingly, e.g. editors/sam again, but the quick answer is:
 
 WRKSRC=             ${WRKDIR}
 
-Please note that the old NO_WRKSUBDIR has been deprecated and should not be
-used. Also, if your package doesn't create a subdir with the name of DISTNAME
-but some different name, set WRKSRC to point to the proper name in ${WRKDIR}.
-See lang/tcl and x11/tk for examples, and here is another one:
+If a package doesn't create a subdir with the name of DISTNAME but some
+different name, set WRKSRC to point to the proper name in ${WRKDIR}. See lang/
+tcl and x11/tk for examples, and here is another one:
 
 WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
 
@@ -3019,10 +3115,9 @@ BUILDLINK_DEPENDS.pkg after a package update:
 In these cases, BUILDLINK_DEPENDS.pkg should be adjusted to require at least
 the new package version. In some cases, the packages that depend on this new
 version may need their PKGREVISIONs increased and, if they have buildlink3.mk
-files, their BUILDLINK_DEPENDS. pkg adjusted, too. This is needed so that
-binary packages made using it will require the correct package dependency and
-not settle for an older one which will not contain the necessary shared
-libraries.
+files, their BUILDLINK_DEPENDS.pkg adjusted, too. This is needed so that binary
+packages made using it will require the correct package dependency and not
+settle for an older one which will not contain the necessary shared libraries.
 
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
@@ -4312,14 +4407,14 @@ with the older version "Xaw3d-1.3".
 There are several reasons why a package might be instructed to not build under
 certain circumstances. If the package builds and runs on most platforms, the
 exceptions should be noted with NOT_FOR_PLATFORM. If the package builds and
-runs on a small handful of platforms, set ONLY_FOR_PLATFORM instead. If the
-package should be skipped (for example, because it provides functionality
-already provided by the system), set PKG_SKIP_REASON to a descriptive message.
-If the package should fail because some preconditions are not met, set
-PKG_FAIL_REASON to a descriptive message.
+runs on a small handful of platforms, set ONLY_FOR_PLATFORM instead. Both
+ONLY_FOR_PLATFORM and NOT_FOR_PLATFORM are OS triples (OS-version-platform)
+that can use glob-style wildcards.
 
-IGNORE is deprecated because it didn't provide enough information to determine
-whether the build should fail.
+If the package should be skipped (for example, because it provides
+functionality already provided by the system), set PKG_SKIP_REASON to a
+descriptive message. If the package should fail because some preconditions are
+not met, set PKG_FAIL_REASON to a descriptive message.
 
 15.1.7. Packages which should not be deleted, once installed
 
@@ -5173,27 +5268,27 @@ possibly untested features.
 
     (and any packages from step 5, of course).
 
-Appendix A. A simple example package: bison
+Appendix 1. A simple example package: bison
 
 Table of Contents
 
-A.1. files
+1.1. files
 
-    A.1.1. Makefile
-    A.1.2. DESCR
-    A.1.3. PLIST
-    A.1.4. Checking a package with pkglint
+    1.1.1. Makefile
+    1.1.2. DESCR
+    1.1.3. PLIST
+    1.1.4. Checking a package with pkglint
 
-A.2. Steps for building, installing, packaging
+1.2. Steps for building, installing, packaging
 
 We checked to find a piece of software that wasn't in the packages collection,
 and picked GNU bison. Quite why someone would want to have bison when Berkeley
 yacc is already present in the tree is beyond us, but it's useful for the
 purposes of this exercise.
 
-A.1. files
+1.1. files
 
-A.1.1. Makefile
+1.1.1. Makefile
 
 # $NetBSD$
 #
@@ -5211,13 +5306,13 @@ INFO_FILES=     bison.info
 
 .include "../../mk/bsd.pkg.mk"
 
-A.1.2. DESCR
+1.1.2. DESCR
 
 GNU version of yacc.  Can make re-entrant parsers, and numerous other
 improvements.  Why you would want this when Berkeley yacc(1) is part
 of the NetBSD source tree is beyond me.
 
-A.1.3. PLIST
+1.1.3. PLIST
 
 @comment $NetBSD$
 bin/bison
@@ -5225,7 +5320,7 @@ man/man1/bison.1.gz
 share/bison.simple
 share/bison.hairy
 
-A.1.4. Checking a package with pkglint
+1.1.4. Checking a package with pkglint
 
 The NetBSD package system comes with pkgtools/pkglint which helps to check the
 contents of these files. After installation it is quite easy to use, just
@@ -5237,7 +5332,7 @@ looks fine.
 Depending on the supplied command line arguments (see pkglint(1)) more verbose
 checks will be performed. Use e.g. pkglint -v for a very verbose check.
 
-A.2. Steps for building, installing, packaging
+1.2. Steps for building, installing, packaging
 
 Create the directory where the package lives, plus any auxiliary directories:
 
@@ -5352,14 +5447,14 @@ Now that you don't need the source and object files any more, clean up:
 # make clean
 ===>  Cleaning for bison-1.25
 
-Appendix B. Build logs
+Appendix 2. Build logs
 
 Table of Contents
 
-B.1. Building figlet
-B.2. Packaging figlet
+2.1. Building figlet
+2.2. Packaging figlet
 
-B.1. Building figlet
+2.1. Building figlet
 
 # make
 ===> Checking for vulnerabilities in figlet-2.2.1nb2
@@ -5450,7 +5545,7 @@ cp figlet.6 /usr/pkg/man/man6
 ===> Registering installation for figlet-2.2.1nb2
 #
 
-B.2. Packaging figlet
+2.2. Packaging figlet
 
 # make package
 ===> Checking for vulnerabilities in figlet-2.2.1nb2
@@ -5461,7 +5556,7 @@ Using SrcDir value of /usr/pkg
 Registering depends:.
 #
 
-Appendix C. Layout of the FTP server's package archive
+Appendix 3. Layout of the FTP server's package archive
 
 Layout for precompiled binary packages on ftp.NetBSD.org:
 
@@ -5539,16 +5634,16 @@ To create:
  3. If necessary, create a symlink ln -s `uname -m` `uname -p` (amiga -> m68k,
     ...)
 
-Appendix D. Editing guidelines for the pkgsrc guide
+Appendix 4. Editing guidelines for the pkgsrc guide
 
 Table of Contents
 
-D.1. Targets
-D.2. Procedure
+4.1. Targets
+4.2. Procedure
 
 This section contains information on editing the pkgsrc guide itself.
 
-D.1. Targets
+4.1. Targets
 
 The pkgsrc guide's source code is stored in pkgsrc/doc/guide/files, and several
 files are created from it:
@@ -5568,7 +5663,7 @@ files are created from it:
   * http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps: PostScript version of
     the pkgsrc guide.
 
-D.2. Procedure
+4.2. Procedure
 
 The procedure to edit the pkgsrc guide is:
 
