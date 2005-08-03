@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10761 2005/08/03 12:48:55 tonio Exp $
+$NetBSD: CHANGES,v 1.10762 2005/08/03 13:43:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3513,3 +3513,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/blender to 2.37a [adam 2005-08-03]
 	Updated net/unison to 2.12.0 [tonio 2005-08-03]
 	Updated net/unison-devel to 2.13.0 [tonio 2005-08-03]
+	Updated math/qalculate to 0.8.1.1 [adam 2005-08-03]
+	Added math/qalculate-gtk version 0.8.1 [adam 2005-08-03]
+	Added math/qalculate-kde version 0.8.1.1 [adam 2005-08-03]
