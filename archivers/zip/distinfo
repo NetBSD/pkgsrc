@@ -1,16 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/03/28 18:08:12 wiz Exp $
+$NetBSD: distinfo,v 1.7 2005/08/03 18:54:31 wiz Exp $
 
-SHA1 (zip23.tar.gz) = 0600c93218e6acf1be75dd79da4244eabc8e16cf
-RMD160 (zip23.tar.gz) = e84f0ec91807e7f213ba28bac51499b9995191b9
-Size (zip23.tar.gz) = 723283 bytes
-SHA1 (zcrypt29.zip) = 04223ea88ba3cf5d0f8d6a5fc9c1a4cd8c568f56
-RMD160 (zcrypt29.zip) = 701aa47d910b76c85a868b343912ebd2d849bdc3
-Size (zcrypt29.zip) = 20248 bytes
-SHA1 (patch-aa) = c667d263bbc87e3f3daf7c80f68b915ac2706c9c
-SHA1 (patch-ab) = ce481fbcf0d4c602e64251b0bc6a1c0dbc17578c
-SHA1 (patch-ac) = 7454650d1c9252a7062c9d9225cd47064dc167b5
-SHA1 (patch-ad) = 3204a7769d0ba73b0eae5de3292e30bf23f485d3
-SHA1 (patch-ae) = 7cb6cddb875af63dac6cfd9fe03b785f55f442ff
-SHA1 (patch-af) = 0c52e3619b304993ae190112e99b58235c283d0e
-SHA1 (patch-ag) = 2249ed52aa9c1f2bad5ef284247a031264b90f78
-SHA1 (patch-ah) = 99f2884b83747f1ed54a28b4284faa3be2e6b40f
+SHA1 (zip231.tar.gz) = 34ba126eb3344b0a35ee1a00fff9639994c7aba4
+RMD160 (zip231.tar.gz) = 4b58e5b4b00ce03ff47b967f4f4c32b205b67751
+Size (zip231.tar.gz) = 781641 bytes
+SHA1 (patch-ah) = 1591f12b9b8593b7a51e0dde865c05f92fed61b0
