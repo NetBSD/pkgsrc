@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.2.2 2005/08/03 23:15:40 salo Exp $
+
+--- msfweb.orig	2005-08-03 21:12:33.000000000 +0100
++++ msfweb	2005-08-03 21:04:52.000000000 +0100
+@@ -616,7 +616,18 @@
+     my $res = {};
+     
+     foreach (keys(%{$state})) {
+-        if (m/^OPT\_(.*)/ && defined($state->{$_})) { $res->{$1} = $state->{$_} }
++        if (m/^OPT\_(.*)/ && defined($state->{$_})) {
++			my $name = $1;
++			
++			# Block all options starting with underscore (thanks Dino!)
++			if ($name !~ /^_/) {
++				$res->{$name} = $state->{$_};
++			}
++			else {
++				# XXX - report a possible "refang" attack?
++				next;
++			}
++		}
+     }
+     return $res;
+ }
