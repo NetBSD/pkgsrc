@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/30 16:31:40 salo Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/03 03:22:05 grant Exp $
 #
 
 DISTNAME=	libmatroska-0.7.7
@@ -23,7 +23,7 @@ BUILD_TARGET=	staticlib
 INSTALL_TARGET=	install_headers install_staticlib
 TEST_TARGET=	test
 
-ONLY_FOR_COMPILER=	gcc
+ONLY_FOR_COMPILER=	gcc icc
 
 .include "../../devel/libebml/buildlink3.mk"
 
