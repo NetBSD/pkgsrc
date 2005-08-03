@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3788 2005/08/03 19:44:35 xtraeme Exp $
+$NetBSD: TODO,v 1.3789 2005/08/03 21:43:42 recht Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,6 @@ Suggested package updates
 	o dirdiff-2.0
 	o dmalloc-5.4.2
 	o dnstracer-1.8
-	o doxygen-1.4.4
 	o dpkg-1.13.3
 	o drivel-2.0.2
 	o dvdrip-0.52.6
