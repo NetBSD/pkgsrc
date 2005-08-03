@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.10 2005/07/28 11:05:36 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.11 2005/08/03 16:34:19 wiz Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -130,13 +130,15 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
 
     <para>The second section contains information about separately
       downloaded patches, if any.
-      <itemizedlist><varname>PATCHFILES</varname>
-	Name(s) of additional files that contain distribution patches.
-	There is no default. pkgsrc will look for them at
-	<varname>PATCH_SITES</varname>.
-	They will automatically be uncompressed before patching if
-	the names end with <filename>.gz</filename> or
-	<filename>.Z</filename>.
+      <itemizedlist>
+	<listitem><para><varname>PATCHFILES</varname>
+	  Name(s) of additional files that contain distribution patches.
+	  There is no default. pkgsrc will look for them at
+	  <varname>PATCH_SITES</varname>.
+	  They will automatically be uncompressed before patching if
+	  the names end with <filename>.gz</filename> or
+	  <filename>.Z</filename>.</para>
+	</listitem>
 	<listitem><para><varname>PATCH_SITES</varname>:
 	  Primary location(s) for distribution patch files (see
 	  <varname>PATCHFILES</varname> below) if not found locally.</para>
@@ -180,6 +182,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
 	    subdirectory.</para>
 	</listitem>
       </itemizedlist>
+    </para>
     <para>Please pay attention to the following gotchas:</para>
 
     <itemizedlist>
@@ -388,7 +391,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
       <varname>WRKDIR</varname>. It can be removed by running
       <command>make clean</command>. Besides the sources, this
       directory is also used to keep various timestamp files.
-      The directory gets <note>removed completely</note> on clean.
+      The directory gets <emphasis>removed completely</emphasis> on clean.
       The default is <filename>${.CURDIR}/work</filename>
       or <filename>${.CURDIR}/work.${MACHINE_ARCH}</filename>
       if <varname>OBJMACHINE</varname> is set.</para>
