@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10772 2005/08/03 20:40:28 adrianp Exp $
+$NetBSD: CHANGES,v 1.10773 2005/08/03 20:46:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3527,3 +3527,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/zip to 2.31 [wiz 2005-08-03]
 	Updated x11/gtk2 to 2.6.9 [xtraeme 2005-08-03]
 	Updated security/msf to 2.4nb2 [adrianp 2005-08-03]
+	Updated lang/clisp to 2.33.2nb1 [wiz 2005-08-03]
