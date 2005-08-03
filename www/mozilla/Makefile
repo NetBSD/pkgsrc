@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.146 2005/07/24 06:59:31 taya Exp $
+# $NetBSD: Makefile,v 1.147 2005/08/03 14:30:50 taya Exp $
 
 MOZILLA=	mozilla
 MOZILLA_BIN=	mozilla-bin
-MOZ_VER=	1.7.10
+MOZ_VER=	1.7.11
 EXTRACT_SUFX=	.tar.bz2
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-#DISTFILES+=    mozilla-source-1.7.3-libart_lgpl.tar.bz2
-#SITES_mozilla-source-1.7.3-libart_lgpl.tar.bz2=${MASTER_SITE_LOCAL}
+DISTFILES+=    mozilla-source-1.7.3-libart_lgpl.tar.bz2
+SITES_mozilla-source-1.7.3-libart_lgpl.tar.bz2=${MASTER_SITE_LOCAL}
 
 COMMENT=	Full featured gecko-based browser
 
