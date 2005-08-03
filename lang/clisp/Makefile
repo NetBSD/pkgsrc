@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2005/08/03 20:46:16 wiz Exp $
 
 DISTNAME=		clisp-2.33.2
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 EXTRACT_SUFX=		.tar.bz2
@@ -33,7 +34,11 @@ do-configure:
 		${CONFIGURE_SCRIPT} --host=${MACHINE_GNU_PLATFORM} \
 			--prefix=${PREFIX}) && \
 	./makemake --prefix=${PREFIX} --with-readline --with-gettext \
-		--with-dynamic-ffi --fsstnd=netbsd >Makefile
+		--with-dynamic-ffi --fsstnd=netbsd >Makefile && \
+	${MV} Makefile Makefile.patch && \
+	${SED} -e 's/MODULES =/MODULES = syscalls regexp pcre wildcard/g' \
+		< Makefile.patch > Makefile && \
+	${RM} Makefile.patch
 
 pre-build:
 	cd ${WRKSRC}/avcall && ${MAKE}
@@ -42,5 +47,6 @@ pre-build:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
