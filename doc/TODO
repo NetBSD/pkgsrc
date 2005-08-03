@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3786 2005/08/03 17:48:11 wiz Exp $
+$NetBSD: TODO,v 1.3787 2005/08/03 17:49:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -999,7 +999,7 @@ Suggested package updates
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
 	o smokeping-1.38
-	o snd-7.14
+	o snd-7.14.1
 	o snes9x-1.43
 	o snownews-1.5.7
 	o source-highlight-2.1
