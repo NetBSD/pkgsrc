@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/03 13:41:24 adam Exp $
+bin/qalculate-kde
+share/kde/applnk/Utilities/qalculate_kde.desktop
+share/kde/apps/qalculate_kde/qalculate_kdeui.rc
+share/kde/doc/HTML/en/qalculate_kde/calculation-history.png
+share/kde/doc/HTML/en/qalculate_kde/calculator-buttons.png
+share/kde/doc/HTML/en/qalculate_kde/common
+share/kde/doc/HTML/en/qalculate_kde/completion.png
+share/kde/doc/HTML/en/qalculate_kde/convert-number-bases.png
+share/kde/doc/HTML/en/qalculate_kde/convert-unit.png
+share/kde/doc/HTML/en/qalculate_kde/edit-function.png
+share/kde/doc/HTML/en/qalculate_kde/edit-matrix.png
+share/kde/doc/HTML/en/qalculate_kde/edit-unit.png
+share/kde/doc/HTML/en/qalculate_kde/function-manager.png
+share/kde/doc/HTML/en/qalculate_kde/functions.docbook
+share/kde/doc/HTML/en/qalculate_kde/gnuplot.png
+share/kde/doc/HTML/en/qalculate_kde/import-csv.png
+share/kde/doc/HTML/en/qalculate_kde/index.cache.bz2
+share/kde/doc/HTML/en/qalculate_kde/index.docbook
+share/kde/doc/HTML/en/qalculate_kde/insert-function.png
+share/kde/doc/HTML/en/qalculate_kde/mainwindow.png
+share/kde/doc/HTML/en/qalculate_kde/plot-data.png
+share/kde/doc/HTML/en/qalculate_kde/plot-range.png
+share/kde/doc/HTML/en/qalculate_kde/plot-settings.png
+share/kde/doc/HTML/en/qalculate_kde/store-variable.png
+share/kde/doc/HTML/en/qalculate_kde/unit-manager.png
+share/kde/doc/HTML/en/qalculate_kde/units.docbook
+share/kde/doc/HTML/en/qalculate_kde/variable-manager.png
+share/kde/doc/HTML/en/qalculate_kde/variables.docbook
+share/kde/icons/hicolor/16x16/apps/qalculate_kde.png
+share/kde/icons/hicolor/32x32/apps/qalculate_kde.png
+share/kde/locale/sv/LC_MESSAGES/qalculate_kde.mo
+@dirrm share/kde/doc/HTML/en/qalculate_kde
+@dirrm share/kde/apps/qalculate_kde
