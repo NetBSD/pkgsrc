@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10766 2005/08/03 16:55:43 tron Exp $
+$NetBSD: CHANGES,v 1.10767 2005/08/03 17:20:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3521,3 +3521,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added www/ap2-suphp version 0.6.0 [rillig 2005-08-03]
 	Updated devel/glib2 to 2.6.6 [xtraeme 2005-08-03]
 	Updated www/firefox to 1.0.6 [tron 2005-08-03]
+	Updated mail/rss2email to 2.55 [schmonz 2005-08-03]
