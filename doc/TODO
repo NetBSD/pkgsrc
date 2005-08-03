@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3784 2005/08/03 16:51:37 xtraeme Exp $
+$NetBSD: TODO,v 1.3785 2005/08/03 17:31:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -953,7 +953,6 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rpm-4.1
 	o rsnapshot-1.2.1 [or rsnapshot-1.1.7]
-	o rsync-2.6.6
 	o rt-3.4.1
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
