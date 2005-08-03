@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:58:08 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/03 17:19:26 schmonz Exp $
 #
 
 DISTNAME=		rss2email-${RVER}
@@ -13,14 +13,14 @@ COMMENT=		Get RSS feeds emailed to you
 
 DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 
-RVER=			2.54
-HVER=			2.21
+RVER=			2.55
+HVER=			2.23
 
 SITES_html2text-${HVER}.py=	http://www.aaronsw.com/2002/html2text/
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	*.py
 
 SUBST_CLASSES+=		bin
