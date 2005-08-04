@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/04 13:27:18 xtraeme Exp $
 #
 
-DISTNAME=		skype_staticQT-1.0.0.20
+DISTNAME=		skype_staticQT-1.2.0.11
 PKGNAME=		${DISTNAME:S/_staticQT//}
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
@@ -15,6 +15,7 @@ COMMENT=		P2P VoIP software
 
 .if ${OPSYS} != "Linux"
 DEPENDS+=	suse_base>=9.1:../../emulators/suse91_base
+DEPENDS+=	suse_glx>=9.1:../../emulators/suse91_glx
 DEPENDS+=	suse_fontconfig>=9.1:../../emulators/suse91_fontconfig
 DEPENDS+=	suse_freetype2>=9.1:../../emulators/suse91_freetype2
 DEPENDS+=	suse_x11>=9.1:../../emulators/suse91_x11
@@ -28,6 +29,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 NO_CONFIGURE=		yes
 CHECK_SHLIBS=		no
 USE_DIRS+=		xdg-1.1
+WRKSRC=			${WRKDIR}/${PKGNAME}
 
 RESTRICTED=             "Redistribution not allowed yet."
 NO_SRC_ON_CDROM=        ${RESTRICTED}
