@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.52 2005/08/04 22:37:01 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.53 2005/08/04 23:35:51 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -159,3 +159,9 @@ Pullup ticket 640 - requested by Grant Beattie
 portability fix for cvsps
 Pullup ticket 641 - requested by Grant Beattie
 portability fix for cssc
+Pullup ticket 642 - requested by Grant Beattie
+portability fix for rss2html
+Pullup ticket 647 - requeste by Grant Beattie
+portability fix for ipw
+Pullup ticket 648 - requested by Grant Beattie
+portability fix for ishell
