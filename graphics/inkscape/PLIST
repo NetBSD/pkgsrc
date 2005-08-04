@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/07/28 13:52:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/08/04 10:55:25 adam Exp $
 bin/inkscape
 bin/inkview
 man/fr/man1/inkscape.1
@@ -221,4 +221,3 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/inkscape.mo
 @dirrm share/inkscape/examples
 @dirrm share/inkscape/clipart
 @dirrm share/inkscape
-@dirrm lib/inkscape
