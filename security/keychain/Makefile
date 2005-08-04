@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2005/02/01 18:40:28 martti Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/04 10:50:43 martti Exp $
 
-DISTNAME=	keychain-2.5.1
+DISTNAME=	keychain-2.5.5
 CATEGORIES=	security
 MASTER_SITES=	http://www.ibiblio.org/pub/linux/distributions/gentoo/distfiles/
 EXTRACT_SUFX=	.tar.bz2
