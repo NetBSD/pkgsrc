@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10778 2005/08/04 07:53:26 hiramatsu Exp $
+$NetBSD: CHANGES,v 1.10779 2005/08/04 10:00:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3531,3 +3531,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/doxygen to 1.4.4 [recht 2005-08-03]
 	Updated chat/jabberd to 2.0s9 [xtraeme 2005-08-03]
 	Updated devel/p5-IO-Util to 1.48 [hiramatsu 2005-08-04]
+	Updated fonts/t1lib to 5.1.0 [adam 2005-08-04]
