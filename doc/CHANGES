@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10781 2005/08/04 10:42:21 adam Exp $
+$NetBSD: CHANGES,v 1.10782 2005/08/04 10:50:53 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3534,3 +3534,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fonts/t1lib to 5.1.0 [adam 2005-08-04]
 	Updated sysutils/mc to 4.6.1 [rillig 2005-08-04]
 	Updated games/zoom to 1.0.3 [adam 2005-08-04]
+	Updated security/keychain to 2.5.5 [martti 2005-08-04]
