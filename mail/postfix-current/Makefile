@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/04/11 21:46:22 tv Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2005/08/04 22:13:30 salo Exp $
 
 DISTNAME=	postfix-2.2-20040628
 PKGREVISION=	1
@@ -27,7 +27,7 @@ POSTFIX_QUEUE_DIR?=	${VARBASE}/spool/postfix
 # AUXLIBS is a list of options to pass to the linker.
 #
 CCARGS=		# empty
-AUXLIBS=	# empty
+AUXLIBS=	${LDFLAGS}
 FIX_RPATH+=	AUXLIBS
 
 # Set some default paths to override ${WRKSRC}/src/global/mail_params.h.
