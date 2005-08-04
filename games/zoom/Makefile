@@ -1,24 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2005/07/16 01:19:10 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.15 2005/08/04 10:40:38 adam Exp $
 
-DISTNAME=	zoom-1.0.1
-PKGNAME=	${DISTNAME}a
-PKGREVISION=	3
+DISTNAME=	zoom-1.0.3
 CATEGORIES=	games
-MASTER_SITES=	http://www.logicalshift.demon.co.uk/unix/zoom/
-
-PATCH_SITES=		http://www.logicalshift.demon.co.uk/unix/zoom/
-PATCHFILES=		zoom-1.0.1-1.0.1a.patch
-PATCH_DIST_STRIP=	-p1
+MASTER_SITES=	http://www.logicalshift.co.uk/unix/zoom/
 
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://www.logicalshift.demon.co.uk/unix/zoom/
 COMMENT=		Plays Infocom-compatible games, with graphics support
 
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl
+GNU_CONFIGURE=		yes
 
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		3.0
@@ -37,6 +30,7 @@ post-install:
 	done
 
 .include "../../fonts/Xft2/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
