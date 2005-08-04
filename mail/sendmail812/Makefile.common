@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/08/01 14:54:33 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/08/04 12:30:59 wiz Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -14,9 +14,9 @@ HOMEPAGE=	http://www.sendmail.org/
 
 LICENSE=	no-profit
 
-DISTINFO_FILE?=	${.CURDIR}/../../mail/sendmail812/distinfo
-FILESDIR?=	${.CURDIR}/../../mail/sendmail812/files
-PATCHDIR?=	${.CURDIR}/../../mail/sendmail812/patches
+DISTINFO_FILE=	${.CURDIR}/../../mail/sendmail812/distinfo
+FILESDIR=	${.CURDIR}/../../mail/sendmail812/files
+PATCHDIR=	${.CURDIR}/../../mail/sendmail812/patches
 
 DIST_VERS=	8.12.11
 
