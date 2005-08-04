@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.16 2005/06/01 14:14:47 abs Exp $
+# $Id: pkg_chk.sh,v 1.17 2005/08/04 17:55:51 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -87,15 +87,12 @@ extract_make_vars()
 
 # $1 = name of variable
 # $2 = default value
-extract_mk_dir_var()
+extract_mk_var()
     {
     if [ -z "`eval echo \\$$1`" ] ; then
 	eval $(printf "BSD_PKG_MK=1\n.PHONY: x\nx:\n\t@echo $1="'$'"{$1}\n" | ${MAKE} -f - -f $MAKECONF x)
 	if [ -z "`eval echo \\$$1`" ]; then
 	    eval "$1=$2"
-	fi
-	if [ ! -d `eval echo \\$$1` ];then
-	    fatal "Unable to locate $1 `eval echo \\$$1`"
 	fi
     fi
     }
@@ -130,8 +127,14 @@ extract_pkg_vars()
 
 extract_variables()
     {
-    extract_mk_dir_var PKGSRCDIR /usr/pkgsrc
-    extract_mk_dir_var PKG_DBDIR /var/db/pkg
+    extract_mk_var PKGSRCDIR /usr/pkgsrc
+    if [ ! -d $PKGSRCDIR -a ! $opt_b ] ; then
+	fatal "Unable to locate PKGSRCDIR ($PKGSRCDIR)"
+    fi
+    extract_mk_var PKG_DBDIR /var/db/pkg
+    if [ ! -d $PKG_DBDIR ] ; then
+	fatal "Unable to locate PKG_DBDIR ($PKG_DBDIR)"
+    fi
 
     # Now we have PKGSRCDIR, use it to determine PACKAGES, and PKGCHK_CONF
     # as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
@@ -278,7 +281,14 @@ pkgdirs_from_conf()
 
     # Determine list of tags
     #
-    extract_make_vars Makefile OPSYS OS_VERSION MACHINE_ARCH
+    if [ $PKGSRCDIR = NONE ]; then
+	OPSYS=$(uname -s)
+	OS_VERSION=$(uname -r)
+	MACHINE_ARCH=$(uname -p)
+    else
+	extract_make_vars Makefile OPSYS OS_VERSION MACHINE_ARCH
+    fi
+
     TAGS="$(hostname | ${SED} -e 's,\..*,,'),$(hostname),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
     if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
@@ -566,14 +576,16 @@ fi
 saved_PKG_PATH=$PKG_PATH
 unset PKG_PATH || true
 
-test -n "$AWK"      || AWK="@AWK@"
-test -n "$GREP"     || GREP="@GREP@"
-test -n "$MAKE"     || MAKE="@MAKE@"
-test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
-test -n "$PKG_INFO" || PKG_INFO="@PKG_INFO@"
-test -n "$SED"      || SED="@SED@"
-test -n "$SORT"	    || SORT="@SORT@"
-test -n "$TSORT"    || TSORT="@TSORT@"
+test -n "$AWK"        || AWK="@AWK@"
+test -n "$GREP"       || GREP="@GREP@"
+test -n "$MAKE"       || MAKE="@MAKE@"
+test -n "$MAKECONF"   || MAKECONF="@MAKECONF@"
+test -n "$PKG_ADD"    || PKG_ADD="@PKG_ADD@"
+test -n "$PKG_DELETE" || PKG_DELETE="@PKG_DELETE@"
+test -n "$PKG_INFO"   || PKG_INFO="@PKG_INFO@"
+test -n "$SED"        || SED="@SED@"
+test -n "$SORT"	      || SORT="@SORT@"
+test -n "$TSORT"      || TSORT="@TSORT@"
 
 if [ ! -f $MAKECONF ] ; then
     if [ -f /etc/mk.conf ] ; then
@@ -636,9 +648,6 @@ if [ -n "$opt_b" -a -z "$opt_s" -a -d $PACKAGES ] ; then
 	PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
     done
 fi
-
-cd $PKGSRCDIR
-real_pkgsrcdir=$(pwd)
 
 if [ -n "$opt_g" ]; then
     verbose "Write $PKGCHK_CONF based on installed packages"
