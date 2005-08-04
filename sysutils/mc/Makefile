@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.58 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2005/08/04 10:12:06 rillig Exp $
 
-DISTNAME=	mc-4.6.1-pre4
-PKGNAME=	mc-4.6.1rc4.1
+DISTNAME=	mc-4.6.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://pavelsh.pp.ru/mc/
-#MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
-#		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}
+MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/ \
+		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}
 
 MAINTAINER=	pavel.arnost@clnet.cz
 HOMEPAGE=	http://www.ibiblio.org/mc/
 COMMENT=	User-friendly file manager and visual shell
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 
 # see options.mk for an explanation of these options

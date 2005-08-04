@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.mcedit,v 1.3 2005/03/22 15:29:53 wiz Exp $
+@comment $NetBSD: PLIST.mcedit,v 1.4 2005/08/04 10:12:06 rillig Exp $
 bin/mcedit
 share/mc/syntax/Syntax
 share/mc/syntax/ada95.syntax
@@ -12,11 +12,13 @@ share/mc/syntax/dos.syntax
 share/mc/syntax/eiffel.syntax
 share/mc/syntax/fortran.syntax
 share/mc/syntax/html.syntax
+share/mc/syntax/idl.syntax
 share/mc/syntax/java.syntax
 share/mc/syntax/js.syntax
 share/mc/syntax/latex.syntax
 share/mc/syntax/lisp.syntax
 share/mc/syntax/lsm.syntax
+share/mc/syntax/lua.syntax
 share/mc/syntax/m4.syntax
 share/mc/syntax/mail.syntax
 share/mc/syntax/makefile.syntax
