@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10785 2005/08/04 12:05:30 rillig Exp $
+$NetBSD: CHANGES,v 1.10786 2005/08/04 12:36:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3520,7 +3520,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/mozilla-gtk2 to 1.7.11 [taya 2005-08-03]
 	Added www/ap2-suphp version 0.6.0 [rillig 2005-08-03]
 	Updated devel/glib2 to 2.6.6 [xtraeme 2005-08-03]
-	Updated www/firefox to 1.0.6 [tron 2005-08-03]
+	Updated www/firefox to 1.0.6nb1 [tron 2005-08-03]
 	Updated mail/rss2email to 2.55 [schmonz 2005-08-03]
 	Updated net/rsync to 2.6.6 [wiz 2005-08-03]
 	Updated devel/pcre to 6.2 [wiz 2005-08-03]
