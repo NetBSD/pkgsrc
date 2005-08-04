@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10788 2005/08/04 13:29:14 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10789 2005/08/04 14:22:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3543,3 +3543,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/audit-packages to 1.38 [rillig 2005-08-04]
 	Updated math/octave-forge to 2005.06.13 [adam 2005-08-04]
 	Updated net/skype to 1.2.0.11 [xtraeme 2005-08-04]
+	Updated archivers/unzip to 5.52nb2 [tron 2005-08-04]
