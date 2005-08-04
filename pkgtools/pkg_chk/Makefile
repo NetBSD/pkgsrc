@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 14:14:47 abs Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/04 17:55:51 abs Exp $
 
-DISTNAME=	pkg_chk-1.59
+DISTNAME=	pkg_chk-1.60
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -29,9 +29,13 @@ do-build:
 	  -e 's#@GREP@#${GREP}#g' \
 	  -e 's#@MAKE@#${MAKE}#g' \
 	  -e 's#@MAKECONF@#${MAKECONF}#g' \
+	  -e 's#@PKG_ADD@#${PKG_ADD}#g' \
+	  -e 's#@PKG_DELETE@#${PKG_DELETE}#g' \
 	  -e 's#@PKG_INFO@#${PKG_INFO}#g' \
 	  -e 's#@SED@#${SED}#g' \
 	  -e 's#@SH@#${SH}#g' \
+	  -e 's#@SORT@#${SORT}#g' \
+	  -e 's#@TSORT@#${TSORT}#g' \
 	  ${FILESDIR}/pkg_chk.sh >${WRKSRC}/pkg_chk.sh
 
 do-install:
