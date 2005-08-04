@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2002/09/19 01:26:45 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2005/08/04 09:57:17 adam Exp $
 
---- doc/Makefile.in.orig	Wed Sep 18 18:17:56 2002
+--- doc/Makefile.in.orig	2004-12-13 02:35:16.000000000 +0000
 +++ doc/Makefile.in
 @@ -89,16 +89,6 @@ clean: dummy
  
@@ -8,13 +8,13 @@ $NetBSD: patch-aa,v 1.1 2002/09/19 01:26:45 jlam Exp $
  install: dummy
 -	if (test -f t1lib_doc.ps) \
 -	then \
--	  $(MKINSTALLDIRS) @T1LIB_DATA_DIR@/doc; \
--	  $(INSTALL_DATA) t1lib_doc.ps @T1LIB_DATA_DIR@/doc; \
+-	  $(MKINSTALLDIRS) $(DESTDIR)@T1LIB_DATA_DIR@/doc; \
+-	  $(INSTALL_DATA) t1lib_doc.ps $(DESTDIR)@T1LIB_DATA_DIR@/doc; \
 -	fi;
 -	if (test -f t1lib_doc.pdf) \
 -	then \
--	  $(MKINSTALLDIRS) @T1LIB_DATA_DIR@/doc; \
--	  $(INSTALL_DATA) t1lib_doc.pdf @T1LIB_DATA_DIR@/doc; \
+-	  $(MKINSTALLDIRS) $(DESTDIR)@T1LIB_DATA_DIR@/doc; \
+-	  $(INSTALL_DATA) t1lib_doc.pdf $(DESTDIR)@T1LIB_DATA_DIR@/doc; \
 -	fi;
  
  

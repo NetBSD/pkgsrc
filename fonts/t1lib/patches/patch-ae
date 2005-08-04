@@ -1,17 +1,16 @@
-$NetBSD: patch-ae,v 1.1 2004/06/19 14:38:56 markd Exp $
+$NetBSD: patch-ae,v 1.2 2005/08/04 09:57:17 adam Exp $
 
-diff -ur t1lib-5.0.2/lib/type1/fontfcn.c t1lib-5.0.1/lib/type1/fontfcn.c
---- t1lib-5.0.2/lib/type1/fontfcn.c	2004-03-06 14:41:40.000000000 +1300
-+++ lib/type1/fontfcn.c	2003-01-03 16:28:26.000000000 +1300
-@@ -57,6 +57,7 @@
- 			 float line_thickness,
- 			 float line_length,
- 			 float strokewidth);
-+extern  boolean Init_BuiltInEncoding( void);
+--- lib/type1/fontfcn.c.orig	2004-12-12 01:18:20.000000000 +0000
++++ lib/type1/fontfcn.c
+@@ -66,6 +66,7 @@ extern int T1int_Type1QuerySEAC( unsigne
+ 				 unsigned char* accent);
  void objFormatName(psobj *objP, int length, char *valueP);
    
++extern boolean Init_BuiltInEncoding(void);
  extern void T1io_reset( void);
-@@ -156,6 +157,7 @@
+ 
+ #define BEZIERTYPE 0x10+0x02
+@@ -163,6 +164,7 @@ boolean initFont()
  {
    if (!(vm_init())) return(FALSE);
    vm_base = vm_next_byte();
