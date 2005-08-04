@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:03 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/04 13:12:21 adam Exp $
 
-DISTNAME=	octave-forge-2004.11.16
-PKGREVISION=	1
+DISTNAME=	octave-forge-2005.06.13
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=octave/}
 
@@ -48,5 +47,4 @@ post-patch:
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/octave/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
