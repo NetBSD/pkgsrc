@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/04/09 19:53:09 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2005/08/04 13:27:18 xtraeme Exp $
 
-SHA1 (skype_staticQT-1.0.0.20.tar.bz2) = d4a4c0fee98188ce346d13d00a1a6bfe104d3346
-RMD160 (skype_staticQT-1.0.0.20.tar.bz2) = de5ce555e469f8939f65398225eaf600d81d3101
-Size (skype_staticQT-1.0.0.20.tar.bz2) = 8689836 bytes
+SHA1 (skype_staticQT-1.2.0.11.tar.bz2) = a911d0a7d660b432cf07c740a2eb1e4a68f12e97
+RMD160 (skype_staticQT-1.2.0.11.tar.bz2) = 107aa46230f731f01141e0103e34b9b1cbb6da94
+Size (skype_staticQT-1.2.0.11.tar.bz2) = 9605001 bytes
