@@ -160,8 +160,12 @@ pkgfind(const char *path, const char *pkg, int count)
 				continue;
 			if (search != NULL) {
 				(void)strncat(tmp, "/Makefile", sizeof(tmp));
-				if (getstring(tmp, search, &text) == 0)
-					continue;
+				if (getstring(tmp, search, &text) == 0) {
+					(void)strncat(tmp, ".common",
+						sizeof(tmp));
+					if (getstring(tmp, search, &text) == 0)
+						continue;
+				}
 			} else {
 				text = list[j]->d_name;
 			}
