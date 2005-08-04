@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.2.6.1 2005/08/04 22:28:25 salo Exp $
+
+--- sf-val.cc.orig	2004-10-10 22:19:16.000000000 +1000
++++ sf-val.cc
+@@ -109,6 +109,7 @@ sccs_file::validate_isomorphism() const
+ static bool
+ validate_substituted_flags_list(const mylist<char> entries)
+ {
++  return true;
+ }
+ 
+ 
