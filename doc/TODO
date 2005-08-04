@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3792 2005/08/04 13:29:14 xtraeme Exp $
+$NetBSD: TODO,v 1.3793 2005/08/04 15:24:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -670,7 +670,6 @@ Suggested package updates
 	o mplayer-plugin-firefox-2.85
 	o mrproject-0.9.1
 	o mserv-devel-0.41
-	o msmtp-1.4.3
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.6.0
