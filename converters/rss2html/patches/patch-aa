@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2.6.1 2005/08/04 23:22:42 salo Exp $
+
+--- src/Makefile.orig	2004-11-28 07:57:28.000000000 +1100
++++ src/Makefile
+@@ -5,7 +5,7 @@ CFLAGS+=-DVERSION=\"${VERSION}\"
+ OBJ=main.o rsslist.o config.o rssshow.o download.o
+ 
+ all: ${OBJ}
+-	$(CC) ${CFLAGS} ${OBJ} -o ${BIN}
++	$(CC) ${CFLAGS} ${OBJ} ${LDFLAGS} ${LIBS} -o ${BIN}
+ 
+ clean:
+ 	rm -f ${BIN} ${OBJ}
