@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2005/06/01 18:02:57 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/08/04 21:31:24 cube Exp $
 
 DISTNAME=	povray-3.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.povray.org/pub/povray/Official/Unix/ \
 	 	ftp://ftp.mirror.ac.uk/sites/ftp.povray.org/pub/povray/Official/Unix/
@@ -13,12 +13,20 @@ COMMENT=	Persistence of Vision Ray Tracer
 
 LICENSE=	povray-license
 
+BUILDLINK_DEPENDS.zlib=	zlib>=1.2.1
+
 USE_LANGUAGES=		c c++
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-strip
 CONFIGURE_ENV+=		COMPILED_BY="The NetBSD Packages Collection"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == x86_64
+GCC_REQD=	3.4
+.endif
 
 PLIST_SUBST+=	POVRAY=povray-3.6
 
@@ -35,6 +43,7 @@ SUBST_STAGE.povini=	post-patch
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/povray-3.6/scripts
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
