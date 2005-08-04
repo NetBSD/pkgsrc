@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10776 2005/08/04 00:52:21 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10777 2005/08/04 03:25:26 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3529,4 +3529,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/msf to 2.4nb2 [adrianp 2005-08-03]
 	Updated lang/clisp to 2.33.2nb1 [wiz 2005-08-03]
 	Updated devel/doxygen to 1.4.4 [recht 2005-08-03]
-	Updated jabberd to 2.0s9 [xtraeme 2005-08-03]
+	Updated chat/jabberd to 2.0s9 [xtraeme 2005-08-03]
