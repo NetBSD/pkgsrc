@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10790 2005/08/04 15:24:35 adam Exp $
+$NetBSD: CHANGES,v 1.10791 2005/08/04 17:56:36 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3545,3 +3545,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/skype to 1.2.0.11 [xtraeme 2005-08-04]
 	Updated archivers/unzip to 5.52nb2 [tron 2005-08-04]
 	Updated mail/msmtp to 1.4.3 [adam 2005-08-04]
+	Updated pkgtools/pkg_chk to 1.60 [abs 2005-08-04]
