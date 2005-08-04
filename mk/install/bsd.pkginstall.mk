@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.5 2005/07/29 21:41:04 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.6 2005/08/04 15:03:39 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -12,6 +12,21 @@
 BSD_PKG_INSTALL_MK=	1
 
 .include "../../mk/bsd.prefs.mk"
+
+# The Solaris /bin/sh does not know the ${foo#bar} shell substitution.
+# This shell function serves a similar purpose, but is specialized on
+# stripping ${PREFIX}/ from a pathname. 
+_FUNC_STRIP_PREFIX= \
+	strip_prefix() {						\
+	  { echo "$$1"; echo ${PREFIX:Q}/; }				\
+	  | ${AWK} 'NR==1 { s=$$0 } NR==2 { prefix=$$0 }		\
+	    END { plen = length(prefix);				\
+	      if (substr(s, 1, plen) == prefix) {			\
+	        s = substr(s, 1 + plen, length(s) - plen);		\
+	      }								\
+	      print s;							\
+	    }';								\
+	}
 
 DEINSTALL_FILE=		${PKG_DB_TMPDIR}/+DEINSTALL
 INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
@@ -182,6 +197,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_PERMS_FILE}
 
 ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	${_FUNC_STRIP_PREFIX};						\
 	eval set -- ${SPECIAL_PERMS} ;					\
 	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-perms";				\
@@ -199,7 +215,7 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	while ${TEST} $$# -gt 0; do					\
 		file="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
-		file="$${file#${PREFIX}/}";				\
+		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# PERMS: $$file $$mode $$owner $$group";	\
 	done;								\
 	${ECHO} "EOF_PERMS";						\
@@ -255,6 +271,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
 
 ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	${_FUNC_STRIP_PREFIX};						\
 	eval set -- ${CONF_FILES} ${SUPPORT_FILES} ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS} ;	\
 	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-files";				\
@@ -272,16 +289,16 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
 		shift; shift;						\
-		egfile="$${egfile#${PREFIX}/}";				\
-		file="$${file#${PREFIX}/}";				\
+		egfile=`strip_prefix "$$egfile"`;			\
+		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
 	done;								\
 	eval set -- ${SUPPORT_FILES} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
 		shift; shift;						\
-		egfile="$${egfile#${PREFIX}/}";				\
-		file="$${file#${PREFIX}/}";				\
+		egfile=`strip_prefix "$$egfile"`;			\
+		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile ${SUPPORT_FILES_MODE}"; \
 	done;								\
 	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS} ;	\
@@ -289,8 +306,8 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		egfile="$$1"; file="$$2";				\
 		owner="$$3"; group="$$4"; mode="$$5";			\
 		shift; shift; shift; shift; shift;			\
-		egfile="$${egfile#${PREFIX}/}";				\
-		file="$${file#${PREFIX}/}";				\
+		egfile=`strip_prefix "$$egfile"`;			\
+		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
 	done;								\
 	${ECHO} "EOF_FILES";						\
@@ -361,6 +378,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_DIRS_FILE}
 
 ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	${_FUNC_STRIP_PREFIX};						\
 	eval set -- ${PKG_SYSCONFSUBDIR} ${CONF_FILES} ${CONF_FILES_PERMS} ${SUPPORT_FILES} ${SUPPORT_FILES_PERMS} ${RCD_SCRIPTS} ${MAKE_DIRS} ${OWN_DIRS} ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS} ; \
 	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-dirs";				\
@@ -385,27 +403,27 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	eval set -- ${MAKE_DIRS} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
-		dir="$${dir#${PREFIX}/}";				\
+		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m";				\
 	done;								\
 	eval set -- ${OWN_DIRS} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
-		dir="$${dir#${PREFIX}/}";				\
+		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo";				\
 	done;								\
 	eval set -- ${MAKE_DIRS_PERMS} ;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
-		dir="$${dir#${PREFIX}/}";				\
+		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
 	done;								\
 	eval set -- ${OWN_DIRS_PERMS} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
-		dir="$${dir#${PREFIX}/}";				\
+		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo $$owner $$group $$mode";	\
 	done;								\
 	${ECHO} "EOF_DIRS";						\
@@ -428,6 +446,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_SHELL_FILE}
 
 ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
+	${_FUNC_STRIP_PREFIX};						\
 	eval set -- ${PKG_SHELL} ;					\
 	${TEST} $$# -gt 0 || exit 0;					\
 	${ECHO} "# start of install-shell";				\
@@ -442,7 +461,7 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	eval set -- ${PKG_SHELL} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		i="$$1"; shift;						\
-		i="$${i#${PREFIX}/}";					\
+		i=`strip_prefix "$$i"`;					\
 		${ECHO} "# SHELL: $$i";					\
 	done;								\
 	${ECHO} "EOF_SHELL";						\
