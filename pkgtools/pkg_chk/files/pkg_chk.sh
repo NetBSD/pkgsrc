@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.17 2005/08/04 17:55:51 abs Exp $
+# $Id: pkg_chk.sh,v 1.18 2005/08/04 18:01:37 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -647,6 +647,7 @@ if [ -n "$opt_b" -a -z "$opt_s" -a -d $PACKAGES ] ; then
 	PKGNAME=`echo $f | ${SED} 's/\.tgz$//'`
 	PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
     done
+    PKGSRCDIR=NONE
 fi
 
 if [ -n "$opt_g" ]; then
