@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2005/08/04 10:32:01 rillig Exp $
+# $NetBSD: Makefile,v 1.62 2005/08/04 21:11:48 rillig Exp $
 
 DISTNAME=	mc-4.6.1
 CATEGORIES=	sysutils
@@ -15,7 +15,7 @@ USE_PKGLOCALEDIR=	YES
 # see options.mk for an explanation of these options
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
 PKG_SUPPORTED_OPTIONS=	charset edit glib12 ncurses samba slang subshell vfs x11
-PKG_SUGGESTED_OPTIONS=	charset edit glib12               slang subshell vfs
+PKG_SUGGESTED_OPTIONS=	charset edit                      slang subshell vfs
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
