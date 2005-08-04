@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/01/20 05:16:58 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/08/04 11:17:04 drochner Exp $
 ${PYSITELIB}/_ldap.so
 ${PYSITELIB}/dsml.py
 ${PYSITELIB}/dsml.pyc
@@ -12,6 +12,12 @@ ${PYSITELIB}/ldap/async.pyo
 ${PYSITELIB}/ldap/cidict.py
 ${PYSITELIB}/ldap/cidict.pyc
 ${PYSITELIB}/ldap/cidict.pyo
+${PYSITELIB}/ldap/controls.py
+${PYSITELIB}/ldap/controls.pyc
+${PYSITELIB}/ldap/controls.pyo
+${PYSITELIB}/ldap/dn.py
+${PYSITELIB}/ldap/dn.pyc
+${PYSITELIB}/ldap/dn.pyo
 ${PYSITELIB}/ldap/filter.py
 ${PYSITELIB}/ldap/filter.pyc
 ${PYSITELIB}/ldap/filter.pyo
