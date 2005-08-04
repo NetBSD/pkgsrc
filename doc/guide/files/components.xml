@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.11 2005/08/03 16:34:19 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.12 2005/08/04 17:38:06 gdt Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -282,6 +282,12 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
     <para>When you have finished a package, remember to generate the checksums
       for the patch files by using the <command>make makepatchsum</command>
       command, see <xref linkend="components.distinfo"/>.</para>
+
+    <para>When adding a patch that corrects a problem in the distfile (rather
+      than e.g. enforcing pkgsrc's view of where man pages should go), send
+      the patch as a bug report to the maintainer.  This benefits
+      non-pkgsrc users of the package, and usually enables removing
+      the patch in future version.</para>
 
     <para>Patch files that are distributed by the author or other
       maintainers can be listed in
