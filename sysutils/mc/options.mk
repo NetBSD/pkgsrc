@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/08/04 10:17:13 rillig Exp $
+# $NetBSD: options.mk,v 1.5 2005/08/04 10:32:01 rillig Exp $
 #
 
 ### The charset option enables input/display support for various 8-bit
@@ -17,6 +17,15 @@ CONFIGURE_ARGS+=	--with-edit
 PLIST_SRC+=		${PKGDIR}/PLIST.mcedit
 .else
 CONFIGURE_ARGS+=	--without-edit
+.endif
+
+### On some systems where glib-2.0 does not build, glib-1.2 can be used
+### instead.
+.if !empty(PKG_OPTIONS:Mglib12)
+CONFIGURE_ARGS+=	--with-glib12
+.include "../../devel/glib/buildlink3.mk"
+.else
+.include "../../devel/glib2/buildlink3.mk"
 .endif
 
 ### Enable the Samba virtual file system. You can connect to Windows
