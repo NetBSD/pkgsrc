@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2005/07/21 09:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.178 2005/08/04 11:30:31 drochner Exp $
 #
 
 COMMENT=	Databases
@@ -40,6 +40,7 @@ SUBDIR+=	libgnomedb
 SUBDIR+=	libpqxx
 SUBDIR+=	libpqxx-doc
 SUBDIR+=	lua-sqlite
+SUBDIR+=	luma
 SUBDIR+=	mergeant
 SUBDIR+=	metakit-lib
 SUBDIR+=	myodbc
