@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.51 2005/08/04 15:22:28 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.52 2005/08/04 22:37:01 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -151,3 +151,11 @@ Pullup ticket 650 - requested by Shin'ichiro TAYA
 security update for mozilla
 Pullup ticket 654 - requested by Matthias Scheler
 security fix for unzip
+Pullup ticket 638 - requested by Grant Beattie
+portability fix for libmusepack
+Pullup ticket 639 - requested by Grant Beattie
+portability fix for postfix-current
+Pullup ticket 640 - requested by Grant Beattie
+portability fix for cvsps
+Pullup ticket 641 - requested by Grant Beattie
+portability fix for cssc
