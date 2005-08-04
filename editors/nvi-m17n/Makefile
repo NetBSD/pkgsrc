@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2005/07/12 20:27:58 kristerw Exp $
+# $NetBSD: Makefile,v 1.31 2005/08/04 01:39:08 taca Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.19991117
 PKGREVISION=	3
 CATEGORIES=	editors
-MASTER_SITES=	ftp://sleepy.vwh.net/pub/ \
-		ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
+MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
 
 PATCH_SITES=	ftp://lkbreth.foretune.co.jp/pub/tools/nvi-m17n/
 PATCHFILES=	nvi-1.79.m17n-19991117.diff.gz
