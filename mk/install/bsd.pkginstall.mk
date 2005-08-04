@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.6 2005/08/04 15:03:39 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.7 2005/08/04 16:54:53 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -142,8 +142,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_USERGROUP_FILE}
 
 ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
-	eval set -- ${PKG_GROUPS} ${PKG_USERS} ;			\
-	${TEST} $$# -gt 0 || exit 0;					\
+	${TEST} x${PKG_GROUPS:M*:Q}${PKG_USERS:M*:Q} != x || exit 0;	\
 	${ECHO} "# start of install-usergroup";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +USERGROUP script that reference counts users"; \
@@ -155,14 +154,12 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/usergroup;		\
 	${ECHO} "";							\
-	eval set -- ${PKG_GROUPS} ;					\
-	while ${TEST} $$# -gt 0; do					\
-		i="$$1"; shift;						\
+	pkg_groups=${PKG_GROUPS:Q};					\
+	for i in $$pkg_groups; do					\
 		${ECHO} "# GROUP: $$i";					\
 	done;								\
-	eval set -- ${PKG_USERS} ;					\
-	while ${TEST} $$# -gt 0; do					\
-		i="$$1"; shift;						\
+	pkg_users=${PKG_USERS:Q};					\
+	for i in $$pkg_users; do					\
 		${ECHO} "# USER: $$i";					\
 	done;								\
 	${ECHO} "EOF_USERGROUP";					\
@@ -198,8 +195,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_PERMS_FILE}
 ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
 	${_FUNC_STRIP_PREFIX};						\
-	eval set -- ${SPECIAL_PERMS} ;					\
-	${TEST} $$# -gt 0 || exit 0;					\
+	${TEST} x${SPECIAL_PERMS:M*:Q} != x || exit 0;			\
 	${ECHO} "# start of install-perms";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +PERMS script that sets the special";	\
@@ -272,8 +268,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
 ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
 	${_FUNC_STRIP_PREFIX};						\
-	eval set -- ${CONF_FILES} ${SUPPORT_FILES} ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS} ;	\
-	${TEST} $$# -gt 0 || exit 0;					\
+	${TEST} x${CONF_FILES:M*:Q}${SUPPORT_FILES:M*:Q}${CONF_FILES_PERMS:M*:Q}${SUPPORT_FILES_PERMS:M*:Q} != x || exit 0; \
 	${ECHO} "# start of install-files";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +FILES script that reference counts config"; \
@@ -285,6 +280,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${ECHO} "	\$${CAT} > ./+FILES << 'EOF_FILES'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
 	${ECHO} "";							\
+	if ${TEST} x${CONF_FILES:M*:Q} != x; then			\
 	eval set -- ${CONF_FILES} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
@@ -293,6 +289,8 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
 	done;								\
+	fi;								\
+	if ${TEST} x${SUPPORT_FILES:M*:Q} != x; then			\
 	eval set -- ${SUPPORT_FILES} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
@@ -301,6 +299,8 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile ${SUPPORT_FILES_MODE}"; \
 	done;								\
+	fi;								\
+	if ${TEST} x${CONF_FILES_PERMS:M*:Q}${SUPPORT_FILES_PERMS:M*:Q} != x; then \
 	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS} ;	\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
@@ -310,6 +310,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
 	done;								\
+	fi;								\
 	${ECHO} "EOF_FILES";						\
 	${ECHO} "	\$${CHMOD} +x ./+FILES";			\
 	${ECHO} "	;;";						\
@@ -324,8 +325,7 @@ INSTALL_UNPACK_TMPL+=		${INSTALL_RCD_SCRIPTS_FILE}
 
 ${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
-	eval set -- ${RCD_SCRIPTS} ;					\
-	${TEST} $$# -gt 0 || exit 0;					\
+	${TEST} x${RCD_SCRIPTS:M*:Q} != x || exit 0;			\
 	${ECHO} "# start of install-rcd-scripts";			\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +RCD_SCRIPTS script that reference counts config"; \
@@ -379,8 +379,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_DIRS_FILE}
 ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
 	${_FUNC_STRIP_PREFIX};						\
-	eval set -- ${PKG_SYSCONFSUBDIR} ${CONF_FILES} ${CONF_FILES_PERMS} ${SUPPORT_FILES} ${SUPPORT_FILES_PERMS} ${RCD_SCRIPTS} ${MAKE_DIRS} ${OWN_DIRS} ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS} ; \
-	${TEST} $$# -gt 0 || exit 0;					\
+	${TEST} x${PKG_SYSCONFSUBDIR:M*:Q}${CONF_FILES:M*:Q}${CONF_FILES_PERMS:M*:Q}${SUPPORT_FILES:M*:Q}${SUPPORT_FILES_PERMS:M*:Q}${RCD_SCRIPTS:M*:Q}${MAKE_DIRS:M*:Q}${OWN_DIRS:M*:Q}${MAKE_DIRS_PERMS:M*:Q}${OWN_DIRS_PERMS:M*:Q} != x || exit 0; \
 	${ECHO} "# start of install-dirs";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +DIRS script that reference counts directories"; \
@@ -400,18 +399,19 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	"")	;;							\
 	*)	${ECHO} "# DIR: ${RCD_SCRIPTS_DIR:S/${PREFIX}\///} m" ;; \
 	esac;								\
-	eval set -- ${MAKE_DIRS} ;					\
-	while ${TEST} $$# -gt 0; do					\
-		dir="$$1"; shift;					\
+	if ${TEST} x${MAKE_DIRS:M*:Q} != x; then			\
+	for dir in ${MAKE_DIRS}; do					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m";				\
 	done;								\
-	eval set -- ${OWN_DIRS} ;					\
-	while ${TEST} $$# -gt 0; do					\
-		dir="$$1"; shift;					\
+	fi;								\
+	if ${TEST} x${OWN_DIRS:M*:Q} != x; then				\
+	for dir in ${OWN_DIRS}; do					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo";				\
 	done;								\
+	fi;								\
+	if ${TEST} x${MAKE_DIRS_PERMS:M*:Q} != x; then			\
 	eval set -- ${MAKE_DIRS_PERMS} ;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
@@ -419,6 +419,8 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
 	done;								\
+	fi;								\
+	if ${TEST} x${OWN_DIRS_PERMS:M*:Q} != x; then			\
 	eval set -- ${OWN_DIRS_PERMS} ;					\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
@@ -426,6 +428,7 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo $$owner $$group $$mode";	\
 	done;								\
+	fi;								\
 	${ECHO} "EOF_DIRS";						\
 	${ECHO} "	\$${CHMOD} +x ./+DIRS";				\
 	${ECHO} "	;;";						\
@@ -447,8 +450,7 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_SHELL_FILE}
 ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${_PKG_SILENT}${_PKG_DEBUG}(					\
 	${_FUNC_STRIP_PREFIX};						\
-	eval set -- ${PKG_SHELL} ;					\
-	${TEST} $$# -gt 0 || exit 0;					\
+	${TEST} x${PKG_SHELL:M*:Q} != x || exit 0;			\
 	${ECHO} "# start of install-shell";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +SHELL script that handles shell registration."; \
@@ -458,11 +460,9 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${ECHO} "	\$${CAT} > ./+SHELL << 'EOF_SHELL'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/shell;		\
 	${ECHO} "";							\
-	eval set -- ${PKG_SHELL} ;					\
-	while ${TEST} $$# -gt 0; do					\
-		i="$$1"; shift;						\
-		i=`strip_prefix "$$i"`;					\
-		${ECHO} "# SHELL: $$i";					\
+	for pkg_shell in ${PKG_SHELL}; do				\
+		shell=`strip_prefix "$$pkg_shell"`;			\
+		${ECHO} "# SHELL: $$pkg_shell";				\
 	done;								\
 	${ECHO} "EOF_SHELL";						\
 	${ECHO} "	\$${CHMOD} +x ./+SHELL";			\
