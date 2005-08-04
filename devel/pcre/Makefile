@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/08/03 17:43:13 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/08/04 09:52:54 wiz Exp $
 
 DISTNAME=	pcre-6.2
 CATEGORIES=	devel
@@ -12,6 +12,8 @@ COMMENT=	Perl Compatible Regular Expressions library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+BUILD_TARGET=		all libpcrecpp.la pcrecpp_unittest \
+			pcre_scanner_unittest pcre_stringpiece_unittest
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
