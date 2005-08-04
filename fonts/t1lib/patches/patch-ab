@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2004/06/19 14:38:56 markd Exp $
+$NetBSD: patch-ab,v 1.3 2005/08/04 09:57:17 adam Exp $
 
-diff -ur t1lib-5.0.2/lib/t1lib/t1base.c t1lib-5.0.1/lib/t1lib/t1base.c
---- t1lib-5.0.2/lib/t1lib/t1base.c	2004-03-06 14:58:04.000000000 +1300
-+++ lib/t1lib/t1base.c	2004-02-02 14:16:16.000000000 +1300
-@@ -281,12 +276,7 @@
+--- lib/t1lib/t1base.c.orig	2005-05-18 03:08:01.000000000 +0000
++++ lib/t1lib/t1base.c
+@@ -286,12 +286,7 @@ void *T1_InitLib( int log)
  		   T1LOG_WARNING);
    }
    
@@ -17,7 +16,7 @@ diff -ur t1lib-5.0.2/lib/t1lib/t1base.c t1lib-5.0.1/lib/t1lib/t1base.c
    /* Set the default encoding to the fonts' internal encoding */
    pFontBase->default_enc=NULL;
    
-@@ -507,12 +497,6 @@
+@@ -655,12 +650,6 @@ int T1_CloseLib( void)
      else
        error=1;
  
