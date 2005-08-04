@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:24 jlam Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2005/08/04 23:28:48 salo Exp $
 #
 
 DISTNAME=	ish-v${VERSION}
@@ -18,8 +18,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
 
-MAKE_ENV+=	LIBS="${LIBS}"
-LIBS.SunOS+=	-lsocket
+LIBS.SunOS+=	-lnsl -lsocket
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 INSTALLATION_DIRS=	bin sbin
 
