@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/01 17:58:38 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/04 15:11:44 wiz Exp $
 #
 
 DISTNAME=		PAR-0.89
@@ -9,22 +9,12 @@ MAINTAINER=		rillig@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/
 COMMENT=		Cross-Platform Packaging and Debugging Tool
 
-PERL5_DEPENDS+=		archivers,p5-Archive-Zip,1
-PERL5_DEPENDS+=		devel,p5-Module-ScanDeps,0.45
-PERL5_DEPENDS+=		devel,p5-PAR-Dist,0.06
-PERL5_DEPENDS+=		security,p5-Module-Signature,0.35
+DEPENDS+=		p5-Archive-Zip>=1:../../archivers/p5-Archive-Zip
+DEPENDS+=		p5-Module-ScanDeps>=0.45:../../devel/p5-Module-ScanDeps
+DEPENDS+=		p5-PAR-Dist>=0.06:../../devel/p5-PAR-Dist
+DEPENDS+=		p5-Module-Signature>=0.35:../../security/p5-Module-Signature
 
 PERL5_PACKLIST=		auto/PAR/.packlist
-
-.for dep in ${PERL5_DEPENDS}
-.for cat in ${dep:C/^(.*),(.*),(.*)$/\1/}
-.for pkg in ${dep:C/^(.*),(.*),(.*)$/\2/}
-.for ver in ${dep:C/^(.*),(.*),(.*)$/\3/}
-DEPENDS+=		${pkg}>=${ver}:../../${cat}/${pkg}
-.endfor
-.endfor
-.endfor
-.endfor
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
