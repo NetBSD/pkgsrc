@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3791 2005/08/04 12:36:59 wiz Exp $
+$NetBSD: TODO,v 1.3792 2005/08/04 13:29:14 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -989,7 +989,6 @@ Suggested package updates
 	o skill-4.1.2
 	o skkinput-2.06.4
 	o skype-1.1.0.13 [libdbus missing in suse91 compat]
-	o skype-1.2.0.11
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.10
