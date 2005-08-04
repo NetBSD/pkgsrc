@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.7 2005/08/04 16:54:53 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.8 2005/08/04 21:37:33 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -400,13 +400,13 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	*)	${ECHO} "# DIR: ${RCD_SCRIPTS_DIR:S/${PREFIX}\///} m" ;; \
 	esac;								\
 	if ${TEST} x${MAKE_DIRS:M*:Q} != x; then			\
-	for dir in ${MAKE_DIRS}; do					\
+	for dir in ${MAKE_DIRS:M*}""; do				\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m";				\
 	done;								\
 	fi;								\
 	if ${TEST} x${OWN_DIRS:M*:Q} != x; then				\
-	for dir in ${OWN_DIRS}; do					\
+	for dir in ${OWN_DIRS:M*}""; do					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo";				\
 	done;								\
@@ -460,7 +460,7 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${ECHO} "	\$${CAT} > ./+SHELL << 'EOF_SHELL'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/shell;		\
 	${ECHO} "";							\
-	for pkg_shell in ${PKG_SHELL}; do				\
+	for pkg_shell in ${PKG_SHELL:M*}""; do				\
 		shell=`strip_prefix "$$pkg_shell"`;			\
 		${ECHO} "# SHELL: $$pkg_shell";				\
 	done;								\
