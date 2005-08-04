@@ -1,58 +1,76 @@
-$NetBSD: patch-aa,v 1.2 2005/02/27 22:06:10 jschauma Exp $
+$NetBSD: patch-aa,v 1.3 2005/08/04 10:22:21 drochner Exp $
 
---- Makefile.in.orig	Tue Mar 13 17:59:42 2001
-+++ Makefile.in	Sun Feb 27 16:18:25 2005
-@@ -38,22 +38,22 @@
+--- Makefile.in.orig	2002-03-16 11:12:40.000000000 +0100
++++ Makefile.in
+@@ -13,7 +13,7 @@ includedir = @includedir@
+ 
+ SHELL = /bin/sh
+ MKINSTALLDIRS = ${SHELL} mkinstalldirs 
+-SHCC = ${CC} -fPIC 
++SHCC = ${LIBTOOL} --mode=compile ${CC}
+ INSPECT = inspectsocks
+ SAVE = saveme
+ LIB_NAME = libtsocks
+@@ -23,7 +23,7 @@ VALIDATECONF = validateconf
+ SCRIPT = tsocks
+ SHLIB_MAJOR = 1
+ SHLIB_MINOR = 8
+-SHLIB = ${LIB_NAME}.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
++SHLIB = ${LIB_NAME}.la
+ 
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+@@ -34,26 +34,25 @@ SPECIALLIBS = @SPECIALLIBS@
+ 
+ SHOBJS = ${OBJS:.o=.so}
+ 
+-OBJS= tsocks.o
++OBJS= tsocks.lo
+ 
+ TARGETS= ${SHLIB} ${UTIL_LIB} ${SAVE} ${INSPECT} ${VALIDATECONF}
+ 
  all: ${TARGETS}
  
- ${COMMON}.o: ${COMMON}.c
--	${SHCC} ${CFFLAGS} ${INCLUDES} -c -o ${COMMON}.o ${COMMON}.c
-+	${SHCC} ${CFLAGS} ${INCLUDES} -c -o ${COMMON}.o ${COMMON}.c
- 
- ${PARSER}.o: ${PARSER}.c
--	${SHCC} ${CFFLAGS} ${INCLUDES} -c -o ${PARSER}.o ${PARSER}.c
-+	${SHCC} ${CFLAGS} ${INCLUDES} -c -o ${PARSER}.o ${PARSER}.c
- 
  ${VALIDATECONF}: ${VALIDATECONF}.c ${COMMON}.o ${PARSER}.o
--	${SHCC} ${CFFLAGS} ${LIBS} ${INCLUDES} -o ${VALIDATECONF} ${VALIDATECONF}.c ${COMMON}.o ${PARSER}.o
-+	${SHCC} ${CFLAGS} ${LIBS} ${INCLUDES} -o ${VALIDATECONF} ${VALIDATECONF}.c ${COMMON}.o ${PARSER}.o
+-	${SHCC} ${CFLAGS} ${INCLUDES} -o ${VALIDATECONF} ${VALIDATECONF}.c ${COMMON}.o ${PARSER}.o ${LIBS}
++	${CC} ${CFLAGS} ${INCLUDES} -o ${VALIDATECONF} ${VALIDATECONF}.c ${COMMON}.o ${PARSER}.o ${LIBS}
  
  ${INSPECT}: ${INSPECT}.c ${COMMON}.o
--	${SHCC} ${CFFLAGS} ${LIBS} ${INCLUDES} -o ${INSPECT} ${INSPECT}.c ${COMMON}.o
-+	${SHCC} ${CFLAGS} ${LIBS} ${INCLUDES} -o ${INSPECT} ${INSPECT}.c ${COMMON}.o
+-	${SHCC} ${CFLAGS} ${INCLUDES} -o ${INSPECT} ${INSPECT}.c ${COMMON}.o ${LIBS} 
++	${CC} ${CFLAGS} ${INCLUDES} -o ${INSPECT} ${INSPECT}.c ${COMMON}.o ${LIBS} 
  
  ${SAVE}: ${SAVE}.c
--	${SHCC} ${CFFLAGS} ${INCLUDES} -static -o ${SAVE} ${SAVE}.c
-+	${SHCC} ${CFLAGS} ${INCLUDES} -static -o ${SAVE} ${SAVE}.c
+-	${SHCC} ${CFLAGS} ${INCLUDES} -static -o ${SAVE} ${SAVE}.c
++	${CC} ${CFLAGS} ${INCLUDES} -static -o ${SAVE} ${SAVE}.c
  
- ${SHLIB}: ${SHOBJS} ${COMMON}.o ${PARSER}.o
--	${SHCC} ${CFLAGS} ${SPECIALLIBS} ${LIBS} ${INCLUDES} -nostdlib -shared -o ${SHLIB} ${SHOBJS} ${COMMON}.o ${PARSER}.o ${DYNLIB_FLAGS}
-+	${LD} ${LDFLAGS} ${SPECIALLIBS} ${LIBS} ${INCLUDES} -nostdlib -shared -o ${SHLIB} ${SHOBJS} ${COMMON}.o ${PARSER}.o ${DYNLIB_FLAGS}
- 	ln -sf ${SHLIB} ${LIB_NAME}.so
+-${SHLIB}: ${OBJS} ${COMMON}.o ${PARSER}.o
+-	${SHCC} ${CFLAGS} ${INCLUDES} -nostdlib -shared -o ${SHLIB} ${OBJS} ${COMMON}.o ${PARSER}.o ${DYNLIB_FLAGS} ${SPECIALLIBS} ${LIBS}
+-	ln -sf ${SHLIB} ${LIB_NAME}.so
++${SHLIB}: ${OBJS} ${COMMON}.lo ${PARSER}.lo
++	${LIBTOOL} --mode=link ${CC} -rpath ${PREFIX}/lib -version-info ${SHLIB_MAJOR}:${SHLIB_MINOR} ${LDFLAGS} -o ${SHLIB} ${OBJS} ${COMMON}.lo ${PARSER}.lo ${DYNLIB_FLAGS} ${SPECIALLIBS} ${LIBS}
  
- %.so: %.c
-@@ -65,19 +65,19 @@
- install: ${TARGETS} installlib installman
+-%.so: %.c
++%.lo: %.c
+ 	${SHCC} ${CFLAGS} ${INCLUDES} -c ${CC_SWITCHES} $< -o $@
+ 
+ %.o: %.c
+@@ -67,9 +66,7 @@ installscript:
  
  installlib:
--	${INSTALL} ${STATICLIB} ${SHLIB} ${libdir}
-+	${BSD_INSTALL_DATA} ${STATICLIB} ${SHLIB} ${libdir}
- 	ln -sf ${SHLIB} ${libdir}/${LIB_NAME}.so.${SHLIB_MAJOR}
- 	ln -sf ${LIB_NAME}.so.${SHLIB_MAJOR} ${libdir}/${LIB_NAME}.so
+ 	${MKINSTALLDIRS} "${DESTDIR}${libdir}"
+-	${INSTALL} ${SHLIB} ${DESTDIR}${libdir}
+-	ln -sf ${SHLIB} ${DESTDIR}${libdir}/${LIB_NAME}.so.${SHLIB_MAJOR}
+-	ln -sf ${LIB_NAME}.so.${SHLIB_MAJOR} ${DESTDIR}${libdir}/${LIB_NAME}.so
++	${LIBTOOL} --mode=install ${INSTALL} ${SHLIB} ${DESTDIR}${libdir}
  
  installman:
- 	if [ ! -d "${mandir}/man8" ] ; then \
--		${INSTALL} -o root -g root -d ${mandir}/man8; \
-+		${BSD_INSTALL_MAN_DIR} ${mandir}/man8; \
- 	fi;
--	${INSTALL_DATA} -o root -g root tsocks.8 ${mandir}/man8/
-+	${BSD_INSTALL_MAN} tsocks.8 ${mandir}/man8/
- 	if [ ! -d "${mandir}/man5" ] ; then \
--		${INSTALL} -o root -g root -d ${mandir}/man5; \
-+		${BSD_INSTALL_MAN_DIR} -d ${mandir}/man5; \
- 	fi;
--	${INSTALL_DATA} -o root -g root tsocks.conf.5 ${mandir}/man5/
-+	${BSD_INSTALL_MAN} tsocks.conf.5 ${mandir}/man5/
- 	
+ 	${MKINSTALLDIRS} "${DESTDIR}${mandir}/man1"
+@@ -78,7 +75,7 @@ installman:
+ 	${INSTALL_DATA} tsocks.8 ${DESTDIR}${mandir}/man8/
+ 	${MKINSTALLDIRS} "${DESTDIR}${mandir}/man5"
+ 	${INSTALL_DATA} tsocks.conf.5 ${DESTDIR}${mandir}/man5/
+-	
++
  clean:
  	-rm -f *.so *.so.* *.o *~ ${TARGETS}
+ 
