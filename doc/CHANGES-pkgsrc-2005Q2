@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.53 2005/08/04 23:35:51 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.54 2005/08/05 16:37:33 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -165,3 +165,9 @@ Pullup ticket 647 - requeste by Grant Beattie
 portability fix for ipw
 Pullup ticket 648 - requested by Grant Beattie
 portability fix for ishell
+Pullup ticket 655 - requested by Lubomir Sedlacik
+security update for gopher
+Pullup ticket 656 - requested by Lubomir Sedlacik
+security update for ekg
+Pullup ticket 657 - requested by Lubomir Sedlacik
+security fix for gaim
