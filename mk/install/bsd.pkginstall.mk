@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.8 2005/08/04 21:37:33 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.9 2005/08/05 07:06:47 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -154,14 +154,20 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/usergroup;		\
 	${ECHO} "";							\
-	pkg_groups=${PKG_GROUPS:Q};					\
-	for i in $$pkg_groups; do					\
+	if ${TEST} x${PKG_GROUPS:M*:Q} != x; then			\
+	eval set -- ${PKG_GROUPS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		i=$$1; shift;						\
 		${ECHO} "# GROUP: $$i";					\
 	done;								\
-	pkg_users=${PKG_USERS:Q};					\
-	for i in $$pkg_users; do					\
+	fi;								\
+	if ${TEST} x${PKG_USERS:M*:Q} != x; then			\
+	eval set -- ${PKG_USERS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		i=$$1; shift;						\
 		${ECHO} "# USER: $$i";					\
 	done;								\
+	fi;								\
 	${ECHO} "EOF_USERGROUP";					\
 	${ECHO} "	\$${CHMOD} +x ./+USERGROUP";			\
 	${ECHO} "	;;";						\
