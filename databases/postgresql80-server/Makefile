@@ -1,33 +1,53 @@
-# $NetBSD: Makefile,v 1.8 2005/07/09 04:34:53 cjs Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/05 19:43:45 jlam Exp $
 
-PKGNAME=		postgresql80-server-${BASE_VERS}
-PKGREVISION=		1
-COMMENT=		PostgreSQL database server programs
-
-DEPENDS+=		postgresql80-client>=${BASE_VERS}:../../databases/postgresql80-client
+PKGNAME=	postgresql80-server-${BASE_VERS}
+PKGREVISION=	2
+COMMENT=	PostgreSQL database server programs
 
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
 
 .include "../../databases/postgresql80/Makefile.common"
 
+# Use shlibtool (invoked as "$(LIBTOOL)") to build modules.
+USE_LIBTOOL=		yes
+PKG_LIBTOOL=		${PKG_SHLIBTOOL}
+
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
+
+CONFIGURE_ARGS+=	--with-openssl
 
 BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
 BUILD_DIRS+=		${WRKSRC}/src/timezone
 BUILD_DIRS+=		${WRKSRC}/src/pl
 
+# PostgreSQL has loadable server-side language modules.
+#
+# Explicitly set DLOPEN_REQUIRE_PTHREADS to "no" on NetBSD as NetBSD-2.x
+# had problems with mixing dlopen() and pthreads, which blows up in
+# PostgreSQL's backend (pkg/28729).  This works on older and newer
+# versions of NetBSD as well since they don't have the bad interaction
+# between dlopen() and pthreads.
+#
+.if ${OPSYS} == "NetBSD"
+DLOPEN_REQUIRE_PTHREADS=	no
+.endif
+.include "../../mk/dlopen.buildlink3.mk"
+
+# If we're using libltdl to provide "dlopen" functionality, then add the
+# dependency and make sure that we link against -lltdl.
+#
+.if !empty(USE_LIBLTDL:M[yY][eE][sS])
+DL_LIBS+=	-lltdl
+.  include "../../devel/libltdl/buildlink3.mk"
+.endif
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql80-server
 PKG_SUPPORTED_OPTIONS=	pam
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mpam)
-.  include "../../mk/pam.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pam
-.endif
+.include "../../databases/postgresql80/options.mk"
 
 # PGUSER	username of the database administrator
 # PGGROUP	group of the database administrator
@@ -47,39 +67,25 @@ PKG_GROUPS=		${PGGROUP}
 
 RCD_SCRIPTS=		pgsql
 
-post-buildlink:
-#
-# Avoid conflict between "${LOCALBASE}/include/openssl/des.h" and
+.include "../../databases/postgresql80-client/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+
+# Avoid conflict between "${SSLBASE}/include/openssl/des.h" and
 # "/usr/include/crypt.h" -- we want the definitions in the former.
 #
-.if (${OPSYS} == "SunOS")
+post-wrapper:
+.if ${OPSYS} == "SunOS"
 	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
 .endif
 
 pre-build:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-		../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/port && \
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC}/src/backend &&					\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
+		../../src/include/parser/parse.h			\
+		../../src/include/utils/fmgroids.h
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC}/src/port &&					\
        	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}
 
-pre-install:
-	@case "X${PGUSER}" in						\
-	Xbin|Xetc|Xinclude|Xinfo|Xlib|Xlibdata|Xlibexec|Xman|Xsbin|Xshare) \
-		${ECHO} "You have chosen PGUSER=${PGUSER} which will";	\
-		${ECHO} "cause trouble, because the postgres home directory"; \
-		${ECHO} "would be ${PGHOME}.  Please";			\
-		${ECHO} "set PGUSER to something more reasonable";	\
-		${ECHO} "like pgsql.";					\
-		${ECHO} "";						\
-		${FALSE};						\
-		;;							\
-	esac
-
-#post-install:
-#	${EGREP} -v "^#" ${FILESDIR}/man.server > ${WRKDIR}/man_tar
-#	cd ${PG_DIR}/man && ${TAR} -zxm -T ${WRKDIR}/man_tar  		\
-#		-f ${WRKSRC}/doc/man.tar.gz
-
-.include "../../databases/postgresql80-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
