@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/05 22:00:49 reinoud Exp $
+bin/btcheck
+bin/btget
+bin/btlist
+man/man1/btcheck.1
+man/man1/btget.1
+man/man1/btlist.1
+@dirrm etc/cups/certs
