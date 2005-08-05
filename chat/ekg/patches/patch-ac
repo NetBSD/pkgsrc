@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.3 2005/04/21 08:53:11 adam Exp $
+$NetBSD: patch-ac,v 1.3.2.1 2005/08/05 16:28:58 snj Exp $
 
---- lib/Makefile.in.orig	2005-02-22 15:22:25.000000000 +0000
+--- lib/Makefile.in.orig	2005-07-12 21:26:10.000000000 +0000
 +++ lib/Makefile.in
 @@ -11,7 +11,7 @@ VERSION_MAJOR=3
- VERSION_MINOR=2
+ VERSION_MINOR=3
  
  CC = @CC@ 
 -CFLAGS = @CFLAGS_LIBGADU@ -I. -I.. -Wall

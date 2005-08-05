@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.4 2005/04/21 08:53:11 adam Exp $
+$NetBSD: patch-ad,v 1.4.2.1 2005/08/05 16:28:59 snj Exp $
 
---- configure.orig	2005-03-20 12:46:53.000000000 +0000
+--- configure.orig	2005-07-12 21:33:02.000000000 +0000
 +++ configure
-@@ -4224,7 +4224,7 @@ echo "$as_me: WARNING: we do not know ho
- echo $ECHO_N "checking if -pthread is sufficient with -shared... $ECHO_C" >&6
- 	save_CFLAGS="$CFLAGS"
- 	save_LIBS="$LIBS"
--	CFLAGS="-shared -Wl,-z,defs $CFLAGS"
-+	CFLAGS="-shared $CFLAGS"
- 	ok="no"
-         cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
-@@ -4657,7 +4657,6 @@ if test "x$have_openssl" = "xyes"; then
+@@ -4312,7 +4312,7 @@ echo "${ECHO_T}yes" >&6
+ 		# FIXME: -fPIC is required for -shared on many architectures,
+ 		# so we specify it here, but the right way would probably be to
+ 		# properly detect whether it is actually required.
+-		CFLAGS="-shared -fPIC -Wl,-z,defs $CFLAGS $PTHREAD_CFLAGS"
++		CFLAGS="-shared -fPIC $CFLAGS $PTHREAD_CFLAGS"
+ 		LIBS="$PTHREAD_LIBS $LIBS"
+ 		CC="$PTHREAD_CC"
+ 
+@@ -4770,7 +4770,6 @@ if test "x$have_openssl" = "xyes"; then
  	LIBS_LIBGADU="$LIBS_LIBGADU $OPENSSL_LIBS"
  	CFLAGS="$CFLAGS $OPENSSL_INCLUDES"
  	CFLAGS_LIBGADU="$CFLAGS_LIBGADU $OPENSSL_INCLUDES"
