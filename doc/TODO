@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3794 2005/08/05 09:48:18 wiz Exp $
+$NetBSD: TODO,v 1.3795 2005/08/05 13:04:19 tonio Exp $
 
 Suggested new packages
 ======================
@@ -613,7 +613,6 @@ Suggested package updates
 	o liblive-2005.03.23
 	o libmatheval-1.1.2
 	o libmpeg3-1.5.4
-	o libopendaap-0.4.0
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
 	o libstatgrab-0.12
@@ -1063,7 +1062,6 @@ Suggested package updates
 	o tspc-2.1.1
 	o ttt-1.8.1
 	o ttyrec-1.0.6
-	o tunesbrowser-0.3.0
 	o turba-2.0.3
 	o twelf-1.5
 	o txt2html-2.41
