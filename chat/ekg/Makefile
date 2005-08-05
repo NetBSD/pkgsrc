@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2005/05/22 20:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.32.2.1 2005/08/05 16:28:58 snj Exp $
 
-DISTNAME=	ekg-1.6rc1
+DISTNAME=	ekg-1.6rc3
 PKGNAME=	ekg-1.6
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://dev.null.pl/ekg/ \
 		http://dev.null.pl/ekg/stare/
@@ -11,12 +12,11 @@ HOMEPAGE=	http://dev.null.pl/ekg/
 COMMENT=	Experimental Gadu-Gadu Client (Polish instant messaging system)
 
 USE_GNU_READLINE=	yes
-USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	lib/libgadu.pc.in
-
 CONFIGURE_ARGS+=	--enable-ui-ncurses
 CONFIGURE_ARGS+=	--enable-ui-readline
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
