@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10799 2005/08/05 13:04:19 tonio Exp $
+$NetBSD: CHANGES,v 1.10800 2005/08/05 19:31:50 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -503,3 +503,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/gopher to 3.0.9 [salo 2005-08-05]
 	Updated audio/libopendaap to 0.4.0 [tonio 2005-08-05]
 	Updated audio/tunesbrowser to 0.3.0 [tonio 2005-08-05]
+	Updated mail/libetpan to 0.38 [xtraeme 2005-08-05]
+

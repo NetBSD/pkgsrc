@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3795 2005/08/05 13:04:19 tonio Exp $
+$NetBSD: TODO,v 1.3796 2005/08/05 19:31:50 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -604,7 +604,6 @@ Suggested package updates
 	o libcomprex-0.3.3
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
-	o libetpan-0.34b
 	o libextractor-0.5.2
 	o libflash-0.4.13
 	o libhydrogen-0.9.0
