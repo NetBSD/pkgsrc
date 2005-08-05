@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.3 2005/07/09 04:24:52 cjs Exp $
+# $NetBSD: pgsql.sh,v 1.4 2005/08/05 19:43:45 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -31,8 +31,8 @@ pgsql_user="@PGUSER@"
 pgsql_group="@PGGROUP@"
 eval pgsql_home="~$pgsql_user"
 
-command="@PREFIX@/bin/postmaster"
-ctl_command="@PREFIX@/bin/pg_ctl"
+command="@PG_PREFIX@/bin/postmaster"
+ctl_command="@PG_PREFIX@/bin/pg_ctl"
 extra_commands="initdb"
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
@@ -63,7 +63,7 @@ pgsql_precmd()
 
 pgsql_initdb()
 {
-	initdb="@PREFIX@/bin/initdb"
+	initdb="@PG_PREFIX@/bin/initdb"
 
 	if [ ! -x ${initdb} ]; then
 		return 1

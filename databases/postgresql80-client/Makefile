@@ -1,79 +1,84 @@
-# $NetBSD: Makefile,v 1.5 2005/07/05 23:53:47 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/05 19:43:45 jlam Exp $
 
-PKGNAME=		postgresql80-client-${BASE_VERS}
-PKGREVISION=		1
-COMMENT=		PostgreSQL database client programs
+PKGNAME=	postgresql80-client-${BASE_VERS}
+PKGREVISION=	2
+COMMENT=	PostgreSQL database client programs
 
 .include "../../databases/postgresql80/Makefile.common"
 
+USE_TOOLS+=		gzip tar
+USE_LIBTOOL=		yes
+CONFIGURE_ARGS+=	--with-openssl
+CONFIGURE_ARGS+=	--with-readline
+CONFIGURE_ARGS+=	--with-zlib
+
+# The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
+# NetBSD.
+#
+.if ${OPSYS} == "NetBSD"
+PGSQL_THREAD_SAFETY?=	no
+.endif
+PGSQL_THREAD_SAFETY?=	yes
+BUILD_DEFS+=		PGSQL_THREAD_SAFETY
+
+.if !empty(PGSQL_THREAD_SAFETY:M[yY][eE][sS])
+.  include "../../mk/pthread.buildlink3.mk"
+.  if (${PTHREAD_TYPE} == "native")
+CONFIGURE_ARGS+=	--enable-thread-safety
+.  endif
+.endif
+
+INSTALL_DIRS=	${WRKSRC}/src/include
+INSTALL_DIRS+=	${WRKSRC}/src/interfaces
+INSTALL_DIRS+=	${WRKSRC}/src/bin
+INSTALL_DIRS+=	${WRKSRC}/doc
+
+BUILD_DIRS=	${INSTALL_DIRS}
+
+# Without this, the Darwin build fails (related to -bundle_loader).
+BUILD_DIRS+=	${WRKSRC}/src/backend
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql80-client
+.include "../../databases/postgresql80/options.mk"
+
+USE_PKGINSTALL=	yes
+.for _file_ in pg_service.conf psqlrc
+CONF_FILES+=	${PG_DATA_DIR}/${_file_}.sample ${PG_ETC_DIR}/${_file_}
+.endfor
+.if !empty(PG_SUBPREFIX)
+OWN_DIRS+=	${PG_PREFIX}
+.endif
+
 # XXX work around core dumps with the native libedit
 USE_GNU_READLINE=	yes
-USE_PKGINSTALL=		yes
-
-CONFIGURE_ARGS+=	--with-openssl
-CONFIGURE_ARGS+=	--with-zlib
-CONFIGURE_ARGS+=	--with-readline
-
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DIRS=		${WRKSRC}/src/include
-BUILD_DIRS+=		${WRKSRC}/src/interfaces
-BUILD_DIRS+=		${WRKSRC}/src/bin
-BUILD_DIRS+=		${WRKSRC}/doc
-
-# without this the Darwin build fails
-# (-bundle_loader related)
-BUILD_DIRS+=		${WRKSRC}/src/backend
-
-INSTALL_DIRS=		${WRKSRC}/src/bin
-INSTALL_DIRS+=		${WRKSRC}/src/include
-INSTALL_DIRS+=		${WRKSRC}/src/interfaces
-INSTALL_DIRS+=		${WRKSRC}/doc
-
-# As told by Josh Berkus
-.include "../../mk/pthread.buildlink3.mk"
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native" \
-	&& ${OPSYS} != "NetBSD"
-CONFIGURE_ARGS+=	--enable-thread-safety
-.endif
-
-# handle additional headers installed by hierarchical queries patch
-.if defined(PGSQL_USE_HIER) && !empty(PGSQL_USE_HIER:M[yY][eE][sS])
-PLIST_SUBST+=		PG_HIER=
-.else
-PLIST_SUBST+=		PG_HIER="@comment "
-.endif
-
-CONF_FILES=	${PG_DATA_DIR}/pg_service.conf.sample ${PKG_SYSCONFDIR}/pg_service.conf
-CONF_FILES+=	${PG_DATA_DIR}/psqlrc.sample ${PKG_SYSCONFDIR}/psqlrc
-
-post-buildlink:
-#
-# Avoid conflict between "${LOCALBASE}/include/openssl/des.h" and
-# "/usr/include/crypt.h" -- we want the definitions in the former.
-#
-.if (${OPSYS} == "SunOS")
-	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
-.endif
-
-pre-build:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-		../../src/include/parser/parse.h ../../src/include/utils/fmgroids.h
-
-post-install:
-	${INSTALL_DATA_DIR} ${PG_DOC_DIR}/TODO.detail
-	cd ${WRKSRC}/doc; for file in					\
-		FAQ* KNOWN_BUGS MISSING_FEATURES README.* TODO		\
-		bug.template;						\
-	do								\
-		${INSTALL_DATA}	$${file} ${PG_DOC_DIR}/$${file};	\
-	done
-	cd ${WRKSRC}/doc/TODO.detail && \
-		${PAX} -rwppm . ${PG_DOC_DIR}/TODO.detail
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+
+# On Solaris, avoid conflicts between "${SSLBASE}/include/openssl/des.h"
+# and "/usr/include/crypt.h" -- we want the definitions in the former.
+#
+.if ${OPSYS} == "SunOS"
+post-wrapper:
+	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
+.endif
+
+pre-build:
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC}/src/backend &&					\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
+		../../src/include/parser/parse.h			\
+		../../src/include/utils/fmgroids.h
+
+post-install:
+	cd ${WRKSRC}/doc; for file in					\
+		FAQ* KNOWN_BUGS MISSING_FEATURES README.* TODO		\
+		bug.template;						\
+	do								\
+		${INSTALL_DATA} $$file ${PG_DOC_DIR}/$$file;		\
+        done
+	${CP} -R ${WRKSRC}/doc/TODO.detail ${PG_DOC_DIR}
+	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PG_DOC_DIR}/TODO.detail
 
 .include "../../mk/bsd.pkg.mk"
