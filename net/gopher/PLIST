@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/24 00:06:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2.14.1 2005/08/05 16:22:38 snj Exp $
 bin/gopher
 bin/gophfilt
-etc/gopher/gopher.hlp
-etc/gopher/gopher.rc
-etc/gopher/gopherremote.rc
 man/man1/gopher.1
 man/man1/gophfilt.1
 man/man5/gopherrc.5
-@dirrm etc/gopher
+share/examples/gopher/gopher.hlp
+share/examples/gopher/gopher.rc
+share/examples/gopher/gopherremote.rc
+@dirrm share/examples/gopher
