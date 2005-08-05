@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10801 2005/08/05 22:04:04 jdolecek Exp $
+$NetBSD: CHANGES,v 1.10802 2005/08/05 22:07:07 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -505,4 +505,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/tunesbrowser to 0.3.0 [tonio 2005-08-05]
 	Updated mail/libetpan to 0.38 [xtraeme 2005-08-05]
 	Updated www/opera to 8.02 [jdolecek 2005-08-05]
+	Added net/btget version 1.04 [reinoud 2005-08-06]
 
