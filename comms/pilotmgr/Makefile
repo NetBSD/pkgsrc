@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/07/19 10:21:01 grant Exp $
+# $NetBSD: Makefile,v 1.37 2005/08/05 20:31:52 jlam Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 PKGNAME=	pilotmgr-1.107.2
@@ -19,6 +19,7 @@ DEPENDS+=	{p5-Data-Dumper-[0-9]*,perl>=5.6.1nb2}:../../lang/perl5
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*$//}
 HAS_CONFIGURE=		YES
 NO_BUILD=		YES
+USE_TOOLS+=		perl:run
 
 CONFIGURE_ARGS=		</dev/null
 CONFIGURE_ENV+=		PERL="${LOCALBASE}/bin/perl" WRKDIR="${WRKDIR}"
@@ -56,6 +57,5 @@ do-install:
 	done
 	${LN} -fs ${PM_DOC_DIR} ${PM_PERL_DIR}/docs
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
