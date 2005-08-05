@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/08/05 22:00:49 reinoud Exp $
+
+--- src/peer.c.orig	2005-04-27 06:47:47.000000000 +0200
++++ src/peer.c
+@@ -6,6 +6,7 @@
+ #   include <arpa/inet.h>
+ #   include <netdb.h>
+ #   include <sys/socket.h>
++#   include <limits.h>
+ #   if HAVE_UNISTD_H
+ #      include <unistd.h>
+ #   endif
