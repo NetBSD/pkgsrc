@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.i386,v 1.1 2005/06/25 10:47:56 tron Exp $
+# $NetBSD: Makefile.i386,v 1.2 2005/08/05 22:40:24 wiz Exp $
 
 RPMFILES=		aaa_base-9.1-0.${SUSE_ARCH}.rpm \
 			bash-2.05b-305.${SUSE_ARCH}.rpm \
@@ -11,4 +11,4 @@ RPMFILES=		aaa_base-9.1-0.${SUSE_ARCH}.rpm \
 			libstdc++-3.3.3-41.${SUSE_ARCH}.rpm \
 			ncurses-5.4-59.${SUSE_ARCH}.rpm \
 			readline-4.3-306.${SUSE_ARCH}.rpm \
-			zlib-1.2.1-70.${SUSE_ARCH}.rpm
+			zlib-1.2.1-70.12.${SUSE_ARCH}.rpm
