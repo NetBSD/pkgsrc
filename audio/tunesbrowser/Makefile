@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/05 12:58:49 tonio Exp $
 #
 
-DISTNAME=		tunesbrowser-0.2.0
+DISTNAME=		tunesbrowser-0.3.0
 CATEGORIES=		audio
-MASTER_SITES=		http://crazney.net/programs/itunes/files/
+MASTER_SITES=		http://craz.net/programs/itunes/files/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://crazney.net/programs/itunes/libopendaap.html
+HOMEPAGE=		http://craz.net/programs/itunes/libopendaap.html
 COMMENT=		Front-end for DAAP client
 
 GNU_CONFIGURE=		yes
@@ -15,15 +15,12 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/tunesbrowser
+DEPENDS+=		gst-plugins-esound>=0.8.1:../../audio/gst-plugins-esound
+DEPENDS+=		gst-plugins-mad>=0.8.1:../../audio/gst-plugins-mad
 
-BUILDLINK_DEPENDS.libopendaap+=	libopendaap>=0.3.0
+BUILDLINK_DEPENDS.libopendaap+=	libopendaap>=0.4.0
 
-.include "../../audio/gst-plugins-mad/buildlink3.mk"
-# XXX Enable this dependency after the package is created (couldn't be done at
-# XXX the moment because we were preparing the pkgsrc-2005Q1 branch).
-# XXX When that happens, do not depend gst-plugins-mad, and adjust patch-ab to
-# XXX not disable spider use.
-#.include "../../audio/gst-plugins-spider/buildlink3.mk"
+.include "../../multimedia/gst-plugins/buildlink3.mk"
 .include "../../audio/libopendaap/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pkg-config/buildlink3.mk"
