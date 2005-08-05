@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/08/05 19:29:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/05 20:55:19 xtraeme Exp $
 #
 
 DISTNAME=		libetpan-0.38
@@ -11,6 +11,12 @@ COMMENT=		Really nice mail library
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+SUBST_CLASSES=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	libetpan-config.in
+SUBST_SED.conf=		-e "s|@COMPILERFLAGS@|${COMPILER_RPATH_FLAG}|g"
+SUBST_MESSAGE.conf=	Fixing libetpan-config.
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
