@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2005/06/16 06:57:38 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/08/05 06:21:10 snj Exp $
 
 DISTNAME=	abcde_2.2.6.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/a/abcde/}
 
-MAINTAINER=	snj@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.hispalinux.es/~data/abcde.php
 COMMENT=	Command-line utility to rip and encode an audio CD
 
