@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/14 10:26:29 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/05 21:45:29 jlam Exp $
 #
 
 DISTNAME=	bugzilla-2.18.3
@@ -11,12 +11,13 @@ COMMENT=	Web based bug tracking system
 
 DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
 DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
+DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-DBI>=1.36:../../databases/p5-DBI
 DEPENDS+=	p5-File-Spec>=0.82:../../devel/p5-File-Spec
 DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=	p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../textproc/p5-Text-Tabs+Wrap
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
-DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -24,9 +25,6 @@ DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
 PERL5_REQD+=	5.6.0
-
-BUILDLINK_DEPENDS.p5-DBI+=		p5-DBI>=1.36
-BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=3.23.41
 
 BZ_WEB_GROUP?=	www
 SENDMAIL?=	/usr/sbin/sendmail
@@ -113,7 +111,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/images/callouts/*.gif \
 		${BZDIR}/docs/images/callouts
 
-.include "../../databases/p5-DBI/buildlink3.mk"
-.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
