@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2005/07/20 14:49:05 adam Exp $
+$NetBSD: patch-ab,v 1.5 2005/08/05 21:02:04 salo Exp $
 
 --- configure.orig	2005-07-19 19:52:02.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 2005/07/20 14:49:05 adam Exp $
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  
 -	GADU_LIBS=-lgadu
-+	GADU_LIBS="-lgadu -lssl -lpthread"
++	GADU_LIBS="-lgadu -lssl -lcrypto -lpthread"
  
  	echo "$as_me:$LINENO: checking if libgadu is in system directories" >&5
  echo $ECHO_N "checking if libgadu is in system directories... $ECHO_C" >&6
