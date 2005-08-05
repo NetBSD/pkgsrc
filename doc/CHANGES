@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10797 2005/08/05 12:05:10 tron Exp $
+$NetBSD: CHANGES,v 1.10798 2005/08/05 12:15:39 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added x11/x11vnc version 0.7.2 [xtraeme 2005-08-05]
 	Updated net/tor to 0.1.0.13 [jschauma 2005-08-05]
 	Updated security/ipsec-tools to 0.6.1rc1 [tron 2005-08-05]
+	Updated net/gopher to 3.0.9 [salo 2005-08-05]
