@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10793 2005/08/04 22:23:04 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10794 2005/08/05 00:11:12 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3548,3 +3548,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkg_chk to 1.60 [abs 2005-08-04]
 	Updated graphics/povray to 3.6.1nb2 [cube 2005-08-04]
 	Updated pkgtools/pkgfind to 20050804 [xtraeme 2005-08-04]
+	Added x11/x11vnc-0.7.2 [xtraeme 2005-08-05]
