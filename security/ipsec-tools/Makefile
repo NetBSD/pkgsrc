@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 14:35:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.18 2005/08/05 12:04:33 tron Exp $
 
-DISTNAME=		ipsec-tools-0.6b2
+DISTNAME=		ipsec-tools-0.6.1rc1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ipsec-tools/}
 EXTRACT_SUFX=		.tar.bz2
@@ -26,9 +25,16 @@ CONFIGURE_ARGS+=	--with-libradius
 LIBS+=			${BUILDLINK_LDADD.libradius}
 .endif
 
+.if exists(/usr/include/security/pam_modules.h)
+CONFIGURE_ARGS+=	--with-libpam
+.endif
+
 CONFIGURE_ARGS+=	--enable-frag --enable-hybrid
 CONFIGURE_ARGS+=	--enable-adminport --enable-dpd
 CONFIGURE_ARGS+=	--enable-natt=kernel
+
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+PLIST_SUBST+=		VARBASE=${VARBASE}
 
 PKG_SYSCONFSUBDIR=	racoon
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -39,6 +45,11 @@ EXAMPLE_DIR=	${PREFIX}/share/examples/ipsec-tools
 pre-configure:
 	${RM} -f ${WRKSRC}/src/racoon/cfparse.c
 	${RM} -f ${WRKSRC}/src/racoon/cftoken.c
+.if (${OPSYS} == "NetBSD")
+	${MKDIR} ${BUILDLINK_DIR}/include/netinet6
+	${EGREP} -v 'extern.*ipsec_.*_policy' /usr/include/netinet6/ipsec.h \
+	  >${BUILDLINK_DIR}/include/netinet6/ipsec.h
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}

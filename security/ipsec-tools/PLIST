@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/10 12:39:28 manu Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/08/05 12:04:33 tron Exp $
 lib/libipsec.la
 include/libipsec/libpfkey.h
 sbin/setkey
@@ -11,6 +11,7 @@ man/man5/racoon.conf.5
 man/man8/racoon.8
 man/man8/setkey.8
 man/man8/plainrsa-gen.8
+man/man8/racoonctl.8
 share/examples/ipsec-tools/psk.txt
 share/examples/ipsec-tools/psk.txt.in
 share/examples/ipsec-tools/psk.txt.sample
@@ -49,3 +50,5 @@ lib/libracoon.la
 @dirrm share/examples/ipsec-tools/roadwarrior/server
 @dirrm share/examples/ipsec-tools/roadwarrior
 @dirrm share/examples/ipsec-tools
+@exec ${MKDIR} ${VARBASE}/racoon
+@unexec ${RMDIR} ${VARBASE}/racoon 2>/dev/null || ${TRUE}
