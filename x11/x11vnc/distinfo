@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/05 00:08:57 xtraeme Exp $
+
+SHA1 (x11vnc-0.7.2.tar.gz) = 41c2cfc8d7ec4b94a5fba6e07f60cf71e8aeb35a
+RMD160 (x11vnc-0.7.2.tar.gz) = 2c2ff50b292d97abdcdfd00a31708de4d9e97f53
+Size (x11vnc-0.7.2.tar.gz) = 882900 bytes
