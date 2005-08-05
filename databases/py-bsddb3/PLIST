@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/04 15:55:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/08/05 18:21:04 drochner Exp $
 ${PYSITELIB}/bsddb3/__init__.py
 ${PYSITELIB}/bsddb3/__init__.pyc
 ${PYSITELIB}/bsddb3/__init__.pyo
@@ -33,6 +33,9 @@ ${PYSITELIB}/bsddb3/tests/test_associate.pyo
 ${PYSITELIB}/bsddb3/tests/test_basics.py
 ${PYSITELIB}/bsddb3/tests/test_basics.pyc
 ${PYSITELIB}/bsddb3/tests/test_basics.pyo
+${PYSITELIB}/bsddb3/tests/test_compare.py
+${PYSITELIB}/bsddb3/tests/test_compare.pyc
+${PYSITELIB}/bsddb3/tests/test_compare.pyo
 ${PYSITELIB}/bsddb3/tests/test_compat.py
 ${PYSITELIB}/bsddb3/tests/test_compat.pyc
 ${PYSITELIB}/bsddb3/tests/test_compat.pyo
