@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/05 12:53:08 tonio Exp $
 
-DISTNAME=	libopendaap-0.3.0
-PKGREVISION=	1
+DISTNAME=	libopendaap-0.4.0
 CATEGORIES=	audio
-MASTER_SITES=	http://crazney.net/programs/itunes/files/
+MASTER_SITES=	http://craz.net/programs/itunes/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://crazney.net/programs/itunes/libopendaap.html
+HOMEPAGE=	http://craz.net/programs/itunes/libopendaap.html
 COMMENT=	DAAP client library
 
 USE_LIBTOOL=		yes
