@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2005/06/10 22:49:47 salo Exp $
+# $NetBSD: Makefile,v 1.89.2.1 2005/08/05 16:37:15 snj Exp $
 
-DISTNAME=	gaim-1.3.1
+DISTNAME=	gaim-1.4.0
 PKGREVISION=	1
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
@@ -53,4 +53,5 @@ CONFIGURE_ARGS+=	--disable-screensaver
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
