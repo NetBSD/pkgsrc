@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2005/06/17 03:50:41 jlam Exp $
+# $NetBSD: Makefile.common,v 1.29 2005/08/06 19:48:24 tron Exp $
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -79,7 +79,6 @@ _COMPAT16_LIBSTDCXX=	YES
 .    if ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "netbsd"
 DEPENDS+=	gtk2+>=2.4:../../x11/gtk2
 .    elif ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"
-DEPENDS+=	suse_x11>=9.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_gtk2>=9.1:../../emulators/suse91_gtk2
 DEPENDS+=	suse_locale>=9.1:../../emulators/suse91_locale
 .    else
@@ -87,7 +86,6 @@ DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
 .    endif
 .  elif ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
 .  else
 # default to at least gtk-1.2.
