@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.5 2005/06/24 06:43:45 jlam Exp $
-
-${PKGNAME} will use the following directory as the default
-location of the site-specific Perl modules:
-
-	${PERL5_SITELIB}
-
-===========================================================================
