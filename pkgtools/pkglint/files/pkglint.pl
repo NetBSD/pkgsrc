@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.233 2005/08/06 22:20:10 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.234 2005/08/06 22:24:07 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2090,33 +2090,29 @@ sub check_category($) {
 		if (!$lines_atend && $fetch_next_line) {
 			$fetch_next_line = false;
 
-# FIXME: <indent +1>
-		if ($line->text =~ qr"^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$") {
-			my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
+			if ($line->text =~ qr"^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$") {
+				my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
 
-			if ($comment_flag eq "#") {
-				if (!defined($comment) || $comment eq "") {
+				if ($comment_flag eq "#" && (!defined($comment) || $comment eq "")) {
 					$line->log_error("${subdir} commented out without giving a reason.");
 				}
+
+				if ($indentation ne "\t") {
+					$line->log_error("Indentation must be a single tab character.");
+				}
+
+				if (defined($last_subdir) && $subdir le $last_subdir) {
+					$line->log_error("${subdir} must come before ${last_subdir}.");
+				}
+				$last_subdir = $subdir;
+
+			} elsif ($is_wip && $line->text eq "") {
+				# ignore the special case "wip", which defines its own "index" target.
+				$lines_atend = true;
+
+			} else {
+				$line->log_error("SUBDIR+= line expected.");
 			}
-
-			if ($indentation ne "\t") {
-				$line->log_error("Indentation must be a single tab character.");
-			}
-
-			if (defined($last_subdir) && $subdir le $last_subdir) {
-				$line->log_error("${subdir} must come before ${last_subdir}.");
-			}
-			$last_subdir = $subdir;
-
-		} elsif ($is_wip && $line->text eq "") {
-			# ignore the special case "wip", which defines its own "index" target.
-			$lines_atend = true;
-
-		} else {
-			$line->log_error("SUBDIR+= line expected.");
-		}
-# FIXME: </indent>
 
 			$lines_index++;
 		}
