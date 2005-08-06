@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.11 2005/05/24 10:01:25 rillig Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.12 2005/08/06 23:01:19 abs Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -31,7 +31,7 @@ _PGSQL_VERSION_74_INSTALLED=	yes
 _PGSQL_VERSION_73_INSTALLED=yes
 .endif
 .else
-.if exists(${LOCALBASE}/lib/libecpg.so.5.0)
+.if exists(${LOCALBASE}/lib/libecpg.so.5.0.0)
 _PGSQL_VERSION_80_INSTALLED=	yes
 .endif
 .if exists(${LOCALBASE}/lib/libecpg.so.4.1)
