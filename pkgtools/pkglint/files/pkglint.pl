@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.234 2005/08/06 22:24:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.235 2005/08/06 22:41:07 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2108,7 +2108,6 @@ sub check_category($) {
 
 			} elsif ($is_wip && $line->text eq "") {
 				# ignore the special case "wip", which defines its own "index" target.
-				$lines_atend = true;
 
 			} else {
 				$line->log_error("SUBDIR+= line expected.");
@@ -2133,7 +2132,7 @@ sub check_category($) {
 			$fetch_next_line = true;
 		}
 
-		if ($lines_index == $#{$lines} - 1) {
+		if ($lines_index == $#{$lines} - 1 || ($is_wip && $line->text eq "")) {
 			$lines_atend = true;
 		}
 		$filesys_atend = ($filesys_index == @filesys_subdirs);
