@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2005/08/06 06:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/06 23:29:36 cube Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
 SVR4_PKGNAME=		p5plh
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel perl5
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -15,7 +15,7 @@ COMMENT=		Perl header files
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}
-PERL5_PACKLIST=		${PERL5_INSTALLSITEARCH}/.packlist.h2ph
+PERL5_PACKLIST=		.packlist.h2ph
 
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
@@ -35,19 +35,19 @@ do-build:
 	( cd /usr/include; \
 	  ${BUILDLINK_PREFIX.perl}/bin/h2ph -d ${WRKSRC}/h2ph -r -l . ) \
 		> ${WRKSRC}/h2ph_log
-	( ${ECHO} "${PERL5_INSTALLSITEARCH}/_h2ph_pre.ph"; \
+	( ${ECHO} "${PERL5_INSTALLVENDORARCH}/_h2ph_pre.ph"; \
 	  ${CAT} ${WRKSRC}/h2ph_log \
 		| ${GREP} -- "->" \
-		| ${SED} -e "s,.*\./,${PERL5_INSTALLSITEARCH}/,g" ) \
+		| ${SED} -e "s,.*\./,${PERL5_INSTALLVENDORARCH}/,g" ) \
 		| ${SORT} -u \
 		> ${WRKSRC}/packlist
 
 do-install:
-	${INSTALL_DATA_DIR} ${PERL5_INSTALLSITEARCH}
-	cd ${WRKSRC}/h2ph/ && ${PAX} -rw . ${PERL5_INSTALLSITEARCH}
-	${INSTALL_DATA} ${WRKSRC}/packlist ${PERL5_PACKLIST}
-	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHMOD} a-w
-	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
+	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORARCH}
+	cd ${WRKSRC}/h2ph/ && ${PAX} -rw . ${PERL5_INSTALLVENDORARCH}
+	${INSTALL_DATA} ${WRKSRC}/packlist ${PERL5_INSTALLVENDORARCH}/${PERL5_PACKLIST}
+	${CAT} ${PERL5_INSTALLVENDORARCH}/${PERL5_PACKLIST} | ${XARGS} ${CHMOD} a-w
+	${CAT} ${PERL5_INSTALLVENDORARCH}/${PERL5_PACKLIST} | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
 
 # empty do-nothing to override module.mk TEST_TARGET
 do-test:
