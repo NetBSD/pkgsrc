@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:37 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:29 jlam Exp $
 #
 
 DISTNAME=		vcheck-1.2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net perl5
 MASTER_SITES=		http://www.stud.tu-ilmenau.de/~gomar/stuff/vcheck/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:32 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/06 06:19:22 jlam Exp $
 
 DISTNAME=	Mail-Box-2.060
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
@@ -22,8 +23,6 @@ DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-File-Remove-[0-9]*:../../sysutils/p5-File-Remove
-
-PERL5_REQD?=	5.8.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

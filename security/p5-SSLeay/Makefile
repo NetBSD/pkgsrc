@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2005/07/13 18:01:39 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/06 06:19:31 jlam Exp $
 #
 
 DISTNAME=	Crypt-SSLeay-0.51
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 SVR4_PKGNAME=	p5csl
 CATEGORIES=	security perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}

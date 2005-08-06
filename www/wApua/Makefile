@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:48 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:41 jlam Exp $
 #
 
 DISTNAME=	wApua-0.05
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://fsinfo.cs.uni-sb.de/~abe/wApua/
 

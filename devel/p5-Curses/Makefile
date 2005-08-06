@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2005/07/14 18:35:03 adrianp Exp $
+# $NetBSD: Makefile,v 1.29 2005/08/06 06:19:09 jlam Exp $
 
 DISTNAME=	Curses-1.12
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cur
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Curses/}
 EXTRACT_SUFX=	.tgz

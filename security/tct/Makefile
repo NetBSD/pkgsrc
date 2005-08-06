@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/06/19 01:03:04 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/06 06:19:31 jlam Exp $
 #
 
 DISTNAME=	tct-1.09
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://www.porcupine.org/forensics/
 
@@ -12,6 +12,7 @@ COMMENT=	Programs to aid post-mortem after a break-in
 
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	bin/grave-robber bin/mactime bin/strip_tct_home
 REPLACE_PERL+=	extras/bdf extras/ils2mac extras/realpath
 REPLACE_PERL+=	lazarus/lazarus
@@ -39,10 +40,9 @@ do-install:
 	for f in README design-notes grave-robber.README lazarus.README mac.README; do \
 		${INSTALL_DATA} $$f ${PREFIX}/share/doc/tct;		\
 	done
-	${INSTALL_DATA_DIR} ${PERL5_SITEARCH}
-	cd ${WRKSRC}/lib && ${INSTALL_DATA} *.pl ${PERL5_SITEARCH}
+	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
+	cd ${WRKSRC}/lib && ${INSTALL_DATA} *.pl ${PERL5_INSTALLVENDORLIB}
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/tct/conf
 	cd ${WRKSRC}/conf && ${INSTALL_DATA} paths.pl *.cf ${PREFIX}/tct/conf
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

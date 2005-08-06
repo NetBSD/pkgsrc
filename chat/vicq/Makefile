@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/07/13 18:01:19 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/06 06:19:04 jlam Exp $
 
 DISTNAME=	vicq-0.4.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2

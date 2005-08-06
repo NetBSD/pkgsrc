@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2005/06/23 08:12:13 martti Exp $
+# $NetBSD: Makefile,v 1.63 2005/08/06 06:19:24 jlam Exp $
 
 DISTNAME=	mrtg-2.12.2
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
@@ -27,7 +27,6 @@ HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
 
 USE_TOOLS+=	perl
-PERL5_REQD+=	5.6.1
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 
@@ -37,7 +36,7 @@ LDFLAGS+=	-lgd -lttf -lintl -ljpeg
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
-.include "../../net/p5-INET6/buildlink3.mk"
+DEPENDS+=	p5-INET6>=2.00:../../net/p5-INET6
 .endif
 
 .if ${OPSYS} == "SunOS"
@@ -91,13 +90,13 @@ do-install:
 	for FILE in netstat2mrtg sys2mrtg envstat2mrtg; do \
 	  ${INSTALL_SCRIPT} ${WRKDIR}/$$FILE ${PREFIX}/libexec; \
 	done
-	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
+	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/mrtg2/BER.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_Session.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_util.pm \
 	  ${WRKSRC}/lib/mrtg2/MRTG_lib.pm \
 	  ${WRKSRC}/lib/mrtg2/locales_mrtg.pm \
-	  ${PERL5_SITELIB}
+	  ${PERL5_INSTALLVENDORLIB}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/rateup ${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/mrtg ${PREFIX}/bin/
 	for FILE in cfgmaker indexmaker; do \

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/07/13 18:01:34 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/06 06:19:23 jlam Exp $
 
 DISTNAME=	File-Tail-0.99.1
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5fit
-PKGREVISION=	# empty
+PKGREVISION=	1
 CATEGORIES=	misc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 

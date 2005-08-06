@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2005/07/21 20:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2005/08/06 06:19:18 jlam Exp $
 
 DISTNAME=		gnucash-1.8.11
 PKGREVISION=		3
@@ -23,7 +23,6 @@ USE_PKGLOCALEDIR=	YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 

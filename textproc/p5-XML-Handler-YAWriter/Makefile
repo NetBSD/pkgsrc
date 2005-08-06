@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/07/17 14:25:57 heinz Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/06 06:19:33 jlam Exp $
 #
 
 DISTNAME=	XML-Handler-YAWriter-0.23
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 SVR4_PKGNAME=	p5xhy
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -16,7 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # really: XML::Parser::PerlSAX' => 0.06
 DEPENDS+=		p5-libxml>=0.07:../../textproc/p5-libxml
-PERL5_REQD+=		5.6.0 # really: IO:File >= 1.06
 
 PERL5_PACKLIST=		auto/XML/Handler/YAWriter/.packlist
 REPLACE_PERL=		xmlpretty

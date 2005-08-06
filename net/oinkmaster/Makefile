@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/06 06:19:24 jlam Exp $
 
 DISTNAME=	oinkmaster-1.2
 PKGREVISION=	1
@@ -22,7 +22,6 @@ DOCDIR=		${PREFIX}/share/doc/oinkmaster
 DOCS=		INSTALL LICENSE README README.templates UPGRADING FAQ
 
 USE_TOOLS+=	perl:run
-PERL5_REQD+=	5.6.1
 REPLACE_PERL+=	${WRKSRC}/oinkmaster.pl
 
 PKG_SYSCONFSUBDIR=	snort

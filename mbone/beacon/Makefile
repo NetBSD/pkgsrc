@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/07/13 18:01:33 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/06 06:19:23 jlam Exp $
 #
 
 DISTNAME=	beacon-1.1-0
 PKGNAME=	beacon-1.1.0
+PKGREVISION=	1
 CATEGORIES=	mbone
 MASTER_SITES=	http://dast.nlanr.net/Projects/Beacon/releases/
 

@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/06/23 08:12:13 martti Exp $
-${PERL5_SITELIB}/BER.pm
-${PERL5_SITELIB}/MRTG_lib.pm
-${PERL5_SITELIB}/SNMP_Session.pm
-${PERL5_SITELIB}/SNMP_util.pm
-${PERL5_SITELIB}/locales_mrtg.pm
+@comment $NetBSD: PLIST,v 1.9 2005/08/06 06:19:24 jlam Exp $
 bin/mrtg
 bin/mrtgcfgmaker
 bin/mrtgindexmaker
@@ -11,6 +6,11 @@ libexec/envstat2mrtg
 libexec/netstat2mrtg
 libexec/rateup
 libexec/sys2mrtg
+${PERL5_SUB_INSTALLVENDORLIB}/BER.pm
+${PERL5_SUB_INSTALLVENDORLIB}/MRTG_lib.pm
+${PERL5_SUB_INSTALLVENDORLIB}/SNMP_Session.pm
+${PERL5_SUB_INSTALLVENDORLIB}/SNMP_util.pm
+${PERL5_SUB_INSTALLVENDORLIB}/locales_mrtg.pm
 man/man1/mrtg-contrib.1
 man/man1/mrtg-faq.1
 man/man1/mrtg-forum.1

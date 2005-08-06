@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:27 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/06 06:19:22 jlam Exp $
 #
 
 DISTNAME=	sympa-4.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/
 
@@ -61,8 +61,6 @@ CONFIGURE_ARGS+=	--with-group=${SYMPA_GROUP}
 
 MHONARC_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		MHONARC_PREFIX=mhonarc
-
-PERL5_REQD+=	5.005
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sympa
 PKG_SUPPORTED_OPTIONS=	mysql pgsql
