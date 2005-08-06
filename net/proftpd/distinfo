@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.9 2005/02/24 12:14:01 agc Exp $
+$NetBSD: distinfo,v 1.9.4.1 2005/08/06 22:17:34 salo Exp $
 
 SHA1 (proftpd-1.2.10.tar.gz) = ea12d139b8b47168cabcd993b137b2360bba1465
 RMD160 (proftpd-1.2.10.tar.gz) = c96cadc6bfef0f77f2d44ed901b55474c6f6a464
 Size (proftpd-1.2.10.tar.gz) = 1182176 bytes
 SHA1 (patch-aa) = 3784f6aed87b327741685d45d453aa2ac98dd98b
+SHA1 (patch-ab) = cc760fc91846a0fc595e2e76d5a1ef582915034d
+SHA1 (patch-ac) = 5c05fb0c21288af6cd718f8792cc829bc348dd47
+SHA1 (patch-ad) = 5afd166f210589a4d985451840d2eec44f96bac9
+SHA1 (patch-ae) = 5bd9ec77732bc9821a0e723d00778fe03f296da1

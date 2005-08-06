@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/08/06 22:17:34 salo Exp $
+
+--- src/response.c.orig	2005-08-06 12:20:27.000000000 +0100
++++ src/response.c
+@@ -169,7 +169,7 @@ void pr_response_send_async(const char *
+   buf[sizeof(buf) - 1] = '\0';
+   sstrcat(buf, "\r\n", sizeof(buf));
+ 
+-  RESPONSE_WRITE_STR_ASYNC(session.c->outstrm, buf, strlen(buf))
++  RESPONSE_WRITE_STR_ASYNC(session.c->outstrm, "%s", buf)
+ }
+ 
+ void pr_response_send(const char *resp_numeric, const char *fmt, ...) {
