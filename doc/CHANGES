@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10809 2005/08/06 14:08:11 salo Exp $
+$NetBSD: CHANGES,v 1.10810 2005/08/06 17:46:15 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/links-gui to 2.1.0.18 [wiz 2005-08-06]
 	Updated graphics/dcraw to 7.48 [markd 2005-08-06]
 	Updated graphics/netpbm to 10.28 [salo 2005-08-06]
+	Updated sysutils/xentools20 to 20.7 [bouyer 2005-08-06]
