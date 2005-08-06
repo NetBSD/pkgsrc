@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2005/07/30 12:50:54 markd Exp $
+# $NetBSD: Makefile,v 1.403 2005/08/06 00:31:00 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -222,6 +222,7 @@ SUBDIR+=	wxGTK
 SUBDIR+=	wxGTK-contrib
 SUBDIR+=	wxWindows-docs
 SUBDIR+=	wxhaskell
+SUBDIR+=	x11vnc
 SUBDIR+=	x2x
 SUBDIR+=	x3270
 SUBDIR+=	xaniroc
