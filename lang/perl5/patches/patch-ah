@@ -1,67 +1,91 @@
-$NetBSD: patch-ah,v 1.6 2005/06/24 06:43:46 jlam Exp $
+$NetBSD: patch-ah,v 1.7 2005/08/06 06:18:45 jlam Exp $
 
---- perl.c.orig	2004-11-23 10:16:56.000000000 -0500
+--- perl.c.orig	2005-04-22 10:14:27.000000000 -0400
 +++ perl.c
-@@ -4314,12 +4314,33 @@ S_init_perllib(pTHX)
+@@ -4391,45 +4391,12 @@ S_init_perllib(pTHX)
      }
  
  /* Use the ~-expanded versions of APPLLIB (undocumented),
 -    ARCHLIB PRIVLIB SITEARCH SITELIB VENDORARCH and VENDORLIB
-+    SITEARCH SITELIB ARCHLIB PRIVLIB VENDORARCH and VENDORLIB
++    SITEARCH SITELIB VENDORARCH VENDORLIB ARCHLIB and PRIVLIB
  */
  #ifdef APPLLIB_EXP
      incpush(APPLLIB_EXP, TRUE, TRUE, TRUE);
  #endif
  
-+#ifdef SITEARCH_EXP
-+    /* sitearch is always relative to sitelib on Windows for
-+     * DLL-based path intuition to work correctly */
-+#  if !defined(WIN32)
-+    incpush(SITEARCH_EXP, FALSE, FALSE, TRUE);
-+#  endif
-+#endif
-+
-+#ifdef SITELIB_EXP
-+#  if defined(WIN32)
-+    /* this picks up sitearch as well */
-+    incpush(SITELIB_EXP, TRUE, FALSE, TRUE);
-+#  else
-+    incpush(SITELIB_EXP, FALSE, FALSE, TRUE);
-+#  endif
-+#endif
-+
-+#ifdef SITELIB_STEM /* Search for version-specific dirs below here */
-+    incpush(SITELIB_STEM, FALSE, TRUE, TRUE);
-+#endif
-+
- #ifdef ARCHLIB_EXP
-     incpush(ARCHLIB_EXP, FALSE, FALSE, TRUE);
- #endif
-@@ -4353,27 +4374,6 @@ S_init_perllib(pTHX)
-     incpush(PRIVLIB_EXP, FALSE, FALSE, TRUE);
+-#ifdef ARCHLIB_EXP
+-    incpush(ARCHLIB_EXP, FALSE, FALSE, TRUE);
+-#endif
+-#ifdef MACOS_TRADITIONAL
+-    {
+-	Stat_t tmpstatbuf;
+-    	SV * privdir = NEWSV(55, 0);
+-	char * macperl = PerlEnv_getenv("MACPERL");
+-	
+-	if (!macperl)
+-	    macperl = "";
+-	
+-	Perl_sv_setpvf(aTHX_ privdir, "%slib:", macperl);
+-	if (PerlLIO_stat(SvPVX(privdir), &tmpstatbuf) >= 0 && S_ISDIR(tmpstatbuf.st_mode))
+-	    incpush(SvPVX(privdir), TRUE, FALSE, TRUE);
+-	Perl_sv_setpvf(aTHX_ privdir, "%ssite_perl:", macperl);
+-	if (PerlLIO_stat(SvPVX(privdir), &tmpstatbuf) >= 0 && S_ISDIR(tmpstatbuf.st_mode))
+-	    incpush(SvPVX(privdir), TRUE, FALSE, TRUE);
+-	
+-   	SvREFCNT_dec(privdir);
+-    }
+-    if (!PL_tainting)
+-	incpush(":", FALSE, FALSE, TRUE);
+-#else
+-#ifndef PRIVLIB_EXP
+-#  define PRIVLIB_EXP "/usr/local/lib/perl5:/usr/local/lib/perl"
+-#endif
+-#if defined(WIN32)
+-    incpush(PRIVLIB_EXP, TRUE, FALSE, TRUE);
+-#else
+-    incpush(PRIVLIB_EXP, FALSE, FALSE, TRUE);
+-#endif
+-
+ #ifdef SITEARCH_EXP
+     /* sitearch is always relative to sitelib on Windows for
+      * DLL-based path intuition to work correctly */
+@@ -4471,6 +4438,39 @@ S_init_perllib(pTHX)
+     incpush(PERL_VENDORLIB_STEM, FALSE, TRUE, TRUE);
  #endif
  
--#ifdef SITEARCH_EXP
--    /* sitearch is always relative to sitelib on Windows for
--     * DLL-based path intuition to work correctly */
--#  if !defined(WIN32)
--    incpush(SITEARCH_EXP, FALSE, FALSE, TRUE);
--#  endif
--#endif
--
--#ifdef SITELIB_EXP
--#  if defined(WIN32)
--    /* this picks up sitearch as well */
--    incpush(SITELIB_EXP, TRUE, FALSE, TRUE);
--#  else
--    incpush(SITELIB_EXP, FALSE, FALSE, TRUE);
--#  endif
--#endif
--
--#ifdef SITELIB_STEM /* Search for version-specific dirs below here */
--    incpush(SITELIB_STEM, FALSE, TRUE, TRUE);
--#endif
--
- #ifdef PERL_VENDORARCH_EXP
-     /* vendorarch is always relative to vendorlib on Windows for
-      * DLL-based path intuition to work correctly */
++#ifdef ARCHLIB_EXP
++    incpush(ARCHLIB_EXP, FALSE, FALSE, TRUE);
++#endif
++#ifdef MACOS_TRADITIONAL
++    {
++	Stat_t tmpstatbuf;
++    	SV * privdir = NEWSV(55, 0);
++	char * macperl = PerlEnv_getenv("MACPERL");
++	
++	if (!macperl)
++	    macperl = "";
++	
++	Perl_sv_setpvf(aTHX_ privdir, "%slib:", macperl);
++	if (PerlLIO_stat(SvPVX(privdir), &tmpstatbuf) >= 0 && S_ISDIR(tmpstatbuf.st_mode))
++	    incpush(SvPVX(privdir), TRUE, FALSE, TRUE);
++	Perl_sv_setpvf(aTHX_ privdir, "%ssite_perl:", macperl);
++	if (PerlLIO_stat(SvPVX(privdir), &tmpstatbuf) >= 0 && S_ISDIR(tmpstatbuf.st_mode))
++	    incpush(SvPVX(privdir), TRUE, FALSE, TRUE);
++	
++   	SvREFCNT_dec(privdir);
++    }
++    if (!PL_tainting)
++	incpush(":", FALSE, FALSE, TRUE);
++#else
++#ifndef PRIVLIB_EXP
++#  define PRIVLIB_EXP "/usr/local/lib/perl5:/usr/local/lib/perl"
++#endif
++#if defined(WIN32)
++    incpush(PRIVLIB_EXP, TRUE, FALSE, TRUE);
++#else
++    incpush(PRIVLIB_EXP, FALSE, FALSE, TRUE);
++#endif
++
+ #ifdef PERL_OTHERLIBDIRS
+     incpush(PERL_OTHERLIBDIRS, TRUE, TRUE, TRUE);
+ #endif
