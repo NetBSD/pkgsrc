@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/06 05:32:19 xtraeme Exp $
+
+SHA1 (etpan-ng-0.6.1.tar.gz) = 53b552c8e03d83f9d400e116383e0b48ef18676c
+RMD160 (etpan-ng-0.6.1.tar.gz) = edde7cadaee1dbd68bae29faec47a8ae63015dae
+Size (etpan-ng-0.6.1.tar.gz) = 372832 bytes
+SHA1 (patch-aa) = 72ab16853068fc5d7f3f736411187b720d15f8a0
+SHA1 (patch-ab) = f45fadaa7b7326fe73726761c499fb2792527787
