@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.231 2005/08/06 20:32:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.232 2005/08/06 21:08:05 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2028,11 +2028,14 @@ sub check_category($) {
 	my ($lines);
 	my (@makefile_subdirs) = ();
 	my (@filesys_subdirs) = ();
+	my ($is_wip);
 
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
+
+	$is_wip = (basename(Cwd::abs_path($dir)) eq "wip");
 
 	if (@{$lines} < 8) {
 		log_error($fname, NO_LINE_NUMBER, "File too short.");
@@ -2040,7 +2043,7 @@ sub check_category($) {
 	if (@{$lines} > 0) {
 		checkline_rcsid_regex($lines->[0], qr"#\s+", "# ");
 	}
-	if (@{$lines} > 1 && $lines->[1]->text ne "#") {
+	if (@{$lines} > 1 && $lines->[1]->text ne "#" && !$is_wip) {
 		$lines->[1]->log_error("This line must contain a single #, nothing more.");
 	}
 	if (@{$lines} > 2 && $lines->[2]->text ne "") {
@@ -2082,7 +2085,13 @@ sub check_category($) {
 			$last_subdir = $subdir;
 
 			push(@makefile_subdirs, $subdir);
+
 		} else {
+			# ignore the special case "wip", which defines its own "index" target.
+			if ($is_wip && $line->text eq "") {
+				last;
+			}
+
 			$line->log_error("SUBDIR+= line expected.");
 		}
 	}
