@@ -1,0 +1,40 @@
+$NetBSD: patch-ae,v 1.1.2.2 2005/08/06 22:17:34 salo Exp $
+
+--- contrib/mod_sql.c.orig	2004-08-03 01:44:31.000000000 +0100
++++ contrib/mod_sql.c
+@@ -2036,7 +2036,7 @@ MODRET info_master(cmd_rec *cmd) {
+       *outsp++ = 0;
+ 
+       /* add the response */
+-      pr_response_add( c->argv[0], outs);
++      pr_response_add(c->argv[0], "%s", outs);
+ 
+     } while((c = find_config_next(c, c->next, CONF_PARAM, name, FALSE)) != NULL);
+ 
+@@ -2110,7 +2110,7 @@ MODRET info_master(cmd_rec *cmd) {
+       *outsp++ = 0;
+ 
+       /* add the response */
+-      pr_response_add( c->argv[0], outs);
++      pr_response_add(c->argv[0], "%s", outs);
+ 
+     } while((c = find_config_next(c, c->next, CONF_PARAM, name, FALSE)) != NULL);
+ 
+@@ -2201,7 +2201,7 @@ MODRET errinfo_master(cmd_rec *cmd) {
+       *outsp++ = 0;
+ 
+       /* add the response */
+-      pr_response_add_err( c->argv[0], outs);
++      pr_response_add_err(c->argv[0], "%s", outs);
+ 
+     } while((c = find_config_next(c, c->next, CONF_PARAM, name, FALSE)) != NULL);
+ 
+@@ -2275,7 +2275,7 @@ MODRET errinfo_master(cmd_rec *cmd) {
+       *outsp++ = 0;
+ 
+       /* add the response */
+-      pr_response_add( c->argv[0], outs);
++      pr_response_add(c->argv[0], "%s", outs);
+ 
+     } while((c = find_config_next(c, c->next, CONF_PARAM, name, FALSE)) != NULL);
+ 
