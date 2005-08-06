@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.15 2005/01/24 18:06:57 wulf Exp $
+# $NetBSD: Makefile,v 1.16 2005/08/06 20:33:56 rillig Exp $
 #
-
 
 COMMENT=	Amateur packet radio tools
 
