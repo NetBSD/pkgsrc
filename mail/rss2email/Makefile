@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2005/08/03 17:19:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/06 20:25:54 schmonz Exp $
 #
 
 DISTNAME=		rss2email-${RVER}
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.py
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} r2e html2text-${HVER}.py
+DISTFILES=		r2e-${SVER}.sh ${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		html2text-${HVER}.py
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.aaronsw.com/2002/rss2email/
@@ -13,6 +14,7 @@ COMMENT=		Get RSS feeds emailed to you
 
 DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 
+SVER=			2.0
 RVER=			2.55
 HVER=			2.23
 
@@ -34,13 +36,18 @@ EGDIR=			${PREFIX}/share/examples/rss2email
 INSTALLATION_DIRS=	bin man/man1
 
 do-extract:
-	${CP} -R ${DISTDIR}/${DIST_SUBDIR} ${WRKSRC}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${CP} -R ${DISTDIR}/${DIST_SUBDIR} ${WRKSRC};			\
+	cd ${WRKSRC};							\
+	${MV} rss2email-${RVER}.py rss2email.py;			\
+	${MV} html2text-${HVER}.py html2text.py;			\
+	${MV} r2e-${SVER}.sh r2e
 
 do-install:
 	cd ${WRKSRC} &&							\
 	${INSTALL_SCRIPT_DIR} ${SHAREDIR};				\
-	${INSTALL_SCRIPT} rss2email-${RVER}.py ${SHAREDIR}/rss2email.py;\
-	${INSTALL_SCRIPT} html2text-${HVER}.py ${SHAREDIR}/html2text.py;\
+	${INSTALL_SCRIPT} rss2email.py ${SHAREDIR};			\
+	${INSTALL_SCRIPT} html2text.py ${SHAREDIR};			\
 	${INSTALL_DATA_DIR} ${EGDIR};					\
 	${INSTALL_DATA} config.py ${EGDIR};				\
 	${INSTALL_MAN} r2e.1 ${PREFIX}/man/man1;			\
