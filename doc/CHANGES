@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10811 2005/08/06 20:35:57 recht Exp $
+$NetBSD: CHANGES,v 1.10812 2005/08/06 21:39:56 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -518,3 +518,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/netpbm to 10.28 [salo 2005-08-06]
 	Updated sysutils/xentools20 to 20.7 [bouyer 2005-08-06]
 	Updated devel/roundup to 0.8.4 [recht 2005-08-06]
+	Updated databases/phppgadmin to 3.5.4 [adrianp 2005-08-06]
