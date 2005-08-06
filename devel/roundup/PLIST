@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/07/13 21:57:01 recht Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/08/06 20:34:00 recht Exp $
 bin/roundup-admin
 bin/roundup-demo
 bin/roundup-gettext
@@ -289,6 +289,7 @@ ${PKGLOCALEDIR}/locale/en/LC_MESSAGES/roundup.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/roundup.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/roundup.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/roundup.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/roundup.mo
 share/roundup/cgi-bin/roundup.cgi
 share/roundup/templates/classic/TEMPLATE-INFO.txt
 share/roundup/templates/classic/detectors/messagesummary.py
