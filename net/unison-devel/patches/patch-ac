@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/08/03 12:45:27 tonio Exp $
+$NetBSD: patch-ac,v 1.5 2005/08/06 12:44:26 rillig Exp $
 
---- pty.c.orig	2005-08-03 11:31:38.000000000 +0200
-+++ pty.c	2005-08-03 11:33:07.000000000 +0200
-@@ -15,7 +15,7 @@
+--- pty.c.orig	Mon May 30 14:15:43 2005
++++ pty.c	Sat Aug  6 14:41:44 2005
+@@ -15,7 +15,7 @@ extern void uerror (char * cmdname, valu
  #define HAS_OPENPTY 1
  #endif
  
@@ -11,3 +11,15 @@ $NetBSD: patch-ac,v 1.4 2005/08/03 12:45:27 tonio Exp $
  #include <util.h>
  #define HAS_OPENPTY 1
  #endif
+@@ -40,9 +40,10 @@ CAMLprim value setControllingTerminal(va
+ /* c_openpty: unit -> (int * Unix.file_descr) */
+ CAMLprim value c_openpty() {
+   int master,slave;
++  value pair;
+   if (openpty(&master,&slave,NULL,NULL,NULL) < 0)
+     uerror("openpty", (value) 0);
+-  value pair = alloc_tuple(2);
++  pair = alloc_tuple(2);
+   Store_field(pair,0,Val_int(master));
+   Store_field(pair,1,Val_int(slave));
+   return pair;
