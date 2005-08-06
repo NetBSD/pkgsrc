@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2005/07/13 18:01:45 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/06 06:19:35 jlam Exp $
 #
 # NOTE: This package is *BETA*.  If it doesn't work, then check the
 #	modperl-2.0 mailing lists for help.
 
 DISTNAME=	mod_perl-1.99_17
 PKGNAME=	ap2-perl-1.99.17
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	http://perl.apache.org/dist/
 
@@ -15,7 +16,6 @@ COMMENT=	Module that embeds a Perl interpreter into Apache
 CONFLICTS=	ap-perl-[0-9]*
 
 APACHE_MODULE=		# defined
-PERL5_REQD+=		5.6.0
 PERL5_PACKLIST=		auto/mod_perl/.packlist
 
 MAKE_PARAMS+=		MP_APXS=${APXS}

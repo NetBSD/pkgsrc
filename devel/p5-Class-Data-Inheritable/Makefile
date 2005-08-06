@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/07/13 18:01:22 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/06 06:19:08 jlam Exp $
 
 DISTNAME=	Class-Data-Inheritable-0.02
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cdi
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 

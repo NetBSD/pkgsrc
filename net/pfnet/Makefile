@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/06 06:19:28 jlam Exp $
 #
 
 DISTNAME=	fnet.pl-1.4
 PKGNAME=	pfnet-1.4
+PKGREVISION=	1
 CATEGORIES=	chat net
 MASTER_SITES=	ftp://ftp.abattoir.com/pub/
 
@@ -19,8 +20,9 @@ do-build:
 	${SED} -e 's,/usr/local,${PREFIX},g' ${WRKSRC}/fnet.pl >${WRKSRC}/pfnet
 
 do-install:
-	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
-	${INSTALL_DATA} ${WRKSRC}/CMDLINE.pm ${WRKSRC}/FNET.pm ${PERL5_SITELIB}
+	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
+	${INSTALL_DATA} ${WRKSRC}/CMDLINE.pm ${WRKSRC}/FNET.pm		\
+		${PERL5_INSTALLVENDORLIB}
 	${INSTALL_SCRIPT} ${WRKSRC}/pfnet ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

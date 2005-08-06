@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/06 06:19:05 jlam Exp $
 #
 
 DISTNAME=	chkjis
 PKGNAME=	p5-chkjis-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese converters perl5
 MASTER_SITES=	http://www2d.biglobe.ne.jp/~msyk/software/perl5/
 EXTRACT_SUFX=	.pl
@@ -21,12 +21,14 @@ DIST_SUBDIR=	chkjis-${VERSION}
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
 
-NO_BUILD=	yes
-NO_CONFIGURE=	yes
-NO_WRAPPER=	yes
+NO_BUILD=		yes
+NO_CONFIGURE=		yes
+PERL5_CONFIGURE=	no
+NO_WRAPPER=		yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
-	${INSTALL_SCRIPT} ${WRKSRC}/chkjis.pl ${PERL5_SITELIB}
+	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
+	${INSTALL_SCRIPT} ${WRKSRC}/chkjis.pl ${PERL5_INSTALLVENDORLIB}
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

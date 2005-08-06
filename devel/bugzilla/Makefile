@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/05 21:45:29 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:07 jlam Exp $
 #
 
 DISTNAME=	bugzilla-2.18.3
@@ -24,7 +24,6 @@ DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
-PERL5_REQD+=	5.6.0
 
 BZ_WEB_GROUP?=	www
 SENDMAIL?=	/usr/sbin/sendmail

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2005/07/13 18:01:27 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/06 06:19:13 jlam Exp $
 
 DISTNAME=	PerlVision-1.4
 PKGNAME=	p5-PV-1.4
 SVR4_PKGNAME=	p5pvi
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PV/}
 

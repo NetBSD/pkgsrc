@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/06 06:19:31 jlam Exp $
 #
 
 DISTNAME=	dtdparse-2.0beta6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dtdparse/}
 
@@ -13,7 +13,6 @@ COMMENT=	Reads an SGML or XML DTD and constructs an XML database
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM
 DEPENDS+=	p5-Text-DelimMatch-[0-9]*:../../textproc/p5-Text-DelimMatch
-
 
 DOCDIR=		${PREFIX}/share/doc/dtdparse
 EGDIR=		${PREFIX}/share/examples/dtdparse
@@ -31,9 +30,9 @@ do-build:
 
 do-install:
 	cd ${WRKSRC}; ${INSTALL_SCRIPT} ${SCRIPTS} ${PREFIX}/bin
-	${MKDIR} ${PERL5_SITELIB}/XML/DTDParse
+	${MKDIR} ${PERL5_INSTALLVENDORLIB}/XML/DTDParse
 	${INSTALL_DATA} ${WRKSRC}/XML/DTDParse/*.pm ${WRKSRC}/modules/*.pl \
-		${PERL5_SITELIB}/XML/DTDParse
+		${PERL5_INSTALLVENDORLIB}/XML/DTDParse
 	${MKDIR} ${XMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/dtd.dtd ${XMLDIR}
 	${INSTALL_DATA} ${FILESDIR}/catalog ${XMLDIR}/catalog

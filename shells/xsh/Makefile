@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/07/29 18:32:18 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/06 06:19:31 jlam Exp $
 
 DISTNAME=	XML-XSH-1.8.2
 PKGNAME=	${DISTNAME:S/XML-XSH/xsh/}
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xsh/}
 

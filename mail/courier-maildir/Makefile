@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/06 06:19:21 jlam Exp $
 
 DISTNAME=	courier-0.49.0
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -15,7 +15,6 @@ CONFLICTS=	courier-maildirmake-[0-9]*
 
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
-PERL5_REQD+=		5.8.0
 
 .include "Makefile.common"
 

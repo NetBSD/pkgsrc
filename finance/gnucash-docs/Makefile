@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/06 06:19:19 jlam Exp $
 
 DISTNAME=		gnucash-docs-1.8.5
 CATEGORIES=		finance
@@ -18,9 +18,7 @@ USE_DIRS+=		gnome1-1.5
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/08/04 15:11:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/06 06:19:12 jlam Exp $
 #
 
 DISTNAME=		PAR-0.89
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/
 
