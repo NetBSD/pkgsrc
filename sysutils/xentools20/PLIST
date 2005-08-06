@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/24 16:02:08 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/08/06 17:43:14 bouyer Exp $
 bin/xencons
 bin/xenperf
 include/xc.h
@@ -69,7 +69,6 @@ ${PYSITELIB}/xen/xend/XendConsole.py
 ${PYSITELIB}/xen/xend/XendDB.py
 ${PYSITELIB}/xen/xend/XendDmesg.py
 ${PYSITELIB}/xen/xend/XendDomain.py
-${PYSITELIB}/xen/xend/XendDomainConfig.py
 ${PYSITELIB}/xen/xend/XendError.py
 ${PYSITELIB}/xen/xend/XendMigrate.py
 ${PYSITELIB}/xen/xend/XendNode.py
@@ -90,7 +89,6 @@ ${PYSITELIB}/xen/xend/XendConsole.pyc
 ${PYSITELIB}/xen/xend/XendDB.pyc
 ${PYSITELIB}/xen/xend/XendDmesg.pyc
 ${PYSITELIB}/xen/xend/XendDomain.pyc
-${PYSITELIB}/xen/xend/XendDomainConfig.pyc
 ${PYSITELIB}/xen/xend/XendDomainInfo.py
 ${PYSITELIB}/xen/xend/XendDomainInfo.pyc
 ${PYSITELIB}/xen/xend/XendError.pyc
@@ -180,6 +178,7 @@ sbin/xenperf
 sbin/xensv
 sbin/xfrd
 sbin/xm
+share/examples/rc.d/xend
 share/examples/xen/block-enbd
 share/examples/xen/block-file
 share/examples/xen/network
