@@ -1,0 +1,11 @@
+# $NetBSD: install_link.tmpl,v 1.1 2005/08/06 06:18:45 jlam Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	eval `${PERL5} -V:scriptdir`
+	PERL5_PACKLIST="@PERL5_PACKLIST@"
+
+	# Symlink the bits that belong to this module.
+	$scriptdir/perllink -f -p ${PKG_PREFIX} add ${PERL5_PACKLIST}
+	;;
+esac

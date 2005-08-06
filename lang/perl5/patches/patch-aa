@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.26 2005/06/24 06:43:45 jlam Exp $
+$NetBSD: patch-aa,v 1.27 2005/08/06 06:18:45 jlam Exp $
 
 --- lib/ExtUtils/MM_Unix.pm.orig	2004-01-05 17:34:59.000000000 -0500
 +++ lib/ExtUtils/MM_Unix.pm
@@ -48,3 +48,39 @@ $NetBSD: patch-aa,v 1.26 2005/06/24 06:43:45 jlam Exp $
  	    }
  	}
      }
+@@ -2480,13 +2480,13 @@ sub install {
+     my(@m);
+ 
+     push @m, q{
+-install :: all pure_install doc_install
++install :: all pure_install
+ 
+-install_perl :: all pure_perl_install doc_perl_install
++install_perl :: all pure_perl_install
+ 
+-install_site :: all pure_site_install doc_site_install
++install_site :: all pure_site_install
+ 
+-install_vendor :: all pure_vendor_install doc_vendor_install
++install_vendor :: all pure_vendor_install
+ 
+ pure_install :: pure_$(INSTALLDIRS)_install
+ 
+@@ -2519,7 +2519,7 @@ pure_site_install ::
+ 		$(INST_LIB) $(DESTINSTALLSITELIB) \
+ 		$(INST_ARCHLIB) $(DESTINSTALLSITEARCH) \
+ 		$(INST_BIN) $(DESTINSTALLSITEBIN) \
+-		$(INST_SCRIPT) $(DESTINSTALLSCRIPT) \
++		$(INST_SCRIPT) $(DESTINSTALLSITESCRIPT) \
+ 		$(INST_MAN1DIR) $(DESTINSTALLSITEMAN1DIR) \
+ 		$(INST_MAN3DIR) $(DESTINSTALLSITEMAN3DIR)
+ 	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
+@@ -2532,7 +2532,7 @@ pure_vendor_install ::
+ 		$(INST_LIB) $(DESTINSTALLVENDORLIB) \
+ 		$(INST_ARCHLIB) $(DESTINSTALLVENDORARCH) \
+ 		$(INST_BIN) $(DESTINSTALLVENDORBIN) \
+-		$(INST_SCRIPT) $(DESTINSTALLSCRIPT) \
++		$(INST_SCRIPT) $(DESTINSTALLVENDORSCRIPT) \
+ 		$(INST_MAN1DIR) $(DESTINSTALLVENDORMAN1DIR) \
+ 		$(INST_MAN3DIR) $(DESTINSTALLVENDORMAN3DIR)
+ 
