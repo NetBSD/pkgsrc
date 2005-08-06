@@ -1,8 +1,8 @@
-$NetBSD: patch-ce,v 1.1 2005/06/24 06:43:47 jlam Exp $
+$NetBSD: patch-ce,v 1.2 2005/08/06 06:18:45 jlam Exp $
 
---- lib/File/Temp.pm.orig	Fri Apr 23 12:42:30 2004
-+++ lib/File/Temp.pm	Fri Apr 23 12:44:21 2004
-@@ -2012,6 +2012,7 @@
+--- lib/File/Temp.pm.orig	2005-04-03 11:27:16.000000000 -0400
++++ lib/File/Temp.pm
+@@ -2128,6 +2128,7 @@ The value is only relevant when C<safe_l
  
  {
    my $TopSystemUID = 10;

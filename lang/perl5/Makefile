@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2005/07/13 15:20:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.97 2005/08/06 06:18:45 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -6,14 +6,15 @@
 PERL5_SNAPSHOT=	# empty
 PERL5_RC_VERS=	# empty
 
-PERL5_VERS=	5.8.6
+PERL5_VERS=	5.8.7
 CATEGORIES=	lang devel perl5
 EXTRACT_SUFX=	.tar.bz2
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
-PKGREVISION=	6
+PKGREVISION=	# empty
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -35,25 +36,51 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.perl.com/
 COMMENT=	Practical Extraction and Report Language
 
-CONFLICTS=	perl-5.00* perl-base-[0-9]* \
-		p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2] \
-		p5-Data-Dumper-2.1[0-9][0-9] p5-Data-Dumper-[0-9][0-9] \
-		p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
-		perl-mk-[0-9]* perl-thread-[0-9]*
+CONFLICTS=	perl-base-[0-9]* perl-thread-[0-9]*			\
+		p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2]
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+.include "../../mk/bsd.prefs.mk"
+
+# Determine the Perl API version from the patchlevel.h file from the
+# source distribution.
+#
+PERL5_API_VERS?=	unknown
+.if exists(${WRKSRC}/patchlevel.h)
+PERL5_API_VERS_cmd=							\
+	${AWK} '/\#define[ 	]*PERL_API_REVISION/ { R = $$3 }	\
+		/\#define[ 	]*PERL_API_VERSION/ { r = "."$$3 }	\
+		/\#define[ 	]*PERL_API_SUBVERSION/ { s = "."$$3 }	\
+		END { printf "%s%s%s\n", R, r, s }'			\
+		${WRKSRC}/patchlevel.h
+PERL5_API_VERS=		${PERL5_API_VERS_cmd:sh}
+.endif
+
+PERL5_PREFIX=		${PREFIX}
+PERL5_VENDORPREFIX=	${PERL5_PERLBASE}/vendor_perl
+PERL5_SITEPREFIX?=	${PERL5_PERLBASE}/site_perl
+BUILD_DEFS+=		PERL5_SITEPREFIX
+
+PERL5=			${PERL5_PREFIX}/bin/perl
+PERL5_PERLBASE=		${PERL5_PREFIX}/lib/perl5
+PERL5_VENDORBASE=	${PERL5_VENDORPREFIX}
+PERL5_SITEBASE=		${PERL5_SITEPREFIX}
+
+PERL5_PRIVLIB=		${PERL5_PERLBASE}/${PERL5_API_VERS}
+PERL5_VENDORLIB=	${PERL5_VENDORBASE}/${PERL5_API_VERS}
+.if !empty(PERL5_SITEBASE:M*lib/perl5/site_perl)
+PERL5_SITELIB=		${PERL5_SITEBASE}/${PERL5_API_VERS}
+.else
+PERL5_SITELIB=		${PERL5_SITEBASE}/lib/perl5/site_perl/${PERL5_API_VERS}
+.endif
 
 .include "../../mk/compiler.mk"
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
-CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
-CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
-CONFIGURE_ARGS+=	-Dcc="${CC}"
-CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
-CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
+CONFIGURE_ARGS+=	-Dcc=${CC:Q}
+CONFIGURE_ARGS+=	-Doptimize=${CFLAGS:Q}
 CONFIGURE_ARGS+=	-Duseshrplib
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
@@ -62,31 +89,43 @@ MAKE_ENV+=		LC_ALL="C"
 
 TEST_TARGET=		test
 
-# Install Perl man3 pages into a private directory under the normal
-# Perl installation.  Also install site-specific Perl man3 pages into a
-# private directory within site_perl.  This avoids manpage conflicts
-# between 3rd-party modules, the standard Perl library, and other
-# packages.
+###
+### Installation directories for "perl", "vendor" and "site" bits.
+###
+CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
+CONFIGURE_ARGS+=	-Dprefix=${PERL5_PREFIX:Q}
+CONFIGURE_ARGS+=	-Dsiteprefix=${PERL5_SITEPREFIX:Q}
+CONFIGURE_ARGS+=	-Dvendorprefix=${PERL5_VENDORPREFIX:Q}
+
+# The Perl Configure script will install scripts into "*/script"
+# directories if they exist, so override with explicit settings.
 #
+CONFIGURE_ARGS+=	-Dscriptdir=${PERL5_PERLBASE:Q}/bin
+CONFIGURE_ARGS+=	-Dsitescript=${PERL5_SITEBASE:Q}/bin
+CONFIGURE_ARGS+=	-Dvendorscript=${PERL5_VENDORBASE:Q}/bin
+
+# Put the API-specific files into API-specific directories instead
+# of the default version-specific directories.
+#
+CONFIGURE_ARGS+=	-Dprivlib=${PERL5_PRIVLIB:Q}
+CONFIGURE_ARGS+=	-Dsitelib=${PERL5_SITELIB:Q}
+CONFIGURE_ARGS+=	-Dvendorlib=${PERL5_VENDORLIB:Q}
+
+# Avoid manpage conflicts between the standard Perl library, 3rd-party
+# modules, and other packages.
+#
+CONFIGURE_ARGS+=	-Dman1ext="1"
+CONFIGURE_ARGS+=	-Dman1dir=${PERL5_PERLBASE:Q}/man/man1
+CONFIGURE_ARGS+=	-Dsiteman1dir=${PERL5_SITEBASE:Q}/man/man1
+CONFIGURE_ARGS+=	-Dvendorman1dir=${PERL5_VENDORBASE:Q}/man/man1
 CONFIGURE_ARGS+=	-Dman3ext="3"
-CONFIGURE_ARGS+=	-Dman3dir="${PERL5_PRIVLIB}/man/man3"
-CONFIGURE_ARGS+=	-Dsiteman3dir="${PERL5_SITEPERL}/man/man3"
-
-# Ensure that the Perl man1 pages go into ${PREFIX}/man/man1 and not
-# into some other platform-specific location kindly "guessed" by the
-# Configure script.
-#
-CONFIGURE_ARGS+=	-Dman1dir="${PREFIX}/man/man1"
-
-# The site directories are all relative to the perl view.
-CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
-CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
-
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS+=	-Dman3dir=${PERL5_PERLBASE:Q}/man/man3
+CONFIGURE_ARGS+=	-Dsiteman3dir=${PERL5_SITEBASE:Q}/man/man3
+CONFIGURE_ARGS+=	-Dvendorman3dir=${PERL5_VENDORBASE:Q}/man/man3
 
 .if ${OPSYS} == "Darwin"
 #
-# The perl build attempts to work around case-insensitivity problems on
+# The Perl build attempts to work around case-insensitivity problems on
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
 USE_TOOLS+=	gmake
@@ -157,9 +196,9 @@ CHECK_BUILTIN.pthread:=	no
 
 # By default, build with threads only if the threads are native.
 .if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
-PERL5_USE_THREADS?=	yes
+PERL5_BUILD_THREADS_SUPPORT=	yes
 .else
-PERL5_USE_THREADS?=	${DLOPEN_REQUIRE_PTHREADS}
+PERL5_BUILD_THREADS_SUPPORT=	${DLOPEN_REQUIRE_PTHREADS}
 .endif
 
 ### [Sat Dec 18 17:29:44 EST 2004 : jlam]
@@ -167,56 +206,61 @@ PERL5_USE_THREADS?=	${DLOPEN_REQUIRE_PTHREADS}
 ### Build Perl without threads-support until VAX native threads are
 ### known to work.
 ###
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-vax)
-PKG_HACKS+=		broken-vax-pthreads
-PERL5_USE_THREADS=	no
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-vax) && \
+    !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
+PKG_HACKS+=			broken-vax-pthreads
+PERL5_BUILD_THREADS_SUPPORT=	no
 .endif
 
-.if !empty(PERL5_USE_THREADS:M[nN][oO])
-CONFIGURE_ARGS+=	-Uuseithreads
-.else
+PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
+PKG_SUPPORTED_OPTIONS=		threads
+.if !empty(PERL5_BUILD_THREADS_SUPPORT:M[yY][eE][sS])
+PKG_SUGGESTED_OPTIONS=		threads
+.endif
+PKG_OPTIONS_LEGACY_VARS+=	PERL5_USE_THREADS:threads
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mthreads)
 .  include "../../mk/pthread.buildlink3.mk"
 CONFIGURE_ARGS+=	-Duseithreads
 CFLAGS+=		${PTHREAD_CFLAGS}
 PERL5_HINTS_LDFLAGS+=	${PTHREAD_LDFLAGS}
 PERL5_HINTS_LDDLFLAGS+=	${PTHREAD_LDFLAGS}
 LIBSWANTED+=		${PTHREAD_LIBS:M-l*:S/^-l//}
+.else
+CONFIGURE_ARGS+=	-Uuseithreads
 .endif
 
 .if !empty(LIBSWANTED)
-CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED}"
+CONFIGURE_ARGS+=	-Dlibswanted=${LIBSWANTED:Q}
 .endif
 
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "IRIX"
 .  if ${ABI} == "64"
-CONFIGURE_ARGS+=	-Dcc='${CC} -64' -Duse64bitint
+CONFIGURE_ARGS+=	-Dcc=${CC:Q}" -64" -Duse64bitint
 .  else
-CONFIGURE_ARGS+=	-Dcc='${CC} -n32'
+CONFIGURE_ARGS+=	-Dcc=${CC:Q}" -n32"
 .  endif
 .endif
 
-PERL5=			${PREFIX}/bin/perl${PERL5_VERS}
-PERL5_PRIVLIB=		${PREFIX}/lib/perl5/${PERL5_VERS}
-PERL5_SITEPERL=		${VIEWBASE}/lib/perl5/site_perl
-PERL5_SITELIB=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}
-PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
-PLIST_SUBST+=		PERL5_SITELIB=${PERL5_SITELIB:S/^${PREFIX}\///}
-MESSAGE_SUBST+=		PERL5_SITELIB=${PERL5_SITELIB}
+# Some platforms may want the directory mode not to be 0755.  This
+# is, unfortunately, hardcoded in quite a few places in Perl, so
+# let's substitute what pkgsrc says instead.
+#
+SUBST_CLASSES+=		dirmode
+SUBST_STAGE.dirmode=	post-patch
+SUBST_FILES.dirmode=	installhtml installman installperl		\
+			lib/ExtUtils/Install.pm
+SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
-# Some platforms may want the directory mode not to be 0755.  This is,
-# unfortunately, hardcoded in quite a few places in Perl.  So let's substitute
-# what pkgsrc said instead.
-post-patch:
-.if ${PKGDIRMODE} != "755"
-.  for f in installhtml installman installperl lib/ExtUtils/Install.pm
-	cd ${WRKSRC} && \
-		${MV} -f ${f} ${f}.dirmode && \
-		${SED} -e 's/755/${PKGDIRMODE}/g;/umask(/d' \
-		${f}.dirmode >${f}
-.  endfor
-.endif
+USE_PKGINSTALL=		yes
+INSTALL_EXTRA_TMPL+=	${FILESDIR}/install_link.tmpl
+DEINSTALL_EXTRA_TMPL+=	${FILESDIR}/deinstall_link.tmpl
+FILES_SUBST+=		PERL5_PACKLIST=
+FILES_SUBST+=		PERL5_COMMENT=\#
 
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
@@ -228,63 +272,74 @@ pre-configure:
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
 		${CHMOD} +w $${hints};					\
-		( ${ECHO} "";						\
+		{ ${ECHO} "";						\
 		  ${ECHO} "cat > UU/pkgsrc.cbu <<'EOCBU'";		\
 		  ${ECHO} "# This script UU/pkgsrc.cbu will get 'called-back' by Configure to set"; \
 		  ${ECHO} '# linker options after all other call-back scripts have been invoked.'; \
 		  ${ECHO} 'ldflags="${PERL5_HINTS_LDFLAGS} $$ldflags"';	\
 		  ${ECHO} 'lddlflags="${PERL5_HINTS_LDFLAGS} $$lddlflags"'; \
 		  ${ECHO} "EOCBU";					\
-		) >> $${hints};						\
+		} >> $${hints};						\
 	done
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
-		( ${ECHO} "";						\
+		{ ${ECHO} "";						\
 		  ${ECHO} "# Set pkgsrc defaults for library and header search paths."; \
 		  ${ECHO} 'locincpth="${LOCINCPATH}"';			\
 		  ${ECHO} 'loclibpth="${LOCLIBPATH}"';			\
-		) >> $${hints};						\
+		} >> $${hints};						\
 	done
 .if !empty(SYSLIBPATH)
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
-		( ${ECHO} "glibpth='${SYSLIBPATH}'";			\
-		) >> $${hints};						\
+		{ ${ECHO} "glibpth='${SYSLIBPATH}'"; } >> $${hints};	\
 	done
 .endif
 
-WRKSRC_PERL5=	${WRKSRC}/perl
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PLIST_FILE_SED=	-e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,,"
 PLIST_DIR_SED=	${PLIST_FILE_SED}					\
 		-e "s,^,@unexec \${RMDIR} -p %D/,"			\
 		-e "s,/[^/]*$$, 2>/dev/null || ${TRUE},"		\
 
+INSTALLATION_DIRS=	bin man/man1
+
+post-build:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/perllink.in		\
+		> ${WRKDIR}/perllink
+
 post-install:
-	${RM} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL5_VERS}
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC_PERL5} ${PREFIX}/bin/perl${PERL5_VERS}
-	${LN} -f ${PREFIX}/bin/perl${PERL5_VERS} ${PREFIX}/bin/perl
-.if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL)
-	if [ -x ${PREFIX}/bin/a2p ]; then				\
+	if ${TEST} -x ${PREFIX}/bin/a2p; then				\
 		strip ${PREFIX}/bin/a2p;				\
 	fi
-.endif
-	# Generate the PLIST template
 	eval `${PERL5} -V:installarchlib 2>/dev/null`;			\
 	eval `${PERL5} -V:installsitearch 2>/dev/null`;			\
-	sitearch=`${ECHO} $$installsitearch | ${SED} ${PLIST_FILE_SED}`; \
-	${RMDIR} -p $$installsitearch 2>/dev/null || ${TRUE};		\
+	eval `${PERL5} -V:installvendorarch 2>/dev/null`;		\
+	case $$installsitearch in					\
+	${PREFIX}/*)							\
+		${RMDIR} -p $$installsitearch 2>/dev/null || ${TRUE};	\
+		;;							\
+	esac;								\
+	${RMDIR} -p $$installvendorarch 2>/dev/null || ${TRUE};		\
+	eval `${PERL5} -V:scriptdir 2>/dev/null`;			\
+	eval `${PERL5} -V:man1dir 2>/dev/null`;				\
+	${INSTALL_SCRIPT} ${WRKDIR}/perllink $$scriptdir/perllink;	\
+	${INSTALL_MAN} ${FILESDIR}/perllink.1 $$man1dir/perllink.1;	\
+	${RM} -f ${PREFIX}/bin/perllink ${PREFIX}/man/man1/perllink.1;	\
+	${LN} -s $$scriptdir/perllink ${PREFIX}/bin/perllink;		\
+	${LN} -s $$man1dir/perllink.1 ${PREFIX}/man/man1/perllink.1;	\
 	packlist="$$installarchlib/.packlist";				\
-	( ${ECHO} "@unexec ${RM} -f %D/$$sitearch/perllocal.pod";	\
-	  ${ECHO} "@unexec ${RMDIR} -p %D/$$sitearch 2>/dev/null || ${TRUE}"; \
-	  ${CAT} ${PKGDIR}/PLIST;					\
+	{ ${CAT} ${PKGDIR}/PLIST;					\
 	  ${ECHO} "@comment The following lines are automatically generated"; \
 	  ${ECHO} "@comment from the installed .packlist files.";	\
-	) > ${PLIST_SRC};						\
-	( ${ECHO} "$$packlist" && ${CAT} $$packlist )			\
-	| ${SED} ${PLIST_FILE_SED} | ${SORT} -u >> ${PLIST_SRC};	\
-	( ${ECHO} "$$packlist" && ${CAT} $$packlist )			\
-	| ${SED} ${PLIST_DIR_SED} | ${SORT} -ur >> ${PLIST_SRC}
+	  { ${ECHO} "$$packlist"; ${CAT} $$packlist;			\
+	    ${ECHO} "$$scriptdir/perllink";				\
+	    ${ECHO} "$$man1dir/perllink.1";				\
+	  } | ${SED} ${PLIST_FILE_SED} | ${SORT} -u;			\
+	  { ${ECHO} "$$packlist"; ${CAT} $$packlist;			\
+	    ${ECHO} "$$scriptdir/perllink";				\
+	    ${ECHO} "$$man1dir/perllink.1";				\
+	  } | ${SED} ${PLIST_DIR_SED} | ${SORT} -ur;			\
+	} > ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
