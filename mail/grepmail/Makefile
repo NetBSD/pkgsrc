@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2005/07/13 18:01:31 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/06 06:19:21 jlam Exp $
 
 DISTNAME=	grepmail-5.30
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grepmail/}
 
@@ -16,8 +17,6 @@ DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-Mail-Mbox-MessageParser>=1.20:../../mail/p5-Mail-Mbox-MessageParser
 
 PERL5_PACKLIST=	auto/grepmail/.packlist
-
-MAKE_PARAMS+=	INSTALLDIRS=site
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

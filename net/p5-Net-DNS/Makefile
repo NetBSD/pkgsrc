@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2005/07/13 18:01:35 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/08/06 06:19:25 jlam Exp $
 #
 
 DISTNAME=		Net-DNS-0.49
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ndn
+PKGREVISION=		1
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}		\
 			http://www.net-dns.org/download/
@@ -19,7 +20,6 @@ DEPENDS+=		p5-Digest-MD5>=2.12:../../security/p5-Digest-MD5
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_REQD+=		5.6.0
 MAKE_PARAMS=		--online-tests
 
 PERL5_PACKLIST=		auto/Net/DNS/.packlist
