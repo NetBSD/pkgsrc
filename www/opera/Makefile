@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/06/17 19:06:43 jdolecek Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2005/08/06 06:01:28 snj Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -6,9 +6,9 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
 		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
 		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/ \
-		http://opera.online.no/${OPERA_DIR}/ \
 		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/ \
 		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/ \
+		ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/${OPERA_DIR}/ \
 		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
 DISTFILES=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
 
@@ -29,9 +29,9 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20050615
-OPERA_PKG_VERSION=	8.01
-OPERA_PKG_VERSION_DIR=	801
+OPERA_VER_DATE=		20050727
+OPERA_PKG_VERSION=	8.02
+OPERA_PKG_VERSION_DIR=	802
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
@@ -55,7 +55,7 @@ RPM2PKGSTRIP=	0
 .elif (${_OPERA_OPSYS} == FreeBSD)
 EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		.i386.freebsd
-OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/static
+OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/shared/gcc-2.95
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
@@ -137,7 +137,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.38 2005/06/17 19:06:43 jdolecek Exp $$'; echo ''; \
+	( echo '$$NetBSD: Makefile,v 1.38.2.1 2005/08/06 06:01:28 snj Exp $$'; echo ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
