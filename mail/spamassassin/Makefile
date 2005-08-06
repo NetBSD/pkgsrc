@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2005/07/13 18:01:32 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2005/08/06 06:19:22 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-${SPAMASSASSIN_VERSION}
 PKGNAME=	spamassassin-${SPAMASSASSIN_VERSION}
-PKGREVISION=	# empty
+PKGREVISION=	1
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/} \
@@ -30,8 +30,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 SPAMASSASSIN_VERSION=	3.0.4
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-
-PERL5_REQD+=   		5.6.1	# MakeMaker >= 5.45 needed
 
 USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR=	spamassassin
