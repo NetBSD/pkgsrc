@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.18 2005/05/22 02:30:53 jlam Exp $
+# $NetBSD: perl.mk,v 1.19 2005/08/06 06:18:45 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -49,12 +49,6 @@
 # includes find-prefix.mk.
 #
 .  include "../../lang/perl5/vars.mk"
-
-# Substitute for PERL5_* variables in PLISTs.
-PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SUB_INSTALLSITELIB}
-PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SUB_INSTALLSITEARCH}
-PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_SUB_INSTALLARCHLIB}
-
 .else
 #
 # Some packages want the path to the perl tool, even if they don't have

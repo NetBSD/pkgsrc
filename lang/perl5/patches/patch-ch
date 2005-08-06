@@ -1,8 +1,8 @@
-$NetBSD: patch-ch,v 1.1 2005/06/24 06:43:47 jlam Exp $
+$NetBSD: patch-ch,v 1.2 2005/08/06 06:18:45 jlam Exp $
 
---- hints/dec_osf.sh.orig	2004-05-14 03:44:00.000000000 +0200
+--- hints/dec_osf.sh.orig	2005-02-05 10:19:27.000000000 -0500
 +++ hints/dec_osf.sh
-@@ -243,7 +243,7 @@ case "`uname -r`" in
+@@ -254,7 +254,7 @@ case "`uname -r`" in
  		      # fixed in 4.0E or better.
  		      ;;
  		  *)    

@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.47 2005/07/13 18:01:31 jlam Exp $
+# $NetBSD: module.mk,v 1.48 2005/08/06 06:18:45 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -34,10 +34,6 @@ _PERL5_MODULE_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPMETHOD.perl+=	full
-
-BUILDING_PERL5?=		no
-BUILDING_MODULE_BUILD?=		no
 PERL5_MODULE_TYPE?=		MakeMaker
 
 .if (${PERL5_MODULE_TYPE} != "MakeMaker") && \
@@ -45,119 +41,171 @@ PERL5_MODULE_TYPE?=		MakeMaker
 PKG_FAIL_REASON+=	"\`\`${PERL5_MODULE_TYPE}'' is not a supported PERL5_MODULE_TYPE."
 .endif
 
-.if empty(BUILDING_PERL5:M[yY][eE][sS])
-.  include "../../lang/perl5/buildlink3.mk"
-.endif
-
-.if empty(BUILDING_MODULE_BUILD:M[yY][eE][sS]) && \
-    (${PERL5_MODULE_TYPE} == "Module::Build")
-BUILD_DEPENDS+=		p5-Module-Build>=0.2608nb1:../../devel/p5-Module-Build
-.endif
-
-.include "../../lang/perl5/vars.mk"
-
-PERL5_CONFIGURE?=	YES
-PERL5_CONFIGURE_DIRS?=	${CONFIGURE_DIRS}
-
-# All pkgsrc-install perl modules are installed into the "site"
-# directories.
-#
-MAKE_PARAMS+=		INSTALLDIRS=site
+# Default test target for Perl modules
+TEST_TARGET?=		test
 
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "AIX"
-.if !empty(CC_VERSION:Mgcc*)
-BROKEN=		Perl does not like building with gcc on AIX, please use a different compiler
-.endif
-.endif
-
-MAKE_ENV+=	LC_ALL=C
-.if ${PERL5_MODULE_TYPE} == "Module::Build"
-_CONF_ARG=	Build.PL
-.elif ${PERL5_MODULE_TYPE} == "MakeMaker"
-_CONF_ARG=	Makefile.PL ${MAKE_PARAMS}
-.endif
-
-.PHONY: perl5-configure
-perl5-configure:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
-		if [ -f $$dir/Makefile.PL ]; then			\
-			( cd $$dir && ${SETENV} ${MAKE_ENV}		\
-			  ${PERL5} ${_CONF_ARG});		\
-		fi;							\
-	done
-
-.if defined(PERL5_CONFIGURE) && !empty(PERL5_CONFIGURE:M[yY][eE][sS])
-.  if target(do-configure)
-do-configure: perl5-configure
-.  else
-do-configure: perl5-configure
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+.  if !empty(CC_VERSION:Mgcc*)
+BROKEN=		Perl does not like building with GCC on AIX, please use a different compiler
 .  endif
 .endif
 
-# Repoint all of the site-specific variables to be under the perl5
-# module's ${PREFIX}.
+.if ${PERL5_MODULE_TYPE} == "Module::Build"
+_PERL5_MODTYPE=		modbuild
+.elif ${PERL5_MODULE_TYPE} == "MakeMaker"
+_PERL5_MODTYPE=		makemaker
+.endif
+
+
+###########################################################################
+###
+### Add the proper dependencies for using the specified module build
+### system.
+###
+
+BUILDLINK_DEPMETHOD.perl+=	full
+.include "../../lang/perl5/buildlink3.mk"
+
+.if empty(PKGPATH:Mdevel/p5-Module-Build) && \
+    (${PERL5_MODULE_TYPE} == "Module::Build")
+BUILD_DEPENDS+=		p5-Module-Build>=0.2608nb1:../../devel/p5-Module-Build
+.endif
+
+
+###########################################################################
+###
+### Target definitions (configure, build, install, etc.)
+###
+
+PERL5_CONFIGURE?=	yes
+PERL5_CONFIGURE_DIRS?=	${CONFIGURE_DIRS}
+
+MAKE_ENV+=	LC_ALL=C
+
+# All pkgsrc-installed Perl modules are installed into the "vendor"
+# directories.
 #
-.for _var_ in ${_PERL5_SITEVARS} INSTALLSCRIPT
-PERL5_${_var_}=		${PREFIX}/${PERL5_SUB_${_var_}}
-PERL5_MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
+MAKE_PARAMS.makemaker+=	INSTALLDIRS=vendor
+MAKE_PARAMS.modbuild+=	installdirs=vendor
+
+MAKE_PARAMS+=	${MAKE_PARAMS.${_PERL5_MODTYPE}}
+
+.PHONY: do-makemaker-configure
+do-makemaker-configure:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
+		if ${TEST} -f $$dir/Makefile.PL; then			\
+			( cd $$dir && ${SETENV} ${MAKE_ENV}		\
+			  ${PERL5} Makefile.PL ${MAKE_PARAMS} );	\
+		fi;							\
+	done
+
+.PHONY: do-modbuild-configure
+do-modbuild-configure:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
+		if ${TEST} -f $$dir/Build.PL; then			\
+			( cd $$dir && ${SETENV} ${MAKE_ENV}		\
+			  ${PERL5} Build.PL ${MAKE_PARAMS} );		\
+		fi;							\
+	done
+
+.PHONY: perl5-configure
+perl5-configure: do-${_PERL5_MODTYPE}-configure
+
+.if !empty(PERL5_CONFIGURE:M[yY][eE][sS])
+do-configure: perl5-configure
+.endif
+
+.PHONY: do-modbuild-build
+do-modbuild-build:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build
+
+.PHONY: do-modbuild-test
+do-modbuild-test:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build test
+
+.PHONY: do-modbuild-install
+do-modbuild-install:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install
+
+.for _target_ in build test install
+.  if target(do-${_PERL5_MODTYPE}-${_target_})
+do-${_target_}: do-${_PERL5_MODTYPE}-${_target_}
+.  endif
 .endfor
 
-.if ${PERL5_MODULE_TYPE} == "MakeMaker"
+
+###########################################################################
+###
+### Make variable overrides
+###
+
+# MakeMaker provides two hooks, OPTIMIZE and OTHERLDFLAGS, to
+# customize the arguments passed to the preprocessor and linker,
+# respectively.
+#
+PERL5_MAKE_FLAGS.makemaker+=	OPTIMIZE=${CFLAGS:Q}" "${CPPFLAGS:Q}
+.if ${OBJECT_FMT} == "a.out"
+PERL5_MAKE_FLAGS.makemaker+=	OTHERLDFLAGS=${LDFLAGS:S/-Wl,//g:Q}
+.else
+PERL5_MAKE_FLAGS.makemaker+=	OTHERLDFLAGS=${LDFLAGS:Q}
+.endif
+
+# Repoint all of the vendor-specific variables to be under the perl5
+# module's ${PREFIX}.
+#
+.include "../../lang/perl5/vars.mk"
+.for _var_ in ${_PERL5_VARS}
+PERL5_MAKE_FLAGS.makemaker+=	${_var_}=${PERL5_${_var_}:Q}
+.endfor
 #
 # The PREFIX in the generated Makefile will point to ${_PERL5_PREFIX},
 # so override its value to the module's ${PREFIX}.
 #
-PERL5_MAKE_FLAGS+=	PREFIX="${PREFIX}"
-.endif
+PERL5_MAKE_FLAGS.makemaker+=	PREFIX=${PREFIX:Q}
 
-.if ${PERL5_MODULE_TYPE} == "Module::Build"
-do-build:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build
-
-do-test:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build test
-
-do-install:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install
-.endif
-
-.if defined(DEFAULT_VIEW.perl)
-DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.perl}
-.endif
+PERL5_MAKE_FLAGS+=	${PERL5_MAKE_FLAGS.${_PERL5_MODTYPE}}
+MAKE_FLAGS+=		${PERL5_MAKE_FLAGS}
 
 .if defined(PERL5_LDFLAGS) && !empty(PERL5_LDFLAGS)
 FIX_RPATH+=	PERL5_LDFLAGS
 LDFLAGS+=	${PERL5_LDFLAGS}
 .endif
 
-# MakeMaker provides two hooks, OPTIMIZE and OTHERLDFLAGS, to
-# customize the arguments passed to the preprocessor and linker,
-# respectively.
-#
-PERL5_MAKE_FLAGS+=	OPTIMIZE="${CFLAGS} ${CPPFLAGS}"
-.if ${OBJECT_FMT} == "a.out"
-PERL5_MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS:S/-Wl,//g}"
-.else
-PERL5_MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS}"
-.endif
+
+###########################################################################
+###
+### INSTALL/DEINSTALL scripts to manage symlinks
+###
+
+USE_PKGINSTALL=		yes
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/install_link.tmpl
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/deinstall_link.tmpl
+FILES_SUBST+=		PERL5_COMMENT=
+FILES_SUBST+=		PERL5_PACKLIST=${_PERL5_PACKLIST:Q}
+
+
+###########################################################################
+###
+### Packlist -> PLIST generation
+###
 
 # Generate the PLIST from the files listed in PERL5_PACKLIST.
 .if defined(PERL5_PACKLIST)
-PERL5_PACKLIST_DIR?=	${PERL5_SITEARCH}
+PERL5_PACKLIST_DIR?=	${PERL5_INSTALLVENDORARCH}
 _PERL5_PACKLIST=	${PERL5_PACKLIST:S/^/${PERL5_PACKLIST_DIR}\//}
 PERL5_PLIST_COMMENT= \
-	( ${ECHO} "@comment The following lines are automatically generated"; \
-	  ${ECHO} "@comment from the installed .packlist files." )
+	{ ${ECHO} "@comment The following lines are automatically generated"; \
+	  ${ECHO} "@comment from the installed .packlist files."; }
 PERL5_PLIST_FILES= \
-	( ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
+	{ ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_PACKLIST}; do ${TEST} ! -f "$$f" || ${ECHO} "$$f"; done; } \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 	| ${SORT} -u
 PERL5_PLIST_DIRS= \
-	( ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
+	{ ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_PACKLIST}; do ${TEST} ! -f "$$f" || ${ECHO} "$$f"; done; } \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 		-e "s,^,@unexec \${RMDIR} -p %D/," \
 		-e "s,/[^/]*$$, 2>/dev/null || ${TRUE}," \
@@ -167,42 +215,5 @@ PERL5_GENERATE_PLIST=	${PERL5_PLIST_COMMENT}; \
 			${PERL5_PLIST_DIRS}
 GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 .endif
-
-# The build and install stages require slightly different values for
-# INSTALLARCHLIB.  During the build, INSTALLARCHLIB refers to the
-# directory where libperl.so may be found, which should point into the
-# default view.  During the install, INSTALLARCHLIB refers to the
-# directory where the perllocal.pod file should be installed, which
-# should point into the package prefix.
-#
-.if empty(BUILDING_PERL5:M[yY][eE][sS])
-MAKE_FLAGS+=		${PERL5_MAKE_FLAGS}
-BUILD_MAKE_FLAGS=	${MAKE_FLAGS}
-BUILD_MAKE_FLAGS+=	INSTALLARCHLIB="${VIEWBASE}/${PERL5_SUB_INSTALLARCHLIB}"
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	INSTALLARCHLIB="${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}"
-.endif
-
-# Remove the perllocal.pod file from the installation since we don't
-# bother keeping the file contents up-to-date anyway.
-#
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-post-install: perl5-post-install
-.endif
-
-.PHONY: perl5-post-install
-perl5-post-install:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in							\
-	    ${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}			\
-	    ${PERL5_INSTALLSITEARCH};					\
-	do								\
-		if [ -f $$dir/perllocal.pod ]; then			\
-			${RM} -f $$dir/perllocal.pod;			\
-		fi;							\
-	done
-
-# Default test target for perl5 modules
-TEST_TARGET?=	test
 
 .endif	# _PERL5_MODULE_MK

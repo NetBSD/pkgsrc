@@ -1,7 +1,8 @@
-$NetBSD: patch-cb,v 1.1 2005/06/24 06:43:47 jlam Exp $
---- Makefile.SH.orig	2004-10-21 08:30:02.000000000 -0700
-+++ Makefile.SH	2005-03-08 18:05:48.000000000 -0700
-@@ -69,7 +69,11 @@
+$NetBSD: patch-cb,v 1.2 2005/08/06 06:18:45 jlam Exp $
+
+--- Makefile.SH.orig	2005-02-05 10:17:44.000000000 -0500
++++ Makefile.SH
+@@ -73,7 +73,11 @@ true)
  	sunos*)
  		linklibperl="-lperl"
  		;;
@@ -13,8 +14,8 @@ $NetBSD: patch-cb,v 1.1 2005/06/24 06:43:47 jlam Exp $
 +	netbsd*|freebsd[234]*|openbsd*|dragonfly*)
  		linklibperl="-L. -lperl"
  		;;
- 	aix*)
-@@ -77,7 +81,7 @@
+ 	interix*)
+@@ -85,7 +89,7 @@ true)
  		case "$osvers" in
  		3*)	shrpldflags="$shrpldflags -e _nostart"
  			;;
@@ -23,3 +24,14 @@ $NetBSD: patch-cb,v 1.1 2005/06/24 06:43:47 jlam Exp $
  			;;
  		esac
  	        shrpldflags="$shrpldflags $ldflags $perllibs $cryptlib"
+@@ -969,6 +973,10 @@ s_dummy $(static_ext):	miniperl$(EXE_EXT
+ n_dummy $(nonxs_ext):	miniperl$(EXE_EXT) preplibrary $(DYNALOADER) FORCE
+ 	@$(LDLIBPTH) sh ext/util/make_ext nonxs $@ MAKE=$(MAKE) LIBPERL_A=$(LIBPERL)
+ 
++.PHONY: printconfig
++printconfig:
++	@eval `$(LDLIBPTH) ./perl -Ilib -V:$(CONFIGVAR)`; echo $$$(CONFIGVAR)
++
+ .PHONY: clean _tidy _mopup _cleaner1 _cleaner2 \
+ 	realclean _realcleaner clobber _clobber \
+ 	distclean veryclean _verycleaner

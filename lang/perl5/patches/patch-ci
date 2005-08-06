@@ -1,8 +1,8 @@
-$NetBSD: patch-ci,v 1.1 2005/06/24 06:43:47 jlam Exp $
+$NetBSD: patch-ci,v 1.2 2005/08/06 06:18:45 jlam Exp $
 
---- pp_sys.c.orig	2004-10-19 13:07:23.000000000 -0400
+--- pp_sys.c.orig	2005-04-27 18:12:46.000000000 -0400
 +++ pp_sys.c
-@@ -4450,9 +4450,11 @@ PP(pp_gmtime)
+@@ -4466,9 +4466,11 @@ PP(pp_gmtime)
  	when = (Time_t)SvIVx(POPs);
  #endif
  
