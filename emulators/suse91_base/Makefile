@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2005/08/06 06:08:32 snj Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -27,7 +27,7 @@ RPMFILES=		aaa_base-9.1-0.${SUSE_ARCH}.rpm \
 			libstdc++-3.3.3-41.${SUSE_ARCH}.rpm \
 			ncurses-5.4-59.${SUSE_ARCH}.rpm \
 			readline-4.3-306.${SUSE_ARCH}.rpm \
-			zlib-1.2.1-70.${SUSE_ARCH}.rpm
+			zlib-1.2.1-70.12.${SUSE_ARCH}.rpm
 RPMIGNOREPATH=		./etc/bash.bashrc ./etc/bash_completion.d \
 			./etc/cron.daily ./etc/csh.cshrc ./etc/csh.login \
 			./etc/inittab ./etc/hushlogins ./etc/java \
