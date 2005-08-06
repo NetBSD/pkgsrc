@@ -7,11 +7,8 @@
 * stricter type checking
 * quoting check for Makefile variables
 * -E/--explain
-* check for C/C++ style comments in Makefiles
-  rm -f *.o		/* delete unused files */
-  .ifdef foo		/* xyz */
 * check for absolute paths
 * check for direct use of /usr/pkgsrc etc.
 * check dir direct use of *DIR
 * in dependency lines check for ../../category/package, not ../package
-* make all pathnames relative to the current directory
+* ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
