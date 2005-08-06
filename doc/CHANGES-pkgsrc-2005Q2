@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.54 2005/08/05 16:37:33 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.55 2005/08/06 06:09:07 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -171,3 +171,9 @@ Pullup ticket 656 - requested by Lubomir Sedlacik
 security update for ekg
 Pullup ticket 657 - requested by Lubomir Sedlacik
 security fix for gaim
+Pullup ticket 658 - requested by Lubomir Sedlacik
+security update for kadu
+Pullup ticket 659 - requested by Lubomir Sedlacik
+security update for opera
+Pullup ticket 660 - requested by Lubomir Sedlacik
+security update for suse91_base
