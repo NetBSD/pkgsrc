@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.230 2005/08/06 19:10:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.231 2005/08/06 20:32:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -579,7 +579,9 @@ sub check_package($) {
 	$have_patches = false;
 	foreach my $f (@files) {
 		if      ($f =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
-			log_warning($f, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
+			if ($opt_warn_workdir) {
+				log_warning($f, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
+			}
 
 		} elsif (!-f $f) {
 			# We don't have a check for non-regular files yet.
@@ -2031,48 +2033,68 @@ sub check_category($) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
-	if (@{$lines} == 0) {
-		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return;
+
+	if (@{$lines} < 8) {
+		log_error($fname, NO_LINE_NUMBER, "File too short.");
 	}
-	checklines_Makefile($lines);
-
-	@filesys_subdirs = grep { ($_ = substr($_, length($dir) + 1, -1)) ne "CVS"; } glob("${dir}/*/");
-
-	my ($first, $last_subdir, $comment_seen) = (true, undef, false);
-	foreach my $line (@{$lines}) {
-		if ($line->text =~ qr"^(#?)SUBDIR(.*?)=\s*(\S+)\s*(?:#\s*(.*?)\s*|)$") {
-			my ($comment_flag, $operator, $subdir, $comment) = ($1, $2, $3, $4);
-			if ($comment_flag eq "#") {
-				if (defined($comment) && $comment eq "") {
-					$line->log_warning("$subdir commented out without giving a reason.");
-				}
-				push(@makefile_subdirs, $subdir);
-
-			} elsif ($first) {
-				$first = false;
-				if ($operator ne "" && $operator ne "+") {
-					$line->log_error("SUBDIR= or SUBDIR+= expected.");
-				}
-				push(@makefile_subdirs, $subdir);
-				$last_subdir = $subdir;
-
-			} else {
-				if ($operator ne "+") {
-					$line->log_error("SUBDIR+= expected.");
-				}
-				push(@makefile_subdirs, $subdir);
-				if ($last_subdir ge $subdir) {
-					$line->log_error("$subdir should come before $last_subdir.");
-				}
-				$last_subdir = $subdir;
-			}
-
-		} elsif ($line->text =~ qr"^COMMENT\s*=\s*([^#]*?)") {
+	if (@{$lines} > 0) {
+		checkline_rcsid_regex($lines->[0], qr"#\s+", "# ");
+	}
+	if (@{$lines} > 1 && $lines->[1]->text ne "#") {
+		$lines->[1]->log_error("This line must contain a single #, nothing more.");
+	}
+	if (@{$lines} > 2 && $lines->[2]->text ne "") {
+		$lines->[2]->log_error("Empty line expected.");
+	}
+	if (@{$lines} > 3) {
+		if ($lines->[3]->text =~ qr"^COMMENT=\t*(.*)") {
 			my ($comment) = ($1);
-			$comment_seen = true;
+
+			if ($comment =~ qr"\\$") {
+				$lines->[3]->log_error("COMMENT must fit on one line.");
+			}
+		} else {
+			$lines->[3]->log_error("COMMENT= line expected.");
 		}
 	}
+	if (@{$lines} > 4 && $lines->[4]->text ne "") {
+		$lines->[4]->log_error("Empty line expected.");
+	}
+
+	my ($last_subdir) = (undef);
+	for my $line (@{$lines}[5 .. $#{$lines} - 2]) {
+		if ($line->text =~ qr"^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$") {
+			my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
+
+			if ($comment_flag eq "#") {
+				if (!defined($comment) || $comment eq "") {
+					$line->log_error("${subdir} commented out without giving a reason.");
+				}
+			}
+
+			if ($indentation ne "\t") {
+				$line->log_error("Indentation must be a single tab character.");
+			}
+
+			if (defined($last_subdir) && $subdir le $last_subdir) {
+				$line->log_error("${subdir} must come before ${last_subdir}.");
+			}
+			$last_subdir = $subdir;
+
+			push(@makefile_subdirs, $subdir);
+		} else {
+			$line->log_error("SUBDIR+= line expected.");
+		}
+	}
+
+	if (@{$lines} > 7 && $lines->[-2]->text ne "") {
+		$lines->[-2]->log_error("Empty line expected.");
+	}
+	if (@{$lines} > 7 && $lines->[-1]->text ne ".include \"../mk/bsd.pkg.subdir.mk\"") {
+		$lines->[-1]->log_error("Expected this: .include \"../mk/bsd.pkg.subdir.mk\"");
+	}
+
+	@filesys_subdirs = grep { ($_ = substr($_, length($dir) + 1, -1)) ne "CVS"; } glob("${dir}/*/");
 
 	@filesys_subdirs = sort(@filesys_subdirs);
 	@makefile_subdirs = sort(@makefile_subdirs);
@@ -2095,11 +2117,6 @@ sub check_category($) {
 			$mindex++;
 		}
 	}
-
-	if (!$comment_seen) {
-		log_error($fname, NO_LINE_NUMBER, "no COMMENT line found.");
-	}
-	checklines_trailing_empty_lines($lines);
 }
 
 sub check_directory($) {
