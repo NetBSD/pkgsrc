@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.232 2005/08/06 21:08:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.233 2005/08/06 22:20:10 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -643,6 +643,21 @@ sub is_committed($) {
 		}
 	}
 	return false;
+}
+
+sub get_subdirs($) {
+	my ($dir) = @_;
+	my (@result) = ();
+
+	if (opendir(DIR, $dir)) {
+		foreach my $subdir (readdir(DIR)) {
+			if ($subdir ne "." && $subdir ne ".." && $subdir ne "CVS" && -d "${dir}/${subdir}") {
+				push(@result, $subdir);
+			}
+		}
+		closedir(DIR);
+	}
+	return @result;
 }
 
 #
@@ -2026,8 +2041,6 @@ sub check_category($) {
 	my ($dir) = @_;
 	my $fname = "${dir}/Makefile";
 	my ($lines);
-	my (@makefile_subdirs) = ();
-	my (@filesys_subdirs) = ();
 	my ($is_wip);
 
 	if (!($lines = load_file($fname))) {
@@ -2065,7 +2078,19 @@ sub check_category($) {
 	}
 
 	my ($last_subdir) = (undef);
-	for my $line (@{$lines}[5 .. $#{$lines} - 2]) {
+
+	my @filesys_subdirs = sort(get_subdirs($dir));
+	my ($filesys_index, $filesys_atend) = (0, false);
+	my ($lines_index, $lines_atend) = (5, false);
+	my ($fetch_next_line) = true;
+
+	while (!$lines_atend || !$filesys_atend) {
+		my $line = $lines->[$lines_index];
+
+		if (!$lines_atend && $fetch_next_line) {
+			$fetch_next_line = false;
+
+# FIXME: <indent +1>
 		if ($line->text =~ qr"^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$") {
 			my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
 
@@ -2084,16 +2109,38 @@ sub check_category($) {
 			}
 			$last_subdir = $subdir;
 
-			push(@makefile_subdirs, $subdir);
+		} elsif ($is_wip && $line->text eq "") {
+			# ignore the special case "wip", which defines its own "index" target.
+			$lines_atend = true;
 
 		} else {
-			# ignore the special case "wip", which defines its own "index" target.
-			if ($is_wip && $line->text eq "") {
-				last;
-			}
-
 			$line->log_error("SUBDIR+= line expected.");
 		}
+# FIXME: </indent>
+
+			$lines_index++;
+		}
+
+		my $f = ($filesys_atend) ? undef : $filesys_subdirs[$filesys_index];
+		my $m = ($lines_atend) ? undef : $last_subdir;
+
+		if (!$filesys_atend && ($lines_atend || $f lt $m)) {
+			$line->log_error("${f} exists in the file system, but not in the Makefile.");
+			$filesys_index++;
+
+		} elsif (!$lines_atend && ($filesys_atend || $m lt $f)) {
+			$line->log_error("${m} exists in the Makefile, but not in the file system.");
+			$fetch_next_line = true;
+
+		} else { # $f eq $m
+			$filesys_index++;
+			$fetch_next_line = true;
+		}
+
+		if ($lines_index == $#{$lines} - 1) {
+			$lines_atend = true;
+		}
+		$filesys_atend = ($filesys_index == @filesys_subdirs);
 	}
 
 	if (@{$lines} > 7 && $lines->[-2]->text ne "") {
@@ -2101,30 +2148,6 @@ sub check_category($) {
 	}
 	if (@{$lines} > 7 && $lines->[-1]->text ne ".include \"../mk/bsd.pkg.subdir.mk\"") {
 		$lines->[-1]->log_error("Expected this: .include \"../mk/bsd.pkg.subdir.mk\"");
-	}
-
-	@filesys_subdirs = grep { ($_ = substr($_, length($dir) + 1, -1)) ne "CVS"; } glob("${dir}/*/");
-
-	@filesys_subdirs = sort(@filesys_subdirs);
-	@makefile_subdirs = sort(@makefile_subdirs);
-	my ($findex, $mindex) = (0, 0);
-	my ($fmax, $mmax) = (scalar(@filesys_subdirs), scalar(@makefile_subdirs));
-	while ($findex < $fmax || $mindex < $mmax) {
-		my $f = ($findex < $fmax) ? $filesys_subdirs[$findex] : undef;
-		my $m = ($mindex < $mmax) ? $makefile_subdirs[$mindex] : undef;
-
-		if ($findex < $fmax && ($mindex == $mmax || $f lt $m)) {
-			log_error($fname, NO_LINE_NUMBER, "$f exists in the file system, but not in the Makefile.");
-			$findex++;
-
-		} elsif ($mindex < $mmax && ($findex == $fmax || $m lt $f)) {
-			log_error($fname, NO_LINE_NUMBER, "$m exists in the Makefile, but not in the file system.");
-			$mindex++;
-
-		} else { # $findex < $fmax && $mindex < $mmax && $f eq $m
-			$findex++;
-			$mindex++;
-		}
 	}
 }
 
