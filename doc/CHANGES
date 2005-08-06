@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10807 2005/08/06 10:59:02 wiz Exp $
+$NetBSD: CHANGES,v 1.10808 2005/08/06 13:15:05 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -514,3 +514,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added databases/postgresql80-pltcl version 8.0.3 [jlam 2005-08-06]
 	Updated www/links to 2.1.0.18 [wiz 2005-08-06]
 	Updated www/links-gui to 2.1.0.18 [wiz 2005-08-06]
+	Updated graphics/dcraw to 7.48 [markd 2005-08-06]
