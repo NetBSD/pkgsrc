@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/07/13 18:01:37 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/06 06:19:28 jlam Exp $
 
 DISTNAME=	SNMP_Session-1.07
 PKGNAME=	p5-SNMP_Session-1.07
 SVR4_PKGNAME=	p5sns
+PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	http://www.switch.ch/misc/leinen/snmp/perl/dist/
 
@@ -15,7 +16,7 @@ PERL5_PACKLIST=		auto/SNMP_Session/.packlist
 CONFLICTS+=	mrtg-[0-9]*
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${PERL5_SITELIB}/README.SNMP_Session
+	${INSTALL_DATA} ${WRKSRC}/README ${PERL5_INSTALLVENDORLIB}/README.SNMP_Session
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

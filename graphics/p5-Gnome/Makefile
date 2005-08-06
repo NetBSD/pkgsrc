@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2005/07/13 18:01:31 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/06 06:19:21 jlam Exp $
 #
 
 .include "../../x11/p5-gtk/Makefile.common"
 
 PKGNAME=	p5-Gnome-${GTKPERL_VERSION}
+PKGREVISION=	1
 
 MAINTAINER=	adrianp@NetBSD.org
 COMMENT=	Perl bindings for Gnome

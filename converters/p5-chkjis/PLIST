@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/25 15:17:52 taca Exp $
-${PERL5_SITELIB}/chkjis.pl
+@comment $NetBSD: PLIST,v 1.2 2005/08/06 06:19:05 jlam Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/chkjis.pl

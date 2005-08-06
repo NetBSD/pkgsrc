@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2005/07/16 19:10:38 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2005/08/06 06:19:07 jlam Exp $
 #
 
 DISTNAME=	automake-1.9.6
@@ -22,8 +22,6 @@ GNU_CONFIGURE=		YES
 _STRIPFLAG_INSTALL=	# none
 
 INFO_FILES=		automake.info
-
-PERL5_REQD+=		5.5
 
 # doesn't work because buildlink3 hides scripts
 # from autoconf too well
