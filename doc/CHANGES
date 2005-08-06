@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10810 2005/08/06 17:46:15 bouyer Exp $
+$NetBSD: CHANGES,v 1.10811 2005/08/06 20:35:57 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -517,3 +517,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/dcraw to 7.48 [markd 2005-08-06]
 	Updated graphics/netpbm to 10.28 [salo 2005-08-06]
 	Updated sysutils/xentools20 to 20.7 [bouyer 2005-08-06]
+	Updated devel/roundup to 0.8.4 [recht 2005-08-06]
