@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.227 2005/08/02 08:33:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.228 2005/08/06 02:26:47 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1054,18 +1054,9 @@ sub readmakefile($$$$) {
 	if (!defined ($lines)) {
 		return false;
 	}
-	# FIXME: move into checkfile_Makefile
-	if (@{$lines} > 0) {
-		checkline_rcsid_regex($lines->[0], qr"#\s+", "# ");
-	}
-
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
-		checkline_trailing_whitespace($line);
-		if ($text =~ /^\040{8}/) {
-			$line->log_warning("Use tab (not spaces) to make indentation.");
-		}
 		push(@{$all_lines}, $line);
 		# try to get any included file
 		if ($text =~ qr"^\.\s*include\s+\"([-./\w]+)\"$") {
@@ -1112,7 +1103,6 @@ sub readmakefile($$$$) {
 			$contents .= $text . "\n";
 		}
 	}
-	checklines_trailing_empty_lines($lines);
 	return $contents;
 }
 
@@ -1303,6 +1293,32 @@ sub checklines_direct_tools($) {
 	}
 }
 
+sub checklines_Makefile($) {
+	my ($lines) = @_;
+	my ($cont) = 0;
+
+	foreach my $line (@{$lines}) {
+		my $text = $line->text;
+
+		if ($line->lineno == 1) {
+			checkline_rcsid_regex($line, qr"#\s+", "# ");
+		}
+
+		checkline_trailing_whitespace($line);
+
+		if ($text =~ /^\040{8}/) {
+			$line->log_warning("Use tab (not spaces) to make indentation.");
+		}
+
+		$cont = ($text eq "") ? $cont + 1 : 0;
+		if ($cont == $opt_contblank + 1) {
+			$line->log_warning("${cont} contiguous blank lines, should be at most ${opt_contblank}.");
+		}
+	}
+
+	checklines_trailing_empty_lines($lines);
+}
+
 sub expand_variable($$$) {
 	my ($whole, $varname, $default_value) = @_;
 	my ($value, $re);
@@ -1383,18 +1399,7 @@ sub checkfile_package_Makefile($$$$) {
 	$whole = "\n${rawwhole}";
 
 	checkperms($fname);
-
-	$tmp = 0;
-
-	{
-		my $cont = 0;
-		foreach my $line (@{$lines}) {
-			$cont = ($line->text eq "") ? $cont + 1 : 0;
-			if ($cont == $opt_contblank + 1) {
-				$line->log_warning("${cont} contiguous blank lines, should be at most ${opt_contblank}.");
-			}
-		}
-	}
+	checklines_Makefile($lines);
 
 	#
 	# whole file: $(VARIABLE)
@@ -2030,7 +2035,7 @@ sub check_category($) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return;
 	}
-	checkline_rcsid($lines->[0], "# ");
+	checklines_Makefile($lines);
 
 	@filesys_subdirs = grep { ($_ = substr($_, length($dir) + 1, -1)) ne "CVS"; } glob("${dir}/*/");
 	
