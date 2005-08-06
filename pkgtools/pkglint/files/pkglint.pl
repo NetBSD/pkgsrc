@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.228 2005/08/06 02:26:47 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.229 2005/08/06 08:08:33 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -433,12 +433,12 @@ sub parse_multioption($$) {
 	my ($value, $optdefs) = @_;
 	foreach my $opt (split(qr",", $value)) {
 		if ($opt eq "none") {
-			foreach my $key (keys %$optdefs) {
+			foreach my $key (keys %{$optdefs}) {
 				${$optdefs->{$key}->[0]} = false;
 			}
 
 		} elsif ($opt eq "all") {
-			foreach my $key (keys %$optdefs) {
+			foreach my $key (keys %{$optdefs}) {
 				${$optdefs->{$key}->[0]} = true;
 			}
 
