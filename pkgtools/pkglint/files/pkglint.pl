@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.229 2005/08/06 08:08:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.230 2005/08/06 19:10:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -812,7 +812,7 @@ sub checkfile_MESSAGE($$) {
 sub checkfile_PLIST($$) {
 	my ($dir, $fname) = @_;
 	my ($plist, $curdir, $last_file_seen);
-	
+
 	log_subinfo("checkfile_PLIST", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
@@ -1451,12 +1451,12 @@ sub checkfile_package_Makefile($$$$) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR");
 	}
 	if ($whole =~ m|\${INSTALL}(.*)\n|) {
-	    my $args = $1;
-	    	if ($args =~ /-d/) {
-		        if ($args !~ /-[ogm]/) {
+		my $args = $1;
+		if ($args =~ /-d/) {
+			if ($args !~ /-[ogm]/) {
 				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${INSTALL}$args: " .
 					"consider using INSTALL_*_DIR");
-		        }
+			}
 		}
 	}
 	if ($whole =~ /\n\t-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)/g) {
@@ -1682,7 +1682,7 @@ sub checkfile_package_Makefile($$$$) {
 	if ($tmp =~ /(PATCH_SITES|PATCH_SITE_SUBDIR|PATCHFILES|PATCH_DIST_STRIP|PATCH_DIST_CAT)/) {
 		&checkearlier($tmp, @varnames);
 
-                $tmp = "\n$tmp";
+		$tmp = "\n$tmp";
 
 		if ($tmp =~ /\n(PATCH_SITES)=/) {
 			log_info(NO_FILE, NO_LINE_NUMBER, "Seen PATCH_SITES.");
@@ -1777,7 +1777,7 @@ sub checkfile_package_Makefile($$$$) {
 	$tmp = $sections[$idx];
 
 	my @linestocheck = qw(BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS);
-        if ($tmp =~ /(DEPENDS_TARGET|FETCH_DEPENDS|LIB_DEPENDS|RUN_DEPENDS).*=/) {
+	if ($tmp =~ /(DEPENDS_TARGET|FETCH_DEPENDS|LIB_DEPENDS|RUN_DEPENDS).*=/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1 is deprecated, please use DEPENDS.");
 	}
 	if ($tmp =~ /(LIB_|BUILD_|RUN_|FETCH_)?DEPENDS/ or
@@ -2038,7 +2038,7 @@ sub check_category($) {
 	checklines_Makefile($lines);
 
 	@filesys_subdirs = grep { ($_ = substr($_, length($dir) + 1, -1)) ne "CVS"; } glob("${dir}/*/");
-	
+
 	my ($first, $last_subdir, $comment_seen) = (true, undef, false);
 	foreach my $line (@{$lines}) {
 		if ($line->text =~ qr"^(#?)SUBDIR(.*?)=\s*(\S+)\s*(?:#\s*(.*?)\s*|)$") {
