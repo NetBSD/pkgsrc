@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/07/13 18:01:49 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:41 jlam Exp $
 
 DISTNAME=	Gtk2-1.042
 PKGNAME=	p5-gtk2-1.042
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
@@ -15,7 +15,6 @@ DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
 
 USE_TOOLS+=	gmake
 
-PERL5_REQD=	5.8
 PERL5_PACKLIST=	auto/Gtk2/.packlist
 
 .include "../../devel/p5-glib2/buildlink3.mk"

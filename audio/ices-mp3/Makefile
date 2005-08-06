@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/16 19:10:37 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:03 jlam Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -58,7 +58,6 @@ do-install:
 .include "../../audio/libshout/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .if defined(ICES_USE_PERL) && (${ICES_USE_PERL} == "YES")
-PERL5_REQD+=		5.8.0
 USE_TOOLS+=		perl:run
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 .endif

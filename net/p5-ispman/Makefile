@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/07/13 18:01:37 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/08/06 06:19:28 jlam Exp $
 #
 
 DISTNAME=		ispman-0.5
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		p5isp
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ispman/}
@@ -21,7 +21,6 @@ DEPENDS+=		p5-IO-stringy>=1.213:../../devel/p5-IO-stringy
 
 WRKSRC=			${WRKDIR}/ispman/Modules/ISPMan
 PERL5_PACKLIST=		auto/ISPMan/.packlist
-PLIST_SRC=		${WRKDIR}/PLIST
 PERL5_CONFIGURE_DIRS=	${WRKSRC} ${WRKSRC}/../IO-stringy-1.212_patched
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 INSTALL_DIRS=		${WRKSRC}
@@ -29,7 +28,6 @@ INSTALL_DIRS=		${WRKSRC}
 MAKE_PARAMS+=		--noprompt
 
 pre-configure:
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	cd ${WRKSRC} &&							\
 	for i in `${FIND} * -type f -print` ; do			\
 		${CP} $$i $$i.old &&					\
@@ -37,15 +35,9 @@ pre-configure:
 		${RM} $$i.old ;						\
 	done
 
-post-build:
-	${ECHO} >> ${PLIST_SRC}						\
-	"`${GREP} ^INSTALLSITELIB					\
-	   ${WRKSRC}/../IO-stringy-1.212_patched/Makefile		\
-	   | ${CUT} -d/ -f2-`/IO/ScalarPatched.pm"
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/../IO-stringy-1.212_patched/lib/IO/Scalar.pm \
-		${PREFIX}/`${TAIL} -n 1 ${PLIST_SRC}`
+		${PERL5_INSTALLVENDORLIB}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

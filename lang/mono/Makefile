@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2005/08/03 05:45:22 recht Exp $
+# $NetBSD: Makefile,v 1.41 2005/08/06 06:19:21 jlam Exp $
 
 DISTNAME=	mono-1.1.8.3
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://go-mono.com/sources/mono-1.1/
 
@@ -20,7 +21,7 @@ NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
 # LP64 problems
 NOT_FOR_PLATFORM+=	*-*-alpha *-*-sparc64
 
-USE_TOOLS+=		bison gmake gtar perl
+USE_TOOLS+=		bison gmake gtar perl:run
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 EXTRACT_USING=		gtar

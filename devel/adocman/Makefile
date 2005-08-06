@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:07 jlam Exp $
 #
 
 DISTNAME=	adocman-0.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sitedocs/}
 
@@ -13,19 +13,18 @@ COMMENT=	DocManager operation automation tool
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Crypt-SSLeay>=0.47:../../security/p5-SSLeay
 
-USE_TOOLS+=	perl:run
-NO_BUILD=	YES
-
-REPLACE_PERL=	adocman xml_export
+NO_BUILD=		yes
+PERL5_CONFIGURE=	no
+REPLACE_PERL=		adocman xml_export
 
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/adocman ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/xml_export ${PREFIX}/bin
-	${INSTALL_SCRIPT_DIR} ${PERL5_SITEARCH}/Alexandria
+	${INSTALL_SCRIPT_DIR} ${PERL5_INSTALLVENDORLIB}/Alexandria
 .for f in Client.pm Docman.pm
-	${INSTALL_SCRIPT} ${WRKSRC}/Alexandria/${f} ${PERL5_SITEARCH}/Alexandria
+	${INSTALL_SCRIPT} ${WRKSRC}/Alexandria/${f} ${PERL5_INSTALLVENDORLIB}/Alexandria
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/adocman
 .for f in LICENSE README TODO adocman.html xml_export.html
@@ -33,4 +32,5 @@ do-install:
 .endfor
 .undef f
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
