@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/07/13 18:01:19 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2005/08/06 06:19:04 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.irssi
 PKG_SUPPORTED_OPTIONS=	inet6 irssi-perl ssl
@@ -15,7 +15,7 @@ PERL5_PACKLIST+=	auto/Irssi/TextUI/.packlist
 # actually we don't need --with-perl here, irssi is compiled with it by default
 # but who knows what may happen in future versions
 CONFIGURE_ARGS+=	--with-perl
-CONFIGURE_ARGS+=	--with-perl-lib=site
+CONFIGURE_ARGS+=	--with-perl-lib=vendor
 .else
 CONFIGURE_ARGS+=	--with-perl=no
 .endif

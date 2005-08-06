@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/03 20:37:44 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/06 06:19:29 jlam Exp $
 #
 
 DISTNAME=	framework-2.4
@@ -21,7 +21,6 @@ MSFDIR?=	${PREFIX}/share/msf
 MSFDOC?=	${PREFIX}/share/doc/msf
 MESSAGE_SUBST+= MSFDIR=${MSFDIR}
 
-PERL5_REQD=	5.6.0
 USE_TOOLS+=	perl:run
 PERL_FILES=	msfcli msfconsole msfencode msflogdump msfpayload \
 		msfpescan msfweb msfupdate msfelfscan
