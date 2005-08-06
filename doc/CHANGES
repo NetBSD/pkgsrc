@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10806 2005/08/06 06:29:43 jlam Exp $
+$NetBSD: CHANGES,v 1.10807 2005/08/06 10:59:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -512,3 +512,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added databases/postgresql80-plperl version 8.0.3 [jlam 2005-08-06]
 	Added databases/postgresql80-plpython version 8.0.3 [jlam 2005-08-06]
 	Added databases/postgresql80-pltcl version 8.0.3 [jlam 2005-08-06]
+	Updated www/links to 2.1.0.18 [wiz 2005-08-06]
+	Updated www/links-gui to 2.1.0.18 [wiz 2005-08-06]
