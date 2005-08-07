@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10812 2005/08/06 21:39:56 adrianp Exp $
+$NetBSD: CHANGES,v 1.10813 2005/08/07 11:44:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -519,3 +519,18 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/xentools20 to 20.7 [bouyer 2005-08-06]
 	Updated devel/roundup to 0.8.4 [recht 2005-08-06]
 	Updated databases/phppgadmin to 3.5.4 [adrianp 2005-08-06]
+	Updated x11/wxGTK to 2.6.1 [wiz 2005-08-07]
+	Updated x11/wxGTK-contrib to 2.6.1 [wiz 2005-08-07]
+	Added x11/wxGTK24 version 2.4.2nb6 [wiz 2005-08-07]
+	Updated audio/audacity to 1.2.3nb2 [wiz 2005-08-07]
+	Updated editors/poedit to 1.2.5nb3 [wiz 2005-08-07]
+	Updated games/wxhugo to 3.1.02nb1 [wiz 2005-08-07]
+	Updated net/amule to 1.2.8nb4 [wiz 2005-08-07]
+	Updated x11/py-wxWidgets to 2.4.2.4nb7 [wiz 2005-08-07]
+	Updated converters/tex2rtf to 2.01nb3 [wiz 2005-08-07]
+	Updated devel/rapidsvn to 0.8.0nb1 [wiz 2005-08-07]
+	Updated misc/xchm to 0.9.8nb1 [wiz 2005-08-07]
+	Updated multimedia/mmg to 1.4.2nb1 [wiz 2005-08-07]
+	Updated multimedia/vlc to 0.7.2nb4 [wiz 2005-08-07]
+	Updated x11/wxhaskell to 0.9.4nb1 [wiz 2005-08-07]
+	Updated cad/boolean to 6.4nb7 [wiz 2005-08-07]

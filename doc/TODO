@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3797 2005/08/06 21:39:56 adrianp Exp $
+$NetBSD: TODO,v 1.3798 2005/08/07 11:44:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1100,7 +1100,6 @@ Suggested package updates
 	o wmctrl-1.07
 	o wmweather-2.4.3
 	o www6to4-1.6
-	o wxGTK-2.6.1
 	o x2vnc-1.6.1
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xalan-c-1.8.0
@@ -1111,7 +1110,7 @@ Suggested package updates
 	o xblast-2.10.0
 	o xboard-4.2.7
 	o xcb-2.4
-	o xchm-1.0 [needs wxGTK-2.6]
+	o xchm-1.0
 	o xcircuit-3.3.11
 	o xdaliclock-2.20
 	o xdesktopwaves-1.3
