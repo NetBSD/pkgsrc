@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.56 2005/08/06 22:18:19 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.57 2005/08/07 05:04:13 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -179,3 +179,5 @@ Pullup ticket 660 - requested by Lubomir Sedlacik
 security update for suse91_base
 Pullup ticket 662 - requested by Adrian Portelli
 update and security fixes for proftpd
+Pullup ticket 666 - requested by Lubomir Sedlacik
+security update for netpbm
