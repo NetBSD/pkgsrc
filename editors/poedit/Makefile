@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:45 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/07 11:29:03 wiz Exp $
 #
 
 DISTNAME=	poedit-1.2.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poedit/}
 
@@ -15,8 +15,9 @@ DEPENDS+=	zip-[0-9]*:../../archivers/zip
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
+CONFIGURE_ENV+=		WX_CONFIG_NAME=${LOCALBASE}/bin/wx24-config
 
 .include "../../databases/db4/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK24/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
