@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/08/07 16:15:55 recht Exp $
+# $NetBSD: Makefile,v 1.31 2005/08/07 16:43:15 recht Exp $
 #
 
 .include "Makefile.common"
@@ -17,7 +17,7 @@ SUBST_FILES.blibc=	BitTorrent/defaultargs.py
 
 # Enable the 'enable_bad_libc_workaround' on BSD by default.
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" \
-	|| ${OPSYS} == "Darwin" 
+	|| ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly"
 SUBST_SED.blibc=		-e s/%BSD_LIBC%/1/g
 .else
 SUBST_SED.blibc=		-e s/%BSD_LIBC%/0/g
