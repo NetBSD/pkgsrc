@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2005/08/06 06:18:45 jlam Exp $
+# $NetBSD: Makefile,v 1.98 2005/08/07 21:47:24 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
-PKGREVISION=	# empty
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 .else
 .  if !empty(PERL5_SNAPSHOT)
