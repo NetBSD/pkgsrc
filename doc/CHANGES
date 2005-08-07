@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10814 2005/08/07 12:52:04 tron Exp $
+$NetBSD: CHANGES,v 1.10815 2005/08/07 16:19:47 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -535,3 +535,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/wxhaskell to 0.9.4nb1 [wiz 2005-08-07]
 	Updated cad/boolean to 6.4nb7 [wiz 2005-08-07]
 	Updated net/oidentd to 2.0.7nb4 [tron 2005-08-07]
+	Updated net/bittorrent to 4.0.3 [recht 2005-08-07]
+	Updated net/bittorrent-gui to 4.0.3 [recht 2005-08-07]
