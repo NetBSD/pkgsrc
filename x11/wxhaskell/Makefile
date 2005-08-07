@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:32 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/07 11:34:18 wiz Exp $
 
 DISTNAME=		wxhaskell-src-0.9.4
 PKGNAME=		${DISTNAME:S/-src//}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxhaskell/}
 EXTRACT_SUFX=		.zip
@@ -19,7 +20,6 @@ MAKE_FLAGS=		X11BASE=${X11BASE}
 
 pre-configure:
 	cd ${WRKSRC}; ./configure --prefix=${PREFIX} --with-opengl
-
 
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
