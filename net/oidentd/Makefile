@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/02/24 15:49:26 tron Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/07 12:51:32 tron Exp $
 
 DISTNAME=	oidentd-2.0.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ojnk/}
 
@@ -13,6 +13,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		oidentd
+OSVERSION_SPECIFIC=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
