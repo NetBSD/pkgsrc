@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/12/28 23:18:19 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/08/07 11:26:17 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WXGTK_BUILDLINK3_MK:=	${WXGTK_BUILDLINK3_MK}+
@@ -13,8 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NwxGTK}
 BUILDLINK_PACKAGES+=	wxGTK
 
 .if !empty(WXGTK_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.wxGTK+=	wxGTK>=2.4.2
-BUILDLINK_RECOMMENDED.wxGTK+=	wxGTK>=2.4.2nb3
+BUILDLINK_DEPENDS.wxGTK+=	wxGTK>=2.6.0
 BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK
 .endif	# WXGTK_BUILDLINK3_MK
 
@@ -23,11 +22,6 @@ BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-
-.if !empty(WXGTK_USE_GTK1:M[Yy][Ee][Ss])
-.  include "../../x11/gtk/buildlink3.mk"
-.else
-.  include "../../x11/gtk2/buildlink3.mk"
-.endif
+.include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
