@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/05/07 23:04:17 dillo Exp $
+$NetBSD: patch-aa,v 1.5 2005/08/07 11:29:27 wiz Exp $
 
 --- Makefile.orig	2005-01-16 20:25:50.000000000 +0100
 +++ Makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.4 2005/05/07 23:04:17 dillo Exp $
  #LDFLAGS = `wx-config --libs` -lgtk -lgdk -lmikmod
  # Uncomment the following if compiling with GTK 2 support:
 -LDFLAGS = `wx-config --libs` -lgtk-x11-2.0 -lgdk-x11-2.0 -lmikmod
-+LDFLAGS = `wx-config --libs` -lmikmod
++LDFLAGS = `wx24-config --libs` -lmikmod
  
  # Use these LDFLAGS and STATICLIBS for static building:
  #STATICLIBS = /usr/local/lib/libmikmod.a /usr/local/lib/libwx_gtk2-2.4.a
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.4 2005/05/07 23:04:17 dillo Exp $
  # Release build:
 -CFLAGS  = ${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET -O2 -Wall `wx-config --cflags`
 +CPPFLAGS+=${DEPENDFLAGS} -D__WXGTK__ -DWXWINDOWS -DNO_WXCARET
-+HUGO_CFLAGS=-O2 -Wall `wx-config --cflags`
++HUGO_CFLAGS=-O2 -Wall `wx24-config --cflags`
 +CFLAGS  += ${HUGO_CFLAGS}
  
  # C++

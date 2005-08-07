@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/07 11:31:32 wiz Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-2.4.2.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
@@ -22,11 +22,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 BUILDLINK_DEPENDS.python21=	python21>=2.1.3nb3
 BUILDLINK_DEPENDS.python22=	python22>=2.2.2nb2
 
-.include "../../mk/bsd.prefs.mk"
-
-.if empty(WXGTK_USE_GTK1:M[Yy][Ee][Ss])
-WXARG=	WXPORT=gtk2
-.endif
+WXARG=	WXPORT=gtk2 WX_CONFIG=${LOCALBASE}/bin/wx24-config
 
 PYDISTUTILSPKG=	yes
 # no scripts to avoid conflicts
@@ -35,7 +31,7 @@ PYSETUPINSTALLARGS=	NO_SCRIPTS=1 ${WXARG}
 PYBINMODULE=	yes
 
 .include "../../devel/pkg-config/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK24/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
