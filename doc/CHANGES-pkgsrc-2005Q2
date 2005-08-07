@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.58 2005/08/07 05:23:16 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.59 2005/08/07 12:25:26 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -183,3 +183,5 @@ Pullup ticket 666 - requested by Lubomir Sedlacik
 security update for netpbm
 Pullup ticket 665 - requested by Adrian Portelli
 security update for phppgadmin
+Pullup ticket 663 - requested by Adrian Portelli
+security update and build fix for mysql4
