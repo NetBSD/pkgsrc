@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10815 2005/08/07 16:19:47 recht Exp $
+$NetBSD: CHANGES,v 1.10816 2005/08/07 16:20:56 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -537,3 +537,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/oidentd to 2.0.7nb4 [tron 2005-08-07]
 	Updated net/bittorrent to 4.0.3 [recht 2005-08-07]
 	Updated net/bittorrent-gui to 4.0.3 [recht 2005-08-07]
+	Removed emulators/winelib [recht 2005-08-07]
