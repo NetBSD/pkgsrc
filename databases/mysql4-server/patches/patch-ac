@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/05/23 14:00:21 xtraeme Exp $
+$NetBSD: patch-ac,v 1.4.2.1 2005/08/07 12:24:59 salo Exp $
 
---- mysql-test/Makefile.in.orig	2005-05-23 15:39:29.000000000 +0200
-+++ mysql-test/Makefile.in	2005-05-23 15:39:56.000000000 +0200
-@@ -362,7 +362,7 @@
+--- mysql-test/Makefile.in.orig	2005-07-29 22:39:11.000000000 +0200
++++ mysql-test/Makefile.in	2005-07-29 22:39:27.000000000 +0200
+@@ -364,7 +364,7 @@
  @HAVE_NDBCLUSTER_DB_FALSE@USE_NDBCLUSTER = \"\"
  @HAVE_NDBCLUSTER_DB_TRUE@USE_NDBCLUSTER = \"--ndbcluster\"
  benchdir_root = $(prefix)
