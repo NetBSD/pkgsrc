@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
+$NetBSD: patch-ac,v 1.5 2005/08/07 12:51:32 tron Exp $
 
 --- src/kernel/netbsd.c.orig	2003-02-12 02:15:59.000000000 +0000
-+++ src/kernel/netbsd.c	2005-02-24 15:40:54.000000000 +0000
++++ src/kernel/netbsd.c	2005-08-07 13:48:57.000000000 +0100
 @@ -29,6 +29,7 @@
  #include <errno.h>
  #include <string.h>
@@ -10,7 +10,24 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
  #include <sys/socket.h>
  #include <sys/socketvar.h>
  #include <netinet/in.h>
-@@ -99,7 +100,11 @@
+@@ -41,6 +42,16 @@
+ #include <netinet/tcp.h>
+ #include <netinet/ip_compat.h>
+ 
++#if __NetBSD_Version__ >= 399000300	/* 3.99.3 */
++#define	SO_UIDINFO	/* "struct socket" contains so_uidinfo" */
++
++#include <sys/proc.h>
++#include <sys/resource.h>
++#define	_KERNEL	42
++#include <sys/resourcevar.h>
++#undef _KERNEL
++#endif
++
+ #ifdef WANT_IPV6
+ #	include <sys/sysctl.h>
+ #	include <netinet/ip_var.h>
+@@ -99,7 +110,11 @@
  	kinfo->nl[N_TCB].n_name = "_tcbtable";
  
  #ifdef WANT_IPV6
@@ -22,7 +39,7 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
  #else
  	kinfo->nl[N_TCB6].n_name = "_oidentd_nonexistent";
  #endif
-@@ -162,7 +167,7 @@
+@@ -162,7 +177,7 @@
  	if (tcbtablep == NULL)
  		return (NULL);
  
@@ -31,7 +48,7 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
  	while (kpcbp != (struct inpcb *) ktcbtablep) {
  		if (getbuf((u_long) kpcbp, &pcb, sizeof(struct inpcb)) == -1)
  			break;
-@@ -185,7 +190,7 @@
+@@ -185,7 +200,7 @@
  			return (pcb.inp_socket);
  		}
  
@@ -40,7 +57,35 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
  	}
  
  	return (NULL);
-@@ -327,12 +332,38 @@
+@@ -203,6 +218,9 @@
+ 	struct socket *sockp, sock;
+ 	struct inpcbtable tcbtable;
+ 	int ret;
++#ifdef SO_UIDINFO
++	struct uidinfo uidinfo;
++#endif
+ 
+ 	ret = getbuf(kinfo->nl[N_TCB].n_value, &tcbtable, sizeof(tcbtable));
+ 	if (ret == -1)
+@@ -218,7 +236,17 @@
+ 	if (getbuf((u_long) sockp, &sock, sizeof(sock)) == -1)
+ 		return (-1);
+ 
++#ifdef SO_UIDINFO
++	if (sock.so_uidinfo == NULL)
++		return (-1);
++
++	if (getbuf((u_long) sock.so_uidinfo, &uidinfo, sizeof(uidinfo)) == -1)
++		return (-1);
++
++	return (uidinfo.ui_uid);
++#else
+ 	return (sock.so_uid);
++#endif
+ }
+ 
+ #ifdef MASQ_SUPPORT
+@@ -327,12 +355,38 @@
  ** Returns NULL if no match.
  */
  
@@ -79,7 +124,7 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
  	struct in6pcb *tcb6_cur, tcb6_temp;
  
  	if (tcb6 == NULL)
-@@ -355,7 +386,7 @@
+@@ -355,7 +409,7 @@
  		if (getbuf((u_long) tcb6_cur, &tcb6_temp, sizeof(tcb6_temp)) == -1)
  			break;
  	} while ((u_long) tcb6_cur != kinfo->nl[N_TCB6].n_value);
@@ -88,7 +133,7 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
  	return (NULL);
  }
  
-@@ -368,6 +399,19 @@
+@@ -368,6 +422,22 @@
  				struct sockaddr_storage *laddr,
  				struct sockaddr_storage *faddr)
  {
@@ -96,6 +141,9 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
 +	struct socket *sockp, sock;
 +	struct inpcbtable tcbtable;
 +	int ret;
++#ifdef SO_UIDINFO
++	struct uidinfo uidinfo;
++#endif
 +
 +	ret = getbuf(kinfo->nl[N_TCB6].n_value, &tcbtable, sizeof(tcbtable));
 +	if (ret == -1)
@@ -108,7 +156,7 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
  	struct socket *sockp, sock;
  	struct in6pcb tcb6;
  	int ret;
-@@ -378,6 +422,7 @@
+@@ -378,6 +448,7 @@
  
  	sockp = getlist6(&tcb6, lport, fport,
  				&SIN6(laddr)->sin6_addr, &SIN6(faddr)->sin6_addr);
@@ -116,3 +164,21 @@ $NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
  
  	if (sockp == NULL)
  		return (-1);
+@@ -385,7 +456,17 @@
+ 	if (getbuf((u_long) sockp, &sock, sizeof(sock)) == -1)
+ 		return (-1);
+ 
++#ifdef SO_UIDINFO
++	if (sock.so_uidinfo == NULL)
++		return (-1);
++
++	if (getbuf((u_long) sock.so_uidinfo, &uidinfo, sizeof(uidinfo)) == -1)
++		return (-1);
++
++	return (uidinfo.ui_uid);
++#else
+ 	return (sock.so_uid);
++#endif
+ }
+ 
+ #endif
