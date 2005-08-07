@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.235 2005/08/06 22:41:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.236 2005/08/07 00:14:22 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -290,12 +290,14 @@ my $conf_make		= '@MAKE@';
 my $conf_datadir	= '@DATADIR@';
 
 # Command Line Options
+my $opt_autofix		= false;
 my $opt_contblank	= 1;
 my $opt_debug		= false;
 my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
 my (%options) = (
 	"-d"		=> "Enable debugging mode",
+	"-F"		=> "Try to automatically fix some errors (experimental)",
 	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
 	"-q"		=> "don't print a summary line when finishing",
 	"-I"		=> "dump the Makefile after parsing",
@@ -455,6 +457,7 @@ sub parse_multioption($$) {
 
 sub parse_command_line() {
 	my (%options) = (
+		"autofix|F" => \$opt_autofix,
 		"warning|W=s" => sub {
 			my ($opt, $val) = @_;
 			parse_multioption($val, \%warnings);
@@ -645,13 +648,38 @@ sub is_committed($) {
 	return false;
 }
 
+# - A directory that has no entries except ".", ".." and "CVS" is empty.
+# - A directory whose entries besides ".", ".." and "CVS" are all empty is empty.
+# - No other directories are empty.
+sub is_emptydir($);
+sub is_emptydir($) {
+	my ($dir) = @_;
+	my ($rv);
+
+	if (!opendir(DIR, $dir)) {
+		return true;
+	}
+
+	$rv = true;
+	foreach my $subdir (readdir(DIR)) {
+		next if $subdir eq "." || $subdir eq ".." || $subdir eq "CVS";
+		next if -d "${dir}/${subdir}" && is_emptydir("${dir}/${subdir}");
+
+		$rv = false;
+		last;
+	}
+
+	closedir(DIR);
+	return $rv;
+}
+
 sub get_subdirs($) {
 	my ($dir) = @_;
 	my (@result) = ();
 
 	if (opendir(DIR, $dir)) {
 		foreach my $subdir (readdir(DIR)) {
-			if ($subdir ne "." && $subdir ne ".." && $subdir ne "CVS" && -d "${dir}/${subdir}") {
+			if ($subdir ne "." && $subdir ne ".." && $subdir ne "CVS" && -d "${dir}/${subdir}" && !is_emptydir("${dir}/${subdir}")) {
 				push(@result, $subdir);
 			}
 		}
@@ -695,7 +723,9 @@ sub checkline_rcsid_regex($$$) {
 
 	if ($line->text !~ qr"^${prefix_regex}${regex_rcsidstr}$") {
 		$line->log_error("\"${prefix}\$${conf_rcsidstr}\$\" expected.");
+		return false;
 	}
+	return true;
 }
 
 sub checkline_rcsid($$) {
@@ -2040,8 +2070,7 @@ sub check_predefined_sites($$) {
 sub check_category($) {
 	my ($dir) = @_;
 	my $fname = "${dir}/Makefile";
-	my ($lines);
-	my ($is_wip);
+	my ($lines, $is_wip, @normalized_lines, $can_fix);
 
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
@@ -2049,35 +2078,49 @@ sub check_category($) {
 	}
 
 	$is_wip = (basename(Cwd::abs_path($dir)) eq "wip");
+	$can_fix = true;
 
 	if (@{$lines} < 8) {
 		log_error($fname, NO_LINE_NUMBER, "File too short.");
 	}
-	if (@{$lines} > 0) {
-		checkline_rcsid_regex($lines->[0], qr"#\s+", "# ");
+	if (@{$lines} > 0 && checkline_rcsid_regex($lines->[0], qr"#\s+", "# ")) {
+		push(@normalized_lines, $lines->[0]->text);
+	} else {
+		push(@normalized_lines, "# \$NetBSD\$");
 	}
+
 	if (@{$lines} > 1 && $lines->[1]->text ne "#" && !$is_wip) {
 		$lines->[1]->log_error("This line must contain a single #, nothing more.");
+		push(@normalized_lines, "#");
+	} else {
+		push(@normalized_lines, $lines->[1]->text);
 	}
+
 	if (@{$lines} > 2 && $lines->[2]->text ne "") {
 		$lines->[2]->log_error("Empty line expected.");
 	}
+	push(@normalized_lines, "");
+
 	if (@{$lines} > 3) {
 		if ($lines->[3]->text =~ qr"^COMMENT=\t*(.*)") {
 			my ($comment) = ($1);
 
 			if ($comment =~ qr"\\$") {
 				$lines->[3]->log_error("COMMENT must fit on one line.");
+				$can_fix = false;
 			}
+			push(@normalized_lines, "COMMENT=\t${comment}");
 		} else {
 			$lines->[3]->log_error("COMMENT= line expected.");
+			$can_fix = false;
 		}
 	}
 	if (@{$lines} > 4 && $lines->[4]->text ne "") {
 		$lines->[4]->log_error("Empty line expected.");
 	}
+	push(@normalized_lines, "");
 
-	my ($last_subdir) = (undef);
+	my ($last_subdir, $last_line) = (undef);
 
 	my @filesys_subdirs = sort(get_subdirs($dir));
 	my ($filesys_index, $filesys_atend) = (0, false);
@@ -2105,9 +2148,12 @@ sub check_category($) {
 					$line->log_error("${subdir} must come before ${last_subdir}.");
 				}
 				$last_subdir = $subdir;
+				$last_line = $line->text;
 
 			} elsif ($is_wip && $line->text eq "") {
-				# ignore the special case "wip", which defines its own "index" target.
+				# the "wip" category Makefile has its own "index" target after the SUBDIRs.
+				$lines_atend = true;
+				next;
 
 			} else {
 				$line->log_error("SUBDIR+= line expected.");
@@ -2122,6 +2168,7 @@ sub check_category($) {
 		if (!$filesys_atend && ($lines_atend || $f lt $m)) {
 			$line->log_error("${f} exists in the file system, but not in the Makefile.");
 			$filesys_index++;
+			push(@normalized_lines, "SUBDIR+=\t${f}");
 
 		} elsif (!$lines_atend && ($filesys_atend || $m lt $f)) {
 			$line->log_error("${m} exists in the Makefile, but not in the file system.");
@@ -2130,19 +2177,49 @@ sub check_category($) {
 		} else { # $f eq $m
 			$filesys_index++;
 			$fetch_next_line = true;
+			push(@normalized_lines, $last_line);
 		}
 
-		if ($lines_index == $#{$lines} - 1 || ($is_wip && $line->text eq "")) {
+		if ($lines_index == $#{$lines} - 1) {
 			$lines_atend = true;
 		}
-		$filesys_atend = ($filesys_index == @filesys_subdirs);
+		$filesys_atend = ($filesys_index > $#{@filesys_subdirs});
+	}
+
+	foreach my $i ($lines_index .. $#{$lines} - 2) {
+		push(@normalized_lines, $lines->[$i]->text);
 	}
 
 	if (@{$lines} > 7 && $lines->[-2]->text ne "") {
 		$lines->[-2]->log_error("Empty line expected.");
 	}
-	if (@{$lines} > 7 && $lines->[-1]->text ne ".include \"../mk/bsd.pkg.subdir.mk\"") {
-		$lines->[-1]->log_error("Expected this: .include \"../mk/bsd.pkg.subdir.mk\"");
+	push(@normalized_lines, "");
+
+	my $final_line = ".include \"../mk/bsd.pkg.subdir.mk\"";
+	if (@{$lines} > 7 && $lines->[-1]->text ne $final_line) {
+		$lines->[-1]->log_error("Expected this: ${final_line}");
+	}
+	push(@normalized_lines, $final_line);
+
+	if ($opt_autofix) {
+		my $changed = false;
+		if (scalar(@normalized_lines) != scalar(@{$lines})) {
+			$changed = true;
+		} else {
+			for my $i (0..$#{$lines}) {
+				if ($normalized_lines[$i] ne $lines->[$i]->text) {
+					$changed = true;
+				}
+			}
+		}
+
+		if ($changed && $can_fix) {
+			open(F, "> ${fname}") or die;
+			foreach my $line (@normalized_lines) {
+				printf F ("%s\n", $line);
+			}
+			close(F) or die;
+		}
 	}
 }
 
