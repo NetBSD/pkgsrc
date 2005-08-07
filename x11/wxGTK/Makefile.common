@@ -1,46 +1,32 @@
-# $NetBSD: Makefile.common,v 1.1 2005/07/24 21:14:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/08/07 11:26:17 wiz Exp $
 #
 
-DISTNAME=		wxGTK-2.4.2
+DISTNAME=		wxGTK-2.6.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxwindows/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tsarna@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.wxwidgets.org/
 
 PATCHDIR=		${.CURDIR}/../../x11/wxGTK/patches
 DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK/distinfo
 
 USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-opengl
+USE_GNU_CONFIGURE_HOST=	NO
+CONFIGURE_ARGS+=	--with-gtk=2
 CONFIGURE_ARGS+=	--with-libjpeg=sys
-CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-libpng=sys
 CONFIGURE_ARGS+=	--with-libtiff=sys
+CONFIGURE_ARGS+=	--with-opengl
+CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
 CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
-DOCDIR=			${PREFIX}/share/doc/wx/gtk
-
-.include "../../mk/bsd.prefs.mk"
-
-# This is needed for gtk1 and gtk2 on some platforms and
-# it doesn't hurt on those which don't need it
-CONFIGURE_ARGS+=	--with-gtk
-
-.if !empty(WXGTK_USE_GTK1:M[Yy][Ee][Ss])
-PLIST_SUBST+=		GTKVER=
-.include "../../x11/gtk/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--enable-gtk2
-PLIST_SUBST+=		GTKVER=2
-.include "../../x11/gtk2/buildlink3.mk"
-.endif
+DOCDIR=			${PREFIX}/share/doc/wxGTK
 
 .include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -48,6 +34,7 @@ PLIST_SUBST+=		GTKVER=2
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
