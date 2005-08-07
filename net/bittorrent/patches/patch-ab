@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.4 2005/07/26 13:43:13 gdt Exp $
+$NetBSD: patch-ab,v 1.5 2005/08/07 16:15:55 recht Exp $
 
---- btdownloadheadless.py.orig	2005-05-24 02:06:11.000000000 -0400
-+++ btdownloadheadless.py
-@@ -151,6 +151,7 @@ class HeadlessDisplayer(object):
+--- btdownloadheadless.py.orig	2005-07-11 00:44:41.000000000 +0200
++++ btdownloadheadless.py	2005-08-07 17:30:34.000000000 +0200
+@@ -151,6 +151,7 @@
          print 'share rating:  ', self.shareRating
          print 'seed status:   ', self.seedStatus
          print 'peer status:   ', self.peerStatus
-+	sys.stdout.flush()
++        sys.stdout.flush()
  
      def print_spew(self, spew):
          s = StringIO()
