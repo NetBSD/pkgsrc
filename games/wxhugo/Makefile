@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:56 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/07 11:29:27 wiz Exp $
 #
 
 DISTNAME=	hugov31_unix_source
 PKGNAME=	wxhugo-3.1.02
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/hugo/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTFILE_WX}
@@ -28,7 +29,7 @@ SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
 INSTALLATION_DIRS=	bin
 
 .include "../../audio/libmikmod/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK24/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hewx ${PREFIX}/bin
