@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10813 2005/08/07 11:44:30 wiz Exp $
+$NetBSD: CHANGES,v 1.10814 2005/08/07 12:52:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/vlc to 0.7.2nb4 [wiz 2005-08-07]
 	Updated x11/wxhaskell to 0.9.4nb1 [wiz 2005-08-07]
 	Updated cad/boolean to 6.4nb7 [wiz 2005-08-07]
+	Updated net/oidentd to 2.0.7nb4 [tron 2005-08-07]
