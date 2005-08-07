@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.8.4.1 2005/08/07 05:03:33 snj Exp $
+
+--- converter/other/cameratopam/identify.c.orig	2005-04-11 16:24:15.000000000 +0000
++++ converter/other/cameratopam/identify.c	2005-08-06 12:58:46.000000000 +0000
+@@ -22,7 +22,9 @@
+ 
+ static loadRawFn load_raw;
+ 
++#include <sys/param.h>
+ 
++#if !(defined(__GLIBC__) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 300000000)))
+ /* This does the same as the function of the same name in the GNU C library */
+ static const char *memmem (const char *haystack, size_t haystacklen,
+                      const char *needle, size_t needlelen)
+@@ -33,6 +35,7 @@
+       return c;
+   return NULL;
+ }
++#endif
+ 
+ /*
+    Thanks to Adobe for providing these excellent CAM -> XYZ matrices!
