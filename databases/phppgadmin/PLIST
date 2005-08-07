@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/02/07 15:02:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2005/08/07 05:23:09 snj Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -75,6 +75,7 @@ share/phppgadmin/lang/chinese-sim.php
 share/phppgadmin/lang/chinese-tr.php
 share/phppgadmin/lang/convert.awk
 share/phppgadmin/lang/czech.php
+share/phppgadmin/lang/danish.php
 share/phppgadmin/lang/dutch.php
 share/phppgadmin/lang/english.php
 share/phppgadmin/lang/french.php
@@ -84,11 +85,13 @@ share/phppgadmin/lang/italian.php
 share/phppgadmin/lang/japanese.php
 share/phppgadmin/lang/polish.php
 share/phppgadmin/lang/portuguese-br.php
+share/phppgadmin/lang/portuguese-pt.php
 share/phppgadmin/lang/recoded/afrikaans.php
 share/phppgadmin/lang/recoded/arabic.php
 share/phppgadmin/lang/recoded/chinese-sim.php
 share/phppgadmin/lang/recoded/chinese-tr.php
 share/phppgadmin/lang/recoded/czech.php
+share/phppgadmin/lang/recoded/danish.php
 share/phppgadmin/lang/recoded/dutch.php
 share/phppgadmin/lang/recoded/english.php
 share/phppgadmin/lang/recoded/french.php
@@ -100,6 +103,7 @@ share/phppgadmin/lang/recoded/japanese.php
 share/phppgadmin/lang/recoded/mongol.php
 share/phppgadmin/lang/recoded/polish.php
 share/phppgadmin/lang/recoded/portuguese-br.php
+share/phppgadmin/lang/recoded/portuguese-pt.php
 share/phppgadmin/lang/recoded/romanian.php
 share/phppgadmin/lang/recoded/russian.php
 share/phppgadmin/lang/recoded/slovak.php
