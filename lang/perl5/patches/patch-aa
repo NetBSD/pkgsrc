@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.27 2005/08/06 06:18:45 jlam Exp $
+$NetBSD: patch-aa,v 1.28 2005/08/07 21:47:24 jlam Exp $
 
 --- lib/ExtUtils/MM_Unix.pm.orig	2004-01-05 17:34:59.000000000 -0500
 +++ lib/ExtUtils/MM_Unix.pm
@@ -48,7 +48,42 @@ $NetBSD: patch-aa,v 1.27 2005/08/06 06:18:45 jlam Exp $
  	    }
  	}
      }
-@@ -2480,13 +2480,13 @@ sub install {
+@@ -2082,6 +2082,21 @@ sub init_INSTALL {
+           $self->catdir($sprefix, 'bin');
+     }
+ 
++    unless( $Config{installsitescript} ) {
++        $Config_Override{installsitescript} =
++          $self->catdir($sprefix, 'bin');
++    }
++
++    unless( $Config{installvendorbin} ) {
++        $Config_Override{installvendorbin} =
++          $self->catdir($vprefix, 'bin');
++    }
++
++    unless( $Config{installvendorscript} ) {
++        $Config_Override{installvendorscript} =
++          $self->catdir($vprefix, 'bin');
++    }
++
+     $self->{PREFIX}       ||= '';
+ 
+     if( $self->{PREFIX} ) {
+@@ -2127,6 +2142,12 @@ sub init_INSTALL {
+         script      => { s => $iprefix,
+                          t => 'perl',
+                          d => 'bin' },
++        vendorscript => { s => $vprefix,
++                          t => 'vendor',
++                          d => 'bin' },
++        sitescript   => { s => $sprefix,
++                          t => 'site',
++                          d => 'bin' },
+     );
+     
+     my %man_layouts =
+@@ -2480,13 +2501,13 @@ sub install {
      my(@m);
  
      push @m, q{
@@ -66,7 +101,7 @@ $NetBSD: patch-aa,v 1.27 2005/08/06 06:18:45 jlam Exp $
  
  pure_install :: pure_$(INSTALLDIRS)_install
  
-@@ -2519,7 +2519,7 @@ pure_site_install ::
+@@ -2519,7 +2540,7 @@ pure_site_install ::
  		$(INST_LIB) $(DESTINSTALLSITELIB) \
  		$(INST_ARCHLIB) $(DESTINSTALLSITEARCH) \
  		$(INST_BIN) $(DESTINSTALLSITEBIN) \
@@ -75,7 +110,7 @@ $NetBSD: patch-aa,v 1.27 2005/08/06 06:18:45 jlam Exp $
  		$(INST_MAN1DIR) $(DESTINSTALLSITEMAN1DIR) \
  		$(INST_MAN3DIR) $(DESTINSTALLSITEMAN3DIR)
  	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
-@@ -2532,7 +2532,7 @@ pure_vendor_install ::
+@@ -2532,7 +2553,7 @@ pure_vendor_install ::
  		$(INST_LIB) $(DESTINSTALLVENDORLIB) \
  		$(INST_ARCHLIB) $(DESTINSTALLVENDORARCH) \
  		$(INST_BIN) $(DESTINSTALLVENDORBIN) \
