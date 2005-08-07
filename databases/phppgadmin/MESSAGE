@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/10/09 16:23:43 jdolecek Exp $
+$NetBSD: MESSAGE,v 1.5.6.1 2005/08/07 05:23:09 snj Exp $
 
 In order to use ${PKGNAME} under Apache/PHP, include following in your
 server configuration:
@@ -13,6 +13,6 @@ This makes ${PKGNAME} available on your server as:
 Your Apache server must also be configured to support PHP, and PHP
 must be configured to support PostgreSQL by including this in php.ini:
 
-extension=pgsql.so 
+extension=pgsql.so
 
 ===========================================================================
