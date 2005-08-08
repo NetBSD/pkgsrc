@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1710 2005/07/22 18:59:55 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1711 2005/08/08 15:38:19 veego Exp $
 #
 # This file is in the public domain.
 #
@@ -3258,7 +3258,7 @@ fetch-list-one-pkg:
 		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
 .    for fetchfile in ${_ALLFILES}
 .      if defined(_FETCH_MESSAGE)
-	if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
+	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
 			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
@@ -3266,9 +3266,9 @@ fetch-list-one-pkg:
 		${ECHO} '# Prompt user to get ${fetchfile} ('$${filesize-???}' bytes) manually:'; \
 		${ECHO} '#';						\
 		${ECHO} ${_FETCH_MESSAGE:Q};				\
-	fi
+	fi)
 .      elif defined(DYNAMIC_MASTER_SITES)
-	if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
+	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
 			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
@@ -3288,9 +3288,9 @@ fetch-list-one-pkg:
 		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
 		${ECHO}	done;						\
 		${ECHO} ')';						\
-	fi
+	fi)
 .      else
-	if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
+	@(if [ ! -f ${_DISTDIR}/${fetchfile:T} ]; then			\
 		${ECHO};						\
 		filesize=`${AWK} '					\
 			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
@@ -3305,7 +3305,7 @@ fetch-list-one-pkg:
 		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
 		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
 		${ECHO}	done;						\
-	fi
+	fi)
 .      endif # defined(_FETCH_MESSAGE) || defined(DYNAMIC_MASTER_SITES)
 .    endfor
 .  endif # !empty(_ALLFILES)
