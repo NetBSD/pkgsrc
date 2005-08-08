@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10829 2005/08/08 18:13:28 tron Exp $
+$NetBSD: CHANGES,v 1.10830 2005/08/08 18:35:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -554,3 +554,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/dspam to 3.4.9 [xtraeme 2005-08-08]
 	Updated editors/nvi-m17n to 1.79.20040401 [taca 2005-08-08]
 	Updated x11/xservers to 3.3.6.4 [tron 2005-08-08]
+	Updated www/apache2 to 2.0.54nb2 [tron 2005-08-08]
