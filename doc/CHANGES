@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10817 2005/08/07 18:21:31 adrianp Exp $
+$NetBSD: CHANGES,v 1.10818 2005/08/08 00:12:18 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -539,3 +539,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/bittorrent-gui to 4.0.3 [recht 2005-08-07]
 	Removed emulators/winelib [recht 2005-08-07]
 	Updated databases/postgresql73 to 7.3.10 [adrianp 2005-08-07]
+	Added games/REminiscence version 0.1.6 [dillo 2005-08-08]
