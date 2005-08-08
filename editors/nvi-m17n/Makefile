@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.31 2005/08/04 01:39:08 taca Exp $
+# $NetBSD: Makefile,v 1.32 2005/08/08 14:44:07 taca Exp $
 
 DISTNAME=	nvi-1.79
-PKGNAME=	nvi-m17n-1.79.19991117
-PKGREVISION=	3
+PKGNAME=	nvi-m17n-1.79.20040401
+#PKGREVISION=
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
 
-PATCH_SITES=	ftp://lkbreth.foretune.co.jp/pub/tools/nvi-m17n/
-PATCHFILES=	nvi-1.79.m17n-19991117.diff.gz
+PATCH_SITES=	ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
+PATCHFILES=	nvi-1.79.m17n-20040401.diff.gz
 
 MAINTAINER=	itojun@itojun.org
 COMMENT=	Clone of vi/ex, with multilingual patch
@@ -16,7 +16,7 @@ CONFLICTS=	vigor-[0-9]* nvi-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	YES
-PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -E -p1 -f
+PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -E -f
 CONFIGURE_ENV=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
 CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
 
@@ -79,9 +79,9 @@ post-install:
 .for encoding in ${ENCODING}
 	@${INSTALL_SCRIPT} ${WRKDIR}/nvi-${encoding} ${PREFIX}/bin
 .endfor
-	@${CP} ${WRKSRC}/../docs.m17n/README.english \
+	@${CP} ${WRKSRC}/../README.english \
 		${PREFIX}/share/vi/
-	@${CP} ${WRKSRC}/../docs.m17n/README.japanese \
+	@${CP} ${WRKSRC}/../README.japanese \
 		${PREFIX}/share/vi/
 
 .include "../../mk/bsd.pkg.mk"
