@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/07/02 12:12:33 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/08/08 10:33:25 adrianp Exp $
 share/doc/msf
 share/msf/docs/7f8d5320.0
 share/msf/docs/BUGS
@@ -945,10 +945,10 @@ share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
 @dirrm share/msf/encoders
 @dirrm share/msf/exploits
 @dirrm share/msf/extras
-@dirrm share/msf/lib/Msf/Socket       
-@dirrm share/msf/lib/Pex/Nasm         
-@dirrm share/msf/lib/Pex/Poly/BlockMaster  
-@dirrm share/msf/lib/Pex/Poly         
+@dirrm share/msf/lib/Msf/Socket
+@dirrm share/msf/lib/Pex/Nasm
+@dirrm share/msf/lib/Pex/Poly/BlockMaster
+@dirrm share/msf/lib/Pex/Poly
 @dirrm share/msf/lib/Pex/Socket
 @dirrm share/msf/lib/Pex/Meterpreter/Extension/Client
 @dirrm share/msf/lib/Pex/Meterpreter/Extension
@@ -971,14 +971,14 @@ share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
 @dirrm share/msf/lib/Msf
 @dirrm share/msf/lib/Pex
 @dirrm share/msf/lib/Digest/Perl
-@dirrm share/msf/lib/Digest           
-@dirrm share/msf/lib/NetPacket        
-@dirrm share/msf/lib                  
-@dirrm share/msf/nops                 
-@dirrm share/msf/payloads/external    
-@dirrm share/msf/payloads             
-@dirrm share/msf/tools                
-@dirrm share/msf/sdk/docs             
+@dirrm share/msf/lib/Digest
+@dirrm share/msf/lib/NetPacket
+@dirrm share/msf/lib
+@dirrm share/msf/nops
+@dirrm share/msf/payloads/external
+@dirrm share/msf/payloads
+@dirrm share/msf/tools
+@dirrm share/msf/sdk/docs
 @dirrm share/msf/sdk
 @dirrm share/msf/data/msfweb/cache
 @dirrm share/msf/data/msfweb/default
@@ -991,6 +991,6 @@ share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
 @dirrm share/msf/data/msfweb/themes
 @dirrm share/msf/data/msfweb
 @dirrm share/msf/data/meterpreter
-@dirrm share/msf/data                 
+@dirrm share/msf/data
 @dirrm share/msf/docs
 @dirrm share/msf
