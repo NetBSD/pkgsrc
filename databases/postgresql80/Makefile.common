@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/08/05 19:43:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/08/08 22:20:34 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -13,7 +13,7 @@
 
 DISTNAME?=	postgresql-${DIST_VERS}
 CATEGORIES+=	databases
-MASTER_SITES?=  ${POSTGRESQL_MIRRORS:=source/v${DIST_VERS}/}
+MASTER_SITES?=  ${PGSQL_MIRRORS:=source/v${DIST_VERS}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER?=	jlam@NetBSD.org
