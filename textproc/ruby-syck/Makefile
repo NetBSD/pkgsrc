@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/02 22:40:19 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/08 14:25:51 taca Exp $
 
 DISTNAME=	syck-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -9,11 +9,9 @@ MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.whytheluckystiff.net/syck/
 COMMENT=	Fast YAML reader/writer for Ruby
 
-.include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} == "16"
-DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.4.3:../../devel/ruby-racc
-.endif
+DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.4.3:../../devel/ruby16-racc
 
+RUBY_VERSION=		${RUBY16_VERSION}
 USE_RUBY_SETUP=		yes
 RUBY_DIST_SUBDIR=	# make it empty
 RUBY_HAS_ARCHLIB=	yes
