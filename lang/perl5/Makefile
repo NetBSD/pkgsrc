@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2005/08/07 21:47:24 jlam Exp $
+# $NetBSD: Makefile,v 1.99 2005/08/08 16:39:58 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -56,14 +56,25 @@ PERL5_API_VERS=		${PERL5_API_VERS_cmd:sh}
 .endif
 
 PERL5_PREFIX=		${PREFIX}
-PERL5_VENDORPREFIX=	${PERL5_PERLBASE}/vendor_perl
-PERL5_SITEPREFIX?=	${PERL5_PERLBASE}/site_perl
+PERL5_VENDORPREFIX=	${PERL5_PREFIX}
+PERL5_SITEPREFIX?=	${PERL5_PREFIX}
 BUILD_DEFS+=		PERL5_SITEPREFIX
 
 PERL5=			${PERL5_PREFIX}/bin/perl
 PERL5_PERLBASE=		${PERL5_PREFIX}/lib/perl5
-PERL5_VENDORBASE=	${PERL5_VENDORPREFIX}
+PERL5_VENDORBASE=	${PERL5_VENDORPREFIX}/lib/perl5/vendor_perl
+#
+# The unusual check for empty(PERL5_SITEPREFIX) is because ${PREFIX} isn't
+# defined until bsd.pkg.mk is included, so when we inspect its value at
+# this point, it's empty.
+#
+.if empty(PERL5_SITEPREFIX) || \
+    !empty(PERL5_SITEPREFIX:M${LOCALBASE}) || \
+    !empty(PERL5_SITEPREFIX:M${LOCALBASE}/*)
+PERL5_SITEBASE=		${PERL5_SITEPREFIX}/lib/perl5/site_perl
+.else
 PERL5_SITEBASE=		${PERL5_SITEPREFIX}
+.endif
 
 PERL5_PRIVLIB=		${PERL5_PERLBASE}/${PERL5_API_VERS}
 PERL5_VENDORLIB=	${PERL5_VENDORBASE}/${PERL5_API_VERS}
