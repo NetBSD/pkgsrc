@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10818 2005/08/08 00:12:18 dillo Exp $
+$NetBSD: CHANGES,v 1.10819 2005/08/08 01:53:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -540,3 +540,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed emulators/winelib [recht 2005-08-07]
 	Updated databases/postgresql73 to 7.3.10 [adrianp 2005-08-07]
 	Added games/REminiscence version 0.1.6 [dillo 2005-08-08]
+	Updated mail/clamsmtp to 1.5 [xtraeme 2005-08-08]
