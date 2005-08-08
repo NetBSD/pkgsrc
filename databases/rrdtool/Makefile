@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2005/08/06 06:19:07 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2005/08/08 18:13:13 jlam Exp $
 #
 
 DISTNAME=	rrdtool-1.2.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/pub/
 
@@ -19,7 +19,8 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 
-CONFIGURE_ARGS= --enable-shared --enable-perl-site-install
+CONFIGURE_ARGS=		--enable-shared
+CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
 
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST+= 	auto/RRDp/.packlist
