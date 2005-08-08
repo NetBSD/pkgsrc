@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10825 2005/08/08 10:33:25 adam Exp $
+$NetBSD: CHANGES,v 1.10826 2005/08/08 10:43:22 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -547,3 +547,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/ImageMagick to 6.2.3.6 [adam 2005-08-08]
 	Updated devel/libextractor to 0.5.2 [adam 2005-08-08]
 	Updated devel/Gorm to 0.11.0 [adam 2005-08-08]
+	Added databases/nss_ldap version 239 [drochner 2005-08-08]
+	Updated databases/py-bsddb3 to 4.3.3 [drochner 2005-08-08]
+	Updated net/tcpdump to 3.9.3 [drochner 2005-08-08]
+	Updated net/libpcap to 0.9.3 [drochner 2005-08-08]
