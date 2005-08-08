@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10824 2005/08/08 09:46:20 adam Exp $
+$NetBSD: CHANGES,v 1.10825 2005/08/08 10:33:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -546,3 +546,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/libcomprex to 0.3.3 [adam 2005-08-08]
 	Updated graphics/ImageMagick to 6.2.3.6 [adam 2005-08-08]
 	Updated devel/libextractor to 0.5.2 [adam 2005-08-08]
+	Updated devel/Gorm to 0.11.0 [adam 2005-08-08]
