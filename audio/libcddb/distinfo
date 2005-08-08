@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/05/18 15:31:11 drochner Exp $
+$NetBSD: distinfo,v 1.9 2005/08/08 08:41:44 adam Exp $
 
-SHA1 (libcddb-1.0.2.tar.gz) = b2949f6de65ea50f4895ab5460419ba3027b98de
-RMD160 (libcddb-1.0.2.tar.gz) = 57b4696ba08c1030c0ee531ff6c38f695ba3715d
-Size (libcddb-1.0.2.tar.gz) = 411642 bytes
+SHA1 (libcddb-1.2.1.tar.bz2) = 35e510af0bee12bd8aefe2c483978668728d6cd6
+RMD160 (libcddb-1.2.1.tar.bz2) = b54cdc202b5723956f404a09c99d026636d3103e
+Size (libcddb-1.2.1.tar.bz2) = 334524 bytes
