@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.mirrors,v 1.1 2005/08/05 19:43:45 jlam Exp $
+# $NetBSD: Makefile.mirrors,v 1.2 2005/08/08 22:20:34 jlam Exp $
 #
 # This Makefile fragment contains the mirror sites for fetching PostgreSQL.
 #
 # To fetch from the nearest mirror, you may need to set
-# POSTGRESQL_MIRRORS_SORT appropriately, e.g.:
+# PGSQL_MIRRORS_SORT appropriately, e.g.:
 #
-#   POSTGRESQL_MIRRORS_SORT=	.at .de
+#   PGSQL_MIRRORS_SORT=	.at .de
 #
 
 ###
 ### This list was last updated on 20050801.
 ###
-POSTGRESQL_MIRRORS=	\
+PGSQL_MIRRORS=	\
 	ftp://ftp.au.postgresql.org/pub/postgresql/ \
 	ftp://ftp2.au.postgresql.org/pub/postgresql/ \
 	ftp://ftp.at.postgresql.org/db/www.postgresql.org/pub/ \
@@ -93,9 +93,9 @@ POSTGRESQL_MIRRORS=	\
 # Default to fetching from a .us mirror for the sake of the main NetBSD
 # ftp server.
 #
-POSTGRESQL_MIRRORS_SORT?=	.us
+PGSQL_MIRRORS_SORT?=	.us
 
 # Craft a MASTER_SORT_REGEX that understands the location of the country
 # code in the FTP server name for the PostgreSQL mirror sites.
 #
-MASTER_SORT_REGEX+=	${POSTGRESQL_MIRRORS_SORT:S/./\\./g:C/.*/:\/\/[^[\/]*&\/ :\/\/[^\/]*&\\./}
+MASTER_SORT_REGEX+=	${PGSQL_MIRRORS_SORT:S/./\\./g:C/.*/:\/\/[^[\/]*&\/ :\/\/[^\/]*&\\./}
