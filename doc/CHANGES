@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10821 2005/08/08 08:42:19 adam Exp $
+$NetBSD: CHANGES,v 1.10822 2005/08/08 09:01:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/clamsmtp to 1.5 [xtraeme 2005-08-08]
 	Updated net/libtorrent to 0.7.0.1 [adam 2005-08-08]
 	Updated audio/libcddb to 1.2.1 [adam 2005-08-08]
+	Updated archivers/libcomprex to 0.3.3 [adam 2005-08-08]

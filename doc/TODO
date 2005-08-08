@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3799 2005/08/08 08:42:19 adam Exp $
+$NetBSD: TODO,v 1.3800 2005/08/08 09:01:07 adam Exp $
 
 Suggested new packages
 ======================
@@ -600,7 +600,6 @@ Suggested package updates
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafpad-0.7.9
-	o libcomprex-0.3.3
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
 	o libextractor-0.5.2
