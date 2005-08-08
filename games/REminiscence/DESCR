@@ -1,0 +1,3 @@
+REminiscence is a rewrite of the engine used in the game Flashback
+from Delphine Software. This program is designed as a cross-platform
+replacement for the original executable and uses the SDL library.
