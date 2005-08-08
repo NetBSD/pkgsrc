@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2005/07/15 18:27:54 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/08 18:12:46 tron Exp $
 
-DISTNAME=	xservers-3.3.6.3
+DISTNAME=	xservers-3.3.6.4
 CATEGORIES=	x11
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
@@ -23,8 +23,6 @@ PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
 .  endif
 .endif
 
-USE_TOOLS+=	gtar
-
 X11_SUBDIR=	X11R6.3
 X11_SRCS=	Imakefile Makefile config fonts include lib nls \
 		programs/Imakefile programs/Xserver programs/bdftopcf \
@@ -32,29 +30,12 @@ X11_SRCS=	Imakefile Makefile config fonts include lib nls \
 
 MESSAGE_SUBST+=	X11_SUBDIR=${X11_SUBDIR}
 
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/x11.buildlink3.mk"
-
-do-fetch:
-.if defined(BSDXSRCDIR)
-.if !exists(${BSDXSRCDIR}/xc/config/cf/NetBSD.cf)
-	@${ECHO_MSG} "Cannot find NetBSD 2.0 (or older) X11 sources in ${BSDXSRCDIR}."
-	@${FALSE}
-.endif
-.else
-	@${ECHO_MSG} "Please set BSDXSRCDIR in /etc/mk.conf, pointing it to a"
-	@${ECHO_MSG} "directory that contains NetBSD 2.0 (or older) X11 sources."
-	@${FALSE}
-.endif
-
-do-extract:
-	${MKDIR} ${WRKSRC}
-	${GTAR} --exclude '*/CVS' -c -C ${BSDXSRCDIR}/xc -f - ${X11_SRCS} | \
-	${GTAR} xCf ${WRKSRC} -
+BUILDLINK_PASSTHRU_RPATHDIRS+= 	${PREFIX}/X11R6.3/lib
 
 do-configure:
 	${SED} -e 's#@PROJECTROOT@#${PREFIX}/${X11_SUBDIR}#' \
 	  ${FILESDIR}/host.def >${WRKSRC}/config/cf/host.def
+	${ECHO} "#define NetBSDThreads NO" >>${WRKSRC}/config/cf/host.def
 
 post-install:
 	cd ${PREFIX} && \
@@ -62,6 +43,7 @@ post-install:
 	${FIND} ${X11_SUBDIR} -type d -print | ${SORT} -r | \
 	${AWK} '{print("@dirrm "$$1)}' >>${PLIST_SRC}
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 print-x11-release:
