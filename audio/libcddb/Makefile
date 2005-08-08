@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/08/08 08:41:44 adam Exp $
 
-DISTNAME=	libcddb-1.0.2
+DISTNAME=	libcddb-1.2.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcddb/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://libcddb.sourceforge.net/
