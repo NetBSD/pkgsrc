@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/08/08 09:47:42 drochner Exp $
+
+--- Makefile.in.orig	2005-05-24 02:53:19.000000000 +0200
++++ Makefile.in
+@@ -75,14 +75,14 @@ nss_ldap_so_LD = @nss_ldap_so_LD@
+ noinst_PROGRAMS = nss_ldap.so $(authmod)
+ INST_UID = root
+ @AIX_TRUE@INST_GID = system
+-@AIX_FALSE@INST_GID = root
++@AIX_FALSE@INST_GID = wheel
+ 
+ EXTRA_DIST = CVSVersionInfo.txt ChangeLog 	     AUTHORS ANNOUNCE NEWS INSTALL README LICENSE.OpenLDAP COPYING 	     ldap.conf nss_ldap.spec nsswitch.ldap 
+ 
+ 
+ man_MANS = nss_ldap.5
+ 
+-nss_ldap_so_SOURCES = ldap-nss.c ldap-pwd.c ldap-grp.c ldap-netgrp.c ldap-rpc.c 	ldap-hosts.c ldap-network.c ldap-proto.c ldap-spwd.c 	ldap-alias.c ldap-service.c ldap-schema.c ldap-ethers.c 	ldap-bp.c util.c ltf.c snprintf.c resolve.c 	dnsconfig.c irs-nss.c pagectrl.c
++nss_ldap_so_SOURCES = ldap-nss.c ldap-pwd.c ldap-grp.c ldap-netgrp.c ldap-rpc.c 	ldap-hosts.c ldap-network.c ldap-proto.c ldap-spwd.c 	ldap-alias.c ldap-service.c ldap-schema.c ldap-ethers.c 	ldap-bp.c util.c ltf.c snprintf.c resolve.c 	dnsconfig.c irs-nss.c pagectrl.c netbsd.c
+ 
+ 
+ nss_ldap_so_LDFLAGS = @nss_ldap_so_LDFLAGS@
+@@ -121,7 +121,7 @@ LIBS = @LIBS@
+ nss_ldap_so_OBJECTS =  ldap-nss.o ldap-pwd.o ldap-grp.o ldap-netgrp.o \
+ ldap-rpc.o ldap-hosts.o ldap-network.o ldap-proto.o ldap-spwd.o \
+ ldap-alias.o ldap-service.o ldap-schema.o ldap-ethers.o ldap-bp.o \
+-util.o ltf.o snprintf.o resolve.o dnsconfig.o irs-nss.o pagectrl.o
++util.o ltf.o snprintf.o resolve.o dnsconfig.o irs-nss.o pagectrl.o netbsd.o
+ nss_ldap_so_LDADD = $(LDADD)
+ nss_ldap_so_DEPENDENCIES = 
+ NSS_LDAP_OBJECTS =  ldap-nss.o ldap-grp.o ldap-pwd.o ldap-netgrp.o \
