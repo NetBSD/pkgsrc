@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10828 2005/08/08 14:45:27 taca Exp $
+$NetBSD: CHANGES,v 1.10829 2005/08/08 18:13:28 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -553,3 +553,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/libpcap to 0.9.3 [drochner 2005-08-08]
 	Updated mail/dspam to 3.4.9 [xtraeme 2005-08-08]
 	Updated editors/nvi-m17n to 1.79.20040401 [taca 2005-08-08]
+	Updated x11/xservers to 3.3.6.4 [tron 2005-08-08]
