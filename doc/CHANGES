@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10826 2005/08/08 10:43:22 drochner Exp $
+$NetBSD: CHANGES,v 1.10827 2005/08/08 11:12:17 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -551,3 +551,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/py-bsddb3 to 4.3.3 [drochner 2005-08-08]
 	Updated net/tcpdump to 3.9.3 [drochner 2005-08-08]
 	Updated net/libpcap to 0.9.3 [drochner 2005-08-08]
+	Updated mail/dspam to 3.4.9 [xtraeme 2005-08-08]
