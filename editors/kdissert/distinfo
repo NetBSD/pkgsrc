@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/09 18:37:41 drochner Exp $
+
+SHA1 (kdissert-1.0.3.tar.bz2) = e1a7da16e8dacc1e76148cfe247599586b08f561
+RMD160 (kdissert-1.0.3.tar.bz2) = 82fc3b21965cc7fd8201bc8d341fca86f7485c5d
+Size (kdissert-1.0.3.tar.bz2) = 478259 bytes
+SHA1 (patch-aa) = 22dd0fe75a4c63901e3241f91c0a2b7f505b08c2
