@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2005/07/27 17:04:01 drochner Exp $
+# $NetBSD: Makefile,v 1.130 2005/08/09 18:35:16 drochner Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -115,6 +115,7 @@ SUBDIR+=	tex-musixtex
 SUBDIR+=	tex-ocrb
 SUBDIR+=	tex-prosper
 SUBDIR+=	tex-textpos
+SUBDIR+=	tex-ucs
 SUBDIR+=	texfamily
 SUBDIR+=	texfamily-share
 SUBDIR+=	transfig
