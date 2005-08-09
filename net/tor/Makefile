@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2005/06/22 15:53:24 salo Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2005/08/09 16:18:32 snj Exp $
 #
 
-DISTNAME=		tor-0.0.9.10
+DISTNAME=		tor-0.1.0.14
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
 MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://tor.eff.org/
 COMMENT=		Anonymizing overlay network for TCP
-
-DEPENDS+=		tsocks>=1.7:../../net/tsocks
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -63,8 +61,13 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
 	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/tor.pkgsrc.rc ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/tor
+	${INSTALL_SCRIPT} ${WRKSRC}/tor.pkgsrc.rc ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/tor
 
+BUILDLINK_DEPENDS.libevent+= libevent>=1.1a
+# XXX the pkgsrc libevent builtin.mk does not detect the version of a builtin
+# libevent, so we need to force use of the pkgsrc one
+USE_BUILTIN.libevent=	no
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
