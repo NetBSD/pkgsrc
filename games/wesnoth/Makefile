@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2005/07/28 11:26:59 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.15 2005/08/09 16:26:52 adam Exp $
 
-DISTNAME=	wesnoth-0.9.4
+DISTNAME=	wesnoth-0.9.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 
@@ -9,10 +8,10 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.wesnoth.org/
 COMMENT=	Fantasy turn-based strategy game
 
-HAS_CONFIGURE=	YES
-UNLIMIT_RESOURCES+=	datasize
-
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+
+UNLIMIT_RESOURCES+=	datasize
 
 BUILDLINK_DEPENDS.SDL=	SDL>=1.2.7
 BUILDLINK_DEPENDS.SDL_mixer=	SDL_mixer>=1.2.5nb3
