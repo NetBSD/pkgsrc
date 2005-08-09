@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/09 18:37:41 drochner Exp $
+
+--- SConstruct.orig	2005-08-09 10:43:04.000000000 +0200
++++ SConstruct
+@@ -16,8 +16,9 @@ The variables are saved automatically af
+ # LOAD THE ENVIRONMENT AND SET UP THE TOOLS
+ ###################################################################
+ 
++import os
+ ## Load the builders in config
+-env = Environment(tools=['default', 'generic', 'kde', 'parser'], toolpath=['./', './bksys'])
++env = Environment(tools=['default', 'generic', 'kde', 'parser'], toolpath=['./', './bksys'], ENV={'PATH':os.environ['PATH']})
+ env.KDEuse("environ rpath")
+ 
+ ###################################################################
