@@ -1,0 +1,27 @@
+# $NetBSD: Makefile,v 1.1.1.1 2005/08/09 18:37:41 drochner Exp $
+#
+
+DISTNAME=		kdissert-1.0.3
+CATEGORIES=		editors
+MASTER_SITES=		http://freehackers.org/~tnagy/kdissert/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://freehackers.org/~tnagy/kdissert/
+COMMENT=		Mindmapping-like tool to generate text templates
+
+USE_PKGLOCALEDIR=	yes
+NO_CONFIGURE=		yes
+
+BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
+
+do-build:
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
+		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
+
+do-install:
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
+		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install
+
+.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
