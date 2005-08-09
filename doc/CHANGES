@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10832 2005/08/09 12:57:04 adam Exp $
+$NetBSD: CHANGES,v 1.10833 2005/08/09 15:53:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -557,3 +557,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/apache2 to 2.0.54nb2 [tron 2005-08-08]
 	Updated misc/libcdio to 0.75 [adam 2005-08-09]
 	Updated mail/mhonarc to 2.6.11nb1 [tron 2005-08-09]
+	Updated www/squid to 2.5.10nb1 [taca 2005-08-09]
