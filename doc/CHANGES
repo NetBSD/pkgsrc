@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10837 2005/08/09 22:30:34 tron Exp $
+$NetBSD: CHANGES,v 1.10838 2005/08/09 22:47:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -563,3 +563,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/monotone-server to 0.22 [jmmv 2005-08-09]
 	Updated devel/glib2 to 2.6.6nb1 [jmmv 2005-08-09]
 	Updated net/ra-rtsp-proxy to 1.0.0.0nb2 [tron 2005-08-09]
+	Updated benchmarks/netio to 1.23 [tron 2005-08-09]
