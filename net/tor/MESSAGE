@@ -1,8 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/02/13 20:27:53 jschauma Exp $
+$NetBSD: MESSAGE,v 1.1.4.1 2005/08/09 16:18:32 snj Exp $
 
 You probably want to install www/privoxy to torify your browsers.  Please
 see http://tor.eff.org/cvs/tor/doc/tor-doc.html for details.
+
+Other applications can be torified with the help of libtsocks (net/tsocks).
+A tsocks configuration file for this is installed as
+${PREFIX}/share/examples/tor/tor-tsocks.conf.
 
 If you wish to chroot tor, you may find the following URLs helpful:
   http://pestilenz.org/~bauerm/tor-openbsd-howto.html
