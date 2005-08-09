@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/19 18:07:59 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/09 17:31:06 drochner Exp $
 
 DISTNAME=	dropbear-0.46
 CATEGORIES=	security
@@ -11,6 +11,14 @@ COMMENT=	SSH2 server, aimed at embedded market
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.dropbear
+PKG_SUPPORTED_OPTIONS=	pam
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpam)
+CONFIGURE_ARGS+=	--enable-pam
+.endif
 
 MAKEFLAGS+=	ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
 
