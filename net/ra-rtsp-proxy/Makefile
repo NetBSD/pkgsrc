@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/06/17 03:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/09 22:30:13 tron Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.scn.rain.com/pub/security/firewalls/
 
@@ -17,6 +17,9 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+USE_PKGINSTALL=		yes
+RCD_SCRIPTS=		rtspd
+
 WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 
 .include "../../mk/bsd.prefs.mk"
@@ -27,11 +30,7 @@ MAKE_ENV+=	LOCAL_LIBS="-lsocket -lnsl"
 
 INSTALLATION_DIRS=	etc/rc.d man/man8 sbin
 
-post-build:
-	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/rtspd.sh >${WRKDIR}/rtspd.sh
-
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/rtspd.sh ${PREFIX}/etc/rc.d/rtspd
 	${INSTALL_MAN} ${WRKSRC}/rtspd.8 ${PREFIX}/man/man8
 	${INSTALL_PROGRAM} ${WRKSRC}/rtspd ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ra-rtsp-proxy
