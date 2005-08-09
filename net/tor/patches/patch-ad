@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/08/09 16:18:32 snj Exp $
+
+--- src/config/Makefile.in.orig	2005-07-21 23:08:06.000000000 +0200
++++ src/config/Makefile.in
+@@ -75,7 +75,7 @@ confdir = $(sysconfdir)/tor
+ 
+ EXTRA_DIST = 
+ 
+-conf_DATA = torrc.sample
++#conf_DATA = torrc.sample
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../orconfig.h
+ CONFIG_CLEAN_FILES =  torrc.sample
