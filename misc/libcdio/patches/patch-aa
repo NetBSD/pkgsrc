@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/05/02 17:11:18 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2005/08/09 12:56:18 adam Exp $
 
---- lib/driver/logging.c.orig	2004-04-18 17:24:27.000000000 +0000
-+++ lib/driver/logging.c	2004-04-18 17:25:33.000000000 +0000
-@@ -44,7 +44,9 @@
+--- lib/driver/logging.c.orig	2004-12-18 17:29:32.000000000 +0000
++++ lib/driver/logging.c
+@@ -45,7 +45,9 @@ default_cdio_log_handler (cdio_log_level
          fprintf (stderr, "**ERROR: %s\n", message);
          fflush (stderr);
        }
