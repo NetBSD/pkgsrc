@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/06/18 14:33:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/09 22:02:30 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.19
-PKGREVISION=	1
+DISTNAME=	monotone-0.22
 CATEGORIES=	devel
 MASTER_SITES=	http://www.venge.net/monotone/downloads/
 
@@ -18,8 +17,6 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_MAKEINFO=		yes
 
-CONFIGURE_ARGS+=	--with-bundled-lua=no
-CONFIGURE_ARGS+=	--with-bundled-sqlite=no
 CONFIGURE_ARGS+=	BOOST_SUFFIX=-mt
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.monotone
@@ -35,10 +32,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
