@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/06/21 20:13:32 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/08/09 08:06:59 tron Exp $
 bin/mha-dbedit
 bin/mha-dbrecover
 bin/mha-decode
@@ -159,10 +159,10 @@ lib/mhonarc/mhutil.pl
 lib/mhonarc/osinit.pl
 lib/mhonarc/qprint.pl
 lib/mhonarc/readmail.pl
-man/man1/mha-dbedit.1
-man/man1/mha-dbrecover.1
-man/man1/mha-decode.1
-man/man1/mhonarc.1
+lib/perl5/man/man1/mha-dbedit.1
+lib/perl5/man/man1/mha-dbrecover.1
+lib/perl5/man/man1/mha-decode.1
+lib/perl5/man/man1/mhonarc.1
 share/doc/mhonarc/app-api.html
 share/doc/mhonarc/app-bugs.html
 share/doc/mhonarc/app-diagnos.html
