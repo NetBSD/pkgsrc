@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2005/07/28 11:26:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/08/09 16:26:52 adam Exp $
 bin/wesnoth
 bin/wmlxgettext
 man/de/man6/wesnoth.6
 man/man6/wesnoth.6
 man/sv/man6/wesnoth.6
+share/wesnoth/data/COPYING.txt
+share/wesnoth/data/amla.cfg
 share/wesnoth/data/campaigns/Eastern_Invasion.cfg
 share/wesnoth/data/campaigns/Heir_To_The_Throne.cfg
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye.cfg
@@ -119,8 +121,10 @@ share/wesnoth/data/maps/multiplayer/2p_Sullas_Ruins
 share/wesnoth/data/maps/multiplayer/3p_1v1v1Hex
 share/wesnoth/data/maps/multiplayer/3p_Morituri
 share/wesnoth/data/maps/multiplayer/3p_Triple_Blitz
+share/wesnoth/data/maps/multiplayer/4p_Bluewater_Province
 share/wesnoth/data/maps/multiplayer/4p_Lagoon
 share/wesnoth/data/maps/multiplayer/4p_The_Wilderlands
+share/wesnoth/data/maps/multiplayer/6p_Smallolof
 share/wesnoth/data/maps/multiplayer/An_Island
 share/wesnoth/data/maps/multiplayer/BattleWorld
 share/wesnoth/data/maps/multiplayer/Blitz
@@ -130,7 +134,6 @@ share/wesnoth/data/maps/multiplayer/Charge
 share/wesnoth/data/maps/multiplayer/Clash
 share/wesnoth/data/maps/multiplayer/ForestofFear
 share/wesnoth/data/maps/multiplayer/Hexcake
-share/wesnoth/data/maps/multiplayer/Icy_Waters
 share/wesnoth/data/maps/multiplayer/King_of_the_Hill
 share/wesnoth/data/maps/multiplayer/Wesbowl
 share/wesnoth/data/multiplayer.cfg
@@ -252,7 +255,6 @@ share/wesnoth/data/scenarios/multiplayer/2p_Den_of_Onis.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Divide_and_Conquer.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Hamlets.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Hornshark_Island.cfg
-share/wesnoth/data/scenarios/multiplayer/2p_IcyWaters.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Meteor_Lake.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Sablestone_Delta.cfg
 share/wesnoth/data/scenarios/multiplayer/2p_Silverhead_Crossing.cfg
@@ -262,6 +264,7 @@ share/wesnoth/data/scenarios/multiplayer/3p_1v1v1Hex.cfg
 share/wesnoth/data/scenarios/multiplayer/3p_Morituri.cfg
 share/wesnoth/data/scenarios/multiplayer/3p_Triple_Blitz.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_An_Island.cfg
+share/wesnoth/data/scenarios/multiplayer/4p_Bluewater_Province.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_CastleHoppingIsle.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_Clash.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_King_of_the_Hill.cfg
@@ -271,6 +274,7 @@ share/wesnoth/data/scenarios/multiplayer/4p_The_Valley_of_Death.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_The_Wilderlands.cfg
 share/wesnoth/data/scenarios/multiplayer/5p_ForestOfFear.cfg
 share/wesnoth/data/scenarios/multiplayer/6p_Hexcake.cfg
+share/wesnoth/data/scenarios/multiplayer/6p_Smallolof.cfg
 share/wesnoth/data/scenarios/multiplayer/7p_battleworld.cfg
 share/wesnoth/data/scenarios/multiplayer/Random_Scenario.cfg
 share/wesnoth/data/scenarios/multiplayer/Random_Scenario_Desert.cfg
@@ -439,6 +443,7 @@ share/wesnoth/data/units/Lord.cfg
 share/wesnoth/data/units/Mage.cfg
 share/wesnoth/data/units/Mage_of_Light.cfg
 share/wesnoth/data/units/Master_Bowman.cfg
+share/wesnoth/data/units/Master_at_Arms.cfg
 share/wesnoth/data/units/Mermaid_Diviner.cfg
 share/wesnoth/data/units/Mermaid_Enchantress.cfg
 share/wesnoth/data/units/Mermaid_Initiate.cfg
@@ -543,9 +548,8 @@ share/wesnoth/data/units/Yeti.cfg
 share/wesnoth/data/units/Young_Ogre.cfg
 share/wesnoth/data/units/Youth.cfg
 share/wesnoth/data/utils.cfg
-share/wesnoth/fonts/Bepa-Roman.ttf
+share/wesnoth/fonts/DejaVuSans.ttf
 share/wesnoth/fonts/FreeSans.ttf
-share/wesnoth/fonts/Vera.ttf
 share/wesnoth/images/arch-mage+female-defend.png
 share/wesnoth/images/arch-mage+female-die-1.png
 share/wesnoth/images/arch-mage+female-die-2.png
@@ -1362,7 +1366,18 @@ share/wesnoth/images/halo/white-mage-halo2.png
 share/wesnoth/images/halo/white-mage-halo3.png
 share/wesnoth/images/halo/white-mage-halo4.png
 share/wesnoth/images/help/closed_section.png
+share/wesnoth/images/help/hp-green.png
+share/wesnoth/images/help/hp-red.png
+share/wesnoth/images/help/hp-yellow.png
+share/wesnoth/images/help/hpxp.png
+share/wesnoth/images/help/moving1.png
+share/wesnoth/images/help/moving2.png
 share/wesnoth/images/help/open_section.png
+share/wesnoth/images/help/orb-blue.png
+share/wesnoth/images/help/orb-green.png
+share/wesnoth/images/help/orb-none.png
+share/wesnoth/images/help/orb-red.png
+share/wesnoth/images/help/orb-yellow.png
 share/wesnoth/images/help/recruit.png
 share/wesnoth/images/help/tooltip.png
 share/wesnoth/images/help/topic.png
@@ -1454,11 +1469,13 @@ share/wesnoth/images/human-marshal-defend.png
 share/wesnoth/images/human-marshal-defense.png
 share/wesnoth/images/human-marshal-leading.png
 share/wesnoth/images/human-marshal.png
+share/wesnoth/images/human-master-at-arms.png
 share/wesnoth/images/human-masterbowman-attack-ranged1.png
 share/wesnoth/images/human-masterbowman-attack-ranged2.png
 share/wesnoth/images/human-masterbowman-attack-ranged3.png
 share/wesnoth/images/human-masterbowman-attack-ranged4.png
 share/wesnoth/images/human-masterbowman-defend.png
+share/wesnoth/images/human-masterbowman-melee.png
 share/wesnoth/images/human-masterbowman.png
 share/wesnoth/images/human-pikeman-attack-n.png
 share/wesnoth/images/human-pikeman-attack-ne.png
@@ -2051,9 +2068,11 @@ share/wesnoth/images/portraits/Heir_To_The_Throne/delfador.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/kalenz.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/konrad.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/lisar.png
+share/wesnoth/images/portraits/The_Dark_Hordes/gwiti-demilich.png
 share/wesnoth/images/portraits/The_Dark_Hordes/gwiti.png
 share/wesnoth/images/portraits/The_Dark_Hordes/gwiti_lich.png
 share/wesnoth/images/portraits/The_Dark_Hordes/nati.png
+share/wesnoth/images/portraits/The_Dark_Hordes/tanar.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/addroran.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/aethyr.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/archmage.png
@@ -2077,6 +2096,7 @@ share/wesnoth/images/portraits/core/James_Woo/orc-warlord.png
 share/wesnoth/images/portraits/core/James_Woo/orc-warlord2.png
 share/wesnoth/images/portraits/core/James_Woo/orc-warlord3.png
 share/wesnoth/images/portraits/core/James_Woo/orc-warlord4.png
+share/wesnoth/images/portraits/core/James_Woo/orc-warlord5.png
 share/wesnoth/images/portraits/core/Jason_Lutes/human-bandit.png
 share/wesnoth/images/portraits/core/Jason_Lutes/human-grand-knight.png
 share/wesnoth/images/portraits/core/Jason_Lutes/human-halberdier.png
