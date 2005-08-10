@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2005/08/10 16:50:18 he Exp $
+# $NetBSD: Makefile,v 1.60 2005/08/10 18:36:01 gdt Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	10
@@ -17,6 +17,12 @@ HOMEPAGE=	http://www.trilon.com/xv/
 COMMENT=	X11 program that displays images of various formats
 
 USE_IMAKE=	YES
+
+# See the end of README in work/xv-3.10a for details.
+RESTRICTED=	"Distribution of modified copies and commercial distribution is not permitted."
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 LICENSE=	xv-license
 
