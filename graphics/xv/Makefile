@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.58 2005/07/19 13:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2005/08/10 16:50:18 he Exp $
 
 DISTNAME=	xv-3.10a
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=     graphics x11
-MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/ \
-		ftp://ftp.kuis.kyoto-u.ac.jp/X11/contrib/clients/xv/ \
-		ftp://ftp.tohoku.ac.jp/pub/X/app/xv/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		xv310a-magpic2-PhotoCD-patch.tar.gz # only from Japan
+MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
+#DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-PATCH_SITES=    ftp://ftp.cis.upenn.edu/pub/xv/
-PATCHFILES=     xv-3.10a.JPEG-patch xv-3.10a.TIFF-patch # (for tiff3.4)
+PATCHFILES=	xv-3.10a-jumbo-patches-20050501.tar.bz2
+PATCH_SITES=	${MASTER_SITE_SOURCEFORGE:=png-mng/}
+PATCH_DIST_CAT=		${BZCAT} $$patchfile | ${TAR} -Oxf - "*-patch-*"
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.trilon.com/xv/
+# and...	http://www.sonic.net/~roelofs/greg_xv.html
 COMMENT=	X11 program that displays images of various formats
-
 
 USE_IMAKE=	YES
 
@@ -23,10 +22,7 @@ LICENSE=	xv-license
 
 .include "../../mk/bsd.prefs.mk"
 
-pre-patch:
-	@${PATCH} ${PATCH_ARGS} -p1 < ${WRKDIR}/Patch.magpic2.PhotoCD.XV310a
-
-post-patch:
+pre-configure:
 	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.orig &&		\
 		${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g'		\
 		${WRKSRC}/config.h.orig > ${WRKSRC}/config.h
