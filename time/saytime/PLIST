@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/07 22:15:03 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/08/10 17:50:17 kristerw Exp $
 bin/saytime
 man/man1/saytime.1
-share/saytime
 share/saytime/1.ulaw
 share/saytime/10.ulaw
 share/saytime/11.ulaw
