@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/08/10 21:01:52 jlam Exp $
+
+--- server/gam_pidname.c.orig	2005-08-01 15:27:19.000000000 +0000
++++ server/gam_pidname.c
+@@ -7,9 +7,9 @@
+ 
+ char *gam_get_pidname (int pid)
+ {
++    gchar *pidname = NULL;
+ #ifdef HAVE_LINUX
+     gchar *procname;
+-    gchar *pidname = NULL;
+     FILE *fp;
+ #endif
+ 
