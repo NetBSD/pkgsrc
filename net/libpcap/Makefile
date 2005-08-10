@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2005/08/05 16:24:50 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2005/08/10 13:48:22 drochner Exp $
 
 DISTNAME=		libpcap-0.9.3
+PKGREVISION=		1
 SVR4_PKGNAME=		lpcap
 CATEGORIES=		net
 MASTER_SITES= 		http://www.tcpdump.org/release/
@@ -15,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison gm4 lex
+USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
