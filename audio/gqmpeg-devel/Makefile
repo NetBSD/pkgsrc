@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:11 jlam Exp $
 
 DISTNAME=		gqmpeg-0.91.1
 PKGREVISION=		2
@@ -14,6 +14,7 @@ DEPENDS+=		mpg123{,-esound,-nas}>=0.59.18:../../audio/mpg123
 DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 
+USE_TOOLS+=		pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_DIRS+=		xdg-1.2
 USE_PKGINSTALL=		YES
@@ -28,7 +29,6 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 .include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

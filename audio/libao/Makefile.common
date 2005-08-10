@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/08/10 20:56:11 jlam Exp $
 
 DISTNAME=	libao-0.8.6
 CATEGORIES=	audio devel
@@ -12,7 +12,7 @@ DISTINFO_FILE=	${.CURDIR}/../../audio/libao/distinfo
 PATCHDIR=	${.CURDIR}/../../audio/libao/patches
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	ao.pc.in
@@ -32,6 +32,5 @@ CONFIGURE_ARGS+=	ENABLE_SOLARIS=no
 
 MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/08/06 06:19:04 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2005/08/10 20:56:13 jlam Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		6
@@ -15,6 +15,7 @@ COMMENT=                Secure and modular IRC client with text mode user interf
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--with-terminfo \
 			--with-proxy \
@@ -30,7 +31,6 @@ CONF_FILES=	${EGDIR}/irssi.conf ${PKG_SYSCONFDIR}/irssi.conf
 .include "options.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config.h ${IRSSI_CONFIG_H}

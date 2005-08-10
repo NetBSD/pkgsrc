@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:18 jlam Exp $
 
 DISTNAME=	kipi-plugins-0.1.0-beta2
 PKGNAME=	kipi-plugins-0.1.0beta2
@@ -14,7 +14,7 @@ DEPENDS+=	dcraw-[0-9]*:../../graphics/dcraw
 DEPENDS+=	bash-[0-9]*:../../shells/bash2
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -30,7 +30,6 @@ pre-build:
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/libkexif/buildlink3.mk"

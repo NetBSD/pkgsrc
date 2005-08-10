@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/07/21 16:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2005/08/10 20:56:25 jlam Exp $
 #
 
 DISTNAME=	epiphany-1.6.4
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
@@ -59,7 +59,6 @@ BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

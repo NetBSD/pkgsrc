@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:19 jlam Exp $
 
 DISTNAME=	cln-1.1.9
 CATEGORIES=	math
@@ -11,7 +11,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.ginac.de/CLN/
 COMMENT=	CLN Class Library for Numbers
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -19,5 +19,4 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/cln.pc.in
 
 INFO_FILES=	cln.info
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

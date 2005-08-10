@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:30 jlam Exp $
 #
 
 DISTNAME=	xcompmgr-1.1.1	
@@ -9,6 +9,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/
 COMMENT=	Sample compositing manager for X.org >= 6.8.0
 
+USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -18,7 +19,6 @@ GNU_CONFIGURE=	yes
 PKG_SKIP_REASON+=	"This package is exclusively for X.org."
 .endif
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/Xcomposite/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 .include "../../x11/compositeext/buildlink3.mk"

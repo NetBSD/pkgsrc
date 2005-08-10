@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/07/21 16:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2005/08/10 20:56:16 jlam Exp $
 #
 
 DISTNAME=		gedit-2.10.3
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_LIBTOOL=		YES
 USE_MSGFMT_PLURALS=	YES
 GNU_CONFIGURE=		YES
@@ -35,7 +35,6 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

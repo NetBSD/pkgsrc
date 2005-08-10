@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/07/21 16:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/08/10 20:56:16 jlam Exp $
 #
 
 DISTNAME=		gconf-editor-2.10.0
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1 gnome2-1.5
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--with-gconf-defaults-source=${GCONF2_CONFIG_SOURCE}
 CONFIGURE_ARGS+=	--with-gconf-mandatory-source=${GCONF2_CONFIG_SOURCE:S/gconf.xml.defaults/gconf.xml.mandatory/g}
@@ -30,7 +30,6 @@ BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.10.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

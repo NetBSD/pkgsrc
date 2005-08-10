@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/07/21 16:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/10 20:56:20 jlam Exp $
 
 DISTNAME=		gnome-media-2.10.2
 CATEGORIES=		multimedia gnome
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
@@ -44,7 +44,6 @@ GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"

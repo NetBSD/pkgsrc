@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/10 19:01:24 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:17 jlam Exp $
 #
 
 DISTNAME=		ufraw-0.4
@@ -10,13 +10,12 @@ MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://ufraw.sourceforge.net/
 COMMENT=		GIMP plug-in for raw digicam import
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 BUILD_TARGET=		build
 INSTALL_TARGET=		install-admin
 
 BUILDLINK_TRANSFORM+=	rm:-std=gnu99
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

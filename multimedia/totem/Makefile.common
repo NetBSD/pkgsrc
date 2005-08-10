@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/07/21 16:29:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/08/10 20:56:21 jlam Exp $
 #
 
 DISTNAME=	totem-1.0.2
@@ -15,7 +15,7 @@ PLIST_SRC=	${.CURDIR}/../../multimedia/totem/PLIST
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -32,7 +32,6 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=		libvisual-bmp-0.2.0
@@ -13,6 +13,7 @@ COMMENT=		Libvisual Beep Media Player plugin
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
 post-extract:
 	${MV} ${WRKSRC}/pixmaps/libvisual-xmms-vis.bmp \
@@ -23,7 +24,6 @@ post-extract:
 .include "../../audio/bmp/buildlink3.mk"
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/07/21 16:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/08/10 20:56:16 jlam Exp $
 #
 
 DISTNAME=		gice-0.6.2
@@ -11,13 +11,12 @@ HOMEPAGE=		http://gice.sourceforge.net/
 COMMENT=		Powerful C text editor with advanced features
 
 WRKSRC=			${WRKDIR}/gice
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
 
 BUILD_TARGET=		gice
 INSTALLATION_DIRS=	bin
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 do-install:

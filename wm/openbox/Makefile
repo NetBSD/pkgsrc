@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/07/21 16:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/10 20:56:25 jlam Exp $
 
 DISTNAME=	openbox-3.2
 PKGREVISION=	1
@@ -14,7 +14,7 @@ DEPENDS+=		vera-ttf>=1.10:../../fonts/vera-ttf
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -32,7 +32,6 @@ CONF_FILES+=		${EGDIR}/rc.xml ${PKG_SYSCONFDIR}/openbox/rc.xml
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"

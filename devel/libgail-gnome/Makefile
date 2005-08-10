@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:15 jlam Exp $
 #
 
 DISTNAME=	libgail-gnome-1.1.1
@@ -12,6 +12,7 @@ COMMENT=	GNOME Accessibility Implementation Library
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE=	libgail-gnome.pc.in
 
@@ -20,7 +21,6 @@ PKGCONFIG_OVERRIDE=	libgail-gnome.pc.in
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

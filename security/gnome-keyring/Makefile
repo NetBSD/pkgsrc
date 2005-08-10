@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/27 17:30:14 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=	gnome-keyring-0.4.3
@@ -12,6 +12,7 @@ COMMENT=	GNOME password and secret manager
 
 BUILD_USES_MSGFMT=	YES
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -20,6 +21,5 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/gnome-keyring-1.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
