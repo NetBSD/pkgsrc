@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.4 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.5 2005/08/10 05:27:56 reed Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -259,7 +259,7 @@ linkend="dirs-outside-prefix" /> what this means.</para>
 <!-- ================================================================== -->
 
 <sect2 id="conf-files-configure">
-<title>Telling the software were configuration files are</title>
+<title>Telling the software where configuration files are</title>
 
 <para>Given that pkgsrc (and users!) expect configuration files to be in a
 known place, you need to teach each package where it shall install its
