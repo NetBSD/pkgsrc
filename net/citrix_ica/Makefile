@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/17 03:50:24 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/10 17:12:32 veego Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -59,11 +59,11 @@ PKG_FAIL_REASON= "${PKGNAME} requires SVR4 compability - see compat_svr4(8)"
 
 INSTALLATION_DIRS=	bin
 
-PATCHDIR=${WRKDIR}/.patches
-pre-patch:
-	${MKDIR} ${PATCHDIR}
-	${CP} ${PKGDIR}/patches/patch-${MACHINE_ARCH}-* ${PATCHDIR}
-	${CHMOD} -R u+w ${WRKSRC}
+do-patch:
+	@(cd ${WRKSRC}; \
+	for f in ${PATCHDIR}/patch-${MACHINE_ARCH}-*;do \
+	${PATCH} <$$f >/dev/null 2>&1 || true; \
+	done)
 
 do-build:
 	${SED} s%DESTINATION%${CDIR}% ${FILESDIR}/response.${MACHINE_ARCH} \
