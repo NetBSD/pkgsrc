@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/10 13:52:52 drochner Exp $
+
+--- python/setup.py.in.orig	2005-08-10 13:33:42.000000000 +0200
++++ python/setup.py.in
+@@ -6,7 +6,7 @@ from distutils.core import setup, Extens
+ dnet_srcs = [ './dnet.c' ]
+ dnet_incdirs = [ '../include' ]
+ dnet_libdirs = []
+-dnet_libs = []
++dnet_libs = [ 'dnet' ]
+ dnet_extargs = []
+ dnet_extobj = []
+ 
