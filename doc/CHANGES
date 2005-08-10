@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10839 2005/08/10 01:34:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10840 2005/08/10 02:56:10 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -565,3 +565,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ra-rtsp-proxy to 1.0.0.0nb2 [tron 2005-08-09]
 	Updated benchmarks/netio to 1.23 [tron 2005-08-09]
 	Updated games/quake2forge to 0.3 [xtraeme 2005-08-10]
+	Updated mail/mhonarc to 2.6.11nb2 [jlam 2005-08-10]
