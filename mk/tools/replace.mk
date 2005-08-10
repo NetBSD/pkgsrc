@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.123 2005/08/06 06:18:45 jlam Exp $
+# $NetBSD: replace.mk,v 1.124 2005/08/10 06:08:48 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -873,7 +873,7 @@ TOOLS_PATH.perl=		${TOOLS_PREFIX.perl}/bin/perl
 MAKEFLAGS+=			TOOLS_IGNORE.pod2man=
 .  elif !empty(_TOOLS_USE_PKGSRC.pod2man:M[yY][eE][sS])
 .    include "../../lang/perl5/version.mk"
-TOOLS_DEPENDS.perl?=		perl>=${PERL5_REQD}:../../lang/perl5
+TOOLS_DEPENDS.pod2man?=		perl>=${PERL5_REQD}:../../lang/perl5
 TOOLS_CREATE+=			pod2man
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pod2man=perl
 TOOLS_PATH.pod2man=		${TOOLS_PREFIX.pod2man}/bin/pod2man
