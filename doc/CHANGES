@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10843 2005/08/10 12:07:05 adam Exp $
+$NetBSD: CHANGES,v 1.10844 2005/08/10 16:51:56 he Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -569,3 +569,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added print/psjoin version 0.3 [reed 2005-08-10]
 	Updated devel/libsigc++2 to 2.0.16 [adam 2005-08-10]
 	Updated www/bluefish to 1.0.2 [adam 2005-08-10]
+	Updated graphics/xv to 3.10anb10 [he 2005-08-10]
