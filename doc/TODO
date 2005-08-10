@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3804 2005/08/10 01:34:54 xtraeme Exp $
+$NetBSD: TODO,v 1.3805 2005/08/10 12:07:05 adam Exp $
 
 Suggested new packages
 ======================
@@ -363,7 +363,6 @@ Suggested package updates
 	o bioperl-1.5.0
 	o blackbox-0.70
 	o blitz++-0.8
-	o bluefish-1.0.2
 	o bmake-20050322
 	o boaconstructor-0.3.1
 	o bochs-2.2.1
