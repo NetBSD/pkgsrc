@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.567 2005/08/05 22:07:07 reinoud Exp $
+# $NetBSD: Makefile,v 1.568 2005/08/10 13:58:47 drochner Exp $
 #
 
 COMMENT=	Networking tools
@@ -310,6 +310,8 @@ SUBDIR+=	py-adns
 SUBDIR+=	py-dns
 SUBDIR+=	py-google
 SUBDIR+=	py-kenosis
+SUBDIR+=	py-libdnet
+SUBDIR+=	py-libpcap
 SUBDIR+=	py-mimelib
 SUBDIR+=	py-soaplib
 SUBDIR+=	py-soappy
@@ -337,6 +339,7 @@ SUBDIR+=	ruby-drb
 SUBDIR+=	ruby-icmp
 SUBDIR+=	ruby-xmlrpc4r
 SUBDIR+=	samba
+SUBDIR+=	scapy
 SUBDIR+=	scdp
 SUBDIR+=	scli
 SUBDIR+=	sdig
