@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 18:02:44 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/08/10 19:01:23 gdt Exp $
 #
 
 DISTNAME=		guile-gtk-0.40.91
 CATEGORIES=		devel x11
 MASTER_SITES=		http://www.ir.bbn.com/~gdt/pkgsrc-wip/
 
-MAINTAINER=		gdt@ir.bbn.com
+MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/guile-gtk/
 COMMENT=		Library to make GTK 1.2 accessible from guile
 
