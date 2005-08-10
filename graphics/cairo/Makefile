@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/07/21 16:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/08/10 20:56:17 jlam Exp $
 
 DISTNAME=	cairo-0.5.1
 CATEGORIES=	graphics
@@ -8,6 +8,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://cairographics.org/
 COMMENT=	Vector graphics library with cross-device output support
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -20,7 +21,6 @@ BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"

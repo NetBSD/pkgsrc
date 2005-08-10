@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=	shared-mime-info-0.16
@@ -15,6 +15,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--disable-update-mimedb
 
@@ -33,7 +34,6 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/mime/ { next; }
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/07/21 16:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/08/10 20:56:18 jlam Exp $
 
 DISTNAME=	gtkglext-1.0.6
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ HOMEPAGE=	http://gtkglext.sourceforge.net/
 COMMENT=	OpenGL extension to GTK
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	gdkglext.pc.in
@@ -20,7 +20,6 @@ LIBS+=			-lm
 CONFIGURE_ARGS+=        --with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=        --enable-gtk-doc=no
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

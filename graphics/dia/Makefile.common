@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/07/21 16:29:50 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/08/10 20:56:17 jlam Exp $
 #
 
 DISTNAME=	dia-0.94
@@ -14,7 +14,7 @@ DISTINFO_FILE=		${.CURDIR}/../../graphics/dia/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/dia/patches
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -45,7 +45,6 @@ BUILDLINK_DEPMETHOD.gtk2+=		build
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

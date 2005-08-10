@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/08/07 11:26:17 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/08/10 20:56:30 jlam Exp $
 #
 
 DISTNAME=		wxGTK-2.6.1
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.wxwidgets.org/
 PATCHDIR=		${.CURDIR}/../../x11/wxGTK/patches
 DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK/distinfo
 
+USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
@@ -28,7 +29,6 @@ CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
 DOCDIR=			${PREFIX}/share/doc/wxGTK
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

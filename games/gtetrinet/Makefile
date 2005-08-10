@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/07/21 16:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/08/10 20:56:17 jlam Exp $
 #
 
 DISTNAME=	gtetrinet-0.7.7
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	YES
 
 BUILD_DEFS+=		USE_INET6
@@ -33,6 +33,5 @@ GCONF2_SCHEMAS=		gtetrinet.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

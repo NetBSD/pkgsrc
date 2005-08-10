@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/24 08:47:42 recht Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=	ArX-2.2.3
@@ -14,6 +14,7 @@ DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
+USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -41,6 +42,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/${f} ${DOCDIR}
 .endfor
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

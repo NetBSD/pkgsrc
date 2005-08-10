@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/08/08 18:13:13 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=	rrdtool-1.2.11
@@ -15,7 +15,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 
@@ -32,7 +32,6 @@ RRDDOCDIR=		${PREFIX}/share/doc/rrdtool
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../www/cgilib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

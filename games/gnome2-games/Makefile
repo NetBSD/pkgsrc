@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/07/21 16:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2005/08/10 20:56:17 jlam Exp $
 
 DISTNAME=		gnome-games-2.10.1
 CATEGORIES=		games gnome
@@ -17,7 +17,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_CONFIG_WRAPPER=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -74,7 +74,6 @@ BUILDLINK_DEPENDS.libgnome+=	libgnome>=2.10.0
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"

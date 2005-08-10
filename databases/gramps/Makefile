@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:13 jlam Exp $
 #
 
 DISTNAME=		gramps-1.0.11
@@ -18,6 +18,7 @@ BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 # i18n support with other python versions appears to not work
@@ -25,7 +26,6 @@ PYTHON_VERSION_REQD=	23
 
 MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"

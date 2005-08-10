@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:20 jlam Exp $
 #
 
 DISTNAME=		kanjipad-2.0.0
@@ -10,9 +10,8 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://fishsoup.net/software/kanjipad/
 COMMENT=		Japanese handwriting recognition
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-install:

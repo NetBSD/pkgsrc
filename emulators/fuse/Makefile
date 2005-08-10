@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/21 16:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/10 20:56:16 jlam Exp $
 
 DISTNAME=	fuse-0.7.0
 PKGREVISION=	1
@@ -9,12 +9,11 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fuse-emulator.sourceforge.net/
 COMMENT=	ZX Spectrum Emulator
 
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gtk2
 LIBS+=	${LIBOSSAUDIO}
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../emulators/libspectrum/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

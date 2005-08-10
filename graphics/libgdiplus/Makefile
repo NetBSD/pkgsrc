@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/07/31 19:23:00 recht Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/10 20:56:18 jlam Exp $
 #
 
 DISTNAME=	libgdiplus-1.1.8
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Implementation of the GDI+ API
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf gmake
+USE_TOOLS+=		autoconf gmake pkg-config
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libgdiplus.pc.in
 GNU_CONFIGURE=		yes
@@ -25,7 +25,6 @@ BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
 BUILDLINK_TRANSFORM+=		rm:-Werror
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

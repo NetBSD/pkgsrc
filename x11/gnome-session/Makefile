@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/07/21 16:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2005/08/10 20:56:26 jlam Exp $
 #
 
 DISTNAME=		gnome-session-2.10.0
@@ -18,7 +18,7 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_LIBTOOL=		yes
 
 MAKE_ENV+=		REAL_GCONFTOOL="${GCONFTOOL2}"
@@ -40,7 +40,6 @@ BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
