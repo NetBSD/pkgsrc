@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/10 06:57:07 tron Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/10 07:03:13 xtraeme Exp $
 
 DISTNAME=	netio123
 PKGNAME=	netio-1.23
@@ -20,9 +20,7 @@ MAKE_FLAGS+=	CC="${CC}" CFLAGS="-DUNIX ${PTHREAD_CFLAGS} ${CFLAGS}" \
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == SunOS)
-LIBS+=		-lsocket -lnsl
-.endif
+LIBS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin
 
