@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/08/10 01:33:48 xtraeme Exp $
 #
 
-DISTNAME=	quake2-0.2.1
+DISTNAME=	quake2-0.3
 PKGNAME=	${DISTNAME:S/quake2/quake2forge/}
-PKGREVISION=	2
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quake/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://www.quakeforge.net/files/quake2forge/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.quakeforge.net/
@@ -34,8 +32,15 @@ SUBST_SED.snd=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.snd=	"Fixing harcoded audio device."
 SUBST_STAGE.data=	post-patch
 SUBST_FILES.data=	configure
-SUBST_SED.data=		-e "s|PACKAGE=quake2|PACKAGE=${PKGBASE}|g"
+SUBST_SED.data=		-e "s|PACKAGE=\'quake2\'|PACKAGE=\'${PKGBASE}\'|g"
 SUBST_MESSAGE.data=	"Fixing installation directories."
+
+.include "../../mk/bsd.prefs.mk"
+
+# Don't try to build the Sun Solaris sound module, it's broken.
+.if !empty(OPSYS:MNetBSD) || !empty(OPSYS:MOpenBSD)
+CONFIGURE_ENV+=		ac_cv_header_sys_audioio_h=no
+.endif
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
