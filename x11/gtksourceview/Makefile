@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/10 20:56:29 jlam Exp $
 #
 
 DISTNAME=	gtksourceview-1.2.0
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 
 PKGCONFIG_OVERRIDE=	gtksourceview-1.0.pc.in
 
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

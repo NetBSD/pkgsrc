@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/08/10 20:56:24 jlam Exp $
 #
 
 DISTNAME=	rox-2.2.0
@@ -17,6 +17,7 @@ CONFLICTS=	rox-base-[0-9]*
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Filer/src
 DIST_SUBDIR=	rox
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		APP_DIR=${WRKDIR}/${DISTNAME}/ROX-Filer
 CONFIGURE_ARGS+=	--enable-rox --with-platform=${OPSYS}-${MACHINE_ARCH}
@@ -52,7 +53,6 @@ do-install:
 			${PREFIX}/share/mime/packages
 
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

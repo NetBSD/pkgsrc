@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:18 jlam Exp $
 #
 
 DISTNAME=	showimg-0.9.4-1
@@ -11,14 +11,13 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://www.jalix.org/projects/showimg/
 COMMENT=	Feature-rich image viewer for KDE including an image management system
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGE=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libkexif/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"

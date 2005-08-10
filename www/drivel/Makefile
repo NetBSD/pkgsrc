@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/21 16:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/10 20:56:25 jlam Exp $
 #
 
 DISTNAME=	drivel-2.0.1
@@ -12,7 +12,7 @@ COMMENT=	LiveJournal client for the GNOME Desktop
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS=		drivel.schemas
@@ -27,7 +27,6 @@ BUILDLINK_DEPENDS.curl+=	curl>=7.14.0nb1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

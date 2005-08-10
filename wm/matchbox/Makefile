@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/21 16:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/08/10 20:56:25 jlam Exp $
 #
 
 DISTNAME=		matchbox-window-manager-0.9.3
@@ -10,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://projects.o-hand.com/matchbox/
 COMMENT=		Window manager designed for computers with small displays
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
@@ -25,7 +26,6 @@ post-install:
 		${PREFIX}/share/examples/matchbox/
 
 .include "../../devel/libmatchbox/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

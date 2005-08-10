@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/07/21 16:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2005/08/10 20:56:17 jlam Exp $
 #
 
 DISTNAME=	eog-2.10.2
@@ -13,7 +13,7 @@ COMMENT=	Eye of GNOME: an image viewing and cataloging program
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 
@@ -28,7 +28,6 @@ BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.16
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"

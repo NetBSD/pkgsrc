@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/07/27 17:23:51 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2005/08/10 20:56:15 jlam Exp $
 #
 
 DISTNAME=	libbonoboui-2.10.0
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	yes
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	bonobo/libbonoboui-2.0.pc.in
@@ -31,7 +31,6 @@ BUILDLINK_DEPENDS.libbonobo+=	libbonobo>=2.8.1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

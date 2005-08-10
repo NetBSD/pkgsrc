@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=	gail-1.8.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://developer.gnome.org/projects/gap/
 COMMENT=	GNOME Accessibility Implementation Library
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -22,7 +22,6 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

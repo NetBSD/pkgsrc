@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/08/06 06:19:21 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/08/10 20:56:18 jlam Exp $
 
 DISTNAME=	mono-1.1.8.3
 PKGREVISION=	1
@@ -21,7 +21,7 @@ NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
 # LP64 problems
 NOT_FOR_PLATFORM+=	*-*-alpha *-*-sparc64
 
-USE_TOOLS+=		bison gmake gtar perl:run
+USE_TOOLS+=		bison gmake gtar perl:run pkg-config
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 EXTRACT_USING=		gtar
@@ -60,7 +60,6 @@ TEST_TARGET=	check
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
