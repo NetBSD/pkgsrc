@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:30 jlam Exp $
 #
 
 DISTNAME=		libXcursor-1.1.2
@@ -13,6 +13,7 @@ COMMENT=		Client-side cursor loading library for X
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -21,7 +22,6 @@ PKGCONFIG_OVERRIDE+=    xcursor.pc.in
 
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/Xfixes/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

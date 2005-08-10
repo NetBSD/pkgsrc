@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:19 jlam Exp $
 
 DISTNAME=		evolution-1.4.6
 PKGNAME=		${DISTNAME:S/evolution/evolution14/}
@@ -28,7 +28,7 @@ BUILDLINK_DEPENDS.db3=		db3-3.11.2{,nb*}
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		bison gmake
+USE_TOOLS+=		bison gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -50,7 +50,6 @@ CONFIGURE_ARGS+=	--enable-openssl=yes
 CONFIGURE_ARGS+=	--with-krb5=/usr --with-krb4=/usr
 CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
-CONFIGURE_ENV+=		PKG_CONFIG_PATH="${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 
 PKGCONFIG_OVERRIDE=	camel.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
@@ -78,7 +77,6 @@ LDFLAGS+=	-lsemaphore
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

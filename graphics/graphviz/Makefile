@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/07/21 16:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2005/08/10 20:56:18 jlam Exp $
 #
 
 DISTNAME=	graphviz-2.2.1
@@ -15,6 +15,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 XAW_TYPE=		standard
@@ -40,7 +41,6 @@ pre-build:
 	${TOUCH} ${WRKSRC}/Makefile
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

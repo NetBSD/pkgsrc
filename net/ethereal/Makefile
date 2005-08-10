@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2005/07/27 16:44:43 drochner Exp $
+# $NetBSD: Makefile,v 1.114 2005/08/10 20:56:21 jlam Exp $
 
 DISTNAME=		ethereal-0.10.12
 CATEGORIES=		net
@@ -21,7 +21,7 @@ MAINTAINER=		frueauf@NetBSD.org
 HOMEPAGE=		http://www.ethereal.com/
 COMMENT=		Network protocol analyzer
 
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl pkg-config
 
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool
@@ -52,7 +52,6 @@ pre-build:
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"

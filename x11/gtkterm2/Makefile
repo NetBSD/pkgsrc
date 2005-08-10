@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:29 jlam Exp $
 
 DISTNAME=	gtkterm2-0.2.3
 CATEGORIES=	x11
@@ -8,11 +8,11 @@ MAINTAINER=	yui@yui.pe.kr
 HOMEPAGE=	http://gtkterm.feige.net/
 COMMENT=	Simple GTK-2 terminal with tabs
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

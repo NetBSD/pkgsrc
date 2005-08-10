@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/08/10 20:56:19 jlam Exp $
 #
 
 DISTNAME=	evolution-data-server-1.2.3
@@ -17,7 +17,7 @@ BUILDLINK_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.3
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		bison gmake
+USE_TOOLS+=		bison gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -68,7 +68,6 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

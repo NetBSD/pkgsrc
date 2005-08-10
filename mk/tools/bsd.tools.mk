@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.31 2005/07/17 23:19:04 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.32 2005/08/10 20:56:20 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -117,6 +117,7 @@ USE_TOOLS?=		# empty
 .include "../../mk/tools/imake.mk"
 .include "../../mk/tools/replace.mk"
 .include "../../mk/tools/perl.mk"
+.include "../../mk/tools/pkg-config.mk"
 .include "../../mk/tools/make.mk"
 
 ######################################################################

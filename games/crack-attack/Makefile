@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:16 jlam Exp $
 
 DISTNAME=	crack-attack-1.1.14
 CATEGORIES=	games
@@ -10,13 +10,13 @@ COMMENT=	Tetris Attack inspired game
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/html/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/*.jpg ${PREFIX}/share/doc/html/${PKGBASE}
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 

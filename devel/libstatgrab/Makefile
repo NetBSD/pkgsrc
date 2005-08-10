@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:15 jlam Exp $
 
 DISTNAME=	libstatgrab-0.11
 CATEGORIES=	devel
@@ -16,6 +16,7 @@ COMMENT=	Provides a useful interface to system statistics
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	libstatgrab.pc.in
 
 CONFIGURE_ARGS+=	--disable-examples
@@ -40,5 +41,4 @@ PLIST_SUBST+=		SAIDAR=""
 .include "../../devel/ncurses/buildlink3.mk"
 .endif
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

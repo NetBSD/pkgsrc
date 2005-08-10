@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
@@ -11,7 +11,7 @@ COMMENT=		Netlist generation program
 
 DEPENDS+=		geda-symbols-${PKGVERSION}:../../cad/geda-symbols
 # needs GNU m4 for the PCBboard netlister
-USE_TOOLS+=		gm4:run
+USE_TOOLS+=		gm4:run pkg-config
 
 .include "../../cad/geda/Makefile.common"
 
@@ -19,7 +19,7 @@ CONFLICTS+=		gEDA<19991011
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 EVAL_PREFIX+=   PCBDIR=pcb
@@ -35,5 +35,4 @@ post-patch:
 .endfor
 
 .include "../../cad/libgeda/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

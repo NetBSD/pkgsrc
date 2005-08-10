@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/08/09 16:26:52 adam Exp $
+# $NetBSD: Makefile,v 1.16 2005/08/10 20:56:17 jlam Exp $
 
 DISTNAME=	wesnoth-0.9.5
 CATEGORIES=	games
@@ -8,6 +8,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.wesnoth.org/
 COMMENT=	Fantasy turn-based strategy game
 
+USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
@@ -22,7 +23,6 @@ BUILDLINK_DEPENDS.SDL_mixer=	SDL_mixer>=1.2.5nb3
 # use included SDL_ttf library
 #.include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

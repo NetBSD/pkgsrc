@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.33 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=		libgda-1.2.2
@@ -13,7 +13,7 @@ COMMENT=		GNU database access library
 DISTINFO_FILE=		${.CURDIR}/../../databases/libgda/distinfo
 PATCHDIR=		${.CURDIR}/../../databases/libgda/patches
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -45,7 +45,6 @@ SUBST_SED.libs+=	-e 's|$$(top_builddir)/libgda/libgda-2.la|${BUILDLINK_PREFIX.li
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
