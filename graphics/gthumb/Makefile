@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/21 16:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:18 jlam Exp $
 
 DISTNAME=		gthumb-2.6.6
 CATEGORIES=		graphics
@@ -8,6 +8,7 @@ MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://gthumb.sourceforge.net/
 COMMENT=		Image viewer and browser for the GNOME Desktop
 
+USE_TOOLS+=		pkg-config
 USE_DIRS+=		xdg-1.1 gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -24,7 +25,6 @@ GCONF2_SCHEMAS+=	gthumb.schemas
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

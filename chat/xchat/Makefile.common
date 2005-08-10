@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.43 2005/08/10 20:56:13 jlam Exp $
 #
 # Please do not merge this file into "Makefile" because it is used by
 # packages in "pkgsrc-wip".
@@ -15,7 +15,6 @@ DISTINFO_FILE=	${.CURDIR}/../../chat/xchat/distinfo
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"

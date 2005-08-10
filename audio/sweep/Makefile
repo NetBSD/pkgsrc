@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=	sweep-0.8.3
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		gnome1-1.5
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	YES
 
 GNU_CONFIGURE=		YES
@@ -32,7 +32,6 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

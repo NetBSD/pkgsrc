@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/10 20:56:23 jlam Exp $
 
 DISTNAME=		gsasl-0.2.5
 CATEGORIES=		security
@@ -11,6 +11,7 @@ COMMENT=		GNU implementation of the Simple Authentication and Security Layer
 
 BUILD_USES_MSGFMT=	yes
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -26,7 +27,6 @@ PKGCONFIG_OVERRIDE+=    libgsasl.pc.in
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/libntlm/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../security/gss/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/21 16:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME}-src
@@ -12,6 +12,7 @@ COMMENT=	Login password cracker
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	all ssl
 WRKSRC=		${WRKDIR}/${DISTNAME}
@@ -42,7 +43,6 @@ PKG_SUPPORTED_OPTIONS=	gtkfe
 
 .if !empty(PKG_OPTIONS:Mgtkfe)
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-configure:

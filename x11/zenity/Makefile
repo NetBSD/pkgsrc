@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/08/10 20:56:30 jlam Exp $
 #
 
 DISTNAME=	zenity-2.10.0
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 
@@ -24,7 +24,6 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

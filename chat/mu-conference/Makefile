@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:13 jlam Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}/jcr-0.1.2
 SUBWRKSRC=		${WRKSRC}/${DISTNAME}/src
 XMLCONFIG=		${WRKDIR}/${DISTNAME}/muc-jcr.xml
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGINSTALL=		yes
 
 PKG_SYSCONFSUBDIR=      jabberd
@@ -55,6 +55,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}/muc-jcr.xml ${EGDIR}
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
