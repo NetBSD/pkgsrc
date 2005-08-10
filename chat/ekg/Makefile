@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2005/08/10 20:56:13 jlam Exp $
 
 DISTNAME=	ekg-1.6rc3
 PKGNAME=	ekg-1.6
@@ -14,7 +14,7 @@ COMMENT=	Experimental Gadu-Gadu Client (Polish instant messaging system)
 USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	lib/libgadu.pc.in
 CONFIGURE_ARGS+=	--enable-ui-ncurses
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	--with-pthread
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2005/08/10 20:56:13 jlam Exp $
 
 DISTNAME=	wv-1.0.3
 PKGREVISION=    2
@@ -9,7 +9,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://wvware.sourceforge.net/
 COMMENT=	Library and executables to access Microsoft Word files
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

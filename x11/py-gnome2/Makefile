@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/08/10 20:56:29 jlam Exp $
 #
 
 DISTNAME=	gnome-python-2.10.0
@@ -16,6 +16,7 @@ USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	gnome-python-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+USE_TOOLS+=		pkg-config
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
 
@@ -28,7 +29,6 @@ BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.9.0
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 BUILDLINK_DEPENDS.pyorbit+=	${PYPKGPREFIX}-ORBit>=2.0.1
 .include "../../net/py-ORBit/buildlink3.mk"

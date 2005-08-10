@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/07/21 16:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2005/08/10 20:56:16 jlam Exp $
 
 DISTNAME=	libXft-2.1.6
 PKGNAME=	Xft2-2.1.6
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 PKGCONFIG_OVERRIDE=	xft.pc.in
 MAKE_ENV+=		EGREP="${EGREP}"
@@ -23,7 +23,6 @@ MAKE_ENV+=		EGREP="${EGREP}"
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8.2
 BUILDLINK_DEPENDS.fontconfig+=	fontconfig>=2.2
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

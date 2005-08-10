@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/10 20:56:20 jlam Exp $
 #
 
 DISTNAME=		libassetml-1.2.1
@@ -12,7 +12,7 @@ COMMENT=		Library for sharing image and audio files between projects
 BUILD_DEPENDS+=	texi2html-[0-9]*:../../textproc/texi2html
 
 USE_DIRS+=		gnome2-1.5	# share/gnome/help
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -21,7 +21,6 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		libassetml.info
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

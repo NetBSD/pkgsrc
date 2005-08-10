@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2005/08/10 20:56:19 jlam Exp $
 
 DISTNAME=	balsa-2.2.6
 PKGREVISION=	2
@@ -18,7 +18,7 @@ USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 
 CONFIGURE_ARGS=		--with-gpgme=${BUILDLINK_PREFIX.gpgme}/bin/gpgme-config
 CONFIGURE_ARGS+=	--disable-more-warnings
@@ -48,7 +48,6 @@ BUILDLINK_DEPENDS.gmime+=	gmime>=2.1.9
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"

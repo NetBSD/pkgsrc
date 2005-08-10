@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/22 21:12:21 adam Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/10 20:56:15 jlam Exp $
 
 DISTNAME=	glibmm-2.6.1
 CATEGORIES=	devel
@@ -12,11 +12,10 @@ COMMENT=	C++ bindings for glib
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/glib/glibmm-2.4.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsigc++2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/06 06:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/10 20:56:16 jlam Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 MAKE_PARAMS+=	disable-threadsafe
 
 DIST_VERSION=	1.040
@@ -24,6 +24,5 @@ DIST_VERSION=	1.040
 PERL5_PACKLIST=	auto/Glib/.packlist
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

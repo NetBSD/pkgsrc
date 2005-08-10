@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:42 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2005/08/10 20:56:10 jlam Exp $
 #
 
 DISTNAME=	file-roller-2.10.2
@@ -18,7 +18,7 @@ DEPENDS+=		zip>=2.3nb2:../../archivers/zip
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		file-roller.schemas
@@ -46,7 +46,6 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"

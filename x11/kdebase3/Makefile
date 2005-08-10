@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2005/07/30 11:10:08 markd Exp $
+# $NetBSD: Makefile,v 1.86 2005/08/10 20:56:29 jlam Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -14,6 +14,7 @@ SITES_NetBSD-flag.png=	http://www.NetBSD.org/images/
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
+USE_TOOLS+=		pkg-config
 USE_DIRS+=		xdg-1.2
 USE_PKGINSTALL=		YES
 
@@ -155,7 +156,6 @@ CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 .if ${OPSYS} != "SunOS"
 .include "../../devel/libusb/buildlink3.mk"
 .endif
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"

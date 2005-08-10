@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/07/21 16:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/08/10 20:56:17 jlam Exp $
 
 DISTNAME=	gphoto2-2.1.6
 CATEGORIES=	graphics
@@ -10,6 +10,7 @@ COMMENT=	Digital camera access command line client
 
 CONFLICTS=	gphoto-[0-9]*
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -29,7 +30,6 @@ CONFIGURE_ARGS+=	--without-readline
 .include "../../devel/cdk/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

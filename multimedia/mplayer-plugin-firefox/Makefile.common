@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/07/21 16:29:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/08/10 20:56:20 jlam Exp $
 #
 
 DISTNAME=		mplayerplug-in-2.70
@@ -14,7 +14,7 @@ DEPENDS+=		mplayer>=0.92:../../multimedia/mplayer
 
 WRKSRC=			${WRKDIR}/mplayerplug-in
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES+=		c++
 USE_PKGINSTALL=		yes
 
@@ -65,6 +65,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/mplayerplug-in.xpt	\
 		${PREFIX}/lib/${BROWSER}/plugins
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

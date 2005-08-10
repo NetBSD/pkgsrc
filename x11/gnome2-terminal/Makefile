@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/07/21 16:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2005/08/10 20:56:26 jlam Exp $
 #
 
 DISTNAME=		gnome-terminal-2.10.0
@@ -18,7 +18,7 @@ CONFLICTS=		gnome-core-[0-9]*
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_LIBTOOL=		YES
 
 GCONF2_SCHEMAS= 	gnome-terminal.schemas
@@ -29,7 +29,6 @@ BUILDLINK_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

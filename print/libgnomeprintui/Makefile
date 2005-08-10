@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/07/21 16:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=	libgnomeprintui-2.10.2
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	libgnomeprintui/libgnomeprintui-2.2.pc.in
@@ -28,7 +28,6 @@ BUILDLINK_DEPENDS.libgnomeprint+=	libgnomeprint>=2.10.2
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"

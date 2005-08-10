@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=	speex-1.0.5
@@ -12,6 +12,7 @@ COMMENT=	Open-source, patent-free voice codec
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	speex.pc.in
+USE_TOOLS+=		pkg-config
 
 # previous versions of the package were called Speex
 CONFLICTS=	Speex-[0-9]*
@@ -24,7 +25,6 @@ CONFIGURE_ENV+=         F77=${FALSE}
 BUILDLINK_TRANSFORM+=	l:gnugetopt:getopt
 
 .include "../../devel/libgetopt/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"

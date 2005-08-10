@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/10 20:56:12 jlam Exp $
 
 DISTNAME=		faad2-2.0
 PKGNAME=		xmms-faad-2.0
@@ -14,7 +14,7 @@ COMMENT=		XMMS plugin for faad
 #NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/faad2
-USE_TOOLS+=		automake14 gmake
+USE_TOOLS+=		automake14 gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool
@@ -49,6 +49,5 @@ do-install:
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

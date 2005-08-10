@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2005/07/29 16:09:11 drochner Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/08/10 20:56:21 jlam Exp $
 #
 
 DISTNAME=		xine-lib-1.0.2
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool libtool-nofpic
 PKGCONFIG_OVERRIDE=	misc/libxine.pc.in
-USE_TOOLS+=		autoconf gmake
+USE_TOOLS+=		autoconf gmake pkg-config
 
 CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
 CONFIGURE_ARGS+=	--without-external-ffmpeg --disable-ffmpegtest
@@ -42,7 +42,6 @@ pre-configure:
 	cd ${WRKSRC} && autoconf
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/10 20:56:18 jlam Exp $
 #
 
 .include "../../lang/sablevm-classpath/Makefile.common"
@@ -9,6 +9,8 @@ COMMENT+=	(GUI libraries)
 
 DEPENDS+=	sablevm-classpath>=1.1.3nb1:../../lang/sablevm-classpath
 
+USE_TOOLS+=	pkg-config
+
 BUILD_DIRS=	${WRKSRC}/native/jni/classpath
 BUILD_DIRS+=	${WRKSRC}/native/jni/gtk-peer
 INSTALL_DIRS=	${WRKSRC}/native/jni/gtk-peer
@@ -18,7 +20,6 @@ PRINT_PLIST_AWK+= \
 		{ print "@comment in sablevm-classpath: "$$0; next; }
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/java-env.mk"

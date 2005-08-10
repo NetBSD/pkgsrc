@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/08/10 19:01:23 gdt Exp $
+# $NetBSD: Makefile,v 1.40 2005/08/10 20:56:14 jlam Exp $
 
 DISTNAME=	g-wrap-1.9.6
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ DEPENDS+=	guile-lib>=0.1.2:../../devel/guile-lib
 
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
 
@@ -23,6 +23,5 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/guile/site/g-wrap/guile/ws
 
 .include "../../devel/glib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

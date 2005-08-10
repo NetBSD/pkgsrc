@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/21 16:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:25 jlam Exp $
 #
 
 DISTNAME=	windowlab-1.12
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.nickgravgaard.com/windowlab/
 COMMENT=	Small and simple window manager
 
 USE_PKGINSTALL=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 PKG_SYSCONFSUBDIR=	windowlab
 
@@ -23,7 +23,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/menurc.sample ${EGDIR}/menurc.default
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

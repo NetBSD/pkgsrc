@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=		gnome-vfs-2.10.1
@@ -19,7 +19,7 @@ PATCHDIR=		${.CURDIR}/../../sysutils/gnome-vfs2/patches
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 
@@ -88,5 +88,4 @@ do-install:
 			${PREFIX}/lib/gnome-vfs-2.0/modules
 .endif
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

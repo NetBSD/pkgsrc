@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/21 16:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/10 20:56:16 jlam Exp $
 #
 
 DISTNAME=	dasher-3.2.15
@@ -12,7 +12,7 @@ COMMENT=	Easy typing without using keyboard
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
 .include "../../audio/gnome-speech/buildlink3.mk"
@@ -27,7 +27,6 @@ USE_PKGLOCALEDIR=	yes
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

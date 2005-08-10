@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
@@ -15,12 +15,12 @@ CONFLICTS=		libvisual-nebulus-[0-9]* libvisual-gforce-[0-9]*
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
 # sigsegfaults in 0.2.0 because of:
 # sorry, but the bug with strtof has come, please report..
 CONFIGURE_ARGS+=	--disable-dancingparticles
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../audio/goom/buildlink3.mk"
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

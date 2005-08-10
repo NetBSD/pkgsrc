@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:23 jlam Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
 
 PKGREVISION=		# empty1
@@ -7,6 +7,7 @@ GKRELLM_PKGBASE=	gkrellm-server
 COMMENT=		Monitoring daemon remotely accessible by a GKrellM client
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../sysutils/gkrellm-share
 
+USE_TOOLS+=		pkg-config
 USE_PKGINSTALL=		YES
 PTHREAD_OPTS=		require
 RCD_SCRIPTS=		gkrellmd
@@ -43,6 +44,5 @@ MAKE_ENV+=		USE_GLIB12=yes
 .else
 .include "../../devel/glib2/buildlink3.mk"
 .endif
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

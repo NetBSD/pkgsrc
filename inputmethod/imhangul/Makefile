@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:18 jlam Exp $
 
 DISTNAME=	imhangul-0.9.11
 PKGREVISION=	1
@@ -10,12 +10,12 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://imhangul.kldp.net/
 COMMENT=	GTK+-2.0 Hangul Input Module
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool
 USE_PKGLOCALEDIR=	YES
 GTK2_IMMODULES=		YES
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"

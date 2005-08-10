@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2005/07/27 17:11:08 drochner Exp $
+# $NetBSD: Makefile.common,v 1.32 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=		GConf-2.10.1
@@ -22,7 +22,7 @@ PATCHDIR=		${.CURDIR}/../GConf2/patches
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 
 PKGCONFIG_OVERRIDE=	gconf-2.0.pc.in
 
@@ -33,5 +33,3 @@ CONFIGURE_ARGS+=	--with-sysconfsubdir=
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
-
-.include "../../devel/pkg-config/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/21 16:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/10 20:56:15 jlam Exp $
 #
 
 DISTNAME=	ogre-v0-12-1
@@ -14,7 +14,7 @@ COMMENT=	Object-Oriented Graphics Rendering Engine
 
 WRKSRC=			${WRKDIR}/ogrenew
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--with-platform=SDL
@@ -23,7 +23,6 @@ PKGCONFIG_OVERRIDE+=    OGRE.pc.in
 
 .include "../../devel/devIL/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

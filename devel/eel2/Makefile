@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2005/08/10 20:56:14 jlam Exp $
 
 DISTNAME=	eel-2.10.1
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -13,7 +13,7 @@ COMMENT=	Eazel Extensions Library for GNOME2
 BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -27,7 +27,6 @@ PKGCONFIG_OVERRIDE=	eel-2.0.pc.in
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"

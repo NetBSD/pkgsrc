@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/07/21 16:29:54 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2005/08/10 20:56:21 jlam Exp $
 
 DISTNAME=	etherape-0.9.1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	damon@NetBSD.org
 HOMEPAGE=	http://etherape.sourceforge.net/
 COMMENT=	Graphical network monitor
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_DIRS+=		xdg-1.1
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -32,5 +32,4 @@ post-install:
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

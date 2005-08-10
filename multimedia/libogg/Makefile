@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/10 20:56:20 jlam Exp $
 #
 
 DISTNAME=	libogg-1.1.2
@@ -12,6 +12,7 @@ COMMENT=	Ogg project codecs library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
@@ -23,6 +24,5 @@ PKGCONFIG_OVERRIDE+=	ogg.pc.in
 
 TEST_TARGET=	check
 
-.include "../../devel/pkg-config/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

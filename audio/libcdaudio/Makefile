@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/08/10 20:56:11 jlam Exp $
 
 DISTNAME=	libcdaudio-0.99.12
 PKGREVISION=	1
@@ -11,9 +11,9 @@ COMMENT=	Multi-platform CD player development library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	libcdaudio.pc.in
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

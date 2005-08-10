@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2005/08/10 20:56:24 jlam Exp $
 #
 
 DISTNAME=		nautilus-2.10.1
@@ -12,7 +12,7 @@ COMMENT=		Nautilus file manager for GNOME2
 
 USE_PKGLOCALEDIR=	yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
@@ -37,7 +37,6 @@ BUILDLINK_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"

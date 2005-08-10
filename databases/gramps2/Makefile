@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=		gramps-2.0.5
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 .endif
 #BUILD_USES_MSGFMT=	yes
 
+USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 # disable gconf schema and mime type processing
@@ -28,7 +29,6 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 GCONF2_SCHEMAS+=	gramps.schemas
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../databases/py-bsddb3/buildlink3.mk"

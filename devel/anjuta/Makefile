@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/08/01 17:17:14 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2005/08/10 20:56:14 jlam Exp $
 
 DISTNAME=	anjuta-1.2.3
 PKGREVISION=	1
@@ -16,12 +16,11 @@ DEPENDS+=	glade2>=2.6.0:../../devel/glade2
 DEPENDS+=	gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
-BUILDLINK_DEPMETHOD.pkg-config=	full
 
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake:run
+USE_TOOLS+=		gmake:run pkg-config:run
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		make
@@ -43,7 +42,6 @@ SUBST_SED.unused=	-e 's/__unused__/_exctags_unused_/g'
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/vte/buildlink3.mk"

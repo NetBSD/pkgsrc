@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/27 16:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:29 jlam Exp $
 #
 
 DISTNAME=	GTK2-Wonderland-Engine-1.0
@@ -14,12 +14,11 @@ COMMENT=	Port of famous Bluecurve theme for GTK2+
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 WRKSRC=			${WRKDIR}/Bluecurve
 
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=	desktop-file-utils-0.10
@@ -9,6 +9,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/desktop-file-utils
 COMMENT=	Utilities to manage desktop entries
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
@@ -29,6 +30,5 @@ PRINT_PLIST_AWK+=	/^share\/applications\/mimeinfo.cache$$/ \
 				  next; }
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

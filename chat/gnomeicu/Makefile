@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2005/08/10 20:56:13 jlam Exp $
 
 DISTNAME=	gnomeicu-0.99.5
 CATEGORIES=	chat gnome
@@ -11,7 +11,7 @@ COMMENT=	GNOME ICQ client
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -29,7 +29,6 @@ GCONF2_SCHEMAS=		gnomeicu.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

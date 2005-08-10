@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/10 20:56:29 jlam Exp $
 #
 
 DISTNAME=	libxklavier-2.0
@@ -11,6 +11,7 @@ COMMENT=	High-level API for the X Keyboard Extension (XKB)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
@@ -21,7 +22,6 @@ CONFIGURE_ARGS+=	--enable-xmm-support
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

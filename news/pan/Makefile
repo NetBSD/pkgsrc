@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2005/08/10 20:56:22 jlam Exp $
 #
 
 DISTNAME=		pan-0.14.2
@@ -13,7 +13,7 @@ COMMENT=		Newsreader for GTK2
 
 BUILD_USES_MSGFMT=	YES
 
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -25,7 +25,6 @@ LIBS+=			-lcompat
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/gnet/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

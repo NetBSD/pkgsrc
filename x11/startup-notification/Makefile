@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:30 jlam Exp $
 
 DISTNAME=		startup-notification-0.8
 CATEGORIES=		x11 gnome
@@ -11,6 +11,7 @@ COMMENT=		X11 application startup notification library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
@@ -22,6 +23,5 @@ post-install:
 		doc/startup-notification.txt \
 		${PREFIX}/share/doc/startup-notification/
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

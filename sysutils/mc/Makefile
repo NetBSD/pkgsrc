@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2005/08/04 21:11:48 rillig Exp $
+# $NetBSD: Makefile,v 1.63 2005/08/10 20:56:24 jlam Exp $
 
 DISTNAME=	mc-4.6.1
 CATEGORIES=	sysutils
@@ -9,6 +9,7 @@ MAINTAINER=	pavel.arnost@clnet.cz
 HOMEPAGE=	http://www.ibiblio.org/mc/
 COMMENT=	User-friendly file manager and visual shell
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -39,5 +40,4 @@ PLIST_SRC+=  	${PKGDIR}/PLIST
 PLIST_SRC+=	${PKGDIR}/PLIST.end
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/21 16:29:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:20 jlam Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.openquicktime.org/
 COMMENT=		Portable library for handling QuickTime(TM) media files
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		my_cv_comment=""
@@ -25,6 +25,5 @@ pre-configure:
 	${CHMOD} +x ${BUILDLINK_DIR}/bin/glib-config-2.0
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

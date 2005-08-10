@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2005/08/01 00:09:35 rillig Exp $
+# $NetBSD: Makefile.common,v 1.14 2005/08/10 20:56:11 jlam Exp $
 #
 
 DISTNAME=	bmp-0.9.7
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-esd
@@ -77,7 +78,6 @@ post-patch:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"

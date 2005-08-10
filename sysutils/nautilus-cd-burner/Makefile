@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/10 20:56:24 jlam Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.10.1
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	yes
 USE_MSGFMT_PLURALS=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -42,7 +42,6 @@ GCONF2_SCHEMAS=		ncb.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

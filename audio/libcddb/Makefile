@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/08/08 08:41:44 adam Exp $
+# $NetBSD: Makefile,v 1.21 2005/08/10 20:56:11 jlam Exp $
 
 DISTNAME=	libcddb-1.2.1
 CATEGORIES=	audio
@@ -17,9 +17,9 @@ PKGCONFIG_OVERRIDE+=	libcddb.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-cdio
 GCC_REQD+=		2.95
+USE_TOOLS+=		pkg-config
 
 TEST_TARGET=		check
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

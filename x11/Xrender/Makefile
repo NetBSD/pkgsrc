@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/07/21 16:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/10 20:56:26 jlam Exp $
 
 DISTNAME=	libXrender-0.8.4
 PKGNAME=	${DISTNAME:S/lib//}
@@ -13,13 +13,13 @@ COMMENT=	Client library for the X Rendering Extension protocol
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	xrender.pc.in
 
 BUILDLINK_DEPENDS.render+=	render>=0.8
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/render/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/21 16:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/10 20:56:29 jlam Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.10.1
@@ -16,13 +16,13 @@ USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	gnome-python-extras-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+USE_TOOLS+=		pkg-config
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"

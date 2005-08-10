@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/21 16:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/10 20:56:20 jlam Exp $
 #
 
 DISTNAME=		Dirac-0.2.0
@@ -10,10 +10,10 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://dirac.sourceforge.net/
 COMMENT=		Open-source video codec designed at the BBC
 
+USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	dirac.pc.in
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

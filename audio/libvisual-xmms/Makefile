@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=		libvisual-xmms-0.2.0
@@ -13,11 +13,11 @@ COMMENT=		XMMS plugin for libvisual
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

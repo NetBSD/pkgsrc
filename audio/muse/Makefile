@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -13,8 +13,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://muse.dyne.org/
 COMMENT=	Multiple Streaming Engine
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-ncurses
@@ -33,7 +33,6 @@ SUBST_MESSAGE.dsp=	"Fixing hardcoded audio device."
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"

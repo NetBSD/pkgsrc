@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/07/27 17:46:52 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2005/08/10 20:56:14 jlam Exp $
 #
 # Check the API before updating this package!  gal-2.5 and above should
 # get their own gal26 package!
@@ -14,7 +14,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Library functions that came from Gnumeric and Evolution (gal-2.4 API)
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

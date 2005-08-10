@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/07/21 16:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/08/10 20:56:20 jlam Exp $
 
 DISTNAME=		gperiodic-2.0.8
 CATEGORIES=		misc x11
@@ -12,7 +12,7 @@ BUILD_USES_MSGFMT=	# defined
 
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	# defined
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED
@@ -23,6 +23,5 @@ MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 BUILD_TARGET=		gperiodic
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

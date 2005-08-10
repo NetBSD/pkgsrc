@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/21 16:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=		gss-0.0.15
@@ -12,6 +12,7 @@ COMMENT=		GNU Generic Security Service Library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
@@ -19,5 +20,4 @@ PKGCONFIG_OVERRIDE+=    gss.pc.in
 
 INFO_FILES=		gss.info
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

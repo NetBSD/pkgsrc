@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/07/21 16:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2005/08/10 20:56:17 jlam Exp $
 
 DISTNAME=	gimageview-0.2.27
 CATEGORIES=	graphics
@@ -13,7 +13,7 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--disable-xinetest
 CONFIGURE_ARGS+=	--with-gtk2
@@ -26,7 +26,6 @@ LDFLAGS.NetBSD+=	${PTHREAD_LDFLAGS}
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"

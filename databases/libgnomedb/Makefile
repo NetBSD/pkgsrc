@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=		libgnomedb-1.2.2
@@ -12,7 +12,7 @@ COMMENT=		GNOME2 database library
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
@@ -31,7 +31,6 @@ GCONF2_SCHEMAS=		libgnomedb.schemas
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

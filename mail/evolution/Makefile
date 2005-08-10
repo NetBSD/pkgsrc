@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2005/08/10 20:56:19 jlam Exp $
 
 DISTNAME=		evolution-2.2.2
 PKGREVISION=		1
@@ -29,7 +29,7 @@ PKG_FAIL_REASON=	"Kerberos support conflicts with SSL"
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		bison gmake
+USE_TOOLS+=		bison gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -121,7 +121,6 @@ LDFLAGS+=	-lsemaphore
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
