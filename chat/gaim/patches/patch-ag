@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.1.2.2 2005/08/10 18:28:45 snj Exp $
+
+Fix for CAN-2005-2102, from RedHat.
+
+--- src/protocols/oscar/oscar.c.orig	2005-07-02 18:13:14.000000000 +0200
++++ src/protocols/oscar/oscar.c	2005-08-10 16:37:02.000000000 +0200
+@@ -3455,7 +3455,18 @@
+ 			xfer = gaim_xfer_new(gc->account, GAIM_XFER_RECEIVE, userinfo->sn);
+ 			xfer->remote_ip = g_strdup(args->verifiedip);
+ 			xfer->remote_port = args->port;
+-			gaim_xfer_set_filename(xfer, args->info.sendfile.filename);
++
++			if (g_utf8_validate(args->info.sendfile.filename, -1,
++						NULL)) {
++				gaim_xfer_set_filename(xfer,
++						args->info.sendfile.filename);
++			} else {
++				gchar * utf8_filename = gaim_utf8_salvage(
++						args->info.sendfile.filename);
++				gaim_xfer_set_filename(xfer, utf8_filename);
++				g_free(utf8_filename);
++			}
++
+ 			gaim_xfer_set_size(xfer, args->info.sendfile.totsize);
+ 			gaim_xfer_set_message(xfer, message);
+ 
