@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1711 2005/08/08 15:38:19 veego Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1712 2005/08/10 18:21:07 kristerw Exp $
 #
 # This file is in the public domain.
 #
@@ -2118,9 +2118,6 @@ real-su-install: ${MESSAGE}
 		# listed in the PLIST.						\
 		#
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
-.if empty(CHECK_FILES:M[nN][oO])
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} check-files-post
-.endif
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
@@ -2163,6 +2160,9 @@ real-su-install: ${MESSAGE}
 			fi;						\
 		done;							\
 	fi
+.if empty(CHECK_FILES:M[nN][oO])
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} check-files-post
+.endif
 .if ${_DO_SHLIB_CHECKS} == "yes"
 .  if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
