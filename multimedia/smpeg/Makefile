@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/14 00:29:16 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 04:03:07 grant Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
@@ -20,10 +20,6 @@ USE_LIBTOOL=	yes
 
 CPPFLAGS+=	-Dunix=1
 
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-
 # smpeg sources (glmovie.c & glmovie-tile.c) assume <malloc.h> exists.
 # Create a fake one for platforms that don't have it.
 #
@@ -33,5 +29,7 @@ post-wrapper:
 			> ${BUILDLINK_DIR}/include/malloc.h;		\
 	fi
 
-
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
