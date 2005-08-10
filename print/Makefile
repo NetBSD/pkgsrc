@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2005/08/09 18:35:16 drochner Exp $
+# $NetBSD: Makefile,v 1.131 2005/08/10 05:21:44 reed Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -85,6 +85,7 @@ SUBDIR+=	poppler
 SUBDIR+=	poster
 SUBDIR+=	pscal
 SUBDIR+=	psify
+SUBDIR+=	psjoin
 SUBDIR+=	psutils
 SUBDIR+=	py-reportlab
 SUBDIR+=	py-reportlab-renderPM
