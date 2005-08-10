@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/07/29 12:59:50 adam Exp $
+# $NetBSD: Makefile,v 1.28 2005/08/10 20:56:26 jlam Exp $
 
 DISTNAME=	gnustep-back-0.10.0
 CATEGORIES=	x11 gnustep
@@ -8,12 +8,12 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	X11 AppKit backend for GNUstep
 
+USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 
 pre-install:
 	${INSTALL_DATA_DIR} ${GNUSTEP_SYSTEM_ROOT}/Library/Fonts
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glitz/buildlink3.mk"

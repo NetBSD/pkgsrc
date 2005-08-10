@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/07/21 16:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=	gpdf-2.10.0
@@ -13,7 +13,7 @@ COMMENT=	GNOME 2 version of xpdf
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -27,7 +27,6 @@ GCONF2_SCHEMAS=		gpdf.schemas
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

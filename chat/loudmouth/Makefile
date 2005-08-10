@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/10 20:56:13 jlam Exp $
 
 DISTNAME=	loudmouth-0.17.2
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://loudmouth.imendio.org/
 COMMENT=	Lightweight Jabber client library
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -24,6 +24,5 @@ BUILDLINK_DEPENDS.gnutls+=	gnutls>=1.2.0
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

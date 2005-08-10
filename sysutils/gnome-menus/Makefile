@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=	gnome-menus-2.10.1
@@ -13,7 +13,7 @@ COMMENT=	Implementation of the desktop menu specification for GNOME
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.2
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -41,7 +41,6 @@ BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:25 jlam Exp $
 #
 
 DISTNAME=		libXfixes-2.0.1
@@ -14,12 +14,12 @@ COMMENT=		X Fixes extension of X RandR
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    xfixes.pc.in
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/fixesext/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

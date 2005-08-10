@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2005/08/10 20:56:13 jlam Exp $
 #
 
 DISTNAME=	gossip-0.8
@@ -14,7 +14,7 @@ BUILD_DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=       yes
 GNU_CONFIGURE=		yes
@@ -26,6 +26,5 @@ GCONF2_SCHEMAS=		gossip.schemas
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

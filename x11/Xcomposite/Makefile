@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/21 16:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/10 20:56:25 jlam Exp $
 #
 
 DISTNAME=		libXcomposite-1.0.1
@@ -12,6 +12,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://freedesktop.org/
 COMMENT=		Xcomposite extension (library)
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -20,5 +21,4 @@ PKGCONFIG_OVERRIDE+=	xcomposite.pc.in
 .include "../../x11/Xfixes/buildlink3.mk"
 .include "../../x11/compositeext/buildlink3.mk"
 .include "../../x11/fixesext/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/07/28 11:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2005/08/10 20:56:16 jlam Exp $
 #
 
 DISTNAME=		pango-1.8.2
@@ -15,7 +15,7 @@ COMMENT=		Library for layout and rendering of text
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGINSTALL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 USE_LIBTOOL=		yes
@@ -38,7 +38,6 @@ BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"

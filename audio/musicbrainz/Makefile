@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/10 20:56:12 jlam Exp $
 
 DISTNAME=	libmusicbrainz-2.1.1
 PKGNAME=	${DISTNAME:S/lib//}
@@ -12,7 +12,7 @@ COMMENT=	Second generation incarnation of the CD Index
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
@@ -21,5 +21,4 @@ PKGCONFIG_OVERRIDE=	libmusicbrainz.pc.in
 CONFIGURE_ARGS+=	--enable-cpp-headers
 
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

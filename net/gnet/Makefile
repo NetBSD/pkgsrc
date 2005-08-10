@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/07/21 16:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2005/08/10 20:56:22 jlam Exp $
 #
 
 DISTNAME=		gnet-2.0.7
@@ -10,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnetlibrary.org/
 COMMENT=		Simple network library
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	gnet-2.0.pc.in
 GNU_CONFIGURE=		YES
@@ -18,5 +19,4 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 TEST_TARGET=		check
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

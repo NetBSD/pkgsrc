@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/07/21 16:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2005/08/10 20:56:19 jlam Exp $
 #
 
 DISTNAME=		gnome-utils-2.10.1
@@ -12,7 +12,7 @@ COMMENT=		Set of useful GNOME2 utilities and applications
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -34,7 +34,6 @@ BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.4
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

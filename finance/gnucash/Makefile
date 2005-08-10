@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2005/08/06 06:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.90 2005/08/10 20:56:16 jlam Exp $
 
 DISTNAME=		gnucash-1.8.11
 PKGREVISION=		3
@@ -17,7 +17,7 @@ DEPENDS+= 		p5-finance-quote>=1.06:../../finance/p5-finance-quote
 BUILD_DEPENDS+=		bison>=1.28:../../devel/bison
 
 USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -42,7 +42,6 @@ INFO_FILES=		gnucash-design.info
 .include "../../print/gnome-print/buildlink3.mk"
 .include "../../devel/g-wrap/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"

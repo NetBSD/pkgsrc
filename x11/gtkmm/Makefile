@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/07/28 12:29:43 adam Exp $
+# $NetBSD: Makefile,v 1.29 2005/08/10 20:56:29 jlam Exp $
 
 DISTNAME=	gtkmm-2.6.4
 CATEGORIES=	x11
@@ -11,7 +11,7 @@ COMMENT=	C++ interface to Gtk+ v2
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	atk/atkmm-1.6.pc.in
@@ -20,6 +20,5 @@ PKGCONFIG_OVERRIDE+=	gtk/gtkmm-2.4.pc.in
 PKGCONFIG_OVERRIDE+=	pango/pangomm-1.4.pc.in
 
 .include "../../devel/glibmm/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

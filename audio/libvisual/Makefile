@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:11 jlam Exp $
 #
 
 DISTNAME=		libvisual-0.2.0
@@ -12,7 +12,7 @@ COMMENT=		Abstraction library between applications and audio visualisation plugi
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libvisual.pc.in
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

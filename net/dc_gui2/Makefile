@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/21 16:29:54 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/08/10 20:56:21 jlam Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 UNLIMIT_RESOURCES+=	datasize
 
@@ -35,5 +35,4 @@ post-configure:
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

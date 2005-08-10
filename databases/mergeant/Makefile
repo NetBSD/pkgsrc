@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=		mergeant-0.52
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.gnome-db.org/
 COMMENT=		GNOME2 GNOME-DB database front-end
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-gtk-doc
@@ -24,7 +24,6 @@ USE_LIBTOOL=		YES
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

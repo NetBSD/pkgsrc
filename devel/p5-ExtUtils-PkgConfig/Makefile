@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:10 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:15 jlam Exp $
 #
 
 DISTNAME=	ExtUtils-PkgConfig-1.06
@@ -14,7 +14,7 @@ COMMENT=	Simplistic perl interface to pkg-config
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/ExtUtils/PkgConfig/.packlist
+USE_TOOLS=	pkg-config
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

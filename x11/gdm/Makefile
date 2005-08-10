@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/07/21 16:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2005/08/10 20:56:26 jlam Exp $
 #
 
 DISTNAME=	gdm-2.8.0.0
@@ -25,7 +25,7 @@ USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
 PKG_SUPPORTED_OPTIONS=	inet6 pam
@@ -121,7 +121,6 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"

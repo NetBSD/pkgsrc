@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/10 20:56:18 jlam Exp $
 #
 
 DISTNAME=		uim-0.4.6
@@ -12,7 +12,7 @@ COMMENT=		Multilingual input method library
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_NCURSES=		# clear_screen, clr_eos
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/uim.pc.in
 GNU_CONFIGURE=		YES
 GTK2_IMMODULES=		YES
@@ -36,7 +36,6 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/21 16:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:22 jlam Exp $
 #
 
 DISTNAME=	gnome-netstatus-2.10.0
@@ -12,7 +12,7 @@ COMMENT=	Network status applet for the GNOME panel
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -23,7 +23,6 @@ GCONF2_SCHEMAS=		netstatus.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

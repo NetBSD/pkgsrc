@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/21 16:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/10 20:56:24 jlam Exp $
 
 DISTNAME=	gnome-spell-1.0.6
 CATEGORIES=	textproc gnome
@@ -12,7 +12,7 @@ COMMENT=	Spell checking as you type like gtkspell
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.3
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 
 BUILDLINK_DEPENDS.libgnomeui+=	libgnomeui>=2.8.0nb3
@@ -22,7 +22,6 @@ BUILDLINK_DEPENDS.libgnomeui+=	libgnomeui>=2.8.0nb3
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

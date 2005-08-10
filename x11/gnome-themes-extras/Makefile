@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:26 jlam Exp $
 #
 
 DISTNAME=	gnome-themes-extras-0.8.1
@@ -20,14 +20,13 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk2-engines/buildlink3.mk"

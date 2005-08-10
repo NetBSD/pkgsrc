@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/10 20:56:24 jlam Exp $
 
 DISTNAME=		libgtop-2.10.1
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -16,7 +16,7 @@ OSVERSION_SPECIFIC=	YES
 USE_MSGFMT_PLURALS=	YES
 
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	support/gnome-support-2.0.pc.in
@@ -98,6 +98,5 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/08/10 20:56:18 jlam Exp $
 #
 
 DISTNAME=	librsvg-2.9.5
@@ -13,6 +13,7 @@ COMMENT=	SVG library for GNOME2
 DISTINFO_FILE=		${.CURDIR}/../../graphics/librsvg2/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/librsvg2/patches
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	librsvg-2.0.pc.in
@@ -23,5 +24,4 @@ CONFIGURE_ARGS+=	--with-gimp=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/librsvg2
 CONFIGURE_ARGS+=	--with-tags=
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/21 16:29:53 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/10 20:56:19 jlam Exp $
 #
 
 DISTNAME=		gnumeric-1.4.3
@@ -13,7 +13,7 @@ COMMENT=		Spreadsheet program from the GNOME project
 BUILD_USES_MSGFMT=	YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
@@ -40,7 +40,6 @@ BUILDLINK_DEPENDS.libgsf+=	libgsf>=1.11.1
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 # guile is currently not supported in gnumeric
 #.include "../../lang/guile/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/21 16:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:26 jlam Exp $
 #
 
 DISTNAME=	fbdesk-1.2.1
@@ -10,6 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://fluxbox.sourceforge.net/fbdesk/
 COMMENT=	Application that creates and manage icons on your desktop
 
+USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
@@ -20,5 +21,4 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

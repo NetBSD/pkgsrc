@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2005/08/07 11:27:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/08/10 20:56:30 jlam Exp $
 #
 
 DISTNAME=		wxGTK-2.4.2
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.wxwidgets.org/
 PATCHDIR=		${.CURDIR}/../../x11/wxGTK24/patches
 DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK24/distinfo
 
+USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
@@ -37,7 +38,6 @@ CONFIGURE_ARGS+=	--with-gtk
 CONFIGURE_ARGS+=	--enable-gtk2
 PLIST_SUBST+=		GTKVER=2
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

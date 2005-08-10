@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:21 jlam Exp $
 #
 
 DISTNAME=	gkrellm-multiping-2.0.8
@@ -14,6 +14,8 @@ COMMENT=	Pings several machines and prints out stats
 USE_PKGINSTALL=	YES
 SPECIAL_PERMS+=	${PREFIX}/lib/gkrellm2/plugins/pinger ${SETUID_ROOT_PERMS}
 
+USE_TOOLS+=		pkg-config
+
 PTHREAD_OPTS=		require
 PTHREAD_AUTO_VARS=	yes
 
@@ -21,7 +23,6 @@ post-patch:
 	${SED} -e s,@@PREFIX@@,${PREFIX}, ${WRKSRC}/multiping.c > ${WRKSRC}/multiping.c.sed
 	${CP} ${WRKSRC}/multiping.c.sed ${WRKSRC}/multiping.c
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

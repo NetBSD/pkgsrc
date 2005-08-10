@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.124 2005/08/10 06:08:48 jlam Exp $
+# $NetBSD: replace.mk,v 1.125 2005/08/10 20:56:20 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -865,6 +865,17 @@ TOOLS_DEPENDS.perl?=		perl>=${PERL5_REQD}:../../lang/perl5
 TOOLS_CREATE+=			perl
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.perl=perl
 TOOLS_PATH.perl=		${TOOLS_PREFIX.perl}/bin/perl
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.pkg-config) && !empty(_USE_TOOLS:Mpkg-config)
+.  if !empty(PKGPATH:Mdevel/pkg-config)
+MAKEFLAGS+=			TOOLS_IGNORE.pkg-config=
+.  elif !empty(_TOOLS_USE_PKGSRC.pkg-config:M[yY][eE][sS])
+TOOLS_DEPENDS.pkg-config?=	pkg-config>=0.19:../../devel/pkg-config
+TOOLS_CREATE+=			pkg-config
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pkg-config=pkg-config
+TOOLS_PATH.pkg-config=		${TOOLS_PREFIX.pkg-config}/bin/pkg-config
 .  endif
 .endif
 

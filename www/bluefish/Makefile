@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2005/08/10 12:05:52 adam Exp $
+# $NetBSD: Makefile,v 1.57 2005/08/10 20:56:25 jlam Exp $
 
 DISTNAME=	bluefish-1.0.2
 CATEGORIES=	www
@@ -17,7 +17,7 @@ DEPENDS+=		weblint-[0-9]*:../../www/weblint
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		find gmake grep
+USE_TOOLS+=		find gmake grep pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX}/share/pixmaps
@@ -29,7 +29,6 @@ CONFIGURE_ENV+=		EXTERNAL_FIND="${TOOLS_FIND}"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/aspell/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/21 16:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:22 jlam Exp $
 
 DISTNAME=		howl-0.9.10
 CATEGORIES=		net
@@ -8,6 +8,7 @@ MAINTAINER=		nathanw@NetBSD.org
 HOMEPAGE=		http://www.porchdogsoft.com/products/howl/
 COMMENT=		Zeroconf (Rendezvous) implementation
 
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
@@ -17,6 +18,5 @@ RCD_SCRIPTS=		howl
 PKG_GROUPS+=		howl
 PKG_USERS+=		howl:howl::Zeroconf\\ user
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

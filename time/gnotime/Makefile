@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:24 jlam Exp $
 
 DISTNAME=	gnotime-2.2.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Time tracker for GNOME2
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -23,7 +23,6 @@ GCONF2_SCHEMAS=		gnotime.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/07/21 16:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/10 20:56:14 jlam Exp $
 #
 
 DISTNAME=		at-spi-1.6.3
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Assistive Technology Service Provider Interface
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -24,7 +24,6 @@ PKGCONFIG_OVERRIDE+=    libspi-1.0.pc.in
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

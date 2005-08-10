@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/21 16:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/10 20:56:19 jlam Exp $
 #
 
 DISTNAME=		calcoo-1.3.16
@@ -10,7 +10,7 @@ HOMEPAGE=		http://calcoo.sourceforge.net/
 COMMENT=		Scientific calculator
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

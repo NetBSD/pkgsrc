@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:25 jlam Exp $
 #
 
 DISTNAME=	gtkhtml-3.6.2
@@ -11,7 +11,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	src/libgtkhtml.pc.in
@@ -25,7 +25,6 @@ GNU_CONFIGURE=		yes
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"

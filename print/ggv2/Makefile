@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/07/21 16:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2005/08/10 20:56:22 jlam Exp $
 #
 
 DISTNAME=		ggv-2.8.4
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 GCONF2_SCHEMAS= 	ggv.schemas
 
@@ -24,7 +24,6 @@ GCONF2_SCHEMAS= 	ggv.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/intltool/buildlink3.mk"

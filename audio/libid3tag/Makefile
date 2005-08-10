@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/10 20:56:11 jlam Exp $
 #
 
 DISTNAME=	libid3tag-0.15.1b
@@ -17,6 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		pkg-config
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
@@ -31,6 +32,5 @@ post-build:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/id3tag.pc ${PREFIX}/lib/pkgconfig
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/07 11:31:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:29 jlam Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
@@ -12,7 +12,7 @@ HOMEPAGE=	http://wxpython.org/
 COMMENT=	wxPython: Python bindings for wxWidgets
 
 WRKSRC=		${WRKDIR}/wxPythonSrc-2.4.2.4/wxPython
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 # previous name of the package
 CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
@@ -30,7 +30,6 @@ PYSETUPBUILDARGS=	NO_SCRIPTS=1 ${WXARG}
 PYSETUPINSTALLARGS=	NO_SCRIPTS=1 ${WXARG}
 PYBINMODULE=	yes
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/wxGTK24/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/extension.mk"

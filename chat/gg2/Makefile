@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/21 16:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/10 20:56:13 jlam Exp $
 
 DISTNAME=	gg2-2.2.6
 CATEGORIES=	chat
@@ -10,7 +10,7 @@ COMMENT=	Instant messenger software for Poland; Jabber plugin included
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 LIBS+=			-lm
 PKGCONFIG_OVERRIDE+=	lib/gg2_core.pc.in
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--without-update
 .include "../../chat/ekg/buildlink3.mk"
 .include "../../chat/libtlen/buildlink3.mk"
 .include "../../chat/loudmouth/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

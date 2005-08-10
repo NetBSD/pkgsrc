@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:23 jlam Exp $
 #
 
 DISTNAME=		glabels-2.0.2
@@ -13,12 +13,11 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_DIRS+=		gnome2-1.5
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

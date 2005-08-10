@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=	gsmc-1.1
@@ -13,9 +13,8 @@ COMMENT=	Smith charting program
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 # The following were just links in the distfile so

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:16 jlam Exp $
 
 DISTNAME=	gtranslator-1.0.2
 CATEGORIES=	editors
@@ -11,7 +11,7 @@ COMMENT=	Gettext po file editor for the GNOME2 desktop environment
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 MANCOMPRESSED=		yes
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--disable-debug
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

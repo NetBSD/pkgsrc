@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/07/21 16:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2005/08/10 20:56:22 jlam Exp $
 #
 
 DISTNAME=		libIDL-0.8.5
@@ -13,7 +13,7 @@ COMMENT=		CORBA Interface Definition Language parser
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		bison flex
+USE_TOOLS+=		bison flex pkg-config
 CONFIGURE_ENV+=		HAVE_YACC=yes
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libIDL-2.0.pc.in
@@ -30,7 +30,6 @@ CONFIGURE_ENV.SunOS+=	CPP=/usr/lib/cpp
 CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

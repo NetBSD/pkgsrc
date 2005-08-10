@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/07/22 22:13:25 adam Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/10 20:56:16 jlam Exp $
 
 DISTNAME=	ccgo-0.3.6.2
 CATEGORIES=	games
@@ -11,6 +11,7 @@ COMMENT=	Go board with IGS and gnugo interface
 DEPENDS+=	gnugo>=3.4:../../games/gnugo
 BUILD_USES_MSGFMT=	yes
 
+USE_TOOLS+=		pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -28,5 +29,4 @@ PREFIX.gnugo_DEFAULT=	${LOCALBASE}
 .include "../../devel/gconfmm/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

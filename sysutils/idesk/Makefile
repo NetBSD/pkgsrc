@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/21 16:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/10 20:56:24 jlam Exp $
 #
 
 DISTNAME=	idesk-0.7.2
@@ -11,7 +11,7 @@ COMMENT=	Lightweight desktop icons handler
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-libsn
 
@@ -19,7 +19,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/idesk
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/idesk
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"

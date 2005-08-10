@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/07/30 10:56:13 markd Exp $
+# $NetBSD: Makefile,v 1.46 2005/08/10 20:56:10 jlam Exp $
 
 DISTNAME=	arts-1.4.2
 CATEGORIES=	audio
@@ -9,7 +9,7 @@ COMMENT=	Analog Real-Time Synthesizer
 
 CONFLICTS+=	kdelibs-2*
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl pkg-config
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
@@ -22,7 +22,6 @@ _IN_ARTS_BUILD=		yes
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/21 16:29:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:10 jlam Exp $
 
 DISTNAME=		amarok-1.2.4
 CATEGORIES=		audio kde
@@ -10,7 +10,7 @@ HOMEPAGE=		http://amarok.kde.org/
 COMMENT=		KDE audio player
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
@@ -29,7 +29,6 @@ BUILDLINK_DEPENDS.arts+=	arts>=1.2
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/tunepimp/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../multimedia/gst-plugins/buildlink3.mk"

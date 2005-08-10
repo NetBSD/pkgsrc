@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/21 16:29:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=		xmms-musepack-1.1
@@ -12,10 +12,10 @@ COMMENT=		XMMS plugin for musepack (mpc) files
 
 USE_LANGUAGES=		c++
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
 .include "../../audio/libmusepack/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

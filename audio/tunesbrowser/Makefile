@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/05 12:58:49 tonio Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:12 jlam Exp $
 #
 
 DISTNAME=		tunesbrowser-0.3.0
@@ -13,6 +13,7 @@ COMMENT=		Front-end for DAAP client
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/tunesbrowser
 DEPENDS+=		gst-plugins-esound>=0.8.1:../../audio/gst-plugins-esound
@@ -23,7 +24,6 @@ BUILDLINK_DEPENDS.libopendaap+=	libopendaap>=0.4.0
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .include "../../audio/libopendaap/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/gst-plugins-gnomevfs/buildlink3.mk"

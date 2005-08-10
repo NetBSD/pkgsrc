@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/25 12:49:08 markd Exp $
+# $NetBSD: Makefile,v 1.21 2005/08/10 20:56:20 jlam Exp $
 #
 
 DISTNAME=	kmplayer-0.9.0a
@@ -16,7 +16,7 @@ DEPENDS+=		mencoder>=1.0rc3:../../multimedia/mencoder
 DEPENDS+=		xine-arts>=1rc0a:../../audio/xine-arts
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
@@ -30,7 +30,6 @@ SUBST_STAGE.desktop=	pre-configure
 SUBST_FILES.desktop=	src/kmplayer.desktop
 SUBST_SED.desktop=	-e 's|@PREFIX@|${PREFIX}|g'
 
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

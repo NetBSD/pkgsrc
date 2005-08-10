@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/07/21 16:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/08/10 20:56:16 jlam Exp $
 #
 
 DISTNAME=	conglomerate-0.9.0
@@ -16,7 +16,7 @@ DEPENDS+=		docbook-xml>=4.2nb6:../../textproc/docbook-xml
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--enable-printing
@@ -31,7 +31,6 @@ GCONF2_SCHEMAS=		conglomerate.schemas
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pkg-config/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
