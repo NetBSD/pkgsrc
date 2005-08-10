@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/10 13:52:52 drochner Exp $
+
+SHA1 (libdnet-1.10.tar.gz) = 1dd9594adb5a3af121960abd6960bcedfc815f37
+RMD160 (libdnet-1.10.tar.gz) = 167cf841b3fdd061ec8d6a56d53c341678ee5a9e
+Size (libdnet-1.10.tar.gz) = 419752 bytes
+SHA1 (patch-aa) = 34258a63fc9f3866920b7529e8d8b4ea94d36445
