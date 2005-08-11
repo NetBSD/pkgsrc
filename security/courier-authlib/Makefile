@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/07/16 01:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/11 00:03:16 jlam Exp $
 
 .include "Makefile.common"
 
-DISTNAME=	courier-authlib-0.55
-PKGREVISION=	1
+DISTNAME=	courier-authlib-0.57
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,16 +16,17 @@ CONFLICTS+=	courier-authldap-[0-9]*
 CONFLICTS+=	courier-authmysql-[0-9]*
 CONFLICTS+=	courier-authpgsql-[0-9]*
 
-USE_TOOLS+=		cat gmake perl:run
 USE_LIBTOOL=		yes
 PKG_SYSCONFSUBDIR=	authlib
 
-REPLACE_PERL=		sysconftool
+REPLACE_PERL=		samplepipe.pl sysconftool
+
+USE_TOOLS+=		cat:run gmake perl:run
+CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q}		# makedat
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-stdheaderdir
-CONFIGURE_ENV+=		CAT="${TOOLS_CAT}"
 
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=	--with-authdaemonvar=${AUTHDAEMONVAR}
@@ -36,7 +36,7 @@ FILES_SUBST+=		AUTHDAEMONVAR=${AUTHDAEMONVAR}
 # Expect is used to change the password from within the courier webmail
 # application (sqwebmail).
 #
-CONFIGURE_ENV+=		EXPECT="${LOCALBASE}/bin/expect"
+CONFIGURE_ENV+=		EXPECT=${LOCALBASE:Q}/bin/expect
 
 AUTHLIBDIR=		lib/courier-authlib
 AUTHLIBEXECDIR=		libexec/courier-authlib
@@ -64,7 +64,7 @@ INSTALL_AM_MAKEFLAGS=	authdaemonrc=${EGDIR}/authdaemonrc		\
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
-POST_INSTALL_TARGETS=	post-install-common
+POST_INSTALL_TARGETS=	post-install-common post-install-authdaemon
 
 .include "options.mk"
 .include "../../devel/libltdl/buildlink3.mk"
@@ -89,8 +89,8 @@ INSTALLATION_DIRS=	bin sbin
 post-install: ${POST_INSTALL_TARGETS}
 
 post-install-common:
-	${INSTALL_SCRIPT} ${WRKSRC}/makedat/makedat ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/makedat/makedat ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/authldap.schema ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -98,5 +98,9 @@ post-install-common:
 	${INSTALL_DATA} ${WRKSRC}/README.authdebug.html ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.html ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README_authlib.html ${DOCDIR}
+
+post-install-authdaemon:
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authdaemonrc.dist
+	${CHMOD} ${SHAREMODE} ${EGDIR}/authdaemonrc.dist
 
 .include "../../mk/bsd.pkg.mk"
