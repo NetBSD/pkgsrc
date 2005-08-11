@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2005/07/16 01:19:13 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/08/11 00:03:51 jlam Exp $
 
-DISTNAME=	sqwebmail-5.0.1
+DISTNAME=	sqwebmail-5.0.4
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
@@ -10,8 +10,8 @@ MAINTAINER=	jlam@NetBSD.org
 COMMENT=	webmail CGI for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/sqwebmail/
 
-DEPENDS+=	courier-maildir>=0.48.2:../../mail/courier-maildir
-DEPENDS+=	maildrop>=1.8.0:../../mail/maildrop
+DEPENDS+=	courier-maildir>=0.51.0:../../mail/courier-maildir
+DEPENDS+=	maildrop>=1.8.1:../../mail/maildrop
 
 USE_TOOLS+=		env gmake perl:run
 USE_LANGUAGES=		c c++
@@ -88,13 +88,6 @@ CONF_FILES_PERMS+=	${PREFIX}/share/courier/sqwebmail/${FILE}	\
 SPECIAL_PERMS=		libexec/courier/sqwebpasswd			\
 			${COURIER_USER} ${COURIER_GROUP} 2755
 RCD_SCRIPTS=		sqwebmail
-
-SUBST_CLASSES+=		courier
-SUBST_MESSAGE.courier=	"Substituting for @mailuser@ and @mailgroup@."
-SUBST_FILES.courier=	sqwebmail/Makefile.in
-SUBST_SED.courier=	-e "s|@mailuser@|${COURIER_USER}|g"		\
-			-e "s|@mailgroup@|${COURIER_GROUP}|g"
-SUBST_STAGE.courier=	pre-configure
 
 INSTALLATION_DIRS=	bin man/man1 sbin
 

@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2005/03/23 04:55:36 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2005/08/11 00:03:51 jlam Exp $
 
---- Makefile.in.orig	2004-12-09 21:54:15.000000000 -0500
+--- Makefile.in.orig	2005-07-23 10:00:11.000000000 -0400
 +++ Makefile.in
-@@ -219,19 +219,18 @@ DIST_SUBDIRS = numlib gdbmobj bdbobj md5
- noinst_SCRIPTS = sqwebmail.spec
- EXTRA_DIST = INSTALL.html INSTALL.vchkpw README NEWS README.html README.pam sysconftool automake.fix COPYING.GPL README.logindomainlist.html
+@@ -236,19 +236,18 @@ EXTRA_DIST = INSTALL.html README NEWS RE
+ 	pgpkeys.txt
+ 
  scriptbindir = $(sbindir)
 -scriptbin_SCRIPTS = \
 -	sharedindexinstall sharedindexsplit
