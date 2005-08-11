@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.63 2005/08/11 07:08:46 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.64 2005/08/11 19:16:33 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -197,3 +197,7 @@ Pullup ticket 672 - requested by Lubomir Sedlacik
 security fixes for gaim
 Pullup ticket 673 - requested by Lubomir Sedlacik
 security fix for cups
+Pullup ticket 675 - requested by Mark Davies
+portability fix for kdelibs3
+Pullup ticket 674 - requested by Mark Davies
+security fix for kdegraphics3
