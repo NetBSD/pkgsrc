@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:04 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/08/11 00:03:16 jlam Exp $
 bin/courierauthconfig
 bin/makedat
 include/courier_auth_config.h
@@ -12,6 +12,8 @@ lib/courier-authlib/libcourierauthsasl.la
 lib/courier-authlib/libcourierauthsaslclient.la
 libexec/courier-authlib/authdaemond
 libexec/courier-authlib/authsystem.passwd
+man/man1/authpasswd.1
+man/man1/authtest.1
 man/man1/courierlogger.1
 man/man3/auth_enumerate.3
 man/man3/auth_generic.3
@@ -26,6 +28,7 @@ man/man8/userdb.8
 man/man8/userdbpw.8
 sbin/authdaemond
 sbin/authenumerate
+sbin/authpasswd
 sbin/authtest
 sbin/courierlogger
 sbin/sysconftool
