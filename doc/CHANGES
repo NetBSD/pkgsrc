@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10848 2005/08/10 21:02:39 jlam Exp $
+$NetBSD: CHANGES,v 1.10849 2005/08/11 00:05:14 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -574,3 +574,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/jpegpixi to 1.1.0 [gdt 2005-08-10]
 	Updated mail/sylpheed-devel to 2.1.0 [chris 2005-08-10]
 	Updated sysutils/gamin to 0.1.5 [jlam 2005-08-10]
+	Updated security/courier-authlib to 0.57 [jlam 2005-08-11]
+	Updated mail/courier-maildir to 0.51.0 [jlam 2005-08-11]
+	Updated mail/maildrop to 1.8.1 [jlam 2005-08-11]
+	Updated mail/sqwebmail to 5.0.4 [jlam 2005-08-11]
+	Updated mail/courier-imap to 4.0.4 [jlam 2005-08-11]
