@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/05 12:14:51 salo Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/11 17:29:47 reed Exp $
 #
 
 DISTNAME=		gopher_3.0.9
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		net
 MASTER_SITES=		http://quux.org/devel/gopher/Downloads/
 
-MAINTAINER=		jgoerzen@complete.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		gopher://quux.org/1/devel/gopher/
 COMMENT=		Distributed document delivery client and server
 
