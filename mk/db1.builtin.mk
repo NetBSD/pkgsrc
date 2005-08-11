@@ -1,10 +1,10 @@
-# $NetBSD: db1.builtin.mk,v 1.13 2005/06/30 12:52:12 adam Exp $
+# $NetBSD: db1.builtin.mk,v 1.14 2005/08/11 20:25:20 cube Exp $
 
 BUILTIN_PKG:=	db1
 
-BUILTIN_FIND_LIBS:=		db db1
+BUILTIN_FIND_LIBS:=		db1 db
 BUILTIN_FIND_FILES_VAR:=	H_DB
-BUILTIN_FIND_FILES.H_DB=	/usr/include/db.h /usr/include/db1/db.h
+BUILTIN_FIND_FILES.H_DB=	/usr/include/db1/db.h /usr/include/db.h
 #
 # The builtin Berkeley database library must support hash version 2 or
 # else it doesn't support db-1.85 databases.
@@ -68,11 +68,11 @@ BUILDLINK_PREFIX.db1=	/usr
 .    if exists(${H_DB})
 BUILDLINK_INCDIRS.db1?=	${H_DB:H:S/^${BUILDLINK_PREFIX.db1}\///}
 .    endif
-.    if !empty(BUILTIN_LIB_FOUND.db:M[yY][eE][sS])
-BUILDLINK_LDADD.db1=	-ldb
-.    elif !empty(BUILTIN_LIB_FOUND.db1:M[yY][eE][sS])
+.    if !empty(BUILTIN_LIB_FOUND.db1:M[yY][eE][sS])
 BUILDLINK_LDADD.db1=	-ldb1
 BUILDLINK_TRANSFORM+=	l:db:db1
+.    elif !empty(BUILTIN_LIB_FOUND.db:M[yY][eE][sS])
+BUILDLINK_LDADD.db1=	-ldb
 .    else
 BUILDLINK_LDADD.db1=	# empty
 .    endif
