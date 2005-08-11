@@ -1,31 +1,51 @@
-# $NetBSD: mfs_rcd,v 1.5 2005/07/29 12:13:01 xtraeme Exp $ 
+# $NetBSD: livecd,v 1.1 2005/08/11 20:48:55 xtraeme Exp $ 
 #
 # Mount mfs directories and unpack the required files
 # before anything.
 
-# PROVIDE: LiveCD
+# PROVIDE: mklivecd
 # BEFORE: disks
 
-. /etc/rc.subr
+$_rc_subr_loaded . /etc/rc.subr
 
-name="mfsrc"
+name="livecd"
 rcvar=$name
 
-start_cmd="mfsrc_start"
-stop_cmd="mfsrc_stop"
+start_cmd="livecd_start"
+stop_cmd="livecd_stop"
 
-mfsrc_start()
+livecd_start()
 {
+	if [ -f /stand/usr.zfs ]; then
+		echo -n "=> Mounting compressed images: "
+		/rescue/vnconfig -z vnd0 /stand/usr.zfs
+		/rescue/mount -r /dev/vnd0a /usr
+		if [ ! -f /stand/var_db_pkg.zfs ]; then
+			echo "/usr."
+		else
+			/rescue/vnconfig -z vnd1 /stand/var_db_pkg.zfs
+			/rescue/mount -r /dev/vnd1a /var/db/pkg
+			echo "/usr, /var/db/pkg."
+		fi
+	fi
+
 	echo -n "=> Mounting Memory based filesystems: "
+
 	mount_mfs @MNT_DEV_ARGS@ swap /dev
         echo -n "/dev, "
+
 	mount_mfs @MNT_ETC_ARGS@ swap /etc
         echo -n "/etc, "
+
 	mount_mfs @MNT_VAR_ARGS@ swap /var
-        echo -n "/root, "
+        echo -n "/var, "
+
 	mount_mfs @MNT_ROOT_ARGS@ swap /root
-        echo "/tmp."
+	echo -n "/root, "
+
 	mount_mfs @MNT_TMP_ARGS@ swap /tmp
+	echo "/tmp"
+
 	@HOME@
 	@HOMETAR@
 	@USRPKGETC@
@@ -42,7 +62,7 @@ mfsrc_start()
 	done
 }
 
-mfsrc_stop()
+livecd_stop()
 {
 	echo "Please don't do that :-)"
 }
