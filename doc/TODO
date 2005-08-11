@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3806 2005/08/11 00:05:51 jlam Exp $
+$NetBSD: TODO,v 1.3807 2005/08/11 11:15:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -578,7 +578,6 @@ Suggested package updates
 	o jftpgw-0.13.5
 	o john-1.6.37
 	o jove-4.16.0.65
-	o jpegpixi-1.1.0
 	o jpilot-0.99.7 [pkg/24635]
 	o kaffe-1.1.5 [pkg/30017]
 	o kaffe-nox11-1.1.5 [pkg/30017]
@@ -834,7 +833,6 @@ Suggested package updates
 	o pear-HTTP_Request-1.2.4
 	o pear-Net_Socket-1.0.6
 	o pen-0.15.0
-	o perl-5.8.7
 	o pfqueue-0.4.2
 	o pfstat-1.8
 	o phoon-20030120
@@ -998,7 +996,6 @@ Suggested package updates
 	o spamprobe-1.2a
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
-	o squid-2.5.10
 	o srp_client-1.7.5 [jlam]
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1
@@ -1159,7 +1156,6 @@ Suggested package updates
 	o ysm-2.9.6
 	o ytalk-3.2.0 [pkg/28840]
 	o yudit-2.7.8
-	o zebra-0.95
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.2
 	o zircon-1.18.256
