@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/16 01:08:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/11 18:19:14 drochner Exp $
 #
 
-DISTNAME=		partysip-2.2.1
+DISTNAME=		partysip-2.2.3
 CATEGORIES=		net
 MASTER_SITES=		http://savannah.gnu.org/download/partysip/
 
