@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/06/16 17:27:12 gendalia Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/08/11 08:48:04 adam Exp $
 bin/afsmonitor
 bin/bos
 bin/cmdebug
@@ -128,7 +128,15 @@ include/afs/volume.h
 include/afs/xfsattrs.h
 include/afs/xstat_cm.h
 include/afs/xstat_fs.h
+include/des.h
+include/des_conf.h
 include/des_odd.h
+include/des_prototypes.h
+include/lock.h
+include/lwp.h
+include/mit-cpyright.h
+include/potpourri.h
+include/preempt.h
 include/rx/fcrypt.h
 include/rx/rx.h
 include/rx/rx_clock.h
@@ -148,6 +156,7 @@ include/rx/rxkad_prototypes.h
 include/rx/rxstat.h
 include/rx/xdr.h
 include/rx/xdr_prototypes.h
+include/timer.h
 include/ubik.h
 include/ubik_int.h
 lib/afs/libacl.a
