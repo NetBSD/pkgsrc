@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.62 2005/08/10 18:29:03 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.63 2005/08/11 07:08:46 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -195,3 +195,5 @@ Pullup ticket 671 - requested by Lubomir Sedlacik
 security update for inkscape
 Pullup ticket 672 - requested by Lubomir Sedlacik
 security fixes for gaim
+Pullup ticket 673 - requested by Lubomir Sedlacik
+security fix for cups
