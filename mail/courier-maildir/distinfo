@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/03/22 04:21:25 jlam Exp $
+$NetBSD: distinfo,v 1.5 2005/08/11 00:03:32 jlam Exp $
 
-SHA1 (courier-0.49.0.tar.bz2) = 838c00f5c3be9f15174ff8b872e553859a875d7f
-RMD160 (courier-0.49.0.tar.bz2) = 4842fc4f28843b374c5c70a736ab6757a391abc5
-Size (courier-0.49.0.tar.bz2) = 5884664 bytes
+SHA1 (courier-0.51.0.tar.bz2) = c0811f1c21d2de8c4d817238956229288f7f9449
+RMD160 (courier-0.51.0.tar.bz2) = e0bd74219a7fc12bd3a836f3340757aa00dac8f2
+Size (courier-0.51.0.tar.bz2) = 6575351 bytes

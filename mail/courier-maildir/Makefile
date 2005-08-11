@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2005/08/06 06:19:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/11 00:03:32 jlam Exp $
 
-DISTNAME=	courier-0.49.0
+DISTNAME=	courier-0.51.0
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
 PKGBASE=	${PKGNAME:C/-[^-]*$//}
 CATEGORIES=	mail
@@ -25,10 +25,11 @@ USE_LANGUAGES=		c c++
 CONFIGURE_ENV+=		ac_cv_path_COURIERAUTHCONFIG=${TRUE:Q}
 
 # These are files required by the Courier configure scripts.
-WRKSRC_FILES=		config.guess config.sub configure depcomp	\
-			install-sh ltmain.sh missing sysconftool
-WRKSRC_FILES+=		Makefile.in courier.spec.in courier.sysvinit.in	\
-			dbobj.h.in dbobj.config.in courier/courier.c
+WRKSRC_FILES=		courier/courier.c config.guess config.sub	\
+			configure depcomp install-sh ltmain.sh missing	\
+			sysconftool
+WRKSRC_FILES+=		Makefile.in courier.spec.in courier.lpspec.in	\
+			dbobj.h.in dbobj.config.in courier.sysvinit.in
 
 # These are subdirectories containing libraries used by courier-maildir.
 #
@@ -41,7 +42,7 @@ BUILD_DIRS=		${WRKSRC_SUBDIRS:S/^/${WRKSRC}\//}
 INSTALLATION_DIRS=	bin man/man1 man/man5 man/man5 man/man7 man/man8 sbin
 
 USE_PKGINSTALL=		yes
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
 OWN_DIRS=		${PKG_SYSCONFDIR}/shared
 OWN_DIRS+=		${PKG_SYSCONFDIR}/shared.tmp
 CONF_FILES=		${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg
@@ -50,7 +51,7 @@ CONF_FILES_PERMS=	${EGDIR}/sharedindexupdate			\
 			${ROOT_USER} ${ROOT_GROUP} 0755
 
 post-build:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/sharedindexupdate.sh	\
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/sharedindexupdate.sh	\
 		> ${WRKDIR}/sharedindexupdate.sh
 
 do-install:
