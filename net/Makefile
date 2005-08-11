@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.569 2005/08/11 18:11:27 drochner Exp $
+# $NetBSD: Makefile,v 1.570 2005/08/11 20:08:34 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -322,7 +322,6 @@ SUBDIR+=	py-zsi
 SUBDIR+=	pygopherd
 SUBDIR+=	qadsl
 SUBDIR+=	quagga
-SUBDIR+=	ra-pna-proxy
 SUBDIR+=	ra-rtsp-proxy
 SUBDIR+=	radiusd-cistron
 SUBDIR+=	rdesktop
