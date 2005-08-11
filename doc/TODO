@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3807 2005/08/11 11:15:50 adam Exp $
+$NetBSD: TODO,v 1.3808 2005/08/11 15:33:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -1157,7 +1157,6 @@ Suggested package updates
 	o ytalk-3.2.0 [pkg/28840]
 	o yudit-2.7.8
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.2
 	o zircon-1.18.256
 	o zope25-Photo-1.2.4
 	o zope25-ZWiki-0.39.0
