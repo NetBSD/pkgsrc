@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10854 2005/08/11 17:45:33 reed Exp $
+$NetBSD: CHANGES,v 1.10855 2005/08/11 20:10:01 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -585,3 +585,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/cairo to 0.9.0 [adam 2005-08-11]
 	Updated editors/zile to 2.2.4 [adam 2005-08-11]
 	Added www/kazehakase version 0.2.9 [reed 2005-08-11]
+	Removed net/ra-pna-proxy [tron 2005-08-11]
