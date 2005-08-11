@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.21 2005/07/29 12:13:01 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.22 2005/08/11 20:48:55 xtraeme Exp $
 #
 # Copyright (c) 2004, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,6 +62,7 @@
 : ${GRUB_FILES:=stage1 stage2 stage2_eltorito iso9660_stage1_5 \
                 xfs_stage1_5 ufs2_stage1_5 reiserfs_stage1_5 \
                 jfs_stage1_5 ffs_stage1_5 fat_stage1_5 e2fs_stage1_5}
+: ${GRUB_BOOT_ARGS:= -boot-load-size 30 -boot-info-table}
 #
 # Common vars for cdboot/grub.
 #
@@ -128,8 +129,9 @@ do_conf()
     KERNEL_VARS="MULTIPLE_KERNELS BOOTKERN KERNEL_NAME"
 
     MISC_VARS="ENABLE_X11 MKISOFS_ARGS CDRECORD_ARGS BLANK_BEFORE_BURN \
-               CDROM_DEVICE PERSONAL_CONFIG IMAGE_NAME PKG_SYSCONFDIR\
-               REMOVE_DIRS USE_GNU_GRUB GRUB_FILES_DIR HOSTNAME"
+               CDROM_DEVICE PERSONAL_CONFIG IMAGE_NAME PKG_SYSCONFDIR \
+               REMOVE_DIRS USE_GNU_GRUB GRUB_FILES_DIR HOSTNAME \
+               VND_COMPRESSION"
 
     MNT_VARS="MNT_ETC_ARGS MNT_VAR_ARGS MNT_ROOT_ARGS \
               MNT_TMP_ARGS MNT_HOME_ARGS MNT_PKG_SYSCONFDIR_ARGS \
@@ -167,6 +169,7 @@ do_conf()
     : ${REMOVE_DIRS:=altroot usr/share/info}
     : ${USE_GNU_GRUB:=yes}
     : ${GRUB_FILES_DIR:=@LOCALBASE@/lib/grub/@MACHINE_ARCH@-}
+    : ${VND_COMPRESSION:=no}
     #	
     # Mount arguments
     #
@@ -293,9 +296,16 @@ copy_bootfiles()
 
 do_menu_lst()
 {
-    [ -n "$verbose_mode" ] && \
-        showmsg_n "Creating $ISODIR/$GRUB_BOOTDIR/menu.lst..."
-    if [ ! -f $ISODIR/$GRUB_BOOTDIR/menu.lst ]; then
+    if [ -f $ISODIR/$GRUB_BOOTDIR/menu.lst ]; then
+        showmsg_n "Updating menu.lst..."
+        (   \
+        echo "title NetBSD/$KERNEL_NAME kernel";   \
+        echo "kernel --type=netbsd /$GRUB_BOOTDIR/$BOOTKERN.gz"; \
+        echo;   \
+        ) >> $ISODIR/$GRUB_BOOTDIR/menu.lst
+    else
+        [ -n "$verbose_mode" ] && \
+            showmsg_n "Creating $ISODIR/$GRUB_BOOTDIR/menu.lst..."
         cat > $ISODIR/$GRUB_BOOTDIR/menu.lst << _EOF_
 # Default GRUB menu file created by ${progname}.
 # Date: $(date).
@@ -524,7 +534,7 @@ do_cdlive()
             fi
 	fi # ENABLE_X11
 			
-	cp $SHAREDIR/mfs_rcd $ISODIR/etc/rc.d
+	cp $SHAREDIR/livecd $ISODIR/etc/rc.d
 
 	# /etc/rc.conf
 	showmsg_n "Installing configuration files..."
@@ -534,7 +544,7 @@ do_cdlive()
 	touch $ISODIR/etc/fstab
 
 	(						    \
-	echo "mfsrc=yes";				    \
+	echo "livecd=yes";				    \
 	echo "dhclient=yes dhclient_flags=-q";		    \
 	echo "wscons=yes";				    \
 	echo "hostname=$HOSTNAME";			    \
@@ -551,7 +561,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.21 2005/07/29 12:13:01 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.22 2005/08/11 20:48:55 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -608,9 +618,11 @@ _EOF_
 		echo $count > $pkgsrc_mntstat
 		echo "=> pkgsrc directory already mounted."
             else
-		echo "=> pkgsrc directory ready."
-		echo "1" > $pkgsrc_mntstat
-		mount_null $PKGSRCDIR $ISODIR/usr/pkgsrc
+                mount_null $PKGSRCDIR $ISODIR/usr/pkgsrc
+                if [ "$?" -eq 0 ]; then
+		    echo "=> pkgsrc directory ready."
+		    echo "1" > $pkgsrc_mntstat
+                fi
             fi
 	else
 	    	showmsg "==> CANNOT FIND $PKGSRCDIR"
@@ -623,9 +635,11 @@ _EOF_
 		echo $count > $pkgsrcdist_mntstat
 		echo "=> distfiles directory already mounted."
 	    else
-		echo "=> distfiles directory ready."
-		echo "1" > $pkgsrcdist_mntstat
-		mount_null $PKGSRCDISTDIR $ISODIR/usr/pkgsrc/distfiles
+                mount_null $PKGSRCDISTDIR $ISODIR/usr/pkgsrc/distfiles
+                if [ "$?" -eq 0 ]; then
+		    echo "=> distfiles directory ready."
+		    echo "1" > $pkgsrcdist_mntstat
+                fi
             fi
 	else
 	    echo "==> CANNOT FIND $PKGSRCDISTDIR"
@@ -641,7 +655,7 @@ _EOF_
 	fi
 
 	cd $ISODIR
-	cp -f $SHAREDIR/mfs_rcd $ISODIR/etc/rc.d
+	cp -f $SHAREDIR/livecd $ISODIR/etc/rc.d
 
 	SUBST_H="mount_mfs $MNT_HOME_ARGS swap /home"
 	SUBST_HT="@TAR@ xfzp /stand/mfs_home.tgz -C /"
@@ -653,26 +667,32 @@ _EOF_
 	    -e "s|@MNT_VAR_ARGS@|$MNT_VAR_ARGS|g" \
 	    -e "s|@MNT_ROOT_ARGS@|$MNT_ROOT_ARGS|g" \
 	    -e "s|@MNT_TMP_ARGS@|$MNT_TMP_ARGS|g" \
-	    $ISODIR/etc/rc.d/mfs_rcd > $ISODIR/etc/rc.d/mfs_rcd.in
-	mv $ISODIR/etc/rc.d/mfs_rcd.in $ISODIR/etc/rc.d/mfs_rcd
+	    $ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.in
+	mv $ISODIR/etc/rc.d/livecd.in $ISODIR/etc/rc.d/livecd
 		
-	for U in root var dev etc home
+	for U in root dev etc home
 	do
 	    if [ -d $ISODIR/$U ]; then
-	        showmsg_n "Creating /stand/mfs_$U.tgz..."
+	        showmsg_n "Creating /stand/mfs_$U.tgz... "
 		@TAR@ cfzp $ISODIR/stand/mfs_$U.tgz $U >/dev/null 2>&1
 		showmsgstring
             fi
 	done
+
+        if [ "$VND_COMPRESSION" = "no" ]; then
+                showmsg_n "Creating /stand/mfs_var.tgz... "
+                @TAR@ cfzp $ISODIR/stand/mfs_var.tgz var >/dev/null 2>&1
+                showmsgstring
+        fi
  
 	if [ -d $ISODIR/home ]; then
 	    sed	-e "s|@HOME@|$SUBST_H|" -e "s|@HOMETAR@|$SUBST_HT|" \
-		$ISODIR/etc/rc.d/mfs_rcd > $ISODIR/etc/rc.d/mfs_rcd.f
-	    mv $ISODIR/etc/rc.d/mfs_rcd.f $ISODIR/etc/rc.d/mfs_rcd
+		$ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
+	    mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	else
 	    sed	-e "s|@HOME@||" -e "s|@HOMETAR@||" \
-                $ISODIR/etc/rc.d/mfs_rcd > $ISODIR/etc/rc.d/mfs_rcd.f
-            mv $ISODIR/etc/rc.d/mfs_rcd.f $ISODIR/etc/rc.d/mfs_rcd
+                $ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
+            mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	fi
                         
 	if [ -d $ISODIR/$PKG_SYSCONFDIR ]; then
@@ -681,19 +701,20 @@ _EOF_
 		$PKG_SYSCONFDIR >/dev/null 2>&1
 	    showmsgstring
 	    sed	-e "s|@USRPKGETC@|$SUBST_S|" -e "s|@USRPKGETCTAR@|$SUBST_ST|" \
-		$ISODIR/etc/rc.d/mfs_rcd > $ISODIR/etc/rc.d/mfs_rcd.f
-             mv $ISODIR/etc/rc.d/mfs_rcd.f $ISODIR/etc/rc.d/mfs_rcd
+		$ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
+             mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	else
 	    sed -e "s|@USRPKGETC@||" -e "s|@USRPKGETCTAR@||" \
-	        $ISODIR/etc/rc.d/mfs_rcd > $ISODIR/etc/rc.d/mfs_rcd.f
-            mv $ISODIR/etc/rc.d/mfs_rcd.f $ISODIR/etc/rc.d/mfs_rcd
+	        $ISODIR/etc/rc.d/livecd > $ISODIR/etc/rc.d/livecd.f
+            mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	fi
 
-	if [ "${ENABLE_X11}" = "yes" ]; then
-	    [ -f /etc/X11/XF86Config ] && \
-	        cp /etc/X11/XF86Config $ISODIR/etc/X11
-	fi
-
+        if [ "${ENABLE_X11}" = "yes" -a ! -f $ISODIR/etc/X11/XF86Config ]; then
+            if [ -f /etc/X11/XF86Config ]; then
+                cp /etc/X11/XF86Config $ISODIR/etc/X11
+            fi
+        fi
+ 
 	if [ "${PERSONAL_CONFIG}" = "yes" ]; then
             if [ -f $config_dir/$pers_conffile ]; then
 	        echo
@@ -713,7 +734,7 @@ _EOF_
             fi
         fi
 		
-        # Make sure mfs_rcd has the right permissions, because
+        # Make sure livecd has the right permissions, because
 	# it could be critical!.
 
 	chmod -R a+rx $ISODIR/etc/rc.d
@@ -778,6 +799,38 @@ _EOF_
 	done
     ;;
     iso)
+        if [ "$VND_COMPRESSION" = "yes" ]; then
+            cd $ISODIR
+
+            if [ ! -f $ISODIR/stand/usr.zfs ]; then
+                showmsg_n "Creating image of /usr..."
+                makefs -t ffs stand/usr.fs usr > /dev/null 2>&1
+                showmsgstring
+                showmsg_n "Compressing image of /usr..."
+                vndcompress stand/usr.fs stand/usr.zfs > /dev/null 2>&1
+                showmsgstring
+                rm stand/usr.fs
+                find $ISODIR/usr -type f | xargs rm -v
+            fi
+            if [ -d $ISODIR/var/db/pkg ]; then
+                if [ ! -f stand/var_db_pkg.zfs ]; then
+                    showmsg_n "Creating image of /var/db/pkg... "
+                    makefs -t ffs -M 1m $ISODIR/stand/var_db_pkg.fs \
+                        var/db/pkg > /dev/null 2>&1
+                    showmsgstring
+                    showmsg_n "Compressing image of /var/db/pkg... "
+                    vndcompress $ISODIR/stand/var_db_pkg.fs \
+                        $ISODIR/stand/var_db_pkg.zfs > /dev/null 2>&1
+                    showmsgstring
+                    rm -f $ISODIR/stand/var_db_pkg.fs
+                    rm -rf $ISODIR/var/db/pkg/*
+                    @TAR@ cfzp stand/mfs_var.tgz var
+                fi
+            else
+                    @TAR@ cfzp stand/mfs_var.tgz var
+            fi
+        fi
+
         _do_real_iso_image()
         {
             if [ -f "$BASEDIR/$IMAGE_NAME.iso" ]; then
@@ -804,7 +857,7 @@ _EOF_
 
             showmsg_n "Creating ISO CD9660 image..."
             if [ "$USE_GNU_GRUB" = "yes" ]; then
-                $MKISOFS $MKISOFS_FIXED_ARGS $MKISOFS_ARGS \
+                $MKISOFS $MKISOFS_FIXED_ARGS $GRUB_BOOT_ARGS $MKISOFS_ARGS \
 		-b $GRUB_BOOTDIR/$GRUB_BOOTIMAGE \
 		-o $BASEDIR/$IMAGE_NAME.iso $ISODIR > /dev/null 2>&1
 		showmsgstring

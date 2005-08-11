@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.11 2005/07/29 12:13:01 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.12 2005/08/11 20:48:55 xtraeme Exp $
 .\"
 .\" mklivecd - Make your own NetBSD/i386 Live CD-ROM/DVD-ROM
 .\"
@@ -28,7 +28,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd July 25, 2005
+.Dd August 11, 2005
 .Dt MKLIVECD 8
 .Os
 .Sh NAME
@@ -274,11 +274,26 @@ When it's disabled the
 CDBootloader will be used.
 Defaults to
 .Sy yes .
+.It VND_COMPRESSION
+Enable this to mount
+.Pa /usr ,
+and
+.Pa /var/db/pkg
+via
+.Xr vnconfig 8
+with compression enabled.
+Note you'll need to have
+.Sy options VND_COMPRESSION
+in your kernel config, at the moment
+this option is only available on 
+.Nx
+>=4.0. Defaults to
+.Sy no .
 .It MNT_{MOUNT_POINT}_ARGS
 This specifies the arguments passed to the
 .Xr mount 8
 command used in the
-.Pa mfs_rcd
+.Pa livecd
 script, when the
 .Nx
 Live CD is booted.
