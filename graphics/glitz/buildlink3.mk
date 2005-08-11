@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:14:51 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/08/11 15:24:54 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLITZ_BUILDLINK3_MK:=	${GLITZ_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nglitz}
 BUILDLINK_PACKAGES+=	glitz
 
 .if !empty(GLITZ_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.glitz+=	glitz>=0.1.2
-BUILDLINK_RECOMMENDED.glitz+=	glitz>=0.1.2nb1
+BUILDLINK_DEPENDS.glitz+=	glitz>=0.4.4
+BUILDLINK_RECOMMENDED.glitz+=	glitz>=0.4.4
 BUILDLINK_PKGSRCDIR.glitz?=	../../graphics/glitz
 .endif	# GLITZ_BUILDLINK3_MK
 
