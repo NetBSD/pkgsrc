@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/07/06 18:40:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/08/11 15:25:20 adam Exp $
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
 include/cairo/cairo-glitz.h
@@ -18,7 +18,6 @@ share/doc/cairo/bindings-patterns.html
 share/doc/cairo/bindings-return-values.html
 share/doc/cairo/bindings-streams.html
 share/doc/cairo/bindings-surfaces.html
-share/doc/cairo/cairo-ATSUI-Fonts.html
 share/doc/cairo/cairo-Fonts.html
 share/doc/cairo/cairo-FreeType-Fonts.html
 share/doc/cairo/cairo-Glitz-backend.html
