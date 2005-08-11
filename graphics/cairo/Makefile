@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2005/08/10 20:56:17 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/08/11 15:25:20 adam Exp $
 
-DISTNAME=	cairo-0.5.1
+DISTNAME=	cairo-0.9.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
@@ -21,7 +21,6 @@ BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -29,5 +28,4 @@ BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 .include "../../graphics/libpixman/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
