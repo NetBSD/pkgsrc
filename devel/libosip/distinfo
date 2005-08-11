@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/04/01 19:50:42 drochner Exp $
+$NetBSD: distinfo,v 1.5 2005/08/11 18:16:13 drochner Exp $
 
-SHA1 (libosip2-2.2.0.tar.gz) = d1b095a62840872e74e2538846039a182a620563
-RMD160 (libosip2-2.2.0.tar.gz) = c4be8c10336924f42656fcd1ef3c3a2b36210061
-Size (libosip2-2.2.0.tar.gz) = 617523 bytes
+SHA1 (libosip2-2.2.1.tar.gz) = f9c19b07875d71554b6944d087028c03f2a6f42d
+RMD160 (libosip2-2.2.1.tar.gz) = 1a1b5b80ae47f73f50e363b4f50ece5b2e17f740
+Size (libosip2-2.2.1.tar.gz) = 644055 bytes
 SHA1 (patch-aa) = 9d4fed508ff2cfdaae87b175d575318dbd26ba42
