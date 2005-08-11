@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.48 2005/04/11 21:46:05 tv Exp $
+# $NetBSD: Makefile,v 1.48.2.1 2005/08/11 19:15:22 salo Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	post-3.4.1-kdegraphics-4.diff
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
