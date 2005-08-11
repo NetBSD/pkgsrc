@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/03/06 15:45:38 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/11 14:34:38 uebayasi Exp $
 
 DISTNAME=	flim-1.14.7
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/flim/flim-1.14/
 
@@ -14,14 +15,14 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 BUILD_DEPENDS+=	qkc-*:../../converters/qkc
 
 .if ${EMACS_FLAVOR} == "emacs"
-DEPENDS+=	${PKGNAME_PREFIX}apel>=9.22:../../devel/apel
-BUILD_TARGET=     elc
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=9.22:../../devel/apel
+BUILD_TARGET=	elc
 INSTALL_TARGET= install
-.else   # ${EMACS_FLAVOR} == "xemacs"
+.else	# ${EMACS_FLAVOR} == "xemacs"
 DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
-BUILD_TARGET=     package
+BUILD_TARGET=	package
 INSTALL_TARGET= install-package
-MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
+MAKEFLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .endif
 
 USE_MAKEINFO=	YES
