@@ -1,0 +1,148 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/11 17:58:33 drochner Exp $
+
+--- shoot.c.orig	2005-07-29 01:04:15.000000000 +0200
++++ shoot.c
+@@ -340,7 +340,7 @@ int recv_message(char *buf, int size) {
+ #endif
+ 	*(buf+ ret) = '\0';
+ 	if (ret > 0) {
+-		if (!inv_trans && (regexec(&proexp, rec, 0, 0, 0) != REG_NOERROR)) {
++		if (!inv_trans && (regexec(&proexp, rec, 0, 0, 0) != 0)) {
+ 			retryAfter = SIP_T1;
+ 		}
+ 		/* store the biggest delay if one occured */
+@@ -407,7 +407,7 @@ void handle_3xx(struct sockaddr_in *tadr
+ 	/* we'll try to handle 301 and 302 here, other 3xx are to complex */
+ 	regcomp(&redexp, "^SIP/[0-9]\\.[0-9] 30[125] ", 
+ 			REG_EXTENDED|REG_NOSUB|REG_ICASE);
+-	if (regexec(&redexp, rec, 0, 0, 0) == REG_NOERROR) {
++	if (regexec(&redexp, rec, 0, 0, 0) == 0) {
+ 		/* try to find the contact in the redirect */
+ 		contact = uri_from_contact(rec);
+ 		if (contact==NULL) {
+@@ -451,7 +451,7 @@ void trace_reply()
+ {
+ 	char *contact;
+ 
+-	if (regexec(&tmhexp, rec, 0, 0, 0) == REG_NOERROR) {
++	if (regexec(&tmhexp, rec, 0, 0, 0) == 0) {
+ 		/* we received 483 to many hops */
+ 		printf("%i: ", namebeg);
+ 		if (verbose > 2) {
+@@ -470,7 +470,7 @@ void trace_reply()
+ 		set_maxforw(req, namebeg);
+ 		return;
+ 	}
+-	else if (regexec(&proexp, rec, 0, 0, 0) == REG_NOERROR) {
++	else if (regexec(&proexp, rec, 0, 0, 0) == 0) {
+ 		/* we received a provisional response */
+ 		printf("%i: ", namebeg);
+ 		if (verbose > 2) {
+@@ -504,7 +504,7 @@ void trace_reply()
+ 		else {
+ 			printf("\twithout Contact header\n");
+ 		}
+-		if (regexec(&okexp, rec, 0, 0, 0) == REG_NOERROR)
++		if (regexec(&okexp, rec, 0, 0, 0) == 0)
+ 			on_success(rec);
+ 		else
+ 			exit_code(1);
+@@ -516,7 +516,7 @@ void handle_default()
+ {
+ 	/* in the normal send and reply case anything other 
+ 	   then 1xx will be treated as final response*/
+-	if (regexec(&proexp, rec, 0, 0, 0) == REG_NOERROR) {
++	if (regexec(&proexp, rec, 0, 0, 0) == 0) {
+ 		if (verbose > 1) {
+ 			printf("%s\n\n", rec);
+ 			printf("** reply received ");
+@@ -564,7 +564,7 @@ void handle_default()
+ 		else if (timing) {
+ 			printf("%.3f ms\n", deltaT(&firstsendt, &recvtime));
+ 		}
+-		if (regexec(&okexp, rec, 0, 0, 0) == REG_NOERROR) {
++		if (regexec(&okexp, rec, 0, 0, 0) == 0) {
+ 			on_success(rec);
+ 		}
+ 		else {
+@@ -578,7 +578,7 @@ void handle_randtrash()
+ {
+ 	/* in randomzing trash we are expexting 4?? error codes
+ 	   everything else should not be normal */
+-	if (regexec(&errexp, rec, 0, 0, 0) == REG_NOERROR) {
++	if (regexec(&errexp, rec, 0, 0, 0) == 0) {
+ 		if (verbose > 2)
+ 			printf("received:\n%s\n", rec);
+ 		if (verbose > 1) {
+@@ -620,7 +620,7 @@ void handle_usrloc()
+ 	char *crlf;
+ 	char ruri[11+12+20]; //FIXME: username length 20 should be dynamic
+ 
+-	if (regexec(&proexp, rec, 0, 0, 0) == REG_NOERROR) {
++	if (regexec(&proexp, rec, 0, 0, 0) == 0) {
+ 		if (verbose > 2) {
+ 			print_message_line(rec);
+ 			printf("ignoring provisional response\n\n");
+@@ -638,7 +638,7 @@ void handle_usrloc()
+ 			case REG_REP:
+ 				/* we have sent a register and look 
+ 				   at the response now */
+-				if (regexec(&okexp, rec, 0, 0, 0) == REG_NOERROR) {
++				if (regexec(&okexp, rec, 0, 0, 0) == 0) {
+ 					if (verbose > 1) {
+ 						printf ("\tOK\n");
+ 					}
+@@ -748,7 +748,7 @@ void handle_usrloc()
+ 					dontsend=1;
+ 					return;
+ 				}
+-				if (regexec(&okexp, rec, 0, 0, 0) == REG_NOERROR) {
++				if (regexec(&okexp, rec, 0, 0, 0) == 0) {
+ 					if (verbose > 1) {
+ 						printf("\t200 OK received\n");
+ 					}
+@@ -891,7 +891,7 @@ void handle_usrloc()
+ 					dontsend=1;
+ 					return;
+ 				}
+-				if (regexec(&okexp, rec, 0, 0, 0) == REG_NOERROR) {
++				if (regexec(&okexp, rec, 0, 0, 0) == 0) {
+ 					if (verbose > 1) {
+ 						printf("  reply received\n\n");
+ 					}
+@@ -986,7 +986,7 @@ void handle_usrloc()
+ 					dontsend=1;
+ 					return;
+ 				}
+-				if (regexec(&okexp, rec, 0, 0, 0) == REG_NOERROR) {
++				if (regexec(&okexp, rec, 0, 0, 0) == 0) {
+ 					if (verbose > 1) {
+ 						printf("   OK\n\n");
+ 					}
+@@ -1313,7 +1313,7 @@ void shoot(char *buf, int buff_size)
+ 				}
+ 				/* send ACK for non-provisional reply on INVITE */
+ 				if ((STRNCASECMP(req, "INVITE", 6)==0) && 
+-						(regexec(&replyexp, rec, 0, 0, 0) == REG_NOERROR) && 
++						(regexec(&replyexp, rec, 0, 0, 0) == 0) && 
+ 						(regexec(&proexp, rec, 0, 0, 0) == REG_NOMATCH)) { 
+ 					build_ack(req, rec);
+ 					dontsend = 0;
+@@ -1331,7 +1331,7 @@ void shoot(char *buf, int buff_size)
+ 					dontsend = 1;
+ 					continue;
+ 					}
+-				else if (regexec(&authexp, rec, 0, 0, 0) == REG_NOERROR) {
++				else if (regexec(&authexp, rec, 0, 0, 0) == 0) {
+ 					if (!username) {
+ 						printf("%s\nerror: received 401 but cannot "
+ 							"authentication without a username\n", rec);
+@@ -1346,7 +1346,7 @@ void shoot(char *buf, int buff_size)
+ 					continue;
+ 				} /* if auth...*/
+ 				/* lets see if received a redirect */
+-				if (redirects == 1 && regexec(&redexp, rec, 0, 0, 0) == REG_NOERROR) {
++				if (redirects == 1 && regexec(&redexp, rec, 0, 0, 0) == 0) {
+ 					handle_3xx(&addr);
+ 				} /* if redircts... */
+ 				else if (trace == 1) {
