@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/05/31 11:24:32 dillo Exp $
+# $NetBSD: options.mk,v 1.6 2005/08/11 00:03:16 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -9,8 +9,22 @@ PKG_SUGGESTED_OPTIONS=	bdb
 ###
 ### UNIX (shadow) password authentication
 ###
+CONFIGURE_ARGS+=	--with-authpwd
+CONFIGURE_ARGS+=	--with-authshadow
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthpwd.la
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthshadow.la
+
+###
+### "pipe-to-external-program" authentication
+###
+CONFIGURE_ARGS+=	--with-authpipe
+REPLACE_PERL+=		samplepipe.pl
+AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthpipe.la
+AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/samplepipe.pl
+POST_INSTALL_TARGETS+=	post-install-pipe
+
+post-install-pipe:
+	${INSTALL_SCRIPT} ${WRKSRC}/samplepipe.pl ${EGDIR}
 
 ###
 ### PAM authentication
@@ -33,12 +47,12 @@ CONFIGURE_ARGS+=	--with-db=db
 CONFIGURE_ARGS+=	--with-authuserdb
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthuserdb.la
 AUTHLIB_PLIST+=		${AUTHLIBEXECDIR}/makedatprog
-AUTHLIB_PLIST+=		sbin/vchkpw2userdb
-AUTHLIB_PLIST+=		sbin/pw2userdb
 AUTHLIB_PLIST+=		sbin/makeuserdb
+AUTHLIB_PLIST+=		sbin/pw2userdb
 AUTHLIB_PLIST+=		sbin/userdb
-AUTHLIB_PLIST+=		sbin/userdbpw
 AUTHLIB_PLIST+=		sbin/userdb-test-cram-md5
+AUTHLIB_PLIST+=		sbin/userdbpw
+AUTHLIB_PLIST+=		sbin/vchkpw2userdb
 .else
 CONFIGURE_ARGS+=	--without-authuserdb
 PLIST_SUBST+=		BDB="@comment "
@@ -58,6 +72,8 @@ GEN_FILES+=		authldaprc
 POST_INSTALL_TARGETS+=	post-install-ldap
 
 post-install-ldap:
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authldaprc.dist
+	${CHMOD} ${SHAREMODE} ${EGDIR}/authldaprc.dist
 	${INSTALL_DATA} ${WRKSRC}/README.ldap ${DOCDIR}
 .else
 CONFIGURE_ARGS+=	--without-authldap
@@ -76,6 +92,8 @@ GEN_FILES+=		authmysqlrc
 POST_INSTALL_TARGETS+=	post-install-mysql
 
 post-install-mysql:
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authmysqlrc.dist
+	${CHMOD} ${SHAREMODE} ${EGDIR}/authmysqlrc.dist
 	${INSTALL_DATA} ${WRKSRC}/README.authmysql.html ${DOCDIR}
 .else
 CONFIGURE_ARGS+=	--without-authmysql
@@ -100,6 +118,8 @@ GEN_FILES+=		authpgsqlrc
 POST_INSTALL_TARGETS+=	post-install-pgsql
 
 post-install-pgsql:
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authpgsqlrc.dist
+	${CHMOD} ${SHAREMODE} ${EGDIR}/authpgsqlrc.dist
 	${INSTALL_DATA} ${WRKSRC}/README.authpostgres.html ${DOCDIR}
 .else
 CONFIGURE_ARGS+=	--without-authpgsql
