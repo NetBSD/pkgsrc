@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.407 2005/08/04 15:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.408 2005/08/11 17:45:33 reed Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -127,6 +127,7 @@ SUBDIR+=	jalbum
 SUBDIR+=	jsdk20
 SUBDIR+=	jssi
 SUBDIR+=	kannel
+SUBDIR+=	kazehakase
 SUBDIR+=	kdewebdev3
 SUBDIR+=	lhs
 SUBDIR+=	libghttp
