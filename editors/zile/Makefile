@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:42 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/11 15:33:08 adam Exp $
 
-DISTNAME=		zile-1.6.2
-PKGREVISION=		2
-CATEGORIES=		editors
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zile/}
+DISTNAME=	zile-2.2.4
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zile/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://zile.sourceforge.net/
-COMMENT=		Emacs-like text editor
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://zile.sourceforge.net/
+COMMENT=	Emacs-like text editor
 
-GNU_CONFIGURE=		yes
-USE_NCURSES=		# uses stdscr->_delay directly
-USE_MAKEINFO=		YES
-INFO_FILES=		zile.info
+USE_MAKEINFO=	yes
+USE_NCURSES=	yes	# uses stdscr->_delay directly
+GNU_CONFIGURE=	yes
+
+INFO_FILES=	zile.info
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
