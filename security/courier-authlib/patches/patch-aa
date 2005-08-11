@@ -1,80 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2005/03/24 07:13:14 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2005/08/11 00:03:16 jlam Exp $
 
---- Makefile.in.orig	2005-02-28 21:22:03.000000000 -0500
+--- Makefile.in.orig	2005-07-23 00:06:37.000000000 +0000
 +++ Makefile.in
-@@ -465,6 +465,7 @@ commonlibdep = libcourierauthcommon.la
- commonldflags = -module -rpath $(pkglibdir) -export-symbols-regex 'courier_auth.*_init'
- commonlibadd = libcourierauthcommon.la
- libcourierauthcommon_t = @CRYPTLIBS@
-+libcourierauthcommon_t := $(libcourierauthcommon_t:-Wl,%=%)
- libcourierauthcommon_la_SOURCES = \
- 	auth.h courierauth.h \
- 	authpwdenumerate.c \
-@@ -481,6 +482,7 @@ libcourierauthcommon_la_LDFLAGS = libcou
- 	$(libcourierauthcommon_t:%=-Wl,%)
+@@ -448,7 +448,7 @@ libcourierauthcommon_la_SOURCES = \
  
- libcourierauth_t = random128/libshrandom128.a rfc822/libshencode.a @NETLIBS@
-+libcourierauth_t := $(libcourierauth_t:-Wl,%=%)
+ libcourierauthcommon_la_DEPENDENCIES = libcourierauth.la
+ libcourierauthcommon_la_LIBADD = libcourierauth.la
+-libcourierauthcommon_la_LDFLAGS = $(libcourierauthcommon_t:%=-Wl,%)
++libcourierauthcommon_la_LDFLAGS = $(libcourierauthcommon_t)
  libcourierauth_la_SOURCES = authdaemon.c authdaemonlib.c preauthdaemon.c \
  	authmoduser2.c authmoduser3.c debug.c \
  	courierauthdebug.h \
-@@ -491,6 +493,7 @@ libcourierauth_la_LDFLAGS = -Wl,numlib/l
- 
- # The userdb module
- libauthuserdb_t = userdb/libshuserdb.a @shdblibrary@ @LIBGDBM@ @LIBDB@
-+libauthuserdb_t := $(libauthuserdb_t:-Wl,%=%)
- libauthuserdb_la_SOURCES = authuserdb.c preauthuserdb.c preauthuserdbcommon.c \
- 	 authuserdbpwd.c
- 
-@@ -500,6 +503,7 @@ libauthuserdb_la_LDFLAGS = $(commonldfla
- 
- # the authpam module
- libauthpam_t = -lpam @SHADOWLIBS@ @AUTHPAMCRYPT@ @LIBDL@
-+libauthpam_t := $(libauthpam_t:-Wl,%=%)
- libauthpam_la_SOURCES = authpam.c preauthpam.c authwait.h
- libauthpam_la_DEPENDENCIES = $(commonlibdep)
- libauthpam_la_LIBADD = $(commonlibadd)
-@@ -513,6 +517,7 @@ libauthpwd_la_LDFLAGS = $(commonldflags)
- 
- # The authshadow module
- libauthshadow_t = @SHADOWLIBS@
-+libauthshadow_t := $(libauthshadow_t:-Wl,%=%)
- libauthshadow_la_SOURCES = authshadow.c preauthshadow.c
- libauthshadow_la_DEPENDENCIES = $(commonlibdep)
- libauthshadow_la_LIBADD = $(commonlibadd)
-@@ -520,6 +525,7 @@ libauthshadow_la_LDFLAGS = $(commonldfla
- 
- # The authvchkpw module
- libauthvchkpw_t = @VPOPMAILLIBS@ @LIBM@
-+libauthvchkpw_t := $(libauthvchkpw_t:-Wl,%=%)
- libauthvchkpw_la_SOURCES = authvchkpw.c authvchkpwlib.c preauthvchkpw.c
- libauthvchkpw_la_DEPENDENCIES = $(commonlibdep)
- libauthvchkpw_la_LIBADD = $(commonlibadd)
-@@ -527,6 +533,7 @@ libauthvchkpw_la_LDFLAGS = $(commonldfla
- 
- # The authpgsql module
- libauthpgsql_t = @PGSQL_LIBS@ @LIBM@ @NETLIBS@
-+libauthpgsql_t := $(libauthpgsql_t:-Wl,%=%)
- libauthpgsql_la_SOURCES = authpgsql.c preauthpgsql.c authpgsqllib.c authpgsql.h
- libauthpgsql_la_DEPENDENCIES = $(commonlibdep)
- libauthpgsql_la_LIBADD = $(commonlibadd)
-@@ -534,6 +541,7 @@ libauthpgsql_la_LDFLAGS = $(commonldflag
- 
- # The authldap module
- libauthldap_t = @LDAPLIBS@ @NETLIBS@
-+libauthldap_t := $(libauthldap_t:-Wl,%=%)
- libauthldap_la_SOURCES = authldap.c preauthldap.c authldaplib.c authldap.h
- libauthldap_la_DEPENDENCIES = $(commonlibdep)
- libauthldap_la_LIBADD = $(commonlibadd)
-@@ -541,6 +549,7 @@ libauthldap_la_LDFLAGS = $(commonldflags
- 
- # The authmysql module
- libauthmysql_t = @MYSQL_LIBS@ @LIBM@ @NETLIBS@
-+libauthmysql_t := $(libauthmysql_t:-Wl,%=%)
- libauthmysql_la_SOURCES = authmysql.c preauthmysql.c authmysqllib.c authmysql.h
- libauthmysql_la_DEPENDENCIES = $(commonlibdep)
- libauthmysql_la_LIBADD = $(commonlibadd)
-@@ -608,8 +617,8 @@ authdaemondprog_SOURCES = authdaemond.c
+@@ -590,8 +590,8 @@ authdaemondprog_SOURCES = authdaemond.c
  authdaemondprog_DEPENDENCIES = libcourierauthcommon.la \
  	liblock/liblock.la $(modules)
  
@@ -85,18 +22,19 @@ $NetBSD: patch-aa,v 1.2 2005/03/24 07:13:14 jlam Exp $
  authdaemontest_SOURCES = authdaemontest.c
  authdaemontest_DEPENDENCIES = libcourierauthcommon.la
  authdaemontest_LDADD = libcourierauthcommon.la @NETLIBS@
-@@ -1437,14 +1446,12 @@ vpopmail_config.h:
+@@ -1480,14 +1480,14 @@ vpopmail_config.h:
  authpgsqllib.lo: authpgsqllib.c authpgsqlrc.h
  
  @HAVE_AUTHPGSQL_TRUE@install-authpgsqlrc:
 -@HAVE_AUTHPGSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname @authpgsqlrc@`
--@HAVE_AUTHPGSQL_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authpgsqlrc \
++@HAVE_AUTHPGSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authpgsqlrc)`
+ @HAVE_AUTHPGSQL_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authpgsqlrc \
 -@HAVE_AUTHPGSQL_TRUE@		$(DESTDIR)@authpgsqlrc@.dist
 -@HAVE_AUTHPGSQL_TRUE@	-chown @mailuser@ $(DESTDIR)@authpgsqlrc@.dist
 -@HAVE_AUTHPGSQL_TRUE@	-chgrp @mailgroup@ $(DESTDIR)@authpgsqlrc@.dist
-+@HAVE_AUTHPGSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authpgsqlrc)`
-+@HAVE_AUTHPGSQL_TRUE@	$(INSTALL_DATA) $(srcdir)/authpgsqlrc \
 +@HAVE_AUTHPGSQL_TRUE@		$(DESTDIR)$(authpgsqlrc).dist
++@HAVE_AUTHPGSQL_TRUE@	-chown $(mailuser) $(DESTDIR)$(authpgsqlrc).dist
++@HAVE_AUTHPGSQL_TRUE@	-chgrp $(mailgroup) $(DESTDIR)$(authpgsqlrc).dist
  
  @HAVE_AUTHPGSQL_TRUE@uninstall-authpgsqlrc:
 -@HAVE_AUTHPGSQL_TRUE@	rm -f $(DESTDIR)@authpgsqlrc@.dist
@@ -104,18 +42,25 @@ $NetBSD: patch-aa,v 1.2 2005/03/24 07:13:14 jlam Exp $
  
  @HAVE_AUTHPGSQL_FALSE@install-authpgsqlrc:
  @HAVE_AUTHPGSQL_FALSE@	@:
-@@ -1458,14 +1465,12 @@ authpgsqlrc.h:
+@@ -1496,19 +1496,19 @@ authpgsqllib.lo: authpgsqllib.c authpgsq
+ @HAVE_AUTHPGSQL_FALSE@	@:
+ 
+ authpgsqlrc.h:
+-	echo "#define AUTHPGSQLRC \"@authpgsqlrc@\"" >authpgsqlrc.h
++	echo "#define AUTHPGSQLRC \"$(authpgsqlrc)\"" >authpgsqlrc.h
+ 
  authldaplib.lo: authldaplib.c authldaprc.h
  
  @HAVE_LDAP_TRUE@install-authldaprc:
 -@HAVE_LDAP_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname @authldaprc@` 
--@HAVE_LDAP_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authldaprc \
++@HAVE_LDAP_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authldaprc)` 
+ @HAVE_LDAP_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authldaprc \
 -@HAVE_LDAP_TRUE@		$(DESTDIR)@authldaprc@.dist
 -@HAVE_LDAP_TRUE@	-chown @mailuser@ $(DESTDIR)@authldaprc@.dist
 -@HAVE_LDAP_TRUE@	-chgrp @mailgroup@ $(DESTDIR)@authldaprc@.dist
-+@HAVE_LDAP_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authldaprc)` 
-+@HAVE_LDAP_TRUE@	$(INSTALL_DATA) $(srcdir)/authldaprc \
 +@HAVE_LDAP_TRUE@		$(DESTDIR)$(authldaprc).dist
++@HAVE_LDAP_TRUE@	-chown $(mailuser) $(DESTDIR)$(authldaprc).dist
++@HAVE_LDAP_TRUE@	-chgrp $(mailgroup) $(DESTDIR)$(authldaprc).dist
  
  @HAVE_LDAP_TRUE@uninstall-authldaprc:
 -@HAVE_LDAP_TRUE@	rm -f $(DESTDIR)@authldaprc@.dist
@@ -123,18 +68,25 @@ $NetBSD: patch-aa,v 1.2 2005/03/24 07:13:14 jlam Exp $
  
  @HAVE_LDAP_FALSE@install-authldaprc:
  @HAVE_LDAP_FALSE@	@:
-@@ -1479,14 +1484,12 @@ authldaprc.h:
+@@ -1517,19 +1517,19 @@ authldaplib.lo: authldaplib.c authldaprc
+ @HAVE_LDAP_FALSE@	@:
+ 
+ authldaprc.h:
+-	echo "#define AUTHLDAPRC \"@authldaprc@\"" >authldaprc.h
++	echo "#define AUTHLDAPRC \"$(authldaprc)\"" >authldaprc.h
+ 
  authmysqllib.lo: authmysqllib.c authmysqlrc.h
  
  @HAVE_AUTHMYSQL_TRUE@install-authmysqlrc:
 -@HAVE_AUTHMYSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname @authmysqlrc@`
--@HAVE_AUTHMYSQL_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authmysqlrc \
++@HAVE_AUTHMYSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authmysqlrc)`
+ @HAVE_AUTHMYSQL_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authmysqlrc \
 -@HAVE_AUTHMYSQL_TRUE@		$(DESTDIR)@authmysqlrc@.dist
 -@HAVE_AUTHMYSQL_TRUE@	-chown @mailuser@ $(DESTDIR)@authmysqlrc@.dist
 -@HAVE_AUTHMYSQL_TRUE@	-chgrp @mailgroup@ $(DESTDIR)@authmysqlrc@.dist
-+@HAVE_AUTHMYSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authmysqlrc)`
-+@HAVE_AUTHMYSQL_TRUE@	$(INSTALL_DATA) $(srcdir)/authmysqlrc \
 +@HAVE_AUTHMYSQL_TRUE@		$(DESTDIR)$(authmysqlrc).dist
++@HAVE_AUTHMYSQL_TRUE@	-chown $(mailuser) $(DESTDIR)$(authmysqlrc).dist
++@HAVE_AUTHMYSQL_TRUE@	-chgrp $(mailgroup) $(DESTDIR)$(authmysqlrc).dist
  
  @HAVE_AUTHMYSQL_TRUE@uninstall-authmysqlrc:
 -@HAVE_AUTHMYSQL_TRUE@	rm -f $(DESTDIR)@authmysqlrc@.dist
@@ -142,22 +94,64 @@ $NetBSD: patch-aa,v 1.2 2005/03/24 07:13:14 jlam Exp $
  
  @HAVE_AUTHMYSQL_FALSE@install-authmysqlrc:
  @HAVE_AUTHMYSQL_FALSE@	@:
-@@ -1498,12 +1501,10 @@ authmysqlrc.h:
- 	echo "#define AUTHMYSQLRC \"@authmysqlrc@\"" >authmysqlrc.h
+@@ -1538,27 +1538,27 @@ authmysqllib.lo: authmysqllib.c authmysq
+ @HAVE_AUTHMYSQL_FALSE@	@:
+ 
+ authmysqlrc.h:
+-	echo "#define AUTHMYSQLRC \"@authmysqlrc@\"" >authmysqlrc.h
++	echo "#define AUTHMYSQLRC \"$(authmysqlrc)\"" >authmysqlrc.h
+ 
+ authpipelib.lo: authpipelib.c authpipelib.h authpiperc.h
+ 
+ authpiperc.h:
+-	echo "#define PIPE_PROGRAM \"@authProg@\"" >authpiperc.h
++	echo "#define PIPE_PROGRAM \"$(authProg)\"" >authpiperc.h
  
  install-authdaemonrc:
 -	$(mkinstalldirs) $(DESTDIR)`dirname @authdaemonrc@`
 +	$(mkinstalldirs) $(DESTDIR)`dirname $(authdaemonrc)`
  	sed 's/@ALLMODULES@/$(modules:lib%.la=%)/' <authdaemonrc >authdaemonrc.tmp
 -	$(INSTALL_DATA) -m 660 authdaemonrc.tmp $(DESTDIR)@authdaemonrc@.dist
-+	$(INSTALL_DATA) authdaemonrc.tmp $(DESTDIR)$(authdaemonrc).dist
++	$(INSTALL_DATA) -m 660 authdaemonrc.tmp $(DESTDIR)$(authdaemonrc).dist
  	rm -f authdaemonrc.tmp
 -	-chown @mailuser@ $(DESTDIR)@authdaemonrc@.dist
 -	-chgrp @mailgroup@ $(DESTDIR)@authdaemonrc@.dist
++	-chown $(mailuser) $(DESTDIR)$(authdaemonrc).dist
++	-chgrp $(mailgroup) $(DESTDIR)$(authdaemonrc).dist
  
  uninstall-authdaemonrc:
- 	rm -f $(DESTDIR)@authdaemonrc@.dist
-@@ -1557,10 +1558,6 @@ install-exec-hook:
+-	rm -f $(DESTDIR)@authdaemonrc@.dist
++	rm -f $(DESTDIR)$(authdaemonrc).dist
+ 
+ authdaemonrc.h:
+-	echo "#define AUTHDAEMONRC \"@authdaemonrc@\"" >authdaemonrc.h
+-	echo "#define AUTHDAEMONVAR \"@authdaemonvar@\"" >>authdaemonrc.h
++	echo "#define AUTHDAEMONRC \"$(authdaemonrc)\"" >authdaemonrc.h
++	echo "#define AUTHDAEMONVAR \"$(authdaemonvar)\"" >>authdaemonrc.h
+ 	echo "#define AUTHDAEMONPID AUTHDAEMONVAR \"/pid\"" >>authdaemonrc.h
+ 	echo "#define AUTHDAEMONSOCK AUTHDAEMONVAR \"/socket\"" >>authdaemonrc.h
+ 	echo "#define AUTHDAEMONLOCK AUTHDAEMONVAR \"/lock\"" >>authdaemonrc.h
+@@ -1576,7 +1576,7 @@ authchangepwdir.h: config.status
+ 	echo '#define AUTHCHANGEPWDIR "$(pkglibexecdir)"' >authchangepwdir.h
+ 
+ sbindir.h: config.status
+-	echo '#define SBINDIR "@sbindir@"' >sbindir.h
++	echo '#define SBINDIR "$(sbindir)"' >sbindir.h
+ 
+ pkglibdir.h: config.status
+ 	echo '#define PKGLIBDIR "$(pkglibdir)"' >pkglibdir.h
+@@ -1588,8 +1588,8 @@ pkgincludedir.h: config.status
+ 	echo '#define PKGINCLUDEDIR "$(includedir)"' >pkgincludedir.h
+ 
+ mailusergroup.h: config.status
+-	echo '#define MAILUSER "@mailuser@"' >mailusergroup.h
+-	echo '#define MAILGROUP "@mailgroup@"' >>mailusergroup.h
++	echo '#define MAILUSER "$(mailuser)"' >mailusergroup.h
++	echo '#define MAILGROUP "$(mailgroup)"' >>mailusergroup.h
+ 
+ dist-hook:
+ 	for f in $(BUILT1) ; do rm -f $(distdir)/$$f; done
+@@ -1605,10 +1605,10 @@ install-exec-hook:
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
  	$(mkinstalldirs) $(DESTDIR)$(pkglibexecdir)
  	$(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) authdaemondprog $(DESTDIR)$(pkglibexecdir)/authdaemond
@@ -165,6 +159,29 @@ $NetBSD: patch-aa,v 1.2 2005/03/24 07:13:14 jlam Exp $
 -	chmod 750 $(DESTDIR)@authdaemonvar@
 -	-chown @mailuser@ $(DESTDIR)@authdaemonvar@
 -	-chgrp @mailgroup@ $(DESTDIR)@authdaemonvar@
++	$(mkinstalldirs) $(DESTDIR)$(authdaemonvar)
++	chmod 750 $(DESTDIR)$(authdaemonvar)
++	-chown $(mailuser) $(DESTDIR)$(authdaemonvar)
++	-chgrp $(mailgroup) $(DESTDIR)$(authdaemonvar)
  	test "@LIBAUTHUSERDB@" = "" && exit 0 ;\
  		$(INSTALL_PROGRAM_ENV) $(INSTALL_PROGRAM) makedat/makedatprog \
  				$(DESTDIR)$(pkglibexecdir)/makedatprog ; \
+@@ -1711,13 +1711,13 @@ README_authlib.html: README_authlib.html
+ authdaemond.o: authdaemonrc.h authdaemond.c
+ 
+ install-migrate: authmigrate
+-	@SHELL@ authmigrate
++	$(SHELL) authmigrate
+ 
+ install-configure:
+-	test -f $(DESTDIR)@authdaemonrc@.dist && @SYSCONFTOOL@ $(DESTDIR)@authdaemonrc@.dist || true
+-	test -f $(DESTDIR)@authmysqlrc@.dist && @SYSCONFTOOL@ $(DESTDIR)@authmysqlrc@.dist || true
+-	test -f $(DESTDIR)@authpgsqlrc@.dist && @SYSCONFTOOL@ $(DESTDIR)@authpgsqlrc@.dist || true
+-	test -f $(DESTDIR)@authldaprc@.dist && @SYSCONFTOOL@ $(DESTDIR)@authldaprc@.dist || true
++	test -f $(DESTDIR)$(authdaemonrc).dist && $(SYSCONFTOOL) $(DESTDIR)$(authdaemonrc).dist || true
++	test -f $(DESTDIR)$(authmysqlrc).dist && $(SYSCONFTOOL) $(DESTDIR)$(authmysqlrc).dist || true
++	test -f $(DESTDIR)$(authpgsqlrc).dist && $(SYSCONFTOOL) $(DESTDIR)$(authpgsqlrc).dist || true
++	test -f $(DESTDIR)$(authldaprc).dist && $(SYSCONFTOOL) $(DESTDIR)$(authldaprc).dist || true
+ 
+ # For maintainer's use only
+ 
