@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/05 16:40:48 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/11 14:00:38 uebayasi Exp $
 
 DISTNAME=	semi-1.14.6
 PKGREVISION=	3
@@ -23,13 +23,13 @@ BUILD_DEPENDS+=	qkc-*:../../converters/qkc
 DEPENDS+=	${PKGNAME_PREFIX}apel>=9.22:../../devel/apel # See ${WRKSRC}/README.en
 BUILD_DEPENDS+=	${PKGNAME_PREFIX}w3-*:../../www/w3
 BUILD_DEPENDS+=	${PKGNAME_PREFIX}bbdb-*:../../misc/bbdb
-BUILD_TARGET=     elc
+BUILD_TARGET=	elc
 INSTALL_TARGET= install
-.else   # ${EMACS_FLAVOR} == "xemacs"
+.else	# ${EMACS_FLAVOR} == "xemacs"
 DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
-BUILD_TARGET=     package
+BUILD_TARGET=	package
 INSTALL_TARGET= install-package
-MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
+MAKEFLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .endif
 
 USE_MAKEINFO=	YES
