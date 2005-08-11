@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10850 2005/08/11 00:53:34 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.10851 2005/08/11 11:15:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -579,4 +579,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/maildrop to 1.8.1 [jlam 2005-08-11]
 	Updated mail/sqwebmail to 5.0.4 [jlam 2005-08-11]
 	Updated mail/courier-imap to 4.0.4 [jlam 2005-08-11]
-	Updated x11/wxGTK to 2.6.1nb1 [dmcmahill 2005-08-10]
+	Updated x11/wxGTK to 2.6.1nb1 [dmcmahill 2005-08-11]
+	Updated net/zebra to 0.95 [adam 2005-08-11]
