@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2002/08/25 21:50:21 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2005/08/11 11:14:06 adam Exp $
 
---- ospf6d/Makefile.am.orig	Sat Jun 29 15:20:39 2002
-+++ ospf6d/Makefile.am	Wed Jul 10 08:34:31 2002
-@@ -34,15 +34,17 @@
+--- ospf6d/Makefile.am.orig	2004-12-11 02:01:08.000000000 +0000
++++ ospf6d/Makefile.am
+@@ -36,15 +36,17 @@ sysconf_DATA = ospf6d.conf.sample
  
  EXTRA_DIST = $(sysconf_DATA)
  

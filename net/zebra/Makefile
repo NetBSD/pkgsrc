@@ -1,42 +1,40 @@
-# $NetBSD: Makefile,v 1.67 2005/06/01 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2005/08/11 11:14:06 adam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
-#
 
-DISTNAME=	zebra-0.94
-PKGREVISION=	2
+DISTNAME=	zebra-0.95
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.zebra.org/pub/zebra/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+MASTER_SITES=	ftp://ftp.zebra.org/pub/zebra/ \
+		ftp://ftp.ripe.net/mirrors/sites/ftp.zebra.org/pub/zebra/ \
+		ftp://ftp.sunet.se/pub/network/zebra/
 
 MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.zebra.org/
 COMMENT=	Free multithreaded routing daemon software
 
-.include "../../mk/bsd.prefs.mk"
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}
 
-GNU_CONFIGURE=		# defined
 PKG_SYSCONFSUBDIR?=	zebra
-USE_PKGINSTALL=		YES
 EGDIR=		${PREFIX}/share/examples/zebra
 CONF_FILES=	${EGDIR}/bgpd.conf.sample ${PKG_SYSCONFDIR}/bgpd.conf \
 		${EGDIR}/ospfd.conf.sample ${PKG_SYSCONFDIR}/ospfd.conf \
 		${EGDIR}/ripd.conf.sample ${PKG_SYSCONFDIR}/ripd.conf \
 		${EGDIR}/zebra.conf.sample ${PKG_SYSCONFDIR}/zebra.conf
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}
 # with optimization, the timer/scheduler (esp. for MRT dump rotation) appears
 # to have problems.
 CFLAGS=	-O0
-# you might need debugging, it's a developer release !
-#CFLAGS+=	-g
 
 CONFLICTS+=		quagga-[0-9]*
 
 PLIST_SRC=		# empty
 
-INFO_FILES=	zebra.info
+INFO_FILES=		zebra.info
 
 BUILD_DEFS+=		USE_ZEBRA_VTYSH
+
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
 USE_GNU_READLINE=	# uses rl_pending_input
