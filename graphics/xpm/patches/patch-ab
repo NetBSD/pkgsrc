@@ -1,8 +1,11 @@
-$NetBSD: patch-ab,v 1.3 2001/06/09 11:41:36 tron Exp $
+$NetBSD: patch-ab,v 1.4 2005/08/11 22:46:05 dmcmahill Exp $
 
---- sxpm/Imakefile.orig	Thu Mar 19 14:51:01 1998
-+++ sxpm/Imakefile	Sat Jun  9 03:33:04 2001
-@@ -60,8 +60,13 @@
+--- sxpm/Imakefile.orig	1998-03-19 14:51:01.000000000 -0500
++++ sxpm/Imakefile	2005-08-11 14:46:16.678675000 -0400
+@@ -58,9 +58,15 @@
+ #else
+ LOCAL_LIBRARIES = -L../lib -L$(XPMLIBDIR) $(XPMLIB) $(XTOOLLIB) $(XLIB)
++EXTRA_LDOPTIONS = -L../lib 
  #endif
  
  XCOMM try hard to set things so we'll find the shared lib once installed
@@ -15,4 +18,3 @@ $NetBSD: patch-ab,v 1.3 2001/06/09 11:41:36 tron Exp $
 +#endif
  
  #if ProjectX < 603
- # ifdef HPArchitecture
