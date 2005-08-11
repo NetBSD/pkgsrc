@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/11 14:36:53 uebayasi Exp $
 #
 
-DISTNAME=       jde-2.3.2
-CATEGORIES=     devel editors java
+DISTNAME=	jde-2.3.2
+CATEGORIES=	devel editors java
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # The "real" site has silly naming conventions:
-#MASTER_SITES=   http://jdee.sunsite.dk/
+#MASTER_SITES=	http://jdee.sunsite.dk/
 
-MAINTAINER=     cjones@NetBSD.org
-HOMEPAGE=       http://jdee.sunsite.dk/
-COMMENT=        Full-featured Java editing mode for emacs
+MAINTAINER=	cjones@NetBSD.org
+HOMEPAGE=	http://jdee.sunsite.dk/
+COMMENT=	Full-featured Java editing mode for emacs
 
-DEPENDS+=       speedbar>=0.14rc2:../../editors/speedbar
-DEPENDS+=       eieio>=0.17:../../lang/eieio
-DEPENDS+=       semantic>=1.4rc13:../../devel/semantic
-DEPENDS+=       elib>=1.0:../../devel/elib
+DEPENDS+=	speedbar>=0.14rc2:../../editors/speedbar
+DEPENDS+=	eieio>=0.17:../../lang/eieio
+DEPENDS+=	semantic>=1.4rc13:../../devel/semantic
+DEPENDS+=	elib>=1.0:../../devel/elib
 
-WRKSRC=         ${WRKDIR}/${DISTNAME}/lisp
+WRKSRC=		${WRKDIR}/${DISTNAME}/lisp
 
 .include "../../mk/emacs.mk"
 
@@ -25,12 +25,12 @@ EMACS_VERSIONS_ACCEPTED=emacs21		# XXX Won't compile with emacs20...
 
 PKG_JVM=	sun-jdk14
 
-BUILD_ENV+=     EMACS=${EMACS}
+BUILD_ENV+=	EMACS=${EMACS}
 MAKE_ENV+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX}
 
-NO_CONFIGURE=   # set
+NO_CONFIGURE=	# set
 
-MAKEFILE=       makefile
+MAKEFILE=	makefile
 
 post-extract:
 	@${RMDIR} ${WRKDIR}/${DISTNAME}/java/classes
