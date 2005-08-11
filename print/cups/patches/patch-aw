@@ -1,0 +1,16 @@
+$NetBSD: patch-aw,v 1.2.14.1 2005/08/11 07:08:37 snj Exp $
+
+Fix for CAN-2005-2097, from RedHat.
+
+--- pdftops/FontFile.cxx.orig	2004-02-02 23:41:09.000000000 +0100
++++ pdftops/FontFile.cxx	2005-08-10 22:30:54.000000000 +0200
+@@ -3572,6 +3573,9 @@
+     } else {
+       origLocaTable[i].pos = 2 * getUShort(pos + 2*i);
+     }
++
++    if (origLocaTable[i].pos < 0 || origLocaTable[i].pos > len)
++      error (1, 0, "bad loca table pos value");
+   }
+   qsort(origLocaTable, nGlyphs + 1, sizeof(TrueTypeLoca), &cmpTrueTypeLocaPos);
+   for (i = 0; i < nGlyphs; ++i) {
