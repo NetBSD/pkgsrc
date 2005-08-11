@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/08/11 17:43:10 reed Exp $
+
+--- etc/mozilla/Makefile.in.orig	2005-07-28 06:40:47.000000000 +0000
++++ etc/mozilla/Makefile.in
+@@ -179,7 +179,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ 
+-kzetcmozdir = $(sysconfdir)/$(PACKAGE)/mozilla
++kzetcmozdir = @datadir@/examples/@PACKAGE_TARNAME@/mozilla
+ kzetcmoz_DATA = \
+ 	encodings.xml
+ 

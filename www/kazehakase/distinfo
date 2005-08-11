@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/11 17:43:10 reed Exp $
+
+SHA1 (kazehakase-0.2.9.tar.gz) = 074c3df2e7bed75d8b980cf9403bd06e9ec19ab6
+RMD160 (kazehakase-0.2.9.tar.gz) = adb8f3dce825666f224b331af495e94d022fbf34
+Size (kazehakase-0.2.9.tar.gz) = 1220493 bytes
+SHA1 (patch-aa) = f04c8f51f6b78e920755b9adb8f8c69e92ce5399
+SHA1 (patch-ab) = eda16247d8065ea366af2d42d687b694a499e76a
+SHA1 (patch-ac) = 212c007f3bcd6eda798e7767220400ce31c93d44
+SHA1 (patch-ad) = 15ec26b8922d44224d03074472bfb249195f5d2e
+SHA1 (patch-ae) = 9ca9e88b3e73a48ecc76cf68429baa16ce23c246
+SHA1 (patch-af) = 89af4c615d2a8c2c28322863029a89208bc55a23
+SHA1 (patch-ag) = 2ae2e80bfbbd7d27eb28b69f5a96351f1106030f
+SHA1 (patch-ah) = cb3802373a490c0fbe23503758080d90ebed0c6d
+SHA1 (patch-ai) = b492b3abac4e7a4ee4d5acb63c248dc8224f2358
+SHA1 (patch-aj) = d8738dd81a59ef13515f3dddfb37611dee71fd38
+SHA1 (patch-ak) = 24b5d930002f9a2061d99ffebb9e088f0cb696ed
+SHA1 (patch-al) = 52549306ced23b3372738881874e24fdafce6c13
