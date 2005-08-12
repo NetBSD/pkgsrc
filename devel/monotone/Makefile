@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/08/09 22:02:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/12 20:59:18 jmmv Exp $
 #
 
 DISTNAME=	monotone-0.22
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.venge.net/monotone/downloads/
 
