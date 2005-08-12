@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/04/29 15:12:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/08/12 15:59:22 jmmv Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -45,7 +45,6 @@ share/applications/gnomecc.desktop
 share/applications/gtk-theme-selector.desktop
 share/applications/keybinding.desktop
 share/applications/keyboard.desktop
-share/applications/mimeinfo.cache
 share/applications/themus-theme-applier.desktop
 share/applications/window-properties.desktop
 share/control-center-2.0/icons/display-capplet.png
@@ -200,8 +199,6 @@ share/pixmaps/display-capplet.png
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/gnome/vfolders
 @dirrm share/gnome/cursor-fonts
-@exec ${MKDIR} %D/share/gnome-background-properties
-@dirrm share/gnome-background-properties
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/examples/gnome2-control-center
