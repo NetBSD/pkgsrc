@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2005/04/26 20:07:45 drochner Exp $
+$NetBSD: distinfo,v 1.21 2005/08/12 15:59:22 jmmv Exp $
 
 SHA1 (control-center-2.10.1.tar.bz2) = b2d6ea6f4e81b84b58ef7e3585922a87360ce667
 RMD160 (control-center-2.10.1.tar.bz2) = 7bf57aba9416c5c89169474ef65fa05cea6e9cd8
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = a522bf7b8d1108b2350bbc35125bc794a1fb0ac7
 SHA1 (patch-ac) = 0bec26fa35730ddd706ec8e80855d1bc72b1dd7d
 SHA1 (patch-ad) = 15aeffd62733036840d402f1ed3a2f1a89c8945d
 SHA1 (patch-ae) = 1c6e2ff7ca214c5cca74d6447a01eed718a79b4a
+SHA1 (patch-af) = 50f179c3d2775f0a058d7644f6f9a0b958f4b531
