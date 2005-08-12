@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.18 2005/03/15 15:43:28 xtraeme Exp $
+$NetBSD: distinfo,v 1.18.4.1 2005/08/12 16:23:16 salo Exp $
 
-SHA1 (mysql-4.0.24.tar.gz) = 523de9f374d4e8c08d5e6520ced05a32dfa2d35d
-RMD160 (mysql-4.0.24.tar.gz) = 595a162be1bc4e09eab7bc751c9c02214ba41ed7
-Size (mysql-4.0.24.tar.gz) = 16885399 bytes
+SHA1 (mysql-4.0.25.tar.gz) = 65315c7659c75fcc9f3d9f749dbed26581f6da9c
+RMD160 (mysql-4.0.25.tar.gz) = 9c32ff5b7332712929eb2eb8eb58ae1f4be7ad46
+Size (mysql-4.0.25.tar.gz) = 11159288 bytes
 SHA1 (patch-af) = 2f3bab4108c002420e243a4ca6c9c0c3d4bdd21b
-SHA1 (patch-au) = 9183bfa3a6f5b4a9553a6de83448fb684d514a91
 SHA1 (patch-av) = 684c1e2ff1f96652225045653c25707850fe0ff2
 SHA1 (patch-aw) = 23d54ceddd0631aa93b32666853965a5fc7bdfab
 SHA1 (patch-ax) = 0ee6c30cc814d9404625191ac3b248ba9d9e094a
