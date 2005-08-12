@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10862 2005/08/12 14:00:36 salo Exp $
+$NetBSD: CHANGES,v 1.10863 2005/08/12 15:59:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -593,3 +593,4 @@ Changes to the packages collection and infrastructure in 2005:
         Updated databases/mysql-server to 4.0.25 [xtraeme 2005-08-12]
 	Updated editors/yudit to 2.7.8 [adam 2005-08-12]
 	Updated emulators/wine to 20050725nb1 [salo 2005-08-12]
+	Updated x11/gnome2-control-center to 2.10.1nb1 [jmmv 2005-08-12]
