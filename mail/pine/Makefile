@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2005/06/16 06:58:03 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2005/08/12 20:23:00 tv Exp $
 
-DISTNAME=	pine4.62
-PKGNAME=	pine-4.62
-PKGREVISION=	2
+DISTNAME=	pine4.63
+PKGNAME=	pine-4.63
 CATEGORIES=	mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -105,9 +104,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
 	${CHMOD} +x ${PREFIX}/share/pine/contrib/utils/*.sh
 
+# 2004e contains extensions needed by Pine 4.63
+BUILDLINK_DEPENDS.imap-uw+=	imap-uw>=2004e
+.include "../../mail/imap-uw/buildlink3.mk"
+
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../editors/pico/buildlink3.mk"
-.include "../../mail/imap-uw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
