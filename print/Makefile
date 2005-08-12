@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2005/08/10 05:21:44 reed Exp $
+# $NetBSD: Makefile,v 1.132 2005/08/12 19:21:57 drochner Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -34,6 +34,7 @@ SUBDIR+=	foomatic-filters
 SUBDIR+=	foomatic-gswrapper
 SUBDIR+=	ggv2
 SUBDIR+=	ghostscript
+SUBDIR+=	ghostscript-afpl
 SUBDIR+=	ghostscript-esp
 SUBDIR+=	ghostscript-esp-nox11
 SUBDIR+=	ghostscript-gnu
