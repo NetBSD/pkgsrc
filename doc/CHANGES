@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10864 2005/08/12 17:54:32 reed Exp $
+$NetBSD: CHANGES,v 1.10865 2005/08/12 19:47:51 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -595,3 +595,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/wine to 20050725nb1 [salo 2005-08-12]
 	Updated x11/gnome2-control-center to 2.10.1nb1 [jmmv 2005-08-12]
 	Updated chat/gaim to 1.5.0 [reed 2005-08-12]
+	Updated mail/imap-uw to 2004e [tv 2005-08-12]
