@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2005/06/01 18:02:57 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/08/12 19:29:29 drochner Exp $
 
-DISTNAME=	pstoedit_3_31
-PKGNAME=	pstoedit-3.31
-PKGREVISION=	2
+DISTNAME=	pstoedit-3.41
 CATEGORIES=	converters graphics print
-MASTER_SITES=	http://home.t-online.de/home/helga.glunz/wglunz/pstoedit/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstoedit/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pstoedit.net/
@@ -15,13 +12,10 @@ RESTRICTED?=	"The author writes: If you include this program on a CDROM, please 
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=		${WRKDIR}/pstoedit_3.31/src
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c++
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	LIBTOOL="${LIBTOOL}" LIBPLOTTERLA="${X11PREFIX}/lib/libplotter.la"
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS} -Dunix"
-CONFIGURE_ENV+=	LDLIBS="${X11_LDFLAGS}"
 CONFIGURE_ENV+=	GS=${LOCALBASE}/bin/gs
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=--libdir=${PREFIX}/lib/pstoedit	# plugin dir -- unused for now
@@ -29,12 +23,9 @@ BUILD_TARGET=
 
 LIBS.SunOS+=	-ldl
 
-post-extract:
-	cd ${WRKSRC} && ${LN} ../config/* .
-
 DOCDIR=		${PREFIX}/share/doc/pstoedit
 HTMLDIR=	${PREFIX}/share/doc/html/pstoedit
-DOCSRC=		${WRKSRC}/..
+DOCSRC=		${WRKSRC}/doc
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -46,5 +37,5 @@ post-install:
 
 .include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
-.include "../../mk/ghostscript.mk"
+#.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
