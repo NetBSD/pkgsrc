@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10856 2005/08/11 20:51:35 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10857 2005/08/12 12:56:04 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -587,3 +587,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added www/kazehakase version 0.2.9 [reed 2005-08-11]
 	Removed net/ra-pna-proxy [tron 2005-08-11]
 	Updated sysutils/mklivecd to 0.13.0 [xtraeme 2005-08-11]
+	Updated graphics/xpm to 3.4knb5 [dmcmahill 2005-08-11]
