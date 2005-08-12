@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10859 2005/08/12 13:04:21 tron Exp $
+$NetBSD: CHANGES,v 1.10860 2005/08/12 13:06:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -589,3 +589,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/mklivecd to 0.13.0 [xtraeme 2005-08-11]
 	Updated graphics/xpm to 3.4knb5 [dmcmahill 2005-08-11]
 	Updated print/xpdf to 3.00pl3nb1 [salo 2005-08-12]
+        Updated databases/mysql-client to 4.0.25 [xtraeme 2005-08-12]
+        Updated databases/mysql-server to 4.0.25 [xtraeme 2005-08-12]
