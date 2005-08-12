@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.64 2005/08/11 19:16:33 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.65 2005/08/12 16:23:41 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -201,3 +201,5 @@ Pullup ticket 675 - requested by Mark Davies
 portability fix for kdelibs3
 Pullup ticket 674 - requested by Mark Davies
 security fix for kdegraphics3
+Pullup ticket 677 - requested by Juan Romero Pardines
+security update for mysql
