@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2005/02/01 21:51:12 jschauma Exp $
+$NetBSD: patch-ae,v 1.2 2005/08/12 20:11:26 reed Exp $
 
---- cmd/platlibs.mk.orig	Thu Jan 20 06:55:35 2005
-+++ cmd/platlibs.mk	Thu Jan 20 06:56:07 2005
+--- cmd/platlibs.mk.orig	2004-06-18 23:13:45.000000000 -0700
++++ cmd/platlibs.mk	2005-08-12 12:21:35.000000000 -0700
+@@ -182,7 +182,7 @@
+ # If GNU ld is used, we must use the -rpath-link option to tell
+ # the linker where to find libsoftokn3.so, an implicit dependency
+ # of libnss3.so.
+-ifeq (,$(filter-out BSD_OS FreeBSD Linux NetBSD, $(OS_ARCH)))
++ifeq (,$(filter-out BSD_OS FreeBSD Linux NetBSD DragonFly, $(OS_ARCH)))
+ EXTRA_SHARED_LIBS += -Wl,-rpath-link,$(DIST)/lib
+ endif
+ 
 @@ -216,6 +216,7 @@
  	-L$(DIST)/lib \
  	-lssl3 \
