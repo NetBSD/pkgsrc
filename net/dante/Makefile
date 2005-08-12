@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:45 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/12 19:13:11 drochner Exp $
 
-DISTNAME=	dante-1.1.15
+DISTNAME=	dante-1.1.17
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.inet.no/pub/socks/
 
