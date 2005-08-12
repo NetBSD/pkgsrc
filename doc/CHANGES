@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10857 2005/08/12 12:56:04 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.10858 2005/08/12 13:03:59 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -588,3 +588,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed net/ra-pna-proxy [tron 2005-08-11]
 	Updated sysutils/mklivecd to 0.13.0 [xtraeme 2005-08-11]
 	Updated graphics/xpm to 3.4knb5 [dmcmahill 2005-08-11]
+	Updated print/xpdf to 3.00pl3nb1 [tron 2005-08-12]
