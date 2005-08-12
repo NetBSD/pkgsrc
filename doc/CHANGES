@@ -601,3 +601,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added print/ghostscript-afpl version 8.51 [drochner 2005-08-12]
 	Updated net/dante to 1.1.17 [drochner 2005-08-12]
 	Updated mail/imap-uw to 2004e [tv 2005-08-12]
+	Updated editors/pico to 4.10 [tv 2005-08-12]
+	Updated mail/pine to 4.63 [tv 2005-08-12]
