@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2005/08/06 06:18:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2005/08/12 19:59:03 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -22,7 +22,7 @@ BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 PERL5_OPTIONS?=		# empty
 .  if !empty(PERL5_OPTIONS:Mthreads)
 USE_PKGINSTALL=		yes
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/install.tmpl
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/install_threads.tmpl
 .  endif
 
 .  if ${PKG_INSTALLATION_TYPE} == "overwrite"
