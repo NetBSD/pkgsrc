@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2005/04/08 15:59:02 wiz Exp $
+$NetBSD: distinfo,v 1.19 2005/08/12 19:36:53 drochner Exp $
 
-SHA1 (gpgme-1.0.2.tar.gz) = 5ca592b6a8ec64e92fa64402a15ea3ee37ad3fab
-RMD160 (gpgme-1.0.2.tar.gz) = 444d6fa0e721ae099912692172dd9f2f40d8de33
-Size (gpgme-1.0.2.tar.gz) = 833949 bytes
+SHA1 (gpgme-1.0.3.tar.gz) = 632436ff5c66405d9704983411aa031f29006dce
+RMD160 (gpgme-1.0.3.tar.gz) = cc8dc465c733eea8d7f0297127f9f97dd0876a53
+Size (gpgme-1.0.3.tar.gz) = 837866 bytes
 SHA1 (patch-aa) = 27f98c23d89a0a030398e1e5cfefff84b23d2658
 SHA1 (patch-ab) = c47b732622deaa2eb3269d7ae753ab553c4fa54e
 SHA1 (patch-ac) = c702392423c1ed48cca43f8e35a2c510a8d68460
