@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/06/18 14:32:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/12 20:58:45 jmmv Exp $
 #
 
 BOOST_PACKAGE=	meta-pkg
 BOOST_COMMENT=	(meta package)
-
-PKGREVISION=	1
 
 .include "Makefile.common"
 
@@ -19,8 +17,8 @@ COMMENT=	Free, peer-reviewed portable C++ source libraries
 DEPENDS+=	boost-build>=${BOOST_VERSION}:../../devel/boost-build
 DEPENDS+=	boost-docs>=${BOOST_VERSION}:../../devel/boost-docs
 DEPENDS+=	boost-headers>=${BOOST_VERSION}:../../devel/boost-headers
-DEPENDS+=	boost-libs>=${BOOST_VERSION}nb1:../../devel/boost-libs
-DEPENDS+=	boost-python>=${BOOST_VERSION}nb1:../../devel/boost-python
+DEPENDS+=	boost-libs>=${BOOST_VERSION}:../../devel/boost-libs
+DEPENDS+=	boost-python>=${BOOST_VERSION}:../../devel/boost-python
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
