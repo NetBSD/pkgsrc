@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.97 2005/08/03 09:43:58 tron Exp $
+# $NetBSD: Makefile,v 1.98 2005/08/12 19:47:17 tv Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system with Kerberos libraries
 # but not running Kerberos before committing the changes.
 
-DISTNAME=       imap-2004c1
-PKGNAME=        imap-uw-2004c1
-PKGREVISION=	3
+DISTNAME=       imap-2004e
+PKGNAME=        ${DISTNAME:S/-/-uw-/}
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -75,7 +74,7 @@ CCLIENT_INCS=	c-client.h env.h env_unix.h flocksim.h flstring.h	\
 CCLIENT_LIB=	libc-client.la
 CCLIENT_PICLIB=	libc-client_pic.a
 CCLIENT_MAJOR=	4
-CCLIENT_MINOR=	1
+CCLIENT_MINOR=	2
 CCLIENT_MFILES=	src/imapd/Makefile					\
 		src/ipopd/Makefile					\
 		src/mtest/Makefile					\
