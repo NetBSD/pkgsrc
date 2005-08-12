@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2005/08/08 16:39:58 jlam Exp $
+# $NetBSD: Makefile,v 1.100 2005/08/12 19:59:03 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -268,8 +268,8 @@ SUBST_FILES.dirmode=	installhtml installman installperl		\
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
 USE_PKGINSTALL=		yes
-INSTALL_EXTRA_TMPL+=	${FILESDIR}/install_link.tmpl
-DEINSTALL_EXTRA_TMPL+=	${FILESDIR}/deinstall_link.tmpl
+INSTALL_EXTRA_TMPL+=	${FILESDIR}/install.tmpl
+DEINSTALL_EXTRA_TMPL+=	${FILESDIR}/deinstall.tmpl
 FILES_SUBST+=		PERL5_PACKLIST=
 FILES_SUBST+=		PERL5_COMMENT=\#
 
