@@ -1,26 +1,11 @@
-# $NetBSD: install.tmpl,v 1.1 2004/12/19 00:01:43 jlam Exp $
-#
-# Require the presence of a pkgsrc Perl installation that supports threads
-# during the PRE-INSTALL stage, otherwise we bail out.
-
-PERL5="@PERL5@"
+# $NetBSD: install.tmpl,v 1.2 2005/08/12 19:59:03 jlam Exp $
 
 case ${STAGE} in
-PRE-INSTALL)
-	if [ ! -x "${PERL5}" ]; then
-		${ECHO} "==> ${PERL5} does not exist." 1>&2
-		exit 1
-	fi
-	eval `${PERL5} -V:usethreads`
-	case $usethreads in
-	define*|true|[yY]*)	# possible "yes" values in Perl Config.pm
-		# We found what we were looking for (a threaded perl) so
-		# do nothing.
-		;;
-	*)
-		${ECHO} "==> ${PKGNAME} requires a Perl that supports threads." 1>&2
-		exit 1
-		;;
-	esac
+POST-INSTALL)
+	eval `${PERL5} -V:scriptdir`
+	PERL5_PACKLIST="@PERL5_PACKLIST@"
+
+	# Symlink the bits that belong to this module.
+	$scriptdir/perllink -f -p ${PKG_PREFIX} add ${PERL5_PACKLIST}
 	;;
 esac

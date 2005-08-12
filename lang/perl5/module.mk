@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.48 2005/08/06 06:18:45 jlam Exp $
+# $NetBSD: module.mk,v 1.49 2005/08/12 19:59:03 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -182,8 +182,8 @@ LDFLAGS+=	${PERL5_LDFLAGS}
 ###
 
 USE_PKGINSTALL=		yes
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/install_link.tmpl
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/deinstall_link.tmpl
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/install.tmpl
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../lang/perl5/files/deinstall.tmpl
 FILES_SUBST+=		PERL5_COMMENT=
 FILES_SUBST+=		PERL5_PACKLIST=${_PERL5_PACKLIST:Q}
 

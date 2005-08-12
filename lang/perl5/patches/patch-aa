@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.28 2005/08/07 21:47:24 jlam Exp $
+$NetBSD: patch-aa,v 1.29 2005/08/12 19:59:03 jlam Exp $
 
 --- lib/ExtUtils/MM_Unix.pm.orig	2004-01-05 17:34:59.000000000 -0500
 +++ lib/ExtUtils/MM_Unix.pm
@@ -83,24 +83,6 @@ $NetBSD: patch-aa,v 1.28 2005/08/07 21:47:24 jlam Exp $
      );
      
      my %man_layouts =
-@@ -2480,13 +2501,13 @@ sub install {
-     my(@m);
- 
-     push @m, q{
--install :: all pure_install doc_install
-+install :: all pure_install
- 
--install_perl :: all pure_perl_install doc_perl_install
-+install_perl :: all pure_perl_install
- 
--install_site :: all pure_site_install doc_site_install
-+install_site :: all pure_site_install
- 
--install_vendor :: all pure_vendor_install doc_vendor_install
-+install_vendor :: all pure_vendor_install
- 
- pure_install :: pure_$(INSTALLDIRS)_install
- 
 @@ -2519,7 +2540,7 @@ pure_site_install ::
  		$(INST_LIB) $(DESTINSTALLSITELIB) \
  		$(INST_ARCHLIB) $(DESTINSTALLSITEARCH) \
