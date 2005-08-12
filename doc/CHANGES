@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10860 2005/08/12 13:06:24 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10861 2005/08/12 13:51:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -591,3 +591,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/xpdf to 3.00pl3nb1 [salo 2005-08-12]
         Updated databases/mysql-client to 4.0.25 [xtraeme 2005-08-12]
         Updated databases/mysql-server to 4.0.25 [xtraeme 2005-08-12]
+	Updated editors/yudit to 2.7.8 [adam 2005-08-12]
