@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.5 2005/07/06 14:29:04 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.6 2005/08/13 06:37:18 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -59,6 +59,14 @@ case $arg in
 ######################################################################
 -Wl,-R*)
 	arg="${arg#-Wl,}"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# SunPro uses -h to set the shared object name.
+######################################################################
+-Wl,-soname=*)
+	arg="-h${arg#-Wl,-soname=}"
 	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
 	;;
