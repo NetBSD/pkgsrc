@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/13 19:38:19 adrianp Exp $
+share/doc/snort/signatures/100000100.txt
+share/doc/snort/signatures/100000101.txt
+share/doc/snort/signatures/100000102.txt
+share/doc/snort/signatures/100000103.txt
+share/doc/snort/signatures/100000104.txt
+share/doc/snort/signatures/100000106.txt
+share/doc/snort/signatures/100000107.txt
+share/doc/snort/signatures/100000108.txt
+share/doc/snort/signatures/100000109.txt
+share/doc/snort/signatures/100000110.txt
+share/doc/snort/signatures/100000111.txt
+share/doc/snort/signatures/100000112.txt
+share/doc/snort/signatures/100000113.txt
+share/doc/snort/signatures/100000114.txt
+share/doc/snort/signatures/100000115.txt
+share/doc/snort/signatures/100000116.txt
+share/doc/snort/signatures/100000117.txt
+share/doc/snort/signatures/100000118.txt
+share/doc/snort/signatures/100000119.txt
+share/doc/snort/signatures/100000121.txt
+share/doc/snort/signatures/100000122.txt
+share/doc/snort/signatures/100000125.txt
+share/doc/snort/signatures/100000126.txt
+share/doc/snort/signatures/100000127.txt
+share/doc/snort/signatures/100000128.txt
+share/doc/snort/signatures/100000129.txt
+share/doc/snort/signatures/100000130.txt
+share/doc/snort/signatures/100000131.txt
+share/doc/snort/signatures/100000132.txt
+share/doc/snort/signatures/100000133.txt
+share/snort/rules/community-exploit.rules
+share/snort/rules/community-ftp.rules
+share/snort/rules/community-game.rules
+share/snort/rules/community-inappropriate.rules
+share/snort/rules/community-mail-client.rules
+share/snort/rules/community-misc.rules
+share/snort/rules/community-sql-injection.rules
+share/snort/rules/community-virus.rules
+share/snort/rules/community-web-cgi.rules
+share/snort/rules/community-web-client.rules
+share/snort/rules/community-web-dos.rules
+share/snort/rules/community-web-misc.rules
+share/snort/rules/sid-msg.map
+@unexec ${RMDIR} %D/share/snort/rules 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/snort 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/snort/signatures 2>/dev/null || ${TRUE}
