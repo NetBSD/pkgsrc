@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2004/10/11 22:14:51 reed Exp $
+$NetBSD: MESSAGE,v 1.4 2005/08/13 19:56:47 adrianp Exp $
 
 To use snort, you will need to perform the following steps:
 
@@ -11,4 +11,15 @@ To use snort, you will need to perform the following steps:
 2. Now start snort by issuing the command
 
 	/etc/rc.d/snort start
+
+As of snort v2.4.0 rules are no longer distributed with the main 
+distribution.  You can either install the net/snort-rules package
+which contains the GPL "Community Rules" or download your appropriate 
+rules from:
+
+	http://www.snort.org/pub-bin/downloads.cgi
+
+or:
+	http://www.bleedingsnort.com
+
 ===========================================================================
