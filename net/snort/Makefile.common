@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.20 2005/04/27 18:36:25 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/08/13 19:56:47 adrianp Exp $
 #
 
-DISTNAME=		snort-2.3.3
+DISTNAME=		snort-2.4.0
 CATEGORIES=		net security
 MASTER_SITES=		http://www.snort.org/dl/current/ \
 			ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
@@ -52,8 +52,9 @@ SNORTDIR=		${PREFIX}/share/snort
 
 SUBST_CLASSES=		paths
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	etc/snort.conf
-SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_FILES.paths=	etc/snort.conf src/snort.c
+SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g" \
+			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.cgi=	"Fixing paths."
 
 post-install:
@@ -69,14 +70,6 @@ post-install:
 	cd ${WRKSRC}/doc ; \
 	for i in `${LS} | ${EGREP} -v "(Makefile|signatures)"` ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/snort ; \
-	done
-	cd ${WRKSRC}/doc ; \
-	${RM} -rf signatures/CVS; \
-	${PAX} -rw -pm signatures ${PREFIX}/share/doc/snort
-	${INSTALL_DATA_DIR} ${PREFIX}/share/snort/rules
-	cd ${WRKSRC}/rules ; \
-	for i in `${LS} | ${GREP} -v Makefile` ; do \
-		${INSTALL_DATA} $$i ${PREFIX}/share/snort/rules ; \
 	done
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/man/man8
 
