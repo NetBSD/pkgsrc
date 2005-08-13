@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.4.14.1 2005/08/13 05:32:37 snj Exp $
+
+Fix for SA16352, from Wine CVS.
+
+--- programs/winelauncher.in.orig	2004-06-22 01:56:15.000000000 +0200
++++ programs/winelauncher.in	2005-08-12 16:15:19.000000000 +0200
+@@ -59,8 +59,8 @@
+ if [ $? -ne 0 ] ; then
+     # xmessage not found; make sure the user notices this error
+     # (GUI users wouldn't even notice if we printed the text on console !)
+-    MSGFILE=/tmp/WINE_CANNOT_FIND_XMESSAGE
+-    cat > $MSGFILE << EOF
++    MSGFILE=`mktemp "/tmp/wine.xmessage.XXXXXX"`
++    cat > $MSGFILE <<EOF
+ Warning:
+     The Wine launcher is unable to find the xmessage program,
+     which it needs to properly notify you of Wine execution status
+@@ -87,6 +87,7 @@
+ 
+     # ok, we really give up now, this system is hosed ;-)
+     cat $MSGFILE
++    rm $MSGFILE
+ else
+     XMESSAGE="xmessage $COLOR"
+ fi

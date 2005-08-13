@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2005/06/05 06:14:17 minskim Exp $
+$NetBSD: distinfo,v 1.33.2.1 2005/08/13 05:32:37 snj Exp $
 
 SHA1 (Wine-20050524.tar.gz) = 109fac3a1b9158a4d23ca8c003f6716dd8caf73f
 RMD160 (Wine-20050524.tar.gz) = 682795fd1cd156203c5766554f74e19e5060fa34
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 92abc177dc37ed983ec6079cd08ad7a1472e178a
 SHA1 (patch-ae) = dbd40183fb8e1f1d7af9ab4e51910a2227524e3c
 SHA1 (patch-af) = 803e74ff592ce39f520c631a503d90b8abee190d
 SHA1 (patch-ag) = 656f9667da542489595d1db65c84579b3dfce279
+SHA1 (patch-ai) = f9f713431b32734398fe770e7600a8c9e6460f89
