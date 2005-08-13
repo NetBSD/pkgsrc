@@ -1,0 +1,34 @@
+$NetBSD: patch-ar,v 1.1.2.2 2005/08/13 05:27:41 snj Exp $
+
+Fix for CAN-2005-2097, from Ubuntu and RedHat.
+
+--- fofi/FoFiTrueType.cc.orig	2004-01-22 02:26:44.000000000 +0100
++++ fofi/FoFiTrueType.cc	2005-08-12 13:49:51.000000000 +0200
+@@ -1343,6 +1343,27 @@
+     return;
+   }
+ 
++  // make sure the loca table is sane (correct length and entries are
++  // in bounds)
++  i = seekTable("loca");
++  if (tables[i].len < (nGlyphs + 1) * (locaFmt ? 4 : 2)) {
++    parsedOk = gFalse;
++    return;
++  }
++  for (j = 0; j <= nGlyphs; ++j) {
++    if (locaFmt) {
++      pos = (int)getU32BE(tables[i].offset + j*4, &parsedOk);
++    } else {
++      pos = getU16BE(tables[i].offset + j*2, &parsedOk);
++    }
++    if (pos < 0 || pos > len) {
++      parsedOk = gFalse;
++    }
++  }
++  if (!parsedOk) {
++    return;
++  }
++
+   // read the post table
+   readPostTable();
+   if (!parsedOk) {
