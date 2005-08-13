@@ -617,3 +617,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/p5-Net-IPv6Addr version 0.2 [adrianp 2005-08-13]
 	Added net/p5-Net-Packet version 2.04 [adrianp 2005-08-13]
 	Updated devel/monotone-server to 0.22nb1 [jmmv 2005-08-13]
+	Updated textproc/docbook-xsl to 1.69.1 [jmmv 2005-08-13]
