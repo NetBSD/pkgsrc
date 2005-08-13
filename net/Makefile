@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.571 2005/08/13 07:57:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.572 2005/08/13 08:06:39 adrianp Exp $
 #
 
 COMMENT=	Networking tools
@@ -249,6 +249,7 @@ SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Google
 SUBDIR+=	p5-Net-IP
 SUBDIR+=	p5-Net-IPv4Addr
+SUBDIR+=	p5-Net-IPv6Addr
 SUBDIR+=	p5-Net-IRC
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Net-RawIP
