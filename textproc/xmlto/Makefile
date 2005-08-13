@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:43 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/13 21:25:58 adrianp Exp $
 #
 
 DISTNAME=		xmlto-0.0.18
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://cyberelk.net/tim/data/xmlto/stable/
 EXTRACT_SUFX=		.tar.bz2
@@ -23,6 +24,9 @@ CONFIGURE_ARGS+=	--with-getopt=${PREFIX}/bin/getopt
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xmlto/format/docbook
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xmlto/format/fo
+	@${SED} "s|/bin/bash|${PREFIX}/bin/bash|" \
+		${WRKSRC}/xmlto  > ${WRKDIR}/xmlto.new
+	@${MV} ${WRKDIR}/xmlto.new ${WRKSRC}/xmlto
 
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
