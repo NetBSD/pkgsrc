@@ -610,3 +610,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/boost-docs to 1.33.0 [jmmv 2005-08-12]
 	Updated meta-pkgs/boost to 1.33.0 [jmmv 2005-08-12]
 	Updated devel/monotone to 0.22nb1 [jmmv 2005-08-12]
+	Updated net/libpcap to 0.9.3nb2 [adrianp 2005-08-13]
