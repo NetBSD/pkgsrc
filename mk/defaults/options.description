@@ -237,6 +237,7 @@ starttls		Enable TLS support.
 static	
 subshell	
 suexec	
+sun-jre-jce		Use unlimited strength cryptograpy extension.
 svn	
 syncdir			Force synchronous link() and related syscalls.
 tcpd	

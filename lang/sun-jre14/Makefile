@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/18 15:39:04 jschauma Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/13 11:25:14 dillo Exp $
 
 # Note: Regen distinfo with SUN_JRE14_USE_JCE=YES
 
@@ -34,12 +34,16 @@ SUPPORT_FILES=	# empty
 SUPPORT_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sun-jre14
+PKG_SUPPORTED_OPTIONS=	sun-jre-jce
+# can be removed after 2005Q3
+PKG_OPTIONS_LEGACY_VARS=SUN_JRE14_USE_JCE:sun-jre-jce
 
-BUILD_DEFS+=		SUN_JRE14_USE_JCE
+.include "../../mk/bsd.options.mk"
+
 PLIST_SRC=      	${WRKDIR}/PLIST
 
-.if !empty(SUN_JRE14_USE_JCE:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_4_2.zip
 .endif
 
@@ -47,7 +51,7 @@ do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
 		${MV} -f $$file $$file.default;				\
 	done
-.if !empty(SUN_JRE14_USE_JCE:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
 	${SED} 's/@SUN_JRE14_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .else
