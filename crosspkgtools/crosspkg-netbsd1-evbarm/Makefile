@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/06 22:41:40 kristerw Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/13 05:56:23 uebayasi Exp $
 
 DISTNAME=	crosspkg-netbsd1-evbarm-1.6.2
 CATEGORIES=     crosspkgtools
@@ -42,25 +42,25 @@ GENERATE_PLIST+=	${CROSSFS_PLIST_FILES}; ${CROSSFS_PLIST_DIRS};
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/crossfs/netbsd1-evbarm
 	cd ${PREFIX}/crossfs/netbsd1-evbarm && 			\
-		tar zxfp ${_DISTDIR}/base.tgz && 		\
-		tar zxfp ${_DISTDIR}/comp.tgz && 		\
-		tar zxfp ${_DISTDIR}/etc.tgz && 		\
-		tar zxfp ${_DISTDIR}/games.tgz && 		\
-		tar zxfp ${_DISTDIR}/kern-INTEGRATOR.tgz && 	\
-		tar zxfp ${_DISTDIR}/man.tgz && 		\
-		tar zxfp ${_DISTDIR}/misc.tgz && 		\
-		tar zxfp ${_DISTDIR}/text.tgz && 		\
-		tar zxfp ${_DISTDIR}/xbase.tgz && 		\
-		tar zxfp ${_DISTDIR}/xcomp.tgz && 		\
-		tar zxfp ${_DISTDIR}/xcontrib.tgz && 		\
-		tar zxfp ${_DISTDIR}/xfont.tgz && 		\
-		tar zxfp ${_DISTDIR}/xmisc.tgz && 		\
-		tar zxfp ${_DISTDIR}/gnusrc.tgz && 		\
-		tar zxfp ${_DISTDIR}/sharesrc.tgz && 		\
-		tar zxfp ${_DISTDIR}/src.tgz && 		\
-		tar zxfp ${_DISTDIR}/syssrc.tgz
+		${TAR} zxfp ${_DISTDIR}/base.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/comp.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/etc.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/games.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/kern-INTEGRATOR.tgz && 	\
+		${TAR} zxfp ${_DISTDIR}/man.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/misc.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/text.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/xbase.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/xcomp.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/xcontrib.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/xfont.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/xmisc.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/gnusrc.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/sharesrc.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/src.tgz && 		\
+		${TAR} zxfp ${_DISTDIR}/syssrc.tgz
 	cd ${PREFIX}/crossfs/netbsd1-evbarm/usr && 		\
-		tar zxfp ${_DISTDIR}/xsrc.tgz
+		${TAR} zxfp ${_DISTDIR}/xsrc.tgz
 	# XXX These should be done in some kind of installation script
 	# and should not be added in binary packages.
 	${CP} /etc/resolv.conf ${PREFIX}/crossfs/netbsd1-evbarm/etc/resolv.conf
