@@ -619,3 +619,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/monotone-server to 0.22nb1 [jmmv 2005-08-13]
 	Updated textproc/docbook-xsl to 1.69.1 [jmmv 2005-08-13]
 	Added net/snort-rules version 2.3 [adrianp 2005-08-13]
+	Updated net/snort to 2.4.0 [adrianp 2005-08-13]
