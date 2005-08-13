@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/07/21 18:23:16 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/08/13 11:25:14 dillo Exp $
 
 # Note: Regen distinfo with SUN_JRE15_USE_JCE=YES
 
@@ -26,7 +26,12 @@ SUPPORT_FILES=	# empty
 SUPPORT_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sun-jre15
+PKG_SUPPORTED_OPTIONS=	sun-jre-jce
+# can be removed after 2005Q3
+PKG_OPTIONS_LEGACY_VARS=SUN_JRE15_USE_JCE:sun-jre-jce
+
+.include "../../mk/bsd.options.mk"
 
 HEADER_EXTRA_TMPL=	${WRKDIR}/HEADER.tmpl
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL.tmpl
@@ -34,10 +39,9 @@ DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL.tmpl
 FILES_SUBST+=		JAVA_HOME=${JAVA_HOME:Q}
 FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 
-BUILD_DEFS+=		SUN_JRE15_USE_JCE
 PLIST_SRC=      	${WRKDIR}/PLIST
 
-.if !empty(SUN_JRE15_USE_JCE:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_5_0.zip
 .endif
 
@@ -51,7 +55,7 @@ do-configure:
 		${MV} -f $$file $$file.default;				\
 	done
 	@${ECHO} 'SUPPORT_FILES="${SUPPORT_FILES}"' >${HEADER_EXTRA_TMPL}
-.if !empty(SUN_JRE15_USE_JCE:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
 	${SED} 's/@SUN_JRE15_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .else
