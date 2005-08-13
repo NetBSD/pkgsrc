@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.22 2005/08/11 20:48:55 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.23 2005/08/13 23:35:45 xtraeme Exp $
 #
 # Copyright (c) 2004, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -561,7 +561,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.22 2005/08/11 20:48:55 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.23 2005/08/13 23:35:45 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -803,14 +803,16 @@ _EOF_
             cd $ISODIR
 
             if [ ! -f $ISODIR/stand/usr.zfs ]; then
-                showmsg_n "Creating image of /usr..."
+                showmsg_n "Creating image of /usr... "
                 makefs -t ffs stand/usr.fs usr > /dev/null 2>&1
                 showmsgstring
-                showmsg_n "Compressing image of /usr..."
+                showmsg_n "Compressing image of /usr... "
                 vndcompress stand/usr.fs stand/usr.zfs > /dev/null 2>&1
                 showmsgstring
                 rm stand/usr.fs
-                find $ISODIR/usr -type f | xargs rm -v
+                showmsg_n "Removing /usr... "
+                rm -rf $ISODIR/usr/*
+                showmsgstring
             fi
             if [ -d $ISODIR/var/db/pkg ]; then
                 if [ ! -f stand/var_db_pkg.zfs ]; then
@@ -823,7 +825,9 @@ _EOF_
                         $ISODIR/stand/var_db_pkg.zfs > /dev/null 2>&1
                     showmsgstring
                     rm -f $ISODIR/stand/var_db_pkg.fs
+                    showmsg_n "Removing /var/db/pkg... "
                     rm -rf $ISODIR/var/db/pkg/*
+                    showmsgstring
                     @TAR@ cfzp stand/mfs_var.tgz var
                 fi
             else
