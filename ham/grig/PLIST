@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/24 23:36:42 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/08/14 07:12:07 wulf Exp $
 bin/grig
-share/pixmaps/grig/digits_normal.xpm
-share/pixmaps/grig/digits_small.xpm
-@dirrm share/pixmaps/grig
+share/grig/AUTHORS
+share/grig/COPYING
+share/grig/ChangeLog
+share/grig/NEWS
+share/grig/README
+share/grig/pixmaps/digits_normal.png
+share/grig/pixmaps/digits_small.png
+share/grig/pixmaps/grig-logo.png
+share/grig/pixmaps/ic910.png
+share/grig/pixmaps/smeter.png
+@dirrm share/grig/pixmaps
