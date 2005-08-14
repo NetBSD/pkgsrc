@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2005/08/13 11:25:14 dillo Exp $
+# $NetBSD: Makefile,v 1.26 2005/08/14 10:15:55 dillo Exp $
 
-# Note: Regen distinfo with SUN_JRE14_USE_JCE=YES
+# Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
 DISTNAME=	j2re-1_4_2_08-linux-i586
 PKGNAME=	sun-jre14-2.8
