@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1713 2005/08/14 17:26:13 kristerw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1714 2005/08/14 19:52:26 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -3603,13 +3603,12 @@ pre-install-depends:
 FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
 
-_DEPENDS_AND_BUILD_DEPENDS=	${DEPENDS} ${BUILD_DEPENDS}
 install-depends: pre-install-depends
 .  if !empty(DEPENDS) || !empty(BUILD_DEPENDS)
 .    if defined(NO_DEPENDS)
 	@${DO_NADA}
 .    else	# !DEPENDS
-.      for dep in ${_DEPENDS_AND_BUILD_DEPENDS:O}
+.      for dep in ${DEPENDS} ${BUILD_DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
