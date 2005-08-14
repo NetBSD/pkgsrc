@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/05/02 20:33:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/08/14 18:47:47 tv Exp $
 lib/fidogate/areafix.help
 lib/fidogate/bin/areasbbssync
 lib/fidogate/bin/ftnafutil
@@ -80,6 +80,9 @@ share/doc/fidogate/fidogate_4.html
 share/doc/fidogate/fidogate_5.html
 share/doc/fidogate/fidogate_6.html
 share/doc/fidogate/fidogate_7.html
+share/doc/fidogate/fidogate_8.html
+share/doc/fidogate/fidogate_abt.html
+share/doc/fidogate/fidogate_ovr.html
 share/doc/fidogate/fidogate_toc.html
 share/doc/fidogate/fidogate.txt
 share/doc/fidogate/msgid-1.html
