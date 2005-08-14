@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/07/09 17:25:00 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/08/14 18:01:54 adrianp Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -192,6 +192,7 @@ man/man1/radwho.1
 man/man1/radzap.1
 man/man5/acct_users.5
 man/man5/clients.5
+man/man5/clients.conf.5
 man/man5/dictionary.5
 man/man5/naslist.5
 man/man5/radiusd.conf.5
