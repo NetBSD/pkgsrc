@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2005/05/10 01:51:13 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.26 2005/08/14 10:15:55 dillo Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -47,7 +47,7 @@ _FETCH_MESSAGE= 							\
 	${ECHO} -e ${END_MESSAGE};					\
 	${ECHO} "======================================================================"
 
-.if !empty(SUN_JRE14_USE_JCE:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 END_MESSAGE="\n The file jce_policy-1_4_2.zip must be fetched into:\n"	\
 		"    ${DISTDIR}/jce_policy-1_4_2.zip\n\n"		\
 		"Under 'Other Downloads' / 'Java Cryptography Extension'\n" \
