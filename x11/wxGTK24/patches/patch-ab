@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/08/07 11:27:29 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2005/08/14 18:10:08 veego Exp $
 
 --- Makefile.in.orig	2003-09-21 13:31:27.000000000 +0200
 +++ Makefile.in
@@ -60,6 +60,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/08/07 11:27:29 wiz Exp $
  REGEXDIR = $(WXDIR)/src/regex
  GTKDIR   = $(WXDIR)/src/gtk
  X11DIR   = $(WXDIR)/src/x11
+@@ -139,7 +132,7 @@ DISTDIR=./_dist_dir/$(DISTDIRNAME)
+ 
+ ############################## Files ##################################
+ 
+-WX_LINGUAS = `cd $(top_srcdir)/locale && ls *.mo 2> /dev/null | sed -n 's/\.mo//p'`
++WX_LINGUAS =
+ 
+ # this line will include a file which defines ALL_SOURCES, ALL_OBJECTS,
+ # ALL_DEPFILES and ALL_HEADERS variables with the complete list of .cpp, .o,
 @@ -161,124 +154,6 @@ REGEXOBJS = \
  		regerror.o \
  		regfree.o
@@ -296,7 +305,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/08/07 11:27:29 wiz Exp $
  	$(INSTALL_SCRIPT) $(top_builddir)/wx@TOOLCHAIN_NAME@-config $(bindir)/wx@TOOLCHAIN_NAME@-config
 -	cd $(bindir) && rm -f wx-config && $(LN_S) wx@TOOLCHAIN_NAME@-config wx-config
 -	@INSTALL_LIBRARY@ $(build_libdir)/@WX_TARGET_LIBRARY@ $(libdir)/@WX_TARGET_LIBRARY@
-+	cd $(bindir) && rm -f wx-config && $(LN_S) wx@TOOLCHAIN_NAME@-config wx24-config
++	cd $(bindir) && rm -f wx24-config && $(LN_S) wx@TOOLCHAIN_NAME@-config wx24-config
 +	${LIBTOOL} --mode=install ${INSTALL_DATA} $(build_libdir)/lib@WX_LIBRARY_BASENAME@.la $(libdir)
  	@if test "x@WX_LIBRARY_IMPORTLIB@" != "x"; then \
  		$(INSTALL_PROGRAM) $(top_builddir)/lib/@WX_LIBRARY_IMPORTLIB@ $(libdir)/@WX_LIBRARY_IMPORTLIB@; fi
