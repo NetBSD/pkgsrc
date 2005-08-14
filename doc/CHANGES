@@ -629,3 +629,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/bdb-xml to 1.2.1nb2 [minskim 2005-08-14]
 	Updated net/freeradius to 1.0.4nb1 [adrianp 2005-08-14]
 	Updated x11/wxGTK24 to 2.4.2nb7 [veego 2005-08-14]
+	Updated misc/xchm to 1.0 [minskim 2005-08-14]
