@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/14 07:42:12 wulf Exp $
 
-DISTNAME=	cwtext-0.91
+DISTNAME=	cwtext-0.94
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cwtext/}
 
@@ -24,6 +24,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cwpcm ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/cwtext ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/cwmm ${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
