@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/08/07 11:26:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/08/14 08:03:53 wiz Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-2.6
@@ -496,9 +496,9 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/wxstd.mo
 @dirrm share/doc/wxGTK
 @dirrm lib/wx/include/gtk2-ansi-release-2.6/wx
 @dirrm lib/wx/include/gtk2-ansi-release-2.6
-@dirrm lib/wx/include
+@unexec ${RMDIR} %D/lib/wx/include 2>/dev/null || ${TRUE}
 @dirrm lib/wx/config
-@dirrm lib/wx
+@unexec ${RMDIR} %D/lib/wx 2>/dev/null || ${TRUE}
 @dirrm include/wx-2.6/wx/xrc
 @dirrm include/wx-2.6/wx/xml
 @dirrm include/wx-2.6/wx/unix
