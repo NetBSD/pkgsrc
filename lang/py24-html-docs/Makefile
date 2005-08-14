@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/29 06:32:10 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/14 08:02:56 toshii Exp $
 #
 
-DISTNAME=	html-2.4
+DISTNAME=	html-2.4.1
 PKGNAME=	${DISTNAME:S/html/py24-html-docs/}
 CATEGORIES=	lang python
-MASTER_SITES=	http://www.python.org/ftp/python/doc/2.4/
+MASTER_SITES=	http://www.python.org/ftp/python/doc/2.4.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/
 COMMENT=	HTML Documentation for Python
 
-WRKSRC=		${WRKDIR}/Python-Docs-2.4/
+WRKSRC=		${WRKDIR}/Python-Docs-2.4.1/
 DIST_SUBDIR=	python
 
 NO_CONFIGURE=	yes
