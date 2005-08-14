@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/08/14 21:51:02 christos Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
 libexec/postfix/bounce
 libexec/postfix/cleanup
+libexec/postfix/discard
 libexec/postfix/error
 libexec/postfix/flush
 libexec/postfix/lmtp
@@ -16,6 +17,7 @@ libexec/postfix/pipe
 libexec/postfix/proxymap
 libexec/postfix/qmgr
 libexec/postfix/qmqpd
+libexec/postfix/scache
 libexec/postfix/showq
 libexec/postfix/smtp
 libexec/postfix/smtpd
@@ -130,11 +132,15 @@ share/doc/postfix/VERP_README
 share/doc/postfix/VIRTUAL_README
 share/doc/postfix/XCLIENT_README
 share/doc/postfix/XFORWARD_README
+share/doc/postfix/CDB_README
+share/doc/postfix/DSN_README
+share/doc/postfix/CONNECTION_CACHE_README
 share/examples/postfix/LICENSE
 share/examples/postfix/access
 share/examples/postfix/aliases
 share/examples/postfix/canonical
 share/examples/postfix/header_checks
+share/examples/postfix/generic
 share/examples/postfix/mailer.conf
 share/examples/postfix/main.cf
 share/examples/postfix/main.cf.default
