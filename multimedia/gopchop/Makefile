@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/06 15:12:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/15 02:15:56 wiz Exp $
 #
 
 DISTNAME=		gopchop-1.1.7
@@ -11,9 +11,10 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://outflux.net/unix/software/GOPchop/
 COMMENT=		MPEG2 GOP-accurate editor
 
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
