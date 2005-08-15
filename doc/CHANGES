@@ -631,3 +631,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/wxGTK24 to 2.4.2nb7 [veego 2005-08-14]
 	Updated misc/xchm to 1.0 [minskim 2005-08-14]
 	Updated mail/postfix-current to postfix-2.3-200507206 [christos 2005-08-14]
+	Updated devel/lwp to 2.0 [xtraeme 2005-08-15]
