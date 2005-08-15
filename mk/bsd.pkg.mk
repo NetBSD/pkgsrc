@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1715 2005/08/15 13:05:18 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1716 2005/08/15 17:35:45 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2107,15 +2107,15 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
 	${_PKG_SILENT}${DO_NADA} \
-		#								\
-		# PLIST must be generated at this late point (instead of	\
-		# depending on it somewhere earlier), because it needs		\
-		# to be created _after_ the {pre,do,post}-install		\
-		# targets are run.						\
-		#								\
-		# We generate _before_ post-install-script is run so		\
-		# that the real config files and rc.d scripts aren't		\
-		# listed in the PLIST.						\
+		#							\
+		# PLIST must be generated at this late point (instead of \
+		# depending on it somewhere earlier), because it needs	\
+		# to be created _after_ the {pre,do,post}-install	\
+		# targets are run.					\
+		#							\
+		# We generate _before_ post-install-script is run so	\
+		# that the real config files and rc.d scripts aren't	\
+		# listed in the PLIST.					\
 		#
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
