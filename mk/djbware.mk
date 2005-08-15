@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.5 2005/07/18 18:26:47 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.6 2005/08/15 19:44:13 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -9,7 +9,18 @@
 # * replace inline definitions of errno with "#include <errno.h>"
 #
 # TODO:
+# * centralize handling of third-party manpages
+# * centralize MASTER_SITES and SITES_foo
+# * centralize compiler hack for arm{,32}
+# * phase out BGWARE_INSTALLER (instead, use default INSTALL_TARGET)
+# * common install script for compatibility with default conf-home pathnames
+# * PKG_OPTIONS (default):
+#     djbware-errno-hack (off)
+#     djbware-pathname-compat (on)
+#     inet6 (off)
+#     pam (off)
 # * set RESTRICTED automatically iff patches or other mods are applied
+# * be unrestricted by default for bulk builds
 #
 
 .if !defined(DJBWARE_MK)
