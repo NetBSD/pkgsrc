@@ -1,9 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2005/03/16 15:32:12 rillig Exp $
+$NetBSD: patch-ai,v 1.2 2005/08/15 14:03:53 wulf Exp $
 
-Needed for g++-2.95.3.
-
---- src/spectrumdisplay.cpp.orig	Sun Jul 25 18:00:51 2004
-+++ src/spectrumdisplay.cpp	Wed Mar 16 03:25:07 2005
+--- src/spectrumdisplay.cpp.orig	2005-03-13 20:32:03.000000000 +1030
++++ src/spectrumdisplay.cpp	2005-08-15 07:24:05.000000000 +0930
 @@ -21,6 +21,8 @@
  #include <qpainter.h>
  #include <qsplitter.h>
@@ -13,7 +11,7 @@ Needed for g++-2.95.3.
  #include "spectrumdisplay.h"
  #include "crxchannel.h"
  #include "parameter.h"
-@@ -181,7 +183,7 @@ paintLineal(&p,xmax,ymax);
+@@ -178,7 +180,7 @@
       {
         int ID = pRx->getID();
         if ( ID >= 0 && ID < Farbe->size() )
