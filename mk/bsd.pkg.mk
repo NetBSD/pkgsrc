@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1714 2005/08/14 19:52:26 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1715 2005/08/15 13:05:18 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -3973,7 +3973,7 @@ print-pkg-size-this:
 	| ${SORT} -u							\
 	| ${SED} -e "s/'/'\\\\''/g" -e "s/.*/'&'/"			\
 	| ${XARGS} -n 256 ${LS} -ld					\
-	| ${AWK} '{ s += $$5; } END { print s; }'			\
+	| ${AWK} 'BEGIN { s = 0; } { s += $$5; } END { print s; }'
 
 # Sizes of required pkgs (only)
 #
