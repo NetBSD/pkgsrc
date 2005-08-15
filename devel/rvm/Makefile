@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:07:55 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/15 01:26:14 xtraeme Exp $
 #
 
-DISTNAME=	rvm-1.10
+DISTNAME=	rvm-1.11
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/ \
-		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
+MASTER_SITES=	http://ftp.coda.cs.cmu.edu/pub/rvm/src/
 
 MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
