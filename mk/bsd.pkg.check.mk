@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.9 2005/08/15 14:19:37 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.10 2005/08/15 17:33:31 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -179,13 +179,17 @@ check-files-varbase: ${_CHECK_FILES_COOKIE.varbase}
 #
 .PHONY: check-files
 check-files: ${_CHECK_FILES_COOKIES}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
+		"${_PKGSRC_IN}> Checking file-check results for ${PKGNAME}"
 .for _cookie_ in ${_CHECK_FILES_COOKIES}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${_cookie_}
 .endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${CAT} ${_CHECK_FILES_COOKIES} | ${AWK} 'END { if (NR > 0) exit 1; }'
 
-# Check ${PREFIX} for files which are not listed in the generated ${PLIST}.
+# Check ${PREFIX} for files which are not listed in the generated ${PLIST}
+# and vice-versa.
+#
 ${_CHECK_FILES_COOKIE.prefix}:
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -194,33 +198,48 @@ ${_CHECK_FILES_COOKIE.prefix}:
 	then								\
 		{ exit 0; };						\
 	fi;								\
+	f_added=${WRKDIR:Q}/.files.added;				\
+	f_deleted=${WRKDIR:Q}/.files.deleted;				\
+	f_expected=${WRKDIR:Q}/.files.expected;				\
+	f_missing=${WRKDIR:Q}/.files.missing;				\
+	f_extra=${WRKDIR:Q}/.files.extra;				\
 	${DIFF} -u ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix} \
 		> ${WRKDIR}/.files.diff || ${TRUE};			\
 	${GREP} '^+/' ${WRKDIR}/.files.diff | ${SED} "s|^+||" | ${SORT}	\
-		> ${WRKDIR}/.files.added;				\
+		> $$f_added;						\
 	${GREP} '^-/' ${WRKDIR}/.files.diff | ${SED} "s|^-||" | ${SORT}	\
-		> ${WRKDIR}/.files.deleted;				\
+		> $$f_deleted;						\
 	${GREP} '^[A-Za-z]' ${PLIST} | ${SED} "s|^|${PREFIX}/|" | ${SORT} \
-		> ${WRKDIR}/.files.expected;				\
-	if ${AWK} 'END { if (NR == 0) exit 1; }' ${WRKDIR}/.files.deleted; \
-	then								\
+		> $$f_expected;						\
+	${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added	\
+		| ${GREP} '^-[^-]' | ${SED} "s|^-|	|"		\
+		> $$f_missing;						\
+	${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added\
+		| ${GREP} '^+[^+]' | ${SED} "s|^+|	|"		\
+		> $$f_extra;						\
+	if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_deleted; then	\
 		{ ${ECHO} "*** The following files have been deleted"	\
 			  "from ${PREFIX}!";				\
-		  ${SED} "s|^|        |" ${WRKDIR}/.files.deleted;	\
+		  ${SED} "s|^|        |" $$f_deleted;			\
 		} > ${.TARGET};						\
 	fi;								\
-	if ! ${CMP} -s ${WRKDIR}/.files.expected ${WRKDIR}/.files.added; \
+	if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing $$f_extra;	\
 	then								\
 		{ ${ECHO} "*** The PLIST does not match installed files!"; \
-		  ${ECHO} "    The following files were not expected"	\
-			  "in ${PREFIX}:";				\
-		  ${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added \
-			| ${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
+		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing; then \
+		  	${ECHO} "*** The following files are in the"	\
+				"PLIST but not in ${PREFIX}:";		\
+			${CAT} $$f_missing;				\
+		  fi;							\
+		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_extra; then \
+		  	${ECHO} "*** The following files are in"	\
+				"${PREFIX} but not in the PLIST:";	\
+			${CAT} $$f_extra;				\
+		  fi;							\
 		} >> ${.TARGET};					\
-	fi
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR}/.files.added ${WRKDIR}/.files.deleted	\
-	         ${WRKDIR}/.files.diff ${WRKDIR}/.files.expected
+	fi;								\
+	${RM} -f ${WRKDIR}/.files.diff $$f_added $$f_deleted		\
+		 $$f_expected $$f_missing $$f_extra
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 
@@ -243,7 +262,7 @@ ${_CHECK_FILES_COOKIE.sysconfdir}:
 		  ${ECHO} "    The offending files/directories are:";	\
 		  ${DIFF} -u ${_CHECK_FILES_PRE.sysconfdir}		\
 			     ${_CHECK_FILES_POST.sysconfdir}		\
-			| ${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
+			| ${GREP} '^+[^+]' | ${SED} "s|^+|	|";	\
 		} > ${.TARGET};						\
 	fi
 .endif
@@ -268,7 +287,7 @@ ${_CHECK_FILES_COOKIE.varbase}:
 		  ${ECHO} "    The offending files/directories are:";	\
 		  ${DIFF} -u ${_CHECK_FILES_PRE.varbase}		\
 			     ${_CHECK_FILES_POST.varbase}		\
-			| ${GREP} '^+[^+]' | ${SED} "s|^+|        |";	\
+			| ${GREP} '^+[^+]' | ${SED} "s|^+|	|";	\
 		} > ${.TARGET};						\
 	fi
 .endif
