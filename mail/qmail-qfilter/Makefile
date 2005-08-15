@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/07/18 18:28:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/15 12:58:21 schmonz Exp $
 #
 
-DISTNAME=		qmail-qfilter-2.0
+DISTNAME=		qmail-qfilter-2.1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -30,9 +30,9 @@ SUBST_MESSAGE.paths=	"Fixing paths."
 INSTALLATION_DIRS=	bin man man/man1 share/examples/qmail-qfilter
 
 BUILD_TARGET=		all
+INSTALL_TARGET=		install
 
 DJB_RESTRICTED=		NO
-BGWARE_INSTALLER=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
