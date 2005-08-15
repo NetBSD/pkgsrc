@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2005/03/24 21:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/15 08:45:54 wennmach Exp $
 
-DISTNAME=		avr-libc-1.0.4
+DISTNAME=		avr-libc-1.2.5
 CATEGORIES=		cross
 MASTER_SITES=		http://people.freebsd.org/~joerg/ \
 			http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		karlj@mdstud.chalmers.se
+MAINTAINER=		wennmach@NetBSD.org
 HOMEPAGE=		http://savannah.nongnu.org/projects/avr-libc
 COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 
@@ -18,10 +18,16 @@ BUILD_DEPENDS+=		transfig-*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-*:../../graphics/netpbm
 
 USE_BZIP2=		yes
+USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV=		CC=${LOCALBASE}/bin/avr-gcc PREFIX=${PREFIX}
-CONFIGURE_SCRIPT=	./doconf
-CONFIGURE_ARGS=		--disable-versioned-doc --enable-html-doc --enable-doc
+CONFIGURE_ENV+=		CC=${LOCALBASE}/bin/avr-gcc
+CONFIGURE_ENV+=		PREFIX=${PREFIX}
+CONFIGURE_ARGS+=	--enable-doc
+CONFIGURE_ARGS+=	--disable-versioned-doc
+# avr-libc's method to build the man pages seems to be broken
+CONFIGURE_ARGS+=	--disable-man-doc
+CONFIGURE_SCRIPT=	${SRCDIR}/doconf
+SRCDIR=			${WRKDIR}/${DISTNAME}
 
 do-build:
 	(cd ${WRKSRC}; ./domake MAKE=${GMAKE})
