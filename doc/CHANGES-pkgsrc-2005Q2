@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.66 2005/08/13 05:32:50 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.67 2005/08/15 04:44:42 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -207,3 +207,5 @@ Pullup ticket 676 - requested by Lubomir Sedlacik
 security fix for xpdf
 Pullup ticket 679 - requested by Lubomir Sedlacik
 security fix for wine
+Pullup ticket 681 - requested by Min Sik Kim
+security fix for awstats
