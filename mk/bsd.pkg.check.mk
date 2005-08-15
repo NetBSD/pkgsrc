@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.8 2005/07/28 13:20:13 wiz Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.9 2005/08/15 14:19:37 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -207,7 +207,7 @@ ${_CHECK_FILES_COOKIE.prefix}:
 		{ ${ECHO} "*** The following files have been deleted"	\
 			  "from ${PREFIX}!";				\
 		  ${SED} "s|^|        |" ${WRKDIR}/.files.deleted;	\
-		} > ${_CHECK_FILES_COOKIE.prefix};			\
+		} > ${.TARGET};						\
 	fi;								\
 	if ! ${CMP} -s ${WRKDIR}/.files.expected ${WRKDIR}/.files.added; \
 	then								\
