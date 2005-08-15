@@ -633,3 +633,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/postfix-current to postfix-2.3-200507206 [christos 2005-08-14]
 	Updated devel/lwp to 2.0 [xtraeme 2005-08-15]
 	Updated devel/rpc2 to 1.27 [xtraeme 2005-08-15]
+	Updated devel/rvm to 1.11 [xtraeme 2005-08-15]
+
