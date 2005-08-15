@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/08/15 01:20:23 xtraeme Exp $
 #
 
-DISTNAME=	rpc2-1.26
+DISTNAME=	rpc2-1.27
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/rpc2/src/ \
-		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
+MASTER_SITES=	http://www.coda.cs.cmu.edu/pub/coda/src/
 
 MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
