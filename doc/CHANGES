@@ -635,3 +635,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/rpc2 to 1.27 [xtraeme 2005-08-15]
 	Updated devel/rvm to 1.11 [xtraeme 2005-08-15]
 	Updated mail/qmail-qfilter to 2.1 [schmonz 2005-08-15]
+	Updated cross/avr-libc to 1.2.5 [wennmach 2005-08-15]
