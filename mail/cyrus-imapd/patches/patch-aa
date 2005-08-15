@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/05/21 03:31:26 rh Exp $
+$NetBSD: patch-aa,v 1.5 2005/08/15 02:20:33 rh Exp $
 
 --- tools/config2header.orig	2004-06-23 05:02:31.000000000 +1000
 +++ tools/config2header
@@ -17,3 +17,21 @@ $NetBSD: patch-aa,v 1.4 2005/05/21 03:31:26 rh Exp $
  die "wrong number of arguments" if ($#ARGV != 1);
  my ($cfile, $hfile) = @ARGV;
  
+@@ -214,7 +222,6 @@ while (<STDIN>) {
+ print HFILE <<EOF
+   IMAPOPT_LAST
+ };
+-extern struct imapopt_s imapopts[];
+ 
+ enum enum_value {
+   IMAP_ENUM_ZERO = 0,
+@@ -260,6 +267,9 @@ print HFILE "    const struct enum_optio
+ 
+ print HFILE <<EOF
+ };
++
++extern struct imapopt_s imapopts[];
++
+ #endif /* INCLUDED_IMAPOPTIONS_H */
+ EOF
+     ;
