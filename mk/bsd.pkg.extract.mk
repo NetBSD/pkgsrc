@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.10 2005/07/15 18:27:54 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.11 2005/08/15 12:57:07 rillig Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -49,11 +49,12 @@ _EXTRACT_SUFFIXES+=	.zoo
 _EXTRACT_SUFFIXES+=	.bin
 _EXTRACT_SUFFIXES+=	.rar
 
-.if !empty(EXTRACT_ONLY:M*.tar) || !empty(EXTRACT_ONLY:M*.tar.*) || \
-    !empty(EXTRACT_SUFX:M*.tar) || !empty(EXTRACT_SUFX:M*.tar.*) || \
-    !empty(EXTRACT_ONLY:M*.tbz) || !empty(EXTRACT_ONLY:M*.tgz) || \
-    !empty(EXTRACT_SUFX:M*.tbz) || !empty(EXTRACT_SUFX:M*.tgz) || \
+.if !empty(EXTRACT_ONLY:M*.tar)    || !empty(EXTRACT_SUFX:M*.tar)   || \
+    !empty(EXTRACT_ONLY:M*.tar.*)  || !empty(EXTRACT_SUFX:M*.tar.*) || \
+    !empty(EXTRACT_ONLY:M*.tbz)    || !empty(EXTRACT_SUFX:M*.tbz)   || \
+    !empty(EXTRACT_ONLY:M*.tgz)    || !empty(EXTRACT_SUFX:M*.tgz)   || \
     !empty(EXTRACT_ONLY:M*_tar.gz) || !empty(EXTRACT_SUFX:M*_tar.gz)
+
 .  if !empty(EXTRACT_USING:Mgtar)
 USE_TOOLS+=	gtar
 .  elif !empty(EXTRACT_USING:Mnbtar)
