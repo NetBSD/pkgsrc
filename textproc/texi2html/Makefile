@@ -1,25 +1,21 @@
-# $NetBSD: Makefile,v 1.21 2005/07/16 19:10:40 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.22 2005/08/16 11:37:34 adam Exp $
 
-DISTNAME=		texi2html-1.76
-CATEGORIES=		textproc
-MASTER_SITES=		${MASTER_SITE_LOCAL}
-# The following only seems to work with a graphical browser
-# https://texi2html.cvshome.org/files/documents/70/758/texi2html-1.76.tar.bz2
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	texi2html-1.76
+CATEGORIES=	textproc
+MASTER_SITES=	http://savannah.nongnu.org/download/texi2html/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		https://texi2html.cvshome.org/
-COMMENT=		Texinfo-to-HTML direct translator
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.nongnu.org/texi2html/
+COMMENT=	Texinfo-to-HTML direct translator
 
-CONFLICTS=		teTeX-bin-1.0 teTeX-bin-1.0.[1234567]
+CONFLICTS=	teTeX-bin-1.0 teTeX-bin-1.0.[1234567]
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		YES
+USE_TOOLS+=		perl:run
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-USE_TOOLS+=		perl:run
 INFO_FILES=		texi2html.info
 
 .include "../../mk/bsd.pkg.mk"
