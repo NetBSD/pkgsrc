@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/16 14:41:04 grant Exp $
 
 PKGNAME=		tk-postgresql73-${BASE_VERS}
 PKGREVISION=	1
@@ -17,7 +17,8 @@ CONFIGURE_ENV+=		TCLSH="${TCLSH}"
 TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
 MAKE_ENV+=		INSTALLED_LIBPQ=1 INSTALLED_LIBPGTCL=1
 
-BUILD_DIRS=		${WRKSRC}/src/bin/pgtclsh
+BUILD_DIRS=		${WRKSRC}/src/port
+BUILD_DIRS+=		${WRKSRC}/src/bin/pgtclsh
 BUILD_TARGET=		pgtksh
 INSTALL_TARGET=		install-tk
 
