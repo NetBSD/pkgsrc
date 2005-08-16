@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2005/06/09 06:07:29 jlam Exp $
+# $NetBSD: builtin.mk,v 1.15 2005/08/16 16:58:29 jlam Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -152,7 +152,8 @@ WRAPPER_REORDER_CMDS+=	reorder:l:des:crypto
 #     (b) If it's NetBSD's Special(TM) one that stripped out the old DES
 #         support into a separate library and header (-ldes, <des.h>),
 #         then we create a new header <openssl/des.h> that includes the
-#         system one and <des.h>.
+#         system one and <des.h>, and we create an <openssl/des_old.h>
+#         that just includes <des.h>.
 #
 BUILDLINK_TARGETS+=	buildlink-openssl-des-h
 .    if !target(buildlink-openssl-des-h)
@@ -160,6 +161,7 @@ BUILDLINK_TARGETS+=	buildlink-openssl-des-h
 buildlink-openssl-des-h:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	bl_odes_h="${BUILDLINK_DIR}/include/openssl/des.h";		\
+	bl_odes_old_h="${BUILDLINK_DIR}/include/openssl/des_old.h";	\
 	odes_h="${BUILDLINK_PREFIX.openssl}/include/openssl/des.h";	\
 	odes_old_h="${BUILDLINK_PREFIX.openssl}/include/openssl/des_old.h"; \
 	des_h="${BUILDLINK_PREFIX.openssl}/include/des.h";		\
@@ -177,6 +179,12 @@ buildlink-openssl-des-h:
 		  ${ECHO} "#include \"$$odes_h\"";			\
 		  ${ECHO} "#include \"$$des_h\"";			\
 		) > $$bl_odes_h;					\
+		${ECHO_BUILDLINK_MSG} "Creating $$bl_odes_old_h";	\
+		${RM} -f $$bl_odes_old_h;				\
+		${MKDIR} `${DIRNAME} $$bl_odes_old_h`;			\
+		( ${ECHO} "/* Created by openssl/builtin.mk:${.TARGET} */"; \
+		  ${ECHO} "#include \"$$des_h\"";			\
+		) > $$bl_odes_old_h;					\
 		exit 0;							\
 	else								\
 		${ECHO} "Unable to find headers for old DES API.";	\
