@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config.mk,v 1.1 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: pkg-config.mk,v 1.2 2005/08/16 13:32:00 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,12 +39,12 @@
 # Override the location where pkg-config searches for *.pc files in the
 # pkg-config wrapper script.
 #
-PKG_CONFIG_LIBDIR?=	${BUILDLINK_DIR}/lib/pkgconfig
+_PKG_CONFIG_LIBDIR?=	${BUILDLINK_DIR}/lib/pkgconfig
 
 TOOLS_SCRIPT.pkg-config=	\
-	PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR:Q} ${TOOLS_SCRIPT_DFLT.pkg-config}
+	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q} ${TOOLS_SCRIPT_DFLT.pkg-config}
 
 CONFIGURE_ENV+=	PKG_CONFIG=${TOOLS_CMD.pkg-config:Q}
-CONFIGURE_ENV+=	PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR:Q}
+CONFIGURE_ENV+=	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q}
 MAKE_ENV+=	PKG_CONFIG=${TOOLS_CMD.pkg-config:Q}
-MAKE_ENV+=	PKG_CONFIG_LIBDIR=${PKG_CONFIG_LIBDIR:Q}
+MAKE_ENV+=	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q}
