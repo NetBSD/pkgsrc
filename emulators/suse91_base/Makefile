@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/08/05 22:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/16 00:30:41 dmcmahill Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -51,9 +51,9 @@ do-install:
 	  ${INSTALL_SCRIPT} $$FILE ${PREFIX}/sbin/`basename $$FILE .sh`; \
 	done
 	${INSTALL_DATA_DIR} ${EMULDIR}/dev
-	${LN} -fs /dev/sound ${EMULDIR}/dev/dsp
-	${LN} -fs /dev/null ${EMULDIR}/dev/null
-	${LN} -fs /dev/tty ${EMULDIR}/dev/tty
+	${INSTALL_DATA} /dev/MAKEDEV ${EMULDIR}/dev
+	cd ${EMULDIR}/dev && ${SH} ./MAKEDEV  std audio
+	cd ${EMULDIR}/dev && ${LN} -fs sound dsp
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${RPM2PKG} ${RPM2PKGARGS}
 	${ECHO} "@dirrm ${EMULSUBDIR}" >>${PLIST_SRC}
