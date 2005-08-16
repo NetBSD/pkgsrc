@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/08/04 15:23:35 adam Exp $
+$NetBSD: distinfo,v 1.9 2005/08/16 10:59:08 adam Exp $
 
-SHA1 (msmtp-1.4.3.tar.bz2) = b4f8778de80b02af5be418a794059eff47265d38
-RMD160 (msmtp-1.4.3.tar.bz2) = cdb45cdca53e8cdcd6e2449ca15734cec0658c3a
-Size (msmtp-1.4.3.tar.bz2) = 481219 bytes
+SHA1 (msmtp-1.4.4.tar.bz2) = 2b8437bb613a4054f51e94f4a6a4784b2abe3458
+RMD160 (msmtp-1.4.4.tar.bz2) = c83018a31815e031cd1b34bceb71862fb7a5399f
+Size (msmtp-1.4.4.tar.bz2) = 480904 bytes
