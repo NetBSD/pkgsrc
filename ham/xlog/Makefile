@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2005/08/10 20:56:18 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/16 12:35:49 wulf Exp $
 #
 
-DISTNAME=	xlog-1.0
+DISTNAME=	xlog-1.2.2
 CATEGORIES=	ham
 MASTER_SITES=	http://www.qsl.net/pg4i/download/
 
@@ -18,4 +18,5 @@ CONFIGURE_ARGS=	--enable-hamlib
 .include "../../ham/hamlib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
