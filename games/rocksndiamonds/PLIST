@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/12/22 16:46:19 reed Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/08/16 15:35:51 adam Exp $
 bin/rocksndiamonds
 man/man6/rocksndiamonds.6
 @dirrm share/rocksndiamonds/sounds/snd_classic
@@ -7,7 +7,8 @@ man/man6/rocksndiamonds.6
 @dirrm share/rocksndiamonds/music
 @dirrm share/rocksndiamonds/levels/Tutorials/rnd_tutorial_niko_boehm/tapes
 @dirrm share/rocksndiamonds/levels/Tutorials/rnd_tutorial_niko_boehm
-@dirrm share/rocksndiamonds/levels/Tutorials/rnd_tutorial
+@dirrm share/rocksndiamonds/levels/Tutorials/rnd_tutorial_aaron_davidson/tapes
+@dirrm share/rocksndiamonds/levels/Tutorials/rnd_tutorial_aaron_davidson
 @dirrm share/rocksndiamonds/levels/Tutorials
 @dirrm share/rocksndiamonds/levels/Classic_Games/classic_supaplex/music
 @dirrm share/rocksndiamonds/levels/Classic_Games/classic_supaplex
@@ -18,7 +19,6 @@ man/man6/rocksndiamonds.6
 @dirrm share/rocksndiamonds/levels/Classic_Games
 @dirrm share/rocksndiamonds/levels
 @dirrm share/rocksndiamonds/graphics/gfx_classic
-@dirrm share/rocksndiamonds/graphics/gfx_animal_kingdom
 @dirrm share/rocksndiamonds/graphics
 @dirrm share/rocksndiamonds
 @exec ${ROCK_INSTALL_DIR} ${SCORE_PATH}
