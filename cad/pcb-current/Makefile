@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/07/30 21:56:51 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.20 2005/08/16 22:04:46 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -19,6 +19,9 @@ CONFLICTS+=	pcb-[0-9]*
 SNAPDATE=		20050609
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison gm4:run gmake lex
+
+# needed for XWarpPointer in action.c
+LIBS+=		-lX11
 
 INFO_FILES=	pcb.info
 
