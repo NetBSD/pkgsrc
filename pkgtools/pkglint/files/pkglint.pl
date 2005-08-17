@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.236 2005/08/07 00:14:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.237 2005/08/17 09:43:29 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -356,6 +356,7 @@ my $regex_yes_or_undef	= qr"^(?:YES|yes)$";
 my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
+my $regex_varassign	= qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)";
 
 # Global variables
 my $pkgdir;
@@ -708,6 +709,24 @@ sub checkline_valid_characters($$) {
 	if ($rest ne "") {
 		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
 		$line->log_warning(sprintf("Line contains invalid characters (%s).", join(", ", @chars)));
+	}
+}
+
+sub checkline_valid_characters_in_variable($$) {
+	my ($line, $re_validchars) = @_;
+	my ($varname, $rest);
+
+	$rest = $line->text;
+	if ($rest =~ $regex_varassign) {
+		($varname, undef, $rest) = ($1, $2, $3);
+	} else {
+		return;
+	}
+
+	$rest =~ s/$re_validchars//g;
+	if ($rest ne "") {
+		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
+		$line->log_warning(sprintf("${varname} contains invalid characters (%s).", join(", ", @chars)));
 	}
 }
 
@@ -2070,7 +2089,7 @@ sub check_predefined_sites($$) {
 sub check_category($) {
 	my ($dir) = @_;
 	my $fname = "${dir}/Makefile";
-	my ($lines, $is_wip, @normalized_lines, $can_fix);
+	my ($lines, $lineno, $is_wip, @normalized_lines, $can_fix);
 
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
@@ -2079,59 +2098,60 @@ sub check_category($) {
 
 	$is_wip = (basename(Cwd::abs_path($dir)) eq "wip");
 	$can_fix = true;
+	$lineno = 0;
 
-	if (@{$lines} < 8) {
-		log_error($fname, NO_LINE_NUMBER, "File too short.");
-	}
-	if (@{$lines} > 0 && checkline_rcsid_regex($lines->[0], qr"#\s+", "# ")) {
-		push(@normalized_lines, $lines->[0]->text);
+	# The first line must contain the RCS Id
+	if ($lineno <= $#{$lines} && checkline_rcsid_regex($lines->[$lineno], qr"#\s+", "# ")) {
+		push(@normalized_lines, $lines->[$lineno++]->text);
 	} else {
+		# The error message has already been printed by checkline_rcsid_regex().
 		push(@normalized_lines, "# \$NetBSD\$");
 	}
 
-	if (@{$lines} > 1 && $lines->[1]->text ne "#" && !$is_wip) {
-		$lines->[1]->log_error("This line must contain a single #, nothing more.");
-		push(@normalized_lines, "#");
+	# Then, arbitrary comments may follow
+	while ($lineno <= $#{$lines} && $lines->[$lineno]->text =~ qr"^#") {
+		push(@normalized_lines, $lines->[$lineno++]->text);
+	}
+
+	# Then we need an empty line
+	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
+		push(@normalized_lines, $lines->[$lineno++]->text);
 	} else {
-		push(@normalized_lines, $lines->[1]->text);
+		$lines->[$lineno]->log_error("Empty line expected.");
+		push(@normalized_lines, "");
 	}
 
-	if (@{$lines} > 2 && $lines->[2]->text ne "") {
-		$lines->[2]->log_error("Empty line expected.");
-	}
-	push(@normalized_lines, "");
+	# Then comes the COMMENT line
+	if ($lineno <= $#{$lines} && $lines->[$lineno]->text =~ qr"^COMMENT=\t*(.*)") {
+		my ($comment) = ($1);
 
-	if (@{$lines} > 3) {
-		if ($lines->[3]->text =~ qr"^COMMENT=\t*(.*)") {
-			my ($comment) = ($1);
-
-			if ($comment =~ qr"\\$") {
-				$lines->[3]->log_error("COMMENT must fit on one line.");
-				$can_fix = false;
-			}
-			push(@normalized_lines, "COMMENT=\t${comment}");
-		} else {
-			$lines->[3]->log_error("COMMENT= line expected.");
-			$can_fix = false;
-		}
+		checkline_valid_characters_in_variable($lines->[$lineno], qr"[-\040'(),/0-9A-Za-z]");
+		push(@normalized_lines, $lines->[$lineno++]->text);
+	} else {
+		$lines->[3]->log_error("COMMENT= line expected.");
+		$can_fix = false;
 	}
-	if (@{$lines} > 4 && $lines->[4]->text ne "") {
-		$lines->[4]->log_error("Empty line expected.");
-	}
-	push(@normalized_lines, "");
 
-	my ($last_subdir, $last_line) = (undef);
+	# Then we need an empty line
+	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
+		push(@normalized_lines, $lines->[$lineno++]->text);
+	} else {
+		$lines->[$lineno]->log_error("Empty line expected.");
+		push(@normalized_lines, "");
+	}
+
+	# And now to the most complicated part of the category Makefiles,
+	# the (hopefully) sorted list of SUBDIRs.
 
 	my @filesys_subdirs = sort(get_subdirs($dir));
-	my ($filesys_index, $filesys_atend) = (0, false);
-	my ($lines_index, $lines_atend) = (5, false);
-	my ($fetch_next_line) = true;
+	my ($f_index, $f_atend, $f_neednext, $f_current) = (0, false, true, undef, undef);
+	my ($m_index, $m_atend, $m_neednext, $m_current, $m_source) = ($lineno, false, true, undef, undef);
 
-	while (!$lines_atend || !$filesys_atend) {
-		my $line = $lines->[$lines_index];
+	while (!($m_atend && $f_atend)) {
+		my $line = $lines->[$m_index];
 
-		if (!$lines_atend && $fetch_next_line) {
-			$fetch_next_line = false;
+		if (!$m_atend && $m_neednext) {
+			$m_neednext = false;
 
 			if ($line->text =~ qr"^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$") {
 				my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
@@ -2144,63 +2164,87 @@ sub check_category($) {
 					$line->log_error("Indentation must be a single tab character.");
 				}
 
-				if (defined($last_subdir) && $subdir le $last_subdir) {
-					$line->log_error("${subdir} must come before ${last_subdir}.");
+				if (defined($m_current) && $subdir eq $m_current) {
+					$line->log_error("${subdir} should only appear once.");
+				} elsif (defined($m_current) && $subdir le $m_current) {
+					$line->log_error("${subdir} must come before ${m_current}.");
+				} else {
+					# correctly ordered
 				}
-				$last_subdir = $subdir;
-				$last_line = $line->text;
 
-			} elsif ($is_wip && $line->text eq "") {
-				# the "wip" category Makefile has its own "index" target after the SUBDIRs.
-				$lines_atend = true;
+				$m_current = $subdir;
+				$m_index++;
+				$m_source = $line;
+
+			} elsif ($line->text eq "") {
+				$m_atend = true;
 				next;
 
 			} else {
 				$line->log_error("SUBDIR+= line expected.");
+				$m_atend = true;
+				next;
 			}
-
-			$lines_index++;
 		}
 
-		my $f = ($filesys_atend) ? undef : $filesys_subdirs[$filesys_index];
-		my $m = ($lines_atend) ? undef : $last_subdir;
-
-		if (!$filesys_atend && ($lines_atend || $f lt $m)) {
-			$line->log_error("${f} exists in the file system, but not in the Makefile.");
-			$filesys_index++;
-			push(@normalized_lines, "SUBDIR+=\t${f}");
-
-		} elsif (!$lines_atend && ($filesys_atend || $m lt $f)) {
-			$line->log_error("${m} exists in the Makefile, but not in the file system.");
-			$fetch_next_line = true;
-
-		} else { # $f eq $m
-			$filesys_index++;
-			$fetch_next_line = true;
-			push(@normalized_lines, $last_line);
+		if (!$f_atend && $f_neednext) {
+			$f_neednext = false;
+			if ($f_index > $#filesys_subdirs) {
+				$f_atend = true;
+				next;
+			} else {
+				$f_current = $filesys_subdirs[$f_index++];
+			}
 		}
 
-		if ($lines_index == $#{$lines} - 1) {
-			$lines_atend = true;
+		if (!$f_atend && ($m_atend || $f_current lt $m_current)) {
+			$line->log_error("${f_current} exists in the file system, but not in the Makefile.");
+			$f_neednext = true;
+			push(@normalized_lines, "SUBDIR+=\t${f_current}");
+
+		} elsif (!$m_atend && ($f_atend || $m_current lt $f_current)) {
+			$m_source->log_error("${m_current} exists in the Makefile, but not in the file system.");
+			$m_neednext = true;
+
+		} else { # $f_current eq $m_current
+			$f_neednext = true;
+			$m_neednext = true;
+			push(@normalized_lines, $m_source->text);
 		}
-		$filesys_atend = ($filesys_index > $#{@filesys_subdirs});
 	}
 
-	foreach my $i ($lines_index .. $#{$lines} - 2) {
-		push(@normalized_lines, $lines->[$i]->text);
+	$lineno = $m_index;
+
+	# the wip category Makefile may have its own targets for generating
+	# indexes and READMEs. Just skip them.
+	if ($is_wip) {
+		while ($lineno <= $#{$lines} - 2) {
+			push(@normalized_lines, $lines->[$lineno++]->text);
+		}
 	}
 
-	if (@{$lines} > 7 && $lines->[-2]->text ne "") {
-		$lines->[-2]->log_error("Empty line expected.");
+	# Then we need an empty line
+	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
+		push(@normalized_lines, $lines->[$lineno++]->text);
+	} else {
+		$lines->[$lineno]->log_error("Empty line expected.");
+		push(@normalized_lines, "");
 	}
-	push(@normalized_lines, "");
 
+	# And, last but not least, the .include line
 	my $final_line = ".include \"../mk/bsd.pkg.subdir.mk\"";
-	if (@{$lines} > 7 && $lines->[-1]->text ne $final_line) {
-		$lines->[-1]->log_error("Expected this: ${final_line}");
+	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq $final_line) {
+		push(@normalized_lines, $lines->[$lineno++]->text);
+	} else {
+		$lines->[$lineno]->log_error("Expected this: ${final_line}.");
+		push(@normalized_lines, $final_line);
 	}
-	push(@normalized_lines, $final_line);
 
+	if ($lineno <= $#{$lines}) {
+		$lines->[$lineno]->log_error("The file should end here.");
+	}
+
+	# If the user has requested automatic fixing and we can do it, we do it.
 	if ($opt_autofix) {
 		my $changed = false;
 		if (scalar(@normalized_lines) != scalar(@{$lines})) {
@@ -2214,6 +2258,7 @@ sub check_category($) {
 		}
 
 		if ($changed && $can_fix) {
+			rename($fname, "${fname}.pkglint-backup") or die;
 			open(F, "> ${fname}") or die;
 			foreach my $line (@normalized_lines) {
 				printf F ("%s\n", $line);
