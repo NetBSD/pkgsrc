@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.237 2005/08/17 09:43:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.238 2005/08/17 10:42:51 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2128,7 +2128,7 @@ sub check_category($) {
 		checkline_valid_characters_in_variable($lines->[$lineno], qr"[-\040'(),/0-9A-Za-z]");
 		push(@normalized_lines, $lines->[$lineno++]->text);
 	} else {
-		$lines->[3]->log_error("COMMENT= line expected.");
+		$lines->[$lineno]->log_error("COMMENT= line expected.");
 		$can_fix = false;
 	}
 
@@ -2141,79 +2141,102 @@ sub check_category($) {
 	}
 
 	# And now to the most complicated part of the category Makefiles,
-	# the (hopefully) sorted list of SUBDIRs.
+	# the (hopefully) sorted list of SUBDIRs. The first step is to
+	# collect the SUBDIRs in the Makefile and in the file system.
 
-	my @filesys_subdirs = sort(get_subdirs($dir));
+	my (@f_subdirs, @m_subdirs);
+
+	@f_subdirs = sort(get_subdirs($dir));
+
+	my $prev_subdir = undef;
+	while ($lineno <= $#{$lines}) {
+		my $line = $lines->[$lineno];
+
+		if ($line->text =~ qr"^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$") {
+			my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
+
+			if ($comment_flag eq "#" && (!defined($comment) || $comment eq "")) {
+				$line->log_error("${subdir} commented out without giving a reason.");
+			}
+
+			if ($indentation ne "\t") {
+				$line->log_error("Indentation must be a single tab character.");
+			}
+
+			if (defined($prev_subdir) && $subdir eq $prev_subdir) {
+				$line->log_error("${subdir} must only appear once.");
+			} elsif (defined($prev_subdir) && $subdir le $prev_subdir) {
+				$line->log_error("${subdir} must come before ${prev_subdir}.");
+			} else {
+				# correctly ordered
+			}
+
+			push(@m_subdirs, [$subdir, $line]);
+			$lineno++;
+
+		} else {
+			if ($line->text ne "") {
+				$line->log_error("SUBDIR+= line or empty line expected.");
+			}
+			last;
+		}
+	}
+
+	# To prevent unnecessary warnings about subdirectories that are
+	# in one list, but not in the other, we generate the sets of
+	# subdirs of each list.
+	my (%f_check, %m_check);
+	foreach my $f (@f_subdirs) { $f_check{$f} = true; }
+	foreach my $m (@m_subdirs) { $m_check{$m} = true; }
+
 	my ($f_index, $f_atend, $f_neednext, $f_current) = (0, false, true, undef, undef);
-	my ($m_index, $m_atend, $m_neednext, $m_current, $m_source) = ($lineno, false, true, undef, undef);
+	my ($m_index, $m_atend, $m_neednext, $m_current) = (0, false, true, undef, undef);
+	my ($line);
 
 	while (!($m_atend && $f_atend)) {
-		my $line = $lines->[$m_index];
 
 		if (!$m_atend && $m_neednext) {
 			$m_neednext = false;
-
-			if ($line->text =~ qr"^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$") {
-				my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
-
-				if ($comment_flag eq "#" && (!defined($comment) || $comment eq "")) {
-					$line->log_error("${subdir} commented out without giving a reason.");
-				}
-
-				if ($indentation ne "\t") {
-					$line->log_error("Indentation must be a single tab character.");
-				}
-
-				if (defined($m_current) && $subdir eq $m_current) {
-					$line->log_error("${subdir} should only appear once.");
-				} elsif (defined($m_current) && $subdir le $m_current) {
-					$line->log_error("${subdir} must come before ${m_current}.");
-				} else {
-					# correctly ordered
-				}
-
-				$m_current = $subdir;
-				$m_index++;
-				$m_source = $line;
-
-			} elsif ($line->text eq "") {
+			if ($m_index > $#m_subdirs) {
 				$m_atend = true;
+				$line = $lines->[$lineno];
 				next;
-
 			} else {
-				$line->log_error("SUBDIR+= line expected.");
-				$m_atend = true;
-				next;
+				$m_current = $m_subdirs[$m_index]->[0];
+				$line = $m_subdirs[$m_index]->[1];
+				$m_index++;
 			}
 		}
 
 		if (!$f_atend && $f_neednext) {
 			$f_neednext = false;
-			if ($f_index > $#filesys_subdirs) {
+			if ($f_index > $#f_subdirs) {
 				$f_atend = true;
 				next;
 			} else {
-				$f_current = $filesys_subdirs[$f_index++];
+				$f_current = $f_subdirs[$f_index++];
 			}
 		}
 
 		if (!$f_atend && ($m_atend || $f_current lt $m_current)) {
-			$line->log_error("${f_current} exists in the file system, but not in the Makefile.");
+			if (!exists($m_check{$f_current})) {
+				$line->log_error("${f_current} exists in the file system, but not in the Makefile.");
+			}
 			$f_neednext = true;
 			push(@normalized_lines, "SUBDIR+=\t${f_current}");
 
 		} elsif (!$m_atend && ($f_atend || $m_current lt $f_current)) {
-			$m_source->log_error("${m_current} exists in the Makefile, but not in the file system.");
+			if (!exists($f_check{$m_current})) {
+				$line->log_error("${m_current} exists in the Makefile, but not in the file system.");
+			}
 			$m_neednext = true;
 
 		} else { # $f_current eq $m_current
 			$f_neednext = true;
 			$m_neednext = true;
-			push(@normalized_lines, $m_source->text);
+			push(@normalized_lines, $line->text);
 		}
 	}
-
-	$lineno = $m_index;
 
 	# the wip category Makefile may have its own targets for generating
 	# indexes and READMEs. Just skip them.
