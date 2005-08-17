@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3814 2005/08/14 18:49:56 minskim Exp $
+$NetBSD: TODO,v 1.3815 2005/08/17 15:16:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -306,6 +306,7 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-71
 	o aap-0.144
+	o abcde-2.3.0
 	o acpi-iasl-20040715
 	o advancecomp-1.14
 	o aewm++-1.0.27
@@ -460,12 +461,12 @@ Suggested package updates
 	o fdgw-20040609
 	o feh-1.3.4
 	o fhist-1.14
-	o fidogate-4.4.10
 	o file-4.14
 	o findutils-4.2.23
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fluxbox-0.9.13 [pkg/30229|jmcneill]
+	o flyspell-1.7j
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -483,6 +484,7 @@ Suggested package updates
 	o gated-3.6
 	o gauche-0.8.4 [pkg/30535]
 	o gauche-0.8.5
+	o gawk-3.1.5
 	o gcc-3.3.6
 	o gcc-4.0.1
 	o gcombust-0.1.55
@@ -501,6 +503,7 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
+	o glib2-2.8.0
 	o gliv-1.9.3
 	o gnats-4.1.0
 	o gnet1-1.1.9
@@ -518,11 +521,14 @@ Suggested package updates
 	o grep-2.5.1a
 	o grepmail-5.3032
 	o gri-2.12.8
+	o gsasl-0.2.6
 	o gsed-4.1.4
 	o gsharutils-4.3.78
+	o gss-0.0.16
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
+	o gtk2+-2.8.0
 	o gtklife-4.2
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -635,13 +641,14 @@ Suggested package updates
 	o memtest86-3.2
 	o mftrace-1.1.6
 	o mgetty+sendfax-1.1.32
-	o mhonarc-2.6.15
 	o micq-0.4.12 [pkg/29063]
 	o micq-0.5.0.3
 	o mini_sendmail-1.3.5
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.5.0
+	o mldonkey-2.6.2
+	o mldonkey-gui-2.6.2
 	o mlview-0.8
 	o mmix-20041014
 	o molden-4.3
@@ -663,6 +670,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.6.0
 	o muse-0.9.1
+	o mutt-devel-1.5.10
 	o nagios-2.0b3 [replacing netsaint]
 	o nail-11.25
 	o nano-1.2.5
@@ -818,6 +826,7 @@ Suggested package updates
 	o p5-sybperl-2.17
 	o pag-0.92 [pkg/30417]
 	o pam-smbpass-3.0.13
+	o pango-1.10.0
 	o par2-0.4 [pkg/30587]
 	o pari-2.2.7
 	o parrot-0.2.1 [pkg/30586]
@@ -908,9 +917,10 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
-	o raine-0.42.3
+	o raine-0.42.5
 	o randread-0.2
 	o raptor-1.4.5
+	o rar-linux-3.5.0
 	o rasmol-2.7.2.1.1
 	o rat-4.2.25
 	o rayshade-4.0.6
@@ -1056,6 +1066,7 @@ Suggested package updates
 	o ucl-1.03
 	o unalz-0.50
 	o unix2dos-1.3
+	o unrar-3.5.3
 	o userppp-030706
 	o uvscan-4.40 [pkg/30290]
 	o vba-1.7.2
@@ -1112,7 +1123,9 @@ Suggested package updates
 	o xlog-1.2.2
 	o xm7-303
 	o xmahjongg-3.7
+	o xmame-0.99
 	o xmcd-3.3.0
+	o xmess-0.99
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-0.3.7
