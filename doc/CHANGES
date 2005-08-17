@@ -648,3 +648,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mhonarc to 2.6.15 [jwise 2005-08-16]
 	Updated comms/fidogate to 4.4.10 [tv 2005-08-17]
 	Updated databases/p5-DBD-CSV to 0.22 [hiramatsu 2005-08-17]
+	Updated net/entropy to 0.9.1.438 [tv 2005-08-17]
