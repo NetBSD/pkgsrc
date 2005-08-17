@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.241 2005/08/17 11:28:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.242 2005/08/17 19:06:41 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1205,7 +1205,8 @@ sub checklines_direct_tools($) {
 		SUBST_MESSAGE\\..*
 		.*_TARGET
 		USE_TOOLS);
-	my @ok_shellcmds = (
+	my @rm_shellcmds = (
+		qr"for file in",
 		qr"(?:\./Build|\$\{JAM_COMMAND\})\s+(?:install|test)",
 		qr"\"[^\"]*${regex_tools}[^\"]*\"",
 		qr"\'[^\']*${regex_tools}[^\']*\'");
@@ -1220,12 +1221,12 @@ sub checklines_direct_tools($) {
 
 	my $ok_vars = join("|", @ok_vars);
 	my $regex_ok_vars = qr"^(?:${ok_vars})$";
-	my $ok_shellcmds = join("|", @ok_shellcmds);
-	my $regex_ok_shellcmds = qr"(?:${ok_shellcmds})";
+	my $rm_shellcmds = join("|", @rm_shellcmds);
+	my $regex_rm_shellcmds = qr"(?:${rm_shellcmds})";
 
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_tools=${regex_tools}");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_shellcmds=${regex_ok_shellcmds}");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_rm_shellcmds=${regex_rm_shellcmds}");
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
@@ -1233,32 +1234,37 @@ sub checklines_direct_tools($) {
 		next unless ($text =~ $regex_tools);
 		my ($tool) = ($1);
 
+		# skip comments
 		if ($text =~ qr"^#") {
-			# skip comments
 
+		# process variable assignments
 		} elsif ($text =~ qr"^([\w.]+?)\s*[?+:!]?=\s*(.*)") {
 			my ($varname, $value) = ($1, $2);
-			# process variable assignments
+
 			if ($varname =~ $regex_ok_vars) {
 				$line->log_info("Legitimate direct use of \"${tool}\" in variable ${varname}.");
 			} else {
 				$line->log_warning("Possible direct use of \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
 			}
 
+		# process shell commands
 		} elsif ($text =~ qr"^\t(.*?)(?:\s*\\)?$") {
-			my ($shellcmd) = ($1);
-			# process shell commands
-			if ($shellcmd =~ $regex_ok_shellcmds) {
-				$line->log_info("Legitimate direct use of \"${tool}\" in shell command \"${shellcmd}\".");
-			} else {
+			my ($shellcmd, $rm_shellcmd) = ($1, $1);
+
+			# Remove known legitimate uses from the string
+			$rm_shellcmd =~ s,$regex_rm_shellcmds,,g;
+
+			if ($rm_shellcmd =~ $regex_tools) {
 				$line->log_warning("Possible direct use of \"${tool}\" in shell command \"${shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
+			} else {
+				$line->log_info("Legitimate direct use of \"${tool}\" in shell command \"${shellcmd}\".");
 			}
 
+		# skip processing directives
 		} elsif ($text =~ qr"^\.") {
-			# skip processing directives
 
+		# skip dependency specifications
 		} elsif ($text =~ qr"^([-\w.]+):") {
-			# skip dependency specifications
 
 		} else {
 			$line->log_error("[internal:checklines_direct_tools] unknown line format");
