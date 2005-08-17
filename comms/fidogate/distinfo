@@ -1,27 +1,25 @@
-$NetBSD: distinfo,v 1.9 2005/02/23 16:05:29 agc Exp $
+$NetBSD: distinfo,v 1.10 2005/08/17 11:43:27 tv Exp $
 
-SHA1 (fidogate-4.4.9.tar.gz) = 7d23802931a67b5b3cc256f5dd85d8b2c47ab4fe
-RMD160 (fidogate-4.4.9.tar.gz) = c073aa157cc5bfe6b005076e0c94c1aa427dbf01
-Size (fidogate-4.4.9.tar.gz) = 1186562 bytes
+SHA1 (fidogate-4.4.10.tar.gz) = 531305ac82963d5bd6398d2e8e350676bbc9c5eb
+RMD160 (fidogate-4.4.10.tar.gz) = 09b8dfa7304089ff27c7c39c1b6004aef00edadf
+Size (fidogate-4.4.10.tar.gz) = 1191524 bytes
 SHA1 (patch-aa) = a12ffe978a32b342a48927b2887b4c5340816c5c
 SHA1 (patch-ab) = 27457fff799208f3daf72eabb6a7b0b056faf945
 SHA1 (patch-ac) = 89e81b49da503eaaf6b641231d30cf75e58b376b
-SHA1 (patch-ad) = 2562aca505a403e9cd5e493fcf84f9c7b15e764f
+SHA1 (patch-ad) = bc08f722e53b23181d797e1f504023cf4b1ae5fa
 SHA1 (patch-ae) = e2cf8add74b051111626230257c01793c1c20ca9
 SHA1 (patch-af) = 7fbc604c555f210aa49de2ecc1ec13d9835287f0
 SHA1 (patch-ag) = 0d7babf2526a4b235bdd20ae1aead7ee4d734dd6
 SHA1 (patch-ah) = d75936b400f87c87033b07a5481a004ea21d6ddd
 SHA1 (patch-ai) = 7d3c184bc1071a6e70be67707181650468557cc5
 SHA1 (patch-aj) = 0f68f94aa285a4d1ae38cfd2d62b10f96ad325a6
-SHA1 (patch-ak) = c24f82c5440095cb4e55ac665f2b5936116b4e32
-SHA1 (patch-al) = df1c2da097eead9444c4cf6a43ea515582258ad9
+SHA1 (patch-ak) = 818f81491dcf39e272b6c4107255d738d9f91196
+SHA1 (patch-al) = 229523f59d427a1b60996db9f968fe2c6b119386
 SHA1 (patch-am) = d005bf2020b0b88026e53a08d6a35a7b451ef777
 SHA1 (patch-an) = 7d454b745e4a7a303c25e040936c72db92554ad4
-SHA1 (patch-ao) = e19a532f79dd4ad203b9fe19bbde49da7f92a753
-SHA1 (patch-ap) = 860c3989306e5d431520ddf5f676938da8806c87
-SHA1 (patch-aq) = 29db774435c55ccadb7ed492c93eb233df502ca0
+SHA1 (patch-ao) = 047993df8fa7de8f4f81ba1b1456e2c0e11c54d8
+SHA1 (patch-ap) = 9f8aae03b2b2e758785c9196583221c92d398371
+SHA1 (patch-aq) = cdf5aa7edc6cf6c5b33d95a6b7e9266608f38bca
 SHA1 (patch-ar) = 0883b75e210d635f7e9f49c9b2b5d3978645953b
 SHA1 (patch-as) = daf5a80d044933c17f8ab556bebc0765af1439e3
-SHA1 (patch-at) = f6b3fe0bac12489d314e3a1b39bfe67d67b14374
-SHA1 (patch-au) = 90b0a4630b3029b34752972a7e7892b63462a703
 SHA1 (patch-av) = dec5e163dcba702d929f4242083ac942abbf2160
