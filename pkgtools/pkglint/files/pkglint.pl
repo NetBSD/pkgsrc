@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.239 2005/08/17 10:49:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.240 2005/08/17 10:55:22 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -376,8 +376,8 @@ sub checkfile_MESSAGE($$);
 sub checkfile_patches_patch($$);
 sub checkfile_PLIST($$);
 
-sub check_category($);
-sub check_package($);
+sub checkdir_category($);
+sub checkdir_package($);
 
 sub checkperms($);
 sub readmakefile($$$$);
@@ -550,7 +550,7 @@ sub load_predefined_sites($) {
 	return $predefined_sites;
 }
 
-sub check_package($) {
+sub checkdir_package($) {
 	my ($dir) = @_;
 
 	my ($whole, $lines, $have_distinfo, $have_patches);
@@ -2086,7 +2086,7 @@ sub check_predefined_sites($$) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "URL does not match any of the predefined URLS. Good.");
 }
 
-sub check_category($) {
+sub checkdir_category($) {
 	my ($dir) = @_;
 	my $fname = "${dir}/Makefile";
 	my ($lines, $lineno, $is_wip, @normalized_lines, $can_fix);
@@ -2297,11 +2297,11 @@ sub check_directory($) {
 
 	if (-f "${dir}/../mk/bsd.pkg.mk") {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
-		check_category($dir);
+		checkdir_category($dir);
 
 	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
 		load_predefined_sites("${dir}/../..");
-		check_package($dir);
+		checkdir_package($dir);
 
 	} else {
 		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
