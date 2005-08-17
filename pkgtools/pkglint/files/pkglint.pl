@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.238 2005/08/17 10:42:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.239 2005/08/17 10:49:59 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2165,13 +2165,14 @@ sub check_category($) {
 
 			if (defined($prev_subdir) && $subdir eq $prev_subdir) {
 				$line->log_error("${subdir} must only appear once.");
-			} elsif (defined($prev_subdir) && $subdir le $prev_subdir) {
+			} elsif (defined($prev_subdir) && $subdir lt $prev_subdir) {
 				$line->log_error("${subdir} must come before ${prev_subdir}.");
 			} else {
 				# correctly ordered
 			}
 
 			push(@m_subdirs, [$subdir, $line]);
+			$prev_subdir = $subdir;
 			$lineno++;
 
 		} else {
@@ -2187,7 +2188,7 @@ sub check_category($) {
 	# subdirs of each list.
 	my (%f_check, %m_check);
 	foreach my $f (@f_subdirs) { $f_check{$f} = true; }
-	foreach my $m (@m_subdirs) { $m_check{$m} = true; }
+	foreach my $m (@m_subdirs) { $m_check{$m->[0]} = true; }
 
 	my ($f_index, $f_atend, $f_neednext, $f_current) = (0, false, true, undef, undef);
 	my ($m_index, $m_atend, $m_neednext, $m_current) = (0, false, true, undef, undef);
