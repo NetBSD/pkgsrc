@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2005/05/27 11:41:03 adrianp Exp $
+$NetBSD: distinfo,v 1.14 2005/08/17 03:29:28 jwise Exp $
 
-SHA1 (MHonArc-2.6.11.tar.bz2) = b01a1466dd3126b365dbe8a3e0869cdc4e3e4059
-RMD160 (MHonArc-2.6.11.tar.bz2) = abd5d3c70a1a7e617e9dd66b2d0b6d7531405125
-Size (MHonArc-2.6.11.tar.bz2) = 1552360 bytes
+SHA1 (MHonArc-2.6.15.tar.bz2) = 655abad903411586ddd7275c816f8ce1f9c18a5e
+RMD160 (MHonArc-2.6.15.tar.bz2) = f17355213254ca9ff0ab71b961e74ec88892906c
+Size (MHonArc-2.6.15.tar.bz2) = 1564765 bytes
