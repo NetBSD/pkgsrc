@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/06/12 08:18:28 jdolecek Exp $
+# $NetBSD: Makefile,v 1.46 2005/08/17 19:58:34 tron Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 CATEGORIES+=		lang
@@ -17,6 +17,11 @@ USE_TOOLS+=		gmake
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
 
+MASTER_SITES+=		http://pear.php.net/get/
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+XMLRPC_DISTFILE=	XML_RPC-1.4.0.tgz
+DISTFILES=		${EXTRACT_ONLY} ${XMLRPC_DISTFILE}
+
 # On NetBSD ELF platforms, we need to link libgcc.a whole-archive so that
 # certain symbols from the C++ implementation (__get_eh_context, etc.)
 # referenced by DSOs written in C++ will resolve correctly.  We need to
@@ -34,6 +39,11 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
+
+post-extract:
+	${RM} -f ${WRKSRC}/pear/packages/XML_RPC-1.3.1.tar
+	${GZIP_CMD} -cd ${DISTDIR}/${XMLRPC_DISTFILE} \
+	  >${WRKSRC}/pear/packages/${XMLRPC_DISTFILE:S/.tgz/.tar/}
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
