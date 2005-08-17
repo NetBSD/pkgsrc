@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/06 06:19:05 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/17 15:02:01 hiramatsu Exp $
 
 DISTNAME=		Convert-BinHex-1.119
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,9 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/search?query=convert+binhex
 COMMENT=		Read and write Macintosh BinHex streams
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+PERL5_PACKLIST=		auto/Convert/BinHex/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
