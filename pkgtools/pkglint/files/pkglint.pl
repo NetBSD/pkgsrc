@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.240 2005/08/17 10:55:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.241 2005/08/17 11:28:12 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -368,17 +368,6 @@ my $seen_USE_PKGLOCALEDIR;
 my $seen_Makefile_common;
 my $pkgname;
 
-sub checkfile_DESCR($$);
-sub checkfile_distinfo($$);
-sub checkfile_extra($$);
-sub checkfile_package_Makefile($$$$);
-sub checkfile_MESSAGE($$);
-sub checkfile_patches_patch($$);
-sub checkfile_PLIST($$);
-
-sub checkdir_category($);
-sub checkdir_package($);
-
 sub checkperms($);
 sub readmakefile($$$$);
 sub checkextra($$);
@@ -548,88 +537,6 @@ sub load_predefined_sites($) {
 	}
 	log_info($fname, NO_LINE_NUMBER, sprintf("Loaded %d MASTER_SITE_* definitions.", scalar(keys(%{$predefined_sites}))));
 	return $predefined_sites;
-}
-
-sub checkdir_package($) {
-	my ($dir) = @_;
-
-	my ($whole, $lines, $have_distinfo, $have_patches);
-
-	$pkgdir			= ".";
-	$filesdir		= "files";
-	$patchdir		= "patches";
-	$distinfo_file		= "distinfo";
-	$scriptdir		= "scripts";
-	$seen_USE_PKGLOCALEDIR	= false;
-	$seen_Makefile_common	= false;
-	$pkgname		= undef;
-
-	# we need to handle the Makefile first to get some variables
-	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$lines)) {
-		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
-
-	my @files = <${dir}/*>;
-	if ($pkgdir ne ".") {
-		push(@files, <${dir}/${pkgdir}/*>);
-	}
-	push(@files, <${dir}/${filesdir}/*>);
-	push(@files, <${dir}/${patchdir}/*>);
-	if ($distinfo_file ne "distinfo") {
-		push(@files, "${dir}/${distinfo_file}");
-	}
-	$have_distinfo = false;
-	$have_patches = false;
-	foreach my $f (@files) {
-		if      ($f =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
-			if ($opt_warn_workdir) {
-				log_warning($f, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
-			}
-
-		} elsif (!-f $f) {
-			# We don't have a check for non-regular files yet.
-
-		} elsif ($f eq "${dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($dir, $f, $whole, $lines);
-
-		} elsif ($f =~ qr"/buildlink3.mk$") {
-			$opt_check_bl3 and checkfile_buildlink3_mk($dir, $f);
-
-		} elsif ($f =~ qr"/DESCR[^/]*$") {
-			checkfile_DESCR($dir, $f);
-
-		} elsif ($f =~ qr"/distinfo$") {
-			$have_distinfo = true;
-			$opt_check_distinfo and checkfile_distinfo($dir, $f);
-
-		} elsif ($f =~ qr"/MESSAGE[^/]*$") {
-			$opt_check_MESSAGE and checkfile_MESSAGE($dir, $f);
-
-		} elsif ($f =~ qr"/PLIST[^/]*$") {
-			$opt_check_PLIST and checkfile_PLIST($dir, $f);
-
-		} elsif ($f =~ qr"/patches/patch-[-A-Za-z0-9]*$") {
-			$have_patches = true;
-			$opt_check_patches and checkfile_patches_patch($dir, $f);
-
-		} elsif (-T $f) {
-			$opt_check_extra and checkfile_extra($dir, $f);
-
-		} else {
-			log_warning($f, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
-		}
-	}
-
-	if ($opt_check_distinfo && $opt_check_patches) {
-		if ($have_patches && ! $have_distinfo) {
-			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
-		}
-	}
-
-	if (grep { $_ !~ qr"/CVS$" } <$dir/scripts/*>) {
-		log_warning("$dir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
-	}
 }
 
 sub is_committed($) {
@@ -2292,7 +2199,89 @@ sub checkdir_category($) {
 	}
 }
 
-sub check_directory($) {
+sub checkdir_package($) {
+	my ($dir) = @_;
+
+	my ($whole, $lines, $have_distinfo, $have_patches);
+
+	$pkgdir			= ".";
+	$filesdir		= "files";
+	$patchdir		= "patches";
+	$distinfo_file		= "distinfo";
+	$scriptdir		= "scripts";
+	$seen_USE_PKGLOCALEDIR	= false;
+	$seen_Makefile_common	= false;
+	$pkgname		= undef;
+
+	# we need to handle the Makefile first to get some variables
+	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$lines)) {
+		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+
+	my @files = <${dir}/*>;
+	if ($pkgdir ne ".") {
+		push(@files, <${dir}/${pkgdir}/*>);
+	}
+	push(@files, <${dir}/${filesdir}/*>);
+	push(@files, <${dir}/${patchdir}/*>);
+	if ($distinfo_file ne "distinfo") {
+		push(@files, "${dir}/${distinfo_file}");
+	}
+	$have_distinfo = false;
+	$have_patches = false;
+	foreach my $f (@files) {
+		if      ($f =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
+			if ($opt_warn_workdir) {
+				log_warning($f, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
+			}
+
+		} elsif (!-f $f) {
+			# We don't have a check for non-regular files yet.
+
+		} elsif ($f eq "${dir}/Makefile") {
+			$opt_check_Makefile and checkfile_package_Makefile($dir, $f, $whole, $lines);
+
+		} elsif ($f =~ qr"/buildlink3.mk$") {
+			$opt_check_bl3 and checkfile_buildlink3_mk($dir, $f);
+
+		} elsif ($f =~ qr"/DESCR[^/]*$") {
+			checkfile_DESCR($dir, $f);
+
+		} elsif ($f =~ qr"/distinfo$") {
+			$have_distinfo = true;
+			$opt_check_distinfo and checkfile_distinfo($dir, $f);
+
+		} elsif ($f =~ qr"/MESSAGE[^/]*$") {
+			$opt_check_MESSAGE and checkfile_MESSAGE($dir, $f);
+
+		} elsif ($f =~ qr"/PLIST[^/]*$") {
+			$opt_check_PLIST and checkfile_PLIST($dir, $f);
+
+		} elsif ($f =~ qr"/patches/patch-[-A-Za-z0-9]*$") {
+			$have_patches = true;
+			$opt_check_patches and checkfile_patches_patch($dir, $f);
+
+		} elsif (-T $f) {
+			$opt_check_extra and checkfile_extra($dir, $f);
+
+		} else {
+			log_warning($f, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
+		}
+	}
+
+	if ($opt_check_distinfo && $opt_check_patches) {
+		if ($have_patches && ! $have_distinfo) {
+			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
+		}
+	}
+
+	if (grep { $_ !~ qr"/CVS$" } <$dir/scripts/*>) {
+		log_warning("$dir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
+	}
+}
+
+sub checkdir($) {
 	my ($dir) = @_;
 
 	if (-f "${dir}/../mk/bsd.pkg.mk") {
@@ -2324,10 +2313,10 @@ sub main() {
 
 	if (@ARGV) {
 		foreach my $dir (@ARGV) {
-			check_directory($dir);
+			checkdir($dir);
 		}
 	} else {
-		check_directory(".");
+		checkdir(".");
 	}
 
 	if ($opt_debug) {
