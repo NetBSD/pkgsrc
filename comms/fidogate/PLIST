@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/08/14 18:47:47 tv Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/08/17 11:43:27 tv Exp $
 lib/fidogate/areafix.help
 lib/fidogate/bin/areasbbssync
 lib/fidogate/bin/ftnafutil
@@ -10,6 +10,7 @@ lib/fidogate/bin/logcheck
 lib/fidogate/bin/logdaily
 lib/fidogate/bin/logreport
 lib/fidogate/bin/logsendmail
+lib/fidogate/bin/logsendmail2
 lib/fidogate/bin/logstat
 lib/fidogate/bin/nl-autoupd
 lib/fidogate/bin/nl-check
@@ -69,10 +70,8 @@ lib/fidogate/ftnseq
 lib/fidogate/ftntick
 lib/fidogate/ftntoss
 lib/fidogate/rfc2ftn
-share/examples/rc.d/fidogate
-@dirrm lib/fidogate/bin
-@dirrm lib/fidogate
 share/doc/fidogate/ANNOUNCE
+share/doc/fidogate/fidogate.txt
 share/doc/fidogate/fidogate_1.html
 share/doc/fidogate/fidogate_2.html
 share/doc/fidogate/fidogate_3.html
@@ -84,7 +83,6 @@ share/doc/fidogate/fidogate_8.html
 share/doc/fidogate/fidogate_abt.html
 share/doc/fidogate/fidogate_ovr.html
 share/doc/fidogate/fidogate_toc.html
-share/doc/fidogate/fidogate.txt
 share/doc/fidogate/msgid-1.html
 share/doc/fidogate/msgid-2.html
 share/doc/fidogate/msgid-3.html
@@ -93,7 +91,7 @@ share/doc/fidogate/msgid-5.html
 share/doc/fidogate/msgid-6.html
 share/doc/fidogate/msgid-7.html
 share/doc/fidogate/msgid.html
-@dirrm share/doc/fidogate
+share/examples/fidogate/README
 share/examples/fidogate/fidogate.conf
 share/examples/fidogate/morannon/aliases
 share/examples/fidogate/morannon/areas
@@ -122,13 +120,16 @@ share/examples/fidogate/point/fidogate.conf
 share/examples/fidogate/point/newsfeeds
 share/examples/fidogate/point/packing
 share/examples/fidogate/point/routing
-share/examples/fidogate/README
-@dirrm share/examples/fidogate/morannon
-@dirrm share/examples/fidogate/orodruin
-@dirrm share/examples/fidogate/point
-@dirrm share/examples/fidogate
+share/examples/rc.d/fidogate
 share/fidogate/sendmail/mailer/ffx.m4
 share/fidogate/sendmail/mailer/ftn.m4
 @dirrm share/fidogate/sendmail/mailer
 @dirrm share/fidogate/sendmail
 @dirrm share/fidogate
+@dirrm share/examples/fidogate/point
+@dirrm share/examples/fidogate/orodruin
+@dirrm share/examples/fidogate/morannon
+@dirrm share/examples/fidogate
+@dirrm share/doc/fidogate
+@dirrm lib/fidogate/bin
+@dirrm lib/fidogate
