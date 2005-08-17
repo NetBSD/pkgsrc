@@ -1,31 +1,79 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:53 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/17 19:55:57 jlam Exp $
+#
 
-DISTNAME=	openvpn-1.6.0
-CATEGORIES=	net security
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openvpn/}
+DISTNAME=	openvpn-2.0.1
+PKGNAME=	${DISTNAME:S/_//}
+CATEGORIES=	net
+MASTER_SITES=	http://openvpn.net/release/ \
+		http://openvpn.net/release/old/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://openvpn.sourceforge.net/
-COMMENT=	Easy-to-use, robust, and highly configurable VPN over UDP
+HOMEPAGE=	http://openvpn.net/
+COMMENT=	Easy-to-use SSL VPN daemon
 
-#USE_PKGINSTALL=		YES
+GNU_CONFIGURE=		yes
+USE_TOOLS=		grep:run
+USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
+USE_OLD_DES_API=	yes
+TEST_TARGET=		check
 
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-ssl-headers=${SSLBASE}/include/openssl
-CONFIGURE_ARGS+=	--with-ssl-lib=${SSLBASE}/lib
-CONFIGURE_ARGS+=	--with-lzo-headers=${BUILDLINK_PREFIX.liblzo}/include
-CONFIGURE_ARGS+=	--with-lzo-lib=${BUILDLINK_PREFIX.liblzo}/lib
+PKG_SYSCONFSUBDIR=	openvpn
+DATADIR=		${PREFIX}/share/${PKGBASE}
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+RCD_SCRIPTS=		openvpn
 
-EGDIR=			${PREFIX}/share/examples/openvpn
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--enable-pthread
+CONFIGURE_ARGS+=	--enable-password-save
+CONFIGURE_ARGS+=	--disable-dependency-tracking
+
+# OpenVPN 2.x has a shared module "plugin" architecture that allows
+# inserting callbacks into the server for various tasks.
+#
+DL_AUTO_VARS=		yes
+.include "../../mk/dlopen.buildlink3.mk"
+
+.include "../../archivers/lzo/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
+post-build:
+	for file in ${WRKSRC}/easy-rsa/2.0/pkitool; do			\
+		${SED}	-e "s|^\(GREP\)=.*|\1=\""${GREP}"\"|"		\
+			-e "s|^\(OPENSSL\)=.*|\1=\""${SSLBASE}/bin/openssl"\"|" \
+			$$file > $$file.new;				\
+		${MV} -f $$file.new $$file;				\
+		${CHMOD} +x $$file;					\
+	done
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}/sample-config-files
-	${INSTALL_DATA}	${WRKSRC}/sample-config-files/* ${EGDIR}/sample-config-files
-	${INSTALL_DATA_DIR} ${EGDIR}/sample-keys
-	${INSTALL_DATA}	${WRKSRC}/sample-keys/* ${EGDIR}/sample-keys
-	${INSTALL_DATA_DIR} ${EGDIR}/sample-scripts
-	${INSTALL_DATA}	${WRKSRC}/sample-scripts/* ${EGDIR}/sample-scripts
+	${INSTALL_DATA_DIR} ${DATADIR}/easy-rsa
+	dir=${DATADIR:S/^${PREFIX}\///}/easy-rsa;			\
+	cd ${WRKSRC}/easy-rsa/2.0;					\
+	${GREP} "^$$dir/" ${PKGDIR}/PLIST | ${SED} "s|^$$dir/||" |	\
+	while read file; do						\
+		case $$file in						\
+		[A-Z]*|*.cnf)	${INSTALL_DATA} $$file ${PREFIX}/$$dir ;; \
+		*)		${INSTALL_SCRIPT} $$file ${PREFIX}/$$dir ;; \
+		esac;							\
+	done
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/management/management-notes.txt ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}/config
+	cd ${WRKSRC}/sample-config-files; for file in *; do		\
+		${INSTALL_DATA} $$file ${EGDIR}/config;			\
+	done
+	${INSTALL_DATA_DIR} ${EGDIR}/scripts
+	cd ${WRKSRC}/sample-scripts; for file in *; do			\
+		${INSTALL_DATA} $$file ${EGDIR}/scripts;		\
+	done
+	${INSTALL_DATA_DIR} ${EGDIR}/keys
+	cd ${WRKSRC}/sample-keys; for file in *; do			\
+		${INSTALL_DATA} $$file ${EGDIR}/keys;			\
+	done
 
-.include "../../archivers/liblzo/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
