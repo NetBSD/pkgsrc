@@ -646,3 +646,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/rocksndiamonds to 3.1.1 [adam 2005-08-16]
 	Removed games/rocksndiamonds-sdl [adam 2005-08-16]
 	Updated mail/mhonarc to 2.6.15 [jwise 2005-08-16]
+	Updated comms/fidogate to 4.4.10 [tv 2005-08-17]
