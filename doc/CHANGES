@@ -645,3 +645,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/efax-gtk to 3.0.4 [adam 2005-08-16]
 	Updated games/rocksndiamonds to 3.1.1 [adam 2005-08-16]
 	Removed games/rocksndiamonds-sdl [adam 2005-08-16]
+	Updated mail/mhonarc to 2.6.15 [jwise 2005-08-16]
