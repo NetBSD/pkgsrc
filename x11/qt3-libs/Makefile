@@ -1,6 +1,14 @@
-# $NetBSD: Makefile,v 1.38 2005/07/01 04:24:12 reed Exp $
+# $NetBSD: Makefile,v 1.39 2005/08/17 06:26:18 jdc Exp $
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
+
+.include "../../mk/bsd.prefs.mk"
+# XXX: hack - work round an ICE with GCC 3.3 on sparc
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
+GCC_REQD+=		3.4
+.else
+GCC_REQD+=		2.95.3
+.endif
 
 .include "../qt3-libs/Makefile.common"
 
@@ -8,8 +16,6 @@ PKGNAME=		qt3-libs-${QTVERSION}
 PKGREVISION=		4
 MAINTAINER=		adam@NetBSD.org
 COMMENT=		C++ X GUI toolkit
-
-GCC_REQD+=		2.95.3
 
 BUILD_TARGET=		sub-plugins
 
@@ -34,7 +40,6 @@ do-install:
 	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${QTPREFIX}/plugins/imageformats/
 	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqmng.la ${QTPREFIX}/plugins/imageformats/
 
-.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
 SUBST_CLASSES+=		socklen
 SUBST_MESSAGE.socklen=	"Correcting socklen_t."
