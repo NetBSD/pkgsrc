@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:35 tv Exp $
+# $NetBSD: Makefile,v 1.31.2.1 2005/08/18 08:09:25 snj Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	post-3.4.2-kdeedu.diff
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
