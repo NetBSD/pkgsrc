@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1716 2005/08/15 17:35:45 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1717 2005/08/18 19:24:15 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -150,6 +150,14 @@ PKGWILDCARD?=		${PKGBASE}-[0-9]*
 SVR4_PKGNAME?=		${PKGNAME}
 USE_DIGEST?=		YES
 WRKSRC?=		${WRKDIR}/${DISTNAME}
+
+# If a package sets INSTALLATION_DIRS, then it's known to pre-create all
+# of the directories that it needs at install-time, so we don't need
+# mtree to do it for us.
+#
+.if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
+NO_MTREE=		yes
+.endif
 
 .if (defined(INSTALL_UNSTRIPPED) && !empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) || defined(DEBUG_FLAGS)
 _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
