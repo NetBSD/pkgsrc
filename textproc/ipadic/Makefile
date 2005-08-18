@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:35 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/18 15:44:44 taca Exp $
 #
 
-DISTNAME=		ipadic-2.7.0
+DISTNAME=	ipadic-2.7.0
 PKGREVISION=	1
-CATEGORIES=		japanese textproc
-MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/ipadic/
+CATEGORIES=	japanese textproc
+MASTER_SITES=	http://chasen.aist-nara.ac.jp/stable/ipadic/
 
-MAINTAINER=     	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=       	http://chasen.aist-nara.ac.jp/
-COMMENT=		Japanese Morphological Dictionary for ChaSen
+MAINTAINER=    	tech-pkg-ja@jp.NetBSD.org
+HOMEPAGE=      	http://chasen.aist-nara.ac.jp/
+COMMENT=	Japanese Morphological Dictionary for ChaSen
 
-GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
-CONF_FILES=		${CHASEN_DICDIR}/ipadic/chasenrc.example \
-			${PKG_SYSCONFDIR}/chasenrc
+GNU_CONFIGURE=	yes
+USE_PKGINSTALL=	yes
+CONF_FILES=	${CHASEN_DICDIR}/ipadic/chasenrc.example \
+		${PKG_SYSCONFDIR}/chasenrc
 
-DOCDIR=			${PREFIX}/share/doc/chasen
-DOCS=			AUTHORS COPYING ChangeLog NEWS doc/ipadic-ja.pdf
+DOCDIR=		${PREFIX}/share/doc/chasen
+DOCS=		AUTHORS COPYING ChangeLog NEWS doc/ipadic-ja.pdf
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
