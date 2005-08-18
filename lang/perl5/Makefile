@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2005/08/12 19:59:03 jlam Exp $
+# $NetBSD: Makefile,v 1.101 2005/08/18 17:26:48 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -326,11 +326,7 @@ post-install:
 	eval `${PERL5} -V:installarchlib 2>/dev/null`;			\
 	eval `${PERL5} -V:installsitearch 2>/dev/null`;			\
 	eval `${PERL5} -V:installvendorarch 2>/dev/null`;		\
-	case $$installsitearch in					\
-	${PREFIX}/*)							\
-		${RMDIR} -p $$installsitearch 2>/dev/null || ${TRUE};	\
-		;;							\
-	esac;								\
+	${RMDIR} -p $$installsitearch 2>/dev/null || ${TRUE};		\
 	${RMDIR} -p $$installvendorarch 2>/dev/null || ${TRUE};		\
 	eval `${PERL5} -V:scriptdir 2>/dev/null`;			\
 	eval `${PERL5} -V:man1dir 2>/dev/null`;				\
