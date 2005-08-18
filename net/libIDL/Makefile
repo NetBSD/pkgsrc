@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.36 2005/08/10 20:56:22 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.37 2005/08/18 13:17:01 adam Exp $
 
-DISTNAME=		libIDL-0.8.5
-CATEGORIES=		net gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libIDL/0.8/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	libIDL-0.8.6
+CATEGORIES=	net gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libIDL/0.8/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		rh@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
-COMMENT=		CORBA Interface Definition Language parser
+MAINTAINER=	rh@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	CORBA Interface Definition Language parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex pkg-config
-CONFIGURE_ENV+=		HAVE_YACC=yes
-USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libIDL-2.0.pc.in
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		HAVE_YACC=yes
 INFO_FILES=		libIDL2.info
 
 .include "../../mk/compiler.mk"
@@ -31,5 +30,4 @@ CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
