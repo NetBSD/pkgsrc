@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/16 06:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/08/18 23:51:24 dmcmahill Exp $
 
 DISTNAME=		qcad-1.5.4-src
 PKGNAME=		qcad-1.5.4
@@ -15,10 +15,25 @@ MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 MAKE_ENV+=		QTDIR=${BUILDLINK_PREFIX.qt3}
 INSTALLATION_DIRS=	bin
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+QCAD_OPSYS = LINUX
+.elif ${OPSYS} == "SunOS"
+QCAD_OPSYS = SOLARIS
+.elif !empty(OPSYS:MBSD)
+QCAD_OPSYS = BSD
+.elif !empty(OPSYS:MIRIX)
+QCAD_OPSYS = IRIX
+.else
+PKG_FAIL_REASON=	"Unknown operating system for ${PKGNAME}
+.endif
+
 do-configure:
 	for f in rappwin.cpp relement.cpp rfonts.cpp rprgdef.h; do	\
 		${SED} -e 's:@PREFIX@:'${PREFIX}':g'			\
 			-e 's:@X11BASE@:${X11BASE}:g'			\
+			-e 's:@OPSYS@:${QCAD_OPSYS}:g'			\
 		 ${WRKSRC}/$$f	> ${WRKSRC}/$$f.tmp			\
 		&& ${MV} ${WRKSRC}/$$f.tmp ${WRKSRC}/$$f;		\
 	done
