@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/15 23:02:05 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/08/18 23:52:14 dmcmahill Exp $
 bin/boolean
 bin/edit
 share/boolean/default/config/boolean.ad
@@ -6,18 +6,20 @@ share/boolean/default/config/default.set
 share/boolean/default/config/gdsapp.cfg
 share/boolean/default/config/gdsapp.dos
 share/boolean/default/config/history.set
-share/boolean/default/data/32899002.03m
 share/boolean/default/data/33375151.cal
 share/boolean/default/data/aaaaa.key
-share/boolean/default/data/aaaaaaaabox.key
 share/boolean/default/data/aaaaaimage.key
 share/boolean/default/data/aaaaap.cal
 share/boolean/default/data/aap.cal
 share/boolean/default/data/albert.cal
+share/boolean/default/data/bbbb.key
+share/boolean/default/data/bbbb2.key
 share/boolean/default/data/bignext.cal
 share/boolean/default/data/bigtest.cal
 share/boolean/default/data/bigtest2.cal
+share/boolean/default/data/bigtest2l.key
 share/boolean/default/data/bigthree.cal
+share/boolean/default/data/bigthree.key
 share/boolean/default/data/boog.key
 share/boolean/default/data/boog2.key
 share/boolean/default/data/boog3.key
@@ -57,6 +59,7 @@ share/boolean/default/data/lev.cal
 share/boolean/default/data/lev2.cal
 share/boolean/default/data/lev3.cal
 share/boolean/default/data/m782506.cal
+share/boolean/default/data/m782506.key
 share/boolean/default/data/one.cal
 share/boolean/default/data/one.key
 share/boolean/default/data/oops.key
@@ -206,8 +209,7 @@ share/boolean/default/process/tworec.prs
 share/boolean/default/process/tworec2.prs
 share/boolean/default/process/vijf.prs
 share/boolean/default/process/wil1.prs
-share/boolean/gdsuser/6.1_version
-share/boolean/gdsuser/6.3_version
+share/boolean/gdsuser/6.6_version
 share/boolean/gdsuser/config/gdsapp.cfg
 share/boolean/gdsuser/config/history.set
 share/boolean/gdsuser/config/user.set
