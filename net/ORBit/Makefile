@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2005/08/18 05:39:52 grant Exp $
+# $NetBSD: Makefile,v 1.116 2005/08/18 05:41:02 grant Exp $
 
 DISTNAME=	ORBit-0.5.17
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	High-performance CORBA ORB with support for the C language
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		bison gmake lex
+USE_TOOLS+=		bison flex gmake
 USE_LIBTOOL=		YES
 PTHREAD_AUTO_VARS=	YES
 
