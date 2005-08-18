@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/08/06 06:19:32 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/18 15:46:24 taca Exp $
 
 DISTNAME=		Text-ChaSen-1.03
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 SVR4_PKGNAME=		p5tcs
 CATEGORIES=		japanese textproc perl5
 MASTER_SITES=		http://www.daionet.gr.jp/~knok/chasen/
