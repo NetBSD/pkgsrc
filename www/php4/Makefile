@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/08/17 21:13:53 tron Exp $
+# $NetBSD: Makefile,v 1.49 2005/08/18 07:47:50 tron Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 CATEGORIES+=		lang
@@ -40,11 +40,11 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
 
-USE_TOOLS+=	gzip
+USE_TOOLS+=	gzcat
 
 post-extract:
 	${RM} -f ${WRKSRC}/pear/packages/XML_RPC-1.3.1.tar
-	${GZIP_CMD} -cd ${DISTDIR}/${XMLRPC_DISTFILE} \
+	${GZCAT} ${DISTDIR}/${XMLRPC_DISTFILE} \
 	  >${WRKSRC}/pear/packages/${XMLRPC_DISTFILE:S/.tgz/.tar/}
 
 post-install:
