@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/02/13 10:07:40 taca Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/18 15:46:23 taca Exp $
 #
 
 DISTNAME=	chasen-${CHASEN_VERSION}
+PKGREVISION=	1
 CATEGORIES=	japanese textproc
 MASTER_SITES=	# empty
 DISTFILES=	# empty
