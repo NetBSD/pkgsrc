@@ -653,3 +653,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/openvpn to 2.0.1 [jlam 2005-08-17]
 	Removed net/openvpn-current [jlam 2005-08-17]
 	Updated www/php4 to 4.4.0 [tron 2005-08-17]
+	Updated misc/rubygems to 0.8.11 [jlam 2005-08-18]
