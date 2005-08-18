@@ -1,0 +1,37 @@
+$NetBSD: patch-ae,v 1.1.2.2 2005/08/18 21:39:09 salo Exp $
+
+--- src/hooks/gaduhook.cc.orig	2005-01-18 23:20:17.000000000 +0000
++++ src/hooks/gaduhook.cc
+@@ -893,6 +893,7 @@ static char *token_ocr(const char *ocr, 
+ string gaduhook::handletoken(struct gg_http *h) {
+     struct gg_token *t;
+     string fname, r;
++    char *tmpfilep = NULL;
+ 
+     if(!h)
+ 	return "";
+@@ -906,8 +907,22 @@ string gaduhook::handletoken(struct gg_h
+     if(!(t = (struct gg_token *) h->data) || !h->body)
+ 	return "";
+ 
+-    fname = (getenv("TMPDIR") ? getenv("TMPDIR") : "/tmp");
+-    fname += "/gg.token." + i2str(getpid());
++    while (tmpfilep == NULL) {
++      char tmpnam[100];
++      int tmpfiledes;
++      if (getenv("TMPDIR") && strlen(getenv("TMPDIR")) < 50)
++	sprintf (tmpnam, "%s/gg.token.XXXXXX", getenv("TMPDIR"));
++      else
++	sprintf (tmpnam, "/tmp/gg.token.XXXXXX");
++
++      if ((tmpfilep = mktemp (tmpnam)) != NULL) {
++	if ((tmpfiledes = open (tmpnam, O_CREAT | O_EXCL, S_IREAD | S_IWRITE)) == -1)
++	  tmpfilep = NULL;
++	else
++	  close (tmpfiledes);
++      }
++      fname = tmpnam;
++    }
+ 
+     ofstream bf(fname.c_str());
+ 
