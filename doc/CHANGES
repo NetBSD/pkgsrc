@@ -657,3 +657,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/libIDL to 0.8.6 [adam 2005-08-18]
 	Updated textproc/chasen-base to 2.3.3nb2 [taca 2005-08-18]
 	Updated devel/bglibs to 1.025 [schmonz 2005-08-18]
+	Updated cad/boolean to 6.7 [dmcmahill 2005-08-18]
