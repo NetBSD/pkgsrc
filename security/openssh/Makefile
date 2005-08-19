@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2005/07/28 17:54:57 reed Exp $
+# $NetBSD: Makefile,v 1.155 2005/08/19 18:12:38 jlam Exp $
 
 DISTNAME=		openssh-3.9p1
 PKGNAME=		openssh-3.9.1
@@ -116,8 +116,7 @@ CONFIGURE_ARGS+=	--with-xauth=${X11BASE}/bin/xauth
 CONFIGURE_ARGS+=	--with-xauth=${X11PREFIX}/bin/xauth
 .endif
 
-CONFS=			ssh_config sshd_config
-SUPPS=			moduli
+CONFS=			ssh_config sshd_config moduli
 
 .if exists(/dev/urandom)
 .  if ${OPSYS} == "NetBSD"
@@ -134,10 +133,6 @@ CONF_FILES=		# empty
 .for FILE in ${CONFS}
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
-SUPPORT_FILES=		# empty
-.for FILE in ${SUPPS}
-SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
-.endfor
 OWN_DIRS=		${OPENSSH_CHROOT}
 RCD_SCRIPTS=		sshd
 
@@ -152,7 +147,7 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}; for file in ${CONFS} ${SUPPS}; do			\
+	cd ${WRKSRC}; for file in ${CONFS}; do				\
 		${INSTALL_DATA} $${file}.out ${EGDIR}/$${file};		\
 	done
 .if !empty(PKG_OPTIONS:MPAM) && ${OPSYS} == "Linux"

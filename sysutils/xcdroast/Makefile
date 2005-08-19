@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/08/10 20:56:24 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/08/19 18:12:39 jlam Exp $
 
 DISTNAME=	xcdroast-0.98alpha15
 PKGNAME=	xcdroast-0.98a15
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=	AUDIO_LIBS=${LIBOSSAUDIO}
 DOCDIR=		${PREFIX}/share/doc/xcdroast
 DOCFILES=	DOCUMENTATION FAQ README.nonroot manual/xcdroast-manual.pdf
 HTMLDIR=	${PREFIX}/share/doc/html/xcdroast
-SUPPORT_FILES=	/dev/null ${PKG_SYSCONFDIR}/xcdroast.conf
+CONF_FILES=	/dev/null ${PKG_SYSCONFDIR}/xcdroast.conf
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 

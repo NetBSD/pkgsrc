@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/08/03 22:21:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2005/08/19 18:12:37 jlam Exp $
 #
 
 DISTNAME=		jabberd-2.0s9
@@ -51,7 +51,7 @@ PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}
 
 BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
-SUPPORT_FILES=          ${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
+CONF_FILES=		${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
 FILES=			c2s.xml resolver.xml router.xml			\
 			router-users.xml s2s.xml sm.xml

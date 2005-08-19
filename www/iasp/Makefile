@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/15 18:27:54 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/19 18:12:39 jlam Exp $
 
 .include "../iasp/Makefile.common"
 
@@ -31,16 +31,16 @@ USE_PKGINSTALL=	yes
 OWN_DIRS=	${IASP_DESTDIR}
 OWN_DIRS_PERMS=	${IASP_DESTDIR}/logs ${IASP_USER} ${IASP_GROUP} 0750
 CONFDIR=	${IASP_DESTDIR}/properties
-SFILES=		cdonts.properties	dbserver.properties
-SFILES+=	ejb.properties		loadbalance.properties
-SFILES+=	msmq.properties		rules.properties
-SFILES+=	security.properties	server.properties
-SFILES+=	servlets.properties
-SUPPORT_FILES=	# empty
-.for FILE in ${SFILES}
-SUPPORT_FILES+=	${CONFDIR}/${FILE}.default ${CONFDIR}/${FILE}
+CFILES=		cdonts.properties	dbserver.properties
+CFILES+=	ejb.properties		loadbalance.properties
+CFILES+=	msmq.properties		rules.properties
+CFILES+=	security.properties	server.properties
+CFILES+=	servlets.properties
+CONF_FILES=	# empty
+.for FILE in ${CFILES}
+CONF_FILES+=	${CONFDIR}/${FILE}.default ${CONFDIR}/${FILE}
 .endfor
-SUPPORT_FILES+=	/dev/null ${IASP_DESTDIR}/properties/license
+CONF_FILES+=	/dev/null ${IASP_DESTDIR}/properties/license
 RCD_SCRIPTS=	iasp iasp_admin
 
 post-extract:
