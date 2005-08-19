@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/06/24 19:09:41 kristerw Exp $
+# $NetBSD: Makefile,v 1.38 2005/08/19 18:12:38 jlam Exp $
 
 DISTNAME=		apcupsd-3.8.6
 PKGREVISION=		4
@@ -39,13 +39,13 @@ CONFIGURE_ENV+=		SCRIPTSHELL="${TOOLS_SH}"
 
 EGDIR=          ${PREFIX}/share/examples/apcupsd
 
-CONF_FILES_PERMS+=     ${EGDIR}/apcupsd.master.conf ${PKG_SYSCONFDIR}/apcupsd.conf ${ROOT_USER} ${ROOT_GROUP} 644
+CONF_FILES_PERMS+= ${EGDIR}/apcupsd.master.conf ${PKG_SYSCONFDIR}/apcupsd.conf ${ROOT_USER} ${ROOT_GROUP} 644
 CONF_FILES_PERMS+= ${EGDIR}/changeme ${PKG_SYSCONFDIR}/changeme ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commfailure ${PKG_SYSCONFDIR}/commfailure ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commok ${PKG_SYSCONFDIR}/commok ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/mainsback ${PKG_SYSCONFDIR}/mainsback ${ROOT_USER} ${ROOT_GROUP} 755
-SUPPORT_FILES_PERMS=  ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+= ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${ROOT_USER} ${ROOT_GROUP} 755
 RCD_SCRIPTS=	apcupsd
 RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/distributions/netbsd/apcupsd
 

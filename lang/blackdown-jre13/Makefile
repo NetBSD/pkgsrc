@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/15 11:53:20 veego Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/19 18:12:37 jlam Exp $
 #
 
 BD_BASENAME=	j2re
@@ -36,9 +36,9 @@ SFILES+=	font.properties			font.properties.ja
 SFILES+=	font.properties.zh		jvm.cfg
 SFILES+=	images/cursors/cursors.properties	psfont.properties.ja
 SFILES+=	psfontj2d.properties		security/java.security
-SUPPORT_FILES=	# empty
+CONF_FILES=	# empty
 .for FILE in ${SFILES}
-SUPPORT_FILES+=	${JVM_HOME}/lib/${FILE}.default ${JVM_HOME}/lib/${FILE}
+CONF_FILES+=	${JVM_HOME}/lib/${FILE}.default ${JVM_HOME}/lib/${FILE}
 .endfor
 
 do-configure:

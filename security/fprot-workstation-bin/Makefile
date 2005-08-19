@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/07/16 19:10:40 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/19 18:12:38 jlam Exp $
 #
 
 DISTNAME=		#defined
@@ -34,9 +34,9 @@ FPDIR=			${PREFIX}/libexec/fprot-workstation-bin
 FILES_SUBST+=		FPDIR=${FPDIR:Q}
 FILES_SUBST+=		DATDIR=${DATDIR:Q}
 
-SUPPORT_FILES=          ${DATDIR}/MACRO.DEF ${FPDIR}/MACRO.DEF
-SUPPORT_FILES+=         ${DATDIR}/SIGN.DEF ${FPDIR}/SIGN.DEF
-SUPPORT_FILES+=         ${DATDIR}/SIGN2.DEF ${FPDIR}/SIGN2.DEF
+CONF_FILES=		${DATDIR}/MACRO.DEF ${FPDIR}/MACRO.DEF
+CONF_FILES+=		${DATDIR}/SIGN.DEF ${FPDIR}/SIGN.DEF
+CONF_FILES+=		${DATDIR}/SIGN2.DEF ${FPDIR}/SIGN2.DEF
 OWN_DIRS=               ${FPDIR}
 
 .include "../../mk/bsd.prefs.mk"
