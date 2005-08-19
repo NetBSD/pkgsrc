@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/08/19 03:55:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.48 2005/08/19 04:44:10 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		7
@@ -32,8 +32,6 @@ GCC_REQD+=		3.0
 .endif
 
 INSTALLATION_DIRS=	bin man man/man1 man/man5 man/man8 share/examples/djbdns
-
-.include "options.mk"
 
 post-install:
 	cd ${WRKDIR}/*-man; for i in 1 5 8; do		 		\
