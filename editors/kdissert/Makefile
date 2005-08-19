@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/09 18:37:41 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/19 11:18:32 drochner Exp $
 #
 
 DISTNAME=		kdissert-1.0.3
@@ -13,7 +13,7 @@ COMMENT=		Mindmapping-like tool to generate text templates
 USE_PKGLOCALEDIR=	yes
 NO_CONFIGURE=		yes
 
-BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
+BUILD_DEPENDS+=	scons>=0.96.1nb1:../../devel/scons
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
