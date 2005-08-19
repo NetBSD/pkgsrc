@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/19 16:06:03 drochner Exp $
+${PYSITELIB}/pslib.so
