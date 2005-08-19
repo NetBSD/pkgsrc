@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:20 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/19 03:55:00 schmonz Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -18,7 +18,6 @@ DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 
 EGDIR=			${PREFIX}/share/examples/mess822
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""

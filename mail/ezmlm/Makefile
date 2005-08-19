@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:19 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/19 03:55:00 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -13,7 +13,6 @@ COMMENT=		Easy-to-use, high-speed mailing list manager for qmail
 CONFLICTS=		ezmlm-idx-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 
 # We change conf-bin and conf-man from the default "/usr/local"
 # and don't provide compatibility symlinks.
