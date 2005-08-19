@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.16 2005/05/10 16:24:48 drochner Exp $
+$NetBSD: distinfo,v 1.17 2005/08/19 19:46:24 reed Exp $
 
 SHA1 (db-4.3.28.tar.gz) = a59eece10a907977a0578a58218c75cac7c3bdf7
 RMD160 (db-4.3.28.tar.gz) = c4853e6004787d3d664da7bb5acc17d7d1875c58
 Size (db-4.3.28.tar.gz) = 5995854 bytes
 SHA1 (patch-aa) = ea0c124c6d18db88ccd0d92b7c14b7e859213444
-SHA1 (patch-ab) = ab6b8c819cf21407dfe136bb75cd4e2f82be9afc
+SHA1 (patch-ab) = 9e742365c9d1f812f8f170333abc5b532cbf1348
 SHA1 (patch-ac) = ec623253fdee19b81a8a1cd3a58fc76f1d2e343f
 SHA1 (patch-ad) = 6fc146cc50aa8f74830639af95b4e0cd1ddb1949
