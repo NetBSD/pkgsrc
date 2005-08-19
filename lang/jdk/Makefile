@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile,v 1.44 2005/08/19 18:12:37 jlam Exp $
 #
 
 VERSION=	1.1.8
@@ -57,9 +57,9 @@ SFILES+=	font.properties.tr		font.properties.zh_EUC_CN
 SFILES+=	font.properties.zh_TW_Big5	font.properties.zh_TW_EUC_TW
 SFILES+=	psfont.properties.ja		serialver.properties
 SFILES+=	security/java.security
-SUPPORT_FILES=	# empty
+CONF_FILES=	# empty
 .for FILE in ${SFILES}
-SUPPORT_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
+CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
 do-configure:

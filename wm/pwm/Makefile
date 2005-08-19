@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/08/19 18:12:39 jlam Exp $
 #
 
 DISTNAME=	pwm-20030617
@@ -24,14 +24,14 @@ PKG_SYSCONFSUBDIR=	pwm
 EGDIR=		${PREFIX}/share/examples/pwm
 CONF_FILES=	${EGDIR}/pwm.conf.default ${PKG_SYSCONFDIR}/pwm.conf
 
-SUPPS=		buttons-default.conf
-SUPPS+=		keys-default.conf
-SUPPS+=		menus-default.conf
-SUPPS+=		look-beoslike.conf
-SUPPS+=		look-brownsteel.conf
-SUPPORT_FILES=	# empty
-.for FILE in ${SUPPS}
-SUPPORT_FILES+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+CONFS=		buttons-default.conf
+CONFS+=		keys-default.conf
+CONFS+=		menus-default.conf
+CONFS+=		look-beoslike.conf
+CONFS+=		look-brownsteel.conf
+CONF_FILES=	# empty
+.for FILE in ${CONFS}
+CONF_FILES+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 
 .include "../../mk/x11.buildlink3.mk"

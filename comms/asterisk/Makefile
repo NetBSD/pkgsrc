@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:07:43 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/19 18:12:37 jlam Exp $
 #
 
 DISTNAME=		asterisk-1.0.7
@@ -79,7 +79,7 @@ CONF_FILES+=	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
 	res_config_odbc.conf res_odbc.conf rpt.conf rtp.conf sip.conf 	\
 	skinny.conf voicemail.conf vpb.conf zapata.conf asterisk.adsi 	\
 	telcordia-1.adsi
-SUPPORT_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
+CONF_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
 .endfor
 .undef _file_
 
