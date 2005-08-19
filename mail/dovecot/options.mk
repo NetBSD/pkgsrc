@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2005/01/08 19:58:16 schmonz Exp $
+# $NetBSD: options.mk,v 1.7 2005/08/19 04:57:01 grant Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pgsql sasl
+PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pgsql sasl pam
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -54,4 +54,14 @@ CONFIGURE_ARGS+=	--with-ldap
 .if !empty(PKG_OPTIONS:Msasl)
 CONFIGURE_ARGS+=	--with-cyrus-sasl2
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
+.endif
+
+###
+### PAM support.
+###
+.if !empty(PKG_OPTIONS:Mpam)
+CONFIGURE_ARGS+=	--with-pam
+.  include "../../mk/pam.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-pam
 .endif
