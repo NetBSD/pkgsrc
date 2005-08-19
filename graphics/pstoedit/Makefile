@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/08/12 19:29:29 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2005/08/19 15:49:52 drochner Exp $
 
 DISTNAME=	pstoedit-3.41
 CATEGORIES=	converters graphics print
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c++
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS} -Dunix"
-CONFIGURE_ENV+=	GS=${LOCALBASE}/bin/gs
+CONFIGURE_ENV+=	ac_cv_path_GS=${LOCALBASE}/bin/gs
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=--libdir=${PREFIX}/lib/pstoedit	# plugin dir -- unused for now
 BUILD_TARGET=
@@ -37,5 +37,6 @@ post-install:
 
 .include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
+# XXX avoid hard dependency
 #.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
