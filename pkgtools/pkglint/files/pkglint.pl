@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.243 2005/08/19 15:32:50 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.244 2005/08/19 15:58:30 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2069,7 +2069,7 @@ sub checkdir_category($) {
 			my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
 
 			if ($comment_flag eq "#" && (!defined($comment) || $comment eq "")) {
-				$line->log_error("${subdir} commented out without giving a reason.");
+				$line->log_warning("${subdir} commented out without giving a reason.");
 			}
 
 			if ($indentation ne "\t") {
@@ -2079,7 +2079,7 @@ sub checkdir_category($) {
 			if (defined($prev_subdir) && $subdir eq $prev_subdir) {
 				$line->log_error("${subdir} must only appear once.");
 			} elsif (defined($prev_subdir) && $subdir lt $prev_subdir) {
-				$line->log_error("${subdir} must come before ${prev_subdir}.");
+				$line->log_warning("${subdir} should come before ${prev_subdir}.");
 			} else {
 				# correctly ordered
 			}
