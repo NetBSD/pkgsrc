@@ -661,3 +661,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/dovecot to 0.99.14nb1 [grant 2005-08-19]
 	Updated sysutils/xentools20 to 2.0.7nb1 [bouyer 2005-08-19]
 	Updated print/acroread7 to 7.0.1 [salo 2005-08-19]
+	Updated devel/bglibs to 1.026 [schmonz 2005-08-19]
