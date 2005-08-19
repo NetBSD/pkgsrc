@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:48:02 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/08/19 18:12:39 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.7
@@ -25,7 +25,7 @@ DOCDIR=		${PREFIX}/share/doc/surfraw
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${EGDIR}/surfraw.conf ${PKG_SYSCONFDIR}/surfraw.conf
-SUPPORT_FILES=	${EGDIR}/surfraw_elvi.list ${PKG_SYSCONFDIR}/surfraw_elvi.list
+CONF_FILES+=	${EGDIR}/surfraw_elvi.list ${PKG_SYSCONFDIR}/surfraw_elvi.list
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
