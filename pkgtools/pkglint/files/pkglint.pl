@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.245 2005/08/19 16:08:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.246 2005/08/19 17:32:13 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -309,6 +309,7 @@ my (%options) = (
 	"-v|--verbose"	=> "print progress messages",
 );
 
+my $opt_check_DESCR	= true;
 my $opt_check_distinfo	= true;
 my $opt_check_extra	= true;
 my $opt_check_bl3	= true;
@@ -317,6 +318,7 @@ my $opt_check_MESSAGE	= true;
 my $opt_check_patches	= true;
 my $opt_check_PLIST	= true;
 my (%checks) = (
+	"DESCR"		=> [\$opt_check_DESCR, "check DESCR file"],
 	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
 	"bl3"		=> [\$opt_check_bl3, "check buildlink3 files"],
 	"extra"		=> [\$opt_check_extra, "check various additional files"],
@@ -2252,7 +2254,7 @@ sub checkdir_package($) {
 			$opt_check_bl3 and checkfile_buildlink3_mk($dir, $f);
 
 		} elsif ($f =~ qr"/DESCR[^/]*$") {
-			checkfile_DESCR($dir, $f);
+			$opt_check_DESCR and checkfile_DESCR($dir, $f);
 
 		} elsif ($f =~ qr"/distinfo$") {
 			$have_distinfo = true;
