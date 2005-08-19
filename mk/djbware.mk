@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.7 2005/08/19 04:44:09 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.8 2005/08/19 13:47:26 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -44,7 +44,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 BUILD_TARGET?=		it ${DJB_BUILD_TARGETS}
 INSTALL_TARGET?=	setup check ${DJB_INSTALL_TARGETS}
 
-.if !target(do-configure)
+.if !defined(NO_CONFIGURE) && !target(do-configure)
 do-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
 	for i in conf-*; do ${CP} $${i} $${i}.orig_dist; done;		\
