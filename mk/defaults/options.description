@@ -52,6 +52,7 @@ debug
 deliver-suid		Install deliver executable setuid root.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
+djbware-errno-hack	Patch to #include <errno.h> for correctness.
 domainscale	
 drac			Enable DRAC support.
 dummy	

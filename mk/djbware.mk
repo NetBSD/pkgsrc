@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.6 2005/08/15 19:44:13 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.7 2005/08/19 04:44:09 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -35,8 +35,6 @@ DJB_CONFIG_HOME?=	conf-home
 DJB_CONFIG_CMDS?=	${DO_NADA}
 BGWARE_INSTALLER?=	NO
 
-BUILD_DEFS+=		DJB_ERRNO_HACK
-
 .if !empty(DJB_RESTRICTED:M[yY][eE][sS])
 RESTRICTED=		"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -45,14 +43,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 BUILD_TARGET?=		it ${DJB_BUILD_TARGETS}
 INSTALL_TARGET?=	setup check ${DJB_INSTALL_TARGETS}
-
-.if !empty(DJB_ERRNO_HACK:M[yY][eE][sS])
-SUBST_CLASSES+=		djbware
-SUBST_STAGE.djbware=	do-configure
-SUBST_FILES.djbware=	error.h
-SUBST_SED.djbware=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
-SUBST_MESSAGE.djbware=	"Correcting definition of errno."
-.endif
 
 .if !target(do-configure)
 do-configure:
@@ -84,6 +74,26 @@ do-install:
 	./installer;							\
 	./instcheck
 . endif
+.endif
+
+PKG_SUPPORTED_OPTIONS+=	djbware-errno-hack
+PKG_OPTIONS_LEGACY_VARS+=	DJB_ERRNO_HACK:djbware-errno-hack
+
+.include "../../mk/bsd.prefs.mk"
+
+.if exists(${PKGDIR}/options.mk)
+. include "${PKGDIR}/options.mk"
+.else
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGBASE}
+.include "../../mk/bsd.options.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mdjbware-errno-hack)
+SUBST_CLASSES+=		djbware
+SUBST_STAGE.djbware=	do-configure
+SUBST_FILES.djbware=	error.h
+SUBST_SED.djbware=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
+SUBST_MESSAGE.djbware=	"Correcting definition of errno."
 .endif
 
 .endif	# DJBWARE_MK

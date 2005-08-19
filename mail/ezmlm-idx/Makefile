@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/12 10:58:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2005/08/19 04:44:09 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -31,10 +31,6 @@ CONF_FILES+=		${EGDIR}/ezmlmrc ${PKG_SYSCONFDIR}/ezmlmrc
 
 INSTALLATION_DIRS=	bin man man/man1 man/man5 man/cat1 man/cat5
 INSTALLATION_DIRS+=	share/examples/ezmlm-idx
-
-.include "../../mk/bsd.prefs.mk"
-
-.include "options.mk"
 
 post-extract:
 	@${MV} ${WRKSRC}/* ${WRKDIR}/${EZMLM_VERS}

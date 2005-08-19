@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2005/07/19 19:41:19 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2005/08/19 04:44:09 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ezmlm
-PKG_SUPPORTED_OPTIONS=	ezmlm-althash
+PKG_SUPPORTED_OPTIONS+=	ezmlm-althash
 PKG_OPTIONS_LEGACY_OPTS+=	althash:ezmlm-althash
 
 .if ${OPSYS} == "Darwin"
