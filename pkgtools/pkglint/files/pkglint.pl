@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.244 2005/08/19 15:58:30 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.245 2005/08/19 16:08:08 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -306,7 +306,7 @@ my (%options) = (
 	"-W{warn,...}"	=> "enable or disable specific warnings",
 	"-h|--help"	=> "print a detailed help message",
 	"-V|--version"	=> "print the version number of pkglint",
-	"-v|--verbose"	=> "print progress messages on STDERR",
+	"-v|--verbose"	=> "print progress messages",
 );
 
 my $opt_check_distinfo	= true;
