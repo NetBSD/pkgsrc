@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2005/08/19 18:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/08/19 22:26:21 jlam Exp $
 
 DISTNAME=	libiconv-1.10
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=libiconv/}
 
@@ -17,7 +18,7 @@ GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
 EGDIR=			${PREFIX}/share/examples/libiconv
-CONF_FILES=		${EGDIR}/charset.alias ${PREFIX}/lib/charset.alias
+REQD_FILES=		${EGDIR}/charset.alias ${PREFIX}/lib/charset.alias
 
 MAKE_ENV+=		PAX="${PAX}"
 
