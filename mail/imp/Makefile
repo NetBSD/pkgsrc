@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/06/02 23:28:11 salo Exp $
+# $NetBSD: Makefile,v 1.33 2005/08/19 18:12:37 jlam Exp $
 
 DISTNAME=	imp-3.2.8
 PKGREVISION=	1
@@ -27,25 +27,25 @@ USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR?=	httpd
 
 CONF_FILES=	${EGDIR}/imp.conf ${PKG_SYSCONFDIR}/imp.conf
-CONF_FILES+=	${IMPDIR}/config/conf.php.dist			\
+CONF_FILES+=	${IMPDIR}/config/conf.php.dist				\
 		${IMPDIR}/config/conf.php
 CONF_FILES+=	${IMPDIR}/config/servers.php.dist			\
 		${IMPDIR}/config/servers.php
-SUPPORT_FILES+=	${IMPDIR}/config/filter.txt.dist			\
+CONF_FILES+=	${IMPDIR}/config/filter.txt.dist			\
 		${IMPDIR}/config/filter.txt
-SUPPORT_FILES+=	${IMPDIR}/config/header.txt.dist			\
+CONF_FILES+=	${IMPDIR}/config/header.txt.dist			\
 		${IMPDIR}/config/header.txt
-SUPPORT_FILES+=	${IMPDIR}/config/html.php.dist				\
+CONF_FILES+=	${IMPDIR}/config/html.php.dist				\
 		${IMPDIR}/config/html.php
-SUPPORT_FILES+=	${IMPDIR}/config/menu.php.dist		\
+CONF_FILES+=	${IMPDIR}/config/menu.php.dist				\
 		${IMPDIR}/config/menu.php
-SUPPORT_FILES+=	${IMPDIR}/config/mime_drivers.php.dist				\
+CONF_FILES+=	${IMPDIR}/config/mime_drivers.php.dist			\
 		${IMPDIR}/config/mime_drivers.php
-SUPPORT_FILES+=	${IMPDIR}/config/motd.php.dist			\
+CONF_FILES+=	${IMPDIR}/config/motd.php.dist				\
 		${IMPDIR}/config/motd.php
-SUPPORT_FILES+=	${IMPDIR}/config/prefs.php.dist			\
+CONF_FILES+=	${IMPDIR}/config/prefs.php.dist				\
 		${IMPDIR}/config/prefs.php
-SUPPORT_FILES+=	${IMPDIR}/config/trailer.txt.dist			\
+CONF_FILES+=	${IMPDIR}/config/trailer.txt.dist			\
 		${IMPDIR}/config/trailer.txt
 
 do-build:

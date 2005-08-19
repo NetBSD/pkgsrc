@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/02 23:10:28 salo Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/19 18:12:38 jlam Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -34,28 +34,28 @@ PKG_SYSCONFSUBDIR?=	httpd
 CONF_FILES=		${EGDIR}/imp.conf ${PKG_SYSCONFDIR}/imp.conf
 CONF_FILES+=		${IMPDIR}/config/servers.php.dist \
 			${IMPDIR}/config/servers.php
-SUPPORT_FILES_PERMS+=	${IMPDIR}/config/conf.xml.dist \
+CONF_FILES_PERMS+=	${IMPDIR}/config/conf.xml.dist \
 			${IMPDIR}/config/conf.xml \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${IMPDIR}/config/filter.txt.dist \
+CONF_FILES_PERMS+=	${IMPDIR}/config/filter.txt.dist \
 			${IMPDIR}/config/filter.txt \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${IMPDIR}/config/header.txt.dist \
+CONF_FILES_PERMS+=	${IMPDIR}/config/header.txt.dist \
 			${IMPDIR}/config/header.txt \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${IMPDIR}/config/menu.php.dist \
+CONF_FILES_PERMS+=	${IMPDIR}/config/menu.php.dist \
 			${IMPDIR}/config/menu.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${IMPDIR}/config/mime_drivers.php.dist \
+CONF_FILES_PERMS+=	${IMPDIR}/config/mime_drivers.php.dist \
 			${IMPDIR}/config/mime_drivers.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${IMPDIR}/config/motd.php.dist \
+CONF_FILES_PERMS+=	${IMPDIR}/config/motd.php.dist \
 			${IMPDIR}/config/motd.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${IMPDIR}/config/prefs.php.dist \
+CONF_FILES_PERMS+=	${IMPDIR}/config/prefs.php.dist \
 			${IMPDIR}/config/prefs.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${IMPDIR}/config/trailer.txt.dist \
+CONF_FILES_PERMS+=	${IMPDIR}/config/trailer.txt.dist \
 			${IMPDIR}/config/trailer.txt \
 			${APACHE_USER} ${ROOT_GROUP} 0440
 

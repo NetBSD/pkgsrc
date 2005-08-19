@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.10 2005/08/19 17:20:33 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.11 2005/08/19 18:12:38 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -261,18 +261,14 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 #	MLINKS in the base system.  At post-install time, if the true config
 #	file doesn't exist, then the example one is copied into place.  At
 #	deinstall time, the true one is removed if it doesn't differ from the
-#	example one.  SUPPORT_FILES is used the same way, but the package
-#	admin isn't prompted to customize the file at post-install time.
+#	example one.
 #
-# CONF_FILES_MODE and SUPPORT_FILES_MODE are the file permissions for the
-#	files in CONF_FILES and SUPPORT_FILES, respectively.
+# CONF_FILES_MODE is the file permissions for the files in CONF_FILES.
 #
 # CONF_FILES_PERMS are lists that look like:
 #		example_file config_file user group mode
 #	and works like CONF_FILES, except the config files are owned by
-#	user:group have mode permissions.  SUPPORT_FILES_PERMS is used in the
-#	same way, but the package admin isn't prompted to customize the file
-#	at post-install time.
+#	user:group have mode permissions.
 #
 # RCD_SCRIPTS works lists the basenames of the rc.d scripts.  They are
 #	expected to be found in ${PREFIX}/share/examples/rc.d, and
@@ -285,9 +281,6 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 CONF_FILES?=		# empty
 CONF_FILES_MODE?=	0644
 CONF_FILES_PERMS?=	# empty
-SUPPORT_FILES?=		# empty
-SUPPORT_FILES_MODE?=	0644
-SUPPORT_FILES_PERMS?=	# empty
 RCD_SCRIPTS?=		# empty
 RCD_SCRIPTS_MODE?=	0755
 RCD_SCRIPTS_EXAMPLEDIR=	share/examples/rc.d
@@ -307,17 +300,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
 	esac; }
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${SUPPORT_FILES:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
 	case "${CONF_FILES_PERMS:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${SUPPORT_FILES_PERMS:M*:Q}" in				\
 	"")	;;							\
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
 	esac; }
@@ -348,19 +331,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${SUPPORT_FILES};				\
-	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
-		egfile="$$1"; file="$$2";				\
-		shift; shift;						\
-		egfile=`strip_prefix "$$egfile"`;			\
-		file=`strip_prefix "$$file"`;				\
-		${ECHO} "# FILE: $$file c $$egfile ${SUPPORT_FILES_MODE}"; \
-	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS};	\
+	eval set -- __dummy ${CONF_FILES_PERMS};			\
 	while ${TEST} $$# -gt 0; do					\
 		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		egfile="$$1"; file="$$2";				\
@@ -470,16 +441,6 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
 	esac; }
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${SUPPORT_FILES:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${SUPPORT_FILES_PERMS:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
 	case "${RCD_SCRIPTS:M*:Q}" in					\
 	"")	;;							\
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
@@ -518,7 +479,7 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${ECHO} "";							\
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
-	case "${PKG_SYSCONFSUBDIR:M*:Q}${CONF_FILES:M*:Q}${CONF_FILES_PERMS:M*Q}${SUPPORT_FILES:M*:Q}${SUPPORT_FILES_PERMS:M*:Q}" in \
+	case "${PKG_SYSCONFSUBDIR:M*:Q}${CONF_FILES:M*:Q}${CONF_FILES_PERMS:M*Q}" in \
 	"")	;;							\
 	*)	${ECHO} "# DIR: ${PKG_SYSCONFDIR:S/${PREFIX}\///} m" ;;	\
 	esac;								\

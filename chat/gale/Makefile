@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:03 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/19 18:12:36 jlam Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -28,8 +28,8 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 PKG_GROUPS=		gale
 PKG_USERS=		gale:gale
 
-SUPPORT_FILES=		${EGDIR}/COPYING ${PKG_SYSCONFDIR}/gale/COPYING
-SUPPORT_FILES+=		${EGDIR}/ROOT ${PKG_SYSCONFDIR}/gale/auth/trusted/ROOT
+CONF_FILES=		${EGDIR}/COPYING ${PKG_SYSCONFDIR}/gale/COPYING
+CONF_FILES+=		${EGDIR}/ROOT ${PKG_SYSCONFDIR}/gale/auth/trusted/ROOT
 OWN_DIRS=		${PKG_SYSCONFDIR}
 OWN_DIRS+=		${PKG_SYSCONFDIR}/auth
 OWN_DIRS+=		${PKG_SYSCONFDIR}/auth/private

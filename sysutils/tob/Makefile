@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/08/19 18:12:38 jlam Exp $
 
 DISTNAME=	tob-0.25
 CATEGORIES=	sysutils
@@ -13,8 +13,8 @@ USE_PKGINSTALL=	yes
 
 EGDIR=		${PREFIX}/share/examples/tob
 CONF_FILES=	${EGDIR}/tob.rc ${PKG_SYSCONFDIR}/tob/tob.rc
-SUPPORT_FILES=	${EGDIR}/example.exclude ${PKG_SYSCONFDIR}/tob/volumes/example.exclude
-SUPPORT_FILES+=	${EGDIR}/example.startdir ${PKG_SYSCONFDIR}/tob/volumes/example.startdir
+CONF_FILES+=	${EGDIR}/example.exclude ${PKG_SYSCONFDIR}/tob/volumes/example.exclude
+CONF_FILES+=	${EGDIR}/example.startdir ${PKG_SYSCONFDIR}/tob/volumes/example.startdir
 
 INSTALLATION_DIRS=	man/man8 sbin
 

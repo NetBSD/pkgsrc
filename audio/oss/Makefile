@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/04/11 21:44:55 tv Exp $
+# $NetBSD: Makefile,v 1.32 2005/08/19 18:12:36 jlam Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -47,9 +47,9 @@ FILES_SUBST+=		MODSTAT=${MODSTAT}
 SFILES=			drums.o3 drums.sb oss.conf std.o3 std.sb
 FILES_SUBST+=		SFILES=${SFILES:Q}
 .for FILE in ${SFILES}
-SUPPORT_FILES+=		${OSSLIBDIR}/${FILE} /etc/${FILE}
+CONF_FILES+=		${OSSLIBDIR}/${FILE} /etc/${FILE}
 .endfor
-SUPPORT_FILES+=		${OSSLIBDIR}/license.asc.eval ${OSSLIBDIR}/license.asc
+CONF_FILES+=		${OSSLIBDIR}/license.asc.eval ${OSSLIBDIR}/license.asc
 RCD_SCRIPTS=		oss
 INSTALLATION_DIRS=	bin sbin
 

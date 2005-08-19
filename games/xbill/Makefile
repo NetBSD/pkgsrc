@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/14 17:23:24 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/19 18:12:37 jlam Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -21,7 +21,7 @@ CPPFLAGS+=		-DVARBASE=\"${VARBASE}\"
 PKG_GROUPS=		${GAMEGRP}
 MAKE_DIRS_PERMS+=	${VARBASE}/games ${BINOWN} ${GAMEGRP} 0775
 MAKE_ENV+=		GAMEGRP=${GAMEGRP} GAMEMODE=${GAMEMODE}
-SUPPORT_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores ${VARBASE}/games/xbill.scores ${BINOWN} ${GAMEGRP} ${GAMEDATAMODE}
+CONF_FILES_PERMS+=	${PREFIX}/share/examples/xbill.scores ${VARBASE}/games/xbill.scores ${BINOWN} ${GAMEGRP} ${GAMEDATAMODE}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/xbill.man ${PREFIX}/man/man6/xbill.6

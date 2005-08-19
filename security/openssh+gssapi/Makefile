@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/16 01:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/08/19 18:12:38 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -114,8 +114,7 @@ ASKPASS_PROGRAM=	${X11PREFIX}/bin/ssh-askpass
 CONFIGURE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM}
 MAKE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM}
 
-CONFS=			ssh_config sshd_config
-SUPPS=			moduli
+CONFS=			ssh_config sshd_config moduli
 
 .if exists(/dev/urandom)
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE.urandom
@@ -129,10 +128,6 @@ EGDIR=			${PREFIX}/share/examples/openssh
 CONF_FILES=		# empty
 .for FILE in ${CONFS}
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
-.endfor
-SUPPORT_FILES=		# empty
-.for FILE in ${SUPPS}
-SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 OWN_DIRS=		${OPENSSH_CHROOT}
 RCD_SCRIPTS=		sshd
@@ -150,7 +145,7 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}; for file in ${CONFS} ${SUPPS}; do			\
+	cd ${WRKSRC}; for file in ${CONFS}; do				\
 		${INSTALL_DATA} $${file}.out ${EGDIR}/$${file};		\
 	done
 #.if !empty(PKT_OPTIONS:Mpam)

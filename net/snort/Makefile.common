@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2005/08/13 19:56:47 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/08/19 18:12:38 jlam Exp $
 #
 
 DISTNAME=		snort-2.4.0
@@ -36,15 +36,15 @@ CONF_FILES+=		${EGDIR}/classification.config \
 			${PKG_SYSCONFDIR}/classification.config
 CONF_FILES+=		${EGDIR}/reference.config \
 			${PKG_SYSCONFDIR}/reference.config
-SUPPORT_FILES+=		${EGDIR}/gen-msg.map \
+CONF_FILES+=		${EGDIR}/gen-msg.map \
 			${PKG_SYSCONFDIR}/gen-msg.map
-SUPPORT_FILES+=		${EGDIR}/generators \
+CONF_FILES+=		${EGDIR}/generators \
 			${PKG_SYSCONFDIR}/generators
-SUPPORT_FILES+=		${EGDIR}/sid \
+CONF_FILES+=		${EGDIR}/sid \
 			${PKG_SYSCONFDIR}/sid
-SUPPORT_FILES+=		${EGDIR}/sid-msg.map \
+CONF_FILES+=		${EGDIR}/sid-msg.map \
 			${PKG_SYSCONFDIR}/sid-msg.map
-SUPPORT_FILES+=		${EGDIR}/unicode.map \
+CONF_FILES+=		${EGDIR}/unicode.map \
 			${PKG_SYSCONFDIR}/unicode.map
 
 EGDIR=			${PREFIX}/share/examples/snort

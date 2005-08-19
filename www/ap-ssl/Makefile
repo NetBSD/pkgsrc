@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2005/07/14 04:04:58 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2005/08/19 18:12:39 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.23-1.3.33
 PKGNAME=		ap-ssl-2.8.23
@@ -38,13 +38,13 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.prm
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/ssl.key			\
 			${ROOT_USER} ${ROOT_GROUP} 0700
 
-SUPPORT_FILES=		# empty
-SUPPS=			ssl.crl/Makefile.crl ssl.crl/README.CRL		\
+CONF_FILES=		# empty
+CONFS=			ssl.crl/Makefile.crl ssl.crl/README.CRL		\
 			ssl.crt/Makefile.crt ssl.crt/README.CRT		\
 			ssl.csr/README.CSR ssl.csr/README.CSR		\
 			ssl.key/README.KEY ssl.prm/README.PRM
-.for FILE in ${SUPPS}
-SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.for FILE in ${CONFS}
+CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 
 .include "../../security/openssl/buildlink3.mk"

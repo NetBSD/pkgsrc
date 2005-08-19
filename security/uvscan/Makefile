@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/07/19 14:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2005/08/19 18:12:38 jlam Exp $
 
 DISTNAME=		vlnx424e
 PKGNAME=		uvscan-4.24.1
@@ -36,9 +36,9 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 FILES_SUBST+=		UVSCANDIR=${UVSCANDIR:Q}
 FILES_SUBST+=		DATFILES=${DATFILES:Q}
 
-SUPPORT_FILES=		${DATDIR}/clean.dat ${UVSCANDIR}/clean.dat
-SUPPORT_FILES+=		${DATDIR}/names.dat ${UVSCANDIR}/names.dat
-SUPPORT_FILES+=		${DATDIR}/scan.dat ${UVSCANDIR}/scan.dat
+CONF_FILES=		${DATDIR}/clean.dat ${UVSCANDIR}/clean.dat
+CONF_FILES+=		${DATDIR}/names.dat ${UVSCANDIR}/names.dat
+CONF_FILES+=		${DATDIR}/scan.dat ${UVSCANDIR}/scan.dat
 OWN_DIRS=		${UVSCANDIR}
 
 INSTALLATION_DIRS=	bin man/man1 sbin

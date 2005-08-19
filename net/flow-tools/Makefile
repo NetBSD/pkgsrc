@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/21 12:54:02 seb Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/19 18:12:38 jlam Exp $
 
 DISTNAME=	flow-tools-0.68
 PKGREVISION=	1
@@ -19,11 +19,9 @@ EGDIR=		${PREFIX}/share/examples/flow-tools
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/sym
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/cfg
 
-# These files are config files that are unlikely to be modified in most cases
-# so we install them via SUPPORT_FILES.
 _SYM_FILES=	ip-prot.sym ip-type.sym tcp-port.sym asn.sym tag.sym
 .for _f_ in ${_SYM_FILES}
-SUPPORT_FILES+=	${EGDIR}/sym/${_f_} ${PKG_SYSCONFDIR}/sym/${_f_}
+CONF_FILES+=	${EGDIR}/sym/${_f_} ${PKG_SYSCONFDIR}/sym/${_f_}
 .endfor
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
