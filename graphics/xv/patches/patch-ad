@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.8 2001/04/05 13:57:15 wiz Exp $
+$NetBSD: patch-ad,v 1.8.22.1 2005/08/19 11:37:05 salo Exp $
 
---- Imakefile.orig	Tue Oct 27 00:45:53 1998
-+++ Imakefile	Tue Oct 27 01:13:26 1998
+--- Imakefile.orig	2005-07-29 15:14:59.000000000 +0200
++++ Imakefile
 @@ -6,13 +6,15 @@
  /* if, for whatever reason, you're unable to get the JPEG library to compile
   * on your machine, *COMMENT OUT* the following line
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.8 2001/04/05 13:57:15 wiz Exp $
  
  
  /* if, for whatever reason, you're unable to get the PDS/VICAR support
-@@ -119,16 +121,30 @@
+@@ -124,16 +126,30 @@ MGCSFX = -DMGCSFXDIR=\"$(MGCSFXDIR)\"
  JPEG = -DDOJPEG
  JPEGDIR = jpeg
  LIBJPEG = $(JPEGDIR)/libjpeg.a
@@ -51,7 +51,7 @@ $NetBSD: patch-ad,v 1.8 2001/04/05 13:57:15 wiz Exp $
  #ifdef HavePDS
  PDS = -DDOPDS
  #endif
-@@ -141,8 +157,8 @@
+@@ -149,8 +165,8 @@ SYS_LIBRARIES=        -lm
  #endif
  
  
@@ -62,7 +62,7 @@ $NetBSD: patch-ad,v 1.8 2001/04/05 13:57:15 wiz Exp $
  
  DEFINES= $(SCO) $(UNIX) $(NODIRENT) $(VPRINTF) $(TIMERS) \
  	$(HPUX7) $(JPEG) $(TIFF) $(PDS) $(DXWM) $(RAND) \
-@@ -182,10 +198,10 @@
+@@ -194,10 +210,10 @@ OBJS5=	xvpictoppm.o
  
  PROGRAMS= xv bggen vdcomp xcmap xvpictoppm
  
