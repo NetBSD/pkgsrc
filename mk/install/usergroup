@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: usergroup,v 1.9 2005/07/27 16:18:54 jlam Exp $
+# $NetBSD: usergroup,v 1.10 2005/08/19 22:24:10 jlam Exp $
 #
 # +USERGROUP - users and groups management script
 #
@@ -51,6 +51,7 @@ RMDIR="@RMDIR@"
 SED="@SED@"
 SORT="@SORT@"
 TEST="@TEST@"
+TRUE="@TRUE@"
 USERADD="@USERADD@"
 
 SELF=$0
@@ -65,6 +66,15 @@ PKG_REFCOUNT_GROUPS_DBDIR="${PKG_REFCOUNT_DBDIR}/groups"
 
 PKG_USER_HOME="@PKG_USER_HOME@"
 PKG_USER_SHELL="@PKG_USER_SHELL@"
+
+case "${PKG_CREATE_USERGROUP:-@PKG_CREATE_USERGROUP@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_CREATE_USERGROUP=yes
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_CREATE_USERGROUP=no
+	;;
+esac
 
 group_exists()
 {
@@ -139,21 +149,25 @@ ADD)
 			group_exists $group &&
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
-		if group_exists $group; then
-			:
-		elif ${TEST} -n "${GROUPADD}" -a -x "${GROUPADD}"; then
-			${ECHO} "Creating group: $group";
-			case $groupid in
-			"")	${GROUPADD} $group ;;
-			*)	${GROUPADD} -g $groupid $group ;;
-			esac
-		fi
 		if ${TEST} -f "$token" && \
 		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
 			:
 		else
 			${ECHO} "${PKG_METADATA_DIR}" >> $token
 		fi
+		case ${_PKG_CREATE_USERGROUP} in
+		yes)
+			if group_exists $group; then
+				:
+			elif ${TEST} -n "${GROUPADD}" -a -x "${GROUPADD}"; then
+				${ECHO} "Creating group: $group";
+				case $groupid in
+				"")	${GROUPADD} $group ;;
+				*)	${GROUPADD} -g $groupid $group ;;
+				esac
+			fi
+			;;
+		esac
 	done; }
 	${SED} -n "/^\# USER: /{s/^\# USER: //;p;}" ${SELF} | ${SORT} -u |
 	{ while read line; do
@@ -176,23 +190,30 @@ ADD)
 			user_exists $user &&
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
-		if user_exists $user && group_exists $group; then
-			:
-		elif ${TEST} -n "${USERADD}" -a -x "${USERADD}"; then
-			${ECHO} "Creating user: $user";
-			case $userid in
-			"")	${USERADD} -c "$descr" -d "$home" -s "$shell" \
-					-g $group $user ;;
-			*)	${USERADD} -c "$descr" -d "$home" -s "$shell" \
-					-g $group -u $userid $user ;;
-			esac
-		fi
 		if ${TEST} -f "$token" && \
 		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
 			:
 		else
 			${ECHO} "${PKG_METADATA_DIR}" >> $token
 		fi
+		case ${_PKG_CREATE_USERGROUP} in
+		yes)
+			if user_exists $user && group_exists $group; then
+				:
+			elif ${TEST} -n "${USERADD}" -a -x "${USERADD}"; then
+				${ECHO} "Creating user: $user";
+				case $userid in
+				"")	${USERADD} -c "$descr" -d "$home" \
+						-s "$shell" -g $group $user
+					;;
+				*)	${USERADD} -c "$descr" -d "$home" \
+						-s "$shell" -g $group \
+						-u $userid $user
+					;;
+				esac
+			fi
+			;;
+		esac
 	done; }
 	;;
 

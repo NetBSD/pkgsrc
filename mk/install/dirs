@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: dirs,v 1.7 2005/07/29 21:41:04 jlam Exp $
+# $NetBSD: dirs,v 1.8 2005/08/19 22:24:10 jlam Exp $
 #
 # +DIRS - reference-counted directory management script
 #
@@ -23,13 +23,15 @@
 #
 #	# DIR: /etc/foo m
 #	# DIR: /var/log/foo/tmp mo foo-user foo-group 0700
+#	# DIR: share/foo-plugins fm
 #
 # For each DIR entry, if the directory path is relative, then it is taken
 # to be relative to ${PKG_PREFIX}.
 #
 # The second field in each DIR entry is a set of flags with the following
-# meaning:
+# meanings:
 #
+#	f	ignore ${PKG_CONFIG}
 #	m	create (make) the directory when ADDing
 #	o	directory is owned by the package
 #
@@ -59,6 +61,15 @@ PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
 
 PKG_REFCOUNT_DIRS_DBDIR="${PKG_REFCOUNT_DBDIR}/dirs"
 
+case "${PKG_CONFIG:-@PKG_CONFIG@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_CONFIG=yes
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_CONFIG=no
+	;;
+esac
+
 exitcode=0
 case $ACTION in
 ADD)
@@ -81,7 +92,6 @@ ADD)
 			${TEST} ! -d "$dir" ||
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
-		${MKDIR} $dir
 		if ${TEST} -f "$token" && \
 		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
 			:
@@ -93,11 +103,16 @@ ADD)
 			${ECHO} "$d_user $d_group $d_mode" > $perms
 			;;
 		esac
-		case $d_user/$d_group/$d_mode in
-		[!/]*/[!/]*/[!/]*)
-			${CHOWN} $d_user $dir
-			${CHGRP} $d_group $dir
-			${CHMOD} $d_mode $dir
+		case $d_flags/$_PKG_CONFIG in
+		*f*/*|*/yes)
+			${MKDIR} $dir
+			case $d_user/$d_group/$d_mode in
+			[!/]*/[!/]*/[!/]*)
+				${CHOWN} $d_user $dir
+				${CHGRP} $d_group $dir
+				${CHMOD} $d_mode $dir
+				;;
+			esac
 			;;
 		esac
 	done
@@ -125,7 +140,11 @@ REMOVE)
 			case `${CAT} $tokentmp | ${SED} -n "$="` in
 			"")
 				${TEST} -f "$preexist" ||
-					{ ${RMDIR} -p $dir 2>/dev/null || ${TRUE}; }
+					{ case $d_flags/$_PKG_CONFIG in
+					  *f*/*|*/yes)
+						${RMDIR} -p $dir 2>/dev/null || ${TRUE}; 
+						;;
+					  esac; }
 				${RM} -f $perms $preexist $token $token.tmp.*
 				${RMDIR} -p $shadow_dir 2>/dev/null || ${TRUE}
 				;;
