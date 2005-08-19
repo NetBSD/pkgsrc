@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/19 16:00:18 drochner Exp $
+bin/evince
+bin/evince-thumbnailer
+share/applications/evince.desktop
+share/evince/evince-password.glade
+share/evince/evince-properties.glade
+share/evince/evince-toolbar.xml
+share/evince/evince-ui.xml
+share/evince/hand-open.png
+share/evince/pdf-icon.png
+share/gconf/schemas/evince-thumbnailer.schemas
+share/gconf/schemas/evince.schemas
+share/gnome/help/evince/C/evince.xml
+share/gnome/help/evince/C/figures/evince_start_window.png
+share/gnome/help/evince/C/legal.xml
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/evince.mo
+share/omf/evince/evince-C.omf
+@dirrm share/omf/evince
+@dirrm share/gnome/help/evince/C/figures
+@dirrm share/gnome/help/evince/C
+@dirrm share/gnome/help/evince
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/evince
