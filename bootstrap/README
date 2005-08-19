@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.5 2005/04/10 22:03:35 jschauma Exp $
+$NetBSD: README,v 1.6 2005/08/19 16:12:14 reed Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -8,6 +8,7 @@ as root:
     [ --prefix <prefix> ]
     [ --pkgdbdir <pkgdbdir> ]
     [ --sysconfdir <sysconfdir> ]
+    [ --varbase <varbase> ]
     [ --ignore-case-check ]
     [ --ignore-user-check ]
     [ --preserve-path ]
@@ -18,6 +19,7 @@ The defaults for the arguments are as follows:
 	--prefix	/usr/pkg
 	--pkgdbdir	/var/db/pkg
 	--sysconfdir	/usr/pkg/etc
+	--varbase	/var
 	--workdir	work
 
 It is perfectly acceptable to place 'pkgdbdir' under 'prefix'.
