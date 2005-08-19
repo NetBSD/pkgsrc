@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.70 2005/08/19 07:45:12 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.71 2005/08/19 11:37:36 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -217,3 +217,5 @@ Pullup ticket 684 - requested by Adrian Portelli
 security update for postgresql73
 Pullup ticket 685 - requested by Shin'ichiro TAYA
 security update for thunderbird and thunderbird-gtk1
+Pullup ticket 689 - requested by Havard Eidnes
+security fixes for xv
