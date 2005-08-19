@@ -1,4 +1,4 @@
-#	$NetBSD: DragonFly.pkg.dist,v 1.3 2005/07/20 02:41:34 schmonz Exp $
+#	$NetBSD: DragonFly.pkg.dist,v 1.4 2005/08/19 17:04:47 jmmv Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -888,6 +888,10 @@
                 ..
             ..
             ta
+                LC_MESSAGES
+                ..
+            ..
+            te
                 LC_MESSAGES
                 ..
             ..
