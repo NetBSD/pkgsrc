@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/23 19:14:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2005/08/19 16:46:52 reed Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -78,6 +78,7 @@ pre-install:
 		${WRKSRC}/xmakefile
 
 post-install:
+	${CHMOD} ${NONBINMODE} ${X11ROOT}/lib/X11/config/host.def
 	@${CP} ${X11ROOT}/lib/X11/config/host.def		\
 		${X11ROOT}/lib/X11/config/host.def.orig
 	@${SED} -e "s|\#define ProjectRoot ${X11ROOT}||"	\
