@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/02/20 13:02:28 tron Exp $
+$NetBSD: patch-ac,v 1.5 2005/08/19 03:53:55 grant Exp $
 
---- wmbiff/tlsComm.c.orig	2004-06-23 22:44:45.000000000 +0100
-+++ wmbiff/tlsComm.c	2005-02-20 12:52:13.000000000 +0000
-@@ -407,11 +407,13 @@
+--- wmbiff/tlsComm.c.orig	2004-06-24 07:44:45.000000000 +1000
++++ wmbiff/tlsComm.c
+@@ -407,10 +407,12 @@ tls_check_certificate(struct connection_
  							"server's certificate is invalid or not X.509.\n"
  							"there may be a problem with the certificate stored in your certfile\n");
  		}
@@ -15,4 +15,3 @@ $NetBSD: patch-ac,v 1.4 2005/02/20 13:02:28 tron Exp $
  	}
  
  	if (gnutls_x509_crt_init(&cert) < 0) {
- 		bad_certificate(scs,
