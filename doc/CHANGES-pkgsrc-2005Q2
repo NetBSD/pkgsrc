@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.72 2005/08/19 11:55:33 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.73 2005/08/19 16:55:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -221,3 +221,5 @@ Pullup ticket 689 - requested by Havard Eidnes
 security fixes for xv
 Pullup ticket 690 - requested by Matthias Scheler
 security update for php4
+Pullup ticket 692 - requested by Grant Beattie
+SunPro compiler wrapper fixes
