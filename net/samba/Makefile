@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2005/06/06 07:02:23 taca Exp $
+# $NetBSD: Makefile,v 1.146 2005/08/19 18:12:38 jlam Exp $
 
 DISTNAME=		samba-3.0.14a
 PKGREVISION=		1
@@ -93,9 +93,9 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 USE_PKGINSTALL=		yes
 CONF_FILES=		${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
-SUPPORT_FILES_PERMS=	${EGDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser	\
+CONF_FILES_PERMS=	${EGDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser	\
 			${ROOT_USER} ${ROOT_GROUP} 0755
-SUPPORT_FILES_PERMS+=	${EGDIR}/deluser.sh ${SAMBA_ETCDIR}/deluser	\
+CONF_FILES_PERMS+=	${EGDIR}/deluser.sh ${SAMBA_ETCDIR}/deluser	\
 			${ROOT_USER} ${ROOT_GROUP} 0755
 MAKE_DIRS=		${SAMBA_VARDIR} ${SAMBA_LOGDIR} ${SAMBA_PIDDIR}
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
