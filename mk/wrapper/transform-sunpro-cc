@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.2.8.1 2005/07/29 07:33:59 snj Exp $
+# $NetBSD: transform-sunpro-cc,v 1.2.8.2 2005/08/19 16:54:48 salo Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,6 +63,23 @@ case $arg in
 	addtocache=yes
 	;;
 ######################################################################
+# SunPro uses -h to set the shared object name.
+######################################################################
+-Wl,-soname=*)
+	arg="-h${arg#-Wl,-soname=}"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
+# Solaris' linker exports all dynamic symbols by default when building
+# a shared object.
+######################################################################
+-Wl,--export-dynamic)
+	arg=
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
 # SunPro compiler accepts -Wl,* so just pass it on through.
 ######################################################################
 -Wl,*)
@@ -111,9 +128,23 @@ case $arg in
 	split_arg=yes
 	;;
 ######################################################################
+# Pass through -f flags that SunPro understands.
+######################################################################
+-fast|-fd|-features*|-flags|-flteval*|-fnonstd*|-fns*|-fprecision*|-fround*|-fsimple*|-fsingle|-fstore|-ftrap*)
+	addtocache=yes
+	;;
+######################################################################
+# Ignore all other -f flags.
+######################################################################
+-f*)
+	arg=
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	;;
+######################################################################
 # Ignore some flags that are unnecessary for SunPro.
 ######################################################################
--ansi|-fno-gnu-keywords|-fomit-frame-pointer|-fstrict-prototypes|-fwriteable-strings|-pedantic|-traditional)
+-ansi|-pedantic|-traditional)
 	arg=
 	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
