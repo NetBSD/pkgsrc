@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/01 00:06:41 grant Exp $
-bin/xv
+@comment $NetBSD: PLIST,v 1.2.14.1 2005/08/19 11:37:05 salo Exp $
 bin/bggen
 bin/vdcomp
 bin/xcmap
+bin/xv
 bin/xvpictoppm
+lib/X11/xv_mgcsfx.sample
 ${IMAKE_MAN_DIR}/xv.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/bggen.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/vdcomp.${IMAKE_MANNEWSUFFIX}
