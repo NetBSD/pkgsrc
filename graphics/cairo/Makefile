@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/08/11 15:25:20 adam Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/19 16:14:54 drochner Exp $
 
 DISTNAME=	cairo-0.9.0
 CATEGORIES=	graphics
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+BUILDLINK_DEPENDS.glitz+=	glitz>=0.4.4
+BUILDLINK_DEPENDS.libpixman+=	libpixman>=0.1.5
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
