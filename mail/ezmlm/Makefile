@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/08/19 03:55:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/19 04:44:09 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -19,9 +19,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 DJB_RESTRICTED=		YES
 
 INSTALLATION_DIRS=	bin man man/man1 man/man5 man/cat1 man/cat5
-
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
