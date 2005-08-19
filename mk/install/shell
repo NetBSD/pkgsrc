@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: shell,v 1.1 2005/07/29 18:32:18 jlam Exp $
+# $NetBSD: shell,v 1.2 2005/08/19 22:24:10 jlam Exp $
 #
 # +SHELL - shell registration script
 #
@@ -33,6 +33,7 @@ RM="@RM@"
 SED="@SED@"
 SORT="@SORT@"
 TEST="@TEST@"
+TRUE="@TRUE@"
 TOUCH="@TOUCH@"
 
 SELF=$0
@@ -42,11 +43,23 @@ PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
 : ${PKG_PREFIX=@PREFIX@}
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 
+case "${PKG_REGISTER_SHELLS:-@PKG_REGISTER_SHELLS@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_REGISTER_SHELLS=yes
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_REGISTER_SHELLS=no
+	;;
+esac
+
 exitcode=0
 case $ACTION in
 ADD)
 	${SED} -n "/^\# SHELL: /{s/^\# SHELL: //;p;}" ${SELF} | ${SORT} -u |
 	{ while read shell; do
+		case ${_PKG_REGISTER_SHELLS} in
+		no)	continue ;;
+		esac
 		case $shell in
 		/*)	continue ;;
 		*)	shell="${PKG_PREFIX}/$shell" ;;
@@ -83,6 +96,9 @@ ADD)
 REMOVE)
 	${SED} -n "/^\# SHELL: /{s/^\# SHELL: //;p;}" ${SELF} | ${SORT} -u |
 	{ while read shell; do
+		case ${_PKG_REGISTER_SHELLS} in
+		no)	continue ;;
+		esac
 		case $shell in
 		/*)	continue ;;
 		*)	shell="${PKG_PREFIX}/$shell" ;;
