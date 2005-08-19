@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: files,v 1.7 2005/07/29 21:41:04 jlam Exp $
+# $NetBSD: files,v 1.8 2005/08/19 22:24:10 jlam Exp $
 #
 # +FILES - reference-counted configuration file management script
 #
@@ -33,6 +33,8 @@
 # meaning:
 #
 #	c	file is copied into place
+#	f	ignore ${PKG_CONFIG}
+#	r	file is an rc.d script (consider ${PKG_RCD_SCRIPTS})
 #
 CAT="@CAT@"
 CP="@CP@"
@@ -57,7 +59,24 @@ ACTION=$1
 
 : ${PKG_PREFIX=@PREFIX@}
 
-case ${ACTION} in
+case "${PKG_CONFIG:-@PKG_CONFIG@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_CONFIG=yes
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_CONFIG=no
+	;;
+esac
+case "${PKG_RCD_SCRIPTS:-@PKG_RCD_SCRIPTS@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_RCD_SCRIPTS=yes
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_RCD_SCRIPTS=no
+	;;
+esac
+
+case $ACTION in
 VIEW-REMOVE)
 	DEPOTDIR="$2"
 	VIEWDIR="$3"
@@ -113,34 +132,38 @@ ADD)
 		if ${TEST} ! -f "$file" -a ! -f "$f_eg"; then
 			:
 		else
-			case "$printed_header" in
-			yes)	;;
-			*)	printed_header=yes
-				${ECHO} "==========================================================================="
-				${ECHO} "Installing files needed by ${PKGNAME}:"
+			case "$f_flags/$_PKG_CONFIG/$_PKG_RCD_SCRIPTS" in
+			*f*/*/*|[!r]/yes/*|[!r][!r]/yes/*|[!r][!r][!r]/yes/*|*r*/yes/yes)
+				case "$printed_header" in
+				yes)	;;
+				*)	printed_header=yes
+					${ECHO} "==========================================================================="
+					${ECHO} "Installing files needed by ${PKGNAME}:"
+					;;
+				esac
+				if ${TEST} -f "$file"; then
+					${ECHO} ""
+					${ECHO} "	$file already exists."
+				elif ${TEST} -f "$f_eg"; then
+					${ECHO} ""
+					${ECHO} "	$file"
+					${ECHO} "	    [$f_eg]"
+					${CP} $f_eg $file
+					case $f_user in
+					"")	;;
+					*)	${CHOWN} $f_user $file ;;
+					esac
+					case $f_group in
+					"")	;;
+					*)	${CHGRP} $f_group $file ;;
+					esac
+					case $f_mode in
+					"")	;;
+					*)	${CHMOD} $f_mode $file ;;
+					esac
+				fi
 				;;
 			esac
-			if ${TEST} -f "$file"; then
-				${ECHO} ""
-				${ECHO} "	$file already exists."
-			elif ${TEST} -f "$f_eg"; then
-				${ECHO} ""
-				${ECHO} "	$file"
-				${ECHO} "	    [$f_eg]"
-				${CP} $f_eg $file
-				case $f_user in
-				"")	;;
-				*)	${CHOWN} $f_user $file ;;
-				esac
-				case $f_group in
-				"")	;;
-				*)	${CHGRP} $f_group $file ;;
-				esac
-				case $f_mode in
-				"")	;;
-				*)	${CHMOD} $f_mode $file ;;
-				esac
-			fi
 		fi
 	done
 	case "$printed_header" in
@@ -180,7 +203,11 @@ REMOVE)
 					:
 				elif ${TEST} -f "$file" -a -f "$f_eg" && \
 				     ${CMP} -s "$file" "$f_eg"; then
-					${RM} -f "$file"
+					case "$f_flags/$_PKG_CONFIG/$_PKG_RCD_SCRIPTS" in
+					*f*/*/*|[!r]/yes/*|[!r][!r]/yes/*|[!r][!r][!r]/yes/*|*r*/yes/yes)
+						${RM} -f "$file"
+						;;
+					esac
 				fi
 				${RM} -f $perms $preexist $token $token.tmp.*
 				${RMDIR} -p $shadow_dir 2>/dev/null || ${TRUE}
