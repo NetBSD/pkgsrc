@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/08/14 10:15:55 dillo Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/19 18:12:37 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -20,10 +20,10 @@ OWN_DIRS+=	${JAVA_HOME}/lib/applet
 OWN_DIRS+=	${JAVA_HOME}/lib/images
 OWN_DIRS+=	${JAVA_HOME}/lib/images/cursors
 OWN_DIRS+=	${JAVA_HOME}/lib/security
-SUPPORT_FILES=	# empty
+CONF_FILES=	# empty
 .sinclude "sfiles.mk"
 .for FILE in ${SFILES}
-SUPPORT_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
+CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sun-jre15
@@ -54,7 +54,7 @@ do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
 		${MV} -f $$file $$file.default;				\
 	done
-	@${ECHO} 'SUPPORT_FILES="${SUPPORT_FILES}"' >${HEADER_EXTRA_TMPL}
+	@${ECHO} 'CONF_FILES="${CONF_FILES}"' >${HEADER_EXTRA_TMPL}
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
 	${SED} 's/@SUN_JRE15_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}

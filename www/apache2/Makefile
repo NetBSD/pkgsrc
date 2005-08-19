@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2005/08/08 18:30:26 tron Exp $
+# $NetBSD: Makefile,v 1.78 2005/08/19 18:12:39 jlam Exp $
 
 .include "Makefile.common"
 
@@ -74,9 +74,9 @@ EGDIR=			${PREFIX}/share/examples/httpd
 SBINDIR=		${PREFIX}/sbin
 CONF_FILES=		${EGDIR}/httpd-std.conf ${PKG_SYSCONFDIR}/httpd.conf
 CONF_FILES+=		${EGDIR}/ssl-std.conf ${PKG_SYSCONFDIR}/ssl.conf
-SUPPORT_FILES=		${SBINDIR}/envvars-std ${SBINDIR}/envvars
-SUPPORT_FILES+=		${EGDIR}/magic ${PKG_SYSCONFDIR}/magic
-SUPPORT_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+CONF_FILES+=		${SBINDIR}/envvars-std ${SBINDIR}/envvars
+CONF_FILES+=		${EGDIR}/magic ${PKG_SYSCONFDIR}/magic
+CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 RCD_SCRIPTS=		apache
 
 MAKE_DIRS=		${PREFIX}/share/httpd

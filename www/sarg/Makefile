@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/19 18:12:39 jlam Exp $
 
 DISTNAME=		sarg-1.4.1
 CATEGORIES=		www
@@ -43,8 +43,8 @@ MAKE_ENV+=		PKG_FLAGS="-DSQUID_ACCESSLOG='\"${SQUID_ACCESSLOG}\"' \
 			-DSARG_REPORTSDIR='\"${SARG_REPORTSDIR}\"'"	\
 			EGDIR="${EGDIR}"
 
-CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf
-SUPPORT_FILES=		${EGDIR}/exclude_codes ${PKG_SYSCONFDIR}/exclude_codes \
+CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf	\
+			${EGDIR}/exclude_codes ${PKG_SYSCONFDIR}/exclude_codes \
 			${EGLNG}/Bulgarian_windows1251			\
 				${CFLNG}/Bulgarian_windows1251		\
 			${EGLNG}/Catalan ${CFLNG}/Catalan		\

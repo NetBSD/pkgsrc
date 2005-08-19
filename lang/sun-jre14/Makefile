@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/08/14 10:15:55 dillo Exp $
+# $NetBSD: Makefile,v 1.27 2005/08/19 18:12:37 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -29,9 +29,9 @@ SFILES+=	font.properties.ja		font.properties.zh.Turbo
 SFILES+=	images/cursors/cursors.properties	i386/jvm.cfg
 SFILES+=	logging.properties		psfont.properties.ja
 SFILES+=	psfontj2d.properties		security/java.security
-SUPPORT_FILES=	# empty
+CONF_FILES=	# empty
 .for FILE in ${SFILES}
-SUPPORT_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
+CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sun-jre14

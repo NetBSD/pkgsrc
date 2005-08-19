@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/01/30 23:18:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2005/08/19 18:12:37 jlam Exp $
 
 DISTNAME=	j2re-1_3_1_15-linux-i586
 PKGNAME=	sun-jre13-1.0.15
@@ -22,9 +22,9 @@ SFILES+=	font.properties		font.properties.ja
 SFILES+=	font.properties.zh	images/cursors/cursors.properties
 SFILES+=	jvm.cfg			psfont.properties.ja
 SFILES+=	psfontj2d.properties	security/java.security
-SUPPORT_FILES=	# empty
+CONF_FILES=	# empty
 .for FILE in ${SFILES}
-SUPPORT_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
+CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
 do-configure:

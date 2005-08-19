@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/08/19 13:06:31 bouyer Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/19 18:12:39 jlam Exp $
 #
 
 DISTNAME=		xen-2.0.7-src
@@ -80,13 +80,13 @@ INSTALLATION_DIRS=	share/examples/xen
 XEND_SCRIPTS=		network vif-bridge block-enbd block-file	\
 			xmexample1 xmexample2 xmexample3
 
-SUPPORT_FILES=		${EGDIR}/xend-config.sxp \
+CONF_FILES=		${EGDIR}/xend-config.sxp \
 			${PKG_SYSCONFDIR}/xend-config.sxp
 .for f in ${XEND_SCRIPTS}
-SUPPORT_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-SUPPORT_FILES_MODE=	0755
+CONF_FILES_MODE=	0755
 
 pre-build:
 	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD

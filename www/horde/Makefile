@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/06/02 23:26:41 salo Exp $
+# $NetBSD: Makefile,v 1.39 2005/08/19 18:12:39 jlam Exp $
 
 DISTNAME=	horde-2.2.8
 PKGREVISION=	1
@@ -28,13 +28,13 @@ PKG_SYSCONFSUBDIR?=	httpd
 USE_PKGINSTALL=	YES
 CONF_FILES=	${EGDIR}/horde.conf ${PKG_SYSCONFDIR}/horde.conf
 CONF_FILES+=	${HORDEDIR}/config/horde.php.dist ${HORDEDIR}/config/horde.php
-SUPPORT_FILES+=	${HORDEDIR}/config/html.php.dist ${HORDEDIR}/config/html.php
-SUPPORT_FILES+=	${HORDEDIR}/config/lang.php.dist ${HORDEDIR}/config/lang.php
-SUPPORT_FILES+=	${HORDEDIR}/config/mime_drivers.php.dist ${HORDEDIR}/config/mime_drivers.php
-SUPPORT_FILES+=	${HORDEDIR}/config/mime_mapping.php.dist ${HORDEDIR}/config/mime_mapping.php
-SUPPORT_FILES+=	${HORDEDIR}/config/motd.php.dist ${HORDEDIR}/config/motd.php
-SUPPORT_FILES+=	${HORDEDIR}/config/prefs.php.dist ${HORDEDIR}/config/prefs.php
-SUPPORT_FILES+=	${HORDEDIR}/config/registry.php.dist ${HORDEDIR}/config/registry.php
+CONF_FILES+=	${HORDEDIR}/config/html.php.dist ${HORDEDIR}/config/html.php
+CONF_FILES+=	${HORDEDIR}/config/lang.php.dist ${HORDEDIR}/config/lang.php
+CONF_FILES+=	${HORDEDIR}/config/mime_drivers.php.dist ${HORDEDIR}/config/mime_drivers.php
+CONF_FILES+=	${HORDEDIR}/config/mime_mapping.php.dist ${HORDEDIR}/config/mime_mapping.php
+CONF_FILES+=	${HORDEDIR}/config/motd.php.dist ${HORDEDIR}/config/motd.php
+CONF_FILES+=	${HORDEDIR}/config/prefs.php.dist ${HORDEDIR}/config/prefs.php
+CONF_FILES+=	${HORDEDIR}/config/registry.php.dist ${HORDEDIR}/config/registry.php
 
 post-patch:
 	cd ${WRKSRC}/scripts;						\

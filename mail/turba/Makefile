@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/16 01:19:13 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/19 18:12:38 jlam Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -40,13 +40,13 @@ CONF_FILES_PERMS+=	${TURBADIR}/config/sources.php.dist \
 			${APACHE_USER} ${ROOT_GROUP} 0440
 CONF_FILES+=		${TURBADIR}/config/attributes.php.dist \
 			${TURBADIR}/config/attributes.php
-SUPPORT_FILES_PERMS+=	${TURBADIR}/config/conf.xml.dist \
+CONF_FILES_PERMS+=	${TURBADIR}/config/conf.xml.dist \
 			${TURBADIR}/config/conf.xml \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${TURBADIR}/config/menu.php.dist \
+CONF_FILES_PERMS+=	${TURBADIR}/config/menu.php.dist \
 			${TURBADIR}/config/menu.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SUPPORT_FILES_PERMS+=	${TURBADIR}/config/prefs.php.dist \
+CONF_FILES_PERMS+=	${TURBADIR}/config/prefs.php.dist \
 			${TURBADIR}/config/prefs.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
 

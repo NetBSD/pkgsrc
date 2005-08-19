@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2005/08/10 23:37:08 salo Exp $
+# $NetBSD: Makefile,v 1.96 2005/08/19 18:12:38 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -92,10 +92,10 @@ PKG_USERS=		${CUPS_USER}:${CUPS_GROUP}::Common\\ UNIX\\ Printing\\ System\\ user
 SPECIAL_PERMS=		${PREFIX}/bin/lppasswd ${CUPS_USER} ${CUPS_GROUP} 4755
 CONF_FILES=		${EGDIR}/client.conf ${CUPS_CONFDIR}/client.conf
 CONF_FILES+=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
-SUPPORT_FILES=		${EGDIR}/classes.conf ${CUPS_CONFDIR}/classes.conf
-SUPPORT_FILES+=		${EGDIR}/mime.convs ${CUPS_CONFDIR}/mime.convs
-SUPPORT_FILES+=		${EGDIR}/mime.types ${CUPS_CONFDIR}/mime.types
-SUPPORT_FILES+=		${EGDIR}/printers.conf ${CUPS_CONFDIR}/printers.conf
+CONF_FILES+=		${EGDIR}/classes.conf ${CUPS_CONFDIR}/classes.conf
+CONF_FILES+=		${EGDIR}/mime.convs ${CUPS_CONFDIR}/mime.convs
+CONF_FILES+=		${EGDIR}/mime.types ${CUPS_CONFDIR}/mime.types
+CONF_FILES+=		${EGDIR}/printers.conf ${CUPS_CONFDIR}/printers.conf
 RCD_SCRIPTS=		cupsd
 
 OWN_DIRS=		${CUPS_CONFDIR}

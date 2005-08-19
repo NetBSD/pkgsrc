@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/06/24 16:44:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.42 2005/08/19 18:12:39 jlam Exp $
 #
 
 DISTNAME=	icu-3.2
@@ -28,7 +28,7 @@ PKG_SYSCONFSUBDIR=	icu
 CONVRTRS_EG=		${CONVRTRS_EG_DIR}/convrtrs.txt
 CONVRTRS_EG_DIR=	${PREFIX}/share/examples/icu
 
-SUPPORT_FILES+=		${CONVRTRS_EG} ${PKG_SYSCONFDIR}/convrtrs.txt
+CONF_FILES+=		${CONVRTRS_EG} ${PKG_SYSCONFDIR}/convrtrs.txt
 
 .include "../../mk/pthread.buildlink3.mk"
 
