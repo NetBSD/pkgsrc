@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:27 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/19 03:55:00 schmonz Exp $
 #
 
 DISTNAME=		queue-fix
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.netmeridian.com/e-huss/
 COMMENT=		Check and repair the qmail queue structure
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-
 
 INSTALLATION_DIRS=	bin share/doc/queue-fix
 
