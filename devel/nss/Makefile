@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/19 16:18:02 reed Exp $
 
 DISTNAME=		nss-3.9.2
 PKGREVISION=		2
@@ -29,6 +29,10 @@ SO_SUFFIX=		dylib
 SO_SUFFIX=		so.1.0
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX}
+
+pre-configure:
+	${CP} ${FILESDIR}/DragonFly.mk \
+		${WRKDIR}/${DISTNAME}/mozilla/security/coreconf/
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/nss
