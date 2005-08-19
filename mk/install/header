@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.33 2005/07/29 18:32:18 jlam Exp $
+# $NetBSD: header,v 1.34 2005/08/19 22:24:10 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -75,39 +75,12 @@ CONF_IGNORE_FILES="*[~#] *.OLD *.orig *,v .pkgsrc */.pkgsrc"
 
 PKG_INSTALLATION_TYPE="@PKG_INSTALLATION_TYPE@"
 
-case "${PKG_CREATE_USERGROUP:-@PKG_CREATE_USERGROUP@}" in
-[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
-	_PKG_CREATE_USERGROUP=YES
-	;;
-[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
-	_PKG_CREATE_USERGROUP=NO
-	;;
-esac
-
 case "${PKG_CONFIG:-@PKG_CONFIG@}" in
 [Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
-	_PKG_CONFIG=YES
+	_PKG_CONFIG=yes
 	;;
 [Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
-	_PKG_CONFIG=NO
-	;;
-esac
-
-case "${PKG_RCD_SCRIPTS:-@PKG_RCD_SCRIPTS@}" in
-[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
-	_PKG_RCD_SCRIPTS=YES
-	;;
-[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
-	_PKG_RCD_SCRIPTS=NO
-	;;
-esac
-
-case "${PKG_REGISTER_SHELLS:-@PKG_REGISTER_SHELLS@}" in
-[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
-	_PKG_REGISTER_SHELLS=YES
-	;;
-[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
-	_PKG_REGISTER_SHELLS=NO
+	_PKG_CONFIG=yes
 	;;
 esac
 

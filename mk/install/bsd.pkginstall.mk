@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.11 2005/08/19 18:12:38 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.12 2005/08/19 22:24:10 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -261,14 +261,19 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 #	MLINKS in the base system.  At post-install time, if the true config
 #	file doesn't exist, then the example one is copied into place.  At
 #	deinstall time, the true one is removed if it doesn't differ from the
-#	example one.
+#	example one.  REQD_FILES is the same as CONF_FILES but the value
+#	of PKG_CONFIG is ignored.
 #
-# CONF_FILES_MODE is the file permissions for the files in CONF_FILES.
+# CONF_FILES_MODE and REQD_FILES_MODE are the file permissions for the
+# files in CONF_FILES and REQD_FILES, respectively.
 #
 # CONF_FILES_PERMS are lists that look like:
+#
 #		example_file config_file user group mode
+#
 #	and works like CONF_FILES, except the config files are owned by
-#	user:group have mode permissions.
+#	user:group have mode permissions.  REQD_FILES_PERMS is the same
+#	as CONF_FILES_PERMS but the value of PKG_CONFIG is ignored.
 #
 # RCD_SCRIPTS works lists the basenames of the rc.d scripts.  They are
 #	expected to be found in ${PREFIX}/share/examples/rc.d, and
@@ -295,12 +300,27 @@ INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
 ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
+	case "${RCD_SCRIPTS:M*:Q}" in					\
+	"")	;;							\
+	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
+	esac; }
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
 	case "${CONF_FILES:M*:Q}" in					\
 	"")	;;							\
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
 	esac; }
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
+	case "${REQD_FILES:M*:Q}" in					\
+	"")	;;							\
+	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
+	esac; }
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
 	case "${CONF_FILES_PERMS:M*:Q}" in				\
+	"")	;;							\
+	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
+	esac; }
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
+	case "${REQD_FILES_PERMS:M*:Q}" in				\
 	"")	;;							\
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
 	esac; }
@@ -319,6 +339,17 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
+	eval set -- __dummy ${RCD_SCRIPTS};				\
+	while ${TEST} $$# -gt 0; do					\
+		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
+		script="$$1"; shift;					\
+		file="${RCD_SCRIPTS_DIR:S/^${PREFIX}\///}/$$script";	\
+		egfile="${RCD_SCRIPTS_EXAMPLEDIR}/$$script";		\
+		${ECHO} "# FILE: $$file cr $$egfile ${RCD_SCRIPTS_MODE}"; \
+	done;								\
+	} >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
+	${TEST} ! -f ${.TARGET}.tmp || {				\
 	eval set -- __dummy ${CONF_FILES};				\
 	while ${TEST} $$# -gt 0; do					\
 		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
@@ -327,6 +358,18 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		egfile=`strip_prefix "$$egfile"`;			\
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
+	done;								\
+	} >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
+	${TEST} ! -f ${.TARGET}.tmp || {				\
+	eval set -- __dummy ${REQD_FILES};				\
+	while ${TEST} $$# -gt 0; do					\
+		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
+		egfile="$$1"; file="$$2";				\
+		shift; shift;						\
+		egfile=`strip_prefix "$$egfile"`;			\
+		file=`strip_prefix "$$file"`;				\
+		${ECHO} "# FILE: $$file cf $$egfile ${REQD_FILES_MODE}"; \
 	done;								\
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
@@ -342,6 +385,19 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
 	done;								\
 	} >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
+	${TEST} ! -f ${.TARGET}.tmp || {				\
+	eval set -- __dummy ${REQD_FILES_PERMS};			\
+	while ${TEST} $$# -gt 0; do					\
+		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
+		egfile="$$1"; file="$$2";				\
+		owner="$$3"; group="$$4"; mode="$$5";			\
+		shift; shift; shift; shift; shift;			\
+		egfile=`strip_prefix "$$egfile"`;			\
+		file=`strip_prefix "$$file"`;				\
+		${ECHO} "# FILE: $$file cf $$egfile $$mode $$owner $$group"; \
+	done;								\
+	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
 	${ECHO} "EOF_FILES";						\
 	${ECHO} "	\$${CHMOD} +x ./+FILES";			\
@@ -354,69 +410,28 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 
-INSTALL_RCD_SCRIPTS_FILE=	${WRKDIR}/.install-rcd-scripts
-INSTALL_UNPACK_TMPL+=		${INSTALL_RCD_SCRIPTS_FILE}
-
-${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${RCD_SCRIPTS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
-	${ECHO} "# start of install-rcd-scripts";			\
-	${ECHO} "#";							\
-	${ECHO} "# Generate a +RCD_SCRIPTS script that reference counts config"; \
-	${ECHO} "# files that are required for the proper functioning"; \
-	${ECHO} "# of the package.";					\
-	${ECHO} "#";							\
-	${ECHO} "case \$${STAGE} in";					\
-	${ECHO} "PRE-INSTALL|UNPACK)";					\
-	${ECHO} "	\$${CAT} > ./+RCD_SCRIPTS << 'EOF_RCD_SCRIPTS'"; \
-	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
-	${ECHO} "";							\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${RCD_SCRIPTS};				\
-	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
-		script="$$1"; shift;					\
-		file="${RCD_SCRIPTS_DIR:S/^${PREFIX}\///}/$$script";	\
-		egfile="${RCD_SCRIPTS_EXAMPLEDIR}/$$script";		\
-		${ECHO} "# FILE: $$file c $$egfile ${RCD_SCRIPTS_MODE}"; \
-	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
-	${ECHO} "EOF_RCD_SCRIPTS";					\
-	${ECHO} "	\$${CHMOD} +x ./+RCD_SCRIPTS";			\
-	${ECHO} "	;;";						\
-	${ECHO} "esac";							\
-	${ECHO} "";							\
-	${ECHO} "# end of install-rcd-scripts";				\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp ||	\
-	${MV} -f ${.TARGET}.tmp ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-
 # OWN_DIRS contains a list of directories for this package that should be
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL
 #	scripts.  MAKE_DIRS is used the same way, but the package admin
 #	isn't prompted to remove the directory at post-deinstall time if it
-#	isn't empty.
+#	isn't empty.  REQD_DIRS is like MAKE_DIRS but the value of PKG_CONFIG
+#	is ignored.
 #
 # OWN_DIRS_PERMS contains a list of "directory owner group mode" sublists
 #	representing directories for this package that should be
 #	created/destroyed by the INSTALL/DEINSTALL scripts.  MAKE_DIRS_PERMS
 #	is used the same way but the package admin isn't prompted to remove
 #	the directory at post-deinstall time if it isn't empty.
+#	REQD_DIRS_PERMS is like MAKE_DIRS but the value of PKG_CONFIG is
+#	ignored.
 #
 # If any directory pathnames are relative, then they are taken to be
 # relative to ${PREFIX}.
 #
 MAKE_DIRS?=		# empty
 MAKE_DIRS_PERMS?=	# empty
+REQD_DIRS?=		# empty
+REQD_DIRS_PERMS?=	# empty
 OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
 
@@ -451,12 +466,22 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
 	esac; }
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
+	case "${REQD_DIRS:M*:Q}" in					\
+	"")	;;							\
+	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
+	esac; }
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
 	case "${OWN_DIRS:M*:Q}" in					\
 	"")	;;							\
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
 	esac; }
 	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
 	case "${MAKE_DIRS_PERMS:M*:Q}" in				\
+	"")	;;							\
+	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
+	esac; }
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
+	case "${REQD_DIRS_PERMS:M*:Q}" in				\
 	"")	;;							\
 	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
 	esac; }
@@ -502,6 +527,16 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
+	eval set -- __dummy ${REQD_DIRS};				\
+	while ${TEST} $$# -gt 0; do					\
+		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
+		dir="$$1"; shift;					\
+		dir=`strip_prefix "$$dir"`;				\
+		${ECHO} "# DIR: $$dir fm";				\
+	done;								\
+	} >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
+	${TEST} ! -f ${.TARGET}.tmp || {				\
 	eval set -- __dummy ${OWN_DIRS};				\
 	while ${TEST} $$# -gt 0; do					\
 		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
@@ -519,6 +554,17 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
+	done;								\
+	} >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
+	${TEST} ! -f ${.TARGET}.tmp || {				\
+	eval set -- __dummy ${REQD_DIRS_PERMS};				\
+	while ${TEST} $$# -gt 0; do					\
+		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
+		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
+		shift; shift; shift; shift;				\
+		dir=`strip_prefix "$$dir"`;				\
+		${ECHO} "# DIR: $$dir fm $$owner $$group $$mode";	\
 	done;								\
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\

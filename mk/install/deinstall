@@ -1,12 +1,12 @@
 # -*- sh -*-
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.35 2005/07/29 18:32:18 jlam Exp $
+# $NetBSD: deinstall,v 1.36 2005/08/19 22:24:10 jlam Exp $
 
 case ${STAGE} in
 VIEW-DEINSTALL)
 	case ${_PKG_CONFIG} in
-	YES)
+	yes)
 		case ${PKG_SYSCONFDEPOTBASE} in
 		"")
 			${TEST} ! -x ./+FILES ||
@@ -23,10 +23,8 @@ VIEW-DEINSTALL)
 	#
 	# Remove shells from /etc/shells.
 	#
-	case ${_PKG_REGISTER_SHELLS} in
-	YES)	${TEST} ! -x ./+SHELL ||
-			./+SHELL REMOVE ${PKG_METADATA_DIR} ;;
-	esac
+	${TEST} ! -x ./+SHELL ||
+		./+SHELL REMOVE ${PKG_METADATA_DIR}
 	${TEST} ! -x ./+SHELL ||
 		./+SHELL CHECK-REMOVE ${PKG_METADATA_DIR}
 	;;
@@ -35,19 +33,15 @@ DEINSTALL)
 	# Remove configuration files if they don't differ from the default
 	# config file.
 	#
-	case ${_PKG_CONFIG} in
-	YES)	${TEST} ! -x ./+FILES ||
-			./+FILES REMOVE ${PKG_METADATA_DIR} ;;
-	esac
-	case ${_PKG_CONFIG}${_PKG_RCD_SCRIPTS} in
-	YESYES)	${TEST} ! -x ./+RCD_SCRIPTS ||
-			./+RCD_SCRIPTS REMOVE ${PKG_METADATA_DIR} ;;
-	esac
+	${TEST} ! -x ./+FILES ||
+		./+FILES REMOVE ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+RCD_SCRIPTS ||
+		./+RCD_SCRIPTS REMOVE ${PKG_METADATA_DIR}
 	;;
 
 POST-DEINSTALL)
 	if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" -a			\
-	     "${_PKG_CONFIG}" = "YES" -a -n "${CONF_DEPENDS}" ]; then
+	     "${_PKG_CONFIG}" = "yes" -a -n "${CONF_DEPENDS}" ]; then
 		if [ -h ${PKG_SYSCONFDIR} ]; then
 			${RM} -f ${PKG_SYSCONFDIR}
 		fi
@@ -56,14 +50,10 @@ POST-DEINSTALL)
 	#
 	# Remove empty directories and unused users/groups.
 	#
-	case ${_PKG_CONFIG} in
-	YES)	${TEST} ! -x ./+DIRS ||
-			./+DIRS REMOVE ${PKG_METADATA_DIR} ;;
-	esac
-	case ${_PKG_CREATE_USERGROUP} in
-	YES)	${TEST} ! -x ./+USERGROUP ||
-			./+USERGROUP REMOVE ${PKG_METADATA_DIR} ;;
-	esac
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS REMOVE ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+USERGROUP ||
+		./+USERGROUP REMOVE ${PKG_METADATA_DIR}
 	#
 	# Check for any existing bits after we're finished de-installing.
 	#
