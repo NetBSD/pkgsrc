@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.26 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: builtin.mk,v 1.27 2005/08/20 12:04:09 jmmv Exp $
 
 BUILTIN_PKG:=	gettext
 
@@ -222,12 +222,25 @@ BUILDLINK_TARGETS+=	buildlink-msgfmt
 buildlink-msgfmt: ${BUILDLINK_DIR}/bin/msgfmt
 
 ${BUILDLINK_DIR}/bin/msgfmt: ${.CURDIR}/../../devel/gettext/files/msgfmt.pl
-	@${MKDIR} ${.TARGET:H}
-	@${CAT} ${.ALLSRC} |						\
-	 ${SED} -e "s|@PERL@|"${PERL5:Q}"|g"				\
-		-e "s|@MSGFMT@|"${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt"|g" \
-		> ${.TARGET}
-	@${CHMOD} +x ${.TARGET}
+	@ver=`${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt --version |	\
+		${HEAD} -n 1 | ${CUT} -d ' ' -f 4`;			\
+	${MKDIR} ${.TARGET:H};						\
+	case $${ver} in							\
+	0.10.[1-3][0-5]|0.[0-9].*)					\
+		${ECHO} "=> Creating msgfmt wrapper to work-around"	\
+			"plurals";					\
+		${CAT} ${.ALLSRC} |					\
+			${SED} -e "s|@PERL@|"${PERL5:Q}"|g"		\
+			-e "s|@MSGFMT@|"${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt"|g" \
+			> ${.TARGET};					\
+		;;							\
+	*)								\
+		${ECHO} "#! ${SH}" >${.TARGET};				\
+		${ECHO} "${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt"	\
+			'"$$@"' >>${.TARGET};				\
+		;;							\
+	esac;								\
+	${CHMOD} +x ${.TARGET}
 .  endif
 
 .endif	# CHECK_BUILTIN.gettext
