@@ -1,17 +1,21 @@
-# $NetBSD: Makefile,v 1.30 2005/04/11 21:48:02 tv Exp $
+# $NetBSD: Makefile,v 1.30.2.1 2005/08/20 18:44:07 salo Exp $
 
 DISTNAME=	thttpd-2.25b
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		sitedrivenby.gif
+		${NETBSD_LOGO}
+DIST_SUBDIR=	${PKGNAME}
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.acme.com/software/thttpd/
 COMMENT=	Tiny/turbo/throttling HTTP server
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+NETBSD_LOGO=		sitedrivenby.gif
+SITES_${NETBSD_LOGO}=	http://www.NetBSD.org/images/logos/
 
 GNU_CONFIGURE=	yes
 USE_PKGINSTALL=	yes
