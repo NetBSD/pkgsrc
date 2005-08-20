@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/08/02 10:26:43 adam Exp $
+# $NetBSD: Makefile,v 1.28 2005/08/20 10:50:52 grant Exp $
 
 DISTNAME=	fox-1.4.17
 CATEGORIES=	x11
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-x
 .include "../../mk/bsd.prefs.mk"
 
 # NetBSD < 3.0 does not have getpwnam_r() getpwuin_r()
-.if (${OPSYS} == "NetBSD") && (${OS_VERSION:R} < 3)
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[1-2]*)
 CONFIGURE_ARGS+=	--disable-threadsafe
 .endif
 
