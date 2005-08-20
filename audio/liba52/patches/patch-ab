@@ -1,7 +1,18 @@
-$NetBSD: patch-ab,v 1.3 2002/08/30 23:43:08 wiz Exp $
+$NetBSD: patch-ab,v 1.3.16.1 2005/08/20 14:36:15 salo Exp $
 
---- configure.orig	Sun Jul 28 05:50:42 2002
+--- configure.orig	2002-07-28 13:50:42.000000000 +1000
 +++ configure
+@@ -9639,8 +9639,8 @@ _ACEOF
+ 
+ 
+ 
+-
+-LIBA52_CFLAGS="$LIBA52_CFLAGS -prefer-non-pic"
++# we set LIBA52_CFLAGS in CONFIGURE_ENV
++# LIBA52_CFLAGS="$LIBA52_CFLAGS -prefer-non-pic"
+ 
+ # Check whether --enable-double or --disable-double was given.
+ if test "${enable_double+set}" = set; then
 @@ -9743,6 +9743,11 @@ if test $ac_cv_lib_ossaudio__oss_ioctl =
    LIBAO_LIBS="$LIBAO_LIBS -lossaudio"
  fi
