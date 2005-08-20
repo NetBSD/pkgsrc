@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2005/06/15 09:00:15 hira Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/20 19:16:22 jlam Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfdesktop-${XFCE4_VERSION}
 PKGNAME=	xfce4-desktop-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	XFce4 desktop background manager
 
@@ -25,7 +25,7 @@ CONF_FILES+=		${EGDIR}/xfce-registered-categories.xml.${_l} \
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
-MAKE_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
+REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
