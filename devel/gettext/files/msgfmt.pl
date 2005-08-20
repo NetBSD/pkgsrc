@@ -1,11 +1,11 @@
 #!@PERL@
 #
-# $NetBSD: msgfmt.pl,v 1.1 2004/04/01 18:33:20 jmmv Exp $
+# $NetBSD: msgfmt.pl,v 1.2 2005/08/20 12:04:09 jmmv Exp $
 #
 # msgfmt.pl - Workaround uses of msgid_plural to work with implementations
 #             that don't support it.
 #
-# Copyright (c) 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
+# Copyright (c) 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -60,38 +60,96 @@ foreach (@ARGV) {
 open INFILE, $file;
 open OUTFILE, ">$file.tmp";
 
-$read_plural = 0;
-$skip = 0;
-@msgid_plural = ();
-
-printf "Fixing plural forms in $file\n";
+printf "Working-around plural forms in $file\n";
 while (<INFILE>) {
-    if (/^msgid_plural/) {
-        $read_plural = 1;
-        s/^msgid_plural[ \t]+"/"/;
-        push @msgid_plural, $_;
-    } elsif ($read_plural && /^msgstr\[0\]/) {
-        $read_plural = 0;
-        s/^msgstr\[0\]/msgstr/;
-        print OUTFILE;
-    } elsif ($read_plural) {
-        push @msgid_plural, $_;
-    } elsif (/^msgstr\[1\]/) {
-        print OUTFILE "\n";
-        print OUTFILE "msgid ";
-        foreach $line (@msgid_plural) {
-            print OUTFILE "$line";
+    @msgid_singular = ();
+    @msgid_plural = ();
+
+    s/^#~//;
+
+    if (/^msgid[ \t]+(.*)$/) {
+        push @msgid_singular, "$1\n";
+        while (<INFILE>) {
+            if (/^[ \t]*"/) {
+                push @msgid_singular, $_;
+            } else {
+                last;
+            }
         }
-        s/^msgstr\[1\]/msgstr/;
+    }
+
+    if (/^msgid_plural[ \t]+(.*)$/) {
+        push @msgid_plural, "$1\n";
+        while (<INFILE>) {
+            if (/^[ \t]*"/) {
+                push @msgid_plural, $_;
+            } else {
+                last;
+            }
+        }
+    }
+
+    if (/^msgstr[ \t]+(.*)$/) {
+        print OUTFILE "msgid ";
+	foreach $line (@msgid_singular) { print OUTFILE $line; }
+        print OUTFILE "msgstr $1\n";
+        while (<INFILE>) {
+            if (/^[ \t]*"/) {
+                print OUTFILE;
+            } else {
+                last;
+            }
+        }
+    }
+
+    if (/^msgstr\[0\][ \t]+(.*)$/) {
+        print OUTFILE "msgid ";
+	foreach $line (@msgid_singular) { print OUTFILE $line; }
+        print OUTFILE "msgstr $1\n";
+        while (<INFILE>) {
+            if (/^[ \t]*"/) {
+                print OUTFILE;
+            } else {
+                last;
+            }
+        }
+    }
+
+    if (/^msgstr\[1\][ \t]+(.*)$/) {
+	$equal = (@msgid_singular == @msgid_plural);
+	if ($equal) {
+	    for ($i = 0; $i < @msgid_singular; $i++) {
+		if (@msgid_singular[$i] ne @msgid_plural[$i]) {
+		    $equal = 0;
+		    last;
+		}
+	    }
+	}
+
+        if (! $equal) {
+            print OUTFILE "msgid ";
+	    foreach $line (@msgid_plural) { print OUTFILE $line; }
+            print OUTFILE "msgstr $1\n";
+            while (<INFILE>) {
+                if (/^[ \t]*"/) {
+                    print OUTFILE;
+                } else {
+                    last;
+                }
+            }
+        } else {
+	    while (<INFILE>) {
+                last if (! /^[ \t]*"/);
+	    }
+	}
+    }
+
+    if (/^msgstr\[2\][ \t]+(.*)$/) {
+    }
+
+    if (/^#/ || /^[ \t]*$/) {
         print OUTFILE;
-        @msgid_plural = ();
-    } elsif (/^msgstr\[2\]/) {
-    	$skip = 1;
-    } elsif (/^[ \t]*$/) {
-    	$skip = 0;
-        print OUTFILE;
-    } elsif (! $skip) {
-        print OUTFILE;
+	next;
     }
 }
 
