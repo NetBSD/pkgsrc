@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2002/01/16 20:27:11 drochner Exp $
+$NetBSD: patch-ab,v 1.1.22.1 2005/08/20 16:03:20 salo Exp $
 
---- Misc/Makefile.pre.in.orig	Wed Jan 16 21:11:24 2002
-+++ Misc/Makefile.pre.in	Wed Jan 16 21:11:43 2002
-@@ -92,7 +92,7 @@
+--- Misc/Makefile.pre.in.orig	2000-07-01 02:03:53.000000000 +1000
++++ Misc/Makefile.pre.in
+@@ -92,7 +92,7 @@ VPATH=		.
  TARGET=		python
  
  # Installed python binary (used only by boot target)
@@ -11,3 +11,14 @@ $NetBSD: patch-ab,v 1.1 2002/01/16 20:27:11 drochner Exp $
  
  # Add more -I and -D options here
  CFLAGS=		$(OPT) -I$(INCLUDEPY) -I$(EXECINCLUDEPY) $(DEFS)
+@@ -125,8 +125,8 @@ LIBC=		@LIBC@
+ RANLIB=		@RANLIB@
+ MACHDEP=	@MACHDEP@
+ SO=		@SO@
+-LDSHARED=	@LDSHARED@
+-CCSHARED=	@CCSHARED@
++LDSHARED=	@LDSHARED@ $(LDFLAGS)
++CCSHARED=	@CCSHARED@ $(LDFLAGS)
+ LINKFORSHARED=	@LINKFORSHARED@
+ #@SET_CCC@
+ 
