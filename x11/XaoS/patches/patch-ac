@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.2.2 2005/08/20 14:45:36 salo Exp $
+
+--- src/ui/ui.c.orig	2003-03-19 23:09:31.000000000 +1100
++++ src/ui/ui.c
+@@ -169,6 +169,10 @@ CONST struct params global_params[] = {
+   {NULL, 0, NULL, NULL}
+ };
+ 
++
++static void ui_mkimages (int, int);
++static void main_loop (void);
++
+ static int resizeregistered = 0;
+ static void
+ ui_updatemenus (uih_context * c, CONST char *name)
