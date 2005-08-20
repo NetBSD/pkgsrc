@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2005/06/18 05:57:05 hira Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/20 19:16:21 jlam Exp $
 #
 
 DISTNAME=	ser-0.8.10_src
 PKGNAME=	ser-0.8.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.berlios.de/pub/ser/latest/src/
 
@@ -20,7 +20,7 @@ PKG_SYSCONFSUBDIR=	ser
 EGDIR=			${PREFIX}/share/examples/ser
 CONF_FILES=		${EGDIR}/ser.cfg ${PKG_SYSCONFDIR}/ser.cfg
 
-MAKE_DIRS=	${EGDIR}
+REQD_DIRS=	${EGDIR}
 
 MAKE_ENV+= BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
 MAKE_ENV+= BUILDLINK_PREFIX.mysql-client=${BUILDLINK_PREFIX.mysql-client:Q}
