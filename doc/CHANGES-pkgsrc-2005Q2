@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.74 2005/08/20 14:46:02 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.75 2005/08/20 15:02:20 grant Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -227,3 +227,5 @@ Pullup ticket 693 - requested by Grant Beattie
 portability fix for liba52
 Pullup ticket 696 - requested by Grant Beattie
 portability fix for XaoS
+Pullup ticket 701 - requested by Lubomir Sedlacik
+bsd.sites.mk mirror list sync
