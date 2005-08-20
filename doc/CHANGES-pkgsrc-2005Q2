@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.81 2005/08/20 19:06:28 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.82 2005/08/20 19:11:42 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -243,3 +243,5 @@ Pullup tickets 699 and 700 - requested by Quentin Garnier
 distfile update for thttpd
 Pullup ticket 649 - requested by Grant Beattie
 portability fixes for open2300
+Pullup ticket 703 - requested by Manuel Bouyer
+MASTER_SITES update for xdemineur
