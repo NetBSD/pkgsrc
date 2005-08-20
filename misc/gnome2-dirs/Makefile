@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/04/28 23:04:08 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/08/20 19:16:21 jlam Exp $
 #
 
 DISTNAME=	gnome2-dirs-1.5
+PKGREVISION=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -28,7 +29,7 @@ ALL_GNOME_DIRS=	${GNOME2_DIRS}
 ALL_GNOME_DIRS=	${GNOME_DIRS} ${GNOME2_DIRS}
 .endif
 
-MAKE_DIRS+=	${ALL_GNOME_DIRS:O:S/^/${PREFIX}\//}
+REQD_DIRS+=	${ALL_GNOME_DIRS:O:S/^/${PREFIX}\//}
 
 do-install:	# nothing
 
