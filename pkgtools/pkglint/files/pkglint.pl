@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.247 2005/08/20 10:05:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.248 2005/08/20 10:53:44 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1324,7 +1324,7 @@ sub expand_variable($$$) {
 	if ($value =~ qr"\$") {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "The variable ${varname} could not be resolved completely.");
 		log_warning(NO_FILE, NO_LINE_NUMBER, sprintf("Its value would be \"${value}\"---using %s instead.",
-		    defined($default_value) ? \"${default_value}\" : "(undef)"));
+		    defined($default_value) ? "\"${default_value}\"" : "(undef)"));
 		$value = $default_value;
 	}
 	return $value;
