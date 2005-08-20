@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.36 2005/07/26 07:36:54 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.37 2005/08/20 14:37:53 grant Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -256,6 +256,7 @@ _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
+_WRAP_ARG_PP.CXX=	${WRAPPER_TMPDIR}/arg-pp-sunpro-cxx
 _WRAP_CMD_SINK.CXX=	${WRAPPER_TMPDIR}/cmd-sink-sunpro-cxx
 _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-sunpro-cc
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-sunpro-cc
@@ -463,6 +464,12 @@ ${WRAPPER_TMPDIR}/arg-pp-darwin-gcc:					\
 
 ${WRAPPER_TMPDIR}/arg-pp-mipspro-cc:					\
 		${WRAPPER_SRCDIR}/arg-pp-mipspro-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/arg-pp-sunpro-cxx:					\
+		${WRAPPER_SRCDIR}/arg-pp-sunpro-cxx
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
