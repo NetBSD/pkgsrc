@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2005/03/02 15:52:26 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/08/20 01:56:11 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
 
@@ -62,7 +62,6 @@ BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 
 PKG_GROUPS=		${CYRUS_GROUP}
 PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
-OWN_DIRS=		${PLUGINDIR}
 
 MESSAGE_SUBST+=		_PLUGINDIR=${_PLUGINDIR}
 
