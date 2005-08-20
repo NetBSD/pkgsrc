@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.80 2005/08/20 18:45:13 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.81 2005/08/20 19:06:28 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -241,3 +241,5 @@ Pullup ticket 698 - requested by Grant Beattie
 portability fix for python20
 Pullup tickets 699 and 700 - requested by Quentin Garnier
 distfile update for thttpd
+Pullup ticket 649 - requested by Grant Beattie
+portability fixes for open2300
