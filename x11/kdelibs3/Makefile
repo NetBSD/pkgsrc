@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2005/07/30 11:04:59 markd Exp $
+# $NetBSD: Makefile,v 1.92 2005/08/20 19:16:22 jlam Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -27,7 +28,7 @@ SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2/docboo
 
 LIBS.NetBSD+=			${EXPORT_SYMBOLS_LDFLAGS}
 
-MAKE_DIRS+=	${KDE3_DIRS:O:S/^/${PREFIX}\//}
+REQD_DIRS+=	${KDE3_DIRS:O:S/^/${PREFIX}\//}
 
 REPLACE_PERL= \
 	dcop/dcopidlng/kalyptus \

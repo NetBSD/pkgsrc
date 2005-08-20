@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2005/06/15 09:01:59 hira Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/20 19:16:22 jlam Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-panel-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	XFce4 panel
 
@@ -23,7 +23,7 @@ CONF_FILES+=		${EGDIR}/contents.xml.${_l} \
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
-MAKE_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
+REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"

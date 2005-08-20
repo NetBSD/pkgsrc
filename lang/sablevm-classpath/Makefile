@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/20 19:16:23 jlam Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 INFO_FILES=		hacking.info vmintegration.info
 

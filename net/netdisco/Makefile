@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/20 19:16:21 jlam Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
 PKGNAME=		netdisco-0.94
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 
@@ -93,7 +94,7 @@ CONF_FILES_PERMS+=	${EGDIR}/netdisco.conf ${PKG_SYSCONFDIR}/netdisco.conf \
 			${NETDISCOUSER} ${NETDISCOGROUP} 0660
 CONF_FILES+=		${EGDIR}/netdisco-topology.txt ${PKG_SYSCONFDIR}/netdisco-topology.txt
 
-MAKE_DIRS=              ${PREFIX}/netdisco ${EGDIR}
+REQD_DIRS=              ${PREFIX}/netdisco ${EGDIR}
 OWN_DIRS_PERMS+=        ${VARBASE}/netdisco ${NETDISCOUSER} ${NETDISCOGROUP} 0775
 RCD_SCRIPTS=		netdisco
 
