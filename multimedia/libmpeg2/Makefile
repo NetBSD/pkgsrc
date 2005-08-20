@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/20 11:44:09 grant Exp $
 
 DISTNAME=	mpeg2dec-0.4.0b
 PKGNAME=	libmpeg2-0.4.0b
@@ -23,6 +23,14 @@ PKGCONFIG_OVERRIDE+=    libmpeg2/convert/libmpeg2convert.pc.in
 PKGCONFIG_OVERRIDE+=    libmpeg2/libmpeg2.pc.in
 
 CONFIGURE_ARGS+=	--enable-shared
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
+CONFIGURE_ENV+=		LIBMPEG2_CFLAGS=-prefer-non-pic
+.  endif
+.endif
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
