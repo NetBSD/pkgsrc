@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.77 2005/08/20 15:26:21 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.78 2005/08/20 15:34:28 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -233,3 +233,5 @@ Pullup ticket 694 - requested by Grant Beattie
 portability fix for xmms-flac
 Pullup ticket 695 - requested by Grant Beattie
 portability fixes for ORBit
+Pullup ticket 702 - requested by Adrian Portelli
+security fix for awstats
