@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.2 2005/05/09 20:37:51 recht Exp $
+$NetBSD: patch-af,v 1.2.2.1 2005/08/20 16:01:13 salo Exp $
 
---- Makefile.pre.in.orig	Sun Sep 26 19:26:55 2004
+--- Makefile.pre.in.orig	2005-03-29 09:23:01.000000000 +1000
 +++ Makefile.pre.in
 @@ -56,7 +56,7 @@ MAKESETUP=      $(srcdir)/Modules/makese
  OPT=		@OPT@
@@ -11,6 +11,17 @@ $NetBSD: patch-af,v 1.2 2005/05/09 20:37:51 recht Exp $
  LDFLAGS=	@LDFLAGS@
  LDLAST=		@LDLAST@
  SGI_ABI=	@SGI_ABI@
+@@ -94,8 +94,8 @@ LIBP=		$(LIBDIR)/python$(VERSION)
+ 
+ # Symbols used for using shared libraries
+ SO=		@SO@
+-LDSHARED=	@LDSHARED@
+-BLDSHARED=	@BLDSHARED@
++LDSHARED=	@LDSHARED@ $(LDFLAGS)
++BLDSHARED=	@BLDSHARED@ $(LDFLAGS)
+ DESTSHARED=	$(BINLIBDEST)/lib-dynload
+ 
+ # Executable suffix (.exe on Windows and Mac OS X)
 @@ -311,7 +311,7 @@ all:		$(BUILDPYTHON) oldsharedmods share
  $(BUILDPYTHON):	Modules/$(MAINOBJ) $(LIBRARY) $(LDLIBRARY)
  		$(LINKCC) $(LDFLAGS) $(LINKFORSHARED) -o $@ \
