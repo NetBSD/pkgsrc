@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:46:21 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/20 02:20:45 schmonz Exp $
 
-DISTNAME=		nullmailer-1.00RC7
-PKGNAME=		${DISTNAME:S/0RC7/.0rc7/}
-PKGREVISION=		1
+DISTNAME=		nullmailer-1.00
 CATEGORIES=		mail
-MASTER_SITES=		http://untroubled.org/nullmailer/
+MASTER_SITES=		${HOMEPAGE}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/nullmailer/
 COMMENT=		Simple relay-only mail transport agent
 
@@ -30,17 +28,37 @@ PKG_USERS?=		${NULLMAILER_USER}:${NULLMAILER_GROUP}
 MAKE_ENV+=		NULLMAILER_GROUP=${NULLMAILER_GROUP}
 MAKE_ENV+=		NULLMAILER_USER=${NULLMAILER_USER}
 
-PLIST_SUBST+=		NULLMAILER_GROUP=${NULLMAILER_GROUP}		\
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}		\
+			NULLMAILER_GROUP=${NULLMAILER_GROUP}		\
+			NULLMAILER_USER=${NULLMAILER_USER}
+
+FILES_SUBST+=		VARBASE=${VARBASE}				\
+			NULLMAILER_GROUP=${NULLMAILER_GROUP}		\
 			NULLMAILER_USER=${NULLMAILER_USER}
 
 RCD_SCRIPTS=		nullmailer
 
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/nullmailer
+.for i in nullmailer nullmailer/queue nullmailer/tmp
+OWN_DIRS_PERMS+=	${VARBASE}/spool/${i} ${NULLMAILER_USER}	\
+			${NULLMAILER_GROUP} 700
+.endfor
+SPECIAL_PERMS+=		libexec/nullmailer/mailq			\
+			${NULLMAILER_USER} ${NULLMAILER_GROUP} 4555
+SPECIAL_PERMS+=		libexec/nullmailer/nullmailer-queue		\
+			${NULLMAILER_USER} ${NULLMAILER_GROUP} 4555
+SPECIAL_PERMS+=		${VARBASE}/spool/nullmailer/trigger		\
+			${NULLMAILER_USER} ${NULLMAILER_GROUP} 0600
+INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
+
 post-configure:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf	>	\
 		${WRKDIR}/mailer.conf
-	@${MV} ${WRKSRC}/doc/nullmailer-send.8 ${WRKDIR}/nullmailer-send.8
-	@${SED} ${FILES_SUBST_SED} ${WRKDIR}/nullmailer-send.8	>	\
-		${WRKSRC}/doc/nullmailer-send.8
+	@cd ${WRKSRC}/doc; for i in nullmailer-send nullmailer-queue; do\
+		${SED} ${FILES_SUBST_SED} $${i}.8 > $${i}.8.new;	\
+		${MV} -f $${i}.8.new $${i}.8;				\
+	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nullmailer
