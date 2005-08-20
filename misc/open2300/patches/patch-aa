@@ -1,44 +1,42 @@
-$NetBSD: patch-aa,v 1.3 2004/11/29 08:22:27 martin Exp $
+$NetBSD: patch-aa,v 1.3.6.1 2005/08/20 19:03:14 salo Exp $
 
---- Makefile.orig	2004-11-13 01:25:31.000000000 +0100
-+++ Makefile	2004-11-29 09:12:16.000000000 +0100
-@@ -4,7 +4,7 @@
- # Default locations are 
- # 1. Path to config file including filename given as parameter
- # 2. ./open2300.conf
--# 3. /usr/local/etc/open2300.conf
-+# 3. ${SYSCONFDIR}/open2300.conf
- # 4. /etc/open2300.conf
- #
- # This makefile is made for Linux.
-@@ -12,7 +12,7 @@
- #
- # You may want to adjust the 3 directories below
+--- Makefile.orig	2004-11-13 11:25:31.000000000 +1100
++++ Makefile
+@@ -14,11 +14,11 @@
  
--prefix = /usr/local
-+prefix = ${PREFIX}
+ prefix = /usr/local
  exec_prefix = ${prefix}
- bindir = ${exec_prefix}/bin
+-bindir = ${exec_prefix}/bin
++bindir = ${PREFIX}/bin
  
-@@ -37,7 +37,7 @@
+ #########################################
+ 
+-CC  = gcc
++#CC  = gcc
+ OBJ = open2300.o rw2300.o linux2300.o win2300.o
+ LOGOBJ = log2300.o rw2300.o linux2300.o win2300.o
+ FETCHOBJ = fetch2300.o rw2300.o linux2300.o win2300.o
+@@ -37,8 +37,8 @@ MINMAXOBJ = minmax2300.o rw2300.o linux2
  
  VERSION = 1.8
  
 -CFLAGS = -Wall -O3 -DVERSION=\"$(VERSION)\"
-+CFLAGS += -DVERSION=\"$(VERSION)\" -DSYSCONFDIR=\"$(PKG_SYSCONFDIR)\" -I /usr/pkg/include/mysql
- CC_LDFLAGS = -lm
+-CC_LDFLAGS = -lm
++CFLAGS += -DVERSION=\"$(VERSION)\" ${CPPFLAGS}
++CC_LDFLAGS = ${LDFLAGS} ${LIBS} -lm
  CC_WINFLAG = 
  # For Windows - comment the two line above and un-comment the two lines below.
-@@ -80,7 +80,7 @@
+ # CC_LDFLAGS = -lwsock32 -fno-exceptions -s
+@@ -80,7 +80,7 @@ xml2300 : $(XMLOBJ)
  	$(CC) $(CFLAGS) -o $@ $(XMLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
  
  mysql2300: $(MYSQLOBJ)
 -	$(CC) $(CFLAGS) -o $@ $(MYSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG) -I/usr/include/mysql -L/usr/lib/mysql -lmysqlclient
-+	$(CC) $(CFLAGS) -o $@ $(MYSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG) -L/usr/pkg/lib/mysql -Wl,-R/usr/pkg/lib/mysql -lmysqlclient
++	$(CC) $(CFLAGS) -o $@ $(MYSQLOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
  	
  light2300: $(LIGHTOBJ)
  	$(CC) $(CFLAGS) -o $@ $(LIGHTOBJ) $(CC_LDFLAGS)
-@@ -92,19 +92,23 @@
+@@ -92,19 +92,23 @@ minmax2300: $(MINMAXOBJ)
  	$(CC) $(CFLAGS) -o $@ $(MINMAXOBJ) $(CC_LDFLAGS) $(CC_WINFLAG)
  
  install:
