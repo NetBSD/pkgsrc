@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/04/11 21:46:15 tv Exp $
+# $NetBSD: Makefile,v 1.27.2.1 2005/08/20 16:03:20 salo Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -46,15 +46,6 @@ ZOULARIS?=	${PREFIX}/bsd
 MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib ${COMPILER_RPATH_FLAG}${ZOULARIS}/lib
 FIX_RPATH+=	MODADD
 .endif
-
-pre-configure:
-	${SED}  -e 's,@NOSHARED@,${NOSHARED},g' \
-		-e 's,@MODADD@,${MODADD},g' \
-		-e 's+@SSLFLAGS@+${SSLFLAGS}+g' \
-		${FILESDIR}/Setup.in >${WRKSRC}/Modules/Setup.in
-	${SED}  -e 's,@NOSHARED@,${NOSHARED},g' \
-		-e 's,@MODADD@,${MODADD},g' \
-		${FILESDIR}/Setup.config.in >${WRKSRC}/Modules/Setup.config.in
 
 post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
