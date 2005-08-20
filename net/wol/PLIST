@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/09 16:07:32 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/08/20 19:23:17 kristerw Exp $
 bin/wol
 bin/wol-bootptab
 bin/wol-dhcpdconf
@@ -7,3 +7,4 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wol.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/wol.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/wol.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wol.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/wol.mo
