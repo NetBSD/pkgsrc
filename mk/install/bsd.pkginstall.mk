@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.12 2005/08/19 22:24:10 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.13 2005/08/20 02:22:02 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -262,7 +262,8 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 #	file doesn't exist, then the example one is copied into place.  At
 #	deinstall time, the true one is removed if it doesn't differ from the
 #	example one.  REQD_FILES is the same as CONF_FILES but the value
-#	of PKG_CONFIG is ignored.
+#	of PKG_CONFIG is ignored; however, all files listed in REQD_FILES
+#	should be under ${PREFIX}.
 #
 # CONF_FILES_MODE and REQD_FILES_MODE are the file permissions for the
 # files in CONF_FILES and REQD_FILES, respectively.
@@ -273,7 +274,9 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 #
 #	and works like CONF_FILES, except the config files are owned by
 #	user:group have mode permissions.  REQD_FILES_PERMS is the same
-#	as CONF_FILES_PERMS but the value of PKG_CONFIG is ignored.
+#	as CONF_FILES_PERMS but the value of PKG_CONFIG is ignored;
+#	however, all files listed in REQD_FILES_PERMS should be under
+#	${PREFIX}.
 #
 # RCD_SCRIPTS works lists the basenames of the rc.d scripts.  They are
 #	expected to be found in ${PREFIX}/share/examples/rc.d, and
@@ -415,7 +418,8 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 #	scripts.  MAKE_DIRS is used the same way, but the package admin
 #	isn't prompted to remove the directory at post-deinstall time if it
 #	isn't empty.  REQD_DIRS is like MAKE_DIRS but the value of PKG_CONFIG
-#	is ignored.
+#	is ignored; however, all directories listed in REQD_DIRS should
+#	be under ${PREFIX}.
 #
 # OWN_DIRS_PERMS contains a list of "directory owner group mode" sublists
 #	representing directories for this package that should be
@@ -423,7 +427,8 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 #	is used the same way but the package admin isn't prompted to remove
 #	the directory at post-deinstall time if it isn't empty.
 #	REQD_DIRS_PERMS is like MAKE_DIRS but the value of PKG_CONFIG is
-#	ignored.
+#	ignored; however, all directories listed in REQD_DIRS should be
+#	under ${PREFIX}.
 #
 # If any directory pathnames are relative, then they are taken to be
 # relative to ${PREFIX}.
