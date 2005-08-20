@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/08/18 23:51:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.27 2005/08/20 02:23:25 dmcmahill Exp $
 
 DISTNAME=		qcad-1.5.4-src
 PKGNAME=		qcad-1.5.4
@@ -21,11 +21,12 @@ INSTALLATION_DIRS=	bin
 QCAD_OPSYS = LINUX
 .elif ${OPSYS} == "SunOS"
 QCAD_OPSYS = SOLARIS
-.elif !empty(OPSYS:MBSD)
+.elif !empty(OPSYS:M*BSD)
 QCAD_OPSYS = BSD
 .elif !empty(OPSYS:MIRIX)
 QCAD_OPSYS = IRIX
 .else
+QCAD_OPSYS = UNKNOWN
 PKG_FAIL_REASON=	"Unknown operating system for ${PKGNAME}
 .endif
 
