@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.78 2005/08/19 18:12:39 jlam Exp $
+# $NetBSD: Makefile,v 1.79 2005/08/20 03:36:25 jlam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
 CATEGORIES=	www
-PKGREVISION=	2
+PKGREVISION=	3
 
 HOMEPAGE=	http://httpd.apache.org/
 COMMENT=	Apache HTTP (Web) server, version 2
@@ -79,8 +79,8 @@ CONF_FILES+=		${EGDIR}/magic ${PKG_SYSCONFDIR}/magic
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 RCD_SCRIPTS=		apache
 
-MAKE_DIRS=		${PREFIX}/share/httpd
-MAKE_DIRS+=		${PREFIX}/share/httpd/htdocs
+REQD_DIRS=		${PREFIX}/share/httpd
+REQD_DIRS+=		${PREFIX}/share/httpd/htdocs
 OWN_DIRS= 		${VARBASE}/log/httpd
 OWN_DIRS+=		${VARBASE}/db/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
