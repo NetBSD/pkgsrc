@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/08/10 02:55:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/08/20 19:31:00 kristerw Exp $
 bin/mha-dbedit
 bin/mha-dbrecover
 bin/mha-decode
@@ -299,6 +299,7 @@ share/doc/mhonarc/resources/mimeargs.html
 share/doc/mhonarc/resources/mimedecoders.html
 share/doc/mhonarc/resources/mimeexcs.html
 share/doc/mhonarc/resources/mimefilters.html
+share/doc/mhonarc/resources/mimeincs.html
 share/doc/mhonarc/resources/modifybodyaddresses.html
 share/doc/mhonarc/resources/modtime.html
 share/doc/mhonarc/resources/months.html
@@ -340,6 +341,7 @@ share/doc/mhonarc/resources/prevlink.html
 share/doc/mhonarc/resources/prevlinkia.html
 share/doc/mhonarc/resources/prevpglink.html
 share/doc/mhonarc/resources/prevpglinkia.html
+share/doc/mhonarc/resources/printxcomments.html
 share/doc/mhonarc/resources/quiet.html
 share/doc/mhonarc/resources/rcfile.html
 share/doc/mhonarc/resources/reconvert.html
