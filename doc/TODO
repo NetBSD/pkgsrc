@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3815 2005/08/17 15:16:40 wiz Exp $
+$NetBSD: TODO,v 1.3816 2005/08/20 02:21:21 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -693,7 +693,6 @@ Suggested package updates
 	o nsca-1.2.0
 	o nsd-2.3.0
 	o nslint-2.1a3
-	o nullmailer-1.0.0
 	o nut-10.21
 	o nvi-m17n-1.79.20040401 [pkg/30216]
 	o obexftp-0.10.6
