@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/08/20 19:16:21 jlam Exp $
 #
 
 DISTNAME=		gstreamer-0.8.10
+PKGREVISION=		1
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,7 +28,7 @@ CONFIGURE_ARGS+=	HAVE_GTK_DOC=no
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-control.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
 
-MAKE_DIRS+=		${GST_DBDIR}
+REQD_DIRS+=		${GST_DBDIR}
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22
 

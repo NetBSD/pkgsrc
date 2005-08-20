@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/05/03 18:04:10 seb Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/20 19:16:22 jlam Exp $
 #
 
 DISTNAME=	WebSVN_161
 PKGNAME=	websvn-1.61
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/14334/
 
@@ -29,7 +29,7 @@ HTTPD_ROOT?=	share/httpd/htdocs
 BUILD_DEFS+=	HTTPD_ROOT
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-MAKE_DIRS=	${PREFIX}/${HTTPD_ROOT}/websvn/include
+REQD_DIRS=	${PREFIX}/${HTTPD_ROOT}/websvn/include
 CONF_FILES=	${EGDIR}/distconfig.inc ${PKG_SYSCONFDIR}/config.inc
 
 INSTALLATION_DIRS=	${HTTPD_ROOT}/websvn share/examples/${PKGBASE}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2005/01/30 23:18:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2005/08/20 19:16:23 jlam Exp $
 
 DISTNAME=	j2sdk-1_3_1_15-linux-i586
 PKGNAME=	sun-jdk13-1.0.15
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) Development Kit 1.3.1

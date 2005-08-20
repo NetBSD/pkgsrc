@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2005/08/19 18:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/08/20 19:16:21 jlam Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
 
 PKGNAME=		nethack-lib-${NETHACK_VERSION}
+PKGREVISION=		1
 
 COMMENT=		Data files for Nethack
 
@@ -19,9 +20,9 @@ CONF_FILES_PERMS+=	/dev/null ${PREFIX}/share/${NETHACK_DIR}/record \
 CONF_FILES_PERMS+=	/dev/null ${PREFIX}/share/${NETHACK_DIR}/logfile \
 			${ROOT_USER} games 664
 
-MAKE_DIRS_PERMS+=	${PREFIX}/share/${NETHACK_DIR}			\
+REQD_DIRS_PERMS+=	${PREFIX}/share/${NETHACK_DIR}			\
 			${ROOT_USER} games 775
-MAKE_DIRS_PERMS+=	${PREFIX}/share/${NETHACK_DIR}/save		\
+REQD_DIRS_PERMS+=	${PREFIX}/share/${NETHACK_DIR}/save		\
 			${ROOT_USER} games 770
 
 .include "../../mk/bsd.pkg.mk"

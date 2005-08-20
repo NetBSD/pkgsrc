@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 05:49:35 hira Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/20 19:16:22 jlam Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-session-${XFCE4_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	XFce4 session manager
 
@@ -16,7 +16,7 @@ CONF_FILES=		${EGDIR}/xfce4-session.rc \
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
-MAKE_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
+REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
