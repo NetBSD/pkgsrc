@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2003/02/17 01:45:32 jtb Exp $
+$NetBSD: patch-ab,v 1.3 2005/08/20 02:20:45 schmonz Exp $
 
---- doc/nullmailer-send.8.orig	Fri Jan  3 20:50:07 2003
+--- doc/nullmailer-send.8.orig	2003-01-03 15:50:07.000000000 -0500
 +++ doc/nullmailer-send.8
 @@ -66,16 +66,16 @@ For example, to connect to port 2525 on 
  Blank lines and lines starting with a pound are ignored.
  .SH FILES
  .TP
 -.B /var/nullmailer/queue
-+.B /var/spool/nullmailer/queue
++.B @VARBASE@/spool/nullmailer/queue
  The message queue.
  .TP
 -.B /var/nullmailer/trigger
-+.B /var/spool/nullmailer/trigger
++.B @VARBASE@/spool/nullmailer/trigger
  A trigger file to cause immediate delivery.
  .TP
 -.B /usr/local/etc/nullmailer

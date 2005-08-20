@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/10/11 22:14:51 reed Exp $
+$NetBSD: MESSAGE,v 1.5 2005/08/20 02:20:45 schmonz Exp $
 
 To use nullmailer, you will need to perform the following steps:
 
@@ -9,11 +9,12 @@ To use nullmailer, you will need to perform the following steps:
 
 	smtp.relayhost.domain	smtp
 
-2. Back up /etc/mailer.conf and copy nullmailer's own one from
+2. Back up /etc/mailer.conf and copy nullmailer's from
    ${PREFIX}/share/examples/nullmailer/mailer.conf
 
-3. In case you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
-   ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/nullmailer to /etc/rc.d/nullmailer and add
+3. If you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
+   ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/nullmailer to
+   ${RCD_SCRIPTS_DIR}/nullmailer and add
 
 	nullmailer=YES
 
@@ -23,7 +24,7 @@ To use nullmailer, you will need to perform the following steps:
 4. Stop any other running MTA. Now start nullmailer by issuing the
    command
 
-	/etc/rc.d/nullmailer start
+	${RCD_SCRIPTS_DIR}/nullmailer start
 
 5. You may need to add further configuration files to the directory
    ${PKG_SYSCONFDIR}/nullmailer.  These include the `adminaddr',
