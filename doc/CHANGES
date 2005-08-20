@@ -663,3 +663,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/acroread7 to 7.0.1 [salo 2005-08-19]
 	Updated devel/bglibs to 1.026 [schmonz 2005-08-19]
 	Updated mail/nullmailer to 1.00 [schmonz 2005-08-20]
+	Updated audio/libvorbis to 1.1.0nb2 [grant 2005-08-20]
