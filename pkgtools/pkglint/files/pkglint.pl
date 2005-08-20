@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.246 2005/08/19 17:32:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.247 2005/08/20 10:05:00 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1313,7 +1313,7 @@ sub expand_variable($$$) {
 		}
 	}
 	if (!defined($value)) {
-		$value = $default_value;
+		return $default_value;
 	}
 	$value =~ s,\$\{\.CURDIR\},.,g;
 	$value =~ s,\$\{PKGSRCDIR\},../..,g;
@@ -1323,7 +1323,8 @@ sub expand_variable($$$) {
 	}
 	if ($value =~ qr"\$") {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "The variable ${varname} could not be resolved completely.");
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Its value would be \"${value}\"---using \"${default_value}\" instead.");
+		log_warning(NO_FILE, NO_LINE_NUMBER, sprintf("Its value would be \"${value}\"---using %s instead.",
+		    defined($default_value) ? \"${default_value}\" : "(undef)"));
 		$value = $default_value;
 	}
 	return $value;
@@ -1367,20 +1368,18 @@ sub load_package_Makefile($$$$) {
 
 sub checkfile_package_Makefile($$$$) {
 	my ($dir, $fname, $rawwhole, $lines) = @_;
-	my ($tmp, $idx, @sections);
-	my (@varnames) = ();
-	my ($distfiles, $svr4_pkgname, $distname, $extract_sufx) = ('', '', '', '', '');
-	my ($bogusdistfiles) = (0);
-	my ($realwrksrc, $wrksrc) = ('', '');
-	my ($category, $whole);
-
+	my ($pkgdir, $distname, $svr4_pkgname, $category, $distfiles,
+	    $extract_sufx, $wrksrc);
+	my ($whole, $tmp, $idx, @sections, @varnames);
+	
 	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
-
-	$category = basename(dirname(Cwd::abs_path($dir)));
-	$whole = "\n${rawwhole}";
 
 	checkperms($fname);
 	checklines_Makefile($lines);
+
+	$pkgdir = Cwd::abs_path($dir);
+	$category = basename(dirname($pkgdir));
+	$whole = "\n${rawwhole}";
 
 	#
 	# whole file: $(VARIABLE)
@@ -1552,14 +1551,14 @@ sub checkfile_package_Makefile($$$$) {
 	}
 
 	# check DISTFILES and related items.
-	$distname     = expand_variable($tmp, "DISTNAME", $distname);
+	$distname     = expand_variable($tmp, "DISTNAME", basename($pkgdir) . "-0.0");
 	$pkgname      = expand_variable($tmp, "PKGNAME", $distname);
-	$svr4_pkgname = expand_variable($tmp, "SVR4_PKGNAME", $svr4_pkgname);
-	$extract_sufx = expand_variable($tmp, "EXTRACT_SUFX", $extract_sufx);
-	$distfiles    = expand_variable($tmp, "DISTFILES", $distfiles);
+	$svr4_pkgname = expand_variable($tmp, "SVR4_PKGNAME", $pkgname);
+	$extract_sufx = expand_variable($tmp, "EXTRACT_SUFX", undef);
+	$distfiles    = expand_variable($tmp, "DISTFILES", "");
 
 	# check bogus EXTRACT_SUFX.
-	if ($extract_sufx ne '') {
+	if (defined($extract_sufx)) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Seen EXTRACT_SUFX, checking value.");
 		if ($distfiles ne '' && ($extract_sufx eq '.tar.gz')) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "no need to define EXTRACT_SUFX if ".
@@ -1630,14 +1629,13 @@ sub checkfile_package_Makefile($$$$) {
 	#	DISTNAME=     package-1.0
 	#	EXTRACT_SUFX= .tgz
 	if ($distfiles =~ /^\S+$/) {
-		$bogusdistfiles++;
 		log_info(NO_FILE, NO_LINE_NUMBER, "Seen DISTFILES with single item, checking value.");
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use of DISTFILES with single file ".
 			"is discouraged. Distribution filename should be set by ".
 			"DISTNAME and EXTRACT_SUFX.");
 		if ($distfiles eq "${distname}${extract_sufx}") {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of DISTFILES not necessary. ".
-				"DISTFILES is \${DISTNAME}/\${EXTRACT_SUFX} by default.");
+				"DISTFILES is \${DISTNAME}\${EXTRACT_SUFX} by default.");
 		}
 
 		# make an advice only in certain cases.
@@ -1853,11 +1851,8 @@ sub checkfile_package_Makefile($$$$) {
 	#
 	$wrksrc = '';
 	$wrksrc = $1 if ($tmp =~ /\nWRKSRC[+?]?=[ \t]*([^\n]*)\n/);
-	$realwrksrc = $wrksrc ? "$wrksrc/$distname"
-			      : "\${WRKDIR}/$distname";
-	log_info(NO_FILE, NO_LINE_NUMBER, "WRKSRC seems to be $realwrksrc.");
 
-	if ($bogusdistfiles) {
+	if ($distfiles =~ qr"^\S+$") {
 		if ($distname ne '' && $wrksrc eq '') {
 		    $opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Do not use DISTFILES and DISTNAME ".
 			"to control WRKSRC. how about ".
