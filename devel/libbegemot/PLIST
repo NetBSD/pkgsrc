@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/04/05 11:12:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/08/20 19:36:58 kristerw Exp $
 include/begemot.h
 include/rpoll.h
 lib/libbegemot.la
@@ -38,3 +38,4 @@ man/man3/begemot-xalloc.3
 man/man3/begemot-xfree.3
 man/man3/begemot-xrealloc.3
 man/man3/begemot-xstrsave.3
+man/man3/begemot-Intro.3
