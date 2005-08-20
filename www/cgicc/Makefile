@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/20 11:06:07 grant Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/20 11:14:47 grant Exp $
 
 DISTNAME=	cgicc-3.1.5
 PKGREVISION=	1
@@ -20,7 +20,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/support/ltconfig ${WRKSRC}/example/ltconfig
 
 .include "../../mk/compiler.mk"
 
-.if empty(CC_VERSION:Mgcc)
+.if empty(CC_VERSION:Mgcc*)
 BUILDLINK_TRANSFORM+=	rm:-lstdc++
 .endif
 
