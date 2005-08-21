@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2005/07/23 21:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.389 2005/08/21 11:26:47 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -109,7 +109,6 @@ SUBDIR+=	glut
 SUBDIR+=	gmngview
 SUBDIR+=	gnome-backgrounds
 SUBDIR+=	gnome-icon-theme
-SUBDIR+=	gnome2-pixmaps
 SUBDIR+=	gnuplot
 SUBDIR+=	gnuplot-nox11
 SUBDIR+=	gpaint
