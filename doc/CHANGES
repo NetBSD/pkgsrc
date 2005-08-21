@@ -672,3 +672,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mhonarc to 2.6.15nb1 [kristerw 2005-08-20]
 	Updated graphics/xplot to 0.90.7.1nb2 [kristerw 2005-08-20]
 	Updated devel/libbegemot to 1.9nb2 [kristerw 2005-08-20]
+	Updated pkgtools/pkglint to 4.20 [rillig 2005-08-21]
