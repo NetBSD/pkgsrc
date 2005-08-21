@@ -716,3 +716,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated meta-pkgs/gnome-devel to 2.10.2 [jmmv 2005-08-21]
 	Updated meta-pkgs/gnome-base to 2.10.2 [jmmv 2005-08-21]
 	Updated meta-pkgs/gnome to 2.10.2 [jmmv 2005-08-21]
+	Updated sysutils/grub to 0.97nb1 [jmmv 2005-08-21]
