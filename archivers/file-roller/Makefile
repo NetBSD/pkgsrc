@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2005/08/10 20:56:10 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2005/08/21 11:48:34 jmmv Exp $
 #
 
-DISTNAME=	file-roller-2.10.2
-PKGREVISION=	1
+DISTNAME=	file-roller-2.10.4
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,18 +21,6 @@ USE_TOOLS+=		gmake perl pkg-config
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		file-roller.schemas
-
-EVAL_PREFIX+=		PREFIX.gtar=gtar
-PREFIX.gtar_DEFAULT=	${LOCALBASE}
-CPPFLAGS+=		-DFILEROLLER_TAR="\"${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar\""
-
-EVAL_PREFIX+=		PREFIX.unzip=unzip
-PREFIX.unzip_DEFAULT=	${LOCALBASE}
-CPPFLAGS+=		-DFILEROLLER_UNZIP="\"${PREFIX.unzip}/bin/unzip\""
-
-EVAL_PREFIX+=		PREFIX.zip=zip
-PREFIX.zip_DEFAULT=	${LOCALBASE}
-CPPFLAGS+=		-DFILEROLLER_ZIP="\"${PREFIX.zip}/bin/zip\""
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
