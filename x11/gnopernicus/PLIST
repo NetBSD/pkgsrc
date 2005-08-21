@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2005/05/19 21:09:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/08/21 11:33:23 jmmv Exp $
 bin/gnopernicus
+bin/gnopernicus-mag-config
 bin/srcore
 include/gnopernicus-1.0/libbrl/brlxmlapi.h
 include/gnopernicus-1.0/libke/libke.h
@@ -12,6 +13,7 @@ include/gnopernicus-1.0/libsrs/srs-xml.h
 include/gnopernicus-1.0/libsrutil/SREvent.h
 include/gnopernicus-1.0/libsrutil/SRMessages.h
 include/gnopernicus-1.0/libsrutil/srintl.h
+include/gnopernicus-1.0/libsrutil/sru-debug.h
 include/gnopernicus-1.0/libsrutil/util.h
 lib/gnopernicus-1.0/libbrl.la
 lib/gnopernicus-1.0/libke.la
@@ -89,6 +91,7 @@ ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnopernicus.mo
