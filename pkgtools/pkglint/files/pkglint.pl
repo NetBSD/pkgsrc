@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.252 2005/08/21 18:25:27 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.253 2005/08/21 23:05:01 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -343,6 +343,7 @@ my (%checks) = (
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 my $opt_warn_exec	= true;
+my $opt_warn_internal	= false;
 my $opt_warn_order	= true;
 my $opt_warn_paren	= true;
 my $opt_warn_plist_sort	= false;
@@ -353,6 +354,7 @@ my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
+	"internal"	=> [\$opt_warn_internal, "emit warnings for the pkgsrc infrastructure files"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
 	"paren"		=> [\$opt_warn_paren, "warn about use of \$(VAR) instead of \${VAR} in Makefiles"],
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
@@ -1323,8 +1325,13 @@ sub checklines_Makefile($) {
 		if ($text =~ $regex_varassign) {
 			my ($varname, $op, $value) = ($1, $2, $3);
 
-			if ($op eq ":=" && !($line->file =~ qr"buildlink3.mk$" && $varname =~ "BUILDLINK")) {
-				$line->log_warning("Please use \"=\" instead of \":=\" if possible.");
+			if ($op eq ":=") {
+				if ($line->file =~ qr"buildlink3.mk$" && $varname =~ "BUILDLINK") {
+					# buildlink3 files may use the := operator
+
+				} elsif ($opt_warn_internal || $line->file !~ qr"/mk/") {
+					$line->log_warning("Please use \"=\" instead of \":=\" if possible.");
+				}
 			}
 		}
 	}
