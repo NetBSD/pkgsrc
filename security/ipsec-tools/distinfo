@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/08/07 22:21:05 tron Exp $
+$NetBSD: distinfo,v 1.11 2005/08/21 21:58:41 tron Exp $
 
-SHA1 (ipsec-tools-0.6.1rc1.tar.bz2) = 2ed2692165b1d59074e00d9f3465ed7e416d5b78
-RMD160 (ipsec-tools-0.6.1rc1.tar.bz2) = 985a15f0a004985c22d6d4a55fbeb786291f4d74
-Size (ipsec-tools-0.6.1rc1.tar.bz2) = 663281 bytes
-SHA1 (patch-aa) = 0f6d9495cb4b644883274ae9985e6648630a7252
+SHA1 (ipsec-tools-0.6.1.tar.bz2) = 9bb1c4429b05d66d41bf3b4c11e2a8dadc6a4891
+RMD160 (ipsec-tools-0.6.1.tar.bz2) = f827cd76c656690d48df5e18c88997e984954ebd
+Size (ipsec-tools-0.6.1.tar.bz2) = 663386 bytes
