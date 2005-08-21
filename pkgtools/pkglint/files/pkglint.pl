@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.251 2005/08/21 15:33:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.252 2005/08/21 18:25:27 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1323,7 +1323,7 @@ sub checklines_Makefile($) {
 		if ($text =~ $regex_varassign) {
 			my ($varname, $op, $value) = ($1, $2, $3);
 
-			if ($op eq ":=") {
+			if ($op eq ":=" && !($line->file =~ qr"buildlink3.mk$" && $varname =~ "BUILDLINK")) {
 				$line->log_warning("Please use \"=\" instead of \":=\" if possible.");
 			}
 		}
