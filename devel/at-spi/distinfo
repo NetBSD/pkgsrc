@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2005/03/22 16:25:06 jmmv Exp $
+$NetBSD: distinfo,v 1.14 2005/08/21 11:30:03 jmmv Exp $
 
-SHA1 (at-spi-1.6.3.tar.bz2) = 94f469f9498c1631b4aab5f7b0d44be04492ef83
-RMD160 (at-spi-1.6.3.tar.bz2) = 30555911602d0ffadfbcb731c1101e2a0d295995
-Size (at-spi-1.6.3.tar.bz2) = 496638 bytes
+SHA1 (at-spi-1.6.4.tar.bz2) = 7ceb2472ccdae184dcfd0e00b90ac0ba9ef5a6c3
+RMD160 (at-spi-1.6.4.tar.bz2) = 549f568911173773cc05a2f989ad01330343ac50
+Size (at-spi-1.6.4.tar.bz2) = 499226 bytes
