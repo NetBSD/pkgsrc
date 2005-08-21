@@ -1,0 +1,142 @@
+$NetBSD: patch-ac,v 1.3 2005/08/21 15:08:46 jmmv Exp $
+
+--- stage2/boot.c	2004-03-30 13:44:08.000000000 +0200
++++ stage2/boot.c	2005-07-25 21:55:29.000000000 +0200
+@@ -22,6 +22,7 @@
+ #include "shared.h"
+ 
+ #include "freebsd.h"
++#include "netbsd_reboot.h"
+ #include "imgact_aout.h"
+ #include "i386-elf.h"
+ 
+@@ -872,6 +873,91 @@
+  *  variables.
+  */
+ 
++int 
++netbsd_value(char arg) 
++{
++    switch (arg) {
++        case 'a':
++            return(NB_RB_ASKNAME);
++            break;
++        case 'b':
++            return(NB_RB_HALT);
++            break;
++        case 'c':
++            return(NB_RB_USERCONF);
++            break;
++        case 'd':
++            return(NB_RB_KDB);
++            break;
++        case 'm':
++            return(NB_RB_MINIROOT);
++            break;
++        case 'q':
++            return(NB_AB_QUIET);
++            break;
++        case 's':
++            return(NB_RB_SINGLE);
++            break;
++        case 'v':
++            return(NB_AB_VERBOSE);
++            break;
++        case 'x':
++            return(NB_AB_DEBUG);
++            break;
++        case 'z':
++            return(NB_AB_SILENT);
++            break;
++        default:
++            break;
++    }
++    return(0);
++}
++
++int 
++freebsd_value(char arg) 
++{
++    switch (arg) {
++        case 'C':
++            return(RB_CDROM);
++            break;
++        case 'a':
++            return(RB_ASKNAME);
++            break;
++        case 'b':
++            return(RB_HALT);
++            break;
++        case 'c':
++            return(RB_CONFIG);
++            break;
++        case 'd':
++            return(RB_KDB);
++            break;
++        case 'D':
++            return(RB_MULTIPLE);
++            break;
++        case 'g':
++            return(RB_GDB);
++            break;
++        case 'h':
++            return(RB_SERIAL);
++            break;
++        case 'm':
++            return(RB_MUTE);
++            break;
++        case 'r':
++            return(RB_DFLTROOT);
++            break;
++        case 's':
++            return(RB_SINGLE);
++            break;
++        case 'v':
++            return(RB_VERBOSE);
++            break;
++        default:
++            break;
++    }
++    return(0);
++}
+ 
+ void
+ bsd_boot (kernel_t type, int bootdev, char *arg)
+@@ -894,31 +980,12 @@
+ 	{
+ 	  while (*str && *str != ' ')
+ 	    {
+-	      if (*str == 'C')
+-		clval |= RB_CDROM;
+-	      if (*str == 'a')
+-		clval |= RB_ASKNAME;
+-	      if (*str == 'b')
+-		clval |= RB_HALT;
+-	      if (*str == 'c')
+-		clval |= RB_CONFIG;
+-	      if (*str == 'd')
+-		clval |= RB_KDB;
+-	      if (*str == 'D')
+-		clval |= RB_MULTIPLE;
+-	      if (*str == 'g')
+-		clval |= RB_GDB;
+-	      if (*str == 'h')
+-		clval |= RB_SERIAL;
+-	      if (*str == 'm')
+-		clval |= RB_MUTE;
+-	      if (*str == 'r')
+-		clval |= RB_DFLTROOT;
+-	      if (*str == 's')
+-		clval |= RB_SINGLE;
+-	      if (*str == 'v')
+-		clval |= RB_VERBOSE;
+-	      str++;
++        if (type == KERNEL_TYPE_NETBSD) {
++            clval |= netbsd_value(*str);
++        } else {
++            clval |= freebsd_value(*str);
++        }
++        str++;
+ 	    }
+ 	  continue;
+ 	}
