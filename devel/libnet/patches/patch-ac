@@ -1,7 +1,25 @@
-$NetBSD: patch-ac,v 1.1 2005/03/25 17:52:32 adrianp Exp $
+$NetBSD: patch-ac,v 1.2 2005/08/21 12:21:55 grant Exp $
 
---- configure.orig	2005-03-25 17:38:37.000000000 +0000
+--- configure.orig	1999-10-28 04:47:27.000000000 +1000
 +++ configure
+@@ -503,7 +503,7 @@ fi
+ 
+ ac_ext=c
+ # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CPP $CPPFLAGS'
++ac_cpp='${CC-cc} -E $CPPFLAGS'
+ ac_compile='${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CC-cc} -o conftest $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cc_cross
+@@ -737,7 +737,7 @@ echo "configure:737: checking whether th
+ 
+ ac_ext=c
+ # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CPP $CPPFLAGS'
++ac_cpp='${CC-cc} -E $CPPFLAGS'
+ ac_compile='${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CC-cc} -o conftest $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cc_cross
 @@ -1209,7 +1209,7 @@ fi
  echo $ac_n "checking low-level packet interface type""... $ac_c" 1>&6
  echo "configure:1211: checking low-level packet interface type" >&5
