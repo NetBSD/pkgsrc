@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/05/18 16:24:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/08/21 11:29:47 jmmv Exp $
 share/icons/Crux/12x12/filesystems/gnome-fs-directory.png
 share/icons/Crux/12x12/filesystems/gnome-fs-regular.png
 share/icons/Crux/192x192/filesystems/gnome-fs-directory.png
@@ -1135,6 +1135,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-themes.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-themes.mo
