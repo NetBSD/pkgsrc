@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:26 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/21 13:40:24 grant Exp $
 
 DISTNAME=	mDNSResponder-107.1
 PKGREVISION=	1
@@ -27,13 +27,13 @@ MAKE_ENV+=	os=solaris
 .elif ${OPSYS} == "Linux"
 MAKE_ENV+=	os=linux
 .elif ${OPSYS} == "Darwin"
-.if !empty(OS_VERSION:M[6]\.*)
+.  if !empty(OS_VERSION:M6*)
 MAKE_ENV+=	os=jaguar
-.elif !empty(OS_VERSION:M[7]\.*)
+.  elif !empty(OS_VERSION:M7*)
 MAKE_ENV+=	os=panther
-.elif !empty(OS_VERSION:M[8]\.*)
+.  elif !empty(OS_VERSION:M8*)
 MAKE_ENV+=	os=tiger
-.endif
+.  endif
 SO_SUFFIX=	dylib
 .else
 MAKE_ENV+=	os=netbsd
