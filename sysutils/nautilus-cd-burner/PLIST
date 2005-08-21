@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/04/19 19:22:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/08/21 11:48:54 jmmv Exp $
 bin/nautilus-cd-burner
 include/libnautilus-burn/nautilus-burn-drive-selection.h
 include/libnautilus-burn/nautilus-burn-drive.h
@@ -32,6 +32,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/nautilus-cd-burner.mo
