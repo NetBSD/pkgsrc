@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.13 2005/08/20 02:22:02 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.14 2005/08/21 22:27:09 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -18,14 +18,13 @@ BSD_PKG_INSTALL_MK=	1
 # stripping ${PREFIX}/ from a pathname. 
 _FUNC_STRIP_PREFIX= \
 	strip_prefix() {						\
-	  { echo "$$1"; echo ${PREFIX:Q}/; }				\
-	  | ${AWK} 'NR==1 { s=$$0 } NR==2 { prefix=$$0 }		\
-	    END { plen = length(prefix);				\
+	  ${AWK} 'END {							\
+	    plen = length(prefix);					\
 	      if (substr(s, 1, plen) == prefix) {			\
 	        s = substr(s, 1 + plen, length(s) - plen);		\
 	      }								\
 	      print s;							\
-	    }';								\
+	    }' s="$$1" prefix="$$2" /dev/null;				\
 	}
 
 DEINSTALL_FILE=		${PKG_DB_TMPDIR}/+DEINSTALL
