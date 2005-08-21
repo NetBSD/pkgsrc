@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/06 04:35:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/08/21 11:27:31 jmmv Exp $
 bin/gnome-menu-spec-test
 include/gnome-menus/menu-tree.h
 lib/libgnome-menu.la
@@ -37,7 +37,9 @@ ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-menus.mo
@@ -58,7 +60,9 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-menus.mo
@@ -67,6 +71,7 @@ ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
 @dirrm share/examples/gnome-menus/xdg/menus
