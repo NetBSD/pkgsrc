@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.250 2005/08/21 10:20:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.251 2005/08/21 15:33:45 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -95,6 +95,7 @@ BEGIN {
 		NO_FILE NO_LINE_NUMBER
 		log_error log_warning log_info log_subinfo
 		print_summary_and_exit set_verbose is_verbose
+		set_gcc_output_format
 	);
 	import PkgLint::Util qw(false true);
 }
@@ -105,6 +106,7 @@ use constant NO_LINE_NUMBER	=> undef;
 my $errors		= 0;
 my $warnings		= 0;
 my $verbose_flag	= false;
+my $gcc_output_format	= false;
 
 sub log_message($$$$$) {
 	my ($file, $subr, $lineno, $type, $message) = @_;
@@ -117,21 +119,29 @@ sub log_message($$$$$) {
 		$file =~ s,/+,/,g;
 	}
 
-	$text = "${type}:";
-	if (defined($subr)) {
-		$text .= " [${subr}]";
+	$text = "";
+	$sep = "";
+	if (!$gcc_output_format && defined($type)) {
+		$text .= "${sep}${type}:";
+		$sep = " ";
 	}
-	if (defined($file) && defined($lineno)) {
-		$text .= " ${file}:${lineno}";
+	if (defined($file)) {
+		$text .= defined($lineno)
+		    ? "${sep}${file}:${lineno}"
+		    : "${sep}${file}";
 		$sep = ": ";
-	} elsif (defined($file)) {
-		$text .= " ${file}";
-		$sep = ": ";
-	} else {
+	}
+	if ($gcc_output_format && defined($type)) {
+		$text .= "${sep}${type}:";
+		$sep = " ";
+	}
+	if (defined($subr)) {
+		$text .= "${sep}[${subr}]";
 		$sep = " ";
 	}
 	if (defined($message)) {
 		$text .= "${sep}${message}";
+		$sep = "";
 	}
 
 	print("${text}\n");
@@ -139,24 +149,24 @@ sub log_message($$$$$) {
 
 sub log_error($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message($file, undef, $lineno, "FATAL", $msg);
+	log_message($file, undef, $lineno, $gcc_output_format ? "error" : "ERROR", $msg);
 	$errors++;
 }
 sub log_warning($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message($file, undef, $lineno, "WARN", $msg);
+	log_message($file, undef, $lineno, $gcc_output_format ? "warning" : "WARN", $msg);
 	$warnings++;
 }
 sub log_info($$$) {
 	my ($file, $lineno, $msg) = @_;
 	if ($verbose_flag) {
-		log_message($file, undef, $lineno, "OK", $msg);
+		log_message($file, undef, $lineno, $gcc_output_format ? "info" : "OK", $msg);
 	}
 }
 sub log_subinfo($$$$) {
 	my ($subr, $file, $lineno, $msg) = @_;
 	if ($verbose_flag) {
-		log_message($file, $subr, $lineno, "OK", $msg);
+		log_message($file, $subr, $lineno, $gcc_output_format ? "info" : "OK", $msg);
 	}
 }
 
@@ -178,9 +188,10 @@ sub set_verbose($) {
 	$verbose_flag = $verbose;
 }
 
-sub is_verbose() {
-	return $verbose_flag;
+sub set_gcc_output_format() {
+	$gcc_output_format = true;
 }
+
 #== End of PkgLint::Logging ===============================================
 
 package PkgLint::FileUtil::Line;
@@ -296,16 +307,17 @@ my $opt_debug		= false;
 my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
 my (%options) = (
-	"-d"		=> "Enable debugging mode",
-	"-F"		=> "Try to automatically fix some errors (experimental)",
-	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
-	"-q"		=> "don't print a summary line when finishing",
-	"-I"		=> "dump the Makefile after parsing",
 	"-B#"		=> "allow # contiguous blank lines in Makefiles",
 	"-C{check,...}"	=> "enable or disable specific checks",
-	"-W{warn,...}"	=> "enable or disable specific warnings",
-	"-h|--help"	=> "print a detailed help message",
+	"-F"		=> "Try to automatically fix some errors (experimental)",
+	"-I"		=> "dump the Makefile after parsing",
 	"-V|--version"	=> "print the version number of pkglint",
+	"-W{warn,...}"	=> "enable or disable specific warnings",
+	"-d"		=> "Enable debugging mode",
+	"-g"		=> "Mimic the gcc output format",
+	"-h|--help"	=> "print a detailed help message",
+	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
+	"-q"		=> "don't print a summary line when finishing",
 	"-v|--verbose"	=> "print progress messages",
 );
 
@@ -452,21 +464,31 @@ sub parse_multioption($$) {
 sub parse_command_line() {
 	my (%options) = (
 		"autofix|F" => \$opt_autofix,
-		"warning|W=s" => sub {
-			my ($opt, $val) = @_;
-			parse_multioption($val, \%warnings);
-		},
 		"check|C=s" => sub {
 			my ($opt, $val) = @_;
 			parse_multioption($val, \%checks);
 		},
-		"help|h" => sub { help(*STDOUT, 0, 1); },
-		"verbose|v" => sub { PkgLint::Logging::set_verbose(true); },
-		"version|V" => sub { print("$conf_distver\n"); exit(0); },
 		"contblank|B=i" => \$opt_contblank,
 		"debug|d" => \$opt_debug,
 		"dumpmakefile|I" => \$opt_dumpmakefile,
+		"gcc-output-format|g" => sub {
+			PkgLint::Logging::set_gcc_output_format();
+		},
+		"help|h" => sub {
+			help(*STDOUT, 0, 1);
+		},
 		"quiet|q" => \$opt_quiet,
+		"verbose|v" => sub {
+			PkgLint::Logging::set_verbose(true);
+		},
+		"version|V" => sub {
+			print("$conf_distver\n");
+			exit(0);
+		},
+		"warning|W=s" => sub {
+			my ($opt, $val) = @_;
+			parse_multioption($val, \%warnings);
+		},
 	);
 	{
 		local $SIG{__WARN__} = sub {};
