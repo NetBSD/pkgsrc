@@ -1,4 +1,4 @@
-# $NetBSD: arg-pp-sunpro-cxx,v 1.1 2005/08/20 14:37:53 grant Exp $
+# $NetBSD: arg-pp-sunpro-cxx,v 1.2 2005/08/21 02:39:52 grant Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,6 +46,7 @@ case $arg in
 			prepend_queue argbuf $nextarg2
 			;;
 		*)
+			argok=yes
 			$debug_log $wrapperlog "    (arg-pp-sunpro-cxx) pre:  $nextarg2"
 			prepend_queue argbuf $nextarg2
 			$debug_log $wrapperlog "    (arg-pp-sunpro-cxx) pre:  $nextarg1"
