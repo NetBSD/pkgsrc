@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3816 2005/08/20 02:21:21 schmonz Exp $
+$NetBSD: TODO,v 1.3817 2005/08/21 11:50:38 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -279,14 +279,6 @@ Suggested new packages
 	and Xpm. You control a blue (good) car, that has to collect
 	yellow flags around a maze-like map, while avoiding the
 	red (bad) cars.
-
-	Evince [wip/evince]
-	http://www.gnome.org/projects/evince/
-	A document viewer for multiple document formats like pdf,
-	postscript, and many others. The goal of evince is to
-	replace the multiple document viewers that exist on the
-	GNOME Desktop, like ggv, gpdf, and xpdf with a single simple
-	application.
 
 Suggested package updates
 =========================
