@@ -98,11 +98,12 @@
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)sigcompat.c	5.3 (Berkeley) 2/24/91";*/
-static char *rcsid = "$Id: sigcompat.c,v 1.1.1.1 2004/03/11 13:04:12 grant Exp $";
+static char *rcsid = "$Id: sigcompat.c,v 1.2 2005/08/21 12:35:00 grant Exp $";
 #endif				/* LIBC_SCCS and not lint */
 
 #undef signal
 #include <stdio.h>
+#include <string.h>
 #include <sys/param.h>
 #include <sys/cdefs.h>
 #include "assert.h"
