@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.248 2005/08/20 10:53:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.249 2005/08/21 08:55:52 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -356,6 +356,8 @@ my $regex_validchars	= qr"[\011\040-\176]";
 my $regex_boolean	= qr"^(?:YES|yes|NO|no)$";
 my $regex_yes_or_undef	= qr"^(?:YES|yes)$";
 my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
+my $regex_pkgname	= qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
+my $regex_unresolved	= qr"\$\{";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 my $regex_varassign	= qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)";
@@ -1300,8 +1302,8 @@ sub checklines_Makefile($) {
 	checklines_trailing_empty_lines($lines);
 }
 
-sub expand_variable($$$) {
-	my ($whole, $varname, $default_value) = @_;
+sub expand_variable($$) {
+	my ($whole, $varname) = @_;
 	my ($value, $re);
 
 	$re = qr"\n${varname}([+:?]?)=[ \t]*([^\n#]*)";
@@ -1313,21 +1315,27 @@ sub expand_variable($$$) {
 		}
 	}
 	if (!defined($value)) {
-		return $default_value;
+		return undef;
 	}
+
 	$value =~ s,\$\{\.CURDIR\},.,g;
 	$value =~ s,\$\{PKGSRCDIR\},../..,g;
 	$value =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,g;
 	if (defined($pkgdir)) {
 		$value =~ s,\$\{PKGDIR\},$pkgdir,g;
 	}
-	if ($value =~ qr"\$") {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "The variable ${varname} could not be resolved completely.");
-		log_warning(NO_FILE, NO_LINE_NUMBER, sprintf("Its value would be \"${value}\"---using %s instead.",
-		    defined($default_value) ? "\"${default_value}\"" : "(undef)"));
-		$value = $default_value;
+	if ($value =~ $regex_unresolved) {
+		log_subinfo("expand_variable", NO_FILE, NO_LINE_NUMBER, "The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
 	}
 	return $value;
+}
+
+sub set_default_value($$) {
+	my ($varref, $value) = @_;
+
+	if (!defined(${$varref}) || ${$varref} =~ $regex_unresolved) {
+		${$varref} = $value;
+	}
 }
 
 sub load_package_Makefile($$$$) {
@@ -1349,11 +1357,17 @@ sub load_package_Makefile($$$$) {
 		}
 	}
 
-	$distinfo_file = expand_variable($whole, "DISTINFO_FILE", "distinfo");
-	$filesdir = expand_variable($whole, "FILESDIR", "files");
-	$patchdir = expand_variable($whole, "PATCHDIR", "patches");
-	$pkgdir = expand_variable($whole, "PKGDIR", ".");
-	$scriptdir = expand_variable($whole, "SCRIPTDIR", "scripts");
+	$distinfo_file = expand_variable($whole, "DISTINFO_FILE");
+	$filesdir = expand_variable($whole, "FILESDIR");
+	$patchdir = expand_variable($whole, "PATCHDIR");
+	$pkgdir = expand_variable($whole, "PKGDIR");
+	$scriptdir = expand_variable($whole, "SCRIPTDIR");
+
+	set_default_value(\$distinfo_file, "distinfo");
+	set_default_value(\$filesdir, "files");
+	set_default_value(\$patchdir, "patches");
+	set_default_value(\$pkgdir, ".");
+	set_default_value(\$scriptdir, "scripts");
 
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "DISTINFO_FILE=$distinfo_file");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "FILESDIR=$filesdir");
@@ -1368,17 +1382,17 @@ sub load_package_Makefile($$$$) {
 
 sub checkfile_package_Makefile($$$$) {
 	my ($dir, $fname, $rawwhole, $lines) = @_;
-	my ($pkgdir, $distname, $svr4_pkgname, $category, $distfiles,
+	my ($distname, $svr4_pkgname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
-	my ($whole, $tmp, $idx, @sections, @varnames);
+	my ($abspkgdir, $whole, $tmp, $idx, @sections, @varnames);
 	
 	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
 	checklines_Makefile($lines);
 
-	$pkgdir = Cwd::abs_path($dir);
-	$category = basename(dirname($pkgdir));
+	$abspkgdir = Cwd::abs_path($dir);
+	$category = basename(dirname($abspkgdir));
 	$whole = "\n${rawwhole}";
 
 	#
@@ -1551,16 +1565,15 @@ sub checkfile_package_Makefile($$$$) {
 	}
 
 	# check DISTFILES and related items.
-	$distname     = expand_variable($tmp, "DISTNAME", basename($pkgdir) . "-0.0");
-	$pkgname      = expand_variable($tmp, "PKGNAME", $distname);
-	$svr4_pkgname = expand_variable($tmp, "SVR4_PKGNAME", $pkgname);
-	$extract_sufx = expand_variable($tmp, "EXTRACT_SUFX", undef);
-	$distfiles    = expand_variable($tmp, "DISTFILES", "");
+	$distname     = expand_variable($tmp, "DISTNAME");
+	$pkgname      = expand_variable($tmp, "PKGNAME");
+	$svr4_pkgname = expand_variable($tmp, "SVR4_PKGNAME");
+	$extract_sufx = expand_variable($tmp, "EXTRACT_SUFX");
+	$distfiles    = expand_variable($tmp, "DISTFILES");
 
-	# check bogus EXTRACT_SUFX.
 	if (defined($extract_sufx)) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Seen EXTRACT_SUFX, checking value.");
-		if ($distfiles ne '' && ($extract_sufx eq '.tar.gz')) {
+		if (defined($distfiles)) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "no need to define EXTRACT_SUFX if ".
 				"DISTFILES is defined.");
 		}
@@ -1573,52 +1586,32 @@ sub checkfile_package_Makefile($$$$) {
 		$extract_sufx = '.tar.gz';
 	}
 
-	if (defined($pkgname) && $pkgname eq $distname) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default, ".
-			"you don't need to define PKGNAME.");
+	if ($opt_warn_vague && defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
+		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
 	}
-	if ($svr4_pkgname ne '') {
-		if (length($svr4_pkgname) > 5) {
-			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "SVR4_PKGNAME should not be longer ".
-				"than 5 characters.");
-		}
-	}
-	my $i = defined($pkgname) ? $pkgname : $distname;
-	$i =~ s/\${DISTNAME[^}]*}/$distname/g;
-	if ($i =~ /-([^-]+)$/) {
-		my ($j, $k) = ($`, $1);
-		# Be very smart. Kids, don't do this at home.
-		if ($k =~ /\$(\(|\{)([A-Z_-]+)(\)|\})/) {
-			my $k1 = $2;
-			$k = $1 if ($rawwhole =~ /\n$k1[ \t]*?=[ \t]*([^\n]+)\n/);
-		}
-		if ($k =~ /^pl[0-9]*$/
-		 || $k =~ /^[0-9]*[A-Za-z]*[0-9]*(\.[0-9]*[A-Za-z]*[0-9]*)*$/) {
-			log_info(NO_FILE, NO_LINE_NUMBER, "Trailing part of PKGNAME\"-$k\" ".
-				"looks fine.");
-		} else {
-			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Version number part of PKGNAME".
-				(!defined($pkgname)
-					? ', which is derived from DISTNAME, '
-					: ' ').
-				"looks illegal. You should modify \"-$k\".");
-		}
-	} else {
-		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "PKGNAME".
-			(!defined($pkgname)
-				? ', which is derived from DISTNAME, '
-				: ' ').
-			"must come with version number, like \"foobaa-1.0\".");
-		if ($i =~ /_pl[0-9]*$/
-		 || $i =~ /_[0-9]*[A-Za-z]?[0-9]*(\.[0-9]*[A-Za-z]?[0-9]*)*$/) {
-			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "You seem to be using underline ".
-				"before version number in PKGNAME. ".
-				"it has to be hyphen.");
+	if ($opt_warn_vague && defined($svr4_pkgname)) {
+		if ($svr4_pkgname =~ $regex_unresolved) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "SVR4_PKGNAME must not contain references to other variables.");
+		} elsif (length($svr4_pkgname) > 5) {
+			log_error(NO_FILE, NO_LINE_NUMBER, "SVR4_PKGNAME must not be longer than 5 characters.");
 		}
 	}
-	if ($distname =~ /(nb\d*)/) {
+
+	if ($opt_warn_vague && defined($pkgname) && $pkgname !~ $regex_unresolved && $pkgname !~ $regex_pkgname) {
+		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME should have the form packagename-version, where version consists only of digits, letters and dots.");
+	}
+
+	if ($opt_warn_vague && !defined($pkgname) && defined($distname) && $distname !~ $regex_unresolved && $distname !~ $regex_pkgname) {
+		log_warning(NO_FILE, NO_LINE_NUMBER, "As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
+	}
+
+	if (defined($distname) && $distname =~ qr"(nb\d+)") {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Is '$1' really ok on DISTNAME, ".
 				"or is it intended for PKGNAME?");
+	}
+
+	if (!defined($pkgname)) {
+		$pkgname = $distname;
 	}
 
 	# if DISTFILES have only single item, it is better to avoid DISTFILES
@@ -1628,19 +1621,19 @@ sub checkfile_package_Makefile($$$$) {
 	# should be
 	#	DISTNAME=     package-1.0
 	#	EXTRACT_SUFX= .tgz
-	if ($distfiles =~ /^\S+$/) {
+	if ($opt_warn_vague && defined($distfiles) && $distfiles !~ $regex_unresolved && $distfiles =~ /^\S+$/) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Seen DISTFILES with single item, checking value.");
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use of DISTFILES with single file ".
+		log_warning(NO_FILE, NO_LINE_NUMBER, "Use of DISTFILES with single file ".
 			"is discouraged. Distribution filename should be set by ".
 			"DISTNAME and EXTRACT_SUFX.");
-		if ($distfiles eq "${distname}${extract_sufx}") {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of DISTFILES not necessary. ".
+		if (defined($distname) && defined($extract_sufx) && $distfiles eq "${distname}${extract_sufx}") {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of DISTFILES not necessary. ".
 				"DISTFILES is \${DISTNAME}\${EXTRACT_SUFX} by default.");
 		}
 
 		# make an advice only in certain cases.
 		if (defined($pkgname) && $distfiles =~ /^$pkgname([-\.].+)$/) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "How about \"DISTNAME=$pkgname\"".
+			log_warning(NO_FILE, NO_LINE_NUMBER, "How about \"DISTNAME=$pkgname\"".
 				(($1 eq '.tar.gz')
 					? ""
 					: " and \"EXTRACT_SUFX=$1\"").
@@ -1705,7 +1698,7 @@ sub checkfile_package_Makefile($$$$) {
 	if ($tmp !~ /\nHOMEPAGE[+?]?=[ \t]*([^\n]*)\n/ || $1 =~ /^[ \t]*$/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please add HOMEPAGE if the package has one.");
 	} else {
-		$i = $1;
+		my $i = $1;
 		if ($i =~ m#^\w+://#) {
 			if ($i !~ m#^\w+://[^\n/]+/#) {
 				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" does not ".
@@ -1852,8 +1845,8 @@ sub checkfile_package_Makefile($$$$) {
 	$wrksrc = '';
 	$wrksrc = $1 if ($tmp =~ /\nWRKSRC[+?]?=[ \t]*([^\n]*)\n/);
 
-	if ($distfiles =~ qr"^\S+$") {
-		if ($distname ne '' && $wrksrc eq '') {
+	if (defined($distfiles) && $distfiles =~ qr"^\S+$" && defined($distname)) {
+		if (defined($wrksrc) && $wrksrc ne "\${WRKDIR\}") {
 		    $opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Do not use DISTFILES and DISTNAME ".
 			"to control WRKSRC. how about ".
 			"\"WRKSRC=\${WRKDIR}/$distname\"?");
