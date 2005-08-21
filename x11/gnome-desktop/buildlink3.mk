@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2005/03/22 16:09:27 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2005/08/21 11:26:47 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_DESKTOP_BUILDLINK3_MK:=	${GNOME_DESKTOP_BUILDLINK3_MK}+
@@ -17,7 +17,6 @@ BUILDLINK_PKGSRCDIR.gnome-desktop?=	../../x11/gnome-desktop
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../graphics/gnome2-pixmaps/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
