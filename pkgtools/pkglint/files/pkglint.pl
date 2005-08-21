@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.249 2005/08/21 08:55:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.250 2005/08/21 10:20:13 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -360,7 +360,7 @@ my $regex_pkgname	= qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 my $regex_unresolved	= qr"\$\{";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
-my $regex_varassign	= qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)";
+my $regex_varassign	= qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=|:=)\s*(.*)";
 
 # Global variables
 my $pkgdir;
@@ -1296,6 +1296,14 @@ sub checklines_Makefile($) {
 		$cont = ($text eq "") ? $cont + 1 : 0;
 		if ($cont == $opt_contblank + 1) {
 			$line->log_warning("${cont} contiguous blank lines, should be at most ${opt_contblank}.");
+		}
+
+		if ($text =~ $regex_varassign) {
+			my ($varname, $op, $value) = ($1, $2, $3);
+
+			if ($op eq ":=") {
+				$line->log_warning("Please use \"=\" instead of \":=\" if possible.");
+			}
 		}
 	}
 
