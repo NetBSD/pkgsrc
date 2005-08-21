@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2005/08/06 14:07:07 salo Exp $
+# $NetBSD: Makefile,v 1.121 2005/08/21 04:47:24 grant Exp $
 
 DISTNAME=	netpbm-10.28
 CATEGORIES=	graphics
@@ -44,6 +44,15 @@ SUBST_FILES.bash=	converter/other/anytopnm			\
 # Fiasco fails to compile on Darwin-8.x.
 .if !empty(MACHINE_PLATFORM:MDarwin-8.*-*)
 MAKE_ENV+=	BUILD_FIASCO=N
+.endif
+
+.if ${OPSYS} == "SunOS"
+.  include "../../graphics/jasper/buildlink3.mk"
+MAKE_ENV+=	JASPERLIB="${LDFLAGS} -ljasper"
+MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:Q}
+.else
+MAKE_ENV+=	JASPERLIB='$$(INTERNAL_JASPERLIB)'
+MAKE_ENV+=	JASPERHDR_DIR='$$(INTERNAL_JASPERHDR_DIR)'
 .endif
 
 pre-configure:
