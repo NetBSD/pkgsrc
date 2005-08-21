@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.22 2005/06/09 19:49:48 rillig Exp $
+# $NetBSD: subst.mk,v 1.23 2005/08/21 22:00:07 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -11,25 +11,25 @@
 #	A list of class names. 	A new class name must be appended (+=).
 #
 # SUBST_STAGE.<class>
-#	"stage" at which we do the text replacement, e.g. pre-configure,
-#	post-build, etc.
+#	"stage" at which we do the text replacement. Should be one of
+#	{pre,do,post}-{extract,patch,configure,build,install}.
 #
 # SUBST_MESSAGE.<class>
-#	message to display, noting what is being substituted
+#	The message to display when the substitution is done.
 #
 # SUBST_FILES.<class>
-#	files on which to run the substitution; these are relative to
-#	${WRKSRC}
+#	A list of file patterns on which to run the substitution;
+#	the filenames are relative to ${WRKSRC}.
 #
 # SUBST_SED.<class>
-#	sed(1) substitution expression to run on the specified files
+#	sed(1) substitution expression to run on the specified files.
 #
 # SUBST_FILTER_CMD.<class>
-#	filter used to perform the actual substitution on the specified
+#	Filter used to perform the actual substitution on the specified
 #	files.  Defaults to ${SED} ${SUBST_SED.<class>}.
 #
 # SUBST_POSTCMD.<class>
-#	command to clean up after sed(1). Defaults to ${RM} -f
+#	Command to clean up after sed(1). Defaults to ${RM} -f
 #	$$file${_SUBST_BACKUP_SUFFIX}. For debugging, set it to ${DO_NADA}.
 
 ECHO_SUBST_MSG?=	${ECHO}
