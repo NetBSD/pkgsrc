@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.11 2005/08/15 12:57:07 rillig Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.12 2005/08/21 07:29:48 rillig Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -49,11 +49,13 @@ _EXTRACT_SUFFIXES+=	.zoo
 _EXTRACT_SUFFIXES+=	.bin
 _EXTRACT_SUFFIXES+=	.rar
 
-.if !empty(EXTRACT_ONLY:M*.tar)    || !empty(EXTRACT_SUFX:M*.tar)   || \
-    !empty(EXTRACT_ONLY:M*.tar.*)  || !empty(EXTRACT_SUFX:M*.tar.*) || \
-    !empty(EXTRACT_ONLY:M*.tbz)    || !empty(EXTRACT_SUFX:M*.tbz)   || \
-    !empty(EXTRACT_ONLY:M*.tgz)    || !empty(EXTRACT_SUFX:M*.tgz)   || \
-    !empty(EXTRACT_ONLY:M*_tar.gz) || !empty(EXTRACT_SUFX:M*_tar.gz)
+_EXTRACT_PATTERNS=	${EXTRACT_ONLY} ${EXTRACT_SUFX}
+
+.if !empty(_EXTRACT_PATTERNS:M*.tar) || \
+    !empty(_EXTRACT_PATTERNS:M*.tar.*) || \
+    !empty(_EXTRACT_PATTERNS:M*.tbz) || \
+    !empty(_EXTRACT_PATTERNS:M*.tgz) || \
+    !empty(_EXTRACT_PATTERNS:M*_tar.gz)
 
 .  if !empty(EXTRACT_USING:Mgtar)
 USE_TOOLS+=	gtar
@@ -63,26 +65,26 @@ USE_TOOLS+=	tar
 USE_TOOLS+=	pax
 .  endif
 .endif
-.if !empty(EXTRACT_ONLY:M*.bz2) || !empty(EXTRACT_ONLY:M*.tbz) || \
-    !empty(EXTRACT_SUFX:M*.bz2) || !empty(EXTRACT_SUFX:M*.tbz)
+.if !empty(_EXTRACT_PATTERNS:M*.bz2) || \
+    !empty(_EXTRACT_PATTERNS:M*.tbz)
 USE_TOOLS+=	bzcat
 .endif
-.if !empty(EXTRACT_ONLY:M*.zip) || !empty(EXTRACT_SUFX:M*.zip)
+.if !empty(_EXTRACT_PATTERNS:M*.zip)
 USE_TOOLS+=	unzip
 .endif
-.if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha) || \
-    !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
+.if !empty(_EXTRACT_PATTERNS:M*.lzh) || \
+    !empty(_EXTRACT_PATTERNS:M*.lha)
 USE_TOOLS+=	lha
 .endif
-.if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
-    !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz) || \
-    !empty(EXTRACT_ONLY:M*.Z) || !empty(EXTRACT_SUFX:M*.Z)
+.if !empty(_EXTRACT_PATTERNS:M*.gz) || \
+    !empty(_EXTRACT_PATTERNS:M*.tgz) || \
+    !empty(_EXTRACT_PATTERNS:M*.Z)
 USE_TOOLS+=	gzcat
 .endif
-.if !empty(EXTRACT_ONLY:M*.zoo) || !empty(EXTRACT_SUFX:M*.zoo)
+.if !empty(_EXTRACT_PATTERNS:M*.zoo)
 USE_TOOLS+=	unzoo
 .endif
-.if !empty(EXTRACT_ONLY:M*.rar) || !empty(EXTRACT_SUFX:M*.rar)
+.if !empty(_EXTRACT_PATTERNS:M*.rar)
 USE_TOOLS+=	unrar
 .endif
 
