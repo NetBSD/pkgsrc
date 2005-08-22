@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3818 2005/08/22 09:50:14 cube Exp $
+$NetBSD: TODO,v 1.3819 2005/08/22 15:36:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -440,7 +440,6 @@ Suggested package updates
 	o elm-me-2.4pl122
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
-	o enigma-0.92
 	o enscript-1.6.4
 	o erlang-10b-6
 	o esh-0.8.5
