@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/03/01 22:46:26 heinz Exp $
+$NetBSD: patch-ad,v 1.2 2005/08/22 15:35:37 adam Exp $
 
---- doc/manual/Makefile.in.orig	Sat Oct 11 19:19:56 2003
+--- doc/manual/Makefile.in.orig	2005-05-27 05:54:42.000000000 +0000
 +++ doc/manual/Makefile.in
-@@ -146,7 +146,7 @@ HTML = $(wildcard enigma_*.html) \
+@@ -177,7 +177,7 @@ HTML = $(wildcard enigma_*.html) \
  	index.html
  
  
