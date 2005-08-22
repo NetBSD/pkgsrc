@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:45:28 tv Exp $
+# $NetBSD: Makefile,v 1.23 2005/08/22 17:15:23 reed Exp $
 
 DISTNAME=	libusb-0.1.10a
 CATEGORIES=	devel
@@ -15,6 +15,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-build-docs
 
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
-ONLY_FOR_PLATFORM+=	OpenBSD-*-*
+ONLY_FOR_PLATFORM+=	OpenBSD-*-* DragonFly-*-*
 
 .include "../../mk/bsd.pkg.mk"
