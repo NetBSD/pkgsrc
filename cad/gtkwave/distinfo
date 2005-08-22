@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 14:59:24 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/08/22 12:25:00 cube Exp $
 
-SHA1 (gtkwave-2.0.0pre3-20030319.tar.gz) = 1eed6d1fba08ab5f92df0ba3b67c44fd252661f1
-RMD160 (gtkwave-2.0.0pre3-20030319.tar.gz) = 79d59ff1e6e881375c1a22f4ba816ef7946e741a
-Size (gtkwave-2.0.0pre3-20030319.tar.gz) = 706605 bytes
-SHA1 (patch-aa) = 1257d680ff1c6d4c0370261cdd025e9a00ab9a3a
-SHA1 (patch-ab) = a7c78e231235c1c528019c6fd36e5737cf1735bc
-SHA1 (patch-ac) = 4140c2c0204836147122b1c1051e5f68b0a1bf1d
+SHA1 (gtkwave-2.0.0pre5.tar.gz) = 03ad81b6c196f01fe9c0d93755965f5a91b7043d
+RMD160 (gtkwave-2.0.0pre5.tar.gz) = bf70e21895ec6d7ce081a98d09f72b3b70ff9446
+Size (gtkwave-2.0.0pre5.tar.gz) = 720414 bytes
+SHA1 (patch-aa) = 8daee531dc540a8fa76b8dedb6f23edf883b7dd2
+SHA1 (patch-ab) = 28e9c5ace91f99335097df4f901ab90c73f196d7
