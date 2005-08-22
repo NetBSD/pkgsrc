@@ -1,10 +1,10 @@
-$NetBSD: patch-an,v 1.2 2005/05/06 00:03:25 salo Exp $
+$NetBSD: patch-an,v 1.3 2005/08/22 15:35:37 adam Exp $
 
---- src/px/video.cc	2003-07-31 09:28:04.000000000 +0200
-+++ src/px/video.cc	2004-11-11 00:04:26.855388248 +0100
-@@ -207,16 +207,16 @@
-         void set_pixels(int n, const int* xlist, const int* ylist, Uint32 color)
-         {
+--- src/px/video.cc.orig	2004-12-30 13:21:35.000000000 +0000
++++ src/px/video.cc
+@@ -177,16 +177,16 @@ namespace
+ 
+         void set_pixels(const GS &gs, int n, const int* xlist, const int* ylist, Uint32 color) {
              const int *xp = xlist, *yp = ylist;
 -            if (NOCLIP(gs)) {
 +            if (NOCLIP(this->gs)) {

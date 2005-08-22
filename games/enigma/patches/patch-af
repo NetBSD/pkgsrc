@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/03/01 22:46:26 heinz Exp $
+$NetBSD: patch-af,v 1.2 2005/08/22 15:35:37 adam Exp $
 
---- doc/refman/Makefile.in.orig	Sat Oct 11 19:20:08 2003
+--- doc/refman/Makefile.in.orig	2005-05-27 05:54:44.000000000 +0000
 +++ doc/refman/Makefile.in
-@@ -143,7 +143,7 @@ HTML = enigma-ref.html
+@@ -174,7 +174,7 @@ HTML = enigma-ref.html
  
- EXTRA_DIST = enigma-ref.texi $(HTML)
+ EXTRA_DIST = enigma-ref.texi texi2html.init $(HTML)
  
 -htmldir = @datadir@/doc/enigma/reference
 +htmldir = @datadir@/doc/html/enigma/reference
