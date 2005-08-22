@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.254 2005/08/22 05:12:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.255 2005/08/22 13:51:40 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -364,17 +364,17 @@ my (%warnings) = (
 );
 
 # Constants
-my $regex_rcsidstr	= qr"\$($conf_rcsidstr)(?::[^\$]*|)\$";
 my $regex_known_rcs_tag	= qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$conf_rcsidstr)(?::[^\$]*?|)\$";
-my $regex_validchars	= qr"[\011\040-\176]";
-my $regex_boolean	= qr"^(?:YES|yes|NO|no)$";
-my $regex_yes_or_undef	= qr"^(?:YES|yes)$";
 my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
 my $regex_pkgname	= qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
+my $regex_rcsidstr	= qr"\$($conf_rcsidstr)(?::[^\$]*|)\$";
 my $regex_unresolved	= qr"\$\{";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
+my $regex_validchars	= qr"[\011\040-\176]";
 my $regex_varassign	= qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=|:=)\s*(.*)";
+my $regex_yes		= qr"^(?:YES|yes)$";
+my $regex_yesno		= qr"^(?:YES|yes|NO|no)$";
 
 # Global variables
 my $pkgdir;
@@ -1101,12 +1101,12 @@ sub check_Makefile_vartype($$) {
 		} elsif (exists($vartypes->{$varname})) {
 			my ($type) = ($vartypes->{$varname});
 			if ($type eq "Boolean") {
-				if ($value !~ $regex_boolean) {
+				if ($value !~ $regex_yesno) {
 					$line->log_warning("$varname should be set to YES, yes, NO, or no.");
 				}
 
 			} elsif ($type eq "Yes_Or_Undefined") {
-				if ($value !~ $regex_yes_or_undef) {
+				if ($value !~ $regex_yes) {
 					$line->log_warning("$varname should be set to YES or yes.");
 				}
 
