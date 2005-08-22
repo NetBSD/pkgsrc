@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.15 2005/08/21 22:29:45 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.16 2005/08/22 08:07:38 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -24,7 +24,7 @@ _FUNC_STRIP_PREFIX= \
 	        s = substr(s, 1 + plen, length(s) - plen);		\
 	      }								\
 	      print s;							\
-	    }' s="$$1" prefix=${PREFIX:Q} /dev/null;			\
+	    }' s="$$1" prefix=${PREFIX:Q}/ /dev/null;			\
 	}
 
 DEINSTALL_FILE=		${PKG_DB_TMPDIR}/+DEINSTALL
