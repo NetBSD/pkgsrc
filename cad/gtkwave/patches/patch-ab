@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2003/07/15 12:32:59 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2005/08/22 12:25:01 cube Exp $
 
---- src/utils.c.orig	2003-07-14 21:12:05.000000000 +0200
-+++ src/utils.c	2003-07-14 21:12:57.000000000 +0200
-@@ -186,7 +186,7 @@
+--- src/event.c.orig	2003-11-07 10:56:33.000000000 +0100
++++ src/event.c
+@@ -249,7 +249,7 @@ void wave_event_position_free (WaveEvent
   * freed so this is OK...
   */
  #ifndef HISTENT_GRANULARITY
@@ -10,4 +10,4 @@ $NetBSD: patch-ab,v 1.1 2003/07/15 12:32:59 drochner Exp $
 +#define HISTENT_GRANULARITY ((64*1024)/sizeof(HistEnt))
  #endif
  
- HistEnt *histent_calloc (void)
+ HistEnt *wave_new_hist_ent_raw (void)
