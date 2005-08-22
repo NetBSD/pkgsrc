@@ -722,3 +722,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/netpbm to 10.29 [adam 2005-08-22]
 	Updated cad/gtkwave to 2.0.0pre5 [cube 2005-08-22]
 	Updated mail/elm to 2.5.8 [tron 2005-08-22]
+	Added audio/vorbisgain version 0.37 [rpaulo 2005-08-22]
