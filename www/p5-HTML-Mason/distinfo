@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 14:08:35 wiz Exp $
+$NetBSD: distinfo,v 1.9 2005/08/22 19:03:04 tv Exp $
 
-SHA1 (HTML-Mason-1.28.tar.gz) = 643edbb52cf9d4c6fa3dd891aaeca6039911e6e7
-RMD160 (HTML-Mason-1.28.tar.gz) = 5914ab048248bcd659b390819a0545fcf95ff7bd
-Size (HTML-Mason-1.28.tar.gz) = 335604 bytes
+SHA1 (HTML-Mason-1.31.tar.gz) = 4f98f0d8d3150e05aa872aaa3343ee9f377bc5f1
+RMD160 (HTML-Mason-1.31.tar.gz) = d698c1cf1481d47cc6ed87cfedf5f8eb005a0b48
+Size (HTML-Mason-1.31.tar.gz) = 381273 bytes
