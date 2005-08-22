@@ -725,3 +725,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added audio/vorbisgain version 0.37 [rpaulo 2005-08-22]
 	Updated fonts/adobe-cmaps to 20040605 [hira 2005-08-22]
 	Updated games/enigma to 0.92 [adam 2005-08-22]
+	Updated fonts/fontforge to 20050809 [adam 2005-08-22]
