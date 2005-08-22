@@ -721,3 +721,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/amavisd-new to 2.3.1 [cube 2005-08-22]
 	Updated graphics/netpbm to 10.29 [adam 2005-08-22]
 	Updated cad/gtkwave to 2.0.0pre5 [cube 2005-08-22]
+	Updated mail/elm to 2.5.8 [tron 2005-08-22]
