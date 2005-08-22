@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/23 18:01:48 sketch Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/08/22 15:15:43 hira Exp $
 share/Adobe/Resource/CMap/78-EUC-H
 share/Adobe/Resource/CMap/78-EUC-V
 share/Adobe/Resource/CMap/78-H
@@ -39,6 +39,7 @@ share/Adobe/Resource/CMap/Adobe-Japan1-2
 share/Adobe/Resource/CMap/Adobe-Japan1-3
 share/Adobe/Resource/CMap/Adobe-Japan1-4
 share/Adobe/Resource/CMap/Adobe-Japan1-5
+share/Adobe/Resource/CMap/Adobe-Japan1-6
 share/Adobe/Resource/CMap/Adobe-Japan1-UCS2
 share/Adobe/Resource/CMap/Adobe-Japan2-0
 share/Adobe/Resource/CMap/Adobe-Korea1-0
@@ -270,64 +271,65 @@ share/Adobe/Resource/ag14/CMap/UniGB-UTF8-V
 share/Adobe/Resource/ag14/cid2code.txt
 share/Adobe/Resource/ai0/CMap/Identity-H
 share/Adobe/Resource/ai0/CMap/Identity-V
-share/Adobe/Resource/aj15/CMap/78-EUC-H
-share/Adobe/Resource/aj15/CMap/78-EUC-V
-share/Adobe/Resource/aj15/CMap/78-H
-share/Adobe/Resource/aj15/CMap/78-RKSJ-H
-share/Adobe/Resource/aj15/CMap/78-RKSJ-V
-share/Adobe/Resource/aj15/CMap/78-V
-share/Adobe/Resource/aj15/CMap/78ms-RKSJ-H
-share/Adobe/Resource/aj15/CMap/78ms-RKSJ-V
-share/Adobe/Resource/aj15/CMap/83pv-RKSJ-H
-share/Adobe/Resource/aj15/CMap/90ms-RKSJ-H
-share/Adobe/Resource/aj15/CMap/90ms-RKSJ-V
-share/Adobe/Resource/aj15/CMap/90msp-RKSJ-H
-share/Adobe/Resource/aj15/CMap/90msp-RKSJ-V
-share/Adobe/Resource/aj15/CMap/90pv-RKSJ-H
-share/Adobe/Resource/aj15/CMap/90pv-RKSJ-V
-share/Adobe/Resource/aj15/CMap/Add-H
-share/Adobe/Resource/aj15/CMap/Add-RKSJ-H
-share/Adobe/Resource/aj15/CMap/Add-RKSJ-V
-share/Adobe/Resource/aj15/CMap/Add-V
-share/Adobe/Resource/aj15/CMap/Adobe-Japan1-0
-share/Adobe/Resource/aj15/CMap/Adobe-Japan1-1
-share/Adobe/Resource/aj15/CMap/Adobe-Japan1-2
-share/Adobe/Resource/aj15/CMap/Adobe-Japan1-3
-share/Adobe/Resource/aj15/CMap/Adobe-Japan1-4
-share/Adobe/Resource/aj15/CMap/Adobe-Japan1-5
-share/Adobe/Resource/aj15/CMap/EUC-H
-share/Adobe/Resource/aj15/CMap/EUC-V
-share/Adobe/Resource/aj15/CMap/Ext-H
-share/Adobe/Resource/aj15/CMap/Ext-RKSJ-H
-share/Adobe/Resource/aj15/CMap/Ext-RKSJ-V
-share/Adobe/Resource/aj15/CMap/Ext-V
-share/Adobe/Resource/aj15/CMap/H
-share/Adobe/Resource/aj15/CMap/Hankaku
-share/Adobe/Resource/aj15/CMap/Hiragana
-share/Adobe/Resource/aj15/CMap/Katakana
-share/Adobe/Resource/aj15/CMap/NWP-H
-share/Adobe/Resource/aj15/CMap/NWP-V
-share/Adobe/Resource/aj15/CMap/RKSJ-H
-share/Adobe/Resource/aj15/CMap/RKSJ-V
-share/Adobe/Resource/aj15/CMap/Roman
-share/Adobe/Resource/aj15/CMap/UniJIS-UCS2-H
-share/Adobe/Resource/aj15/CMap/UniJIS-UCS2-HW-H
-share/Adobe/Resource/aj15/CMap/UniJIS-UCS2-HW-V
-share/Adobe/Resource/aj15/CMap/UniJIS-UCS2-V
-share/Adobe/Resource/aj15/CMap/UniJIS-UTF16-H
-share/Adobe/Resource/aj15/CMap/UniJIS-UTF16-V
-share/Adobe/Resource/aj15/CMap/UniJIS-UTF32-H
-share/Adobe/Resource/aj15/CMap/UniJIS-UTF32-V
-share/Adobe/Resource/aj15/CMap/UniJIS-UTF8-H
-share/Adobe/Resource/aj15/CMap/UniJIS-UTF8-V
-share/Adobe/Resource/aj15/CMap/UniJISPro-UCS2-HW-V
-share/Adobe/Resource/aj15/CMap/UniJISPro-UCS2-V
-share/Adobe/Resource/aj15/CMap/UniJISPro-UTF8-V
-share/Adobe/Resource/aj15/CMap/UniJISX0213-UTF32-H
-share/Adobe/Resource/aj15/CMap/UniJISX0213-UTF32-V
-share/Adobe/Resource/aj15/CMap/V
-share/Adobe/Resource/aj15/CMap/WP-Symbol
-share/Adobe/Resource/aj15/cid2code.txt
+share/Adobe/Resource/aj16/CMap/78-EUC-H
+share/Adobe/Resource/aj16/CMap/78-EUC-V
+share/Adobe/Resource/aj16/CMap/78-H
+share/Adobe/Resource/aj16/CMap/78-RKSJ-H
+share/Adobe/Resource/aj16/CMap/78-RKSJ-V
+share/Adobe/Resource/aj16/CMap/78-V
+share/Adobe/Resource/aj16/CMap/78ms-RKSJ-H
+share/Adobe/Resource/aj16/CMap/78ms-RKSJ-V
+share/Adobe/Resource/aj16/CMap/83pv-RKSJ-H
+share/Adobe/Resource/aj16/CMap/90ms-RKSJ-H
+share/Adobe/Resource/aj16/CMap/90ms-RKSJ-V
+share/Adobe/Resource/aj16/CMap/90msp-RKSJ-H
+share/Adobe/Resource/aj16/CMap/90msp-RKSJ-V
+share/Adobe/Resource/aj16/CMap/90pv-RKSJ-H
+share/Adobe/Resource/aj16/CMap/90pv-RKSJ-V
+share/Adobe/Resource/aj16/CMap/Add-H
+share/Adobe/Resource/aj16/CMap/Add-RKSJ-H
+share/Adobe/Resource/aj16/CMap/Add-RKSJ-V
+share/Adobe/Resource/aj16/CMap/Add-V
+share/Adobe/Resource/aj16/CMap/Adobe-Japan1-0
+share/Adobe/Resource/aj16/CMap/Adobe-Japan1-1
+share/Adobe/Resource/aj16/CMap/Adobe-Japan1-2
+share/Adobe/Resource/aj16/CMap/Adobe-Japan1-3
+share/Adobe/Resource/aj16/CMap/Adobe-Japan1-4
+share/Adobe/Resource/aj16/CMap/Adobe-Japan1-5
+share/Adobe/Resource/aj16/CMap/Adobe-Japan1-6
+share/Adobe/Resource/aj16/CMap/EUC-H
+share/Adobe/Resource/aj16/CMap/EUC-V
+share/Adobe/Resource/aj16/CMap/Ext-H
+share/Adobe/Resource/aj16/CMap/Ext-RKSJ-H
+share/Adobe/Resource/aj16/CMap/Ext-RKSJ-V
+share/Adobe/Resource/aj16/CMap/Ext-V
+share/Adobe/Resource/aj16/CMap/H
+share/Adobe/Resource/aj16/CMap/Hankaku
+share/Adobe/Resource/aj16/CMap/Hiragana
+share/Adobe/Resource/aj16/CMap/Katakana
+share/Adobe/Resource/aj16/CMap/NWP-H
+share/Adobe/Resource/aj16/CMap/NWP-V
+share/Adobe/Resource/aj16/CMap/RKSJ-H
+share/Adobe/Resource/aj16/CMap/RKSJ-V
+share/Adobe/Resource/aj16/CMap/Roman
+share/Adobe/Resource/aj16/CMap/UniJIS-UCS2-H
+share/Adobe/Resource/aj16/CMap/UniJIS-UCS2-HW-H
+share/Adobe/Resource/aj16/CMap/UniJIS-UCS2-HW-V
+share/Adobe/Resource/aj16/CMap/UniJIS-UCS2-V
+share/Adobe/Resource/aj16/CMap/UniJIS-UTF16-H
+share/Adobe/Resource/aj16/CMap/UniJIS-UTF16-V
+share/Adobe/Resource/aj16/CMap/UniJIS-UTF32-H
+share/Adobe/Resource/aj16/CMap/UniJIS-UTF32-V
+share/Adobe/Resource/aj16/CMap/UniJIS-UTF8-H
+share/Adobe/Resource/aj16/CMap/UniJIS-UTF8-V
+share/Adobe/Resource/aj16/CMap/UniJISPro-UCS2-HW-V
+share/Adobe/Resource/aj16/CMap/UniJISPro-UCS2-V
+share/Adobe/Resource/aj16/CMap/UniJISPro-UTF8-V
+share/Adobe/Resource/aj16/CMap/UniJISX0213-UTF32-H
+share/Adobe/Resource/aj16/CMap/UniJISX0213-UTF32-V
+share/Adobe/Resource/aj16/CMap/V
+share/Adobe/Resource/aj16/CMap/WP-Symbol
+share/Adobe/Resource/aj16/cid2code.txt
 share/Adobe/Resource/aj20/CMap/Adobe-Japan2-0
 share/Adobe/Resource/aj20/CMap/Hojo-EUC-H
 share/Adobe/Resource/aj20/CMap/Hojo-EUC-V
@@ -466,8 +468,8 @@ share/Adobe/Resource/rksj-cmaps/TCVN-RKSJ-H
 @dirrm share/Adobe/Resource/ak12
 @dirrm share/Adobe/Resource/aj20/CMap
 @dirrm share/Adobe/Resource/aj20
-@dirrm share/Adobe/Resource/aj15/CMap
-@dirrm share/Adobe/Resource/aj15
+@dirrm share/Adobe/Resource/aj16/CMap
+@dirrm share/Adobe/Resource/aj16
 @dirrm share/Adobe/Resource/ai0/CMap
 @dirrm share/Adobe/Resource/ai0
 @dirrm share/Adobe/Resource/ag14/CMap
