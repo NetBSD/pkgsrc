@@ -719,3 +719,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/grub to 0.97nb1 [jmmv 2005-08-21]
 	Updated security/ipsec-tools to 0.6.1 [tron 2005-08-21]
 	Updated security/amavisd-new to 2.3.1 [cube 2005-08-22]
+	Updated graphics/netpbm to 10.29 [adam 2005-08-22]
