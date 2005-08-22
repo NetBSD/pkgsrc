@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:41 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/22 18:28:43 tv Exp $
 
-DISTNAME=	libapreq2-2.04_03-dev
-PKGNAME=	p5-libapreq2-2.4.3
+DISTNAME=	libapreq2-2.06-dev
+PKGNAME=	p5-libapreq2-2.06
 SVR4_PKGNAME=	p5la2
-PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	http://www.apache.org/dist/httpd/libapreq/
 
@@ -14,9 +13,8 @@ COMMENT=	Lots of Apache specific httpd handling modules
 DEPENDS+=	p5-ExtUtils-XSBuilder>=0.23:../../devel/p5-ExtUtils-XSBuilder
 
 BUILDLINK_DEPENDS.apache+=	apache>=2.0.48
-BUILDLINK_DEPENDS.ap2-perl+=	ap2-perl>=1.99.15
+BUILDLINK_DEPENDS.ap2-perl+=	ap2-perl>=2.0.1
 
-WRKSRC=		${WRKDIR}/libapreq2-2.04-dev
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 PERL5_PACKLIST=	auto/libapreq2/.packlist
