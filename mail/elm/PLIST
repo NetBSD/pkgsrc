@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/23 14:36:36 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/08/22 12:40:12 tron Exp $
 bin/answer
 bin/checkalias
 bin/elm
@@ -52,3 +52,4 @@ man/cat1/printmail.1
 man/cat1/readmsg.1
 man/cat1/wnewmail.1
 share/nls/C/elm2.5.cat
+@dirrm lib/elm
