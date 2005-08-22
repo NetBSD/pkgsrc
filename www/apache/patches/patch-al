@@ -1,0 +1,19 @@
+$NetBSD: patch-al,v 1.6 2005/08/22 16:19:00 reed Exp $
+
+--- src/Configure.orig	2005-08-22 08:43:51.000000000 -0700
++++ src/Configure	2005-08-22 08:46:05.000000000 -0700
+@@ -465,6 +465,14 @@
+ 	DBM_LIB=""
+ 	DB_LIB=""
+ 	;;
++    *-DragonFly*)
++	OS="DragonFly"
++	DEF_WANTHSREGEX=no
++	CFLAGS="$CFLAGS -funsigned-char"
++	LIBS="$LIBS -lcrypt"
++	DBM_LIB=""
++	DB_LIB=""
++	;;
+     *-openbsd*)
+ 	OS='OpenBSD'
+ 	DBM_LIB=""
