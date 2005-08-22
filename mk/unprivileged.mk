@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.1 2005/05/29 17:12:16 jmmv Exp $
+# $NetBSD: unprivileged.mk,v 1.2 2005/08/22 17:13:28 reed Exp $
 #
 # Ease configuration of unprivileged (non-root) builds.
 #
@@ -46,11 +46,14 @@ NO_MTREE=		# defined
 
 # As a regular user, creation of other users and groups won't work, so
 # disable this step by default.
-PKG_CREATE_USERGROUP?=	NO
+PKG_CREATE_USERGROUP=	NO
 
 # Override commands that won't work as a regular user.
 CHGRP=			${TRUE}
 CHOWN=			${TRUE}
 SU_CMD=			${SH} -c
+
+# Do not attempt to modify /etc/shells as a regular user.
+PKG_REGISTER_SHELLS=	NO
 
 .endif
