@@ -1,0 +1,4 @@
+Vorbisgain calculates a percieved sound level of an Ogg Vorbis file using the
+ReplayGain algorithm. VorbisGain then stores in the comments (tags) in the
+file a suggestion on how the volume should be changed during playback, to get
+a uniform sound level.
