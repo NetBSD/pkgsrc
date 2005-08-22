@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:40 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/22 12:25:00 cube Exp $
 #
 
-#DISTNAME=		gtkwave-2.0.0pre3
-DISTNAME=		gtkwave-2.0.0pre3-20030319
-PKGNAME=		gtkwave-2.0.0pre3.20030319
-PKGREVISION=		3
+DISTNAME=		gtkwave-2.0.0pre5
+PKGNAME=		gtkwave-2.0.0pre5
 CATEGORIES=		cad
-#MASTER_SITES=		ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/2.0/
-MASTER_SITES=		ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/snapshots/
+MASTER_SITES=		ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/2.0/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.man.ac.uk/apt/tools/gtkwave/index.html
