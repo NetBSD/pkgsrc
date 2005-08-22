@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/08/22 12:40:12 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/08/22 13:15:05 salo Exp $
 bin/answer
 bin/checkalias
 bin/elm
@@ -25,19 +25,6 @@ lib/elm/help-selfolder
 lib/elm/help-status
 lib/elm/mime-types
 lib/elm/mlists.eg
-man/man1/answer.1
-man/man1/checkalias.1
-man/man1/elm.1
-man/man1/elmalias.1
-man/man1/fastmail.1
-man/man1/frm.1
-man/man1/listalias.1
-man/man1/messages.1
-man/man1/newalias.1
-man/man1/newmail.1
-man/man1/printmail.1
-man/man1/readmsg.1
-man/man1/wnewmail.1
 man/cat1/answer.1
 man/cat1/checkalias.1
 man/cat1/elm.1
@@ -51,5 +38,18 @@ man/cat1/newmail.1
 man/cat1/printmail.1
 man/cat1/readmsg.1
 man/cat1/wnewmail.1
+man/man1/answer.1
+man/man1/checkalias.1
+man/man1/elm.1
+man/man1/elmalias.1
+man/man1/fastmail.1
+man/man1/frm.1
+man/man1/listalias.1
+man/man1/messages.1
+man/man1/newalias.1
+man/man1/newmail.1
+man/man1/printmail.1
+man/man1/readmsg.1
+man/man1/wnewmail.1
 share/nls/C/elm2.5.cat
 @dirrm lib/elm
