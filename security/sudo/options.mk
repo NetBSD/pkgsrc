@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.9 2005/06/22 10:30:12 taca Exp $
+# $NetBSD: options.mk,v 1.10 2005/08/22 10:20:33 abs Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
 PKG_SUPPORTED_OPTIONS=	pam kerberos ldap skey
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/skey.h)
 PKG_SUGGESTED_OPTIONS=	skey
 .endif
 
