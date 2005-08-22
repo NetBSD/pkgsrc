@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.83 2005/08/21 05:27:50 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.84 2005/08/22 13:17:49 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -247,3 +247,5 @@ Pullup ticket 703 - requested by Manuel Bouyer
 MASTER_SITES update for xdemineur
 Pullup ticket 686 - requested by Jeremy C. Reed
 distfile update for mozilla
+Pullup ticket 705 - requested by Matthias Scheler
+security update for elm
