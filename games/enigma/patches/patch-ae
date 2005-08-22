@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/03/01 22:46:26 heinz Exp $
+$NetBSD: patch-ae,v 1.2 2005/08/22 15:35:37 adam Exp $
 
---- doc/manual/images/Makefile.in.orig	Sat Oct 11 19:20:01 2003
+--- doc/manual/images/Makefile.in.orig	2005-05-27 05:54:43.000000000 +0000
 +++ doc/manual/images/Makefile.in
-@@ -139,7 +139,7 @@ target_vendor = @target_vendor@
- PNG = $(wildcard *.png)
- PDF = $(addsuffix .pdf, $(basename $(PNG)))
+@@ -170,7 +170,7 @@ target_vendor = @target_vendor@
+ PNG = $(wildcard $(srcdir)/*.png)
+ PDF = $(addprefix $(builddir), $(addsuffix .pdf, $(basename $(notdir $(PNG)))))
  
 -pngdir = @datadir@/doc/enigma/images
 +pngdir = @datadir@/doc/html/enigma/images
