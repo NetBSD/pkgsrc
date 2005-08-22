@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3817 2005/08/21 11:50:38 jmmv Exp $
+$NetBSD: TODO,v 1.3818 2005/08/22 09:50:14 cube Exp $
 
 Suggested new packages
 ======================
@@ -305,7 +305,7 @@ Suggested package updates
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
 	o amavis-0.3.12
-	o amavisd-new-2.3.1
+	o amavisd-new-2.3.3
 	o amule-2.0.3
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.70
