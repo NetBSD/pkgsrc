@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/29 16:10:44 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/22 19:21:32 drochner Exp $
 #
 
 DISTNAME=		gxine-0.4.6
@@ -12,7 +12,7 @@ COMMENT=		Gtk-based media player
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 PTHREAD_OPTS+=		require
 
