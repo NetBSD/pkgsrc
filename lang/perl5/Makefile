@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2005/08/18 17:26:48 jlam Exp $
+# $NetBSD: Makefile,v 1.102 2005/08/22 17:40:20 reed Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -156,6 +156,7 @@ CONFIGURE_ARGS+=	-Dissymlink="${TOOLS_TEST} -h"
 # particular operating system.
 #
 LIBSWANTED.Darwin=	m c
+LIBSWANTED.DragonFly=	m crypt
 LIBSWANTED.FreeBSD=	m crypt
 LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.Interix=	m dl
@@ -169,6 +170,7 @@ LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 # operating system.
 #
 SYSLIBPATH.Darwin=	/usr/lib
+SYSLIBPATH.DragonFly=	/usr/lib
 SYSLIBPATH.FreeBSD=	/usr/lib
 SYSLIBPATH.Interix=	/usr/lib
 SYSLIBPATH.NetBSD=	/usr/lib
