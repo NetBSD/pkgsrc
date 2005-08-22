@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.253 2005/08/21 23:05:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.254 2005/08/22 05:12:01 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -812,7 +812,7 @@ sub checkfile_MESSAGE($$) {
 
 sub checkfile_PLIST($$) {
 	my ($dir, $fname) = @_;
-	my ($plist, $curdir, $last_file_seen);
+	my ($plist, $last_file_seen);
 
 	log_subinfo("checkfile_PLIST", $fname, NO_LINE_NUMBER, undef);
 
@@ -827,7 +827,6 @@ sub checkfile_PLIST($$) {
 	}
 	checkline_rcsid($plist->[0], "\@comment ");
 
-	$curdir = $conf_localbase;
 	line:
 	foreach my $line (@{$plist}) {
 		my $text = $line->text;
@@ -840,7 +839,7 @@ sub checkfile_PLIST($$) {
 		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 			if ($cmd eq "cwd" || $cmd eq "cd") {
-				$curdir = $arg;
+				$line->log_error("\@cwd and \@cd must not be used anymore.");
 
 			} elsif ($cmd eq "unexec" && $arg =~ /^rmdir/) {
 				$line->log_warning("Use \"\@dirrm\" instead of \"\@unexec rmdir\".");
@@ -873,51 +872,36 @@ sub checkfile_PLIST($$) {
 			$line->log_error("Use of full pathname disallowed.");
 		}
 
-		if ($opt_warn_plist_sort && $text =~ qr"^\w") {
+		if ($opt_warn_plist_sort && $text =~ qr"^\w" && $text !~ $regex_unresolved) {
 			if (defined($last_file_seen)) {
 				if ($last_file_seen gt $text) {
-					$line->log_warning($text . " should be sorted before ${last_file_seen}.");
+					$line->log_warning("${text} should be sorted before ${last_file_seen}.");
 				}
 			}
 			$last_file_seen = $text;
 		}
 
-		if ($text =~ /^doc/) {
+		if ($text =~ qr"^doc/") {
 			$line->log_error("Documentation must be installed under share/doc, not doc.");
-		}
 
-		if ($text =~ /^etc/ && $text !~ /^etc\/rc.d/) {
-			$line->log_error("Configuration files must not be ".
-				"registered in the PLIST. Please use the ".
-				"PKG_SYSCONFDIR framework.");
-		}
+		} elsif ($text =~ qr"^etc/rc\.d/") {
+			$line->log_error("RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.");
 
-		if ($text =~ /^etc\/rc\.d/) {
-			$line->log_error("RCD_SCRIPTS must not be ".
-				"registered in the PLIST. Please use the ".
-				"RCD_SCRIPTS framework.");
-		}
+		} elsif ($text =~ qr"^etc/") {
+			$line->log_error("Configuration files must not be registered in the PLIST. Please use the PKG_SYSCONFDIR framework.");
 
-		if ($text =~ /^info\/dir$/) {
-			$line->log_error("\"info/dir\" should not be listed. Use install-info to add/remove an entry.");
-		}
+		} elsif ($text eq "info/dir") {
+			$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
 
-		if ($text =~ /^lib\/locale/) {
-			$line->log_error("\"lib/locale\" should not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
-		}
+		} elsif ($text =~ qr"^lib/locale/") {
+			$line->log_error("\"lib/locale\" must not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 
-		if ($text =~ /^share\/locale/) {
-			$line->log_warning("Use of \"share/locale\" is ".
-				"deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+		} elsif ($text =~ qr"^share/locale/") {
+			$line->log_warning("Use of \"share/locale\" is deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
 		if ($text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
-			$line->log_warning("PLIST contains \${PKGLOCALEDIR}, ".
-				"but USE_PKGLOCALEDIR was not found.");
-		}
-
-		if ($curdir !~ m:^$conf_localbase: && $curdir !~ m:^/usr/X11R6:) {
-			$line->log_warning("Installing to directory $curdir discouraged. could you please avoid it?");
+			$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
 		}
 	}
 	checklines_trailing_empty_lines($plist);
