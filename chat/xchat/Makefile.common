@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.43 2005/08/10 20:56:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.44 2005/08/23 22:48:07 tron Exp $
 #
 # Please do not merge this file into "Makefile" because it is used by
 # packages in "pkgsrc-wip".
 
-DISTNAME=	xchat-2.4.3
+DISTNAME=	xchat-2.4.4
 CATEGORIES=	chat gnome
 MASTER_SITES=	http://www.xchat.org/files/source/2.4/
 EXTRACT_SUFX=	.tar.bz2
