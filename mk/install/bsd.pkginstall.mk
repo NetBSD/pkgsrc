@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.21 2005/08/23 09:51:35 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.22 2005/08/23 10:00:50 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -490,16 +490,18 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 PKG_SHELL?=		# empty
 
 INSTALL_SHELL_FILE=	${WRKDIR}/.install-shell
+INSTALL_SHELL_MEMBERS=	${PKG_SHELL}
 INSTALL_UNPACK_TMPL+=	${INSTALL_SHELL_FILE}
 
+.if empty(INSTALL_SHELL_MEMBERS:M*)
+${INSTALL_SHELL_FILE}:
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
 ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${PKG_SHELL:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_FUNC_STRIP_PREFIX};						\
+	exec 1>>${.TARGET}.tmp;						\
 	${ECHO} "# start of install-shell";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +SHELL script that handles shell registration."; \
@@ -509,27 +511,21 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${ECHO} "	\$${CAT} > ./+SHELL << 'EOF_SHELL'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/shell;		\
 	${ECHO} "";							\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
 	eval set -- dummy ${PKG_SHELL}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		shell="$$1"; shift;					\
 		shell=`strip_prefix "$$shell"`;				\
 		${ECHO} "# SHELL: $$shell";				\
 	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
 	${ECHO} "EOF_SHELL";						\
 	${ECHO} "	\$${CHMOD} +x ./+SHELL";			\
 	${ECHO} "	;;";						\
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-shell";				\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp ||	\
+	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.endif
 
 # PKG_CREATE_USERGROUP indicates whether the INSTALL script should
 #	automatically add any needed users/groups to the system using
