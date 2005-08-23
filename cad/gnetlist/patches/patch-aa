@@ -1,23 +1,11 @@
-$NetBSD: patch-aa,v 1.8 2004/03/05 13:03:47 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.9 2005/08/23 00:02:20 dmcmahill Exp $
 
---- scheme/gnet-PCBboard.scm.orig	Sun Aug 24 01:36:06 2003
-+++ scheme/gnet-PCBboard.scm
-@@ -134,7 +134,8 @@
- ;;
- ;;
+--- configure.ac.orig	2005-08-20 14:13:28.000000000 +0000
++++ configure.ac	2005-08-22 02:36:15.000000000 +0000
+@@ -31,5 +31,5 @@
  
--(define *m4-pcbdir* "/usr/X11R6/lib/X11/pcb/m4")
-+(define *m4-pcbdir* "@pcb_m4dir@")
-+(define *m4-pcbconfdir* "@pcb_confdir@")
- 
- ;; To emulate popen. Guileish again.
- ; Needed after guile ver. 1.3.2. To save 1.3a users, wrap it in.
-@@ -153,7 +154,7 @@
- ;; Original pipe command commented out by AVH (bugfix by Rich Walker)
- ;;  (let ((pipe (open-output-pipe (string-append "m4 " *m4-pcbdir* "/common.m4 - >> " output-filename))))
- ;; Fixed pipe command (AVH 1/27/02)
--   (let ((pipe (open-output-pipe (string-append "m4 -d -I" *m4-pcbdir* " " *m4-pcbdir* "/common.m4 - >> " output-filename))))
-+   (let ((pipe (open-output-pipe (string-append "@M4@ -d -I" *m4-pcbdir* " -I" *m4-pcbconfdir* " -I$HOME/.pcb -I. " *m4-pcbdir* "/common.m4 - >> " output-filename))))
- 
- 
-        ;; packages is a list with the different uref value
+ # Change default location for pcb's m4 site configuration directory
+-AC_ARG_WITH(pcbm4dir,
++AC_ARG_WITH(pcbconfdir,
+ 	[  --with-pcbconfdir=path     Change where the PCB site config files are installed [[default=${sysconfdir}/pcb]]],
+         [PCBCONFDIR=$withval],

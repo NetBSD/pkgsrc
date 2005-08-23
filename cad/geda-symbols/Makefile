@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:07:41 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/23 00:02:20 dmcmahill Exp $
 #
 
 DISTNAME=	geda-symbols-${PKGVERSION}
@@ -14,5 +14,8 @@ CONFLICTS+=	gEDA<19991011
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake gsed
+
+post-install:
+	${RM} -f ${PREFIX}/share/gEDA/sym/micro/gschem.log.old
 
 .include "../../mk/bsd.pkg.mk"

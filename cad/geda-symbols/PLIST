@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/03/24 02:05:11 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/08/23 00:02:20 dmcmahill Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4000-2.sym
@@ -477,6 +477,7 @@ share/gEDA/sym/allegro/3967-2.sym
 share/gEDA/sym/altera/10K10LC84-1.sym
 share/gEDA/sym/altera/EPC1LC20-1.sym
 share/gEDA/sym/altera/EPF10K-1.sym
+share/gEDA/sym/amphenol/31-71043-1.sym
 share/gEDA/sym/analog/CS5396-1.sym
 share/gEDA/sym/analog/HA5221-1.sym
 share/gEDA/sym/analog/aop-std-1.sym
@@ -1014,6 +1015,7 @@ share/gEDA/sym/maxim/max1674-1.sym
 share/gEDA/sym/maxim/max186-1.sym
 share/gEDA/sym/maxim/max186-2.sym
 share/gEDA/sym/maxim/max189-1.sym
+share/gEDA/sym/maxim/max19538-1.sym
 share/gEDA/sym/maxim/max202-1.sym
 share/gEDA/sym/maxim/max214-1.sym
 share/gEDA/sym/maxim/max218-1.sym
@@ -1655,6 +1657,7 @@ share/gEDA/system-gafrc
 @dirrm share/gEDA/sym/asic
 @dirrm share/gEDA/sym/apex
 @dirrm share/gEDA/sym/analog
+@dirrm share/gEDA/sym/amphenol
 @dirrm share/gEDA/sym/altera
 @dirrm share/gEDA/sym/allegro
 @dirrm share/gEDA/sym/IEC417
