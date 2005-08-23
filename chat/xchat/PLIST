@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/06/06 11:35:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/08/23 22:48:07 tron Exp $
 bin/xchat
 bin/xchat-text
 share/applications/xchat.desktop
@@ -15,6 +15,7 @@ ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xchat.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xchat.mo
@@ -25,6 +26,7 @@ ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xchat.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xchat.mo
