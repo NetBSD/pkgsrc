@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.18 2005/08/23 08:58:20 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.19 2005/08/23 09:19:06 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -136,22 +136,18 @@ PKG_FAIL_REASON+=	"User and group '${user}' cannot have the same name on Interix
 DEPENDS+=		${_USER_DEPENDS}
 .endif
 
-INSTALL_USERGROUP_FILE=	${WRKDIR}/.install-usergroup
-INSTALL_UNPACK_TMPL+=	${INSTALL_USERGROUP_FILE}
+INSTALL_USERGROUP_FILE=		${WRKDIR}/.install-usergroup
+INSTALL_USERGROUP_MEMBERS=	${PKG_USERS} ${PKG_GROUPS}
+INSTALL_UNPACK_TMPL+=		${INSTALL_USERGROUP_FILE}
 
+.if empty(INSTALL_USERGROUP_MEMBERS:M*)
+${INSTALL_USERGROUP_FILE}:
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
 ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${PKG_GROUPS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${PKG_USERS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RM} -f ${.TARGET} ${.TARGET}.tmp;				\
+	exec 1>>${.TARGET}.tmp;						\
 	${ECHO} "# start of install-usergroup";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +USERGROUP script that reference counts users"; \
@@ -163,34 +159,25 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/usergroup;		\
 	${ECHO} "";							\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
-	eval set -- __dummy ${PKG_GROUPS};				\
+	eval set -- dummy ${PKG_GROUPS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		i="$$1"; shift;						\
 		${ECHO} "# GROUP: $$i";					\
 	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
-	eval set -- __dummy ${PKG_USERS} __dummy;			\
+	eval set -- dummy ${PKG_USERS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		i="$$1"; shift;						\
 		${ECHO} "# USER: $$i";					\
 	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
 	${ECHO} "EOF_USERGROUP";					\
 	${ECHO} "	\$${CHMOD} +x ./+USERGROUP";			\
 	${ECHO} "	;;";						\
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-usergroup";				\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp ||	\
+	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.endif
 
 # SPECIAL_PERMS are lists that look like:
 #		file user group mode
@@ -301,7 +288,10 @@ INSTALL_FILES_MEMBERS=	${RCD_SCRIPTS} ${CONF_FILES} ${REQD_FILES} \
 	${CONF_FILES_PERMS} ${REQD_FILES_PERMS}
 INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
 
-.if !empty(INSTALL_FILES_MEMBERS:M*)
+.if empty(INSTALL_FILES_MEMBERS:M*)
+${INSTALL_FILES_FILE}:
+	${_PKG_DEBUG}${_PKG_SILENT}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
 ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -377,9 +367,6 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${ECHO} "";							\
 	${ECHO} "# end of install-files";				\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-.else
-${INSTALL_FILES_FILE}:
-	${_PKG_DEBUG}${_PKG_SILENT}${TOUCH} ${.TARGET}
 .endif
 
 # OWN_DIRS contains a list of directories for this package that should be
