@@ -743,3 +743,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/drivel to 2.0.2 [jmmv 2005-08-23]
 	Updated benchmarks/xengine to 1.0.1nb2 [hira 2005-08-23]
 	Updated www/epiphany to 1.6.5 [jmmv 2005-08-23]
+	Updated pkgtools/pkg_comp to 1.22 [jmmv 2005-08-23]
