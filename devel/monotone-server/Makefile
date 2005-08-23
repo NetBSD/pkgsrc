@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/13 11:19:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/23 11:48:47 rillig Exp $
 #
 
 DISTNAME=	monotone-server-0.22
@@ -33,7 +33,7 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/hooks.conf \
 			${PKG_SYSCONFDIR}/hooks.conf \
 			${MONOTONE_USER} ${MONOTONE_GROUP} 600
 
-PKG_USERS=		${MONOTONE_USER}:${MONOTONE_GROUP}::Monotone\\ dedicated\\ server:${VARBASE}/monotone:${SH}
+PKG_USERS=		${MONOTONE_USER}:${MONOTONE_GROUP}::Monotone\ dedicated\ server:${VARBASE}/monotone:${SH}
 PKG_GROUPS=		${MONOTONE_GROUP}
 
 SUBST_CLASSES+=		vars
