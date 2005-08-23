@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/12 19:20:19 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/23 14:04:03 drochner Exp $
 #
 
 DISTNAME=		ghostscript-8.51
@@ -11,9 +11,8 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ghostscript.sourceforge.net/
 COMMENT=		Postscript interpreter
 
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-USE_X11=		yes
 
 GS_SRCS=                ${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=             ${GS_SRCS}
@@ -44,4 +43,5 @@ post-extract:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
