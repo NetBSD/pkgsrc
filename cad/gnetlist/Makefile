@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/08/10 20:56:12 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/08/23 00:02:20 dmcmahill Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
@@ -10,8 +10,6 @@ HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		Netlist generation program
 
 DEPENDS+=		geda-symbols-${PKGVERSION}:../../cad/geda-symbols
-# needs GNU m4 for the PCBboard netlister
-USE_TOOLS+=		gm4:run pkg-config
 
 .include "../../cad/geda/Makefile.common"
 
@@ -19,20 +17,14 @@ CONFLICTS+=		gEDA<19991011
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake pkg-config
+
+# needs GNU m4 for the PCBboard and gsch2pcb netlisters
+USE_TOOLS+=		gmake m4:run pkg-config
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 EVAL_PREFIX+=   PCBDIR=pcb
-
-post-patch:
-.for f in gnet-PCBboard.scm gnet-gsch2pcb.scm
-	${MV} -f ${WRKSRC}/scheme/${f} ${WRKSRC}/scheme/${f}.bak
-	${SED} -e 's;@M4@;${TOOLS_M4:Q};g' \
-	       -e 's;@pcb_confdir@;${PKG_SYSCONFDIR}/pcb;g' \
-	       -e 's;@pcb_m4dir@;${PCBDIR}/share/pcb/m4;g' \
-		${WRKSRC}/scheme/${f}.bak > ${WRKSRC}/scheme/${f}
-	${RM} -f ${WRKSRC}/scheme/${f}.bak
-.endfor
+CONFIGURE_ARGS+=	--with-pcbm4dir=${PCBDIR}/share/pcb/m4
+CONFIGURE_ARGS+=	--with-pcbconfdir=${PKG_SYSCONFDIR}/pcb
 
 .include "../../cad/libgeda/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

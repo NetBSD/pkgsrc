@@ -1,25 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2004/03/05 13:03:47 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.7 2005/08/23 00:02:20 dmcmahill Exp $
 
---- scheme/gnet-gsch2pcb.scm.orig	Fri Jan  2 19:49:31 2004
-+++ scheme/gnet-gsch2pcb.scm
-@@ -133,9 +133,10 @@
- ;;
- ;;
+--- configure.orig	2005-08-20 14:28:33.000000000 +0000
++++ configure	2005-08-22 02:36:57.000000000 +0000
+@@ -1816,6 +1816,6 @@
  
--(define m4-command "m4")
--(define m4-pcbdir "/usr/X11R6/lib/X11/pcb/m4")
-+(define m4-command "@M4@")
-+(define m4-pcbdir "@pcb_m4dir@")
- (define m4-files "")
-+(define m4-pcbconfdir "@pcb_confdir@")
- 
- ;; To emulate popen. Guileish again.
- ; Needed after guile ver. 1.3.2. To save 1.3a users, wrap it in.
-@@ -149,6 +150,7 @@
-   	;; pipe with the macro define in pcb program
-   	(let ((pipe (open-output-pipe (string-append
- 			m4-command " -d -I. -I" m4-pcbdir " "
-+			" -I " m4-pcbconfdir " -I$HOME/.pcb -I. "
- 			m4-pcbdir "/common.m4 " m4-files " - >> "
- 			output-filename))))
- 
+ # Check whether --with-pcbm4dir or --without-pcbm4dir was given.
+-if test "${with_pcbm4dir+set}" = set; then
+-  withval="$with_pcbm4dir"
++if test "${with_pcbconfdir+set}" = set; then
++  withval="$with_pcbconfdir"
+   PCBCONFDIR=$withval
+ else

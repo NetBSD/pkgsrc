@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/08/10 20:56:12 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/08/23 00:02:20 dmcmahill Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
@@ -9,18 +9,13 @@ HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		Set of utilities for gEDA
 
 BUILD_DEPENDS+=		geda-symbols>=${PKGVERSION}:../../cad/geda-symbols
-.if !exists(/usr/bin/lex) && !exists(/usr/bin/flex)
-BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
-EVAL_PREFIX+=		LEXDIR=flex
-LEX=			${LEXDIR}/bin/flex
-.endif
 
 CONFLICTS+=		gEDA<19991011
 
 .include "../../cad/geda/Makefile.common"
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		perl:run pkg-config
+USE_TOOLS+=		lex perl:run pkg-config
 
 # let (f)lex rebuild this file.  The distributed one doesn't
 # always work.
@@ -42,4 +37,5 @@ REPLACE_PERL+=		scripts/pads_backannotate \
 			scripts/sarlacc_sym
 
 .include "../../cad/libgeda/buildlink3.mk"
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
