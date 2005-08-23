@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/03/24 02:05:11 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/08/23 00:02:20 dmcmahill Exp $
 share/doc/geda-doc/attributes/WARNINGS
 share/doc/geda-doc/attributes/attributes.css
 share/doc/geda-doc/attributes/attributes.dvi
@@ -386,6 +386,7 @@ share/doc/geda-doc/tutorials/gsch2pcb/images/warmup-1.png
 share/doc/geda-doc/tutorials/gsch2pcb/images/warmup-2.png
 share/doc/geda-doc/tutorials/gsch2pcb/transistor-guide.html
 share/doc/geda-doc/tutorials/gsch2pcb/tutorial.html
+share/doc/geda-doc/tutorials/gsch2pcb/tutorial-old.html
 share/doc/geda-doc/tutorials/tragesym/gedit_corrected.jpg
 share/doc/geda-doc/tutorials/tragesym/gedit_pasted.jpg
 share/doc/geda-doc/tutorials/tragesym/gnumeric_dot.jpg
