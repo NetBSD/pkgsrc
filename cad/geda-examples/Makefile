@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/06/15 01:50:58 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/23 00:02:20 dmcmahill Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
-PKGREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	dmcmahill@NetBSD.org
@@ -21,7 +20,6 @@ pre-install:
 	${RM} -f ${WRKSRC}/configure.lineno
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/geda
 	cd ${WRKSRC} && ${PAX} -s '/.*Makefile.*//' -s '/.config.log//' \
 		-s '/.*config.status//' \
 		-rw . ${PREFIX}/share/examples/geda
