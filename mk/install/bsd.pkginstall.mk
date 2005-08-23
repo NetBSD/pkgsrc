@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.20 2005/08/23 09:29:06 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.21 2005/08/23 09:51:35 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -392,61 +392,21 @@ OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
 
 INSTALL_DIRS_FILE=	${WRKDIR}/.install-dirs
+INSTALL_DIRS_MEMBERS=	${PKG_SYSCONFSUBDIR} ${RCD_SCRIPTS}		\
+	${CONF_FILES} ${CONF_FILES_PERMS}				\
+	${MAKE_DIRS} ${MAKE_DIRS_PERMS}					\
+	${REQD_DIRS} ${REDQ_DIRS_PERMS}					\
+	${OWN_DIRS} ${OWN_DIRS_PERMS}
 INSTALL_UNPACK_TMPL+=	${INSTALL_DIRS_FILE}
 
+.if empty(INSTALL_DIRS_MEMBERS:M*)
+${INSTALL_DIRS_FILE}:
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
 ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${PKG_SYSCONFSUBDIR:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${CONF_FILES:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${CONF_FILES_PERMS:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${RCD_SCRIPTS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${MAKE_DIRS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${REQD_DIRS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${OWN_DIRS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${MAKE_DIRS_PERMS:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${REQD_DIRS_PERMS:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${OWN_DIRS_PERMS:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>>${.TARGET}.tmp;						\
 	${ECHO} "# start of install-dirs";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +DIRS script that reference counts directories"; \
@@ -457,49 +417,39 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+DIRS << 'EOF_DIRS'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/dirs;		\
-	${ECHO} "";							\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
-	case "${PKG_SYSCONFSUBDIR:M*:Q}${CONF_FILES:M*:Q}${CONF_FILES_PERMS:M*Q}" in \
+	${ECHO} ""
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>>${.TARGET}.tmp;						\
+	case ${PKG_SYSCONFSUBDIR:M*:Q}${CONF_FILES:M*:Q}${CONF_FILES_PERMS:M*Q}"" in \
 	"")	;;							\
 	*)	${ECHO} "# DIR: ${PKG_SYSCONFDIR:S/${PREFIX}\///} m" ;;	\
 	esac;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
-	case "${RCD_SCRIPTS:M*:Q}" in					\
+	case ${RCD_SCRIPTS:M*:Q}"" in					\
 	"")	;;							\
 	*)	${ECHO} "# DIR: ${RCD_SCRIPTS_DIR:S/${PREFIX}\///} m" ;; \
-	esac;								\
-	} >> ${.TARGET}.tmp
+	esac
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
+	exec 1>>${.TARGET}.tmp;						\
 	eval set -- dummy ${MAKE_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m";				\
 	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
 	eval set -- dummy ${REQD_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir fm";				\
 	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
 	eval set -- dummy ${OWN_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo";				\
-	done;								\
-	} >> ${.TARGET}.tmp
+	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
+	exec 1>>${.TARGET}.tmp;						\
 	eval set -- dummy ${MAKE_DIRS_PERMS}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
@@ -507,9 +457,6 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
 	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
 	eval set -- dummy ${REQD_DIRS_PERMS}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
@@ -517,28 +464,24 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir fm $$owner $$group $$mode";	\
 	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
 	eval set -- dummy ${OWN_DIRS_PERMS}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo $$owner $$group $$mode";	\
-	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
+	done
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>>${.TARGET}.tmp;						\
 	${ECHO} "EOF_DIRS";						\
 	${ECHO} "	\$${CHMOD} +x ./+DIRS";				\
 	${ECHO} "	;;";						\
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-dirs";				\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp ||	\
+	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.endif
 
 # PKG_SHELL contains the pathname of the shell that should be added or
 #	removed from the shell database, /etc/shells.  If a pathname
