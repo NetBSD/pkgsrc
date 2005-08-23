@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.19 2005/08/23 09:19:06 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.20 2005/08/23 09:29:06 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -198,16 +198,18 @@ SPECIAL_PERMS?=		# empty
 SETUID_ROOT_PERMS?=	${ROOT_USER} ${ROOT_GROUP} 4711
 
 INSTALL_PERMS_FILE=	${WRKDIR}/.install-perms
+INSTALL_PERMS_MEMBERS=	${SPECIAL_PERMS}
 INSTALL_UNPACK_TMPL+=	${INSTALL_PERMS_FILE}
 
+.if empty(INSTALL_PERMS_MEMBERS:M*)
+${INSTALL_PERMS_FILE}:
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
 ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${SPECIAL_PERMS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_FUNC_STRIP_PREFIX};						\
+	exec 1>>${.TARGET}.tmp;						\
 	${ECHO} "# start of install-perms";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +PERMS script that sets the special";	\
@@ -219,29 +221,22 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${ECHO} "	\$${CAT} > ./+PERMS << 'EOF_PERMS'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/perms;		\
 	${ECHO} "";							\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${SPECIAL_PERMS};				\
+	eval set -- dummy ${SPECIAL_PERMS}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		file="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# PERMS: $$file $$mode $$owner $$group";	\
 	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
 	${ECHO} "EOF_PERMS";						\
 	${ECHO} "	\$${CHMOD} +x ./+PERMS";			\
 	${ECHO} "	;;";						\
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-perms";				\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp ||	\
+	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.endif
 
 # CONF_FILES are pairs of example and true config files, used much like
 #	MLINKS in the base system.  At post-install time, if the true config
