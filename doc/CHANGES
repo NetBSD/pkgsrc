@@ -741,3 +741,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cad/libgeda to 20050820 [dmcmahill 2005-08-22]
 	Updated www/sope to 4.5.4 [rh 2005-08-23]
 	Updated www/drivel to 2.0.2 [jmmv 2005-08-23]
+	Updated benchmarks/xengine to 1.0.1nb2 [hira 2005-08-23]
