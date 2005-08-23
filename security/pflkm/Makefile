@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/12 04:15:50 grant Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/23 11:48:51 rillig Exp $
 
 DISTNAME=		pflkm-20050511
 CATEGORIES=		security
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
-PKG_USERS=		_pflogd:nogroup::pflogd\\ pseudo-user:${VARBASE}/chroot/pflogd:${NOLOGIN}
+PKG_USERS=		_pflogd:nogroup::pflogd\ pseudo-user:${VARBASE}/chroot/pflogd:${NOLOGIN}
 
 RCD_SCRIPTS=		pf pflogd
 PKG_SYSCONFSUBDIR=	pf

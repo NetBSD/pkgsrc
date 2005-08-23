@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/23 11:48:47 rillig Exp $
 #
 
 DISTNAME=	ircu2.10.11.07
@@ -43,7 +43,7 @@ FILES_SUBST+=		IRCD_USER=${IRCD_USER}
 MESSAGE_SUBST+=		IRCD_USER=${IRCD_USER}
 MESSAGE_SUBST+=		IRCD_GROUP=${IRCD_GROUP}
 PKG_GROUPS=		${IRCD_GROUP}
-PKG_USERS=		${IRCD_USER}:${IRCD_GROUP}::IRC\\ server\\ user:/nonexistant:${SH}
+PKG_USERS=		${IRCD_USER}:${IRCD_GROUP}::IRC\ server\ user:/nonexistant:${SH}
 
 SUBST_CLASSES=		paths
 SUBST_STAGE.paths=	post-patch

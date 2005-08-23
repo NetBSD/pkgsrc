@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/08/06 06:19:29 jlam Exp $
+# $NetBSD: Makefile,v 1.70 2005/08/23 11:48:50 rillig Exp $
 
 DISTNAME=		inn-2.4.1
 PKGREVISION=		7
@@ -43,7 +43,7 @@ CONFIGURE_ENV+=		_PATH_SORT="${TOOLS_SORT}"
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
 USE_TOOLS+=		awk egrep gzip perl:run sed sh sort yacc
 
-PKG_USERS=		${INN_USER}:${INN_GROUP}::Internet\\ News:${INN_DATA_DIR}:${SH}
+PKG_USERS=		${INN_USER}:${INN_GROUP}::Internet\ News:${INN_DATA_DIR}:${SH}
 PKG_GROUPS=		${INN_GROUP}
 
 PKG_SYSCONFDIR.inn=	${INN_DATA_DIR}/etc
