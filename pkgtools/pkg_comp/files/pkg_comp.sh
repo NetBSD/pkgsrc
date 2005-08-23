@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.23 2005/06/06 18:50:07 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.24 2005/08/23 14:52:58 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
-# Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
+# Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -659,6 +659,10 @@ pkg_auto()
         err "there is an stopped auto build; removeroot first or resume it"
     else
         makeroot
+
+        [ "$nflag" = "no" -a -n "$INSTALL_PACKAGES" ] &&
+            pkg_install $INSTALL_PACKAGES
+
         echo ${pkgs} | tr ' ' '\n' > ${rfile}
     fi
 
