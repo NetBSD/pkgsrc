@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: shell,v 1.2 2005/08/19 22:24:10 jlam Exp $
+# $NetBSD: shell,v 1.3 2005/08/23 09:33:14 abs Exp $
 #
 # +SHELL - shell registration script
 #
@@ -62,7 +62,11 @@ ADD)
 		esac
 		case $shell in
 		/*)	continue ;;
-		*)	shell="${PKG_PREFIX}/$shell" ;;
+		*)	if [ ${PKG_PREFIX} = / ] ; then
+				shell="/$shell"
+			else
+				shell="${PKG_PREFIX}/$shell"
+			fi ;;
 		esac
 		${TEST} -f "$shell" || continue
 
@@ -101,7 +105,11 @@ REMOVE)
 		esac
 		case $shell in
 		/*)	continue ;;
-		*)	shell="${PKG_PREFIX}/$shell" ;;
+		*)	if [ ${PKG_PREFIX} = / ] ; then
+				shell="/$shell"
+			else
+				shell="${PKG_PREFIX}/$shell"
+			fi ;;
 		esac
 		${TEST} -f "$shell" || continue
 
@@ -135,7 +143,11 @@ CHECK-ADD)
 	{ while read shell; do
 		case $shell in
 		/*)	continue ;;
-		*)	shell="${PKG_PREFIX}/$shell" ;;
+		*)	if [ ${PKG_PREFIX} = / ] ; then
+				shell="/$shell"
+			else
+				shell="${PKG_PREFIX}/$shell"
+			fi ;;
 		esac
 		${TEST} -f "$shell" || continue
 
@@ -169,7 +181,11 @@ CHECK-REMOVE)
 	{ while read shell; do
 		case $shell in
 		/*)	continue ;;
-		*)	shell="${PKG_PREFIX}/$shell" ;;
+		*)	if [ ${PKG_PREFIX} = / ] ; then
+				shell="/$shell"
+			else
+				shell="${PKG_PREFIX}/$shell"
+			fi ;;
 		esac
 		${TEST} -f "$shell" || continue
 
