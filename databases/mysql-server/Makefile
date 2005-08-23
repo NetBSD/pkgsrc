@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/04/11 21:45:12 tv Exp $
+# $NetBSD: Makefile,v 1.65 2005/08/23 11:48:47 rillig Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-pthreads
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
-PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}::MySQL\\ database\\ administrator:${MYSQL_DATADIR}:${SH}
+PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}::MySQL\ database\ administrator:${MYSQL_DATADIR}:${SH}
 PKG_GROUPS=		${MYSQL_GROUP}
 RCD_SCRIPTS=		mysqld
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/08/23 11:48:47 rillig Exp $
 #
 
 DISTNAME=		icecast-2.2.0
@@ -27,7 +27,7 @@ ICECAST_USER?=		icecast
 ICECAST_GROUP?=		icecast
 
 PKG_GROUPS=		${ICECAST_GROUP}
-PKG_USERS=		${ICECAST_USER}:${ICECAST_GROUP}::Icecast2\\ user
+PKG_USERS=		${ICECAST_USER}:${ICECAST_GROUP}::Icecast2\ user
 
 EGDIR=			${PREFIX}/share/examples/icecast
 CONF_FILES=		${EGDIR}/icecast.xml ${PKG_SYSCONFDIR}/icecast.xml

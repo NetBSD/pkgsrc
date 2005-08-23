@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/06/19 01:22:17 salo Exp $
+# $NetBSD: Makefile,v 1.41 2005/08/23 11:48:47 rillig Exp $
 #
 
 DISTNAME=		silc-server-1.0
@@ -26,7 +26,7 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 SILCD_USER?=		silcd
 SILCD_GROUP?=		silcd
 PKG_GROUPS=		${SILCD_GROUP}
-PKG_USERS=		${SILCD_USER}:${SILCD_GROUP}::SILC\\ Server\\ user
+PKG_USERS=		${SILCD_USER}:${SILCD_GROUP}::SILC\ Server\ user
 
 PKG_SYSCONFSUBDIR?=	${PKGBASE}
 

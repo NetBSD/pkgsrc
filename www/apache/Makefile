@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2005/08/20 19:16:22 jlam Exp $
+# $NetBSD: Makefile,v 1.170 2005/08/23 11:48:51 rillig Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -149,7 +149,7 @@ OWN_DIRS+=		${VARBASE}/log/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 
 PKG_GROUPS=		${APACHE_GROUP}
-PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\\ user
+PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\ user
 
 MAKE_ENV+=		CHMOD="${CHMOD}" CHOWN="${CHOWN}" XARGS="${XARGS}"
 MAKE_ENV+=		FIND="${FIND}" CHGRP="${CHGRP}"
