@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.16 2005/08/22 08:07:38 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.17 2005/08/23 08:54:29 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -297,36 +297,15 @@ MESSAGE_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 MESSAGE_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
 
 INSTALL_FILES_FILE=	${WRKDIR}/.install-files
+INSTALL_FILES_MEMBERS=	${RCD_SCRIPTS} ${CONF_FILES} ${REQD_FILES} \
+	${CONF_FILES_PERMS} ${REQD_FILES_PERMS}
 INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
 
+.if !empty(INSTALL_FILES_MEMBERS:M*)
 ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${RCD_SCRIPTS:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${CONF_FILES:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${REQD_FILES:M*:Q}" in					\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${CONF_FILES_PERMS:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -f ${.TARGET}.tmp || {	\
-	case "${REQD_FILES_PERMS:M*:Q}" in				\
-	"")	;;							\
-	*)	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp ;;		\
-	esac; }
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>>${.TARGET}.tmp;						\
 	${ECHO} "# start of install-files";				\
 	${ECHO} "#";							\
 	${ECHO} "# Generate a +FILES script that reference counts config"; \
@@ -337,59 +316,50 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+FILES << 'EOF_FILES'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
-	${ECHO} "";							\
-	} >> ${.TARGET}.tmp
+	${ECHO} ""
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${RCD_SCRIPTS};				\
+	eval set -- dummy ${RCD_SCRIPTS}; shift;			\
+	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		script="$$1"; shift;					\
 		file="${RCD_SCRIPTS_DIR:S/^${PREFIX}\///}/$$script";	\
 		egfile="${RCD_SCRIPTS_EXAMPLEDIR}/$$script";		\
 		${ECHO} "# FILE: $$file cr $$egfile ${RCD_SCRIPTS_MODE}"; \
-	done;								\
-	} >> ${.TARGET}.tmp
+	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${CONF_FILES};				\
+	eval set -- dummy ${CONF_FILES}; shift;				\
+	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		egfile="$$1"; file="$$2";				\
 		shift; shift;						\
 		egfile=`strip_prefix "$$egfile"`;			\
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
-	done;								\
-	} >> ${.TARGET}.tmp
+	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${REQD_FILES};				\
+	eval set -- dummy ${REQD_FILES}; shift;				\
+	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		egfile="$$1"; file="$$2";				\
 		shift; shift;						\
 		egfile=`strip_prefix "$$egfile"`;			\
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file cf $$egfile ${REQD_FILES_MODE}"; \
-	done;								\
-	} >> ${.TARGET}.tmp
+	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${CONF_FILES_PERMS};			\
+	eval set -- dummy ${CONF_FILES_PERMS}; shift;			\
+	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		egfile="$$1"; file="$$2";				\
 		owner="$$3"; group="$$4"; mode="$$5";			\
 		shift; shift; shift; shift; shift;			\
 		egfile=`strip_prefix "$$egfile"`;			\
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
-	done;								\
-	} >> ${.TARGET}.tmp
+	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${REQD_FILES_PERMS};			\
+	eval set -- dummy ${REQD_FILES_PERMS}; shift;			\
+	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		egfile="$$1"; file="$$2";				\
@@ -398,19 +368,20 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		egfile=`strip_prefix "$$egfile"`;			\
 		file=`strip_prefix "$$file"`;				\
 		${ECHO} "# FILE: $$file cf $$egfile $$mode $$owner $$group"; \
-	done;								\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp || {	\
+	done
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>>${.TARGET}.tmp;						\
 	${ECHO} "EOF_FILES";						\
 	${ECHO} "	\$${CHMOD} +x ./+FILES";			\
 	${ECHO} "	;;";						\
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-files";				\
-	} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${.TARGET}.tmp ||	\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
+${INSTALL_FILES_FILE}:
+	${_PKG_DEBUG}${_PKG_SILENT}${TOUCH} ${.TARGET}
+.endif
 
 # OWN_DIRS contains a list of directories for this package that should be
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL
