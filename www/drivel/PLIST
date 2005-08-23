@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/06/26 16:55:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/08/23 10:02:12 jmmv Exp $
 bin/drivel
 share/application-registry/drivel.applications
 share/applications/gnome-drivel.desktop
@@ -20,6 +20,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/drivel.mo
@@ -28,6 +29,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/drivel.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/drivel.mo
 share/mime-info/drivel.keys
 share/mime-info/drivel.mime
 share/mime/packages/drivel.xml
