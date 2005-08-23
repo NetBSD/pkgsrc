@@ -1,14 +1,15 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.23 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.24 2005/08/23 12:01:52 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
 #
 # (1) Set the variables to customize the install scripts to the package, and
 # (2) Set USE_PKGINSTALL to YES in the package Makefile.
-#
-# NOTE: This file must _not_ be included from anything else than bsd.pkg.mk.
 
-.if !defined(BSD_PKG_INSTALL_MK)
+.if defined(BSD_PKG_INSTALL_MK)
+PKG_FAIL_REASON+=	"[bsd.pkginstall.mk] Must not be included directly."
+
+.else
 BSD_PKG_INSTALL_MK=	1
 
 .include "../../mk/bsd.prefs.mk"
