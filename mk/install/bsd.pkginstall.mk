@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.22 2005/08/23 10:00:50 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.23 2005/08/23 11:48:50 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -99,10 +99,10 @@ FILES_SUBST+=		PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}
 #
 #	Only the user and group are required; everything else is optional,
 #	but the colons must be in the right places when specifying optional
-#	bits.  Note that if the description contains spaces, then spaces
-#	should be double backslash-escaped, e.g.
+#	bits.  Note that if the description contains spaces, they must
+#	be escaped as usual, e.g.
 #
-#		foo:foogrp::The\\ Foomister
+#		foo:foogrp::The\ Foomister
 #
 # PKG_GROUPS represents the groups to create for the package.  It is a
 #	space-separated list of elements of the form
@@ -117,6 +117,10 @@ _PKG_USER_HOME?=	/nonexistent
 _PKG_USER_SHELL?=	${NOLOGIN}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL}
+
+.if !empty(PKG_USERS:M*\\\\*)
+PKG_FAIL_REASON+=	"[bsd.pkginstall.mk] PKG_USERS must not contain double backslashes."
+.endif
 
 # Interix is very Special in that users are groups cannot have the
 # same name.  Interix.mk tries to work around this by overriding
@@ -159,12 +163,12 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/usergroup;		\
 	${ECHO} "";							\
-	eval set -- dummy ${PKG_GROUPS}; shift;				\
+	set -- dummy ${PKG_GROUPS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		i="$$1"; shift;						\
 		${ECHO} "# GROUP: $$i";					\
 	done;								\
-	eval set -- dummy ${PKG_USERS}; shift;				\
+	set -- dummy ${PKG_USERS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		i="$$1"; shift;						\
 		${ECHO} "# USER: $$i";					\
@@ -221,7 +225,7 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${ECHO} "	\$${CAT} > ./+PERMS << 'EOF_PERMS'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/perms;		\
 	${ECHO} "";							\
-	eval set -- dummy ${SPECIAL_PERMS}; shift;			\
+	set -- dummy ${SPECIAL_PERMS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		file="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
@@ -303,7 +307,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
 	${ECHO} ""
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	eval set -- dummy ${RCD_SCRIPTS}; shift;			\
+	set -- dummy ${RCD_SCRIPTS}; shift;				\
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		script="$$1"; shift;					\
@@ -312,7 +316,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		${ECHO} "# FILE: $$file cr $$egfile ${RCD_SCRIPTS_MODE}"; \
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	eval set -- dummy ${CONF_FILES}; shift;				\
+	set -- dummy ${CONF_FILES}; shift;				\
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
@@ -322,7 +326,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	eval set -- dummy ${REQD_FILES}; shift;				\
+	set -- dummy ${REQD_FILES}; shift;				\
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
@@ -332,7 +336,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		${ECHO} "# FILE: $$file cf $$egfile ${REQD_FILES_MODE}"; \
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	eval set -- dummy ${CONF_FILES_PERMS}; shift;			\
+	set -- dummy ${CONF_FILES_PERMS}; shift;			\
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
@@ -343,7 +347,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
-	eval set -- dummy ${REQD_FILES_PERMS}; shift;			\
+	set -- dummy ${REQD_FILES_PERMS}; shift;			\
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		egfile="$$1"; file="$$2";				\
@@ -430,19 +434,19 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	exec 1>>${.TARGET}.tmp;						\
-	eval set -- dummy ${MAKE_DIRS}; shift;				\
+	set -- dummy ${MAKE_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m";				\
 	done;								\
-	eval set -- dummy ${REQD_DIRS}; shift;				\
+	set -- dummy ${REQD_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir fm";				\
 	done;								\
-	eval set -- dummy ${OWN_DIRS}; shift;				\
+	set -- dummy ${OWN_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
@@ -450,21 +454,21 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	exec 1>>${.TARGET}.tmp;						\
-	eval set -- dummy ${MAKE_DIRS_PERMS}; shift;			\
+	set -- dummy ${MAKE_DIRS_PERMS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
 	done;								\
-	eval set -- dummy ${REQD_DIRS_PERMS}; shift;			\
+	set -- dummy ${REQD_DIRS_PERMS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir fm $$owner $$group $$mode";	\
 	done;								\
-	eval set -- dummy ${OWN_DIRS_PERMS}; shift;			\
+	set -- dummy ${OWN_DIRS_PERMS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
@@ -511,7 +515,7 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${ECHO} "	\$${CAT} > ./+SHELL << 'EOF_SHELL'";		\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/shell;		\
 	${ECHO} "";							\
-	eval set -- dummy ${PKG_SHELL}; shift;				\
+	set -- dummy ${PKG_SHELL}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
 		shell="$$1"; shift;					\
 		shell=`strip_prefix "$$shell"`;				\

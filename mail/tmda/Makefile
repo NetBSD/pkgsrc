@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/16 06:58:08 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/08/23 11:48:49 rillig Exp $
 #
 
 DISTNAME=	tmda-1.0.3
@@ -20,7 +20,7 @@ PKG_SYSCONFSUBDIR=	${PKGBASE}
 PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 PKG_GROUPS=	tofmipd
-PKG_USERS=	tofmipd:tofmipd::TMDA\\ ofmipd\\ User
+PKG_USERS=	tofmipd:tofmipd::TMDA\ ofmipd\ User
 
 RCD_SCRIPTS=	tofmipd
 FILES_SUBST+=	PYTHONBIN=${PYTHONBIN}

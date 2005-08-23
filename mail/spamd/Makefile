@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/26 11:13:41 peter Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/23 11:48:49 rillig Exp $
 
 DISTNAME=		spamd-20050726
 CATEGORIES=		mail
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
-PKG_USERS=		_spamd:_spamd::Spam\\ Daemon:${VARBASE}/chroot/spamd:/sbin/nologin
+PKG_USERS=		_spamd:_spamd::Spam\ Daemon:${VARBASE}/chroot/spamd:/sbin/nologin
 PKG_GROUPS=		_spamd
 
 OWN_DIRS=		${VARBASE}/chroot/spamd

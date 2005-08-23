@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/08/10 20:56:13 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/08/23 11:48:47 rillig Exp $
 #
 
 DISTNAME=		bitlbee-0.92
@@ -32,7 +32,7 @@ STATEDIR=		${VARBASE}/db/bitlbee
 
 OWN_DIRS_PERMS=		${STATEDIR} bitlbee nobody 700
 
-PKG_USERS=		bitlbee:nobody::Bitlbee\\ user:${VARBASE}/db/bitlbee
+PKG_USERS=		bitlbee:nobody::Bitlbee\ user:${VARBASE}/db/bitlbee
 
 INSTALLATION_DIRS=	man/man8 sbin
 

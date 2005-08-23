@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/23 11:48:47 rillig Exp $
 #
 
 DISTNAME=	gnats-4.0.1
@@ -23,7 +23,7 @@ INFO_FILES=	gnats.info gnats-faq.info
 CONFIGURE_ARGS= --with-lispdir=${PREFIX}/share/emacs/site-lisp
 
 GNATS_HOME=	${PREFIX}/share/gnats/gnats-db
-PKG_USERS=	gnats:daemon::GNATS\\ database\\ owner:${GNATS_HOME}:${SH}
+PKG_USERS=	gnats:daemon::GNATS\ database\ owner:${GNATS_HOME}:${SH}
 
 REQD_DIRS=		${PREFIX}/share/gnats
 REQD_DIRS+=		${PREFIX}/libexec/gnats

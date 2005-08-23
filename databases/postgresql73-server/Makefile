@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/15 18:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/23 11:48:47 rillig Exp $
 
 PKGNAME=		postgresql73-server-${BASE_VERS}
 PKGREVISION=		# empty
@@ -47,7 +47,7 @@ FILES_SUBST+=		PGGROUP=${PGGROUP}
 FILES_SUBST+=		PGHOME=${PGHOME}
 BUILD_DEFS=		PGUSER PGGROUP PGHOME
 
-PKG_USERS=		${PGUSER}:${PGGROUP}::PostgreSQL\\ database\\ administrator:${PGHOME}:${SH}
+PKG_USERS=		${PGUSER}:${PGGROUP}::PostgreSQL\ database\ administrator:${PGHOME}:${SH}
 PKG_GROUPS=		${PGGROUP}
 
 RCD_SCRIPTS=		pgsql

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/09 18:21:23 salo Exp $
+# $NetBSD: Makefile,v 1.27 2005/08/23 11:48:50 rillig Exp $
 
 DISTNAME=		leafnode-1.11.3.rel
 PKGNAME=		${DISTNAME:S/.rel//}
@@ -24,7 +24,7 @@ LEAFNODE_CONFDIR?=	${PKG_SYSCONFDIR}/leafnode
 # Default data dir, login and group are the same as used by inn
 #
 BUILD_DEFS+=		LEAFNODE_DATA_DIR LEAFNODE_GROUP LEAFNODE_USER
-PKG_USERS=		${LEAFNODE_USER}:${LEAFNODE_GROUP}::Internet\\ News:${LEAFNODE_DATA_DIR}:${SH}
+PKG_USERS=		${LEAFNODE_USER}:${LEAFNODE_GROUP}::Internet\ News:${LEAFNODE_DATA_DIR}:${SH}
 PKG_GROUPS=		${LEAFNODE_GROUP}
 LEAFNODE_HOME?=		${INN_DATA_DIR}
 

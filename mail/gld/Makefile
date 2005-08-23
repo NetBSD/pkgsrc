@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/21 11:46:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/23 11:48:48 rillig Exp $
 #
 
 DISTNAME=		gld-1.5.2
@@ -21,7 +21,7 @@ RCD_SCRIPTS=		gld
 GLD_USER?=		gld
 GLD_GROUP?=		gld
 PKG_GROUPS=             ${GLD_GROUP}
-PKG_USERS=              ${GLD_USER}:${GLD_GROUP}::Greylisting\\ Daemon\\ user
+PKG_USERS=              ${GLD_USER}:${GLD_GROUP}::Greylisting\ Daemon\ user
 
 SUBST_CLASSES+=		gld users
 SUBST_STAGE.gld=	post-patch

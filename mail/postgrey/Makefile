@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:13 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/23 11:48:49 rillig Exp $
 #
 
 DISTNAME=	postgrey-1.21
@@ -32,7 +32,7 @@ EGDIR=			share/examples/${PKGBASE}
 
 RCD_SCRIPTS=		postgrey
 PKG_GROUPS=		${POSTGREY_GROUP}
-PKG_USERS=		${POSTGREY_USER}:${POSTGREY_GROUP}::Postgrey\\ Daemon
+PKG_USERS=		${POSTGREY_USER}:${POSTGREY_GROUP}::Postgrey\ Daemon
 
 .for i in postgrey_whitelist_clients postgrey_whitelist_recipients
 CONF_FILES+=		${PREFIX}/${EGDIR}/${i} \

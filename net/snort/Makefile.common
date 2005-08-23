@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2005/08/19 18:12:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/08/23 11:48:50 rillig Exp $
 #
 
 DISTNAME=		snort-2.4.0
@@ -24,7 +24,7 @@ RCD_SCRIPTS=		snort
 SNORT_USER?=		snort
 SNORT_GROUP?=		snort
 PKG_GROUPS=		${SNORT_GROUP}
-PKG_USERS=		${SNORT_USER}:${SNORT_GROUP}::Snort\\ user
+PKG_USERS=		${SNORT_USER}:${SNORT_GROUP}::Snort\ user
 FILES_SUBST+=		SNORT_USER="${SNORT_USER}" SNORT_GROUP="${SNORT_GROUP}"
 
 OWN_DIRS_PERMS=		${VARBASE}/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
