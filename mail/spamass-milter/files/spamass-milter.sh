@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: spamass-milter.sh,v 1.1 2003/09/11 18:22:41 jmmv Exp $
+# $NetBSD: spamass-milter.sh,v 1.2 2005/08/23 13:40:02 tv Exp $
 #
 
 # PROVIDE: spamass-milter
@@ -21,5 +21,5 @@ if [ -f /etc/rc.subr ]; then
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
-	${command} ${spamass_milter_flags} ${command_args}
+	${command} ${command_args} ${spamass_milter_flags}
 fi
