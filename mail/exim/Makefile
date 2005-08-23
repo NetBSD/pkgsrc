@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2005/07/21 03:06:13 grant Exp $
+# $NetBSD: Makefile,v 1.62 2005/08/23 11:48:48 rillig Exp $
 
 DISTNAME=	exim-4.52
 CATEGORIES=	mail net
@@ -24,7 +24,7 @@ MAKE_FLAGS+=	FULLECHO=''
 BUILD_DEFS=	EXIM_USER EXIM_GROUP EXIM_DB EXIM_USE_LOOKUP_WHOSON
 
 PKG_GROUPS=	${EXIM_GROUP}
-PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}::Exim\\ mail\\ server\\ user:/var/mail:${NOLOGIN}
+PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}::Exim\ mail\ server\ user:/var/mail:${NOLOGIN}
 
 PKG_SYSCONFSUBDIR?=	exim
 EXAMPLESDIR=		${PREFIX}/share/examples/exim

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/07/16 01:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/08/23 11:48:51 rillig Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -24,7 +24,7 @@ USE_TOOLS+=		perl:run
 
 GCC_REQD+=		2.95.3
 
-PKG_USERS=		sfs:sfs::Self-certifying\\ file\\ system:/
+PKG_USERS=		sfs:sfs::Self-certifying\ file\ system:/
 PKG_GROUPS=		sfs
 PKG_SYSCONFSUBDIR=	sfs
 

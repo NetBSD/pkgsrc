@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/22 09:47:30 cube Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/23 11:48:50 rillig Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -56,7 +56,7 @@ FILES_SUBST+=		AMAVIS_DIR=${AMAVIS_DIR}
 FILES_SUBST+=		AMAVIS_QUARANTINE=${AMAVIS_QUARANTINE}
 
 PKG_GROUPS=	${AMAVIS_GROUP}
-PKG_USERS=	${AMAVIS_USER}:${AMAVIS_GROUP}::Virus\\ Scanning\\ Account:${AMAVIS_DIR}:${SH}
+PKG_USERS=	${AMAVIS_USER}:${AMAVIS_GROUP}::Virus\ Scanning\ Account:${AMAVIS_DIR}:${SH}
 RCD_SCRIPTS=	amavisd
 CONF_FILES=	${EGDIR}/amavisd.conf-minimal ${PKG_SYSCONFDIR}/amavisd.conf
 

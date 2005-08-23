@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/08/23 11:48:50 rillig Exp $
 #
 
 CATEGORIES=		net sysutils
@@ -12,8 +12,8 @@ NETSTADM_GROUP?=	${NETSTADM_USER}
 PKG_GROUPS+=	${NETSAINT_GROUP}
 PKG_GROUPS+=	${NETSTADM_GROUP}
 
-PKG_USERS+=	${NETSAINT_USER}:${NETSAINT_GROUP}::NetSaint\\ Runtime\\ User
-PKG_USERS+=	${NETSTADM_USER}:${NETSTADM_GROUP}::NetSaint\\ Administrator:${PREFIX}/etc/netsaint:${SH}
+PKG_USERS+=	${NETSAINT_USER}:${NETSAINT_GROUP}::NetSaint\ Runtime\ User
+PKG_USERS+=	${NETSTADM_USER}:${NETSTADM_GROUP}::NetSaint\ Administrator:${PREFIX}/etc/netsaint:${SH}
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run

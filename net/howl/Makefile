@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:22 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/08/23 11:48:50 rillig Exp $
 
 DISTNAME=		howl-0.9.10
 CATEGORIES=		net
@@ -16,7 +16,7 @@ PTHREAD_AUTO_VARS=	yes
 
 RCD_SCRIPTS=		howl
 PKG_GROUPS+=		howl
-PKG_USERS+=		howl:howl::Zeroconf\\ user
+PKG_USERS+=		howl:howl::Zeroconf\ user
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
