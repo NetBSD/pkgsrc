@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.17 2005/08/23 08:54:29 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.18 2005/08/23 08:58:20 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -361,7 +361,6 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	eval set -- dummy ${REQD_FILES_PERMS}; shift;			\
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		egfile="$$1"; file="$$2";				\
 		owner="$$3"; group="$$4"; mode="$$5";			\
 		shift; shift; shift; shift; shift;			\
@@ -492,9 +491,8 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${MAKE_DIRS};				\
+	eval set -- dummy ${MAKE_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir m";				\
@@ -502,9 +500,8 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${REQD_DIRS};				\
+	eval set -- dummy ${REQD_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir fm";				\
@@ -512,9 +509,8 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${OWN_DIRS};				\
+	eval set -- dummy ${OWN_DIRS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		dir="$$1"; shift;					\
 		dir=`strip_prefix "$$dir"`;				\
 		${ECHO} "# DIR: $$dir mo";				\
@@ -522,9 +518,8 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${MAKE_DIRS_PERMS};				\
+	eval set -- dummy ${MAKE_DIRS_PERMS}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
@@ -533,9 +528,8 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${REQD_DIRS_PERMS};				\
+	eval set -- dummy ${REQD_DIRS_PERMS}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
@@ -544,9 +538,8 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${OWN_DIRS_PERMS};				\
+	eval set -- dummy ${OWN_DIRS_PERMS}; shift;			\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
@@ -594,9 +587,8 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	} >> ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	${TEST} ! -f ${.TARGET}.tmp || {				\
-	eval set -- __dummy ${PKG_SHELL};				\
+	eval set -- dummy ${PKG_SHELL}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} "$$1" = "__dummy"; then shift; continue; fi;	\
 		shell="$$1"; shift;					\
 		shell=`strip_prefix "$$shell"`;				\
 		${ECHO} "# SHELL: $$shell";				\
