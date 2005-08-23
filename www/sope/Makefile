@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/05/05 03:23:08 rh Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/23 05:06:04 rh Exp $
 #
 
-DISTNAME=		sope-4.4beta.6-voyager-r758
-PKGNAME=		sope-4.4rc6.758
+DISTNAME=		sope-4.5.4-nevermind-r878
+PKGNAME=		sope-4.5.4
 CATEGORIES=		www gnustep
-MASTER_SITES=		ftp://ftp.opengroupware.org/sources/releases/
+MASTER_SITES=		ftp://ftp.opengroupware.org/nightly/sources/releases/ \
+			http://download.opengroupware.org/nightly/sources/releases/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://sope.opengroupware.org/
@@ -30,6 +31,7 @@ post-configure:
 	cd ${WRKSRC}/sope-core/NGStreams			&&	\
 	${LN} -s `${FIND} ${GNUSTEP_HOST_CPU} -name config.h` .
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libFoundation/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../databases/openldap/buildlink3.mk"

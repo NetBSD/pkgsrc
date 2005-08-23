@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/24 03:01:15 rh Exp $
-share/GNUstep/Local/Library/GDLAdaptors-4.4/PostgreSQL.gdladaptor/PostgreSQL
-share/GNUstep/Local/Library/GDLAdaptors-4.4/PostgreSQL.gdladaptor/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GDLAdaptors-4.4/PostgreSQL.gdladaptor/Resources/Version
-share/GNUstep/Local/Library/GDLAdaptors-4.4/PostgreSQL.gdladaptor/stamp.make
+@comment $NetBSD: PLIST,v 1.2 2005/08/23 05:06:04 rh Exp $
+share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/PostgreSQL
+share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/Resources/Version
+share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/stamp.make
 share/GNUstep/Local/Library/Headers/DOM/DOM.h
 share/GNUstep/Local/Library/Headers/DOM/DOMAttribute.h
 share/GNUstep/Local/Library/Headers/DOM/DOMBuilder.h
@@ -87,6 +87,16 @@ share/GNUstep/Local/Library/Headers/GDLAccess/EOSQLExpression.h
 share/GNUstep/Local/Library/Headers/GDLAccess/EOSQLQualifier.h
 share/GNUstep/Local/Library/Headers/GDLAccess/GDLAccess.h
 share/GNUstep/Local/Library/Headers/GDLAccess/NSObject+EONullInit.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/EOAdaptorChannel+GCS.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/GCSChannelManager.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/GCSContext.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/GCSFieldExtractor.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/GCSFieldInfo.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/GCSFolder.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/GCSFolderManager.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/GCSFolderType.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/GCSStringFormatter.h
+share/GNUstep/Local/Library/Headers/GDLContentStore/NSURL+GCS.h
 share/GNUstep/Local/Library/Headers/NGExtensions/AutoDefines.h
 share/GNUstep/Local/Library/Headers/NGExtensions/DOMNode+EOQualifier.h
 share/GNUstep/Local/Library/Headers/NGExtensions/EOCacheDataSource.h
@@ -118,6 +128,15 @@ share/GNUstep/Local/Library/Headers/NGExtensions/NGFileFolderInfoDataSource.h
 share/GNUstep/Local/Library/Headers/NGExtensions/NGFileManager.h
 share/GNUstep/Local/Library/Headers/NGExtensions/NGFileManagerURL.h
 share/GNUstep/Local/Library/Headers/NGExtensions/NGHashMap.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLogAppender.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLogEvent.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLogEventFormatter.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLogFileHandleAppender.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLogLevel.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLogSyslogAppender.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLogger.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLoggerManager.h
+share/GNUstep/Local/Library/Headers/NGExtensions/NGLogging.h
 share/GNUstep/Local/Library/Headers/NGExtensions/NGMemoryAllocation.h
 share/GNUstep/Local/Library/Headers/NGExtensions/NGMerging.h
 share/GNUstep/Local/Library/Headers/NGExtensions/NGObjCRuntime.h
@@ -230,6 +249,7 @@ share/GNUstep/Local/Library/Headers/NGObjWeb/EOFetchSpecification+SoDAV.h
 share/GNUstep/Local/Library/Headers/NGObjWeb/NGObjWeb.h
 share/GNUstep/Local/Library/Headers/NGObjWeb/NGObjWebDecls.h
 share/GNUstep/Local/Library/Headers/NGObjWeb/NSException+HTTP.h
+share/GNUstep/Local/Library/Headers/NGObjWeb/NSString+JavaScriptEscaping.h
 share/GNUstep/Local/Library/Headers/NGObjWeb/OWResourceManager.h
 share/GNUstep/Local/Library/Headers/NGObjWeb/OWResponder.h
 share/GNUstep/Local/Library/Headers/NGObjWeb/OWViewRequestHandler.h
@@ -355,7 +375,17 @@ share/GNUstep/Local/Library/Headers/NGXmlRpc/WODirectAction+XmlRpc.h
 share/GNUstep/Local/Library/Headers/NGXmlRpc/WODirectAction+XmlRpcIntrospection.h
 share/GNUstep/Local/Library/Headers/NGXmlRpc/XmlRpcMethodCall+WO.h
 share/GNUstep/Local/Library/Headers/NGXmlRpc/XmlRpcMethodResponse+WO.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCard.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCardAddress.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCardName.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCardOrg.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCardPhone.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCardSaxHandler.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCardSimpleValue.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCardStrArrayValue.h
+share/GNUstep/Local/Library/Headers/NGiCal/NGVCardValue.h
 share/GNUstep/Local/Library/Headers/NGiCal/NGiCal.h
+share/GNUstep/Local/Library/Headers/NGiCal/NSCalendarDate+ICal.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalAlarm.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalAttachment.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalCalendar.h
@@ -368,7 +398,10 @@ share/GNUstep/Local/Library/Headers/NGiCal/iCalFreeBusy.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalJournal.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalObject.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalPerson.h
+share/GNUstep/Local/Library/Headers/NGiCal/iCalRecurrenceCalculator.h
+share/GNUstep/Local/Library/Headers/NGiCal/iCalRecurrenceRule.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalRenderer.h
+share/GNUstep/Local/Library/Headers/NGiCal/iCalRepeatableEntityObject.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalToDo.h
 share/GNUstep/Local/Library/Headers/NGiCal/iCalTrigger.h
 share/GNUstep/Local/Library/Headers/SaxObjC/SaxAttributeList.h
@@ -410,8 +443,8 @@ share/GNUstep/Local/Library/Headers/SoOFS/OFSWebMethod.h
 share/GNUstep/Local/Library/Headers/SoOFS/OFSWebMethodRenderer.h
 share/GNUstep/Local/Library/Headers/SoOFS/OFSWebTemplate.h
 share/GNUstep/Local/Library/Headers/SoOFS/SoOFS.h
-share/GNUstep/Local/Library/Headers/WEExtensions/WEClientCapabilities.h
 share/GNUstep/Local/Library/Headers/WEExtensions/WEContextConditional.h
+share/GNUstep/Local/Library/Headers/WEExtensions/WEResourceManager.h
 share/GNUstep/Local/Library/Headers/WOExtensions/WOExtensions.h
 share/GNUstep/Local/Library/Headers/WOExtensions/WORedirect.h
 share/GNUstep/Local/Library/Headers/WOXML/WOXML.h
@@ -426,74 +459,81 @@ share/GNUstep/Local/Library/Libraries/Resources/NGObjWeb/DAVPropMap.plist
 share/GNUstep/Local/Library/Libraries/Resources/NGObjWeb/Defaults.plist
 share/GNUstep/Local/Library/Libraries/Resources/NGObjWeb/Languages.plist
 share/GNUstep/Local/Library/Libraries/libDOM_d.so
-share/GNUstep/Local/Library/Libraries/libDOM_d.so.4.4.13
+share/GNUstep/Local/Library/Libraries/libDOM_d.so.4.5.16
 share/GNUstep/Local/Library/Libraries/libEOControl_d.so
-share/GNUstep/Local/Library/Libraries/libEOControl_d.so.4.4.48
+share/GNUstep/Local/Library/Libraries/libEOControl_d.so.4.5.53
 share/GNUstep/Local/Library/Libraries/libGDLAccess_d.so
-share/GNUstep/Local/Library/Libraries/libGDLAccess_d.so.4.4.44
+share/GNUstep/Local/Library/Libraries/libGDLAccess_d.so.4.5.52
+share/GNUstep/Local/Library/Libraries/libGDLContentStore_d.so
+share/GNUstep/Local/Library/Libraries/libGDLContentStore_d.so.4.5.28
 share/GNUstep/Local/Library/Libraries/libNGExtensions_d.so
-share/GNUstep/Local/Library/Libraries/libNGExtensions_d.so.4.4.133
+share/GNUstep/Local/Library/Libraries/libNGExtensions_d.so.4.5.160
 share/GNUstep/Local/Library/Libraries/libNGLdap_d.so
-share/GNUstep/Local/Library/Libraries/libNGLdap_d.so.4.4.22
+share/GNUstep/Local/Library/Libraries/libNGLdap_d.so.4.5.23
 share/GNUstep/Local/Library/Libraries/libNGMime_d.so
-share/GNUstep/Local/Library/Libraries/libNGMime_d.so.4.4.201
+share/GNUstep/Local/Library/Libraries/libNGMime_d.so.4.5.222
 share/GNUstep/Local/Library/Libraries/libNGObjWeb_d.so
-share/GNUstep/Local/Library/Libraries/libNGObjWeb_d.so.4.4.89
+share/GNUstep/Local/Library/Libraries/libNGObjWeb_d.so.4.5.170
 share/GNUstep/Local/Library/Libraries/libNGStreams_d.so
-share/GNUstep/Local/Library/Libraries/libNGStreams_d.so.4.4.46
+share/GNUstep/Local/Library/Libraries/libNGStreams_d.so.${PKGVERSION}8
 share/GNUstep/Local/Library/Libraries/libNGXmlRpc_d.so
-share/GNUstep/Local/Library/Libraries/libNGXmlRpc_d.so.4.4.7
+share/GNUstep/Local/Library/Libraries/libNGXmlRpc_d.so.4.5.10
 share/GNUstep/Local/Library/Libraries/libNGiCal_d.so
-share/GNUstep/Local/Library/Libraries/libNGiCal_d.so.4.4.34
+share/GNUstep/Local/Library/Libraries/libNGiCal_d.so.${PKGVERSION}7
 share/GNUstep/Local/Library/Libraries/libSaxObjC_d.so
-share/GNUstep/Local/Library/Libraries/libSaxObjC_d.so.4.4.43
+share/GNUstep/Local/Library/Libraries/libSaxObjC_d.so.4.5.51
 share/GNUstep/Local/Library/Libraries/libSoOFS_d.so
-share/GNUstep/Local/Library/Libraries/libSoOFS_d.so.4.4.12
+share/GNUstep/Local/Library/Libraries/libSoOFS_d.so.4.5.16
 share/GNUstep/Local/Library/Libraries/libWEExtensions_d.so
-share/GNUstep/Local/Library/Libraries/libWEExtensions_d.so.4.4.61
+share/GNUstep/Local/Library/Libraries/libWEExtensions_d.so.4.5.74
 share/GNUstep/Local/Library/Libraries/libWOExtensions_d.so
-share/GNUstep/Local/Library/Libraries/libWOExtensions_d.so.4.4.21
+share/GNUstep/Local/Library/Libraries/libWOExtensions_d.so.4.5.25
 share/GNUstep/Local/Library/Libraries/libWOXML_d.so
-share/GNUstep/Local/Library/Libraries/libWOXML_d.so.4.4.7
+share/GNUstep/Local/Library/Libraries/libWOXML_d.so.4.5.8
 share/GNUstep/Local/Library/Libraries/libXmlRpc_d.so
-share/GNUstep/Local/Library/Libraries/libXmlRpc_d.so.4.4.23
-share/GNUstep/Local/Library/SaxDrivers-4.4/STXSaxDriver.sax/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/SaxDrivers-4.4/STXSaxDriver.sax/Resources/Version
-share/GNUstep/Local/Library/SaxDrivers-4.4/STXSaxDriver.sax/STXSaxDriver
-share/GNUstep/Local/Library/SaxDrivers-4.4/STXSaxDriver.sax/bundle-info.plist
-share/GNUstep/Local/Library/SaxDrivers-4.4/STXSaxDriver.sax/stamp.make
-share/GNUstep/Local/Library/SaxDrivers-4.4/libxmlSAXDriver.sax/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/SaxDrivers-4.4/libxmlSAXDriver.sax/Resources/Version
-share/GNUstep/Local/Library/SaxDrivers-4.4/libxmlSAXDriver.sax/Resources/bundle-info.plist
-share/GNUstep/Local/Library/SaxDrivers-4.4/libxmlSAXDriver.sax/bundle-info.plist
-share/GNUstep/Local/Library/SaxDrivers-4.4/libxmlSAXDriver.sax/libxmlSAXDriver
-share/GNUstep/Local/Library/SaxDrivers-4.4/libxmlSAXDriver.sax/stamp.make
-share/GNUstep/Local/Library/SaxDrivers-4.4/versitSaxDriver.sax/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/SaxDrivers-4.4/versitSaxDriver.sax/Resources/bundle-info.plist
-share/GNUstep/Local/Library/SaxDrivers-4.4/versitSaxDriver.sax/bundle-info.plist
-share/GNUstep/Local/Library/SaxDrivers-4.4/versitSaxDriver.sax/stamp.make
-share/GNUstep/Local/Library/SaxDrivers-4.4/versitSaxDriver.sax/versitSaxDriver
+share/GNUstep/Local/Library/Libraries/libXmlRpc_d.so.4.5.25
+share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax/Resources/Version
+share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax/STXSaxDriver
+share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax/bundle-info.plist
+share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax/stamp.make
+share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax/Resources/Version
+share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax/Resources/bundle-info.plist
+share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax/bundle-info.plist
+share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax/libxmlSAXDriver
+share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax/stamp.make
+share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax/Resources/bundle-info.plist
+share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax/bundle-info.plist
+share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax/stamp.make
+share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax/versitSaxDriver
 share/GNUstep/Local/Library/SaxMappings/NGiCal.xmap
-share/GNUstep/Local/Library/SoProducts-4.4/SoCore.sxp/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/SoProducts-4.4/SoCore.sxp/Resources/Version
-share/GNUstep/Local/Library/SoProducts-4.4/SoCore.sxp/Resources/product.plist
-share/GNUstep/Local/Library/SoProducts-4.4/SoCore.sxp/SoCore
-share/GNUstep/Local/Library/SoProducts-4.4/SoCore.sxp/stamp.make
-share/GNUstep/Local/Library/SoProducts-4.4/SoOFS.sxp/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/SoProducts-4.4/SoOFS.sxp/Resources/Version
-share/GNUstep/Local/Library/SoProducts-4.4/SoOFS.sxp/Resources/product.plist
-share/GNUstep/Local/Library/SoProducts-4.4/SoOFS.sxp/SoOFS
-share/GNUstep/Local/Library/SoProducts-4.4/SoOFS.sxp/stamp.make
-share/GNUstep/Local/Library/WOxElemBuilders-4.4/WEExtensions.wox/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/WOxElemBuilders-4.4/WEExtensions.wox/WEExtensions
-share/GNUstep/Local/Library/WOxElemBuilders-4.4/WEExtensions.wox/bundle-info.plist
-share/GNUstep/Local/Library/WOxElemBuilders-4.4/WEExtensions.wox/stamp.make
-share/GNUstep/Local/Library/WOxElemBuilders-4.4/WOExtensions.wox/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/WOxElemBuilders-4.4/WOExtensions.wox/WOExtensions
-share/GNUstep/Local/Library/WOxElemBuilders-4.4/WOExtensions.wox/bundle-info.plist
-share/GNUstep/Local/Library/WOxElemBuilders-4.4/WOExtensions.wox/stamp.make
+share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp/Resources/Version
+share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp/Resources/product.plist
+share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp/SoCore
+share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp/stamp.make
+share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp/Resources/Version
+share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp/Resources/product.plist
+share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp/SoOFS
+share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp/stamp.make
+share/GNUstep/Local/Library/WOxElemBuilders-4.5/WEExtensions.wox/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/WOxElemBuilders-4.5/WEExtensions.wox/WEExtensions
+share/GNUstep/Local/Library/WOxElemBuilders-4.5/WEExtensions.wox/bundle-info.plist
+share/GNUstep/Local/Library/WOxElemBuilders-4.5/WEExtensions.wox/stamp.make
+share/GNUstep/Local/Library/WOxElemBuilders-4.5/WOExtensions.wox/Resources/Info-gnustep.plist
+share/GNUstep/Local/Library/WOxElemBuilders-4.5/WOExtensions.wox/WOExtensions
+share/GNUstep/Local/Library/WOxElemBuilders-4.5/WOExtensions.wox/bundle-info.plist
+share/GNUstep/Local/Library/WOxElemBuilders-4.5/WOExtensions.wox/stamp.make
 share/GNUstep/Local/Tools/connect-EOAdaptor
 share/GNUstep/Local/Tools/domxml
+share/GNUstep/Local/Tools/gcs_cat
+share/GNUstep/Local/Tools/gcs_gensql
+share/GNUstep/Local/Tools/gcs_ls
+share/GNUstep/Local/Tools/gcs_mkdir
+share/GNUstep/Local/Tools/gcs_recreatequick
 share/GNUstep/Local/Tools/ldap2dsml
 share/GNUstep/Local/Tools/ldapchkpwd
 share/GNUstep/Local/Tools/ldapls
@@ -502,7 +542,7 @@ share/GNUstep/Local/Tools/rss2plist1
 share/GNUstep/Local/Tools/rss2plist2
 share/GNUstep/Local/Tools/rssparse
 share/GNUstep/Local/Tools/saxxml
-share/GNUstep/Local/Tools/sope-4.4
+share/GNUstep/Local/Tools/sope-4.5
 share/GNUstep/Local/Tools/testqp
 share/GNUstep/Local/Tools/wod
 share/GNUstep/Local/Tools/xmln
@@ -513,24 +553,24 @@ share/GNUstep/System/Library/Makefiles/wobundle.make
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Makefiles/Additional
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Makefiles
 @dirrm share/GNUstep/Local/Tools
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.4/WOExtensions.wox/Resources
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.4/WOExtensions.wox
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.4/WEExtensions.wox/Resources
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.4/WEExtensions.wox
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.4
-@dirrm share/GNUstep/Local/Library/SoProducts-4.4/SoOFS.sxp/Resources
-@dirrm share/GNUstep/Local/Library/SoProducts-4.4/SoOFS.sxp
-@dirrm share/GNUstep/Local/Library/SoProducts-4.4/SoCore.sxp/Resources
-@dirrm share/GNUstep/Local/Library/SoProducts-4.4/SoCore.sxp
-@dirrm share/GNUstep/Local/Library/SoProducts-4.4
+@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5/WOExtensions.wox/Resources
+@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5/WOExtensions.wox
+@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5/WEExtensions.wox/Resources
+@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5/WEExtensions.wox
+@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5
+@dirrm share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp/Resources
+@dirrm share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp
+@dirrm share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp/Resources
+@dirrm share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp
+@dirrm share/GNUstep/Local/Library/SoProducts-4.5
 @dirrm share/GNUstep/Local/Library/SaxMappings
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.4/versitSaxDriver.sax/Resources
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.4/versitSaxDriver.sax
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.4/libxmlSAXDriver.sax/Resources
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.4/libxmlSAXDriver.sax
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.4/STXSaxDriver.sax/Resources
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.4/STXSaxDriver.sax
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.4
+@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax/Resources
+@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax
+@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax/Resources
+@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax
+@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax/Resources
+@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax
+@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5
 @dirrm share/GNUstep/Local/Library/Libraries/Resources/NGObjWeb
 @dirrm share/GNUstep/Local/Library/Libraries/Resources
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
@@ -550,11 +590,13 @@ share/GNUstep/System/Library/Makefiles/wobundle.make
 @dirrm share/GNUstep/Local/Library/Headers/NGImap4
 @dirrm share/GNUstep/Local/Library/Headers/NGHttp
 @dirrm share/GNUstep/Local/Library/Headers/NGExtensions
+@dirrm share/GNUstep/Local/Library/Headers/GDLContentStore
 @dirrm share/GNUstep/Local/Library/Headers/GDLAccess
 @dirrm share/GNUstep/Local/Library/Headers/EOControl
 @dirrm share/GNUstep/Local/Library/Headers/DOM
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
-@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.4/PostgreSQL.gdladaptor/Resources
-@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.4/PostgreSQL.gdladaptor
-@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.4
+@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/Resources
+@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor
+@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.5
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local
