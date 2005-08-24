@@ -1,0 +1,193 @@
+$NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
+
+--- configure.orig	2005-08-23 16:22:20.000000000 +0000
++++ configure
+@@ -12203,13 +12203,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
+@@ -12316,13 +12316,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
+@@ -12425,13 +12425,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
+@@ -12530,13 +12530,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
+@@ -12641,13 +12641,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
+@@ -12749,13 +12749,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
+@@ -12858,13 +12858,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
+@@ -12967,13 +12967,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
+@@ -13074,13 +13074,13 @@ echo "${ECHO_T}yes" >&6
+ 
+ 
+ 
+-    if (test $ac_tr_lib == HAVE_LIBX11     \
+-        || test $ac_tr_lib == HAVE_LIBXEXT \
+-        || test $ac_tr_lib == HAVE_LIBXT   \
+-        || test $ac_tr_lib == HAVE_LIBXMU  \
+-        || test $ac_tr_lib == HAVE_LIBXPM  \
+-        || test $ac_tr_lib == HAVE_LIBXAW  \
+-        || test $ac_tr_lib == HAVE_LIBXAW3D); then
++    if (test $ac_tr_lib = HAVE_LIBX11     \
++        || test $ac_tr_lib = HAVE_LIBXEXT \
++        || test $ac_tr_lib = HAVE_LIBXT   \
++        || test $ac_tr_lib = HAVE_LIBXMU  \
++        || test $ac_tr_lib = HAVE_LIBXPM  \
++        || test $ac_tr_lib = HAVE_LIBXAW  \
++        || test $ac_tr_lib = HAVE_LIBXAW3D); then
+       cat >>confdefs.h <<_ACEOF
+ #define $ac_tr_lib 1
+ _ACEOF
