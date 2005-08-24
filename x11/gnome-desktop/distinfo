@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.15 2005/07/06 18:01:37 drochner Exp $
+$NetBSD: distinfo,v 1.16 2005/08/24 08:49:30 jmmv Exp $
 
 SHA1 (gnome-desktop-2.10.2.tar.bz2) = 0d769590b4af44c77fea9d455d503d77fdc52db9
 RMD160 (gnome-desktop-2.10.2.tar.bz2) = 6804087b24bf67ddc9fc48b962a24824a758b633
 Size (gnome-desktop-2.10.2.tar.bz2) = 985248 bytes
-SHA1 (patch-ae) = 66bfd41d49347ec4fb8edc063988a07f4fb58f7d
 SHA1 (patch-ag) = ad8d3466bdfe18c1b853ba69f863db35a5891996
