@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/01/23 07:02:03 martti Exp $
+@comment $NetBSD: PLIST,v 1.15.4.1 2005/08/24 13:06:03 salo Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -34,16 +34,25 @@ share/squirrelmail/contrib/RPM/config.php.redhat
 share/squirrelmail/contrib/RPM/squirrelmail.conf
 share/squirrelmail/contrib/RPM/squirrelmail.cron
 share/squirrelmail/contrib/RPM/squirrelmail.spec
+share/squirrelmail/contrib/decrypt_headers.php
+share/squirrelmail/contrib/squirrelmail.mailto.NT2KXP.reg
+share/squirrelmail/contrib/squirrelmail.mailto.Win9x.reg
+share/squirrelmail/contrib/squirrelmail.mailto.reg
 share/squirrelmail/data/.htaccess
 share/squirrelmail/data/default_pref
 share/squirrelmail/data/index.php
-share/squirrelmail/doc/README.russian_apache
+share/squirrelmail/doc/Development/addressbook.txt
+share/squirrelmail/doc/Development/index.html
+share/squirrelmail/doc/Development/mime.txt
+share/squirrelmail/doc/Development/plugin.txt
+share/squirrelmail/doc/Development/rfc_documents.txt
+share/squirrelmail/doc/Development/tree.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.1.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.4.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.5
+share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.5.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.6.txt
 share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.1.txt
@@ -53,19 +62,16 @@ share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.1.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3a.txt
-share/squirrelmail/doc/addressbook.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.4.txt
 share/squirrelmail/doc/authentication.txt
 share/squirrelmail/doc/db-backend.txt
 share/squirrelmail/doc/ie_ssl.txt
 share/squirrelmail/doc/index.html
-share/squirrelmail/doc/mime.txt
-share/squirrelmail/doc/plugin.txt
 share/squirrelmail/doc/presets.txt
-share/squirrelmail/doc/rfc_documents.txt
+share/squirrelmail/doc/russian_apache.txt
 share/squirrelmail/doc/themes.txt
 share/squirrelmail/doc/translating.txt
 share/squirrelmail/doc/translating_help.txt
-share/squirrelmail/doc/tree.txt
 share/squirrelmail/functions/abook_database.php
 share/squirrelmail/functions/abook_ldap_server.php
 share/squirrelmail/functions/abook_local_file.php
@@ -155,6 +161,7 @@ share/squirrelmail/help/en_US/options.hlp
 share/squirrelmail/help/en_US/read_mail.hlp
 share/squirrelmail/help/en_US/search.hlp
 share/squirrelmail/help/index.php
+share/squirrelmail/images/blank.png
 share/squirrelmail/images/delitem.png
 share/squirrelmail/images/down_pointer.png
 share/squirrelmail/images/draft.png
@@ -327,6 +334,7 @@ share/squirrelmail/src/image.php
 share/squirrelmail/src/index.php
 share/squirrelmail/src/left_main.php
 share/squirrelmail/src/login.php
+share/squirrelmail/src/mailto.php
 share/squirrelmail/src/move_messages.php
 share/squirrelmail/src/options.php
 share/squirrelmail/src/options_highlight.php
@@ -359,6 +367,9 @@ share/squirrelmail/themes/css/sans-10.css
 share/squirrelmail/themes/css/sans-12.css
 share/squirrelmail/themes/css/serif-10.css
 share/squirrelmail/themes/css/serif-12.css
+share/squirrelmail/themes/css/tahoma-08.css
+share/squirrelmail/themes/css/tahoma-10.css
+share/squirrelmail/themes/css/tahoma-12.css
 share/squirrelmail/themes/css/verdana-08.css
 share/squirrelmail/themes/css/verdana-10.css
 share/squirrelmail/themes/css/verdana-12.css
@@ -434,6 +445,7 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/doc/ReleaseNotes/1.3
 @dirrm share/squirrelmail/doc/ReleaseNotes/1.2
 @dirrm share/squirrelmail/doc/ReleaseNotes
+@dirrm share/squirrelmail/doc/Development
 @dirrm share/squirrelmail/doc
 @dirrm share/squirrelmail/data
 @dirrm share/squirrelmail/contrib/RPM
