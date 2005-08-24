@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.87 2005/08/24 09:31:44 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.88 2005/08/24 09:55:35 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -257,3 +257,5 @@ Pullup ticket 710 - requested by Grant Beattie
 portability PKGREVISION bump for libvorbis
 Pullup ticket 711 - requested by Grant Beattie
 portability fix for tools framework
+Pullup ticket 712 - requested by Grant Beattie
+build fix for xmms-flac
