@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.256 2005/08/24 16:50:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.257 2005/08/24 17:29:52 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -302,7 +302,6 @@ my $conf_datadir	= '@DATADIR@';
 
 # Command Line Options
 my $opt_autofix		= false;
-my $opt_contblank	= 1;
 my $opt_debug		= false;
 my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
@@ -349,7 +348,6 @@ my $opt_warn_paren	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
 my $opt_warn_vague	= false;
-my $opt_warn_whitespace	= false;
 my $opt_warn_workdir	= true;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
@@ -361,7 +359,6 @@ my (%warnings) = (
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"vague"		=> [\$opt_warn_vague, "show old (unreliable, vague) warnings"],
-	"whitespace"	=> [\$opt_warn_whitespace, "warn about white-space issues"],
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
 
@@ -472,7 +469,6 @@ sub parse_command_line() {
 			my ($opt, $val) = @_;
 			parse_multioption($val, \%checks);
 		},
-		"contblank|B=i" => \$opt_contblank,
 		"debug|d" => \$opt_debug,
 		"dumpmakefile|I" => \$opt_dumpmakefile,
 		"gcc-output-format|g" => sub {
@@ -1288,7 +1284,6 @@ sub checklines_direct_tools($) {
 
 sub checklines_Makefile($) {
 	my ($lines) = @_;
-	my ($cont) = 0;
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
@@ -1301,11 +1296,6 @@ sub checklines_Makefile($) {
 
 		if ($text =~ /^\040{8}/) {
 			$line->log_warning("Use tab (not spaces) to make indentation.");
-		}
-
-		$cont = ($text eq "") ? $cont + 1 : 0;
-		if ($opt_warn_whitespace && $cont == $opt_contblank + 1) {
-			$line->log_warning("${cont} contiguous blank lines, should be at most ${opt_contblank}.");
 		}
 
 		if ($text =~ $regex_varassign) {
