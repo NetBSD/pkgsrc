@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.255 2005/08/22 13:51:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.256 2005/08/24 16:50:13 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -349,6 +349,7 @@ my $opt_warn_paren	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
 my $opt_warn_vague	= false;
+my $opt_warn_whitespace	= false;
 my $opt_warn_workdir	= true;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
@@ -360,6 +361,7 @@ my (%warnings) = (
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"vague"		=> [\$opt_warn_vague, "show old (unreliable, vague) warnings"],
+	"whitespace"	=> [\$opt_warn_whitespace, "warn about white-space issues"],
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
 
@@ -1302,7 +1304,7 @@ sub checklines_Makefile($) {
 		}
 
 		$cont = ($text eq "") ? $cont + 1 : 0;
-		if ($cont == $opt_contblank + 1) {
+		if ($opt_warn_whitespace && $cont == $opt_contblank + 1) {
 			$line->log_warning("${cont} contiguous blank lines, should be at most ${opt_contblank}.");
 		}
 
