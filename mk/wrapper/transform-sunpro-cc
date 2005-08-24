@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.2.8.2 2005/08/19 16:54:48 salo Exp $
+# $NetBSD: transform-sunpro-cc,v 1.2.8.3 2005/08/24 09:11:11 salo Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -128,9 +128,21 @@ case $arg in
 	split_arg=yes
 	;;
 ######################################################################
+# -fast implies -xlibmopt, which uses the optimized math routines in
+# libsunmath. libsunmath is only available as part of SunPro, so
+# disable the use of the optimized math library (at least until it can
+# be statically linked).
+######################################################################
+-fast)
+	arg="-fast -xnolibmopt"
+	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
+	addtocache=yes
+	split_arg=yes
+	;;
+######################################################################
 # Pass through -f flags that SunPro understands.
 ######################################################################
--fast|-fd|-features*|-flags|-flteval*|-fnonstd*|-fns*|-fprecision*|-fround*|-fsimple*|-fsingle|-fstore|-ftrap*)
+-fd|-features*|-flags|-flteval*|-fnonstd*|-fns*|-fprecision*|-fround*|-fsimple*|-fsingle|-fstore|-ftrap*)
 	addtocache=yes
 	;;
 ######################################################################
