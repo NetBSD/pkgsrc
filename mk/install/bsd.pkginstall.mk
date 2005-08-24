@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.25 2005/08/24 12:34:42 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.26 2005/08/24 22:43:02 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -16,7 +16,7 @@ BSD_PKG_INSTALL_MK=	1
 
 # The Solaris /bin/sh does not know the ${foo#bar} shell substitution.
 # This shell function serves a similar purpose, but is specialized on
-# stripping ${PREFIX}/ from a pathname. 
+# stripping ${PREFIX}/ from a pathname.
 _FUNC_STRIP_PREFIX= \
 	strip_prefix() {						\
 	  ${AWK} 'END {							\
