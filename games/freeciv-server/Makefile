@@ -1,26 +1,21 @@
-# $NetBSD: Makefile,v 1.18 2004/11/03 14:20:09 adam Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/24 10:43:32 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Freeciv game server
 
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
 
-USE_GNU_READLINE=	# uses callback interface of GNU readline
-LIBS+=			-ltermcap
-
-CONFIGURE_ARGS+=	--enable-client=no --disable-make-data
+USE_GNU_READLINE=	yes
+CONFIGURE_ARGS+=	--disable-make-data
+CONFIGURE_ARGS+=	--enable-client=no
 CONFIGURE_ARGS+=	--with-readline
+LIBS+=			-ltermcap
 
 # Uses rl_filename_completion_function() which was introduced in readline-4.2
 BUILDLINK_DEPENDS.readline=	readline>=4.2
 
 .include "../freeciv-share/Makefile.common"
 
-do-install:
-	cd ${WRKSRC}/server; ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
-
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

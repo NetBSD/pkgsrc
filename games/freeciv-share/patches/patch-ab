@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2005/08/24 10:36:41 adam Exp $
+
+--- Makefile.in.orig	2005-08-23 18:06:02.000000000 +0000
++++ Makefile.in
+@@ -276,8 +276,8 @@ target_vendor = @target_vendor@
+ @CLIENT_TRUE@@SERVER_TRUE@MSUBDIRS = manual
+ @SERVER_FALSE@MSUBDIRS = 
+ @MAKE_DATA_FALSE@DSUBDIRS = 
+-@MAKE_DATA_TRUE@DSUBDIRS = data
+-SUBDIRS = $(DSUBDIRS) intl utility common tests $(SSUBDIRS) $(CSUBDIRS) po doc $(MSUBDIRS)
++@MAKE_DATA_TRUE@DSUBDIRS = data po doc
++SUBDIRS = $(DSUBDIRS) intl utility common tests $(SSUBDIRS) $(CSUBDIRS) $(MSUBDIRS)
+ EXTRA_DIST = acconfig.old			\
+ 		autogen.sh 			\
+ 		config.mac.h			\
