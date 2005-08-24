@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/08/19 03:55:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2005/08/24 04:36:14 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		1
@@ -16,10 +16,6 @@ SITES_${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		3.0
-.endif
 
 INSTALLATION_DIRS=	bin man man/man1
 
