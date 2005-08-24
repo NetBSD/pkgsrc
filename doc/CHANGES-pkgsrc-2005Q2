@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.89 2005/08/24 10:02:49 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.90 2005/08/24 13:06:26 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -261,3 +261,5 @@ Pullup ticket 712 - requested by Grant Beattie
 build fix for xmms-flac
 Pullup ticket 713 - requested by Grant Beattie
 portability fix for bootstrap bmake
+Pullup ticket 664 - requested by Manuel Bouyer
+security update for squirrelmail
