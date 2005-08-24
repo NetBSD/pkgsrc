@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/08/19 18:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2005/08/24 04:36:14 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		7
@@ -26,10 +26,6 @@ USE_PKGINSTALL=		yes
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
 CONF_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
 PLIST_SRC=		${PKGDIR}/PLIST
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		3.0
-.endif
 
 INSTALLATION_DIRS=	bin man man/man1 man/man5 man/man8 share/examples/djbdns
 
