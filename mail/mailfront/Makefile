@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/20 03:30:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/24 04:47:10 schmonz Exp $
 #
 
 DISTNAME=		mailfront-0.96
@@ -14,10 +14,8 @@ DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
 
-BUILD_TARGET=		all
-INSTALL_TARGET=		install
-
 DJB_RESTRICTED=		NO
+DJB_MAKE_TARGETS=	NO
 
 USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		smtpfront
