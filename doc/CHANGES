@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10944 2005/08/24 04:51:01 schmonz Exp $
+$NetBSD: CHANGES,v 1.10945 2005/08/24 10:59:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -747,3 +747,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/bglibs to 1.027 [schmonz 2005-08-23]
 	Updated chat/xchat to 2.4.4 [tron 2005-08-23]
 	Updated security/cvm to 0.75 [schmonz 2005-08-24]
+	Updated games/freeciv-share to 2.0.4 [adam 2005-08-24]
+	Updated games/freeciv-sounds to 3.0 [adam 2005-08-24]
+	Updated games/freeciv-server to 2.0.4 [adam 2005-08-24]
+	Updated games/freeciv-client to 2.0.4 [adam 2005-08-24]
+	Removed games/freeciv-client-gtk [adam 2005-08-24]
+	Removed games/freeciv-client-gtk2 [adam 2005-08-24]
