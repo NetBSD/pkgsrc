@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.32.2.1 2005/07/29 07:38:30 snj Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.32.2.2 2005/08/24 09:01:19 salo Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -314,6 +314,15 @@ _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
+.if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
+_WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-solaris-gcc
+_WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-solaris-gcc
+_WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
+_WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+_WRAP_CMD_SINK.IMAKE=	${WRAPPER_TMPDIR}/cmd-sink-solaris-imake
+_WRAP_CACHE_BODY.IMAKE=	${WRAPPER_TMPDIR}/cache-body-solaris-imake
+.endif
+
 # Filter to scrunch shell scripts by removing comments and empty lines.
 _WRAP_SH_CRUNCH_FILTER=							\
 	${GREP} -v "^\#[^!]" | ${GREP} -v "^[ 	][ 	]*\#" |		\
@@ -433,6 +442,18 @@ ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 .for _target_ in ${WRAPPER_TARGETS}
 do-wrapper: ${_target_}
 .endfor
+
+${WRAPPER_TMPDIR}/transform-solaris-gcc:				\
+		${WRAPPER_SRCDIR}/transform-solaris-gcc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/cmd-sink-solaris-imake:				\
+		${WRAPPER_SRCDIR}/cmd-sink-solaris-imake
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/arg-pp-darwin-gcc:					\
 		${WRAPPER_SRCDIR}/arg-pp-darwin-gcc
