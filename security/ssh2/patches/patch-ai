@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2005/08/24 09:13:24 kivinen Exp $
+
+--- apps/ssh/authc-kbd-interactive.c.orig	2003-12-03 15:17:26.000000000 +0200
++++ apps/ssh/authc-kbd-interactive.c
+@@ -103,7 +103,7 @@ SSH_FSM_STEP(ssh_kbd_process_packet)
+ 
+   ssh_encode_buffer(gdata->response_packet,
+                     SSH_FORMAT_CHAR, SSH_MSG_USERAUTH_INFO_RESPONSE,
+-                    SSH_FORMAT_UINT32, gdata->num_prompts,
++                    SSH_FORMAT_UINT32, (SshUInt32) gdata->num_prompts,
+                     SSH_FORMAT_END);
+ 
+ 
