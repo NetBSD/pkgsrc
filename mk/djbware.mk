@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.9 2005/08/24 04:47:10 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.10 2005/08/24 05:10:35 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -19,6 +19,7 @@
 #     inet6 (off)
 #     pam (off)
 # * set RESTRICTED automatically iff patches or other mods are applied
+# * define "djb-nonlicense" and set LICENSE on affected packages
 # * be unrestricted by default for bulk builds
 #
 
