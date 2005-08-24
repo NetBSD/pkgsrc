@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.5 2005/08/24 10:59:12 adrianp Exp $
+
+--- calendar/gui/e-calendar-view.c.orig	2005-04-18 15:29:04.000000000 +0100
++++ calendar/gui/e-calendar-view.c
+@@ -1079,7 +1079,7 @@ on_save_as (EPopup *ep, EPopupItem *pite
+ 		return;
+ 	}
+ 	
+-	fprintf (file, ical_string);
++	fprintf (file, "%s", ical_string);
+ 	g_free (ical_string);
+ 	fclose (file);
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.8 2005/08/24 10:59:12 adrianp Exp $
+
+--- calendar/gui/e-cal-component-preview.c.orig	2005-01-04 18:48:56.000000000 +0000
++++ calendar/gui/e-cal-component-preview.c
+@@ -284,7 +284,7 @@ write_html (GtkHTMLStream *stream, ECal 
+ 					str = g_string_append_c (str, text.value[i]);
+ 			}
+ 
+-			gtk_html_stream_printf (stream, str->str);
++			gtk_html_stream_printf (stream, "%s", str->str);
+ 			g_string_free (str, TRUE);
+ 		}
+ 
