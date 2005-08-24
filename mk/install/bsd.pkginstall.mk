@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.24 2005/08/23 12:01:52 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.25 2005/08/24 12:34:42 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -119,11 +119,12 @@ _PKG_USER_SHELL?=	${NOLOGIN}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL}
 
+# REMOVE: after 2005Q4
 .if !empty(PKG_USERS:M*\\\\*)
 PKG_FAIL_REASON+=	"[bsd.pkginstall.mk] PKG_USERS must not contain double backslashes."
 .endif
 
-# Interix is very Special in that users are groups cannot have the
+# Interix is very special in that users are groups cannot have the
 # same name.  Interix.mk tries to work around this by overriding
 # some specific package defaults.  If we get here and there's still a
 # conflict, add a breakage indicator to make sure the package won't
