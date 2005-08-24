@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.7 2005/08/24 08:30:28 bjh21 Exp $
+
 --- src/st.h~	Mon Dec 20 19:48:54 2004
 +++ src/st.h	Sun Aug  7 13:27:21 2005
 @@ -68,9 +68,9 @@
