@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14.2.1 2005/08/20 15:04:41 salo Exp $
+# $NetBSD: Makefile,v 1.14.2.2 2005/08/24 09:54:51 salo Exp $
 #
 
 DISTNAME=	flac-1.1.2
@@ -22,18 +22,18 @@ XMMS_WRKSRC=	${WRKSRC}/src/plugin_xmms
 # previous name of the package
 CONFLICTS=	flac-xmms-[0-9]*
 
+BUILD_DIRS=	${WRKSRC}/src/libFLAC
+BUILD_DIRS+=	${WRKSRC}/src/plugin_common
+BUILD_DIRS+=	${WRKSRC}/src/share
+BUILD_DIRS+=	${WRKSRC}/src/plugin_xmms
+INSTALL_DIRS=	${WRKSRC}/src/plugin_xmms
+
 .include "../../mk/compiler.mk"
 
 # SunPro does not support __inline
 .if !empty(PKGSRC_COMPILER:Msunpro)
 CFLAGS+=	-D__inline=inline
 .endif
-
-#do-build:
-#	@cd ${XMMS_WRKSRC}/../plugin_common && ${SETENV} ${MAKE_ENV} \
-#		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
-#	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
-#		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
 
 do-install:
 	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
