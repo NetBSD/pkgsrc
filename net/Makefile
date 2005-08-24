@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.575 2005/08/17 19:58:15 jlam Exp $
+# $NetBSD: Makefile,v 1.576 2005/08/24 11:03:11 salo Exp $
 #
 
 COMMENT=	Networking tools
@@ -34,13 +34,13 @@ SUBDIR+=	bittornado-gui
 SUBDIR+=	bittorrent
 SUBDIR+=	bittorrent-gui
 SUBDIR+=	bmon
-SUBDIR+=	btget
 SUBDIR+=	boinc3-coreclient
 SUBDIR+=	boinc3-libs
 SUBDIR+=	boinc3-seti
 SUBDIR+=	bounce
 SUBDIR+=	bpalogin
 SUBDIR+=	bridged
+SUBDIR+=	btget
 SUBDIR+=	bug-buddy
 SUBDIR+=	cdpd
 SUBDIR+=	cftp
