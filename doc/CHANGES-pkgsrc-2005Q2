@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.84 2005/08/22 13:17:49 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.85 2005/08/24 09:13:56 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -249,3 +249,7 @@ Pullup ticket 686 - requested by Jeremy C. Reed
 distfile update for mozilla
 Pullup ticket 705 - requested by Matthias Scheler
 security update for elm
+Pullup ticket 708 - requested by Grant Beattie
+portability fix for compiler wrapper
+Pullup ticket 709 - requested by Grant Beattie
+portability fixes for compiler wrapper
