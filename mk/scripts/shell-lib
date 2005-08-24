@@ -1,4 +1,4 @@
-# $NetBSD: shell-lib,v 1.2 2004/09/21 15:14:08 jlam Exp $
+# $NetBSD: shell-lib,v 1.3 2005/08/24 21:51:10 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -383,3 +383,14 @@ fqueue_is_empty()
 		return 1
 	fi
 }
+
+######################################################################
+# $setargs_from_cmd
+#	Run $cmd and initialize the $@ array with the lines from that
+#	command.
+# usage:
+#	cmd="echo *"; eval "${setargs_from_cmd}"
+#	for i in "$@"; do echo "($i)"; done
+######################################################################
+setargs_from_cmd='saved_IFS="${IFS}"; IFS="
+"; set args `eval "${cmd}"`; IFS="${saved_IFS}"; shift'
