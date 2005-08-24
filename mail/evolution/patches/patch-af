@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.6 2005/08/24 10:59:12 adrianp Exp $
+
+--- calendar/gui/e-calendar-table.c.orig	2005-01-25 11:18:16.000000000 +0000
++++ calendar/gui/e-calendar-table.c
+@@ -1027,7 +1027,7 @@ e_calendar_table_on_save_as (EPopup *ep,
+ 		return;
+ 	}
+ 	
+-	fprintf (file, ical_string);
++	fprintf (file, "%s", ical_string);
+ 	g_free (ical_string);
+ 	fclose (file);
+ }
