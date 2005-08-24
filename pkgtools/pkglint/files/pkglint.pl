@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.257 2005/08/24 17:29:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.258 2005/08/24 17:32:43 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -315,7 +315,6 @@ my (%options) = (
 	"-d"		=> "Enable debugging mode",
 	"-g"		=> "Mimic the gcc output format",
 	"-h|--help"	=> "print a detailed help message",
-	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
 	"-q"		=> "don't print a summary line when finishing",
 	"-v|--verbose"	=> "print progress messages",
 );
