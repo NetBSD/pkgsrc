@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10943 2005/08/24 03:29:50 hira Exp $
+$NetBSD: CHANGES,v 1.10944 2005/08/24 04:51:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -746,3 +746,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkg_comp to 1.22 [jmmv 2005-08-23]
 	Updated devel/bglibs to 1.027 [schmonz 2005-08-23]
 	Updated chat/xchat to 2.4.4 [tron 2005-08-23]
+	Updated security/cvm to 0.75 [schmonz 2005-08-24]
