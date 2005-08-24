@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/06/15 02:24:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/08/24 19:48:18 kristerw Exp $
 bin/fltk-config
 bin/fluid
 include/FL/Enumerations.H
@@ -245,6 +245,9 @@ lib/libfltk.la
 lib/libfltk_forms.la
 lib/libfltk_gl.la
 lib/libfltk_images.la
+man/cat1/fltk-config.1
+man/cat1/fluid.1
+man/cat3/fltk.3
 man/man1/fltk-config.1
 man/man1/fluid.1
 man/man3/fltk.3
