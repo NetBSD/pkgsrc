@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/20 03:28:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/24 04:49:31 schmonz Exp $
 #
 
-DISTNAME=		cvm-0.71
+DISTNAME=		cvm-0.75
 CATEGORIES=		security
 MASTER_SITES=		${HOMEPAGE}
 
@@ -11,10 +11,8 @@ COMMENT=		Credential Validation Modules
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
-BUILD_TARGET=		all instshow installer instcheck
-
 DJB_RESTRICTED=		NO
-BGWARE_INSTALLER=	YES
+DJB_MAKE_TARGETS=	NO
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
@@ -27,8 +25,8 @@ RCD_SCRIPTS=		cvm
 PKG_USERS+=		cvmlog:users::cvmlog
 
 DJB_CONFIG_CMDS=							\
-	${ECHO} ${LOCALBASE}/include > conf-include;			\
-	${ECHO} ${LOCALBASE}/lib > conf-lib
+	${ECHO} ${DJB_CONFIG_PREFIX}/include > conf-include;		\
+	${ECHO} ${DJB_CONFIG_PREFIX}/lib > conf-lib
 
 .include "../../devel/bglibs/buildlink3.mk"
 .include "../../mk/djbware.mk"
