@@ -1,0 +1,31 @@
+$NetBSD: patch-ag,v 1.7 2005/08/24 10:59:12 adrianp Exp $
+
+--- addressbook/gui/widgets/eab-contact-display.c.orig	2005-04-28 10:23:01.000000000 +0100
++++ addressbook/gui/widgets/eab-contact-display.c
+@@ -353,7 +353,7 @@ render_contact (GtkHTMLStream *html_stre
+ 	accum_multival_attribute (accum, contact, _("Yahoo"), E_CONTACT_IM_YAHOO, YAHOO_ICON, 0);
+ 
+ 	if (accum->len > 0)
+-		gtk_html_stream_printf (html_stream, accum->str);
++		gtk_html_stream_printf (html_stream, "%s", accum->str);
+ 
+ 	end_block (html_stream);
+ 
+@@ -368,7 +368,7 @@ render_contact (GtkHTMLStream *html_stre
+ 
+ 	if (accum->len > 0) {
+ 		start_block (html_stream, _("work"));
+-		gtk_html_stream_printf (html_stream, accum->str);
++		gtk_html_stream_printf (html_stream, "%s", accum->str);
+ 		end_block (html_stream);
+ 	}
+ 
+@@ -383,7 +383,7 @@ render_contact (GtkHTMLStream *html_stre
+ 
+ 	if (accum->len > 0) {
+ 		start_block (html_stream, _("personal"));
+-		gtk_html_stream_printf (html_stream, accum->str);
++		gtk_html_stream_printf (html_stream, "%s", accum->str);
+ 		end_block (html_stream);
+ 	}
+ 
