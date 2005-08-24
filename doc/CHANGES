@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10945 2005/08/24 10:59:15 adam Exp $
+$NetBSD: CHANGES,v 1.10946 2005/08/24 11:00:40 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -753,3 +753,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/freeciv-client to 2.0.4 [adam 2005-08-24]
 	Removed games/freeciv-client-gtk [adam 2005-08-24]
 	Removed games/freeciv-client-gtk2 [adam 2005-08-24]
+	Updated mail/evolution to 2.2.3nb1 [adrianp 2005-08-24]
