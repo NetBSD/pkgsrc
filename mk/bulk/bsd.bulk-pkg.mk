@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.83 2005/06/24 06:43:44 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.84 2005/08/25 22:56:03 reed Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -283,7 +283,7 @@ bulk-package:
 	fi ; \
 	if [ $$uptodate = 1 ]; then \
 		( if [ $$installed = 1 ]; then \
-			${ECHO_MSG} "BULK> Package ${PKGNAME} is upto-date, and still installed" ; \
+			${ECHO_MSG} "BULK> Package ${PKGNAME} is up-to-date, and still installed" ; \
 		else \
 			${ECHO_MSG} "BULK> Nothing to be done." ; \
 		fi \
@@ -469,7 +469,7 @@ bulk-package:
 		${RM} -f ${BUILDLOG} ;\
 	fi
 
-# Install pkg - if possible from binary pkg (i.e. available & upto date)
+# Install pkg - if possible from binary pkg (i.e. available & up-to-date)
 # else revert to the old recompiling.
 # Don't rely upon pkg_add to snarf in depending pkgs as they may have
 # been modified and need rebuilding.
