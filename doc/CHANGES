@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10949 2005/08/25 07:10:56 rillig Exp $
+$NetBSD: CHANGES,v 1.10950 2005/08/25 10:38:03 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3807,3 +3807,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/evolution to 2.2.3nb1 [adrianp 2005-08-24]
 	Updated x11/fltk to 1.1.6nb4 [kristerw 2005-08-24]
 	Updated lang/yap to 5.0.0 [rillig 2005-08-25]
+	Updated pkgtools/pkg_select to 20050817 [xtraeme 2005-08-25]
