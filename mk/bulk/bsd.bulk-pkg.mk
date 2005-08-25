@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.84 2005/08/25 22:56:03 reed Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.85 2005/08/25 22:57:29 reed Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -43,6 +43,7 @@
 ##
 
 LS?=	ls
+TEE?=	tee
 WC?=	wc
 TO_HTML?=	${SED} -e 's,&,\&amp;,g' -e 's,<,\&lt;,g' -e 's,>,\&gt;,g'
 
