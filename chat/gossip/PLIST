@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2004/12/28 14:05:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/08/25 20:16:52 jmmv Exp $
 bin/gossip
 share/applications/gossip.desktop
+share/examples/gossip/sound/events/gossip.soundlist
 share/gconf/schemas/gossip.schemas
 share/gossip/channel-old4.png
 share/gossip/chat.glade
-share/gossip/chat1.wav
-share/gossip/chat2.wav
 share/gossip/connect.glade
 share/gossip/emoticon-face1.png
 share/gossip/emoticon-face10.png
@@ -23,25 +22,25 @@ share/gossip/gossip-about.png
 share/gossip/gossip-available.png
 share/gossip/gossip-away.png
 share/gossip/gossip-busy.png
+share/gossip/gossip-contact-groups.dtd
 share/gossip/gossip-extended-away.png
 share/gossip/gossip-group-message.png
 share/gossip/gossip-log.xsl
 share/gossip/gossip-logo.png
 share/gossip/gossip-message.png
 share/gossip/gossip-offline.png
+share/gossip/gossip-status-presets.dtd
 share/gossip/gossip-typing.png
 share/gossip/group-chat.glade
 share/gossip/main.glade
 share/gossip/my-user_48.png
-share/gossip/offline.wav
-share/gossip/online.wav
 share/gossip/protocols/aim.protocol
 share/gossip/protocols/gossip-protocol.dtd
 share/gossip/protocols/icq.protocol
 share/gossip/protocols/msn.protocol
 share/gossip/protocols/yahoo.protocol
 share/gossip/query_48.png
-share/gossip/send.wav
+share/gossip/vcard_16.png
 share/gossip/vcard_48.png
 share/gossip/watermark.png
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gossip.mo
@@ -60,6 +59,7 @@ ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gossip.mo
@@ -80,8 +80,18 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gossip.mo
 share/pixmaps/gossip.png
+share/sounds/gossip/chat1.wav
+share/sounds/gossip/chat2.wav
+share/sounds/gossip/offline.wav
+share/sounds/gossip/online.wav
+share/sounds/gossip/send.wav
+@dirrm share/sounds/gossip
+@comment in xdg-dirs: @dirrm share/sounds
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/gossip/protocols
 @dirrm share/gossip
 @comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/examples/gossip/sound/events
+@dirrm share/examples/gossip/sound
+@dirrm share/examples/gossip
 @comment in xdg-dirs: @dirrm share/applications
