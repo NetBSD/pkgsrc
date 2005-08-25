@@ -1,0 +1,52 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/08/25 11:14:25 xtraeme Exp $
+
+--- makefile.in.orig	2005-03-06 17:54:14.000000000 +0100
++++ makefile.in	2005-08-15 01:36:15.000000000 +0200
+@@ -86,8 +86,8 @@
+ 	dlg_colors.h \
+ 	dlg_config.h
+ 
+-LIB	= @LIB_PREFIX@dialog$a
+-PROG	= dialog$x
++LIB	= @LIB_PREFIX@cdialog$a
++PROG	= cdialog$x
+ ALL	= $(LIB) $(PROG)
+ 
+ BIN_DIRS	= $(bindir) $(MAN1DIR)
+@@ -102,15 +102,15 @@
+ @INTLDIR_MAKE@	@echo "Building GNU gettext library..."
+ @INTLDIR_MAKE@	@cd intl && $(MAKE) @cf_cv_makeflags@
+ 
+-dialog$o \
++cdialog$o \
+ $(OBJECTS) : $(srcdir)/dialog.h dlg_config.h VERSION
+ 
+ $(LIB) : $(LIB_OBJECT)
+ 	$(LIBTOOL_CREATE) $(LIB) $(LIB_OBJECT)
+ 	$(RANLIB) $@
+ 
+-dialog$x : $(LIB) dialog$o @INTLDIR_MAKE@ @INTLLIBS@
+-	$(LINK) -o $@ dialog$o -L. -ldialog $(LDFLAGS) $(LIBS)
++cdialog$x : $(LIB) dialog$o @INTLDIR_MAKE@ @INTLLIBS@
++	$(LINK) -o $@ dialog$o -L. -lcdialog $(LDFLAGS) $(LIBS)
+ 
+ clean	\
+ distclean \
+@@ -141,7 +141,7 @@
+ 
+ install-strip \
+ install :: $(MAN1DIR)
+-	$(INSTALL_DATA) $(srcdir)/dialog.1 $(MAN1DIR)
++	$(INSTALL_DATA) $(srcdir)/dialog.1 $(MAN1DIR)/cdialog.1
+ 
+ uninstall ::
+ 	$(RM) $(bindir)/$(PROG)
+@@ -156,7 +156,7 @@
+ 	@ $(SHELL) $(srcdir)/headers.sh $(INSTALL_DATA) $(includedir) $(srcdir) dlg_colors.h
+ 	@ $(SHELL) $(srcdir)/headers.sh $(INSTALL_DATA) $(includedir) .         dlg_config.h
+ 	@ echo "** installing manpage"
+-	$(INSTALL_DATA) $(srcdir)/dialog.3 $(MAN3DIR)
++	$(INSTALL_DATA) $(srcdir)/dialog.3 $(MAN3DIR)/cdialog.3
+ 
+ uninstall-lib :: $(LIB_DIRS)
+ 	- $(LIBTOOL_UNINSTALL) $(RM) $(libdir)/$(LIB)
