@@ -1,3 +1,4 @@
+$NetBSD: patch-dd,v 1.2 2005/08/25 14:42:26 wiz Exp $
 --- libmpcodecs/vd_realvid.c.orig	2005-05-20 20:04:14.000000000 +0200
 +++ libmpcodecs/vd_realvid.c	2005-05-20 20:04:24.000000000 +0200
 @@ -79,7 +79,7 @@
