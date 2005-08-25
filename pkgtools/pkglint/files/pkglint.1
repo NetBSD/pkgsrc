@@ -1,12 +1,13 @@
-.\"	$NetBSD: pkglint.1,v 1.16 2005/07/21 09:07:38 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.17 2005/08/25 07:24:00 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
+.\" Roland Illig <rillig@NetBSD.org>, 2005.
 .\"
-.Dd July 21, 2005
+.Dd August 24, 2005
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -30,14 +31,6 @@ pkgsrc infrastructure easier.
 .Pp
 .Sy Options
 .Bl -tag -width 18n -offset indent
-.It Fl B Ar n
-Set the number of contiguous blank lines allowed in
-.Pa Makefile
-to
-.Ar n
-(by default,
-.Ar n
-is 1.)
 .It Fl C{[no-]check,...}
 Enable or disable specific checks. For a list of checks, see below.
 .It Fl h Ns | Ns Fl -help
