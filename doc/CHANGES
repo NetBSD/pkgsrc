@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10950 2005/08/25 10:38:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10951 2005/08/25 11:04:34 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/fltk to 1.1.6nb4 [kristerw 2005-08-24]
 	Updated lang/yap to 5.0.0 [rillig 2005-08-25]
 	Updated pkgtools/pkg_select to 20050817 [xtraeme 2005-08-25]
+	Updated emulators/gxemul to 0.3.5 [xtraeme 2005-08-25]
