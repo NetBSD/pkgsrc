@@ -1,26 +1,26 @@
-$NetBSD: patch-ad,v 1.7 2005/03/18 18:56:04 jmmv Exp $
+$NetBSD: patch-ad,v 1.8 2005/08/25 21:30:48 reed Exp $
 
---- configure.orig	2005-02-25 03:44:01.000000000 +0100
-+++ configure
-@@ -28205,7 +28205,7 @@ fi
+--- configure.orig	2005-08-25 10:19:21.000000000 -0700
++++ configure	2005-08-25 10:23:27.000000000 -0700
+@@ -29137,7 +29137,7 @@
  	if test "$ac_silc_libs" != "no"; then
  		SILC_LIBS="-L$ac_silc_libs"
  	fi
 -	SILC_LIBS="$SILC_LIBS -lsilc -lsilcclient -lpthread -ldl"
-+	SILC_LIBS="$SILC_LIBS -lsilc -lsilcclient -lpthread"
++	SILC_LIBS="$SILC_LIBS -lsilc -lsilcclient ${PTHREAD_LIBS} ${DLLIB}"
  	echo "$as_me:$LINENO: checking for silc_client_init in -lsilcclient" >&5
  echo $ECHO_N "checking for silc_client_init in -lsilcclient... $ECHO_C" >&6
  if test "${ac_cv_lib_silcclient_silc_client_init+set}" = set; then
-@@ -33268,10 +33268,10 @@ echo "$as_me: error: Static linkage requ
+@@ -34275,10 +34275,10 @@
  
  					enable_nss="no"
  				else
 -					nsprlibs="-ldl $with_nspr_libs/libplc4.a $with_nspr_libs/libplds4.a $with_nspr_libs/libnspr4.a $PTHREAD_LIB"
-+					nsprlibs="$with_nspr_libs/libplc4.a $with_nspr_libs/libplds4.a $with_nspr_libs/libnspr4.a $PTHREAD_LIB"
++					nsprlibs="${DLLIB} $with_nspr_libs/libplc4.a $with_nspr_libs/libplds4.a $with_nspr_libs/libnspr4.a $PTHREAD_LIB"
  				fi
  			else
 -				nsprlibs="-ldl -lplc4 -lplds4 -lnspr4 $PTHREAD_LIB"
-+				nsprlibs="-lplc4 -lplds4 -lnspr4 $PTHREAD_LIB"
++				nsprlibs="${DLLIB} -lplc4 -lplds4 -lnspr4 $PTHREAD_LIB"
  			fi
  
  			echo "$as_me:$LINENO: checking for Mozilla nspr libraries" >&5
