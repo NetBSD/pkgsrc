@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/08/25 11:14:25 xtraeme Exp $
+
+SHA1 (dialog.tar.gz) = c99418b18e0dae9d446b6392bc4804b11d600e3a
+RMD160 (dialog.tar.gz) = a584601ff2fd778456e3a54bd4192f9139c30d29
+Size (dialog.tar.gz) = 300067 bytes
+SHA1 (patch-aa) = ecd724d3e0daa954e05d294847047cd830501998
