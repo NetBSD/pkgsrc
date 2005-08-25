@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/02/23 15:59:11 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/08/25 20:16:52 jmmv Exp $
 
-SHA1 (gossip-0.8.tar.bz2) = b1e26016f40cbe3d174f722923c27d2e7f61d178
-RMD160 (gossip-0.8.tar.bz2) = 504c2edf30cb7c0b21d1bea2751491e7281f5f29
-Size (gossip-0.8.tar.bz2) = 913257 bytes
+SHA1 (gossip-0.9.tar.bz2) = 6b0c1b1fa1b861fccc12e13e3b4bdb10cbb04c8a
+RMD160 (gossip-0.9.tar.bz2) = 1a6ff83c6e4ca1f400475537e667cdf3f6d42538
+Size (gossip-0.9.tar.bz2) = 994982 bytes
