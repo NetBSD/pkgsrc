@@ -1,3 +1,4 @@
+$NetBSD: patch-dc,v 1.2 2005/08/25 14:42:26 wiz Exp $
 --- libmpcodecs/ad_realaud.c.orig	2005-05-20 20:01:46.000000000 +0200
 +++ libmpcodecs/ad_realaud.c	2005-05-20 20:01:52.000000000 +0200
 @@ -35,7 +35,7 @@

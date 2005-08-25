@@ -1,3 +1,4 @@
+$NetBSD: patch-dh,v 1.2 2005/08/25 14:42:26 wiz Exp $
 --- libmpdvdkit2/bswap.h.orig	2005-05-20 20:12:12.000000000 +0200
 +++ libmpdvdkit2/bswap.h	2005-05-20 20:13:32.000000000 +0200
 @@ -88,12 +88,17 @@
