@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/20 13:08:15 rillig Exp $
+$NetBSD: distinfo,v 1.2 2005/08/25 07:09:49 rillig Exp $
 
-SHA1 (Yap-4.4.4.tar.gz) = 3523d3ec7c02fed42aaef41ab36fee8f5c156978
-RMD160 (Yap-4.4.4.tar.gz) = 4c570012e75bfabc568a141f80506dba0bd94e5d
-Size (Yap-4.4.4.tar.gz) = 2970956 bytes
+SHA1 (Yap-5.0.0.tar.gz) = b682333873445ca36b9444043b0c156c29d06fb7
+RMD160 (Yap-5.0.0.tar.gz) = 0df66a8afded05f99137252660c4732eef9fbe55
+Size (Yap-5.0.0.tar.gz) = 3099298 bytes
