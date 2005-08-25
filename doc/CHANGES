@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10951 2005/08/25 11:04:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10952 2005/08/25 11:15:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3809,3 +3809,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/yap to 5.0.0 [rillig 2005-08-25]
 	Updated pkgtools/pkg_select to 20050817 [xtraeme 2005-08-25]
 	Updated emulators/gxemul to 0.3.5 [xtraeme 2005-08-25]
+	Added misc/cdialog version 1.0.20050306 [xtraeme 2005-08-25]
