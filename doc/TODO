@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3822 2005/08/25 14:23:25 xtraeme Exp $
+$NetBSD: TODO,v 1.3823 2005/08/25 14:39:42 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -808,7 +808,6 @@ Suggested package updates
 	o p5-perl-ldap-0.3202
 	o p5-razor-agents-2.75
 	o p5-sybperl-2.17
-	o pag-0.92 [pkg/30417]
 	o pam-smbpass-3.0.13
 	o pango-1.10.0
 	o par2-0.4 [pkg/30587]
