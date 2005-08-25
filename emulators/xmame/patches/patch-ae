@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.21 2004/11/06 21:41:52 kristerw Exp $
+$NetBSD: patch-ae,v 1.22 2005/08/25 19:54:22 kristerw Exp $
 
 --- src/unix/doc/xmamerc.dist.orig	Sat Nov  6 21:40:52 2004
 +++ src/unix/doc/xmamerc.dist	Sat Nov  6 21:42:31 2004
@@ -19,4 +19,4 @@ $NetBSD: patch-ae,v 1.21 2004/11/06 21:41:52 kristerw Exp $
 +mameinfo_file           @SPOOLDIR@/mameinfo.dat
  
  ### Mame Related ###
- defaultgame             pacman
+ defaultgame             robby
