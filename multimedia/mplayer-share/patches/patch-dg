@@ -1,3 +1,4 @@
+$NetBSD: patch-dg,v 1.2 2005/08/25 14:42:26 wiz Exp $
 --- libmpdemux/tvi_bsdbt848.c.orig	2005-05-20 20:11:15.000000000 +0200
 +++ libmpdemux/tvi_bsdbt848.c	2005-05-20 20:11:56.000000000 +0200
 @@ -43,6 +43,9 @@
