@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/25 11:14:25 xtraeme Exp $
+bin/cdialog
+include/dialog.h
+include/dlg_colors.h
+include/dlg_config.h
+lib/libcdialog.la
+man/man1/cdialog.1
+man/man3/cdialog.3
