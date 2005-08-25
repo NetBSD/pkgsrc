@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2005/08/19 10:24:25 grant Exp $
+# $NetBSD: Makefile,v 1.98 2005/08/25 21:30:47 reed Exp $
 
 DISTNAME=	gaim-1.5.0
 CATEGORIES=	chat x11
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--disable-gevolution
 CONFIGURE_ARGS+=	--with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc
 CONFIGURE_ARGS+=	--with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc
+CONFIGURE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 
 .include "options.mk"
 
@@ -47,5 +48,7 @@ CONFIGURE_ARGS+=	--disable-screensaver
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
