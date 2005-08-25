@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10956 2005/08/25 20:17:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.10957 2005/08/25 21:05:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3816,3 +3816,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/xmess to 0.99 [kristerw 2005-08-25]
 	Updated chat/loudmouth to 1.0 [jmmv 2005-08-25]
 	Updated chat/gossip to 0.9 [jmmv 2005-08-25]
+	Updated x11/gtk2 to 2.6.10 [jmmv 2005-08-25]
+	Updated www/epiphany to 1.6.5nb1 [jmmv 2005-08-25]
