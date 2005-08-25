@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.258 2005/08/24 17:32:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.259 2005/08/25 07:24:00 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -306,7 +306,6 @@ my $opt_debug		= false;
 my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
 my (%options) = (
-	"-B#"		=> "allow # contiguous blank lines in Makefiles",
 	"-C{check,...}"	=> "enable or disable specific checks",
 	"-F"		=> "Try to automatically fix some errors (experimental)",
 	"-I"		=> "dump the Makefile after parsing",
