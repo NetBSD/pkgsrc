@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10954 2005/08/25 14:39:41 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10955 2005/08/25 19:56:44 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3812,3 +3812,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added misc/cdialog version 1.0.20050306 [xtraeme 2005-08-25]
 	Updated print/imposter to 0.3 [xtraeme 2005-08-25]
 	Updated games/pag to 0.92 [xtraeme 2005-08-25]
+	Updated emulators/xmame to 0.99 [kristerw 2005-08-25]
+	Updated emulators/xmess to 0.99 [kristerw 2005-08-25]
