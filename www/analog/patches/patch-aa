@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.24 2004/12/19 22:00:10 tron Exp $
+$NetBSD: patch-aa,v 1.25 2005/08/25 10:09:48 grant Exp $
 
---- Makefile.orig	2004-12-19 13:51:30.000000000 +0000
-+++ Makefile	2004-12-19 21:45:24.000000000 +0000
+--- Makefile.orig	2004-12-20 00:51:30.000000000 +1100
++++ Makefile
 @@ -2,16 +2,20 @@
  # Please read docs/Readme.html, or http://www.analog.cx/
  # This is a general Unix-like Makefile: Makefiles for other OS's can be found
@@ -27,3 +27,12 @@ $NetBSD: patch-aa,v 1.24 2004/12/19 22:00:10 tron Exp $
  #                 ... -DNOOPEN -DNOFOLLOW -DNOALARM -DNOGRAPHICS -DNOGMTIME ...
  #                 ... -DEBCDIC -DUSE_PLAIN_SETJMP ...
  #                 ... -DHAVE_GD -DHAVE_ZLIB -DHAVE_BZLIB -DHAVE_PCRE ...
+@@ -30,7 +34,7 @@ DEFS =          # any combination of -DN
+ #
+ OS = UNIX         # Operating system: UNIX, DOS, WIN32, MAC, OS2, OSX, VMS
+ #                   RISCOS, BEOS, NEXTSTEP, MPEIX, BS2000, AS400, OS390
+-LIBS = -lm  # extra libraries needed; most platforms (but not OS X or BeOS)
++#LIBS = -lm  # extra libraries needed; most platforms (but not OS X or BeOS)
+ #               need -lm LAST
+ #             if you defined HAVE_GD above you also need -lgd -lpng -ljpeg -lz
+ #             if you defined HAVE_ZLIB above you also need -lz
