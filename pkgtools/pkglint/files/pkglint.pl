@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.259 2005/08/25 07:24:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.260 2005/08/25 07:27:23 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -894,6 +894,9 @@ sub checkfile_PLIST($$) {
 
 		} elsif ($text =~ qr"^share/locale/") {
 			$line->log_warning("Use of \"share/locale\" is deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+
+		} elsif ($text =~ qr"^share/man/") {
+			$line->log_warning("Man pages should be installed into man/, not share/man/.");
 		}
 
 		if ($text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
