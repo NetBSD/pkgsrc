@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10955 2005/08/25 19:56:44 kristerw Exp $
+$NetBSD: CHANGES,v 1.10956 2005/08/25 20:17:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3814,3 +3814,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/pag to 0.92 [xtraeme 2005-08-25]
 	Updated emulators/xmame to 0.99 [kristerw 2005-08-25]
 	Updated emulators/xmess to 0.99 [kristerw 2005-08-25]
+	Updated chat/loudmouth to 1.0 [jmmv 2005-08-25]
+	Updated chat/gossip to 0.9 [jmmv 2005-08-25]
