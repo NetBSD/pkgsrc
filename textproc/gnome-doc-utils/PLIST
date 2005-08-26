@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:24:11 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/08/26 16:30:51 drochner Exp $
 bin/gnome-doc-prepare
 bin/xml2po
 lib/pkgconfig/gnome-doc-utils.pc
@@ -8,7 +8,6 @@ share/aclocal/gnome-doc-utils.m4
 share/gnome-doc-utils/gnome-doc-utils.make
 share/xml/gnome/xslt/docbook/common/db-chunk.xsl
 share/xml/gnome/xslt/docbook/common/db-common.xsl
-share/xml/gnome/xslt/docbook/common/db-format.xsl
 share/xml/gnome/xslt/docbook/common/db-label.xsl
 share/xml/gnome/xslt/docbook/common/db-title.xsl
 share/xml/gnome/xslt/docbook/common/db-xref.xsl
@@ -37,7 +36,6 @@ share/xml/gnome/xslt/docbook/omf/db2omf.xsl
 share/xml/gnome/xslt/docbook/utils/chunks.xsl
 share/xml/gnome/xslt/docbook/utils/credits.xsl
 share/xml/gnome/xslt/docbook/utils/ids.xsl
-share/xml/gnome/xslt/gettext/format2xsl.xsl
 share/xml/gnome/xslt/gettext/gettext.xsl
 share/xml/gnome/xslt/gettext/l10n.xml
 share/xml/gnome/xslt/xsldoc/xsldoc.xsl
