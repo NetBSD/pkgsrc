@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.49 2005/08/26 07:19:05 reed Exp $
+# $NetBSD: pre-build,v 1.50 2005/08/26 07:24:53 reed Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -99,6 +99,7 @@ fi
 #
 PKG_DBDIR=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=PKG_DBDIR)`
 DEPOTBASE=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=DEPOTBASE)`
+PKG_TOOLS_BIN=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=PKG_TOOLS_BIN)`
 
 for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
 	echo Removing all installed packages in $dbdir
@@ -106,9 +107,9 @@ for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
 		cd $dbdir
 		for pkg in *
 		do
-			if `pkg_info -K $dbdir -qe $pkg`; then
-				echo pkg_delete -r $pkg
-				pkg_delete -K $dbdir -r $pkg
+			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
+				echo ${PKG_TOOLS_BIN}/pkg_delete -r $pkg
+				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -r $pkg
 			fi
 		done
 		#
@@ -117,9 +118,9 @@ for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
 		#
 		for pkg in *
 		do
-			if `pkg_info -K $dbdir -qe $pkg`; then
-				echo pkg_delete -f $pkg
-				pkg_delete -K $dbdir -f $pkg
+			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
+				echo ${PKG_TOOLS_BIN}/pkg_delete -f $pkg
+				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -f $pkg
 			fi
 		done
 	
@@ -254,9 +255,9 @@ for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
 		cd $dbdir
 		for pkg in *
 		do
-			if `pkg_info -K $dbdir -qe $pkg`; then
-				echo pkg_delete -r $pkg
-				pkg_delete -K $dbdir -r $pkg
+			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
+				echo ${PKG_TOOLS_BIN}/pkg_delete -r $pkg
+				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -r $pkg
 			fi
 		done
 	fi
