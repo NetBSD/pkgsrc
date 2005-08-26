@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.48 2005/06/10 13:09:07 sketch Exp $
+# $NetBSD: pre-build,v 1.49 2005/08/26 07:19:05 reed Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -280,7 +280,7 @@ if [ -f mk/bulk/pre-build.local ]; then
 fi
 
 if [ ! -d ${PKG_DBDIR} ]; then
-	mkdir ${PKG_DBDIR}
+	mkdir -p ${PKG_DBDIR}
 fi
 
 touch $STARTFILE
