@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3824 2005/08/26 08:33:18 adam Exp $
+$NetBSD: TODO,v 1.3825 2005/08/26 11:54:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,6 @@ Suggested package updates
 	o cgic-205
 	o cgicc-3.2.3
 	o check-0.9.2
-	o chemtool-1.6.7
 	o chicken-1.92
 	o chkrootkit-0.45
 	o chktex-1.6.2
