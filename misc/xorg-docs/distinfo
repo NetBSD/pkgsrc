@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/05/25 13:08:58 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/08/26 22:44:30 reed Exp $
 
-SHA1 (X11R6.7.0-src1.tar.gz) = 14f282cee9dc1ff6ebc34d834892599b53195f8b
-RMD160 (X11R6.7.0-src1.tar.gz) = 71eccb1e44579efd2dc23bbdf920661b9672b7f8
-Size (X11R6.7.0-src1.tar.gz) = 30039655 bytes
-SHA1 (X11R6.7.0-src6.tar.gz) = 6aa91c33bf2832a43fa52b2f78e93db3bf796389
-RMD160 (X11R6.7.0-src6.tar.gz) = f617de77026c93f55e75c00a8d9cde5ec1e17433
-Size (X11R6.7.0-src6.tar.gz) = 3181606 bytes
+SHA1 (X11R6.8.2-src1.tar.gz) = 23c60680274062a1db17f646a8388149309dc45c
+RMD160 (X11R6.8.2-src1.tar.gz) = bb170d7a11416c3d9bd1d23d461ba4cea9b1b2c8
+Size (X11R6.8.2-src1.tar.gz) = 32373802 bytes
+SHA1 (X11R6.8.2-src6.tar.gz) = 4d405eee6abff8a7881295c8b22428974838b466
+RMD160 (X11R6.8.2-src6.tar.gz) = bb3db522084a375ffd18808ebcb21392247d5a36
+Size (X11R6.8.2-src6.tar.gz) = 3205143 bytes
