@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2005/05/23 12:15:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/08/26 16:22:38 drochner Exp $
+bin/gsf-office-thumbnailer
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
 include/libgsf-1/gsf-gnome/gsf-output-bonobo.h
@@ -6,6 +7,8 @@ include/libgsf-1/gsf-gnome/gsf-output-gnomevfs.h
 include/libgsf-1/gsf-gnome/gsf-shared-bonobo-stream.h
 include/libgsf-1/gsf-win32/gsf-input-win32.h
 include/libgsf-1/gsf-win32/gsf-output-win32.h
+include/libgsf-1/gsf/gsf-blob.h
+include/libgsf-1/gsf/gsf-clip-data.h
 include/libgsf-1/gsf/gsf-doc-meta-data.h
 include/libgsf-1/gsf/gsf-docprop-vector.h
 include/libgsf-1/gsf/gsf-impl-utils.h
@@ -49,40 +52,8 @@ lib/libgsf-1.la
 lib/libgsf-gnome-1.la
 lib/pkgconfig/libgsf-1.pc
 lib/pkgconfig/libgsf-gnome-1.pc
-share/doc/libgsf/gsf/api.html
-share/doc/libgsf/gsf/gsf-Bononbo.html
-share/doc/libgsf/gsf/gsf-Compression.html
-share/doc/libgsf/gsf/gsf-GIOChannel.html
-share/doc/libgsf/gsf/gsf-GnomeVFS.html
-share/doc/libgsf/gsf/gsf-Infile-reading-structed-files.html
-share/doc/libgsf/gsf/gsf-Input-from-unstructured-files.html
-share/doc/libgsf/gsf/gsf-MS-OLE2.html
-share/doc/libgsf/gsf/gsf-Outfile-writing-structed-files.html
-share/doc/libgsf/gsf/gsf-Output-to-unstructured-files.html
-share/doc/libgsf/gsf/gsf-Reading-and-Writing-from-local-files-and-directories.html
-share/doc/libgsf/gsf/gsf-Structured-Blobs.html
-share/doc/libgsf/gsf/gsf-Text.html
-share/doc/libgsf/gsf/gsf-XML-and-libxml.html
-share/doc/libgsf/gsf/gsf-Zip.html
-share/doc/libgsf/gsf/gsf-memory.html
-share/doc/libgsf/gsf/gsf-metadata.html
-share/doc/libgsf/gsf/gsf-utils.html
-share/doc/libgsf/gsf/gsf.devhelp
-share/doc/libgsf/gsf/home.png
-share/doc/libgsf/gsf/index.html
-share/doc/libgsf/gsf/index.sgml
-share/doc/libgsf/gsf/into.html
-share/doc/libgsf/gsf/io.html
-share/doc/libgsf/gsf/ix01.html
-share/doc/libgsf/gsf/left.png
-share/doc/libgsf/gsf/misc.html
-share/doc/libgsf/gsf/parsers.html
-share/doc/libgsf/gsf/right.png
-share/doc/libgsf/gsf/sources.html
-share/doc/libgsf/gsf/style.css
-share/doc/libgsf/gsf/up.png
-@dirrm share/doc/libgsf/gsf
-@dirrm share/doc/libgsf
+share/gconf/schemas/gsf-office-thumbnailer.schemas
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgsf.mo
 @dirrm include/libgsf-1/gsf-win32
 @dirrm include/libgsf-1/gsf-gnome
 @dirrm include/libgsf-1/gsf
