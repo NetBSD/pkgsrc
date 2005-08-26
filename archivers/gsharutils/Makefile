@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/06/24 19:12:55 kristerw Exp $
+# $NetBSD: Makefile,v 1.30 2005/08/26 06:09:42 reed Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=sharutils/}
 
@@ -20,16 +20,12 @@ GNU_CONFIGURE=		yes
 INSTALL_TARGET=		install install-man
 USE_MAKEINFO=		YES
 INFO_FILES=		remsync.info sharutils.info
-USE_TOOLS+=		sh
+USE_TOOLS+=		sh:run mktemp:run
 
 CONFIGURE_ARGS+=	--disable-uucode
 CONFIGURE_ENV+=		SH="${TOOLS_SH}"
 
 .include "../../mk/bsd.prefs.mk"
-
-.if empty(OPSYS:M*BSD)
-DEPENDS+=		mktemp>=1.5:../../sysutils/mktemp
-.endif
 
 # gettext 0.11+ has renamed internal symbols, and gsharutils is
 # being a very bad neighbor by using them directly.  To fix, force
