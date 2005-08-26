@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/08/10 20:56:24 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/26 16:30:51 drochner Exp $
 #
 
-DISTNAME=	gnome-doc-utils-0.2.0
+DISTNAME=	gnome-doc-utils-0.3.2
 CATEGORIES=	textproc gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.3/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -36,4 +36,5 @@ BUILDLINK_DEPMETHOD.libxml2?=	build
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
