@@ -1,9 +1,16 @@
-$NetBSD: patch-ad,v 1.1 1999/06/01 11:31:50 agc Exp $
-
-If MAN5PAGES is empty, don't punish dumb shells (Hi, Solaris)
-
---- doc/Makefile.in	1999/06/01 11:12:32	1.1
-+++ doc/Makefile.in	1999/06/01 11:20:26
+--- doc/Makefile.in.orig	1995-11-25 02:44:35.000000000 +0000
++++ doc/Makefile.in	2005-08-26 05:47:16.587932824 +0000
+@@ -37,8 +37,8 @@
+ MAN5PAGES = @MAN5PAGES@
+ 
+ prefix = @prefix@
+-infodir = $(prefix)/info
+-mandir = $(prefix)/man
++infodir = @infodir@
++mandir = @mandir@
+ man1dir = $(mandir)/man1
+ man1ext = .1
+ man5dir = $(mandir)/man5
 @@ -109,11 +109,11 @@
  		$(man1dir)/`echo $$name | sed '$(transform)'`$(man1ext); \
  	  fi; \
