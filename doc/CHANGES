@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10962 2005/08/26 13:19:51 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10963 2005/08/26 18:57:06 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3823,3 +3823,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/tcptrace to 6.6.7 [adam 2005-08-26]
 	Updated biology/chemtool to 1.6.7 [adam 2005-08-26]
 	Updated mail/sylpheed to 2.0.1 [xtraeme 2005-08-26]
+	Updated archivers/par2 to 0.4 [tv 2005-08-26]
