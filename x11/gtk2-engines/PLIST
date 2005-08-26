@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/10 20:24:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/08/26 16:33:40 drochner Exp $
+lib/gtk-2.0/2.4.0/engines/libclearlooks.la
 lib/gtk-2.0/2.4.0/engines/libcrux-engine.la
 lib/gtk-2.0/2.4.0/engines/libhcengine.la
 lib/gtk-2.0/2.4.0/engines/libindustrial.la
@@ -8,7 +9,6 @@ lib/gtk-2.0/2.4.0/engines/libmist.la
 lib/gtk-2.0/2.4.0/engines/libredmond95.la
 lib/gtk-2.0/2.4.0/engines/libsmooth.la
 lib/gtk-2.0/2.4.0/engines/libthinice.la
-lib/gtk-2.0/engines/libclearlooks.la
 lib/pkgconfig/gtk-engines-2.pc
 share/themes/Clearlooks/gtk-2.0/gtkrc
 share/themes/Crux/gtk-2.0/gtkrc
