@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2004/08/17 11:18:57 recht Exp $
+$NetBSD: patch-ab,v 1.9 2005/08/26 17:21:04 drochner Exp $
 
---- configure.orig	2004-08-03 17:56:28.000000000 +0200
-+++ configure	2004-08-17 12:14:25.000000000 +0200
-@@ -5587,9 +5587,9 @@
+--- configure.orig	2005-08-21 12:05:29.000000000 +0200
++++ configure
+@@ -5956,9 +5956,9 @@ echo "$as_me: WARNING: unable to link st
        fi
     fi
  fi
@@ -14,4 +14,4 @@ $NetBSD: patch-ab,v 1.8 2004/08/17 11:18:57 recht Exp $
 +LIBS="$SAVE_LIBS"
  
  #--------------------------------------------------------------------
- # Disable customized allocator
+ # Handle different systems case by case
