@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/08/26 16:54:21 drochner Exp $
 bin/libnet-config
 include/libnet.h
 include/libnet/libnet-asn1.h
@@ -9,25 +9,4 @@ include/libnet/libnet-ospf.h
 include/libnet/libnet-structures.h
 lib/libnet.la
 man/man3/libnet.3
-share/doc/html/libnet/1.html
-share/doc/html/libnet/2.html
-share/doc/html/libnet/3.html
-share/doc/html/libnet/4.html
-share/doc/html/libnet/5.html
-share/doc/html/libnet/6.html
-share/doc/html/libnet/7.html
-share/doc/html/libnet/contrib.html
-share/doc/html/libnet/examples/libnet-example-1.c
-share/doc/html/libnet/examples/libnet-example-2.c
-share/doc/html/libnet/examples/libnet-example-3.c
-share/doc/html/libnet/examples/libnet-example-4.c
-share/doc/html/libnet/fig-3a.gif
-share/doc/html/libnet/figure-1.gif
-share/doc/html/libnet/figure-2.gif
-share/doc/html/libnet/figure-3.gif
-share/doc/html/libnet/figure-3a.gif
-share/doc/html/libnet/lrm.html
-share/examples/libnet
-@dirrm share/doc/html/libnet/examples
-@dirrm share/doc/html/libnet
 @dirrm include/libnet
