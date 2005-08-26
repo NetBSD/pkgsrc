@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/08/20 14:28:03 adrianp Exp $
+# $NetBSD: Makefile,v 1.20 2005/08/26 20:22:56 adrianp Exp $
 #
 
 DISTNAME=	awstats-6.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://awstats.sourceforge.net/files/
 EXTRACT_SUFX=	.tgz
@@ -17,6 +17,29 @@ NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	tools/*.pl		\
 		wwwroot/cgi-bin/*.pl
+
+APACHE_USER?=	www
+APACHE_GROUP?=	www
+
+USE_PKGINSTALL=		YES
+# OWN_DIRS=		${VARBASE}/awstats
+OWN_DIRS_PERMS+= 	${VARBASE}/awstats ${APACHE_USER} ${APACHE_GROUP} 0700
+PKG_SYSCONFSUBDIR=	awstats
+
+SUBST_CLASSES=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	tools/awstats_configure.pl \
+			wwwroot/cgi-bin/awstats.model.conf \
+			wwwroot/cgi-bin/awstats.pl
+SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g" \
+			-e "s|@VARBASE@|${VARBASE}|g" \
+			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
+			-e "s|/var/log/httpd/mylog.log|${VARBASE}/log/httpd/access_log|g" \
+			-e "s|\"/etc/opt/awstats\"|\"/etc/opt/awstats\",\"${PKG_SYSCONFDIR}\"|g"
+SUBST_MESSAGE.conf=	"Fixing configuration files and scripts."
+
+CONF_FILES+=	${PREFIX}/share/examples/awstats/awstats.conf \
+		${PKG_SYSCONFDIR}/awstats.model.conf
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/awstats
