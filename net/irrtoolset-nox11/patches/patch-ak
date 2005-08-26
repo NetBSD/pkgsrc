@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2005/02/28 12:37:30 spz Exp $
+$NetBSD: patch-ak,v 1.2 2005/08/26 08:41:46 spz Exp $
 
 --- src/Core/util/List.hh.orig	2004-07-30 12:58:10.000000000 +0200
 +++ src/Core/util/List.hh
@@ -11,13 +11,23 @@ $NetBSD: patch-ak,v 1.1.1.1 2005/02/28 12:37:30 spz Exp $
  	T* operator-> () const { return (T*)const_ListIterator<T>::operator->(); }
  	ListIterator& operator++ () { // prefix ++
  		const_ListIterator<T>::operator++();
-@@ -185,9 +185,9 @@ public:
+@@ -185,17 +185,17 @@ public:
  
  	const_ListSearchIterator& operator++ () { // prefix ++
  		for (const_ListIterator<T>::operator++();
 -		     ptr_!=(ListNode*)list_;
 +		     const_ListIterator<T>::ptr_!=(ListNode*)const_ListIterator<T>::list_;
  		     const_ListIterator<T>::operator++()) {
+-			if (((T*)ptr_)->isKey(key_)) break;
++			if (((T*)const_ListIterator<T>::ptr_)->isKey(key_)) break;
+ 		}
+ 		return *this;
+ 	}
+ 	const_ListSearchIterator& operator-- () { // prefix --
+ 		for (const_ListIterator<T>::operator--();
+-		     ptr_!=(ListNode*)list_;
++		     const_ListIterator<T>::ptr_!=(ListNode*)const_ListIterator<T>::list_;
+ 		     const_ListIterator<T>::operator--()) {
 -			if (((T*)ptr_)->isKey(key_)) break;
 +			if (((T*)const_ListIterator<T>::ptr_)->isKey(key_)) break;
  		}
