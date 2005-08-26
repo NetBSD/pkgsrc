@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2003/08/20 08:28:57 grant Exp $
+$NetBSD: patch-aa,v 1.8 2005/08/26 08:32:13 adam Exp $
 
---- Makefile.in.orig	2003-04-04 09:38:48.000000000 +1000
+--- Makefile.in.orig	2004-03-04 20:33:56.000000000 +0000
 +++ Makefile.in
 @@ -1,4 +1,4 @@
 -#
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.7 2003/08/20 08:28:57 grant Exp $
  
  
  
-@@ -118,8 +118,8 @@ DEFINES += -DGROK_NETSCOUT
+@@ -129,8 +129,8 @@ DEFINES += -DGROK_ERF
  # 
  ################################################################## 
  # Pathname of directory to install the binary
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.7 2003/08/20 08:28:57 grant Exp $
  
  
  ################################################################## 
-@@ -140,7 +140,7 @@ INCLS = -I. @V_INCLS@ ${PCAP_INCS}
+@@ -151,7 +151,7 @@ INCLS = -I. @V_INCLS@ ${PCAP_INCS}
  # Probably want full optimization
  # FreeBSD needs	-Ae
  # HP needs	-Ae
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.7 2003/08/20 08:28:57 grant Exp $
  
  # Standard LIBS
  LDLIBS = @LIBS@ ${PCAP_LDLIBS}
-@@ -185,7 +185,7 @@ tcptrace: ${OFILES}
+@@ -196,7 +196,7 @@ tcptrace: ${OFILES}
  # your machine, just hack in a quick string below in place of the command.
  version.o: ${CFILES} Makefile
  	${CC} ${CFLAGS} -o version.o -c $(srcdir)/version.c \
