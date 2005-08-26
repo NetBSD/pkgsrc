@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/18 16:19:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/08/26 16:37:51 drochner Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -45,6 +45,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/vte.mo
@@ -84,6 +85,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ug/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/vte.mo
