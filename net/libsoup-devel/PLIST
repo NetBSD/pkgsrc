@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2005/03/26 16:18:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/08/26 16:27:55 drochner Exp $
 include/libsoup-2.2/libsoup/soup-address.h
 include/libsoup-2.2/libsoup/soup-connection.h
+include/libsoup-2.2/libsoup/soup-date.h
 include/libsoup-2.2/libsoup/soup-headers.h
 include/libsoup-2.2/libsoup/soup-message-filter.h
 include/libsoup-2.2/libsoup/soup-message-queue.h
 include/libsoup-2.2/libsoup/soup-message.h
 include/libsoup-2.2/libsoup/soup-method.h
 include/libsoup-2.2/libsoup/soup-misc.h
+include/libsoup-2.2/libsoup/soup-portability.h
 include/libsoup-2.2/libsoup/soup-server-auth.h
 include/libsoup-2.2/libsoup/soup-server-message.h
 include/libsoup-2.2/libsoup/soup-server.h
@@ -19,8 +21,36 @@ include/libsoup-2.2/libsoup/soup-socket.h
 include/libsoup-2.2/libsoup/soup-status.h
 include/libsoup-2.2/libsoup/soup-types.h
 include/libsoup-2.2/libsoup/soup-uri.h
+include/libsoup-2.2/libsoup/soup-xmlrpc-message.h
+include/libsoup-2.2/libsoup/soup-xmlrpc-response.h
 include/libsoup-2.2/libsoup/soup.h
 lib/libsoup-2.2.la
 lib/pkgconfig/libsoup-2.2.pc
+share/doc/libsoup/SoupAddress.html
+share/doc/libsoup/SoupAuth.html
+share/doc/libsoup/SoupConnection.html
+share/doc/libsoup/SoupConnectionNTLM.html
+share/doc/libsoup/SoupMessage.html
+share/doc/libsoup/SoupServer.html
+share/doc/libsoup/SoupServerMessage.html
+share/doc/libsoup/SoupSession.html
+share/doc/libsoup/SoupSessionAsync.html
+share/doc/libsoup/SoupSessionSync.html
+share/doc/libsoup/SoupSoapMessage.html
+share/doc/libsoup/SoupSocket.html
+share/doc/libsoup/ch01.html
+share/doc/libsoup/home.png
+share/doc/libsoup/index.html
+share/doc/libsoup/index.sgml
+share/doc/libsoup/left.png
+share/doc/libsoup/libsoup-soup-dns.html
+share/doc/libsoup/libsoup-soup-ssl.html
+share/doc/libsoup/libsoup-soup-status.html
+share/doc/libsoup/libsoup-soup-uri.html
+share/doc/libsoup/libsoup.devhelp
+share/doc/libsoup/right.png
+share/doc/libsoup/style.css
+share/doc/libsoup/up.png
+@dirrm share/doc/libsoup
 @dirrm include/libsoup-2.2/libsoup
 @dirrm include/libsoup-2.2
