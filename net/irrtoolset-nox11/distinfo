@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/05/25 13:13:30 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/08/26 08:41:46 spz Exp $
 
 SHA1 (IRRToolSet-4.8.2.tar.gz) = f60a03cb6585503f1ef0b8b7c0a2ce7c39ce999c
 RMD160 (IRRToolSet-4.8.2.tar.gz) = 00332f7fe1144b56c93dc327126ec51aa094b6ab
@@ -13,7 +13,7 @@ SHA1 (patch-ag) = d7eef2f41932977650ed3cd68fe0bf852745d444
 SHA1 (patch-ah) = 8641120cfd49797d4fd2fca53a7f11f04c8fb5b4
 SHA1 (patch-ai) = ec16a78eb24c0a78846bfa370ca11fba09b60f0c
 SHA1 (patch-aj) = bdd8215f482ea203a3387345640b87b421fbfe82
-SHA1 (patch-ak) = 4a47bfdb462b2ec0beaa8dce028be569bc1d4e1e
+SHA1 (patch-ak) = 1646dc6f95abb477779fc396d04f5456292b8af7
 SHA1 (patch-al) = 83ee86276245a4431f963d8b6db8feb04598a5ad
 SHA1 (patch-am) = ae4d07005d20275a3b6a683ba04e5fc8aa84292d
 SHA1 (patch-an) = 19e899a3bf0bab28e5a9322e6001f59643ffe897
@@ -48,6 +48,19 @@ SHA1 (patch-bp) = 5944c48114743a2771f3044beb84d767abe538df
 SHA1 (patch-bq) = 17523090fd787ce7f585060d49c92b0b1e64430e
 SHA1 (patch-br) = 72e7b86a31851a437dff832206c8d96f263a6b15
 SHA1 (patch-bs) = ff8b504a8b8aedb49bdc27bffc50f58c5878c5c6
-SHA1 (patch-bt) = 878e6723901f2f7e02416a2a7bbee0f2f4605af8
+SHA1 (patch-bt) = 1597f361bc791c41bfb770cfb07b31432e34c779
 SHA1 (patch-bu) = ea10d9cafc9032bd9f50ea6b81cab58779f6890e
 SHA1 (patch-bv) = d0584058eaddce6a03a7b90e5f44997d70afc51d
+SHA1 (patch-bw) = 647544abdbc27886946a37d4f7d7cfb461addc1e
+SHA1 (patch-bx) = 8923f6d3f267b415468b31a3bbd8eb62f821d4a6
+SHA1 (patch-by) = 25af58ff132815c580edfc3dd6b4d1a9b2a464e4
+SHA1 (patch-bz) = 336c6714f3573e93ef2705f15094811dbf177bfc
+SHA1 (patch-ca) = 2285b293abb2c43b12b0aa43c19524f559131fba
+SHA1 (patch-cb) = a3ab7b8c11d913b25f795f59767c884e3a9605a0
+SHA1 (patch-cc) = 3c9395751b58cff9cfc808c91b04a6548f2daf38
+SHA1 (patch-cd) = 8ddbb605d40988378875de80390b09203c61212e
+SHA1 (patch-cf) = 3ec8166b3282364b082bcec666ad79f51ffb8e74
+SHA1 (patch-cg) = 0df548f8a560044b5eaeaaac1b25beadd4850ff0
+SHA1 (patch-ch) = 40ee868bdb7ecb73cb279e5e9f1ff546ab4a4ffe
+SHA1 (patch-ci) = 2e0104e01b7c8beb9d9feab837520014ad6b63e4
+SHA1 (patch-cj) = 86950483f15144510fab6f46cfd36a1759eb3bb4
