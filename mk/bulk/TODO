@@ -1,2 +1,3 @@
  * allow using non-/etc mk.conf
  * integrate libkver
+ * Generate list of packages that were "Successfully packaged"
