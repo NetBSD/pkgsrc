@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/09/06 03:36:03 kim Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/26 08:42:09 abs Exp $
 #
 
 DISTNAME=	freerdist-0.92
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.astron.com/pub/freerdist/ \
 		ftp://ftp.gw.com/pub/unix/freerdist/
