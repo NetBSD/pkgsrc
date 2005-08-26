@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/06 20:09:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/08/26 17:42:58 drochner Exp $
 bin/gramps
 man/man1/gramps.1
 share/application-registry/gramps.applications
@@ -158,6 +158,8 @@ share/gramps/SourceView.py
 share/gramps/SourceView.pyo
 share/gramps/Sources.py
 share/gramps/Sources.pyo
+share/gramps/Spell.py
+share/gramps/Spell.pyo
 share/gramps/SpreadSheetDoc.py
 share/gramps/SpreadSheetDoc.pyo
 share/gramps/StartupDialog.py
@@ -195,7 +197,13 @@ share/gramps/caution.png
 share/gramps/const.py
 share/gramps/const.pyo
 share/gramps/data/gedcom.xml
+share/gramps/data/main1.css
+share/gramps/data/main2.css
+share/gramps/data/main3.css
+share/gramps/data/main4.css
+share/gramps/data/main5.css
 share/gramps/data/papersize.xml
+share/gramps/data/somerights20.gif
 share/gramps/data/templates/blue_edge.tpkg
 share/gramps/data/templates/marble.tpkg
 share/gramps/data/templates/pink_marble.tpkg
@@ -312,6 +320,69 @@ share/gramps/gnome/help/gramps/C/legal.xml
 share/gramps/gnome/help/gramps/C/mainwin.xml
 share/gramps/gnome/help/gramps/C/preface.xml
 share/gramps/gnome/help/gramps/C/usage.xml
+share/gramps/gnome/help/gramps/fr/authors.xml
+share/gramps/gnome/help/gramps/fr/bugs.xml
+share/gramps/gnome/help/gramps/fr/cmdline.xml
+share/gramps/gnome/help/gramps/fr/custom.xml
+share/gramps/gnome/help/gramps/fr/faq.xml
+share/gramps/gnome/help/gramps/fr/figures/bookreport.png
+share/gramps/gnome/help/gramps/fr/figures/cfe-ar.png
+share/gramps/gnome/help/gramps/fr/figures/cfe-df.png
+share/gramps/gnome/help/gramps/fr/figures/column-editor.png
+share/gramps/gnome/help/gramps/fr/figures/comp-people.png
+share/gramps/gnome/help/gramps/fr/figures/date-selection.png
+share/gramps/gnome/help/gramps/fr/figures/edit-ad.png
+share/gramps/gnome/help/gramps/fr/figures/edit-an.png
+share/gramps/gnome/help/gramps/fr/figures/edit-at.png
+share/gramps/gnome/help/gramps/fr/figures/edit-bm.png
+share/gramps/gnome/help/gramps/fr/figures/edit-ev.png
+share/gramps/gnome/help/gramps/fr/figures/edit-media.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-addresses.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-attributes.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-events.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-gallery.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-internet.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-lds.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-names.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-notes.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person-sources.png
+share/gramps/gnome/help/gramps/fr/figures/edit-person.png
+share/gramps/gnome/help/gramps/fr/figures/edit-plc.png
+share/gramps/gnome/help/gramps/fr/figures/edit-rel.png
+share/gramps/gnome/help/gramps/fr/figures/edit-si.png
+share/gramps/gnome/help/gramps/fr/figures/edit-src.png
+share/gramps/gnome/help/gramps/fr/figures/edit-wi.png
+share/gramps/gnome/help/gramps/fr/figures/family-alt.png
+share/gramps/gnome/help/gramps/fr/figures/family.png
+share/gramps/gnome/help/gramps/fr/figures/find-people.png
+share/gramps/gnome/help/gramps/fr/figures/first-open.png
+share/gramps/gnome/help/gramps/fr/figures/gedcom-export-progress.png
+share/gramps/gnome/help/gramps/fr/figures/gedcom-export.png
+share/gramps/gnome/help/gramps/fr/figures/gedcom-import.png
+share/gramps/gnome/help/gramps/fr/figures/mainwin.png
+share/gramps/gnome/help/gramps/fr/figures/media.png
+share/gramps/gnome/help/gramps/fr/figures/merge-people.png
+share/gramps/gnome/help/gramps/fr/figures/merge-plc.png
+share/gramps/gnome/help/gramps/fr/figures/merge-src.png
+share/gramps/gnome/help/gramps/fr/figures/missing-media.png
+share/gramps/gnome/help/gramps/fr/figures/noside-nofilt.png
+share/gramps/gnome/help/gramps/fr/figures/pedigree-anchor.png
+share/gramps/gnome/help/gramps/fr/figures/pedigree-child-cut.png
+share/gramps/gnome/help/gramps/fr/figures/pedigree.png
+share/gramps/gnome/help/gramps/fr/figures/places.png
+share/gramps/gnome/help/gramps/fr/figures/prefs.png
+share/gramps/gnome/help/gramps/fr/figures/researcher.png
+share/gramps/gnome/help/gramps/fr/figures/scratch-pad.png
+share/gramps/gnome/help/gramps/fr/figures/side-filt.png
+share/gramps/gnome/help/gramps/fr/figures/sources.png
+share/gramps/gnome/help/gramps/fr/filtref.xml
+share/gramps/gnome/help/gramps/fr/getstart.xml
+share/gramps/gnome/help/gramps/fr/gramps-manual.xml
+share/gramps/gnome/help/gramps/fr/keybind.xml
+share/gramps/gnome/help/gramps/fr/legal.xml
+share/gramps/gnome/help/gramps/fr/mainwin.xml
+share/gramps/gnome/help/gramps/fr/preface.xml
+share/gramps/gnome/help/gramps/fr/usage.xml
 share/gramps/good.png
 share/gramps/gramps.glade
 share/gramps/gramps.png
@@ -392,10 +463,14 @@ share/gramps/plugins/Leak.py
 share/gramps/plugins/Leak.pyo
 share/gramps/plugins/Merge.py
 share/gramps/plugins/Merge.pyo
+share/gramps/plugins/NavWebPage.py
+share/gramps/plugins/NavWebPage.pyo
 share/gramps/plugins/PatchNames.py
 share/gramps/plugins/PatchNames.pyo
 share/gramps/plugins/ReadPkg.py
 share/gramps/plugins/ReadPkg.pyo
+share/gramps/plugins/Rebuild.py
+share/gramps/plugins/Rebuild.pyo
 share/gramps/plugins/RelCalc.py
 share/gramps/plugins/RelCalc.pyo
 share/gramps/plugins/ReorderIds.py
@@ -497,11 +572,12 @@ share/mime-info/gramps.keys
 share/mime-info/gramps.mime
 share/mime/packages/gramps.xml
 share/omf/gramps/gramps-manual-C.omf
+share/omf/gramps/gramps-manual-fr.omf
 @dirrm share/omf/gramps
-@comment in scrollkeeper: @dirrm share/omf
 @comment in shared-mime-info: @dirrm share/mime/packages
-@comment in gnome-icon-theme: @dirrm share/icons/gnome/48x48/mimetypes
 @dirrm share/gramps/plugins
+@dirrm share/gramps/gnome/help/gramps/fr/figures
+@dirrm share/gramps/gnome/help/gramps/fr
 @dirrm share/gramps/gnome/help/gramps/C/figures
 @dirrm share/gramps/gnome/help/gramps/C
 @dirrm share/gramps/gnome/help/gramps
