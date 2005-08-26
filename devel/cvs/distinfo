@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.26 2005/04/19 12:39:18 wiz Exp $
+$NetBSD: distinfo,v 1.27 2005/08/26 21:36:29 adrianp Exp $
 
 SHA1 (cvs-1.11.20.tar.bz2) = 47f51a96b5a73e18c96f431f3c494735aa9c0236
 RMD160 (cvs-1.11.20.tar.bz2) = 4f926d661b35dc1bafb5ee5f98487289a907d34d
 Size (cvs-1.11.20.tar.bz2) = 2414744 bytes
-SHA1 (cvs-1.11.19-v6-20050205.diff.gz) = 5cd1519d99c8a6bc124fd5e4daaf5202cde87f07
-RMD160 (cvs-1.11.19-v6-20050205.diff.gz) = a6c304badf71464798311f121f3eb2df50501c2f
-Size (cvs-1.11.19-v6-20050205.diff.gz) = 13004 bytes
 SHA1 (patch-aa) = 57bcc59a51d44f436d2f79a0752e44e317589650
 SHA1 (patch-ab) = 3c5ff65e7a087b2e73e933366aae99b6b5549371
 SHA1 (patch-ac) = 4da02fe019da9721afe6f9af0cd1db44214b575e
@@ -29,3 +26,4 @@ SHA1 (patch-au) = ba788685ee842d07ac866183185e257ce2dcf749
 SHA1 (patch-av) = d381dbf50a59d78e0a4bf8fff09b2570988d5647
 SHA1 (patch-ay) = 7a0ee5bf1707afeaeb9092ce3faf7fc594044a2b
 SHA1 (patch-az) = 4b773728b228af6c69d4e10cf59f1677feaa54ea
+SHA1 (patch-ba) = 25f9a2f7e35db0d2bfefae5ebf7be43d21a8a9ee
