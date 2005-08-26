@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10961 2005/08/26 11:54:22 adam Exp $
+$NetBSD: CHANGES,v 1.10962 2005/08/26 13:19:51 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3822,3 +3822,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated inputmethod/imhangul to 0.9.12 [minskim 2005-08-26]
 	Updated net/tcptrace to 6.6.7 [adam 2005-08-26]
 	Updated biology/chemtool to 1.6.7 [adam 2005-08-26]
+	Updated mail/sylpheed to 2.0.1 [xtraeme 2005-08-26]
