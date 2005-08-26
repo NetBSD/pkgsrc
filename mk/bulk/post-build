@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.56 2005/07/17 13:38:01 ben Exp $
+# $NetBSD: post-build,v 1.57 2005/08/26 07:24:53 reed Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -85,6 +85,7 @@ getmakevars(qw(
 	STARTFILE
 	SUPPORTSFILE
 	X11BASE
+	PKG_TOOLS_BIN
 ));
 
 my $bulkdbfile = basename($vars{BULK_DBFILE});
@@ -159,7 +160,7 @@ writeReport();
 	{
 		local $/;
 		undef $/;
-		$perlfiles = `pkg_info -qL perl*`;
+		$perlfiles = `$vars{PKG_TOOLS_BIN}/pkg_info -qL perl*`;
 	}
 
 	my $perlfiles_pattern = $perlfiles;
