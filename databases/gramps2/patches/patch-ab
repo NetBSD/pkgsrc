@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/07/06 20:09:31 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2005/08/26 17:42:58 drochner Exp $
 
---- src/GrampsBSDDB.py.orig	2005-04-17 20:48:46.000000000 +0200
+--- src/GrampsBSDDB.py.orig	2005-08-15 04:30:17.000000000 +0200
 +++ src/GrampsBSDDB.py
-@@ -33,7 +33,7 @@ import os
- import time
+@@ -34,7 +34,7 @@ import time
  import locale
+ import sets
  from gettext import gettext as _
 -from bsddb import dbshelve, db
 +from bsddb3 import dbshelve, db
