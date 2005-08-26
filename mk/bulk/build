@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.54 2005/06/24 13:37:51 sketch Exp $
+# $NetBSD: build,v 1.55 2005/08/26 07:24:53 reed Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -207,6 +207,7 @@ if [ -d pkgtools/pkglint ]; then
 	MACHINE_ARCH=`${BMAKE} show-var VARNAME=MACHINE_ARCH` || fail=yes
 	OPSYS=`${BMAKE} show-var VARNAME=OPSYS` || fail=yes
 	OS_VERSION=`${BMAKE} show-var VARNAME=OS_VERSION` || fail=yes
+	PKG_TOOLS_BIN=`${BMAKE} show-var VARNAME=PKG_TOOLS_BIN` || fail=yes
 else
 	echo "The pkgtools/pkglint directory does not exist.  Please update"
 	echo "your pkgsrc tree in ${USR_PKGSRC}"
@@ -234,6 +235,7 @@ echo "PERL5           = $PERL5"
 echo "MACHINE_ARCH    = $MACHINE_ARCH"
 echo "OPSYS           = $OPSYS"
 echo "OS_VERSION      = $OS_VERSION"
+echo "PKG_TOOLS_BIN   = $PKG_TOOLS_BIN"
 echo "----------------------------------"
 
 # make sure we have values for these very important
@@ -256,6 +258,7 @@ if [ $fail = "yes" -o \
 	-z "$PERL5" -o \
 	-z "$MACHINE_ARCH" -o \
 	-z "$OPSYS" -o \
+	-z "$PKG_TOOLS_BIN" -o \
 	-z "$OS_VERSION" \
 	]; then
 	echo "ERROR:  build failed to extract certain key variables."
@@ -328,9 +331,9 @@ done
 
 echo "Build finished.  Removing all installed packages left over from build..."
 
-for pkgname in `pkg_info -e \*`
+for pkgname in `${PKG_TOOLS_BIN}/pkg_info -e \*`
 do
-	pkg_info -qe $pkgname
+	${PKG_TOOLS_BIN}/pkg_info -qe $pkgname
 	if [ $? -eq 0 ]; then
 		pkgdir=`${GREP} " $pkgname " $INDEXFILE | ${AWK} '{print $1}'`	
 		case "${BULK_PREREQ}" in
@@ -338,12 +341,12 @@ do
 				echo "Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
 				;;
 			* )
-				echo pkg_delete -r $pkgname
-				pkg_delete -r $pkgname
-				pkg_info -qe $pkgname
+				echo ${PKG_TOOLS_BIN}/pkg_delete -r $pkgname
+				${PKG_TOOLS_BIN}/pkg_delete -r $pkgname
+				${PKG_TOOLS_BIN}/pkg_info -qe $pkgname
 				if [ $? -eq 0 ]; then
 					echo "$pkgname ($pkgdir) did not deinstall nicely.  Forcing the deinstall"
-					pkg_delete -f $pkgname || true
+					${PKG_TOOLS_BIN}/pkg_delete -f $pkgname || true
 				fi
 				;;
 		esac
