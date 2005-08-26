@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3823 2005/08/25 14:39:42 xtraeme Exp $
+$NetBSD: TODO,v 1.3824 2005/08/26 08:33:18 adam Exp $
 
 Suggested new packages
 ======================
@@ -1009,7 +1009,6 @@ Suggested package updates
 	o tcpick-0.2.1
 	o tcpillust-1.00b
 	o tcpreplay-2.3.5
-	o tcptrace-6.6.7
 	o tct-1.15
 	o tdir-1.67
 	o tds-1.6.2
