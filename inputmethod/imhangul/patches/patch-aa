@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/07/19 22:42:53 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2005/08/26 02:19:31 minskim Exp $
 
---- Makefile.in.orig	2004-07-12 00:44:54.000000000 -0500
+--- Makefile.in.orig	2005-07-29 21:31:02.000000000 -0700
 +++ Makefile.in
-@@ -828,12 +828,12 @@ uninstall-info: uninstall-info-recursive
+@@ -829,12 +829,12 @@ uninstall-info: uninstall-info-recursive
  
  
  install-data-hook:
