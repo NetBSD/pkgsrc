@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10965 2005/08/26 21:37:55 adrianp Exp $
+$NetBSD: CHANGES,v 1.10966 2005/08/26 22:19:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3826,3 +3826,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/par2 to 0.4 [tv 2005-08-26]
 	Updated www/awstats to 6.4nb2 [adrianp 2005-08-26]
 	Updated devel/cvs to 1.11.20nb2 [adrianp 2005-08-26]
+	Added www/firefox-bin-acroread7 version 1.0 [xtraeme 2005-08-26]
