@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/08/26 13:59:21 grant Exp $
 
 DISTNAME=		gperiodic-2.0.8
 CATEGORIES=		misc x11
@@ -21,6 +21,9 @@ BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 BUILD_TARGET=		gperiodic
+
+LIBS+=			-lintl
+MAKE_ENV+=		LIBS=${LIBS:Q}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
