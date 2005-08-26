@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:45:27 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/08/26 16:54:21 drochner Exp $
 #
 
-DISTNAME=	libnet-1.0.1b
-PKGREVISION=	5
+DISTNAME=	libnet-1.0.2a
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.packetfactory.net/libnet/dist/deprecated/
 
@@ -24,12 +23,5 @@ INSTALLATION_DIRS=	bin lib share/examples
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}/doc
-
-post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/libnet
-	@cd ${WRKSRC}/doc/html && ${PAX} -rw *.html *.gif */*.c	\
-		${PREFIX}/share/doc/html/libnet
-	@${LN} -s ${PREFIX}/share/doc/html/libnet/examples \
-		${PREFIX}/share/examples/libnet
 
 .include "../../mk/bsd.pkg.mk"
