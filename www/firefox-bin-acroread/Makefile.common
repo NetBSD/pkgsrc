@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/02/10 12:26:24 grant Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/08/26 22:18:05 xtraeme Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -20,9 +20,11 @@ PLIST_SUBST+=		ACROREAD=${ACROREAD}
 PLIST_SUBST+=		PLATFORM=${PLATFORM}
 NS_PLUGINS_DIR=		${PREFIX}/lib/firefox-linux/plugins
 
+BROWSER?=		Browsers
+
 do-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${LN} -s ${PREFIX}/${ACROREAD}/Browsers/${PLATFORM}/nppdf.so \
+	${LN} -s ${PREFIX}/${ACROREAD}/${BROWSER}/${PLATFORM}/nppdf.so \
 		${NS_PLUGINS_DIR}/nppdf.so
 
 .include "../../mk/bsd.pkg.mk"
