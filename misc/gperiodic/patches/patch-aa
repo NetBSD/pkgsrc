@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2003/12/14 12:38:30 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2005/08/26 13:59:22 grant Exp $
 
---- Makefile.orig	2003-08-09 21:33:27.000000000 +0200
+--- Makefile.orig	2003-08-10 05:33:27.000000000 +1000
 +++ Makefile
 @@ -1,8 +1,8 @@
 -CC=gcc
 -CFLAGS=`pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
-+CC?=gcc
-+CFLAGS+=`pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
- LIBS=`pkg-config --libs gtk+-2.0`
+-LIBS=`pkg-config --libs gtk+-2.0`
 -bindir ?= /usr/bin
 -datadir ?= /usr/share
++CC?=gcc
++CFLAGS+=`pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
++LIBS+=`pkg-config --libs gtk+-2.0`
 +bindir ?= ${PREFIX}/bin
 +datadir ?= ${PREFIX}/share
  
