@@ -1,20 +1,23 @@
-$NetBSD: patch-ac,v 1.1 1999/09/12 16:50:41 kim Exp $
+$NetBSD: patch-ac,v 1.2 2005/08/27 20:43:40 minskim Exp $
 
---- buffer.c.orig	Wed Jul 14 11:59:17 1993
-+++ buffer.c	Sun Sep 12 12:35:57 1999
-@@ -384,6 +384,7 @@
- }
+--- buffer.c.orig	1994-10-04 09:44:53.000000000 -0700
++++ buffer.c
+@@ -118,6 +118,4 @@ static char *rcsid = "$Header: /a/swan/h
+ #endif
+ 
+-extern char *shmat();
+-
+ /* General macros */
+ #define TRUE 1
+@@ -385,4 +383,5 @@ parse_args( argc, argv )
  
  /* The interrupt handler */
 +void
  shutdown()
  {
- 	static int shutting;
-@@ -400,6 +401,7 @@
- }
+@@ -401,4 +400,5 @@ shutdown()
  
  /* Shutdown because the child has ended */
 +void
  child_shutdown()
  {
- 	/* Find out which child has died.  (They may not be my
