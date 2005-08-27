@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/12/28 23:18:19 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/08/27 00:40:25 cube Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 WINDOWMAKER_BUILDLINK3_MK:=	${WINDOWMAKER_BUILDLINK3_MK}+
@@ -18,7 +18,6 @@ BUILDLINK_PKGSRCDIR.windowmaker?=	../../wm/windowmaker
 
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/hermes/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
