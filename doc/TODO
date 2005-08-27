@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3827 2005/08/27 19:00:13 minskim Exp $
+$NetBSD: TODO,v 1.3828 2005/08/27 22:25:51 recht Exp $
 
 Suggested new packages
 ======================
@@ -490,7 +490,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glib2-2.8.0
 	o gliv-1.9.3
-	o gnats-4.1.0
 	o gnet1-1.1.9
 	o gnetman-20050325
 	o gnocatan-0.8.1.30
