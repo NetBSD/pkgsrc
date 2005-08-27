@@ -1,27 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2004/11/14 10:59:58 soren Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/08/27 22:24:02 recht Exp $
 bin/edit-pr
 bin/getclose
 bin/install-sid
 bin/query-pr
 bin/send-pr
-etc/gnats/databases
-etc/gnats/defaults/addresses
-etc/gnats/defaults/categories
-etc/gnats/defaults/classes
-etc/gnats/defaults/dbconfig
-etc/gnats/defaults/gnatsd.user_access
-etc/gnats/defaults/responsible
-etc/gnats/defaults/states
-etc/gnats/defaults/submitters
-etc/gnats/gnatsd.host_access
-info/gnats.info
-info/gnats.info-1
-info/gnats.info-2
-info/gnats.info-3
-info/gnats.info-4
-info/gnats.info-5
-info/gnats.info-6
-info/gnats-faq.info
 libexec/gnats/at-pr
 libexec/gnats/check-db
 libexec/gnats/delete-pr
@@ -47,11 +29,28 @@ man/man7/gnats.7
 man/man8/delete-pr.8
 man/man8/file-pr.8
 man/man8/gen-index.8
+man/man8/getclose.8
 man/man8/gnatsd.8
+man/man8/install-sid.8
 man/man8/mkcat.8
 man/man8/mkdb.8
 man/man8/pr-edit.8
 man/man8/queue-pr.8
 man/man8/rmcat.8
-@dirrm etc/gnats/defaults
-@dirrm etc/gnats
+share/examples/gnats/databases
+share/examples/gnats/gnatsd.host_access
+share/examples/gnats/gnatsd.user_access
+share/examples/gnats/send-pr.conf
+share/gnats/defaults/addresses
+share/gnats/defaults/categories
+share/gnats/defaults/classes
+share/gnats/defaults/dbconfig
+share/gnats/defaults/gnatsd.user_access
+share/gnats/defaults/responsible
+share/gnats/defaults/states
+share/gnats/defaults/submitters
+share/gnats/gnats.el
+@dirrm share/gnats/defaults
+@dirrm share/gnats
+@dirrm share/examples/gnats
+@dirrm libexec/gnats

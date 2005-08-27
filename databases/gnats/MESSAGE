@@ -1,11 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2004/11/10 21:34:46 soren Exp $
+$NetBSD: MESSAGE,v 1.7 2005/08/27 22:24:02 recht Exp $
 
 See http://www.gnu.org/software/gnats/ for the official web page
-and don't forget to run ${PREFIX}/libexec/gnats/mkcat as gnats.
+and don't forget to run ${PREFIX}/libexec/gnats/mkdb default
+as user ${GNATS_USER} to create the default database.
 
 Add the following line to /etc/inetd.conf to activate GNATS:
-    support stream tcp nowait gnats ${PREFIX}/libexec/gnats/gnatsd gnatsd
+    ${GNATS_SERVICE} stream tcp nowait ${GNATS_USER} ${PREFIX}/libexec/gnats/gnatsd gnatsd
 
 Add something like this into the crontab to process incoming bug reports:
     */5 * * * * ${PREFIX}/libexec/gnats/queue-pr -r
