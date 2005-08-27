@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2004/11/10 21:34:46 soren Exp $
+$NetBSD: patch-ab,v 1.4 2005/08/27 22:24:02 recht Exp $
 
---- send-pr/Makefile.in.orig	2003-10-16 15:36:52.000000000 +0200
-+++ send-pr/Makefile.in	2003-10-16 15:37:04.000000000 +0200
-@@ -59,7 +59,7 @@
+--- send-pr/Makefile.in.orig	2005-02-24 19:49:23.000000000 +0100
++++ send-pr/Makefile.in
+@@ -55,7 +55,7 @@ RANLIB = ranlib
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
@@ -11,3 +11,17 @@ $NetBSD: patch-ab,v 1.3 2004/11/10 21:34:46 soren Exp $
  
  CFLAGS = -g
  LDFLAGS = -g
+@@ -121,11 +121,11 @@ install-norm-arch-dep: all
+ 	$(INSTALL_DATA) send-pr.1 $(DESTDIR)$(man1dir)/send-pr.1
+ 	$(SHELL) $(srcdir)/../mkinstalldirs $(DESTDIR)$(man8dir)/
+ 	$(INSTALL_DATA) install-sid.8 $(DESTDIR)$(man8dir)/install-sid.8
+-	$(INSTALL_DATA) $(srcdir)/send-pr.conf $(DESTDIR)$(sysconfdir)/gnats/
++	$(INSTALL_DATA) $(srcdir)/send-pr.conf %%EGDIR%%
+ 
+ uninstall:
+ 	-rm -f $(DESTDIR)$(bindir)/send-pr $(DESTDIR)$(bindir)/install-sid
+-	-rm -f $(DESTDIR)$(sysconfdir)/gnats/send-pr.conf
++	-rm -f %%EGDIR%%/send-pr.conf
+ 	-rmdir $(DESTDIR)$(datadir)/gnats
+ 	-rm -f $(DESTDIR)$(man1dir)/send-pr.1
+ 	-rm -f $(DESTDIR)$(man1dir)/install-sid.8
