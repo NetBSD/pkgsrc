@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/17 04:49:49 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/27 12:51:10 grant Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -12,6 +12,7 @@ COMMENT=	Solar System Flyby Simulator
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
+USE_TOOLS+=	flex
 USE_X11BASE=	yes
 
 MAKEFILE=	Makefile.FreeBSD
