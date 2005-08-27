@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3825 2005/08/26 11:54:22 adam Exp $
+$NetBSD: TODO,v 1.3826 2005/08/27 12:05:03 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -690,7 +690,6 @@ Suggested package updates
 	o opencobol-0.31
 	o openh323-1.17.1
 	o openmotif-2.2.3 [http://www.openmotif.org/]
-	o openmsx-0.5.2
 	o openssh-4.1
 	o openssl-0.9.8
 	o openttd-0.4.0 [pkg/30238]
