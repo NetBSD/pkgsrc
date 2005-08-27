@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10968 2005/08/27 12:07:21 xtraeme Exp $
+$NetBSD: CHANGES,v 1.10969 2005/08/27 12:27:27 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3829,3 +3829,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added www/firefox-bin-acroread7 version 1.0 [xtraeme 2005-08-26]
 	Updated emulators/openmsx to 0.5.2 [xtraeme 2005-08-27]
 	Updated archivers/libarchive to 1.02.030 [xtraeme 2005-08-27]
+	Updated mail/sylpheed-devel to 2.1.1 [chris 2005-08-27]
