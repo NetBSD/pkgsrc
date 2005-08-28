@@ -1,4 +1,4 @@
-# $NetBSD: tools.BSDOS.mk,v 1.14 2005/06/24 20:59:59 jlam Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.15 2005/08/28 01:43:56 reed Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
@@ -25,9 +25,21 @@ TOOLS_PLATFORM.fgrep?=		/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.grep?=		/bin/grep
+.if exists(/usr/bin/gunzip)
+TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
+.elif exists(/usr/contrib/bin/gunzip)
 TOOLS_PLATFORM.gunzip?=		/usr/contrib/bin/gunzip -f
+.endif
+.if exists(/usr/bin/gzcat)
+TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
+.elif exists(/usr/contrib/bin/gzcat)
 TOOLS_PLATFORM.gzcat?=		/usr/contrib/bin/gzcat
+.endif
+.if exists(/usr/bin/gzip)
+TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
+.elif exists(/usr/contrib/bin/gzip)
 TOOLS_PLATFORM.gzip?=		/usr/contrib/bin/gzip -nf ${GZIP}
+.endif
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
@@ -42,7 +54,11 @@ TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
+.if exists(/usr/bin/patch)
+TOOLS_PLATFORM.patch?=		/usr/bin/patch
+.elif exists(/usr/contrib/bin/patch)
 TOOLS_PLATFORM.patch?=		/usr/contrib/bin/patch
+.endif
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
