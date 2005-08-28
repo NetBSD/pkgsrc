@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/28 04:25:29 uebayasi Exp $
 #
 
 DISTNAME=	semantic-1.4.2
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
@@ -9,24 +10,20 @@ MAINTAINER=	cjones@NetBSD.org
 HOMEPAGE=	http://cedet.sourceforge.net/semantic.shtml
 COMMENT=	Lexer, parser-generator, and parser written for Emacs
 
-DEPENDS+=	speedbar>=0.13:../../editors/speedbar
-DEPENDS+=	eieio>=0.17:../../lang/eieio
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}speedbar>=0.13:../../editors/speedbar
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}eieio>=0.17:../../lang/eieio
 
 .include "../../mk/emacs.mk"
 
-.if ${EMACS_FLAVOR} == "emacs"
-EMACS=			emacs
-.else
-EMACS=			xemacs
-.endif
-
-BUILD_ENV+=	EMACS=${EMACS}
+BUILD_ENV+=	EMACS=${EMACS_FLAVOR}
 
 NO_CONFIGURE=	# set
 USE_TOOLS+=	gmake
 
 INFO_FILES=	semantic.info
 OTHER_INFO=	semantic.info-1 semantic.info-2
+
+MAKE_ENV+=	EMACS=${EMACS_FLAVOR}
 
 # XXX cd ${WRKSRC}; ${MAKE} -V semantic_LISP
 SRCS=	semantic.el semantic-util.el semantic-bnf.el semantic-ctxt.el

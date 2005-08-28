@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:43:35 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/28 04:25:29 uebayasi Exp $
 #
 
 DISTNAME=	IIIMECF-0.6
-PKGNAME=	iiimecf-0.6
+PKGNAME=	${EMACS_PKGNAME_PREFIX}iiimecf-0.6
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/IIIM/
 
@@ -10,7 +10,7 @@ MAINTAINER=	uebayasi@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Emacs Lisp library for IIIM Protocol
 
-DEPENDS+=	Mule-UCS>=0.82:../../editors/mule-ucs
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS>=0.82:../../editors/mule-ucs
 
 do-build:
 	@cd ${WRKSRC} && \
