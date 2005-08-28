@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10973 2005/08/28 04:28:53 uebayasi Exp $
+$NetBSD: CHANGES,v 1.10974 2005/08/28 04:31:00 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3833,3 +3833,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/mathomatic to 12.4.9 [minskim 2005-08-27]
 	Updated databases/gnats to 4.1.0 [recht 2005-08-27]
 	Updated devel/semi to 1.14.6nb4 [uebayasi 2005-08-28]
+	Updated mail/vm to 7.19 [uebayasi 2005-08-28]
