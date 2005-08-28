@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10974 2005/08/28 04:31:00 uebayasi Exp $
+$NetBSD: CHANGES,v 1.10975 2005/08/28 08:39:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3834,3 +3834,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/gnats to 4.1.0 [recht 2005-08-27]
 	Updated devel/semi to 1.14.6nb4 [uebayasi 2005-08-28]
 	Updated mail/vm to 7.19 [uebayasi 2005-08-28]
+	Updated www/apache2 to 2.0.54nb4 [tron 2005-08-28]
