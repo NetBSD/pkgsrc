@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/03/05 16:33:07 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/28 04:25:28 uebayasi Exp $
 
 DISTNAME=	apel-10.6
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/apel/
 

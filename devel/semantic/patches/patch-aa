@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2003/01/11 08:56:33 uebayasi Exp $
+$NetBSD: patch-aa,v 1.3 2005/08/28 04:25:29 uebayasi Exp $
 
---- Makefile.orig	Tue Dec 31 19:17:40 2002
+--- Makefile.orig	2002-12-31 19:17:40.000000000 +0900
 +++ Makefile
-@@ -19,7 +19,6 @@
+@@ -11,7 +11,6 @@ ede_FILES=Project.ede Makefile
+ 
+ example_MISC=semantic-skel.el skeleton.bnf semantic-example.el
+ init_LISP=semantic-load.el
+-EMACS=emacs
+ LOADPATH=../speedbar/ ../eieio/ 
+ semantic_LISP=semantic.el semantic-util.el semantic-bnf.el semantic-ctxt.el
+ Languages_LISP=semantic-c.el semantic-el.el semantic-java.el semantic-make.el semantic-scm.el semantic-texi.el
+@@ -19,7 +18,6 @@ tools_LISP=semantic-imenu.el semantic-sb
  senator_LISP=senator.el
  misc_AUX=INSTALL NEWS ChangeLog
  info_TEXINFOS=semantic.texi

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/28 04:25:30 uebayasi Exp $
 #
 
 DISTNAME=	tc-2.3.1
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/tcode/resources/soft/
 

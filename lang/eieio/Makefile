@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:58:00 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/28 04:25:30 uebayasi Exp $
 #
 
 DISTNAME=	eieio-0.17
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	lang editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
@@ -11,9 +12,8 @@ COMMENT=	Enhanced Integration of Emacs Interpreted Objects
 
 .include "../../mk/emacs.mk"
 
-.if ${EMACS_FLAVOR} == "emacs"
-.elif ${EMACS_FLAVOR} == "xemacs"
-DEPENDS+=	xemacs-packages:../../editors/xemacs-packages
+.if ${EMACS_FLAVOR} == "xemacs"
+DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 .endif
 
 MAKEFLAGS+=	EMACS=${EMACS_BIN}

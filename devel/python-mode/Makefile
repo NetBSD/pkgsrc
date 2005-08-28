@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:47 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/28 04:25:29 uebayasi Exp $
 #
 
 DISTNAME=	python-mode-4.54
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-mode/}
 DISTFILES=	python-mode.el
