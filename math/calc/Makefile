@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:19 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/08/28 04:25:30 uebayasi Exp $
 
 DISTNAME=	calc-2.02f
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=calc/}
