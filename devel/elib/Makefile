@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:07:50 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/08/28 04:25:28 uebayasi Exp $
 #
 
 DISTNAME=	elib-1.0
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION?=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://jde.sunsite.dk/

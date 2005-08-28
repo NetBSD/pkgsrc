@@ -1,8 +1,10 @@
-# $NetBSD: emacs.mk,v 1.19 2005/05/22 21:52:49 rillig Exp $
+# $NetBSD: emacs.mk,v 1.20 2005/08/28 04:25:30 uebayasi Exp $
 #
-# A Makefile fragment for Emacs Lisp packages.
+# This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
-# 	* Determine the version of Emacs/XEmacs to be used.
+# Note to users:
+#
+#	* Users choose one favoriate Emacs version (default GNU Emacs 21).
 #
 #	* Emacs Lisp files are installed...
 #	  	GNU emacs
@@ -10,13 +12,161 @@
 #		XEmacs
 #	  		->${PREFIX}/lib/xemacs/site-packages/lisp/foo/...
 #
-#	* XEmacs package's names are prefix'ed by "xemacs-", since Emacs
-#	  {20,21} conflict, and XEmacs conflict.
+#	* You can't install an ELP for both Emacs and XEmacs
+#	  simultaneously.
 #
-#	* Assume each package supports GNU Emacs {20,21} by default.  If the
-#	  package supports XEmacsen too, define EMACS_VERSIONS_ACCEPTED
-#	  explicitly before including mk/emacs.mk.  Note that the order is
-#	  important.
+#	* XEmacs package's names are prefix'ed by "xemacs-".
+#
+# Note to package developers:
+#
+#	* XEmacs package's names are prefix'ed by "xemacs-".
+#
+#	  This is to make sure ELPs for XEmacs keep their own dependency
+#	  tree (for example, if an ELP "bar" depends on another ELP "foo",
+#	  "xemacs-bar" depends on "xemacs-foo".  "foo" (installed for GNU
+#	  Emacs) is useless for "xemacs-bar" in this case.).
+#
+#	  Make sure too that "foo" and "xemacs-foo" conflict each other,
+#	  since they can share some files.  (Making all ELPs separately
+#	  installable for GNU Emacs/XEmacs might be possible.)
+#
+#	* Assume each ELP supports all Emacs versions by default.  If the
+#	  ELP supports only certain Emacs versions, define EMACS_VERSIONS
+#	  _ACCEPTED explicitly before including mk/emacs.mk.
+#
+# Variables for users:
+#
+#	EMACS_TYPE
+#		Description:
+#			The user's favoriate Emacs version.
+#		Possible values:
+#			emacs21, emacs21nox, emacs20, xemacs215, xemacs214
+#		Default value: 
+#			emacs21
+#
+# Variables ELPs can provide:
+#
+#	EMACS_USE_LEIM
+#		Description:
+#			Set if the ELP wants LEIM support.
+#		Possible values:
+#			<undefined>, <defined>
+#		Default value: 
+#			<undefined>
+#
+#	EMACS_VERSIONS_ACCEPTED
+#		Description:
+#			Versions the ELP accepts (supports).
+#		Possible values:
+#			emacs21, emacs21nox, emacs20, xemacs215, xemacs214
+#		Default value:
+#			emacs21, emacs21nox, emacs20, xemacs215, xemacs214
+#	REPLACE_EMACS
+#		Description:
+#			If set, correct the #!/path/to/emacs line in the
+#			specified files.
+#		Possible values:
+#			<a list of files relative to ${WRKDIR}>
+#		Default value: 
+#			<undefined>
+#
+# Variables provided for ELPs:
+#
+#	EMACS_BIN
+#		Description:
+#			Path to Emacs executable.
+#		Possible values:
+#			${PREFIX}/bin/emacs, ${PREFIX}/bin/xemacs
+#
+#	EMACS_ETCPREFIX
+#		Description:
+#			Path to the directory misc. files should be
+#			installed into.  ELPs should append a short
+#			name as a subdirectory.
+#		Possible values:
+#			${PREFIX}/share
+#	  		${PREFIX}/lib/xemacs/site-packages/etc
+#
+#	EMACS_FLAVOR
+#		Description:
+#			GNU Emacs (emacs) or XEmacs (xemacs).
+#		Possible values:
+#			emacs, xemacs
+#
+#	EMACS_INFOPREFIX
+#		Description:
+#			Path to the directory Info files should be
+#			installed into.  Unlike EMACS_ETCPREFIX or
+#			EMACS_LISPPREFIX, subdirectory is not needed.
+#		Possible values:
+#			${PREFIX}/info
+#	  		${PREFIX}/lib/xemacs/site-packages/info
+#
+#	EMACS_LISPPREFIX
+#		Description:
+#			Path to the directory Emacs lisp files should be
+#			installed into.  ELPs should append a short name
+#			as a subdirectory.
+#		Possible values:
+#			${PREFIX}/share/emacs/site-lisp
+#	  		${PREFIX}/lib/xemacs/site-packages/lisp
+#
+#	EMACS_PKGNAME_PREFIX
+#		Description:
+#			The prefix of PKGNAME and DEPENDS lines.  All ELPs
+#			must honour this!
+#		Possible values:
+#			"", "xemacs-"
+#
+# Variables provided in ELPs' PLIST:
+#
+#	EMACS_ETCPREFIX
+#		Description:
+#			Same as the one in Makefile, except that
+#			${PREFIX} is omitted in PLIST.
+#		Possible values:
+#			share
+#	  		lib/xemacs/site-packages/etc
+#
+#	EMACS_INFOPREFIX
+#		Description:
+#			Same as the one in Makefile, except that
+#			${PREFIX} is omitted in PLIST.
+#		Possible values:
+#			info
+#	  		lib/xemacs/site-packages/info
+#
+#	EMACS_LISPPREFIX
+#		Description:
+#			Same as the one in Makefile, except that
+#			${PREFIX} is omitted in PLIST.
+#		Possible values:
+#			share/emacs/site-lisp
+#	  		lib/xemacs/site-packages/lisp
+#
+#	EMACS_VERSION
+#		Description:
+#			XXX
+#		Possible values:
+#			XXX
+#
+#	FOR_{emacs,emacs21,emacs21nox,emacs20,xemacs,xemacs215,xemacs214}
+#		Description:
+#			These macros will become either an empty string or
+#			"@comment" depending on the Emacs version; when
+#			"emacs21" is used, ${FOR_emacs} and ${FOR_emacs21}
+#			become "" (empty), and other macros become
+#			"@comment"; thie means that only the PLIST lines
+#			prefixed by ${FOR_emacs} and ${FOR_emacs21} are
+#			valid.
+#		Possible values:
+#			"", "@comment"
+#
+#	NOTFOR_{emacs,emacs21,emacs21nox,emacs20,xemacs,xemacs215,xemacs214}
+#		Description:
+#			The opposite of FOR_*.  See above.
+#		Possible values:
+#			"", "@comment"
 #
 
 .if !defined(EMACS_MK)
@@ -24,185 +174,161 @@ EMACS_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-# Assume only GNU emacsen are supported by default.
 #
-EMACS_VERSION_DEFAULT?=		emacs21
-.if !defined(USE_XEMACS)
-EMACS_VERSIONS_ACCEPTED?=	emacs21 emacs21nox emacs20
-#EMACS_VERSIONS_ACCEPTED?=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
+# Constants
+#
+
+_EMACS_VERSIONS_ALL= \
+	emacs21 emacs21nox xemacs214 emacs20 xemacs215
+_EMACS_VERSIONS_ACCEPTED_DEFAULT=	${_EMACS_VERSIONS_ALL}
+_EMACS_VERSION_DEFAULT.emacs=	emacs21
+_EMACS_VERSION_DEFAULT.xemacs=	xemacs214
+_EMACS_REQD.emacs20=	emacs>=20.7
+_EMACS_REQD.emacs21=	emacs>=21.2
+_EMACS_REQD.emacs21nox=	emacs-nox11>=21.2
+_EMACS_REQD.xemacs214=	xemacs>=21.4
+_EMACS_REQD.xemacs215=	xemacs>=21.5
+_EMACS_REQD.leim20=	leim>=20.7
+_EMACS_REQD.leim21=	leim>=21.2
+_EMACS_DEP.emacs20=	../../editors/emacs20
+_EMACS_DEP.emacs21=	../../editors/emacs
+_EMACS_DEP.emacs21nox=	../../editors/emacs-nox11
+_EMACS_DEP.xemacs214=	../../editors/xemacs
+_EMACS_DEP.xemacs215=	../../editors/xemacs-current
+_EMACS_DEP.leim20=	../../editors/leim20
+_EMACS_DEP.leim21=	../../editors/leim
+
+#
+# Version decision
+#
+# 1. Pick up an emacs version.
+#
+#	if (user want a specific version)
+#		if (the specified version is "emacs" or "xemacs")
+#			fall into recommended versions (i.e. "emacs21" or
+#			    "xemacs214";
+#		use the specified version;
+#	else
+#		use "emacs21" by default;
+#	add a dependency to the version;
+#
+# 2. Check if a given package can be used for the emacs version.
+#	
+# 	if (package accepts the emacs version)
+#		nothing to do;
+#	else
+#		abort;
+#
+
+.if !empty(EMACS_TYPE:Memacs) || !empty(EMACS_TYPE:Mxemacs)
+_EMACS_TYPE=	${_EMACS_VERSION_DEFAULT.${EMACS_TYPE}}
+.endif
+_EMACS_TYPE?=	${EMACS_TYPE}
+
+.if !empty(_EMACS_TYPE:Nxemacs*)
+.  if !empty(_EMACS_TYPE:N*nox)
+_EMACS_PKGBASE=	emacs
+.  else
+_EMACS_PKGBASE=	emacs-nox11
+.  endif
 .else
-EMACS_VERSIONS_ACCEPTED?=	xemacs214 xemacs215
+.  if !empty(_EMACS_TYPE:N*nox)
+_EMACS_PKGBASE=	xemacs
+.  else
+_EMACS_PKGBASE=	xemacs-nox11
+.  endif
 .endif
 
-# Actually BUILDLINK_ means little here...
+_EMACS_VERSION_CMD!=	${PKG_INFO} -e "${_EMACS_PKGBASE}" || ${ECHO}
+.if "${_EMACS_VERSION_CMD}" != ""
+_EMACS_VERSION_FULL=	${_EMACS_VERSION_CMD}
+_EMACS_VERSION=		${_EMACS_VERSION_FULL:C/^${_EMACS_PKGBASE}-//}
+_EMACS_VERSION_MAJOR=	${_EMACS_VERSION:C/\..*//}
+_EMACS_VERSION_MINOR=	${_EMACS_VERSION:C/^[0-9]*\.//:C/[^0-9].*//}
+_EMACS_VERSION_NOREV=	${_EMACS_VERSION:C/[a-z]*$//}
+_EMACS_VERSION_ISMATCH!= \
+	dep="${_EMACS_REQD.${_EMACS_TYPE}:Q}";				\
+	${PKG_ADMIN} pmatch "$$dep" "${_EMACS_PKGBASE}";		\
+	if [ $$? = 0 ]; then ${ECHO} "yes"; else ${ECHO} "no"; fi
+.endif
+
+EMACS_VERSIONS_ACCEPTED?=	${_EMACS_VERSIONS_ACCEPTED_DEFAULT}
+
+.if empty(EMACS_VERSIONS_ACCEPTED:M${_EMACS_TYPE})
+PKG_FAIL_REASON+=	"Accepted versions are: ${EMACS_VERSIONS_ACCEPTED}"
+PKG_FAIL_REASON+=	"No valid Emacs version installed found"
+.endif
+
 #
-BUILDLINK_DEPENDS.emacs20?=	emacs>=20.7
-BUILDLINK_DEPENDS.emacs21?=	emacs>=21.2
-BUILDLINK_DEPENDS.emacs21nox?=	emacs-nox11>=21.2
-BUILDLINK_DEPENDS.xemacs214?=	xemacs>=21.4
-BUILDLINK_DEPENDS.xemacs215?=	xemacs>=21.5
-BUILDLINK_DEPENDS.leim20?=	leim>=20.7
-BUILDLINK_DEPENDS.leim21?=	leim>=21.2
-
-.for v in ${EMACS_VERSIONS_ACCEPTED}
-_EMACS_VERSION_${v}_OK=	yes
-.endfor
-
-# Look for Emacs 21/Emacs 20
+# Dependencies and conflicts
 #
-_TMP!=	${PKG_INFO} -e emacs || ${ECHO}
-.if ${_TMP} != ""
-_EMACS_VERSION_EMACS_FULL:=	${_TMP}
-_EMACS_VERSION_EMACS=	${_EMACS_VERSION_EMACS_FULL:C/^.*-//}
-_EMACS_VERSION_EMACS_MAJOR=	${_EMACS_VERSION_EMACS:C/\..*//}
-.if ${_EMACS_VERSION_EMACS_MAJOR} == "21"
-_EMACS_VERSION_emacs21_INSTALLED=	yes
-.elif ${_EMACS_VERSION_EMACS_MAJOR} == "20"
-_EMACS_VERSION_emacs20_INSTALLED=	yes
-.endif
-.endif
 
-# Look for Emacs21 without X11
-#
-_TMP!= ${PKG_INFO} -e emacs-nox11 || ${ECHO}
-.if ${_TMP} != ""
-_EMACS_VERSION_EMACS_FULL:=	${_TMP}
-_EMACS_VERSION_EMACS=	${_EMACS_VERSION_EMACS_FULL:C/^.*-//}
-_EMACS_VERSION_EMACS_MAJOR=	${_EMACS_VERSION_EMACS:C/\..*//}
-_EMACS_VERSION_emacs21nox_INSTALLED=	yes
-.endif
-
-# Look for XEmacs 21.5/XEmacs 21.1
-#
-_TMP!=	${PKG_INFO} -e xemacs || ${ECHO}
-.if ${_TMP} != ""
-_EMACS_VERSION_XEMACS_FULL:=	${_TMP:C/^.*-//}
-_EMACS_VERSION_XEMACS=	${_EMACS_VERSION_XEMACS_FULL:C/^.*-//}
-_EMACS_VERSION_XEMACS_MAJOR=	${_EMACS_VERSION_XEMACS:C/\..*//}
-_EMACS_VERSION_XEMACS_MINOR=	${_EMACS_VERSION_XEMACS:C/^[0-9]*\.//:C/[^0-9].*//}
-.if ${_EMACS_VERSION_XEMACS_MAJOR} == "21" && \
-	${_EMACS_VERSION_XEMACS_MINOR} == "5"
-_EMACS_VERSION_xemacs215_INSTALLED=	yes
-.elif ${_EMACS_VERSION_XEMACS_MAJOR} == "21" && \
-	${_EMACS_VERSION_XEMACS_MINOR} == "4"
-_EMACS_VERSION_xemacs214_INSTALLED=	yes
-.endif
-.endif
-
-# Determine the Emacs version to be used.
-#
-.if defined(EMACS_VERSION_REQD)
-_EMACS_VERSION=	${EMACS_VERSION_REQD}
-.endif
-.if !defined(_EMACS_VERSION)
-.if defined(_EMACS_VERSION_${EMACS_VERSION_DEFAULT}_OK)
-.if defined(_EMACS_VERSION_${EMACS_VERSION_DEFAULT}_INSTALLED)
-_EMACS_VERSION=	${EMACS_VERSION_DEFAULT}
-.endif
-.endif
-.endif
-.if !defined(_EMACS_VERSION)
-.for v in ${EMACS_VERSIONS_ACCEPTED}
-.if defined(_EMACS_VERSION_${v}_INSTALLED)
-_EMACS_VERSION?=	${v}
-.else
-_EMACS_VERSION_FIRSTACCEPTED?=	${v}
-.endif
-.endfor
-.endif
-.if !defined(_EMACS_VERSION)
-.if defined(_EMACS_VERSION_${EMACS_VERSION_DEFAULT}_OK)
-_EMACS_VERSION=	${EMACS_VERSION_DEFAULT}
-.endif
-.endif
-.if !defined(_EMACS_VERSION)
-_EMACS_VERSION=	${_EMACS_VERSION_FIRSTACCEPTED}
-.endif
-
-# Set version specifics.
-#
-FOR.emacs21=		"@comment "
-FOR.emacs21nox=		"@comment "
-FOR.emacs20=		"@comment "
-FOR.xemacs215=		"@comment "
-FOR.xemacs214=		"@comment "
-.if ${_EMACS_VERSION} == "emacs21"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21}:../../editors/emacs
-FOR.emacs21=		""
+DEPENDS+=	${_EMACS_REQD.${_EMACS_TYPE}}:${_EMACS_DEP.${_EMACS_TYPE}}
 .if defined(EMACS_USE_LEIM)
-DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim
+.  if !empty(_EMACS_TYPE:Nxemacs*:Nemacs20*)
+DEPENDS+=	${_EMACS_REQD.leim21}:${_EMACS_DEP.leim21}
+.  else
+DEPENDS+=	${_EMACS_REQD.leim20}:${_EMACS_DEP.leim20}
+.  endif
 .endif
-.elif ${_EMACS_VERSION} == "emacs21nox"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs21nox}:../../editors/emacs-nox11
-FOR.emacs21nox=		""
-.if defined(EMACS_USE_LEIM)
-DEPENDS+=		${BUILDLINK_DEPENDS.leim21}:../../editors/leim
-.endif
-.elif ${_EMACS_VERSION} == "emacs20"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.emacs20}:../../editors/emacs20
-FOR.emacs20=		""
-.if defined(EMACS_USE_LEIM)
-DEPENDS+=		${BUILDLINK_DEPENDS.leim20}:../../editors/leim20
-.endif
-.elif ${_EMACS_VERSION} == "xemacs215"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.xemacs215}:../../editors/xemacs-current
-FOR.xemacs215=		""
-.elif ${_EMACS_VERSION} == "xemacs214"
-EMACS_DEPENDENCY=	${BUILDLINK_DEPENDS.xemacs214}:../../editors/xemacs
-FOR.xemacs214=		""
+.if !empty(_EMACS_TYPE:Nxemacs*)
+CONFLICTS+=	xemacs-${PKGBASE}-[0-9]*
 .else
-PKG_SKIP_REASON+=	"Accepted versions are: ${EMACS_VERSIONS_ACCEPTED}"
-PKG_SKIP_REASON+=	"No valid Emacs version installed found"
-.endif
-.if defined(EMACS_FOR_BUILD_ONLY)
-BUILD_DEPENDS+=	${EMACS_DEPENDENCY}
-.else
-DEPENDS+=	${EMACS_DEPENDENCY}
+CONFLICTS+=	${PKGBASE:C|^xemacs-||}-[0-9]*
 .endif
 
-# Provide some macro definitions.
 #
-.if ${_EMACS_VERSION:Memacs*}
-EMACS_FLAVOR=	emacs
-EMACS_BIN=	${PREFIX}/bin/emacs
-EMACS_PKG_VERSION=	${_EMACS_VERSION_EMACS_FULL:C|^.*-||}
+# Macros for packages
+#
+
+EMACS_FLAVOR=		${_EMACS_TYPE:C|nox||:C|[0-9].*||}
+EMACS_BIN=		${PREFIX}/bin/${EMACS_FLAVOR}
+.if ${EMACS_FLAVOR} == "emacs"
+EMACS_ETCPREFIX=	${PREFIX}/share
+EMACS_INFOPREFIX=	${PREFIX}/info
 EMACS_LISPPREFIX=	${PREFIX}/share/emacs/site-lisp
-PKGNAME_PREFIX=
-CONFLICTS+=		xemacs-${PKGBASE}-[0-9]*
+EMACS_PKGNAME_PREFIX=
 .else
-EMACS_FLAVOR=	xemacs
-EMACS_BIN=	${PREFIX}/bin/xemacs
-EMACS_PKG_VERSION=	${_EMACS_VERSION_XEMACS_FULL:C|^.*-||}
+EMACS_ETCPREFIX=	${PREFIX}/lib/xemacs/site-packages/etc
+EMACS_INFOPREFIX=	${PREFIX}/lib/xemacs/site-packages/info
 EMACS_LISPPREFIX=	${PREFIX}/lib/xemacs/site-packages/lisp
-PKGNAME_PREFIX=		xemacs-
-.if defined(PKGNAME)
-PKGNAME:=		${PKGNAME_PREFIX}${PKGNAME}
-.else
-PKGNAME:=		${PKGNAME_PREFIX}${DISTNAME}${PKGREVISION}
-CONFLICTS+=		${PKGBASE:C|^xemacs-||}-[0-9]*
+EMACS_PKGNAME_PREFIX=	xemacs-
 .endif
-.endif
-# strip out nb?
-EMACS_VERSION=${EMACS_PKG_VERSION:C|nb[0-9]*$||}
-PLIST_SUBST+=	EMACS_VERSION=${EMACS_VERSION}
+
+_EMACS_FOR.emacs=		"@comment "
+_EMACS_FOR.emacs21=		"@comment "
+_EMACS_FOR.emacs21nox=		"@comment "
+_EMACS_FOR.emacs20=		"@comment "
+_EMACS_FOR.xemacs=		"@comment "
+_EMACS_FOR.xemacs215=		"@comment "
+_EMACS_FOR.xemacs214=		"@comment "
+_EMACS_NOTFOR.emacs=		""
+_EMACS_NOTFOR.emacs21=		""
+_EMACS_NOTFOR.emacs21nox=	""
+_EMACS_NOTFOR.emacs20=		""
+_EMACS_NOTFOR.xemacs=		""
+_EMACS_NOTFOR.xemacs215=	""
+_EMACS_NOTFOR.xemacs214=	""
+_EMACS_FOR.${EMACS_FLAVOR}=	""
+_EMACS_FOR.${_EMACS_TYPE}=	""
+_EMACS_NOTFOR.${EMACS_FLAVOR}=	"@comment "
+_EMACS_NOTFOR.${_EMACS_TYPE}=	"@comment "
+
+PLIST_SUBST+=	EMACS_VERSION=${_EMACS_VERSION_NOREV}
 PLIST_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
-PLIST_SUBST+=	FOR_emacs21=${FOR.emacs21}
-PLIST_SUBST+=	FOR_emacs21nox=${FOR.emacs21nox}
-PLIST_SUBST+=	FOR_emacs20=${FOR.emacs20}
-PLIST_SUBST+=	FOR_xemacs215=${FOR.xemacs215}
-PLIST_SUBST+=	FOR_xemacs214=${FOR.xemacs214}
-
-_REPLACE_EMACS_SED=	-e "1s;^\#!.*emacs;\#!${EMACS_BIN};"
-
-.if defined(REPLACE_EMACS)
-emacs-patch-scripts:
-.for s in ${REPLACE_EMACS}
-	${CP} ${WRKSRC}/${s} ${WRKSRC}/${s}.tmp
-	${CHMOD} +w ${WRKSRC}/${s}
-	${SED} ${_REPLACE_EMACS_SED} <${WRKSRC}/${s}.tmp >${WRKSRC}/${s}
-.endfor
-
-post-patch: emacs-patch-scripts
-.endif
+PLIST_SUBST+=	FOR_emacs=${_EMACS_FOR.emacs}
+PLIST_SUBST+=	FOR_emacs21=${_EMACS_FOR.emacs21}
+PLIST_SUBST+=	FOR_emacs21nox=${_EMACS_FOR.emacs21nox}
+PLIST_SUBST+=	FOR_emacs20=${_EMACS_FOR.emacs20}
+PLIST_SUBST+=	FOR_xemacs=${_EMACS_FOR.xemacs}
+PLIST_SUBST+=	FOR_xemacs215=${_EMACS_FOR.xemacs215}
+PLIST_SUBST+=	FOR_xemacs214=${_EMACS_FOR.xemacs214}
+PLIST_SUBST+=	NOTFOR_emacs=${_EMACS_NOTFOR.emacs}
+PLIST_SUBST+=	NOTFOR_emacs21=${_EMACS_NOTFOR.emacs21}
+PLIST_SUBST+=	NOTFOR_emacs21nox=${_EMACS_NOTFOR.emacs21nox}
+PLIST_SUBST+=	NOTFOR_emacs20=${_EMACS_NOTFOR.emacs20}
+PLIST_SUBST+=	NOTFOR_xemacs=${_EMACS_NOTFOR.xemacs}
+PLIST_SUBST+=	NOTFOR_xemacs215=${_EMACS_NOTFOR.xemacs215}
+PLIST_SUBST+=	NOTFOR_xemacs214=${_EMACS_NOTFOR.xemacs214}
 
 .endif	# EMACS_MK

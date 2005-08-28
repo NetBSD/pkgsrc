@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/01/19 14:53:44 adam Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/28 04:25:29 uebayasi Exp $
 
 DISTNAME=	artist-1.2.6
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.lysator.liu.se/~tab/artist/
 

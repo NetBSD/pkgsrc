@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/28 05:38:47 taya Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/28 04:25:29 uebayasi Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
-PKGNAME=	anthy-elisp-${ANTHY_VERSION}
+PKGNAME=	${EMACS_PKGNAME_PREFIX}anthy-elisp-${ANTHY_VERSION}
 CATEGORIES=	inputmethod editor
 
 MAINTAINER=	taya@NetBSD.org
@@ -15,8 +15,7 @@ EMACS_USE_LEIM=	# defined (for emacs21/emacs20)
 
 .include "../../mk/emacs.mk"
 .if ${EMACS_FLAVOR} == "xemacs"
-PKGNAME=	${PKGNAME_PREFIX}anthy-elisp-${ANTHY_VERSION}
-DEPENDS+=	xemacs-packages:../../editors/xemacs-packages
+DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 .endif
 
 do-build:

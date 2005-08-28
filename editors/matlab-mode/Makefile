@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2005/03/14 22:03:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/28 04:25:29 uebayasi Exp $
 #
 
 DISTNAME=		matlab.el
 # we do this because we want DIST_SUBDIR to not change based on
 # emacs vs xemacs
 BASEPKGNAME=		matlab-mode-2.3.1
-PKGNAME=		${BASEPKGNAME}
+PKGNAME=		${EMACS_PKGNAME_PREFIX}${BASEPKGNAME}
 CATEGORIES=		editors math
 MASTER_SITES=		http://www.mathworks.com/matlabcentral/files/104/
 EXTRACT_SUFX=
@@ -35,7 +35,7 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/${PKGBASE}
+	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/${PKGBASE:C|^xemacs-||}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${EMACS_LISPPREFIX}/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"

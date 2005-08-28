@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/03/05 11:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/08/28 04:25:30 uebayasi Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
-PKGNAME=	skk-12.2.0
+PKGNAME=	${EMACS_PKGNAME_PREFIX}skk-12.2.0
 PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/
@@ -19,12 +19,12 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
 .include "../../mk/emacs.mk"
 .include "options.mk"
 
-DEPENDS=	${PKGNAME_PREFIX}apel>=10.6:../../devel/apel
+DEPENDS=	${EMACS_PKGNAME_PREFIX}apel>=10.6:../../devel/apel
 .if ${EMACS_FLAVOR} == "emacs"
 EMACS_USE_LEIM=	# defined
-BUILD_DEPENDS+=	${PKGNAME_PREFIX}Mule-UCS-[0-9]*:../../editors/mule-ucs
+BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS-[0-9]*:../../editors/mule-ucs
 .else
-BUILD_DEPENDS+= ${PKGNAME_PREFIX}xemacs-packages>=1.10:../../editors/xemacs-packages
+BUILD_DEPENDS+= xemacs-packages>=1.10:../../editors/xemacs-packages
 .endif
 
 MAKEFLAGS=	EMACS=${EMACS_BIN}

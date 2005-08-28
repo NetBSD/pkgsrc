@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/08/18 13:23:13 minoura Exp $
+# $NetBSD: Makefile,v 1.17 2005/08/28 04:25:31 uebayasi Exp $
 
 DISTNAME=	w3-4.0pre.47
-PKGNAME=	w3-4.0b47
+PKGNAME=	${EMACS_PKGNAME_PREFIX}w3-4.0b47
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/emacs-w3/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/emacs-w3/ \
