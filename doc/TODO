@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3828 2005/08/27 22:25:51 recht Exp $
+$NetBSD: TODO,v 1.3829 2005/08/28 17:59:24 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1125,7 +1125,6 @@ Suggested package updates
 	o xrn-9.02
 	o xsane-0.97
 	o xskat-4.0
-	o xterm-203
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
