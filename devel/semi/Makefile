@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/08/11 14:00:38 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2005/08/28 04:28:54 uebayasi Exp $
 
 DISTNAME=	semi-1.14.6
-PKGREVISION=	3
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/
 
@@ -10,25 +11,23 @@ PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		semi-1.14.6-pgg-gpg.patch
 PATCH_DIST_STRIP=	-p0
 
-MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/SEMI/
 COMMENT=	Emacs lisp library to provide MIME feature
 
-DEPENDS+=	${PKGNAME_PREFIX}flim>=1.14.2:../../devel/flim # See ${WRKSRC}/README.en
-BUILD_DEPENDS+=	qkc-*:../../converters/qkc
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}flim>=1.14.2:../../devel/flim
+BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
 .include "../../mk/emacs.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
-DEPENDS+=	${PKGNAME_PREFIX}apel>=9.22:../../devel/apel # See ${WRKSRC}/README.en
-BUILD_DEPENDS+=	${PKGNAME_PREFIX}w3-*:../../www/w3
-BUILD_DEPENDS+=	${PKGNAME_PREFIX}bbdb-*:../../misc/bbdb
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=9.22:../../devel/apel
 BUILD_TARGET=	elc
-INSTALL_TARGET= install
+INSTALL_TARGET=	install
 .else	# ${EMACS_FLAVOR} == "xemacs"
 DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
 BUILD_TARGET=	package
-INSTALL_TARGET= install-package
+INSTALL_TARGET=	install-package
 MAKEFLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .endif
 
@@ -48,4 +47,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/mime-ui-en.info ${PREFIX}/info
 	${INSTALL_DATA} ${WRKSRC}/mime-ui-ja.info ${PREFIX}/info
 
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
