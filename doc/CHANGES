@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10975 2005/08/28 08:39:35 tron Exp $
+$NetBSD: CHANGES,v 1.10976 2005/08/28 17:59:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3835,3 +3835,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/semi to 1.14.6nb4 [uebayasi 2005-08-28]
 	Updated mail/vm to 7.19 [uebayasi 2005-08-28]
 	Updated www/apache2 to 2.0.54nb4 [tron 2005-08-28]
+	Updated x11/xterm to 203 [minskim 2005-08-28]
