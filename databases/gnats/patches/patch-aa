@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2005/08/27 22:24:02 recht Exp $
+$NetBSD: patch-aa,v 1.4 2005/08/28 12:36:42 recht Exp $
 
 --- gnats/Makefile.in.orig	2005-02-24 21:35:55.000000000 +0100
-+++ gnats/Makefile.in
-@@ -93,7 +93,7 @@ M4 = @M4@
++++ gnats/Makefile.in	2005-08-28 14:24:22.000000000 +0200
+@@ -93,7 +93,7 @@
  
  INSTALL = $(srcdir)/../install-sh -c
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2005/08/27 22:24:02 recht Exp $
  INSTALL_DATA = @INSTALL_DATA@
  
  SUB_INSTALL = `echo $(INSTALL) | sed 's,^\([^/]\),../\1,'`
-@@ -250,7 +250,7 @@ diff-prs: diff-prs.sh Makefile
+@@ -250,7 +250,7 @@
  
  mkcat: mkcat.sh Makefile
  	@echo Creating mkcat...
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2005/08/27 22:24:02 recht Exp $
  	@mv $@-t $@
  	@chmod a+x $@
  
-@@ -265,7 +265,7 @@ mkdb: mkdb.sh Makefile
+@@ -265,7 +265,7 @@
  
  rmcat: rmcat.sh Makefile
  	@echo Creating rmcat...
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.3 2005/08/27 22:24:02 recht Exp $
  	@mv $@-t $@
  	@chmod a+x $@
  
-@@ -369,7 +369,7 @@ install-tools-arch-dep: install-tools-bi
+@@ -369,7 +369,7 @@
  
  install-tools-arch-indep: all-tools
  	$(SHELL) $(srcdir)/../mkinstalldirs $(DESTDIR)$(datadir)/gnats
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.3 2005/08/27 22:24:02 recht Exp $
  	@if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
  	  echo "chown $(GNATS_USER) $(DESTDIR)$(datadir)/gnats" ; \
  	  chown $(GNATS_USER) $(DESTDIR)$(datadir)/gnats ; \
-@@ -379,9 +379,9 @@ install-tools-arch-indep: all-tools
+@@ -379,9 +379,9 @@
  	$(INSTALL_DATA) $(srcdir)/gnats.el $(DESTDIR)$(lispdir)/gnats.el
  	for i in categories submitters responsible gnatsd.user_access addresses states classes dbconfig ; do \
  	    if [ -f "$$i" ] ; then \
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.3 2005/08/27 22:24:02 recht Exp $
  	    fi ; \
  	done
  
-@@ -391,7 +391,7 @@ install-tools-bin: all-tools
+@@ -391,17 +391,9 @@
  	$(INSTALL_SCRIPT) edit-pr $(DESTDIR)$(bindir)/edit-pr
  	$(INSTALL_SCRIPT) diff-prs $(DESTDIR)$(libexecdir)/gnats/diff-prs
  	$(INSTALL_SCRIPT) mail-agent $(DESTDIR)$(libexecdir)/gnats/mail-agent
@@ -58,8 +58,18 @@ $NetBSD: patch-aa,v 1.3 2005/08/27 22:24:02 recht Exp $
 +	$(INSTALL_SCRIPT) file-pr $(DESTDIR)$(libexecdir)/gnats/file-pr
  	$(INSTALL_PROGRAM) pr-age $(DESTDIR)$(libexecdir)/gnats/pr-age
  	$(INSTALL_PROGRAM) pr-edit $(DESTDIR)$(libexecdir)/gnats/pr-edit
- 	@if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
-@@ -409,29 +409,42 @@ install-gnats: install-gnats-bin install
+-	@if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
+-	  echo "chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/pr-edit" ; \
+-	  echo "chmod 4555 $(DESTDIR)$(libexecdir)/gnats/pr-edit" ; \
+-	  chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/pr-edit ; \
+-	  chmod 4555 $(DESTDIR)$(libexecdir)/gnats/pr-edit ; \
+-        else \
+-	  echo "*** Warning: Must make pr-edit suid $(DESTDIR)$(GNATS_USER)" ; \
+-	fi
+ 
+ EXTRA_INSTALL =
+ 
+@@ -409,29 +401,42 @@
  install-gnats-arch-dep: install-gnats-bin $(EXTRA_INSTALL)
  
  install-gnats-arch-indep: all-gnats install-tools-arch-indep
@@ -112,3 +122,24 @@ $NetBSD: patch-aa,v 1.3 2005/08/27 22:24:02 recht Exp $
  	  fi \
  	fi
  	@echo "*** If you're a first-time user, you'll want to create a new database";
+@@ -450,20 +455,6 @@
+ 	$(INSTALL_PROGRAM) gen-index $(DESTDIR)$(libexecdir)/gnats/gen-index
+ 	$(INSTALL_SCRIPT) mail-query $(DESTDIR)$(libexecdir)/gnats/mail-query
+ 	$(INSTALL_PROGRAM) gnats-pwconv $(DESTDIR)$(libexecdir)/gnats/gnats-pwconv
+-	@if [ `whoami` = root -o `whoami` = $(GNATS_USER) ] ; then \
+-	  echo "chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/queue-pr $(DESTDIR)$(libexecdir)/gnats/file-pr $(DESTDIR)$(libexecdir)/gnats/gen-index" ; \
+-	  echo "chmod 4555 $(DESTDIR)$(libexecdir)/gnats/queue-pr $(DESTDIR)$(libexecdir)/gnats/file-pr $(DESTDIR)$(libexecdir)/gnats/gen-index" ; \
+-	  echo "chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/gnatsd" ; \
+-	  echo "chmod 555 $(DESTDIR)$(libexecdir)/gnats/gnatsd" ; \
+-	  chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/queue-pr ; \
+-	  chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/gen-index ; \
+-	  chmod 4555 $(DESTDIR)$(libexecdir)/gnats/queue-pr ; \
+-	  chmod 4555 $(DESTDIR)$(libexecdir)/gnats/gen-index ; \
+-	  chown $(GNATS_USER) $(DESTDIR)$(libexecdir)/gnats/gnatsd ; \
+-	  chmod 555 $(DESTDIR)$(libexecdir)/gnats/gnatsd ; \
+-	else \
+-	  echo "*** Warning: must make queue-pr and gen-index suid $(GNATS_USER)." ; \
+-	fi
+ 
+ # regex.c is pretty badly broken, and I don't feel like fixing it.
+ regex.o: $(srcdir)/regex.c
