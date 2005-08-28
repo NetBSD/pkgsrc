@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/05/22 20:07:43 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/08/28 04:25:28 uebayasi Exp $
 
 DISTNAME=	navi2ch-1.7.5
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=navi2ch/}
 
