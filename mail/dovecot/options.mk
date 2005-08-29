@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2005/08/29 13:14:43 tv Exp $
+# $NetBSD: options.mk,v 1.9 2005/08/29 13:15:34 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pam pgsql sasl ssl
+PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql pam pgsql sasl ssl
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
