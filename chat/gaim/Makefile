@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2005/08/29 11:35:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.101 2005/08/29 13:31:14 xtraeme Exp $
 
 DISTNAME=	gaim-1.5.0
 PKGREVISION=	1
@@ -23,12 +23,7 @@ GNU_CONFIGURE=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 
 CONFIGURE_ARGS+=	--disable-binreloc
-CONFIGURE_ARGS+=	--disable-nas
-CONFIGURE_ARGS+=	--disable-perl
-CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--disable-gevolution
-CONFIGURE_ARGS+=	--with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc
-CONFIGURE_ARGS+=	--with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc
 CONFIGURE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 
 .include "options.mk"
@@ -39,12 +34,9 @@ CONFIGURE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 CONFIGURE_ARGS+=	--disable-screensaver
 .endif
 
-.include "../../audio/libao/buildlink3.mk"
-.include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/silc-toolkit/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
