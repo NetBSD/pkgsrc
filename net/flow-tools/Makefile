@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/08/19 18:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/08/29 13:36:37 tv Exp $
 
 DISTNAME=	flow-tools-0.68
 PKGREVISION=	1
@@ -28,9 +28,9 @@ MESSAGE_SUBST+=	EGDIR=${EGDIR}
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flow-tools
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_SUPPORTED_OPTIONS=		python
-PKG_OPTIONS_GROUP.database=	mysql postgresql
+PKG_OPTIONS_GROUP.database=	mysql pgsql
 PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_MYSQL:mysql
-PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_POSTGRESQL:postgresql
+PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_POSTGRESQL:pgsql
 
 .include "../../mk/bsd.options.mk"
 
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 .endif
 
 # PostgreSQL support.
-.if !empty(PKG_OPTIONS:Mpostgresql)
+.if !empty(PKG_OPTIONS:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
 .endif

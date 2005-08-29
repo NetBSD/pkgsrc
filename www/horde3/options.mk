@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2005/05/31 10:01:40 dillo Exp $
+# $NetBSD: options.mk,v 1.4 2005/08/29 13:36:06 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.horde
-PKG_SUPPORTED_OPTIONS=	ldap postgresql mysql
+PKG_SUPPORTED_OPTIONS=	ldap pgsql mysql
 PKG_SUGGESTED_OPTIONS=	mysql
 
 .include "../../mk/bsd.options.mk"
@@ -17,7 +17,7 @@ DEPENDS+=	php-ldap>=4.3.3:../../databases/php-ldap
 ###
 ### Use PostgreSQL for storing user details
 ###
-.if !empty(PKG_OPTIONS:Mpostgresql)
+.if !empty(PKG_OPTIONS:Mpgsql)
 .	include "../../mk/pgsql.buildlink3.mk"
 DEPENDS+=	php-pgsql>=4.3.3:../../databases/php-pgsql
 .endif
