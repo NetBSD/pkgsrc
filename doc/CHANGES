@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10977 2005/08/29 10:15:32 drochner Exp $
+$NetBSD: CHANGES,v 1.10978 2005/08/29 15:58:59 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3850,3 +3850,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/gnome-backgrounds to 2.10.2 [drochner 2005-08-28]
 	Updated databases/gramps2 to 2.0.6 [drochner 2005-08-28]
 	Updated security/pam-ldap to 180 [drochner 2005-08-28]
+	Updated mail/sqwebmail to 5.0.4nb1 [adrianp 2005-08-28]
