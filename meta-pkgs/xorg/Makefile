@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:33 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/08/29 18:46:42 reed Exp $
 
 DISTNAME=	# empty
 PKGNAME=	xorg-${XORG_VER}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	# empty
@@ -21,7 +22,7 @@ DEPENDS+=	xorg-fontsMisc>=${XORG_VER}:../../fonts/xorg-fontsMisc
 DEPENDS+=	xorg-fontsCyrillic>=${XORG_VER}:../../fonts/xorg-fontsCyrillic
 DEPENDS+=	xorg-fontsTruetype>=${XORG_VER}:../../fonts/xorg-fontsTruetype
 DEPENDS+=	xorg-fontsType1>=${XORG_VER}:../../fonts/xorg-fontsType1
-#DEPENDS+=	xorg-docs>=${XORG_VER}:../../misc/xorg-docs
+DEPENDS+=	xorg-docs>=${XORG_VER}nb1:../../misc/xorg-docs
 
 NO_BUILD=		yes
 NO_CHECKSUM=		yes
