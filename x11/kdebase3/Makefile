@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2005/08/10 20:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.87 2005/08/29 10:36:54 jdc Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -14,6 +14,7 @@ SITES_NetBSD-flag.png=	http://www.NetBSD.org/images/
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
+UNLIMIT_RESOURCES=	datasize
 USE_TOOLS+=		pkg-config
 USE_DIRS+=		xdg-1.2
 USE_PKGINSTALL=		YES
