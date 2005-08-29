@@ -1,0 +1,53 @@
+$NetBSD: patch-al,v 1.1 2005/08/29 15:53:24 adrianp Exp $
+
+--- sqwebmail/html.c.orig	2003-10-06 01:16:13.000000000 +0100
++++ sqwebmail/html.c
+@@ -187,9 +187,16 @@ char *p;
+ 					if (tai)	++tai->tagvaluelen;
+ 				}
+ 				if (*p)	p++;
++				else
++				{
++					memset(tagbuf, ' ', strlen(tagbuf));
++				}
+ 			}
+ 			else
+ 			{
++				if (c == 0)
++					memset(tagbuf, ' ', strlen(tagbuf));
++
+ 				if (tai)
+ 				{
+ 					tai->tagvalue=p;
+@@ -222,6 +229,31 @@ static void parsetagbuf()
+ 	while ((p=strchr(tagbuf, '<')) != NULL)
+ 		*p=' ';
+ 
++	for (p=tagbuf; *p; p++)
++	{
++		char *q;
++
++		if (*p != '&')
++			continue;
++
++		q=p;
++
++		++p;
++
++		while (*p)
++		{
++			if (strchr("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", *p) == NULL)
++				break;
++			++p;
++		}
++
++		if (*p != ';')
++		{
++			*q=0;
++		}
++		--p;
++	}
++
+         tagattrlen=parseattr(0);
+         if ( tagattrlen > tagattrsize)
+         {
