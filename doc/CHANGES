@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10976 2005/08/28 17:59:24 minskim Exp $
+$NetBSD: CHANGES,v 1.10977 2005/08/29 10:15:32 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3836,3 +3836,17 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/vm to 7.19 [uebayasi 2005-08-28]
 	Updated www/apache2 to 2.0.54nb4 [tron 2005-08-28]
 	Updated x11/xterm to 203 [minskim 2005-08-28]
+	Updated devel/libgsf to 1.12.2 [drochner 2005-08-28]
+	Updated devel/libwnck to 2.10.3 [drochner 2005-08-28]
+	Updated net/libsoup-devel to 2.2.6.1 [drochner 2005-08-28]
+	Updated textproc/gnome-doc-utils to 0.3.2 [drochner 2005-08-28]
+	Updated x11/gtk2-engines to 2.6.5 [drochner 2005-08-28]
+	Updated x11/gtksourceview to 1.2.1 [drochner 2005-08-28]
+	Updated x11/vte to 0.11.15 [drochner 2005-08-28]
+	Updated wm/metacity to 2.10.3 [drochner 2005-08-28]
+	Updated devel/libnet to 1.0.2a [drochner 2005-08-28]
+	Updated net/nemesis to 1.4 [drochner 2005-08-28]
+	Updated editors/TeXmacs to 1.0.5.7 [drochner 2005-08-28]
+	Updated graphics/gnome-backgrounds to 2.10.2 [drochner 2005-08-28]
+	Updated databases/gramps2 to 2.0.6 [drochner 2005-08-28]
+	Updated security/pam-ldap to 180 [drochner 2005-08-28]
