@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2005/08/12 17:52:16 reed Exp $
+@comment $NetBSD: PLIST,v 1.43 2005/08/29 13:31:14 xtraeme Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim/account.h
@@ -86,7 +86,7 @@ lib/gaim/libmsn.la
 lib/gaim/libnapster.la
 lib/gaim/libnovell.la
 lib/gaim/liboscar.la
-lib/gaim/libsilcgaim.la
+${SILC}lib/gaim/libsilcgaim.la
 lib/gaim/libyahoo.la
 lib/gaim/libzephyr.la
 lib/gaim/notify.la

@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2005/08/29 11:37:08 xtraeme Exp $
+# $NetBSD: options.mk,v 1.4 2005/08/29 13:31:14 xtraeme Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gaim
-PKG_SUPPORTED_OPTIONS+=		gnutls gtkspell
-PKG_SUGGESTED_OPTIONS+=		gtkspell
+PKG_SUPPORTED_OPTIONS+=		gnutls gtkspell silc audio perl tcl nas
+PKG_SUGGESTED_OPTIONS+=		gtkspell silc audio
 
 .include "../../mk/bsd.options.mk"
 
@@ -14,10 +14,10 @@ CONFIGURE_ARGS+= --with-gnutls-libs=${BUILDLINK_PREFIX.gnutls}/lib
 .  include "../../security/gnutls/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gnutls
-CONFIGURE_ARGS+=	--with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
-CONFIGURE_ARGS+=	--with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib/nspr
-CONFIGURE_ARGS+=	--with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
-CONFIGURE_ARGS+=	--with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
+CONFIGURE_ARGS+= --with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
+CONFIGURE_ARGS+= --with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib/nspr
+CONFIGURE_ARGS+= --with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
+CONFIGURE_ARGS+= --with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
 
 .  include "../../devel/nss/buildlink3.mk"
 .endif
@@ -26,4 +26,42 @@ CONFIGURE_ARGS+=	--with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
 .  include "../../textproc/gtkspell/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtkspell
+.endif
+
+.if !empty(PKG_OPTIONS:Msilc)
+PLIST_SUBST+=		SILC=
+CONFIGURE_ARGS+= --with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc
+CONFIGURE_ARGS+= --with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc
+. include "../../devel/silc-toolkit/buildlink3.mk"
+.else
+PLIST_SUBST+=		SILC="@comment "
+CONFIGURE_ARGS+=	--disable-silc
+.endif
+
+.if !empty(PKG_OPTIONS:Maudio)
+.  include "../../audio/libao/buildlink3.mk"
+.  include "../../audio/libaudiofile/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-audio
+.endif
+
+.if !empty(PKG_OPTIONS:Mperl)
+USE_PERL5=	yes
+.  include "../../lang/perl5/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-perl
+.endif
+
+.if !empty(PKG_OPTIONS:Mtcl)
+CONFIGURE_ARGS+=	--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib
+.  include "../../lang/tcl/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-tcl
+.endif
+
+.if !empty(PKG_OPTIONS:Mnas)
+CONFIGURE_ARGS+=	--enable-nas
+.  include "../../audio/nas/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-nas
 .endif
