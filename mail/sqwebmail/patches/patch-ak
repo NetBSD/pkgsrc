@@ -1,0 +1,25 @@
+$NetBSD: patch-ak,v 1.1 2005/08/29 15:53:24 adrianp Exp $
+
+--- sqwebmail/folder.c.orig	2005-07-16 23:20:28.000000000 +0100
++++ sqwebmail/folder.c
+@@ -2238,13 +2238,19 @@ const struct unicode_info *uiptr=unicode
+ 	if (strcmp(cgi("form"), "print") == 0)
+ 	{
+ 		showattname(getarg("ATTSTUB"), dummy, content_type);
++
++		printf("&nbsp;(");
++		output_attrencoded(content_type);
++		printf(")");
+ 	}
+ 	else
+ 	{
+ 		printf("<div align=\"center\"><span class=\"message-attachment-header\">");
+ 		showattname(getarg("ATTACHMENT"), dummy, content_type);
+ 
+-		printf("&nbsp;(%s)</span></div>",
++		printf("&nbsp;(");
++		output_attrencoded(content_type);
++		printf("; %s)</span></div>",
+ 		       showsize(end_pos - start_body));
+ 		printf("<br /><div align=\"center\">");
+ 
