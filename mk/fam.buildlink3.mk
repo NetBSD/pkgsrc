@@ -1,4 +1,4 @@
-# $NetBSD: fam.buildlink3.mk,v 1.2 2005/08/12 15:33:15 jlam Exp $
+# $NetBSD: fam.buildlink3.mk,v 1.3 2005/08/29 23:16:33 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a FAM implementation.  fam.buildlink3.mk will:
@@ -26,7 +26,7 @@ FAM_ACCEPTED?=	${_FAM_PKGS}
 # This is an exhaustive list of all of the FAM implementations that may
 # be used with fam.buildlink3.mk, in order of precedence.
 #
-_FAM_PKGS?=	fam gamin
+_FAM_PKGS?=	fam # XXX gamin
 
 _FAM_DEFAULT=	${FAM_DEFAULT}
 _FAM_ACCEPTED=	${FAM_ACCEPTED}
