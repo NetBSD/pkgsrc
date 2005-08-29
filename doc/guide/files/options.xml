@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.10 2005/07/26 09:37:50 dillo Exp $ -->
+<!-- $NetBSD: options.xml,v 1.11 2005/08/29 22:43:11 cube Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.42 -->
 
@@ -38,8 +38,8 @@ main package <filename>Makefile</filename>.</para>
 <programlisting>
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
 PKG_SUPPORTED_OPTIONS=		wibble-foo ldap
-PKG_OPTIONAL_GROUPS=		database
-PKG_GROUP.database=		mysql pgsql
+PKG_OPTIONS_OPTIONAL_GROUPS=	database
+PKG_OPTIONS_GROUP.database=	mysql pgsql
 PKG_SUGGESTED_OPTIONS=		wibble-foo
 PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
 PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
