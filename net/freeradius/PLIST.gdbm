@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.gdbm,v 1.1 2005/08/29 14:28:12 tv Exp $
+lib/rlm_counter-${PKGVERSION}.so
+lib/rlm_counter.a
+lib/rlm_counter.la
+lib/rlm_counter.so
