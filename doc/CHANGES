@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10978 2005/08/29 15:58:59 adrianp Exp $
+$NetBSD: CHANGES,v 1.10979 2005/08/29 16:11:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3851,3 +3851,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/gramps2 to 2.0.6 [drochner 2005-08-28]
 	Updated security/pam-ldap to 180 [drochner 2005-08-28]
 	Updated mail/sqwebmail to 5.0.4nb1 [adrianp 2005-08-28]
+	Update misc/p5-File-MMagic to 1.25 [taca 2005-08-29]
