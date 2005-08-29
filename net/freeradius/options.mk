@@ -1,43 +1,47 @@
-# $NetBSD: options.mk,v 1.4 2005/03/02 21:44:55 adrianp Exp $
+# $NetBSD: options.mk,v 1.5 2005/08/29 14:28:12 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
-PKG_SUPPORTED_OPTIONS=	ldap postgresql73 postgresql74 mysql snmp
+PKG_SUPPORTED_OPTIONS=	bdb gdbm ldap mysql pgsql snmp
+PKG_SUGGESTED_OPTIONS=	gdbm
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### Can't support both versions of PostgreSQL
+### Use GDBM or Berkeley DB 1.x for storing user details
 ###
-.if !empty(PKG_OPTIONS:Mpostgresql73) && !empty(PKG_OPTIONS:Mpostgresql74)
-PKG_FAIL_REASON+=	"PostgreSQL 7.3 and 7.4 cannot both be compiled in." \
-			"Please change ${PKG_OPTIONS_VAR} to one or the other."
+.if !empty(PKG_OPTIONS:Mgdbm)
+.  include "../../databases/gdbm/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-rlm_dbm
+PLIST_SRC+=		${PKGDIR}/PLIST.dbm ${PKGDIR}/PLIST.gdbm
+.elif !empty(PKG_OPTIONS:Mbdb) && exists(/usr/include/ndbm.h)
+BDB_ACCEPTED=		db1
+.  include "../../mk/bdb.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-rlm_dbm
+PLIST_SRC+=		${PKGDIR}/PLIST.dbm
+.else
+CONFIGURE_ARGS+=	--without-rlm_dbm
 .endif
 
 ###
 ### Use OpenLDAP for storing user details
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.	include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-rlm_ldap
 PLIST_SRC+=		${PKGDIR}/PLIST.ldap
+.else
+CONFIGURE_ARGS+=	--without-rlm_ldap
 .endif
 
 ###
-### Use PostgreSQL v7.3 for storing user details
+### Use PostgreSQL for storing user details
 ###
-.if !empty(PKG_OPTIONS:Mpostgresql73)
-.	include "../../databases/postgresql73-lib/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mpgsql)
+.  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-rlm_sql_postgresql
 PLIST_SRC+=		${PKGDIR}/PLIST.pgsql
-.endif
-
-###
-### Use PostgreSQL v7.4 for storing user details
-###
-.if !empty(PKG_OPTIONS:Mpostgresql74)
-.	include "../../databases/postgresql74-lib/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-rlm_sql_postgresql
-PLIST_SRC+=		${PKGDIR}/PLIST.pgsql
+.else
+CONFIGURE_ARGS+=	--without-rlm_sql_postgresql
 .endif
 
 ###
@@ -47,6 +51,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST.pgsql
 .	include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-rlm_sql_mysql
 PLIST_SRC+=		${PKGDIR}/PLIST.mysql
+.else
+CONFIGURE_ARGS+=	--without-rlm_sql_mysql
 .endif
 
 ###
@@ -60,6 +66,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST.mysql
 ###
 ###
 .if !empty(PKG_OPTIONS:Msnmp)
-.	include "../../net/net-snmp/buildlink3.mk"
+.  include "../../net/net-snmp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-snmp
+.else
+CONFIGURE_ARGS+=	--without-snmp
 .endif
