@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/16 15:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/08/29 17:53:49 adrianp Exp $
 #
 
 DISTNAME=		elmo-1.3.2
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 REPLACE_PERL=		elmoconf.pl
 
 CONFIGURE_ARGS+=	--with-gpgme-prefix=${BUILDLINK_PREFIX.gpgme}
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 # I get segmentation faults when not compiled with debug enabled
 CONFIGURE_ARGS+=	--enable-debug
 
