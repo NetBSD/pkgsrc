@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/19 16:00:18 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/29 09:52:45 drochner Exp $
 #
 
 DISTNAME=		evince-0.3.2
@@ -14,12 +14,20 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+USE_MSGFMT_PLURALS=	yes
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF2_SCHEMAS+=	evince-thumbnailer.schemas
 GCONF2_SCHEMAS+=	evince.schemas
+
+# XXX fake for "configure" to allow build w/o a gs installed
+# (avoid hard dependency on a specific version)
+CONFIGURE_ARGS+=	--with-gs=${LOCALBASE}/bin/gs
+pre-configure:
+	${ECHO} "echo 8.51" >${BUILDLINK_DIR}/bin/gs
+	${CHMOD} +x ${BUILDLINK_DIR}/bin/gs
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
