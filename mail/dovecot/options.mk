@@ -1,19 +1,20 @@
-# $NetBSD: options.mk,v 1.7 2005/08/19 04:57:01 grant Exp $
+# $NetBSD: options.mk,v 1.8 2005/08/29 13:14:43 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pgsql sasl pam
+PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pam pgsql sasl ssl
+PKG_SUGGESTED_OPTIONS=	ssl
+
 .include "../../mk/bsd.options.mk"
 
 ###
-### Build with GNU TLS or OpenSSL as the underlying crypto library.
+### Build with OpenSSL as the underlying crypto library.
 ###
-.if !empty(PKG_OPTIONS:Mgnutls)
-PKG_FAIL_REASON+=	"GNU TLS support is currently broken."
-CONFIGURE_ARGS+=	--enable-ssl=gnutls
-.  include "../../security/gnutls/buildlink3.mk"
-.else
+# (gnutls is broken in dovecot 0.99.x)
+.if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=        --enable-ssl=openssl
 .  include "../../security/openssl/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
 ###
