@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/01 00:25:04 agc Exp $
+# $NetBSD: Makefile,v 1.2 2005/08/29 20:39:37 reed Exp $
 
 DISTNAME=	ezxml-0.8.4
 CATEGORIES=	textproc devel
@@ -13,12 +13,11 @@ WRKSRC=		${WRKDIR}/${PKGNAME:C/-[^-]*$//}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-INSTALLATION_DIRS+=	share/doc/ezxml
+INSTALLATION_DIRS+=	lib include share/doc/ezxml
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libezxml.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/ezxml.h ${PREFIX}/include
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ezxml
 	${INSTALL_DATA} ${WRKSRC}/ezxml.txt ${PREFIX}/share/doc/ezxml
 
 .include "../../mk/bsd.pkg.mk"
