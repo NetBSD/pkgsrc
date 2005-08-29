@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.95 2005/08/29 13:42:06 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.96 2005/08/29 21:11:56 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -273,3 +273,5 @@ Pullup ticket 721 - requested by Adrian Portelli
 security fix for apache2
 Pullup ticket 720 - requested by Adrian Portelli
 update and security fix for gnats
+Pullup ticket 722 - requested by Adrian Portelli
+security update for phpmyadmin
