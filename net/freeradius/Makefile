@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/08/14 18:01:54 adrianp Exp $
+# $NetBSD: Makefile,v 1.33 2005/08/29 14:28:12 tv Exp $
 
 DISTNAME=	freeradius-1.0.4
 PKGREVISION=	1
@@ -39,14 +39,10 @@ CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include
 CONFIGURE_ARGS+=        --without-rlm_ippool
 CONFIGURE_ARGS+=        --without-rlm_smb
 CONFIGURE_ARGS+=	--without-rlm_krb5
-CONFIGURE_ARGS+=	--without-rlm_ldap
 CONFIGURE_ARGS+=	--without-rlm_pam
 CONFIGURE_ARGS+=	--without-rlm_sql_iodbc
-CONFIGURE_ARGS+=	--without-rlm_sql_mysql
-CONFIGURE_ARGS+=	--without-rlm_sql_postgresql
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
-CONFIGURE_ARGS+=	--without-snmp
 
 SUBST_CLASSES=		make
 SUBST_STAGE.make=	post-patch
@@ -88,7 +84,6 @@ CONF_FILES+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .undef f
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -117,11 +112,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}/certs
 	${INSTALL_DATA_DIR} ${EGDIR}/certs/demoCA
-
-.	for f in ${EGFILES}
-		${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
-.	endfor
-
+.for f in ${EGFILES}
+	${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
+.endfor
 	@${MKDIR} ${PKG_SYSCONFDIR}/certs
 	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
 	cd ${WRKSRC} && ${FIND} . -name .libs | ${XARGS} ${RM} -rf
