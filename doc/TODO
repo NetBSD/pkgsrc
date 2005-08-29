@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3829 2005/08/28 17:59:24 minskim Exp $
+$NetBSD: TODO,v 1.3830 2005/08/29 17:13:20 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -821,7 +821,6 @@ Suggested package updates
 	o phoon-20030120
 	o photopc-3.05
 	o php-4.4.0
-	o phpmyadmin-2.6.3
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
