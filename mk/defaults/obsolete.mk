@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.14 2005/08/01 14:56:44 wiz Exp $
+# $NetBSD: obsolete.mk,v 1.15 2005/08/29 14:28:25 tv Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -30,6 +30,10 @@ PKG_LEGACY_OPTIONS+=	socks5
 PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable SOCKS used, use PKG_DEFAULT_OPTIONS+=socks5 instead."
 .  endif
 .endif
+
+PKG_OPTIONS_LEGACY_OPTS+=	postgresql:pgsql
+PKG_OPTIONS_LEGACY_OPTS+=	postgresql73:pgsql
+PKG_OPTIONS_LEGACY_OPTS+=	postgresql74:pgsql
 
 PKG_OPTIONS_LEGACY_VARS+=	USE_CANNA:canna
 PKG_OPTIONS_LEGACY_VARS+=	USE_CUPS:cups
