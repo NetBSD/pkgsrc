@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/04/04 12:55:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/08/29 17:09:31 adrianp Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -35,6 +35,7 @@ share/phpmyadmin/db_operations.php
 share/phpmyadmin/db_printview.php
 share/phpmyadmin/db_search.php
 share/phpmyadmin/docs.css
+share/phpmyadmin/error.php
 share/phpmyadmin/export.php
 share/phpmyadmin/footer.inc.php
 share/phpmyadmin/header.inc.php
@@ -50,6 +51,9 @@ share/phpmyadmin/lang/azerbaijani-iso-8859-9.inc.php
 share/phpmyadmin/lang/azerbaijani-utf-8.inc.php
 share/phpmyadmin/lang/basque-iso-8859-1.inc.php
 share/phpmyadmin/lang/basque-utf-8.inc.php
+share/phpmyadmin/lang/belarusian_cyrillic-utf-8.inc.php
+share/phpmyadmin/lang/belarusian_cyrillic-windows-1251.inc.php
+share/phpmyadmin/lang/belarusian_latin-utf-8.inc.php
 share/phpmyadmin/lang/bosnian-utf-8.inc.php
 share/phpmyadmin/lang/bosnian-windows-1250.inc.php
 share/phpmyadmin/lang/brazilian_portuguese-iso-8859-1.inc.php
@@ -75,6 +79,7 @@ share/phpmyadmin/lang/dutch-iso-8859-1.inc.php
 share/phpmyadmin/lang/dutch-iso-8859-15.inc.php
 share/phpmyadmin/lang/dutch-utf-8.inc.php
 share/phpmyadmin/lang/english-iso-8859-1.inc.php
+share/phpmyadmin/lang/english-iso-8859-15.inc.php
 share/phpmyadmin/lang/english-utf-8.inc.php
 share/phpmyadmin/lang/estonian-iso-8859-1.inc.php
 share/phpmyadmin/lang/estonian-utf-8.inc.php
@@ -113,6 +118,7 @@ share/phpmyadmin/lang/lithuanian-utf-8.inc.php
 share/phpmyadmin/lang/lithuanian-windows-1257.inc.php
 share/phpmyadmin/lang/malay-iso-8859-1.inc.php
 share/phpmyadmin/lang/malay-utf-8.inc.php
+share/phpmyadmin/lang/mongolian-utf-8.inc.php
 share/phpmyadmin/lang/norwegian-iso-8859-1.inc.php
 share/phpmyadmin/lang/norwegian-utf-8.inc.php
 share/phpmyadmin/lang/persian-utf-8.inc.php
@@ -144,12 +150,15 @@ share/phpmyadmin/lang/spanish-iso-8859-15.inc.php
 share/phpmyadmin/lang/spanish-utf-8.inc.php
 share/phpmyadmin/lang/swedish-iso-8859-1.inc.php
 share/phpmyadmin/lang/swedish-utf-8.inc.php
+share/phpmyadmin/lang/tatarish-iso-8859-9.inc.php
+share/phpmyadmin/lang/tatarish-utf-8.inc.php
 share/phpmyadmin/lang/thai-tis-620.inc.php
 share/phpmyadmin/lang/thai-utf-8.inc.php
 share/phpmyadmin/lang/turkish-iso-8859-9.inc.php
 share/phpmyadmin/lang/turkish-utf-8.inc.php
 share/phpmyadmin/lang/ukrainian-utf-8.inc.php
 share/phpmyadmin/lang/ukrainian-windows-1251.inc.php
+share/phpmyadmin/license.php
 share/phpmyadmin/ldi_check.php
 share/phpmyadmin/ldi_table.php
 share/phpmyadmin/left.php
@@ -159,6 +168,7 @@ share/phpmyadmin/libraries/auth/http.auth.lib.php
 share/phpmyadmin/libraries/blowfish.php
 share/phpmyadmin/libraries/bookmark.lib.php
 share/phpmyadmin/libraries/charset_conversion.lib.php
+share/phpmyadmin/libraries/check_user_privileges.lib.php
 share/phpmyadmin/libraries/common.lib.php
 share/phpmyadmin/libraries/config_import.lib.php
 share/phpmyadmin/libraries/database_interface.lib.php
@@ -169,6 +179,7 @@ share/phpmyadmin/libraries/dbg/setup.php
 share/phpmyadmin/libraries/dbi/mysql.dbi.lib.php
 share/phpmyadmin/libraries/dbi/mysqli.dbi.lib.php
 share/phpmyadmin/libraries/defines.lib.php
+share/phpmyadmin/libraries/display_create_database.lib.php
 share/phpmyadmin/libraries/display_export.lib.php
 share/phpmyadmin/libraries/display_tbl.lib.php
 share/phpmyadmin/libraries/display_tbl_links.lib.php
@@ -219,6 +230,7 @@ share/phpmyadmin/libraries/ob.lib.php
 share/phpmyadmin/libraries/read_dump.lib.php
 share/phpmyadmin/libraries/relation.lib.php
 share/phpmyadmin/libraries/relation_cleanup.lib.php
+share/phpmyadmin/libraries/sanitizing.lib.php
 share/phpmyadmin/libraries/select_lang.lib.php
 share/phpmyadmin/libraries/select_server.lib.php
 share/phpmyadmin/libraries/select_theme.lib.php
@@ -238,6 +250,7 @@ share/phpmyadmin/libraries/transformations/README
 share/phpmyadmin/libraries/transformations/TEMPLATE
 share/phpmyadmin/libraries/transformations/TEMPLATE_MIMETYPE
 share/phpmyadmin/libraries/transformations/application_octetstream__download.inc.php
+share/phpmyadmin/libraries/transformations/application_octetstream__hex.inc.php
 share/phpmyadmin/libraries/transformations/global.inc.php
 share/phpmyadmin/libraries/transformations/image_jpeg__inline.inc.php
 share/phpmyadmin/libraries/transformations/image_jpeg__link.inc.php
@@ -260,6 +273,7 @@ share/phpmyadmin/phpinfo.php
 share/phpmyadmin/queryframe.php
 share/phpmyadmin/querywindow.php
 share/phpmyadmin/read_dump.php
+share/phpmyadmin/readme.php
 share/phpmyadmin/scripts/convertcfg.pl
 share/phpmyadmin/scripts/create_tables.sql
 share/phpmyadmin/scripts/create_tables_mysql_4_1_2+.sql
@@ -509,6 +523,7 @@ share/phpmyadmin/themes/original/img/dot_green.png
 share/phpmyadmin/themes/original/img/dot_red.png
 share/phpmyadmin/themes/original/img/dot_violet.png
 share/phpmyadmin/themes/original/img/dot_yellow.png
+share/phpmyadmin/themes/original/img/error.ico
 share/phpmyadmin/themes/original/img/frm_linevrlt.png
 share/phpmyadmin/themes/original/img/item.png
 share/phpmyadmin/themes/original/img/item_ltr.png
