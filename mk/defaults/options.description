@@ -193,14 +193,11 @@ perl
 perl-taint-checks	
 perl-warnings	
 pf	
-pgsql	
+pgsql			Enable PostgreSQL support.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 plplot	
 png			Enable PNG support.
 portals	
-postgresql	
-postgresql73	
-postgresql74	
 prefix-cmds	
 python	
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
