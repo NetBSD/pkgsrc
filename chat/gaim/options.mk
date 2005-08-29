@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2005/08/29 11:35:51 xtraeme Exp $
+# $NetBSD: options.mk,v 1.3 2005/08/29 11:37:08 xtraeme Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gaim
-PKG_SUPPORTED_OPTIONS+=		gnutls
-PKG_SUGGESTED_OPTIONS+=		gtk-spell
+PKG_SUPPORTED_OPTIONS+=		gnutls gtkspell
+PKG_SUGGESTED_OPTIONS+=		gtkspell
 
 .include "../../mk/bsd.options.mk"
 
