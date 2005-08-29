@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2005/05/22 20:08:30 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/08/29 09:49:07 drochner Exp $
 #
 
-DISTNAME=	pam_ldap-176
+DISTNAME=	pam_ldap-180
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.padl.com/pub/
+MASTER_SITES+=	http://www.padl.com/download/
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.padl.com/pam_ldap.html
@@ -15,8 +16,8 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ldap-lib=openldap
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap}
-CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/ldap.conf
-CONFIGURE_ARGS+=	--with-ldap-secret-file=${PKG_SYSCONFDIR}/ldap.secret
+CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/pam_ldap.conf
+CONFIGURE_ARGS+=	--with-ldap-secret-file=${PKG_SYSCONFDIR}/pam_ldap.secret
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 MAKE_ENV+=		SHLIBTOOL=$(SHLIBTOOL)
@@ -28,7 +29,7 @@ DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 USE_PKGINSTALL=	yes
-CONF_FILES=	${EGDIR}/ldap.conf ${PKG_SYSCONFDIR}/ldap.conf
+CONF_FILES=	${EGDIR}/pam_ldap.conf ${PKG_SYSCONFDIR}/pam_ldap.conf
 
 .include "../../databases/openldap/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
