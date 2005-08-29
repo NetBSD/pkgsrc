@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/08/14 18:01:54 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/08/29 14:28:12 tv Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -6,8 +6,6 @@ bin/radrelay
 bin/radtest
 bin/radwho
 bin/radzap
-bin/rlm_dbm_cat
-bin/rlm_dbm_parser
 bin/smbencrypt
 lib/libeap-${PKGVERSION}.la
 lib/libeap-${PKGVERSION}.so
@@ -49,16 +47,6 @@ lib/rlm_checkval-${PKGVERSION}.so
 lib/rlm_checkval.a
 lib/rlm_checkval.la
 lib/rlm_checkval.so
-lib/rlm_counter-${PKGVERSION}.la
-lib/rlm_counter-${PKGVERSION}.so
-lib/rlm_counter.a
-lib/rlm_counter.la
-lib/rlm_counter.so
-lib/rlm_dbm-${PKGVERSION}.la
-lib/rlm_dbm-${PKGVERSION}.so
-lib/rlm_dbm.a
-lib/rlm_dbm.la
-lib/rlm_dbm.so
 lib/rlm_detail-${PKGVERSION}.la
 lib/rlm_detail-${PKGVERSION}.so
 lib/rlm_detail.a
