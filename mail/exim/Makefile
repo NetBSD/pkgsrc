@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2005/08/23 11:48:48 rillig Exp $
+# $NetBSD: Makefile,v 1.63 2005/08/29 18:29:05 reed Exp $
 
 DISTNAME=	exim-4.52
+PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -17,6 +18,7 @@ USE_TOOLS+=	perl:run
 USE_PKGINSTALL=	yes
 
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
+MAKE_ENV+=	INST_CHOWN=${CHOWN}
 MAKE_FLAGS+=	FULLECHO=''
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,7 +26,7 @@ MAKE_FLAGS+=	FULLECHO=''
 BUILD_DEFS=	EXIM_USER EXIM_GROUP EXIM_DB EXIM_USE_LOOKUP_WHOSON
 
 PKG_GROUPS=	${EXIM_GROUP}
-PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}::Exim\ mail\ server\ user:/var/mail:${NOLOGIN}
+PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}::Exim\ mail\ server\ user:${VARBASE}/mail:${NOLOGIN}
 
 PKG_SYSCONFSUBDIR?=	exim
 EXAMPLESDIR=		${PREFIX}/share/examples/exim
@@ -35,8 +37,8 @@ PLIST_SUBST+=		DISTNAME="${DISTNAME}"
 
 RCD_SCRIPTS=		exim
 
-OWN_DIRS_PERMS=		/var/log/exim ${EXIM_USER} ${EXIM_GROUP} 0750
-OWN_DIRS_PERMS+=	/var/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
+OWN_DIRS_PERMS=		${VARBASE}/log/exim ${EXIM_USER} ${EXIM_GROUP} 0750
+OWN_DIRS_PERMS+=	${VARBASE}/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
 
 # XXX: The following will be handled by buildlink3 at some point.
 CFLAGS+=		${_STRIPFLAG_CC}
@@ -88,6 +90,7 @@ pre-configure:
 		-e 's:@MV@:${MV}:' \
 		-e 's:@RM@:${RM}:' \
 		-e 's:@PERL5@:${PERL5}:' \
+		-e 's:@VARBASE@:${VARBASE}:' \
 	    < ${WRKSRC}/Local/Makefile.pkgsrc \
 	    > ${WRKSRC}/Local/Makefile
 	@${ECHO} WITH_CONTENT_SCAN=yes >> ${WRKSRC}/Local/Makefile
