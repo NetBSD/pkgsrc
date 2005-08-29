@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.93 2005/08/28 01:17:12 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.94 2005/08/29 09:26:35 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -269,3 +269,5 @@ Pullup ticket 717 - reqested by Adrian Portelli
 security fix for evolution
 Pullup ticket 718 - requested by Tom Spindler
 security fix for mplayer
+Pullup ticket 721 - requested by Adrian Portelli
+security fix for apache2
