@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/08/10 22:57:24 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/30 23:24:33 jlam Exp $
 
 DISTNAME=	gamin-0.1.5
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.gnome.org/~veillard/gamin/sources/
 
@@ -13,6 +14,7 @@ HOMEPAGE=	http://www.gnome.org/~veillard/gamin/
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-debug
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--without-threads
 CONFIGURE_ARGS+=	--with-html-dir=${DOCDIR}

@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/08/10 21:01:52 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2005/08/30 23:24:33 jlam Exp $
 
---- server/gam_kqueue.c.orig	2005-08-04 08:17:37.000000000 +0000
+--- server/gam_kqueue.c.orig	2005-08-04 04:17:37.000000000 -0400
 +++ server/gam_kqueue.c
 @@ -52,6 +52,7 @@
  #include <string.h>
@@ -10,9 +10,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/08/10 21:01:52 jlam Exp $
  #include <sys/types.h>
  #include <sys/sysctl.h>
  #include <sys/stat.h>
-@@ -327,7 +328,7 @@ gam_kqueue_get_uint_sysctl (const char *
+@@ -325,9 +326,9 @@ gam_kqueue_isdir (const char *pathname, 
+ static gboolean
+ gam_kqueue_get_uint_sysctl (const char *name, unsigned int *value)
  {
-   unsigned int value_len = sizeof(*value);
+-  unsigned int value_len = sizeof(*value);
++  size_t value_len = sizeof(*value);
  
 -  if (sysctlbyname(name, value, &value_len, NULL, 0) < 0)
 +  if (sysctlbyname(name, value, &value_len, (void *)NULL, 0) < 0)
@@ -28,3 +31,28 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/08/10 21:01:52 jlam Exp $
    
    return TRUE;			/* keep source */
  }
+@@ -1134,8 +1135,10 @@ gam_kqueue_init (void)
+ 
+   if (! gam_kqueue_get_uint_sysctl("kern.maxfiles", &maxfiles))
+     return FALSE;
++#if defined(KERN_MAXFILESPERPROC)
+   if (! gam_kqueue_get_uint_sysctl("kern.maxfilesperproc", &maxfilesperproc))
+     return FALSE;
++#endif
+ 
+   /*
+    * We make sure to:
+@@ -1144,9 +1147,13 @@ gam_kqueue_init (void)
+    */
+ 
+   maxfiles *= CFG_GLOBAL_FILE_RESERVE_RATIO;
++#if defined(KERN_MAXFILESPERPROC)
+   maxfilesperproc = maxfilesperproc > CFG_SELF_FILE_RESERVE
+     ? maxfilesperproc - CFG_SELF_FILE_RESERVE
+     : 0;
++#else
++  maxfilesperproc = maxfiles;
++#endif
+ 
+   max_open_files = MIN(maxfiles, maxfilesperproc);
+ 
