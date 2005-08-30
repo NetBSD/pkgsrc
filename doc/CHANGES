@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10987 2005/08/30 14:31:12 adam Exp $
+$NetBSD: CHANGES,v 1.10988 2005/08/30 16:18:43 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/libtasn1 to 0.2.15 [adam 2005-08-30]
 	Updated security/opencdk to 0.5.7 [adam 2005-08-30]
 	Updated security/gnutls to 1.2.6 [adam 2005-08-30]
+	Updated databases/lbdb to 0.30 [tonio 2005-08-30]
