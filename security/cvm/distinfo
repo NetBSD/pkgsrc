@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/08/24 04:49:31 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2005/08/30 03:57:11 schmonz Exp $
 
-SHA1 (cvm-0.75.tar.gz) = c43465b2981b5e7cf51b3902893cf15bbe491f84
-RMD160 (cvm-0.75.tar.gz) = 8c6011234f0b348daab4801a08fea5256b87b697
-Size (cvm-0.75.tar.gz) = 91270 bytes
+SHA1 (cvm-0.76.tar.gz) = 652aec4ff9f7e7a66c50c6ea71494d5c1c43ca3f
+RMD160 (cvm-0.76.tar.gz) = d25f579ecbbb378099ca0375a50c176273c26a80
+Size (cvm-0.76.tar.gz) = 91957 bytes
