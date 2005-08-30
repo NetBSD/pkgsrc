@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3831 2005/08/30 11:12:11 xtraeme Exp $
+$NetBSD: TODO,v 1.3832 2005/08/30 11:13:17 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -692,7 +692,6 @@ Suggested package updates
 	o openssl-0.9.8
 	o openttd-0.4.0 [pkg/30238]
 	o openvpn-2.0 [pkg/30239]
-	o opera-8.02
 	o oregano-0.40.5
 	o oroborus-2.0.13.1
 	o osh-050219
