@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2005/08/01 00:25:41 agc Exp $
+# $NetBSD: Makefile,v 1.293 2005/08/30 08:32:18 simonb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -236,6 +236,7 @@ SUBDIR+=	py-textile
 SUBDIR+=	py-xml
 SUBDIR+=	py-xmltools
 SUBDIR+=	pyDict
+SUBDIR+=	qprint
 SUBDIR+=	qsubst
 SUBDIR+=	raptor
 SUBDIR+=	regexx
