@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2005/06/24 21:53:48 kristerw Exp $
+# $NetBSD: Makefile,v 1.23 2005/08/30 20:46:23 tron Exp $
 
 .include	"../nessus/Makefile.common"
 
 DISTNAME=	nessus-plugins-GPL-${VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	nessus-plugins-${VERS}
 
 COMMENT=	Plugins for the Nessus Network Security Scanner
@@ -12,10 +12,10 @@ DEPENDS+=	nmap>=2.0:../../net/nmap
 
 WRKSRC=		${WRKDIR}/nessus-plugins
 GNU_CONFIGURE=		yes
-USE_TOOLS+=	cat
+USE_TOOLS+=	cat gzip
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ENV+=		CAT="${TOOLS_CAT}"
+CONFIGURE_ENV+=		CAT="${TOOLS_CAT}" GZIP=${TOOLS_GZIP_CMD:Q}
 
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 
