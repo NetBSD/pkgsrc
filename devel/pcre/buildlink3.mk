@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:13:32 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/08/30 12:34:07 salo Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PCRE_BUILDLINK3_MK:=	${PCRE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	pcre
 
 .if !empty(PCRE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pcre+=	pcre>=3.4nb1
-BUILDLINK_RECOMMENDED.pcre+=	pcre>=5.0nb1
+BUILDLINK_RECOMMENDED.pcre+=	pcre>=6.2
 BUILDLINK_PKGSRCDIR.pcre?=	../../devel/pcre
 .endif	# PCRE_BUILDLINK3_MK
 
