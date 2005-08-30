@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.20 2005/08/28 04:25:30 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.21 2005/08/30 05:55:05 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -240,7 +240,7 @@ _EMACS_PKGBASE=	xemacs-nox11
 .endif
 
 _EMACS_VERSION_CMD!=	${PKG_INFO} -e "${_EMACS_PKGBASE}" || ${ECHO}
-.if "${_EMACS_VERSION_CMD}" != ""
+.if ${_EMACS_VERSION_CMD} != ""
 _EMACS_VERSION_FULL=	${_EMACS_VERSION_CMD}
 _EMACS_VERSION=		${_EMACS_VERSION_FULL:C/^${_EMACS_PKGBASE}-//}
 _EMACS_VERSION_MAJOR=	${_EMACS_VERSION:C/\..*//}
