@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/05/23 22:01:42 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2005/08/30 14:26:32 adrianp Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
