@@ -2,6 +2,7 @@
 a52	
 aac	
 aalib			Enable aalib support.
+abook			Enable abook support
 ac3_passthrough	
 ads	
 alsa	
@@ -185,6 +186,7 @@ openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
 openssl	
 oss			Enable support for the Open Sound System audio library.
+osx-addressbook		Enable support for MacOSX Address Book
 pam			Enable PAM support.
 patchviewer	
 pcre	
