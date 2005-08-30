@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2005/08/30 14:26:32 adrianp Exp $
+
+--- login.php.orig	2005-04-15 14:16:59.000000000 +0100
++++ login.php
+@@ -30,7 +30,9 @@ $ldapserver = new LDAPServer($server_id)
+ $dn = isset( $_POST['login_dn'] ) ? $_POST['login_dn'] : null;
+ $uid = isset( $_POST['uid'] ) ? $_POST['uid'] : null;
+ $pass = isset( $_POST['login_pass'] ) ? $_POST['login_pass'] : null;
+-$anon_bind = isset( $_POST['anonymous_bind'] ) && $_POST['anonymous_bind'] == 'on' ? true : false;
++$anon_bind = isset( $_POST['anonymous_bind'] ) && 
++                    $_POST['anonymous_bind'] == 'on' && 
++                    $ldapserver->isAnonBindAllowed() ? true : false;
+ 
+ if( ! $anon_bind )
+ 	strlen($pass) or pla_error( $lang['password_blank'] );
