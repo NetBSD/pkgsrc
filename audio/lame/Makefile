@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2005/05/31 16:04:28 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2005/08/30 16:12:49 xtraeme Exp $
 #
 
 DISTNAME=	lame-${VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/} \
 		http://hive.me.gu.edu.au/not_lame/
@@ -38,6 +38,11 @@ LDFLAGS.SunOS+=		-lm
 CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-mfp-regs -fschedule-insns -fschedule-insns2 		  \
 		-finline-functions -DFLOAT=double -DFLOAT_MAX=DBL_MAX
+.endif
+
+.if ${MACHINE_ARCH} == "i386"
+BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+CONFIGURE_ARGS+=	--enable-nasm
 .endif
 
 .include "../../mk/curses.buildlink3.mk"
