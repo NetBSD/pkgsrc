@@ -1,15 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/05/27 21:52:46 reed Exp $
-
-So it doesn't install time.info.orig too.
-
---- Makefile.in.orig	Thu Jul 11 14:07:03 1996
-+++ Makefile.in
-@@ -67,7 +67,7 @@ time_LDADD = $(LDADD)
+--- Makefile.in.orig	1996-07-11 14:07:03.000000000 -0700
++++ Makefile.in	2005-08-30 13:14:23.000000000 -0700
+@@ -178,9 +178,7 @@
+ install-info: $(INFO_DEPS)
+ 	$(mkinstalldirs) $(infodir)
+ 	for file in $(INFO_DEPS); do		\
+-	  for ifile in `cd $(srcdir) && echo $$file*`; do \
+-	    $(INSTALL_DATA) $(srcdir)/$$ifile $(infodir)/$$ifile; \
+-	  done;					\
++	    $(INSTALL_DATA) $(srcdir)/$$file $(infodir)/$$file; \
+ 	done
  
- MAKEINFO = makeinfo
- TEXI2DVI = texi2dvi
--INFOS = time.info*
-+INFOS = time.info
- INFO_DEPS = time.info
- DVIS = time.dvi
- TEXINFOS = time.texi
+ uninstall-info:
