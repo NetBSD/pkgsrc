@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10981 2005/08/29 20:54:59 seb Exp $
+$NetBSD: CHANGES,v 1.10982 2005/08/30 03:57:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3854,3 +3854,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/p5-File-MMagic to 1.25 [taca 2005-08-29]
 	Updated databases/phpmyadmin to 2.6.4rc1 [adrianp 2005-08-28]
 	Updated audio/taglib to 1.4 [seb 2005-08-29]
+	Updated security/cvm to 0.76 [schmonz 2005-08-30]
