@@ -1,4 +1,4 @@
-/* $NetBSD: netbsd.c,v 1.1.1.1 2005/08/08 09:47:42 drochner Exp $ */
+/* $NetBSD: netbsd.c,v 1.2 2005/08/30 12:47:52 drochner Exp $ */
 
 #include <sys/param.h>
 #include <pwd.h>
@@ -45,6 +45,9 @@ extern NSS_STATUS _nss_ldap_getgrgid_r(gid_t, struct group *,
 				       char *, size_t, int *);
 static int netbsd_getgrgid(void *, void *, va_list);
 static int netbsd_getgrgid_r(void *, void *, va_list);
+extern NSS_STATUS _nss_ldap_initgroups(const char *, gid_t, long int *,
+	long int *, gid_t *, long int, int *);
+static int netbsd_getgroupmembership(void *, void *, va_list);
 
 static int nss2netbsderr[] = {
 	NS_SUCCESS, NS_NOTFOUND, NS_UNAVAIL, NS_TRYAGAIN, NS_RETURN
@@ -73,6 +76,7 @@ static ns_mtab methods[] = {
 	{ NSDB_GROUP, "getgrnam_r", netbsd_getgrnam_r, 0 },
 	{ NSDB_GROUP, "getgrgid", netbsd_getgrgid, 0 },
 	{ NSDB_GROUP, "getgrgid_r", netbsd_getgrgid_r, 0 },
+	{ NSDB_GROUP, "getgroupmembership", netbsd_getgroupmembership, 0 },
 };
 
 static int
@@ -436,6 +440,40 @@ netbsd_getgrgid_r(void *rv, void *cb_data, va_list ap)
 	return nss2netbsderr[s];
 }
 
+static int
+netbsd_getgroupmembership(void *rv, void *cb_data, va_list ap)
+{
+	int err;
+	NSS_STATUS s;
+	int *retval = va_arg(ap, int *);
+	const char *user = va_arg(ap, const char *);
+	gid_t group = va_arg(ap, gid_t);
+	gid_t *groups = va_arg(ap, gid_t *);
+	int limit = va_arg(ap, int);
+	int *size = va_arg(ap, int*);
+	long int lstart, lsize;
+
+	/* insert primary membership */
+	if (*size < limit) {
+		groups[0] = group;
+		(*size)++;
+	}
+	lstart = *size;
+	lsize = limit;
+	s = _nss_ldap_initgroups(user, group, &lstart, &lsize,
+		groups, limit, &err);
+	*size = lstart;
+	if (s == NSS_STATUS_TRYAGAIN) {
+		/* array too short */
+		*retval = -1;
+	} else {
+		if (s == NSS_STATUS_SUCCESS)
+			s = NSS_STATUS_NOTFOUND;
+		*retval = 0;
+	}
+
+	return nss2netbsderr[s];
+}
 
 ns_mtab *
 nss_module_register(const char *source, unsigned int *mtabsize,
