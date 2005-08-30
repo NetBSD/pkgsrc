@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2005/08/17 02:45:49 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.5 2005/08/30 01:31:21 dmcmahill Exp $
 
 --- configure.orig	2005-03-15 21:38:09.000000000 -0500
 +++ configure
@@ -59,7 +59,7 @@ $NetBSD: patch-ac,v 1.4 2005/08/17 02:45:49 dmcmahill Exp $
 +
 +echo "$as_me:$LINENO: checking if ${TR} works" >&5
 +echo $ECHO_N "checking if ${TR} works... $ECHO_C" >&6
-+TR_TEST="`echo Test | ${TR} a-z, A-Z\ `"
++TR_TEST="`echo Test | ${TR} [a-z], [A-Z]\ `"
  if test $TR_TEST != "TEST"; then
    { { echo "$as_me:$LINENO: error: tr program doesn't work" >&5
  echo "$as_me: error: tr program doesn't work" >&2;}
@@ -149,7 +149,7 @@ $NetBSD: patch-ac,v 1.4 2005/08/17 02:45:49 dmcmahill Exp $
  
  if test -n "$DEBUG_PKG"; then
 -  for pkg in `echo $DEBUG_PKG | tr 'a-z,' 'A-Z '`; do
-+  for pkg in `echo $DEBUG_PKG | ${TR} a-z, A-Z\ `; do
++  for pkg in `echo $DEBUG_PKG | ${TR} "[a-z]," "[A-Z] "`; do
      CPPFLAGS="$CPPFLAGS -DH5${pkg}_DEBUG"
    done
  fi
@@ -158,7 +158,7 @@ $NetBSD: patch-ac,v 1.4 2005/08/17 02:45:49 dmcmahill Exp $
        path="`echo $cmd | sed 's/\(.*\)\/.*$/\1/'`"
      else
 -      for path in `echo $PATH | tr : ' '`; do
-+      for path in `echo $PATH | ${TR} : \ `; do
++      for path in `echo $PATH | ${TR} ":" " "`; do
          if test -x $path/$cmd; then
            break
          fi
@@ -167,7 +167,7 @@ $NetBSD: patch-ac,v 1.4 2005/08/17 02:45:49 dmcmahill Exp $
        path="`echo $cmd | sed 's/\(.*\)\/.*$/\1/'`"
      else
 -      for path in `echo $PATH | tr : ' '`; do
-+      for path in `echo $PATH | ${TR} : \ `; do
++      for path in `echo $PATH | ${TR} ":" " "`; do
          if test -x $path/$cmd; then
            break
          fi
@@ -176,7 +176,7 @@ $NetBSD: patch-ac,v 1.4 2005/08/17 02:45:49 dmcmahill Exp $
  
  if test -n "$FILTERS"; then
 -  for filter in `echo $FILTERS | tr 'a-z,' 'A-Z '`; do
-+  for filter in `echo $FILTERS | ${TR} a-z, A-Z\ `; do
++  for filter in `echo $FILTERS | ${TR} "[a-z]," "[A-Z] "`; do
                      if test $filter = "SHUFFLE"; then
  
  cat >>confdefs.h <<\_ACEOF
