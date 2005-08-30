@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/10 21:01:51 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2005/08/30 23:24:33 jlam Exp $
 
---- libgamin/gam_data.c.orig	2005-05-18 14:45:04.000000000 +0000
+--- libgamin/gam_data.c.orig	2005-05-18 10:45:04.000000000 -0400
 +++ libgamin/gam_data.c
 @@ -471,7 +471,7 @@ gamin_data_new(void)
      }
