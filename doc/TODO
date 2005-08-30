@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3833 2005/08/30 14:31:13 adam Exp $
+$NetBSD: TODO,v 1.3834 2005/08/30 16:18:43 tonio Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,6 @@ Suggested package updates
 	o latd-1.21
 	o latex2rtf-1.9.16a
 	o lavaps-2.7
-	o lbdb-0.30 [pkg/29879]
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafpad-0.7.9
