@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/08/24 04:49:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2005/08/30 03:57:11 schmonz Exp $
 #
 
-DISTNAME=		cvm-0.75
+DISTNAME=		cvm-0.76
 CATEGORIES=		security
 MASTER_SITES=		${HOMEPAGE}
 
