@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.6 2005/08/30 06:44:37 seb Exp $
+
+--- configure.orig	2005-08-14 22:53:36.000000000 +0000
++++ configure
+@@ -33581,24 +33581,24 @@ else
+ 
+ fi;
+ 
+-echo "$as_me:$LINENO: checking for RealPlayer or HelixPlayer" >&5
+-echo $ECHO_N "checking for RealPlayer or HelixPlayer... $ECHO_C" >&6
++#echo "$as_me:$LINENO: checking for RealPlayer or HelixPlayer" >&5
++#echo $ECHO_N "checking for RealPlayer or HelixPlayer... $ECHO_C" >&6
+ 
+-HXPLAY=`type -p hxplay`
+-RPLAY=`type -p realplay`
+-if test "$RPLAY" != "" -a -x "$RPLAY"; then
+-      HELIX_LIBS=`grep 'HELIX_LIBS=/' $RPLAY|cut -d';' -f1|cut -d'=' -f2|cut -d' ' -f1`
+-      if test -e "$HELIX_LIBS/common/clntcore.so"; then
+-         echo "found RealPlayer"
+-         build_helix=yes
+-      fi
+-elif test "$HXPLAY" != "" -a -x "$HXPLAY"; then
+-      HELIX_LIBS=`grep 'HELIX_LIBS=/' $HXPLAY|cut -d';' -f1|cut -d'=' -f2|cut -d' ' -f1`
+-      if test -e "$HELIX_LIBS/common/clntcore.so"; then
+-         echo "found HelixPlayer"
+-         build_helix=yes
+-      fi
+-fi
++#HXPLAY=`type -p hxplay`
++#RPLAY=`type -p realplay`
++#if test "$RPLAY" != "" -a -x "$RPLAY"; then
++#      HELIX_LIBS=`grep 'HELIX_LIBS=/' $RPLAY|cut -d';' -f1|cut -d'=' -f2|cut -d' ' -f1`
++#      if test -e "$HELIX_LIBS/common/clntcore.so"; then
++#         echo "found RealPlayer"
++#         build_helix=yes
++#      fi
++#elif test "$HXPLAY" != "" -a -x "$HXPLAY"; then
++#      HELIX_LIBS=`grep 'HELIX_LIBS=/' $HXPLAY|cut -d';' -f1|cut -d'=' -f2|cut -d' ' -f1`
++#      if test -e "$HELIX_LIBS/common/clntcore.so"; then
++#         echo "found HelixPlayer"
++#         build_helix=yes
++#      fi
++#fi
+ 
+ 
+ if test "$build_helix" != "no"; then
