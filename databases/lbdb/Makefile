@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/08/30 16:14:53 tonio Exp $
 
 DISTNAME=		${PKGNAME:S/-/_/}
-PKGNAME=		lbdb-0.29
+PKGNAME=		lbdb-0.30
 CATEGORIES=		databases
 MASTER_SITES=		http://www.spinnaker.de/debian/
 
@@ -17,6 +17,13 @@ USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/lbdb/
 CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=  --enable-lbdb_dotlock
+CONFIGURE_ARGS+=  --without-getent
+CONFIGURE_ARGS+=  --without-evolution-addressbook-export
+CONFIGURE_ARGS+=  --without-pgp
+CONFIGURE_ARGS+=  --without-pgpk
+
+.include "options.mk"
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
