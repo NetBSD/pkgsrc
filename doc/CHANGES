@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10984 2005/08/30 08:33:32 simonb Exp $
+$NetBSD: CHANGES,v 1.10985 2005/08/30 11:08:18 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3857,3 +3857,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/cvm to 0.76 [schmonz 2005-08-30]
 	Updated audio/amarok to 1.3 [seb 2005-08-30]
 	Added textproc/qprint version 1.0 [simonb 2005-08-30]
+	Added emulators/generator-cbiere version 0.35r1 [xtraeme 20050830]
