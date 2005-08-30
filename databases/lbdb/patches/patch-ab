@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2005/08/30 16:14:53 tonio Exp $
+
+--- configure.orig	2005-04-30 20:23:23.000000000 +0100
++++ configure	2005-07-05 17:46:06.000000000 +0100
+@@ -4604,6 +4604,12 @@
+ 
+ fi
+ 
++# Check whether --with-osx-addressbook or --without-osx-addressbook was given.
++if test "${with_osx_addressbook+set}" = set; then
++  withval="$with_osx_addressbook"
++
++fi;
++    if test x$withval = xyes; then
+ # m_osx_addressbook requires xcode (10.3) or projectbuilder (<10.3)
+ # Extract the first word of "xcodebuild", so it can be a program name with args.
+ set dummy xcodebuild; ac_word=$2
+@@ -4694,6 +4700,11 @@
+ 
+ 	fi
+ fi
++else
++  PBXBUILD="no"
++  XCODEBUILD="no"
++fi
++withval=""
+ 
+ MODULES_SH=""
+ for i in $MODULES ; do
