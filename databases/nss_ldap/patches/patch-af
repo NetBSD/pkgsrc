@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/08/08 09:47:42 drochner Exp $
+$NetBSD: patch-af,v 1.2 2005/08/30 12:47:52 drochner Exp $
 
 --- Makefile.in.orig	2005-05-24 02:53:19.000000000 +0200
 +++ Makefile.in
@@ -28,3 +28,16 @@ $NetBSD: patch-af,v 1.1.1.1 2005/08/08 09:47:42 drochner Exp $
  nss_ldap_so_LDADD = $(LDADD)
  nss_ldap_so_DEPENDENCIES = 
  NSS_LDAP_OBJECTS =  ldap-nss.o ldap-grp.o ldap-pwd.o ldap-netgrp.o \
+@@ -496,10 +496,8 @@ maintainer-clean-generic clean mostlycle
+ 
+ install-data-local:
+ 	@$(NORMAL_INSTALL)
+-	@if test ! -f $(DESTDIR)$(NSS_LDAP_PATH_CONF); then \
+-		$(mkinstalldirs) $(DESTDIR)$(dir $(NSS_LDAP_PATH_CONF)); \
+-		$(INSTALL_DATA) -o $(INST_UID) -g $(INST_GID) $(srcdir)/ldap.conf $(DESTDIR)$(NSS_LDAP_PATH_CONF); \
+-	fi
++	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++	$(INSTALL_DATA) -o $(INST_UID) -g $(INST_GID) $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/nss_ldap.conf
+ 	$(INSTALL_DATA) -o $(INST_UID) -g $(INST_GID) $(srcdir)/nsswitch.ldap $(DESTDIR)$(sysconfdir)/nsswitch.ldap; 
+ 
+ uninstall-local:
