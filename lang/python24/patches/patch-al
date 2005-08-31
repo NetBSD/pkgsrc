@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.6 2005/05/09 20:37:51 recht Exp $
+$NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
 
 --- configure.orig	2005-03-29 01:23:02.000000000 +0200
 +++ configure	2005-05-09 21:14:53.000000000 +0200
@@ -78,7 +78,7 @@ $NetBSD: patch-al,v 1.6 2005/05/09 20:37:51 recht Exp $
  		fi
  		;;
 -	Linux*|GNU*) LDSHARED='$(CC) -shared';;
-+	Linux*|GNU*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
++	Linux*|GNU*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";;
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	OpenBSD*|FreeBSD*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
@@ -87,8 +87,8 @@ $NetBSD: patch-al,v 1.6 2005/05/09 20:37:51 recht Exp $
  			LDSHARED="ld -Bshareable ${LDFLAGS}"
  		fi;;
 -	NetBSD*) LDSHARED="cc -shared ${LDFLAGS}";;
-+	NetBSD*|DragonFly*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
-+	Interix*) LDSHARED='$(CC) -shared ${LDFLAGS}';; # XXX tv needs image-base hack
++	NetBSD*|DragonFly*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";;
++	Interix*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
