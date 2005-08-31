@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/04/13 20:41:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2005/08/31 09:40:15 seb Exp $
 #
 
 DISTNAME=		tcl8.3.4
 PKGNAME=		tcl-8.3.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 			ftp://gd.tuwien.ac.at/languages/tcl/scriptics/tcl8_3/ \
@@ -70,7 +70,7 @@ post-build:
 	do								\
 		${TOUCH} $${file};					\
 	done
-	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
+	${SED} 								\
 		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
 		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}/include/tcl|"	\
 		${WRKSRC}/tclConfig.sh > ${WRKSRC}/tclConfig.sh.tmp &&	\
