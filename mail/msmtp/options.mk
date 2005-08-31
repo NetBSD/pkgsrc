@@ -1,7 +1,11 @@
-# $NetBSD: options.mk,v 1.7 2005/08/29 13:09:58 tv Exp $
+# $NetBSD: options.mk,v 1.8 2005/08/31 18:37:33 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msmtp
-PKG_SUPPORTED_OPTIONS=	gnutls gsasl inet6 ssl
+
+PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
+PKG_OPTIONS_GROUP.ssl=	gnutls ssl
+
+PKG_SUPPORTED_OPTIONS=	gsasl inet6
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
