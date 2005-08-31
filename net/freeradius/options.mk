@@ -1,7 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2005/08/29 14:28:12 tv Exp $
+# $NetBSD: options.mk,v 1.6 2005/08/31 18:32:47 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
-PKG_SUPPORTED_OPTIONS=	bdb gdbm ldap mysql pgsql snmp
+
+PKG_OPTIONS_OPTIONAL_GROUPS=	dbm
+PKG_OPTIONS_GROUP.dbm=	bdb gdbm
+
+PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp
 PKG_SUGGESTED_OPTIONS=	gdbm
 
 .include "../../mk/bsd.options.mk"
