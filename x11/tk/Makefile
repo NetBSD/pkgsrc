@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2005/07/19 11:12:24 adam Exp $
+# $NetBSD: Makefile,v 1.48 2005/08/31 09:40:15 seb Exp $
 
 DISTNAME=	tk8.4.11-src
 PKGNAME=	tk-8.4.11
+PKGREVISION=		1
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -32,7 +33,7 @@ CONFIGURE_ARGS+=	--mandir=${WRKDIR:Q}/man
 .include "../../mk/x11.buildlink3.mk"
 
 post-build:
-	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
+	${SED} 								\
 		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
 		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}/include/tk|"	\
 		${WRKSRC}/tkConfig.sh > ${WRKSRC}/tkConfig.sh.tmp &&	\
