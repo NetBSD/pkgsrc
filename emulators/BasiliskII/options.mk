@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2005/07/01 12:34:32 adam Exp $
+# $NetBSD: options.mk,v 1.2 2005/08/31 16:11:34 hira Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.BasiliskII
-PKG_SUPPORTED_OPTIONS=	esd gtk sdl
+PKG_SUPPORTED_OPTIONS=	esound gtk sdl
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mesd)
+.if !empty(PKG_OPTIONS:Mesound)
 CONFIGURE_ARGS+=	--with-esd
 .include "../../audio/esound/buildlink3.mk"
 .else
