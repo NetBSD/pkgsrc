@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.99 2005/08/31 19:46:25 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.100 2005/08/31 19:47:55 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -279,5 +279,5 @@ Pullup ticket 723 - requested by Adrian Portelli
 security update for elmo
 Pullup ticket 724 - requested by Lubomir Sedlacik
 security update for pcre
-Pullup ticket 725 - requested by S.P.Zeidler
+Pullup ticket 726 - requested by S.P.Zeidler
 build fix for pcre
