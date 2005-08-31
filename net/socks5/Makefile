@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/04/11 21:47:00 tv Exp $
+# $NetBSD: Makefile,v 1.36 2005/08/31 18:47:36 reed Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
@@ -36,7 +36,7 @@ CONFIGURE_ARGS=		--with-libconffile=${PREFIX}/etc/libsocks5.conf \
 			--with-srvidtfile=/var/run/socks5.ident \
 			${EXTRA_CONFIGURE_ARGS}
 LIBS+=			-lcrypt
-
+INSTALLATION_DIRS=	include
 RCD_SCRIPTS=		socks5
 
 post-install:
