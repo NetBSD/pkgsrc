@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2005/08/02 22:37:18 seb Exp $
+# $NetBSD: Makefile,v 1.53 2005/08/31 09:40:15 seb Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -55,7 +56,7 @@ CONFIGURE_ARGS+=	--enable-64bit
 .endif
 
 post-build:
-	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
+	${SED} 								\
 		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
 		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}/include/tcl|"	\
 		${WRKSRC}/tclConfig.sh > ${WRKSRC}/tclConfig.sh.tmp &&	\
