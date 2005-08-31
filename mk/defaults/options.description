@@ -49,6 +49,7 @@ darwin			Build and/or run on Darwin and Mac OS X.
 db	
 db2	
 db4	
+dbh			Enable DBH support.
 debug	
 deliver-suid		Install deliver executable setuid root.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
