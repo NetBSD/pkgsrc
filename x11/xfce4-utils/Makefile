@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/20 19:16:23 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/08/31 15:23:09 hira Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -17,6 +17,8 @@ CONF_FILES=		${EGDIR}/xinitrc ${PKG_SYSCONFDIR}/xinitrc
 REQD_DIRS+=		${EGDIR}
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+
+.include "options.mk"
 
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
