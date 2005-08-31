@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2005/08/22 11:59:31 adam Exp $
+# $NetBSD: Makefile,v 1.123 2005/08/31 08:04:58 jlam Exp $
 
 DISTNAME=	netpbm-10.29
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -46,14 +47,12 @@ SUBST_FILES.bash=	converter/other/anytopnm			\
 MAKE_ENV+=	BUILD_FIASCO=N
 .endif
 
-.if ${OPSYS} == "SunOS"
-.  include "../../graphics/jasper/buildlink3.mk"
 MAKE_ENV+=	JASPERLIB="${LDFLAGS} -ljasper"
 MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:Q}
-.else
-MAKE_ENV+=	JASPERLIB='$$(INTERNAL_JASPERLIB)'
-MAKE_ENV+=	JASPERHDR_DIR='$$(INTERNAL_JASPERHDR_DIR)'
-.endif
+
+.include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 
 pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
@@ -79,6 +78,4 @@ post-install:
 	${PAX} -rwpppm . ${PREFIX}
 	${RM} -fr ${STAGEDIR}
 
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
