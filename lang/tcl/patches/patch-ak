@@ -1,0 +1,31 @@
+$NetBSD: patch-ak,v 1.1 2005/08/31 14:46:59 seb Exp $
+
+--- tclUnixNotfy.c.orig	2005-06-07 10:26:58.000000000 +0000
++++ tclUnixNotfy.c
+@@ -275,7 +275,7 @@ Tcl_FinalizeNotifier(clientData)
+      */
+ 
+     if (notifierCount == 0) {
+-	int result, dummy;
++	int result;
+ 	if (triggerPipe < 0) {
+ 	    panic("Tcl_FinalizeNotifier: notifier pipe not initialized");
+ 	}
+@@ -288,13 +288,14 @@ Tcl_FinalizeNotifier(clientData)
+ 	 * not just close the pipe and check for EOF in the notifier
+ 	 * thread because if a background child process was created with
+ 	 * exec, select() would not register the EOF on the pipe until the
+-	 * child processes had terminated. [Bug: 4139]
++	 * child processes had terminated. [Bug: 4139][Bug: 1222872]
+ 	 */
+ 	write(triggerPipe, "q", 1);
+ 	close(triggerPipe);
+-
++	while(triggerPipe >= 0) {
+ 	Tcl_ConditionWait(&notifierCV, &notifierMutex, NULL);
+-	result = Tcl_JoinThread(notifierThread, &dummy);
++	}
++	result = Tcl_JoinThread(notifierThread, NULL);
+ 	if (result) {
+ 	    Tcl_Panic("Tcl_FinalizeNotifier: unable to join notifier thread");
+ 	}
