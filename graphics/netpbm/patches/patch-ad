@@ -1,0 +1,137 @@
+$NetBSD: patch-ad,v 1.18 2005/08/31 19:47:53 reed Exp $
+
+Fixes error: invalid lvalue in assignment
+Found idea from DarwinPorts
+
+--- editor/pnmaddnoise.c.orig	2005-08-31 01:14:52.000000000 -0700
++++ editor/pnmaddnoise.c	2005-08-31 01:31:56.000000000 -0700
+@@ -252,14 +252,14 @@
+     int rows, cols, format, row;
+     double rtemp, gtemp, btemp;
+     double u, u1;
+-    double INFINITY;
++    double infinity;
+ 
+     double const EPSILON = 1.0e-5;
+     int const forceplain = 0;
+ 
+     pnm_readpnminit( ifp, &cols, &rows, &maxval, &format );
+     xelrow = pnm_allocrow( cols );
+-    INFINITY = (double) maxval;
++    infinity = (double) maxval;
+ 
+     pnm_writepnminit( stdout, cols, rows, maxval, format, forceplain );
+ 
+@@ -272,12 +272,12 @@
+                 u = ( rand( ) & RANDOM_MASK ) / arand; 
+                 if ( u <= 0.5 ) {
+                     if ( u <= EPSILON )
+-                        rtemp = PPM_GETR( *xP ) - INFINITY;
++                        rtemp = PPM_GETR( *xP ) - infinity;
+                     else
+                         rtemp = PPM_GETR( *xP ) + lsigma * log( 2.0 * u );
+                 } else {
+                     if ( ( u1 = 1.0 - u ) <= 0.5 * EPSILON )
+-                        rtemp = PPM_GETR( *xP ) + INFINITY;
++                        rtemp = PPM_GETR( *xP ) + infinity;
+                     else
+                         rtemp = PPM_GETR( *xP ) - lsigma * log( 2.0 * u1 );
+                 }
+@@ -285,12 +285,12 @@
+                 u = ( rand( ) & RANDOM_MASK ) / arand; 
+                 if ( u <= 0.5 ) {
+                     if ( u <= EPSILON )
+-                        gtemp = PPM_GETG( *xP ) - INFINITY;
++                        gtemp = PPM_GETG( *xP ) - infinity;
+                     else
+                         gtemp = PPM_GETG( *xP ) + lsigma * log( 2.0 * u );
+                 } else {
+                     if ( ( u1 = 1.0 - u ) <= 0.5 * EPSILON )
+-                        gtemp = PPM_GETG( *xP ) + INFINITY;
++                        gtemp = PPM_GETG( *xP ) + infinity;
+                     else
+                         gtemp = PPM_GETG( *xP ) - lsigma * log( 2.0 * u1 );
+                 }
+@@ -298,12 +298,12 @@
+                 u = ( rand( ) & RANDOM_MASK ) / arand; 
+                 if ( u <= 0.5 ) {
+                     if ( u <= EPSILON )
+-                        btemp = PPM_GETB( *xP ) - INFINITY;
++                        btemp = PPM_GETB( *xP ) - infinity;
+                     else
+                         btemp = PPM_GETB( *xP ) + lsigma * log( 2.0 * u );
+                 } else {
+                     if ( ( u1 = 1.0 - u ) <= 0.5 * EPSILON )
+-                        btemp = PPM_GETB( *xP ) + INFINITY;
++                        btemp = PPM_GETB( *xP ) + infinity;
+                     else
+                         btemp = PPM_GETB( *xP ) - lsigma * log( 2.0 * u1 );
+                 }
+@@ -318,12 +318,12 @@
+                 u = ( rand( ) & RANDOM_MASK ) / arand; 
+                 if ( u <= 0.5 ) {
+                     if ( u <= EPSILON )
+-                        gtemp = PNM_GET1( *xP ) - INFINITY;
++                        gtemp = PNM_GET1( *xP ) - infinity;
+                     else
+                         gtemp = PNM_GET1( *xP ) + lsigma * log( 2.0 * u );
+                 } else {
+                     if ( ( u1 = 1.0 - u ) <= 0.5 * EPSILON )
+-                        gtemp = PNM_GET1( *xP ) + INFINITY;
++                        gtemp = PNM_GET1( *xP ) + infinity;
+                     else
+                         gtemp = PNM_GET1( *xP ) - lsigma * log( 2.0 * u1 );
+                 }
+@@ -356,14 +356,14 @@
+     int rows, cols, format, row;
+     double rtemp, gtemp, btemp;
+     double uniform, rayleigh, gauss;
+-    double INFINITY;
++    double infinity;
+ 
+     double const EPSILON = 1.0e-5;
+     int const forceplain = 0;
+ 
+     pnm_readpnminit( ifp, &cols, &rows, &maxval, &format );
+     xelrow = pnm_allocrow( cols );
+-    INFINITY = (double) maxval;
++    infinity = (double) maxval;
+ 
+     pnm_writepnminit( stdout, cols, rows, maxval, format, forceplain );
+ 
+@@ -375,7 +375,7 @@
+             case PPM_TYPE:
+                 uniform = ( rand( ) & RANDOM_MASK ) / arand; 
+                 if ( uniform <= EPSILON )
+-                    rayleigh = INFINITY;
++                    rayleigh = infinity;
+                 else
+                     rayleigh = sqrt( -2.0 * log( uniform ) );
+                 uniform = ( rand( ) & RANDOM_MASK ) / arand; 
+@@ -384,7 +384,7 @@
+ 
+                 uniform = ( rand( ) & RANDOM_MASK ) / arand; 
+                 if ( uniform <= EPSILON )
+-                    rayleigh = INFINITY;
++                    rayleigh = infinity;
+                 else
+                     rayleigh = sqrt( -2.0 * log( uniform ) );
+                 uniform = ( rand( ) & RANDOM_MASK ) / arand; 
+@@ -393,7 +393,7 @@
+ 
+                 uniform = ( rand( ) & RANDOM_MASK ) / arand; 
+                 if ( uniform <= EPSILON )
+-                    rayleigh = INFINITY;
++                    rayleigh = infinity;
+                 else
+                     rayleigh = sqrt( -2.0 * log( uniform ) );
+                 uniform = ( rand( ) & RANDOM_MASK ) / arand; 
+@@ -409,7 +409,7 @@
+             default:
+                 uniform = ( rand( ) & RANDOM_MASK ) / arand; 
+                 if ( uniform <= EPSILON )
+-                    rayleigh = INFINITY;
++                    rayleigh = infinity;
+                 else
+                     rayleigh = sqrt( -2.0 * log( uniform ) );
+                 uniform = ( rand( ) & RANDOM_MASK ) / arand; 
