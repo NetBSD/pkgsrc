@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.11 2005/03/30 16:16:20 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.12 2005/08/31 08:50:32 jlam Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -140,9 +140,9 @@ RUBY_SHLIBVER?=		${RUBY_VERSION}
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "Interix"
 RUBY_SHLIBMAJOR=	${RUBY_VER}
 RUBY_SHLIBVER=		${RUBY_VER}.${_RUBY_VERS_TEENY}
-.elif ${OPSYS} == "FreeBSD"
+.elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 RUBY_SHLIBMAJOR=	# unused
-RUBY_SHLIBVER=		${_RUBY_VERS_TEENY}
+RUBY_SHLIBVER=		${RUBY_VER}
 .elif ${OPSYS} == "OpenBSD"
 RUBY_SHLIBMAJOR=	# unused
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_VERS_TEENY}
