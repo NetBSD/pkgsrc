@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/08/03 20:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2005/08/31 12:12:32 drochner Exp $
 
 DISTNAME=		clisp-2.33.2
 PKGREVISION=		1
@@ -22,6 +22,8 @@ GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
+MODULES=		--with-module=syscalls --with-module=regexp
+MODULES+=		--with-module=pcre --with-module=wildcard
 
 post-patch:
 	${CP} files/tramp-rs6000-netbsd.o ${WRKSRC}/../ffcall/callback/trampoline_r
@@ -32,13 +34,9 @@ do-configure:
 	cd ${WRKSRC} && \
 	(cd .. ; ${SETENV} ${CONFIGURE_ENV} \
 		${CONFIGURE_SCRIPT} --host=${MACHINE_GNU_PLATFORM} \
-			--prefix=${PREFIX}) && \
+			--prefix=${PREFIX} ${MODULES}) && \
 	./makemake --prefix=${PREFIX} --with-readline --with-gettext \
-		--with-dynamic-ffi --fsstnd=netbsd >Makefile && \
-	${MV} Makefile Makefile.patch && \
-	${SED} -e 's/MODULES =/MODULES = syscalls regexp pcre wildcard/g' \
-		< Makefile.patch > Makefile && \
-	${RM} Makefile.patch
+		--with-dynamic-ffi --fsstnd=netbsd ${MODULES} >Makefile
 
 pre-build:
 	cd ${WRKSRC}/avcall && ${MAKE}
