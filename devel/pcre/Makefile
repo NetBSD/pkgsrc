@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21.2.1 2005/08/31 08:48:45 snj Exp $
+# $NetBSD: Makefile,v 1.21.2.2 2005/08/31 19:46:14 snj Exp $
 
 DISTNAME=	pcre-6.2
 CATEGORIES=	devel
@@ -21,5 +21,10 @@ USE_LIBTOOL=		yes
 PKG_CONFIG_OVERRIDE=	libpcre.pc.in
 
 TEST_TARGET=		test
+
+# Avoid an ICE in gcc2 on sparc64
+# use CONFIGURE_ARGS instead of the usual CONFIGURE_ENV as the latter just
+# won't work with -this- configure
+CONFIGURE_ARGS+=	F77=${FALSE}
 
 .include "../../mk/bsd.pkg.mk"
