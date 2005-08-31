@@ -1,15 +1,23 @@
-$NetBSD: patch-ah,v 1.6 2005/08/22 11:59:31 adam Exp $
+$NetBSD: patch-ah,v 1.7 2005/08/31 08:04:58 jlam Exp $
 
---- converter/other/cameratopam/camera.c.orig	2005-08-15 06:12:51.000000000 +0000
+--- converter/other/cameratopam/camera.c.orig	Mon Aug 15 06:12:51 2005
 +++ converter/other/cameratopam/camera.c
-@@ -22,6 +22,10 @@
+@@ -4,6 +4,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <assert.h>
++#include <sys/types.h>
+ #include <netinet/in.h>
+ 
+ #ifdef HAVE_JPEG
+@@ -21,6 +22,10 @@
+ #include "dng.h"
  
  #include "camera.h"
- 
++
 +#ifdef __sun
 +#define setenv(x, y, z) putenv(x"="y)
 +#endif
-+
+ 
  #if HAVE_INT64
     typedef int64_t INT64;
-    static bool const have64BitArithmetic = true;
