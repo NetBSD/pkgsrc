@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10991 2005/08/31 05:02:02 taca Exp $
+$NetBSD: CHANGES,v 1.10992 2005/08/31 09:44:56 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3864,3 +3864,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/gnutls to 1.2.6 [adam 2005-08-30]
 	Updated databases/lbdb to 0.30 [tonio 2005-08-30]
 	Updated security/nessus-plugins to 2.2.4nb2 [tron 2005-08-30]
+	Updated lang/tcl to 8.4.11nb1 [seb 2005-08-31]
+	Updated lang/tcl83 to 8.3.4nb2 [seb 2005-08-31]
+	Updated x11/tk to 8.4.11nb1 [seb 2005-08-31]
+	Updated x11/tk83 to 8.3.4nb1 [seb 2005-08-31]
