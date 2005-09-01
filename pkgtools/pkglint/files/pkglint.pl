@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.260 2005/08/25 07:27:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.261 2005/09/01 21:39:57 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -305,6 +305,7 @@ my $opt_autofix		= false;
 my $opt_debug		= false;
 my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
+my $opt_recursive	= false;
 my (%options) = (
 	"-C{check,...}"	=> "enable or disable specific checks",
 	"-F"		=> "Try to automatically fix some errors (experimental)",
@@ -315,6 +316,7 @@ my (%options) = (
 	"-g"		=> "Mimic the gcc output format",
 	"-h|--help"	=> "print a detailed help message",
 	"-q"		=> "don't print a summary line when finishing",
+	"-r"		=> "Recursive---check subdirectories, too",
 	"-v|--verbose"	=> "print progress messages",
 );
 
@@ -382,6 +384,7 @@ my $scriptdir;
 my $seen_USE_PKGLOCALEDIR;
 my $seen_Makefile_common;
 my $pkgname;
+my @todo_dirs;
 
 sub checkperms($);
 sub readmakefile($$$$);
@@ -476,6 +479,7 @@ sub parse_command_line() {
 			help(*STDOUT, 0, 1);
 		},
 		"quiet|q" => \$opt_quiet,
+		"recursive|r" => \$opt_recursive,
 		"verbose|v" => sub {
 			PkgLint::Logging::set_verbose(true);
 		},
@@ -2088,7 +2092,7 @@ sub checkdir_category($) {
 				# correctly ordered
 			}
 
-			push(@m_subdirs, [$subdir, $line]);
+			push(@m_subdirs, [$subdir, $line, $comment_flag ? false : true]);
 			$prev_subdir = $subdir;
 			$lineno++;
 
@@ -2109,7 +2113,7 @@ sub checkdir_category($) {
 
 	my ($f_index, $f_atend, $f_neednext, $f_current) = (0, false, true, undef, undef);
 	my ($m_index, $m_atend, $m_neednext, $m_current) = (0, false, true, undef, undef);
-	my ($line);
+	my ($line, $m_recurse);
 
 	while (!($m_atend && $f_atend)) {
 
@@ -2122,6 +2126,7 @@ sub checkdir_category($) {
 			} else {
 				$m_current = $m_subdirs[$m_index]->[0];
 				$line = $m_subdirs[$m_index]->[1];
+				$m_recurse = $m_subdirs[$m_index]->[2];
 				$m_index++;
 			}
 		}
@@ -2153,6 +2158,9 @@ sub checkdir_category($) {
 			$f_neednext = true;
 			$m_neednext = true;
 			push(@normalized_lines, $line->text);
+			if ($opt_recursive && $m_recurse) {
+				push(@todo_dirs, "${dir}/${m_current}");
+			}
 		}
 	}
 
@@ -2321,12 +2329,9 @@ sub main() {
 		($startsec, $startusec) = Time::HiRes::gettimeofday();
 	}
 
-	if (@ARGV) {
-		foreach my $dir (@ARGV) {
-			checkdir($dir);
-		}
-	} else {
-		checkdir(".");
+	@todo_dirs = (@ARGV != 0) ? @ARGV : (".");
+	while (@todo_dirs != 0) {
+		checkdir(shift(@todo_dirs));
 	}
 
 	if ($opt_debug) {
