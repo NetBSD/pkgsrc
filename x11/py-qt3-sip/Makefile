@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/01 01:27:09 reed Exp $
+# $NetBSD: Makefile,v 1.18 2005/09/01 01:01:19 reed Exp $
 #
 
 DISTNAME=	sip-4.2.1
@@ -29,6 +29,7 @@ PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	CFLAGS_SHLIB=-fno-common
