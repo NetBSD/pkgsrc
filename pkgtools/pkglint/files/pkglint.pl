@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.263 2005/09/01 22:45:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.264 2005/09/01 23:24:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -963,6 +963,7 @@ sub check_for_multiple_patches($) {
 		my $text = $line->text;
 
 		if ($text =~ qr"^@@ -\d+,(\d+) \+\d+,\d+ @@") {
+			$line_type = "";
 			$dellines = $1;
 
 		} elsif ($dellines == 0 && index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
@@ -976,6 +977,7 @@ sub check_for_multiple_patches($) {
 			$line_type = "+";
 
 		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
+			$line_type = "";
 			$dellines--;
 
 		} else {
