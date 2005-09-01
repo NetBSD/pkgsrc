@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/08/30 15:28:48 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/01 19:56:57 adrianp Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
@@ -29,9 +29,6 @@ do-configure:
 	@${SED} -e "s|@LDAPADMINDIR@|${PREFIX}/share/phpldapadmin|g" \
 		${FILESDIR}/phpldapadmin.conf > ${WRKDIR}/phpldapadmin.conf
 
-pre-install:
-	@${RM} ${WRKSRC}/login.php.orig
-
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/phpldapadmin
 
@@ -46,6 +43,8 @@ do-install:
 	cd ${WRKSRC} && ${PAX}		\
 		-s /\.#//		\
 		-s /\.cvsignore//	\
+		-s /\.orig//		\
 		-rwppm . ${PREFIX}/share/phpldapadmin
 
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
