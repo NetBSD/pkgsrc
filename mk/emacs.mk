@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.21 2005/08/30 05:55:05 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.22 2005/09/01 22:23:41 rillig Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -41,7 +41,7 @@
 #			The user's favoriate Emacs version.
 #		Possible values:
 #			emacs21, emacs21nox, emacs20, xemacs215, xemacs214
-#		Default value: 
+#		Default value:
 #			emacs21
 #
 # Variables ELPs can provide:
@@ -51,7 +51,7 @@
 #			Set if the ELP wants LEIM support.
 #		Possible values:
 #			<undefined>, <defined>
-#		Default value: 
+#		Default value:
 #			<undefined>
 #
 #	EMACS_VERSIONS_ACCEPTED
@@ -67,7 +67,7 @@
 #			specified files.
 #		Possible values:
 #			<a list of files relative to ${WRKDIR}>
-#		Default value: 
+#		Default value:
 #			<undefined>
 #
 # Variables provided for ELPs:
@@ -213,7 +213,7 @@ _EMACS_DEP.leim21=	../../editors/leim
 #	add a dependency to the version;
 #
 # 2. Check if a given package can be used for the emacs version.
-#	
+#
 # 	if (package accepts the emacs version)
 #		nothing to do;
 #	else
