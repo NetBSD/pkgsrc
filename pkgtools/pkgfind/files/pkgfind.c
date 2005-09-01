@@ -100,7 +100,7 @@ main(int argc, char *argv[])
 		case 'M':	/* search for maintainer */
 			search = "MAINTAINER";
 			break;
-		case 'q':	/* quite, don't output comment */
+		case 'q':	/* quiet, don't output comment */
 			qflag = 1;
 			break;
 		case 'x':	/* exact matches */
