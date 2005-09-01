@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.262 2005/09/01 22:09:39 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.263 2005/09/01 22:45:16 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -954,14 +954,18 @@ sub checkfile_extra($$) {
 # $lines => an array of lines as returned by load_file().
 sub check_for_multiple_patches($) {
 	my ($lines) = @_;
-	my ($files_in_patch, $patch_state, $line_type);
+	my ($files_in_patch, $patch_state, $line_type, $dellines);
 
 	$files_in_patch = 0;
 	$patch_state = "";
+	$dellines = 0;
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
-		if (index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
+		if ($text =~ qr"^@@ -\d+,(\d+) \+\d+,\d+ @@") {
+			$dellines = $1;
+
+		} elsif ($dellines == 0 && index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
 			$line_type = "-";
 
 		} elsif (index($text, "*** ") == 0 && $text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
@@ -970,6 +974,9 @@ sub check_for_multiple_patches($) {
 
 		} elsif (index($text, "+++ ") == 0) {
 			$line_type = "+";
+
+		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
+			$dellines--;
 
 		} else {
 			$line_type = "";
