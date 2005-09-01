@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2005/07/15 18:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.75 2005/09/01 22:02:34 rillig Exp $
 #
 
 # tools used by this Makefile
@@ -19,48 +19,48 @@ SUBDIR+=	${HOST_SPECIFIC_PKGS}
 SUBDIR+=	${GROUP_SPECIFIC_PKGS}
 SUBDIR+=	${USER_SPECIFIC_PKGS}
 .else
-SUBDIR += archivers
-SUBDIR += audio
-SUBDIR += benchmarks
-SUBDIR += biology
-SUBDIR += cad
-SUBDIR += chat
-SUBDIR += comms
-SUBDIR += converters
-SUBDIR += cross
-SUBDIR += crosspkgtools
-SUBDIR += databases
-SUBDIR += devel
-SUBDIR += editors
-SUBDIR += emulators
-SUBDIR += finance
-SUBDIR += fonts
-SUBDIR += games
-SUBDIR += geography
-SUBDIR += graphics
-SUBDIR += ham
-SUBDIR += inputmethod
-SUBDIR += lang
-SUBDIR += mail
-SUBDIR += math
-SUBDIR += mbone
-SUBDIR += meta-pkgs
-SUBDIR += misc
-SUBDIR += multimedia
-SUBDIR += net
-SUBDIR += news
-SUBDIR += parallel
-SUBDIR += pkgtools
-SUBDIR += print
-#SUBDIR += regress
-SUBDIR += security
-SUBDIR += shells
-SUBDIR += sysutils
-SUBDIR += textproc
-SUBDIR += time
-SUBDIR += wm
-SUBDIR += www
-SUBDIR += x11
+SUBDIR+=	archivers
+SUBDIR+=	audio
+SUBDIR+=	benchmarks
+SUBDIR+=	biology
+SUBDIR+=	cad
+SUBDIR+=	chat
+SUBDIR+=	comms
+SUBDIR+=	converters
+SUBDIR+=	cross
+SUBDIR+=	crosspkgtools
+SUBDIR+=	databases
+SUBDIR+=	devel
+SUBDIR+=	editors
+SUBDIR+=	emulators
+SUBDIR+=	finance
+SUBDIR+=	fonts
+SUBDIR+=	games
+SUBDIR+=	geography
+SUBDIR+=	graphics
+SUBDIR+=	ham
+SUBDIR+=	inputmethod
+SUBDIR+=	lang
+SUBDIR+=	mail
+SUBDIR+=	math
+SUBDIR+=	mbone
+SUBDIR+=	meta-pkgs
+SUBDIR+=	misc
+SUBDIR+=	multimedia
+SUBDIR+=	net
+SUBDIR+=	news
+SUBDIR+=	parallel
+SUBDIR+=	pkgtools
+SUBDIR+=	print
+#SUBDIR+=	regress
+SUBDIR+=	security
+SUBDIR+=	shells
+SUBDIR+=	sysutils
+SUBDIR+=	textproc
+SUBDIR+=	time
+SUBDIR+=	wm
+SUBDIR+=	www
+SUBDIR+=	x11
 .endif
 
 .ifdef USER_ADDITIONAL_PKGS
