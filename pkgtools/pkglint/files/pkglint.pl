@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.261 2005/09/01 21:39:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.262 2005/09/01 22:09:39 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2007,6 +2007,55 @@ sub check_predefined_sites($$) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "URL does not match any of the predefined URLS. Good.");
 }
 
+sub checkdir_root($) {
+	my ($dir) = @_;
+	my ($fname) = "${dir}/Makefile";
+	my ($lines, $prev_subdir);
+
+	log_subinfo("checkdir_root", $fname, NO_LINE_NUMBER, "Checking pkgsrc root directory.");
+
+	if (!($lines = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+
+	if (0 <= $#{$lines}) {
+		checkline_rcsid_regex($lines->[0], qr"#\s+", "# ");
+	}
+
+	foreach my $line (@{$lines}) {
+		if ($line->text =~ qr"^(#?)SUBDIR\s*\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$") {
+			my ($comment_flag, $indentation, $subdir, $comment) = ($1, $2, $3, $4);
+
+			if ($comment_flag eq "#" && (!defined($comment) || $comment eq "")) {
+				$line->log_warning("${subdir} commented out without giving a reason.");
+			}
+
+			if ($indentation ne "\t") {
+				$line->log_warning("Indentation should be a single tab character.");
+			}
+
+			if ($subdir =~ qr"\$" || !-f "${subdir}/Makefile") {
+				next;
+			}
+
+			if (defined($prev_subdir) && $subdir eq $prev_subdir) {
+				$line->log_error("${subdir} must only appear once.");
+			} elsif (defined($prev_subdir) && $subdir lt $prev_subdir) {
+				$line->log_warning("${subdir} should come before ${prev_subdir}.");
+			} else {
+				# correctly ordered
+			}
+
+			$prev_subdir = $subdir;
+
+			if ($opt_recursive && $comment_flag eq "") {
+				push(@todo_dirs, "${dir}/${subdir}");
+			}
+		}
+	}
+}
+
 sub checkdir_category($) {
 	my ($dir) = @_;
 	my $fname = "${dir}/Makefile";
@@ -2081,7 +2130,7 @@ sub checkdir_category($) {
 			}
 
 			if ($indentation ne "\t") {
-				$line->log_error("Indentation must be a single tab character.");
+				$line->log_warning("Indentation should be a single tab character.");
 			}
 
 			if (defined($prev_subdir) && $subdir eq $prev_subdir) {
@@ -2302,16 +2351,19 @@ sub checkdir_package($) {
 sub checkdir($) {
 	my ($dir) = @_;
 
-	if (-f "${dir}/../mk/bsd.pkg.mk") {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
-		checkdir_category($dir);
-
-	} elsif (-f "${dir}/../../mk/bsd.pkg.mk") {
+	if (-f "${dir}/../../mk/bsd.pkg.mk") {
 		load_predefined_sites("${dir}/../..");
 		checkdir_package($dir);
 
+	} elsif (-f "${dir}/../mk/bsd.pkg.mk") {
+		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
+		checkdir_category($dir);
+
+	} elsif (-f "${dir}/mk/bsd.pkg.mk") {
+		checkdir_root($dir);
+
 	} else {
-		log_error($dir, NO_LINE_NUMBER, "Neither a package nor a category.");
+		log_error($dir, NO_LINE_NUMBER, "Not a pkgsrc directory.");
 	}
 }
 
