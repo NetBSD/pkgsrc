@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10993 2005/09/01 03:40:45 jlam Exp $
+$NetBSD: CHANGES,v 1.10994 2005/09/01 19:58:35 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3869,3 +3869,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/tk to 8.4.11nb1 [seb 2005-08-31]
 	Updated x11/tk83 to 8.3.4nb1 [seb 2005-08-31]
 	Updated net/openvpn to 2.0.2 [jlam 2005-09-01]
+	Updated databases/phpldadpadmin to 0.9.6cnb3 [adrianp 2005-09-01]
