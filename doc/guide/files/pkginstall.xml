@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.5 2005/08/10 05:27:56 reed Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.6 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -33,7 +33,7 @@
 </itemizedlist>
 
 <para>The following sections inspect each of the above points in detail.
-Note that, in order to use any of the described functionalities, you must
+Note that in order to use any of the described functionalities, you must
 add the following to your package's <filename>Makefile</filename>:</para>
 
 <programlisting>USE_PKGINSTALL=YES</programlisting>
@@ -64,11 +64,11 @@ to install files outside this location; e.g., under
 <para>The only way to achieve this is to create such files during
 installation time by using the installation scripts.  These scripts can run
 arbitrary commands, so they have the potential to create and manage files
-anywhere in the filesystem.  Here is where pkginstall comes into play: it
+anywhere in the file system.  Here is where pkginstall comes into play: it
 provides generic scripts to abstract the manipulation of such files and
 directories based on variables set in the package's
-<filename>Makefile</filename>.  The rest of this section describes which
-these variables are.</para>
+<filename>Makefile</filename>.  The rest of this section describes these
+variables.</para>
 
 <!-- ================================================================== -->
 
@@ -76,7 +76,7 @@ these variables are.</para>
 <title>Directory manipulation</title>
 
 <para>The following variables can be set to request the creation of
-directories anywhere in the filesystem:</para>
+directories anywhere in the file system:</para>
 
 <itemizedlist>
 
@@ -196,8 +196,7 @@ set based upon the following variables:</para>
     <varname>PKG_SYSCONFBASE</varname> under which the configuration files
     for the package being built shall be installed.  The definition of this
     variable only makes sense in the package's
-    <filename>Makefile</filename> (i.e., it is not user
-    customizable).</para>
+    <filename>Makefile</filename> (i.e., it is not user-customizable).</para>
 
     <para>As an example, consider the Apache package,
     <filename role="pkg">www/apache2</filename>, which places its 
@@ -265,7 +264,7 @@ linkend="dirs-outside-prefix" /> what this means.</para>
 known place, you need to teach each package where it shall install its
 files.  In some cases you will have to patch the package Makefiles to
 achieve it.  If you are lucky, though, it may be as easy as passing an
-extra flag to the configuration script; this is the case of GNU Autoconf
+extra flag to the configuration script; this is the case of GNU Autoconf-
 generated files:</para>
 
 <programlisting>CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}</programlisting>
