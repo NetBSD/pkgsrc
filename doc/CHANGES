@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10996 2005/09/02 01:10:20 schmonz Exp $
+$NetBSD: CHANGES,v 1.10997 2005/09/02 02:28:20 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3871,3 +3871,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/openvpn to 2.0.2 [jlam 2005-09-01]
 	Updated databases/phpldapadmin to 0.9.6cnb3 [adrianp 2005-09-01]
 	Updated mail/ezmlm-idx to 0.443 [schmonz 2005-09-02]
+	Updated devel/pvs to 3.2 [jschauma 2005-09-02]
