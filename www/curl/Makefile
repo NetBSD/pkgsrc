@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2005/06/12 13:43:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.56 2005/09/02 08:13:29 adam Exp $
 
-DISTNAME=	curl-7.14.0
-PKGREVISION=	1
+DISTNAME=	curl-7.14.1
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/ \
@@ -17,15 +16,14 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 # list it into IPv6-ready packages
 BUILD_DEFS+=	USE_INET6
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-
-TEST_TARGET=		check
-
 # Work around an ICE on sparc64 with gcc2
 CONFIGURE_ENV+=		F77=${FALSE}
+
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
