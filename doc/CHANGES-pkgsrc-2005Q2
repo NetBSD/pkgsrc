@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.101 2005/09/01 14:24:40 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.102 2005/09/02 12:20:57 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -283,3 +283,5 @@ Pullup ticket 726 - requested by S.P.Zeidler
 build fix for pcre
 Pullup ticket 727 - requested by D'Arcy J.M. Cain
 build fix for python24 modules
+Pullup ticket 732 - requested by Matthias Scheler
+security fix for apache2
