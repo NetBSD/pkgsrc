@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10998 2005/09/02 08:14:25 adam Exp $
+$NetBSD: CHANGES,v 1.10999 2005/09/02 11:48:34 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3873,3 +3873,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/ezmlm-idx to 0.443 [schmonz 2005-09-02]
 	Updated devel/pvs to 3.2 [jschauma 2005-09-02]
 	Updated www/curl to 7.14.1 [adam 2005-09-02]
+	Updated www/apache2 to 2.0.54nb5 [tron 2005-09-02]
