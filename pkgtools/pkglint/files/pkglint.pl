@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.268 2005/09/02 11:43:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.269 2005/09/02 12:10:16 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -305,24 +305,6 @@ my $conf_make		= '@MAKE@';
 my $conf_datadir	= '@DATADIR@';
 
 # Command Line Options
-my $opt_autofix		= false;
-my $opt_debug		= false;
-my $opt_dumpmakefile	= false;
-my $opt_quiet		= false;
-my $opt_recursive	= false;
-my (%options) = (
-	"-C{check,...}"	=> "enable or disable specific checks",
-	"-F"		=> "Try to automatically fix some errors (experimental)",
-	"-I"		=> "dump the Makefile after parsing",
-	"-V|--version"	=> "print the version number of pkglint",
-	"-W{warn,...}"	=> "enable or disable specific warnings",
-	"-d"		=> "Enable debugging mode",
-	"-g"		=> "Mimic the gcc output format",
-	"-h|--help"	=> "print a detailed help message",
-	"-q"		=> "don't print a summary line when finishing",
-	"-r"		=> "Recursive---check subdirectories, too",
-	"-v|--verbose"	=> "print progress messages",
-);
 
 my $opt_check_DESCR	= true;
 my $opt_check_distinfo	= true;
@@ -366,6 +348,58 @@ my (%warnings) = (
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
 
+my $opt_autofix		= false;
+my $opt_debug		= false;
+my $opt_dumpmakefile	= false;
+my $opt_quiet		= false;
+my $opt_recursive	= false;
+my (@options) = (
+	# [ usage-opt, usage-message, getopt-opt, getopt-action ]
+	[ "-C{check,...}", "Enable or disable specific checks",
+	  "check|C=s",
+	  sub {
+		my ($opt, $val) = @_;
+		parse_multioption($val, \%checks);
+	  } ],
+	[ "-F|--autofix", "Try to automatically fix some errors (experimental)",
+	  "autofix|F", \$opt_autofix ],
+	[ "-I|--dumpmakefile", "Dump the Makefile after parsing",
+	  "dumpmakefile|I", \$opt_dumpmakefile ],
+	[ "-V|--version", "print the version number of pkglint",
+	  "version|V",
+	  sub {
+		print("$conf_distver\n");
+		exit(0);
+	  } ],
+	[ "-W{warn,...}", "enable or disable specific warnings",
+	  "warning|W=s",
+	  sub {
+		my ($opt, $val) = @_;
+		parse_multioption($val, \%warnings);
+	  } ],
+	[ "-d", "Enable debugging mode",
+	  "debug|d", \$opt_debug ],
+	[ "-g", "Mimic the gcc output format",
+	  "gcc-output-format|g",
+	  sub {
+		PkgLint::Logging::set_gcc_output_format();
+	  } ],
+	[ "-h|--help", "print a detailed help message",
+	  "help|h",
+	  sub {
+		help(*STDOUT, 0, 1);
+	  } ],
+	[ "-q", "don't print a summary line when finishing",
+	  "quiet|q", \$opt_quiet ],
+	[ "-r", "Recursive---check subdirectories, too",
+	  "recursive|r", \$opt_recursive ],
+	[ "-v|--verbose", "print progress messages",
+	  "verbose|v",
+	  sub {
+		PkgLint::Logging::set_verbose(true);
+	  } ]
+);
+
 # Constants
 my $regex_known_rcs_tag	= qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$conf_rcsidstr)(?::[^\$]*?|)\$";
 my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
@@ -403,8 +437,8 @@ sub help($$$) {
 	print $out ("usage: $prog [options] [package_directory]\n\n");
 
 	my (@option_table) = ();
-	foreach my $opt (sort keys %options) {
-		push(@option_table, ["  ", $opt, $options{$opt}]);
+	foreach my $opt (@options) {
+		push(@option_table, ["  ", $opt->[0], $opt->[1]]);
 	}
 	print $out ("options:\n");
 	PkgLint::Util::print_table($out, \@option_table);
@@ -468,34 +502,11 @@ sub parse_multioption($$) {
 }
 
 sub parse_command_line() {
-	my (%options) = (
-		"autofix|F" => \$opt_autofix,
-		"check|C=s" => sub {
-			my ($opt, $val) = @_;
-			parse_multioption($val, \%checks);
-		},
-		"debug|d" => \$opt_debug,
-		"dumpmakefile|I" => \$opt_dumpmakefile,
-		"gcc-output-format|g" => sub {
-			PkgLint::Logging::set_gcc_output_format();
-		},
-		"help|h" => sub {
-			help(*STDOUT, 0, 1);
-		},
-		"quiet|q" => \$opt_quiet,
-		"recursive|r" => \$opt_recursive,
-		"verbose|v" => sub {
-			PkgLint::Logging::set_verbose(true);
-		},
-		"version|V" => sub {
-			print("$conf_distver\n");
-			exit(0);
-		},
-		"warning|W=s" => sub {
-			my ($opt, $val) = @_;
-			parse_multioption($val, \%warnings);
-		},
-	);
+	my (%options);
+
+	foreach my $opt (@options) {
+		$options{$opt->[2]} = $opt->[3];
+	}
 	{
 		local $SIG{__WARN__} = sub {};
 		if (!GetOptions(%options)) {
