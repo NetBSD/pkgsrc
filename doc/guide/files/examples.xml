@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.6 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.7 2005/09/02 19:12:37 rillig Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -63,7 +63,7 @@ share/bison.hairy</programlisting>
       <screen>&uprompt; <userinput>pkglint</userinput>
 looks fine.</screen>
 
-      <para>Depending on the supplied command line arguments (see pkglint(1))
+      <para>Depending on the supplied command line arguments (see pkglint(1)),
 	more verbose checks will be performed. Use e.g.
 	<command>pkglint -v</command> for a very verbose check.</para>
     </sect2>

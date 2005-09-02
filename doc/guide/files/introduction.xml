@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.6 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.7 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>Introduction</title>
@@ -6,7 +6,7 @@
   <sect1 id="introduction-section">
     <title>Introduction</title>
 
-    <para> There is a lot of software freely available for Unix based
+    <para> There is a lot of software freely available for Unix-based
       systems, which usually runs on NetBSD and other Unix-flavoured
       systems, too, sometimes with some modifications.  The NetBSD
       Packages Collection (pkgsrc) incorporates any such changes
@@ -221,7 +221,7 @@
 
 	<listitem>
 	  <para>The piece of software to be installed which will be constructed from
-	    all the files in the Distfile by the actions defined in the
+	    all the files in the distfile by the actions defined in the
 	    corresponding package.</para>
 	</listitem>
       </varlistentry>

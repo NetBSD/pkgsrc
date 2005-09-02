@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.9 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: build.xml,v 1.10 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -55,8 +55,8 @@
       </listitem>
 
       <listitem>
-	<para>X11 based are special in that they may be installed in either
-	  <varname>X11BASE</varname> or <varname>LOCALBASE</varname>.</para>
+	<para>X11-based packages are special in that they may be installed in
+	  either <varname>X11BASE</varname> or <varname>LOCALBASE</varname>.</para>
 
 	<para>Usually, X11 packages should be installed under
 	  <varname>LOCALBASE</varname> whenever possible.  Note that you will
@@ -202,8 +202,8 @@ CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
 	    <filename>.shar.Z</filename>, <filename>.shar</filename>,
 	    <filename>.Z</filename>, <filename>.bz2</filename> and
 	    <filename>.gz</filename>; see the definition of the
-	    various <varname>DECOMPRESS_CMD</varname> variables
-	    <filename>bsd.pkg.mk</filename> for a complete
+	    various <varname>DECOMPRESS_CMD</varname> variables in
+	    <filename>bsd.pkg.extract.mk</filename> for a complete
 	    list). Here's an example on how to use the other variables
 	    for a program that comes with a compressed shell archive
 	    whose name ends in <filename>.msg.gz</filename>:</para>
@@ -409,7 +409,7 @@ make build</programlisting>
 	    updating in case a previous <command>make update</command> was interrupted
 	    for some reason.  However, in this case, make sure you don't call
 	    <command>make clean</command> or otherwise remove the list of dependent
-	    packages in <varname>WRKDIR</varname>.  Otherwise you lose the
+	    packages in <varname>WRKDIR</varname>.  Otherwise, you lose the
 	    ability to automatically update the current package along with the
 	    dependent packages you have installed.</para>
 
@@ -489,10 +489,10 @@ make build</programlisting>
 	    <command>make update</command> and only if you have a dirty package tree
 	    (e.g., if you used <varname>NOCLEAN</varname>).</para>
 
-	  <para>If you unsure about whether your tree is clean you can either perform
-	    a <command>make clean</command> at the top of the tree, or use the
-	    following sequence of commands from the directory of the package you
-	    want to update (<emphasis>before</emphasis> running
+	  <para>If you are unsure about whether your tree is clean, you can either
+	    perform a <command>make clean</command> at the top of the tree, or use
+	    the following sequence of commands from the directory of the package
+	    you want to update (<emphasis>before</emphasis> running
 	    <command>make update</command> for the first time, otherwise you lose
 	    all the packages you wanted to update!):</para>
 
@@ -669,10 +669,10 @@ make build</programlisting>
 	<listitem>
 	  <para>Used to do bulk builds. If an appropriate binary package already exists,
 	    no action is taken. If not, this target will compile, install and
-	    package it (and it's depends, if <varname>PKG_DEPENDS</varname> is
-	    set properly. See <xref linkend="binary.configuration"/>.
+	    package it (and its depends, if <varname>PKG_DEPENDS</varname> is
+	    set properly. See <xref linkend="binary.configuration"/>).
 	    After creating the binary
-	    package, the sources, the just-installed package and it's required
+	    package, the sources, the just-installed package and its required
 	    packages are removed, preserving free disk space.</para>
 
 	  <para><emphasis>Beware that this target may deinstall all
@@ -685,11 +685,11 @@ make build</programlisting>
 
 	<listitem>
 	  <para>Used during bulk-installs to install required packages. If an
-	    upto-date binary package is available, it will be installed via
+	    up-to-date binary package is available, it will be installed via
 	    &man.pkg.add.1;. If not, <command>make bulk-package</command> will be executed,
-	    but the installed binary not be removed. </para>
+	    but the installed binary won't be removed. </para>
 
-	  <para> A binary package is considered <quote>upto-date</quote> to be
+	  <para> A binary package is considered <quote>up-to-date</quote> to be
 	    installed via &man.pkg.add.1; if:</para>
 
 	  <itemizedlist>

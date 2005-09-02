@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.12 2005/08/04 17:38:06 gdt Exp $ -->
+<!-- $NetBSD: components.xml,v 1.13 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -100,9 +100,9 @@ converters    games         mbone         print         x11</programlisting>
 	  <para>If the package has multiple
 	    <varname>DISTFILES</varname> or multiple
 	    <varname>PATCHFILES</varname> from different
-	    sites, set <varname>SITES_foo</varname> to a list of URI's
+	    sites, set <varname>SITES_foo</varname> to a list of URIs
 	    where file <quote>foo</quote> may be
-	    found. <quote>foo</quote> includes the suffix, e.g.</para>
+	    found. <quote>foo</quote> includes the suffix, e.g.:</para>
 	  <programlisting>DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=     foo-file.tar.gz
 SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
@@ -131,7 +131,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
     <para>The second section contains information about separately
       downloaded patches, if any.
       <itemizedlist>
-	<listitem><para><varname>PATCHFILES</varname>
+	<listitem><para><varname>PATCHFILES:</varname>
 	  Name(s) of additional files that contain distribution patches.
 	  There is no default. pkgsrc will look for them at
 	  <varname>PATCH_SITES</varname>.
@@ -187,7 +187,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
 
     <itemizedlist>
       <listitem>
-        <para>Add <varname>MANCOMPRESSED</varname> if manpages are installed in
+        <para>Add <varname>MANCOMPRESSED</varname> if man pages are installed in
           compressed form by the package; see comment in
           <filename>bsd.pkg.mk</filename>.</para>
       </listitem>
@@ -258,7 +258,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
       problems. (To force patches to apply
       with fuzz you can set <varname>PATCH_FUZZ_FACTOR=-F2</varname>).
       Furthermore, do not put changes for more than one file into a single
-      patch-file, as this will make future modifications more difficult.</para>
+      patch file, as this will make future modifications more difficult.</para>
 
     <para>Similar, a file should be patched at most once, not several times by
       several different patches. If a file needs several patches, they should
@@ -300,7 +300,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
       <quote>category/package</quote> structure as pkgsrc, and patches are
       expected to be stored inside these dirs (also known as
       <filename>$LOCALPATCHES/$PKGPATH</filename>). For
-      example if you want to keep a private patch for
+      example, if you want to keep a private patch for
       <filename>pkgsrc/graphics/png</filename>, keep
       it in <filename>$LOCALPATCHES/graphics/png/mypatch</filename>. All
       files in the named directory are expected to be patch files, and
@@ -392,7 +392,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
   <sect1 id="work-dir">
     <title><filename>work*</filename></title>
 
-    <para>When you type <command>make</command> the distribution files are
+    <para>When you type <command>make</command>, the distribution files are
       unpacked into the directory denoted by
       <varname>WRKDIR</varname>. It can be removed by running
       <command>make clean</command>. Besides the sources, this

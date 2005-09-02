@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.11 2005/07/27 21:29:51 rpaulo Exp $ -->
+<!-- $NetBSD: using.xml,v 1.12 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -27,17 +27,17 @@
         layout as in
         <filename>/usr/pkgsrc/packages</filename>). </para>
 
-      <para> This same directory layout applies for CDROM
+      <para> This same directory layout applies for CD-ROM
         distributions, only that the directory may be rooted somewhere
         else, probably somewhere below
-        <filename>/cdrom</filename>. Please consult your CDROMs
+        <filename>/cdrom</filename>. Please consult your CD-ROMs
         documentation for the exact location. </para>  
     </sect2>
 
     <sect2 id="how-to-use-binary-packages">
       <title>How to use binary packages</title>
       
-      <para> If you have the files on a CDROM or downloaded them to
+      <para> If you have the files on a CD-ROM or downloaded them to
         your hard disk, you can install them with the following command
         (be sure to <command>su</command> to root first):</para>
 
@@ -55,9 +55,9 @@
         present where you install from. </para>
 
       <para>To save some typing, you can set the
-        <varname>PKG_PATH</varname> environment variable to a semicolon
-        separated list of paths (including remote URLs); trailing
-        slashes are not allowed. </para>
+        <varname>PKG_PATH</varname> environment variable to a semicolon-separated
+	list of paths (including remote URLs); trailing slashes are not allowed.
+	</para>
 
       <para>Additionally to the <filename>All</filename> directory
         there exists a <filename>vulnerable</filename> directory to
@@ -66,7 +66,7 @@
         use these packages, add the <filename>vulnerable</filename>
         directory to your <varname>PKG_PATH</varname>. However, you should run
         <filename role="pkg">security/audit-packages</filename> regularly, 
-	and especially after installing new packages, and verify that the 
+	especially after installing new packages, and verify that the 
 	vulnerabilities are acceptable for your configuration. An example
         <varname>PKG_PATH</varname> would be:
       <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</filename>
@@ -103,7 +103,7 @@
 
       <para> To build packages from source on a NetBSD system the
         <quote>comp</quote> and the <quote>text</quote> distribution
-        sets must be installed. If you want to build X11 related
+        sets must be installed. If you want to build X11-related
         packages the <quote>xbase</quote> and <quote>xcomp</quote>
         distribution sets are required, too.</para>
       <!-- FIXME: what about installing x11/XFree86-*? -->
@@ -140,7 +140,7 @@
       <title>How to build and install</title>
 
       <para>Assuming that the distfile has been fetched (see previous section), become
-        root and change into the relevant directory and running
+        root and change into the relevant directory and run
         <command>make</command>. For example, type </para>
 
       <screen>&cprompt; <userinput>cd misc/figlet</userinput>
@@ -167,7 +167,7 @@
         your packages tree. So, to use <filename>/usr/local</filename>, set
         <varname>LOCALBASE=/usr/local</varname> in your environment.  Please note
         that you should use a directory which is
-        dedicated to packages and not shared with other programs (ie, do not try
+        dedicated to packages and not shared with other programs (i.e., do not try
         and use <varname>LOCALBASE=/usr</varname>).  Also, you should not try to
         add any of your own files or directories (such as <filename>src/</filename>,
         <filename>obj/</filename>, or <filename>pkgsrc/</filename>) below the
@@ -225,7 +225,7 @@
         into <varname>BIN_INSTALL_FLAGS</varname>.
         See <filename>pkgsrc/mk/defaults/mk.conf</filename> for more details.</para>
 
-      <para>A final word of warning: If you setup a system that has a non-standard
+      <para>A final word of warning: If you set up a system that has a non-standard
         setting for <varname>LOCALBASE</varname>, be sure to set that
         before any packages are installed, as you can not use several directories
         for the same purpose. Doing so will result in pkgsrc not being able to
