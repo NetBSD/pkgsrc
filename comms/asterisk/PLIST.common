@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2005/05/02 20:33:58 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2005/09/02 12:58:34 adam Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -270,6 +270,7 @@ libdata/asterisk/sounds/digits/h-8.gsm
 libdata/asterisk/sounds/digits/h-9.gsm
 libdata/asterisk/sounds/digits/hundred.gsm
 libdata/asterisk/sounds/digits/million.gsm
+libdata/asterisk/sounds/digits/minus.gsm
 libdata/asterisk/sounds/digits/mon-0.gsm
 libdata/asterisk/sounds/digits/mon-1.gsm
 libdata/asterisk/sounds/digits/mon-10.gsm
@@ -478,6 +479,7 @@ libdata/asterisk/sounds/voicemail
 man/man8/asterisk.8
 sbin/asterisk
 sbin/astgenkey
+sbin/autosupport
 sbin/safe_asterisk
 share/examples/asterisk/adsi.conf
 share/examples/asterisk/adtranvofr.conf
@@ -521,16 +523,3 @@ share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
 share/examples/asterisk/zapata.conf
 share/examples/rc.d/asterisk
-@dirrm share/examples/asterisk
-@dirrm libdata/asterisk/sounds/phonetic
-@dirrm libdata/asterisk/sounds/letters
-@dirrm libdata/asterisk/sounds/digits
-@dirrm libdata/asterisk/sounds
-@dirrm libdata/asterisk/mohmp3
-@dirrm libdata/asterisk/keys
-@dirrm libdata/asterisk/images
-@dirrm libdata/asterisk/firmware/iax
-@dirrm libdata/asterisk/firmware
-@dirrm libdata/asterisk/agi-bin
-@dirrm libdata/asterisk
-@dirrm include/asterisk
