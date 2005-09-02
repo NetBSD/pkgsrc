@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.266 2005/09/02 10:11:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.267 2005/09/02 10:42:18 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -117,6 +117,10 @@ sub log_message($$$$$) {
 		$file =~ s,^(?:\./)+,,;
 		$file =~ s,/(?:\./)+,/,g;
 		$file =~ s,/+,/,g;
+
+		# strip intermediate "../.." path components
+		while ($file =~ s,/[^.][^/]*/[^.][^/]*/\.\./\.\./,/,) {
+		}
 	}
 
 	$text = "";
