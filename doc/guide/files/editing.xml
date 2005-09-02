@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.7 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.8 2005/09/02 19:12:37 rillig Exp $ -->
 
 <appendix id="editing">
   <title>Editing guidelines for the pkgsrc guide</title>
@@ -69,8 +69,8 @@
           Make sure you have the packages needed to re-generate the
           pkgsrc guide (and other XML-based NetBSD documentation)
           installed. These are <quote>netbsd-doc</quote> for creating the
-          ASCII- and HTML-version, and
-          <quote>netbsd-doc-print</quote>for the PostScript- and PDF
+          ASCII and HTML version, and
+          <quote>netbsd-doc-print</quote> for the PostScript and PDF
           version. You will need both packages installed, to make sure
           documentation is consistent across all formats. The packages
           can be found in

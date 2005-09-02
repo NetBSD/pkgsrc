@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.17 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.18 2005/09/02 19:12:37 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -42,7 +42,7 @@ pkgsrc/bootstrap/bmake/var.c 1.2
     backslash, the backslash, the newline, and any whitespace
     immediately behind the newline are replaced with a single space. A
     backspace character and an immediately following hash character are
-    replaced with a single hash character. Otherwise the backslash is
+    replaced with a single hash character. Otherwise, the backslash is
     passed as is. In a variable assignment, any hash character that is
     not preceded by a backslash starts a comment that continues upto the
     end of the logical line.</para>
@@ -56,14 +56,14 @@ pkgsrc/bootstrap/bmake/var.c 1.2
     variables is evaluating them. A variable is evaluated when it is
     part of the right side of the ``:='' or the ``!='' operator, or
     directly before executing a shell command which the variable is part
-    of. In all other cases &man.make.1; performs lazy evaluation, that
+    of. In all other cases, &man.make.1; performs lazy evaluation, that
     is, variables are not evaluated until there's no other way. The
     ``modifiers'' mentioned in the man page also evaluate the
     variable.</para>
 
     <para>Some of the modifiers split the string into words and then
     operate on the words, others operate on the string as a whole. When
-    a string is splitted into words, it is splitted as you would expect
+    a string is split into words, it is split as you would expect
     it from &man.sh.1;.</para>
 
     <para>No rule without exception&mdash;the <command>.for</command>
@@ -76,14 +76,14 @@ pkgsrc/bootstrap/bmake/var.c 1.2
     <itemizedlist>
 
       <listitem><para><emphasis>Strings</emphasis> can contain arbitrary
-      characters. Nevertheless you should restrict yourself to only
+      characters. Nevertheless, you should restrict yourself to only
       using printable characters. Examples are
       <varname>PREFIX</varname> and
       <varname>COMMENT</varname>.</para></listitem>
 
       <listitem><para><emphasis>Internal lists</emphasis> are lists that
       are never exported to any shell command. Their elements are
-      separated by whitespace. Therefore the elements themselves cannot
+      separated by whitespace. Therefore, the elements themselves cannot
       have embedded whitespace. Any other characters are allowed.
       Internal lists can be used in <command>.for</command> loops.
       Examples are <varname>DEPENDS</varname> and
@@ -201,14 +201,14 @@ all:
       <para>Example 4 handles correctly every string that does not start
       with a dash. In that case, the result depends on the
       implementation of the &man.echo.1; command. As long as you can
-      guarantee that your input does not start with a dash this form is
+      guarantee that your input does not start with a dash, this form is
       appropriate.</para>
 
       <para>Example 5 handles even the case of a leading dash
       correctly.</para>
 
       <para>The <varname>EXT_LIST</varname> does not need to be quoted
-      because the quoting has already be done when adding elements to
+      because the quoting has already been done when adding elements to
       the list.</para>
 
       <para>As internal lists shall not be passed to the shell, there is
@@ -226,7 +226,7 @@ all:
 
 	<listitem><para>Whenever you use the value of a list, think
 	about what happens to leading or trailing whitespace. If the
-	list is a well-formed shell expression you can apply the
+	list is a well-formed shell expression, you can apply the
 	<varname>:M*</varname> modifier to strip leading and trailing
 	whitespace from each word. The <varname>:M</varname> operator
 	first splits its argument according to the rules of the shell,
@@ -235,7 +235,7 @@ all:
 	One class of situations where this is needed is when adding a
 	variable like <varname>CPPFLAGS</varname> to
 	<varname>CONFIGURE_ARGS</varname>. If the configure script
-	invokes other configure scripts it strips the leading and
+	invokes other configure scripts, it strips the leading and
 	trailing whitespace from the variable and then passes it to the
 	other configure scripts. But these configure scripts expect the
 	(child) <varname>CPPFLAGS</varname> variable to be the same as
@@ -267,7 +267,7 @@ all:
 	operator for it, as this operator only works for the
 	shell.</para></listitem>
 
-	<listitem><para>Whenever a variable can be empty the
+	<listitem><para>Whenever a variable can be empty, the
 	<varname>:Q</varname> operator can have surprising results. Here
 	are two completely different cases which can be solved with the
 	same trick.</para>
