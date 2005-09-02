@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.404 2005/08/24 11:05:51 salo Exp $
+# $NetBSD: Makefile,v 1.405 2005/09/02 14:44:33 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -30,6 +30,8 @@ SUBDIR+=	dfm
 SUBDIR+=	dtx11session
 SUBDIR+=	dxpc
 SUBDIR+=	ebuilder
+SUBDIR+=	ede
+SUBDIR+=	efltk
 SUBDIR+=	egtk
 SUBDIR+=	eterm
 SUBDIR+=	fbdesk
