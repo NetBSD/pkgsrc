@@ -1,27 +1,14 @@
-Common Lisp is
-  * a convential programming language and an AI language
-  * interactive
-  * a Lisp for professional use
+Common Lisp is a high-level, general-purpose programming language. GNU
+CLISP is a Common Lisp implementation by Bruno Haible of Karlsruhe
+University and Michael Stoll of Munich University, both in Germany.
 
-Common Lisp CLISP
-  * needs only 2 MB of memory
-  * mostly implements the ANSI Common Lisp standard, as well as some
-    extensions
-  * can call your preferred editor
-  * is freely distributable
+It mostly supports the Lisp described in the ANSI Common Lisp standard.
+It runs on microcomputers (Windows NT/2000/XP, Windows 95/98/ME) as well
+as on Unix workstations (Linux, SVR4, Sun4, DEC Alpha OSF, HP-UX, BeOS,
+NeXTstep, SGI, AIX and others) and needs only 2 MB of RAM.
 
-Common Lisp CLISP provides
-  * an interpreter
-  * a compiler which makes execution of programs 5 times faster
-  * a debugger
-  * all data types with unlimited size (the size need never be declared,
-    the size of lists and arrays may be changed dynamically)
-  * integers of arbitrary length, unlimited floating point number precision
-  * An X11 interface is available through CLX, Garnet, CLUE/CLIO.
-  * CLOS, a foreign language interface, sockets, i18n, and more.
-
+The user interface comes in German, English, French, Spanish, Dutch and
+Russian. GNU CLISP includes an interpreter, a compiler, a debugger,
+CLOS, a foreign language interface, sockets, i18n, fast bignums and
+more. An X11 interface is available through CLX, Garnet, CLUE/CLIO. GNU
 CLISP runs Maxima, ACL2 and many other Common Lisp packages.
-
-It is Free Software and may be distributed under the terms of GNU GPL,
-while it is possible to distribute commercial applications compiled
-with CLISP.
