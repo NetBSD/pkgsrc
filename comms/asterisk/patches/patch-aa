@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/04/13 19:23:56 riz Exp $
---- Makefile.orig	2005-03-10 09:15:05.000000000 +0100
-+++ Makefile	2005-04-13 19:32:56.000000000 +0200
-@@ -42,7 +42,7 @@
+$NetBSD: patch-aa,v 1.3 2005/09/02 12:58:34 adam Exp $
+
+--- Makefile.orig	2005-04-26 14:30:23.000000000 +0000
++++ Makefile
+@@ -42,7 +42,7 @@ MPG123TARG=linux
  endif
  
  ifeq ($(findstring BSD,${OSARCH}),BSD)
@@ -10,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2005/04/13 19:23:56 riz Exp $
  endif
  
  # Pentium Pro Optimize
-@@ -122,6 +122,7 @@
+@@ -122,6 +122,7 @@ ASTBINDIR=$(INSTALL_PREFIX)/usr/bin
  ASTSBINDIR=$(INSTALL_PREFIX)/usr/sbin
  ASTVARRUNDIR=$(INSTALL_PREFIX)/var/run
  ASTMANDIR=$(INSTALL_PREFIX)/usr/share/man
@@ -18,7 +19,7 @@ $NetBSD: patch-aa,v 1.2 2005/04/13 19:23:56 riz Exp $
  
  MODULES_DIR=$(ASTLIBDIR)/modules
  AGI_DIR=$(ASTVARLIBDIR)/agi-bin
-@@ -148,7 +149,7 @@
+@@ -148,7 +149,7 @@ endif # FreeBSD
  
  ifeq (${OSARCH},NetBSD)
  CFLAGS+=-pthread
@@ -27,7 +28,7 @@ $NetBSD: patch-aa,v 1.2 2005/04/13 19:23:56 riz Exp $
  MPG123TARG=netbsd
  endif
  
-@@ -159,8 +160,11 @@
+@@ -159,8 +160,11 @@ endif
  #Uncomment this to use the older DSP routines
  #CFLAGS+=-DOLD_DSP_ROUTINES
  
@@ -41,7 +42,7 @@ $NetBSD: patch-aa,v 1.2 2005/04/13 19:23:56 riz Exp $
  
  LIBEDIT=editline/libedit.a
  
-@@ -200,7 +204,7 @@
+@@ -200,7 +204,7 @@ ifeq (${OSARCH},FreeBSD)
  LIBS+=-lcrypto
  endif
  ifeq (${OSARCH},NetBSD)
@@ -50,7 +51,7 @@ $NetBSD: patch-aa,v 1.2 2005/04/13 19:23:56 riz Exp $
  endif
  ifeq (${OSARCH},OpenBSD)
  LIBS=-lcrypto -lpthread -lm -lncurses
-@@ -448,29 +452,29 @@
+@@ -450,29 +454,29 @@ install: all datafiles bininstall
  upgrade: all bininstall
  
  adsi: all

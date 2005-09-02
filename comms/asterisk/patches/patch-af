@@ -1,15 +1,16 @@
-$NetBSD: patch-af,v 1.1 2005/05/24 14:29:06 riz Exp $
---- codecs/gsm/Makefile.orig	2005-05-23 20:29:10.000000000 -0700
-+++ codecs/gsm/Makefile	2005-05-23 20:29:48.000000000 -0700
-@@ -43,6 +43,7 @@
- ifneq ($(shell uname -m),ppc)
+$NetBSD: patch-af,v 1.2 2005/09/02 12:58:34 adam Exp $
+
+--- codecs/gsm/Makefile.orig	2005-06-21 14:27:28.000000000 +0000
++++ codecs/gsm/Makefile
+@@ -44,6 +44,7 @@ ifneq ($(shell uname -m),ppc)
  ifneq ($(shell uname -m),alpha)
+ ifneq ($(shell uname -m),armv4l)
  ifneq (${PROC},sparc64)
 +ifneq (${PROC},powerpc)
+ ifneq (${PROC},ppc)
+ ifneq (${PROC},ppc64)
  OPTIMIZE+=-march=$(PROC)
- endif
- endif
-@@ -50,6 +51,7 @@
+@@ -56,6 +57,7 @@ endif
  endif
  endif
  endif
