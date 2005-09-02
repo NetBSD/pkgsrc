@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.14 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.15 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -9,7 +9,7 @@
     <para>
       Once you have built and installed a package, you can create a
       <emphasis>binary package</emphasis> which can be installed on
-      another system with &man.pkg.add.1; This saves having to build
+      another system with &man.pkg.add.1;. This saves having to build
       the same package on a group of hosts and wasting CPU time. It
       also provides a simple means for others to install your package,
       should you distribute it.
@@ -99,7 +99,7 @@ _ACCEPTABLE=    yes</programlisting>
 	<title><filename>pre-build.local</filename></title>
 
 	<para>It is possible to configure the bulk build to perform
-	  certain site specific tasks at the end of the pre-build
+	  certain site-specific tasks at the end of the pre-build
 	  stage.  If the file 
 	  <filename>pre-build.local</filename> exists in
 	  <filename>/usr/pkgsrc/mk/bulk</filename>, it will be executed
@@ -269,7 +269,7 @@ fi</programlisting>
     </sect2>
 
     <sect2 id="setting-up-a-sandbox">
-      <title>Setting up a sandbox for chroot'ed builds</title>
+      <title>Setting up a sandbox for chrooted builds</title>
 
       <para>
         If you don't want all the packages nuked from a machine
@@ -393,7 +393,7 @@ fi</programlisting>
 	</step>
       </procedure>
 
-      <para>When the chroot sandbox is setup, you can start
+      <para>When the chroot sandbox is set up, you can start
 	the build with the following steps:</para>
 
       <screen>&rprompt; <userinput>cd /usr/sandbox/usr/pkgsrc</userinput>
@@ -413,7 +413,7 @@ fi</programlisting>
       <para> In addition to building a complete set of all packages in
         pkgsrc, the <filename>pkgsrc/mk/bulk/build</filename> script
         may be used to build a subset of the packages contained in
-        pkgsrc.  By setting defining <varname>SPECIFIC_PKGS</varname>
+        pkgsrc.  By setting <varname>SPECIFIC_PKGS</varname>
         in <filename>/etc/mk.conf</filename>, the variables</para>
 
       <itemizedlist>
@@ -468,7 +468,7 @@ fi</programlisting>
       <screen>RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload </screen>
 
       <para>
-        Please use appropviate values for "pkgsrc-200xQy",
+        Please use appropriate values for "pkgsrc-200xQy",
         "NetBSD-a.b.c" and "arch" here. If your login on
         ftp.NetBSD.org is different from <varname>CVS_USER</varname>,
         write your login directly into the variable, e.g. my local
@@ -494,7 +494,7 @@ fi</programlisting>
 
       <para>
         Before uploading the binary pkgs, ssh authentication needs to
-        be set up. This example shows how to setup temporary keys
+        be set up. This example shows how to set up temporary keys
         for the root account <emphasis>inside the sandbox</emphasis>
         (assuming that no keys should be present there usually):
       </para>
@@ -569,7 +569,7 @@ nbftp% <userinput>chmod 755 .</userinput> </screen>
       <filename role="pkg">pkgtools/cdpack</filename> package provides 
       a simple tool for creating the ISO 9660 images. 
       <command>cdpack</command> arranges the packages on the CD-ROMs in a 
-      way that keeps all the dependencies for given package on the same 
+      way that keeps all the dependencies for a given package on the same 
       CD as that package.
     </para>
 
@@ -578,7 +578,7 @@ nbftp% <userinput>chmod 755 .</userinput> </screen>
 
       <para>
         Complete documentation for cdpack is found in the cdpack(1)
-        manpage. The following short example assumes that the binary
+        man page. The following short example assumes that the binary
         packages are left in
         <filename>/usr/pkgsrc/packages/All</filename> and that
         sufficient disk space exists in <filename>/u2</filename> to
