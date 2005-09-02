@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2005/07/12 10:58:09 schmonz Exp $
+$NetBSD: distinfo,v 1.16 2005/09/02 01:08:48 schmonz Exp $
 
-SHA1 (ezmlm-idx-0.442.tar.gz) = fae68bb6dd201a5e746526a5c6c7b6f163eeb4a1
-RMD160 (ezmlm-idx-0.442.tar.gz) = 80fbbb68aa37df29f0131931712a9c0868c55a07
-Size (ezmlm-idx-0.442.tar.gz) = 580077 bytes
+SHA1 (ezmlm-idx-0.443.tar.gz) = d8f63c6f7a04d9581cd330e8d5e64fbb9f3f48b6
+RMD160 (ezmlm-idx-0.443.tar.gz) = e06b1eadd65cb79efbdd6529a4cfc9dd7efdc805
+Size (ezmlm-idx-0.443.tar.gz) = 579970 bytes
 SHA1 (ezmlm-0.53.tar.gz) = 3a7b618737fed8b774bec69c272d70f4142c1e30
 RMD160 (ezmlm-0.53.tar.gz) = 6d366de2d7028a984ba454f1bec9d2d9f495c88b
 Size (ezmlm-0.53.tar.gz) = 62693 bytes
