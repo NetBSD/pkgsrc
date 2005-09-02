@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2005/08/19 18:12:37 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.6 2005/09/02 12:58:34 adam Exp $
 
-DISTNAME=		asterisk-1.0.7
-PKGREVISION=		1
-CATEGORIES=		comms net audio
-MASTER_SITES=		ftp://ftp.asterisk.org/pub/asterisk/ \
-			ftp://ftp.asterisk.org/pub/asterisk/old-releases/
+DISTNAME=	asterisk-1.0.9
+CATEGORIES=	comms net audio
+MASTER_SITES=	http://ftp.digium.com/pub/asterisk/
 
-MAINTAINER=		riz@NetBSD.org
-HOMEPAGE=		http://www.asterisk.org/
-COMMENT=		The Asterisk Software PBX
+MAINTAINER=	riz@NetBSD.org
+HOMEPAGE=	http://www.asterisk.org/
+COMMENT=	The Asterisk Software PBX
 
 USE_TOOLS+= 		bison gmake
 
