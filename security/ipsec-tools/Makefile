@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/21 21:58:41 tron Exp $
+# $NetBSD: Makefile,v 1.20 2005/09/02 17:01:13 tron Exp $
 
 DISTNAME=		ipsec-tools-0.6.1
 CATEGORIES=		security
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		manu@NetBSD.org
 HOMEPAGE=		http://ipsec-tools.sourceforge.net/
 COMMENT=		IPsec-tools racoon IKE daemon
+
+ONLY_FOR_PLATFORM=	NetBSD-[3-9].*-* Linux-2.[6-9].*-*
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
