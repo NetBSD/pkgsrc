@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3835 2005/09/01 18:12:54 rillig Exp $
+$NetBSD: TODO,v 1.3836 2005/09/02 12:59:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -337,7 +337,6 @@ Suggested package updates
 	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
-	o asterisk-1.0.9
 	o astyle-1.15.3
 	o aterm-1.0.0
 	o autogen-5.7.1

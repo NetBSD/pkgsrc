@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.10999 2005/09/02 11:48:34 tron Exp $
+$NetBSD: CHANGES,v 1.11000 2005/09/02 12:59:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3874,3 +3874,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/pvs to 3.2 [jschauma 2005-09-02]
 	Updated www/curl to 7.14.1 [adam 2005-09-02]
 	Updated www/apache2 to 2.0.54nb5 [tron 2005-09-02]
+	Updated comms/asterisk to 1.0.9 [adam 2005-09-02]
