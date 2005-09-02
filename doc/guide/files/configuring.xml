@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.5 2005/08/03 16:34:19 wiz Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.6 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -6,9 +6,9 @@
   <sect1 id="general-configuration">
     <title>General configuration</title>
 
-    <para>In this section you can find some variables that apply all
-      pkgsrc packages.  The preferred method of setting them is by
-      setting them in <filename>/etc/mk.conf</filename>.
+    <para>In this section, you can find some variables that apply to all
+      pkgsrc packages.  The preferred method of setting these variables
+      is by setting them in <filename>/etc/mk.conf</filename>.
       <itemizedlist>
 	<listitem><para><varname>LOCALBASE</varname>: Where
 	    packages will be installed. The default is

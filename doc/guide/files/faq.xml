@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.14 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.15 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -206,15 +206,10 @@ etc:</para>
 
 </itemizedlist>
 
-<para>Utilities for people maintaining pkgsrc (or more obscure pkg
+<para>Utilities for people maintaining pkgsrc (or: more obscure pkg
 utilities)</para>
 
 <itemizedlist>
-
-  <listitem>
-    <para><filename role="pkg">pkgtools/pkgconflict</filename>: Find 
-      packages that conflict but aren't marked as such.</para>
-  </listitem>
 
   <listitem>
     <para><filename role="pkg">pkgtools/pkg_comp</filename>: Build 
@@ -262,7 +257,7 @@ that allow finer tuning of the tree layout.</para>
 <sect1 id="resume-transfers">
 <title>How to resume transfers when fetching distfiles?</title>
 
-<para>By default resuming transfers in pkgsrc is disabled, but you can
+<para>By default, resuming transfers in pkgsrc is disabled, but you can
 enable this feature by adding the option
 <varname>PKG_RESUME_TRANSFERS=YES</varname> into
 <filename>/etc/mk.conf</filename>.  If, during a fetch step, an incomplete
@@ -318,7 +313,7 @@ you will have to add the following line into
 <para>If you are sitting behind a firewall which does not allow direct
 connections to Internet hosts (i.e. non-NAT), you may specify the
 relevant proxy hosts.  This is done using an environment variable in the
-form of a URL e.g. in Amdahl, the machine
+form of a URL, e.g. in Amdahl, the machine
 <quote>orpheus.amdahl.com</quote> is one of the firewalls, and it uses
 port 80 as the proxy port number.  So the proxy environment variables
 are:</para>
@@ -371,7 +366,7 @@ url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/">ftp.NetBSD.org</ulink>
 but downloading the entire directory may not be appropriate.</para>
 
 <para>The answer here is to do a <command>make fetch-list</command> in
-<filename>/usr/pkgsrc</filename> or one of it's subdirectories, carry the
+<filename>/usr/pkgsrc</filename> or one of its subdirectories, carry the
 resulting list to your machine at work/school and use it there.  If you
 don't have a NetBSD-compatible &man.ftp.1; (like lukemftp) at work, don't
 forget to set <varname>FETCH_CMD</varname> to something that fetches a
@@ -417,7 +412,7 @@ package, you get the error from make that it doesn't know how to make
 <filename>/usr/share/tmac/tmac.andoc</filename>? This indicates that
 you don't have installed the <quote>text</quote> set (nroff, ...) from
 the NetBSD base distribution on your machine.  It is recommended to do
-that to format manpages.</para>
+that to format man pages.</para>
 
 <para>In the case of the <filename 
   role="pkg">pkgtools/pkg_install</filename> package, you
@@ -432,7 +427,7 @@ environment or in <filename>/etc/mk.conf</filename>.</para>
 <title>What does <quote>Could not find bsd.own.mk</quote> mean?</title>
 
 <para> You didn't install the compiler set, <filename>comp.tgz</filename>,
-when you installed your NetBSD machine.  Please get it and install it, by
+when you installed your NetBSD machine.  Please get and install it, by
 extracting it in <filename>/</filename>:</para>
 
 <screen><prompt>#</prompt> <userinput>cd /</userinput>
@@ -487,7 +482,7 @@ setting the <varname>PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</varname> variable.
 package you would like to modify, that is, the contents of
 <varname>PKGBASE</varname>.</para>
 
-<para>Note that, after changing these settings, you must rebuild and
+<para>Note that after changing these settings, you must rebuild and
 reinstall any affected packages.</para>
 
 </sect1>

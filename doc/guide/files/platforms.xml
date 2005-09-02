@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.12 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.13 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -75,7 +75,7 @@
   </sect1>
 
   <sect1 id="platform-specific-notes">
-    <title>Platform specific notes</title>
+    <title>Platform-specific notes</title>
 
     <para>Here are some platform-specific notes you should be aware of.</para>
 
@@ -102,7 +102,7 @@
 
       <note>
 	<para>You cannot use a HFS+ file system for pkgsrc, because pkgsrc currently
-	  requires the filesystem to be case-sensitive, and HFS+ is not.</para>
+	  requires the file system to be case-sensitive, and HFS+ is not.</para>
       </note>
 
       <sect3 id="platform.osx-image">
@@ -200,7 +200,7 @@
     <sect2 id="interix">
       <title>Interix</title>
 
-      <para>Interix is a POSIX compatible subsystem for the Windows NT kernel,
+      <para>Interix is a POSIX-compatible subsystem for the Windows NT kernel,
 	providing a Unix-like environment with a tighter kernel integration than
 	available with Cygwin.  It is part of the Windows Services for Unix
 	package, available for free for any licensed copy of Windows 2000, XP
@@ -254,7 +254,7 @@
 	      Add or Remove, then uncheck Utilities-&gt;UNIX Perl.</para>
 	  </listitem>
 	  <listitem>
-	    <para>To enable case-sensitivity for the filesystem, run REGEDIT.EXE, and
+	    <para>To enable case-sensitivity for the file system, run REGEDIT.EXE, and
 	      change the following registry key:</para>
 	    <para>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel</para>
 	    <para>Set the DWORD value "obcaseinsensitive" to 0; then reboot.</para>
@@ -322,7 +322,7 @@
       <para>If you have the actual pkgsrc tree mounted via NFS from a different host,
 	please make sure to set <varname>WRKOBJDIR</varname> to a local directory,
 	as it appears that IRIX linker occasionally runs into issues when trying to
-	link over a network mounted filesystem.</para>
+	link over a network-mounted file system.</para>
 
       <para>The bootstrapping process should set all the right options for programs such
 	as imake(1), but you may want to set some options depending on your local
@@ -429,7 +429,7 @@
 	    <filename>/etc/mk.conf.example</filename> file
 	    when you use the bootstrap script. OpenBSD's make program uses
 	    <filename>/etc/mk.conf</filename>
-	    as well. You can work around this by enclosing all the pkgsrc specific parts 
+	    as well. You can work around this by enclosing all the pkgsrc-specific parts 
 	    of the file with:</para>
 
           <programlisting>.ifdef BSD_PKG_MK
@@ -516,20 +516,20 @@
 
 	<para>You should set <varname>CC</varname>, <varname>CXX</varname> and
 	  optionally, <varname>CPP</varname> in <filename>/etc/mk.conf</filename>,
-	  eg.</para>
+	  e.g.:</para>
 
         <programlisting>CC=     cc
 CXX=    CC
 CPP=    /usr/ccs/lib/cpp</programlisting>
 
-	<para>You may also want to build 64-bit binaries, eg.</para>
+	<para>You may also want to build 64-bit binaries, e.g.:</para>
 
         <programlisting>CFLAGS= -xtarget=ultra -xarch=v9</programlisting>
 
 	<para>Whichever compiler you use, please ensure the compiler tools and
 	  your $prefix are in your <varname>PATH</varname>. This includes
 	  <filename>/usr/ccs/{bin,lib}</filename>
-	  and eg. <filename>/usr/pkg/{bin,sbin}</filename>.</para>
+	  and e.g. <filename>/usr/pkg/{bin,sbin}</filename>.</para>
       </sect3>
     </sect2>
   </sect1>
