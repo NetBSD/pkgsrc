@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.264 2005/09/01 23:24:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.265 2005/09/02 01:03:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -371,7 +371,7 @@ my $regex_unresolved	= qr"\$\{";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 my $regex_validchars	= qr"[\011\040-\176]";
-my $regex_varassign	= qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=|:=)\s*(.*)";
+my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*(.*?)(\\?)$";
 my $regex_yes		= qr"^(?:YES|yes)$";
 my $regex_yesno		= qr"^(?:YES|yes|NO|no)$";
 
@@ -498,6 +498,24 @@ sub parse_command_line() {
 			help(*STDERR, 1, false);
 		}
 	}
+}
+
+sub get_logical_line($$) {
+	my ($lines, $ref_lineno) = @_;
+	my ($value, $lineno);
+
+	$value = "";
+	for ($lineno = ${$ref_lineno}; $lineno <= $#{$lines}; $lineno++) {
+		my $text = $lines->[$lineno]->text;
+		if ($text =~ qr"^(.*)\\$") {
+			$value .= $1;
+		} else {
+			$value .= $text;
+			last;
+		}
+	}
+	${$ref_lineno} = $lineno + 1;
+	return $value;
 }
 
 sub load_make_vars_typemap() {
@@ -653,7 +671,7 @@ sub checkline_valid_characters_in_variable($$) {
 
 	$rest = $line->text;
 	if ($rest =~ $regex_varassign) {
-		($varname, undef, $rest) = ($1, $2, $3);
+		($varname, undef, $rest, undef) = ($1, $2, $3, $4);
 	} else {
 		return;
 	}
@@ -1225,7 +1243,7 @@ sub checklines_direct_tools($) {
 		EXTRACT_SUFX EXTRACT_USING
 		INTERACTIVE_STAGE
 		MANSOURCEPATH MASTER_SITES
-		PKGNAME PKGSRC_USE_TOOLS
+		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON
 		SUBST_MESSAGE\\..*
 		.*_TARGET
 		USE_TOOLS);
@@ -1252,8 +1270,9 @@ sub checklines_direct_tools($) {
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_rm_shellcmds=${regex_rm_shellcmds}");
 
-	foreach my $line (@{$lines}) {
-		my $text = $line->text;
+	for (my $lineno = 0; $lineno <= $#{$lines}; ) {
+		my $line = $lines->[$lineno];
+		my $text = get_logical_line($lines, \$lineno);
 
 		next unless ($text =~ $regex_tools);
 		my ($tool) = ($1);
@@ -1262,8 +1281,8 @@ sub checklines_direct_tools($) {
 		if ($text =~ qr"^#") {
 
 		# process variable assignments
-		} elsif ($text =~ qr"^([\w.]+?)\s*[?+:!]?=\s*(.*)") {
-			my ($varname, $value) = ($1, $2);
+		} elsif ($text =~ $regex_varassign) {
+			my ($varname, undef, $varvalue, $varcont) = ($1, $2, $3, $4);
 
 			if ($varname =~ $regex_ok_vars) {
 				$line->log_info("Legitimate direct use of \"${tool}\" in variable ${varname}.");
