@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.7 2005/07/27 21:29:51 rpaulo Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.8 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -7,7 +7,7 @@
     <quote>packing list</quote>, i.e. a list of files that belong to
     the package (relative to the <filename>${PREFIX}</filename>
     directory it's been installed in) plus some additional statements
-    - see the &man.pkg.create.1; manpage for a full list.
+    - see the &man.pkg.create.1; man page for a full list.
     This chapter addresses some issues that need attention when
     dealing with the <filename>PLIST</filename> file (or files, see
     below!).</para>
@@ -84,7 +84,7 @@
         <listitem>
           <para>Some packages like emacs and perl embed information
             about which architecture they were built on into the
-            pathnames where they install their file. To handle this
+            pathnames where they install their files. To handle this
             case, PLIST will be preprocessed before actually used, and
             the symbol
             <quote><varname>${MACHINE_ARCH}</varname></quote> will be
@@ -92,7 +92,7 @@
             same is done if the string
             <varname>${MACHINE_GNU_ARCH}</varname> is embedded in
             PLIST somewhere - use this on packages that have GNU
-            autoconf created configure scripts.</para>
+            autoconf-created configure scripts.</para>
 
           <note>
             <title>Legacy note</title>
@@ -163,13 +163,13 @@
   </sect1>
 
   <sect1 id="manpage-compression">
-    <title>Manpage-compression</title>
+    <title>Man page-compression</title>
     
-    <para>Manpages should be installed in compressed form if
+    <para>Man pages should be installed in compressed form if
       <varname>MANZ</varname> is set (in <filename>bsd.own.mk</filename>),
       and uncompressed otherwise. To handle this in the
       <filename>PLIST</filename> file, the suffix <quote>.gz</quote> is
-      appended/removed automatically for manpages according to
+      appended/removed automatically for man pages according to
       <varname>MANZ</varname> and <varname>MANCOMPRESSED</varname> being set
       or not, see above for details. This modification of the
       <filename>PLIST</filename> file is done on a copy of it, not
@@ -189,7 +189,7 @@
 
 
   <sect1 id="platform-specific-plist">
-    <title>Platform specific and differing PLISTs</title>
+    <title>Platform-specific and differing PLISTs</title>
     
     <para>Some packages decide to install a different set of files based on
       the operating system being used. These differences can be
@@ -286,7 +286,7 @@
       print-PLIST</command>, you should get the right (commented out)
       lines. </para> 
       
-    <para> Note that, even if your package is using
+    <para> Note that even if your package is using
       <filename>$X11BASE</filename>, it must not depend on the
       *-x11-dirs packages.  Just specify the name without that part and
       pkgsrc (in particular, <filename>mk/dirs.mk</filename>) will take

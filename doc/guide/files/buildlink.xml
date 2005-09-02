@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.6 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.7 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -88,7 +88,7 @@
       </listitem>
 
       <listitem>
-	<para><filename>curses.buildlink3.mk</filename> If the system
+	<para><filename>curses.buildlink3.mk</filename>: If the system
           comes with neither Curses nor NCurses, this will take care
 	  to install the <filename 
 	    role="pkg">devel/ncurses</filename> package.</para>  
@@ -106,13 +106,13 @@
 	  for a system-provided
 	  Motif installation or adds a dependency on <filename 
 	    role="pkg">x11/lesstif</filename> or
-	  <filename role="pkg">x11/openmotif</filename>;</para>
+	  <filename role="pkg">x11/openmotif</filename>.</para>
       </listitem>
 
       <listitem>
 	<para><filename>ossaudio.buildlink3.mk</filename> defines several
 	  variables that may be used by packages that use the
-	  Open Sound System (OSS) API;</para>
+	  Open Sound System (OSS) API.</para>
       </listitem>
 
       <listitem>
@@ -125,7 +125,7 @@
 	<para><filename>pthread.buildlink3.mk</filename> uses the value of
 	  <varname>PTHREAD_OPTS</varname> and checks for native pthreads or adds
 	  a dependency on <filename 
-	    role="pkg">devel/pth</filename> as needed;</para>
+	    role="pkg">devel/pth</filename> as needed.</para>
       </listitem>
 
       <listitem>
@@ -234,7 +234,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} </programlisting>
         <listitem>
 	  <para> <varname>BUILDLINK_PKGSRCDIR.<replaceable>pkg</replaceable></varname>
 	    is the location of the <replaceable>pkg</replaceable>
-	    pkgsrc directory;</para> 
+	    pkgsrc directory.</para> 
 	</listitem>
 	
         <listitem>
@@ -359,7 +359,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} </programlisting>
       <orderedlist>
         <listitem>
 	  <para> if the sonames (major number of the library version)
-	    of any installed shared libraries change; </para>
+	    of any installed shared libraries change. </para>
         </listitem>
 
         <listitem>

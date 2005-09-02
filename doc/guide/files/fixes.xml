@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.28 2005/07/28 11:05:36 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.29 2005/09/02 19:12:37 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -12,14 +12,14 @@
       <para>The problem with package-defined variables that can be
         overridden via <varname>MAKECONF</varname> or
         <filename>/etc/mk.conf</filename> is that &man.make.1; expands a
-        variable as it is used, but evaluates preprocessor like
+        variable as it is used, but evaluates preprocessor-like
         statements (.if, .ifdef and .ifndef) as they are read.  So, to
         use any variable (which may be set in
         <filename>/etc/mk.conf</filename>) in one of the .if*
         statements, the file <filename>/etc/mk.conf</filename> must be
         included before that .if* statement.</para>
     
-      <para>Rather than have a number of ad-hoc ways of including
+      <para>Rather than having a number of ad-hoc ways of including
         <filename>/etc/mk.conf</filename>, should it exist, or
         <varname>MAKECONF</varname>, should it exist, include the
         <filename>pkgsrc/mk/bsd.prefs.mk</filename> file in the package
@@ -33,7 +33,7 @@
     .endif</programlisting>
     
       <para>If you wish to set the <varname>CFLAGS</varname> variable
-        in <filename>/etc/mk.conf</filename> please make sure to use: 
+        in <filename>/etc/mk.conf</filename>, please make sure to use: 
     
         <programlisting>CFLAGS+=  -your -flags</programlisting>
     
@@ -299,12 +299,12 @@
         pkgsrc tree.</para>
     
       <para>In this case you can set <varname>CONFLICTS</varname> to a
-        space separated list of packages (including version string) your
+        space-separated list of packages (including version string) your
         package conflicts with.</para>
     
-      <para>For example <filename role="pkg">x11/Xaw3d</filename> 
+      <para>For example, <filename role="pkg">x11/Xaw3d</filename> 
         and <filename role="pkg">x11/Xaw-Xpm</filename>
-        install provide the same shared library, thus you set in
+        install the same shared library, thus you set in
         <filename>pkgsrc/x11/Xaw3d/Makefile</filename>:</para>
     
       <programlisting>CONFLICTS=      Xaw-Xpm-[0-9]*</programlisting>
@@ -391,7 +391,7 @@
         are gcc internal errors  or never finishing compiling a file.
 </para> 
     
-      <para>Typically a workaround involves testing the
+      <para>Typically, a workaround involves testing the
         <varname>MACHINE_ARCH</varname>  and compiler version, disabling
         optimisation for that
         file/<varname>MACHINE_ARCH</varname>/compiler  combination, and
@@ -418,7 +418,7 @@
         <quote>foo-17.42nb9</quote>.</para>
     
       <para>When a new release of the package is released, the
-        <varname>PKGREVISION</varname> should be removed. e.g. on a new
+        <varname>PKGREVISION</varname> should be removed, e.g. on a new
         minor release of the above package, things should be like:
 </para>
     
@@ -528,7 +528,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
 	<filename role="pkg">devel/libtool</filename> pkg
         can help here, as it just <quote>knows</quote> how to build
         both static and dynamic libraries from a set of source files,
-        thus being platform independent.</para>
+        thus being platform-independent.</para>
 
       <para>Here's how to use libtool in a pkg in seven simple
         steps:</para> 
@@ -677,7 +677,7 @@ dynamic linker chooses the library with the greater REVISION number. </programli
         libraries built and installed, then use
         <varname>SHLIBTOOL_OVERRIDE</varname> instead.</para>
 
-      <para>If your package makes use of the platform independent library
+      <para>If your package makes use of the platform-independent library
         for loading dynamic shared objects, that comes with libtool
         (libltdl), you should include devel/libltdl/buildlink3.mk.</para>
 
@@ -788,7 +788,7 @@ pre-configure:
 
       <para>Please use the <quote>__NetBSD__</quote> definition sparingly - it
         should only apply to features of &os; that are not present in other
-        4.4-lite derived BSDs.</para>
+        4.4-lite-derived BSDs.</para>
     </sect2>
   </sect1>
   
@@ -822,7 +822,7 @@ pre-configure:
 
       <para>The <varname>INTERACTIVE_STAGE</varname> definition is provided to notify
         the pkgsrc mechanism of an interactive stage which will be needed, and
-        this should be set in the package's <filename>Makefile</filename>. e.g.</para>
+        this should be set in the package's <filename>Makefile</filename>, e.g.:</para>
 
       <programlisting>INTERACTIVE_STAGE= build</programlisting>
 
@@ -1051,7 +1051,7 @@ pre-configure:
         <filename>INSTALL</filename> script, and it must use the
         appropriate <command>makeinfo</command> command.</para>
     
-      <para>To achieve this goal the pkgsrc infrastructure creates
+      <para>To achieve this goal, the pkgsrc infrastructure creates
         overriding scripts for the <command>install-info</command> and
         <command>makeinfo</command> commands in a directory listed early
         in <varname>PATH</varname>.</para>
@@ -1178,7 +1178,7 @@ pre-configure:
     <sect2 id="gtk2-modules">
       <title>Packages installing GTK2 modules</title>
     
-      <para>If a package installs gtk2 immodules or loaders, you need to
+      <para>If a package installs GTK2 immodules or loaders, you need to
         take some extra steps to get them registered in the GTK2 database
         properly:</para>
     
@@ -1201,7 +1201,7 @@ pre-configure:
       </listitem>
       
       <listitem> <para>
-        Patch the package to not touch any of the gtk2 databases directly.
+        Patch the package to not touch any of the GTK2 databases directly.
         These are:
     
         <itemizedlist>
@@ -1295,7 +1295,7 @@ pre-configure:
             <emphasis>except</emphasis> for files saved under 
             <filename>share/mime/packages</filename>.  The former are
             handled automatically by 
-            the update-mime-database program, but the later are
+            the update-mime-database program, but the latter are
             package-dependent and must be removed by the package that
             installed them in the first place.</para>
         </listitem>
