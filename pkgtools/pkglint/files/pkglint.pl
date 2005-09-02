@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.265 2005/09/02 01:03:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.266 2005/09/02 10:11:24 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1403,16 +1403,15 @@ sub load_package_Makefile($$$$) {
 		}
 	}
 
-	$distinfo_file = expand_variable($whole, "DISTINFO_FILE");
-	$filesdir = expand_variable($whole, "FILESDIR");
-	$patchdir = expand_variable($whole, "PATCHDIR");
 	$pkgdir = expand_variable($whole, "PKGDIR");
-	$scriptdir = expand_variable($whole, "SCRIPTDIR");
-
-	set_default_value(\$distinfo_file, "distinfo");
-	set_default_value(\$filesdir, "files");
-	set_default_value(\$patchdir, "patches");
 	set_default_value(\$pkgdir, ".");
+	$distinfo_file = expand_variable($whole, "DISTINFO_FILE");
+	set_default_value(\$distinfo_file, "distinfo");
+	$filesdir = expand_variable($whole, "FILESDIR");
+	set_default_value(\$filesdir, "files");
+	$patchdir = expand_variable($whole, "PATCHDIR");
+	set_default_value(\$patchdir, "patches");
+	$scriptdir = expand_variable($whole, "SCRIPTDIR");
 	set_default_value(\$scriptdir, "scripts");
 
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "DISTINFO_FILE=$distinfo_file");
