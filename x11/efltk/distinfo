@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/09/02 14:41:37 xtraeme Exp $
+
+SHA1 (efltk-2.0.5.tar.bz2) = 26f7124b384d0bfe3d28a73cbdf0111432b08d99
+RMD160 (efltk-2.0.5.tar.bz2) = 7efa711d0df8a01ee402e1866286265d294778e8
+Size (efltk-2.0.5.tar.bz2) = 1241294 bytes
+SHA1 (patch-aa) = d87f595661c465fc315b643241b22ef65926906e
+SHA1 (patch-ab) = 27a6870c068c8ea44089955a7d3c0492191f23ba
