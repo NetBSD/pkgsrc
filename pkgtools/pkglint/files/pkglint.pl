@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.269 2005/09/02 12:10:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.270 2005/09/02 12:39:42 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -349,7 +349,6 @@ my (%warnings) = (
 );
 
 my $opt_autofix		= false;
-my $opt_debug		= false;
 my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
 my $opt_recursive	= false;
@@ -377,8 +376,6 @@ my (@options) = (
 		my ($opt, $val) = @_;
 		parse_multioption($val, \%warnings);
 	  } ],
-	[ "-d", "Enable debugging mode",
-	  "debug|d", \$opt_debug ],
 	[ "-g", "Mimic the gcc output format",
 	  "gcc-output-format|g",
 	  sub {
@@ -2423,21 +2420,9 @@ sub main() {
 
 	parse_command_line();
 
-	if ($opt_debug) {
-		use Time::HiRes;
-		($startsec, $startusec) = Time::HiRes::gettimeofday();
-	}
-
 	@todo_dirs = (@ARGV != 0) ? @ARGV : (".");
 	while (@todo_dirs != 0) {
 		checkdir(shift(@todo_dirs));
-	}
-
-	if ($opt_debug) {
-		($endsec, $endusec) = Time::HiRes::gettimeofday();
-		printf STDERR ("%.0f %s\n",
-			($endsec - $startsec) * 1.0e6 + ($endusec - $startusec),
-			getcwd());
 	}
 
 	print_summary_and_exit($opt_quiet);
