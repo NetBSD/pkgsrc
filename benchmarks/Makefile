@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/09/03 05:58:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.37 2005/09/03 06:27:25 xtraeme Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -20,6 +20,7 @@ SUBDIR+=	iozone
 SUBDIR+=	kttcp
 SUBDIR+=	linpack-bench
 SUBDIR+=	lmbench
+SUBDIR+=	nbench
 SUBDIR+=	netio
 SUBDIR+=	netpipe
 SUBDIR+=	nettest
