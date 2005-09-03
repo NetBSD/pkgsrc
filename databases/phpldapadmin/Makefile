@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/09/03 16:14:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/03 17:00:07 adrianp Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 PKGREVISION=	4
@@ -38,12 +38,12 @@ do-install:
 		${PREFIX}/share/examples/phpldapadmin
 
 	@${RM} ${WRKSRC}/config.php.example
+	@${FIND} ${WRKSRC} -name \*.orig | ${XARGS} ${RM}
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpldapadmin
 	cd ${WRKSRC} && ${PAX}		\
 		-s /\.#//		\
 		-s /\.cvsignore//	\
-		-s /\.orig//		\
 		-rwppm . ${PREFIX}/share/phpldapadmin
 
 .include "../../mk/apache.mk"

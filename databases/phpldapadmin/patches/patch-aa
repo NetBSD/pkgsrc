@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2005/08/30 14:26:32 adrianp Exp $
+$NetBSD: patch-aa,v 1.2 2005/09/03 17:00:07 adrianp Exp $
 
 --- login.php.orig	2005-04-15 14:16:59.000000000 +0100
 +++ login.php
@@ -13,3 +13,13 @@ $NetBSD: patch-aa,v 1.1 2005/08/30 14:26:32 adrianp Exp $
  
  if( ! $anon_bind )
  	strlen($pass) or pla_error( $lang['password_blank'] );
+@@ -149,9 +151,6 @@ include realpath( 'header.php' );
+ 		parent.left_frame.location.reload();
+ 	<?php } ?>
+ 
+-	<?php if ( isset($custom_welcome_page) and $custom_welcome_page ) { ?>
+-		parent.right_frame.location.href='welcome.php';
+-	<?php } ?>
+ </script>
+ 
+ <center>
