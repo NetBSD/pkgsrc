@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2005/07/31 01:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.245 2005/09/03 22:47:23 xtraeme Exp $
 #
 
 COMMENT=	Security tools
@@ -18,6 +18,7 @@ SUBDIR+=	apg
 SUBDIR+=	arirang
 SUBDIR+=	audit-packages
 SUBDIR+=	avcheck
+SUBDIR+=	bcrypt
 SUBDIR+=	beecrypt
 SUBDIR+=	bitstir
 SUBDIR+=	cfs
