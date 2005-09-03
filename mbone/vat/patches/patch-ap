@@ -1,9 +1,8 @@
-$NetBSD$
+$NetBSD: patch-ap,v 1.1 2005/09/03 23:05:14 rillig Exp $
 
 --- configure.in.tk.orig	Thu May 16 04:06:05 1996
 +++ configure.in.tk	Wed Jan 26 16:03:04 2000
-@@ -2,6 +2,8 @@
- dnl $Header: configure.in.tk,v 1.2 96/05/16 01:03:40 van Exp $ (LBL)
+@@ -3,5 +3,7 @@
  
  AC_ARG_WITH(tcl,	--with-tcl=path	specify a pathname for tcl, d=$withval, d="")
 +tcldir=tcl8.3
