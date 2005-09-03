@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2004/11/08 14:54:18 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2005/09/03 18:16:07 xtraeme Exp $
 #
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.xmame
-PKG_SUPPORTED_OPTIONS=	sdl opengl esound
+PKG_OPTIONS_VAR=		PKG_OPTIONS.xmame
+PKG_OPTIONS_OPTIONAL_GROUPS=	video
+PKG_OPTIONS_GROUP.video=	sdl opengl
+PKG_SUPPORTED_OPTIONS=		esound
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msdl)
@@ -13,10 +16,6 @@ MAME_DISP_METHOD?=	xgl
 .include "../../graphics/Mesa/buildlink3.mk"
 .else
 MAME_DISP_METHOD?=	x11
-.endif
-
-.if !empty(PKG_OPTIONS:Msdl) && !empty(PKG_OPTIONS:Mopengl)
-PKG_SKIP_REASON+=	"Only one display method is allowed."
 .endif
 
 .if !empty(PKG_OPTIONS:Mesound)
