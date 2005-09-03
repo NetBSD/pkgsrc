@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.103 2005/09/03 13:20:40 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.104 2005/09/03 13:34:10 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -287,3 +287,5 @@ Pullup ticket 732 - requested by Matthias Scheler
 security fix for apache2
 Pullup ticket 725 - requested by Adrian Portelli
 security fixes for phpldapadmin
+Pullup ticket 735 - requested by Adrian Portelli
+security update for nikto
