@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2005/09/03 16:14:18 adrianp Exp $
+
+--- welcome.php.orig	2005-09-03 16:53:02.000000000 +0100
++++ welcome.php
+@@ -10,10 +10,6 @@
+ 	include './header.php'; 
+ //	include './config.php'; 
+     
+-if ( isset($custom_welcome_page) && $custom_welcome_page ) {
+-    include_once $custom_welcome_page;
+-
+-} else {
+     // Close the session for faster page loading
+     pla_session_close();
+ ?>
