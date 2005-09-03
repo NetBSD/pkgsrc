@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3838 2005/09/03 16:59:32 tonio Exp $
+$NetBSD: TODO,v 1.3839 2005/09/03 23:01:44 tonio Exp $
 
 Suggested new packages
 ======================
@@ -322,7 +322,6 @@ Suggested package updates
 	o ap2-auth-ldap-3.05
 	o ap2-chroot-0.4
 	o ap2-transform-0.6.0
-	o apache-ant-1.6.5 [pkg/30332]
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
 	o apg-2.2.3 [pkg/30345|zuntum]
 	o apr-1.1.1
