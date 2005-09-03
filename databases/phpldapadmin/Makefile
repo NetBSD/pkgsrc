@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/09/01 19:56:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/03 16:14:18 adrianp Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
@@ -19,7 +19,7 @@ APACHE_USER?=	www
 CONF_FILES=	${PREFIX}/share/examples/phpldapadmin/config.php.example \
 		${PREFIX}/share/phpldapadmin/config.php
 CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf \
-		${PKG_SYSCONFDIR}/httpd/phpldapadmin.conf		
+		${PKG_SYSCONFDIR}/httpd/phpldapadmin.conf
 SPECIAL_PERMS=	${PREFIX}/share/phpldapadmin/config.php \
 		${APACHE_USER} wheel 0600
 
