@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2005/09/03 12:09:58 tonio Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/03 12:39:23 tonio Exp $
 
-DISTNAME=		${PKGNAME:S/-/_/}
+DISTNAME=		${PKGNAME:S/-/_/:C|nb[0-9]*$||}
 PKGNAME=		lbdb-0.30
 PKGREVISION=	1
 CATEGORIES=		databases
