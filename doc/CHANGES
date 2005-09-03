@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11004 2005/09/03 06:53:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11005 2005/09/03 11:05:46 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3880,3 +3880,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added benchmarks/ubench version 0.32 [xtraeme 2005-09-03]
 	Added benchmarks/nbench version 2.2.2 [xtraeme 2005-09-03]
 	Added benchmarks/pipebench version 0.40 [xtraeme 2005-09-03]
+	Updated security/nikto to 1.35nb1 [adrianp 2005-09-03]
