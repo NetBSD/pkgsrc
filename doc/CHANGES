@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11006 2005/09/03 13:40:40 adrianp Exp $
+$NetBSD: CHANGES,v 1.11007 2005/09/03 14:21:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3882,3 +3882,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added benchmarks/pipebench version 0.40 [xtraeme 2005-09-03]
 	Updated security/nikto to 1.35nb1 [adrianp 2005-09-03]
 	Updated lang/php5 to 5.0.4nb1 [adrianp 2005-09-03]
+	Added devel/p5-Date-Simple version 3.02 [minskim 2005-09-03]
