@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11007 2005/09/03 14:21:13 minskim Exp $
+$NetBSD: CHANGES,v 1.11008 2005/09/03 16:01:53 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3883,3 +3883,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/nikto to 1.35nb1 [adrianp 2005-09-03]
 	Updated lang/php5 to 5.0.4nb1 [adrianp 2005-09-03]
 	Added devel/p5-Date-Simple version 3.02 [minskim 2005-09-03]
+	Updated print/pscal to 1.16 [recht 2005-09-03]
