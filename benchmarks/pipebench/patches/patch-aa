@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/09/03 06:51:57 xtraeme Exp $
+
+--- Makefile.orig	2005-09-03 08:42:58.000000000 +0200
++++ Makefile	2005-09-03 08:44:36.000000000 +0200
+@@ -1,7 +1,7 @@
+ # $Id: patch-aa,v 1.1.1.1 2005/09/03 06:51:57 xtraeme Exp $
+ 
+-CC=gcc
+-CFLAGS=-Wall -w -pedantic
++#CC=gcc
++CFLAGS+=-Wall -w -pedantic
+ 
+ all: pipebench
+ doc: pipebench.1
