@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-bm,v 1.4 2005/09/03 23:12:20 rillig Exp $
 
 Shut up gcc.
 
