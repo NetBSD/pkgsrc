@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3837 2005/09/03 16:07:38 recht Exp $
+$NetBSD: TODO,v 1.3838 2005/09/03 16:59:32 tonio Exp $
 
 Suggested new packages
 ======================
@@ -649,7 +649,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.6.0
 	o muse-0.9.1
-	o mutt-devel-1.5.10
 	o nagios-2.0b3 [replacing netsaint]
 	o nail-11.25
 	o nano-1.2.5
