@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/04/11 20:16:02 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/09/03 13:37:36 adrianp Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -293,6 +293,7 @@ share/php/php.gif
 @dirrm lib/php/test/HTML_Template_IT/tests/templates
 @dirrm lib/php/test/HTML_Template_IT/tests
 @dirrm lib/php/test/HTML_Template_IT
+@dirrm lib/php/test
 @dirrm lib/php/doc/HTML_Template_IT/examples/templates
 @dirrm lib/php/doc/HTML_Template_IT/examples
 @dirrm lib/php/doc/HTML_Template_IT
@@ -336,3 +337,4 @@ share/php/php.gif
 @dirrm include/php/Zend
 @dirrm include/php/TSRM
 @dirrm include/php
+@unexec ${RMDIR} %D/lib/php 2>/dev/null || ${TRUE}
