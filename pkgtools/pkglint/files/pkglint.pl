@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.271 2005/09/02 22:45:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.272 2005/09/03 10:19:05 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -97,7 +97,9 @@ BEGIN {
 		print_summary_and_exit set_verbose is_verbose
 		set_gcc_output_format
 	);
-	import PkgLint::Util qw(false true);
+	import PkgLint::Util qw(
+		false true
+	);
 }
 
 use constant NO_FILE		=> undef;
@@ -239,7 +241,7 @@ sub to_string($) {
 
 package PkgLint::FileUtil;
 #==========================================================================
-# This package provides the subroutine load_file reads, which reads a file
+# This package provides the subroutine load_file, which reads a file
 # completely into memory as an array of lines.
 #==========================================================================
 use strict;
@@ -251,7 +253,9 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(load_file);
 
-	import PkgLint::Util qw(false true);
+	import PkgLint::Util qw(
+		false true
+	);
 }
 
 sub load_file($) {
@@ -285,7 +289,9 @@ use File::Basename;
 use Cwd;
 
 BEGIN {
-	import PkgLint::Util qw(false true);
+	import PkgLint::Util qw(
+		false true
+	);
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER
 		log_error log_warning log_info log_subinfo
