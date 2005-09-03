@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.273 2005/09/03 10:41:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.274 2005/09/03 11:53:15 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1254,7 +1254,8 @@ sub checklines_direct_tools($) {
 	my @cmd_tools = qw(
 		file gunzip gzip);
 	my $tools = join("|", @tools, @cmd_tools);
-	my $regex_tools = qr"(?:^|\s|/)(${tools})(?:\s|$)";
+	my $regex_tools = qr"${tools}";
+	my $regex_tools_with_context = qr"(?:^|\s|/)($regex_tools)(?:\s|$)";
 
 	my @ok_vars = qw(
 		BUILDLINK_TRANSFORM BUILD_DEPENDS
@@ -1288,13 +1289,13 @@ sub checklines_direct_tools($) {
 
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_tools=${regex_tools}");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_rm_shellcmds=${regex_valid_shellcmds}");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_valid_shellcmds=${regex_valid_shellcmds}");
 
 	for (my $lineno = 0; $lineno <= $#{$lines}; ) {
 		my $line = $lines->[$lineno];
 		my $text = get_logical_line($lines, \$lineno);
 
-		next unless ($text =~ $regex_tools);
+		next unless ($text =~ $regex_tools_with_context);
 		my ($tool) = ($1);
 
 		# skip comments
@@ -1312,15 +1313,29 @@ sub checklines_direct_tools($) {
 
 		# process shell commands
 		} elsif ($text =~ qr"^\t(.*)$") {
-			my ($shellcmd, $remaining_shellcmd) = ($1, $1);
+			my ($short_shellcmd, $remaining_shellcmd) = ($1, $1);
 
 			# Remove known legitimate uses from the string
 			$remaining_shellcmd =~ s,$regex_valid_shellcmds,,g;
 
-			if ($remaining_shellcmd =~ $regex_tools) {
-				$line->log_warning("Possible direct use of \"${tool}\" in shell command \"${shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
+			# As shell commands tend to become long, extract
+			# the relevant part only.
+			if ($short_shellcmd =~ qr"(.{0,15})\Q${tool}\E(.{0,15})") {
+				my ($before, $after) = ($1, $2);
+
+				if (length($before) == 15) {
+					$before = "...${before}";
+				}
+				if (length($after) == 15) {
+					$after = "${after}...";
+				}
+				$short_shellcmd = "${before}${tool}${after}";
+			}
+
+			if ($remaining_shellcmd =~ $regex_tools_with_context) {
+				$line->log_warning("Possible direct use of \"${tool}\" in shell command \"${short_shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
 			} else {
-				$line->log_info("Legitimate direct use of \"${tool}\" in shell command \"${shellcmd}\".");
+				$line->log_info("Legitimate direct use of \"${tool}\" in shell command \"${short_shellcmd}\".");
 			}
 
 		# skip processing directives
