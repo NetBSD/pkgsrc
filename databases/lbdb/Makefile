@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/08/30 16:14:53 tonio Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/03 12:09:58 tonio Exp $
 
 DISTNAME=		${PKGNAME:S/-/_/}
 PKGNAME=		lbdb-0.30
+PKGREVISION=	1
 CATEGORIES=		databases
 MASTER_SITES=		http://www.spinnaker.de/debian/
 
