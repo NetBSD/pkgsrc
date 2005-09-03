@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2005/04/14 21:01:48 markd Exp $
+$NetBSD: patch-aa,v 1.14 2005/09/03 21:34:44 markd Exp $
 
---- configure.orig	2005-03-05 02:15:11.000000000 +1300
+--- configure.orig	2005-07-21 09:08:37.000000000 +1200
 +++ configure
-@@ -30682,7 +30682,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
+@@ -30769,7 +30769,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
  	# if you're trying to debug this check and think it's incorrect,
  	# better check your installation. The check _is_ correct - your
  	# installation is not.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.13 2005/04/14 21:01:48 markd Exp $
  		kde_cv_uic_plugins=yes
  	fi
  fi
-@@ -42279,6 +42279,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -42372,6 +42372,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.13 2005/04/14 21:01:48 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -44908,6 +44925,9 @@ case "$host" in
+@@ -45004,6 +45021,9 @@ case "$host" in
    *-*-freebsd*)
  	FOUND_USBVIEW=yes
  	;;
@@ -45,7 +45,16 @@ $NetBSD: patch-aa,v 1.13 2005/04/14 21:01:48 markd Exp $
  esac
  
  
-@@ -52928,6 +52948,7 @@ fi
+@@ -46214,7 +46234,7 @@ acimake:
+ 
+ EOF
+     if $XMKMF >&5 2>&1 && test -f Makefile; then
+-	kde_cv_defines_imake=`${MAKE-make} acimake 2> /dev/null | grep -v "^make"`
++	kde_cv_defines_imake=`${MAKE-make} PREFIX='${X11_ROOT}' acimake 2> /dev/null | grep -v "^make"`
+ 	kde_cv_defines_imake_version=$imkv
+     else
+         echo "$as_me:$LINENO: result: failed" >&5
+@@ -53104,6 +53124,7 @@ fi
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
