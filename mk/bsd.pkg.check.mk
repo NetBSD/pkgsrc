@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.14 2005/08/20 02:45:05 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.15 2005/09/03 23:28:30 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -59,6 +59,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/${INFO_DIR}/dir
 .endif
 CHECK_FILES_SKIP+=	${PERL5_INSTALLARCHLIB}/perllocal.pod
 CHECK_FILES_SKIP+=	${PREFIX}/emul/linux/proc
+CHECK_FILES_SKIP+=	${PKG_DBDIR}.refcount
 .for d in ${MAKE_DIRS} ${OWN_DIRS}
 CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}
 .endfor
