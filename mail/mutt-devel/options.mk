@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/08/02 13:15:40 tonio Exp $
+# $NetBSD: options.mk,v 1.8 2005/09/03 03:21:23 jlam Exp $
 
 # Global and legacy options
 
@@ -47,6 +47,14 @@ CONFIGURE_ARGS+=	--without-ssl
 BDB_ACCEPTED=		db4
 .  include "../../mk/bdb.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hcache
+CONFIGURE_ARGS+=	--without-gdbm
+#
+# BDB_INCLUDE_DIR_ and BDB_LIB_DIR don't have to be particularly accurate
+# since the real -I and -L flags are added by buildlink already.
+#
+CONFIGURE_ENV+=		BDB_INCLUDE_DIR=${BDBBASE}/include
+CONFIGURE_ENV+=		BDB_LIB_DIR=${BDBBASE}/lib
+CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//}
 .else
 CONFIGURE_ARGS+=	--disable-hcache
 .endif
