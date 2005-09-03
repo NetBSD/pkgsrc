@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11011 2005/09/03 18:57:59 abs Exp $
+$NetBSD: CHANGES,v 1.11012 2005/09/03 19:02:19 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3887,4 +3887,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/phpldapadmin to 0.9.6cnb4 [adrianp 2005-09-03]
 	Updated mail/mutt-devel to 1.5.10 [tonio 2005-09-03]
 	Updated net/autonet to 0.16 [abs 2005-09-03]
+	Updated sysutils/rconfig to 0.43 [abs 2005-09-03]
 
