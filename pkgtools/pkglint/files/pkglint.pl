@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.272 2005/09/03 10:19:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.273 2005/09/03 10:41:23 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -425,7 +425,6 @@ my $seen_Makefile_common;
 my $pkgname;
 my @todo_dirs;
 
-sub checkperms($);
 sub readmakefile($$$$);
 sub checkextra($$);
 sub checkorder($$@);
@@ -663,8 +662,16 @@ sub get_subdirs($) {
 	return @result;
 }
 
+sub checkperms($) {
+	my ($fname) = @_;
+
+	if ($opt_warn_exec && -f $fname && -x $fname && !is_committed($fname)) {
+		log_warning($fname, NO_LINE_NUMBER, "Should not be executable.");
+	}
+}
+
 #
-# Subroutines common to all checking routines
+# Subroutines to check a single line.
 #
 
 sub checkline_length($$) {
@@ -726,6 +733,10 @@ sub checkline_rcsid($$) {
 	checkline_rcsid_regex($line, quotemeta($prefix), $prefix);
 }
 
+#
+# Subroutines to check an array of lines.
+#
+
 sub checklines_trailing_empty_lines($) {
 	my ($lines) = @_;
 	my ($last, $max);
@@ -740,7 +751,7 @@ sub checklines_trailing_empty_lines($) {
 }
 
 #
-# Specific subroutines
+# Subroutines to check a file.
 #
 
 sub checkfile_DESCR($$) {
@@ -964,17 +975,6 @@ sub checkfile_buildlink3_mk($$) {
 	checklines_direct_tools($lines);
 }
 
-sub checkperms($) {
-	my ($fname) = @_;
-
-	if ($opt_warn_exec && -f $fname && -x $fname && !is_committed($fname)) {
-		log_warning($fname, NO_LINE_NUMBER, "Should not be executable.");
-	}
-}
-
-#
-# misc files
-#
 sub checkfile_extra($$) {
 	my ($dir, $fname) = @_;
 	my ($lines);
@@ -990,8 +990,7 @@ sub checkfile_extra($$) {
 	checkperms($fname);
 }
 
-# $lines => an array of lines as returned by load_file().
-sub check_for_multiple_patches($) {
+sub checklines_multiple_patches($) {
 	my ($lines) = @_;
 	my ($files_in_patch, $patch_state, $line_type, $dellines);
 
@@ -1078,7 +1077,7 @@ sub checkfile_patches_patch($$) {
 	}
 	checklines_trailing_empty_lines($lines);
 
-	check_for_multiple_patches($lines);
+	checklines_multiple_patches($lines);
 }
 
 sub readmakefile($$$$) {
@@ -1142,7 +1141,7 @@ sub readmakefile($$$$) {
 	return $contents;
 }
 
-sub check_Makefile_vartype($$) {
+sub checkline_Makefile_vartype($$) {
 	my ($line, $vartypes) = @_;
 	if ($line->text =~ qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)") {
 		my ($varname, $op, $value) = ($1, $2, $3);
@@ -1200,7 +1199,7 @@ sub checklines_Makefile_varuse($) {
 
 	# Check variable types
 	foreach my $line (@{$lines}) {
-		check_Makefile_vartype($line, $checklines_Makefile_varuse_map);
+		checkline_Makefile_vartype($line, $checklines_Makefile_varuse_map);
 	}
 }
 
@@ -1268,7 +1267,7 @@ sub checklines_direct_tools($) {
 		SUBST_MESSAGE\\..*
 		.*_TARGET
 		USE_TOOLS);
-	my @rm_shellcmds = (
+	my @valid_shellcmds = (
 		qr"for file in",
 		qr"(?:\./Build|\$\{JAM_COMMAND\})\s+(?:install|test)",
 		qr"\"[^\"]*${regex_tools}[^\"]*\"",
@@ -1284,12 +1283,12 @@ sub checklines_direct_tools($) {
 
 	my $ok_vars = join("|", @ok_vars);
 	my $regex_ok_vars = qr"^(?:${ok_vars})$";
-	my $rm_shellcmds = join("|", @rm_shellcmds);
-	my $regex_rm_shellcmds = qr"(?:${rm_shellcmds})";
+	my $valid_shellcmds = join("|", @valid_shellcmds);
+	my $regex_valid_shellcmds = qr"(?:${valid_shellcmds})";
 
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_tools=${regex_tools}");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_rm_shellcmds=${regex_rm_shellcmds}");
+	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_rm_shellcmds=${regex_valid_shellcmds}");
 
 	for (my $lineno = 0; $lineno <= $#{$lines}; ) {
 		my $line = $lines->[$lineno];
@@ -1312,13 +1311,13 @@ sub checklines_direct_tools($) {
 			}
 
 		# process shell commands
-		} elsif ($text =~ qr"^\t(.*?)(?:\s*\\)?$") {
-			my ($shellcmd, $rm_shellcmd) = ($1, $1);
+		} elsif ($text =~ qr"^\t(.*)$") {
+			my ($shellcmd, $remaining_shellcmd) = ($1, $1);
 
 			# Remove known legitimate uses from the string
-			$rm_shellcmd =~ s,$regex_rm_shellcmds,,g;
+			$remaining_shellcmd =~ s,$regex_valid_shellcmds,,g;
 
-			if ($rm_shellcmd =~ $regex_tools) {
+			if ($remaining_shellcmd =~ $regex_tools) {
 				$line->log_warning("Possible direct use of \"${tool}\" in shell command \"${shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
 			} else {
 				$line->log_info("Legitimate direct use of \"${tool}\" in shell command \"${shellcmd}\".");
