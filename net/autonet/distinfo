@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/06/14 18:28:21 abs Exp $
+$NetBSD: distinfo,v 1.4 2005/09/03 18:57:12 abs Exp $
 
-SHA1 (autonet-0.15.tbz) = 30c1c02b7a631d5c5ceac21d76f8ec5db8d0ed23
-RMD160 (autonet-0.15.tbz) = 4b8ffaea315a3f372c3cccf5042fae041ee5c0c3
-Size (autonet-0.15.tbz) = 5526 bytes
+SHA1 (autonet-0.16.tbz) = 4191c998b93aaf8f7f3567f4c05aac71a6984483
+RMD160 (autonet-0.16.tbz) = aa22346996e81bd783232be46d4ac239381a8c65
+Size (autonet-0.16.tbz) = 5560 bytes
