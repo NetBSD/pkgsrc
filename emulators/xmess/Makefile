@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2005/08/25 19:54:49 kristerw Exp $
+# $NetBSD: Makefile,v 1.74 2005/09/03 18:16:07 xtraeme Exp $
 #
 
 DISTNAME=		xmame-0.99
@@ -107,6 +107,13 @@ do-install:
 		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
+
+.if !empty(CC_VERSION:Mgcc-3*)
+SUBST_CLASSES=		pragma
+SUBST_STAGE.pragma=	pre-configure
+SUBST_FILES.pragma=	src/*.h
+SUBST_SED.pragma=	-e "s|\#pragma once||g"
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
