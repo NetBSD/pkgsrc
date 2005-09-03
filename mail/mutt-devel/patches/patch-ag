@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.3 2005/08/20 21:58:00 jlam Exp $
+$NetBSD: patch-ag,v 1.4 2005/09/03 16:57:07 tonio Exp $
 
---- doc/Makefile.in.orig	2005-02-15 14:28:24.000000000 -0500
-+++ doc/Makefile.in
-@@ -80,8 +80,8 @@ install: all instdoc
+--- doc/Makefile.in.orig	2005-08-11 21:37:02.000000000 +0200
++++ doc/Makefile.in	2005-09-03 11:16:26.000000000 +0200
+@@ -81,8 +81,8 @@
  	./instdoc $(srcdir)/dotlock.man \
  		$(DESTDIR)$(mandir)/man1/mutt_dotlock.1
  	./instdoc muttrc.man $(DESTDIR)$(mandir)/man5/muttrc.5
@@ -11,5 +11,14 @@ $NetBSD: patch-ag,v 1.3 2005/08/20 21:58:00 jlam Exp $
 +	./instdoc $(srcdir)/mbox.man $(DESTDIR)$(mandir)/man5/mutt-mbox.5
 +	./instdoc $(srcdir)/mmdf.man $(DESTDIR)$(mandir)/man5/mutt-mmdf.5
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(docdir)
- 	for f in $(srcdir_DOCFILES) ; do \
- 		$(INSTALL) -m 644 $(srcdir)/$$f $(DESTDIR)$(docdir) ; \
+ 	for f in $(topsrcdir_DOCFILES) ; do \
+ 		$(INSTALL) -m 644 $(top_srcdir)/$$f $(DESTDIR)$(docdir) ; \
+@@ -170,7 +170,7 @@
+ 	-e 's,@docdir\@,$(docdir),g'
+ 
+ mutt.1: $(srcdir)/mutt.man
+-	$(EDIT) $< > $@
++	$(EDIT) $(srcdir)/mutt.man > $@
+ 
+ muttrc.man stamp-doc-man: ../makedoc$(EXEEXT) $(top_srcdir)/init.h muttrc.man.head muttrc.man.tail
+ 	$(MAKEDOC_CPP) $(top_srcdir)/init.h | ../makedoc -m | 	    \
