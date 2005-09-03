@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2005/09/03 19:32:52 xtraeme Exp $
+$NetBSD: patch-aa,v 1.6 2005/09/03 22:20:55 rillig Exp $
 
 --- Makefile.orig	2005-09-03 21:31:38.000000000 +0200
 +++ Makefile	2005-09-03 21:31:45.000000000 +0200
-@@ -1,7 +1,7 @@
- # $Id: patch-aa,v 1.5 2005/09/03 19:32:52 xtraeme Exp $
+@@ -2,6 +2,6 @@
  
 -CC=gcc
 -CFLAGS=-Wall -w -pedantic
