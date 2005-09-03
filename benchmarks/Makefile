@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/08/06 20:45:18 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2005/09/03 05:58:59 xtraeme Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -32,6 +32,7 @@ SUBDIR+=	randread
 SUBDIR+=	skampi
 SUBDIR+=	thrulay
 SUBDIR+=	ttcp
+SUBDIR+=	ubench
 SUBDIR+=	whetstone
 SUBDIR+=	xengine
 SUBDIR+=	zelibm

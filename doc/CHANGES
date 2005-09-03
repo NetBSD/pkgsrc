@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11001 2005/09/02 14:44:33 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11002 2005/09/03 05:58:58 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3877,3 +3877,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/asterisk to 1.0.9 [adam 2005-09-02]
 	Added x11/efltk version 2.0.5 [xtraeme 2005-09-02]
 	Added x11/ede version 1.0.4 [xtraeme 2005-09-02]
+	Added benchmarks/ubench version 0.32 [xtraeme 2005-09-03]
