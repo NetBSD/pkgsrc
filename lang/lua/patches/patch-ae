@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.4 2005/09/04 04:59:36 jlam Exp $
+
+--- src/lua/Makefile.orig	Wed Apr  9 02:07:23 2003
++++ src/lua/Makefile
+@@ -12,8 +12,8 @@ T= $(BIN)/lua
+ 
+ all:	$T
+ 
+-$T:	$(OBJS) $(LIB)/liblua.a $(LIB)/liblualib.a
+-	$(CC) -o $@ $(MYLDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
++$T:	$(OBJS)
++	$(CCLD) -o $@ $(MYLDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
+ 
+ $(LIB)/liblua.a:
+ 	cd ..; $(MAKE)

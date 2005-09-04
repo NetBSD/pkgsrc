@@ -1,27 +1,23 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/05 14:54:34 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/09/04 04:59:36 jlam Exp $
 bin/bin2c
 bin/lua
 bin/luac
 include/lauxlib.h
 include/lua.h
 include/lualib.h
-lib/liblua.a
-lib/liblua.so
-lib/liblua.so.5.0
-lib/liblualib.a
-lib/liblualib.so
-lib/liblualib.so.5.0
+lib/liblua.la
+lib/liblualib.la
 man/man1/lua.1
 man/man1/luac.1
-share/doc/html/lua/contents.html
-share/doc/html/lua/logo.gif
-share/doc/html/lua/lua.html
-share/doc/html/lua/luac.html
-share/doc/html/lua/manual.html
-share/doc/html/lua/readme.html
 share/doc/lua/COPYRIGHT
 share/doc/lua/HISTORY
 share/doc/lua/README
+share/doc/lua/contents.html
+share/doc/lua/logo.gif
+share/doc/lua/lua.html
+share/doc/lua/luac.html
+share/doc/lua/manual.html
+share/doc/lua/readme.html
 share/examples/lua/README
 share/examples/lua/bisect.lua
 share/examples/lua/cf.lua
@@ -58,4 +54,3 @@ share/examples/lua/xd.lua
 @dirrm share/examples/lua/etc
 @dirrm share/examples/lua
 @dirrm share/doc/lua
-@dirrm share/doc/html/lua

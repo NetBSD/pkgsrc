@@ -1,15 +1,22 @@
-$NetBSD: patch-ab,v 1.5 2005/06/07 03:52:10 minskim Exp $
+$NetBSD: patch-ab,v 1.6 2005/09/04 04:59:36 jlam Exp $
 
---- Makefile.orig	2004-03-11 19:50:55.000000000 -0600
+--- Makefile.orig	Fri Mar 12 01:50:55 2004
 +++ Makefile
-@@ -38,8 +38,8 @@ install: all strip
+@@ -29,12 +29,12 @@ strip:
+ 	$(STRIP) bin/*
+ 
+ # official installation
+-install: all strip
++install: all
+ 	mkdir -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN)
+-	$(INSTALL_EXEC) bin/* $(INSTALL_BIN)
+-	$(INSTALL_DATA) include/*.h $(INSTALL_INC)
+-	$(INSTALL_DATA) lib/*.a $(INSTALL_LIB)
+-	$(INSTALL_DATA) doc/*.1 $(INSTALL_MAN)
++	cd bin; for f in *; do $(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$f $(INSTALL_BIN); done
++	cd include; for f in *.h; do $(BSD_INSTALL_DATA) $$f $(INSTALL_INC); done
++	cd lib; for f in *.la; do $(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $$f $(INSTALL_LIB); done
++	cd doc; for f in *.1; do $(BSD_INSTALL_MAN) $$f $(INSTALL_MAN); done
  
  # shared libraries (for Linux)
  so:
--	ld -o lib/liblua.so.$V -shared src/*.o
--	ld -o lib/liblualib.so.$V -shared src/lib/*.o
-+	${CC} ${LDFLAGS} -o lib/liblua.so.$V -shared src/*.o ${LIBS}
-+	${CC} ${LDFLAGS} -o lib/liblualib.so.$V -shared src/lib/*.o ${LIBS}
- 	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
- 
- # binaries using shared libraries

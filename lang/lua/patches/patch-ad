@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.4 2005/09/04 04:59:36 jlam Exp $
+
+--- src/lib/Makefile.orig	Fri Mar 28 12:49:56 2003
++++ src/lib/Makefile
+@@ -7,15 +7,20 @@ include $(LUA)/config
+ EXTRA_DEFS= $(POPEN) $(TMPNAM) $(DEGREES) $(LOADLIB)
+ 
+ OBJS= lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o ltablib.o lstrlib.o loadlib.o
++LOBJS= $(OBJS:.o=.lo)
+ SRCS= lauxlib.c lbaselib.c ldblib.c liolib.c lmathlib.c ltablib.c lstrlib.c loadlib.c
+ 
+ T= $(LIB)/liblualib.a
++LT= $(T:.a=.la)
+ 
+-all:	$T
++all:	$(LT)
+ 
+ $T:	$(OBJS)
+ 	$(AR) $@ $(OBJS)
+ 	$(RANLIB) $@
++
++$(LT):	$(LOBJS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(LOBJS) -rpath $(INSTALL_LIB) -version-info $(LV)
+ 
+ clean:
+ 	rm -f $(OBJS) $T
