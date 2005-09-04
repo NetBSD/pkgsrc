@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.22 2005/05/31 10:01:40 dillo Exp $
+# $NetBSD: Makefile.php,v 1.23 2005/09/04 20:13:59 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -18,8 +18,6 @@ CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-exec-dir=${PREFIX}/libexec/php4
 CONFIGURE_ARGS+=	--with-regex=system
 
-CONFIGURE_ARGS+=	--enable-discard-path
-CONFIGURE_ARGS+=	--enable-force-cgi-redirect
 CONFIGURE_ARGS+=	--enable-memory-limit
 CONFIGURE_ARGS+=	--enable-track-vars
 
