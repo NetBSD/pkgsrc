@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/10 02:47:00 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/09/04 13:55:53 taca Exp $
 
-SHA1 (ruby/activesupport-1.0.3.tgz) = a5207d09d4f3caca76319c5058283e28ff03e71a
-RMD160 (ruby/activesupport-1.0.3.tgz) = 7255fa76c9033606075807f3b576ccb731f711f7
-Size (ruby/activesupport-1.0.3.tgz) = 20990 bytes
+SHA1 (ruby/activesupport-1.1.1.tgz) = c6e502334f84924396d34b470e70892e3e9e8ade
+RMD160 (ruby/activesupport-1.1.1.tgz) = 9e7f33ff121ab305dd4f37b1ea5c80d2a506fcfc
+Size (ruby/activesupport-1.1.1.tgz) = 24161 bytes
