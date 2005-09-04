@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3842 2005/09/04 14:53:28 wiz Exp $
+$NetBSD: TODO,v 1.3843 2005/09/04 20:12:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -607,6 +607,7 @@ Suggested package updates
 	o lopster-1.2.2
 	o lout-3.30
 	o lua-sql
+	o m1-0.7.7
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mail-notification-1.1
@@ -895,7 +896,7 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
-	o raine-0.42.5
+	o raine-0.43.0
 	o randread-0.2
 	o raptor-1.4.5
 	o rar-linux-3.5.0
@@ -1069,8 +1070,10 @@ Suggested package updates
 	o webmin-1.220
 	o weechat-0.1.1
 	o weewm-0.01
+	o wesnoth-0.9.6
 	o wget-1.10.1
 	o winbind-3.0.13
+	o wine-20050830
 	o wmbiff-0.4.26
 	o wmctrl-1.07
 	o wmweather-2.4.3
