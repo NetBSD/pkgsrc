@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/03/24 15:00:40 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/09/04 20:21:18 tonio Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fluxbox
@@ -14,6 +14,7 @@ share/fluxbox/keys
 share/fluxbox/menu
 share/fluxbox/nls/C/fluxbox.cat
 share/fluxbox/nls/bg_BG/fluxbox.cat
+share/fluxbox/nls/cs_CZ/fluxbox.cat
 share/fluxbox/nls/da_DK/fluxbox.cat
 share/fluxbox/nls/de_DE/fluxbox.cat
 share/fluxbox/nls/es_ES/fluxbox.cat
@@ -116,6 +117,7 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/nls/es_ES
 @dirrm share/fluxbox/nls/de_DE
 @dirrm share/fluxbox/nls/da_DK
+@dirrm share/fluxbox/nls/cs_CZ
 @dirrm share/fluxbox/nls/bg_BG
 @dirrm share/fluxbox/nls/C
 @dirrm share/fluxbox/nls
