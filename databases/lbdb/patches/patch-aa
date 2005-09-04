@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/08/30 16:14:53 tonio Exp $
+$NetBSD: patch-aa,v 1.3 2005/09/04 14:53:15 tonio Exp $
 
---- Makefile.in.orig	2004-01-18 12:58:43.000000000 +0000
-+++ Makefile.in	2005-07-05 17:40:54.000000000 +0100
-@@ -38,6 +38,7 @@
+--- Makefile.in.orig	2004-01-18 13:58:43.000000000 +0100
++++ Makefile.in
+@@ -38,6 +38,7 @@ srcdir=@srcdir@
  libdir=@libdir@
  mandir=@mandir@
  sysconfdir=@sysconfdir@
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.2 2005/08/30 16:14:53 tonio Exp $
  
  ALL=lbdbq lbdb_lib lbdb-fetchaddr lbdb-munge fetchaddr qpto8bit munge \
  	munge-keeporder	nodelist2lbdb palm_lsaddr mutt_ldap_query lbdbq.man \
-@@ -49,7 +50,7 @@
+@@ -49,7 +50,7 @@ all: Makefile $(ALL)
  install: all
  	$(srcdir)/mkinstalldirs $(install_prefix)$(bindir)
  	$(srcdir)/mkinstalldirs $(install_prefix)$(libdir)
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.2 2005/08/30 16:14:53 tonio Exp $
  	$(srcdir)/mkinstalldirs $(install_prefix)$(mandir)
  	$(srcdir)/mkinstalldirs $(install_prefix)$(mandir)/man1
  	$(INSTALL) -m 755 fetchaddr $(install_prefix)$(libdir)
-@@ -70,7 +71,7 @@
+@@ -70,7 +71,7 @@ install: all
  		$(INSTALL) -m 644 mutt_ldap_query.man \
  			$(install_prefix)$(mandir)/man1/mutt_ldap_query.1; \
  		$(INSTALL) -m 644 lbdb_ldap.rc \
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.2 2005/08/30 16:14:53 tonio Exp $
  	fi
  	if [ "$(XCODEBUILD)" != "no" -o "$(PBXBUILD)" != "no" ]; then \
  		$(INSTALL) -m 755 ABQuery/sym/ABQuery $(install_prefix)$(libdir); \
-@@ -81,7 +82,7 @@
+@@ -81,7 +82,7 @@ install: all
  	$(INSTALL) -m 644 lbdbq.man $(install_prefix)$(mandir)/man1/lbdbq.1
  	$(INSTALL) -m 644 lbdb-fetchaddr.man \
  		$(install_prefix)$(mandir)/man1/lbdb-fetchaddr.1
@@ -37,3 +37,12 @@ $NetBSD: patch-aa,v 1.2 2005/08/30 16:14:53 tonio Exp $
  	if [ "$(DOTLOCK_TARGET)" != "" ]; then \
  		$(INSTALL) -m 755 lbdb_dotlock $(install_prefix)$(bindir); \
  		$(INSTALL) -m 644 dotlock.man \
+@@ -145,7 +146,7 @@ ABQuery/sym/ABQuery: ABQuery/pbxbuild.sh
+ 
+ ABQuery/pbxbuild.sh:
+ 	if [ "$(XCODEBUILD)" != "no" ]; then \
+-		(cd ABQuery; xcodebuild -buildstyle Deployment; printf '#!/bin/sh\nmkdir ABQuery/sym; cp ABQuery/build/ABQuery ABQuery/sym\n' > pbxbuild.sh; chmod a+x pbxbuild.sh) \
++		(cd ABQuery; xcodebuild -buildstyle Deployment; printf '#!/bin/sh\nmkdir ABQuery/sym; if test -d ABQuery/build/Deployment; then cp ABQuery/build/Deployment/ABQuery ABQuery/sym; else cp ABQuery/build/ABQuery ABQuery/sym; fi\n' > pbxbuild.sh; chmod a+x pbxbuild.sh) \
+ 	else \
+ 		(cd ABQuery; pbxbuild -buildstyle Deployment export) \
+ 	fi
