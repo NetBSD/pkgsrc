@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11015 2005/09/04 04:57:30 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11016 2005/09/04 05:07:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3891,3 +3891,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added security/bcrypt version 1.1 [xtraeme 2005-09-04]
 	Updated devel/apache-ant to 1.6.5 [tonio 2005-09-03]
 	Added wm/cwm version 3 [xtraeme 2005-09-04]
+	Updated www/squid to 2.5.10nb2 [taca 2005-09-04]
