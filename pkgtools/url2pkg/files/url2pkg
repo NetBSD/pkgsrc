@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.30 2005/05/07 22:14:32 wiz Exp $
+# $NetBSD: url2pkg,v 1.31 2005/09/04 20:03:10 hubertf Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -39,18 +39,35 @@ if [ ! -f w*/.extract_done ]; then
 		url="$1"
 	fi
 
-	sourceforge="http://prdownloads.sourceforge.net/"
-	if [ `expr "$url" : "$sourceforge.*"` -gt 0 ]; then
-		DISTNAME=`expr "$url" : '.*/\([^/?]*\)'`
-		sfname=`expr "$url" : "${sourceforge}\(.*\)/[^/]*\$"`
-		MASTER_SITES='${MASTER_SITE_SOURCEFORGE:='"$sfname"'/}'
-		HOMEPAGE="http://$sfname.sourceforge.net/"
-	else
+	found=0
+	for A in `cat ../../mk/bsd.sites.mk`; do
+		if [ "`expr "$A" : ".*+="`" -gt 0 ]; then
+			master_site="`echo $A|cut -f1 -d +`"
+		fi
+		if [ ! "${A}" = "\\" ]; then
+		if [ `expr "$url" : "$A"` -gt 0 ]; then
+			found=1
+			DISTNAME=`expr "$url" : '.*/\([^/?]*\)'`
+			name=`expr "$url" : "${A}\(.*\)/[^/]*\$"`
+			MASTER_SITES="\${${master_site}:=${name}}"
+			case "${master_site}" in
+			"MASTER_SITE_SOURCEFORGE")
+				HOMEPAGE="http://$name.sourceforge.net/" ; ;;
+			"MASTER_SITE_GNU")
+				HOMEPAGE="http://www.gnu.org/software/$name/" ; ;;
+			esac
+			HOMEPAGE=`expr "$url" : '\(.*/\)[^/]*$'`
+			break
+		fi
+		fi
+	done
+
+	if [ $found = 0 ]; then
 		DISTNAME=`expr "$url" : '.*/\([^/]*\)$'`
 		MASTER_SITES=`expr "$url" : '\(.*/\)[^/]*$'`
 		HOMEPAGE=$MASTER_SITES
 	fi
-	
+
 	case "$DISTNAME" in
 	*.tgz)		EXTRACT_SUFX=".tgz" 
 			DISTNAME=`expr ${DISTNAME} : '\(.*\)\.[^.]*'`
