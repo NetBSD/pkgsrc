@@ -1,9 +1,9 @@
-$NetBSD: patch-bv,v 1.1 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-bv,v 1.2 2005/09/04 13:57:51 tonio Exp $
 
---- camlp4/compile/Makefile.orig	2004-10-15 15:53:25.000000000 +0100
-+++ camlp4/compile/Makefile	2004-10-15 15:55:06.000000000 +0100
-@@ -29,8 +29,8 @@
- 	OTOP=$(OTOP) EXE=$(EXE) ./compile.sh $(COMP_OPT) $(SRC) > $D_fast.ml
+--- camlp4/compile/Makefile.orig	2005-09-03 16:16:48.000000000 +0200
++++ camlp4/compile/Makefile	2005-09-03 16:18:35.000000000 +0200
+@@ -30,8 +30,8 @@
+ 	OTOP=$(OTOP) EXE=$(EXE) ./compile.sh $(COMP_OPT) $(SRC) >> $D_fast.ml
  
  install:
 -	if test -f camlp4$D.fast.opt; then cp camlp4$D.fast.opt $(BINDIR)/camlp4$D.opt$(EXE); fi
