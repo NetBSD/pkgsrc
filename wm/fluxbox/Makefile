@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/09/04 20:21:18 tonio Exp $
+# $NetBSD: Makefile,v 1.27 2005/09/04 23:41:47 xtraeme Exp $
 #
 
 DISTNAME=	fluxbox-0.9.13
@@ -21,6 +21,7 @@ USE_LIBTOOL=	YES
 
 BUILDLINK_TRANSFORM+=	rename:-O2:-O1
 
+CONFIGURE_ARGS+=	--enable-shape
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-xinerama
 
