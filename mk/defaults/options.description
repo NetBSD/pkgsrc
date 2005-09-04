@@ -2,7 +2,7 @@
 a52	
 aac	
 aalib			Enable aalib support.
-abook			Enable abook support
+abook			Enable abook support.
 ac3_passthrough	
 ads	
 alsa	
@@ -169,7 +169,7 @@ mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 multibyte	
-mutt-hcache		Enable header caching in mutt
+mutt-hcache		Enable header caching in mutt.
 mysql	
 mysql4	
 nas			Enable usage of the Network Audio System.
@@ -188,7 +188,7 @@ openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
 openssl	
 oss			Enable support for the Open Sound System audio library.
-osx-addressbook		Enable support for MacOSX Address Book
+osx-addressbook		Enable support for MacOSX Address Book.
 pam			Enable PAM support.
 patchviewer	
 pcre	
