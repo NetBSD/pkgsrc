@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/01 19:13:24 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/09/04 12:46:01 jdolecek Exp $
 
 MODNAME=		xslt
 CATEGORIES+=		textproc
@@ -22,9 +22,9 @@ CHECK_BUILTIN.iconv:=	no
 
 .if !empty(USE_BUILTIN.iconv:M[nN][oO]) || \
     !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--with-iconv=shared,${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--with-iconv-dir=${BUILDLINK_PREFIX.iconv}
 .else
-CONFIGURE_ARGS+=	--with-iconv
+CONFIGURE_ARGS+=	--with-iconv-dir
 .endif
 
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
