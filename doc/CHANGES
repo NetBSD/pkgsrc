@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11023 2005/09/04 14:32:17 taca Exp $
+$NetBSD: CHANGES,v 1.11024 2005/09/04 17:11:36 sjg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3905,3 +3905,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/ruby-actionpack to 1.9.1 [taca 2005-09-04]
 	Updated mail/ruby-actionmailer to 1.0.1 [taca 2005-09-04]
 	Updated www/ruby-actionwebservice to 0.8.1 [taca 2005-09-04]
+	Updated devel/bmake to 20050901 [sjg 2005-09-04]
