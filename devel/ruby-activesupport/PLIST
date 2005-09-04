@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/10 02:47:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/04 13:55:53 taca Exp $
 ${RUBY_SITELIBDIR}/active_support.rb
 ${RUBY_SITELIBDIR}/active_support/binding_of_caller.rb
 ${RUBY_SITELIBDIR}/active_support/breakpoint.rb
@@ -6,8 +6,14 @@ ${RUBY_SITELIBDIR}/active_support/class_attribute_accessors.rb
 ${RUBY_SITELIBDIR}/active_support/class_inheritable_attributes.rb
 ${RUBY_SITELIBDIR}/active_support/clean_logger.rb
 ${RUBY_SITELIBDIR}/active_support/core_ext.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/array.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/array/to_param.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/cgi.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/cgi/escape_skipping_slashes.rb
 ${RUBY_SITELIBDIR}/active_support/core_ext/date.rb
 ${RUBY_SITELIBDIR}/active_support/core_ext/date/conversions.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/fixnum.rb
+${RUBY_SITELIBDIR}/active_support/core_ext/fixnum/even_odd.rb
 ${RUBY_SITELIBDIR}/active_support/core_ext/hash.rb
 ${RUBY_SITELIBDIR}/active_support/core_ext/hash/indifferent_access.rb
 ${RUBY_SITELIBDIR}/active_support/core_ext/hash/keys.rb
@@ -28,11 +34,15 @@ ${RUBY_SITELIBDIR}/active_support/inflector.rb
 ${RUBY_SITELIBDIR}/active_support/misc.rb
 ${RUBY_SITELIBDIR}/active_support/module_attribute_accessors.rb
 ${RUBY_SITELIBDIR}/active_support/values/time_zone.rb
+${RUBY_SITELIBDIR}/active_support/whiny_nil.rb
 @dirrm ${RUBY_SITELIBDIR}/active_support/values
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/time
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/string
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/numeric
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/hash
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/fixnum
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/date
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/cgi
+@dirrm ${RUBY_SITELIBDIR}/active_support/core_ext/array
 @dirrm ${RUBY_SITELIBDIR}/active_support/core_ext
 @dirrm ${RUBY_SITELIBDIR}/active_support
