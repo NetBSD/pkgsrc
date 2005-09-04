@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.17 2005/08/25 07:24:00 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.18 2005/09/04 00:04:15 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -7,7 +7,7 @@
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Roland Illig <rillig@NetBSD.org>, 2005.
 .\"
-.Dd August 24, 2005
+.Dd September 04, 2005
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -15,7 +15,7 @@
 .Sh SYNOPSIS
 .Nm pkglint
 .Op Fl options
-.Op Ar dir
+.Op Ar dir ...
 .Sh DESCRIPTION
 .Nm
 attempts to detect features of the named pkgsrc packages that are likely
@@ -109,12 +109,10 @@ If omitted, the current directory is checked.
 .El
 .Sh FILES
 .Bl -tag -width /usr/pkgsrc/mk/bsd.pkg.mk -compact
-.It Pa /usr/pkgsrc/mk/bsd.pkg.mk
-The pkgsrc master Makefile
-.It Pa /usr/pkgsrc/*
-The files of the
-.Nx
-packages collection
+.It Pa @PKGSRCDIR@/mk/bsd.pkg.mk
+The pkgsrc master Makefile.
+.It Pa @PKGSRCDIR@/*
+Other pkgsrc files.
 .El
 .Sh EXAMPLES
 .Bl -tag -width Fl
@@ -126,12 +124,11 @@ Checks the category Makefile and reports any warnings it can find.
 .Sh DIAGNOSTICS
 Diagnostics are written to the standard output.
 .Bl -tag -width "WARN: foobaa"
-.It FATAL: ...
-Fatal errors are those that must be fixed before a package may be
-committed to pkgsrc.
+.It ERROR: ...
+Errors should be fixed before a package is committed to pkgsrc.
 .It WARN: ...
 Warnings generally should be fixed, but they are not as critical as
-fatal errors.
+errors.
 .It OK: ...
 Informational messages are only written in verbose mode
 .Pq Fl v .
