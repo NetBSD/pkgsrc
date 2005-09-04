@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2005/06/17 03:50:21 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/09/04 05:00:36 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-kde-/}
+PKGREVISION=	1
 
 COMMENT=	KDE frontend for free real-time 3D space simulator
 
