@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11022 2005/09/04 14:02:44 tonio Exp $
+$NetBSD: CHANGES,v 1.11023 2005/09/04 14:32:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3898,3 +3898,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Added wm/mlvwm version 0.9.1 [xtraeme 2005-09-04]
 	Updated lang/ocaml to 3.08.4 [tonio 2005-09-04]
 	Updated x11/ocaml-graphics to 3.08.4 [tonio 2005-09-04]
+	Updated devel/rake to 0.5.4 [taca 2005-09-04]
+	Updated devel/ruby-cmd to 0.7.2 [taca 2005-09-04]
+	Updated devel/ruby-activesupport to 1.1.1 [taca 2005-09-04]
+	Updated databases/ruby-activerecord to 1.11.1 [taca 2005-09-04]
+	Updated www/ruby-actionpack to 1.9.1 [taca 2005-09-04]
+	Updated mail/ruby-actionmailer to 1.0.1 [taca 2005-09-04]
+	Updated www/ruby-actionwebservice to 0.8.1 [taca 2005-09-04]
