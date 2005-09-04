@@ -100,7 +100,8 @@ gsasl
 gssapi	
 gstreamer	
 gtk			Enable support for GTK.
-gtkfe	
+gtkfe
+gtkspell		Enable gtkspell support.	
 gucharmap	
 hdf5	
 homedir	
