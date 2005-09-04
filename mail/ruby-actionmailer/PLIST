@@ -1,7 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/10 04:15:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/04 14:12:31 taca Exp $
 ${RUBY_SITELIBDIR}/action_mailer.rb
+${RUBY_SITELIBDIR}/action_mailer/adv_attr_accessor.rb
 ${RUBY_SITELIBDIR}/action_mailer/base.rb
+${RUBY_SITELIBDIR}/action_mailer/helpers.rb
 ${RUBY_SITELIBDIR}/action_mailer/mail_helper.rb
+${RUBY_SITELIBDIR}/action_mailer/part.rb
+${RUBY_SITELIBDIR}/action_mailer/part_container.rb
+${RUBY_SITELIBDIR}/action_mailer/quoting.rb
+${RUBY_SITELIBDIR}/action_mailer/utils.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/text/format.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/address.rb
