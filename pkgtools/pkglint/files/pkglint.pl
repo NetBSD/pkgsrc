@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.276 2005/09/04 00:26:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.277 2005/09/04 00:33:18 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1074,10 +1074,9 @@ sub checkfile_patches_patch($$) {
 	checkline_rcsid($lines->[0], "");
 
 	foreach my $line (@{$lines}[1..$#{$lines}]) {
-		if ($line->text =~ /$regex_known_rcs_tag/) {
-			# XXX: see the pkgsrc guide how to fix that
-			# TODO: that section still needs to be written
-			$line->log_warning("Possible RCS tag \"\$$1\$\". Please try to remove that line from the patch.");
+		if ($line->text =~ $regex_known_rcs_tag) {
+			my ($tag) = ($1);
+			$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
 		}
 	}
 	checklines_trailing_empty_lines($lines);
