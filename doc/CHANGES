@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11019 2005/09/04 06:39:23 jlam Exp $
+$NetBSD: CHANGES,v 1.11020 2005/09/04 06:58:59 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3895,3 +3895,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wm/windowlab to 1.32 [xtraeme 2005-09-04]
 	Updated databases/ruby-mysql to 2.7 [taca 2005-09-04]
 	Added www/lighttpd version 1.4.3 [jlam 2005-09-04]
+	Added wm/mlvwm version 0.9.1 [xtraeme 2005-09-04]
