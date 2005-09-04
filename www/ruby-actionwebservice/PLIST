@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/10 05:10:40 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/04 14:17:34 taca Exp $
 ${RUBY_SITELIBDIR}/action_web_service.rb
 ${RUBY_SITELIBDIR}/action_web_service/api.rb
-${RUBY_SITELIBDIR}/action_web_service/api/base.rb
 ${RUBY_SITELIBDIR}/action_web_service/base.rb
+${RUBY_SITELIBDIR}/action_web_service/casting.rb
 ${RUBY_SITELIBDIR}/action_web_service/client.rb
 ${RUBY_SITELIBDIR}/action_web_service/client/base.rb
 ${RUBY_SITELIBDIR}/action_web_service/client/soap_client.rb
@@ -19,21 +19,13 @@ ${RUBY_SITELIBDIR}/action_web_service/protocol.rb
 ${RUBY_SITELIBDIR}/action_web_service/protocol/abstract.rb
 ${RUBY_SITELIBDIR}/action_web_service/protocol/discovery.rb
 ${RUBY_SITELIBDIR}/action_web_service/protocol/soap_protocol.rb
+${RUBY_SITELIBDIR}/action_web_service/protocol/soap_protocol/marshaler.rb
 ${RUBY_SITELIBDIR}/action_web_service/protocol/xmlrpc_protocol.rb
+${RUBY_SITELIBDIR}/action_web_service/scaffolding.rb
 ${RUBY_SITELIBDIR}/action_web_service/struct.rb
 ${RUBY_SITELIBDIR}/action_web_service/support/class_inheritable_options.rb
+${RUBY_SITELIBDIR}/action_web_service/support/signature_types.rb
 ${RUBY_SITELIBDIR}/action_web_service/test_invoke.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/common.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/encoding.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/encoding/abstract.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/encoding/soap_rpc_encoding.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/encoding/xmlrpc_encoding.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/marshaling.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/marshaling/abstract.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/marshaling/soap_marshaling.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/marshaling/xmlrpc_marshaling.rb
-${RUBY_SITELIBDIR}/action_web_service/vendor/ws/types.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch/README
 ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch/autoloading/google_search_api.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch/autoloading/google_search_controller.rb
@@ -55,14 +47,13 @@ ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/controllers/xmlrpc_controller.
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch/autoloading
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/googlesearch
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service
-@dirrm ${RUBY_SITELIBDIR}/action_web_service/vendor/ws/marshaling
-@dirrm ${RUBY_SITELIBDIR}/action_web_service/vendor/ws/encoding
-@dirrm ${RUBY_SITELIBDIR}/action_web_service/vendor/ws
-@dirrm ${RUBY_SITELIBDIR}/action_web_service/vendor
+@exec ${MKDIR} ${RUBY_SITELIBDIR}/action_web_service/templates/scaffolds
+@dirrm ${RUBY_SITELIBDIR}/action_web_service/templates/scaffolds
+@dirrm ${RUBY_SITELIBDIR}/action_web_service/templates
 @dirrm ${RUBY_SITELIBDIR}/action_web_service/support
+@dirrm ${RUBY_SITELIBDIR}/action_web_service/protocol/soap_protocol
 @dirrm ${RUBY_SITELIBDIR}/action_web_service/protocol
 @dirrm ${RUBY_SITELIBDIR}/action_web_service/dispatcher
 @dirrm ${RUBY_SITELIBDIR}/action_web_service/container
 @dirrm ${RUBY_SITELIBDIR}/action_web_service/client
-@dirrm ${RUBY_SITELIBDIR}/action_web_service/api
 @dirrm ${RUBY_SITELIBDIR}/action_web_service
