@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2005/09/04 06:05:20 xtraeme Exp $
+
+--- menufile.c.orig	2005-09-04 07:57:21.000000000 +0200
++++ menufile.c	2005-09-04 07:57:40.000000000 +0200
+@@ -44,6 +44,7 @@
+ #endif
+ 	if ((menufile = fopen(menurcpath, "r")) == NULL)
+ 	{
++#ifdef __linux__
+ 		// get location of the executable
+ 		if (readlink("/proc/self/exe", menurcpath, PATH_MAX) == -1)
+ 		{
+@@ -51,6 +52,7 @@
+ 			menurcpath[0] = '.';
+ 			menurcpath[1] = '\0';
+ 		}
++#endif
+ 		*(strrchr(menurcpath, '/')) = '\0';
+ 		*(strrchr(menurcpath, '/')) = '\0';
+ 		strncat(menurcpath, "/etc/windowlab.menurc", PATH_MAX);
