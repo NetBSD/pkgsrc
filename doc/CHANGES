@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11027 2005/09/04 20:25:06 recht Exp $
+$NetBSD: CHANGES,v 1.11028 2005/09/04 23:07:39 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3909,3 +3909,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/bmake to 20050901 [sjg 2005-09-04]
 	Updated pkgtools/url2pkg to 1.29 [hubertf 2005-09-04]
 	Updated security/amavisd-new to 2.3.3 [recht 2005-09-04]
+	Updated emulators/qemu to 0.7.2 [xtraeme 2005-09-05]
