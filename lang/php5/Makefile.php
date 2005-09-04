@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.6 2005/05/31 10:01:37 dillo Exp $
+# $NetBSD: Makefile.php,v 1.7 2005/09/04 20:13:59 jlam Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -24,8 +24,6 @@ CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--without-sqlite
 CONFIGURE_ARGS+=	--without-iconv
 
-CONFIGURE_ARGS+=	--enable-discard-path
-CONFIGURE_ARGS+=	--enable-force-cgi-redirect
 CONFIGURE_ARGS+=	--enable-memory-limit
 CONFIGURE_ARGS+=	--enable-track-vars
 
