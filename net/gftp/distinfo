@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2005/03/14 14:50:48 rillig Exp $
+$NetBSD: distinfo,v 1.11 2005/09/04 20:00:09 tonio Exp $
 
 SHA1 (gftp-2.0.18.tar.bz2) = c2468f1ff1fe978a5fab3a198e513558f3b48f5a
 RMD160 (gftp-2.0.18.tar.bz2) = 0e0daea8543ae822b25635647360193362a2648d
 Size (gftp-2.0.18.tar.bz2) = 1374850 bytes
 SHA1 (patch-aa) = fe0aff2e0f8408d6a5b663e2095b61b9e92e0d84
-SHA1 (patch-ab) = 739be62c545d7644da4bcd53140fb734ec8e19ef
+SHA1 (patch-ab) = c95c215694e63f32924285b71c32a5b94a566864
 SHA1 (patch-ac) = 862f2f5856da4f361f2cac660ffd489424a854d8
 SHA1 (patch-ad) = 4024658780e23543b47901b802d0e8d7c469f7b6
 SHA1 (patch-ae) = 54e5d9370b2bfd9c410823d3c2d4f522744fa88d
