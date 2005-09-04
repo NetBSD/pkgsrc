@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3843 2005/09/04 20:12:46 wiz Exp $
+$NetBSD: TODO,v 1.3844 2005/09/04 20:25:06 recht Exp $
 
 Suggested new packages
 ======================
@@ -309,7 +309,6 @@ Suggested package updates
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
 	o amavis-0.3.12
-	o amavisd-new-2.3.3
 	o amule-2.0.3
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.70
