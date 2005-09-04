@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.277 2005/09/04 00:33:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.278 2005/09/04 21:06:05 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -235,7 +235,7 @@ sub log_info($$) {
 }
 sub to_string($) {
 	my ($self) = @_;
-	return sprintf("%s:%d: %s", $self->file, $self->lineno, $self->text);
+	return sprintf("%s:%s: %s", $self->file, $self->lineno, $self->text);
 }
 #== End of PkgLint::FileUtil::Line ========================================
 
@@ -517,11 +517,15 @@ sub parse_command_line() {
 
 sub get_logical_line($$) {
 	my ($lines, $ref_lineno) = @_;
-	my ($value, $lineno, $first);
+	my ($value, $lineno, $first, $file, $firstlineno, $lastlineno);
 
 	$value = "";
 	$first = true;
-	for ($lineno = ${$ref_lineno}; $lineno <= $#{$lines}; $lineno++) {
+	$lineno = ${$ref_lineno};
+	$file = $lines->[$lineno]->file;
+	$firstlineno = $lines->[$lineno]->lineno;
+
+	for (; $lineno <= $#{$lines}; $lineno++) {
 		if ($lines->[$lineno]->text =~ qr"^(\s*)(.*?)\s*(\\?)$") {
 			my ($indent, $text, $cont) = ($1, $2, $3);
 
@@ -539,8 +543,25 @@ sub get_logical_line($$) {
 			}
 		}
 	}
+
+	$lastlineno = $lines->[$lineno]->lineno;
 	${$ref_lineno} = $lineno + 1;
-	return $value;
+
+	return PkgLint::FileUtil::Line->new($file,
+	    $firstlineno == $lastlineno
+		? $firstlineno
+		: "$firstlineno--$lastlineno",
+	    $value);
+}
+
+sub to_logical_lines($) {
+	my ($lines) = @_;
+
+	my @loglines = ();
+	for (my $lineno = 0; $lineno <= $#{$lines}; ) {
+		push(@loglines, get_logical_line($lines, \$lineno));
+	}
+	return \@loglines;
 }
 
 sub load_make_vars_typemap() {
@@ -1295,9 +1316,8 @@ sub checklines_direct_tools($) {
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_valid_shellcmds=${regex_valid_shellcmds}");
 
-	for (my $lineno = 0; $lineno <= $#{$lines}; ) {
-		my $line = $lines->[$lineno];
-		my $text = get_logical_line($lines, \$lineno);
+	foreach my $line (@{$lines}) {
+		my $text = $line->text;
 
 		next unless ($text =~ $regex_tools_with_context);
 		my ($tool) = ($1);
@@ -1410,10 +1430,10 @@ sub set_default_value($$) {
 	}
 }
 
-sub load_package_Makefile($$$$) {
+sub load_package_Makefile($$$$$) {
 	my ($subr) = "load_package_Makefile";
-	my ($dir, $fname, $refwhole, $reflines) = @_;
-	my ($whole, $lines);
+	my ($dir, $fname, $ref_whole, $ref_lines, $ref_loglines) = @_;
+	my ($whole, $lines, $loglines);
 
 	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
 
@@ -1422,9 +1442,11 @@ sub load_package_Makefile($$$$) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
+	$loglines = to_logical_lines($lines);
+
 	if ($opt_dumpmakefile) {
 		print("OK: whole Makefile (with all included files) follows:\n");
-		foreach my $line (@{$lines}) {
+		foreach my $line (@{$loglines}) {
 			printf("%s\n", $line->to_string());
 		}
 	}
@@ -1446,13 +1468,14 @@ sub load_package_Makefile($$$$) {
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "PKGDIR=$pkgdir");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "SCRIPTDIR=$scriptdir");
 
-	${$refwhole} = $whole;
-	${$reflines} = $lines;
+	${$ref_whole} = $whole;
+	${$ref_lines} = $lines;
+	${$ref_loglines} = $loglines;
 	return true;
 }
 
-sub checkfile_package_Makefile($$$$) {
-	my ($dir, $fname, $rawwhole, $lines) = @_;
+sub checkfile_package_Makefile($$$$$) {
+	my ($dir, $fname, $rawwhole, $lines, $loglines) = @_;
 	my ($distname, $svr4_pkgname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
 	my ($abspkgdir, $whole, $tmp, $idx, @sections, @varnames);
@@ -1528,7 +1551,7 @@ sub checkfile_package_Makefile($$$$) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1: no need to use '-' before command.");
 	}
 
-	checklines_direct_tools($lines);
+	checklines_direct_tools($loglines);
 
 	#
 	# whole file: continuation line in DEPENDS
@@ -2322,7 +2345,7 @@ sub checkdir_category($) {
 sub checkdir_package($) {
 	my ($dir) = @_;
 
-	my ($whole, $lines, $have_distinfo, $have_patches);
+	my ($whole, $lines, $loglines, $have_distinfo, $have_patches);
 
 	$pkgdir			= ".";
 	$filesdir		= "files";
@@ -2334,7 +2357,7 @@ sub checkdir_package($) {
 	$pkgname		= undef;
 
 	# we need to handle the Makefile first to get some variables
-	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$lines)) {
+	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$lines, \$loglines)) {
 		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
@@ -2360,7 +2383,7 @@ sub checkdir_package($) {
 			# We don't have a check for non-regular files yet.
 
 		} elsif ($f eq "${dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($dir, $f, $whole, $lines);
+			$opt_check_Makefile and checkfile_package_Makefile($dir, $f, $whole, $lines, $loglines);
 
 		} elsif ($f =~ qr"/buildlink3.mk$") {
 			$opt_check_bl3 and checkfile_buildlink3_mk($dir, $f);
