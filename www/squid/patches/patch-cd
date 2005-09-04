@@ -1,18 +1,20 @@
-$NetBSD: patch-cd,v 1.10 2005/08/09 15:48:30 taca Exp $
+$NetBSD: patch-cd,v 1.11 2005/09/04 05:07:05 taca Exp $
 
---- src/client_side.c.orig	2005-07-13 01:16:03.000000000 +0900
+--- src/client_side.c.orig	2005-09-02 10:23:02.000000000 +0900
 +++ src/client_side.c
-@@ -41,6 +41,9 @@
+@@ -55,6 +55,11 @@
+ #ifdef _SQUID_SOLARIS_
+ #undef free
  #endif
- #include <netinet/tcp.h>
- #include <net/if.h>
-+#if HAVE_NETINET_IPL_H
++#ifdef HAVE_IPL_H
++#include <ipl.h>
++#elif HAVE_NETINET_IPL_H
 +#include <netinet/ipl.h>
 +#endif
  #if HAVE_IP_FIL_COMPAT_H
  #include <ip_fil_compat.h>
  #elif HAVE_NETINET_IP_FIL_COMPAT_H
-@@ -2592,6 +2595,9 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2606,6 +2611,9 @@ parseHttpRequest(ConnStateData * conn, m
      static int natfd = -1;
      static int siocgnatl_cmd = SIOCGNATL & 0xff;
      int x;
@@ -22,7 +24,7 @@ $NetBSD: patch-cd,v 1.10 2005/08/09 15:48:30 taca Exp $
  #endif
  #if PF_TRANSPARENT
      struct pfioc_natlook nl;
-@@ -2734,6 +2740,13 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2748,6 +2756,13 @@ parseHttpRequest(ConnStateData * conn, m
  	if (vhost_mode) {
  #if IPF_TRANSPARENT
  	    static time_t last_reported = 0;
@@ -36,7 +38,7 @@ $NetBSD: patch-cd,v 1.10 2005/08/09 15:48:30 taca Exp $
  	    natLookup.nl_inport = http->conn->me.sin_port;
  	    natLookup.nl_outport = http->conn->peer.sin_port;
  	    natLookup.nl_inip = http->conn->me.sin_addr;
-@@ -2742,8 +2755,8 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2756,8 +2771,8 @@ parseHttpRequest(ConnStateData * conn, m
  	    if (natfd < 0) {
  		int save_errno;
  		enter_suid();
@@ -47,7 +49,7 @@ $NetBSD: patch-cd,v 1.10 2005/08/09 15:48:30 taca Exp $
  #else
  		natfd = open(IPL_NAT, O_RDONLY, 0);
  #endif
-@@ -2757,6 +2770,9 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2771,6 +2786,9 @@ parseHttpRequest(ConnStateData * conn, m
  		    last_reported = squid_curtime;
  		}
  	    } else {
@@ -57,7 +59,7 @@ $NetBSD: patch-cd,v 1.10 2005/08/09 15:48:30 taca Exp $
  		/*
  		 * IP-Filter changed the type for SIOCGNATL between
  		 * 3.3 and 3.4.  It also changed the cmd value for
-@@ -2770,6 +2786,7 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2784,6 +2802,7 @@ parseHttpRequest(ConnStateData * conn, m
  		} else {
  		    x = ioctl(natfd, SIOCGNATL, &natLookup);
  		}
