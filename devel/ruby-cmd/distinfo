@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/11 03:26:55 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/09/04 13:53:53 taca Exp $
 
-SHA1 (ruby/cmd-0.7.0.tar.bz2) = 458213b6c281f65b1407c4a3c07ce41c4257d385
-RMD160 (ruby/cmd-0.7.0.tar.bz2) = 16662d8514502e35a240f45295189cd359a319a7
-Size (ruby/cmd-0.7.0.tar.bz2) = 22648 bytes
+SHA1 (ruby/cmd-0.7.2.tar.bz2) = f0af8d74cc55c23bb4755321fab8ecea77e8a982
+RMD160 (ruby/cmd-0.7.2.tar.bz2) = a1841e7437cfef50ec324c0b97ca664f76224ac1
+Size (ruby/cmd-0.7.2.tar.bz2) = 23325 bytes
