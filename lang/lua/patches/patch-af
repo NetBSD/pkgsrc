@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.3 2005/09/04 04:59:36 jlam Exp $
+
+--- src/luac/Makefile.orig	Tue Oct 21 11:54:08 2003
++++ src/luac/Makefile
+@@ -12,8 +12,8 @@ T= $(BIN)/luac
+ 
+ all:	$T
+ 
+-$T:	$(OBJS) $(LIB)/liblua.a $(LIB)/liblualib.a
+-	$(CC) -o $@ $(MYLDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
++$T:	$(OBJS)
++	$(CCLD) -o $@ $(MYLDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
+ 
+ # print.c needs opcode names from lopcodes.c
+ lopcodes.o:	../lopcodes.c ../lopcodes.h

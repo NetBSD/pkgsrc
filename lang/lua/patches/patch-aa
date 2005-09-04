@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2004/10/02 20:54:59 cube Exp $
+$NetBSD: patch-aa,v 1.9 2005/09/04 04:59:36 jlam Exp $
 
---- config.orig	2003-04-11 16:00:41.000000000 +0200
+--- config.orig	Fri Apr 11 14:00:41 2003
 +++ config
-@@ -6,7 +6,7 @@
- LOADLIB=
- DLLIB=
- NUMBER=
--POPEN=
-+POPEN= -DUSE_POPEN=1
- TMPNAM=
- DEGREES=
- USERCONF=
 @@ -25,7 +25,7 @@ USERCONF=
  # interface (e.g., Linux, Solaris, IRIX, BSD, AIX, HPUX, and probably others),
  # uncomment the next two lines.
@@ -20,49 +11,35 @@ $NetBSD: patch-aa,v 1.8 2004/10/02 20:54:59 cube Exp $
  #DLLIB= -ldl
  #
  # In Linux with gcc, you should also uncomment the next definition for
-@@ -83,7 +83,7 @@ USERCONF=
- # For partial compatibility with old upvalue behavior in C functions, define
- # LUA_COMPATUPVALUES. Add these definitions to MYCFLAGS.
+@@ -45,7 +45,7 @@ USERCONF=
+ # If your system is not POSIX but has popen and pclose, define USE_POPEN=1.
+ # If you don't want to support pipes, define USE_POPEN=0.
  #
--# -DLUA_COMPATUPSYNTAX -DLUA_COMPATUPVALUES
-+# EXTRA_DEFS=-DLUA_COMPATUPSYNTAX -DLUA_COMPATUPVALUES
- 
- # ------------------------------------------------------------- Lua interpreter
- 
+-#POPEN= -DUSE_POPEN=1
++POPEN= -DUSE_POPEN=1
+ #POPEN= -DUSE_POPEN=0
+ #
+ # The form below will probably work in (some) Windows systems.
 @@ -108,8 +108,8 @@ EXTRA_LIBS= -lm
  # You need an ANSI C compiler. gcc is a popular one. We do not use -ansi in
  # WARN because it disables POSIX features used in the libraries.
  #
 -CC= gcc
 -WARN= -Wall
-+# CC= gcc
-+# WARN= -Wall
++#CC= gcc
++#WARN= -Wall
  
  # ------------------------------------------------------------------ C options
  
-@@ -119,11 +119,11 @@ WARN= -Wall
+@@ -119,7 +119,7 @@ WARN= -Wall
  # debug information. If you only want the shared libraries, you may want to
  # add -fPIC to MYCFLAGS.
  #
 -MYCFLAGS= -O2
-+MYCFLAGS:= $(CFLAGS)
++#MYCFLAGS= -O2
  #MYCFLAGS= -O3 -fomit-frame-pointer # -fPIC
  
  # Write here any options you may need for your C linker.
--#MYLDFLAGS=
-+MYLDFLAGS= $(LDFLAGS) $(LIBS) # -Wl,-E
- 
- # ------------------------------------------------------------------ librarian
- 
-@@ -134,7 +134,7 @@ AR= ar rcu
- # If your system doesn't have (or need) ranlib, use RANLIB=true.
- # On some systems, "ar s" does what ranlib would do.
- #
--RANLIB= ranlib
-+# RANLIB= ranlib
- #RANLIB= ar s
- #RANLIB= true
- 
 @@ -148,7 +148,7 @@ STRIP= strip
  
  # Locations for "make install". You may need to be root do "make install".
@@ -72,14 +49,23 @@ $NetBSD: patch-aa,v 1.8 2004/10/02 20:54:59 cube Exp $
  INSTALL_BIN= $(INSTALL_ROOT)/bin
  INSTALL_INC= $(INSTALL_ROOT)/include
  INSTALL_LIB= $(INSTALL_ROOT)/lib
-@@ -157,8 +157,8 @@ INSTALL_MAN= $(INSTALL_ROOT)/man/man1
- # You may prefer to use "install" instead of "cp" if you have it.
- # If you use "install", you may also want to change the permissions after -m.
- #
--INSTALL_EXEC= cp
--INSTALL_DATA= cp
-+INSTALL_EXEC= $(BSD_INSTALL_PROGRAM)
-+INSTALL_DATA= $(BSD_INSTALL_DATA)
- #INSTALL_EXEC= install -m 0755
- #INSTALL_DATA= install -m 0644
+@@ -165,6 +165,7 @@ INSTALL_DATA= cp
+ # == END OF USER SETTINGS. NO NEED TO CHANGE ANYTHING BELOW THIS LINE =========
  
+ V=5.0
++LV=5:0
+ 
+ BIN= $(LUA)/bin
+ INC= $(LUA)/include
+@@ -173,6 +174,11 @@ LIB= $(LUA)/lib
+ INCS= -I$(INC) $(EXTRA_INCS)
+ DEFS= $(NUMBER) $(EXTRA_DEFS)
+ 
++CCLD= $(LIBTOOL) --mode=link $(CC)
+ CFLAGS= $(MYCFLAGS) $(WARN) $(INCS) $(DEFS)
++
++.SUFFIXES:	.lo
++.c.lo:
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
+ 
+ # (end of config)
