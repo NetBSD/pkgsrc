@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11021 2005/09/04 13:59:42 tonio Exp $
+$NetBSD: CHANGES,v 1.11022 2005/09/04 14:02:44 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3897,3 +3897,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added www/lighttpd version 1.4.3 [jlam 2005-09-04]
 	Added wm/mlvwm version 0.9.1 [xtraeme 2005-09-04]
 	Updated lang/ocaml to 3.08.4 [tonio 2005-09-04]
+	Updated x11/ocaml-graphics to 3.08.4 [tonio 2005-09-04]
