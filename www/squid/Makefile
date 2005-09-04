@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.156 2005/08/23 11:48:51 rillig Exp $
+# $NetBSD: Makefile,v 1.157 2005/09/04 05:07:05 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE10
 PKGNAME=	squid-2.5.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -23,7 +23,21 @@ PATCHFILES=	squid-2.5.STABLE10-content_length.patch \
 		squid-2.5.STABLE10-wbinfo_groups.patch \
 		squid-2.5.STABLE10-64bit_cleanup.patch \
 		squid-2.5.STABLE10-wb_ntlm_auth_silent.patch \
-		squid-2.5.STABLE10-buildenv.patch
+		squid-2.5.STABLE10-buildenv.patch \
+		squid-2.5.STABLE10-mail_program.patch \
+		squid-2.5.STABLE10-arp_ipfilter-2.patch \
+		squid-2.5.STABLE10-sslConnectTimeout.patch \
+		squid-2.5.STABLE10-statHistAssert.patch \
+		squid-2.5.STABLE10-chroot_dir.patch \
+		squid-2.5.STABLE10-errmsg.patch \
+		squid-2.5.STABLE10-FORTIFY_SOURCE.patch \
+		squid-2.5.STABLE10-ftp_250.patch \
+		squid-2.5.STABLE10-Greek.patch \
+		squid-2.5.STABLE10-STORE_PENDING.patch \
+		squid-2.5.STABLE10-ldap_auth-U.patch \
+		squid-2.5.STABLE10-cacheClientTable.patch \
+		squid-2.5.STABLE10-Solaris_IPFilter.patch \
+		squid-2.5.STABLE10-mail_from.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org

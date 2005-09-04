@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.19 2005/06/07 14:19:10 taca Exp $
+$NetBSD: patch-ag,v 1.20 2005/09/04 05:07:05 taca Exp $
 
---- configure.orig	2005-05-17 07:41:14.000000000 +0900
+--- configure.orig	2005-09-02 10:23:02.000000000 +0900
 +++ configure
 @@ -2241,7 +2241,7 @@ if test "${enable_snmp+set}" = set; then
  #define SQUID_SNMP 1
@@ -11,7 +11,11 @@ $NetBSD: patch-ag,v 1.19 2005/06/07 14:19:10 taca Exp $
      
  
  if true; then
-@@ -4046,6 +4046,7 @@ for ac_hdr in \
+@@ -4046,9 +4046,11 @@ for ac_hdr in \
+ 	ip_fil_compat.h \
+ 	ip_fil.h \
+ 	ip_nat.h \
++	ipl.h \
  	libc.h \
  	limits.h \
  	linux/netfilter_ipv4.h \
@@ -19,7 +23,7 @@ $NetBSD: patch-ag,v 1.19 2005/06/07 14:19:10 taca Exp $
  	malloc.h \
  	math.h \
  	memory.h \
-@@ -4060,6 +4061,7 @@ for ac_hdr in \
+@@ -4063,6 +4065,7 @@ for ac_hdr in \
  	netinet/ip_fil_compat.h \
  	netinet/ip_fil.h \
  	netinet/ip_nat.h \
@@ -27,7 +31,7 @@ $NetBSD: patch-ag,v 1.19 2005/06/07 14:19:10 taca Exp $
  	openssl/err.h \
  	openssl/md5.h \
  	openssl/ssl.h \
-@@ -6291,43 +6293,38 @@ fi
+@@ -6294,43 +6297,38 @@ fi
  echo "$ac_t""$ac_cv_type_mode_t" 1>&6
  if test $ac_cv_type_mode_t = no; then
    cat >> confdefs.h <<\EOF
@@ -85,7 +89,7 @@ $NetBSD: patch-ag,v 1.19 2005/06/07 14:19:10 taca Exp $
  
  
  echo $ac_n "checking size of off_t""... $ac_c" 1>&6
-@@ -7643,8 +7640,8 @@ if test "$GCC" = "yes"; then
+@@ -7646,8 +7644,8 @@ if test "$GCC" = "yes"; then
  	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
  	case "$GCCVER" in
  	2.95.[123])
