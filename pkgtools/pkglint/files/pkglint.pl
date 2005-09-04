@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.275 2005/09/03 22:23:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.276 2005/09/04 00:26:13 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -525,13 +525,18 @@ sub get_logical_line($$) {
 		if ($lines->[$lineno]->text =~ qr"^(\s*)(.*?)\s*(\\?)$") {
 			my ($indent, $text, $cont) = ($1, $2, $3);
 
-			$value .= $first ? "$indent$text" : $text;
+			if ($first) {
+				$value .= $indent;
+				$first = false;
+			}
+
+			$value .= $text;
+
 			if ($cont eq "\\") {
 				$value .= " ";
 			} else {
 				last;
 			}
-			$first = false;
 		}
 	}
 	${$ref_lineno} = $lineno + 1;
