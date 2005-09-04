@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11014 2005/09/03 23:01:44 tonio Exp $
+$NetBSD: CHANGES,v 1.11015 2005/09/04 04:57:30 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/rconfig to 0.43 [abs 2005-09-03]
 	Added security/bcrypt version 1.1 [xtraeme 2005-09-04]
 	Updated devel/apache-ant to 1.6.5 [tonio 2005-09-03]
+	Added wm/cwm version 3 [xtraeme 2005-09-04]
