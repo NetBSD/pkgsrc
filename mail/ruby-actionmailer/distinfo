@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/04/10 04:15:44 minskim Exp $
+$NetBSD: distinfo,v 1.3 2005/09/04 14:12:31 taca Exp $
 
-SHA1 (ruby/actionmailer-0.8.1.tgz) = 5b41aa0985cea88b1372766b7f436aba22114cb2
-RMD160 (ruby/actionmailer-0.8.1.tgz) = b018aab60e7c5fab45092492575cff2471fad3fc
-Size (ruby/actionmailer-0.8.1.tgz) = 54132 bytes
-SHA1 (patch-aa) = 41a615c7e9a7d6987f76c3c36c397e4854b07331
+SHA1 (ruby/actionmailer-1.0.1.tgz) = 2ae354e38fcb44da5e10f3dfc7ce0c33ce04af30
+RMD160 (ruby/actionmailer-1.0.1.tgz) = e488790c65921c9f5d45b29953ab1343ec5a0324
+Size (ruby/actionmailer-1.0.1.tgz) = 71911 bytes
