@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2004/06/26 09:16:10 grant Exp $
+$NetBSD: patch-ab,v 1.2 2005/09/04 05:20:05 xtraeme Exp $
 
 --- Makefile.in.orig	2001-06-18 22:59:14.000000000 +0200
-+++ Makefile.in
-@@ -310,15 +310,15 @@ uninstall-binPROGRAMS:
++++ Makefile.in	2005-09-04 07:16:04.000000000 +0200
+@@ -120,7 +120,7 @@
+ bin_PROGRAMS = plaympeg $(GTK_PLAYER) $(OPENGL_PLAYER)
+ 
+ # Sources for plaympeg
+-man_MANS = plaympeg.1 gtv.1
++man_MANS = plaympeg.1 @HAVE_GTK_TRUE@gtv.1
+ plaympeg_SOURCES = plaympeg.c
+ plaympeg_LDADD = libsmpeg.la
+ 
+@@ -310,15 +310,15 @@
  
  plaympeg: $(plaympeg_OBJECTS) $(plaympeg_DEPENDENCIES)
  	@rm -f plaympeg
