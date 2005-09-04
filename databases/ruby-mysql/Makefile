@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2005/06/12 15:23:03 taca Exp $
+# $NetBSD: Makefile,v 1.16 2005/09/04 06:30:08 taca Exp $
 #
 
-DISTNAME=	mysql-ruby-2.6
-PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.6
+DISTNAME=	mysql-ruby-2.7
+PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.7
 CATEGORIES=	databases ruby
-MASTER_SITES=	http://www.tmtm.org/mysql/ruby/
+MASTER_SITES=	http://tmtm.org/downloads/mysql/ruby/
 
 MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=       http://www.tmtm.org/en/mysql/ruby/
