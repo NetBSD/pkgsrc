@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11018 2005/09/04 06:31:07 taca Exp $
+$NetBSD: CHANGES,v 1.11019 2005/09/04 06:39:23 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3894,3 +3894,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/squid to 2.5.10nb2 [taca 2005-09-04]
 	Updated wm/windowlab to 1.32 [xtraeme 2005-09-04]
 	Updated databases/ruby-mysql to 2.7 [taca 2005-09-04]
+	Added www/lighttpd version 1.4.3 [jlam 2005-09-04]
