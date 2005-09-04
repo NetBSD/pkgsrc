@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/10 04:11:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/09/04 14:05:44 taca Exp $
 
-SHA1 (ruby/actionpack-1.7.0.tgz) = 720f3f283dd55ebff32feb60039c9564eabd5632
-RMD160 (ruby/actionpack-1.7.0.tgz) = 7d2c3c0fed862f5f9039548464f74b6e0630bcae
-Size (ruby/actionpack-1.7.0.tgz) = 161267 bytes
-SHA1 (patch-aa) = a630d3fd9f0932574b03688524501adfa6a7f0c2
+SHA1 (ruby/actionpack-1.9.1.tgz) = 7b64b1dc4e7a602c5227ae5acfa72107fa5fd352
+RMD160 (ruby/actionpack-1.9.1.tgz) = 861e60281e8739283092660b101182f200869289
+Size (ruby/actionpack-1.9.1.tgz) = 253132 bytes
+SHA1 (patch-ab) = a28bffd733066ee56e3470e4b28d897eb768906f
