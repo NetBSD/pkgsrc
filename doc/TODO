@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3845 2005/09/04 22:13:57 wiz Exp $
+$NetBSD: TODO,v 1.3846 2005/09/05 00:26:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -327,7 +327,6 @@ Suggested package updates
 	o ap2-chroot-0.4
 	o ap2-transform-0.6.0
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
-	o apg-2.2.3 [pkg/30345|zuntum]
 	o apr-1.1.1
 	o apsfilter-7.2.6
 	o aqsis-0.9.2
@@ -360,7 +359,6 @@ Suggested package updates
 	o boaconstructor-0.3.1
 	o bochs-2.2.1
 	o bogofilter-0.94.12
-	o boolean-6.7
 	o boson-0.10
 	o browser-bookmarks-menu-0.4
 	o btparse-0.34
@@ -386,7 +384,6 @@ Suggested package updates
 	o cint-5.15
 	o cjk-lyx-1.3.3
 	o cksfv-1.3.6
-	o clamav-0.86.2
 	o classpath-0.17
 	o classpath-gui-0.17
 	o clisp-2.34
@@ -406,7 +403,6 @@ Suggested package updates
 	o cue-20050228
 	o cuetools-1.3
 	o cvs2svn-1.2.1 [pkg/30386]
-	o cwtext-0.94
 	o cxref-1.6
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.18.1
@@ -450,7 +446,6 @@ Suggested package updates
 	o fakeroot-1.3 [pkg/30015]
 	o fd-2.06c
 	o fdgw-20040609
-	o feh-1.3.4
 	o fhist-1.14
 	o file-4.14
 	o findutils-4.2.23
@@ -543,7 +538,7 @@ Suggested package updates
 	o ijs-0.35
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
-	o ion3-devel-20050728
+	o ion3-devel-20050820 [pkg/31132]
 	o iozone-3.239
 	o ipcheck-0.219
 	o ircd-hybrid-7.0.4
@@ -644,7 +639,6 @@ Suggested package updates
 	o moz-flash-0.4.13
 	o mozilla-bin-1.7.11
 	o mpage-2.5.4
-	o mpc-0.11.2
 	o mpfr-2.1.1
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-2.85
@@ -665,7 +659,6 @@ Suggested package updates
 	o neon-0.25.1
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
-	o netio-1.23
 	o netpipe-3.6.2
 	o netramet-50
 	o neverball-1.4.0
@@ -677,7 +670,6 @@ Suggested package updates
 	o nsd-2.3.0
 	o nslint-2.1a3
 	o nut-10.21
-	o nvi-m17n-1.79.20040401 [pkg/30216]
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
 	o offlineimap-4.0.8
@@ -806,7 +798,6 @@ Suggested package updates
 	o p5-sybperl-2.17
 	o pam-smbpass-3.0.13
 	o pango-1.10.0
-	o par2-0.4 [pkg/30587]
 	o pari-2.2.7
 	o parrot-0.2.1 [pkg/30586]
 	o patchutils-0.2.31
@@ -843,14 +834,12 @@ Suggested package updates
 	o pptp-1.6.0 [pkg/26842]
 	o proj-4.4.9
 	o proxsmtp-1.2.1
-	o pscal-1.16
 	o psmisc-21.5
 	o pstree-2.26
 	o pth-2.0.4
 	o puf-0.93.3
 	o puzzle-5.2
 	o pv-0.9.0
-	o pvs-3.2
 	o pwgen-0.4 [pkg/30714]
 	o pxe-1.4.2
 	o py-FourSuite-1.0a4
@@ -953,7 +942,7 @@ Suggested package updates
 	o siag-3.6.0
 	o sign-1.0.7
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
-	o simh-3.3.2
+	o simh-3.4.0 [pkg/31129]
 	o sitecopy-0.15.1
 	o sitescooper-3.1.2
 	o sjeng-11.2
@@ -973,8 +962,6 @@ Suggested package updates
 	o snes9x-1.43
 	o snownews-1.5.7
 	o source-highlight-2.1
-	o spamassassin-3.0.4 [pkg/30452]
-	o spamprobe-1.2a
 	o spim-7.2
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
@@ -989,8 +976,6 @@ Suggested package updates
 	o stunnel-4.11
 	o subtitleripper-0.3.4
 	o subversion-1.2.3
-	o sun-jdk15-5.0.4
-	o sun-jre15-5.0.4
 	o suse_base-9.3
 	o svk-1.02
 	o swfdec-0.3.5
@@ -1057,7 +1042,6 @@ Suggested package updates
 	o vile-9.5
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
 	o vlc-0.8.2
-	o vm-7.19
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-0.5.14
@@ -1102,12 +1086,9 @@ Suggested package updates
 	o xine-ui-0.99.4
 	o xkbset-0.5
 	o xlispstat-3.52.20
-	o xlog-1.2.2
 	o xm7-303
 	o xmahjongg-3.7
-	o xmame-0.99
 	o xmcd-3.3.0
-	o xmess-0.99
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-0.3.7
