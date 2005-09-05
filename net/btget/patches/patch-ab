@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/08/05 22:00:49 reinoud Exp $
+$NetBSD: patch-ab,v 1.2 2005/09/05 23:41:13 reinoud Exp $
 
 --- src/peer.c.orig	2005-04-27 06:47:47.000000000 +0200
 +++ src/peer.c
@@ -10,3 +10,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/08/05 22:00:49 reinoud Exp $
  #   if HAVE_UNISTD_H
  #      include <unistd.h>
  #   endif
+@@ -473,7 +474,7 @@ recv_peermsg( btContext *ctx, btPeer *pe
+     btDownload *dl = ctx->downloads[peer->download];
+     int32_t nbo_len;
+     int len;
+-    char msg[80];
++    char msg[128];
+     char *nmsg, *param;
+     int res = 0;
+     int err;
