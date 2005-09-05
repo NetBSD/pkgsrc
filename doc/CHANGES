@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11046 2005/09/05 16:58:40 wiz Exp $
+$NetBSD: CHANGES,v 1.11047 2005/09/05 17:05:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3932,3 +3932,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/pbzip2 to 0.9.4 [wiz 2005-09-05]
 	Updated net/wget to 1.10.1 [wiz 2005-09-05]
 	Updated lang/gawk to 3.1.5 [wiz 2005-09-05]
+	Updated textproc/flyspell to 1.7j [wiz 2005-09-05]
