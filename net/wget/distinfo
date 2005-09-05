@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.26 2005/07/02 15:10:23 wiz Exp $
+$NetBSD: distinfo,v 1.27 2005/09/05 16:45:32 wiz Exp $
 
-SHA1 (wget-1.10.tar.gz) = 2204e65f08e23b3cf5ff83210a669d2e5267a2d0
-RMD160 (wget-1.10.tar.gz) = 4c3368fd698751a54d812c8ef5a4bae2136d9edf
-Size (wget-1.10.tar.gz) = 1593119 bytes
+SHA1 (wget-1.10.1.tar.gz) = 63249e837a02eb946b887a610ccc7be4ab41d0bc
+RMD160 (wget-1.10.1.tar.gz) = ae5b8198b71919a703e9184a4b2eae87812f4574
+Size (wget-1.10.1.tar.gz) = 1212784 bytes
 SHA1 (patch-ag) = c501bc48070ba9b71d51d6cdebf5c3e5d5aa5ffb
-SHA1 (patch-ah) = d4d1e152c5d65e743489b325397080060ac1de37
