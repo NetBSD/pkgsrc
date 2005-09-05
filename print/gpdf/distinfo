@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2005/03/22 16:32:56 jmmv Exp $
+$NetBSD: distinfo,v 1.12 2005/09/05 14:42:42 jmmv Exp $
 
 SHA1 (gpdf-2.10.0.tar.bz2) = f9b925ed5b15deb90968e834fd63fc7628688808
 RMD160 (gpdf-2.10.0.tar.bz2) = 16cb9413e012c2c5268082d8322d1468e5c30907
 Size (gpdf-2.10.0.tar.bz2) = 1079944 bytes
 SHA1 (patch-aa) = 8985b54bad962a31a6ee315747c0297419b8e291
+SHA1 (patch-ab) = 4601088604b8c5a52546e689bfdccc2aa18ea1e6
