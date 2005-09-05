@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/24 10:36:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/09/05 08:18:08 adam Exp $
 man/man6/civclient.6
 man/man6/civserver.6
 share/freeciv/civ1.serv
@@ -143,7 +143,6 @@ share/freeciv/flags/unknown.png
 share/freeciv/flags/usa.png
 share/freeciv/flags/vietnam.png
 share/freeciv/flags/wales.png
-share/freeciv/freeciv.rc
 share/freeciv/helpdata.txt
 share/freeciv/history.serv
 share/freeciv/history/buildings.ruleset
