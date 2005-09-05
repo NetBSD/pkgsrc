@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 12:06:54 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/09/05 14:06:59 adam Exp $
 
-SHA1 (blitz-0.6.tar.gz) = 4271cbaa3c23e35466e9610551d9809b89b606ed
-RMD160 (blitz-0.6.tar.gz) = b42d8d58bffed179aa6d35b307d13c25c9eecc1b
-Size (blitz-0.6.tar.gz) = 1019425 bytes
-SHA1 (patch-aa) = 85d8f8a6ef8c63c566c307d24074639fee47b41c
-SHA1 (patch-ab) = f84a9c79eab98649fd7cfb8acbf5c5580ae97386
-SHA1 (patch-ac) = 3b26d8b2432ddd70ea24993d1b14e9116171cd30
-SHA1 (patch-ad) = 469b604a0896a6b5c6916fac02db9f7d864e9097
+SHA1 (blitz-0.8.tar.gz) = e1396cdfdbf4ec93bfc69ca581b8e9a64d745ca1
+RMD160 (blitz-0.8.tar.gz) = 95b8eb6ee8a99f0632a0c510eafd0051053c1e0e
+Size (blitz-0.8.tar.gz) = 2729167 bytes
+SHA1 (patch-aa) = deb437da8741a87c18f56883a880a03a6e94c84d
