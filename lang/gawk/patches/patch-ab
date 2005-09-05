@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.9 2004/08/26 00:00:20 wiz Exp $
+$NetBSD: patch-ab,v 1.10 2005/09/05 16:58:22 wiz Exp $
 
---- Makefile.in.orig	2004-08-02 11:16:30.000000000 +0200
+--- Makefile.in.orig	2005-07-26 20:44:03.000000000 +0200
 +++ Makefile.in
-@@ -176,7 +176,7 @@ CPP = @CPP@
+@@ -156,7 +156,7 @@ CFLAGS = @CFLAGS@
+ CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
  CYGPATH_W = @CYGPATH_W@
- DATADIRNAME = @DATADIRNAME@
 -DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR="\"$(datadir)/locale\""
 +DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR="\"$(prefix)/$(PKGLOCALEDIR)/locale\""
  DEPDIR = @DEPDIR@
  ECHO_C = @ECHO_C@
  ECHO_N = @ECHO_N@
-@@ -955,9 +955,7 @@ install-exec-hook:
+@@ -936,9 +936,7 @@ install-exec-hook:
  	(cd $(DESTDIR)$(bindir); \
  	$(LN) gawk$(EXEEXT) gawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
  	$(LN) pgawk$(EXEEXT) pgawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
