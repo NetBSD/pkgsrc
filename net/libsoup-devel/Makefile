@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2005/08/26 16:27:55 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.12 2005/09/05 14:24:33 adam Exp $
 
-DISTNAME=		libsoup-2.2.6.1
-PKGNAME=		${DISTNAME:S/soup/soup-devel/}
-CATEGORIES=		net gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libsoup/2.2/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	libsoup-2.2.6.1
+PKGNAME=	${DISTNAME:S/soup/soup-devel/}
+PKGREVISION=	1
+CATEGORIES=	net gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/2.2/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		recht@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
-COMMENT=		HTTP library implementation in C
+MAINTAINER=	recht@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	HTTP library implementation in C
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
