@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/07/28 16:40:03 reed Exp $
+# $NetBSD: Makefile,v 1.45 2005/09/05 15:18:42 hira Exp $
 #
 
 DISTNAME=	fontconfig-2.3.2
@@ -35,13 +35,9 @@ CONFIGURE_ENV+=		HASDOCBOOK=no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined($X11PREFIX) && (${LOCALBASE} != {$X11PREFIX})
-FONT_PATH=	${X11PREFIX}/lib/X11/fonts
+.if (${X11BASE} != ${LOCALBASE})
+CONFIGURE_ARGS+=	--with-add-fonts=${X11BASE}/lib/X11/fonts
 .endif
-.if (${X11PREFIX} != ${X11BASE})
-FONT_PATH2=	,${X11BASE}/lib/X11/fonts
-.endif
-CONFIGURE_ARGS+=	--with-add-fonts=${FONT_PATH}${FONT_PATH2}
 
 EGDIR=		${PREFIX}/share/examples/fontconfig
 CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
