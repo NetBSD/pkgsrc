@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.279 2005/09/05 13:06:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.280 2005/09/05 13:27:36 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1168,7 +1168,7 @@ sub readmakefile($$$$) {
 
 sub checkline_Makefile_vartype($$) {
 	my ($line, $vartypes) = @_;
-	if ($line->text =~ qr"^([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)") {
+	if ($line->text =~ $regex_varassign) {
 		my ($varname, $op, $value) = ($1, $2, $3);
 		if ($value =~ qr"\$") {
 			# ignore values that contain other variables
@@ -1252,8 +1252,8 @@ sub checklines_deprecated_variables($) {
 	}
 
 	foreach my $line (@{$lines}) {
-		if ($line->text =~ qr"^([A-Z][A-Z0-9_]*)\s*[!+?]?=") {
-			my ($varname) = ($1);
+		if ($line->text =~ $regex_varassign) {
+			my ($varname, undef, undef) = ($1, $2, $3);
 			if (exists($vars{$varname})) {
 				$line->log_warning("${varname} is deprecated. $vars{$varname}");
 			}
