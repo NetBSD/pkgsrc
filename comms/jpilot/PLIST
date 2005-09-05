@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/09/05 07:51:58 rh Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-sync
@@ -8,12 +8,11 @@ lib/jpilot/plugins/.directory
 lib/jpilot/plugins/libexpense.la
 lib/jpilot/plugins/libkeyring.la
 lib/jpilot/plugins/libsynctime.la
+man/man1/jpilot-dial.1
 man/man1/jpilot-dump.1
 man/man1/jpilot-sync.1
 man/man1/jpilot-upgrade-99.1
 man/man1/jpilot.1
-share/doc/html/jpilot/manual.html
-share/doc/html/jpilot/plugin.html
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/BUGS
 share/doc/${PKGNAME}/COPYING
@@ -65,13 +64,14 @@ ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/jpilot.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/jpilot.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/jpilot.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/jpilot.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/jpilot.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/jpilot.mo
 @dirrm share/jpilot
-@dirrm share/doc/jpilot
+@dirrm share/gnome/apps/Applications
 @dirrm share/doc/${PKGNAME}/icons
 @dirrm share/doc/${PKGNAME}
-@dirrm share/doc/html/jpilot
+@dirrm share/doc/jpilot
 @dirrm lib/jpilot/plugins
 @dirrm lib/jpilot
 @dirrm include/jpilot

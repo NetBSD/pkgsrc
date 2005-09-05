@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.48 2005/08/10 20:56:13 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2005/09/05 07:51:58 rh Exp $
 #
 
-DISTNAME=		jpilot-0.99.5
-PKGREVISION=		6
+DISTNAME=		jpilot-0.99.7
 CATEGORIES=		comms
 MASTER_SITES=		http://jpilot.org/
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://jpilot.org/
 COMMENT=		Desktop organizer application for the palm pilot
 
@@ -14,11 +13,12 @@ BUILD_USES_MSGFMT=	YES
 
 CONFLICTS+=		jpilot-libplugin-[0-9]*
 
-USE_DIRS+=		gnome1-1.0
 USE_LIBTOOL=		YES
-USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
 USE_OLD_DES_API=	YES
+USE_DIRS+=		gnome1-1.0
+USE_TOOLS+=		pkg-config
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
@@ -28,7 +28,6 @@ LDFLAGS+=		-export-dynamic
 
 DOCDIR=			${PREFIX}/share/doc/jpilot
 INCDIR=			${PREFIX}/include/jpilot
-HTMLDIR=		${PREFIX}/share/doc/html/jpilot
 MAN1DIR=		${PREFIX}/man/man1
 PLUGINSDIR=		${PREFIX}/lib/jpilot/plugins
 
@@ -50,11 +49,9 @@ pre-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${INCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${INSTALL_DATA_DIR} ${PLUGINSDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} libplugin.h prefs.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DOCDIR}
-	cd ${WRKSRC}/docs; ${INSTALL_DATA} *.html ${HTMLDIR}
 	cd ${WRKSRC}/docs; ${INSTALL_MAN} *.1 ${MAN1DIR}
 	${TOUCH} ${PLUGINSDIR}/.directory
 
