@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2005/07/13 15:21:57 jschauma Exp $
+# $NetBSD: Makefile,v 1.31 2005/09/05 16:58:22 wiz Exp $
 #
 
-DISTNAME=	gawk-3.1.4
-PKGREVISION=	2
+DISTNAME=	gawk-3.1.5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gawk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,9 +14,8 @@ CONFLICTS=	ja-gawk-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		# defined
-USE_PKGLOCALEDIR=	# defined
-TEST_DIRS=		${WRKSRC}
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 TEST_TARGET=		check
 
 INFO_FILES=	gawk.info gawkinet.info
@@ -30,7 +28,6 @@ LDFLAGS.IRIX+=		-lgen
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gawk
 PKG_SUPPORTED_OPTIONS=	portals
-PKG_OPTIONS_LEGACY_VARS+=	GAWK_ENABLE_PORTALS:portals
 
 .include "../../mk/bsd.options.mk"
 
