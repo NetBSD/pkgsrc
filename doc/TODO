@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3851 2005/09/05 14:08:16 adam Exp $
+$NetBSD: TODO,v 1.3852 2005/09/05 14:23:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -284,6 +284,7 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
+	o BitTorrent-4.0.4
 	o Chinput-3.0.1
 	o DatLib-2.6
 	o DatUtil-2.18
@@ -303,6 +304,7 @@ Suggested package updates
 	o YoSucker-71
 	o aap-0.144
 	o abcde-2.3.0
+	o abook-0.5.4
 	o acpi-iasl-20040715
 	o advancecomp-1.14
 	o aewm++-1.0.27
@@ -351,7 +353,7 @@ Suggested package updates
 	o bchunk-1.2.0
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o benchfft-3.1
-	o bins-1.1.28
+	o bins-1.1.29
 	o binutils-2.16.1
 	o bioperl-1.5.0
 	o blackbox-0.70
@@ -369,11 +371,13 @@ Suggested package updates
 	o ccd2iso-0.2
 	o cdl3-1.2.6
 	o cdlabelgen-3.5.0 [pkg/30721]
+	o cdlabelgen-3.6.0
 	o cdrtools-2.01
+	o centericq-4.21.0
 	o cfengine2-2.1.14
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
-	o cgdb-0.5.2
+	o cgdb-0.5.3
 	o cgic-205
 	o cgicc-3.2.3
 	o check-0.9.2
@@ -384,7 +388,7 @@ Suggested package updates
 	o cjk-lyx-1.3.3
 	o classpath-0.17
 	o classpath-gui-0.17
-	o clisp-2.34
+	o clisp-2.35
 	o cocoon-2.1.7
 	o columba-1.0RC1
 	o common-mml-1.2.16
@@ -413,7 +417,7 @@ Suggested package updates
 	o devhelp-0.9.3
 	o dialog-1.0 [pkg/30856]
 	o diffstat-1.38
-	o dirac-0.5.2
+	o dirac-0.5.3
 	o dirdiff-2.0
 	o dmalloc-5.4.2
 	o dnstracer-1.8
@@ -429,7 +433,7 @@ Suggested package updates
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6
-	o electricfence-2.4.15
+	o electricfence-2.4.16
 	o elf-0.5.4
 	o elm-me-2.4pl122
 	o emacs-w3m-1.4.4
@@ -446,7 +450,7 @@ Suggested package updates
 	o fdgw-20040609
 	o fhist-1.14
 	o file-4.14
-	o findutils-4.2.23
+	o findutils-4.2.25
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fluxbox-0.9.13 [pkg/30229|jmcneill]
@@ -483,7 +487,7 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
-	o glib2-2.8.0
+	o glib2-2.8.1
 	o gliv-1.9.3
 	o gnet1-1.1.9
 	o gnetman-20050325
@@ -495,11 +499,12 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o grace-5.1.18
+	o gramps-2.0.6
 	o grap-1.32
 	o grep-2.5.1a
 	o grepmail-5.3032
 	o gri-2.12.8
-	o gsasl-0.2.6
+	o gsasl-0.2.7
 	o gsed-4.1.4
 	o gsharutils-4.3.78
 	o gss-0.0.16
@@ -538,7 +543,7 @@ Suggested package updates
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20050820 [pkg/31132]
-	o iozone-3.239
+	o iozone-3.248
 	o ipcheck-0.219
 	o ircd-hybrid-7.0.4
 	o iroffer-1.309
@@ -563,6 +568,7 @@ Suggested package updates
 	o kaffe-nox11-1.1.5 [pkg/30017]
 	o kajaani-kombat-0.7
 	o kapooka-0.3
+	o kazehakase-0.3.0 [pkg/31106]
 	o kdbg-2.0.0
 	o kdrill-6.4
 	o kinput2-3.1
@@ -580,6 +586,7 @@ Suggested package updates
 	o leafpad-0.7.9
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
+	o libextractor-0.5.4
 	o libflash-0.4.13
 	o libhydrogen-0.9.0
 	o libjit-0.0.4 [pkg/30514]
@@ -587,13 +594,15 @@ Suggested package updates
 	o liblive-2005.03.23
 	o libmatheval-1.1.2
 	o libmpeg3-1.5.4
+	o librsvg2-2.11.1
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
 	o libstatgrab-0.12
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.20
+	o libtorrent-0.7.3
 	o licq-core-1.3.0
-	o liferea-0.9.7
+	o liferea-0.9.7b
 	o lilypond-2.6
 	o linuxsms-0.77
 	o lmbench-2.0.4
@@ -613,6 +622,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
+	o mathomatic-12.4.10
 	o mdd-20050318
 	o mdf2iso-0.3.0
 	o memcached-1.1.12 [pkg/30289]
@@ -624,9 +634,9 @@ Suggested package updates
 	o mini_sendmail-1.3.5
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.5.0
-	o mldonkey-2.6.3
-	o mldonkey-gui-2.6.3
+	o mkvtoolnix-1.5.5
+	o mldonkey-2.6.4
+	o mldonkey-gui-2.6.4
 	o mlview-0.8
 	o mmix-20041014
 	o molden-4.3
@@ -655,7 +665,7 @@ Suggested package updates
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o neon-0.25.1
+	o neon-0.25.3
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netpipe-3.6.2
@@ -666,9 +676,9 @@ Suggested package updates
 	o ns-2.28
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
-	o nsd-2.3.0
+	o nsd-2.3.1
 	o nslint-2.1a3
-	o nut-10.21
+	o nut-11.0
 	o obexftp-0.10.6
 	o odbc-postgresql-7.4.7
 	o offlineimap-4.0.8
@@ -800,17 +810,20 @@ Suggested package updates
 	o pari-2.2.7
 	o parrot-0.2.1 [pkg/30586]
 	o patchutils-0.2.31
+	o pbzip2-0.9.4
 	o pcal-4.8
 	o pchar-1.5
+	o pcre-6.3
 	o pdmenu-1.2.85
 	o pear-HTTP_Request-1.2.4
 	o pear-Net_Socket-1.0.6
 	o pen-0.15.0
-	o pfqueue-0.4.2
+	o pfqueue-0.5.0
 	o pfstat-1.8
 	o phoon-20030120
 	o photopc-3.05
 	o php-4.4.0
+	o phppgadmin-3.5.5
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
@@ -821,8 +834,10 @@ Suggested package updates
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
+	o ploticus-2.32
 	o ploticus-examples-230
 	o plptools-0.13 [pkg/30244]
+	o plptools-0.14
 	o pnet-0.7.0 [pkg/30516]
 	o pnetC-0.7.0 [pkg/30517]
 	o pnetlib-0.7.0 [pkg/30518]
@@ -852,6 +867,7 @@ Suggested package updates
 	o py-ZODB-3.2.3
 	o py-amkCrypto-2.0
 	o py-bdb-xml-2.0.9
+	o py-checker-0.8.15
 	o py-gnuplot-1.7
 	o py-imaging-1.1.5c2
 	o py-kenosis-0.95
@@ -860,6 +876,8 @@ Suggested package updates
 	o py-mad-0.5.3
 	o py-mysqldb-1.1.7
 	o py-psycopg-1.1.19
+	o py-qt3-base-3.15
+	o py-qt3-sip-4.3
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
 	o py-sqlite-2.0.3
@@ -880,6 +898,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o quagga-0.98.5
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
@@ -892,11 +911,11 @@ Suggested package updates
 	o rayshade-4.0.6
 	o rblcheck-1.5
 	o rc-1.7.1
-	o rdiff-backup-0.12.8
+	o rdiff-backup-1.0.0
 	o rdp-1.6
 	o rep-gtk-0.18
 	o resize_image-0.7
-	o riece-1.0.8
+	o riece-2.0.0
 	o rio500-0.8.1
 	o ripmime-1.4.0.4
 	o rman-3.2
@@ -909,7 +928,7 @@ Suggested package updates
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rpm-4.1
-	o rsnapshot-1.2.1 [or rsnapshot-1.1.7]
+	o rsnapshot-1.2.3
 	o rt-3.4.1
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
@@ -951,16 +970,17 @@ Suggested package updates
 	o skype-1.1.0.13 [libdbus missing in suse91 compat]
 	o sma-1.4
 	o smalleiffel-0.90
-	o smalltalk-2.1.10
+	o smalltalk-2.1.12
 	o smartmontools-5.33
 	o sml-nj-110.55
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
 	o smokeping-1.38
-	o snd-7.14.1
+	o snd-7.15
 	o snes9x-1.43
 	o snownews-1.5.7
-	o source-highlight-2.1
+	o source-highlight-2.1.2
+	o sox-12.17.8
 	o spim-7.2
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
@@ -976,7 +996,7 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o subversion-1.2.3
 	o suse_base-9.3
-	o svk-1.02
+	o svk-1.04
 	o swfdec-0.3.5
 	o swi-prolog-5.5.11
 	o swish-e-2.4.3
@@ -1009,6 +1029,7 @@ Suggested package updates
 	o tnef-1.3.3
 	o tob-0.26
 	o top-3.6alpha9
+	o tor-0.1.0.14
 	o totd-1.5 [pkg/30545]
 	o totd-1.5.1
 	o tpasm-1.2
@@ -1021,7 +1042,7 @@ Suggested package updates
 	o ttyrec-1.0.6
 	o turba-2.0.3
 	o twelf-1.5
-	o txt2html-2.41
+	o txt2html-2.42
 	o txt2man-1.4.8
 	o uae-0.8.23
 	o ubs-0.20
@@ -1070,6 +1091,7 @@ Suggested package updates
 	o xblast-2.10.0
 	o xboard-4.2.7
 	o xcb-2.4
+	o xchm-1.2
 	o xcircuit-3.3.11
 	o xdaliclock-2.20
 	o xdesktopwaves-1.3
@@ -1101,7 +1123,9 @@ Suggested package updates
 	o xmon-1.5.6
 	o xnap-2.5r3
 	o xorp-1.1
-	o xpad-2.8
+	o xpad-2.9
+	o xpaint-2.7.8
+	o xpdf-3.01
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrmap-2.31
@@ -1120,6 +1144,7 @@ Suggested package updates
 	o ysm-2.9.6
 	o ytalk-3.2.0 [pkg/28840]
 	o zenicb-1.31 (needs merge with lots of local changes)
+	o zile-2.2.6
 	o zircon-1.18.256
 	o zope25-Photo-1.2.4
 	o zope25-ZWiki-0.39.0
