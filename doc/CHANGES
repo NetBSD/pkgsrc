@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11037 2005/09/05 14:26:19 adam Exp $
+$NetBSD: CHANGES,v 1.11038 2005/09/05 14:43:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3923,3 +3923,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/blitz++ to 0.8 [adam 2005-09-05]
 	Updated sysutils/gnome-vfs2 to 2.10.1nb1 [adam 2005-09-05]
 	Updated net/libsoup-devel to 2.2.6.1nb1 [adam 2005-09-05]
+	Updated print/gpdf to 2.10.0nb1 [jmmv 2005-09-05]
