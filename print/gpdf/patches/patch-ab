@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1 2005/09/05 14:42:42 jmmv Exp $
+
+Patch to fix CAN-2005-2097.  The patch in #163920 doesn't apply to
+gpdf, since gpdf uses the gnome print api for rendering.  The crux of
+that patch is to avoid using the FoFi (font file) classes for fixing
+up the embedded truetype font, but instead pass the font to freetype
+directly.  This patch does the same thing for the gpdf rendering code.
+
+Kristian Høgsberg <krh@redhat.com>
+
+--- xpdf/GPOutputDev.cc.krh	2005-08-01 11:44:43.000000000 -0400
++++ xpdf/GPOutputDev.cc	2005-08-01 11:45:32.000000000 -0400
+@@ -258,9 +258,6 @@
+   }
+   case fontTrueType: {
+     FoFiTrueType *ff;
+-    gint fd;
+-    gchar *temp_name;
+-    FILE *f;
+     gushort *code_to_gid;
+ 
+     ff = FoFiTrueType::make((char *)contents, length);
+@@ -269,16 +266,7 @@
+ 
+     code_to_gid = ((Gfx8BitFont *)font)->getCodeToGIDMap(ff); // this is g(oo)malloc'd
+ 
+-    fd = g_file_open_tmp("gpdf-ttf-XXXXXX", &temp_name, NULL);
+-    f = fdopen(fd, "wb");
+-    ff->writeTTF(&fileWrite, f);
+     delete ff;
+-    g_free(contents);
+-    fclose(f);
+-
+-    g_file_get_contents(temp_name, (gchar **)&contents, &length, NULL);
+-    unlink(temp_name);
+-    g_free(temp_name);
+ 
+     gff = gpdf_font_face_download((const guchar *)font_name,
+ 				  (const guchar *)"",
+@@ -324,28 +312,8 @@
+     break;
+   }
+   case fontCIDType2: {
+-    FoFiTrueType *ff;
+-    gint fd;
+-    gchar *temp_name;
+-    FILE *f;
+     gint n_cids;    
+     gushort *code_to_gid;
+-
+-    ff = FoFiTrueType::make((char *)contents, length);
+-    if (!ff)
+-      return getFontFaceFallback(font);
+-
+-    fd = g_file_open_tmp("gpdf-ttf-XXXXXX", &temp_name, NULL);
+-    f = fdopen(fd, "wb");
+-    ff->writeTTF(&fileWrite, f);
+-    delete ff;
+-    g_free(contents);
+-    fclose(f);
+-
+-    g_file_get_contents(temp_name, (gchar **)&contents, &length, NULL);
+-    unlink(temp_name);
+-    g_free(temp_name);
+-
+     gff = gpdf_font_face_download((const guchar *)font_name,
+ 				  (const guchar *)"",
+ 				  GNOME_FONT_REGULAR, FALSE,
