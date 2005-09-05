@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2005/01/16 22:28:34 recht Exp $
+@comment $NetBSD: PLIST,v 1.36 2005/09/05 07:37:50 recht Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -24,6 +24,7 @@ include/libxml2/libxml/parserInternals.h
 include/libxml2/libxml/pattern.h
 include/libxml2/libxml/relaxng.h
 include/libxml2/libxml/schemasInternals.h
+include/libxml2/libxml/schematron.h
 include/libxml2/libxml/threads.h
 include/libxml2/libxml/tree.h
 include/libxml2/libxml/uri.h
@@ -88,6 +89,7 @@ share/doc/html/libxml2/html/libxml-parserInternals.html
 share/doc/html/libxml2/html/libxml-pattern.html
 share/doc/html/libxml2/html/libxml-relaxng.html
 share/doc/html/libxml2/html/libxml-schemasInternals.html
+share/doc/html/libxml2/html/libxml-schematron.html
 share/doc/html/libxml2/html/libxml-threads.html
 share/doc/html/libxml2/html/libxml-tree.html
 share/doc/html/libxml2/html/libxml-uri.html
