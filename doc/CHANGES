@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11044 2005/09/05 16:05:58 wiz Exp $
+$NetBSD: CHANGES,v 1.11045 2005/09/05 16:45:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3930,3 +3930,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/xchm to 1.2 [minskim 2005-09-05]
 	Updated devel/pcre to 6.3 [wiz 2005-09-05]
 	Updated archivers/pbzip2 to 0.9.4 [wiz 2005-09-05]
+	Updated net/wget to 1.10.1 [wiz 2005-09-05]
