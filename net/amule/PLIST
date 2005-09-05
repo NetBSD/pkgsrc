@@ -1,81 +1,67 @@
-@comment $NetBSD: PLIST,v 1.5 2004/07/25 14:00:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/09/05 10:45:19 dogcow Exp $
 bin/amule
-bin/amulecmd
-bin/amulecmdDLG
-bin/amuleweb
-bin/amulewebDLG
 bin/ed2k
-share/amuleweb/aMule.tmpl
-share/amuleweb/webserver/GraphCon.gif
-share/amuleweb/webserver/GraphDL.gif
-share/amuleweb/webserver/GraphUL.gif
-share/amuleweb/webserver/add_server.gif
-share/amuleweb/webserver/arrow_down.gif
-share/amuleweb/webserver/arrow_right.gif
-share/amuleweb/webserver/arrow_up.gif
-share/amuleweb/webserver/black.gif
-share/amuleweb/webserver/blue.gif
-share/amuleweb/webserver/blue1.gif
-share/amuleweb/webserver/blue2.gif
-share/amuleweb/webserver/blue3.gif
-share/amuleweb/webserver/blue4.gif
-share/amuleweb/webserver/blue5.gif
-share/amuleweb/webserver/blue6.gif
-share/amuleweb/webserver/cp_download.gif
-share/amuleweb/webserver/cp_kad.gif
-share/amuleweb/webserver/cp_search.gif
-share/amuleweb/webserver/cp_servers.gif
-share/amuleweb/webserver/cp_settings.gif
-share/amuleweb/webserver/cp_shared.gif
-share/amuleweb/webserver/cp_stats.gif
-share/amuleweb/webserver/emule.gif
-share/amuleweb/webserver/green.gif
-share/amuleweb/webserver/greenpercent.gif
-share/amuleweb/webserver/l_cancel.gif
-share/amuleweb/webserver/l_connect.gif
-share/amuleweb/webserver/l_down.gif
-share/amuleweb/webserver/l_ed2klink.gif
-share/amuleweb/webserver/l_info.gif
-share/amuleweb/webserver/l_pause.gif
-share/amuleweb/webserver/l_resume.gif
-share/amuleweb/webserver/l_up.gif
-share/amuleweb/webserver/log.gif
-share/amuleweb/webserver/main_bg.gif
-share/amuleweb/webserver/main_top_bg.gif
-share/amuleweb/webserver/red.gif
-share/amuleweb/webserver/top_bar_bg.gif
-share/amuleweb/webserver/top_bar_bg2.gif
-share/amuleweb/webserver/transparent.gif
-share/amuleweb/webserver/yellow.gif
+lib/xchat/plugins/xas.pl
+man/de/man1/amule.1
+man/de/man1/ed2k.1
+man/de/man1/xas.1
+man/es/man1/amule.1
+man/es/man1/ed2k.1
+man/es/man1/xas.1
+man/fr/man1/amule.1
+man/fr/man1/ed2k.1
+man/hu/man1/amule.1
+man/hu/man1/ed2k.1
+man/hu/man1/xas.1
+man/man1/amule.1
+man/man1/ed2k.1
+man/man1/xas.1
 share/applications/amule.desktop
 share/doc/aMule-${PKGVERSION}/ABOUT-NLS
-share/doc/aMule-${PKGVERSION}/AUTHORS
 share/doc/aMule-${PKGVERSION}/Changelog
+share/doc/aMule-${PKGVERSION}/Doxyfile
+share/doc/aMule-${PKGVERSION}/EC_Protocol.txt
 share/doc/aMule-${PKGVERSION}/ED2K-Links.HOWTO
 share/doc/aMule-${PKGVERSION}/INSTALL
 share/doc/aMule-${PKGVERSION}/README
 share/doc/aMule-${PKGVERSION}/TODO
+share/doc/aMule-${PKGVERSION}/amule-win32.HOWTO.txt
 share/doc/aMule-${PKGVERSION}/amulesig.txt
-share/doc/aMule-${PKGVERSION}/eMule-Imports-Status
 share/doc/aMule-${PKGVERSION}/license.txt
+share/doc/aMule-${PKGVERSION}/socks4.protocol
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/ee/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/en/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/en_US/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/et_EE/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/it_CH/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/amule.mo
 share/pixmaps/amule.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm ${PKGLOCALEDIR}/locale/it_CH/LC_MESSAGES
 @dirrm share/doc/aMule-${PKGVERSION}
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm share/amuleweb/webserver
-@dirrm share/amuleweb
+@dirrm man/hu/man1
+@dirrm man/hu
+@dirrm lib/xchat/plugins
+@dirrm lib/xchat
