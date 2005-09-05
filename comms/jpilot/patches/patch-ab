@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.9 2005/09/05 07:52:22 rh Exp $
+
+--- KeyRing/keyring.c.orig	2004-02-17 16:59:38.000000000 -0800
++++ KeyRing/keyring.c
+@@ -182,7 +182,7 @@ static int pack_KeyRing(struct KeyRing *
+    for (i=strlen(kr->name)+1; i<n; i=i+8) {
+       /* des_encrypt3((DES_LONG *)&buf[i], s1, s2, s1); */
+ #ifdef HEADER_NEW_DES_H
+-      DES_ecb3_encrypt((const_des_cblock *)&buf[i], (des_cblock *)(&buf[i]), 
++      DES_ecb3_encrypt((const_DES_cblock *)&buf[i], (DES_cblock *)(&buf[i]), 
+ 		       &s1, &s2, &s1, DES_ENCRYPT);
+ #else
+       des_ecb3_encrypt((const_des_cblock *)&buf[i], (des_cblock *)(&buf[i]),
+@@ -281,7 +281,7 @@ static int unpack_KeyRing(struct KeyRing
+       /* des_decrypt3((DES_LONG *)chunk, s1, s2, s1); */
+       /* memcpy(clear_text+i, chunk, 8); */
+ #ifdef HEADER_NEW_DES_H
+-      DES_ecb3_encrypt((const_des_cblock *)&P[i], (DES_cblock *)(clear_text+i),
++      DES_ecb3_encrypt((const_DES_cblock *)&P[i], (DES_cblock *)(clear_text+i),
+ 		       &s1, &s2, &s1, DES_DECRYPT);
+ #else
+       des_ecb3_encrypt((const_des_cblock *)&P[i], (des_cblock *)(clear_text+i),
