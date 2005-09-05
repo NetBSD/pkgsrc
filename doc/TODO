@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3859 2005/09/05 16:45:54 wiz Exp $
+$NetBSD: TODO,v 1.3860 2005/09/05 16:58:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -469,7 +469,6 @@ Suggested package updates
 	o gated-3.6
 	o gauche-0.8.4 [pkg/30535]
 	o gauche-0.8.5
-	o gawk-3.1.5
 	o gcc-3.3.6
 	o gcc-4.0.1
 	o gcombust-0.1.55
