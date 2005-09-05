@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:13 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/05 14:06:59 adam Exp $
 
-DISTNAME=		blitz-0.6
-PKGNAME=		blitz++-0.6
-CATEGORIES=		math devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=blitz/}
+DISTNAME=	blitz-0.8
+PKGNAME=	blitz++-0.8
+CATEGORIES=	math devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blitz/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.oonumerics.org/blitz/
-COMMENT=		C++ template class library providing array objects
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.oonumerics.org/blitz/
+COMMENT=	C++ template class library providing array objects
 
-CONFIGURE_ARGS+=	--with-cxx=gcc
-GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-cxx=gcc
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/blitz
-	${INSTALL_DATA} ${WRKSRC}/manual/blitz.ps ${PREFIX}/share/doc/blitz
+INFO_FILES=		blitz.info
 
 .include "../../mk/bsd.pkg.mk"
