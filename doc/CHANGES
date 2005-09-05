@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11042 2005/09/05 15:11:39 minskim Exp $
+$NetBSD: CHANGES,v 1.11043 2005/09/05 15:57:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/loudmouth to 1.0.1 [adam 2005-09-05]
 	Updated inputmethod/anthy to 6700b [taya 2005-09-05]
 	Updated misc/xchm to 1.2 [minskim 2005-09-05]
+	Updated devel/pcre to 6.3 [wiz 2005-09-05]
