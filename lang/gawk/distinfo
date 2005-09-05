@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.15 2005/05/15 16:38:28 bouyer Exp $
+$NetBSD: distinfo,v 1.16 2005/09/05 16:58:22 wiz Exp $
 
-SHA1 (gawk-3.1.4.tar.bz2) = ba50753eca7518d5a13fa9a1e1333562cd8477ca
-RMD160 (gawk-3.1.4.tar.bz2) = d90e6fcc15cb205cbd7452284c567ab5c6840411
-Size (gawk-3.1.4.tar.bz2) = 1732494 bytes
-SHA1 (patch-aa) = 52740979223e5e9f36ea1f6d758399a946a1ea29
-SHA1 (patch-ab) = c0ffd2cc29104e5fefb123a353388d991dc62635
-SHA1 (patch-af) = 09b66c3552a8792b516845c371163aae41e29c94
+SHA1 (gawk-3.1.5.tar.bz2) = 0d5694461f1c32f1eae41a1c0d7ba0939b47e369
+RMD160 (gawk-3.1.5.tar.bz2) = 8eae0f173fcb344f97d811fa5bb5fd390a76b886
+Size (gawk-3.1.5.tar.bz2) = 1756783 bytes
+SHA1 (patch-ab) = 39a98bd71349e2eb7ac7c6bb67cb2b8617fda6bd
