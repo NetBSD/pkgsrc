@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/09/04 20:23:14 recht Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/05 10:14:16 cube Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
+PKGREVISION=	1
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
@@ -18,7 +19,7 @@ COMMENT=	daemonized interface between MTA and content checkers
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip>=1.14:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-Compress-Zlib>=1.35:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib>=1.05:../../converters/p5-Convert-UUlib
 DEPENDS+=	p5-Digest-MD5>=2.22:../../security/p5-Digest-MD5
@@ -26,7 +27,7 @@ DEPENDS+=	p5-MIME-tools>=5.415:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.58:../../mail/p5-MailTools
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=	p5-Net>=1.16:../../net/p5-Net
-DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
+DEPENDS+=	p5-Net-Server>=0.88:../../net/p5-Net-Server
 DEPENDS+=	p5-Time-HiRes>=1.49:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
