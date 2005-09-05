@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11032 2005/09/05 07:40:03 recht Exp $
+$NetBSD: CHANGES,v 1.11033 2005/09/05 07:53:43 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3915,3 +3915,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/ruby-redcloth to 3.0.3 [taca 2005-09-05]
 	Updated textproc/libxml2 to 2.6.21 [recht 2005-09-05]
 	Updated textproc/libxslt to 1.1.15 [recht 2005-09-05]
+	Updated comms/jpilot to 0.99.7 [rh 2005-09-05]
