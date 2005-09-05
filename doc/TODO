@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3856 2005/09/05 15:11:39 minskim Exp $
+$NetBSD: TODO,v 1.3857 2005/09/05 15:57:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -812,7 +812,6 @@ Suggested package updates
 	o pbzip2-0.9.4
 	o pcal-4.8
 	o pchar-1.5
-	o pcre-6.3
 	o pdmenu-1.2.85
 	o pear-HTTP_Request-1.2.4
 	o pear-Net_Socket-1.0.6
