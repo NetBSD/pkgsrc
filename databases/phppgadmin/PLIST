@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/06 21:36:56 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/09/05 18:14:39 tv Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -7,8 +7,8 @@ share/doc/phppgadmin/INSTALL
 share/doc/phppgadmin/LICENSE
 share/doc/phppgadmin/TODO
 share/doc/phppgadmin/TRANSLATORS
-share/examples/phppgadmin/config.inc.php-dist
 share/examples/phppgadmin/apache.conf
+share/examples/phppgadmin/config.inc.php-dist
 share/phppgadmin/aggregates.php
 share/phppgadmin/all_db.php
 share/phppgadmin/bottombar.php
@@ -52,8 +52,6 @@ share/phppgadmin/domains.php
 share/phppgadmin/functions.php
 share/phppgadmin/groups.php
 share/phppgadmin/help.php
-share/phppgadmin/redirect.php
-share/phppgadmin/tablespaces.php
 share/phppgadmin/images/themes/default/database.png
 share/phppgadmin/images/themes/default/domains.png
 share/phppgadmin/images/themes/default/functions.png
@@ -80,9 +78,11 @@ share/phppgadmin/lang/dutch.php
 share/phppgadmin/lang/english.php
 share/phppgadmin/lang/french.php
 share/phppgadmin/lang/german.php
+share/phppgadmin/lang/hebrew.php
 share/phppgadmin/lang/hungarian.php
 share/phppgadmin/lang/italian.php
 share/phppgadmin/lang/japanese.php
+share/phppgadmin/lang/mongol.php
 share/phppgadmin/lang/polish.php
 share/phppgadmin/lang/portuguese-br.php
 share/phppgadmin/lang/portuguese-pt.php
@@ -111,8 +111,6 @@ share/phppgadmin/lang/recoded/spanish.php
 share/phppgadmin/lang/recoded/swedish.php
 share/phppgadmin/lang/recoded/turkish.php
 share/phppgadmin/lang/recoded/ukrainian.php
-share/phppgadmin/lang/hebrew.php
-share/phppgadmin/lang/mongol.php
 share/phppgadmin/lang/romanian.php
 share/phppgadmin/lang/russian.php
 share/phppgadmin/lang/slovak.php
@@ -185,6 +183,7 @@ share/phppgadmin/logout.php
 share/phppgadmin/opclasses.php
 share/phppgadmin/operators.php
 share/phppgadmin/privileges.php
+share/phppgadmin/redirect.php
 share/phppgadmin/reports.php
 share/phppgadmin/robots.txt
 share/phppgadmin/rules.php
@@ -193,6 +192,7 @@ share/phppgadmin/sql.php
 share/phppgadmin/sql/reports-pgsql.sql
 share/phppgadmin/sqledit.php
 share/phppgadmin/tables.php
+share/phppgadmin/tablespaces.php
 share/phppgadmin/tblproperties.php
 share/phppgadmin/themes/default/global.css
 share/phppgadmin/topbar.php
@@ -213,10 +213,9 @@ share/phppgadmin/views.php
 @dirrm share/phppgadmin/images/themes/default
 @dirrm share/phppgadmin/images/themes
 @dirrm share/phppgadmin/images
-@dirrm share/phppgadmin/conf
 @dirrm share/phppgadmin/classes/database
 @dirrm share/phppgadmin/classes/HTML_TreeMenu/images
 @dirrm share/phppgadmin/classes/HTML_TreeMenu
 @dirrm share/phppgadmin/classes
-@dirrm share/phppgadmin
 @dirrm share/examples/phppgadmin
+@dirrm share/doc/phppgadmin
