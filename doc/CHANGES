@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11043 2005/09/05 15:57:12 wiz Exp $
+$NetBSD: CHANGES,v 1.11044 2005/09/05 16:05:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3929,3 +3929,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated inputmethod/anthy to 6700b [taya 2005-09-05]
 	Updated misc/xchm to 1.2 [minskim 2005-09-05]
 	Updated devel/pcre to 6.3 [wiz 2005-09-05]
+	Updated archivers/pbzip2 to 0.9.4 [wiz 2005-09-05]
