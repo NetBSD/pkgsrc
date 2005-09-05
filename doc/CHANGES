@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11031 2005/09/05 03:54:04 taca Exp $
+$NetBSD: CHANGES,v 1.11032 2005/09/05 07:40:03 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3913,3 +3913,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/unrar to 3.5.3 [wiz 2005-09-05]
 	Updated misc/cksfv to 1.3.6 [wiz 2005-09-05]
 	Updated textproc/ruby-redcloth to 3.0.3 [taca 2005-09-05]
+	Updated textproc/libxml2 to 2.6.21 [recht 2005-09-05]
+	Updated textproc/libxslt to 1.1.15 [recht 2005-09-05]
