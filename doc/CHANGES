@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11041 2005/09/05 15:01:07 taya Exp $
+$NetBSD: CHANGES,v 1.11042 2005/09/05 15:11:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3927,3 +3927,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/mathomatic to 12.4.10 [minskim 2005-09-05]
 	Updated chat/loudmouth to 1.0.1 [adam 2005-09-05]
 	Updated inputmethod/anthy to 6700b [taya 2005-09-05]
+	Updated misc/xchm to 1.2 [minskim 2005-09-05]
