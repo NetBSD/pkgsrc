@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3853 2005/09/05 14:25:12 wiz Exp $
+$NetBSD: TODO,v 1.3854 2005/09/05 14:26:27 taca Exp $
 
 Suggested new packages
 ======================
@@ -459,6 +459,7 @@ Suggested package updates
 	o fondu-040927
 	o fop-0.20.5
 	o fort77-1.18
+	o fprot-workstation-bin-4.6.1
 	o freetds-0.62.4
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
