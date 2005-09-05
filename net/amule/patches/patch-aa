@@ -1,16 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2005/03/16 19:06:10 rillig Exp $
+$NetBSD: patch-aa,v 1.4 2005/09/05 10:45:19 dogcow Exp $
 
-<net/if.h> requires <sys/socket.h>
-
---- src/SysTray.cpp.orig	Tue Mar 15 19:02:17 2005
-+++ src/SysTray.cpp	Tue Mar 15 19:01:55 2005
-@@ -23,6 +23,9 @@
- #include "sys.h"
- #include <libintl.h>
- #include <clocale>		// Needed for setlocale(3)
-+#ifdef __NetBSD__
-+# include <sys/socket.h>
-+#endif
- #include <net/if.h>		// Needed for struct ifreq
- #include <sys/socket.h>		//
- #include <netinet/in.h>		// Needed for inet_ntoa
+--- /tmp/configure.orig	2005-09-05 03:12:12.000000000 -0700
++++ configure	2005-09-05 03:05:31.000000000 -0700
+@@ -7711,6 +7711,7 @@ if test x$autopoint_version != x; then
+ else
+ 	result="no"
+ fi
++result="yes"
+ HAVE_GETTEXT=$result
+ echo "$as_me:$LINENO: result: $result ($autopoint_version)" >&5
+ echo "${ECHO_T}$result ($autopoint_version)" >&6
