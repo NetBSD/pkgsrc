@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11040 2005/09/05 14:45:53 adam Exp $
+$NetBSD: CHANGES,v 1.11041 2005/09/05 15:01:07 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3926,3 +3926,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/gpdf to 2.10.0nb1 [jmmv 2005-09-05]
 	Updated math/mathomatic to 12.4.10 [minskim 2005-09-05]
 	Updated chat/loudmouth to 1.0.1 [adam 2005-09-05]
+	Updated inputmethod/anthy to 6700b [taya 2005-09-05]
