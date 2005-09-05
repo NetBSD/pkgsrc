@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.48 2005/07/28 15:17:55 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.49 2005/09/05 15:24:08 dillo Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -199,13 +199,15 @@ _opt_:=	${_m_:C/.*://}
 _popt_:=${_opt_:C/^-//}
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_})
 .    if defined(${_var_})
-PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated variable "${_var_:Q}" used, use PKG_DEFAULT_OPTIONS+="${_popt_:Q}" instead."
 .      if empty(${_var_}:M[nN][oO])
 PKG_LEGACY_OPTIONS:=${PKG_LEGACY_OPTIONS} ${_opt_}
+PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated variable "${_var_:Q}" set to "${${_var_}:Q}", use PKG_DEFAULT_OPTIONS+="${_opt_:Q}" instead."
 .      elif empty(_opt_:M-*)
 PKG_LEGACY_OPTIONS:=${PKG_LEGACY_OPTIONS} -${_popt_}
+PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated variable "${_var_:Q}" set to "${${_var_}:Q}", use PKG_DEFAULT_OPTIONS+=-"${_popt_:Q}" instead."
 .      else
 PKG_LEGACY_OPTIONS:=${PKG_LEGACY_OPTIONS} ${_popt_}
+PKG_OPTIONS_DEPRECATED_WARNINGS:=${PKG_OPTIONS_DEPRECATED_WARNINGS} "Deprecated variable "${_var_:Q}" set to "${${_var_}:Q}", use PKG_DEFAULT_OPTIONS+="${_popt_:Q}" instead."
 .      endif
 .    endif
 .  endif
