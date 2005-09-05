@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.278 2005/09/04 21:06:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.279 2005/09/05 13:06:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -410,7 +410,7 @@ my $regex_unresolved	= qr"\$\{";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 my $regex_validchars	= qr"[\011\040-\176]";
-my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*(.*?)(\\?)$";
+my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*(.*?)$";
 my $regex_yes		= qr"^(?:YES|yes)$";
 my $regex_yesno		= qr"^(?:YES|yes|NO|no)$";
 
@@ -725,7 +725,7 @@ sub checkline_valid_characters_in_variable($$) {
 
 	$rest = $line->text;
 	if ($rest =~ $regex_varassign) {
-		($varname, undef, $rest, undef) = ($1, $2, $3, $4);
+		($varname, undef, $rest) = ($1, $2, $3);
 	} else {
 		return;
 	}
@@ -1327,7 +1327,7 @@ sub checklines_direct_tools($) {
 
 		# process variable assignments
 		} elsif ($text =~ $regex_varassign) {
-			my ($varname, undef, $varvalue, $varcont) = ($1, $2, $3, $4);
+			my ($varname, undef, $varvalue) = ($1, $2, $3);
 
 			if ($varname =~ $regex_ok_vars) {
 				$line->log_info("Legitimate direct use of \"${tool}\" in variable ${varname}.");
