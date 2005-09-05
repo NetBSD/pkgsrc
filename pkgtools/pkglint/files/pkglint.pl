@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.280 2005/09/05 13:27:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.281 2005/09/05 15:45:29 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1166,6 +1166,72 @@ sub readmakefile($$$$) {
 	return $contents;
 }
 
+# The pkglint author thinks that variables containing lists of things
+# should have a name indicating some plural form. Sadly, there are other
+# reasons like backwards compatibility and other developer's
+# expectations that make changes to most of the following variables
+# highly unlikely.
+my $get_regex_plurals_value = undef;
+sub get_regex_plurals() {
+
+	if (defined($get_regex_plurals_value)) {
+		return $get_regex_plurals_value;
+	}
+
+	my @plurals_ok = qw(
+		.*S
+		.*_ENV
+		.*_REQD
+		BUILDLINK_LDADD
+		BUILDLINK_RECOMMENDED
+		COMMENT
+		EXTRACT_ONLY
+		SUBST_SED
+		_.*
+	);
+	my @plurals_missing_an_s = qw(
+		.*_OVERRIDE
+		.*_PREREQ
+		.*_SRC
+		.*_SUBST
+		.*_TARGET
+		.*_TMPL
+		BUILDLINK_DEPMETHOD
+		BUILDLINK_TRANSFORM
+		CONFLICT
+		EVAL_PREFIX
+		INTERACTIVE_STAGE
+		LICENSE
+		MASTER_SITE_.*
+		NOT_FOR_COMPILER
+		NOT_FOR_PLATFORM
+		ONLY_FOR_COMPILER
+		ONLY_FOR_PLATFORM
+		PERL5_PACKLIST
+		PKG_FAIL_REASON
+		PKG_SKIP_REASON
+	);
+	my @plurals_reluctantly_accepted = qw(
+		CRYPTO
+		FIX_RPATH
+		PRINT_PLIST_AWK
+		PYTHON_VERSIONS_INCOMPATIBLE
+		REPLACE_INTERPRETER
+		REPLACE_PERL
+		REPLACE_RUBY
+		RESTRICTED
+		SITES_.*
+	);
+	my $plurals = join("|",
+		@plurals_ok,
+		@plurals_missing_an_s,
+		@plurals_reluctantly_accepted
+	);
+
+	$get_regex_plurals_value = qr"^(?:${plurals})$";
+	return $get_regex_plurals_value;
+}
+
 sub checkline_Makefile_vartype($$) {
 	my ($line, $vartypes) = @_;
 	if ($line->text =~ $regex_varassign) {
@@ -1197,6 +1263,14 @@ sub checkline_Makefile_vartype($$) {
 
 			} else {
 				$line->log_error("[internal] Type $type unknown.");
+			}
+
+		} elsif ($op eq "+=") {
+			my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
+			my $regex_plurals = get_regex_plurals();
+
+			if ($varbase !~ $regex_plurals) {
+				$line->log_warning("As ${varname} is modified using \"+=\", its name should indicate plural.");
 			}
 		}
 	}
