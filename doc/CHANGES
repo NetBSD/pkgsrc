@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11035 2005/09/05 10:45:53 dogcow Exp $
+$NetBSD: CHANGES,v 1.11036 2005/09/05 14:08:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3920,3 +3920,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/freeciv-server to 2.0.5 [adam 2005-09-05]
 	Updated games/freeciv-client to 2.0.5 [adam 2005-09-05]
 	Updated net/amule to 2.0.3 [dogcow 2005-09-05]
+	Updated math/blitz++ to 0.8 [adam 2005-09-05]
