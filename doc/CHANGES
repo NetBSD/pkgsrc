@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11033 2005/09/05 07:53:43 rh Exp $
+$NetBSD: CHANGES,v 1.11034 2005/09/05 08:19:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3916,3 +3916,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/libxml2 to 2.6.21 [recht 2005-09-05]
 	Updated textproc/libxslt to 1.1.15 [recht 2005-09-05]
 	Updated comms/jpilot to 0.99.7 [rh 2005-09-05]
+	Updated games/freeciv-share to 2.0.5 [adam 2005-09-05]
+	Updated games/freeciv-server to 2.0.5 [adam 2005-09-05]
+	Updated games/freeciv-client to 2.0.5 [adam 2005-09-05]
