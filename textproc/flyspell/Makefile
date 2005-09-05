@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/08/28 04:25:31 uebayasi Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/05 17:04:53 wiz Exp $
 #
 
-DISTNAME=	flyspell-1.7i.el
+DISTNAME=	flyspell-1.7j.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/.el//}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www-sop.inria.fr/mimosa/personnel/Manuel.Serrano/flyspell/
 EXTRACT_SUFX=	# empty
@@ -13,8 +12,6 @@ HOMEPAGE=	http://www-sop.inria.fr/mimosa/personnel/Manuel.Serrano/flyspell/flysp
 COMMENT=	Emacs/Xemacs on-the-fly spell checker
 
 DEPENDS=	${EMACS_PKGNAME_PREFIX}ispell-emacs-[0-9]*:../../textproc/ispell-emacs
-
-DIST_SUBDIR=	flyspell-1.7iv2
 
 EXTRACT_ONLY=	# None
 
