@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/08/26 00:00:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/09/05 16:58:22 wiz Exp $
 bin/gawk
 bin/${PKGNAME}
 bin/igawk
@@ -33,13 +33,17 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gawk.mo
 @dirrm share/awk
 @dirrm libexec/awk
