@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:18 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/06 15:23:10 adam Exp $
 
-DISTNAME=		python-gnutls-0.2
-PKGNAME=		${PYPKGPREFIX}${DISTNAME:S/python//}
-PKGREVISION=		4
-CATEGORIES=		security python
-MASTER_SITES=		http://home.o2w.net/~ivo/python-gnutls/dist/
+DISTNAME=	python-gnutls-0.2
+PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python//}
+PKGREVISION=	5
+CATEGORIES=	security python
+MASTER_SITES=	http://home.o2w.net/~ivo/python-gnutls/dist/
 
-MAINTAINER=		minskim@NetBSD.org
-HOMEPAGE=		http://home.o2w.net/~ivo/wiki/moin.cgi/PythonGnutls
-COMMENT=		Python bindings for GNUTLS
+MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://home.o2w.net/~ivo/wiki/moin.cgi/PythonGnutls
+COMMENT=	Python bindings for GNUTLS
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 PYDISTUTILSPKG=		yes
