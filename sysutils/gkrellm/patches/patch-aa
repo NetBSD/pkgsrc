@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2004/06/07 17:01:50 cube Exp $
+$NetBSD: patch-aa,v 1.15 2005/09/06 08:10:59 abs Exp $
 
 --- src/sysdeps/bsd-common.c.orig	2004-05-01 19:46:38.000000000 +0200
 +++ src/sysdeps/bsd-common.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.14 2004/06/07 17:01:50 cube Exp $
  gkrellm_sys_fs_get_mounts_list(void)
  	{
  	gchar		*s, *dev, *dir, *type;
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +	struct statvfs	*mntbuf;
 +#else
  	struct statfs	*mntbuf;
@@ -18,20 +18,20 @@ $NetBSD: patch-aa,v 1.14 2004/06/07 17:01:50 cube Exp $
  void
  gkrellm_sys_fs_get_fsusage(gpointer fs, gchar *dir)
  	{
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +	struct statvfs	st;
 +#else
  	struct statfs	st;
 +#endif
  
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +	if (!statvfs(dir, &st))
 +#else
  	if (!statfs(dir, &st))
 +#endif
  		gkrellm_fs_assign_fsusage_data(fs,
  					(glong) st.f_blocks, (glong) st.f_bavail,
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +					(glong) st.f_bfree, (glong) st.f_frsize);
 +#else
  					(glong) st.f_bfree, (glong) st.f_bsize);

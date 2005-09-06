@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2004/05/04 13:52:11 mrg Exp $
+$NetBSD: patch-ac,v 1.6 2005/09/06 08:10:58 abs Exp $
 
 --- ark/arkutils.cpp.orig	2003-11-30 20:50:36.000000000 +1100
 +++ ark/arkutils.cpp	2004-05-04 22:57:13.000000000 +1000
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.5 2004/05/04 13:52:11 mrg Exp $
  #ifdef BSD4_4
  #include <sys/mount.h>
 +#ifdef __NetBSD__
-+#if __NetBSD_Version__ >= 200040000    /* 2.0D */
++#if __NetBSD_Version__ >= 299000900    /* 2.99.9 */
 +#include <sys/statvfs.h>
 +#define STATFS statvfs
 +#endif

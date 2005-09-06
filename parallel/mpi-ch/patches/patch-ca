@@ -1,4 +1,4 @@
-$NetBSD: patch-ca,v 1.2 2005/03/03 12:01:30 garbled Exp $
+$NetBSD: patch-ca,v 1.3 2005/09/06 08:10:59 abs Exp $
 --- romio/adio/common/ad_fstype.c.orig	2003-09-04 13:24:44.000000000 -0700
 +++ romio/adio/common/ad_fstype.c	2004-10-15 09:54:55.000000000 -0700
 @@ -11,7 +11,15 @@
@@ -8,7 +8,7 @@ $NetBSD: patch-ca,v 1.2 2005/03/03 12:01:30 garbled Exp $
 -#if (defined(HPUX) || defined(SPPUX) || defined(IRIX) || defined(SOLARIS) || defined(AIX) || defined(DEC) || defined(CRAY))
 +#ifdef __NetBSD__
 +#include <sys/param.h>
-+#if __NetBSD_Version__ >= 200040000
++#if __NetBSD_Version__ >= 299000900
 +#define NETBSD_STATVFS
 +#define f_basetype f_fstypename
 +#endif

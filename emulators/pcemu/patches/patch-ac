@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2004/09/16 17:16:18 minskim Exp $
+$NetBSD: patch-ac,v 1.5 2005/09/06 08:10:58 abs Exp $
 
 --- mfs.c.orig	1994-06-22 09:24:51.000000000 -0500
 +++ mfs.c
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2004/09/16 17:16:18 minskim Exp $
 +#endif
  
 -#ifdef SOLARIS
-+#if defined(SOLARIS) || (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000)
++#if defined(SOLARIS) || (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
  #include <fcntl.h>
  #include <sys/statvfs.h>
  #endif
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.4 2004/09/16 17:16:18 minskim Exp $
  get_disk_space(char *cwd, int *free, int *total)
  {
 -#ifdef SOLARIS
-+#if defined(SOLARIS) || (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000)
++#if defined(SOLARIS) || (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
      struct statvfs fsbuf;
      if (statvfs(cwd, &fsbuf) >= 0)
  #else

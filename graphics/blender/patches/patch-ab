@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2005/08/03 11:58:14 adam Exp $
+$NetBSD: patch-ab,v 1.5 2005/09/06 08:10:58 abs Exp $
 
 --- source/blender/blenlib/intern/storage.c.orig	2005-04-30 09:57:35.000000000 +0000
 +++ source/blender/blenlib/intern/storage.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.4 2005/08/03 11:58:14 adam Exp $
  
  	return (double) (freec*bytesps*sectorspc);
  #else
-+#if defined (__NetBSD__) && __NetBSD_Version__ >= 200040000 /* 2.0D */
++#if defined (__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */
 +	struct statvfs disk;
 +#else
  	struct statfs disk;
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.4 2005/08/03 11:58:14 adam Exp $
  	} else strcpy(name,"/");
  
 -#if defined (__FreeBSD__) || defined (linux) || defined (__OpenBSD__) || defined (__APPLE__) 
-+#if defined (__NetBSD__) && __NetBSD_Version__ >= 200040000 /* 2.0D */
++#if defined (__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */
 +	if (statvfs(name, &disk)) return(-1);
 +#elif defined (__FreeBSD__) || defined (linux) || defined (__OpenBSD__) || \
 +      defined (__APPLE__) || defined (__NetBSD__)
