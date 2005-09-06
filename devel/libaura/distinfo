@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:17 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/09/06 08:10:57 abs Exp $
 
 SHA1 (libaura-2.0.tar.gz) = 4f91d8efaca9ffb2b9ae244187bd49f7c1969d6a
 RMD160 (libaura-2.0.tar.gz) = 6901381e42abfbf323fccb735ffbd7fa5171ad8e
 Size (libaura-2.0.tar.gz) = 10682 bytes
-SHA1 (patch-aa) = a3b7e2540c289f6eb4222464efd86c918e8cfa9d
+SHA1 (patch-aa) = 6973345c5476700565e230021e5d60350b86fa0d
 SHA1 (patch-ab) = 74c6510dcde9b579f39e089dae97c7a4cdd6869b
