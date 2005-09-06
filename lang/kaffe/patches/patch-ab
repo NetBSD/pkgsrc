@@ -1,0 +1,85 @@
+$NetBSD: patch-ab,v 1.9 2005/09/06 18:15:32 tonio Exp $
+
+--- ./kaffe/kaffevm/systems/unix-pthreads/signal.c.orig	2005-04-24 19:46:52.000000000 +0200
++++ ./kaffe/kaffevm/systems/unix-pthreads/signal.c	2005-04-24 19:50:12.000000000 +0200
+@@ -47,8 +47,6 @@
+ #define SIG_T   void*
+ #endif
+ 
+-static void nullException(SIGNAL_ARGS(sig, sc));
+-static void floatingException(EXCEPTIONPROTO);
+ static void ignoreSignal(int sig);
+ 
+ static exchandler_t nullHandler;
+@@ -56,35 +54,6 @@
+ static exchandler_t stackOverflowHandler;
+ 
+ /*
+- * Setup the internal exceptions.
+- */
+-void
+-jthread_initexceptions(exchandler_t _nullHandler,
+-		       exchandler_t _floatingHandler,
+-		       exchandler_t _stackOverflowHandler)
+-{
+-	nullHandler = _nullHandler;
+-	floatingHandler = _floatingHandler;
+-	stackOverflowHandler = _stackOverflowHandler;
+-
+-	if (DBGEXPR(EXCEPTION, false, true)) {
+-		/* Catch signals we need to convert to exceptions */
+-#if defined(SIGSEGV)
+-		registerSyncSignalHandler(SIGSEGV, nullException);
+-#endif
+-#if defined(SIGBUS)
+-		registerSyncSignalHandler(SIGBUS, nullException);
+-#endif
+-#if defined(SIGFPE)
+-		registerSyncSignalHandler(SIGFPE, floatingException);
+-#endif
+-#if defined(SIGPIPE)
+-		ignoreSignal(SIGPIPE);
+-#endif
+-	}
+-}
+-
+-/*
+  * Null exception - catches bad memory accesses.
+  */
+ static void
+@@ -141,6 +110,35 @@
+ 	floatingHandler(EXCEPTIONFRAMEPTR);
+ }
+ 
++/*
++ * Setup the internal exceptions.
++ */
++void
++jthread_initexceptions(exchandler_t _nullHandler,
++		       exchandler_t _floatingHandler,
++		       exchandler_t _stackOverflowHandler)
++{
++	nullHandler = _nullHandler;
++	floatingHandler = _floatingHandler;
++	stackOverflowHandler = _stackOverflowHandler;
++
++	if (DBGEXPR(EXCEPTION, false, true)) {
++		/* Catch signals we need to convert to exceptions */
++#if defined(SIGSEGV)
++		registerSyncSignalHandler(SIGSEGV, nullException);
++#endif
++#if defined(SIGBUS)
++		registerSyncSignalHandler(SIGBUS, nullException);
++#endif
++#if defined(SIGFPE)
++		registerSyncSignalHandler(SIGFPE, floatingException);
++#endif
++#if defined(SIGPIPE)
++		ignoreSignal(SIGPIPE);
++#endif
++	}
++}
++
+ /* -----------------------------------------------
+  * OS signal handling code.  See FAQ/FAQ.jsignal for information.
+  * ----------------------------------------------- */
