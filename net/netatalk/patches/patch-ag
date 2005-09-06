@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2004/11/03 20:53:15 markd Exp $
+$NetBSD: patch-ag,v 1.6 2005/09/06 07:59:32 abs Exp $
 
 --- etc/afpd/unix.h.orig	2004-05-11 06:40:33.000000000 +1200
 +++ etc/afpd/unix.h
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.5 2004/11/03 20:53:15 markd Exp $
  #else /* TRU64 */
  /* temp fix, was: defined(HAVE_SYS_STATVFS) || defined(__svr4__) */
 -#if defined(__svr4__)
-+#if defined(__svr4__) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000))
++#if defined(__svr4__) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
  #include <sys/statvfs.h>
  #define statfs statvfs
  #else /* HAVE_SYS_STATVFS || __svr4__ */
