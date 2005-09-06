@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.50 2005/05/23 11:37:22 adam Exp $
+# $NetBSD: Makefile,v 1.51 2005/09/06 14:53:36 adam Exp $
 
-DISTNAME=       xpaint-2.7.7
+DISTNAME=       xpaint-2.7.8
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xaw95-1.1.4${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://sf-xpaint.sourceforge.net/
 COMMENT=	Simple paint program
 
-USE_TOOLS+=		gmake
 USE_IMAKE=      	yes
+USE_TOOLS+=		gmake
+MAKE_ENV+=		XMKMF="${XMKMF}"
+BUILD_TARGET=		xaw3dg
 
-BUILD_TARGET=	xaw95
-MAKE_ENV+=	XMKMF="${XMKMF}"
-
-SUBST_CLASSES=	    foo
-SUBST_STAGE.foo=    pre-configure
-SUBST_FILES.foo=    Local.config
-SUBST_SED.foo=	    -e "s|\$${LOCALBASE}|${LOCALBASE}|g" \
-		    -e "s|\$${X11BASE}|${X11BASE}|g" \
-		    -e "s|\$${XPMDIR}|${BUILDLINK_PREFIX.xpm}|g"
+SUBST_CLASSES=		foo
+SUBST_STAGE.foo=	pre-configure
+SUBST_FILES.foo=	Local.config configure
+SUBST_SED.foo=		-e "s|@LOCALBASE@|${LOCALBASE}|g" \
+			-e "s|@PREFIX@|${PREFIX}|g" \
+			-e "s|@XAWDIR@|${BUILDLINK_PREFIX.Xaw3d}|g" \
+			-e "s|@XPMDIR@|${BUILDLINK_PREFIX.xpm}|g"
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
