@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2005/08/19 03:53:55 grant Exp $
+$NetBSD: patch-ac,v 1.6 2005/09/06 15:49:35 adam Exp $
 
---- wmbiff/tlsComm.c.orig	2004-06-24 07:44:45.000000000 +1000
+--- wmbiff/tlsComm.c.orig	2004-10-11 00:29:47.000000000 +0000
 +++ wmbiff/tlsComm.c
-@@ -407,10 +407,12 @@ tls_check_certificate(struct connection_
+@@ -412,10 +412,12 @@ tls_check_certificate(struct connection_
  							"server's certificate is invalid or not X.509.\n"
  							"there may be a problem with the certificate stored in your certfile\n");
  		}
