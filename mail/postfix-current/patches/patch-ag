@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.7 2005/08/23 02:31:44 reed Exp $
+$NetBSD: patch-ag,v 1.8 2005/09/06 08:10:58 abs Exp $
 
 --- src/util/sys_defs.h.orig	2005-07-14 14:28:33.000000000 -0700
 +++ src/util/sys_defs.h	2005-08-22 19:05:24.000000000 -0700
@@ -37,7 +37,7 @@ $NetBSD: patch-ag,v 1.7 2005/08/23 02:31:44 reed Exp $
  #define ALIAS_DB_MAP	"hash:/etc/aliases"
  #define GETTIMEOFDAY(t) gettimeofday(t,(struct timezone *) 0)
  #define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin"
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +#define USE_STATVFS
 +#define STATVFS_IN_SYS_STATVFS_H
 +#else

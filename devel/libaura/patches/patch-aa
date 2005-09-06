@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/09 05:40:28 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2005/09/06 08:10:57 abs Exp $
 
 --- fspred.c.orig	2005-02-09 04:36:15.000000000 +0100
 +++ fspred.c	2005-02-09 04:41:15.000000000 +0100
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/09 05:40:28 xtraeme Exp $
  #include <stdlib.h>
  #include <string.h>
  
-+#if (__NetBSD_Version__ >= 200040000)
++#if (__NetBSD_Version__ >= 299000900)
 +#define STATFS statvfs
 +#else
 +#define STATFS statfs

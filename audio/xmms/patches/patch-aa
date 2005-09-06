@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2004/05/06 14:48:57 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2005/09/06 08:10:57 abs Exp $
 
 --- Input/cdaudio/cdaudio.c.orig	2004-05-06 17:52:36.000000000 +0200
 +++ Input/cdaudio/cdaudio.c	2004-05-06 17:54:45.000000000 +0200
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.8 2004/05/06 14:48:57 drochner Exp $
   	FILE *mounts;
   	struct mntent *mnt;
  #elif defined(HAVE_GETMNTINFO)
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +	struct statvfs *fsp;
 +#else
   	struct statfs *fsp;

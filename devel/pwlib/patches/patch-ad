@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2004/12/28 16:09:47 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2005/09/06 08:10:57 abs Exp $
 
 --- src/ptlib/unix/osutil.cxx.orig	2004-09-23 07:00:10.000000000 +0200
 +++ src/ptlib/unix/osutil.cxx
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.4 2004/12/28 16:09:47 wiz Exp $
  #elif defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS)
  #define P_USE_STRFTIME
  
-+#if defined(__NetBSD__) && __NetBSD_Version__ > 200040000
++#if defined(__NetBSD__) && __NetBSD_Version__ > 299000900
 +#include <sys/statvfs.h>
 +#define statfs statvfs
 +#else

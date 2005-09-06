@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.4 2004/05/09 00:12:13 jdolecek Exp $
+$NetBSD: patch-as,v 1.5 2005/09/06 08:10:58 abs Exp $
 
 --- ../sal/osl/unx/file.c.orig	2004-05-07 09:57:55.000000000 +0200
 +++ ../sal/osl/unx/file.c
@@ -19,8 +19,8 @@ $NetBSD: patch-as,v 1.4 2004/05/09 00:12:13 jdolecek Exp $
 +
 +#include <sys/param.h>
 +
-+/* statvfs() replaced statfs() in 2.0D */
-+# if __NetBSD_Version__ >= 200040000
++/* statvfs() replaced statfs() in 2.99.9 */
++# if __NetBSD_Version__ >= 299000900
 +	/* 2.0D or later */
 +#   define __OSL_STATFS_STRUCT      			struct statvfs
 +#   define __OSL_STATFS(dir, sfs)   			statvfs((dir), (sfs))
