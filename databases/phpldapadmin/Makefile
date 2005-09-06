@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/09/04 10:08:14 adrianp Exp $
+# $NetBSD: Makefile,v 1.14 2005/09/06 21:47:09 adrianp Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
@@ -14,16 +14,24 @@ DEPENDS+=	php-ldap>=4.1.2:../../databases/php-ldap
 VERSION=	0.9.6c
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
-APACHE_USER?=	www
+BUILD_DEFS+=	WWW_USER
 
 CONF_FILES=	${PREFIX}/share/examples/phpldapadmin/config.php.example \
 		${PREFIX}/share/phpldapadmin/config.php
 CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf \
-		${PKG_SYSCONFDIR}/httpd/phpldapadmin.conf
+		${PKG_SYSCONFDIR}/phpldapadmin.conf
 SPECIAL_PERMS=	${PREFIX}/share/phpldapadmin/config.php \
-		${APACHE_USER} wheel 0600
+		${WWW_USER} ${ROOT_GROUP} 0600
 
 INSTALLATION_DIRS=	${PREFIX}/share/phpldapadmin
+
+# NOTE: If you're running apache under an account other than www or
+# are running a different web server under a specific user account
+# you should set WWW_USER in your mk.conf.
+#
+.if !defined(WWW_USER)
+WWW_USER=	${APACHE_USER}
+.endif
 
 do-configure:
 	@${SED} -e "s|@LDAPADMINDIR@|${PREFIX}/share/phpldapadmin|g" \
@@ -45,5 +53,4 @@ do-install:
 		-s /\.\*.example//	\
 		-rwppm . ${PREFIX}/share/phpldapadmin
 
-.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
