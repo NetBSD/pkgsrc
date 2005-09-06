@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2005/05/23 11:37:23 adam Exp $
+$NetBSD: patch-ac,v 1.8 2005/09/06 14:53:36 adam Exp $
 
---- rw/rwTable.c.orig	2005-04-10 08:52:02.000000000 +0000
+--- rw/rwTable.c.orig	2005-08-17 13:00:25.000000000 +0000
 +++ rw/rwTable.c
-@@ -249,6 +249,7 @@ RWtableGetWriterList()
+@@ -251,6 +251,7 @@ RWtableGetWriterList()
  char *
  RWGetMsg()
  {
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.7 2005/05/23 11:37:23 adam Exp $
  #if defined(BSD4_4)
      __const extern char *__const sys_errlist[];
  #else
-@@ -262,6 +263,7 @@ RWGetMsg()
+@@ -264,6 +265,7 @@ RWGetMsg()
  #endif
  #endif
  #endif
