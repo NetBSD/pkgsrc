@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2005/03/03 12:01:30 garbled Exp $
+$NetBSD: distinfo,v 1.10 2005/09/06 08:10:59 abs Exp $
 
 SHA1 (mpich-1.2.6.tar.gz) = d3dba3993bc7b0bd11ec4e4bdb70374283770cea
 RMD160 (mpich-1.2.6.tar.gz) = dae2e2920a9bc0d3ca050fcb78b32d0f99a36dcf
@@ -20,4 +20,4 @@ SHA1 (patch-bb) = 7f399ed3d4bbaf00b75ec3a5ce8f114e4c6bbd23
 SHA1 (patch-bc) = e89bbf9e1ef9f2aaa6b8000d170c5a158408988d
 SHA1 (patch-bd) = 7c96f575263fbe9adc0514ed64452db04cc68212
 SHA1 (patch-be) = d21a703dbe17a48fb940ce65fd232284a57ff3cf
-SHA1 (patch-ca) = 095f2d5b801299e56b16e17ef1014fd5cf9b3332
+SHA1 (patch-ca) = f5c7c8ed152ed55c5e8275fc7ca4278231203945

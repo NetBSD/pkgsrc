@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2004/12/09 16:01:58 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2005/09/06 08:10:59 abs Exp $
 
 --- spegla.c.orig	2000-05-27 15:38:14.000000000 +0200
 +++ spegla.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.5 2004/12/09 16:01:58 wiz Exp $
  	struct	fs_data f;
  #else
 -#ifdef Solaris
-+#if defined(Solaris) || (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000)
++#if defined(Solaris) || (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
  	struct	statvfs f;
  #else
  	struct	statfs f;
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.5 2004/12/09 16:01:58 wiz Exp $
  		return;
  
 -#ifdef Solaris
-+#if defined(Solaris) || (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000)
++#if defined(Solaris) || (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
  	if (statvfs(path, &f) < 0)
  		e_err(1, "statvfs: %s", path);
  #else
