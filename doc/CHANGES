@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11057 2005/09/06 15:56:38 adam Exp $
+$NetBSD: CHANGES,v 1.11058 2005/09/06 17:35:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3943,3 +3943,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/lftp to 3.2.1nb1 [adam 2005-09-06]
 	Updated mail/wmbiff to 0.4.26 [adam 2005-09-06]
 	Updated graphics/inkscape to 0.42.2 [adam 2005-09-06]
+	Updated devel/p5-subversion to 1.2.3 [jlam 2005-09-06]
+	Updated devel/py-subversion to 1.2.3 [jlam 2005-09-06]
+	Updated devel/ruby-subversion to 1.2.3 [jlam 2005-09-06]
+	Updated devel/subversion to 1.2.3 [jlam 2005-09-06]
+	Updated devel/subversion-base to 1.2.3 [jlam 2005-09-06]
+	Updated www/ap2-subversion to 1.2.3 [jlam 2005-09-06]
