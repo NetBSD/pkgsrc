@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11059 2005/09/06 18:21:40 tonio Exp $
+$NetBSD: CHANGES,v 1.11060 2005/09/06 19:12:08 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3952,3 +3952,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/kaffe to 1.1.5 [tonio 2005-09-06]
 	Updated lang/kaffe-x11 to 1.1.5 [tonio 2005-09-06]
 	Updated lang/kaffe-esound to 1.1.5 [tonio 2005-09-06]
+	Added databases/php-sqlite version 4.4.0.1.0.3 [tv 2005-09-06]
