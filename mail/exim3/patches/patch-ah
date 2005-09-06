@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2004/05/26 09:57:20 grant Exp $
+$NetBSD: patch-ah,v 1.2 2005/09/06 08:10:58 abs Exp $
 
 --- OS/os.h-NetBSD.orig	2002-04-04 22:56:14.000000000 +1000
 +++ OS/os.h-NetBSD
@@ -8,7 +8,7 @@ $NetBSD: patch-ah,v 1.1 2004/05/26 09:57:20 grant Exp $
  
 +#include <sys/param.h>
 +
-+#if __NetBSD_Version__ >= 200040000
++#if __NetBSD_Version__ >= 299000900
 +/* NetBSD 2.0D switched to statvfs() */
 +#  include <sys/statvfs.h>
 +#  define statfs statvfs

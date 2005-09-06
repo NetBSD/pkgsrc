@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+$NetBSD: patch-af,v 1.2 2005/09/06 08:10:59 abs Exp $
 
 --- ntfsprogs/ntfsclone.c.orig	Sat Sep  4 06:16:32 2004
 +++ ntfsprogs/ntfsclone.c
@@ -8,8 +8,8 @@ $NetBSD: patch-af,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
  
 +#ifdef __NetBSD__
 +#  include <sys/param.h>
-+   /* NetBSD versions later than 2.0D have statvfs(2) instead of statfs(2) */
-+#  if __NetBSD_Version__ >= 200040000
++   /* NetBSD versions later than 2.99.9 have statvfs(2) instead of statfs(2) */
++#  if __NetBSD_Version__ >= 299000900
 +#    include <sys/statvfs.h>
 +#    define F_TYPE	f_fsid
 +#  else
@@ -24,7 +24,7 @@ $NetBSD: patch-af,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
  	int restore_image;
  	char *output;
  	char *volume;
-+#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900)
 +	struct statvfs stfs;
 +#else
  	struct statfs stfs;

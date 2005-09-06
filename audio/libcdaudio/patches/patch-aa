@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2004/11/26 13:38:30 adam Exp $
+$NetBSD: patch-aa,v 1.10 2005/09/06 08:10:57 abs Exp $
 
 --- src/cdaudio.c.orig	2004-09-09 00:26:20.000000000 +0000
 +++ src/cdaudio.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.9 2004/11/26 13:38:30 adam Exp $
  #endif
  #ifdef HAVE_GETMNTINFO
    int mounts;
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +  struct statvfs *mnt;
 +#else
    struct statfs *mnt;

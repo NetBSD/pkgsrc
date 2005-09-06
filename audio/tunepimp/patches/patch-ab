@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/11/01 12:47:22 markd Exp $
+$NetBSD: patch-ab,v 1.3 2005/09/06 08:10:57 abs Exp $
 
 --- lib/write.cpp.orig	2004-03-25 22:12:43.000000000 +1200
 +++ lib/write.cpp
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.2 2004/11/01 12:47:22 markd Exp $
  #else
  //---------------------------------------------------------------------------
  
-+#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +#define HAVE_STATVFS 1
 +#endif
 +

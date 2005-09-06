@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2005/04/14 20:48:58 mrauch Exp $
+$NetBSD: distinfo,v 1.32 2005/09/06 08:10:58 abs Exp $
 
 SHA1 (openoffice-1.1.4/OOo_1.1.4_source.tar.gz) = 3161dbe53f6ec0b0d5a65790a2b1dd3d7331b430
 RMD160 (openoffice-1.1.4/OOo_1.1.4_source.tar.gz) = 0e218792bb72106cd494532de373d0f40a5a9587
@@ -48,9 +48,9 @@ SHA1 (patch-ao) = 68d21a0daf48d47c7a1ab398bb98c48d7f002c4e
 SHA1 (patch-ap) = 8f885c569f09ba3d66481e8d3b60238a50fd38bb
 SHA1 (patch-aq) = 82285ade1af0a0c5e84d322d5a3a925c095103bb
 SHA1 (patch-ar) = f185c705cda716e1b52e5b6ca6d9c5d2a9b341bc
-SHA1 (patch-as) = 71d4d5a1517274ed9aff3e6c2bd89265772c93af
-SHA1 (patch-at) = f38552d47fbbc1013b00a29b5c451607236b2b84
-SHA1 (patch-au) = 662e14be36e28aacf0bb3961c194c69d39cef8a8
+SHA1 (patch-as) = 81cd7e2a6ff24729a0276d397b285b07c9694205
+SHA1 (patch-at) = d208593e5fd37687c4be0b2735fdcc57760f7f3a
+SHA1 (patch-au) = 3fd383266f24c4a0c5e6f0cd00d419e1fe20cafa
 SHA1 (patch-av) = f6f0aa984f7d975c721d616b348a69cff6173ff8
 SHA1 (patch-aw) = f0decfe7d1bac881ec83b09328a6b863a9bed7b1
 SHA1 (patch-ax) = 4a918df6dfd058fd6abecfc4c9b85a21bfc18364

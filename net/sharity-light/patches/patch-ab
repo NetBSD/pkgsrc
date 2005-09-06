@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/09/16 17:57:02 minskim Exp $
+$NetBSD: patch-ab,v 1.3 2005/09/06 08:10:59 abs Exp $
 
 --- nfs/syscalls.c.orig	1998-06-30 07:24:56.000000000 -0500
 +++ nfs/syscalls.c
@@ -8,7 +8,7 @@ $NetBSD: patch-ab,v 1.2 2004/09/16 17:57:02 minskim Exp $
  
 +#ifdef __NetBSD__
 +#include <nfs/nfsmount.h>
-+#if __NetBSD_Version__ >= 200040000
++#if __NetBSD_Version__ >= 299000900
 +#define statfs statvfs
 +#endif
 +#endif

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2004/09/16 17:57:02 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2005/09/06 08:10:59 abs Exp $
 
 --- ../unshlight/unshlight.c.orig	2001-03-09 10:09:36.000000000 -0600
 +++ ../unshlight/unshlight.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.1 2004/09/16 17:57:02 minskim Exp $
  #include <stdlib.h>
  #include <signal.h>
  
-+#if defined(__NetBSD__) && __NetBSD_Version__ >= 200040000
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 299000900
 +#define statfs statvfs
 +#endif
 +
