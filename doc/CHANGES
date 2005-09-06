@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11053 2005/09/06 15:20:40 adam Exp $
+$NetBSD: CHANGES,v 1.11054 2005/09/06 15:24:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3939,3 +3939,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/kdebase3 to 3.4.2nb2 [markd 2005-09-06]
 	Updated graphics/xpaint to 2.7.8 [adam 2005-09-06]
 	Updated www/thy to 0.9.4 [adam 2005-09-06]
+	Updated security/py-gnutls to 0.2nb5 [adam 2005-09-06]
