@@ -1,12 +1,16 @@
-# $NetBSD: Makefile.common,v 1.5 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/09/06 18:15:32 tonio Exp $
 
-DISTNAME=		kaffe-1.1.4
+DISTNAME=		kaffe-1.1.5
 CATEGORIES=		lang java
 MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.kaffe.org/
 COMMENT=		Virtual machine capable of running Java(tm) code
+
+BUILD_DEPENDS=  unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS=  zip-[0-9]*:../../archivers/zip
+DEPENDS+=       jikes>=1.22:../../lang/jikes
 
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 JAVA_HOME=		${PREFIX}/java/kaffe
@@ -15,7 +19,6 @@ NO_MTREE=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 TEST_TARGET=		check
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips*	\
@@ -30,7 +33,8 @@ BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}/jre/lib/${MACHINE_ARCH}
 
 CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-esd
-CONFIGURE_ARGS+=	--without-awt
+CONFIGURE_ARGS+=	--disable-esdtest
+CONFIGURE_ARGS+=	--disable-native-awt
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,7 +46,7 @@ CONFIGURE_ARGS+=	--without-awt
 CONFIGURE_ENV+=		VM_LIBS="-lc"
 .endif
 
-.if (${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha")
+.if ((${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "powerpc"))
 # On these systems, jit3 is not working.
 CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
