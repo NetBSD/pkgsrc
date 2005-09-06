@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3864 2005/09/06 15:50:34 adam Exp $
+$NetBSD: TODO,v 1.3865 2005/09/06 18:21:40 tonio Exp $
 
 Suggested new packages
 ======================
@@ -561,8 +561,6 @@ Suggested package updates
 	o jftpgw-0.13.5
 	o john-1.6.37
 	o jove-4.16.0.65
-	o kaffe-1.1.5 [pkg/30017]
-	o kaffe-nox11-1.1.5 [pkg/30017]
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.0 [pkg/31106]
@@ -1216,7 +1214,7 @@ Suggested cleanups in pkgsrc
 	  graphics/freetype-lib, graphics/gphoto, graphics/librsvg,
 	  graphics/libungif, graphics/plotutils-nox11, graphics/plotutils,
 	  graphics/py-gimp, graphics/scigraphica, lang/cim, lang/gb,
-	  lang/japhar, lang/kaffe, lang/vslisp,
+	  lang/japhar, lang/vslisp,
 	  net/ja-samba, net/samba2, print/LPRng-core, print/ja-vflib-lib,
 	  print/ja-vfxdvik, security/mirrordir, sysutils/amanda-common,
 	  sysutils/medusa, textproc/chasen-base, textproc/jade,
