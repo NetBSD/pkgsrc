@@ -1,0 +1,15 @@
+$NetBSD: patch-bj,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/sheet-object-widget.c.orig	2005-09-06 10:01:40.000000000 +0200
++++ src/sheet-object-widget.c
+@@ -98,8 +98,8 @@ so_widget_foo_view_init (SheetObjectView
+ }
+ typedef FooCanvasWidget		SOWidgetFooView;
+ typedef FooCanvasWidgetClass	SOWidgetFooViewClass;
+-static GSF_CLASS_FULL (SOWidgetFooView, so_widget_foo_view,
+-	NULL, NULL,
++static GSF_CLASS_FULL (SOWidgetFooView, so_widget_foo_view, NULL, NULL,
++	NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_WIDGET, 0,
+ 	GSF_INTERFACE (so_widget_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ 
