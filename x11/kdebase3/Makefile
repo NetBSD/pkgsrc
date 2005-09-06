@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2005/09/03 21:34:44 markd Exp $
+# $NetBSD: Makefile,v 1.89 2005/09/06 12:37:58 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -12,6 +12,9 @@ DISTFILES+=	NetBSD-flag.png
 SITES_Daemon.png=	${MASTER_SITE_LOCAL}
 SITES_Daemon.README=	${MASTER_SITE_LOCAL}
 SITES_NetBSD-flag.png=	http://www.NetBSD.org/images/
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	post-3.4.2-kdebase-kcheckpass.diff
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -102,6 +105,18 @@ ICONDIR=		share/kde/icons
 
 .if ${OPSYS} == "NetBSD"
 SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${ROOT_USER} kmem 2755
+.endif
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		varlock
+SUBST_STAGE.varlock=	post-patch
+SUBST_MESSAGE.varlock=	"Fix lock directory path."
+SUBST_FILES.varlock=	kcheckpass/kcheckpass.c
+.if ${OPSYS} == "SunOS"
+SUBST_SED.varlock=	s:/var/lock:/var/spool/locks:
+.else
+SUBST_SED.varlock=	s:/var/lock:/var/spool/lock:
+.endif
 .endif
 
 pre-configure:
