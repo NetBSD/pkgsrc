@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/09 05:44:18 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2005/09/06 08:10:57 abs Exp $
 
 --- mount.c.orig	2005-02-09 04:51:24.000000000 +0100
 +++ mount.c	2005-02-09 04:52:38.000000000 +0100
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/09 05:44:18 xtraeme Exp $
  #include "commands.h"
  #include "functions.h"
  
-+#if (__NetBSD_Version__ >= 200040000)
++#if (__NetBSD_Version__ >= 299000900)
 +#define STATFS statvfs
 +#else
 +#define STATFS statfs

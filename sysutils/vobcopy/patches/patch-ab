@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/04/22 15:28:47 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2005/09/06 08:11:00 abs Exp $
 
 --- vobcopy.c.orig	2004-03-26 19:53:10.000000000 +0100
 +++ vobcopy.c	2004-04-22 15:54:46.000000000 +0200
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.2 2004/04/22 15:28:47 drochner Exp $
  #include <dvdread/dvd_reader.h>
  /* for solaris, but is also present in linux */
 -#if (defined(BSD) && (BSD >= 199306)) ||(defined(__APPLE__) && defined(__GNUC__))
-+#if (defined(BSD) && (BSD >= 199306) && !defined(__NetBSD__)) ||(defined(__APPLE__) && defined(__GNUC__)) || (defined(__NetBSD__) && (__NetBSD_Version__ < 200040000))
++#if (defined(BSD) && (BSD >= 199306) && !defined(__NetBSD__)) ||(defined(__APPLE__) && defined(__GNUC__)) || (defined(__NetBSD__) && (__NetBSD_Version__ < 299000900))
  /* I don't know if *BSD have getopt-long... please tell me! */
  //#define HAVE_GETOPT_LONG
  #include <sys/mount.h>

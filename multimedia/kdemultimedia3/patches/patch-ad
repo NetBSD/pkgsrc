@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2004/05/04 11:30:17 mrg Exp $
+$NetBSD: patch-ad,v 1.2 2005/09/06 08:10:59 abs Exp $
 
 --- kscd/libwm/plat_freebsd.c.orig	2003-05-05 22:19:39.000000000 +1000
 +++ kscd/libwm/plat_freebsd.c	2004-05-04 19:17:17.000000000 +1000
@@ -9,7 +9,7 @@ $NetBSD: patch-ad,v 1.1 2004/05/04 11:30:17 mrg Exp $
 +/* XXX */
 +#ifdef __NetBSD__
 +# include <sys/param.h>
-+# if __NetBSD_Version__ >= 200040000	 /* 2.0D */
++# if __NetBSD_Version__ >= 299000900	 /* 2.99.9 */
 +#  define HAVE_SYS_STATVFS_H 1
 +# endif
 +#endif
