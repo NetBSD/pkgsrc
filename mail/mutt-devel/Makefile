@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/09/03 16:57:07 tonio Exp $
+# $NetBSD: Makefile,v 1.37 2005/09/06 07:26:35 jlam Exp $
 
 DISTNAME=		mutt-1.5.10i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -80,13 +80,8 @@ post-build:
 			$$file.save > $$file;				\
 	done
 
-# Pre-create some directories and symlinks used during the installation
-# process.
-#
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${RM} -f ${DOCDIR}/samples
-	${LN} -sf ${EGDIR} ${DOCDIR}/samples
 
 .include "../../mk/bsd.pkg.mk"
