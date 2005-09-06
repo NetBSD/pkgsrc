@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11058 2005/09/06 17:35:19 jlam Exp $
+$NetBSD: CHANGES,v 1.11059 2005/09/06 18:21:40 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3949,3 +3949,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/subversion to 1.2.3 [jlam 2005-09-06]
 	Updated devel/subversion-base to 1.2.3 [jlam 2005-09-06]
 	Updated www/ap2-subversion to 1.2.3 [jlam 2005-09-06]
+	Updated lang/kaffe to 1.1.5 [tonio 2005-09-06]
+	Updated lang/kaffe-x11 to 1.1.5 [tonio 2005-09-06]
+	Updated lang/kaffe-esound to 1.1.5 [tonio 2005-09-06]
