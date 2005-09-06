@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/09/06 18:15:32 tonio Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/09/06 19:11:24 tonio Exp $
 
 DISTNAME=		kaffe-1.1.5
 CATEGORIES=		lang java
@@ -51,6 +51,7 @@ CONFIGURE_ENV+=		VM_LIBS="-lc"
 CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
