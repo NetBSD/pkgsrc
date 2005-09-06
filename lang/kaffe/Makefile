@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2005/08/20 19:16:23 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2005/09/06 18:15:32 tonio Exp $
 #
 
 .include "Makefile.common"
-
-PKGREVISION=		7
 
 CONFLICTS+=		kaffe-nox11-[0-9]*
 
@@ -21,6 +19,6 @@ PRINT_PLIST_AWK+=	/^java\/kaffe\/jre\/lib\/security\/java.security$$/ \
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms ${JAVA_HOME}
 
-.include "../../devel/libltdl/convenience.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
