@@ -1,0 +1,14 @@
+$NetBSD: patch-ba,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/command-context-stderr.c.orig	2005-09-06 09:49:10.000000000 +0200
++++ src/command-context-stderr.c
+@@ -106,7 +106,7 @@ ccs_gnm_cmd_context_init (GnmCmdContextC
+ 	cc_class->error.error_info	= ccs_error_info;
+ }
+ 
+-GSF_CLASS_FULL (CmdContextStderr, cmd_context_stderr,
+-		NULL, ccs_init,
++GSF_CLASS_FULL (CmdContextStderr, cmd_context_stderr, NULL, NULL,
++		NULL, NULL, ccs_init,
+ 		G_TYPE_OBJECT, 0,
+ 		GSF_INTERFACE (ccs_gnm_cmd_context_init, GNM_CMD_CONTEXT_TYPE))

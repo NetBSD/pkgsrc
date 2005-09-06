@@ -1,0 +1,26 @@
+$NetBSD: patch-bb,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/gnm-so-filled.c.orig	2005-09-06 09:56:08.000000000 +0200
++++ src/gnm-so-filled.c
+@@ -112,8 +112,8 @@ so_filled_foo_view_init (SheetObjectView
+ }
+ typedef FooCanvasGroup		FilledFooView;
+ typedef FooCanvasGroupClass	FilledFooViewClass;
+-static GSF_CLASS_FULL (FilledFooView, so_filled_foo_view,
+-	NULL, NULL,
++static GSF_CLASS_FULL (FilledFooView, so_filled_foo_view, NULL, NULL,
++	NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_GROUP, 0,
+ 	GSF_INTERFACE (so_filled_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ #endif /* WITH_GTK */
+@@ -631,8 +631,8 @@ so_polygon_foo_view_init (SheetObjectVie
+ }
+ typedef FooCanvasPolygon	PolygonFooView;
+ typedef FooCanvasPolygonClass	PolygonFooViewClass;
+-static GSF_CLASS_FULL (PolygonFooView, so_polygon_foo_view,
+-	NULL, NULL,
++static GSF_CLASS_FULL (PolygonFooView, so_polygon_foo_view, NULL, NULL,
++	NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_POLYGON, 0,
+ 	GSF_INTERFACE (so_polygon_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ #endif /* WITH_GTK */
