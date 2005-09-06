@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/09/06 18:15:32 tonio Exp $
 bin/kaffe-appletviewer
 bin/kaffe-jar
 bin/kaffe-java
@@ -18,17 +18,15 @@ java/kaffe/bin/java
 java/kaffe/bin/javac
 java/kaffe/bin/javadoc
 java/kaffe/bin/javah
-java/kaffe/bin/javakey
 java/kaffe/bin/javap
-java/kaffe/bin/jdb
 java/kaffe/bin/kaffe
 java/kaffe/bin/kaffeh
-java/kaffe/bin/kjc
-java/kaffe/bin/kopi
 java/kaffe/bin/native2ascii
 java/kaffe/bin/rmic
 java/kaffe/bin/rmiregistry
 java/kaffe/bin/serialver
+java/kaffe/include/jawt.h
+java/kaffe/include/jawt_md.h
 java/kaffe/include/jni.h
 java/kaffe/include/jni_cpp.h
 java/kaffe/include/jvmpi.h
@@ -40,27 +38,35 @@ java/kaffe/include/kaffe/java_lang_ThreadGroup.h
 java/kaffe/include/kaffe/java_lang_Throwable.h
 java/kaffe/include/kaffe/java_lang_VMThrowable.h
 java/kaffe/include/kaffe/jmalloc.h
-java/kaffe/include/kaffe/jtypes.h
+java/kaffe/include/kaffe/jni_md.h
+java/kaffe/include/kaffe_jni.h
 java/kaffe/jre/bin/java
 java/kaffe/jre/bin/kaffe
 java/kaffe/jre/bin/kaffe-bin
 java/kaffe/jre/bin/rmiregistry
+java/kaffe/jre/lib/${MACHINE_ARCH}/libclasspath.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libio.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffegc.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffeverifier.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffevm.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libmanagement.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libmath.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libnative.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libnet.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libnio.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libreplace.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity.la
 java/kaffe/jre/lib/${MACHINE_ARCH}/libzip.la
+java/kaffe/jre/lib/gmpjavamath.jar
+java/kaffe/jre/lib/logging.properties
 java/kaffe/jre/lib/rt.jar
-java/kaffe/jre/lib/security/java.security.default
-java/kaffe/lib/kjc.jar
+java/kaffe/jre/lib/security/java.security
+java/kaffe/jre/lib/tools.jar
 java/kaffe/license.terms
 java/kaffe/man/man1/kaffe.1
 @dirrm java/kaffe/man/man1
 @dirrm java/kaffe/man
+@exec ${MKDIR} %D/java/kaffe/lib
 @dirrm java/kaffe/lib
 @dirrm java/kaffe/jre/lib/security
 @dirrm java/kaffe/jre/lib/${MACHINE_ARCH}
