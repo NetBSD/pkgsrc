@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:39 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/09/06 15:19:31 adam Exp $
 
-SHA1 (thy-0.9.3.tar.bz2) = 2af7561df6b0100f6009d1ce18099ee168084c60
-RMD160 (thy-0.9.3.tar.bz2) = e66333d166047b9e9d041f0a5986495f75eae1d9
-Size (thy-0.9.3.tar.bz2) = 277249 bytes
+SHA1 (thy-0.9.4.tar.gz) = e3bae4f3667f98fbc5fc39dc3f61571b524e5dfd
+RMD160 (thy-0.9.4.tar.gz) = b64ada0d71d123b0a5300697ae69823ff59e5ee7
+Size (thy-0.9.4.tar.gz) = 357776 bytes
+SHA1 (patch-aa) = d8b98822747e7d76318e591336b981aea6773c96
