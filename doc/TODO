@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3861 2005/09/05 17:05:12 wiz Exp $
+$NetBSD: TODO,v 1.3862 2005/09/06 11:47:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -311,7 +311,6 @@ Suggested package updates
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
 	o amavis-0.3.12
-	o amule-2.0.3 [pkg/31095]
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.70
 	o ap-Embperl-1.3.6
@@ -818,7 +817,6 @@ Suggested package updates
 	o phoon-20030120
 	o photopc-3.05
 	o php-4.4.0
-	o phppgadmin-3.5.5
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
