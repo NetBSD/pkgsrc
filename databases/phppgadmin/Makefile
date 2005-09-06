@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/09/05 18:14:39 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/09/06 06:07:28 jlam Exp $
 
 DISTNAME=	phpPgAdmin-3.5.5
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phppgadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,13 +24,12 @@ PHPPGHIER=	classes/HTML_TreeMenu/images images/themes/default \
 		libraries/adodb/datadict libraries/adodb/drivers \
 		classes/database lang/recoded themes/default sql conf
 
-PKG_SYSCONFDIR.phppgadmin=	${PREFIX}/share/phppgadmin/conf
 EGDIR=		${PREFIX}/share/examples/phppgadmin
 DOCDIR=		${PREFIX}/share/doc/phppgadmin
-CONF_FILES=	${EGDIR}/config.inc.php-dist ${PKG_SYSCONFDIR}/config.inc.php
+CONF_FILES=	${EGDIR}/config.inc.php-dist ${PHPPGBASE}/conf/config.inc.php
 DOC_FILES=	CREDITS DEVELOPERS FAQ HISTORY INSTALL LICENSE TODO \
 		TRANSLATORS
-MAKE_DIRS+=	${PREFIX}/share/phppgadmin/conf ${PREFIX}/share/phppgadmin
+REQD_DIRS+=	${PHPPGBASE} ${PHPPGBASE}/conf
 
 do-configure:
 	@${SED} -e "s#/usr/bin/pg#${PREFIX}/bin/pg#" \
