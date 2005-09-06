@@ -1,0 +1,15 @@
+$NetBSD: patch-bh,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/sheet-object-graph.c.orig	2005-09-06 09:59:22.000000000 +0200
++++ src/sheet-object-graph.c
+@@ -93,8 +93,8 @@ so_graph_foo_view_init (SheetObjectViewI
+ }
+ typedef GogControlFooCanvas		SOGraphFooView;
+ typedef GogControlFooCanvasClass	SOGraphFooViewClass;
+-static GSF_CLASS_FULL (SOGraphFooView, so_graph_foo_view,
+-	NULL, NULL,
++static GSF_CLASS_FULL (SOGraphFooView, so_graph_foo_view, NULL, NULL,
++	NULL, NULL, NULL,
+ 	GOG_CONTROL_FOOCANVAS_TYPE, 0,
+ 	GSF_INTERFACE (so_graph_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ 
