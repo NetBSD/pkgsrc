@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11049 2005/09/05 23:41:13 reinoud Exp $
+$NetBSD: CHANGES,v 1.11050 2005/09/06 08:55:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3933,6 +3933,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/wget to 1.10.1 [wiz 2005-09-05]
 	Updated lang/gawk to 3.1.5 [wiz 2005-09-05]
 	Updated textproc/flyspell to 1.7j [wiz 2005-09-05]
-	Updated databases/phpPgAdmin to 3.5.5 [tv 2005-09-05]
+	Updated databases/phppgadmin to 3.5.5 [tv 2005-09-05]
 	Updated net/btget to 1.04nb1 [reinoud 2005-09-06]
-
