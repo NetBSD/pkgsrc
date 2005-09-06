@@ -1,25 +1,14 @@
-$NetBSD: patch-ac,v 1.7 2004/04/06 17:08:01 xtraeme Exp $
+$NetBSD: patch-ac,v 1.8 2005/09/06 18:15:32 tonio Exp $
 
---- libraries/clib/security/Makefile.in.orig	2004-04-06 17:39:24.000000000 +0200
-+++ libraries/clib/security/Makefile.in	2004-04-06 17:42:21.000000000 +0200
-@@ -453,16 +453,16 @@
- 	@list='$(security_DATA)'; for p in $$list; do \
- 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " $(securityDATA_INSTALL) $$d$$p $(DESTDIR)$(securitydir)/$$f"; \
--	  $(securityDATA_INSTALL) $$d$$p $(DESTDIR)$(securitydir)/$$f; \
-+	  echo " $(securityDATA_INSTALL) $$d$$p $(DESTDIR)$(securitydir)/$$f.default"; \
-+	  $(securityDATA_INSTALL) $$d$$p $(DESTDIR)$(securitydir)/$$f.default; \
- 	done
+--- config/i386/netbsd1/jit-md.h.orig	2005-04-24 20:01:15.000000000 +0200
++++ config/i386/netbsd1/jit-md.h	2005-04-24 20:01:46.000000000 +0200
+@@ -26,7 +26,7 @@
  
- uninstall-securityDATA:
- 	@$(NORMAL_UNINSTALL)
- 	@list='$(security_DATA)'; for p in $$list; do \
- 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " rm -f $(DESTDIR)$(securitydir)/$$f"; \
--	  rm -f $(DESTDIR)$(securitydir)/$$f; \
-+	  echo " rm -f $(DESTDIR)$(securitydir)/$$f.default"; \
-+	  rm -f $(DESTDIR)$(securitydir)/$$f.default; \
- 	done
+ /* Get the first exception frame from a signal handler */
+ #define	EXCEPTIONFRAME(f, c)						\
+-	(f).retbp = (c)->sc_ebp;					\
+-	(f).retpc = (c)->sc_eip + 1
++       (f).retbp = (c)->uc_mcontext.__gregs[_REG_EBP];                 \
++       (f).retpc = (c)->uc_mcontext.__gregs[_REG_EIP] + 1
  
- ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
+ #endif
