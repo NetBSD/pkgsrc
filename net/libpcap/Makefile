@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2005/08/13 07:04:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.30 2005/09/06 03:26:14 jlam Exp $
 
 DISTNAME=		libpcap-0.9.3
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		lpcap
 CATEGORIES=		net
 MASTER_SITES= 		http://www.tcpdump.org/release/
@@ -20,10 +20,8 @@ USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
-.  if exists(/usr/include/netinet/ip6.h)
+.if exists(/usr/include/netinet/ip6.h)
 CONFIGURE_ARGS+=	--enable-ipv6
-.  endif
 .endif
 
 post-install:
