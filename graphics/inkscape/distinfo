@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/07/28 13:52:10 adam Exp $
+$NetBSD: distinfo,v 1.8 2005/09/06 15:55:52 adam Exp $
 
-SHA1 (inkscape-0.42.tar.bz2) = 0f4d18318d57b52b72ca39bde0ac486c564e7991
-RMD160 (inkscape-0.42.tar.bz2) = 4a0136b9cd70f6d79f94b3ce5ae39cf06d232239
-Size (inkscape-0.42.tar.bz2) = 5723495 bytes
+SHA1 (inkscape-0.42.2.tar.bz2) = a6bb2aa1bb9d4a1098a0e3746eaf3299c753cc3b
+RMD160 (inkscape-0.42.2.tar.bz2) = e513ab1aeaaf79a66465c48795f9c4f3098145b7
+Size (inkscape-0.42.2.tar.bz2) = 5724173 bytes
