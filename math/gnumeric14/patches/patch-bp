@@ -1,0 +1,15 @@
+$NetBSD: patch-bp,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/cut-n-paste-code/goffice/graph/gog-series.c.orig	2005-09-06 09:41:25.000000000 +0200
++++ src/cut-n-paste-code/goffice/graph/gog-series.c
+@@ -588,8 +588,8 @@ gog_series_dataset_init (GogDatasetClass
+ 	iface->dim_changed = gog_series_dataset_dim_changed;
+ }
+ 
+-GSF_CLASS_FULL (GogSeries, gog_series,
+-		gog_series_class_init, gog_series_init,
++GSF_CLASS_FULL (GogSeries, gog_series, NULL, NULL,
++		gog_series_class_init, NULL, gog_series_init,
+ 		GOG_STYLED_OBJECT_TYPE, 0,
+ 		GSF_INTERFACE (gog_series_dataset_init, GOG_DATASET_TYPE))
+ 

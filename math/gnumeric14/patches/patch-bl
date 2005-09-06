@@ -1,0 +1,15 @@
+$NetBSD: patch-bl,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/widgets/gnumeric-expr-entry.c.orig	2005-09-06 09:47:22.000000000 +0200
++++ src/widgets/gnumeric-expr-entry.c
+@@ -502,8 +502,8 @@ gee_cell_editable_init (GtkCellEditableI
+ 	iface->start_editing = gee_start_editing;
+ }
+ 
+-GSF_CLASS_FULL (GnmExprEntry, gnm_expr_entry,
+-		gee_class_init, gee_init,
++GSF_CLASS_FULL (GnmExprEntry, gnm_expr_entry, NULL, NULL,
++		gee_class_init, NULL, gee_init,
+ 		GTK_TYPE_HBOX, 0,
+ 		GSF_INTERFACE (gee_cell_editable_init, GTK_TYPE_CELL_EDITABLE))
+ 

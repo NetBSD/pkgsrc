@@ -1,0 +1,15 @@
+$NetBSD: patch-bm,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/cut-n-paste-code/goffice/graph/gog-axis.c.orig	2005-09-06 09:34:41.000000000 +0200
++++ src/cut-n-paste-code/goffice/graph/gog-axis.c
+@@ -1677,8 +1677,8 @@ gog_axis_dataset_init (GogDatasetClass *
+ 	iface->dim_changed = gog_axis_dim_changed;
+ }
+ 
+-GSF_CLASS_FULL (GogAxis, gog_axis,
+-		gog_axis_class_init, gog_axis_init,
++GSF_CLASS_FULL (GogAxis, gog_axis, NULL, NULL,
++		gog_axis_class_init, NULL, gog_axis_init,
+ 		GOG_STYLED_OBJECT_TYPE, 0,
+ 		GSF_INTERFACE (gog_axis_dataset_init, GOG_DATASET_TYPE))
+ 

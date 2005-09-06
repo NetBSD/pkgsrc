@@ -1,0 +1,15 @@
+$NetBSD: patch-bq,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/cut-n-paste-code/goffice/graph/gog-style.c.orig	2005-09-06 09:39:24.000000000 +0200
++++ src/cut-n-paste-code/goffice/graph/gog-style.c
+@@ -1686,8 +1686,8 @@ gog_style_persist_init (GogPersistClass 
+ 	iface->sax_save = gog_style_persist_sax_save;
+ }
+ 
+-GSF_CLASS_FULL (GogStyle, gog_style,
+-		gog_style_class_init, gog_style_init,
++GSF_CLASS_FULL (GogStyle, gog_style, NULL, NULL,
++		gog_style_class_init, NULL, gog_style_init,
+ 		G_TYPE_OBJECT, 0,
+ 		GSF_INTERFACE (gog_style_persist_init, GOG_PERSIST_TYPE))
+ 

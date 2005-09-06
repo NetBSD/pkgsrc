@@ -1,0 +1,15 @@
+$NetBSD: patch-bo,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/cut-n-paste-code/goffice/graph/gog-label.c.orig	2005-09-06 09:37:48.000000000 +0200
++++ src/cut-n-paste-code/goffice/graph/gog-label.c
+@@ -175,8 +175,8 @@ gog_label_dataset_init (GogDatasetClass 
+ 	iface->dim_changed = gog_label_dim_changed;
+ }
+ 
+-GSF_CLASS_FULL (GogLabel, gog_label,
+-		gog_label_class_init, NULL,
++GSF_CLASS_FULL (GogLabel, gog_label, NULL, NULL,
++		gog_label_class_init, NULL, NULL,
+ 		GOG_OUTLINED_OBJECT_TYPE, 0,
+ 		GSF_INTERFACE (gog_label_dataset_init, GOG_DATASET_TYPE))
+ 

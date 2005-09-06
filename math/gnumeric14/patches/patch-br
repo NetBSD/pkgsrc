@@ -1,0 +1,15 @@
+$NetBSD: patch-br,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- plugins/corba/corba-workbook.c.orig	2005-09-06 11:23:24.000000000 +0200
++++ plugins/corba/corba-workbook.c
+@@ -312,8 +312,8 @@ wbcc_init (WorkbookControlCORBA *wbcc)
+ 	CORBA_exception_free (&ev);
+ }
+ 
+-GSF_CLASS_FULL (WorkbookControlCORBA, workbook_control_corba,
+-		wbcc_class_init, wbcc_init, 
++GSF_CLASS_FULL (WorkbookControlCORBA, workbook_control_corba, NULL, NULL,
++		wbcc_class_init, NULL, wbcc_init, 
+ 		WORKBOOK_CONTROL_TYPE, 0,
+ 		GSF_INTERFACE (wbcc_gnm_cmd_context_init,
+ 			       GNM_CMD_CONTEXT_TYPE))
