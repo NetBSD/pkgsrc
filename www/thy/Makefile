@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:46 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.8 2005/09/06 15:19:31 adam Exp $
 
-DISTNAME=		thy-0.9.3
-PKGREVISION=		2
-CATEGORIES=		www
-MASTER_SITES=		ftp://bonehunter.rulez.org/pub/thy/stable/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	thy-0.9.4
+CATEGORIES=	www
+MASTER_SITES=	ftp://bonehunter.rulez.org/pub/thy/stable/
 
-MAINTAINER=		algernon@bonehunter.rulez.org
-HOMEPAGE=		http://bonehunter.rulez.org/software/thy/
-COMMENT=		Tiny and fast HTTP daemon
+MAINTAINER=	algernon@bonehunter.rulez.org
+HOMEPAGE=	http://bonehunter.rulez.org/software/thy/
+COMMENT=	Tiny and fast HTTP daemon
 
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		USE_INET6
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		bison gmake lex
 USE_PKGINSTALL=		yes
+USE_TOOLS+=		bison gmake lex
+GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	thy
 CONF_FILES=		${EGDIR}/thyrc ${PKG_SYSCONFDIR}/thyrc \
@@ -48,6 +45,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/thyrc ${EGDIR}
 
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
