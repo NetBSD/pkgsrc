@@ -1,0 +1,15 @@
+$NetBSD: patch-bg,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/sheet-object-cell-comment.c.orig	2005-09-06 09:54:47.000000000 +0200
++++ src/sheet-object-cell-comment.c
+@@ -122,8 +122,8 @@ comment_foo_view_init (SheetObjectViewIf
+ }
+ typedef FooCanvasPolygon	CommentFooView;
+ typedef FooCanvasPolygonClass	CommentFooViewClass;
+-static GSF_CLASS_FULL (CommentFooView, comment_foo_view,
+-	NULL, NULL,
++static GSF_CLASS_FULL (CommentFooView, comment_foo_view, NULL, NULL,
++	NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_POLYGON, 0,
+ 	GSF_INTERFACE (comment_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/gnm-so-line.c.orig	2005-09-06 09:57:50.000000000 +0200
++++ src/gnm-so-line.c
+@@ -110,8 +110,8 @@ so_line_foo_view_init (SheetObjectViewIf
+ }
+ typedef FooCanvasLine		LineFooView;
+ typedef FooCanvasLineClass	LineFooViewClass;
+-static GSF_CLASS_FULL (LineFooView, so_line_foo_view,
+-	NULL, NULL,
++static GSF_CLASS_FULL (LineFooView, so_line_foo_view, NULL, NULL,
++	NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_LINE, 0,
+ 	GSF_INTERFACE (so_line_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ #endif /* WITH_GTK */

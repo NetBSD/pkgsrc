@@ -1,0 +1,15 @@
+$NetBSD: patch-be,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/io-context.c.orig	2005-09-06 09:50:26.000000000 +0200
++++ src/io-context.c
+@@ -116,8 +116,8 @@ io_context_class_init (GObjectClass *kla
+ 	klass->finalize = ioc_finalize;
+ }
+ 
+-GSF_CLASS_FULL (IOContext, io_context,
+-		io_context_class_init, io_context_init,
++GSF_CLASS_FULL (IOContext, io_context, NULL, NULL,
++		io_context_class_init, NULL, io_context_init,
+ 		G_TYPE_OBJECT, 0,
+ 		GSF_INTERFACE (io_context_gnm_cmd_context_init, GNM_CMD_CONTEXT_TYPE))
+ 

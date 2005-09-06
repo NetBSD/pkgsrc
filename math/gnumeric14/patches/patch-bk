@@ -1,0 +1,15 @@
+$NetBSD: patch-bk,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/workbook-control-gui.c.orig	2005-09-06 11:15:18.000000000 +0200
++++ src/workbook-control-gui.c
+@@ -2544,8 +2544,8 @@ workbook_control_gui_init (WorkbookContr
+ 	wbcg->current_saver = NULL;
+ }
+ 
+-GSF_CLASS_FULL (WorkbookControlGUI, workbook_control_gui,
+-		workbook_control_gui_class_init, workbook_control_gui_init,
++GSF_CLASS_FULL (WorkbookControlGUI, workbook_control_gui, NULL, NULL,
++		workbook_control_gui_class_init, NULL, workbook_control_gui_init,
+ 		WORKBOOK_CONTROL_TYPE, G_TYPE_FLAG_ABSTRACT,
+ 		GSF_INTERFACE (wbcg_go_plot_data_allocator_init, GOG_DATA_ALLOCATOR_TYPE);
+ 		GSF_INTERFACE (wbcg_gnm_cmd_context_init, GNM_CMD_CONTEXT_TYPE))

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/08/10 20:56:19 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/06 17:58:56 drochner Exp $
 #
 
 DISTNAME=		gnumeric-1.4.3
+PKGREVISION=		1
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,7 +28,7 @@ GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 .include "../../lang/python/application.mk"
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/libgnomedb/buildlink3.mk"
-BUILDLINK_DEPENDS.libgsf+=	libgsf>=1.11.1
+BUILDLINK_DEPENDS.libgsf+=	libgsf>=1.12.2
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"

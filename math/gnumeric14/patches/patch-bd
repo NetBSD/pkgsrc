@@ -1,0 +1,15 @@
+$NetBSD: patch-bd,v 1.1 2005/09/06 17:58:56 drochner Exp $
+
+--- src/io-context-gtk.c.orig	2005-09-06 11:17:07.000000000 +0200
++++ src/io-context-gtk.c
+@@ -366,8 +366,8 @@ icg_init (IOContextGtk *icg)
+ 	g_timer_start (icg->timer);
+ }
+ 
+-GSF_CLASS_FULL (IOContextGtk, io_context_gtk,
+-		icg_class_init, icg_init,
++GSF_CLASS_FULL (IOContextGtk, io_context_gtk, NULL, NULL,
++		icg_class_init, NULL, icg_init,
+ 		TYPE_IO_CONTEXT, 0,
+ 		GSF_INTERFACE (icg_gnm_cmd_context_init, GNM_CMD_CONTEXT_TYPE))
+ 
