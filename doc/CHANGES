@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11050 2005/09/06 08:55:39 wiz Exp $
+$NetBSD: CHANGES,v 1.11051 2005/09/06 14:23:40 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3888,6 +3888,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mutt-devel to 1.5.10 [tonio 2005-09-03]
 	Updated net/autonet to 0.16 [abs 2005-09-03]
 	Updated sysutils/rconfig to 0.43 [abs 2005-09-03]
+	Updated x11/kdebase3 to 3.4.2nb1 [markd 2005-09-03]
 	Added security/bcrypt version 1.1 [xtraeme 2005-09-04]
 	Updated devel/apache-ant to 1.6.5 [tonio 2005-09-03]
 	Added wm/cwm version 3 [xtraeme 2005-09-04]
@@ -3935,3 +3936,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/flyspell to 1.7j [wiz 2005-09-05]
 	Updated databases/phppgadmin to 3.5.5 [tv 2005-09-05]
 	Updated net/btget to 1.04nb1 [reinoud 2005-09-06]
+	Updated x11/kdebase3 to 3.4.2nb2 [markd 2005-09-06]
