@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.281 2005/09/05 15:45:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.282 2005/09/06 10:30:00 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2160,7 +2160,7 @@ sub check_predefined_sites($$) {
 sub checkdir_root($) {
 	my ($dir) = @_;
 	my ($fname) = "${dir}/Makefile";
-	my ($lines, $prev_subdir);
+	my ($lines, $prev_subdir, @subdirs);
 
 	log_subinfo("checkdir_root", $fname, NO_LINE_NUMBER, "Checking pkgsrc root directory.");
 
@@ -2185,7 +2185,7 @@ sub checkdir_root($) {
 				$line->log_warning("Indentation should be a single tab character.");
 			}
 
-			if ($subdir =~ qr"\$" || !-f "${subdir}/Makefile") {
+			if ($subdir =~ qr"\$" || !-f "${dir}/${subdir}/Makefile") {
 				next;
 			}
 
@@ -2199,10 +2199,14 @@ sub checkdir_root($) {
 
 			$prev_subdir = $subdir;
 
-			if ($opt_recursive && $comment_flag eq "") {
-				push(@todo_dirs, "${dir}/${subdir}");
+			if ($comment_flag eq "") {
+				push(@subdirs, "${dir}/${subdir}");
 			}
 		}
+	}
+
+	if ($opt_recursive) {
+		push(@todo_dirs, @subdirs);
 	}
 }
 
@@ -2313,6 +2317,7 @@ sub checkdir_category($) {
 	my ($f_index, $f_atend, $f_neednext, $f_current) = (0, false, true, undef, undef);
 	my ($m_index, $m_atend, $m_neednext, $m_current) = (0, false, true, undef, undef);
 	my ($line, $m_recurse);
+	my (@subdirs);
 
 	while (!($m_atend && $f_atend)) {
 
@@ -2357,8 +2362,8 @@ sub checkdir_category($) {
 			$f_neednext = true;
 			$m_neednext = true;
 			push(@normalized_lines, $line->text);
-			if ($opt_recursive && $m_recurse) {
-				push(@todo_dirs, "${dir}/${m_current}");
+			if ($m_recurse) {
+				push(@subdirs, "${dir}/${m_current}");
 			}
 		}
 	}
@@ -2413,6 +2418,10 @@ sub checkdir_category($) {
 			}
 			close(F) or die;
 		}
+	}
+
+	if ($opt_recursive) {
+		unshift(@todo_dirs, @subdirs);
 	}
 }
 
