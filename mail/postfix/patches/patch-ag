@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.15 2005/04/04 18:13:32 martti Exp $
+$NetBSD: patch-ag,v 1.16 2005/09/06 08:10:58 abs Exp $
 
 --- src/util/sys_defs.h.orig	2005-02-04 02:07:44.000000000 +0200
 +++ src/util/sys_defs.h	2005-04-04 20:55:05.000000000 +0300
@@ -6,7 +6,7 @@ $NetBSD: patch-ag,v 1.15 2005/04/04 18:13:32 martti Exp $
  #define GETTIMEOFDAY(t) gettimeofday(t,(struct timezone *) 0)
 +#define RESOLVE_H_NEEDS_NAMESER8_COMPAT_H
  #define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin"
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +#define USE_STATVFS
 +#define STATVFS_IN_SYS_STATVFS_H
 +#else
