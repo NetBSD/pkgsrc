@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.7 2005/05/23 11:37:23 adam Exp $
+$NetBSD: patch-ag,v 1.8 2005/09/06 14:53:36 adam Exp $
 
---- Imakefile.orig	2005-04-27 20:59:37.000000000 +0000
+--- Imakefile.orig	2005-06-03 12:26:03.000000000 +0000
 +++ Imakefile
 @@ -102,7 +102,7 @@ SGI_LIB = -limage
  #endif
@@ -11,32 +11,3 @@ $NetBSD: patch-ag,v 1.7 2005/05/23 11:37:23 adam Exp $
  
  SUBDIRS = rw
  
-@@ -155,7 +155,7 @@ xaw::
- 	-$(RM) xaw_incdir ; ln -sf /usr/include/X11/Xaw xaw_incdir
- 	echo "XAWLIB_DEFINES = -DXAWPLAIN" > Local.xawdefs			
- 	echo "SYS_LIBRARIES = XawClientLibs -lm" >> Local.xawdefs
--	xmkmf -a ; make
-+	${XMKMF} -a ; ${MAKE}
- 	@echo ""
- 	@echo "'xpaint' compiled with Xaw widgets (old and ugly)"
- 	@echo "You should rather use Xaw3d, neXtaw or Xaw95 !!"	
-@@ -195,12 +195,15 @@ nextaw::
- 	@echo "Variants are 'make xaw3d' and 'make xaw95'"
- 	@echo ""	
- 
--xaw95::
-+libXaw95.a:
-+	cd ../xaw95-1.1.4 ; ${XMKMF} ; ${MAKE}
-+
-+xaw95:: libXaw95.a
- 	-$(RM) $(XAWDEPENDS)
--	-$(RM) xaw_incdir ; ln -sf /usr/include/X11/Xaw95 xaw_incdir	
-+	-$(RM) xaw_incdir ; ln -sf ${X11BASE}/include/X11/Xaw xaw_incdir	
- 	echo "XAWLIB_DEFINES = -DXAW95" > Local.xawdefs
--	echo "SYS_LIBRARIES = -lXaw95 -L." >> Local.xawdefs
--	xmkmf -a ; make
-+	echo "SYS_LIBRARIES = ../xaw95-1.1.4/libXaw95.a -lm -lX11 -lXt -lXmu" >> Local.xawdefs
-+	${XMKMF} -a ; ${MAKE}
- 	@echo ""	
- 	@echo "'xpaint' compiled with Xaw95 widgets"
- 	@echo "Another alternative is to use the Xaw3d widgets :"	
