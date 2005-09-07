@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 20:51:51 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/07 20:17:46 bouyer Exp $
 bin/gpsim
 include/eXdbm/eXdbm.h
 include/eXdbm/eXdbmErrors.h
@@ -13,14 +13,22 @@ include/gpsim/16bit-instructions.h
 include/gpsim/16bit-processors.h
 include/gpsim/16bit-registers.h
 include/gpsim/16bit-tmrs.h
-include/gpsim/attribute.h
+include/gpsim/attributes.h
+include/gpsim/bit.h
+include/gpsim/bitlog.h
 include/gpsim/breakpoints.h
+include/gpsim/bytelog.h
+include/gpsim/cmd_gpsim.h
+include/gpsim/cmd_manager.h
 include/gpsim/cod.h
 include/gpsim/eeprom.h
-include/gpsim/registers.h
+include/gpsim/errors.h
+include/gpsim/exports.h
+include/gpsim/expr.h
 include/gpsim/gpsim_classes.h
 include/gpsim/gpsim_def.h
 include/gpsim/gpsim_interface.h
+include/gpsim/gpsim_object.h
 include/gpsim/gpsim_time.h
 include/gpsim/fopen-path.h
 include/gpsim/i2c-ee.h
@@ -30,6 +38,7 @@ include/gpsim/interface.h
 include/gpsim/ioports.h
 include/gpsim/lxt_write.h
 include/gpsim/modules.h
+include/gpsim/operator.h
 include/gpsim/p12x.h
 include/gpsim/p16x5x.h
 include/gpsim/p16f62x.h
@@ -48,6 +57,11 @@ include/gpsim/picdis.h
 include/gpsim/pie.h
 include/gpsim/pir.h
 include/gpsim/processor.h
+include/gpsim/program_files.h
+include/gpsim/protocol.h
+include/gpsim/pthread-wrap.h
+include/gpsim/registers.h
+include/gpsim/sim_context.h
 include/gpsim/ssp.h
 include/gpsim/stimuli.h
 include/gpsim/stimulus_orb.h
@@ -56,6 +70,8 @@ include/gpsim/symbol_orb.h
 include/gpsim/tmr0.h
 include/gpsim/trace.h
 include/gpsim/trace_orb.h
+include/gpsim/trigger.h
+include/gpsim/ttoken.h
 include/gpsim/uart.h
 include/gpsim/value.h
 include/gpsim/xref.h
