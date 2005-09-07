@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.63 2005/07/15 18:27:52 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2005/09/07 10:48:47 dmcmahill Exp $
 #
 
-DISTNAME=	${SCIBASE}.src
+DISTNAME=	${SCIBASE}-src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	3
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Scilab/distributions/
+MASTER_SITES=	http://scilabsoft.inria.fr/download/stable/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
 
-SCIBASE=	scilab-3.0
+SCIBASE=	scilab-3.1.1
 WRKSRC=		${WRKDIR}/${SCIBASE}
 
 #needs FPC code not found in older versions of NetBSD
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
-USE_LANGUAGES=		fortran
+USE_LANGUAGES=		c fortran
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		tee
@@ -71,6 +70,14 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 #		cd ${WRKSRC}/macros/${f} && ${EXTRACT_CMD}
 #.endfor
 
+post-patch:
+	${MV} ${WRKSRC}/macros/util/ilib_compile.sci ${WRKSRC}/macros/util/ilib_compile.sci.bak
+	${SED} 's|make -f|export PATH ; ${MAKE_PROGRAM} -f|g' \
+		${WRKSRC}/macros/util/ilib_compile.sci.bak > \
+		${WRKSRC}/macros/util/ilib_compile.sci
+	${RM} ${WRKSRC}/macros/util/ilib_compile.sci.bak
+
+
 # clean up any possible leftovers from 'make test' so that our PLIST
 # will still be right.  Also clean up a reference to WRKSRC.
 pre-install:
@@ -98,11 +105,12 @@ GCC_REQD+=		2.95.3
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will
 # fail if SCI is set to anything.
+MAKE_ENV+=	SCI=${WRKSRC}
 do-test:
-	SCI=0 && unset SCI && cd ${WRKSRC}/tests && \
+	cd ${WRKSRC}/tests && \
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
 		 ${TEE} ${WRKDIR}/tests.log
-	SCI=0 && unset SCI && cd ${WRKSRC}/examples && \
+	cd ${WRKSRC}/examples && \
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
 		${TEE} ${WRKDIR}/examples.log
 
