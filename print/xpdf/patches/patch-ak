@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.2 2004/03/03 10:50:09 adam Exp $
+$NetBSD: patch-ak,v 1.3 2005/09/07 15:19:08 adam Exp $
 
---- doc/xpdfrc.5.orig	2004-01-22 01:26:44.000000000 +0000
+--- doc/xpdfrc.5.orig	2005-08-17 05:34:30.000000000 +0000
 +++ doc/xpdfrc.5
 @@ -7,7 +7,7 @@ All of the Xpdf tools read a single conf
  .I .xpdfrc
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.2 2004/03/03 10:50:09 adam Exp $
  if it exists.  (This is its default location; depending on build
  options, it may be placed elsewhere.)  On Win32 systems, the
  .I xpdfrc
-@@ -405,33 +405,33 @@ The following is a sample xpdfrc file.
+@@ -407,28 +407,28 @@ The following is a sample xpdfrc file.
  .nf
  
  # from the Thai support package
@@ -27,7 +27,6 @@ $NetBSD: patch-ak,v 1.2 2004/03/03 10:50:09 adam Exp $
 +cMapDir      Adobe-Japan1 @PREFIX@/share/xpdf/cmap/Adobe-Japan1
  
  # use the Base-14 Type 1 fonts from ghostscript
- # (note that this overrides the displayFontX command above)
 -displayFontT1 Times-Roman           /usr/local/share/ghostscript/fonts/n021003l.pfb
 -displayFontT1 Times-Italic          /usr/local/share/ghostscript/fonts/n021023l.pfb
 -displayFontT1 Times-Bold            /usr/local/share/ghostscript/fonts/n021004l.pfb
@@ -58,14 +57,8 @@ $NetBSD: patch-ak,v 1.2 2004/03/03 10:50:09 adam Exp $
 +displayFontT1 ZapfDingbats          @PREFIX@/share/ghostscript/fonts/d050000l.pfb
  
  # use the Bakoma Type 1 fonts
--# (this assumes they happen to be installed in /usr/local/fonts/bakoma)
--fontDir /usr/local/fonts/bakoma
-+# (this assumes they happen to be installed in @PREFIX@/share/tex-contrib/fonts/BaKoMa)
-+fontDir @PREFIX@/share/tex-contrib/fonts/BaKoMa
- 
- # set some PostScript options
- psPaperSize          letter
-@@ -458,7 +458,7 @@ urlCommand      "netscape -remote 'openU
+ # (this assumes they happen to be installed in /usr/local/fonts/bakoma)
+@@ -459,7 +459,7 @@ urlCommand      "netscape -remote 'openU
  .fi
  .SH FILES
  .TP
