@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11065 2005/09/07 10:32:42 adam Exp $
+$NetBSD: CHANGES,v 1.11066 2005/09/07 10:49:36 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3961,3 +3961,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/SDL-esound to 1.2.9 [adam 2005-09-07]
 	Updated audio/SDL-nas to 1.2.9 [adam 2005-09-07]
 	Updated devel/gob2 to 2.0.12 [adam 2005-09-07]
+	Updated math/scilab to 3.1.1 [dmcmahill 2005-09-07]
