@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.3 2005/05/27 13:47:05 adam Exp $
+$NetBSD: patch-ag,v 1.4 2005/09/07 12:41:12 adam Exp $
 
---- src/plugins/jabber/jabber_plugin.c.orig	2005-05-20 16:20:12.000000000 +0000
+--- src/plugins/jabber/jabber_plugin.c.orig	2005-08-12 08:21:27.000000000 +0000
 +++ src/plugins/jabber/jabber_plugin.c
-@@ -1489,9 +1489,10 @@ void start_plugin()
+@@ -1503,9 +1503,10 @@ void start_plugin()
  
  	if (ggadu_config_var_get(jabber_handler, "autoconnect"))
  	{
