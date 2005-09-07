@@ -1,10 +1,8 @@
-$NetBSD: patch-ar,v 1.1 2005/08/12 12:27:30 salo Exp $
+$NetBSD: patch-ar,v 1.2 2005/09/07 15:19:08 adam Exp $
 
-Fix for CAN-2005-2097, from Ubuntu and RedHat.
-
---- fofi/FoFiTrueType.cc.orig	2004-01-22 02:26:44.000000000 +0100
-+++ fofi/FoFiTrueType.cc	2005-08-12 13:49:51.000000000 +0200
-@@ -1343,6 +1343,27 @@
+--- fofi/FoFiTrueType.cc.orig	2005-08-17 05:34:30.000000000 +0000
++++ fofi/FoFiTrueType.cc
+@@ -1652,6 +1652,27 @@ void FoFiTrueType::parse() {
      return;
    }
  
@@ -31,4 +29,4 @@ Fix for CAN-2005-2097, from Ubuntu and RedHat.
 +
    // read the post table
    readPostTable();
-   if (!parsedOk) {
+ }
