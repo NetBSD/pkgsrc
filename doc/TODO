@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3866 2005/09/07 09:02:58 wiz Exp $
+$NetBSD: TODO,v 1.3867 2005/09/07 10:18:41 adam Exp $
 
 Suggested new packages
 ======================
@@ -296,7 +296,6 @@ Suggested package updates
 	o MayaVi-1.4
 	o MyPasswordSafe-20041210
 	o PAM-0.78
-	o SDL-1.2.9
 	o SmartEiffel-2.1
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
