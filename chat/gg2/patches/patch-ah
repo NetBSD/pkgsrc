@@ -1,12 +1,13 @@
-$NetBSD: patch-ah,v 1.2 2005/04/04 08:26:29 adam Exp $
+$NetBSD: patch-ah,v 1.3 2005/09/07 12:41:12 adam Exp $
 
---- src/plugins/jabber/jabber_login.c.orig	2005-02-17 22:28:33.000000000 +0000
+--- src/plugins/jabber/jabber_login.c.orig	2005-08-12 08:21:27.000000000 +0000
 +++ src/plugins/jabber/jabber_login.c
-@@ -85,15 +85,15 @@ gpointer jabber_login_connect(gpointer s
+@@ -92,16 +92,16 @@ gpointer jabber_login_connect(gpointer s
  
  	if (!jabber_data.connection || !lm_connection_is_open(jabber_data.connection))
  	{
--		print_debug("jabber: Connecting to %s with %s", server,jid);
+-		portstr ? print_debug("jabber: Connecting to %s:%s with %s", server, portstr, jid) :
+-			print_debug("jabber: Connecting to %s with %s", server, jid);
 -		jabber_data.connection = lm_connection_new(server);
 -		lm_connection_set_keep_alive_rate(jabber_data.connection,30);
 -
@@ -15,7 +16,8 @@ $NetBSD: patch-ah,v 1.2 2005/04/04 08:26:29 adam Exp $
  		gchar *jabber_proxy_host = NULL;
  		gint jabber_proxy_port;
  
-+		print_debug("jabber: Connecting to %s with %s", server,jid);
++		portstr ? print_debug("jabber: Connecting to %s:%s with %s", server, portstr, jid) :
++			print_debug("jabber: Connecting to %s with %s", server, jid);
 +		jabber_data.connection = lm_connection_new(server);
 +		lm_connection_set_keep_alive_rate(jabber_data.connection,30);
 +
