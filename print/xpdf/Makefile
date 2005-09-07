@@ -1,18 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2005/08/12 12:27:30 salo Exp $
+# $NetBSD: Makefile,v 1.39 2005/09/07 15:19:08 adam Exp $
 
-DISTNAME=	xpdf-3.00
-PKGNAME=	${DISTNAME}pl3
-PKGREVISION=	1
+DISTNAME=	xpdf-3.01
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/} \
 		http://gd.tuwien.ac.at/publishing/xpdf/
-
-PATCHFILES=	xpdf-3.00pl1.patch
-PATCHFILES+=	xpdf-3.00pl2.patch
-PATCHFILES+=	xpdf-3.00pl3.patch
-PATCH_SITES=	${MASTER_SITES}
-PATCH_DIST_ARGS=-d ${WRKSRC}/xpdf --quiet
 
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
@@ -22,10 +14,9 @@ DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 
 CONFLICTS=	xpdf-crypto-[0-9]*
 
-USE_PKGINSTALL=		YES
+USE_PKGINSTALL=		yes
 USE_LANGUAGES=		c c++
-
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-freetype2-includes=${BUILDLINK_PREFIX.freetype2}/include/freetype2
 CONFIGURE_ARGS+=	--with-t1-includes=${BUILDLINK_PREFIX.t1lib}/include
