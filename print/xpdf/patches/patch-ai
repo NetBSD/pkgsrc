@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2003/03/25 14:02:42 salo Exp $
+$NetBSD: patch-ai,v 1.2 2005/09/07 15:19:08 adam Exp $
 
---- doc/sample-xpdfrc.orig	2003-03-21 08:01:01.000000000 +0100
-+++ doc/sample-xpdfrc	2003-03-25 12:45:39.000000000 +0100
+--- doc/sample-xpdfrc.orig	2005-08-17 05:34:30.000000000 +0000
++++ doc/sample-xpdfrc
 @@ -4,7 +4,7 @@
  #
  # The Xpdf tools look for a config file in two places:
@@ -11,9 +11,9 @@ $NetBSD: patch-ai,v 1.1 2003/03/25 14:02:42 salo Exp $
  #
  # This sample config file demonstrates some of the more common
  # configuration options.  Everything here is commented out.  You
-@@ -46,20 +46,20 @@
- # this, but you'll need to adjust this to point to wherever
- # ghostscript is installed on your system.
+@@ -29,20 +29,20 @@
+ # installed in a "standard" location, xpdf will find them
+ # automatically.)
  
 -#displayFontT1 Times-Roman		/usr/local/share/ghostscript/fonts/n021003l.pfb
 -#displayFontT1 Times-Italic		/usr/local/share/ghostscript/fonts/n021023l.pfb
@@ -46,7 +46,7 @@ $NetBSD: patch-ai,v 1.1 2003/03/25 14:02:42 salo Exp $
  
  # If you need to display PDF files that refer to non-embedded fonts,
  # you should add one or more fontDir options to point to the
-@@ -67,7 +67,7 @@
+@@ -50,7 +50,7 @@
  # .pfb, and .ttf files in those directories (other files will simply
  # be ignored).
  

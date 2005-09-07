@@ -1,32 +1,20 @@
-$NetBSD: distinfo,v 1.20 2005/08/12 12:27:30 salo Exp $
+$NetBSD: distinfo,v 1.21 2005/09/07 15:19:08 adam Exp $
 
-SHA1 (xpdf-3.00.tar.gz) = 080317afce0851274fec2865131f59590b54eb99
-RMD160 (xpdf-3.00.tar.gz) = d98668ac8cd059461107c4dfbd9b3fd3beff6176
-Size (xpdf-3.00.tar.gz) = 534697 bytes
-SHA1 (xpdf-3.00pl1.patch) = b984f64c25310e3b0bdebd9b75088ea46e067735
-RMD160 (xpdf-3.00pl1.patch) = d8cc3c381fca5c388bae9fa1c240548a97241a13
-Size (xpdf-3.00pl1.patch) = 7434 bytes
-SHA1 (xpdf-3.00pl2.patch) = 9b406ea1514b508893460c3ec9cb6131287b1c9c
-RMD160 (xpdf-3.00pl2.patch) = 70fc8d6cccb02adb2ba32ea6911682ead6a1649a
-Size (xpdf-3.00pl2.patch) = 1645 bytes
-SHA1 (xpdf-3.00pl3.patch) = c29b9ea13d1f8567a4521e12d50e497bf1681608
-RMD160 (xpdf-3.00pl3.patch) = 7fb5521b698589245f9e0ccea753a6d4e30badf8
-Size (xpdf-3.00pl3.patch) = 346 bytes
-SHA1 (patch-aa) = 3f5d7792b9febecccbce49848755a351465df729
-SHA1 (patch-ab) = 775bfdd4d81ac8b6dd358eeec320097faaecaf90
+SHA1 (xpdf-3.01.tar.gz) = 472cbf0f3df4e20a3ab7ada2e704b4e10d1d385b
+RMD160 (xpdf-3.01.tar.gz) = d734065ce12db8d0c37d9d0ac0ca7c287be59442
+Size (xpdf-3.01.tar.gz) = 599778 bytes
+SHA1 (patch-aa) = 6664207f59076a2612cf4141b7ab4b072b404e3a
+SHA1 (patch-ab) = fd4205c477ee4ac7660b8c1a707ea7b528ac4f90
 SHA1 (patch-ac) = 6fa74df05e01510c792eb2b20f670e6903f30aa2
-SHA1 (patch-ad) = 303dbde0636e79601745808c514c77c31ef3d1b5
+SHA1 (patch-ad) = 08202be663d819f033a7a5e6708b4158255bcf4a
 SHA1 (patch-ae) = 4642345ed25231dae6753024a691bbd39f028143
 SHA1 (patch-af) = da53b226cd7a58979902f899c0ab9303a7f0b95c
 SHA1 (patch-ag) = a739f73612a4f02d50d97e242ccff2505a3a3fac
 SHA1 (patch-ah) = 61e44757c30800754fc4966acb218325fd1bd26a
-SHA1 (patch-ai) = baa4308f9c44c750f54868dc3e355588dfd0dac8
-SHA1 (patch-aj) = 428b2da89b1775afbd2752ec105adad966babdf9
-SHA1 (patch-ak) = e09c064906e0695fe31ab9f20fb9b6945b1b25cc
-SHA1 (patch-al) = 785bf1547e0bf5273b66e5b18adbcccaa85aee35
+SHA1 (patch-ai) = 041f0b7afbd46e109a6c38a5edef5bd38bb41034
+SHA1 (patch-aj) = 36609d6ba7bc56be9b417558b90850fc19e62860
+SHA1 (patch-ak) = ed9506fd0cba7e350608cd40b1f794253f30e917
+SHA1 (patch-al) = b6e958b0592ac285b3ade90079c83da30db8a8b6
 SHA1 (patch-am) = 794ff952c749c8dab6f575d55602cdc7e7157fef
-SHA1 (patch-an) = bf579a07e9b9868ed8d6a6450484c47ce9acaef0
-SHA1 (patch-ao) = fd25cab0255d24c4b55907b031f5f4ec68411576
-SHA1 (patch-ap) = 51d05bb8978003308e14274fc1ada4f1ace6d766
-SHA1 (patch-ar) = bd66ea42d4ba11bdcefcfef2988d37559f21e629
-SHA1 (patch-as) = e76bc488bc533ef3784ed863c2c5d4b0967afc29
+SHA1 (patch-an) = 94ea208c43f4df1ac3a9bf01cc874d488ae49a9a
+SHA1 (patch-ar) = f3d320991e189a21244acd31ca5cc6cfdb18bd96

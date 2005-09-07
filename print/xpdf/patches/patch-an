@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2004/04/27 19:45:59 adam Exp $
+$NetBSD: patch-an,v 1.2 2005/09/07 15:19:08 adam Exp $
 
---- configure.orig	Tue Apr 27 21:07:38 2004
+--- configure.orig	2005-08-17 05:34:30.000000000 +0000
 +++ configure
-@@ -9124,6 +9124,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -9128,6 +9128,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -10,7 +10,7 @@ $NetBSD: patch-an,v 1.1 2004/04/27 19:45:59 adam Exp $
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
-@@ -9159,6 +9160,7 @@ _ACEOF
+@@ -9163,6 +9164,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -18,7 +18,7 @@ $NetBSD: patch-an,v 1.1 2004/04/27 19:45:59 adam Exp $
  #include <$ac_header>
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
-@@ -9483,6 +9485,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -9495,6 +9497,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -26,7 +26,7 @@ $NetBSD: patch-an,v 1.1 2004/04/27 19:45:59 adam Exp $
  #include <$ac_header>
  _ACEOF
  rm -f conftest.$ac_objext
-@@ -9518,6 +9521,7 @@ _ACEOF
+@@ -9530,6 +9533,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
