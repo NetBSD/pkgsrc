@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2005/09/07 07:32:10 martin Exp $
+
+--- ataprint.c.orig	2004-06-04 22:59:16.000000000 +0200
++++ ataprint.c	2005-08-15 22:18:08.000000000 +0200
+@@ -90,7 +90,11 @@ void formatdriveidstring(char *out, cons
+   char tmp[65];
+ 
+   n = n > 64 ? 64 : n;
++#ifndef __NetBSD__
+   swapbytes(tmp, in, n);
++#else
++  strncpy(tmp, in, n);	/* NetBSD delivers host byte order strings */  
++#endif
+   tmp[n] = '\0';
+   trim(out, tmp);
+ }
