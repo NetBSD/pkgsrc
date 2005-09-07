@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
+$NetBSD: patch-aj,v 1.23 2005/09/07 10:15:39 adam Exp $
 
---- configure.in.orig	2004-12-13 10:02:08.000000000 +0100
+--- configure.in.orig	2005-08-28 06:31:18.000000000 +0000
 +++ configure.in
 @@ -28,9 +28,9 @@ AC_SUBST(SDL_VERSION)
  
@@ -104,7 +104,7 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1724,29 +1731,31 @@ CheckUSBHID()
+@@ -1723,29 +1730,31 @@ CheckUSBHID()
          have_libusbhid=no
          have_libusb=no
          AC_CHECK_LIB(usbhid, hid_init, have_libusbhid=yes)
@@ -145,7 +145,7 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
          fi
  
          AC_MSG_CHECKING(for usbhid)
-@@ -1756,8 +1765,13 @@ CheckUSBHID()
+@@ -1755,8 +1764,13 @@ CheckUSBHID()
            #if defined(HAVE_USB_H)
            #include <usb.h>
            #endif
@@ -159,7 +159,7 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
            #if defined(HAVE_USBHID_H)
            #include <usbhid.h>
            #elif defined(HAVE_LIBUSB_H)
-@@ -1782,8 +1796,13 @@ CheckUSBHID()
+@@ -1781,8 +1795,13 @@ CheckUSBHID()
                #if defined(HAVE_USB_H)
                #include <usb.h>
                #endif
@@ -173,7 +173,7 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
                #if defined(HAVE_USBHID_H)
                #include <usbhid.h>
                #elif defined(HAVE_LIBUSB_H)
-@@ -1809,8 +1828,13 @@ CheckUSBHID()
+@@ -1808,8 +1827,13 @@ CheckUSBHID()
                #if defined(HAVE_USB_H)
                #include <usb.h>
                #endif
@@ -187,7 +187,7 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
                #if defined(HAVE_USBHID_H)
                #include <usbhid.h>
                #elif defined(HAVE_LIBUSB_H)
-@@ -1835,6 +1859,26 @@ CheckUSBHID()
+@@ -1834,6 +1858,26 @@ CheckUSBHID()
      fi
  }
  
@@ -214,7 +214,7 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
  dnl Check for altivec instruction support using gas syntax
  CheckAltivec()
  {
-@@ -1992,7 +2036,7 @@ case "$target" in
+@@ -2013,7 +2057,7 @@ case "$target" in
              COPY_ARCH_SRC(src/timer, linux, SDL_systimer.c)
          fi
          ;;
@@ -223,17 +223,18 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
          ARCH=freebsd
          CheckDummyVideo
          CheckDiskAudio
-@@ -2043,16 +2087,18 @@ case "$target" in
+@@ -2065,17 +2109,19 @@ case "$target" in
          CheckESD
          CheckNAS
          CheckX11
-+        CheckDGA
++	CheckDGA
          CheckAAlib
          CheckOpenGL
          CheckPTHREAD
          CheckSIGACTION
          CheckUSBHID
-+        CheckMachineJoystick
+         CheckRPATH
++	CheckMachineJoystick
          # Set up files for the audio library
          if test x$enable_audio = xyes; then
 -            CFLAGS="$CFLAGS -DSUNAUDIO_SUPPORT"
@@ -245,7 +246,7 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -2061,9 +2107,6 @@ case "$target" in
+@@ -2084,9 +2130,6 @@ case "$target" in
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -255,12 +256,12 @@ $NetBSD: patch-aj,v 1.22 2005/05/31 17:37:50 wiz Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -2724,7 +2767,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
- 
+@@ -2755,7 +2798,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
  # Set runtime shared library paths as needed
  
--if test $ARCH = linux -o $ARCH = freebsd -o $ARCH = bsdi; then
-+if test $ARCH = linux -o $ARCH = freebsd -o $ARCH = bsdi -o $ARCH = netbsd; then
-   SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib"
- fi
- if test $ARCH = solaris; then
+ if test "x$enable_rpath" = "xyes"; then
+-  if test $ARCH = linux -o $ARCH = freebsd -o $ARCH = bsdi; then
++  if test $ARCH = linux -o $ARCH = freebsd -o $ARCH = bsdi -o $ARCH = netbsd; then
+     SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib"
+   fi
+   if test $ARCH = solaris; then
