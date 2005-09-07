@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11075 2005/09/07 20:25:11 bouyer Exp $
+$NetBSD: CHANGES,v 1.11076 2005/09/07 22:41:36 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3973,3 +3973,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulator/gpsim-devel to 20050905 [bouyer 2005-09-07]
 	Updated emulator/gpsim-oscilloscope to 0.1.2 [bouyer 2005-09-07]
 	Updated emulator/gpsim-ptyusart to 0.3.2 [bouyer 2005-09-07]
+	Added fonts/dejavu-ttf version 1.13 [reed 2005-09-07]
