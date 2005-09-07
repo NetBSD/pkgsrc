@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/07 20:21:37 bouyer Exp $
 #
 
-DISTNAME=	oscilloscope-0.1.1
+DISTNAME=	oscilloscope-0.1.2
 PKGNAME=	gpsim-${DISTNAME}
 CATEGORIES=	emulators
 MASTER_SITES=	http://www-asim.lip6.fr/~bouyer/pic/
@@ -10,6 +10,7 @@ MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Oscilloscope module for gpsim
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 
 USE_LIBTOOL=	YES
