@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/09/07 13:58:16 adam Exp $
 bin/gale-config
 bin/gale-install
 bin/galed
@@ -8,24 +8,29 @@ bin/gkinfo
 bin/gksign
 bin/gsend
 bin/gsub
-bin/gwatch
 include/gale/all.h
-include/gale/auth.h
 include/gale/client.h
 include/gale/compat.h
 include/gale/config.h
 include/gale/core.h
+include/gale/crypto.h
 include/gale/globals.h
 include/gale/gsubrc.h
+include/gale/key.h
 include/gale/misc.h
 include/gale/types.h
 include/oop-adns.h
 include/oop-glib.h
+include/oop-read.h
+include/oop-rl.h
+include/oop-tcl.h
 include/oop-www.h
 include/oop.h
 lib/libgale.la
 lib/liboop-adns.la
 lib/liboop-glib.la
+lib/liboop-rl.la
+lib/liboop-tcl.la
 lib/liboop-www.la
 lib/liboop.la
 sbin/gksign
