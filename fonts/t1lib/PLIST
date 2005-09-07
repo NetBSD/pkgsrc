@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/08/04 09:57:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/09/07 17:46:28 reed Exp $
 bin/type1afm
 bin/xglyph
 include/t1lib.h
@@ -56,6 +56,20 @@ share/doc/${PKGBASE}/type1afm.tex
 share/doc/${PKGBASE}/ut1lib.tex
 share/doc/${PKGBASE}/xglyph.tex
 share/doc/${PKGBASE}/xinterface.tex
+share/doc/${PKGBASE}/t1dump/t1dump_o.eps
+share/doc/${PKGBASE}/t1dump/t1dump_B.pdf
+share/doc/${PKGBASE}/t1dump/t1dump_eight.eps
+share/doc/${PKGBASE}/t1dump/parallelpath_sk.pdf
+share/doc/${PKGBASE}/t1dump/t1dump_eight.pdf
+share/doc/${PKGBASE}/t1dump/t1dump_o.pdf
+share/doc/${PKGBASE}/t1dump/t1dump_t_1.pdf
+share/doc/${PKGBASE}/t1dump/t1dump_t_2.pdf
+share/doc/${PKGBASE}/t1dump/parallelpath.eps
+share/doc/${PKGBASE}/t1dump/t1dump_t_1.eps
+share/doc/${PKGBASE}/t1dump/t1dump_t_2.eps
+share/doc/${PKGBASE}/t1dump/parallelpath_sk.eps
+share/doc/${PKGBASE}/t1dump/t1dump_B.eps
+share/doc/${PKGBASE}/t1dump/parallelpath_sk.sk
 share/examples/${PKGBASE}/FontDataBase
 share/examples/${PKGBASE}/t1example1.c
 share/examples/${PKGBASE}/t1lib.config
@@ -86,11 +100,11 @@ share/${PKGBASE}/Fonts/type1/dcbxti10.pfb
 share/${PKGBASE}/Fonts/type1/dcr10.pfb
 share/${PKGBASE}/Fonts/type1/dcti10.pfb
 share/${PKGBASE}/Fonts/type1/eufm10.pfb
+@dirrm share/doc/${PKGBASE}/t1dump
+@dirrm share/doc/${PKGBASE}
 @dirrm share/${PKGBASE}/Fonts/type1
 @dirrm share/${PKGBASE}/Fonts/enc
 @dirrm share/${PKGBASE}/Fonts/afm
 @dirrm share/${PKGBASE}/Fonts
 @dirrm share/${PKGBASE}
 @dirrm share/examples/${PKGBASE}
-@comment remove any rendered docs as well
-@unexec ${RM} -rf %D/share/doc/${PKGBASE} || ${TRUE}
