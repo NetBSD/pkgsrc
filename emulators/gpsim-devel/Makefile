@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:07:58 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/07 20:17:46 bouyer Exp $
 #
 
-DISTNAME=	gpsim-20040826
+DISTNAME=	gpsim-20050905
 CATEGORIES=	emulators
 MASTER_SITES=	http://www-asim.lip6.fr/~bouyer/pic/
 
@@ -12,7 +12,7 @@ COMMENT=	PIC emulator with X interface
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	bison gmake lex
+USE_TOOLS+=	bison gmake lex pkg-config
 USE_LIBTOOL=	YES
 
 USE_GNU_READLINE=	# rl_callback_read_char, rl_copy_text,
@@ -23,6 +23,6 @@ CONFLICTS=	eXdbm-[0-9]* gpsim-[0-9]*
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-.include "../../x11/gtk+extra/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk2+extra/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
