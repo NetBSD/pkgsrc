@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/02/23 16:33:09 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/09/07 11:42:27 darcy Exp $
 
-SHA1 (PyGreSQL-3.6.2.tgz) = 9abf0cc3929ec025587de9479deddde0b500e153
-RMD160 (PyGreSQL-3.6.2.tgz) = 67088242e28d45dd0b9ec5904384e1e86cfb2981
-Size (PyGreSQL-3.6.2.tgz) = 45824 bytes
+SHA1 (PyGreSQL-3.7.tgz) = 1550742021fc23016852afd559e28ef6710a483b
+RMD160 (PyGreSQL-3.7.tgz) = 534f37c937426b1f291683220d605887148562f2
+Size (PyGreSQL-3.7.tgz) = 47643 bytes
