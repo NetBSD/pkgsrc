@@ -7,4 +7,4 @@ generated. Speeds up learning LaTeX and makes complicated layouts
 easy and intuitive. New features include spell-checking, international
 character support, WYSIWYG graphics, tables, and equations.
 
-This version of LyX uses the Qt toolkit for the graphical interface.
+This version of LyX uses the XForms graphical user interface toolkit.
