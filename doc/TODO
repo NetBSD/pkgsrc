@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3870 2005/09/07 11:30:32 seb Exp $
+$NetBSD: TODO,v 1.3871 2005/09/07 14:30:19 adam Exp $
 
 Suggested new packages
 ======================
@@ -1066,7 +1066,6 @@ Suggested package updates
 	o weewm-0.01
 	o wesnoth-0.9.6
 	o winbind-3.0.13
-	o wine-20050830
 	o wmctrl-1.07
 	o wmweather-2.4.3
 	o www6to4-1.6
