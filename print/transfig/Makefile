@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.27 2005/05/22 20:08:29 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.28 2005/09/07 14:10:56 adam Exp $
 
-DISTNAME=		transfig.3.2.4
-PKGNAME=		transfig-3.2.4
-PKGREVISION=		2
-CATEGORIES=		graphics print
-MASTER_SITES=		ftp://epb.lbl.gov/xfig/
+DISTNAME=	transfig.3.2.4
+PKGNAME=	transfig-3.2.4
+PKGREVISION=	2
+CATEGORIES=	graphics print
+MASTER_SITES=	ftp://epb.lbl.gov/xfig/
 
-MAINTAINER=		root@garbled.net
-COMMENT=		TeX document creation tool utilizing portable graphics
+MAINTAINER=	root@garbled.net
+COMMENT=	TeX document creation tool utilizing portable graphics
 
-USE_IMAKE=		YES
+USE_IMAKE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,5 +25,4 @@ USE_TOOLS+=		gmake
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
