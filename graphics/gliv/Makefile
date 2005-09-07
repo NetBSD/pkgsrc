@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:56 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/07 14:42:10 adam Exp $
 
-DISTNAME=	gliv-1.9.1
+DISTNAME=	gliv-1.9.3
 CATEGORIES=	graphics
 MASTER_SITES=	http://guichaz.free.fr/gliv/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,12 +11,11 @@ COMMENT=	OpenGL image viewer
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
