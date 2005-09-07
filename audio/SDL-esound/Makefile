@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:38 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.9 2005/09/07 10:16:40 adam Exp $
 
 .include "../../devel/SDL/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/SDL/SDL-esound/}
-PKGREVISION=	1
 
 CATEGORIES+=	audio gnome
 
