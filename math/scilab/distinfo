@@ -1,20 +1,23 @@
-$NetBSD: distinfo,v 1.17 2005/02/23 12:06:58 agc Exp $
+$NetBSD: distinfo,v 1.18 2005/09/07 10:48:47 dmcmahill Exp $
 
-SHA1 (scilab-3.0.src.tar.gz) = 73465add3c1b6640172e885b29fcfd8a3dc426a7
-RMD160 (scilab-3.0.src.tar.gz) = 0a8fa728e3d4730986912d51ba39e8a97fd509f5
-Size (scilab-3.0.src.tar.gz) = 10988126 bytes
-SHA1 (patch-aa) = 04f95450f611912e3c7d37cb0ff2681ca31dde62
-SHA1 (patch-ab) = bca7144747d40817a8688ac3ef70bec319bdaac6
+SHA1 (scilab-3.1.1-src.tar.gz) = 63cae13441befb795d32cec5f825042b6b4e74b3
+RMD160 (scilab-3.1.1-src.tar.gz) = 363486c6c9d1e64a28edcd002651e3c9d3b1eb73
+Size (scilab-3.1.1-src.tar.gz) = 14261772 bytes
+SHA1 (patch-aa) = c07d4817a3e8ad0b7291709a84937d6f28a1e122
+SHA1 (patch-ab) = edfd155402a07931d51d849781ec679f3f9c7c27
 SHA1 (patch-ac) = 0c48500eb261d643bdd5c1d34d23968b312eae57
-SHA1 (patch-ad) = 8615a759579793942c8a984e34683d35d874b565
+SHA1 (patch-ad) = 186b5b1b71ccd983f49ae4c1bfb45152d4ebd662
 SHA1 (patch-ae) = 050ea8847196c2808a74c252db7c98d77677cd25
 SHA1 (patch-af) = e31a818b24b7a4981f3f4a92589c3677cb5ffd34
 SHA1 (patch-ag) = d51b476920236b582dee6ea591fcd2d61b1e8fe3
 SHA1 (patch-ah) = d39bca8c9a1ba6d8d9b79d9fe12ee5503cfd3371
 SHA1 (patch-ai) = a99bd6b3cd27a6328343ae9247e291eea635402c
 SHA1 (patch-aj) = 231a10acd752c8dc8039cae8c011f78dbbfa56fa
-SHA1 (patch-ak) = a59ff16c0e7eab5c37d93abcdc9499ec49663080
+SHA1 (patch-ak) = 2840aff8a77c8d02e5ce8a97a20c26e410e2c751
 SHA1 (patch-al) = 371078078036436c72868eadd9f40532d9d2916f
 SHA1 (patch-am) = 7dc94f3d41aff5c508256361e15aab6cd0c4924a
 SHA1 (patch-an) = 75b9c531dcc39e82a9cfc3e5352afbe57f826310
-SHA1 (patch-ao) = 1dae172657b3852db6c14b9a791858f704528aba
+SHA1 (patch-ao) = f11104e0d68132607a941dd2b37aad85fce3d01f
+SHA1 (patch-ap) = 0f87996f0940459b57248068021c6bd565be258e
+SHA1 (patch-aq) = 158c9f7466f488f2dad9b1b73939bd0ceaf39b98
+SHA1 (patch-ar) = fba20ba23ec78262c6eba1248b662d08e727cada
