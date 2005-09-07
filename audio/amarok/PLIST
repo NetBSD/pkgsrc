@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/30 06:44:37 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/09/07 11:29:41 seb Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
@@ -279,25 +279,30 @@ share/kde/apps/amarok/data/wirl1.png
 share/kde/apps/amarok/data/wirl2.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/covermanager.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/dynamic.png
+share/kde/apps/amarok/icons/crystalsvg/16x16/actions/equalizer.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/mini_dock.png
-share/kde/apps/amarok/icons/crystalsvg/16x16/actions/party.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/random.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/repeat_playlist.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/repeat_track.png
+share/kde/apps/amarok/icons/crystalsvg/16x16/actions/visualizations.png
 share/kde/apps/amarok/icons/crystalsvg/16x16/actions/wiki.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/dynamic.png
-share/kde/apps/amarok/icons/crystalsvg/22x22/actions/party.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/random.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/repeat_playlist.png
-share/kde/apps/amarok/icons/crystalsvg/32x32/actions/player_playlist_2.png
-share/kde/apps/amarok/icons/crystalsvg/48x48/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/dynamic.png
-share/kde/apps/amarok/icons/crystalsvg/64x64/actions/party.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/random.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/repeat_playlist.png
+share/kde/apps/amarok/icons/crystalsvg/scalable/actions/collection.svg
+share/kde/apps/amarok/icons/crystalsvg/scalable/actions/dynamic.svg
+share/kde/apps/amarok/icons/crystalsvg/scalable/actions/player_playlist_2.svg
+share/kde/apps/amarok/icons/hicolor/16x16/actions/collection.png
+share/kde/apps/amarok/icons/hicolor/22x22/actions/collection.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/audioscrobbler.png
+share/kde/apps/amarok/icons/hicolor/32x32/actions/collection.png
+share/kde/apps/amarok/icons/hicolor/48x48/actions/collection.png
+share/kde/apps/amarok/icons/hicolor/64x64/actions/collection.png
 share/kde/apps/amarok/images/amarok_cut.png
 share/kde/apps/amarok/images/amarok_rocks.jpg
 share/kde/apps/amarok/images/b_next.png
@@ -316,10 +321,10 @@ share/kde/apps/amarok/images/currenttrack_stop_small.png
 share/kde/apps/amarok/images/description.png
 share/kde/apps/amarok/images/eq_active2.png
 share/kde/apps/amarok/images/eq_inactive2.png
-share/kde/apps/amarok/images/folder_crystal.png
 share/kde/apps/amarok/images/loading1.png
 share/kde/apps/amarok/images/loading2.png
 share/kde/apps/amarok/images/logo_web.png
+share/kde/apps/amarok/images/menu_sidepixmap.png
 share/kde/apps/amarok/images/musicbrainz.png
 share/kde/apps/amarok/images/nocover.png
 share/kde/apps/amarok/images/pl_active2.png
@@ -356,18 +361,13 @@ share/kde/apps/amarok/scripts/shouter/Services.py
 share/kde/apps/amarok/scripts/shouter/Shouter.py
 share/kde/apps/amarok/scripts/shouter/ShouterConfig.py
 share/kde/apps/amarok/scripts/shouter/ShouterExceptions.py
+share/kde/apps/amarok/scripts/shouter/SocketErrors.py
 share/kde/apps/amarok/scripts/shouter/StreamConfig.py
 share/kde/apps/amarok/scripts/shouter/StreamController.py
 share/kde/apps/amarok/scripts/shouter/StreamPublisher.py
 share/kde/apps/amarok/scripts/shouter/binfuncs.py
 share/kde/apps/amarok/scripts/shouter/debug.py
 share/kde/apps/amarok/scripts/shouter/propfind-req.xml
-share/kde/apps/amarok/scripts/shouter/silence/silence-128.mp3
-share/kde/apps/amarok/scripts/shouter/silence/silence-160.mp3
-share/kde/apps/amarok/scripts/shouter/silence/silence-192.mp3
-share/kde/apps/amarok/scripts/shouter/silence/silence-224.mp3
-share/kde/apps/amarok/scripts/shouter/silence/silence-256.mp3
-share/kde/apps/amarok/scripts/shouter/silence/silence-320.mp3
 share/kde/apps/amarok/scripts/shouter/silence/silence-48.mp3
 share/kde/apps/amarok/scripts/shouter/test/client.py
 share/kde/apps/amarok/scripts/templates/amarok.rb
@@ -460,6 +460,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/xx/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amarok.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/amarok.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
@@ -492,15 +493,21 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amarok.mo
 @dirrm share/kde/apps/amarok/scripts/alarm
 @dirrm share/kde/apps/amarok/scripts
 @dirrm share/kde/apps/amarok/images
+@dirrm share/kde/apps/amarok/icons/hicolor/64x64/actions
+@dirrm share/kde/apps/amarok/icons/hicolor/64x64
+@dirrm share/kde/apps/amarok/icons/hicolor/48x48/actions
+@dirrm share/kde/apps/amarok/icons/hicolor/48x48
 @dirrm share/kde/apps/amarok/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/amarok/icons/hicolor/32x32
+@dirrm share/kde/apps/amarok/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/amarok/icons/hicolor/22x22
+@dirrm share/kde/apps/amarok/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/amarok/icons/hicolor/16x16
 @dirrm share/kde/apps/amarok/icons/hicolor
+@dirrm share/kde/apps/amarok/icons/crystalsvg/scalable/actions
+@dirrm share/kde/apps/amarok/icons/crystalsvg/scalable
 @dirrm share/kde/apps/amarok/icons/crystalsvg/64x64/actions
 @dirrm share/kde/apps/amarok/icons/crystalsvg/64x64
-@dirrm share/kde/apps/amarok/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/amarok/icons/crystalsvg/48x48
-@dirrm share/kde/apps/amarok/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/amarok/icons/crystalsvg/32x32
 @dirrm share/kde/apps/amarok/icons/crystalsvg/22x22/actions
 @dirrm share/kde/apps/amarok/icons/crystalsvg/22x22
 @dirrm share/kde/apps/amarok/icons/crystalsvg/16x16/actions
@@ -509,6 +516,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amarok.mo
 @dirrm share/kde/apps/amarok/icons
 @dirrm share/kde/apps/amarok/data
 @dirrm share/kde/apps/amarok
+@comment in kde: @dirrm share/kde/apps
 @dirrm share/doc/kde/HTML/sv/amarok
 @comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/ru/amarok
@@ -526,6 +534,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amarok.mo
 @dirrm share/doc/kde/HTML/et/amarok
 @comment in kde: @dirrm share/doc/kde/HTML/et
 @dirrm share/doc/kde/HTML/en/amarok
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML/de/amarok
 @comment in kde: @dirrm share/doc/kde/HTML/de
 @dirrm share/doc/kde/HTML/da/amarok
