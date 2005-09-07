@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.9 2004/07/15 04:00:47 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.10 2005/09/07 10:48:47 dmcmahill Exp $
 
---- configure.in.orig	Fri Jul  9 08:28:05 2004
+--- configure.in.orig	2005-05-25 15:00:45.000000000 +0000
 +++ configure.in
-@@ -450,8 +450,8 @@ case "$host" in
+@@ -452,8 +452,8 @@ case "$host" in
    *-*-solaris*)
      # standard compilers
      CC=cc
--    CC_OPTIONS='-O -DSVR4 -DSYSV -Dsolaris'
+-    CC_OPTIONS='-O -DNDEBUG -DSVR4 -DSYSV -Dsolaris'
 -    CC_LDFLAGS=
-+    CC_OPTIONS="${CFLAGS} -DSVR4 -DSYSV -Dsolaris"
++    CC_OPTIONS="${CFLAGS} -DNDEBUG -DSVR4 -DSYSV -Dsolaris"
 +    CC_LDFLAGS="${LDFLAGS}"
      if test "$WITH_G77" != yes; then    
        #AC_CHECK_PROG(F77,f77,yes,no)
        AC_CHECK_PROGS(F77,f77 f90 f2c-f77,no)
-@@ -461,9 +461,9 @@ case "$host" in
+@@ -463,9 +463,9 @@ case "$host" in
        FC="$F77"
      fi
      #FC="$F77"
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.9 2004/07/15 04:00:47 dmcmahill Exp $
      LD=ld
      LD_LDFLAGS=
      if test "$enable_debug" = yes; then 
-@@ -482,7 +482,7 @@ case "$host" in
+@@ -484,7 +484,7 @@ case "$host" in
        FC=g77
        FC_OPTIONS=-O2
        FC_OPTIONS_O0=
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.9 2004/07/15 04:00:47 dmcmahill Exp $
  #     for solaris 2.7 with gcc/g77 2.95.2, binutils 2.9 
  #     the correct value should be 
  #     FC_LDFLAGS='-t -Wl,-export-dynamic'
-@@ -1104,7 +1104,7 @@ case "$host" in
+@@ -1189,7 +1189,7 @@ case "$host" in
     FC="$F77"
     FC_OPTIONS="${FFLAGS}"
     FC_OPTIONS_O0=`echo $FC_OPTIONS | sed 's/-O[0-9]*//g'`
@@ -43,12 +43,12 @@ $NetBSD: patch-aa,v 1.9 2004/07/15 04:00:47 dmcmahill Exp $
     FC_PICFLAGS='-fPIC'
     # check for --export-dynamic
     ac_save_LDFLAGS="$LDFLAGS"
-@@ -1751,13 +1751,13 @@ case "$host" in
+@@ -1714,13 +1714,13 @@ case "$host" in
      ;;
  esac
  
--GETLIBTK=libtk$TK_MAJOR_VERSION.$TK_MINOR_VERSION.so
-+GETLIBTK=libtk$TK_MAJOR_VERSION$TK_MINOR_VERSION.so
+-GETLIBTK=libtk$TK_MAJOR_VERSION.$TK_MINOR_VERSION.$SONAME
++GETLIBTK=libtk$TK_MAJOR_VERSION$TK_MINOR_VERSION.$SONAME
  
 -case "$host" in
 -  *-*-darwin*)
