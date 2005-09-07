@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2005/08/12 13:57:44 salo Exp $
+# $NetBSD: Makefile,v 1.90 2005/09/07 14:28:38 adam Exp $
 
-DISTNAME=	Wine-20050725
+DISTNAME=	Wine-20050830
 PKGNAME=	${DISTNAME:S/W/w/}
-PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
 		http://www.ibiblio.org/pub/Linux/ALPHA/wine/development/ \
@@ -21,9 +20,11 @@ ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386 Darwin*-i386
 
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
 USE_LIBTOOL=		yes
+USE_NCURSES=		yes
 USE_TOOLS+=		bison gmake mktemp
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-curses --disable-trace --disable-debug
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-trace
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
 UNLIMIT_RESOURCES=	datasize
@@ -40,7 +41,9 @@ LIBS+=			${LDFLAGS}
 
 .include "options.mk"
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../databases/openldap/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
