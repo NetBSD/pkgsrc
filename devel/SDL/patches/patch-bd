@@ -1,16 +1,16 @@
-$NetBSD: patch-bd,v 1.3 2005/01/05 12:05:19 adam Exp $
+$NetBSD: patch-bd,v 1.4 2005/09/07 10:15:39 adam Exp $
 
---- src/audio/nas/Makefile.in.orig	2004-12-13 09:03:21.000000000 +0000
+--- src/audio/nas/Makefile.in.orig	2005-08-28 06:31:42.000000000 +0000
 +++ src/audio/nas/Makefile.in
-@@ -49,6 +49,7 @@ am__configure_deps = $(am__aclocal_m4_de
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -47,6 +47,7 @@ am__configure_deps = $(am__aclocal_m4_de
+ mkinstalldirs = $(install_sh) -d
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(noinst_LTLIBRARIES)
 +libaudio_nas_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) $(SHARED_SYSTEM_LIBS)
  libaudio_nas_la_LIBADD =
  am__objects_1 = SDL_nasaudio.lo
  am_libaudio_nas_la_OBJECTS = $(am__objects_1)
-@@ -321,7 +322,7 @@ clean-noinstLTLIBRARIES:
+@@ -320,7 +321,7 @@ clean-noinstLTLIBRARIES:
  	  rm -f "$${dir}/so_locations"; \
  	done
  libaudio_nas.la: $(libaudio_nas_la_OBJECTS) $(libaudio_nas_la_DEPENDENCIES) 
