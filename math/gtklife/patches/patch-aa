@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/22 17:20:23 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2005/09/07 10:55:31 adam Exp $
 
---- Makefile.orig	2004-05-13 03:29:10.000000000 +0200
+--- Makefile.orig	2005-01-13 06:16:20.000000000 +0000
 +++ Makefile
 @@ -1,16 +1,16 @@
  # C compiler to use
@@ -19,8 +19,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/22 17:20:23 drochner Exp $
 +DOCDIR=$(PREFIX)/share/doc/gtklife
  
  # Optimization and debug flags
--CFLAGS=-O3 -mpentiumpro -Wall # -g
-+#CFLAGS=-O3 -mpentiumpro -Wall # -g
+-CFLAGS=-O3 -Wall # -g
++#CFLAGS=-O3 -Wall # -g
  
  ########## No user-serviceable parts below ##########
  
