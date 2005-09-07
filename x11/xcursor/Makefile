@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:30 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/09/07 16:49:41 reed Exp $
 #
 
 DISTNAME=		libXcursor-1.1.2
 PKGNAME=		${DISTNAME:S/libX/x/}
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://freedesktop.org/~xlibs/release/
+MASTER_SITES=		http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
