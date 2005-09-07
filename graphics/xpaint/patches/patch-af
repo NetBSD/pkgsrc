@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.10 2005/09/06 14:53:36 adam Exp $
+$NetBSD: patch-af,v 1.11 2005/09/07 14:10:16 adam Exp $
 
---- Local.config.orig	2004-09-05 08:14:53.000000000 +0000
+--- Local.config.orig	2005-04-30 21:33:14.000000000 +0000
 +++ Local.config
-@@ -9,7 +9,7 @@ XCOMM $Id: Local.config,v 1.29 2004/09/0
+@@ -9,7 +9,7 @@ XCOMM $Id: Local.config,v 1.18 2005/03/2
  XCOMM Local customization
  
  DESTDIR = 
@@ -35,7 +35,7 @@ $NetBSD: patch-af,v 1.10 2005/09/06 14:53:36 adam Exp $
  
  
  DEPENDFLAGS = -I./bitmaps
-@@ -162,14 +165,14 @@ XCOMM CDEBUGFLAGS =
+@@ -162,20 +165,11 @@ XCOMM CDEBUGFLAGS =
  
  XCOMM This should take care of everything needed for BSD.
  
@@ -47,6 +47,15 @@ $NetBSD: patch-af,v 1.10 2005/09/06 14:53:36 adam Exp $
 -JPEG_LIB     = -L/usr/local/lib -ljpeg
 -XPM_INCLUDE = -I/usr/X11R6/include/X11
 -#endif
+-
+-#if defined(FreeBSDArchitecture)
+-ARCH_DEFINES = -DHAVE_PARAM_H
+-TIFF_INCLUDE = -I/usr/local/include/tiff34
+-TIFF_LIB     = -L/usr/local/lib -ltiff34
+-JPEG_INCLUDE = -I/usr/local/include
+-JPEG_LIB     = -L/usr/local/lib -ljpeg
+-XPM_INCLUDE = -I/usr/X11R6/include/X11
+-#endif
 +TIFF_INCLUDE = -I@LOCALBASE@/include
 +TIFF_LIB     = -L@LOCALBASE@/lib -Wl,-R@LOCALBASE@/lib -ltiff
 +JPEG_INCLUDE = -I@LOCALBASE@/include
@@ -54,6 +63,3 @@ $NetBSD: patch-af,v 1.10 2005/09/06 14:53:36 adam Exp $
 +PNG_INCLUDE = -I@LOCALBASE@/include/png
 +PNG_LIB     = -L@LOCALBASE@/lib -Wl,-R@LOCALBASE@/lib -lpng -lz
 +XPM_INCLUDE = -I@XPMDIR@/include/X11
- 
- #if defined(FreeBSDArchitecture)
- ARCH_DEFINES = -DHAVE_PARAM_H
