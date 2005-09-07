@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.25 2005/08/19 18:12:36 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.26 2005/09/07 13:58:16 adam Exp $
 
-DISTNAME=	gale-0.99a
-PKGREVISION=	5
+DISTNAME=	gale-0.99fruit
+PKGNAME=	gale-0.99f
 CATEGORIES=	chat
-MASTER_SITES=	http://download.gale.org/
+MASTER_SITES=	http://download.ofb.net/gale/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gale.org/
 COMMENT=	Secure instant messaging system
 
-USE_PKGINSTALL=		YES
-USE_GNU_READLINE=	# needs rl_named_function()
-USE_LIBTOOL=		YES
+USE_PKGINSTALL=		yes
+USE_GNU_READLINE=	yes	# needs rl_named_function()
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/liboopltconfig
-
-GNU_CONFIGURE= 		YES
+GNU_CONFIGURE= 		yes
 CONFIGURE_ARGS=		--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		PROG_GLIB_CONFIG="${GLIB_CONFIG}"
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.rsaref}/include/rsaref
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libwww}/include/w3c-libwww
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.tcl}/include/tcl
 
 PKG_SYSCONFSUBDIR?=	gale
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -47,8 +47,8 @@ post-install:
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../net/adns/buildlink3.mk"
 .include "../../security/rsaref/buildlink3.mk"
 .include "../../www/libwww/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
