@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/07 22:40:23 reed Exp $
+lib/X11/fonts/TTF/DejaVuSans-Bold.ttf
+lib/X11/fonts/TTF/DejaVuSans-BoldOblique.ttf
+lib/X11/fonts/TTF/DejaVuSans-Oblique.ttf
+lib/X11/fonts/TTF/DejaVuSans.ttf
+lib/X11/fonts/TTF/DejaVuSansCondensed-Bold.ttf
+lib/X11/fonts/TTF/DejaVuSansCondensed-BoldOblique.ttf
+lib/X11/fonts/TTF/DejaVuSansCondensed-Oblique.ttf
+lib/X11/fonts/TTF/DejaVuSansCondensed.ttf
+lib/X11/fonts/TTF/DejaVuSansMono-Bold.ttf
+lib/X11/fonts/TTF/DejaVuSansMono-BoldOb.ttf
+lib/X11/fonts/TTF/DejaVuSansMono-Oblique.ttf
+lib/X11/fonts/TTF/DejaVuSansMono-Roman.ttf
+lib/X11/fonts/TTF/DejaVuSerif-Bold.ttf
+lib/X11/fonts/TTF/DejaVuSerif-BoldOblique.ttf
+lib/X11/fonts/TTF/DejaVuSerif-Oblique.ttf
+lib/X11/fonts/TTF/DejaVuSerif-Roman.ttf
+lib/X11/fonts/TTF/DejaVuSerifCondensed-Bold.ttf
+lib/X11/fonts/TTF/DejaVuSerifCondensed-BoldOblique.ttf
+lib/X11/fonts/TTF/DejaVuSerifCondensed-Oblique.ttf
+lib/X11/fonts/TTF/DejaVuSerifCondensed.ttf
+share/doc/dejavu-ttf/AUTHORS
+share/doc/dejavu-ttf/BUGS
+share/doc/dejavu-ttf/LICENSE
+share/doc/dejavu-ttf/NEWS
+share/doc/dejavu-ttf/README
+@dirrm share/doc/dejavu-ttf
