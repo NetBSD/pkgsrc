@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/07 23:10:45 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/07 23:21:44 reed Exp $
 lib/X11/fonts/TTF/DejaVuSans-Bold.ttf
 lib/X11/fonts/TTF/DejaVuSans-BoldOblique.ttf
 lib/X11/fonts/TTF/DejaVuSans-Oblique.ttf
@@ -19,12 +19,9 @@ lib/X11/fonts/TTF/DejaVuSerifCondensed-Bold.ttf
 lib/X11/fonts/TTF/DejaVuSerifCondensed-BoldOblique.ttf
 lib/X11/fonts/TTF/DejaVuSerifCondensed-Oblique.ttf
 lib/X11/fonts/TTF/DejaVuSerifCondensed.ttf
-lib/X11/fonts/TTF/fonts.dir
-lib/X11/fonts/TTF/fonts.scale
 share/doc/dejavu-ttf/AUTHORS
 share/doc/dejavu-ttf/BUGS
 share/doc/dejavu-ttf/LICENSE
 share/doc/dejavu-ttf/NEWS
 share/doc/dejavu-ttf/README
 @dirrm share/doc/dejavu-ttf
-@dirrm lib/X11/fonts/TTF
