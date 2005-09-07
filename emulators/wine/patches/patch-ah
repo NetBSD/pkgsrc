@@ -1,25 +1,25 @@
-$NetBSD: patch-ah,v 1.5 2005/07/26 13:24:36 adam Exp $
+$NetBSD: patch-ah,v 1.6 2005/09/07 14:28:38 adam Exp $
 
---- tools/Makefile.in.orig	2005-07-26 12:12:26.000000000 +0000
+--- tools/Makefile.in.orig	2005-08-08 15:02:29.000000000 +0000
 +++ tools/Makefile.in
-@@ -49,16 +49,16 @@ make_ctests: make_ctests.o
- 	$(CC) $(CFLAGS) -o make_ctests make_ctests.o
+@@ -50,16 +50,16 @@ make_ctests$(EXEEXT): make_ctests.o
+ 	$(CC) $(CFLAGS) -o $@ make_ctests.o
  
- fnt2bdf: fnt2bdf.o
--	$(CC) $(CFLAGS) -o fnt2bdf fnt2bdf.o $(LIBPORT)
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o fnt2bdf fnt2bdf.o $(LIBPORT)
+ fnt2bdf$(EXEEXT): fnt2bdf.o
+-	$(CC) $(CFLAGS) -o $@ fnt2bdf.o $(LIBPORT)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ fnt2bdf.o $(LIBPORT)
  
- fnt2fon: fnt2fon.o
--	$(CC) $(CFLAGS) -o fnt2fon fnt2fon.o $(LIBPORT)
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o fnt2fon fnt2fon.o $(LIBPORT)
+ fnt2fon$(EXEEXT): fnt2fon.o
+-	$(CC) $(CFLAGS) -o $@ fnt2fon.o $(LIBPORT)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ fnt2fon.o $(LIBPORT)
  
- sfnt2fnt: sfnt2fnt.o
--	$(CC) $(CFLAGS) -o sfnt2fnt sfnt2fnt.o $(LIBUNICODE) $(LIBPORT) $(FREETYPELIBS)
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o sfnt2fnt sfnt2fnt.o $(LIBUNICODE) $(LIBPORT) $(FREETYPELIBS)
+ sfnt2fnt$(EXEEXT): sfnt2fnt.o
+-	$(CC) $(CFLAGS) -o $@ sfnt2fnt.o $(LIBUNICODE) $(LIBPORT) $(FREETYPELIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ sfnt2fnt.o $(LIBUNICODE) $(LIBPORT) $(FREETYPELIBS)
  
- bin2res: bin2res.o
--	$(CC) $(CFLAGS) -o bin2res bin2res.o $(LIBPORT)
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o bin2res bin2res.o $(LIBPORT)
+ bin2res$(EXEEXT): bin2res.o
+-	$(CC) $(CFLAGS) -o $@ bin2res.o $(LIBPORT)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ bin2res.o $(LIBPORT)
  
  wineprefixcreate: wineprefixcreate.in
  	sed -e 's,@dlldir\@,$(dlldir),g' -e 's,@datadir\@,$(datadir),g' $(SRCDIR)/wineprefixcreate.in >$@ || ($(RM) $@ && false)
