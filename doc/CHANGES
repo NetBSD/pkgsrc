@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11072 2005/09/07 14:30:19 adam Exp $
+$NetBSD: CHANGES,v 1.11073 2005/09/07 14:42:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3968,3 +3968,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/gg2 to 2.2.8 [adam 2005-09-07]
 	Updated chat/gale to 0.99f [adam 2005-09-07]
 	Updated emulators/wine to 20050830 [adam 2005-09-07]
+	Updated graphics/gliv to 1.9.3 [adam 2005-09-07]
