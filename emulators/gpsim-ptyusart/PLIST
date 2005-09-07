@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 20:55:51 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/07 20:23:12 bouyer Exp $
 lib/libgpsim_ptyusart.la
 share/examples/gpsim-ptyusart/tst_txdot.asm
 share/examples/gpsim-ptyusart/tst_txrx.asm

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:49:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/09/07 20:23:12 bouyer Exp $
 
-SHA1 (ptyusart-0.3.1.tar.gz) = b0cda0e8009ca6bd78ac977c02b5d01df04e9039
-RMD160 (ptyusart-0.3.1.tar.gz) = 4972952d5a4c8b5d61eb8594896a885e4433ce91
-Size (ptyusart-0.3.1.tar.gz) = 308297 bytes
+SHA1 (ptyusart-0.3.2.tar.gz) = cf2a8bf2fefac2dd52661e976b6991f45b8c3e76
+RMD160 (ptyusart-0.3.2.tar.gz) = 3d08f6b2c46f3879b87748b38238903ccc346a1b
+Size (ptyusart-0.3.2.tar.gz) = 629491 bytes
