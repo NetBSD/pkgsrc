@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/09/06 19:11:24 tonio Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/09/07 11:58:56 tonio Exp $
 
 DISTNAME=		kaffe-1.1.5
 CATEGORIES=		lang java
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--disable-native-awt
 CONFIGURE_ENV+=		VM_LIBS="-lc"
 .endif
 
-.if ((${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "powerpc"))
+.if (((${OPSYS} == "NetBSD") && (${MACHINE_ARCH} == "alpha")) || (${MACHINE_ARCH} == "powerpc") || ((${OPSYS} == "SunOS") && ${MACHINE_ARCH} == "i386"))
 # On these systems, jit3 is not working.
 CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
