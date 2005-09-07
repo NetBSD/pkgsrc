@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3872 2005/09/07 14:42:57 adam Exp $
+$NetBSD: TODO,v 1.3873 2005/09/07 15:20:06 adam Exp $
 
 Suggested new packages
 ======================
@@ -1110,7 +1110,6 @@ Suggested package updates
 	o xnap-2.5r3
 	o xorp-1.1
 	o xpad-2.9
-	o xpdf-3.01
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrmap-2.31
