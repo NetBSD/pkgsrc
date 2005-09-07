@@ -1,0 +1,11 @@
+--- configure.orig	2005-08-19 22:50:34.000000000 -0700
++++ configure	2005-08-19 22:51:48.000000000 -0700
+@@ -10320,7 +10320,7 @@
+ main ()
+ {
+ bindtextdomain ("", "");
+-return (int) gettext ("") + _nl_msg_cat_cntr + *_nl_expand_alias (0)
++return (int) gettext ("") + _nl_msg_cat_cntr + *_nl_expand_alias ()
+   ;
+   return 0;
+ }
