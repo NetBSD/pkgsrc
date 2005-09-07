@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/22 16:36:46 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/07 08:36:40 adam Exp $
 bin/vino-preferences
 lib/bonobo/servers/GNOME_RemoteDesktop.server
 libexec/vino-server
@@ -23,9 +23,12 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/vino.mo
@@ -48,15 +51,20 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/ug/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/vino.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
