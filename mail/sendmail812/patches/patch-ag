@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/08/30 19:56:46 adrianp Exp $
+$NetBSD: patch-ag,v 1.2 2005/09/08 22:32:39 abs Exp $
 
 --- include/sm/conf.h.orig	2004-01-07 13:52:16.000000000 +1300
 +++ include/sm/conf.h
@@ -6,7 +6,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2004/08/30 19:56:46 adrianp Exp $
  #  ifndef LA_TYPE
  #   define LA_TYPE	LA_SUBR
  #  endif /* ! LA_TYPE */
-+#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 299000900)
 +#  define SFS_TYPE	SFS_STATVFS	/* use <sys/statvfs.h> statfs() impl */
 +#else
  #  define SFS_TYPE	SFS_MOUNT	/* use <sys/mount.h> statfs() impl */
@@ -18,7 +18,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2004/08/30 19:56:46 adrianp Exp $
  #  ifndef LA_TYPE
  #   define LA_TYPE	LA_SUBR
  #  endif /* ! LA_TYPE */
-+#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 299000900)
 +#  define SFS_TYPE	SFS_STATVFS	/* use <sys/statvfs.h> statfs() impl */
 +#else
  #  define SFS_TYPE	SFS_MOUNT	/* use <sys/mount.h> statfs() impl */
