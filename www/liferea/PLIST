@@ -1,18 +1,30 @@
-@comment $NetBSD: PLIST,v 1.8 2004/12/02 16:56:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/09/08 18:49:33 drochner Exp $
 bin/liferea
 bin/liferea-bin
 lib/liferea/liblihtmlg.la
 man/man1/liferea.1
 share/applications/liferea.desktop
 share/gconf/schemas/liferea.schemas
+share/liferea/css/adblock.css
 share/liferea/css/liferea.css
 share/liferea/css/liferea2.css
+share/liferea/doc/html/about_en.html
+share/liferea/doc/html/folders_en.html
+share/liferea/doc/html/headlines_en.html
+share/liferea/doc/html/preferences_en.html
+share/liferea/doc/html/reference.css
+share/liferea/doc/html/reference_en.html
+share/liferea/doc/html/searching_en.html
+share/liferea/doc/html/subscriptions_en.html
+share/liferea/doc/html/topics_en.html
+share/liferea/doc/html/updating_en.html
+share/liferea/dtd/html.ent
 share/liferea/opml/feedlist.opml
 share/liferea/opml/feedlist_de.opml
 share/liferea/opml/feedlist_es.opml
 share/liferea/opml/feedlist_fr.opml
-share/liferea/opml/feedlist_pl.opml
 share/liferea/opml/feedlist_sk.opml
+share/liferea/pixmaps/arrow.png
 share/liferea/pixmaps/available.png
 share/liferea/pixmaps/directory.png
 share/liferea/pixmaps/edit.png
@@ -30,18 +42,25 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/liferea.mo
 share/pixmaps/liferea.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/liferea/pixmaps
+@dirrm share/liferea/dtd
+@dirrm share/liferea/doc/html
+@dirrm share/liferea/doc
 @dirrm share/liferea/opml
 @dirrm share/liferea/css
 @dirrm share/liferea
