@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/31 10:01:39 dillo Exp $
+# $NetBSD: Makefile,v 1.35 2005/09/08 21:57:56 salo Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -58,9 +58,8 @@ PLIST_SUBST+=		USE_LIBCRACK="@comment "
 .endif
 
 .if !empty(OPSYS:M*BSD)
-CFLAGS+=		-DUSE_GETLOGIN=1
+CPPFLAGS+=		-DUSE_GETLOGIN=1
 .endif
-MAKE_FLAGS+=		OS_CFLAGS="${CFLAGS}"
 
 # pam_userdb uses ndbm if it finds it, otherwise it will use Berkeley DB.
 .if !exists(/usr/include/ndbm.h)
