@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11086 2005/09/08 19:13:28 rpaulo Exp $
+$NetBSD: CHANGES,v 1.11087 2005/09/08 19:23:53 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3983,3 +3983,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/wesnoth to 0.9.7 [wiz 2005-09-08]
 	Updated lang/php5 to 5.0.5 [jdolecek 2005-09-08]
 	Update games/openttd to 0.4.1 [rpaulo 2005-09-08]
+	Update databases/gramps2 to 2.0.8 [drochner 2005-09-08]
+	Update databases/gourmet to 0.8.5.12 [drochner 2005-09-08]
+	Update chat/ser to 0.8.14 [drochner 2005-09-08]
+	Update multimedia/gxine to 0.4.7 [drochner 2005-09-08]
+	Update databases/krecipes to 0.8.1 [drochner 2005-09-08]
+	Update databases/luma to 2.2.1 [drochner 2005-09-08]
+	Update www/liferea to 0.9.7b [drochner 2005-09-08]
