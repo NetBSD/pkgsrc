@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2005/08/31 09:40:15 seb Exp $
+# $NetBSD: Makefile,v 1.49 2005/09/08 21:25:15 minskim Exp $
 
-DISTNAME=	tk8.4.11-src
-PKGNAME=	tk-8.4.11
+DISTNAME=	tk${TK_VERSION}-src
+PKGNAME=	tk-${TK_VERSION}
 PKGREVISION=		1
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
 COMMENT=	Graphical toolkit for TCL
+
+.include "../../x11/tk/Makefile.version"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
