@@ -1,21 +1,26 @@
-$NetBSD: patch-ar,v 1.1 2005/03/30 15:26:43 cube Exp $
+$NetBSD: patch-ar,v 1.2 2005/09/08 13:19:56 cube Exp $
 
---- server/monitor.c.orig	2005-03-09 17:25:01.000000000 +0100
+--- server/monitor.c.orig	2005-05-24 06:29:32.000000000 +0200
 +++ server/monitor.c
-@@ -550,10 +550,10 @@ serve_disk_data(GkrellmdMonitor *mon, gb
- 		if (!disk->changed && !first_serve)
- 			continue;
+@@ -555,14 +555,14 @@ serve_disk_data(GkrellmdMonitor *mon, gb
  		if (!disk->subdisk_parent)
--			snprintf(buf, sizeof(buf), "%s %llu %llu\n",
-+			snprintf(buf, sizeof(buf), "%s %" PRIu64 " %" PRIu64 "\n",
- 						disk->name, disk->rb, disk->wb);
+ 			{
+ 			if (gkrellmd_check_client_version(mon, 2, 2, 7) && disk->virtual)
+-				snprintf(buf, sizeof(buf), "%s virtual %llu %llu\n",
++				snprintf(buf, sizeof(buf), "%s virtual %" PRIu64 " %" PRIu64 "\n",
+ 							disk->name, disk->rb, disk->wb);
+ 			else
+-				snprintf(buf, sizeof(buf), "%s %llu %llu\n",
++				snprintf(buf, sizeof(buf), "%s %" PRIu64 " %" PRIu64 "\n",
+ 							disk->name, disk->rb, disk->wb);
+ 			}
  		else if (mon->privat->client->feature_subdisk)
 -			snprintf(buf, sizeof(buf), "%s %s %llu %llu\n",
 +			snprintf(buf, sizeof(buf), "%s %s %" PRIu64 " %" PRIu64 "\n",
  						disk->name, disk->subdisk_parent, disk->rb, disk->wb);
  		else
  			continue;
-@@ -1134,7 +1134,7 @@ serve_mem_data(GkrellmdMonitor *mon, gbo
+@@ -1233,7 +1233,7 @@ serve_mem_data(GkrellmdMonitor *mon, gbo
  	if (mem.mem_changed || first_serve)
  		{
  		gkrellmd_set_serve_name(mon, "mem");
@@ -24,7 +29,7 @@ $NetBSD: patch-ar,v 1.1 2005/03/30 15:26:43 cube Exp $
  				mem.total, mem.used, mem.free,
  				mem.shared, mem.buffers, mem.cached);
  		gkrellmd_serve_data(mon, buf);
-@@ -1143,7 +1143,7 @@ serve_mem_data(GkrellmdMonitor *mon, gbo
+@@ -1242,7 +1242,7 @@ serve_mem_data(GkrellmdMonitor *mon, gbo
  	if (mem.swap_changed || first_serve)
  		{
  		gkrellmd_set_serve_name(mon, "swap");

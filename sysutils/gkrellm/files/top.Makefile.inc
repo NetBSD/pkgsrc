@@ -1,4 +1,4 @@
-VERSION=	2.2.5
+VERSION=	2.2.7
 
 # Path options
 PREFIX?=	/usr/local
@@ -100,7 +100,8 @@ LINK_FLAGS+=	-prebind -Wl,-bind_at_load -framework CoreFoundation -lX11
 GTK_CONFIG=	gtk-config
 STRIP=
 NEED_MD5=	no
-MD5_LIBS=	-lmd5
+MD5_LIBS=
+HAVE_GETADDRINFO=	1
     ifeq ($(MODULE),src)
 LINK_FLAGS+=	-lX11
     endif
