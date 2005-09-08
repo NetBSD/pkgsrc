@@ -1,23 +1,17 @@
-$NetBSD: patch-ao,v 1.4 2004/03/08 23:55:24 minskim Exp $
+$NetBSD: patch-ao,v 1.5 2005/09/08 02:50:58 minskim Exp $
 
---- indep-utils/webtrace-conv/nlanr/Makefile.in.orig	Mon Jan 12 18:58:48 2004
+--- indep-utils/webtrace-conv/nlanr/Makefile.in.orig	2005-01-19 10:23:27.000000000 -0800
 +++ indep-utils/webtrace-conv/nlanr/Makefile.in
-@@ -32,11 +32,11 @@ prefix  = @prefix@
- # Pathname of directory to install the binary
- BINDEST = @prefix@/bin
- 
--# when including files from ns, we need to take care STL_NAMESPACE
-+# when including files from ns, we need to take care CPP_NAMESPACE
+@@ -35,7 +35,7 @@ BINDEST = @prefix@/bin
  CC = @CXX@
  INCLUDE = -I. -I../../.. @V_INCLUDES@
--CFLAGS = @V_CCOPT@ -DSTL_NAMESPACE=@STL_NAMESPACE@
+ CFLAGS = @V_CCOPT@ -DCPP_NAMESPACE=@CPP_NAMESPACE@
 -LDFLAGS = @V_STATIC@
-+CFLAGS = @V_CCOPT@ -DCPP_NAMESPACE=@CPP_NAMESPACE@
 +LDFLAGS = @LDFLAGS@
  LIBS = @V_LIB_TCL@ @V_LIB@ @LIBS@
  INSTALL = @INSTALL@
  
-@@ -49,7 +49,7 @@ nlanr-tr-stat: $(OBJ)
+@@ -48,7 +48,7 @@ nlanr-tr-stat: $(OBJ)
  	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $(OBJ) $(LIBS)
  
  install: nlanr-tr-stat

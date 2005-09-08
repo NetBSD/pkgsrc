@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/01 18:21:12 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/08 02:50:58 minskim Exp $
 bin/calcdest
 bin/dec-tr-stat
 bin/epa-tr-stat
@@ -7,5 +7,5 @@ bin/ns
 bin/setdest
 bin/ucb-tr-stat
 man/man1/ns.1
-share/doc/html/ns/CHANGES.html
-@dirrm share/doc/html/ns
+share/doc/ns/CHANGES.html
+@dirrm share/doc/ns
