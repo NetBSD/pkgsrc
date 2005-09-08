@@ -21,32 +21,47 @@ ifeq ($(ENABLE_NLS),yes)
     FLAGS += -DENABLE_NLS -DLOCALEDIR=\"$(LOCALEDIR)\"
 endif
 ifneq ($(PACKAGE),gkrellm)
-	FLAGS += -DPACKAGE=\"$(PACKAGE)\"
+    FLAGS += -DPACKAGE=\"$(PACKAGE)\"
 endif
 
 ifeq ($(HAVE_GETADDRINFO),1)
     FLAGS += -DHAVE_GETADDRINFO
 endif
 
-WITHOUT_SSL?=	no
+SSL_TYPE?=	gnutls openssl
+ifeq ($(without-gnutls),1)
+SSL_TYPE=	$(filter-out gnutls, $(SSL_TYPE))
+endif
+ifeq ($(without-gnutls),yes)
+SSL_TYPE=	$(filter-out gnutls, $(SSL_TYPE))
+endif
 ifeq ($(without-ssl),1)
-WITHOUT_SSL=	yes
+SSL_TYPE=	$(filter-out openssl, $(SSL_TYPE))
 endif
 ifeq ($(without-ssl),yes)
-WITHOUT_SSL=	yes
+SSL_TYPE=	$(filter-out openssl, $(SSL_TYPE))
 endif
-ifeq ($(WITHOUT_SSL),yes)
-CONFIGURE_ARGS+=	--without-ssl
+ifeq ($(filter gnutls, $(SSL_TYPE)),)
+CONFIGURE_ARGS+=	--without-gnutls
 endif
+ifeq ($(filter openssl, $(SSL_TYPE)),)
+CONFIGURE_ARGS+=	--without-openssl
+endif
+
 GREP?=		grep
 
 DUMMY_VAR:=	$(shell ./configure $(CONFIGURE_ARGS))
+HAVE_GNUTLS=	$(shell $(GREP) -c HAVE_GNUTLS configure.h)
 HAVE_SSL=	$(shell $(GREP) -c HAVE_SSL configure.h)
 
+ifeq ($(HAVE_GNUTLS),1)
+SSL_LIBS?=	-lgnutls-openssl
+else
 ifeq ($(HAVE_SSL),1)
 SSL_LIBS?=	-lssl -lcrypto
 NEED_MD5=	no
 MD5_LIBS=
+endif
 endif
 
 LIBS = $(PKG_LIB) $(GTOP_LIBS) $(SMC_LIBS) $(SYS_LIBS) $(MD5_LIBS) $(SSL_LIBS)
