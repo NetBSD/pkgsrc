@@ -1,4 +1,4 @@
-$NetBSD: patch-bp,v 1.1 2005/09/06 17:58:56 drochner Exp $
+$NetBSD: patch-bp,v 1.1 2005/09/08 15:29:32 drochner Exp $
 
 --- src/cut-n-paste-code/goffice/graph/gog-series.c.orig	2005-09-06 09:41:25.000000000 +0200
 +++ src/cut-n-paste-code/goffice/graph/gog-series.c
