@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/06/03 14:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/08 22:03:45 abs Exp $
 
 MOZILLA=	thunderbird
+PKGREVISION=	1
 
 COMMENT=	Mozilla mail client
 
