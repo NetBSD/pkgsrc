@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3877 2005/09/08 15:31:35 wiz Exp $
+$NetBSD: TODO,v 1.3878 2005/09/08 19:13:29 rpaulo Exp $
 
 Suggested new packages
 ======================
@@ -684,7 +684,6 @@ Suggested package updates
 	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openssh-4.2
 	o openssl-0.9.8
-	o openttd-0.4.0 [pkg/30238]
 	o openvpn-2.0 [pkg/30239]
 	o oregano-0.40.5
 	o oroborus-2.0.13.1
