@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/09/08 10:21:20 bouyer Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+GTK2+EXTRA_BUILDLINK3_MK:=	${GTK2+EXTRA_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	gtk2+extra
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngtk2+extra}
+BUILDLINK_PACKAGES+=	gtk2+extra
+
+.if !empty(GTK2+EXTRA_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.gtk2+extra+=	gtk2+extra>=2.1.1
+BUILDLINK_PKGSRCDIR.gtk2+extra?=	../../x11/gtk2+extra
+.endif	# GTK2+EXTRA_BUILDLINK3_MK
+
+.include "../../x11/gtk2/buildlink3.mk"
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
