@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2005/01/20 21:35:07 drochner Exp $
+$NetBSD: patch-ad,v 1.5 2005/09/08 15:29:31 drochner Exp $
 
 --- src/tools/solver/lp_solve/commonlib.c.orig	2005-01-20 19:24:30.000000000 +0100
 +++ src/tools/solver/lp_solve/commonlib.c

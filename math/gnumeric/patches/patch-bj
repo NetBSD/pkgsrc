@@ -1,4 +1,4 @@
-$NetBSD: patch-bj,v 1.1 2005/09/06 17:58:56 drochner Exp $
+$NetBSD: patch-bj,v 1.1 2005/09/08 15:29:32 drochner Exp $
 
 --- src/sheet-object-widget.c.orig	2005-09-06 10:01:40.000000000 +0200
 +++ src/sheet-object-widget.c
