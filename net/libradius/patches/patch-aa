@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/12/13 11:51:00 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2005/09/08 18:01:29 minskim Exp $
 
---- Makefile.orig	2004-08-27 09:20:33.000000000 +0200
-+++ Makefile	2004-12-13 09:11:36.000000000 +0100
-@@ -23,17 +23,13 @@
- # SUCH DAMAGE.
+--- Makefile.orig	2004-08-27 00:20:33.000000000 -0700
++++ Makefile
+@@ -24,15 +24,11 @@
  #
  #	$FreeBSD: src/lib/libradius/Makefile,v 1.1.1.1 1998/11/13 00:53:01 jdp Exp $
  
@@ -22,9 +21,7 @@ $NetBSD: patch-aa,v 1.5 2004/12/13 11:51:00 wiz Exp $
  
  # netbsd - it's in libc
  #LIBMD= -L/usr/lib -lc
- 
-@@ -47,13 +43,13 @@
- lib$(LIB).a:    $(OBJS)
+@@ -48,11 +44,11 @@ lib$(LIB).a:    $(OBJS)
  	ar cru $@ $(OBJS)
  	ranlib $@
  
@@ -41,16 +38,19 @@ $NetBSD: patch-aa,v 1.5 2004/12/13 11:51:00 wiz Exp $
  
  clean:
  	$(RM) *.o
- 
-@@ -61,9 +57,9 @@
+@@ -61,9 +57,9 @@ clobber:	clean
  	$(RM) lib$(LIB).a
  
  install:	all
- 	install -c -m 644 -o bin -g bin lib$(LIB).a $(PREFIX)/lib
+-	install -c -m 644 -o bin -g bin lib$(LIB).a $(PREFIX)/lib
 -	install -c -m 644 -o bin -g bin lib$(LIB).so.1.0 $(PREFIX)/lib
 -	$(LN) -sf $(PREFIX)/lib/lib$(LIB).so.1.0 $(PREFIX)/lib/lib$(LIB).so
+-	install -c -m 444 -o bin -g bin radlib.h $(PREFIX)/include
+-	install -c -m 444 -o bin -g bin libradius.3 $(PREFIX)/man/man3
+-	install -c -m 444 -o bin -g bin radius.conf.5 $(PREFIX)/man/man5
++	${BSD_INSTALL_LIB} lib$(LIB).a $(PREFIX)/lib
 +#	install -c -m 644 -o bin -g bin lib$(LIB).so.1.0 $(PREFIX)/lib
 +#	$(LN) -sf $(PREFIX)/lib/lib$(LIB).so.1.0 $(PREFIX)/lib/lib$(LIB).so
- 	install -c -m 444 -o bin -g bin radlib.h $(PREFIX)/include
- 	install -c -m 444 -o bin -g bin libradius.3 $(PREFIX)/man/man3
- 	install -c -m 444 -o bin -g bin radius.conf.5 $(PREFIX)/man/man5
++	${BSD_INSTALL_DATA} radlib.h $(PREFIX)/include
++	${BSD_INSTALL_MAN} libradius.3 $(PREFIX)/man/man3
++	${BSD_INSTALL_MAN} radius.conf.5 $(PREFIX)/man/man5
