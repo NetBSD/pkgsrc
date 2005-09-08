@@ -1,21 +1,26 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/08 06:30:37 jdc Exp $
 
-DISTNAME=		xmris.4.04
-PKGNAME=		xmris-4.04
+DISTNAME=		xmris.4.0.5
+PKGNAME=		xmris-4.05
 CATEGORIES=		games x11
-MASTER_SITES=		http://www.cs.bris.ac.uk/~nathan/xmris/
+MASTER_SITES=		http://www.planetfall.pwp.blueyonder.co.uk/xmris/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.cs.bris.ac.uk/~nathan/xmris/
+HOMEPAGE=		http://www.planetfall.pwp.blueyonder.co.uk/xmris/
 COMMENT=		Version of the Mr Do video arcade game for X
 
 USE_PKGINSTALL=		yes
 USE_IMAKE=		yes
-BUILD_TARGET=		initialize xmris xmred
 NO_INSTALL_MANPAGES=	yes
 
-OWN_DIRS_PERMS=		/var/games/${PKGBASE} games games 775
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
+
+post-patch:
+	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile-pre
+	@${SED} -e 's@XXXVARBASEXXX@${VARBASE}@g'	\
+		< ${WRKSRC}/Imakefile-pre > ${WRKSRC}/Imakefile
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/xmris.man ${PREFIX}/man/man6/xmris.6
