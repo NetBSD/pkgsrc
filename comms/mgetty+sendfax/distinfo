@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2005/06/12 14:29:53 hira Exp $
+$NetBSD: distinfo,v 1.23 2005/09/08 22:37:54 abs Exp $
 
 SHA1 (mgetty1.1.31-Jul24.tar.gz) = a6f20da26b49bbfa695791edec7d0a2247b79e2d
 RMD160 (mgetty1.1.31-Jul24.tar.gz) = 255eec0838ce5bfad04c53d478a4505e74111a07
@@ -10,7 +10,7 @@ SHA1 (patch-ad) = 7c4a96eaf7c83e9d907a74317252f752b4c689e6
 SHA1 (patch-ae) = 04f35280e337fb766152b7d9badcd0c417aa1739
 SHA1 (patch-af) = b5a36405c7e3783810f513d890190352fe2008cb
 SHA1 (patch-ag) = f12e39005c78a94f641ccbdbbfa51b5181821148
-SHA1 (patch-ah) = 7ca56968f891eefe361d6c2635771ac6e0a36a5b
+SHA1 (patch-ah) = 2d9de861d3bce7b454eee957d32ffe67996e27c7
 SHA1 (patch-ai) = a69003a5a28196c5a57bf538b20a31e2371683c7
 SHA1 (patch-aj) = 37d88c1a4f8d5826f7113dd120c32e89cc442e5d
 SHA1 (patch-ak) = 18f9570f35909089a4083fa24903dfea14dcc475
