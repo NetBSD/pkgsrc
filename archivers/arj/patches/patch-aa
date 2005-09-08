@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2005/03/22 16:24:13 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2005/09/08 22:37:53 abs Exp $
 
 --- environ.c.orig	Fri Jun 18 11:19:36 2004
 +++ environ.c
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.6 2005/03/22 16:24:13 minskim Exp $
     return((LONG_MAX/(spclu*bps)<fclu)?LONG_MAX:spclu*bps*fclu);
   #elif TARGET==UNIX
 -  #if defined(__QNXNTO__)||defined(__sco__)||defined(SUNOS)
-+  #if defined(__QNXNTO__)||defined(__sco__)||defined(SUNOS)||defined(__INTERIX)||(defined(__NetBSD__) && (__NetBSD_Version__ > 200030000))
++  #if defined(__QNXNTO__)||defined(__sco__)||defined(SUNOS)||defined(__INTERIX)||(defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
     struct statvfs vfs;
  
     if(statvfs(name, &vfs)==-1)

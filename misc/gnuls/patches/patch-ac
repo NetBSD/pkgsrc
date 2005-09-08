@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2004/05/19 16:55:25 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2005/09/08 22:37:54 abs Exp $
 
 --- lib/mountlist.c.orig	2004-01-26 09:58:12.000000000 +0100
 +++ lib/mountlist.c	2004-05-18 20:56:57.000000000 +0200
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.1 2004/05/19 16:55:25 jmmv Exp $
  
  #if MOUNTED_GETMNTINFO
  
-+# if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++# if defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900)
 +# define statfs				statvfs
 +# define HAVE_F_FSTYPENAME_IN_STATFS	1
 +# endif
