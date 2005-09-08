@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/19 17:34:46 drochner Exp $
+$NetBSD: distinfo,v 1.2 2005/09/08 18:00:35 drochner Exp $
 
-SHA1 (gourmet-0.8.5.5.tar.gz) = 4c27e14fb14009682fc925090e3c8402b27ff734
-RMD160 (gourmet-0.8.5.5.tar.gz) = 3821a389308c98fc50e8f804e16a52ccb7191f4b
-Size (gourmet-0.8.5.5.tar.gz) = 694493 bytes
+SHA1 (gourmet-0.8.5.12.tar.gz) = d426393521b2af14b6ccfeebc7d5c5d2ea77cd5f
+RMD160 (gourmet-0.8.5.12.tar.gz) = 0a5ae2734090bb70b5fab6887d169148bc0b2a93
+Size (gourmet-0.8.5.12.tar.gz) = 967333 bytes
