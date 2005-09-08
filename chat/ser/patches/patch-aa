@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2005/06/18 12:39:52 hira Exp $
+$NetBSD: patch-aa,v 1.7 2005/09/08 18:13:48 drochner Exp $
 
---- Makefile.defs.orig	2002-11-13 02:21:28.000000000 +0900
-+++ Makefile.defs	2005-06-18 21:32:06.000000000 +0900
-@@ -16,7 +16,6 @@
- 			-e s/armv4l/arm/)
- 
-  # install location
--PREFIX = /usr/local
- prefix = $(PREFIX)
- # install path is $(basedir) $(prefix) 
- # example:
-@@ -33,7 +32,8 @@
+--- Makefile.defs.orig	2004-07-27 13:38:33.000000000 +0200
++++ Makefile.defs
+@@ -77,7 +77,7 @@ prefix = $(PREFIX)
+ BASEDIR ?=
+ basedir = $(BASEDIR)
+ # install prefixes for various stuff
+-cfg-prefix = $(basedir)$(prefix)
++cfg-prefix = $(basedir)$(prefix)/share/examples
+ bin-prefix = $(basedir)$(prefix)
+ modules-prefix = $(basedir)$(prefix)
+ doc-prefix = $(basedir)$(prefix)
+@@ -85,7 +85,8 @@ man-prefix = $(basedir)$(prefix)
  ut-prefix = $(basedir)$(prefix)
  
  # dirs
@@ -20,7 +21,7 @@ $NetBSD: patch-aa,v 1.6 2005/06/18 12:39:52 hira Exp $
  bin-dir = sbin/
  modules-dir = lib/ser/modules/
  ifeq ($(OS), linux)
-@@ -45,7 +45,7 @@
+@@ -117,7 +118,7 @@ endif
  endif
  ut-prefix = bin/
  # target dirs for various stuff
@@ -29,9 +30,9 @@ $NetBSD: patch-aa,v 1.6 2005/06/18 12:39:52 hira Exp $
  modules-target = $(prefix)/$(modules-dir)
  
  
-@@ -59,10 +59,10 @@
- endif
- 
+@@ -133,10 +134,10 @@ endif
+ INSTALL-TOUCH = touch          # used to create the file first (good to 
+                                #  make solaris install work)
  # INSTALL-CFG = $(INSTALL) -m 644
 -INSTALL-BIN = $(INSTALL) -m 755
 -INSTALL-MODULES = $(INSTALL) -m 755
@@ -44,7 +45,7 @@ $NetBSD: patch-aa,v 1.6 2005/06/18 12:39:52 hira Exp $
  
  #set some vars from the environment (and not make builtins)
  CC   := $(shell echo "$${CC}")
-@@ -446,6 +446,7 @@
+@@ -639,6 +640,7 @@ ifeq	($(CC_NAME), suncc)
  endif
  
  endif #mode=release
@@ -52,23 +53,3 @@ $NetBSD: patch-aa,v 1.6 2005/06/18 12:39:52 hira Exp $
  
  
  #*FLAGS used for compiling the modules
-@@ -473,8 +474,10 @@
- 	DEFS+=-DHAVE_GETHOSTBYNAME2 -DHAVE_UNION_SEMUN
- endif
- ifneq ($(OS), openbsd)
-+ifneq ($(OS), netbsd)
- 	DEFS+=-DHAVE_SCHED_YIELD
- endif
-+endif
- 
- 
- #os specific stuff
-@@ -520,7 +523,7 @@
- ifeq ($(OS), netbsd)
- 	DEFS+=-DHAVE_SOCKADDR_SA_LEN
- 	YACC=yacc
--	LIBS= -lfl  -lc_r
-+	LIBS= -lfl  -lpthread
- endif
- 
- ifneq (,$(findstring CYGWIN, $(OS)))
