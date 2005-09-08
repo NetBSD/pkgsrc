@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/08/10 20:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/08 19:16:51 drochner Exp $
 #
 
-DISTNAME=	gnome-python-extras-2.10.1
+DISTNAME=	gnome-python-extras-2.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.10/}
