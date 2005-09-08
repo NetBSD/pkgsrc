@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/04/11 21:46:52 tv Exp $
+# $NetBSD: Makefile,v 1.26 2005/09/08 17:40:30 minskim Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -27,6 +27,7 @@ NC_TARGET.IRIX=		irix
 NC_TARGET.Interix=	netbsd
 NC_TARGET.OpenBSD=	netbsd
 NC_TARGET.DragonFly=	freebsd
+NC_TARGET.Darwin=	generic
 BUILD_TARGET=		${NC_TARGET.${OPSYS}}
 
 EXTRA_PROGS=	data rservice xor
