@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/06 06:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/08 13:43:05 cube Exp $
 
 DISTNAME=		rt-3.2.3
 CATEGORIES=		devel
@@ -8,7 +8,7 @@ MAINTAINER=		cube@NetBSD.org
 HOMEPAGE=		http://bestpractical.com/rt/
 COMMENT=		Industrial-grade ticketing system
 
-.include "Makefile.options"
+.include "options.mk"
 
 # Core dependencies:
 DEPENDS+=	p5-Digest-[0-9]*:../../security/p5-Digest
