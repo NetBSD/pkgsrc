@@ -1,16 +1,21 @@
-$NetBSD: patch-ad,v 1.1 2005/06/18 05:57:05 hira Exp $
+$NetBSD: patch-ad,v 1.2 2005/09/08 18:13:48 drochner Exp $
 
---- Makefile.orig	2002-11-12 21:31:25.000000000 +0900
-+++ Makefile	2005-06-18 11:33:25.000000000 +0900
-@@ -156,10 +156,10 @@
- $(man-prefix)/$(man-dir)/man5:
+--- Makefile.orig	2004-07-27 01:18:34.000000000 +0200
++++ Makefile
+@@ -252,15 +252,10 @@ $(man-prefix)/$(man-dir)/man5:
  		mkdir -p $(man-prefix)/$(man-dir)/man5
- 
+ 		
+ # note: on solaris 8 sed: ? or \(...\)* (a.s.o) do not work
 -install-cfg: $(cfg-prefix)/$(cfg-dir)
 +install-cfg:
- 		sed -e "s#/usr/lib/ser/modules/#$(modules-target)#g" \
--			< etc/ser.cfg > $(cfg-prefix)/$(cfg-dir)ser.cfg
--		chmod 644 $(cfg-prefix)/$(cfg-dir)ser.cfg
+ 		sed -e "s#/usr/.*lib/ser/modules/#$(modules-target)#g" \
+-			< etc/ser.cfg > $(cfg-prefix)/$(cfg-dir)ser.cfg.sample
+-		chmod 644 $(cfg-prefix)/$(cfg-dir)ser.cfg.sample
+-		if [ -z "${skip_cfg_install}" -a \
+-				! -f $(cfg-prefix)/$(cfg-dir)ser.cfg ]; then \
+-			mv -f $(cfg-prefix)/$(cfg-dir)ser.cfg.sample \
+-				$(cfg-prefix)/$(cfg-dir)ser.cfg; \
+-		fi
 +			< etc/ser.cfg > $(eg-dir)ser.cfg
 +		chmod 644 $(eg-dir)ser.cfg
  #		$(INSTALL-CFG) etc/ser.cfg $(cfg-prefix)/$(cfg-dir)
