@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/26 17:42:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/08 17:55:52 drochner Exp $
 bin/gramps
 man/man1/gramps.1
 share/application-registry/gramps.applications
@@ -196,12 +196,14 @@ share/gramps/bad.png
 share/gramps/caution.png
 share/gramps/const.py
 share/gramps/const.pyo
+share/gramps/data/document.png
 share/gramps/data/gedcom.xml
 share/gramps/data/main1.css
 share/gramps/data/main2.css
 share/gramps/data/main3.css
 share/gramps/data/main4.css
 share/gramps/data/main5.css
+share/gramps/data/main6.css
 share/gramps/data/papersize.xml
 share/gramps/data/somerights20.gif
 share/gramps/data/templates/blue_edge.tpkg
@@ -215,6 +217,8 @@ share/gramps/dates/Date_de.py
 share/gramps/dates/Date_de.pyo
 share/gramps/dates/Date_es.py
 share/gramps/dates/Date_es.pyo
+share/gramps/dates/Date_fi.py
+share/gramps/dates/Date_fi.pyo
 share/gramps/dates/Date_fr.py
 share/gramps/dates/Date_fr.pyo
 share/gramps/dates/Date_ru.py
@@ -425,6 +429,8 @@ share/gramps/plugins/DesGraph.py
 share/gramps/plugins/DesGraph.pyo
 share/gramps/plugins/Desbrowser.py
 share/gramps/plugins/Desbrowser.pyo
+share/gramps/plugins/DescendChart.py
+share/gramps/plugins/DescendChart.pyo
 share/gramps/plugins/DescendReport.py
 share/gramps/plugins/DescendReport.pyo
 share/gramps/plugins/DetAncestralReport.py

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/08/26 17:42:58 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/08 17:55:52 drochner Exp $
 #
 
-DISTNAME=		gramps-2.0.6
+DISTNAME=		gramps-2.0.8
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
