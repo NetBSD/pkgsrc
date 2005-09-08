@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/09/08 02:50:58 minskim Exp $
 
-DISTNAME=	ns-src-2.27
+DISTNAME=	ns-src-2.28
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.isi.edu/nsnam/dist/
 
@@ -44,7 +43,7 @@ post-extract:
 	${RM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/calcdest
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ns
-	${INSTALL_DATA} ${WRKSRC}/CHANGES.html ${PREFIX}/share/doc/html/ns
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ns
+	${INSTALL_DATA} ${WRKSRC}/CHANGES.html ${PREFIX}/share/doc/ns
 
 .include "../../mk/bsd.pkg.mk"

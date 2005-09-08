@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 12:13:57 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/09/08 02:50:58 minskim Exp $
 
-SHA1 (ns-src-2.27.tar.gz) = 63c3fbf6dd8772e9b0fa30b5127cc32da4b63e0c
-RMD160 (ns-src-2.27.tar.gz) = 7155d58623618cc726c7d6d196e77646864b96f5
-Size (ns-src-2.27.tar.gz) = 44642525 bytes
+SHA1 (ns-src-2.28.tar.gz) = ecad96f69bb32420c0a9ee698c7289e66001febf
+RMD160 (ns-src-2.28.tar.gz) = f2ec76b7dc96bbfb75d8485ef2822ebdf50b8ed1
+Size (ns-src-2.28.tar.gz) = 46599585 bytes
 SHA1 (patch-aa) = 49acbf12598245262286f0717b2b8efeb03792d2
-SHA1 (patch-ab) = 6c30337ed419553751eb8d1286e00c03ac0244b6
+SHA1 (patch-ab) = 7c93e4540faa1b16a9e40bd063ffce510f5bc063
 SHA1 (patch-ac) = 28cda4d9f68e031725016d2c06925394c76e5152
 SHA1 (patch-ad) = 5f35152de976c2195dcff20abbe8610321dd9969
-SHA1 (patch-ae) = fb6a737a177447fd077fb4e70c51fa0f3bec9929
-SHA1 (patch-af) = d227406ec73324fd78bbe6314b47cc3950c2887e
+SHA1 (patch-ae) = c971d28448ae1b495119e3ec2c8de185468b9be2
+SHA1 (patch-af) = 94ab6d8a0cb9d43f9d440712880fe9a2be24ccd4
 SHA1 (patch-ah) = 51c36d73309d135f89f7d2362835052b304b88bd
 SHA1 (patch-ai) = b75f36f986ca7c833769de09e6e79f6b87c5564a
 SHA1 (patch-aj) = 533fa4f1bd1f8bf83882ed5ed2717511283d5ddc
 SHA1 (patch-ak) = ea478696cdddc44ba7a76d1f31d4a6a97a88aaef
-SHA1 (patch-al) = b305fc29f962d2bef8575afdbf3c401352fc57ea
-SHA1 (patch-am) = 298c41171cb7daa6b3a59287e9cb7a0ad37b6f44
-SHA1 (patch-an) = c5a672c47c554cd7a1970c732f1a9da76b6c7090
-SHA1 (patch-ao) = 7598b01a11352e602aa3e8013b518c656d6aae85
-SHA1 (patch-ap) = f59ca64a44c251104cd5cec173dbaad9c4e4756b
+SHA1 (patch-al) = 628733a1e9ccf34c677711666e833c1ede27b5b1
+SHA1 (patch-am) = 882ea61b7f6909336f72f637b041f373830197e8
+SHA1 (patch-an) = c6dd6b93332a6c6dd169975836df9ef802bfc206
+SHA1 (patch-ao) = 2a1fd71686ff206fe2212605f91b8167b998d6e2
+SHA1 (patch-ap) = f130c112d7dfe114e637e190750d9caad55e4703

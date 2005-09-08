@@ -1,15 +1,10 @@
-$NetBSD: patch-al,v 1.5 2004/03/08 23:55:24 minskim Exp $
+$NetBSD: patch-al,v 1.6 2005/09/08 02:50:58 minskim Exp $
 
---- indep-utils/cmu-scen-gen/setdest/Makefile.in.orig	Mon Jan 12 18:58:39 2004
+--- indep-utils/cmu-scen-gen/setdest/Makefile.in.orig	2005-01-25 15:29:12.000000000 -0800
 +++ indep-utils/cmu-scen-gen/setdest/Makefile.in
-@@ -36,18 +36,18 @@ CCX = @CXX@
- CC = @CC@
- MKDEP	= ../../../conf/mkdep
- 
--# when including files from ns, we need to take care STL_NAMESPACE
--DEFINE = -Dstand_alone -DSTL_NAMESPACE=@STL_NAMESPACE@
-+# when including files from ns, we need to take care CPP_NAMESPACE
-+DEFINE = -Dstand_alone -DCPP_NAMESPACE=@CPP_NAMESPACE@
+@@ -39,15 +39,15 @@ MKDEP	= ../../../conf/mkdep
+ # when including files from ns, we need to take care STL_NAMESPACE
+ DEFINE = -Dstand_alone -DSTL_NAMESPACE=@STL_NAMESPACE@ -DCPP_NAMESPACE=@CPP_NAMESPACE@
  CFLAGS = @V_CCOPT@ 
 -LDFLAGS = @V_STATIC@
 +LDFLAGS = @LDFLAGS@
