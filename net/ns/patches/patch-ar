@@ -1,0 +1,18 @@
+$NetBSD: patch-ar,v 1.1 2005/09/08 17:19:14 minskim Exp $
+
+--- xcp/xcpq.cc.orig	2005-02-03 10:29:20.000000000 -0800
++++ xcp/xcpq.cc
+@@ -24,6 +24,13 @@
+ #include "xcp.h"
+ #include "random.h"
+ 
++const double XCPQueue::ALPHA_ = 0.4;
++const double XCPQueue::BETA_ = 0.226;
++const double XCPQueue::GAMMA_ = 0.1;
++const double XCPQueue::XCP_MAX_INTERVAL = 1.0;
++const double XCPQueue::XCP_MIN_INTERVAL = .001;
++const double XCPQueue::BWIDTH = 0.01;
++
+ static class XCPQClass : public TclClass {
+ public:
+ 	XCPQClass() : TclClass("Queue/DropTail/XCPQ") {}
