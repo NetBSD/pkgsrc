@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/19 17:10:36 drochner Exp $
+$NetBSD: distinfo,v 1.2 2005/09/08 18:18:52 drochner Exp $
 
-SHA1 (krecipes_beta_0.8.tar.gz) = 94926df1d4cef750aca77aa01fdc17f1aa2e9207
-RMD160 (krecipes_beta_0.8.tar.gz) = 696526cb25abcfaa031f8460e0b30f6f65480f58
-Size (krecipes_beta_0.8.tar.gz) = 5603875 bytes
+SHA1 (krecipes-0.8.1.tar.gz) = 64b3bfd1d36ce09ae1342ac3a1cfc21e238b30f8
+RMD160 (krecipes-0.8.1.tar.gz) = 2b98cce1fedadb4161fca499f2f7424bed3c2f05
+Size (krecipes-0.8.1.tar.gz) = 5606139 bytes

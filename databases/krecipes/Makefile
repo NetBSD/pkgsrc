@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/19 17:10:36 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/08 18:18:52 drochner Exp $
 #
 
-DISTNAME=		krecipes_beta_0.8
-PKGNAME=		krecipes-0.8beta
+DISTNAME=		krecipes-0.8.1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=krecipes/}
 
@@ -10,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://krecipes.sourceforge.net/
 COMMENT=		Recipe manager
 
-WRKSRC=		${WRKDIR}/krecipes-0.8
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
