@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/09/08 18:13:48 drochner Exp $
 #
 
-DISTNAME=	ser-0.8.10_src
-PKGNAME=	ser-0.8.10
-PKGREVISION=	5
-CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.berlios.de/pub/ser/latest/src/
+DISTNAME=	ser-0.8.14_src
+PKGNAME=	ser-0.8.14
+CATEGORIES=	chat net comms
+MASTER_SITES=	ftp://ftp.berlios.de/pub/ser/0.8.14/src/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.iptel.org/ser/
 COMMENT=	SIP express router
 
-WRKSRC=		${WRKDIR}/ser-0.8.10
+WRKSRC=		${WRKDIR}/ser-0.8.14
 
 USE_TOOLS+=	gmake
 USE_PKGINSTALL=	yes
@@ -23,11 +22,8 @@ CONF_FILES=		${EGDIR}/ser.cfg ${PKG_SYSCONFDIR}/ser.cfg
 REQD_DIRS=	${EGDIR}
 
 MAKE_ENV+= BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
-MAKE_ENV+= BUILDLINK_PREFIX.mysql-client=${BUILDLINK_PREFIX.mysql-client:Q}
-MAKE_ENV+= BUILDLINK_PREFIX.expat=${BUILDLINK_PREFIX.expat:Q}
+MAKE_ENV+= cfg-prefix=${PREFIX}/share/examples
 MAKE_ENV+= EGDIR=${EGDIR}
 
-.include "../../mk/mysql.buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
