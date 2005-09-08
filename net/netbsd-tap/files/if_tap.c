@@ -1,4 +1,4 @@
-/*	$NetBSD: if_tap.c,v 1.6 2005/06/10 15:06:33 cube Exp $	*/
+/*	$NetBSD: if_tap.c,v 1.7 2005/09/08 17:57:35 cube Exp $	*/
 
 /*
  *  Copyright (c) 2003, 2004 The NetBSD Foundation.
@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.6 2005/06/10 15:06:33 cube Exp $");
+__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.7 2005/09/08 17:57:35 cube Exp $");
 
 #if defined(_KERNEL_OPT)
 #include "bpfilter.h"
@@ -91,6 +91,11 @@ __KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.6 2005/06/10 15:06:33 cube Exp $");
 static int tap_node;
 static int	tap_sysctl_handler(SYSCTLFN_PROTO);
 SYSCTL_SETUP_PROTO(sysctl_tap_setup);
+#if __NetBSD_Version__ < 399000600
+# define __SYSCTL_CONST
+#else
+# define __SYSCTL_CONST const
+#endif
 
 /*
  * Since we're an Ethernet device, we need the 3 following
@@ -263,7 +268,7 @@ tap_attach(struct device *parent, struct device *self, void *aux)
 	char enaddrstr[18];
 	uint32_t ui;
 	int error;
-	struct sysctlnode *node;
+	__SYSCTL_CONST struct sysctlnode *node;
 
 	aprint_normal("%s: faking Ethernet device\n",
 	    self->dv_xname);
@@ -1209,7 +1214,7 @@ tap_kqread(struct knote *kn, long hint)
  */
 SYSCTL_SETUP(sysctl_tap_setup, "sysctl net.link.tap subtree setup")
 {
-	struct sysctlnode *node;
+	__SYSCTL_CONST struct sysctlnode *node;
 	int error = 0;
 
 	if ((error = sysctl_createv(clog, 0, NULL, NULL,
