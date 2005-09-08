@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2005/08/09 16:26:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/09/08 15:31:09 wiz Exp $
 bin/wesnoth
 bin/wmlxgettext
 man/de/man6/wesnoth.6
+man/hu/man6/wesnoth.6
 man/man6/wesnoth.6
 man/sv/man6/wesnoth.6
 share/wesnoth/data/COPYING.txt
@@ -752,6 +753,7 @@ share/wesnoth/images/cursors-bw/attack.png
 share/wesnoth/images/cursors-bw/move.png
 share/wesnoth/images/cursors-bw/normal.png
 share/wesnoth/images/cursors-bw/select.png
+share/wesnoth/images/cursors-bw/wait-16x16.png
 share/wesnoth/images/cursors-bw/wait.png
 share/wesnoth/images/cursors/attack.png
 share/wesnoth/images/cursors/move.png
@@ -1239,9 +1241,7 @@ share/wesnoth/images/giant-mudcrawler-defend.png
 share/wesnoth/images/giant-mudcrawler.png
 share/wesnoth/images/goblin-direwolver-attack.png
 share/wesnoth/images/goblin-direwolver-defend.png
-share/wesnoth/images/goblin-direwolver-die-1.png
-share/wesnoth/images/goblin-direwolver-die-2.png
-share/wesnoth/images/goblin-direwolver-die-3.png
+share/wesnoth/images/goblin-direwolver-moving.png
 share/wesnoth/images/goblin-direwolver.png
 share/wesnoth/images/goblin-impaler-attack-ranged1.png
 share/wesnoth/images/goblin-impaler-attack-ranged2.png
@@ -1283,15 +1283,8 @@ share/wesnoth/images/great-mage.png
 share/wesnoth/images/great-troll-attack.png
 share/wesnoth/images/great-troll-defend.png
 share/wesnoth/images/great-troll.png
-share/wesnoth/images/gryphon-attack1.png
-share/wesnoth/images/gryphon-attack2.png
 share/wesnoth/images/gryphon-defend.png
-share/wesnoth/images/gryphon-master-attack1.png
-share/wesnoth/images/gryphon-master-attack2.png
-share/wesnoth/images/gryphon-master-defend.png
 share/wesnoth/images/gryphon-master.png
-share/wesnoth/images/gryphon-rider-attack.png
-share/wesnoth/images/gryphon-rider-defend.png
 share/wesnoth/images/gryphon-rider.png
 share/wesnoth/images/gryphon-sleeping.png
 share/wesnoth/images/gryphon.png
@@ -1366,9 +1359,7 @@ share/wesnoth/images/halo/white-mage-halo2.png
 share/wesnoth/images/halo/white-mage-halo3.png
 share/wesnoth/images/halo/white-mage-halo4.png
 share/wesnoth/images/help/closed_section.png
-share/wesnoth/images/help/hp-green.png
-share/wesnoth/images/help/hp-red.png
-share/wesnoth/images/help/hp-yellow.png
+share/wesnoth/images/help/hp-bars.png
 share/wesnoth/images/help/hpxp.png
 share/wesnoth/images/help/moving1.png
 share/wesnoth/images/help/moving2.png
@@ -1418,12 +1409,25 @@ share/wesnoth/images/human-dragoon-ranged2.png
 share/wesnoth/images/human-dragoon.png
 share/wesnoth/images/human-duelist-attack.png
 share/wesnoth/images/human-duelist-defend.png
-share/wesnoth/images/human-duelist-die-1.png
-share/wesnoth/images/human-duelist-die-2.png
+share/wesnoth/images/human-duelist-die1.png
+share/wesnoth/images/human-duelist-die2.png
+share/wesnoth/images/human-duelist-die3.png
+share/wesnoth/images/human-duelist-die4.png
+share/wesnoth/images/human-duelist-die5.png
+share/wesnoth/images/human-duelist-die6.png
+share/wesnoth/images/human-duelist-die7.png
+share/wesnoth/images/human-duelist-die8.png
 share/wesnoth/images/human-duelist-ranged.png
 share/wesnoth/images/human-duelist.png
 share/wesnoth/images/human-fencer-attack.png
+share/wesnoth/images/human-fencer-defend-1-1.png
+share/wesnoth/images/human-fencer-defend-1-2.png
 share/wesnoth/images/human-fencer-defend.png
+share/wesnoth/images/human-fencer-die1.png
+share/wesnoth/images/human-fencer-die2.png
+share/wesnoth/images/human-fencer-die3.png
+share/wesnoth/images/human-fencer-die4.png
+share/wesnoth/images/human-fencer-die5.png
 share/wesnoth/images/human-fencer.png
 share/wesnoth/images/human-general-attack-crossbow.png
 share/wesnoth/images/human-general-attack-sword1.png
@@ -2055,6 +2059,7 @@ share/wesnoth/images/owaec-lord-defend.png
 share/wesnoth/images/owaec-lord-moving.png
 share/wesnoth/images/owaec-lord.png
 share/wesnoth/images/paladin-attack-sword.png
+share/wesnoth/images/paladin-defend.png
 share/wesnoth/images/paladin-healing.png
 share/wesnoth/images/paladin-moving.png
 share/wesnoth/images/paladin.png
@@ -2092,6 +2097,15 @@ share/wesnoth/images/portraits/The_Rise_of_Wesnoth/lich.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/logalmier.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/rithrandil.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/typhon.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/elvish-shaman.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/ghoul.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/mermaid-initiate.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/merman-fighter.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/merman-hunter.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/naga-fighter.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/nagini-fighter.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/orcish-assassin.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/saurian-skirmisher.png
 share/wesnoth/images/portraits/core/James_Woo/orc-warlord.png
 share/wesnoth/images/portraits/core/James_Woo/orc-warlord2.png
 share/wesnoth/images/portraits/core/James_Woo/orc-warlord3.png
@@ -3755,6 +3769,7 @@ share/wesnoth/sounds/zombie-hit.wav
 @dirrm share/wesnoth/images/projectiles
 @dirrm share/wesnoth/images/portraits/core/Jason_Lutes
 @dirrm share/wesnoth/images/portraits/core/James_Woo
+@dirrm share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst
 @dirrm share/wesnoth/images/portraits/core
 @dirrm share/wesnoth/images/portraits/The_Rise_of_Wesnoth
 @dirrm share/wesnoth/images/portraits/The_Dark_Hordes
@@ -3817,3 +3832,5 @@ share/wesnoth/sounds/zombie-hit.wav
 @dirrm share/wesnoth
 @dirrm man/sv/man6
 @dirrm man/sv
+@dirrm man/hu/man6
+@dirrm man/hu
