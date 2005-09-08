@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
+$NetBSD: patch-af,v 1.5 2005/09/08 02:50:58 minskim Exp $
 
---- configure.orig	2004-03-08 17:19:35.000000000 -0600
+--- configure.orig	2005-01-24 15:37:44.000000000 -0800
 +++ configure
 @@ -1,9 +1,8 @@
  #! /bin/sh
@@ -264,7 +264,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
        fi;;
    esac
    # Pass precious variables to config.status.
-@@ -1813,7 +1846,6 @@ ac_compiler=`set X $ac_compile; echo $2`
+@@ -1820,7 +1853,6 @@ ac_compiler=`set X $ac_compile; echo $2`
    (exit $ac_status); }
  
  cat >conftest.$ac_ext <<_ACEOF
@@ -272,7 +272,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -1833,8 +1865,8 @@ ac_clean_files="$ac_clean_files a.out a.
+@@ -1840,8 +1872,8 @@ ac_clean_files="$ac_clean_files a.out a.
  # Try to create an executable without -o first, disregard a.out.
  # It will help us diagnose broken compilers, and finding out an intuition
  # of exeext.
@@ -283,7 +283,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  ac_link_default=`echo "$ac_link" | sed 's/ -o *conftest[^ ]*//'`
  if { (eval echo "$as_me:$LINENO: \"$ac_link_default\"") >&5
    (eval $ac_link_default) 2>&5
-@@ -1854,23 +1886,23 @@ do
+@@ -1861,23 +1893,23 @@ do
    test -f "$ac_file" || continue
    case $ac_file in
      *.$ac_ext | *.xcoff | *.tds | *.d | *.pdb | *.xSYM | *.bb | *.bbg | *.o | *.obj )
@@ -320,7 +320,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    esac
  done
  else
-@@ -1944,8 +1976,8 @@ for ac_file in conftest.exe conftest con
+@@ -1951,8 +1983,8 @@ for ac_file in conftest.exe conftest con
    case $ac_file in
      *.$ac_ext | *.xcoff | *.tds | *.d | *.pdb | *.xSYM | *.bb | *.bbg | *.o | *.obj ) ;;
      *.* ) ac_cv_exeext=`expr "$ac_file" : '[^.]*\(\..*\)'`
@@ -331,7 +331,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
      * ) break;;
    esac
  done
-@@ -1970,7 +2002,6 @@ if test "${ac_cv_objext+set}" = set; the
+@@ -1977,7 +2009,6 @@ if test "${ac_cv_objext+set}" = set; the
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -339,7 +339,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2021,7 +2052,6 @@ if test "${ac_cv_c_compiler_gnu+set}" = 
+@@ -2028,7 +2059,6 @@ if test "${ac_cv_c_compiler_gnu+set}" = 
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -347,7 +347,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2041,11 +2071,21 @@ main ()
+@@ -2048,11 +2078,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -371,7 +371,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2058,7 +2098,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -2065,7 +2105,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_compiler_gnu=no
  fi
@@ -380,7 +380,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  ac_cv_c_compiler_gnu=$ac_compiler_gnu
  
  fi
-@@ -2074,7 +2114,6 @@ if test "${ac_cv_prog_cc_g+set}" = set; 
+@@ -2081,7 +2121,6 @@ if test "${ac_cv_prog_cc_g+set}" = set; 
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -388,7 +388,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2091,11 +2130,21 @@ main ()
+@@ -2098,11 +2137,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -412,7 +412,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2108,7 +2157,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -2115,7 +2164,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_prog_cc_g=no
  fi
@@ -421,7 +421,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: $ac_cv_prog_cc_g" >&5
  echo "${ECHO_T}$ac_cv_prog_cc_g" >&6
-@@ -2135,7 +2184,6 @@ else
+@@ -2142,7 +2191,6 @@ else
    ac_cv_prog_cc_stdc=no
  ac_save_CC=$CC
  cat >conftest.$ac_ext <<_ACEOF
@@ -429,7 +429,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2163,6 +2211,16 @@ static char *f (char * (*g) (char **, in
+@@ -2170,6 +2218,16 @@ static char *f (char * (*g) (char **, in
    va_end (v);
    return s;
  }
@@ -446,7 +446,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  int test (int i, double x);
  struct s1 {int (*f) (int a);};
  struct s2 {int (*f) (double a);};
-@@ -2189,11 +2247,21 @@ do
+@@ -2196,11 +2254,21 @@ do
    CC="$ac_save_CC $ac_arg"
    rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -470,7 +470,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2206,7 +2274,7 @@ else
+@@ -2213,7 +2281,7 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  fi
@@ -479,7 +479,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  done
  rm -f conftest.$ac_ext conftest.$ac_objext
  CC=$ac_save_CC
-@@ -2234,19 +2302,28 @@ cat >conftest.$ac_ext <<_ACEOF
+@@ -2241,19 +2309,28 @@ cat >conftest.$ac_ext <<_ACEOF
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -512,7 +512,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
     'extern "C" void std::exit (int) throw (); using std::exit;' \
     'extern "C" void std::exit (int); using std::exit;' \
     'extern "C" void exit (int) throw ();' \
-@@ -2254,14 +2331,13 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2261,14 +2338,13 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
     'void exit (int);'
  do
    cat >conftest.$ac_ext <<_ACEOF
@@ -528,7 +528,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  int
  main ()
  {
-@@ -2272,11 +2348,21 @@ exit (42);
+@@ -2279,11 +2355,21 @@ exit (42);
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -552,7 +552,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2289,9 +2375,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -2296,9 +2382,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  continue
  fi
@@ -563,7 +563,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2308,11 +2393,21 @@ exit (42);
+@@ -2315,11 +2400,21 @@ exit (42);
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -587,7 +587,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2324,7 +2419,7 @@ else
+@@ -2331,7 +2426,7 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  fi
@@ -596,7 +596,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  done
  rm -f conftest*
  if test -n "$ac_declaration"; then
-@@ -2338,7 +2433,7 @@ else
+@@ -2345,7 +2440,7 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  fi
@@ -605,7 +605,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  ac_ext=c
  ac_cpp='$CPP $CPPFLAGS'
  ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-@@ -2464,7 +2559,6 @@ if test "${ac_cv_cxx_compiler_gnu+set}" 
+@@ -2471,7 +2566,6 @@ if test "${ac_cv_cxx_compiler_gnu+set}" 
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -613,7 +613,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2484,11 +2578,21 @@ main ()
+@@ -2491,11 +2585,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -637,7 +637,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2501,7 +2605,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -2508,7 +2612,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_compiler_gnu=no
  fi
@@ -646,7 +646,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  ac_cv_cxx_compiler_gnu=$ac_compiler_gnu
  
  fi
-@@ -2517,7 +2621,6 @@ if test "${ac_cv_prog_cxx_g+set}" = set;
+@@ -2524,7 +2628,6 @@ if test "${ac_cv_prog_cxx_g+set}" = set;
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -654,7 +654,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2534,11 +2637,21 @@ main ()
+@@ -2541,11 +2644,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -678,7 +678,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2551,7 +2664,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -2558,7 +2671,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_prog_cxx_g=no
  fi
@@ -687,7 +687,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: $ac_cv_prog_cxx_g" >&5
  echo "${ECHO_T}$ac_cv_prog_cxx_g" >&6
-@@ -2571,8 +2684,7 @@ else
+@@ -2578,8 +2691,7 @@ else
    fi
  fi
  for ac_declaration in \
@@ -697,7 +697,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
     'extern "C" void std::exit (int) throw (); using std::exit;' \
     'extern "C" void std::exit (int); using std::exit;' \
     'extern "C" void exit (int) throw ();' \
-@@ -2580,14 +2692,13 @@ for ac_declaration in \
+@@ -2587,14 +2699,13 @@ for ac_declaration in \
     'void exit (int);'
  do
    cat >conftest.$ac_ext <<_ACEOF
@@ -713,7 +713,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  int
  main ()
  {
-@@ -2598,11 +2709,21 @@ exit (42);
+@@ -2605,11 +2716,21 @@ exit (42);
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -737,7 +737,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2615,9 +2736,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -2622,9 +2743,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  continue
  fi
@@ -748,7 +748,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2634,11 +2754,21 @@ exit (42);
+@@ -2641,11 +2761,21 @@ exit (42);
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -772,7 +772,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2650,7 +2780,7 @@ else
+@@ -2657,7 +2787,7 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  fi
@@ -781,7 +781,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  done
  rm -f conftest*
  if test -n "$ac_declaration"; then
-@@ -2694,7 +2824,6 @@ do
+@@ -2701,7 +2831,6 @@ do
    # On the NeXT, cc -E runs the code through the compiler's parser,
    # not just through cpp. "Syntax error" is here to catch this case.
    cat >conftest.$ac_ext <<_ACEOF
@@ -789,7 +789,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2705,7 +2834,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -2712,7 +2841,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  #else
  # include <assert.h>
  #endif
@@ -798,7 +798,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -2717,6 +2846,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2724,6 +2853,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    (exit $ac_status); } >/dev/null; then
    if test -s conftest.err; then
      ac_cpp_err=$ac_c_preproc_warn_flag
@@ -806,7 +806,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    else
      ac_cpp_err=
    fi
-@@ -2737,7 +2867,6 @@ rm -f conftest.err conftest.$ac_ext
+@@ -2744,7 +2874,6 @@ rm -f conftest.err conftest.$ac_ext
    # OK, works on sane cases.  Now check whether non-existent headers
    # can be detected and how.
    cat >conftest.$ac_ext <<_ACEOF
@@ -814,7 +814,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2755,6 +2884,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2762,6 +2891,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    (exit $ac_status); } >/dev/null; then
    if test -s conftest.err; then
      ac_cpp_err=$ac_c_preproc_warn_flag
@@ -822,7 +822,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    else
      ac_cpp_err=
    fi
-@@ -2801,7 +2931,6 @@ do
+@@ -2808,7 +2938,6 @@ do
    # On the NeXT, cc -E runs the code through the compiler's parser,
    # not just through cpp. "Syntax error" is here to catch this case.
    cat >conftest.$ac_ext <<_ACEOF
@@ -830,7 +830,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2812,7 +2941,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -2819,7 +2948,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  #else
  # include <assert.h>
  #endif
@@ -839,7 +839,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -2824,6 +2953,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2831,6 +2960,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    (exit $ac_status); } >/dev/null; then
    if test -s conftest.err; then
      ac_cpp_err=$ac_c_preproc_warn_flag
@@ -847,7 +847,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    else
      ac_cpp_err=
    fi
-@@ -2844,7 +2974,6 @@ rm -f conftest.err conftest.$ac_ext
+@@ -2851,7 +2981,6 @@ rm -f conftest.err conftest.$ac_ext
    # OK, works on sane cases.  Now check whether non-existent headers
    # can be detected and how.
    cat >conftest.$ac_ext <<_ACEOF
@@ -855,7 +855,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2862,6 +2991,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -2869,6 +2998,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    (exit $ac_status); } >/dev/null; then
    if test -s conftest.err; then
      ac_cpp_err=$ac_c_preproc_warn_flag
@@ -863,7 +863,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    else
      ac_cpp_err=
    fi
-@@ -2922,7 +3052,6 @@ if test "${ac_cv_header_stdc+set}" = set
+@@ -2929,7 +3059,6 @@ if test "${ac_cv_header_stdc+set}" = set
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -871,7 +871,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2943,11 +3072,21 @@ main ()
+@@ -2950,11 +3079,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -895,7 +895,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -2960,12 +3099,11 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -2967,12 +3106,11 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_header_stdc=no
  fi
@@ -909,7 +909,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -2987,7 +3125,6 @@ fi
+@@ -2994,7 +3132,6 @@ fi
  if test $ac_cv_header_stdc = yes; then
    # ISC 2.0.2 stdlib.h does not declare free, contrary to ANSI.
    cat >conftest.$ac_ext <<_ACEOF
@@ -917,7 +917,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3012,7 +3149,6 @@ if test $ac_cv_header_stdc = yes; then
+@@ -3019,7 +3156,6 @@ if test $ac_cv_header_stdc = yes; then
    :
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -925,7 +925,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3024,9 +3160,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -3031,9 +3167,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  # define TOUPPER(c) (ISLOWER(c) ? 'A' + ((c) - 'a') : (c))
  #else
  # define ISLOWER(c) \
@@ -938,7 +938,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  # define TOUPPER(c) (ISLOWER(c) ? ((c) | 0x40) : (c))
  #endif
  
-@@ -3037,7 +3173,7 @@ main ()
+@@ -3044,7 +3180,7 @@ main ()
    int i;
    for (i = 0; i < 256; i++)
      if (XOR (islower (i), ISLOWER (i))
@@ -947,7 +947,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
        exit(2);
    exit (0);
  }
-@@ -3062,7 +3198,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3069,7 +3205,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ( exit $ac_status )
  ac_cv_header_stdc=no
  fi
@@ -956,7 +956,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  fi
  fi
-@@ -3087,7 +3223,7 @@ fi
+@@ -3094,7 +3230,7 @@ fi
  
  
  for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
@@ -965,7 +965,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  echo "$as_me:$LINENO: checking for $ac_header" >&5
-@@ -3096,7 +3232,6 @@ if eval "test \"\${$as_ac_Header+set}\" 
+@@ -3103,7 +3239,6 @@ if eval "test \"\${$as_ac_Header+set}\" 
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -973,7 +973,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3108,11 +3243,21 @@ $ac_includes_default
+@@ -3115,11 +3250,21 @@ $ac_includes_default
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -997,7 +997,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3125,7 +3270,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3132,7 +3277,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  eval "$as_ac_Header=no"
  fi
@@ -1006,7 +1006,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
  echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
-@@ -3156,7 +3301,6 @@ else
+@@ -3163,7 +3308,6 @@ else
  echo "$as_me:$LINENO: checking $ac_header usability" >&5
  echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6
  cat >conftest.$ac_ext <<_ACEOF
@@ -1014,7 +1014,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3167,11 +3311,21 @@ $ac_includes_default
+@@ -3174,11 +3318,21 @@ $ac_includes_default
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1038,7 +1038,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3184,7 +3338,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3191,7 +3345,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_header_compiler=no
  fi
@@ -1047,7 +1047,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
  echo "${ECHO_T}$ac_header_compiler" >&6
  
-@@ -3192,7 +3346,6 @@ echo "${ECHO_T}$ac_header_compiler" >&6
+@@ -3199,7 +3353,6 @@ echo "${ECHO_T}$ac_header_compiler" >&6
  echo "$as_me:$LINENO: checking $ac_header presence" >&5
  echo $ECHO_N "checking $ac_header presence... $ECHO_C" >&6
  cat >conftest.$ac_ext <<_ACEOF
@@ -1055,7 +1055,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3210,6 +3363,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -3217,6 +3370,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    (exit $ac_status); } >/dev/null; then
    if test -s conftest.err; then
      ac_cpp_err=$ac_c_preproc_warn_flag
@@ -1063,7 +1063,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    else
      ac_cpp_err=
    fi
-@@ -3229,33 +3383,32 @@ echo "$as_me:$LINENO: result: $ac_header
+@@ -3236,33 +3390,32 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_preproc" >&6
  
  # So?  What about this header?
@@ -1114,7 +1114,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  _ASBOX
      ) |
        sed "s/^/$as_me: WARNING:     /" >&2
-@@ -3266,7 +3419,7 @@ echo $ECHO_N "checking for $ac_header...
+@@ -3273,7 +3426,7 @@ echo $ECHO_N "checking for $ac_header...
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
@@ -1123,7 +1123,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
  echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
-@@ -3299,7 +3452,6 @@ else
+@@ -3306,7 +3459,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-lXbsd  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -1131,7 +1131,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3317,11 +3469,21 @@ main ();
+@@ -3324,11 +3476,21 @@ main ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -1155,7 +1155,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3334,7 +3496,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3341,7 +3503,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_Xbsd_main=no
  fi
@@ -1165,7 +1165,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_Xbsd_main" >&5
-@@ -3351,7 +3514,6 @@ else
+@@ -3358,7 +3521,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-lsocket  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -1173,7 +1173,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3375,11 +3537,21 @@ socket ();
+@@ -3382,11 +3544,21 @@ socket ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -1197,7 +1197,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3392,7 +3564,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3399,7 +3571,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_socket_socket=no
  fi
@@ -1207,7 +1207,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_socket_socket" >&5
-@@ -3409,7 +3582,6 @@ else
+@@ -3416,7 +3589,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-lnsl  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -1215,7 +1215,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3433,11 +3605,21 @@ gethostbyname ();
+@@ -3440,11 +3612,21 @@ gethostbyname ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -1239,7 +1239,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3450,7 +3632,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3457,7 +3639,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_nsl_gethostbyname=no
  fi
@@ -1249,7 +1249,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_nsl_gethostbyname" >&5
-@@ -3467,7 +3650,6 @@ else
+@@ -3474,7 +3657,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-lintl  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -1257,7 +1257,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3491,11 +3673,21 @@ dcgettext ();
+@@ -3498,11 +3680,21 @@ dcgettext ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -1281,7 +1281,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3508,7 +3700,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3515,7 +3707,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_intl_dcgettext=no
  fi
@@ -1291,7 +1291,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_intl_dcgettext" >&5
-@@ -3525,7 +3718,6 @@ else
+@@ -3532,7 +3725,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-ldnet_stub  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -1299,7 +1299,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3549,11 +3741,21 @@ getnodebyname ();
+@@ -3556,11 +3748,21 @@ getnodebyname ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -1323,7 +1323,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3566,7 +3768,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3573,7 +3775,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_dnet_stub_getnodebyname=no
  fi
@@ -1333,7 +1333,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_dnet_stub_getnodebyname" >&5
-@@ -3618,7 +3821,6 @@ else
+@@ -3625,7 +3828,6 @@ else
  	    echo "$as_me:$LINENO: checking that $CXX can handle -O2" >&5
  echo $ECHO_N "checking that $CXX can handle -O2... $ECHO_C" >&6
  	    cat >conftest.$ac_ext <<_ACEOF
@@ -1341,7 +1341,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3643,11 +3845,21 @@ main ()
+@@ -3650,11 +3852,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1365,7 +1365,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3664,7 +3876,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -3671,7 +3883,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  	    echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6
  fi
@@ -1374,7 +1374,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
      fi
  fi
  
-@@ -3778,7 +3990,6 @@ then
+@@ -3785,7 +3997,6 @@ then
  echo $ECHO_N "checking if C++ libraries work without any namespace... $ECHO_C" >&6
  
  cat >conftest.$ac_ext <<_ACEOF
@@ -1382,7 +1382,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3797,11 +4008,21 @@ cout.fail();
+@@ -3804,11 +4015,21 @@ cout.fail();
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1406,7 +1406,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3819,14 +4040,13 @@ echo "$as_me:$LINENO: result: no" >&5
+@@ -3826,14 +4047,13 @@ echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6
  
  fi
@@ -1422,7 +1422,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3846,11 +4066,21 @@ cout.fail();
+@@ -3853,11 +4073,21 @@ cout.fail();
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1446,7 +1446,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3868,7 +4098,7 @@ echo "$as_me:$LINENO: result: no" >&5
+@@ -3875,7 +4105,7 @@ echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6
  
  fi
@@ -1455,7 +1455,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  
  if test x$stl_namespace = xno
-@@ -3876,7 +4106,6 @@ then
+@@ -3883,7 +4113,6 @@ then
  	echo "$as_me:$LINENO: checking if STL works without any namespace" >&5
  echo $ECHO_N "checking if STL works without any namespace... $ECHO_C" >&6
  	cat >conftest.$ac_ext <<_ACEOF
@@ -1463,7 +1463,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3895,11 +4124,21 @@ list<int> test;
+@@ -3902,11 +4131,21 @@ list<int> test;
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1487,7 +1487,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3917,14 +4156,13 @@ echo "$as_me:$LINENO: result: no" >&5
+@@ -3924,14 +4163,13 @@ echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6
  
  fi
@@ -1503,7 +1503,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3944,11 +4182,21 @@ list<int> test;
+@@ -3951,11 +4189,21 @@ list<int> test;
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1527,7 +1527,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3966,14 +4214,13 @@ echo "$as_me:$LINENO: result: no" >&5
+@@ -3973,14 +4221,13 @@ echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6
  
  fi
@@ -1543,7 +1543,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -3993,11 +4240,21 @@ list<int> test;
+@@ -4000,11 +4247,21 @@ list<int> test;
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1567,7 +1567,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4015,7 +4272,7 @@ echo "$as_me:$LINENO: result: no" >&5
+@@ -4022,7 +4279,7 @@ echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6
  
  fi
@@ -1576,61 +1576,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  
  
-@@ -4101,7 +4358,7 @@ if test "${with_tcl_ver+set}" = set; the
-   withval="$with_tcl_ver"
-   TCL_VERS=$withval
- else
--  TCL_VERS=8.4.5
-+  TCL_VERS=8.3.2
- fi;
- 
- 
-@@ -4109,7 +4366,7 @@ TCL_HI_VERS=`echo $TCL_VERS | sed 's/^\(
- TCL_MAJOR_VERS=`echo $TCL_VERS | sed 's/^\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\1/'`
- TCL_ALT_VERS=`echo $TCL_HI_VERS | sed 's/\.//'`
- 
--TCL_OLD_VERS=8.3.2
-+TCL_OLD_VERS=7.6
- TCL_OLD_ALT_VERS=`echo $TCL_OLD_VERS | sed 's/\.//'`
- 
- TCL_TCL_PLACES_D="$d \
-@@ -4554,7 +4811,7 @@ if test "${with_tk_ver+set}" = set; then
-   withval="$with_tk_ver"
-   TK_VERS=$withval
- else
--  TK_VERS=8.4.5
-+  TK_VERS=8.3.2
- fi;
- 
- 
-@@ -4563,7 +4820,7 @@ TK_HI_VERS=`echo $TK_VERS | sed 's/\([0-
- TK_MAJOR_VERS=`echo $TK_VERS | sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\1/'`
- TK_ALT_VERS=`echo $TK_VERS | sed 's/\.//'`
- 
--TK_OLD_VERS=8.3.2
-+TK_OLD_VERS=4.2
- TK_OLD_ALT_VERS=`echo $TK_OLD_VERS | sed 's/\.//'`
- 
- TK_TCL_PLACES_D="$d \
-@@ -4924,7 +5181,7 @@ else
-   d=""
- fi;
- 
--OTCL_VERS=1.8
-+OTCL_VERS=1.0a8
- OTCL_ALT_VERS=1.0
- 
- OTCL_H_PLACES_D="$d \
-@@ -5142,7 +5399,7 @@ else
-   d=""
- fi;
- 
--TCLCL_VERS=1.15
-+TCLCL_VERS=1.0b13
- TCLCL_ALT_VERS=1.0
- 
- TCLCL_H_PLACES="\
-@@ -5193,7 +5450,7 @@ TCLCL_PROG_PLACES="\
+@@ -5213,7 +5470,7 @@ TCLCL_PROG_PLACES="\
                  /usr/src/local/Tcl \
                  /usr/src/local/Tcl-1.0 \
                  "
@@ -1639,7 +1585,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  
  
-@@ -5555,7 +5812,6 @@ xincdirs="\
+@@ -5575,7 +5832,6 @@ xincdirs="\
  echo "checking for X11 header files"
  if test "$x_includes" = NONE ; then
  	cat >conftest.$ac_ext <<_ACEOF
@@ -1647,7 +1593,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -5573,6 +5829,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5593,6 +5849,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    (exit $ac_status); } >/dev/null; then
    if test -s conftest.err; then
      ac_cpp_err=$ac_c_preproc_warn_flag
@@ -1655,7 +1601,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    else
      ac_cpp_err=
    fi
-@@ -5616,7 +5873,6 @@ else
+@@ -5636,7 +5893,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-lX11  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -1663,7 +1609,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -5640,11 +5896,21 @@ XOpenDisplay ();
+@@ -5660,11 +5916,21 @@ XOpenDisplay ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -1687,7 +1633,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5657,7 +5923,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -5677,7 +5943,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_X11_XOpenDisplay=no
  fi
@@ -1697,7 +1643,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_X11_XOpenDisplay" >&5
-@@ -5694,7 +5961,6 @@ else
+@@ -5714,7 +5981,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-lXext -lX11 $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -1705,7 +1651,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -5718,11 +5984,21 @@ XShmAttach ();
+@@ -5738,11 +6004,21 @@ XShmAttach ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -1729,7 +1675,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5735,7 +6011,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -5755,7 +6031,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_Xext_XShmAttach=no
  fi
@@ -1739,7 +1685,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_Xext_XShmAttach" >&5
-@@ -6391,7 +6668,6 @@ if test "${ac_cv_header_stdc+set}" = set
+@@ -6411,7 +6688,6 @@ if test "${ac_cv_header_stdc+set}" = set
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -1747,7 +1693,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -6412,11 +6688,21 @@ main ()
+@@ -6432,11 +6708,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1771,7 +1717,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6429,12 +6715,11 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -6449,12 +6735,11 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_header_stdc=no
  fi
@@ -1785,7 +1731,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -6456,7 +6741,6 @@ fi
+@@ -6476,7 +6761,6 @@ fi
  if test $ac_cv_header_stdc = yes; then
    # ISC 2.0.2 stdlib.h does not declare free, contrary to ANSI.
    cat >conftest.$ac_ext <<_ACEOF
@@ -1793,7 +1739,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -6481,7 +6765,6 @@ if test $ac_cv_header_stdc = yes; then
+@@ -6501,7 +6785,6 @@ if test $ac_cv_header_stdc = yes; then
    :
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -1801,7 +1747,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -6493,9 +6776,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -6513,9 +6796,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  # define TOUPPER(c) (ISLOWER(c) ? 'A' + ((c) - 'a') : (c))
  #else
  # define ISLOWER(c) \
@@ -1814,7 +1760,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  # define TOUPPER(c) (ISLOWER(c) ? ((c) | 0x40) : (c))
  #endif
  
-@@ -6506,7 +6789,7 @@ main ()
+@@ -6526,7 +6809,7 @@ main ()
    int i;
    for (i = 0; i < 256; i++)
      if (XOR (islower (i), ISLOWER (i))
@@ -1823,7 +1769,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
        exit(2);
    exit (0);
  }
-@@ -6531,7 +6814,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -6551,7 +6834,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ( exit $ac_status )
  ac_cv_header_stdc=no
  fi
@@ -1832,83 +1778,19 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  fi
  fi
-@@ -6561,21 +6844,28 @@ if eval "test \"\${$as_ac_var+set}\" = s
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
-+/* Define $ac_func to an innocuous variant, in case <limits.h> declares $ac_func.
-+   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
-+#define $ac_func innocuous_$ac_func
-+
- /* System header to define __stub macros and hopefully few prototypes,
-     which can conflict with char $ac_func (); below.
-     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
-     <limits.h> exists even on freestanding compilers.  */
-+
- #ifdef __STDC__
- # include <limits.h>
- #else
- # include <assert.h>
- #endif
-+
-+#undef $ac_func
-+
- /* Override any gcc2 internal prototype to avoid an error.  */
- #ifdef __cplusplus
- extern "C"
-@@ -6606,11 +6896,21 @@ return f != $ac_func;
- _ACEOF
- rm -f conftest.$ac_objext conftest$ac_exeext
- if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
--  (eval $ac_link) 2>&5
-+  (eval $ac_link) 2>conftest.er1
-   ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--         { ac_try='test -s conftest$ac_exeext'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest$ac_exeext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -6623,7 +6923,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- eval "$as_ac_var=no"
- fi
--rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext \
-+      conftest$ac_exeext conftest.$ac_ext
- fi
- echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
- echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
-@@ -6642,7 +6943,10 @@ done
+@@ -6574,7 +6857,10 @@ fi
  
  
  
--for ac_header in arpa/inet.h netinet/in.h string.h strings.h time.h unistd.h net/ethernet.h
+-for ac_header in arpa/inet.h fenv.h netinet/in.h string.h strings.h time.h unistd.h net/ethernet.h
 +
 +
 +
-+for ac_header in arpa/inet.h netinet/in.h string.h strings.h time.h unistd.h net/if.h net/ethernet.h netinet/if_ether.h sys/socket.h
++for ac_header in arpa/inet.h fenv.h netinet/in.h string.h strings.h time.h unistd.h net/if.h net/ethernet.h netinet/if_ether.h sys/socket.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -6658,7 +6962,6 @@ else
+@@ -6590,7 +6876,6 @@ else
  echo "$as_me:$LINENO: checking $ac_header usability" >&5
  echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6
  cat >conftest.$ac_ext <<_ACEOF
@@ -1916,7 +1798,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -6669,11 +6972,21 @@ $ac_includes_default
+@@ -6601,11 +6886,21 @@ $ac_includes_default
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -1940,7 +1822,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6686,7 +6999,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -6618,7 +6913,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_header_compiler=no
  fi
@@ -1949,7 +1831,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
  echo "${ECHO_T}$ac_header_compiler" >&6
  
-@@ -6694,7 +7007,6 @@ echo "${ECHO_T}$ac_header_compiler" >&6
+@@ -6626,7 +6921,6 @@ echo "${ECHO_T}$ac_header_compiler" >&6
  echo "$as_me:$LINENO: checking $ac_header presence" >&5
  echo $ECHO_N "checking $ac_header presence... $ECHO_C" >&6
  cat >conftest.$ac_ext <<_ACEOF
@@ -1957,7 +1839,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -6712,6 +7024,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6644,6 +6938,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    (exit $ac_status); } >/dev/null; then
    if test -s conftest.err; then
      ac_cpp_err=$ac_c_preproc_warn_flag
@@ -1965,7 +1847,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    else
      ac_cpp_err=
    fi
-@@ -6731,33 +7044,32 @@ echo "$as_me:$LINENO: result: $ac_header
+@@ -6663,33 +6958,32 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_preproc" >&6
  
  # So?  What about this header?
@@ -1975,26 +1857,13 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
 +  yes:no: )
      { echo "$as_me:$LINENO: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&5
  echo "$as_me: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&2;}
--    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
--echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
--    (
--      cat <<\_ASBOX
--## ------------------------------------ ##
--## Report this to bug-autoconf@gnu.org. ##
--## ------------------------------------ ##
--_ASBOX
--    ) |
--      sed "s/^/$as_me: WARNING:     /" >&2
 +    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the compiler's result" >&5
 +echo "$as_me: WARNING: $ac_header: proceeding with the compiler's result" >&2;}
 +    ac_header_preproc=yes
-     ;;
--  no:yes )
++    ;;
 +  no:yes:* )
-     { echo "$as_me:$LINENO: WARNING: $ac_header: present but cannot be compiled" >&5
- echo "$as_me: WARNING: $ac_header: present but cannot be compiled" >&2;}
--    { echo "$as_me:$LINENO: WARNING: $ac_header: check for missing prerequisite headers?" >&5
--echo "$as_me: WARNING: $ac_header: check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: present but cannot be compiled" >&5
++echo "$as_me: WARNING: $ac_header: present but cannot be compiled" >&2;}
 +    { echo "$as_me:$LINENO: WARNING: $ac_header:     check for missing prerequisite headers?" >&5
 +echo "$as_me: WARNING: $ac_header:     check for missing prerequisite headers?" >&2;}
 +    { echo "$as_me:$LINENO: WARNING: $ac_header: see the Autoconf documentation" >&5
@@ -2010,13 +1879,29 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
 -## ------------------------------------ ##
 -## Report this to bug-autoconf@gnu.org. ##
 -## ------------------------------------ ##
+-_ASBOX
+-    ) |
+-      sed "s/^/$as_me: WARNING:     /" >&2
+-    ;;
+-  no:yes )
+-    { echo "$as_me:$LINENO: WARNING: $ac_header: present but cannot be compiled" >&5
+-echo "$as_me: WARNING: $ac_header: present but cannot be compiled" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: $ac_header: check for missing prerequisite headers?" >&5
+-echo "$as_me: WARNING: $ac_header: check for missing prerequisite headers?" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
+-    (
+-      cat <<\_ASBOX
+-## ------------------------------------ ##
+-## Report this to bug-autoconf@gnu.org. ##
+-## ------------------------------------ ##
 +## ------------------------------------------ ##
 +## Report this to the AC_PACKAGE_NAME lists.  ##
 +## ------------------------------------------ ##
  _ASBOX
      ) |
        sed "s/^/$as_me: WARNING:     /" >&2
-@@ -6768,7 +7080,7 @@ echo $ECHO_N "checking for $ac_header...
+@@ -6700,7 +6994,7 @@ echo $ECHO_N "checking for $ac_header...
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
@@ -2025,44 +1910,27 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
  echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
-@@ -6797,7 +7109,6 @@ _ACEOF
- 
- else
-   cat >conftest.$ac_ext <<_ACEOF
+@@ -6724,7 +7018,6 @@ else
+   ac_check_lib_save_LIBS=$LIBS
+ LIBS="-lm  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
 -#line $LINENO "configure"
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -6841,7 +7152,7 @@ _ACEOF
- 
- 
- fi
--rm -f core core.* *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
-+rm -f core *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
- fi
- 
- echo "$as_me:$LINENO: checking for int8_t" >&5
-@@ -6850,7 +7161,6 @@ if test "${ac_cv_type_int8_t+set}" = set
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
+@@ -6742,11 +7035,21 @@ main ();
  _ACEOF
- cat confdefs.h >>conftest.$ac_ext
-@@ -6870,11 +7180,21 @@ if (sizeof (int8_t))
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
-+  (eval $ac_compile) 2>conftest.er1
+ rm -f conftest.$ac_objext conftest$ac_exeext
+ if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
++  (eval $ac_link) 2>conftest.er1
    ac_status=$?
 +  grep -v '^ *+' conftest.er1 >conftest.err
 +  rm -f conftest.er1
 +  cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
+-         { ac_try='test -s conftest$ac_exeext'
 +	 { ac_try='test -z "$ac_c_werror_flag"
 +			 || test ! -s conftest.err'
 +  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
@@ -2070,307 +1938,21 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
 +  ac_status=$?
 +  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -s conftest$ac_exeext'
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6887,7 +7207,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -6759,7 +7062,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
- ac_cv_type_int8_t=no
+ ac_cv_lib_m_main=no
  fi
--rm -f conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
  fi
- echo "$as_me:$LINENO: result: $ac_cv_type_int8_t" >&5
- echo "${ECHO_T}$ac_cv_type_int8_t" >&6
-@@ -6907,7 +7227,6 @@ if test "${ac_cv_type_int16_t+set}" = se
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
-@@ -6927,11 +7246,21 @@ if (sizeof (int16_t))
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
-+  (eval $ac_compile) 2>conftest.er1
-   ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest.$ac_objext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -6944,7 +7273,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- ac_cv_type_int16_t=no
- fi
--rm -f conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
- fi
- echo "$as_me:$LINENO: result: $ac_cv_type_int16_t" >&5
- echo "${ECHO_T}$ac_cv_type_int16_t" >&6
-@@ -6964,7 +7293,6 @@ if test "${ac_cv_type_int32_t+set}" = se
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
-@@ -6984,11 +7312,21 @@ if (sizeof (int32_t))
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
-+  (eval $ac_compile) 2>conftest.er1
-   ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest.$ac_objext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -7001,7 +7339,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- ac_cv_type_int32_t=no
- fi
--rm -f conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
- fi
- echo "$as_me:$LINENO: result: $ac_cv_type_int32_t" >&5
- echo "${ECHO_T}$ac_cv_type_int32_t" >&6
-@@ -7021,7 +7359,6 @@ if test "${ac_cv_type_u_int8_t+set}" = s
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
-@@ -7041,11 +7378,21 @@ if (sizeof (u_int8_t))
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
-+  (eval $ac_compile) 2>conftest.er1
-   ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest.$ac_objext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -7058,7 +7405,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- ac_cv_type_u_int8_t=no
- fi
--rm -f conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
- fi
- echo "$as_me:$LINENO: result: $ac_cv_type_u_int8_t" >&5
- echo "${ECHO_T}$ac_cv_type_u_int8_t" >&6
-@@ -7078,7 +7425,6 @@ if test "${ac_cv_type_u_int16_t+set}" = 
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
-@@ -7098,11 +7444,21 @@ if (sizeof (u_int16_t))
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
-+  (eval $ac_compile) 2>conftest.er1
-   ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest.$ac_objext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -7115,7 +7471,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- ac_cv_type_u_int16_t=no
- fi
--rm -f conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
- fi
- echo "$as_me:$LINENO: result: $ac_cv_type_u_int16_t" >&5
- echo "${ECHO_T}$ac_cv_type_u_int16_t" >&6
-@@ -7135,7 +7491,6 @@ if test "${ac_cv_type_u_int32_t+set}" = 
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
-@@ -7155,11 +7510,21 @@ if (sizeof (u_int32_t))
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
-+  (eval $ac_compile) 2>conftest.er1
-   ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest.$ac_objext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -7172,7 +7537,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- ac_cv_type_u_int32_t=no
- fi
--rm -f conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
- fi
- echo "$as_me:$LINENO: result: $ac_cv_type_u_int32_t" >&5
- echo "${ECHO_T}$ac_cv_type_u_int32_t" >&6
-@@ -7192,7 +7557,6 @@ if test "${ac_cv_type_u_char+set}" = set
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
-@@ -7212,11 +7576,21 @@ if (sizeof (u_char))
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
-+  (eval $ac_compile) 2>conftest.er1
-   ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest.$ac_objext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -7229,7 +7603,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- ac_cv_type_u_char=no
- fi
--rm -f conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
- fi
- echo "$as_me:$LINENO: result: $ac_cv_type_u_char" >&5
- echo "${ECHO_T}$ac_cv_type_u_char" >&6
-@@ -7249,7 +7623,6 @@ if test "${ac_cv_type_u_int+set}" = set;
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
-@@ -7269,11 +7642,21 @@ if (sizeof (u_int))
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>&5
-+  (eval $ac_compile) 2>conftest.er1
-   ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--         { ac_try='test -s conftest.$ac_objext'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest.$ac_objext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -7286,7 +7669,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
- 
- ac_cv_type_u_int=no
- fi
--rm -f conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
- fi
- echo "$as_me:$LINENO: result: $ac_cv_type_u_int" >&5
- echo "${ECHO_T}$ac_cv_type_u_int" >&6
-@@ -7313,21 +7696,28 @@ if eval "test \"\${$as_ac_var+set}\" = s
+ echo "$as_me:$LINENO: result: $ac_cv_lib_m_main" >&5
+@@ -6793,21 +7097,28 @@ if eval "test \"\${$as_ac_var+set}\" = s
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -2400,7 +1982,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* Override any gcc2 internal prototype to avoid an error.  */
  #ifdef __cplusplus
  extern "C"
-@@ -7358,11 +7748,21 @@ return f != $ac_func;
+@@ -6838,11 +7149,21 @@ return f != $ac_func;
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -2424,7 +2006,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7375,7 +7775,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -6855,7 +7176,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  eval "$as_ac_var=no"
  fi
@@ -2434,7 +2016,24 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
  echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
-@@ -7398,7 +7799,6 @@ if test "${ac_cv_type_long+set}" = set; 
+@@ -6881,7 +7203,6 @@ _ACEOF
+ 
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -6925,7 +7246,7 @@ _ACEOF
+ 
+ 
+ fi
+-rm -f core core.* *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
++rm -f core *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
+ fi
+ 
+ echo "$as_me:$LINENO: checking for int8_t" >&5
+@@ -6934,7 +7255,6 @@ if test "${ac_cv_type_int8_t+set}" = set
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -2442,7 +2041,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7418,11 +7818,21 @@ if (sizeof (long))
+@@ -6954,11 +7274,21 @@ if (sizeof (int8_t))
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2466,7 +2065,399 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7435,7 +7845,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -6971,7 +7301,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ac_cv_type_int8_t=no
+ fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_type_int8_t" >&5
+ echo "${ECHO_T}$ac_cv_type_int8_t" >&6
+@@ -6991,7 +7321,6 @@ if test "${ac_cv_type_int16_t+set}" = se
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -7011,11 +7340,21 @@ if (sizeof (int16_t))
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7028,7 +7367,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ac_cv_type_int16_t=no
+ fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_type_int16_t" >&5
+ echo "${ECHO_T}$ac_cv_type_int16_t" >&6
+@@ -7048,7 +7387,6 @@ if test "${ac_cv_type_int32_t+set}" = se
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -7068,11 +7406,21 @@ if (sizeof (int32_t))
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7085,7 +7433,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ac_cv_type_int32_t=no
+ fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_type_int32_t" >&5
+ echo "${ECHO_T}$ac_cv_type_int32_t" >&6
+@@ -7105,7 +7453,6 @@ if test "${ac_cv_type_u_int8_t+set}" = s
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -7125,11 +7472,21 @@ if (sizeof (u_int8_t))
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7142,7 +7499,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ac_cv_type_u_int8_t=no
+ fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_type_u_int8_t" >&5
+ echo "${ECHO_T}$ac_cv_type_u_int8_t" >&6
+@@ -7162,7 +7519,6 @@ if test "${ac_cv_type_u_int16_t+set}" = 
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -7182,11 +7538,21 @@ if (sizeof (u_int16_t))
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7199,7 +7565,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ac_cv_type_u_int16_t=no
+ fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_type_u_int16_t" >&5
+ echo "${ECHO_T}$ac_cv_type_u_int16_t" >&6
+@@ -7219,7 +7585,6 @@ if test "${ac_cv_type_u_int32_t+set}" = 
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -7239,11 +7604,21 @@ if (sizeof (u_int32_t))
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7256,7 +7631,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ac_cv_type_u_int32_t=no
+ fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_type_u_int32_t" >&5
+ echo "${ECHO_T}$ac_cv_type_u_int32_t" >&6
+@@ -7276,7 +7651,6 @@ if test "${ac_cv_type_u_char+set}" = set
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -7296,11 +7670,21 @@ if (sizeof (u_char))
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7313,7 +7697,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ac_cv_type_u_char=no
+ fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_type_u_char" >&5
+ echo "${ECHO_T}$ac_cv_type_u_char" >&6
+@@ -7333,7 +7717,6 @@ if test "${ac_cv_type_u_int+set}" = set;
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -7353,11 +7736,21 @@ if (sizeof (u_int))
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7370,7 +7763,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ ac_cv_type_u_int=no
+ fi
+-rm -f conftest.$ac_objext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: $ac_cv_type_u_int" >&5
+ echo "${ECHO_T}$ac_cv_type_u_int" >&6
+@@ -7397,21 +7790,28 @@ if eval "test \"\${$as_ac_var+set}\" = s
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++/* Define $ac_func to an innocuous variant, in case <limits.h> declares $ac_func.
++   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
++#define $ac_func innocuous_$ac_func
++
+ /* System header to define __stub macros and hopefully few prototypes,
+     which can conflict with char $ac_func (); below.
+     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
+     <limits.h> exists even on freestanding compilers.  */
++
+ #ifdef __STDC__
+ # include <limits.h>
+ #else
+ # include <assert.h>
+ #endif
++
++#undef $ac_func
++
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ #ifdef __cplusplus
+ extern "C"
+@@ -7442,11 +7842,21 @@ return f != $ac_func;
+ _ACEOF
+ rm -f conftest.$ac_objext conftest$ac_exeext
+ if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
++  (eval $ac_link) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest$ac_exeext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7459,7 +7869,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ eval "$as_ac_var=no"
+ fi
+-rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
+ fi
+ echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
+ echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
+@@ -7482,7 +7893,6 @@ if test "${ac_cv_type_long+set}" = set; 
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   cat >conftest.$ac_ext <<_ACEOF
+-#line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+@@ -7502,11 +7912,21 @@ if (sizeof (long))
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>&5
++  (eval $ac_compile) 2>conftest.er1
+   ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-         { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest.$ac_objext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7519,7 +7939,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_type_long=no
  fi
@@ -2475,7 +2466,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: $ac_cv_type_long" >&5
  echo "${ECHO_T}$ac_cv_type_long" >&6
-@@ -7453,7 +7863,6 @@ else
+@@ -7537,7 +7957,6 @@ else
    if test "$cross_compiling" = yes; then
    # Depending upon the size, compute the lo and hi bounds.
  cat >conftest.$ac_ext <<_ACEOF
@@ -2483,7 +2474,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7472,11 +7881,21 @@ test_array [0] = 0
+@@ -7556,11 +7975,21 @@ test_array [0] = 0
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2507,7 +2498,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7485,7 +7904,6 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -7569,7 +7998,6 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    ac_lo=0 ac_mid=0
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
@@ -2515,7 +2506,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7504,11 +7922,21 @@ test_array [0] = 0
+@@ -7588,11 +8016,21 @@ test_array [0] = 0
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2539,7 +2530,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7520,20 +7948,19 @@ else
+@@ -7604,20 +8042,19 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_lo=`expr $ac_mid + 1`
@@ -2566,7 +2557,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7552,11 +7979,21 @@ test_array [0] = 0
+@@ -7636,11 +8073,21 @@ test_array [0] = 0
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2590,7 +2581,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7565,7 +8002,6 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -7649,7 +8096,6 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    ac_hi=-1 ac_mid=-1
    while :; do
      cat >conftest.$ac_ext <<_ACEOF
@@ -2598,7 +2589,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7584,11 +8020,21 @@ test_array [0] = 0
+@@ -7668,11 +8114,21 @@ test_array [0] = 0
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2622,7 +2613,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7600,13 +8046,13 @@ else
+@@ -7684,13 +8140,13 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_hi=`expr '(' $ac_mid ')' - 1`
@@ -2642,7 +2633,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    done
  else
    echo "$as_me: failed program was:" >&5
-@@ -7614,14 +8060,13 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -7698,14 +8154,13 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_lo= ac_hi=
  fi
@@ -2659,7 +2650,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7640,11 +8085,21 @@ test_array [0] = 0
+@@ -7724,11 +8179,21 @@ test_array [0] = 0
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2683,7 +2674,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7657,7 +8112,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -7741,7 +8206,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_lo=`expr '(' $ac_mid ')' + 1`
  fi
@@ -2692,7 +2683,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  done
  case $ac_lo in
  ?*) ac_cv_sizeof_long=$ac_lo;;
-@@ -7676,7 +8131,6 @@ See \`config.log' for more details." >&2
+@@ -7760,7 +8225,6 @@ See \`config.log' for more details." >&2
     { (exit 1); exit 1; }; }
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -2700,7 +2691,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7738,7 +8192,7 @@ echo "$as_me: error: cannot compute size
+@@ -7822,7 +8286,7 @@ echo "$as_me: error: cannot compute size
  See \`config.log' for more details." >&2;}
     { (exit 1); exit 1; }; }
  fi
@@ -2709,7 +2700,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  fi
  rm -f conftest.val
-@@ -7762,21 +8216,28 @@ if test "${ac_cv_func_strtol+set}" = set
+@@ -7846,21 +8310,28 @@ if test "${ac_cv_func_strtol+set}" = set
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -2739,7 +2730,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* Override any gcc2 internal prototype to avoid an error.  */
  #ifdef __cplusplus
  extern "C"
-@@ -7807,11 +8268,21 @@ return f != strtol;
+@@ -7891,11 +8362,21 @@ return f != strtol;
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -2763,7 +2754,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7824,7 +8295,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -7908,7 +8389,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_func_strtol=no
  fi
@@ -2773,7 +2764,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: $ac_cv_func_strtol" >&5
  echo "${ECHO_T}$ac_cv_func_strtol" >&6
-@@ -7841,7 +8313,6 @@ if test "$cross_compiling" = yes; then
+@@ -7925,7 +8407,6 @@ if test "$cross_compiling" = yes; then
    int64_t_HAVE___INT64_T=cross
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -2781,7 +2772,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7871,7 +8342,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -7955,7 +8436,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ( exit $ac_status )
  int64_t_HAVE___INT64_T=no
  fi
@@ -2790,7 +2781,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  fi
  echo "$as_me:$LINENO: result: $int64_t_HAVE___INT64_T" >&5
-@@ -7890,7 +8361,6 @@ if test "$cross_compiling" = yes; then
+@@ -7974,7 +8455,6 @@ if test "$cross_compiling" = yes; then
    int64_t_HAVE_LONG_LONG=cross
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -2798,7 +2789,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -7920,7 +8390,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8004,7 +8484,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  ( exit $ac_status )
  int64_t_HAVE_LONG_LONG=no
  fi
@@ -2807,7 +2798,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  fi
  echo "$as_me:$LINENO: result: $int64_t_HAVE_LONG_LONG" >&5
-@@ -7937,7 +8407,6 @@ if test "${ac_cv_type_int64_t+set}" = se
+@@ -8021,7 +8501,6 @@ if test "${ac_cv_type_int64_t+set}" = se
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -2815,7 +2806,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8004,7 +8473,6 @@ fi
+@@ -8088,7 +8567,6 @@ fi
  echo "$as_me:$LINENO: checking for struct ether_header" >&5
  echo $ECHO_N "checking for struct ether_header... $ECHO_C" >&6
  cat >conftest.$ac_ext <<_ACEOF
@@ -2823,7 +2814,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8012,7 +8480,24 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -8096,7 +8574,24 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  #include <stdio.h>
@@ -2848,7 +2839,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  int
  main ()
-@@ -8031,11 +8516,21 @@ int main()
+@@ -8115,11 +8610,21 @@ int main()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2872,7 +2863,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8058,13 +8553,12 @@ echo "$as_me:$LINENO: result: not found"
+@@ -8142,13 +8647,12 @@ echo "$as_me:$LINENO: result: not found"
  echo "${ECHO_T}not found" >&6
  
  fi
@@ -2887,7 +2878,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8072,7 +8566,24 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -8156,7 +8660,24 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  #include <stdio.h>
@@ -2912,7 +2903,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  int
  main ()
-@@ -8091,11 +8602,21 @@ int main()
+@@ -8175,11 +8696,21 @@ int main()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2936,7 +2927,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8118,7 +8639,7 @@ echo "$as_me:$LINENO: result: not found"
+@@ -8202,7 +8733,7 @@ echo "$as_me:$LINENO: result: not found"
  echo "${ECHO_T}not found" >&6
  
  fi
@@ -2945,7 +2936,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  cross_compiling=no
  
-@@ -8131,21 +8652,28 @@ if eval "test \"\${$as_ac_var+set}\" = s
+@@ -8215,21 +8746,28 @@ if eval "test \"\${$as_ac_var+set}\" = s
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -2975,7 +2966,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* Override any gcc2 internal prototype to avoid an error.  */
  #ifdef __cplusplus
  extern "C"
-@@ -8176,11 +8704,21 @@ return f != $ac_func;
+@@ -8260,11 +8798,21 @@ return f != $ac_func;
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -2999,7 +2990,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8193,7 +8731,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8277,7 +8825,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  eval "$as_ac_var=no"
  fi
@@ -3009,7 +3000,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
  echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
-@@ -8211,7 +8750,6 @@ if test "$cross_compiling" = yes; then
+@@ -8295,7 +8844,6 @@ if test "$cross_compiling" = yes; then
  
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -3017,7 +3008,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8247,7 +8785,7 @@ echo "$as_me: failed program was:" >&5
+@@ -8331,7 +8879,7 @@ echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
  fi
@@ -3026,7 +3017,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  fi
  
  tcphdr=no
-@@ -8256,7 +8794,6 @@ pcap=no
+@@ -8340,7 +8888,6 @@ pcap=no
  echo "$as_me:$LINENO: checking for Linux compliant tcphdr" >&5
  echo $ECHO_N "checking for Linux compliant tcphdr... $ECHO_C" >&6
  cat >conftest.$ac_ext <<_ACEOF
@@ -3034,7 +3025,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8284,11 +8821,21 @@ int main()
+@@ -8368,11 +8915,21 @@ int main()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3058,7 +3049,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8309,12 +8856,11 @@ echo "$as_me:$LINENO: result: not found"
+@@ -8393,12 +8950,11 @@ echo "$as_me:$LINENO: result: not found"
  echo "${ECHO_T}not found" >&6
  
  fi
@@ -3072,7 +3063,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8322,6 +8868,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -8406,6 +8962,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  #include <stdio.h>
@@ -3082,7 +3073,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  #include <netinet/tcp.h>
  
  int
-@@ -8342,11 +8891,21 @@ int main()
+@@ -8426,11 +8985,21 @@ int main()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3106,7 +3097,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8366,7 +8925,7 @@ echo "$as_me:$LINENO: result: not found"
+@@ -8450,7 +9019,7 @@ echo "$as_me:$LINENO: result: not found"
  echo "${ECHO_T}not found" >&6
  
  fi
@@ -3115,7 +3106,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  echo "$as_me:$LINENO: checking for socklen_t" >&5
  echo $ECHO_N "checking for socklen_t... $ECHO_C" >&6
-@@ -8375,7 +8934,6 @@ if test "${ac_cv_type_socklen_t+set}" = 
+@@ -8459,7 +9028,6 @@ if test "${ac_cv_type_socklen_t+set}" = 
  else
  
    cat >conftest.$ac_ext <<_ACEOF
@@ -3123,7 +3114,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8393,11 +8951,21 @@ socklen_t len = 42; return 0;
+@@ -8477,11 +9045,21 @@ socklen_t len = 42; return 0;
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3147,7 +3138,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8410,7 +8978,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8494,7 +9072,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_type_socklen_t=no
  fi
@@ -3156,7 +3147,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  fi
  echo "$as_me:$LINENO: result: $ac_cv_type_socklen_t" >&5
-@@ -8434,7 +9002,6 @@ else
+@@ -8518,7 +9096,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-lpcap  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -3164,7 +3155,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8452,11 +9019,21 @@ main ();
+@@ -8536,11 +9113,21 @@ main ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -3188,7 +3179,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8469,7 +9046,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8553,7 +9140,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_pcap_main=no
  fi
@@ -3198,7 +3189,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pcap_main" >&5
-@@ -8478,7 +9056,6 @@ if test $ac_cv_lib_pcap_main = yes; then
+@@ -8562,7 +9150,6 @@ if test $ac_cv_lib_pcap_main = yes; then
    V_LIB="$V_LIB -lpcap" pcap=yes
  fi
  
@@ -3206,7 +3197,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  
  echo "$as_me:$LINENO: checking to make nse" >&5
-@@ -8545,7 +9122,6 @@ else
+@@ -8629,7 +9216,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-ldl  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -3214,7 +3205,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8569,11 +9145,21 @@ dlopen ();
+@@ -8653,11 +9239,21 @@ dlopen ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -3238,7 +3229,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8586,7 +9172,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8670,7 +9266,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  ac_cv_lib_dl_dlopen=no
  fi
@@ -3248,7 +3239,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_dl_dlopen" >&5
-@@ -8614,7 +9201,6 @@ else
+@@ -8698,7 +9295,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-l$V_LIB_DL $V_STATIC $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -3256,7 +3247,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8632,11 +9218,21 @@ main ();
+@@ -8716,11 +9312,21 @@ main ();
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -3280,7 +3271,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8649,7 +9245,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8733,7 +9339,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  eval "$as_ac_Lib=no"
  fi
@@ -3290,7 +3281,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Lib'}'`" >&5
-@@ -8769,6 +9366,7 @@ V_INCLUDES=`absolutize_list $V_INCLUDES`
+@@ -8853,6 +9460,7 @@ V_INCLUDES=`absolutize_list $V_INCLUDES`
  # AIX 4 /usr/bin/installbsd, which doesn't work without a -g flag
  # AFS /usr/afsws/bin/install, which mishandles nonexistent args
  # SVR4 /usr/ucb/install, which tries to use the nonexistent group "staff"
@@ -3298,7 +3289,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  # ./install, which can be erroneously created by make from ./install.sh.
  echo "$as_me:$LINENO: checking for a BSD-compatible install" >&5
  echo $ECHO_N "checking for a BSD-compatible install... $ECHO_C" >&6
-@@ -8785,6 +9383,7 @@ do
+@@ -8869,6 +9477,7 @@ do
  case $as_dir/ in
    ./ | .// | /cC/* | \
    /etc/* | /usr/sbin/* | /usr/etc/* | /sbin/* | /usr/afsws/bin/* | \
@@ -3306,7 +3297,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    /usr/ucb/* ) ;;
    *)
      # OSF1 and SCO ODT 3.0 have their own names for install.
-@@ -8792,20 +9391,20 @@ case $as_dir/ in
+@@ -8876,20 +9485,20 @@ case $as_dir/ in
      # by default.
      for ac_prog in ginstall scoinst install; do
        for ac_exec_ext in '' $ac_executable_extensions; do
@@ -3341,7 +3332,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
        done
      done
      ;;
-@@ -8866,13 +9465,13 @@ _ACEOF
+@@ -8950,13 +9559,13 @@ _ACEOF
        # `set' does not quote correctly, so add quotes (double-quote
        # substitution turns \\\\ into \\, and sed turns \\ into \).
        sed -n \
@@ -3358,7 +3349,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
        ;;
      esac;
  } |
-@@ -8902,13 +9501,13 @@ test "x$exec_prefix" = xNONE && exec_pre
+@@ -8986,13 +9595,13 @@ test "x$exec_prefix" = xNONE && exec_pre
  # trailing colons and then remove the whole line if VPATH becomes empty
  # (actually we leave an empty line to preserve line numbers).
  if test "x$srcdir" = x.; then
@@ -3375,7 +3366,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  }'
  fi
  
-@@ -8919,7 +9518,7 @@ ac_ltlibobjs=
+@@ -9003,7 +9612,7 @@ ac_ltlibobjs=
  for ac_i in : $LIBOBJS; do test "x$ac_i" = x: && continue
    # 1. Remove the extension, and $U if already installed.
    ac_i=`echo "$ac_i" |
@@ -3384,7 +3375,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    # 2. Add them.
    ac_libobjs="$ac_libobjs $ac_i\$U.$ac_objext"
    ac_ltlibobjs="$ac_ltlibobjs $ac_i"'$U.lo'
-@@ -8963,9 +9562,10 @@ if test -n "${ZSH_VERSION+set}" && (emul
+@@ -9047,9 +9656,10 @@ if test -n "${ZSH_VERSION+set}" && (emul
  elif test -n "${BASH_VERSION+set}" && (set -o posix) >/dev/null 2>&1; then
    set -o posix
  fi
@@ -3396,7 +3387,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    as_unset=unset
  else
    as_unset=false
-@@ -8984,7 +9584,7 @@ for as_var in \
+@@ -9068,7 +9678,7 @@ for as_var in \
    LC_MEASUREMENT LC_MESSAGES LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER \
    LC_TELEPHONE LC_TIME
  do
@@ -3405,7 +3396,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
      eval $as_var=C; export $as_var
    else
      $as_unset $as_var
-@@ -9163,16 +9763,17 @@ rm -f conf$$ conf$$.exe conf$$.file
+@@ -9247,16 +9857,17 @@ rm -f conf$$ conf$$.exe conf$$.file
  if mkdir -p . 2>/dev/null; then
    as_mkdir_p=:
  else
@@ -3425,7 +3416,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  
  # IFS
-@@ -9199,7 +9800,7 @@ _ASBOX
+@@ -9283,7 +9894,7 @@ _ASBOX
  cat >&5 <<_CSEOF
  
  This file was extended by $as_me, which was
@@ -3434,7 +3425,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
    CONFIG_FILES    = $CONFIG_FILES
    CONFIG_HEADERS  = $CONFIG_HEADERS
-@@ -9243,9 +9844,9 @@ Usage: $0 [OPTIONS] [FILE]...
+@@ -9327,9 +9938,9 @@ Usage: $0 [OPTIONS] [FILE]...
    -d, --debug      don't remove temporary files
        --recheck    update $as_me by reconfiguring in the same conditions
    --file=FILE[:TEMPLATE]
@@ -3446,7 +3437,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  Configuration files:
  $config_files
-@@ -9259,11 +9860,10 @@ _ACEOF
+@@ -9343,11 +9954,10 @@ _ACEOF
  cat >>$CONFIG_STATUS <<_ACEOF
  ac_cs_version="\\
  config.status
@@ -3460,7 +3451,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  This config.status script is free software; the Free Software Foundation
  gives unlimited permission to copy, distribute and modify it."
  srcdir=$srcdir
-@@ -9549,9 +10149,9 @@ _ACEOF
+@@ -9633,9 +10243,9 @@ _ACEOF
        (echo ':t
    /@[a-zA-Z_][a-zA-Z_0-9]*@/!b' && cat $tmp/subs.frag) >$tmp/subs-$ac_sed_frag.sed
        if test -z "$ac_sed_cmds"; then
@@ -3472,7 +3463,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
        fi
        ac_sed_frag=`expr $ac_sed_frag + 1`
        ac_beg=$ac_end
-@@ -9569,21 +10169,21 @@ for ac_file in : $CONFIG_FILES; do test 
+@@ -9653,21 +10263,21 @@ for ac_file in : $CONFIG_FILES; do test 
    # Support "outfile[:infile[:infile...]]", defaulting infile="outfile.in".
    case $ac_file in
    - | *:- | *:-:* ) # input from stdin
@@ -3502,7 +3493,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  echo X"$ac_file" |
      sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{ s//\1/; q; }
    	  /^X\(\/\/\)[^/].*/{ s//\1/; q; }
-@@ -9599,10 +10199,10 @@ echo X"$ac_file" |
+@@ -9683,10 +10293,10 @@ echo X"$ac_file" |
        as_dirs="$as_dir $as_dirs"
        as_dir=`(dirname "$as_dir") 2>/dev/null ||
  $as_expr X"$as_dir" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
@@ -3517,7 +3508,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  echo X"$as_dir" |
      sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{ s//\1/; q; }
    	  /^X\(\/\/\)[^/].*/{ s//\1/; q; }
-@@ -9640,12 +10240,45 @@ case $srcdir in
+@@ -9724,12 +10334,45 @@ case $srcdir in
      ac_srcdir=$ac_top_builddir$srcdir$ac_dir_suffix
      ac_top_srcdir=$ac_top_builddir$srcdir ;;
  esac
@@ -3569,7 +3560,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  
    case $INSTALL in
-@@ -9667,7 +10300,7 @@ echo "$as_me: creating $ac_file" >&6;}
+@@ -9751,7 +10394,7 @@ echo "$as_me: creating $ac_file" >&6;}
      configure_input="$ac_file.  "
    fi
    configure_input=$configure_input"Generated from `echo $ac_file_in |
@@ -3578,7 +3569,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
    # First look for the input files in the build tree, otherwise in the
    # src tree.
-@@ -9676,24 +10309,24 @@ echo "$as_me: creating $ac_file" >&6;}
+@@ -9760,24 +10403,24 @@ echo "$as_me: creating $ac_file" >&6;}
        case $f in
        -) echo $tmp/stdin ;;
        [\\/$]*)
@@ -3616,7 +3607,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
        esac
      done` || { (exit 1); exit 1; }
  _ACEOF
-@@ -9735,12 +10368,12 @@ cat >>$CONFIG_STATUS <<\_ACEOF
+@@ -9819,12 +10462,12 @@ cat >>$CONFIG_STATUS <<\_ACEOF
  # NAME is the cpp macro being defined and VALUE is the value it is being given.
  #
  # ac_d sets the value in "#define NAME VALUE" lines.
@@ -3632,7 +3623,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  ac_uB='$,\1#\2define\3'
  ac_uC=' '
  ac_uD=',;t'
-@@ -9749,11 +10382,11 @@ for ac_file in : $CONFIG_HEADERS; do tes
+@@ -9833,11 +10476,11 @@ for ac_file in : $CONFIG_HEADERS; do tes
    # Support "outfile[:infile[:infile...]]", defaulting infile="outfile.in".
    case $ac_file in
    - | *:- | *:-:* ) # input from stdin
@@ -3648,7 +3639,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    * )   ac_file_in=$ac_file.in ;;
    esac
  
-@@ -9767,28 +10400,29 @@ echo "$as_me: creating $ac_file" >&6;}
+@@ -9851,28 +10494,29 @@ echo "$as_me: creating $ac_file" >&6;}
        case $f in
        -) echo $tmp/stdin ;;
        [\\/$]*)
@@ -3692,7 +3683,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  
  _ACEOF
  
-@@ -9811,9 +10445,9 @@ s/[\\&,]/\\&/g
+@@ -9895,9 +10539,9 @@ s/[\\&,]/\\&/g
  s,[\\$`],\\&,g
  t clear
  : clear
@@ -3704,7 +3695,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  : end
  _ACEOF
  # If some macros were called several times there might be several times
-@@ -9827,13 +10461,13 @@ rm -f confdef2sed.sed
+@@ -9911,13 +10555,13 @@ rm -f confdef2sed.sed
  # example, in the case of _POSIX_SOURCE, which is predefined and required
  # on some systems where configure will not decide to define it.
  cat >>conftest.undefs <<\_ACEOF
@@ -3720,7 +3711,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  echo '  # If there are no defines, we may have an empty if/fi' >>$CONFIG_STATUS
  echo '  :' >>$CONFIG_STATUS
  rm -f conftest.tail
-@@ -9842,7 +10476,7 @@ do
+@@ -9926,7 +10570,7 @@ do
    # Write a limited-size here document to $tmp/defines.sed.
    echo '  cat >$tmp/defines.sed <<CEOF' >>$CONFIG_STATUS
    # Speed up: don't consider the non `#define' lines.
@@ -3729,7 +3720,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    # Work around the forget-to-reset-the-flag bug.
    echo 't clr' >>$CONFIG_STATUS
    echo ': clr' >>$CONFIG_STATUS
-@@ -9869,7 +10503,7 @@ do
+@@ -9953,7 +10597,7 @@ do
    # Write a limited-size here document to $tmp/undefs.sed.
    echo '  cat >$tmp/undefs.sed <<CEOF' >>$CONFIG_STATUS
    # Speed up: don't consider the non `#undef'
@@ -3738,7 +3729,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
    # Work around the forget-to-reset-the-flag bug.
    echo 't clr' >>$CONFIG_STATUS
    echo ': clr' >>$CONFIG_STATUS
-@@ -9903,10 +10537,10 @@ echo "$as_me: $ac_file is unchanged" >&6
+@@ -9987,10 +10631,10 @@ echo "$as_me: $ac_file is unchanged" >&6
      else
        ac_dir=`(dirname "$ac_file") 2>/dev/null ||
  $as_expr X"$ac_file" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
@@ -3753,7 +3744,7 @@ $NetBSD: patch-af,v 1.4 2004/03/08 23:55:24 minskim Exp $
  echo X"$ac_file" |
      sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{ s//\1/; q; }
    	  /^X\(\/\/\)[^/].*/{ s//\1/; q; }
-@@ -9922,10 +10556,10 @@ echo X"$ac_file" |
+@@ -10006,10 +10650,10 @@ echo X"$ac_file" |
        as_dirs="$as_dir $as_dirs"
        as_dir=`(dirname "$as_dir") 2>/dev/null ||
  $as_expr X"$as_dir" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
