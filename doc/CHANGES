@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11081 2005/09/08 10:25:13 bouyer Exp $
+$NetBSD: CHANGES,v 1.11082 2005/09/08 13:21:52 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3978,3 +3978,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/xmris to 4.0.5 [jdc 2005-09-08]
 	Updated math/pari to 2.1.6 [adam 2005-09-08]
 	Added x11/gtk2+extra version 2.1.1 [bouyer 2005-09-08]
+	Updated sysutils/gkrellm to 2.2.7 [cube 2005-09-08]
