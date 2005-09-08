@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.13 2004/07/05 08:42:27 cube Exp $
+$NetBSD: patch-ab,v 1.14 2005/09/08 13:19:56 cube Exp $
 
---- src/sysdeps/netbsd.c.orig	2004-05-01 19:46:38.000000000 +0200
+--- src/sysdeps/netbsd.c.orig	2005-05-24 05:45:10.000000000 +0200
 +++ src/sysdeps/netbsd.c
 @@ -63,7 +63,8 @@ gkrellm_sys_cpu_read_data(void)
  {
@@ -82,7 +82,7 @@ $NetBSD: patch-ab,v 1.13 2004/07/05 08:42:27 cube Exp $
     if (getloadavg(&avenrun, 1) <= 0)
  		avenrun = 0;
  	gkrellm_proc_assign_data(n_processes, 0, n_forks, avenrun);
-@@ -183,6 +178,97 @@ gkrellm_sys_proc_init(void)
+@@ -183,6 +178,96 @@ gkrellm_sys_proc_init(void)
  
  
  /* ===================================================================== */
@@ -91,7 +91,6 @@ $NetBSD: patch-ab,v 1.13 2004/07/05 08:42:27 cube Exp $
 +#include <sys/vmmeter.h>
 +#include <sys/sysctl.h>
 +#include <uvm/uvm_extern.h>
-+#include <kvm.h>
 +
 +
 +void
@@ -180,7 +179,7 @@ $NetBSD: patch-ab,v 1.13 2004/07/05 08:42:27 cube Exp $
  /* Sensor monitor interface */
  
    /* Tables of voltage correction factors and offsets derived from the
-@@ -295,7 +381,7 @@ gkrellm_sys_sensors_init(void)
+@@ -295,7 +380,7 @@ gkrellm_sys_sensors_init(void)
     int fd;			/* file desc. for /dev/sysmon */
     int id = 0;			/* incremented for each sensor */
     int type;
@@ -189,7 +188,7 @@ $NetBSD: patch-ab,v 1.13 2004/07/05 08:42:27 cube Exp $
     gboolean	found_sensors = FALSE;
  
     /* check if some sensor is configured */
-@@ -336,3 +422,68 @@ gkrellm_sys_sensors_init(void)
+@@ -336,3 +421,149 @@ gkrellm_sys_sensors_init(void)
     return found_sensors;
  }
  
@@ -240,7 +239,7 @@ $NetBSD: patch-ab,v 1.13 2004/07/05 08:42:27 cube Exp $
 +		wbytes = 0;
 +#endif
 +
-+		gkrellm_disk_assign_data_by_name(dk_drives[i].dk_name, rbytes, wbytes);
++		gkrellm_disk_assign_data_by_name(dk_drives[i].dk_name, rbytes, wbytes, FALSE);
 +	}
 +
 +	free(dk_drives);
@@ -258,3 +257,84 @@ $NetBSD: patch-ab,v 1.13 2004/07/05 08:42:27 cube Exp $
 +	{
 +	return -1;  /* append disk charts as added */
 +	}
++
++#if __NetBSD_Version__ >= 399000100
++
++#include "../inet.h"
++
++#include <errno.h>
++#include <sys/socket.h>
++#include <netinet/in.h>
++#include <netinet/tcp_fsm.h>
++
++static const struct gkrellm_inet_fam {
++	sa_family_t family;
++	const char *mib;
++} families[] = { {AF_INET, "net.inet.tcp.pcblist"},
++#ifdef INET6
++    {AF_INET6, "net.inet6.tcp6.pcblist"},
++#endif
++    {0, NULL} };
++
++void
++gkrellm_sys_inet_read_tcp_data()
++{
++	ActiveTCP tcp;
++	int mib[CTL_MAXNAME], i;
++	size_t sz;
++	u_int namelen;
++	struct kinfo_pcb *pcbt = NULL;
++	const struct gkrellm_inet_fam *pf = families;
++
++	while (pf->mib != NULL) {
++		sz = CTL_MAXNAME;
++		if (sysctlnametomib(pf->mib, mib, &sz) == -1)
++			return;
++		namelen = sz;
++
++		mib[namelen++] = PCB_ALL;
++		mib[namelen++] = 0;
++		mib[namelen++] = sizeof(struct kinfo_pcb);
++		mib[namelen++] = INT_MAX;
++
++		sz = 0;
++		pcbt = NULL;
++		if (sysctl(&mib[0], namelen, pcbt, &sz, NULL, 0) == -1)
++			return;
++		pcbt = malloc(sz);
++		if (pcbt == NULL)
++			return;
++		if (sysctl(&mib[0], namelen, pcbt, &sz, NULL, 0) == -1)
++			return;
++
++		sz /= sizeof(struct kinfo_pcb);
++		for (i = 0; i < sz; i++) {
++			tcp.family = pf->family;
++			if (pf->family == AF_INET) {
++				struct sockaddr_in *sin =
++				    (struct sockaddr_in *)&pcbt[i].ki_dst;
++				tcp.remote_addr.s_addr = sin->sin_addr.s_addr;
++				tcp.remote_port = sin->sin_port;
++
++				sin = (struct sockaddr_in *)&pcbt[i].ki_src;
++				tcp.local_port = sin->sin_port;
++#ifdef INET6
++			} else { /* AF_INET6 */
++				struct sockaddr_in6 *sin =
++				    (struct sockaddr_in6 *)&pcbt[i].ki_dst;
++				memcpy(&tcp.remote_addr6, &sin->sin6_addr,
++				    sizeof(struct in6_addr));
++				tcp.remote_port = sin->sin6_port;
++
++				sin = (struct sockaddr_in6 *)&pcbt[i].ki_src;
++				tcp.local_port = sin->sin6_port;
++#endif
++			}
++			if (pcbt[i].ki_tstate == TCPS_ESTABLISHED)
++				gkrellm_inet_log_tcp_port_data(&tcp);
++		}
++		free(pcbt);
++		pf++;
++	}
++}
++#endif

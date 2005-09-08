@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/06/07 17:01:50 cube Exp $
+$NetBSD: patch-ad,v 1.2 2005/09/08 13:19:56 cube Exp $
 
---- src/sysdeps/bsd-net-open.c.orig	2004-05-01 19:46:38.000000000 +0200
+--- src/sysdeps/bsd-net-open.c.orig	2005-05-24 05:44:48.000000000 +0200
 +++ src/sysdeps/bsd-net-open.c
-@@ -23,108 +23,6 @@
+@@ -23,110 +23,10 @@
  
  
  /* ===================================================================== */
@@ -76,7 +76,7 @@ $NetBSD: patch-ad,v 1.1 2004/06/07 17:01:50 cube Exp $
 -		wbytes = 0;
 -#endif
 -
--		gkrellm_disk_assign_data_by_name(buf, rbytes, wbytes);
+-		gkrellm_disk_assign_data_by_name(buf, rbytes, wbytes, FALSE);
 -		}
 -	}
 -}
@@ -110,8 +110,20 @@ $NetBSD: patch-ad,v 1.1 2004/06/07 17:01:50 cube Exp $
 -/* ===================================================================== */
  /* Inet monitor interface */
  
++#if defined(__OpenBSD__) || ( defined(__NetBSD__) && __NetBSD_Version__ < 399000100 )
++
  #include "../inet.h"
-@@ -199,95 +97,6 @@ gkrellm_sys_inet_init(void)
+ 
+ /* NO IPv6 SUPPORT YET */
+@@ -191,6 +91,7 @@ gkrellm_sys_inet_read_tcp_data(void)
+       next = (struct inpcb *)inpcb.inp_queue.cqe_next;
+    }
+ }
++#endif
+ 
+ gboolean
+ gkrellm_sys_inet_init(void)
+@@ -199,95 +100,6 @@ gkrellm_sys_inet_init(void)
  	}
  
  /* ===================================================================== */

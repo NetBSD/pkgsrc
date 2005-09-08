@@ -1,8 +1,20 @@
-$NetBSD: patch-aq,v 1.1 2005/03/30 15:26:43 cube Exp $
+$NetBSD: patch-aq,v 1.2 2005/09/08 13:19:56 cube Exp $
 
---- server/main.c.orig	2005-03-11 16:03:54.000000000 +0100
+--- server/main.c.orig	2005-05-24 05:46:38.000000000 +0200
 +++ server/main.c
-@@ -1051,7 +1051,7 @@ main(gint argc, gchar **argv)
+@@ -203,7 +203,10 @@ cidr_match(struct sockaddr *sa, socklen_
+ 	char		*p, *ep;
+ 	guchar		*addr, *pat;
+ 	u_int32_t	mask;
+-	int			plen, i;
++	int		plen;
++#if defined(INET6)
++	int		i;
++#endif
+ 	gboolean	result;
+ 
+ 	buf = g_strdup(allowed);
+@@ -1062,7 +1065,7 @@ main(gint argc, gchar **argv)
  				{
  				client_fd = accept(server_fd,
  						(struct sockaddr *) &client_addr,
