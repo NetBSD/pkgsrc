@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11084 2005/09/08 15:31:35 wiz Exp $
+$NetBSD: CHANGES,v 1.11085 2005/09/08 18:49:48 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3981,3 +3981,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/gkrellm to 2.2.7 [cube 2005-09-08]
 	Updated games/xscavenger to 1.4.4nb1 [martin 2005-09-08]
 	Updated games/wesnoth to 0.9.7 [wiz 2005-09-08]
+	Updated lang/php5 to 5.0.5 [jdolecek 2005-09-08]
