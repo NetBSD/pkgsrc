@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2005/09/08 15:51:40 jdc Exp $
+# $NetBSD: Makefile,v 1.48 2005/09/08 16:24:15 schmonz Exp $
 
 DISTNAME=	arts-1.4.2
 CATEGORIES=	audio
 HOMEPAGE=	http://www.kde.org/areas/multimedia/
 COMMENT=	Analog Real-Time Synthesizer
-
-# XXX: hack - work round an ICE with GCC 3.3 on sparc
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
-GCC_REQD+=              3.4
-.endif
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
