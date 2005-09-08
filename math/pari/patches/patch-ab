@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2003/07/07 21:57:50 jtb Exp $
+$NetBSD: patch-ab,v 1.5 2005/09/08 08:39:59 adam Exp $
 
 --- config/Makefile.SH.orig
 +++ config/Makefile.SH
@@ -242,7 +242,7 @@ $NetBSD: patch-ab,v 1.4 2003/07/07 21:57:50 jtb Exp $
 -	-\$(RM) \$(LIBDIR)/\$(LIBPARI_STA)
 -	\$(INSTALL_DATA) \$(LIBPARI_STA) \$(LIBDIR)/\$(LIBPARI_STA).$version
 -	-\$(LN) \$(LIBPARI_STA).$version \$(LIBDIR)/\$(LIBPARI_STA)
-+	\$(LIBTOOL) --mode=install \$(INSTALL_DATA) \$(LIBPARI) \$(LIBDIR)/
++	\$(LIBTOOL) --mode=install \$(BSD_INSTALL_LIB) \$(LIBPARI) \$(LIBDIR)/
  
 -install-lib-dyn: \$(LIBPARI_DYN)
 -	-mkdir -p \$(LIBDIR)
