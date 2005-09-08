@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2005/09/05 07:37:50 recht Exp $
+# $NetBSD: Makefile,v 1.73 2005/09/08 07:31:54 recht Exp $
 
 DISTNAME=	libxml2-2.6.21
 CATEGORIES=	textproc
@@ -12,7 +12,7 @@ COMMENT=	XML parser library from the GNOME project
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake tar
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
