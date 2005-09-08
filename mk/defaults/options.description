@@ -24,8 +24,6 @@ audiofile
 authlib	
 avifile	
 awl-sql-tests	
-backend-mysql	
-backend-pgsql	
 bayes-sql-tests	
 bdb	
 bktr	
@@ -72,13 +70,11 @@ ezmlm-althash		Patch to hash subscriber list case-insensitively.
 faac	
 faad	
 fam	
+fastcgi			Use FastCGI as the CGI manager.
 ffmpeg	
 firefox			Use firefox as gecko rendering engine.
 flac	
 freetype	
-frontend-fastcgi	
-frontend-modperl1	
-frontend-modperl2	
 gd	
 gdbm	
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
@@ -163,6 +159,8 @@ mjpegtools-cmov		Enable CMOV support (i386 only).
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
 modperl	
+modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
+modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 mozilla			Use mozilla as gecko rendering engine.
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
@@ -170,7 +168,7 @@ mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 multibyte	
 mutt-hcache		Enable header caching in mutt.
-mysql	
+mysql			Enable MySQL support.
 mysql4	
 nas			Enable usage of the Network Audio System.
 native	
