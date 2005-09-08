@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/04 11:29:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/08 18:29:56 drochner Exp $
 bin/luma
 lib/luma/__init__.py
 lib/luma/__init__.pyc
@@ -26,6 +26,12 @@ lib/luma/base/gui/BaseSelector.pyc
 lib/luma/base/gui/BaseSelectorDesign.py
 lib/luma/base/gui/BaseSelectorDesign.pyc
 lib/luma/base/gui/BaseSelectorDesign.ui
+lib/luma/base/gui/ImprovedServerDialog.py
+lib/luma/base/gui/ImprovedServerDialog.pyc
+lib/luma/base/gui/ImprovedServerDialog.ui
+lib/luma/base/gui/ImprovedServerDialogDesign.py
+lib/luma/base/gui/ImprovedServerDialogDesign.pyc
+lib/luma/base/gui/ImprovedServerDialogDesign.ui
 lib/luma/base/gui/LanguageDialog.py
 lib/luma/base/gui/LanguageDialog.pyc
 lib/luma/base/gui/LanguageDialogDesign.py
@@ -122,6 +128,7 @@ lib/luma/base/utils/gui/PasswordDialogDesign.ui
 lib/luma/base/utils/gui/PluginInformation.py
 lib/luma/base/utils/gui/PluginInformation.pyc
 lib/luma/base/utils/gui/PluginInformation.ui
+lib/luma/base/utils/gui/PromptPasswordDialog.ui
 lib/luma/base/utils/gui/SearchForm.py
 lib/luma/base/utils/gui/SearchForm.pyc
 lib/luma/base/utils/gui/SearchFormDesign.py
@@ -227,21 +234,13 @@ lib/luma/plugins/schemabrowser/SchemaView.pyc
 lib/luma/plugins/schemabrowser/SchemaViewDesign.py
 lib/luma/plugins/schemabrowser/SchemaViewDesign.pyc
 lib/luma/plugins/schemabrowser/SchemaViewDesign.ui
+lib/luma/plugins/schemabrowser/SearchView.py
+lib/luma/plugins/schemabrowser/SearchView.pyc
 lib/luma/plugins/schemabrowser/__init__.py
 lib/luma/plugins/schemabrowser/__init__.pyc
 lib/luma/plugins/schemabrowser/plugin.meta
 lib/luma/plugins/schemabrowser/schemabrowser.py
 lib/luma/plugins/schemabrowser/schemabrowser.pyc
-lib/luma/plugins/schemaeditor/SchemaEditor.py
-lib/luma/plugins/schemaeditor/SchemaEditor.pyc
-lib/luma/plugins/schemaeditor/SchemaEditorDesign.py
-lib/luma/plugins/schemaeditor/SchemaEditorDesign.pyc
-lib/luma/plugins/schemaeditor/SchemaEditorDesign.ui
-lib/luma/plugins/schemaeditor/__init__.py
-lib/luma/plugins/schemaeditor/__init__.pyc
-lib/luma/plugins/schemaeditor/plugin.meta
-lib/luma/plugins/schemaeditor/schemaeditor.py
-lib/luma/plugins/schemaeditor/schemaeditor.pyc
 lib/luma/plugins/search_plugin/SearchView.py
 lib/luma/plugins/search_plugin/SearchView.pyc
 lib/luma/plugins/search_plugin/__init__.py
@@ -332,8 +331,10 @@ share/luma/icons/LOGO.README
 share/luma/icons/addattribute.png
 share/luma/icons/alias.png
 share/luma/icons/binary.png
+share/luma/icons/auth32.png
 share/luma/icons/binary_big.png
 share/luma/icons/bomb.png
+share/luma/icons/certificate48.png
 share/luma/icons/clear.png
 share/luma/icons/config.png
 share/luma/icons/delete.png
@@ -371,6 +372,8 @@ share/luma/icons/mainwin/gear.png
 share/luma/icons/mainwin/logger.png
 share/luma/icons/mainwin/reload.png
 share/luma/icons/manage.png
+share/luma/icons/network32.png
+share/luma/icons/network48.png
 share/luma/icons/new.png
 share/luma/icons/newEntry.png
 share/luma/icons/no.png
@@ -411,6 +414,7 @@ share/luma/icons/reload.png
 share/luma/icons/save.png
 share/luma/icons/secure-alias.png
 share/luma/icons/secure.png
+share/luma/icons/security48.png
 share/luma/icons/server.png
 share/luma/icons/single.png
 share/luma/icons/tip.png
@@ -443,7 +447,6 @@ share/man/man1/luma.1
 @dirrm lib/luma/plugins/usermanagement
 @dirrm lib/luma/plugins/template_plugin
 @dirrm lib/luma/plugins/search_plugin
-@dirrm lib/luma/plugins/schemaeditor
 @dirrm lib/luma/plugins/schemabrowser
 @dirrm lib/luma/plugins/mass_creation_plugin
 @dirrm lib/luma/plugins/browser_plugin
