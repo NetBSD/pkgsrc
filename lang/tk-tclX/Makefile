@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/16 01:15:32 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/09/08 21:32:35 minskim Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -10,6 +10,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tclx/}
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://tclx.sourceforge.net/
 COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
+
+.include "../../lang/tcl/Makefile.version"
+.include "../../x11/tk/Makefile.version"
 
 CONFLICTS+=	tclX-[0-9]*
 
@@ -27,9 +30,10 @@ TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ENV+=		\
-	PKGSRC_TCL_SRC_DIR="${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.9" \
-	PKGSRC_TK_SRC_DIR="${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.9"
+PKGSRC_TCL_SRC_DIR="${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl${TCL_VERSION}"
+PKGSRC_TK_SRC_DIR="${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk${TK_VERSION}"
+CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR="${PKGSRC_TCL_SRC_DIR}" \
+			PKGSRC_TK_SRC_DIR="${PKGSRC_TK_SRC_DIR}"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
@@ -48,10 +52,10 @@ INSTALLATION_DIRS=	bin include
 
 post-extract:
 	${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
-	@if [ ! -r ${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.8 ]; then	\
+	@if [ ! -r ${PKGSRC_TCL_SRC_DIR} ]; then	\
 		cd ../../lang/tcl && ${MAKE} extract;			\
 	fi
-	@if [ ! -r ${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.8 ]; then	\
+	@if [ ! -r ${PKGSRC_TK_SRC_DIR} ]; then	\
 		cd ../../x11/tk && ${MAKE} extract;			\
 	fi
 
