@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/09/08 13:39:21 martin Exp $
+
+--- scav.h.orig	2001-01-10 17:10:22.000000000 +0100
++++ scav.h	2005-09-08 14:52:08.000000000 +0200
+@@ -383,7 +383,7 @@ extern uchar ibuff[IBUFFLEN];
+ extern uchar *getgfx();
+ 
+ 
+-extern long readlong();
++extern uint32_t readlong();	/* because that's what it reads */
+ extern int rbs();
+ extern int myci();
+ 
