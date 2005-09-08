@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2004/05/24 18:13:19 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2005/09/08 15:29:31 drochner Exp $
 
---- configure.orig	2004-05-21 22:06:50.000000000 +0200
+--- configure.orig	2005-01-15 18:01:09.000000000 +0100
 +++ configure
-@@ -24809,7 +24809,7 @@ echo $ECHO_N "checking Look for $PY_PREF
- 			  echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6
- 			  PY_LIBS="python$PY_VERSION"
--			  PY_LIB_LOC="-L$PY_EXEC_PREFIX/lib/python$PY_VERSION/config"
-+			  PY_LIB_LOC="-L$PY_EXEC_PREFIX/lib"
- 			  PY_CFLAGS="-I$PY_PREFIX/include/python$PY_VERSION"
- 			  PY_MAKEFILE="$PY_EXEC_PREFIX/lib/python$PY_VERSION/config/Makefile"
- 			  PY_LOCALMODLIBS=`sed -n -e 's/^LOCALMODLIBS=\(.*\)/\1/p' $PY_MAKEFILE`
+@@ -27200,7 +27200,7 @@ echo $ECHO_N "checking Look for $PY_PREF
+ 	echo "$as_me:$LINENO: result: $marker_ok" >&5
+ echo "${ECHO_T}$marker_ok" >&6
+ 	PY_LIBS="python$PY_VERSION"
+-    	PY_LIB_LOC=`$PYTHON -c 'from distutils.sysconfig import get_config_var; print get_config_var("LIBPL")'`
++    	PY_LIB_LOC="$PY_EXEC_PREFIX/lib"
+     	PY_LIB_LOC="-L$PY_LIB_LOC"
+ 	PY_CFLAGS="-I$PY_PREFIX/include/python$PY_VERSION"
+ 	echo 'echo_python_libs:

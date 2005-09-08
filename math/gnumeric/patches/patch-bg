@@ -1,4 +1,4 @@
-$NetBSD: patch-bg,v 1.1 2005/09/06 17:58:56 drochner Exp $
+$NetBSD: patch-bg,v 1.1 2005/09/08 15:29:32 drochner Exp $
 
 --- src/sheet-object-cell-comment.c.orig	2005-09-06 09:54:47.000000000 +0200
 +++ src/sheet-object-cell-comment.c
