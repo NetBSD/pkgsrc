@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/19 17:34:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/08 18:00:35 drochner Exp $
 bin/gourmet
 ${PYSITELIB}/gourmet/FauxActionGroups.py
 ${PYSITELIB}/gourmet/FauxActionGroups.pyc
@@ -90,6 +90,9 @@ ${PYSITELIB}/gourmet/defaults_en_GB.pyo
 ${PYSITELIB}/gourmet/defaults_es.py
 ${PYSITELIB}/gourmet/defaults_es.pyc
 ${PYSITELIB}/gourmet/defaults_es.pyo
+${PYSITELIB}/gourmet/defaults_fr.py
+${PYSITELIB}/gourmet/defaults_fr.pyc
+${PYSITELIB}/gourmet/defaults_fr.pyo
 ${PYSITELIB}/gourmet/defaults_nl.py
 ${PYSITELIB}/gourmet/defaults_nl.pyc
 ${PYSITELIB}/gourmet/defaults_nl.pyo
@@ -174,9 +177,27 @@ ${PYSITELIB}/gourmet/importers/gxml_importer.pyo
 ${PYSITELIB}/gourmet/importers/html_importer.py
 ${PYSITELIB}/gourmet/importers/html_importer.pyc
 ${PYSITELIB}/gourmet/importers/html_importer.pyo
-${PYSITELIB}/gourmet/importers/html_rules.py
-${PYSITELIB}/gourmet/importers/html_rules.pyc
-${PYSITELIB}/gourmet/importers/html_rules.pyo
+${PYSITELIB}/gourmet/importers/html_plugins/__init__.py
+${PYSITELIB}/gourmet/importers/html_plugins/__init__.pyc
+${PYSITELIB}/gourmet/importers/html_plugins/__init__.pyo
+${PYSITELIB}/gourmet/importers/html_plugins/allrecipes.py
+${PYSITELIB}/gourmet/importers/html_plugins/allrecipes.pyc
+${PYSITELIB}/gourmet/importers/html_plugins/allrecipes.pyo
+${PYSITELIB}/gourmet/importers/html_plugins/eating_well.py
+${PYSITELIB}/gourmet/importers/html_plugins/eating_well.pyc
+${PYSITELIB}/gourmet/importers/html_plugins/eating_well.pyo
+${PYSITELIB}/gourmet/importers/html_plugins/epicurious.py
+${PYSITELIB}/gourmet/importers/html_plugins/epicurious.pyc
+${PYSITELIB}/gourmet/importers/html_plugins/epicurious.pyo
+${PYSITELIB}/gourmet/importers/html_plugins/foodnetwork.py
+${PYSITELIB}/gourmet/importers/html_plugins/foodnetwork.pyc
+${PYSITELIB}/gourmet/importers/html_plugins/foodnetwork.pyo
+${PYSITELIB}/gourmet/importers/html_plugins/html_helpers.py
+${PYSITELIB}/gourmet/importers/html_plugins/html_helpers.pyc
+${PYSITELIB}/gourmet/importers/html_plugins/html_helpers.pyo
+${PYSITELIB}/gourmet/importers/html_plugins/recipezaar.py
+${PYSITELIB}/gourmet/importers/html_plugins/recipezaar.pyc
+${PYSITELIB}/gourmet/importers/html_plugins/recipezaar.pyo
 ${PYSITELIB}/gourmet/importers/importer.py
 ${PYSITELIB}/gourmet/importers/importer.pyc
 ${PYSITELIB}/gourmet/importers/importer.pyo
@@ -210,6 +231,9 @@ ${PYSITELIB}/gourmet/keyEditor.pyo
 ${PYSITELIB}/gourmet/keymanager.py
 ${PYSITELIB}/gourmet/keymanager.pyc
 ${PYSITELIB}/gourmet/keymanager.pyo
+${PYSITELIB}/gourmet/mnemonic_manager.py
+${PYSITELIB}/gourmet/mnemonic_manager.pyc
+${PYSITELIB}/gourmet/mnemonic_manager.pyo
 ${PYSITELIB}/gourmet/optionTable.py
 ${PYSITELIB}/gourmet/optionTable.pyc
 ${PYSITELIB}/gourmet/optionTable.pyo
@@ -264,7 +288,34 @@ share/gourmet/recbox.png
 share/gourmet/recipe.dtd
 share/gourmet/shopList.glade
 share/gourmet/splash.png
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/de_AT/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/nl_BE/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/sv_SE/LC_MESSAGES/gourmet.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gourmet.mo
 @dirrm share/gourmet
+@dirrm ${PYSITELIB}/gourmet/importers/html_plugins
 @dirrm ${PYSITELIB}/gourmet/importers
 @dirrm ${PYSITELIB}/gourmet/exporters
 @dirrm ${PYSITELIB}/gourmet/backends
