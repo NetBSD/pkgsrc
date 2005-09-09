@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/09/07 10:48:47 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/09/09 18:26:00 dmcmahill Exp $
 bin/intersci
 bin/intersci-n
 bin/scilab
@@ -11288,7 +11288,13 @@ lib/${PKGNAME}/util/scidem
 lib/${PKGNAME}/util/scidem-gcwin32
 lib/${PKGNAME}/util/scidoc
 lib/${PKGNAME}/util/scilib
-@comment $NetBSD: PLIST,v 1.7 2005/09/07 10:48:47 dmcmahill Exp $
+share/doc/${PKGNAME}/ACKNOWLEDGEMENTS
+share/doc/${PKGNAME}/CHANGES
+share/doc/${PKGNAME}/README_Unix
+share/doc/${PKGNAME}/Version.incl
+share/doc/${PKGNAME}/licence.txt
+share/doc/${PKGNAME}/license.txt
+@dirrm share/doc/${PKGNAME}
 @dirrm lib/${PKGNAME}/util
 @dirrm lib/${PKGNAME}/tests/demos
 @dirrm lib/${PKGNAME}/tests/Java
