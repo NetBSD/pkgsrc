@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2005/09/09 23:13:12 martin Exp $
+
+--- dispatcher.c.orig	2001-03-14 20:33:10.000000000 +0100
++++ dispatcher.c	2005-09-10 01:10:33.000000000 +0200
+@@ -240,7 +240,7 @@ dispatcher_mainloop(void)
+ 	nfds_t pfds;
+ 	int nfds, errcnt = 0;
+ 	int timeout;
+-	time_t delta;
++	time_t delta = 0;
+ 
+ 	while (!TAILQ_EMPTY(&contexts)) {
+ 		for (pfds = 0, ctx = TAILQ_FIRST(&contexts); ctx != NULL;
