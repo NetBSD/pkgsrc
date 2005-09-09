@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/09/07 17:46:28 reed Exp $
+# $NetBSD: Makefile,v 1.26 2005/09/09 12:31:22 tonio Exp $
 
 DISTNAME=	t1lib-5.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts devel graphics
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=libs/graphics/}
 
