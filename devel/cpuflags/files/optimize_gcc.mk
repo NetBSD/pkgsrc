@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.22 2005/06/25 10:50:49 abs Exp $
+# $Id: optimize_gcc.mk,v 1.23 2005/09/09 16:03:32 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -20,6 +20,7 @@ COPT_FLAGS=
 
 # This is a horrible mess, but how else to adjust per package?
 
+PKGNAME?=${DISTNAME}
 PKGBASE?=${PKGNAME:C/-[^-]*$//}
 
 COPT_FLAGS+=-ffast-math -fomit-frame-pointer
