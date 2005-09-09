@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.282 2005/09/06 10:30:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.283 2005/09/09 11:05:00 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1119,7 +1119,7 @@ sub readmakefile($$$$) {
 
 		push(@{$all_lines}, $line);
 		# try to get any included file
-		if ($text =~ qr"^\.\s*include\s+\"([-./\w]+)\"$") {
+		if ($text =~ qr"^\.\s*include\s+\"([^\$]+)\"$") {
 			$includefile = $1;
 			if (exists($seen_Makefile_include->{$includefile})) {
 				$contents .= "### pkglint ### skipped $includefile\n";
