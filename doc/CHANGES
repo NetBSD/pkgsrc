@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11088 2005/09/08 20:25:32 agc Exp $
+$NetBSD: CHANGES,v 1.11089 2005/09/09 10:56:26 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3991,3 +3991,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Update databases/luma to 2.2.1 [drochner 2005-09-08]
 	Update www/liferea to 0.9.7b [drochner 2005-09-08]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2005Q3 branch [agc 2005-09-08]
+	Updated devel/rt3 to 3.2.3nb1 [cube 2005-09-09]
