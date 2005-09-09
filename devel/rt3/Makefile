@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/09/08 13:43:05 cube Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/09 10:54:15 cube Exp $
 
 DISTNAME=		rt-3.2.3
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -51,21 +52,21 @@ DEPENDS+=	p5-HTML-Format>=2.03:../../www/p5-HTML-Format
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 
 # Front-end dependencies:
-.if !empty(PKG_OPTIONS:Mfrontend-modperl1)
+.if !empty(PKG_OPTIONS:Mmodperl1)
 DEPENDS+=	p5-libapreq>=1.2:../../www/p5-libapreq
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
-.elif !empty(PKG_OPTIONS:Mfrontend-modperl2)
+.elif !empty(PKG_OPTIONS:Mmodperl2)
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
-.elif !empty(PKG_OPTIONS:Mfrontend-fastcgi)
+.elif !empty(PKG_OPTIONS:Mfastcgi)
 DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
 .endif
 
 # Back-end dependencies
-.if !empty(PKG_OPTIONS:Mbackend-mysql)
+.if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	mysql-client>=4.0.9:../../databases/mysql4-client
 DEPENDS+=	p5-DBD-mysql>=2.1018:../../databases/p5-DBD-mysql
 _RT_DB_TYPE=		mysql
-.elif !empty(PKG_OPTIONS:Mbackend-pgsql)
+.elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
 _RT_DB_TYPE=		Pg
 .endif
