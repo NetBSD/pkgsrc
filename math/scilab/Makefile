@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/09/07 10:48:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.65 2005/09/09 18:30:01 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -23,7 +23,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		tee
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-xaw3d
+CONFIGURE_ARGS+=	--without-local-xaw
 
 EVAL_PREFIX+=		TCL_PREFIX=tcl
 EVAL_PREFIX+=		TK_PREFIX=tk
@@ -127,4 +127,5 @@ CONFIGURE_ARGS+=	--without-ocaml
 .include "../../parallel/pvm3/buildlink3.mk"
 .include "../../textproc/sablotron/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
