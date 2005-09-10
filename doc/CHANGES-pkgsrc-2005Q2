@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.109 2005/09/10 07:48:11 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.110 2005/09/10 11:17:33 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -297,3 +297,5 @@ Pullup ticket 744 - requested by Julio M. Merino Vidal
 security fix for gpdf
 Pullup ticket 751 - requested by Lubomir Sedlacik
 build fix for PAM
+Pullup ticket 738 - requested by Takahiro Kambe
+security fix for squid
