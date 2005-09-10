@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.107 2005/09/08 10:28:07 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.108 2005/09/10 07:47:35 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -295,3 +295,5 @@ Pullup ticket 737 - requested by Adrian Portelli
 security fix for phpldapadmin
 Pullup ticket 744 - requested by Julio M. Merino Vidal
 security fix for gpdf
+Pullup ticket 751 - requested by Lubomir Sedlacik
+build fix for linux-pam-using packages
