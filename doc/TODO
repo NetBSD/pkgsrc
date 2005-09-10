@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3879 2005/09/09 16:28:18 jmmv Exp $
+$NetBSD: TODO,v 1.3880 2005/09/10 21:07:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -439,6 +439,7 @@ Suggested package updates
 	o enscript-1.6.4
 	o erlang-10b-6
 	o esh-0.8.5
+	o estd-0.4 [pkg/31285]
 	o et-2.60
 	o etach-1.4.0
 	o exmh-2.7.2
@@ -495,7 +496,6 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o grace-5.1.18
-	o gramps-2.0.6
 	o grap-1.32
 	o grep-2.5.1a
 	o grepmail-5.3032
@@ -515,7 +515,6 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o guile-pg-0.27
 	o guile-www-1.1.1
-	o gxine-0.4.7
 	o gzrecover-0.3
 	o hackbot-2.21
 	o hashcash-1.16
@@ -597,7 +596,6 @@ Suggested package updates
 	o libtool-1.5.20
 	o libtorrent-0.7.3
 	o licq-core-1.3.0
-	o liferea-0.9.7b
 	o lilypond-2.6
 	o linuxsms-0.77
 	o lmbench-2.0.4
@@ -608,6 +606,7 @@ Suggested package updates
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mail-notification-1.1
+	o mailgraph-1.11
 	o mailscanner-4.42
 	o mairix-0.15.2
 	o makeself-2.1.3
@@ -812,7 +811,6 @@ Suggested package updates
 	o phoon-20030120
 	o photopc-3.05
 	o php-4.4.0
-	o php-5.0.5
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
@@ -887,11 +885,12 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt3-3.3.5
 	o quagga-0.98.5
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
-	o raine-0.43.0
+	o raine-0.43.1
 	o randread-0.2
 	o raptor-1.4.5
 	o rar-linux-3.5.0
@@ -922,6 +921,7 @@ Suggested package updates
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
 	o rtcw-1.41.3
+	o ruby-RMagick-1.9.1 [pkg/31251]
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
@@ -931,6 +931,8 @@ Suggested package updates
 	o sablevm-classpath-gui-1.12
 	o samba-3.0.20 [See also http://www.samba.org/samba/patches/]
 	o same-1.8 [don't update; same-1.3 is small and nice]
+	o sane-backends-1.0.16
+	o sane-frontends-1.0.16
 	o sarah-0.9.1b
 	o sather-1.2.2
 	o sawfish-1.3
@@ -949,7 +951,7 @@ Suggested package updates
 	o siag-3.6.0
 	o sign-1.0.7
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
-	o simh-3.4.0 [pkg/31129]
+	o simh-3.5.0
 	o sitecopy-0.15.1
 	o sitescooper-3.1.2
 	o sjeng-11.2
@@ -1005,6 +1007,7 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
+	o tidy-20050826 [pkg/31220]
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-7.2.4
