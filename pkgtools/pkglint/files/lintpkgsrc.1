@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.26 2005/05/23 08:35:41 rillig Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.27 2005/09/10 22:32:43 wiz Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -202,6 +202,6 @@ The
 algorithm used to obtain package versions
 and DEPENDS information is geared towards speed rather than
 perfection, though it has got somewhat better over time, it only
-parses the simplest Makefile conditionals. (a == b, no && etc).
+parses the simplest Makefile conditionals. (a == b, no \*[Am]\*[Am] etc).
 .Pp
 Potentially others, but non serious to date.
