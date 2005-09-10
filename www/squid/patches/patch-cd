@@ -1,18 +1,20 @@
-$NetBSD: patch-cd,v 1.9 2005/06/07 14:19:10 taca Exp $
+$NetBSD: patch-cd,v 1.9.2.1 2005/09/10 11:16:41 salo Exp $
 
---- src/client_side.c.orig	2005-04-21 06:46:06.000000000 +0900
+--- src/client_side.c.orig	2005-09-02 10:23:02.000000000 +0900
 +++ src/client_side.c
-@@ -41,6 +41,9 @@
+@@ -55,6 +55,11 @@
+ #ifdef _SQUID_SOLARIS_
+ #undef free
  #endif
- #include <netinet/tcp.h>
- #include <net/if.h>
-+#if HAVE_NETINET_IPL_H
++#ifdef HAVE_IPL_H
++#include <ipl.h>
++#elif HAVE_NETINET_IPL_H
 +#include <netinet/ipl.h>
 +#endif
  #if HAVE_IP_FIL_COMPAT_H
  #include <ip_fil_compat.h>
  #elif HAVE_NETINET_IP_FIL_COMPAT_H
-@@ -2589,6 +2592,9 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2606,6 +2611,9 @@ parseHttpRequest(ConnStateData * conn, m
      static int natfd = -1;
      static int siocgnatl_cmd = SIOCGNATL & 0xff;
      int x;
@@ -22,10 +24,10 @@ $NetBSD: patch-cd,v 1.9 2005/06/07 14:19:10 taca Exp $
  #endif
  #if PF_TRANSPARENT
      struct pfioc_natlook nl;
-@@ -2731,6 +2737,13 @@ parseHttpRequest(ConnStateData * conn, m
- 	int vport;
+@@ -2748,6 +2756,13 @@ parseHttpRequest(ConnStateData * conn, m
  	if (vhost_mode) {
  #if IPF_TRANSPARENT
+ 	    static time_t last_reported = 0;
 +#if defined(IPFILTER_VERSION) && (IPFILTER_VERSION >= 4000027)
 +	    obj.ipfo_rev = IPFILTER_VERSION;
 +	    obj.ipfo_size = sizeof(natLookup);
@@ -36,7 +38,7 @@ $NetBSD: patch-cd,v 1.9 2005/06/07 14:19:10 taca Exp $
  	    natLookup.nl_inport = http->conn->me.sin_port;
  	    natLookup.nl_outport = http->conn->peer.sin_port;
  	    natLookup.nl_inip = http->conn->me.sin_addr;
-@@ -2739,8 +2752,8 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2756,8 +2771,8 @@ parseHttpRequest(ConnStateData * conn, m
  	    if (natfd < 0) {
  		int save_errno;
  		enter_suid();
@@ -47,9 +49,9 @@ $NetBSD: patch-cd,v 1.9 2005/06/07 14:19:10 taca Exp $
  #else
  		natfd = open(IPL_NAT, O_RDONLY, 0);
  #endif
-@@ -2756,6 +2769,9 @@ parseHttpRequest(ConnStateData * conn, m
- 		cbdataFree(http);
- 		xfree(inbuf);
+@@ -2771,6 +2786,9 @@ parseHttpRequest(ConnStateData * conn, m
+ 		    last_reported = squid_curtime;
+ 		}
  	    } else {
 +#if defined(IPFILTER_VERSION) && (IPFILTER_VERSION >= 4000027)
 +		x = ioctl(natfd, SIOCGNATL, &obj);
@@ -57,11 +59,11 @@ $NetBSD: patch-cd,v 1.9 2005/06/07 14:19:10 taca Exp $
  		/*
  		 * IP-Filter changed the type for SIOCGNATL between
  		 * 3.3 and 3.4.  It also changed the cmd value for
-@@ -2769,6 +2785,7 @@ parseHttpRequest(ConnStateData * conn, m
+@@ -2784,6 +2802,7 @@ parseHttpRequest(ConnStateData * conn, m
  		} else {
  		    x = ioctl(natfd, SIOCGNATL, &natLookup);
  		}
 +#endif
  		if (x < 0) {
  		    if (errno != ESRCH) {
- 			debug(50, 1) ("parseHttpRequest: NAT lookup failed: ioctl(SIOCGNATL)\n");
+ 			if (squid_curtime - last_reported > 60) {
