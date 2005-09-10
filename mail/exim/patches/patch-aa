@@ -149,7 +149,7 @@
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1095,3 +1097,7 @@
+@@ -1095,3 +1097,8 @@
  # SUPPORT_MOVE_FROZEN_MESSAGES=yes
  
  # End of EDITME for Exim 4.
@@ -157,3 +157,4 @@
 +@EXIM_USE_DB_CONFIG@
 +@EXIM_DBMLIB@
 +INCLUDE=@EXIM_INCLUDE@
++LOOKUP_LIBS=@LOOKUP_LIBS@
