@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/09/10 12:38:30 jmmv Exp $
+
+--- common/pi.xsl	2005-09-08 20:36:54.000000000 +0200
++++ common/pi.xsl	2005-09-08 20:38:08.000000000 +0200
+@@ -105,7 +105,7 @@
+     <xsl:variable name="tokenized-format-string">
+       <xsl:call-template name="str.tokenize.keep.delimiters">
+ 	<xsl:with-param name="string" select="$format-nbsp"/>
+-	<xsl:with-param name="delimiters" select="'&#xa0;,./-()[]'"/>
++	<xsl:with-param name="delimiters" select="'&#xa0;,./-:()[]'"/>
+       </xsl:call-template>
+     </xsl:variable>
+ 
