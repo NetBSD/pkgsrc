@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11093 2005/09/10 12:39:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.11094 2005/09/10 15:56:33 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3996,3 +3996,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/cpuflags to 0.91 [abs 2005-09-09]
 	Updated net/ntp4 to 4.2.0nb7 [adrianp 2005-09-10]
 	Updated textproc/docbook-xsl to 1.69.1nb1 [jmmv 2005-09-10]
+	Updated sysutils/xentools20 to 2.0.7nb2 [bouyer 2005-09-10]
