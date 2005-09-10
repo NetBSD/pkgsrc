@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2005/08/13 15:21:32 jmmv Exp $
+$NetBSD: distinfo,v 1.14 2005/09/10 12:38:30 jmmv Exp $
 
 SHA1 (docbook-xsl-1.69.1.tar.bz2) = aaabf0e274609134e187a6c36d2be23f3471f507
 RMD160 (docbook-xsl-1.69.1.tar.bz2) = 4cc1a26acdcbe7af8f037cfb261b5e9dca15938c
 Size (docbook-xsl-1.69.1.tar.bz2) = 1058962 bytes
+SHA1 (patch-aa) = faa2fce58198f3ffde4954aed80af262116b06b1
