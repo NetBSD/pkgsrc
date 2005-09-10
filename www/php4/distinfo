@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.41 2005/08/17 19:58:34 tron Exp $
+$NetBSD: distinfo,v 1.42 2005/09/10 08:58:55 jdolecek Exp $
 
 SHA1 (php-4.4.0.tar.bz2) = 5e0afe6e5f8c751f880a50ad4fa1716f0242ef37
 RMD160 (php-4.4.0.tar.bz2) = 4792e78b6f2f3e3347a1ac945b48efaccedf4542
 Size (php-4.4.0.tar.bz2) = 4086074 bytes
-SHA1 (XML_RPC-1.4.0.tgz) = 461f0b70675a37f524043d19078e9c0502dd13ac
-RMD160 (XML_RPC-1.4.0.tgz) = 8647565c7fa973ac800683d91c32d781fce9437c
-Size (XML_RPC-1.4.0.tgz) = 26776 bytes
 SHA1 (patch-aa) = feb064407950d0fc732b7240e65cac84420d2407
 SHA1 (patch-ad) = 9ca5d2f59bfeea77a98cd0e727546d11669114cd
 SHA1 (patch-ag) = 1ded1d7f4daac6806f41864c783f16d3403315e4
