@@ -1,8 +1,28 @@
-$NetBSD: patch-ab,v 1.1 2005/08/30 16:14:53 tonio Exp $
+$NetBSD: patch-ab,v 1.2 2005/09/10 11:26:47 tonio Exp $
 
---- configure.orig	2005-04-30 20:23:23.000000000 +0100
-+++ configure	2005-07-05 17:46:06.000000000 +0100
-@@ -4604,6 +4604,12 @@
+--- configure.orig	2005-04-30 21:23:23.000000000 +0200
++++ configure
+@@ -3294,18 +3294,7 @@ if test "x$AWK" != "xNONE" ; then
+ 	AWK="$AWK"
+ fi
+ 
+-if test "x$NAWK" != "xNONE" ; then
+-	AWK="$NAWK"
+-fi
+-
+-if test "x$GAWK" != "xNONE" ; then
+-	AWK="$GAWK"
+-fi
+-
+-if test "x$MAWK" != "xNONE" ; then
+-	AWK="$MAWK"
+-fi
+-
++#use the supplied awk
+ 
+ 
+ # Extract the first word of "tac", so it can be a program name with args.
+@@ -4604,6 +4593,12 @@ if test "x$PERL" != xno ; then
  
  fi
  
@@ -15,7 +35,7 @@ $NetBSD: patch-ab,v 1.1 2005/08/30 16:14:53 tonio Exp $
  # m_osx_addressbook requires xcode (10.3) or projectbuilder (<10.3)
  # Extract the first word of "xcodebuild", so it can be a program name with args.
  set dummy xcodebuild; ac_word=$2
-@@ -4694,6 +4700,11 @@
+@@ -4694,6 +4689,11 @@ fi
  
  	fi
  fi
