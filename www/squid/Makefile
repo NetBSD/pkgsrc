@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.153 2005/06/07 14:19:10 taca Exp $
+# $NetBSD: Makefile,v 1.153.2.1 2005/09/10 11:16:41 salo Exp $
 
 DISTNAME=	squid-2.5.STABLE10
 PKGNAME=	squid-2.5.10
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -9,7 +10,34 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE10-content_length.patch
+PATCHFILES=	squid-2.5.STABLE10-content_length.patch \
+		squid-2.5.STABLE10-spanish.patch \
+		squid-2.5.STABLE10-internal_date.patch \
+		squid-2.5.STABLE10-chroot-2.patch \
+		squid-2.5.STABLE10-transparent-2.patch \
+		squid-2.5.STABLE10-redirect_flags.patch \
+		squid-2.5.STABLE10-cache_dir_change.patch \
+		squid-2.5.STABLE10-snmp_getnext.patch \
+		squid-2.5.STABLE10-ftp_title-2.patch \
+		squid-2.5.STABLE10-ftp_basehref.patch \
+		squid-2.5.STABLE10-wbinfo_groups.patch \
+		squid-2.5.STABLE10-64bit_cleanup.patch \
+		squid-2.5.STABLE10-wb_ntlm_auth_silent.patch \
+		squid-2.5.STABLE10-buildenv.patch \
+		squid-2.5.STABLE10-mail_program.patch \
+		squid-2.5.STABLE10-arp_ipfilter-2.patch \
+		squid-2.5.STABLE10-sslConnectTimeout.patch \
+		squid-2.5.STABLE10-statHistAssert.patch \
+		squid-2.5.STABLE10-chroot_dir.patch \
+		squid-2.5.STABLE10-errmsg.patch \
+		squid-2.5.STABLE10-FORTIFY_SOURCE.patch \
+		squid-2.5.STABLE10-ftp_250.patch \
+		squid-2.5.STABLE10-Greek.patch \
+		squid-2.5.STABLE10-STORE_PENDING.patch \
+		squid-2.5.STABLE10-ldap_auth-U.patch \
+		squid-2.5.STABLE10-cacheClientTable.patch \
+		squid-2.5.STABLE10-Solaris_IPFilter.patch \
+		squid-2.5.STABLE10-mail_from.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -48,9 +76,12 @@ PKG_GROUPS=	${SQUID_GROUP}
 PKG_USERS=	${SQUID_USER}:${SQUID_GROUP}::Squid\\ Web-Cache\\ pseudo-user
 CONF_FILES+=	${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf
 CONF_FILES+=	${EXAMPLESDIR}/squid.conf ${PKG_SYSCONFDIR}/squid.conf
+CONF_FILES+=	${EXAMPLESDIR}/msntauth.conf ${PKG_SYSCONFDIR}/msntauth.conf
 OWN_DIRS=	${DATADIR}
 OWN_DIRS_PERMS+= ${DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
 		 ${DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
+EXAMPLES_FILES=	src/mime.conf.default src/squid.conf.default \
+		helpers/basic_auth/MSNT/msntauth.conf.default
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -83,6 +114,7 @@ OPTIONAL_FILES+= libexec/digest_pw_auth
 #
 # ntlm auth helpers (except no_check and winbind)
 #
+OPTIONAL_FILES+= libexec/fakeauth_auth libexec/ntlm_auth
 OPTIONAL_FILES+= libexec/wb_ntlmauth man/man8/squid_unix_group.8
 #
 # external acl helpers (except ldap_group, wbinfo_group and winbind_group)
@@ -90,12 +122,16 @@ OPTIONAL_FILES+= libexec/wb_ntlmauth man/man8/squid_unix_group.8
 OPTIONAL_FILES+= libexec/ip_user_check libexec/squid_unix_group
 
 pre-install:
-	@${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
 
 post-install:
+	@${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+.for f in ${EXAMPLES_FILES}
+	cd ${WRKSRC} && \
+	${INSTALL_DATA}	${f} ${EXAMPLESDIR}/`basename ${f} .default`
+.endfor
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	@cd ${WRKSRC};						\
