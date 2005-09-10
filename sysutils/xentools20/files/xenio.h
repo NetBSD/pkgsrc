@@ -83,7 +83,7 @@ typedef struct privcmd_blkmsg
 #define IOCTL_PRIVCMD_MMAPBATCH        \
     _IOW('P', 3, privcmd_mmapbatch_t)
 #define IOCTL_PRIVCMD_GET_MACH2PHYS_START_MFN \
-    _IOW('P', 4, unsigned long)
+    _IOR('P', 4, unsigned long)
 
 /*
  * @cmd: IOCTL_PRIVCMD_INITDOMAIN_EVTCHN
