@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/09/07 02:13:18 reed Exp $
+# $NetBSD: Makefile,v 1.50 2005/09/10 18:16:04 minskim Exp $
 #
 
 DISTNAME=		mathomatic-12.4.10
@@ -6,7 +6,7 @@ CATEGORIES=		math
 MASTER_SITES=		http://www.panix.com/~gesslein/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://www.mathomatic.com/
 COMMENT=		Small portable symbolic math program
 
