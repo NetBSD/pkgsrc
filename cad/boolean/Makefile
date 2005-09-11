@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/08/18 23:52:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.24 2005/09/11 12:42:46 dmcmahill Exp $
 #
 
 DISTNAME=	boolean_6_7
@@ -17,6 +17,8 @@ REL=		6.7
 BUILD_DEPENDS+=	cmake>=1.6.6:../../devel/cmake
 
 WRKSRC=		${WRKDIR}/boolean
+
+GCC_REQD=	3.0
 
 USE_TOOLS+=	gmake pkg-config tar
 
