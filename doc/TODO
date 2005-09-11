@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3880 2005/09/10 21:07:41 wiz Exp $
+$NetBSD: TODO,v 1.3881 2005/09/11 14:31:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -419,6 +419,7 @@ Suggested package updates
 	o dirdiff-2.0
 	o dmalloc-5.4.2
 	o dnstracer-1.8
+	o docbook-xml-4.4 [pkg/31219]
 	o dpkg-1.13.3
 	o dvdrip-0.52.6
 	o dvipdfmx-20050201
@@ -931,8 +932,7 @@ Suggested package updates
 	o sablevm-classpath-gui-1.12
 	o samba-3.0.20 [See also http://www.samba.org/samba/patches/]
 	o same-1.8 [don't update; same-1.3 is small and nice]
-	o sane-backends-1.0.16
-	o sane-frontends-1.0.16
+	o sane-backends-1.0.16 [wiz]
 	o sarah-0.9.1b
 	o sather-1.2.2
 	o sawfish-1.3
@@ -967,7 +967,7 @@ Suggested package updates
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
 	o smokeping-1.38
-	o snd-7.15
+	o snd-7.15 [wiz]
 	o snes9x-1.43
 	o snownews-1.5.7
 	o source-highlight-2.1.2
