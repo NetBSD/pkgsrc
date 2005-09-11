@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/03 13:36:05 adam Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/11 17:01:14 minskim Exp $
 
 DISTNAME=	libqalculate-0.8.1.1
 PKGNAME=	qalculate-0.8.1.1
@@ -22,6 +22,7 @@ UNLIMIT_RESOURCES=	datasize
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../math/cln/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
