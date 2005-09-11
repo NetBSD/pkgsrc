@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.9 2005/06/23 15:16:53 minskim Exp $
+# $NetBSD: modules.mk,v 1.10 2005/09/11 15:54:22 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -12,13 +12,6 @@ DEPENDS+= ruby${RUBY_VER}-base>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}-base
 .endif
 
 CONFIGURE_ENV+=		RUBY=${RUBY} RDOC=${RDOC}
-
-#
-# make ruby module package to common DIST_SUBDIR
-#
-.if defined(RUBY_DIST_SUBDIR) && !empty(RUBY_DIST_SUBDIR)
-DIST_SUBDIR?=	${RUBY_DIST_SUBDIR}
-.endif
 
 #
 # extconf.rb support
