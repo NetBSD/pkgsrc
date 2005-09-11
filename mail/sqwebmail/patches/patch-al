@@ -1,8 +1,6 @@
-$NetBSD: patch-al,v 1.1 2005/08/29 15:53:24 adrianp Exp $
-
 --- sqwebmail/html.c.orig	2003-10-06 01:16:13.000000000 +0100
-+++ sqwebmail/html.c
-@@ -187,9 +187,16 @@ char *p;
++++ sqwebmail/html.c	2005-09-05 18:05:59.000000000 +0100
+@@ -187,9 +187,16 @@
  					if (tai)	++tai->tagvaluelen;
  				}
  				if (*p)	p++;
@@ -19,7 +17,7 @@ $NetBSD: patch-al,v 1.1 2005/08/29 15:53:24 adrianp Exp $
  				if (tai)
  				{
  					tai->tagvalue=p;
-@@ -222,6 +229,31 @@ static void parsetagbuf()
+@@ -222,6 +229,31 @@
  	while ((p=strchr(tagbuf, '<')) != NULL)
  		*p=' ';
  
@@ -51,3 +49,81 @@ $NetBSD: patch-al,v 1.1 2005/08/29 15:53:24 adrianp Exp $
          tagattrlen=parseattr(0);
          if ( tagattrlen > tagattrsize)
          {
+@@ -285,7 +317,9 @@
+ 	incomment,		/* <!--, in a comment, have not seen any
+ 				dashes */
+ 	incommentseendash,	/* In a comment, seen - */
+-	incommentseendashdash	/* In a comment, seen -- */
++	incommentseendashdash,	/* In a comment, seen -- */
++
++	skiptag			/* Ignore <!tag> */
+ 	} ;
+ 
+ static enum htmlstate cur_state;
+@@ -385,7 +419,7 @@
+ 		case intag:
+ 			/* We're in a tag (not a <!-- comment)
+ 			collect the contents in tagbuf, until > is seen */
+-do_intag:
++
+ 			cur_state=intag;
+ 			if (p[l] == '>')
+ 			{
+@@ -397,9 +431,21 @@
+ 			addtagbuf(p[l]);
+ 			continue;
+ 
++		case skiptag:
++			if (p[l] == '>')
++			{
++				start=l+1;
++				cur_state=intext;
++			}
++			continue;
+ 		case seenltbang:
+ 			/* We have <!.  If - is not here, this is a SGML tag */
+-			if (p[l] != '-')	goto do_intag;
++			if (p[l] != '-')
++			{
++				cur_state=skiptag;
++				continue;
++			}
++
+ 			addtagbuf(p[l]);
+ 			cur_state=seenltbangdash;
+ 			continue;
+@@ -410,9 +456,12 @@
+ 			otherweise we're in a comment, which we can pass
+ 			along */
+ 
+-			if (p[l] != '-')	goto do_intag;
+-			if (!skipping())
+-				(*htmlfiltered_func)("<!--", 4);
++			if (p[l] != '-')
++			{
++				cur_state=skiptag;
++				continue;
++			}
++
+ 			start=l+1;
+ 			cur_state=incomment;
+ 			continue;
+@@ -433,8 +482,6 @@
+ 				cur_state=incomment;
+ 				continue;
+ 			}
+-			if (!skipping())
+-				(*htmlfiltered_func)(p+start, l+1-start);
+ 			cur_state=intext;
+ 			start=l+1;
+ 			continue;
+@@ -446,9 +493,6 @@
+ 
+ 	switch (cur_state)	{
+ 	case intext:
+-	case incomment:
+-	case incommentseendash:
+-	case incommentseendashdash:
+ 		if (!skipping())
+ 			(*htmlfiltered_func)(p+start, l-start);
+ 	default:
