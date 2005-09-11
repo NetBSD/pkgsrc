@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2005/07/16 19:10:39 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2005/09/11 10:49:35 mrauch Exp $
 
 DISTNAME=		openoffice-1.1.4
 PKGREVISION=		2
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+= 	--enable-mozilla --disable-java
 CONFIGURE_ARGS+= 	--with-lang="AFRIK","ARAB","BASQUE","CHINSIM","CHINTRAD","CZECH","DAN","DTCH","ENUS","ESTONIAN","FINN","FREN","GAL","GREEK","HEBREW","HUNG","ITAL","JAPN","KOREAN","LITHUANIAN","NORBOK","NORNYN","NSOTHO","POL","PORT","PORTBR","RUSS","SLOVAK","SLOVENIAN","SPAN","SWED","TURK","WELSH","ZULU"
 CONFIGURE_ARGS+=	--with-dict=ALL
 
-TEMP?=			${WRKSRC}
+TEMP?=			${WRKDIR}
 UNLIMIT_RESOURCES+=	datasize
 
 PLIST_SRC+=		PLIST.common
@@ -85,7 +85,7 @@ pre-install:
 		>${WRKSRC}/../instsetoo/${OPENOFFICE_OUTPATH}.pro/${OPENOFFICE_LANGCODE}/normal/setup.ins
 
 do-install:
-	${SH} -c "cd ${WRKSRC}/../instsetoo/${OPENOFFICE_OUTPATH}.pro/${OPENOFFICE_LANGCODE}/normal; ./install --prefix=${PREFIX}"
+	cd ${WRKSRC}/../instsetoo/${OPENOFFICE_OUTPATH}.pro/${OPENOFFICE_LANGCODE}/normal; ${SETENV} TEMP=${TEMP} ./install --prefix=${PREFIX}"
 	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/common.tree
 	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/schart.tree
 	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/sdraw.tree
