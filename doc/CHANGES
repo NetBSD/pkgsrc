@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11096 2005/09/11 11:45:51 adrianp Exp $
+$NetBSD: CHANGES,v 1.11097 2005/09/11 12:31:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3999,3 +3999,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/xentools20 to 2.0.7nb2 [bouyer 2005-09-10]
 	Updated pkgtools/pkg_chk to 1.61 [abs 2005-09-10]
 	Updated games/openttd to 0.4.0.1nb1 [adrianp 2005-09-11]
+	Updated audio/libvisual-plugins to 0.2.0nb2 [wiz 2005-09-11]
