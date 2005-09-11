@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2005/09/11 11:44:29 adrianp Exp $
+
+--- network.c.orig	2005-05-17 17:01:19.000000000 +0100
++++ network.c
+@@ -96,7 +96,7 @@ void CDECL NetworkTextMessage(NetworkAct
+ 	StringID TempStr = STR_NULL;
+ 
+ 	va_start(va, str);
+-	vsprintf(buf, str, va);
++	vsnprintf(buf, lengthof(buf), str, va);
+ 	va_end(va);
+ 
+ 	switch (action) {
+@@ -507,7 +507,7 @@ void NetworkCloseClient(NetworkClientSta
+ 
+ 		GetString(str, STR_NETWORK_ERR_CLIENT_GENERAL + errorno);
+ 
+-		NetworkTextMessage(NETWORK_ACTION_LEAVE, 1, false, client_name, str);
++		NetworkTextMessage(NETWORK_ACTION_LEAVE, 1, false, client_name, "%s", str);
+ 
+ 		// Inform other clients of this... strange leaving ;)
+ 		FOR_ALL_CLIENTS(new_cs) {
