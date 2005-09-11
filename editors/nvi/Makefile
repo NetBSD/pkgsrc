@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/12 20:19:35 kristerw Exp $
+# $NetBSD: Makefile,v 1.18 2005/09/11 18:08:02 schmonz Exp $
 #
 
 DISTNAME=	nvi-1.81.5
@@ -18,6 +18,9 @@ COMMENT=	Berkeley nvi with additional features
 CONFIGURE_ENV+=		vi_cv_include_sys_select=no
 .  endif
 # XXX ignore NetBSD 2.0F and later's granpt(2) and SysV pty for just now
+CONFIGURE_ENV+=		vi_cv_sys5_pty=no
+# XXX also ignore it on Darwin (fixes Tiger build)
+.elif ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 .endif
 
