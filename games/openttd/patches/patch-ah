@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2005/09/11 11:44:29 adrianp Exp $
+
+--- texteff.c.orig	2005-03-28 13:38:02.000000000 +0100
++++ texteff.c
+@@ -57,7 +57,7 @@ void CDECL AddTextMessage(uint16 color, 
+ 	int length;
+ 
+ 	va_start(va, message);
+-	vsprintf(buf, message, va);
++	vsnprintf(buf, lengthof(buf), message, va);
+ 	va_end(va);
+ 
+ 	/* Special color magic */
