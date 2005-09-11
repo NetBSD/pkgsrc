@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/11 11:43:23 wiz Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
@@ -25,7 +25,7 @@ USE_PKGINSTALL=		yes
 #DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 #MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
