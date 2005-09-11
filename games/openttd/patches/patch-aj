@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/09/11 11:44:29 adrianp Exp $
+
+--- win32.c.orig	2005-05-16 17:19:32.000000000 +0100
++++ win32.c
+@@ -841,7 +841,7 @@ static long CDECL MidiSendCommand(const 
+ 	char buf[512];
+ 
+ 	va_start(va, cmd);
+-	vsprintf(buf, cmd, va);
++	vsnprintf(buf, sizeof(buf), cmd, va);
+ 	va_end(va);
+ 	return mciSendStringA(buf, NULL, 0, 0);
+ }
