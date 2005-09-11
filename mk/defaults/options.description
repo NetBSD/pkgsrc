@@ -276,6 +276,8 @@ x11			Enable X11 support.
 xface	
 xft	
 xft2	
+xlockmore-allow-root	Allow root to get access
+xlockmore-dpms		Use DPMS
 xmlimportbugs	
 xmms-eq	
 xterm-256color		Enable 256 color support.
