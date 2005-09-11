@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/29 00:54:41 grant Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/11 10:49:35 mrauch Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 PKGREVISION=		1
@@ -34,7 +34,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
-TEMP?=			${WRKSRC}
+TEMP?=			${WRKDIR}
 CHECK_SHLIBS=		no
 
 .include "../../mk/bsd.prefs.mk"
@@ -81,7 +81,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/OpenOffice.org${OO_VER}/program
 	${INSTALL_DATA} ${WRKDIR}/openoffice-linux-112-services.rdb	\
 		${PREFIX}/OpenOffice.org${OO_VER}/program/services.rdb
-	${SH} -c "cd ${WRKSRC}; ./install --prefix=${PREFIX}"
+	cd ${WRKSRC}; ${SETENV} TEMP=${TEMP} ./install --prefix=${PREFIX}
 	${INSTALL_LIB} ${DISTDIR}/libsot645li.so 	\
 		${PREFIX}/OpenOffice.org${OO_VER}/program/libsot645li.so
 	${RM} -f ${PREFIX}/bin/soffice.orig
