@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11098 2005/09/11 12:58:45 adrianp Exp $
+$NetBSD: CHANGES,v 1.11099 2005/09/11 14:00:38 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4001,3 +4001,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/openttd to 0.4.0.1nb1 [adrianp 2005-09-11]
 	Updated audio/libvisual-plugins to 0.2.0nb2 [wiz 2005-09-11]
 	Updated net/freeradius to 1.0.5 [adrianp 2005-09-11]
+	Updated devel/gcvs to 1.0nb2 [adrianp 2005-09-11]
