@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:14 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/09/11 13:59:38 adrianp Exp $
 
 SHA1 (gcvs-1.0.tar.gz) = 42b2469d0a9acc0e69a127b44000cd1b11bb895e
 RMD160 (gcvs-1.0.tar.gz) = 195698283848cd1f22d00eb37df7dd0f6b52cffc
@@ -22,3 +22,4 @@ SHA1 (patch-am) = af0098e91aa030a8ba09c520ecff86341fc573ff
 SHA1 (patch-an) = 039dac4df56f922c1611b6e00382558496613d2f
 SHA1 (patch-ao) = 0c34855297bd4c8aa32d5f6ef14695c58f6d3e8c
 SHA1 (patch-ap) = c14228e74fc433b06cf25b23aece71dfe74587aa
+SHA1 (patch-aq) = 544d6b2d44cba7ab31fea66c13ff391d0cd81932
