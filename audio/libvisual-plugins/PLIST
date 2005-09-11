@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/20 15:56:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/11 12:30:55 wiz Exp $
 lib/libvisual/actor/actor_JESS.la
 lib/libvisual/actor/actor_bumpscope.la
 lib/libvisual/actor/actor_corona.la
@@ -52,9 +52,6 @@ share/libvisual-plugins/GForceColorMaps/Green
 share/libvisual-plugins/GForceColorMaps/Hero
 share/libvisual-plugins/GForceColorMaps/Ice_Nightshade
 share/libvisual-plugins/GForceColorMaps/Lust
-share/libvisual-plugins/GForceColorMaps/Makefile
-share/libvisual-plugins/GForceColorMaps/Makefile.am
-share/libvisual-plugins/GForceColorMaps/Makefile.in
 share/libvisual-plugins/GForceColorMaps/Midnight_Dream
 share/libvisual-plugins/GForceColorMaps/Mononoke
 share/libvisual-plugins/GForceColorMaps/Muted_Middle
@@ -117,9 +114,6 @@ share/libvisual-plugins/GForceDeltaFields/In_Or_Out__Inner_Turn
 share/libvisual-plugins/GForceDeltaFields/Krabben
 share/libvisual-plugins/GForceDeltaFields/Left_Turn_N_Flow_Out
 share/libvisual-plugins/GForceDeltaFields/Linear_Spread
-share/libvisual-plugins/GForceDeltaFields/Makefile
-share/libvisual-plugins/GForceDeltaFields/Makefile.am
-share/libvisual-plugins/GForceDeltaFields/Makefile.in
 share/libvisual-plugins/GForceDeltaFields/Marble
 share/libvisual-plugins/GForceDeltaFields/Nexus-Zero
 share/libvisual-plugins/GForceDeltaFields/Noise
@@ -192,9 +186,6 @@ share/libvisual-plugins/GForceParticles/Explosion_I
 share/libvisual-plugins/GForceParticles/Explosion_II
 share/libvisual-plugins/GForceParticles/Falling_Orbs
 share/libvisual-plugins/GForceParticles/Lizy_s_Starry_Night
-share/libvisual-plugins/GForceParticles/Makefile
-share/libvisual-plugins/GForceParticles/Makefile.am
-share/libvisual-plugins/GForceParticles/Makefile.in
 share/libvisual-plugins/GForceParticles/Metors
 share/libvisual-plugins/GForceParticles/Miri_s_Ball
 share/libvisual-plugins/GForceParticles/Moon_N_Sun
@@ -251,9 +242,6 @@ share/libvisual-plugins/GForceWaveShapes/Horzonal_Sweep
 share/libvisual-plugins/GForceWaveShapes/Hourglass
 share/libvisual-plugins/GForceWaveShapes/Kaleidoscope
 share/libvisual-plugins/GForceWaveShapes/Magnum
-share/libvisual-plugins/GForceWaveShapes/Makefile
-share/libvisual-plugins/GForceWaveShapes/Makefile.am
-share/libvisual-plugins/GForceWaveShapes/Makefile.in
 share/libvisual-plugins/GForceWaveShapes/Melt_O_Rama
 share/libvisual-plugins/GForceWaveShapes/Mother_and_Daughters
 share/libvisual-plugins/GForceWaveShapes/Moving
@@ -551,6 +539,7 @@ share/libvisual/actor/actor_nebulus/twist_texture.bmp
 @dirrm share/libvisual-plugins/GForceParticles
 @dirrm share/libvisual-plugins/GForceDeltaFields
 @dirrm share/libvisual-plugins/GForceColorMaps
+@dirrm share/libvisual-plugins
 @dirrm share/libvisual
 @dirrm lib/libvisual/morph
 @dirrm lib/libvisual/input
