@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2005/08/29 15:53:24 adrianp Exp $
+# $NetBSD: Makefile,v 1.38 2005/09/11 19:58:46 adrianp Exp $
 
 DISTNAME=	sqwebmail-5.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
