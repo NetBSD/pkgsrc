@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:12 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/11 12:30:55 wiz Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 
@@ -20,6 +20,10 @@ USE_TOOLS+=		pkg-config
 # sigsegfaults in 0.2.0 because of:
 # sorry, but the bug with strtof has come, please report..
 CONFIGURE_ARGS+=	--disable-dancingparticles
+
+# install unnecessarily installed files
+post-install:
+	${RM} ${PREFIX}/share/libvisual-plugins/*/Makefile*
 
 .include "../../audio/goom/buildlink3.mk"
 .include "../../audio/libvisual/buildlink3.mk"
