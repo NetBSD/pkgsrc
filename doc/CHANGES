@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11101 2005/09/11 16:31:03 minskim Exp $
+$NetBSD: CHANGES,v 1.11102 2005/09/11 20:00:36 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4004,3 +4004,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/gcvs to 1.0nb2 [adrianp 2005-09-11]
 	Updated devel/allegro to 4.1.18nb1 [wiz 2005-09-11]
 	Updated textproc/aspell to 0.60.3nb1 [minskim 2005-09-11]
+	Updated mail/sqwebmail to 5.0.4nb2 [adrianp 2005-09-11]
