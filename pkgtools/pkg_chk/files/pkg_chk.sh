@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.18 2005/08/04 18:01:37 abs Exp $
+# $Id: pkg_chk.sh,v 1.19 2005/09/11 10:39:03 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -459,7 +459,7 @@ run_cmd()
     else
 	FAILOK=$opt_k
     fi
-    msg $1
+    msg $(date +%R) $1
     if [ -z "$opt_n" ];then
 	if [ -n "$opt_L" ] ; then
 	    sh -c "$1" >> "$opt_L" 2>&1 || FAIL=1
@@ -477,6 +477,15 @@ run_cmd()
             fi
         fi
     fi
+    }
+
+set_path()
+    {
+    arg=$1
+    case $arg in
+	/*)	echo $arg ;;
+	*)	echo $basedir/$arg ;;
+    esac
     }
 
 usage()
@@ -612,12 +621,13 @@ if [ -n "$opt_L" ] ; then
     rm -f $opt_L
 fi
 
+basedir=$(pwd)
 extract_variables
 if [ -n "$opt_C" ] ; then
-    PKGCHK_CONF="$opt_C"
+    PKGCHK_CONF="$(set_path $opt_C)"
 fi
 if [ -n "$opt_P" ] ; then
-    PACKAGES="$opt_P"
+    PACKAGES="$(set_path $opt_P)"
 fi
 if [ -d $PACKAGES/All ] ; then
     PACKAGES="$PACKAGES/All"
