@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11099 2005/09/11 14:00:38 adrianp Exp $
+$NetBSD: CHANGES,v 1.11100 2005/09/11 14:18:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4002,3 +4002,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/libvisual-plugins to 0.2.0nb2 [wiz 2005-09-11]
 	Updated net/freeradius to 1.0.5 [adrianp 2005-09-11]
 	Updated devel/gcvs to 1.0nb2 [adrianp 2005-09-11]
+	Updated devel/allegro to 4.1.18nb1 [wiz 2005-09-11]
