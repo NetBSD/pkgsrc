@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11095 2005/09/11 10:40:25 abs Exp $
+$NetBSD: CHANGES,v 1.11096 2005/09/11 11:45:51 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3998,3 +3998,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/docbook-xsl to 1.69.1nb1 [jmmv 2005-09-10]
 	Updated sysutils/xentools20 to 2.0.7nb2 [bouyer 2005-09-10]
 	Updated pkgtools/pkg_chk to 1.61 [abs 2005-09-10]
+	Updated games/openttd to 0.4.0.1nb1 [adrianp 2005-09-11]
