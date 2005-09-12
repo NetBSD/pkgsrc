@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/09/11 10:49:35 mrauch Exp $
+# $NetBSD: Makefile,v 1.70 2005/09/12 18:42:11 mrauch Exp $
 
 DISTNAME=		openoffice-1.1.4
 PKGREVISION=		2
@@ -85,7 +85,7 @@ pre-install:
 		>${WRKSRC}/../instsetoo/${OPENOFFICE_OUTPATH}.pro/${OPENOFFICE_LANGCODE}/normal/setup.ins
 
 do-install:
-	cd ${WRKSRC}/../instsetoo/${OPENOFFICE_OUTPATH}.pro/${OPENOFFICE_LANGCODE}/normal; ${SETENV} TEMP=${TEMP} ./install --prefix=${PREFIX}"
+	cd ${WRKSRC}/../instsetoo/${OPENOFFICE_OUTPATH}.pro/${OPENOFFICE_LANGCODE}/normal; ${SETENV} TEMP=${TEMP} ./install --prefix=${PREFIX}
 	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/common.tree
 	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/schart.tree
 	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/sdraw.tree
