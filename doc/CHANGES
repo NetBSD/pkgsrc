@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11104 2005/09/12 12:58:48 tron Exp $
+$NetBSD: CHANGES,v 1.11105 2005/09/12 13:42:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sqwebmail to 5.0.4nb2 [adrianp 2005-09-11]
 	Updated comms/kyopon to 0.3 [itohy 2005-09-12]
 	Updated chat/xchat to 2.4.5 [tron 2005-09-12]
+	Updated converters/libiconv to 1.10nb2 [adam 2005-09-12]
