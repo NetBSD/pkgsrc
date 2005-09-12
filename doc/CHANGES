@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11103 2005/09/12 09:20:37 itohy Exp $
+$NetBSD: CHANGES,v 1.11104 2005/09/12 12:58:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4006,3 +4006,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/aspell to 0.60.3nb1 [minskim 2005-09-11]
 	Updated mail/sqwebmail to 5.0.4nb2 [adrianp 2005-09-11]
 	Updated comms/kyopon to 0.3 [itohy 2005-09-12]
+	Updated chat/xchat to 2.4.5 [tron 2005-09-12]
