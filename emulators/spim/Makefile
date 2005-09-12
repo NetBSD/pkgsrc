@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.25 2005/07/17 21:38:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.26 2005/09/12 14:53:29 adam Exp $
 
-DISTNAME=		spim
-PKGNAME=		spim-7.1
-CATEGORIES=		emulators
-MASTER_SITES=		http://www.cs.wisc.edu/~larus/SPIM/ \
-			ftp://ftp.cs.wisc.edu/pub/spim/
+DISTNAME=	spim-7.1
+CATEGORIES=	emulators
+MASTER_SITES=	http://www.cs.wisc.edu/~larus/SPIM/ \
+		ftp://ftp.cs.wisc.edu/pub/spim/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.cs.wisc.edu/~larus/spim.html
-COMMENT=		MIPS R2000 Simulator
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.cs.wisc.edu/~larus/spim.html
+COMMENT=	MIPS R2000 Simulator
 
 RESTRICTED=		"selling is not allowed"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-DIST_SUBDIR=		${PKGNAME}
+#DIST_SUBDIR=		${PKGNAME}
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=		yes
