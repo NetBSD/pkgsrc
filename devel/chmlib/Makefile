@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:07:49 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/12 14:49:10 minskim Exp $
 #
 
-DISTNAME=	chmlib-0.35
+DISTNAME=	chmlib-0.36
 CATEGORIES=	devel
 MASTER_SITES=	http://66.93.236.84/%7Ejedwin/projects/chmlib/
-EXTRACT_SUFX=	.tbz
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://66.93.236.84/%7Ejedwin/projects/chmlib/
