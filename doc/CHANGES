@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11105 2005/09/12 13:42:21 adam Exp $
+$NetBSD: CHANGES,v 1.11106 2005/09/12 15:20:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4008,3 +4008,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/kyopon to 0.3 [itohy 2005-09-12]
 	Updated chat/xchat to 2.4.5 [tron 2005-09-12]
 	Updated converters/libiconv to 1.10nb2 [adam 2005-09-12]
+	Updated chat/gaim-encryption to 2.38 [gdt 2005-09-11]
