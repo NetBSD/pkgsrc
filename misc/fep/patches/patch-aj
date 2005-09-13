@@ -1,64 +1,37 @@
-$NetBSD: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $
+$NetBSD: patch-aj,v 1.5 2005/09/13 19:40:59 christos Exp $
 
 --- fep_main.c.orig	1993-06-09 22:53:06.000000000 -0400
-+++ fep_main.c	2004-02-20 09:50:33.000000000 -0500
-@@ -3,15 +3,25 @@
- #ifndef lint
- static char rcsid[]=
- "$Id: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $ (SRA)";
++++ fep_main.c	2005-09-13 15:38:02.000000000 -0400
+@@ -6 +6 @@
 -#endif lint
 +#endif /* lint */
- 
- #include <stdio.h>
- #include <signal.h>
- #include <sys/types.h>
- #include <sys/stat.h>
- #include <sys/ioctl.h>
+@@ -13 +13,8 @@
 -#include <sys/file.h>
 +#ifdef TERMIOS
++#include <stdlib.h>
++#include <fcntl.h>
 +#include <termios.h>
-+#ifdef __linux__
 +#ifndef _POSIX_VDISABLE
 +#define _POSIX_VDISABLE '\0'
 +#endif
-+#include <stdlib.h>
-+#endif
 +#else
- #include <sgtty.h>
-+#endif
+@@ -14,0 +22,2 @@
 +#include <sys/file.h>
- #include <sys/time.h>
- #include <sys/resource.h>
- #include <sys/errno.h>
-@@ -30,7 +40,7 @@
- #ifdef STAT
-   static char fep_statrc[] = FEP_STAT;
- #endif
++#endif
+@@ -33 +42 @@
 -#endif lint
 +#endif /* lint */
- 
- char	*myself;			/* the command name */
- char	*prompt = "";			/* prompt string */
-@@ -38,9 +48,9 @@
- 					/* delimiter characters */
- int	master;				/* file discriptor for pty master */
- int	slave;				/* file discriptor for pty slave */
+@@ -41,3 +50,3 @@
 -int	mastermask;			/* 1<<master */
 -int	stdinmask;			/* 1<<fileno(stdin) */
 -int	selectmask;			/* stdinmask | mastermask */
 +fd_set	mastermask;			/* 1<<master */
 +fd_set	stdinmask;			/* 1<<fileno(stdin) */
 +fd_set	selectmask;			/* stdinmask | mastermask */
- int	selectnfds;			/* max (fileno(stdin), master) + 1*/
- int	child_pid;			/* child pid */
- int	ptyflag = ON;			/* flag to use pty or not */
-@@ -48,27 +58,34 @@
- int	debug = OFF;			/* debug switch */
- int	auto_tty_fix = ON;		/* fix tty mode automaticaly */
- FILE	*script_fp = NULL;		/* script file pointer */
+@@ -51 +60 @@
 -int	catchsig();			/* function take care SIGCHILD */
 +void	catchsig __P((int));		/* function take care SIGCHILD */
- 
+@@ -53,3 +62,8 @@
 -struct	sgttyb initial_ttymode;		/* initial tty mode */
 -struct	sgttyb master_ttymode;		/* master tty mode */
 -struct	sgttyb slave_ttymode;		/* slave tty mode */
@@ -70,186 +43,82 @@ $NetBSD: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $
 +struct	ttystruct initial_ttymode;		/* initial tty mode */
 +struct	ttystruct master_ttymode;		/* master tty mode */
 +struct	ttystruct slave_ttymode;		/* slave tty mode */
- 
- int	lines;				/* terminal line size */
- int	columns;			/* terminal coulumn size */
- char	*term_clear;			/* terminal clear code */
- 
+@@ -61 +75 @@
 -void	(*sighup)(), (*sigchld)(), (*sigtstp)();
 +void	(*sighup) __P((int)), (*sigchld) __P((int)), (*sigtstp) __P((int));
- 					/* function buffer for signal */
- 
+@@ -63,0 +78 @@
 +#ifdef TIOCSETN
- struct	tchars tchars_buf;		/* tty characters */
- struct	ltchars ltchars_buf;		/* tty characters */
+@@ -65,0 +81 @@
 +#endif
- int	lmode_buf;			/* local mode */
- int	line_desc;			/* line descipline */
- #ifdef KANJI
- struct	jtchars jtchars_buf;		/* kanji tty characters */
- int	kmode_buf;			/* kanji mode */
+@@ -71 +87 @@
 -#endif KANJI
 +#endif /* KANJI */
- 
- char	master_tty[16];			/* master tty name */
- char	slave_tty[16];			/* slave tty name */
-@@ -112,6 +129,10 @@
- 
-     myself = argv[0];
- 
+@@ -114,0 +131,4 @@
 +    setvbuf(stdin, NULL, _IONBF, 0);
 +    setvbuf(stdout, NULL, _IONBF, 0);
 +    setvbuf(stderr, NULL, _IONBF, 0);
 +
-     /*
-      * Initialize binding table
-      */
-@@ -172,7 +193,7 @@
- 		    histlen = atoi (argv[1]);
- 		}
- 		else {
+@@ -175 +195 @@
 -		    histlen = atoi (&argv[1] + 2);
 +		    histlen = atoi (argv[1] + 2);
- 		}
- 		break;
- 
-@@ -276,7 +297,7 @@
- fix_signal ()
- {
- #ifdef SIGWINCH
+@@ -279 +299 @@
 -    int sigwinch();
 +    void sigwinch __P((int));
- #endif
- 
-     sighup = signal (SIGHUP, terminate);
-@@ -336,7 +357,7 @@
- 	if (Through == OFF && Transparency == OFF && script_fp)
- 	    fwrite (inputline, sizeof(CHAR), strlen (inputline), script_fp);
-     }
+@@ -339 +359 @@
 -    terminate ();
 +    terminate (0);
- }
- 
- #define INPUT_BUFFER_SIZE 1024
-@@ -384,7 +405,8 @@
- {
-     char c;
-     int n;
+@@ -387 +407,2 @@
 -    int nfound, readfd, writefd = 0, execptfd = 0;
 +    int nfound;
 +    fd_set readfd, writefd, exceptfd;
- #ifdef USE_TIMEOUT
-     struct timeval **timeout = auto_tty_fix ? timeout_list : notimeout;
- #else
-@@ -396,9 +418,8 @@
-     /*
-      * Sorry, this cording depends to an implementation of getc().
-      */
+@@ -399,3 +420,2 @@
 -#   define CHAR_IN_BUFFER (stdin->_cnt)
 -    if (CHAR_IN_BUFFER)
 -	goto RETURNCHAR;
 +    FD_ZERO(&writefd);
 +    FD_ZERO(&exceptfd);
- 
- RETRY:
-     readfd = selectmask;
-@@ -409,13 +430,13 @@
-     while ((nfound = select (selectnfds, &readfd, 0, 0, *timeout)) < 0)
- 	if (errno != EINTR) {
- 		perror ("select");
+@@ -412 +432 @@
 -		terminate();
 +		terminate(1);
- 	}
- 
-     /*
-      * Found output from pty.
-      */
+@@ -418 +438 @@
 -    if (readfd & mastermask) {
 +    if (FD_ISSET(master, &readfd)) {
- 	int nbyte;
- 
- 	/*
-@@ -451,7 +472,7 @@
-     /*
-      * Found input from terminal
-      */
+@@ -454 +474 @@
 -    if (CHAR_IN_BUFFER || readfd & stdinmask) {
 +    if (FD_ISSET(fileno(stdin), &readfd)) {
- 
- #ifndef USE_TIMEOUT
- 	/*
-@@ -467,8 +488,8 @@
- 	RETURNCHAR:
- 	if ((c = getc (stdin)) == EOF) {
- 	    if (debug)
+@@ -470,2 +490,2 @@
 -		printf ("EOF chatched\n");
 -	    terminate ();
 +		printf ("EOF catched\n");
 +	    terminate (1);
- 	}
- 	else
- 	    return (c & CHARMASK);
-@@ -596,7 +617,7 @@
- 
- swallow_output()
- {
+@@ -599 +619 @@
 -    int readfd = mastermask;
 +    fd_set readfd = mastermask;
-     int r;
-     int nbyte;
-     int ncount = 10;
-@@ -604,7 +625,7 @@
-     while (
- 	ncount-- &&
- 	select (selectnfds, &readfd, 0, 0, TIMEOUT_NOBLOCK) > 0 &&
+@@ -607 +627 @@
 -	readfd & mastermask
 +	FD_ISSET(master, &mastermask)
-     ) {
- 	nbyte = buf_read (master, output_buffer);
- 	if (nbyte > 0) {
-@@ -636,21 +657,23 @@
- #include <sys/m_wait.h>
- #endif
- 
+@@ -639 +659,3 @@
 -catchsig()
 +void
 +catchsig(n)
 +    int n;
- {
+@@ -641 +663 @@
 -    union wait status;
 +    int status;
-     struct rusage   ru;
- 
-     if (wait3 (&status, WNOHANG | WUNTRACED, &ru) != child_pid)
- 	return;
-     if (WIFSTOPPED (status) /* || WIFSIGNALED (status) */) {
- 	if (debug) {
+@@ -648 +670 @@
 -	    message ("Child has sttoped!!\n");
 +	    message ("Child has stopped!!\n");
- 	}
- 	suspend ();
- 	return;
-     }
+@@ -653 +675 @@
 -    terminate ();
 +    terminate (WEXITSTATUS(status));
- }
- 
- exec_to_command(argv)
-@@ -675,13 +698,37 @@
-     dup2 (slave, 2);
-     (void) close (slave);
- 
+@@ -677,0 +700,3 @@
 +#ifdef TERMIOS
 +    tcsetattr(0, TCSANOW, &slave_ttymode);
 +#elif defined(TIOCSETN)
-     ioctl (0, TIOCSETN, (char *) & slave_ttymode);
+@@ -679 +704 @@
 -
 +#endif
-     execvp (*argv, argv, 0);
-     perror (*argv);
-     exit (1);
- }
- 
+@@ -684,0 +710,21 @@
 +#ifdef TERMIOS
 +fix_tty()
 +{
@@ -271,48 +140,22 @@ $NetBSD: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $
 +
 +#elif defined(TIOCSETN)
 +
- fix_tty()
- {
-     struct tchars tcbuf;
-@@ -719,6 +766,7 @@
-     ioctl (0, TIOCSETC, (char *) & tcbuf);
-     ioctl (0, TIOCSLTC, (char *) & lcbuf);
- }
+@@ -721,0 +768 @@
 +#endif
- 
- kill_process()
- {
-@@ -727,7 +775,9 @@
- 	(void) killpg (child_pid, SIGTERM);
- }
- 
+@@ -730 +777,3 @@
 -terminate()
 +void
 +terminate(n)
 +    int n;
- {
-     extern int errno;
- 
-@@ -759,10 +809,14 @@
- 	    if (killpg (child_pid, SIGKILL) < 0)
- 		perror ("kill");
- 
+@@ -761,0 +811,3 @@
 +#ifdef TERMIOS
 +    tcsetattr(0, TCSANOW, &initial_ttymode);
 +#elif defined(TIOCSETN)
-     ioctl (0, TIOCSETN, (char *) & initial_ttymode);
-     ioctl (0, TIOCSETC, (char *) & tchars_buf);
-     ioctl (0, TIOCSLTC, (char *) & ltchars_buf);
+@@ -765 +817,2 @@
 -    exit (0);
 +#endif
 +    exit (n);
- }
- 
- get_pty_master()
-@@ -775,6 +829,41 @@
- 	master = 1;
- 	return;
-     }
+@@ -777,0 +831,35 @@
 +#ifdef HAVE_PTMX
 +    if ((master = open("/dev/ptmx", O_RDWR)) == -1) {
 +	perror ("Couldn't open pseudo tty");
@@ -348,33 +191,17 @@ $NetBSD: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $
 +#endif
 +    }
 +#else
-     for (c = 'p'; c <= 's'; c++) {
- 	for (i = 0; i < 16; i++) {
- 	    sprintf (master_tty, "/dev/pty%c%x", c, i);
-@@ -796,11 +885,16 @@
-     }
- 
-  FOUND:
+@@ -798,0 +887,4 @@
 +#endif
 +#ifdef TERMIOS
 +    tcgetattr(0, &initial_ttymode);
 +#elif defined(TIOCSETN)
-     ioctl (0, TIOCGETP, (char *) &initial_ttymode);
-     ioctl (0, TIOCGETC, (char *) &tchars_buf);
-     ioctl (0, TIOCGETD, (char *) &line_desc);
-     ioctl (0, TIOCGLTC, (char *) &ltchars_buf);
-     ioctl (0, TIOCLGET, (char *) &lmode_buf);
+@@ -803,0 +896 @@
 +#endif
- 
- #ifdef TIOCGWINSZ
-     {
-@@ -820,11 +914,15 @@
- # if defined(TIOCKGETC) && defined(TIOCKSETC)
-     ioctl (0, TIOCKGETC, (char *) &jtchars_buf);
- # endif
+@@ -823 +916 @@
 -#endif KANJI
 +#endif /* KANJI */
- 
+@@ -825,3 +918,7 @@
 -    stdinmask = 1 << fileno (stdin);
 -    mastermask = 1 << master;
 -    selectmask = stdinmask | mastermask;
@@ -385,13 +212,7 @@ $NetBSD: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $
 +    FD_SET(master, &mastermask);
 +    FD_SET(fileno(stdin), &selectmask);
 +    FD_SET(master, &selectmask);
-     selectnfds = max (fileno(stdin), master) + 1;
- 
-     return;
-@@ -838,11 +936,20 @@
- 	perror (slave_tty);
- 	exit (1);
-     }
+@@ -840,0 +938,8 @@
 +    if (setsid() == -1)
 +	perror ("setsid");
 +    if (ioctl (slave, TIOCSCTTY, 1) == -1)
@@ -400,52 +221,21 @@ $NetBSD: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $
 +#ifdef TERMIOS
 +    tcsetattr(slave, TCSANOW, &initial_ttymode);
 +#elif defined(TIOCSETN)
-     ioctl (slave, TIOCSETN, (char *) &initial_ttymode);
-     ioctl (slave, TIOCSETC, (char *) &tchars_buf);
-     ioctl (slave, TIOCSLTC, (char *) &ltchars_buf);
-     ioctl (slave, TIOCLSET, (char *) &lmode_buf);
-     ioctl (slave, TIOCSETD, (char *) &line_desc);
+@@ -845,0 +951 @@
 +#endif
- 
- #ifdef KANJI
- # if defined(TIOCKGET) && defined(TIOCKSET)
-@@ -851,7 +958,7 @@
- # if defined(TIOCKGETC) && defined(TIOCKSETC)
-     ioctl (slave, TIOCKSETC, (char *) &jtchars_buf);
- # endif
+@@ -854 +960 @@
 -#endif KANJI
 +#endif /* KANJI */
- 
- #ifdef TIOCSWINSZ
-     {
-@@ -866,16 +973,19 @@
- 
- recover_tty()
- {
+@@ -869 +975,3 @@
 -
 +#ifdef TERMIOS
 +    tcsetattr(0, TCSANOW, &initial_ttymode);
 +#elif defined(TIOCSETN)
-     ioctl (0, TIOCSETN, (char *) & initial_ttymode);
-     ioctl (0, TIOCSETC, (char *) & tchars_buf);
-     ioctl (0, TIOCSLTC, (char *) & ltchars_buf);
+@@ -872,0 +981 @@
 +#endif
- }
- 
- suspend()
- {
-     long	pid;
+@@ -878 +987 @@
 -    void	(*func) ();
 +    void	(*func) __P((int));
-     int		omask;
-     extern int	errno;
- 
-@@ -890,7 +1000,7 @@
- 
-     if (kill (child_pid, SIGCONT) < 0 && errno == ESRCH) {
- 	printf ("Where my child has gone?!\n");
+@@ -893 +1002 @@
 -	terminate ();
 +	terminate (1);
-     }
-     killpg (child_pid, SIGCONT);
-     kill (0, SIGCONT);
