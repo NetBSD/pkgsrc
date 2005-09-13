@@ -1,8 +1,16 @@
-$NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
+$NetBSD: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $
 
---- fep_main.c.orig	Thu Jun 10 04:53:06 1993
-+++ fep_main.c
-@@ -10,8 +10,17 @@ static char rcsid[]=
+--- fep_main.c.orig	1993-06-09 22:53:06.000000000 -0400
++++ fep_main.c	2004-02-20 09:50:33.000000000 -0500
+@@ -3,15 +3,25 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Id: patch-aj,v 1.4 2005/09/13 19:25:57 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
+ 
+ #include <stdio.h>
+ #include <signal.h>
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <sys/ioctl.h>
@@ -13,6 +21,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
 +#ifndef _POSIX_VDISABLE
 +#define _POSIX_VDISABLE '\0'
 +#endif
++#include <stdlib.h>
 +#endif
 +#else
  #include <sgtty.h>
@@ -21,7 +30,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  #include <sys/time.h>
  #include <sys/resource.h>
  #include <sys/errno.h>
-@@ -30,7 +39,7 @@ static char rcsid[]=
+@@ -30,7 +40,7 @@
  #ifdef STAT
    static char fep_statrc[] = FEP_STAT;
  #endif
@@ -30,7 +39,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  char	*myself;			/* the command name */
  char	*prompt = "";			/* prompt string */
-@@ -38,9 +47,9 @@ char	*delimiters = DEFAULT_DELIMITERS;
+@@ -38,9 +48,9 @@
  					/* delimiter characters */
  int	master;				/* file discriptor for pty master */
  int	slave;				/* file discriptor for pty slave */
@@ -43,7 +52,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  int	selectnfds;			/* max (fileno(stdin), master) + 1*/
  int	child_pid;			/* child pid */
  int	ptyflag = ON;			/* flag to use pty or not */
-@@ -48,27 +57,34 @@ int	histlen = -1;			/* history length */
+@@ -48,27 +58,34 @@
  int	debug = OFF;			/* debug switch */
  int	auto_tty_fix = ON;		/* fix tty mode automaticaly */
  FILE	*script_fp = NULL;		/* script file pointer */
@@ -84,7 +93,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  char	master_tty[16];			/* master tty name */
  char	slave_tty[16];			/* slave tty name */
-@@ -112,6 +128,10 @@ main(argc, argv)
+@@ -112,6 +129,10 @@
  
      myself = argv[0];
  
@@ -95,7 +104,16 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
      /*
       * Initialize binding table
       */
-@@ -276,7 +296,7 @@ DEFAULT:
+@@ -172,7 +193,7 @@
+ 		    histlen = atoi (argv[1]);
+ 		}
+ 		else {
+-		    histlen = atoi (&argv[1] + 2);
++		    histlen = atoi (argv[1] + 2);
+ 		}
+ 		break;
+ 
+@@ -276,7 +297,7 @@
  fix_signal ()
  {
  #ifdef SIGWINCH
@@ -104,7 +122,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  #endif
  
      sighup = signal (SIGHUP, terminate);
-@@ -336,7 +356,7 @@ input_handler()
+@@ -336,7 +357,7 @@
  	if (Through == OFF && Transparency == OFF && script_fp)
  	    fwrite (inputline, sizeof(CHAR), strlen (inputline), script_fp);
      }
@@ -113,7 +131,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  }
  
  #define INPUT_BUFFER_SIZE 1024
-@@ -384,7 +404,8 @@ getcharacter()
+@@ -384,7 +405,8 @@
  {
      char c;
      int n;
@@ -123,7 +141,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  #ifdef USE_TIMEOUT
      struct timeval **timeout = auto_tty_fix ? timeout_list : notimeout;
  #else
-@@ -396,9 +417,8 @@ getcharacter()
+@@ -396,9 +418,8 @@
      /*
       * Sorry, this cording depends to an implementation of getc().
       */
@@ -135,7 +153,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  RETRY:
      readfd = selectmask;
-@@ -409,13 +429,13 @@ RETRY:
+@@ -409,13 +430,13 @@
      while ((nfound = select (selectnfds, &readfd, 0, 0, *timeout)) < 0)
  	if (errno != EINTR) {
  		perror ("select");
@@ -151,7 +169,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  	int nbyte;
  
  	/*
-@@ -451,7 +471,7 @@ RETRY:
+@@ -451,7 +472,7 @@
      /*
       * Found input from terminal
       */
@@ -160,7 +178,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  #ifndef USE_TIMEOUT
  	/*
-@@ -467,8 +487,8 @@ RETRY:
+@@ -467,8 +488,8 @@
  	RETURNCHAR:
  	if ((c = getc (stdin)) == EOF) {
  	    if (debug)
@@ -171,7 +189,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  	}
  	else
  	    return (c & CHARMASK);
-@@ -596,7 +616,7 @@ buf_put (bp, s)
+@@ -596,7 +617,7 @@
  
  swallow_output()
  {
@@ -180,7 +198,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
      int r;
      int nbyte;
      int ncount = 10;
-@@ -604,7 +624,7 @@ swallow_output()
+@@ -604,7 +625,7 @@
      while (
  	ncount-- &&
  	select (selectnfds, &readfd, 0, 0, TIMEOUT_NOBLOCK) > 0 &&
@@ -189,7 +207,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
      ) {
  	nbyte = buf_read (master, output_buffer);
  	if (nbyte > 0) {
-@@ -636,21 +656,23 @@ swallow_output()
+@@ -636,21 +657,23 @@
  #include <sys/m_wait.h>
  #endif
  
@@ -217,7 +235,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  }
  
  exec_to_command(argv)
-@@ -675,13 +697,37 @@ exec_to_command(argv)
+@@ -675,13 +698,37 @@
      dup2 (slave, 2);
      (void) close (slave);
  
@@ -256,7 +274,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  fix_tty()
  {
      struct tchars tcbuf;
-@@ -719,6 +765,7 @@ fix_tty()
+@@ -719,6 +766,7 @@
      ioctl (0, TIOCSETC, (char *) & tcbuf);
      ioctl (0, TIOCSLTC, (char *) & lcbuf);
  }
@@ -264,7 +282,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  kill_process()
  {
-@@ -727,7 +774,9 @@ kill_process()
+@@ -727,7 +775,9 @@
  	(void) killpg (child_pid, SIGTERM);
  }
  
@@ -275,7 +293,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  {
      extern int errno;
  
-@@ -759,10 +808,14 @@ terminate()
+@@ -759,10 +809,14 @@
  	    if (killpg (child_pid, SIGKILL) < 0)
  		perror ("kill");
  
@@ -291,10 +309,53 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  }
  
  get_pty_master()
-@@ -796,11 +849,15 @@ get_pty_master()
+@@ -775,6 +829,41 @@
+ 	master = 1;
+ 	return;
+     }
++#ifdef HAVE_PTMX
++    if ((master = open("/dev/ptmx", O_RDWR)) == -1) {
++	perror ("Couldn't open pseudo tty");
++	kill_process ();
++	exit (1);
++    }
++    if (grantpt (master) == -1) {
++	perror ("grantpt");
++	kill_process ();
++	exit (1);
++    }
++    if (unlockpt (master) == -1) {
++	perror ("grantpt");
++	kill_process ();
++	exit (1);
++    }
++    {
++#ifdef __linux__
++	if (ptsname_r (master, slave_tty, sizeof(slave_tty)) == -1) {
++	    perror ("ptsname_r");
++	    kill_process ();
++	    exit (1);
++	}
++#else
++	char *ptr;
++	if ((ptr = ptsname (master)) == NULL) {
++	    perror ("ptsname");
++	    kill_process ();
++	    exit (1);
++	}
++	(void)strncpy (slave_tty, ptr, sizeof(slave_tty));
++	slave_tty[sizeof(slave_tty) - 1] = '\0';
++#endif
++    }
++#else
+     for (c = 'p'; c <= 's'; c++) {
+ 	for (i = 0; i < 16; i++) {
+ 	    sprintf (master_tty, "/dev/pty%c%x", c, i);
+@@ -796,11 +885,16 @@
      }
  
   FOUND:
++#endif
 +#ifdef TERMIOS
 +    tcgetattr(0, &initial_ttymode);
 +#elif defined(TIOCSETN)
@@ -307,7 +368,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  #ifdef TIOCGWINSZ
      {
-@@ -820,11 +877,15 @@ get_pty_master()
+@@ -820,11 +914,15 @@
  # if defined(TIOCKGETC) && defined(TIOCKSETC)
      ioctl (0, TIOCKGETC, (char *) &jtchars_buf);
  # endif
@@ -327,10 +388,15 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
      selectnfds = max (fileno(stdin), master) + 1;
  
      return;
-@@ -838,11 +899,15 @@ get_pty_slave()
+@@ -838,11 +936,20 @@
  	perror (slave_tty);
  	exit (1);
      }
++    if (setsid() == -1)
++	perror ("setsid");
++    if (ioctl (slave, TIOCSCTTY, 1) == -1)
++	perror ("ioctl");
++
 +#ifdef TERMIOS
 +    tcsetattr(slave, TCSANOW, &initial_ttymode);
 +#elif defined(TIOCSETN)
@@ -343,7 +409,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  #ifdef KANJI
  # if defined(TIOCKGET) && defined(TIOCKSET)
-@@ -851,7 +916,7 @@ get_pty_slave()
+@@ -851,7 +958,7 @@
  # if defined(TIOCKGETC) && defined(TIOCKSETC)
      ioctl (slave, TIOCKSETC, (char *) &jtchars_buf);
  # endif
@@ -352,7 +418,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  #ifdef TIOCSWINSZ
      {
-@@ -866,16 +931,19 @@ get_pty_slave()
+@@ -866,16 +973,19 @@
  
  recover_tty()
  {
@@ -374,7 +440,7 @@ $NetBSD: patch-aj,v 1.3 2003/11/11 10:42:32 wiz Exp $
      int		omask;
      extern int	errno;
  
-@@ -890,7 +958,7 @@ suspend()
+@@ -890,7 +1000,7 @@
  
      if (kill (child_pid, SIGCONT) < 0 && errno == ESRCH) {
  	printf ("Where my child has gone?!\n");
