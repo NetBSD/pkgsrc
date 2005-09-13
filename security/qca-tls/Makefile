@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/13 04:27:21 dmcmahill Exp $
 
 DISTNAME=	qca-tls-1.0
 PKGREVISION=	# empty
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=        --with-openssl-lib=${SSLBASE}/lib
 # XXX the -rpath filter is somewhat ugly, and this should be eventually
 # fixed in NetBSD qmake template to not be necessary.
 post-configure:
-	cd ${WRKSRC} && (	\
+	cd ${WRKSRC} && ( ${SETENV} ${CONFIGURE_ENV}			\
 		${QTDIR}/bin/qmake qca-tls.pro -o Makefile.orig;	\
 		${SED} -e "s,-rpath .*,-rpath ${QTDIR}/lib," Makefile.orig > Makefile;	\
 	)
