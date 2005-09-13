@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/03/07 12:59:54 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/09/13 04:28:18 dmcmahill Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT3_TOOLS_BUILDLINK3_MK:=	${QT3_TOOLS_BUILDLINK3_MK}+
@@ -22,5 +22,12 @@ CONFIGURE_ENV+=		UIC="${QTDIR}/bin/uic"
 MAKE_ENV+=		UIC="${QTDIR}/bin/uic"
 CONFIGURE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
 MAKE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
+
+# the way the spec files are currently instealled via pkgsrc, they
+# are all identical anyway, so just pick one and point to it.  
+# Without specifying QMAKESPEC, qmake can't figure it out on some
+# platforms (solaris for example)
+CONFIGURE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/netbsd-g++
+MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/netbsd-g++
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
