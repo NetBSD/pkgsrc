@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3882 2005/09/11 15:14:48 wiz Exp $
+$NetBSD: TODO,v 1.3883 2005/09/13 11:14:22 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -651,6 +651,8 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.6.0
 	o muse-0.9.1
+	o mysql4-4.1.14 [xtraeme]
+	o mysql-4.0.26 [xtraeme]
 	o nagios-2.0b3 [replacing netsaint]
 	o nail-11.25
 	o nano-1.2.5
