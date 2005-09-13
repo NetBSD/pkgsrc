@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/13 11:47:49 abs Exp $
 #
 
-DISTNAME=	rsnapshot-1.1.6
-PKGREVISION=	1
+DISTNAME=	rsnapshot-1.2.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.rsnapshot.org/downloads/
 
@@ -11,7 +10,6 @@ HOMEPAGE=	http://www.rsnapshot.org/
 COMMENT=	Filesystem snapshot utility
 
 DEPENDS+=	rsync>=2.3.1:../../net/rsync
-DEPENDS+=	p5-Lchown>=0.07:../../sysutils/p5-Lchown
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
