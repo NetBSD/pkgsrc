@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11109 2005/09/13 11:48:54 abs Exp $
+$NetBSD: CHANGES,v 1.11110 2005/09/13 12:44:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4011,4 +4011,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/gaim-encryption to 2.38 [gdt 2005-09-11]
 	Updated devel/chmlib to 0.36 [minskim 2005-09-12]
 	Updated sysutils/rsnapshot to 1.2.1 [abs 2005-09-13]
-
+	Updated sysutils/xuvmstat to 20050909 [wiz 2005-09-13]
