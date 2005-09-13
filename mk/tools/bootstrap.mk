@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.5 2005/07/30 00:38:56 seb Exp $
+# $NetBSD: bootstrap.mk,v 1.6 2005/09/13 04:24:35 dmcmahill Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,7 +48,6 @@
 # 
 
 .if ${OPSYS} == "AIX"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.install?=	${LOCALBASE}/bin/install-sh
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
@@ -61,25 +60,21 @@ TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .elif ${OPSYS} == "DragonFly"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .elif ${OPSYS} == "FreeBSD"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .elif ${OPSYS} == "HPUX"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
 TOOLS_PLATFORM.sed?=		${LOCALBASE}/bin/nbsed
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .elif ${OPSYS} == "Interix"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.install?=	${LOCALBASE}/bin/install-sh
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
@@ -87,7 +82,6 @@ TOOLS_PLATFORM.sed?=		${LOCALBASE}/bin/nbsed
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .elif ${OPSYS} == "IRIX"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.install?=	${LOCALBASE}/bin/install-sh
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
@@ -103,12 +97,10 @@ TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 # NetBSD has everything.
 
 .elif ${OPSYS} == "OpenBSD"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .elif ${OPSYS} == "OSF1"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.install?=	${LOCALBASE}/bin/install-sh
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
@@ -116,14 +108,12 @@ TOOLS_PLATFORM.sed?=		${LOCALBASE}/bin/nbsed
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .elif ${OPSYS} == "SunOS"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
 TOOLS_PLATFORM.sed?=		${LOCALBASE}/bin/nbsed
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .elif ${OPSYS} == "UnixWare"
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.mkdir?=		${LOCALBASE}/sbin/mkdir-sh
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
@@ -131,7 +121,6 @@ TOOLS_PLATFORM.sed?=		${LOCALBASE}/bin/nbsed
 TOOLS_PLATFORM.tar?=		${LOCALBASE}/bin/tar
 
 .else
-TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
 TOOLS_PLATFORM.mtree?=		${LOCALBASE}/sbin/mtree
 TOOLS_PLATFORM.pax?=		${LOCALBASE}/bin/pax
 TOOLS_PLATFORM.sed?=		${LOCALBASE}/bin/nbsed
