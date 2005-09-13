@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/25 22:05:53 epg Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/13 19:39:46 agc Exp $
 
 DISTNAME=	swig-1.3.24
 CATEGORIES=	devel
@@ -14,7 +14,6 @@ CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/1.3
 BUILD_TARGET=		swig
 WRKSRC=			${WRKDIR}/SWIG-1.3.24
 
-USE_BUILDLINK3=		YES
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
