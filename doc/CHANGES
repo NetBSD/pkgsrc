@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11111 2005/09/13 14:39:26 taca Exp $
+$NetBSD: CHANGES,v 1.11112 2005/09/13 20:22:53 christos Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4013,3 +4013,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/rsnapshot to 1.2.1 [abs 2005-09-13]
 	Updated sysutils/xuvmstat to 20050909 [wiz 2005-09-13]
 	Updated graphics/ruby-RMagick to 1.9.1 [taca 2005-09-13]
+	Updated sysutils/lsof to 4.76 [christos 2005-09-13]
