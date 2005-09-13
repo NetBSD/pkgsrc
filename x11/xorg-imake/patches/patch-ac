@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2004/12/27 17:26:18 xtraeme Exp $
+$NetBSD: patch-ac,v 1.4 2005/09/13 22:51:42 reed Exp $
 
---- config/cf/NetBSD.cf.in.orig	2004-08-15 02:03:36.000000000 +0200
-+++ config/cf/NetBSD.cf.in	2004-12-20 15:33:15.000000000 +0100
+--- config/cf/NetBSD.cf.in.orig	2004-08-14 17:03:36.000000000 -0700
++++ config/cf/NetBSD.cf.in	2005-09-12 15:21:11.000000000 -0700
 @@ -123,7 +123,7 @@
  # define ThreadedX		YES
  # define HasThreadSafeAPI	YES
@@ -103,7 +103,18 @@ $NetBSD: patch-ac,v 1.3 2004/12/27 17:26:18 xtraeme Exp $
  /*
   * agpgart support (NetBSD 1.5Y and up)
   */
-@@ -588,7 +597,7 @@
+@@ -468,9 +477,7 @@
+ file.0:: file.$(MANNEWSUFFIX)						@@\
+ 	@if [ -f file.$(MANNEWSUFFIX) ]; \				@@\
+ 	then \								@@\
+-	cat file.$(MANNEWSUFFIX) | $(NEQN) | $(TBL) | $(NROFF) $(MANMACROS) | $(COL) >/tmp/$$$$.man; \	@@\
+-	cp /tmp/$$$$.man file.0; \					@@\
+-	$(RM) /tmp/$$$$.man; \						@@\
++	cat file.$(MANNEWSUFFIX) | $(NEQN) | $(TBL) | $(NROFF) $(MANMACROS) | $(COL) > file.0; \	@@\
+ 	fi 								@@\
+ 									@@\
+ install.man::                                                           @@\
+@@ -588,7 +595,7 @@
  # define BuildXInputLib          YES
  #endif
  
