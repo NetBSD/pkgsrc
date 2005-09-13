@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/11 15:57:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/13 14:38:14 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/RMagick.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/RMagick.rb
 ${RUBY_SITELIBDIR}/rvg/clippath.rb
@@ -17,6 +17,7 @@ ${RUBY_SITELIBDIR}/rvg/transformable.rb
 ${RUBY_SITELIBDIR}/rvg/units.rb
 ${RUBY_EXAMPLESDIR}/RMagick/describe.rb
 ${RUBY_EXAMPLESDIR}/RMagick/histogram.rb
+${RUBY_EXAMPLESDIR}/RMagick/identify.rb
 ${RUBY_EXAMPLESDIR}/RMagick/image_opacity.rb
 ${RUBY_EXAMPLESDIR}/RMagick/import_export.rb
 ${RUBY_EXAMPLESDIR}/RMagick/pattern_fill.rb
@@ -180,9 +181,6 @@ ${RUBY_DOCDIR}/RMagick/ex/cbezier6.gif
 ${RUBY_DOCDIR}/RMagick/ex/cbezier6.rb
 ${RUBY_DOCDIR}/RMagick/ex/channel.jpg
 ${RUBY_DOCDIR}/RMagick/ex/channel.rb
-${RUBY_DOCDIR}/RMagick/ex/channel_threshold.rb
-${RUBY_DOCDIR}/RMagick/ex/channel_threshold_after.jpg
-${RUBY_DOCDIR}/RMagick/ex/channel_threshold_before.jpg
 ${RUBY_DOCDIR}/RMagick/ex/charcoal.jpg
 ${RUBY_DOCDIR}/RMagick/ex/charcoal.rb
 ${RUBY_DOCDIR}/RMagick/ex/chop.rb
@@ -362,8 +360,6 @@ ${RUBY_DOCDIR}/RMagick/ex/radial_blur.jpg
 ${RUBY_DOCDIR}/RMagick/ex/radial_blur.rb
 ${RUBY_DOCDIR}/RMagick/ex/raise.jpg
 ${RUBY_DOCDIR}/RMagick/ex/raise.rb
-${RUBY_DOCDIR}/RMagick/ex/random_channel_threshold.jpg
-${RUBY_DOCDIR}/RMagick/ex/random_channel_threshold.rb
 ${RUBY_DOCDIR}/RMagick/ex/random_threshold_channel.jpg
 ${RUBY_DOCDIR}/RMagick/ex/random_threshold_channel.rb
 ${RUBY_DOCDIR}/RMagick/ex/rect01.gif
@@ -528,7 +524,6 @@ ${RUBY_DOCDIR}/RMagick/cbezier4.rb.html
 ${RUBY_DOCDIR}/RMagick/cbezier5.rb.html
 ${RUBY_DOCDIR}/RMagick/cbezier6.rb.html
 ${RUBY_DOCDIR}/RMagick/channel.rb.html
-${RUBY_DOCDIR}/RMagick/channel_threshold.rb.html
 ${RUBY_DOCDIR}/RMagick/charcoal.rb.html
 ${RUBY_DOCDIR}/RMagick/chop.rb.html
 ${RUBY_DOCDIR}/RMagick/circle.rb.html
@@ -625,7 +620,6 @@ ${RUBY_DOCDIR}/RMagick/quad01.rb.html
 ${RUBY_DOCDIR}/RMagick/quantize-m.rb.html
 ${RUBY_DOCDIR}/RMagick/radial_blur.rb.html
 ${RUBY_DOCDIR}/RMagick/raise.rb.html
-${RUBY_DOCDIR}/RMagick/random_channel_threshold.rb.html
 ${RUBY_DOCDIR}/RMagick/random_threshold_channel.rb.html
 ${RUBY_DOCDIR}/RMagick/rect01.rb.html
 ${RUBY_DOCDIR}/RMagick/rect02.rb.html
