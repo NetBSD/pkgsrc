@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3884 2005/09/13 11:16:52 wiz Exp $
+$NetBSD: TODO,v 1.3885 2005/09/13 12:44:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1134,7 +1134,6 @@ Suggested package updates
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
-	o xuvmstat-20050909 [wiz]
 	o xvile-9.5
 	o xzip-182
 	o yafc-1.1
