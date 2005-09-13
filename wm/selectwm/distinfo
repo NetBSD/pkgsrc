@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/15 12:42:40 agc Exp $
+$NetBSD: distinfo,v 1.2 2005/09/13 21:21:12 tonio Exp $
 
 SHA1 (selectwm-0.4.1.tar.gz) = a4688afb9a286dae4794f297b97891008afcdeab
 RMD160 (selectwm-0.4.1.tar.gz) = d16a8497f39b12e8578b0d28f64cc8f7b1031958
 Size (selectwm-0.4.1.tar.gz) = 209754 bytes
 SHA1 (patch-aa) = 2e3806e5c408bbc6891acc42399d24abc3a01f8b
-SHA1 (patch-ab) = 454186d904324d1834e40609933a6fd0c9e03d62
+SHA1 (patch-ab) = a6441f722158685d78e6bffafd182ed9bff04091
