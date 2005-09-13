@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3883 2005/09/13 11:14:22 xtraeme Exp $
+$NetBSD: TODO,v 1.3884 2005/09/13 11:16:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -300,7 +300,7 @@ Suggested package updates
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
-	o YoSucker-71
+	o YoSucker-73
 	o aap-0.144
 	o abcde-2.3.0
 	o abook-0.5.4
@@ -358,7 +358,7 @@ Suggested package updates
 	o boaconstructor-0.3.1
 	o bochs-2.2.1
 	o bogofilter-0.94.12
-	o boson-0.10
+	o boson-0.11
 	o browser-bookmarks-menu-0.4
 	o btparse-0.34
 	o c4-1.10
@@ -407,6 +407,7 @@ Suggested package updates
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.18.1
 	o dact-0.8.37
+	o dante-1.1.18
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -431,6 +432,7 @@ Suggested package updates
 	o eclipse-3.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o efax-gtk-3.0.5
 	o egtk-0.3.6
 	o electricfence-2.4.16
 	o elf-0.5.4
@@ -497,12 +499,13 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o grace-5.1.18
+	o gramps-2.0.8
 	o grap-1.32
 	o grep-2.5.1a
 	o grepmail-5.3032
 	o gri-2.12.8
 	o groff-1.19.2
-	o gsasl-0.2.7
+	o gsasl-0.2.8
 	o gsed-4.1.4
 	o gsharutils-4.3.78
 	o gss-0.0.16
@@ -516,6 +519,7 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o guile-pg-0.27
 	o guile-www-1.1.1
+	o gwenview-1.3.0 [pkg/31299]
 	o gzrecover-0.3
 	o hackbot-2.21
 	o hashcash-1.16
@@ -581,14 +585,14 @@ Suggested package updates
 	o leafpad-0.7.9
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
-	o libextractor-0.5.4
+	o libextractor-0.5.5
 	o libflash-0.4.13
 	o libhydrogen-0.9.0
 	o libjit-0.0.4 [pkg/30514]
 	o libksba-0.9.9
 	o liblive-2005.03.23
 	o libmatheval-1.1.2
-	o libmpeg3-1.5.4
+	o libmpeg3-1.6
 	o librsvg2-2.11.1
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
@@ -596,10 +600,11 @@ Suggested package updates
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.20
 	o libtorrent-0.7.3
+	o libxml2-2.6.22
 	o licq-core-1.3.0
 	o lilypond-2.6
 	o linuxsms-0.77
-	o lmbench-2.0.4
+	o lmbench-2.5
 	o lopster-1.2.2
 	o lout-3.30
 	o lua-sql
@@ -625,15 +630,17 @@ Suggested package updates
 	o mgetty+sendfax-1.1.32
 	o micq-0.4.12 [pkg/29063]
 	o micq-0.5.0.3
+	o mimedefang-2.53
 	o mini_sendmail-1.3.5
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.5.5
+	o mkvtoolnix-1.5.6
 	o mldonkey-2.6.4
 	o mldonkey-gui-2.6.4
 	o mlview-0.8
 	o mmix-20041014
 	o molden-4.3
+	o mono-1.1.9
 	o moscow_ml-2.01
 	o most-4.10.1
 	o mowitz-0.3.0
@@ -669,6 +676,7 @@ Suggested package updates
 	o neverball-1.4.0
 	o newmail-1.0.2
 	o ng-1.4.4
+	o nmap-3.93
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
 	o nsd-2.3.1
@@ -805,6 +813,7 @@ Suggested package updates
 	o patchutils-0.2.31
 	o pcal-4.8
 	o pchar-1.5
+	o pcre-6.4
 	o pdmenu-1.2.85
 	o pear-HTTP_Request-1.2.4
 	o pear-Net_Socket-1.0.6
@@ -814,6 +823,7 @@ Suggested package updates
 	o phoon-20030120
 	o photopc-3.05
 	o php-4.4.0
+	o phpmyadmin-2.6.4
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
@@ -865,12 +875,12 @@ Suggested package updates
 	o py-m2crypto-0.13
 	o py-mad-0.5.3
 	o py-mysqldb-1.1.7
-	o py-psycopg-1.1.19
+	o py-psycopg-1.1.20
 	o py-qt3-base-3.15
-	o py-qt3-sip-4.3
+	o py-qt3-sip-4.3.1
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
-	o py-sqlite-2.0.3
+	o py-sqlite-2.0.4
 	o py-textile-2.0.10
 	o py-twisted-2.0.0 
 	o py-urwid-0.8.6
@@ -902,7 +912,7 @@ Suggested package updates
 	o rayshade-4.0.6
 	o rblcheck-1.5
 	o rc-1.7.1
-	o rdiff-backup-1.0.0
+	o rdiff-backup-1.0.1
 	o rdp-1.6
 	o rep-gtk-0.18
 	o resize_image-0.7
@@ -972,6 +982,7 @@ Suggested package updates
 	o snd-7.15 [wiz]
 	o snes9x-1.43
 	o snownews-1.5.7
+	o socat-1.4.3.0
 	o source-highlight-2.1.2
 	o sox-12.17.8
 	o spim-7.2
@@ -981,7 +992,7 @@ Suggested package updates
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1
 	o stella-1.4.2
-	o stellarium-0.6.2
+	o stellarium-0.7.0
 	o stlport-4.6.2
 	o strace-4.5.8
 	o streamtuner-0.99.99
@@ -1123,6 +1134,7 @@ Suggested package updates
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
+	o xuvmstat-20050909 [wiz]
 	o xvile-9.5
 	o xzip-182
 	o yafc-1.1
