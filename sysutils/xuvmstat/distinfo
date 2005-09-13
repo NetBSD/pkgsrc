@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:41:00 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/09/13 12:43:48 wiz Exp $
 
-SHA1 (xuvmstat20030810.tar.gz) = 20644f01e6458b5bb5765a704d018b5c233d18f1
-RMD160 (xuvmstat20030810.tar.gz) = 64a1062f1e46df19eb127d3f9d2e9e7d22d4e9b4
-Size (xuvmstat20030810.tar.gz) = 7552 bytes
+SHA1 (xuvmstat20050909.tar.gz) = b8118b1b11c260683ff14fe2200e9ee584f6b7c5
+RMD160 (xuvmstat20050909.tar.gz) = 6400ee7e396c410bf22ef9673b27b909f2a29a68
+Size (xuvmstat20050909.tar.gz) = 7661 bytes
