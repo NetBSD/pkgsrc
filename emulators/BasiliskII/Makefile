@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/01 12:34:32 adam Exp $
+# $NetBSD: Makefile,v 1.23 2005/09/13 12:07:34 adam Exp $
 
 DISTNAME=	BasiliskII_src_22032005
 PKGNAME=	BasiliskII-1.0.20050322
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-fbdev-dga
 CONFIGURE_ARGS+=	--enable-addressing=banks
 CONFIGURE_ARGS+=	--without-mon
+# disable gnome support, or configure will break if gnome-libs is installed
+CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG=no
 
 .include "options.mk"
 
