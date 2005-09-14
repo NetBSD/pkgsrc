@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.8 2005/09/14 15:55:35 reed Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.9 2005/09/14 16:40:57 reed Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -81,7 +81,7 @@
     </para>
 
     <programlisting>BUILDLINK_DEPENDS.foo+=   foo>=1.1.0
-    .include "../../category/foo/buildlink3.mk"</programlisting>
+.include "../../category/foo/buildlink3.mk"</programlisting>
 
     <para>There are several <filename>buildlink3.mk</filename>
       files in <filename>pkgsrc/mk</filename>
