@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.5 2005/09/14 14:18:16 dmcmahill Exp $
+
+--- cutestuff/openpgp/gpgproc/jprocess_unix.cpp.orig	2004-06-07 03:30:04.000000000 -0400
++++ cutestuff/openpgp/gpgproc/jprocess_unix.cpp
+@@ -35,6 +35,9 @@
+ **
+ **********************************************************************/
+ 
++#define BSD_COMP
++#include <sys/ioctl.h>
++
+ #include "qplatformdefs.h"
+ 
+ // Solaris redefines connect -> __xnet_connect with _XOPEN_SOURCE_EXTENDED.
