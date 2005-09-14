@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2005/08/31 08:04:58 jlam Exp $
+# $NetBSD: Makefile,v 1.124 2005/09/14 07:38:50 pooka Exp $
 
 DISTNAME=	netpbm-10.29
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -20,7 +20,7 @@ MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}" \
 MAKEFILE=	GNUmakefile
 PLIST_SRC=	${WRKDIR}/PLIST_STAGE
 REPLACE_PERL=	editor/ppmfade editor/ppmshadow editor/pnmquant \
-		generator/ppmrainbow manweb editor/pnmflip
+		generator/ppmrainbow manweb editor/pnmflip editor/ppmquant
 STAGEDIR=	${WRKDIR}/staging
 
 LIBS.SunOS=	-lsocket -lnsl
