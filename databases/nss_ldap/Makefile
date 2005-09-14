@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/30 12:47:52 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/14 16:44:12 drochner Exp $
 #
 
 DISTNAME=		nss_ldap-239
@@ -9,6 +9,9 @@ MASTER_SITES=		http://www.padl.com/download/
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.padl.com/OSS/nss_ldap.html
 COMMENT=		LDAP client for nsswitch
+
+# needs nsswitch
+ONLY_FOR_PLATFORM=	NetBSD-3.*-*
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
