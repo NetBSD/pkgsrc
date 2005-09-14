@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11113 2005/09/13 21:31:24 tonio Exp $
+$NetBSD: CHANGES,v 1.11114 2005/09/14 11:56:13 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4015,3 +4015,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/ruby-RMagick to 1.9.1 [taca 2005-09-13]
 	Updated sysutils/lsof to 4.76 [christos 2005-09-13]
 	Updated wm/selectwm to 0.4.1nb1 [tonio 2005-09-13]
+	Updated sysutils/xfce4-systemload-plugin to 0.3.6nb1 [martti 2005-09-14]
