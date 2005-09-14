@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/16 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/09/14 14:18:16 dmcmahill Exp $
 
 PSI_VERSION=	0.9.3
 DISTNAME=	psi-${PSI_VERSION}
@@ -23,6 +23,8 @@ DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
+
+CONFIG_SHELL=	${SH}
 
 CONFIGURE_ARGS= --prefix="${PREFIX}" --qtdir="${QTDIR}"
 CONFIGURE_ARGS+=	--with-qca-inc="${BUILDLINK_PREFIX.qca}/include" \
@@ -49,7 +51,7 @@ post-configure:
 	-e "s:/bin/true:${TRUE}:" < ${WRKSRC}/Makefile \
 		> ${WRKSRC}/Makefile.new
 	${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
-	cd ${WRKSRC}/libpsi/psiwidgets && (	\
+	cd ${WRKSRC}/libpsi/psiwidgets && ( ${SETENV} ${CONFIGURE_ENV}	\
 		${QTDIR}/bin/qmake psiwidgets.pro -o Makefile; \
 		${SED} -e 's,-rpath.*$$,-rpath "${QTDIR}/lib",' < Makefile > Makefile.new; \
 		${MV} Makefile.new Makefile; \
