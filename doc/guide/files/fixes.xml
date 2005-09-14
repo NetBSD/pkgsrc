@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.29 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.30 2005/09/14 16:46:13 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -120,12 +120,13 @@
       <para>Your package may depend on some other package being present
         - and there are various ways of expressing this
         dependency. pkgsrc supports the <varname>BUILD_DEPENDS</varname>
-        and <varname>DEPENDS</varname> definitions, as well as
+        and <varname>DEPENDS</varname> definitions, the
+        <varname>USE_TOOLS</varname> definition, as well as
         dependencies via <filename>buildlink3.mk</filename>, which is
         the preferred way to handle dependencies, and which uses the
         variables named above. See <xref linkend="buildlink"/> for more
         information.</para> 
-    
+
       <para>The basic difference between the two variables is as
         follows: The <varname>DEPENDS</varname> definition registers
         that pre-requisite in the binary package so it will be pulled in
