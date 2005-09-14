@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.13 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.14 2005/09/14 17:04:17 reed Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -72,6 +72,14 @@
     <para>Binary packages for the pkgsrc tools and an initial set of packages is
       available for supported platforms. An up-to-date list of these can be
       found on <ulink url="http://www.pkgsrc.org/">www.pkgsrc.org</ulink>.</para>
+
+    <note>
+	<para>The bootstrap installs a <command>bmake</command> tool.
+	Use this <command>bmake</command> when building via pkgsrc.
+	For examples in this guide, use <command>bmake</command>
+	instead of <quote>make</quote>.</para>
+    </note>
+
   </sect1>
 
   <sect1 id="platform-specific-notes">
