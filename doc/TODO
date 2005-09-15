@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3885 2005/09/13 12:44:33 wiz Exp $
+$NetBSD: TODO,v 1.3886 2005/09/15 08:08:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -520,6 +520,7 @@ Suggested package updates
 	o guile-pg-0.27
 	o guile-www-1.1.1
 	o gwenview-1.3.0 [pkg/31299]
+	o gxine-0.4.8
 	o gzrecover-0.3
 	o hackbot-2.21
 	o hashcash-1.16
@@ -693,6 +694,8 @@ Suggested package updates
 	o opencobol-0.31
 	o openh323-1.17.1
 	o openmotif-2.2.3 [http://www.openmotif.org/]
+	o openoffice-1.5
+	o openoffice-bin-1.5
 	o openssh-4.2
 	o openssl-0.9.8
 	o openvpn-2.0 [pkg/30239]
