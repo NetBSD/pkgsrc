@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3889 2005/09/15 14:13:53 wiz Exp $
+$NetBSD: TODO,v 1.3890 2005/09/15 15:38:40 tonio Exp $
 
 Suggested new packages
 ======================
@@ -455,7 +455,6 @@ Suggested package updates
 	o findutils-4.2.25
 	o flac123-0.0.8
 	o flashplayer-0.4.13
-	o fluxbox-0.9.13 [pkg/30229|jmcneill]
 	o fluxbox-0.9.14
 	o fmsx-3.0
 	o fondu-040927
