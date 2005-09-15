@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11117 2005/09/15 15:41:50 taca Exp $
+$NetBSD: CHANGES,v 1.11118 2005/09/15 21:08:33 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4020,3 +4020,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/nmap to 3.93 [salo 2005-09-15]
 	Updated net/nmapfe to 0.9.5nb21 [salo 2005-09-15]
 	Updated www/squid to 2.5.10nb3 [taca 2005-09-15]
+	Updated mail/sylpheed-devel to 2.1.2 [chris 2005-09-15]
