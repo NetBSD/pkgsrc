@@ -1,17 +1,7 @@
-$NetBSD: patch-bb,v 1.7 2005/09/04 05:07:05 taca Exp $
+$NetBSD: patch-bb,v 1.8 2005/09/15 15:40:47 taca Exp $
 
 --- include/autoconf.h.in.orig	2005-04-23 10:32:27.000000000 +0900
 +++ include/autoconf.h.in
-@@ -656,6 +656,9 @@
- /* Define if you have the <ip_nat.h> header file.  */
- #undef HAVE_IP_NAT_H
- 
-+/* Define if you have the <ipl.h> header file.  */
-+#undef HAVE_IPL_H
-+
- /* Define if you have the <libc.h> header file.  */
- #undef HAVE_LIBC_H
- 
 @@ -665,6 +668,9 @@
  /* Define if you have the <linux/netfilter_ipv4.h> header file.  */
  #undef HAVE_LINUX_NETFILTER_IPV4_H
@@ -21,14 +11,4 @@ $NetBSD: patch-bb,v 1.7 2005/09/04 05:07:05 taca Exp $
 +
  /* Define if you have the <malloc.h> header file.  */
  #undef HAVE_MALLOC_H
- 
-@@ -707,6 +713,9 @@
- /* Define if you have the <netinet/ip_nat.h> header file.  */
- #undef HAVE_NETINET_IP_NAT_H
- 
-+/* Define if you have the <netinet/ipl.h> header file.  */
-+#undef HAVE_NETINET_IPL_H
-+
- /* Define if you have the <netinet/tcp.h> header file.  */
- #undef HAVE_NETINET_TCP_H
  
