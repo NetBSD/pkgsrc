@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3891 2005/09/15 19:16:12 drochner Exp $
+$NetBSD: TODO,v 1.3892 2005/09/15 20:49:36 heinz Exp $
 
 Suggested new packages
 ======================
@@ -989,6 +989,7 @@ Suggested package updates
 	o socat-1.4.3.0
 	o source-highlight-2.1.2
 	o sox-12.17.8
+	o spamassassin-3.1.0 [heinz]
 	o spim-7.2
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
