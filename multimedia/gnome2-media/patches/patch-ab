@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.3 2005/09/15 19:00:32 reed Exp $
+
+--- volume.c	2005/04/15 12:59:37	1.5
++++ gst-mixer/src/volume.c	2005/08/08 21:05:37	1.6
+@@ -480,9 +480,9 @@
+     if (gnome_volume_control_button_get_active (
+             GNOME_VOLUME_CONTROL_BUTTON (vol->button))) {
+       gtk_adjustment_set_value (adj, gtk_adjustment_get_value (_adj));
+-      volumes[i++] = lrint (gtk_adjustment_get_value (_adj));
++      volumes[i++] = rint (gtk_adjustment_get_value (_adj));
+     } else {
+-      volumes[i++] = lrint (gtk_adjustment_get_value (adj));
++      volumes[i++] = rint (gtk_adjustment_get_value (adj));
+     }
+   }
+ 
+@@ -554,7 +554,7 @@
+        scales != NULL; scales = scales->next, n++) {
+     GtkAdjustment *adj = gtk_range_get_adjustment (scales->data);
+                                                                                 
+-    if (lrint (gtk_adjustment_get_value (adj)) != 0) {
++    if (rint (gtk_adjustment_get_value (adj)) != 0) {
+       *slider_zero = FALSE;
+       break;
+     }
