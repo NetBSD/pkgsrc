@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:23 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/15 13:27:34 wiz Exp $
 
 .include "Makefile.common"
 
@@ -15,8 +15,10 @@ MP_FONTS=	font-arial-iso-8859-1.tar.bz2 \
 FONT_DIRS=	font-arial-cp1250 font-arial-iso-8859-1 font-arial-iso-8859-2
 
 .for font in ${MP_FONTS}
-SITES_${font}=	http://www2.mplayerhq.hu/MPlayer/releases/fonts/ \
-		ftp://ftp.mplayerhq.hu/MPlayer/releases/fonts/
+SITES_${font}=	http://ftp5.mplayerhq.hu/mplayer/releases/fonts/ \
+		http://www4.mplayerhq.hu/MPlayer/releases/fonts/ \
+		ftp://ftp2.mplayerhq.hu/MPlayer/releases/fonts/ \
+		ftp://ftp5.mplayerhq.hu/mplayer/releases/fonts/
 .endfor
 
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
