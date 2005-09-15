@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11116 2005/09/15 14:13:21 salo Exp $
+$NetBSD: CHANGES,v 1.11117 2005/09/15 15:41:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4019,3 +4019,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/snort to 2.4.0nb1 [adrianp 2005-09-14]
 	Updated net/nmap to 3.93 [salo 2005-09-15]
 	Updated net/nmapfe to 0.9.5nb21 [salo 2005-09-15]
+	Updated www/squid to 2.5.10nb3 [taca 2005-09-15]
