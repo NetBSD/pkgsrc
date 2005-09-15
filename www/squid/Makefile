@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.157 2005/09/04 05:07:05 taca Exp $
+# $NetBSD: Makefile,v 1.158 2005/09/15 15:40:47 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE10
 PKGNAME=	squid-2.5.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -36,8 +36,16 @@ PATCHFILES=	squid-2.5.STABLE10-content_length.patch \
 		squid-2.5.STABLE10-STORE_PENDING.patch \
 		squid-2.5.STABLE10-ldap_auth-U.patch \
 		squid-2.5.STABLE10-cacheClientTable.patch \
-		squid-2.5.STABLE10-Solaris_IPFilter.patch \
-		squid-2.5.STABLE10-mail_from.patch
+		squid-2.5.STABLE10-Solaris_IPFilter-2.patch \
+		squid-2.5.STABLE10-mail_from.patch \
+		squid-2.5.STABLE10-LDAP_TLS.patch \
+		squid-2.5.STABLE10-storedir_objsize_debug.patch \
+		squid-2.5.STABLE10-header_id_enum.patch \
+		squid-2.5.STABLE10-allow_coredump.patch \
+		squid-2.5.STABLE10-delay_pools.patch \
+		squid-2.5.STABLE10-NetBSD_IPFilter-4.patch \
+		squid-2.5.STABLE10-pipeline-CONNECT.patch \
+		squid-2.5.STABLE10-NTLM-scheme_assert.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -94,7 +102,7 @@ CONFIGURE_ARGS+=	--enable-auth=basic,digest,ntlm \
 			--enable-removal-policies=lru,heap \
 			--enable-poll \
 			--enable-underscores \
-			--enable-storeio=${SQUID_BACKEND:Q}
+			--enable-storeio=${SQUID_BACKENDS:Q}
 
 #
 # generic helpers
