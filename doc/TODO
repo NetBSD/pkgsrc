@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3886 2005/09/15 08:08:12 wiz Exp $
+$NetBSD: TODO,v 1.3887 2005/09/15 10:29:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,6 +456,7 @@ Suggested package updates
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fluxbox-0.9.13 [pkg/30229|jmcneill]
+	o fluxbox-0.9.14
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -564,7 +565,6 @@ Suggested package updates
 	o jdbc-postgresql-7.3.9
 	o jessie-1.0.0
 	o jftpgw-0.13.5
-	o john-1.6.37
 	o jove-4.16.0.65
 	o kajaani-kombat-0.7
 	o kapooka-0.3
@@ -694,8 +694,8 @@ Suggested package updates
 	o opencobol-0.31
 	o openh323-1.17.1
 	o openmotif-2.2.3 [http://www.openmotif.org/]
-	o openoffice-1.5
-	o openoffice-bin-1.5
+	o openoffice-1.1.5
+	o openoffice-bin-1.1.5
 	o openssh-4.2
 	o openssl-0.9.8
 	o openvpn-2.0 [pkg/30239]
@@ -872,6 +872,7 @@ Suggested package updates
 	o py-bdb-xml-2.0.9
 	o py-checker-0.8.15
 	o py-gnuplot-1.7
+	o py-gnutls-0.2.1
 	o py-imaging-1.1.5c2
 	o py-kenosis-0.95
 	o py-logging-0.4.9.5
