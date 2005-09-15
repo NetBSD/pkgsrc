@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/06/07 14:19:10 taca Exp $
+# $NetBSD: options.mk,v 1.4 2005/09/15 15:40:47 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	icmp pam-helper snmp ssl aufs
@@ -42,7 +42,7 @@ PKG_SUPPORTED_OPTIONS+=	arp-acl
 
 .include "../../mk/bsd.options.mk"
 
-SQUID_BACKEND?=			ufs null
+SQUID_BACKENDS?=		ufs null
 SQUID_BASIC_AUTH_HELPERS?=	getpwnam MSNT NCSA YP winbind
 SQUID_DIGEST_AUTH_HELPERS?=	password
 SQUID_NTLM_AUTH_HELPERS?=	fakeauth SMB
@@ -85,7 +85,7 @@ CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mdiskd)
-SQUID_BACKEND+=		diskd
+SQUID_BACKENDS+=	diskd
 .endif
 
 .if !empty(SQUID_BASIC_AUTH_HELPERS)
