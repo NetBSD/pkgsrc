@@ -1,28 +1,72 @@
-$NetBSD: patch-aa,v 1.12 2004/11/26 09:24:21 adam Exp $
+$NetBSD: patch-aa,v 1.13 2005/09/15 14:12:18 salo Exp $
 
---- Makefile.in.orig	2004-11-10 02:05:51.000000000 +0000
-+++ Makefile.in
-@@ -16,9 +16,7 @@ NSOCKDIR=@NSOCKDIR@
+--- Makefile.in.orig	2005-09-12 12:36:16.000000000 +0200
++++ Makefile.in	2005-09-15 14:13:00.000000000 +0200
+@@ -1,4 +1,4 @@
+-export NMAP_VERSION = 3.93
++NMAP_VERSION = 3.93
+ NMAP_NAME= nmap
+ NMAP_URL= http://www.insecure.org/nmap/
+ NMAP_PLATFORM=@host@
+@@ -11,14 +11,14 @@
+ nmapdatadir = @datadir@/nmap
+ deskdir = $(prefix)/share/applications
+ 
+-export NBASEDIR=@NBASEDIR@
+-export NSOCKDIR=@NSOCKDIR@
++NBASEDIR = @NBASEDIR@
++NSOCKDIR = @NSOCKDIR@
  CC = @CC@
  CXX = @CXX@
  CCOPT = 
 -LIBPCAPDIR = @libpcapdir@
 -LIBPCREDIR = @LIBPCREDIR@
--INCLS = -I$(LIBPCAPDIR) 
-+INCLS = -I.
+-export LIBDNETDIR = @LIBDNETDIR@
++#LIBPCAPDIR = @libpcapdir@
++#LIBPCREDIR = @LIBPCREDIR@
++LIBDNETDIR = @LIBDNETDIR@
  DEFS = @DEFS@ -DNMAP_VERSION=\"$(NMAP_VERSION)\" -DNMAP_NAME=\"$(NMAP_NAME)\" -DNMAP_URL=\"$(NMAP_URL)\" -DNMAP_PLATFORM=\"$(NMAP_PLATFORM)\" -DNMAPDATADIR=\"$(nmapdatadir)\"
  # For mtrace debugging -- see MTRACE define in main.cc for instructions
  # Should only be enabled during debugging and not in any real release.
-@@ -69,12 +67,6 @@ $(TARGET): $(DEPS) @PCAP_DEPENDS@ @PCRE_
+@@ -35,7 +35,7 @@
+ SHTOOL = ./shtool
+ INSTALL = $(SHTOOL) install 
+ MAKEDEPEND = @MAKEDEPEND@
+-export RPMTDIR=$(HOME)/rpm
++RPMTDIR=$(HOME)/rpm
+ 
+ # DESTDIR is used by some package maintainers to install Nmap under
+ # its usual directory structure into a different tree.  See the 
+@@ -46,11 +46,11 @@
+ TARGETNMAPFE=@TARGETNMAPFE@
+ INSTALLNMAPFE=@INSTALLNMAPFE@
+ 
+-export SRCS = main.cc nmap.cc targets.cc tcpip.cc nmap_error.cc utils.cc idle_scan.cc osscan.cc output.cc scan_engine.cc timing.cc charpool.cc services.cc protocols.cc nmap_rpc.cc portlist.cc NmapOps.cc TargetGroup.cc Target.cc FingerPrintResults.cc service_scan.cc NmapOutputTable.cc MACLookup.cc @COMPAT_SRCS@
++SRCS = main.cc nmap.cc targets.cc tcpip.cc nmap_error.cc utils.cc idle_scan.cc osscan.cc output.cc scan_engine.cc timing.cc charpool.cc services.cc protocols.cc nmap_rpc.cc portlist.cc NmapOps.cc TargetGroup.cc Target.cc FingerPrintResults.cc service_scan.cc NmapOutputTable.cc MACLookup.cc @COMPAT_SRCS@
+ 
+ OBJS = main.o nmap.o targets.o tcpip.o nmap_error.o utils.o idle_scan.o osscan.o output.o scan_engine.o timing.o charpool.o services.o protocols.o nmap_rpc.o portlist.o NmapOps.o TargetGroup.o Target.o FingerPrintResults.o service_scan.o NmapOutputTable.o MACLookup.o @COMPAT_OBJS@
+ 
+-export DEPS = nmap.h nmap_amigaos.h nmap_error.h targets.h idle_scan.h osscan.h output.h scan_engine.h timing.h tcpip.h utils.h global_structures.h charpool.h services.h protocols.h nmap_rpc.h portlist.h NmapOps.h TargetGroup.h Target.h FingerPrintResults.h service_scan.h NmapOutputTable.h MACLookup.h
++DEPS = nmap.h nmap_amigaos.h nmap_error.h targets.h idle_scan.h osscan.h output.h scan_engine.h timing.h tcpip.h utils.h global_structures.h charpool.h services.h protocols.h nmap_rpc.h portlist.h NmapOps.h TargetGroup.h Target.h FingerPrintResults.h service_scan.h NmapOutputTable.h MACLookup.h
+ 
+ 
+ # %.o : %.cc -- nope this is a GNU extension
+@@ -68,14 +68,14 @@
  # all of the prerequisites (e.g. recursive makes and such)
  FORCE:
  
 -$(LIBPCREDIR)/libpcre.a: $(LIBPCREDIR)/Makefile FORCE
 -	@echo Compiling libpcre; cd $(LIBPCREDIR) && $(MAKE)
--
++#$(LIBPCREDIR)/libpcre.a: $(LIBPCREDIR)/Makefile FORCE
++#	@echo Compiling libpcre; cd $(LIBPCREDIR) && $(MAKE)
+ 
+ $(LIBDNETDIR)/src/.libs/libdnet.a: $(LIBDNETDIR)/Makefile FORCE
+ 	@echo Compiling libdnet; cd $(LIBDNETDIR) && $(MAKE)
+ 
 -$(LIBPCAPDIR)/libpcap.a: $(LIBPCAPDIR)/Makefile FORCE
 -	@echo Compiling libpcap; cd $(LIBPCAPDIR) && $(MAKE)
--
++#$(LIBPCAPDIR)/libpcap.a: $(LIBPCAPDIR)/Makefile FORCE
++#	@echo Compiling libpcap; cd $(LIBPCAPDIR) && $(MAKE)
+ 
  $(NBASEDIR)/libnbase.a: $(NBASEDIR)/Makefile FORCE
  	@echo Compiling libnbase;
- 	cd $(NBASEDIR) && $(MAKE)
