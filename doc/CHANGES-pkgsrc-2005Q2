@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.111 2005/09/14 11:32:20 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.112 2005/09/15 16:36:07 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -301,3 +301,5 @@ Pullup ticket 738 - requested by Takahiro Kambe
 security fix for squid
 Pullup ticket 753 - requested by Matthias Scheler
 security update for xchat
+Pullup ticket 756 - requested by Takahiro Kambe
+bugfix update for squid
