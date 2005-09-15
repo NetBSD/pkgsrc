@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.12 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.13 2005/09/15 00:04:59 reed Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -141,7 +141,13 @@
 
       <para>Assuming that the distfile has been fetched (see previous section), become
         root and change into the relevant directory and run
-        <command>make</command>. For example, type </para>
+        <command>make</command>.</para>
+
+      <note><para>If using bootstrap or pkgsrc on a non-NetBSD system,
+        use the pkgsrc <command>bmake</command> command instead of
+        <quote>make</quote> in the examples in this guide.</para></note>
+
+     <para>For example, type </para>
 
       <screen>&cprompt; <userinput>cd misc/figlet</userinput>
 &cprompt; <userinput>make</userinput></screen>
