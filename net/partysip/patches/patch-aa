@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/01 19:55:02 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2005/09/16 15:24:23 drochner Exp $
 
---- ppl/unix/ppldnsv6.c.orig	2005-04-01 19:42:57.000000000 +0200
+--- ppl/unix/ppldnsv6.c.orig	2005-01-26 17:58:44.000000000 +0100
 +++ ppl/unix/ppldnsv6.c
-@@ -314,7 +314,7 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
+@@ -314,41 +314,41 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
        cp += n;
  
  
@@ -11,7 +11,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/01 19:55:02 drochner Exp $
      defined(OLD_NAMESER) || defined(__FreeBSD__)
        type = _get_short (cp);
        cp += sizeof (u_short);
-@@ -324,7 +324,7 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
+-#elif defined(__APPLE_CC__)
++#elif defined(__APPLE_CC__) || defined(__NetBSD__)
+       GETSHORT(type, cp);
+ #else
        NS_GET16 (type, cp);
  #endif
  
@@ -20,7 +23,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/01 19:55:02 drochner Exp $
      defined(OLD_NAMESER) || defined(__FreeBSD__)
        aclass = _get_short (cp);
        cp += sizeof (u_short);
-@@ -334,7 +334,7 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
+-#elif defined(__APPLE_CC__)
++#elif defined(__APPLE_CC__) || defined(__NetBSD__)
+       GETSHORT(aclass, cp);
+ #else
        NS_GET16 (aclass, cp);
  #endif
  
@@ -29,7 +35,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/01 19:55:02 drochner Exp $
      defined(OLD_NAMESER) || defined(__FreeBSD__)
        ttl = _get_long (cp);
        cp += sizeof (u_long);
-@@ -344,7 +344,7 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
+-#elif defined(__APPLE_CC__)
++#elif defined(__APPLE_CC__) || defined(__NetBSD__)
+       GETLONG(ttl, cp);
+ #else
        NS_GET32 (ttl, cp);
  #endif
  
@@ -38,7 +47,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/01 19:55:02 drochner Exp $
      defined(OLD_NAMESER) || defined(__FreeBSD__)
        dlen = _get_short (cp);
        cp += sizeof (u_short);
-@@ -359,7 +359,7 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
+-#elif defined(__APPLE_CC__)
++#elif defined(__APPLE_CC__) || defined(__NetBSD__)
+       GETSHORT(dlen, cp);
+ #else
+       NS_GET16 (dlen, cp);
+@@ -359,31 +359,31 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
  	  cp += dlen;
  	  continue;
  	}
@@ -47,7 +61,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/01 19:55:02 drochner Exp $
      defined(OLD_NAMESER) || defined(__FreeBSD__)
        pref = _get_short (cp);
        cp += sizeof (u_short);
-@@ -369,7 +369,7 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
+-#elif defined(__APPLE_CC__)
++#elif defined(__APPLE_CC__) || defined(__NetBSD__)
+       GETSHORT(pref, cp);
+ #else
        NS_GET16 (pref, cp);
  #endif
  
@@ -56,7 +73,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/01 19:55:02 drochner Exp $
      defined(OLD_NAMESER) || defined(__FreeBSD__)
        weight = _get_short (cp);
        cp += sizeof (u_short);
-@@ -379,7 +379,7 @@ ppl_dns_resolv (ppl_dns_ip_t ** dns_ips,
+-#elif defined(__APPLE_CC__)
++#elif defined(__APPLE_CC__) || defined(__NetBSD__)
+       GETSHORT(weight, cp);
+ #else
        NS_GET16 (weight, cp);
  #endif
  
@@ -65,3 +85,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/01 19:55:02 drochner Exp $
      defined(OLD_NAMESER) || defined(__FreeBSD__)
        port = _get_short (cp);
        cp += sizeof (u_short);
+-#elif defined(__APPLE_CC__)
++#elif defined(__APPLE_CC__) || defined(__NetBSD__)
+       GETSHORT(port, cp);
+ #else
+       NS_GET16 (port, cp);
