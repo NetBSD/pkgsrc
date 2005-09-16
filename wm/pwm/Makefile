@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2005/08/19 18:12:39 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/09/16 04:17:40 jlam Exp $
 #
 
 DISTNAME=	pwm-20030617
 PKGNAME=	${DISTNAME:S/-/-1.0./}
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://modeemi.fi/~tuomov/dl/
 
@@ -29,7 +30,6 @@ CONFS+=		keys-default.conf
 CONFS+=		menus-default.conf
 CONFS+=		look-beoslike.conf
 CONFS+=		look-brownsteel.conf
-CONF_FILES=	# empty
 .for FILE in ${CONFS}
 CONF_FILES+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
