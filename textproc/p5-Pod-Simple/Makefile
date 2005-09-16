@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2005/09/16 13:32:20 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/16 13:40:36 tv Exp $
 
 DISTNAME=	Pod-Simple-3.02
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	devel perl5
-#MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
-# CPAN copy is corrupted; explicitly request NetBSD distfile site:
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Pod-Simple/
