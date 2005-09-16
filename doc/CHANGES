@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11119 2005/09/16 00:53:29 wiz Exp $
+$NetBSD: CHANGES,v 1.11120 2005/09/16 04:30:19 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3869,6 +3869,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/tcl83 to 8.3.4nb2 [seb 2005-08-31]
 	Updated x11/tk to 8.4.11nb1 [seb 2005-08-31]
 	Updated x11/tk83 to 8.3.4nb1 [seb 2005-08-31]
+	Updated graphics/netpbm to 10.29nb1 [jlam 2005-08-31]
 	Updated net/openvpn to 2.0.2 [jlam 2005-09-01]
 	Updated databases/phpldapadmin to 0.9.6cnb3 [adrianp 2005-09-01]
 	Updated mail/ezmlm-idx to 0.443 [schmonz 2005-09-02]
@@ -4022,3 +4023,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/nmapfe to 0.9.5nb21 [salo 2005-09-15]
 	Updated www/squid to 2.5.10nb3 [taca 2005-09-15]
 	Updated mail/sylpheed-devel to 2.1.2 [chris 2005-09-15]
+	Updated graphics/netpbm to 10.29nb2 [pooka 2005-09-14]
