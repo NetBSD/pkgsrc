@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2005/09/06 12:37:58 markd Exp $
+# $NetBSD: Makefile,v 1.90 2005/09/16 12:10:39 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	2
@@ -8,10 +8,10 @@ COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
-DISTFILES+=	NetBSD-flag.png
+DISTFILES+=	NetBSD-flag-1.0.png
 SITES_Daemon.png=	${MASTER_SITE_LOCAL}
 SITES_Daemon.README=	${MASTER_SITE_LOCAL}
-SITES_NetBSD-flag.png=	http://www.NetBSD.org/images/
+SITES_NetBSD-flag-1.0.png=	${MASTER_SITE_LOCAL}
 
 PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
 PATCHFILES=	post-3.4.2-kdebase-kcheckpass.diff
@@ -129,7 +129,7 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/templates/.source/emptydir
-	${INSTALL_DATA} ${DISTDIR}/NetBSD-flag.png ${PREFIX}/${ICONDIR}
+	${INSTALL_DATA} ${DISTDIR}/NetBSD-flag-1.0.png ${PREFIX}/${ICONDIR}/NetBSD-flag.png
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/${ICONDIR}
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README			\
 		${PREFIX}/share/doc/kde/HTML/en/kdm
