@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11118 2005/09/15 21:08:33 chris Exp $
+$NetBSD: CHANGES,v 1.11119 2005/09/16 00:53:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3615,6 +3615,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/glib2 to 2.6.6nb1 [jmmv 2005-08-09]
 	Updated net/ra-rtsp-proxy to 1.0.0.0nb2 [tron 2005-08-09]
 	Updated benchmarks/netio to 1.23 [tron 2005-08-09]
+	Updated net/tor to 0.1.0.14 [drochner 2005-08-09]
 	Updated games/quake2forge to 0.3 [xtraeme 2005-08-10]
 	Updated mail/mhonarc to 2.6.11nb2 [jlam 2005-08-10]
 	Added print/psjoin version 0.3 [reed 2005-08-10]
