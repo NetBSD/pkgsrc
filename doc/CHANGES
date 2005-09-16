@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11124 2005/09/16 14:19:44 taca Exp $
+$NetBSD: CHANGES,v 1.11125 2005/09/16 18:16:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4029,3 +4029,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed pkgtools/distfetch [martti 2005-09-16]
 	Updated www/ap-ssl to 2.8.24 [salo 2005-09-16]
 	Updated www/squid to 2.5.10nb4 [taca 2005-09-16]
+	Updated sysutils/xentools20 to 2.0.7nb3 [bouyer 2005-09-16]
