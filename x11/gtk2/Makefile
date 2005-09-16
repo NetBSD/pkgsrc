@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2005/08/25 21:04:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.92 2005/09/16 06:10:15 jlam Exp $
 #
 
 DISTNAME=		gtk+-2.6.10
@@ -65,7 +65,12 @@ SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 USE_TOOLS+=		gawk
 .endif
 
+# We remove the module databases during post-install since we create them
+# anew in the +INSTALL script as part of the POST-INSTALL action.
+#
 post-install:
+	${RM} -f ${GTK_IMMODULES_DB}
+	${RM} -f ${GDK_PIXBUF_LOADERS_DB}
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/2.4.0/filesystems
 
