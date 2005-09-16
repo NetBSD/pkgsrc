@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1718 2005/08/26 14:47:30 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1719 2005/09/16 06:09:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2927,7 +2927,9 @@ real-su-deinstall:
 	fi
 .    endfor
 .  endif # DEINSTALLDEPENDS
-	@${RM} -f ${_INSTALL_COOKIE} ${_PACKAGE_COOKIE}
+	@${RM} -f ${_INSTALL_COOKIE} ${_PACKAGE_COOKIE}			\
+		  ${_CHECK_FILES_COOKIES}				\
+		  ${_CHECK_FILES_PRE} ${_CHECK_FILES_POST}
 .endif						# target(deinstall)
 
 
