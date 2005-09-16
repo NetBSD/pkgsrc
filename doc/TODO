@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3892 2005/09/15 20:49:36 heinz Exp $
+$NetBSD: TODO,v 1.3893 2005/09/16 12:35:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -436,6 +436,7 @@ Suggested package updates
 	o egtk-0.3.6
 	o electricfence-2.4.16
 	o elf-0.5.4
+	o elinks-0.10.6
 	o elm-me-2.4pl122
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
@@ -509,6 +510,7 @@ Suggested package updates
 	o gsasl-0.2.8
 	o gsed-4.1.4
 	o gsharutils-4.3.78
+	o gsl-1.7
 	o gss-0.0.16
 	o gst-plugins-0.8.11
 	o gtetrinet-0.7.9
@@ -703,7 +705,7 @@ Suggested package updates
 	o oregano-0.40.5
 	o oroborus-2.0.13.1
 	o osh-050219
-	o oss-3.99.2d
+	o oss-3.99.3c
 	o p11-2.10c
 	o p5-Apache-ASP-2.57
 	o p5-Apache-AuthCookieDBI-2.01
@@ -827,7 +829,7 @@ Suggested package updates
 	o phoon-20030120
 	o photopc-3.05
 	o php-4.4.0
-	o phpmyadmin-2.6.4
+	o phpmyadmin-2.6.4pl1
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
@@ -1146,7 +1148,7 @@ Suggested package updates
 	o ysm-2.9.6
 	o ytalk-3.2.0 [pkg/28840]
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.6
+	o zile-2.2.7
 	o zircon-1.18.256
 	o zope25-Photo-1.2.4
 	o zope25-ZWiki-0.39.0
