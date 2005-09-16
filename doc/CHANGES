@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11120 2005/09/16 04:30:19 grant Exp $
+$NetBSD: CHANGES,v 1.11121 2005/09/16 07:43:17 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4024,3 +4024,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/squid to 2.5.10nb3 [taca 2005-09-15]
 	Updated mail/sylpheed-devel to 2.1.2 [chris 2005-09-15]
 	Updated graphics/netpbm to 10.29nb2 [pooka 2005-09-14]
+	Removed sysutils/etcupdate [martti 2005-09-16]
+	Removed pkgtools/distfetch [martti 2005-09-16]
