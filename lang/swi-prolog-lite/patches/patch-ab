@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2005/09/17 19:35:51 minskim Exp $
 
---- src/configure.orig	Tue Apr 16 10:03:45 2002
-+++ src/configure	Wed May  1 19:21:58 2002
-@@ -978,7 +978,7 @@
+--- src/configure.orig	2004-01-21 02:08:17.000000000 -0800
++++ src/configure
+@@ -1227,7 +1227,7 @@ fi
  EXTRAOBJ=""
  EXTRAHDR=""
  INSTALLTARGET=dv-install
@@ -11,3 +11,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
  PLLIB=libpl.a
  RT=""
  PLVERSION=`cat ../VERSION`
+@@ -11281,7 +11281,7 @@ fi
+ 	fi
+ 	;;
+   *darwin*)
+-	PL=swipl
++	#PL=swipl
+ 	SO_pic="-fPIC"
+ 	cat >>confdefs.h <<\_ACEOF
+ #define USE_SEM_OPEN 1
