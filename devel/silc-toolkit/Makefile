@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:38 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/17 03:39:41 jlam Exp $
 #
 
 DISTNAME=		silc-toolkit-0.9.13
+PKGREVISION=		1
 CATEGORIES=		devel chat security
 MASTER_SITES=		http://www.silcnet.org/download/toolkit/sources/ \
 			ftp://ftp.silcnet.org/silc/toolkit/sources/ \
@@ -24,7 +25,7 @@ LIBTOOL_OVERRIDE=	libtool */*/*/libtool
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/silc
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/silc
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/silc-toolkit
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silc-toolkit
 CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/silc/modules
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-irssi
