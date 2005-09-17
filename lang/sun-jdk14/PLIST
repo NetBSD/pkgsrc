@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/11 14:07:38 tv Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/09/17 16:44:54 dillo Exp $
 bin/sun14-appletviewer
 bin/sun14-extcheck
 bin/sun14-idlj
@@ -12,6 +12,7 @@ bin/sun14-jdb
 bin/sun14-rmic
 bin/sun14-serialver
 java/sun-1.4/README.html
+java/sun-1.4/THIRDPARTYLICENSEREADME.txt
 java/sun-1.4/bin/HtmlConverter
 java/sun-1.4/bin/appletviewer
 java/sun-1.4/bin/extcheck
@@ -24,6 +25,7 @@ java/sun-1.4/bin/javadoc
 java/sun-1.4/bin/javah
 java/sun-1.4/bin/javap
 java/sun-1.4/bin/jdb
+java/sun-1.4/bin/jmap
 java/sun-1.4/bin/native2ascii
 java/sun-1.4/bin/rmic
 java/sun-1.4/bin/serialver
@@ -451,6 +453,7 @@ java/sun-1.4/demo/jfc/TableExample/src/TableExample4.java
 java/sun-1.4/demo/jfc/TableExample/src/TableMap.java
 java/sun-1.4/demo/jfc/TableExample/src/TableSorter.java
 java/sun-1.4/demo/jpda/examples.jar
+java/sun-1.4/demo/plugin/applets.html
 java/sun-1.4/demo/plugin/applets/Animator/Animation.class
 java/sun-1.4/demo/plugin/applets/Animator/AnimationFrame.class
 java/sun-1.4/demo/plugin/applets/Animator/Animator.class
@@ -659,7 +662,6 @@ java/sun-1.4/demo/plugin/applets/WireFrame/models/cube.obj
 java/sun-1.4/demo/plugin/applets/WireFrame/models/dinasaur.obj
 java/sun-1.4/demo/plugin/applets/WireFrame/models/hughes_500.obj
 java/sun-1.4/demo/plugin/applets/WireFrame/models/knoxS.obj
-java/sun-1.4/demo/plugin/applets.html
 java/sun-1.4/demo/plugin/jfc/FileChooserDemo/FileChooserDemo.jar
 java/sun-1.4/demo/plugin/jfc/FileChooserDemo/README.txt
 java/sun-1.4/demo/plugin/jfc/FileChooserDemo/images/gifIcon.gif
@@ -914,8 +916,6 @@ java/sun-1.4/man/man1/native2ascii.1
 java/sun-1.4/man/man1/rmic.1
 java/sun-1.4/man/man1/serialver.1
 java/sun-1.4/src.zip
-@dirrm java/sun-1.4/include/linux
-@dirrm java/sun-1.4/include
 @dirrm java/sun-1.4/demo/plugin/jfc/TableExample/src
 @dirrm java/sun-1.4/demo/plugin/jfc/TableExample
 @dirrm java/sun-1.4/demo/plugin/jfc/SwingSet2/src
