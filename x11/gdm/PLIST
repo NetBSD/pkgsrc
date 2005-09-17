@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.20 2005/07/20 02:44:48 schmonz Exp $
-bin/gdm-dmx-reconnect-proxy
+@comment $NetBSD: PLIST,v 1.21 2005/09/17 19:09:54 minskim Exp $
+${DMX}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
 bin/gdmdynamic

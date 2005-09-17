@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2005/08/21 11:30:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.87 2005/09/17 19:09:53 minskim Exp $
 #
 
 DISTNAME=	gdm-2.8.0.1
@@ -112,6 +112,12 @@ PLIST_SUBST+=		PAM_MISC="@comment "
 .else
 CONFIGURE_ARGS+=	--enable-authentication-scheme=crypt
 PLIST_SUBST+=		PAM_MISC="@comment "
+.endif
+
+.if exists(${X11BASE}/include/X11/extensions/dmxext.h)
+PLIST_SUBST+=		DMX=""
+.else
+PLIST_SUBST+=		DMX="@comment "
 .endif
 
 post-install:
