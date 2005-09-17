@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2005/08/11 17:43:10 reed Exp $
+$NetBSD: patch-aj,v 1.2 2005/09/17 22:40:36 reed Exp $
 
---- src/bookmarks/Makefile.in.orig	2005-06-28 00:17:36.000000000 +0000
+--- src/bookmarks/Makefile.in.orig	2005-08-28 23:22:16.000000000 +0000
 +++ src/bookmarks/Makefile.in
-@@ -90,7 +90,7 @@ AM_CPPFLAGS = \
+@@ -91,7 +91,7 @@ AM_CPPFLAGS = \
          -DLOCALEDIR=\""$(localedir)"\" \
          -DSYSCONFDIR=\""$(sysconfdir)"\" \
          -DDATADIR=\""$(datadir)"\" \
