@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11125 2005/09/16 18:16:27 bouyer Exp $
+$NetBSD: CHANGES,v 1.11126 2005/09/17 16:46:30 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4030,3 +4030,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/ap-ssl to 2.8.24 [salo 2005-09-16]
 	Updated www/squid to 2.5.10nb4 [taca 2005-09-16]
 	Updated sysutils/xentools20 to 2.0.7nb3 [bouyer 2005-09-16]
+	Updated lang/sun-jre14 to 2.9 [dillo 2005-09-17]
+	Updated lang/sun-jdk14 to 2.9 [dillo 2005-09-17]
