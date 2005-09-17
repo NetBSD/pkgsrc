@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/07/24 06:59:32 taya Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/09/17 02:35:20 jlam Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -3074,8 +3074,6 @@ include/${MOZILLA}/nss/swfortt.h
 include/${MOZILLA}/nss/watcomfx.h
 include/${MOZILLA}/seccmd/secutil.h
 @comment end INCLUDE-PUBLIC
-@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
-@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/chrome.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/browser/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/browser/skin/stylesheets.rdf

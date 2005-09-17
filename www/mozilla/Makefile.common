@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2005/08/10 20:56:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.63 2005/09/17 02:35:19 jlam Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -9,7 +9,7 @@ CATEGORIES=	www
 MAINTAINER=	taya@NetBSD.org
 HOMEPAGE?=	http://www.mozilla.org/
 
-FILESDIR=	"../../www/mozilla/files"
+FILESDIR=	${.CURDIR}/../../www/mozilla/files
 
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 
@@ -17,6 +17,9 @@ WRKSRC=		${WRKDIR}/mozilla
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf213 gmake perl pkg-config
 GNU_CONFIGURE=	yes
+
+USE_PKGINSTALL=		yes
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../www/mozilla/INSTALL
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
@@ -100,6 +103,8 @@ SCRIPTS_ENV+=	HOME="${WRKDIR}"
 
 PLIST_SUBST+=	MOZILLA=${MOZILLA}
 PLIST_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
+FILES_SUBST+=	MOZILLA=${MOZILLA}
+FILES_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=	so
 SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
@@ -195,5 +200,3 @@ SUBST_FILES.pc=		build/unix/*.pc.in
 SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
 			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
 SUBST_MESSAGE.pc=	"Fixing pkgconfig files."
-
-.include "../../mk/bsd.pkg.mk"

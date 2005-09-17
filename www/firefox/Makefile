@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/09/08 22:03:45 abs Exp $
+# $NetBSD: Makefile,v 1.20 2005/09/17 02:35:19 jlam Exp $
 
 MOZILLA=	firefox
 EXTRACT_SUFX=	.tar.bz2
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Lightweight gecko-based web browser
 
@@ -20,3 +20,4 @@ PKGCONFIG_OVERRIDE+=	build/unix/firefox-xpcom.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../www/firefox/Makefile-firefox.common"
+.include "../../mk/bsd.pkg.mk"
