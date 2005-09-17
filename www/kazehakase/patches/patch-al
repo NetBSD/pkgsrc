@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2005/08/11 17:43:10 reed Exp $
+$NetBSD: patch-al,v 1.2 2005/09/17 22:40:36 reed Exp $
 
---- src/prefs_ui/Makefile.in.orig	2005-06-28 00:17:38.000000000 +0000
+--- src/prefs_ui/Makefile.in.orig	2005-08-28 23:22:18.000000000 +0000
 +++ src/prefs_ui/Makefile.in
-@@ -85,7 +85,7 @@ AM_CPPFLAGS = \
+@@ -83,7 +83,7 @@ AM_CPPFLAGS = \
  	-DLOCALEDIR=\""$(localedir)"\" \
  	-DSYSCONFDIR=\""$(sysconfdir)"\" \
  	-DDATADIR=\""$(datadir)"\" \
