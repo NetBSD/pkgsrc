@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.12 2004/10/25 18:06:26 jmmv Exp $
+# $NetBSD: moz-install,v 1.13 2005/09/17 02:35:20 jlam Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
@@ -63,12 +63,6 @@ for i in `${SED} -n -e '/^@comment begin INCLUDE-PUBLIC$/,/^@comment end INCLUDE
 done
 
 ${RM} -f ${TMP_PLIST}
-#
-#
-#
-cd ${PREFIX}/lib/${MOZILLA}
-${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regxpcom
-${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regchrome
 
 #
 # remove generated user conf directory ${WRKDIR}/.mozilla
