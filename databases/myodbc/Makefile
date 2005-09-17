@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/17 19:21:29 minskim Exp $
 #
 
 DISTNAME=		MyODBC-2.50.36
@@ -11,20 +11,20 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 COMMENT=		ODBC driver (server side) for MySQL
 
-DEPENDS+=		mysql-client>=3.23.35:../../databases/mysql-client
-DEPENDS+=		iodbc-[0-9]*:../../databases/iodbc
-
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-mysql-libs=${LOCALBASE}/lib/mysql
-CONFIGURE_ARGS+=	--with-mysql-includes=${LOCALBASE}/include/mysql
-CONFIGURE_ARGS+=	--with-iodbc=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-odbc-ini=${LOCALBASE}/etc/odbc.ini
+CONFIGURE_ARGS+=	--with-mysql-libs=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql
+CONFIGURE_ARGS+=	--with-iodbc=${BUILDLINK_PREFIX.iodbc}
+CONFIGURE_ARGS+=	--with-odbc-ini=${BUILDLINK_PREFIX.iodbc}/etc/odbc.ini
 
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 USE_TOOLS+=		gmake
+
+.include "../../databases/iodbc/buildlink3.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/myodbc
