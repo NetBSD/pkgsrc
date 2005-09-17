@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/06/28 11:49:58 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/09/17 20:07:38 minskim Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -24,7 +24,6 @@ share/doc/gxemul/20041213-debian_3_small.gif
 share/doc/gxemul/20041213-debian_4.png
 share/doc/gxemul/20041213-debian_4_small.gif
 share/doc/gxemul/20050317-example.png
-share/doc/gxemul/20050317-example_medium.png
 share/doc/gxemul/20050317-example_small.png
 share/doc/gxemul/20050413-netbsd-cobalt.png
 share/doc/gxemul/20050413-netbsd-cobalt_small.png
@@ -51,6 +50,7 @@ share/doc/gxemul/openbsd-pmax-20040710.png
 share/doc/gxemul/openbsd-pmax-20040710_small.png
 share/doc/gxemul/sprite-20040711.png
 share/doc/gxemul/sprite-20040711_small.png
+share/doc/gxemul/test_disk.c
 share/doc/gxemul/ultrix4.5-20040706.png
 share/doc/gxemul/ultrix4.5-20040706_small.gif
 @dirrm share/doc/gxemul
