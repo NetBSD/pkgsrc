@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/08/28 04:30:03 uebayasi Exp $
+# $NetBSD: options.mk,v 1.2 2005/09/17 16:41:24 uebayasi Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.semi
 PKG_SUPPORTED_OPTIONS=	semi-bbdb
@@ -10,10 +10,16 @@ PKG_SUGGESTED_OPTIONS=
 
 .if !empty(PKG_OPTIONS:Mbbdb)
 DEPENDS+=	bbdb-[0-9]*:../../misc/bbdb
+PLIST_SUBST+=	FOR_bbdb=
+.else
+PLIST_SUBST+=	FOR_bbdb="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mw3)
 DEPENDS+=	w3-[0-9]*:../../www/w3
+PLIST_SUBST+=	FOR_w3=
+.else
+PLIST_SUBST+=	FOR_w3="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mw3m)
