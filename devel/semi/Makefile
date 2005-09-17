@@ -1,4 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2005/08/28 04:28:54 uebayasi Exp $
+# $NetBSD: Makefile,v 1.20 2005/09/17 16:41:23 uebayasi Exp $
+#
+# TODO:
+# * Control ${WRKSRC}/SEMI-ELS explicitly, otherwise Emacs/XEmacs founds
+#   bbdb / w3 if installed.
+#
 
 DISTNAME=	semi-1.14.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
