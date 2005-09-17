@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.20 2005/07/20 23:33:30 taya Exp $
+# $NetBSD: Makefile-firefox.common,v 1.21 2005/09/17 02:35:19 jlam Exp $
 
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	1.0.6
@@ -32,15 +32,12 @@ USE_LANGUAGES+=		c++
 BUILD_MATHML=		# defined
 MESSAGE=		${.CURDIR}/../../www/firefox/MESSAGE
 
+.include "../../www/mozilla/Makefile.common"
+
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../www/firefox/INSTALL
+
 pre-install:
 	cd ${WRKSRC}/dist/bin/defaults/profile/ && \
 		${PAX} -Lrw extensions ${WRKSRC}/dist/bin
 	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
 		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt
-
-post-install:
-	cd ${PREFIX}/lib/${MOZILLA} && \
-	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. HOME=${WRKSRC} \
-				./${MOZILLA_BIN} -register
-
-.include "../../www/mozilla/Makefile.common"
