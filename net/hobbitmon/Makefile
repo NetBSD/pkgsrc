@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/17 20:33:11 minskim Exp $
 #
 
 DISTNAME=	hobbit-4.0-beta6
@@ -22,7 +22,7 @@ USE_PKGINSTALL=YES
 BBUSER?=	hobbit
 BBGROUP?=	hobbit
 BBTOPDIR?=	${PREFIX}/hobbit
-BBLOGDIR?=	/var/log/hobbit
+BBLOGDIR?=	${VARBASE}/log/hobbit
 BBHOSTURL?=	/hobbit
 CGIDIR?=	${BBTOPDIR}/cgi-bin
 BBCGIURL?=	/cgi-bin
