@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/08/11 17:43:10 reed Exp $
+$NetBSD: patch-ab,v 1.2 2005/09/17 22:40:36 reed Exp $
 
---- etc/Makefile.in.orig	2005-07-28 06:40:47.000000000 +0000
+--- etc/Makefile.in.orig	2005-08-28 23:22:15.000000000 +0000
 +++ etc/Makefile.in
-@@ -181,7 +181,7 @@ target_alias = @target_alias@
- 
+@@ -212,7 +212,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
  SUBDIRS = mozilla
- 
 -kzetcdir = $(sysconfdir)/$(PACKAGE)
 +kzetcdir = @datadir@/examples/@PACKAGE_TARNAME@
  kzetc_DATA = \
