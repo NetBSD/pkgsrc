@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 2005/09/18 13:38:50 taca Exp $
+
+--- ext/pty/pty.c.orig	2005-07-15 16:16:50.000000000 +0000
++++ ext/pty/pty.c
+@@ -103,8 +103,6 @@ char	*MasterDevice = "/dev/pty%s",
+
+ static char SlaveName[DEVICELEN];
+
+-extern int errno;
+-
+ #ifndef HAVE_SETEUID
+ # ifdef HAVE_SETREUID
+ #  define seteuid(e)	setreuid(-1, (e))
