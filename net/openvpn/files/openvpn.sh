@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: openvpn.sh,v 1.1 2005/08/17 19:55:57 jlam Exp $
+# $NetBSD: openvpn.sh,v 1.2 2005/09/18 03:11:40 jlam Exp $
 #
 # PROVIDE: openvpn
 # REQUIRE: NETWORKING
@@ -20,6 +20,9 @@
 #					# a process is started for all
 #					# *.conf files.
 #
+# The "reset" action will trigger a SIGUSR1 restart of the OpenVPN
+# process.  Please read the openvpn(8) man page for more details.
+#
 # For information on how to write an OpenVPN config file, please read the
 # openvpn(8) man page or check the website at:
 #
@@ -33,10 +36,11 @@ rcvar=$name
 sysconfdir="@PKG_SYSCONFDIR@"
 command="@PREFIX@/sbin/openvpn"
 command_args="--cd $sysconfdir --daemon"
-extra_commands="reload"
+extra_commands="reload reset"
 required_dirs="$sysconfdir"
 
 start_cmd="openvpn_start"
+reset_cmd="openvpn_reset"
 
 openvpn_start()
 {
@@ -69,6 +73,30 @@ openvpn_start()
 		fi
 	done
 	cd $savewd
+}
+
+openvpn_reset()
+{
+	if [ -z "$rc_pid" ]; then
+		if [ -n "$pidfile" ]; then
+			echo 1>&2 \
+		    "${name} not running? (check $pidfile)."
+		else
+			echo 1>&2 "${name} not running?"
+		fi
+		exit 1
+	fi
+	echo "Triggering SIGUSR1 restart of ${name}."
+	if ! eval $_precmd && [ -z "$rc_force" ]; then
+		return 1
+	fi
+	_doit="kill -${sig_reload:-USR1} $rc_pid"
+	if [ -n "$_user" ]; then
+		_doit="su -m $_user -c 'sh -c \"$_doit\"'"
+	fi
+	if ! eval $_doit && [ -z "$rc_force" ]; then
+		return 1
+	fi
 }
 
 load_rc_config $name
