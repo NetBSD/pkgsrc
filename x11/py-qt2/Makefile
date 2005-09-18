@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:30 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/18 19:55:15 minskim Exp $
 #
 
 DISTNAME=	PyQt-3.1-Qt-2.3.1
 PKGNAME=	${PYPKGPREFIX}-qt2-3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 python
 MASTER_SITES=	http://www.riverbankcomputing.co.uk/download/PyQt/
 
