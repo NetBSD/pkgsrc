@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/09/18 21:18:53 minskim Exp $
+
+--- src/Makefile.orig	2005-02-03 07:11:44.000000000 -0800
++++ src/Makefile
+@@ -89,7 +89,7 @@ $(LIBRARY).a:
+ $(DSO).so.$(FL_API_VERSION) $(DSO).sl.2:
+ 	@rm -f $@
+ 	@echo $(DSOCOMMAND) $(DSONAME) ...
+-	@$(DSOCOMMAND) $(DSONAME) $(SHARED_OBJECTS) $(DSOLIBS)
++	@$(DSOCOMMAND) $(DSONAME) $(SHARED_OBJECTS) $(DSOLIBS) $(THREADSLIBS) $(COMPILER_RPATH_FLAG)$(PTHREADBASE)/lib
+ ifneq ($(STRIP), ) 
+ 	@$(STRIP) $(DSONAME)
+ endif
