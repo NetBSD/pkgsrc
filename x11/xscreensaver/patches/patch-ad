@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.17 2005/06/28 10:03:14 wiz Exp $
+$NetBSD: patch-ad,v 1.18 2005/09/18 21:31:21 jlam Exp $
 
---- driver/Makefile.in.orig	2005-06-23 03:02:23.000000000 +0200
+--- driver/Makefile.in.orig	2005-06-23 01:02:23.000000000 +0000
 +++ driver/Makefile.in
+@@ -15,7 +15,7 @@ prefix		= @prefix@
+ exec_prefix	= @exec_prefix@
+ bindir		= @bindir@
+ datadir		= @datadir@
+-localedir	= $(datadir)/locale
++localedir	= /usr/pkg/share/locale
+ mandir		= @mandir@
+ libexecdir	= @libexecdir@
+ mansuffix	= 1
 @@ -222,7 +222,7 @@ HDRS		= XScreenSaver_ad.h XScreenSaver_X
  		  xscreensaver.h prefs.h remote.h \
  		  demo-Gtk-widgets.h demo-Gtk-stubs.h demo-Gtk-support.h \
@@ -11,6 +20,15 @@ $NetBSD: patch-ad,v 1.17 2005/06/28 10:03:14 wiz Exp $
  		  xscreensaver-command.man \
  		  xscreensaver-text.man \
  		  xscreensaver-getimage.man \
+@@ -253,7 +253,7 @@ all: $(EXES) $(EXES2)
+ tests: $(TEST_EXES)
+ 
+ install:   install-program   install-ad    install-scripts \
+-	   install-gnome     install-man   install-xml install-pam
++	   install-gnome     install-man   install-xml
+ uninstall: uninstall-program uninstall-ad  \
+ 	   uninstall-gnome   uninstall-man uninstall-xml  
+ 
 @@ -288,7 +288,7 @@ install-program: $(EXES)
  	fi ;								      \
  	echo $$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver ;    \
