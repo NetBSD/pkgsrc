@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.1 1998/08/23 07:34:17 garbled Exp $
---- Imakefile.orig	Sun Mar  9 07:03:27 1997
-+++ Imakefile	Sat Aug 22 02:33:41 1998
-@@ -13,11 +13,3 @@
+$NetBSD: patch-aa,v 1.2 2005/09/18 20:21:17 minskim Exp $
+
+--- Imakefile.orig	1997-03-09 06:03:27.000000000 -0800
++++ Imakefile
+@@ -11,15 +11,7 @@
+ /* Can define CDEBUGFLAGS to anything you need */
+ /*CDEBUGFLAGS = -LMyLibrarydir*/
  
 -ALLSUBDIRS = lib \
 -  	  afterstep \
@@ -14,3 +17,11 @@ $NetBSD: patch-aa,v 1.1 1998/08/23 07:34:17 garbled Exp $
 -		modules/Animate
 +ALLSUBDIRS = lib modules/Wharf
  
+ SUBDIRS = $(ALLSUBDIRS) $(XPMSUBDIRS) $(SHAPESUBDIRS)
+ /* I have absolutely no idea what this does, but it seems to be needed */
+@@ -28,4 +20,4 @@ SUBDIRS = $(ALLSUBDIRS) $(XPMSUBDIRS) $(
+ MakeSubdirs($(SUBDIRS))
+ 
+ /* Doesn't work for me! */
+-/* #DependSubdirs($(SUBDIRS))*/
++#DependSubdirs($(SUBDIRS))
