@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11129 2005/09/18 13:41:20 taca Exp $
+$NetBSD: CHANGES,v 1.11130 2005/09/18 13:52:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4036,3 +4036,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/rdiff-backup tp 1.0.1 [reed 2005-09-18]
 	Updated lang/ruby16-base to 1.6.8nb1 [taca 2005-09-18]
 	Updated lang/ruby18-base to 1.8.2nb3 [taca 2005-09-18]
+	Updated security/zebedee to 2.5.3 [taca 2005-09-18]
