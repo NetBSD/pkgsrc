@@ -1,0 +1,12 @@
+$NetBSD: patch-au,v 1.1 2005/09/18 13:38:50 taca Exp $
+
+--- error.c.orig	2005-07-15 16:08:36.000000000 +0000
++++ error.c
+@@ -1108,7 +1108,6 @@ void
+ rb_sys_fail(mesg)
+     const char *mesg;
+ {
+-    extern int errno;
+     int n = errno;
+     VALUE arg;
+ 

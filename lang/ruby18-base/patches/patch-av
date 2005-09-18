@@ -1,0 +1,52 @@
+$NetBSD: patch-av,v 1.1 2005/09/18 13:38:50 taca Exp $
+
+--- process.c.orig	2005-07-15 16:12:12.000000000 +0000
++++ process.c
+@@ -2050,7 +2050,6 @@ static VALUE
+ p_uid_change_privilege(obj, id)
+     VALUE obj, id;
+ {
+-    extern int errno;
+     int uid;
+
+     check_uid_switch();
+@@ -2602,7 +2601,6 @@ static VALUE
+ p_gid_change_privilege(obj, id)
+     VALUE obj, id;
+ {
+-    extern int errno;
+     int gid;
+
+     check_gid_switch();
+@@ -3129,7 +3127,6 @@ static VALUE
+ p_uid_switch(obj)
+     VALUE obj;
+ {
+-    extern int errno;
+     int uid, euid;
+
+     check_uid_switch();
+@@ -3171,7 +3168,6 @@ static VALUE
+ p_uid_switch(obj)
+     VALUE obj;
+ {
+-    extern int errno;
+     int uid, euid;
+
+     check_uid_switch();
+@@ -3242,7 +3238,6 @@ static VALUE
+ p_gid_switch(obj)
+     VALUE obj;
+ {
+-    extern int errno;
+     int gid, egid;
+
+     check_gid_switch();
+@@ -3283,7 +3278,6 @@ static VALUE
+ p_gid_switch(obj)
+     VALUE obj;
+ {
+-    extern int errno;
+     int gid, egid;
+
+     check_gid_switch();
