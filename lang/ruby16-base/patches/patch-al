@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2005/09/18 13:36:30 taca Exp $
+
+--- io.c.orig	2005-08-17 17:35:04.000000000 +0000
++++ io.c
+@@ -27,7 +27,7 @@
+ # define NO_LONG_FNAME
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(sun) || defined(_nec_ews)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(sun) || defined(_nec_ews) || defined(__DragonFly__)
+ # define USE_SETVBUF
+ #endif
+ 
+@@ -107,6 +107,8 @@ static VALUE lineno;
+ #  else
+ #    define READ_DATA_PENDING(fp) ((fp)->_gptr < (fp)->_egptr)
+ #  endif
++#elif defined(__DragonFly__)
++#  define READ_DATA_PENDING(fp) (__fpending(fp) != 0)
+ #elif defined(FILE_COUNT)
+ #  define READ_DATA_PENDING(fp) ((fp)->FILE_COUNT > 0)
+ #elif defined(__BEOS__)
