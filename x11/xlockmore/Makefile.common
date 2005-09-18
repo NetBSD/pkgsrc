@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2005/09/11 16:55:38 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.33 2005/09/18 19:16:49 minskim Exp $
 #
 # This Makefile.common is included by:
 #
@@ -35,6 +35,7 @@ PKG_OPTIONS_LEGACY_VARS+=XLOCK_NO_DPMS:-xlockmore-dpms
 .include "../../mk/bsd.options.mk"
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		xmkmf
 USE_X11BASE=		YES
 
 .include "../../mk/bsd.prefs.mk"
