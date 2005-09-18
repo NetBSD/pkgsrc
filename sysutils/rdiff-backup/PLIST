@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/14 16:43:55 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/09/18 13:03:15 adrianp Exp $
 bin/rdiff-backup
 ${PYSITELIB}/rdiff_backup/C.so
 ${PYSITELIB}/rdiff_backup/FilenameMapping.py
@@ -38,6 +38,12 @@ ${PYSITELIB}/rdiff_backup/backup.pyo
 ${PYSITELIB}/rdiff_backup/connection.py
 ${PYSITELIB}/rdiff_backup/connection.pyc
 ${PYSITELIB}/rdiff_backup/connection.pyo
+${PYSITELIB}/rdiff_backup/eas_acls.py
+${PYSITELIB}/rdiff_backup/eas_acls.pyc
+${PYSITELIB}/rdiff_backup/eas_acls.pyo
+${PYSITELIB}/rdiff_backup/fs_abilities.py
+${PYSITELIB}/rdiff_backup/fs_abilities.pyc
+${PYSITELIB}/rdiff_backup/fs_abilities.pyo
 ${PYSITELIB}/rdiff_backup/increment.py
 ${PYSITELIB}/rdiff_backup/increment.pyc
 ${PYSITELIB}/rdiff_backup/increment.pyo
@@ -83,6 +89,9 @@ ${PYSITELIB}/rdiff_backup/static.pyo
 ${PYSITELIB}/rdiff_backup/statistics.py
 ${PYSITELIB}/rdiff_backup/statistics.pyc
 ${PYSITELIB}/rdiff_backup/statistics.pyo
+${PYSITELIB}/rdiff_backup/user_group.py
+${PYSITELIB}/rdiff_backup/user_group.pyc
+${PYSITELIB}/rdiff_backup/user_group.pyo
 man/man1/rdiff-backup.1
 share/doc/${PKGNAME}/CHANGELOG
 share/doc/${PKGNAME}/COPYING
