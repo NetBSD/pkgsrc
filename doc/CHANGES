@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11132 2005/09/18 16:48:59 hira Exp $
+$NetBSD: CHANGES,v 1.11133 2005/09/18 19:56:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4039,3 +4039,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/zebedee to 2.5.3 [taca 2005-09-18]
 	Updated games/xvier to 1.0nb2 [hira 2005-09-18]
 	Updated audio/cdplayer to 0.4.2nb1 [hira 2005-09-18]
+	Updated x11/py-qt2 to 3.1nb2 [minskim 2005-09-18]
