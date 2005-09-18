@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/24 05:48:51 taca Exp $
+$NetBSD: patch-ab,v 1.2 2005/09/18 13:51:09 taca Exp $
 
---- zebedee.c.orig	Sat Feb 10 05:47:55 2001
+--- zebedee.c.orig	2005-09-03 07:20:23.000000000 +0900
 +++ zebedee.c
-@@ -59,8 +59,8 @@
+@@ -59,8 +59,8 @@ typedef Huge *mpz_t;
  #define mpz_clear(z)		    huge_free(z)
  #endif
  
