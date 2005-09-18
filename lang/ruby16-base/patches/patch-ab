@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
+$NetBSD: patch-ab,v 1.2 2005/09/18 13:36:30 taca Exp $
 
---- configure.orig	2002-11-19 06:49:26.000000000 -0500
+--- configure.orig	2002-11-19 11:49:26.000000000 +0000
 +++ configure
 @@ -29,6 +29,8 @@ ac_help="$ac_help
  --with-sitedir=DIR        site libraries in DIR [PREFIX/lib/ruby/site_ruby]"
@@ -20,7 +20,18 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
  freebsd*)	LIBS="-lm $LIBS"
  		echo $ac_n "checking whether -lxpg4 has to be linked""... $ac_c" 1>&6
  echo "configure:2330: checking whether -lxpg4 has to be linked" >&5
-@@ -2877,7 +2881,8 @@ fi
+@@ -2448,6 +2452,10 @@ echo "$ac_t""$rb_cv_supplementary_lib_c_
+ 			fi
+ 		fi
+ 		;;
++dragonfly*)
++		LIBS="-lm $LIBS"
++		MAINLIBS="-pthread $MAINLIBS"
++		;;
+ linux*)		LIBS="-lm $LIBS"
+ 		case "$target_cpu" in
+ 		alpha*)
+@@ -2877,7 +2885,8 @@ fi
  
  for ac_hdr in stdlib.h string.h unistd.h limits.h sys/file.h sys/ioctl.h\
  		 fcntl.h sys/fcntl.h sys/select.h sys/time.h sys/times.h sys/param.h\
@@ -30,7 +41,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
-@@ -4387,6 +4392,330 @@ EOF
+@@ -4387,6 +4396,330 @@ EOF
  
  fi
  
@@ -361,7 +372,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
  DEFAULT_KCODE="KCODE_NONE"
  
  # Check whether --with-default-kcode or --without-default-kcode was given.
-@@ -4510,6 +4839,7 @@ echo "configure:4501: checking whether O
+@@ -4510,6 +4843,7 @@ echo "configure:4501: checking whether O
      cygwin*)	;;
      mingw*)	;;
      netbsd*) CCDLFLAGS=-fPIC;;
@@ -369,7 +380,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
      *) CCDLFLAGS=-fPIC;;
      esac
    else
-@@ -4524,7 +4854,7 @@ echo "configure:4501: checking whether O
+@@ -4524,7 +4858,7 @@ echo "configure:4501: checking whether O
  
    case "$target_os" in
  	hpux*)		DLDFLAGS="-E"
@@ -378,7 +389,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
  			LDFLAGS="-Wl,-E"
  			rb_cv_dlopen=yes;;
  	solaris*) 	if test "$GCC" = yes; then
-@@ -4539,7 +4869,8 @@ echo "configure:4501: checking whether O
+@@ -4539,7 +4873,8 @@ echo "configure:4501: checking whether O
  			rb_cv_dlopen=yes;;
  	sunos*) 	LDSHARED='ld -assert nodefinitions'
  			rb_cv_dlopen=yes;;
@@ -388,7 +399,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
  			rb_cv_dlopen=yes;;
  	sysv4*) 	LDSHARED='ld -G'
  			rb_cv_dlopen=yes;;
-@@ -4550,6 +4881,12 @@ echo "configure:4501: checking whether O
+@@ -4550,6 +4885,12 @@ echo "configure:4501: checking whether O
  	osf*) 		LDSHARED="$CC -shared"
  			rb_cv_dlopen=yes ;;
  	linux*) 	LDSHARED="$CC -shared"
@@ -401,8 +412,13 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
  			rb_cv_dlopen=yes ;;
  	freebsd*)       LDSHARED="$CC -shared"
  			if test "$rb_cv_binary_elf" = yes; then
-@@ -4562,8 +4899,18 @@ echo "configure:4501: checking whether O
- 	netbsd*)	LDSHARED='${CC} -shared'
+@@ -4559,11 +4900,22 @@ echo "configure:4501: checking whether O
+ 			  test "$GCC" = yes && test "$rb_cv_prog_gnu_ld" = yes || LDSHARED="ld -Bshareable"
+ 			fi
+ 			rb_cv_dlopen=yes ;;
+-	netbsd*)	LDSHARED='${CC} -shared'
++	dragonfly*|netbsd*)
++			LDSHARED='${CC} -shared'
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="-Wl,-export-dynamic"
 +			    DLDFLAGS="$DLDFLAGS "'-Wl,-soname,$(.TARGET)'
@@ -420,7 +436,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
  	openbsd*) 	LDSHARED="ld -Bforcearchive -Bshareable"
  			rb_cv_dlopen=yes ;;
  	bsdi3*) 	case "$CC" in
-@@ -5070,6 +5417,7 @@ if test "$enable_shared" = 'yes'; then
+@@ -5070,6 +5422,7 @@ if test "$enable_shared" = 'yes'; then
  	;;
      linux*)
  	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
@@ -428,7 +444,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
  	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).so'
  	;;
      freebsd*)
-@@ -5091,6 +5439,14 @@ if test "$enable_shared" = 'yes'; then
+@@ -5080,7 +5433,7 @@ if test "$enable_shared" = 'yes'; then
+ 	    LIBRUBY_ALIASES=''
+ 	fi
+ 	;;
+-    netbsd*)
++    dragonfly*|netbsd*)
+ 	SOLIBS='$(LIBS)'
+ 	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
+ 	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR)'
+@@ -5091,6 +5444,14 @@ if test "$enable_shared" = 'yes'; then
  	   LIBRUBY_ALIASES=""
  	fi
   	;;
@@ -443,7 +468,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
      openbsd*)
  	SOLIBS='$(LIBS)'
   	;;
-@@ -5315,6 +5671,15 @@ EOF
+@@ -5315,6 +5676,15 @@ EOF
  
  fi
  
