@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/07 20:21:37 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/19 09:10:23 bouyer Exp $
 #
 
 DISTNAME=	oscilloscope-0.1.2
@@ -14,6 +14,8 @@ USE_BUILDLINK3=	YES
 USE_LANGUAGES=	c c++
 
 USE_LIBTOOL=	YES
+
+GCC_REQD+=		3.0
 
 EGDIR=		${PREFIX}/share/examples/gpsim-oscilloscope
 post-install:
