@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11136 2005/09/19 10:29:41 wiz Exp $
+$NetBSD: CHANGES,v 1.11137 2005/09/19 19:35:25 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4033,7 +4033,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/sun-jre14 to 2.9 [dillo 2005-09-17]
 	Updated lang/sun-jdk14 to 2.9 [dillo 2005-09-17]
 	Updated www/kazehakase to 0.3.0 [reed 2005-09-17]
-	Updated sysutils/rdiff-backup tp 1.0.1 [reed 2005-09-18]
+	Updated sysutils/rdiff-backup to 1.0.1 [adrianp 2005-09-18]
 	Updated lang/ruby16-base to 1.6.8nb1 [taca 2005-09-18]
 	Updated lang/ruby18-base to 1.8.2nb3 [taca 2005-09-18]
 	Updated security/zebedee to 2.5.3 [taca 2005-09-18]
