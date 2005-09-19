@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/07 20:17:46 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/19 09:10:23 bouyer Exp $
 #
 
 DISTNAME=	gpsim-20050905
@@ -14,6 +14,8 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	bison gmake lex pkg-config
 USE_LIBTOOL=	YES
+
+GCC_REQD+=		3.0
 
 USE_GNU_READLINE=	# rl_callback_read_char, rl_copy_text,
 # rl_callback_handler_remove, rl_forced_update_display,
