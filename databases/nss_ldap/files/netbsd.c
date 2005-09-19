@@ -1,4 +1,4 @@
-/* $NetBSD: netbsd.c,v 1.3 2005/08/30 16:12:02 drochner Exp $ */
+/* $NetBSD: netbsd.c,v 1.4 2005/09/19 15:54:42 drochner Exp $ */
 
 #include <sys/param.h>
 #include <pwd.h>
@@ -453,6 +453,7 @@ netbsd_getgroupmembership(void *rv, void *cb_data, va_list ap)
 	int *size = va_arg(ap, int*);
 	gid_t *tmpgroups;
 	long int lstart, lsize;
+	int origsize = *size;
 
 	tmpgroups = malloc(limit * sizeof(gid_t));
 	if (!tmpgroups)
@@ -476,7 +477,8 @@ netbsd_getgroupmembership(void *rv, void *cb_data, va_list ap)
 		}
 		*size = lstart;
 		s = NSS_STATUS_NOTFOUND;
-	}
+	} else
+		*size = origsize;
 	free(tmpgroups);
 		
 	return nss2netbsderr[s];
