@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3896 2005/09/18 23:34:54 wiz Exp $
+$NetBSD: TODO,v 1.3897 2005/09/19 18:45:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,6 +361,7 @@ Suggested package updates
 	o blackbox-0.70
 	o boaconstructor-0.3.1
 	o bochs-2.2.1
+	o boehm-gc-6.6
 	o bogofilter-0.94.12
 	o boson-0.11
 	o browser-bookmarks-menu-0.4
@@ -598,9 +599,10 @@ Suggested package updates
 	o leafpad-0.7.9
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
-	o libextractor-0.5.5
+	o libextractor-0.5.6
 	o libflash-0.4.13
 	o libhydrogen-0.9.0
+	o libidn-0.5.19
 	o libjit-0.0.4 [pkg/30514]
 	o libksba-0.9.9
 	o liblive-2005.03.23
@@ -1008,6 +1010,7 @@ Suggested package updates
 	o sox-12.17.8
 	o spamassassin-3.1.0 [heinz]
 	o spim-7.2
+	o sqlite3-3.2.6
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
 	o sqwebmail-5.0.5
@@ -1022,6 +1025,8 @@ Suggested package updates
 	o stunnel-4.11
 	o subtitleripper-0.3.4
 	o subversion-1.2.3
+	o sun-jdk15-5.0.5
+	o sun-jre15-5.0.5
 	o suse_base-9.3
 	o svk-1.04
 	o swfdec-0.3.5
