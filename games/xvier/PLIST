@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/09/18 16:31:56 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/09/19 16:37:26 reed Exp $
 bin/xvier
-${IMAKE_MAN_SOURCE_PATH}6/xvier.${IMAKE_MANNEWSUFFIX}
 libexec/xvier_prog
+man/man6/xvier.6
