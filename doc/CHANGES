@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11137 2005/09/19 19:35:25 adrianp Exp $
+$NetBSD: CHANGES,v 1.11138 2005/09/19 19:43:16 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4043,3 +4043,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/efltk to 2.0.5nb1 [minskim 2005-09-18]
 	Updated x11/xscreensaver to 4.22nb2 [jlam 2005-09-18]
 	Updated databases/postgresql80-plperl to 8.0.3nb1 [jlam 2005-09-19]
+	Updated chat/centericq to 4.20.0nb2 [adrianp 2005-09-19]
