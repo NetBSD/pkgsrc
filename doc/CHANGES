@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11135 2005/09/18 23:34:37 wiz Exp $
+$NetBSD: CHANGES,v 1.11136 2005/09/19 10:29:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4042,3 +4042,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/py-qt2 to 3.1nb2 [minskim 2005-09-18]
 	Updated x11/efltk to 2.0.5nb1 [minskim 2005-09-18]
 	Updated x11/xscreensaver to 4.22nb2 [jlam 2005-09-18]
+	Updated databases/postgresql80-plperl to 8.0.3nb1 [jlam 2005-09-19]
