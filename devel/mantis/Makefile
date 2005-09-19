@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/06/10 19:38:29 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/19 22:33:28 adrianp Exp $
 
-DISTNAME=	mantis-0.19.1
-PKGREVISION=	4
+DISTNAME=	mantis-1.0.0rc2
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -25,8 +24,6 @@ PKG_SUPPORTED_OPTIONS=	charts
 .if !empty(PKG_OPTIONS:Mcharts)
 DEPENDS+=	php-jpgraph-[0-9]*:../../graphics/php-jpgraph
 .endif
-
-BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=3.23.2
 
 APACHE_USER?=	www
 
@@ -52,51 +49,18 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mantis
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${MANTIS_HOME}
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/admin
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/admin/css
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/admin/upgrades
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/core
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/core/adodb
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/core/adodb/lang
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/core/adodb/drivers
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/core/adodb/datadict
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/core/phpmailer
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/core/phpmailer/language
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/css
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/graphs
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/images
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/javascript
-	${INSTALL_DATA_DIR} ${MANTIS_HOME}/lang
-	${INSTALL_DATA} ${WRKSRC}/doc/CUSTOMIZATION ${PREFIX}/share/doc/mantis
-	${INSTALL_DATA} ${WRKSRC}/doc/INSTALL ${PREFIX}/share/doc/mantis
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/mantis
-	${INSTALL_DATA} ${WRKSRC}/doc/UPGRADING ${PREFIX}/share/doc/mantis
-	${INSTALL_DATA} ${WRKSRC}/*.php ${MANTIS_HOME}
-	${INSTALL_DATA} ${WRKSRC}/admin/*.php ${MANTIS_HOME}/admin
-	${INSTALL_DATA} ${WRKSRC}/admin/*.css ${MANTIS_HOME}/admin
-	${INSTALL_DATA} ${WRKSRC}/admin/css/*.php ${MANTIS_HOME}/admin/css
-	${INSTALL_DATA} ${WRKSRC}/admin/upgrades/*.php \
-		${MANTIS_HOME}/admin/upgrades
-	${INSTALL_DATA} ${WRKSRC}/core/*.php ${MANTIS_HOME}/core
-	${INSTALL_DATA} ${WRKSRC}/core/phpmailer/*.php \
-		${MANTIS_HOME}/core/phpmailer
-	${INSTALL_DATA} ${WRKSRC}/core/phpmailer/language/*.php \
-		${MANTIS_HOME}/core/phpmailer/language
-	${INSTALL_DATA} ${WRKSRC}/core/adodb/*.php ${MANTIS_HOME}/core/adodb
-	${INSTALL_DATA} ${WRKSRC}/core/adodb/*.htm ${MANTIS_HOME}/core/adodb
-	${INSTALL_DATA} ${WRKSRC}/core/adodb/lang/*.php \
-		${MANTIS_HOME}/core/adodb/lang
-	${INSTALL_DATA} ${WRKSRC}/core/adodb/drivers/*.php \
-		${MANTIS_HOME}/core/adodb/drivers
-	${INSTALL_DATA} ${WRKSRC}/core/adodb/datadict/*.php \
-		${MANTIS_HOME}/core/adodb/datadict
-	${INSTALL_DATA} ${WRKSRC}/css/*.css ${MANTIS_HOME}/css
-	${INSTALL_DATA} ${WRKSRC}/graphs/*.php ${MANTIS_HOME}/graphs
-	${INSTALL_DATA} ${WRKSRC}/images/*.gif ${MANTIS_HOME}/images
-	${INSTALL_DATA} ${WRKSRC}/images/*.png ${MANTIS_HOME}/images
-	${INSTALL_DATA} ${WRKSRC}/javascript/*.js ${MANTIS_HOME}/javascript
-	${INSTALL_DATA} ${WRKSRC}/lang/*.txt ${MANTIS_HOME}/lang
-	${INSTALL_DATA} ${WRKSRC}/sql/*.sql ${EGDIR}
+	${INSTALL} ${WRKSRC}/doc/CUSTOMIZATION ${PREFIX}/share/doc/mantis
+	${INSTALL} ${WRKSRC}/doc/INSTALL ${PREFIX}/share/doc/mantis
+	${INSTALL} ${WRKSRC}/doc/README ${PREFIX}/share/doc/mantis
+	${INSTALL} ${WRKSRC}/doc/UPGRADING ${PREFIX}/share/doc/mantis
+
+	cd ${WRKSRC} && ${PAX}				\
+		-s /\.cvsignore//			\
+		-s /config_inc.php.sample//		\
+		-s /mantis_offline.php.sample//		\
+		-s /mantis.conf//			\
+		-rwppm . ${MANTIS_HOME}
+
 	${INSTALL_DATA} ${WRKSRC}/config_inc.php.sample ${EGDIR}/config_inc.php
 	${INSTALL_DATA} ${WRKSRC}/mantis_offline.php.sample ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/mantis.conf ${EGDIR}
