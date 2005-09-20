@@ -139,7 +139,7 @@ alink="#0000FF">
                 pkgsrc</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#platform-specific-notes">3.2. Platform specific
+                "#platform-specific-notes">3.2. Platform-specific
                 notes</a></span></dt>
 
                 <dd>
@@ -285,7 +285,7 @@ alink="#0000FF">
 
                     <dt><span class="sect2"><a href=
                     "#setting-up-a-sandbox">6.3.6. Setting up a
-                    sandbox for chroot'ed builds</a></span></dt>
+                    sandbox for chrooted builds</a></span></dt>
 
                     <dt><span class="sect2"><a href=
                     "#building-a-partial-set">6.3.7. Building a
@@ -503,8 +503,8 @@ alink="#0000FF">
                 Variable substitution in PLIST</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#manpage-compression">10.5.
-                Manpage-compression</a></span></dt>
+                "#manpage-compression">10.5. Man
+                page-compression</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#using-PLIST_SRC">10.6. Changing PLIST source with
@@ -512,7 +512,7 @@ alink="#0000FF">
                 "varname">PLIST_SRC</code></a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#platform-specific-plist">10.7. Platform specific
+                "#platform-specific-plist">10.7. Platform-specific
                 and differing PLISTs</a></span></dt>
 
                 <dt><span class="sect1"><a href=
@@ -611,7 +611,7 @@ alink="#0000FF">
 
                     <dt><span class="sect2"><a href=
                     "#conf-files-configure">12.2.2. Telling the
-                    software were configuration files
+                    software where configuration files
                     are</a></span></dt>
 
                     <dt><span class="sect2"><a href=
@@ -1011,8 +1011,8 @@ alink="#0000FF">
           </div>
         </div>
 
-        <p>There is a lot of software freely available for Unix
-        based systems, which usually runs on NetBSD and other
+        <p>There is a lot of software freely available for
+        Unix-based systems, which usually runs on NetBSD and other
         Unix-flavoured systems, too, sometimes with some
         modifications. The NetBSD Packages Collection (pkgsrc)
         incorporates any such changes necessary to make that
@@ -1277,7 +1277,7 @@ alink="#0000FF">
 
             <dd>
               <p>The piece of software to be installed which will
-              be constructed from all the files in the Distfile by
+              be constructed from all the files in the distfile by
               the actions defined in the corresponding package.</p>
             </dd>
           </dl>
@@ -1345,7 +1345,7 @@ alink="#0000FF">
               pkgsrc</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#platform-specific-notes">3.2. Platform specific
+              "#platform-specific-notes">3.2. Platform-specific
               notes</a></span></dt>
 
               <dd>
@@ -1490,7 +1490,7 @@ alink="#0000FF">
 
                   <dt><span class="sect2"><a href=
                   "#setting-up-a-sandbox">6.3.6. Setting up a
-                  sandbox for chroot'ed builds</a></span></dt>
+                  sandbox for chrooted builds</a></span></dt>
 
                   <dt><span class="sect2"><a href=
                   "#building-a-partial-set">6.3.7. Building a
@@ -1732,7 +1732,7 @@ release=pkgsrc
             pkgsrc</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#platform-specific-notes">3.2. Platform specific
+            "#platform-specific-notes">3.2. Platform-specific
             notes</a></span></dt>
 
             <dd>
@@ -1854,6 +1854,19 @@ release=pkgsrc
           up-to-date list of these can be found on <a href=
           "http://www.pkgsrc.org/" target=
           "_top">www.pkgsrc.org</a>.</p>
+
+          <div class="note" style=
+          "margin-left: 0.5in; margin-right: 0.5in;">
+            <h3 class="title">Note</h3>
+
+            <p>The bootstrap installs a <span><strong class=
+            "command">bmake</strong></span> tool. Use this
+            <span><strong class="command">bmake</strong></span>
+            when building via pkgsrc. For examples in this guide,
+            use <span><strong class="command">bmake</strong></span>
+            instead of &#8220;<span class=
+            "quote">make</span>&#8221;.</p>
+          </div>
         </div>
 
         <div class="sect1" lang="en" xml:lang="en">
@@ -1862,8 +1875,8 @@ release=pkgsrc
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "platform-specific-notes" id=
-                "platform-specific-notes"></a>3.2.&nbsp;Platform
-                specific notes</h2>
+                "platform-specific-notes"></a>3.2.&nbsp;Platform-specific
+                notes</h2>
               </div>
             </div>
           </div>
@@ -1912,7 +1925,7 @@ release=pkgsrc
               <h3 class="title">Note</h3>
 
               <p>You cannot use a HFS+ file system for pkgsrc,
-              because pkgsrc currently requires the filesystem to
+              because pkgsrc currently requires the file system to
               be case-sensitive, and HFS+ is not.</p>
             </div>
 
@@ -2081,7 +2094,7 @@ release=pkgsrc
               </div>
             </div>
 
-            <p>Interix is a POSIX compatible subsystem for the
+            <p>Interix is a POSIX-compatible subsystem for the
             Windows NT kernel, providing a Unix-like environment
             with a tighter kernel integration than available with
             Cygwin. It is part of the Windows Services for Unix
@@ -2180,8 +2193,8 @@ release=pkgsrc
                   </li>
 
                   <li>
-                    <p>To enable case-sensitivity for the
-                    filesystem, run REGEDIT.EXE, and change the
+                    <p>To enable case-sensitivity for the file
+                    system, run REGEDIT.EXE, and change the
                     following registry key:</p>
 
                     <p>
@@ -2304,8 +2317,8 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
             from a different host, please make sure to set
             <code class="varname">WRKOBJDIR</code> to a local
             directory, as it appears that IRIX linker occasionally
-            runs into issues when trying to link over a network
-            mounted filesystem.</p>
+            runs into issues when trying to link over a
+            network-mounted file system.</p>
 
             <p>The bootstrapping process should set all the right
             options for programs such as imake(1), but you may want
@@ -2481,8 +2494,8 @@ ICCBASE=/opt/icc
                   program uses <code xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" class=
                   "filename">/etc/mk.conf</code> as well. You can
-                  work around this by enclosing all the pkgsrc
-                  specific parts of the file with:</p>
+                  work around this by enclosing all the
+                  pkgsrc-specific parts of the file with:</p>
                   <pre class="programlisting">
 .ifdef BSD_PKG_MK
 # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
@@ -2612,7 +2625,7 @@ ICCBASE=/opt/icc
               <code class="varname">CXX</code> and optionally,
               <code class="varname">CPP</code> in <code xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" class=
-              "filename">/etc/mk.conf</code>, eg.</p>
+              "filename">/etc/mk.conf</code>, e.g.:</p>
               <pre class="programlisting">
 CC=     cc
 CXX=    CC
@@ -2620,7 +2633,7 @@ CPP=    /usr/ccs/lib/cpp
 </pre>
 
               <p>You may also want to build 64-bit binaries,
-              eg.</p>
+              e.g.:</p>
               <pre class="programlisting">
 CFLAGS= -xtarget=ultra -xarch=v9
 </pre>
@@ -2630,7 +2643,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
               <code class="varname">PATH</code>. This includes
               <code xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" class=
-              "filename">/usr/ccs/{bin,lib}</code> and eg.
+              "filename">/usr/ccs/{bin,lib}</code> and e.g.
               <code xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" class=
               "filename">/usr/pkg/{bin,sbin}</code>.</p>
@@ -2747,11 +2760,11 @@ CFLAGS= -xtarget=ultra -xarch=v9
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">/usr/pkgsrc/packages</code>).</p>
 
-            <p>This same directory layout applies for CDROM
+            <p>This same directory layout applies for CD-ROM
             distributions, only that the directory may be rooted
             somewhere else, probably somewhere below <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">/cdrom</code>. Please consult your CDROMs
+            "filename">/cdrom</code>. Please consult your CD-ROMs
             documentation for the exact location.</p>
           </div>
 
@@ -2767,7 +2780,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
               </div>
             </div>
 
-            <p>If you have the files on a CDROM or downloaded them
+            <p>If you have the files on a CD-ROM or downloaded them
             to your hard disk, you can install them with the
             following command (be sure to <span><strong class=
             "command">su</strong></span> to root first):</p>
@@ -2792,7 +2805,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
 
             <p>To save some typing, you can set the <code class=
             "varname">PKG_PATH</code> environment variable to a
-            semicolon separated list of paths (including remote
+            semicolon-separated list of paths (including remote
             URLs); trailing slashes are not allowed.</p>
 
             <p>Additionally to the <code xmlns=
@@ -2811,12 +2824,11 @@ CFLAGS= -xtarget=ultra -xarch=v9
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html"
             target="_top"><code xmlns="" class=
             "filename">security/audit-packages</code></a>
-            regularly, and especially after installing new
-            packages, and verify that the vulnerabilities are
-            acceptable for your configuration. An example
-            <code class="varname">PKG_PATH</code> would be:
-            <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
-            class=
+            regularly, especially after installing new packages,
+            and verify that the vulnerabilities are acceptable for
+            your configuration. An example <code class=
+            "varname">PKG_PATH</code> would be: <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</code>
             Please note that semicolon (';') is a shell
             meta-character, so you'll probably have to quote
@@ -2886,7 +2898,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
             &#8220;<span class="quote">comp</span>&#8221; and the
             &#8220;<span class="quote">text</span>&#8221;
             distribution sets must be installed. If you want to
-            build X11 related packages the &#8220;<span class=
+            build X11-related packages the &#8220;<span class=
             "quote">xbase</span>&#8221; and &#8220;<span class=
             "quote">xcomp</span>&#8221; distribution sets are
             required, too.</p>
@@ -2949,8 +2961,21 @@ CFLAGS= -xtarget=ultra -xarch=v9
 
             <p>Assuming that the distfile has been fetched (see
             previous section), become root and change into the
-            relevant directory and running <span><strong class=
-            "command">make</strong></span>. For example, type</p>
+            relevant directory and run <span><strong class=
+            "command">make</strong></span>.</p>
+
+            <div class="note" style=
+            "margin-left: 0.5in; margin-right: 0.5in;">
+              <h3 class="title">Note</h3>
+
+              <p>If using bootstrap or pkgsrc on a non-NetBSD
+              system, use the pkgsrc <span><strong class=
+              "command">bmake</strong></span> command instead of
+              &#8220;<span class="quote">make</span>&#8221; in the
+              examples in this guide.</p>
+            </div>
+
+            <p>For example, type</p>
             <pre class="screen">
 <code class="prompt">%</code> <strong class=
 "userinput"><code>cd misc/figlet</code></strong>
@@ -2991,7 +3016,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
             "varname">LOCALBASE=/usr/local</code> in your
             environment. Please note that you should use a
             directory which is dedicated to packages and not shared
-            with other programs (ie, do not try and use
+            with other programs (i.e., do not try and use
             <code class="varname">LOCALBASE=/usr</code>). Also, you
             should not try to add any of your own files or
             directories (such as <code xmlns=
@@ -3098,7 +3123,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
             "filename">pkgsrc/mk/defaults/mk.conf</code> for more
             details.</p>
 
-            <p>A final word of warning: If you setup a system that
+            <p>A final word of warning: If you set up a system that
             has a non-standard setting for <code class=
             "varname">LOCALBASE</code>, be sure to set that before
             any packages are installed, as you can not use several
@@ -3250,11 +3275,11 @@ CFLAGS= -xtarget=ultra -xarch=v9
             </div>
           </div>
 
-          <p>In this section you can find some variables that apply
-          all pkgsrc packages. The preferred method of setting them
-          is by setting them in <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">/etc/mk.conf</code>.</p>
+          <p>In this section, you can find some variables that
+          apply to all pkgsrc packages. The preferred method of
+          setting these variables is by setting them in
+          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+          class="filename">/etc/mk.conf</code>.</p>
 
           <div class="itemizedlist">
             <ul type="disc">
@@ -3606,7 +3631,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
 
                 <dt><span class="sect2"><a href=
                 "#setting-up-a-sandbox">6.3.6. Setting up a sandbox
-                for chroot'ed builds</a></span></dt>
+                for chrooted builds</a></span></dt>
 
                 <dt><span class="sect2"><a href=
                 "#building-a-partial-set">6.3.7. Building a partial
@@ -3650,7 +3675,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
           system with <a href=
           "http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current">
           <span class="citerefentry"><span class=
-          "refentrytitle">pkg_add</span>(1)</span></a> This saves
+          "refentrytitle">pkg_add</span>(1)</span></a>. This saves
           having to build the same package on a group of hosts and
           wasting CPU time. It also provides a simple means for
           others to install your package, should you distribute
@@ -3818,7 +3843,7 @@ _ACCEPTABLE=    yes
               </div>
 
               <p>It is possible to configure the bulk build to
-              perform certain site specific tasks at the end of the
+              perform certain site-specific tasks at the end of the
               pre-build stage. If the file <code xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" class=
               "filename">pre-build.local</code> exists in
@@ -4056,7 +4081,7 @@ fi
                 <div>
                   <h3 class="title"><a name="setting-up-a-sandbox"
                   id="setting-up-a-sandbox"></a>6.3.6.&nbsp;Setting
-                  up a sandbox for chroot'ed builds</h3>
+                  up a sandbox for chrooted builds</h3>
                 </div>
               </div>
             </div>
@@ -4249,7 +4274,7 @@ fi
               </ol>
             </div>
 
-            <p>When the chroot sandbox is setup, you can start the
+            <p>When the chroot sandbox is set up, you can start the
             build with the following steps:</p>
             <pre class="screen">
 <code class="prompt">#</code> <strong class=
@@ -4284,7 +4309,7 @@ fi
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">pkgsrc/mk/bulk/build</code> script may be
             used to build a subset of the packages contained in
-            pkgsrc. By setting defining <code class=
+            pkgsrc. By setting <code class=
             "varname">SPECIFIC_PKGS</code> in <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">/etc/mk.conf</code>, the variables</p>
@@ -4361,7 +4386,7 @@ fi
 RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload 
 </pre>
 
-            <p>Please use appropviate values for "pkgsrc-200xQy",
+            <p>Please use appropriate values for "pkgsrc-200xQy",
             "NetBSD-a.b.c" and "arch" here. If your login on
             ftp.NetBSD.org is different from <code class=
             "varname">CVS_USER</code>, write your login directly
@@ -4391,7 +4416,7 @@ nbftp% <strong class=
             "filename">/pub/pkgsrc</code>.</p>
 
             <p>Before uploading the binary pkgs, ssh authentication
-            needs to be set up. This example shows how to setup
+            needs to be set up. This example shows how to set up
             temporary keys for the root account <span class=
             "emphasis"><em>inside the sandbox</em></span> (assuming
             that no keys should be present there usually):</p>
@@ -4495,8 +4520,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           simple tool for creating the ISO 9660 images.
           <span><strong class="command">cdpack</strong></span>
           arranges the packages on the CD-ROMs in a way that keeps
-          all the dependencies for given package on the same CD as
-          that package.</p>
+          all the dependencies for a given package on the same CD
+          as that package.</p>
 
           <div class="sect2" lang="en" xml:lang="en">
             <div class="titlepage">
@@ -4510,7 +4535,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             </div>
 
             <p>Complete documentation for cdpack is found in the
-            cdpack(1) manpage. The following short example assumes
+            cdpack(1) man page. The following short example assumes
             that the binary packages are left in <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">/usr/pkgsrc/packages/All</code> and that
@@ -4963,21 +4988,11 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             </ul>
           </div>
 
-          <p>Utilities for people maintaining pkgsrc (or more
+          <p>Utilities for people maintaining pkgsrc (or: more
           obscure pkg utilities)</p>
 
           <div class="itemizedlist">
             <ul type="disc">
-              <li>
-                <p><a xmlns=
-                "http://www.w3.org/TR/xhtml1/transitional" href=
-                "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgconflict/README.html"
-                target="_top"><code xmlns="" class=
-                "filename">pkgtools/pkgconflict</code></a>: Find
-                packages that conflict but aren't marked as
-                such.</p>
-              </li>
-
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
@@ -5054,7 +5069,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             </div>
           </div>
 
-          <p>By default resuming transfers in pkgsrc is disabled,
+          <p>By default, resuming transfers in pkgsrc is disabled,
           but you can enable this feature by adding the option
           <code class="varname">PKG_RESUME_TRANSFERS=YES</code>
           into <code xmlns=
@@ -5154,7 +5169,7 @@ X11_TYPE=xorg
           allow direct connections to Internet hosts (i.e.
           non-NAT), you may specify the relevant proxy hosts. This
           is done using an environment variable in the form of a
-          URL e.g. in Amdahl, the machine &#8220;<span class=
+          URL, e.g. in Amdahl, the machine &#8220;<span class=
           "quote">orpheus.amdahl.com</span>&#8221; is one of the
           firewalls, and it uses port 80 as the proxy port number.
           So the proxy environment variables are:</p>
@@ -5239,7 +5254,7 @@ http_proxy=http://orpheus.amdahl.com:80/
           <p>The answer here is to do a <span><strong class=
           "command">make fetch-list</strong></span> in <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">/usr/pkgsrc</code> or one of it's
+          "filename">/usr/pkgsrc</code> or one of its
           subdirectories, carry the resulting list to your machine
           at work/school and use it there. If you don't have a
           NetBSD-compatible <a href=
@@ -5315,7 +5330,7 @@ http_proxy=http://orpheus.amdahl.com:80/
           indicates that you don't have installed the
           &#8220;<span class="quote">text</span>&#8221; set (nroff,
           ...) from the NetBSD base distribution on your machine.
-          It is recommended to do that to format manpages.</p>
+          It is recommended to do that to format man pages.</p>
 
           <p>In the case of the <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
@@ -5344,8 +5359,8 @@ http_proxy=http://orpheus.amdahl.com:80/
           <p>You didn't install the compiler set, <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">comp.tgz</code>, when you installed your
-          NetBSD machine. Please get it and install it, by
-          extracting it in <code xmlns=
+          NetBSD machine. Please get and install it, by extracting
+          it in <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">/</code>:</p>
           <pre class="screen">
@@ -5438,7 +5453,7 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
           like to modify, that is, the contents of <code class=
           "varname">PKGBASE</code>.</p>
 
-          <p>Note that, after changing these settings, you must
+          <p>Note that after changing these settings, you must
           rebuild and reinstall any affected packages.</p>
         </div>
 
@@ -5639,8 +5654,8 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
               Variable substitution in PLIST</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#manpage-compression">10.5.
-              Manpage-compression</a></span></dt>
+              "#manpage-compression">10.5. Man
+              page-compression</a></span></dt>
 
               <dt><span class="sect1"><a href=
               "#using-PLIST_SRC">10.6. Changing PLIST source with
@@ -5648,7 +5663,7 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
               "varname">PLIST_SRC</code></a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#platform-specific-plist">10.7. Platform specific
+              "#platform-specific-plist">10.7. Platform-specific
               and differing PLISTs</a></span></dt>
 
               <dt><span class="sect1"><a href=
@@ -5744,7 +5759,7 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
 
                   <dt><span class="sect2"><a href=
                   "#conf-files-configure">12.2.2. Telling the
-                  software were configuration files
+                  software where configuration files
                   are</a></span></dt>
 
                   <dt><span class="sect2"><a href=
@@ -6212,10 +6227,10 @@ converters    games         mbone         print         x11
                 "varname">DISTFILES</code> or multiple <code class=
                 "varname">PATCHFILES</code> from different sites,
                 set <code class="varname">SITES_foo</code> to a
-                list of URI's where file &#8220;<span class=
+                list of URIs where file &#8220;<span class=
                 "quote">foo</span>&#8221; may be found.
                 &#8220;<span class="quote">foo</span>&#8221;
-                includes the suffix, e.g.</p>
+                includes the suffix, e.g.:</p>
                 <pre class="programlisting">
 DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=     foo-file.tar.gz
@@ -6256,7 +6271,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
           <div class="itemizedlist">
             <ul type="disc">
               <li>
-                <p><code class="varname">PATCHFILES</code> Name(s)
+                <p><code class="varname">PATCHFILES:</code> Name(s)
                 of additional files that contain distribution
                 patches. There is no default. pkgsrc will look for
                 them at <code class="varname">PATCH_SITES</code>.
@@ -6342,8 +6357,8 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
             <ul type="disc">
               <li>
                 <p>Add <code class="varname">MANCOMPRESSED</code>
-                if manpages are installed in compressed form by the
-                package; see comment in <code xmlns=
+                if man pages are installed in compressed form by
+                the package; see comment in <code xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" class=
                 "filename">bsd.pkg.mk</code>.</p>
               </li>
@@ -6469,7 +6484,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
           force patches to apply with fuzz you can set <code class=
           "varname">PATCH_FUZZ_FACTOR=-F2</code>). Furthermore, do
           not put changes for more than one file into a single
-          patch-file, as this will make future modifications more
+          patch file, as this will make future modifications more
           difficult.</p>
 
           <p>Similar, a file should be patched at most once, not
@@ -6532,8 +6547,8 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
           structure as pkgsrc, and patches are expected to be
           stored inside these dirs (also known as <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">$LOCALPATCHES/$PKGPATH</code>). For example if
-          you want to keep a private patch for <code xmlns=
+          "filename">$LOCALPATCHES/$PKGPATH</code>). For example,
+          if you want to keep a private patch for <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">pkgsrc/graphics/png</code>, keep it in
           <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
@@ -6691,8 +6706,8 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
           </div>
 
           <p>When you type <span><strong class=
-          "command">make</strong></span> the distribution files are
-          unpacked into the directory denoted by <code class=
+          "command">make</strong></span>, the distribution files
+          are unpacked into the directory denoted by <code class=
           "varname">WRKDIR</code>. It can be removed by running
           <span><strong class="command">make clean</strong></span>.
           Besides the sources, this directory is also used to keep
@@ -6896,7 +6911,7 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
           newline, and any whitespace immediately behind the
           newline are replaced with a single space. A backspace
           character and an immediately following hash character are
-          replaced with a single hash character. Otherwise the
+          replaced with a single hash character. Otherwise, the
           backslash is passed as is. In a variable assignment, any
           hash character that is not preceded by a backslash starts
           a comment that continues upto the end of the logical
@@ -6913,7 +6928,7 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
           evaluated when it is part of the right side of the ``:=''
           or the ``!='' operator, or directly before executing a
           shell command which the variable is part of. In all other
-          cases <a href=
+          cases, <a href=
           "http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current">
           <span class="citerefentry"><span class=
           "refentrytitle">make</span>(1)</span></a> performs lazy
@@ -6923,8 +6938,8 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
 
           <p>Some of the modifiers split the string into words and
           then operate on the words, others operate on the string
-          as a whole. When a string is splitted into words, it is
-          splitted as you would expect it from <a href=
+          as a whole. When a string is split into words, it is
+          split as you would expect it from <a href=
           "http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current">
           <span class="citerefentry"><span class=
           "refentrytitle">sh</span>(1)</span></a>.</p>
@@ -6941,7 +6956,7 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
             <ul type="disc">
               <li>
                 <p><span class="emphasis"><em>Strings</em></span>
-                can contain arbitrary characters. Nevertheless you
+                can contain arbitrary characters. Nevertheless, you
                 should restrict yourself to only using printable
                 characters. Examples are <code class=
                 "varname">PREFIX</code> and <code class=
@@ -6952,7 +6967,7 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
                 <p><span class="emphasis"><em>Internal
                 lists</em></span> are lists that are never exported
                 to any shell command. Their elements are separated
-                by whitespace. Therefore the elements themselves
+                by whitespace. Therefore, the elements themselves
                 cannot have embedded whitespace. Any other
                 characters are allowed. Internal lists can be used
                 in <span><strong class=
@@ -7140,13 +7155,13 @@ all:
             <span class="citerefentry"><span class=
             "refentrytitle">echo</span>(1)</span></a> command. As
             long as you can guarantee that your input does not
-            start with a dash this form is appropriate.</p>
+            start with a dash, this form is appropriate.</p>
 
             <p>Example 5 handles even the case of a leading dash
             correctly.</p>
 
             <p>The <code class="varname">EXT_LIST</code> does not
-            need to be quoted because the quoting has already be
+            need to be quoted because the quoting has already been
             done when adding elements to the list.</p>
 
             <p>As internal lists shall not be passed to the shell,
@@ -7174,7 +7189,7 @@ all:
                   <p>Whenever you use the value of a list, think
                   about what happens to leading or trailing
                   whitespace. If the list is a well-formed shell
-                  expression you can apply the <code class=
+                  expression, you can apply the <code class=
                   "varname">:M*</code> modifier to strip leading
                   and trailing whitespace from each word. The
                   <code class="varname">:M</code> operator first
@@ -7186,7 +7201,7 @@ all:
                   adding a variable like <code class=
                   "varname">CPPFLAGS</code> to <code class=
                   "varname">CONFIGURE_ARGS</code>. If the configure
-                  script invokes other configure scripts it strips
+                  script invokes other configure scripts, it strips
                   the leading and trailing whitespace from the
                   variable and then passes it to the other
                   configure scripts. But these configure scripts
@@ -7228,7 +7243,7 @@ all:
                 </li>
 
                 <li>
-                  <p>Whenever a variable can be empty the
+                  <p>Whenever a variable can be empty, the
                   <code class="varname">:Q</code> operator can have
                   surprising results. Here are two completely
                   different cases which can be solved with the same
@@ -7344,15 +7359,15 @@ for_test:
             Variable substitution in PLIST</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#manpage-compression">10.5.
-            Manpage-compression</a></span></dt>
+            "#manpage-compression">10.5. Man
+            page-compression</a></span></dt>
 
             <dt><span class="sect1"><a href=
             "#using-PLIST_SRC">10.6. Changing PLIST source with
             <code class="varname">PLIST_SRC</code></a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#platform-specific-plist">10.7. Platform specific and
+            "#platform-specific-plist">10.7. Platform-specific and
             differing PLISTs</a></span></dt>
 
             <dt><span class="sect1"><a href=
@@ -7372,9 +7387,9 @@ for_test:
         <a href=
         "http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1+NetBSD-current">
         <span class="citerefentry"><span class=
-        "refentrytitle">pkg_create</span>(1)</span></a> manpage for
-        a full list. This chapter addresses some issues that need
-        attention when dealing with the <code xmlns=
+        "refentrytitle">pkg_create</span>(1)</span></a> man page
+        for a full list. This chapter addresses some issues that
+        need attention when dealing with the <code xmlns=
         "http://www.w3.org/TR/xhtml1/transitional" class=
         "filename">PLIST</code> file (or files, see below!).</p>
 
@@ -7496,7 +7511,7 @@ for_test:
                 <p>Some packages like emacs and perl embed
                 information about which architecture they were
                 built on into the pathnames where they install
-                their file. To handle this case, PLIST will be
+                their files. To handle this case, PLIST will be
                 preprocessed before actually used, and the symbol
                 &#8220;<span class="quote"><code class=
                 "varname">${MACHINE_ARCH}</code></span>&#8221; will
@@ -7505,7 +7520,7 @@ for_test:
                 is done if the string <code class=
                 "varname">${MACHINE_GNU_ARCH}</code> is embedded in
                 PLIST somewhere - use this on packages that have
-                GNU autoconf created configure scripts.</p>
+                GNU autoconf-created configure scripts.</p>
 
                 <div class="note" style=
                 "margin-left: 0.5in; margin-right: 0.5in;">
@@ -7606,12 +7621,13 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "manpage-compression" id=
-                "manpage-compression"></a>10.5.&nbsp;Manpage-compression</h2>
+                "manpage-compression"></a>10.5.&nbsp;Man
+                page-compression</h2>
               </div>
             </div>
           </div>
 
-          <p>Manpages should be installed in compressed form if
+          <p>Man pages should be installed in compressed form if
           <code class="varname">MANZ</code> is set (in <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">bsd.own.mk</code>), and uncompressed
@@ -7619,7 +7635,7 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">PLIST</code> file, the suffix
           &#8220;<span class="quote">.gz</span>&#8221; is
-          appended/removed automatically for manpages according to
+          appended/removed automatically for man pages according to
           <code class="varname">MANZ</code> and <code class=
           "varname">MANCOMPRESSED</code> being set or not, see
           above for details. This modification of the <code xmlns=
@@ -7660,8 +7676,8 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "platform-specific-plist" id=
-                "platform-specific-plist"></a>10.7.&nbsp;Platform
-                specific and differing PLISTs</h2>
+                "platform-specific-plist"></a>10.7.&nbsp;Platform-specific
+                and differing PLISTs</h2>
               </div>
             </div>
           </div>
@@ -7792,7 +7808,7 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
           print-PLIST</strong></span>, you should get the right
           (commented out) lines.</p>
 
-          <p>Note that, even if your package is using <code xmlns=
+          <p>Note that even if your package is using <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">$X11BASE</code>, it must not depend on the
           *-x11-dirs packages. Just specify the name without that
@@ -7968,6 +7984,15 @@ DEPENDS+=   foo&gt;=1.1.0:../../category/foo
 .include "../../category/foo/buildlink3.mk"
 </pre>
 
+          <p>The buildlink3.mk files usually define the required
+          dependencies. If you need a newer version of the
+          dependency when using buildlink3.mk files, then you can
+          define it in your Makefile; for example:</p>
+          <pre class="programlisting">
+BUILDLINK_DEPENDS.foo+=   foo&gt;=1.1.0
+.include "../../category/foo/buildlink3.mk"
+</pre>
+
           <p>There are several <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">buildlink3.mk</code> files in <code xmlns=
@@ -7990,7 +8015,7 @@ DEPENDS+=   foo&gt;=1.1.0:../../category/foo
               <li>
                 <p><code xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" class=
-                "filename">curses.buildlink3.mk</code> If the
+                "filename">curses.buildlink3.mk</code>: If the
                 system comes with neither Curses nor NCurses, this
                 will take care to install the <a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
@@ -8022,7 +8047,7 @@ DEPENDS+=   foo&gt;=1.1.0:../../category/foo
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/openmotif/README.html"
                 target="_top"><code xmlns="" class=
-                "filename">x11/openmotif</code></a>;</p>
+                "filename">x11/openmotif</code></a>.</p>
               </li>
 
               <li>
@@ -8030,7 +8055,7 @@ DEPENDS+=   foo&gt;=1.1.0:../../category/foo
                 "http://www.w3.org/TR/xhtml1/transitional" class=
                 "filename">ossaudio.buildlink3.mk</code> defines
                 several variables that may be used by packages that
-                use the Open Sound System (OSS) API;</p>
+                use the Open Sound System (OSS) API.</p>
               </li>
 
               <li>
@@ -8051,7 +8076,7 @@ DEPENDS+=   foo&gt;=1.1.0:../../category/foo
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/pth/README.html"
                 target="_top"><code xmlns="" class=
-                "filename">devel/pth</code></a> as needed;</p>
+                "filename">devel/pth</code></a> as needed.</p>
               </li>
 
               <li>
@@ -8217,7 +8242,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
                   "replaceable"><code>pkg</code></em></code> is the
                   location of the <em class=
                   "replaceable"><code>pkg</code></em> pkgsrc
-                  directory;</p>
+                  directory.</p>
                 </li>
 
                 <li>
@@ -8407,7 +8432,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
                 <li>
                   <p>if the sonames (major number of the library
                   version) of any installed shared libraries
-                  change;</p>
+                  change.</p>
                 </li>
 
                 <li>
@@ -8736,7 +8761,7 @@ CHECK_BUILTIN.foo?=     no
 
                 <dt><span class="sect2"><a href=
                 "#conf-files-configure">12.2.2. Telling the
-                software were configuration files
+                software where configuration files
                 are</a></span></dt>
 
                 <dt><span class="sect2"><a href=
@@ -8811,7 +8836,7 @@ CHECK_BUILTIN.foo?=     no
         </div>
 
         <p>The following sections inspect each of the above points
-        in detail. Note that, in order to use any of the described
+        in detail. Note that in order to use any of the described
         functionalities, you must add the following to your
         package's <code xmlns=
         "http://www.w3.org/TR/xhtml1/transitional" class=
@@ -8864,13 +8889,13 @@ USE_PKGINSTALL=YES
           during installation time by using the installation
           scripts. These scripts can run arbitrary commands, so
           they have the potential to create and manage files
-          anywhere in the filesystem. Here is where pkginstall
+          anywhere in the file system. Here is where pkginstall
           comes into play: it provides generic scripts to abstract
           the manipulation of such files and directories based on
           variables set in the package's <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">Makefile</code>. The rest of this section
-          describes which these variables are.</p>
+          describes these variables.</p>
 
           <div class="sect2" lang="en" xml:lang="en">
             <div class="titlepage">
@@ -8884,7 +8909,8 @@ USE_PKGINSTALL=YES
             </div>
 
             <p>The following variables can be set to request the
-            creation of directories anywhere in the filesystem:</p>
+            creation of directories anywhere in the file
+            system:</p>
 
             <div class="itemizedlist">
               <ul type="disc">
@@ -9058,8 +9084,8 @@ SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} 
                   variable only makes sense in the package's
                   <code xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" class=
-                  "filename">Makefile</code> (i.e., it is not user
-                  customizable).</p>
+                  "filename">Makefile</code> (i.e., it is not
+                  user-customizable).</p>
 
                   <p>As an example, consider the Apache package,
                   <a xmlns=
@@ -9149,7 +9175,7 @@ SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} 
                 <div>
                   <h3 class="title"><a name="conf-files-configure"
                   id="conf-files-configure"></a>12.2.2. Telling the
-                  software were configuration files are</h3>
+                  software where configuration files are</h3>
                 </div>
               </div>
             </div>
@@ -9160,7 +9186,7 @@ SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} 
             you will have to patch the package Makefiles to achieve
             it. If you are lucky, though, it may be as easy as
             passing an extra flag to the configuration script; this
-            is the case of GNU Autoconf generated files:</p>
+            is the case of GNU Autoconf- generated files:</p>
             <pre class="programlisting">
 CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 </pre>
@@ -9547,8 +9573,8 @@ PKG_SHELL=      ${PREFIX}/bin/zsh
           <pre class="programlisting">
 PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
 PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
-PKG_OPTIONAL_GROUPS=            database
-PKG_GROUP.database=             mysql pgsql
+PKG_OPTIONS_OPTIONAL_GROUPS=    database
+PKG_OPTIONS_GROUP.database=     mysql pgsql
 PKG_SUGGESTED_OPTIONS=          wibble-foo
 PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
 PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
@@ -9724,7 +9750,7 @@ CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
           "varname">PKG_SUPPORTED_OPTIONS</code>, <code class=
           "varname">PKG_OPTIONS_OPTIONAL_GROUPS</code>, and
           <code class="varname">PKG_OPTIONS_REQUIRED_GROUPS</code>
-          are defined (as can happen with platform specific options
+          are defined (as can happen with platform-specific options
           if none of them is supported on the current platform),
           <code class="varname">PKG_OPTIONS</code> is set to the
           empty list and the package is otherwise treated as not
@@ -9867,8 +9893,8 @@ CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
               </li>
 
               <li>
-                <p>X11 based are special in that they may be
-                installed in either <code class=
+                <p>X11-based packages are special in that they may
+                be installed in either <code class=
                 "varname">X11BASE</code> or <code class=
                 "varname">LOCALBASE</code>.</p>
 
@@ -10099,12 +10125,13 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
                 "http://www.w3.org/TR/xhtml1/transitional" class=
                 "filename">.gz</code>; see the definition of the
                 various <code class="varname">DECOMPRESS_CMD</code>
-                variables <code xmlns=
+                variables in <code xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" class=
-                "filename">bsd.pkg.mk</code> for a complete list).
-                Here's an example on how to use the other variables
-                for a program that comes with a compressed shell
-                archive whose name ends in <code xmlns=
+                "filename">bsd.pkg.extract.mk</code> for a complete
+                list). Here's an example on how to use the other
+                variables for a program that comes with a
+                compressed shell archive whose name ends in
+                <code xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" class=
                 "filename">.msg.gz</code>:</p>
                 <pre class="programlisting">
@@ -10387,7 +10414,7 @@ make build
                 call <span><strong class="command">make
                 clean</strong></span> or otherwise remove the list
                 of dependent packages in <code class=
-                "varname">WRKDIR</code>. Otherwise you lose the
+                "varname">WRKDIR</code>. Otherwise, you lose the
                 ability to automatically update the current package
                 along with the dependent packages you have
                 installed.</p>
@@ -10500,14 +10527,14 @@ make build
                 package tree (e.g., if you used <code class=
                 "varname">NOCLEAN</code>).</p>
 
-                <p>If you unsure about whether your tree is clean
-                you can either perform a <span><strong class=
-                "command">make clean</strong></span> at the top of
-                the tree, or use the following sequence of commands
-                from the directory of the package you want to
-                update (<span class=
-                "emphasis"><em>before</em></span> running
+                <p>If you are unsure about whether your tree is
+                clean, you can either perform a
                 <span><strong class="command">make
+                clean</strong></span> at the top of the tree, or
+                use the following sequence of commands from the
+                directory of the package you want to update
+                (<span class="emphasis"><em>before</em></span>
+                running <span><strong class="command">make
                 update</strong></span> for the first time,
                 otherwise you lose all the packages you wanted to
                 update!):</p>
@@ -10741,13 +10768,13 @@ make build
                 <p>Used to do bulk builds. If an appropriate binary
                 package already exists, no action is taken. If not,
                 this target will compile, install and package it
-                (and it's depends, if <code class=
+                (and its depends, if <code class=
                 "varname">PKG_DEPENDS</code> is set properly. See
                 <a href="#binary.configuration" title=
                 "6.3.1.&nbsp;Configuration">Section&nbsp;6.3.1,
-                &#8220;Configuration&#8221;</a>. After creating the
-                binary package, the sources, the just-installed
-                package and it's required packages are removed,
+                &#8220;Configuration&#8221;</a>). After creating
+                the binary package, the sources, the just-installed
+                package and its required packages are removed,
                 preserving free disk space.</p>
 
                 <p><span class="emphasis"><em>Beware that this
@@ -10759,17 +10786,17 @@ make build
 
               <dd>
                 <p>Used during bulk-installs to install required
-                packages. If an upto-date binary package is
+                packages. If an up-to-date binary package is
                 available, it will be installed via <a href=
                 "http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current">
                 <span class="citerefentry"><span class=
                 "refentrytitle">pkg_add</span>(1)</span></a>. If
                 not, <span><strong class="command">make
                 bulk-package</strong></span> will be executed, but
-                the installed binary not be removed.</p>
+                the installed binary won't be removed.</p>
 
                 <p>A binary package is considered
-                &#8220;<span class="quote">upto-date</span>&#8221;
+                &#8220;<span class="quote">up-to-date</span>&#8221;
                 to be installed via <a href=
                 "http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current">
                 <span class="citerefentry"><span class=
@@ -11027,7 +11054,7 @@ make build
             "http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current">
             <span class="citerefentry"><span class=
             "refentrytitle">make</span>(1)</span></a> expands a
-            variable as it is used, but evaluates preprocessor like
+            variable as it is used, but evaluates preprocessor-like
             statements (.if, .ifdef and .ifndef) as they are read.
             So, to use any variable (which may be set in
             <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
@@ -11037,7 +11064,7 @@ make build
             "filename">/etc/mk.conf</code> must be included before
             that .if* statement.</p>
 
-            <p>Rather than have a number of ad-hoc ways of
+            <p>Rather than having a number of ad-hoc ways of
             including <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">/etc/mk.conf</code>, should it exist, or
@@ -11058,7 +11085,7 @@ make build
             <p>If you wish to set the <code class=
             "varname">CFLAGS</code> variable in <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">/etc/mk.conf</code> please make sure to
+            "filename">/etc/mk.conf</code>, please make sure to
             use:</p>
             <pre class="programlisting">
 CFLAGS+=  -your -flags
@@ -11192,7 +11219,8 @@ CFLAGS+=  -your -flags
             present - and there are various ways of expressing this
             dependency. pkgsrc supports the <code class=
             "varname">BUILD_DEPENDS</code> and <code class=
-            "varname">DEPENDS</code> definitions, as well as
+            "varname">DEPENDS</code> definitions, the <code class=
+            "varname">USE_TOOLS</code> definition, as well as
             dependencies via <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">buildlink3.mk</code>, which is the preferred
@@ -11449,11 +11477,11 @@ pre-clean:
             another package in our pkgsrc tree.</p>
 
             <p>In this case you can set <code class=
-            "varname">CONFLICTS</code> to a space separated list of
+            "varname">CONFLICTS</code> to a space-separated list of
             packages (including version string) your package
             conflicts with.</p>
 
-            <p>For example <a xmlns=
+            <p>For example, <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/Xaw3d/README.html"
             target="_top"><code xmlns="" class=
@@ -11461,8 +11489,8 @@ pre-clean:
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/Xaw-Xpm/README.html"
             target="_top"><code xmlns="" class=
-            "filename">x11/Xaw-Xpm</code></a> install provide the
-            same shared library, thus you set in <code xmlns=
+            "filename">x11/Xaw-Xpm</code></a> install the same
+            shared library, thus you set in <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">pkgsrc/x11/Xaw3d/Makefile</code>:</p>
             <pre class="programlisting">
@@ -11600,7 +11628,7 @@ CONFLICTS=      Xaw3d-[0-9]*
             being enabled. Common symptoms are gcc internal errors
             or never finishing compiling a file.</p>
 
-            <p>Typically a workaround involves testing the
+            <p>Typically, a workaround involves testing the
             <code class="varname">MACHINE_ARCH</code> and compiler
             version, disabling optimisation for that
             file/<code class="varname">MACHINE_ARCH</code>/compiler
@@ -11644,7 +11672,7 @@ CONFLICTS=      Xaw3d-[0-9]*
 
             <p>When a new release of the package is released, the
             <code class="varname">PKGREVISION</code> should be
-            removed. e.g. on a new minor release of the above
+            removed, e.g. on a new minor release of the above
             package, things should be like:</p>
             <pre class="programlisting">
 DISTNAME=   foo-17.43
@@ -11861,7 +11889,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             as it just &#8220;<span class=
             "quote">knows</span>&#8221; how to build both static
             and dynamic libraries from a set of source files, thus
-            being platform independent.</p>
+            being platform-independent.</p>
 
             <p>Here's how to use libtool in a pkg in seven simple
             steps:</p>
@@ -12097,10 +12125,10 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
             installed, then use <code class=
             "varname">SHLIBTOOL_OVERRIDE</code> instead.</p>
 
-            <p>If your package makes use of the platform
-            independent library for loading dynamic shared objects,
-            that comes with libtool (libltdl), you should include
-            devel/libltdl/buildlink3.mk.</p>
+            <p>If your package makes use of the
+            platform-independent library for loading dynamic shared
+            objects, that comes with libtool (libltdl), you should
+            include devel/libltdl/buildlink3.mk.</p>
 
             <p>Some packages use libtool incorrectly so that the
             package may not work or build in some circumstances.
@@ -12251,7 +12279,7 @@ pre-configure:
             <p>Please use the &#8220;<span class=
             "quote">__NetBSD__</span>&#8221; definition sparingly -
             it should only apply to features of NetBSD that are not
-            present in other 4.4-lite derived BSDs.</p>
+            present in other 4.4-lite-derived BSDs.</p>
           </div>
         </div>
 
@@ -12307,7 +12335,7 @@ pre-configure:
             of an interactive stage which will be needed, and this
             should be set in the package's <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">Makefile</code>. e.g.</p>
+            "filename">Makefile</code>, e.g.:</p>
             <pre class="programlisting">
 INTERACTIVE_STAGE= build
 </pre>
@@ -12639,7 +12667,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             the appropriate <span><strong class=
             "command">makeinfo</strong></span> command.</p>
 
-            <p>To achieve this goal the pkgsrc infrastructure
+            <p>To achieve this goal, the pkgsrc infrastructure
             creates overriding scripts for the <span><strong class=
             "command">install-info</strong></span> and
             <span><strong class="command">makeinfo</strong></span>
@@ -12850,7 +12878,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               </div>
             </div>
 
-            <p>If a package installs gtk2 immodules or loaders, you
+            <p>If a package installs GTK2 immodules or loaders, you
             need to take some extra steps to get them registered in
             the GTK2 database properly:</p>
 
@@ -12880,7 +12908,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
                 </li>
 
                 <li>
-                  <p>Patch the package to not touch any of the gtk2
+                  <p>Patch the package to not touch any of the GTK2
                   databases directly. These are:</p>
 
                   <div class="itemizedlist">
@@ -13027,7 +13055,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
                   "http://www.w3.org/TR/xhtml1/transitional" class=
                   "filename">share/mime/packages</code>. The former
                   are handled automatically by the
-                  update-mime-database program, but the later are
+                  update-mime-database program, but the latter are
                   package-dependent and must be removed by the
                   package that installed them in the first
                   place.</p>
@@ -13843,7 +13871,7 @@ looks fine.
 </pre>
 
           <p>Depending on the supplied command line arguments (see
-          pkglint(1)) more verbose checks will be performed. Use
+          pkglint(1)), more verbose checks will be performed. Use
           e.g. <span><strong class="command">pkglint
           -v</strong></span> for a very verbose check.</p>
         </div>
@@ -14366,10 +14394,10 @@ Registering depends:.
               re-generate the pkgsrc guide (and other XML-based
               NetBSD documentation) installed. These are
               &#8220;<span class="quote">netbsd-doc</span>&#8221;
-              for creating the ASCII- and HTML-version, and
+              for creating the ASCII and HTML versions, and
               &#8220;<span class=
-              "quote">netbsd-doc-print</span>&#8221;for the
-              PostScript- and PDF version. You will need both
+              "quote">netbsd-doc-print</span>&#8221; for the
+              PostScript and PDF versions. You will need both
               packages installed, to make sure documentation is
               consistent across all formats. The packages can be
               found in <code xmlns=
