@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.125 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: replace.mk,v 1.126 2005/09/20 03:50:18 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -103,6 +103,9 @@ _USE_TOOLS+=	${_t_}
 .  if !empty(_USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
 _USE_TOOLS:=	${_USE_TOOLS:Nyacc}
 .  endif
+.  if !empty(_USE_TOOLS:Mbyacc)		# byacc > yacc
+_USE_TOOLS:=	${_USE_TOOLS:Nyacc}
+.  endif
 .  if !empty(_USE_TOOLS:Mflex)		# flex > lex
 _USE_TOOLS:=	${_USE_TOOLS:Nlex}
 .  endif
@@ -117,6 +120,11 @@ _USE_TOOLS:=	${_USE_TOOLS:Nsed}
 .  endif
 .endif
 MAKEVARS+=	_USE_TOOLS
+
+# Catch conflicting tools.
+.if !empty(_USE_TOOLS:Mbison) && !empty(_USE_TOOLS:Mbyacc)
+PKG_FAIL_REASON+=	"\`\`bison'' and \`\`byacc'' conflict in USE_TOOLS."
+.endif
 
 ######################################################################
 
@@ -282,6 +290,18 @@ TOOLS_CMD.bison-yacc=		${TOOLS_DIR}/bin/yacc
 # so that bison will be correctly invoked in yacc-compatilility mode.
 #
 TOOLS_VALUE_GNU.bison-yacc=	${TOOLS_CMDLINE.bison-yacc}
+.endif
+
+.if !defined(TOOLS_IGNORE.byacc) && !empty(_USE_TOOLS:Mbyacc)
+.  if !empty(PKGPATH:Mdevel/byacc)
+MAKEFLAGS+=			TOOLS_IGNORE.byacc=
+.  elif !empty(_TOOLS_USE_PKGSRC.byacc:M[yY][eE][sS])
+TOOLS_DEPENDS.byacc?=		byacc>=20040328:../../devel/byacc
+TOOLS_CREATE+=			byacc
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.byacc=byacc
+TOOLS_PATH.byacc=		${TOOLS_PREFIX.byacc}/bin/yacc
+TOOLS_CMD.byacc=		${TOOLS_DIR}/bin/yacc
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.bzcat) && !empty(_USE_TOOLS:Mbzcat)
