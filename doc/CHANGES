@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11142 2005/09/20 10:59:23 abs Exp $
+$NetBSD: CHANGES,v 1.11143 2005/09/20 12:13:50 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4048,4 +4048,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/cvsync to 0.24.19 [gehenna 2005-09-19]
 	Updated graphics/netpbm to 10.29nb3 [schmonz 2005-09-20]
 	Updated devel/cpuflags to 0.92 [abs 2005-09-20]
-
+	Updated multimedia/xine-lib to 1.0.2nb1 [dmcmahill 2005-09-20]
