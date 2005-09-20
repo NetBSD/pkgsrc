@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.5 2005/09/20 05:04:11 schmonz Exp $
+
+--- editor/pnmhisteq.c.orig	2004-09-17 23:25:46.000000000 -0400
++++ editor/pnmhisteq.c
+@@ -275,6 +275,8 @@ int main(argc, argv)
+        luminosity mapping table which gives the histogram-equalized
+        luminosity for each original luminosity. */
+ 
++    if (rmap == NULL) {
++
+     /* Calculate initial histogram equalisation curve. */
+ 
+     for (i = 0; i <= (int) maxval; i++) {
+@@ -301,6 +303,8 @@ int main(argc, argv)
+ 	    MIN(((long) maxval), ((long) (lumamap[0][i] * lscale + 0.5)));
+     }
+ 
++    }
++
+     /* If requested, print the luminosity map and original histogram. */
+ 
+     if (verbose) {
