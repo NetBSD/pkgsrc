@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/07/29 18:32:17 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/20 04:23:49 jlam Exp $
 
 DISTNAME=	osh-050131
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	http://jneitzel.sdf1.org/osh/src/
 

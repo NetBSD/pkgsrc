@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/07/29 18:32:18 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/09/20 04:23:49 jlam Exp $
 
 DISTNAME=       rc-1.6
+PKGREVISION=	1
 CATEGORIES=	shells plan9
 MASTER_SITES=   http://www.star.le.ac.uk/%7Etjg/rc/release/
 
