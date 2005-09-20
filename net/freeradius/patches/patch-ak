@@ -1,0 +1,35 @@
+$NetBSD: patch-ak,v 1.5 2005/09/20 18:46:32 adrianp Exp $
+
+--- src/modules/rlm_sql/rlm_sql.c.orig	2005/08/31 12:49:52	1.131.2.4
++++ src/modules/rlm_sql/rlm_sql.c	2005/09/17 13:03:31	1.131.2.5
+@@ -910,8 +910,9 @@ static int rlm_sql_accounting(void *inst
+ 	if ((pair = pairfind(request->packet->vps, PW_ACCT_STATUS_TYPE)) != NULL) {
+ 		acctstatustype = pair->lvalue;
+ 	} else {
+-		radius_xlat(logstr, sizeof(logstr), "rlm_sql: packet has no account status type.  [user '%{User-Name}', nas '%{NAS-IP-Address}']", request, sql_escape_func);
+-		radlog(L_ERR, logstr);
++		radius_xlat(logstr, sizeof(logstr), "packet has no accounting status type. [user '%{User-Name}', nas '%{NAS-IP-Address}']", request, NULL);
++		radlog(L_ERR, "rlm_sql (%s) in sql_accounting: %s",
++		       inst->config->xlat_name, logstr);
+ 		return RLM_MODULE_INVALID;
+ 	}
+ 
+@@ -1077,12 +1078,12 @@ static int rlm_sql_accounting(void *inst
+ 					        if ((pair = pairfind(request->packet->vps, PW_ACCT_SESSION_TIME)) != NULL)
+ 					                acctsessiontime = pair->lvalue;
+ 
+-					        if (acctsessiontime <= 0) {
+-				        	        radius_xlat(logstr, sizeof(logstr), "rlm_sql: Stop packet with zero session length.  (user '%{User-Name}', nas '%{NAS-IP-Address}')", request, sql_escape_func);
+-					                radlog(L_ERR, logstr);
+-				        	        sql_release_socket(inst, sqlsocket);
+-				                	ret = RLM_MODULE_NOOP;
+-					        }
++						if (acctsessiontime <= 0) {
++							radius_xlat(logstr, sizeof(logstr), "stop packet with zero session length. [user '%{User-Name}', nas '%{NAS-IP-Address}']", request, NULL);
++							radlog(L_ERR, "rlm_sql (%s) in sql_accounting: %s", inst->config->xlat_name, logstr);
++							sql_release_socket(inst, sqlsocket);
++							ret = RLM_MODULE_NOOP;
++						}
+ #endif
+ 
+ 						radius_xlat(querystr, sizeof(querystr), inst->config->accounting_stop_query_alt, request, sql_escape_func);
