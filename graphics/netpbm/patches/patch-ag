@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.10 2005/09/20 05:04:11 schmonz Exp $
+
+--- converter/other/pnmtopng.c.orig	2005-08-06 13:26:55.000000000 -0400
++++ converter/other/pnmtopng.c
+@@ -1690,7 +1690,7 @@ writeRaster(png_struct *         const p
+             pnm_promoteformatrow(xelrow, cols, maxval, format, maxval,
+                                  PPM_TYPE);
+             
+-            makePngLine(line, xelrow, cols, maxval, alpha, alpha_mask[row],
++            makePngLine(line, xelrow, cols, maxval, alpha, alpha ? alpha_mask[row] : NULL,
+                         cht, caht, info_ptr, png_maxval, depth);
+ 
+             png_write_row(png_ptr, line);
