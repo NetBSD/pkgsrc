@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11144 2005/09/20 13:20:04 schmonz Exp $
+$NetBSD: CHANGES,v 1.11145 2005/09/20 18:04:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4050,3 +4050,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/cpuflags to 0.92 [abs 2005-09-20]
 	Updated multimedia/xine-lib to 1.0.2nb1 [dmcmahill 2005-09-20]
 	Updated mail/squirrelmail to 1.4.5nb1 [schmonz 2005-09-20]
+	Updated net/snort to 2.4.1 [adrianp 2005-09-20]
