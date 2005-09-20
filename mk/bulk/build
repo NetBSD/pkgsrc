@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.55 2005/08/26 07:24:53 reed Exp $
+# $NetBSD: build,v 1.56 2005/09/20 18:54:37 xtraeme Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -68,12 +68,17 @@ usage() {
 	echo "                       This option is used for building a subset of"
 	echo "                       pkgsrc."
 	echo " "
+	echo " -e|--no-email         Don't send email when the bulk build is"
+	echo "                       finished, it will put the results into a file"
+	echo "                       (FTP/pkgsrc-results.txt)."
+	echo " "
 }
 
 restart=no
 mirror_only=no
 target=bulk-package
 makeargs=""
+noemail=no
 
 while [ ${#} -ge 1 ] ; do
 	case $1 in
@@ -96,6 +101,11 @@ while [ ${#} -ge 1 ] ; do
 
 	--specific-pkgs|-s )
 		makeargs="$makeargs SPECIFIC_PKGS=1"
+		shift
+		;;
+	
+	--no-email|-e )
+		noemail=yes
 		shift
 		;;
 
@@ -378,7 +388,12 @@ done
 
 # Perl was wiped, reinstall it!
 ( cd lang/perl5 && ${BMAKE} bulk-install )
-${PERL5} mk/bulk/post-build | ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results `date +%Y-%m-%d`" $ADMIN
+BUILDDATE=`date +%Y-%m-%d`
+
+${PERL5} mk/bulk/post-build > ${FTP}/pkgsrc-results-${BUILDDATE}.txt
+if [ "$noemail" = "no" ]; then
+${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" $ADMIN < ${FTP}/pkgsrc-results-${BUILDDATE}.txt
+fi
 
 # Done!
 echo ""
