@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/25 00:11:01 reed Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/20 12:53:40 dmcmahill Exp $
 
 DISTNAME=		nss-3.9.2
 PKGREVISION=		2
@@ -14,6 +14,10 @@ BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 # NSS will build and run on other platforms when MAINTAINER knows what
 # magic Makefile glue is required
 ONLY_FOR_PLATFORM+=	NetBSD-*-* FreeBSD-*-* Linux-*-* DragonFly-*-*
+# Solaris has missing symbols when linking.  It looks like some of those problem
+# have been addressed in the nss source tree so this should be enabled after
+# the next update.
+#SunOS-*-*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/security/nss
 
@@ -33,6 +37,10 @@ SO_SUFFIX=		dylib
 SO_SUFFIX=		so.1.0
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX}
+
+.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "gcc"
+MAKEFLAGS+=	NS_USE_GCC=YES
+.endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 NSS_OBJ_DIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
