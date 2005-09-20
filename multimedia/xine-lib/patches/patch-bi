@@ -1,0 +1,22 @@
+$NetBSD: patch-bi,v 1.1 2005/09/20 12:11:37 dmcmahill Exp $
+
+--- src/video_out/Makefile.in.orig	2005-07-26 14:33:37.000000000 -0400
++++ src/video_out/Makefile.in
+@@ -139,7 +139,7 @@ xineplug_vo_out_opengl_la_OBJECTS =  \
+ @HAVE_OPENGL_TRUE@@HAVE_X11_TRUE@	-rpath $(libdir)
+ xineplug_vo_out_pgx32_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1)
+-am_xineplug_vo_out_pgx32_la_OBJECTS = video_out_pgx32.lo
++am_xineplug_vo_out_pgx32_la_OBJECTS = alphablend.lo video_out_pgx32.lo
+ xineplug_vo_out_pgx32_la_OBJECTS =  \
+ 	$(am_xineplug_vo_out_pgx32_la_OBJECTS)
+ @HAVE_SUNDGA_TRUE@@HAVE_SUNFB_TRUE@@HAVE_X11_TRUE@am_xineplug_vo_out_pgx32_la_rpath =  \
+@@ -775,7 +775,7 @@ xineplug_vo_out_syncfb_la_LDFLAGS = -avo
+ xineplug_vo_out_pgx64_la_SOURCES = alphablend.c video_out_pgx64.c
+ xineplug_vo_out_pgx64_la_LIBADD = $(X_LIBS) $(SUNDGA_LIBS)
+ xineplug_vo_out_pgx64_la_LDFLAGS = -avoid-version -module @XINE_PLUGIN_MIN_SYMS@
+-xineplug_vo_out_pgx32_la_SOURCES = video_out_pgx32.c
++xineplug_vo_out_pgx32_la_SOURCES = alphablend.c video_out_pgx32.c
+ xineplug_vo_out_pgx32_la_LIBADD = $(X_LIBS) $(SUNDGA_LIBS)
+ xineplug_vo_out_pgx32_la_LDFLAGS = -avoid-version -module @XINE_PLUGIN_MIN_SYMS@
+ xineplug_vo_out_vidix_la_SOURCES = alphablend.c video_out_vidix.c $(X11OSD)
