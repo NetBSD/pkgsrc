@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.26 2005/09/20 12:12:27 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/09/20 12:49:30 dmcmahill Exp $
 #
 
 DISTNAME=		xine-lib-1.0.2
 XINE_PKGNAME=		xine-lib-1.0.2
 PKGNAME?=		${XINE_PKGNAME}
-PKGREVISION=		1
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
