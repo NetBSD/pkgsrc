@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11146 2005/09/20 18:47:44 adrianp Exp $
+$NetBSD: CHANGES,v 1.11147 2005/09/20 19:36:55 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4052,3 +4052,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/squirrelmail to 1.4.5nb1 [schmonz 2005-09-20]
 	Updated net/snort to 2.4.1 [adrianp 2005-09-20]
 	Updated net/freeradius to 1.0.5nb1 [adrianp 2005-09-20]
+	Updated www/opera to 8.50 [jdolecek 2005-09-20]
