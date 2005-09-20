@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: shell,v 1.3 2005/08/23 09:33:14 abs Exp $
+# $NetBSD: shell,v 1.4 2005/09/20 04:23:49 jlam Exp $
 #
 # +SHELL - shell registration script
 #
@@ -71,6 +71,7 @@ ADD)
 		${TEST} -f "$shell" || continue
 
 		shelldb="/etc/shells"
+		${TEST} -f "$shelldb" || continue
 		if ${TEST} -f "$shelldb" && \
 		   ${GREP} "^$shell" $shelldb >/dev/null; then
 			:

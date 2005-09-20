@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2005/07/29 18:32:18 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/09/20 04:23:49 jlam Exp $
 
 DISTNAME=		scsh-0.6.6
+PKGREVISION=		1
 CATEGORIES=		shells lang
 MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/0.6/
 
