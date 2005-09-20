@@ -1,10 +1,11 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.19 2005/08/10 02:57:32 jlam Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.20 2005/09/20 03:50:19 jlam Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
+TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
 .if exists(/usr/bin/bzcat)
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
 .endif

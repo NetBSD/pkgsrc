@@ -1,10 +1,11 @@
-# $NetBSD: tools.NetBSD.mk,v 1.18 2005/06/24 20:59:59 jlam Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.19 2005/09/20 03:50:19 jlam Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
+TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
 .if exists(/usr/bin/bzcat)
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
 .endif
