@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:08 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/20 19:43:03 reed Exp $
 #
 
 DISTNAME=	mpage-2.5
@@ -14,9 +14,9 @@ BUILD_TARGET=	default
 .include "../../mk/bsd.prefs.mk"
 
 .if ${PAPERSIZE} == "A4"
-MAKEFLAGS+=	PAGESIZE=PAGE_A4
+MAKE_ENV+=	PAGESIZE=PAGE_A4
 .elif ((${PAPERSIZE} == "Letter") || (${PAPERSIZE} == "Letterdj"))
-MAKEFLAGS+=	PAGESIZE=PAGE_LETTER
+MAKE_ENV+=	PAGESIZE=PAGE_LETTER
 .endif
 
 .include "../../mk/bsd.pkg.mk"
