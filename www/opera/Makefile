@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/08/05 22:04:04 jdolecek Exp $
+# $NetBSD: Makefile,v 1.41 2005/09/20 19:36:13 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -29,9 +29,9 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20050727
-OPERA_PKG_VERSION=	8.02
-OPERA_PKG_VERSION_DIR=	802
+OPERA_VER_DATE=		20050916
+OPERA_PKG_VERSION=	8.50
+OPERA_PKG_VERSION_DIR=	850
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
@@ -53,7 +53,6 @@ RPMFILES=	${DISTFILES}
 RPM2PKGSTRIP=	0
 
 .elif (${_OPERA_OPSYS} == FreeBSD)
-EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		.i386.freebsd
 OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/shared/gcc-2.95
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
@@ -137,7 +136,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( echo '$$NetBSD: Makefile,v 1.40 2005/08/05 22:04:04 jdolecek Exp $$'; echo ''; \
+	( ${ECHO} '$$NetBSD: Makefile,v 1.41 2005/09/20 19:36:13 jdolecek Exp $$'; ${ECHO} ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
