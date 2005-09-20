@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 11:24:05 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/09/20 12:15:34 dmcmahill Exp $
 
 SHA1 (xine-ui-0.99.2.tar.gz) = 0815f3b660e50a3a69bac1d54bdf8036e9ff57e2
 RMD160 (xine-ui-0.99.2.tar.gz) = ccfd667417a9aa51561a132ab86e3fb1d3349694
@@ -13,3 +13,5 @@ SHA1 (patch-ah) = 9d61282de803459e4b9c49814796dcc97658849d
 SHA1 (patch-ai) = 78228fa174cb0d455a9debec18125d9ee13d34dd
 SHA1 (patch-aj) = 48deb40db11492858245b8affca709f11a6c240f
 SHA1 (patch-ak) = 21d6d048502b71a703365e3fab136b096c4575d3
+SHA1 (patch-al) = d00f3ad348450e209d55ba69c1c053fce7d359b3
+SHA1 (patch-am) = 55f13b6288a2ef06ed3d82bec6e28be3d65620ee
