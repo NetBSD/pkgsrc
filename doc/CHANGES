@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11140 2005/09/20 03:32:24 gehenna Exp $
+$NetBSD: CHANGES,v 1.11141 2005/09/20 05:05:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4046,3 +4046,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/centericq to 4.20.0nb2 [adrianp 2005-09-19]
 	Updated devel/mantis to 1.0.0rc2 [adrianp 2005-09-19]
 	Updated devel/cvsync to 0.24.19 [gehenna 2005-09-19]
+	Updated graphics/netpbm to 10.29nb3 [schmonz 2005-09-20]
