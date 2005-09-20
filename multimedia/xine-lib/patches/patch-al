@@ -1,0 +1,18 @@
+$NetBSD: patch-al,v 1.5 2005/09/20 12:10:53 dmcmahill Exp $
+
+--- src/xine-utils/xineutils.h.orig	2004-12-12 08:51:30.000000000 -0500
++++ src/xine-utils/xineutils.h
+@@ -666,7 +666,13 @@ void xine_strdupa(char *dest, char *src)
+ 
+ /* compatibility macros */
+ #define xine_strpbrk(S, ACCEPT) strpbrk((S), (ACCEPT))
++
++#ifndef HAVE_STRSEP
++#define strsep(STRINGP, DELIM) _xine_private_strsep((STRINGP), (DELIM))
++char *_xine_private_strsep(char **stringp, const char *delim);
++#endif
+ #define xine_strsep(STRINGP, DELIM) strsep((STRINGP), (DELIM))
++
+ #define xine_setenv(NAME, VAL, XX) setenv((NAME), (VAL), (XX))
+ 
+ /*
