@@ -1,0 +1,17 @@
+$NetBSD: patch-aj,v 1.7 2005/09/20 05:04:11 schmonz Exp $
+
+--- editor/pammasksharpen.c.orig	2004-05-29 14:15:46.000000000 -0400
++++ editor/pammasksharpen.c
+@@ -114,10 +114,10 @@ main(int argc, char *argv[]) {
+             unsigned int plane;
+             
+             for (plane = 0; plane < outpam.depth; ++plane) {
+-                unsigned int const rawResult = 
++                int const rawResult = 
+                     2 * inputTuplerow[col][plane] - maskTuplerow[col][plane];
+ 
+-                outputTuplerow[col][plane] = MIN(255, MAX(0, rawResult));
++                outputTuplerow[col][plane] = MIN(outpam.maxval, MAX(0, rawResult));
+             }
+         }
+         pnm_writepamrow(&outpam, outputTuplerow);
