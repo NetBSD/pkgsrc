@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3899 2005/09/21 03:02:54 taca Exp $
+$NetBSD: TODO,v 1.3900 2005/09/21 14:30:49 taca Exp $
 
 Suggested new packages
 ======================
@@ -1104,7 +1104,7 @@ Suggested package updates
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wdm-1.28
-	o webmin-1.220
+	o webmin-1.230
 	o weechat-0.1.1
 	o weewm-0.01
 	o winbind-3.0.13
