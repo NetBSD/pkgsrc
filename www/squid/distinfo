@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.103 2005/09/16 14:19:00 taca Exp $
+$NetBSD: distinfo,v 1.104 2005/09/21 15:06:07 taca Exp $
 
 SHA1 (squid-2.5.10-2005060500/squid-2.5.STABLE10.tar.bz2) = a0092570938032f66e7f636d1a6a02dd2383a643
 RMD160 (squid-2.5.10-2005060500/squid-2.5.STABLE10.tar.bz2) = e1409a2fcd52e1c928d74740c98396886b5ef927
@@ -108,9 +108,18 @@ Size (squid-2.5.10-2005060500/squid-2.5.STABLE10-NetBSD_IPFilter-4.patch) = 4532
 SHA1 (squid-2.5.10-2005060500/squid-2.5.STABLE10-pipeline-CONNECT.patch) = f72a46995e4673d69d6d10c9c719ffbf63da0659
 RMD160 (squid-2.5.10-2005060500/squid-2.5.STABLE10-pipeline-CONNECT.patch) = 97b88ba80c8aa26ed9f0bc719a24d35993b81488
 Size (squid-2.5.10-2005060500/squid-2.5.STABLE10-pipeline-CONNECT.patch) = 6316 bytes
-SHA1 (squid-2.5.10-2005060500/squid-2.5.STABLE10-NTLM-scheme_assert-2.patch) = f072e7faba2660ff5a1225983f78782eed466d79
-RMD160 (squid-2.5.10-2005060500/squid-2.5.STABLE10-NTLM-scheme_assert-2.patch) = aa3c890d3c467f81045010491ba0fc2a41f3979e
-Size (squid-2.5.10-2005060500/squid-2.5.STABLE10-NTLM-scheme_assert-2.patch) = 1217 bytes
+SHA1 (squid-2.5.10-2005060500/squid-2.5.STABLE10-NTLM-scheme_assert-3.patch) = 09f1bb2be87451e67da3adb99c97bec81116e505
+RMD160 (squid-2.5.10-2005060500/squid-2.5.STABLE10-NTLM-scheme_assert-3.patch) = d645e00bf444f3a8ef479b68ea964ddc855c5c91
+Size (squid-2.5.10-2005060500/squid-2.5.STABLE10-NTLM-scheme_assert-3.patch) = 2410 bytes
+SHA1 (squid-2.5.10-2005060500/squid-2.5.STABLE10-ntlm-pipeline_prefetch.patch) = fedd6b51341c49a3a7bffb1cac1af29522d09aef
+RMD160 (squid-2.5.10-2005060500/squid-2.5.STABLE10-ntlm-pipeline_prefetch.patch) = 051505287a90a206e575b75187802fc0f2c4a884
+Size (squid-2.5.10-2005060500/squid-2.5.STABLE10-ntlm-pipeline_prefetch.patch) = 2248 bytes
+SHA1 (squid-2.5.10-2005060500/squid-2.5.STABLE10-dst_unknown.patch) = 628b8217821ed3461553ea5c83af87218a33e5f4
+RMD160 (squid-2.5.10-2005060500/squid-2.5.STABLE10-dst_unknown.patch) = eb597dbb5d1f48aec030593dfa61621847f34020
+Size (squid-2.5.10-2005060500/squid-2.5.STABLE10-dst_unknown.patch) = 579 bytes
+SHA1 (squid-2.5.10-2005060500/squid-2.5.STABLE10-maxfd.patch) = 089c44eda18009ce173697e34786577a7589704b
+RMD160 (squid-2.5.10-2005060500/squid-2.5.STABLE10-maxfd.patch) = ad5e5d273f4bf501b598e6e9652a8420c6fddd0d
+Size (squid-2.5.10-2005060500/squid-2.5.STABLE10-maxfd.patch) = 3335 bytes
 SHA1 (patch-aa) = 25d47b8ab8618af2b1d2a40f1dc3630cdc14038c
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
