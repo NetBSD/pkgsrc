@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/08 11:50:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/09/21 23:19:14 dmcmahill Exp $
 bin/cda
 bin/xmcd
 bin/xmcd_start
 lib/X11/xmcd/app-defaults/XKeysymDB
 lib/X11/xmcd/app-defaults/XMcd
-lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/README
-lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/cda
-lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/gobrowser
-lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/xmcd
+lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}/README
+lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}/cda
+lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}/gobrowser
+lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}/xmcd
 lib/X11/xmcd/config/.tbl/Acer
 lib/X11/xmcd/config/.tbl/Apple
 lib/X11/xmcd/config/.tbl/Aztech
@@ -231,7 +231,7 @@ lib/X11/xmcd/help/Xm/TimeMode.lbl
 lib/X11/xmcd/help/Xm/Track.lbl
 lib/X11/xmcd/help/Xm/TrkTitle.lbl
 lib/X11/xmcd/help/Xm/WWWwarp.btn
-@exec ${MKDIR} %D/lib/X11/xmcd/lib-${OPSYS}-${MACHINE_ARCH}
+@exec ${MKDIR} %D/lib/X11/xmcd/lib-${ARCH}-${MACHINE_ARCH}
 lib/X11/xmcd/pixmaps/xmcd.icon
 lib/X11/xmcd/pixmaps/xmcd.xpm
 lib/X11/xmcd/pixmaps/xmcd_a.px
@@ -258,7 +258,7 @@ man/man1/xmcd.1
 @dirrm lib/X11/xmcd/help
 @dirrm lib/X11/xmcd/docs
 @dirrm lib/X11/xmcd/config/.tbl
-@dirrm lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}
-@dirrm lib/X11/xmcd/lib-${OPSYS}-${MACHINE_ARCH}
+@dirrm lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}
+@dirrm lib/X11/xmcd/lib-${ARCH}-${MACHINE_ARCH}
 @dirrm lib/X11/xmcd/scripts
 @dirrm lib/X11/xmcd/app-defaults
