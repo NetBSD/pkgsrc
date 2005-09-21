@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.34 2005/08/31 14:46:59 seb Exp $
+$NetBSD: distinfo,v 1.35 2005/09/21 14:49:08 joerg Exp $
 
 SHA1 (tcl8.4.11-src.tar.gz) = 4580adcbdcb7d09fd9a8ae8fbe61c592a56bfa9e
 RMD160 (tcl8.4.11-src.tar.gz) = 933dda739859af170c31cef855409f861ed597cb
 Size (tcl8.4.11-src.tar.gz) = 3474428 bytes
 SHA1 (patch-aa) = c41a554996965c9ceaf639ce54841c8861ac8ba2
-SHA1 (patch-ab) = 7107fca2f0269ce90ea076c6be6dd45ccda3bc0b
-SHA1 (patch-ac) = bc746ec3c8fc50c56d4827540d6a8b2fffda78ad
+SHA1 (patch-ab) = 4a20ef86bda2faf1f427273dbde601fcb176a34e
+SHA1 (patch-ac) = 39634cde6f535f3592e40105d6060c05cfab0a68
 SHA1 (patch-ad) = 54947660216280726ee9ec213995063fa428f560
 SHA1 (patch-ae) = d5b7c01873c9d092bcdea5ea37b407bbd865f22d
-SHA1 (patch-af) = 427a6baa9494f1eeb9148584436af3a8162fbbf5
+SHA1 (patch-af) = 6e599f54b2f2045cdee608aaa958cd95941cb67f
 SHA1 (patch-ag) = 0a11bfc878d43b15f6444923fac18b4876b62398
 SHA1 (patch-ah) = 0aaa349fcf9ce736e1f7d3dad377ee355f549ecb
 SHA1 (patch-ai) = ef8939597e759a95ca869f93e251df76d9c660f9

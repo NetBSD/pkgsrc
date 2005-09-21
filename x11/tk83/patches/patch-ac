@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
+$NetBSD: patch-ac,v 1.3 2005/09/21 14:49:09 joerg Exp $
 
---- tcl.m4.orig	Fri Oct 19 20:24:40 2001
-+++ tcl.m4	Sun Mar  6 16:06:56 2005
-@@ -602,6 +602,7 @@
+--- tcl.m4.orig	2001-10-20 00:24:40.000000000 +0000
++++ tcl.m4
+@@ -602,6 +602,7 @@ AC_DEFUN(SC_CONFIG_CFLAGS, [
  
      do64bit_ok=no
      fullSrcDir=`cd $srcdir; pwd`
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
      EXTRA_CFLAGS=""
      TCL_EXPORT_FILE_SUFFIX=""
      UNSHARED_LIB_SUFFIX=""
-@@ -791,8 +792,11 @@
+@@ -791,8 +792,11 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  	    EXTRA_CFLAGS=""
  	    LDFLAGS=""
@@ -23,7 +23,7 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
  	    SHLIB_CFLAGS=""
  	    SHLIB_LD="ld -n32 -shared -rdata_shared"
  	    SHLIB_LD_LIBS='${LIBS}'
-@@ -815,6 +819,9 @@
+@@ -815,6 +819,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  		esac
  		LDFLAGS="-n32"
  	    fi
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
  	    ;;
  	IRIX64-6.*)
  	    SHLIB_CFLAGS=""
-@@ -825,6 +832,15 @@
+@@ -825,6 +832,15 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    DL_LIBS=""
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
@@ -49,7 +49,7 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
  	    ;;
  	Linux*)
  	    SHLIB_CFLAGS="-fPIC"
-@@ -915,7 +931,6 @@
+@@ -915,7 +931,6 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    AC_CHECK_HEADER(dlfcn.h, [
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -57,7 +57,7 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
  		SHLIB_LD_LIBS=""
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
-@@ -927,11 +942,19 @@
+@@ -927,11 +942,19 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  #ifdef __ELF__
  	yes
  #endif
@@ -79,7 +79,16 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
  		)
  	    ], [
  		SHLIB_CFLAGS=""
-@@ -1130,6 +1153,9 @@
+@@ -950,7 +973,7 @@ dnl AC_CHECK_TOOL(AR, ar, :)
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # FreeBSD 3.* and greater have ELF.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="ld -Bshareable -x"
+@@ -1130,6 +1153,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    DL_LIBS="-ldl"
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
@@ -89,7 +98,7 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
  	    ;;
  	SunOS-5*)
  
-@@ -1174,6 +1200,9 @@
+@@ -1174,6 +1200,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    else
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -99,7 +108,16 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -1652,7 +1681,11 @@
+@@ -1329,7 +1358,7 @@ dnl AC_CHECK_TOOL(AR, ar, :)
+ 		    ;;
+ 		IRIX*)
+ 		    ;;
+-		NetBSD-*|FreeBSD-*|OpenBSD-*)
++		NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*)
+ 		    ;;
+ 		Rhapsody-*|Darwin-*)
+ 		    ;;
+@@ -1652,7 +1681,11 @@ AC_DEFUN(SC_PATH_X, [
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		AC_MSG_RESULT($i)
@@ -111,7 +129,7 @@ $NetBSD: patch-ac,v 1.2 2005/03/06 22:41:28 jschauma Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -1661,7 +1694,11 @@
+@@ -1661,7 +1694,11 @@ AC_DEFUN(SC_PATH_X, [
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
