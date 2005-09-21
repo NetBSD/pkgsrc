@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.156 2005/08/23 11:48:51 rillig Exp $
+# $NetBSD: Makefile,v 1.157 2005/09/21 18:07:09 reed Exp $
 
-DISTNAME=		openssh-3.9p1
-PKGNAME=		openssh-3.9.1
-PKGREVISION=		8
+DISTNAME=		openssh-4.2p1
+PKGNAME=		openssh-4.2.1
+PKGREVISION=		
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -150,7 +150,7 @@ post-install:
 	cd ${WRKSRC}; for file in ${CONFS}; do				\
 		${INSTALL_DATA} $${file}.out ${EGDIR}/$${file};		\
 	done
-.if !empty(PKG_OPTIONS:MPAM) && ${OPSYS} == "Linux"
+.if !empty(PKG_OPTIONS:Mpam) && ${OPSYS} == "Linux"
 	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.generic ${EGDIR}/sshd.pam
 .endif
 

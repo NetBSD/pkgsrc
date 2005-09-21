@@ -1,46 +1,53 @@
-$NetBSD: patch-aa,v 1.37 2005/03/07 23:29:49 tv Exp $
-
---- configure.orig	2004-08-17 08:54:53.000000000 -0400
-+++ configure
-@@ -6101,8 +6101,46 @@ _ACEOF
+--- configure.orig	2005-09-01 02:15:24.000000000 -0700
++++ configure	2005-09-21 09:49:24.000000000 -0700
+@@ -5706,7 +5706,7 @@
+ 		need_dash_r=1
+ 	fi
+ 	;;
+-*-*-freebsd*)
++*-*-freebsd*|*-*-dragonfly*)
+ 	check_for_libcrypt_later=1
+ 	;;
+ *-*-bsdi*)
+@@ -6552,8 +6552,46 @@
  _ACEOF
  
- 	;;
-+
+         ;;
++ 
 +*-*-interix3)
-+	cat >>confdefs.h <<\_ACEOF
++        cat >>confdefs.h <<\_ACEOF
 +#define HAVE_INTERIX 1
 +_ACEOF
 +
-+	cat >>confdefs.h <<\_ACEOF
++        cat >>confdefs.h <<\_ACEOF
 +#define DISABLE_FD_PASSING 1
 +_ACEOF
 +
-+	cat >>confdefs.h <<\_ACEOF
++        cat >>confdefs.h <<\_ACEOF
 +#define DISABLE_SHADOW 1
 +_ACEOF
 +
-+	cat >>confdefs.h <<\_ACEOF
++        cat >>confdefs.h <<\_ACEOF
 +#define IP_TOS_IS_BROKEN 1
 +_ACEOF
 +
-+	cat >>confdefs.h <<\_ACEOF
++        cat >>confdefs.h <<\_ACEOF
 +#define MISSING_HOWMANY 1
 +_ACEOF
 +
-+	cat >>confdefs.h <<\_ACEOF
++        cat >>confdefs.h <<\_ACEOF
 +#define NO_IPPORT_RESERVED_CONCEPT 1
 +_ACEOF
 +
-+	cat >>confdefs.h <<\_ACEOF
++        cat >>confdefs.h <<\_ACEOF
 +#define SETGROUPS_NOOP 1
 +_ACEOF
 +
-+	cat >>confdefs.h <<\_ACEOF
++        cat >>confdefs.h <<\_ACEOF
 +#define USE_PIPES 1
 +_ACEOF
 +
-+	;;
++       ;;
  esac
  
 +# pkgsrc handles any rpath settings this package needs
@@ -49,7 +56,7 @@ $NetBSD: patch-aa,v 1.37 2005/03/07 23:29:49 tv Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -23790,12 +23828,19 @@ fi
+@@ -25360,12 +25398,19 @@
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -72,7 +79,7 @@ $NetBSD: patch-aa,v 1.37 2005/03/07 23:29:49 tv Exp $
  	cat >>confdefs.h <<_ACEOF
  #define CONF_UTMPX_FILE "$conf_utmpx_location"
  _ACEOF
-@@ -23864,12 +23909,20 @@ fi
+@@ -25434,12 +25479,20 @@
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -95,7 +102,7 @@ $NetBSD: patch-aa,v 1.37 2005/03/07 23:29:49 tv Exp $
  	cat >>confdefs.h <<_ACEOF
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
-@@ -25091,7 +25144,7 @@ echo "OpenSSH has been configured with t
+@@ -26665,7 +26718,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"

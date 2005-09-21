@@ -1,19 +1,19 @@
-$NetBSD: patch-ad,v 1.10 2005/05/25 23:17:11 reed Exp $
+$NetBSD: patch-ad,v 1.11 2005/09/21 18:07:09 reed Exp $
 
---- loginrec.c.orig	2004-08-15 05:12:52.000000000 -0400
+--- loginrec.c.orig	2005-07-17 02:26:44.000000000 -0500
 +++ loginrec.c
-@@ -406,8 +406,8 @@ login_set_addr(struct logininfo *li, con
+@@ -414,8 +414,8 @@
  int
- login_write (struct logininfo *li)
+ login_write(struct logininfo *li)
  {
 -#ifndef HAVE_CYGWIN
--	if ((int)geteuid() != 0) {
+-	if (geteuid() != 0) {
 +#if !defined(HAVE_CYGWIN) && !defined(HAVE_INTERIX)
-+	if ((int)geteuid() != ROOTUID) {
- 	  logit("Attempt to write login records by non-root user (aborting)");
- 	  return 1;
++        if (geteuid() != ROOTUID) {
+ 		logit("Attempt to write login records by non-root user (aborting)");
+ 		return (1);
  	}
-@@ -415,7 +415,7 @@ login_write (struct logininfo *li)
+@@ -423,7 +423,7 @@
  
  	/* set the timestamp */
  	login_set_current_time(li);
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.10 2005/05/25 23:17:11 reed Exp $
  	syslogin_write_entry(li);
  #endif
  #ifdef USE_LASTLOG
-@@ -589,7 +589,7 @@ line_abbrevname(char *dst, const char *s
+@@ -603,7 +603,7 @@
   ** into account.
   **/
  
@@ -31,25 +31,27 @@ $NetBSD: patch-ad,v 1.10 2005/05/25 23:17:11 reed Exp $
  
  /* build the utmp structure */
  void
-@@ -725,8 +725,6 @@ construct_utmpx(struct logininfo *li, st
- 	line_stripname(utx->ut_line, li->line, sizeof(utx->ut_line));
+@@ -740,10 +740,6 @@
  	set_utmpx_time(li, utx);
  	utx->ut_pid = li->pid;
--	/* strncpy(): Don't necessarily want null termination */
--	strncpy(utx->ut_name, li->username, MIN_SIZEOF(utx->ut_name, li->username));
  
+-	/* strncpy(): Don't necessarily want null termination */
+-	strncpy(utx->ut_name, li->username,
+-	    MIN_SIZEOF(utx->ut_name, li->username));
+-
  	if (li->type == LTYPE_LOGOUT)
  		return;
-@@ -736,6 +734,8 @@ construct_utmpx(struct logininfo *li, st
+ 
+@@ -752,6 +748,8 @@
  	 * for logouts.
  	 */
  
 +	/* strncpy(): Don't necessarily want null termination */
 +	strncpy(utx->ut_name, li->username, MIN_SIZEOF(utx->ut_name, li->username));
  # ifdef HAVE_HOST_IN_UTMPX
- 	strncpy(utx->ut_host, li->hostname, MIN_SIZEOF(utx->ut_host, li->hostname));
- # endif
-@@ -1357,7 +1357,7 @@ wtmpx_get_entry(struct logininfo *li)
+ 	strncpy(utx->ut_host, li->hostname,
+ 	    MIN_SIZEOF(utx->ut_host, li->hostname));
+@@ -1381,7 +1379,7 @@
   ** Low-level libutil login() functions
   **/
  
