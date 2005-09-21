@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.38 2005/08/02 00:23:31 reed Exp $
+# $NetBSD: Interix.mk,v 1.39 2005/09/21 20:37:01 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -95,7 +95,6 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.5.18nb4 # for hardcode_libdir_flag_spec fix
 _OPSYS_PERL_REQD=	5.8.3nb1 # base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough
