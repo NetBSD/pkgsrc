@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2005/03/07 23:29:49 tv Exp $
+$NetBSD: patch-ae,v 1.10 2005/09/21 18:07:09 reed Exp $
 
---- includes.h.orig	2004-08-14 10:01:48.000000000 -0400
+--- includes.h.orig	2005-08-26 15:15:20.000000000 -0500
 +++ includes.h
-@@ -163,6 +163,10 @@ static /**/const char *const rcsid[] = {
+@@ -164,6 +164,10 @@
  #ifdef HAVE_READPASSPHRASE_H
  # include <readpassphrase.h>
  #endif
