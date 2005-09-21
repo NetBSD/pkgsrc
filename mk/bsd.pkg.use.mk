@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.22 2005/07/19 23:01:55 jlam Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.23 2005/09/21 20:37:01 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -94,7 +94,7 @@ _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
-LIBTOOL_REQD?=		1.5.18nb1
+LIBTOOL_REQD?=		1.5.18nb5
 BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
