@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2005/09/21 23:19:14 dmcmahill Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    5
@@ -27,8 +27,16 @@ MAKE_ENV+=		SHELL=${SH}
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]* NetBSD-1.6[A-S]*
 
-ARCHBIN=	${PREFIX}/lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+ARCH=	Solaris
+.else
+ARCH=	${OPSYS}
+.endif
+
+ARCHBIN=	${PREFIX}/lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}
 XMCDDIR=	${PREFIX}/lib/X11/xmcd
+PLIST_SUBST+=	ARCH=${ARCH}
 
 _SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4711
 SPECIAL_PERMS=	${ARCHBIN}/cda ${_SETUID_ROOT}
@@ -54,7 +62,9 @@ post-install:
 		done;							\
 	fi
 
+.if ${OPSYS} != "SunOS"
 .include "../../devel/ncurses/buildlink3.mk"
+.endif
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 
