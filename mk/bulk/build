@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.56 2005/09/20 18:54:37 xtraeme Exp $
+# $NetBSD: build,v 1.57 2005/09/21 15:46:06 reed Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -389,7 +389,7 @@ done
 # Perl was wiped, reinstall it!
 ( cd lang/perl5 && ${BMAKE} bulk-install )
 BUILDDATE=`date +%Y-%m-%d`
-
+mkdir -p ${FTP}
 ${PERL5} mk/bulk/post-build > ${FTP}/pkgsrc-results-${BUILDDATE}.txt
 if [ "$noemail" = "no" ]; then
 ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" $ADMIN < ${FTP}/pkgsrc-results-${BUILDDATE}.txt
