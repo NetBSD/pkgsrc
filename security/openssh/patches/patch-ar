@@ -1,23 +1,24 @@
-$NetBSD: patch-ar,v 1.4 2005/03/07 23:29:50 tv Exp $
+$NetBSD: patch-ar,v 1.5 2005/09/21 18:07:09 reed Exp $
 
---- uidswap.c.orig	2004-02-23 21:17:30.000000000 -0500
+--- uidswap.c.orig	2005-02-22 00:57:13.000000000 -0600
 +++ uidswap.c
-@@ -56,12 +56,12 @@ temporarily_use_uid(struct passwd *pw)
- 	debug("temporarily_use_uid: %u/%u (e=%u/%u)",
+@@ -57,13 +57,13 @@
  	    (u_int)pw->pw_uid, (u_int)pw->pw_gid,
  	    (u_int)saved_euid, (u_int)saved_egid);
+ #ifndef HAVE_CYGWIN
 -	if (saved_euid != 0) {
 +	if (saved_euid != ROOTUID) {
  		privileged = 0;
  		return;
  	}
+ #endif
  #else
 -	if (geteuid() != 0) {
 +	if (geteuid() != ROOTUID) {
  		privileged = 0;
  		return;
  	}
-@@ -85,9 +85,11 @@ temporarily_use_uid(struct passwd *pw)
+@@ -87,9 +87,11 @@
  
  	/* set and save the user's groups */
  	if (user_groupslen == -1) {
@@ -29,7 +30,7 @@ $NetBSD: patch-ar,v 1.4 2005/03/07 23:29:50 tv Exp $
  
  		user_groupslen = getgroups(0, NULL);
  		if (user_groupslen < 0)
-@@ -172,6 +174,10 @@ permanently_set_uid(struct passwd *pw)
+@@ -174,6 +176,10 @@
  	debug("permanently_set_uid: %u/%u", (u_int)pw->pw_uid,
  	    (u_int)pw->pw_gid);
  
@@ -40,7 +41,7 @@ $NetBSD: patch-ar,v 1.4 2005/03/07 23:29:50 tv Exp $
  #if defined(HAVE_SETRESGID) && !defined(BROKEN_SETRESGID)
  	if (setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) < 0)
  		fatal("setresgid %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
-@@ -218,6 +224,7 @@ permanently_set_uid(struct passwd *pw)
+@@ -222,6 +228,7 @@
  	    (setuid(old_uid) != -1 || seteuid(old_uid) != -1))
  		fatal("%s: was able to restore old [e]uid", __func__);
  #endif

@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.12 2005/03/07 23:29:49 tv Exp $
+$NetBSD: patch-ac,v 1.13 2005/09/21 18:07:09 reed Exp $
 
---- defines.h.orig	2004-06-21 23:27:16.000000000 -0400
+--- defines.h.orig	2005-08-31 11:59:49.000000000 -0500
 +++ defines.h
 @@ -30,6 +30,15 @@
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ac,v 1.12 2005/03/07 23:29:49 tv Exp $
  #ifndef SHUT_RDWR
  enum
  {
-@@ -424,8 +433,8 @@ struct winsize {
+@@ -442,8 +451,8 @@
  # define __attribute__(x)
  #endif /* !defined(__GNUC__) || (__GNUC__ < 2) */
  
@@ -28,8 +28,8 @@ $NetBSD: patch-ac,v 1.12 2005/03/07 23:29:49 tv Exp $
 +# define __noreturn __attribute__((noreturn))
  #endif
  
- /* *-*-nto-qnx doesn't define this macro in the system headers */
-@@ -591,6 +600,24 @@ struct winsize {
+ #if !defined(HAVE_ATTRIBUTE__SENTINEL__) && !defined(__sentinel__)
+@@ -635,6 +644,24 @@
  #    endif
  #  endif
  #endif
