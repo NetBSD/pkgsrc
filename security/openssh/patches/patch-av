@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.1 2005/03/07 23:29:50 tv Exp $
+$NetBSD: patch-av,v 1.2 2005/09/21 18:07:09 reed Exp $
 
---- sshd.c.orig	2004-08-12 09:08:15.000000000 -0400
+--- sshd.c.orig	2005-07-26 06:54:56.000000000 -0500
 +++ sshd.c
-@@ -579,10 +579,15 @@ privsep_preauth_child(void)
+@@ -574,10 +574,15 @@
  	/* XXX not ready, too heavy after chroot */
  	do_setusercontext(pw);
  #else
@@ -18,7 +18,7 @@ $NetBSD: patch-av,v 1.1 2005/03/07 23:29:50 tv Exp $
  #endif
  }
  
-@@ -622,7 +627,7 @@ privsep_preauth(Authctxt *authctxt)
+@@ -617,7 +622,7 @@
  		close(pmonitor->m_sendfd);
  
  		/* Demote the child */
@@ -27,7 +27,7 @@ $NetBSD: patch-av,v 1.1 2005/03/07 23:29:50 tv Exp $
  			privsep_preauth_child();
  		setproctitle("%s", "[net]");
  	}
-@@ -635,7 +640,7 @@ privsep_postauth(Authctxt *authctxt)
+@@ -630,7 +635,7 @@
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -36,7 +36,7 @@ $NetBSD: patch-av,v 1.1 2005/03/07 23:29:50 tv Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		monitor_apply_keystate(pmonitor);
-@@ -911,7 +916,7 @@ main(int ac, char **av)
+@@ -911,7 +916,7 @@
  	av = saved_argv;
  #endif
  
@@ -45,7 +45,7 @@ $NetBSD: patch-av,v 1.1 2005/03/07 23:29:50 tv Exp $
  		debug("setgroups(): %.200s", strerror(errno));
  
  	/* Initialize configuration options to their default values. */
-@@ -1166,7 +1171,7 @@ main(int ac, char **av)
+@@ -1168,7 +1173,7 @@
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else

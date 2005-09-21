@@ -1,22 +1,24 @@
-$NetBSD: patch-au,v 1.1 2005/03/07 23:29:50 tv Exp $
+$NetBSD: patch-au,v 1.2 2005/09/21 18:07:09 reed Exp $
 
---- openbsd-compat/bsd-openpty.c.orig	2004-02-17 00:49:55.000000000 -0500
+--- openbsd-compat/bsd-openpty.c.orig	2005-02-25 17:04:29.000000000 -0600
 +++ openbsd-compat/bsd-openpty.c
-@@ -102,7 +102,7 @@ openpty(int *amaster, int *aslave, char 
+@@ -102,15 +102,17 @@
  		return (-1);
  	}
  
--#ifndef HAVE_CYGWIN
-+#if !defined(HAVE_CYGWIN) && !defined(HAVE_INTERIX)
++#if !defined(HAVE_INTERIX)
  	/*
  	 * Try to push the appropriate streams modules, as described 
  	 * in Solaris pts(7).
-@@ -112,7 +112,7 @@ openpty(int *amaster, int *aslave, char 
- # ifndef __hpux
+ 	 */
+ 	ioctl(*aslave, I_PUSH, "ptem");
+ 	ioctl(*aslave, I_PUSH, "ldterm");
+-# ifndef __hpux
++  # ifndef __hpux
  	ioctl(*aslave, I_PUSH, "ttcompat");
- # endif /* __hpux */
--#endif /* HAVE_CYGWIN */
-+#endif /* !HAVE_CYGWIN && !HAVE_INTERIX */
+-# endif /* __hpux */
++  # endif /* __hpux */
++#endif /* !HAVE_INTERIX */
  
  	return (0);
  

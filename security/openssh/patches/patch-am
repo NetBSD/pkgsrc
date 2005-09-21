@@ -1,13 +1,13 @@
-$NetBSD: patch-am,v 1.4 2005/03/07 23:29:50 tv Exp $
+$NetBSD: patch-am,v 1.5 2005/09/21 18:07:09 reed Exp $
 
---- auth2.c.orig	2004-08-12 08:40:25.000000000 -0400
+--- auth2.c.orig	2005-07-17 02:26:44.000000000 -0500
 +++ auth2.c
-@@ -211,7 +211,7 @@ userauth_finish(Authctxt *authctxt, int 
+@@ -216,7 +216,7 @@
  		    authctxt->user);
  
  	/* Special handling for root */
 -	if (authenticated && authctxt->pw->pw_uid == 0 &&
 +	if (authenticated && authctxt->pw->pw_uid == ROOTUID &&
- 	    !auth_root_allowed(method))
+ 	    !auth_root_allowed(method)) {
  		authenticated = 0;
- 
+ #ifdef SSH_AUDIT_EVENTS

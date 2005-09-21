@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.6 2005/03/07 23:29:50 tv Exp $
+$NetBSD: patch-ao,v 1.7 2005/09/21 18:07:09 reed Exp $
 
---- session.c.orig	2004-08-12 08:40:25.000000000 -0400
+--- session.c.orig	2005-08-31 11:59:49.000000000 -0500
 +++ session.c
-@@ -326,7 +326,7 @@ do_authenticated1(Authctxt *authctxt)
+@@ -331,7 +331,7 @@
  				break;
  			}
  			debug("Received TCP/IP port forwarding request.");
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.6 2005/03/07 23:29:50 tv Exp $
  			success = 1;
  			break;
  
-@@ -921,7 +921,7 @@ read_etc_default_login(char ***env, u_in
+@@ -930,7 +930,7 @@
  	if (tmpenv == NULL)
  		return;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ao,v 1.6 2005/03/07 23:29:50 tv Exp $
  		var = child_get_env(tmpenv, "SUPATH");
  	else
  		var = child_get_env(tmpenv, "PATH");
-@@ -1020,7 +1020,7 @@ do_setup_env(Session *s, const char *she
+@@ -1036,7 +1036,7 @@
  #  endif /* HAVE_ETC_DEFAULT_LOGIN */
  		if (path == NULL || *path == '\0') {
  			child_set_env(&env, &envsize, "PATH",
@@ -29,7 +29,7 @@ $NetBSD: patch-ao,v 1.6 2005/03/07 23:29:50 tv Exp $
  				SUPERUSER_PATH : _PATH_STDPATH);
  		}
  # endif /* HAVE_CYGWIN */
-@@ -1124,6 +1124,18 @@ do_setup_env(Session *s, const char *she
+@@ -1150,6 +1150,18 @@
  		    strcmp(pw->pw_dir, "/") ? pw->pw_dir : "");
  		read_environment_file(&env, &envsize, buf);
  	}
@@ -48,7 +48,7 @@ $NetBSD: patch-ao,v 1.6 2005/03/07 23:29:50 tv Exp $
  	if (debug_flag) {
  		/* dump the environment */
  		fprintf(stderr, "Environment:\n");
-@@ -1234,9 +1246,9 @@ do_nologin(struct passwd *pw)
+@@ -1260,9 +1272,9 @@
  void
  do_setusercontext(struct passwd *pw)
  {
@@ -60,7 +60,7 @@ $NetBSD: patch-ao,v 1.6 2005/03/07 23:29:50 tv Exp $
  	{
  
  #ifdef HAVE_SETPCRED
-@@ -1271,11 +1283,13 @@ do_setusercontext(struct passwd *pw)
+@@ -1304,11 +1316,13 @@
  			perror("setgid");
  			exit(1);
  		}
@@ -72,9 +72,9 @@ $NetBSD: patch-ao,v 1.6 2005/03/07 23:29:50 tv Exp $
  		}
 +# endif /* !HAVE_INTERIX */
  		endgrent();
- # ifdef USE_PAM
- 		/*
-@@ -1965,7 +1979,7 @@ session_pty_cleanup2(Session *s)
+ #ifdef GSSAPI
+ 		if (options.gss_authentication) {
+@@ -2052,7 +2066,7 @@
  		record_logout(s->pid, s->tty, s->pw->pw_name);
  
  	/* Release the pseudo-tty. */
