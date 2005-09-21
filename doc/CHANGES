@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11152 2005/09/21 18:10:10 reed Exp $
+$NetBSD: CHANGES,v 1.11153 2005/09/21 20:32:15 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4059,3 +4059,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/ruby18-base to 1.8.2nb4 [taca 2005-09-21]
 	Updated www/squid to 2.5.10nb5 [taca 2005-09-21]
 	Updated security/openssh to 4.2.1 [reed 2005-09-21]
+	Updated devel/libtool-base to 1.5.18nb5 [tv 2005-09-21]
