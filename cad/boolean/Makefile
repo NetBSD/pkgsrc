@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/09/11 12:42:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.25 2005/09/21 23:17:20 dmcmahill Exp $
 #
 
 DISTNAME=	boolean_6_7
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/boolean
 GCC_REQD=	3.0
 
 USE_TOOLS+=	gmake pkg-config tar
+USE_LANGUAGES=	c++
 
 INSTALLATION_DIRS=	bin
 
