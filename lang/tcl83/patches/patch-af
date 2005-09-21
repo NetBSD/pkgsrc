@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
+$NetBSD: patch-af,v 1.2 2005/09/21 14:49:08 joerg Exp $
 
 --- tcl.m4.orig	Fri Oct 19 19:24:15 2001
 +++ tcl.m4
@@ -92,6 +92,15 @@ $NetBSD: patch-af,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  	    ], [
  		SHLIB_CFLAGS=""
  		SHLIB_LD="echo tclLdAout $CC \{$SHLIB_CFLAGS\} | `pwd`/tclsh -r"
+@@ -949,7 +970,7 @@ dnl AC_CHECK_TOOL(AR, ar, :)
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-* | DragonFly-*)
+ 	    # FreeBSD 3.* and greater have ELF.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="ld -Bshareable -x"
 @@ -1129,6 +1150,9 @@ dnl AC_CHECK_TOOL(AR, ar, :)
  	    DL_LIBS="-ldl"
  	    LDFLAGS=""
@@ -112,3 +121,12 @@ $NetBSD: patch-af,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
+@@ -1328,7 +1355,7 @@ dnl AC_CHECK_TOOL(AR, ar, :)
+ 		    ;;
+ 		IRIX*)
+ 		    ;;
+-		NetBSD-*|FreeBSD-*|OpenBSD-*)
++		NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*)
+ 		    ;;
+ 		Rhapsody-*|Darwin-*)
+ 		    ;;

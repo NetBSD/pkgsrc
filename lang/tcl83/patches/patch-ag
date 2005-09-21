@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2005/09/21 14:49:08 joerg Exp $
+
+--- tclUnixPort.h.orig	2005-07-30 20:55:41.000000000 +0000
++++ tclUnixPort.h
+@@ -417,7 +417,9 @@ EXTERN int		gettimeofday _ANSI_ARGS_((st
+  * isn't generally declared in a header file anywhere.
+  */
+ 
++#ifndef errno
+ extern int errno;
++#endif
+ 
+ /*
+  * Variables provided by the C library:
