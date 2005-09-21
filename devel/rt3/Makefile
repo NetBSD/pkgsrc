@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/09/09 10:54:15 cube Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/21 21:23:46 cube Exp $
 
 DISTNAME=		rt-3.2.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -39,7 +39,7 @@ DEPENDS+=	p5-Module-Versions-Report-[0-9]*:../../devel/p5-Module-Versions-Report
 DEPENDS+=	p5-Params-Validate>=0.02:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Cache-Cache>=1.02:../../devel/p5-Cache-Cache
 DEPENDS+=	p5-Exception-Class>=1.14:../../devel/p5-Exception-Class
-DEPENDS+=	p5-HTML-Mason>=1.23:../../www/p5-HTML-Mason
+DEPENDS+=	p5-HTML-Mason>=1.31:../../www/p5-HTML-Mason
 DEPENDS+=	p5-MLDBM>=2.01:../../databases/p5-MLDBM
 DEPENDS+=	p5-FreezeThaw>=0.43:../../devel/p5-FreezeThaw
 DEPENDS+=	p5-Storable>=2.08:../../devel/p5-Storable
