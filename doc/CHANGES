@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11150 2005/09/21 14:06:17 taca Exp $
+$NetBSD: CHANGES,v 1.11151 2005/09/21 15:06:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4057,3 +4057,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/firefox-bin to 1.0.7 [tron 2005-09-21]
 	Updated lang/ruby16-base to 1.6.8nb2 [taca 2005-09-21]
 	Updated lang/ruby18-base to 1.8.2nb4 [taca 2005-09-21]
+	Updated www/squid to 2.5.10nb5 [taca 2005-09-21]
