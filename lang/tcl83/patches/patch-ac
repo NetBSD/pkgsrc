@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2005/09/21 14:49:08 joerg Exp $
 
 --- tclUnixInit.c.orig	Fri Aug 24 19:13:22 2001
 +++ tclUnixInit.c
+@@ -13,7 +13,7 @@
+ #include "tclInt.h"
+ #include "tclPort.h"
+ #include <locale.h>
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #   include <floatingpoint.h>
+ #endif
+ #if defined(__bsdi__)
 @@ -22,6 +22,11 @@
  #	include <dlfcn.h>
  #   endif
@@ -14,7 +23,16 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  
  /*
   * The Init script (common to Windows and Unix platforms) is
-@@ -550,6 +555,11 @@
+@@ -132,7 +137,7 @@ TclpInitPlatform()
+     (void) signal(SIGPIPE, SIG_IGN);
+ #endif /* SIGPIPE */
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+     fpsetround(FP_RN);
+     fpsetmask(0L);
+ #endif
+@@ -550,6 +555,11 @@ TclpSetVariables(interp)
      int unameOK;
      char *user;
      Tcl_DString ds;
@@ -26,7 +44,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  
      Tcl_SetVar(interp, "tclDefaultLibrary", defaultLibraryDir, TCL_GLOBAL_ONLY);
      Tcl_SetVar(interp, "tcl_pkgPath", pkgPath, TCL_GLOBAL_ONLY);
-@@ -585,8 +595,16 @@
+@@ -585,8 +595,16 @@ TclpSetVariables(interp)
  	    Tcl_SetVar2(interp, "tcl_platform", "osVersion", name.release,
  		    TCL_GLOBAL_ONLY|TCL_APPEND_VALUE);
  	}

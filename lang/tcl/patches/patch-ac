@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.6 2005/07/19 11:11:58 adam Exp $
+$NetBSD: patch-ac,v 1.7 2005/09/21 14:49:08 joerg Exp $
 
 --- tclUnixInit.c.orig	2005-05-24 04:20:12.000000000 +0000
 +++ tclUnixInit.c
+@@ -19,7 +19,7 @@
+ #ifdef HAVE_LANGINFO
+ #include <langinfo.h>
+ #endif
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #   include <floatingpoint.h>
+ #endif
+ #if defined(__bsdi__)
 @@ -28,6 +28,11 @@
  #	include <dlfcn.h>
  #   endif
@@ -14,6 +23,15 @@ $NetBSD: patch-ac,v 1.6 2005/07/19 11:11:58 adam Exp $
  
  /*
   * The Init script (common to Windows and Unix platforms) is
+@@ -203,7 +208,7 @@ TclpInitPlatform()
+     (void) signal(SIGPIPE, SIG_IGN);
+ #endif /* SIGPIPE */
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+     fpsetround(FP_RN);
+     fpsetmask(0L);
+ #endif
 @@ -740,6 +745,11 @@ TclpSetVariables(interp)
      int unameOK;
      CONST char *user;
