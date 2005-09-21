@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1 2005/09/21 21:23:46 cube Exp $
+
+--- html/Elements/Callback.orig	2004-07-29 02:08:11.000000000 +0200
++++ html/Elements/Callback
+@@ -49,7 +49,7 @@ my (%cache, $check);
+ <%init>
+ # checks for inode change time for each callback directory
+ my $new_check = join(
+-    $;, map { $_->[1] => (stat("$_->[1]/Callbacks"))[10] } $m->interp->resolver->comp_root_array
++    $;, map { $_->[1] => (stat("$_->[1]/Callbacks"))[10] } $m->interp->comp_root_array
+ ) or return;
+ 
+ $Page = $m->callers(1)->path unless ($Page);
+@@ -64,8 +64,18 @@ else {
+ 
+ if (!$callbacks) {
+     my $path = "/Callbacks/*$Page/$_CallbackName";
+-    $callbacks = [ $m->interp->resolver->glob_path($path) ];
+-    @$callbacks = grep !/^\.|~$/, @$callbacks; #skip backup files
++
++    my @roots = map { $_->[1] } $m->interp->comp_root_array;
++    my %seen;
++
++    for my $root (@roots) {
++            push @$callbacks,
++            # Skip backup files, files without a leading package name,
++            # and files we've already seen
++            grep {     !/^\.|~$/
++                   and not $seen{$_}++ }
++                 $m->interp->resolver->glob_path($path, $root);
++    }
+ 
+     #skip files without a package
+     my $invalid_base = "/Callbacks/$Page/$_CallbackName";
