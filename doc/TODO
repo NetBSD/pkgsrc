@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3901 2005/09/21 16:09:43 wiz Exp $
+$NetBSD: TODO,v 1.3902 2005/09/21 18:10:10 reed Exp $
 
 Suggested new packages
 ======================
@@ -720,7 +720,6 @@ Suggested package updates
 	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openoffice-1.1.5
 	o openoffice-bin-1.1.5
-	o openssh-4.2
 	o openssl-0.9.8
 	o openvpn-2.0 [pkg/30239]
 	o oregano-0.40.5
