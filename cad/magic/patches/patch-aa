@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/01/23 11:43:33 agc Exp $
+$NetBSD: patch-aa,v 1.3 2005/09/22 15:28:35 minskim Exp $
 
---- misc/magic.h.orig	Fri Sep 21 11:15:45 2001
-+++ misc/magic.h	Wed Mar 13 12:37:46 2002
-@@ -99,7 +99,7 @@
+--- misc/magic.h.orig	2001-09-21 08:15:45.000000000 -0700
++++ misc/magic.h
+@@ -99,7 +99,7 @@ extern char *SysLibPath;	/* Path for fin
  	: FALSE)
  #else
  #define	ASSERT(p, where)	(FALSE)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2004/01/23 11:43:33 agc Exp $
  
  
  /* ------------------------ Malloc/free ------------------------------- */
-@@ -146,71 +146,13 @@
+@@ -146,71 +146,6 @@ extern char AbortMessage[];
   *
   */
  
@@ -70,13 +70,8 @@ $NetBSD: patch-aa,v 1.2 2004/01/23 11:43:33 agc Exp $
 -
 -#ifdef	ALPHA
 -#define	IS_LITTLE_ENDIAN	/* Digital Alpha AXP */
-+#include <sys/endian.h>
-+#if BYTE_ORDER==BIG_ENDIAN
-+#define IS_BIG_ENDIAN
-+#else
-+#define IS_LITTLE_ENDIAN
- #endif
- 
+-#endif
+-
 -/* Well, how'd we do? */
 -
 -#if	!defined(IS_BIG_ENDIAN) && !defined(IS_LITTLE_ENDIAN)

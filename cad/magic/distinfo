@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 14:59:25 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/09/22 15:28:35 minskim Exp $
 
 SHA1 (magic-7.1.tar.gz) = 176eb4c6a0ff33c6e265e61360c02da4f454f101
 RMD160 (magic-7.1.tar.gz) = 7ab03ba23243817b168254f8c6f7a50d8ea2a4db
 Size (magic-7.1.tar.gz) = 3860487 bytes
-SHA1 (patch-aa) = bfd5101deed8e5626311798f7dd4e8c80c3d63e7
-SHA1 (patch-ab) = 4168f956b665672ec79e11875f7b948a5be715ba
+SHA1 (patch-aa) = 6c25c20e7c23e86c8f4ddd2931cb2fa1decc9ff7
+SHA1 (patch-ab) = 4e6405e8c5ce551c6999a43da2bd0591bd096f0f
 SHA1 (patch-ac) = 270cbb68cb3b1ff5e635490ac1dfe13e3dcfc0d0
 SHA1 (patch-ad) = e9db83580fc1b34906d9f5e151479e46f7da444a
 SHA1 (patch-ae) = 27555db8f06d1f8a7a6f002e7dfccf14a4db2765
