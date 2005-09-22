@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/09/19 22:33:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/22 11:54:43 adrianp Exp $
 
 DISTNAME=	mantis-1.0.0rc2
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -35,6 +36,7 @@ EGDIR=		${PREFIX}/share/examples/mantis
 CONF_FILES+=	${EGDIR}/mantis.conf ${PKG_SYSCONFDIR}/mantis.conf \
 		${EGDIR}/config_inc.php ${MANTIS_HOME}/config_inc.php
 SPECIAL_PERMS=	${MANTIS_HOME}/config_inc.php ${APACHE_USER} ${SHAREGRP} 0400
+MANTIS_EG=	config_inc.php mantis.conf mantis_offline.php.sample
 
 SUBST_CLASSES=		conf
 SUBST_STAGE.conf=	pre-install
@@ -49,21 +51,20 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mantis
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${MANTIS_HOME}
-	${INSTALL} ${WRKSRC}/doc/CUSTOMIZATION ${PREFIX}/share/doc/mantis
-	${INSTALL} ${WRKSRC}/doc/INSTALL ${PREFIX}/share/doc/mantis
-	${INSTALL} ${WRKSRC}/doc/README ${PREFIX}/share/doc/mantis
-	${INSTALL} ${WRKSRC}/doc/UPGRADING ${PREFIX}/share/doc/mantis
 
-	cd ${WRKSRC} && ${PAX}				\
-		-s /\.cvsignore//			\
-		-s /config_inc.php.sample//		\
-		-s /mantis_offline.php.sample//		\
-		-s /mantis.conf//			\
-		-rwppm . ${MANTIS_HOME}
+	${INSTALL_DATA} ${WRKSRC}/doc/CUSTOMIZATION ${PREFIX}/share/doc/mantis
+	${INSTALL_DATA} ${WRKSRC}/doc/INSTALL ${PREFIX}/share/doc/mantis
+	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/mantis
+	${INSTALL_DATA} ${WRKSRC}/doc/UPGRADING ${PREFIX}/share/doc/mantis
+	${MV} ${WRKSRC}/config_inc.php.sample ${WRKSRC}/config_inc.php
 
-	${INSTALL_DATA} ${WRKSRC}/config_inc.php.sample ${EGDIR}/config_inc.php
-	${INSTALL_DATA} ${WRKSRC}/mantis_offline.php.sample ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/mantis.conf ${EGDIR}
+. 	for f in ${MANTIS_EG}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${EGDIR}
+	${RM} ${WRKSRC}/${f}
+.	endfor
+
+	cd ${WRKSRC} && ${FIND} . -name .cvsignore -print | ${XARGS} ${RM}
+	cd ${WRKSRC} && ${PAX} -rwpppm . ${MANTIS_HOME}
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
