@@ -1,6 +1,6 @@
-$NetBSD: patch-cf,v 1.1 2004/10/24 05:41:25 grant Exp $
+$NetBSD: patch-cf,v 1.2 2005/09/22 14:14:04 jlam Exp $
 
---- browser/config/mozconfig.orig	2004-07-07 18:31:10.000000000 +1000
+--- browser/config/mozconfig.orig	2004-07-07 08:31:10.000000000 +0000
 +++ browser/config/mozconfig
 @@ -3,7 +3,8 @@
  #  . $topsrcdir/browser/config/mozconfig

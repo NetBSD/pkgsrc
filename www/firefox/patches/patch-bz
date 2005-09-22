@@ -1,6 +1,6 @@
-$NetBSD: patch-bz,v 1.1 2004/08/24 14:28:33 aymeric Exp $
+$NetBSD: patch-bz,v 1.2 2005/09/22 14:14:04 jlam Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_ppc_netbsd.s.orig	2001-03-11 18:22:22.000000000 +0100
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_ppc_netbsd.s.orig	2001-03-11 17:22:22.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_asm_ppc_netbsd.s
 @@ -1,27 +1,27 @@
 -# -*- Mode: Asm -*-

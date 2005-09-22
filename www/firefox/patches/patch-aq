@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.1 2005/07/25 15:46:51 adam Exp $
+$NetBSD: patch-aq,v 1.2 2005/09/22 14:14:04 jlam Exp $
 
---- directory/c-sdk/configure.in.orig	2005-07-23 11:36:39.000000000 +0000
+--- directory/c-sdk/configure.in.orig	2004-09-14 20:59:40.000000000 +0000
 +++ directory/c-sdk/configure.in
 @@ -52,7 +52,7 @@ USE_64=
  USE_CPLUS=
