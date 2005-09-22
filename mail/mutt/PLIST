@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/08/05 07:19:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/09/22 15:24:42 tron Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -32,6 +32,8 @@ share/doc/mutt/html/manual-7.html
 share/doc/mutt/html/manual.html
 share/doc/mutt/manual.txt
 share/doc/mutt/patch-notes.txt
+@exec ${LN} -s %D/share/examples/mutt %D/share/doc/mutt/samples
+@unexec ${RM} -f %D/share/doc/mutt/samples
 share/examples/mutt/Mush.rc
 share/examples/mutt/Muttrc
 share/examples/mutt/Pine.rc
