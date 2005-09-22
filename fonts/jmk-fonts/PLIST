@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:49:05 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/22 14:45:13 jwise Exp $
 lib/X11/fonts/jmk/fonts.alias
 lib/X11/fonts/jmk/fonts.dir
+lib/X11/fonts/jmk/fonts.scale
 lib/X11/fonts/jmk/modd-iso8859-1-06x11-bold.pcf.gz
 lib/X11/fonts/jmk/modd-iso8859-1-06x11.pcf.gz
 lib/X11/fonts/jmk/modd-iso8859-1-06x13-bold.pcf.gz
