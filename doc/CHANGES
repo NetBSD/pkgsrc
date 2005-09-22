@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11172 2005/09/22 14:58:30 wiz Exp $
+$NetBSD: CHANGES,v 1.11173 2005/09/22 15:33:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4083,3 +4083,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/nethack to 3.4.3 [wiz 2005-09-22]
 	Updated graphics/p5-Gnome to 0.7009nb2 [wiz 2005-09-22]
 	Updated lang/sablevm to 1.1.3nb7 [wiz 2005-09-22]
+	Updated mail/mutt to 1.4.2.1nb4 [tron 2005-09-22]
