@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.283 2005/09/09 11:05:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.284 2005/09/22 01:46:46 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1448,7 +1448,10 @@ sub checklines_direct_tools($) {
 	}
 }
 
-sub checklines_Makefile($) {
+# This subroutine contains "local" checks that can be made looking only
+# at a single line at a time. The other checks are in
+# checkfile_package_Makefile.
+sub checklines_package_Makefile($) {
 	my ($lines) = @_;
 
 	foreach my $line (@{$lines}) {
@@ -1462,6 +1465,25 @@ sub checklines_Makefile($) {
 
 		if ($text =~ /^\040{8}/) {
 			$line->log_warning("Use tab (not spaces) to make indentation.");
+		}
+
+		if ($text =~ $regex_varassign) {
+			my ($varname, $op, $value) = ($1, $2, $3);
+
+			if ($varname eq "COMMENT") {
+				if ($value =~ qr"^(a|an)\s+"i) {
+					$line->log_warning("COMMENT should not begin with '$1'.");
+				}
+				if ($value =~ qr"^[a-z]") {
+					$line->log_warning("COMMENT should start with a capital letter.");
+				}
+				if ($value =~ qr"\.$") {
+					$line->log_warning("COMMENT should not end with a period.");
+				}
+				if (length($value) > 70) {
+					$line->log_warning("COMMENT should not be longer than 70 characters.");
+				}
+			}
 		}
 	}
 
@@ -1557,7 +1579,7 @@ sub checkfile_package_Makefile($$$$$) {
 	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	checklines_Makefile($lines);
+	checklines_package_Makefile($lines);
 
 	$abspkgdir = Cwd::abs_path($dir);
 	$category = basename(dirname($abspkgdir));
@@ -1878,21 +1900,6 @@ sub checkfile_package_Makefile($$$$$) {
 	# warnings for missing COMMENT
 	if ($tmp !~ /\nCOMMENT=\s*(.*)$/) {
 		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Please add a short COMMENT describing the package.");
-	} else {
-		# and its properties:
-		my $tmp2 = $1;
-		if ($tmp2 =~ /\.$/i) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not end with a '.' (period).");
-		}
-		if ($tmp2 =~ /^(a|an) /i) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not begin with '$1 '.");
-		}
-		if ($tmp2 =~ /^[a-z]/) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should start with a capital letter.");
-		}
-		if (length($tmp2) > 70) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "COMMENT should not be longer than 70 characters.");
-		}
 	}
 
 	checkearlier($tmp, @varnames);
