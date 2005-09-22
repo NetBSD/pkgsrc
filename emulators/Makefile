@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2005/08/30 11:08:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.137 2005/09/22 15:02:56 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -89,7 +89,7 @@ SUBDIR+=	suse91_gtk2
 SUBDIR+=	suse91_libjpeg
 SUBDIR+=	suse91_libpng
 SUBDIR+=	suse91_libtiff
-#SUBDIR+=	suse91_linux
+#SUBDIR+=	suse91_linux		# only contains Makefile fragments
 SUBDIR+=	suse91_locale
 SUBDIR+=	suse91_openmotif
 SUBDIR+=	suse91_slang
