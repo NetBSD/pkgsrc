@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/13 16:12:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/09/22 20:58:50 bouyer Exp $
 sbin/Crack
 sbin/Reporter
 share/crack/conf/dictrun.conf
@@ -94,6 +94,10 @@ share/crack/extra/b64encode
 share/crack/extra/b64decode
 share/crack/extra/brute.c
 share/crack/extra/Dictstats.pl
+share/crack/run/dict/.dictmade
+share/crack/run/dict/1.dwg.gz
+share/crack/run/dict/2.dwg.gz
+share/crack/run/dict/3.dwg.gz
 share/crack/scripts/smartcat
 share/crack/scripts/trad2spf
 share/crack/scripts/dictcomp
