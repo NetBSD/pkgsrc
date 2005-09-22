@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/06/23 16:47:12 taya Exp $
+$NetBSD: patch-aa,v 1.2 2005/09/22 14:14:04 jlam Exp $
 
-diff -ru ../Orig/mozilla/config/autoconf.mk.in ./config/autoconf.mk.in
---- ../Orig/mozilla/config/autoconf.mk.in	2004-03-21 11:31:17.000000000 +0900
-+++ ./config/autoconf.mk.in	2004-06-15 23:55:36.000000000 +0900
-@@ -31,13 +31,13 @@
+--- config/autoconf.mk.in.orig	2004-10-31 04:29:54.000000000 +0000
++++ config/autoconf.mk.in
+@@ -32,13 +32,13 @@ MOZ_APP_DISPLAYNAME = @MOZ_APP_DISPLAYNA
  prefix		= @prefix@
  exec_prefix	= @exec_prefix@
  bindir		= @bindir@

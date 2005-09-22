@@ -1,9 +1,8 @@
-$NetBSD: patch-bs,v 1.2 2004/06/23 16:47:12 taya Exp $
+$NetBSD: patch-bs,v 1.3 2005/09/22 14:14:04 jlam Exp $
 
-diff -ru ../Orig/mozilla/config/mkdepend/imakemdep.h ./config/mkdepend/imakemdep.h
---- ../Orig/mozilla/config/mkdepend/imakemdep.h	1998-09-05 13:22:25.000000000 +0900
-+++ ./config/mkdepend/imakemdep.h	2004-06-15 23:56:48.000000000 +0900
-@@ -277,6 +277,9 @@
+--- config/mkdepend/imakemdep.h.orig	1998-09-05 04:22:25.000000000 +0000
++++ config/mkdepend/imakemdep.h
+@@ -277,6 +277,9 @@ char *cpp_argv[ARGUMENTS] = {
  # ifdef __i386__
  	"-D__i386__",
  # endif

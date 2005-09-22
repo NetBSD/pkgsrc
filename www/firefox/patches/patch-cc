@@ -1,8 +1,8 @@
-$NetBSD: patch-cc,v 1.1 2004/09/01 00:01:59 taya Exp $
+$NetBSD: patch-cc,v 1.2 2005/09/22 14:14:04 jlam Exp $
 
---- /mnt/local/src/mozilla-1.7rc3/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_linux_alpha.cpp	2004-08-13 01:24:00.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_linux_alpha.cpp	2004-08-13 01:23:35.000000000 +0900
-@@ -163,7 +163,11 @@
+--- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_linux_alpha.cpp.orig	2001-09-28 20:12:51.000000000 +0000
++++ xpcom/reflect/xptcall/src/md/unix/xptcinvoke_linux_alpha.cpp
+@@ -163,7 +163,11 @@ __asm__(
      "bis $16,$16,$1\n\t"    /* load "this" */
      "ldq $2,16($15)\n\t"    /* load "methodIndex" */
      "ldq $1,0($1)\n\t"      /* load vtable */

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/09/17 02:35:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/09/22 14:14:04 jlam Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2240,6 +2240,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/res/fonts
 @dirrm lib/${MOZILLA}/res/entityTables
 @dirrm lib/${MOZILLA}/res/dtd
+@exec ${MKDIR} %D/lib/${MOZILLA}/res/builtin
 @dirrm lib/${MOZILLA}/res/builtin
 @dirrm lib/${MOZILLA}/res
 @exec ${MKDIR} %D/lib/${MOZILLA}/plugins
