@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2005/07/19 10:17:59 grant Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/22 14:55:07 wiz Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
 
 PKGNAME=		nethack-tty-${NETHACK_VERSION}
+PKGREVISION=		1
 
 COMMENT=		The tty/console based version of NetHack
 
-DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../../games/nethack-lib
+DEPENDS+=		nethack-lib-${NETHACK_VERSION}nb1:../../games/nethack-lib
 
 BUILD_TARGET=		nethack
 INSTALL_TARGET=		binfiles
