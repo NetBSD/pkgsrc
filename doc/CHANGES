@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11175 2005/09/22 15:55:09 rillig Exp $
+$NetBSD: CHANGES,v 1.11176 2005/09/22 16:14:50 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4086,3 +4086,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mutt to 1.4.2.1nb4 [tron 2005-09-22]
 	Updated news/inn to 2.4.1nb8 [tron 2005-09-22]
 	Updated pkgtools/pkglint to 4.21.3 [rillig 2005-09-22]
+	Updated net/freeradius to 1.0.5nb2 [adrianp 2005-09-22]
