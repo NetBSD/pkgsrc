@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.153.2.3 2005/09/16 15:06:30 salo Exp $
+# $NetBSD: Makefile,v 1.153.2.4 2005/09/22 17:36:31 salo Exp $
 
 DISTNAME=	squid-2.5.STABLE10
 PKGNAME=	squid-2.5.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -45,7 +45,10 @@ PATCHFILES=	squid-2.5.STABLE10-content_length.patch \
 		squid-2.5.STABLE10-delay_pools.patch \
 		squid-2.5.STABLE10-NetBSD_IPFilter-4.patch \
 		squid-2.5.STABLE10-pipeline-CONNECT.patch \
-		squid-2.5.STABLE10-NTLM-scheme_assert-2.patch
+		squid-2.5.STABLE10-NTLM-scheme_assert-3.patch \
+		squid-2.5.STABLE10-ntlm-pipeline_prefetch.patch \
+		squid-2.5.STABLE10-dst_unknown.patch \
+		squid-2.5.STABLE10-maxfd.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
