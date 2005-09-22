@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/08/20 19:16:23 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/22 14:58:00 wiz Exp $
 #
 
 DISTNAME=	sablevm-1.1.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sablevm/} \
 		http://devel.sablevm.org/download/1.1.3/
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.sablevm.org/
 COMMENT=	SableVM free Java virtual machine
 
 DEPENDS+=	unzip>=5.50:../../archivers/unzip
-DEPENDS+=	sablevm-classpath-1.1.3nb2:../../lang/sablevm-classpath
+DEPENDS+=	sablevm-classpath-1.1.3nb3:../../lang/sablevm-classpath
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
