@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.284 2005/09/22 01:46:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.285 2005/09/22 11:56:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -832,7 +832,7 @@ sub checkfile_distinfo($$) {
 		next unless $line->text =~ /^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
 		my ($alg, $patch, $sum) = ($1, $2, $3);
 
-		if ($patch =~ /^patch-[-A-Za-z0-9_.]+$/) {
+		if ($patch =~ /^patch-[A-Za-z0-9]+$/) {
 			if (-f "${dir}/$patchdir/$patch") {
 				my $chksum = `sed -e '/\$NetBSD.*/d' $dir/$patchdir/$patch | digest $alg`;
 				$chksum =~ s/\r*\n*\z//;
@@ -842,8 +842,8 @@ sub checkfile_distinfo($$) {
 			} else {
 				$line->log_error("$patch does not exist.");
 			}
-			$in_distinfo{$patch} = true;
 		}
+		$in_distinfo{$patch} = true;
 	}
 	checklines_trailing_empty_lines($distinfo);
 
@@ -2491,9 +2491,12 @@ sub checkdir_package($) {
 		} elsif ($f =~ qr"/PLIST[^/]*$") {
 			$opt_check_PLIST and checkfile_PLIST($dir, $f);
 
-		} elsif ($f =~ qr"/patches/patch-[-A-Za-z0-9]*$") {
+		} elsif ($f =~ qr"/patches/patch-[A-Za-z0-9]*$") {
 			$have_patches = true;
 			$opt_check_patches and checkfile_patches_patch($dir, $f);
+
+		} elsif ($f =~ qr"/patches/[^/]*$") {
+			log_warning($f, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
 
 		} elsif (-T $f) {
 			$opt_check_extra and checkfile_extra($dir, $f);
