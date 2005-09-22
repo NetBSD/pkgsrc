@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 18:02:39 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/09/22 04:30:41 minskim Exp $
 #
 
 DISTNAME=	xhippo-3.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio x11
 MASTER_SITES=	${MASTER_SITE_GNU:=xhippo/}
 
@@ -10,7 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/xhippo/xhippo.html
 COMMENT=	Generic playlist manager for UNIX
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
+USE_PKGINSTALL=		yes
+USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ENV+=	--with-gnome=no
 
