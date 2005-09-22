@@ -1,0 +1,26 @@
+$NetBSD: patch-ae,v 1.5 2005/09/22 12:07:29 rillig Exp $
+
+ISO C90 does not allow declarations after code.
+
+--- address_gui.c.orig	Sun Feb 22 20:34:23 2004
++++ address_gui.c	Thu Sep 22 13:59:00 2005
+@@ -1426,14 +1426,16 @@ void cb_dialer(GtkWidget *widget, gpoint
+    char *Px;
+    char number[100];
+    char ext[100];
+-
+-   number[0]=ext[0]='\0';
+-   text=data;
+ #ifdef ENABLE_GTK2
+    GtkTextIter    start_iter;
+    GtkTextIter    end_iter;
+    GtkTextBuffer *text_buffer;
++#endif
+ 
++   number[0]=ext[0]='\0';
++   text=data;
++
++#ifdef ENABLE_GTK2
+    text_buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(text));
+    gtk_text_buffer_get_bounds(GTK_TEXT_BUFFER(text),&start_iter,&end_iter);
+    str = gtk_text_buffer_get_text(GTK_TEXT_BUFFER(text),&start_iter,&end_iter,TRUE);
