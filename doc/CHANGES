@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11167 2005/09/22 11:55:54 adrianp Exp $
+$NetBSD: CHANGES,v 1.11168 2005/09/22 11:57:38 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4074,3 +4074,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/ifp-line to 0.2.4.4nb1 [minskim 2005-09-22]
 	Updated audio/xhippo to 3.3nb5 [minskim 2005-09-22]
 	Updated devel/mantis to 1.0.0rc2nb1 [adrianp 2005-09-22]
+	Updated pkgtools/pkglint to 4.21.2 [rillig 2005-09-22]
