@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/03/22 16:27:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/09/22 00:46:57 minskim Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -77,6 +77,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/zenity-0.1.mo
@@ -86,8 +87,10 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/ug/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/zenity-0.1.mo
 share/omf/zenity/zenity-C.omf
