@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/09/05 03:52:49 taca Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/22 01:40:23 minskim Exp $
 
 DISTNAME=	RedCloth-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-redcloth-${VER}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://rubyforge.org/frs/download.php/2896/
 
