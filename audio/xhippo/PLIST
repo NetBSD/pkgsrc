@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:16 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/09/22 04:30:41 minskim Exp $
 bin/xhippo
+man/man1/xhippo.1
 share/doc/xhippo/BUGS
 share/doc/xhippo/ChangeLog
 share/doc/xhippo/README
@@ -9,5 +10,5 @@ share/doc/xhippo/xhippo.txt.gz
 share/doc/xhippo/xhippo.sgml
 share/doc/xhippo/xhippo.gtkrc
 share/doc/xhippo/xhippo.config.example
-@exec if [ ! -f %D/etc/xhippo.config ]; then cp %D/%F %D/etc/xhippo.config ; fi
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xhippo.mo
 @dirrm share/doc/xhippo
