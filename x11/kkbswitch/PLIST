@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/22 01:13:37 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/09/22 13:26:11 wiz Exp $
 bin/kkbswitch
 man/man1/kkbswitch.1
 share/doc/kde/HTML/en/kkbswitch/code_style.png
@@ -22,8 +22,8 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kkbswitch.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kkbswitch.mo
 @comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/kkbswitch
-@comment in kde: @dirrm share/kde/apps/kconf_update                            
-@comment in kde: @dirrm share/kde/apps                                         
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Utilities
 @dirrm share/doc/kde/HTML/en/kkbswitch
 @comment in kde: @dirrm share/doc/kde/HTML/en
