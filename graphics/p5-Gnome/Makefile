@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2005/08/06 06:19:21 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/22 14:56:56 wiz Exp $
 #
 
 .include "../../x11/p5-gtk/Makefile.common"
 
 PKGNAME=	p5-Gnome-${GTKPERL_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	adrianp@NetBSD.org
 COMMENT=	Perl bindings for Gnome
 
-DEPENDS+=	p5-Gdk-Imlib-${GTKPERL_VERSION}:../../graphics/p5-Gdk-Imlib
+DEPENDS+=	p5-Gdk-Imlib-${GTKPERL_VERSION}nb1:../../graphics/p5-Gdk-Imlib
 
 MAKE_PARAMS=	INSTALLMAN3DIR=${PREFIX}/man/man3
 PERL5_PACKLIST=	auto/Gnome/.packlist
