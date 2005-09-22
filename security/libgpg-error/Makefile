@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:30 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/22 09:11:37 xtraeme Exp $
 #
 
 DISTNAME=	libgpg-error-1.0
@@ -18,7 +18,9 @@ USE_PKGLOCALEDIR=	YES
 .include "../../mk/bsd.prefs.mk"
 
 # XXX See HACKS
-.if ${OPSYS} != IRIX
+.if ${OPSYS} == IRIX || !empty(MACHINE_PLATFORM:MNetBSD-3*)
+USE_TOOLS+=		nawk
+.else
 USE_TOOLS+=		gawk
 .endif
 
