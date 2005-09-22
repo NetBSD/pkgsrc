@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/06/17 04:49:48 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/22 02:04:03 minskim Exp $
 
 DISTNAME=	grun-0.9.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.geocities.com/ResearchTriangle/Facility/1468/sg/
 
@@ -10,6 +10,7 @@ HOMEPAGE=	${MASTER_SITES}/grun.html
 COMMENT=	GTK+ based Run dialog
 
 GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake
 PTHREAD_OPTS+=		require
 
