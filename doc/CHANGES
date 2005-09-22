@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11158 2005/09/22 01:41:14 minskim Exp $
+$NetBSD: CHANGES,v 1.11159 2005/09/22 01:48:28 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4065,3 +4065,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/kannel to 1.4.0nb1 [minskim 2005-09-22]
 	Updated wm/afterstep to 2.1.2nb1 [minskim 2005-09-22]
 	Updated textproc/ruby-redcloth to 3.0.3nb1 [minskim 2005-09-22]
+	Updated pkgtools/pkglint to 4.21.1 [rillig 2005-09-22]
