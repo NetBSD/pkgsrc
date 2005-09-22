@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2005/09/22 22:00:41 jlam Exp $
 
 DISTNAME=		nmh-1.0.4
 PKGREVISION=		6
@@ -20,11 +20,12 @@ CONFLICTS+=		ja-mh6-[0-9]*
 # Locks supported by `mail.local' are ".lock" and flock(2).
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 # Mail Transport Agent - either "smtp" or "sendmail"
 NMH_MTA?=		smtp
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/nmh
@@ -87,13 +88,6 @@ CONF_FILES=		# empty
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .undef f
-
-.if defined(NMH_HASH_BACKUP) && (${NMH_HASH_BACKUP} == yes)
-post-configure:
-	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.bak
-	${SED} -e 's/^\(#define  *BACKUP_PREFIX\)  *.*/\1 "#"/' \
-	    < ${WRKSRC}/config.h.bak > ${WRKSRC}/config.h
-.endif
 
 # This hopefully makes sure the permissions and ownership are right.
 pre-install:
