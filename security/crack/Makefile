@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/09/22 20:58:50 bouyer Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.task.gda.pl/mirror/ftp.cert.org/pub/tools/crack/ \
 		ftp://ftp.cs.umn.edu/mirror00/ftp.win.tue.nl/pub/security/ \
