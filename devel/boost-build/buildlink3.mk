@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/08/12 20:58:45 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/09/22 22:06:08 kristerw Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BOOST_BUILD_BUILDLINK3_MK:=	${BOOST_BUILD_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nboost-build}
 BUILDLINK_PACKAGES+=	boost-build
 
 .if !empty(BOOST_BUILD_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.boost-build+=		boost-build>=1.33.*
+BUILDLINK_DEPENDS.boost-build+=		boost-build-1.33.*
 BUILDLINK_DEPMETHOD.boost-build?=	build
 BUILDLINK_PKGSRCDIR.boost-build?=	../../devel/boost-build
 .endif	# BOOST_BUILD_BUILDLINK3_MK
