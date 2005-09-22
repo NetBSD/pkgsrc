@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2004/08/24 16:32:42 aymeric Exp $
+$NetBSD: patch-ac,v 1.5 2005/09/22 14:14:04 jlam Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2004-04-22 22:50:05.000000000 +0200
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2005-04-28 16:01:33.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
 @@ -49,6 +49,9 @@ ifneq (,$(filter FreeBSD NetBSD OpenBSD 
  ifeq (86,$(findstring 86,$(OS_TEST)))

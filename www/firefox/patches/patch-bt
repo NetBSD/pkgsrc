@@ -1,8 +1,7 @@
-$NetBSD: patch-bt,v 1.3 2004/11/01 18:07:24 kristerw Exp $
+$NetBSD: patch-bt,v 1.4 2005/09/22 14:14:04 jlam Exp $
 
-diff -ru ../Orig/mozilla/nsprpub/pr/src/io/prprf.c ./nsprpub/pr/src/io/prprf.c
---- ../Orig/mozilla/nsprpub/pr/src/io/prprf.c	2004-03-09 12:18:19.000000000 +0900
-+++ ./nsprpub/pr/src/io/prprf.c	2004-06-15 23:56:50.000000000 +0900
+--- nsprpub/pr/src/io/prprf.c.orig	2004-03-09 03:18:19.000000000 +0000
++++ nsprpub/pr/src/io/prprf.c
 @@ -53,6 +53,11 @@
  */
  #if (defined(LINUX) && defined(__x86_64__))

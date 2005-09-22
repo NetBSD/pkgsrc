@@ -1,7 +1,7 @@
-$NetBSD: patch-cd,v 1.1 2004/10/21 00:55:36 xtraeme Exp $
+$NetBSD: patch-cd,v 1.2 2005/09/22 14:14:04 jlam Exp $
 
---- modules/plugin/base/public/nptypes.h.orig	2004-10-21 01:07:27.000000000 +0200
-+++ modules/plugin/base/public/nptypes.h	2004-10-21 01:09:38.000000000 +0200
+--- modules/plugin/base/public/nptypes.h.orig	2004-09-01 16:59:55.000000000 +0000
++++ modules/plugin/base/public/nptypes.h
 @@ -78,8 +78,10 @@
      typedef int bool;
    #endif

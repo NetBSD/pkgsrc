@@ -1,9 +1,8 @@
-$NetBSD: patch-bw,v 1.3 2004/06/15 23:19:50 reinoud Exp $
+$NetBSD: patch-bw,v 1.4 2005/09/22 14:14:04 jlam Exp $
 
-diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp	2001-09-29 05:12:52.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp	2004-05-11 16:29:31.000000000 +0900
-@@ -188,6 +188,50 @@
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp.orig	2001-09-28 20:12:52.000000000 +0000
++++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp
+@@ -188,6 +188,50 @@ __asm__(
   * nsresult nsXPTCStubBase::Stub##n()
   *  Sets register $1 to "methodIndex" and jumps to SharedStub.
   */
@@ -54,7 +53,7 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha
  #define STUB_ENTRY(n) \
  __asm__( \
      "#### Stub"#n" ####\n" \
-@@ -204,6 +248,7 @@
+@@ -204,6 +248,7 @@ __asm__( \
      "br $31,$SharedStub..ng\n\t" \
      ".end Stub"#n"__14nsXPTCStubBase" \
      );

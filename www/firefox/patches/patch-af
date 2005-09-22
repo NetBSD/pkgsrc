@@ -1,8 +1,7 @@
-$NetBSD: patch-af,v 1.2 2004/06/23 16:47:12 taya Exp $
+$NetBSD: patch-af,v 1.3 2005/09/22 14:14:04 jlam Exp $
 
-diff -ru ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c ./security/nss/lib/freebl/unix_rand.c
---- ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c	2003-05-31 08:31:19.000000000 +0900
-+++ ./security/nss/lib/freebl/unix_rand.c	2004-06-15 23:55:49.000000000 +0900
+--- security/nss/lib/freebl/unix_rand.c.orig	2003-05-30 23:31:19.000000000 +0000
++++ security/nss/lib/freebl/unix_rand.c
 @@ -32,6 +32,7 @@
   */
  
@@ -11,7 +10,7 @@ diff -ru ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c ./security/nss/lib/
  #include <string.h>
  #include <signal.h>
  #include <unistd.h>
-@@ -691,7 +692,11 @@
+@@ -691,7 +692,11 @@ safe_popen(char *cmd)
  	/* dup write-side of pipe to stderr and stdout */
  	if (p[1] != 1) dup2(p[1], 1);
  	if (p[1] != 2) dup2(p[1], 2);
