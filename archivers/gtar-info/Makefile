@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:44:48 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/09/22 16:48:34 reed Exp $
 #
 
 DISTNAME=       tar-1.15.1
 PKGNAME=	gtar-info-1.15.1
 SVR4_PKGNAME=	gtari
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
 
@@ -18,11 +19,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+INSTALLATION_DIRS=	${INFODIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${INFO_DIR}
-	for i in ${WRKSRC}/doc/tar.info* ; \
-	do \
-	    ${INSTALL_DATA} $${i} ${PREFIX}/${INFO_DIR} ; \
-	done
+	${INSTALL_DATA} ${WRKSRC}/doc/tar.info ${PREFIX}/${INFO_DIR}
 
 .include "../../mk/bsd.pkg.mk"
