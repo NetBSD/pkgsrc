@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.285 2005/09/22 11:56:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.286 2005/09/22 15:54:23 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1545,6 +1545,15 @@ sub load_package_Makefile($$$$$) {
 		foreach my $line (@{$loglines}) {
 			printf("%s\n", $line->to_string());
 		}
+	}
+
+	# HACK
+	if ($whole !~ qr"\nUSE_PHP_EXT_PATCHES") {
+		$whole =~ s,\nPATCHDIR=.*PHPPKGSRCDIR.*,,;
+	}
+	# HACK
+	if ($whole =~ qr"\nPECL_VERSION") {
+		$whole =~ s,\nDISTINFO_FILE=.*PHPPKGSRCDIR.*,,;
 	}
 
 	$pkgdir = expand_variable($whole, "PKGDIR");
