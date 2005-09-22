@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2005/09/20 18:46:32 adrianp Exp $
+# $NetBSD: Makefile,v 1.36 2005/09/22 16:13:17 adrianp Exp $
 
 DISTNAME=	freeradius-1.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
