@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11156 2005/09/22 01:02:41 minskim Exp $
+$NetBSD: CHANGES,v 1.11157 2005/09/22 01:25:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4063,3 +4063,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/rt3 to 3.2.3nb2 [cube 2005-09-21]
 	Updated x11/zenity to 2.10.1nb1 [minskim 2005-09-22]
 	Updated www/kannel to 1.4.0nb1 [minskim 2005-09-22]
+	Updated wm/afterstep to 2.1.2nb1 [minskim 2005-09-22]
