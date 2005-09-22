@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11178 2005/09/22 19:45:45 jlam Exp $
+$NetBSD: CHANGES,v 1.11179 2005/09/22 21:13:46 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4087,5 +4087,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated news/inn to 2.4.1nb8 [tron 2005-09-22]
 	Updated pkgtools/pkglint to 4.21.3 [rillig 2005-09-22]
 	Updated net/freeradius to 1.0.5nb2 [adrianp 2005-09-22]
-	Updated gtar-info to 1.15.1nb1 [reed 2005-09-22]
+	Updated archivers/gtar-info to 1.15.1nb1 [reed 2005-09-22]
 	Updated security/mit-krb5 to 1.4.2nb2 [jlam 2005-09-22]
