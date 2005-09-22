@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11180 2005/09/22 21:34:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.11181 2005/09/22 21:35:33 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4090,3 +4090,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/gtar-info to 1.15.1nb1 [reed 2005-09-22]
 	Updated security/mit-krb5 to 1.4.2nb2 [jlam 2005-09-22]
 	Updated x11/wdm to 1.25nb6 [jmmv 2005-09-22]
+	Updated security/crack to 5.0nb1 [bouyer 2005-09-22]
