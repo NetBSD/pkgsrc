@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/05/03 15:51:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/09/22 02:08:14 minskim Exp $
 man/man8/cfagent.8
 man/man8/cfengine.8
 man/man8/cfenvd.8
@@ -15,6 +15,7 @@ sbin/cfexecd
 sbin/cfkey
 sbin/cfrun
 sbin/cfservd
+sbin/vicf
 share/cfengine/cfengine.el
 share/examples/cfengine/cf.chflags.example
 share/examples/cfengine/cf.freebsd.example
