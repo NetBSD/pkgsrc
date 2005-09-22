@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/07/30 18:28:25 recht Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/09/22 01:54:35 minskim Exp $
 bin/rst2html.py
 bin/rst2latex.py
 ${PYSITELIB}/docutils/__init__.py
@@ -37,6 +37,9 @@ ${PYSITELIB}/docutils/languages/eo.pyo
 ${PYSITELIB}/docutils/languages/es.py
 ${PYSITELIB}/docutils/languages/es.pyc
 ${PYSITELIB}/docutils/languages/es.pyo
+${PYSITELIB}/docutils/languages/fi.py
+${PYSITELIB}/docutils/languages/fi.pyc
+${PYSITELIB}/docutils/languages/fi.pyo
 ${PYSITELIB}/docutils/languages/fr.py
 ${PYSITELIB}/docutils/languages/fr.pyc
 ${PYSITELIB}/docutils/languages/fr.pyo
@@ -55,6 +58,9 @@ ${PYSITELIB}/docutils/languages/sk.pyo
 ${PYSITELIB}/docutils/languages/sv.py
 ${PYSITELIB}/docutils/languages/sv.pyc
 ${PYSITELIB}/docutils/languages/sv.pyo
+${PYSITELIB}/docutils/languages/zh_tw.py
+${PYSITELIB}/docutils/languages/zh_tw.pyc
+${PYSITELIB}/docutils/languages/zh_tw.pyo
 ${PYSITELIB}/docutils/nodes.py
 ${PYSITELIB}/docutils/nodes.pyc
 ${PYSITELIB}/docutils/nodes.pyo
@@ -112,6 +118,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/eo.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/es.py
 ${PYSITELIB}/docutils/parsers/rst/languages/es.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/es.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/fi.py
+${PYSITELIB}/docutils/parsers/rst/languages/fi.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/fi.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.py
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.pyo
@@ -130,6 +139,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/sk.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/sv.py
 ${PYSITELIB}/docutils/parsers/rst/languages/sv.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/sv.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/zh_tw.py
+${PYSITELIB}/docutils/parsers/rst/languages/zh_tw.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/zh_tw.pyo
 ${PYSITELIB}/docutils/parsers/rst/roles.py
 ${PYSITELIB}/docutils/parsers/rst/roles.pyc
 ${PYSITELIB}/docutils/parsers/rst/roles.pyo
