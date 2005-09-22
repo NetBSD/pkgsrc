@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/09/22 20:58:50 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/09/22 21:15:38 bouyer Exp $
 sbin/Crack
 sbin/Reporter
 share/crack/conf/dictrun.conf
@@ -138,8 +138,7 @@ libexec/crack/xdawg
 libexec/crack/cracker
 libexec/crack/dictfilt
 libexec/crack/kickdict
-@exec ${MKDIR} %D/share/crack/run
-@exec %D/sbin/Crack -makedict
+@unexec /bin/rm -rf %D/crack
 @unexec /bin/rm -rf %D/share/crack
 @unexec /bin/rm -rf %D/share/doc/crack
 @unexec /bin/rm -rf %D/share/libexec/crack
