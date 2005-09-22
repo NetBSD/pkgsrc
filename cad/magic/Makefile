@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:40 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/22 15:28:35 minskim Exp $
 #
 
 DISTNAME=	magic-7.1
@@ -12,6 +12,13 @@ COMMENT=	Integrated circuit layout system
 
 USE_TOOLS+=	gmake
 MAKE_ENV+=	MAGIC_HOME=${PREFIX}
+
+.include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN} == "big"
+CPPFLAGS+=	-DIS_BIG_ENDIAN
+.else
+CPPFLAGS+=	-DIS_LITTLE_ENDIAN
+.endif
 
 .include "../../mk/x11.buildlink3.mk"
 
