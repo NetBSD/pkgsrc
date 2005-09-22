@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.113 2005/09/16 15:06:52 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q2,v 1.1.2.114 2005/09/22 17:37:15 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q2 branch:
@@ -145,7 +145,7 @@ Pullup ticket 653 - requested by Juan Romero Pardines
 security update for jabberd2
 Pullup ticket 646 - requested by Klaus Heinz
 MASTER_SITES update for spamassassin
-Pullup ticket 645 - requested by Jeremy C. Reed 
+Pullup ticket 645 - requested by Jeremy C. Reed
 security update for mozilla
 Pullup ticket 650 - requested by Shin'ichiro TAYA
 security update for mozilla
@@ -305,3 +305,11 @@ Pullup ticket 756 - requested by Takahiro Kambe
 bugfix update for squid
 Pullup ticket 759 - requested by Takahiro Kambe
 patchfile fix for squid
+Pullup ticket #769 - requested by Takahiro Kambe
+security and portability fixes for ruby18-base
+Pullup ticket 771 - requested by Takahiro Kambe
+security and portability fixes for ruby16-base
+Pullup ticket 768 - requested by Matthias Scheler
+security update for firefox-bin
+Pullup ticket 772 - requested by Takahiro Kambe
+bugfix update for squid
