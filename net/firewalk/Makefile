@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/23 20:06:26 wiz Exp $
 
 DISTNAME=	firewalk-5.0
 CATEGORIES=	net security
 MASTER_SITES=	http://www.packetfactory.net/firewalk/dist/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	xs@nitric.net
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.packetfactory.net/Projects/firewalk/
 COMMENT=	Determines the filter rules on a packet forwarding device
 
