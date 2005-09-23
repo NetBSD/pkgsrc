@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11183 2005/09/23 13:09:48 rillig Exp $
+$NetBSD: CHANGES,v 1.11184 2005/09/23 13:26:09 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4093,3 +4093,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/crack to 5.0nb1 [bouyer 2005-09-22]
 	Updated archivers/p7zip to 4.27 [wiz 2005-09-23]
 	Updated pkgtools/pkglint to 4.21.4 [rillig 2005-09-22]
+	Updated devel/cpuflags to 0.93 [abs 2005-09-22]
