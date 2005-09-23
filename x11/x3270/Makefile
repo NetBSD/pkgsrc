@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/03/24 21:13:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/09/23 20:05:07 wiz Exp $
 
 DISTNAME=	x3270-3213
 PKGNAME=	x3270-3.2.13
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Peaks/7814/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=     volf@oasis.IAEhv.nl
+MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Peaks/7814/
 COMMENT=	3270 Terminal emulator
 
