@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2005/08/22 18:51:04 reed Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/09/23 22:05:17 reed Exp $
 bin/gwenview
-include/libgwenview_export.h
 lib/kde3/gwenview.la
 lib/kde3/libgvdirpart.la
 lib/kde3/libgvimagepart.la
@@ -10,6 +9,7 @@ man/man1/gwenview.1
 share/applications/kde/gwenview.desktop
 share/doc/kde/HTML/da/gwenview/common
 share/doc/kde/HTML/da/gwenview/docked_windows.docbook
+share/doc/kde/HTML/da/gwenview/external_tools.docbook
 share/doc/kde/HTML/da/gwenview/index.cache.bz2
 share/doc/kde/HTML/da/gwenview/index.docbook
 share/doc/kde/HTML/da/gwenview/interface.docbook
@@ -29,19 +29,19 @@ share/doc/kde/HTML/de/gwenview/introduction.docbook
 share/doc/kde/HTML/de/gwenview/keybindings.docbook
 share/doc/kde/HTML/de/gwenview/mouse.docbook
 share/doc/kde/HTML/de/gwenview/view_mode.png
-share/doc/kde/HTML/en/doc/browse_mode.png
-share/doc/kde/HTML/en/doc/common
-share/doc/kde/HTML/en/doc/dock_grip.png
-share/doc/kde/HTML/en/doc/docked_windows.docbook
-share/doc/kde/HTML/en/doc/external_tools.docbook
-share/doc/kde/HTML/en/doc/external_tools_dialog.png
-share/doc/kde/HTML/en/doc/index.cache.bz2
-share/doc/kde/HTML/en/doc/index.docbook
-share/doc/kde/HTML/en/doc/interface.docbook
-share/doc/kde/HTML/en/doc/introduction.docbook
-share/doc/kde/HTML/en/doc/keybindings.docbook
-share/doc/kde/HTML/en/doc/mouse.docbook
-share/doc/kde/HTML/en/doc/view_mode.png
+share/doc/kde/HTML/en/gwenview/browse_mode.png
+share/doc/kde/HTML/en/gwenview/common
+share/doc/kde/HTML/en/gwenview/dock_grip.png
+share/doc/kde/HTML/en/gwenview/docked_windows.docbook
+share/doc/kde/HTML/en/gwenview/external_tools.docbook
+share/doc/kde/HTML/en/gwenview/external_tools_dialog.png
+share/doc/kde/HTML/en/gwenview/index.cache.bz2
+share/doc/kde/HTML/en/gwenview/index.docbook
+share/doc/kde/HTML/en/gwenview/interface.docbook
+share/doc/kde/HTML/en/gwenview/introduction.docbook
+share/doc/kde/HTML/en/gwenview/keybindings.docbook
+share/doc/kde/HTML/en/gwenview/mouse.docbook
+share/doc/kde/HTML/en/gwenview/view_mode.png
 share/doc/kde/HTML/et/gwenview/common
 share/doc/kde/HTML/et/gwenview/docked_windows.docbook
 share/doc/kde/HTML/et/gwenview/external_tools.docbook
@@ -119,27 +119,6 @@ share/kde/apps/gvdirpart/gvdirpart.rc
 share/kde/apps/gvimagepart/gvimagepart.rc
 share/kde/apps/gwenview/cursors/zoom.png
 share/kde/apps/gwenview/gwenviewui.rc
-share/kde/apps/gwenview/icons/crystalsvg/16x16/actions/flip.png
-share/kde/apps/gwenview/icons/crystalsvg/16x16/actions/mirror.png
-share/kde/apps/gwenview/icons/crystalsvg/16x16/actions/rotate_left.png
-share/kde/apps/gwenview/icons/crystalsvg/16x16/actions/rotate_right.png
-share/kde/apps/gwenview/icons/crystalsvg/16x16/actions/slideshow.png
-share/kde/apps/gwenview/icons/crystalsvg/22x22/actions/flip.png
-share/kde/apps/gwenview/icons/crystalsvg/22x22/actions/mirror.png
-share/kde/apps/gwenview/icons/crystalsvg/22x22/actions/rotate_left.png
-share/kde/apps/gwenview/icons/crystalsvg/22x22/actions/rotate_right.png
-share/kde/apps/gwenview/icons/crystalsvg/22x22/actions/slideshow.png
-share/kde/apps/gwenview/icons/crystalsvg/32x32/actions/flip.png
-share/kde/apps/gwenview/icons/crystalsvg/32x32/actions/mirror.png
-share/kde/apps/gwenview/icons/crystalsvg/32x32/actions/rotate_left.png
-share/kde/apps/gwenview/icons/crystalsvg/32x32/actions/rotate_right.png
-share/kde/apps/gwenview/icons/crystalsvg/32x32/actions/slideshow.png
-share/kde/apps/gwenview/icons/crystalsvg/48x48/actions/flip.png
-share/kde/apps/gwenview/icons/crystalsvg/48x48/actions/mirror.png
-share/kde/apps/gwenview/icons/crystalsvg/48x48/actions/rotate_left.png
-share/kde/apps/gwenview/icons/crystalsvg/48x48/actions/rotate_right.png
-share/kde/apps/gwenview/icons/crystalsvg/48x48/actions/slideshow.png
-share/kde/apps/gwenview/icons/crystalsvg/scalable/actions/slideshow.svgz
 share/kde/apps/gwenview/icons/hicolor/16x16/actions/dnd1.png
 share/kde/apps/gwenview/icons/hicolor/16x16/actions/dnd2.png
 share/kde/apps/gwenview/icons/hicolor/16x16/actions/dnd3.png
@@ -148,6 +127,27 @@ share/kde/apps/gwenview/icons/hicolor/16x16/actions/dnd5.png
 share/kde/apps/gwenview/icons/hicolor/16x16/actions/dnd6.png
 share/kde/apps/gwenview/icons/hicolor/16x16/actions/dnd7.png
 share/kde/apps/gwenview/icons/hicolor/16x16/actions/dnd8.png
+share/kde/apps/gwenview/icons/hicolor/16x16/actions/flip.png
+share/kde/apps/gwenview/icons/hicolor/16x16/actions/mirror.png
+share/kde/apps/gwenview/icons/hicolor/16x16/actions/rotate_left.png
+share/kde/apps/gwenview/icons/hicolor/16x16/actions/rotate_right.png
+share/kde/apps/gwenview/icons/hicolor/16x16/actions/slideshow.png
+share/kde/apps/gwenview/icons/hicolor/22x22/actions/flip.png
+share/kde/apps/gwenview/icons/hicolor/22x22/actions/mirror.png
+share/kde/apps/gwenview/icons/hicolor/22x22/actions/rotate_left.png
+share/kde/apps/gwenview/icons/hicolor/22x22/actions/rotate_right.png
+share/kde/apps/gwenview/icons/hicolor/22x22/actions/slideshow.png
+share/kde/apps/gwenview/icons/hicolor/32x32/actions/flip.png
+share/kde/apps/gwenview/icons/hicolor/32x32/actions/mirror.png
+share/kde/apps/gwenview/icons/hicolor/32x32/actions/rotate_left.png
+share/kde/apps/gwenview/icons/hicolor/32x32/actions/rotate_right.png
+share/kde/apps/gwenview/icons/hicolor/32x32/actions/slideshow.png
+share/kde/apps/gwenview/icons/hicolor/48x48/actions/flip.png
+share/kde/apps/gwenview/icons/hicolor/48x48/actions/mirror.png
+share/kde/apps/gwenview/icons/hicolor/48x48/actions/rotate_left.png
+share/kde/apps/gwenview/icons/hicolor/48x48/actions/rotate_right.png
+share/kde/apps/gwenview/icons/hicolor/48x48/actions/slideshow.png
+share/kde/apps/gwenview/icons/hicolor/scalable/actions/slideshow.svgz
 share/kde/apps/gwenview/thumbnail/wait.png
 share/kde/apps/gwenview/tools/gimp.desktop
 share/kde/apps/gwenview/tools/konqueror.desktop
@@ -157,14 +157,20 @@ share/kde/apps/kconf_update/gwenview_thumbnail_size.sh
 share/kde/apps/kconf_update/gwenview_thumbnail_size.upd
 share/kde/apps/konqueror/servicemenus/konqgwenview.desktop
 share/kde/config.kcfg/gvconfig.kcfg
-share/kde/icons/crystalsvg/16x16/apps/imagegallery.png
-share/kde/icons/crystalsvg/22x22/apps/imagegallery.png
+share/kde/icons/crystalsvg/16x16/apps/gvdirpart.png
+share/kde/icons/crystalsvg/22x22/apps/gvdirpart.png
+share/kde/icons/crystalsvg/32x32/apps/gvdirpart.png
+share/kde/icons/crystalsvg/scalable/apps/gvdirpart.svg
 share/kde/icons/hicolor/128x128/apps/gwenview.png
+share/kde/icons/hicolor/16x16/apps/gvdirpart.png
 share/kde/icons/hicolor/16x16/apps/gwenview.png
+share/kde/icons/hicolor/22x22/apps/gvdirpart.png
 share/kde/icons/hicolor/22x22/apps/gwenview.png
+share/kde/icons/hicolor/32x32/apps/gvdirpart.png
 share/kde/icons/hicolor/32x32/apps/gwenview.png
 share/kde/icons/hicolor/48x48/apps/gwenview.png
 share/kde/icons/hicolor/64x64/apps/gwenview.png
+share/kde/icons/hicolor/scalable/apps/gvdirpart.svg
 share/kde/icons/hicolor/scalable/apps/gwenview.svgz
 share/kde/services/gvdirpart.desktop
 share/kde/services/gvimagepart.desktop
@@ -221,6 +227,8 @@ ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gwenview.mo
 @comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/kde/config.kcfg
@@ -228,20 +236,17 @@ ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gwenview.mo
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/gwenview/tools
 @dirrm share/kde/apps/gwenview/thumbnail
+@dirrm share/kde/apps/gwenview/icons/hicolor/scalable/actions
+@dirrm share/kde/apps/gwenview/icons/hicolor/scalable
+@dirrm share/kde/apps/gwenview/icons/hicolor/48x48/actions
+@dirrm share/kde/apps/gwenview/icons/hicolor/48x48
+@dirrm share/kde/apps/gwenview/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/gwenview/icons/hicolor/32x32
+@dirrm share/kde/apps/gwenview/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/gwenview/icons/hicolor/22x22
 @dirrm share/kde/apps/gwenview/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/gwenview/icons/hicolor/16x16
 @dirrm share/kde/apps/gwenview/icons/hicolor
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/scalable/actions
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/scalable
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/48x48
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/32x32
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/22x22
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/gwenview/icons/crystalsvg/16x16
-@dirrm share/kde/apps/gwenview/icons/crystalsvg
 @dirrm share/kde/apps/gwenview/icons
 @dirrm share/kde/apps/gwenview/cursors
 @dirrm share/kde/apps/gwenview
@@ -264,7 +269,7 @@ ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gwenview.mo
 @comment in kde: @dirrm share/doc/kde/HTML/fr
 @dirrm share/doc/kde/HTML/et/gwenview
 @comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/en/doc
+@dirrm share/doc/kde/HTML/en/gwenview
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML/de/gwenview
 @comment in kde: @dirrm share/doc/kde/HTML/de
