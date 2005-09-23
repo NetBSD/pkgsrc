@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/10 20:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/09/23 20:08:05 wiz Exp $
 #
 
 DISTNAME=		libzvt-2.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libzvt/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		sab@posix.org.uk
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Virtual Terminal Widget Library for GNOME2
 
