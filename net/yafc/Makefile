@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/09/23 05:50:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/23 16:27:48 hubertf Exp $
 
 DISTNAME=	yafc-0.7.10
 PKGREVISION=	2
@@ -27,6 +27,6 @@ LIBS+=			-lcrypt -lcrypto
 
 .include "../../devel/readline/buildlink3.mk"
 .if defined(KERBEROS)
-.endif
 .include "../../mk/krb5.buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
