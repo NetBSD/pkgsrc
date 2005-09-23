@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.286 2005/09/22 15:54:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.287 2005/09/23 13:08:23 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -840,7 +840,7 @@ sub checkfile_distinfo($$) {
 					$line->log_error("Checksum of $patch differs. Rerun '$conf_make makepatchsum'.");
 				}
 			} else {
-				$line->log_error("$patch does not exist.");
+				$line->log_warning("$patch does not exist.");
 			}
 		}
 		$in_distinfo{$patch} = true;
@@ -1549,10 +1549,12 @@ sub load_package_Makefile($$$$$) {
 
 	# HACK
 	if ($whole !~ qr"\nUSE_PHP_EXT_PATCHES") {
+		log_info($fname, NO_LINE_NUMBER, "[hack] USE_PHP_EXT_PATCHES");
 		$whole =~ s,\nPATCHDIR=.*PHPPKGSRCDIR.*,,;
 	}
 	# HACK
 	if ($whole =~ qr"\nPECL_VERSION") {
+		log_info($fname, NO_LINE_NUMBER, "[hack] PECL_VERSION");
 		$whole =~ s,\nDISTINFO_FILE=.*PHPPKGSRCDIR.*,,;
 	}
 
