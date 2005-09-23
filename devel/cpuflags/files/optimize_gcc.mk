@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.24 2005/09/20 10:58:23 abs Exp $
+# $Id: optimize_gcc.mk,v 1.25 2005/09/23 13:24:17 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -20,11 +20,6 @@ COPT_FLAGS=
 
 # This is a horrible mess, but how else to adjust per package?
 
-TMPPKGNAME=${PKGNAME}
-TMPPKGNAME?=${DISTNAME}
-PKGBASE?=${TMPPKGNAME:C/-[^-]*$//}
-TMPPKGNAME=
-
 COPT_FLAGS+=-ffast-math -fomit-frame-pointer
 
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=firefox firefox-gtk1 galeon galeon-devel
@@ -35,6 +30,10 @@ PKG_EXCLUDE_FAST_MATH+=firefox firefox-gtk1 # v1.0, NetBSD i386/2.0
 .if !defined(USE_GCC3)
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=qt3-libs kdeedu3 koffice
 .endif
+
+TMPPKGNAME=${PKGNAME}
+TMPPKGNAME?=${DISTNAME}
+PKGBASE?=${TMPPKGNAME:C/-[^-]*$//}
 
 .if !empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${PKGBASE})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer//}
@@ -47,6 +46,8 @@ COPT_FLAGS:=    ${COPT_FLAGS:S/-finline-functions//}
 .if !empty(PKG_EXCLUDE_FAST_MATH:M${PKGBASE})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-ffast-math//}
 .endif
+
+TMPPKGNAME=
 
 CFLAGS+=${COPT_FLAGS}
 CXXFLAGS+=${COPT_FLAGS}
