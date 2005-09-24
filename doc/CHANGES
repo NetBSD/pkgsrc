@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11184 2005/09/23 13:26:09 abs Exp $
+$NetBSD: CHANGES,v 1.11185 2005/09/24 00:20:56 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4094,3 +4094,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/p7zip to 4.27 [wiz 2005-09-23]
 	Updated pkgtools/pkglint to 4.21.4 [rillig 2005-09-22]
 	Updated devel/cpuflags to 0.93 [abs 2005-09-22]
+	Updated sysutils/grub to 0.97nb2 [jlam 2005-09-24]
