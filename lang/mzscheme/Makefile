@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/16 06:58:00 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/24 02:30:57 dmcmahill Exp $
 
 DISTNAME=		mzscheme-205.src.unix
 PKGNAME=		mzscheme-205
@@ -18,6 +18,7 @@ EXTRACT_USING=		pax
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i386
+ONLY_FOR_PLATFORM+=	SunOS-*-*
 
 INSTALLATION_DIRS=	man/man1
 
