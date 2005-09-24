@@ -1,0 +1,4 @@
+Picprg is a PIC programmer for a common design of programmer attached to a PC
+parallel port.  This package is for Byron Jeff's adapted version for Brian
+Lane's original software, and supports the Trivial Low Voltage Programmer
+(TLVP).
