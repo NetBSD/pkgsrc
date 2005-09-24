@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2005/09/22 15:28:35 minskim Exp $
+$NetBSD: patch-ab,v 1.5 2005/09/24 02:09:42 dmcmahill Exp $
 
 --- scripts/config.orig	2005-09-22 08:13:16.000000000 -0700
 +++ scripts/config
@@ -16,9 +16,9 @@ $NetBSD: patch-ab,v 1.4 2005/09/22 15:28:35 minskim Exp $
  case "2":
      echo "NetBSD 1.x selected"
 -    set cpp = "/usr/libexec/cpp -P -traditional"
-+    if (-f /usr/libexec/cpp) then
++    if (-f xx/usr/libexec/cpp) then
 +    	set cpp = "/usr/libexec/cpp -P -traditional"
-+    else if (-f /usr/libexec/cpp0) then
++    else if (-f xx/usr/libexec/cpp0) then
 +    	set cpp = "/usr/libexec/cpp0 -P -traditional"
 +    else
 +	set cpp = "cc -E -traditional"
