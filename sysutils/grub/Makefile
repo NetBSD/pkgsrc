@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2005/09/24 00:15:03 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/09/24 00:20:44 jlam Exp $
 #
 
 DISTNAME=	grub-0.97
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/grub/
 
@@ -26,7 +26,7 @@ BUILD_DEFS+=		GRUB_PRESET_COMMAND
 BUILD_DEFS+=		GRUB_SCAN_ARGS
 
 .include "../../devel/binutils/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 
 .if defined(GRUB_NETWORK_CARDS)
 CONFIGURE_ARGS+=	--enable-diskless
