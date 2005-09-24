@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11186 2005/09/24 09:39:18 dsainty Exp $
+$NetBSD: CHANGES,v 1.11187 2005/09/24 21:01:31 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4096,3 +4096,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/cpuflags to 0.93 [abs 2005-09-22]
 	Updated sysutils/grub to 0.97nb2 [jlam 2005-09-24]
 	Added devel/picprg version 2.3d [dsainty 2005-09-24]
+	Updated wm/windowmaker to 0.92.0nb1 [rillig 2005-09-24]
