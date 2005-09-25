@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.15 2005/09/03 23:28:30 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.16 2005/09/25 00:02:27 kristerw Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -66,7 +66,7 @@ CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}
 .for d o g m in ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
 CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}
 .endfor
-_CHECK_FILES_SKIP_FILTER=	${GREP} -v ${CHECK_FILES_SKIP:@f@-e ${f:Q}@}
+_CHECK_FILES_SKIP_FILTER=	${GREP} -vx ${CHECK_FILES_SKIP:@f@-e ${f:Q}@}
 
 ###########################################################################
 # These are the files generated and used by the check-files implementation
