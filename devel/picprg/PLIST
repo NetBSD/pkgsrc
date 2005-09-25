@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/24 09:30:54 dsainty Exp $
-bin/picprg
-share/doc/picprg/README
-share/doc/picprg/README.BAJ
-@dirrm share/doc/picprg
