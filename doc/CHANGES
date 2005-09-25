@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11189 2005/09/25 10:41:50 rillig Exp $
+$NetBSD: CHANGES,v 1.11190 2005/09/25 14:07:10 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1428,7 +1428,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/screws to 0.56 [jmmv 2005-03-20]
 	Updated net/djbdns to 1.05nb6 [schmonz 2005-03-21]
 	Updated security/cfs to 1.4.1nb5 [wiz 2005-03-21]
-	mk/bsd.pkg.mk: archivers/freeze ended for pkgsrc-2005Q1 branch [agc 2005-03-21]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2005Q1 branch [agc 2005-03-21]
 	Updated mail/dspam to 3.4.1 [xtraeme 2005-03-21]
 	Added devel/byacc version 20040328 [tv 2005-03-21]
 	Updated pkgtools/url2pkg to 1.27 [wiz 2005-03-21]
