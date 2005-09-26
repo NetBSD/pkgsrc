@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2005/07/19 16:33:57 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2005/09/26 01:01:46 fredb Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 PKGNAME=		cdrdao-${CDRDAO_VER}
 

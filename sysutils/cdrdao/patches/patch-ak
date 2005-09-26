@@ -1,8 +1,16 @@
-$NetBSD: patch-ak,v 1.1 2005/06/15 21:45:12 adrianp Exp $
+$NetBSD: patch-ak,v 1.2 2005/09/26 01:01:46 fredb Exp $
 
---- trackdb/Track.cc.orig	2005-06-06 22:37:22.000000000 +0100
+--- trackdb/Track.cc.orig	2005-05-09 10:39:47.000000000 -0500
 +++ trackdb/Track.cc
-@@ -596,6 +596,7 @@ bool Track::resolveFilename(const char* 
+@@ -411,6 +411,7 @@ bool Track::recomputeLength()
+   }
+ 
+   update();
++  return true;
+ }
+ 
+ // Sets ISRC code. Expected string: "CCOOOYYSSSSS"
+@@ -596,6 +597,7 @@ bool Track::resolveFilename(const char* 
        }
      }
    }
