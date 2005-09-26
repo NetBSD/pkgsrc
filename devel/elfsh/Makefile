@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:46 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/09/26 14:19:44 wiz Exp $
 #
 
 VERS=		0.51b3
 DISTNAME=	elfsh-${VERS}-portable
 PKGNAME=	elfsh-${VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://elfsh.segfault.net/files/
 EXTRACT_SUFX=	.tgz
