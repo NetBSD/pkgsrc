@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2005/09/16 06:10:15 jlam Exp $
+# $NetBSD: Makefile,v 1.93 2005/09/26 11:47:24 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.6.10
@@ -46,6 +46,8 @@ PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 REQD_DIRS+=		${PREFIX}/libdata/gtk-2.0
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/demos/gtk-demo
+
+.include "../../mk/bsd.prefs.mk"
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 
