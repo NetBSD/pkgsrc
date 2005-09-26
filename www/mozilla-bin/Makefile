@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/07/21 13:24:18 tron Exp $
+# $NetBSD: Makefile,v 1.26 2005/09/26 19:32:47 tron Exp $
 
 MOZILLA=	mozilla
-MOZ_VER=	1.7.10
+MOZ_VER=	1.7.12
 
 COMMENT=	Full featured gecko-based browser (binary pkg)
 
