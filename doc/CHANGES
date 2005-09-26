@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11206 2005/09/26 21:06:11 agc Exp $
+$NetBSD: CHANGES,v 1.11207 2005/09/26 21:47:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4113,3 +4113,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/openttd to 0.4.0.1nb2 [rpaulo 2005-09-26]
 	Updated www/mozilla-bin to 1.7.12 [tron 2005-09-26]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2005Q3 branch [agc 2005-09-26]
+	Updated net/pen to 0.15.0 [xtraeme 2005-09-26]

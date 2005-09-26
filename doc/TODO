@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3903 2005/09/23 13:49:05 schmonz Exp $
+$NetBSD: TODO,v 1.3904 2005/09/26 21:47:32 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -845,7 +845,6 @@ Suggested package updates
 	o pdmenu-1.2.85
 	o pear-HTTP_Request-1.2.4
 	o pear-Net_Socket-1.0.6
-	o pen-0.15.0
 	o pfqueue-0.5.0
 	o pfstat-1.8
 	o phoon-20030120
