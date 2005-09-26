@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11190 2005/09/25 14:07:10 salo Exp $
+$NetBSD: CHANGES,v 1.11191 2005/09/26 01:04:10 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/grub to 0.97nb2 [jlam 2005-09-24]
 	Updated wm/windowmaker to 0.92.0nb1 [rillig 2005-09-24]
 	Updated benchmarks/dbench to 3.03nb1 [rillig 2005-09-25]
+	Updated sysutils/cdrdao to 1.2.0nb3 [fredb 2005-09-26]
