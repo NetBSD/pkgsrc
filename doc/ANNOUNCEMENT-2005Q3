@@ -1,0 +1,84 @@
+The pkgsrc-2005Q3 Branch
+========================
+
+The pkgsrc developers are very proud to announce the new pkgsrc-2005Q3
+branch, which has support for more packages than previous branches. 
+As well as updated versions of many packages, the infrastructure of
+pkgsrc itself has been improved for better platform and compiler
+support, and also for enhanced security.
+
+At the same time, the pkgsrc-2005Q2 branch has been deprecated, and
+continuing engineering starts on the pkgsrc-2005Q3 branch.
+
+Some highlights of the new pkgsrc-2005Q3 branch are:
+
++ many, many packages have been updated to newer versions, to take
+advantage of fixes and improved functionality.  This includes
+
+	+ firefox-1.0.7
+	+ gnome-2.10.2
+	+ kde-3.4.2
+	+ opera-8.5 
+	+ perl-5.8.7
+	+ postgresql 8.0
+	+ the addition of some pertinent bright, shiny packages such
+	  as jalbum, spamd, archangel, freefont-ttf, cvm, js, ucon64,
+	  pwsafe, luma, nss_ldap, ghostscript-afpl, lighttpd, dejavu-ttf
+	+ more of Johnny Lam's infrastructure changes  
+	+ Krister Walfridsson's cross-package work, which allows the
+	  building of packages on different platforms
+
+The full list of platforms supported by pkgsrc is:  AIX, BSD/OS,
+Darwin (MacOS X), DragonFly, FreeBSD, IRIX, Interix, Linux, NetBSD,
+OSF1, OpenBSD, SunOS (Solaris), and UnixWare.  We would like to add
+support for more - please get in touch if you, too, are interested.
+
+Our thanks also to the Dragonfly BSD project for adopting pkgsrc as
+their packaging system - this is the first pkgsrc branch since that
+announcement, and we have brought on board some Dragonfly developers
+specifically to look after issues related to that platform.
+
++ removed some older, unmaintained or vulnerable packages, such as
+realplayer, cxunzip, yamt, evolution12, gtksamba, gdm1, prc-tools,
+palmos-includes, and winelib. 
+
++ continuing engineering on the "stable" branches of pkgsrc has been
+much improved, and our thanks to the pkgsrc releng team for all the
+hard work they do in sanity checking pullup requests, and managing
+the stable branches in pkgsrc
+
++ constant bulk building on a number of platforms (see the pkgsrc-bulk
+mailing list) has improved our ability to identify potential areas of
+concern, and to correct them sooner. It has also improved our ability
+to make binary packages available, and we are working on ways to
+improve this further
+
++ the number of packages has been increased to 5551; the number of
+supported platforms continues to be 13.  NetBSD, on all its supported
+architectures, is considered to be one pkgsrc platform.
+
+As always, we'd like to encourage users of the packages collection to
+install and run pkgsrc/security/audit-packages at least every day -
+this will provide notification of any packages which are vulnerable
+to exploit.
+
+We'd also really appreciate it if people would install the
+pkgsrc/pkgtools/pkgsurvey package, and then run the pkgsurvey script
+for us.  This will forward us a list of the packages installed on that
+machine, and the operating system and release level of the operating
+system.  The results will be kept confidential, but the output will
+help us analyse the packages that are most used.
+
+The source tar files for the new branch can be found at:
+
+	ftp://ftp.NetBSD.org/pub/pkgsrc/2005Q3/pkgsrc-2005Q3.tar.gz
+		or
+	ftp://ftp.NetBSD.org/pub/pkgsrc/2005Q3/pkgsrc-2005Q3.tar.bz2
+
+You can also use the "pkgsrc-2005Q3" tag to check it out yourself from
+anoncvs.NetBSD.org or any of the mirrors.
+
+Alistair Crooks
+On behalf of the Packages Team
+The NetBSD Foundation
+
