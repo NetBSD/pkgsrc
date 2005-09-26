@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11195 2005/09/26 13:02:12 wiz Exp $
+$NetBSD: CHANGES,v 1.11196 2005/09/26 14:00:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4102,3 +4102,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/xmms-bump-scope to 0.0.3nb4 [wiz 2005-09-26]
 	Updated chat/ninja to 1.5.8.1nb1 [wiz 2005-09-26]
 	Updated chat/xaric to 0.12.1nb1 [wiz 2005-09-26]
+	Updated comms/gscmxx to 0.4.1nb2 [wiz 2005-09-26]
