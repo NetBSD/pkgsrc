@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11197 2005/09/26 14:07:43 wiz Exp $
+$NetBSD: CHANGES,v 1.11198 2005/09/26 14:20:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4104,3 +4104,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/xaric to 0.12.1nb1 [wiz 2005-09-26]
 	Updated comms/gscmxx to 0.4.1nb2 [wiz 2005-09-26]
 	Updated comms/minicom to 2.1nb1 [wiz 2005-09-26]
+	Updated devel/elfsh to 0.51b3nb2 [wiz 2005-09-26]
