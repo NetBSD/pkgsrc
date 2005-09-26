@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2005/08/06 06:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/09/26 14:59:13 wiz Exp $
 
 DISTNAME=		g2-0.49a
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		http://g2.sourceforge.net/pub/
 
@@ -28,6 +28,6 @@ post-install:
 		${PREFIX}/share/examples/g2
 
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
