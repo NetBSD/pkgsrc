@@ -1,0 +1,63 @@
+# $NetBSD: usergroupfuncs,v 1.1 2005/09/26 22:12:35 jlam Exp $
+#
+# Default implementation of adduser() and addgroup() shell functions
+# for addiing users and groups.  This implementation assumes there are
+# NetBSD/Solaris-compatible versions of useradd(8) and groupadd(8)
+# available through ${USERADD} and ${GROUPADD}, respectively.
+#
+# Platform-specific customizations of this file should be located at:
+#
+#	pkgsrc/mk/install/usergroupfuncs.${OPSYS}
+#
+
+# adduser user group [userid] [descr] [home] [shell]
+adduser()
+{
+	user="$1"; group="$2"; userid="$3"
+	descr="$4"; home="$5" shell="$6"
+	${TEST} $# -eq 6 || return 1
+	${TEST} -n "$user" || return 2
+	${TEST} -n "$group" || return 2
+
+	USERADD="@USERADD@"
+
+	: ${descr:="${PKGNAME%-[0-9]*} $user user"}
+	: ${home:="@PKG_USER_HOME@"}
+	: ${shell:="@PKG_USER_SHELL@"}
+
+	if ${TEST} -n "${USERADD}" -a -x "${USERADD}"; then
+		${ECHO} "Creating user: $user"
+		case $userid in
+		"")
+			${USERADD}					\
+				-c "$descr" -d "$home" -s "$shell"	\
+				-g $group $user
+			;;
+		*)
+			${USERADD}					\
+				-c "$descr" -d "$home" -s "$shell"	\
+				-g $group -u $userid $user
+			;;
+		esac
+	fi
+	return 0
+}
+
+# adduser group [groupid]
+addgroup()
+{
+	group="$1"; groupid="$2"
+	${TEST} $# -eq 2 || return 1
+	${TEST} -n "$group" || return 2
+
+	GROUPADD="@GROUPADD@"
+
+	if ${TEST} -n "${GROUPADD}" -a -x "${GROUPADD}"; then
+		${ECHO} "Creating group: $group";
+		case $groupid in
+		"")	${GROUPADD} $group ;;
+		*)	${GROUPADD} -g $groupid $group ;;
+		esac
+	fi
+	return 0
+}
