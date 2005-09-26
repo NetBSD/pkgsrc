@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.26 2005/08/24 22:43:02 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.27 2005/09/26 22:12:35 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -143,6 +143,11 @@ DEPENDS+=		${_USER_DEPENDS}
 .endif
 
 INSTALL_USERGROUP_FILE=		${WRKDIR}/.install-usergroup
+.if exists(../../mk/install/usergroupfuncs.${OPSYS})
+INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs.${OPSYS}
+.else
+INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs
+.endif
 INSTALL_USERGROUP_MEMBERS=	${PKG_USERS} ${PKG_GROUPS}
 INSTALL_UNPACK_TMPL+=		${INSTALL_USERGROUP_FILE}
 
@@ -150,7 +155,9 @@ INSTALL_UNPACK_TMPL+=		${INSTALL_USERGROUP_FILE}
 ${INSTALL_USERGROUP_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 .else
-${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
+${INSTALL_USERGROUP_FILE}:						\
+		../../mk/install/usergroup				\
+		${INSTALL_USERGROUPFUNCS_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${.TARGET} ${.TARGET}.tmp;				\
 	exec 1>>${.TARGET}.tmp;						\
@@ -163,7 +170,8 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 	${ECHO} "case \$${STAGE} in";					\
 	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
-	${SED} ${FILES_SUBST_SED} ../../mk/install/usergroup;		\
+	${SED}	-e "/^# platform-specific adduser\/addgroup functions/r${INSTALL_USERGROUPFUNCS_FILE}" ../../mk/install/usergroup | \
+	${SED} ${FILES_SUBST_SED};					\
 	${ECHO} "";							\
 	set -- dummy ${PKG_GROUPS}; shift;				\
 	while ${TEST} $$# -gt 0; do					\
