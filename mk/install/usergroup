@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: usergroup,v 1.10 2005/08/19 22:24:10 jlam Exp $
+# $NetBSD: usergroup,v 1.11 2005/09/26 22:12:35 jlam Exp $
 #
 # +USERGROUP - users and groups management script
 #
@@ -42,7 +42,6 @@ CAT="@CAT@"
 CHGRP="@CHGRP@"
 ECHO="@ECHO@"
 GREP="@GREP@"
-GROUPADD="@GROUPADD@"
 ID="@ID@"
 MKDIR="@MKDIR@"
 PWD_CMD="@PWD_CMD@"
@@ -52,7 +51,6 @@ SED="@SED@"
 SORT="@SORT@"
 TEST="@TEST@"
 TRUE="@TRUE@"
-USERADD="@USERADD@"
 
 SELF=$0
 ACTION=$1
@@ -63,9 +61,6 @@ PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
 
 PKG_REFCOUNT_USERS_DBDIR="${PKG_REFCOUNT_DBDIR}/users"
 PKG_REFCOUNT_GROUPS_DBDIR="${PKG_REFCOUNT_DBDIR}/groups"
-
-PKG_USER_HOME="@PKG_USER_HOME@"
-PKG_USER_SHELL="@PKG_USER_SHELL@"
 
 case "${PKG_CREATE_USERGROUP:-@PKG_CREATE_USERGROUP@}" in
 [Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
@@ -129,6 +124,9 @@ listwrap()
 	esac
 }
 
+# DO NOT CHANGE THE FOLLOWING LINE!
+# platform-specific adduser/addgroup functions
+
 exitcode=0
 case $ACTION in
 ADD)
@@ -159,12 +157,8 @@ ADD)
 		yes)
 			if group_exists $group; then
 				:
-			elif ${TEST} -n "${GROUPADD}" -a -x "${GROUPADD}"; then
-				${ECHO} "Creating group: $group";
-				case $groupid in
-				"")	${GROUPADD} $group ;;
-				*)	${GROUPADD} -g $groupid $group ;;
-				esac
+			else
+				addgroup "$group" "$groupid"
 			fi
 			;;
 		esac
@@ -179,9 +173,9 @@ ADD)
 		case $user in
 		"")	continue ;;
 		esac
-		: ${descr:="${PKGNAME%-[0-9]*} $user user"}
-		: ${home:="${PKG_USER_HOME}"}
-		: ${shell:="${PKG_USER_SHELL}"}
+		case $group in
+		"")	continue ;;
+		esac
 		shadow_dir="${PKG_REFCOUNT_USERS_DBDIR}/$user"
 		preexist="$shadow_dir/+PREEXISTING"
 		token="$shadow_dir/${PKGNAME}"
@@ -200,17 +194,9 @@ ADD)
 		yes)
 			if user_exists $user && group_exists $group; then
 				:
-			elif ${TEST} -n "${USERADD}" -a -x "${USERADD}"; then
-				${ECHO} "Creating user: $user";
-				case $userid in
-				"")	${USERADD} -c "$descr" -d "$home" \
-						-s "$shell" -g $group $user
-					;;
-				*)	${USERADD} -c "$descr" -d "$home" \
-						-s "$shell" -g $group \
-						-u $userid $user
-					;;
-				esac
+			else
+				adduser "$user" "$group" "$userid"	\
+					"$descr" "$home" "$shell"
 			fi
 			;;
 		esac
