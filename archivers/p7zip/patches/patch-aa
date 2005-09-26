@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2005/09/23 12:17:59 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2005/09/26 11:26:46 joerg Exp $
 
 --- makefile.machine.orig	2005-09-22 14:23:32.000000000 -0500
 +++ makefile.machine
@@ -11,10 +11,12 @@ $NetBSD: patch-aa,v 1.8 2005/09/23 12:17:59 wiz Exp $
      	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE \
  	-DNDEBUG -D_REENTRANT -DENV_UNIX \
  	$(LOCAL_FLAGS)
-@@ -12,5 +12,5 @@
+@@ -11,6 +11,6 @@ CXX=g++ $(ALLFLAGS)
+ CC=gcc $(ALLFLAGS)
  LINK_SHARED=-shared
  
- LOCAL_LIBS=-lpthread
+-LOCAL_LIBS=-lpthread
 -LOCAL_LIBS_DLL=$(LOCAL_LIBS) -ldl
++LOCAL_LIBS=${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 +LOCAL_LIBS_DLL=$(LOCAL_LIBS)
  
