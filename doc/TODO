@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3905 2005/09/26 22:08:20 minskim Exp $
+$NetBSD: TODO,v 1.3906 2005/09/26 22:36:24 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -684,7 +684,6 @@ Suggested package updates
 	o multitail-3.6.0
 	o muse-0.9.1
 	o mutt-devel-1.5.11
-	o mysql4-4.1.14 [xtraeme]
 	o mysql-4.0.26 [xtraeme]
 	o nagios-2.0b3 [replacing netsaint]
 	o nail-11.25
