@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11204 2005/09/26 17:34:50 rpaulo Exp $
+$NetBSD: CHANGES,v 1.11205 2005/09/26 19:33:25 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4111,3 +4111,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ham/grig to 0.4.3nb1 [wiz 2005-09-26]
 	Updated www/p5-HTML-Mason to 1.31.1 [cube 2005-09-26]
 	Updated games/openttd to 0.4.0.1nb2 [rpaulo 2005-09-26]
+	Updated www/mozilla-bin to 1.7.12 [tron 2005-09-26]
