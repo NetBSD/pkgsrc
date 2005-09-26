@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11200 2005/09/26 15:02:23 wiz Exp $
+$NetBSD: CHANGES,v 1.11201 2005/09/26 15:04:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4107,3 +4107,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/elfsh to 0.51b3nb2 [wiz 2005-09-26]
 	Updated graphics/g2 to 0.49anb5 [wiz 2005-09-26]
 	Updated ham/xdx to 1.2nb1 [wiz 2005-09-26]
+	Updated lang/awka to 0.7.5nb1 [wiz 2005-09-26]
