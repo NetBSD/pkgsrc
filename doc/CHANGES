@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11208 2005/09/26 22:08:20 minskim Exp $
+$NetBSD: CHANGES,v 1.11209 2005/09/26 22:36:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4114,4 +4114,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/mozilla-bin to 1.7.12 [tron 2005-09-26]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2005Q3 branch [agc 2005-09-26]
 	Updated net/pen to 0.15.0 [xtraeme 2005-09-26]
-	Updated mathomatic to 12.4.11 [minskim 2005-09-26]
+	Updated math/mathomatic to 12.4.11 [minskim 2005-09-26]
+	Updated databases/mysql4-client to 4.1.14 [xtraeme 2005-09-26]
+	Updated databases/mysql4-server to 4.1.14 [xtraeme 2005-09-26]
