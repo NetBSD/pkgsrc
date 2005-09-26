@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/10/30 23:36:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/26 21:46:27 xtraeme Exp $
 #
 
-DISTNAME=	pen-0.12.0
+DISTNAME=	pen-0.15.0
 CATEGORIES=	net
 MASTER_SITES=	http://siag.nu/pub/pen/					\
 		ftp://siag.nu/pub/pen/
@@ -15,5 +15,7 @@ GNU_CONFIGURE=	YES
 # Avoid pen complaining on NetBSD
 CONFIGURE_ARGS+=	--with-fd_setsize=2048
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/pen
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
