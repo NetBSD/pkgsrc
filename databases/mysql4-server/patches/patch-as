@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.7 2005/02/16 02:21:37 xtraeme Exp $
+$NetBSD: patch-as,v 1.8 2005/09/26 22:34:51 xtraeme Exp $
 
---- support-files/Makefile.in.orig	2005-02-16 03:49:38.000000000 +0100
-+++ support-files/Makefile.in	2005-02-16 03:50:06.000000000 +0100
-@@ -343,15 +343,7 @@
+--- support-files/Makefile.in.orig	2005-09-27 00:00:34.000000000 +0200
++++ support-files/Makefile.in	2005-09-27 00:00:57.000000000 +0200
+@@ -345,14 +345,7 @@
  			ndb-config-2-node.ini.sh
  
  SUBDIRS = MacOSX
@@ -12,10 +12,9 @@ $NetBSD: patch-as,v 1.7 2005/02/16 02:21:37 xtraeme Exp $
 -			my-huge.cnf \
 -      my-innodb-heavy-4G.cnf \
 -			mysql-log-rotate \
--			mysql-@VERSION@.spec \
--			MySQL-shared-compat.spec \
+-			binary-configure \
 -			ndb-config-2-node.ini
 +pkgdata_DATA =
  
  pkgdata_SCRIPTS = mysql.server
- CLEANFILES = my-small.cnf \
+ noinst_DATA = mysql-@VERSION@.spec \
