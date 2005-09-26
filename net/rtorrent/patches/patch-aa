@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2005/09/26 07:49:06 joerg Exp $
+
+--- src/ui/element_string_list.cc.orig	2005-09-25 19:07:46.000000000 +0200
++++ src/ui/element_string_list.cc
+@@ -43,7 +43,8 @@
+ 
+ namespace ui {
+ 
+-ElementStringList::ElementStringList() {
++ElementStringList::ElementStringList():
++  m_window(NULL) {
+   m_list.push_back("Test string 1");
+   m_list.push_back("Test string 2");
+ }
