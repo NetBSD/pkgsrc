@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/14 07:12:07 wulf Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/09/26 15:06:29 wiz Exp $
 bin/grig
+man/man1/grig.1
 share/grig/AUTHORS
 share/grig/COPYING
 share/grig/ChangeLog
@@ -11,3 +12,4 @@ share/grig/pixmaps/grig-logo.png
 share/grig/pixmaps/ic910.png
 share/grig/pixmaps/smeter.png
 @dirrm share/grig/pixmaps
+@dirrm share/grig
