@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11219 2005/09/27 12:05:54 salo Exp $
+$NetBSD: CHANGES,v 1.11220 2005/09/27 12:28:56 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4136,3 +4136,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/picprg version 2.3d [dsainty 2005-09-27]
 	Added textproc/php-pspell 4.4.0 [salo 2005-09-27]
 	Added textproc/php-pspell 5.0.5 [salo 2005-09-27]
+	Updated textproc/btparse to 0.34 [tonio 2005-09-27]
+	Updated converters/bib2xml to 20021006nb1 [tonio 2005-09-27]
