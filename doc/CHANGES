@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11225 2005/09/27 14:49:10 tonio Exp $
+$NetBSD: CHANGES,v 1.11226 2005/09/27 15:15:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4144,3 +4144,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/clamav to 0.87 [xtraeme 2005-09-27]
 	Updated net/unison to 2.13.16 [tonio 2005-09-27]
 	Updated net/unison-devel to 2.17.1 [tonio 2005-09-27]
+	Updated comms/efax-gtk to 3.0.5 [adam 2005-09-27]
