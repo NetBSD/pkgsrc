@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.287 2005/09/23 13:08:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.288 2005/09/27 18:58:56 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1259,6 +1259,11 @@ sub checkline_Makefile_vartype($$) {
 			} elsif ($type eq "URL") {
 				if ($value !~ $regex_url) {
 					$line->log_warning("\"$value\" is not a valid URL.");
+				}
+
+			} elsif ($type eq "Integer") {
+				if ($value !~ qr"^\d+$") {
+					$line->log_warning("\"$value\" is not a valid Integer.");
 				}
 
 			} else {
