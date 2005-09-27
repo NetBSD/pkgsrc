@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11212 2005/09/26 23:35:39 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11213 2005/09/27 00:14:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4120,3 +4120,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added audio/moc version 2.3.2 [xtraeme 2005-09-26]
 	Added sysutils/mesure version 0.5 [xtraeme 2005-09-26]
 	Added devel/acr version 0.4 [xtraeme 2005-09-26]
+	Updated databases/mysql-client to 4.0.26 [xtraeme 2005-09-27]
+	Updated databases/mysql-server to 4.0.26 [xtraeme 2005-09-27]
