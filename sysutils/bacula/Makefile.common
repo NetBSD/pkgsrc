@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.6 2005/04/11 21:47:22 tv Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/09/27 22:37:25 mjl Exp $
 #
 
 DISTNAME=		bacula-1.36.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
-MAINTAINER=		mjl@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.bacula.org/
 COMMENT=		Network Backup Solution
 
