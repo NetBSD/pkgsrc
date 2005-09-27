@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.10 2005/09/04 20:21:18 tonio Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/09/27 12:49:04 tonio Exp $
 bin/fbrun
 bin/fbsetbg
+bin/fbsetroot
 bin/fluxbox
 bin/fluxbox-generate_menu
 bin/startfluxbox
 man/man1/fbrun.1
 man/man1/fbsetbg.1
+man/man1/fbsetroot.1
 man/man1/fluxbox.1
 man/man1/fluxstyle.1
 man/man1/startfluxbox.1
@@ -13,10 +15,12 @@ share/fluxbox/init
 share/fluxbox/keys
 share/fluxbox/menu
 share/fluxbox/nls/C/fluxbox.cat
+share/fluxbox/nls/be_BY/fluxbox.cat
 share/fluxbox/nls/bg_BG/fluxbox.cat
 share/fluxbox/nls/cs_CZ/fluxbox.cat
 share/fluxbox/nls/da_DK/fluxbox.cat
 share/fluxbox/nls/de_DE/fluxbox.cat
+share/fluxbox/nls/el_GR/fluxbox.cat
 share/fluxbox/nls/es_ES/fluxbox.cat
 share/fluxbox/nls/et_EE/fluxbox.cat
 share/fluxbox/nls/fr_FR/fluxbox.cat
@@ -32,6 +36,7 @@ share/fluxbox/nls/ru_RU/fluxbox.cat
 share/fluxbox/nls/sl_SI/fluxbox.cat
 share/fluxbox/nls/sv_SE/fluxbox.cat
 share/fluxbox/nls/tr_TR/fluxbox.cat
+share/fluxbox/nls/uk_UA/fluxbox.cat
 share/fluxbox/nls/vi_VN/fluxbox.cat
 share/fluxbox/styles/Artwiz
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_active.xpm
@@ -100,6 +105,7 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/styles/BlueFlux
 @dirrm share/fluxbox/styles
 @dirrm share/fluxbox/nls/vi_VN
+@dirrm share/fluxbox/nls/uk_UA
 @dirrm share/fluxbox/nls/tr_TR
 @dirrm share/fluxbox/nls/sv_SE
 @dirrm share/fluxbox/nls/sl_SI
@@ -115,10 +121,12 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/nls/fr_FR
 @dirrm share/fluxbox/nls/et_EE
 @dirrm share/fluxbox/nls/es_ES
+@dirrm share/fluxbox/nls/el_GR
 @dirrm share/fluxbox/nls/de_DE
 @dirrm share/fluxbox/nls/da_DK
 @dirrm share/fluxbox/nls/cs_CZ
 @dirrm share/fluxbox/nls/bg_BG
+@dirrm share/fluxbox/nls/be_BY
 @dirrm share/fluxbox/nls/C
 @dirrm share/fluxbox/nls
 @dirrm share/fluxbox
