@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.7 2005/04/25 16:52:10 wiz Exp $
+$NetBSD: distinfo,v 1.8 2005/09/27 00:31:18 gdt Exp $
 
-SHA1 (ufraw-0.4.tar.gz) = dd907171f6e3b0055499f108ba212465839d6f89
-RMD160 (ufraw-0.4.tar.gz) = e1a8106305fcc2b5405344cdca28c0fa503dcb66
-Size (ufraw-0.4.tar.gz) = 101409 bytes
-SHA1 (patch-aa) = 4268efb3c00ac5517f6c27d8bcd84d42293f6345
-SHA1 (patch-ab) = 5def994eac734aaf1edf02138e5af29f880b77f3
-SHA1 (patch-ac) = e34fe4f2f6878dbc24a401a5c6b95363b78c3d30
-SHA1 (patch-ad) = bc2183adb63d35f42b6c0d6e77b77e3884d37c3b
+SHA1 (ufraw-0.5.tar.gz) = dc6d89157acd25d84ee48148772d6800dfb4eb1c
+RMD160 (ufraw-0.5.tar.gz) = 5cfe6be92507b81996d98fa6ddedc1de34a1ba52
+Size (ufraw-0.5.tar.gz) = 284234 bytes
+SHA1 (patch-aa) = 1ef87b4f0429b01338957b2e0203fd7cb95f08e1
