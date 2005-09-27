@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2005/08/16 12:56:57 adam Exp $
+$NetBSD: patch-ac,v 1.6 2005/09/27 15:13:03 adam Exp $
 
---- src/fax_list.cpp.orig	2005-08-10 22:16:28.000000000 +0000
+--- src/fax_list.cpp.orig	2005-09-11 12:23:37.000000000 +0000
 +++ src/fax_list.cpp
-@@ -571,7 +571,7 @@ std::pair<const char*, char* const*> Fax
+@@ -597,7 +597,7 @@ std::pair<const char*, char* const*> Fax
    std::vector<std::string> efix_parms;
    std::string temp;
      
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.5 2005/08/16 12:56:57 adam Exp $
    // shut up efix (comment out next line and uncomment following one if errors to be reported)
    efix_parms.push_back("-v");
    //efix_parms.push_back("-ve");
-@@ -717,8 +717,8 @@ std::pair<const char*, char* const*> Fax
+@@ -743,8 +743,8 @@ std::pair<const char*, char* const*> Fax
    
    *temp_pp = 0;
  
@@ -22,7 +22,7 @@ $NetBSD: patch-ac,v 1.5 2005/08/16 12:56:57 adam Exp $
  
    return std::pair<const char*, char* const*>(prog_name, exec_parms);
  }
-@@ -924,7 +924,7 @@ void FaxListDialog::print_fax_thread(voi
+@@ -950,7 +950,7 @@ void FaxListDialog::print_fax_thread(voi
  
        // if we reached this point, then the execvp() call must have failed
        // report error and then end process - use _exit(), not exit()
@@ -31,7 +31,7 @@ $NetBSD: patch-ac,v 1.5 2005/08/16 12:56:57 adam Exp $
  		  "and the PATH environmental variable\n");
        _exit(0);
      }
-@@ -1035,7 +1035,7 @@ void FaxListDialog::view_fax_thread(void
+@@ -1061,7 +1061,7 @@ void FaxListDialog::view_fax_thread(void
  
      // if we reached this point, then the execvp() call must have failed
      // report error and then end process - use _exit(), not exit()
