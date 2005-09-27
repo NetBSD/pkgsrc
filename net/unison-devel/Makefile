@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2005/08/03 12:45:27 tonio Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/27 14:44:18 tonio Exp $
 
-DISTNAME=	unison-2.13.0
+DISTNAME=	unison-2.17.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 
@@ -34,12 +34,6 @@ MAKE_FLAGS+=	THREADS=true
 .endif
 
 INSTALLATION_DIRS=	bin
-
-SUBST_CLASSES=		x11
-SUBST_STAGE.x11=	post-patch
-SUBST_FILES.x11=	Makefile.OCaml
-SUBST_SED.x11=		-e "s|/usr/X11R6|${X11BASE}|g"
-SUBST_MESSAGE.x11=	"Fixing X11 paths."
 
 post-install:
 	@cd ${WRKSRC} && ./unison -doc install > INSTALL
