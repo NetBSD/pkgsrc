@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/08/17 06:26:18 jdc Exp $
+# $NetBSD: Makefile,v 1.40 2005/09/27 07:46:20 adam Exp $
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
 
@@ -13,7 +13,6 @@ GCC_REQD+=		2.95.3
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-libs-${QTVERSION}
-PKGREVISION=		4
 MAINTAINER=		adam@NetBSD.org
 COMMENT=		C++ X GUI toolkit
 
