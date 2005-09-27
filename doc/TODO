@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3918 2005/09/27 20:12:10 wiz Exp $
+$NetBSD: TODO,v 1.3919 2005/09/27 20:16:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -290,13 +290,10 @@ Suggested package updates
 	o 0verkill-0.16
 	o BitTorrent-4.0.4
 	o Chinput-3.0.1
-	o DatLib-2.7
-	o DatUtil-2.19
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.1
-	o MAMEDiff-2.18
 	o MayaVi-1.5 [drochner]
 	o MyPasswordSafe-20041210
 	o PAM-0.78
