@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2005/09/17 19:09:53 minskim Exp $
+# $NetBSD: Makefile,v 1.88 2005/09/27 22:19:41 mjl Exp $
 #
 
 DISTNAME=	gdm-2.8.0.1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
 
-MAINTAINER=	mjl@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
