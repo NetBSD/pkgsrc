@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2005/04/11 21:47:03 tv Exp $
+# $NetBSD: Makefile,v 1.36 2005/09/27 22:37:25 mjl Exp $
 
 DISTNAME=	slrn-0.9.8.1
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slrn/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	mjl@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 
