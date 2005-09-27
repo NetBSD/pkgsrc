@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.6 2005/09/27 09:29:56 wiz Exp $
+
+--- backend/Makefile.in.orig	2005-07-30 14:28:10.000000000 +0200
++++ backend/Makefile.in
+@@ -25,7 +25,7 @@ infodir = @infodir@
+ mandir = @mandir@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+-configdir = ${sysconfdir}/sane.d
++configdir = ${prefix}/share/examples/sane
+ BEOS_ADDONDIR = @BEOS_ADDONDIR@
+ 
+ V_MAJOR = @V_MAJOR@
