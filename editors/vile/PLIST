@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/08 13:31:06 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/09/27 22:49:27 agc Exp $
 bin/vile
 bin/vile-pager
 bin/vileget
@@ -8,6 +8,7 @@ libexec/vile/atr2text
 libexec/vile/vile-ada-filt
 libexec/vile/vile-as-filt
 libexec/vile/vile-asm-filt
+libexec/vile/vile-au3-filt
 libexec/vile/vile-awk-filt
 libexec/vile/vile-basic-filt
 libexec/vile/vile-bat-filt
@@ -25,6 +26,8 @@ libexec/vile/vile-fdl-filt
 libexec/vile/vile-html-filt
 libexec/vile/vile-imake-filt
 libexec/vile/vile-info-filt
+libexec/vile/vile-ini-filt
+libexec/vile/vile-iss-filt
 libexec/vile/vile-key-filt
 libexec/vile/vile-latex-filt
 libexec/vile/vile-lex-filt
@@ -77,6 +80,7 @@ share/vile/ada.keywords
 share/vile/as.keywords
 share/vile/as386.keywords
 share/vile/asm.keywords
+share/vile/au3.keywords
 share/vile/awk.keywords
 share/vile/basic.keywords
 share/vile/bat.keywords
@@ -97,17 +101,22 @@ share/vile/fdl.keywords
 share/vile/filters.rc
 share/vile/gnugpg.rc
 share/vile/html.keywords
+share/vile/ini.keywords
 share/vile/imake.keywords
+share/vile/iss.keywords
 share/vile/java.keywords
 share/vile/js.keywords
 share/vile/latex.keywords
 share/vile/lex.keywords
+share/vile/lisp.keywords
 share/vile/loaderrs.rc
 share/vile/m4.keywords
 share/vile/mail.keywords
 share/vile/make.keywords
 share/vile/manpage.rc
+share/vile/modes.rc
 share/vile/nr.keywords
+share/vile/nsis.keywords
 share/vile/palettes.rc
 share/vile/pas.keywords
 share/vile/pc.keywords
@@ -148,6 +157,7 @@ share/vile/sccs.keywords
 share/vile/search.rc
 share/vile/sh.keywords
 share/vile/shifts.rc
+share/vile/showeach.rc
 share/vile/sml.keywords
 share/vile/spell.rc
 share/vile/sql.keywords

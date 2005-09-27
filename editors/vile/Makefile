@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2005/08/17 14:57:19 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.43 2005/09/27 22:49:27 agc Exp $
 
-DISTNAME=		vile-9.4
-PKGREVISION=	1
+DISTNAME=		vile-9.5
 CATEGORIES=		editors
 MASTER_SITES=		ftp://dickey.his.com/vile/ \
 			ftp://invisible-island.net/vile/
@@ -17,9 +16,6 @@ CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR}
 USE_TOOLS+=		perl:run
 
-# Until the source catches up to the current Perl API, we need PERL_POLLUTE
-# to look like an older perl.
-CPPFLAGS+=		-DPERL_POLLUTE=1
 CPPFLAGS.NetBSD+=	-DMISSING_EXTERN_ENVIRON
 
 MAKEFILE=		makefile
