@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3914 2005/09/27 15:57:29 wiz Exp $
+$NetBSD: TODO,v 1.3915 2005/09/27 15:58:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -533,7 +533,6 @@ Suggested package updates
 	o gtk2+-2.8.3
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
-	o gphoto2-2.1.6
 	o guile-oops-1.0.2
 	o guile-pg-0.27
 	o guile-www-1.1.1
@@ -605,7 +604,6 @@ Suggested package updates
 	o libdvbpsi-0.1.5
 	o libextractor-0.5.6
 	o libflash-0.4.13
-	o libgphoto2-2.1.6
 	o libhydrogen-0.9.0
 	o libidn-0.5.19
 	o libjit-0.0.4 [pkg/30514]
@@ -938,7 +936,6 @@ Suggested package updates
 	o rayshade-4.0.6
 	o rblcheck-1.5
 	o rc-1.7.1
-	o rdiff-backup-1.0.1
 	o rdp-1.6
 	o rep-gtk-0.18
 	o resize_image-0.7
@@ -1027,7 +1024,6 @@ Suggested package updates
 	o streamtuner-0.99.99
 	o stunnel-4.11
 	o subtitleripper-0.3.4
-	o subversion-1.2.3
 	o sun-jdk15-5.0.5
 	o sun-jre15-5.0.5
 	o suse_base-9.3
