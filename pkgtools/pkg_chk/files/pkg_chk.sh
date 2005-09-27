@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.19 2005/09/11 10:39:03 abs Exp $
+# $Id: pkg_chk.sh,v 1.20 2005/09/27 17:13:03 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -250,7 +250,7 @@ list_packages()
 	    fi
 	    for dep in $DEPLIST ; do
 		if [ ! -f $PACKAGES/$dep.tgz ] ; then
-		    fatal_maybe " ** $dep.tgz - binary package dependency missing"
+		    fatal_maybe " ** $dep.tgz - dependency missing for $pkg"
 		    break 2
 		fi
 		PAIRLIST="${PAIRLIST}$dep.tgz $pkg.tgz\n"
@@ -340,10 +340,23 @@ pkgdirs_from_conf()
     {
     sub("#.*", "");
     if (skip[$1])
-	{ next; }
+	next;
     need = 0;
-    for (f = 1 ; f<=NF ; ++f) {			# For each word on the line
+    if ($0 ~ /=/) {
+	split($0, tmp, "[ \t]*=");
+	taggroup = tmp[1];
+	sub("[ \t]*=", "=");
+	}
+    else
+	{
+	taggroup = ""
+	if (NF == 1)			# If only one arg, we want pkg
+	    need = 1;
+	}
+    for (f = 2 ; f<=NF ; ++f) {		# For each word on the line
 	if (sub("^-", "", $f)) { 	# If it begins with a '-'
+		if (f == 2)		# If first entry '-', assume '*'
+		    { need = 1; }
 		if (and_expr_with_dict($f, taglist))
 			next;		# If it is true, discard
 	} else {
@@ -351,8 +364,11 @@ pkgdirs_from_conf()
 			need = 1;	# If it is true, note needed
 	}
     }
-    if (NF == 1 || need)
-	{ print $1 }
+    if (need)
+	if (taggroup)
+	    taglist[taggroup] = 1
+	else
+	    print $1;
     }
     ' < $CONF
     )
@@ -496,7 +512,7 @@ usage()
     fi
     echo 'Usage: pkg_chk [opts]
 	-a      Add all missing packages (implies -c)
-	-B      Check the "Build version" of packages (implies -i)
+	-B      Check the "Build version" of packages
 	-b      Install binary packages
 	-C conf Use pkgchk.conf file 'conf'
 	-c      Check installed packages against pkgchk.conf
@@ -543,7 +559,7 @@ set -- $args
 while [ $# != 0 ]; do
     case "$1" in
 	-a )	opt_a=1 ; opt_c=1 ;;
-	-B )    opt_B=1 ; opt_i=1 ;;
+	-B )    opt_B=1 ;;
 	-b )	opt_b=1 ;;
 	-C )	opt_C="$2" ; shift;;
 	-c )	opt_c=1 ;;

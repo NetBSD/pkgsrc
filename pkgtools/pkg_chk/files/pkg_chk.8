@@ -1,9 +1,9 @@
-.\"	$NetBSD: pkg_chk.8,v 1.11 2005/06/01 11:38:45 wiz Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.12 2005/09/27 17:13:03 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd June 1, 2005
+.Dd September 27, 2005
 .Dt PKG_CHK 1
 .Sh NAME
 .Nm pkg_chk
@@ -28,7 +28,7 @@ When updating packages that depend on each other
 .Nm
 will skip dependent packages to reduce unnecessary rebuilding.
 .Pp
-.Sy Options
+.Ss Options
 .Bl -tag -width xxxxxxxx
 .It Fl a
 Automatically add any missing packages.
@@ -160,12 +160,29 @@ Verbose - list the tags set when checking
 and all packages checked.
 .El
 .Sh FILE FORMAT
-Each non comment line in
+Anything after a '#' on a line is considered a comment.
+
+Each line in
 .Pa pkgchk.conf
-should contain a package
-directory (such as sysutils/skill) followed by an optional list of
-tags.
-Tags are checked against the current machine's set:
+can either define a new tag or a package directory 
+(such as sysutils/skill), in each case followed by a list of tags.
+.Ss New tag groups
+Lines that define a new tag can be used to group tags to avoid
+repeating the same set of tags for multiple packages.
+For example:
+
+.Dl mailserver      \= tll gta tycoon jeeves iris
+
+would cause the mailserver tag to be set for any of the listed hosts.
+Note that the tags after the
+.Sq =
+are parsed with the same set of tag
+evaluation rules as those after package definitions (see later).
+.Ss Package definition lines
+Package directory lines are used to determine which packages are to be
+installed, checking the tags against the current defined set.
+.Ss Tag evaulation
+Tags on package directory are checked against the current machine's set:
 .Bl -bullet
 .It
 If a matched tag starts with a hyphen
@@ -177,11 +194,11 @@ Otherwise if any tags match the package will be included.
 A line without any tags matches all machines.
 .It
 An asterisk
-.Em *
+.Sq *
 matches any tag.
 .It
 If a tag starts with an
-.Em /
+.Sq /
 then it is checked for as a readable filename.
 .It
 Tags cannot contain a hyphen
@@ -299,9 +316,18 @@ Sample
 .Pa pkgchk.conf
 file:
 .Bd -literal
-# Must install before others
+
+mailserver      = tll gta tycoon jeeves iris
+
+# Install before others
 devel/cpuflags
-pkgtools/xpkgwedge              x11
+pkgtools/pkg_chk
+
+# Mail related
+mail/exim                       *
+mail/spamassassin               mailserver
+mail/cyrus-imapd                mailserver
+mail/procmail			mailserver bobhost
 
 shells/standalone-tcsh          *
 wm/pwm                          /etc/X11/XF86Config
