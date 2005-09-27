@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/09/27 12:24:06 tonio Exp $
 
-SHA1 (btparse-0.33.tar.gz) = 4c9c1def544ad381e1bfa89489dba90ca87a6e3f
-RMD160 (btparse-0.33.tar.gz) = fb5a0b763a16c7209af5af20de3e5d3a470e62c7
-Size (btparse-0.33.tar.gz) = 205792 bytes
+SHA1 (btparse-0.34.tar.gz) = cfc2a5364b99121843dae4fd4ce1b01326a7a0bb
+RMD160 (btparse-0.34.tar.gz) = 9c8374f38e0f4816512d8fb743b3461d175ea89c
+Size (btparse-0.34.tar.gz) = 471885 bytes
