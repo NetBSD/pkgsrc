@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11217 2005/09/27 09:38:50 adam Exp $
+$NetBSD: CHANGES,v 1.11218 2005/09/27 11:14:58 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4133,3 +4133,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/freeciv-share to 2.0.6 [adam 2005-09-27]
 	Updated games/freeciv-client to 2.0.6 [adam 2005-09-27]
 	Updated games/freeciv-server to 2.0.6 [adam 2005-09-27]
+	Added devel/picprg version 2.3d [dsainty 2005-09-27]
