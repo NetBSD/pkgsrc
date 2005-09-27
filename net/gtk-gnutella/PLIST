@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2004/12/03 13:12:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/09/27 12:57:06 adam Exp $
 bin/gtk-gnutella
+share/applications/gtk-gnutella.desktop
 share/gtk-gnutella/bogons.txt
 share/gtk-gnutella/geo-ip.txt
 share/gtk-gnutella/gwcache.boot
@@ -33,6 +34,8 @@ share/gtk-gnutella/pixmaps/thaw.xpm
 share/gtk-gnutella/pixmaps/ultra.xpm
 share/gtk-gnutella/pixmaps/upload.xpm
 share/gtk-gnutella/pixmaps/warning.xpm
+share/pixmaps/gtk-gnutella.png
+share/pixmaps/gtk-gnutella.svg
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtk-gnutella.mo

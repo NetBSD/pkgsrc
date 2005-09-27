@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2005/07/26 00:01:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.45 2005/09/27 12:57:06 adam Exp $
 
-DISTNAME=	gtk-gnutella-0.95.3
+DISTNAME=	gtk-gnutella-0.95.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gtk-gnutella.sourceforge.net/
 COMMENT=	GTK-based gnutella client
 
+BUILD_USES_MSGFMT=	yes
 USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
