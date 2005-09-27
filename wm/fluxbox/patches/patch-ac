@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2004/05/13 10:03:12 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2005/09/27 12:49:04 tonio Exp $
 
---- src/fluxbox.cc.orig	2004-04-26 11:25:42.000000000 +0200
+--- src/fluxbox.cc.orig	2005-09-01 11:22:01.000000000 +0200
 +++ src/fluxbox.cc
-@@ -700,11 +700,11 @@ void Fluxbox::setupConfigFiles() {
+@@ -570,11 +570,11 @@ void Fluxbox::setupConfigFiles() {
  
      bool create_init = false, create_keys = false, create_menu = false;
  
