@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3912 2005/09/27 14:24:43 xtraeme Exp $
+$NetBSD: TODO,v 1.3913 2005/09/27 15:15:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,6 @@ Suggested package updates
 	o eclipse-3.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.0.5
 	o egtk-0.3.6
 	o electricfence-2.4.16
 	o elf-0.5.4
@@ -465,8 +464,6 @@ Suggested package updates
 	o fhist-1.14
 	o file-4.14
 	o findutils-4.2.25
-	o firefox-1.0.7
-	o firefox-gtk1-1.0.7
 	o flac123-0.0.8
 	o flashplayer-0.4.13
 	o fmsx-3.0
