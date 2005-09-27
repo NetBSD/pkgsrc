@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11220 2005/09/27 12:28:56 tonio Exp $
+$NetBSD: CHANGES,v 1.11221 2005/09/27 12:50:15 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4138,3 +4138,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added textproc/php-pspell 5.0.5 [salo 2005-09-27]
 	Updated textproc/btparse to 0.34 [tonio 2005-09-27]
 	Updated converters/bib2xml to 20021006nb1 [tonio 2005-09-27]
+	Updated wm/fluxbox to 0.9.14 [tonio 2005-09-27]
