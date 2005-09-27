@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:20 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/27 22:37:25 mjl Exp $
 
 DISTNAME=	adjustkernel-1.7
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	mjl@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Generate a NetBSD kernel config
 
 WRKSRC=		${WRKDIR}
