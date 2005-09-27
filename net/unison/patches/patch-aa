@@ -1,40 +1,40 @@
-$NetBSD: patch-aa,v 1.5 2005/08/03 12:42:13 tonio Exp $
+$NetBSD: patch-aa,v 1.6 2005/09/27 14:46:08 tonio Exp $
 
---- Makefile.orig	Sat Mar 12 16:17:58 2005
+--- Makefile.orig	2005-07-03 00:44:28.000000000 +0200
 +++ Makefile
-@@ -38,7 +38,7 @@ all:: strings.ml buildexecutable
- all:: INSTALL
+@@ -39,7 +39,7 @@ all:: INSTALL
  
  INSTALL: $(NAME)$(EXEC_EXT)
--	./$(NAME) -doc install > INSTALL
-+##	./$(NAME) -doc install > INSTALL
+ # file isn't made for OS X, so check that it's there first
+-	(if [ -f $(NAME) ]; then ./$(NAME) -doc install > INSTALLATION; fi)
++##	(if [ -f $(NAME) ]; then ./$(NAME) -doc install > INSTALLATION; fi)
  
  ########################################################################
  ## Miscellaneous developer-only switches
-@@ -67,14 +67,12 @@ include Makefile.OCaml
+@@ -68,16 +68,13 @@ include Makefile.OCaml
  ######################################################################
  # Installation
  
 -INSTALLDIR = $(HOME)/bin/
 +INSTALLDIR = $(PREFIX)/bin/
  
- install: $(NAME)$(EXEC_EXT)
+ # This has two names because on OSX the file INSTALL shadows the target 'install'!
+ install: doinstall
+ 
+ doinstall: $(NAME)$(EXEC_EXT)
 -	-mv $(INSTALLDIR)/$(NAME)$(EXEC_EXT) /tmp/$(NAME)-$(shell echo $$$$)
  	cp $(NAME)$(EXEC_EXT) $(INSTALLDIR)
--	cp $(NAME)$(EXEC_EXT) $(INSTALLDIR)$(NAME)-$(VERSION)$(EXEC_EXT)
--	@# If we're running at Penn, install a public version too
--	if [ -d /plclub/bin ]; then cp $(NAME)$(EXEC_EXT) /plclub/bin/$(NAME)-$(VERSION)$(EXEC_EXT); fi
-+#HF#	@# If we're running at Penn, install a public version too
-+#HF#	if [ -d /plclub/bin ]; then cp $(NAME)$(EXEC_EXT) /plclub/bin/$(NAME)-$(VERSION)$(EXEC_EXT); fi
- 
+-	cp $(NAME)$(EXEC_EXT) $(INSTALLDIR)$(NAME)-$(MAJORVERSION)$(EXEC_EXT)
+-
  
  ######################################################################
-@@ -352,7 +350,7 @@ testmerge:
+ # Demo
+@@ -355,7 +352,7 @@ testmerge:
  tags:
  	-$(ETAGS) *.mli */*.mli *.ml */*.ml *.m */*.m *.c */*.c *.txt
  
 -all:: TAGS
-+# all:: TAGS
++#all:: TAGS
  
  TAGS:
  	$(MAKE) tags
