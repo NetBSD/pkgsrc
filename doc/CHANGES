@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11235 2005/09/27 20:22:11 wiz Exp $
+$NetBSD: CHANGES,v 1.11236 2005/09/27 21:14:08 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4158,3 +4158,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/DatUtil to 2.19 [wiz 2005-09-27]
 	Updated emulators/MAMEDiff to 2.18 [wiz 2005-09-27]
 	Updated devel/pcre to 6.4 [wiz 2005-09-27]
+	Updated pkgtools/pkglint to 4.22 [rillig 2005-09-27]

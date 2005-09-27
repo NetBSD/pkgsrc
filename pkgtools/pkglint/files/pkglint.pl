@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.288 2005/09/27 18:58:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.289 2005/09/27 21:13:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -811,41 +811,57 @@ sub checkfile_DESCR($$) {
 
 sub checkfile_distinfo($$) {
 	my ($dir, $fname) = @_;
-	my ($distinfo, %in_distinfo);
+	my ($lines, %in_distinfo, %sums);
 
 	log_subinfo("checkfile_distinfo", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	if (!($distinfo = load_file($fname))) {
+	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
 
-	if (@{$distinfo} == 0) {
+	if (@{$lines} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return;
 	}
 
-	checkline_rcsid($distinfo->[0], "");
+	checkline_rcsid($lines->[0], "");
+	if (1 <= $#{$lines} && $lines->[1]->text ne "") {
+		$lines->[1]->log_warning("Empty line expected.");
+	}
 
-	foreach my $line (@{$distinfo}) {
-		next unless $line->text =~ /^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
-		my ($alg, $patch, $sum) = ($1, $2, $3);
+	foreach my $line (@{$lines}[2..$#{$lines}]) {
+		if ($line->text !~ /^(MD5|SHA1|RMD160|Size) \(([^)]+)\) = (.*)(?: bytes)?$/) {
+			$line->log_error("Unknown line type.");
+			next;
+		}
 
-		if ($patch =~ /^patch-[A-Za-z0-9]+$/) {
-			if (-f "${dir}/$patchdir/$patch") {
-				my $chksum = `sed -e '/\$NetBSD.*/d' $dir/$patchdir/$patch | digest $alg`;
+		my ($alg, $file, $sum) = ($1, $2, $3);
+
+		if ($file =~ /^patch-[A-Za-z0-9]+$/) {
+			if (-f "${dir}/${patchdir}/${file}") {
+				my $chksum = `sed -e '/\$NetBSD.*/d' $dir/$patchdir/$file | digest $alg`;
 				$chksum =~ s/\r*\n*\z//;
 				if ($sum ne $chksum) {
-					$line->log_error("Checksum of $patch differs. Rerun '$conf_make makepatchsum'.");
+					$line->log_error("Checksum of $file differs. Rerun '$conf_make makepatchsum'.");
 				}
 			} else {
-				$line->log_warning("$patch does not exist.");
+				$line->log_warning("$file does not exist.");
 			}
+		} else {
+			$sums{$alg}->{$file} = $line;
 		}
-		$in_distinfo{$patch} = true;
+		$in_distinfo{$file} = true;
 	}
-	checklines_trailing_empty_lines($distinfo);
+	checklines_trailing_empty_lines($lines);
+
+	# Check for distfiles that have SHA1, but not RMD160 checksums
+	foreach my $sha1_file (sort(keys(%{$sums{"SHA1"}}))) {
+		if (!exists($sums{"RMD160"}->{$sha1_file})) {
+			$sums{"SHA1"}->{$sha1_file}->log_error("RMD160 checksum missing for \"${sha1_file}\".");
+		}
+	}
 
 	foreach my $patch (<${dir}/$patchdir/patch-*>) {
 		$patch = basename($patch);
