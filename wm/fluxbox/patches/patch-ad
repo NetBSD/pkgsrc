@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2005/09/04 20:21:18 tonio Exp $
+$NetBSD: patch-ad,v 1.4 2005/09/27 12:49:04 tonio Exp $
 
---- util/startfluxbox.in.orig	2005-05-14 18:13:52.000000000 +0200
-+++ util/startfluxbox.in	2005-05-14 18:14:39.000000000 +0200
-@@ -29,7 +29,9 @@
+--- util/startfluxbox.in.orig	2005-07-20 13:01:49.000000000 +0200
++++ util/startfluxbox.in
+@@ -29,7 +29,9 @@ elif [ -r "$startup" ]; then
      exec sh "$startup"
  else
      if [ ! -d ~/.fluxbox ]; then
