@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2005/08/03 12:42:13 tonio Exp $
+# $NetBSD: Makefile,v 1.28 2005/09/27 14:46:08 tonio Exp $
 
-DISTNAME=	unison-2.12.0
+DISTNAME=	unison-2.13.16
 CATEGORIES=	net
-MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/stable/latest/
+MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 
@@ -35,19 +35,12 @@ MAKE_FLAGS+=	THREADS=true
 
 INSTALLATION_DIRS=	bin
 
-SUBST_CLASSES=		x11
-SUBST_STAGE.x11=	post-patch
-SUBST_FILES.x11=	Makefile.OCaml
-SUBST_SED.x11=		-e "s|/usr/X11R6|${X11BASE}|g"
-SUBST_MESSAGE.x11=	"Fixing X11 paths."
-
 post-install:
 		@cd ${WRKSRC} && ./unison -doc install > INSTALL
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/BUGS.txt ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/CONTRIB ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/doc/unison
-		${INSTALL_MAN} ${WRKSRC}/DEPENDENCIES.ps ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/NEWS ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/unison
