@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/09/12 13:41:31 adam Exp $
+# $NetBSD: Makefile,v 1.39 2005/09/27 01:41:18 jschauma Exp $
 
 DISTNAME=	libiconv-1.10
 PKGREVISION=	2
@@ -25,6 +25,12 @@ EGDIR=			${PREFIX}/share/examples/libiconv
 REQD_FILES=		${EGDIR}/charset.alias ${PREFIX}/lib/charset.alias
 
 MAKE_ENV+=		PAX="${PAX}"
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro*)
+CFLAGS+=	-c99
+.endif
 
 # remove any existing charset.alias; if it already exists, libiconv does
 # not overwrite it, and older versions of libiconv wrote incorrect
