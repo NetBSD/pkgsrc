@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/27 12:24:06 tonio Exp $
 #
 
-DISTNAME=	btparse-0.33
+DISTNAME=	btparse-0.34
 CATEGORIES=	textproc
 MASTER_SITES=	http://starship.python.net/~gward/btOOL/
 
@@ -12,8 +12,7 @@ COMMENT=	BibTeX parsing library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	perl
+USE_LIBTOOL=YES
 GNU_CONFIGURE=	YES
-BUILD_TARGET=	lib
-TEST_TARGET=	test
 
 .include "../../mk/bsd.pkg.mk"
