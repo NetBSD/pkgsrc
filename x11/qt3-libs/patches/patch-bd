@@ -1,8 +1,8 @@
-$NetBSD: patch-bd,v 1.4 2005/02/10 13:21:20 adam Exp $
+$NetBSD: patch-bd,v 1.5 2005/09/27 07:46:20 adam Exp $
 
---- src/network/qdns.cpp.orig	2005-01-21 17:16:09.000000000 +0000
+--- src/network/qdns.cpp.orig	2005-09-02 12:42:59.000000000 +0000
 +++ src/network/qdns.cpp
-@@ -2532,6 +2532,8 @@ void QDns::doSynchronousLookup()
+@@ -2538,6 +2538,8 @@ void QDns::doSynchronousLookup()
  
  #if defined(__GLIBC__) && ((__GLIBC__ > 2) || ((__GLIBC__ == 2) && (__GLIBC_MINOR__ >= 3)))
  #define Q_MODERN_RES_API
