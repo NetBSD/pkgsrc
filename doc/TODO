@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3919 2005/09/27 20:16:13 wiz Exp $
+$NetBSD: TODO,v 1.3920 2005/09/27 20:22:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -831,7 +831,6 @@ Suggested package updates
 	o patchutils-0.2.31
 	o pcal-4.8
 	o pchar-1.5
-	o pcre-6.4
 	o pdmenu-1.2.85
 	o pear-HTTP_Request-1.2.4
 	o pear-Net_Socket-1.0.6
