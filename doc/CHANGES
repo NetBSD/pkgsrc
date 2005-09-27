@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11214 2005/09/27 00:32:33 gdt Exp $
+$NetBSD: CHANGES,v 1.11215 2005/09/27 09:17:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4123,3 +4123,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/mysql-client to 4.0.26 [xtraeme 2005-09-27]
 	Updated databases/mysql-server to 4.0.26 [xtraeme 2005-09-27]
 	Updated graphics/gimp-ufraw to 0.5 [gdt 2005-09-27]
+	Updated x11/qt3-libs to 3.3.5 [adam 2005-09-27]
+	Updated x11/qt3-tools to 3.3.5 [adam 2005-09-27]
+	Updated x11/qt3-docs to 3.3.5 [adam 2005-09-27]
+	Updated x11/qt3-psql to 3.3.5 [adam 2005-09-27]
+	Updated x11/qt3-mysql to 3.3.5 [adam 2005-09-27]
