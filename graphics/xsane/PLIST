@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/11/05 13:54:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/09/27 09:31:38 wiz Exp $
 bin/xsane
 man/man1/xsane.1
 share/sane/xsane/Mustek-logo.xpm
@@ -133,6 +133,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xsane.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xsane.mo
@@ -146,3 +147,4 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/xsane.mo
 @dirrm share/sane/xsane/doc
 @dirrm share/sane/xsane
+@comment in sane-backends: @dirrm share/sane
