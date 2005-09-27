@@ -1,42 +1,56 @@
-$NetBSD: patch-aa,v 1.1 2005/09/14 11:55:57 martti Exp $
+$NetBSD: patch-aa,v 1.2 2005/09/27 12:49:08 martti Exp $
 
 --- panel-plugin/memswap.c.orig	2003-11-06 02:39:52.000000000 +0200
-+++ panel-plugin/memswap.c	2005-09-14 11:47:37.000000000 +0300
-@@ -284,7 +284,17 @@
++++ panel-plugin/memswap.c	2005-09-27 12:39:16.000000000 +0300
+@@ -284,7 +284,24 @@
  
  #define ARRLEN(X) (sizeof(X)/sizeof(X[0]))
      {
 -        static int mib[]={ CTL_HW, HW_PHYSMEM };
-+	static int mib[2];
-+	/* 64-bit datatype */
-+	if(sizeof(size_t) == 8) {
-+		mib[0] = CTL_HW;
-+		mib[1] = HW_PHYSMEM64;
-+	}
-+	/* assume 32-bit datatype */
-+	else {
-+		mib[0] = CTL_HW;
-+		mib[1] = HW_PHYSMEM;
-+	}
++        static int mib[2];
++
++#ifdef HW_PHYSMEM64
++        /* 64-bit datatype */
++        if (sizeof(size_t) == 8) {
++                mib[0] = CTL_HW;
++                mib[1] = HW_PHYSMEM64;
++        }
++        /* assume 32-bit datatype */
++        else {
++                mib[0] = CTL_HW;
++                mib[1] = HW_PHYSMEM;
++        }
++#else
++        mib[0] = CTL_HW;
++        mib[1] = HW_PHYSMEM;
++#endif
++
          len = sizeof(MTotal);
          sysctl(mib, ARRLEN(mib), &MTotal, &len, NULL, 0);
          MTotal >>= 10;
-@@ -395,7 +405,17 @@
+@@ -395,7 +412,24 @@
  
  #define ARRLEN(X) (sizeof(X)/sizeof(X[0]))
      {
 -        static int mib[]={ CTL_HW, HW_PHYSMEM };
-+	static int mib[2];
-+	/* 64-bit datatype */
-+	if(sizeof(size_t) == 8) {
-+		mib[0] = CTL_HW;
-+		mib[1] = HW_PHYSMEM64;
-+	}
-+	/* assume 32-bit datatype */
-+	else {
-+		mib[0] = CTL_HW;
-+		mib[1] = HW_PHYSMEM;
-+	}
++        static int mib[2];
++
++#ifdef HW_PHYSMEM64
++        /* 64-bit datatype */
++        if (sizeof(size_t) == 8) {
++                mib[0] = CTL_HW;
++                mib[1] = HW_PHYSMEM64;
++        }
++        /* assume 32-bit datatype */
++        else {
++                mib[0] = CTL_HW;
++                mib[1] = HW_PHYSMEM;
++        }
++#else
++        mib[0] = CTL_HW;
++        mib[1] = HW_PHYSMEM;
++#endif
++
          len = sizeof(MTotal);
          sysctl(mib, ARRLEN(mib), &MTotal, &len, NULL, 0);
          MTotal >>= 10;

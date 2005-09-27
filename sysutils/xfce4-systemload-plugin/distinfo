@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/09/14 11:55:57 martti Exp $
+$NetBSD: distinfo,v 1.6 2005/09/27 12:49:08 martti Exp $
 
 SHA1 (xfce4-systemload-plugin-0.3.6.tar.gz) = ed477e9c8499b8e34031658237586a83bc12cef4
 RMD160 (xfce4-systemload-plugin-0.3.6.tar.gz) = a7b3f28326262eeb5aa66d5cd966474ac0a4554b
 Size (xfce4-systemload-plugin-0.3.6.tar.gz) = 229985 bytes
-SHA1 (patch-aa) = 8424fead4e2450b55ca607f652a24e1b66c549bf
+SHA1 (patch-aa) = 8889a9dcf8f10fd4e6f8597d849efc838c202b56
