@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/11/01 04:25:50 rh Exp $
+$NetBSD: patch-aa,v 1.2 2005/09/27 12:25:35 tonio Exp $
 
---- progs/Makefile.in.orig	Tue Sep 24 14:26:50 2002
+--- progs/Makefile.in.orig	2002-09-24 06:26:50.000000000 +0200
 +++ progs/Makefile.in
-@@ -12,8 +12,8 @@ include ../Makefile.defs	# for CC, CFLAG
+@@ -12,12 +12,12 @@ include ../Makefile.defs	# for CC, CFLAG
  # into the guts of the lexical scanner in order to ferret out the
  # token stream.  Thus, it needs access to the PCCTS header files in
  # order to compile.
@@ -13,6 +13,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/01 04:25:50 rh Exp $
  
  LIBDIRS = -L$(LIBDIR) $(OTHERLIBDIRS)
  LIBS    = -lbtparse $(OTHERLIBS)
+-LDFLAGS = $(LIBDIRS) $(LIBS)
++LDFLAGS = $(LIBDIRS) $(LIBS) -Wl,-R$(LIBDIR)
+ 
+ BPSRC   = bibparse.c args.c @GETOPT_SRC@
+ BPOBJ   = $(BPSRC:.c=.o)
 @@ -46,7 +46,6 @@ dumpnames : $(DNOBJ) lib
  	$(CC) -o $@ $(CFLAGS) $(DNOBJ) $(LDFLAGS)
  
