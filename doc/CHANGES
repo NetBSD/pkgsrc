@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11216 2005/09/27 09:32:47 wiz Exp $
+$NetBSD: CHANGES,v 1.11217 2005/09/27 09:38:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4130,3 +4130,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/qt3-mysql to 3.3.5 [adam 2005-09-27]
 	Updated graphics/sane-backends to 1.0.16 [wiz 2005-09-27]
 	Updated graphics/xsane to 0.97 [wiz 2005-09-27]
+	Updated games/freeciv-share to 2.0.6 [adam 2005-09-27]
+	Updated games/freeciv-client to 2.0.6 [adam 2005-09-27]
+	Updated games/freeciv-server to 2.0.6 [adam 2005-09-27]
