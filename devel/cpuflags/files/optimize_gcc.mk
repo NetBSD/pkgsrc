@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.25 2005/09/23 13:24:17 abs Exp $
+# $Id: optimize_gcc.mk,v 1.26 2005/09/27 16:38:11 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -31,23 +31,23 @@ PKG_EXCLUDE_FAST_MATH+=firefox firefox-gtk1 # v1.0, NetBSD i386/2.0
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=qt3-libs kdeedu3 koffice
 .endif
 
-TMPPKGNAME=${PKGNAME}
-TMPPKGNAME?=${DISTNAME}
-PKGBASE?=${TMPPKGNAME:C/-[^-]*$//}
+TMPPKGNAME:=${PKGNAME:?${PKGNAME}:${DISTNAME}}
+TMPPKGBASE:=${PKGBASE:?${PKGBASE}:${TMPPKGNAME:C/-[^-]*$//}}
 
-.if !empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${PKGBASE})
+.if !empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${TMPPKGBASE})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer//}
 .endif
 
-.if !empty(PKG_EXCLUDE_INLINE_FUNCTIONS:M${PKGBASE})
+.if !empty(PKG_EXCLUDE_INLINE_FUNCTIONS:M${TMPPKGBASE})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-finline-functions//}
 .endif
 
-.if !empty(PKG_EXCLUDE_FAST_MATH:M${PKGBASE})
+.if !empty(PKG_EXCLUDE_FAST_MATH:M${TMPPKGBASE})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-ffast-math//}
 .endif
 
 TMPPKGNAME=
+TMPPKGBASE=
 
 CFLAGS+=${COPT_FLAGS}
 CXXFLAGS+=${COPT_FLAGS}
