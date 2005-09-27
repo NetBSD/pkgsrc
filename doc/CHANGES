@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11230 2005/09/27 18:59:33 rillig Exp $
+$NetBSD: CHANGES,v 1.11231 2005/09/27 19:24:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4150,3 +4150,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/cpuflags to 0.94 [abs 2005-09-27]
 	Updated pkgtools/pkg_chk to 1.62 [abs 2005-09-27]
 	Updated pkgtools/pkglint to 4.21.5 [rillig 2005-09-27]
+	Updated net/bittornado to 0.3.13 [wiz 2005-09-27]
+	Updated net/bittornado-gui to 0.3.13 [wiz 2005-09-27]
