@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/12/05 11:14:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/09/27 07:47:27 adam Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -30,6 +30,8 @@ qt3/mkspecs/dgux-g++/qmake.conf
 qt3/mkspecs/dgux-g++/qplatformdefs.h
 qt3/mkspecs/freebsd-g++/qmake.conf
 qt3/mkspecs/freebsd-g++/qplatformdefs.h
+qt3/mkspecs/freebsd-g++34/qmake.conf
+qt3/mkspecs/freebsd-g++34/qplatformdefs.h
 qt3/mkspecs/freebsd-icc/qmake.conf
 qt3/mkspecs/freebsd-icc/qplatformdefs.h
 qt3/mkspecs/hpux-acc-64/qmake.conf
@@ -136,6 +138,8 @@ qt3/mkspecs/win32-msvc/qplatformdefs.h
 qt3/mkspecs/win32-msvc/win32app.dsp
 qt3/mkspecs/win32-msvc/win32dll.dsp
 qt3/mkspecs/win32-msvc/win32lib.dsp
+qt3/mkspecs/win32-msvc2005/qmake.conf
+qt3/mkspecs/win32-msvc2005/qplatformdefs.h
 qt3/mkspecs/win32-watcom/qmake.conf
 qt3/plugins/designer/libcppeditor.la
 qt3/plugins/designer/libdlgplugin.la
@@ -146,6 +150,7 @@ qt3/plugins/designer/libwizards.la
 @comment @dirrm qt3/plugins
 @dirrm qt3/mkspecs/win32-watcom
 @dirrm qt3/mkspecs/win32-msvc.net
+@dirrm qt3/mkspecs/win32-msvc2005
 @dirrm qt3/mkspecs/win32-msvc
 @dirrm qt3/mkspecs/win32-icc
 @dirrm qt3/mkspecs/win32-g++
@@ -193,6 +198,7 @@ qt3/plugins/designer/libwizards.la
 @dirrm qt3/mkspecs/hpux-acc-64
 @dirrm qt3/mkspecs/hpux-acc
 @dirrm qt3/mkspecs/freebsd-icc
+@dirrm qt3/mkspecs/freebsd-g++34
 @dirrm qt3/mkspecs/freebsd-g++
 @dirrm qt3/mkspecs/dgux-g++
 @dirrm qt3/mkspecs/darwin-g++
