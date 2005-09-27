@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3913 2005/09/27 15:15:26 adam Exp $
+$NetBSD: TODO,v 1.3914 2005/09/27 15:57:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,6 +347,7 @@ Suggested package updates
 	o ast-ksh-20040229
 	o astyle-1.15.3
 	o aterm-1.0.0
+	o auctex-11.81
 	o autogen-5.7.1
 	o avl-2.0.1
 	o avr-libc-1.2.3
@@ -412,6 +413,7 @@ Suggested package updates
 	o cue-20050228
 	o cuetools-1.3
 	o cvs2svn-1.2.1 [pkg/30386]
+	o cvsweb-3.0.6
 	o cxref-1.6
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.18.1
@@ -450,6 +452,7 @@ Suggested package updates
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
 	o enscript-1.6.4
+	o epiphany-1.8
 	o eric3-3.7.2
 	o erlang-10b-6
 	o esh-0.8.5
@@ -500,7 +503,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade2-2.12.0
 	o gld-1.6
-	o glib2-2.8.1
+	o glib2-2.8.2
 	o gnet1-1.1.9
 	o gnetman-20050325
 	o gnocatan-0.8.1.30
@@ -553,6 +556,7 @@ Suggested package updates
 	o hydrogen-0.9.0
 	o i2ocfg-1.1
 	o icdprog-0.5
+	o icecast-2.3.0
 	o icepref-2.3
 	o icsi-finger-1.0.29
 	o idesk-0.7.3
@@ -641,6 +645,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
+	o maradns-1.0.32
 	o mdd-20050318
 	o mdf2iso-0.3.0
 	o memcached-1.1.12 [pkg/30289]
@@ -652,6 +657,7 @@ Suggested package updates
 	o mimedefang-2.53
 	o mini_sendmail-1.3.5
 	o minivmac-2.5.0
+	o mjpegtools-1.8.0
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.5.6
 	o mldonkey-2.6.4
@@ -867,6 +873,7 @@ Suggested package updates
 	o proj-4.4.9
 	o proxsmtp-1.2.1
 	o psmisc-21.5
+	o pstoedit-3.42
 	o pstree-2.26
 	o pth-2.0.4
 	o puf-0.93.3
@@ -890,6 +897,7 @@ Suggested package updates
 	o py-gnutls-0.2.1
 	o py-imaging-1.1.5c2
 	o py-kenosis-0.95
+	o py-ldap-2.0.10
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
 	o py-mad-0.5.3
@@ -968,6 +976,7 @@ Suggested package updates
 	o sawfish-replibs-1.3
 	o scew-0.4.0
 	o scilab-3.1
+	o scmxx-0.8.1
 	o scribus-1.2.3 [drochner]
 	o scrollz-1.9.4
 	o sdig-0.40
@@ -1056,6 +1065,7 @@ Suggested package updates
 	o tnef-1.3.3
 	o tob-0.26
 	o top-3.6alpha9
+	o tor-0.1.0.15
 	o totd-1.5 [pkg/30545]
 	o totd-1.5.1
 	o tpasm-1.2
@@ -1129,7 +1139,9 @@ Suggested package updates
 	o xlispstat-3.52.20
 	o xm7-303
 	o xmahjongg-3.7
+	o xmame-0.100
 	o xmcd-3.3.0
+	o xmess-0.100
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-0.3.7
@@ -1162,7 +1174,7 @@ Suggested package updates
 	o ysm-2.9.6
 	o ytalk-3.2.0 [pkg/28840]
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.7
+	o zile-2.2.8
 	o zircon-1.18.256
 	o zope25-Photo-1.2.4
 	o zope25-ZWiki-0.39.0
