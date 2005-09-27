@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11229 2005/09/27 17:13:38 abs Exp $
+$NetBSD: CHANGES,v 1.11230 2005/09/27 18:59:33 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4149,3 +4149,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/abiword-plugins to 2.2.10 [adam 2005-09-27]
 	Updated devel/cpuflags to 0.94 [abs 2005-09-27]
 	Updated pkgtools/pkg_chk to 1.62 [abs 2005-09-27]
+	Updated pkgtools/pkglint to 4.21.5 [rillig 2005-09-27]
