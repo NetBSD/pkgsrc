@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.21 2005/09/05 08:18:08 adam Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/09/27 09:37:32 adam Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.0.5
+FC_VERS=	2.0.6
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.freeciv.org/pub/freeciv/stable/ \
 		http://www.freeciv.org/ftp/stable/ \
