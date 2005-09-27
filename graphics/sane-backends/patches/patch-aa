@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2003/06/29 10:16:45 rh Exp $
+$NetBSD: patch-aa,v 1.9 2005/09/27 09:29:56 wiz Exp $
 
---- doc/Makefile.in.orig	Thu May  1 09:12:55 2003
-+++ doc/Makefile.in
-@@ -25,7 +25,7 @@ mandir = @mandir@
- includedir = @includedir@
- oldincludedir = /usr/include
- configdir = ${sysconfdir}/sane.d
--docdir=$(prefix)/doc/sane-@VERSION@
-+docdir=$(prefix)/share/doc/sane-@VERSION@
+--- include/sane/sanei_backend.h.orig	2004-11-13 21:50:48.000000000 +0100
++++ include/sane/sanei_backend.h
+@@ -16,7 +16,7 @@
+  * Compiler related options
+  */
  
- MKDIR = $(top_srcdir)/mkinstalldirs
- INSTALL = @INSTALL@
+-#ifdef __GNUC__
++#if defined(__GNUC__) && !defined(__NetBSD__)
+ 
+ /* __unused tells the compiler a variable is unused, so the
+  * compiler doesn't spit a warning. */

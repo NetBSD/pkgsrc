@@ -1,59 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2005/05/15 03:13:10 reed Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/09/27 09:29:56 wiz Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
 bin/scanimage
-etc/sane.d/abaton.conf
-etc/sane.d/agfafocus.conf
-etc/sane.d/apple.conf
-etc/sane.d/artec.conf
-etc/sane.d/artec_eplus48u.conf
-etc/sane.d/avision.conf
-etc/sane.d/bh.conf
-etc/sane.d/canon.conf
-etc/sane.d/canon630u.conf
-etc/sane.d/coolscan.conf
-etc/sane.d/coolscan2.conf
-etc/sane.d/dc210.conf
-etc/sane.d/dc240.conf
-etc/sane.d/dc25.conf
-etc/sane.d/dll.conf
-etc/sane.d/dmc.conf
-etc/sane.d/epson.conf
-etc/sane.d/fujitsu.conf
-etc/sane.d/gt68xx.conf
-etc/sane.d/hp.conf
-etc/sane.d/hp5400.conf
-etc/sane.d/ibm.conf
-etc/sane.d/leo.conf
-etc/sane.d/ma1509.conf
-etc/sane.d/matsushita.conf
-etc/sane.d/microtek.conf
-etc/sane.d/microtek2.conf
-etc/sane.d/mustek.conf
-etc/sane.d/mustek_usb.conf
-etc/sane.d/nec.conf
-etc/sane.d/net.conf
-etc/sane.d/pie.conf
-etc/sane.d/plustek.conf
-etc/sane.d/plustek_pp.conf
-etc/sane.d/ricoh.conf
-etc/sane.d/s9036.conf
-etc/sane.d/saned.conf
-etc/sane.d/sceptre.conf
-etc/sane.d/sharp.conf
-etc/sane.d/snapscan.conf
-etc/sane.d/sp15c.conf
-etc/sane.d/st400.conf
-etc/sane.d/tamarack.conf
-etc/sane.d/teco1.conf
-etc/sane.d/teco2.conf
-etc/sane.d/teco3.conf
-etc/sane.d/test.conf
-etc/sane.d/u12.conf
-etc/sane.d/umax.conf
-etc/sane.d/umax1220u.conf
-etc/sane.d/umax_pp.conf
 include/sane/sane.h
 include/sane/saneopts.h
 lib/libsane.la
@@ -76,6 +25,7 @@ lib/sane/libsane-dll.la
 lib/sane/libsane-dmc.la
 lib/sane/libsane-epson.la
 lib/sane/libsane-fujitsu.la
+lib/sane/libsane-genesys.la
 lib/sane/libsane-gt68xx.la
 lib/sane/libsane-hp.la
 lib/sane/libsane-hp5400.la
@@ -99,6 +49,7 @@ lib/sane/libsane-s9036.la
 lib/sane/libsane-sceptre.la
 lib/sane/libsane-sharp.la
 ${SANE_SM3600}lib/sane/libsane-sm3600.la
+lib/sane/libsane-sm3840.la
 lib/sane/libsane-snapscan.la
 lib/sane/libsane-sp15c.la
 lib/sane/libsane-st400.la
@@ -135,6 +86,7 @@ man/man5/sane-dll.5
 man/man5/sane-dmc.5
 man/man5/sane-epson.5
 man/man5/sane-fujitsu.5
+man/man5/sane-genesys.5
 man/man5/sane-gphoto2.5
 man/man5/sane-gt68xx.5
 man/man5/sane-hp.5
@@ -164,6 +116,7 @@ man/man5/sane-sceptre.5
 man/man5/sane-scsi.5
 man/man5/sane-sharp.5
 man/man5/sane-sm3600.5
+man/man5/sane-sm3840.5
 man/man5/sane-snapscan.5
 man/man5/sane-sp15c.5
 man/man5/sane-st400.5
@@ -203,6 +156,7 @@ share/doc/sane-${SANE_VERSION}/README.solaris
 share/doc/sane-${SANE_VERSION}/README.unixware2
 share/doc/sane-${SANE_VERSION}/README.unixware7
 share/doc/sane-${SANE_VERSION}/README.windows
+share/doc/sane-${SANE_VERSION}/README.zeta
 share/doc/sane-${SANE_VERSION}/backend-writing.txt
 share/doc/sane-${SANE_VERSION}/canon/canon.changes
 share/doc/sane-${SANE_VERSION}/canon/canon.install2700F.txt
@@ -261,6 +215,59 @@ share/doc/sane-${SANE_VERSION}/umax/umax.BUGS
 share/doc/sane-${SANE_VERSION}/umax/umax.CHANGES
 share/doc/sane-${SANE_VERSION}/umax/umax.FAQ
 share/doc/sane-${SANE_VERSION}/umax/umax.TODO
+share/examples/sane/abaton.conf
+share/examples/sane/agfafocus.conf
+share/examples/sane/apple.conf
+share/examples/sane/artec.conf
+share/examples/sane/artec_eplus48u.conf
+share/examples/sane/avision.conf
+share/examples/sane/bh.conf
+share/examples/sane/canon.conf
+share/examples/sane/canon630u.conf
+share/examples/sane/coolscan.conf
+share/examples/sane/coolscan2.conf
+share/examples/sane/dc210.conf
+share/examples/sane/dc240.conf
+share/examples/sane/dc25.conf
+share/examples/sane/dll.conf
+share/examples/sane/dmc.conf
+share/examples/sane/epson.conf
+share/examples/sane/fujitsu.conf
+share/examples/sane/genesys.conf
+share/examples/sane/gt68xx.conf
+share/examples/sane/hp.conf
+share/examples/sane/hp5400.conf
+share/examples/sane/ibm.conf
+share/examples/sane/leo.conf
+share/examples/sane/ma1509.conf
+share/examples/sane/matsushita.conf
+share/examples/sane/microtek.conf
+share/examples/sane/microtek2.conf
+share/examples/sane/mustek.conf
+share/examples/sane/mustek_usb.conf
+share/examples/sane/nec.conf
+share/examples/sane/net.conf
+share/examples/sane/pie.conf
+share/examples/sane/plustek.conf
+share/examples/sane/plustek_pp.conf
+share/examples/sane/ricoh.conf
+share/examples/sane/s9036.conf
+share/examples/sane/saned.conf
+share/examples/sane/sceptre.conf
+share/examples/sane/sharp.conf
+share/examples/sane/snapscan.conf
+share/examples/sane/sm3840.conf
+share/examples/sane/sp15c.conf
+share/examples/sane/st400.conf
+share/examples/sane/tamarack.conf
+share/examples/sane/teco1.conf
+share/examples/sane/teco2.conf
+share/examples/sane/teco3.conf
+share/examples/sane/test.conf
+share/examples/sane/u12.conf
+share/examples/sane/umax.conf
+share/examples/sane/umax1220u.conf
+share/examples/sane/umax_pp.conf
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/sane-backends.mo
@@ -271,12 +278,14 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/sane-backends.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sane-backends.mo
 @exec ${MKDIR} %D/share/sane/gt68xx
 @dirrm share/sane/gt68xx
 @dirrm share/sane
+@dirrm share/examples/sane
 @dirrm share/doc/sane-${SANE_VERSION}/umax
 @dirrm share/doc/sane-${SANE_VERSION}/u12
 @dirrm share/doc/sane-${SANE_VERSION}/teco
@@ -292,4 +301,3 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sane-backends.mo
 @dirrm share/doc/sane-${SANE_VERSION}
 @dirrm lib/sane
 @dirrm include/sane
-@dirrm etc/sane.d
