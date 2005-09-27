@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11227 2005/09/27 15:51:22 adam Exp $
+$NetBSD: CHANGES,v 1.11228 2005/09/27 16:38:39 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4147,3 +4147,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/efax-gtk to 3.0.5 [adam 2005-09-27]
 	Updated editors/abiword to 2.2.10 [adam 2005-09-27]
 	Updated editors/abiword-plugins to 2.2.10 [adam 2005-09-27]
+	Updated devel/cpuflags to 0.94 [abs 2005-09-27]
