@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11223 2005/09/27 13:49:32 adam Exp $
+$NetBSD: CHANGES,v 1.11224 2005/09/27 14:24:43 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4141,3 +4141,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wm/fluxbox to 0.9.14 [tonio 2005-09-27]
 	Updated net/gtk-gnutella to 0.95.4 [adam 2005-09-27]
 	Updated wm/windowmaker to 0.92.0nb2 [adam 2005-09-27]
+	Updated mail/clamav to 0.87 [xtraeme 2005-09-27]
