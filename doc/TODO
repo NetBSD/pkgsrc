@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3915 2005/09/27 15:58:41 wiz Exp $
+$NetBSD: TODO,v 1.3916 2005/09/27 15:59:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -844,7 +844,6 @@ Suggested package updates
 	o pfstat-1.8
 	o phoon-20030120
 	o photopc-3.05
-	o php-4.4.0
 	o phpmyadmin-2.6.4pl1
 	o phylip-3.62
 	o piewm-1.03
