@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11232 2005/09/27 19:54:36 tv Exp $
+$NetBSD: CHANGES,v 1.11233 2005/09/27 20:12:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4153,3 +4153,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/bittornado to 0.3.13 [wiz 2005-09-27]
 	Updated net/bittornado-gui to 0.3.13 [wiz 2005-09-27]
 	Updated net/tor to 0.1.0.15 [tv 2005-09-27]
+	Updated x11/devilspie to 0.11 [wiz 2005-09-27]
