@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: MESSAGE,v 1.6 2005/09/28 14:15:49 rillig Exp $
 
 Arla now has been installed on your system.
 
@@ -34,5 +34,5 @@ to /etc/lkm.conf.  You also have to enable loading of lkms in /etc/rc.conf
 
 NOTE: Please note that the name of the arla device changed from "xfs"
       to "nnpfs". If you're upgrading arla from an older version, you
-      need to adjust /etc/fstab, /etc/lkm.conf, and /etc/rc.d/arlad. 
+      need to adjust /etc/fstab, /etc/lkm.conf, and /etc/rc.d/arlad.
 ===========================================================================

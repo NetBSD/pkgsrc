@@ -1,17 +1,17 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.10 2004/11/18 08:22:27 jklos Exp $
+$NetBSD: MESSAGE,v 1.11 2005/09/28 14:15:49 rillig Exp $
 
 The MySQL directory `${MYSQL_DATADIR}' should be owned by the user
 `${MYSQL_USER}' and group `${MYSQL_GROUP}'.  This can be done with:
 
   chown -R ${MYSQL_USER}:${MYSQL_GROUP} ${MYSQL_DATADIR}
 
-If this is a new installation, you will likely want to set up the 
+If this is a new installation, you will likely want to set up the
 initial database tables by using the following command:
 
   ${PREFIX}/bin/mysql_install_db --user=${MYSQL_USER}
 
-After the tables are set up and the MySQL server is running, 
+After the tables are set up and the MySQL server is running,
 please remember to set a password for the MySQL root user!
 This is done by running both:
 

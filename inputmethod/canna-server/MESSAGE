@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2004/10/11 22:14:52 reed Exp $
+$NetBSD: MESSAGE,v 1.4 2005/09/28 14:15:49 rillig Exp $
 
-If you want Canna server to boot automatically, 
+If you want Canna server to boot automatically,
 
 	1) Copy ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/canna to /etc/rc.d/.
 	2) Add the following line to /etc/rc.conf.
