@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:54 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 12:24:44 rillig Exp $
 
 DISTNAME=	instiki-0.9.2
 PKGREVISION=	3
@@ -13,7 +13,7 @@ COMMENT=	Wiki clone that focuses on simple installation and running
 DEPENDS+=	${RUBY_PKGPREFIX}-digest-[0-9]*:../../security/ruby-digest
 DEPENDS+=	${RUBY_PKGPREFIX}-zlib-[0-9]*:../../devel/ruby-zlib
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
 USE_PKGINSTALL=	yes
 
 RCD_SCRIPTS=	instiki
