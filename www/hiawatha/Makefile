@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:53 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/09/28 12:23:55 rillig Exp $
 #
 
 DISTNAME=	hiawatha
@@ -16,8 +16,8 @@ COMMENT=	Barebones HTTP server with XML and XSLT support (and more)
 
 DEPENDS+=	saxon-[0-9]*:../../textproc/saxon
 
-NO_CONFIGURE=
-NO_BUILD=
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}
 USE_JAVA=	run
