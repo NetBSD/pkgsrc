@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/09/15 13:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/09/28 20:52:24 rillig Exp $
 #
 
 DISTNAME=	windows-all-20050412
@@ -21,8 +21,8 @@ USE_LANGUAGES=	# empty
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-NO_BUILD=	# defined
-NO_CONFIGURE=	# defined
+NO_BUILD=	yes
+NO_CONFIGURE=	yes
 
 RESTRICTED=	"Unsure of codec's license"
 NO_BIN_ON_CDROM=${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/15 18:27:53 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 20:52:25 rillig Exp $
 #
 
 DISTNAME=	prereq-readme-20050521
@@ -11,9 +11,9 @@ HOMEPAGE=	http://www.NetBSD.org/
 COMMENT=	Tools required for pkgsrc README.html generation
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	# defined
-NO_CONFIGURE=  	# defined
-NO_BUILD=   	# defined
+NO_CHECKSUM=	yes
+NO_CONFIGURE=  	yes
+NO_BUILD=   	yes
 NO_INSTALL=   	# defined
 NO_PACKAGE=   	# defined
 

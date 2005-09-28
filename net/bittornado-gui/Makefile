@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/27 19:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 20:52:24 rillig Exp $
 #
 
 .include "../../net/bittornado/Makefile.common"
@@ -11,7 +11,7 @@ CONFLICTS=	bittorrent-gui-[0-9]*
 
 DEPENDS+=	BitTornado>=0.3.13:../../net/bittornado
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 PYTHON_PATCH_SCRIPTS=	btcompletedirgui.py btdownloadgui.py
 PYTHON_PATCH_SCRIPTS+=	btmaketorrentgui.py

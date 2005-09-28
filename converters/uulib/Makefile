@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/06/16 06:57:43 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/09/28 20:52:18 rillig Exp $
 #
 
 DISTNAME=       uudeview-0.5.20
@@ -15,8 +15,8 @@ COMMENT=	Library for uu/xx/Base64/BinHex de-/encoding
 CONFLICTS=	kdesupport-2.1b
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/uulib
-GNU_CONFIGURE=	# defined
-USE_LIBTOOL=	# defined
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
 BUILD_TARGET=	libuu.la
 
