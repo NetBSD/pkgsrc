@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.18 2005/09/22 18:21:00 rillig Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.19 2005/09/28 10:06:05 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -214,6 +214,11 @@ do-pkgsrc-patch:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	fail=;								\
 	patches=${_PKGSRC_PATCHES:Q};					\
+	patch_warning() {						\
+		${ECHO_MSG} "**************************************";	\
+		${ECHO_MSG} "$$1";					\
+		${ECHO_MSG} "**************************************";	\
+	};								\
 	for i in $$patches; do						\
 		${TEST} -f "$$i" || continue;				\
 		case "$$i" in						\
@@ -225,33 +230,21 @@ do-pkgsrc-patch:
 			;;						\
 		${PATCHDIR}/patch-*) 					\
 			if ${TEST} ! -f ${DISTINFO_FILE:Q}; then	\
-				${ECHO_MSG} "**************************************"; \
-				${ECHO_MSG} "Ignoring unknown patch file: $$i";	\
-				${ECHO_MSG} "**************************************"; \
+				patch_warning "Ignoring patch file $$i: distinfo not found"; \
 				continue;				\
 			fi;						\
 			filename=`${BASENAME} $$i`;			\
 			algsum=`${AWK} '(NF == 4) && ($$2 == "('$$filename')") && ($$3 == "=") {print $$1 " " $$4}' ${DISTINFO_FILE} || ${TRUE}`; \
 			if ${TEST} -z "$$algsum"; then			\
-				${ECHO_MSG} "**************************************"; \
-				${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
-				${ECHO_MSG} "**************************************"; \
+				patch_warning "Ignoring patch file $$i: no checksum found"; \
 				continue;				\
 			fi;						\
 			set -- $$algsum;				\
 			{ alg="$$1"; recorded="$$2";			\
 			  calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
 			  ${ECHO_PATCH_MSG} "=> Verifying $$filename (using digest algorithm $$alg)"; \
-			  if ${TEST} -z "$$recorded"; then		\
-				${ECHO_MSG} "**************************************"; \
-				${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
-				${ECHO_MSG} "**************************************"; \
-				continue;				\
-			  fi;						\
 			  if ${TEST} "$$calcsum" != "$$recorded"; then	\
-				${ECHO_MSG} "**************************************"; \
-				${ECHO_MSG} "Patch file $$i has been modified"; \
-				${ECHO_MSG} "**************************************"; \
+			  	patch_warning "Ignoring patch file $$i: invalid checksum"; \
 				fail="$$fail $$i";			\
 				continue;				\
 			  fi; };					\
