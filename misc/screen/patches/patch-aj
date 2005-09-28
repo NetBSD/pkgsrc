@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.3 2004/07/15 04:05:40 atatat Exp $
+$NetBSD: patch-aj,v 1.4 2005/09/28 19:35:36 rillig Exp $
 
 Detect getutent correctly on NetBSD with utmpx.
 
@@ -29,4 +29,3 @@ Detect getutent correctly on NetBSD with utmpx.
  
  AC_MSG_CHECKING(for setenv)
  AC_TRY_LINK(,[setenv((char *)0,(char *)0);unsetenv((char *)0);], AC_MSG_RESULT(yes);AC_DEFINE(USESETENV),
-
