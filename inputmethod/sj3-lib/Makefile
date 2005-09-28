@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:11 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/28 18:22:11 rillig Exp $
 
 DISTNAME=	sj3-2.0.1.20
 PKGNAME=	sj3-lib-2.0.1.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.sony.co.jp/pub/unsupported/src/	\
 		ftp://ftp.cs.titech.ac.jp/pub/japanese/sj3/
