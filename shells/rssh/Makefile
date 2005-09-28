@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/20 04:23:49 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 21:02:27 seb Exp $
 #
 
 DISTNAME=		rssh-2.2.3
@@ -7,7 +7,7 @@ CATEGORIES=		shells security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rssh/}
 
 MAINTAINER=		seb@NetBSD.org
-HOMEPAGE=		http://www.pizzashack.org/rssh/
+HOMEPAGE=		http://rssh.sourceforge.net/
 COMMENT=		Restricted shell allowing only scp and/or sftp
 
 GNU_CONFIGURE=		yes
