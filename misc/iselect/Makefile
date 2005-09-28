@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:35 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/09/28 19:51:27 rillig Exp $
 #
 
 DISTNAME=		iselect-1.2.0
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.engelschall.com/sw/iselect/
 COMMENT=		Curses based Interactive Selection Tool
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 
 post-configure:
 	touch ${WRKSRC}/config_ac.h.in

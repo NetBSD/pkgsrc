@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:49:48 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 19:51:27 rillig Exp $
 
 DISTNAME=		proj-pdf-docs
 PKGNAME=		proj-doc-1.0
@@ -9,7 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.remotesensing.org/proj/
 COMMENT=		PDF documentation for the PROJ cartographic projection software
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/proj
