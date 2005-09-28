@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/25 19:11:58 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 19:07:49 rillig Exp $
 #
 
 DISTNAME=	prosper-1.00.4
@@ -40,9 +40,8 @@ do-install:
 	cd ${WRKSRC}/doc && ${PAX} -rw -pp -pm . ${DOCDIR}
 	cd ${WRKSRC}/examples && ${PAX} -rw -pp -pm . ${EGDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
-.undef f
 	${LOCALBASE}/bin/mktexlsr
 
 .include "../../mk/bsd.pkg.mk"
