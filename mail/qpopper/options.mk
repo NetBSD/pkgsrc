@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2005/06/01 21:14:28 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2005/09/28 21:55:32 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qpopper
 PKG_SUPPORTED_OPTIONS=	drac inet6 kerberos pam qpopper-servermode ssl
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--without-pam
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
-PKG_USE_KERBEROS=	# defined
+PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--enable-kerberos
 .endif
 

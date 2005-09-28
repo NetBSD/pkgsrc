@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2005/04/11 21:46:02 tv Exp $
+# $NetBSD: Makefile.common,v 1.30 2005/09/28 21:55:32 rillig Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	# defined
 
-USE_PKGLOCALEDIR=	# defined
+USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
