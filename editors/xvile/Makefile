@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/09/28 09:44:30 agc Exp $
+# $NetBSD: Makefile,v 1.48 2005/09/28 20:52:20 rillig Exp $
 
 DISTNAME=		vile-9.5
 PKGNAME=		xvile-9.5
@@ -12,7 +12,7 @@ HOMEPAGE=		http://dickey.his.com/vile/vile.html
 COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR}

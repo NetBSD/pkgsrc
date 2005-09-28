@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/28 20:52:21 rillig Exp $
 
 DISTNAME=	vmware-netbsd-1.2
 PKGNAME=	vmware-module-1.2
@@ -15,7 +15,7 @@ CONFLICTS=	vmware-module-3*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 WRKSRC=		${WRKDIR}
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	yes
 
 NO_SRC_ON_FTP=		already there
 

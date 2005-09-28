@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/06 18:05:32 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2005/09/28 20:52:26 rillig Exp $
 
 DISTNAME=	scribus-1.2.2.1
 CATEGORIES=	print
@@ -15,7 +15,7 @@ PTHREAD_OPTS+=		require
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=        --with-qt-dir=${QTDIR} \
 			--with-extra-libs=${LOCALBASE}/lib \
 			--with-extra-includes=${LOCALBASE}/include

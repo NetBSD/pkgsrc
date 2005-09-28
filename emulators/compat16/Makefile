@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/23 10:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 20:52:20 rillig Exp $
 #
 
 DISTNAME=		compat16-${MACHINE_ARCH}-${VERSION}
@@ -15,9 +15,9 @@ VERSION=		1.6.0
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6[A-Z]*-i386 NetBSD-[2-9]*-i386
 
-NO_MTREE=		# defined
-NO_BUILD=		# defined
-NO_CONFIGURE=		# defined
+NO_MTREE=		yes
+NO_BUILD=		yes
+NO_CONFIGURE=		yes
 SHLIB_HANDLING=		NO
 
 .include "../../mk/bsd.prefs.mk"

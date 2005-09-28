@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/19 10:16:09 grant Exp $
+# $NetBSD: Makefile,v 1.23 2005/09/28 20:52:25 rillig Exp $
 
 DISTNAME=		trn-4.0-test76
 PKGNAME=		trn-4.76
@@ -29,7 +29,7 @@ DEPENDS=		nntpclnt>=1.6.1:../../news/nntpclnt
 # foo.y.z.com for the purposes of allowing cancels.
 TRN_HOSTBITS?=		0
 
-HAS_CONFIGURE=		# defined
+HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ENV=		PREFIX=${PREFIX}
 USE_TOOLS+=		awk basename cat cp diff echo egrep expr grep mkdir mv

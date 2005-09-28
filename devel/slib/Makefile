@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/09/28 20:52:20 rillig Exp $
 
 DISTNAME=	slib3a1
 #
@@ -17,9 +17,9 @@ HOMEPAGE=	http://swissnet.ai.mit.edu/~jaffer/SLIB.html
 COMMENT=	Portable Scheme library of compatibility and utility functions
 
 WRKSRC=		${WRKDIR}/slib
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
-NO_TOOLS=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_TOOLS=	yes
 
 SLIBDIR=	${PREFIX}/share/slib
 DOCDIR=		${PREFIX}/share/doc/slib

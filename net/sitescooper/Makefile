@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:25 rillig Exp $
 #
 
 DISTNAME=	sitescooper-2.2.8
@@ -14,7 +14,7 @@ DEPENDS+=	p5-libwww>=5.46:../../www/p5-libwww
 DEPENDS+=	pilotmgr-[0-9]*:../../comms/pilotmgr
 
 USE_TOOLS+=	perl:run
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin etc man/man1
 

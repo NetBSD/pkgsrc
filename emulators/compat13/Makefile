@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/04/15 18:40:50 kristerw Exp $
+# $NetBSD: Makefile,v 1.22 2005/09/28 20:52:20 rillig Exp $
 #
 
 DISTNAME=		compat13-${MACHINE_ARCH}${PKGMINOR}
@@ -16,8 +16,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
 			NetBSD-*-ns32k NetBSD-*-sparc
 NOT_FOR_PLATFORM=	NetBSD-1.3*-*
 
-NO_MTREE=		# defined
-NO_BUILD=		# defined
+NO_MTREE=		yes
+NO_BUILD=		yes
 SHLIB_HANDLING=		NO
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

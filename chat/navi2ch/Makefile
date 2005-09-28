@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/28 04:25:28 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/28 20:52:18 rillig Exp $
 
 DISTNAME=	navi2ch-1.7.5
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	2ch BBS browser for Emacs
 
 .include "../../mk/emacs.mk"
 
-GNU_CONFIGURE=	# defined
+GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 .if ${EMACS_FLAVOR} == "emacs"
 CONFIGURE_ARGS+=--with-emacs

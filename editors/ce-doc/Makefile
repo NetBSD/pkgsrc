@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/08 07:46:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 20:52:20 rillig Exp $
 #
 
 .include "../ce/Makefile.common"
@@ -8,7 +8,7 @@ COMMENT+=		, documentation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 INSTALL_TARGET=		doc-install
 

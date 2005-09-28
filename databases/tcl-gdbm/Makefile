@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/09/28 20:52:19 rillig Exp $
 #
 
 DISTNAME=	tclgdbm-0.10
@@ -10,8 +10,8 @@ MASTER_SITES=	http://www.graphviz.org/pub/tclgdbm/
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Tcl interface to gdbm - GNU database manager
 
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CFLAGS+=		-I${LOCALBASE}/include		# gdbm.h

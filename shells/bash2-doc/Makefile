@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/15 18:27:53 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/28 20:52:26 rillig Exp $
 
 DISTNAME=	bash-doc-2.05b
 PKGNAME=	bash-doc-2.05.2
@@ -13,8 +13,8 @@ COMMENT=	Documentation for the GNU Bourne Again Shell
 CONFLICTS=	bash<=2.05nb1
 
 WRKSRC=		${WRKDIR}/doc
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 USE_TOOLS+=	gzip
 

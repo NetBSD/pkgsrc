@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/17 03:50:35 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/28 20:52:27 rillig Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -25,8 +25,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 WRKSRC=			${WRKDIR}/sm_linux_v314_install
 CHECK_SHLIBS=		NO
 _STRIPFLAG_INSTALL=	# defined
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 INTERACTIVE_STAGE=	fetch
 
 DOWNLOAD=		http://www.adaptec.com/worldwide/support/driverdetail.html?cat=%2fOperating+System%2fLinux&filekey=sm_linux_v314_install.rpm

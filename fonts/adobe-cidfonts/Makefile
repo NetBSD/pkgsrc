@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/01 16:40:39 snj Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 20:52:21 rillig Exp $
 
 DISTNAME=	adobe-cidfonts-20000901
 CATEGORIES=	fonts
@@ -27,8 +27,8 @@ DISTFILES+=	WadaMin-Regular WadaMin-Regular.afm
 DISTFILES+=	WadaMin-RegularH WadaMin-RegularH.afm
 
 EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 RESOURCEDIR=	${PREFIX}/share/Adobe/Resource
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 20:52:25 rillig Exp $
 #
 
 DISTNAME=		${TWISTED_DISTNAME}
@@ -10,8 +10,8 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.twistedmatrix.com/
 COMMENT=		Framework for writing networked applications
 
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 USE_LANGUAGES=
 
 HTMLDIR=	share/doc/py-twisted-docs-${TWISTED_VERSION}

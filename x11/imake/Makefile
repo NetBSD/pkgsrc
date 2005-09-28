@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/07/17 21:57:52 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2005/09/28 20:52:28 rillig Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_DIRS+=		XFree86-1.1
 INSTALL_TARGET=		install install.man
-NO_XFREE86_TARGETS=	# defined
+NO_XFREE86_TARGETS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

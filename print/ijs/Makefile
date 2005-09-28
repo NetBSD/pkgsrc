@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:26 rillig Exp $
 
 DISTNAME=	ijs-0.34
 PKGREVISION=	1
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.linuxprinting.org/ijs/
 COMMENT=	Protocol library for raster page transmission
 
 USE_TOOLS+=		gmake
-USE_LIBTOOL=		# defined
-GNU_CONFIGURE=		# defined
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
 BUILD_TARGET=		libijs.la
 MAKE_ENV+=		XCFLAGS="${CFLAGS}"

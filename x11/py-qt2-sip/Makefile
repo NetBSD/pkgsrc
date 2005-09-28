@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:03:30 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/28 20:52:28 rillig Exp $
 #
 
 DISTNAME=	sip-3.1
@@ -11,9 +11,9 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.riverbankcomputing.co.uk/sip/index.php
 COMMENT=	Tool to create Python bindings for C++ libraries
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-python=${PYTHONBIN} \
 			--with-qt-dir=${QTDIR}
 

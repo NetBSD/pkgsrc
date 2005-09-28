@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:45:07 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/09/28 20:52:18 rillig Exp $
 
 DISTNAME=	lrzsz-0.12.20
 CATEGORIES=	comms
@@ -10,8 +10,8 @@ COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PKGLOCALEDIR=	# defined
-GNU_CONFIGURE=		# defined
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

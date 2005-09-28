@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/06 06:19:05 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/28 20:52:18 rillig Exp $
 
 DISTNAME=	jcode.pl-2.13
 PKGNAME=	p5-jcode-2.13
@@ -15,8 +15,8 @@ COMMENT=	Perl library for Japanese character code conversion
 
 WRKSRC=			${WRKDIR}
 
-NO_BUILD=		# defined
-NO_CONFIGURE=		# defined
+NO_BUILD=		yes
+NO_CONFIGURE=		yes
 PERL5_CONFIGURE=	NO
 EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} .
 

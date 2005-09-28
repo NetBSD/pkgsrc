@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:53 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:22 rillig Exp $
 
 DISTNAME=		colchess
 PKGNAME=		${DISTNAME}-7.0
@@ -12,7 +12,7 @@ COMMENT=		Chess analysis engine
 
 DIST_SUBDIR=		${PKGNAME}
 MAKE_ENV+=		PREFIX="${PREFIX}"
-NO_CONFIGURE=		# defined
+NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/ColChess
 
 DATADIR=		${PREFIX}/share/colchess

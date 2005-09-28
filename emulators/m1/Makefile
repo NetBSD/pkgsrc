@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 20:52:20 rillig Exp $
 #
 
 DISTNAME=	m1074b2-lnx
@@ -16,7 +16,7 @@ DEPENDS+=	suse_base>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
 ONLY_FOR_PLATFORM=	*-*-i386
 
 WRKSRC=		${WRKDIR}/m1-0.7.4
-NO_BUILD=	# defined
+NO_BUILD=	yes
 CHECK_SHLIBS=	no
 
 INSTALLATION_DIRS=	bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 18:02:39 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 20:52:18 rillig Exp $
 #
 
 DISTNAME=	xanalyser-1.24
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.suse.de/~arvin/xanalyser/
 COMMENT=	Frequency spectrum analyser for X
 
 USE_LANGUAGES=		c++
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"

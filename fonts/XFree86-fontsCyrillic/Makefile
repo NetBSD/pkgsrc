@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/09/28 14:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:21 rillig Exp $
 
 DISTNAME=	XFree86-${XF_VER}-src-4
 PKGNAME=	XFree86-fontsCyrillic-${XF_VER}
@@ -11,7 +11,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Cyrillic fonts
 
-NO_XFREE86_TARGETS=	# defined
+NO_XFREE86_TARGETS=	yes
 WRKSRC=			${WRKDIR}/xc/fonts/bdf/cyrillic
 
 .include "../../fonts/XFree86-fontsEncodings/Makefile.common"

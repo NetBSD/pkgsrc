@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/09/10 08:39:33 jdolecek Exp $
+# $NetBSD: Makefile,v 1.35 2005/09/28 20:52:18 rillig Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -35,7 +35,7 @@ BUILD_DEFS+=	APACHE_USER
 USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR?=	phpmyadmin
 
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 INSTALL_DIRS=	css lang libraries libraries/auth libraries/dbg \
 		libraries/dbi libraries/export libraries/fpdf	\

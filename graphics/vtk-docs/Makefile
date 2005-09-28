@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/02 13:17:27 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/28 20:52:23 rillig Exp $
 #
 
 DISTNAME=	VTKDocHtml-4.2
@@ -6,7 +6,7 @@ PKGNAME=	vtk-docs-4.2
 COMMENT=	Documentation for VTK (HTML)
 
 WRKSRC=		${WRKDIR}/html
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 HTML_DIR=	share/doc/${PKGNAME}
 

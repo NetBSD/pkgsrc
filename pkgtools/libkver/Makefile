@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:05 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/28 20:52:25 rillig Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -14,8 +14,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_PKGINSTALL=		YES
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
-NO_CHECKSUM=		# defined
-NO_MTREE=		# defined
+NO_CHECKSUM=		yes
+NO_MTREE=		yes
 
 VERSION=		0.6
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2005/06/13 17:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.115 2005/09/28 20:52:25 rillig Exp $
 
 # Notes to package maintainers:
 #
@@ -17,7 +17,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 CONFIGURE_ARGS+=	--with-ftp="\"${FETCH_CMD}"\"
 CONFIGURE_ARGS+=	--with-mtree="\"${MTREE}"\"
@@ -30,8 +30,8 @@ USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
 			sed sort touch
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
-NO_CHECKSUM=		# defined
-NO_MTREE=		# defined
+NO_CHECKSUM=		yes
+NO_MTREE=		yes
 PKG_PRESERVE=		# defined
 
 # These are needed to solve a chicken-and-egg problem where pkgsrc uses

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/16 01:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/28 20:52:25 rillig Exp $
 
 DISTNAME=	foomatic-gswrapper
 PKGNAME=	foomatic-gswrapper-1.2
@@ -23,7 +23,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
 USE_TOOLS+=		perl:run
-NO_BUILD=		# defined
+NO_BUILD=		yes
 
 REPLACE_PERL=	${DISTNAME}
 

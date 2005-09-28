@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:16 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/28 20:52:23 rillig Exp $
 
 .include "Makefile.common"
 
@@ -8,7 +8,7 @@ PKGREVISION=	1
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		ISO/Edinburgh-style Prolog compiler
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 USE_BUILTIN.readline=	no	# uses rl_event_hook() interface
 
 CONFIGURE_ENV+=		PL=swi-prolog
