@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/27 12:18:50 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/28 14:35:31 rillig Exp $
 #
 
-DISTNAME=		# empty
-PKGNAME=		xrmap-2.29
+DISTNAME=		xrmap-2.29
 CATEGORIES=		geography
 DISTFILES=		# empty
 
@@ -10,6 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		Earth map viewer - complete
 
+NO_CHECKSUM=		yes
 NO_BUILD=		yes
 
 DEPENDS+=	xrmap-base-2.29:../../geography/xrmap-base
@@ -22,6 +22,6 @@ DEPENDS+=	xrmap-hymns>=1.2:../../geography/xrmap-hymns
 DEPENDS+=	xrmap-pdfmaps>=1.1:../../geography/xrmap-pdfmaps
 
 do-install:
-	# nothing
+	@${DO_NADA}
 
 .include "../../mk/bsd.pkg.mk"
