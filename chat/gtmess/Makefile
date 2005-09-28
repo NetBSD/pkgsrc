@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:04 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/09/28 23:11:27 rafal Exp $
 #
 
-DISTNAME=		gtmess-0.9
+DISTNAME=		gtmess-0.91
 CATEGORIES=		chat
-MASTER_SITES=		http://www.geocities.com/montajoe/gtmess/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtmess/}
 
 MAINTAINER=		luapzz@gmail.com
-HOMEPAGE=		http://www.geocities.com/montajoe/gtmess/
+HOMEPAGE=		http://gtmess.sourceforge.net/
 COMMENT=		Console-based MSN Messenger client
 
 DEPENDS+=		tk-[0-9]*:../../x11/tk
