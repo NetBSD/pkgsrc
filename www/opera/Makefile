@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2005/09/22 21:50:03 jdolecek Exp $
+# $NetBSD: Makefile,v 1.43 2005/09/28 12:33:10 rillig Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
-PKGREVISION=	# empty
 CATEGORIES=	www
 MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
 		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
@@ -136,7 +135,7 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( ${ECHO} '$$NetBSD: Makefile,v 1.42 2005/09/22 21:50:03 jdolecek Exp $$'; ${ECHO} ''; \
+	( ${ECHO} '$$NetBSD: Makefile,v 1.43 2005/09/28 12:33:10 rillig Exp $$'; ${ECHO} ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
