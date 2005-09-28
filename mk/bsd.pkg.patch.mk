@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.19 2005/09/28 10:06:05 rillig Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.20 2005/09/28 10:09:33 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -240,14 +240,15 @@ do-pkgsrc-patch:
 				continue;				\
 			fi;						\
 			set -- $$algsum;				\
-			{ alg="$$1"; recorded="$$2";			\
-			  calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
-			  ${ECHO_PATCH_MSG} "=> Verifying $$filename (using digest algorithm $$alg)"; \
-			  if ${TEST} "$$calcsum" != "$$recorded"; then	\
-			  	patch_warning "Ignoring patch file $$i: invalid checksum"; \
+			alg="$$1";					\
+			recorded="$$2";					\
+			calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
+			${ECHO_PATCH_MSG} "=> Verifying $$filename (using digest algorithm $$alg)"; \
+			if ${TEST} "$$calcsum" != "$$recorded"; then	\
+				patch_warning "Ignoring patch file $$i: invalid checksum"; \
 				fail="$$fail $$i";			\
 				continue;				\
-			  fi; };					\
+			fi;						\
 			;;						\
 		esac;							\
 		${ECHO_PATCH_MSG} "${_PKGSRC_IN}> Applying pkgsrc patch $$i"; \
