@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.2 2005/08/22 17:13:28 reed Exp $
+# $NetBSD: unprivileged.mk,v 1.3 2005/09/28 21:55:32 rillig Exp $
 #
 # Ease configuration of unprivileged (non-root) builds.
 #
@@ -42,7 +42,7 @@ NONBINMODE=		644
 
 # mtree is useless as a regular user because it won't set directory
 # ownerships correctly.
-NO_MTREE=		# defined
+NO_MTREE=		yes
 
 # As a regular user, creation of other users and groups won't work, so
 # disable this step by default.
