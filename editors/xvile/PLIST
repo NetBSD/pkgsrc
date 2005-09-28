@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/22 11:48:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/09/28 09:44:30 agc Exp $
 bin/xshell.sh
 bin/xvile
 bin/xvile-pager
@@ -9,6 +9,7 @@ libexec/xvile/atr2text
 libexec/xvile/vile-ada-filt
 libexec/xvile/vile-as-filt
 libexec/xvile/vile-asm-filt
+libexec/xvile/vile-au3-filt
 libexec/xvile/vile-awk-filt
 libexec/xvile/vile-basic-filt
 libexec/xvile/vile-bat-filt
@@ -26,6 +27,8 @@ libexec/xvile/vile-fdl-filt
 libexec/xvile/vile-html-filt
 libexec/xvile/vile-imake-filt
 libexec/xvile/vile-info-filt
+libexec/xvile/vile-ini-filt
+libexec/xvile/vile-iss-filt
 libexec/xvile/vile-key-filt
 libexec/xvile/vile-latex-filt
 libexec/xvile/vile-lex-filt
@@ -78,6 +81,7 @@ share/xvile/ada.keywords
 share/xvile/as.keywords
 share/xvile/as386.keywords
 share/xvile/asm.keywords
+share/xvile/au3.keywords
 share/xvile/awk.keywords
 share/xvile/basic.keywords
 share/xvile/bat.keywords
@@ -99,16 +103,21 @@ share/xvile/filters.rc
 share/xvile/gnugpg.rc
 share/xvile/html.keywords
 share/xvile/imake.keywords
+share/xvile/ini.keywords
+share/xvile/iss.keywords
 share/xvile/java.keywords
 share/xvile/js.keywords
 share/xvile/latex.keywords
 share/xvile/lex.keywords
+share/xvile/lisp.keywords
 share/xvile/loaderrs.rc
 share/xvile/m4.keywords
 share/xvile/mail.keywords
 share/xvile/make.keywords
 share/xvile/manpage.rc
+share/xvile/modes.rc
 share/xvile/nr.keywords
+share/xvile/nsis.keywords
 share/xvile/palettes.rc
 share/xvile/pas.keywords
 share/xvile/pc.keywords
@@ -149,6 +158,7 @@ share/xvile/sccs.keywords
 share/xvile/search.rc
 share/xvile/sh.keywords
 share/xvile/shifts.rc
+share/xvile/showeach.rc
 share/xvile/sml.keywords
 share/xvile/spell.rc
 share/xvile/sql.keywords
