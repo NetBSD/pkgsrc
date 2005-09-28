@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/04 06:37:05 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/28 12:27:52 rillig Exp $
 
 DISTNAME=	lighttpd-1.4.3
 CATEGORIES=	www
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.lighttpd.net/download/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.lighttpd.net/
-COMMENT=	fast, light-footprint HTTP server
+COMMENT=	Fast, light-footprint HTTP server
 
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
