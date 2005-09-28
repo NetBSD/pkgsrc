@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 19:24:49 rillig Exp $
 #
 
 DISTNAME=	XFree86-dirs-1.1
@@ -11,11 +11,11 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Shared XFree86 directories
 
-NO_BUILD=		# defined
-NO_CHECKSUM=		# defined
-NO_CONFIGURE=		# defined
-NO_EXTRACT=		# defined
-NO_XFREE86_TARGETS=	# defined
+NO_BUILD=		yes
+NO_CHECKSUM=		yes
+NO_CONFIGURE=		yes
+NO_EXTRACT=		yes
+NO_XFREE86_TARGETS=	yes
 USE_PKGINSTALL=		yes
 WRKSRC=			${WRKDIR}
 
