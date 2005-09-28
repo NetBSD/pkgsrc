@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11238 2005/09/28 09:45:26 rillig Exp $
+$NetBSD: CHANGES,v 1.11239 2005/09/28 09:52:52 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4161,3 +4161,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.22 [rillig 2005-09-27]
 	Updated editors/vile to 9.5 [agc 2005-09-27]
 	Updated pkgtools/pkglint to 4.23 [rillig 2005-09-28]
+	Updated editors/xvile to 9.5 [agc 2005-09-28]

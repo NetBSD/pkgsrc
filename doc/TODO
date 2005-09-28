@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3921 2005/09/27 22:51:09 agc Exp $
+$NetBSD: TODO,v 1.3922 2005/09/28 09:52:52 agc Exp $
 
 Suggested new packages
 ======================
@@ -1154,7 +1154,6 @@ Suggested package updates
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
-	o xvile-9.5
 	o xzip-182
 	o yafc-1.1
 	o yasm-0.4.0 [pkg/30445]
