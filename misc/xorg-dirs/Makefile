@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 19:51:27 rillig Exp $
 #
 
 DISTNAME=	xorg-dirs-1.1
@@ -11,11 +11,11 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Shared X.org directories
 
-NO_BUILD=		# defined
-NO_CHECKSUM=		# defined
-NO_CONFIGURE=		# defined
-NO_EXTRACT=		# defined
-NO_XORG_TARGETS=	# defined
+NO_BUILD=		yes
+NO_CHECKSUM=		yes
+NO_CONFIGURE=		yes
+NO_EXTRACT=		yes
+NO_XORG_TARGETS=	yes
 USE_PKGINSTALL=		yes
 WRKSRC=			${WRKDIR}
 
