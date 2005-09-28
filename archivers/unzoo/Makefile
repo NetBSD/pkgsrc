@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:44:50 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 19:45:45 rillig Exp $
 #
 
 DISTNAME=	unzoo.c
 PKGNAME=	unzoo-4.4
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/util/
-EXTRACT_SUFX=	# defined
+EXTRACT_SUFX=	# empty
 
 MAINTAINER=	cjep@NetBSD.org
 COMMENT=	Extract zoo archives
