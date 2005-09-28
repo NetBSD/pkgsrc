@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2005/06/17 03:50:41 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/09/28 12:32:45 rillig Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
 PKGNAME=		netscape${VERS_MAJ}-${VERS_MAJ}.${VERS_MIN}
-PKGREVISION=		# none
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://sunsite.utk.edu/pub/netscape/netscape7/${SUB}/ \
