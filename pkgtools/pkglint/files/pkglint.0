@@ -1,4 +1,4 @@
-PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
+PKGLINT(1)                  NetBSD Reference Manual                 PKGLINT(1)
 
 NNAAMMEE
      ppkkgglliinntt - a verifier for pkgsrc directories
@@ -22,13 +22,16 @@ DDEESSCCRRIIPPTTIIOONN
            --hh|----hheellpp           Show the summary of command line options, then
                                exit.
 
-           --II                  Show the Makefile that is constructed by
-                               including all the files that are slurped in via
+           --II                  Show the Makefile that is constructed by in-
+                               cluding all the files that are slurped in via
                                .include directives.  This flag is mainly for
                                debugging.
 
-           --qq|----qquuiieett          Don't print the errors and warnings summary
-                               before terminating.
+           --RR|----rrccssiiddssttrriinngg    Allow other RCS Id strings than NetBSD.  Multi-
+                               ple strings may be concatenated with `|'.
+
+           --qq|----qquuiieett          Don't print the errors and warnings summary be-
+                               fore terminating.
 
            --vv|----vveerrbboossee        Be verbose.  Show the progress report for items
                                that are being checked.
@@ -42,8 +45,8 @@ DDEESSCCRRIIPPTTIIOONN
 
            nnoonnee                Disable all checks.
 
-           [[nnoo--]]MMaakkeeffiillee       Check the package Makefile, including all
-                               included files.
+           [[nnoo--]]MMaakkeeffiillee       Check the package Makefile, including all in-
+                               cluded files.
 
            [[nnoo--]]MMEESSSSAAGGEE        Check MESSAGE files.
 
@@ -80,13 +83,13 @@ DDEESSCCRRIIPPTTIIOONN
                                alphabetically.  This warning is disabled by
                                default.
 
-           [[nnoo--]]ttyyppeess          Warn for some Makefile variables if their
-                               assigned values do not match their type.
+           [[nnoo--]]ttyyppeess          Warn for some Makefile variables if their as-
+                               signed values do not match their type.
 
            [[nnoo--]]wwoorrkkddiirr        Warn about existing _w_o_r_k_* directories.  They
                                might be committed to CVS accidentally.
 
-           OOtthheerr aarrgguummeennttss
+     OOtthheerr aarrgguummeennttss
 
            _d_i_r _._._.             The pkgsrc directories to be checked.  If omit-
                                ted, the current directory is checked.
@@ -103,6 +106,10 @@ EEXXAAMMPPLLEESS
                  Checks the category Makefile and reports any warnings it can
                  find.
 
+     ppkkgglliinntt --rr --RR ''NNeettBBSSDD||IIdd'' //uussrr//ppkkggssrrcc
+                 Check the whole pkgsrc tree while allowing `NetBSD' or `Id'
+                 as the RCS Id.
+
 DDIIAAGGNNOOSSTTIICCSS
      Diagnostics are written to the standard output.
 
@@ -113,7 +120,7 @@ DDIIAAGGNNOOSSTTIICCSS
                    critical as errors.
 
      OK: ...       Informational messages are only written in verbose mode
-                   (--vv).  Their main use is to aid debugging.
+                   (--vv). Their main use is to aid debugging.
 
 AAUUTTHHOORRSS
      Jun-ichiro Itoh <itojun@itojun.org>
@@ -125,7 +132,7 @@ AAUUTTHHOORRSS
 BBUUGGSS
      Many more checks could be added.
 
-     If you don't understand the messages, feel free to ask on the
-     <tech-pkg@NetBSD.org> mailing list.
+     If you don't understand the messages, feel free to ask on the <tech-
+     pkg@NetBSD.org> mailing list.
 
-NetBSD 2.0                     September 4, 2005                    NetBSD 2.0
+                              September 28, 2005                             3

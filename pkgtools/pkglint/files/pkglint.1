@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.20 2005/09/10 22:32:54 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.21 2005/09/28 09:44:42 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -7,7 +7,7 @@
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Roland Illig <rillig@NetBSD.org>, 2005.
 .\"
-.Dd September 4, 2005
+.Dd September 28, 2005
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -40,6 +40,10 @@ Show the summary of command line options, then exit.
 Show the Makefile that is constructed by including all the files that
 are slurped in via .include directives.
 This flag is mainly for debugging.
+.It Fl R Ns | Ns Fl -rcsidstring
+Allow other RCS Id strings than NetBSD.
+Multiple strings may be concatenated with
+.Ql | .
 .It Fl q Ns | Ns Fl -quiet
 Don't print the errors and warnings summary before terminating.
 .It Fl v Ns | Ns Fl -verbose
@@ -121,6 +125,12 @@ Other pkgsrc files.
 Checks the patches of the package in the current directory.
 .It Ic pkglint \-Wall /usr/pkgsrc/devel
 Checks the category Makefile and reports any warnings it can find.
+.It Ic pkglint -r \-R 'NetBSD|Id' /usr/pkgsrc
+Check the whole pkgsrc tree while allowing
+.Ql NetBSD
+or
+.Ql Id
+as the RCS Id.
 .El
 .Sh DIAGNOSTICS
 Diagnostics are written to the standard output.

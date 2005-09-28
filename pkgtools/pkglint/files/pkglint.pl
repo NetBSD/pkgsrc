@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.289 2005/09/27 21:13:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.290 2005/09/28 09:44:42 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -303,7 +303,7 @@ BEGIN {
 }
 
 # Buildtime configuration
-my $conf_rcsidstr	= 'NetBSD';
+my $conf_rcsidstring	= 'NetBSD';
 my $conf_pkgsrcdir	= '@PKGSRCDIR@';
 my $conf_localbase	= '@PREFIX@';
 my $conf_distver	= '@DISTVER@';
@@ -356,6 +356,7 @@ my $opt_autofix		= false;
 my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
 my $opt_recursive	= false;
+my $opt_rcsidstring	= $conf_rcsidstring;
 my (@options) = (
 	# [ usage-opt, usage-message, getopt-opt, getopt-action ]
 	[ "-C{check,...}", "Enable or disable specific checks",
@@ -368,6 +369,8 @@ my (@options) = (
 	  "autofix|F", \$opt_autofix ],
 	[ "-I|--dumpmakefile", "Dump the Makefile after parsing",
 	  "dumpmakefile|I", \$opt_dumpmakefile ],
+	[ "-R|--rcsidstring", "Set the allowed RCS Id strings",
+	  "rcsidstring|R=s", \$opt_rcsidstring ],
 	[ "-V|--version", "print the version number of pkglint",
 	  "version|V",
 	  sub {
@@ -402,10 +405,8 @@ my (@options) = (
 );
 
 # Constants
-my $regex_known_rcs_tag	= qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$conf_rcsidstr)(?::[^\$]*?|)\$";
 my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
 my $regex_pkgname	= qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
-my $regex_rcsidstr	= qr"\$($conf_rcsidstr)(?::[^\$]*|)\$";
 my $regex_unresolved	= qr"\$\{";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
@@ -746,9 +747,8 @@ sub checkline_trailing_whitespace($) {
 
 sub checkline_rcsid_regex($$$) {
 	my ($line, $prefix_regex, $prefix) = @_;
-
-	if ($line->text !~ qr"^${prefix_regex}${regex_rcsidstr}$") {
-		$line->log_error("\"${prefix}\$${conf_rcsidstr}\$\" expected.");
+	if ($line->text !~ qr"^${prefix_regex}\$($opt_rcsidstring)(?::[^\$]*|)\$$") {
+		$line->log_error("\"${prefix}\$${opt_rcsidstring}\$\" expected.");
 		return false;
 	}
 	return true;
@@ -1111,7 +1111,7 @@ sub checkfile_patches_patch($$) {
 	checkline_rcsid($lines->[0], "");
 
 	foreach my $line (@{$lines}[1..$#{$lines}]) {
-		if ($line->text =~ $regex_known_rcs_tag) {
+		if ($line->text =~ qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)(?::[^\$]*?|)\$") {
 			my ($tag) = ($1);
 			$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
 		}
