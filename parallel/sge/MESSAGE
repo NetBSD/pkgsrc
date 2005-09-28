@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:15:49 rillig Exp $
 
 You will need to add the following line to /etc/services:
 
-sge_commd       535/tcp                 # Sun Grid Engine    
+sge_commd       535/tcp                 # Sun Grid Engine
 
-In addition after installation, you need to set up SGE.  To configure the 
+In addition after installation, you need to set up SGE.  To configure the
 master node of the cluster, run:
 
         cd ${SGE_ROOT} && ./install_qmaster -csp

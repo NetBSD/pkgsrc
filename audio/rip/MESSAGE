@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/10/19 03:13:11 ben Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:15:48 rillig Exp $
 
-To actually use rip, you need to install at least one of the 
+To actually use rip, you need to install at least one of the
 following rippers and encoders:
 
 Rippers:

@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/06/29 18:00:17 shannonjr Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:15:49 rillig Exp $
 
-A wrapper, "ada", has been placed in ${LOCALBASE}/bin to setup the 
+A wrapper, "ada", has been placed in ${LOCALBASE}/bin to setup the
 environment and call the tools in this package. So, to make a program
 with a main program file "main.adb" you would type:
 

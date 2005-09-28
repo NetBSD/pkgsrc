@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/04/20 09:50:54 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:15:48 rillig Exp $
 
 You will need to make ACID accessible through your HTTP server.
 If you are running Apache and ap-php, then you may copy:
-       
+
 	${EXDIR}/acid.conf
 
 to ${PKG_SYSCONFDIR}/httpd and add the following line to httpd.conf:
@@ -11,11 +11,11 @@ to ${PKG_SYSCONFDIR}/httpd and add the following line to httpd.conf:
 	Include ${PKG_SYSCONFDIR}/httpd/acid.conf
 
 to make ACID accessible through:
-				
+
 	http://www.domain.com/acid/
 
-You will need to customise ${ACID_DIR}/acid_conf.php before 
-ACID will work.  This includes setting up database access. 
+You will need to customise ${ACID_DIR}/acid_conf.php before
+ACID will work.  This includes setting up database access.
 For detailed instructions see:
 
 	http://www.andrew.cmu.edu/~rdanyliw/snort/acid_config.html

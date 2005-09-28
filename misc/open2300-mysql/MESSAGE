@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2004/11/11 19:41:46 martin Exp $
+$NetBSD: MESSAGE,v 1.4 2005/09/28 14:15:49 rillig Exp $
 
 Before you can use this program, you need to configure the MySQL
 connection in the open2300.conf file. The mysql user used by the
@@ -54,10 +54,10 @@ versions) works as well:
      `tendency` enum('Steady','Rising','Falling') NOT NULL default 'Steady',
      `forecast` enum('Rainy','Cloudy','Sunny') NOT NULL default 'Rainy',
      PRIMARY KEY  (`timestamp`)
-   ) 
-   ENGINE=MyISAM DEFAULT CHARSET=latin1 
+   )
+   ENGINE=MyISAM DEFAULT CHARSET=latin1
    COMMENT='Weather as reported by WS 2300';
-   
+
 The program will not output anything, unless errors occur. This
 makes it easy to use it in cron jobs.
 
