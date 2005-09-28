@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2005/05/10 01:55:39 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/09/28 19:04:44 rillig Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang java
@@ -31,14 +31,9 @@ JAVA_NAME=	sun13
 
 .if ${OPSYS} == "Darwin"
 DISTFILES=	# empty
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 PLIST_SRC=	${PKGDIR}/PLIST.Darwin
-.endif
-
-.if ${OPSYS} == "Linux"
-NO_PATCH=	yes	# no need for patches on Linux
 .endif
 
 NO_MTREE=	yes	# since we change PREFIX
