@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2005/09/28 07:44:59 wiz Exp $
+
+--- hamlib.m4.orig	2002-05-28 23:33:10.000000000 +0200
++++ hamlib.m4
+@@ -10,7 +10,7 @@ dnl
+ dnl For backwards compatibility, if ACTION_IF_NOT_FOUND is not specified,
+ dnl and the hamlib libraries are not found, a fatal AC_MSG_ERROR() will result.
+ dnl
+-AC_DEFUN(AM_PATH_HAMLIB,
++AC_DEFUN([AM_PATH_HAMLIB],
+ [dnl Save the original CFLAGS, LDFLAGS, and LIBS
+ hamlib_save_CFLAGS="$CFLAGS"
+ hamlib_save_LDFLAGS="$LDFLAGS"
