@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11241 2005/09/28 18:23:13 rillig Exp $
+$NetBSD: CHANGES,v 1.11242 2005/09/28 20:48:14 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4167,3 +4167,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated inputmethod/sj3-lib to 2.0.1.20nb2 [rillig 2005-09-28]
 	Updated inputmethod/sj3-server to 2.0.1.20nb2 [rillig 2005-09-28]
 	Updated inputmethod/sj3-server-bin to 2.0.1.20nb5 [rillig 2005-09-28]
+	Updated pkgtools/pkglint to 4.23.2 [rillig 2005-09-28]
