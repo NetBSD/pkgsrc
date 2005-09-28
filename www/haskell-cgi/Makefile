@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:40 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 12:23:19 rillig Exp $
 
 DISTNAME=	haskell-cgi-20001206
 CATEGORIES=	www
@@ -12,7 +12,7 @@ DEPENDS+=	hugs98-[0-9]*:../../lang/hugs
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
-NO_BUILD= 	#defined
+NO_BUILD= 	yes
 
 HUGS_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=	HUGS_PREFIX=hugs

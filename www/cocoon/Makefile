@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:27:58 agc Exp $
+# $NetBSD: Makefile,v 1.25 2005/09/28 12:15:16 rillig Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -29,7 +29,7 @@ DEPENDS+=	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
 # org.apache.cocoon.processor.dcp.DCPProcessor ===>
 #	FESI 1.21+ (http://home.worldcom.ch/jmlugrin/fesi/download.html)
 
-NO_CONFIGURE=
+NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
