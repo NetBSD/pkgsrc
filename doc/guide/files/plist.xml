@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.8 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.9 2005/09/28 13:02:44 rillig Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -163,7 +163,7 @@
   </sect1>
 
   <sect1 id="manpage-compression">
-    <title>Man page-compression</title>
+    <title>Man page compression</title>
     
     <para>Man pages should be installed in compressed form if
       <varname>MANZ</varname> is set (in <filename>bsd.own.mk</filename>),
