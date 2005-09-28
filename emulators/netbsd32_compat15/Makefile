@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/11/23 05:22:34 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:21 rillig Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -20,8 +20,8 @@ CONFLICTS=              netbsd32_compat16-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc64
 
-NO_MTREE=		# defined
-NO_BUILD=		# defined
+NO_MTREE=		yes
+NO_BUILD=		yes
 SHLIB_HANDLING=		NO
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

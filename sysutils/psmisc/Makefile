@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/09/28 20:52:27 rillig Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -13,7 +13,7 @@ CONFLICTS+=		pstree<=2.16
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 LIBS+=			${BUILDLINK_LDADD.getopt}
 
 # "make install" doesn't install the link from killall -> pidof.

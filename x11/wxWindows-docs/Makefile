@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/24 22:46:13 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/28 20:52:28 rillig Exp $
 
 DISTNAME=		wxHTML22
 PKGNAME=		wxWindows-docs-2.2
@@ -11,8 +11,8 @@ HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/docs.html
 COMMENT=		HTML documentation for wxWindows
 
 WRKSRC=			${WRKDIR}/wxHTML
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 HTMLDIR=		${PREFIX}/share/doc/html/wx
 

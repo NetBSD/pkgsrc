@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:37:22 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 20:52:21 rillig Exp $
 
 DISTNAME=		ko-x11fonts-20010722
 CATEGORIES=		fonts x11 korean
@@ -14,9 +14,9 @@ DEPENDS+=		ko-kaist>=20010718:../../fonts/ko-kaist
 DEPENDS+=		ko-mizi>=20010718:../../fonts/ko-mizi
 
 EXTRACT_ONLY=		# empty
-NO_CHECKSUM=		# defined
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CHECKSUM=		yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 do-install:		# empty
 

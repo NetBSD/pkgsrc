@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/28 20:52:28 rillig Exp $
 
 DISTNAME=	xvattr-1.3
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	veego@NetBSD.org
 HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	Modify Xv attributes
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:43 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:52:18 rillig Exp $
 
 DISTNAME=		libmal-0.40
 PKGREVISION=		1
@@ -12,9 +12,9 @@ COMMENT=		MAL convenience library
 CONFLICTS+=		malsync-[0-9]*
 
 USE_TOOLS+=		gmake
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pilot-prefix=${BUILDLINK_PREFIX.pilot-link-libs}
 CPPFLAGS+=		-D__unix__=1
 

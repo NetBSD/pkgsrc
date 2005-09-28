@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2005/09/26 11:44:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.81 2005/09/28 20:52:19 rillig Exp $
 
 DISTNAME=		glib-2.6.6
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -33,7 +33,7 @@ PKGCONFIG_OVERRIDE+=	gobject-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gthread-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gthread-2.0.pc.in
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib

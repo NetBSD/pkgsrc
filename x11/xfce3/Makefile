@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:52 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:52:28 rillig Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		5
@@ -11,12 +11,12 @@ COMMENT=		Lightweight desktop environment with CDE look and feel
 
 BUILD_USES_MSGFMT=	yes
 
-USE_X11BASE=		# defined
-USE_PKGLOCALEDIR=	# defined
-USE_LIBTOOL=		# defined
+USE_X11BASE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
 
 USE_TOOLS+=		gmake
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		2.95

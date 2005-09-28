@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/16 06:58:00 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/09/28 20:52:23 rillig Exp $
 #
 
 DISTNAME=	jasmin-1.06
@@ -12,7 +12,7 @@ COMMENT=	Java "assembler" interface
 USE_JAVA=	run
 
 WRKSRC=		${WRKDIR}/jasmin
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin
 

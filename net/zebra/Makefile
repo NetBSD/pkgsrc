@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2005/08/11 11:14:06 adam Exp $
+# $NetBSD: Makefile,v 1.69 2005/09/28 20:52:25 rillig Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 
 DISTNAME=	zebra-0.95
@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--disable-vtysh
 .endif
 
 USE_TOOLS+=		automake gmake
-USE_MAKEINFO=		# defined
+USE_MAKEINFO=		yes
 .include "../../devel/readline/buildlink3.mk"
 
 BUILD_DEFS+=		USE_INET6
