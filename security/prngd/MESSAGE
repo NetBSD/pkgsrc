@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/07/15 23:10:35 recht Exp $
+$NetBSD: MESSAGE,v 1.2 2005/09/28 14:15:49 rillig Exp $
 
 - Edit the PRNGD configuration file ${PKG_SYSCONFDIR}/prngd.conf
    (see ${PREFIX}/share/doc/prngd). An example conf file was installed in
@@ -21,7 +21,7 @@ echo ''
 echo 'Starting PRNGD.'
 if [ -f /usr/pkg/bin/prngd ]; then
 	/usr/pkg/bin/prngd /var/run/egd-pool
-fi 
+fi
 
 - Browse the manual, docs, and the PRNGD home page for more information.
 
