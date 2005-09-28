@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1719 2005/09/16 06:09:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1720 2005/09/28 08:24:52 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -3945,19 +3945,20 @@ print-summary-data:
 	@${ECHO} "prefix ${PKGPATH} ${PREFIX}"
 .endif
 
+LICENSE_FILE?=		${PKGSRCDIR}/licenses/${LICENSE}
+
 .if !target(show-license)
 show-license show-licence:
-	@if [ "${LICENSE}" != "" ]; then				\
-		if ${TEST} -f ${PKGSRCDIR}/licenses/${LICENSE}; then	\
-			if [ "${PAGER}" != "" ]; then			\
-				${PAGER} ${PKGSRCDIR}/licenses/${LICENSE};\
-			else						\
-				${CAT} ${PKGSRCDIR}/licenses/${LICENSE};\
-			fi						\
-		else							\
-			${ECHO} "Generic ${LICENSE} information not available"; \
-			${ECHO} "See the package description (pkg_info -d ${PKGNAME}) for more information."; \
-		fi							\
+	@license=${LICENSE:Q};						\
+	license_file=${LICENSE_FILE:Q};					\
+	pager=${PAGER:Q};						\
+	case "$$pager" in "") pager=${CAT:Q};; esac;			\
+	case "$$license" in "") exit 0;; esac;				\
+	if ${TEST} -f "$$license_file"; then				\
+		$$pager "$$license_file";				\
+	else								\
+		${ECHO} "Generic $$license information not available";	\
+		${ECHO} "See the package description (pkg_info -d ${PKGNAME}) for more information."; \
 	fi
 .endif
 
