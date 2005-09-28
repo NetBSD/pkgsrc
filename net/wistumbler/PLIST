@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST
+@comment $NetBSD: PLIST,v 1.2 2005/09/28 21:49:17 rillig Exp $
 bin/wistumbler
 man/man1/wistumbler.1
