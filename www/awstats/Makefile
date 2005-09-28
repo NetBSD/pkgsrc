@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/08/26 20:22:56 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2005/09/28 12:11:29 rillig Exp $
 #
 
 DISTNAME=	awstats-6.4
@@ -59,19 +59,19 @@ do-install:
 		${PREFIX}/awstats/cgi-bin/plugins
 .for d in lang lib
 	cd ${WRKSRC}/wwwroot/cgi-bin					\
-		&& ${PAX} -rwpppm $d ${PREFIX}/awstats/cgi-bin/
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/cgi-bin/$d
-	${FIND} ${PREFIX}/awstats/cgi-bin/$d -type d -print	\
+		&& ${PAX} -rwpppm ${d} ${PREFIX}/awstats/cgi-bin/
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/cgi-bin/${d}
+	${FIND} ${PREFIX}/awstats/cgi-bin/${d} -type d -print	\
 		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/awstats/cgi-bin/$d -type f -print	\
+	${FIND} ${PREFIX}/awstats/cgi-bin/${d} -type f -print	\
 		| ${XARGS} ${CHMOD} ${SHAREMODE}
 .endfor
 .for d in classes css icon js
-	cd ${WRKSRC}/wwwroot && ${PAX} -rwpppm $d ${PREFIX}/awstats/
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/$d
-	${FIND} ${PREFIX}/awstats/$d -type d -print	\
+	cd ${WRKSRC}/wwwroot && ${PAX} -rwpppm ${d} ${PREFIX}/awstats/
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/awstats/${d}
+	${FIND} ${PREFIX}/awstats/${d} -type d -print	\
 		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/awstats/$d -type f -print	\
+	${FIND} ${PREFIX}/awstats/${d} -type f -print	\
 		| ${XARGS} ${CHMOD} ${SHAREMODE}
 .endfor
 	cd ${WRKSRC}/docs && ${PAX} -rwpppm . ${PREFIX}/share/doc/html/awstats/
