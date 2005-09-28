@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/24 19:57:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/28 22:38:11 rillig Exp $
 #
 
 DISTNAME=		nspr-reference
@@ -10,7 +10,7 @@ MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		ftp://ftp.mozilla.org/pub/mozilla.org/nspr/doc/
 COMMENT=		HTML Documentation for NSPR
 
-NO_CONNFIGURE=		YES
+NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
 WRKSRC=			${WRKDIR}/nspr/reference/html
