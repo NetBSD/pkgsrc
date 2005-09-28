@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 23:11:27 rafal Exp $
+$NetBSD: distinfo,v 1.4 2005/09/28 23:15:38 rafal Exp $
 
 SHA1 (gtmess-0.91.tar.gz) = 078d7e1fb60bcc8f54b5df5d3e7df53d55c70392
 RMD160 (gtmess-0.91.tar.gz) = 7a5ff6696409aa976b072a415131279dd769dfbb
-Size (gtmess-0.9.tar.gz) = 697344 bytes
+Size (gtmess-0.91.tar.gz) = 697344 bytes
 SHA1 (patch-aa) = ecbde16ded4a85eb4c6e0dad24062b12b9ad6041
 SHA1 (patch-ab) = 5b8a7b1f47c72527040338f86dc4d8a7e50c428f
