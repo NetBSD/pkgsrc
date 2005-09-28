@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2005/02/18 14:00:16 wiz Exp $
+$NetBSD: MESSAGE,v 1.4 2005/09/28 12:13:07 rillig Exp $
 
 To configure blur6ex, complete the following steps:
 
@@ -17,7 +17,7 @@ group:
 
 $ mysql
 mysql> use blur6ex;
-mysql> insert into 
+mysql> insert into
   -> permissionGroups (username,pGroup) values ('YOUR-NAME', 'admin' );
 mysql> quit
 
