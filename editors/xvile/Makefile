@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2005/09/17 17:06:19 minskim Exp $
+# $NetBSD: Makefile,v 1.47 2005/09/28 09:44:30 agc Exp $
 
-DISTNAME=		vile-9.4
-PKGNAME=		xvile-9.4
-PKGREVISION=	1
+DISTNAME=		vile-9.5
+PKGNAME=		xvile-9.5
 CATEGORIES=		editors
 MASTER_SITES=		ftp://dickey.his.com/vile/ \
 			ftp://invisible-island.net/vile/
