@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:05 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 14:31:08 rillig Exp $
 #
 
 DISTNAME=		rcorder-20031013
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")  
+.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")
 .  include "../../pkgtools/libnbcompat/inplace.mk"
 .else
 .  include "../../pkgtools/libnbcompat/buildlink3.mk"
