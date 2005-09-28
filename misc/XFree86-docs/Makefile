@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:33 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 20:52:24 rillig Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-docs-${XF_VER}
@@ -13,7 +13,7 @@ COMMENT=		XFree86 Documentation
 DEPENDS=		imake>=${XF_VER}:../../x11/imake
 
 USE_LANGUAGES=		# empty
-NO_XFREE86_TARGETS=	# defined
+NO_XFREE86_TARGETS=	yes
 WRKSRC=			${WRKDIR}/xc/doc/specs
 
 pre-configure:

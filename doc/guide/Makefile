@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/27 21:33:36 rpaulo Exp $
+# $NetBSD: Makefile,v 1.14 2005/09/28 20:52:20 rillig Exp $
 #
 
 DISTNAME=		htdocs-share-20050727
@@ -15,8 +15,8 @@ COMMENT=		The pkgsrc guide
 
 PKGVERSION!=		date '+%Y%m%d'
 DIST_SUBDIR=		${PKGBASE}
-NO_CONFIGURE=		# defined
-NO_MTREE=		# defined
+NO_CONFIGURE=		yes
+NO_MTREE=		yes
 USE_LANGUAGES=		# empty
 
 WRKSRC=			${WRKDIR}/${PKGNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:48:08 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/09/28 20:52:28 rillig Exp $
 
 DISTNAME=		gtkstep-1.10
 PKGREVISION=		5
@@ -11,8 +11,8 @@ HOMEPAGE=		http://ulli.linuxave.net/gtkstep/index.html
 COMMENT=		GTK theme-engine to yield a NEXTSTEP(tm) look and feel
 
 USE_DIRS+=		xdg-1.1
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 post-install:
 	${RM} -f ${PREFIX}/share/themes/Step/gtk/gtkrc.in

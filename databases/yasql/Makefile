@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/08/16 14:33:46 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 20:52:19 rillig Exp $
 
 DISTNAME=	yasql-1.81
 CATEGORIES=	databases
@@ -10,7 +10,7 @@ COMMENT=	Yet another SQLPlus replacement for Oracle
 
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 
