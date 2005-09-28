@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:25 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 12:30:35 rillig Exp $
 #
 
 DISTNAME=	make_album_1_6
@@ -18,8 +18,8 @@ MY_SCRIPTS=	index_albums ingest make_album newimagedir populate_master
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	${MY_SCRIPTS}
 
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin lib
 
