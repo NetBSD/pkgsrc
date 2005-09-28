@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/09/04 05:00:36 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/09/28 14:31:08 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/-kde-/}
 PKGREVISION=	1
@@ -36,7 +36,7 @@ do-install:
 	${INSTALL_DATA} ${KDEWRKSRC}/celestiarc ${PREFIX}/share/kde/config/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kde/HTML/en/celestia
 .for nn in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 \
-		25 26 27 28 29 30 221 
+		25 26 27 28 29 30 221
 	${INSTALL_DATA} ${KDEWRKSRC}/../doc/celestia/fig${nn}.jpg \
 		${PREFIX}/share/doc/kde/HTML/en/celestia/
 .endfor

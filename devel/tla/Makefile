@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/26 14:57:31 recht Exp $
+# $NetBSD: Makefile,v 1.19 2005/09/28 14:31:06 rillig Exp $
 #
 
 DISTNAME=	tla-1.3.3
@@ -42,6 +42,6 @@ post-install:
 		| ${PAX} -rwppm ${DOCDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR}
 	${FIND} ${DOCDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${DOCDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE} 
+	${FIND} ${DOCDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../mk/bsd.pkg.mk"

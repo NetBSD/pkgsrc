@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/06/24 17:17:51 kristerw Exp $
+# $NetBSD: Makefile,v 1.38 2005/09/28 14:31:07 rillig Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -115,10 +115,10 @@ post-build:
 .endif
 
 .if ${OPSYS} == "SunOS"
-# 
-# remove empty file and directories that show up when one does: 
+#
+# remove empty file and directories that show up when one does:
 #       make install; make deinstall; make install
-# 
+#
 post-install:
 	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .else

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:58:08 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 14:31:07 rillig Exp $
 
 DISTNAME=       sma-1.3.2
 CATEGORIES=	mail
@@ -16,9 +16,9 @@ BUILD_TARGET=	sma
 
 .include "../../mk/bsd.prefs.mk"
 
-.if empty(LOWER_OPSYS:Mirix5*)                                                                     
-CFLAGS+=	-DUSE_REGEXP                                                                        
-.endif                                                                                             
+.if empty(LOWER_OPSYS:Mirix5*)
+CFLAGS+=	-DUSE_REGEXP
+.endif
 INSTALLATION_DIRS=	bin man/man8
 
 do-install:
