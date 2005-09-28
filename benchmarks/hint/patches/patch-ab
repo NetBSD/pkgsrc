@@ -1,21 +1,13 @@
-$NetBSD: patch-ab,v 1.2 1999/02/10 14:59:50 frueauf Exp $
+$NetBSD: patch-ab,v 1.3 2005/09/28 18:59:41 rillig Exp $
 
-*** hint.c.ORIG	Sun May 31 15:34:52 1998
---- hint.c	Mon Jun 15 09:44:53 1998
-***************
-*** 90,96 ****
-  #ifdef DEBUG
-      curv = stdout;
-  #else
-!     sprintf(filnm,"data/%s",argv[0]);
-      if ((curv = fopen(filnm, "w")) == NULL)
-      {
-          printf("Could not open data file\n");
---- 90,96 ----
-  #ifdef DEBUG
-      curv = stdout;
-  #else
-!     sprintf(filnm,"data/%s","DOUBLE");
-      if ((curv = fopen(filnm, "w")) == NULL)
-      {
-          printf("Could not open data file\n");
+--- hint.c.orig	Sun May 31 22:34:52 1998
++++ hint.c	Wed Sep 28 20:52:04 2005
+@@ -90,7 +90,7 @@ void main(int argc, char *argv[])
+ #ifdef DEBUG
+     curv = stdout;
+ #else
+-    sprintf(filnm,"data/%s",argv[0]);
++    sprintf(filnm,"data/%s","DOUBLE");
+     if ((curv = fopen(filnm, "w")) == NULL)
+     {
+         printf("Could not open data file\n");

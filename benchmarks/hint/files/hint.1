@@ -1,0 +1,115 @@
+.\" Copyright 1998 Iowa State University Research Foundation, Inc.
+.\"
+.\" This program is free software; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published by
+.\" the Free Software Foundation.  You should have received a copy of the
+.\" GNU General Public License along with this program; if not, write to the
+.\" Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE IOWA STATE UNIVERSITY RESEARCH
+.\" FOUNDATION ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+.\" INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+.\" IN NO EVENT SHALL THE IOWA STATE UNIVERSITY RESEARCH FOUNDATION BE
+.\" LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+.\" OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+.\" PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+.\" DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+.\" THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+.\" (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+.\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+.\"
+.\"	Id
+.\"
+.Dd May 18, 1998
+.Dt HINT 1
+.Os
+.Sh NAME
+.Nm hint
+.Nd scalable benchmark for CPU and memory
+.Sh SYNOPSIS
+.Nm hint
+.Sh DESCRIPTION
+The program
+.Nm
+reveals many aspects of computer performance: operation speed,
+precision, memory bandwidth, and usable memory size.  HINT measures
+"QUIPS" (QUality Improvement Per Second) as a function of time.  "Net
+QUIPS" is a single number that summarizes the QUIPS over time.
+.Pp
+As provided,
+.Nm
+tests double-precision floating point arithmetic.  The original source
+can be re-compiled to test other data types (such as long integers).
+The original source should be available directly from
+.Pa ftp://ftp.scl.ameslab.gov/pub/HINT/ .
+See
+.Pa http://www.scl.ameslab.gov/Projects/HINT/
+for more information on HINT, including technical reports and an
+on-line database of HINT results.
+.Pp
+The output of
+.Nm
+is a file in the directory
+.Pa data
+named
+.Pa DOUBLE
+which contains five columns:
+.Bl -enum
+.It
+Time
+.It
+QUIPS
+.It
+Quality
+.It
+Subintervals
+.It
+Memory Used
+.El
+.Pp
+The first two columns are used to produce the QUIPS graph.  The third
+and fourth columns are Quality and subintervals.  These columns can be
+used to check for loss of quality due to insufficient precision and
+poor choices of which rectangle to split. The fifth is useful for
+finding the sizes of memory regimes, like where primary cache
+saturates or where virtual memory is first invoked.
+.Pp
+The file is set up in a format suitable for
+.Xr gnuplot 1
+or similar plotting packages.  QUIPS graphs should be plotted on a
+semi-log scale with log of time as the horizontal axis and QUIPS as
+the vertical axis. The following gnuplot commands would be suitable to
+display the QUIPS graph from the file
+.Pa data/DOUBLE :
+.nf
+
+set logscale x
+plot "data/DOUBLE"
+
+.fi
+QUIPS vs. memory use can also be plotted to reveal memory regime sizes,
+by using the following
+.Xr gnuplot 1
+command:
+.nf
+
+plot "data/DOUBLE" using 5:2
+
+.fi
+
+.Sh FILES
+.Bl -tag -width DOUBLE -compact
+.It Pa DOUBLE	output file in the directory
+.Pa data
+.El
+.Sh SEE ALSO
+.Xr gnuplot 1
+.Sh AUTHOR
+.Nm HINT
+was developed by the Scalable Computing Laboratory (SCL) of Ames Laboratory,
+a US Department of Energy laboratory.
+.Sh BUGS
+.Nm
+only writes its output file in the directory
+.Pa data .
