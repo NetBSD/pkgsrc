@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/08/19 18:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/09/28 14:31:08 rillig Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -84,7 +84,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.php ${TURBADIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${TURBADIR}
 	${FIND} ${TURBADIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${TURBADIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE} 
+	${FIND} ${TURBADIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${TURBADIR}/config
 	${CHMOD} 0750 ${TURBADIR}/config
 
