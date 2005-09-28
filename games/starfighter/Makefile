@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 14:31:07 rillig Exp $
 #
 
 DISTNAME=	starfighter-1.1-1
@@ -20,7 +20,7 @@ MAKEFILE=	makefile
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/starfighter/music
 	cd ${WRKDIR}/music && ${PAX} -rwppm . \
-		${PREFIX}/share/starfighter/music 
+		${PREFIX}/share/starfighter/music
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
