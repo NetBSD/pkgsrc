@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.3 2005/09/28 20:52:22 rillig Exp $
 
 DISTNAME=	BlenderManual.html
 PKGNAME=	blender-doc-20030922
@@ -12,8 +12,8 @@ COMMENT=	Documentation for Blender
 CONFLICTS=	blender<=2.31
 
 WRKSRC=		${WRKDIR}/doc
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/blender

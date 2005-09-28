@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/28 04:25:31 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:27 rillig Exp $
 
 DISTNAME=	emacs-w3m-1.3.3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -26,7 +26,7 @@ EMACS_MAJOR_VERSION=	${EMACS_VERSION:C/\..*//}
 BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS>=0.84:../../editors/mule-ucs
 .endif
 
-HAS_CONFIGURE=	# defined
+HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-emacs=${EMACS_BIN}
 BUILD_TARGET=	default
 .if ${EMACS_FLAVOR} == "xemacs"

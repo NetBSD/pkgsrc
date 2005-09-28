@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/15 18:40:50 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 20:52:20 rillig Exp $
 #
 
 DISTNAME=		compat14-crypto-${MACHINE_ARCH}-${VERSION}
@@ -20,8 +20,8 @@ NOT_FOR_PLATFORM=	NetBSD-1.3*-* NetBSD-1.4*-*
 
 CRYPTO=			YES
 
-NO_MTREE=		# defined
-NO_BUILD=		# defined
+NO_MTREE=		yes
+NO_BUILD=		yes
 SHLIB_HANDLING=		NO
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

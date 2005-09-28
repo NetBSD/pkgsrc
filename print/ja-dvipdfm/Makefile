@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:47:08 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/28 20:52:26 rillig Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGNAME=	ja-${DISTNAME}
@@ -19,7 +19,7 @@ CONFLICTS+=	dvipdfmx-[0-9]*
 CONFLICTS+=	teTeX-bin>=2.0
 
 WRKSRC=		${WRKDIR}/dvipdfm
-GNU_CONFIGURE=	# defined
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 
 .include "../../mk/bsd.prefs.mk"

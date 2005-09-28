@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/02 13:35:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:52:25 rillig Exp $
 #
 
 DISTNAME=		rinetd
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.boutell.com/rinetd/
 COMMENT=		Internet redirection server
 
 WRKSRC=			${WRKDIR}/${PKGNAME:S|nb*||}
-NO_CONFIGURE=		# defined
+NO_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 BUILD_TARGET=		rinetd
 

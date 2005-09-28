@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:39 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/09/28 20:52:20 rillig Exp $
 #
 
 DISTNAME=		syncdir-1.0
@@ -12,7 +12,7 @@ COMMENT=		Implementation of open, link, rename, and unlink
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
 
 INSTALLATION_DIRS=	lib
 

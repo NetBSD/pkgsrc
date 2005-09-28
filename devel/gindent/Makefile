@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/04/11 21:45:23 tv Exp $
+# $NetBSD: Makefile,v 1.40 2005/09/28 20:52:19 rillig Exp $
 #
 
 DISTNAME=	indent-2.2.8a
@@ -14,8 +14,8 @@ COMMENT=	GNU version of pretty-printer for C source code
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		# defined
-USE_PKGLOCALEDIR=	# defined
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 
 INFO_FILES=	indent.info
 

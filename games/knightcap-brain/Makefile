@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:54 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:22 rillig Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME}
 
 EXTRACT_ONLY=		# empty
-NO_CONFIGURE=		# defined
+NO_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/knightcap
 INSTALLATION_DIRS=	bin

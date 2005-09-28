@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/04/24 22:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 20:52:22 rillig Exp $
 
 DISTNAME=		colchess
 PKGNAME=		${CHESS_ENGINE}-book-${DIST_SUBDIR}
@@ -17,8 +17,8 @@ CONFLICTS+=		colchess-book-[0-9]*
 WRKSRC=			${WRKDIR}/ColChess
 CHESS_ENGINE=		colchess
 DIST_SUBDIR=		colchess-7.0
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 PLIST_SUBST+=		CHESS_ENGINE=${CHESS_ENGINE}
 PLIST_SUBST+=		BOOK_FILE=${BOOK_FILE}

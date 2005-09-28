@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:25 rillig Exp $
 
 DISTNAME=	all-com-ppds
 PKGNAME=	cupsomatic-ppds-20010515
@@ -31,8 +31,8 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 DEPENDS+=	cups>=1.1.14nb1:../../print/cups
 DEPENDS+=	cupsomatic-[0-9]*:../../print/cupsomatic
 
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST
 MODELDIR=	share/cups/model

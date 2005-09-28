@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/15 18:40:50 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/28 20:52:20 rillig Exp $
 #
 
 DISTNAME=		compat14-${MACHINE_ARCH}-${VERSION}
@@ -18,8 +18,8 @@ CONFLICTS=		compat14-crypto-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc NetBSD-*-i386
 NOT_FOR_PLATFORM=	NetBSD-1.3*-* NetBSD-1.4*-*
 
-NO_MTREE=		# defined
-NO_BUILD=		# defined
+NO_MTREE=		yes
+NO_BUILD=		yes
 SHLIB_HANDLING=		NO
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

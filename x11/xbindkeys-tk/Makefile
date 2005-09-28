@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:45 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/28 20:52:28 rillig Exp $
 #
 
 .include "../../x11/xbindkeys/Makefile.common"
@@ -10,8 +10,8 @@ COMMENT+=	(Tk interface)
 DEPENDS+=	xbindkeys>=1.7.1:../../x11/xbindkeys
 DEPENDS+=	tk>=8.3.4:../../x11/tk
 
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin man/man1
 

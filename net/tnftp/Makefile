@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/25 07:01:20 lukem Exp $
+# $NetBSD: Makefile,v 1.17 2005/09/28 20:52:25 rillig Exp $
 #
 
 DISTNAME=		tnftp-20050625
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 CONFLICTS+=		kth-krb4-[0-9]*
 CONFLICTS+=		lukemftp-[0-9]*
 
-NO_CHECKSUM=		# defined
+NO_CHECKSUM=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

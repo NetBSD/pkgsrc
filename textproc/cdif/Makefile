@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/09/28 20:52:27 rillig Exp $
 #
 
 DISTNAME=		cdif-1.15
@@ -14,8 +14,8 @@ LICENSE=		no-commercial-use
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		perl:run
 
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 INSTALLATION_DIRS=	bin
 
 do-extract:

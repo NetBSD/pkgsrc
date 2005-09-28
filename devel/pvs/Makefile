@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/09/02 02:27:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2005/09/28 20:52:19 rillig Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -21,7 +21,7 @@ DEPENDS+=		tk>=8.0:../../x11/tk
 
 WRKSRC=			${WRKDIR}
 VERSION=		3.2
-NO_BUILD=		# defined
+NO_BUILD=		yes
 CHECK_SHLIBS=		NO
 SHLIB_HANDLING=		NO
 INFO_DIR=		pvs/doc/release-notes

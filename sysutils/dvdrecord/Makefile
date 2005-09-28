@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/17 03:50:34 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/28 20:52:26 rillig Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
@@ -13,7 +13,7 @@ COMMENT=	This program allows you to create DVDs on a DVD-Recorder
 
 VERSION=	0.1.5
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 LIBS.SunOS+=		-lsocket
 INSTALLATION_DIRS=	bin man/man1
 

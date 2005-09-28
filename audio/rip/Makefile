@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/16 01:19:07 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 20:52:18 rillig Exp $
 #
 
 DISTNAME=	rip-1.07
@@ -12,7 +12,7 @@ COMMENT=	Command-line based audio CD ripper and encoder
 DEPENDS+=	p5-CDDB_get>=2.23:../../audio/p5-CDDB_get
 DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	rip
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2005/09/20 12:47:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.74 2005/09/28 20:52:24 rillig Exp $
 
 DISTNAME=		R-2.1.1
 CATEGORIES=		math
@@ -18,10 +18,10 @@ TEST_TARGET=		check
 USE_TOOLS+=		gmake perl:run sed xmkmf
 USE_GNU_READLINE=	# uses callback interface
 USE_LANGUAGES=		c fortran
-USE_MAKEINFO=		# defined
+USE_MAKEINFO=		yes
 TEXINFO_REQD=		4.5
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-R-shlib
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-readline

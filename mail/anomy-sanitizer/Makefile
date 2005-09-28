@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/07/16 01:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/09/28 20:52:23 rillig Exp $
 #
 
 DISTNAME=	anomy-sanitizer-1.69
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=		${WRKDIR}/anomy
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
 
 ANOMYLIB=	${PREFIX}/lib/anomy-sanitizer

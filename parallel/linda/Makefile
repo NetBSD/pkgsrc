@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:22 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/09/28 20:52:25 rillig Exp $
 #
 
 DISTNAME=	linda-0.1.1
@@ -11,8 +11,8 @@ HOMEPAGE=	http://sourceforge.net/projects/linda/
 COMMENT=	Parallel distributed database environment
 
 USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

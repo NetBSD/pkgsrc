@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/24 22:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/09/28 20:52:22 rillig Exp $
 
 DISTNAME=		crafty-doc-18.0
 CATEGORIES=		games
@@ -10,8 +10,8 @@ COMMENT=		Documentation for Crafty chess engine
 
 DIST_SUBDIR=		${PKGNAME}
 EXTRACT_ONLY=		# empty
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 DOCDIR=			${PREFIX}/share/doc/crafty
 

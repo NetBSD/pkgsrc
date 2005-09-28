@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2005/08/12 19:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.99 2005/09/28 20:52:23 rillig Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -61,7 +61,7 @@ MAKE_ENV+=	IP=6
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
-PKG_USE_KERBEROS=	# defined
+PKG_USE_KERBEROS=	yes
 
 BUILD_TARGET+=	EXTRAAUTHENTICATORS="gss"
 .endif
