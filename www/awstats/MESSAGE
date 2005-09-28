@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/08/26 20:22:56 adrianp Exp $
+$NetBSD: MESSAGE,v 1.5 2005/09/28 12:11:29 rillig Exp $
 
 An example file has been installed as
 ${PREFIX}/share/examples/awstats/awstats.conf.  After adjusting it to
-your needs, copy it to ${PREFIX}/awstats/cgi-bin/awstats.conf. 
+your needs, copy it to ${PREFIX}/awstats/cgi-bin/awstats.conf.
 
 Alternatively, you can also now use ${PKG_SYSCONFDIR} to store your awstats
 configuration files.
