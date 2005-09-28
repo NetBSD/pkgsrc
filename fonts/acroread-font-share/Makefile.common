@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/07/15 18:27:49 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/09/28 22:23:02 rillig Exp $
 #
 
 PKGNAME=	acroread-${DISTNAME}-4.0
@@ -14,7 +14,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
