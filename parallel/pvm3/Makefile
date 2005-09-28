@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/09/28 14:31:08 rillig Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -57,7 +57,7 @@ do-install:
 .endfor
 .for __tmp__ in pvm pvmgs
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/lib/${PVM_ARCH}/${__tmp__} ${PVM_DIR}/lib/${PVM_ARCH}/ 
+		${WRKSRC}/lib/${PVM_ARCH}/${__tmp__} ${PVM_DIR}/lib/${PVM_ARCH}/
 .endfor
 	${INSTALL_PROGRAM} ${WRKSRC}/lib/${PVM_ARCH}/pvmd3		\
 		${PVM_DIR}/lib/${PVM_ARCH}

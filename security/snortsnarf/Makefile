@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/16 01:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/09/28 14:31:08 rillig Exp $
 #
 
 DISTNAME=	SnortSnarf-050314.1
@@ -21,7 +21,7 @@ REPLACE_PERL=	snortsnarf.pl include/ann_xml.pl include/web_utils.pl	\
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	snortsnarf.pl
-SUBST_SED.paths=	-e "s|./include|${PREFIX}/share/snortsnarf|g"      
+SUBST_SED.paths=	-e "s|./include|${PREFIX}/share/snortsnarf|g"
 SUBST_MESSAGE.paths=	"Fixing paths."
 
 INSTALLATION_DIRS=	bin

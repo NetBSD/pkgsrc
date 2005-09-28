@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2005/09/02 11:40:56 tron Exp $
+# $NetBSD: Makefile,v 1.83 2005/09/28 14:31:09 rillig Exp $
 
 .include "Makefile.common"
 
@@ -151,7 +151,7 @@ post-build:
 pre-install:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} install-conf sysconfdir="${EGDIR}"
- 
+
 post-install:
 	@${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${PREFIX}/share/httpd/build
 	@cd ${EGDIR};							\
