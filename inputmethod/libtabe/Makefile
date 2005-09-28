@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/09/28 17:09:43 rillig Exp $
 #
 
 DISTNAME=	libtabe-0.2.5
@@ -11,9 +11,9 @@ HOMEPAGE=	http://libtabe.sourceforge.net/
 COMMENT=	Library for Chinese language processing
 
 WRKSRC=			${WRKDIR}/libtabe
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_PREFIX.db3}/include/db3
 CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db3}/lib
 
