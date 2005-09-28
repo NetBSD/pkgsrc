@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11243 2005/09/28 21:00:23 seb Exp $
+$NetBSD: CHANGES,v 1.11244 2005/09/28 23:24:35 rafal Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4169,3 +4169,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated inputmethod/sj3-server-bin to 2.0.1.20nb5 [rillig 2005-09-28]
 	Updated pkgtools/pkglint to 4.23.2 [rillig 2005-09-28]
 	Updated sysutils/vip to 19971113nb2 [seb 2005-09-28]
+	Updated chat/gtmess to 0.91 [rafal 2005-09-28]
