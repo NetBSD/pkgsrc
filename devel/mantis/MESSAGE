@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2005/09/19 22:33:28 adrianp Exp $
+$NetBSD: MESSAGE,v 1.4 2005/09/28 14:15:49 rillig Exp $
 
 To complete the setup you will need to read the INSTALL guide in order
 to setup mySQL properly.  In particular secion 3 of the document deals
-with database setup.  
+with database setup.
 
 The following URL can be used to complete the installation and database
 setup:
@@ -16,7 +16,7 @@ If you are running Apache then you may add the following lines to httpd.conf:
 	Include ${PKG_SYSCONFDIR}/mantis.conf
 
 to make Mantis accessible through:
-	
+
 	http://www.domain.com/mantis/index.php
 
 
