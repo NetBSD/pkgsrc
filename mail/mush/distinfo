@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/05/29 05:57:20 minskim Exp $
+$NetBSD: distinfo,v 1.9 2005/09/28 20:31:28 christos Exp $
 
 SHA1 (mush/mush-7.2.5.tar.Z) = 1b9b54b368b9a748401b1baeb3b3eba5a9ed2c03
 RMD160 (mush/mush-7.2.5.tar.Z) = 32e010f544f79cc1a0f899d722d465975d552a4e
@@ -37,5 +37,5 @@ SHA1 (patch-aj) = fee38b6e855a6494ecef0e41e2602850d1b58746
 SHA1 (patch-ak) = 47a3a7dc405a654db3a7d76f80d71af98e9501cb
 SHA1 (patch-al) = 4d0c9ff2a6a8c3c1d59a81b659ed3599881cc762
 SHA1 (patch-am) = 2af4636ebd0168d06711abff5f05ffbf0e1868a8
-SHA1 (patch-an) = a750c02339df8a161f3c3c8cf33aa6411f1aa2bd
+SHA1 (patch-an) = 9c7441265ac13e73a4143440b3a1706f81d9d00c
 SHA1 (patch-ao) = e5b28c4a761c1bc1bba195c5dc6ff332cad51f67
