@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.21 2005/09/28 09:44:42 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.22 2005/09/28 10:06:29 wiz Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -40,12 +40,12 @@ Show the summary of command line options, then exit.
 Show the Makefile that is constructed by including all the files that
 are slurped in via .include directives.
 This flag is mainly for debugging.
+.It Fl q Ns | Ns Fl -quiet
+Don't print the errors and warnings summary before terminating.
 .It Fl R Ns | Ns Fl -rcsidstring
 Allow other RCS Id strings than NetBSD.
 Multiple strings may be concatenated with
 .Ql | .
-.It Fl q Ns | Ns Fl -quiet
-Don't print the errors and warnings summary before terminating.
 .It Fl v Ns | Ns Fl -verbose
 Be verbose.
 Show the progress report for items that are being checked.
