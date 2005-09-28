@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.7 2005/06/14 01:35:09 jschauma Exp $
+# $NetBSD: pear.mk,v 1.8 2005/09/28 21:46:24 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -44,13 +44,13 @@ PEAR_GENERATE_PLIST=	\
 	${PREFIX}/bin/php -C -n ${PKGDIR}/../../lang/php/pear_plist.php;
 GENERATE_PLIST+=	${PEAR_GENERATE_PLIST}
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 post-extract:
 	@cd ${WRKSRC} && ${LN} -s ${WRKDIR}/package.xml package.xml
 
 do-install:
-	cd ${WRKSRC} && ${PEAR_CMD} install package.xml || exit 1
+	cd ${WRKSRC} && ${PEAR_CMD} "install" package.xml || exit 1
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
