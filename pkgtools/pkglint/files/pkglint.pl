@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.290 2005/09/28 09:44:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.291 2005/09/28 14:12:38 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1392,7 +1392,9 @@ sub checklines_direct_tools($) {
 		qr"for file in",
 		qr"(?:\./Build|\$\{JAM_COMMAND\})\s+(?:install|test)",
 		qr"\"[^\"]*${regex_tools}[^\"]*\"",
-		qr"\'[^\']*${regex_tools}[^\']*\'");
+		qr"\'[^\']*${regex_tools}[^\']*\'",
+		qr"#.*",
+	);
 
 	my %toolvar = ();
 	foreach my $tool (@tools) {
