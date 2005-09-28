@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/09/28 18:22:11 rillig Exp $
+$NetBSD: distinfo,v 1.7 2005/09/28 21:42:49 rillig Exp $
 
 SHA1 (sj3-2.0.1.20.tar.gz) = b1cae59065ebc9caf5e198143ceb9558c932f259
 RMD160 (sj3-2.0.1.20.tar.gz) = b25f2c585485516fddf3b9168e4cb8552cd26f71
@@ -8,7 +8,7 @@ SHA1 (patch-ac) = a2a9c21618e7de1e56d371cb05cf866d549d50a1
 SHA1 (patch-ad) = 6f45996f04f894e28f2dd5d1276c31b3c6a7b12a
 SHA1 (patch-ae) = 3b07eb2ea9d72049a8f322220836a631598ea7dc
 SHA1 (patch-af) = 33ac72303dfa13929d423ecaf5d9b7cb308f8ff5
-SHA1 (patch-ag) = 4df33d342b583bcbc7a81e2da5eb75dd7060215c
+SHA1 (patch-ag) = 14744940b736cee683a59a25a2bda0a2ce85d319
 SHA1 (patch-ah) = 77dd83b13facb0c99fc50ebb883591b590a2cab1
 SHA1 (patch-ai) = c29e6770c8679baa7401e20a7a0e2655382bcd7a
 SHA1 (patch-aj) = a8055ef4e06f70b344f5eadf1c2f0042e22781db
