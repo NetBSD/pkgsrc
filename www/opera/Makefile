@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/09/28 12:33:10 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2005/09/28 14:00:51 rillig Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=	www
@@ -135,7 +135,8 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( ${ECHO} '$$NetBSD: Makefile,v 1.43 2005/09/28 12:33:10 rillig Exp $$'; ${ECHO} ''; \
+	( ${ECHO} '$$'NetBSD'$$';
+	  ${ECHO} ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
@@ -144,5 +145,5 @@ opera-distinfo:
 		${GREP} opera distinfo; \
 	) > distinfo.new
 	${MV} -f distinfo.new distinfo
-	
+
 .include "../../mk/bsd.pkg.mk"
