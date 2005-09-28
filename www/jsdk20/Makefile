@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/07/15 18:27:54 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/09/28 12:26:06 rillig Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -22,8 +22,8 @@ USE_JAVA=	run
 
 WRKSRC=		${WRKDIR}/JSDK2.0
 BUILD_DEFS+=    JSDK_HOME
-NO_CONFIGURE=
-NO_BUILD=
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 USE_TOOLS+=	gtar
 
