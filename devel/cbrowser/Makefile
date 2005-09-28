@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:45 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:19 rillig Exp $
 #
 
 DISTNAME=       cbrowser-0.6
@@ -13,7 +13,7 @@ COMMENT=        Graphical C/C++ source code browsing tool, and call graph viewer
 DEPENDS+=	cscope-[0-9]*:../../devel/cscope
 DEPENDS+=	tk-[0-9]*:../../x11/tk
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin
 

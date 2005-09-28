@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/08/26 16:54:21 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2005/09/28 20:52:19 rillig Exp $
 #
 
 DISTNAME=	libnet-1.0.2a
@@ -14,8 +14,8 @@ CONFLICTS=	libnet-1.1.[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/l/L/}
 
-USE_LIBTOOL=	# defined
-GNU_CONFIGURE=	# defined
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBNET_CONFIG_CFLAGS="-I${PREFIX}/include" \
 		LIBNET_CONFIG_LIBS="${LDFLAGS}"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/07/16 01:19:20 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/09/28 20:52:27 rillig Exp $
 #
 
 DISTNAME=		roller-1.19
@@ -16,7 +16,7 @@ DEPENDS+=		pflogsumm-[0-9]*:../../sysutils/pflogsumm
 
 .include "../../mk/bsd.prefs.mk"
 
-NO_CONFIGURE=		# defined
+NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 
 MAKE_PARAMS+=		PREFIX=${PREFIX}

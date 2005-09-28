@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/09/28 20:52:20 rillig Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -11,10 +11,10 @@ HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
 
 USE_TOOLS+=	gmake
-USE_LIBTOOL=	# defined
+USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-NO_CONFIGURE=	# defined
+NO_CONFIGURE=	yes
 BUILD_DIRS=	${WRKSRC}/src
 
 MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"

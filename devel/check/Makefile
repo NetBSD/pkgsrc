@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/22 20:07:49 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/09/28 20:52:19 rillig Exp $
 #
 
 DISTNAME=	check-0.9.1
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://check.sourceforge.net/
 COMMENT=	Unit test framework for C
 
-GNU_CONFIGURE=	# defined
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-plain-docdir
 USE_TOOLS+=	gmake
 

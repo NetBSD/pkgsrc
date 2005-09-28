@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/28 20:52:18 rillig Exp $
 #
 
 DISTNAME=		tik-0.90
@@ -12,8 +12,8 @@ COMMENT=		Tcl/Tk AOL Instant Messenger client
 DEPENDS+=		tk>=8.1:../../x11/tk
 
 WRKSRC=			${WRKDIR}/tik
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 TIKDIR=			${PREFIX}/libexec/tik
 INSTALLATION_DIRS=	bin
