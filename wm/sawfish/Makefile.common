@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/09/28 21:55:32 rillig Exp $
 
 DISTNAME=		sawfish-${SF_VERS}-gtk1
 SF_VERS=		1.2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://sawmill.sourceforge.net/
 DEPENDS+=		rep-gtk>=0.15nb2:../../x11/rep-gtk
 
 USE_DIRS+=		xdg-1.1
-USE_PKGLOCALEDIR=	# defined
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		# defined
 
