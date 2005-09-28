@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/10 20:56:25 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/28 14:31:09 rillig Exp $
 #
 
 DISTNAME=	skippy-0.5.0
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://thegraveyard.org/skippy.php
-COMMENT=	Fullscreen task switcher for X11	
+COMMENT=	Fullscreen task switcher for X11
 
 USE_TOOLS+=		pkg-config
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
