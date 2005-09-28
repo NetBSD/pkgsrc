@@ -1,13 +1,9 @@
 * --autofix
-* pkglint <package>...
 * fix false positive warnings
-* @deprecated_variables
-* add checks for buildlink3.mk files
-* stricter type checking
 * quoting check for Makefile variables
 * -E/--explain
 * check for absolute paths
 * check for direct use of /usr/pkgsrc etc.
-* check dir direct use of *DIR
+* check for direct use of *DIR
 * in dependency lines check for ../../category/package, not ../package
 * ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
