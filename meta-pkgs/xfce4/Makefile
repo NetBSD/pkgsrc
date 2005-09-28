@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/26 13:26:16 martti Exp $
+# $NetBSD: Makefile,v 1.17 2005/09/28 19:18:55 rillig Exp $
 
 .include "Makefile.common"
 
@@ -7,13 +7,14 @@ DISTFILES=	# empty
 CATEGORIES=	meta-pkgs
 COMMENT=	XFce4
 
-NO_CHECKSUM=	# defined
-NO_CONFIGURE=	# defined
-NO_MTREE=	# defined
+NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_MTREE=	yes
 WRKSRC=		${WRKDIR}
 
-do-build:	# empty
-do-install:	# empty
+do-install:
+	@${DO_NADA}
 
 .include "../../audio/xfce4-mixer/buildlink3.mk"
 .include "../../graphics/xfce4-icon-theme/buildlink3.mk"
