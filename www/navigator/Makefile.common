@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.77 2005/06/17 03:50:41 jlam Exp $
+# $NetBSD: Makefile.common,v 1.78 2005/09/28 12:17:23 rillig Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -68,7 +68,7 @@ VENDOR_NAME=	BSD/OS 2.1
 BUILD_DEPENDS=  binpatch>=1.0:../../pkgtools/binpatch
 
 post-install:
-	sh ../../www/navigator/files/binpatch-x86-bsdi-bsd2-4.75.sh \
+	${SH} ../../www/navigator/files/binpatch-x86-bsdi-bsd2-4.75.sh \
 	    ${LOCALBASE} ${MOZILLA_HOME}/netscape
 .elif ${MACHINE_ARCH} == "i386"
 PKGREVISION=	1
@@ -85,7 +85,7 @@ DEPENDS+=	ns-flash>4.0:../../multimedia/ns-flash
 BUILD_DEPENDS=  binpatch>=1.0:../../pkgtools/binpatch
 
 post-install:
-	sh ../../www/navigator/files/binpatch-x86-unknown-linux2.2-4.80.sh \
+	${SH} ../../www/navigator/files/binpatch-x86-unknown-linux2.2-4.80.sh \
 	    ${LOCALBASE} ${MOZILLA_HOME}/netscape
 .endif
 .elif ((${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64") && defined(NS_USE_SUNOS))
@@ -133,7 +133,6 @@ HOMEPAGE=	http://linuxppc.org/software/index/linuxppc_stable/software/netscape-4
 BUILD_DEPENDS=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 DESCR_SRC=	${WRKDIR}/DESCR.linux-powerpc
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
-SORT=		sort
 RPM2PKG=	rpm2pkg
 RPM2PKGARGS=	${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
 VENDOR_NAME=	# empty.  what should be here?
