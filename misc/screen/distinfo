@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2005/03/29 07:02:25 kim Exp $
+$NetBSD: distinfo,v 1.24 2005/09/28 19:35:36 rillig Exp $
 
 SHA1 (screen-4.0.2.tar.gz) = 461eb9d5edc211e1480d7b5e94d89c4d9ba3643f
 RMD160 (screen-4.0.2.tar.gz) = 42aea3d27ed25104f2a48606ea73234b715e480f
@@ -8,7 +8,7 @@ SHA1 (patch-ab) = f4fc914ad9c48cb83cf3633630cb83e4a8e90ff5
 SHA1 (patch-ac) = 4eb492cd7cf9cf0df11337e91dc8f55f440de761
 SHA1 (patch-ae) = dcdbb1ca08e36308f5659a90a5b6f31fb3a45691
 SHA1 (patch-ai) = a3d2c7d2ef3db9deb7a5e70ed7f906efd3196af6
-SHA1 (patch-aj) = 1d672a9e3290d68137ea5b9400410fbba63c22eb
+SHA1 (patch-aj) = d3a2a0170d92c06b25598ee2b5f288f0ef37f41f
 SHA1 (patch-ak) = 20254505d621a994befc2e1bfef56c9291d09fe6
 SHA1 (patch-al) = 6ee93058847f3894a886346676e4a613c0bd134e
 SHA1 (patch-am) = 5fdc32f33ebbb5385292919f6cd01bedc30491d9
