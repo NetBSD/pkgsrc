@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/09/13 19:25:57 christos Exp $
+# $NetBSD: Makefile,v 1.16 2005/09/29 14:31:11 wiz Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0
@@ -9,8 +9,8 @@ MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/fep/
 MAINTAINER=	nobu@psrc.isac.co.jp
 COMMENT=	General purpose front end for command line editing
 
-LICENSE=	limited-redistribution
-RESTRICTED=	Do not redistribute for a fee
+LICENSE=	fep-license
+RESTRICTED=	Do not redistribute for a fee.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
