@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/04 22:23:23 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/09/29 13:20:46 tonio Exp $
+bin/esponja
 bin/hacha
 bin/hevea
-bin/esponja
 bin/imagen
 share/hevea/alltt.hva
 share/hevea/amsmath.hva
@@ -11,23 +11,27 @@ share/hevea/bookcommon.hva
 share/hevea/comment.hva
 share/hevea/compat.hva
 share/hevea/contents_motif.gif
-share/hevea/cutfoot-eng.html
-share/hevea/cutfoot-fra.html
-share/hevea/footer.tex
+share/hevea/czech.hva
+share/hevea/english.hva
+share/hevea/french-common.hva
+share/hevea/german-common.hva
 share/hevea/hevea.sty
-share/hevea/multibib.hva
-share/hevea/natbib-common.hva
-share/hevea/xxcharset.exe
+share/hevea/html/amssymb.hva
 share/hevea/html/article.hva
+share/hevea/html/austrian.hva
 share/hevea/html/book.hva
 share/hevea/html/color.hva
 share/hevea/html/colortbl.hva
+share/hevea/html/common-math.hva
 share/hevea/html/commongraphic.hva
 share/hevea/html/fancysection.hva
 share/hevea/html/fancyvrb.hva
+share/hevea/html/french.hva
+share/hevea/html/german.hva
 share/hevea/html/graphics.hva
 share/hevea/html/graphicx.hva
 share/hevea/html/hevea.hva
+share/hevea/html/mathpartir.hva
 share/hevea/html/natbib.hva
 share/hevea/html/png.hva
 share/hevea/html/report.hva
@@ -43,6 +47,7 @@ share/hevea/html/urlhref.hva
 share/hevea/html/xypic.hva
 share/hevea/hyperref.hva
 share/hevea/ifthen.hva
+share/hevea/imagen
 share/hevea/index.hva
 share/hevea/info/article.hva
 share/hevea/info/book.hva
@@ -50,6 +55,7 @@ share/hevea/info/color.hva
 share/hevea/info/colortbl.hva
 share/hevea/info/fancysection.hva
 share/hevea/info/hevea.hva
+share/hevea/info/multind.hva
 share/hevea/info/report.hva
 share/hevea/info/seminar.hva
 share/hevea/iso-symb.hva
@@ -63,18 +69,25 @@ share/hevea/makeidx.hva
 share/hevea/mathaccents.hva
 share/hevea/mathop.hva
 share/hevea/moreverb.hva
+share/hevea/multibib.hva
 share/hevea/multind.hva
+share/hevea/natbib-common.hva
 share/hevea/next_motif.gif
 share/hevea/packages.hva
 share/hevea/plain.hva
 share/hevea/previous_motif.gif
 share/hevea/program.hva
+share/hevea/ragged2e.hva
 share/hevea/spaces.hva
+share/hevea/supertabular.hva
 share/hevea/text/article.hva
+share/hevea/text/austrian.hva
 share/hevea/text/book.hva
 share/hevea/text/color.hva
 share/hevea/text/colortbl.hva
 share/hevea/text/fancysection.hva
+share/hevea/text/french.hva
+share/hevea/text/german.hva
 share/hevea/text/hevea.hva
 share/hevea/text/report.hva
 share/hevea/text/seminar.hva
@@ -82,7 +95,6 @@ share/hevea/text/symb.hva
 share/hevea/underscore.hva
 share/hevea/url.hva
 share/hevea/verbatim.hva
-share/hevea/xxdate.exe
 @dirrm share/hevea/text
 @dirrm share/hevea/info
 @dirrm share/hevea/html

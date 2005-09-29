@@ -1,28 +1,32 @@
-$NetBSD: patch-aa,v 1.6 2005/02/04 22:23:23 adrianp Exp $
+$NetBSD: patch-aa,v 1.7 2005/09/29 13:20:46 tonio Exp $
 
---- Makefile.orig	2005-01-13 20:27:38.000000000 +0000
-+++ Makefile	2005-01-13 20:39:04.000000000 +0000
-@@ -1,12 +1,12 @@
+--- Makefile.orig	2005-05-13 16:08:47.000000000 +0200
++++ Makefile
+@@ -1,16 +1,16 @@
  ################## Configuration parameters
  # Compile using ocamlopt, to use ocamlc set TARGET=byte
 -TARGET=opt
 +#TARGET=opt
+ # Install prefix
+-PREFIX=/usr/local
++#PREFIX=/usr/local
  # Library directory of hevea
--LIBDIR=/usr/local/lib/hevea
-+LIBDIR=${PREFIX}/share/hevea
+-LIBDIR=$(PREFIX)/lib/hevea
++LIBDIR=$(PREFIX)/share/hevea
  # Where to install programms
--BINDIR=/usr/local/bin
-+BINDIR=${PREFIX}/bin
- # C preprocessor with proper options (don't ask)
--CPP=cpp -E -P
-+CPP=${M4}
- #Some alternatives...
- #CPP=/lib/cpp -E -P  (Old fashioned Unix)
- #CPP=gcc -E -P -x c  (If you have gcc)
-@@ -21,8 +21,8 @@
+ BINDIR=$(PREFIX)/bin
+ # Install prefix prefix
+ DESTDIR=
+ #Where to install hevea.sty
+-LATEXLIBDIR=$(PREFIX)/lib/hevea
++LATEXLIBDIR=$(LIBDIR)
+ ############### End of configuration parameters
+ SUF=
+ DIR=
+@@ -22,8 +22,8 @@ OCAMLFLAGS=
  OCAMLCI=$(OCAMLC)
  OCAMLOPT=${DIR}ocamlopt$(SUF)
- OCAMLLEX=${DIR}ocamllex$(SUF)
+ OCAMLLEX=${DIR}ocamllex$(SUF) -q
 -INSTALL=cp
 -MKDIR=mkdir -p
 +INSTALL=${BSD_INSTALL_DATA}
@@ -30,52 +34,60 @@ $NetBSD: patch-aa,v 1.6 2005/02/04 22:23:23 adrianp Exp $
  
  ONLYESPONJA=emisc.cmo buff.cmo htmllex.cmo htmlparse.cmo htmltext.cmo pp.cmo util.cmo explode.cmo ultra.cmo esponja.cmo
  
-@@ -50,30 +50,30 @@
- 	$(MAKE) $(MFLAGS) TARGET=byte hevea.byte hacha.byte esponja.byte cutfoot-fra.html cutfoot-eng.html
+@@ -51,34 +51,34 @@ byte:
+ 	$(MAKE) $(MFLAGS) TARGET=byte hevea.byte hacha.byte esponja.byte
  
  install-lib:
--	- $(MKDIR) $(LIBDIR)
--	$(INSTALL) hevea.sty cutfoot-fra.html cutfoot-eng.html footer.tex ${LIBDIR}
--	$(INSTALL) contents_motif.gif next_motif.gif previous_motif.gif ${LIBDIR}
--	$(INSTALL) $(ALLLIB) $(LIBDIR)
--	- $(MKDIR)  $(LIBDIR)/html
--	cd html ; $(INSTALL) $(HTMLLIB) $(LIBDIR)/html
--	- $(MKDIR)  $(LIBDIR)/text
--	cd text ; $(INSTALL) $(TEXTLIB) $(LIBDIR)/text
--	- $(MKDIR) $(LIBDIR)/info
--	cd info ; $(INSTALL) $(INFOLIB) $(LIBDIR)/info
-+	$(BSD_INSTALL_DATA_DIR) $(LIBDIR)
-+	$(BSD_INSTALL_DATA) hevea.sty cutfoot-fra.html cutfoot-eng.html footer.tex ${LIBDIR}
-+	$(BSD_INSTALL_DATA) contents_motif.gif next_motif.gif previous_motif.gif ${LIBDIR}
-+	$(BSD_INSTALL_DATA) $(ALLLIB) $(LIBDIR)
-+	$(BSD_INSTALL_DATA_DIR)  $(LIBDIR)/html
-+	cd html ; $(BSD_INSTALL_DATA) $(HTMLLIB) $(LIBDIR)/html
-+	$(BSD_INSTALL_DATA_DIR)  $(LIBDIR)/text
-+	cd text ; $(BSD_INSTALL_DATA) $(TEXTLIB) $(LIBDIR)/text
-+	$(BSD_INSTALL_DATA_DIR) $(LIBDIR)/info
-+	cd info ; $(BSD_INSTALL_DATA) $(INFOLIB) $(LIBDIR)/info
+-	- $(MKDIR) $(DESTDIR)/$(LATEXLIBDIR)
+-	$(INSTALL)  hevea.sty $(DESTDIR)/$(LATEXLIBDIR)
+-	- $(MKDIR) $(DESTDIR)/$(LIBDIR)
+-	$(INSTALL) contents_motif.gif next_motif.gif previous_motif.gif $(DESTDIR)/$(LIBDIR)
+-	$(INSTALL) $(ALLLIB) $(DESTDIR)/$(LIBDIR)
+-	- $(MKDIR)  $(DESTDIR)/$(LIBDIR)/html
+-	cd html ; $(INSTALL) $(HTMLLIB) $(DESTDIR)/$(LIBDIR)/html
+-	- $(MKDIR)  $(DESTDIR)/$(LIBDIR)/text
+-	cd text ; $(INSTALL) $(TEXTLIB) $(DESTDIR)/$(LIBDIR)/text
+-	- $(MKDIR) $(DESTDIR)/$(LIBDIR)/info
+-	cd info ; $(INSTALL) $(INFOLIB) $(DESTDIR)/$(LIBDIR)/info
+-	$(INSTALL) imagen $(DESTDIR)/$(LIBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(LATEXLIBDIR)
++	$(BSD_INSTALL_DATA)  hevea.sty $(DESTDIR)/$(LATEXLIBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(LIBDIR)
++	$(BSD_INSTALL_DATA) contents_motif.gif next_motif.gif previous_motif.gif $(DESTDIR)/$(LIBDIR)
++	$(BSD_INSTALL_DATA) $(ALLLIB) $(DESTDIR)/$(LIBDIR)
++	$(BSD_INSTALL_DATA_DIR)  $(DESTDIR)/$(LIBDIR)/html
++	cd html ; $(BSD_INSTALL_DATA) $(HTMLLIB) $(DESTDIR)/$(LIBDIR)/html
++	$(BSD_INSTALL_DATA_DIR)  $(DESTDIR)/$(LIBDIR)/text
++	cd text ; $(BSD_INSTALL_DATA) $(TEXTLIB) $(DESTDIR)/$(LIBDIR)/text
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(LIBDIR)/info
++	cd info ; $(BSD_INSTALL_DATA) $(INFOLIB) $(DESTDIR)/$(LIBDIR)/info
++	$(BSD_INSTALL_DATA) imagen $(DESTDIR)/$(LIBDIR)
  
  
  
  install-opt: install-lib
--	$(INSTALL) hevea.opt $(BINDIR)/hevea
--	$(INSTALL) hacha.opt $(BINDIR)/hacha
--	$(INSTALL) esponja.opt $(BINDIR)/esponja
--	$(INSTALL) imagen $(BINDIR)
-+	$(BSD_INSTALL_PROGRAM) hevea.opt $(BINDIR)/hevea
-+	$(BSD_INSTALL_PROGRAM) hacha.opt $(BINDIR)/hacha
-+	$(BSD_INSTALL_PROGRAM) esponja.opt $(BINDIR)/esponja
-+	$(BSD_INSTALL_SCRIPT) imagen $(BINDIR)
+-	- $(MKDIR) $(DESTDIR)/$(BINDIR)
+-	$(INSTALL) hevea.opt $(DESTDIR)/$(BINDIR)/hevea
+-	$(INSTALL) hacha.opt $(DESTDIR)/$(BINDIR)/hacha
+-	$(INSTALL) esponja.opt $(DESTDIR)/$(BINDIR)/esponja
+-	$(INSTALL) imagen $(DESTDIR)/$(BINDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) hevea.opt $(DESTDIR)/$(BINDIR)/hevea
++	$(BSD_INSTALL_PROGRAM) hacha.opt $(DESTDIR)/$(BINDIR)/hacha
++	$(BSD_INSTALL_PROGRAM) esponja.opt $(DESTDIR)/$(BINDIR)/esponja
++	$(BSD_INSTALL_SCRIPT) imagen $(DESTDIR)/$(BINDIR)
  
  install-byte: install-lib
--	$(INSTALL) hevea.byte $(BINDIR)/hevea
--	$(INSTALL) hacha.byte $(BINDIR)/hacha
--	$(INSTALL) esponja.byte $(BINDIR)/esponja
--	$(INSTALL) imagen $(BINDIR)
-+	$(BSD_INSTALL_SCRIPT) hevea.byte $(BINDIR)/hevea
-+	$(BSD_INSTALL_SCRIPT) hacha.byte $(BINDIR)/hacha
-+	$(BSD_INSTALL_SCRIPT) esponja.byte $(BINDIR)/esponja
-+	$(BSD_INSTALL_SCRIPT) imagen $(BINDIR)
+-	- $(MKDIR) $(DESTDIR)/$(BINDIR)
+-	$(INSTALL) hevea.byte $(DESTDIR)/$(BINDIR)/hevea
+-	$(INSTALL) hacha.byte $(DESTDIR)/$(BINDIR)/hacha
+-	$(INSTALL) esponja.byte $(DESTDIR)/$(BINDIR)/esponja
+-	$(INSTALL) imagen $(DESTDIR)/$(BINDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(BINDIR)
++	$(BSD_INSTALL_SCRIPT) hevea.byte $(DESTDIR)/$(BINDIR)/hevea
++	$(BSD_INSTALL_SCRIPT) hacha.byte $(DESTDIR)/$(BINDIR)/hacha
++	$(BSD_INSTALL_SCRIPT) esponja.byte $(DESTDIR)/$(BINDIR)/esponja
++	$(BSD_INSTALL_SCRIPT) imagen $(DESTDIR)/$(BINDIR)
  
  
  hevea.byte: ${OBJS}
