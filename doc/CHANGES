@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11247 2005/09/29 14:13:53 wiz Exp $
+$NetBSD: CHANGES,v 1.11248 2005/09/29 18:04:28 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4173,3 +4173,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/hevea to 1.08 [tonio 2005-09-28]
 	Updated fonts/dbz-ttf to 20050114 [wiz 2005-09-29]
 	Updated sysutils/sarah to 0.9.1b [wiz 2005-09-29]
+	Added net/scamper version 20050529 [rpaulo 2005-09-29]
