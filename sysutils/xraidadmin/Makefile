@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/09/29 13:10:02 wiz Exp $
 #
 
 DISTNAME=		RAIDAdmin1.3archive
@@ -8,7 +8,7 @@ MASTER_SITES=		http://download.info.apple.com/Mac_OS_X/061-1159.20040318.Pplkf/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		jschauma@NetBSD.org
-HOMEPAGE=		http://www.apple.com/support/downloads/xserveraidadmintools.html
+HOMEPAGE=		http://www.apple.com/downloads/macosx/apple/xserveraidadmintools.html
 COMMENT=		Tool to administer Apple's Xserve RAID
 
 LICENSE=		apple-admin
