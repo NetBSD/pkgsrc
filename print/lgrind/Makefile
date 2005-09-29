@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/07/18 00:15:13 kristerw Exp $
+# $NetBSD: Makefile,v 1.22 2005/09/29 14:21:08 tonio Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jwise@NetBSD.org
 COMMENT=	Source pretty printer for LaTeX
 
-DEPENDS+=	teTeX>=1.0:../../print/teTeX
+DEPENDS+=	teTeX-bin>=1.0:../../print/teTeX-bin
 
 WRKSRC=		${WRKDIR}/lgrind/source
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
