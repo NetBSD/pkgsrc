@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/04/11 21:46:05 tv Exp $
+# $NetBSD: Makefile,v 1.49 2005/09/29 10:24:59 adam Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
 CATEGORIES=	graphics
@@ -16,6 +16,14 @@ CONFIGURE_ARGS+=	--with-imlib-config=${X11PREFIX}/bin
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+
+# a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
+SUBST_CLASSES+=		hints
+SUBST_STAGE.hints=	post-patch
+SUBST_MESSAGE.hints=	"Fix includehints."
+SUBST_FILES.hints=	ksnapshot/ksnapshotwidget.ui \
+			kviewshell/pageSizeWidget_base.ui
+SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
