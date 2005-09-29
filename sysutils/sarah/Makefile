@@ -1,24 +1,22 @@
-# $NetBSD: Makefile,v 1.9 2005/07/16 01:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/29 14:13:15 wiz Exp $
 
-DISTNAME=	sarah-0.7b
+DISTNAME=	sarah-0.9.1b
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.conundrum.com/pub/sarah/
+MASTER_SITES=	ftp://ftp.conundrum.com/pub/sarah/ \
+		http://prdownloads.sourceforge.net/sarah/
 
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://sarah.sourceforge.net/
 COMMENT=	Syslog automated Rotation and Archive Handler
-
-LICENSE=	limited-redistribution
-RESTRICTED=	"Do not redistribute"
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	sarah
 NO_BUILD=	YES
 
 INSTALLATION_DIRS=	bin man/man1
+USE_PKGINSTALL=	YES
+CONF_FILES+=	${PREFIX}/share/examples/sarah/sarah.conf.sample \
+			${PKG_SYSCONFDIR}/sarah.conf
 
 post-patch:
 	${SED}	-e "s,/usr/local,${PREFIX},g"				\
