@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/07/15 18:27:51 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/09/29 13:36:11 wiz Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -21,7 +21,7 @@ PLIST_SUBST+=	JAVADIR=${PKG_JAVA_HOME:C|${PREFIX}/||}
 
 EXTRACT_ELEMENTS=	LinuxJIT/javacomp-1.2.15.tar.gz
 
-LICENSE=		single-user-license
+LICENSE=		jbuilder-jit-license
 RESTRICTED=		"Redistribution of binaries not permitted"
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
