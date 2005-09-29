@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:32 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/29 13:05:24 wiz Exp $
 #
 
 DISTNAME=	libidea-0.8.2b
@@ -14,7 +14,7 @@ COMMENT=	IDEA block cipher library
 
 WRKSRC=		${WRKDIR}/idea
 CRYPTO=		YES
-LICENCE=	IDEA-licence
+LICENCE=	idea-license
 RESTRICTED=	IDEA is a patented algorithm that requires proper licensing
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
