@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/12/28 14:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/09/29 13:46:16 wiz Exp $
 #
 
 DISTNAME=	dbz
-PKGNAME=	dbz-ttf-20020507
-PKGREVISION=	3
+PKGNAME=	dbz-ttf-20050114
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.andrew.cmu.edu/~twm/fonts/
 EXTRACT_SUFX=	.zip
@@ -14,12 +13,12 @@ COMMENT=	Divide By Zero TrueType fonts created by Tom Murphy 7
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-LICENSE=	limited-redistribution
+LICENSE=	dbz-ttf-license
 RESTRICTED=	Resale prohibited.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-USE_X11BASE=	YES
+USE_X11=	YES
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
