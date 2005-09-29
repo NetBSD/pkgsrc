@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2005/09/28 20:47:39 rillig Exp $
+# $NetBSD: Makefile,v 1.259 2005/09/29 13:38:37 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.23.2
@@ -18,7 +18,6 @@ USE_TOOLS+=	perl:run
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
-NO_TOOLS=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
 
