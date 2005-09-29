@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11245 2005/09/29 13:22:26 tonio Exp $
+$NetBSD: CHANGES,v 1.11246 2005/09/29 13:46:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4171,3 +4171,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/vip to 19971113nb2 [seb 2005-09-28]
 	Updated chat/gtmess to 0.91 [rafal 2005-09-28]
 	Updated textproc/hevea to 1.08 [tonio 2005-09-28]
+	Updated fonts/dbz-ttf to 20050114 [wiz 2005-09-29]
