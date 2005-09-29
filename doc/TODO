@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3923 2005/09/29 12:15:58 wiz Exp $
+$NetBSD: TODO,v 1.3924 2005/09/29 14:14:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,6 +456,7 @@ Suggested package updates
 	o etach-1.4.0
 	o exmh-2.7.2
 	o f2c-20031025
+	o faces-1.7.7
 	o fakeroot-1.3 [pkg/30015]
 	o fd-2.06c
 	o fdgw-20040609
@@ -962,7 +963,6 @@ Suggested package updates
 	o sablevm-classpath-gui-1.12
 	o samba-3.0.20 [See also http://www.samba.org/samba/patches/]
 	o same-1.8 [don't update; same-1.3 is small and nice]
-	o sarah-0.9.1b
 	o sather-1.2.2
 	o sawfish-1.3
 	o sawfish-replibs-1.3
