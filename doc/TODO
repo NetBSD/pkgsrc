@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3932 2005/09/30 12:44:48 wiz Exp $
+$NetBSD: TODO,v 1.3933 2005/09/30 13:12:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -505,7 +505,6 @@ Suggested package updates
 	o gnocatan-0.8.1.30
 	o gnome-2.12.0
 	o gnupg-devel-1.9.19
-	o gnutls-1.2.7
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.40
 	o gogo-3.11p1
