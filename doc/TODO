@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3929 2005/09/30 12:22:08 wiz Exp $
+$NetBSD: TODO,v 1.3930 2005/09/30 12:31:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -520,7 +520,6 @@ Suggested package updates
 	o gsasl-0.2.8
 	o gsed-4.1.4
 	o gsharutils-4.3.78
-	o gsl-1.7
 	o gss-0.0.16
 	o gst-plugins-0.8.11
 	o gtetrinet-0.7.9
