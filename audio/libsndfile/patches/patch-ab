@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.5 2004/11/19 12:15:14 adam Exp $
+$NetBSD: patch-ab,v 1.6 2005/09/30 13:26:02 adam Exp $
 
---- src/common.h.orig	2004-11-14 19:56:44.000000000 +0000
+--- src/common.h.orig	2005-09-18 02:36:57.000000000 +0000
 +++ src/common.h
-@@ -137,7 +137,7 @@ typedef struct
- 	unsigned int	timestamp ;	/* secs since 1/1/1970  */
+@@ -150,7 +150,7 @@ typedef struct
+ 
  #if HAVE_FLEXIBLE_ARRAY
  	/* the per channel peak info */
 -	PEAK_POS		peaks [] ;
