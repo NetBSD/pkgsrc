@@ -1,34 +1,23 @@
-# $NetBSD: Makefile,v 1.28 2005/05/22 20:08:14 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/09/30 22:02:56 wiz Exp $
 
-DISTNAME=       dialog-0.6z
-PKGREVISION=	3
+DISTNAME=	dialog-1.0-20050911
+PKGNAME=	${DISTNAME:C/-2/.2/}
 CATEGORIES=	misc
-MASTER_SITES=   ${MASTER_SITE_SUNSITE:=utils/shell/}
+MASTER_SITES=	ftp://invisible-island.net/dialog/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://dickey.his.com/dialog/dialog.html
 COMMENT=	Display dialog boxes from shell scripts
 
-USE_TOOLS+=		gmake
+GNU_CONFIGURE=	yes
+MAKEFILE=	makefile
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]* NetBSD-1.6[A-P]-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-EGDIR=			${PREFIX}/share/examples/dialog
-EGFILES=		checklist guage infobox inputbox menubox msgbox
-EGFILES+=		radiolist textbox yesno
-
 INSTALLATION_DIRS=	bin man/man1
-
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/samples; for file in ${EGFILES}; do		\
-		${MV} $${file} $${file}.tmp;				\
-		${SED} "s|\.\./dialog|${PREFIX}/bin/dialog|g"		\
-			$${file}.tmp > $${file};			\
-		${RM} $${file}.tmp;					\
-		${INSTALL_SCRIPT} $${file} ${EGDIR};			\
-	done
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
