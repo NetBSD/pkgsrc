@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3938 2005/09/30 14:07:10 adam Exp $
+$NetBSD: TODO,v 1.3939 2005/09/30 15:25:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,6 @@ Suggested package updates
 	o dirdiff-2.0
 	o dmalloc-5.4.2
 	o dnstracer-1.8
-	o docbook-xml-4.4 [pkg/31219]
 	o dpkg-1.13.3
 	o dvdrip-0.52.6
 	o dvipdfmx-20050201
