@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/05/02 12:59:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/09/30 13:11:34 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -76,6 +76,7 @@ man/man3/gnutls_certificate_set_x509_trust_mem.3
 man/man3/gnutls_certificate_type_get.3
 man/man3/gnutls_certificate_type_get_name.3
 man/man3/gnutls_certificate_type_set_priority.3
+man/man3/gnutls_certificate_verify_peers.3
 man/man3/gnutls_certificate_verify_peers2.3
 man/man3/gnutls_check_version.3
 man/man3/gnutls_cipher_get.3
@@ -398,6 +399,7 @@ share/examples/gnutls/ex-serv1.c
 share/examples/gnutls/ex-session-info.c
 share/examples/gnutls/ex-verify.c
 share/examples/gnutls/ex-x509-info.c
+share/examples/gnutls/tcp.c
 @dirrm share/examples/gnutls
 @dirrm share/doc/gnutls
 @dirrm include/gnutls
