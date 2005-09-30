@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2004/11/19 12:15:14 adam Exp $
+$NetBSD: patch-aa,v 1.9 2005/09/30 13:26:02 adam Exp $
 
---- src/Makefile.in.orig	2004-11-15 10:53:04.000000000 +0000
+--- src/Makefile.in.orig	2005-09-29 20:00:35.000000000 +0000
 +++ src/Makefile.in
-@@ -881,7 +881,7 @@ libsndfile.def: create_symbols_file.py
+@@ -833,7 +833,7 @@ libsndfile.def: create_symbols_file.py
  	./create_symbols_file.py win32 $(VERSION) > libsndfile.def
  
  # Fake dependancy to force the creation of these files.
