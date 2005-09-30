@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.17 2005/09/25 00:34:12 kristerw Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.18 2005/09/30 21:36:45 kristerw Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -204,6 +204,8 @@ ${_CHECK_FILES_COOKIE.prefix}:
 	f_deleted=${WRKDIR:Q}/.files.deleted;				\
 	f_expected=${WRKDIR:Q}/.files.expected;				\
 	f_missing=${WRKDIR:Q}/.files.missing;				\
+	f_missing_real=${WRKDIR:Q}/.files.missing.real;			\
+	f_missing_skip=${WRKDIR:Q}/.files.missing.skip;			\
 	f_extra=${WRKDIR:Q}/.files.extra;				\
 	${DIFF} -u ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix} \
 		> ${WRKDIR}/.files.diff || ${TRUE};			\
@@ -214,10 +216,10 @@ ${_CHECK_FILES_COOKIE.prefix}:
 	${GREP} '^[A-Za-z]' ${PLIST} | ${SED} "s|^|${PREFIX}/|" | ${SORT} \
 		> $$f_expected;						\
 	${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added	\
-		| ${GREP} '^-[^-]' | ${SED} "s|^-|	|"		\
+		| ${GREP} '^-[^-]' | ${SED} "s|^-||"			\
 		> $$f_missing;						\
-	${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added\
-		| ${GREP} '^+[^+]' | ${SED} "s|^+|	|"		\
+	${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added	\
+		| ${GREP} '^+[^+]' | ${SED} "s|^+||"			\
 		> $$f_extra;						\
 	if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_deleted; then	\
 		{ ${ECHO} "*** The following files have been deleted"	\
@@ -228,20 +230,33 @@ ${_CHECK_FILES_COOKIE.prefix}:
 	if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing $$f_extra;	\
 	then								\
 		{ ${ECHO} "*** The PLIST does not match installed files!"; \
-		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing; then \
+		  ${CAT} $$f_missing | ${_CHECK_FILES_SKIP_FILTER}	\
+			> $$f_missing_real;				\
+		  ${DIFF} -u $$f_missing $$f_missing_real		\
+			| ${GREP} '^-[^-]' | ${SED} "s|^-||"		\
+			> $$f_missing_skip;				\
+		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing_real; \
+		  then \
 		  	${ECHO} "*** The following files are in the"	\
 				"PLIST but not in ${PREFIX}:";		\
-			${CAT} $$f_missing;				\
+			${SED} "s|^|        |" $$f_missing_real;	\
 		  fi;							\
 		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_extra; then \
 		  	${ECHO} "*** The following files are in"	\
 				"${PREFIX} but not in the PLIST:";	\
-			${CAT} $$f_extra;				\
+			${SED} "s|^|        |" $$f_extra;		\
+		  fi;							\
+		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing_skip; \
+		  then \
+		  	${ECHO} "*** The following files are in both"	\
+				"the PLIST and CHECK_FILES_SKIP:";	\
+			 ${SED} "s|^|        |" $$f_missing_skip;	\
 		  fi;							\
 		} >> ${.TARGET};					\
 	fi;								\
 	${RM} -f ${WRKDIR}/.files.diff $$f_added $$f_deleted		\
-		 $$f_expected $$f_missing $$f_extra
+		 $$f_expected $$f_missing $$f_extra			\
+		 $$f_missing_real $$f_missing_skip
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 
