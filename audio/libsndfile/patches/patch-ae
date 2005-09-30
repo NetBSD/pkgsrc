@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.3 2004/11/19 12:15:14 adam Exp $
+$NetBSD: patch-ae,v 1.4 2005/09/30 13:26:02 adam Exp $
 
---- src/ima_adpcm.c.orig	2004-11-19 13:05:19.000000000 +0000
+--- src/ima_adpcm.c.orig	2005-09-04 00:11:39.000000000 +0000
 +++ src/ima_adpcm.c
 @@ -37,7 +37,7 @@ typedef struct IMA_ADPCM_PRIVATE_tag
  	unsigned char	*block ;
  	short			*samples ;
  #if HAVE_FLEXIBLE_ARRAY
--	unsigned short	data	[] ; /* ISO C99 struct flexible array. */
-+	unsigned short	*data ; /* ISO C99 struct flexible array. */
+-	short			data	[] ; /* ISO C99 struct flexible array. */
++	short			*data ; /* ISO C99 struct flexible array. */
  #else
- 	unsigned short	data	[0] ; /* This is a hack and might not work. */
+ 	short			data	[0] ; /* This is a hack and might not work. */
  #endif
