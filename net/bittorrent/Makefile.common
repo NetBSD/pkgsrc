@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.15 2005/08/07 16:15:55 recht Exp $
-#
+# $NetBSD: Makefile.common,v 1.16 2005/09/30 14:05:38 adam Exp $
 
-DISTNAME=	BitTorrent-4.0.3
+DISTNAME=	BitTorrent-4.0.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bittorrent/}
 
