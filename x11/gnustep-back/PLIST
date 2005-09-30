@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/07/29 12:59:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/09/30 23:18:41 rh Exp $
 share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources/English.lproj/nfontFaceNames.strings
 share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/libgnustep-back-010.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
@@ -30,7 +30,6 @@ share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019063l.pfm
 share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019064l.afm
 share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019064l.pfb
 share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019064l.pfm
-share/GNUstep/System/Tools/font_cacher
 share/GNUstep/System/Tools/gpbs
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Tools
 @comment in devel/gnustep-base: @dirrm share/GNUstep/System/Library/Documentation/man/man1
