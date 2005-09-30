@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2005/09/08 07:31:54 recht Exp $
+# $NetBSD: Makefile,v 1.74 2005/09/30 19:58:00 wiz Exp $
 
-DISTNAME=	libxml2-2.6.21
+DISTNAME=	libxml2-2.6.22
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-html-subdir=libxml2
 CONFIGURE_ARGS+=	--without-python
 
