@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.6 2004/11/19 12:15:14 adam Exp $
+$NetBSD: patch-ad,v 1.7 2005/09/30 13:26:02 adam Exp $
 
---- examples/Makefile.in.orig	2004-11-15 10:53:01.000000000 +0000
+--- examples/Makefile.in.orig	2005-09-29 20:00:29.000000000 +0000
 +++ examples/Makefile.in
-@@ -168,7 +168,7 @@ sndfile_info_SOURCES = sndfile-info.c 
+@@ -235,7 +235,7 @@ INCLUDES = -I$(srcdir)/$(SNDFILEDIR) $(O
+ sndfile_info_SOURCES = sndfile-info.c 
  sndfile_info_LDADD = $(SNDFILEDIR)/libsndfile.la
- 
  sndfile_play_SOURCES = sndfile-play.c 
 -sndfile_play_LDADD = $(SNDFILEDIR)/libsndfile.la $(OS_SPECIFIC_LINKS) $(ALSA_LIBS)
 +sndfile_play_LDADD = $(SNDFILEDIR)/libsndfile.la $(OS_SPECIFIC_LINKS) $(ALSA_LIBS) $(LIBOSSAUDIO)
- 
  sndfile_convert_SOURCES = sndfile-convert.c 
  sndfile_convert_LDADD = $(SNDFILEDIR)/libsndfile.la
+ make_sine_SOURCES = make_sine.c 
