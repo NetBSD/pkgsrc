@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11270 2005/09/30 23:17:00 rh Exp $
+$NetBSD: CHANGES,v 1.11271 2005/09/30 23:19:04 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4200,3 +4200,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/gnustep-make to 1.11.1 [rh 2005-09-30]
 	Updated devel/gnustep-base to 1.11.1 [rh 2005-09-30]
 	Updated x11/gnustep-gui to 0.10.1 [rh 2005-09-30]
+	Updated x11/gnustep-back to 0.10.1 [rh 2005-09-30]
