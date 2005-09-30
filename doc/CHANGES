@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11261 2005/09/30 13:27:22 wiz Exp $
+$NetBSD: CHANGES,v 1.11262 2005/09/30 13:51:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4190,3 +4190,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/monotone-server to 0.23 [jmmv 2005-09-30]
 	Updated audio/libsndfile to 1.0.12 [adam 2005-09-30]
 	Updated devel/libntlm to 0.3.8 [wiz 2005-09-30]
+	Updated devel/bison to 2.1 [wiz 2005-09-30]
