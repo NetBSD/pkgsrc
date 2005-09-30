@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/09/30 04:56:27 minskim Exp $
 #
 
 DISTNAME=	slurm-0.3.3
 CATEGORIES=	net
-MASTER_SITES=	http://www.raisdorf.net/files/slurm/
+MASTER_SITES=	http://www.wormulon.net/files/code/slurm/
 
 MAINTAINER=	mail@eckigesauge.de
 HOMEPAGE=	http://www.raisdorf.net/projects/slurm/
