@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/06/03 10:25:38 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2005/09/30 12:43:35 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna eb gtk qt
@@ -13,6 +13,8 @@ PKG_OPTIONS_LEGACY_VARS+=	UIM_USE_QT:qt
 .if !empty(PKG_OPTIONS:Manthy)
 .include "../../inputmethod/anthy/buildlink3.mk"
 PLIST_SRC+=		PLIST.anthy
+.else
+CONFIGURE_ARGS+=	--without-anthy
 .endif
 
 .if !empty(PKG_OPTIONS:Mcanna)
@@ -30,6 +32,8 @@ CONFIGURE_ARGS+=	--without-eb
 .if !empty(PKG_OPTIONS:Mgtk)
 .include "../../x11/gtk2/modules.mk"
 PLIST_SRC+=		PLIST.gtk
+.else
+CONFIGURE_ARGS+=	--without-gtk2
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt)
