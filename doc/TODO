@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3927 2005/09/30 11:55:50 wiz Exp $
+$NetBSD: TODO,v 1.3928 2005/09/30 12:18:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1003,7 +1003,6 @@ Suggested package updates
 	o sox-12.17.8
 	o spamassassin-3.1.0 [heinz]
 	o spim-7.2
-	o sqlite3-3.2.6
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
 	o sqwebmail-5.0.5
