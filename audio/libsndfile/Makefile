@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2005/05/31 16:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2005/09/30 13:26:02 adam Exp $
 
-DISTNAME=	libsndfile-1.0.11
+DISTNAME=	libsndfile-1.0.12
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/libsndfile/
 
@@ -10,9 +10,9 @@ COMMENT=	Library for reading and writing audio files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
+GNU_CONFIGURE=		yes
 
 # This package compiles with gcc2, but its configure script doesn't know that
 CONFIGURE_ENV+=		ac_cv_c_struct_hack=yes
@@ -26,4 +26,5 @@ CONFIGURE_ENV+=		F77=${FALSE}
 BUILDLINK_PASSTHRU_DIRS+=	/Developer
 .endif
 
+.include "../../audio/flac/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
