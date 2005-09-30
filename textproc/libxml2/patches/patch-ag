@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/09/30 19:58:00 wiz Exp $
+
+--- doc/devhelp/Makefile.in.orig	2005-09-12 23:44:43.000000000 +0200
++++ doc/devhelp/Makefile.in
+@@ -258,7 +258,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-DEVHELP_DIR = $(datadir)/gtk-doc/html/libxml2
++DEVHELP_DIR = ${HTML_DIR}
+ HTML_FILES = index.html general.html $(HTML_MODULES)
+ HTML_MODULES = \
+ 	libxml2-c14n.html		\
