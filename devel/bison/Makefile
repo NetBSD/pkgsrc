@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2005/07/15 20:14:03 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2005/09/30 13:51:25 wiz Exp $
 
-DISTNAME=		bison-2.0
+DISTNAME=		bison-2.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=bison/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		cjep@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/bison/bison.html
