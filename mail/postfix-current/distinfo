@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.13 2005/09/06 08:10:58 abs Exp $
+$NetBSD: distinfo,v 1.14 2005/09/30 06:04:32 martti Exp $
 
-SHA1 (postfix/postfix-2.3-20050726.tar.gz) = 7b5c10f01a003b4764c6e4a672ae866ca53e793c
-RMD160 (postfix/postfix-2.3-20050726.tar.gz) = 4eecae72057e23c97f05280485ad2ce9d1df7973
-Size (postfix/postfix-2.2-20040628.tar.gz) = 2504873 bytes
-SHA1 (patch-aa) = 279b54f19289b56a423214716386c5aab79a57d5
-SHA1 (patch-ag) = 806a75127cb596059ca68664ad7ba070e96cc589
-SHA1 (patch-ai) = 14fdae53a54422c9714442df2bc7c308393e0dfa
+SHA1 (postfix/postfix-2.3-20050922.tar.gz) = 392548fef18c860bc6d75155f0e6b259fd4489a5
+RMD160 (postfix/postfix-2.3-20050922.tar.gz) = 848bcfcc5e044fdae3f42ed384bbc7bea98a1ae5
+Size (postfix/postfix-2.3-20050922.tar.gz) = 2508873 bytes
+SHA1 (patch-aa) = 3f45ca9b05bf080bd0f9ef3c9f8c24a1ef992edd
+SHA1 (patch-ab) = aa08339399411b8c1e12856f6b5f8406b7775840
+SHA1 (patch-ac) = 1b0fb6da368b65ccd6e47c94ff867f0169aaa839
+SHA1 (patch-ag) = 9285c62239419876ee3351250dcc29984c39d958
+SHA1 (patch-ai) = adc9996118adc6162efbec21d6aa491e6962706b
