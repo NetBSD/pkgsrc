@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3937 2005/09/30 13:51:56 wiz Exp $
+$NetBSD: TODO,v 1.3938 2005/09/30 14:07:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -288,7 +288,6 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
-	o BitTorrent-4.0.4
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
