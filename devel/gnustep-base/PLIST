@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/07/29 12:58:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/09/30 23:13:57 rh Exp $
 bin/openapp
 share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
@@ -15,6 +15,7 @@ share/GNUstep/System/Library/Documentation/man/man1/autogsdoc.1
 share/GNUstep/System/Library/Documentation/man/man1/cvtenc.1
 share/GNUstep/System/Library/Documentation/man/man1/defaults.1
 share/GNUstep/System/Library/Documentation/man/man1/gdnc.1
+share/GNUstep/System/Library/Documentation/man/man1/gspath.1
 share/GNUstep/System/Library/Documentation/man/man1/pldes.1
 share/GNUstep/System/Library/Documentation/man/man1/sfparse.1
 share/GNUstep/System/Library/Documentation/man/man1/xmlparse.1
@@ -80,6 +81,7 @@ share/GNUstep/System/Library/Headers/Foundation/NSRunLoop.h
 share/GNUstep/System/Library/Headers/Foundation/NSScanner.h
 share/GNUstep/System/Library/Headers/Foundation/NSSerialization.h
 share/GNUstep/System/Library/Headers/Foundation/NSSet.h
+share/GNUstep/System/Library/Headers/Foundation/NSSortDescriptor.h
 share/GNUstep/System/Library/Headers/Foundation/NSString.h
 share/GNUstep/System/Library/Headers/Foundation/NSTask.h
 share/GNUstep/System/Library/Headers/Foundation/NSThread.h
@@ -760,6 +762,7 @@ share/GNUstep/System/Tools/cvtenc
 share/GNUstep/System/Tools/defaults
 share/GNUstep/System/Tools/gdnc
 share/GNUstep/System/Tools/gdomap
+share/GNUstep/System/Tools/gspath
 share/GNUstep/System/Tools/make_strings
 share/GNUstep/System/Tools/pl
 share/GNUstep/System/Tools/pl2link
