@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/08/23 11:48:47 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/09/30 13:18:38 jmmv Exp $
 #
 
-DISTNAME=	monotone-server-0.22
-PKGREVISION=	1
+DISTNAME=	monotone-server-0.23
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.venge.net/monotone/
 COMMENT=	Simplifies the configuration of a dedicated Monotone server
 
-DEPENDS+=	monotone>=0.22:../../devel/monotone
+DEPENDS+=	monotone>=0.23:../../devel/monotone
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
