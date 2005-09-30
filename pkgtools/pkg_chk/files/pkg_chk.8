@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.12 2005/09/27 17:13:03 abs Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.13 2005/09/30 12:10:44 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -160,8 +160,10 @@ Verbose - list the tags set when checking
 and all packages checked.
 .El
 .Sh FILE FORMAT
-Anything after a '#' on a line is considered a comment.
-
+Anything after a
+.Sq #
+on a line is considered a comment.
+.Pp
 Each line in
 .Pa pkgchk.conf
 can either define a new tag or a package directory 
@@ -170,9 +172,7 @@ can either define a new tag or a package directory
 Lines that define a new tag can be used to group tags to avoid
 repeating the same set of tags for multiple packages.
 For example:
-
 .Dl mailserver      \= tll gta tycoon jeeves iris
-
 would cause the mailserver tag to be set for any of the listed hosts.
 Note that the tags after the
 .Sq =
@@ -181,7 +181,7 @@ evaluation rules as those after package definitions (see later).
 .Ss Package definition lines
 Package directory lines are used to determine which packages are to be
 installed, checking the tags against the current defined set.
-.Ss Tag evaulation
+.Ss Tag evaluation
 Tags on package directory are checked against the current machine's set:
 .Bl -bullet
 .It
@@ -327,7 +327,7 @@ pkgtools/pkg_chk
 mail/exim                       *
 mail/spamassassin               mailserver
 mail/cyrus-imapd                mailserver
-mail/procmail			mailserver bobhost
+mail/procmail                   mailserver bobhost
 
 shells/standalone-tcsh          *
 wm/pwm                          /etc/X11/XF86Config
@@ -340,7 +340,7 @@ x11/xlockmore                   x11 -wopr
 .Ed
 .Sh AUTHORS
 .An David Brownlee
-.Aq abs@netbsd.org ,
+.Aq abs@NetBSD.org ,
 plus much from Stoned Elipot.
 .Sh BUGS
 When used against binary packages,
