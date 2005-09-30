@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/01/13 15:06:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/09/30 12:31:28 wiz Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -6,7 +6,6 @@ include/gsl/gsl_blas.h
 include/gsl/gsl_blas_types.h
 include/gsl/gsl_block.h
 include/gsl/gsl_block_char.h
-include/gsl/gsl_block_complex.h
 include/gsl/gsl_block_complex_double.h
 include/gsl/gsl_block_complex_float.h
 include/gsl/gsl_block_complex_long_double.h
