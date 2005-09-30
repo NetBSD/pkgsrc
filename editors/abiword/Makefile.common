@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.24 2005/08/10 20:56:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24.2.1 2005/09/30 02:32:24 snj Exp $
 
 # Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
-ABIWORD_VERSION=	2.2.9
+ABIWORD_VERSION=	2.2.10
 DISTNAME=	abiword-${ABIWORD_VERSION}
 
 CATEGORIES=	editors
