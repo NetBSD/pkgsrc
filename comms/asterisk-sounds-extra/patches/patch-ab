@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/09/30 21:17:24 mjl Exp $
+
+--- sounds-extra.txt.orig	2005-09-16 23:20:17.000000000 +0200
++++ sounds-extra.txt	2005-09-16 23:26:41.000000000 +0200
+@@ -1606,7 +1606,7 @@
+ %inside-sales.gsm%Inside Sales
+ %internal-audit.gsm%Internal Audit
+ %interstate.gsm%Interstate
+-%invalid.gsm%That option is invalid. Please try again.
++%xxxxinvalid.gsm%That option is invalid. Please try again.
+ %investor-relations.gsm%Investor Relations
+ %iowa.gsm%Iowa
+ %is-at.gsm%is at
