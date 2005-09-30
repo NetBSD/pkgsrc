@@ -1,41 +1,12 @@
-$NetBSD: patch-ag,v 1.8 2005/09/06 08:10:58 abs Exp $
+$NetBSD: patch-ag,v 1.9 2005/09/30 06:04:32 martti Exp $
 
---- src/util/sys_defs.h.orig	2005-07-14 14:28:33.000000000 -0700
-+++ src/util/sys_defs.h	2005-08-22 19:05:24.000000000 -0700
-@@ -24,11 +24,12 @@
-   * 4.4BSD and close derivatives.
-   */
- #if defined(FREEBSD2) || defined(FREEBSD3) || defined(FREEBSD4) \
--    || defined(FREEBSD5) \
-+    || defined(FREEBSD5) || defined(FREEBSD6) \
-     || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
-     || defined(OPENBSD2) || defined(OPENBSD3) \
--    || defined(NETBSD1) || defined(NETBSD2) \
--    || defined(EKKOBSD1)
-+    || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
-+    || defined(EKKOBSD1) \
-+    || defined(DRAGONFLY1)
- #define SUPPORTED
- #include <sys/types.h>
- #include <sys/param.h>
-@@ -89,6 +90,14 @@
- #define SOCKOPT_SIZE	socklen_t
- #endif
- 
-+#ifdef DRAGONFLY1
-+#define HAS_DUPLEX_PIPE
-+#define HAS_DEV_URANDOM
-+#define HAS_ISSETUGID
-+#define SOCKADDR_SIZE	socklen_t
-+#define SOCKOPT_SIZE	socklen_t
-+#endif
-+
- /* OpenBSD version is year+month */
- 
- #if OpenBSD >= 200000			/* XXX */
-@@ -156,8 +165,13 @@
+--- src/util/sys_defs.h.orig	2005-07-15 00:28:33.000000000 +0300
++++ src/util/sys_defs.h	2005-09-30 05:52:00.000000000 +0300
+@@ -155,9 +155,15 @@
+ #define DEF_DB_TYPE	"hash"
  #define ALIAS_DB_MAP	"hash:/etc/aliases"
  #define GETTIMEOFDAY(t) gettimeofday(t,(struct timezone *) 0)
++#define RESOLVE_H_NEEDS_NAMESER8_COMPAT_H
  #define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin"
 +#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
 +#define USE_STATVFS

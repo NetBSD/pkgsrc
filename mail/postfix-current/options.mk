@@ -1,46 +1,33 @@
-# $NetBSD: options.mk,v 1.10 2005/07/15 18:27:51 jlam Exp $
+# $NetBSD: options.mk,v 1.11 2005/09/30 06:04:32 martti Exp $
+
+# Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-#PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre pgsql sasl tls
-PKG_SUPPORTED_OPTIONS=	ldap mysql mysql4 pcre pgsql sasl
+PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl tls
 .include "../../mk/bsd.options.mk"
 
-# ###
-# ### IPv6 and STARTTLS support (http://www.ipnet6.org/postfix/)
-# ###
-# .if !empty(PKG_OPTIONS:Minet6)
-# .  if empty(PKG_OPTIONS:Mtls)
-# PKG_OPTIONS+=		tls
-# .  endif
-# IPV6TLS_PATCH=		tls+ipv6-1.25-pf-2.2-20040616.patch.gz
-# PATCHFILES+=		${IPV6TLS_PATCH}
-# SITES_${IPV6TLS_PATCH}=	ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
-# PATCH_DIST_STRIP.${IPV6TLS_PATCH}=	-p1
-# PLIST_SRC+=		${PKGDIR}/PLIST.inet6
-# .endif
-#
-# ###
-# ### STARTTLS support (http://mirrors.loonybin.net/postfix_tls/)
-# ###
-# .if !empty(PKG_OPTIONS:Mtls)
-# .  include "../../security/openssl/buildlink3.mk"
-# .  if empty(PKG_OPTIONS:Minet6)
-# TLS_PATCH=		pfixtls-0.8.18-2.1.3-0.9.7d.tar.gz
-# PATCHFILES+=		${TLS_PATCH}
-# SITES_${TLS_PATCH}=	http://mirrors.loonybin.net/postfix_tls/	\
-# 			ftp://mirrors.loonybin.net/pub/postfix_tls/	\
-# 			ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/
-# USE_TOOLS+=		tar
-# PATCH_DIST_CAT.${TLS_PATCH}=	${TAR} -zxOf ${TLS_PATCH} "*/pfixtls.diff"
-# PATCH_DIST_STRIP.${TLS_PATCH}=	-p1
-# .  endif
-# CCARGS+=	-DHAS_SSL
-# AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
-# 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
-# 		-lssl -lcrypto
-# PLIST_SRC+=	${PKGDIR}/PLIST.tls
-# MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
-# .endif
+###
+### Support "hash" (Berkeley DB) map type.
+###
+.if empty(PKG_OPTIONS:Mbdb)
+PKG_OPTIONS+=	bdb		# "hash" map type is mandatory
+.endif
+.if !empty(PKG_OPTIONS:Mbdb)
+.  include "../../mk/bdb.buildlink3.mk"
+CCARGS+=	-DHAS_DB
+AUXLIBS+=	${BDB_LIBS}
+.endif
+
+###
+### STARTTLS support
+###
+.if !empty(PKG_OPTIONS:Mtls)
+.  include "../../security/openssl/buildlink3.mk"
+CCARGS+=	-DUSE_TLS
+AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
+		-lssl -lcrypto
+.endif
 
 ###
 ### Support "pcre" map type for regular expressions.
@@ -64,13 +51,6 @@ CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
-.  if ${OPSYS} != "Linux"
-.    include "../../databases/db4/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib				\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib	\
-		-ldb4
-.  endif
 .endif
 
 ###
@@ -101,8 +81,7 @@ AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 .endif
 
 ###
-### SASL support for SMTP authentication.  If neither SASLv1 or SASLv2 is
-### explicitly specified, then build with SASLv2.
+### SASL support for SMTP authentication.
 ###
 .if !empty(PKG_OPTIONS:Msasl)
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
@@ -113,16 +92,10 @@ CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
-PLIST_SRC+=	${PKGDIR}/PLIST.sasl
+PLIST_SUBST+=	SASL=
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
-.endif
-
-.if ${OPSYS} == "Linux"
-.  include "../../databases/db/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib				\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib	\
-		-ldb2
+.else
+PLIST_SUBST+=	SASL="@comment "
 .endif
