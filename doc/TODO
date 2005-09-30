@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3928 2005/09/30 12:18:30 wiz Exp $
+$NetBSD: TODO,v 1.3929 2005/09/30 12:22:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -708,7 +708,6 @@ Suggested package updates
 	o oo2c-2.1.7
 	o open2300-1.8
 	o openal-20050202
-	o opencdk-0.5.8
 	o opencobol-0.31
 	o openh323-1.17.1
 	o openmotif-2.2.3 [http://www.openmotif.org/]
