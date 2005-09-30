@@ -1,16 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 11:02:51 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/09/30 22:02:56 wiz Exp $
 
-SHA1 (dialog-0.6z.tar.gz) = 3c9483554bbb63bb8838e1f7b31f2600a33198ad
-RMD160 (dialog-0.6z.tar.gz) = 174a66402790388b3acdad1b49e624fefcf2dfb0
-Size (dialog-0.6z.tar.gz) = 50901 bytes
-SHA1 (patch-aa) = 39dddd7e772d2d0e796ba80eb9309db8b5c679f5
-SHA1 (patch-ab) = 39318c50019277ffa1cecdb33f16e16c11ad37af
-SHA1 (patch-ac) = 5862dd0163f2979b8071d8dbc6388c466a162042
-SHA1 (patch-ad) = 90a88a838923423cfe3bdbfc5d9de6d40bd10cee
-SHA1 (patch-ae) = c0aae5c99837a17919fea47734d90fb6006dd381
-SHA1 (patch-af) = 4b47fa64e73deca0bb69ad1bc83102e46eaa01fe
-SHA1 (patch-ag) = 55d7a46411d1e8775048b5d52e2451acba58e5bd
-SHA1 (patch-ah) = 33a9423930fde5b785c70c4755adf946f8ceecdd
-SHA1 (patch-ai) = fc2d0690cd07b019c031115eb92cad5f19b4904d
-SHA1 (patch-aj) = ffa5f39a31dbaca2e4c10ec3d2034721a531cffa
-SHA1 (patch-ak) = f720d9dd5f79fea389dfca662f7d2bc8dcbf95b6
+SHA1 (dialog-1.0-20050911.tgz) = 96c11fb4a98d5f9f074d8339fe2bad501e0f5786
+RMD160 (dialog-1.0-20050911.tgz) = 9fe5698fd2dda5cd2391302d39b081abf6f86ab8
+Size (dialog-1.0-20050911.tgz) = 307686 bytes
