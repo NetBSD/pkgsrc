@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.3 2005/09/30 02:25:05 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.4 2005/09/30 02:32:40 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -9,3 +9,5 @@ Pullup ticket 783 - requested by Martti Kuparinen
 build fix for xfce4-systemload-plugin
 Pullup ticket 785 - requested by Lubomir Sedlacik
 security update for clamav
+Pullup ticket 786 - requested by Lubomir Sedlacik
+security update for abiword and abiword-plugins
