@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3935 2005/09/30 13:27:22 wiz Exp $
+$NetBSD: TODO,v 1.3936 2005/09/30 13:44:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -605,7 +605,7 @@ Suggested package updates
 	o liblive-2005.03.23
 	o libmatheval-1.1.2
 	o libmpeg3-1.6
-	o librsvg2-2.11.1
+	o librsvg2-2.12.3
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
 	o libstatgrab-0.12
@@ -1009,7 +1009,7 @@ Suggested package updates
 	o stlport-4.6.2
 	o strace-4.5.8
 	o streamtuner-0.99.99
-	o stunnel-4.11
+	o stunnel-4.12
 	o subtitleripper-0.3.4
 	o sun-jdk15-5.0.5
 	o sun-jre15-5.0.5
