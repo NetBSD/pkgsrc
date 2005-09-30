@@ -1,29 +1,35 @@
-$NetBSD: patch-ai,v 1.9 2005/08/23 02:31:44 reed Exp $
+$NetBSD: patch-ai,v 1.10 2005/09/30 06:04:32 martti Exp $
 
---- makedefs.orig	2005-07-16 16:51:31.000000000 -0700
-+++ makedefs	2005-08-22 19:04:19.000000000 -0700
-@@ -116,6 +116,10 @@
+--- makedefs.orig	2005-07-17 02:51:31.000000000 +0300
++++ makedefs	2005-09-30 05:52:25.000000000 +0300
+@@ -124,7 +124,7 @@
  		;;
-   FreeBSD.5*)	SYSTYPE=FREEBSD5
+    NetBSD.1*)	SYSTYPE=NETBSD1
  		;;
-+  FreeBSD.6*)	SYSTYPE=FREEBSD6
-+		;;
-+  DragonFly.1*) SYSTYPE=DRAGONFLY1
-+		;;
-   OpenBSD.2*)	SYSTYPE=OPENBSD2
+-   NetBSD.2*)	SYSTYPE=NETBSD2
++   NetBSD.[23]*)SYSTYPE=NETBSD2
  		;;
-   OpenBSD.3*)	SYSTYPE=OPENBSD3
-@@ -126,6 +130,8 @@
- 		;;
-    NetBSD.2*)	SYSTYPE=NETBSD2
- 		;;
-+   NetBSD.3*)	SYSTYPE=NETBSD3
-+		;;
     BSD/OS.2*)	SYSTYPE=BSDI2
  		;;
-    BSD/OS.3*)	SYSTYPE=BSDI3
-@@ -217,22 +223,6 @@
- 		SYSLIBS="-ldb"
+@@ -176,13 +176,6 @@
+ 		esac
+ 		;;
+    ULTRIX.4*)	SYSTYPE=ULTRIX4
+-		if [ -f /usr/local/lib/libdb.a ]; then
+-		    SYSLIBS="$SYSLIBS -ldb"
+-		    CCARGS="$CCARGS -DHAS_DB"
+-		    if [ -d /usr/local/include/db ]; then
+-			CCARGS="$CCARGS -I/usr/local/include/db"
+-		    fi
+-		fi
+ 		for l in syslog resolv; do
+ 		    if [ -f /usr/local/lib/lib$l.a ]; then
+ 			SYSLIBS="$SYSLIBS -l$l"
+@@ -214,25 +207,8 @@
+ 		esac;;
+ 		# Tested with RedHat 3.03 on 20020729.
+     Linux.1*)	SYSTYPE=LINUX1
+-		SYSLIBS="-ldb"
  		;;
      Linux.2*)	SYSTYPE=LINUX2
 -		# Postfix no longer needs DB 1.85 compatibility
@@ -45,7 +51,7 @@ $NetBSD: patch-ai,v 1.9 2005/08/23 02:31:44 reed Exp $
  		# GDBM locks the DBM .pag file after open. This breaks postmap.
  		# if [ -f /usr/include/gdbm-ndbm.h ]
  		# then
-@@ -243,7 +233,6 @@
+@@ -243,7 +219,6 @@
  		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
  		#     GDBM_LIBS=gdbm
  		# fi
@@ -53,3 +59,29 @@ $NetBSD: patch-ai,v 1.9 2005/08/23 02:31:44 reed Exp $
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
+@@ -271,25 +246,13 @@
+ HP-UX.A.09.*)	SYSTYPE=HPUX9
+ 		SYSLIBS=-ldbm
+ 		CCARGS="$CCARGS -DMISSING_USLEEP"
+-		if [ -f /usr/lib/libdb.a ]; then
+-		    CCARGS="$CCARGS -DHAS_DB"
+-		    SYSLIBS="$SYSLIBS -ldb"
+-		fi
+ 		;;
+ HP-UX.B.10.*)	SYSTYPE=HPUX10
+ 		CCARGS="$CCARGS `nm /usr/lib/libc.a 2>/dev/null |
+ 		    (grep usleep >/dev/null || echo '-DMISSING_USLEEP')`"
+-		if [ -f /usr/lib/libdb.a ]; then
+-		    CCARGS="$CCARGS -DHAS_DB"
+-		    SYSLIBS=-ldb
+-		fi
+ 		;;
+ HP-UX.B.11.*)	SYSTYPE=HPUX11
+ 		SYSLIBS=-lnsl
+-		if [ -f /usr/lib/libdb.a ]; then
+-		    CCARGS="$CCARGS -DHAS_DB"
+-		    SYSLIBS="$SYSLIBS -ldb"
+-		fi
+ 		;;
+ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix543
+ 		RANLIB=echo
