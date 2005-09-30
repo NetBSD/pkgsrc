@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.22 2005/08/19 16:14:54 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2005/09/30 13:51:24 adam Exp $
 
-DISTNAME=	cairo-0.9.0
+DISTNAME=	cairo-1.0.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://cairographics.org/snapshots/
+MASTER_SITES=	http://cairographics.org/releases/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://cairographics.org/
 COMMENT=	Vector graphics library with cross-device output support
 
-USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	cairo.pc.in
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-atsui
 CONFIGURE_ARGS+=	--disable-xcb
+CONFIGURE_ARGS+=	--enable-glitz
+CONFIGURE_ARGS+=	--enable-pdf
+CONFIGURE_ARGS+=	--enable-ps
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
