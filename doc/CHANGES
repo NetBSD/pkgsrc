@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11256 2005/09/30 12:44:09 wiz Exp $
+$NetBSD: CHANGES,v 1.11257 2005/09/30 13:12:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/opencdk to 0.5.8 [wiz 2005-09-30]
 	Updated math/gsl to 1.7 [wiz 2005-09-30]
 	Updated inputmethod/uim to 0.4.9.1 [wiz 2005-09-30]
+	Updated security/gnutls to 1.2.7 [wiz 2005-09-30]
