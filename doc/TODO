@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3934 2005/09/30 13:17:33 wiz Exp $
+$NetBSD: TODO,v 1.3935 2005/09/30 13:27:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -605,7 +605,6 @@ Suggested package updates
 	o liblive-2005.03.23
 	o libmatheval-1.1.2
 	o libmpeg3-1.6
-	o libntlm-0.3.8
 	o librsvg2-2.11.1
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
