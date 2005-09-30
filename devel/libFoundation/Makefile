@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/04/24 02:48:06 rh Exp $
+# $NetBSD: Makefile,v 1.2 2005/09/30 23:52:58 rh Exp $
 #
 
 DISTNAME=	libFoundation-1.0.72-r107
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/libfoundation
 GNU_CONFIGURE=	yes
 MAKE_ENV+=	ADDITIONAL_OBJCFLAGS="-I${WRKSRC} -I."
 MAKE_ENV+=	FOUNDATION_LIB="fd"
+MAKE_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
 
 PLIST_SUBST+=	GNUSTEP_HOST_CPU=${GNUSTEP_HOST_CPU}
 
@@ -29,9 +30,10 @@ pre-configure:
 	${LN} -s linux.h ${WRKSRC}/config/${MACHINE_GNU_ARCH}/${LIBF_HOST_OS}.h
 
 post-configure:
+	-${MKDIR} ${WRKSRC}/Foundation/${GNUSTEP_HOST_CPU}
 	[ -e ${WRKSRC}/Foundation/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS} ] || \
 	  ${LN} -s							\
-	    ${WRKSRC}/Foundation/${GNUSTEP_HOST_CPU}/${LIBF_HOST_OS}	\
+	    ${WRKSRC}/Foundation/${LIBF_HOST_OS}	\
 	    ${WRKSRC}/Foundation/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
 
 .include "../../mk/compiler.mk"
