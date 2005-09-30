@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3936 2005/09/30 13:44:40 wiz Exp $
+$NetBSD: TODO,v 1.3937 2005/09/30 13:51:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -357,7 +357,6 @@ Suggested package updates
 	o bins-1.1.29
 	o binutils-2.16.1
 	o bioperl-1.5.0
-	o bison-2.1
 	o blackbox-0.70
 	o boaconstructor-0.3.1
 	o bochs-2.2.1
