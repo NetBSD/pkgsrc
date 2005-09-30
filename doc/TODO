@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3926 2005/09/30 10:28:37 wiz Exp $
+$NetBSD: TODO,v 1.3927 2005/09/30 11:55:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -613,7 +613,6 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
 	o libstatgrab-0.12
-	o libtasn1-0.2.17
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.20
 	o libtorrent-0.7.3
