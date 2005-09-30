@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11266 2005/09/30 19:58:52 wiz Exp $
+$NetBSD: CHANGES,v 1.11267 2005/09/30 22:03:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4196,3 +4196,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/bittorrent-gui to 4.0.4 [adam 2005-09-30]
 	Updated textproc/docbook-xml to 4.4 [wiz 2005-09-30]
 	Updated textproc/libxml2 to 2.6.22 [wiz 2005-09-30]
+	Updated misc/dialog to 1.0.20050911 [wiz 2005-09-30]
