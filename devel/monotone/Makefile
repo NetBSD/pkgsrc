@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/08/12 20:59:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2005/09/30 13:18:24 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.22
-PKGREVISION=	1
+DISTNAME=	monotone-0.23
 CATEGORIES=	devel
 MASTER_SITES=	http://www.venge.net/monotone/downloads/
 
@@ -17,6 +16,7 @@ UNLIMIT_RESOURCES+=	datasize
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_MAKEINFO=		yes
+USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	BOOST_SUFFIX=-mt
 
