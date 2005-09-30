@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/11 15:25:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/09/30 13:51:24 adam Exp $
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
 include/cairo/cairo-glitz.h
@@ -18,18 +18,30 @@ share/doc/cairo/bindings-patterns.html
 share/doc/cairo/bindings-return-values.html
 share/doc/cairo/bindings-streams.html
 share/doc/cairo/bindings-surfaces.html
-share/doc/cairo/cairo-Fonts.html
+share/doc/cairo/Drawing.html
+share/doc/cairo/Fonts.html
+share/doc/cairo/Support.html
+share/doc/cairo/Surfaces.html
+share/doc/cairo/cairo-Error-handling.html
 share/doc/cairo/cairo-FreeType-Fonts.html
-share/doc/cairo/cairo-Glitz-backend.html
-share/doc/cairo/cairo-Microsoft-Windows-Backend.html
-share/doc/cairo/cairo-PDF-Backend.html
-share/doc/cairo/cairo-PNG-Backend.html
-share/doc/cairo/cairo-PS-Backend.html
-share/doc/cairo/cairo-Quartz-Backend.html
-share/doc/cairo/cairo-XCB-Backend.html
-share/doc/cairo/cairo-XLib-Backend.html
+share/doc/cairo/cairo-Font-Options.html
+share/doc/cairo/cairo-Glitz-Surfaces.html
+share/doc/cairo/cairo-Image-Surfaces.html
+share/doc/cairo/cairo-PDF-Surfaces.html
+share/doc/cairo/cairo-PNG-Support.html
+share/doc/cairo/cairo-Paths.html
+share/doc/cairo/cairo-Patterns.html
+share/doc/cairo/cairo-PostScript-Surfaces.html
+share/doc/cairo/cairo-Scaled-Fonts.html
+share/doc/cairo/cairo-Text.html
+share/doc/cairo/cairo-Transformations.html
+share/doc/cairo/cairo-Types.html
+share/doc/cairo/cairo-Version-Information.html
+share/doc/cairo/cairo-Win32-Fonts.html
+share/doc/cairo/cairo-Win32-Surfaces.html
+share/doc/cairo/cairo-XLib-Surfaces.html
+share/doc/cairo/cairo-cairo-font-face-t.html
 share/doc/cairo/cairo-cairo-matrix-t.html
-share/doc/cairo/cairo-cairo-pattern-t.html
 share/doc/cairo/cairo-cairo-surface-t.html
 share/doc/cairo/cairo-cairo-t.html
 share/doc/cairo/cairo.devhelp
