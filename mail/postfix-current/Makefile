@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.44 2005/08/23 11:48:49 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2005/09/30 06:04:32 martti Exp $
 
-DISTNAME=	postfix-2.3-20050726
+DISTNAME=	postfix-2.3-20050922
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/ \
 		http://public.planetmirror.com.au/pub/postfix/experimental/
-DIST_SUBDIR=	postfix
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
+
+DIST_SUBDIR=	postfix
 
 CONFLICTS+=	sendmail-[0-9]* fastforward>=0.51nb2
 
@@ -105,6 +106,8 @@ MAKE_DIRS+=		${SASLLIBDIR}
 CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
 
+MAKE_ENV+=		DEBUG= # empty
+
 do-configure:
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles	\
@@ -117,10 +120,6 @@ post-build:
 	${ECHO} "pwcheck_method: ${PWCHECK_METHOD}" > ${WRKDIR}/smtpd.conf
 .endif
 
-POSTFIX_EXAMPLE_FILES=	LICENSE access aliases canonical header_checks	\
-			main.cf main.cf.default makedefs.out master.cf	\
-			postfix-files relocated transport virtual
-
 do-install:
 	${INSTALL_DATA_DIR} ${LIBEXECDIR}
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
@@ -129,9 +128,6 @@ do-install:
 .if !empty(PKG_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${EXAMPLEDIR}
 .endif
-	@for i in ${POSTFIX_EXAMPLE_FILES}; do				\
-		${INSTALL_DATA} ${WRKSRC}/conf/$$i ${EXAMPLEDIR}/$$i;	\
-	done
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${EXAMPLEDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLEDIR}/mailer.conf
