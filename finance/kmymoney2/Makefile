@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/05/22 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/09/30 15:02:55 wiz Exp $
 
 DISTNAME=	kmymoney2-0.6.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jnr@cwru.edu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://kmymoney2.sourceforge.net/
 COMMENT=	Personal finance manager for kde3
 
