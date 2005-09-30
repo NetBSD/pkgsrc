@@ -1,0 +1,127 @@
+$NetBSD: patch-ac,v 1.1 2005/09/30 13:11:34 wiz Exp $
+
+--- doc/examples/Makefile.in.orig	2005-09-08 15:41:05.000000000 +0200
++++ doc/examples/Makefile.in
+@@ -95,15 +95,7 @@ am__configure_deps = $(am__aclocal_m4_de
+ mkinstalldirs = $(install_sh) -d
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+-am__vpath_adj = case $$p in \
+-    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+-    *) f=$$p;; \
+-  esac;
+-am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+-am__installdirs = "$(DESTDIR)$(libdir)"
+-libLTLIBRARIES_INSTALL = $(INSTALL)
+-LTLIBRARIES = $(lib_LTLIBRARIES)
++LTLIBRARIES = $(noinst_LTLIBRARIES)
+ libexamples_la_LIBADD =
+ am_libexamples_la_OBJECTS = ex-alert.lo ex-pkcs12.lo ex-rfc2818.lo \
+ 	ex-session-info.lo ex-x509-info.lo ex-verify.lo tcp.lo
+@@ -349,7 +341,7 @@ LDADD = libexamples.la \
+ 	../../lib/libgnutls.la	\
+ 	../../libextra/libgnutls-extra.la
+ 
+-lib_LTLIBRARIES = libexamples.la
++noinst_LTLIBRARIES = libexamples.la
+ libexamples_la_SOURCES = ex-alert.c ex-pkcs12.c ex-rfc2818.c	\
+ 	ex-session-info.c ex-x509-info.c ex-verify.c tcp.c
+ 
+@@ -386,35 +378,17 @@ $(top_srcdir)/configure:  $(am__configur
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+-install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+-	@$(NORMAL_INSTALL)
+-	test -z "$(libdir)" || $(mkdir_p) "$(DESTDIR)$(libdir)"
+-	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+-	  if test -f $$p; then \
+-	    f=$(am__strip_dir) \
+-	    echo " $(LIBTOOL) --mode=install $(libLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) '$$p' '$(DESTDIR)$(libdir)/$$f'"; \
+-	    $(LIBTOOL) --mode=install $(libLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) "$$p" "$(DESTDIR)$(libdir)/$$f"; \
+-	  else :; fi; \
+-	done
+-
+-uninstall-libLTLIBRARIES:
+-	@$(NORMAL_UNINSTALL)
+-	@set -x; list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+-	  p=$(am__strip_dir) \
+-	  echo " $(LIBTOOL) --mode=uninstall rm -f '$(DESTDIR)$(libdir)/$$p'"; \
+-	  $(LIBTOOL) --mode=uninstall rm -f "$(DESTDIR)$(libdir)/$$p"; \
+-	done
+ 
+-clean-libLTLIBRARIES:
+-	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+-	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
++clean-noinstLTLIBRARIES:
++	-test -z "$(noinst_LTLIBRARIES)" || rm -f $(noinst_LTLIBRARIES)
++	@list='$(noinst_LTLIBRARIES)'; for p in $$list; do \
+ 	  dir="`echo $$p | sed -e 's|/[^/]*$$||'`"; \
+ 	  test "$$dir" != "$$p" || dir=.; \
+ 	  echo "rm -f \"$${dir}/so_locations\""; \
+ 	  rm -f "$${dir}/so_locations"; \
+ 	done
+ libexamples.la: $(libexamples_la_OBJECTS) $(libexamples_la_DEPENDENCIES) 
+-	$(LINK) -rpath $(libdir) $(libexamples_la_LDFLAGS) $(libexamples_la_OBJECTS) $(libexamples_la_LIBADD) $(LIBS)
++	$(LINK)  $(libexamples_la_LDFLAGS) $(libexamples_la_OBJECTS) $(libexamples_la_LIBADD) $(LIBS)
+ 
+ clean-noinstPROGRAMS:
+ 	@list='$(noinst_PROGRAMS)'; for p in $$list; do \
+@@ -591,9 +565,6 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(LTLIBRARIES) $(PROGRAMS)
+ installdirs:
+-	for dir in "$(DESTDIR)$(libdir)"; do \
+-	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+-	done
+ install: install-am
+ install-exec: install-exec-am
+ install-data: install-data-am
+@@ -620,7 +591,7 @@ maintainer-clean-generic:
+ 	@echo "it deletes files that may require special tools to rebuild."
+ clean: clean-am
+ 
+-clean-am: clean-generic clean-libLTLIBRARIES clean-libtool \
++clean-am: clean-generic clean-libtool clean-noinstLTLIBRARIES \
+ 	clean-noinstPROGRAMS mostlyclean-am
+ 
+ distclean: distclean-am
+@@ -641,7 +612,7 @@ info-am:
+ 
+ install-data-am:
+ 
+-install-exec-am: install-libLTLIBRARIES
++install-exec-am:
+ 
+ install-info: install-info-am
+ 
+@@ -667,20 +638,19 @@ ps: ps-am
+ 
+ ps-am:
+ 
+-uninstall-am: uninstall-info-am uninstall-libLTLIBRARIES
++uninstall-am: uninstall-info-am
+ 
+ .PHONY: CTAGS GTAGS all all-am check check-am clean clean-generic \
+-	clean-libLTLIBRARIES clean-libtool clean-noinstPROGRAMS ctags \
+-	distclean distclean-compile distclean-generic \
++	clean-libtool clean-noinstLTLIBRARIES clean-noinstPROGRAMS \
++	ctags distclean distclean-compile distclean-generic \
+ 	distclean-libtool distclean-tags distdir dvi dvi-am html \
+ 	html-am info info-am install install-am install-data \
+ 	install-data-am install-exec install-exec-am install-info \
+-	install-info-am install-libLTLIBRARIES install-man \
+-	install-strip installcheck installcheck-am installdirs \
+-	maintainer-clean maintainer-clean-generic mostlyclean \
+-	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
+-	pdf pdf-am ps ps-am tags uninstall uninstall-am \
+-	uninstall-info-am uninstall-libLTLIBRARIES
++	install-info-am install-man install-strip installcheck \
++	installcheck-am installdirs maintainer-clean \
++	maintainer-clean-generic mostlyclean mostlyclean-compile \
++	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
++	tags uninstall uninstall-am uninstall-info-am
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

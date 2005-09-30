@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2005/09/30 13:11:34 wiz Exp $
+
+--- doc/examples/Makefile.am.orig	2005-08-24 00:51:41.000000000 +0200
++++ doc/examples/Makefile.am
+@@ -28,7 +28,7 @@ noinst_PROGRAMS = ex-cert-select ex-clie
+ 	ex-client-resume ex-client-srp ex-crq ex-serv1 ex-serv-anon	\
+ 	ex-serv-export ex-serv-pgp ex-serv-srp
+ 
+-lib_LTLIBRARIES = libexamples.la
++noinst_LTLIBRARIES = libexamples.la
+ 
+ libexamples_la_SOURCES = ex-alert.c ex-pkcs12.c ex-rfc2818.c	\
+ 	ex-session-info.c ex-x509-info.c ex-verify.c tcp.c
