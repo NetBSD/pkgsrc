@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.24 2005/08/06 10:57:25 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/09/30 16:16:49 is Exp $
 
 DISTNAME=	links-2.1pre18
+DIST_SUBDIR=	links
 CATEGORIES=	www
 MASTER_SITES= \
 	http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/download/ \
