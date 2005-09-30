@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11268 2005/09/30 23:12:40 rh Exp $
+$NetBSD: CHANGES,v 1.11269 2005/09/30 23:14:21 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4198,3 +4198,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/libxml2 to 2.6.22 [wiz 2005-09-30]
 	Updated misc/dialog to 1.0.20050911 [wiz 2005-09-30]
 	Updated devel/gnustep-make to 1.11.1 [rh 2005-09-30]
+	Updated devel/gnustep-base to 1.11.1 [rh 2005-09-30]
