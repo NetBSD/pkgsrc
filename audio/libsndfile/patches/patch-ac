@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2004/11/19 12:15:14 adam Exp $
+$NetBSD: patch-ac,v 1.7 2005/09/30 13:26:02 adam Exp $
 
---- examples/sndfile-play.c.orig	2004-11-14 19:57:17.000000000 +0000
+--- examples/sndfile-play.c.orig	2005-09-04 00:11:38.000000000 +0000
 +++ examples/sndfile-play.c
 @@ -34,16 +34,21 @@
  	#include <sys/time.h>
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.6 2004/11/19 12:15:14 adam Exp $
  	#include <fcntl.h>
  	#include <sys/ioctl.h>
  	#include <sys/audioio.h>
-@@ -324,7 +329,7 @@ alsa_write_float (snd_pcm_t *alsa_dev, f
+@@ -339,7 +344,7 @@ alsa_write_float (snd_pcm_t *alsa_dev, f
  **	Linux/OSS functions for playing a sound.
  */
  
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.6 2004/11/19 12:15:14 adam Exp $
  
  static	int	linux_open_dsp_device (int channels, int srate) ;
  
-@@ -387,7 +392,7 @@ static int
+@@ -408,7 +413,7 @@ static int
  linux_open_dsp_device (int channels, int srate)
  {	int fd, stereo, temp, error ;
  
@@ -44,7 +44,7 @@ $NetBSD: patch-ac,v 1.6 2004/11/19 12:15:14 adam Exp $
  		(fd = open ("/dev/sound/dsp", O_WRONLY, 0)) == -1)
  	{	perror ("linux_open_dsp_device : open ") ;
  		exit (1) ;
-@@ -798,7 +803,8 @@ win32_play (int argc, char *argv [])
+@@ -819,7 +824,8 @@ win32_play (int argc, char *argv [])
  **	Solaris.
  */
  
@@ -54,7 +54,7 @@ $NetBSD: patch-ac,v 1.6 2004/11/19 12:15:14 adam Exp $
  
  static void
  solaris_play (int argc, char *argv [])
-@@ -905,7 +911,7 @@ main (int argc, char *argv [])
+@@ -926,7 +932,7 @@ main (int argc, char *argv [])
  		return 1 ;
  		} ;
  
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.6 2004/11/19 12:15:14 adam Exp $
  	#if HAVE_ALSA_ASOUNDLIB_H
  		if (access ("/proc/asound/cards", R_OK) == 0)
  			alsa_play (argc, argv) ;
-@@ -914,7 +920,8 @@ main (int argc, char *argv [])
+@@ -935,7 +941,8 @@ main (int argc, char *argv [])
  		linux_play (argc, argv) ;
  #elif (defined (__MACH__) && defined (__APPLE__))
  	macosx_play (argc, argv) ;
