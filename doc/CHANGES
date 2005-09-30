@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11264 2005/09/30 14:07:10 adam Exp $
+$NetBSD: CHANGES,v 1.11265 2005/09/30 15:25:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4194,3 +4194,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/cairo to 1.0.0 [adam 2005-09-30]
 	Updated net/bittorrent to 4.0.4 [adam 2005-09-30]
 	Updated net/bittorrent-gui to 4.0.4 [adam 2005-09-30]
+	Updated textproc/docbook-xml to 4.4 [wiz 2005-09-30]
