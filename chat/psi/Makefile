@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2005/09/14 14:18:16 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.27 2005/10/01 22:02:00 jdolecek Exp $
 
 PSI_VERSION=	0.9.3
 DISTNAME=	psi-${PSI_VERSION}
-PKGREVISION=	# empty
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -73,4 +73,5 @@ BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/qca/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
