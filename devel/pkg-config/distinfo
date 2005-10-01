@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/21 16:22:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/10/01 12:52:16 jmmv Exp $
 
 SHA1 (pkg-config-0.19.tar.gz) = b09fa43dcc44fe0db8df1c4994a8ff9eab371666
 RMD160 (pkg-config-0.19.tar.gz) = 30355004c09fe947dc3cf8f1159f068924d0d7a2
 Size (pkg-config-0.19.tar.gz) = 968790 bytes
 SHA1 (patch-aa) = b07ff0f2a8caaef6d91673c1883f0de9d4d2ae7f
+SHA1 (patch-ab) = 4554bbb56ffaa857051e44b31897f0b254650803
