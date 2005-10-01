@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2005/09/20 03:30:31 gehenna Exp $
+# $NetBSD: Makefile,v 1.77 2005/10/01 08:56:46 agc Exp $
 #
 
 DISTNAME=	cvsync-0.24.19
@@ -27,7 +27,7 @@ CONF_FILES+=	${EGDIR}/cvsync.conf ${PKG_SYSCONFDIR}/cvsync.conf
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cvsync
 PKG_SUPPORTED_OPTIONS=	libgcrypt mhash openssl
-.ifdef ${OPSYS} == "AIX" || ${OPSYS} == "BSDOS" || ${OPSYS} == "Darwin" || \
+.if ${OPSYS} == "AIX" || ${OPSYS} == "BSDOS" || ${OPSYS} == "Darwin" || \
 	${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS=	openssl
 .else
