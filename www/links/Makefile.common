@@ -1,11 +1,9 @@
-# $NetBSD: Makefile.common,v 1.25 2005/09/30 16:16:49 is Exp $
+# $NetBSD: Makefile.common,v 1.26 2005/10/01 18:54:10 is Exp $
 
 DISTNAME=	links-2.1pre18
 DIST_SUBDIR=	links
 CATEGORIES=	www
-MASTER_SITES= \
-	http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/download/ \
-	ftp://atrey.karlin.mff.cuni.cz/pub/local/clock/links/
+MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/local/clock/links/
 EXTRACT_SUFX=  .tar.bz2
 
 MAINTAINER=	jschauma@NetBSD.org
