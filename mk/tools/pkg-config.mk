@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config.mk,v 1.2 2005/08/16 13:32:00 jlam Exp $
+# $NetBSD: pkg-config.mk,v 1.3 2005/10/01 12:55:20 jmmv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,11 +40,23 @@
 # pkg-config wrapper script.
 #
 _PKG_CONFIG_LIBDIR?=	${BUILDLINK_DIR}/lib/pkgconfig
+_PKG_CONFIG_LOG?=	${WRKDIR}/.pkg-config.log
 
 TOOLS_SCRIPT.pkg-config=	\
 	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q} ${TOOLS_SCRIPT_DFLT.pkg-config}
 
 CONFIGURE_ENV+=	PKG_CONFIG=${TOOLS_CMD.pkg-config:Q}
 CONFIGURE_ENV+=	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q}
+CONFIGURE_ENV+=	PKG_CONFIG_LOG=${_PKG_CONFIG_LOG}
 MAKE_ENV+=	PKG_CONFIG=${TOOLS_CMD.pkg-config:Q}
 MAKE_ENV+=	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q}
+MAKE_ENV+=	PKG_CONFIG_LOG=${_PKG_CONFIG_LOG}
+
+.if !empty(PKG_DEVELOPER:M[Yy][Ee][Ss])
+post-build: pkgconfig-post-build
+
+pkgconfig-post-build:
+	@if ${TEST} -f ${_PKG_CONFIG_LOG}; then \
+		${ECHO} "*** Please use pkgtools/verifypc to sanity check dependencies."; \
+	fi
+.endif
