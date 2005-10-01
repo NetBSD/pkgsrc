@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/01 13:29:52 smb Exp $
+bin/gtkpod
+share/gtkpod/gtkpod.glade
+share/gtkpod/gtkpod.gladep
+share/gtkpod/pixmaps/gtkpod-add-dirs.png
+share/gtkpod/pixmaps/gtkpod-add-files.png
+share/gtkpod/pixmaps/gtkpod-add-playlists.png
+share/gtkpod/pixmaps/gtkpod-icon-32.png
+share/gtkpod/pixmaps/gtkpod-icon-32x32-2.png
+share/gtkpod/pixmaps/gtkpod-icon-32x32.png
+share/gtkpod/pixmaps/gtkpod-icon-48.png
+share/gtkpod/pixmaps/gtkpod-icon-48x48.png
+share/gtkpod/pixmaps/gtkpod-icon-64x64.png
+share/gtkpod/pixmaps/gtkpod-logo.png
+share/gtkpod/pixmaps/gtkpod-new-playlist.png
+share/gtkpod/pixmaps/gtkpod-read.png
+share/gtkpod/pixmaps/gtkpod-sync.png
+share/gtkpod/pixmaps/gtkpod.glade
+share/gtkpod/pixmaps/gtkpod.gladep
+share/gtkpod/scripts/mab2vcard
+share/gtkpod/scripts/sync-abook.sh
+share/gtkpod/scripts/sync-evocalendar.sh
+share/gtkpod/scripts/sync-evolution.sh
+share/gtkpod/scripts/sync-kaddressbook.sh
+share/gtkpod/scripts/sync-korganizer.sh
+share/gtkpod/scripts/sync-notes.sh
+share/gtkpod/scripts/sync-thunderbird.sh
+share/gtkpod/scripts/sync-webcalendar.sh
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkpod.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtkpod.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gtkpod.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtkpod.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtkpod.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtkpod.mo
+@dirrm share/gtkpod/scripts
+@dirrm share/gtkpod/pixmaps
+@dirrm share/gtkpod
