@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2005/09/16 18:14:49 bouyer Exp $
+# $NetBSD: Makefile,v 1.21 2005/10/01 02:10:10 xtraeme Exp $
 #
 
 DISTNAME=		xen-2.0.7-src
 PKGNAME=		xentools20-2.0.7
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=		.tgz
@@ -18,6 +18,8 @@ USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR=	xen
 
 ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
+
+CONFLICTS+=		libxen-[0-9]*
 
 WRKSRC=			${WRKDIR}/xen-2.0/tools
 
@@ -74,10 +76,11 @@ PROCPATH=		/proc
 RCD_SCRIPTS=		xend
 FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN}
 FILES_SUBST+=		PROCPATH=${PROCPATH}
+FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 INSTALLATION_DIRS=	share/examples/xen
 
-XEND_SCRIPTS=		network vif-bridge block-enbd block-file	\
+XEND_SCRIPTS=		network block-enbd vif-bridge block-file \
 			xmexample1 xmexample2 xmexample3
 
 CONF_FILES=		${EGDIR}/xend-config.sxp \
@@ -95,9 +98,20 @@ pre-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/xend-config.sxp \
 		${EGDIR}/xend-config.sxp
-.for s in ${XEND_SCRIPTS}
-	${INSTALL_DATA} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
-.endfor
+.if ${OPSYS} == "Linux"
+.  for s in ${XEND_SCRIPTS}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
+.  endfor
+.else
+.  for f in vif-bridge block-file
+	${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
+		${FILESDIR}/${f}-nbsd > ${WRKSRC}/${f}-nbsd
+	${INSTALL_SCRIPT} ${WRKSRC}/${f}-nbsd ${EGDIR}/${f}
+.  endfor
+.  for f in ${XEND_SCRIPTS:S/vif-bridge//:S/block-file//}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/${f} ${EGDIR}/${f}
+.  endfor
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

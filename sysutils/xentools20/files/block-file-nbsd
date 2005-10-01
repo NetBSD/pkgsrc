@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# $NetBSD: block-file-nbsd,v 1.1 2005/10/01 02:10:10 xtraeme Exp $
+#
+# Usage: block_file [bind file|unbind node]
+#
+# The file argument to the bind command is the file we are to bind to a
+# vnd device.  We print the path to the vnd device node to stdout.
+#
+# The node argument to unbind is the name of the device node we are to
+# unbind.
+
+case $1 in
+	bind)
+		for dev in /dev/vnd?d; do
+			if /usr/sbin/vnconfig $dev $2; then
+				echo $dev
+				exit 0
+			fi
+		done
+		exit 1
+	;;
+
+	unbind)
+		/usr/sbin/vnconfig -u $2
+		exit 0
+	;;
+
+	*)
+		echo 'Unknown command: ' $1
+		echo 'Valid commands are: bind, unbind'
+		exit 1
+	;;
+esac
