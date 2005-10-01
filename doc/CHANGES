@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11276 2005/10/01 05:59:16 minskim Exp $
+$NetBSD: CHANGES,v 1.11277 2005/10/01 10:56:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4207,3 +4207,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/mozilla to 1.7.12 [taya 2005-10-01]
 	Updated www/mozilla-gtk2 to 1.7.12 [taya 2005-10-01]
 	Added editors/heme version 0.4 [minskim 2005-10-01]
+	Updated archivers/unalz to 0.50 [minskim 2005-10-01]
