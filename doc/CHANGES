@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11271 2005/09/30 23:19:04 rh Exp $
+$NetBSD: CHANGES,v 1.11272 2005/10/01 00:15:10 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4201,3 +4201,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/gnustep-base to 1.11.1 [rh 2005-09-30]
 	Updated x11/gnustep-gui to 0.10.1 [rh 2005-09-30]
 	Updated x11/gnustep-back to 0.10.1 [rh 2005-09-30]
+	Updated www/sope to 4.5.4nb1 [rh 2005-10-01]
