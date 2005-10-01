@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: vif-bridge-nbsd,v 1.1 2005/10/01 02:10:10 xtraeme Exp $
+# $NetBSD: vif-bridge-nbsd,v 1.2 2005/10/01 02:38:51 xtraeme Exp $
 #
 #============================================================================
 # @PKG_SYSCONFDIR@/vif-bridge
@@ -73,5 +73,5 @@ if [ "${bridge}" = "null" ] ; then
 fi
 
 # Add/remove vif to/from bridge.
-/sbin/brconfig ${bridge} ${brcmd} ${vif}
-/sbin/ifconfig ${vif} $OP
+/sbin/brconfig ${bridge} ${brcmd} x${vif}
+/sbin/ifconfig x${vif} $OP
