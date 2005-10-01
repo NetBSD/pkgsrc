@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/07/25 21:08:29 kristerw Exp $
+# $NetBSD: Makefile,v 1.64 2005/10/01 11:40:55 adam Exp $
 
 DISTNAME=	koffice-1.4.1
 CATEGORIES=	misc kde
@@ -16,9 +16,9 @@ CONFLICTS+=	koffice3-[0-9]*
 # to unpack krita/plugins/convolutionfilters properly on NetBSD 1.6
 EXTRACT_USING=		gtar
 
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+GNU_CONFIGURE=		yes
 
 GCC_REQD+=		2.95.3
 
@@ -40,6 +40,21 @@ REPLACE_PERL+=		kpresenter/kprconverter.pl
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
+
+# a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
+SUBST_CLASSES+=		hints
+SUBST_STAGE.hints=	post-patch
+SUBST_MESSAGE.hints=	"Fix includehints."
+SUBST_FILES.hints=	krita/ui/widgets/kis_wdg_autogradient.ui \
+			krita/ui/kis_previewwidgetbase.ui \
+			krita/ui/wdgnewimage.ui \
+			krita/ui/wdgcolorsettings.ui \
+			krita/ui/wdglayerbox.ui \
+			krita/plugins/screenshot/ksnapshotwidget.ui \
+			krita/plugins/convolutionfilters/kis_custom_convolution_filter_configuration_base_widget.ui \
+			krita/plugins/colorspaceconversion/wdgconvertcolorspace.ui \
+			kpresenter/imageEffectBase.ui
+SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
 .include "options.mk"
 
