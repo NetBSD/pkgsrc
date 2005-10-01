@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11279 2005/10/01 12:58:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.11280 2005/10/01 13:56:43 smb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4211,3 +4211,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated inputmethod/anthy-elisp to 6700bnb1 [taya 2005-10-01]
 	Updated devel/pkg-config to 0.19nb1 [jmmv 2005-10-01]
 	Added pkgtools/verifypc version 1.0 [jmmv 2005-10-01]
+	Added audio/gtkpod version 0.94.0 [smb 2005-10-01]
