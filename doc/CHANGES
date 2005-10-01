@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11275 2005/10/01 04:43:16 taya Exp $
+$NetBSD: CHANGES,v 1.11276 2005/10/01 05:59:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4206,3 +4206,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libFoundation to 1.0.72.107nb1 [rh 2005-10-01]
 	Updated www/mozilla to 1.7.12 [taya 2005-10-01]
 	Updated www/mozilla-gtk2 to 1.7.12 [taya 2005-10-01]
+	Added editors/heme version 0.4 [minskim 2005-10-01]
