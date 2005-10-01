@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11283 2005/10/01 18:54:05 kristerw Exp $
+$NetBSD: CHANGES,v 1.11284 2005/10/01 20:46:22 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4215,3 +4215,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/ezxml to version 0.8.5 [recht 2005-10-01]
 	Added sysutils/fs-kit version 0.4 [agc 2005-10-01]
 	Updated editors/hnb to 1.9.17nb1 [kristerw 2005-10-01]
+	Updated net/ttt to 1.8nb1 [kristerw 2005-10-01]
