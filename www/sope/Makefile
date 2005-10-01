@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/08/23 05:06:04 rh Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/01 00:14:16 rh Exp $
 #
 
 DISTNAME=		sope-4.5.4-nevermind-r878
 PKGNAME=		sope-4.5.4
+PKGREVISION=		1
 CATEGORIES=		www gnustep
 MASTER_SITES=		ftp://ftp.opengroupware.org/nightly/sources/releases/ \
 			http://download.opengroupware.org/nightly/sources/releases/
@@ -18,6 +19,7 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gnustep
 CONFIGURE_ARGS+=	--enable-strip
+CONFIGURE_ARGS+=	--disable-debug
 CONFIG_SHELL=		${PREFIX}/bin/bash
 MAKE_ENV+=		ADDITIONAL_OBJCFLAGS="-Wno-import"
 
