@@ -1,0 +1,65 @@
+$NetBSD: patch-ab,v 1.1 2005/10/01 12:52:16 jmmv Exp $
+
+Log all pkg-config calls to a file.  Used by pkgtools/verifypc.
+
+--- main.c.orig	2005-05-21 11:14:47.000000000 +0200
++++ main.c
+@@ -458,12 +458,27 @@ main (int argc, char **argv)
+   {
+     GSList *reqs;
+     GSList *iter;
++    char *log_name;
++    FILE *log;
+ 
+     reqs = parse_module_list (NULL, str->str,
+                               "(command line arguments)");
+ 
+     iter = reqs;
+ 
++    log_name = getenv ("PKG_CONFIG_LOG");
++    if (log_name != NULL)
++      {
++        log = fopen (getenv ("PKG_CONFIG_LOG"), "a");
++        if (log == NULL)
++          {
++            fprintf (stderr, "Cannot open log file: %s\n", log_name);
++            exit (1);
++          }
++      }
++    else
++      log = NULL;
++
+     while (iter != NULL)
+       {
+         Package *req;
+@@ -471,6 +486,18 @@ main (int argc, char **argv)
+ 
+         req = get_package (ver->name);
+ 
++        if (log != NULL)
++          {
++            if (req == NULL)
++              fprintf (log, "%s NOT-FOUND", ver->name);
++            else
++              fprintf (log, "%s %s %s", ver->name,
++                       comparison_to_str (ver->comparison),
++                       ver->version);
++
++            fprintf (log, "\n");
++          }
++
+         if (req == NULL)
+           {
+             verbose_error ("No package '%s' found\n", ver->name);
+@@ -497,6 +524,11 @@ main (int argc, char **argv)
+ 
+         iter = g_slist_next (iter);
+       }
++
++    if (log != NULL)
++      {
++        fclose (log);
++      }
+   }
+ 
+   g_string_free (str, TRUE);
