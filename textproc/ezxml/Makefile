@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/08/29 20:39:37 reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/01 18:19:58 recht Exp $
 
-DISTNAME=	ezxml-0.8.4
+DISTNAME=	ezxml-0.8.5
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ezxml/} \
 		http://www.yazzy.org/pkgsrc/ezxml/
