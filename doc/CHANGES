@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11280 2005/10/01 13:56:43 smb Exp $
+$NetBSD: CHANGES,v 1.11281 2005/10/01 18:25:32 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4212,3 +4212,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/pkg-config to 0.19nb1 [jmmv 2005-10-01]
 	Added pkgtools/verifypc version 1.0 [jmmv 2005-10-01]
 	Added audio/gtkpod version 0.94.0 [smb 2005-10-01]
+	Updated textproc/ezxml to version 0.8.5 [recht 2005-10-01]
