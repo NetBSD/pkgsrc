@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/10/01 13:29:52 smb Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.1 2005/10/01 15:43:51 smb Exp $
 
 If you are mounting your iPod via USB, you probably need at least version
 1.130 of usb_subr.c.
