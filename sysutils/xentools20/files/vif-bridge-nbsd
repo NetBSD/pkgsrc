@@ -1,0 +1,77 @@
+#!/bin/sh
+#
+# $NetBSD: vif-bridge-nbsd,v 1.1 2005/10/01 02:10:10 xtraeme Exp $
+#
+#============================================================================
+# @PKG_SYSCONFDIR@/vif-bridge
+#
+# Script for configuring a vif in bridged mode.
+# Xend calls a vif script when bringing a vif up or down.
+# This script is the default - but it can be configured for each vif.
+#
+# Example invocation:
+#
+# vif-bridge up domain=VM1 vif=xvif1.0 bridge=bridge0 ip="128.232.38.45/28 10.10.10.55/24"
+#
+#
+# Usage:
+# vif-bridge (up|down) {VAR=VAL}*
+#
+# Vars:
+#
+# domain  name of the domain the interface is on (required).
+# vif     vif interface name (required).
+# mac     vif MAC address (required).
+# bridge  bridge to add the vif to (required).
+# ip      list of IP networks for the vif, space-separated (optional).
+#
+# up:
+# Enslaves the vif interface to the bridge and adds iptables rules
+# for its ip addresses (if any).
+#
+# down:
+# Removes the vif interface from the bridge and removes the iptables
+# rules for its ip addresses (if any).
+#============================================================================
+
+# Exit if anything goes wrong
+set -e
+
+echo "vif-bridge $*"
+
+# Operation name.
+OP=$1
+shift
+
+# Pull variables in args into environment
+for arg ; do export "${arg}" ; done
+
+# Required parameters. Fail if not set.
+domain=${domain:?}
+vif=${vif:?}
+mac=${mac:?}
+bridge=${bridge:?}
+
+# Are we going up or down?
+case $OP in
+    up)
+        brcmd='add'
+        ;;
+    down)
+        brcmd='delete'
+        ;;
+    *)
+        echo 'Invalid command: ' $OP
+        echo 'Valid commands are: up, down'
+        exit 1
+        ;;
+esac
+
+# Don't do anything if the bridge is "null".
+if [ "${bridge}" = "null" ] ; then
+    exit
+fi
+
+# Add/remove vif to/from bridge.
+/sbin/brconfig ${bridge} ${brcmd} ${vif}
+/sbin/ifconfig ${vif} $OP
