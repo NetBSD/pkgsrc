@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/04/24 02:48:06 rh Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/10/01 04:25:32 rh Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBFOUNDATION_BUILDLINK3_MK:=	${LIBFOUNDATION_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibFoundation}
 BUILDLINK_PACKAGES+=	libFoundation
 
 .if !empty(LIBFOUNDATION_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libFoundation+=	libFoundation>=1.0.72.107
+BUILDLINK_DEPENDS.libFoundation+=	libFoundation>=1.0.72.107nb1
 BUILDLINK_PKGSRCDIR.libFoundation?=	../../devel/libFoundation
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Libraries$$/ { print "@comment in devel/libFoundation: " $$0; next; }
@@ -68,6 +68,6 @@ MAKE_ENV+=		ADDITIONAL_INCLUDE_DIRS="${ADDITIONAL_INCLUDE_DIRS}"
 
 .endif	# LIBFOUNDATION_BUILDLINK3_MK
 
-.include "../../devel/gnustep-make/buildlink3.mk"
+.include "../../devel/gnustep-objc-lf2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
