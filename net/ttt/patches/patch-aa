@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2005/10/01 20:45:05 kristerw Exp $
+
+--- configure.orig	Sat Oct  1 22:38:51 2005
++++ configure	Sat Oct  1 22:39:17 2005
+@@ -2001,7 +2001,7 @@
+ tttIncludes=""
+ tttLibraries=""
+ tttAuxLibs=""
+-tttRunPath=""
++tttRunPath="${PREFIX}/lib"
+ tttFlags=""
+ 
+ ttt_ckcmd_tcl_home=""
