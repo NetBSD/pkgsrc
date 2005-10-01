@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/09/30 23:52:58 rh Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/01 04:25:32 rh Exp $
 #
 
 DISTNAME=	libFoundation-1.0.72-r107
 PKGNAME=	${DISTNAME:S/-r/./}
+PKGREVISION=	1
 CATEGORIES=	devel gnustep
-MASTER_SITES=	ftp://ftp.opengroupware.org/sources/releases/	\
+MASTER_SITES=	ftp://ftp.opengroupware.org/sources/releases/		\
 		http://www.opengroupware.org/sources/releases/
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -36,12 +37,6 @@ post-configure:
 	    ${WRKSRC}/Foundation/${LIBF_HOST_OS}	\
 	    ${WRKSRC}/Foundation/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
 
-.include "../../mk/compiler.mk"
-
-.if empty(CC_VERSION:Mgcc-3*)
-.include "../../devel/gnustep-objc/buildlink3.mk"
-.endif
-.include "../../devel/gnustep-make/buildlink3.mk"
-
+.include "../../devel/gnustep-objc-lf2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
