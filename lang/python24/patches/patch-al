@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
+$NetBSD: patch-al,v 1.8 2005/10/01 21:12:05 recht Exp $
 
---- configure.orig	2005-03-29 01:23:02.000000000 +0200
-+++ configure	2005-05-09 21:14:53.000000000 +0200
+--- configure.orig	2005-08-07 23:08:42.000000000 +0200
++++ configure	2005-10-01 22:26:48.000000000 +0200
 @@ -1482,6 +1482,8 @@
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    OpenBSD/2.* | OpenBSD/3.[0123456])
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
    # On Solaris 2.6, sys/wait.h is inconsistent in the usage
    # of union __?sigval. Reported by Stuart Bishop.
    SunOS/5.6)
-@@ -3402,7 +3404,7 @@
+@@ -3404,7 +3406,7 @@
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -20,7 +20,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
-@@ -3826,7 +3828,12 @@
+@@ -3828,7 +3830,12 @@
  	    ;;
  	# is there any other compiler on Darwin besides gcc?
  	Darwin*)
@@ -34,7 +34,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  	    ;;
      esac
      ;;
-@@ -10186,7 +10193,10 @@
+@@ -10188,7 +10195,10 @@
  case "$enable_toolbox_glue" in
  yes)
  	extra_machdep_objs="Python/mactoolboxglue.o"
@@ -46,7 +46,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define USE_TOOLBOX_OBJECT_GLUE 1
-@@ -10332,7 +10342,7 @@
+@@ -10334,7 +10344,7 @@
  			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework. Ignore undefined symbols, assuming they come from Python
@@ -55,7 +55,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  		fi ;;
  	Darwin/1.4*|Darwin/5.*|Darwin/6.*)
  		LDSHARED='$(CC) $(LDFLAGS) -bundle'
-@@ -10342,8 +10352,8 @@
+@@ -10344,8 +10354,8 @@
  			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -66,7 +66,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -10362,12 +10372,12 @@
+@@ -10364,12 +10374,12 @@
  				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -82,7 +82,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	OpenBSD*|FreeBSD*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
-@@ -10376,7 +10386,8 @@
+@@ -10378,7 +10388,8 @@
  		else
  			LDSHARED="ld -Bshareable ${LDFLAGS}"
  		fi;;
@@ -92,7 +92,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
-@@ -10408,7 +10419,9 @@
+@@ -10410,7 +10421,9 @@
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -103,7 +103,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -10461,11 +10474,12 @@
+@@ -10463,11 +10476,12 @@
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -117,7 +117,7 @@ $NetBSD: patch-al,v 1.7 2005/08/31 12:13:02 darcy Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -14335,6 +14349,7 @@
+@@ -14337,6 +14351,7 @@
  /* end confdefs.h.  */
  
  #include "confdefs.h"
