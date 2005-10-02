@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11301 2005/10/02 15:54:51 minskim Exp $
+$NetBSD: CHANGES,v 1.11302 2005/10/02 16:08:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4239,3 +4239,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/docbook-xml to 4.4nb1 [jmmv 2005-10-02]
 	Updated audio/amarok to 1.3.2 [seb 2005-10-02]
 	Updated x11/py-wxWidgets to 2.6.1 [minskim 2005-10-02]
+	updated devel/ExmanIDE to 0.9.4nb2 [minskim 2005-10-02]
