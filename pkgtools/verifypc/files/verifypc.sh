@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: verifypc.sh,v 1.1.1.1 2005/10/01 12:56:51 jmmv Exp $
+# $NetBSD: verifypc.sh,v 1.2 2005/10/02 09:29:29 jmmv Exp $
 #
 # verifypc - Sanity check package dependencies according to pkg-config
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -83,7 +83,7 @@ search_file_in_depends() {
 #
 check_match() {
     local dep="${1}" pcname="${2}" pcop="${3}" pcver="${4}"
-    local pkgdep pkgname
+    local out pkgdep pkgname ret
 
     if [ ${pcop} != ">" -a ${pcop} != ">=" -a ${pcop} != "-" ]; then
         warn "unsupported operator ${pcop} in ${pcname} dependency"
@@ -93,8 +93,14 @@ check_match() {
     pkgdep=$(echo ${dep} | cut -d : -f 1 | sed 's|>=|-|;s|>|-|')
     pkgname=$(echo ${pkgdep} | cut -d - -f 1)
 
-    if ! pkg_admin pmatch "${pkgname}${pcop}${pcver}" "${pkgdep}"; then
+    out=$(pkg_admin pmatch "${pkgname}${pcop}${pcver}" "${pkgdep}" 2>&1)
+    ret=$?
+    if [ ${ret} -ne 0 ]; then
         warn "${pcname} not correct; '${pcop} ${pcver}' needed"
+        return 1
+    elif [ -n "${out}" ]; then
+        warn "${pcname} pmatch failed; wanted" \
+            "${pkgname}${pcop}${pcver}, have ${pkgdep}"
         return 1
     fi
     return 0
