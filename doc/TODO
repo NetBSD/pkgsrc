@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3945 2005/10/02 06:12:55 taca Exp $
+$NetBSD: TODO,v 1.3946 2005/10/02 12:21:00 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -495,7 +495,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade2-2.12.0
 	o gld-1.6
-	o glib2-2.8.2
 	o gnet1-1.1.9
 	o gnetman-20050325
 	o gnocatan-0.8.1.30
@@ -520,7 +519,6 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
-	o gtk2+-2.8.4
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-oops-1.0.2
@@ -816,7 +814,6 @@ Suggested package updates
 	o p5-razor-agents-2.75
 	o p5-sybperl-2.17
 	o pam-smbpass-3.0.13
-	o pango-1.10.0
 	o parrot-0.2.1 [pkg/30586]
 	o patchutils-0.2.31
 	o pcal-4.8
