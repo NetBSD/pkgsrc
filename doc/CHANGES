@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11303 2005/10/02 21:27:19 wiz Exp $
+$NetBSD: CHANGES,v 1.11304 2005/10/02 21:35:48 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4241,3 +4241,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/py-wxWidgets to 2.6.1 [minskim 2005-10-02]
 	updated devel/ExmanIDE to 0.9.4nb2 [minskim 2005-10-02]
 	Updated security/pwsafe to 0.2.0 [wiz 2005-10-02]
+	Updated editors/leafpad to 0.8.4 [jmmv 2005-10-02]
