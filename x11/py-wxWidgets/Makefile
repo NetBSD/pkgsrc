@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/02 15:53:35 minskim Exp $
 #
 
-DISTNAME=	wxPythonSrc-2.4.2.4
-PKGNAME=	${PYPKGPREFIX}-wxWidgets-2.4.2.4
-PKGREVISION=	7
+DISTNAME=	wxPython-src-2.6.1.0
+PKGNAME=	${PYPKGPREFIX}-wxWidgets-2.6.1.0
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
@@ -11,18 +10,18 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	wxPython: Python bindings for wxWidgets
 
-WRKSRC=		${WRKDIR}/wxPythonSrc-2.4.2.4/wxPython
+WRKSRC=		${WRKDIR}/wxPython-src-2.6.1.0/wxPython
 USE_TOOLS+=	gmake pkg-config
 
 # previous name of the package
 CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
 
-# we depend on glib which pulls in threads
-PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
-BUILDLINK_DEPENDS.python21=	python21>=2.1.3nb3
-BUILDLINK_DEPENDS.python22=	python22>=2.2.2nb2
+PYTHON_VERSIONS_ACCEPTED=	24 23
 
-WXARG=	WXPORT=gtk2 WX_CONFIG=${LOCALBASE}/bin/wx24-config
+WXARG=	WXPORT=gtk2 \
+	WX_CONFIG=${BUILDLINK_PREFIX.wxGTK}/bin/wx-config \
+	CONTRIBS_INC="../contrib/include" \
+	BUILD_ANIMATE=0
 
 PYDISTUTILSPKG=	yes
 # no scripts to avoid conflicts
@@ -30,7 +29,10 @@ PYSETUPBUILDARGS=	NO_SCRIPTS=1 ${WXARG}
 PYSETUPINSTALLARGS=	NO_SCRIPTS=1 ${WXARG}
 PYBINMODULE=	yes
 
-.include "../../x11/wxGTK24/buildlink3.mk"
+PLIST_SUBST+=            GTKVER=2
+
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK-contrib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
