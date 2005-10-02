@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/09/30 15:24:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/02 15:04:41 jmmv Exp $
 share/xml/docbook/4.4/ChangeLog
 share/xml/docbook/4.4/README
 share/xml/docbook/4.4/calstblx.dtd
@@ -68,6 +68,7 @@ share/xml/docbook/4.2/ChangeLog
 share/xml/docbook/4.2/README
 share/xml/docbook/4.2/calstblx.dtd
 share/xml/docbook/4.2/catalog
+share/xml/docbook/4.2/catalog-4.1.2
 share/xml/docbook/4.2/dbcentx.mod
 share/xml/docbook/4.2/dbgenent.mod
 share/xml/docbook/4.2/dbhierx.mod

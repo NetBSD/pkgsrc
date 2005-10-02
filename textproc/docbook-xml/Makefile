@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/09/30 15:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/10/02 15:04:41 jmmv Exp $
 #
 
 DISTNAME=	docbook-xml-4.4
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.oasis-open.org/docbook/xml/4.4/
 SITES_docbook-xml-4.3.zip=	http://www.oasis-open.org/docbook/xml/4.3/
@@ -30,6 +31,7 @@ XML_CATALOGS=
 .for ver in ${VER}
 XML_CATALOGS+= ${DTDDIR}/${ver}/catalog
 .endfor
+XML_CATALOGS+= ${DTDDIR}/4.2/catalog-4.1.2
 
 pre-install:
 .for ver in ${VER}
@@ -41,6 +43,8 @@ do-install:
 	@(cd ${DTDDIR}/${ver}; unzip ${DISTDIR}/docbook-xml-${ver}.zip)
 	@(cd ${DTDDIR}/${ver}; ${MV} catalog.xml catalog)
 .endfor
+	@${SED} -e 's|V4.2|V4.1.2|g' <${DTDDIR}/4.2/catalog \
+	    >${DTDDIR}/4.2/catalog-4.1.2
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
