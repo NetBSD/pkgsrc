@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.20 2005/09/27 17:13:03 abs Exp $
+# $Id: pkg_chk.sh,v 1.21 2005/10/02 02:05:29 heas Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -342,7 +342,7 @@ pkgdirs_from_conf()
     if (skip[$1])
 	next;
     need = 0;
-    if ($0 ~ /=/) {
+    if ($0 ~ /\=/) {
 	split($0, tmp, "[ \t]*=");
 	taggroup = tmp[1];
 	sub("[ \t]*=", "=");
