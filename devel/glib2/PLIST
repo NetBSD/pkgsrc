@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2005/08/03 16:50:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.27 2005/10/02 12:15:09 jmmv Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -27,6 +27,7 @@ include/glib/glib-2.0/glib/gkeyfile.h
 include/glib/glib-2.0/glib/glist.h
 include/glib/glib-2.0/glib/gmacros.h
 include/glib/glib-2.0/glib/gmain.h
+include/glib/glib-2.0/glib/gmappedfile.h
 include/glib/glib-2.0/glib/gmarkup.h
 include/glib/glib-2.0/glib/gmem.h
 include/glib/glib-2.0/glib/gmessages.h
@@ -80,6 +81,7 @@ lib/libgobject-2.0.la
 lib/libgthread-2.0.la
 lib/pkgconfig/glib-2.0.pc
 lib/pkgconfig/gmodule-2.0.pc
+lib/pkgconfig/gmodule-export-2.0.pc
 lib/pkgconfig/gmodule-no-export-2.0.pc
 lib/pkgconfig/gobject-2.0.pc
 lib/pkgconfig/gthread-2.0.pc
@@ -168,6 +170,7 @@ share/doc/glib/ix02.html
 share/doc/glib/ix03.html
 share/doc/glib/ix04.html
 share/doc/glib/ix05.html
+share/doc/glib/ix06.html
 share/doc/glib/left.png
 share/doc/glib/mainloop-states.gif
 share/doc/glib/right.png
@@ -176,8 +179,17 @@ share/doc/glib/tools.html
 share/doc/glib/up.png
 share/doc/gobject/GTypeModule.html
 share/doc/gobject/GTypePlugin.html
+share/doc/gobject/ch01.html
+share/doc/gobject/ch01s02.html
+share/doc/gobject/ch02.html
+share/doc/gobject/ch06s03.html
+share/doc/gobject/ch07s02.html
+share/doc/gobject/ch07s03.html
+share/doc/gobject/chapter-gobject.html
+share/doc/gobject/chapter-signal.html
 share/doc/gobject/glib-genmarshal.html
 share/doc/gobject/glib-mkenums.html
+share/doc/gobject/glue.png
 share/doc/gobject/gobject-Boxed-Types.html
 share/doc/gobject/gobject-Closures.html
 share/doc/gobject/gobject-Enumeration-and-Flag-Types.html
@@ -189,9 +201,25 @@ share/doc/gobject/gobject-The-Base-Object-Type.html
 share/doc/gobject/gobject-Type-Information.html
 share/doc/gobject/gobject-Value-arrays.html
 share/doc/gobject/gobject-Varargs-Value-Collection.html
+share/doc/gobject/gobject-memory.html
+share/doc/gobject/gobject-properties.html
 share/doc/gobject/gobject-query.html
 share/doc/gobject/gobject.devhelp
+share/doc/gobject/gtype-conventions.html
+share/doc/gobject/gtype-instantiable-classed.html
+share/doc/gobject/gtype-non-instantiable-classed.html
+share/doc/gobject/gtype-non-instantiable.html
 share/doc/gobject/home.png
+share/doc/gobject/howto-gobject-chainup.html
+share/doc/gobject/howto-gobject-code.html
+share/doc/gobject/howto-gobject-construction.html
+share/doc/gobject/howto-gobject-destruction.html
+share/doc/gobject/howto-gobject-methods.html
+share/doc/gobject/howto-gobject.html
+share/doc/gobject/howto-interface-implement.html
+share/doc/gobject/howto-interface-properties.html
+share/doc/gobject/howto-interface.html
+share/doc/gobject/howto-signals.html
 share/doc/gobject/index.html
 share/doc/gobject/index.sgml
 share/doc/gobject/ix01.html
@@ -199,12 +227,21 @@ share/doc/gobject/ix02.html
 share/doc/gobject/ix03.html
 share/doc/gobject/ix04.html
 share/doc/gobject/ix05.html
+share/doc/gobject/ix06.html
 share/doc/gobject/left.png
 share/doc/gobject/pr01.html
+share/doc/gobject/pt01.html
+share/doc/gobject/pt02.html
+share/doc/gobject/pt03.html
 share/doc/gobject/right.png
 share/doc/gobject/rn01.html
 share/doc/gobject/rn02.html
+share/doc/gobject/signal.html
 share/doc/gobject/style.css
+share/doc/gobject/tools-ginspector.html
+share/doc/gobject/tools-gob.html
+share/doc/gobject/tools-gtkdoc.html
+share/doc/gobject/tools-refdb.html
 share/doc/gobject/up.png
 share/glib-2.0/gettext/mkinstalldirs
 share/glib-2.0/gettext/po/Makefile.in.in
@@ -269,6 +306,7 @@ ${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/te/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/tl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/glib20.mo

@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.81 2005/09/28 20:52:19 rillig Exp $
+# $NetBSD: Makefile,v 1.82 2005/10/02 12:15:09 jmmv Exp $
 
-DISTNAME=		glib-2.6.6
+DISTNAME=		glib-2.8.2
 PKGNAME=		${DISTNAME:S/glib/glib2/}
-PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.6/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.6/ \
-			${MASTER_SITE_GNOME:=sources/glib/2.6/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.8/ \
+			${MASTER_SITE_GNOME:=sources/glib/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -27,6 +26,7 @@ PKGCONFIG_OVERRIDE+=	glib-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-export-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gmodule-no-export-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule-no-export-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-2.0.pc.in
