@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3949 2005/10/02 21:17:48 wiz Exp $
+$NetBSD: TODO,v 1.3950 2005/10/02 21:27:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -860,7 +860,6 @@ Suggested package updates
 	o puzzle-5.2
 	o pv-0.9.0
 	o pwgen-0.4 [pkg/30714]
-	o pwsafe-0.2.0
 	o pxe-1.4.2
 	o py-FourSuite-1.0a4
 	o py-HappyDoc-3.0
