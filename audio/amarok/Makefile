@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2005/10/02 04:55:05 seb Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/02 15:22:19 seb Exp $
 
-DISTNAME=		amarok-1.3.1
+DISTNAME=		amarok-1.3.2
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amarok/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--without-nmm
 CONFIGURE_ARGS+=	--without-mas
+CONFIGURE_ARGS+=	--without-arts	# disable aRts engine
 
 LIBS+=			${LIBOSSAUDIO}
 
