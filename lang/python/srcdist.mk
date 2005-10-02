@@ -1,14 +1,14 @@
-# $NetBSD: srcdist.mk,v 1.16 2005/05/10 22:27:44 abs Exp $
+# $NetBSD: srcdist.mk,v 1.17 2005/10/02 10:50:57 recht Exp $
 
 .include "../../lang/python/pyversion.mk"
 
 .if ${_PYTHON_VERSION} == "24"
 
-DISTNAME=	Python-2.4.1
+DISTNAME=	Python-2.4.2
 EXTRACT_SUFX=	.tar.bz2
 DISTINFO_FILE=	${.CURDIR}/../../lang/python24/distinfo
 PATCHDIR=	${.CURDIR}/../../lang/python24/patches
-PYSUBDIR=	Python-2.4.1
+PYSUBDIR=	Python-2.4.2
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.4/
 
