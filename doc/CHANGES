@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11295 2005/10/02 11:12:16 wiz Exp $
+$NetBSD: CHANGES,v 1.11296 2005/10/02 12:10:57 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkg_comp to 1.23 [jmmv 2005-10-02]
 	Updated graphics/cairo to 1.0.0nb2 [jmmv 2005-10-02]
 	Added textproc/convertlit version 1.8 [wiz 2005-10-02]
+	Added math/fftwf version 3.0.1 [wulf 2005-10-02]
