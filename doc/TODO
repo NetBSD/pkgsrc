@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3950 2005/10/02 21:27:19 wiz Exp $
+$NetBSD: TODO,v 1.3951 2005/10/02 21:35:48 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -589,7 +589,6 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b11
 	o lcc-4.2
-	o leafpad-0.8.4
 	o libdockapp-0.6.0
 	o libdvbpsi-0.1.5
 	o libextractor-0.5.6
