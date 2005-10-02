@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2005/08/03 19:42:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.42 2005/10/02 12:19:06 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -13,11 +13,13 @@ include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-features.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-io.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-marshal.h
+include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixdata.h
 include/gtk-2.0/gdk/gdk.h
 include/gtk-2.0/gdk/gdkalias.h
+include/gtk-2.0/gdk/gdkcairo.h
 include/gtk-2.0/gdk/gdkcolor.h
 include/gtk-2.0/gdk/gdkcursor.h
 include/gtk-2.0/gdk/gdkdisplay.h
@@ -298,6 +300,7 @@ share/doc/gdk-pixbuf/ix02.html
 share/doc/gdk-pixbuf/ix03.html
 share/doc/gdk-pixbuf/ix04.html
 share/doc/gdk-pixbuf/ix05.html
+share/doc/gdk-pixbuf/ix06.html
 share/doc/gdk-pixbuf/left.png
 share/doc/gdk-pixbuf/license.html
 share/doc/gdk-pixbuf/right.png
@@ -336,6 +339,7 @@ share/doc/gdk/draped_box.png
 share/doc/gdk/exchange.png
 share/doc/gdk/fleur.png
 share/doc/gdk/gdk-Bitmaps-and-Pixmaps.html
+share/doc/gdk/gdk-Cairo-Interaction.html
 share/doc/gdk/gdk-Colormaps-and-Colors.html
 share/doc/gdk/gdk-Cursors.html
 share/doc/gdk/gdk-Drag-and-Drop.html
@@ -375,6 +379,7 @@ share/doc/gdk/ix02.html
 share/doc/gdk/ix03.html
 share/doc/gdk/ix04.html
 share/doc/gdk/ix05.html
+share/doc/gdk/ix06.html
 share/doc/gdk/left.png
 share/doc/gdk/left_ptr.png
 share/doc/gdk/left_side.png
@@ -601,6 +606,7 @@ share/doc/gtk/ch02.html
 share/doc/gtk/check-button.png
 share/doc/gtk/checklist-gdkeventexpose-region.html
 share/doc/gtk/checklist-modifiers.html
+share/doc/gtk/checklist-named-icons.html
 share/doc/gtk/color-button.png
 share/doc/gtk/colorsel.png
 share/doc/gtk/combo-box-entry.png
@@ -667,6 +673,7 @@ share/doc/gtk/ix02.html
 share/doc/gtk/ix03.html
 share/doc/gtk/ix04.html
 share/doc/gtk/ix05.html
+share/doc/gtk/ix06.html
 share/doc/gtk/label.png
 share/doc/gtk/left.png
 share/doc/gtk/list-and-tree.png
@@ -723,13 +730,16 @@ share/doc/gtk/stock_exit_24.png
 share/doc/gtk/stock_file_24.png
 share/doc/gtk/stock_first_24.png
 share/doc/gtk/stock_font_24.png
+share/doc/gtk/stock_fullscreen_24.png
 share/doc/gtk/stock_harddisk_24.png
 share/doc/gtk/stock_help_24.png
 share/doc/gtk/stock_home_24.png
 share/doc/gtk/stock_index_24.png
+share/doc/gtk/stock_info_24.png
 share/doc/gtk/stock_jump_to_24.png
 share/doc/gtk/stock_jump_to_rtl_24.png
 share/doc/gtk/stock_last_24.png
+share/doc/gtk/stock_leave_fullscreen_24.png
 share/doc/gtk/stock_left_arrow_24.png
 share/doc/gtk/stock_media_forward_24.png
 share/doc/gtk/stock_media_next_24.png
@@ -816,6 +826,7 @@ share/gtk-2.0/demo/gnu-keys.png
 share/gtk-2.0/demo/gtk-logo-rgb.gif
 share/gtk-2.0/demo/hypertext.c
 share/gtk-2.0/demo/iconview.c
+share/gtk-2.0/demo/iconview_edit.c
 share/gtk-2.0/demo/images.c
 share/gtk-2.0/demo/list_store.c
 share/gtk-2.0/demo/menus.c
@@ -904,6 +915,8 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gtk20-properties.mo
@@ -964,6 +977,8 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gtk20-properties.mo
@@ -989,12 +1004,13 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtk20.mo
 share/themes/Default/gtk-2.0-key/gtkrc
-share/themes/Default/gtk-2.0/gtkrc
 share/themes/Emacs/gtk-2.0-key/gtkrc
+share/themes/Raleigh/gtk-2.0/gtkrc
+@dirrm share/themes/Raleigh/gtk-2.0
+@dirrm share/themes/Raleigh
 @dirrm share/themes/Emacs/gtk-2.0-key
 @dirrm share/themes/Emacs
 @dirrm share/themes/Default/gtk-2.0-key
-@dirrm share/themes/Default/gtk-2.0
 @unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}
 @comment in xdg-dirs: @dirrm share/themes
 @dirrm share/gtk-2.0/demo

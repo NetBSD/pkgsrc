@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.93 2005/09/26 11:47:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.94 2005/10/02 12:19:06 jmmv Exp $
 #
 
-DISTNAME=		gtk+-2.6.10
+DISTNAME=		gtk+-2.8.4
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.6/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.6/ \
-			${MASTER_SITE_GNOME:=sources/gtk+/2.6/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.8/ \
+			${MASTER_SITE_GNOME:=sources/gtk+/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -17,8 +17,9 @@ CONFLICTS=		gtk2-engines<2.6.0
 
 BUILD_USES_MSGFMT=	yes
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.2
-BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
+BUILDLINK_DEPENDS.cairo+=	cairo>=1.0.0
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.2
+BUILDLINK_DEPENDS.pango+=	pango>=1.10.0
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
 USE_DIRS+=		xdg-1.1
@@ -38,8 +39,11 @@ CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEST_TARGET=		check
 
-PKGCONFIG_OVERRIDE=	gdk-2.0.pc.in
+PKGCONFIG_OVERRIDE=	gdk-2.0-uninstalled.pc.in
+PKGCONFIG_OVERRIDE+=	gdk-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gtk+-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gdk-pixbuf-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 
@@ -83,7 +87,9 @@ _BUILDING_GTK2=	yes
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
