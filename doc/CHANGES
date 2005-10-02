@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11298 2005/10/02 12:38:17 taya Exp $
+$NetBSD: CHANGES,v 1.11299 2005/10/02 15:05:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4236,3 +4236,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated meta-pkgs/gtk2-extras to 2.8.0 [jmmv 2005-10-02]
 	Updated mail/thunderbird to 1.0.7 [taya 2005-10-02]
 	Updated mail/thunderbird-gtk1 to 1.0.7 [taya 2005-10-02]
+	Updated textproc/docbook-xml to 4.4nb1 [jmmv 2005-10-02]
