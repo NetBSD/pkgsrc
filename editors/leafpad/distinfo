@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 17:15:11 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/10/02 21:34:50 jmmv Exp $
 
-SHA1 (leafpad-0.7.8.tar.gz) = 4a0b736dc1ea0a6bd11d63388ddb248d283f55ad
-RMD160 (leafpad-0.7.8.tar.gz) = 8b27283587606a0a530f14fd997b6e8506b65519
-Size (leafpad-0.7.8.tar.gz) = 188955 bytes
+SHA1 (leafpad-0.8.4.tar.gz) = 927b1a3acce28fef07631c1ffc8da7a5236f10ed
+RMD160 (leafpad-0.8.4.tar.gz) = 2c3a4b847aebd56aa06adf83fc0db8757ee29261
+Size (leafpad-0.8.4.tar.gz) = 230525 bytes
