@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3947 2005/10/02 15:24:04 seb Exp $
+$NetBSD: TODO,v 1.3948 2005/10/02 15:54:50 minskim Exp $
 
 Suggested new packages
 ======================
@@ -888,7 +888,6 @@ Suggested package updates
 	o py-textile-2.0.10
 	o py-twisted-2.0.0 
 	o py-urwid-0.8.6
-	o py-wxWidgets-2.6.1.0
 	o py-xmltools-1.4.0
 	o py-zconfig-2.1
 	o pygopherd-2.0.13
