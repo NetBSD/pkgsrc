@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3942 2005/10/01 10:56:43 minskim Exp $
+$NetBSD: TODO,v 1.3943 2005/10/02 01:09:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -638,8 +638,7 @@ Suggested package updates
 	o memtest86-3.2
 	o mftrace-1.1.6
 	o mgetty+sendfax-1.1.32
-	o micq-0.4.12 [pkg/29063]
-	o micq-0.5.0.3
+	o micq-0.5.0.4
 	o mimedefang-2.53
 	o mini_sendmail-1.3.5
 	o minivmac-2.5.0
@@ -1029,6 +1028,8 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
+	o thunderbird-1.0.7
+	o thunderbird-gtk1-1.0.7
 	o tidy-20050826 [pkg/31220]
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
