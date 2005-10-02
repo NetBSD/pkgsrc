@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11288 2005/10/02 06:22:38 taca Exp $
+$NetBSD: CHANGES,v 1.11289 2005/10/02 06:37:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4218,7 +4218,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ttt to 1.8nb1 [kristerw 2005-10-01]
 	Updated lang/python24 to 2.4.2 [recht 2005-10-01]
 	Updated lang/python24-pth to 2.4.2 [recht 2005-10-01]
-	Updated adzap to 20050921 [simonb 2005-10-02]
+	Updated www/adzap to 20050921 [simonb 2005-10-02]
 	Updated converters/libiconv to 1.10nb3 [taca 2005-10-02]
 	Updated security/ruby-digest to 1.8.2nb2 [taca 2005-10-02]
 	Updated security/ruby-openssl to 1.8.2nb2 [taca 2005-10-02]
