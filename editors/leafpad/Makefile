@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/08/10 20:56:16 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/02 21:34:50 jmmv Exp $
 #
 
-DISTNAME=	leafpad-0.7.8
+DISTNAME=	leafpad-0.8.4
 CATEGORIES=	editors gnome
-MASTER_SITES=	http://tarot.freeshell.org/leafpad/
+MASTER_SITES=	http://savannah.nongnu.org/download/leafpad/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://tarot.freeshell.org/leafpad/
@@ -16,5 +16,7 @@ USE_PKGLOCALEDIR=	YES
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
