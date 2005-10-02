@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.8 2005/10/01 19:14:44 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.9 2005/10/02 20:13:03 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -19,3 +19,5 @@ Pullup ticket 793 - requested by Shin'ichiro TAYA
 security update for mozilla
 Pullup ticket 794 - requested by Shin'ichiro TAYA
 PLIST fix for anthy-elisp
+Pullup ticket 790 - requested by Ignatios Souvatzis
+distfile update for links
