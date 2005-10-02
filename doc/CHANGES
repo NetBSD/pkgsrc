@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11286 2005/10/02 05:06:20 simonb Exp $
+$NetBSD: CHANGES,v 1.11287 2005/10/02 06:11:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/python24 to 2.4.2 [recht 2005-10-01]
 	Updated lang/python24-pth to 2.4.2 [recht 2005-10-01]
 	Updated adzap to 20050921 [simonb 2005-10-02]
+	Updated converters/libiconv to 1.10nb3 [taca 2005-10-02]
