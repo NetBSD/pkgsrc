@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/10/02 15:04:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2005/10/02 15:07:45 jmmv Exp $
 #
 
 DISTNAME=	docbook-xml-4.4
@@ -9,7 +9,7 @@ SITES_docbook-xml-4.3.zip=	http://www.oasis-open.org/docbook/xml/4.3/
 SITES_docbook-xml-4.2.zip=	http://www.oasis-open.org/docbook/xml/4.2/
 DISTFILES=	docbook-xml-4.2.zip docbook-xml-4.3.zip docbook-xml-4.4.zip
 
-MAINTAINER=	seb@NetBSD.org
+MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.oasis-open.org/docbook/
 COMMENT=	XML DTD designed for computer documentation
 
