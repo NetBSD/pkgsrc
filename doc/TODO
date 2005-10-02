@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3946 2005/10/02 12:21:00 jmmv Exp $
+$NetBSD: TODO,v 1.3947 2005/10/02 15:24:04 seb Exp $
 
 Suggested new packages
 ======================
@@ -310,7 +310,6 @@ Suggested package updates
 	o aewm++-1.0.27
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
-	o amarok-1.3.2
 	o amavis-0.3.12
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.70
