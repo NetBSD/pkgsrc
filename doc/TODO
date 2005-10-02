@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3951 2005/10/02 21:35:48 jmmv Exp $
+$NetBSD: TODO,v 1.3952 2005/10/02 22:06:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -481,7 +481,6 @@ Suggested package updates
 	o gcpio-2.6
 	o gcube-0.4
 	o gdb6-6.3.0
-	o generator-cbiere-0.35r2
 	o gettext-0.14.5
 	o gfract-0.3.2
 	o ggiterm-0.7.1
