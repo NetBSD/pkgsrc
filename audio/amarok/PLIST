@@ -1,18 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2005/09/07 11:29:41 seb Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/10/02 15:22:19 seb Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
 bin/amarokapp
 lib/kde3/konqsidebar_universalamarok.la
-lib/kde3/libamarok_artsengine_plugin.la
 lib/kde3/libamarok_gstengine_plugin.la
 lib/kde3/libamarok_void-engine_plugin.la
 lib/kde3/libamarok_xine-engine.la
-lib/libamarokarts.la
-lib/mcop/Amarok/RawScope.mcopclass
-lib/mcop/Amarok/Synth_STEREO_XFADE.mcopclass
-lib/mcop/amarokarts.mcopclass
-lib/mcop/amarokarts.mcoptype
 share/applications/kde/amarok.desktop
 share/doc/kde/HTML/da/amarok/advanced.docbook
 share/doc/kde/HTML/da/amarok/common
@@ -294,7 +288,6 @@ share/kde/apps/amarok/icons/crystalsvg/22x22/actions/repeat_playlist.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/dynamic.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/random.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/repeat_playlist.png
-share/kde/apps/amarok/icons/crystalsvg/scalable/actions/collection.svg
 share/kde/apps/amarok/icons/crystalsvg/scalable/actions/dynamic.svg
 share/kde/apps/amarok/icons/crystalsvg/scalable/actions/player_playlist_2.svg
 share/kde/apps/amarok/icons/hicolor/16x16/actions/collection.png
@@ -335,6 +328,9 @@ share/kde/apps/amarok/images/splash_screen.png
 share/kde/apps/amarok/images/time_minus.png
 share/kde/apps/amarok/images/time_plus.png
 share/kde/apps/amarok/images/vol_speaker.png
+share/kde/apps/amarok/images/volumeslider-gradient.png
+share/kde/apps/amarok/images/volumeslider-handle.png
+share/kde/apps/amarok/images/volumeslider-inset.png
 share/kde/apps/amarok/images/wizard_compact.png
 share/kde/apps/amarok/images/wizard_xmms.png
 share/kde/apps/amarok/images/xine_logo.png
@@ -410,7 +406,6 @@ share/kde/icons/hicolor/22x22/apps/amarok.png
 share/kde/icons/hicolor/32x32/apps/amarok.png
 share/kde/icons/hicolor/48x48/apps/amarok.png
 share/kde/icons/hicolor/64x64/apps/amarok.png
-share/kde/services/amarok_artsengine_plugin.desktop
 share/kde/services/amarok_gstengine_plugin.desktop
 share/kde/services/amarok_void-engine_plugin.desktop
 share/kde/services/amarok_xine-engine.desktop
@@ -454,7 +449,6 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/amarok.mo
-${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/amarok.mo
@@ -540,6 +534,4 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/amarok.mo
 @dirrm share/doc/kde/HTML/da/amarok
 @comment in kde: @dirrm share/doc/kde/HTML/da
 @comment in kde: @dirrm share/applications/kde
-@dirrm lib/mcop/Amarok
-@comment in arts: @dirrm lib/mcop
 @comment in kde: @dirrm lib/kde3
