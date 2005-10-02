@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2005/10/02 12:19:06 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2005/10/02 13:06:37 hira Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -27,7 +27,7 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0\/(engines|filesystems|immodules|l
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../fonts/freetype/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
