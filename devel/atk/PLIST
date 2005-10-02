@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/05/10 16:37:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/10/02 12:15:54 jmmv Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -27,6 +27,10 @@ include/atk-1.0/atk/atkutil.h
 include/atk-1.0/atk/atkvalue.h
 lib/libatk-1.0.la
 lib/pkgconfig/atk.pc
+share/doc/atk/home.png
+share/doc/atk/left.png
+share/doc/atk/right.png
+share/doc/atk/up.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/atk10.mo
@@ -52,6 +56,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/atk10.mo
@@ -94,6 +99,7 @@ ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/ug/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/atk10.mo
@@ -101,7 +107,6 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/atk10.mo
-@exec ${MKDIR} %D/share/doc/atk
 @dirrm share/doc/atk
 @dirrm include/atk-1.0/atk
 @dirrm include/atk-1.0
