@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/02 16:07:30 minskim Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://kldp.net/download.php/715/
 
@@ -9,19 +9,20 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://exmanide.kldp.net/
 COMMENT=	Integrated development environment for Python
 
-DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.4.2:../../x11/py-wxWidgets
+DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_ACCEPTED?=	23 22
+PYTHON_VERSIONS_ACCEPTED?=	24 23
 
 SUBST_CLASSES+=		mod
 SUBST_MESSAGE.mod=	"Fixing deprecated module names."
 SUBST_STAGE.mod=	post-patch
-SUBST_FILES.mod=	Profile.py SourceEditor.py
-SUBST_SED.mod=		-e 's,wxPython\.lib\.PyCrust,wxPython.py,g'
+SUBST_FILES.mod=	Profile.py SourceEditor.py StcStyle.py
+SUBST_SED.mod=		-e 's,wxPython\.lib\.PyCrust,wxPython.py,g'	\
+			-e 's,wxPython\.py,wx.py,g'
 
 SUBST_CLASSES+=		py
 SUBST_MESSAGE.py=	"Fixing paths in a wrapper script."
