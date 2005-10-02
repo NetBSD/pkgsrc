@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2005/07/28 11:04:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2005/10/02 12:16:58 jmmv Exp $
 bin/pango-querymodules
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
@@ -21,6 +21,7 @@ include/pango-1.0/pango/pango-tabs.h
 include/pango-1.0/pango/pango-types.h
 include/pango-1.0/pango/pango-utils.h
 include/pango-1.0/pango/pango.h
+include/pango-1.0/pango/pangocairo.h
 include/pango-1.0/pango/pangofc-decoder.h
 include/pango-1.0/pango/pangofc-font.h
 include/pango-1.0/pango/pangofc-fontmap.h
@@ -29,6 +30,7 @@ include/pango-1.0/pango/pangox.h
 include/pango-1.0/pango/pangoxft-render.h
 include/pango-1.0/pango/pangoxft.h
 lib/libpango-1.0.la
+lib/libpangocairo-1.0.la
 lib/libpangoft2-1.0.la
 lib/libpangox-1.0.la
 lib/libpangoxft-1.0.la
@@ -43,6 +45,7 @@ lib/pango/1.4.0/modules/pango-syriac-fc.la
 lib/pango/1.4.0/modules/pango-thai-fc.la
 lib/pango/1.4.0/modules/pango-tibetan-fc.la
 lib/pkgconfig/pango.pc
+lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangoft2.pc
 lib/pkgconfig/pangox.pc
 lib/pkgconfig/pangoxft.pc
@@ -62,6 +65,7 @@ share/doc/pango/ix01.html
 share/doc/pango/layout.gif
 share/doc/pango/left.png
 share/doc/pango/lowlevel.html
+share/doc/pango/pango-Cairo-Rendering.html
 share/doc/pango/pango-Coverage-Maps.html
 share/doc/pango/pango-Engines.html
 share/doc/pango/pango-Fonts.html
@@ -82,6 +86,7 @@ share/doc/pango/pango.devhelp
 share/doc/pango/pango.html
 share/doc/pango/rendering.html
 share/doc/pango/right.png
+share/doc/pango/rotated-text.png
 share/doc/pango/style.css
 share/doc/pango/tools.html
 share/doc/pango/up.png
