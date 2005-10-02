@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11293 2005/10/02 09:38:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.11294 2005/10/02 10:55:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4226,3 +4226,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/cairo to 1.0.0nb1 [rh 2005-10-02]
 	Updated pkgtools/verifypc to 1.1 [jmmv 2005-10-02]
 	Updated pkgtools/pkg_comp to 1.23 [jmmv 2005-10-02]
+	Updated graphics/cairo to 1.0.0nb2 [jmmv 2005-10-02]
