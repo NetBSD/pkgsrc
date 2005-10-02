@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11291 2005/10/02 08:10:42 rh Exp $
+$NetBSD: CHANGES,v 1.11292 2005/10/02 09:29:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4224,3 +4224,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/ruby-openssl to 1.8.2nb2 [taca 2005-10-02]
 	Updated graphics/ruby-RMagick to 1.9.2 [taca 2005-10-02]
 	Updated graphics/cairo to 1.0.0nb1 [rh 2005-10-02]
+	Updated pkgtools/verifypc to 1.1 [jmmv 2005-10-02]
