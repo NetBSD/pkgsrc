@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/30 11:06:58 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/10/02 22:06:06 wiz Exp $
 
-SHA1 (generator-0.35-cbiere-r1.tar.bz2) = c754c4adf06b0b9a3feebe3702b7a642c1ea72f3
-RMD160 (generator-0.35-cbiere-r1.tar.bz2) = dc260c8b41fce15e4e96c9e9c4d7119950bcd7a9
-Size (generator-0.35-cbiere-r1.tar.bz2) = 445802 bytes
+SHA1 (generator-0.35-cbiere-r2.tar.bz2) = bb329925298ef7a087601e61f570af8d4e615915
+RMD160 (generator-0.35-cbiere-r2.tar.bz2) = 394145e32f3bf61ac4ed5fa21d2873978c5bd341
+Size (generator-0.35-cbiere-r2.tar.bz2) = 446101 bytes
