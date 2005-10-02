@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2005/06/01 18:03:29 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2005/10/02 12:19:06 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gtk2
 
 .if !empty(GTK2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.4.0
-BUILDLINK_RECOMMENDED.gtk2+=	gtk2+>=2.6.4nb1
+BUILDLINK_RECOMMENDED.gtk2+=	gtk2+>=2.8.4
 BUILDLINK_PKGSRCDIR.gtk2?=	../../x11/gtk2
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0$$/ { next; }
@@ -27,7 +27,9 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.4.0\/(engines|filesystems|immodules|l
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../fonts/freetype/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
