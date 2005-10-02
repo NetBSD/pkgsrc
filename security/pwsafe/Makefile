@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/31 01:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/02 21:26:14 wiz Exp $
 #
 
-DISTNAME=		pwsafe-0.1.6
+DISTNAME=		pwsafe-0.2.0
 CATEGORIES=		security wip
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pwsafe/} \
 			http://nsd.dyndns.org/pwsafe/releases/
