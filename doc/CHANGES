@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11300 2005/10/02 15:23:36 seb Exp $
+$NetBSD: CHANGES,v 1.11301 2005/10/02 15:54:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4238,3 +4238,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/thunderbird-gtk1 to 1.0.7 [taya 2005-10-02]
 	Updated textproc/docbook-xml to 4.4nb1 [jmmv 2005-10-02]
 	Updated audio/amarok to 1.3.2 [seb 2005-10-02]
+	Updated x11/py-wxWidgets to 2.6.1 [minskim 2005-10-02]
