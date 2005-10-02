@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/09/13 14:38:14 taca Exp $
+$NetBSD: distinfo,v 1.8 2005/10/02 06:41:47 taca Exp $
 
-SHA1 (ruby/RMagick-1.9.1.tar.gz) = f6ca185df435eddc50ffa8b5089688693bd5c99f
-RMD160 (ruby/RMagick-1.9.1.tar.gz) = b7f2c693c78348886a8bc6bd841a36e54662dc89
-Size (ruby/RMagick-1.9.1.tar.gz) = 915084 bytes
+SHA1 (ruby/RMagick-1.9.2.tar.bz2) = 7ca55b44bdabbcc5c840cde1bdf76e6dfffde7fb
+RMD160 (ruby/RMagick-1.9.2.tar.bz2) = 28edd867b38a75dd8a1a4178b8848f4b1d10d95c
+Size (ruby/RMagick-1.9.2.tar.bz2) = 915499 bytes
