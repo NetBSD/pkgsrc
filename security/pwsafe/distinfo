@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/31 01:06:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/10/02 21:26:14 wiz Exp $
 
-SHA1 (pwsafe-0.1.6.tar.gz) = 39b42f95517cdbf1e241f9da477fb1a9bca050bb
-RMD160 (pwsafe-0.1.6.tar.gz) = ac3b7b2287e2cacda876ddc21bf653d700cd9e0b
-Size (pwsafe-0.1.6.tar.gz) = 110027 bytes
-SHA1 (patch-aa) = a00dc129c853dea872cc12cc03b88137de31b221
+SHA1 (pwsafe-0.2.0.tar.gz) = 026643a391796a527a48ffccf93d542113ca79d4
+RMD160 (pwsafe-0.2.0.tar.gz) = 5509379f0bb4acea855183e1249395cdc23954d2
+Size (pwsafe-0.2.0.tar.gz) = 127433 bytes
