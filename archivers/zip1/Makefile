@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/24 13:24:52 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2005/10/03 20:34:56 joerg Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -25,7 +25,7 @@ BUILD_TARGET=	zip zipcloak
 .include "../../mk/bsd.prefs.mk"
 
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-.if ${OPSYS} == "Linux" || ${OPSYS} == "Interix" || ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Interix" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly"
 CFLAGS+=	-DSYSV -DMODERN -DTERMIOS
 .else
 CFLAGS+=	-DDIRENT
