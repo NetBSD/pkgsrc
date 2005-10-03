@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11317 2005/10/03 14:43:12 taca Exp $
+$NetBSD: CHANGES,v 1.11318 2005/10/03 15:01:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4256,3 +4256,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mutt-devel to 1.5.11 [tonio 2005-10-03]
 	Updated devel/libgnomemm to 2.12.0 [adam 2005-10-03]
 	Updated devel/libgnomeuimm to 2.12.0 [adam 2005-10-03]
+	Updated devel/cscope to 15.5 [wiz 2005-10-03]
