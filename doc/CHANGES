@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11312 2005/10/03 13:51:55 adam Exp $
+$NetBSD: CHANGES,v 1.11313 2005/10/03 13:58:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4251,3 +4251,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libglademm to 2.6.1 [adam 2005-10-03]
 	Updated graphics/libgnomecanvasmm to 2.12.0 [adam 2005-10-03]
 	Updated sysutils/gnome-vfsmm to 2.12.0 [adam 2005-10-03]
+	Updated graphics/ImageMagick to 6.2.5.0 [adam 2005-10-03]
