@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11318 2005/10/03 15:01:17 wiz Exp $
+$NetBSD: CHANGES,v 1.11319 2005/10/03 15:24:14 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4257,3 +4257,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libgnomemm to 2.12.0 [adam 2005-10-03]
 	Updated devel/libgnomeuimm to 2.12.0 [adam 2005-10-03]
 	Updated devel/cscope to 15.5 [wiz 2005-10-03]
+	Updated audio/mpg123 to 0.59.18nb8 [joerg 2005-10-03]
+	Updated audio/mpg123-esound to 0.59.18nb6 [joerg 2005-10-03]
+	Updated audio/mpg123-nas to 0.59.18nb7 [joerg 2005-10-03]
