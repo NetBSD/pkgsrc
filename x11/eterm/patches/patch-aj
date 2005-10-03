@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/10/03 19:52:04 joerg Exp $
+
+--- src/eterm_utmp.h.orig	2005-07-31 00:03:43.000000000 +0000
++++ src/eterm_utmp.h
+@@ -69,7 +69,7 @@
+ # ifdef HAVE_LASTLOG_H
+ #  include <lastlog.h>
+ # endif
+-# if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__bsdi__)
++# if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__bsdi__) || defined(__DragonFly__)
+ #  include <ttyent.h>
+ # endif
+ 
