@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 20:39:56 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/10/03 13:30:20 joerg Exp $
 
 SHA1 (xwave2.tar.gz) = 7ace9911c9425eab4907a34694cd208d21a6dac2
 RMD160 (xwave2.tar.gz) = 71df0bc4640be385c33ea3a2525bc7287741d9ab
@@ -6,7 +6,7 @@ Size (xwave2.tar.gz) = 269942 bytes
 SHA1 (patch-aa) = 934f1818bc09fb8b6ccea1ec921fac95a460098f
 SHA1 (patch-ab) = 28801c1e4722275b599e9035e65136b9cc25215d
 SHA1 (patch-ac) = ae802fc9d4f882089496f41cc7b06412ae9ddf62
-SHA1 (patch-ad) = 373a8b9aff67f768e4968c349298f74d0d3deb5f
+SHA1 (patch-ad) = 87638e7555fe3d855f0972bef0942a9dcc90f535
 SHA1 (patch-ae) = 9b4fed9bb232334f2fcaaf59db152d1b078f3702
 SHA1 (patch-af) = 01d5fdad2c7056252ab64c49d9ebb06c7b5fbf6c
 SHA1 (patch-ag) = f06b4eecf0eafc985077fa2c356cd4c0e88cfe15
@@ -21,3 +21,5 @@ SHA1 (patch-ao) = 3cf9f51939be5f02ad423d79103e7faeab13a3fd
 SHA1 (patch-ap) = 7a06de821da92a2d388939fdcaf7618a0a7f96ba
 SHA1 (patch-aq) = 62164a6a788190b5cce231bfadf5d7e0a22ee0d1
 SHA1 (patch-ar) = 22874069ef6de212d3f13302e649be06d03760a9
+SHA1 (patch-as) = 71bfcb6ebf047e01d08ba9d9b091e506943aa944
+SHA1 (patch-at) = 91c193a56a9f50620d832aa37b54ae40688cd582
