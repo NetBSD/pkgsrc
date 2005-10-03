@@ -4,8 +4,8 @@
 cd `dirname $0`
 
 # Set the Defaults Here
-oo_version="OpenOffice.org 1.1.4"
-oo_home=OpenOffice.org1.1.4
+oo_version="OpenOffice.org 1.1.5"
+oo_home=OpenOffice.org1.1.5
 oo_default_prefix=/usr/local
 oo_default_netflg=-net
 oo_default_interact=no
