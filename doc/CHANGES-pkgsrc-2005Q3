@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.11 2005/10/03 14:30:25 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.12 2005/10/03 19:00:55 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -25,3 +25,5 @@ Pullup ticket 796 - requested by Min Sik Kim
 portability fix for imap-uw
 Pullup ticket 797 - requested by Shin'ichiro TAYA 
 security update for thunderbird
+Pullup ticket 798 - requested by Joerg Sonnenberger
+bugfixes for mpg123
