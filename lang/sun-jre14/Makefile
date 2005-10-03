@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/09/17 16:44:54 dillo Exp $
+# $NetBSD: Makefile,v 1.30 2005/10/03 21:36:59 wiz Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -36,8 +36,6 @@ CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sun-jre14
 PKG_SUPPORTED_OPTIONS=	sun-jre-jce
-# can be removed after 2005Q3
-PKG_OPTIONS_LEGACY_VARS=SUN_JRE14_USE_JCE:sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
 

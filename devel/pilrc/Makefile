@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/26 10:22:47 dillo Exp $
+# $NetBSD: Makefile,v 1.28 2005/10/03 21:36:58 wiz Exp $
 #
 
 DISTNAME=	pilrc-3.2
@@ -20,9 +20,6 @@ DOCDIR=		${PREFIX}/share/doc/html/pilrc
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pilrc
 PKG_SUPPORTED_OPTIONS=		gtk
 PKG_SUGGESTED_OPTIONS=		gtk
-
-# PILRC_USE_GTK should be removed after the pkgsrc-2005Q3 branch.
-PKG_OPTIONS_LEGACY_VARS+=	PILRC_USE_GTK:gtk
 
 .include "../../mk/bsd.options.mk"
 
