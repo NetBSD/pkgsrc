@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11322 2005/10/03 20:38:31 reed Exp $
+$NetBSD: CHANGES,v 1.11323 2005/10/03 21:15:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/openoffice-bin to 1.1.5 [mrauch 2005-10-03]
 	Updated pkgtools/url2pkg to 1.30 [wiz 2005-10-03]
 	Updated x11/xterm to 205 [reed 2005-10-03]
+	Added games/blobwars version 1.04.1 [wiz 2005-10-03]
