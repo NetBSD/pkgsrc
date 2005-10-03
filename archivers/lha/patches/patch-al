@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1 2005/10/03 11:20:55 joerg Exp $
+
+--- src/lha_macro.h.orig	2005-07-22 14:26:32.000000000 +0000
++++ src/lha_macro.h
+@@ -68,7 +68,6 @@ extern char    *realloc();
+ #endif
+ 
+ /* external variables */
+-extern int      errno;
+ 
+ #define	FALSE			0
+ #define TRUE			1
