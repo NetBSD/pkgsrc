@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 20:39:56 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/10/03 20:48:42 joerg Exp $
 
 SHA1 (xsidplay-1.6.5.1a.tgz) = 60f2262a8dd79b276272d49eff9a07277dc6c9aa
 RMD160 (xsidplay-1.6.5.1a.tgz) = 9a0529c7b76e7659feddc35c04aaf81ae2002984
 Size (xsidplay-1.6.5.1a.tgz) = 355698 bytes
-SHA1 (patch-aa) = ef685ad02fd72aac03c4a2379547578717a0830b
+SHA1 (patch-aa) = f5a6065735aa1b925c6b9f912a85b72741b94a87
