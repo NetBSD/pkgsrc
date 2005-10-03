@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.31 2005/09/04 20:03:10 hubertf Exp $
+# $NetBSD: url2pkg,v 1.32 2005/10/03 19:54:10 wiz Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -49,7 +49,7 @@ if [ ! -f w*/.extract_done ]; then
 			found=1
 			DISTNAME=`expr "$url" : '.*/\([^/?]*\)'`
 			name=`expr "$url" : "${A}\(.*\)/[^/]*\$"`
-			MASTER_SITES="\${${master_site}:=${name}}"
+			MASTER_SITES="\${${master_site}:=${name}/}"
 			case "${master_site}" in
 			"MASTER_SITE_SOURCEFORGE")
 				HOMEPAGE="http://$name.sourceforge.net/" ; ;;
