@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11315 2005/10/03 14:19:43 tonio Exp $
+$NetBSD: CHANGES,v 1.11316 2005/10/03 14:24:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4254,3 +4254,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/ImageMagick to 6.2.5.0 [adam 2005-10-03]
 	Updated devel/gconfmm to 2.12.0 [adam 2005-10-03]
 	Updated chat/mutt-devel to 1.5.11 [tonio 2005-10-03]
+	Updated devel/libgnomemm to 2.12.0 [adam 2005-10-03]
+	Updated devel/libgnomeuimm to 2.12.0 [adam 2005-10-03]
