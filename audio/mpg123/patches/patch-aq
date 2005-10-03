@@ -1,8 +1,21 @@
-$NetBSD: patch-aq,v 1.2 2004/11/07 08:55:04 tron Exp $
+$NetBSD: patch-aq,v 1.3 2005/10/03 15:17:14 joerg Exp $
 
---- httpget.c.orig	2004-11-07 09:47:28.000000000 +0100
-+++ httpget.c	2004-11-07 09:49:34.000000000 +0100
-@@ -55,11 +55,10 @@
+--- httpget.c.orig	2005-10-03 17:03:06.000000000 +0200
++++ httpget.c	2005-10-03 17:03:06.000000000 +0200
+@@ -18,11 +18,9 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+-#include <sys/errno.h>
++#include <errno.h>
+ #include <ctype.h>
+ 
+-extern int errno;
+-
+ #include "mpg123.h"
+ 
+ #ifndef INADDR_NONE
+@@ -55,11 +53,10 @@
  #endif
  	int pos = 0;
  
@@ -15,7 +28,7 @@ $NetBSD: patch-aq,v 1.2 2004/11/07 08:55:04 tron Exp $
  				break;
  			}
  		}
-@@ -78,6 +77,7 @@
+@@ -78,6 +75,7 @@
  	}
  #endif
  
@@ -23,7 +36,7 @@ $NetBSD: patch-aq,v 1.2 2004/11/07 08:55:04 tron Exp $
  }
  
  void encode64 (char *source,char *destination)
-@@ -111,7 +111,7 @@
+@@ -111,7 +109,7 @@
  }
  
  /* VERY  simple auth-from-URL grabber */
@@ -32,7 +45,7 @@ $NetBSD: patch-aq,v 1.2 2004/11/07 08:55:04 tron Exp $
  {
    char *pos;
  
-@@ -126,9 +126,13 @@
+@@ -126,9 +124,13 @@
        if( url[i] == '/' )
           return 0;
      }
@@ -47,7 +60,16 @@ $NetBSD: patch-aq,v 1.2 2004/11/07 08:55:04 tron Exp $
      return 1;
    }
    return 0;
-@@ -265,7 +269,10 @@
+@@ -199,7 +201,7 @@
+ 	strncpy(p0, portptr, stringlength);
+ 	*(p0 + stringlength) = '\0';
+ 
+-	for (p = p0; *p && isdigit(*p); p++)
++	for (p = p0; *p && isdigit((unsigned char)*p); p++)
+ 		;
+ 	*p = '\0';
+ 	*port = (char *)p0;
+@@ -265,7 +267,10 @@
  	strncpy (purl, url, 1023);
  	purl[1023] = '\0';
  
@@ -59,7 +81,7 @@ $NetBSD: patch-aq,v 1.2 2004/11/07 08:55:04 tron Exp $
  
  	do {
  		strcpy (request, "GET ");
-@@ -399,6 +406,7 @@
+@@ -399,6 +404,7 @@
  		fprintf (stderr, "Too many HTTP relocations.\n");
  		exit (1);
  	}
