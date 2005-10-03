@@ -109,6 +109,7 @@ i740
 i810	
 iconv	
 id3	
+idn		    Internationalized Domain Names (IDN) support	
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 ifevents	
 imlib			Use imlib as imaging library.
