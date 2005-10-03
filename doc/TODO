@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3954 2005/10/03 15:00:54 wiz Exp $
+$NetBSD: TODO,v 1.3955 2005/10/03 15:01:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,7 +401,6 @@ Suggested package updates
 	o criticalmass-0.9.11
 	o crossfire-client-1.7.1
 	o crossfire-server-1.7.1
-	o cscope-15.5
 	o cstream-2.5
 	o cue-20050228
 	o cuetools-1.3
