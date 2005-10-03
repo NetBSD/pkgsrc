@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mysqld.sh,v 1.3 2004/10/28 01:08:15 xtraeme Exp $
+# $NetBSD: mysqld.sh,v 1.4 2005/10/03 14:24:29 xtraeme Exp $
 #
 # PROVIDE: mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -24,9 +24,9 @@ name="mysqld"
 rcvar=${name}
 command="@PREFIX@/bin/mysqld_safe"
 procname="@PREFIX@/libexec/${name}"
-mysqld_user="@MYSQL_USER@"
-mysqld_group="@MYSQL_GROUP@"
-mysqld_datadir="@MYSQL_DATADIR@"
+: ${mysqld_user=@MYSQL_USER@}
+: ${mysqld_group=@MYSQL_GROUP@}
+: ${mysqld_datadir=@MYSQL_DATADIR@}
 pidfile="${mysqld_datadir}/`@HOSTNAME_CMD@`.pid"
 
 extra_commands="initdb"
