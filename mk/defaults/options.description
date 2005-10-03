@@ -66,14 +66,14 @@ eb			Enable EB dictionary library support.
 edit	
 emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 esound			Enable support for the Enlightment Sound Daemon.
-exim-build-eximon	Also build the X based exim queue monitoring tool
-exim-content-scan	Call virus and spam scanning direct from ACLs
-exim-lookup-dnsdb	Use DNS for lookups (as general database facility)
-exim-lookup-dsearch	Lookup via key as filename in directory
-exim-lookup-ldap	LDAP lookup using a query in the form of a URL
-exim-lookup-mysql	Perform lookups in MySQL database
-exim-lookup-whoson	Lookup in whoson dynamic IP address
-exim-old-demime		Use deprecated "demime" condition in the DATA ACL
+exim-build-eximon	Also build the X based exim queue monitoring tool.
+exim-content-scan	Call virus and spam scanning direct from ACLs.
+exim-lookup-dnsdb	Use DNS for lookups (as general database facility).
+exim-lookup-dsearch	Lookup via key as filename in directory.
+exim-lookup-ldap	LDAP lookup using a query in the form of a URL.
+exim-lookup-mysql	Perform lookups in MySQL database.
+exim-lookup-whoson	Lookup in whoson dynamic IP address.
+exim-old-demime		Use deprecated "demime" condition in the DATA ACL.
 ezmlm-althash		Patch to hash subscriber list case-insensitively.
 faac	
 faad	
@@ -84,7 +84,7 @@ firefox			Use firefox as gecko rendering engine.
 flac	
 freetype	
 gd	
-gdbm			Use the GNU gdmb DMB library
+gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
 ggi			Enable GGI support.
 gif			Enable GIF support.
@@ -118,7 +118,7 @@ i810
 iconv	
 id3	
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
-idn		    Internationalized Domain Names (IDN) support	
+idn			Internationalized Domain Names (IDN) support.
 ifevents	
 imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
@@ -232,7 +232,7 @@ s3
 s3virge	
 samba	
 sasl			Enable SASL support.
-saslauthd		Use the Cyrus saslauthd daemon for authentication
+saslauthd		Use the Cyrus saslauthd daemon for authentication.
 savage	
 sdl			Use SDL as display library.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
@@ -286,8 +286,8 @@ x11			Enable X11 support.
 xface	
 xft	
 xft2	
-xlockmore-allow-root	Allow root to get access
-xlockmore-dpms		Use DPMS
+xlockmore-allow-root	Allow root to get access.
+xlockmore-dpms		Use DPMS.
 xmlimportbugs	
 xmms-eq	
 xterm-256color		Enable 256 color support.
