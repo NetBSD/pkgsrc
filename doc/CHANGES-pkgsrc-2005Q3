@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.9 2005/10/02 20:13:03 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.10 2005/10/03 08:48:08 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -21,3 +21,5 @@ Pullup ticket 794 - requested by Shin'ichiro TAYA
 PLIST fix for anthy-elisp
 Pullup ticket 790 - requested by Ignatios Souvatzis
 distfile update for links
+Pullup ticket 796 - requested by Min Sik Kim
+portability fix for imap-uw
