@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11310 2005/10/03 13:12:31 adam Exp $
+$NetBSD: CHANGES,v 1.11311 2005/10/03 13:24:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/verifypc to 1.2 [jmmv 2005-10-03]
 	Updated devel/glibmm to 2.8.0 [adam 2005-10-03]
 	Updated devel/gtkmm to 2.8.0 [adam 2005-10-03]
+	Updated devel/libglademm to 2.6.1 [adam 2005-10-03]
