@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2005/07/25 11:30:17 tron Exp $
+@comment $NetBSD: PLIST,v 1.42 2005/10/03 13:57:40 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -79,6 +79,7 @@ include/magick/pixel.h
 include/magick/prepress.h
 include/magick/profile.h
 include/magick/quantize.h
+include/magick/quantum.h
 include/magick/random_.h
 include/magick/registry.h
 include/magick/resize.h
@@ -275,11 +276,13 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/examples.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/formats.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/identify.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/import.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/index.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/install-source.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/license.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/links.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/magick-core.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/magick-wand.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/magick-vector-graphics.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/magick.css
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/mailing-list.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/miff.html
@@ -290,6 +293,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/quantize.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/resources.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/search.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/sponsors.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/subversion.html
 @dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www/api
 @dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++
 @dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www
