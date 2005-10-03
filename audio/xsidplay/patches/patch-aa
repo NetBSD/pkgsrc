@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2004/09/17 23:21:27 hubertf Exp $
+$NetBSD: patch-aa,v 1.10 2005/10/03 20:48:42 joerg Exp $
 
---- configure.orig	2003-02-01 21:18:09.000000000 +0100
+--- configure.orig	2003-02-01 20:18:09.000000000 +0000
 +++ configure
 @@ -6577,6 +6577,7 @@ else
  fi
@@ -35,6 +35,15 @@ $NetBSD: patch-aa,v 1.9 2004/09/17 23:21:27 hubertf Exp $
  
  
  if test -n "$ESD_CONFIG"; then
+@@ -6705,7 +6708,7 @@ EOF
+     $CP src/audio/linux/* src/audio
+     echo "$ac_t""linux (OSS)" 1>&6
+        ;;
+-  *freebsd*) my_have_audio_driver=yes
++  *freebsd*|*dragonfly*) my_have_audio_driver=yes
+     cat >> confdefs.h <<\EOF
+ #define HAVE_FREEBSD 1
+ EOF
 @@ -7789,6 +7792,7 @@ fi
      done
  
