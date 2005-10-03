@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2005/01/06 15:52:19 mrauch Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2005/10/03 16:03:19 mrauch Exp $
 ${OPENOFFICE_VERSION}/LICENSE
 ${OPENOFFICE_VERSION}/LICENSE.html
 ${OPENOFFICE_VERSION}/README
@@ -357,6 +357,7 @@ ${OPENOFFICE_VERSION}/program/libwrp645${OPENOFFICE_DLLSUFFIX}.so
 ${OPENOFFICE_VERSION}/program/libxcr645${OPENOFFICE_DLLSUFFIX}.so
 ${OPENOFFICE_VERSION}/program/libxmx645${OPENOFFICE_DLLSUFFIX}.so
 ${OPENOFFICE_VERSION}/program/libxo645${OPENOFFICE_DLLSUFFIX}.so
+${OPENOFFICE_VERSION}/program/libxod645${OPENOFFICE_DLLSUFFIX}.so
 ${OPENOFFICE_VERSION}/program/libxpcom.so
 ${OPENOFFICE_VERSION}/program/libxsltdlg645${OPENOFFICE_DLLSUFFIX}.so
 ${OPENOFFICE_VERSION}/program/libxsltfilter645${OPENOFFICE_DLLSUFFIX}.so
@@ -379,6 +380,7 @@ ${OPENOFFICE_VERSION}/program/pagein-writer
 ${OPENOFFICE_VERSION}/program/pkgchk
 ${OPENOFFICE_VERSION}/program/pkgchk.bin
 ${OPENOFFICE_VERSION}/program/pluginapp.bin
+${OPENOFFICE_VERSION}/program/pp5.dat
 ${OPENOFFICE_VERSION}/program/proxyfac.uno.so
 ${OPENOFFICE_VERSION}/program/python
 ${OPENOFFICE_VERSION}/program/python-core
