@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SolarisIntel,v 1.2 2005/02/27 11:10:09 wiz Exp $
+@comment $NetBSD: PLIST.SolarisIntel,v 1.3 2005/10/03 16:09:43 mrauch Exp $
 OpenOffice.org${VER}/LICENSE
 OpenOffice.org${VER}/LICENSE.html
 OpenOffice.org${VER}/README
@@ -392,6 +392,7 @@ OpenOffice.org${VER}/program/libxmlfa645ss.so
 OpenOffice.org${VER}/program/libxmlfd645ss.so
 OpenOffice.org${VER}/program/libxmx645ss.so
 OpenOffice.org${VER}/program/libxo645ss.so
+OpenOffice.org${VER}/program/libxod645ss.so
 OpenOffice.org${VER}/program/libxpcom.so
 OpenOffice.org${VER}/program/libxsltdlg645ss.so
 OpenOffice.org${VER}/program/libxsltfilter645ss.so
@@ -415,6 +416,7 @@ OpenOffice.org${VER}/program/pangox.aliases
 OpenOffice.org${VER}/program/pkgchk
 OpenOffice.org${VER}/program/pkgchk.bin
 OpenOffice.org${VER}/program/pluginapp.bin
+OpenOffice.org${VER}/program/pp5.dat
 OpenOffice.org${VER}/program/proxyfac.uno.so
 OpenOffice.org${VER}/program/python
 OpenOffice.org${VER}/program/python-core
@@ -1371,10 +1373,10 @@ OpenOffice.org${VER}/share/basic/WebWizard/Language.xba
 OpenOffice.org${VER}/share/basic/WebWizard/WebWzrd.xdl
 OpenOffice.org${VER}/share/basic/WebWizard/dialog.xlb
 OpenOffice.org${VER}/share/basic/WebWizard/script.xlb
-OpenOffice.org${VER}/share/cde/auto pilots/OpenOffice.org_1.1.4_agenda
-OpenOffice.org${VER}/share/cde/auto pilots/OpenOffice.org_1.1.4_fax
-OpenOffice.org${VER}/share/cde/auto pilots/OpenOffice.org_1.1.4_letter
-OpenOffice.org${VER}/share/cde/auto pilots/OpenOffice.org_1.1.4_memo
+OpenOffice.org${VER}/share/cde/auto pilots/OpenOffice.org_1.1.5_agenda
+OpenOffice.org${VER}/share/cde/auto pilots/OpenOffice.org_1.1.5_fax
+OpenOffice.org${VER}/share/cde/auto pilots/OpenOffice.org_1.1.5_letter
+OpenOffice.org${VER}/share/cde/auto pilots/OpenOffice.org_1.1.5_memo
 OpenOffice.org${VER}/share/cde/dtappintegrate
 OpenOffice.org${VER}/share/cde/dtint
 OpenOffice.org${VER}/share/cde/icons/002_text_document.l.xpm
@@ -1482,13 +1484,13 @@ OpenOffice.org${VER}/share/cde/icons/ooo_writer.m.xpm
 OpenOffice.org${VER}/share/cde/icons/ooo_writer.s.xpm
 OpenOffice.org${VER}/share/cde/icons/ooo_writer.t.xpm
 OpenOffice.org${VER}/share/cde/information and setup/OpenOffice.org on the Web
-OpenOffice.org${VER}/share/cde/information and setup/OpenOffice.org_1.1.4_printeradmin
-OpenOffice.org${VER}/share/cde/information and setup/OpenOffice.org_1.1.4_setup
+OpenOffice.org${VER}/share/cde/information and setup/OpenOffice.org_1.1.5_printeradmin
+OpenOffice.org${VER}/share/cde/information and setup/OpenOffice.org_1.1.5_setup
 OpenOffice.org${VER}/share/cde/information and setup/README.html
-OpenOffice.org${VER}/share/cde/other/OpenOffice.org_1.1.4_labels
-OpenOffice.org${VER}/share/cde/other/OpenOffice.org_1.1.4_masterdoc
-OpenOffice.org${VER}/share/cde/other/OpenOffice.org_1.1.4_mathdoc
-OpenOffice.org${VER}/share/cde/other/OpenOffice.org_1.1.4_vcards
+OpenOffice.org${VER}/share/cde/other/OpenOffice.org_1.1.5_labels
+OpenOffice.org${VER}/share/cde/other/OpenOffice.org_1.1.5_masterdoc
+OpenOffice.org${VER}/share/cde/other/OpenOffice.org_1.1.5_mathdoc
+OpenOffice.org${VER}/share/cde/other/OpenOffice.org_1.1.5_vcards
 OpenOffice.org${VER}/share/cde/types/af.UTF-8/calc.dt
 OpenOffice.org${VER}/share/cde/types/af.UTF-8/calc.fp
 OpenOffice.org${VER}/share/cde/types/af.UTF-8/draw.dt
