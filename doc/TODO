@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3953 2005/10/03 14:19:43 tonio Exp $
+$NetBSD: TODO,v 1.3954 2005/10/03 15:00:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -667,6 +667,7 @@ Suggested package updates
 	o muse-0.9.1
 	o nagios-2.0b3 [replacing netsaint]
 	o nail-11.25
+	o naim-0.11.8
 	o nano-1.2.5
 	o nap-1.5.3
 	o navi2ch-1.7.5
@@ -1078,6 +1079,7 @@ Suggested package updates
 	o weechat-0.1.1
 	o weewm-0.01
 	o winbind-3.0.13
+	o wine-20050930
 	o wmctrl-1.07
 	o wmweather-2.4.3
 	o www6to4-1.6
