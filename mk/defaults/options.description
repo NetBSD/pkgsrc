@@ -132,7 +132,7 @@ jasper			Enable JPEG 2000 support using the jasper library.
 java	
 jpeg			Enable JPEG support.
 jpilot	
-jwhois			Enable cache support.
+jwhois-enable-cache	Enable cache support.
 kde	
 kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
