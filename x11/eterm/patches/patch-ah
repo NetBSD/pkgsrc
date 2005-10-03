@@ -1,7 +1,16 @@
-$NetBSD: patch-ah,v 1.3 2002/12/26 04:58:45 wiz Exp $
+$NetBSD: patch-ah,v 1.4 2005/10/03 19:52:04 joerg Exp $
 --- src/utmp.c.orig	Thu Jun 27 14:15:53 2002
 +++ src/utmp.c	Sat Dec 14 21:44:17 2002
-@@ -47,8 +47,13 @@
+@@ -38,7 +38,7 @@ static const char cvs_ident[] = "$Id: ut
+ # endif
+ 
+ /* don't go off end of ut_id & remember if an entry has been made */
+-#  if defined(USE_SYSV_UTMP) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__bsdi__)
++#  if defined(USE_SYSV_UTMP) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__bsdi__) || defined(__DragonFly__)
+ static char ut_id[5];           /* remember if entry to utmp made */
+ #  else
+ static int utmp_pos;            /* BSD position of utmp-stamp */
+@@ -47,8 +47,13 @@ static int utmp_pos;            /* BSD p
  # ifdef USE_SYSV_UTMP
  
  #  ifdef HAVE_UTMPX_H
@@ -16,7 +25,7 @@ $NetBSD: patch-ah,v 1.3 2002/12/26 04:58:45 wiz Exp $
  #   define update_wtmp updwtmpx
  #  else /* HAVE_UTMPX_H */
  
-@@ -128,9 +133,9 @@
+@@ -128,9 +133,9 @@ add_utmp_entry(const char *pty, const ch
      privileges(INVOKE);
  #   ifdef HAVE_UTMPX_H
      getutmp(&utmp, &utmp2);
@@ -28,7 +37,7 @@ $NetBSD: patch-ah,v 1.3 2002/12/26 04:58:45 wiz Exp $
  #   endif
  
      /* set up the new entry */
-@@ -152,16 +157,15 @@
+@@ -152,16 +157,15 @@ add_utmp_entry(const char *pty, const ch
      /*
       * write a utmp entry to the utmp file
       */
@@ -47,7 +56,7 @@ $NetBSD: patch-ah,v 1.3 2002/12/26 04:58:45 wiz Exp $
      privileges(REVERT);
      return;
      fd = 0;
-@@ -177,19 +181,19 @@
+@@ -177,19 +181,19 @@ remove_utmp_entry(void)
      if (!ut_id[0])
          return;                 /* entry not made */
  
@@ -75,3 +84,30 @@ $NetBSD: patch-ah,v 1.3 2002/12/26 04:58:45 wiz Exp $
  
  #   else /* HAVE_UTMPX_H */
      struct utmp *putmp;
+@@ -222,7 +226,7 @@ remove_utmp_entry(void)
+ # else /* USE_SYSV_UTMP */
+ /* BSD utmp support */
+ 
+-#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__bsdi__)
++#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__bsdi__) || defined(__DragonFly__)
+ 
+ /* used to hold the line we are using */
+ static char ut_line[32];
+@@ -348,7 +352,7 @@ add_utmp_entry(const char *pty, const ch
+         return;
+     }
+ 
+-#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__bsdi__)
++#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__bsdi__) || defined(__DragonFly__)
+     strncpy(ut_line, pty, 31);
+ 
+     strncpy(utmp.ut_line, pty, UT_LINESIZE);
+@@ -376,7 +380,7 @@ add_utmp_entry(const char *pty, const ch
+ void
+ remove_utmp_entry(void)
+ {
+-#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__bsdi__)
++#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__bsdi__) || defined(__DragonFly__)
+     logout(ut_line);
+     logwtmp(ut_line, "", "");
+ #  else /* __FreeBSD__ */
