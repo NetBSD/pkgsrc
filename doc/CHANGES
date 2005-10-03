@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11307 2005/10/03 04:53:50 minskim Exp $
+$NetBSD: CHANGES,v 1.11308 2005/10/03 09:46:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4245,3 +4245,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/generator-cbiere to 0.35r2 [wiz 2005-10-02]
 	Updated archivers/unalz to 0.52 [minskim 2005-10-03]
 	Added x11/libexo version 0.3.0 [minskim 2005-10-03]
+	Updated pkgtools/verifypc to 1.2 [jmmv 2005-10-03]
