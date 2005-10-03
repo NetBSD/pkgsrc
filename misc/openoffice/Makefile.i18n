@@ -1,3 +1,5 @@
+# $NetBSD: Makefile.i18n,v 1.4 2005/10/03 16:03:19 mrauch Exp $
+
 .if ${PKG_LANG:C/_.*//} == "afrikaans"
 OPENOFFICE_ISOCODE=	af
 OPENOFFICE_LANG=	afrikaans

@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.70 2005/09/12 18:42:11 mrauch Exp $
+# $NetBSD: Makefile,v 1.71 2005/10/03 16:03:19 mrauch Exp $
 
-DISTNAME=		openoffice-1.1.4
-PKGREVISION=		2
+DISTNAME=		openoffice-1.1.5
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.4/}
-DISTFILES=		OOo_1.1.4_source.tar.gz
+MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.5/}
+DISTFILES=		OOo_1.1.5_src.tar.gz
 DISTFILES+=		gpc231.tar.Z
-DISTFILES+=		ooo_addons_114.tar.bz2
+DISTFILES+=		ooo_addons_115.tar.bz2
 SITES_gpc231.tar.Z= 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/
-SITES_ooo_addons_114.tar.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
+SITES_ooo_addons_115.tar.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
 			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
@@ -21,7 +20,7 @@ BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
-WRKSRC=			${WRKDIR}/config_office
+WRKSRC=			${WRKDIR}/OOo_1.1.5/config_office
 GCC_REQD=		3.0
 USE_LANGUAGES+=		c c++
 
@@ -53,7 +52,7 @@ PLIST_SRC+=             ${PKGDIR}/PLIST.${OPSYS}
 . endif
 MESSAGE_SUBST+=		OPENOFFICE_VERSION=${OPENOFFICE_VERSION}
 
-OPENOFFICE_VERSION=	OpenOffice.org1.1.4
+OPENOFFICE_VERSION=	OpenOffice.org1.1.5
 
 INSTALLATION_DIRS=	bin
 
@@ -95,7 +94,7 @@ do-install:
 		< ${FILESDIR}/soffice > ${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
 .for i in scalc sdraw simpress swriter
-	${LN} -sf ${PREFIX}/${OPENOFFICE_VERSION}/program/$i ${PREFIX}/bin/$i
+	${LN} -sf ${PREFIX}/${OPENOFFICE_VERSION}/program/${i} ${PREFIX}/bin/${i}
 .endfor
 
 # everything specific to your OS/Arch goes into its own Makefile

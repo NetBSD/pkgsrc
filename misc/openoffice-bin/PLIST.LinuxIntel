@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.LinuxIntel,v 1.2 2005/02/27 11:10:09 wiz Exp $
+@comment $NetBSD: PLIST.LinuxIntel,v 1.3 2005/10/03 16:09:43 mrauch Exp $
 OpenOffice.org${VER}/LICENSE
 OpenOffice.org${VER}/LICENSE.html
 OpenOffice.org${VER}/README
@@ -320,6 +320,9 @@ OpenOffice.org${VER}/program/libpl645li.so
 OpenOffice.org${VER}/program/libplacewareli.so
 OpenOffice.org${VER}/program/libplc4.so
 OpenOffice.org${VER}/program/libplds4.so
+OpenOffice.org${VER}/program/libportaudio.so
+OpenOffice.org${VER}/program/libportaudio.so.0
+OpenOffice.org${VER}/program/libportaudio.so.0.0.18
 OpenOffice.org${VER}/program/libpreload645li.so
 OpenOffice.org${VER}/program/libprldap50.so
 OpenOffice.org${VER}/program/libproxyset.so
@@ -352,6 +355,9 @@ OpenOffice.org${VER}/program/libsdbc2.so
 OpenOffice.org${VER}/program/libset645li.so
 OpenOffice.org${VER}/program/libsfx645li.so
 OpenOffice.org${VER}/program/libsm645li.so
+OpenOffice.org${VER}/program/libsndfile.so
+OpenOffice.org${VER}/program/libsndfile.so.1
+OpenOffice.org${VER}/program/libsndfile.so.1.0.9
 OpenOffice.org${VER}/program/libso645li.so
 OpenOffice.org${VER}/program/libsot645li.so
 OpenOffice.org${VER}/program/libspa645li.so
@@ -396,6 +402,7 @@ OpenOffice.org${VER}/program/libxmlfa645li.so
 OpenOffice.org${VER}/program/libxmlfd645li.so
 OpenOffice.org${VER}/program/libxmx645li.so
 OpenOffice.org${VER}/program/libxo645li.so
+OpenOffice.org${VER}/program/libxod645li.so
 OpenOffice.org${VER}/program/libxpcom.so
 OpenOffice.org${VER}/program/libxsltdlg645li.so
 OpenOffice.org${VER}/program/libxsltfilter645li.so
@@ -419,6 +426,7 @@ OpenOffice.org${VER}/program/pangox.aliases
 OpenOffice.org${VER}/program/pkgchk
 OpenOffice.org${VER}/program/pkgchk.bin
 OpenOffice.org${VER}/program/pluginapp.bin
+OpenOffice.org${VER}/program/pp5.dat
 OpenOffice.org${VER}/program/proxyfac.uno.so
 OpenOffice.org${VER}/program/python
 OpenOffice.org${VER}/program/python-core
