@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11316 2005/10/03 14:24:11 adam Exp $
+$NetBSD: CHANGES,v 1.11317 2005/10/03 14:43:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4247,12 +4247,12 @@ Changes to the packages collection and infrastructure in 2005:
 	Added x11/libexo version 0.3.0 [minskim 2005-10-03]
 	Updated pkgtools/verifypc to 1.2 [jmmv 2005-10-03]
 	Updated devel/glibmm to 2.8.0 [adam 2005-10-03]
-	Updated devel/gtkmm to 2.8.0 [adam 2005-10-03]
+	Updated x11/gtkmm to 2.8.0 [adam 2005-10-03]
 	Updated devel/libglademm to 2.6.1 [adam 2005-10-03]
 	Updated graphics/libgnomecanvasmm to 2.12.0 [adam 2005-10-03]
 	Updated sysutils/gnome-vfsmm to 2.12.0 [adam 2005-10-03]
 	Updated graphics/ImageMagick to 6.2.5.0 [adam 2005-10-03]
 	Updated devel/gconfmm to 2.12.0 [adam 2005-10-03]
-	Updated chat/mutt-devel to 1.5.11 [tonio 2005-10-03]
+	Updated mail/mutt-devel to 1.5.11 [tonio 2005-10-03]
 	Updated devel/libgnomemm to 2.12.0 [adam 2005-10-03]
 	Updated devel/libgnomeuimm to 2.12.0 [adam 2005-10-03]
