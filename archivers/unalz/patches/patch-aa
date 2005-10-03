@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2005/10/01 10:55:35 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2005/10/03 04:12:21 minskim Exp $
 
 --- Makefile.orig	2005-07-08 18:32:15.000000000 -0700
 +++ Makefile
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.3 2005/10/01 10:55:35 minskim Exp $
 -OBJ = main.o UnAlz.o UnAlzUtils.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o zlib/adler32.o zlib/crc32.o zlib/infback.o zlib/inffast.o zlib/inflate.o zlib/inftrees.o zlib/zutil.o bzip2/blocksort.o bzip2/compress.o bzip2/crctable.o bzip2/huffman.o bzip2/randtable.o
 +#CPP = g++
 +#CC  = gcc
-+OBJ = main.o UnAlz.o UnAlzUtils.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o
++OBJ = main.o UnAlz.o UnAlzUtils.o UnAlzBz2decompress.o UnAlzBzip2.o
  BIN = unalz
 -LDFLAGS = 
 -CFLAGS = -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 
