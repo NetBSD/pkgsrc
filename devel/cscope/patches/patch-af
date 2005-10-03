@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2004/12/17 22:29:06 wiz Exp $
+$NetBSD: patch-af,v 1.5 2005/10/03 15:00:12 wiz Exp $
 
---- src/main.c.orig	2002-07-28 17:40:07.000000000 +0200
+--- src/main.c.orig	2003-08-14 16:36:18.000000000 +0200
 +++ src/main.c
-@@ -319,9 +319,32 @@ lastarg:
+@@ -330,9 +330,32 @@ lastarg:
  	}
  
  	/* create the temporary file names */
