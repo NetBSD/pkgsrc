@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.8 2005/09/03 03:21:23 jlam Exp $
+# $NetBSD: options.mk,v 1.9 2005/10/03 14:16:53 tonio Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
-PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl mutt-hcache
+PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl mutt-hcache idn
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
@@ -57,4 +57,14 @@ CONFIGURE_ENV+=		BDB_LIB_DIR=${BDBBASE}/lib
 CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//}
 .else
 CONFIGURE_ARGS+=	--disable-hcache
+.endif
+
+###
+### Internationalized Domain Names
+###
+.if !empty(PKG_OPTIONS:Midn)
+.  include "../../devel/libidn/buildlink3.mk"
+CONFIGURE_ARGS+=  --with-idn=${BUILDLINK_PREFIX.libidn}
+.else
+CONFIGURE_ARGS+=  --disable-idn
 .endif
