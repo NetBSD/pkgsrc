@@ -1,0 +1,9 @@
+--- jartool.c.orig	2005-07-22 14:15:00.000000000 +0000
++++ jartool.c	2005-07-22 14:15:09.000000000 +0000
+@@ -171,6 +171,4 @@
+ 
+-extern int errno;
+-
+ void usage(char*);
+ void add_entry(struct zipentry *);
+ void init_headers();
