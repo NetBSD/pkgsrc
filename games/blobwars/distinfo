@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/03 21:13:18 wiz Exp $
+
+SHA1 (blobwars-1.04-1.tar.gz) = c351a8e4a507e0636b8856cdd174b7b131b2772d
+RMD160 (blobwars-1.04-1.tar.gz) = d211649d6946cdf2db3170947f5ef9816ffcb653
+Size (blobwars-1.04-1.tar.gz) = 7682669 bytes
+SHA1 (patch-aa) = 1e884e34d33406d09857ceaa378041aeb59b760d
