@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11319 2005/10/03 15:24:14 joerg Exp $
+$NetBSD: CHANGES,v 1.11320 2005/10/03 16:14:30 mrauch Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4260,3 +4260,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/mpg123 to 0.59.18nb8 [joerg 2005-10-03]
 	Updated audio/mpg123-esound to 0.59.18nb6 [joerg 2005-10-03]
 	Updated audio/mpg123-nas to 0.59.18nb7 [joerg 2005-10-03]
+	Updated misc/openoffice to 1.1.5 [mrauch 2005-10-03]
+	Updated misc/openoffice-bin to 1.1.5 [mrauch 2005-10-03]
