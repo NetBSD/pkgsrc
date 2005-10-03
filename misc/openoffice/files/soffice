@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: soffice,v 1.5 2005/01/06 15:52:20 mrauch Exp $
+#	$NetBSD: soffice,v 1.6 2005/10/03 15:53:34 mrauch Exp $
 #
 SOINST=@@PREFIX@@/@@OPENOFFICE_VERSION@@
 [ "$SOFFICE" = "" ] && SOFFICE=$HOME/@@OPENOFFICE_VERSION@@
@@ -49,5 +49,9 @@ if [ -z $PTHREAD_DIAGASSERT ]; then
 PTHREAD_DIAGASSERT=AEL
 export PTHREAD_DIAGASSERT
 fi
+
+# Let the standard pkgsrc libraries be found by dlopen()
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:@@PREFIX@@/lib
+export LD_LIBRARY_PATH
 
 exec ${SOFFICE}/soffice "$@"
