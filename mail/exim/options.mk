@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/10/03 18:45:50 abs Exp $
+# $NetBSD: options.mk,v 1.3 2005/10/03 20:20:18 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-build-eximon exim-content-scan exim-lookup-dnsdb
@@ -10,6 +10,7 @@ PKG_SUGGESTED_OPTIONS=	exim-content-scan exim-lookup-dsearch exim-old-demime
 
 .if !empty(PKG_OPTIONS:Mexim-build-eximon)
 LOCAL_MAKEFILE_OPTIONS+=EXIM_MONITOR=eximon.bin
+PLIST_SRC+=${PKGDIR}/PLIST.eximon
 USE_X11BASE=yes
 .endif
 
