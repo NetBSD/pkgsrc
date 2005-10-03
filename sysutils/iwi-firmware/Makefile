@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/06/09 07:30:03 skrll Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/03 16:45:08 skrll Exp $
 #
 
 DISTNAME=		ipw2200-fw-2.3
 PKGNAME=		iwi-firmware-2.3
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://damien.bergamini.free.fr/iwifw/
 EXTRACT_SUFX=		.tgz
@@ -36,6 +37,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-ibss.fw ${PREFIX}/libdata/if_iwi/iwi-ibss.fw
 	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-ibss_ucode.fw ${PREFIX}/libdata/if_iwi/iwi-ucode-ibss.fw
 	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-sniffer.fw ${PREFIX}/libdata/if_iwi/iwi-sniffer.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-sniffer_ucode.fw ${PREFIX}/libdata/if_iwi/iwi-sniffer-ibss.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw-2.3-sniffer_ucode.fw ${PREFIX}/libdata/if_iwi/iwi-ucode-sniffer.fw
 
 .include "../../mk/bsd.pkg.mk"
