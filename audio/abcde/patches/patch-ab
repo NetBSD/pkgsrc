@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2005/05/15 00:36:28 snj Exp $
+$NetBSD: patch-ab,v 1.9 2005/10/04 20:58:43 sketch Exp $
 
---- abcde.conf.orig	2005-03-01 05:19:50.000000000 -0800
-+++ abcde.conf	2005-05-14 08:15:50.000000000 -0700
-@@ -174,7 +174,7 @@
+--- abcde.conf.orig	2005-10-04 21:45:58.000000000 +0100
++++ abcde.conf	2005-10-04 21:46:09.000000000 +0100
+@@ -184,7 +184,7 @@
  #ACTIONS=cddb,read,encode,tag,move,clean
  
  # CD device you want to read from
 -#CDROM=/dev/cdrom
 +#CDROM=/dev/rcd0d
- 
- # Optional CDROM device-ID for readers requiring the SCSI-syntax Bus,ID,Lun
- #CDROMID=0,3,0
+ # If we are using the IDE bus, we need CDPARANOIACDROMBUS defined as "d"
+ # If we are using the ide-scsi emulation layer, we need to define a "g"
+ #CDPARANOIACDROMBUS="d"
