@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1720 2005/09/28 08:24:52 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1721 2005/10/04 16:45:25 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -2128,7 +2128,7 @@ real-su-install: ${MESSAGE}
 		#
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
-		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
+		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.[0-9])(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
 	if [ "${_MANCOMPRESSED}" = "yes" -a "${_MANZ}" != "yes" ]; then	\
 		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
@@ -4507,13 +4507,13 @@ _PLIST_AWK_MANINSTALL=							\
 # plist awk pattern-action statement to strip '.gz' from man
 # entries
 _PLIST_AWK_STRIP_MANZ=							\
-/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)\.gz$$/ { \
+/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*[0-9])\.gz$$/ { \
 	$$0 = substr($$0, 1, length($$0) - 3);				\
 }
 
 # plist awk pattern-action statement to add '.gz' to man entries
 _PLIST_AWK_ADD_MANZ=							\
-/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)$$/ { \
+/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*[0-9])$$/ { \
 	$$0 = $$0 ".gz";						\
 }
 
