@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/09/18 15:22:11 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/04 16:50:50 tv Exp $
 
 MODNAME=		SQLite
 PKGMODNAME=		sqlite
 PKGNAME=		php-${PKGMODNAME}-${PHP_BASE_VERS}.${PECL_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 PECL_VERSION=		1.0.3
 CATEGORIES+=		databases
 MAINTAINER=		tech-pkg@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.9 2005/09/20 10:56:38 abs Exp $
+# $NetBSD: ext.mk,v 1.10 2005/10/04 16:50:50 tv Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -8,6 +8,10 @@
 
 .if !defined(PHPEXT_MK)
 PHPEXT_MK=	defined
+
+.if defined(PECL_VERSION)
+HOMEPAGE?=		http://pecl.php.net/package/${MODNAME}
+.endif
 
 .include "../../lang/php/phpversion.mk"
 
