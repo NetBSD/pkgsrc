@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1724 2005/10/04 17:43:57 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1725 2005/10/04 20:50:49 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -2138,7 +2138,7 @@ real-su-install: ${MESSAGE}
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
 	if [ "${_MANCOMPRESSED}" = "yes" -a "${_MANZ}" != "yes" ]; then	\
 		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
-		 ${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
+		${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|^man/|${PKGMANDIR}/|' -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
