@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11324 2005/10/04 01:52:05 minskim Exp $
+$NetBSD: CHANGES,v 1.11325 2005/10/04 02:32:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added games/blobwars version 1.04.1 [wiz 2005-10-03]
 	Updated x11/wxGTK to 2.6.2 [minskim 2005-10-04]
 	Updated x11/wxGTK-contrib to 2.6.2 [minskim 2005-10-04]
+	Updated x11/py-wxWidgets to 2.6.1.0nb1 [minskim 2005-10-04]
