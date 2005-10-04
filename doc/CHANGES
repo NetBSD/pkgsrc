@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11326 2005/10/04 02:58:18 minskim Exp $
+$NetBSD: CHANGES,v 1.11327 2005/10/04 09:56:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4269,3 +4269,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/wxGTK-contrib to 2.6.2 [minskim 2005-10-04]
 	Updated x11/py-wxWidgets to 2.6.1.0nb1 [minskim 2005-10-04]
 	Updated graphics/gtkam to 0.1.12nb1 [minskim 2005-10-04]
+	Updated editors/abiword to 2.4.0 [adam 2005-10-04]
+	Updated editors/abiword-plugins to 2.4.0 [adam 2005-10-04]
