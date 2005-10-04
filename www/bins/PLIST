@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/02/18 13:48:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/10/04 19:12:01 wiz Exp $
 bin/anti_bins
 bin/bins
 bin/bins_cleanupgallery
@@ -8,8 +8,10 @@ man/man1/bins_edit.1
 share/doc/html/bins/bins-edit-gui_man.html
 share/doc/html/bins/bins_edit_man.html
 share/doc/html/bins/bins_man.html
+share/doc/html/bins/contact.html
 share/doc/html/bins/download.html
 share/doc/html/bins/examples.html
+share/doc/html/bins/faq.html
 share/doc/html/bins/index.html
 share/doc/html/bins/index_fr.html
 share/doc/html/bins/install.html
@@ -29,25 +31,8 @@ share/doc/html/bins/usage_desc_gui_gqview.html
 share/doc/html/bins/usage_desc_gui_nautilus.html
 share/doc/html/bins/usage_desc_xml.html
 share/doc/html/bins/usage_httpd.html
+share/doc/html/bins/usage_tools.html
 share/examples/bins/binsrc
-share/examples/bins/templates.default/details.html
-share/examples/bins/templates.default/footer.html
-share/examples/bins/templates.default/image.html
-share/examples/bins/templates.default/imagelist.html
-share/examples/bins/templates.default/navbar.html
-share/examples/bins/templates.default/path.html
-share/examples/bins/templates.default/subalbum.html
-share/examples/bins/templates.default/thumbnail.html
-share/examples/bins/templates.default/tree.html
-share/examples/bins/templates.jab/details.html
-share/examples/bins/templates.jab/footer.html
-share/examples/bins/templates.jab/image.html
-share/examples/bins/templates.jab/imagelist.html
-share/examples/bins/templates.jab/navbar.html
-share/examples/bins/templates.jab/path.html
-share/examples/bins/templates.jab/subalbum.html
-share/examples/bins/templates.jab/thumbnail.html
-share/examples/bins/templates.jab/tree.html
 share/examples/bins/templates.joi/details.html
 share/examples/bins/templates.joi/footer.html
 share/examples/bins/templates.joi/image.html
@@ -134,8 +119,66 @@ share/examples/bins/templates.marc/thumbnav.html
 share/examples/bins/templates.marc/thumbnavrow.html
 share/examples/bins/templates.marc/tree.html
 share/examples/bins/templates.marc/xlink.html
-share/examples/bins/templates.new/th.html
-share/examples/bins/templates.new/thubnail.html
+share/examples/bins/templates.martin/details.html
+share/examples/bins/templates.martin/footer.html
+share/examples/bins/templates.martin/image.html
+share/examples/bins/templates.martin/imagelist.html
+share/examples/bins/templates.martin/imagenavbar.html
+share/examples/bins/templates.martin/navbar.html
+share/examples/bins/templates.martin/path.html
+share/examples/bins/templates.martin/static/actthumb.png
+share/examples/bins/templates.martin/static/albumtree.png
+share/examples/bins/templates.martin/static/back.png
+share/examples/bins/templates.martin/static/contact.png
+share/examples/bins/templates.martin/static/exit.png
+share/examples/bins/templates.martin/static/first.png
+share/examples/bins/templates.martin/static/firstInactive.png
+share/examples/bins/templates.martin/static/home.png
+share/examples/bins/templates.martin/static/huge.png
+share/examples/bins/templates.martin/static/hugeActive.png
+share/examples/bins/templates.martin/static/imagelist.png
+share/examples/bins/templates.martin/static/info.png
+share/examples/bins/templates.martin/static/large.png
+share/examples/bins/templates.martin/static/largeActive.png
+share/examples/bins/templates.martin/static/last.png
+share/examples/bins/templates.martin/static/lastInactive.png
+share/examples/bins/templates.martin/static/martin.css
+share/examples/bins/templates.martin/static/media.png
+share/examples/bins/templates.martin/static/medium.png
+share/examples/bins/templates.martin/static/mediumActive.png
+share/examples/bins/templates.martin/static/metal_slide_light.gif
+share/examples/bins/templates.martin/static/metal_slide_light.png
+share/examples/bins/templates.martin/static/next.png
+share/examples/bins/templates.martin/static/nextInactive.png
+share/examples/bins/templates.martin/static/prev.png
+share/examples/bins/templates.martin/static/prevInactive.png
+share/examples/bins/templates.martin/static/related.png
+share/examples/bins/templates.martin/static/slides.css
+share/examples/bins/templates.martin/static/small.png
+share/examples/bins/templates.martin/static/smallActive.png
+share/examples/bins/templates.martin/static/subalbum.png
+share/examples/bins/templates.martin/static/thumbnails.png
+share/examples/bins/templates.martin/static/up.png
+share/examples/bins/templates.martin/subalbum.html
+share/examples/bins/templates.martin/subjectpath.html
+share/examples/bins/templates.martin/thumbnail.html
+share/examples/bins/templates.martin/thumbnavrow.html
+share/examples/bins/templates.martin/tree.html
+share/examples/bins/templates.martin/xlink.html
+share/examples/bins/templates.mwolson/bodyheader.html
+share/examples/bins/templates.mwolson/details.html
+share/examples/bins/templates.mwolson/footer.html
+share/examples/bins/templates.mwolson/header.html
+share/examples/bins/templates.mwolson/image.html
+share/examples/bins/templates.mwolson/imagelist.html
+share/examples/bins/templates.mwolson/navbar.html
+share/examples/bins/templates.mwolson/path.html
+share/examples/bins/templates.mwolson/static/style.css
+share/examples/bins/templates.mwolson/subalbum.html
+share/examples/bins/templates.mwolson/thheader.html
+share/examples/bins/templates.mwolson/thumbnail.html
+share/examples/bins/templates.mwolson/tree.html
+share/examples/bins/templates.petrus/README.txt
 share/examples/bins/templates.petrus/details.html
 share/examples/bins/templates.petrus/footer.html
 share/examples/bins/templates.petrus/image.html
@@ -194,27 +237,46 @@ share/examples/bins/templates.satyap/subalbum.html
 share/examples/bins/templates.satyap/thheader.html
 share/examples/bins/templates.satyap/thumbnail.html
 share/examples/bins/templates.satyap/tree.html
+share/examples/bins/templates.swigs/album.txt
+share/examples/bins/templates.swigs/album_fr.txt
+share/examples/bins/templates.swigs/details.html
+share/examples/bins/templates.swigs/footer.html
+share/examples/bins/templates.swigs/image.html
+share/examples/bins/templates.swigs/imagelist.html
+share/examples/bins/templates.swigs/navbar.html
+share/examples/bins/templates.swigs/path.html
+share/examples/bins/templates.swigs/search.html
+share/examples/bins/templates.swigs/search.js
+share/examples/bins/templates.swigs/search_data.js
+share/examples/bins/templates.swigs/search_result.html
+share/examples/bins/templates.swigs/subalbum.html
+share/examples/bins/templates.swigs/thumbnail.html
+share/examples/bins/templates.swigs/tree.html
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bins.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bins.mo
-@dirrm share/doc/html/bins
-@dirrm share/examples/bins/templates.default
-@dirrm share/examples/bins/templates.jab
-@dirrm share/examples/bins/templates.joi/static
-@dirrm share/examples/bins/templates.joi
-@dirrm share/examples/bins/templates.marc/static
-@dirrm share/examples/bins/templates.marc
-@dirrm share/examples/bins/templates.new
-@dirrm share/examples/bins/templates.petrus/static
-@dirrm share/examples/bins/templates.petrus
+@dirrm share/examples/bins/templates.swigs
 @dirrm share/examples/bins/templates.satyap/static
 @dirrm share/examples/bins/templates.satyap
+@dirrm share/examples/bins/templates.petrus/static
+@dirrm share/examples/bins/templates.petrus
+@dirrm share/examples/bins/templates.mwolson/static
+@dirrm share/examples/bins/templates.mwolson
+@dirrm share/examples/bins/templates.martin/static
+@dirrm share/examples/bins/templates.martin
+@dirrm share/examples/bins/templates.marc/static
+@dirrm share/examples/bins/templates.marc
+@dirrm share/examples/bins/templates.joi/static
+@dirrm share/examples/bins/templates.joi
 @dirrm share/examples/bins
+@dirrm share/doc/html/bins
