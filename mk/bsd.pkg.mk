@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1722 2005/10/04 17:27:00 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1723 2005/10/04 17:33:44 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -2139,7 +2139,7 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
 		 ${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
 		for manpage in $$newmanpages; do			\
-			manpage=`${ECHO} $$manpage | ${SED}  -e 's|^man/|${PKGMANDIR}/|' -e 's|\.gz$$||'`; \
+			manpage=`${ECHO} $$manpage | ${SED} -e 's|^man/|${PKGMANDIR}/|' -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
 				set - `${LS} -l ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
 				shift `expr $$# - 1`;			\
@@ -3814,16 +3814,16 @@ README_NAME=	${TEMPLATES}/README.pkg
 
 # set up the correct license information as a sed expression
 .if defined(LICENSE)
-SED_LICENSE_EXPR=       -e 's|%%LICENSE%%|<p>Please note that this package has a ${LICENSE} license.</p>|'
+SED_LICENSE_EXPR=	-e 's|%%LICENSE%%|<p>Please note that this package has a ${LICENSE} license.</p>|'
 .else
-SED_LICENSE_EXPR=       -e 's|%%LICENSE%%||'
+SED_LICENSE_EXPR=	-e 's|%%LICENSE%%||'
 .endif
 
 # set up the "more info URL" information as a sed expression
 .if defined(HOMEPAGE)
-SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%|<p>This package has a home page at <a HREF="${HOMEPAGE}">${HOMEPAGE}</a>.</p>|'
+SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%|<p>This package has a home page at <a HREF="${HOMEPAGE}">${HOMEPAGE}</a>.</p>|'
 .else
-SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
+SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%||'
 .endif
 
 .PHONY: show-vulnerabilities-html
