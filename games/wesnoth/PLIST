@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/09/08 15:31:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/10/04 18:30:52 wiz Exp $
 bin/wesnoth
 bin/wmlxgettext
 man/de/man6/wesnoth.6
@@ -10,7 +10,6 @@ share/wesnoth/data/amla.cfg
 share/wesnoth/data/campaigns/Eastern_Invasion.cfg
 share/wesnoth/data/campaigns/Heir_To_The_Throne.cfg
 share/wesnoth/data/campaigns/Son_Of_The_Black_Eye.cfg
-share/wesnoth/data/campaigns/The_Dark_Hordes.cfg
 share/wesnoth/data/campaigns/The_Rise_of_Wesnoth.cfg
 share/wesnoth/data/convert.pl
 share/wesnoth/data/fonts.cfg
@@ -77,14 +76,6 @@ share/wesnoth/data/maps/Son_Of_The_Black_Eye/Silent_Forest
 share/wesnoth/data/maps/Son_Of_The_Black_Eye/The_Siege_Of_Barag_Gor
 share/wesnoth/data/maps/Son_Of_The_Black_Eye/To_The_Harbour_Of_Tirigaz
 share/wesnoth/data/maps/Son_Of_The_Black_Eye/Towards_Mountains_of_Haag
-share/wesnoth/data/maps/The_Dark_Hordes/A_New_Chance
-share/wesnoth/data/maps/The_Dark_Hordes/Brother_Against_Brother
-share/wesnoth/data/maps/The_Dark_Hordes/Confrontation
-share/wesnoth/data/maps/The_Dark_Hordes/Crelanus_Book
-share/wesnoth/data/maps/The_Dark_Hordes/Inside_The_Tower
-share/wesnoth/data/maps/The_Dark_Hordes/Mages_And_Elves
-share/wesnoth/data/maps/The_Dark_Hordes/The_Skull_of_Agarash
-share/wesnoth/data/maps/The_Dark_Hordes/Underground_Pool
 share/wesnoth/data/maps/The_Rise_of_Wesnoth/A_Beach
 share/wesnoth/data/maps/The_Rise_of_Wesnoth/A_Final_Spring
 share/wesnoth/data/maps/The_Rise_of_Wesnoth/A_Harrowing_Escape
@@ -208,15 +199,6 @@ share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/Towards_Mountains_of_Haag.cfg
 share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/utils/deaths.cfg
 share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/utils/story.cfg
 share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/utils/utils.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/A_New_Chance.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/Brother_Against_Brother.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/Confrontation.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/Crelanus_Book.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/Inside_The_Tower.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/Mages_And_Elves.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/The_Skull_of_Agarash.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/Underground_Pool.cfg
-share/wesnoth/data/scenarios/The_Dark_Hordes/utils/intro.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/A_Beach.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/A_Final_Spring.cfg
 share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/A_Harrowing_Escape.cfg
@@ -549,8 +531,8 @@ share/wesnoth/data/units/Yeti.cfg
 share/wesnoth/data/units/Young_Ogre.cfg
 share/wesnoth/data/units/Youth.cfg
 share/wesnoth/data/utils.cfg
+share/wesnoth/fonts/COPYING
 share/wesnoth/fonts/DejaVuSans.ttf
-share/wesnoth/fonts/FreeSans.ttf
 share/wesnoth/images/arch-mage+female-defend.png
 share/wesnoth/images/arch-mage+female-die-1.png
 share/wesnoth/images/arch-mage+female-die-2.png
@@ -801,6 +783,10 @@ share/wesnoth/images/drake-clasher-die-1.png
 share/wesnoth/images/drake-clasher-die-2.png
 share/wesnoth/images/drake-clasher-flying.png
 share/wesnoth/images/drake-clasher.png
+share/wesnoth/images/drake-enforcer-attack-mace.png
+share/wesnoth/images/drake-enforcer-attack-spear.png
+share/wesnoth/images/drake-enforcer-attack-sword.png
+share/wesnoth/images/drake-enforcer-defend.png
 share/wesnoth/images/drake-enforcer.png
 share/wesnoth/images/drake-fighter-attack-close1.png
 share/wesnoth/images/drake-fighter-attack-close2.png
@@ -1545,6 +1531,7 @@ share/wesnoth/images/icons/icon-music.png
 share/wesnoth/images/icons/icon-server.png
 share/wesnoth/images/icons/icon-serverother.png
 share/wesnoth/images/items/altar.png
+share/wesnoth/images/items/ankh-necklace.png
 share/wesnoth/images/items/ball-blue.png
 share/wesnoth/images/items/ball-green.png
 share/wesnoth/images/items/barrel.png
@@ -2073,11 +2060,6 @@ share/wesnoth/images/portraits/Heir_To_The_Throne/delfador.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/kalenz.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/konrad.png
 share/wesnoth/images/portraits/Heir_To_The_Throne/lisar.png
-share/wesnoth/images/portraits/The_Dark_Hordes/gwiti-demilich.png
-share/wesnoth/images/portraits/The_Dark_Hordes/gwiti.png
-share/wesnoth/images/portraits/The_Dark_Hordes/gwiti_lich.png
-share/wesnoth/images/portraits/The_Dark_Hordes/nati.png
-share/wesnoth/images/portraits/The_Dark_Hordes/tanar.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/addroran.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/aethyr.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/archmage.png
@@ -3461,6 +3443,9 @@ share/wesnoth/images/undead-ghoul.png
 share/wesnoth/images/undead-initiate-attack1.png
 share/wesnoth/images/undead-initiate-attack2.png
 share/wesnoth/images/undead-initiate-defend.png
+share/wesnoth/images/undead-initiate-die1.png
+share/wesnoth/images/undead-initiate-die2.png
+share/wesnoth/images/undead-initiate-die3.png
 share/wesnoth/images/undead-initiate.png
 share/wesnoth/images/undead-lich-defend.png
 share/wesnoth/images/undead-lich-melee.png
@@ -3772,7 +3757,6 @@ share/wesnoth/sounds/zombie-hit.wav
 @dirrm share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst
 @dirrm share/wesnoth/images/portraits/core
 @dirrm share/wesnoth/images/portraits/The_Rise_of_Wesnoth
-@dirrm share/wesnoth/images/portraits/The_Dark_Hordes
 @dirrm share/wesnoth/images/portraits/Heir_To_The_Throne
 @dirrm share/wesnoth/images/portraits/Eastern_Invasion
 @dirrm share/wesnoth/images/portraits
@@ -3810,8 +3794,6 @@ share/wesnoth/sounds/zombie-hit.wav
 @dirrm share/wesnoth/data/scenarios/multiplayer
 @dirrm share/wesnoth/data/scenarios/The_Rise_of_Wesnoth/utils
 @dirrm share/wesnoth/data/scenarios/The_Rise_of_Wesnoth
-@dirrm share/wesnoth/data/scenarios/The_Dark_Hordes/utils
-@dirrm share/wesnoth/data/scenarios/The_Dark_Hordes
 @dirrm share/wesnoth/data/scenarios/Son_Of_The_Black_Eye/utils
 @dirrm share/wesnoth/data/scenarios/Son_Of_The_Black_Eye
 @dirrm share/wesnoth/data/scenarios/Heir_To_The_Throne/utils
@@ -3822,7 +3804,6 @@ share/wesnoth/sounds/zombie-hit.wav
 @dirrm share/wesnoth/data/maps/multiplayer
 @dirrm share/wesnoth/data/maps/Tutorial
 @dirrm share/wesnoth/data/maps/The_Rise_of_Wesnoth
-@dirrm share/wesnoth/data/maps/The_Dark_Hordes
 @dirrm share/wesnoth/data/maps/Son_Of_The_Black_Eye
 @dirrm share/wesnoth/data/maps/Heir_To_The_Throne
 @dirrm share/wesnoth/data/maps/Eastern_Invasion
