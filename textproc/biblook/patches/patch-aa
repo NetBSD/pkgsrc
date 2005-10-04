@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/31 10:54:21 agc Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/04 21:40:19 reed Exp $
 
---- Makefile.orig	Tue Jan 31 21:15:22 1995
-+++ Makefile
+--- Makefile.orig	1995-01-31 12:15:22.000000000 -0800
++++ Makefile	2005-10-04 14:26:20.000000000 -0700
 @@ -68,12 +68,15 @@
  # [13-Sep-1993]
  #=======================================================================
@@ -19,6 +19,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/31 10:54:21 agc Exp $
  # Compilation with a C++ compiler is preferable.  SunOS 4.1 CC cannot be
  # used, however, because of its erroneous function prototypes in stdlib.h
  # which use char* instead of void* in many places.  There is no such
+@@ -148,7 +151,7 @@
+ LIBS		= /usr/lib/debug/malloc.o
+ LIBS		=
+ 
+-MANDIR		= $(DEST)/man/man1
++MANDIR		?= $(DEST)/man/man1
+ 
+ MANEXT		= 1
+ 
 @@ -243,16 +246,10 @@
  	-$(RM) TAGS
  
