@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/10/04 17:45:22 reed Exp $
+
+--- Makefile.in.orig	1996-09-10 16:59:11.000000000 -0700
++++ Makefile.in
+@@ -34,7 +34,7 @@ bindir = $(exec_prefix)/bin
+ libdir = $(exec_prefix)/lib
+ includedir = $(prefix)/include
+ manext = 1
+-mandir = $(prefix)/man/man$(manext)
++mandir = $(prefix)/${PKGMANDIR}/man$(manext)
+ 
+ # You can define these to be "lex" and "libl.a" if you want to replace
+ # lex at your site.
