@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3961 2005/10/04 16:45:03 wiz Exp $
+$NetBSD: TODO,v 1.3962 2005/10/04 16:46:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,7 +416,6 @@ Suggested package updates
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.9.3
-	o devilspie-0.13
 	o diffstat-1.38
 	o dirac-0.5.3
 	o dirdiff-2.0
