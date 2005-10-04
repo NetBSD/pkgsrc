@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/06/01 18:03:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/10/04 19:34:36 joerg Exp $
 #
 
 DISTNAME=	qt-x11-${QTVERSION}
@@ -37,6 +37,8 @@ PATCHDIR=		${.CURDIR}/../../x11/qt2-libs/patches
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	-platform solaris-g++
+.elif ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	-xft -platform freebsd-g++
 .endif
 
 FILES_SUBST=		BUILDLINK_DIR=${BUILDLINK_DIR}
@@ -50,13 +52,15 @@ FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 post-extract:
 	cd ${WRKSRC}/configs;						\
-	for file in netbsd-g++-static solaris-g++-static; do		\
+	for file in netbsd-g++-static solaris-g++-static 		\
+	    freebsd-g++-static; do					\
 		${MV} -f $${file} $${file}.in;				\
 	done
 
 post-patch:
 	cd ${WRKSRC}/configs;						\
-	for file in netbsd-g++-static solaris-g++-static; do		\
+	for file in netbsd-g++-static solaris-g++-static		\
+	    freebsd-g++-static; do					\
 		${SED} ${FILES_SUBST_SED} $${file}.in > $${file};	\
 	done
 
