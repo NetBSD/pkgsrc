@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2005/07/16 19:10:41 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/10/04 19:12:01 wiz Exp $
 #
 
-DISTNAME=	bins-1.1.27
+DISTNAME=	bins-1.1.29
 CATEGORIES=	www graphics
 MASTER_SITES=	http://zubro.chez.tiscali.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,19 +11,21 @@ HOMEPAGE=	http://bins.sautret.org/
 COMMENT=	Static HTML photo album generator
 
 DEPENDS+=	p5-gettext>=1.01:../../devel/p5-gettext
-DEPENDS+=	p5-Text-Iconv>=1.1:../../converters/p5-Text-Iconv
-DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
+DEPENDS+=	p5-HTML-Clean>=0.8:../../www/p5-HTML-Clean
+DEPENDS+=	p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
+DEPENDS+=	p5-HTML-Template>=2.5:../../www/p5-HTML-Template
 DEPENDS+=	p5-Image-Info>=1.10:../../graphics/p5-Image-Info
 DEPENDS+=	p5-Image-Size>=2.980:../../graphics/p5-Image-Size
 DEPENDS+=	p5-IO-String>=1.01:../../devel/p5-IO-String
 DEPENDS+=	p5-PerlMagick>=5.3.9nb1:../../graphics/p5-PerlMagick
+DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
+DEPENDS+=	p5-Text-Iconv>=1.1:../../converters/p5-Text-Iconv
+DEPENDS+=	p5-Text-Unaccent>=1.0:../../textproc/p5-Text-Unaccent
+DEPENDS+=	p5-TimeDate>=1.0:../../time/p5-TimeDate
+DEPENDS+=	p5-URI>=1.19:../../www/p5-URI
 DEPENDS+=	p5-XML-Grove>=0.46.0.1:../../textproc/p5-XML-Grove
 DEPENDS+=	p5-XML-Handler-YAWriter>=0.23:../../textproc/p5-XML-Handler-YAWriter
 DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
-DEPENDS+=	p5-HTML-Clean>=0.8:../../www/p5-HTML-Clean
-DEPENDS+=	p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
-DEPENDS+=	p5-HTML-Template>=2.5:../../www/p5-HTML-Template
-DEPENDS+=	p5-URI>=1.19:../../www/p5-URI
 
 USE_PKGLOCALEDIR=	YES
 
@@ -32,7 +34,8 @@ USE_PKGLOCALEDIR=	YES
 # have previous versions in pkgsrc.
 #
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	bins bins_edit bins-edit-gui bins_cleanupgallery bins_txt2xml
+REPLACE_PERL=	bins bins_edit bins-edit-gui tools/bins_addtext \
+		tools/bins_cleanupgallery tools/bins_txt2xml
 
 INSTALLATION_DIRS=	bin man/man1
 
@@ -44,9 +47,9 @@ post-patch:
 
 do-install:
 	# Programs and manual pages
-	${INSTALL_SCRIPT} ${WRKSRC}/anti_bins ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/anti_bins ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bins ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/bins_cleanupgallery ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/bins_cleanupgallery ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bins_edit ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/bins.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bins_edit.1 ${PREFIX}/man/man1
@@ -56,58 +59,23 @@ do-install:
 	# Example configuration file
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins
 	${INSTALL_DATA} ${WRKSRC}/binsrc ${PREFIX}/share/examples/bins/
+.for template in swigs
 	# template: default
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.default
-	${INSTALL_DATA} ${WRKSRC}/templates.default/*.html		\
-		${PREFIX}/share/examples/bins/templates.default/
-	# template: jab
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.jab
-	${INSTALL_DATA} ${WRKSRC}/templates.jab/*.html			\
-		${PREFIX}/share/examples/bins/templates.jab/
-	# template: joi
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.joi
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.joi/static
-	${INSTALL_DATA} ${WRKSRC}/templates.joi/*.html			\
-		${PREFIX}/share/examples/bins/templates.joi/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.${template}
+	${INSTALL_DATA} ${WRKSRC}/templates.${template}/*.*		\
+		${PREFIX}/share/examples/bins/templates.${template}/
+.endfor
+.for template in joi marc martin mwolson petrus satyap
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.${template}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.${template}/static
+	${INSTALL_DATA} ${WRKSRC}/templates.${template}/*.*		\
+		${PREFIX}/share/examples/bins/templates.${template}/
 	${INSTALL_DATA}							\
-		${WRKSRC}/templates.joi/static/*.css			\
-		${WRKSRC}/templates.joi/static/*.png			\
-		${WRKSRC}/templates.joi/static/*.js			\
-		${PREFIX}/share/examples/bins/templates.joi/static/
-	# template: marc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.marc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.marc/static
-	${INSTALL_DATA} ${WRKSRC}/templates.marc/*.html			\
-		${PREFIX}/share/examples/bins/templates.marc/
-	${INSTALL_DATA}							\
-		${WRKSRC}/templates.marc/static/*.css			\
-		${WRKSRC}/templates.marc/static/*.png			\
-		${WRKSRC}/templates.marc/static/*.js			\
-		${PREFIX}/share/examples/bins/templates.marc/static/
-	# template: new
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.new
-	${INSTALL_DATA} ${WRKSRC}/templates.new/*.html			\
-		${PREFIX}/share/examples/bins/templates.new/
-	# template: petrus
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.petrus
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.petrus/static
-	${INSTALL_DATA} ${WRKSRC}/templates.petrus/*.html		\
-		${PREFIX}/share/examples/bins/templates.petrus/
-	${INSTALL_DATA}							\
-		${WRKSRC}/templates.petrus/static/*.css			\
-		${WRKSRC}/templates.petrus/static/*.png			\
-		${WRKSRC}/templates.petrus/static/*.js			\
-		${PREFIX}/share/examples/bins/templates.petrus/static/
-	# template: satyap
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.satyap
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.satyap/static
-	${INSTALL_DATA} ${WRKSRC}/templates.satyap/*.html		\
-		${PREFIX}/share/examples/bins/templates.satyap/
-	${INSTALL_DATA}							\
-		${WRKSRC}/templates.satyap/static/*.css			\
-		${PREFIX}/share/examples/bins/templates.satyap/static/
+		${WRKSRC}/templates.${template}/static/*		\
+		${PREFIX}/share/examples/bins/templates.${template}/static/
+.endfor
 	# Translations
-	for lang in de eo es fi fr it ja nl pl ru zh_TW; do \
+	for lang in ca de eo es fi fr hu it ja nl pl ru zh_TW; do \
 		${INSTALL_DATA_DIR} \
 		${PREFIX}/${PKGLOCALEDIR}/locale/$$lang/LC_MESSAGES; \
 		${INSTALL_DATA} ${WRKSRC}/intl/$$lang.mo \
