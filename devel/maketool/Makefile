@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/09/28 13:54:49 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2005/10/04 12:24:08 wiz Exp $
 #
 
 DISTNAME=	maketool-0.7-src
@@ -15,6 +15,7 @@ BUILD_USES_MSGFMT=	yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
