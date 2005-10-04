@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3967 2005/10/04 21:00:59 sketch Exp $
+$NetBSD: TODO,v 1.3968 2005/10/04 22:42:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1141,6 +1141,8 @@ Suggested package updates
 	o zircon-1.18.256
 	o zope25-Photo-1.2.4
 	o zope25-ZWiki-0.39.0
+	o zope-2.8.1
+	o zope-3.1.0
 	o zopeedit-0.8
 	o zziplib-0.13.37
 
