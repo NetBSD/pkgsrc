@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:07:50 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/04 17:45:22 reed Exp $
 
 DISTNAME=		flex-2.5.4a
 CATEGORIES=		lang
@@ -10,6 +10,7 @@ COMMENT=		Fast clone of lex(1), the lexical scanner generator
 
 WRKSRC=			${WRKDIR}/flex-2.5.4
 GNU_CONFIGURE=		YES
+CONFIGURE_HAS_MANDIR=	NO
 USE_TOOLS+=		bison
 
 TEST_TARGET=		check
