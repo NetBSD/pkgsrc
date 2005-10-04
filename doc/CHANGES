@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11331 2005/10/04 16:46:54 wiz Exp $
+$NetBSD: CHANGES,v 1.11332 2005/10/04 16:53:08 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4275,3 +4275,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/RealPlayerGold to 10.0.6 [rpaulo 2005-10-04]
 	Updated devel/boehm-gc to 6.6 [wiz 2005-10-04]
 	Updated x11/devilspie to 0.13 [wiz 2005-10-04]
+	Removed databases/php5-sqlite [tv 2005-10-04]
