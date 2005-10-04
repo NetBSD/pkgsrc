@@ -1,11 +1,21 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/27 20:03:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/04 02:57:25 minskim Exp $
 bin/gtkam
 man/man1/gtkam.1
+share/applications/gtkam.desktop
 share/doc/gtkam/AUTHORS
 share/doc/gtkam/COPYING
 share/doc/gtkam/NEWS
 share/doc/gtkam/README
 share/doc/gtkam/TODO
+share/gnome/help/gtkam/C/figures/gtkam_add_camera_enhanced_window.png
+share/gnome/help/gtkam/C/figures/gtkam_add_camera_window.png
+share/gnome/help/gtkam/C/figures/gtkam_fileinfo.png
+share/gnome/help/gtkam/C/figures/gtkam_makedir.png
+share/gnome/help/gtkam/C/figures/gtkam_save.png
+share/gnome/help/gtkam/C/figures/gtkam_save_all.png
+share/gnome/help/gtkam/C/figures/gtkam_start_window.png
+share/gnome/help/gtkam/C/gtkam.xml
+share/gnome/help/gtkam/C/legal.xml
 share/gtkam/pixmaps/camera.xpm
 share/gtkam/pixmaps/configure.xpm
 share/gtkam/pixmaps/delete_images.xpm
@@ -33,8 +43,16 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtkam.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gtkam.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtkam.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtkam.mo
+share/omf/gtkam/gtkam-C.omf
+share/pixmaps/gtkam.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/gtkam
 @dirrm share/images/gtkam
-@comment in gnome-dirs: @dirrm share/images
+@comment in xdg-dirs: @dirrm share/images
 @dirrm share/gtkam/pixmaps
 @dirrm share/gtkam
+@dirrm share/gnome/help/gtkam/C/figures
+@dirrm share/gnome/help/gtkam/C
+@dirrm share/gnome/help/gtkam
 @dirrm share/doc/gtkam
+@comment in xdg-dirs: @dirrm share/applications

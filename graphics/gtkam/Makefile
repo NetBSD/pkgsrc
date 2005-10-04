@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2005/10/04 02:38:28 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2005/10/04 02:57:25 minskim Exp $
 #
 
 DISTNAME=	gtkam-0.1.12
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 
@@ -22,5 +23,6 @@ CONFIGURE_ARGS+=	--without-gimp
 
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/libexif-gtk/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
