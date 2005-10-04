@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2005/06/30 13:16:51 adam Exp $
+# $NetBSD: Makefile,v 1.92 2005/10/04 09:55:05 adam Exp $
 
 .include "Makefile.common"
 PKGNAME=	abiword-${ABIWORD_VERSION}
@@ -37,8 +37,8 @@ post-install:
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.1 \
 		${PREFIX}/man/man1/abiword.1
 	cd ${WRKDIR}/${DISTNAME}/abiword-docs/ && env \
-		ABI_DOC_DEST=${PREFIX}/share/AbiSuite-2.2/AbiWord \
-		./make-html.sh
+		ABI_DOC_DEST=${PREFIX}/share/AbiSuite-2.4/AbiWord \
+		ABI_DOC_PROG=AbiWord-2.4 ./make-html.sh
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
