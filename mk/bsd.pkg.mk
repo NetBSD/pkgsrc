@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1723 2005/10/04 17:33:44 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1724 2005/10/04 17:43:57 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -314,6 +314,7 @@ MAKE_ENV+=	NO_WHOLE_ARCHIVE_FLAG=${NO_WHOLE_ARCHIVE_FLAG:Q}
 MAKE_ENV+=	WHOLE_ARCHIVE_FLAG=${WHOLE_ARCHIVE_FLAG:Q}
 MAKE_ENV+=	X11BASE=${X11BASE}
 MAKE_ENV+=	X11PREFIX=${X11PREFIX}
+MAKE_ENV+=	PKGMANDIR=${PKGMANDIR}
 
 # Constants to provide a consistent environment for packages using
 # BSD-style Makefiles.
