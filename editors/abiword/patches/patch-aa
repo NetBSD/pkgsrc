@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2005/06/30 13:16:51 adam Exp $
+$NetBSD: patch-aa,v 1.9 2005/10/04 09:55:06 adam Exp $
 
---- configure.orig	2005-06-06 00:43:22.000000000 +0000
+--- configure.orig	2005-09-30 10:23:57.000000000 +0000
 +++ configure
-@@ -4118,7 +4118,7 @@ case "$OS_NAME" in
+@@ -4127,7 +4127,7 @@ case "$OS_NAME" in
  		WARNING_CFLAGS=""
  		;;
  	*BSD|DragonFly)
