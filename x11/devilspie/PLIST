@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/27 19:53:11 snj Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/04 16:46:23 wiz Exp $
 bin/devilspie
 man/man1/devilspie.1
 share/doc/devilspie/README
-share/examples/devilspie/sample-config.xml
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/devilspie.mo
-@dirrm share/examples/devilspie
 @dirrm share/doc/devilspie
