@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11334 2005/10/04 18:31:20 wiz Exp $
+$NetBSD: CHANGES,v 1.11335 2005/10/04 18:52:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4278,3 +4278,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed databases/php5-sqlite [tv 2005-10-04]
 	Updated www/tidy to 20050921 [wiz 2005-10-04]
 	Updated games/wesnoth to 1.0 [wiz 2005-10-04]
+	Added textproc/p5-Text-Unaccent version 1.08 [wiz 2005-10-04]
