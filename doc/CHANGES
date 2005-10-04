@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11327 2005/10/04 09:56:06 adam Exp $
+$NetBSD: CHANGES,v 1.11328 2005/10/04 12:48:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4271,3 +4271,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/gtkam to 0.1.12nb1 [minskim 2005-10-04]
 	Updated editors/abiword to 2.4.0 [adam 2005-10-04]
 	Updated editors/abiword-plugins to 2.4.0 [adam 2005-10-04]
+	Updated fonts/fontforge to 20050919 [adam 2005-10-04]
