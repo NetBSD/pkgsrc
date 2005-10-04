@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.6 2005/08/07 11:26:17 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2005/10/04 01:47:32 minskim Exp $
 
---- configure.orig	2005-06-02 18:03:05.000000000 +0200
+--- configure.orig	2005-09-20 08:03:25.000000000 -0700
 +++ configure
-@@ -22242,7 +22242,8 @@ SEARCH_INCLUDE="\
-     /usr/local/x11r5/include  \
-     /usr/lpp/Xamples/include  \
+@@ -22529,7 +22529,8 @@ SEARCH_INCLUDE="\
+     /usr/XFree86/include/X11  \
+     /usr/pkg/include          \
                                \
 -    /usr/openwin/share/include"
 +    /usr/openwin/share/include\
 +    ${BUILDLINK_DIR}/include"
  
- SEARCH_LIB="/usr/lib /usr/lib32 /usr/lib64 /usr/X11R6/lib64 `echo "$SEARCH_INCLUDE" | sed s/include/lib/g`"
- 
+ echo "$as_me:$LINENO: checking for libraries directory" >&5
+ echo $ECHO_N "checking for libraries directory... $ECHO_C" >&6

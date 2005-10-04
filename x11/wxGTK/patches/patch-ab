@@ -1,6 +1,9 @@
---- Makefile.in.orig	2005-06-02 12:03:05.000000000 -0400
-+++ Makefile.in	2005-08-10 15:28:16.561533000 -0400
-@@ -24,5 +24,7 @@
+$NetBSD: patch-ab,v 1.14 2005/10/04 01:47:32 minskim Exp $
+
+--- Makefile.in.orig	2005-09-20 08:03:25.000000000 -0700
++++ Makefile.in
+@@ -23,7 +23,9 @@ PIC_FLAG = @PIC_FLAG@
+ SONAME_FLAG = @SONAME_FLAG@
  STRIP = @STRIP@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
 +INSTALL_SCRIPT = @INSTALL_SCRIPT@
@@ -8,14 +11,18 @@
 +INSTALL_DATA_DIR = @INSTALL_DATA_DIR@
  INSTALL_DIR = @INSTALL_DIR@
  srcdir = @srcdir@
-@@ -1181,5 +1183,5 @@
+ top_srcdir = @top_srcdir@
+@@ -1181,7 +1183,7 @@ LOCALE_MSW_LINGUAS =  it
+ @COND_DEPS_TRACKING_1@CCC = $(top_builddir)./bk-deps $(CC)
  @COND_DEPS_TRACKING_0@CXXC = $(CXX)
  @COND_DEPS_TRACKING_1@CXXC = $(top_builddir)./bk-deps $(CXX)
 -@COND_USE_PLUGINS_0@PLUGIN_ADV_EXTRALIBS = $(EXTRALIBS_SDL)
 +@COND_USE_PLUGINS_0@PLUGIN_ADV_EXTRALIBS = $(EXTRALIBS_SDL) $(LIBOSSAUDIO)
+ @COND_PLATFORM_MACOSX_1@WXMACVERSION_CMD = \
+ @COND_PLATFORM_MACOSX_1@	-compatibility_version 2.0 -current_version 2.0
  @COND_USE_GUI_0@PORTNAME = base
- @COND_USE_GUI_1@PORTNAME = $(TOOLKIT_LOWERCASE)$(TOOLKIT_VERSION)
-@@ -9674,14 +9676,14 @@
+@@ -9693,16 +9695,16 @@ samples: 
+ install-wxconfig: 
  	$(INSTALL_DIR) $(DESTDIR)$(bindir)
  	$(INSTALL_DIR) $(DESTDIR)$(libdir)/wx/config
 -	$(INSTALL_PROGRAM) lib/wx/config/$(TOOLCHAIN_FULLNAME) $(DESTDIR)$(libdir)/wx/config
@@ -35,3 +42,4 @@
 +	$(INSTALL_DATA) $(srcdir)/locale/$$l.mo $(DESTDIR)$(prefix)/${PKGLOCALEDIR}/locale/$$l/LC_MESSAGES/wxstd.mo ; \
  	fi ; \
  	done
+ 
