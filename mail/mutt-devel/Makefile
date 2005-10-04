@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2005/10/03 14:16:53 tonio Exp $
+# $NetBSD: Makefile,v 1.39 2005/10/04 17:51:05 tonio Exp $
 
 DISTNAME=		mutt-1.5.11
+PKGREVISION=	1
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -19,7 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 BUILD_USES_MSGFMT=	yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl:run
-REPLACE_PERL=		smime_keys */*.pl
+REPLACE_PERL=		*.pl */*.pl
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}			\
