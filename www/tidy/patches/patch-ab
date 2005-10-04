@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2004/08/30 18:48:57 reed Exp $
+$NetBSD: patch-ab,v 1.6 2005/10/04 18:00:49 wiz Exp $
 
---- include/platform.h.orig	Fri Mar 19 00:00:57 2004
-+++ include/platform.h	Sat Aug 28 15:41:12 2004
+--- include/platform.h.orig	2005-06-16 08:58:05.000000000 +0200
++++ include/platform.h	2005-07-03 15:02:26.000000000 +0200
 @@ -48,7 +48,7 @@
    Contributed by Todd Lewis.
  */
@@ -11,7 +11,22 @@ $NetBSD: patch-ab,v 1.5 2004/08/30 18:48:57 reed Exp $
  
  
  /* Enable/disable support for Big5 and Shift_JIS character encodings */
-@@ -497,7 +497,7 @@
+@@ -105,7 +105,13 @@
+ 
+ /* Convenience defines for BSD like platforms */
+  
+-#if defined(__FreeBSD__)
++#if defined(__DragonFly__)
++#define BSD_BASED_OS
++#ifndef PLATFORM_NAME
++#define PLATFORM_NAME "DragonFly"
++#endif
++
++#elif defined(__FreeBSD__)
+ #define BSD_BASED_OS
+ #ifndef PLATFORM_NAME
+ #define PLATFORM_NAME "FreeBSD"
+@@ -504,7 +510,7 @@
  #if !defined(HPUX_OS) && !defined(CYGWIN_OS) && !defined(MAC_OS_X) && !defined(BE_OS) && !defined(SOLARIS_OS) && !defined(BSD_BASED_OS) && !defined(OSF_OS) && !defined(IRIX_OS) && !defined(AIX_OS) && !defined(LINUX_OS)
  typedef unsigned int uint;
  #endif
