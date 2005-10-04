@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11328 2005/10/04 12:48:08 adam Exp $
+$NetBSD: CHANGES,v 1.11329 2005/10/04 15:33:24 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4272,3 +4272,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/abiword to 2.4.0 [adam 2005-10-04]
 	Updated editors/abiword-plugins to 2.4.0 [adam 2005-10-04]
 	Updated fonts/fontforge to 20050919 [adam 2005-10-04]
+	Updated multimedia/RealPlayerGold to 10.0.6 [rpaulo 2005-10-04]
