@@ -1,4 +1,4 @@
-# $NetBS$
+# $NetBSD: hacks.mk,v 1.2 2005/10/04 22:50:41 wiz Exp $
 
 .ifndef GNUPG_HACKS_MK
 GNUPG_HACKS_MK=         #defined
