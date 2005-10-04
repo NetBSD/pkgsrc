@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2005/09/08 15:31:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/04 18:30:52 wiz Exp $
 
-DISTNAME=	wesnoth-0.9.7
+DISTNAME=	wesnoth-1.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 
