@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 1999/02/02 23:00:41 tron Exp $
+$NetBSD: patch-ai,v 1.2 2005/10/04 16:12:28 tron Exp $
 
---- utils.c.orig	Wed Sep  9 16:31:16 1992
-+++ utils.c	Tue Feb  2 23:52:03 1999
+--- utils.c.orig	1992-09-09 15:31:16.000000000 +0100
++++ utils.c	2005-10-04 17:09:34.000000000 +0100
 @@ -25,8 +25,10 @@
  #else
  #include <sys/resource.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-ai,v 1.1 1999/02/02 23:00:41 tron Exp $
  
  /* Signal handler, print message and exit */
  SIG_HANDLER_RET exitsig(sig)
-@@ -70,7 +72,7 @@
+@@ -70,10 +72,10 @@
  
  /* set up signal handling. All except TSTP, CONT, CLD, and QUIT
   * are caught with exitsig(). */
@@ -21,4 +21,17 @@ $NetBSD: patch-ai,v 1.1 1999/02/02 23:00:41 tron Exp $
 +void init_signals()
  {
      int i ;
- #ifdef SIG_SETMASK		/* only with BSD signals */
+-#ifdef SIG_SETMASK		/* only with BSD signals */
++#if defined(SIG_SETMASK) && !defined(__NetBSD__)		/* only with BSD signals */
+     static struct sigvec svec = { exitsig, ~0, 0 } ;
+ #endif
+ 
+@@ -103,7 +105,7 @@
+ 	  case SIGQUIT:		/* if the user wants a core dump, */
+ 	    continue ;		/* they can have it. */
+ 	  default:	    
+-#ifdef SIG_SETMASK
++#if defined(SIG_SETMASK) && !defined(__NetBSD__)
+ 	    sigvec(i, &svec, NULL) ;
+ #else
+ 	    signal(i, exitsig) ;
