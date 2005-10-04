@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11332 2005/10/04 16:53:08 tv Exp $
+$NetBSD: CHANGES,v 1.11333 2005/10/04 18:01:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4276,3 +4276,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/boehm-gc to 6.6 [wiz 2005-10-04]
 	Updated x11/devilspie to 0.13 [wiz 2005-10-04]
 	Removed databases/php5-sqlite [tv 2005-10-04]
+	Updated www/tidy to 20050921 [wiz 2005-10-04]
