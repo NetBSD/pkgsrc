@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2005/08/05 07:23:43 sketch Exp $
+# $NetBSD: Makefile,v 1.36 2005/10/04 20:58:43 sketch Exp $
 
-DISTNAME=	abcde_2.2.6.orig
+DISTNAME=	abcde_2.3.3.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/a/abcde/}
+MASTER_SITES=	http://www.hispalinux.es/~data/files/
 
 MAINTAINER=	sketch@NetBSD.org
 HOMEPAGE=	http://www.hispalinux.es/~data/abcde.php
