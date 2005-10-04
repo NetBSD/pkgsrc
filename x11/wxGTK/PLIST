@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/08/14 08:03:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/10/04 01:47:32 minskim Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-2.6
@@ -313,6 +313,7 @@ include/wx-2.6/wx/quantize.h
 include/wx-2.6/wx/radiobox.h
 include/wx-2.6/wx/radiobut.h
 include/wx-2.6/wx/rawbmp.h
+include/wx-2.6/wx/recguard.h
 include/wx-2.6/wx/regex.h
 include/wx-2.6/wx/region.h
 include/wx-2.6/wx/renderer.h
@@ -471,6 +472,9 @@ lib/libwx_gtk2_xrc-2.6.so
 lib/wx/config/gtk2-ansi-release-2.6
 lib/wx/include/gtk2-ansi-release-2.6/wx/setup.h
 share/aclocal/wxwin.m4
+share/bakefile/presets/wx.bkl
+share/bakefile/presets/wx_unix.bkl
+share/bakefile/presets/wx_win32.bkl
 share/doc/wxGTK/LICENSE
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/wxstd.mo
@@ -482,6 +486,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/wxstd.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wxmsw.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/wxstd.mo
@@ -494,6 +499,8 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/wxstd.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/wxstd.mo
 @dirrm share/doc/wxGTK
+@dirrm share/bakefile/presets
+@dirrm share/bakefile
 @dirrm lib/wx/include/gtk2-ansi-release-2.6/wx
 @dirrm lib/wx/include/gtk2-ansi-release-2.6
 @unexec ${RMDIR} %D/lib/wx/include 2>/dev/null || ${TRUE}
