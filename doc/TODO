@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3964 2005/10/04 18:31:20 wiz Exp $
+$NetBSD: TODO,v 1.3965 2005/10/04 19:13:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -352,7 +352,6 @@ Suggested package updates
 	o bchunk-1.2.0
 	o bdb-xml-2.0.9 [requires xerces-c>=2.6.0]
 	o benchfft-3.1
-	o bins-1.1.29
 	o binutils-2.16.1
 	o bioperl-1.5.0
 	o blackbox-0.70

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11335 2005/10/04 18:52:43 wiz Exp $
+$NetBSD: CHANGES,v 1.11336 2005/10/04 19:13:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/tidy to 20050921 [wiz 2005-10-04]
 	Updated games/wesnoth to 1.0 [wiz 2005-10-04]
 	Added textproc/p5-Text-Unaccent version 1.08 [wiz 2005-10-04]
+	Updated www/bins to 1.1.29 [wiz 2005-10-04]
