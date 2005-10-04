@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3963 2005/10/04 18:01:51 wiz Exp $
+$NetBSD: TODO,v 1.3964 2005/10/04 18:31:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1076,7 +1076,6 @@ Suggested package updates
 	o webmin-1.230
 	o weechat-0.1.1
 	o weewm-0.01
-	o wesnoth-1.0
 	o winbind-3.0.13
 	o wine-20050930
 	o wmctrl-1.07

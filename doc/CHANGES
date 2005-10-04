@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11333 2005/10/04 18:01:51 wiz Exp $
+$NetBSD: CHANGES,v 1.11334 2005/10/04 18:31:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4277,3 +4277,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/devilspie to 0.13 [wiz 2005-10-04]
 	Removed databases/php5-sqlite [tv 2005-10-04]
 	Updated www/tidy to 20050921 [wiz 2005-10-04]
+	Updated games/wesnoth to 1.0 [wiz 2005-10-04]
