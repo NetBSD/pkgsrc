@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1721 2005/10/04 16:45:25 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1722 2005/10/04 17:27:00 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -504,7 +504,8 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		RMDIR=${RMDIR:Q}					\
 		RM=${RM:Q}						\
 		TRUE=${TRUE:Q}						\
-		QMAILDIR=${QMAILDIR}
+		QMAILDIR=${QMAILDIR}					\
+		PKGMANDIR=${PKGMANDIR}
 
 # Handle alternatives
 #
@@ -727,6 +728,10 @@ HAS_CONFIGURE=		yes
 CONFIGURE_HAS_INFODIR?=	yes
 .  if !empty(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}
+.  endif
+CONFIGURE_HAS_MANDIR?=	yes
+.  if !empty(CONFIGURE_HAS_MANDIR:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 .  endif
 #
 # By default, override config.guess and config.sub for GNU configure
@@ -2132,9 +2137,9 @@ real-su-install: ${MESSAGE}
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
 	if [ "${_MANCOMPRESSED}" = "yes" -a "${_MANZ}" != "yes" ]; then	\
 		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
+		 ${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
 		for manpage in $$newmanpages; do			\
-			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
+			manpage=`${ECHO} $$manpage | ${SED}  -e 's|^man/|${PKGMANDIR}/|' -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
 				set - `${LS} -l ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
 				shift `expr $$# - 1`;			\
@@ -4488,8 +4493,17 @@ tags:
 
 # generate ${PLIST} from ${PLIST_SRC} by:
 # - substituting for PLIST_SUBST entries
-# - fixing list of man-pages according to MANZ, MANINSTALL.
+# - fixing list of man-pages according to PKGMANDIR, MANZ, MANINSTALL.
 # - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
+
+# plist awk pattern-action statement to convert man/ to ${PKGMANDIR}/
+_PLIST_AWK_PKGMANDIR=							\
+/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*[0-9])$$/ { \
+	sub("^man/", "${PKGMANDIR}/");					\
+}									\
+/^@dirrm man\// {							\
+	sub(" man/", " ${PKGMANDIR}/");					\
+}
 
 # plist awk pattern-action statement to handle MANINSTALL
 _PLIST_AWK_MANINSTALL=							\
@@ -4593,6 +4607,8 @@ _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_SUBST}
 .if !empty(INFO_FILES)
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_INFO}
 .endif
+# Change path to man directory if using custom PKGMANDIR
+_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_PKGMANDIR}
 # Expand libtool archives
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_LIBTOOL}
 # Strip the '.gz' suffixes on man entries
