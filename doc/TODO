@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3957 2005/10/03 20:38:31 reed Exp $
+$NetBSD: TODO,v 1.3958 2005/10/04 10:53:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -573,6 +573,7 @@ Suggested package updates
 	o kaffe-1.1.6
 	o kajaani-kombat-0.7
 	o kapooka-0.3
+	o kazehakase-0.3.1
 	o kdbg-2.0.0
 	o kdrill-6.4
 	o kinput2-3.1
@@ -605,7 +606,7 @@ Suggested package updates
 	o libtool-1.5.20
 	o libtorrent-0.7.3
 	o licq-core-1.3.0
-	o lighttpd-1.4.4
+	o lighttpd-1.4.5
 	o lilypond-2.6
 	o linuxsms-0.77
 	o lmbench-2.5
@@ -840,7 +841,7 @@ Suggested package updates
 	o pnet-0.7.0 [pkg/30516]
 	o pnetC-0.7.0 [pkg/30517]
 	o pnetlib-0.7.0 [pkg/30518]
-	o poedit-1.3.3
+	o poedit-1.3.4
 	o poppy-4.01
 	o poptop-1.2.3
 	o potrace-1.7
@@ -1075,11 +1076,13 @@ Suggested package updates
 	o webmin-1.230
 	o weechat-0.1.1
 	o weewm-0.01
+	o wesnoth-1.0
 	o winbind-3.0.13
 	o wine-20050930
 	o wmctrl-1.07
 	o wmweather-2.4.3
 	o www6to4-1.6
+	o wxGTK-2.6.2
 	o x2vnc-1.6.1
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xalan-c-1.8.0
