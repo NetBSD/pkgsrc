@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/10/28 12:34:58 cube Exp $
+$NetBSD: patch-ac,v 1.2 2005/10/04 18:00:49 wiz Exp $
 
---- build/gmake/Makefile.orig	2003-04-12 08:57:03.000000000 +0200
-+++ build/gmake/Makefile
-@@ -58,8 +58,8 @@ SHELL=/bin/sh
+--- build/gmake/Makefile.orig	2005-05-03 08:58:08.000000000 +0200
++++ build/gmake/Makefile	2005-07-03 14:56:45.000000000 +0200
+@@ -58,8 +58,8 @@
  PROJECT=tidy
  
  # Installation variables.  Spaces OK, only dir create and file copy operations.
@@ -13,34 +13,43 @@ $NetBSD: patch-ac,v 1.1 2003/10/28 12:34:58 cube Exp $
  
  bininst = ${runinst_prefix}/bin
  libinst = ${devinst_prefix}/lib
-@@ -76,7 +76,7 @@ LIBDIR = ${TOPDIR}/lib
- BINDIR = ${TOPDIR}/bin
- 
+@@ -79,14 +79,14 @@
  # CFLAGS etc..
+ # For optimised builds, flags such as "-O2" should be added and -D_DEBUG=1
+ # disabled.
 -CC= gcc
+-CFLAGS= -g -Wall -Wno-switch -Wno-parentheses -I $(INCDIR)
 +#CC= gcc
- CFLAGS= -Wall -Wno-switch -Wno-parentheses -Wno-unused -I $(INCDIR)
++CFLAGS+= -g -Wall -Wno-switch -Wno-parentheses -I $(INCDIR)
+ # flags only supported with gcc 3.x
+ # CFLAGS += -Wunused-parameter
  
- # OTHERCFLAGS= -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_UTF16_ENCODINGS=1 -DSUPPORT_ASIAN_ENCODINGS=1
-@@ -107,7 +107,7 @@ LIBPREFIX = lib
- LIBSUFFIX = .a
+ OTHERCFLAGS=
+ OTHERCFLAGS+= -D_DEBUG=1
+-# OTHERCFLAGS+= -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_UTF16_ENCODINGS=1 -DSUPPORT_ASIAN_ENCODINGS=1
++OTHERCFLAGS+= -DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_UTF16_ENCODINGS=1 -DSUPPORT_ASIAN_ENCODINGS=1
+ ifdef SUPPORT_UTF16_ENCODINGS
+ CFLAGS += -DSUPPORT_UTF16_ENCODINGS=$(SUPPORT_UTF16_ENCODINGS)
+ endif
+@@ -115,7 +115,7 @@
+ OBJSUF = .o
  
  LIBRARY = $(LIBDIR)/$(LIBPREFIX)$(PROJECT)$(LIBSUFFIX)
 -AR=ar -r
 +#AR=ar -r
  
- EXES = $(BINDIR)/$(PROJECT) $(BINDIR)/tab2space
+ XSLTPROC = xsltproc
  
-@@ -148,7 +148,7 @@ all:    $(LIBRARY) $(EXES)
+@@ -164,7 +164,7 @@
  
  $(LIBRARY): $(OBJFILES)
  	if [ ! -d $(LIBDIR) ]; then mkdir $(LIBDIR); fi
 -	$(AR) $@ $(OBJFILES)
 +	$(AR) -r $@ $(OBJFILES)
  ifdef RANLIB
- 	$(RANLIB) $@ 
+ 	$(RANLIB) $@
  endif
-@@ -177,21 +177,21 @@ clean:
+@@ -205,19 +205,19 @@
  	if [ "$(BINDIR)" != "$(TOPDIR)" -a -d $(BINDIR) ]; then rmdir $(BINDIR); fi
  
  installhdrs: $(HFILES)
@@ -61,12 +70,10 @@ $NetBSD: patch-ac,v 1.1 2003/10/28 12:34:58 cube Exp $
 +	if [ ! -d "$(bininst)" ]; then $(BSD_INSTALL_PROGRAM_DIR) "$(bininst)"; fi
 +	$(BSD_INSTALL_PROGRAM) $(EXES) "$(bininst)/"
  
- installmanpage:
- 	if [ -f "$(TOPDIR)/htmldoc/man_page.txt" ] ; then \
--    	if [ ! -d "$(maninst)/man1" ]; then mkdir -p "$(maninst)/man1"; fi; \
--    	cp -f $(TOPDIR)/htmldoc/man_page.txt "$(maninst)/man1/tidy.1"; \
-+    	if [ ! -d "$(maninst)/man1" ]; then $(BSD_INSTALL_MAN_DIR) "$(maninst)/man1"; fi; \
-+    	$(BSD_INSTALL_MAN) $(TOPDIR)/htmldoc/man_page.txt "$(maninst)/man1/tidy.1"; \
- 	fi
-    
+ installmanpage: $(DOCDIR)/tidy.1
+-	if [ ! -d "$(maninst)/man1" ]; then mkdir -p "$(maninst)/man1"; fi;
+-	cp -f $(DOCDIR)/tidy.1 "$(maninst)/man1/tidy.1";
++	if [ ! -d "$(maninst)/man1" ]; then $(BSD_INSTALL_MAN_DIR) "$(maninst)/man1"; fi;
++	$(BSD_INSTALL_MAN) $(DOCDIR)/tidy.1 "$(maninst)/man1/tidy.1";
+ 
  install: installhdrs installib installmanpage installexes
