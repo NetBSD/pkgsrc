@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.9 2005/02/24 14:08:39 wiz Exp $
+$NetBSD: distinfo,v 1.10 2005/10/04 18:00:49 wiz Exp $
 
-SHA1 (tidy_src_040811.tgz) = c3f72c7200ea2ef05d46c882e25ad015e12bfa26
-RMD160 (tidy_src_040811.tgz) = 4b4ccc6329dd9f6eb9495442a6c10481f1317dd2
-Size (tidy_src_040811.tgz) = 244076 bytes
-SHA1 (tidy_docs_040810.tgz) = c8665ede43f58d1b4dad5921f0b520ec863eb416
-RMD160 (tidy_docs_040810.tgz) = 65f31c49074098e7bd071ef693bd9399693c17a9
-Size (tidy_docs_040810.tgz) = 153044 bytes
-SHA1 (patch-ab) = 6d44dbc78bed849997108fe6bb5ff41088f653a3
-SHA1 (patch-ac) = 93e397595652a697bb705444f2923453818d1dde
+SHA1 (tidy_src_050921.tgz) = 4a53aa129e2575004dcbaf0cf4c5c3f1637723b0
+RMD160 (tidy_src_050921.tgz) = 958f532245412e3f8ac5bdd56edc5693cadf4b5b
+Size (tidy_src_050921.tgz) = 256079 bytes
+SHA1 (tidy_docs_050705.tgz) = b243d7910ce2fe57a8df27ff8f775e6d397c732d
+RMD160 (tidy_docs_050705.tgz) = 49b8c2eaf87a0291b1bef6479cf1eeda6b720f52
+Size (tidy_docs_050705.tgz) = 150359 bytes
+SHA1 (patch-aa) = e27b9b82ee47b9b54004c4a4a5bccba944847040
+SHA1 (patch-ab) = b243b9021f922e123b18a79566923a57d904b0d3
+SHA1 (patch-ac) = acc5e591182217a8cb7555c02e6954b7ceb60987
