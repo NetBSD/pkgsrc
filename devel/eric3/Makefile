@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/07/19 17:45:03 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/05 16:34:00 drochner Exp $
 #
 
-DISTNAME=	eric-3.7.1
+DISTNAME=	eric-3.7.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eric-ide/}
 
