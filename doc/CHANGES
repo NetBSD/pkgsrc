@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11338 2005/10/04 21:00:59 sketch Exp $
+$NetBSD: CHANGES,v 1.11339 2005/10/05 01:49:40 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4282,3 +4282,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/bins to 1.1.29 [wiz 2005-10-04]
 	Updated multimedia/xawtv to 3.95 [wiz 2005-10-04]
 	Updated audio/abcde to 2.3.3 [sketch 2005-10-04]
+	Updated print/latex-mk to 1.4 [dmcmahill 2005-10-04]
