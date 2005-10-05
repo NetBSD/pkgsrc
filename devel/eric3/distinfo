@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/07/19 17:45:03 drochner Exp $
+$NetBSD: distinfo,v 1.7 2005/10/05 16:34:00 drochner Exp $
 
-SHA1 (eric-3.7.1.tar.gz) = ec86a6837d225710cb5f7aefc6bb327188b82ac0
-RMD160 (eric-3.7.1.tar.gz) = c1366b880d145c9f136b75d38f4dfb2b9d7bcc36
-Size (eric-3.7.1.tar.gz) = 1731501 bytes
-SHA1 (patch-aa) = a69a4e9f670bfd41b09bb172d1e72a445efd1e6c
+SHA1 (eric-3.7.2.tar.gz) = f8733c9c02bbf5bcba9b49b57f0edc43cff975b8
+RMD160 (eric-3.7.2.tar.gz) = 2bbcdcdd74fe88c0d28f935e9c1b46886eb6988d
+Size (eric-3.7.2.tar.gz) = 1733560 bytes
+SHA1 (patch-aa) = c0cca341501fb55cbd05751768574986b46fbe32
