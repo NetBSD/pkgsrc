@@ -1,10 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2005/08/19 05:07:42 schmonz Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/05 04:28:00 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbfft
 PKG_OPTIONS_OPTIONAL_GROUPS=	optimization
 PKG_OPTIONS_GROUP.optimization=	djbfft-pentium djbfft-ppro djbfft-sparc
-PKG_OPTIONS_LEGACY_VARS+=	WITH_OPT_PENTIUM:djbfft-pentium
-PKG_OPTIONS_LEGACY_VARS+=	WITH_OPT_PPRO:djbfft-ppro
 
 .if ${MACHINE_ARCH} == "sparc"
 PKG_SUGGESTED_OPTIONS=	djbfft-sparc
