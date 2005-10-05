@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.tls,v 1.4 2005/08/14 21:51:02 christos Exp $
-libexec/postfix/tlsmgr
-man/man8/tlsmgr.8
-share/examples/postfix/TLS_LICENSE
-share/doc/postfix/TLS_README 
