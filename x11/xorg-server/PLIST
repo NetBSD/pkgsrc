@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/04/15 21:53:38 hira Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/10/05 00:24:11 reed Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/Xnest
 ${X11ROOT_PREFIX}/bin/Xprt
@@ -993,7 +993,6 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/pcitweak.${MAN_SUFFIX}
 ${SCANPCI}${X11ROOT_PREFIX}/${MAN_DIR}/scanpci.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xorgcfg.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xorgconfig.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/bin/XFree86
 ${X11ROOT_PREFIX}/bin/Xorg
 ${X11ROOT_PREFIX}/bin/getconfig
 ${X11ROOT_PREFIX}/bin/getconfig.pl

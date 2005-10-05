@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.10 2005/03/22 14:01:20 adam Exp $ */
+/* $NetBSD: host.def,v 1.11 2005/10/05 00:24:11 reed Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -32,7 +32,6 @@
 #ifdef DarwinArchitecture
 #define XDarwinServer YES
 #else
-#define XF86Server YES
 #define BuildXFree86ConfigTools YES
 #define XF86CardDrivers @CARDDRIVERS@
 #endif
