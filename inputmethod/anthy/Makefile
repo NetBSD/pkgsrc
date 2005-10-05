@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/09/05 15:00:09 taya Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/05 13:29:50 wiz Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
@@ -18,8 +18,6 @@ PKGCONFIG_OVERRIDE+=	anthy.pc.in
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.anthy
 PKG_SUPPORTED_OPTIONS=	2ch_dict okinawa_dict
-PKG_OPTIONS_LEGACY_VARS+=	USE_2CH_DICT:2ch_dict
-PKG_OPTIONS_LEGACY_VARS+=	USE_OKINAWA_DICT:okinawa_dict
 
 .include	"../../mk/bsd.options.mk"
 

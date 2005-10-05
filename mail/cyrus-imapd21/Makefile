@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/08/08 16:50:59 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/10/05 13:29:50 wiz Exp $
 
 DISTNAME=		cyrus-imapd-2.1.18
 SVR4_PKGNAME=		cimap
@@ -59,8 +59,6 @@ CONFIGURE_ENV+=		ac_cv_lib_${_var_}_db_create=no
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
 PKG_SUPPORTED_OPTIONS=	gssapi inet6 kerberos kerberos4 recommended-db
-PKG_OPTIONS_LEGACY_VARS+=	CYRUS_USE_INET6:inet6
-PKG_OPTIONS_LEGACY_VARS+=	CYRUS_DB_RECOMMEND:recommend-db
 
 .include "../../mk/bsd.options.mk"
 
