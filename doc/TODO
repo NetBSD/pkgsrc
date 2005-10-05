@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3971 2005/10/05 14:02:09 wiz Exp $
+$NetBSD: TODO,v 1.3972 2005/10/05 14:38:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,7 +514,6 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-2003.06.23
-	o gtk2+-2.8.6
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-oops-1.0.2
