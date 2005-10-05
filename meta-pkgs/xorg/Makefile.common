@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2005/07/15 18:27:52 jlam Exp $
+# $NetBSD: Makefile.common,v 1.34 2005/10/05 00:26:50 reed Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will
 #   be built in.
@@ -194,6 +194,8 @@ MASTER_SITE_XORG+=	\
 	http://ftp.gwdg.de/pub/x11/x.org/pub/X11R${XORG_VER}/src/	\
 	http://www.mirror.ac.uk/mirror/ftp.x.org/pub/X11R${XORG_VER}/src/
 
+# When updating the version be sure to regenerate checksums
+# for each xorg package with distinfo files.
 XORG_VER=	6.8.2
 
 IMAKE=		${X11ROOT}/bin/imake
