@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/02/24 21:47:25 jmmv Exp $
+$NetBSD: patch-ae,v 1.2 2005/10/05 11:45:46 salo Exp $
 
---- convert/jmovie2jpeg.c.orig	1995-01-20 00:29:24.000000000 +0000
-+++ convert/jmovie2jpeg.c
+--- ../convert/jmovie2jpeg.c.orig	1995-01-20 00:29:24.000000000 +0000
++++ ../convert/jmovie2jpeg.c
 @@ -283,12 +283,12 @@ static char inbuffer[300000] = {    
      if (fread (&(image_offset),sizeof(int),1,inFile) != 1)
      {
