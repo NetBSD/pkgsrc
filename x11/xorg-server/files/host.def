@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.11 2005/10/05 00:24:11 reed Exp $ */
+/* $NetBSD: host.def,v 1.12 2005/10/05 00:31:23 reed Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -65,5 +65,7 @@
 
 #define DriverManSuffix @KERNMAN_SUFFIX@
 #define MiscManSuffix @MISCMAN_SUFFIX@
+#define FileManSuffix @FILEMAN_SUFFIX@
 #define MiscManDir @PREFIX@/@MISCMAN_DIR@
 #define DriverManDir @PREFIX@/@KERNMAN_DIR@
+#define FileManDir @PREFIX@/@FILEMAN_DIR@
