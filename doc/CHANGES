@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11340 2005/10/05 11:35:11 tron Exp $
+$NetBSD: CHANGES,v 1.11341 2005/10/05 11:47:07 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4284,3 +4284,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/abcde to 2.3.3 [sketch 2005-10-04]
 	Updated print/latex-mk to 1.4 [dmcmahill 2005-10-04]
 	Updated mail/milter-greylist to 2.0.1 [tron 2005-10-05]
+	Updated multimedia/mpeg_encode to 1.5bnb3 [salo 2005-10-05]
