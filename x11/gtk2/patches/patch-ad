@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.13 2005/04/15 13:47:25 wiz Exp $
+$NetBSD: patch-ad,v 1.14 2005/10/05 14:37:45 wiz Exp $
 
---- gtk/xdgmime/xdgmime.c.orig	2005-04-03 05:56:50.000000000 +0200
+--- gtk/xdgmime/xdgmime.c.orig	2005-08-07 15:32:27.000000000 +0200
 +++ gtk/xdgmime/xdgmime.c
-@@ -233,7 +233,7 @@ xdg_run_command_on_dirs (XdgDirectoryFun
+@@ -236,7 +236,7 @@ xdg_run_command_on_dirs (XdgDirectoryFun
  
    xdg_data_dirs = getenv ("XDG_DATA_DIRS");
    if (xdg_data_dirs == NULL)
