@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.9 2005/06/08 13:59:30 dillo Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.10 2005/10/05 13:59:56 dillo Exp $ -->
 
 
 <?xml version="1.0"?>
@@ -40,12 +40,12 @@
     </authorgroup>
 
     <copyright>
-      <year>1994-2004</year>
+      <year>1994-2005</year>
 
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.9 2005/06/08 13:59:30 dillo Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.10 2005/10/05 13:59:56 dillo Exp $</pubdate>
 
     <abstract>
       <para>Information about using the NetBSD package system (pkgsrc)

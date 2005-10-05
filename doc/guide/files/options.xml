@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.12 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: options.xml,v 1.13 2005/10/05 13:59:56 dillo Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.42 -->
 
@@ -177,13 +177,34 @@ whether it is listed in <varname>PKG_OPTIONS</varname>:</para>
 
 <programlisting>.if !empty(PKG_OPTIONS:M<replaceable>option</replaceable>)</programlisting>
 
-<para>If another package already has an option with the same meaning,
-use the same name.  For options applicable to multiple packages (like
-enabling support for a library), use short option names (like the name
-of the library).  For options specific to this package, prefix the
-name with <varname><replaceable>pkgname</replaceable>-</varname>.
-Document the option and its meaning in
-<filename>mk/defaults/options.description</filename>.</para>
+</sect1>
+
+<sect1 id="option-names">
+<title>Option Names</title>
+
+<para>Options that enable similar features in different packages (like
+optional support for a library) should use a common name in all
+packages that support it (like the name of the library).  If another
+package already has an option with the same meaning, use the same
+name.</para>
+
+<para>Options that enable features specific to one package, where it's
+unlikely that another (unrelated) package has the same (or a similar)
+optional feature, should use a name prefixed with
+<varname><replaceable>pkgname</replaceable>-</varname>.</para>
+
+<para>If a group of related packages share an optional feature
+specific to that group, prefix it with the name of the
+<quote>main</quote> package
+(e. g. <varname>djbware-errno-hack</varname>).</para>
+
+<para>For new options, add a line to
+<filename>mk/defaults/options.description</filename>.  Lines have two
+fields, separated by tab.  The first field is the option name, the
+second its description.  The description should be a whole sentence
+(starting with an uppercase letter and ending with a period) that
+describes what enabling the option does.  E. g. <quote>Enable ispell
+support.</quote> The file is sorted by option names.</para>
 
 </sect1>	  
 
