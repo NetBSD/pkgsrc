@@ -12,9 +12,9 @@ Hubert Feyrer
 
 The pkgsrc Developers
 
-Copyright (C) 1994-2004 The NetBSD Foundation, Inc
+Copyright (C) 1994-2005 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.9 2005/06/08 13:59:30 dillo Exp $
+$NetBSD: pkgsrc.xml,v 1.10 2005/10/05 13:59:56 dillo Exp $
 
 Abstract
 
@@ -146,7 +146,7 @@ II. The pkgsrc developer's guide
         10.2. Semi-automatic PLIST generation
         10.3. Tweaking output of make print-PLIST
         10.4. Variable substitution in PLIST
-        10.5. Man page-compression
+        10.5. Man page compression
         10.6. Changing PLIST source with PLIST_SRC
         10.7. Platform-specific and differing PLISTs
         10.8. Sharing directories between packages
@@ -191,6 +191,7 @@ II. The pkgsrc developer's guide
 
         13.1. Global default options
         13.2. Converting packages to use bsd.options.mk
+        13.3. Option Names
 
     14. The build process
 
@@ -417,7 +418,7 @@ command should/can be issued as root, or if "normal" user privileges are
 sufficient. We use a # for root's shell prompt, and a % for users' shell
 prompt, assuming they use the C-shell or tcsh.
 
-The pkgsrc user's guide
+Part I. The pkgsrc user's guide
 
 Table of Contents
 
@@ -2034,7 +2035,7 @@ Use of the security/audit-packages package is strongly recommended! After
 "audit-packages" is installed, please read the package's message, which you can
 get by running pkg_info -D audit-package.
 
-The pkgsrc developer's guide
+Part II. The pkgsrc developer's guide
 
 Table of Contents
 
@@ -2068,7 +2069,7 @@ Table of Contents
     10.2. Semi-automatic PLIST generation
     10.3. Tweaking output of make print-PLIST
     10.4. Variable substitution in PLIST
-    10.5. Man page-compression
+    10.5. Man page compression
     10.6. Changing PLIST source with PLIST_SRC
     10.7. Platform-specific and differing PLISTs
     10.8. Sharing directories between packages
@@ -2113,6 +2114,7 @@ Table of Contents
 
     13.1. Global default options
     13.2. Converting packages to use bsd.options.mk
+    13.3. Option Names
 
 14. The build process
 
@@ -2739,7 +2741,7 @@ Table of Contents
 10.2. Semi-automatic PLIST generation
 10.3. Tweaking output of make print-PLIST
 10.4. Variable substitution in PLIST
-10.5. Man page-compression
+10.5. Man page compression
 10.6. Changing PLIST source with PLIST_SRC
 10.7. Platform-specific and differing PLISTs
 10.8. Sharing directories between packages
@@ -2836,7 +2838,7 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
 
 This replaces all occurrences of "${SOMEVAR}" in the PLIST with "somevalue".
 
-10.5. Man page-compression
+10.5. Man page compression
 
 Man pages should be installed in compressed form if MANZ is set (in
 bsd.own.mk), and uncompressed otherwise. To handle this in the PLIST file, the
@@ -3568,6 +3570,7 @@ Table of Contents
 
 13.1. Global default options
 13.2. Converting packages to use bsd.options.mk
+13.3. Option Names
 
 Many packages have the ability to be built to support different sets of
 features. bsd.options.mk is a framework in pkgsrc that provides generic
@@ -3697,11 +3700,26 @@ PKG_OPTIONS:
 
 .if !empty(PKG_OPTIONS:Moption)
 
-If another package already has an option with the same meaning, use the same
-name. For options applicable to multiple packages (like enabling support for a
-library), use short option names (like the name of the library). For options
-specific to this package, prefix the name with pkgname-. Document the option
-and its meaning in mk/defaults/options.description.
+13.3. Option Names
+
+Options that enable similar features in different packages (like optional
+support for a library) should use a common name in all packages that support it
+(like the name of the library). If another package already has an option with
+the same meaning, use the same name.
+
+Options that enable features specific to one package, where it's unlikely that
+another (unrelated) package has the same (or a similar) optional feature,
+should use a name prefixed with pkgname-.
+
+If a group of related packages share an optional feature specific to that
+group, prefix it with the name of the "main" package (e. g.
+djbware-errno-hack).
+
+For new options, add a line to mk/defaults/options.description. Lines have two
+fields, separated by tab. The first field is the option name, the second its
+description. The description should be a whole sentence (starting with an
+uppercase letter and ending with a period) that describes what enabling the
+option does. E. g. "Enable ispell support." The file is sorted by option names.
 
 Chapter 14. The build process
 

@@ -61,13 +61,13 @@ alink="#0000FF">
         </div>
 
         <div>
-          <p class="copyright">Copyright &#169; 1994-2004 The
+          <p class="copyright">Copyright &#169; 1994-2005 The
           NetBSD Foundation, Inc</p>
         </div>
 
         <div xmlns="http://www.w3.org/TR/xhtml1/transitional">
-          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.9
-          2005/06/08 13:59:30 dillo Exp $</p>
+          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.10
+          2005/10/05 13:59:56 dillo Exp $</p>
         </div>
 
         <div>
@@ -503,8 +503,8 @@ alink="#0000FF">
                 Variable substitution in PLIST</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#manpage-compression">10.5. Man
-                page-compression</a></span></dt>
+                "#manpage-compression">10.5. Man page
+                compression</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#using-PLIST_SRC">10.6. Changing PLIST source with
@@ -668,6 +668,9 @@ alink="#0000FF">
                 to use <code xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" class=
                 "filename">bsd.options.mk</code></a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#option-names">13.3. Option Names</a></span></dt>
               </dl>
             </dd>
 
@@ -1310,7 +1313,8 @@ alink="#0000FF">
         <div>
           <div>
             <h1 class="title"><a name="users-guide" id=
-            "users-guide"></a>The pkgsrc user's guide</h1>
+            "users-guide"></a>Part&nbsp;I.&nbsp;The pkgsrc user's
+            guide</h1>
           </div>
         </div>
       </div>
@@ -5533,8 +5537,8 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
         <div>
           <div>
             <h1 class="title"><a name="developers-guide" id=
-            "developers-guide"></a>The pkgsrc developer's
-            guide</h1>
+            "developers-guide"></a>Part&nbsp;II.&nbsp;The pkgsrc
+            developer's guide</h1>
           </div>
         </div>
       </div>
@@ -5654,8 +5658,8 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
               Variable substitution in PLIST</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#manpage-compression">10.5. Man
-              page-compression</a></span></dt>
+              "#manpage-compression">10.5. Man page
+              compression</a></span></dt>
 
               <dt><span class="sect1"><a href=
               "#using-PLIST_SRC">10.6. Changing PLIST source with
@@ -5814,6 +5818,9 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
               use <code xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" class=
               "filename">bsd.options.mk</code></a></span></dt>
+
+              <dt><span class="sect1"><a href="#option-names">13.3.
+              Option Names</a></span></dt>
             </dl>
           </dd>
 
@@ -7359,8 +7366,8 @@ for_test:
             Variable substitution in PLIST</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#manpage-compression">10.5. Man
-            page-compression</a></span></dt>
+            "#manpage-compression">10.5. Man page
+            compression</a></span></dt>
 
             <dt><span class="sect1"><a href=
             "#using-PLIST_SRC">10.6. Changing PLIST source with
@@ -7621,8 +7628,8 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
               <div>
                 <h2 class="title" style="clear: both"><a name=
                 "manpage-compression" id=
-                "manpage-compression"></a>10.5.&nbsp;Man
-                page-compression</h2>
+                "manpage-compression"></a>10.5.&nbsp;Man page
+                compression</h2>
               </div>
             </div>
           </div>
@@ -9512,6 +9519,9 @@ PKG_SHELL=      ${PREFIX}/bin/zsh
             use <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">bsd.options.mk</code></a></span></dt>
+
+            <dt><span class="sect1"><a href="#option-names">13.3.
+            Option Names</a></span></dt>
           </dl>
         </div>
 
@@ -9771,17 +9781,47 @@ CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
 .if !empty(PKG_OPTIONS:M<em class=
 "replaceable"><code>option</code></em>)
 </pre>
+        </div>
 
-          <p>If another package already has an option with the same
-          meaning, use the same name. For options applicable to
-          multiple packages (like enabling support for a library),
-          use short option names (like the name of the library).
-          For options specific to this package, prefix the name
-          with <code class="varname"><em class=
-          "replaceable"><code>pkgname</code></em>-</code>. Document
-          the option and its meaning in <code xmlns=
+        <div class="sect1" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "option-names" id=
+                "option-names"></a>13.3.&nbsp;Option Names</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>Options that enable similar features in different
+          packages (like optional support for a library) should use
+          a common name in all packages that support it (like the
+          name of the library). If another package already has an
+          option with the same meaning, use the same name.</p>
+
+          <p>Options that enable features specific to one package,
+          where it's unlikely that another (unrelated) package has
+          the same (or a similar) optional feature, should use a
+          name prefixed with <code class="varname"><em class=
+          "replaceable"><code>pkgname</code></em>-</code>.</p>
+
+          <p>If a group of related packages share an optional
+          feature specific to that group, prefix it with the name
+          of the &#8220;<span class="quote">main</span>&#8221;
+          package (e. g. <code class=
+          "varname">djbware-errno-hack</code>).</p>
+
+          <p>For new options, add a line to <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">mk/defaults/options.description</code>.</p>
+          "filename">mk/defaults/options.description</code>. Lines
+          have two fields, separated by tab. The first field is the
+          option name, the second its description. The description
+          should be a whole sentence (starting with an uppercase
+          letter and ending with a period) that describes what
+          enabling the option does. E. g. &#8220;<span class=
+          "quote">Enable ispell support.</span>&#8221; The file is
+          sorted by option names.</p>
         </div>
       </div>
 
