@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2005/08/19 04:44:10 schmonz Exp $
+# $NetBSD: options.mk,v 1.7 2005/10/05 04:28:00 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=	inet6 djbdns-ignoreip2 djbdns-tinydns64
-PKG_OPTIONS_LEGACY_OPTS+=	ignoreip2:djbdns-ignoreip2
-PKG_OPTIONS_LEGACY_OPTS+=	tinydns64:djbdns-tinydns64
 
 .if ${MACHINE_ARCH} == "sparc64" || \
 	${MACHINE_ARCH} == "alpha" || \
