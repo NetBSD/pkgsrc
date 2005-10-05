@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.10 2005/08/24 05:10:35 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.11 2005/10/05 05:46:54 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -27,7 +27,6 @@
 DJBWARE_MK=		# defined
 
 DJB_RESTRICTED?=	YES
-DJB_ERRNO_HACK?=	YES
 DJB_MAKE_TARGETS?=	YES
 DJB_BUILD_TARGETS?=	# empty
 DJB_INSTALL_TARGETS?=	# empty
@@ -70,7 +69,7 @@ do-configure:
 .endif
 
 PKG_SUPPORTED_OPTIONS+=	djbware-errno-hack
-PKG_OPTIONS_LEGACY_VARS+=	DJB_ERRNO_HACK:djbware-errno-hack
+PKG_SUGGESTED_OPTIONS+=	djbware-errno-hack
 
 .include "../../mk/bsd.prefs.mk"
 
