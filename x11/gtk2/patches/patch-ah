@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.9 2005/03/02 15:39:06 wiz Exp $
+$NetBSD: patch-ah,v 1.10 2005/10/05 14:37:45 wiz Exp $
 
---- gdk-pixbuf/pixops/scale_line_22_33_mmx.S.orig	2005-02-28 19:08:34.000000000 +0100
+--- gdk-pixbuf/pixops/scale_line_22_33_mmx.S.orig	2005-07-12 17:58:57.000000000 +0200
 +++ gdk-pixbuf/pixops/scale_line_22_33_mmx.S
-@@ -4,7 +4,7 @@ gcc2_compiled.:
+@@ -22,7 +22,7 @@ gcc2_compiled.:
  .text
  	.align 16
  

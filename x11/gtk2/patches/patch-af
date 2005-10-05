@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.11 2005/03/02 15:39:06 wiz Exp $
+$NetBSD: patch-af,v 1.12 2005/10/05 14:37:45 wiz Exp $
 
---- gdk-pixbuf/pixops/composite_line_color_22_4a4_mmx.S.orig	2005-02-28 19:08:34.000000000 +0100
+--- gdk-pixbuf/pixops/composite_line_color_22_4a4_mmx.S.orig	2005-07-12 17:58:57.000000000 +0200
 +++ gdk-pixbuf/pixops/composite_line_color_22_4a4_mmx.S
-@@ -4,7 +4,7 @@ gcc2_compiled.:
+@@ -22,7 +22,7 @@ gcc2_compiled.:
  .text
  	.align 16
  
