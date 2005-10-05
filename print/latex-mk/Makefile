@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/06/07 17:32:58 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/05 01:48:40 dmcmahill Exp $
 #
 
-DISTNAME=	latex-mk-1.3
+DISTNAME=	latex-mk-1.4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=latex-mk/}
 
@@ -11,10 +11,12 @@ COMMENT=	Makefile fragments and scripts for managing LaTeX documents
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS=	awk echo env false find grep rm rmdir
+USE_TOOLS+=	awk echo env false find grep gzcat gzip rm rmdir tar
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	BMAKE=${MAKE_PROGRAM:Q}
+CONFIGURE_ENV+=	GZCAT=${GZCAT:Q}
+CONFIGURE_ENV+=	GZIP=${GZIP_CMD:Q}
 
 INFO_FILES=	latex-mk.info
 
