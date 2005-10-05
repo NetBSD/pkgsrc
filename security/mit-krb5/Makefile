@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/09/22 19:45:42 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/10/05 13:29:51 wiz Exp $
 
 DISTNAME=	krb5-1.4.2
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -42,8 +42,6 @@ MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mit-krb5
 PKG_SUPPORTED_OPTIONS=	kerberos-prefix-cmds
-PKG_OPTIONS_LEGACY_VARS+=	KERBEROS_PREFIX_CMDS:kerberos-prefix-cmds
-PKG_OPTIONS_LEGACY_OPTS+=	prefix-cmds:kerberos-prefix-cmds
 
 .include "../../mk/bsd.options.mk"
 

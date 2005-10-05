@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2005/06/10 18:11:57 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2005/10/05 13:29:50 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.battleball
 PKG_SUPPORTED_OPTIONS=		opengl
-PKG_OPTIONS_LEGACY_VARS+=	BATTLEBALL_USE_MESA:opengl
 
 .include "../../mk/bsd.options.mk"
 

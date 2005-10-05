@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/02 18:10:33 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/05 13:29:49 wiz Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -22,7 +22,6 @@ CONFIGURE_ARGS+=	--enable-xinerama
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.golem
 PKG_SUPPORTED_OPTIONS=	esound
-PKG_OPTIONS_LEGACY_VARS+=	GOLEM_WITH_SOUND:esound
 
 .include "../../mk/bsd.options.mk"
 

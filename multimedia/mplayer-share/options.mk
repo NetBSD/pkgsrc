@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/07/21 15:20:47 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2005/10/05 13:29:50 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -53,24 +53,6 @@ PKG_SUPPORTED_OPTIONS+=	mplayer-real
 PKG_SUGGESTED_OPTIONS+=	${_o_}
 .  endif
 .endfor
-
-# -------------------------------------------------------------------------
-# Define PKG_SUGGESTED_OPTIONS based on deprecated variables.
-# -------------------------------------------------------------------------
-
-.for d in ${MPLAYER_DISABLE_DRIVERS}
-PKG_LEGACY_OPTIONS+=-${d:S/esd/esound/}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable MPLAYER_DISABLE_DRIVERS="${d:Q}" used; use "${PKG_OPTIONS_VAR:Q}"+=-"${d:S/esd/esound/:Q}" instead."
-.endfor
-
-.if ${MACHINE_ARCH} == "i386"
-PKG_OPTIONS_LEGACY_VARS+=	\
-	MPLAYER_ENABLE_RUNTIME_CPU_DETECTION:mplayer-runtime-cpudetection
-.endif
-
-.if ${OPSYS} == "SunOS"
-PKG_OPTIONS_LEGACY_VARS+=	MPLAYER_USE_MEDIALIB:mlib
-.endif
 
 # -------------------------------------------------------------------------
 # Handle chosen options.

@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:36 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2005/10/05 13:29:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.db4
 PKG_SUPPORTED_OPTIONS=	java
-PKG_OPTIONS_LEGACY_VARS+=	WITH_JAVA:java
 
 .include "../../mk/bsd.options.mk"
 

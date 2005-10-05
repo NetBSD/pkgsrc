@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/29 13:36:37 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/05 13:29:50 wiz Exp $
 
 DISTNAME=	flow-tools-0.68
 PKGREVISION=	1
@@ -29,8 +29,6 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.flow-tools
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_SUPPORTED_OPTIONS=		python
 PKG_OPTIONS_GROUP.database=	mysql pgsql
-PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_MYSQL:mysql
-PKG_OPTIONS_LEGACY_VARS+=	FLOW_TOOLS_USE_POSTGRESQL:pgsql
 
 .include "../../mk/bsd.options.mk"
 

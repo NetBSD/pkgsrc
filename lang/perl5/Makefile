@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2005/08/22 17:40:20 reed Exp $
+# $NetBSD: Makefile,v 1.103 2005/10/05 13:29:50 wiz Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -230,7 +230,6 @@ PKG_SUPPORTED_OPTIONS=		threads
 .if !empty(PERL5_BUILD_THREADS_SUPPORT:M[yY][eE][sS])
 PKG_SUGGESTED_OPTIONS=		threads
 .endif
-PKG_OPTIONS_LEGACY_VARS+=	PERL5_USE_THREADS:threads
 
 .include "../../mk/bsd.options.mk"
 
