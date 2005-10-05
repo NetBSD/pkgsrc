@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/09/20 04:23:48 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2005/10/05 13:29:50 wiz Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -36,7 +36,6 @@ CFLAGS.Interix+=	-DUSE_POSIX_GLOB_LIBRARY
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bash
 PKG_SUPPORTED_OPTIONS=	multibyte static
 PKG_SUGGESTED_OPTIONS=	multibyte
-PKG_OPTIONS_LEGACY_VARS+=	BASH_STATIC:static
 
 .include "../../mk/bsd.options.mk"
 

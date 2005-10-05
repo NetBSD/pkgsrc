@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/06/19 01:46:35 salo Exp $
+# $NetBSD: options.mk,v 1.7 2005/10/05 13:29:50 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -6,12 +6,6 @@
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xchat
 PKG_SUPPORTED_OPTIONS=	inet6 ssl socks5
 PKG_SUGGESTED_OPTIONS=	ssl
-PKG_OPTIONS_LEGACY_OPTS+=	socks:socks5
-
-.if defined(PKG_OPTIONS.xchat2)
-PKG_LEGACY_OPTIONS+=	${PKG_OPTIONS.xchat2}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.xchat2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
-.endif
 
 .include "../../mk/bsd.options.mk"
 
