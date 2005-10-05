@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2005/10/05 13:29:50 wiz Exp $
 
 DISTNAME=	cue-snap-20050131
 PKGNAME=	cue-20050131
@@ -14,7 +14,6 @@ GNU_CONFIGURE=	yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cue
 PKG_SUPPORTED_OPTIONS=	canna idea inet6
-PKG_OPTIONS_LEGACY_VARS+=	CUE_USE_CANNA:canna
 
 .include "../../mk/bsd.options.mk"
 

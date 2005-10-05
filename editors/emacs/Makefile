@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2005/06/08 14:39:40 markd Exp $
+# $NetBSD: Makefile,v 1.87 2005/10/05 13:29:49 wiz Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 PKGREVISION=	1
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=	--with-png
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=  emacs-xaw3d
-PKG_OPTIONS_LEGACY_VARS+= EMACS_USE_XAW3D:emacs-xaw3d
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Memacs-xaw3d)

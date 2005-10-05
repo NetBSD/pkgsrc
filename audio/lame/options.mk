@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2005/05/31 16:04:28 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lame
 PKG_SUPPORTED_OPTIONS=	gtk
-PKG_OPTIONS_LEGACY_VARS+= LAME_USE_GTK:gtk
 
 .include "../../mk/bsd.options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/02 18:30:17 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/10/05 13:29:49 wiz Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -30,7 +30,6 @@ post-install:
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pinfo
 PKG_SUPPORTED_OPTIONS=	pinfo-native-curses
-PKG_OPTIONS_LEGACY_VARS+=	PINFO_USE_NATIVE_CURSES:pinfo-native-curses
 
 .include "../../mk/bsd.options.mk"
 

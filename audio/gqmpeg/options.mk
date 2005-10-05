@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2005/05/31 12:20:11 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gqmpeg
 PKG_SUPPORTED_OPTIONS=	gqmpeg-japanese gqmpeg-russian
 PKG_SUGGESTED_OPTIONS=	gqmpeg-japanese gqmpeg-russian
-PKG_OPTIONS_LEGACY_VARS+= GQMPEG_NO_JAPANESE:-gqmpeg-japanese GQMPEG_NO_RUSSIAN:-gqmpeg-russian
 
 .include "../../mk/bsd.options.mk"
 

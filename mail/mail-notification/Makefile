@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:19 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/05 13:29:50 wiz Exp $
 #
 
 DISTNAME=	mail-notification-1.0
@@ -26,7 +26,6 @@ CONF_FILES=	${EGDIR}/sound/events/mail-notification.soundlist \
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mail-notification
 PKG_SUPPORTED_OPTIONS=	inet6 sasl ssl
-PKG_OPTIONS_LEGACY_OPTS+=	ipv6:inet6
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"

@@ -1,15 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2005/08/01 15:27:00 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2005/10/05 13:29:50 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	db2 db4
 PKG_SUPPORTED_OPTIONS=	inet6 ldap sasl tls tcpwrappers sendmail-socketmap
 PKG_SUGGESTED_OPTIONS=	tcpwrappers
-
-PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls
-PKG_OPTIONS_LEGACY_OPTS+=	socketmap:sendmail-socketmap
-PKG_OPTIONS_LEGACY_VARS+=	USE_STARTTLS:ssl
-PKG_OPTIONS_LEGACY_VARS+=	USE_TCPWRAPPERS:tcpwrappers
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/08/23 14:07:25 reed Exp $
+# $NetBSD: Makefile,v 1.43 2005/10/05 13:29:50 wiz Exp $
 
 DISTNAME=	heimdal-0.6.5
 PKGREVISION=	2
@@ -44,8 +44,6 @@ USE_OLD_DES_API=	yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal
 PKG_SUPPORTED_OPTIONS=	db4 ldap kerberos-prefix-cmds
-PKG_OPTIONS_LEGACY_VARS+=	KERBEROS_PREFIX_CMDS:kerberos-prefix-cmds
-PKG_OPTIONS_LEGACY_OPTS+=	prefix-cmds:kerberos-prefix-cmds
 
 .include "../../mk/bsd.options.mk"
 

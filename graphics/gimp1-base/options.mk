@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2005/05/31 22:26:10 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gimp-base
 PKG_SUPPORTED_OPTIONS=	gimp1-helpbrowser
-PKG_OPTIONS_LEGACY_VARS+=	GIMP_WITH_HELPBROWSER:gimp1-helpbrowser
 
 .include "../../mk/bsd.options.mk"
 

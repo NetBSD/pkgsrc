@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2005/05/31 16:36:40 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bitchx
 PKG_SUPPORTED_OPTIONS=	gtk
-PKG_OPTIONS_LEGACY_VARS+=	BITCHX_WITH_GTK:gtk
 
 .include "../../mk/bsd.options.mk"
 
