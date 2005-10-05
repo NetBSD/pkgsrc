@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2005/10/05 04:28:00 schmonz Exp $
+# $NetBSD: options.mk,v 1.17 2005/10/05 05:46:54 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS+=	qmail-netqmail qmail-outgoingip qmail-qregex
 PKG_SUPPORTED_OPTIONS+=	qmail-realrcptto qmail-viruscan
 
 .if ${OPSYS} == "Darwin"
-PKG_SUGGESTED_OPTIONS=	darwin
+PKG_SUGGESTED_OPTIONS+=	darwin
 .endif
 
 .include "../../mk/bsd.options.mk"
