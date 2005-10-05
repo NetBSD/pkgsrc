@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11348 2005/10/05 15:53:14 salo Exp $
+$NetBSD: CHANGES,v 1.11349 2005/10/05 16:00:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4292,3 +4292,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gtk2 to 2.8.6 [wiz 2005-10-05]
 	Updated devel/bugzilla to 2.18.4 [salo 2005-10-05]
 	Updated mail/imap-uw to 2004enb1 [salo 2005-10-05]
+	Updated www/php4 to 4.4.0nb1 [tron 2005-10-05]
