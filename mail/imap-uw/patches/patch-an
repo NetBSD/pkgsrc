@@ -1,0 +1,17 @@
+$NetBSD: patch-an,v 1.1 2005/10/05 15:49:44 salo Exp $
+
+Security fix for CAN-2005-2933, from 2004g.
+
+--- src/c-client/mail.c.orig	2005-03-17 01:12:17.000000000 +0100
++++ src/c-client/mail.c	2005-10-05 17:37:13.000000000 +0200
+@@ -691,8 +691,10 @@
+       if (c == '=') {		/* parse switches which take arguments */
+ 	if (*t == '"') {	/* quoted string? */
+ 	  for (v = arg,i = 0,++t; (c = *t++) != '"';) {
++            if (!c) return NIL; /* unterminated string */
+ 				/* quote next character */
+ 	    if (c == '\\') c = *t++;
++            if (!c) return NIL; /* can't quote NUL either */
+ 	    arg[i++] = c;
+ 	  }
+ 	  c = *t++;		/* remember delimiter for later */
