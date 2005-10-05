@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/06/17 04:49:49 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/05 13:38:13 salo Exp $
 
 DISTNAME=	weex-2.6.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.enjoy.ne.jp/~gm/program/weex/arc/
 
