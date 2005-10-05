@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11344 2005/10/05 13:53:49 wiz Exp $
+$NetBSD: CHANGES,v 1.11345 2005/10/05 14:02:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4288,3 +4288,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added emulators/ski version 0.9.81-l6 [skrll 2005-10-05]
 	Updated www/weex to 2.6.1nb1 [salo 2005-10-05]
 	Updated devel/glib2 to 2.8.3 [wiz 2005-10-05]
+	Updated devel/pango to 1.10.1 [wiz 2005-10-05]
