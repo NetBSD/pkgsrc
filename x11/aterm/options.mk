@@ -1,11 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2005/06/01 19:39:36 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aterm
 PKG_SUPPORTED_OPTIONS=	aterm-big5 aterm-greek aterm-kanji aterm-xterm-scroll
-PKG_OPTIONS_LEGACY_VARS+=	ATERM_USE_KANJI:aterm-kanji
-PKG_OPTIONS_LEGACY_VARS+=	ATERM_USE_XTERM_SCROLL:aterm-xterm-scroll
-PKG_OPTIONS_LEGACY_VARS+=	ATERM_USE_BIG5:aterm-big5
-PKG_OPTIONS_LEGACY_VARS+=	ATERM_USE_GREEK:aterm-greek
 
 .include "../../mk/bsd.options.mk"
 
