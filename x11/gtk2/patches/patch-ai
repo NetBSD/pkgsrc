@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.11 2005/10/05 14:37:45 wiz Exp $
+
+--- gtk/gtkcalendar.c.orig	2005-10-04 05:24:16.000000000 +0200
++++ gtk/gtkcalendar.c
+@@ -566,6 +566,7 @@ gtk_calendar_init (GtkCalendar *calendar
+   GtkCalendarPrivate *priv;
+   gchar *year_before;
+   gchar *langinfo;
++  gchar *week_start;
+   gint week_1stday = 0;
+   gint first_weekday = 1;
+   guint week_origin;
