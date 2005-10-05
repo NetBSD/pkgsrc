@@ -1,9 +1,9 @@
-# $NetBSD: tools.Interix.mk,v 1.13 2005/06/24 20:59:59 jlam Exp $
+# $NetBSD: tools.Interix.mk,v 1.14 2005/10/05 16:10:20 tv Exp $
 #
 # System-supplied tools for the Interix operating system.
 
 TOOLS_PLATFORM.[?=		/bin/[
-TOOLS_PLATFORM.awk?=		/usr/contrib/bin/gawk
+TOOLS_PLATFORM.awk?=		/bin/awk
 TOOLS_PLATFORM.basename?=	/bin/basename
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/bin/chgrp
