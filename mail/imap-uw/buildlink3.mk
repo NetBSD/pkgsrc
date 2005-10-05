@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:12:53 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/10/05 15:49:44 salo Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 IMAP_UW_BUILDLINK3_MK:=	${IMAP_UW_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	imap-uw
 
 .if !empty(IMAP_UW_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.imap-uw+=	imap-uw>=2004
-BUILDLINK_RECOMMENDED.imap-uw+=	imap-uw>=2004anb2
+BUILDLINK_RECOMMENDED.imap-uw+=	imap-uw>=2004enb1
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
 #
 # Make "-limapuw" resolve into "-lc-client".
