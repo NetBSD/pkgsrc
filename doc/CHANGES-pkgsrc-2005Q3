@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.13 2005/10/05 12:19:11 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.14 2005/10/05 13:45:58 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -29,3 +29,5 @@ Pullup ticket 798 - requested by Joerg Sonnenberger
 bugfixes for mpg123
 Pullup ticket 800 - requested by Michael Rauch
 build fix for openoffice
+Pullup ticket 801 - requested by Martti Kuparinen
+postfix-current update and PLIST fix
