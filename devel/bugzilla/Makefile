@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:07 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/05 15:09:23 salo Exp $
 #
 
-DISTNAME=	bugzilla-2.18.3
+DISTNAME=	bugzilla-2.18.4
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/webtools/
 
