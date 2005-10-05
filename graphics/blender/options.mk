@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/06/02 14:14:43 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.blender
 PKG_SUPPORTED_OPTIONS=
@@ -6,10 +6,6 @@ PKG_SUPPORTED_OPTIONS=
 .if 0
 PKG_SUPPORTED_OPTIONS+=	blender-exppython ogg openal vorbis
 .endif
-PKG_OPTIONS_LEGACY_VARS+=	BLENDER_USE_EXPPYTHON:blender-exppython
-PKG_OPTIONS_LEGACY_VARS+=	BLENDER_USE_OGG:ogg
-PKG_OPTIONS_LEGACY_VARS+=	BLENDER_USE_OPENAL:openal
-PKG_OPTIONS_LEGACY_VARS+=	BLENDER_USE_VORBIS:vorbis
 
 .include "../../mk/bsd.options.mk"
 
