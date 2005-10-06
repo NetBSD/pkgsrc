@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2005/10/06 11:50:03 wiz Exp $
 #
 
 .include "Makefile.common"
 
 USE_PKGINSTALL=		YES
-
-CONFIGURE_ARGS+=	--disable-gui
 
 RCD_SCRIPTS=		mldonkey
 
