@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1 2005/10/06 14:23:39 salo Exp $
+
+Security fix for CAN-2005-2945 and CAN-2005-2992, from Debian.
+
+--- arcsvc.c.orig	1992-04-15 00:58:40.000000000 +0200
++++ arcsvc.c	2005-10-06 16:07:28.000000000 +0200
+@@ -17,6 +17,9 @@
+ 	 Computer Innovations Optimizing C86
+ */
+ #include <stdio.h>
++#include <sys/types.h>
++#include <sys/stat.h>
++#include <fcntl.h>
+ #include "arc.h"
+ #if	_MTS
+ #include <mts.h>
+@@ -52,7 +55,12 @@
+ 	}
+ #endif
+ 	if (chg) {		/* if opening for changes */
+-		if (!(new = fopen(newname, OPEN_W)))
++		int fd;
++
++		if ((fd = open(newname, O_CREAT|O_EXCL|O_RDWR, S_IREAD|S_IWRITE)) == -1)
++			arcdie("Cannot create archive copy: %s", newname);
++
++		if (!(new = fdopen(fd, OPEN_W)))
+ 			arcdie("Cannot create archive copy: %s", newname);
+ 
+ 	changing = chg;		/* note if open for changes */
