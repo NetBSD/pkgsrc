@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:51 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/06 11:26:18 sketch Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
+PKGREVISION=	1
 CATEGORIES=	sysutils www
 MASTER_SITES=	http://clueful.shagged.org/apachetop/files/
 
