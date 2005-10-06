@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/02 14:13:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/06 18:08:15 drochner Exp $
 bin/mayavi
 ${PYSITELIB}/mayavi/Base/DataVizManager.py
 ${PYSITELIB}/mayavi/Base/DataVizManager.pyc
@@ -57,6 +57,9 @@ ${PYSITELIB}/mayavi/Filters/Threshold.pyo
 ${PYSITELIB}/mayavi/Filters/UserDefined.py
 ${PYSITELIB}/mayavi/Filters/UserDefined.pyc
 ${PYSITELIB}/mayavi/Filters/UserDefined.pyo
+${PYSITELIB}/mayavi/Filters/Vorticity.py
+${PYSITELIB}/mayavi/Filters/Vorticity.pyc
+${PYSITELIB}/mayavi/Filters/Vorticity.pyo
 ${PYSITELIB}/mayavi/Filters/WarpScalar.py
 ${PYSITELIB}/mayavi/Filters/WarpScalar.pyc
 ${PYSITELIB}/mayavi/Filters/WarpScalar.pyo
@@ -72,6 +75,9 @@ ${PYSITELIB}/mayavi/Main.pyo
 ${PYSITELIB}/mayavi/Misc/CTFEditor.py
 ${PYSITELIB}/mayavi/Misc/CTFEditor.pyc
 ${PYSITELIB}/mayavi/Misc/CTFEditor.pyo
+${PYSITELIB}/mayavi/Misc/GradientEditor.py
+${PYSITELIB}/mayavi/Misc/GradientEditor.pyc
+${PYSITELIB}/mayavi/Misc/GradientEditor.pyo
 ${PYSITELIB}/mayavi/Misc/Lights.py
 ${PYSITELIB}/mayavi/Misc/Lights.pyc
 ${PYSITELIB}/mayavi/Misc/Lights.pyo
