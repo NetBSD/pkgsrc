@@ -1,12 +1,6 @@
-$NetBSD: distinfo,v 1.9 2005/02/23 18:43:53 wiz Exp $
+$NetBSD: distinfo,v 1.10 2005/10/06 17:28:42 reed Exp $
 
-SHA1 (ctwm-3.6.tar.gz) = 8a8cefd2273c748fd7ceded4c3553e5ca7a994ec
-RMD160 (ctwm-3.6.tar.gz) = 83e6f770e58efb6dea5eacfcce345322ffdd416e
-Size (ctwm-3.6.tar.gz) = 370563 bytes
-SHA1 (ctwm-3.6-xpm.tar.gz) = dfe7331dba041eff70d561b728ca8d7a16f68ca6
-RMD160 (ctwm-3.6-xpm.tar.gz) = 94e1c995bd4059215b061000af2b6d52c3cd0e6b
-Size (ctwm-3.6-xpm.tar.gz) = 246505 bytes
-SHA1 (patch-aa) = f1feb6e3c932018669afac774397dae2f7b06b44
-SHA1 (patch-ab) = e03e595241ae1e1bc412772c6805ee115aad80d0
+SHA1 (ctwm-3.7.tar.gz) = 6140e82ec23499146eaab5bf3bd592f92e95683e
+RMD160 (ctwm-3.7.tar.gz) = 9809df2555b3eb2bf0c46c041df8c1c089b67255
+Size (ctwm-3.7.tar.gz) = 1139461 bytes
 SHA1 (patch-ac) = 99a28b20904207693a4f25aafaaac447dbcdca95
-SHA1 (patch-ad) = d455a80205f07baf3789a5e8b2506e5c42429b85
