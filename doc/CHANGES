@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11355 2005/10/06 14:24:36 salo Exp $
+$NetBSD: CHANGES,v 1.11356 2005/10/06 15:55:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4300,3 +4300,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/mldonkey-gui to 2.6.4 [wiz 2005-10-06]
 	Updated security/libgcrypt to 1.2.2 [wiz 2005-10-06]
 	Updated archivers/arc to 5.21enb2 [salo 2005-10-06]
+	Updated chat/gtmess to 0.91nb1 [minskim 2005-10-06]
