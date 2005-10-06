@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.15 2005/10/05 20:39:46 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.16 2005/10/06 11:48:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -33,3 +33,5 @@ Pullup ticket 801 - requested by Martti Kuparinen
 postfix-current update and PLIST fix
 Pullup ticket 806 - requested by Matthias Scheler
 security fix for php4
+Pullup ticket 808 - requested by Jonathan Perkin
+security fix for apachetop
