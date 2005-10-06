@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2005/10/06 11:50:03 wiz Exp $
+
+--- src/utils/lib/stubs_c.c.orig	2005-09-03 00:39:59.000000000 +0200
++++ src/utils/lib/stubs_c.c
+@@ -1066,7 +1066,7 @@ statfs_statfs (value pathv)
+ 
+ #ifdef HAVE_STATS
+ static value
+-#if ((defined (sun) || defined (__sun__)))
++#if ((defined (sun) || defined (__sun__))) || (defined(__NetBSD__) && (__NetBSD_Version__ > 299000000))
+ copy_statfs (struct statvfs *buf)
+ #else
+ copy_statfs (struct statfs *buf)
+@@ -1123,7 +1123,7 @@ statfs_statfs (value pathv)
+   CAMLparam1 (pathv);
+   CAMLlocal1 (bufv);
+   const char *path = String_val (pathv);
+-#if ((defined (sun) || defined (__sun__)))
++#if ((defined (sun) || defined (__sun__))) || (defined(__NetBSD__) && (__NetBSD_Version__ > 299000000))
+   struct statvfs buf;
+   if (statvfs (path, &buf) == -1)
+ #else
