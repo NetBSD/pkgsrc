@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11357 2005/10/06 16:32:48 drochner Exp $
+$NetBSD: CHANGES,v 1.11358 2005/10/06 17:31:06 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4302,3 +4302,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/arc to 5.21enb2 [salo 2005-10-06]
 	Updated chat/gtmess to 0.91nb1 [minskim 2005-10-06]
 	Updated devel/eric3 to 3.7.2 [drochner 2005-10-06]
+	Updated wm/ctwm to 3.7 [reed 2005-10-06]
