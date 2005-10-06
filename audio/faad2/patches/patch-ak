@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2005/10/06 13:13:28 ben Exp $
+
+--- configure.in.orig	2005-10-05 21:16:43.000000000 -0700
++++ configure.in
+@@ -114,7 +114,7 @@ if test x$WITHDRM = xyes; then
+   AC_DEFINE(DRM, 1, [Define if you want to use libfaad together with Digital Radio Mondiale (DRM)])
+ fi
+ 
+-AC_CONFIG_FILES(libfaad/Makefile frontend/Makefile common/Makefile plugins/Makefile Makefile )
++AC_CONFIG_FILES(libfaad/Makefile frontend/Makefile common/Makefile plugins/Makefile include/Makefile Makefile )
+ 
+ AC_CONFIG_FILES(plugins/mpeg4ip/Makefile)
+ 
