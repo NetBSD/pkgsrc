@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2005/10/06 11:26:18 sketch Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/06 11:33:52 sketch Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
 PKGREVISION=	1
 CATEGORIES=	sysutils www
-MASTER_SITES=	http://clueful.shagged.org/apachetop/files/
+MASTER_SITES=	http://spork.qfe3.net/apachetop/files/
 
 MAINTAINER=	sketch@NetBSD.org
-HOMEPAGE=	http://clueful.shagged.org/apachetop/
+HOMEPAGE=	http://spork.qfe3.net/apachetop/
 COMMENT=	Real time apache log display
 
 GNU_CONFIGURE=		YES
