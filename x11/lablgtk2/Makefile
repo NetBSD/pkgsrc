@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/10/06 10:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/06 11:48:14 wiz Exp $
 #
 
 DISTNAME=	lablgtk-2.4.0
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
@@ -13,6 +13,8 @@ COMMENT=	GTK+ 2.x bindings for Objective Caml
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+
+BUILD_TARGET=		world
 
 BUILDLINK_DEPMETHOD.ocaml=	full
 
