@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2005/09/28 20:52:26 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2005/10/06 18:00:39 drochner Exp $
 
-DISTNAME=	scribus-1.2.2.1
+DISTNAME=	scribus-1.2.3
 CATEGORIES=	print
-MASTER_SITES=	http://www.scribus.org.uk/downloads/1.2.2.1/
+MASTER_SITES=	http://www.scribus.org.uk/downloads/1.2.3/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
