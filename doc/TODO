@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3975 2005/10/06 12:21:02 wiz Exp $
+$NetBSD: TODO,v 1.3976 2005/10/06 16:52:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -439,7 +439,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enscript-1.6.4
 	o epiphany-1.8
-	o eric3-3.7.2
 	o erlang-10b-6
 	o esh-0.8.5
 	o estd-0.4 [pkg/31285]
