@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.7 2005/07/23 18:47:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/10/06 11:50:03 wiz Exp $
 #
 
-DISTNAME=	mldonkey-2.6.0
+DISTNAME=	mldonkey-2.6.4
 CATEGORIES=	net
 MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,9 +30,6 @@ PRINT_PLIST_AWK+=	/^@dirrm libexec\/mldonkey$$/ \
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
-
-post-extract:
-	${CHMOD} 0644 ${WRKSRC}/Makefile
-
 .include "../../mk/pthread.buildlink3.mk"
