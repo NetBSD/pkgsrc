@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2005/10/03 19:45:42 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/06 18:46:59 drochner Exp $
 
---- test/Makefile.in.orig	2005-10-03 18:27:21.000000000 +0000
+--- test/Makefile.in.orig	2005-10-04 02:48:31.000000000 +0200
 +++ test/Makefile.in
-@@ -44,7 +44,7 @@ host_triplet = @host@
- @CAIRO_HAS_PS_SURFACE_TRUE@am__append_3 = ps-surface
- @CAIRO_HAS_XLIB_SURFACE_TRUE@am__append_4 = xlib-surface
- check_PROGRAMS = $(am__EXEEXT_5)
--@HAVE_PTHREAD_TRUE@am__append_5 = -lpthread
-+@HAVE_PTHREAD_TRUE@am__append_5 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+@@ -43,7 +43,7 @@ host_triplet = @host@
+ @CAIRO_HAS_PS_SURFACE_TRUE@am__append_4 = ps-surface
+ @CAIRO_HAS_XLIB_SURFACE_TRUE@am__append_5 = xlib-surface
+ check_PROGRAMS = $(am__EXEEXT_6)
+-@HAVE_PTHREAD_TRUE@am__append_6 = -lpthread
++@HAVE_PTHREAD_TRUE@am__append_6 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  noinst_PROGRAMS = imagediff$(EXEEXT)
  subdir = test
  DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in
