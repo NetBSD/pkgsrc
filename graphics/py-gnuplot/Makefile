@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:08 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/06 18:04:42 drochner Exp $
 #
 
-DISTNAME=	gnuplot-py-1.6
-PKGNAME=	${PYPKGPREFIX}-gnuplot-1.6
+DISTNAME=	gnuplot-py-1.7
+PKGNAME=	${PYPKGPREFIX}-gnuplot-1.7
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot-py/}
 
