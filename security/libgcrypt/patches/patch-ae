@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2005/03/10 15:38:33 tv Exp $
+$NetBSD: patch-ae,v 1.3 2005/10/06 12:20:41 wiz Exp $
 
---- src/ath.h.orig	Thu Nov 25 14:29:26 2004
+--- src/ath.h.orig	2005-07-29 15:45:42.000000000 +0200
 +++ src/ath.h
 @@ -31,6 +31,12 @@
  
@@ -30,18 +30,18 @@ $NetBSD: patch-ae,v 1.2 2005/03/10 15:38:33 tv Exp $
  #else
    ssize_t (*select) (int nfd, fd_set *rset, fd_set *wset, fd_set *eset,
  		     struct timeval *timeout);
-@@ -117,6 +131,14 @@ ssize_t ath_select (int nfd, void *rset,
- ssize_t ath_waitpid (pid_t pid, int *status, int options);
- int ath_accept (int s, void *addr, int *length_ptr);
+@@ -119,6 +133,14 @@ int ath_accept (int s, void *addr, int *
  int ath_connect (int s, void *addr, int length);
-+int ath_sendmsg (int s, const void *msg, int flags);
-+int ath_recvmsg (int s, void *msg, int flags);
+ int ath_sendmsg (int s, const void *msg, int flags);
+ int ath_recvmsg (int s, void *msg, int flags);
 +#elif defined(__INTERIX)
 +ssize_t ath_select (int nfd, fd_set *rset, fd_set *wset, fd_set *eset,
 +		    struct timeval *timeout);
 +ssize_t ath_waitpid (pid_t pid, int *status, int options);
 +int ath_accept (int s, struct sockaddr *addr, socklen_t *length_ptr);
 +int ath_connect (int s, struct sockaddr *addr, socklen_t length);
- int ath_sendmsg (int s, const void *msg, int flags);
- int ath_recvmsg (int s, void *msg, int flags);
++int ath_sendmsg (int s, const void *msg, int flags);
++int ath_recvmsg (int s, void *msg, int flags);
  #else
+ ssize_t ath_select (int nfd, fd_set *rset, fd_set *wset, fd_set *eset,
+ 		    struct timeval *timeout);
