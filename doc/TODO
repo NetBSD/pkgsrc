@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3972 2005/10/05 14:38:23 wiz Exp $
+$NetBSD: TODO,v 1.3973 2005/10/06 11:08:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -588,6 +588,7 @@ Suggested package updates
 	o libdvbpsi-0.1.5
 	o libextractor-0.5.6
 	o libflash-0.4.13
+	o libgcrypt-1.2.2
 	o libhydrogen-0.9.0
 	o libjit-0.0.4 [pkg/30514]
 	o libksba-0.9.9
@@ -997,7 +998,7 @@ Suggested package updates
 	o sun-jdk15-5.0.5
 	o sun-jre15-5.0.5
 	o suse_base-9.3
-	o svk-1.04
+	o svk-1.05
 	o swfdec-0.3.5
 	o swi-prolog-5.5.11
 	o swish-e-2.4.3
@@ -1034,6 +1035,7 @@ Suggested package updates
 	o totd-1.5.1
 	o tpasm-1.2
 	o tpb-0.6.3
+	o trafshow-5.2.1
 	o transcode-0.6.14
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
