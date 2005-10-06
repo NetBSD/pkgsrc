@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11358 2005/10/06 17:31:06 reed Exp $
+$NetBSD: CHANGES,v 1.11359 2005/10/06 18:28:24 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4303,3 +4303,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/gtmess to 0.91nb1 [minskim 2005-10-06]
 	Updated devel/eric3 to 3.7.2 [drochner 2005-10-06]
 	Updated wm/ctwm to 3.7 [reed 2005-10-06]
+	Updated x11/qt3-qscintilla to 1.6 [drochner 2005-10-06]
+	Updated x11/py-qt3-base to 3.15 [drochner 2005-10-06]
+	Updated print/scribus to 1.2.3 [drochner 2005-10-06]
+	Updated multimedia/gxine to 0.4.8 [drochner 2005-10-06]
+	Updated graphics/py-gnuplot to 1.7 [drochner 2005-10-06]
+	Updated graphics/mayavi to 1.5 [drochner 2005-10-06]
