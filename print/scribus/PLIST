@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/07/06 18:05:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/10/06 18:00:39 drochner Exp $
 bin/scribus
 include/scribus/alignselect.h
 include/scribus/bookmwin.h
@@ -124,7 +124,11 @@ lib/scribus/plugins/libscribusexportpixmap.la
 lib/scribus/plugins/libscribusshortwords.la
 lib/scribus/plugins/libsvgexplugin.la
 lib/scribus/plugins/libsvgimplugin.la
+lib/scribus/profiles/Fogra27L.icm
 lib/scribus/profiles/ReadMe
+lib/scribus/profiles/sRGB.icm
+lib/scribus/profiles/srgb.license
+lib/scribus/profiles/tr01_d50.icm
 lib/scribus/rgbscribus.txt
 lib/scribus/rgbscribusgnome.txt
 lib/scribus/rgbscribusgreys.txt
@@ -180,7 +184,6 @@ share/scribus/doc/en/codingstandards.html
 share/scribus/doc/en/contributions.html
 share/scribus/doc/en/cross-platform.html
 share/scribus/doc/en/cups.html
-share/scribus/doc/en/cygwin.html
 share/scribus/doc/en/developers.html
 share/scribus/doc/en/doccopyright.html
 share/scribus/doc/en/docinfo.html
@@ -195,9 +198,7 @@ share/scribus/doc/en/fonts3.html
 share/scribus/doc/en/fonts4.html
 share/scribus/doc/en/fonts5.html
 share/scribus/doc/en/gettexthowto.html
-share/scribus/doc/en/gsadv.html
 share/scribus/doc/en/gsfont.html
-share/scribus/doc/en/gsview.html
 share/scribus/doc/en/hyphenator.html
 share/scribus/doc/en/images/RDF.png
 share/scribus/doc/en/images/Scripter.png
@@ -220,6 +221,9 @@ share/scribus/doc/en/images/cups1.png
 share/scribus/doc/en/images/cups2.png
 share/scribus/doc/en/images/docheader1.png
 share/scribus/doc/en/images/docheader2.png
+share/scribus/doc/en/images/docinfo.png
+share/scribus/doc/en/images/docinfo2.png
+share/scribus/doc/en/images/filepicker.png
 share/scribus/doc/en/images/fontpref1.png
 share/scribus/doc/en/images/fontpref2.png
 share/scribus/doc/en/images/fontpref3.png
@@ -252,6 +256,10 @@ share/scribus/doc/en/images/monprof1.png
 share/scribus/doc/en/images/monprof2.png
 share/scribus/doc/en/images/monprof3.png
 share/scribus/doc/en/images/monprof4.png
+share/scribus/doc/en/images/oochart.png
+share/scribus/doc/en/images/ooeps1.png
+share/scribus/doc/en/images/oogettext1.png
+share/scribus/doc/en/images/pagetemplate1.png
 share/scribus/doc/en/images/pdfx3-1.png
 share/scribus/doc/en/images/pdfxcolor.png
 share/scribus/doc/en/images/pdfxintent.png
@@ -283,15 +291,17 @@ share/scribus/doc/en/images/wlasciwosci_pola.png
 share/scribus/doc/en/images/wyslij_formularz.png
 share/scribus/doc/en/images/xnview.png
 share/scribus/doc/en/importhints.html
+share/scribus/doc/en/importhints1.html
 share/scribus/doc/en/importhints2.html
+share/scribus/doc/en/importhints3.html
 share/scribus/doc/en/index.html
 share/scribus/doc/en/install-dpkg.html
 share/scribus/doc/en/install.html
 share/scribus/doc/en/install1.html
 share/scribus/doc/en/install2.html
 share/scribus/doc/en/install3.html
-share/scribus/doc/en/install4.html
 share/scribus/doc/en/intro.html
+share/scribus/doc/en/irc.html
 share/scribus/doc/en/javascriptpdf.html
 share/scribus/doc/en/keys.html
 share/scribus/doc/en/machints1.html
@@ -300,12 +310,14 @@ share/scribus/doc/en/menu.xml
 share/scribus/doc/en/moncal.html
 share/scribus/doc/en/mouse.html
 share/scribus/doc/en/otherinfo.html
+share/scribus/doc/en/pagetemplate1.html
 share/scribus/doc/en/parallel-install.html
 share/scribus/doc/en/pdf_form.html
 share/scribus/doc/en/pdfexport1.html
 share/scribus/doc/en/pdfexport2.html
 share/scribus/doc/en/pdfexport3.html
 share/scribus/doc/en/pdfexport4.html
+share/scribus/doc/en/pdflavor.html
 share/scribus/doc/en/pdfx3.html
 share/scribus/doc/en/plugin_howto.html
 share/scribus/doc/en/prepress.html
@@ -314,6 +326,7 @@ share/scribus/doc/en/print2.html
 share/scribus/doc/en/print3.html
 share/scribus/doc/en/readme.html
 share/scribus/doc/en/resources.html
+share/scribus/doc/en/scprinters.html
 share/scribus/doc/en/scribus-svg.html
 share/scribus/doc/en/scribuscopyright.html
 share/scribus/doc/en/scribusfileformat.html
