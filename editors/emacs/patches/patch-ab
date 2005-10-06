@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.19 2005/05/26 02:10:49 markd Exp $
+$NetBSD: patch-ab,v 1.20 2005/10/06 11:08:39 markd Exp $
 
 --- configure.orig	2003-03-19 02:19:12.000000000 +1200
 +++ configure
-@@ -822,9 +822,13 @@ case "${canonical}" in
+@@ -822,9 +822,14 @@ case "${canonical}" in
        sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
        arm-*-netbsd*)	machine=arm ;;
 +      x86_64-*-netbsd*)	machine=amd64 ;;
++      hppa-*-netbsd*)	machine=hp800 ;;
      esac
    ;;
  
