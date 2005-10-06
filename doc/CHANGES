@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11352 2005/10/06 11:48:57 wiz Exp $
+$NetBSD: CHANGES,v 1.11353 2005/10/06 11:51:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4296,3 +4296,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/apachetop to 0.12.5nb1 [sketch 2005-10-06]
 	Updated security/lsh2 to 2.0.1nb1 [wiz 2005-10-06]
 	Updated x11/lablgtk2 to 2.4.0nb3 [wiz 2005-10-06]
+	Updated net/mldonkey to 2.6.4 [wiz 2005-10-06]
+	Updated net/mldonkey-gui to 2.6.4 [wiz 2005-10-06]
