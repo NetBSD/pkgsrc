@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3981 2005/10/07 13:11:30 salo Exp $
+$NetBSD: TODO,v 1.3982 2005/10/07 15:18:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -897,7 +897,6 @@ Suggested package updates
 	o randread-0.2
 	o raptor-1.4.5
 	o rar-linux-3.5.0
-	o rasmol-2.7.2.1.1
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rblcheck-1.5
@@ -1010,6 +1009,7 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
+	o tidy-20051006
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-7.2.4
