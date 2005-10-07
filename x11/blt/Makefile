@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/07 17:39:26 perry Exp $
 #
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blt/}
 
@@ -20,7 +21,15 @@ CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 MAKE_ENV+=		CP=${CP}
 
-.include "../../lang/tcl83/buildlink3.mk"
-.include "../../x11/tk83/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.if empty(OS_VERSION:M1.[56]*)
+.include "../../mk/pthread.buildlink3.mk"
+.endif
+.endif
+
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

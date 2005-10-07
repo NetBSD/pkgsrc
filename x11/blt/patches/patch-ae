@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2005/10/03 18:42:33 joerg Exp $
+$NetBSD: patch-ae,v 1.6 2005/10/07 17:39:26 perry Exp $
 
---- configure.orig	2002-10-04 00:33:59.000000000 -0500
-+++ configure
-@@ -3384,8 +3384,8 @@ case $target in
+--- configure.orig	2002-10-04 01:33:59.000000000 -0400
++++ configure	2005-10-07 13:33:26.000000000 -0400
+@@ -3384,8 +3384,8 @@
      TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
      ;;
    *)
@@ -13,16 +13,17 @@ $NetBSD: patch-ae,v 1.5 2005/10/03 18:42:33 joerg Exp $
      ;;
  esac
  
-@@ -4072,7 +4072,7 @@ fi
+@@ -4072,7 +4072,8 @@
      EXTRA_LIB_SPECS="-ldl"
      ;;
  
 -  *-netbsd*|*-freebsd*|*-openbsd*)
 +  *-netbsd*|*-freebsd*|*-openbsd*|*-dragonfly*)
++    EXTRA_LIB_SPECS="$PTHREAD_LDFLAGS"
      # Not available on all versions:  check for include file.
      ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -4109,9 +4109,10 @@ test_ok=no
+@@ -4109,9 +4110,10 @@
  fi
  
      if test "$test_ok" = yes; then
