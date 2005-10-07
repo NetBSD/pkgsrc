@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.294 2005/10/07 10:24:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.295 2005/10/07 17:34:11 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1147,8 +1147,14 @@ sub readmakefile($$$$) {
 			}
 
 			$seen_Makefile_include->{$includefile} = true;
-			if ($includefile =~ qr"Makefile\.common$") {
-				$seen_Makefile_common = true;
+			if ($includefile =~ qr"^\.\./[^./][^/]*/[^/]+") {
+				$line->log_warning("Relative directories should look like \"../../cat/pkg\", not \"../pkg\".");
+			}
+			if ($includefile =~ qr"^(?:\.\./(?:\.\./[^/]+/)?[^/]+/)?([^/]+)$") {
+				my ($basename) = ($1);
+				if ($basename ne "buildlink3.mk") {
+					$seen_Makefile_common = true;
+				}
 			}
 			if ($includefile =~ /\/mk\/texinfo\.mk/) {
 				$line->log_error("Do not include $includefile.");
@@ -1514,8 +1520,23 @@ sub checklines_package_Makefile($) {
 				}
 			}
 
+			if ($varname eq "SVR4_PKGNAME") {
+				if ($value =~ $regex_unresolved) {
+					$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
+				} elsif (length($value) > 5) {
+					$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
+				}
+			}
+
 			if ($value eq "# defined" && $varname !~ qr".*(?:_MK|_COMMON)$") {
 				$line->log_warning("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".");
+			}
+
+			if ($varname =~ qr"^NO_(.*)_ON_(.*)$") {
+				my ($what, $where) = ($1, $2);
+				if (($what ne "SRC" && $what ne "BIN") || ($where ne "FTP" && $where ne "CDROM")) {
+					$line->log_error("Misspelled variable: Valid names are USE_{BIN,SRC}_ON_{FTP,CDROM}.");
+				}
 			}
 		}
 	}
@@ -1616,7 +1637,7 @@ sub load_package_Makefile($$$$$) {
 
 sub checkfile_package_Makefile($$$$$) {
 	my ($dir, $fname, $rawwhole, $lines, $loglines) = @_;
-	my ($distname, $svr4_pkgname, $category, $distfiles,
+	my ($distname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
 	my ($abspkgdir, $whole, $tmp, $idx, @sections, @varnames);
 	
@@ -1754,7 +1775,7 @@ sub checkfile_package_Makefile($$$$$) {
 	# check the items that have to be there.
 	$tmp = "\n" . $tmp;
 	foreach my $i ('DISTNAME', 'CATEGORIES') {
-		if ($tmp !~ /\n$i=/) {
+		if (!$seen_Makefile_common && $tmp !~ /\n$i=/) {
 			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "$i has to be there.");
 		}
 		if ($tmp =~ /\n$i(\?=)/) {
@@ -1801,7 +1822,6 @@ sub checkfile_package_Makefile($$$$$) {
 	# check DISTFILES and related items.
 	$distname     = expand_variable($tmp, "DISTNAME");
 	$pkgname      = expand_variable($tmp, "PKGNAME");
-	$svr4_pkgname = expand_variable($tmp, "SVR4_PKGNAME");
 	$extract_sufx = expand_variable($tmp, "EXTRACT_SUFX");
 	$distfiles    = expand_variable($tmp, "DISTFILES");
 
@@ -1823,14 +1843,6 @@ sub checkfile_package_Makefile($$$$$) {
 	if ($opt_warn_vague && defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
 	}
-	if ($opt_warn_vague && defined($svr4_pkgname)) {
-		if ($svr4_pkgname =~ $regex_unresolved) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "SVR4_PKGNAME must not contain references to other variables.");
-		} elsif (length($svr4_pkgname) > 5) {
-			log_error(NO_FILE, NO_LINE_NUMBER, "SVR4_PKGNAME must not be longer than 5 characters.");
-		}
-	}
-
 	if ($opt_warn_vague && defined($pkgname) && $pkgname !~ $regex_unresolved && $pkgname !~ $regex_pkgname) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME should have the form packagename-version, where version consists only of digits, letters and dots.");
 	}
