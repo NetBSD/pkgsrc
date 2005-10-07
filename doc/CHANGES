@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11360 2005/10/07 09:00:46 adam Exp $
+$NetBSD: CHANGES,v 1.11361 2005/10/07 10:21:53 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4310,3 +4310,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/py-gnuplot to 1.7 [drochner 2005-10-06]
 	Updated graphics/mayavi to 1.5 [drochner 2005-10-06]
 	Updated sysutils/estd to 0.4 [adam 2005-10-07]
+	Updated games/xscrabble to 1.0nb3 [rillig 2005-10-07]
