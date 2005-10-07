@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:28:56 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/10/07 15:13:21 perry Exp $
 
-SHA1 (RasMol_2.7.1.tar.gz) = 5960b1c397aa13824e6524e97f80493e468f19e6
-RMD160 (RasMol_2.7.1.tar.gz) = 6f34a8cd700dc8e0055009ee61f7fd362666aae3
-Size (RasMol_2.7.1.tar.gz) = 3482749 bytes
-SHA1 (patch-aa) = 627dbdee004e58451a76a9394197de5c39dd0ae4
-SHA1 (patch-ab) = c9f829a2c0873dc1eb156efff57ea69f90bdd442
-SHA1 (patch-ac) = 0ec2fbf59a92398e3b514637b686cfff80ee7a19
+SHA1 (RasMol_2.7.3.tar.gz) = 25790653566a1a1971bb3e06964288362d588154
+RMD160 (RasMol_2.7.3.tar.gz) = 3203996bc55930e1e3b63f8e64734ccb77a986fc
+Size (RasMol_2.7.3.tar.gz) = 8862988 bytes
+SHA1 (patch-aa) = aeb57ef20033e9103c65fced9625a9dbb49ca573
+SHA1 (patch-ab) = f289b9299de47022f4310dc56e4c6b1b6e97e887
+SHA1 (patch-ac) = bbbbf90bac91eeb1347fe8170c0351d31f07afcd
