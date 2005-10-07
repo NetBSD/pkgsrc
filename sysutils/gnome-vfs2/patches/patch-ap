@@ -1,8 +1,16 @@
-$NetBSD: patch-ap,v 1.1 2004/10/24 18:03:24 recht Exp $
+$NetBSD: patch-ap,v 1.2 2005/10/07 16:10:44 drochner Exp $
 
---- modules/file-method.c.orig	Sun Oct 24 18:55:16 2004
-+++ modules/file-method.c	Sun Oct 24 18:56:12 2004
-@@ -94,13 +94,13 @@
+--- modules/file-method.c.orig	2005-07-15 15:46:53.000000000 +0200
++++ modules/file-method.c
+@@ -66,6 +66,7 @@
+ #if HAVE_SYS_VFS_H
+ #include <sys/vfs.h>
+ #elif HAVE_SYS_MOUNT_H
++#include <sys/param.h>
+ #include <sys/mount.h>
+ #endif
+ 
+@@ -173,13 +174,13 @@ GET_PATH_MAX (void)
  }
  #endif
  
@@ -10,7 +18,7 @@ $NetBSD: patch-ap,v 1.1 2004/10/24 18:03:24 recht Exp $
 +#if defined(HAVE_OPEN64) && !defined(__APPLE__)
  #define OPEN open64
  #else
- #define OPEN open
+ #define OPEN g_open
  #endif
  
 -#if defined(HAVE_LSEEK64) && defined(HAVE_OFF64_T)
