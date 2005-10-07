@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.293 2005/09/28 21:39:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.294 2005/10/07 10:24:43 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1505,6 +1505,12 @@ sub checklines_package_Makefile($) {
 				}
 				if (length($value) > 70) {
 					$line->log_warning("COMMENT should not be longer than 70 characters.");
+				}
+			}
+
+			if ($varname eq "PKG_SUPPORTED_OPTIONS" || $varname eq "PKG_SUGGESTED_OPTIONS") {
+				if ($value =~ qr"_") {
+					$line->log_warning("Options should not contain underscores.");
 				}
 			}
 
