@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/10/07 22:50:50 wulf Exp $
+#
+# This Makefile fragment is included at the top of package Makefiles for
+# GNU Radio distributed packages (they all share common configure and build
+# settings).
+
+CATEGORIES+=	ham
+MASTER_SITES?=	${MASTER_SITE_GNU:=gnuradio/}
+
+MAINTAINER?=	wulf@NetBSD.org
+HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
+
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake automake autoconf pkg-config
+
+BUILD_DEPENDS+=doxygen>=1.4.3nb1:../../devel/doxygen
+
+PY_PATCHPLIST=	yes
+PYTHON_VERSIONS_ACCEPTED=	24 23
+
+pre-configure:
+	cd ${WRKSRC}; ./bootstrap
+
+.include "../../mk/bsd.prefs.mk"
