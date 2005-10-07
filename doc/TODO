@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3978 2005/10/07 09:00:46 adam Exp $
+$NetBSD: TODO,v 1.3979 2005/10/07 11:43:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -295,6 +295,7 @@ Suggested package updates
 	o GridSim-3.1
 	o MyPasswordSafe-20041210
 	o PAM-0.78
+	o R-2.2.0
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.5.9
 	o ViPEC-3.2.0
@@ -969,6 +970,7 @@ Suggested package updates
 	o socat-1.4.3.0
 	o source-highlight-2.1.2
 	o sox-12.17.8
+	o spamass-milter-1.0
 	o spamassassin-3.1.0 [heinz]
 	o spim-7.2
 	o sqlitemanager-1.0.6
