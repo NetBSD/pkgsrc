@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/10/07 15:13:21 perry Exp $
+# $NetBSD: Makefile,v 1.23 2005/10/07 15:17:56 wiz Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
@@ -38,7 +38,7 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/NOTICE ${PREFIX}/share/doc/rasmol
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/rasmol.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/doc/rasmol.1 ${PREFIX}/man/man1
 	for doc in manualA4.pdf.gz manualA4.ps.gz manualA4.rtf.gz	\
 			manualUS.pdf.gz manualUS.ps.gz manualUS.rtf.gz	\
 			refcardA4.pdf.gz refcardA4.ps.gz		\
