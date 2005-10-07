@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/05/13 15:26:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/10/07 16:14:04 drochner Exp $
 include/gail-1.0/libgail-util/gail-util.h
 include/gail-1.0/libgail-util/gailmisc.h
 include/gail-1.0/libgail-util/gailtextutil.h
@@ -6,10 +6,6 @@ lib/gtk-2.0/modules/libferret.la
 lib/gtk-2.0/modules/libgail.la
 lib/libgailutil.la
 lib/pkgconfig/gail.pc
-share/doc/gail-libgail-util/home.png
-share/doc/gail-libgail-util/left.png
-share/doc/gail-libgail-util/right.png
-share/doc/gail-libgail-util/up.png
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/as/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gail.mo
@@ -34,6 +30,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gail.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gail.mo
@@ -59,6 +56,7 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gail.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gail.mo
@@ -71,7 +69,6 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gail.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gail.mo
-@dirrm share/doc/gail-libgail-util
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
 @dirrm include/gail-1.0/libgail-util
 @dirrm include/gail-1.0
