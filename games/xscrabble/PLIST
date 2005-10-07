@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:57:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/07 10:20:49 rillig Exp $
 bin/xscrabble
 bin/xscrab
 lib/X11/app-defaults/XScrabble
 share/games/xscrabble/OSPD3.gz
 share/games/xscrabble/scrabble_permutations
 share/games/xscrabble/xscrabble.scores.dist
-@exec if [ ! -f /var/games/xscrabble.scores ]; then cp -p %D/share/games/xscrabble/xscrabble.scores.dist /var/games/xscrabble.scores; fi
-@unexec echo "Warning: If you will *NOT* use this package anymore, please remove /var/games/xscrabble.scores manually."
 @dirrm share/games/xscrabble
