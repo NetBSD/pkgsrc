@@ -1,8 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/24 10:50:53 agc Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/07 08:52:14 adam Exp $
 
---- Makefile	2005/01/24 10:40:24	1.1
-+++ Makefile	2005/01/24 10:40:56
-@@ -11,9 +11,9 @@
+--- Makefile.orig	2005-01-30 22:20:52.000000000 +0000
++++ Makefile
+@@ -6,12 +6,12 @@ clean:
+ 	rm -f *~
+ 
+ estd:	estd.c
+-	gcc -O2 -lutil -o estd estd.c
++	gcc ${CFLAGS} -lutil -o estd estd.c
+ 	
  all: estd
  
  install: all
@@ -14,5 +20,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/24 10:50:53 agc Exp $
 +	install -s -o root -g wheel -m 0755 estd ${PREFIX}/sbin/estd
 +	install -d -o root -g wheel -m 0755 ${PREFIX}/man/man1
 +	install -o root -g wheel -m 0644 estd.1 ${PREFIX}/man/man1/estd.1
- 
- 	
