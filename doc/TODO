@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3980 2005/10/07 11:55:34 wiz Exp $
+$NetBSD: TODO,v 1.3981 2005/10/07 13:11:30 salo Exp $
 
 Suggested new packages
 ======================
@@ -541,6 +541,7 @@ Suggested package updates
 	o idesk-0.7.3
 	o ifile-1.3.5
 	o ijs-0.35
+	o imap-uw-2004g
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20050820 [pkg/31132]
