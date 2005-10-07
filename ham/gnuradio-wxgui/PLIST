@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/07 23:11:02 wulf Exp $
+${PYSITELIB}/gnuradio/wxgui/__init__.py
+${PYSITELIB}/gnuradio/wxgui/__init__.pyc
+${PYSITELIB}/gnuradio/wxgui/__init__.pyo
+${PYSITELIB}/gnuradio/wxgui/fftsink.py
+${PYSITELIB}/gnuradio/wxgui/fftsink.pyc
+${PYSITELIB}/gnuradio/wxgui/fftsink.pyo
+${PYSITELIB}/gnuradio/wxgui/plot.py
+${PYSITELIB}/gnuradio/wxgui/plot.pyc
+${PYSITELIB}/gnuradio/wxgui/plot.pyo
+${PYSITELIB}/gnuradio/wxgui/scopesink.py
+${PYSITELIB}/gnuradio/wxgui/scopesink.pyc
+${PYSITELIB}/gnuradio/wxgui/scopesink.pyo
+${PYSITELIB}/gnuradio/wxgui/slider.py
+${PYSITELIB}/gnuradio/wxgui/slider.pyc
+${PYSITELIB}/gnuradio/wxgui/slider.pyo
+${PYSITELIB}/gnuradio/wxgui/stdgui.py
+${PYSITELIB}/gnuradio/wxgui/stdgui.pyc
+${PYSITELIB}/gnuradio/wxgui/stdgui.pyo
+${PYSITELIB}/gnuradio/wxgui/waterfallsink.py
+${PYSITELIB}/gnuradio/wxgui/waterfallsink.pyc
+${PYSITELIB}/gnuradio/wxgui/waterfallsink.pyo
+@dirrm ${PYSITELIB}/gnuradio/wxgui
