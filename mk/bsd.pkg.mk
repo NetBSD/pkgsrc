@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1727 2005/10/07 16:57:14 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1728 2005/10/07 17:39:28 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -3542,14 +3542,15 @@ bin-install:
 # This variable is passed down via build-depends-list and run-depends-list
 PACKAGE_NAME_TYPE?=	name
 
-# Nobody should want to override this unless PKGNAME is simply bogus.
-HTML_PKGNAME=<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>
+_HTML_PKGNAME=		${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}
+_HTML_PKGPATH=		${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}
+_HTML_PKGLINK=		<a href="../../${_HTML_PKGPATH}/README.html">${_HTML_PKGNAME}</a>
 
 .PHONY: package-name
 .if !target(package-name)
 package-name:
 .  if (${PACKAGE_NAME_TYPE} == "html")
-	@${ECHO} '<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>'
+	@${ECHO} ${_HTML_PKGLINK:Q}
 .  elif (${PACKAGE_NAME_TYPE} == "svr4")
 	@${ECHO} ${SVR4_PKGNAME}
 .  else
@@ -3918,11 +3919,11 @@ print-run-depends-list:
 .PHONY: print-summary-data
 .if !target(print-summary-data)
 print-summary-data:
-	@${ECHO} "depends ${PKGPATH} ${DEPENDS}"
-	@${ECHO} "build_depends ${PKGPATH} ${BUILD_DEPENDS}"
-	@${ECHO} "conflicts ${PKGPATH} ${CONFLICTS}"
-	@${ECHO} "index ${PKGPATH} ${PKGNAME}"
-	@${ECHO} htmlname ${PKGPATH} ${HTML_PKGNAME:Q}
+	@${ECHO} depends ${PKGPATH} ${DEPENDS:Q}
+	@${ECHO} build_depends ${PKGPATH} ${BUILD_DEPENDS:Q}
+	@${ECHO} conflicts ${PKGPATH} ${CONFLICTS:Q}
+	@${ECHO} index ${PKGPATH} ${PKGNAME:Q}
+	@${ECHO} htmlname ${PKGPATH} ${_HTML_PKGLINK:Q}
 	@${ECHO} homepage ${PKGPATH} ${HOMEPAGE:Q}
 	@${ECHO} wildcard ${PKGPATH} ${PKGWILDCARD:Q}
 	@${ECHO} comment ${PKGPATH} ${COMMENT:Q}
