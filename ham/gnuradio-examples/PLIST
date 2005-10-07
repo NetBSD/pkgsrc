@@ -1,0 +1,50 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/07 23:02:54 wulf Exp $
+share/examples/gnuradio/python/audio/audio_copy.py
+share/examples/gnuradio/python/audio/audio_play.py
+share/examples/gnuradio/python/audio/audio_to_file.py
+share/examples/gnuradio/python/audio/dial_tone.py
+share/examples/gnuradio/python/audio/mono_tone.py
+share/examples/gnuradio/python/audio/multi_tone.py
+share/examples/gnuradio/python/audio/spectrum_inversion.py
+share/examples/gnuradio/python/gmsk/ggmsk-test.py
+share/examples/gnuradio/python/gmsk/gmsk-test.py
+share/examples/gnuradio/python/gmsk/rx.py
+share/examples/gnuradio/python/gmsk/tx.py
+share/examples/gnuradio/python/mc4020/fm_demod.py
+share/examples/gnuradio/python/mc4020/mc4020_fft.py
+share/examples/gnuradio/python/usrp/am_rcv.py
+share/examples/gnuradio/python/usrp/benchmark_usb.py
+share/examples/gnuradio/python/usrp/dbs_debug.py
+share/examples/gnuradio/python/usrp/dbs_fft.py
+share/examples/gnuradio/python/usrp/dbs_nbfm.py
+share/examples/gnuradio/python/usrp/dsb_tx.py
+share/examples/gnuradio/python/usrp/fm_tx4.py
+share/examples/gnuradio/python/usrp/fsk_loopback.py
+share/examples/gnuradio/python/usrp/fsk_rx.py
+share/examples/gnuradio/python/usrp/fsk_tx.py
+share/examples/gnuradio/python/usrp/max_power.py
+share/examples/gnuradio/python/usrp/nbfm_ptt_quick_and_dirty.py
+share/examples/gnuradio/python/usrp/nbfm_rcv.py
+share/examples/gnuradio/python/usrp/test_counting.py
+share/examples/gnuradio/python/usrp/test_digital_loopback_counting.py
+share/examples/gnuradio/python/usrp/test_digital_loopback_lfsr.py
+share/examples/gnuradio/python/usrp/tvrx_debug.py
+share/examples/gnuradio/python/usrp/tvrx_wfm_rcv_gui.py
+share/examples/gnuradio/python/usrp/tweak_adc_offset.py
+share/examples/gnuradio/python/usrp/usrp_fft.py
+share/examples/gnuradio/python/usrp/usrp_fft_simple.py
+share/examples/gnuradio/python/usrp/usrp_oscope.py
+share/examples/gnuradio/python/usrp/usrp_rx_cfile.py
+share/examples/gnuradio/python/usrp/usrp_rx_file.py
+share/examples/gnuradio/python/usrp/usrp_siggen.py
+share/examples/gnuradio/python/usrp/wfm_rcv.py
+share/examples/gnuradio/python/usrp/wfm_rcv_dual.py
+share/examples/gnuradio/python/usrp/wfm_rcv_file.py
+share/examples/gnuradio/python/usrp/wfm_rcv_gui.py
+share/examples/gnuradio/python/usrp/wfm_rcv_many.py
+@dirrm share/examples/gnuradio/python/audio
+@dirrm share/examples/gnuradio/python/gmsk
+@dirrm share/examples/gnuradio/python/mc4020
+@dirrm share/examples/gnuradio/python/usrp
+@dirrm share/examples/gnuradio/python
+@dirrm share/examples/gnuradio
