@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/09/28 20:52:20 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/07 12:14:26 rillig Exp $
 #
 
 DISTNAME=		htdocs-share-20050727
@@ -23,7 +23,10 @@ WRKSRC=			${WRKDIR}/${PKGNAME}
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 DOCDIR=			${PREFIX}/share/doc/pkgsrc
+.if exists(/usr/cvs/htdocs)
 HTDOCSDIR?=		/usr/cvs/htdocs
+.endif
+HTDOCSDIR?=		../../../htdocs
 
 BUILD_DEFS+=		OUTPUTS
 OUTPUTS?=		lint html html-split ascii pdf
