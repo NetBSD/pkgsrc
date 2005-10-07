@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2005/10/07 17:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2005/10/07 18:38:34 reed Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -27,12 +27,6 @@ INSTALL_TARGET=		install
 # The test target gives better results when not run as root.
 TEST_TARGET=		test
 TEST_ENV+=		TZ=+0
-
-# Initially install the man pages into ${WRKDIR}/man, as we need a staged
-# install to avoid overwriting existing manpages in ${PREFIX}/man.
-CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
-# need to avoid automatic --mandir
-CONFIGURE_HAS_MANDIR=	no
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -65,8 +59,6 @@ post-build:
 		${MV} ${WRKSRC}/tclConfig.sh.tmp ${WRKSRC}/tclConfig.sh
 
 post-install:
-	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
-	${RM} -rf ${WRKDIR}/man
 	cd ${PREFIX}/bin && ${LN} -s tclsh8.4 tclsh
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/unix
