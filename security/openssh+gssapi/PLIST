@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:05 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/07 17:43:30 reed Exp $
 bin/scp
 bin/sftp
 bin/slogin
@@ -9,19 +9,19 @@ bin/ssh-keygen
 bin/ssh-keyscan
 libexec/sftp-server
 libexec/ssh-keysign
-${MANDIR}/man1/scp.1
-${MANDIR}/man1/sftp.1
-${MANDIR}/man1/slogin.1
-${MANDIR}/man1/ssh-add.1
-${MANDIR}/man1/ssh-agent.1
-${MANDIR}/man1/ssh-keygen.1
-${MANDIR}/man1/ssh-keyscan.1
-${MANDIR}/man1/ssh.1
-${MANDIR}/man5/ssh_config.5
-${MANDIR}/man5/sshd_config.5
-${MANDIR}/man8/sftp-server.8
-${MANDIR}/man8/ssh-keysign.8
-${MANDIR}/man8/sshd.8
+man/man1/scp.1
+man/man1/sftp.1
+man/man1/slogin.1
+man/man1/ssh-add.1
+man/man1/ssh-agent.1
+man/man1/ssh-keygen.1
+man/man1/ssh-keyscan.1
+man/man1/ssh.1
+man/man5/ssh_config.5
+man/man5/sshd_config.5
+man/man8/sftp-server.8
+man/man8/ssh-keysign.8
+man/man8/sshd.8
 sbin/sshd
 share/examples/openssh/moduli
 share/examples/openssh/ssh_config
