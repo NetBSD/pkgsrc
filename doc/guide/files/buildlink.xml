@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.9 2005/09/14 16:40:57 reed Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.10 2005/10/07 09:56:12 rillig Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -168,7 +168,7 @@
       <filename>buildlink3.mk</filename> files:</para>
 
     <screen>&cprompt; <userinput>cd pkgsrc/<replaceable>category</replaceable>/<replaceable>pkgdir</replaceable>
-&cprompt; createbuildlink -3 &gt;buildlink3.mk</userinput></screen> 
+&cprompt; createbuildlink &gt;buildlink3.mk</userinput></screen> 
 
     <sect2 id="anatomy-of-bl3">
       <title>Anatomy of a buildlink3.mk file</title>
