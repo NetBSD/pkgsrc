@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/08/23 11:48:51 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2005/10/07 17:43:29 reed Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -50,15 +50,11 @@ PKG_GROUPS=             ${OPENSSH_GROUP}:${OPENSSH_GID}
 SSH_PID_DIR=		/var/run	# default directory for PID files
 
 PKG_SYSCONFSUBDIR=	ssh
-MANDIR=			man
-
-PLIST_SUBST+=		MANDIR=${MANDIR}
 
 USE_PKGINSTALL=		yes
 USE_TOOLS+=		autoconf perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${MANDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
