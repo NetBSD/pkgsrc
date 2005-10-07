@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/07 12:36:19 rillig Exp $
 #
 
 DISTNAME=	AiCA-0.81
@@ -35,10 +35,10 @@ pre-configure:
 
 do-install:
 .for f in ${LIBRARIES}
-	${INSTALL_LIB} ${WRKSRC}/lib/$f ${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/lib/${f} ${PREFIX}/lib
 .endfor
 .for f in ${COMMANDS}
-	${INSTALL_PROGRAM} ${WRKSRC}/$f ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/newca.sh ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/aicrypto/include/*.h ${PREFIX}/include
@@ -49,11 +49,11 @@ do-install:
 	${CP} ${WRKSRC}/templates/*  ${PREFIX}/templates
 	${INSTALL_DATA_DIR} ${DOCDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/$f ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${EXAMPLESDIR}
 .endfor
 
 .include "../../security/openssl/buildlink3.mk"
