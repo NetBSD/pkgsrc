@@ -2303,13 +2303,13 @@ any.
 
 The third section contains the following variables.
 
-  * MAINTAINER is the email address of the contact person for this package. The
-    person who feels responsible for this package, and who is most likely to
-    look at problems or questions regarding this package which have been
-    reported with send-pr(1). The right person to contact before making major
-    changes to the package. When packaging a new program, set MAINTAINER to
-    yourself. If you really can't maintain the package for future updates, set
-    it to <tech-pkg@NetBSD.org>.
+  * MAINTAINER is the email address of the person who feels responsible for
+    this package, and who is most likely to look at problems or questions
+    regarding this package which have been reported with send-pr(1). Other
+    developers should contact the MAINTAINER before making major changes to the
+    package. When packaging a new program, set MAINTAINER to yourself. If you
+    really can't maintain the package for future updates, set it to <
+    tech-pkg@NetBSD.org>.
 
   * HOMEPAGE is a URL where users can find more information about the package.
 
@@ -2318,10 +2318,27 @@ The third section contains the following variables.
 
 Other variables that affect the build:
 
-  * WRKSRC: The subdirectory of ${WRKDIR} to which the distribution actually
-    unpacks. The default is ${WRKDIR}/${DISTNAME}. The value of WRKSRC should
-    be set explicitly if the package does not follow standard conventions and
-    include the package's name as a subdirectory.
+  * WRKSRC: The directory where the interesting distribution files of the
+    package are found. The default is ${WRKDIR}/${DISTNAME}, which works for
+    most packages.
+
+    If a package doesn't create a subdirectory for itself (most GNU software
+    does, for instance), but extracts itself in the current directory, you
+    should set WRKSRC= ${WRKDIR}.
+
+    If a package doesn't create a subdirectory with the name of DISTNAME but
+    some different name, set WRKSRC to point to the proper name in ${WRKDIR},
+    for example WRKSRC= ${WRKDIR}/${DISTNAME}/unix. See lang/tcl and x11/tk for
+    other examples.
+
+    The name of the working directory created by pkgsrc is taken from the
+    WRKDIR_BASENAME variable. By default, its value is work. If you want to use
+    the same pkgsrc tree for building different kinds of binary packages, you
+    can change the variable according to your needs. Two other variables handle
+    common cases of setting WRKDIR_BASENAME individually. If OBJHOSTNAME is
+    defined in /etc/mk.conf, the first component of the host's name is attached
+    to the directory name. If OBJMACHINE is defined, the platform name is
+    attached, which might look like work.i386 or work.sparc.
 
 Please pay attention to the following gotchas:
 
@@ -2335,28 +2352,22 @@ Please pay attention to the following gotchas:
 
 8.2. distinfo
 
-Most important, the mandatory message digest, or checksum, of all the distfiles
-needed for the package to compile, confirming they match the original file
-distributed by the author. This ensures that the distfile retrieved from the
-Internet has not been corrupted during transfer or altered by a malign force to
-introduce a security hole. It is generated using the make makesum command. The
-digest algorithm used was, at one stage, md5, but that was felt lacking
-compared to sha1, and so sha1 is now the default algorithm. The distfile size
-is also generated and stored in new distinfo files. The pkgtools/digest utility
-calculates all of the digests in the distinfo file, and it provides various
-different algorithms. At the current time, the algorithms provided are: md5,
-rmd160, sha1, sha256, sha384 and sha512.
+The distinfo file contains the message digest, or checksum, of each distfile
+needed for the package. This ensures that the distfiles retrieved from the
+Internet have not been corrupted during transfer or altered by a malign force
+to introduce a security hole. Due to recent rumor about weaknesses of digest
+algorithms, all distfiles are protected using both SHA1 and RMD160 message
+digests, as well as the file size.
 
-Some packages have different sets of distfiles on a per architecture basis, for
+The distinfo file also contains the checksums for all the patches found in the
+patches directory (see Section 8.3, "patches/*").
+
+To regenerate the distinfo file, use the make makedistinfo or make mdi command.
+
+Some packages have different sets of distfiles depending on the platform, for
 example www/navigator). These are kept in the same distinfo file and care
 should be taken when upgrading such a package to ensure distfile information is
 not lost.
-
-The message digest/checksum for all the official patches found in the patches/
-directory (see Section 8.3, "patches/*") for the package is also stored in the
-distinfo file. This is a message digest/checksum of all lines in the patch file
-except the NetBSD RCS Id. This file is generated by invoking make makepatchsum
-(or make mps if you're in a hurry).
 
 8.3. patches/*
 
@@ -2446,10 +2457,10 @@ DEINSTALL
 
 MESSAGE
 
-    Display this file after installation of the package. Useful for things like
-    legal notices on almost-free software and hints for updating config files
-    after installing modules for apache, PHP etc. Please note that you can
-    modify variables in it easily by using MESSAGE_SUBST in the package's
+    This file is displayed after installation of the package. Useful for things
+    like legal notices on almost-free software and hints for updating config
+    files after installing modules for apache, PHP etc. Please note that you
+    can modify variables in it easily by using MESSAGE_SUBST in the package's
     Makefile:
 
     MESSAGE_SUBST+=  SOMEVAR="somevalue"
@@ -2463,23 +2474,6 @@ denoted by WRKDIR. It can be removed by running make clean. Besides the
 sources, this directory is also used to keep various timestamp files. The
 directory gets removed completely on clean. The default is ${.CURDIR}/work or $
 {.CURDIR}/work.${MACHINE_ARCH} if OBJMACHINE is set.
-
-If a package doesn't create a subdirectory for itself (like GNU software does,
-for instance), but extracts itself in the current directory, you should set
-WRKSRC accordingly, e.g. editors/sam again, but the quick answer is:
-
-WRKSRC=             ${WRKDIR}
-
-If a package doesn't create a subdir with the name of DISTNAME but some
-different name, set WRKSRC to point to the proper name in ${WRKDIR}. See lang/
-tcl and x11/tk for examples, and here is another one:
-
-WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
-
-The name of the working directory created by pkgsrc is work by default. If the
-same pkgsrc tree should be used on several different platforms, the variable
-OBJMACHINE can be set in /etc/mk.conf to attach the platform to the directory
-name, e.g. work.i386 or work.sparc.
 
 8.7. files/*
 
