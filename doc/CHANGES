@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11366 2005/10/07 17:34:45 rillig Exp $
+$NetBSD: CHANGES,v 1.11367 2005/10/07 17:46:12 perry Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4323,3 +4323,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/gail to 1.8.5 [drochner 2005-10-07]
 	Updated archivers/dact to 0.8.3nb3 [joerg 2005-10-07]
 	Updated pkgtools/pkglint to 4.25 [rillig 2005-10-07]
+	Updated x11/py-Pmw to 1.2 [perry 2005-10-07]
