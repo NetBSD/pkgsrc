@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/09/08 17:40:30 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2005/10/07 12:16:52 rillig Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -43,7 +43,7 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nc ${PREFIX}/sbin
 .for i in ${EXTRA_PROGS}
-	${INSTALL_PROGRAM} ${WRKSRC}/data/$i ${PREFIX}/sbin/nc-$i
+	${INSTALL_PROGRAM} ${WRKSRC}/data/${i} ${PREFIX}/sbin/nc-${i}
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/${EXAMPLE_DIR}
 	@(							\
