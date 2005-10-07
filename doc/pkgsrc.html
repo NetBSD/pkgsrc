@@ -6153,10 +6153,10 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
               <li>
                 <p><code class="varname">PKGNAME</code> is the name
                 of the package, as used by pkgsrc. You only need to
-                provide it if it differs from DISTNAME. Usually it
-                is the directory name together with the version
-                number. It must match the regular expression
-                <code class=
+                provide it if it differs from <code class=
+                "varname">DISTNAME</code>. Usually it is the
+                directory name together with the version number. It
+                must match the regular expression <code class=
                 "varname">^[A-Za-z0-9][A-Za-z0-9-_.+]*$</code>,
                 that is, it starts with a letter or digit, and
                 contains only letters, digits, dashes, underscores,
@@ -6306,20 +6306,20 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
             <ul type="disc">
               <li>
                 <p><code class="varname">MAINTAINER</code> is the
-                email address of the contact person for this
-                package. The person who feels responsible for this
-                package, and who is most likely to look at problems
-                or questions regarding this package which have been
-                reported with <a href=
+                email address of the person who feels responsible
+                for this package, and who is most likely to look at
+                problems or questions regarding this package which
+                have been reported with <a href=
                 "http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1+NetBSD-current">
                 <span class="citerefentry"><span class=
-                "refentrytitle">send-pr</span>(1)</span></a>. The
-                right person to contact before making major changes
-                to the package. When packaging a new program, set
-                <code class="varname">MAINTAINER</code> to
-                yourself. If you really can't maintain the package
-                for future updates, set it to <code class=
-                "email">&lt;<a href=
+                "refentrytitle">send-pr</span>(1)</span></a>. Other
+                developers should contact the <code class=
+                "varname">MAINTAINER</code> before making major
+                changes to the package. When packaging a new
+                program, set <code class=
+                "varname">MAINTAINER</code> to yourself. If you
+                really can't maintain the package for future
+                updates, set it to <code class="email">&lt;<a href=
                 "mailto:tech-pkg@NetBSD.org">tech-pkg@NetBSD.org</a>&gt;</code>.</p>
               </li>
 
@@ -6343,17 +6343,61 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
             <ul type="disc">
               <li>
                 <p><code class="varname">WRKSRC</code>: The
-                subdirectory of <code xmlns=
-                "http://www.w3.org/TR/xhtml1/transitional" class=
-                "filename">${WRKDIR}</code> to which the
-                distribution actually unpacks. The default is
+                directory where the interesting distribution files
+                of the package are found. The default is
                 <code xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" class=
-                "filename">${WRKDIR}/${DISTNAME}</code>. The value
-                of <code class="varname">WRKSRC</code> should be
-                set explicitly if the package does not follow
-                standard conventions and include the package's name
-                as a subdirectory.</p>
+                "filename">${WRKDIR}/${DISTNAME}</code>, which
+                works for most packages.</p>
+
+                <p>If a package doesn't create a subdirectory for
+                itself (most GNU software does, for instance), but
+                extracts itself in the current directory, you
+                should set <code class="varname">WRKSRC=
+                ${WRKDIR}</code>.</p>
+
+                <p>If a package doesn't create a subdirectory with
+                the name of <code class="varname">DISTNAME</code>
+                but some different name, set <code class=
+                "varname">WRKSRC</code> to point to the proper name
+                in <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename">${WRKDIR}</code>, for example
+                <code class="varname">WRKSRC=
+                ${WRKDIR}/${DISTNAME}/unix</code>. See <a xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" href=
+                "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/lang/tcl/README.html"
+                target="_top"><code xmlns="" class=
+                "filename">lang/tcl</code></a> and <a xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" href=
+                "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/tk/README.html"
+                target="_top"><code xmlns="" class=
+                "filename">x11/tk</code></a> for other
+                examples.</p>
+
+                <p>The name of the working directory created by
+                pkgsrc is taken from the <code class=
+                "varname">WRKDIR_BASENAME</code> variable. By
+                default, its value is <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename">work</code>. If you want to use the same
+                pkgsrc tree for building different kinds of binary
+                packages, you can change the variable according to
+                your needs. Two other variables handle common cases
+                of setting <code class=
+                "varname">WRKDIR_BASENAME</code> individually. If
+                <code class="varname">OBJHOSTNAME</code> is defined
+                in <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename">/etc/mk.conf</code>, the first component
+                of the host's name is attached to the directory
+                name. If <code class="varname">OBJMACHINE</code> is
+                defined, the platform name is attached, which might
+                look like <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename">work.i386</code> or <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename">work.sparc</code>.</p>
               </li>
             </ul>
           </div>
@@ -6402,59 +6446,45 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
             </div>
           </div>
 
-          <p>Most important, the mandatory message digest, or
-          checksum, of all the distfiles needed for the package to
-          compile, confirming they match the original file
-          distributed by the author. This ensures that the distfile
-          retrieved from the Internet has not been corrupted during
-          transfer or altered by a malign force to introduce a
-          security hole. It is generated using the
-          <span><strong class="command">make
-          makesum</strong></span> command. The digest algorithm
-          used was, at one stage, md5, but that was felt lacking
-          compared to sha1, and so sha1 is now the default
-          algorithm. The distfile size is also generated and stored
-          in new distinfo files. The <a xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" href=
-          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/digest/README.html"
-          target="_top"><code xmlns="" class=
-          "filename">pkgtools/digest</code></a> utility calculates
-          all of the digests in the distinfo file, and it provides
-          various different algorithms. At the current time, the
-          algorithms provided are: <span class=
-          "emphasis"><em>md5</em></span>, <span class=
-          "emphasis"><em>rmd160</em></span>, <span class=
-          "emphasis"><em>sha1</em></span>, <span class=
-          "emphasis"><em>sha256</em></span>, <span class=
-          "emphasis"><em>sha384</em></span> and <span class=
-          "emphasis"><em>sha512</em></span>.</p>
+          <p>The <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">distinfo</code> file contains the message
+          digest, or checksum, of each distfile needed for the
+          package. This ensures that the distfiles retrieved from
+          the Internet have not been corrupted during transfer or
+          altered by a malign force to introduce a security hole.
+          Due to recent rumor about weaknesses of digest
+          algorithms, all distfiles are protected using both SHA1
+          and RMD160 message digests, as well as the file size.</p>
 
-          <p>Some packages have different sets of distfiles on a
-          per architecture basis, for example <a xmlns=
+          <p>The <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">distinfo</code> file also contains the
+          checksums for all the patches found in the <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">patches</code> directory (see <a href=
+          "#components.patches" title=
+          "8.3.&nbsp;patches/*">Section&nbsp;8.3,
+          &#8220;patches/*&#8221;</a>).</p>
+
+          <p>To regenerate the <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">distinfo</code> file, use the
+          <span><strong class="command">make
+          makedistinfo</strong></span> or <span><strong class=
+          "command">make mdi</strong></span> command.</p>
+
+          <p>Some packages have different sets of distfiles
+          depending on the platform, for example <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/navigator/README.html"
           target="_top"><code xmlns="" class=
           "filename">www/navigator</code></a>). These are kept in
-          the same distinfo file and care should be taken when
-          upgrading such a package to ensure distfile information
-          is not lost.</p>
-
-          <p>The message digest/checksum for all the official
-          patches found in the <code xmlns=
+          the same <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">patches/</code> directory (see <a href=
-          "#components.patches" title=
-          "8.3.&nbsp;patches/*">Section&nbsp;8.3,
-          &#8220;patches/*&#8221;</a>) for the package is also
-          stored in the <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">distinfo</code> file. This is a message
-          digest/checksum of all lines in the patch file except the
-          NetBSD RCS Id. This file is generated by invoking
-          <span><strong class="command">make
-          makepatchsum</strong></span> (or <span><strong class=
-          "command">make mps</strong></span> if you're in a
-          hurry).</p>
+          "filename">distinfo</code> file and care should be taken
+          when upgrading such a package to ensure distfile
+          information is not lost.</p>
         </div>
 
         <div class="sect1" lang="en" xml:lang="en">
@@ -6677,7 +6707,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
               "filename">MESSAGE</code></span></dt>
 
               <dd>
-                <p>Display this file after installation of the
+                <p>This file is displayed after installation of the
                 package. Useful for things like legal notices on
                 almost-free software and hints for updating config
                 files after installing modules for apache, PHP etc.
@@ -6726,50 +6756,6 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">${.CURDIR}/work.${MACHINE_ARCH}</code> if
           <code class="varname">OBJMACHINE</code> is set.</p>
-
-          <p>If a package doesn't create a subdirectory for itself
-          (like GNU software does, for instance), but extracts
-          itself in the current directory, you should set
-          <code class="varname">WRKSRC</code> accordingly, e.g.
-          <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href=
-          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/editors/sam/README.html"
-          target="_top"><code xmlns="" class=
-          "filename">editors/sam</code></a> again, but the quick
-          answer is:</p>
-          <pre class="programlisting">
-WRKSRC=             ${WRKDIR}
-</pre>
-
-          <p>If a package doesn't create a subdir with the name of
-          <code class="varname">DISTNAME</code> but some different
-          name, set <code class="varname">WRKSRC</code> to point to
-          the proper name in <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">${WRKDIR}</code>. See <a xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" href=
-          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/lang/tcl/README.html"
-          target="_top"><code xmlns="" class=
-          "filename">lang/tcl</code></a> and <a xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" href=
-          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/tk/README.html"
-          target="_top"><code xmlns="" class=
-          "filename">x11/tk</code></a> for examples, and here is
-          another one:</p>
-          <pre class="programlisting">
-WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
-</pre>
-
-          <p>The name of the working directory created by pkgsrc is
-          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
-          class="filename">work</code> by default. If the same
-          pkgsrc tree should be used on several different
-          platforms, the variable <code class=
-          "varname">OBJMACHINE</code> can be set in /etc/mk.conf to
-          attach the platform to the directory name, e.g.
-          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
-          class="filename">work.i386</code> or <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">work.sparc</code>.</p>
         </div>
 
         <div class="sect1" lang="en" xml:lang="en">
