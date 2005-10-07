@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2005/10/07 17:15:40 joerg Exp $
+
+--- net.c.orig	2005-10-07 19:06:20.000000000 +0200
++++ net.c
+@@ -85,7 +85,7 @@ int open_net(const char *pathname, int f
+ 	mode_t mode;
+ 
+ 	va_start(args, flags);
+-	mode = va_arg(args, mode_t);
++	mode = va_arg(args, int);
+ 	va_end(args);
+ 
+ 	if (!parse_url(pathname,scheme,username,password,host,&port,file)) {
+@@ -292,7 +292,7 @@ int open_net(const char *pathname, int f
+ 	mode_t mode;
+ 
+ 	va_start(args, flags);
+-	mode = va_arg(args, mode_t);
++	mode = va_arg(args, int);
+ 	va_end(args);
+ 
+ 	return(open(pathname,flags,mode));
