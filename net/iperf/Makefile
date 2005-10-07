@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:48 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/07 20:29:52 markd Exp $
 
-DISTNAME=	iperf-2.0.1
+DISTNAME=	iperf-2.0.2
 CATEGORIES=	net
 MASTER_SITES=	http://dast.nlanr.net/Projects/Iperf2.0/
 
