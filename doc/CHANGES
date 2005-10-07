@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11368 2005/10/07 19:43:26 perry Exp $
+$NetBSD: CHANGES,v 1.11369 2005/10/07 20:31:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4325,3 +4325,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.25 [rillig 2005-10-07]
 	Updated x11/py-Pmw to 1.2 [perry 2005-10-07]
 	Added biology/pymol version 0.98 [perry 2005-10-07]
+	Updated net/iperf to 2.0.2 [markd 2005-10-07]
