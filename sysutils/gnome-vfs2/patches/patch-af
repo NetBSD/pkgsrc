@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.7 2005/03/22 15:56:41 jmmv Exp $
+$NetBSD: patch-af,v 1.8 2005/10/07 16:10:44 drochner Exp $
 
---- libgnomevfs/gnome-vfs-cdrom.c.orig	2005-02-10 11:00:21.000000000 +0100
+--- libgnomevfs/gnome-vfs-cdrom.c.orig	2005-05-08 19:49:56.000000000 +0200
 +++ libgnomevfs/gnome-vfs-cdrom.c
 @@ -37,6 +37,8 @@
  
@@ -11,19 +11,3 @@ $NetBSD: patch-af,v 1.7 2005/03/22 15:56:41 jmmv Exp $
  #endif
  
  #ifdef HAVE_SYS_CDIO_H
-@@ -143,6 +145,7 @@ _gnome_vfs_get_cdrom_type (const char *v
- #endif /* defined(__FreeBSD__) */
- 	return type;
- #else
-+	#if !defined(__APPLE__)
- 	*fd = open (vol_dev_path, O_RDONLY|O_NONBLOCK);
- 	if (*fd  < 0) {
- 		return -1;
-@@ -153,6 +156,7 @@ _gnome_vfs_get_cdrom_type (const char *v
- 		return -1;
- 	}
- 	return ioctl (*fd, CDROM_DISC_STATUS, CDSL_CURRENT);
-+	#endif
- #endif
- }
- 
