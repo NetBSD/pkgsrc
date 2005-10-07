@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11364 2005/10/07 16:39:32 drochner Exp $
+$NetBSD: CHANGES,v 1.11365 2005/10/07 17:17:21 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4321,3 +4321,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ORBit2 to 2.12.4 [drochner 2005-10-07]
 	Updated sysutils/gnome-vfs2 to 2.12.1.1 [drochner 2005-10-07]
 	Updated devel/gail to 1.8.5 [drochner 2005-10-07]
+	Updated archivers/dact to 0.8.3nb3 [joerg 2005-10-07]
