@@ -3029,7 +3029,7 @@ pkgtools/createbuildlink package is highly recommended. For most packages, the
 following command will generate a good starting point for buildlink3.mk files:
 
 % cd pkgsrc/category/pkgdir
-% createbuildlink -3 >buildlink3.mk
+% createbuildlink >buildlink3.mk
 
 11.2.1. Anatomy of a buildlink3.mk file
 
