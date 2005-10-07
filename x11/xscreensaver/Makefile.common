@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.83 2005/06/28 10:03:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.84 2005/10/07 18:43:40 wiz Exp $
 #
 
 DISTNAME=		xscreensaver-4.22
@@ -17,7 +17,6 @@ USE_X11=		yes
 USE_TOOLS+=		perl
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
 CONFIGURE_ARGS+=	--with-gl
 CONFIGURE_ARGS+=	--with-gle
