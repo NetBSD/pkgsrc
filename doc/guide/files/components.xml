@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.15 2005/10/07 15:49:01 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.16 2005/10/07 18:30:17 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -30,7 +30,7 @@
 
       <listitem><para><varname>PKGNAME</varname> is the name of the
       package, as used by pkgsrc. You only need to provide it if it
-      differs from DISTNAME. Usually it is the directory name together
+      differs from <varname>DISTNAME</varname>. Usually it is the directory name together
       with the version number. It must match the regular expression
       <varname>^[A-Za-z0-9][A-Za-z0-9-_.+]*$</varname>, that is, it
       starts with a letter or digit, and contains only letters, digits,
@@ -170,11 +170,41 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
     <para>Other variables that affect the build:
       <itemizedlist>
 
-	<listitem><para><varname>WRKSRC</varname>: The directory where
-	the interesting distribution files of the package are found. The
-	default is <filename>${WRKDIR}/${DISTNAME}</filename>, which
-	works for most packages.</para></listitem>
+	<listitem>
 
+	  <para><varname>WRKSRC</varname>: The directory where the
+	  interesting distribution files of the package are found. The
+	  default is <filename>${WRKDIR}/${DISTNAME}</filename>, which
+	  works for most packages.</para>
+
+	  <para>If a package doesn't create a subdirectory for itself
+	  (most GNU software does, for instance), but extracts itself in
+	  the current directory, you should set <varname>WRKSRC=
+	  ${WRKDIR}</varname>.</para>
+
+	  <para>If a package doesn't create a subdirectory with the name
+	  of <varname>DISTNAME</varname> but some different name, set
+	  <varname>WRKSRC</varname> to point to the proper name in
+	  <filename>${WRKDIR}</filename>, for example <varname>WRKSRC=
+	  ${WRKDIR}/${DISTNAME}/unix</varname>. See <filename
+	  role="pkg">lang/tcl</filename> and <filename
+	  role="pkg">x11/tk</filename> for other examples.</para>
+
+	  <para>The name of the working directory created by pkgsrc is
+	  taken from the <varname>WRKDIR_BASENAME</varname> variable. By
+	  default, its value is <filename>work</filename>. If you want
+	  to use the same pkgsrc tree for building different kinds of
+	  binary packages, you can change the variable according to your
+	  needs. Two other variables handle common cases of setting
+	  <varname>WRKDIR_BASENAME</varname> individually. If
+	  <varname>OBJHOSTNAME</varname> is defined in
+	  <filename>/etc/mk.conf</filename>, the first component of the
+	  host's name is attached to the directory name. If
+	  <varname>OBJMACHINE</varname> is defined, the platform name is
+	  attached, which might look like <filename>work.i386</filename>
+	  or <filename>work.sparc</filename>.</para>
+
+	</listitem>
       </itemizedlist>
     </para>
     <para>Please pay attention to the following gotchas:</para>
@@ -202,37 +232,30 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
   <sect1 id="components.distinfo">
     <title><filename>distinfo</filename></title>
 
-    <para>Most important, the mandatory message digest, or checksum, of all the
-      distfiles needed for the package to compile, confirming they match the
-      original file distributed by the author.  This ensures that the
-      distfile retrieved from the Internet has not been corrupted during
-      transfer or altered by a malign force to introduce a security hole.
-      It is generated using the <command>make makesum</command> command.
-      The digest algorithm used was, at one stage, md5, but that was felt
-      lacking compared to sha1, and so sha1 is now the default algorithm.
-      The distfile size is also generated and stored in new distinfo files.
-      The <filename role="pkg">pkgtools/digest</filename> utility 
-      calculates all of the digests in the distinfo file, and it provides 
-      various different algorithms.  At the current time, the algorithms 
-      provided are:
-      <emphasis>md5</emphasis>, <emphasis>rmd160</emphasis>,
-      <emphasis>sha1</emphasis>, <emphasis>sha256</emphasis>,
-      <emphasis>sha384</emphasis> and <emphasis>sha512</emphasis>.</para>
+    <para>The <filename>distinfo</filename> file contains the message
+    digest, or checksum, of each distfile needed for the package. This
+    ensures that the distfiles retrieved from the Internet have not been
+    corrupted during transfer or altered by a malign force to introduce
+    a security hole. Due to recent rumor about weaknesses of digest
+    algorithms, all distfiles are protected using both SHA1 and RMD160
+    message digests, as well as the file size.</para>
 
-    <para>Some packages have different sets of distfiles on a per architecture
-      basis, for example <filename 
-        role="pkg">www/navigator</filename>). These are kept in the
-      same distinfo file and care should be taken when upgrading such a
-      package to ensure distfile information is not lost.</para>
+    <para>The <filename>distinfo</filename> file also contains the
+    checksums for all the patches found in the
+    <filename>patches</filename> directory (see <xref
+    linkend="components.patches"/>).</para>
+    
+    <para>To regenerate the <filename>distinfo</filename> file, use the
+    <command>make makedistinfo</command> or <command>make mdi</command>
+    command.</para>
 
-    <para>The message digest/checksum for all the official patches found in the
-      <filename>patches/</filename> directory (see
-      <xref linkend="components.patches"/>) for the package is also stored in
-      the <filename>distinfo</filename> file. This is a message
-      digest/checksum of all lines in the patch file except the &os; RCS Id.
-      This file is generated by invoking <command>make
-      makepatchsum</command> (or <command>make mps</command> if you're
-      in a hurry).</para>
+    <para>Some packages have different sets of distfiles depending on
+    the platform, for example <filename
+    role="pkg">www/navigator</filename>). These are kept in the same
+    <filename>distinfo</filename> file and care should be taken when
+    upgrading such a package to ensure distfile information is not
+    lost.</para>
+
   </sect1>
 
   <sect1 id="components.patches">
@@ -366,7 +389,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
         <term><filename>MESSAGE</filename></term>
 
         <listitem>
-          <para>Display this file after installation of the package.
+          <para>This file is displayed after installation of the package.
             Useful for things like legal notices on almost-free
             software and hints for updating config files after
             installing modules for apache, PHP etc. 
@@ -395,32 +418,6 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
       The default is <filename>${.CURDIR}/work</filename>
       or <filename>${.CURDIR}/work.${MACHINE_ARCH}</filename>
       if <varname>OBJMACHINE</varname> is set.</para>
-
-    <para> If a package doesn't create a subdirectory for itself (like
-      GNU software does, for instance), but extracts itself in the
-      current directory, you should set <varname>WRKSRC</varname>
-      accordingly, e.g. <filename role="pkg">editors/sam</filename> 
-      again, but the quick answer is:</para>
-
-    <programlisting>WRKSRC=             ${WRKDIR}</programlisting>
-
-    <para>If a package doesn't create a subdir with the name of
-      <varname>DISTNAME</varname> but some different name, set
-      <varname>WRKSRC</varname> to point to the proper name in
-      <filename>${WRKDIR}</filename>. See <filename 
-        role="pkg">lang/tcl</filename> and
-      <filename role="pkg">x11/tk</filename> for examples, and here is 
-      another one: </para>
-      
-    <programlisting>WRKSRC=         ${WRKDIR}/${DISTNAME}/unix</programlisting>
-
-    <para> The name of the working directory created by pkgsrc is
-      <filename>work</filename> by default. If the same pkgsrc tree
-      should be used on several different platforms, the variable
-      <varname>OBJMACHINE</varname> can be set in /etc/mk.conf to
-      attach the platform to the directory name,
-      e.g. <filename>work.i386</filename> or
-      <filename>work.sparc</filename>. </para>
   </sect1>
 
   <sect1 id="files-dir">
