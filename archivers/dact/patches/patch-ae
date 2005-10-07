@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.1 2005/10/07 17:15:40 joerg Exp $
+
+--- parse.c.orig	2005-10-07 19:09:21.000000000 +0200
++++ parse.c
+@@ -138,7 +138,7 @@ char *parse_url_subst(const char *src, c
+ 			case 346290: /* OSVR-done */
+ 				if (strlen(system_info.release)>127) break;
+ 				for (x=0;x<strlen(system_info.release);x++) {
+-					if (isdigit(system_info.release[x]) || system_info.release[x]=='.') {
++					if (isdigit((unsigned char)system_info.release[x]) || system_info.release[x]=='.') {
+ 						ret[0]=system_info.release[x];
+ 						ret++;
+ 					} else {
+@@ -151,7 +151,7 @@ char *parse_url_subst(const char *src, c
+ 				for (x=0;x<strlen(system_info.release);x++) {
+ 					if (system_info.release[x]=='.' && found) break;
+ 					if (system_info.release[x]=='.') found=1;
+-					if (isdigit(system_info.release[x]) || found) {
++					if (isdigit((unsigned char)system_info.release[x]) || found) {
+ 						ret[0]=system_info.release[x];
+ 						ret++;
+ 					}
+@@ -264,7 +264,7 @@ char *parse_url_subst_dist(void) {
+ void strtolower(char *str) {
+ 	uint32_t x=0;
+ 
+-	while (str[x]) { str[x]=tolower(str[x]); x++; }
++	while (str[x]) { str[x]=tolower((unsigned char)str[x]); x++; }
+ }
+ 
+ char *mime64(unsigned char *str) {
