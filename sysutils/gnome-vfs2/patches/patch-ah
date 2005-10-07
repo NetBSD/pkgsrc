@@ -1,18 +1,17 @@
-$NetBSD: patch-ah,v 1.5 2005/07/06 06:36:03 reed Exp $
+$NetBSD: patch-ah,v 1.6 2005/10/07 16:10:44 drochner Exp $
 
---- libgnomevfs/gnome-vfs-resolve.c.orig	Fri May  6 18:06:26 2005
-+++ libgnomevfs/gnome-vfs-resolve.c	Fri May  6 18:15:23 2005
-@@ -172,8 +172,12 @@
- 	   switch (error) {
+--- libgnomevfs/gnome-vfs-resolve.c.orig	2005-04-19 13:54:52.000000000 +0200
++++ libgnomevfs/gnome-vfs-resolve.c
+@@ -172,9 +172,11 @@ _gnome_vfs_result_from_gai_error (int er
  			 
  	   case EAI_NONAME: return GNOME_VFS_ERROR_HOST_NOT_FOUND;
+ #ifdef EAI_ADDRFAMILY
 -	   case EAI_ADDRFAMILY:		
-+#ifdef EAI_ADDRFAMILY
-+	   case EAI_ADDRFAMILY: return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;	
-+#endif
++	   case EAI_ADDRFAMILY:	return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;
+ #endif
 +#ifdef EAI_NODATA
  	   case EAI_NODATA: return GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS;
 +#endif
+ #ifdef EAI_SYSTEM
  	   case EAI_SYSTEM: return gnome_vfs_result_from_errno ();
- 	   case EAI_FAIL:
- 	   case EAI_AGAIN: return GNOME_VFS_ERROR_NAMESERVER;
+ #endif

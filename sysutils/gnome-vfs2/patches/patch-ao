@@ -1,18 +1,17 @@
-$NetBSD: patch-ao,v 1.1 2004/10/24 18:03:24 recht Exp $
+$NetBSD: patch-ao,v 1.2 2005/10/07 16:10:44 drochner Exp $
 
---- libgnomevfs/gnome-vfs-utils.c.orig	Sun Oct 24 17:36:16 2004
-+++ libgnomevfs/gnome-vfs-utils.c	Sun Oct 24 17:37:27 2004
-@@ -46,6 +46,13 @@
+--- libgnomevfs/gnome-vfs-utils.c.orig	2005-09-15 13:02:53.000000000 +0200
++++ libgnomevfs/gnome-vfs-utils.c
+@@ -49,6 +49,12 @@
  #include <sys/param.h>
  #include <sys/stat.h>
  #include <sys/types.h>
 +
 +#ifdef __APPLE__
-+#include <sys/param.h>
 +#include <sys/mount.h>
 +#define HAVE_STATVFS 0
 +#endif
 +
  #include <unistd.h>
  
- #if HAVE_SYS_STATVFS_H
+ #define KILOBYTE_FACTOR 1024.0
