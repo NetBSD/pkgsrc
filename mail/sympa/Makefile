@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/08/23 11:48:49 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/07 18:42:33 wiz Exp $
 #
 
 DISTNAME=	sympa-4.1.2
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--with-libexecdir=${SYMPA_BIN}
 CONFIGURE_ARGS+=	--with-libdir=${SYMPA_BIN}
 CONFIGURE_ARGS+=	--with-datadir=${SYMPA_BIN}/etc
 CONFIGURE_ARGS+=	--with-expldir=${SYMPA_VARBASE}/expl
-CONFIGURE_ARGS+=	--with-mandir=${PREFIX}/man
+CONFIGURE_ARGS+=	--with-mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--with-lockdir=${SYMPA_VARBASE}/lock
 CONFIGURE_ARGS+=	--with-piddir=${SYMPA_VARBASE}/run
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}/sympa
