@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2005/03/07 18:29:03 minskim Exp $
+$NetBSD: patch-ab,v 1.9 2005/10/07 15:46:15 joerg Exp $
 
 --- main_u.c.orig	Thu Oct 14 11:49:18 2004
 +++ main_u.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.8 2005/03/07 18:29:03 minskim Exp $
  #include <io.h>
  #endif /* __dos */
 -#if defined(__STDC_ISO_10646__)
-+#if defined(__STDC_ISO_10646__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__APPLE__)
++#if defined(__STDC_ISO_10646__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
  #include <locale.h>
  #endif /* __STDC_ISO_10646__ */
  #if defined(N_PLAT_NLM)
