@@ -1,17 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2005/10/07 11:30:35 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/07 11:33:28 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.bacula
-PKG_SUPPORTED_OPTIONS=	catalog-sqlite catalog-pgsql
-PKG_SUGGESTED_OPTIONS=	catalog-sqlite
+PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
+PKG_OPTIONS_REQUIRED_GROUPS=	database
+PKG_OPTIONS_GROUP.database=	catalog-sqlite catalog-pgsql
+PKG_SUGGESTED_OPTIONS=		catalog-sqlite
 
 .include "../../mk/bsd.options.mk"
-
-# Too bad -1-6's make doesn't have :[#] modifier
-.for _option_ in catalog
-. if empty(PKG_OPTIONS:M${_option_}-*)
-PKG_FAIL_REASON+=	"There must one and only one ${_option_} defined."
-. endif
-.endfor
 
 # Other options
 
