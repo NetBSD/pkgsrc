@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11362 2005/10/07 10:25:08 rillig Exp $
+$NetBSD: CHANGES,v 1.11363 2005/10/07 15:15:18 perry Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/estd to 0.4 [adam 2005-10-07]
 	Updated games/xscrabble to 1.0nb3 [rillig 2005-10-07]
 	Updated pkgtools/pkglint to 4.24 [rillig 2005-10-07]
+	Updated biology/rasmol to 2.7.3 [perry 2005-10-07]
