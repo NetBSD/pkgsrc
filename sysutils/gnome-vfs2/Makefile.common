@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.21 2005/08/10 20:56:23 jlam Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/10/07 16:10:44 drochner Exp $
 #
 
-DISTNAME=		gnome-vfs-2.10.1
+DISTNAME=		gnome-vfs-2.12.1.1
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.10/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.12/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -23,6 +23,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 
+CONFIGURE_ARGS+=	--disable-cdda
 CONFIGURE_ARGS+= 	--disable-fam
 CONFIGURE_ARGS+= 	--disable-gtk
 CONFIGURE_ARGS+= 	--disable-howl
@@ -70,7 +71,7 @@ SUBST_STAGE.libs=       pre-configure
 SUBST_FILES.libs=       modules/Makefile.in
 SUBST_SED.libs=         -e 's|../libgnomevfs/libgnomevfs-2.la|${BUILDLINK_PREFIX.gnome-vfs2}/lib/libgnomevfs-2.la|g'
 
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.1
+BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.12.1.1
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gnome-vfs-2.0\/modules$$/ \

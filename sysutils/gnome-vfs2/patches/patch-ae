@@ -1,14 +1,14 @@
-$NetBSD: patch-ae,v 1.7 2004/11/28 13:00:17 recht Exp $
+$NetBSD: patch-ae,v 1.8 2005/10/07 16:10:44 drochner Exp $
 
---- configure.orig	Thu Oct 28 16:16:54 2004
-+++ configure	Sat Nov 27 20:51:53 2004
-@@ -25971,9 +25971,11 @@
+--- configure.orig	2005-10-05 10:56:02.000000000 +0200
++++ configure
+@@ -25942,9 +25942,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  int
  main ()
  {
 +#ifndef HAVE_STATVFS
  struct statfs st;
- statfs(NULL, &st);
+   statfs(NULL, &st);
    ;
 +#endif
    return 0;

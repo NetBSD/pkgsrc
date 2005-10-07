@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/04/26 18:03:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/10/07 16:10:44 drochner Exp $
 bin/gnomevfs-cat
 bin/gnomevfs-copy
 bin/gnomevfs-info
@@ -67,9 +67,7 @@ lib/gnome-vfs-2.0/modules/libnetwork.la
 lib/gnome-vfs-2.0/modules/libnntp.la
 lib/gnome-vfs-2.0/modules/libsftp.la
 lib/gnome-vfs-2.0/modules/libtar.la
-lib/gnome-vfs-2.0/modules/libvfs-pipe.la
 lib/gnome-vfs-2.0/modules/libvfs-test.la
-lib/gnome-vfs-2.0/modules/libvfs-translate.la
 lib/libgnomevfs-2.la
 lib/pkgconfig/gnome-vfs-2.0.pc
 lib/pkgconfig/gnome-vfs-module-2.0.pc
