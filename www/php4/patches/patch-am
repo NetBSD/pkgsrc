@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.3 2005/10/07 21:09:28 jdolecek Exp $
+
+--- ext/ldap/config.m4.orig	2005-05-08 16:06:24.000000000 +0000
++++ ext/ldap/config.m4
+@@ -114,6 +114,7 @@ if test "$PHP_LDAP" != "no"; then
+   _SAVE_CPPFLAGS=$CPPFLAGS
+   _SAVE_LDFLAGS=$LDFLAGS
+   CPPFLAGS="$CPPFLAGS -I$LDAP_INCDIR"
++  LDFLAGS="$LDFLAGS $LDAP_SHARED_LIBADD"
+   AC_CACHE_CHECK([for 3 arg ldap_set_rebind_proc], ac_cv_3arg_setrebindproc,
+   [AC_TRY_COMPILE([#include <ldap.h>], [ldap_set_rebind_proc(0,0,0)],
+   ac_cv_3arg_setrebindproc=yes, ac_cv_3arg_setrebindproc=no)])
