@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11363 2005/10/07 15:15:18 perry Exp $
+$NetBSD: CHANGES,v 1.11364 2005/10/07 16:39:32 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4313,3 +4313,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/xscrabble to 1.0nb3 [rillig 2005-10-07]
 	Updated pkgtools/pkglint to 4.24 [rillig 2005-10-07]
 	Updated biology/rasmol to 2.7.3 [perry 2005-10-07]
+	Updated graphics/gthumb to 2.6.8 [drochner 2005-10-07]
+	Updated devel/libgsf to 1.12.3 [drochner 2005-10-07]
+	Updated graphics/cairo to 1.0.2 [drochner 2005-10-07]
+	Updated textproc/gnome-doc-utils to 0.4.2 [drochner 2005-10-07]
+	Updated devel/GConf2 to 2.12.0 [drochner 2005-10-07]
+	Updated net/ORBit2 to 2.12.4 [drochner 2005-10-07]
+	Updated sysutils/gnome-vfs2 to 2.12.1.1 [drochner 2005-10-07]
+	Updated devel/gail to 1.8.5 [drochner 2005-10-07]
