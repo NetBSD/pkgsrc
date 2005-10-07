@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3979 2005/10/07 11:43:28 wiz Exp $
+$NetBSD: TODO,v 1.3980 2005/10/07 11:55:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -988,7 +988,7 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o sun-jdk15-5.0.5
 	o sun-jre15-5.0.5
-	o suse_base-9.3
+	o suse_base-10.0
 	o svk-1.05
 	o swfdec-0.3.5
 	o swi-prolog-5.5.11
