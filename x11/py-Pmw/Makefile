@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:48:12 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/07 17:44:27 perry Exp $
 #
 
-DISTNAME=	Pmw.0.8.5
-PKGNAME=	${PYPKGPREFIX}-Pmw-0.8.5
-PKGREVISION=	1
+DISTNAME=	Pmw.1.2
+PKGNAME=	${PYPKGPREFIX}-Pmw-1.2
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmw/}
 
@@ -30,4 +29,5 @@ do-install:
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
+.include "../../x11/blt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
