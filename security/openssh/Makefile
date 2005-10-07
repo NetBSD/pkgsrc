@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2005/09/23 15:45:14 taca Exp $
+# $NetBSD: Makefile,v 1.159 2005/10/07 17:42:35 reed Exp $
 
 DISTNAME=		openssh-4.2p1
 PKGNAME=		openssh-4.2.1
@@ -62,7 +62,6 @@ USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mantype=man
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
