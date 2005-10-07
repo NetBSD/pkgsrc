@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/07 23:17:19 wulf Exp $
+include/gnuradio/audio_oss_sink.h
+include/gnuradio/audio_oss_source.h
+${PYSITELIB}/gnuradio/_audio_oss.la
+${PYSITELIB}/gnuradio/audio_oss.pyo
+${PYSITELIB}/gnuradio/audio_oss.py
+${PYSITELIB}/gnuradio/audio_oss.pyc
+include/gnuradio/swig/audio_oss.i

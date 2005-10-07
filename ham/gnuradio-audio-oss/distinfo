@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/07 23:17:19 wulf Exp $
+
+SHA1 (gr-audio-oss-0.6.tar.gz) = 0ebd49159e25f989381161c730395f2adba7dc84
+RMD160 (gr-audio-oss-0.6.tar.gz) = 6599eb919c174694661524f4056bfea3fddc2c13
+Size (gr-audio-oss-0.6.tar.gz) = 365275 bytes
