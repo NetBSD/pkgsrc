@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/04/28 13:36:02 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2005/10/07 18:38:25 wiz Exp $
 
 DISTNAME=	naim-0.11.7.3.1
 CATEGORIES=	chat
@@ -11,8 +11,6 @@ COMMENT=	Ncurses-based AIM, ICQ, IRC, and Lily client
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 
 USE_NCURSES=		# compiles fine, but terminates on startup with:
 # assertion "strlen(h->addch.buf) == h->addch.len" failed:
