@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3977 2005/10/06 18:28:25 drochner Exp $
+$NetBSD: TODO,v 1.3978 2005/10/07 09:00:46 adam Exp $
 
 Suggested new packages
 ======================
@@ -440,7 +440,6 @@ Suggested package updates
 	o epiphany-1.8
 	o erlang-10b-6
 	o esh-0.8.5
-	o estd-0.4 [pkg/31285]
 	o et-2.60
 	o etach-1.4.0
 	o exmh-2.7.2

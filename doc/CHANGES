@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11359 2005/10/06 18:28:24 drochner Exp $
+$NetBSD: CHANGES,v 1.11360 2005/10/07 09:00:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4309,3 +4309,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/gxine to 0.4.8 [drochner 2005-10-06]
 	Updated graphics/py-gnuplot to 1.7 [drochner 2005-10-06]
 	Updated graphics/mayavi to 1.5 [drochner 2005-10-06]
+	Updated sysutils/estd to 0.4 [adam 2005-10-07]
