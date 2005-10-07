@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.14 2005/10/07 15:45:24 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.15 2005/10/07 15:49:01 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -169,15 +169,12 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
 
     <para>Other variables that affect the build:
       <itemizedlist>
-	<listitem><para><varname>WRKSRC</varname>:
-	    The subdirectory of <filename>${WRKDIR}</filename> to which
-	    the distribution actually unpacks. The default is
-	    <filename>${WRKDIR}/${DISTNAME}</filename>.
-	    The value of <varname>WRKSRC</varname> should be set
-	    explicitly if the package does not follow standard
-	    conventions and include the package's name as a
-	    subdirectory.</para>
-	</listitem>
+
+	<listitem><para><varname>WRKSRC</varname>: The directory where
+	the interesting distribution files of the package are found. The
+	default is <filename>${WRKDIR}/${DISTNAME}</filename>, which
+	works for most packages.</para></listitem>
+
       </itemizedlist>
     </para>
     <para>Please pay attention to the following gotchas:</para>
