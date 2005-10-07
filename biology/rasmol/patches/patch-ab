@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/03/13 04:42:00 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/07 15:13:21 perry Exp $
 
---- cif_ctonum.c.orig	Thu Aug  5 23:11:05 1999
-+++ cif_ctonum.c	Thu Aug  5 23:11:11 1999
-@@ -168,7 +168,6 @@
+--- cif_ctonum.c.orig	2005-10-06 18:05:48.000000000 -0400
++++ cif_ctonum.c	2005-10-06 18:07:54.000000000 -0400
+@@ -173,7 +173,6 @@
  extern "C" {
  #endif
  

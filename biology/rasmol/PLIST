@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/25 03:37:23 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/10/07 15:13:21 perry Exp $
 bin/rasmol
-share/doc/rasmol/rasmol.hlp
+man/cat1/rasmol.0
+man/man1/rasmol.1
 share/doc/rasmol/NOTICE
 share/doc/rasmol/manualA4.pdf.gz
 share/doc/rasmol/manualA4.ps.gz
@@ -8,6 +9,7 @@ share/doc/rasmol/manualA4.rtf.gz
 share/doc/rasmol/manualUS.pdf.gz
 share/doc/rasmol/manualUS.ps.gz
 share/doc/rasmol/manualUS.rtf.gz
+share/doc/rasmol/rasmol.hlp
 share/doc/rasmol/refcardA4.pdf.gz
 share/doc/rasmol/refcardA4.ps.gz
 share/doc/rasmol/refcardA4.rtf.gz
@@ -27,4 +29,3 @@ share/examples/rasmol/IUCR9800028.cif
 share/examples/rasmol/asprin.alc
 share/examples/rasmol/pdb2mcg.ent
 @dirrm share/examples/rasmol
-${IMAKE_MAN_DIR}/rasmol.${IMAKE_MANNEWSUFFIX}

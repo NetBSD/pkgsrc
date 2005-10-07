@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2005/07/15 18:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/10/07 15:13:21 perry Exp $
 
-DISTNAME=	RasMol_2.7.1
-PKGNAME=	rasmol-2.7.1
-PKGREVISION=	1
+DISTNAME=	RasMol_2.7.3
+PKGNAME=	rasmol-2.7.3
 CATEGORIES=	biology
-MASTER_SITES=	ftp://ftp.bernstein-plus-sons.com/software/
+MASTER_SITES=	http://www.bernstein-plus-sons.com/software/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.bernstein-plus-sons.com/software/rasmol/
@@ -34,12 +33,12 @@ DEPTHDEF?=	-DEIGHTBIT
 post-patch:
 	${LN} -sf ${WRKDIR}/${DISTNAME}/doc  ${WRKSRC}
 	${LN} -sf ${WRKDIR}/${DISTNAME}/data ${WRKSRC}
-	${GUNZIP_CMD} ${WRKDIR}/${DISTNAME}/doc/rasmol.1.gz
 	cd ${WRKSRC} && ${SED} "s#@@PREFIX@@#${PREFIX}#" rasmol.h > \
 		rasmol.h.new && ${MV} rasmol.h.new rasmol.h
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/NOTICE ${PREFIX}/share/doc/rasmol
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/rasmol.1 ${PREFIX}/man/man1
 	for doc in manualA4.pdf.gz manualA4.ps.gz manualA4.rtf.gz	\
 			manualUS.pdf.gz manualUS.ps.gz manualUS.rtf.gz	\
 			refcardA4.pdf.gz refcardA4.ps.gz		\
