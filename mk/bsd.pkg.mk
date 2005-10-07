@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1726 2005/10/06 15:25:47 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1727 2005/10/07 16:57:14 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1280,7 +1280,7 @@ _FETCH_FILE=								\
 _CHECK_DIST_PATH=							\
 	if [ "X${DIST_PATH}" != "X" ]; then				\
 		for d in "" ${DIST_PATH:S/:/ /g}; do			\
-			if [ "X$$d" = "X" -o "X$$d" = "X${DISTDIR}" ]; then continue; fi; \
+			case $$d in "" | ${DISTDIR}) continue;; esac;	\
 			if [ -f $$d/${DIST_SUBDIR}/$$bfile ]; then	\
 				${ECHO} "Using $$d/${DIST_SUBDIR}/$$bfile"; \
 				${RM} -f $$bfile;			\
@@ -3380,19 +3380,15 @@ makepatchsum mps: uptodate-digest
 	if [ -f ${DISTINFO_FILE} ]; then				\
 		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
 	else \
-		${ECHO_N} "$$" > $$newfile;				\
-		${ECHO_N} "NetBSD" >> $$newfile; 			\
-		${ECHO} "$$" >> $$newfile;				\
+		${ECHO} "\$$""NetBSD""\$$" > $$newfile;			\
 		${ECHO} "" >> $$newfile;				\
 	fi;								\
 	if [ -d ${PATCHDIR} ]; then					\
 		(cd ${PATCHDIR};					\
 		for sumfile in "" patch-*; do				\
-			if [ "X$$sumfile" = "X" ]; then continue; fi;	\
-			if [ "X$$sumfile" = "Xpatch-*" ]; then break; fi; \
 			case $$sumfile in				\
-				patch-local-*) ;;			\
-				*.orig|*.rej|*~) continue ;;		\
+				"" | "patch-*") ;;			\
+				patch-local-* | *.orig | *.rej | *~) ;;	\
 				*)	${ECHO} "${PATCH_DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${PATCH_DIGEST_ALGORITHM}`" >> $$newfile;; \
 			esac;						\
 		done);							\
