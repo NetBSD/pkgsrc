@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.13 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.14 2005/10/07 15:45:24 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -148,18 +148,15 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
     <para>The third section contains the following variables.
       <itemizedlist>
 
-      <listitem><para><varname>MAINTAINER</varname> is the email address of the
-	    contact person for this package.
-	    The person who feels responsible for this package, and who is most
-	    likely to look at problems or questions regarding this package
-	    which have been reported with &man.send-pr.1;. The right
-	    person to contact before making major changes to the
-	    package.
-	    When packaging a new program, set
-	    <varname>MAINTAINER</varname> to yourself.  If you really
-	    can't maintain the package for future updates, set it to
-	    <email>tech-pkg@NetBSD.org</email>.</para> 
-	</listitem>
+      <listitem><para><varname>MAINTAINER</varname> is the email address
+      of the person who feels responsible for this package, and who is
+      most likely to look at problems or questions regarding this
+      package which have been reported with &man.send-pr.1;. Other
+      developers should contact the <varname>MAINTAINER</varname> before
+      making major changes to the package. When packaging a new program,
+      set <varname>MAINTAINER</varname> to yourself. If you really can't
+      maintain the package for future updates, set it to
+      <email>tech-pkg@NetBSD.org</email>.</para></listitem>
 
       <listitem><para><varname>HOMEPAGE</varname> is a URL where users can
       find more information about the package.</para></listitem>
