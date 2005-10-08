@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2005/10/07 16:00:24 drochner Exp $
+# $NetBSD: Makefile.common,v 1.34 2005/10/08 17:15:48 jmmv Exp $
 #
 
 DISTNAME=		GConf-2.12.0
@@ -33,3 +33,8 @@ CONFIGURE_ARGS+=	--with-sysconfsubdir=
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
+
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
