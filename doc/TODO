@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3983 2005/10/07 17:45:23 perry Exp $
+$NetBSD: TODO,v 1.3984 2005/10/08 04:12:13 reed Exp $
 
 Suggested new packages
 ======================
@@ -283,6 +283,18 @@ Suggested new packages
 	Postoffice
 	http://www.pell.portland.or.us/~orc/Code/postoffice/index.html
 	Simple SMTP mail server and client.
+
+	kplayer
+	http://kplayer.sourceforge.net/ 
+	KDE media player based on MPlayer.
+
+	kaffeine
+	http://kaffeine.sourceforge.net/
+	Full featured Multimedia-Player for KDE using Xine as backend.
+
+	oKle
+	http://okle.sourceforge.net/
+	KDE frontend to the Ogle DVD player.
 
 Suggested package updates
 =========================
