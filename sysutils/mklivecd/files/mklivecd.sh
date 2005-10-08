@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.23 2005/08/13 23:35:45 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.24 2005/10/08 23:20:10 xtraeme Exp $
 #
 # Copyright (c) 2004, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -51,7 +51,7 @@
 #
 # NetBSD >= 4.0 has cdboot, no need to use grub here.
 #
-: ${CDBOOT_IMG:=cdboot}
+: ${CDBOOT_IMG:=bootxx_cd9660}
 : ${BOOT_IMG:=boot}
 : ${CDBOOT_DIR:=/usr/mdec}
 #
@@ -561,7 +561,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.23 2005/08/13 23:35:45 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.24 2005/10/08 23:20:10 xtraeme Exp $
 # 
 
 # PROVIDE: root
