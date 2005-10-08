@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11371 2005/10/08 08:18:09 adam Exp $
+$NetBSD: CHANGES,v 1.11372 2005/10/08 08:28:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4337,3 +4337,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ham/usrp version 0.8 [wulf 2005-10-08]
 	Updated graphics/graphviz to 2.6 [adam 2005-10-08]
 	Updated devel/doxygen to 1.4.5 [adam 2005-10-08]
+	Updated archivers/p7zip to 4.29 [adam 2005-10-08]
