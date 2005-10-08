@@ -1,10 +1,12 @@
-# $NetBSD: Makefile.php,v 1.25 2005/10/08 20:34:26 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.26 2005/10/08 21:12:53 jdolecek Exp $
 
 .include "../../www/php4/Makefile.common"
 
 # revision of the core PHP interpreter package
 DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
 PATCHDIR=		${.CURDIR}/../../www/php4/patches
+
+BUILD_DEFS=		USE_INET6
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -41,6 +43,13 @@ CONFIGURE_ARGS+=	${PHP4_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[^-]*$//}
+PKG_OPTIONS_VAR=		PKG_OPTIONS.${PKGNAME:C/-[^-]*$//}
+PKG_SUPPORTED_OPTIONS+=	inet6
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
