@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/25 04:21:29 simonb Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/08 18:02:57 reed Exp $
 #
 
 DISTNAME=		wdiff-0.5
@@ -11,6 +11,7 @@ COMMENT=		Word-by-word diff
 
 GNU_CONFIGURE=		yes
 CONFIGURE_HAS_INFODIR=	no
+CONFIGURE_HAS_MANDIR=	no
 
 USE_MAKEINFO=		yes
 INFO_FILES=		wdiff.info
