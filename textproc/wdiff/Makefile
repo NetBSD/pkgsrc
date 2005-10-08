@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/08 19:06:25 reed Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/08 19:19:37 reed Exp $
 #
 
 DISTNAME=		wdiff-0.5
@@ -17,7 +17,6 @@ CONFIGURE_HAS_MANDIR=	no
 USE_MAKEINFO=		yes
 INFO_FILES=		wdiff.info
 INSTALLATION_DIRS=	bin ${INFO_DIR} ${PKGMANDIR}/man1 share/doc/wdiff
-CPPFLAGS+=		-DHAVE_STRERROR
 
 # pkgsrc does not provide libtermcap, but ncurses does provide
 # libtermcap routines.
