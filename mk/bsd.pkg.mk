@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1728 2005/10/07 17:39:28 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1729 2005/10/08 13:16:28 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1831,11 +1831,13 @@ pre-configure-override: ${_CONFIGURE_PREREQ}
 .if !target(do-configure)
 do-configure:
 .  if defined(HAS_CONFIGURE)
-.    for DIR in ${CONFIGURE_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
-	    AWK="${TOOLS_AWK}" \
-	    INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
-	    ac_given_INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
+.    for _dir_ in ${CONFIGURE_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC}; cd ${_dir_};					\
+	${SETENV}							\
+	    AWK="${TOOLS_AWK}"						\
+	    INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}"		\
+	    ac_given_INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}"	\
 	    INSTALL_DATA="${INSTALL_DATA}"				\
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}"			\
 	    INSTALL_GAME="${INSTALL_GAME}"				\
@@ -1846,8 +1848,10 @@ do-configure:
 .    endfor
 .  endif
 .  if defined(USE_IMAKE)
-.    for DIR in ${CONFIGURE_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${DIR} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
+.    for _dir_ in ${CONFIGURE_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${WRKSRC}; cd ${_dir_};					\
+	${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
 .    endfor
 .  endif
 .endif
@@ -1920,8 +1924,11 @@ BUILD_MAKE_FLAGS?=	${MAKE_FLAGS}
 .PHONY: do-build
 .if !target(do-build)
 do-build:
-.  for DIR in ${BUILD_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
+.  for _dir_ in ${BUILD_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC}; cd ${_dir_};					\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
+		-f ${MAKEFILE} ${BUILD_TARGET}
 .  endfor
 .endif
 
@@ -1935,8 +1942,11 @@ TEST_MAKE_FLAGS?=	${MAKE_FLAGS}
 .if !target(do-test)
 do-test:
 .  if defined(TEST_TARGET) && !empty(TEST_TARGET)
-.    for DIR in ${TEST_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${TEST_ENV} ${MAKE_PROGRAM} ${TEST_MAKE_FLAGS} -f ${MAKEFILE} ${TEST_TARGET}
+.    for _dir_ in ${TEST_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC}; cd ${_dir_};					\
+	${SETENV} ${TEST_ENV} ${MAKE_PROGRAM} ${TEST_MAKE_FLAGS}	\
+		-f ${MAKEFILE} ${TEST_TARGET}
 .    endfor
 .  else
 	@${DO_NADA}
@@ -1948,8 +1958,11 @@ do-test:
 .PHONY: do-install
 .if !target(do-install)
 do-install:
-.  for DIR in ${INSTALL_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+.  for _dir_ in ${INSTALL_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC}; cd ${_dir_};					\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS}	\
+		-f ${MAKEFILE} ${INSTALL_TARGET}
 .  endfor
 .endif
 
