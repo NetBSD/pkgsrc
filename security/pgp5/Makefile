@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/09/27 22:37:25 mjl Exp $
+# $NetBSD: Makefile,v 1.26 2005/10/08 22:36:49 rillig Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -24,28 +24,11 @@ CONFLICTS=	pgraf-[0-9]*  	# Both have a `pgps' executable
 WRKSRC=		${WRKDIR}/pgp50i/src
 CRYPTO=		YES
 GNU_CONFIGURE=	YES
-USE_RSAREF2=	NO
 
 # use of IDEA as crypto function
 LICENCE=	fee-based-commercial-use
 
 PGPLIB=	${PREFIX}/share/pgp5
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
-pre-fetch:
-	@${ECHO}
-	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
-	@${ECHO} in order to build this package.  USA residents that are
-	@${ECHO} not licensees of the RSA algorithm MUST set this variable
-	@${ECHO} to YES.  Users outside the USA MUST set this variable to
-	@${ECHO} NO.  Licensees may choose -- NO is faster.
-	@${ECHO}
-	@${ECHO} On the other hand, this package needs more work to
-	@${ECHO} actually work with RSAREF. Sorry.
-	@${FALSE}
-.endif
 
 post-patch:
 	${MV} ${WRKSRC}/man/pgp.1 ${WRKSRC}/man/pgp5.1
