@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11376 2005/10/08 17:20:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.11377 2005/10/08 19:08:55 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4346,3 +4346,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/gtk-doc to 1.4 [jmmv 2005-10-08]
 	Updated textproc/intltool to 0.34.1 [jmmv 2005-10-08]
 	Updated meta-pkgs/gnome-devel to 2.12.1 [jmmv 2005-10-08]
+	Updated textproc/wdiff to 0.5nb1 [reed 2005-10-08]
