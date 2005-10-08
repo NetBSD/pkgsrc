@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11370 2005/10/07 23:48:47 wulf Exp $
+$NetBSD: CHANGES,v 1.11371 2005/10/08 08:18:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4335,3 +4335,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ham/gnuradio-usrp version 0.5 [wulf 2005-10-08]
 	Added ham/gnuradio-wxgui version 0.3 [wulf 2005-10-08]
 	Added ham/usrp version 0.8 [wulf 2005-10-08]
+	Updated graphics/graphviz to 2.6 [adam 2005-10-08]
+	Updated devel/doxygen to 1.4.5 [adam 2005-10-08]
