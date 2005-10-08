@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.18 2005/10/07 09:59:32 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.19 2005/10/08 06:29:41 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -39,3 +39,15 @@ Pullup ticket 811 - requested by Matthias Drochner
 security update for eric3
 Pullup ticket 812 - requested by Min Sik Kim
 build fixes for gtkam
+Pullup ticket 802 - requested by Lubomir Sedlacik
+security fix for mpeg_encode
+Pullup ticket 803 - requested by Lubomir Sedlacik
+security fix for weex
+Pullup ticket 804 - requested by Lubomir Sedlacik
+security update for bugzilla
+Pullup ticket 805 - requested by Lubomir Sedlacik
+security fix for imap-uw
+Pullup ticket 809 - requested by Lubomir Sedlacik
+security update for RealPlayerGold
+Pullup ticket 810 - requested by Lubomir Sedlacik
+security fix for arc
