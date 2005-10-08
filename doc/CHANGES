@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11379 2005/10/08 22:28:14 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11380 2005/10/08 23:21:06 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4349,3 +4349,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/wdiff to 0.5nb1 [reed 2005-10-08]
 	Updated mail/mailfront to 0.97 [schmonz 2005-10-08]
 	Updated emulators/gxemul to 0.3.6 [xtraeme 2005-10-08]
+	Updated sysutils/mklivecd to 0.13.2 [xtraeme 2005-10-08]
