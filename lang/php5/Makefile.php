@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.8 2005/10/08 16:49:35 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.9 2005/10/08 21:04:36 jdolecek Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--with-openssl
 .include "../../security/openssl/buildlink3.mk"
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.${PKGNAME:C/-[^-]*$//}
+PKG_SUPPORTED_OPTIONS+=	inet6
 
 .include "../../mk/bsd.options.mk"
 
