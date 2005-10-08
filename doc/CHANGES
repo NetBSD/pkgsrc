@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11378 2005/10/08 21:01:36 schmonz Exp $
+$NetBSD: CHANGES,v 1.11379 2005/10/08 22:28:14 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4348,3 +4348,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated meta-pkgs/gnome-devel to 2.12.1 [jmmv 2005-10-08]
 	Updated textproc/wdiff to 0.5nb1 [reed 2005-10-08]
 	Updated mail/mailfront to 0.97 [schmonz 2005-10-08]
+	Updated emulators/gxemul to 0.3.6 [xtraeme 2005-10-08]
