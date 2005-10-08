@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.9 2005/10/08 16:49:35 jdolecek Exp $
+$NetBSD: MESSAGE,v 1.10 2005/10/08 16:51:50 jdolecek Exp $
 
 To process PHP scripts, you will need a PHP-enabled HTTP server.  You may
 either configure the HTTP server to use PHP as a CGI program, or install a
@@ -14,5 +14,5 @@ Note that php4-pcre, php4-session and php4-xml are no longer
 separate packages since 4.3.3, the main PHP4 package has them built-in now.
 
 Note php-openssl has been removed as separate package as of 4.4.0nb2, the
-main PHP4 package has them built-in now.
+main PHP4 package has it built-in now.
 ===========================================================================
