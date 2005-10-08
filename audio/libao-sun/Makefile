@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/05/24 15:57:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/08 12:30:38 jmmv Exp $
 
 .include "../libao/Makefile.common"
 
@@ -13,6 +13,8 @@ BUILD_DIRS=		${WRKSRC}/src/plugins/sun
 INSTALL_DIRS=		${WRKSRC}/src/plugins/sun
 
 BUILDLINK_DEPENDS.libao+=	libao>=0.8.6nb1
+
+_LIBAO_BUILDING_PLUGIN=	yes
 
 .include "../../audio/libao/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
