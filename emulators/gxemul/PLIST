@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/17 20:07:38 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/08 22:27:03 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -37,6 +37,14 @@ share/doc/gxemul/20050622-netbsd-evbmips-malta.png
 share/doc/gxemul/20050622-netbsd-evbmips-malta_small.png
 share/doc/gxemul/20050626-netbsd-sgimips-netboot.png
 share/doc/gxemul/20050626-netbsd-sgimips-netboot_small.png
+share/doc/gxemul/20050817-sgi-o2-success-7.png
+share/doc/gxemul/20050817-sgi-o2-success-7_small.png
+share/doc/gxemul/20050817-sgi-o2-success-8.png
+share/doc/gxemul/20050817-sgi-o2-success-8_small.png
+share/doc/gxemul/20051007-netbsd-cats-installed.png
+share/doc/gxemul/20051007-netbsd-cats-installed_small.png
+share/doc/gxemul/20051007-openbsd-cats-installed.png
+share/doc/gxemul/20051007-openbsd-cats-installed_small.png
 share/doc/gxemul/BUGS
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
