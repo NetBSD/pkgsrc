@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2004/12/24 18:26:56 seb Exp $
+$NetBSD: MESSAGE,v 1.4 2005/10/08 08:11:10 adam Exp $
 
 Please read graphviz license terms in:
 
-${PREFIX}/share/doc/graphviz/COPYING
+${PREFIX}/share/graphviz/doc/COPYING
 
 ===========================================================================
