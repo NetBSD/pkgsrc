@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2005/10/07 19:40:11 jmmv Exp $
+# $NetBSD: builtin.mk,v 1.14 2005/10/08 10:17:44 jmmv Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -111,8 +111,9 @@ USE_BUILTIN.render=		yes
 
 # Check whether the implementation we selected has a xrender.pc file
 # or not.  If the latter, generate a fake one.
-.  if exists(${BUILDLINK_PREFIX.Xrender}/lib/pkgconfig/xrender.pc)
-BUILDLINK_FILES.Xrender+=	lib/pkgconfig/fontconfig.pc
+.  if !empty(IS_BUILTIN.Xrender:M[Yy][Ee][Ss]) && \
+      exists(${BUILDLINK_PREFIX.Xrender}/lib/pkgconfig/xrender.pc)
+BUILDLINK_FILES.Xrender+=	lib/pkgconfig/xrender.pc
 .  else
 BUILDLINK_TARGETS+=	Xrender-fake-pc
 
@@ -122,8 +123,9 @@ Xrender-fake-pc:
 	   ${ECHO} "Description: X Render Library"; \
 	   ${ECHO} "Version: 0.8.4"; \
 	   ${ECHO} "Cflags: -I${BUILDLINK_PREFIX.Xrender}/include"; \
-	   ${ECHO} "Libs: -L${BUILDLINK_PREFIX.Xrender}/include" \
-	       "${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.Xrender} -lXrender"; \
+	   ${ECHO} "Libs: -L${BUILDLINK_PREFIX.Xrender}/lib" \
+	       "${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.Xrender}/lib" \
+	       "-lXrender"; \
 	} >${BUILDLINK_DIR}/lib/pkgconfig/xrender.pc
 .  endif
 
