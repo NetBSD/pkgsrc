@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2005/06/15 15:26:59 jlam Exp $
+# $NetBSD: builtin.mk,v 1.7 2005/10/08 10:07:30 jmmv Exp $
 
 BUILTIN_PKG:=	xextensions
 
@@ -68,7 +68,7 @@ BUILDLINK_PREFIX.xextensions=	${X11BASE}
 # Check whether the implementation we selected has a xextensions.pc file
 # or not.  If the latter, generate a fake one.
 .  if exists(${BUILDLINK_PREFIX.xextensions}/lib/pkgconfig/xextensions.pc)
-BUILDLINK_FILES.xextensions+=	lib/pkgconfig/fontconfig.pc
+BUILDLINK_FILES.xextensions+=	lib/pkgconfig/xextensions.pc
 .  else
 BUILDLINK_TARGETS+=	xextensions-fake-pc
 
