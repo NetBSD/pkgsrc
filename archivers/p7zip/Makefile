@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/09/23 12:17:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/08 08:27:42 adam Exp $
 
-DISTNAME=	p7zip_4.27_src
-PKGNAME=	p7zip-4.27
+DISTNAME=	p7zip_4.29_src_all
+PKGNAME=	p7zip-4.29
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,9 +13,9 @@ COMMENT=	File archiver with high compression
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 MAKEFILE=		makefile
 NO_CONFIGURE=		yes
-USE_TOOLS+=		gmake
 PTHREAD_OPTS+=		require
 
 # compiles, but does not recognize any archives as supported
@@ -27,7 +27,7 @@ PLIST_SUBST+=		DYNAMIC_7Z=""
 PLIST_SUBST+=		DYNAMIC_7Z="@comment "
 .endif
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/_src//}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}
 
 GCC_REQD=		3.0
 
