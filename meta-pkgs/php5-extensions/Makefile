@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/05/23 22:04:34 jdolecek Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/08 16:05:48 jdolecek Exp $
 
 DISTNAME=	php-extensions-5.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	meta-pkgs www php5
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -49,6 +49,7 @@ DEPENDS+=	php-sockets-5.0.*:../../net/php-sockets
 DEPENDS+=	php-sysvsem-5.0.*:../../devel/php-sysvsem
 DEPENDS+=	php-sysvshm-5.0.*:../../devel/php-sysvshm
 DEPENDS+=	php-wddx-5.0.*:../../textproc/php-wddx
+DEPENDS+=	php-xmlrpc-5.0.*:../../net/php-xmlrpc
 DEPENDS+=	php-yp-5.0.*:../../net/php-yp
 DEPENDS+=	php-zip-5.0.*:../../archivers/php-zip
 DEPENDS+=	php-zlib-5.0.*:../../archivers/php-zlib

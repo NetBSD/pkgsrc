@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11373 2005/10/08 12:03:39 hira Exp $
+$NetBSD: CHANGES,v 1.11374 2005/10/08 16:05:48 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4339,3 +4339,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/doxygen to 1.4.5 [adam 2005-10-08]
 	Updated archivers/p7zip to 4.29 [adam 2005-10-08]
 	Updated print/dvipdfmx to 0.0.0.20031116nb3 [hira 2005-10-08]
+	Added net/php-xmlrpc 4.4.0 [jdolecek 2005-10-08]
+	Added net/php-xmlrpc 5.0.5 [jdolecek 2005-10-08]
