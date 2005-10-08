@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:46:04 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/08 21:11:55 jschauma Exp $
 #
 
 DISTNAME=	jasper-1.701.0
@@ -16,6 +16,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--enable-shared --without-x --disable-opengl
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro*)
+CFLAGS+=		-c99
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jasper
