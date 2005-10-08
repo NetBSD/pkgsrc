@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: clamsmtpd.sh,v 1.4 2004/09/21 10:16:05 xtraeme Exp $
+# $NetBSD: clamsmtpd.sh,v 1.5 2005/10/08 08:56:48 xtraeme Exp $
 #
 # PROVIDE: clamsmtpd
 # REQUIRE: LOGIN clamd
@@ -25,7 +25,7 @@ fi
 name="clamsmtpd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-pidfile=/var/run/clamsmtpd.pid
+pidfile="@VARBASE@/run/clamsmtpd.pid"
 
 start_precmd="clamsmtpd_prestart"
 start_cmd="clamsmtpd_start"
