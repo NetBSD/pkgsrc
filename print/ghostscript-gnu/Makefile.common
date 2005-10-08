@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/05/30 15:39:11 dillo Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/10/08 22:41:56 jschauma Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	8.15
@@ -66,6 +66,12 @@ HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
 LIBDIR=			${GSDATADIR}/lib
 
 PLIST_SUBST+=		GS_VERS=${GS_VERS}
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro*)
+CFLAGS+=		-c99
+.endif
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
