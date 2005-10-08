@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/08/01 13:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2005/10/08 22:42:08 rillig Exp $
 
 DISTNAME=	pgp263is
 CATEGORIES=	security
@@ -69,12 +69,12 @@ INSTALLATION_DIRS=	bin man/man1
 
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
 pre-fetch:
-	@${ECHO}
-	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
-	@${ECHO} in order to build this package.  USA residents that are
-	@${ECHO} no licensees of the RSA algorithm MUST set this variable
-	@${ECHO} to YES.  Users outside the USA MUST set this variable to
-	@${ECHO} NO.  Licensees may choose -- NO is faster.
+	@${ECHO} ""
+	@${ECHO} "The variable USE_RSAREF2 must be set to either YES or NO"
+	@${ECHO} "in order to build this package.  USA residents that are"
+	@${ECHO} "no licensees of the RSA algorithm MUST set this variable"
+	@${ECHO} "to YES.  Users outside the USA MUST set this variable to"
+	@${ECHO} "NO.  Licensees may choose -- NO is faster."
 	@${FALSE}
 .endif
 
