@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.20 2005/10/09 00:18:14 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.21 2005/10/09 23:02:56 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -53,3 +53,7 @@ Pullup ticket 810 - requested by Lubomir Sedlacik
 security fix for arc
 Pullup ticket 815 - requested by Havard Eidnes
 security fix for python23
+Pullup ticket 817 - requested by Jan Schaumann
+portability fix for jasper
+Pullup ticket 818 - requested by Jan Schaumann
+portability fix for ghostscript-gnu
