@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11389 2005/10/09 18:35:07 minskim Exp $
+$NetBSD: CHANGES,v 1.11390 2005/10/09 20:03:29 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4360,3 +4360,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/squid to 2.5.11 [taca 2005-10-09]
 	Updated pkgtools/pkglint to 4.26 [rillig 2005-10-09]
 	Updated editors/poedit to 1.3.4 [minskim 2005-10-09]
+	Updated textproc/latex2html to 2002.2.1nb4 [rillig 2005-10-09]
