@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3985 2005/10/09 09:06:46 wiz Exp $
+$NetBSD: TODO,v 1.3986 2005/10/09 10:45:46 abs Exp $
 
 Suggested new packages
 ======================
@@ -459,7 +459,6 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.0
-	o exim-4.54
 	o exmh-2.7.2
 	o f2c-20031025
 	o faces-1.7.7
