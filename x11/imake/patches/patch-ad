@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2004/03/28 22:06:16 xtraeme Exp $
+$NetBSD: patch-ad,v 1.3 2005/10/09 05:11:32 reed Exp $
 
---- config/cf/NetBSD.cf.in.orig	2004-03-03 07:53:38.000000000 +0000
-+++ config/cf/NetBSD.cf.in	2004-03-03 07:54:59.000000000 +0000
+--- config/cf/NetBSD.cf.in.orig	2003-11-20 08:18:18.000000000 -0800
++++ config/cf/NetBSD.cf.in	2005-10-08 19:20:49.000000000 -0700
 @@ -143,7 +143,7 @@
  #define MkdirHierCmd		mkdir -p
  
@@ -44,3 +44,14 @@ $NetBSD: patch-ad,v 1.2 2004/03/28 22:06:16 xtraeme Exp $
  # if defined(SparcArchitecture)
  #  define ServerOSDefines 	-DDDXOSINIT
  # elif defined(AlphaArchitecture)
+@@ -465,9 +459,7 @@
+ file.0:: file.$(MANNEWSUFFIX)						@@\
+ 	@if [ -f file.$(MANNEWSUFFIX) ]; \				@@\
+ 	then \								@@\
+-	cat file.$(MANNEWSUFFIX) | $(NEQN) | $(TBL) | $(NROFF) $(MANMACROS) | $(COL) >/tmp/$$$$.man; \	@@\
+-	cp /tmp/$$$$.man file.0; \					@@\
+-	$(RM) /tmp/$$$$.man; \						@@\
++	cat file.$(MANNEWSUFFIX) | $(NEQN) | $(TBL) | $(NROFF) $(MANMACROS) | $(COL) > file.0; \	@@\
+ 	fi 								@@\
+ 									@@\
+ install.man::                                                           @@\
