@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+#	$NetBSD: soffice,v 1.1.1.1 2005/10/09 13:39:53 mrauch Exp $
+#
+SOINST=@@PREFIX@@/openoffice.org@@OO_VER@@
+
+# make sure we can find `whoami` on solaris
+PATH=${PATH}:/usr/ucb
+
+# add an existing java directory to $PATH to allow OOo to
+# automatically find it
+#
+if [ -d "@@PREFIX@@/java" ]; then
+  for i in @@PREFIX@@/java/*; do
+    if [ -f "$i/bin/java" ]; then
+	export PATH=$PATH:$i/bin
+    fi
+  done
+fi
+# default data seg size is too small for java
+ulimit -d `ulimit -H -d`
+
+
+# Let the standard pkgsrc libraries be found by dlopen()
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:@@PREFIX@@/lib
+export LD_LIBRARY_PATH
+
+exec ${SOINST}/program/soffice "$@"
