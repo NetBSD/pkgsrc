@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/04/27 21:58:15 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/09 18:33:17 minskim Exp $
 
---- configure.orig	Sun Jan 25 22:17:58 2004
+--- configure.orig	2005-10-02 16:03:35.000000000 -0700
 +++ configure
-@@ -1460,19 +1460,19 @@ test -n "$target_alias" &&
+@@ -1436,19 +1436,19 @@ test -n "$target_alias" &&
      NONENONEs,x,x, &&
    program_prefix=${target_alias}-
  
@@ -32,5 +32,23 @@ $NetBSD: patch-ab,v 1.1 2004/04/27 21:58:15 dmcmahill Exp $
 -fi
 +#fi
  
- am__api_version="1.7"
+ am__api_version="1.8"
  # Find a good install program.  We prefer a C program (faster),
+@@ -4677,7 +4677,7 @@ fi
+ 
+   echo "$as_me:$LINENO: checking for GNOME data directory" >&5
+ echo $ECHO_N "checking for GNOME data directory... $ECHO_C" >&6
+-  GNOME_DATA_DIR=`gnome-config --datadir 2>/dev/null`
++  GNOME_DATA_DIR=$prefix/share
+   if test x$GNOME_DATA_DIR = x ; then
+      echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+@@ -4736,7 +4736,7 @@ echo $ECHO_N "checking for Berkeley DB..
+ echo $ECHO_N "checking for Berkeley DB >= $minversion... $ECHO_C" >&6
+   fi
+ 
+-  for version in "" 5.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1 4.0 3.6 3.5 3.4 3.3 3.2 3.1 ; do
++  for version in "" 5.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1 4.0 4 3.6 3.5 3.4 3.3 3.2 3.1 ; do
+ 
+     if test -z $version ; then
+         db_lib="-ldb"
