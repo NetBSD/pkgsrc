@@ -1,7 +1,14 @@
-$NetBSD: patch-ak,v 1.1 2005/10/06 13:13:28 ben Exp $
+$NetBSD: patch-ak,v 1.2 2005/10/09 03:23:11 ben Exp $
 
---- configure.in.orig	2005-10-05 21:16:43.000000000 -0700
+--- configure.in.orig	2004-02-06 08:04:39.000000000 -0800
 +++ configure.in
+@@ -1,5 +1,5 @@
+ AC_INIT
+-AM_INIT_AUTOMAKE(faad2, 2.0)
++AM_INIT_AUTOMAKE(faad2, 2.0, do-not-define-PACKAGE-or-VERSION)
+ 
+ AC_PROG_LIBTOOL
+ AC_SUBST(LIBTOOL_DEPS)
 @@ -114,7 +114,7 @@ if test x$WITHDRM = xyes; then
    AC_DEFINE(DRM, 1, [Define if you want to use libfaad together with Digital Radio Mondiale (DRM)])
  fi
@@ -11,3 +18,8 @@ $NetBSD: patch-ak,v 1.1 2005/10/06 13:13:28 ben Exp $
  
  AC_CONFIG_FILES(plugins/mpeg4ip/Makefile)
  
+@@ -122,3 +122,4 @@ AC_CONFIG_FILES(common/mp4ff/Makefile co
+ 
+ AC_CONFIG_FILES(faad2.spec)
+ AC_OUTPUT
++cp config.h faad2-config.h
