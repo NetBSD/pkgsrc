@@ -1,29 +1,48 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/30 23:20:37 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/09 18:33:17 minskim Exp $
 bin/poedit
 man/man1/poedit.1
+share/gnome/apps/Development/poedit.desktop
 ${PKGLOCALEDIR}/locale/af_ZA/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/am_ET/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/ast/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/es_PR/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/fa_IR/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/fur/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/ky/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/poedit.mo
@@ -31,14 +50,43 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/sq_AL/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/sv_SE/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/tt/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/poedit.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/poedit.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/poedit.mo
+share/mime-info/poedit.keys
+share/mime-info/poedit.mime
+share/pixmaps/poedit.png
+share/pixmaps/poedit.xpm
 share/poedit/help-gettext.zip
 share/poedit/help-hr.zip
 share/poedit/help.zip
 share/poedit/resources.zip
 @dirrm share/poedit
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/mime-info
+@dirrm ${PKGLOCALEDIR}/locale/tt/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/tt
+@dirrm ${PKGLOCALEDIR}/locale/sv_SE/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/sv_SE
+@dirrm ${PKGLOCALEDIR}/locale/ky/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ky
+@dirrm ${PKGLOCALEDIR}/locale/fur/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/fur
+@dirrm ${PKGLOCALEDIR}/locale/fa_IR/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/fa_IR
+@dirrm ${PKGLOCALEDIR}/locale/es_PR/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/es_PR
+@dirrm ${PKGLOCALEDIR}/locale/ast/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/ast
+@dirrm ${PKGLOCALEDIR}/locale/am_ET/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/am_ET
+@dirrm ${PKGLOCALEDIR}/locale/af_ZA/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/af_ZA
+@comment in gnome2-dirs: @dirrm share/gnome/apps/Development
