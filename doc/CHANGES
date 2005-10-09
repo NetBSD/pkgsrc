@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11387 2005/10/09 14:48:33 taca Exp $
+$NetBSD: CHANGES,v 1.11388 2005/10/09 18:24:49 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4358,3 +4358,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/freetds to 0.63 [jdolecek 2005-10-09]
 	Added misc/openoffice2-bin 2.0.0rc2 [mrauch 2005-10-09]
 	Updated www/squid to 2.5.11 [taca 2005-10-09]
+	Updated pkgtools/pkglint to 4.26 [rillig 2005-10-09]

@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.295 2005/10/07 17:34:11 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.296 2005/10/09 18:24:11 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -407,6 +407,7 @@ my (@options) = (
 # Constants
 my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
 my $regex_pkgname	= qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
+my $regex_shellcmd	= qr"^\t";
 my $regex_unresolved	= qr"\$\{";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
@@ -980,7 +981,7 @@ sub checkfile_PLIST($$) {
 			$line->log_error("RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.");
 
 		} elsif ($text =~ qr"^etc/") {
-			$line->log_error("Configuration files must not be registered in the PLIST. Please use the PKG_SYSCONFDIR framework.");
+			$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/install/bsd.pkginstall.mk.");
 
 		} elsif ($text eq "info/dir") {
 			$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
@@ -1311,7 +1312,7 @@ sub checklines_Makefile_varuse($) {
 	foreach my $line (@{$lines}) {
 		if ($line->text =~ qr"^[^#]*[^\$]\$(\w+)") {
 			my ($varname) = ($1);
-			$line->log_warning("please write either \${$varname} or \$\$$varname instead of \$$varname.");
+			$line->log_warning("\$$varname is ambiguous. Use \${$varname} if you mean a Makefile variable or \$\$$varname if you mean a shell variable.");
 		}
 	}
 
@@ -1537,6 +1538,10 @@ sub checklines_package_Makefile($) {
 				if (($what ne "SRC" && $what ne "BIN") || ($where ne "FTP" && $where ne "CDROM")) {
 					$line->log_error("Misspelled variable: Valid names are USE_{BIN,SRC}_ON_{FTP,CDROM}.");
 				}
+			}
+
+			if ($varname =~ qr"^SUBST_STAGE\." && $value !~ qr"^(?:pre|do|post)-(?:patch|configure|build|install)$") {
+				$line->log_warning("SUBST_STAGE should be one of {pre,do,post}-{patch,configure,build,install}");
 			}
 		}
 	}
