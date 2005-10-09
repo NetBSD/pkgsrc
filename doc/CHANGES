@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11383 2005/10/09 10:44:41 abs Exp $
+$NetBSD: CHANGES,v 1.11384 2005/10/09 12:36:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4354,3 +4354,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/php-xmlrpc 5.0.5 [jdolecek 2005-10-08]
 	Updated pkgtools/verifypc to 1.3 [jmmv 2005-10-09]
 	Updated mail/exim to 4.54 [abs 2005-10-09]
+	Updated finance/kmymoney2 to 0.8 [markd 2005-10-09]
