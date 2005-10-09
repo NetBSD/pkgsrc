@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/10/09 12:58:59 jdolecek Exp $
 
-DISTNAME=	freetds-0.61.2
-PKGREVISION=	1
+DISTNAME=	freetds-0.63
+PKGREVISION=	# empty
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/stable/
 
@@ -16,8 +16,12 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/freetds
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-tdsver=7.0
+
+# no thread-safe resolver functions on NetBSD
+CONFIGURE_ARGS+=	--disable-threadsafe
 
 EGDIR=		${PREFIX}/share/examples/freetds
 CONF_FILES=	${EGDIR}/freetds.conf ${PKG_SYSCONFDIR}/freetds.conf

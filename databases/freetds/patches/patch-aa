@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/06/11 13:24:09 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2005/10/09 12:58:59 jdolecek Exp $
 
---- Makefile.in.orig	Wed Jun 11 14:41:58 2003
-+++ Makefile.in
-@@ -538,13 +538,6 @@ uninstall-info: uninstall-info-recursive
+--- Makefile.in.orig	2005-03-30 02:51:55.000000000 +0200
++++ Makefile.in	2005-10-09 14:20:14.000000000 +0200
+@@ -576,13 +576,6 @@
  
  
  install-data-local:
@@ -14,5 +14,5 @@ $NetBSD: patch-aa,v 1.4 2003/06/11 13:24:09 wiz Exp $
 -		$(INSTALL_DATA) $(srcdir)/locales.conf $(ETC)/locales.conf; \
 -	fi
  
- # for default we do not uninstall configuration (they can be changed)
+ # do not uninstall configuration files (they may have been changed)
  @DISTCHECK_BUILD_TRUE@uninstall-local:

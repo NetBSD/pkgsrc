@@ -1,22 +1,22 @@
-$NetBSD: patch-ad,v 1.1 2004/05/23 18:23:51 danw Exp $
+$NetBSD: patch-ad,v 1.2 2005/10/09 12:58:59 jdolecek Exp $
 
---- src/replacements/Makefile.in.orig	Sat Aug  2 11:24:35 2003
-+++ src/replacements/Makefile.in
-@@ -138,7 +138,7 @@ tds_sysdep_int64_type = @tds_sysdep_int6
- tds_sysdep_real32_type = @tds_sysdep_real32_type@
- tds_sysdep_real64_type = @tds_sysdep_real64_type@
+--- src/replacements/Makefile.in.orig	2005-03-30 02:51:58.000000000 +0200
++++ src/replacements/Makefile.in	2005-10-09 14:21:59.000000000 +0200
+@@ -172,7 +172,7 @@
+ 
+ # $Id: patch-ad,v 1.2 2005/10/09 12:58:59 jdolecek Exp $
  noinst_LTLIBRARIES = libreplacements.la
--libreplacements_la_SOURCES = 
-+libreplacements_la_SOURCES = dummy.c
+-libreplacements_la_SOURCES = iconv.c
++libreplacements_la_SOURCES = iconv.c dummy.c
  libreplacements_la_LDFLAGS = 
  libreplacements_la_LIBADD = @LTLIBOBJS@
  INCLUDES = -I$(top_srcdir)/include
-@@ -150,7 +150,7 @@ CONFIG_CLEAN_FILES =
+@@ -184,7 +184,7 @@
  LTLIBRARIES = $(noinst_LTLIBRARIES)
  
  libreplacements_la_DEPENDENCIES = @LTLIBOBJS@
--am_libreplacements_la_OBJECTS =
-+am_libreplacements_la_OBJECTS = dummy.lo
+-am_libreplacements_la_OBJECTS = iconv.lo
++am_libreplacements_la_OBJECTS = iconv.lo dummy.lo
  libreplacements_la_OBJECTS = $(am_libreplacements_la_OBJECTS)
  
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)/include
