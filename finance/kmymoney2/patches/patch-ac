@@ -1,0 +1,90 @@
+$NetBSD: patch-ac,v 1.3 2005/10/09 12:33:58 markd Exp $
+
+--- configure.orig	2005-08-13 05:49:50.000000000 +1200
++++ configure
+@@ -31762,7 +31762,7 @@ echo "${ECHO_T}$kde_cv_path" >&6
+               if test "$kde_qtsubver" -le 1; then
+                 kde32ornewer=
+               fi
+-              if test "$kde_qtsubver" -le 2 -o `kde-config --version | grep KDE | sed 's/KDE: \(...\).*/\1/'` == 3.2; then
++              if test "$kde_qtsubver" -le 2 -o `kde-config --version | grep KDE | sed 's/KDE: \(...\).*/\1/'` = 3.2; then
+                 kde33ornewer=
+               fi
+             fi
+@@ -32043,7 +32043,7 @@ echo "${ECHO_T}$kde_cv_path" >&6
+ 
+ 
+         if test -n "$MEINPROC" && test ! "$MEINPROC" = "compiled"; then
+-	    kde_sharedirs="/usr/share/kde /usr/local/share /usr/share /opt/kde3/share /opt/kde/share $prefix/share `kde-config --prefix`/share"
++	    kde_sharedirs="$prefix/share/kde /usr/share/kde /usr/local/share /usr/share /opt/kde3/share /opt/kde/share $prefix/share `kde-config --prefix`/share"
+             test -n "$KDEDIR" && kde_sharedirs="$KDEDIR/share $kde_sharedirs"
+ 
+ KDE_XSL_STYLESHEET=NO
+@@ -33391,7 +33391,7 @@ echo "${ECHO_T}$enable_pdfdocs" >&6
+ 
+ 
+ 
+-if test x$enable_pdfdocs == xyes; then
++if test x$enable_pdfdocs = xyes; then
+   GENERATE_PDF_TRUE=
+   GENERATE_PDF_FALSE='#'
+ else
+@@ -33400,7 +33400,7 @@ else
+ fi
+ 
+ 
+-  if test x$enable_pdfdocs == xyes; then
++  if test x$enable_pdfdocs = xyes; then
+         # Extract the first word of "html2ps", so it can be a program name with args.
+ set dummy html2ps; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -33549,7 +33549,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_pdfdocs == xyes -a x$found_ps2pdf = xyes -a x$found_html2ps == xyes; then
++if test x$enable_pdfdocs = xyes -a x$found_ps2pdf = xyes -a x$found_html2ps = xyes; then
+   HAVE_HTMLCONVERSIONTOOLS_TRUE=
+   HAVE_HTMLCONVERSIONTOOLS_FALSE='#'
+ else
+@@ -33559,7 +33559,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_pdfdocs == xyes -a x$found_jade = xyes -a x$found_pdfjadetex == xyes; then
++if test x$enable_pdfdocs = xyes -a x$found_jade = xyes -a x$found_pdfjadetex = xyes; then
+   HAVE_DSSSLCONVERSIONTOOLS_TRUE=
+   HAVE_DSSSLCONVERSIONTOOLS_FALSE='#'
+ else
+@@ -33808,7 +33808,7 @@ else
+   have_new_ofx="no"
+ fi
+ 
+-    if test "$have_new_ofx" == "yes"; then
++    if test "$have_new_ofx" = "yes"; then
+       ofx_importerplugin="ofximport"
+       ofx_libs="-lofx"
+     fi
+@@ -34028,7 +34028,7 @@ else
+   have_new_ofx="no"
+ fi
+ 
+-    if test "$have_new_ofx" == "yes"; then
++    if test "$have_new_ofx" = "yes"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define USE_OFX_DIRECTCONNECT "1"
+@@ -34058,10 +34058,9 @@ CURDIR=`pwd`
+ MFILES=$(find $CURDIR/$srcdir -name Makefile.am);
+ for mfile in $MFILES; do
+   DIR=$(dirname $mfile)
+-  pushd $DIR > /dev/null
+-  CD=`pwd`
+-  popd > /dev/null
+-  if test "$srcdir" == "." -o ${CD:0:${#CURDIR}} == $CURDIR; then
++  CD=`(cd $DIR; pwd)`
++  CD1=`echo $CD | head -c ${#CURDIR}`
++  if test "$srcdir" = "." -o $CD1 = $CURDIR; then
+     HFILES=$(grep -v noinst_HEADERS $mfile | grep _HEADERS)
+     for HFILE in $HFILES; do
+       case $HFILE in
