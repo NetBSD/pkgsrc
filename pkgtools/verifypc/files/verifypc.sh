@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: verifypc.sh,v 1.3 2005/10/03 09:45:45 jmmv Exp $
+# $NetBSD: verifypc.sh,v 1.4 2005/10/09 10:30:23 jmmv Exp $
 #
 # verifypc - Sanity check package dependencies according to pkg-config
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -151,7 +151,11 @@ main() {
             then
                 : # Package explicitly ignored by the user, so shut up.
             else
-                warn "${pcname} not a direct dependency"
+                if [ "${pcop}" != "NOT-FOUND" ]; then
+                    warn "${pcname} not a direct dependency"
+                else
+                    warn "${pcname} not found"
+                fi
                 error=1
             fi
         fi
