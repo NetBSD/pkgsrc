@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.29 2005/09/10 23:11:40 abs Exp $
+$NetBSD: distinfo,v 1.30 2005/10/09 10:43:50 abs Exp $
 
-SHA1 (exim-4.52.tar.bz2) = 8cf1e91a668b0f0220b4f40a793ce087d596f16e
-RMD160 (exim-4.52.tar.bz2) = d88d8cdb553af45466514e03e7759366b73212c0
-Size (exim-4.52.tar.bz2) = 1535866 bytes
+SHA1 (exim-4.54.tar.bz2) = d1d5a41aeedc464462562a0f970fabb20c98c712
+RMD160 (exim-4.54.tar.bz2) = 5b7219874dd834396add0fd0e1ee21b97fc8d122
+Size (exim-4.54.tar.bz2) = 1547608 bytes
 SHA1 (patch-aa) = 82b0ff0fe5d3265efef6cf5511925e63469c2516
 SHA1 (patch-ab) = 32452f2fed6f0300f460aa9de8528b5ab2fe15c1
 SHA1 (patch-ac) = ed2b1b02cfa8338e82cf6bb74e9f9e5959dd8775
