@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3988 2005/10/09 18:35:07 minskim Exp $
+$NetBSD: TODO,v 1.3989 2005/10/09 20:18:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -357,7 +357,7 @@ Suggested package updates
 	o astyle-1.15.3
 	o aterm-1.0.0
 	o auctex-11.81
-	o autogen-5.7.1
+	o autogen-5.7.3
 	o avl-2.0.1
 	o avr-libc-1.2.3
 	o baci-20040415
@@ -509,6 +509,7 @@ Suggested package updates
 	o gnocatan-0.8.1.30
 	o gnome-2.12.0
 	o gnupg-devel-1.9.19
+	o gnutls-1.2.8
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.40
 	o gogo-3.11p1
@@ -638,6 +639,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.32
+	o mathomatic-12.4.12
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -859,7 +861,7 @@ Suggested package updates
 	o psmisc-21.5
 	o pstoedit-3.42
 	o pstree-2.26
-	o pth-2.0.4
+	o pth-2.0.5
 	o puf-0.93.3
 	o puzzle-5.2
 	o pv-0.9.0
@@ -1052,7 +1054,7 @@ Suggested package updates
 	o ttyrec-1.0.6
 	o turba-2.0.3
 	o twelf-1.5
-	o txt2html-2.42
+	o txt2html-2.43
 	o txt2man-1.4.8
 	o uae-0.8.23
 	o ubs-0.20
