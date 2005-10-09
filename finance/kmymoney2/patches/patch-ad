@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.3 2005/10/09 12:33:58 markd Exp $
+
+--- developer-doc/phb/Makefile.in.orig	2005-10-09 10:10:54.000000000 +1300
++++ developer-doc/phb/Makefile.in
+@@ -507,8 +507,8 @@ all:	$(TARGETS) $(PDF_TARGET)
+ 
+ phb.html:	$(DOCBOOK_FILES)
+ 	@if test -e $(MEINPROC); then \
+-		echo $(MEINPROC) --stylesheet $(kde_libs_prefix)/share/apps/ksgmltools2/customization/$(STYLESHEET) $(srcdir)/phb.docbook -o phb.html; \
+-		$(MEINPROC) --stylesheet $(kde_libs_prefix)/share/apps/ksgmltools2/customization/$(STYLESHEET) $(srcdir)/phb.docbook -o phb.html; \
++		echo $(MEINPROC) --stylesheet $(kde_libs_prefix)/share/kde/apps/ksgmltools2/customization/$(STYLESHEET) $(srcdir)/phb.docbook -o phb.html; \
++		$(MEINPROC) --stylesheet $(kde_libs_prefix)/share/kde/apps/ksgmltools2/customization/$(STYLESHEET) $(srcdir)/phb.docbook -o phb.html; \
+ 	fi
+ 
+ # if we're in a VPATH environment, we need to copy all files over
