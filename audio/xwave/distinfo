@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/10/03 13:30:20 joerg Exp $
+$NetBSD: distinfo,v 1.9 2005/10/09 15:04:14 joerg Exp $
 
 SHA1 (xwave2.tar.gz) = 7ace9911c9425eab4907a34694cd208d21a6dac2
 RMD160 (xwave2.tar.gz) = 71df0bc4640be385c33ea3a2525bc7287741d9ab
@@ -22,4 +22,4 @@ SHA1 (patch-ap) = 7a06de821da92a2d388939fdcaf7618a0a7f96ba
 SHA1 (patch-aq) = 62164a6a788190b5cce231bfadf5d7e0a22ee0d1
 SHA1 (patch-ar) = 22874069ef6de212d3f13302e649be06d03760a9
 SHA1 (patch-as) = 71bfcb6ebf047e01d08ba9d9b091e506943aa944
-SHA1 (patch-at) = 91c193a56a9f50620d832aa37b54ae40688cd582
+SHA1 (patch-at) = 49e89a952862f47f00c37e6dd6879b5f3fea49b8
