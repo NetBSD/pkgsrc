@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.160 2005/09/21 15:06:07 taca Exp $
+# $NetBSD: Makefile,v 1.161 2005/10/09 14:47:55 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE10
-PKGNAME=	squid-2.5.10
-PKGREVISION=	5
+DISTNAME=	squid-2.5.STABLE11
+PKGNAME=	squid-2.5.11
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -10,61 +9,24 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE10-content_length.patch \
-		squid-2.5.STABLE10-spanish.patch \
-		squid-2.5.STABLE10-internal_date.patch \
-		squid-2.5.STABLE10-chroot-2.patch \
-		squid-2.5.STABLE10-transparent-2.patch \
-		squid-2.5.STABLE10-redirect_flags.patch \
-		squid-2.5.STABLE10-cache_dir_change.patch \
-		squid-2.5.STABLE10-snmp_getnext.patch \
-		squid-2.5.STABLE10-ftp_title-2.patch \
-		squid-2.5.STABLE10-ftp_basehref.patch \
-		squid-2.5.STABLE10-wbinfo_groups.patch \
-		squid-2.5.STABLE10-64bit_cleanup.patch \
-		squid-2.5.STABLE10-wb_ntlm_auth_silent.patch \
-		squid-2.5.STABLE10-buildenv.patch \
-		squid-2.5.STABLE10-mail_program.patch \
-		squid-2.5.STABLE10-arp_ipfilter-2.patch \
-		squid-2.5.STABLE10-sslConnectTimeout.patch \
-		squid-2.5.STABLE10-statHistAssert.patch \
-		squid-2.5.STABLE10-chroot_dir.patch \
-		squid-2.5.STABLE10-errmsg.patch \
-		squid-2.5.STABLE10-FORTIFY_SOURCE.patch \
-		squid-2.5.STABLE10-ftp_250.patch \
-		squid-2.5.STABLE10-Greek.patch \
-		squid-2.5.STABLE10-STORE_PENDING.patch \
-		squid-2.5.STABLE10-ldap_auth-U.patch \
-		squid-2.5.STABLE10-cacheClientTable.patch \
-		squid-2.5.STABLE10-Solaris_IPFilter-2.patch \
-		squid-2.5.STABLE10-mail_from.patch \
-		squid-2.5.STABLE10-LDAP_TLS.patch \
-		squid-2.5.STABLE10-storedir_objsize_debug.patch \
-		squid-2.5.STABLE10-header_id_enum.patch \
-		squid-2.5.STABLE10-allow_coredump.patch \
-		squid-2.5.STABLE10-delay_pools.patch \
-		squid-2.5.STABLE10-NetBSD_IPFilter-4.patch \
-		squid-2.5.STABLE10-pipeline-CONNECT.patch \
-		squid-2.5.STABLE10-NTLM-scheme_assert-3.patch \
-		squid-2.5.STABLE10-ntlm-pipeline_prefetch.patch \
-		squid-2.5.STABLE10-dst_unknown.patch \
-		squid-2.5.STABLE10-maxfd.patch
-PATCH_DIST_STRIP=       -p1
+PATCHFILES=	squid-2.5.STABLE11-delaypools_truncated.patch \
+		squid-2.5.STABLE11-tcp_outgoing_xxx.patch \
+		squid-2.5.STABLE11-ldap_auth.patch \
+		squid-2.5.STABLE11.accel_single_host_pconn.patch \
+		squid-2.5.STABLE11-CACHE_HTTP_PORT.patch \
+		squid-2.5.STABLE11-CNAME.patch
+PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
-DIST_SUBDIR=	${PKGNAME_NOREV}-${DIST_STAMP}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 DOCDIR=		${PREFIX}/share/doc/squid
 EXAMPLESDIR=	${PREFIX}/share/examples/squid
 DATADIR=	${VARBASE}/squid
-
-# Update this time stamp pattern if any of official distfiles has changed.
-#
-DIST_STAMP=	2005060500
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
