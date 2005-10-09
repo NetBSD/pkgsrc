@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2005/08/04 14:20:35 tron Exp $
+# $NetBSD: Makefile,v 1.57 2005/10/09 09:48:22 rillig Exp $
 
 DISTNAME=	unzip552
 PKGNAME=	unzip-5.52
@@ -12,7 +12,7 @@ COMMENT=	List, test and extract compressed files in a ZIP archive
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-DIST_SUBDIR=	${PKGNAME}	# Remove on next update.
+DIST_SUBDIR=	${PKGNAME_NOREV}	# Remove on next update.
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
 
