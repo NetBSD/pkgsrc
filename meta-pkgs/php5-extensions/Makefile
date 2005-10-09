@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/08 16:49:35 jdolecek Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/09 09:13:24 wiz Exp $
 
 DISTNAME=	php-extensions-5.0
 PKGREVISION=	8
@@ -45,6 +45,7 @@ DEPENDS+=	php-posix-5.0.*:../../devel/php-posix
 DEPENDS+=	php-shmop-5.0.*:../../devel/php-shmop
 DEPENDS+=	php-snmp-5.0.*:../../net/php-snmp
 DEPENDS+=	php-sockets-5.0.*:../../net/php-sockets
+DEPENDS+=	php-sqlite-5.0.*:../../databases/php-sqlite
 DEPENDS+=	php-sysvsem-5.0.*:../../devel/php-sysvsem
 DEPENDS+=	php-sysvshm-5.0.*:../../devel/php-sysvshm
 DEPENDS+=	php-wddx-5.0.*:../../textproc/php-wddx
@@ -57,7 +58,6 @@ DEPENDS+=	php-zlib-5.0.*:../../archivers/php-zlib
 DEPENDS+=	php-dom-5.0.*:../../textproc/php5-dom
 DEPENDS+=	php-mysqli-5.0.*:../../databases/php5-mysqli
 DEPENDS+=	php-soap-5.0.*:../../net/php5-soap
-DEPENDS+=	php-sqlite-5.0.*:../../databases/php5-sqlite
 DEPENDS+=	php-xsl-5.0.*:../../textproc/php5-xsl
 
 EXTRACT_ONLY=	# empty
