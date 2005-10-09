@@ -1,4 +1,4 @@
-# $NetBSD: reduce-depends.mk,v 1.2 2004/10/06 21:51:41 jlam Exp $
+# $NetBSD: reduce-depends.mk,v 1.3 2005/10/09 08:48:44 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,17 +58,20 @@ _DEPENDS=	${DEPENDS}
 #
 _DEPENDS_PKGPATHS=	# empty
 .for _dep_ in ${_DEPENDS}
-.  if !defined(_DEPENDS_PKGPATH.${_dep_:C/^[^:]*://:C/:.*$//})
-_DEPENDS_PKGPATH.${_dep_:C/^[^:]*://:C/:.*$//}!=			\
-	cd ${_dep_:C/^[^:]*://:C/:.*$//} && ${PWD_CMD}
-.  endif
-_DEPENDS_PKGPATH.${_DEPENDS_PKGPATH.${_dep_:C/^[^:]*://:C/:.*$//}}?=	\
-	${_dep_:C/^[^:]*://:C/:.*$//}
-_DEPENDS.${_DEPENDS_PKGPATH.${_dep_:C/^[^:]*://:C/:.*$//}}+=		\
-	${_dep_:C/:.*$//}
-.  if empty(_DEPENDS_PKGPATHS:M${_DEPENDS_PKGPATH.${_dep_:C/^[^:]*://:C/:.*$//}})
-_DEPENDS_PKGPATHS+=	${_DEPENDS_PKGPATH.${_dep_:C/^[^:]*://:C/:.*$//}}
-.  endif
+.  for _depdir_ in ${_dep_:C/^[^:]*://:C/:.*$//}
+.    if !defined(_DEPENDS_PKGPATH.${_depdir_})
+.      if exists(${_depdir_})
+_DEPENDS_PKGPATH.${_depdir_}!=	cd ${_depdir_:Q} && ${PWD_CMD}
+.      else
+PKG_FAIL_REASON+=	"[reduce-depends.mk] "${PKGPATH:Q}" depends on "${_depdir_:Q}", but the latter does not exist."
+.      endif
+.    endif
+_DEPENDS_PKGPATH.${_DEPENDS_PKGPATH.${_depdir_}}?=	${_depdir_}
+_DEPENDS.${_DEPENDS_PKGPATH.${_depdir_}}+=		${_dep_:C/:.*$//}
+.    if empty(_DEPENDS_PKGPATHS:M${_DEPENDS_PKGPATH.${_depdir_}})
+_DEPENDS_PKGPATHS+=	${_DEPENDS_PKGPATH.${_depdir_}}
+.    endif
+.  endfor
 .endfor
 
 # This next block of code sets REDUCED_DEPENDS to the strictest set of
