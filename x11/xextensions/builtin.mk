@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/10/08 10:07:30 jmmv Exp $
+# $NetBSD: builtin.mk,v 1.8 2005/10/09 21:43:02 jmmv Exp $
 
 BUILTIN_PKG:=	xextensions
 
@@ -65,20 +65,25 @@ BUILDLINK_PREFIX.xextensions=	${X11BASE}
 .    include "../../mk/x11.builtin.mk"
 .  endif
 
-# Check whether the implementation we selected has a xextensions.pc file
-# or not.  If the latter, generate a fake one.
-.  if exists(${BUILDLINK_PREFIX.xextensions}/lib/pkgconfig/xextensions.pc)
-BUILDLINK_FILES.xextensions+=	lib/pkgconfig/xextensions.pc
-.  else
+# If we are using the builtin version, check whether it has a xextensions.pc
+# file or not.  If the latter, generate a fake one.
+.  if !empty(USE_BUILTIN.xextensions:M[Yy][Ee][Ss])
 BUILDLINK_TARGETS+=	xextensions-fake-pc
 
 xextensions-fake-pc:
-	@${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig
-	@{ ${ECHO} "Name: XExtensions"; \
-	   ${ECHO} "Description: Sundry X extension headers"; \
-	   ${ECHO} "Version: 1.0.1"; \
-	   ${ECHO} "Cflags: -I${BUILDLINK_PREFIX.xextensions}/include"; \
-	} >${BUILDLINK_DIR}/lib/pkgconfig/xextensions.pc
+	${_PKG_SILENT}${_PKG_DEBUG} \
+	src=${BUILDLINK_PREFIX.xextensions}/lib/pkgconfig/xextensions.pc \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/xextensions.pc; \
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	else \
+		{ ${ECHO} "Name: XExtensions"; \
+	   	${ECHO} "Description: Sundry X extension headers"; \
+	   	${ECHO} "Version: 1.0.1"; \
+	   	${ECHO} "Cflags: -I${BUILDLINK_PREFIX.xextensions}/include"; \
+		} >$${dst}; \
+	fi
 .  endif
 
 .endif	# CHECK_BUILTIN.xextensions
