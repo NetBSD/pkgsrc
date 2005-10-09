@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/10/03 09:45:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/09 10:30:23 jmmv Exp $
 #
 
-DISTNAME=	verifypc-1.2
+DISTNAME=	verifypc-1.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
