@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/09 13:11:18 jdolecek Exp $
+
+SHA1 (php-PDO_PGSQL/PDO_PGSQL-1.0RC1.tgz) = dabc5e1d28b863ac64f1df9d38928f5aa1914406
+RMD160 (php-PDO_PGSQL/PDO_PGSQL-1.0RC1.tgz) = eeb2bf6ceca3668d8c425dddfbfa4c7b1fe8d5e3
+Size (php-PDO_PGSQL/PDO_PGSQL-1.0RC1.tgz) = 11468 bytes

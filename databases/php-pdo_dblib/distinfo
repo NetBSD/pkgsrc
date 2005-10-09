@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/09 13:11:18 jdolecek Exp $
+
+SHA1 (php-PDO_DBLIB/PDO_DBLIB-1.0RC1.tgz) = 6f3865932bb96fac3f49aa2c7f4d4fa8cf6164b9
+RMD160 (php-PDO_DBLIB/PDO_DBLIB-1.0RC1.tgz) = 5922102bcdfda827f6c504b3cfc802ed31053a43
+Size (php-PDO_DBLIB/PDO_DBLIB-1.0RC1.tgz) = 7953 bytes
