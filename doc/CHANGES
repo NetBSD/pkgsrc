@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11385 2005/10/09 13:00:55 jdolecek Exp $
+$NetBSD: CHANGES,v 1.11386 2005/10/09 13:46:55 mrauch Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4356,3 +4356,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/exim to 4.54 [abs 2005-10-09]
 	Updated finance/kmymoney2 to 0.8 [markd 2005-10-09]
 	Updated databases/freetds to 0.63 [jdolecek 2005-10-09]
+	Added misc/openoffice2-bin 2.0.0rc2 [mrauch 2005-10-09]
