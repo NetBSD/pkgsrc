@@ -1,7 +1,8 @@
 #! /bin/sh
-# $NetBSD: mkdir-sh,v 1.1 2004/04/12 14:48:58 heinz Exp $
+# $NetBSD: mkdir-sh,v 1.2 2005/10/09 20:12:29 heinz Exp $
 #
 # workaround for the broken "mkdir -p" on Unixware
+PATH=/usr/bin:/usr/sbin; export PATH
 
 MKDIRCMD=mkdir
 cmdargs="$@"
