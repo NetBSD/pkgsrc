@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.25 2005/09/12 12:56:41 tron Exp $
+$NetBSD: distinfo,v 1.26 2005/10/09 21:43:46 tron Exp $
 
 SHA1 (xchat-2.4.5.tar.bz2) = e027a20caa47b4ffea00896ee68269a7ae885e2d
 RMD160 (xchat-2.4.5.tar.bz2) = 19d1033d01af784f8b7af5103a7de8cf3a26f3fb
 Size (xchat-2.4.5.tar.bz2) = 1324626 bytes
+SHA1 (xc245-fix-te-notify.diff) = 15c6c6e62e1e23359b7a4cff06666516dd794452
+RMD160 (xc245-fix-te-notify.diff) = df48a5b90b8c4b2f1a8899f4b981527221c809cb
+Size (xc245-fix-te-notify.diff) = 403 bytes
