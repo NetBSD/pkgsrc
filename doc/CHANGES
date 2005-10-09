@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11381 2005/10/09 10:10:54 jdolecek Exp $
+$NetBSD: CHANGES,v 1.11382 2005/10/09 10:30:48 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4352,3 +4352,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/mklivecd to 0.13.2 [xtraeme 2005-10-08]
 	Updated databases/php-dbx 1.1.0 [jdolecek 2005-10-09]
 	Added net/php-xmlrpc 5.0.5 [jdolecek 2005-10-08]
+	Updated pkgtools/verifypc to 1.3 [jmmv 2005-10-09]
