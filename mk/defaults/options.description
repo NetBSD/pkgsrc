@@ -76,7 +76,7 @@ exim-lookup-whoson	Lookup in whoson dynamic IP address.
 exim-old-demime		Use deprecated "demime" condition in the DATA ACL.
 ezmlm-althash		Patch to hash subscriber list case-insensitively.
 faac	
-faad	
+faad			Enable AAC decoding support using faad2.
 fam	
 fastcgi			Use FastCGI as the CGI manager.
 ffmpeg	
