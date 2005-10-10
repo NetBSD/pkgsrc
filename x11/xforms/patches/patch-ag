@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2005/10/10 12:11:47 joerg Exp $
+
+--- lib/errmsg.c.orig	2005-07-22 18:01:01.000000000 +0000
++++ lib/errmsg.c
+@@ -51,7 +51,10 @@ char *id_errm = "$Id: errmsg.c,v 0.80 19
+ 
+ #include "forms.h"
+ #include "ulib.h"
++
++#ifndef errno
+ extern int errno;		/* system error no            */
++#endif
+ 
+ #ifdef DONT_HAVE_STRERROR
+ extern char *sys_errlist[];
