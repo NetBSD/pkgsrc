@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/09/08 21:25:15 minskim Exp $
+# $NetBSD: Makefile,v 1.50 2005/10/10 17:39:19 reed Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -26,10 +26,6 @@ PTHREAD_OPTS+=		require
 
 TEST_TARGET=		test
 
-# Initially install the man pages into ${WRKDIR}/man, as we need a staged
-# install to avoid overwriting existing manpages in ${PREFIX}/man.
-CONFIGURE_ARGS+=	--mandir=${WRKDIR:Q}/man
-
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
@@ -42,8 +38,6 @@ post-build:
 		${MV} ${WRKSRC}/tkConfig.sh.tmp ${WRKSRC}/tkConfig.sh
 
 post-install:
-	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
-	${RM} -rf ${WRKDIR}/man
 	${RM} -f ${PREFIX}/bin/wish
 	cd ${PREFIX}/bin && ${LN} -s wish8.4 wish
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tk
