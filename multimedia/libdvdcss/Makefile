@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/10 21:09:07 reed Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/10 21:38:45 agc Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -24,21 +24,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .if !defined(LIBDVDCSS_MASTER_SITES)
 INTERACTIVE_STAGE=	fetch
-
-_FETCH_MESSAGE= 							\
-	${ECHO} "======================================================================"; \
-	${ECHO} ; 							\
-	${ECHO} " Unfortunately, some reading of the United States law (DMCA) means";	\
-	${ECHO} " that we are not able to provide pointers to the source or homepage";	\
-	${ECHO} " for this software, even in other countries.";		\
-	${ECHO} ;							\
-	${ECHO} " Either define LIBDVDCSS_MASTER_SITES to point to the download site or"; \
-	${ECHO} " manually download the file ${DISTNAME}${EXTRACT_SUFX} containing this"; \
-	${ECHO} " ${COMMENT} and save to:";				\
-	${ECHO} ;							\
-	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
-	${ECHO} ;							\
-	${ECHO} "======================================================================"
 .endif
 
 USE_LIBTOOL=	YES
