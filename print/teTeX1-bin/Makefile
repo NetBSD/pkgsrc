@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/09/30 22:01:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/10 14:51:02 tonio Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -53,8 +53,12 @@ CONFIGURE_ARGS+=	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
 CONFLICTS+=		coreutils-[0-9]*
 .endif
 
-.if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
+.if defined(PAPERSIZE)
+LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
+LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
+.  if ${PAPERSIZE} == "A4"
 CONFIGURE_ARGS+=	--enable-a4
+.  endif
 .endif
 
 .if ${OPSYS} != "SunOS"
@@ -79,11 +83,11 @@ OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${ROOT_USER} ${ROOT_GROUP} 1777
 post-install:
 	@${RM} ${PREFIX}/share/texmf/web2c/*.log
 .if defined(PAPERSIZE)
-	${LOCALBASE}/bin/texconfig dvips paper ${PAPERSIZE:tl}
+	${LOCALBASE}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
 .  if ${PAPERSIZE} == "Letter"
 	${LOCALBASE}/bin/texconfig xdvi us
 .  else
-	${LOCALBASE}/bin/texconfig xdvi ${PAPERSIZE:tl}
+	${LOCALBASE}/bin/texconfig xdvi ${LOWER_PAPERSIZE}
 .  endif
 .endif
 	${LOCALBASE}/bin/texconfig font ro
