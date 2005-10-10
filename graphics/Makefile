@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.389 2005/08/21 11:26:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.390 2005/10/10 13:59:35 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -170,7 +170,6 @@ SUBDIR+=	libkipi
 SUBDIR+=	libpixman
 SUBDIR+=	librsvg
 SUBDIR+=	librsvg2
-SUBDIR+=	librsvg2-gtk2
 SUBDIR+=	libungif
 SUBDIR+=	libvideogfx
 SUBDIR+=	libwmf
