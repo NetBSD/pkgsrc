@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/20 15:52:47 kristerw Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/10 20:10:37 reed Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.apsfilter.org/download/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.apsfilter.org/
-COMMENT=	Number one magic filter for printing under Unix environment
+COMMENT=	Flexible magic filter for printing under Unix environment
 
 DEPENDS=	recode-[0-9]*:../../converters/recode
 #DEPENDS+=	html2ps-[0-9]*:../../print/html2ps
