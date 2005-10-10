@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3991 2005/10/10 09:19:11 seb Exp $
+$NetBSD: TODO,v 1.3992 2005/10/10 11:35:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1003,7 +1003,9 @@ Suggested package updates
 	o streamtuner-0.99.99
 	o stunnel-4.12
 	o subtitleripper-0.3.4
+	o sun-jdk13-1.0.16
 	o sun-jdk15-5.0.5
+	o sun-jre13-1.0.16
 	o sun-jre15-5.0.5
 	o suse_base-10.0
 	o svk-1.05
@@ -1105,6 +1107,7 @@ Suggested package updates
 	o xerces-j-2.7.1
 	o xfe-0.72
 	o xfmail-1.5.4
+	o xine-lib-1.0.3
 	o xine-lib-1.1.0
 	o xine-ui-0.99.4
 	o xkbset-0.5
