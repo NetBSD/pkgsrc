@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/10/10 20:04:26 reed Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/10 21:09:07 reed Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -22,6 +22,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+.if !defined(LIBDVDCSS_MASTER_SITES)
 INTERACTIVE_STAGE=	fetch
 
 _FETCH_MESSAGE= 							\
@@ -31,13 +32,14 @@ _FETCH_MESSAGE= 							\
 	${ECHO} " that we are not able to provide pointers to the source or homepage";	\
 	${ECHO} " for this software, even in other countries.";		\
 	${ECHO} ;							\
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing"; 	\
-	${ECHO} " ${COMMENT}";						\
-	${ECHO} " must be fetched into:";				\
+	${ECHO} " Either define LIBDVDCSS_MASTER_SITES to point to the download site or"; \
+	${ECHO} " manually download the file ${DISTNAME}${EXTRACT_SUFX} containing this"; \
+	${ECHO} " ${COMMENT} and save to:";				\
 	${ECHO} ;							\
 	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
 	${ECHO} ;							\
 	${ECHO} "======================================================================"
+.endif
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
