@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/23 11:48:47 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/10 16:46:02 joerg Exp $
 
 PKGNAME=	postgresql80-server-${BASE_VERS}
 PKGREVISION=	2
@@ -79,6 +79,17 @@ post-wrapper:
 .endif
 
 pre-build:
+	${TOUCH} ${WRKSRC}/src/template/dragonfly
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.c
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
+	${CP} ${WRKSRC}/src/include/port/freebsd.h \
+		${WRKSRC}/src/include/port/dragonfly.h
+	${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd \
+		${WRKSRC}/src/makefiles/Makefile.dragonfly
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC}/src/backend &&					\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\

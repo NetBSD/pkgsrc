@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/21 01:21:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/10/10 16:46:02 joerg Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -257,6 +257,7 @@ ${PG_SUBPREFIX}include/postgresql/server/port/bsdi.h
 ${PG_SUBPREFIX}include/postgresql/server/port/cygwin.h
 ${PG_SUBPREFIX}include/postgresql/server/port/darwin.h
 ${PG_SUBPREFIX}include/postgresql/server/port/dgux.h
+${PG_SUBPREFIX}include/postgresql/server/port/dragonfly.h
 ${PG_SUBPREFIX}include/postgresql/server/port/freebsd.h
 ${PG_SUBPREFIX}include/postgresql/server/port/hpux.h
 ${PG_SUBPREFIX}include/postgresql/server/port/irix.h

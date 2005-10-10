@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/08/21 01:21:23 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/10 16:46:02 joerg Exp $
 
 PKGNAME=	postgresql80-client-${BASE_VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	PostgreSQL database client programs
 
 .include "../../databases/postgresql80/Makefile.common"
@@ -16,9 +16,9 @@ CONFLICTS+=	postgresql80-lib-*
 CONFLICTS+=	postgresql80-docs-*
 
 # The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
-# NetBSD.
+# NetBSD or DragonFly.
 #
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 PGSQL_THREAD_SAFETY?=	no
 .endif
 PGSQL_THREAD_SAFETY?=	yes
