@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2005/09/02 12:58:34 adam Exp $
+$NetBSD: patch-aa,v 1.4 2005/10/10 21:45:08 rh Exp $
 
---- Makefile.orig	2005-04-26 14:30:23.000000000 +0000
+--- Makefile.orig	2005-04-27 00:30:23.000000000 +1000
 +++ Makefile
 @@ -42,7 +42,7 @@ MPG123TARG=linux
  endif
@@ -51,7 +51,17 @@ $NetBSD: patch-aa,v 1.3 2005/09/02 12:58:34 adam Exp $
  endif
  ifeq (${OSARCH},OpenBSD)
  LIBS=-lcrypto -lpthread -lm -lncurses
-@@ -450,29 +454,29 @@ install: all datafiles bininstall
+@@ -214,7 +218,8 @@ OBJS=io.o sched.o logger.o frame.o loade
+ 	astmm.o enum.o srv.o dns.o aescrypt.o aestab.o aeskey.o \
+ 	utils.o 
+ ifeq (${OSARCH},Darwin)
+-OBJS+=poll.o dlfcn.o
++OBJS+=dlfcn.o
++OBJS+=$(shell if [ -e /usr/include/sys/poll.h ]; then echo -n "" ; else echo poll.o; fi)
+ ASTLINK=-Wl,-dynamic
+ SOLINK=-dynamic -bundle -undefined suppress -force_flat_namespace
+ else
+@@ -450,29 +455,29 @@ install: all datafiles bininstall
  upgrade: all bininstall
  
  adsi: all
