@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/09/25 10:40:18 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/10 08:35:54 xtraeme Exp $
 
 DISTNAME=	dbench-3.03
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://samba.org/ftp/tridge/dbench/
 
@@ -12,7 +12,6 @@ COMMENT=	Simulation of the Ziff-Davis netbench benchmark
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/man/man1
 
 .include "../../mk/bsd.prefs.mk"
 
