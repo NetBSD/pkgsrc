@@ -1,0 +1,22 @@
+$NetBSD: patch-bf,v 1.1 2005/10/10 21:23:24 joerg Exp $
+
+--- filter/subtitler/frame_list.c.orig	2005-07-10 17:53:50.000000000 +0000
++++ filter/subtitler/frame_list.c
+@@ -15,7 +15,7 @@ Foundation, Inc., 675 Mass Ave, Cambridg
+ */
+ 
+ #include "subtitler.h"
+-
++#include <stdlib.h>
+ 
+ int hash(s)/* form hash value for string s */
+ char *s;
+@@ -33,7 +33,7 @@ return(hashval % FRAME_HASH_SIZE);
+ 
+ char *strsave(char *s) /*save char array s somewhere*/
+ {
+-char *p, *malloc();
++char *p;
+ if(p = malloc( strlen(s) +  1) ) strcpy(p, s);
+ return(p);
+ }
