@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/09/18 19:51:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2005/10/10 17:22:05 reed Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -16,7 +16,7 @@ CONFLICTS+=		xextensions-[0-9]*
 CONFLICTS+=		libX11-[0-9]*
 CONFLICTS+=		libXau-[0-9]*
 
-BUILD_DEPENDS=		imake>=${XF_VER}:../../x11/imake
+BUILD_DEPENDS=		XFree86-imake>=${XF_VER}:../../x11/XFree86-imake
 
 .include "../../mk/bsd.prefs.mk"
 
