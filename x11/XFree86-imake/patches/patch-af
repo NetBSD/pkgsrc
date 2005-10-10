@@ -1,0 +1,41 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/10/10 17:18:56 reed Exp $
+
+--- config/cf/linux.cf.in.orig	2004-03-03 07:44:42.000000000 +0000
++++ config/cf/linux.cf.in	2004-03-03 07:46:51.000000000 +0000
+@@ -549,15 +549,15 @@
+ #  if defined (i386Architecture) && ((GccMajorVersion >3) \
+    || ((GccMajorVersion == 3) &&  (GccMinorVersion >= 1)))
+ #   ifndef CcCmd
+-#    define CcCmd		gcc -m32
++#    define CcCmd		@@PKGSRC_CC@@
+ #   endif
+ #   ifndef CplusplusCmd
+-#    define CplusplusCmd		c++ -m32
++#    define CplusplusCmd	@@PKGSRC_CXX@@
+ #   endif
+ #  endif
+ #  ifndef CcCmd
+-#   define CcCmd		gcc
+-#   define CplusplusCmd		c++
++#   define CcCmd		@@PKGSRC_CC@@
++#   define CplusplusCmd		@@PKGSRC_CXX@@
+ #  endif
+ #  ifndef AsCmd
+ #   define AsCmd		CcCmd -c -x assembler
+@@ -721,7 +721,6 @@
+ #define YaccCmd			bison -y
+ #define LexCmd			flex -l
+ #define HasFlex			YES
+-#define LexLib			-lfl
+ #define PreProcessCmd		CcCmd -E
+ #define PostIncDir		DefaultGccIncludeDir
+ #define LdCombineFlags		-r
+@@ -791,7 +790,7 @@
+ 
+ #ifdef i386Architecture
+ # ifndef OptimizedCDebugFlags
+-#  define OptimizedCDebugFlags	DefaultGcc2i386Opt
++#  define OptimizedCDebugFlags	@@PKGSRC_CFLAGS@@
+ # endif
+ # define LinuxMachineDefines	-D__i386__
+ # define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME

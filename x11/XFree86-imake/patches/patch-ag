@@ -1,0 +1,28 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/10/10 17:18:56 reed Exp $
+
+--- config/cf/sun.cf.in.orig	Mon Feb  2 16:55:26 2004
++++ config/cf/sun.cf.in	Thu Nov  4 16:43:40 2004
+@@ -19,6 +19,12 @@
+ #endif
+ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVersion)
+ 
++/* This is the XFree86 package - we want to build XFree86 on Solaris */
++#define BuildXFree86OnSparcSunOS YES
++#define BuildThreadStubLibrary NO
++#define HasSunC NO
++#define HasGcc2 YES
++
+ /*
+  * Compiler setup.  This sun.cf file knows what options to use with 
+  * certain compilers, including Sun C, CenterLine C, and gcc.  It 
+@@ -224,6 +230,10 @@
+ #endif
+ #endif
+ 
++#define CcCmd @@PKGSRC_CC@@
++#define CplusplusCmd @@PKGSRC_CXX@@
++#define OptimizedCDebugFlags @@PKGSRC_CFLAGS@@
++
+ # if HasSunC && (CCompilerMajorVersion < 3)
+ #  define BootstrapCFlags	-DSVR4
+ # else
