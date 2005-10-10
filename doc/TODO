@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3990 2005/10/10 08:33:25 adam Exp $
+$NetBSD: TODO,v 1.3991 2005/10/10 09:19:11 seb Exp $
 
 Suggested new packages
 ======================
@@ -986,7 +986,6 @@ Suggested package updates
 	o snes9x-1.43
 	o snownews-1.5.7
 	o socat-1.4.3.0
-	o source-highlight-2.1.2
 	o sox-12.17.8
 	o spamass-milter-1.0
 	o spamassassin-3.1.0 [heinz]
