@@ -1,8 +1,8 @@
-# $NetBSD: module.mk,v 1.3 2005/10/10 14:12:05 tv Exp $
+# $NetBSD: module.mk,v 1.4 2005/10/10 14:29:05 tv Exp $
 
 # Items common for all PDO drivers
 
-PDO_DRIVER_TR=		echo ${PDO_DRIVER:Q} | tr a-z A-Z
+PDO_DRIVER_TR=		${ECHO} ${PDO_DRIVER:Q} | ${TR} a-z A-Z
 MODNAME=		PDO_${PDO_DRIVER_TR:sh}
 PKGMODNAME=		pdo_${PDO_DRIVER}
 PKGNAME=		php-${PKGMODNAME}-${PHP_BASE_VERS}.${PECL_VERSION}
