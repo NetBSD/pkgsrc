@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2005/10/10 20:25:07 joerg Exp $
+
+--- src/libsoup/soup-private.h.orig	2005-07-10 16:03:45.000000000 +0000
++++ src/libsoup/soup-private.h
+@@ -31,7 +31,9 @@
+ #      pragma alloca
+ #    else
+ #      ifndef alloca /* predefined by HP cc +Olibcalls */
++#ifndef __DragonFly__
+          char *alloca ();
++#endif
+ #      endif
+ #    endif
+ #  endif
