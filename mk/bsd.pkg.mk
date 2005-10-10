@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1729 2005/10/08 13:16:28 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1730 2005/10/10 17:37:17 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -2102,7 +2102,7 @@ real-su-install: ${MESSAGE}
 		/*)	;;						\
 		*bin|*bin/*|*libexec|*libexec/*)			\
 			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
-		*man/*)							\
+		${PKGMANDIR}/*)						\
 			${INSTALL_MAN_DIR} ${PREFIX}/$$dir ;;		\
 		*)							\
 			${INSTALL_DATA_DIR} ${PREFIX}/$$dir ;;		\
