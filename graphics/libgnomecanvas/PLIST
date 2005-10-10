@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/07/04 20:06:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/10/10 13:42:46 jmmv Exp $
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-bpath.h
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-clipgroup.h
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-line.h
@@ -16,6 +16,33 @@ include/libgnomecanvas-2.0/libgnomecanvas/libgnomecanvas.h
 lib/libglade/2.0/libcanvas.la
 lib/libgnomecanvas-2.la
 lib/pkgconfig/libgnomecanvas-2.0.pc
+share/doc/libgnomecanvas/GnomeCanvas.html
+share/doc/libgnomecanvas/GnomeCanvasBpath.html
+share/doc/libgnomecanvas/GnomeCanvasClipgroup.html
+share/doc/libgnomecanvas/GnomeCanvasEllipse.html
+share/doc/libgnomecanvas/GnomeCanvasGroup.html
+share/doc/libgnomecanvas/GnomeCanvasItem.html
+share/doc/libgnomecanvas/GnomeCanvasLine.html
+share/doc/libgnomecanvas/GnomeCanvasPixbuf.html
+share/doc/libgnomecanvas/GnomeCanvasPolygon.html
+share/doc/libgnomecanvas/GnomeCanvasRE.html
+share/doc/libgnomecanvas/GnomeCanvasRect.html
+share/doc/libgnomecanvas/GnomeCanvasRichText.html
+share/doc/libgnomecanvas/GnomeCanvasShape.html
+share/doc/libgnomecanvas/GnomeCanvasText.html
+share/doc/libgnomecanvas/GnomeCanvasWidget.html
+share/doc/libgnomecanvas/ch01.html
+share/doc/libgnomecanvas/ch02.html
+share/doc/libgnomecanvas/home.png
+share/doc/libgnomecanvas/index.html
+share/doc/libgnomecanvas/index.sgml
+share/doc/libgnomecanvas/left.png
+share/doc/libgnomecanvas/libgnomecanvas-gnome-canvas-path-def.html
+share/doc/libgnomecanvas/libgnomecanvas-gnome-canvas-util.html
+share/doc/libgnomecanvas/libgnomecanvas.devhelp
+share/doc/libgnomecanvas/right.png
+share/doc/libgnomecanvas/style.css
+share/doc/libgnomecanvas/up.png
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnomecanvas-2.0.mo
@@ -40,6 +67,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libgnomecanvas-2.0.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libgnomecanvas-2.0.mo
@@ -86,6 +114,7 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomecanvas-2.0.mo
+@dirrm share/doc/libgnomecanvas
 @comment in libglade2: @dirrm lib/libglade/2.0
 @dirrm include/libgnomecanvas-2.0/libgnomecanvas
 @dirrm include/libgnomecanvas-2.0
