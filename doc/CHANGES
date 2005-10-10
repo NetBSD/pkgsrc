@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11397 2005/10/10 15:00:49 jschauma Exp $
+$NetBSD: CHANGES,v 1.11398 2005/10/10 15:15:51 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4381,3 +4381,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed graphics/librsvg2-gtk [jmmv 2005-10-10]
 	Updated lang/sun-jre13 to 1.0.16 [jschauma 2005-10-10]
 	Updated lang/sun-jdk13 to 1.0.16 [jschauma 2005-10-10]
+	Updated devel/gtexinfo to 4.8nb1 [salo 2005-10-10]
