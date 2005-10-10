@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2005/04/05 20:27:02 rillig Exp $
+$NetBSD: patch-aa,v 1.7 2005/10/10 13:06:11 joerg Exp $
 
 --- makefile.orig	2004-09-07 21:17:58.000000000 -0400
 +++ makefile
@@ -11,11 +11,13 @@ $NetBSD: patch-aa,v 1.6 2005/04/05 20:27:02 rillig Exp $
  
  
  # no need to touch anything below this line
-@@ -14,16 +14,16 @@ TARGET = daapd
+@@ -13,17 +13,17 @@ MAKE = $(MAKE_COMMAND)
+ TARGET = daapd
  DEPS = daaplib_ libhttpd_
  OBJS = daapd.o db.o dboutput.o songcache.o parsemp3.o
- LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz -lpthread 
+-LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz -lpthread 
 -LIBPATH = -L. -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
++LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 +LIBPATH = -L. ${LDFLAGS} -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
  INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I/usr/local/include
 -DEPLOY = /usr/local
