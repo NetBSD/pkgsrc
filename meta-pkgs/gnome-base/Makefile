@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2005/08/21 11:49:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2005/10/10 14:03:36 jmmv Exp $
 
 DISTNAME=	gnome-base-2.10.2
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -50,8 +51,7 @@ DEPENDS+=	gnome-icon-theme>=2.10.1:../../graphics/gnome-icon-theme
 DEPENDS+=	libgnomeprint>=2.10.3:../../print/libgnomeprint
 DEPENDS+=	libgnomeprintui>=2.10.2:../../print/libgnomeprintui
 DEPENDS+=	libgtop2>=2.10.2:../../sysutils/libgtop2
-DEPENDS+=	librsvg2>=2.9.5:../../graphics/librsvg2
-DEPENDS+=	librsvg2-gtk2>=2.9.5:../../graphics/librsvg2-gtk2
+DEPENDS+=	librsvg2>=2.12.6:../../graphics/librsvg2
 DEPENDS+=	libxklavier>=2.0:../../x11/libxklavier
 DEPENDS+=	libgtkhtml>=2.6.3:../../www/libgtkhtml
 DEPENDS+=	libsoup-devel>=2.2.3:../../net/libsoup-devel
