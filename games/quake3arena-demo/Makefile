@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/07/15 18:27:51 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/10/10 19:51:00 reed Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	2
@@ -18,7 +18,7 @@ CONFLICTS=	quake3arena-[0-9]*
 
 .if ${OPSYS} != "Linux"
 DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
+DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 .include "../../emulators/suse_linux/Makefile.application"
 .else
