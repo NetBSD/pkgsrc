@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/10 10:48:49 dillo Exp $
 #
 
 DISTNAME=	Config-General-2.27
@@ -9,7 +9,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
 MAINTAINER=	sketch@NetBSD.org
-HOMEPAGE=	http://www.daemon.de/config-general/
+HOMEPAGE=	http://www.daemon.de/ConfigGeneral
 COMMENT=	Perl Generic Config module
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
