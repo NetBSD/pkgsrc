@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/09/28 20:52:24 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/10 17:22:05 reed Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-docs-${XF_VER}
@@ -10,7 +10,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.xfree86.org/
 COMMENT=		XFree86 Documentation
 
-DEPENDS=		imake>=${XF_VER}:../../x11/imake
+DEPENDS=		XFree86-imake>=${XF_VER}:../../x11/XFree86-imake
 
 USE_LANGUAGES=		# empty
 NO_XFREE86_TARGETS=	yes
