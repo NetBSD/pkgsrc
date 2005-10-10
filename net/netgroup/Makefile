@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2004/12/21 21:06:40 christos Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/10 17:08:18 hira Exp $
 #
 
 DISTNAME=	netgroup-0.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.astron.com/pub/netgroup/
 
-MAINTAINER=	christos@netbsd.org
+MAINTAINER=	christos@NetBSD.org
 COMMENT=	Netgroup membership listing and testing functions
 
 .include "../../mk/bsd.prefs.mk"
