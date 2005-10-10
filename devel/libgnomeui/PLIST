@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/03/22 15:59:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/10/10 13:43:44 jmmv Exp $
 include/libgnomeui-2.0/gnome.h
 include/libgnomeui-2.0/libgnomeui/gnome-about.h
 include/libgnomeui-2.0/libgnomeui/gnome-app-helper.h
@@ -180,6 +180,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnomeui-2.0.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/libgnomeui-2.0.mo
@@ -210,6 +211,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnomeui-2.0.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnomeui-2.0.mo
