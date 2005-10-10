@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2003/06/12 01:17:31 seb Exp $
+$NetBSD: patch-ac,v 1.3 2005/10/10 09:05:59 seb Exp $
 
---- doc/Makefile.am.orig	2003-03-17 09:38:40.000000000 +0000
-+++ doc/Makefile.am
-@@ -34,7 +34,7 @@ EXTRA_DIST = colors.html @PACKAGE@.html 
-              header.html footer.html \
-              startapp.cc.html cmdline.c.html cmdline.h.html
+--- tests/Makefile.am.orig	2005-08-25 14:01:56.000000000 +0000
++++ tests/Makefile.am
+@@ -459,7 +459,7 @@ check_debug: debug.debug
+ 	@echo expect no output from diff
+ 	diff $(srcdir)/debug.debug debug.out.debug
  
--source_highlightdoc_DATA = colors.html @PACKAGE@.html \
-+source_highlightdochtml_DATA = colors.html @PACKAGE@.html \
-     Hello.java Hello1.html Hello2.html Hello3.html Hello4.html Hello5.html \
-     Hello.java.html Hello_h_f.html Hello_lines.html Hello_xhtml.html \
-     Hello_xhtml2.html \
+-source_highlightdoc_DATA = test.php3.html test.pl.html test.pm.html \
++source_highlightdochtml_DATA = test.php3.html test.pl.html test.pm.html \
+ test.py.html test.rb.html test.js.html test.lua.html test.ml.html \
+ test.sml.html test.log.html access.log.html auth.log.html error.log.html syslog.log.html test.htm.html test.java.tex.html \
+ syslog.style
