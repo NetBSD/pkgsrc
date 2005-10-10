@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2005/08/10 20:56:17 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2005/10/10 14:03:36 jmmv Exp $
 
 DISTNAME=		gnome-games-2.10.1
+PKGREVISION=		1
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.10/}
 EXTRACT_SUFX=		.tar.bz2
@@ -8,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 games collection
-
-DEPENDS+=		librsvg2-gtk2>=2.9.5:../../graphics/librsvg2-gtk2
 
 CONFLICTS=		xbill-[0-9]*
 
@@ -66,6 +65,7 @@ PYTHON_PATCH_SCRIPTS=	libgames-support/games-server.py
 
 BUILDLINK_DEPENDS.howl+=	howl>=0.9.6
 BUILDLINK_DEPENDS.libgnome+=	libgnome>=2.10.0
+BUILDLINK_DEPENDS.librsvg2+=	librsvg2>=2.12.6
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
