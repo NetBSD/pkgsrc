@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/03/11 21:24:49 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2005/10/10 13:49:41 joerg Exp $
 
 Added some necessary header files.
 Don't put statements above declarations (gcc-2.95 is not a C99 compiler).
@@ -7,15 +7,18 @@ Needed for NetBSD-1.6.2.
 
 --- drivers/festival/festivalsynthesisdriver.c.orig	Tue Mar  8 14:10:23 2005
 +++ drivers/festival/festivalsynthesisdriver.c	Fri Mar 11 09:47:37 2005
-@@ -25,6 +25,8 @@
+@@ -25,8 +25,10 @@
   *
   */
  
+-#include <string.h>
+ #include <sys/types.h>
 +#include <sys/socket.h>
 +#include <netinet/in.h>
- #include <string.h>
- #include <sys/types.h>
++#include <string.h>
  #include <sys/wait.h>
+ #include <signal.h>
+ #include <unistd.h>
 @@ -591,9 +593,9 @@ get_voice_list (void)
  static void
  voice_list_free (GSList *l)
