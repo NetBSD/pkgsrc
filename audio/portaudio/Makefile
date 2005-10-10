@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/27 16:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/10 15:24:08 joerg Exp $
 
 DISTNAME=	portaudio_v18_1
 PKGNAME=	portaudio-18.1
@@ -13,7 +13,7 @@ COMMENT=	Portable cross-platform Audio API
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
-HAS_CONFIGURE=		yes
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS=		--prefix=${PREFIX}
 EXTRACT_CMD_OPTS.zip=	-aqo
