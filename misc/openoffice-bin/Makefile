@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/10/03 16:09:43 mrauch Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/10 20:08:09 mrauch Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
