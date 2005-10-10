@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/10/07 11:30:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/10/10 15:27:45 wiz Exp $
 #
 
 DISTNAME=		bacula-1.36.0
@@ -45,6 +45,11 @@ BACULA_DB=		sqlite
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}
 BACULA_DB=		postgresql
+.endif
+.if !empty(PKG_OPTIONS:Mcatalog-mysql)
+.  include "../../mk/mysql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-mysql=${PREFIX}
+BACULA_DB=		mysql
 .endif
 
 .include "../../mk/bsd.prefs.mk"
