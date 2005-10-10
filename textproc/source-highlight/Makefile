@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/10/10 09:05:59 seb Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/10 20:13:45 tv Exp $
 #
 
 DISTNAME=	source-highlight-2.1.2
@@ -23,7 +23,7 @@ BUILDLINK_TRANSFORM+=	l:boost_regex:boost_regex-mt
 
 .include "../../mk/bsd.prefs.mk"
 
-.if "${OPSYS}" == "NetBSD"
+.if ${OPSYS} == "NetBSD"
 # We really need GNU sed not NetBSD's GNuish sed
 TOOLS_PLATFORM.gsed=	# empty
 .endif
