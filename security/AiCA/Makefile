@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2005/10/07 12:36:19 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/10 17:06:30 hira Exp $
 #
 
 DISTNAME=	AiCA-0.81
 CATEGORIES=	security
 MASTER_SITES=	http://mars.elcom.nitech.ac.jp/security/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://mars.elcom.nitech.ac.jp/security/
 COMMENT=	Manage Certification Authority and PKI utilities
 
