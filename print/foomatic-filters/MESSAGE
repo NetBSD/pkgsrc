@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2005/10/10 20:30:07 reed Exp $
+
+This package depends on mpage.
+
+The foomatic-rip script defaults to use in order: a2ps, enscript,
+or mpage.
+
+This can be adjusted in the ${PKG_SYSCONFDIR}/filter.conf
+configuration file with the "textfilter: ..." setting.
+
+You can install print/a2ps or print/enscript packages if needed.
+
+===========================================================================
