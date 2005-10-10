@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.13 2005/07/26 13:24:36 adam Exp $
+$NetBSD: patch-af,v 1.14 2005/10/10 08:32:23 adam Exp $
 
---- dlls/ntdll/signal_i386.c.orig	2005-07-03 11:24:54.000000000 +0000
+--- dlls/ntdll/signal_i386.c.orig	2005-09-27 09:36:15.000000000 +0000
 +++ dlls/ntdll/signal_i386.c
 @@ -204,7 +204,7 @@ typedef struct trapframe SIGCONTEXT;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.13 2005/07/26 13:24:36 adam Exp $
  
  typedef struct sigcontext SIGCONTEXT;
  
-@@ -324,7 +324,40 @@ typedef struct sigcontext SIGCONTEXT;
+@@ -325,7 +325,40 @@ typedef ucontext_t SIGCONTEXT;
  
  #endif /* __APPLE__ */
  
