@@ -1,8 +1,8 @@
-$NetBSD: patch-cj,v 1.1 2005/06/24 06:43:47 jlam Exp $
+$NetBSD: patch-cj,v 1.2 2005/10/10 17:07:36 joerg Exp $
 
 --- /dev/null	2005-01-17 19:31:20.000000000 -0500
 +++ hints/dragonfly.sh	2005-01-17 19:39:56.000000000 -0500
-@@ -0,0 +1,118 @@
+@@ -0,0 +1,116 @@
 +# hints/dragonfly.sh
 +#
 +# This file is mostly copied from hints/freebsd.sh with the OS version
@@ -77,20 +77,7 @@ $NetBSD: patch-cj,v 1.1 2005/06/24 06:43:47 jlam Exp $
 +        lc_r=`/sbin/ldconfig -r|grep ':-lc_r'|awk '{print $NF}'|sed -n '$p'`
 +        case "$osvers" in
 +       *)
-+             if [ ! -r "$lc_r" ]; then
-+             cat <<EOM >&4
-+POSIX threads should be supported by FreeBSD $osvers --
-+but your system is missing the shared libc_r.
-+(/sbin/ldconfig -r doesn't find any).
-+
-+Consider using the latest STABLE release.
-+EOM
-+                exit 1
-+             fi
-+             case "$osvers" in
-+             *)        ldflags="-pthread $ldflags"
-+                       ;;
-+             esac
++             ldflags="-pthread $ldflags"
 +             # Both in 4.x and 5.x gethostbyaddr_r exists but
 +             # it is "Temporary function, not threadsafe"...
 +             # Presumably earlier it didn't even exist.
@@ -121,3 +108,14 @@ $NetBSD: patch-cj,v 1.1 2005/06/24 06:43:47 jlam Exp $
 +case "$usemallocwrap" in
 +'') usemallocwrap='define' ;;
 +esac
++
++cat > UU/pkgsrc.cbu <<'EOCBU'
++# This script UU/pkgsrc.cbu will get 'called-back' by Configure to set
++# linker options after all other call-back scripts have been invoked.
++ldflags=" -Wl,-R/usr/pkg/lib  -pthread $ldflags"
++lddlflags=" -Wl,-R/usr/pkg/lib  -pthread $lddlflags"
++EOCBU
++
++# Set pkgsrc defaults for library and header search paths.
++locincpth="/usr/pkg/include"
++loclibpth="/usr/pkg/lib"
