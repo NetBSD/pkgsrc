@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/10/10 17:18:56 reed Exp $
+
+--- config/pswrap/Imakefile.orig	2003-07-24 01:45:49.000000000 +0200
++++ config/pswrap/Imakefile	2003-07-24 01:46:00.000000000 +0200
+@@ -4,7 +4,6 @@
+         DEFINES = -DXENVIRONMENT
+         DEPLIBS =
+          YFLAGS = -d
+-EXTRA_LIBRARIES = LexLib
+ 
+ SRCS = main.c pswdict.c pswfile.c \
+ 	systemnames.c psw.c pswstring.c pswsemantics.c
