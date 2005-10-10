@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11393 2005/10/10 08:33:24 adam Exp $
+$NetBSD: CHANGES,v 1.11394 2005/10/10 09:18:03 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4366,3 +4366,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added games/fortunes-futurama 0.2 [jschauma 2005-10-09]
 	Added games/fortunes-h2g2 0.1 [jschauma 2005-10-09]
 	Updated emulators/wine to 20050930 [adam 2005-10-10]
+	Updated textproc/source-highlight to 2.1.2 [seb 2005-10-10]
