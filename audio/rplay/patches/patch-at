@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2005/10/10 15:13:58 joerg Exp $
+
+--- rplayd/rplayd.h.orig	2005-08-04 22:07:33.000000000 +0000
++++ rplayd/rplayd.h
+@@ -133,8 +133,6 @@ extern int default_fragsize;
+ extern int monitor_count;
+ extern BUFFER *monitor_buffers;
+ 
+-extern int errno;
+-
+ #ifdef __STDC__
+ extern void usage ();
+ extern void done (int exit_value);
