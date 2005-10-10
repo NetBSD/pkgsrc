@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2004/05/16 12:22:40 seb Exp $
+$NetBSD: patch-ae,v 1.4 2005/10/10 09:05:59 seb Exp $
 
---- src/lib/fileutil.cc.orig	2004-04-19 10:59:24.000000000 +0000
+--- src/lib/fileutil.cc.orig	2005-08-25 14:01:56.000000000 +0000
 +++ src/lib/fileutil.cc
-@@ -41,7 +41,7 @@ read_file(const string &fileName)
+@@ -43,7 +43,7 @@ read_file(const string &fileName)
    // we open it as binary otherwise we may experience problems under
    // Windows system: when we fread, the number of char read can be
    // less then char_count, and thus we'd get an error...

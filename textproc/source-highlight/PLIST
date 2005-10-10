@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/21 00:15:47 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/10 09:05:59 seb Exp $
 bin/cpp2html
 bin/java2html
 bin/source-highlight
-bin/source-highlight-cgi
 bin/src-hilite-lesspipe.sh
+info/source-highlight.info
 man/man1/source-highlight.1
 share/doc/html/source-highlight/Hello.css
 share/doc/html/source-highlight/Hello.java
@@ -26,13 +26,15 @@ share/doc/html/source-highlight/colors.html
 share/doc/html/source-highlight/cpp2html.css
 share/doc/html/source-highlight/error.log.html
 share/doc/html/source-highlight/flex_scanner.ll.html
+share/doc/html/source-highlight/index.html
 share/doc/html/source-highlight/mono-alt.css
 share/doc/html/source-highlight/mono.css
 share/doc/html/source-highlight/source-highlight.html
 share/doc/html/source-highlight/startapp.cc.html
 share/doc/html/source-highlight/syslog.log.html
-share/doc/html/source-highlight/tags.esc
-share/doc/html/source-highlight/tags.syslog
+share/doc/html/source-highlight/syslog.style
+share/doc/html/source-highlight/test.htm.html
+share/doc/html/source-highlight/test.java.tex.html
 share/doc/html/source-highlight/test.js.html
 share/doc/html/source-highlight/test.log.html
 share/doc/html/source-highlight/test.lua.html
@@ -53,8 +55,52 @@ share/doc/source-highlight/README
 share/doc/source-highlight/README.compile_VC6
 share/doc/source-highlight/THANKS
 share/doc/source-highlight/TODO.txt
-share/source-highlight/tags.j2h
-share/source-highlight/tags2.j2h
+share/source-highlight/bison.lang
+share/source-highlight/c_comment.lang
+share/source-highlight/caml.lang
+share/source-highlight/changelog.lang
+share/source-highlight/cpp.lang
+share/source-highlight/css_common.outlang
+share/source-highlight/cssdoc.outlang
+share/source-highlight/default.style
+share/source-highlight/esc.outlang
+share/source-highlight/esc.style
+share/source-highlight/flex.lang
+share/source-highlight/fortran.lang
+share/source-highlight/function.lang
+share/source-highlight/html.lang
+share/source-highlight/html.outlang
+share/source-highlight/html_common.outlang
+share/source-highlight/htmldoc.outlang
+share/source-highlight/java.lang
+share/source-highlight/javascript.lang
+share/source-highlight/lang.map
+share/source-highlight/latex.lang
+share/source-highlight/latex.outlang
+share/source-highlight/latexcolor.outlang
+share/source-highlight/latexcolordoc.outlang
+share/source-highlight/latexdoc.outlang
+share/source-highlight/log.lang
+share/source-highlight/logtalk.lang
+share/source-highlight/lua.lang
+share/source-highlight/number.lang
+share/source-highlight/outlang.map
+share/source-highlight/pascal.lang
+share/source-highlight/perl.lang
+share/source-highlight/php.lang
+share/source-highlight/prolog.lang
+share/source-highlight/python.lang
+share/source-highlight/ruby.lang
+share/source-highlight/sml.lang
+share/source-highlight/style2.style
+share/source-highlight/style3.style
+share/source-highlight/symbols.lang
+share/source-highlight/texinfo.outlang
+share/source-highlight/texinfo.style
+share/source-highlight/url.lang
+share/source-highlight/xhtml.outlang
+share/source-highlight/xhtmlcss.outlang
+share/source-highlight/xhtmldoc.outlang
 @dirrm share/source-highlight
 @dirrm share/doc/source-highlight
 @dirrm share/doc/html/source-highlight

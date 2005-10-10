@@ -1,32 +1,20 @@
-$NetBSD: patch-ab,v 1.2 2004/08/16 15:21:45 seb Exp $
+$NetBSD: patch-ab,v 1.3 2005/10/10 09:05:59 seb Exp $
 
---- configure.orig	2004-08-16 14:10:31.000000000 +0000
-+++ configure
-@@ -309,7 +309,7 @@ ac_includes_default="\
- # include <unistd.h>
- #endif"
+--- doc/Makefile.am.orig	2005-08-25 14:10:51.000000000 +0000
++++ doc/Makefile.am
+@@ -71,7 +71,7 @@ EXTRA_DIST = colors.html source-highligh
+              gpl.texinfo flex_scanner.ll $(GENERATEDINFOS) \
+              source-highlight.1
  
--ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot source_highlightdatadir source_highlightdocdir JAVA_SCANNER_VERSION CPP_SCANNER_VERSION PROLOG_SCANNER_VERSION PERL_SCANNER_VERSION PHP3_SCANNER_VERSION PYTHON_SCANNER_VERSION CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE ar_to_use CPP EGREP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE RANLIB ac_ct_RANLIB CHROOT_INPUT_DIR TXTC YACC LEX LEXLIB LEX_OUTPUT_ROOT LIBOBJS CXXCPP GENGETOPT NO_GENGETOPT_TRUE NO_GENGETOPT_FALSE YFLAGS TAR LTLIBOBJS'
-+ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot source_highlightdatadir source_highlightdocdir source_highlightdochtmldir JAVA_SCANNER_VERSION CPP_SCANNER_VERSION PROLOG_SCANNER_VERSION PERL_SCANNER_VERSION PHP3_SCANNER_VERSION PYTHON_SCANNER_VERSION CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE ar_to_use CPP EGREP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE RANLIB ac_ct_RANLIB CHROOT_INPUT_DIR TXTC YACC LEX LEXLIB LEX_OUTPUT_ROOT LIBOBJS CXXCPP GENGETOPT NO_GENGETOPT_TRUE NO_GENGETOPT_FALSE YFLAGS TAR LTLIBOBJS'
- ac_subst_files=''
+-source_highlightdoc_DATA = colors.html source-highlight.html \
++source_highlightdochtml_DATA = colors.html source-highlight.html \
+     Hello.java Hello1.html Hello2.html Hello3.html Hello4.html Hello5.html \
+     Hello.java.html Hello_h_f.html Hello_lines.html Hello_xhtml.html \
+     Hello_xhtml2.html \
+@@ -167,4 +167,4 @@ flex_scanner.ll.html
+ html-clean:
+ 	rm -f $(HTML_GENERATED_FILES)
  
- # Initialize some variables set by options.
-@@ -1744,8 +1744,10 @@ INSTALL_STRIP_PROGRAM="\${SHELL} \$(inst
- 
- 
- 
-+
- source_highlightdatadir=$datadir/source-highlight
- source_highlightdocdir=$datadir/doc/source-highlight
-+source_highlightdochtmldir=$datadir/doc/html/source-highlight
- 
- 
- 
-@@ -7341,6 +7343,7 @@ s,@SET_MAKE@,$SET_MAKE,;t t
- s,@am__leading_dot@,$am__leading_dot,;t t
- s,@source_highlightdatadir@,$source_highlightdatadir,;t t
- s,@source_highlightdocdir@,$source_highlightdocdir,;t t
-+s,@source_highlightdochtmldir@,$source_highlightdochtmldir,;t t
- s,@JAVA_SCANNER_VERSION@,$JAVA_SCANNER_VERSION,;t t
- s,@CPP_SCANNER_VERSION@,$CPP_SCANNER_VERSION,;t t
- s,@PROLOG_SCANNER_VERSION@,$PROLOG_SCANNER_VERSION,;t t
+-DISTCLEANFILES = $(HTML_GENERATED_FILES) source-highlight.1 $(GENERATEDINFOS)
+\ No newline at end of file
++DISTCLEANFILES = $(HTML_GENERATED_FILES) source-highlight.1 $(GENERATEDINFOS)
