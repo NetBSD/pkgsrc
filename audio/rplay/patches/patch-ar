@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
+$NetBSD: patch-ar,v 1.3 2005/10/10 15:13:58 joerg Exp $
 
---- configure.orig	Tue Jun  8 23:26:19 1999
+--- configure.orig	1999-06-09 06:26:19.000000000 +0000
 +++ configure
 @@ -1,30 +1,326 @@
  #! /bin/sh
@@ -1350,8 +1350,8 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +cat >>confdefs.h <<_ACEOF
 +#define PACKAGE_STRING "$PACKAGE_STRING"
 +_ACEOF
-+
  
++
 +cat >>confdefs.h <<_ACEOF
 +#define PACKAGE_BUGREPORT "$PACKAGE_BUGREPORT"
 +_ACEOF
@@ -1361,7 +1361,7 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
    if test "x$prefix" != xNONE; then
-@@ -490,265 +1192,775 @@ if test -z "$CONFIG_SITE"; then
+@@ -490,41 +1192,106 @@ if test -z "$CONFIG_SITE"; then
  fi
  for ac_site_file in $CONFIG_SITE; do
    if test -r "$ac_site_file"; then
@@ -1470,29 +1470,28 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +ac_compiler_gnu=$ac_cv_c_compiler_gnu
 +
 +
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
  
  
- 
- 
- 
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
-+
 +          ac_config_headers="$ac_config_headers include/config.h"
-+
-+
-+
- export srcdir
- RPLAY_VERSION=`$srcdir/version`
+ 
+ 
+ 
+@@ -533,222 +1300,667 @@ RPLAY_VERSION=`$srcdir/version`
  
  echo configuring rplay version $RPLAY_VERSION
  
@@ -1577,7 +1576,8 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +else
 +  if test -n "$ac_ct_CC"; then
 +  ac_cv_prog_ac_ct_CC="$ac_ct_CC" # Let the user override the test.
-+else
+ else
+-  echo "$ac_t""no" 1>&6
 +as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
 +for as_dir in $PATH
 +do
@@ -1604,8 +1604,7 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +fi
 +
 +  CC=$ac_ct_CC
- else
--  echo "$ac_t""no" 1>&6
++else
 +  CC="$ac_cv_prog_CC"
  fi
  
@@ -1882,11 +1881,6 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 -echo "configure:661: checking whether the C compiler ($CC $CFLAGS $LDFLAGS) works" >&5
 +  test -n "$ac_ct_CC" && break
 +done
-+
-+  CC=$ac_ct_CC
-+fi
-+
-+fi
  
 -ac_ext=c
 -# CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
@@ -1894,8 +1888,15 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 -ac_compile='${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
 -ac_link='${CC-cc} -o conftest${ac_exeext} $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
 -cross_compiling=$ac_cv_prog_cc_cross
++  CC=$ac_ct_CC
++fi
++
++fi
  
 -cat > conftest.$ac_ext << EOF
+ 
+-#line 672 "configure"
+-#include "confdefs.h"
 +test -z "$CC" && { { echo "$as_me:$LINENO: error: no acceptable C compiler found in \$PATH
 +See \`config.log' for more details." >&5
 +echo "$as_me: error: no acceptable C compiler found in \$PATH
@@ -1929,8 +1930,13 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +cat >>conftest.$ac_ext <<_ACEOF
 +/* end confdefs.h.  */
  
--#line 672 "configure"
--#include "confdefs.h"
+-main(){return(0);}
+-EOF
+-if { (eval echo configure:677: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  ac_cv_prog_cc_works=yes
+-  # If we can't run a trivial program, we are probably using a cross compiler.
+-  if (./conftest; exit) 2>/dev/null; then
+-    ac_cv_prog_cc_cross=no
 +int
 +main ()
 +{
@@ -1987,14 +1993,7 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +else
 +  echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
- 
--main(){return(0);}
--EOF
--if { (eval echo configure:677: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
--  ac_cv_prog_cc_works=yes
--  # If we can't run a trivial program, we are probably using a cross compiler.
--  if (./conftest; exit) 2>/dev/null; then
--    ac_cv_prog_cc_cross=no
++
 +{ { echo "$as_me:$LINENO: error: C compiler cannot create executables
 +See \`config.log' for more details." >&5
 +echo "$as_me: error: C compiler cannot create executables
@@ -3964,13 +3963,11 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +cat >>conftest.$ac_ext <<_ACEOF
 +/* end confdefs.h.  */
 +
- /* Override any gcc2 internal prototype to avoid an error.  */
++/* Override any gcc2 internal prototype to avoid an error.  */
 +#ifdef __cplusplus
 +extern "C"
 +#endif
- /* We use char because int might match the return type of a gcc2
--    builtin and then its argument prototype would still apply.  */
--char opendir();
++/* We use char because int might match the return type of a gcc2
 +   builtin and then its argument prototype would still apply.  */
 +char opendir ();
 +int
@@ -4020,27 +4017,14 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +cat confdefs.h >>conftest.$ac_ext
 +cat >>conftest.$ac_ext <<_ACEOF
 +/* end confdefs.h.  */
- 
--int main() {
--opendir()
--; return 0; }
--EOF
--if { (eval echo configure:1349: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
--  rm -rf conftest*
--  eval "ac_cv_lib_$ac_lib_var=yes"
--else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  eval "ac_cv_lib_$ac_lib_var=no"
--fi
--rm -f conftest*
--LIBS="$ac_save_LIBS"
-+/* Override any gcc2 internal prototype to avoid an error.  */
++
+ /* Override any gcc2 internal prototype to avoid an error.  */
 +#ifdef __cplusplus
 +extern "C"
 +#endif
-+/* We use char because int might match the return type of a gcc2
+ /* We use char because int might match the return type of a gcc2
+-    builtin and then its argument prototype would still apply.  */
+-char opendir();
 +   builtin and then its argument prototype would still apply.  */
 +char opendir ();
 +int
@@ -4079,16 +4063,31 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +  echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
  
+-int main() {
+-opendir()
+-; return 0; }
+-EOF
+-if { (eval echo configure:1349: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=yes"
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=no"
+ fi
+-rm -f conftest*
+-LIBS="$ac_save_LIBS"
+-
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++  done
  fi
 -if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
 -  echo "$ac_t""yes" 1>&6
 -  LIBS="$LIBS -lx"
 -else
 -  echo "$ac_t""no" 1>&6
-+rm -f conftest.err conftest.$ac_objext \
-+      conftest$ac_exeext conftest.$ac_ext
-+  done
-+fi
 +LIBS=$ac_func_search_save_LIBS
  fi
 +echo "$as_me:$LINENO: result: $ac_cv_search_opendir" >&5
@@ -4418,9 +4417,10 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
  #define TIME_WITH_SYS_TIME 1
 -EOF
 +_ACEOF
-+
-+fi
-+
+ 
+ fi
+ 
+-for ac_hdr in fcntl.h sys/file.h sys/ioctl.h sys/time.h stdlib.h unistd.h memory.h string.h strings.h utime.h limits.h gsm.h gsm/gsm.h rxposix.h rx/rxposix.h
 +# On IRIX 5.3, sys/types and inttypes.h are conflicting.
 +
 +
@@ -4433,7 +4433,12 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +
 +for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
 +		  inttypes.h stdint.h unistd.h
-+do
+ do
+-ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+-echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+-echo "configure:1514: checking for $ac_hdr" >&5
+-if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
 +as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 +echo "$as_me:$LINENO: checking for $ac_header" >&5
 +echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6
@@ -4487,10 +4492,9 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +  cat >>confdefs.h <<_ACEOF
 +#define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
 +_ACEOF
- 
- fi
- 
--for ac_hdr in fcntl.h sys/file.h sys/ioctl.h sys/time.h stdlib.h unistd.h memory.h string.h strings.h utime.h limits.h gsm.h gsm/gsm.h rxposix.h rx/rxposix.h
++
++fi
++
 +done
 +
 +
@@ -4510,12 +4514,7 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +
 +
 +for ac_header in fcntl.h sys/file.h sys/ioctl.h sys/time.h stdlib.h unistd.h memory.h string.h strings.h utime.h limits.h gsm.h gsm/gsm.h rxposix.h rx/rxposix.h
- do
--ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
--echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
--echo "configure:1514: checking for $ac_hdr" >&5
--if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
--  echo $ac_n "(cached) $ac_c" 1>&6
++do
 +as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 +if eval "test \"\${$as_ac_Header+set}\" = set"; then
 +  echo "$as_me:$LINENO: checking for $ac_header" >&5
@@ -5188,12 +5187,12 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +sed 's/^/| /' conftest.$ac_ext >&5
  
 +ac_cv_type_size_t=no
++fi
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  fi
 -echo "$ac_t""$ac_cv_type_size_t" 1>&6
 -if test $ac_cv_type_size_t = no; then
 -  cat >> confdefs.h <<\EOF
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
-+fi
 +echo "$as_me:$LINENO: result: $ac_cv_type_size_t" >&5
 +echo "${ECHO_T}$ac_cv_type_size_t" >&6
 +if test $ac_cv_type_size_t = yes; then
@@ -5316,10 +5315,10 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 -  cat conftest.$ac_ext >&5
 -  rm -rf conftest*
 -  eval "ac_cv_header_$ac_safe=no"
--fi
--rm -f conftest*
 +  ac_cpp_err=yes
  fi
+-rm -f conftest*
+-fi
 -if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
 -  echo "$ac_t""yes" 1>&6
 -    ac_tr_hdr=HAVE_`echo $ac_hdr | sed 'y%abcdefghijklmnopqrstuvwxyz./-%ABCDEFGHIJKLMNOPQRSTUVWXYZ___%'`
@@ -5429,16 +5428,16 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +    which can conflict with char $ac_func (); below.
 +    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
 +    <limits.h> exists even on freestanding compilers.  */
- 
--int main() {
++
 +#ifdef __STDC__
 +# include <limits.h>
 +#else
 +# include <assert.h>
 +#endif
  
+-int main() {
 +#undef $ac_func
-+
+ 
 +/* Override any gcc2 internal prototype to avoid an error.  */
 +#ifdef __cplusplus
 +extern "C"
@@ -5923,16 +5922,16 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +    which can conflict with char $ac_func (); below.
 +    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
 +    <limits.h> exists even on freestanding compilers.  */
- 
--int main() {
++
 +#ifdef __STDC__
 +# include <limits.h>
 +#else
 +# include <assert.h>
 +#endif
  
+-int main() {
 +#undef $ac_func
-+
+ 
 +/* Override any gcc2 internal prototype to avoid an error.  */
 +#ifdef __cplusplus
 +extern "C"
@@ -7002,13 +7001,7 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 -/* We use char because int might match the return type of a gcc2
 -    builtin and then its argument prototype would still apply.  */
 -char regncomp();
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
- 
+-
 -int main() {
 -regncomp()
 -; return 0; }
@@ -7024,7 +7017,13 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 -fi
 -rm -f conftest*
 -LIBS="$ac_save_LIBS"
--
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
+ 
 -fi
 -if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
 -  echo "$ac_t""yes" 1>&6
@@ -7468,7 +7467,8 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +cat >>conftest.$ac_ext <<_ACEOF
 +/* end confdefs.h.  */
  
- #ifdef __FreeBSD__
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
    yes
  #endif
  
@@ -7697,15 +7697,15 @@ $NetBSD: patch-ar,v 1.2 2004/12/22 16:18:42 ben Exp $
 +  ac_ltlibobjs="$ac_ltlibobjs $ac_i"'$U.lo'
 +done
 +LIBOBJS=$ac_libobjs
-+
-+LTLIBOBJS=$ac_ltlibobjs
-+
  
 -echo creating $CONFIG_STATUS
 -rm -f $CONFIG_STATUS
 -cat > $CONFIG_STATUS <<EOF
 -#! /bin/sh
 -# Generated automatically by configure.
++LTLIBOBJS=$ac_ltlibobjs
++
++
 +
 +: ${CONFIG_STATUS=./config.status}
 +ac_clean_files_save=$ac_clean_files
