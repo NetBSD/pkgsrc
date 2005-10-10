@@ -1,105 +1,17 @@
-$NetBSD: patch-ah,v 1.7 2004/10/21 00:15:47 seb Exp $
+$NetBSD: patch-ah,v 1.8 2005/10/10 09:05:59 seb Exp $
 
---- tests/Makefile.in.orig	2004-10-20 23:33:28.000000000 +0000
-+++ tests/Makefile.in
-@@ -56,9 +56,9 @@ CONFIG_HEADER = $(top_builddir)/config.h
- CONFIG_CLEAN_FILES =
- SOURCES =
- DIST_SOURCES =
--am__installdirs = "$(DESTDIR)$(source_highlightdocdir)"
--source_highlightdocDATA_INSTALL = $(INSTALL_DATA)
--DATA = $(source_highlightdoc_DATA)
-+am__installdirs = "$(DESTDIR)$(source_highlightdochtmldir)"
-+source_highlightdochtmlDATA_INSTALL = $(INSTALL_DATA)
-+DATA = $(source_highlightdochtml_DATA)
- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
- ACLOCAL = @ACLOCAL@
- AMDEP_FALSE = @AMDEP_FALSE@
-@@ -156,6 +156,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- source_highlightdatadir = @source_highlightdatadir@
- source_highlightdocdir = @source_highlightdocdir@
-+source_highlightdochtmldir = @source_highlightdochtmldir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
- TAGS_J2H_OPTION = -f html --tags-file $(top_srcdir)/src/tags.j2h 
-@@ -216,7 +217,7 @@ tags.syslog tags.esc \
- changelog.css
+--- doc/source-highlight.info.orig	2005-10-09 20:07:02.000000000 +0000
++++ doc/source-highlight.info
+@@ -1,6 +1,12 @@
+ This is source-highlight.info, produced by makeinfo version 4.7 from
+ source-highlight.texinfo.
  
- CPP2HTML_WHEADERS = $(CPP2HTML) --header=$(srcdir)/header.html --footer=$(srcdir)/footer.html --title="Header and footer test"
--source_highlightdoc_DATA = test.php3.html test.pl.html test.pm.html \
-+source_highlightdochtml_DATA = test.php3.html test.pl.html test.pm.html \
- test.py.html test.rb.html test.js.html test.lua.html test.ml.html \
- test.sml.html test.log.html access.log.html auth.log.html error.log.html syslog.log.html \
- tags.syslog tags.esc
-@@ -255,22 +256,22 @@ $(top_srcdir)/configure:  $(am__configur
- $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
- 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
- uninstall-info-am:
--install-source_highlightdocDATA: $(source_highlightdoc_DATA)
-+install-source_highlightdochtmlDATA: $(source_highlightdochtml_DATA)
- 	@$(NORMAL_INSTALL)
--	test -z "$(source_highlightdocdir)" || $(mkdir_p) "$(DESTDIR)$(source_highlightdocdir)"
--	@list='$(source_highlightdoc_DATA)'; for p in $$list; do \
-+	test -z "$(source_highlightdochtmldir)" || $(mkdir_p) "$(DESTDIR)$(source_highlightdochtmldir)"
-+	@list='$(source_highlightdochtml_DATA)'; for p in $$list; do \
- 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " $(source_highlightdocDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(source_highlightdocdir)/$$f'"; \
--	  $(source_highlightdocDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(source_highlightdocdir)/$$f"; \
-+	  echo " $(source_highlightdochtmlDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(source_highlightdochtmldir)/$$f'"; \
-+	  $(source_highlightdochtmlDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(source_highlightdochtmldir)/$$f"; \
- 	done
++INFO-DIR-SECTION Programming & development tools
++START-INFO-DIR-ENTRY
++* GNU Source-highlight: (source-highlight).
++                        Procude syntax highlighted documents from source files.
++END-INFO-DIR-ENTRY
++
+    This file documents the `source-highlight' command which given a
+ source file, produces a document with syntax highlighting.
  
--uninstall-source_highlightdocDATA:
-+uninstall-source_highlightdochtmlDATA:
- 	@$(NORMAL_UNINSTALL)
--	@list='$(source_highlightdoc_DATA)'; for p in $$list; do \
-+	@list='$(source_highlightdochtml_DATA)'; for p in $$list; do \
- 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " rm -f '$(DESTDIR)$(source_highlightdocdir)/$$f'"; \
--	  rm -f "$(DESTDIR)$(source_highlightdocdir)/$$f"; \
-+	  echo " rm -f '$(DESTDIR)$(source_highlightdochtmldir)/$$f'"; \
-+	  rm -f "$(DESTDIR)$(source_highlightdochtmldir)/$$f"; \
- 	done
- tags: TAGS
- TAGS:
-@@ -310,7 +311,7 @@ check-am: all-am
- check: check-am
- all-am: Makefile $(DATA)
- installdirs:
--	for dir in "$(DESTDIR)$(source_highlightdocdir)"; do \
-+	for dir in "$(DESTDIR)$(source_highlightdochtmldir)"; do \
- 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
- 	done
- install: install-am
-@@ -356,7 +357,7 @@ info: info-am
- 
- info-am:
- 
--install-data-am: install-source_highlightdocDATA
-+install-data-am: install-source_highlightdochtmlDATA
- 
- install-exec-am:
- 
-@@ -382,17 +383,17 @@ ps: ps-am
- 
- ps-am:
- 
--uninstall-am: uninstall-info-am uninstall-source_highlightdocDATA
-+uninstall-am: uninstall-info-am uninstall-source_highlightdochtmlDATA
- 
- .PHONY: all all-am check check-am clean clean-generic distclean \
- 	distclean-generic distdir dvi dvi-am html html-am info info-am \
- 	install install-am install-data install-data-am install-exec \
- 	install-exec-am install-info install-info-am install-man \
--	install-source_highlightdocDATA install-strip installcheck \
-+	install-source_highlightdochtmlDATA install-strip installcheck \
- 	installcheck-am installdirs maintainer-clean \
- 	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
- 	pdf-am ps ps-am uninstall uninstall-am uninstall-info-am \
--	uninstall-source_highlightdocDATA
-+	uninstall-source_highlightdochtmlDATA
- 
- 
- %.cc.html: %.cc
