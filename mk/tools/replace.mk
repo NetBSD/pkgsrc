@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.126 2005/09/20 03:50:18 jlam Exp $
+# $NetBSD: replace.mk,v 1.127 2005/10/10 17:22:06 reed Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -679,12 +679,12 @@ TOOLS_PATH.id=			${TOOLS_PREFIX.id}/bin/${GNU_PROGRAM_PREFIX}id
 .endif
 
 .if !defined(TOOLS_IGNORE.imake) && !empty(_USE_TOOLS:Mimake)
-.  if !empty(PKGPATH:Mx11/imake) || !empty(PKGPATH:Mx11/xorg-imake)
+.  if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
 MAKEFLAGS+=			TOOLS_IGNORE.imake=
 .  elif !empty(_TOOLS_USE_PKGSRC.imake:M[yY][eE][sS])
 TOOLS_CREATE+=			imake
 .    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.imake?=		imake>=4.4.0:../../x11/imake
+TOOLS_DEPENDS.imake?=		XFree86-imake>=4.4.0:../../x11/XFree86-imake
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.imake=imake
 TOOLS_PATH.imake=		${TOOLS_PREFIX.imake}/${X11ROOT_PREFIX}/bin/imake
 .    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
@@ -1149,12 +1149,12 @@ TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
 .endif
 
 .if !defined(TOOLS_IGNORE.xmkmf) && !empty(_USE_TOOLS:Mxmkmf)
-.  if !empty(PKGPATH:Mx11/imake) || !empty(PKGPATH:Mx11/xorg-imake)
+.  if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
 MAKEFLAGS+=			TOOLS_IGNORE.xmkmf=
 .  elif !empty(_TOOLS_USE_PKGSRC.xmkmf:M[yY][eE][sS])
 TOOLS_CREATE+=			xmkmf
 .    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.xmkmf?=		imake>=4.4.0:../../x11/imake
+TOOLS_DEPENDS.xmkmf?=		XFree86-imake>=4.4.0:../../x11/XFree86-imake
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmkmf=imake
 TOOLS_PATH.xmkmf=		${TOOLS_PREFIX.xmkmf}/${X11ROOT_PREFIX}/bin/xmkmf
 .    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
