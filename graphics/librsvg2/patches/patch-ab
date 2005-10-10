@@ -1,26 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2005/03/22 16:04:44 jmmv Exp $
+$NetBSD: patch-ab,v 1.6 2005/10/10 13:59:00 jmmv Exp $
 
---- gdk-pixbuf-loader/Makefile.in.orig	2005-01-19 02:14:41.000000000 +0100
+--- gdk-pixbuf-loader/Makefile.in.orig	2005-10-07 04:33:38.000000000 +0200
 +++ gdk-pixbuf-loader/Makefile.in
-@@ -220,7 +220,7 @@ svg_loader_la_LDFLAGS = -avoid-version -
- svg_loader_la_LIBADD = $(LIBRSVG_LIBS) 	\
- 	$(LIBGNOME_VFS_LIBS)		\
- 	$(LIBGSF_LIBS) $(LIBCROCO_LIBS)	\
--	$(top_builddir)/librsvg-2.la
-+	`pkg-config --libs librsvg-2.0`
- 
- 
- loader_LTLIBRARIES = $(target_pixbuf_loader)
-@@ -231,7 +231,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
- CONFIG_CLEAN_FILES =
- LTLIBRARIES = $(loader_LTLIBRARIES)
- 
--svg_loader_la_DEPENDENCIES = $(top_builddir)/librsvg-2.la
-+svg_loader_la_DEPENDENCIES =
- am_svg_loader_la_OBJECTS = io-svg.lo
- svg_loader_la_OBJECTS = $(am_svg_loader_la_OBJECTS)
- 
-@@ -522,10 +522,6 @@ uninstall-am: uninstall-info-am uninstal
+@@ -528,10 +528,6 @@ uninstall-am: uninstall-info-am uninstal
  
  
  install-data-hook: 
