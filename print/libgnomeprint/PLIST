@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2005/03/22 16:03:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/10/10 13:57:40 jmmv Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-pgl.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print-config.h
+include/libgnomeprint-2.2/libgnomeprint/gnome-print-filter.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print-job.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print-meta.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-print-pango.h
@@ -18,6 +19,7 @@ include/libgnomeprint-2.2/libgnomeprint/private/gnome-font-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-fontmap.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-glyphlist-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-config-private.h
+include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-path.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gp-gc-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gpa-config.h
@@ -34,6 +36,15 @@ include/libgnomeprint-2.2/libgnomeprint/private/gpa-settings.h
 include/libgnomeprint-2.2/libgnomeprint/private/gpa-state.h
 include/libgnomeprint-2.2/libgnomeprint/private/gpa-utils.h
 lib/libgnomeprint-2-2.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-clip.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-draft.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-frgba.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-multipage.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-position.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-reorder.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-rotate.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-select.la
+lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-zoom.la
 ${USE_CUPS}lib/libgnomeprint/${PKGVERSION}/modules/libgnomeprintcups.la
 lib/libgnomeprint/${PKGVERSION}/modules/libgnomeprintlpd.la
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-custom.la
@@ -93,6 +104,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -121,6 +133,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -128,11 +141,13 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
 @dirrm share/libgnomeprint/${PKGVERSION}/printers/uninstalled
@@ -143,6 +158,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
 @dirrm share/libgnomeprint
 @dirrm share/doc/libgnomeprint
 @dirrm lib/libgnomeprint/${PKGVERSION}/modules/transports
+@dirrm lib/libgnomeprint/${PKGVERSION}/modules/filters
 @dirrm lib/libgnomeprint/${PKGVERSION}/modules
 @dirrm lib/libgnomeprint/${PKGVERSION}
 @dirrm lib/libgnomeprint
