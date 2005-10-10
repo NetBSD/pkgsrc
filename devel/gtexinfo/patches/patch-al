@@ -1,0 +1,34 @@
+$NetBSD: patch-al,v 1.1 2005/10/10 15:14:49 salo Exp $
+
+Security fix for CAN-2005-3011, from Ubuntu.
+
+--- util/texindex.c.orig	2004-04-11 19:56:47.000000000 +0200
++++ util/texindex.c	2005-10-10 16:46:44.000000000 +0200
+@@ -390,11 +390,12 @@
+ maketempname (int count)
+ {
+   static char *tempbase = NULL;
++  char *tempname;
+   char tempsuffix[10];
++  int fd;
+ 
+   if (!tempbase)
+     {
+-      int fd;
+       tempbase = concat (tempdir, "txidxXXXXXX");
+ 
+       fd = mkstemp (tempbase);
+@@ -403,7 +404,12 @@
+     }
+ 
+   sprintf (tempsuffix, ".%d", count);
+-  return concat (tempbase, tempsuffix);
++  tempname = concat (tempbase, tempsuffix);
++  fd = open (tempname, O_CREAT|O_EXCL|O_WRONLY, 0600);
++  if (fd == -1)
++    pfatal_with_name (tempname);
++  close (fd);
++  return tempname;
+ }
+ 
+ 
