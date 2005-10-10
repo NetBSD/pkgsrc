@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2005/02/24 09:03:08 agc Exp $
+$NetBSD: distinfo,v 1.24 2005/10/10 17:19:51 joerg Exp $
 
 SHA1 (guile-1.6.7.tar.gz) = 00a82dc4c7c19f9b791e116a2baf83e7d0c0856d
 RMD160 (guile-1.6.7.tar.gz) = 63d45e8143834c641d4a4732cfbb34e8984f55dd
@@ -9,3 +9,4 @@ SHA1 (patch-af) = 96b50d3cff86a7ba7a76551723192ad99a07b971
 SHA1 (patch-ag) = a4b5f490e9c9520120bcb2824004cb8bfa1027e1
 SHA1 (patch-ah) = e66596a5ecc5c2d4fd09833507499b4d02c7af8a
 SHA1 (patch-ai) = 3343ea669fa05c93a2af5a75cf9da5a04d068273
+SHA1 (patch-aj) = 2d55986fd8161bdc32c6e2ef7fe3d89310ab20cd
