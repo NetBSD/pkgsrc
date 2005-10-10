@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/02 17:23:06 riz Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/10 21:45:08 rh Exp $
 
 DISTNAME=	asterisk-1.0.9
 CATEGORIES=	comms net audio
@@ -82,6 +82,11 @@ CONF_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
 .undef _file_
 
 PTHREAD_OPTS+=	require native
+
+.if (${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h))
+post-patch:
+	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
+.endif
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
