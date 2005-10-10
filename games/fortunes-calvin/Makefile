@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/09 23:14:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/10 19:13:47 jschauma Exp $
 #
 
-DISTNAME=	fortunes-calvin-0.1
+DISTNAME=	fortunes-calvin-0.2
 CATEGORIES=	games
 MASTER_SITES=	http://www.netmeister.org/apps/
 EXTRACT_SUFX=	.gz
