@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11395 2005/10/10 09:57:29 jmmv Exp $
+$NetBSD: CHANGES,v 1.11396 2005/10/10 14:05:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4370,3 +4370,12 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/distcc to 2.18.3nb1 [jmmv 2005-10-10]
 	Added devel/distccmon-gtk version 2.18.3 [jmmv 2005-10-10]
 	Added devel/distccmon-gnome version 2.18.3 [jmmv 2005-10-10]
+	Updated devel/libgnome to 2.12.0.1 [jmmv 2005-10-10]
+	Updated graphics/libgnomecanvas to 2.12.0 [jmmv 2005-10-10]
+	Updated security/gnome-keyring to 0.4.4 [jmmv 2005-10-10]
+	Updated devel/libgnomeui to 2.12.0 [jmmv 2005-10-10]
+	Updated graphics/gnome-icon-theme to 2.12.0 [jmmv 2005-10-10]
+	Updated print/libgnomeprint to 2.12.1 [jmmv 2005-10-10]
+	Updated print/libgnomeprintui to 2.12.1 [jmmv 2005-10-10]
+	Updated graphics/librsvg2 to 2.12.6 [jmmv 2005-10-10]
+	Removed graphics/librsvg2-gtk [jmmv 2005-10-10]
