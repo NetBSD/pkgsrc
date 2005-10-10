@@ -1,0 +1,5 @@
+/* $NetBSD: host.def,v 1.1.1.1 2005/10/10 17:18:55 reed Exp $ */
+
+#define ProjectRoot @PREFIX@
+#define BuildHtmlManPages NO
+#define MakeCmd @MAKE@
