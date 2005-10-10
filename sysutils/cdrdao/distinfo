@@ -1,16 +1,19 @@
-$NetBSD: distinfo,v 1.15 2005/09/26 01:01:46 fredb Exp $
+$NetBSD: distinfo,v 1.16 2005/10/10 21:36:56 joerg Exp $
 
 SHA1 (cdrdao-1.2.0.tar.gz) = 0da9f0ae829dba5afe7efc34981ce4ad1dd7d210
 RMD160 (cdrdao-1.2.0.tar.gz) = 031be2ce0ed0894d1026a90f9ce62b3154849d14
 Size (cdrdao-1.2.0.tar.gz) = 2041966 bytes
 SHA1 (patch-aa) = ac38ac97ffbd502c5b5ea4de771ce92c520ae10e
-SHA1 (patch-ab) = 5cbacba844e1fa3c55634bdbbe3ec8a998d20273
+SHA1 (patch-ab) = 4aa2499b6e5768d7f8dee32b1b7d0bfc55d30f71
 SHA1 (patch-ac) = 4608827f9202ef5aed35ddda426dc7a9574bc18f
 SHA1 (patch-ad) = 2c092aa6755f6029bbd07db9fee03e655081fdb7
 SHA1 (patch-ae) = 0d352c9815401131b8d6ec8ecf5ecc8e1a572b45
 SHA1 (patch-af) = 6db55b356b6f78f26472f710ecef2f98ce0051ca
 SHA1 (patch-ag) = e5466c41d1f6e492a57588ccbc2cdfe5696b0a8a
 SHA1 (patch-ah) = 1ec8be46c29c4af2f5fdecccae5b2aa4a7f9893f
-SHA1 (patch-ai) = 84f868e768b6eb44e506972cc73ad4795b7b1aaa
+SHA1 (patch-ai) = 3441edbe934b8e2a996259aaf293618c94c147d5
 SHA1 (patch-aj) = 233ffacfe7ccecba0ac6118b18357771465a20dd
 SHA1 (patch-ak) = 28d58c003a2025d032df061eff1394d2372826c8
+SHA1 (patch-al) = eba32acd367714c668feb2662a486476577d0643
+SHA1 (patch-am) = 2b0f687b8ed233580c3ef497ad50ed01ca8a69dc
+SHA1 (patch-ao) = fbc7694628c2dc0f6f631d5f6d6c66801fff1d17

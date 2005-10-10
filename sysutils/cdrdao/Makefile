@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/10/08 12:35:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2005/10/10 21:36:56 joerg Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
@@ -13,6 +13,9 @@ CONFIGURE_ARGS+=	--without-xdao
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 CONFIGURE_ARGS+=	--without-posix-threads
 .endif
+
+post-extract:
+	${CP} ${WRKSRC}/scsilib/RULES/os-freebsd.id ${WRKSRC}/scsilib/RULES/os-dragonfly.id
 
 post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cdrdao

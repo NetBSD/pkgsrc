@@ -1,13 +1,40 @@
-$NetBSD: patch-ai,v 1.1 2005/06/04 19:05:38 adrianp Exp $
+$NetBSD: patch-ai,v 1.2 2005/10/10 21:36:56 joerg Exp $
 
---- configure.orig	2005-06-04 15:19:02.000000000 +0100
+--- configure.orig	2005-05-12 18:30:44.000000000 +0000
 +++ configure
+@@ -10250,7 +10250,7 @@ _ACEOF
+     *-freebsd2*)
+ 			       scsilib_libs="$scsilib_libs"
+ 			       ;;
+-    *-freebsd[3456]*)
++    *-freebsd[3456]* | *-dragonfly*)
+ 			       scsilib_libs="$scsilib_libs -lcam"
+ 			       ;;
+   esac
+@@ -10268,7 +10268,7 @@ else
+ 	       scsilib_objs="ScsiIf-linux.o sg_err.o"
+ 	       ;;
+ 
+-    *-freebsd[3456]*)
++    *-freebsd[3456]* | *-dragonfly*)
+ 	       scsilib_libs="-lcam"
+ 	       scsilib_objs="ScsiIf-freebsd-cam.o"
+ 	       ;;
+@@ -10496,7 +10496,7 @@ case "$host" in
+ esac
+ 
+ case "$host" in
+-  *-freebsd*)
++  *-freebsd* | *-dragonfly*)
+ 	      if test "$use_pthreads" = yes; then
+ 		LDFLAGS="-pthread $LDFLAGS"
+ 		thread_libs=""
 @@ -10514,7 +10514,7 @@ _ACEOF
  esac
  
  case "$host" in
 -  *-linux-* | *-freebsd[456]* | *-solaris*)
-+  *-linux-* | *-freebsd[456]* | *-solaris* | *-netbsd*)
++  *-linux-* | *-freebsd[456]* | *-solaris* | *-netbsd* | *-dragonfly*)
  	     sound_if_obj=SoundIF-ao.o
  	     ;;
  
