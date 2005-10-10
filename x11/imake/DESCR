@@ -1,3 +1,0 @@
-The imake package provides various utilities, such as imake, lndir,
-mkdirhier, xmkmf, and others. These utilities are from XFree86, although
-an X server and X libraries are not needed.
