@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/08/28 04:25:28 uebayasi Exp $
+# $NetBSD: Makefile,v 1.17 2005/10/10 07:01:43 martin Exp $
 
 DISTNAME=		zenicb-19981202
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -15,20 +15,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 
-.if defined(USE_XEMACS)
-MAKEFLAGS+=		USE_XEMACS=${USE_XEMACS}
-.include "../../editors/xemacs/Makefile.pkg"
-.else
-.endif
-
 #PLIST_SUBST+=		ELISPDIR=${ELISPDIR}
-
-pre-configure:
-.if defined(USE_XEMACS)
-	@${ECHO} "You have chosen Xemacs configuration."
-.else
-	@${ECHO} "To install for Xemacs, set the environment variable USE_XEMACS."
-.endif
 
 do-build:
 
