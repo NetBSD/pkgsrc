@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.31 2005/02/20 05:55:51 grant Exp $
+# $NetBSD: Makefile.in,v 1.32 2005/10/10 18:28:08 reed Exp $
 #
 
 srcdir=		@srcdir@
@@ -12,6 +12,7 @@ CFLAGS=		-I$(srcdir) -I. @INCLUDES@ @CFLAGS@
 CPPFLAGS=	@CPPFLAGS@
 DEFS=		@DEFS@
 INSTALL=	@INSTALL@
+BINMODE?=	555
 LDFLAGS=	@LDFLAGS@
 
 AWK=		@AWK@
@@ -83,7 +84,7 @@ bits: bits.c
 
 install:
 	$(INSTALL) -m 755 -d $(prefix)/lib
-	$(INSTALL) -m 555 ${LIB} $(prefix)/lib
+	$(INSTALL) -m $(BINMODE) ${LIB} $(prefix)/lib
 	$(RANLIB) $(prefix)/lib/$(LIB)
 	$(INSTALL) -m 755 -d $(prefix)/include
 	$(INSTALL) -m 755 -d $(prefix)/include/nbcompat
