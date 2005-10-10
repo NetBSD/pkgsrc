@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11394 2005/10/10 09:18:03 seb Exp $
+$NetBSD: CHANGES,v 1.11395 2005/10/10 09:57:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4367,3 +4367,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Added games/fortunes-h2g2 0.1 [jschauma 2005-10-09]
 	Updated emulators/wine to 20050930 [adam 2005-10-10]
 	Updated textproc/source-highlight to 2.1.2 [seb 2005-10-10]
+	Updated devel/distcc to 2.18.3nb1 [jmmv 2005-10-10]
+	Added devel/distccmon-gtk version 2.18.3 [jmmv 2005-10-10]
+	Added devel/distccmon-gnome version 2.18.3 [jmmv 2005-10-10]
