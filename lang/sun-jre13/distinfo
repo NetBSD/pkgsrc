@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2005/05/25 11:17:11 wiz Exp $
+$NetBSD: distinfo,v 1.15 2005/10/10 14:59:20 jschauma Exp $
 
-SHA1 (j2re-1_3_1_15-linux-i586.bin) = 8e13b9d83cb3bca521be615b7e8a5ced22a9ec7a
-RMD160 (j2re-1_3_1_15-linux-i586.bin) = af16d32d4de85c4c8ee4ea6ec3b7e80a1e8c9716
-Size (j2re-1_3_1_15-linux-i586.bin) = 15471679 bytes
+SHA1 (j2re-1_3_1_16-linux-i586.bin) = 9b2f452504f8cb65f079d1c031ca81f6e6cacf3a
+RMD160 (j2re-1_3_1_16-linux-i586.bin) = 3f6e33fe83a933653ff5dde9343ad497a3f27bc5
+Size (j2re-1_3_1_16-linux-i586.bin) = 15474756 bytes
 SHA1 (patch-aa) = d77d939b5c38ca8c8f9b387632e40441015c47cf
 SHA1 (patch-ab) = 1a1664d2be48d7a4f8fc05876b7aa5f225c65b16
