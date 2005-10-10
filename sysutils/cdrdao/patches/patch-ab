@@ -1,11 +1,17 @@
-$NetBSD: patch-ab,v 1.4 2004/06/20 19:05:25 dillo Exp $
+$NetBSD: patch-ab,v 1.5 2005/10/10 21:36:56 joerg Exp $
 
-have a default scsi device which is likely to be correct (at least
-on single CD systems).
-
---- dao/main.cc.orig	2004-06-05 22:57:34.000000000 +0200
+--- dao/main.cc.orig	2005-05-09 15:48:40.000000000 +0000
 +++ dao/main.cc
-@@ -115,7 +115,11 @@ static int FIFO_BUFFERS = 32;
+@@ -108,7 +108,7 @@ static TrackData::SubChannelMode READ_SU
+ 
+ static Settings *SETTINGS = NULL; // settings read from $HOME/.cdrdao
+ 
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ 
+ #  ifdef USE_SCGLIB
+ static const char *SCSI_DEVICE = "0,0,0";
+@@ -124,7 +124,11 @@ static int FIFO_BUFFERS = 32;
  
  #else
  
