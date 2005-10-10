@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2005/10/10 20:23:05 joerg Exp $
+
+--- parallel.c.orig	2005-10-10 22:19:37.000000000 +0200
++++ parallel.c
+@@ -14,8 +14,6 @@
+ #include <linux/lp.h>
+ #endif
+ 
+-extern int errno;
+-
+ extern RDPDR_DEVICE g_rdpdr_device[];
+ 
+ 
