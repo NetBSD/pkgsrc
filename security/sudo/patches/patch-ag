@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2004/05/19 19:26:38 kim Exp $
+$NetBSD: patch-ag,v 1.6 2005/10/10 17:48:10 joerg Exp $
 
---- configure.orig	2003-05-06 11:22:27.000000000 -0400
-+++ configure	2004-05-19 15:17:50.000000000 -0400
-@@ -873,6 +873,7 @@
+--- configure.orig	2004-11-26 21:04:30.000000000 +0100
++++ configure	2005-05-10 21:38:19.000000000 +0200
+@@ -1051,6 +1051,7 @@
    --with-devel            add development options
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -10,7 +10,7 @@ $NetBSD: patch-ag,v 1.5 2004/05/19 19:26:38 kim Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR       enable S/Key support
    --with-opie=DIR       enable OPIE support
-@@ -1423,7 +1424,6 @@
+@@ -1622,7 +1623,6 @@
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -18,7 +18,7 @@ $NetBSD: patch-ag,v 1.5 2004/05/19 19:26:38 kim Exp $
  
  
  
-@@ -1622,6 +1622,22 @@
+@@ -1820,6 +1820,22 @@
  fi;
  
  
@@ -41,7 +41,117 @@ $NetBSD: patch-ag,v 1.5 2004/05/19 19:26:38 kim Exp $
  # Check whether --with-passwd or --without-passwd was given.
  if test "${with_passwd+set}" = set; then
    withval="$with_passwd"
-@@ -13230,6 +13246,58 @@
+@@ -5228,7 +5244,7 @@
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-freebsd*)
++freebsd*|dragonfly*)
+   if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
+     case $host_cpu in
+     i*86 )
+@@ -8440,7 +8456,7 @@
+       ;;
+ 
+     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
+-    freebsd*)
++    dragonfly*|freebsd*)
+       archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
+       hardcode_libdir_flag_spec='-R$libdir'
+       hardcode_direct=yes
+@@ -9071,11 +9087,11 @@
+   dynamic_linker=no
+   ;;
+ 
+-freebsd*)
++dragonfly*|freebsd*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+   version_type=freebsd-$objformat
+   case $version_type in
+-    freebsd-elf*)
++    dragonfly*|freebsd-elf*)
+       library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
+       ;;
+     freebsd-*)
+@@ -11205,7 +11221,7 @@
+   freebsd-elf*)
+     archive_cmds_need_lc_CXX=no
+     ;;
+-  freebsd*)
++  dragonfly*|freebsd*)
+     # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
+     # conventions
+     ld_shlibs_CXX=yes
+@@ -12576,11 +12592,11 @@
+   dynamic_linker=no
+   ;;
+ 
+-freebsd*)
++dragonfly*|freebsd*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+   version_type=freebsd-$objformat
+   case $version_type in
+-    freebsd-elf*)
++    dragonfly*|freebsd-elf*)
+       library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
+       ;;
+     freebsd-*)
+@@ -14890,7 +14906,7 @@
+       ;;
+ 
+     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
+-    freebsd*)
++    dragonfly*|freebsd*)
+       archive_cmds_F77='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
+       hardcode_libdir_flag_spec_F77='-R$libdir'
+       hardcode_direct_F77=yes
+@@ -15521,11 +15537,11 @@
+   dynamic_linker=no
+   ;;
+ 
+-freebsd*)
++dragonfly*|freebsd*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+   version_type=freebsd-$objformat
+   case $version_type in
+-    freebsd-elf*)
++    dragonfly*|freebsd-elf*)
+       library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
+       ;;
+     freebsd-*)
+@@ -17123,7 +17139,7 @@
+       ;;
+ 
+     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
+-    freebsd*)
++    dragonfly*|freebsd*)
+       archive_cmds_GCJ='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
+       hardcode_libdir_flag_spec_GCJ='-R$libdir'
+       hardcode_direct_GCJ=yes
+@@ -17754,11 +17770,11 @@
+   dynamic_linker=no
+   ;;
+ 
+-freebsd*)
++dragonfly*|freebsd*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+   version_type=freebsd-$objformat
+   case $version_type in
+-    freebsd-elf*)
++    dragonfly*|freebsd-elf*)
+       library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
+       ;;
+     freebsd-*)
+@@ -21737,7 +21753,7 @@
+ 		    esac
+ 		fi
+ 		;;
+-    *-*-freebsd*)
++    *-*-freebsd*|*-*-dragonfly*)
+ 		# FreeBSD has a real setreuid(2) starting with 2.1 and
+ 		# backported to 2.0.5.  We just take 2.1 and above...
+ 		case "`echo $host_os | sed 's/^freebsd\([0-9\.]*\).*$/\1/'`" in
+@@ -29049,6 +29065,58 @@
  _ACEOF
  
  	    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -ldes -lcom_err -lasn1"
@@ -100,7 +210,7 @@ $NetBSD: patch-ag,v 1.5 2004/05/19 19:26:38 kim Exp $
  	    echo "$as_me:$LINENO: checking for main in -lroken" >&5
  echo $ECHO_N "checking for main in -lroken... $ECHO_C" >&6
  if test "${ac_cv_lib_roken_main+set}" = set; then
-@@ -13282,7 +13350,6 @@
+@@ -29101,7 +29169,6 @@
    SUDO_LIBS="${SUDO_LIBS} -lroken"
  fi
  
