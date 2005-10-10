@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/10 21:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/10 21:54:31 agc Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -21,10 +21,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-.if !defined(LIBDVDCSS_MASTER_SITES)
-INTERACTIVE_STAGE=	fetch
-.endif
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
