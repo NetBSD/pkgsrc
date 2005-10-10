@@ -1,23 +1,138 @@
-$NetBSD: patch-af,v 1.4 2004/10/21 00:15:47 seb Exp $
+$NetBSD: patch-af,v 1.5 2005/10/10 09:05:59 seb Exp $
 
---- doc/source-highlight.1.in.orig	2004-07-11 12:58:38.000000000 +0000
-+++ doc/source-highlight.1.in
-@@ -19,7 +19,8 @@ output languages are: \fBHTML\fP, \fBXHT
- .PP
- \fBTexinfo documentation will be released soon, but meanwhile
- please refer to README file or to the html documentation that you
--can find in @prefix@/share/doc/source-highlight.\fP 
-+can find respectively in @prefix@/share/doc/source-highlight and
-+@prefix@/share/doc/html/source-highlight.\fP 
- .SH OPTIONS
- \fBsource-highlight\fP accepts some options.
- .sp
-@@ -121,7 +122,7 @@ with \fB--verbose\fP option
- enabled. 
+--- doc/Makefile.in.orig	2005-10-09 09:27:17.000000000 +0000
++++ doc/Makefile.in
+@@ -56,6 +56,8 @@ am__configure_deps = $(am__aclocal_m4_de
+ mkinstalldirs = $(install_sh) -d
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES = index.html
++depcomp =
++am__depfiles_maybe =
+ SOURCES =
+ DIST_SOURCES =
+ INFO_DEPS = $(srcdir)/source-highlight.info
+@@ -70,7 +72,7 @@ TEXI2PDF = $(TEXI2DVI) --pdf --batch
+ MAKEINFOHTML = $(MAKEINFO) --html
+ DVIPS = dvips
+ am__installdirs = "$(DESTDIR)$(infodir)" "$(DESTDIR)$(man1dir)" \
+-	"$(DESTDIR)$(source_highlightdocdir)"
++	"$(DESTDIR)$(source_highlightdochtmldir)"
+ man1dir = $(mandir)/man1
+ NROFF = nroff
+ MANS = $(man_MANS)
+@@ -80,8 +82,8 @@ am__vpath_adj = case $$p in \
+     *) f=$$p;; \
+   esac;
+ am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+-source_highlightdocDATA_INSTALL = $(INSTALL_DATA)
+-DATA = $(source_highlightdoc_DATA)
++source_highlightdochtmlDATA_INSTALL = $(INSTALL_DATA)
++DATA = $(source_highlightdochtml_DATA)
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ ACLOCAL = @ACLOCAL@
+ AMDEP_FALSE = @AMDEP_FALSE@
+@@ -184,6 +186,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ source_highlightdatadir = @source_highlightdatadir@
+ source_highlightdocdir = @source_highlightdocdir@
++source_highlightdochtmldir = @source_highlightdochtmldir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ TAGS_J2H_OPTION = --style-file $(top_srcdir)/src/default.style
+@@ -210,7 +213,7 @@ EXTRA_DIST = colors.html source-highligh
+              gpl.texinfo flex_scanner.ll $(GENERATEDINFOS) \
+              source-highlight.1
  
- .SH "SEE ALSO"
--HTML documentation in \fI@prefix@/share/doc/source-highlight\fP.
-+HTML documentation in \fI@prefix@/share/doc/html/source-highlight\fP.
- .SH "VERSION INFORMATION"
- This man page (partially) documents \fBsource-highlight\fP, version @VERSION@.
- TexInfo documentation will be released soon.
+-source_highlightdoc_DATA = colors.html source-highlight.html \
++source_highlightdochtml_DATA = colors.html source-highlight.html \
+     Hello.java Hello1.html Hello2.html Hello3.html Hello4.html Hello5.html \
+     Hello.java.html Hello_h_f.html Hello_lines.html Hello_xhtml.html \
+     Hello_xhtml2.html \
+@@ -250,9 +253,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefi
+ 	      exit 1;; \
+ 	  esac; \
+ 	done; \
+-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  doc/Makefile'; \
++	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  --ignore-deps doc/Makefile'; \
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  doc/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps doc/Makefile
+ .PRECIOUS: Makefile
+ Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
+ 	@case '$?' in \
+@@ -444,22 +447,22 @@ uninstall-man1:
+ 	  echo " rm -f '$(DESTDIR)$(man1dir)/$$inst'"; \
+ 	  rm -f "$(DESTDIR)$(man1dir)/$$inst"; \
+ 	done
+-install-source_highlightdocDATA: $(source_highlightdoc_DATA)
++install-source_highlightdochtmlDATA: $(source_highlightdochtml_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(source_highlightdocdir)" || $(mkdir_p) "$(DESTDIR)$(source_highlightdocdir)"
+-	@list='$(source_highlightdoc_DATA)'; for p in $$list; do \
++	test -z "$(source_highlightdochtmldir)" || $(mkdir_p) "$(DESTDIR)$(source_highlightdochtmldir)"
++	@list='$(source_highlightdochtml_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(source_highlightdocDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(source_highlightdocdir)/$$f'"; \
+-	  $(source_highlightdocDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(source_highlightdocdir)/$$f"; \
++	  echo " $(source_highlightdochtmlDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(source_highlightdochtmldir)/$$f'"; \
++	  $(source_highlightdochtmlDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(source_highlightdochtmldir)/$$f"; \
+ 	done
+ 
+-uninstall-source_highlightdocDATA:
++uninstall-source_highlightdochtmlDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(source_highlightdoc_DATA)'; for p in $$list; do \
++	@list='$(source_highlightdochtml_DATA)'; for p in $$list; do \
+ 	  f=$(am__strip_dir) \
+-	  echo " rm -f '$(DESTDIR)$(source_highlightdocdir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(source_highlightdocdir)/$$f"; \
++	  echo " rm -f '$(DESTDIR)$(source_highlightdochtmldir)/$$f'"; \
++	  rm -f "$(DESTDIR)$(source_highlightdochtmldir)/$$f"; \
+ 	done
+ tags: TAGS
+ TAGS:
+@@ -502,7 +505,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(INFO_DEPS) $(MANS) $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(infodir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(source_highlightdocdir)"; do \
++	for dir in "$(DESTDIR)$(infodir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(source_highlightdochtmldir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	done
+ install: install-am
+@@ -551,7 +554,7 @@ info: info-am
+ info-am: $(INFO_DEPS)
+ 
+ install-data-am: install-info-am install-man \
+-	install-source_highlightdocDATA
++	install-source_highlightdochtmlDATA
+ 
+ install-exec-am:
+ 
+@@ -609,7 +612,7 @@ ps: ps-am
+ ps-am: $(PSS)
+ 
+ uninstall-am: uninstall-info-am uninstall-man \
+-	uninstall-source_highlightdocDATA
++	uninstall-source_highlightdochtmlDATA
+ 
+ uninstall-man: uninstall-man1
+ 
+@@ -617,13 +620,14 @@ uninstall-man: uninstall-man1
+ 	distclean distclean-generic distdir dvi dvi-am html html-am \
+ 	info info-am install install-am install-data install-data-am \
+ 	install-exec install-exec-am install-info install-info-am \
+-	install-man install-man1 install-source_highlightdocDATA \
++	install-man install-man1 install-source_highlightdochtmlDATA \
+ 	install-strip installcheck installcheck-am installdirs \
+ 	maintainer-clean maintainer-clean-aminfo \
+ 	maintainer-clean-generic maintainer-clean-vti mostlyclean \
+ 	mostlyclean-aminfo mostlyclean-generic mostlyclean-vti pdf \
+ 	pdf-am ps ps-am uninstall uninstall-am uninstall-info-am \
+-	uninstall-man uninstall-man1 uninstall-source_highlightdocDATA
++	uninstall-man uninstall-man1 \
++	uninstall-source_highlightdochtmlDATA
+ 
+ 
+ source-highlight.texinfo: help-output.texinfo lang-list.texinfo outlang-list.texinfo test.java.texinfo debug.java.texinfo style.texinfo

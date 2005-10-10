@@ -1,13 +1,126 @@
-$NetBSD: patch-ag,v 1.6 2004/10/21 00:15:47 seb Exp $
+$NetBSD: patch-ag,v 1.7 2005/10/10 09:05:59 seb Exp $
 
---- tests/Makefile.am.orig	2004-09-28 07:22:00.000000000 +0000
-+++ tests/Makefile.am
-@@ -287,7 +287,7 @@ check_log: test.log.html
- 	diff $(srcdir)/error.log.html error.log.out.html
- 	diff $(srcdir)/syslog.log.html syslog.log.out.html
- 
+--- tests/Makefile.in.orig	2005-10-09 09:27:08.000000000 +0000
++++ tests/Makefile.in
+@@ -55,6 +55,8 @@ am__configure_deps = $(am__aclocal_m4_de
+ mkinstalldirs = $(install_sh) -d
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES = valgrind_tests.sh valgrind_test.sh
++depcomp =
++am__depfiles_maybe =
+ SOURCES =
+ DIST_SOURCES =
+ am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+@@ -63,9 +65,9 @@ am__vpath_adj = case $$p in \
+     *) f=$$p;; \
+   esac;
+ am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+-am__installdirs = "$(DESTDIR)$(source_highlightdocdir)"
+-source_highlightdocDATA_INSTALL = $(INSTALL_DATA)
+-DATA = $(source_highlightdoc_DATA)
++am__installdirs = "$(DESTDIR)$(source_highlightdochtmldir)"
++source_highlightdochtmlDATA_INSTALL = $(INSTALL_DATA)
++DATA = $(source_highlightdochtml_DATA)
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ ACLOCAL = @ACLOCAL@
+ AMDEP_FALSE = @AMDEP_FALSE@
+@@ -168,6 +170,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ source_highlightdatadir = @source_highlightdatadir@
+ source_highlightdocdir = @source_highlightdocdir@
++source_highlightdochtmldir = @source_highlightdochtmldir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ STD_TAGS = --style-file $(top_srcdir)/src/default.style
+@@ -261,7 +264,7 @@ erasedir.sed erasedir2.sed
+ PROG_NOLANGDEF = $(PROGEXE) --outlang-def=$(srcdir)/simple.outlang $(STD_TAGS) --data-dir=$(srcdir)/
+ PROG_NOOUTLANGDEF = $(PROGEXE) --lang-def=$(srcdir)/simple.lang $(STD_TAGS)
+ CPP2HTML_WHEADERS = $(CPP2HTML) --header=$(srcdir)/header.html --footer=$(srcdir)/footer.html --title="Header and footer test"
 -source_highlightdoc_DATA = test.php3.html test.pl.html test.pm.html \
 +source_highlightdochtml_DATA = test.php3.html test.pl.html test.pm.html \
  test.py.html test.rb.html test.js.html test.lua.html test.ml.html \
- test.sml.html test.log.html access.log.html auth.log.html error.log.html syslog.log.html \
- tags.syslog tags.esc
+ test.sml.html test.log.html access.log.html auth.log.html error.log.html syslog.log.html test.htm.html test.java.tex.html \
+ syslog.style
+@@ -281,9 +284,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefi
+ 	      exit 1;; \
+ 	  esac; \
+ 	done; \
+-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  tests/Makefile'; \
++	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  --ignore-deps tests/Makefile'; \
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  tests/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps tests/Makefile
+ .PRECIOUS: Makefile
+ Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
+ 	@case '$?' in \
+@@ -306,22 +309,22 @@ valgrind_tests.sh: $(top_builddir)/confi
+ valgrind_test.sh: $(top_builddir)/config.status $(srcdir)/valgrind_test.sh.in
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+ uninstall-info-am:
+-install-source_highlightdocDATA: $(source_highlightdoc_DATA)
++install-source_highlightdochtmlDATA: $(source_highlightdochtml_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(source_highlightdocdir)" || $(mkdir_p) "$(DESTDIR)$(source_highlightdocdir)"
+-	@list='$(source_highlightdoc_DATA)'; for p in $$list; do \
++	test -z "$(source_highlightdochtmldir)" || $(mkdir_p) "$(DESTDIR)$(source_highlightdochtmldir)"
++	@list='$(source_highlightdochtml_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(source_highlightdocDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(source_highlightdocdir)/$$f'"; \
+-	  $(source_highlightdocDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(source_highlightdocdir)/$$f"; \
++	  echo " $(source_highlightdochtmlDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(source_highlightdochtmldir)/$$f'"; \
++	  $(source_highlightdochtmlDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(source_highlightdochtmldir)/$$f"; \
+ 	done
+ 
+-uninstall-source_highlightdocDATA:
++uninstall-source_highlightdochtmlDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(source_highlightdoc_DATA)'; for p in $$list; do \
++	@list='$(source_highlightdochtml_DATA)'; for p in $$list; do \
+ 	  f=$(am__strip_dir) \
+-	  echo " rm -f '$(DESTDIR)$(source_highlightdocdir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(source_highlightdocdir)/$$f"; \
++	  echo " rm -f '$(DESTDIR)$(source_highlightdochtmldir)/$$f'"; \
++	  rm -f "$(DESTDIR)$(source_highlightdochtmldir)/$$f"; \
+ 	done
+ tags: TAGS
+ TAGS:
+@@ -361,7 +364,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(source_highlightdocdir)"; do \
++	for dir in "$(DESTDIR)$(source_highlightdochtmldir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	done
+ install: install-am
+@@ -407,7 +410,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-source_highlightdocDATA
++install-data-am: install-source_highlightdochtmlDATA
+ 
+ install-exec-am:
+ 
+@@ -433,17 +436,17 @@ ps: ps-am
+ 
+ ps-am:
+ 
+-uninstall-am: uninstall-info-am uninstall-source_highlightdocDATA
++uninstall-am: uninstall-info-am uninstall-source_highlightdochtmlDATA
+ 
+ .PHONY: all all-am check check-am clean clean-generic distclean \
+ 	distclean-generic distdir dvi dvi-am html html-am info info-am \
+ 	install install-am install-data install-data-am install-exec \
+ 	install-exec-am install-info install-info-am install-man \
+-	install-source_highlightdocDATA install-strip installcheck \
++	install-source_highlightdochtmlDATA install-strip installcheck \
+ 	installcheck-am installdirs maintainer-clean \
+ 	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
+ 	pdf-am ps ps-am uninstall uninstall-am uninstall-info-am \
+-	uninstall-source_highlightdocDATA
++	uninstall-source_highlightdochtmlDATA
+ 
+ 
+ %.cc.html: %.cc

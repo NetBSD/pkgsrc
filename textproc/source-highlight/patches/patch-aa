@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2002/12/23 22:27:50 seb Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/10 09:05:59 seb Exp $
 
---- configure.in.orig	Wed Oct 30 18:21:25 2002
-+++ configure.in
-@@ -17,9 +17,11 @@ AM_INIT_AUTOMAKE(source-highlight,1.6.1)
+--- configure.ac.orig	2005-08-25 14:09:51.000000000 +0000
++++ configure.ac
+@@ -17,9 +17,11 @@ AM_INIT_AUTOMAKE(source-highlight,2.1.2)
  
  AC_SUBST(source_highlightdatadir)
  AC_SUBST(source_highlightdocdir)
@@ -12,5 +12,12 @@ $NetBSD: patch-aa,v 1.1 2002/12/23 22:27:50 seb Exp $
  source_highlightdocdir=$datadir/doc/source-highlight
 +source_highlightdochtmldir=$datadir/doc/html/source-highlight
  
- dnl scanner version
- 
+ dnl Checks for C compiler.
+ AC_PROG_CC
+@@ -216,4 +218,4 @@ if test -z "$ac_cv_path_HELP2MAN"; then
+ help2man is not installed so the man page will not
+ be updated in case command line options are changed.
+ This is important for maintainers only, though.])
+-fi
+\ No newline at end of file
++fi
