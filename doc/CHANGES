@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11399 2005/10/10 16:49:20 joerg Exp $
+$NetBSD: CHANGES,v 1.11400 2005/10/10 17:24:43 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4383,3 +4383,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/sun-jdk13 to 1.0.16 [jschauma 2005-10-10]
 	Updated devel/gtexinfo to 4.8nb1 [salo 2005-10-10]
 	Updated databases/postgresql80-client to 8.0.3nb3 [joerg 2005-10-10]
+	Renamed x11/imake to x11/XFree86-imake [reed 2005-10-10]
