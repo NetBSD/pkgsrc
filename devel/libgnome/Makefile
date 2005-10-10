@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2005/08/10 20:56:15 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/10/10 13:42:11 jmmv Exp $
 #
 
-DISTNAME=	libgnome-2.10.1
+DISTNAME=	libgnome-2.12.0.1
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -27,6 +27,7 @@ CONFIGURE_ARGS= 	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+INSTALL_MAKE_FLAGS+=	soundlistdir=${PREFIX}/share/examples/libgnome/sound/events
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/sound/events
 
