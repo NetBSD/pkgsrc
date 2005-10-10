@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/05/15 02:01:14 reed Exp $
+# $NetBSD: Makefile,v 1.47 2005/10/10 18:28:08 reed Exp $
 #
 # NOTE: If you update this package, it is *mandatory* that you update
 # 	pkgsrc/pkgtools/libnbcompat/files/README to reflect the actual
@@ -19,6 +19,7 @@ NO_CHECKSUM=		yes
 NO_MTREE=		yes
 
 GNU_CONFIGURE=		yes
+MAKE_ENV+=		BINMODE=${BINMODE}
 
 PKG_INFO=		PKG_DBDIR=${_PKG_DBDIR} ${PKG_INFO_CMD}
 PKG_CREATE=		PKG_DBDIR=${_PKG_DBDIR} ${PKG_CREATE_CMD}
