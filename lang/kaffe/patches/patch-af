@@ -1,0 +1,10 @@
+--- config/config.alias.orig	2005-08-04 19:13:02.000000000 +0000
++++ config/config.alias	2005-08-04 19:13:12.000000000 +0000
+@@ -26,6 +26,7 @@
+ cygwin*)	Khost_os=cygwin32 ;;
+ darwin*)	Khost_os=darwin ;;
+ freebsd*)	Khost_os=freebsd2 ;;
++dragonfly*)	Khost_os=freebsd2 ;;
+ hpux*)		Khost_os=hpux ;;
+ gnu*)		Khost_os=gnu ;;
+ irix*)		Khost_os=irix5 ;;
