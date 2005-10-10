@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/08/10 20:56:26 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/10 14:03:36 jmmv Exp $
 #
 
 DISTNAME=	gnome-themes-extras-0.8.1
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-themes-extras/0.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Collection of metathemes for the GNOME desktop environment
 
-DEPENDS+=		librsvg2-gtk2>=2.6.1:../../graphics/librsvg2-gtk2
 BUILD_USES_MSGFMT=	yes
 
 # NetBSD's pax-as-tar truncates filenames
@@ -25,8 +25,11 @@ USE_TOOLS+=		gmake pkg-config
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
+BUILDLINK_DEPENDS.librsvg2+=	librsvg2>=2.12.6
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk2-engines/buildlink3.mk"
