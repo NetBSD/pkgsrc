@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/05/10 13:47:08 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2005/10/10 21:23:24 joerg Exp $
 
 diff -rcp import/nuv/rtjpeg_aud_plugin.c import/nuv/rtjpeg_aud_plugin.c
 *** import/nuv/rtjpeg_aud_plugin.c	Tue Apr  8 20:50:11 2003
@@ -16,7 +16,7 @@ diff -rcp import/nuv/rtjpeg_aud_plugin.c import/nuv/rtjpeg_aud_plugin.c
       regions[0].end   = -1;
     }
   
-! #if defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+! #if defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__) || defined(__DragonFly__)
     rtjpeg_aud_file=open(tplorg, O_RDONLY);
   #else 
     rtjpeg_aud_file=open(tplorg, O_RDONLY|O_LARGEFILE);
