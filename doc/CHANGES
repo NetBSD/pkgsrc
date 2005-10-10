@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11396 2005/10/10 14:05:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.11397 2005/10/10 15:00:49 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4379,3 +4379,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/libgnomeprintui to 2.12.1 [jmmv 2005-10-10]
 	Updated graphics/librsvg2 to 2.12.6 [jmmv 2005-10-10]
 	Removed graphics/librsvg2-gtk [jmmv 2005-10-10]
+	Updated lang/sun-jre13 to 1.0.16 [jschauma 2005-10-10]
+	Updated lang/sun-jdk13 to 1.0.16 [jschauma 2005-10-10]
