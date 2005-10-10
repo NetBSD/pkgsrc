@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2005/09/28 14:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2005/10/10 13:43:44 jmmv Exp $
 #
 
-DISTNAME=	libgnomeui-2.10.1
+DISTNAME=	libgnomeui-2.12.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
 
-BUILDLINK_DEPENDS.gtk2=	gtk2+>=2.4.1
-BUILDLINK_DEPENDS.libgnome=	libgnome>=2.8.1
+BUILDLINK_DEPENDS.gtk2=		gtk2+>=2.8.0
+BUILDLINK_DEPENDS.libgnome=	libgnome>=2.12.0.1
 
 # Needed because part of the pc files doesn't get filled in till after
 # configure does its pass
