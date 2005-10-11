@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/10/10 21:54:31 agc Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/11 16:47:44 dillo Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -21,6 +21,9 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+# Do *not* add INTERACTIVE_STATE=fetch.  The fetch state is not
+# interactive if LIBDVDCSS_MASTER_SITES is defined.
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
