@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3995 2005/10/11 16:21:50 joerg Exp $
+$NetBSD: TODO,v 1.3996 2005/10/11 17:00:15 reed Exp $
 
 Suggested new packages
 ======================
@@ -1043,7 +1043,6 @@ Suggested package updates
 	o totd-1.5.1
 	o tpasm-1.2
 	o tpb-0.6.3
-	o trafshow-5.2.1
 	o transcode-0.6.14
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
