@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/03 13:39:31 adam Exp $
+$NetBSD: distinfo,v 1.2 2005/10/11 12:36:50 adam Exp $
 
-SHA1 (qalculate-gtk-0.8.1.tar.gz) = 4a7fd772c1e539cdcaecb67bbeaf65aac6564187
-RMD160 (qalculate-gtk-0.8.1.tar.gz) = 49de0e7ef9038cdc34af726fb95f1a972c88526e
-Size (qalculate-gtk-0.8.1.tar.gz) = 1205902 bytes
+SHA1 (qalculate-gtk-0.8.2.tar.gz) = f13968eb4b6b3950f95eb2b3a7faaab0fbfb49b9
+RMD160 (qalculate-gtk-0.8.2.tar.gz) = 9e32e8b783f009c7fe9cb9e941eb695b4658e99f
+Size (qalculate-gtk-0.8.2.tar.gz) = 1211225 bytes
 SHA1 (patch-aa) = 52d6f39fb7fd2b38f6e4da99f8c52d611d2e941c
