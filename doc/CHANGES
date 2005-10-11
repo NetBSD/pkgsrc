@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11423 2005/10/11 20:00:57 adrianp Exp $
+$NetBSD: CHANGES,v 1.11424 2005/10/11 20:55:28 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4411,3 +4411,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/sun-jre15 to 5.0.5 [tv 2005-10-11]
 	Updated x11/numlockx to 1.1 [reed 2005-10-11]
 	Updated net/p5-Socket6 to 0.19 [adrianp 2005-10-11]
+	Updated net/snort to 2.4.2 [adrianp 2005-10-11]
