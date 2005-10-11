@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11421 2005/10/11 17:57:04 tv Exp $
+$NetBSD: CHANGES,v 1.11422 2005/10/11 19:18:24 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4409,3 +4409,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/openssl to 0.9.7h [jlam 2005-10-11]
 	Updated lang/sun-jdk15 to 5.0.5 [tv 2005-10-11]
 	Updated lang/sun-jre15 to 5.0.5 [tv 2005-10-11]
+	Updated x11/numlockx to 1.1 [reed 2005-10-11]
