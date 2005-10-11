@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/11 13:26:44 adam Exp $
+bin/qalculate-bases
+share/applications/qalculate-bases.desktop
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/qalculate-bases.mo
