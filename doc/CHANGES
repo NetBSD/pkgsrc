@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11410 2005/10/11 10:07:33 tron Exp $
+$NetBSD: CHANGES,v 1.11411 2005/10/11 10:08:31 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4394,5 +4394,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/kaffe to 1.1.6 [tonio 2005-10-11]
 	Updated lang/kaffe-x11 to 1.1.6 [tonio 2005-10-11]
 	Updated lang/kaffe-esound to 1.1.6 [tonio 2005-10-11]
-	Updated multimedia/xanim to 2.92.0 [tron 2005-10-11]
 	Updated multimedia/xanim to 2.92.0 [tron 2005-10-11]
