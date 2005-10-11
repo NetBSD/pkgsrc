@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3994 2005/10/11 10:03:05 tonio Exp $
+$NetBSD: TODO,v 1.3995 2005/10/11 16:21:50 joerg Exp $
 
 Suggested new packages
 ======================
@@ -615,7 +615,6 @@ Suggested package updates
 	o libtool-1.5.20
 	o libtorrent-0.7.3
 	o licq-core-1.3.0
-	o lighttpd-1.4.5
 	o lilypond-2.6
 	o linuxsms-0.77
 	o lmbench-2.5
