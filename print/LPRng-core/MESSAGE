@@ -1,18 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/09/06 10:44:44 martti Exp $
+$NetBSD: MESSAGE,v 1.3 2005/10/11 15:06:29 reed Exp $
 
 To activate the LPRng printing system do the following:
 
     - set `lpd=NO' in /etc/rc.conf
-    - run ${PREFIX}/etc/rc.d/LPRng (may be added to /etc/rc.local or
+    - run ${RCD_SCRIPTS_DIR}/LPRng (may be added to /etc/rc.local or
       copied into /etc/rc.d)
     - remember to adjust your aliases or your PATH to use the new programs
 
 Note that LPRng uses:
 
-	${PKG_SYSCONFDIR}/etc/printcap
-	${PKG_SYSCONFDIR}/etc/lpd/lpd.conf
-	${PKG_SYSCONFDIR}/etc/lpd/lpd.perms
+	${PKG_SYSCONFDIR}/printcap
+	${PKG_SYSCONFDIR}/lpd/lpd.conf
+	${PKG_SYSCONFDIR}/lpd/lpd.perms
 
 Simple example configuration files are found at:
 
