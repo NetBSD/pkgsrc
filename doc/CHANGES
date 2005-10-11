@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11405 2005/10/11 01:11:29 minskim Exp $
+$NetBSD: CHANGES,v 1.11406 2005/10/11 01:47:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4389,3 +4389,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added www/squidpurge 20040201 [gdt 2005-10-11]
 	Updated x11/wxhaskell to 0.9.4nb2 [minskim 2005-10-11]
 	Updated math/mathomatic to 12.4.12 [minskim 2005-10-11]
+	Updated inputmethod/imhangul to 0.9.13 [minskim 2005-10-11]
