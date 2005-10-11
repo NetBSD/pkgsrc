@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3992 2005/10/10 11:35:19 wiz Exp $
+$NetBSD: TODO,v 1.3993 2005/10/11 01:11:30 minskim Exp $
 
 Suggested new packages
 ======================
@@ -639,7 +639,6 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.32
-	o mathomatic-12.4.12
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
