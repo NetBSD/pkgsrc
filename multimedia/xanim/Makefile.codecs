@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.codecs,v 1.1.1.1 2004/01/26 15:19:52 jmmv Exp $
+# $NetBSD: Makefile.codecs,v 1.2 2005/10/11 10:06:35 tron Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -11,28 +11,28 @@ XANIM_CODECS?=			${_XANIM_UNRESTRICTED_CODECS}
 _XANIM_RESTRICTED_CODECS=	cyuv iv32
 _XANIM_UNRESTRICTED_CODECS=	cvid
 
-_XANIM_CODEC.cvid.i386-a.out=	xa2.0_cvid_netbsd386.o.Z
-_XANIM_CODEC.cyuv.i386-a.out=	xa1.0_cyuv_netbsd386.o.Z
-_XANIM_CODEC.iv32.i386-a.out=	xa2.0_iv32_netbsd386.o.Z
+_XANIM_CODEC.cvid.i386-a.out=	xa2.0_cvid_netbsd386.o.gz
+_XANIM_CODEC.cyuv.i386-a.out=	xa1.0_cyuv_netbsd386.o.gz
+_XANIM_CODEC.iv32.i386-a.out=	xa2.0_iv32_netbsd386.o.gz
 
-_XANIM_CODEC.cvid.m68k-a.out=	xa2.0_cvid_netbsd68k.o.Z
-_XANIM_CODEC.cyuv.m68k-a.out=	xa1.0_cyuv_netbsd68k.o.Z
-_XANIM_CODEC.iv32.m68k-a.out=	xa2.0_iv32_netbsd68k.o.Z
+_XANIM_CODEC.cvid.m68k-a.out=	xa2.0_cvid_netbsd68k.o.gz
+_XANIM_CODEC.cyuv.m68k-a.out=	xa1.0_cyuv_netbsd68k.o.gz
+_XANIM_CODEC.iv32.m68k-a.out=	xa2.0_iv32_netbsd68k.o.gz
 
-_XANIM_CODEC.cvid.i386-ELF=	xa2.0_cvid_linuxELF.o.Z
-_XANIM_CODEC.cyuv.i386-ELF=	xa1.0_cyuv_linuxELF.o.Z
-_XANIM_CODEC.iv32.i386-ELF=	xa2.0_iv32_linuxELF.o.Z
+_XANIM_CODEC.cvid.i386-ELF=	xa2.0_cvid_linuxELF.o.gz
+_XANIM_CODEC.cyuv.i386-ELF=	xa1.0_cyuv_linuxELF.o.gz
+_XANIM_CODEC.iv32.i386-ELF=	xa2.0_iv32_linuxELF.o.gz
 
-_XANIM_CODEC.cvid.sparc-a.out=	xa2.0_cvid_sparcCOFF.o.Z
-_XANIM_CODEC.cyuv.sparc-a.out=	xa1.0_cyuv_sparcAOUT.o.Z
-_XANIM_CODEC.iv32.sparc-a.out=	xa2.0_iv32_sparcCOFF.o.Z
+_XANIM_CODEC.cvid.sparc-a.out=	xa2.0_cvid_sparcCOFF.o.gz
+_XANIM_CODEC.cyuv.sparc-a.out=	xa1.0_cyuv_sparcAOUT.o.gz
+_XANIM_CODEC.iv32.sparc-a.out=	xa2.0_iv32_sparcCOFF.o.gz
 
-_XANIM_CODEC.cvid.sparc-ELF=	xa2.0_cvid_sparcELF.o.Z
-_XANIM_CODEC.cyuv.sparc-ELF=	xa1.0_cyuv_sparcELF.o.Z
-_XANIM_CODEC.iv32.sparc-ELF=	xa2.0_iv32_sparcELF.o.Z
+_XANIM_CODEC.cvid.sparc-ELF=	xa2.0_cvid_sparcELF.o.gz
+_XANIM_CODEC.cyuv.sparc-ELF=	xa1.0_cyuv_sparcELF.o.gz
+_XANIM_CODEC.iv32.sparc-ELF=	xa2.0_iv32_sparcELF.o.gz
 
-_XANIM_CODEC.cvid.powerpc-ELF=	xa2.0_cvid_linuxPPC.o.Z
-_XANIM_CODEC.cyuv.powerpc-ELF=	xa1.0_cyuv_linuxPPC.o.Z
+_XANIM_CODEC.cvid.powerpc-ELF=	xa2.0_cvid_linuxPPC.o.gz
+_XANIM_CODEC.cyuv.powerpc-ELF=	xa1.0_cyuv_linuxPPC.o.gz
 
 _XANIM_DEF.cvid=	XA_CVID_DEF="-DXA_CVID"
 _XANIM_DEF.cyuv=	XA_CYUV_DEF="-DXA_CYUV"
@@ -49,7 +49,7 @@ _XANIM_MACH_TYPE=	${MACHINE_ARCH}-${OBJECT_FMT}
 CODECS+=	${_codec_}
 CODEC_FILES+=	${_XANIM_CODEC.${_codec_}.${_XANIM_MACH_TYPE}}
 MAKE_ENV+=	${_XANIM_DEF.${_codec_}}
-MAKE_ENV+=	${_XANIM_LIB.${_codec_}}="mods/${_XANIM_CODEC.${_codec_}.${_XANIM_MACH_TYPE}:S/.Z$//}"
+MAKE_ENV+=	${_XANIM_LIB.${_codec_}}="mods/${_XANIM_CODEC.${_codec_}.${_XANIM_MACH_TYPE}:S/.gz$//}"
 .    if !empty(_XANIM_RESTRICTED_CODECS:M${_codec_})
 _RESTRICTED_CODECS+=	${_codec_}
 .    endif
