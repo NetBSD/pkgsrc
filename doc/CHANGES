@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11424 2005/10/11 20:55:28 adrianp Exp $
+$NetBSD: CHANGES,v 1.11425 2005/10/11 23:39:07 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4412,3 +4412,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/numlockx to 1.1 [reed 2005-10-11]
 	Updated net/p5-Socket6 to 0.19 [adrianp 2005-10-11]
 	Updated net/snort to 2.4.2 [adrianp 2005-10-11]
+	Updated misc/koffice to 1.4.2 [markd 2005-10-11]
