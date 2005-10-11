@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11411 2005/10/11 10:08:31 tron Exp $
+$NetBSD: CHANGES,v 1.11412 2005/10/11 12:37:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4395,3 +4395,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/kaffe-x11 to 1.1.6 [tonio 2005-10-11]
 	Updated lang/kaffe-esound to 1.1.6 [tonio 2005-10-11]
 	Updated multimedia/xanim to 2.92.0 [tron 2005-10-11]
+	Updated math/qalculate to 0.8.2 [adam 2005-10-11]
+	Updated math/qalculate-gtk to 0.8.2 [adam 2005-10-11]
+	Updated math/qalculate-kde to 0.8.2 [adam 2005-10-11]
