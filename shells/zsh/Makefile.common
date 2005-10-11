@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/08/07 20:18:07 hiramatsu Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/10/11 12:43:00 joerg Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -57,7 +57,7 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/zsh
 
 .    if ${OPSYS} == "Linux" || ${OPSYS} == "IRIX" || ${OPSYS} == "OpenBSD"
 PLIST_SRC+=     ${PKGDIR}/PLIST.terminfo
-.    elif ${OPSYS} == "Interix"
+.    elif ${OPSYS} == "Interix" || ${OPSYS} == "DragonFly"
 PLIST_SRC+=     ${PKGDIR}/PLIST.terminfo ${PKGDIR}/PLIST.shlibs
 .    else
 PLIST_SRC+=     ${PKGDIR}/PLIST.shlibs
@@ -78,6 +78,9 @@ CONFIGURE_ARGS+=--with-tcsetpgrp
 PKG_SHELL=	bin/zsh
 
 INSTALL_TARGET=	install install.info
+
+pre-install:
+	@cd ${WRKSRC}/Completion; find . -name \*.orig -exec rm \{\} \;
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zsh
