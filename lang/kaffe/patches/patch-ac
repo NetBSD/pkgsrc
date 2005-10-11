@@ -1,14 +1,29 @@
-$NetBSD: patch-ac,v 1.8 2005/09/06 18:15:32 tonio Exp $
+$NetBSD: patch-ac,v 1.9 2005/10/11 10:00:15 tonio Exp $
 
---- config/i386/netbsd1/jit-md.h.orig	2005-04-24 20:01:15.000000000 +0200
-+++ config/i386/netbsd1/jit-md.h	2005-04-24 20:01:46.000000000 +0200
-@@ -26,7 +26,7 @@
+--- Makefile.in.orig	2005-09-17 23:41:50.000000000 +0200
++++ Makefile.in
+@@ -406,7 +406,6 @@ SUBDIRS = \
+ 	. \
+ 	libraries/javalib \
+ 	config \
+-	libltdl \
+ 	$(MAYBE_BINRELOC_DIR) \
+ 	kaffe/kaffeh \
+ 	include  \
+@@ -417,7 +416,7 @@ SUBDIRS = \
+ 	po \
+ 	tools
  
- /* Get the first exception frame from a signal handler */
- #define	EXCEPTIONFRAME(f, c)						\
--	(f).retbp = (c)->sc_ebp;					\
--	(f).retpc = (c)->sc_eip + 1
-+       (f).retbp = (c)->uc_mcontext.__gregs[_REG_EBP];                 \
-+       (f).retpc = (c)->uc_mcontext.__gregs[_REG_EIP] + 1
- 
- #endif
+-DIST_SUBDIRS = config include replace libltdl kaffe libraries tools test po
++DIST_SUBDIRS = config include replace kaffe libraries tools test po
+ EXTRA_DIST = \
+ 	ChangeLog.1 \
+ 	ChangeLog.2 \
+@@ -538,7 +537,6 @@ DIRECTORIES_BEFORE_RTJAR = \
+ 	config \
+ 	include \
+ 	replace \
+-	libltdl \
+ 	kaffe/kaffevm \
+ 	libraries/clib \
+ 	kaffe
