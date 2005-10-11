@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/10/11 16:39:29 reed Exp $
+# $NetBSD: Makefile,v 1.22 2005/10/11 17:02:50 reed Exp $
 
 DISTNAME=	trafshow-5.2.1
 CATEGORIES=	net
@@ -28,6 +28,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/.trafshow \
 		${PREFIX}/share/examples/trafshow/trafshow
 
+BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.7
 .include "../../net/libpcap/buildlink3.mk"
+
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
