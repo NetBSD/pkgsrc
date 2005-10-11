@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/11 13:29:40 adam Exp $
+bin/qalculate-units
+share/applications/qalculate-units.desktop
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/qalculate-units.mo
