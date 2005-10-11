@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2005/06/17 03:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/10/11 16:39:29 reed Exp $
 
-DISTNAME=	trafshow-4.0
-PKGREVISION=	1
+DISTNAME=	trafshow-5.2.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.nsk.su/pub/RinetSoftware/
 EXTRACT_SUFX=	.tgz
@@ -21,14 +20,14 @@ BUILD_DEFS+=	USE_INET6
 CPPFLAGS+=	-DINET6
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/trafshow
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/trafshow ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/trafshow.1 ${PREFIX}/man/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/trafshow
+	${INSTALL_MAN} ${WRKSRC}/trafshow.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/.trafshow \
 		${PREFIX}/share/examples/trafshow/trafshow
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
