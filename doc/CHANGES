@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11419 2005/10/11 17:00:15 reed Exp $
+$NetBSD: CHANGES,v 1.11420 2005/10/11 17:19:23 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4406,3 +4406,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/libmemcache version 1.4.0beta9 [joerg 2005-10-11]
 	Updated www/lighttpd to 1.4.6 [joerg 2005-10-11]
 	Updated net/trafshow to 5.2.1 [reed 2005-10-11]
+	Updated security/openssl to 0.9.7h [jlam 2005-10-11]
