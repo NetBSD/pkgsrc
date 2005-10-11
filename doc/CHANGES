@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11407 2005/10/11 09:09:33 wiz Exp $
+$NetBSD: CHANGES,v 1.11408 2005/10/11 10:03:05 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4391,3 +4391,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/mathomatic to 12.4.12 [minskim 2005-10-11]
 	Updated inputmethod/imhangul to 0.9.13 [minskim 2005-10-11]
 	Updated www/squidpurge to 20040201nb1 [wiz 2005-10-11]
+	Updated lang/kaffe to 1.1.6 [tonio 2005-10-11]
+	Updated lang/kaffe-x11 to 1.1.6 [tonio 2005-10-11]
+	Updated lang/kaffe-esound to 1.1.6 [tonio 2005-10-11]
