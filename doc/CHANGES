@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11417 2005/10/11 15:45:49 joerg Exp $
+$NetBSD: CHANGES,v 1.11418 2005/10/11 16:40:22 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4388,7 +4388,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Renamed x11/imake to x11/XFree86-imake [reed 2005-10-10]
 	Updated lang/perl5 to 5.8.7nb4 [joerg 2005-10-10]
 	Updated games/fortunes-calvin to 0.2 [jschauma 2005-10-10]
-	Added www/squidpurge 20040201 [gdt 2005-10-11]
+	Added www/squidpurge 0.20040201 [gdt 2005-10-11]
 	Updated x11/wxhaskell to 0.9.4nb2 [minskim 2005-10-11]
 	Updated math/mathomatic to 12.4.12 [minskim 2005-10-11]
 	Updated inputmethod/imhangul to 0.9.13 [minskim 2005-10-11]
