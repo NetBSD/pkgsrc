@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2005/10/08 22:41:56 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/10/11 07:23:52 abs Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	8.15
@@ -11,6 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 
 CONFLICTS+=	ghostscript{,-nox11}-[0-9]*
+CONFLICTS+=	ghostscript-afpl-[0-9]*
 CONFLICTS+=	ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
