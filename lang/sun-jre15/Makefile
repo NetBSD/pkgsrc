@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2005/10/03 21:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/10/11 17:56:24 tv Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
-DISTNAME=	jre-1_5_0_04-linux-i586
-PKGNAME=	sun-jre15-5.0.4
-PKGREVISION=	1
+DISTNAME=	jre-1_5_0_05-linux-i586
+PKGNAME=	sun-jre15-5.0.5
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.5.0
 
 SHORT=		JRE
 
-WRKSRC=		${WRKDIR}/jre1.5.0_04
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-//:S/_/./:S/_/./:S/-linux-i586//}
 USE_PKGINSTALL=	yes
 JAVA_WRAPPERS=	java javaws keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
@@ -54,6 +53,8 @@ do-configure:
 		${MV} -f $$file $$file.default;				\
 	done
 	@${ECHO} 'CONF_FILES="${CONF_FILES}"' >${HEADER_EXTRA_TMPL}
+
+pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
 	${SED} 's/@SUN_JRE15_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
