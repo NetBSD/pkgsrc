@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/09/11 17:01:14 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/11 12:35:06 adam Exp $
 
-DISTNAME=	libqalculate-0.8.1.1
-PKGNAME=	qalculate-0.8.1.1
+DISTNAME=	libqalculate-0.8.2
+PKGNAME=	qalculate-0.8.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -9,10 +9,10 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://qalculate.sourceforge.net/
 COMMENT=	Qalculate is a modern multi-purpose desktop calculator
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
 USE_GNU_READLINE=	yes
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/src/libqalculate/libqalculate.pc.in
