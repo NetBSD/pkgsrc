@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11415 2005/10/11 13:32:16 adam Exp $
+$NetBSD: CHANGES,v 1.11416 2005/10/11 15:36:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4403,3 +4403,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added math/qalculate-bases 0.8.2 [adam 2005-10-11]
 	Added math/qalculate-currency 0.8.2 [adam 2005-10-11]
 	Added math/qalculate-units 0.8.2 [adam 2005-10-11]
+	Added devel/libmemcache version 1.4.0beta9 [joerg 2005-10-11]
