@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11403 2005/10/11 00:57:08 gdt Exp $
+$NetBSD: CHANGES,v 1.11404 2005/10/11 01:08:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4387,3 +4387,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/perl5 to 5.8.7nb4 [joerg 2005-10-10]
 	Updated games/fortunes-calvin to 0.2 [jschauma 2005-10-10]
 	Added www/squidpurge 20040201 [gdt 2005-10-11]
+	Updated x11/wxhaskell to 0.9.4nb2 [minskim 2005-10-11]
