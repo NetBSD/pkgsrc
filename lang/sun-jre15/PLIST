@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/02/02 13:32:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/10/11 17:56:25 tv Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -54,6 +54,8 @@ java/sun-1.5/lib/fontconfig.RedHat.3.bfc.default
 java/sun-1.5/lib/fontconfig.RedHat.3.properties.src.default
 java/sun-1.5/lib/fontconfig.RedHat.8.0.bfc.default
 java/sun-1.5/lib/fontconfig.RedHat.8.0.properties.src.default
+java/sun-1.5/lib/fontconfig.RedHat.9.0.bfc.default
+java/sun-1.5/lib/fontconfig.RedHat.9.0.properties.src.default
 java/sun-1.5/lib/fontconfig.RedHat.bfc.default
 java/sun-1.5/lib/fontconfig.RedHat.properties.src.default
 java/sun-1.5/lib/fontconfig.SuSE.bfc.default
@@ -247,6 +249,17 @@ java/sun-1.5/lib/zi/America/Anchorage
 java/sun-1.5/lib/zi/America/Anguilla
 java/sun-1.5/lib/zi/America/Antigua
 java/sun-1.5/lib/zi/America/Araguaina
+java/sun-1.5/lib/zi/America/Argentina/Buenos_Aires
+java/sun-1.5/lib/zi/America/Argentina/Catamarca
+java/sun-1.5/lib/zi/America/Argentina/ComodRivadavia
+java/sun-1.5/lib/zi/America/Argentina/Cordoba
+java/sun-1.5/lib/zi/America/Argentina/Jujuy
+java/sun-1.5/lib/zi/America/Argentina/La_Rioja
+java/sun-1.5/lib/zi/America/Argentina/Mendoza
+java/sun-1.5/lib/zi/America/Argentina/Rio_Gallegos
+java/sun-1.5/lib/zi/America/Argentina/San_Juan
+java/sun-1.5/lib/zi/America/Argentina/Tucuman
+java/sun-1.5/lib/zi/America/Argentina/Ushuaia
 java/sun-1.5/lib/zi/America/Aruba
 java/sun-1.5/lib/zi/America/Asuncion
 java/sun-1.5/lib/zi/America/Bahia
@@ -256,17 +269,14 @@ java/sun-1.5/lib/zi/America/Belize
 java/sun-1.5/lib/zi/America/Boa_Vista
 java/sun-1.5/lib/zi/America/Bogota
 java/sun-1.5/lib/zi/America/Boise
-java/sun-1.5/lib/zi/America/Buenos_Aires
 java/sun-1.5/lib/zi/America/Cambridge_Bay
 java/sun-1.5/lib/zi/America/Campo_Grande
 java/sun-1.5/lib/zi/America/Cancun
 java/sun-1.5/lib/zi/America/Caracas
-java/sun-1.5/lib/zi/America/Catamarca
 java/sun-1.5/lib/zi/America/Cayenne
 java/sun-1.5/lib/zi/America/Cayman
 java/sun-1.5/lib/zi/America/Chicago
 java/sun-1.5/lib/zi/America/Chihuahua
-java/sun-1.5/lib/zi/America/Cordoba
 java/sun-1.5/lib/zi/America/Costa_Rica
 java/sun-1.5/lib/zi/America/Cuiaba
 java/sun-1.5/lib/zi/America/Curacao
@@ -299,7 +309,6 @@ java/sun-1.5/lib/zi/America/Indianapolis
 java/sun-1.5/lib/zi/America/Inuvik
 java/sun-1.5/lib/zi/America/Iqaluit
 java/sun-1.5/lib/zi/America/Jamaica
-java/sun-1.5/lib/zi/America/Jujuy
 java/sun-1.5/lib/zi/America/Juneau
 java/sun-1.5/lib/zi/America/Kentucky/Monticello
 java/sun-1.5/lib/zi/America/La_Paz
@@ -311,7 +320,6 @@ java/sun-1.5/lib/zi/America/Managua
 java/sun-1.5/lib/zi/America/Manaus
 java/sun-1.5/lib/zi/America/Martinique
 java/sun-1.5/lib/zi/America/Mazatlan
-java/sun-1.5/lib/zi/America/Mendoza
 java/sun-1.5/lib/zi/America/Menominee
 java/sun-1.5/lib/zi/America/Merida
 java/sun-1.5/lib/zi/America/Mexico_City
@@ -648,6 +656,7 @@ java/sun-1.5/plugin/${MACHINE_ARCH}/ns7/libjavaplugin_oji.so
 @dirrm java/sun-1.5/lib/zi/America/North_Dakota
 @dirrm java/sun-1.5/lib/zi/America/Kentucky
 @dirrm java/sun-1.5/lib/zi/America/Indiana
+@dirrm java/sun-1.5/lib/zi/America/Argentina
 @dirrm java/sun-1.5/lib/zi/America
 @dirrm java/sun-1.5/lib/zi/Africa
 @dirrm java/sun-1.5/lib/zi
