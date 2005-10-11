@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2002/10/22 11:35:40 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2005/10/11 02:03:18 jschauma Exp $
 
 --- locate/Makefile.in.orig	Sat Nov  5 15:44:08 1994
 +++ locate/Makefile.in
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.3 2002/10/22 11:35:40 wiz Exp $
 -	    echo formatting $$man as $$cdir/$$inst; \
 -	    $(NROFF) -man $(srcdir)/$$man > $$cdir/$$inst; \
 +	    echo formatting $$man as $$cdir/$$inst0; \
-+	    $(NROFF) -man $(srcdir)/$$man > $$cdir/$$inst0; \
++	    $(NROFF) -man $(srcdir)/$$man > $$cdir/$$inst0 || true; \
  	  fi; \
  	done
  
