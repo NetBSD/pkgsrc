@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/05/30 14:52:52 dillo Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/10/11 07:23:52 abs Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.07
@@ -16,6 +16,7 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.cups.org/ghostscript.html
 
 CONFLICTS+=	ghostscript{,-nox11}-[0-9]*
+CONFLICTS+=	ghostscript-afpl-[0-9]*
 CONFLICTS+=	ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
