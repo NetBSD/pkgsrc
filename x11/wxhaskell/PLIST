@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/07 11:34:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/11 01:03:57 minskim Exp $
 lib/imports/Graphics/UI/WX.hi
 lib/imports/Graphics/UI/WX/Attributes.hi
 lib/imports/Graphics/UI/WX/Classes.hi
@@ -38,7 +38,7 @@ lib/imports/Graphics/UI/WXCore/WxcDefs.hi
 lib/imports/Graphics/UI/WXCore/WxcObject.hi
 lib/imports/Graphics/UI/WXCore/WxcTypes.hi
 lib/libwx.a
-lib/libwxc-gtk2.6.1-${PKGVERSION}.so
+lib/libwxc-gtk2.6.2-${PKGVERSION}.so
 lib/libwxcore.a
 lib/libwxcore0.a
 lib/libwxcore1.a
