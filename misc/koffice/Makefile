@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.65 2005/10/02 12:35:37 seb Exp $
+# $NetBSD: Makefile,v 1.66 2005/10/11 23:34:02 markd Exp $
 
-DISTNAME=	koffice-1.4.1
+DISTNAME=	koffice-1.4.2
 CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.4.1/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.4.1/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.4.1/src/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.4.2/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.4.2/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.4.2/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite
 
@@ -40,21 +40,6 @@ REPLACE_PERL+=		kpresenter/kprconverter.pl
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
-
-# a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
-SUBST_CLASSES+=		hints
-SUBST_STAGE.hints=	post-patch
-SUBST_MESSAGE.hints=	"Fix includehints."
-SUBST_FILES.hints=	krita/ui/widgets/kis_wdg_autogradient.ui \
-			krita/ui/kis_previewwidgetbase.ui \
-			krita/ui/wdgnewimage.ui \
-			krita/ui/wdgcolorsettings.ui \
-			krita/ui/wdglayerbox.ui \
-			krita/plugins/screenshot/ksnapshotwidget.ui \
-			krita/plugins/convolutionfilters/kis_custom_convolution_filter_configuration_base_widget.ui \
-			krita/plugins/colorspaceconversion/wdgconvertcolorspace.ui \
-			kpresenter/imageEffectBase.ui
-SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
 .include "options.mk"
 
