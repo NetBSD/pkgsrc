@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3993 2005/10/11 01:11:30 minskim Exp $
+$NetBSD: TODO,v 1.3994 2005/10/11 10:03:05 tonio Exp $
 
 Suggested new packages
 ======================
@@ -581,7 +581,6 @@ Suggested package updates
 	o jessie-1.0.0
 	o jftpgw-0.13.5
 	o jove-4.16.0.65
-	o kaffe-1.1.6
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.1
