@@ -1,0 +1,11 @@
+--- Completion/Unix/Command/_ifconfig.orig	2005-05-09 23:57:59.000000000 +0200
++++ Completion/Unix/Command/_ifconfig	2005-05-09 23:58:49.000000000 +0200
+@@ -19,7 +19,7 @@
+       {,-}trailers {,-}link{0,1,2}
+     )
+   ;;
+-  freebsd*)
++  freebsd* | dragonfly*)
+     args=( -s $updown
+       '(-a -l -u -d -m -L 1 *)-C[list interface cloners]'
+       '(-l -C)-m[list supported media]'

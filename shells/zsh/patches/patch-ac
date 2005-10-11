@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.18 2005/04/07 14:16:41 adam Exp $
+$NetBSD: patch-ac,v 1.19 2005/10/11 12:43:00 joerg Exp $
 
---- configure.orig	2005-04-04 09:49:26.000000000 +0000
-+++ configure
-@@ -15724,6 +15724,10 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6
+--- configure.orig	2005-04-04 11:49:26.000000000 +0200
++++ configure	2005-05-10 00:02:26.000000000 +0200
+@@ -15724,6 +15724,10 @@
          DLLD="${DLLD=$CC}"
          DLLDARG=""
        ;;
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.18 2005/04/07 14:16:41 adam Exp $
        * )
  	DLLD="${DLLD=ld}"
  	DLLDARG=""
-@@ -15734,6 +15738,7 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6
+@@ -15734,6 +15738,7 @@
      case "$host_os" in
        hpux*)   DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
        darwin*) DLCFLAGS="${DLCFLAGS=-fno-common}" ;;
@@ -21,12 +21,12 @@ $NetBSD: patch-ac,v 1.18 2005/04/07 14:16:41 adam Exp $
        *)       DLCFLAGS="${DLCFLAGS=-fPIC}" ;;
      esac
    else
-@@ -15747,7 +15752,7 @@ echo "${ECHO_T}$zsh_cv_sys_elf" >&6
+@@ -15747,7 +15752,7 @@
      esac
    fi
    case "$host_os" in
 -    freebsd*|linux*|irix*|osf*|gnu*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
-+    freebsd*|linux*|irix*|osf*|gnu*|interix*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
++    freebsd*|linux*|irix*|osf*|gnu*|interix*|dragonfly*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
      sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
      sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
      netbsd*)      DLLDFLAGS="${DLLDFLAGS=${DLLDARG}-x -shared --whole-archive}" ;;
