@@ -1,21 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:52 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/11 10:06:35 tron Exp $
 
-DISTNAME=	xanim2801
-PKGNAME=	xanim-2.80.1
-PKGREVISION=	2
+DISTNAME=	xanim2920
+PKGNAME=	xanim-2.92.0
 CATEGORIES=	multimedia x11
-MASTER_SITES=	ftp://xanim.va.pubnix.com/\
-		ftp://xanim.va.pubnix.com/modules/ \
-		ftp://ftp.ut.ee/pub/graphics/xanim/ \
-		ftp://ftp.ut.ee/pub/graphics/xanim/modules/ \
-		ftp://ftp.ba-stuttgart.de/Mirrors/xanim/ \
-		ftp://ftp.ba-stuttgart.de/Mirrors/xanim/modules/ \
-		http://smurfland.cit.buffalo.edu/xanim/files/ \
-		http://smurfland.cit.buffalo.edu/xanim/files/modules/
+MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/ \
+		ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/modules/
 DISTFILES=	${EXTRACT_ONLY} ${CODEC_FILES}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://xanim.va.pubnix.com/
 COMMENT=	Play most popular animation formats and show pictures
 
 EXTRACT_ONLY=   ${DISTNAME}${EXTRACT_SUFX}
