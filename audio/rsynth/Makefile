@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:02:38 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/11 21:30:39 reed Exp $
 
 DISTNAME=	rsynth-2.0
 PKGREVISION=	1
@@ -16,6 +16,7 @@ EXTRACT_ONLY=	rsynth-2.0.tar.gz
 
 DIST_SUBDIR=	rsynth
 GNU_CONFIGURE=	YES
+CONFIGURE_HAS_MANDIR=	NO
 
 CONFIGURE_ARGS+=--with-aDict="${WRKDIR}/cmudict.0.4"
 CONFIGURE_ARGS+=--without-bDict
