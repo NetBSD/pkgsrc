@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:07:37 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/11 12:20:57 tonio Exp $
 
 DISTNAME=		daapd-0.2.3d
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tgz
@@ -19,6 +19,17 @@ RCD_SCRIPTS=		daapd
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=    		${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
+
+PKG_OPTIONS_VAR=PKG_OPTIONS.daapd
+PKG_SUPPORTED_OPTIONS=faad
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mfaad)
+.include "../../audio/faad2/buildlink3.mk"
+  MAKE_ENV+= WITH_FAAD=1
+.else
+  MAKE_ENV+= WITH_FAAD=0
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
