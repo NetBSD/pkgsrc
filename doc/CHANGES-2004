@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.13 2005/07/28 15:14:42 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.14 2005/10/11 15:42:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1221,7 +1221,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mimedefang to 2.40 [markd 2004-03-07]
 	Updated pure-ftpd to 1.0.18 [recht 2004-03-07]
 	Updated scrollkeeper to 0.3.14nb2 [jmmv 2004-03-07]
-	Updated ruby-racc to 1.4.4 [taca 2004-03-07]
 	Removed ruby-racc-runtime [taca 2004-03-07]
 	Added ccsh-0.0.4 [minskim 2004-03-07]
 	Updated gnome-session to 2.4.2nb4 [jmmv 2004-03-07]
