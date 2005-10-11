@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/23 14:04:03 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/11 07:23:52 abs Exp $
 #
 
 DISTNAME=		ghostscript-8.51
@@ -10,6 +10,11 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ghostscript.sourceforge.net/
 COMMENT=		Postscript interpreter
+
+CONFLICTS+=		ghostscript{,-nox11}-[0-9]*
+CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
+CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
+CONFLICTS+=		hpijs-[0-9]*
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
