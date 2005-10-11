@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2005/10/10 13:06:11 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2005/10/11 12:20:57 tonio Exp $
 
---- makefile.orig	2004-09-07 21:17:58.000000000 -0400
+--- makefile.orig	2004-09-08 03:17:58.000000000 +0200
 +++ makefile
 @@ -2,7 +2,7 @@
  
  HOWL_ENABLE = 1
  ZLIB_ENABLE = 1
 -MPEG4_ENABLE = 1
-+MPEG4_ENABLE = 0
++MPEG4_ENABLE = $(WITH_FAAD)
  
  
  # no need to touch anything below this line
