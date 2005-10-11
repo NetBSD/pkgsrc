@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2005/09/20 18:01:26 adrianp Exp $
+$NetBSD: distinfo,v 1.31 2005/10/11 20:53:22 adrianp Exp $
 
-SHA1 (snort-2.4.1.tar.gz) = 9aa408848ce3c1958e8a1854332800366376f1d6
-RMD160 (snort-2.4.1.tar.gz) = d0926557579e5bd0f5e73d749e43412738f823e1
-Size (snort-2.4.1.tar.gz) = 2695304 bytes
+SHA1 (snort-2.4.2.tar.gz) = ce770b4c2ab8b501509e7fa82e3bed2c389e6835
+RMD160 (snort-2.4.2.tar.gz) = 76b2c40f31fdeca20ff42a7ff732024dc25aa62b
+Size (snort-2.4.2.tar.gz) = 2785710 bytes
 SHA1 (patch-aa) = f8cd982f2fbc5ed828bf021a489097408f1c9d43
 SHA1 (patch-ab) = 0ea7deb91de5d3d68558a30e80dcbd8bd81f8a5e
 SHA1 (patch-ac) = 6cdf26fcaeb8dad9cd9562b77377bd56b49c9f38
