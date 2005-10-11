@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/09/04 06:37:05 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2005/10/11 15:44:00 joerg Exp $
 
 PKG_OPTIONS_VAR =       PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=  bzip fam gdbm inet6 ldap lua mysql ssl
+PKG_SUPPORTED_OPTIONS=  bzip fam gdbm inet6 ldap lua mysql ssl memcache
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
@@ -59,10 +59,10 @@ CONFIGURE_ARGS+=	--with-lua
 ### Support using memcached as an in-memory caching system for the
 ### "trigger before download" and CML modules.
 ###
-#.if !empty(PKG_OPTIONS:Mmemcache)
-#.  include "../../devel/libmemcache/buildlink3.mk"
-#CONFIGURE_ARGS+=	--with-memcache
-#.endif
+.if !empty(PKG_OPTIONS:Mmemcache)
+.  include "../../devel/libmemcache/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-memcache
+.endif
 
 ###
 ### Allow using MySQL for virtual host configuration.
