@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/07 11:27:29 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/11 02:40:21 ben Exp $
 
---- configure.orig	Sun Sep 21 11:31:30 2003
+--- configure.orig	2003-09-21 11:31:30.000000000 +0000
 +++ configure
 @@ -11498,9 +11498,10 @@ SEARCH_INCLUDE="\
      /usr/local/x11r5/include  \
@@ -15,7 +15,109 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/08/07 11:27:29 wiz Exp $
  
  
  cat > confcache <<\EOF
-@@ -16104,8 +16105,8 @@ esac
+@@ -13381,6 +13382,101 @@ echo "configure:13351: checking PANGOFT2
+   fi
+ 
+             fi
++
++  succeeded=no
++
++  if test -z "$PKG_CONFIG"; then
++    # Extract the first word of "pkg-config", so it can be a program name with args.
++set dummy pkg-config; ac_word=$2
++echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
++echo "configure:14533: checking for $ac_word" >&5
++if eval "test \"`echo '$''{'ac_cv_path_PKG_CONFIG'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  case "$PKG_CONFIG" in
++  /*)
++  ac_cv_path_PKG_CONFIG="$PKG_CONFIG" # Let the user override the test with a path.
++  ;;
++  ?:/*)			 
++  ac_cv_path_PKG_CONFIG="$PKG_CONFIG" # Let the user override the test with a dos path.
++  ;;
++  *)
++  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
++  ac_dummy="$PATH"
++  for ac_dir in $ac_dummy; do 
++    test -z "$ac_dir" && ac_dir=.
++    if test -f $ac_dir/$ac_word; then
++      ac_cv_path_PKG_CONFIG="$ac_dir/$ac_word"
++      break
++    fi
++  done
++  IFS="$ac_save_ifs"
++  test -z "$ac_cv_path_PKG_CONFIG" && ac_cv_path_PKG_CONFIG="no"
++  ;;
++esac
++fi
++PKG_CONFIG="$ac_cv_path_PKG_CONFIG"
++if test -n "$PKG_CONFIG"; then
++  echo "$ac_t""$PKG_CONFIG" 1>&6
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++  fi
++
++  if test "$PKG_CONFIG" = "no" ; then
++     echo "*** The pkg-config script could not be found. Make sure it is"
++     echo "*** in your path, or set the PKG_CONFIG environment variable"
++     echo "*** to the full path to pkg-config."
++     echo "*** Or see http://www.freedesktop.org/software/pkgconfig to get pkg-config."
++  else
++     PKG_CONFIG_MIN_VERSION=0.9.0
++     if $PKG_CONFIG --atleast-pkgconfig-version $PKG_CONFIG_MIN_VERSION; then
++        echo $ac_n "checking for pangox""... $ac_c" 1>&6
++echo "configure:14577: checking for pangox" >&5
++
++        if $PKG_CONFIG --exists "pangox" ; then
++            echo "$ac_t""yes" 1>&6
++            succeeded=yes
++
++            echo $ac_n "checking PANGOX_CFLAGS""... $ac_c" 1>&6
++echo "configure:14584: checking PANGOX_CFLAGS" >&5
++            PANGOX_CFLAGS=`$PKG_CONFIG --cflags "pangox"`
++            echo "$ac_t""$PANGOX_CFLAGS" 1>&6
++
++            echo $ac_n "checking PANGOX_LIBS""... $ac_c" 1>&6
++echo "configure:14589: checking PANGOX_LIBS" >&5
++            PANGOX_LIBS=`$PKG_CONFIG --libs "pangox"`
++            echo "$ac_t""$PANGOX_LIBS" 1>&6
++        else
++            PANGOX_CFLAGS=""
++            PANGOX_LIBS=""
++            ## If we have a custom action on failure, don't print errors, but 
++            ## do set a variable so people can do so.
++            PANGOX_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "pangox"`
++            
++        fi
++
++        
++        
++     else
++        echo "*** Your version of pkg-config is too old. You need version $PKG_CONFIG_MIN_VERSION or newer."
++        echo "*** See http://www.freedesktop.org/software/pkgconfig"
++     fi
++  fi
++
++  if test $succeeded = yes; then
++     
++                        CXXFLAGS="$CXXFLAGS $PANGOX_CFLAGS"
++                        LIBS="$LIBS $PANGOX_LIBS"
++                    
++  else
++     
++                        { echo "configure: error: pangox library not found, library cannot be compiled in Unicode mode" 1>&2; exit 1; }
++                    
++                
++  fi
++
+         else
+             if test "$wxUSE_UNICODE" = "yes"; then
+                 echo "configure: warning: Unicode configuration not supported with GTK+ 1.x" 1>&2
+@@ -16104,8 +16200,8 @@ esac
  WX_LIBRARY_NAME_STATIC="lib${WX_LIBRARY}.a"
  WX_LIBRARY_NAME_STATIC_GL="lib${WX_LIBRARY_GL}.a"
  
@@ -26,7 +128,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/08/07 11:27:29 wiz Exp $
  
  if test "$wxUSE_OPENGL" = "yes"; then
      WXCONFIG_LIBS_GL="-l${WX_LIBRARY_GL} ${OPENGL_LIBS}"
-@@ -22777,6 +22778,7 @@ s%@WX_RELEASE_NUMBER@%$WX_RELEASE_NUMBER
+@@ -22777,6 +22873,7 @@ s%@WX_RELEASE_NUMBER@%$WX_RELEASE_NUMBER
  s%@WX_LIBRARY_NAME_STATIC@%$WX_LIBRARY_NAME_STATIC%g
  s%@WX_LIBRARY_NAME_SHARED@%$WX_LIBRARY_NAME_SHARED%g
  s%@WX_LIBRARY_BASENAME@%$WX_LIBRARY_BASENAME%g
