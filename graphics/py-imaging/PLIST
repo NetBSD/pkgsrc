@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/14 16:43:50 recht Exp $
-${PYINC}/PIL/ImConfig.h
+@comment $NetBSD: PLIST,v 1.7 2005/10/12 14:48:44 drochner Exp $
 ${PYINC}/PIL/ImPlatform.h
 ${PYINC}/PIL/Imaging.h
 ${PYSITELIB}/PIL.pth
@@ -12,6 +11,9 @@ ${PYSITELIB}/PIL/BdfFontFile.pyo
 ${PYSITELIB}/PIL/BmpImagePlugin.py
 ${PYSITELIB}/PIL/BmpImagePlugin.pyc
 ${PYSITELIB}/PIL/BmpImagePlugin.pyo
+${PYSITELIB}/PIL/BufrStubImagePlugin.py
+${PYSITELIB}/PIL/BufrStubImagePlugin.pyc
+${PYSITELIB}/PIL/BufrStubImagePlugin.pyo
 ${PYSITELIB}/PIL/ContainerIO.py
 ${PYSITELIB}/PIL/ContainerIO.pyc
 ${PYSITELIB}/PIL/ContainerIO.pyo
@@ -27,6 +29,9 @@ ${PYSITELIB}/PIL/EpsImagePlugin.pyo
 ${PYSITELIB}/PIL/ExifTags.py
 ${PYSITELIB}/PIL/ExifTags.pyc
 ${PYSITELIB}/PIL/ExifTags.pyo
+${PYSITELIB}/PIL/FitsStubImagePlugin.py
+${PYSITELIB}/PIL/FitsStubImagePlugin.pyc
+${PYSITELIB}/PIL/FitsStubImagePlugin.pyo
 ${PYSITELIB}/PIL/FliImagePlugin.py
 ${PYSITELIB}/PIL/FliImagePlugin.pyc
 ${PYSITELIB}/PIL/FliImagePlugin.pyo
@@ -51,6 +56,15 @@ ${PYSITELIB}/PIL/GimpGradientFile.pyo
 ${PYSITELIB}/PIL/GimpPaletteFile.py
 ${PYSITELIB}/PIL/GimpPaletteFile.pyc
 ${PYSITELIB}/PIL/GimpPaletteFile.pyo
+${PYSITELIB}/PIL/GribStubImagePlugin.py
+${PYSITELIB}/PIL/GribStubImagePlugin.pyc
+${PYSITELIB}/PIL/GribStubImagePlugin.pyo
+${PYSITELIB}/PIL/Hdf5StubImagePlugin.py
+${PYSITELIB}/PIL/Hdf5StubImagePlugin.pyc
+${PYSITELIB}/PIL/Hdf5StubImagePlugin.pyo
+${PYSITELIB}/PIL/IcnsImagePlugin.py
+${PYSITELIB}/PIL/IcnsImagePlugin.pyc
+${PYSITELIB}/PIL/IcnsImagePlugin.pyo
 ${PYSITELIB}/PIL/IcoImagePlugin.py
 ${PYSITELIB}/PIL/IcoImagePlugin.pyc
 ${PYSITELIB}/PIL/IcoImagePlugin.pyo
@@ -84,6 +98,9 @@ ${PYSITELIB}/PIL/ImageFilter.pyo
 ${PYSITELIB}/PIL/ImageFont.py
 ${PYSITELIB}/PIL/ImageFont.pyc
 ${PYSITELIB}/PIL/ImageFont.pyo
+${PYSITELIB}/PIL/ImageGL.py
+${PYSITELIB}/PIL/ImageGL.pyc
+${PYSITELIB}/PIL/ImageGL.pyo
 ${PYSITELIB}/PIL/ImageGrab.py
 ${PYSITELIB}/PIL/ImageGrab.pyc
 ${PYSITELIB}/PIL/ImageGrab.pyo
@@ -171,6 +188,9 @@ ${PYSITELIB}/PIL/PsdImagePlugin.pyo
 ${PYSITELIB}/PIL/SgiImagePlugin.py
 ${PYSITELIB}/PIL/SgiImagePlugin.pyc
 ${PYSITELIB}/PIL/SgiImagePlugin.pyo
+${PYSITELIB}/PIL/SpiderImagePlugin.py
+${PYSITELIB}/PIL/SpiderImagePlugin.pyc
+${PYSITELIB}/PIL/SpiderImagePlugin.pyo
 ${PYSITELIB}/PIL/SunImagePlugin.py
 ${PYSITELIB}/PIL/SunImagePlugin.pyc
 ${PYSITELIB}/PIL/SunImagePlugin.pyo
