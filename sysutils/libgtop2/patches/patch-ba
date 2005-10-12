@@ -1,0 +1,34 @@
+$NetBSD: patch-ba,v 1.1 2005/10/12 21:49:39 jmmv Exp $
+
+From FreeBSD's GNOME development repository.
+
+--- lib/read.c.orig	2005-06-06 14:33:42.000000000 +0200
++++ lib/read.c
+@@ -22,6 +22,7 @@
+ */
+ 
+ #include <config.h>
++#include <errno.h>
+ #include <glibtop/read.h>
+ #include <glibtop/error.h>
+ #include <glib/gi18n-lib.h>
+@@ -56,14 +57,18 @@ glibtop_read_l (glibtop *server, size_t 
+ 	fprintf (stderr, "LIBRARY: really reading %d bytes.\n", size);
+ #endif
+ 
++retry:
+ 	if (server->socket) {
+ 		do_read (server->socket, buf, size);
+ 	} else {
+-		if(read (server->input [0], buf, size) < 0)
++		if(read (server->input [0], buf, size) < 0) {
++			if (errno == EINTR)
++				goto retry;
+ 			glibtop_error_io_r (
+ 				server,
+ 				ngettext ("read %d byte",
+ 					  "read %d bytes", size),
+ 				size);
++		}
+ 	}
+ }
