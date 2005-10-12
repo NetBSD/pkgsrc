@@ -1,0 +1,13 @@
+$NetBSD: patch-dk,v 1.1 2005/10/12 16:39:25 joerg Exp $
+
+--- security/coreconf/config.mk.orig	2005-05-24 01:20:38.000000000 +0200
++++ security/coreconf/config.mk	2005-05-24 01:20:09.000000000 +0200
+@@ -59,7 +59,7 @@
+ #######################################################################
+ 
+ TARGET_OSES = FreeBSD BSD_OS NetBSD OpenUNIX OS2 QNX Darwin BeOS OpenBSD \
+-              OpenVMS AIX
++              OpenVMS AIX DragonFly
+ 
+ ifeq (,$(filter-out $(TARGET_OSES),$(OS_TARGET)))
+ include $(CORE_DEPTH)/coreconf/$(OS_TARGET).mk

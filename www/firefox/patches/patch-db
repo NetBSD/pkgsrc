@@ -1,0 +1,13 @@
+$NetBSD: patch-db,v 1.1 2005/10/12 16:39:25 joerg Exp $
+
+--- gc/boehm/gcconfig.h.orig	2004-11-17 10:31:05.000000000 +0100
++++ gc/boehm/gcconfig.h	2004-11-17 10:31:15.000000000 +0100
+@@ -183,7 +183,7 @@
+ #   define OPENBSD
+ #   define mach_type_known
+ # endif
+-# if defined(__FreeBSD__) && defined(i386)
++# if (defined(__FreeBSD__) || defined(__DragonFly__)) && defined(i386)
+ #   define I386
+ #   define FREEBSD
+ #   define mach_type_known

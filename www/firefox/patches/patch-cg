@@ -1,8 +1,8 @@
-$NetBSD: patch-cg,v 1.5 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-cg,v 1.6 2005/10/12 16:39:25 joerg Exp $
 
 --- extensions/transformiix/source/base/Double.cpp.orig	2004-01-15 21:23:18.000000000 +0000
 +++ extensions/transformiix/source/base/Double.cpp
-@@ -48,6 +48,38 @@
+@@ -48,8 +48,40 @@
   * Utility class for doubles
   */
  
@@ -39,8 +39,11 @@ $NetBSD: patch-cg,v 1.5 2005/09/22 14:14:04 jlam Exp $
 +#else	/* pre INFINITY C environment */
 +
  //A trick to handle IEEE floating point exceptions on FreeBSD - E.D.
- #ifdef __FreeBSD__
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include <ieeefp.h>
+ #ifdef __alpha__
+ fp_except_t allmask = FP_X_INV|FP_X_OFL|FP_X_UFL|FP_X_DZ|FP_X_IMP;
 @@ -127,9 +159,20 @@ const PRUint32 infMask[2] =    {0, TX_DO
  const PRUint32 negInfMask[2] = {0, TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT};
  #endif
