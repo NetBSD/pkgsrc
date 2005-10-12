@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2005/08/10 20:56:26 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2005/10/12 21:58:49 jmmv Exp $
 #
 
-DISTNAME=		gnome-session-2.10.0
+DISTNAME=		gnome-session-2.12.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.10/}
-SITES_gnome-splash-2.10.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.12/}
+SITES_gnome-splash-2.12.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.10.0.png
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.12.0.png
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
@@ -49,7 +49,7 @@ BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 post-extract:
 	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
 	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
-	${CP} ${DISTDIR}/gnome-splash-2.10.0.png \
+	${CP} ${DISTDIR}/gnome-splash-2.12.0.png \
 	    ${WRKSRC}/gnome-session/gnome-splash.png
 
 post-install:
