@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11433 2005/10/12 12:17:55 wiz Exp $
+$NetBSD: CHANGES,v 1.11434 2005/10/12 13:59:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4420,3 +4420,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/amarok to 1.3.3 [seb 2005-10-12]
 	Updated print/xpdf-korean to 20050707 [wiz 2005-10-12]
 	Updated databases/phpmyadmin to 2.6.4pl2 [tron 2005-10-12]
+	Updated archivers/unrar to 3.5.4 [wiz 2005-10-12]
