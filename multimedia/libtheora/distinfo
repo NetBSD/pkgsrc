@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2005/03/21 17:16:23 dmcmahill Exp $
+$NetBSD: distinfo,v 1.6 2005/10/12 21:59:42 wiz Exp $
 
-SHA1 (libtheora-1.0alpha4.tar.bz2) = dc22c91dce11983d25bafd5f54b41def67e84ecc
-RMD160 (libtheora-1.0alpha4.tar.bz2) = 0b637934cad94a32ec96d5ae9b26996b3d4480b3
-Size (libtheora-1.0alpha4.tar.bz2) = 1755132 bytes
-SHA1 (patch-aa) = 742cbb3aef9f9e0efebaa60fd97f5302c1c24d6f
-SHA1 (patch-ab) = 2d0d8e6e8aa87531c6af7ce77a3ddd266b117a1d
-SHA1 (patch-ac) = 390ec107d7da1dd50584c348bb12ae82038412f1
+SHA1 (libtheora-1.0alpha5.tar.bz2) = 8e740ccd7219861de83ac17ecceb13c02ed7e24a
+RMD160 (libtheora-1.0alpha5.tar.bz2) = 47317a42ef6165a167dc45bb697d6528e1209469
+Size (libtheora-1.0alpha5.tar.bz2) = 1765512 bytes
+SHA1 (patch-aa) = 7a0642c237d6e8a438a1fa2d2449c9ec0087a57b
+SHA1 (patch-ab) = c98e9acac047fb51c4835b782906ecfe02b92e01
+SHA1 (patch-ac) = 37f60ea4ea3292f8302417eed52ef9b549f05947

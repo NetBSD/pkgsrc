@@ -1,23 +1,25 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/06 13:47:43 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/12 21:59:42 wiz Exp $
 
---- configure.orig	2004-03-20 06:43:31.000000000 +0100
+--- configure.orig	2005-08-20 20:44:13.000000000 +0200
 +++ configure
-@@ -19426,6 +19426,8 @@ fi
+@@ -20102,6 +20102,8 @@ fi
+ HAVE_SDL=no
  
  
- 
-+# SDL is only used for the sample player; disable it.
++# SDL is only used for the sample player; disable it
 +if false; then
  # Check whether --with-sdl-prefix or --without-sdl-prefix was given.
  if test "${with_sdl_prefix+set}" = set; then
    withval="$with_sdl_prefix"
-@@ -19718,11 +19720,14 @@ echo "$as_me: WARNING: *** Unable to fin
+@@ -20394,6 +20396,7 @@ echo "$as_me: WARNING: *** Unable to fin
  
  
    rm -f conf.sdltest
 +fi
  
  
+ HAVE_OSS=no
+@@ -20401,6 +20404,8 @@ HAVE_OSS=no
  
  
  
@@ -26,11 +28,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/06 13:47:43 jmmv Exp $
  for ac_header in sys/soundcard.h soundcard.h machine/soundcard.h
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
-@@ -19876,6 +19881,7 @@ echo "$as_me: WARNING: OSS audio support
+@@ -20556,7 +20561,7 @@ if test x$HAVE_OSS != xyes; then
+   { echo "$as_me:$LINENO: WARNING: OSS audio support not found -- not compiling player_example" >&5
+ echo "$as_me: WARNING: OSS audio support not found -- not compiling player_example" >&2;}
  fi
- 
- done
+-
 +fi
  
  
- if test x$HAVE_SDL = xyes -a x$HAVE_OSS = xyes; then
+ ac_enable_float=yes
