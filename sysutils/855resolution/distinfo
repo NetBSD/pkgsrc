@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2005/10/12 02:06:37 christos Exp $
+
+SHA1 (855resolution-0.4.tgz) = aabba504d0592cac676188f1ce73bd25389d8fda
+RMD160 (855resolution-0.4.tgz) = d075d239257b778f509c8fd96619bfd810194d3b
+Size (855resolution-0.4tgz) = 6740 bytes
+SHA1 (patch-aa) = 5e549802a60e11a50d1c700f5937e12adfb04124
