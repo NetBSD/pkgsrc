@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/05/25 21:07:59 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/10/12 21:54:04 jmmv Exp $
 bin/gst-launch-ext-0.8
 bin/gst-visualise-0.8
 include/gstreamer-0.8/gst/audio/audio.h
@@ -57,6 +57,7 @@ lib/gstreamer-0.8/libgstdebug.la
 lib/gstreamer-0.8/libgstdecodebin.la
 lib/gstreamer-0.8/libgstdeinterlace.la
 lib/gstreamer-0.8/libgstdvdlpcmdec.la
+lib/gstreamer-0.8/libgstdvdsubdec.la
 lib/gstreamer-0.8/libgstefence.la
 lib/gstreamer-0.8/libgsteffectv.la
 lib/gstreamer-0.8/libgstequalizer.la
@@ -69,6 +70,7 @@ lib/gstreamer-0.8/libgstgamma.la
 lib/gstreamer-0.8/libgstgconfelements.la
 lib/gstreamer-0.8/libgstgoom.la
 lib/gstreamer-0.8/libgstidct.la
+lib/gstreamer-0.8/libgstimagemixer.la
 lib/gstreamer-0.8/libgstinterleave.la
 lib/gstreamer-0.8/libgstlevel.la
 lib/gstreamer-0.8/libgstmatroska.la
