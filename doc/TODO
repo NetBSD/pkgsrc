@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4006 2005/10/12 19:35:39 minskim Exp $
+$NetBSD: TODO,v 1.4007 2005/10/12 22:00:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -317,7 +317,7 @@ Suggested package updates
 	o REminiscence-0.1.8
 	o ROMBuild-2.7
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.5.10
+	o TeXmacs-1.0.5.10 [pkg/31569]
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
