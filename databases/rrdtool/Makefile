@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/10/02 00:09:40 wulf Exp $
+# $NetBSD: Makefile,v 1.41 2005/10/12 19:24:42 abs Exp $
 #
 
 DISTNAME=	rrdtool-1.2.11
@@ -25,6 +25,9 @@ CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST+= 	auto/RRDp/.packlist
 PERL5_PACKLIST+=	auto/RRDs/.packlist
+
+# rrdtool explicitly forbids any use of -ffast-math
+BUILDLINK_TRANSFORM+=	rm:-ffast-math
 
 RRDDOCDIR=		${PREFIX}/share/doc/rrdtool
 
