@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2005/06/29 09:30:56 jmmv Exp $
+$NetBSD: distinfo,v 1.23 2005/10/12 21:56:27 jmmv Exp $
 
-SHA1 (gnome-panel-2.10.2.tar.bz2) = 6a931b17d36cc019d3af902fd9a87bfc30a85d8d
-RMD160 (gnome-panel-2.10.2.tar.bz2) = c8859904ff1c3eadf7918f509f9d5b19661dc0b8
-Size (gnome-panel-2.10.2.tar.bz2) = 2366827 bytes
+SHA1 (gnome-panel-2.12.1.tar.bz2) = 2a658b9ef5ffcd7b5f68b357b51294e15de756d4
+RMD160 (gnome-panel-2.12.1.tar.bz2) = 4dd1e6d73a5464f8620695223b5a0ff25abafdc0
+Size (gnome-panel-2.12.1.tar.bz2) = 2468498 bytes

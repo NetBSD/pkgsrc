@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2005/08/10 20:56:26 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2005/10/12 21:56:27 jmmv Exp $
 #
 
-DISTNAME=		gnome-panel-2.10.2
+DISTNAME=		gnome-panel-2.12.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.10/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.12/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -33,25 +33,24 @@ GCONF2_ENTRIES=		panel-default-setup.entries
 
 BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
 BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.5.0
+BUILDLINK_DEPENDS.libwnck+=	libwnck>=2.12.1
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
