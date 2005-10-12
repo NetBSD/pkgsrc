@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4005 2005/10/12 17:58:13 wiz Exp $
+$NetBSD: TODO,v 1.4006 2005/10/12 19:35:39 minskim Exp $
 
 Suggested new packages
 ======================
@@ -332,7 +332,6 @@ Suggested package updates
 	o advancecomp-1.14
 	o aewm++-1.0.27
 	o ald-0.1.6 [pkg/26431]
-	o alee-ttf-5.4
 	o algae-4.3.6
 	o aliados-0.2.0
 	o amavis-0.3.12
