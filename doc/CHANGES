@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11432 2005/10/12 11:51:37 tron Exp $
+$NetBSD: CHANGES,v 1.11433 2005/10/12 12:17:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -339,7 +339,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/squid to 2.5.7nb6 [taca 2005-01-16]
 	Added textproc/rubber version 0.99.8 [cube 2005-01-16]
 	Updated mail/nmh to 1.0.4nb6 [jmmv 2005-01-16]
-	Added www/horde version 3.0.2 [adrianp 2005-01-16]
+	Added www/horde3 version 3.0.2 [adrianp 2005-01-16]
 	Added mail/imp version 4.0.1 [adrianp 2005-01-16]
 	Updated time/p5-TimeDate to 1.16 [epg 2005-01-16]
 	Updated devel/subversion to 1.1.3 [epg 2005-01-16]
@@ -1269,7 +1269,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/wol to 0.7.1 [uebayasi 2005-03-04]
 	Updated graphics/blender to 2.63nb1 [reinoud 2005-03-04]
 	Added devel/p5-Class-MakeMethods version 1.010 [tv 2005-03-04]
-	Updated www/horde to 3.0.3 [adrianp 2005-03-04]
+	Updated www/horde3 to 3.0.3 [adrianp 2005-03-04]
 	Updated math/mathomatic to 12.1d [minskim 2005-03-05]
 	Updated chat/riece to 1.0.7a [uebayasi 2005-03-05]
 	Added x11/gtk2-engines-clearlooks version 0.4 [jmmv 2005-03-05]
@@ -1741,7 +1741,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sylpheed-claws-image-viewer to 1.0.4 [chris 2005-03-25]
 	Updated mail/sylpheed-claws-trayicon to 1.0.4 [chris 2005-03-25]
 	Added mail/sylpheed-devel version 1.9.6 [chris 2005-03-25]
-	Updated www/horde to 3.0.3nb1 [adrianp 2005-03-25]
+	Updated www/horde3 to 3.0.3nb1 [adrianp 2005-03-25]
 	Updated mail/imp to 4.0.1nb1 [adrianp 2005-03-25]
 	Added mail/turba version 2.0.2 [adrianp 2005-03-25]
 	Updated mail/thunderbird to 1.0.2 [taya 2005-03-25]
@@ -1833,7 +1833,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/ap-jk to 1.2.8 [erh 2005-03-30]
 	Updated mail/qmail-run to 20050330 [schmonz 2005-03-30]
 	Updated textproc/icu to 3.2nb1 [recht 2005-03-30]
-	Updated www/horde to 3.0.4 [adrianp 2005-03-30]
+	Updated www/horde3 to 3.0.4 [adrianp 2005-03-30]
 	Updated devel/cssc to 1.0.1 [seb 2005-03-31]
 	Updated graphics/xpaint to 2.7.6 [adam 2005-03-31]
 	Updated games/bomberclone to 0.11.6 [wiz 2005-03-31]
