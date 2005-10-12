@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.18 2005/09/20 03:50:19 jlam Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.19 2005/10/12 16:28:29 jlam Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -55,6 +55,7 @@ TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
+TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
