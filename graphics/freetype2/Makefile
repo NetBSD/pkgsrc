@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2005/10/12 04:43:26 hiramatsu Exp $
 
 DISTNAME=	freetype-2.1.10
 PKGNAME=	freetype2-2.1.10
@@ -54,6 +54,11 @@ CFLAGS:=	${CFLAGS:C/-O[0-9]*/-O/g}
 # source code breaks strict aliasing in gcc>=2.95
 .if !empty(CC_VERSION:Mgcc-[3-9]*) || !empty(CC_VERSION:Mgcc-2.95*)
 CFLAGS+=	-fno-strict-aliasing
+.endif
+
+# tell configure not to use unix-specific version of ftsystem.c on OpenBSD
+.if ${OPSYS} == "OpenBSD"
+CONFIGURE_ENV+=		ac_cv_func_mmap_fixed_mapped=no
 .endif
 
 post-configure:
