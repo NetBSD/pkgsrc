@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/05/04 16:27:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/10/12 21:53:42 jmmv Exp $
 bin/gst-complete
 bin/gst-complete-0.8
 bin/gst-compprep
@@ -171,6 +171,7 @@ share/doc/gstreamer-0.8/gstreamer-support.html
 share/doc/gstreamer-0.8/gstreamer.html
 share/doc/gstreamer-0.8/index.html
 share/doc/gstreamer-0.8/index.sgml
+share/doc/gstreamer-0.8/style.css
 share/doc/gstreamer-libs-0.8/GstDParam.html
 share/doc/gstreamer-libs-0.8/GstDParamLinInterp.html
 share/doc/gstreamer-libs-0.8/GstDParamManager.html
