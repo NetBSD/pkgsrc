@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 19:39:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/12 14:52:52 drochner Exp $
+${PYINC}/pygame/fastevents.h
+${PYINC}/pygame/ffmovie.h
 ${PYINC}/pygame/font.h
 ${PYINC}/pygame/mixer.h
 ${PYINC}/pygame/pygame.h
@@ -20,6 +22,7 @@ ${PYSITELIB}/pygame/cursors.pyo
 ${PYSITELIB}/pygame/display.so
 ${PYSITELIB}/pygame/draw.so
 ${PYSITELIB}/pygame/event.so
+${PYSITELIB}/pygame/fastevent.so
 ${PYSITELIB}/pygame/font.so
 ${PYSITELIB}/pygame/freesansbold.ttf
 ${PYSITELIB}/pygame/image.so
@@ -36,6 +39,10 @@ ${PYSITELIB}/pygame/mixer.so
 ${PYSITELIB}/pygame/mixer_music.so
 ${PYSITELIB}/pygame/mouse.so
 ${PYSITELIB}/pygame/movie.so
+${PYSITELIB}/pygame/overlay.so
+${PYSITELIB}/pygame/pkgdata.py
+${PYSITELIB}/pygame/pkgdata.pyc
+${PYSITELIB}/pygame/pkgdata.pyo
 ${PYSITELIB}/pygame/pygame.ico
 ${PYSITELIB}/pygame/pygame_icon.bmp
 ${PYSITELIB}/pygame/pygame_icon.icns
