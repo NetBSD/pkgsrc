@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/07/28 11:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/12 11:39:12 wiz Exp $
 #
 
-DISTNAME=	xpdf-korean-2004-jul-27
-PKGNAME=	xpdf-korean-20040727
+DISTNAME=	xpdf-korean-2005-jul-07
+PKGNAME=	xpdf-korean-20050707
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		http://gd.tuwien.ac.at/publishing/xpdf/
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Xpdf support files for Korean
 
 DEPENDS+=	xpdf>=2.02:../../print/xpdf
+DEPENDS+=	baekmuk-ttf>=1.0:../../fonts/baekmuk-ttf
 
 USE_PKGINSTALL=	yes
 
@@ -24,6 +25,8 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 post-patch:
 	${MV} ${WRKSRC}/add-to-xpdfrc ${WRKSRC}/add-to-xpdfrc.orig
 	${SED} -e 's:/usr/local:'${PREFIX}':g' < ${WRKSRC}/add-to-xpdfrc.orig > ${WRKSRC}/add-to-xpdfrc
+	${ECHO} "displayCIDFontTT	Adobe-Korea1	${PREFIX}/lib/X11/fonts/TTF/batang.ttf" >> ${WRKSRC}/add-to-xpdfrc
+	${ECHO} "displayCIDFontTT	Unidocs-Korea1	${PREFIX}/lib/X11/fonts/TTF/batang.ttf" >> ${WRKSRC}/add-to-xpdfrc
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf/korean
