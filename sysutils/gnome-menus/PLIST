@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/21 11:27:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/12 21:52:30 jmmv Exp $
 bin/gnome-menu-spec-test
-include/gnome-menus/menu-tree.h
+include/gnome-menus/gmenu-tree.h
 lib/libgnome-menu.la
 lib/pkgconfig/libgnome-menu.pc
 share/desktop-directories/Accessibility.directory
 share/desktop-directories/Accessories.directory
 share/desktop-directories/Applications.directory
+share/desktop-directories/Desktop.directory
 share/desktop-directories/Development.directory
-share/desktop-directories/Edutainment.directory
+share/desktop-directories/Education.directory
 share/desktop-directories/Games.directory
 share/desktop-directories/Graphics.directory
 share/desktop-directories/Internet.directory
 share/desktop-directories/Multimedia.directory
 share/desktop-directories/Office.directory
 share/desktop-directories/Other.directory
+share/desktop-directories/Preferences.directory
 share/desktop-directories/Settings-Accessibility.directory
 share/desktop-directories/Settings.directory
 share/desktop-directories/System-Settings.directory
@@ -42,12 +44,14 @@ ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/hy/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-menus.mo
@@ -62,7 +66,6 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-menus.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-menus.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-menus.mo
