@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11428 2005/10/12 10:56:55 wiz Exp $
+$NetBSD: CHANGES,v 1.11429 2005/10/12 11:03:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3717,6 +3717,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/xentools20 to 2.0.7nb1 [bouyer 2005-08-19]
 	Updated print/acroread7 to 7.0.1 [salo 2005-08-19]
 	Updated devel/bglibs to 1.026 [schmonz 2005-08-19]
+	Added print/evince version 0.3.2 [drochner 2005-08-19]
 	Updated mail/nullmailer to 1.00 [schmonz 2005-08-20]
 	Updated audio/libvorbis to 1.1.0nb2 [grant 2005-08-20]
 	Updated www/awstats to 6.4nb1 [adrianp 2005-08-20]
