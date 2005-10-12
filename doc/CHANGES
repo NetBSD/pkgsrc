@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11430 2005/10/12 11:17:02 seb Exp $
+$NetBSD: CHANGES,v 1.11431 2005/10/12 11:40:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4418,3 +4418,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sysutils/855resolution 0.4 [christos 2005-10-11]
 	Updated www/adzap to 20051006 [kleink 2005-10-12]
 	Updated audio/amarok to 1.3.3 [seb 2005-10-12]
+	Updated print/xpdf-korean to 20050707 [wiz 2005-10-12]
