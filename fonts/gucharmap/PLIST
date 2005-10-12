@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/03/22 16:18:59 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/12 21:47:59 jmmv Exp $
 bin/charmap
 bin/gnome-character-map
 bin/gucharmap
@@ -17,8 +17,6 @@ include/gucharmap/gucharmap.h
 lib/libgucharmap.la
 lib/pkgconfig/gucharmap.pc
 share/applications/gucharmap.desktop
-share/gnome/help/gucharmap/C/figures/gucharmap_start_window.png
-share/gnome/help/gucharmap/C/figures/gucharmap_window.png
 share/gnome/help/gucharmap/C/gucharmap.xml
 share/gnome/help/gucharmap/C/legal.xml
 share/gnome/help/gucharmap/de/figures/gucharmap_window.png
@@ -70,6 +68,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gucharmap.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gucharmap.mo
@@ -96,6 +95,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gucharmap.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gucharmap.mo
@@ -107,6 +107,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gucharmap.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gucharmap.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gucharmap.mo
 share/omf/gucharmap/gucharmap-C.omf
@@ -141,7 +142,6 @@ share/pixmaps/gucharmap.png
 @dirrm share/gnome/help/gucharmap/es
 @dirrm share/gnome/help/gucharmap/de/figures
 @dirrm share/gnome/help/gucharmap/de
-@dirrm share/gnome/help/gucharmap/C/figures
 @dirrm share/gnome/help/gucharmap/C
 @dirrm share/gnome/help/gucharmap
 @comment in gnome2-dirs: @dirrm share/gnome/help
