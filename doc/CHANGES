@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11436 2005/10/12 15:04:56 drochner Exp $
+$NetBSD: CHANGES,v 1.11437 2005/10/12 15:07:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4423,5 +4423,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/phpmyadmin to 2.6.4pl2 [tron 2005-10-12]
 	Updated archivers/unrar to 3.5.4 [wiz 2005-10-12]
 	Updated graphics/py-imaging to 1.1.5 [drochner 2005-10-12]
+	Updated graphics/py-imagingtk to 1.1.5 [drochner 2005-10-12]
 	Updated devel/py-game to 1.7.1 [drochner 2005-10-12]
 	Updated games/pytraffic to 2.5 [drochner 2005-10-12]
