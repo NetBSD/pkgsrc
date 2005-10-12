@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4010 2005/10/12 22:13:50 wiz Exp $
+$NetBSD: TODO,v 1.4011 2005/10/12 22:27:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -643,7 +643,6 @@ Suggested package updates
 	o hylafax-4.2.2
 	o i2ocfg-1.1
 	o icdprog-0.5
-	o icecast-2.3.0 [pkg/31558]
 	o icepref-2.3
 	o icsi-finger-1.0.29
 	o icu-3.4
