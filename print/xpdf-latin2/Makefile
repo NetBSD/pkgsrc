@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/07/28 11:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/12 11:17:22 wiz Exp $
 #
 
-DISTNAME=	xpdf-latin2
+DISTNAME=	xpdf-latin2-2002-oct-22
 PKGNAME=	${DISTNAME}-20021022
 PKGREVISION=	1
 CATEGORIES=	print
@@ -16,8 +16,7 @@ DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
 USE_PKGINSTALL=	yes
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
-DIST_SUBDIR=	${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/xpdf-latin2
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
