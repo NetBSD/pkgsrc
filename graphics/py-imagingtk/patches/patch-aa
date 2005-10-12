@@ -1,58 +1,51 @@
-$NetBSD: patch-aa,v 1.1 2003/08/18 10:15:43 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/12 14:48:44 drochner Exp $
 
---- setup.py.orig	Fri May  9 14:00:56 2003
-+++ setup.py	Sun Aug 17 00:55:09 2003
-@@ -85,16 +85,16 @@
-     # standard windows libraries
-     LIBRARIES.extend(["kernel32", "user32", "gdi32"])
+--- setup.py.orig	2005-03-23 19:16:40.000000000 +0100
++++ setup.py
+@@ -177,9 +177,6 @@ class pil_build_ext(build_ext):
+         #
+         # add standard directories
  
--MODULES.append(
--    Extension(
--        "_imaging",
--        ["_imaging.c", "decode.c", "encode.c", "map.c", "display.c",
--         "outline.c", "path.c"],
--        include_dirs=INCLUDE_DIRS,
--        library_dirs=LIBRARY_DIRS,
--        libraries=LIBRARIES
--        )
--    )
-+#MODULES.append(
-+#    Extension(
-+#        "_imaging",
-+#        ["_imaging.c", "decode.c", "encode.c", "map.c", "display.c",
-+#         "outline.c", "path.c"],
-+#        include_dirs=INCLUDE_DIRS,
-+#        library_dirs=LIBRARY_DIRS,
-+#        libraries=LIBRARIES
-+#        )
-+#    )
+-        add_directory(library_dirs, "/usr/local/lib")
+-        add_directory(include_dirs, "/usr/local/include")
+-
+         add_directory(library_dirs, "/usr/lib")
+         add_directory(include_dirs, "/usr/include")
  
- # security check
+@@ -210,7 +207,7 @@ class pil_build_ext(build_ext):
+         if find_library_file(self, "tiff"):
+             feature.tiff = "tiff"
  
-@@ -121,7 +121,7 @@
+-        if find_library_file(self, "freetype"):
++        if 0:
+             # look for freetype2 include files
+             freetype_version = 0
+             for dir in include_dirs:
+@@ -265,9 +262,10 @@ class pil_build_ext(build_ext):
+         if struct.unpack("h", "\0\1")[0] == 1:
+             defs.append(("WORDS_BIGENDIAN", None))
  
- try:
-     import _tkinter
--    TCL_VERSION = _tkinter.TCL_VERSION[:3]
-+    TCL_VERSION = ''.join(_tkinter.TCL_VERSION[:3].split('.'))
- except (ImportError, AttributeError):
-     pass
- else:
-@@ -206,7 +206,7 @@
+-        exts = [(Extension(
+-            "_imaging", files, libraries=libs, define_macros=defs
+-            ))]
++#        exts = [(Extension(
++#            "_imaging", files, libraries=libs, define_macros=defs
++#            ))]
++	exts = []
  
-         if not tk_framework_found:
-             # assume the libraries are installed in the default location
--            LIBRARIES.extend(["tk" + TCL_VERSION, "tcl" + TCL_VERSION])
-+            LIBRARIES.extend(["tk" + TCL_VERSION, "tcl" + TCL_VERSION, "X11"])
-             HAVE_TCLTK = 1
- 
-     if HAVE_TCLTK:
-@@ -300,7 +300,7 @@
-         author_email=AUTHOR[1],
-         description=DESCRIPTION,
-         url=HOMEPAGE,
+         #
+         # additional libraries
+@@ -430,10 +428,10 @@ if __name__ == "__main__":
+         license="Python (MIT style)",
+         long_description=DESCRIPTION,
+         name=NAME,
+-        package_dir={"": "PIL"},
 -        packages=[""],
++#        package_dir={"": "PIL"},
 +#        packages=[""],
-         extra_path = "PIL",
-         package_dir={"": "PIL"},
-         ext_modules = MODULES,
+         platforms="Python 1.5.2 and later.",
+-        scripts = glob.glob("Scripts/pil*.py"),
++#        scripts = glob.glob("Scripts/pil*.py"),
+         url=HOMEPAGE,
+         version=VERSION,
+         )
