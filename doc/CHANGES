@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11439 2005/10/12 17:58:44 seb Exp $
+$NetBSD: CHANGES,v 1.11440 2005/10/12 19:35:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4428,3 +4428,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/pytraffic to 2.5 [drochner 2005-10-12]
 	Updated devel/p5-Module-CoreList to 2.02 [seb 2005-10-12]
 	Added security/p5-Crypt-DH version 0.06 [seb 2005-10-12]
+	Updated fonts/alee-ttf to 5.4 [minskim 2005-10-12]
