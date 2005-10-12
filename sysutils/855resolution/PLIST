@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2005/10/12 02:06:37 christos Exp $
-bin/855resolution
+@comment $NetBSD: PLIST,v 1.2 2005/10/12 02:15:30 christos Exp $
+sbin/855resolution
