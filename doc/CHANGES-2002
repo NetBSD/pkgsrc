@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2002,v 1.8 2005/10/12 10:00:14 wiz Exp $
+$NetBSD: CHANGES-2002,v 1.9 2005/10/12 12:36:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3626,6 +3626,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zope25-ZWeather-0.0.1 [drochner 2002-11-14]
 	Added zope25-Photo-1.2.3 [drochner 2002-11-14]
 	Added zope25-CMFPlone-1.0beta3 [drochner 2002-11-14]
+	Added zopeedit-0.6 [drochner 2002-11-14]
 	Updated xmame to 0.61.1 [kristerw 2002-11-14]
 	Updated cyrus-sasl2 to 2.1.9nb1 [seb 2002-11-14]
 	Updated p5-Time-HiRes to 1.38 [heinz 2002-11-15]

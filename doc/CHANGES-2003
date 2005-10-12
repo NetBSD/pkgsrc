@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2003,v 1.5 2005/04/01 11:36:32 adam Exp $
+$NetBSD: CHANGES-2003,v 1.6 2005/10/12 12:36:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1924,6 +1924,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated neon to 0.23.9 [drochner 2003-05-09]
 	Updated zope25-ZWiki to 0.18.0 [drochner 2003-05-09]
 	Updated zope25-ExternalEditor to 0.7 [drochner 2003-05-09]
+	Updated zopeedit to 0.7 [drochner 2003-05-09]
 	Added py-ORBit-1.99.4 [drochner 2003-05-09]
 	Added BitTorrent-3.2.1b [drochner 2003-05-09]
 	Updated xlockmore to 5.08.1 [hubertf 2003-05-09]
