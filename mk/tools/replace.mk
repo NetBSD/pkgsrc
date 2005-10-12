@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.127 2005/10/10 17:22:06 reed Exp $
+# $NetBSD: replace.mk,v 1.128 2005/10/12 16:28:29 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -908,6 +908,17 @@ TOOLS_DEPENDS.pod2man?=		perl>=${PERL5_REQD}:../../lang/perl5
 TOOLS_CREATE+=			pod2man
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pod2man=perl
 TOOLS_PATH.pod2man=		${TOOLS_PREFIX.pod2man}/bin/pod2man
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.printf) && !empty(_USE_TOOLS:Mprintf)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.printf=
+.  elif !empty(_TOOLS_USE_PKGSRC.printf:M[yY][eE][sS])
+TOOLS_DEPENDS.printf?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_CREATE+=			printf
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.printf=coreutils
+TOOLS_PATH.printf=		${TOOLS_PREFIX.printf}/bin/${GNU_PROGRAM_PREFIX}printf
 .  endif
 .endif
 
