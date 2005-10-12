@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/07/20 19:46:27 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/12 14:56:13 drochner Exp $
 
---- setup.py.orig	2005-07-19 18:29:58.000000000 +0200
+--- setup.py.orig	2005-07-30 11:09:08.000000000 +0200
 +++ setup.py
 @@ -48,7 +48,7 @@ except ImportError:
  # Furthermore both their location and content depend on <prefix>.
@@ -11,13 +11,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/07/20 19:46:27 drochner Exp $
      for arg_index in xrange(1,len(sys.argv)):
          arg=sys.argv[arg_index]
          if arg=='--prefix':
-@@ -84,8 +84,8 @@ if py2exe_present:
+@@ -85,8 +85,8 @@ if py2exe_present:
  # We now construct the files pytraffic and pytraffic.desktop. We will
  # remove them afterwards.
  if os.name=='posix':
--    main_command_contents=r"""exec python %s/share/%s/Game.py 
+-    main_command_contents=r"""exec python %s/share/%s/Main.py 
 -""" % (prefix,version.install_leaf)
-+    main_command_contents=r"""exec %s %s/share/%s/Game.py 
++    main_command_contents=r"""exec %s %s/share/%s/Main.py 
 +""" % (sys.executable,prefix,version.install_leaf)
  
      main_command_file=open("pytraffic","w")

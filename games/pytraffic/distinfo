@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/20 19:46:27 drochner Exp $
+$NetBSD: distinfo,v 1.2 2005/10/12 14:56:13 drochner Exp $
 
-SHA1 (pytraffic-2.0.1.tar.gz) = c6b091e3e3ca4a722fa044c89550b6ff81616c03
-RMD160 (pytraffic-2.0.1.tar.gz) = 357633d6bbc951711064dba8635141526b6a500f
-Size (pytraffic-2.0.1.tar.gz) = 655963 bytes
-SHA1 (patch-aa) = 4dd80304142cd5bd6e8dd47fbc1c9d1fcd098254
+SHA1 (pytraffic-2.5.tar.gz) = 1e1a4ad193704233873c3293c052c5a1ba3b83fe
+RMD160 (pytraffic-2.5.tar.gz) = 07dfa09588a2cb5dd891f16aa07959ca9a1f47a2
+Size (pytraffic-2.5.tar.gz) = 2196165 bytes
+SHA1 (patch-aa) = 38a6cfe758848883c7640b7bdb5e9fcb0f72d167
