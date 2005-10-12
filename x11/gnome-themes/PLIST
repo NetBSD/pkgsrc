@@ -1,90 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 2005/08/21 11:29:47 jmmv Exp $
-share/icons/Crux/12x12/filesystems/gnome-fs-directory.png
-share/icons/Crux/12x12/filesystems/gnome-fs-regular.png
-share/icons/Crux/192x192/filesystems/gnome-fs-directory.png
-share/icons/Crux/192x192/filesystems/gnome-fs-regular.png
-share/icons/Crux/20x20/filesystems/gnome-fs-directory.png
-share/icons/Crux/20x20/filesystems/gnome-fs-regular.png
-share/icons/Crux/24x24/filesystems/gnome-fs-directory.png
-share/icons/Crux/24x24/filesystems/gnome-fs-regular.png
-share/icons/Crux/36x36/filesystems/gnome-fs-directory.png
-share/icons/Crux/36x36/filesystems/gnome-fs-regular.png
-share/icons/Crux/48x48/emblems/emblem-nowrite.png
-share/icons/Crux/48x48/filesystems/gnome-fs-directory.png
-share/icons/Crux/48x48/filesystems/gnome-fs-regular.png
-share/icons/Crux/72x72/emblems/emblem-nowrite.png
-share/icons/Crux/72x72/filesystems/gnome-fs-directory.png
-share/icons/Crux/72x72/filesystems/gnome-fs-regular.png
-share/icons/Crux/96x96/emblems/emblem-nowrite.png
-share/icons/Crux/96x96/filesystems/gnome-fs-directory.png
-share/icons/Crux/96x96/filesystems/gnome-fs-regular.png
+@comment $NetBSD: PLIST,v 1.14 2005/10/12 21:57:05 jmmv Exp $
 share/icons/Crux/index.theme
-share/icons/Flat-Blue/12x12/emblems/emblem-symbolic-link.png
-share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory-accept.png
-share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory.png
-share/icons/Flat-Blue/12x12/filesystems/gnome-fs-regular.png
-share/icons/Flat-Blue/192x192/filesystems/gnome-fs-trash-empty.png
-share/icons/Flat-Blue/192x192/filesystems/gnome-fs-trash-full.png
-share/icons/Flat-Blue/20x20/filesystems/gnome-fs-bookmark-missing.png
-share/icons/Flat-Blue/20x20/filesystems/gnome-fs-bookmark.png
-share/icons/Flat-Blue/24x24/emblems/emblem-symbolic-link.png
-share/icons/Flat-Blue/24x24/filesystems/gnome-fs-directory-accept.png
-share/icons/Flat-Blue/24x24/filesystems/gnome-fs-directory.png
-share/icons/Flat-Blue/24x24/filesystems/gnome-fs-regular.png
-share/icons/Flat-Blue/36x36/emblems/emblem-symbolic-link.png
-share/icons/Flat-Blue/36x36/filesystems/gnome-fs-directory-accept.png
-share/icons/Flat-Blue/36x36/filesystems/gnome-fs-directory.png
-share/icons/Flat-Blue/36x36/filesystems/gnome-fs-regular.png
-share/icons/Flat-Blue/48x48/devices/gnome-dev-broken-image.png
-share/icons/Flat-Blue/48x48/devices/gnome-dev-spreadsheet.png
-share/icons/Flat-Blue/48x48/devices/gnome-dev-stalled.png
-share/icons/Flat-Blue/48x48/devices/gnome-dev-symlink.png
-share/icons/Flat-Blue/48x48/emblems/emblem-art.png
-share/icons/Flat-Blue/48x48/emblems/emblem-broken-link.png
-share/icons/Flat-Blue/48x48/emblems/emblem-camera.png
-share/icons/Flat-Blue/48x48/emblems/emblem-documents.png
-share/icons/Flat-Blue/48x48/emblems/emblem-generic.png
-share/icons/Flat-Blue/48x48/emblems/emblem-mail.png
-share/icons/Flat-Blue/48x48/emblems/emblem-multimedia.png
-share/icons/Flat-Blue/48x48/emblems/emblem-package.png
-share/icons/Flat-Blue/48x48/emblems/emblem-pictures.png
-share/icons/Flat-Blue/48x48/emblems/emblem-sound.png
-share/icons/Flat-Blue/48x48/emblems/emblem-symbolic-link.png
-share/icons/Flat-Blue/48x48/emblems/emblem-trash.png
-share/icons/Flat-Blue/48x48/emblems/emblem-web.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-bookmark-missing.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-bookmark.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-directory-accept.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-directory.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-home.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-loading.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-regular.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-trash-empty.png
-share/icons/Flat-Blue/48x48/filesystems/gnome-fs-trash-full.png
-share/icons/Flat-Blue/72x72/devices/gnome-dev-search.png
-share/icons/Flat-Blue/72x72/filesystems/gnome-fs-directory-accept.png
-share/icons/Flat-Blue/72x72/filesystems/gnome-fs-directory.png
-share/icons/Flat-Blue/72x72/filesystems/gnome-fs-regular.png
-share/icons/Flat-Blue/72x72/filesystems/gnome-fs-web.png
-share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory-accept.png
-share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory.png
-share/icons/Flat-Blue/96x96/filesystems/gnome-fs-regular.png
-share/icons/Flat-Blue/index.theme
-share/icons/Flat-Blue/scalable/emblems/emblem-OK.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-certified.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-cool.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-danger.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-distinguished.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-draft.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-favorite.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-important.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-new.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-noread.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-nowrite.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-ohno.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-personal.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-special.svg
-share/icons/Flat-Blue/scalable/emblems/emblem-urgent.svg
 share/icons/HighContrast/index.theme
 share/icons/HighContrastInverse/index.theme
 share/icons/HighContrastLargePrint/48x48/apps/JUSimageIcon.png
@@ -93,6 +8,7 @@ share/icons/HighContrastLargePrint/48x48/apps/acme-48.png
 share/icons/HighContrastLargePrint/48x48/apps/administration.png
 share/icons/HighContrastLargePrint/48x48/apps/advanced-directory.png
 share/icons/HighContrastLargePrint/48x48/apps/ax-applet.png
+share/icons/HighContrastLargePrint/48x48/apps/battstat.png
 share/icons/HighContrastLargePrint/48x48/apps/charpick.png
 share/icons/HighContrastLargePrint/48x48/apps/clock.png
 share/icons/HighContrastLargePrint/48x48/apps/config-language.png
@@ -100,6 +16,7 @@ share/icons/HighContrastLargePrint/48x48/apps/config-users.png
 share/icons/HighContrastLargePrint/48x48/apps/config-xfree.png
 share/icons/HighContrastLargePrint/48x48/apps/disks.png
 share/icons/HighContrastLargePrint/48x48/apps/display-capplet.png
+share/icons/HighContrastLargePrint/48x48/apps/drivemount-applet.png
 share/icons/HighContrastLargePrint/48x48/apps/evolution-1.4.png
 share/icons/HighContrastLargePrint/48x48/apps/evolution.png
 share/icons/HighContrastLargePrint/48x48/apps/file-manager.png
@@ -110,12 +27,14 @@ share/icons/HighContrastLargePrint/48x48/apps/gataxx.png
 share/icons/HighContrastLargePrint/48x48/apps/gcalctool.png
 share/icons/HighContrastLargePrint/48x48/apps/gconf-editor.png
 share/icons/HighContrastLargePrint/48x48/apps/gdict.png
+share/icons/HighContrastLargePrint/48x48/apps/gdm-setup.png
+share/icons/HighContrastLargePrint/48x48/apps/gdm-xnest.png
 share/icons/HighContrastLargePrint/48x48/apps/gdm.png
 share/icons/HighContrastLargePrint/48x48/apps/gedit-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/gkb.png
 share/icons/HighContrastLargePrint/48x48/apps/glade-2.png
 share/icons/HighContrastLargePrint/48x48/apps/glines.png
-share/icons/HighContrastLargePrint/48x48/apps/glow.png
+share/icons/HighContrastLargePrint/48x48/apps/glow-app-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/gnect-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-application-generic.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-applications.png
@@ -131,7 +50,6 @@ share/icons/HighContrastLargePrint/48x48/apps/gnome-desktop-config.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-devel.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-eog.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-folder-generic.png
-share/icons/HighContrastLargePrint/48x48/apps/gnome-folder.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-ftp.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-ghex.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-ghostview.png
@@ -156,6 +74,7 @@ share/icons/HighContrastLargePrint/48x48/apps/gnome-mini-commander.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-mixer-applet.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-mixer.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-modem.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-money.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-monitor.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-multimedia.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-nibbles.png
@@ -196,6 +115,7 @@ share/icons/HighContrastLargePrint/48x48/apps/gnomemeeting-logo-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/gnopernicus.png
 share/icons/HighContrastLargePrint/48x48/apps/gnotski-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/gok.png
+share/icons/HighContrastLargePrint/48x48/apps/gswitchit-applet.png
 share/icons/HighContrastLargePrint/48x48/apps/gthumb.png
 share/icons/HighContrastLargePrint/48x48/apps/gtkam-camera.png
 share/icons/HighContrastLargePrint/48x48/apps/gucharmap.png
@@ -213,15 +133,16 @@ share/icons/HighContrastLargePrint/48x48/apps/logviewer.png
 share/icons/HighContrastLargePrint/48x48/apps/media-player-48.png
 share/icons/HighContrastLargePrint/48x48/apps/mozilla-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/nb48x48.png
+share/icons/HighContrastLargePrint/48x48/apps/netapplet.png
 share/icons/HighContrastLargePrint/48x48/apps/network-config.png
 share/icons/HighContrastLargePrint/48x48/apps/network.png
+share/icons/HighContrastLargePrint/48x48/apps/panel-notification-area.png
 share/icons/HighContrastLargePrint/48x48/apps/password.png
 share/icons/HighContrastLargePrint/48x48/apps/perfmeter.png
 share/icons/HighContrastLargePrint/48x48/apps/postscript-viewer.png
 share/icons/HighContrastLargePrint/48x48/apps/procman.png
+share/icons/HighContrastLargePrint/48x48/apps/quick-lounge-applet.png
 share/icons/HighContrastLargePrint/48x48/apps/realplay.png
-share/icons/HighContrastLargePrint/48x48/apps/realplayer.xpm
-share/icons/HighContrastLargePrint/48x48/apps/rp7.xpm
 share/icons/HighContrastLargePrint/48x48/apps/screensaver.png
 share/icons/HighContrastLargePrint/48x48/apps/serviceconf.png
 share/icons/HighContrastLargePrint/48x48/apps/sound-capplet.png
@@ -229,8 +150,10 @@ share/icons/HighContrastLargePrint/48x48/apps/star.png
 share/icons/HighContrastLargePrint/48x48/apps/staroffice-calc.png
 share/icons/HighContrastLargePrint/48x48/apps/staroffice-impress.png
 share/icons/HighContrastLargePrint/48x48/apps/staroffice-writer.png
+share/icons/HighContrastLargePrint/48x48/apps/stock_notes.png
 share/icons/HighContrastLargePrint/48x48/apps/stock_proxy.png
 share/icons/HighContrastLargePrint/48x48/apps/stock_timezone.png
+share/icons/HighContrastLargePrint/48x48/apps/stock_weather-storm.png
 share/icons/HighContrastLargePrint/48x48/apps/sun_java.png
 share/icons/HighContrastLargePrint/48x48/apps/web-browser.png
 share/icons/HighContrastLargePrint/48x48/apps/window-capplet.png
@@ -244,6 +167,8 @@ share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-jazdisk.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-keyboard.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-mouse-ball.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-mouse-optical.png
+share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-printer-network.png
+share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-printer-new.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-printer.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-removable.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-zipdisk.png
@@ -462,6 +387,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/acme-48.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/administration.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/advanced-directory.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/ax-applet.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/battstat.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/charpick.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/clock.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/config-language.png
@@ -469,6 +395,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/config-users.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/config-xfree.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/disks.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/display-capplet.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/drivemount-applet.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/evolution-1.4.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/evolution.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/file-manager.png
@@ -479,12 +406,14 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gataxx.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gcalctool.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gconf-editor.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gdict.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gdm-setup.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gdm-xnest.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gdm.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gedit-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gkb.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/glade-2.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/glines.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/glow.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/glow-app-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnect-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-application-generic.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-applications.png
@@ -500,7 +429,6 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-desktop-config.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-devel.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-eog.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-folder-generic.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-folder.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-ftp.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-ghex.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-ghostview.png
@@ -525,6 +453,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-mini-commander.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-mixer-applet.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-mixer.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-modem.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-money.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-monitor.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-multimedia.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-nibbles.png
@@ -565,6 +494,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gnomemeeting-logo-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnopernicus.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnotski-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gok.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gswitchit-applet.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gthumb.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gtkam-camera.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gucharmap.png
@@ -582,15 +512,16 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/logviewer.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/media-player-48.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/mozilla-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/nb48x48.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/netapplet.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/network-config.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/network.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/panel-notification-area.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/password.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/perfmeter.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/postscript-viewer.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/procman.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/quick-lounge-applet.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/realplay.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/realplayer.xpm
-share/icons/HighContrastLargePrintInverse/48x48/apps/rp7.xpm
 share/icons/HighContrastLargePrintInverse/48x48/apps/screensaver.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/serviceconf.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/sound-capplet.png
@@ -598,8 +529,10 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/star.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/staroffice-calc.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/staroffice-impress.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/staroffice-writer.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/stock_notes.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/stock_proxy.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/stock_timezone.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/stock_weather-storm.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/sun_java.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/web-browser.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/window-capplet.png
@@ -613,6 +546,8 @@ share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-jazdisk.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-keyboard.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-mouse-ball.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-mouse-optical.png
+share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-printer-network.png
+share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-printer-new.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-printer.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-removable.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-zipdisk.png
@@ -902,6 +837,9 @@ share/icons/LowContrastLargePrint/48x48/devices/gnome-dev-jazdisk.png
 share/icons/LowContrastLargePrint/48x48/devices/gnome-dev-keyboard.png
 share/icons/LowContrastLargePrint/48x48/devices/gnome-dev-memory.png
 share/icons/LowContrastLargePrint/48x48/devices/gnome-dev-mouse-optical.png
+share/icons/LowContrastLargePrint/48x48/devices/gnome-dev-printer-network.png
+share/icons/LowContrastLargePrint/48x48/devices/gnome-dev-printer-new.png
+share/icons/LowContrastLargePrint/48x48/devices/gnome-dev-printer.png
 share/icons/LowContrastLargePrint/48x48/devices/gnome-dev-zipdisk.png
 share/icons/LowContrastLargePrint/48x48/emblems/emblem-art.png
 share/icons/LowContrastLargePrint/48x48/emblems/emblem-camera.png
@@ -1079,40 +1017,6 @@ share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-mime-video-x-msvideo.png
 share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-mime-x-font-afm.png
 share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-package.png
 share/icons/LowContrastLargePrint/index.theme
-share/icons/Sandy/12x12/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/12x12/filesystems/gnome-fs-directory.png
-share/icons/Sandy/24x24/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/24x24/filesystems/gnome-fs-directory.png
-share/icons/Sandy/36x36/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/36x36/filesystems/gnome-fs-directory.png
-share/icons/Sandy/48x48/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/48x48/filesystems/gnome-fs-directory.png
-share/icons/Sandy/72x72/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/72x72/filesystems/gnome-fs-directory.png
-share/icons/Sandy/96x96/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/96x96/filesystems/gnome-fs-directory.png
-share/icons/Sandy/index.theme
-share/icons/Smokey-Blue/48x48/emblems/emblem-nowrite.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-nfs.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty-accept.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full-accept.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full.png
-share/icons/Smokey-Blue/72x72/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Blue/96x96/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Blue/index.theme
-share/icons/Smokey-Red/48x48/emblems/emblem-nowrite.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty-accept.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full-accept.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full.png
-share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.icon
-share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Red/64x64/filesystems/gnome-fs-nfs.png
-share/icons/Smokey-Red/72x72/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Red/96x96/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Red/index.theme
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-themes.mo
@@ -1181,6 +1085,8 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-themes.mo
+share/themes/Clearlooks/index.theme
+share/themes/Clearlooks/metacity-1/metacity-theme-1.xml
 share/themes/Crux/index.theme
 share/themes/Glider/gtk-2.0/gtkrc
 share/themes/Glider/index.theme
@@ -1882,11 +1788,9 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/Smokey/metacity-1
 @dirrm share/themes/Smokey-Blue/gtk-2.0
 @comment in theme-dirs: @dirrm share/themes/Smokey-Blue
-@comment in theme-dirs: @dirrm share/themes/Smokey
 @dirrm share/themes/Simple/gtk-2.0
 @comment in theme-dirs: @dirrm share/themes/Simple
 @dirrm share/themes/Sandwish/metacity-1
-@comment in theme-dirs: @dirrm share/themes/Sandwish
 @comment in theme-dirs: @dirrm share/themes/Ocean-Dream
 @dirrm share/themes/Mist/metacity-1
 @comment in theme-dirs: @dirrm share/themes/Mist
@@ -1914,35 +1818,71 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/Glider/gtk-2.0
 @comment in theme-dirs: @dirrm share/themes/Glider
 @comment in theme-dirs: @dirrm share/themes/Crux
+@dirrm share/themes/Clearlooks/metacity-1
+@comment in theme-dirs: @dirrm share/themes/Clearlooks
+@dirrm share/icons/Smokey-Red/index.theme
+@dirrm share/icons/Smokey-Red/96x96/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Red/96x96/filesystems
 @dirrm share/icons/Smokey-Red/96x96
+@dirrm share/icons/Smokey-Red/72x72/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Red/72x72/filesystems
 @dirrm share/icons/Smokey-Red/72x72
+@dirrm share/icons/Smokey-Red/64x64/filesystems/gnome-fs-nfs.png
+@dirrm share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.icon
 @dirrm share/icons/Smokey-Red/64x64/filesystems
 @dirrm share/icons/Smokey-Red/64x64
+@dirrm share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full.png
+@dirrm share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full-accept.png
+@dirrm share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty.png
+@dirrm share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty-accept.png
 @dirrm share/icons/Smokey-Red/48x48/filesystems
+@dirrm share/icons/Smokey-Red/48x48/emblems/emblem-nowrite.png
 @dirrm share/icons/Smokey-Red/48x48/emblems
 @dirrm share/icons/Smokey-Red/48x48
 @dirrm share/icons/Smokey-Red
+@dirrm share/icons/Smokey-Blue/index.theme
+@dirrm share/icons/Smokey-Blue/96x96/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Blue/96x96/filesystems
 @dirrm share/icons/Smokey-Blue/96x96
+@dirrm share/icons/Smokey-Blue/72x72/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Blue/72x72/filesystems
 @dirrm share/icons/Smokey-Blue/72x72
+@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full.png
+@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full-accept.png
+@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty.png
+@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty-accept.png
+@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-nfs.png
+@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Blue/64x64/filesystems
 @dirrm share/icons/Smokey-Blue/64x64
+@dirrm share/icons/Smokey-Blue/48x48/emblems/emblem-nowrite.png
 @dirrm share/icons/Smokey-Blue/48x48/emblems
 @dirrm share/icons/Smokey-Blue/48x48
 @dirrm share/icons/Smokey-Blue
+@dirrm share/icons/Sandy/index.theme
+@dirrm share/icons/Sandy/96x96/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Sandy/96x96/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/96x96/filesystems
 @dirrm share/icons/Sandy/96x96
+@dirrm share/icons/Sandy/72x72/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Sandy/72x72/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/72x72/filesystems
 @dirrm share/icons/Sandy/72x72
+@dirrm share/icons/Sandy/48x48/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Sandy/48x48/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/48x48/filesystems
 @dirrm share/icons/Sandy/48x48
+@dirrm share/icons/Sandy/36x36/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Sandy/36x36/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/36x36/filesystems
 @dirrm share/icons/Sandy/36x36
+@dirrm share/icons/Sandy/24x24/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Sandy/24x24/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/24x24/filesystems
 @dirrm share/icons/Sandy/24x24
+@dirrm share/icons/Sandy/12x12/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Sandy/12x12/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/12x12/filesystems
 @dirrm share/icons/Sandy/12x12
 @dirrm share/icons/Sandy
@@ -1971,48 +1911,133 @@ share/themes/Traditional/index.theme
 @dirrm share/icons/HighContrastLargePrint
 @dirrm share/icons/HighContrastInverse
 @dirrm share/icons/HighContrast
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-urgent.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-special.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-personal.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-ohno.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-nowrite.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-noread.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-new.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-important.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-favorite.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-draft.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-distinguished.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-danger.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-cool.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-certified.svg
+@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-OK.svg
 @dirrm share/icons/Flat-Blue/scalable/emblems
 @dirrm share/icons/Flat-Blue/scalable
+@dirrm share/icons/Flat-Blue/index.theme
+@dirrm share/icons/Flat-Blue/96x96/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/96x96/filesystems
 @dirrm share/icons/Flat-Blue/96x96
+@dirrm share/icons/Flat-Blue/72x72/filesystems/gnome-fs-web.png
+@dirrm share/icons/Flat-Blue/72x72/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Flat-Blue/72x72/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Flat-Blue/72x72/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/72x72/filesystems
+@dirrm share/icons/Flat-Blue/72x72/devices/gnome-dev-search.png
 @dirrm share/icons/Flat-Blue/72x72/devices
 @dirrm share/icons/Flat-Blue/72x72
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-trash-full.png
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-trash-empty.png
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-loading.png
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-home.png
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-directory-accept.png
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-bookmark.png
+@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-bookmark-missing.png
 @dirrm share/icons/Flat-Blue/48x48/filesystems
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-web.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-trash.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-symbolic-link.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-sound.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-pictures.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-package.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-multimedia.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-mail.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-generic.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-documents.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-camera.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-broken-link.png
+@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-art.png
 @dirrm share/icons/Flat-Blue/48x48/emblems
+@dirrm share/icons/Flat-Blue/48x48/devices/gnome-dev-symlink.png
+@dirrm share/icons/Flat-Blue/48x48/devices/gnome-dev-stalled.png
+@dirrm share/icons/Flat-Blue/48x48/devices/gnome-dev-spreadsheet.png
+@dirrm share/icons/Flat-Blue/48x48/devices/gnome-dev-broken-image.png
 @dirrm share/icons/Flat-Blue/48x48/devices
 @dirrm share/icons/Flat-Blue/48x48
+@dirrm share/icons/Flat-Blue/36x36/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Flat-Blue/36x36/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Flat-Blue/36x36/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/36x36/filesystems
+@dirrm share/icons/Flat-Blue/36x36/emblems/emblem-symbolic-link.png
 @dirrm share/icons/Flat-Blue/36x36/emblems
 @dirrm share/icons/Flat-Blue/36x36
+@dirrm share/icons/Flat-Blue/24x24/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Flat-Blue/24x24/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Flat-Blue/24x24/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/24x24/filesystems
+@dirrm share/icons/Flat-Blue/24x24/emblems/emblem-symbolic-link.png
 @dirrm share/icons/Flat-Blue/24x24/emblems
 @dirrm share/icons/Flat-Blue/24x24
+@dirrm share/icons/Flat-Blue/20x20/filesystems/gnome-fs-bookmark.png
+@dirrm share/icons/Flat-Blue/20x20/filesystems/gnome-fs-bookmark-missing.png
 @dirrm share/icons/Flat-Blue/20x20/filesystems
 @dirrm share/icons/Flat-Blue/20x20
+@dirrm share/icons/Flat-Blue/192x192/filesystems/gnome-fs-trash-full.png
+@dirrm share/icons/Flat-Blue/192x192/filesystems/gnome-fs-trash-empty.png
 @dirrm share/icons/Flat-Blue/192x192/filesystems
 @dirrm share/icons/Flat-Blue/192x192
+@dirrm share/icons/Flat-Blue/12x12/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory.png
+@dirrm share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/12x12/filesystems
+@dirrm share/icons/Flat-Blue/12x12/emblems/emblem-symbolic-link.png
 @dirrm share/icons/Flat-Blue/12x12/emblems
 @dirrm share/icons/Flat-Blue/12x12
 @dirrm share/icons/Flat-Blue
+@dirrm share/icons/Crux/96x96/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Crux/96x96/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/96x96/filesystems
+@dirrm share/icons/Crux/96x96/emblems/emblem-nowrite.png
 @dirrm share/icons/Crux/96x96/emblems
 @dirrm share/icons/Crux/96x96
+@dirrm share/icons/Crux/72x72/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Crux/72x72/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/72x72/filesystems
+@dirrm share/icons/Crux/72x72/emblems/emblem-nowrite.png
 @dirrm share/icons/Crux/72x72/emblems
 @dirrm share/icons/Crux/72x72
+@dirrm share/icons/Crux/48x48/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Crux/48x48/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/48x48/filesystems
+@dirrm share/icons/Crux/48x48/emblems/emblem-nowrite.png
 @dirrm share/icons/Crux/48x48/emblems
 @dirrm share/icons/Crux/48x48
+@dirrm share/icons/Crux/36x36/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Crux/36x36/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/36x36/filesystems
 @dirrm share/icons/Crux/36x36
+@dirrm share/icons/Crux/24x24/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Crux/24x24/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/24x24/filesystems
 @dirrm share/icons/Crux/24x24
+@dirrm share/icons/Crux/20x20/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Crux/20x20/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/20x20/filesystems
 @dirrm share/icons/Crux/20x20
+@dirrm share/icons/Crux/192x192/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Crux/192x192/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/192x192/filesystems
 @dirrm share/icons/Crux/192x192
+@dirrm share/icons/Crux/12x12/filesystems/gnome-fs-regular.png
+@dirrm share/icons/Crux/12x12/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/12x12/filesystems
 @dirrm share/icons/Crux/12x12
 @dirrm share/icons/Crux
