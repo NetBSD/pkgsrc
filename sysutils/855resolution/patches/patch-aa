@@ -1,5 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2005/10/12 02:06:37 christos Exp $
-
+$NetBSD: patch-aa,v 1.2 2005/10/12 02:15:30 christos Exp $
 
 --- 855resolution.c	2005-05-08 15:46:02.000000000 -0400
 +++ 855resolution.c	2005-10-11 17:24:05.000000000 -0400
@@ -20,22 +19,6 @@ $NetBSD: patch-aa,v 1.1 2005/10/12 02:06:37 christos Exp $
          close_bios();
          return 2;
      }
---- Makefile	2005-05-08 11:27:59.000000000 -0400
-+++ Makefile	2005-10-11 17:30:36.000000000 -0400
-@@ -7,10 +7,10 @@
- SRCS=855resolution.c vbios.c plugin.c ${PLUGINS_SRCS}
- OBJS=${SRCS:.c=.o}
- 
--PLUGINS_LIST:=${shell cd plugins;ls -x *.c | sed -e 's/.c//g' -e 's/  */,/g' }
-+PLUGINS_LIST:=${shell cd plugins;ls -x *.c | sed -e 's/.c/,/g' -e 's/,[ ]*$$//g' }
- PLUGINS_ADDR:=${shell echo ${PLUGINS_LIST} | sed -e 's/^/\&/g' -e 's/,/,\&/g' }
- VERSION:=${shell cat VERSION.txt}
--LDLIBS:=-lm
-+LDLIBS:=-lm -li386
- 
- CFLAGS:=-Wall -I`pwd` -DVERSION='"${VERSION}"' -DPLUGINS='${PLUGINS_LIST}' -DREF_PLUGINS='${PLUGINS_ADDR}' ${VBIOS_FILE}
- LDFLAGS:=-s
-Only in .: o
 --- plugins/plugin1.c	2005-05-08 15:56:35.000000000 -0400
 +++ plugins/plugin1.c	2005-10-11 17:22:30.000000000 -0400
 @@ -12,7 +12,6 @@
