@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.5 2005/03/22 16:19:42 jmmv Exp $
+$NetBSD: patch-ab,v 1.6 2005/10/12 21:59:10 jmmv Exp $
 
---- gweather/weather.c.orig	2005-03-01 10:34:33.000000000 +0100
-+++ gweather/weather.c
-@@ -20,7 +20,6 @@
- #include <string.h>
- #include <ctype.h>
- #include <math.h>
--#include <values.h>
+--- battstat/properties.c.orig	2005-07-09 07:48:58.000000000 +0200
++++ battstat/properties.c
+@@ -25,6 +25,7 @@
  
- #ifdef __FreeBSD__
+ #include <stdio.h>
+ 
++#include <sys/param.h>
+ #include <sys/file.h>
+ #include <sys/ioctl.h>
  #include <sys/types.h>
