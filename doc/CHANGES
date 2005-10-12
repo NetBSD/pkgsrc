@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11441 2005/10/12 20:19:30 wiz Exp $
+$NetBSD: CHANGES,v 1.11442 2005/10/12 22:00:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4430,3 +4430,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added security/p5-Crypt-DH version 0.06 [seb 2005-10-12]
 	Updated fonts/alee-ttf to 5.4 [minskim 2005-10-12]
 	Added misc/pyqt_memaid version 0.2.4 [wiz 2005-10-12]
+	Updated multimedia/libtheora to 1.0alpha5 [wiz 2005-10-12]
