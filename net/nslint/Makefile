@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2004/12/03 15:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/12 07:10:57 seb Exp $
 #
 
 DISTNAME=	nslint-2.0.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 
-MAINTAINER=	seb@pbox.org
+MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://ee.lbl.gov/ftp.html
 COMMENT=	Perform consistency checks on DNS zone files
 

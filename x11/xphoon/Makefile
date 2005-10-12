@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:48:16 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/12 07:10:57 seb Exp $
 #
 
 DISTNAME=	xphoon.tar
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.x.org/R5contrib/ \
 		ftp://ftp.sunet.se/pub/X11/
 EXTRACT_SUFX=	.Z
 
-MAINTAINER=	seb@pbox.org
+MAINTAINER=	seb@NetBSD.org
 COMMENT=	Set the root window to the moon in its current phase
 
 WRKSRC=		${WRKDIR}/xphoon
