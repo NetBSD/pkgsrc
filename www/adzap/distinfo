@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.35 2005/10/02 05:03:24 simonb Exp $
+$NetBSD: distinfo,v 1.36 2005/10/12 08:48:26 kleink Exp $
 
-SHA1 (adzap-20050921.tar.gz) = e896117f74b6b62c5c0560777d6b7b189a4d65ad
-RMD160 (adzap-20050921.tar.gz) = 7615d2adc9205d5dc6fd55f0b20640a3b1249767
-Size (adzap-20050921.tar.gz) = 51267 bytes
+SHA1 (adzap-20051006.tar.gz) = 081773a00c4f9facdc76fb022868b6c4dcc30d1b
+RMD160 (adzap-20051006.tar.gz) = 5544943d846a517d0b04880e6510bc7726674168
+Size (adzap-20051006.tar.gz) = 51470 bytes
 SHA1 (patch-aa) = 6bdb5e8d2487a977907d20e0e40afbc900cad919
 SHA1 (patch-ab) = b98776ed6627e743b50cb233f5af0842a92cd6b7
