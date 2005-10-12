@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4002 2005/10/12 14:30:06 wiz Exp $
+$NetBSD: TODO,v 1.4003 2005/10/12 15:07:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1133,12 +1133,9 @@ Suggested package updates
 	o py-checker-0.8.15
 	o py-clearsilver-0.10.1
 	o py-docutils-0.3.9
-	o py-game-1.7.1
 	o py-gnome2-2.12.1
 	o py-gnutls-0.2.1
 	o py-gtk2-2.8.0
-	o py-imaging-1.1.5
-	o py-imagingtk-1.1.5
 	o py-kenosis-0.95
 	o py-ldap-2.0.10
 	o py-libxml2-2.6.22
