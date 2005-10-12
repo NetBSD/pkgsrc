@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11427 2005/10/12 08:49:46 kleink Exp $
+$NetBSD: CHANGES,v 1.11428 2005/10/12 10:56:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -3642,6 +3642,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed net/ra-pna-proxy [tron 2005-08-11]
 	Updated sysutils/mklivecd to 0.13.0 [xtraeme 2005-08-11]
 	Updated graphics/xpm to 3.4knb5 [dmcmahill 2005-08-11]
+	Added net/sipsak version 0.9.1 [drochner 2005-08-11]
 	Updated print/xpdf to 3.00pl3nb1 [salo 2005-08-12]
         Updated databases/mysql-client to 4.0.25 [xtraeme 2005-08-12]
         Updated databases/mysql-server to 4.0.25 [xtraeme 2005-08-12]
