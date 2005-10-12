@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2005/03/21 17:16:23 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/12 21:59:42 wiz Exp $
 
---- examples/Makefile.am.orig	2004-09-24 14:25:14.000000000 -0400
-+++ examples/Makefile.am	2005-03-21 09:49:46.465883000 -0500
-@@ -12,8 +12,10 @@
+--- examples/Makefile.am.orig	2005-05-01 19:03:32.000000000 +0200
++++ examples/Makefile.am
+@@ -11,10 +11,12 @@ AM_CFLAGS = $(SDL_CFLAGS) $(OGG_CFLAGS)
+ LDADD = ../lib/libtheora.la $(OGG_LIBS)
  
  dump_video_SOURCES = dump_video.c
 -dump_video_LDADD = $(LDADD)
@@ -15,3 +16,4 @@ $NetBSD: patch-ab,v 1.1 2005/03/21 17:16:23 dmcmahill Exp $
 +dump_video_DEPENDENCIES = $(GETOPT_OBJS)
  
  encoder_example_SOURCES = encoder_example.c
+ EXTRA_encoder_example_SOURCES = getopt.c getopt1.c getopt.h
