@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2005/08/16 16:58:29 jlam Exp $
+# $NetBSD: builtin.mk,v 1.16 2005/10/12 02:00:03 jlam Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -78,7 +78,7 @@ BUILTIN_OPENSSL_HAS_20040401_FIX!=					\
 		END { print ans; exit 0 }				\
 	' ${H_OPENSSL}
 .    if !empty(BUILTIN_OPENSSL_HAS_20040401_FIX:M[yY][eE][sS])
-BUILTIN_VERSION.openssl=	-0.9.6m
+BUILTIN_VERSION.openssl=	0.9.6m
 .    endif
 .  endif
 BUILTIN_PKG.openssl=	openssl-${BUILTIN_VERSION.openssl}
