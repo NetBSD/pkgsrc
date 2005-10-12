@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2005/08/26 16:46:41 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2005/10/12 21:53:25 jmmv Exp $
 #
 
-DISTNAME=	metacity-2.10.3
+DISTNAME=	metacity-2.12.1
 CATEGORIES=	wm x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -29,12 +29,13 @@ CONFIGURE_ARGS+=	--disable-xinerama
 .endif
 
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../x11/xcursor/buildlink3.mk"
 .include "../../x11/Xcomposite/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 
