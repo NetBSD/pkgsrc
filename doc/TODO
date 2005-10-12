@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4001 2005/10/12 14:24:47 wiz Exp $
+$NetBSD: TODO,v 1.4002 2005/10/12 14:30:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -317,7 +317,7 @@ Suggested package updates
 	o REminiscence-0.1.8
 	o ROMBuild-2.7
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.5.9
+	o TeXmacs-1.0.5.10
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
@@ -489,7 +489,7 @@ Suggested package updates
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.6
 	o dvipdfmx-20050627
-	o dvipng-1.6 [http://sourceforge.net/projects/dvipng/]
+	o dvipng-1.7 [http://sourceforge.net/projects/dvipng/]
 	o dx-4.3.3
 	o dylan-compiler-2.4.0
 	o dylan-interpreter-2.4.0
@@ -557,7 +557,7 @@ Suggested package updates
 	o gauche-0.8.5
 	o gcalctool-5.6.31
 	o gcc-3.3.6
-	o gcc-4.0.1
+	o gcc-4.0.2
 	o gcombust-0.1.55
 	o gcpio-2.6
 	o gcube-0.4
@@ -755,6 +755,7 @@ Suggested package updates
 	o libwpd-0.8.3
 	o licq-core-1.3.0
 	o lilypond-2.6.3
+	o links-2.1pre19
 	o linuxsms-0.77
 	o lmbench-2.5
 	o lopster-1.2.2
@@ -866,7 +867,7 @@ Suggested package updates
 	o openldap-2.2.29
 	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openpam-20050616
-	o openssl-0.9.8
+	o openssl-0.9.8a
 	o openvpn-2.0 [pkg/30239]
 	o oroborus-2.0.15
 	o osh-050219
@@ -1412,8 +1413,7 @@ Suggested package updates
 	o xfce4-notes-plugin-0.11.1
 	o xfe-0.72
 	o xfmail-1.5.4
-	o xine-lib-1.0.3
-	o xine-lib-1.1.0
+	o xine-lib-1.1.1
 	o xine-ui-0.99.4
 	o xkbset-0.5
 	o xlispstat-3.52.20
