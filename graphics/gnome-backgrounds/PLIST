@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2005/08/26 17:22:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/10/12 21:58:12 jmmv Exp $
 share/gnome-background-properties/gnome-branded.xml
 share/gnome-background-properties/gnome-tiles.xml
 share/gnome-background-properties/gnome-translucent.xml
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-backgrounds.mo
@@ -14,6 +15,7 @@ ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-backgrounds.mo
@@ -21,6 +23,7 @@ ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/hy/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-backgrounds.mo
@@ -57,9 +60,9 @@ share/pixmaps/backgrounds/gnome/branded/GNOME-Weirdcolours.jpg
 share/pixmaps/backgrounds/gnome/tiles/alien-artifact-trans.png
 share/pixmaps/backgrounds/gnome/tiles/cow-trans.png
 share/pixmaps/backgrounds/gnome/tiles/tiles-trans.png
-share/pixmaps/backgrounds/gnome/translucent/ellipsis.png
-share/pixmaps/backgrounds/gnome/translucent/rects.png
-share/pixmaps/backgrounds/gnome/translucent/tentacles.png
+share/pixmaps/backgrounds/gnome/translucent/ellipsis.svg
+share/pixmaps/backgrounds/gnome/translucent/rects.svg
+share/pixmaps/backgrounds/gnome/translucent/tentacles.svg
 @dirrm share/pixmaps/backgrounds/gnome/translucent
 @dirrm share/pixmaps/backgrounds/gnome/tiles
 @dirrm share/pixmaps/backgrounds/gnome/branded
