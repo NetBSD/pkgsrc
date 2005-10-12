@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/04/19 19:22:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/10/12 21:53:11 jmmv Exp $
 bin/nautilus
 bin/nautilus-connect-server
 bin/nautilus-file-management-properties
@@ -56,6 +56,7 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/nautilus.mo
@@ -85,6 +86,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/nautilus.mo
@@ -140,42 +142,17 @@ share/nautilus/ui/nautilus-list-view-ui.xml
 share/nautilus/ui/nautilus-navigation-window-ui.xml
 share/nautilus/ui/nautilus-shell-ui.xml
 share/nautilus/ui/nautilus-spatial-window-ui.xml
-share/pixmaps/nautilus/Search.png
-share/pixmaps/nautilus/audio.png
+share/pixmaps/nautilus/audio.svg
 share/pixmaps/nautilus/backgrounds.png
 share/pixmaps/nautilus/chit_frame.png
 share/pixmaps/nautilus/colors.png
-share/pixmaps/nautilus/crux_eggplant/Search.png
-share/pixmaps/nautilus/crux_eggplant/crux_eggplant.xml
-share/pixmaps/nautilus/crux_teal/Search.png
-share/pixmaps/nautilus/crux_teal/crux_teal.xml
-share/pixmaps/nautilus/default/Search.png
-share/pixmaps/nautilus/default/default.xml
-share/pixmaps/nautilus/default/side_bar_image.png
 share/pixmaps/nautilus/emblems.png
 share/pixmaps/nautilus/erase.png
-share/pixmaps/nautilus/gnome/Services.png
-share/pixmaps/nautilus/gnome/gnome.xml
 share/pixmaps/nautilus/knob.png
-share/pixmaps/nautilus/nautilus-desktop.png
-share/pixmaps/nautilus/nautilus-file-management-properties.png
 share/pixmaps/nautilus/nautilus-launch-icon.png
-share/pixmaps/nautilus/nautilus-mini-logo.png
-share/pixmaps/nautilus/nautilus-server-connect.png
 share/pixmaps/nautilus/note-indicator.png
-share/pixmaps/nautilus/side_bar_image.png
-share/pixmaps/nautilus/sierra/green_weave.png
-share/pixmaps/nautilus/sierra/sierra.xml
-share/pixmaps/nautilus/tahoe/bluewall.png
-share/pixmaps/nautilus/tahoe/tahoe.xml
 share/pixmaps/nautilus/text-selection-frame.png
 share/pixmaps/nautilus/thumbnail_frame.png
-@dirrm share/pixmaps/nautilus/tahoe
-@dirrm share/pixmaps/nautilus/sierra
-@dirrm share/pixmaps/nautilus/gnome
-@dirrm share/pixmaps/nautilus/default
-@dirrm share/pixmaps/nautilus/crux_teal
-@dirrm share/pixmaps/nautilus/crux_eggplant
 @dirrm share/pixmaps/nautilus
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/nautilus/ui
