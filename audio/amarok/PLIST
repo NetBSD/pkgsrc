@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/02 15:22:19 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/12 11:15:30 seb Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
@@ -330,6 +330,7 @@ share/kde/apps/amarok/images/time_plus.png
 share/kde/apps/amarok/images/vol_speaker.png
 share/kde/apps/amarok/images/volumeslider-gradient.png
 share/kde/apps/amarok/images/volumeslider-handle.png
+share/kde/apps/amarok/images/volumeslider-handle_glow.png
 share/kde/apps/amarok/images/volumeslider-inset.png
 share/kde/apps/amarok/images/wizard_compact.png
 share/kde/apps/amarok/images/wizard_xmms.png
@@ -449,6 +450,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/amarok.mo
+${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/amarok.mo
