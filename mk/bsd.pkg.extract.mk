@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.12 2005/08/21 07:29:48 rillig Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.13 2005/10/12 15:18:59 rillig Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -40,7 +40,7 @@ EXTRACT_ONLY?=		${DISTFILES}
 EXTRACT_SUFX?=		.tar.gz
 EXTRACT_USING?=		nbtar
 
-_EXTRACT_SUFFIXES=	.tar.gz .tgz .tar.bz2 .tbz .tar.Z .tar _tar.gz
+_EXTRACT_SUFFIXES=	.tar.gz .tgz .tar.bz2 .tbz .tbz2 .tar.Z .tar _tar.gz
 _EXTRACT_SUFFIXES+=	.shar.gz .shar.bz2 .shar.Z .shar
 _EXTRACT_SUFFIXES+=	.zip
 _EXTRACT_SUFFIXES+=	.lha .lzh
@@ -54,6 +54,7 @@ _EXTRACT_PATTERNS=	${EXTRACT_ONLY} ${EXTRACT_SUFX}
 .if !empty(_EXTRACT_PATTERNS:M*.tar) || \
     !empty(_EXTRACT_PATTERNS:M*.tar.*) || \
     !empty(_EXTRACT_PATTERNS:M*.tbz) || \
+    !empty(_EXTRACT_PATTERNS:M*.tbz2) || \
     !empty(_EXTRACT_PATTERNS:M*.tgz) || \
     !empty(_EXTRACT_PATTERNS:M*_tar.gz)
 
@@ -66,7 +67,8 @@ USE_TOOLS+=	pax
 .  endif
 .endif
 .if !empty(_EXTRACT_PATTERNS:M*.bz2) || \
-    !empty(_EXTRACT_PATTERNS:M*.tbz)
+    !empty(_EXTRACT_PATTERNS:M*.tbz) || \
+    !empty(_EXTRACT_PATTERNS:M*.tbz2)
 USE_TOOLS+=	bzcat
 .endif
 .if !empty(_EXTRACT_PATTERNS:M*.zip)
@@ -92,6 +94,7 @@ DECOMPRESS_CMD.tar.gz?=		${GZCAT}
 DECOMPRESS_CMD.tgz?=		${DECOMPRESS_CMD.tar.gz}
 DECOMPRESS_CMD.tar.bz2?=	${BZCAT}
 DECOMPRESS_CMD.tbz?=		${DECOMPRESS_CMD.tar.bz2}
+DECOMPRESS_CMD.tbz2?=		${DECOMPRESS_CMD.tar.bz2}
 DECOMPRESS_CMD.tar.Z?=		${GZCAT}
 DECOMPRESS_CMD.tar?=		${CAT}
 
