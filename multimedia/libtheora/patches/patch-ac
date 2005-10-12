@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2005/03/21 17:16:23 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2005/10/12 21:59:42 wiz Exp $
 
---- examples/Makefile.in.orig	2004-12-15 15:06:17.000000000 -0500
-+++ examples/Makefile.in	2005-03-21 09:51:44.713507000 -0500
-@@ -218,7 +218,9 @@
+--- examples/Makefile.in.orig	2005-08-20 21:30:41.000000000 +0200
++++ examples/Makefile.in
+@@ -225,9 +225,11 @@ INCLUDES = -I$(top_srcdir)/include 
+ AM_CFLAGS = $(SDL_CFLAGS) $(OGG_CFLAGS)
  LDADD = ../lib/libtheora.la $(OGG_LIBS)
  dump_video_SOURCES = dump_video.c
 -dump_video_LDADD = $(LDADD)
@@ -14,3 +15,4 @@ $NetBSD: patch-ac,v 1.1 2005/03/21 17:16:23 dmcmahill Exp $
 +player_example_DEPENDENCIES = $(GETOPT_OBJS)
  encoder_example_SOURCES = encoder_example.c
  EXTRA_encoder_example_SOURCES = getopt.c getopt1.c getopt.h
+ encoder_example_LDADD = $(GETOPT_OBJS) $(LDADD) $(VORBIS_LIBS) $(VORBISENC_LIBS)
