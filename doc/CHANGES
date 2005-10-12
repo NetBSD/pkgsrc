@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11426 2005/10/12 03:19:22 christos Exp $
+$NetBSD: CHANGES,v 1.11427 2005/10/12 08:49:46 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4414,3 +4414,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/snort to 2.4.2 [adrianp 2005-10-11]
 	Updated misc/koffice to 1.4.2 [markd 2005-10-11]
 	Added sysutils/855resolution 0.4 [christos 2005-10-11]
+	Updated www/adzap to 20051006 [kleink 2005-10-12]
