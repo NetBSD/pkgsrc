@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3996 2005/10/11 17:00:15 reed Exp $
+$NetBSD: TODO,v 1.3997 2005/10/12 07:32:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,6 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fprot-workstation-bin-4.6.1
-	o freetds-0.62.4
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
@@ -830,7 +829,7 @@ Suggested package updates
 	o pfstat-1.8
 	o phoon-20030120
 	o photopc-3.05
-	o phpmyadmin-2.6.4pl1
+	o phpmyadmin-2.6.4pl2
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
