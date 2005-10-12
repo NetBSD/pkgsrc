@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11425 2005/10/11 23:39:07 markd Exp $
+$NetBSD: CHANGES,v 1.11426 2005/10/12 03:19:22 christos Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4413,3 +4413,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/p5-Socket6 to 0.19 [adrianp 2005-10-11]
 	Updated net/snort to 2.4.2 [adrianp 2005-10-11]
 	Updated misc/koffice to 1.4.2 [markd 2005-10-11]
+	Added sysutils/855resolution 0.4 [christos 2005-10-11]
