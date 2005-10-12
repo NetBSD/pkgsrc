@@ -1,14 +1,0 @@
-$NetBSD: patch-ai,v 1.1 2004/11/18 14:20:26 sketch Exp $
-
---- ./calendar/backends/file/e-cal-backend-file-todos.c.orig	2003-11-03 18:24:02.000000000 +0000
-+++ ./calendar/backends/file/e-cal-backend-file-todos.c	2004-11-18 07:43:17.101414000 +0000
-@@ -26,6 +26,9 @@
- 
- /* Private part of the ECalBackendFileTodos structure */
- struct _ECalBackendFileTodosPrivate {
-+#if defined(__SUNPRO_C)
-+	unsigned char a_variable_to_avoid_empty_struct;
-+#endif
- };
- 
- 
