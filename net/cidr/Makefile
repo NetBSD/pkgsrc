@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/03 10:57:54 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/12 07:10:57 seb Exp $
 #
 
 DISTNAME=	cidr-current
@@ -6,7 +6,7 @@ PKGNAME=	cidr-2.3.1
 CATEGORIES=	net
 MASTER_SITES=	http://home.netcom.com/~naym/cidr/
 
-MAINTAINER=	seb@pbox.org
+MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://home.netcom.com/~naym/cidr.html
 COMMENT=	RFC 1878 subnet calculator / helper
 
