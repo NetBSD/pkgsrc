@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2005/08/10 20:56:26 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2005/10/12 21:59:10 jmmv Exp $
 #
 
-DISTNAME=		gnome-applets-2.10.1
+DISTNAME=		gnome-applets-2.12.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.10/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.12/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -86,9 +86,11 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/libgtop2/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
