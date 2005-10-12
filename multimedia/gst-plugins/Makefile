@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/08/21 11:27:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2005/10/12 21:54:04 jmmv Exp $
 #
 
 .include "Makefile.common"
@@ -27,5 +27,6 @@ REPLACE_PERL+=		tools/gst-launch-ext-m.m
 REPLACE_PERL+=		tools/gst-visualise-m.m
 
 .include "../../devel/GConf2/schemas.mk"
+.include "../../x11/Xfixes/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
