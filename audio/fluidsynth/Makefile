@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/14 12:49:34 adam Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/12 20:22:57 joerg Exp $
 
 DISTNAME=	fluidsynth-1.0.6
 CATEGORIES=	audio
@@ -13,6 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	fluidsynth.pc.in
+PTHREAD_AUTO_VARS=	yes
 
 CFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LDFLAGS+=		${LIBOSSAUDIO}
