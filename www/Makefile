@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.411 2005/10/11 00:55:39 gdt Exp $
+# $NetBSD: Makefile,v 1.412 2005/10/12 21:51:17 jmmv Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -107,6 +107,7 @@ SUBDIR+=	gtkasp2php
 SUBDIR+=	gtkhtml
 SUBDIR+=	gtkhtml30
 SUBDIR+=	gtkhtml36
+SUBDIR+=	gtkhtml38
 SUBDIR+=	haskell-cgi
 SUBDIR+=	hiawatha
 SUBDIR+=	horde
