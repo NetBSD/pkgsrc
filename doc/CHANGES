@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11440 2005/10/12 19:35:38 minskim Exp $
+$NetBSD: CHANGES,v 1.11441 2005/10/12 20:19:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/p5-Module-CoreList to 2.02 [seb 2005-10-12]
 	Added security/p5-Crypt-DH version 0.06 [seb 2005-10-12]
 	Updated fonts/alee-ttf to 5.4 [minskim 2005-10-12]
+	Added misc/pyqt_memaid version 0.2.4 [wiz 2005-10-12]
