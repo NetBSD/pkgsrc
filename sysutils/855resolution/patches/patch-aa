@@ -1,0 +1,158 @@
+$NetBSD: patch-aa,v 1.1 2005/10/12 02:06:37 christos Exp $
+
+
+--- 855resolution.c	2005-05-08 15:46:02.000000000 -0400
++++ 855resolution.c	2005-10-11 17:24:05.000000000 -0400
+@@ -15,7 +15,6 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
+-#include <sys/io.h>
+ 
+ #include "vbios.h"
+ #include "plugin.h"
+@@ -169,7 +168,7 @@
+     modes = find_modes(&plugin);
+     if(plugin == NULL)
+     {
+-        fprintf(stderr, "Unknow VBIOS structure\n");
++        fprintf(stderr, "Unknown VBIOS structure\n");
+         close_bios();
+         return 2;
+     }
+--- Makefile	2005-05-08 11:27:59.000000000 -0400
++++ Makefile	2005-10-11 17:30:36.000000000 -0400
+@@ -7,10 +7,10 @@
+ SRCS=855resolution.c vbios.c plugin.c ${PLUGINS_SRCS}
+ OBJS=${SRCS:.c=.o}
+ 
+-PLUGINS_LIST:=${shell cd plugins;ls -x *.c | sed -e 's/.c//g' -e 's/  */,/g' }
++PLUGINS_LIST:=${shell cd plugins;ls -x *.c | sed -e 's/.c/,/g' -e 's/,[ ]*$$//g' }
+ PLUGINS_ADDR:=${shell echo ${PLUGINS_LIST} | sed -e 's/^/\&/g' -e 's/,/,\&/g' }
+ VERSION:=${shell cat VERSION.txt}
+-LDLIBS:=-lm
++LDLIBS:=-lm -li386
+ 
+ CFLAGS:=-Wall -I`pwd` -DVERSION='"${VERSION}"' -DPLUGINS='${PLUGINS_LIST}' -DREF_PLUGINS='${PLUGINS_ADDR}' ${VBIOS_FILE}
+ LDFLAGS:=-s
+Only in .: o
+--- plugins/plugin1.c	2005-05-08 15:56:35.000000000 -0400
++++ plugins/plugin1.c	2005-10-11 17:22:30.000000000 -0400
+@@ -12,7 +12,6 @@
+  */
+ 
+ #include <stdio.h>
+-#include <sys/io.h>
+ 
+ #include "../plugin.h"
+ 
+--- plugins/plugin2.c	2005-05-08 15:55:57.000000000 -0400
++++ plugins/plugin2.c	2005-10-11 17:22:34.000000000 -0400
+@@ -14,7 +14,6 @@
+  /* VBIOS as found on the Dell 510m */
+ 
+ #include <stdio.h>
+-#include <sys/io.h>
+ 
+ #include "../plugin.h"
+ 
+--- plugins/plugin3.c	2005-05-08 15:55:55.000000000 -0400
++++ plugins/plugin3.c	2005-10-11 17:22:38.000000000 -0400
+@@ -12,7 +12,6 @@
+  */
+ 
+ #include <stdio.h>
+-#include <sys/io.h>
+ 
+ #include "../plugin.h"
+ 
+--- vbios.c	2005-05-08 15:47:08.000000000 -0400
++++ vbios.c	2005-10-11 17:21:17.000000000 -0400
+@@ -18,7 +18,6 @@
+ #include <string.h>
+ #include <sys/mman.h>
+ #include <fcntl.h>
+-#include <sys/io.h>
+ 
+ #include "vbios.h"
+ 
+@@ -40,7 +39,7 @@
+ static unsigned char b1, b2;
+ 
+ static unsigned int get_chipset(void) {
+-    outl(0x80000000, 0xcf8);
++    OUTL(0x80000000, 0xcf8);
+     return inl(0xcfc);
+ }
+ 
+@@ -75,35 +74,35 @@
+ void unlock_bios(void) {
+     if(get_chipset() == CHIPSET_855)
+     {
+-        outl(0x8000005a, 0xcf8);
++        OUTL(0x8000005a, 0xcf8);
+ 		b1 = inb(0xcfe);
+ 
+-        outl(0x8000005a, 0xcf8);
+-        outb(0x33, 0xcfe);
++        OUTL(0x8000005a, 0xcf8);
++        OUTB(0x33, 0xcfe);
+     }
+     else
+     {
+-        outl(0x80000090, 0xcf8);
++        OUTL(0x80000090, 0xcf8);
+         b1 = inb(0xcfd);
+         b2 = inb(0xcfe);
+ 
+-        outl(0x80000090, 0xcf8);
+-        outb(0x33, 0xcfd);
+-        outb(0x33, 0xcfe);
++        OUTL(0x80000090, 0xcf8);
++        OUTB(0x33, 0xcfd);
++        OUTB(0x33, 0xcfe);
+     }
+ }
+ 
+ void relock_bios(void) {
+     if(get_chipset() == CHIPSET_855)
+     {
+-        outl(0x8000005a, 0xcf8);
+-        outb(b1, 0xcfe);
++        OUTL(0x8000005a, 0xcf8);
++        OUTB(b1, 0xcfe);
+     }
+     else
+     {
+-        outl(0x80000090, 0xcf8);
+-        outb(b1, 0xcfd);
+-        outb(b2, 0xcfe);
++        OUTL(0x80000090, 0xcf8);
++        OUTB(b1, 0xcfd);
++        OUTB(b2, 0xcfe);
+     }
+ }
+ 
+--- vbios.h	2005-05-08 15:47:45.000000000 -0400
++++ vbios.h	2005-10-11 17:21:51.000000000 -0400
+@@ -16,6 +16,20 @@
+ 
+ #define VBIOS_SIZE 0x10000
+ 
++#include <sys/types.h>
++#ifdef __linux__
++#include <sys/io.h>
++#define OUTL(a, b)	outl(a, b)
++#define OUTB(a, b)	outb(a, b)
++#endif
++#ifdef __NetBSD__
++#include <machine/pio.h>
++#include <machine/sysarch.h>
++#define iopl(a) i386_iopl(a)
++#define OUTL(a, b)	outl(b, a)
++#define OUTB(a, b)	outb(b, a)
++#endif
++
+ struct vbios_mode {
+     unsigned char mode;
+     unsigned char bits_per_pixel;
