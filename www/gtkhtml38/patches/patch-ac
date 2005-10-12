@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/10/12 21:50:51 jmmv Exp $
+
+Needed for gcc-2.95.
+
+--- src/htmltext.c.orig	Mon Mar 14 21:33:37 2005
++++ src/htmltext.c	Mon Apr  4 00:37:14 2005
+@@ -2667,10 +2667,12 @@ offset_to_pointer_validated (const gchar
+ gsize
+ html_text_sanitize (const gchar **str, gint *len)
+ {
++	gchar *end;
++
+ 	g_return_val_if_fail (str != NULL, 0);
+ 	g_return_val_if_fail (len != NULL, 0);
+ 	
+-	gchar *end = offset_to_pointer_validated (*str, *len, len);
++	end = offset_to_pointer_validated (*str, *len, len);
+ 	if (end) {
+ 		return end - *str;
+ 	} else {
