@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2005/10/10 13:44:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2005/10/12 21:46:31 jmmv Exp $
 #
 
-DISTNAME=		gnome-icon-theme-2.12.0
+DISTNAME=		gnome-icon-theme-2.12.1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/2.12/}
 EXTRACT_SUFX=		.tar.bz2
