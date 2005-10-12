@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/08/12 15:59:22 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/10/12 21:55:02 jmmv Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -119,6 +119,21 @@ share/gconf/schemas/themus.schemas
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf
 share/gnome/cursor-fonts/cursor-white.pcf
+share/gnome/help/control-center/C/config-accessibility-keyboard.xml
+share/gnome/help/control-center/C/config-background.xml
+share/gnome/help/control-center/C/config-behavior.xml
+share/gnome/help/control-center/C/config-cds.xml
+share/gnome/help/control-center/C/config-default-apps.xml
+share/gnome/help/control-center/C/config-file-type.xml
+share/gnome/help/control-center/C/config-hints.xml
+share/gnome/help/control-center/C/config-html.xml
+share/gnome/help/control-center/C/config-kbd.xml
+share/gnome/help/control-center/C/config-keybindings.xml
+share/gnome/help/control-center/C/config-mouse.xml
+share/gnome/help/control-center/C/config-screensaver.xml
+share/gnome/help/control-center/C/config-sound.xml
+share/gnome/help/control-center/C/config-themes.xml
+share/gnome/help/control-center/C/control-center.xml
 share/gnome/vfolders/font-method.directory
 share/gnome/vfolders/theme-method.directory
 share/icons/hicolor/48x48/apps/gnome-control-center.png
@@ -158,6 +173,7 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/control-center-2.0.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/control-center-2.0.mo
@@ -184,6 +200,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/control-center-2.0.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/control-center-2.0.mo
@@ -193,11 +210,17 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/control-center-2.0.mo
+share/omf/control-center/control-center-C.omf
 share/pixmaps/display-capplet.png
 @comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/control-center
+@comment in scrollkeeper: @dirrm share/omf
 @comment in ORBit2: @dirrm share/idl
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/gnome/vfolders
+@dirrm share/gnome/help/control-center/C
+@dirrm share/gnome/help/control-center
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome/cursor-fonts
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf2: @dirrm share/gconf/schemas
