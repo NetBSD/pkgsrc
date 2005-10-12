@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2005/08/21 11:29:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2005/10/12 21:55:02 jmmv Exp $
 #
 
-DISTNAME=	control-center-2.10.2
+DISTNAME=	control-center-2.12.1
 PKGNAME=	gnome2-${DISTNAME}
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -23,6 +23,8 @@ USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
 
 GCONF2_SCHEMAS= 	apps_gnome_settings_daemon_default_editor.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
@@ -60,13 +62,14 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../x11/xcursor/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
