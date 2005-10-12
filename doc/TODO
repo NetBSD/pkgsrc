@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3999 2005/10/12 13:06:28 wiz Exp $
+$NetBSD: TODO,v 1.4000 2005/10/12 14:00:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1373,6 +1373,7 @@ Suggested package updates
 	o vera-1.14
 	o verilog-0.8.2
 	o vfu-4.03
+	o vice-1.17
 	o vifm-0.3a
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
 	o vlc-0.8.2
