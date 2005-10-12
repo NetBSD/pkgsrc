@@ -1,16 +1,16 @@
-$NetBSD: patch-ad,v 1.4 2005/03/22 16:19:42 jmmv Exp $
+$NetBSD: patch-ad,v 1.5 2005/10/12 21:59:10 jmmv Exp $
 
---- battstat/power-management.c.orig	2005-03-01 10:34:20.000000000 +0100
+--- battstat/power-management.c.orig	2005-08-30 16:32:42.000000000 +0200
 +++ battstat/power-management.c
-@@ -25,6 +25,7 @@
- 
- #include <stdio.h>
+@@ -23,6 +23,7 @@
+ #include <config.h>
+ #endif
  
 +#include <sys/param.h>
  #include <sys/file.h>
  #include <sys/ioctl.h>
  #include <sys/types.h>
-@@ -129,7 +130,11 @@ apm_readinfo (BatteryStatus *status)
+@@ -244,7 +245,11 @@ apm_readinfo (BatteryStatus *status)
    /* Code for OpenBSD by Joe Ammond <jra@twinight.org>. Using the same
       procedure as for FreeBSD.
    */
