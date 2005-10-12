@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2005/08/23 11:48:47 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2005/10/12 22:26:59 wiz Exp $
 #
 
-DISTNAME=		icecast-2.2.0
-PKGREVISION=		1
+DISTNAME=		icecast-2.3.0
 CATEGORIES=		audio
 MASTER_SITES= 		http://svn.xiph.org/releases/icecast/
 
@@ -54,7 +53,10 @@ post-install:
 	)
 
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
