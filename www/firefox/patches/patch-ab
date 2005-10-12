@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.3 2005/07/25 15:46:51 adam Exp $
+$NetBSD: patch-ab,v 1.4 2005/10/12 16:39:24 joerg Exp $
 
---- configure.in.orig	2004-10-31 07:17:58.000000000 +0000
-+++ configure.in
-@@ -1022,6 +1022,9 @@ case "$target" in
+diff -ru ../Orig/mozilla/configure.in ./configure.in
+--- ../Orig/mozilla/configure.in	2004-05-14 06:57:46.000000000 +0900
++++ ./configure.in	2004-06-15 23:55:39.000000000 +0900
+@@ -1008,7 +1008,7 @@
+     esac
+     ;;
+ 
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
+@@ -1017,6 +1017,9 @@
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -12,7 +22,7 @@ $NetBSD: patch-ab,v 1.3 2005/07/25 15:46:51 adam Exp $
      ;; 
  
  *-hpux*)
-@@ -1316,6 +1319,13 @@ case "$target" in
+@@ -1308,6 +1311,13 @@
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -26,7 +36,7 @@ $NetBSD: patch-ab,v 1.3 2005/07/25 15:46:51 adam Exp $
      ;;
  
  *-nto*) 
-@@ -1539,7 +1549,7 @@ dnl the qsort routine under solaris is f
+@@ -1531,7 +1541,7 @@
         MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
