@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2005/09/27 14:23:41 xtraeme Exp $
+$NetBSD: distinfo,v 1.31 2005/10/13 18:09:06 rillig Exp $
 
 SHA1 (clamav-0.87.tar.gz) = 783d8bbd7dd956333a5c66c09cef7b2f410e229e
 RMD160 (clamav-0.87.tar.gz) = eced1d11a2747ff2ffda6060b959afe00ba21561
@@ -7,4 +7,4 @@ SHA1 (patch-aa) = 17c713c3b5833f895b7caa470ae31f3d45d60643
 SHA1 (patch-ab) = afe9915e3fbed6c8dee93101149206a9b2f5c13c
 SHA1 (patch-ad) = 3723ad7212f15ba4e2690127515bfb1f37b97f71
 SHA1 (patch-af) = 605728b133ddb95827285d06bfeec9400222f874
-SHA1 (patch-ah) = ab0bb5ccef06ad4fc37cc0210f939c00a9a2e052
+SHA1 (patch-ah) = 345d884a87e8675787b91925165663cffe47b2d4
