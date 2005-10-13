@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.296 2005/10/09 18:24:11 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.297 2005/10/13 00:23:53 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1542,6 +1542,17 @@ sub checklines_package_Makefile($) {
 
 			if ($varname =~ qr"^SUBST_STAGE\." && $value !~ qr"^(?:pre|do|post)-(?:patch|configure|build|install)$") {
 				$line->log_warning("SUBST_STAGE should be one of {pre,do,post}-{patch,configure,build,install}");
+			}
+
+			if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {
+				my ($pkgvarname) = ($1);
+				if ($varname =~ qr"^PKG_.*_REASON$") {
+					# ok
+				} elsif ($varname =~ qr"^(?:DIST_SUBDIR|WRKSRC)$") {
+					$line->log_warning("${pkgvarname} should not be used in ${varname}, as it sometimes includes the PKGREVISION. Please use ${pkgvarname}_NOREV instead.");
+				} else {
+					$line->log_info("Use of PKGNAME in ${varname}.");
+				}
 			}
 		}
 	}
