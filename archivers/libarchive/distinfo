@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2005/08/27 12:06:22 xtraeme Exp $
+$NetBSD: distinfo,v 1.8 2005/10/13 21:34:16 xtraeme Exp $
 
-SHA1 (libarchive-1.02.030.tar.gz) = b870bfff54d427ef0d9c4c9c7b65a2aff63efba5
-RMD160 (libarchive-1.02.030.tar.gz) = a2426966a325d88a0a30781d823b74427b86d062
-Size (libarchive-1.02.030.tar.gz) = 194473 bytes
-SHA1 (patch-aa) = 4c4b5f1d6bc317df95967eed1d44ff5be344585b
+SHA1 (libarchive-1.02.036.tar.gz) = 419ae3956732a54242db52336d7a989d61a01de6
+RMD160 (libarchive-1.02.036.tar.gz) = f89201b412421051cc392f620189e84451e46455
+Size (libarchive-1.02.036.tar.gz) = 418581 bytes
+SHA1 (patch-aa) = 7195f31172a55da5231d1f76ec202d6eccbfad50
