@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1 2005/10/13 20:41:51 wiz Exp $
+
+--- Makefile.in.orig	2005-03-04 07:35:50.000000000 +0100
++++ Makefile.in
+@@ -13,20 +13,19 @@ YACC= @YACC@
+ LEX= @LEX@
+ INSTALL= @INSTALL@
+ RANLIB= @RANLIB@
+-LIBS= -L. -lmimedir
++LIBS= -L. libmimedir.la
+ 
+-OBJS= dirlex.o dirsynt.o parse.o get.o dup.o free.o memmem.o add.o count.o del.o
++OBJS= dirlex.lo dirsynt.lo parse.lo get.lo dup.lo free.lo memmem.lo add.lo count.lo del.lo
+ 
+ TESTS = test
+ 
+-all: libmimedir.a $(TESTS)
++all: libmimedir.la $(TESTS)
+ 
+-libmimedir.a: ${OBJS}
+-	ar rc libmimedir.a ${OBJS}
+-	$(RANLIB) libmimedir.a
++libmimedir.la: ${OBJS}
++	libtool --mode=link ${CC} ${CFLAGS} -rpath ${PREFIX}/lib -o libmimedir.la ${OBJS}
+ 
+-test: test.o libmimedir.a
+-	${CC} ${CFLAGS} -o test test.o ${LIBS}
++test: test.o libmimedir.la
++	libtool --mode=link ${CC} ${CFLAGS} ${LDFLAGS} -o test test.o ${LIBS}
+ 
+ dirsynt.c dirsynt.h: dirsynt.y
+ 	${YACC} -p_mdir_ -d dirsynt.y
+@@ -37,17 +36,17 @@ dirlex.c: dirlex.l dirsynt.h
+ 	${LEX} -Cem -odirlex.c -P_mdir_ dirlex.l
+ 
+ .SUFFIXES:
+-.SUFFIXES: .c .o
++.SUFFIXES: .c .o .lo
+ 
+-.c.o:
+-	${CC} ${CFLAGS} -o $@ -c $<
++.c.lo:
++	libtool --mode=compile ${CC} ${CFLAGS} -o $@ -c $<
+ 
+ check: all
+ 	./test
+ 
+ install: all
+ 	${INSTALL} -m 444 libmimedir.h ${includedir}
+-	${INSTALL} -m 444 libmimedir.a ${libdir}
++	libtool --mode=install ${BSD_INSTALL_LIB} libmimedir.la ${libdir}/libmimedir.la
+ 
+ clean:
+ 	rm -f *.o *.a *.core
