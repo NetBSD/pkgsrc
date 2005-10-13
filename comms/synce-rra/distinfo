@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/13 16:57:41 wiz Exp $
+
+SHA1 (synce-rra-0.9.1.tar.gz) = 9532427890404a5f095df6b95e140c11e20e2e9c
+RMD160 (synce-rra-0.9.1.tar.gz) = af3b87221f28db88a744039b9c709f2a534d4602
+Size (synce-rra-0.9.1.tar.gz) = 379075 bytes
+SHA1 (patch-aa) = 9ee2701ee684022e6cba60988915a36bc2649330
+SHA1 (patch-ab) = da7a149c9a7ef3569845af795b9bf47441bcd19c
+SHA1 (patch-ac) = c32888b506572d8bf858f4b75836cc8c38c1a277
+SHA1 (patch-ad) = 7d5bcf1b6e26355cec79522e5caa64528d7a8d82
+SHA1 (patch-ae) = 49264cf568a81f68f661aba254c1f4e34f65f3c1
+SHA1 (patch-af) = bb2771e8c28e620ab913e4cdd3fbe226ef57f8aa
