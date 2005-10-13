@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/11 07:23:52 abs Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/13 13:10:05 hira Exp $
 #
 
 DISTNAME=		ghostscript-8.51
@@ -19,18 +19,18 @@ CONFLICTS+=		hpijs-[0-9]*
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
-GS_SRCS=                ${DISTNAME}${EXTRACT_SUFX}
-DISTFILES=             ${GS_SRCS}
-EXTRACT_ONLY=           ${GS_SRCS}
+GS_SRCS=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=		${GS_SRCS}
+EXTRACT_ONLY=		${GS_SRCS}
 
 # Adobe's JPEG implementation in their PDF/PS documents is non-standard,
 # so we can't use an already installed libjpeg.so.
 #
-JPEG_SRCS=              jpegsrc.v6b.tar.gz
-JPEG_WRKSRC=            ${WRKDIR}/jpeg-6b
-SITES_${JPEG_SRCS}=     ftp://ftp.uu.net/graphics/jpeg/
-DISTFILES+=             ${JPEG_SRCS}
-EXTRACT_ONLY+=          ${JPEG_SRCS}
+JPEG_SRCS=		jpegsrc.v6b.tar.gz
+JPEG_WRKSRC=		${WRKDIR}/jpeg-6b
+SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/
+DISTFILES+=		${JPEG_SRCS}
+EXTRACT_ONLY+=		${JPEG_SRCS}
 
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 
