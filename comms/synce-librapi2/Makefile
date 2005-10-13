@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/13 15:03:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/13 15:27:40 wiz Exp $
 #
 
 DISTNAME=		synce-librapi2-0.9.1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://synce.sourceforge.net/
-COMMENT=		SynCE RAPI library
+COMMENT=		Utilities/libraries to make RAPI calls on WinCE devices
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
