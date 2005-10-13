@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2005/10/06 17:28:42 reed Exp $
+$NetBSD: distinfo,v 1.11 2005/10/13 20:20:55 rillig Exp $
 
 SHA1 (ctwm-3.7.tar.gz) = 6140e82ec23499146eaab5bf3bd592f92e95683e
 RMD160 (ctwm-3.7.tar.gz) = 9809df2555b3eb2bf0c46c041df8c1c089b67255
 Size (ctwm-3.7.tar.gz) = 1139461 bytes
-SHA1 (patch-ac) = 99a28b20904207693a4f25aafaaac447dbcdca95
+SHA1 (patch-ac) = 8ccf1e319c0cbe1f2cc8cb941ffc7f8b45814118
