@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11450 2005/10/13 10:56:04 seb Exp $
+$NetBSD: CHANGES,v 1.11451 2005/10/13 11:17:38 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4477,3 +4477,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added benchmarks/forkbomb version 1.4 [xtraeme 2005-10-13]
 	Updated multimedia/xine-lib to 1.0.3a [jmmv 2005-10-13]
 	Added math/p5-Math-GMP version 2.04 [seb 2005-10-13]
+	Added www/drraw version 2.1.3 [kleink 2005-10-13]
