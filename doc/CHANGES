@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11446 2005/10/13 00:24:41 rillig Exp $
+$NetBSD: CHANGES,v 1.11447 2005/10/13 08:10:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4436,7 +4436,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fonts/gucharmap to 1.4.4 [jmmv 2005-10-12]
 	Updated sysutils/libgtop2 to 2.12.0 [jmmv 2005-10-12]
 	Updated devel/libwnck to 2.12.1 [jmmv 2005-10-12]
-	Added www/gtkhtml38-3.8.1 [jmmv 2005-10-12]
+	Added www/gtkhtml38 version 3.8.1 [jmmv 2005-10-12]
 	Updated x11/gnome-desktop to 2.12.1 [jmmv 2005-10-12]
 	Updated sysutils/gnome-menus to 2.12.0 [jmmv 2005-10-12]
 	Updated devel/eel2 to 2.12.1 [jmmv 2005-10-12]
