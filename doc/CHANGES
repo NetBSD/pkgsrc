@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11466 2005/10/13 20:40:24 minskim Exp $
+$NetBSD: CHANGES,v 1.11467 2005/10/13 20:43:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4567,3 +4567,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added security/p5-Net-SSH version 1.29 [seb 2005-10-13]
 	Updated wm/ctwm to 3.7nb1 [rillig 2005-10-13]
 	Updated devel/libidn to 0.5.19nb1 [minskim 2005-10-13]
+	Updated devel/libmimedir to 0.4nb1 [wiz 2005-10-13]
+	Updated comms/synce-rra to 0.9.1nb2 [wiz 2005-10-13]
