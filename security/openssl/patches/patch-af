@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
+$NetBSD: patch-af,v 1.16.4.1 2005/10/13 13:21:08 salo Exp $
 
---- Makefile.org.orig	2005-03-15 04:46:13.000000000 -0500
+--- Makefile.org.orig	2005-06-20 00:29:54.000000000 -0400
 +++ Makefile.org
 @@ -28,6 +28,7 @@ INSTALLTOP=/usr/local/ssl
  
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
  
  # NO_IDEA - Define to build without the IDEA algorithm
  # NO_RC4  - Define to build without the RC4 algorithm
-@@ -194,7 +195,7 @@ TESTS = alltests
+@@ -195,7 +196,7 @@ TESTS = alltests
  
  MAKEFILE= Makefile
  
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
  MAN1=1
  MAN3=3
  MANSUFFIX=
-@@ -287,11 +288,13 @@ link-shared:
+@@ -291,11 +292,13 @@ link-shared:
  		tmp="$(SHARED_LIBS_LINK_EXTS)"; \
  		for i in $(SHLIBDIRS); do \
  			prev=lib$$i$(SHLIB_EXT); \
@@ -33,7 +33,7 @@ $NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
  		done; \
  	fi
  
-@@ -306,8 +309,7 @@ do_gnu-shared:
+@@ -310,8 +313,7 @@ do_gnu-shared:
  	fi; \
  	( set -x; ${CC} ${SHARED_LDFLAGS} \
  		-shared -o lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
@@ -41,17 +41,17 @@ $NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
 -		-Wl,-Bsymbolic \
 +		-Wl,-h,lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
  		-Wl,--whole-archive lib$$i.a \
- 		-Wl,--no-whole-archive $$libs ${EX_LIBS} -lc ) || exit 1; \
+ 		-Wl,--no-whole-archive $$libs ${EX_LIBS} ) || exit 1; \
  	libs="-l$$i $$libs"; \
-@@ -422,6 +424,7 @@ do_solaris-shared:
+@@ -427,6 +429,7 @@ do_solaris-shared:
  			-o lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
  			-h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
  			-Wl,-Bsymbolic \
 +			-Wl,-R${INSTALLTOP}/lib \
  			$${MINUSZ}allextract lib$$i.a $${MINUSZ}defaultextract \
- 			$$libs ${EX_LIBS} -lc ) || exit 1; \
+ 			$$libs ${EX_LIBS} ) || exit 1; \
  		libs="-l$$i $$libs"; \
-@@ -565,7 +568,7 @@ do_hpux64-shared:
+@@ -534,7 +537,7 @@ do_hpux-shared:
  #  HP/UX-64bit: +forceload
  #  AIX:		-bnogc
  # SHAREDFLAGS would be:
@@ -60,7 +60,7 @@ $NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
  #  Tru64 Unix:  -shared \
  #		-set_version "${SHLIB_VERSION_HISTORY}${SHLIB_VERSION_NUMBER}"
  #  Solaris:     -G -h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
-@@ -798,16 +801,14 @@ dist:   
+@@ -771,16 +774,14 @@ dist:   
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) CC='${CC}' SDIRS='${SDIRS}' CFLAG='${CFLAG}' pem.h; $(MAKE) clean)
  
@@ -79,7 +79,7 @@ $NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
  	@headerlist="$(EXHEADER)"; for i in $$headerlist ;\
  	do \
  	(cp $$i $(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl/$$i; \
-@@ -893,35 +894,53 @@ install_docs:
+@@ -875,35 +876,53 @@ install_docs:
  	for i in doc/apps/*.pod; do \
  		fn=`basename $$i .pod`; \
  		if [ "$$fn" = "config" ]; then sec=5; else sec=1; fi; \
@@ -96,8 +96,8 @@ $NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
 -			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$fn.$${sec}$(MANSUFFIX); \
 +			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$ofn.$${sec}$(MANSUFFIX); \
  		$(PERL) util/extract-names.pl < $$i | \
- 			grep -v $$filecase "^$$fn\$$" | \
- 			grep -v "[	]" | \
+ 			(grep -v $$filecase "^$$fn\$$"; true) | \
+ 			(grep -v "[	]"; true) | \
  			(cd $(INSTALL_PREFIX)$(MANDIR)/man$$sec/; \
  			 while read n; do \
 -				$$here/util/point.sh $$fn.$${sec}$(MANSUFFIX) "$$n".$${sec}$(MANSUFFIX); \
@@ -125,8 +125,8 @@ $NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
 -			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$fn.$${sec}$(MANSUFFIX); \
 +			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$ofn.$${sec}$(MANSUFFIX); \
  		$(PERL) util/extract-names.pl < $$i | \
- 			grep -v $$filecase "^$$fn\$$" | \
- 			grep -v "[	]" | \
+ 			(grep -v $$filecase "^$$fn\$$"; true) | \
+ 			(grep -v "[	]"; true) | \
  			(cd $(INSTALL_PREFIX)$(MANDIR)/man$$sec/; \
  			 while read n; do \
 -				$$here/util/point.sh $$fn.$${sec}$(MANSUFFIX) "$$n".$${sec}$(MANSUFFIX); \
