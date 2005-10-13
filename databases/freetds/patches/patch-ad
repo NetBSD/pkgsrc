@@ -1,10 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2005/10/09 12:58:59 jdolecek Exp $
+$NetBSD: patch-ad,v 1.3 2005/10/13 18:05:32 rillig Exp $
 
 --- src/replacements/Makefile.in.orig	2005-03-30 02:51:58.000000000 +0200
 +++ src/replacements/Makefile.in	2005-10-09 14:21:59.000000000 +0200
-@@ -172,7 +172,7 @@
- 
- # $Id: patch-ad,v 1.2 2005/10/09 12:58:59 jdolecek Exp $
+@@ -174,5 +174,5 @@
  noinst_LTLIBRARIES = libreplacements.la
 -libreplacements_la_SOURCES = iconv.c
 +libreplacements_la_SOURCES = iconv.c dummy.c
