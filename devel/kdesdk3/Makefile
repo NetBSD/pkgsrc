@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/09/28 19:47:50 adam Exp $
+# $NetBSD: Makefile,v 1.39 2005/10/13 13:22:55 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -73,13 +73,6 @@ PLIST_SUBST+=		HAVE_SVN=""
 .else
 PLIST_SUBST+=		HAVE_SVN="@comment "
 .endif
-
-# a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
-SUBST_CLASSES+=		hints
-SUBST_STAGE.hints=	post-patch
-SUBST_MESSAGE.hints=	"Fix includehints."
-SUBST_FILES.hints=	umbrello/umbrello/dialogs/codevieweroptionsbase.ui
-SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
 # Makefile{,.am,.in} weren't supposed to be installed so clean up
 post-install:
