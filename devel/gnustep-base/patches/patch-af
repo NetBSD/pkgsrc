@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2005/10/13 14:00:51 joerg Exp $
+
+--- Source/GSHTTPURLHandle.m.orig	2005-07-22 17:32:11.000000000 +0000
++++ Source/GSHTTPURLHandle.m
+@@ -1039,8 +1039,6 @@ static void debugWrite(GSHTTPURLHandle *
+ 	}
+       if (sock == nil)
+ 	{
+-	  extern int errno;
+-
+ 	  /*
+ 	   * Tell superclass that the load failed - let it do housekeeping.
+ 	   */
