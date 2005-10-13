@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2005/09/29 14:21:33 adam Exp $
+# $NetBSD: Makefile,v 1.46 2005/10/13 13:27:21 markd Exp $
 
-DISTNAME=	kdevelop-3.2.2
-PKGNAME=	kdevelop-base-3.2.2
+DISTNAME=	kdevelop-3.2.3
+PKGNAME=	kdevelop-base-3.2.3
 CATEGORIES=	devel kde
 
 HOMEPAGE=       http://www.kdevelop.org/
@@ -42,13 +42,6 @@ EVAL_PREFIX+=	\
 CONFIGURE_ARGS+= \
 	--with-qtdoc-dir=${QT3DIR}/qt3/doc/html \
 	--with-kdelibsdoxy-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs-apidocs
-
-# a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
-SUBST_CLASSES+=		hints
-SUBST_STAGE.hints=	post-patch
-SUBST_MESSAGE.hints=	"Fix includehints."
-SUBST_FILES.hints=	parts/tools/addtooldlg.ui
-SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
 .include "../../databases/db3/buildlink3.mk"
 CPPFLAGS+= -I${BUILDLINK_PREFIX.db3}/include/db3
