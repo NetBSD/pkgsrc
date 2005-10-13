@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/13 15:00:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/13 15:27:40 wiz Exp $
 #
 
 DISTNAME=		synce-libsynce-0.9.1
 CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://synce.sourceforge.net/
-COMMENT=		SynCE Library
+COMMENT=		Library to support communication with WinCE devices
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
