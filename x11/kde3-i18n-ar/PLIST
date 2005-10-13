@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/31 15:38:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/10/13 13:35:57 markd Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/alsaplayerui.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/amor.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/appletproxy.mo
@@ -234,7 +234,6 @@ ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kig.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kinetd.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_audiocd.mo
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_devices.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_finger.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_fish.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_floppy.mo
@@ -243,6 +242,7 @@ ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_imap4.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_lan.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_mac.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_man.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_media.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_mobile.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_nfs.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kio_nntp.mo

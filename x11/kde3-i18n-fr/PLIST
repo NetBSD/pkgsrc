@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/07/30 12:49:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/10/13 13:35:59 markd Exp $
 share/doc/kde/HTML/fr/KRegExpEditor/common
 share/doc/kde/HTML/fr/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/fr/KRegExpEditor/index.docbook
@@ -568,6 +568,7 @@ share/doc/kde/HTML/fr/khelpcenter/userguide/creating-graphics.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/credits-and-license.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/email.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/first-impressions.docbook
+share/doc/kde/HTML/fr/khelpcenter/userguide/font-installation.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/getting-help.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/getting-started.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/glossary.docbook
@@ -577,8 +578,11 @@ share/doc/kde/HTML/fr/khelpcenter/userguide/index.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/installation.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/intro.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/kde-as-root.docbook
+share/doc/kde/HTML/fr/khelpcenter/userguide/kde-edutainment.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/kde-for-admins.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/kde-office.docbook
+share/doc/kde/HTML/fr/khelpcenter/userguide/konsole-intro.docbook
+share/doc/kde/HTML/fr/khelpcenter/userguide/messaging-intro.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/migrator-dictionary.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/more-help.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/net-connection-setup.docbook
@@ -1405,6 +1409,7 @@ share/doc/kde/HTML/fr/kvoctrain/index.docbook
 share/doc/kde/HTML/fr/kvoctrain/lang1-dlg.png
 share/doc/kde/HTML/fr/kvoctrain/learnmenu.png
 share/doc/kde/HTML/fr/kvoctrain/mainview.png
+share/doc/kde/HTML/fr/kvoctrain/man-spotlight2kvtml.1.docbook
 share/doc/kde/HTML/fr/kvoctrain/mu-query-dlg.png
 share/doc/kde/HTML/fr/kvoctrain/options1-dlg.png
 share/doc/kde/HTML/fr/kvoctrain/options2-dlg.png

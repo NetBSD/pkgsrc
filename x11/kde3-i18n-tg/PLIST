@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/05/31 15:38:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/13 13:36:00 markd Exp $
 share/kde/apps/khangman/data/tg/animals.kvtml
 share/kde/apps/khangman/data/tg/easy.kvtml
 share/kde/apps/khangman/data/tg/hard.kvtml
@@ -276,7 +276,6 @@ ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kimagemapeditor.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kinetd.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_audiocd.mo
-${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_devices.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_finger.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_fish.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_floppy.mo
@@ -285,6 +284,7 @@ ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_imap4.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_lan.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_mac.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_man.mo
+${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_media.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_mobile.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_newimap4.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kio_nfs.mo
@@ -422,6 +422,7 @@ ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/ktexteditor_docwordcompletion.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/ktexteditor_insertfile.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/ktexteditor_isearch.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/ktexteditor_kdatatool.mo
+${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/ktexteditor_kttsd.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/ktimemon.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/ktimer.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/ktip.mo
@@ -462,6 +463,7 @@ ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kxkb.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kxmlrpcd.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kxsconfig.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/kxsldbg.mo
+${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/libKTTSD.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/libcalendarresources.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 ${PKGLOCALEDIR}/locale/tg/LC_MESSAGES/libkcal.mo
