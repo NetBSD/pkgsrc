@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/07/30 11:42:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/10/13 13:02:41 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -40,7 +40,6 @@ share/kde/applnk/System/ScreenSavers/KBanner.desktop
 share/kde/applnk/System/ScreenSavers/KBlob.desktop
 share/kde/applnk/System/ScreenSavers/KClock.desktop
 share/kde/applnk/System/ScreenSavers/KEuphoria.desktop
-share/kde/applnk/System/ScreenSavers/KFiresaver.desktop
 share/kde/applnk/System/ScreenSavers/KFlux.desktop
 share/kde/applnk/System/ScreenSavers/KFountain.desktop
 share/kde/applnk/System/ScreenSavers/KGravity.desktop
