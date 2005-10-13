@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2005/09/28 19:54:36 adam Exp $
+# $NetBSD: Makefile,v 1.52 2005/10/13 13:12:25 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
@@ -51,14 +50,6 @@ PLIST_SUBST+=	HAVE_SASL=""
 .else
 PLIST_SUBST+=	HAVE_SASL="@comment "
 .endif
-
-# a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
-SUBST_CLASSES+=		hints
-SUBST_STAGE.hints=	post-patch
-SUBST_MESSAGE.hints=	"Fix includehints."
-SUBST_FILES.hints=	korn/kornboxcfg.ui korn/korncfg.ui \
-			kmail/smimeconfiguration.ui
-SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
 .include "../../comms/libmal/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
