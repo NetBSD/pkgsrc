@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/31 15:38:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/13 13:35:59 markd Exp $
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/amor.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ark.mo
@@ -33,6 +33,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kabc_sql.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kabcformat_binary.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kaboodle.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kaccess.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kaddressbook.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kalzium.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kappfinder.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/karm.mo
@@ -43,6 +44,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/katedefaultproject.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/katepart.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/katomic.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kaudiocreator.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kbabel.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kbackgammon.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kbattleship.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kblackbox.mo
@@ -213,6 +215,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kio_finger.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kio_fish.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kio_floppy.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kio_help.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kio_imap4.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kio_lan.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kio_ldap.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kio_mac.mo

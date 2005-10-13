@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/23 23:06:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/13 13:35:59 markd Exp $
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/childpanelextension.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/clockapplet.mo
@@ -36,9 +36,9 @@ ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kgreet_classic.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/khotkeys.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kicker.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kio.mo
-${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kio_devices.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kio_help.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kio_mac.mo
+${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kio_media.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kio_nntp.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kio_settings.mo
 ${PKGLOCALEDIR}/locale/hsb/LC_MESSAGES/kio_smb.mo

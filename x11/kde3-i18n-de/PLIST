@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/07/30 12:49:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/10/13 13:35:58 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
@@ -181,11 +181,14 @@ share/doc/kde/HTML/de/kate-plugins/textfilter.docbook
 share/doc/kde/HTML/de/kate-plugins/xmlcheck.docbook
 share/doc/kde/HTML/de/kate-plugins/xmltools.docbook
 share/doc/kde/HTML/de/kate/advanced.docbook
+share/doc/kde/HTML/de/kate/common
 share/doc/kde/HTML/de/kate/configdialog01.png
 share/doc/kde/HTML/de/kate/configdialog02.png
 share/doc/kde/HTML/de/kate/configuring.docbook
 share/doc/kde/HTML/de/kate/fundamentals.docbook
 share/doc/kde/HTML/de/kate/highlighting.docbook
+share/doc/kde/HTML/de/kate/index.cache.bz2
+share/doc/kde/HTML/de/kate/index.docbook
 share/doc/kde/HTML/de/kate/kate.png
 share/doc/kde/HTML/de/kate/mdi.docbook
 share/doc/kde/HTML/de/kate/menus.docbook
@@ -479,6 +482,9 @@ share/doc/kde/HTML/de/kenolaba/common
 share/doc/kde/HTML/de/kenolaba/index.cache.bz2
 share/doc/kde/HTML/de/kenolaba/index.docbook
 share/doc/kde/HTML/de/kenolaba/man-kenolaba.6.docbook
+share/doc/kde/HTML/de/kfilereplace/common
+share/doc/kde/HTML/de/kfilereplace/index.cache.bz2
+share/doc/kde/HTML/de/kfilereplace/index.docbook
 share/doc/kde/HTML/de/kfind/common
 share/doc/kde/HTML/de/kfind/index.cache.bz2
 share/doc/kde/HTML/de/kfind/index.docbook
@@ -1475,14 +1481,18 @@ share/doc/kde/HTML/de/opengl/common
 share/doc/kde/HTML/de/opengl/index.cache.bz2
 share/doc/kde/HTML/de/opengl/index.docbook
 share/doc/kde/HTML/de/quanta/adv-quanta.docbook
+share/doc/kde/HTML/de/quanta/common
 share/doc/kde/HTML/de/quanta/config-quanta.docbook
 share/doc/kde/HTML/de/quanta/credits-license.docbook
 share/doc/kde/HTML/de/quanta/debugging-quanta.docbook
 share/doc/kde/HTML/de/quanta/extending-quanta.docbook
 share/doc/kde/HTML/de/quanta/fundamentals.docbook
 share/doc/kde/HTML/de/quanta/glossary.docbook
+share/doc/kde/HTML/de/quanta/index.cache.bz2
+share/doc/kde/HTML/de/quanta/index.docbook
 share/doc/kde/HTML/de/quanta/installation.docbook
 share/doc/kde/HTML/de/quanta/introduction.docbook
+share/doc/kde/HTML/de/quanta/man-quanta.1.docbook
 share/doc/kde/HTML/de/quanta/q-and-a.docbook
 share/doc/kde/HTML/de/quanta/quanta-menus.docbook
 share/doc/kde/HTML/de/quanta/quanta-projects.docbook
@@ -2345,6 +2355,7 @@ ${PKGLOCALEDIR}/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/kfouleggs
 @dirrm share/doc/kde/HTML/de/kfloppy
 @dirrm share/doc/kde/HTML/de/kfind
+@dirrm share/doc/kde/HTML/de/kfilereplace
 @dirrm share/doc/kde/HTML/de/kenolaba
 @dirrm share/doc/kde/HTML/de/keduca
 @dirrm share/doc/kde/HTML/de/kedit
