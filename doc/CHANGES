@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11459 2005/10/13 17:35:08 wiz Exp $
+$NetBSD: CHANGES,v 1.11460 2005/10/13 18:02:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added comms/synce-rra version 0.9.1 [wiz 2005-10-13]
 	Updated mail/qgreylist to 0.3 [schmonz 2005-10-13]
 	Updated mail/turba to 2.0.3 [adrianp 2005-10-13]
+	Updated games/qnetwalk to 1.2 [wiz 2005-10-13]
