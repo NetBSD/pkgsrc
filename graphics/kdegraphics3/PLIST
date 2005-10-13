@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2005/03/23 22:26:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2005/10/13 13:17:59 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -223,6 +223,7 @@ lib/kde3/libksvgplugin.la
 lib/kde3/libksvgrendererlibart.la
 lib/kde3/libkviewcanvas.la
 lib/kde3/libkviewviewer.la
+lib/kde3/libphotobook.la
 lib/kde3/mrmlsearch.la
 lib/kde3/svgthumbnail.la
 lib/libkdeinit_kuickshow.la
@@ -234,7 +235,6 @@ lib/libkmultipage.la
 lib/libkpovmodeler.la
 lib/libkscan.la
 lib/libksvg.la
-lib/libphotobook.la
 lib/libtext2path.la
 share/applications/kde/kamera.desktop
 share/applications/kde/kcmkmrml.desktop

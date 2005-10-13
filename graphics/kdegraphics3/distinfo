@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2005/07/30 11:52:47 markd Exp $
+$NetBSD: distinfo,v 1.31 2005/10/13 13:17:59 markd Exp $
 
-SHA1 (kdegraphics-3.4.2.tar.bz2) = e8822a49fca9adc604a08c5d192c7667e86e0840
-RMD160 (kdegraphics-3.4.2.tar.bz2) = 1227840bdeb7ee03f6999f6fe5397d168154fdb8
-Size (kdegraphics-3.4.2.tar.bz2) = 6579227 bytes
+SHA1 (kdegraphics-3.4.3.tar.bz2) = 8782c5d8a1a5fd462e58060f924bec0df33b656d
+RMD160 (kdegraphics-3.4.3.tar.bz2) = adc456d6987f759f0a03b20e21a98b0cc5f096dd
+Size (kdegraphics-3.4.3.tar.bz2) = 6554272 bytes
