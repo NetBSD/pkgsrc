@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11460 2005/10/13 18:02:06 wiz Exp $
+$NetBSD: CHANGES,v 1.11461 2005/10/13 18:15:00 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4562,3 +4562,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/qgreylist to 0.3 [schmonz 2005-10-13]
 	Updated mail/turba to 2.0.3 [adrianp 2005-10-13]
 	Updated games/qnetwalk to 1.2 [wiz 2005-10-13]
+	Updated www/horde to 3.0.5 [adrianp 2005-10-13]
