@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2005/08/31 18:47:36 reed Exp $
+# $NetBSD: Makefile,v 1.37 2005/10/13 12:35:18 abs Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net security
 MASTER_SITES=	# empty -- manual fetch needed
 EXTRACT_SUFX=	_tar.gz
@@ -39,9 +39,19 @@ LIBS+=			-lcrypt
 INSTALLATION_DIRS=	include
 RCD_SCRIPTS=		socks5
 
+EXAMPLE_FILES=	README multiple_server.example server_2_multiple_server.example
+EXAMPLE_FILES+=	single_homed_host.example socks5.conf.dualhomed
+EXAMPLE_FILES+=	socks5.conf.gssapi socks5.conf.multipleservers
+EXAMPLE_FILES+=	socks5.conf.server2server socks5.conf.singlehomed
+EXAMPLE_DIR=	${PREFIX}/share/examples/socks5
+
 post-install:
 	${MV} ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
 	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so.0
 	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so
+.for f in ${EXAMPLE_FILES}
+	${MKDIR} ${EXAMPLE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/$f ${EXAMPLE_DIR}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
