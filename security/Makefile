@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.246 2005/10/08 16:49:35 jdolecek Exp $
+# $NetBSD: Makefile,v 1.247 2005/10/13 10:58:42 seb Exp $
 #
 
 COMMENT=	Security tools
@@ -129,6 +129,7 @@ SUBDIR+=	p5-Crypt-CBC
 SUBDIR+=	p5-Crypt-CipherSaber
 SUBDIR+=	p5-Crypt-DES
 SUBDIR+=	p5-Crypt-DES_EDE3
+SUBDIR+=	p5-Crypt-DH
 SUBDIR+=	p5-Crypt-DSA
 SUBDIR+=	p5-Crypt-IDEA
 SUBDIR+=	p5-Crypt-OpenPGP
