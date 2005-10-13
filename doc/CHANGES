@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11453 2005/10/13 13:42:18 markd Exp $
+$NetBSD: CHANGES,v 1.11454 2005/10/13 15:01:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4551,3 +4551,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/kde3-i18n-zh_CN to 3.4.3 [markd 2005-10-13]
 	Updated devel/kdevelop-base to 3.2.3 [markd 2005-10-13]
 	Updated devel/kdevelop to 3.2.3 [markd 2005-10-13]
+	Added comms/synce-libsynce version 0.9.1 [wiz 2005-10-13]
