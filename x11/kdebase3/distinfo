@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.73 2005/09/16 12:10:39 markd Exp $
+$NetBSD: distinfo,v 1.74 2005/10/13 12:38:49 markd Exp $
 
-SHA1 (kdebase-3.4.2.tar.bz2) = 6df0c7c576a112a4e32f9e2e2b0d271dcb201f71
-RMD160 (kdebase-3.4.2.tar.bz2) = bdb423ba3f95274cb20171a8e43482c5a09e804c
-Size (kdebase-3.4.2.tar.bz2) = 22466433 bytes
+SHA1 (kdebase-3.4.3.tar.bz2) = 87b72aaf291fdb78fa9feb9acf4476d41485e486
+RMD160 (kdebase-3.4.3.tar.bz2) = 7af02903b0fc750e7b9778391ef8948b54f69ce7
+Size (kdebase-3.4.3.tar.bz2) = 22425835 bytes
 SHA1 (Daemon.png) = e77a42c644beecd66c4b95c0ae68c08c728a4e6d
 RMD160 (Daemon.png) = eb317dc7ac501ee03aac1276856eee14674e3da7
 Size (Daemon.png) = 15725 bytes
@@ -12,9 +12,6 @@ Size (Daemon.README) = 2191 bytes
 SHA1 (NetBSD-flag-1.0.png) = a9cf264a52ae0a602eec956d91222e299c7dee5c
 RMD160 (NetBSD-flag-1.0.png) = 2eac20df70396169819059a704e6a85ae10234b0
 Size (NetBSD-flag-1.0.png) = 4532 bytes
-SHA1 (post-3.4.2-kdebase-kcheckpass.diff) = cf757b82f9ede49ac618dc7c5a4b580c67ed20a4
-RMD160 (post-3.4.2-kdebase-kcheckpass.diff) = 13aecb614384f1dc422a082e8a99d30e97ef2728
-Size (post-3.4.2-kdebase-kcheckpass.diff) = 4186 bytes
 SHA1 (patch-aa) = be18dabe9c66af9a7384ee652a80b7d971d4b5d6
 SHA1 (patch-ac) = 8be0f15be839f4f01d3e079501b83e27f1fab2eb
 SHA1 (patch-ad) = 031e5622acb376ce1867d08b35c55bce101e8855
