@@ -1,0 +1,2 @@
+The Net::SSH::Perl Perl5 module contains implementations of both the
+SSH1 and SSH2 protocols.
