@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/13 15:15:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/13 20:41:51 wiz Exp $
 include/libmimedir.h
-lib/libmimedir.a
+lib/libmimedir.la
