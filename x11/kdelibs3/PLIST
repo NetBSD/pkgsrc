@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2005/07/30 11:04:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2005/10/13 12:31:59 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -4265,6 +4265,7 @@ share/kde/icons/crystalsvg/64x64/actions/fileprint.png
 share/kde/icons/crystalsvg/64x64/actions/filequickprint.png
 share/kde/icons/crystalsvg/64x64/actions/frameprint.png
 share/kde/icons/crystalsvg/64x64/actions/knewstuff.png
+share/kde/icons/crystalsvg/64x64/actions/player_play.png
 share/kde/icons/crystalsvg/64x64/actions/player_playlist.png
 share/kde/icons/crystalsvg/64x64/actions/share.png
 share/kde/icons/crystalsvg/64x64/apps/password.png
