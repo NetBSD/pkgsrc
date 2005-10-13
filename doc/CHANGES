@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11447 2005/10/13 08:10:24 wiz Exp $
+$NetBSD: CHANGES,v 1.11448 2005/10/13 08:19:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added misc/kmemaid version 0.4.7.0 [wiz 2005-10-12]
 	Updated audio/icecast to 2.3.0 [wiz 2005-10-12]
 	Updated pkgtools/pkglint to 4.27 [rillig 2005-10-13]
+	Added benchmarks/forkbomb version 1.4 [xtraeme 2005-10-13]
