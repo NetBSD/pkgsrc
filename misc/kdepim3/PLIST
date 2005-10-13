@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2005/07/30 11:33:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2005/10/13 13:12:25 markd Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -1097,6 +1097,7 @@ share/kde/apps/libkholidays/holiday_co
 share/kde/apps/libkholidays/holiday_cz
 share/kde/apps/libkholidays/holiday_de
 share/kde/apps/libkholidays/holiday_dk
+share/kde/apps/libkholidays/holiday_ee
 share/kde/apps/libkholidays/holiday_es
 share/kde/apps/libkholidays/holiday_fi
 share/kde/apps/libkholidays/holiday_fr
