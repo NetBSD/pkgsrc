@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/13 11:14:41 kleink Exp $
+
+--- drraw.cgi.orig	2005-06-19 20:20:50.000000000 +0200
++++ drraw.cgi	2005-10-13 12:43:43.000000000 +0200
+@@ -49,7 +49,7 @@
+ 
+ # The configuration file is expected to be found in the same directory
+ # as drraw itself.  You may customize this to be elsewhere.
+-my $config = (dirname($0) =~ /(.*)/)[0] . "/drraw.conf"; # Untaint
++my $config = "@PKG_SYSCONFDIR@/drraw.conf";
+ 
+ ###############################################################################
+ ##   STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP STOP   ##
