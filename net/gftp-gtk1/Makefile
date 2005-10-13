@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/03/02 20:43:21 tron Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/13 16:44:59 wiz Exp $
 
 .include "${.CURDIR}/../gftp/Makefile.common"
 
 PKGNAME=	gftp-gtk1-${VERSION}
+PKGREVISION=	1
 COMMENT=	Multithreaded GTK+ ftp client
 
 CONFLICTS=	gftp-[0-9]*
