@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/10/13 16:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2005/10/13 16:58:08 wiz Exp $
 #
 
 COMMENT=	Communication utilities
@@ -49,6 +49,7 @@ SUBDIR+=	snooper
 SUBDIR+=	synce-dccm
 SUBDIR+=	synce-librapi2
 SUBDIR+=	synce-libsynce
+SUBDIR+=	synce-rra
 SUBDIR+=	synce-serial
 SUBDIR+=	tkhylafax
 SUBDIR+=	xisp
