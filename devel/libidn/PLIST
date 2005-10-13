@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/12/26 02:08:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/10/13 20:39:37 minskim Exp $
 bin/idn
 include/idn-free.h
 include/idn-int.h
@@ -55,3 +55,18 @@ man/man3/tld_get_4z.3
 man/man3/tld_get_table.3
 man/man3/tld_get_z.3
 man/man3/tld_strerror.3
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libidn.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libidn.mo
