@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2005/01/04 13:23:24 taca Exp $
+# $NetBSD: Makefile,v 1.17 2005/10/13 17:29:32 wiz Exp $
 #
 
 DISTNAME=	pgpdump-0.24
 CATEGORIES=	security
-MASTER_SITES=	ftp://pgp.iijlab.net/pub/pgp/tools/
+MASTER_SITES=	http://pgp.iijlab.net/pgpdump/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	ftp://pgp.iijlab.net/pub/pgp/tools/
+HOMEPAGE=	http://pgp.iijlab.net/pgpdump.html
 COMMENT=	PGP packet visualizer
 
 GNU_CONFIGURE=	YES
