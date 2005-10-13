@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11456 2005/10/13 16:45:50 wiz Exp $
+$NetBSD: CHANGES,v 1.11457 2005/10/13 17:04:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4558,3 +4558,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/libmimedir version 0.4 [wiz 2005-10-13]
 	Updated net/gftp to 2.0.18nb1 [wiz 2005-10-13]
 	Updated net/gftp-gtk1 to 2.0.18nb1 [wiz 2005-10-13]
+	Updated mail/qgreylist to 0.3 [schmonz 2005-10-13]
