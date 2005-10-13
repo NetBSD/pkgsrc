@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11445 2005/10/12 22:27:49 wiz Exp $
+$NetBSD: CHANGES,v 1.11446 2005/10/13 00:24:41 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4473,3 +4473,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated meta-pkgs/gnome-base to 2.12.1 [jmmv 2005-10-12]
 	Added misc/kmemaid version 0.4.7.0 [wiz 2005-10-12]
 	Updated audio/icecast to 2.3.0 [wiz 2005-10-12]
+	Updated pkgtools/pkglint to 4.27 [rillig 2005-10-13]
