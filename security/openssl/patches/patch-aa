@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.17 2004/12/25 22:11:26 jlam Exp $
+$NetBSD: patch-aa,v 1.17.6.1 2005/10/13 13:21:08 salo Exp $
 
---- config.orig	2004-06-28 18:01:05.000000000 -0400
+--- config.orig	2005-04-07 16:26:10.000000000 -0400
 +++ config
 @@ -49,6 +49,7 @@ done
  # First get uname entries that we use below
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.17 2004/12/25 22:11:26 jlam Exp $
  	;;
  
      OpenBSD:*)
-@@ -654,9 +659,21 @@ EOF
+@@ -671,9 +676,21 @@ EOF
    ia64-*-freebsd*) OUT="FreeBSD-ia64" ;;
    *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
    *-freebsd[1-2]*) OUT="FreeBSD" ;;

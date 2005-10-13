@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.10 2005/03/23 09:06:38 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.10.4.1 2005/10/13 13:21:07 salo Exp $
 bin/c_rehash
 bin/openssl
 bin/openssl_fips_fingerprint
@@ -28,6 +28,7 @@ include/openssl/err.h
 include/openssl/evp.h
 include/openssl/fips.h
 include/openssl/fips_rand.h
+include/openssl/fips_sha.h
 include/openssl/hmac.h
 ${IDEA}include/openssl/idea.h
 include/openssl/krb5_asn.h

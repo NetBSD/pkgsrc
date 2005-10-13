@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2005/07/16 01:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.106.2.1 2005/10/13 13:21:07 salo Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
-OPENSSL_VERS?=		0.9.7f
+OPENSSL_VERS?=		0.9.7h
 
 .if empty(OPENSSL_SNAPSHOT)
 DISTNAME=	openssl-${OPENSSL_VERS}
@@ -96,14 +96,14 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
 # Also, fix the path to perl in various scripts.
 #
 pre-configure:
-	cd ${WRKSRC}; for file in					\
-		fips/aes/Makefile	fips/des/Makefile		\
-		fips/dh/Makefile	fips/dsa/Makefile		\
-		fips/rsa/Makefile	fips/sha1/Makefile;		\
-	do								\
-		${MV} -f $$file $$file.preawk;				\
-		${AWK} '/^install:/ { printf "install:\n\nnot-install:\n"; next } { print }' \
-			$$file.preawk > $$file;				\
+	cd ${WRKSRC};							\
+	for file in fips/*/Makefile; do					\
+		if ${GREP} "^EXHEADER=[ 	]*$$" $$file >/dev/null; then \
+			${ECHO} "Fixing 'install' target in $$file.";	\
+			${MV} -f $$file $$file.preawk;			\
+			${AWK} '/^install:/ { printf "install:\n\nnot-install:\n"; next } { print }' \
+				$$file.preawk > $$file;			\
+		fi;							\
 	done
 	cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${PERL5}
 
