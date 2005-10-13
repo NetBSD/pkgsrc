@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11449 2005/10/13 10:48:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.11450 2005/10/13 10:56:04 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4476,3 +4476,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.27 [rillig 2005-10-13]
 	Added benchmarks/forkbomb version 1.4 [xtraeme 2005-10-13]
 	Updated multimedia/xine-lib to 1.0.3a [jmmv 2005-10-13]
+	Added math/p5-Math-GMP version 2.04 [seb 2005-10-13]
