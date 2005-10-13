@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 14:31:08 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/13 17:13:58 adrianp Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -17,7 +17,7 @@ DOCDIR=		${PREFIX}/share/doc/turba
 EGDIR=		${PREFIX}/share/examples/turba
 HORDEDIR=	${PREFIX}/share/horde
 TURBADIR=	${HORDEDIR}/turba
-TURBAVER=	2.0.2
+TURBAVER=	2.0.3
 PAXDIRS=	lib locale po scripts templates themes
 USE_TOOLS+=	perl:run
 
@@ -63,7 +63,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${TURBADIR}
 	${INSTALL_DATA_DIR} ${TURBADIR}/config
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/LDAP ${DOCDIR}
@@ -73,12 +72,10 @@ do-install:
 .	for d in ${PAXDIRS}
 		${INSTALL_DATA_DIR} ${TURBADIR}/${d}
 .	endfor
-.	undef d
 
 .	for d in ${PAXDIRS}
 		cd ${WRKSRC}/${d} && ${PAX} -rw . ${TURBADIR}/${d}
 .	endfor
-.	undef d
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${TURBADIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${TURBADIR}
