@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2005/08/10 20:56:18 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/10/14 14:28:57 minskim Exp $
 #
 
 DISTNAME=		nabi-0.15
 CATEGORIES=		korean inputmethod
-MASTER_SITES=		http://download.kldp.net/nabi/
+MASTER_SITES=		http://kldp.net/frs/download.php/1651/
 
 MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://nabi.kldp.net/
