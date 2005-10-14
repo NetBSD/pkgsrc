@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2005/09/27 20:21:50 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/10/14 09:37:46 adam Exp $
 
 DISTNAME=	pcre-6.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/	\
 		ftp://pcre.sourceforge.net/pub/pcre/
@@ -12,9 +13,10 @@ COMMENT=	Perl Compatible Regular Expressions library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-utf8
 
 PKG_CONFIG_OVERRIDE=	libpcre.pc.in
 
