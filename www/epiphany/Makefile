@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2005/10/12 22:04:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2005/10/14 21:47:59 jmmv Exp $
 #
 
-DISTNAME=	epiphany-1.6.5
-PKGREVISION=	2
+DISTNAME=	epiphany-1.8.2
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/1.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/1.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -20,7 +19,7 @@ USE_LIBTOOL=		YES
 USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 
-PKGCONFIG_OVERRIDE=	data/epiphany-1.6.pc.in
+PKGCONFIG_OVERRIDE=	data/epiphany-1.8.pc.in
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
@@ -47,23 +46,24 @@ CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
 GCONF2_SCHEMAS=		epiphany.schemas
 GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
 BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
-BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.6.10
-BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
+BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.8.3
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
