@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2005/10/12 22:04:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2005/10/14 21:48:34 jmmv Exp $
 #
 
-DISTNAME=		yelp-2.10.0
-PKGREVISION=		1
+DISTNAME=		yelp-2.12.1
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.10/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.12/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -24,12 +23,14 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 
+GCONF2_SCHEMAS=		yelp.schemas
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.yelp
 .include "../../www/mozilla/gecko-options.mk"
 .include "../../mk/bsd.options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
@@ -37,13 +38,15 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.yelp
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../www/mozilla/gecko-depends.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
