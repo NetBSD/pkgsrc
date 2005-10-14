@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.298 2005/10/14 00:05:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.299 2005/10/14 09:23:46 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1540,6 +1540,17 @@ sub checklines_package_Makefile($) {
 				}
 			}
 
+			if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
+				my ($guess) = ($1);
+				$guess =~ s/-/\//g;
+				$guess = "auto/${guess}/.packlist";
+
+				my ($ucvalue, $ucguess) = (uc($value), uc($guess));
+				if ($ucvalue ne $ucguess && $ucvalue ne "\${PERL5_SITEARCH\}/${ucguess}") {
+					$line->log_warning("Unusual value for PERL5_PACKLIST -- \"${guess}\" expected.");
+				}
+			}
+
 			if ($varname eq "PKG_SUPPORTED_OPTIONS" || $varname eq "PKG_SUGGESTED_OPTIONS") {
 				if ($value =~ qr"_") {
 					$line->log_warning("Options should not contain underscores.");
@@ -1685,7 +1696,6 @@ sub checkfile_package_Makefile($$$$$) {
 	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	checklines_package_Makefile($lines);
 
 	$abspkgdir = Cwd::abs_path($dir);
 	$category = basename(dirname($abspkgdir));
@@ -2152,6 +2162,7 @@ sub checkfile_package_Makefile($$$$$) {
 			"discouraged. Redefine \"do-$1\" instead.");
 	}
 
+	checklines_package_Makefile($lines);
 	checklines_Makefile_varuse($lines);
 }
 
