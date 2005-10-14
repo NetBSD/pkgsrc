@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/14 00:32:53 minskim Exp $
+bin/urxvt
+bin/urxvtc
+bin/urxvtd
+man/man1/urxvt.1
+man/man1/urxvtc.1
+man/man1/urxvtd.1
+man/man7/urxvt.7
