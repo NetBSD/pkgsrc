@@ -8,3 +8,4 @@
 * in dependency lines check for ../../category/package, not ../package
 * ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
 * -Wl,-rpath
+* check that PERL5_PACKLIST is a path relative to ${FOO}
