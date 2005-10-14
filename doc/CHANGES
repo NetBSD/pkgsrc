@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11476 2005/10/14 09:49:06 adrianp Exp $
+$NetBSD: CHANGES,v 1.11477 2005/10/14 09:59:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4578,3 +4578,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sendmail to 8.13.5 [adrianp 2005-10-14]
 	Updated pkgtools/pkglint to 4.28.1 [rillig 2005-10-14]
 	Updated chat/p5-POE-Component-IRC to 4.71 [adrianp 2005-10-14]
+	Updated devel/pcre to 6.4nb1 [adam 2005-10-14]
+	Updated www/bluefish to 1.0.4 [adam 2005-10-14]
