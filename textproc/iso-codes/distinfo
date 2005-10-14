@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/14 21:54:57 jmmv Exp $
+
+SHA1 (iso-codes_0.48-1.tar.gz) = 70abea09e4f9bc057779aed85247931165891126
+RMD160 (iso-codes_0.48-1.tar.gz) = 40f52580d551bd8ad23a171e093a33ca776a5dc7
+Size (iso-codes_0.48-1.tar.gz) = 3444050 bytes
+SHA1 (patch-aa) = 7f47beb7660fc29fc3af5216df29fabcd6cbaf44
+SHA1 (patch-ab) = 95db4d7aaadc66dd1c1f3817ebed97487addfcdb
