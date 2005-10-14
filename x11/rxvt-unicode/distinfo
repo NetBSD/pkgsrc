@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/14 00:32:53 minskim Exp $
+
+SHA1 (rxvt-unicode-5.7.tar.bz2) = 56bc160ba579bfedaec864499b7773cf3a33862c
+RMD160 (rxvt-unicode-5.7.tar.bz2) = 4b7348b430e2142581d80829798c8c1ff40d0b0a
+Size (rxvt-unicode-5.7.tar.bz2) = 848618 bytes
+SHA1 (patch-aa) = 8cd8bc0a7a00e0871bd98cdbee8672ea65448218
