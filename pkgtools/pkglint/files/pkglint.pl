@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.297 2005/10/13 00:23:53 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.298 2005/10/14 00:05:23 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -578,7 +578,7 @@ sub load_make_vars_typemap() {
 		if ($line->text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
 
-		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_]+)$") {
+		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_ ]+)$") {
 			$vartypes->{$1} = $2;
 
 		} else {
@@ -1287,6 +1287,31 @@ sub checkline_Makefile_vartype($$) {
 			} elsif ($type eq "Integer") {
 				if ($value !~ qr"^\d+$") {
 					$line->log_warning("\"$value\" is not a valid Integer.");
+				}
+
+			} elsif ($type =~ qr"^List(?: of (.*))?$") {
+				my ($element_type) = ($1);
+
+				if ($op ne "+=" && $value !~ qr"^#") {
+					$line->log_warning("${varname} should be modified using \"+=\".");
+				}
+
+				if (!defined($element_type)) {
+					# no further checks possible.
+
+				} elsif ($element_type eq "Dependency") {
+					if ($value =~ $regex_unresolved) {
+						# don't even try to check anything
+					} elsif ($value =~ qr":\.\./\.\./") {
+						# great.
+					} elsif ($value =~ qr":\.\./") {
+						$line->log_warning("Dependencies should have the form \"../../category/package\".");
+					} else {
+						$line->log_warning("Unknown dependency format.");
+					}
+
+				} else {
+					$line->log_error("[internal] Element-type ${element_type} unknown.");
 				}
 
 			} else {
