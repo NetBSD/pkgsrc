@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11478 2005/10/14 10:13:03 adam Exp $
+$NetBSD: CHANGES,v 1.11479 2005/10/14 10:49:07 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4581,3 +4581,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/pcre to 6.4nb1 [adam 2005-10-14]
 	Updated www/bluefish to 1.0.4 [adam 2005-10-14]
 	Updated net/wget to 1.10.2 [adam 2005-10-14]
+	Updated www/ap2-auth-ldap to 3.05 [adrianp 2005-10-14]
