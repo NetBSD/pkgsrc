@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11480 2005/10/14 15:06:56 adrianp Exp $
+$NetBSD: CHANGES,v 1.11481 2005/10/14 15:46:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4583,3 +4583,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/wget to 1.10.2 [adam 2005-10-14]
 	Updated www/ap2-auth-ldap to 3.05 [adrianp 2005-10-14]
 	Updated net/snort-rules to 2.4 [adrianp 2005-10-14]
+	Updated sysutils/bacula to 1.36.3nb1 [wiz 2005-10-14]
