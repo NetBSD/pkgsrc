@@ -1,42 +1,58 @@
-$NetBSD: patch-aa,v 1.14 2005/06/26 16:52:14 jmmv Exp $
+$NetBSD: patch-aa,v 1.15 2005/10/14 21:47:01 jmmv Exp $
 
---- configure.orig	2005-06-10 20:53:51.000000000 +0200
+--- configure.orig	2005-10-04 05:31:08.000000000 +0200
 +++ configure
-@@ -22412,7 +22412,8 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
--$ac_includes_default
-+#include <sys/types.h>
-+#include <sys/socket.h>
- int
- main ()
- {
-@@ -22876,13 +22877,13 @@ echo "${ECHO_T}yes" >&6
+@@ -23168,12 +23168,12 @@ else
+   if test "x$ac_cv_env_DAEMON_CFLAGS_set" = "xset"; then
+ 	pkg_cv_DAEMON_CFLAGS=$ac_cv_env_DAEMON_CFLAGS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"gtk+-2.0 >= \$GTK_REQUIRED\" >/dev/null 2>&1") >&5
+-  ($PKG_CONFIG --exists "gtk+-2.0 >= $GTK_REQUIRED" >/dev/null 2>&1) 2>&5
++	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"gtk+-2.0 >= \$GTK_REQUIRED libgnome-2.0 >= \$LIBGNOME_REQUIRED\" >/dev/null 2>&1") >&5
++  ($PKG_CONFIG --exists "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0 >= $LIBGNOME_REQUIRED" >/dev/null 2>&1) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-		pkg_cv_DAEMON_CFLAGS=`$PKG_CONFIG --cflags "gtk+-2.0 >= $GTK_REQUIRED" 2>/dev/null`
++		pkg_cv_DAEMON_CFLAGS=`$PKG_CONFIG --cflags "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0 >= $LIBGNOME_REQUIRED" 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -23191,12 +23191,12 @@ else
+   if test "x$ac_cv_env_DAEMON_LIBS_set" = "xset"; then
+ 	pkg_cv_DAEMON_LIBS=$ac_cv_env_DAEMON_LIBS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"gtk+-2.0 >= \$GTK_REQUIRED\" >/dev/null 2>&1") >&5
+-  ($PKG_CONFIG --exists "gtk+-2.0 >= $GTK_REQUIRED" >/dev/null 2>&1) 2>&5
++	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"gtk+-2.0 >= \$GTK_REQUIRED libgnome-2.0 >= \$LIBGNOME_REQUIRED\" >/dev/null 2>&1") >&5
++  ($PKG_CONFIG --exists "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0 >= $LIBGNOME_REQUIRED" >/dev/null 2>&1) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-		pkg_cv_DAEMON_LIBS=`$PKG_CONFIG --libs "gtk+-2.0 >= $GTK_REQUIRED" 2>/dev/null`
++		pkg_cv_DAEMON_LIBS=`$PKG_CONFIG --libs "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0 >= $LIBGNOME_REQUIRED" 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -23208,18 +23208,18 @@ echo "$as_me:$LINENO: result: $pkg_cv_DA
+ echo "${ECHO_T}$pkg_cv_DAEMON_LIBS" >&6
  
-             echo "$as_me:$LINENO: checking DAEMON_CFLAGS" >&5
- echo $ECHO_N "checking DAEMON_CFLAGS... $ECHO_C" >&6
--            DAEMON_CFLAGS=`$PKG_CONFIG --cflags "gtk+-2.0 >= $GTK_REQUIRED"`
-+            DAEMON_CFLAGS=`$PKG_CONFIG --cflags "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0"`
-             echo "$as_me:$LINENO: result: $DAEMON_CFLAGS" >&5
- echo "${ECHO_T}$DAEMON_CFLAGS" >&6
+ if test $pkg_failed = yes; then
+-	DAEMON_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "gtk+-2.0 >= $GTK_REQUIRED"`
++	DAEMON_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0 >= $LIBGNOME_REQUIRED"`
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$DAEMON_PKG_ERRORS" 1>&5
  
-             echo "$as_me:$LINENO: checking DAEMON_LIBS" >&5
- echo $ECHO_N "checking DAEMON_LIBS... $ECHO_C" >&6
--            DAEMON_LIBS=`$PKG_CONFIG --libs "gtk+-2.0 >= $GTK_REQUIRED"`
-+            DAEMON_LIBS=`$PKG_CONFIG --libs "gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0"`
-             echo "$as_me:$LINENO: result: $DAEMON_LIBS" >&5
- echo "${ECHO_T}$DAEMON_LIBS" >&6
-         else
-@@ -30269,6 +30270,11 @@ else
-    X_CONFIG_OPTIONS="-audit 0"
- fi
+-	{ { echo "$as_me:$LINENO: error: Package requirements (gtk+-2.0 >= $GTK_REQUIRED) were not met.
++	{ { echo "$as_me:$LINENO: error: Package requirements (gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0 >= $LIBGNOME_REQUIRED) were not met.
+ Consider adjusting the PKG_CONFIG_PATH environment variable if you
+ installed software in a non-standard prefix.
  
-+X_PATH="${X11BASE}/bin"
-+X_SERVER_PATH="${X11BASE}/bin"
-+X_SERVER="${X11BASE}/bin/X ${X_SERVER_ARGS}"
-+GDM_CONF_PATH="${X11BASE}/bin:${PREFIX}/bin:/usr/bin:/bin"
-+
- # Don't add EXPANDED_BINDIR to GDM_USER_PATH if it is already in the PATH.
- if test "x$EXPANDED_BINDIR" != "x/bin" -a "x$EXPANDED_BINDIR" != "x/usr/bin"; then
-    GDM_USER_PATH="$GDM_USER_PATH:$EXPANDED_BINDIR"
+ Alternatively you may set the DAEMON_CFLAGS and DAEMON_LIBS environment variables
+ to avoid the need to call pkg-config.  See the pkg-config man page for
+ more details." >&5
+-echo "$as_me: error: Package requirements (gtk+-2.0 >= $GTK_REQUIRED) were not met.
++echo "$as_me: error: Package requirements (gtk+-2.0 >= $GTK_REQUIRED libgnome-2.0 >= $LIBGNOME_REQUIRED) were not met.
+ Consider adjusting the PKG_CONFIG_PATH environment variable if you
+ installed software in a non-standard prefix.
+ 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2005/09/27 22:19:41 mjl Exp $
+# $NetBSD: Makefile,v 1.89 2005/10/14 21:47:01 jmmv Exp $
 #
 
-DISTNAME=	gdm-2.8.0.1
+DISTNAME=	gdm-2.8.0.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -126,9 +126,11 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"

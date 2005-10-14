@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2005/09/17 19:09:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.22 2005/10/14 21:47:01 jmmv Exp $
 ${DMX}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -22,6 +22,7 @@ sbin/gdm-stop
 sbin/gdmsetup
 share/applications/gdmflexiserver-xnest.desktop
 share/applications/gdmflexiserver.desktop
+share/applications/gdmphotosetup.desktop
 share/applications/gdmsetup.desktop
 share/doc/gdm/Daemon.README
 share/examples/gdm/Init/Default
@@ -30,8 +31,6 @@ share/examples/gdm/PostSession/Default
 share/examples/gdm/PreSession/Default
 share/examples/gdm/XKeepsCrashing
 share/examples/gdm/Xsession
-share/examples/gdm/factory-gdm.conf
-share/examples/gdm/gdm.conf
 share/examples/gdm/locale.alias
 share/examples/gdm/modules/AccessDwellMouseEvents
 share/examples/gdm/modules/AccessKeyMouseEvents
@@ -40,6 +39,7 @@ share/examples/gdm/modules/factory-AccessKeyMouseEvents
 share/examples/rc.d/gdm
 share/gdm/BuiltInSessions/default.desktop
 share/gdm/gdmchooser.glade
+share/gdm/gdmphotosetup.glade
 share/gdm/gdmsetup.glade
 share/gdm/themes/circles/GdmGreeterTheme.desktop
 share/gdm/themes/circles/background.svg
@@ -66,7 +66,6 @@ share/gdm/themes/happygnome/options.png
 share/gdm/themes/happygnome/screenshot.png
 share/gdm/themes/happygnome/session.png
 share/gdm/themes/happygnome/system.png
-share/gnome/capplets/gdmphotosetup.desktop
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
 share/gnome/help/gdm/de/figures/gdm_window.png
@@ -136,6 +135,7 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gdm.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/gdm.mo
@@ -185,16 +185,30 @@ share/omf/gdm/gdm-zh_CN.omf
 share/omf/gdm/gdm-zh_HK.omf
 share/omf/gdm/gdm-zh_TW.omf
 share/pixmaps/Daemon.png
-share/pixmaps/faces/bonfire.jpg
-share/pixmaps/faces/cdrom.jpg
-share/pixmaps/faces/clock.jpg
-share/pixmaps/faces/daisy.jpg
+share/pixmaps/faces/astronaut.jpg
+share/pixmaps/faces/baseball.png
+share/pixmaps/faces/butterfly.png
+share/pixmaps/faces/cat-eye.jpg
+share/pixmaps/faces/chess.jpg
+share/pixmaps/faces/coffee.jpg
 share/pixmaps/faces/dice.jpg
-share/pixmaps/faces/hollyleaf.jpg
-share/pixmaps/faces/lamas.jpg
-share/pixmaps/faces/seal.jpg
+share/pixmaps/faces/energy-arc.jpg
+share/pixmaps/faces/fish.jpg
+share/pixmaps/faces/flake.jpg
+share/pixmaps/faces/flower.jpg
+share/pixmaps/faces/grapes.jpg
+share/pixmaps/faces/guitar.jpg
+share/pixmaps/faces/launch.jpg
+share/pixmaps/faces/leaf.jpg
+share/pixmaps/faces/lightning.jpg
+share/pixmaps/faces/penguin.jpg
+share/pixmaps/faces/puppy.jpg
 share/pixmaps/faces/sky.jpg
-share/pixmaps/faces/skyline.jpg
+share/pixmaps/faces/soccerball.png
+share/pixmaps/faces/sunflower.jpg
+share/pixmaps/faces/sunset.jpg
+share/pixmaps/faces/tennis-ball.png
+share/pixmaps/faces/yellow-rose.jpg
 share/pixmaps/gdm-foot-logo.png
 share/pixmaps/gdm-setup.png
 share/pixmaps/gdm-xnest.png
@@ -233,8 +247,6 @@ share/xsessions/gnome.desktop
 @dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome/capplets
-@comment in gnome2-dirs: @dirrm share/gnome
 @dirrm share/gdm/themes/happygnome-list
 @dirrm share/gdm/themes/happygnome
 @dirrm share/gdm/themes/circles
