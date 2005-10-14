@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2005/08/10 20:56:17 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2005/10/14 21:52:14 jmmv Exp $
 #
 
-DISTNAME=	eog-2.10.2
+DISTNAME=	eog-2.12.1
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -30,8 +30,11 @@ BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.16
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
