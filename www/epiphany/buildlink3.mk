@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2005/07/22 14:12:22 dillo Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2005/10/14 21:47:59 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use epiphany.
 #
@@ -14,7 +14,7 @@ BUILDLINK_DEPENDS+=	epiphany
 
 .if !empty(EPIPHANY_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			epiphany
-BUILDLINK_DEPENDS.epiphany+=		epiphany>=1.6.0
+BUILDLINK_DEPENDS.epiphany+=		epiphany>=1.8.0
 BUILDLINK_PKGSRCDIR.epiphany?=		../../www/epiphany
 
 .include "../../mk/bsd.prefs.mk"
