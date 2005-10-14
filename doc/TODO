@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4017 2005/10/14 21:00:02 kristerw Exp $
+$NetBSD: TODO,v 1.4018 2005/10/14 21:53:49 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ Suggested package updates
 	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
 	o astyle-1.15.3
-	o at-spi-1.6.6
 	o aterm-1.0.0
 	o auctex-11.81
 	o autogen-5.7.3
@@ -397,7 +396,6 @@ Suggested package updates
 	o boson-0.11
 	o browser-bookmarks-menu-0.4
 	o bsdiff-4.3
-	o bug-buddy-2.12.1
 	o bugzilla-2.21.1
 	o byacc-20050813
 	o c4-1.10
@@ -463,7 +461,6 @@ Suggested package updates
 	o dact-0.8.37
 	o dante-1.1.18
 	o darkice-0.15
-	o dasher-3.2.18
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dbus-0.50
 	o dbxml-2.1.8
@@ -506,8 +503,6 @@ Suggested package updates
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
 	o enscript-1.6.4
-	o eog2-2.12.1
-	o epiphany-1.8.2
 	o epstool-3.08
 	o erlang-10b-7 [pkg/31555]
 	o esh-0.8.5
@@ -557,7 +552,6 @@ Suggested package updates
 	o gcpio-2.6
 	o gcube-0.4
 	o gdb6-6.3.0
-	o gdm-2.8.0.5
 	o gdsreader-0.3.2
 	o gettext-0.14.5
 	o gfract-0.32
@@ -1431,7 +1425,6 @@ Suggested package updates
 	o ytalk-3.2.0 [pkg/28840]
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.12.1
 	o zile-2.2.8
 	o zircon-1.18.256
 	o zope25-AbracadabraObject-2.0.0
