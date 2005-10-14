@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2005/10/14 00:45:57 minskim Exp $
+# $NetBSD: Makefile,v 1.250 2005/10/14 01:08:27 minskim Exp $
 #
 
 COMMENT=	Security tools
@@ -208,6 +208,7 @@ SUBDIR+=	ruby16-digest
 SUBDIR+=	ruby16-openssl
 SUBDIR+=	scanssh
 SUBDIR+=	seahorse
+SUBDIR+=	secpanel
 SUBDIR+=	sfs
 SUBDIR+=	sign
 SUBDIR+=	skey
