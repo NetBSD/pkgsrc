@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/14 10:41:18 rillig Exp $
 
 DISTNAME=	arj-3.10.21
 CATEGORIES=	archivers
-MASTER_SITES=	http://testcase.newmail.ru/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arj/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://arj.sourceforge.net/
