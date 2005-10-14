@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11471 2005/10/14 00:35:33 minskim Exp $
+$NetBSD: CHANGES,v 1.11472 2005/10/14 00:45:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4573,3 +4573,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/libarchive to 1.02.036 [xtraeme 2005-10-13]
 	Updated pkgtools/pkglint to 4.28 [rillig 2005-10-14]
 	Added x11/rxvt-unicode version 5.7 [minskim 2005-10-14]
+	Added security/dirb version 1.8 [minskim 2005-10-14]
