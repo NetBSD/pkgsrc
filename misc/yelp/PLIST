@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2005/05/31 15:54:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/14 21:48:34 jmmv Exp $
 bin/gnome-help
 bin/yelp
-etc/gconf/schemas/yelp.schemas
 lib/bonobo/servers/GNOME_Yelp.server
 share/applications/yelp.desktop
+share/gconf/schemas/yelp.schemas
 share/icons/hicolor/192x192/apps/yelp-icon-big.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/yelp.mo
@@ -42,6 +42,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/yelp.mo
@@ -103,7 +104,13 @@ share/yelp/xslt/db2html.xsl
 share/yelp/xslt/info2html.xsl
 share/yelp/xslt/man2html.xsl
 share/yelp/xslt/toc2html.xsl
+share/yelp/xslt/yelp-common.xsl
+share/yelp/yelp.js
 @dirrm share/yelp/xslt
 @dirrm share/yelp/ui
 @dirrm share/yelp/icons
 @dirrm share/yelp
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/192x192/apps
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@comment in libbonobo: @dirrm lib/bonobo/servers
