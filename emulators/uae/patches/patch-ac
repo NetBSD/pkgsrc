@@ -1,13 +1,26 @@
-$NetBSD: patch-ac,v 1.8 2004/03/26 22:24:36 kristerw Exp $
+$NetBSD: patch-ac,v 1.9 2005/10/14 22:15:49 kristerw Exp $
 
---- configure.orig	2004-03-26 21:52:11.000000000 +0000
-+++ configure	2004-03-26 21:52:55.000000000 +0000
-@@ -6400,7 +6400,7 @@
- int soundfd; ioctl (soundfd, SNDCTL_DSP_GETFMTS, 0);
- ; return 0; }
- EOF
--if { (eval echo configure:6404: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
-+if { (eval echo configure:6404: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-   rm -rf conftest*
-   echo "$ac_t""yes" 1>&6
- HAVE_USS_SOUND=yes
+--- configure.orig	2005-08-12 20:14:06.000000000 +0200
++++ configure	2005-08-12 20:14:58.000000000 +0200
+@@ -14385,16 +14385,16 @@
+ echo "${ECHO_T}ALSA" >&6
+   SOUNDDEP=sd-alsa
+   USE_SOUND=yes
+-else if [ "x$HAVE_USS_SOUND" = "xyes" ]; then
+-  echo "$as_me:$LINENO: result: USS" >&5
+-echo "${ECHO_T}USS" >&6
+-  SOUNDDEP=sd-uss
+-  USE_SOUND=yes
+ else if [ "x$ac_cv_header_sys_audioio_h" = "xyes" -o "x$ac_cv_header_sun_audioio_h" = "xyes" ]; then
+   echo "$as_me:$LINENO: result: Solaris/NetBSD" >&5
+ echo "${ECHO_T}Solaris/NetBSD" >&6
+   SOUNDDEP=sd-solaris
+   USE_SOUND=yes
++else if [ "x$HAVE_USS_SOUND" = "xyes" ]; then
++  echo "$as_me:$LINENO: result: USS" >&5
++echo "${ECHO_T}USS" >&6
++  SOUNDDEP=sd-uss
++  USE_SOUND=yes
+ else if [ "x$HAVE_AF_LIB" = "xyes" ]; then
+   echo "$as_me:$LINENO: result: AF sound" >&5
+ echo "${ECHO_T}AF sound" >&6
