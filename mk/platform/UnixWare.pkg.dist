@@ -1,6 +1,6 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
 #	NetBSD: SunOS.pkg.dist,v 1.64 2004/04/01 12:19:09 jmmv Exp
-#	$NetBSD: UnixWare.pkg.dist,v 1.5 2005/08/19 21:47:51 jmmv Exp $
+#	$NetBSD: UnixWare.pkg.dist,v 1.6 2005/10/14 16:46:17 jmmv Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -19,6 +19,10 @@
     ..
     lib
 	locale
+            aa
+                LC_MESSAGES
+                ..
+            ..
             af
                 LC_MESSAGES
                 ..
@@ -67,6 +71,10 @@
                 LC_MESSAGES
                 ..
             ..
+            byn
+                LC_MESSAGES
+                ..
+            ..
             ca
                 LC_MESSAGES
                 ..
@@ -96,6 +104,10 @@
                 ..
             ..
             dk
+                LC_MESSAGES
+                ..
+            ..
+            dv
                 LC_MESSAGES
                 ..
             ..
@@ -203,11 +215,23 @@
                 LC_MESSAGES
                 ..
             ..
+            gez
+                LC_MESSAGES
+                ..
+            ..
             gl
                 LC_MESSAGES
                 ..
             ..
             gu
+                LC_MESSAGES
+                ..
+            ..
+            gv
+                LC_MESSAGES
+                ..
+            ..
+            haw
                 LC_MESSAGES
                 ..
             ..
@@ -255,6 +279,10 @@
                 LC_MESSAGES
                 ..
             ..
+            iu
+                LC_MESSAGES
+                ..
+            ..
             ja
                 LC_MESSAGES
                 ..
@@ -267,6 +295,14 @@
                 LC_MESSAGES
                 ..
             ..
+            kk
+                LC_MESSAGES
+                ..
+            ..
+            kl
+                LC_MESSAGES
+                ..
+            ..
             kn
                 LC_MESSAGES
                 ..
@@ -275,7 +311,19 @@
                 LC_MESSAGES
                 ..
             ..
+            kok
+                LC_MESSAGES
+                ..
+            ..
             ku
+                LC_MESSAGES
+                ..
+            ..
+            kw
+                LC_MESSAGES
+                ..
+            ..
+            ky
                 LC_MESSAGES
                 ..
             ..
@@ -367,6 +415,14 @@
                 LC_MESSAGES
                 ..
             ..
+            oc
+                LC_MESSAGES
+                ..
+            ..
+            om
+                LC_MESSAGES
+                ..
+            ..
             or
                 LC_MESSAGES
                 ..
@@ -380,6 +436,10 @@
                 ..
             ..
             pl_PL
+                LC_MESSAGES
+                ..
+            ..
+            ps
                 LC_MESSAGES
                 ..
             ..
@@ -407,7 +467,15 @@
                 LC_MESSAGES
                 ..
             ..
+            sa
+                LC_MESSAGES
+                ..
+            ..
             se
+                LC_MESSAGES
+                ..
+            ..
+            sid
                 LC_MESSAGES
                 ..
             ..
@@ -416,6 +484,10 @@
                 ..
             ..
             sl
+                LC_MESSAGES
+                ..
+            ..
+            so
                 LC_MESSAGES
                 ..
             ..
@@ -447,6 +519,14 @@
                 LC_MESSAGES
                 ..
             ..
+            sw
+                LC_MESSAGES
+                ..
+            ..
+            syr
+                LC_MESSAGES
+                ..
+            ..
             ta
                 LC_MESSAGES
                 ..
@@ -463,6 +543,14 @@
                 LC_MESSAGES
                 ..
             ..
+            ti
+                LC_MESSAGES
+                ..
+            ..
+            tig
+                LC_MESSAGES
+                ..
+            ..
             tk
                 LC_MESSAGES
                 ..
@@ -475,11 +563,19 @@
                 LC_MESSAGES
                 ..
             ..
+            tt
+                LC_MESSAGES
+                ..
+            ..
             ug
                 LC_MESSAGES
                 ..
             ..
             uk
+                LC_MESSAGES
+                ..
+            ..
+            ur
                 LC_MESSAGES
                 ..
             ..
@@ -495,6 +591,10 @@
                 LC_MESSAGES
                 ..
             ..
+            ve
+                LC_MESSAGES
+                ..
+            ..
             ven
                 LC_MESSAGES
                 ..
@@ -504,6 +604,14 @@
                 ..
             ..
             wa
+                LC_MESSAGES
+                ..
+            ..
+            wal
+                LC_MESSAGES
+                ..
+            ..
+            wo
                 LC_MESSAGES
                 ..
             ..
