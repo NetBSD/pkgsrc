@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2005/09/03 18:16:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.75 2005/10/14 20:58:04 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.99
-PKGNAME=		xmess-0.99
+DISTNAME=		xmame-0.100
+PKGNAME=		xmess-0.100
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -32,7 +32,7 @@ MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		X11INC= X11LIB=
 
-# Network support is broken in xmame-0.85
+# Network support is broken since xmame-0.85
 #MAKE_FLAGS+=		XMAME_NET=1
 
 # Determine which CPU-specific code to use.
@@ -78,12 +78,6 @@ MAKE_FLAGS+=		JOY_USB=1
 .  endif
 .endif
 
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-2*)
-# Prevent memory explosion for gcc 2.95 and older.
-MAKE_FLAGS+=		LOW_MEM=1
-.endif
-
 OWN_DIRS=		${SPOOLDIR}
 INSTALLATION_DIRS=	bin man/man6
 
@@ -108,12 +102,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
 
-.if !empty(CC_VERSION:Mgcc-3*)
+# Pragma once is not needed, and case warnings/errors on gcc
 SUBST_CLASSES=		pragma
 SUBST_STAGE.pragma=	pre-configure
 SUBST_FILES.pragma=	src/*.h
 SUBST_SED.pragma=	-e "s|\#pragma once||g"
-.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
