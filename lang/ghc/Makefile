@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2005/07/16 01:19:11 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/10/14 18:47:28 kristerw Exp $
 
-DISTNAME=	ghc-6.4
+DISTNAME=	ghc-6.4.1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.haskell.org/ghc/dist/6.4/
-DISTFILES=	ghc-6.4-src.tar.bz2 \
+MASTER_SITES=	http://www.haskell.org/ghc/dist/6.4.1/
+DISTFILES=	ghc-6.4.1-src.tar.bz2 \
 		ghc-6.2.1-src.tar.bz2 \
 		ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz
 
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 
 SITES_ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
+SITES_ghc-6.2.1-src.tar.bz2=http://www.haskell.org/ghc/dist/6.2.1/
 
 ONLY_FOR_PLATFORM= NetBSD-1.5*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/21 20:22:21 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/10/14 18:47:28 kristerw Exp $
 bin/${PKGNAME}
 bin/ghc
 bin/ghc-pkg
@@ -1004,6 +1004,7 @@ lib/${PKGNAME}/include/TSO.h
 lib/${PKGNAME}/include/TailCalls.h
 lib/${PKGNAME}/include/Typeable.h
 lib/${PKGNAME}/include/Updates.h
+lib/${PKGNAME}/include/WCsubst.h
 lib/${PKGNAME}/include/config.h
 lib/${PKGNAME}/include/consUtils.h
 lib/${PKGNAME}/include/dirUtils.h
