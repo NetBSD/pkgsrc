@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/09/22 00:46:57 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/10/14 21:49:08 jmmv Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -15,18 +15,42 @@ share/gnome/help/zenity/C/figures/zenity-text-screenshot.png
 share/gnome/help/zenity/C/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/C/legal.xml
 share/gnome/help/zenity/C/zenity.xml
-share/gnome/help/zenity/sr/figures/zenity-calendar-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-entry-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-error-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-fileselection-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-information-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-list-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-progress-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-question-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-text-screenshot.png
-share/gnome/help/zenity/sr/figures/zenity-warning-screenshot.png
-share/gnome/help/zenity/sr/legal.xml
-share/gnome/help/zenity/sr/zenity.xml
+share/gnome/help/zenity/es/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/es/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/es/zenity.xml
+share/gnome/help/zenity/fr/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/fr/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/fr/zenity.xml
+share/gnome/help/zenity/uk/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/uk/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/uk/zenity.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/zenity-0.1.mo
@@ -51,6 +75,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/zenity-0.1.mo
@@ -94,7 +119,9 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/zenity-0.1.mo
 share/omf/zenity/zenity-C.omf
-share/omf/zenity/zenity-sr.omf
+share/omf/zenity/zenity-es.omf
+share/omf/zenity/zenity-fr.omf
+share/omf/zenity/zenity-uk.omf
 share/zenity/clothes/gnome-tshirt.png
 share/zenity/clothes/hawaii-shirt.png
 share/zenity/clothes/monk.png
@@ -113,8 +140,12 @@ share/zenity/zenity.png
 @dirrm share/zenity
 @dirrm share/omf/zenity
 @comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/zenity/sr/figures
-@dirrm share/gnome/help/zenity/sr
+@dirrm share/gnome/help/zenity/uk/figures
+@dirrm share/gnome/help/zenity/uk
+@dirrm share/gnome/help/zenity/fr/figures
+@dirrm share/gnome/help/zenity/fr
+@dirrm share/gnome/help/zenity/es/figures
+@dirrm share/gnome/help/zenity/es
 @dirrm share/gnome/help/zenity/C/figures
 @dirrm share/gnome/help/zenity/C
 @dirrm share/gnome/help/zenity
