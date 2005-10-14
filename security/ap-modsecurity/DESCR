@@ -1,0 +1,5 @@
+ModSecurity is an open source intrusion detection and prevention engine for
+web applications (or a web application firewall). Operating as an Apache Web
+server module or standalone, the purpose of ModSecurity is to increase web
+application security, protecting web applications from known and unknown
+attacks.
