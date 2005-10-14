@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11475 2005/10/14 09:24:29 rillig Exp $
+$NetBSD: CHANGES,v 1.11476 2005/10/14 09:49:06 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4577,3 +4577,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added security/secpanel version 0.5.1 [minskim 2005-10-14]
 	Updated mail/sendmail to 8.13.5 [adrianp 2005-10-14]
 	Updated pkgtools/pkglint to 4.28.1 [rillig 2005-10-14]
+	Updated chat/p5-POE-Component-IRC to 4.71 [adrianp 2005-10-14]
