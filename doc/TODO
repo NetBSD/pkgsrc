@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4014 2005/10/13 18:02:07 wiz Exp $
+$NetBSD: TODO,v 1.4015 2005/10/14 09:59:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -389,7 +389,6 @@ Suggested package updates
 	o bittorrent-4.1.4
 	o bittorrent-gui-4.1.4
 	o blackbox-0.70
-	o bluefish-1.0.4
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o boaconstructor-0.4.4
