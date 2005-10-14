@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11486 2005/10/14 21:53:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.11487 2005/10/14 21:56:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/gnome-speech to 0.3.8 [jmmv 2005-10-14]
 	Updated editors/dasher to 3.2.18 [jmmv 2005-10-14]
 	Updated graphics/eog2 to 2.12.1 [jmmv 2005-10-14]
+	Added textproc/iso-codes version 0.48 [jmmv 2005-10-14]
