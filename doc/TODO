@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4018 2005/10/14 21:53:49 jmmv Exp $
+$NetBSD: TODO,v 1.4019 2005/10/14 22:18:11 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -1323,7 +1323,6 @@ Suggested package updates
 	o twelf-1.5
 	o txt2html-2.43
 	o txt2man-1.4.8
-	o uae-0.8.25
 	o ubs-0.20
 	o ucarp-1.1 [pkg/29785]
 	o ucblogo-5.5
