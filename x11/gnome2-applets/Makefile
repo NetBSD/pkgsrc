@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/10/12 21:59:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2005/10/14 16:25:28 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-2.12.0
@@ -14,6 +14,7 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
+USE_MSGFMT_PLURALS=	yes
 USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
