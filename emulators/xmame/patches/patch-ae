@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.22 2005/08/25 19:54:22 kristerw Exp $
+$NetBSD: patch-ae,v 1.23 2005/10/14 20:57:49 kristerw Exp $
 
 --- src/unix/doc/xmamerc.dist.orig	Sat Nov  6 21:40:52 2004
 +++ src/unix/doc/xmamerc.dist	Sat Nov  6 21:42:31 2004
-@@ -66,12 +66,12 @@
+@@ -62,10 +62,10 @@
  analogstick             0
  
  ### Fileio Related ###
@@ -11,12 +11,8 @@ $NetBSD: patch-ae,v 1.22 2005/08/25 19:54:22 kristerw Exp $
  snapshot_directory      .
 -cheat_file              /usr/local/share/xmame/cheat.dat
 -hiscore_file            /usr/local/share/xmame/hiscore.dat
--history_file            /usr/local/share/xmame/history.dat
--mameinfo_file           /usr/local/share/xmame/mameinfo.dat
 +cheat_file              @SPOOLDIR@/cheat.dat
 +hiscore_file            @SPOOLDIR@/hiscore.dat
-+history_file            @SPOOLDIR@/history.dat
-+mameinfo_file           @SPOOLDIR@/mameinfo.dat
  
  ### Mame Related ###
  defaultgame             robby
