@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11485 2005/10/14 21:00:02 kristerw Exp $
+$NetBSD: CHANGES,v 1.11486 2005/10/14 21:53:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4589,3 +4589,13 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/maude to 2.1.1 [tonio 2005-10-14]
 	Updated xmame to 0.100 [kristerw 2005-10-14]
 	Updated xmess to 0.100 [kristerw 2005-10-14]
+	Updated devel/at-spi to 1.6.6 [jmmv 2005-10-14]
+	Updated x11/gtksourceview to 1.4.2 [jmmv 2005-10-14]
+	Updated x11/gdm to 2.8.0.5 [jmmv 2005-10-14]
+	Updated www/epiphany to 1.8.2 [jmmv 2005-10-14]
+	Updated misc/yelp to 2.12.1 [jmmv 2005-10-14]
+	Updated x11/zenity to 2.12.1 [jmmv 2005-10-14]
+	Updated net/bug-buddy to 2.12.1 [jmmv 2005-10-14]
+	Updated audio/gnome-speech to 0.3.8 [jmmv 2005-10-14]
+	Updated editors/dasher to 3.2.18 [jmmv 2005-10-14]
+	Updated graphics/eog2 to 2.12.1 [jmmv 2005-10-14]
