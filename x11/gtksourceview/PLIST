@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/08/26 16:35:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/10/14 21:45:06 jmmv Exp $
 include/gtksourceview-1.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-1.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-1.0/gtksourceview/gtksourcelanguage.h
@@ -52,6 +52,7 @@ share/gtksourceview-1.0/language-specs/javascript.lang
 share/gtksourceview-1.0/language-specs/language.dtd
 share/gtksourceview-1.0/language-specs/latex.lang
 share/gtksourceview-1.0/language-specs/lua.lang
+share/gtksourceview-1.0/language-specs/makefile.lang
 share/gtksourceview-1.0/language-specs/msil.lang
 share/gtksourceview-1.0/language-specs/nemerle.lang
 share/gtksourceview-1.0/language-specs/pascal.lang
@@ -89,6 +90,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gtksourceview-1.0.mo
@@ -111,6 +113,7 @@ ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtksourceview-1.0.mo
