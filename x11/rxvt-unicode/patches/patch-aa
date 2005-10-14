@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/14 00:32:53 minskim Exp $
+
+--- configure.orig	2005-02-18 12:12:31.000000000 +0000
++++ configure
+@@ -3101,14 +3101,6 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+-if test -z "$orig_CXXFLAGS"; then
+-  CXXFLAGS='-O'
+-  if test x$GCC = xyes && test "x$GXX" = xyes; then
+-    CXXFLAGS="-g -O3"
+-  fi
+-  CFLAGS="$CXXFLAGS"
+-fi
+-
+ LINKER="$CXX"
+ if test x$GCC = xyes && test x$GXX = xyes; then
+ 
