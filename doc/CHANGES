@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11482 2005/10/14 18:43:26 adrianp Exp $
+$NetBSD: CHANGES,v 1.11483 2005/10/14 18:49:35 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4585,3 +4585,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/snort-rules to 2.4 [adrianp 2005-10-14]
 	Updated sysutils/bacula to 1.36.3nb1 [wiz 2005-10-14]
 	Added security/ap-modsecurity 1.8.7 [adrianp 2005-10-14]
+	Updated lang/ghc to 6.4.1 [kristerw 2005-10-14]
