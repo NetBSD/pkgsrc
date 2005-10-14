@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2005/08/10 20:56:25 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2005/10/14 09:57:54 adam Exp $
 
-DISTNAME=	bluefish-1.0.2
+DISTNAME=	bluefish-1.0.4
 CATEGORIES=	www
 MASTER_SITES=	http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/	\
 		ftp://bluefish.advancecreations.com/bluefish/downloads/ \
