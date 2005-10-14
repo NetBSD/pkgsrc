@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2005/08/10 20:56:16 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/14 21:51:19 jmmv Exp $
 #
 
-DISTNAME=	dasher-3.2.15
+DISTNAME=	dasher-3.2.18
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/3.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +12,7 @@ COMMENT=	Easy typing without using keyboard
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
