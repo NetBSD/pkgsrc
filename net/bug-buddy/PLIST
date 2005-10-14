@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/03/22 16:27:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/10/14 21:49:58 jmmv Exp $
 bin/bug-buddy
 man/man1/bug-buddy.1
 share/application-registry/bug-buddy.applications
@@ -20,6 +20,10 @@ share/bug-buddy/ximian.png
 share/gconf/schemas/bug-buddy.schemas
 share/gnome/help/bug-buddy/C/bug-buddy.xml
 share/gnome/help/bug-buddy/C/legal.xml
+share/gnome/help/bug-buddy/es/bug-buddy.xml
+share/gnome/help/bug-buddy/pa/bug-buddy.xml
+share/gnome/help/bug-buddy/sr/bug-buddy.xml
+share/gnome/help/bug-buddy/uk/bug-buddy.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/bug-buddy.mo
@@ -58,6 +62,7 @@ ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/bug-buddy.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/bug-buddy.mo
@@ -71,6 +76,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bug-buddy.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/bug-buddy.mo
@@ -80,18 +86,28 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/bug-buddy.mo
+${PKGLOCALEDIR}/locale/ug/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/bug-buddy.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 share/mime-info/bug-buddy.keys
 share/omf/bug-buddy/bug-buddy-C.omf
+share/omf/bug-buddy/bug-buddy-es.omf
+share/omf/bug-buddy/bug-buddy-pa.omf
+share/omf/bug-buddy/bug-buddy-sr.omf
+share/omf/bug-buddy/bug-buddy-uk.omf
 share/pixmaps/bug-buddy.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/bug-buddy
 @comment in scrollkeeper: @dirrm share/omf
 @comment in xdg-dirs: @dirrm share/mime-info
+@dirrm share/gnome/help/bug-buddy/uk
+@dirrm share/gnome/help/bug-buddy/sr
+@dirrm share/gnome/help/bug-buddy/pa
+@dirrm share/gnome/help/bug-buddy/es
 @dirrm share/gnome/help/bug-buddy/C
 @dirrm share/gnome/help/bug-buddy
 @comment in gnome2-dirs: @dirrm share/gnome/help
