@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 09:03:09 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/10/14 19:54:39 tonio Exp $
 
-SHA1 (maude-src.tar.gz) = 5682993dcb62bba1cd06e8bc21bf908e42dd3ecd
-RMD160 (maude-src.tar.gz) = 1c622d07b048c6435a2609fa2ef4e795c01385b3
-Size (maude-src.tar.gz) = 1030863 bytes
-SHA1 (fm.maude) = db8f8d064956a1e8525b368353c3cae9270360d5
-RMD160 (fm.maude) = 1ca2ca8edf6a6f09ce71334c4a8afe5ada572914
-Size (fm.maude) = 511212 bytes
+SHA1 (Maude-2.1.1.tar.gz) = 6433ab534970c65bfdde3ea67d1067ad1c7bd9e3
+RMD160 (Maude-2.1.1.tar.gz) = 22793ee2c339a86e44e49dee56943c8b1099ee0b
+Size (Maude-2.1.1.tar.gz) = 1174764 bytes
