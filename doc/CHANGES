@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11470 2005/10/14 00:06:06 rillig Exp $
+$NetBSD: CHANGES,v 1.11471 2005/10/14 00:35:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4572,3 +4572,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sysutils/xenkernel20 version 2.0.7 [agc 2005-10-13]
 	Updated archivers/libarchive to 1.02.036 [xtraeme 2005-10-13]
 	Updated pkgtools/pkglint to 4.28 [rillig 2005-10-14]
+	Added x11/rxvt-unicode version 5.7 [minskim 2005-10-14]
