@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:51 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/14 10:47:43 adrianp Exp $
 
-DISTNAME=	mod_auth_ldap3.3
-PKGNAME=	ap2-auth-ldap-3.3
+DISTNAME=	mod_auth_ldap3.05
+PKGNAME=	ap2-auth-ldap-3.05
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.muquit.com/muquit/software/mod_auth_ldap/
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://www.muquit.com/muquit/software/mod_auth_ldap/mod_auth_ldap_apache2.html
+HOMEPAGE=	${MASTER_SITES}/mod_auth_ldap.html
 COMMENT=	Module to allow apache2 authentication against an LDAP directory
 
 GNU_CONFIGURE=		YES
@@ -15,7 +15,7 @@ APACHE_MODULE_NAME=	mm_auth_ldap_module
 USE_LIBTOOL=		YES
 CPPFLAGS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lldap -llber
 
-BUILDLINK_DEPENDS.apache?=      apache>=2.0.47
+BUILDLINK_DEPENDS.apache+=	apache>=2.0.47
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap}
@@ -30,8 +30,7 @@ SUBST_SED.paths=	-e "s|@@HASHLIB@@|${PREFIX}/include|g" \
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
 
 do-install:
-	cd ${WRKSRC} && ${APXS} -i \
-		-n ${APACHE_MODULE_NAME} mod_auth_ldap.la
+	cd ${WRKSRC} && ${APXS} -i -n ${APACHE_MODULE_NAME} mod_auth_ldap.la
 
 .include "../../databases/openldap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
