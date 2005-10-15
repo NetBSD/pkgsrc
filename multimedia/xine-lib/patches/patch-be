@@ -1,21 +1,21 @@
-$NetBSD: patch-be,v 1.4 2005/07/29 16:09:11 drochner Exp $
+$NetBSD: patch-be,v 1.4.2.1 2005/10/15 16:07:46 salo Exp $
 
---- src/audio_out/Makefile.in.orig	2005-07-26 20:32:23.000000000 +0200
+--- src/audio_out/Makefile.in.orig	2005-10-09 13:28:00.000000000 +0200
 +++ src/audio_out/Makefile.in
-@@ -449,6 +449,7 @@ OGG_CFLAGS = @OGG_CFLAGS@
+@@ -197,6 +197,7 @@ OGG_CFLAGS = @OGG_CFLAGS@
  OGG_LIBS = @OGG_LIBS@
  OPENGL_CFLAGS = @OPENGL_CFLAGS@
  OPENGL_LIBS = @OPENGL_LIBS@
 +OSS_LIBS = @OSS_LIBS@
  PACKAGE = @PACKAGE@
- PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
- PACKAGE_NAME = @PACKAGE_NAME@
-@@ -640,7 +641,7 @@ xineplug_ao_out_file_la_SOURCES = audio_
- xineplug_ao_out_file_la_LIBADD = $(XINE_LIB)
+ PASS1_CFLAGS = @PASS1_CFLAGS@
+ PASS2_CFLAGS = @PASS2_CFLAGS@
+@@ -337,7 +338,7 @@ xineplug_ao_out_file_la_LIBADD = $(XINE_
  xineplug_ao_out_file_la_LDFLAGS = -avoid-version -module @XINE_PLUGIN_MIN_SYMS@
+ 
  xineplug_ao_out_oss_la_SOURCES = audio_oss_out.c
 -xineplug_ao_out_oss_la_LIBADD = $(XINE_LIB)
 +xineplug_ao_out_oss_la_LIBADD = $(XINE_LIB) $(OSS_LIBS)
  xineplug_ao_out_oss_la_LDFLAGS = -avoid-version -module @XINE_PLUGIN_MIN_SYMS@
+ 
  xineplug_ao_out_alsa_la_SOURCES = audio_alsa_out.c
- xineplug_ao_out_alsa_la_LIBADD = $(ALSA_LIBS) $(XINE_LIB)
