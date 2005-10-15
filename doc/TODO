@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4028 2005/10/15 21:44:52 heinz Exp $
+$NetBSD: TODO,v 1.4029 2005/10/15 21:55:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -438,7 +438,7 @@ Suggested package updates
 	o courier-maildir-0.52
 	o cqcam-0.91
 	o crafty-19.5
-	o crimson-0.4.9
+	o crimsonfields-0.4.9
 	o criticalmass-0.9.12
 	o crossfire-client-1.8.0
 	o crossfire-server-1.7.1
@@ -549,6 +549,7 @@ Suggested package updates
 	o gcube-0.4
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o getmail-4.3.13
 	o gettext-0.14.5
 	o gfract-0.32
 	o ggiterm-0.7.1
@@ -772,7 +773,7 @@ Suggested package updates
 	o minivmac-2.6.1
 	o mjpegtools-1.8.0
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.5.6
+	o mkvtoolnix-1.6.0
 	o mldonkey-2.6.5
 	o mldonkey-gui-2.6.5
 	o mlview-0.9.0
@@ -805,6 +806,7 @@ Suggested package updates
 	o navi2ch-1.7.5
 	o nawk-20041222
 	o ncftp2-2.8.2
+	o ncurses-5.5
 	o ncview-1.92e
 	o neon-0.25.3
 	o nessus-0.2.5
@@ -892,9 +894,8 @@ Suggested package updates
 	o p5-Crypt-Random-1.25
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-SQLite-1.09
-	o p5-DBD-Sybase-1.05
+	o p5-DBD-Sybase-1.07
 	o p5-DBD-postgresql-1.32
-	o p5-DBD-Sybase-1.04
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-DBIx-SearchBuilder-1.33
 	o p5-DB_File-1.810
@@ -1236,6 +1237,7 @@ Suggested package updates
 	o smlnj-110.54
 	o smokeping-2.0.3
 	o snd-7.15 [wiz]
+	o snd-7.16
 	o snes9x-1.43
 	o snownews-1.5.7
 	o socat-1.4.3.0
