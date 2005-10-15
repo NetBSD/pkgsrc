@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/08 14:43:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/15 21:24:16 wiz Exp $
 bin/ogg123
 bin/oggdec
 bin/oggenc
 bin/ogginfo
-bin/vcut
 bin/vorbiscomment
 man/man1/ogg123.1
 man/man1/oggdec.1
 man/man1/oggenc.1
 man/man1/ogginfo.1
-man/man1/vcut.1
 man/man1/vorbiscomment.1
 share/doc/${DISTNAME}/ogg123rc-example
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/vorbis-tools.mo
@@ -23,4 +21,5 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/vorbis-tools.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/vorbis-tools.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/vorbis-tools.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vorbis-tools.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/vorbis-tools.mo
 @dirrm share/doc/${DISTNAME}
