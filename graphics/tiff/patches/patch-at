@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.3 2005/07/14 14:59:10 wiz Exp $
+$NetBSD: patch-at,v 1.4 2005/10/15 17:11:51 wiz Exp $
 
---- configure.orig	2005-07-05 18:37:50.000000000 +0200
+--- configure.orig	2005-09-12 15:52:41.000000000 +0200
 +++ configure
-@@ -22736,6 +22736,117 @@ done
+@@ -22526,6 +22526,117 @@ done
  
  
  
