@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.8 2005/10/15 21:49:53 tonio Exp $
+
+--- config/x86_64/freebsd2/md.c.orig	2005-07-04 00:02:58.000000000 +0200
++++ config/x86_64/freebsd2/md.c
+@@ -13,6 +13,10 @@
+ #include "config.h"
+ #include "config-std.h"
+ 
++#if defined(HAVE_SYS_TYPES_H)
++#include <sys/types.h>
++#endif
++
+ #if defined(HAVE_SYS_SYSCTL_H)
+ #include <sys/sysctl.h>
+ 
