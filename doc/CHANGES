@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11500 2005/10/15 18:14:32 wiz Exp $
+$NetBSD: CHANGES,v 1.11501 2005/10/15 18:54:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4614,3 +4614,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/tiff to 3.7.4 [wiz 2005-10-15]
 	Updated misc/vera to 1.16 [tonio 2005-10-15]
 	Updated audio/libvorbis to 1.1.1 [wiz 2005-10-15]
+	Added x11/Terminal version 0.2.4 [minskim 2005-10-15]
