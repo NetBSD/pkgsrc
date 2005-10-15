@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4020 2005/10/15 16:39:55 wiz Exp $
+$NetBSD: TODO,v 1.4021 2005/10/15 16:56:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -321,7 +321,6 @@ Suggested package updates
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
-	o Xft2-2.1.7
 	o YoSucker-73
 	o aap-0.144
 	o abook-0.5.4
