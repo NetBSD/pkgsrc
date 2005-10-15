@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2003/06/08 09:55:29 abs Exp $
+$NetBSD: patch-aa,v 1.6 2005/10/15 22:16:05 tonio Exp $
 
---- Makefile.orig	Sat Jul 13 11:24:16 2002
+--- Makefile.orig	2005-07-05 11:57:46.000000000 +0200
 +++ Makefile
 @@ -11,19 +11,19 @@
  # Don't change this even if your shell is different. The only reason
@@ -28,11 +28,23 @@ $NetBSD: patch-aa,v 1.5 2003/06/08 09:55:29 abs Exp $
  
  # The filename of the font to be used if no other is specified
  #   (standard.flf is recommended, but any other can be used).
-@@ -55,6 +55,7 @@ install: figlet chkfont
- 	mkdir -p $(DEFAULTFONTDIR)
- 	cp figlet $(DESTDIR)
- 	cp chkfont $(DESTDIR)
-+	chmod 555 figlist showfigfonts
- 	cp figlist $(DESTDIR)
- 	cp showfigfonts $(DESTDIR)
- 	cp fonts/*.flf $(DEFAULTFONTDIR)
+@@ -52,11 +52,11 @@ clean:
+ 	rm -f *.o figlet chkfont
+ 
+ install: figlet chkfont
+-	mkdir -p $(DEFAULTFONTDIR)
+-	cp figlet $(DESTDIR)
+-	cp figlet.6 $(MANDIR)
+-	cp chkfont $(DESTDIR)
+-	cp figlist $(DESTDIR)
+-	cp showfigfonts $(DESTDIR)
+-	cp fonts/*.flf $(DEFAULTFONTDIR)
+-	cp fonts/*.flc $(DEFAULTFONTDIR)
++	${BSD_INSTALL_DATA_DIR} $(DEFAULTFONTDIR)
++	${BSD_INSTALL_PROGRAM} figlet $(DESTDIR)
++	${BSD_INSTALL_DATA} figlet.6 $(MANDIR)
++	${BSD_INSTALL_PROGRAM} chkfont $(DESTDIR)
++	${BSD_INSTALL_SCRIPT} figlist $(DESTDIR)
++	${BSD_INSTALL_SCRIPT} showfigfonts $(DESTDIR)
++	${BSD_INSTALL_DATA} fonts/*.flf $(DEFAULTFONTDIR)
++	${BSD_INSTALL_DATA} fonts/*.flc $(DEFAULTFONTDIR)
