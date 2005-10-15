@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11505 2005/10/15 21:36:32 heinz Exp $
+$NetBSD: CHANGES,v 1.11506 2005/10/15 22:17:13 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4622,3 +4622,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/auctex to 11.81 [tonio 2005-10-15]
 	Updated archivers/p5-Archive-Tar to 1.26 [heinz 2005-10-15]
 	Updated audio/vorbis-tools to 1.1.1 [wiz 2005-10-15]
+	Updated misc/figlet to 2.2.2 [tonio 2005-10-15]
