@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2005/10/11 17:19:21 jlam Exp $
+# $NetBSD: Makefile,v 1.108 2005/10/15 06:29:58 jlam Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
-OPENSSL_VERS?=		0.9.7h
+OPENSSL_VERS?=		0.9.7i
 
 .if empty(OPENSSL_SNAPSHOT)
 DISTNAME=	openssl-${OPENSSL_VERS}
