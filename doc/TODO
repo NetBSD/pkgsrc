@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4021 2005/10/15 16:56:51 wiz Exp $
+$NetBSD: TODO,v 1.4022 2005/10/15 17:12:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1290,7 +1290,6 @@ Suggested package updates
 	o tet3-3.6b
 	o tfmxplay-1.1.6
 	o tidy-20051006
-	o tiff-3.7.4
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-7.2.4
