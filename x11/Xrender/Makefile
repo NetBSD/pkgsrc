@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2005/09/07 16:49:41 reed Exp $
+# $NetBSD: Makefile,v 1.27 2005/10/15 16:37:21 wiz Exp $
 
-DISTNAME=	libXrender-0.8.4
+DISTNAME=	libXrender-0.9.0
 PKGNAME=	${DISTNAME:S/lib//}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,8 +17,6 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	xrender.pc.in
 
-BUILDLINK_DEPENDS.render+=	render>=0.8
-
-.include "../../x11/render/buildlink3.mk"
+.include "../../x11/renderext/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
