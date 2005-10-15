@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2005/08/29 17:09:31 adrianp Exp $
+$NetBSD: distinfo,v 1.13.2.1 2005/10/15 11:40:38 salo Exp $
 
-SHA1 (phpMyAdmin-2.6.4-rc1.tar.bz2) = 64350681ca04a19e1ab68780ab4904fa9717b0ba
-RMD160 (phpMyAdmin-2.6.4-rc1.tar.bz2) = 482059d0073636f204056bf5ea44dc28b0136696
-Size (phpMyAdmin-2.6.4-rc1.tar.bz2) = 1728180 bytes
+SHA1 (phpMyAdmin-2.6.4-pl2.tar.bz2) = f61207409cebb3ddaa8548ab2e454ce74a3ad15a
+RMD160 (phpMyAdmin-2.6.4-pl2.tar.bz2) = d25f069ecba6984d2ad935e0d114bcef8d863751
+Size (phpMyAdmin-2.6.4-pl2.tar.bz2) = 1722828 bytes
