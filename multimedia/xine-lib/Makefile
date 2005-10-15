@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/09/20 12:49:30 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.25.2.1 2005/10/15 16:07:46 salo Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		1
 COMMENT=		Multimedia player library
 
 BUILDLINK_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
@@ -22,25 +21,12 @@ SUBST_FILES.w32path=	src/libw32dll/wine/module.c
 SUBST_SED.w32path=	-e "s,@W32PATH@,${PREFIX}/lib/win32,"
 SUBST_MESSAGE.w32path=	"Fixing win32 dll path."
 
-# This needs to come before checking the values, otherwise the builtin.mk
-# files are not doing its work.
-.include "../../graphics/Mesa/buildlink3.mk"
-
-USE_BUILTIN.MesaLib?=	no
-USE_BUILTIN.glu?=	no
-
-.if !empty(USE_BUILTIN.MesaLib:M[Yy][Ee][Ss]) && \
-    !empty(USE_BUILTIN.glu:M[Yy][Ee][Ss])
-PLIST_SUBST+=		OPENGL_PLUGIN=
-.else
-PLIST_SUBST+=		OPENGL_PLUGIN='@comment '
-.endif
-
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

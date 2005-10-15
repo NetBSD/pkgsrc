@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.27 2005/09/20 12:49:30 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.27.2.1 2005/10/15 16:07:46 salo Exp $
 #
 
-DISTNAME=		xine-lib-1.0.2
-XINE_PKGNAME=		xine-lib-1.0.2
+DISTNAME=		xine-lib-1.0.3a
+XINE_PKGNAME=		xine-lib-1.0.3a
 PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
@@ -21,6 +21,7 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool libtool-nofpic
 PKGCONFIG_OVERRIDE=	misc/libxine.pc.in
 USE_TOOLS+=		autoconf gmake pkg-config
+WRKSRC=			${WRKDIR}/xine-lib-1.0.3
 
 CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
 CONFIGURE_ARGS+=	--without-external-ffmpeg --disable-ffmpegtest
