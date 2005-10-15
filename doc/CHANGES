@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11495 2005/10/15 15:38:55 reed Exp $
+$NetBSD: CHANGES,v 1.11496 2005/10/15 16:39:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4607,3 +4607,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/scanssh to 2.1nb1 [rillig 2005-10-15]
 	Added x11/tile version 0.7.3 [minskim 2005-10-15]
 	Updated www/curl to 7.15.0 [reed 2005-10-15]
+	Added x11/renderext version 0.9 [wiz 2005-10-15]
+	Removed x11/render [wiz 2005-10-15]
+	Updated x11/Xrender to 0.9.0 [wiz 2005-10-15]
