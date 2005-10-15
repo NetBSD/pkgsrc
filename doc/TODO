@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4026 2005/10/15 19:17:40 tonio Exp $
+$NetBSD: TODO,v 1.4027 2005/10/15 20:13:08 tonio Exp $
 
 Suggested new packages
 ======================
@@ -364,7 +364,6 @@ Suggested package updates
 	o ast-ksh-20040229
 	o astyle-1.15.3
 	o aterm-1.0.0
-	o auctex-11.81
 	o autogen-5.7.3
 	o avcheck-0.91
 	o avidemux-2.0.42
