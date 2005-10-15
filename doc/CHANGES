@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11492 2005/10/15 06:30:35 jlam Exp $
+$NetBSD: CHANGES,v 1.11493 2005/10/15 06:57:04 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4604,3 +4604,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/p5-SNMP-MIB-Compiler to 0.06nb3 [kristerw 2005-10-15]
 	Added audio/glurp version 0.11.6 [xtraeme 2005-10-15]
 	Updated security/openssl to 0.9.7i [jlam 2005-10-15]
+	Updated security/scanssh to 2.1nb1 [rillig 2005-10-15]
