@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/15 13:40:49 minskim Exp $
+
+--- Makefile.in.orig	2005-09-24 01:09:25.000000000 -0700
++++ Makefile.in
+@@ -1,5 +1,6 @@
+ CC=@CC@
+ CFLAGS=@CFLAGS@ -Wunused
++LDFLAGS=@LDFLAGS@
+ LIBS=@LIBS@
+ PROG=tile
+ PREFIX=@prefix@
+@@ -14,7 +15,7 @@ HOSTVER=@HOSTREL@
+ all: $(PROG) ChangeLog doc/html/index.html
+ 
+ tile: tile.o tilerc.o avoid.o x11.o cmdline.o
+-	$(CC) -o $(PROG) $(LIBS) -Wl,-s tile.o tilerc.o avoid.o x11.o cmdline.o
++	$(CC) -o $(PROG) $(LDFLAGS) $(LIBS) -Wl,-s tile.o tilerc.o avoid.o x11.o cmdline.o
+ 
+ tile.o: tile.c
+ 	$(CC) $(CFLAGS) -DINSTPFX='"$(PREFIX)"' -c tile.c
+@@ -62,3 +63,4 @@ install:
+ 	-mkdir -p $(SHARE)/applications
+ 	cp *.desktop $(SHARE)/applications
+ 
++.PHONY: install
