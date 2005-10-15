@@ -1,0 +1,3 @@
+This package contains header files and documentation for the X
+render extension (renderext).  Library and server implementations
+are separate.
