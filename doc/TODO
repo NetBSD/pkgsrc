@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4027 2005/10/15 20:13:08 tonio Exp $
+$NetBSD: TODO,v 1.4028 2005/10/15 21:44:52 heinz Exp $
 
 Suggested new packages
 ======================
@@ -856,7 +856,6 @@ Suggested package updates
 	o p5-Apache-Session-1.80
 	o p5-Apache-Session-Wrapper-0.26
 	o p5-Apache-Test-1.26
-	o p5-Archive-Tar-1.26
 	o p5-Archive-Zip-1.16
 	o p5-Array-Compare-1.13
 	o p5-Audio-Wav-0.04
@@ -882,7 +881,6 @@ Suggested package updates
 	o p5-Class-Trigger-0.09 [pkg/29923]
 	o p5-Class-Trigger-0.10
 	o p5-Compress-Bzip2-2.09
-	o p5-Compress-Zlib-1.41
 	o p5-Convert-ASN1-0.19
 	o p5-Convert-BER-1.3101
 	o p5-Convert-PEM-0.07
@@ -932,7 +930,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
 	o p5-IO-Socket-SSL-0.97
-	o p5-IO-Zlib-1.04
 	o p5-Ima-DBI-0.34
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
@@ -959,7 +956,7 @@ Suggested package updates
 	o p5-Net-AOLIM-1.5
 	o p5-Net-CIDR-0.15
 	o p5-Net-CIDR-Lite-0.18
-	o p5-Net-DNS-0.53
+	o p5-Net-DNS-0.53 [heinz]
 	o p5-Net-Daemon-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
@@ -1023,7 +1020,7 @@ Suggested package updates
 	o p5-ispman-1.2
 	o p5-perl-ldap-0.3202
 	o p5-prefork-1.00
-	o p5-razor-agents-2.75
+	o p5-razor-agents-2.77 [heinz]
 	o p5-sybperl-2.18
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
