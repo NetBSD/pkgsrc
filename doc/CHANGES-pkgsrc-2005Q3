@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.25 2005/10/15 11:21:11 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.26 2005/10/15 11:41:27 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -65,3 +65,5 @@ Pullup ticket 827 - requested by Thomas Klausner
 security update for unrar
 Pullup ticket 833 - requested by Johnny C. Lam
 openssl update (abi changes)
+Pullup ticket 826 - requested by Matthias Scheler
+security update for phpmyadmin
