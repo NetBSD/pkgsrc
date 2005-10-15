@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2005/10/09 09:48:22 rillig Exp $
+# $NetBSD: Makefile,v 1.58 2005/10/15 20:24:53 heinz Exp $
 
 DISTNAME=	unzip552
 PKGNAME=	unzip-5.52
@@ -27,6 +27,8 @@ MAKE_FLAGS=	CF="${CPPFLAGS} ${CFLAGS} -I. -DUNIX -Dunix -DUSE_UNSHRINK" LF2="${_
 .endif
 
 INSTALLATION_DIRS=	bin man/man1 share/doc
+
+TEST_TARGET=	check
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} unzip funzip unzipsfx ${PREFIX}/bin
