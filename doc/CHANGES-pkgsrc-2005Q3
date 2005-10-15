@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.26 2005/10/15 11:41:27 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.27 2005/10/15 12:00:33 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -67,3 +67,5 @@ Pullup ticket 833 - requested by Johnny C. Lam
 openssl update (abi changes)
 Pullup ticket 826 - requested by Matthias Scheler
 security update for phpmyadmin
+Pullup ticket 829 - requested by Havard Eidnes
+security fix for python22
