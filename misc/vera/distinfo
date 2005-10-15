@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 11:02:58 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/10/15 17:50:27 tonio Exp $
 
-SHA1 (vera-1.11.tar.gz) = 7a8da43857a65499b38e0c22b0900564407dea21
-RMD160 (vera-1.11.tar.gz) = b6956c77dff35e03059c2fd696a963ba715fe6d6
-Size (vera-1.11.tar.gz) = 182984 bytes
-SHA1 (patch-aa) = 9f2263e979d537977dcdec2b0a4a49209ca02832
+SHA1 (vera-1.16.tar.gz) = dab42957a4feac87a9392b71f9eab7a6b3237d36
+RMD160 (vera-1.16.tar.gz) = fec1ba7363d203cbedf7780036000796dbaeaa3b
+Size (vera-1.16.tar.gz) = 201196 bytes
+SHA1 (patch-aa) = 6b9256fc594c9d0137149dddb81e7582dcf0ea80
