@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.28 2005/10/15 14:26:01 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.29 2005/10/15 16:08:21 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -71,3 +71,5 @@ Pullup ticket 829 - requested by Havard Eidnes
 security fix for python22
 Pullup ticket 830 - requested by Thomas Klausner
 security update for wget
+Pullup ticket 828 - requested by Julio M. Merino Vidal
+security update and portability fixes for xine-lib
