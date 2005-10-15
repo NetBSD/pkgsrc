@@ -1,72 +1,18 @@
-# $NetBSD: Makefile,v 1.29 2005/06/01 18:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/10/15 23:07:21 tonio Exp $
 
-DISTNAME=		elk-3.0
-PKGNAME=		elk-3.0.3
-PKGREVISION=	1
+DISTNAME=		elk-3.99.6
 CATEGORIES=		lang
-MASTER_SITES=		http://www-rn.informatik.uni-bremen.de/software/elk/dist/
+MASTER_SITES=		http://sam.zoy.org/elk/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://sam.zoy.org/elk/
 COMMENT=		Embeddable Scheme interpreter
 
-# ELF loading problems, LP64
-NOT_FOR_PLATFORM=	*-*-alpha *-*-mips* *-*-sparc64
+GNU_CONFIGURE=yes
+USE_LIBTOOL=  yes
 
-BUILD_TARGET=		default
+CONFIGURE_ENV= WITH_XAW="${ELK_AWK}"
 
-.include "../../mk/bsd.prefs.mk"
-
-ELK_GUI?=	none
-BUILD_DEFS+=	ELK_GUI
-
-# We must strip the "-Wl," from the linker flags because they are saved
-# by elk to be used to invoke the real "ld", which won't understand them.
-#
-.if ${ELK_GUI} != "none"
-MAKE_ENV+=	X11_LDFLAGS="${X11_LDFLAGS:S/-Wl,//}"
-.  if !empty(ELK_GUI:Mxaw)
-.    include "../../mk/xaw.buildlink3.mk"
-LIBXAW:=	${LIBXAW:S/-Wl,//}
-ELK_SUBDIRS+=	lib/xlib lib/xt lib/xaw
-PLIST_SRC+=	${PKGDIR}/PLIST.X11
-BUILD_DEFS+=	XAW_TYPE
-.  endif
-.  if !empty(ELK_GUI:Mmotif)
-.    include "../../mk/motif.buildlink3.mk"
-MOTIFLIB:=	${MOTIFLIB:S/-Wl,//}
-ELK_SUBDIRS+=	lib/xm lib/xm/xt
-PLIST_SRC+=	${PKGDIR}/PLIST.Motif
-.  endif
-.endif
-
-PLIST_SRC+=	${PKGDIR}/PLIST.base
-MAKE_ENV+=	ELK_SUBDIRS="${ELK_SUBDIRS}"
-
-.include "../../mk/x11.buildlink3.mk"
-
-do-configure:
-	${MV} ${WRKSRC}/src/stab-elf.c ${WRKSRC}/src/stab-elf.c-dist
-	${CP} ${FILESDIR}/stab-elf.c ${WRKSRC}/src
-	@case ${OBJECT_FMT} in						\
-	a.out)	exetype=aout ;;						\
-	ELF)	exetype=elf ;;						\
-	*)	${ECHO} "Unsupported object format: ${OBJECT_FMT}";	\
-		exit 1 ;;						\
-	esac;								\
-	${ECHO} "Setting up links for $$exetype on ${LOWER_OPSYS}";	\
-	${RM} -f ${WRKSRC}/config/untested/elf-solaris-cc;		\
-	${LN} -s ${WRKSRC}/config/sun-sunos5-gcc			\
-		${WRKSRC}/config/untested/elf-solaris-cc;		\
-	${RM} -f ${WRKSRC}/config/system ${WRKSRC}/config/site;		\
-	${LN} -s ${WRKSRC}/config/untested/$$exetype-${LOWER_OPSYS}-cc	\
-		${WRKSRC}/config/system;				\
-	for f in aout-netbsd elf-netbsd elf-solaris; do			\
-		${RM} -f ${WRKSRC}/config/sites/$$f;			\
-		${LN} -s ${WRKSRC}/config/sites/pkgsrc			\
-			${WRKSRC}/config/sites/$$f;			\
-	done;								\
-	${LN} -s ${WRKSRC}/config/sites/$$exetype-${LOWER_OPSYS}	\
-		${WRKSRC}/config/site
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
