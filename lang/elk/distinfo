@@ -1,29 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:03:06 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/10/15 23:07:21 tonio Exp $
 
-SHA1 (elk-3.0.tar.gz) = d62ae8a88e3206a578195611ace50168e6078661
-RMD160 (elk-3.0.tar.gz) = 9c4b46c51109242bf591302da46b17c2bca2046e
-Size (elk-3.0.tar.gz) = 762484 bytes
-SHA1 (patch-aa) = 109e70fb6ba64b116c3b472b8586bf9c89c29348
-SHA1 (patch-ab) = 62cac0487bf259aa481fbc23fd34b168475062fe
-SHA1 (patch-ac) = 34c00b8d706834bc5ffd4dca21049b56d2ae35bd
-SHA1 (patch-ad) = 421d3a738fa78db6c139331ca0d57987f94266bd
-SHA1 (patch-ae) = d1514bc0391f59adbd2591b361348a2baee118f4
-SHA1 (patch-af) = e3b2da075f099e7f3abff82afc255018c21639dd
-SHA1 (patch-ag) = 3aebf5f386e67c2a87cb549a6c6a7d4f332db1fe
-SHA1 (patch-ah) = 901fbd12b2d103cf1efe965d82c03b6790aa0282
-SHA1 (patch-ai) = 0a3569151de7d78706b5c5112bc260e880c25056
-SHA1 (patch-aj) = fc3294f5198caa7a91aafffaed9ec1b2e55c7696
-SHA1 (patch-ak) = 59fec6f3b2d00c75d3954ccb20237dd179ac0f81
-SHA1 (patch-al) = c17f9c1760bca6928f517bc9d2c64d1eba5b5756
-SHA1 (patch-am) = 1950af890ce6fc3acf2340630199dd8c375f9b0e
-SHA1 (patch-an) = a8eef0e5a1315cd5a0e3a4ce2b7ea80fd4e62db5
-SHA1 (patch-ao) = af0d66514fb2673388658d74246d9e83c174118e
-SHA1 (patch-ap) = 4c76aa4b44b2a3d2e2bcbed3c6d4d639c99e51a4
-SHA1 (patch-aq) = 0d10cc53d0284ce56bb6929579962c7b29afcbe6
-SHA1 (patch-ar) = a145d0b1aba3d201bda60b9c82eff8c642c5919f
-SHA1 (patch-as) = 69b51d90a4e34cd7b1c3a2a290343420ffee51eb
-SHA1 (patch-at) = 133495a41196a4017c232cf7d1de2c8283f36968
-SHA1 (patch-au) = 6bba0055e67418cdb3a0da1c9754cad8de4bb03d
-SHA1 (patch-av) = f764b4ca96f8c837ad1a392137e96b90d8102cd1
-SHA1 (patch-aw) = 3fa21da8be16407ece0cfae3f6510b7ee8052e6c
-SHA1 (patch-ax) = 3e7e0c0a4cff6b33acd818579f743bf8f6665dec
+SHA1 (elk-3.99.6.tar.gz) = 10fb17ab7e06a34ad3067be323482091fa79d398
+RMD160 (elk-3.99.6.tar.gz) = f7e7861bae4e996b4eac2f6d3c004f5631b73e38
+Size (elk-3.99.6.tar.gz) = 847811 bytes
+SHA1 (patch-aa) = 8eafcd683ad0a87003d3727a6a37e321ef92b0a4
+SHA1 (patch-ab) = e28bb6c96d315dfb3010036e3bc40b0e50b3b2b2
