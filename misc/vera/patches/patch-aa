@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/18 01:15:53 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/15 17:50:27 tonio Exp $
 
---- vera.texi.orig	Tue Mar  9 23:29:09 1999
-+++ vera.texi	Tue Mar  9 23:34:16 1999
+--- vera.texi.orig	2005-06-12 01:27:44.000000000 +0200
++++ vera.texi
 @@ -2,6 +2,10 @@
  @c %**start of header
  @setfilename vera.info
