@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11502 2005/10/15 19:17:40 tonio Exp $
+$NetBSD: CHANGES,v 1.11503 2005/10/15 20:13:08 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4616,3 +4616,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/libvorbis to 1.1.1 [wiz 2005-10-15]
 	Added x11/Terminal version 0.2.4 [minskim 2005-10-15]
 	Updated databases/abook to 0.5.4 [tonio 2005-10-15]
+	Updated print/auctex to 11.81 [tonio 2005-10-15]
