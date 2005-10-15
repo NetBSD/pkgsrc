@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2005/10/11 10:00:15 tonio Exp $
+$NetBSD: distinfo,v 1.16 2005/10/15 21:49:53 tonio Exp $
 
 SHA1 (kaffe-1.1.6.tar.gz) = 8987c3a596db89ddc793013eaf0fab5cf8730128
 RMD160 (kaffe-1.1.6.tar.gz) = 9fd1177a43923346f9a21e4c0e89015ae42c4dfa
@@ -6,4 +6,5 @@ Size (kaffe-1.1.6.tar.gz) = 10779887 bytes
 SHA1 (patch-aa) = 24f3720fded5a786bd2c4af354433ab19298ff7f
 SHA1 (patch-ab) = e2ba7816d3b2c9bf850a4ad9aadec5d306a8115e
 SHA1 (patch-ac) = 287fa93128361897ea0fc1bc305004b336609c88
+SHA1 (patch-ad) = d952245f70a61459e527cd846b76dede1df226e4
 SHA1 (patch-af) = c170e9bb8c559db660ba2d6e7af716c29b981235
