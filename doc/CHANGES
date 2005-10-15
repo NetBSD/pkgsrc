@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11498 2005/10/15 17:12:19 wiz Exp $
+$NetBSD: CHANGES,v 1.11499 2005/10/15 17:52:17 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4612,3 +4612,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/Xrender to 0.9.0 [wiz 2005-10-15]
 	Updated fonts/Xft2 to 2.1.7 [wiz 2005-10-15]
 	Updated graphics/tiff to 3.7.4 [wiz 2005-10-15]
+	Updated misc/vera to 1.16 [tonio 2005-10-15]

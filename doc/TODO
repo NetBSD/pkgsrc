@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4023 2005/10/15 17:13:44 wiz Exp $
+$NetBSD: TODO,v 1.4024 2005/10/15 17:52:17 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1332,7 +1332,6 @@ Suggested package updates
 	o vba-1.7.2
 	o vcdimager-0.7.23
 	o vcdimager-devel-0.7.23
-	o vera-1.14
 	o verilog-0.8.2
 	o vfu-4.03
 	o vice-1.17
