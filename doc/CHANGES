@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11496 2005/10/15 16:39:55 wiz Exp $
+$NetBSD: CHANGES,v 1.11497 2005/10/15 16:56:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4610,3 +4610,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added x11/renderext version 0.9 [wiz 2005-10-15]
 	Removed x11/render [wiz 2005-10-15]
 	Updated x11/Xrender to 0.9.0 [wiz 2005-10-15]
+	Updated fonts/Xft2 to 2.1.7 [wiz 2005-10-15]
