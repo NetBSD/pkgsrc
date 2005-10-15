@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/08/29 17:09:31 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.11.2.1 2005/10/15 11:40:38 salo Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -15,7 +15,6 @@ share/phpmyadmin/browse_foreigners.php
 share/phpmyadmin/calendar.php
 share/phpmyadmin/changelog.php
 share/phpmyadmin/chk_rel.php
-share/phpmyadmin/config.default.php
 share/phpmyadmin/config.footer.inc.php
 share/phpmyadmin/config.header.inc.php
 share/phpmyadmin/config.inc.php
