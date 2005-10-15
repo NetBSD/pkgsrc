@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/03/01 03:49:50 uebayasi Exp $
+$NetBSD: MESSAGE,v 1.4 2005/10/15 20:11:35 tonio Exp $
 
 To customize AUC TeX you will need to edit the file
 
@@ -12,7 +12,7 @@ when you update to a newer version of AUC TeX.
 
 You may then put
 
-	(require 'tex-site)
+	(load "auctex.el" nil t t)
 
 in your `${HOME}/.emacs.el' file.
 
