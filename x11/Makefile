@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.413 2005/10/15 16:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.414 2005/10/15 18:54:24 minskim Exp $
 #
 
 COMMENT=	Packages to support the X window system
 
 SUBDIR+=	9term
+SUBDIR+=	Terminal
 SUBDIR+=	XF86Setup
 SUBDIR+=	XFree86-clients
 SUBDIR+=	XFree86-imake
