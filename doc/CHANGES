@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11488 2005/10/14 22:18:10 kristerw Exp $
+$NetBSD: CHANGES,v 1.11489 2005/10/15 00:17:36 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4601,3 +4601,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/eog2 to 2.12.1 [jmmv 2005-10-14]
 	Added textproc/iso-codes version 0.48 [jmmv 2005-10-14]
 	Updated emulators/uae to 0.8.25 [kristerw 2005-10-14]
+	Updated net/p5-SNMP-MIB-Compiler to 0.06nb3 [kristerw 2005-10-15]
