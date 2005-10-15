@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/10/14 21:52:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2005/10/15 09:33:24 jmmv Exp $
 #
 
 DISTNAME=	eog-2.12.1
@@ -15,6 +15,7 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config
 USE_DIRS+=		gnome2-1.5
+USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS= 	eog.schemas
