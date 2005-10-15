@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4029 2005/10/15 21:55:50 wiz Exp $
+$NetBSD: TODO,v 1.4030 2005/10/15 22:17:14 tonio Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,6 @@ Suggested package updates
 	o fd-2.07b
 	o fdgw-20040609
 	o fhist-1.14
-	o figlet-2.2.2
 	o file-4.15
 	o file-roller-2.12.1
 	o findutils-4.2.25
