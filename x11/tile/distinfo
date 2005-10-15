@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/15 13:40:49 minskim Exp $
+
+SHA1 (tile_0.7.3.tar.gz) = 4f1d0e9eacca9c0fca98b36e45fbb925ddd0c4ff
+RMD160 (tile_0.7.3.tar.gz) = 414931082aa29621afd80abd39d17310eae27538
+Size (tile_0.7.3.tar.gz) = 111272 bytes
+SHA1 (patch-aa) = 48396c9610770a205b94bdb1975f459cb001495c
