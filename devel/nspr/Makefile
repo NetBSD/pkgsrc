@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:47 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/16 11:15:10 jmmv Exp $
 
 DISTNAME=		nspr-4.4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES?=		${MASTER_SIZE_MOZILLA:=nspr/releases/v4.4.1/src}
 
@@ -42,14 +42,21 @@ do-install:
 	(cd ${WRKSRC}/dist/include && ${PAX} -Lrwpe . ${PREFIX}/include/ )
 	(cd ${WRKSRC}/dist/lib && ${PAX} -Lrwpe . ${PREFIX}/lib/nspr/ )
 	${INSTALL_SCRIPT} ${WRKSRC}/config/nspr-config ${PREFIX}/bin
-
-
-.include "../../mk/pthread.buildlink3.mk"
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
+	{ ${ECHO} "Name: NSPR"; \
+	  ${ECHO} "Description: The Netscape Portable Runtime"; \
+	  ${ECHO} "Version: ${PKGVERSION}"; \
+	  ${ECHO} "Cflags: -I${PREFIX}/include/nspr"; \
+	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr" \
+	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr" \
+	      "-lplds4 -lplc4 -lnspr4 ${BUILDLINK_LIBS.pthread}"; \
+	} >${PREFIX}/lib/pkgconfig/nspr.pc
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+=	--without-pthreads
 .else
 CONFIGURE_ARGS+=	--with-pthreads
+.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
