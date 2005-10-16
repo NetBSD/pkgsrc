@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2005/09/18 19:33:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2005/10/16 16:56:22 tonio Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG}
 DISTFILES=		X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
@@ -59,7 +59,7 @@ pre-install:
 .if !exists(${X11ROOT}/lib/pkgconfig)
 	${INSTALL_DATA_DIR} ${X11BASE}/lib/pkgconfig
 .endif
-.for f in fixesext.pc compositeext.pc
+.for f in render.pc fixesext.pc compositeext.pc
 	@${SED} -e "s,@X11BASE@,${X11BASE},g"		\
 		-e "s,@LOCALBASE@,${LOCALBASE},g"	\
 		${FILESDIR}/${f} > ${WRKSRC}/${f}
