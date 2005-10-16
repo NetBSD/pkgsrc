@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.413 2005/10/13 11:16:00 kleink Exp $
+# $NetBSD: Makefile,v 1.414 2005/10/16 05:03:30 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -211,6 +211,7 @@ SUBDIR+=	p5-HTML-Tree
 SUBDIR+=	p5-HTMLObject
 SUBDIR+=	p5-HTTP-Cache-Transparent
 SUBDIR+=	p5-HTTP-DAV
+SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Request-Form
 SUBDIR+=	p5-HTTPD-User-Manage
 SUBDIR+=	p5-Kwiki
