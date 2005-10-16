@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2005/08/21 11:48:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2005/10/16 12:12:33 jmmv Exp $
 #
 
-DISTNAME=	nautilus-cd-burner-2.10.2
+DISTNAME=	nautilus-cd-burner-2.12.1
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -23,6 +23,7 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	libnautilus-burn.pc.in
 
+CONFIGURE_ARGS+=	--disable-hal
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CPPFLAGS+=		-D__unix__
