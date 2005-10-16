@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11516 2005/10/16 13:00:42 jdolecek Exp $
+$NetBSD: CHANGES,v 1.11517 2005/10/16 14:15:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4659,3 +4659,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/phpsview to 9.0.2 [jdolecek 2005-10-16]
 	Updated print/libgnomecups to 0.2.2 [jmmv 2005-10-16]
 	Updated sysutils/pwgen to 2.04 [jdolecek 2005-10-16]
+	Updated www/epiphany-extensions to 1.8.1 [jmmv 2005-10-16]
