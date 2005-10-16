@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/16 20:20:41 wiz Exp $
+
+--- configure.orig	2002-08-12 17:18:53.000000000 +0200
++++ configure
+@@ -946,9 +946,11 @@ else
+ fi
+ 
+ 
+-CPPFLAGS=-I/usr/X11R6/include
++#CPPFLAGS=-I/usr/X11R6/include
++CPPFLAGS=
+ #LDFLAGS="-L/usr/X11R6/lib -lpbm -lpgm -lppm -lpnm"
+-LDFLAGS="-L/usr/X11R6/lib -L/usr/local/netpbm/lib"
++#LDFLAGS="-L/usr/X11R6/lib -L/usr/local/netpbm/lib"
++LDFLAGS=
+ 
+ ## pnm can only be found, if LDFLAGS contains -lpgm -lpnm ... etc. 
+ ## is there a better solution ?
