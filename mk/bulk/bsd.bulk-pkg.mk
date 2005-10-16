@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.85 2005/08/25 22:57:29 reed Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.86 2005/10/16 17:35:25 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -61,6 +61,12 @@ _SORT?=			${SORT}
 # exist or are up to date and they take quite a while to rebuild.  So unless
 # they're known to exist and be up to date, don't use them.
 USE_BULK_CACHE?=	no
+
+# If set to 'yes', avoids inflating the 'breaks' column of the final report
+# by not counting dependent packages that are broken all by themselves.
+# If set to 'no', may speed up building on some platforms where fork() is slow.
+# (Only takes effect if USE_BULK_CACHE=yes.)
+USE_BULK_BROKEN_CHECK?=	yes
 
 # This variable may be set to 'no' to avoid automatic rebuilding of dependent
 # packages based solely on timestamps of the package's pkgsrc files and/or
@@ -419,14 +425,16 @@ bulk-package:
 						pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
 						if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
 						${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
-						pkgerr="-1"; \
-						pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
-						pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
+						pkgerr='-1'; pkgignore=''; pkgskip=''; \
+						if [ "${USE_BULK_BROKEN_CHECK}" = 'yes' ]; then \
+							pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
+							pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
+						fi; \
 						if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
 							 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 							 ${ECHO_MSG} "BULK> $$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 							 ${ECHO_MSG} "BULK> $$pkgskip" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-							if [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
+							if [ "${USE_BULK_BROKEN_CHECK}" != 'yes' ] || [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
 								pkgerr="0"; \
 							else \
 								pkgerr="1"; \
