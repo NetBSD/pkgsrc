@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/09/20 12:53:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/16 11:15:10 jmmv Exp $
 
 DISTNAME=		nss-3.9.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES?=		ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_9_2_RTM/src/
 
@@ -68,6 +68,16 @@ do-install:
 	(cd ${DIST}/public && ${PAX} -Lrwpe . ${PREFIX}/include/nss/ )
 	(cd ${DIST}/${NSS_OBJ_DIR}/lib && \
 		${PAX} -Lrwpe *.${SO_SUFFIX} ${PREFIX}/lib/nss/ )
+	{ ${ECHO} "Name: NSS"; \
+	  ${ECHO} "Description: Mozilla Network Security Services"; \
+	  ${ECHO} "Version: ${PKGVERSION}"; \
+	  ${ECHO} "Cflags: -I${PREFIX}/include/nss"; \
+	  ${ECHO} "Libs: -L${PREFIX}/lib/nss" \
+	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss" \
+	      "-lnss3 -lsmime3 -lssl3 -lsoftokn3 ${BUILDLINK_LIBS.pthread}"; \
+	} >${PREFIX}/lib/pkgconfig/nss.pc
+
+BUILDLINK_DEPENDS.nspr+=	nspr>=4.4.1nb2
 
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
