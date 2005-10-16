@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11520 2005/10/16 20:19:00 wiz Exp $
+$NetBSD: CHANGES,v 1.11521 2005/10/16 20:23:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4664,3 +4664,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/p5-IP-Country version 2.20 [heinz 2005-10-16]
 	Updated chat/centericq to 4.21.0 [tonio 2005-10-16]
 	Added graphics/ocrad version 0.13 [wiz 2005-10-16]
+	Moved textproc/gocr to graphics/gocr [wiz 2005-10-16]
