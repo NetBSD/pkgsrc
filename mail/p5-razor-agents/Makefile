@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.21 2005/08/06 06:19:22 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/10/16 08:29:06 heinz Exp $
 
-DISTNAME=	razor-agents-2.72
+DISTNAME=	razor-agents-2.77
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ra
-PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=razor/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://razor.sourceforge.net/
 COMMENT=	Distributed and collaborative spam detection network
 
-# Net::Ping, Getopt::Long, File::Copy are also needed
+# Net::Ping, Getopt::Long, File::Copy are also needed (from the perl package)
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
