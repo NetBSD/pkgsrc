@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:22 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/16 12:13:05 jmmv Exp $
 #
 
-DISTNAME=	gnome-netstatus-2.10.0
+DISTNAME=	gnome-netstatus-2.12.0
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-netstatus/2.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-netstatus/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -24,6 +24,7 @@ GCONF2_SCHEMAS=		netstatus.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
