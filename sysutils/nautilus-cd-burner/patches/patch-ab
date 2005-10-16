@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.4 2005/10/16 12:12:33 jmmv Exp $
+
+--- nautilus-burn-drive.c.orig	2005-10-03 15:55:58.000000000 +0200
++++ nautilus-burn-drive.c
+@@ -481,7 +481,6 @@ get_disc_type (const char *dev_path)
+ 	struct cd_toc_entry              entry;
+ 	int                              i;
+ #endif
+-	int                              type;
+ #ifndef CDROM_DATA_TRACK
+ #define CDROM_DATA_TRACK 4
+ #endif
