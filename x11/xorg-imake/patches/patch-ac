@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2005/09/13 22:51:42 reed Exp $
+$NetBSD: patch-ac,v 1.5 2005/10/16 16:28:27 hira Exp $
 
---- config/cf/NetBSD.cf.in.orig	2004-08-14 17:03:36.000000000 -0700
-+++ config/cf/NetBSD.cf.in	2005-09-12 15:21:11.000000000 -0700
+--- config/cf/NetBSD.cf.in.orig	2004-08-15 09:03:36.000000000 +0900
++++ config/cf/NetBSD.cf.in	2005-10-17 01:14:50.000000000 +0900
 @@ -123,7 +123,7 @@
  # define ThreadedX		YES
  # define HasThreadSafeAPI	YES
@@ -122,4 +122,12 @@ $NetBSD: patch-ac,v 1.4 2005/09/13 22:51:42 reed Exp $
 +#if defined(i386Architecture) || defined(Arm32Architecture) || defined(AlphaArchitecture) || defined(PpcArchitecture) || defined(AMD64Architecture)
  # include <xorg.cf>
  #endif
+ 
+@@ -649,6 +656,7 @@
+  */
+ #ifdef PpcArchitecture
+ 
++# undef OptimizedCDebugFlags
+ # define OptimizedCDebugFlags 	-O2
+ # define XkbServerDefines	-DXKB_ALWAYS_USES_SOFT_REPEAT
  
