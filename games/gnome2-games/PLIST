@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/19 21:11:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/10/16 12:12:16 jmmv Exp $
 bin/blackjack
 bin/games-server.py
 bin/gataxx
@@ -103,6 +103,7 @@ share/gnome-stonesrc.ko
 share/gnome/help/aisleriot/C/agnes.xml
 share/gnome/help/aisleriot/C/aisleriot.xml
 share/gnome/help/aisleriot/C/auld_lang_syne.xml
+share/gnome/help/aisleriot/C/backbone.xml
 share/gnome/help/aisleriot/C/bakers_dozen.xml
 share/gnome/help/aisleriot/C/bakers_game.xml
 share/gnome/help/aisleriot/C/beleaguered_castle.xml
@@ -110,6 +111,7 @@ share/gnome/help/aisleriot/C/block_ten.xml
 share/gnome/help/aisleriot/C/bristol.xml
 share/gnome/help/aisleriot/C/camelot.xml
 share/gnome/help/aisleriot/C/canfield.xml
+share/gnome/help/aisleriot/C/carpet.xml
 share/gnome/help/aisleriot/C/chessboard.xml
 share/gnome/help/aisleriot/C/clock.xml
 share/gnome/help/aisleriot/C/cover.xml
@@ -169,6 +171,7 @@ share/gnome/help/aisleriot/C/thieves.xml
 share/gnome/help/aisleriot/C/thirteen.xml
 share/gnome/help/aisleriot/C/thumb_and_pouch.xml
 share/gnome/help/aisleriot/C/treize.xml
+share/gnome/help/aisleriot/C/triple_peaks.xml
 share/gnome/help/aisleriot/C/union_square.xml
 share/gnome/help/aisleriot/C/valentine.xml
 share/gnome/help/aisleriot/C/westhaven.xml
@@ -180,6 +183,7 @@ share/gnome/help/aisleriot/C/zebra.xml
 share/gnome/help/aisleriot/fr/agnes.xml
 share/gnome/help/aisleriot/fr/aisleriot.xml
 share/gnome/help/aisleriot/fr/auld_lang_syne.xml
+share/gnome/help/aisleriot/fr/backbone.xml
 share/gnome/help/aisleriot/fr/bakers_dozen.xml
 share/gnome/help/aisleriot/fr/bakers_game.xml
 share/gnome/help/aisleriot/fr/beleaguered_castle.xml
@@ -187,6 +191,7 @@ share/gnome/help/aisleriot/fr/block_ten.xml
 share/gnome/help/aisleriot/fr/bristol.xml
 share/gnome/help/aisleriot/fr/camelot.xml
 share/gnome/help/aisleriot/fr/canfield.xml
+share/gnome/help/aisleriot/fr/carpet.xml
 share/gnome/help/aisleriot/fr/chessboard.xml
 share/gnome/help/aisleriot/fr/clock.xml
 share/gnome/help/aisleriot/fr/cover.xml
@@ -246,6 +251,7 @@ share/gnome/help/aisleriot/fr/thieves.xml
 share/gnome/help/aisleriot/fr/thirteen.xml
 share/gnome/help/aisleriot/fr/thumb_and_pouch.xml
 share/gnome/help/aisleriot/fr/treize.xml
+share/gnome/help/aisleriot/fr/triple_peaks.xml
 share/gnome/help/aisleriot/fr/union_square.xml
 share/gnome/help/aisleriot/fr/valentine.xml
 share/gnome/help/aisleriot/fr/westhaven.xml
@@ -330,7 +336,6 @@ share/gnome/help/iagno/C/figures/START.png
 share/gnome/help/iagno/C/iagno.xml
 share/gnome/help/iagno/C/legal.xml
 share/gnome/help/mahjongg/C/figures/mahjongg.png
-share/gnome/help/mahjongg/C/figures/no-match.png
 share/gnome/help/mahjongg/C/figures/no-move.png
 share/gnome/help/mahjongg/C/figures/preferences.png
 share/gnome/help/mahjongg/C/figures/toolbar.png
@@ -379,6 +384,7 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-games.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gnome-games.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-games.mo
@@ -444,10 +450,11 @@ share/pixmaps/gnect/bg_grotty.jpg
 share/pixmaps/gnect/bg_nightfall.jpg
 share/pixmaps/gnect/bg_toplight.png
 share/pixmaps/gnect/tileset_50x50_catseyes.png
-share/pixmaps/gnect/tileset_50x50_classic.png
 share/pixmaps/gnect/tileset_50x50_glassy.png
-share/pixmaps/gnect/tileset_50x50_hcontrast.png
+share/pixmaps/gnect/tileset_50x50_hcinverse.svg
+share/pixmaps/gnect/tileset_50x50_hcontrast.svg
 share/pixmaps/gnect/tileset_50x50_square.png
+share/pixmaps/gnect/tileset_50x50_sunspot.svg
 share/pixmaps/gnibbles/blank.svg
 share/pixmaps/gnibbles/bonus1.svg
 share/pixmaps/gnibbles/bonus2.svg
@@ -517,6 +524,7 @@ share/pixmaps/gnome-stones/title-tile.png
 share/pixmaps/gnome-stones/wall.png
 share/pixmaps/gnometris/7blocks-gw.png
 share/pixmaps/gnometris/7blocks-tig.png
+share/pixmaps/gnomine/bang.svg
 share/pixmaps/gnomine/face-cool.png
 share/pixmaps/gnomine/face-sad.png
 share/pixmaps/gnomine/face-smile.png
@@ -543,12 +551,14 @@ share/pixmaps/rteleport.png
 share/pixmaps/teleport.png
 share/sol-games/agnes.scm
 share/sol-games/auld_lang_syne.scm
+share/sol-games/backbone.scm
 share/sol-games/bakers_dozen.scm
 share/sol-games/bakers_game.scm
 share/sol-games/beleaguered_castle.scm
 share/sol-games/bristol.scm
 share/sol-games/camelot.scm
 share/sol-games/canfield.scm
+share/sol-games/carpet.scm
 share/sol-games/chessboard.scm
 share/sol-games/clock.scm
 share/sol-games/cover.scm
@@ -606,6 +616,7 @@ share/sol-games/thieves.scm
 share/sol-games/thirteen.scm
 share/sol-games/thumb_and_pouch.scm
 share/sol-games/treize.scm
+share/sol-games/triple_peaks.scm
 share/sol-games/union_square.scm
 share/sol-games/valentine.scm
 share/sol-games/westhaven.scm
