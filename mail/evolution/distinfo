@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.40 2005/08/24 10:59:12 adrianp Exp $
+$NetBSD: distinfo,v 1.41 2005/10/16 12:19:13 jmmv Exp $
 
-SHA1 (evolution-2.2.3.tar.bz2) = bd44f9cf45527e77554c5e25d0857236ba97acec
-RMD160 (evolution-2.2.3.tar.bz2) = 74358ef7bb81ffa0fd9a4659c545e99ac4e64910
-Size (evolution-2.2.3.tar.bz2) = 10435908 bytes
+SHA1 (evolution-2.4.1.tar.bz2) = 8cba7b59e781e3e321dd607c836a6f971eb501b0
+RMD160 (evolution-2.4.1.tar.bz2) = 5b783718ef870562b8e4a26b01d593420ca5381c
+Size (evolution-2.4.1.tar.bz2) = 11543481 bytes
 SHA1 (patch-ab) = 871a322eefd1a42e7197da764d49cd1d24f6535d
 SHA1 (patch-ac) = eac530ef720daf3f8f812690496ae39b76691799
 SHA1 (patch-ad) = 10ab1a51ae42934a230ee015554370efc545e3fa
