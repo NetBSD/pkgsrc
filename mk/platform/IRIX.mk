@@ -1,8 +1,11 @@
-# $NetBSD: IRIX.mk,v 1.16 2005/08/02 00:23:31 reed Exp $
+# $NetBSD: IRIX.mk,v 1.17 2005/10/16 19:38:05 schwarz Exp $
 #
 # Variable definitions for the IRIX operating system.
 
 ECHO_N?=	${ECHO} -n
+.if exists(/usr/bin/X11/imake)
+IMAKE?=		/usr/bin/X11/imake # IRIX 5.3 location
+.endif
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE}
 IMAKEOPTS+=	-DManUsr=${PREFIX}
@@ -27,14 +30,14 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 
 # imake installs manpages in weird places
-IMAKE_MAN_SOURCE_PATH=	catman/u_man/cat
-IMAKE_MAN_SUFFIX=	1
-IMAKE_LIBMAN_SUFFIX=	3
-IMAKE_FILEMAN_SUFFIX=	5
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1/X11
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3/X11
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5/X11
-IMAKE_MANNEWSUFFIX=	z
+IMAKE_MAN_SOURCE_PATH?=	catman/u_man/cat
+IMAKE_MAN_SUFFIX?=	1
+IMAKE_LIBMAN_SUFFIX?=	3
+IMAKE_FILEMAN_SUFFIX?=	5
+IMAKE_MAN_DIR?=		${IMAKE_MAN_SOURCE_PATH}1/X11
+IMAKE_LIBMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}3/X11
+IMAKE_FILEMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}5/X11
+IMAKE_MANNEWSUFFIX?=	z
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 .if exists(/usr/include/netinet6)
