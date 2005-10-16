@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.9 2005/10/08 21:04:36 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.10 2005/10/16 12:06:05 jdolecek Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -18,7 +18,13 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
+
+# The Solaris system regex structures miss re_magic used by PHP build 
+.if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--with-regex=system
+.else
+CONFIGURE_ARGS+=	--with-regex=php
+.endif
 
 CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--without-sqlite
