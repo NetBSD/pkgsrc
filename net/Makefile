@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.578 2005/10/08 16:05:48 jdolecek Exp $
+# $NetBSD: Makefile,v 1.579 2005/10/16 18:20:28 heinz Exp $
 #
 
 COMMENT=	Networking tools
@@ -237,6 +237,7 @@ SUBDIR+=	p5-Geo-IP
 SUBDIR+=	p5-INET6
 SUBDIR+=	p5-IO-Interface
 SUBDIR+=	p5-IO-Socket-Multicast
+SUBDIR+=	p5-IP-Country
 SUBDIR+=	p5-Net
 SUBDIR+=	p5-Net-Bind
 SUBDIR+=	p5-Net-CIDR-Lite
@@ -250,6 +251,7 @@ SUBDIR+=	p5-Net-IP
 SUBDIR+=	p5-Net-IPv4Addr
 SUBDIR+=	p5-Net-IPv6Addr
 SUBDIR+=	p5-Net-IRC
+SUBDIR+=	p5-Net-Ident
 SUBDIR+=	p5-Net-Packet
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Net-RawIP
