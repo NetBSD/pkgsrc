@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:44:53 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/16 15:05:45 wiz Exp $
 #
 
 DISTNAME=	juke-0.7
 PKGREVISION=	2
 CATEGORIES=	audio
-MASTER_SITES=	http://johan.nocrew.org/nav10/unix/juke/archive/
+MASTER_SITES=	http://www.moll.no/oyvind/distfiles/
 
 MAINTAINER=	mob@bicekru.org
-HOMEPAGE=	http://johan.nocrew.org/nav10/unix/juke/
+#HOMEPAGE=	http://johan.nocrew.org/nav10/unix/juke/
 COMMENT=	Simple ncurses based jukebox
 
 USE_PKGINSTALL=	YES
