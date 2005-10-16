@@ -1,33 +1,33 @@
-@comment $NetBSD: PLIST,v 1.18 2005/05/19 21:08:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/10/16 12:11:46 jmmv Exp $
 bin/gedit
 bin/gnome-text-editor
-include/gedit-2.10/gedit/bonobo-mdi-child.h
-include/gedit-2.10/gedit/bonobo-mdi.h
-include/gedit-2.10/gedit/gedit-convert.h
-include/gedit-2.10/gedit/gedit-debug.h
-include/gedit-2.10/gedit/gedit-document.h
-include/gedit-2.10/gedit/gedit-encodings-option-menu.h
-include/gedit-2.10/gedit/gedit-encodings.h
-include/gedit-2.10/gedit/gedit-file.h
-include/gedit-2.10/gedit/gedit-mdi-child.h
-include/gedit-2.10/gedit/gedit-mdi.h
-include/gedit-2.10/gedit/gedit-menus.h
-include/gedit-2.10/gedit/gedit-metadata-manager.h
-include/gedit-2.10/gedit/gedit-output-window.h
-include/gedit-2.10/gedit/gedit-plugin.h
-include/gedit-2.10/gedit/gedit-prefs-manager-app.h
-include/gedit-2.10/gedit/gedit-prefs-manager.h
-include/gedit-2.10/gedit/gedit-print.h
-include/gedit-2.10/gedit/gedit-recent.h
-include/gedit-2.10/gedit/gedit-utils.h
-include/gedit-2.10/gedit/gedit-view.h
-include/gedit-2.10/gedit/gedit2.h
-include/gedit-2.10/gedit/recent-files/egg-recent-item.h
-include/gedit-2.10/gedit/recent-files/egg-recent-model.h
-include/gedit-2.10/gedit/recent-files/egg-recent-util.h
-include/gedit-2.10/gedit/recent-files/egg-recent-view-bonobo.h
-include/gedit-2.10/gedit/recent-files/egg-recent-view-gtk.h
-include/gedit-2.10/gedit/recent-files/egg-recent-view.h
+include/gedit-2.12/gedit/bonobo-mdi-child.h
+include/gedit-2.12/gedit/bonobo-mdi.h
+include/gedit-2.12/gedit/gedit-convert.h
+include/gedit-2.12/gedit/gedit-debug.h
+include/gedit-2.12/gedit/gedit-document.h
+include/gedit-2.12/gedit/gedit-encodings-option-menu.h
+include/gedit-2.12/gedit/gedit-encodings.h
+include/gedit-2.12/gedit/gedit-file.h
+include/gedit-2.12/gedit/gedit-mdi-child.h
+include/gedit-2.12/gedit/gedit-mdi.h
+include/gedit-2.12/gedit/gedit-menus.h
+include/gedit-2.12/gedit/gedit-metadata-manager.h
+include/gedit-2.12/gedit/gedit-output-window.h
+include/gedit-2.12/gedit/gedit-plugin.h
+include/gedit-2.12/gedit/gedit-prefs-manager-app.h
+include/gedit-2.12/gedit/gedit-prefs-manager.h
+include/gedit-2.12/gedit/gedit-print.h
+include/gedit-2.12/gedit/gedit-recent.h
+include/gedit-2.12/gedit/gedit-utils.h
+include/gedit-2.12/gedit/gedit-view.h
+include/gedit-2.12/gedit/gedit2.h
+include/gedit-2.12/gedit/recent-files/egg-recent-item.h
+include/gedit-2.12/gedit/recent-files/egg-recent-model.h
+include/gedit-2.12/gedit/recent-files/egg-recent-util.h
+include/gedit-2.12/gedit/recent-files/egg-recent-view-bonobo.h
+include/gedit-2.12/gedit/recent-files/egg-recent-view-gtk.h
+include/gedit-2.12/gedit/recent-files/egg-recent-view.h
 lib/bonobo/servers/GNOME_Gedit.server
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
@@ -49,7 +49,7 @@ lib/gedit-2/plugins/sort.gedit-plugin
 lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
-lib/pkgconfig/gedit-2.10.pc
+lib/pkgconfig/gedit-2.12.pc
 man/man1/gedit.1
 share/application-registry/gedit.applications
 share/applications/gedit.desktop
@@ -163,6 +163,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gedit.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/gedit.mo
@@ -191,6 +192,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gedit.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gedit.mo
@@ -260,6 +262,6 @@ share/pixmaps/gedit-plugin-manager.png
 @dirrm lib/gedit-2/plugins
 @dirrm lib/gedit-2
 @comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/gedit-2.10/gedit/recent-files
-@dirrm include/gedit-2.10/gedit
-@dirrm include/gedit-2.10
+@dirrm include/gedit-2.12/gedit/recent-files
+@dirrm include/gedit-2.12/gedit
+@dirrm include/gedit-2.12
