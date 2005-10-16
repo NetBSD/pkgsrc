@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11515 2005/10/16 12:53:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.11516 2005/10/16 13:00:42 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4658,3 +4658,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated meta-pkgs/gnome to 2.12.1 [jmmv 2005-10-16]
 	Updated graphics/phpsview to 9.0.2 [jdolecek 2005-10-16]
 	Updated print/libgnomecups to 0.2.2 [jmmv 2005-10-16]
+	Updated sysutils/pwgen to 2.04 [jdolecek 2005-10-16]
