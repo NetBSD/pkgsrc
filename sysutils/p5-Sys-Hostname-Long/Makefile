@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/08/06 06:19:31 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/16 08:06:55 heinz Exp $
 #
 
-DISTNAME=		Sys-Hostname-Long-1.0
+DISTNAME=		Sys-Hostname-Long-1.4
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
+SVR4_PKGNAME=		p5shl
 CATEGORIES=		sysutils perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Sys/}
 
@@ -16,10 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/Sys/Hostname/Long/.packlist
-
-pre-configure:
-	@ ${TEST} -r ${WRKSRC}/lib/Sys/Hostname/Long.pm.orig && \
-	  ${RM} ${WRKSRC}/lib/Sys/Hostname/Long.pm.orig ; :
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
