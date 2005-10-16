@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2005/05/19 21:09:43 jmmv Exp $
+$NetBSD: patch-ad,v 1.5 2005/10/16 12:12:01 jmmv Exp $
 
---- braille/libbrl/Makefile.in.orig	2005-04-06 09:20:15.000000000 +0000
+--- braille/libbrl/Makefile.in.orig	2005-09-30 10:45:52.000000000 +0200
 +++ braille/libbrl/Makefile.in
 @@ -245,7 +245,7 @@ libbrl_LTLIBRARIES = libbrl.la
  INCLUDES = -I$(top_builddir)			\
@@ -8,6 +8,6 @@ $NetBSD: patch-ad,v 1.4 2005/05/19 21:09:43 jmmv Exp $
  	   -I$(top_srcdir)/srconf/libsrconf 	\
 -	   -DBRAILLE_TRANS_TABLES_DIR=\"$(sysconfdir)/gnopernicus-1.0/translation_tables/\" \
 +	   -DBRAILLE_TRANS_TABLES_DIR=\"$(sysconfdir)/translation_tables/\" \
- 	   -DTTYNAME0=\"$(TTYNAME_0)\" -DTTYNAME1=\"$(TTYNAME_1)\" \
- 	   -DTTYNAME2=\"$(TTYNAME_2)\" -DTTYNAME3=\"$(TTYNAME_3)\" \
  	   $(BRLTTY_ACTIVE)			\
+ 	   $(LIBBRL_CFLAGS) 			\
+ 	   $(BRLTTY_INCLUDE)			\
