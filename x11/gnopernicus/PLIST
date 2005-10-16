@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/08/21 11:33:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/10/16 12:12:01 jmmv Exp $
 bin/gnopernicus
 bin/gnopernicus-mag-config
 bin/srcore
@@ -84,9 +84,11 @@ ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnopernicus.mo
