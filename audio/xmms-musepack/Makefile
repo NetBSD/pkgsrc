@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:12 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/16 19:09:56 wiz Exp $
 #
 
 DISTNAME=		xmms-musepack-1.1
 CATEGORIES=		audio
-MASTER_SITES=		http://www.saunalahti.fi/grimmel/musepack.net/linux/plugins/
+MASTER_SITES=		http://musepack.imosnet.de/linux/plugins/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
