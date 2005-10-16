@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/19 21:05:20 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/10/16 12:14:33 jmmv Exp $
 libexec/evolution-webcal
 share/gconf/schemas/evolution-webcal.schemas
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/evolution-webcal.mo
@@ -20,6 +20,7 @@ ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/evolution-webcal.mo
@@ -39,8 +40,10 @@ ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/evolution-webcal.mo
@@ -48,6 +51,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/evolution-webcal.mo
+${PKGLOCALEDIR}/locale/ug/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/evolution-webcal.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/evolution-webcal.mo
