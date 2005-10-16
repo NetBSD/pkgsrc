@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:11 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/10/16 12:47:24 jdolecek Exp $
 
-SHA1 (pwc-8.12.tar.gz) = ca245b8b0ad5e2cba9599770f0eee1ae517c16e5
-RMD160 (pwc-8.12.tar.gz) = 2a98c3506c59cfcb3073f6c0b0e8bd735e54e4cf
-Size (pwc-8.12.tar.gz) = 84359 bytes
-SHA1 (pwc-8.12-bsd-0.02.patch.gz) = 610264be9640e3f40e5807d68950f067008478da
-RMD160 (pwc-8.12-bsd-0.02.patch.gz) = 8c75b79f50bf744ee10314c7d2216841af21c6fc
-Size (pwc-8.12-bsd-0.02.patch.gz) = 18309 bytes
+SHA1 (pwc-9.0.2.tar.gz) = 6d5b3e66bdc70c3e22b318da7c69242af5b9605b
+RMD160 (pwc-9.0.2.tar.gz) = 359b6d117e0eb3dd2582f1d399325cc65a2f7a8e
+Size (pwc-9.0.2.tar.gz) = 230499 bytes
+SHA1 (pwc-9.0.2-bsd-0.03.patch.gz) = 83b22d2794d9244eccec92a553077d07057af979
+RMD160 (pwc-9.0.2-bsd-0.03.patch.gz) = 188a5b03626fcd348b768ec3ec3063bb912fd66b
+Size (pwc-9.0.2-bsd-0.03.patch.gz) = 19679 bytes
