@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/05 08:50:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/10/16 12:52:23 jmmv Exp $
 include/libgnomecups-1/libgnomecups/gnome-cups-init.h
 include/libgnomecups-1/libgnomecups/gnome-cups-printer.h
 include/libgnomecups-1/libgnomecups/gnome-cups-queue.h
@@ -6,6 +6,7 @@ include/libgnomecups-1/libgnomecups/gnome-cups-request.h
 include/libgnomecups-1/libgnomecups/gnome-cups-util.h
 lib/libgnomecups-1.0.la
 lib/pkgconfig/libgnomecups-1.0.pc
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnomecups.mo
@@ -15,20 +16,29 @@ ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomecups.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomecups.mo
