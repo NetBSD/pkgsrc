@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4036 2005/10/16 19:07:42 wiz Exp $
+$NetBSD: TODO,v 1.4037 2005/10/16 19:11:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1373,7 +1373,7 @@ Suggested package updates
 	o xmms-infinity-0.6.1
 	o xmms-iris-0.12
 	o xmms-mad-0.5.7
-	o xmms-musepack-1.8.0
+	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmms-nebulus-0.7.0
 	o xmms-wma-1.0.5
 	o xmmsctrl-1.8
