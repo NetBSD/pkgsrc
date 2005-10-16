@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/08 16:14:55 reed Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/16 05:07:58 reed Exp $
 
 DISTNAME=		ed-0.2
 PKGREVISION=		1
@@ -11,6 +11,7 @@ COMMENT=		GNU version of line-oriented text editor
 
 GNU_CONFIGURE=		YES
 CONFIGURE_HAS_INFODIR=	NO
+CONFIGURE_HAS_MANDIR=	NO
 MAKE_ENV+=		INFO_DIR=${INFO_DIR}
 
 .include "../../mk/bsd.prefs.mk"
