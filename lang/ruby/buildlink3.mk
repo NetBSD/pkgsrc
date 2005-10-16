@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/03/06 16:44:04 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/10/16 15:18:02 taca Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RUBY_BUILDLINK3_MK:=	${RUBY_BUILDLINK3_MK}+
@@ -20,6 +20,15 @@ BUILDLINK_DEPENDS.${RUBY_BASE}?=	${RUBY_BASE}>=${RUBY_REQD}
 BUILDLINK_PKGSRCDIR.${RUBY_BASE}?=	../../lang/${RUBY_BASE}
 BUILDLINK_FILES.${RUBY_BASE}+=		lib/libruby${RUBY_VER}.*
 BUILDLINK_FILES.${RUBY_BASE}+=	lib/ruby/${RUBY_VER_DIR}/${RUBY_ARCH}/*.h
+
+BUILDLINK_TARGETS+=	buildlink-bin-ruby
+
+buildlink-bin-ruby:
+	${_PKG_SILENT}${_PKG_DEBUG} \
+	f=${BUILDLINK_PREFIX.${RUBY_BASE}:Q}"/bin/ruby${RUBY_VER}"; \
+	if ${TEST} -f $$f; then \
+		${LN} -s $$f ${BUILDLINK_DIR}/bin/ruby; \
+	fi
 
 .endif	# RUBY_BUILDLINK3_MK
 
