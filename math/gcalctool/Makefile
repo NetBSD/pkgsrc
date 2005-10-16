@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2005/09/23 20:08:05 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2005/10/16 12:11:19 jmmv Exp $
 #
 
-DISTNAME=		gcalctool-5.5.42
+DISTNAME=		gcalctool-5.6.31
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.5/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -33,6 +33,7 @@ post-wrapper:
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

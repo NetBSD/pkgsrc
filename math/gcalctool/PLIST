@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/04/20 15:48:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/10/16 12:11:19 jmmv Exp $
 bin/gcalctool
 bin/gnome-calculator
 man/man1/gcalctool.1
@@ -92,6 +92,7 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gcalctool.mo
@@ -125,6 +126,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcalctool.mo
