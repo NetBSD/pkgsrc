@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.13 2005/09/11 15:54:22 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.14 2005/10/16 15:09:01 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -183,15 +183,11 @@ RUBY_DOCDIR?=		${LOCALBASE}/share/doc/${RUBY_NAME}
 RUBY_EXAMPLESDIR?=	${LOCALBASE}/share/examples/${RUBY_NAME}
 
 #
-# make ruby based packages' distfiles to one place.
+# set ruby reletaed package to common DIST_SUBDIR
 #
-RUBY_DIST_SUBDIR?=	ruby
-
-#
-# make ruby reletaed package to common DIST_SUBDIR
-#
-.if !empty(RUBY_DIST_SUBDIR)
-DIST_SUBDIR?=	${RUBY_DIST_SUBDIR}
+_RUBY_DIST_SUBDIR?=	ruby
+.if defined(USE_RUBY_DIST_SUBDIR) && !empty(USE_RUBY_DIST_SUBDIR:M[yY][eE][sS])
+DIST_SUBDIR?=		${_RUBY_DIST_SUBDIR}
 .endif
 
 #
@@ -211,12 +207,18 @@ PLIST_RUBY_DIRS=	RUBY_LIBDIR="${RUBY_LIBDIR}" \
 			RUBY_EXAMPLESDIR="${RUBY_EXAMPLESDIR}" \
 			RUBY_DLEXT="${RUBY_DLEXT}"
 
+#
+# substitutions
+#
+FILES_SUBST+=		RUBY_NAME="${RUBY_NAME}" RUBY_VER="${RUBY_VER}"
+
+MESSAGE_SUBST+=		RUBY_VER="${RUBY_VER}" \
+			RUBY_VERSION="${RUBY_VERSION}" \
+			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
+
 PLIST_SUBST+=		RUBY_VER="${RUBY_VER}" \
 			RUBY_VERSION="${RUBY_VERSION}" \
 			RUBY_VER_DIR="${RUBY_VER_DIR}" \
-			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
-MESSAGE_SUBST+=		RUBY_VER="${RUBY_VER}" \
-			RUBY_VERSION="${RUBY_VERSION}" \
 			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
 
 .endif # _RUBY_MK
