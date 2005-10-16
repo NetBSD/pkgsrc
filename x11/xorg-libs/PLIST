@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/12 01:24:12 hiramatsu Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/10/16 16:56:22 tonio Exp $
 ${X11ROOT_PREFIX}/include/DPS/ColorSB.h
 ${X11ROOT_PREFIX}/include/DPS/ColorSBP.h
 ${X11ROOT_PREFIX}/include/DPS/DPSScrollW.h
@@ -375,6 +375,7 @@ ${X11ROOT_PREFIX}/include/X11/keysymdef.h
 ${X11ROOT_PREFIX}/include/X11/xpm.h
 ${X11ROOT_PREFIX}/include/xf86Optrec.h
 ${X11ROOT_PREFIX}/include/xf86Parser.h
+${X11ROOT_PREFIX}/lib/pkgconfig/render.pc
 ${X11ROOT_PREFIX}/lib/pkgconfig/xcomposite.pc
 ${X11ROOT_PREFIX}/lib/pkgconfig/xdamage.pc
 ${X11ROOT_PREFIX}/lib/pkgconfig/xevie.pc
