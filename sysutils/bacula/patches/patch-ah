@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1.2.2 2005/10/16 22:32:57 seb Exp $
+
+--- autoconf/config.h.in.orig	2005-10-13 18:29:17.000000000 +0200
++++ autoconf/config.h.in
+@@ -97,6 +97,9 @@
+    very expensive.  */
+ #undef CACHE_IDS
+ 
++/* Define if you have the <sys/statvfs.h> header file */
++#undef HAVE_SYS_STATVFS_H
++
+ /* Define to use SVR4 statvfs to get filesystem type.  */
+ #undef FSTYPE_STATVFS
+ 
