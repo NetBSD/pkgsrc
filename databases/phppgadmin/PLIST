@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/16 11:41:06 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/16 14:00:54 jdolecek Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -224,6 +224,5 @@ share/phppgadmin/views.php
 @dirrm share/phppgadmin/classes/HTML_TreeMenu/images
 @dirrm share/phppgadmin/classes/HTML_TreeMenu
 @dirrm share/phppgadmin/classes
-@dirrm share/phppgadmin
 @dirrm share/examples/phppgadmin
 @dirrm share/doc/phppgadmin
