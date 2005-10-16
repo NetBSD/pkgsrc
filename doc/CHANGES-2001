@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2001,v 1.2 2003/02/25 11:49:25 salo Exp $
+$NetBSD: CHANGES-2001,v 1.3 2005/10/16 19:05:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2001:
 
@@ -34,7 +34,7 @@ Changes to the packages collection and infrastructure in 2001:
 	Updated chasen to sys2.02-ipadic2.1 [taca 2001-01-07]
 	Updated p5-Text-ChaSen to 1.03nb1 [taca 2001-01-07]
 	Updated plex86-0.20010106 [tron 2001-01-07]
-	Added adns 1.0 [lukem 2001-01-08]
+	Added adns-1.0 [lukem 2001-01-08]
 	Added wmmixer-1.0 [wiz 2001-01-08]
 	Updated gnucash to 1.4.9 [wiz 2001-01-09]
 	Added pakemon-0.3.1 [itojun 2001-01-09]
@@ -2011,16 +2011,16 @@ Changes to the packages collection and infrastructure in 2001:
 	Added xmms-dspectralizer-1.2 [hubertf 2001-08-16]
 	Updated xmms-dflowers to 1.2 [zuntum 2001-08-16]
 	Added courier-maildirmake-0.1 [jlam 2001-08-16]
-	Added cd-discid 0.7 [lukem 2001-08-16]
-	Added abcde 2.0 [lukem 2001-08-16]
+	Added cd-discid-0.7 [lukem 2001-08-16]
+	Added abcde-2.0 [lukem 2001-08-16]
 	Updated maildrop to 1.3.4 [jlam 2001-08-16]
 	Updated tnef to 1.1 [jlam 2001-08-16]
 	Updated pgpdump to 0.12 [jun 2001-08-16]
 	Updated mew to 2.0.50 [jun 2001-08-16]
-	Added normalize 0.6.1 [lukem 2001-08-16]
-	Added edb 1.0.2 [rh 2001-08-16]
-	Added imlib2 1.0.3 [rh 2001-08-16]
-	Added feh 1.0.1 [rh 2001-08-16]
+	Added normalize-0.6.1 [lukem 2001-08-16]
+	Added edb-1.0.2 [rh 2001-08-16]
+	Added imlib2-1.0.3 [rh 2001-08-16]
+	Added feh-1.0.1 [rh 2001-08-16]
 	Updated gqmpeg to 0.9.0 [rh 2001-08-16]
 	Updated qvwm to 1.1.11 [wiz 2001-08-16]
 	Updated libnasl to 1.0.9 [frueauf 2001-08-16]
@@ -2028,6 +2028,7 @@ Changes to the packages collection and infrastructure in 2001:
 	Updated nessus-libraries to 1.0.9 [frueauf 2001-08-16]
 	Updated nessus-plugins to 1.0.9 [frueauf 2001-08-16]
 	Updated nessus to 1.0.9 [frueauf 2001-08-16]
+	Added xmms-gdancer-0.4.3 [zuntum 2001-08-16]
 	Updated pardiff to 0.9.4 [zuntum 2001-08-17]
 	Updated AiSSLtelnet-0.15 [jun 2001-08-17]
 	Updated smimemsg-1.4.1 [jun 2001-08-17]
