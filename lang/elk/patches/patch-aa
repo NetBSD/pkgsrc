@@ -1,36 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2002/01/09 23:04:55 seb Exp $
+$NetBSD: patch-aa,v 1.5 2005/10/16 11:37:16 tonio Exp $
 
---- Makefile.orig	Mon Jul 31 14:56:26 1995
-+++ Makefile
-@@ -13,12 +13,7 @@
- 	 src\
- 	 scm\
- 	 lib/misc\
--	 lib/unix\
--	 lib/xlib\
--	 lib/xt\
--	 lib/xaw\
--	 lib/xm\
--	 lib/xm/xt
-+	 lib/unix ${ELK_SUBDIRS}
+--- configure.orig	2003-12-05 13:51:16.000000000 +0100
++++ configure
+@@ -25330,8 +25330,8 @@ _ACEOF
+ # The directory where all files are installed by running "make install". We
+ # cannot use AC_DEFINE_UNQUOTED here because ${prefix} is not set until the
+ # end of the configure script. Thanks to Phillip Rulon for spotting that.
+-CPPFLAGS="${CPPFLAGS} -DSCM_DIR=\\\"\$(prefix)/share/elk\\\""
+-CPPFLAGS="${CPPFLAGS} -DLIB_DIR=\\\"\$(prefix)/lib/elk\\\""
++CPPFLAGS="${CPPFLAGS} -DSCM_DIR=\"\\\"\$(prefix)/share/elk\\\"\""
++CPPFLAGS="${CPPFLAGS} -DLIB_DIR=\"\\\"\$(prefix)/lib/elk\\\"\""
  
- # ----------------------------------------------------------------------
+ #define FIND_AOUT defined(USE_LD) || defined(CAN_DUMP) || defined(INIT_OBJECTS)
  
-@@ -37,10 +32,16 @@
- 	done
- 
- install:
--	@for i in $(SUBDIRS) ;\
-+	@for i in $(SUBDIRS) doc/man;\
- 	do \
- 	    echo Installing $$i...; \
- 	    ( cd $$i ; $(MAKE) install ) || exit $$?; \
-+	done
-+	mkdir -p ${PREFIX}/share/doc/elk
-+	@for i in bitstring cprog kernel oops record regexp unix usenix \
-+							xlib xt; do	\
-+		echo "Installing postscript docs for $$i";		\
-+		${BSD_INSTALL_DATA} doc/$$i/*.ps ${PREFIX}/share/doc/elk; \
- 	done
- 
- localize:
