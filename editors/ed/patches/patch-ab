@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2004/05/08 01:28:36 reed Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/16 05:07:58 reed Exp $
 
---- Makefile.in.orig	Fri May  7 17:59:02 2004
-+++ Makefile.in	Fri May  7 17:59:29 2004
-@@ -41,7 +41,7 @@
+--- Makefile.in.orig	1994-11-19 04:45:32.000000000 -0800
++++ Makefile.in	2005-10-15 16:09:14.000000000 -0700
+@@ -41,8 +41,8 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
  bindir = $(exec_prefix)/bin
 -infodir = $(prefix)/info
+-mandir = $(prefix)/man/man1
 +infodir = $(prefix)/$(INFO_DIR)
- mandir = $(prefix)/man/man1
++mandir = $(prefix)/$(PKGMANDIR)/man1
  manext = .1
  
+ CPPFLAGS = -I. -I$(srcdir) $(DEFS) @CPPFLAGS@
