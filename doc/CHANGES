@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11511 2005/10/16 09:50:38 heinz Exp $
+$NetBSD: CHANGES,v 1.11512 2005/10/16 11:16:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4632,3 +4632,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/p5-razor-agents to version 2.77 [heinz 2005-10-16]
 	Updated security/p5-IO-Socket-SSL to version 0.97 [heinz 2005-10-16]
 	Updated mail/p5-Mail-SPF-Query to version 1.997 [heinz 2005-10-16]
+	Updated devel/nspr to 4.4.1nb2 [jmmv 2005-10-16]
+	Updated devel/nss to 3.9.2nb3 [jmmv 2005-10-16]
