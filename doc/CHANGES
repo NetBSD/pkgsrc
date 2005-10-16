@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11508 2005/10/16 02:20:19 schmonz Exp $
+$NetBSD: CHANGES,v 1.11509 2005/10/16 04:51:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4625,3 +4625,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/figlet to 2.2.2 [tonio 2005-10-15]
 	Updated lang/elk to 3.99.6 [tonio 2005-10-15]
 	Updated mail/getmail to 4.3.13 [schmonz 2005-10-16]
+	Added devel/p5-Term-Screen version 1.03 [minskim 2005-10-16]
