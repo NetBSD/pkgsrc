@@ -1,0 +1,136 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/16 12:22:11 jmmv Exp $
+bin/ximian-connector-setup-2.4
+lib/bonobo/servers/GNOME_Evolution_Exchange_Storage_2.4.server
+lib/evolution-data-server-1.2/camel-providers/libcamelexchange.la
+lib/evolution-data-server-1.2/camel-providers/libcamelexchange.urls
+libexec/evolution/2.4/evolution-exchange-storage
+share/doc/evolution-exchange/ximian-connector/E2kContext.html
+share/doc/evolution-exchange/ximian-connector/E2kGlobalCatalog.html
+share/doc/evolution-exchange/ximian-connector/E2kSecurityDescriptor.html
+share/doc/evolution-exchange/ximian-connector/ch01.html
+share/doc/evolution-exchange/ximian-connector/ch02.html
+share/doc/evolution-exchange/ximian-connector/ch03.html
+share/doc/evolution-exchange/ximian-connector/ch04.html
+share/doc/evolution-exchange/ximian-connector/ch05.html
+share/doc/evolution-exchange/ximian-connector/ch06.html
+share/doc/evolution-exchange/ximian-connector/home.png
+share/doc/evolution-exchange/ximian-connector/index.html
+share/doc/evolution-exchange/ximian-connector/index.sgml
+share/doc/evolution-exchange/ximian-connector/left.png
+share/doc/evolution-exchange/ximian-connector/right.png
+share/doc/evolution-exchange/ximian-connector/style.css
+share/doc/evolution-exchange/ximian-connector/up.png
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kAutoconfig.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kContext-(private).html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kOperation-(private).html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kOperation.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kProperties.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kRestriction-(vaporware).html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kResult-(private).html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kSid.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-E2kUserDialog.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-MAPI.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-autoconfig.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-bug-private.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-bug-xml.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-calendar.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-delegation.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-action.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-encoding-utils.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-freebusy.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-http-utils.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-kerberos.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-restriction.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-result.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-rule.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-uri.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-utils.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-e2k-xml-utils.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-favorites.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-fba.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-freebusy.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-mail-threading.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-mail.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-ntlm.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-oof.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-other-users.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-permissions.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-test-utils.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-xntlm-des.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-xntlm-md4.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector-xntlm.html
+share/doc/evolution-exchange/ximian-connector/ximian-connector.devhelp
+share/doc/evolution-exchange/ximian-connector/ximian-connnector-booking.html
+share/evolution-exchange/2.4/etspec/e-storage-set-view.etspec
+share/evolution-exchange/2.4/glade/e-folder-creation-dialog.glade
+share/evolution-exchange/2.4/glade/e-foreign-folder-dialog.glade
+share/evolution-exchange/2.4/glade/exchange-autoconfig-wizard.glade
+share/evolution-exchange/2.4/glade/exchange-change-password.glade
+share/evolution-exchange/2.4/glade/exchange-delegates.glade
+share/evolution-exchange/2.4/glade/exchange-folder-tree.glade
+share/evolution-exchange/2.4/glade/exchange-oof.glade
+share/evolution-exchange/2.4/glade/exchange-passwd-expiry.glade
+share/evolution-exchange/2.4/glade/exchange-permissions-dialog.glade
+share/evolution-exchange/2.4/images/connector-mini.png
+share/evolution-exchange/2.4/images/connector.png
+share/evolution-exchange/2.4/images/exchange-delegates-48.png
+share/evolution-exchange/2.4/images/exchange-oof-48.png
+share/evolution-exchange/2.4/ui/ximian-connector.xml
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/evolution-exchange-2.4.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/evolution-exchange-2.4.mo
+@dirrm share/evolution-exchange/2.4/ui
+@dirrm share/evolution-exchange/2.4/images
+@dirrm share/evolution-exchange/2.4/glade
+@dirrm share/evolution-exchange/2.4/etspec
+@dirrm share/evolution-exchange/2.4
+@dirrm share/evolution-exchange
+@dirrm share/doc/evolution-exchange/ximian-connector
+@dirrm share/doc/evolution-exchange
+@comment in evolution: @dirrm libexec/evolution/2.4
+@comment in evolution-data-server: @dirrm lib/evolution-data-server-1.2/camel-providers
+@comment in libbonobo: @dirrm lib/bonobo/servers
