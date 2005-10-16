@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/19 21:12:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/10/16 12:13:48 jmmv Exp $
 bin/gnome-dictionary
 bin/gnome-panel-screenshot
 bin/gnome-screenshot
@@ -189,6 +189,8 @@ share/omf/gnome-utils/gnome-system-log-sv.omf
 share/omf/gnome-utils/gnome-system-log-uk.omf
 share/omf/gnome-utils/gnome-system-log-zh_CN.omf
 share/omf/gnome-utils/gnome-system-log-zh_TW.omf
+share/pixmaps/gsearchtool/thumbnail_frame.png
+@dirrm share/pixmaps/gsearchtool
 @dirrm share/omf/gnome-utils
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gnome-system-log/zh_TW/figures
