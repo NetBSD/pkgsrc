@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1.2.2 2005/10/16 22:32:57 seb Exp $
+
+--- src/findlib/fstype.c.orig	2005-04-05 19:23:56.000000000 +0200
++++ src/findlib/fstype.c
+@@ -80,6 +80,12 @@ bool fstype(const char *fname, char *fs,
+ #include <sys/param.h>
+ #include <sys/mount.h>
+ 
++#ifdef HAVE_SYS_STATVFS_H
++#include <sys/statvfs.h>
++#else
++#define statvfs statfs
++#endif
++
+ bool fstype(const char *fname, char *fs, int fslen)
+ {
+    struct statvfs st;

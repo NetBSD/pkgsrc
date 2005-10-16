@@ -1,0 +1,20 @@
+$NetBSD: patch-aj,v 1.1.2.2 2005/10/16 22:32:57 seb Exp $
+
+--- autoconf/randpass.orig	2002-11-09 16:55:22.000000000 +0100
++++ autoconf/randpass
+@@ -8,7 +8,14 @@ if test "x$1" = "x" ; then
+ else
+    PWL=$1
+ fi 
+-tmp=/tmp/p.tmp.$$    
++tmp=`mktemp randpass.XXXXXXXXXX`
++if test x$tmp = x; then
++   tmp=/tmp/p.tmp.$$    
++   if test -f $tmp; then
++      echo "Temp file security problem on: $tmp"
++      exit 1
++   fi
++fi
+ cp autoconf/randpass.bc $tmp
+ ps | sum | tr -d ':[:alpha:] ' | sed 's/^/k=/' >>$tmp
+ date | tr -d ':[:alpha:] ' | sed 's/^/k=k*/' >>$tmp
