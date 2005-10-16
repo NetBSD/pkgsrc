@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/10/01 12:52:16 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/16 21:51:29 jmmv Exp $
 
 Log all pkg-config calls to a file.  Used by pkgtools/verifypc.
 
---- main.c.orig	2005-05-21 11:14:47.000000000 +0200
+--- main.c.orig	2005-10-16 23:42:25.000000000 +0200
 +++ main.c
 @@ -458,12 +458,27 @@ main (int argc, char **argv)
    {
@@ -43,7 +43,7 @@ Log all pkg-config calls to a file.  Used by pkgtools/verifypc.
 +            else
 +              fprintf (log, "%s %s %s", ver->name,
 +                       comparison_to_str (ver->comparison),
-+                       ver->version);
++                       (ver->version == NULL) ? "(null)" : ver->version);
 +
 +            fprintf (log, "\n");
 +          }
