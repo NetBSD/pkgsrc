@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2005/07/16 18:55:23 adrianp Exp $
+$NetBSD: patch-ae,v 1.2 2005/10/16 19:28:03 tonio Exp $
 
---- src/hooks/gaduhook.cc.orig	2005-01-18 23:20:17.000000000 +0000
+--- src/hooks/gaduhook.cc.orig	2005-08-25 23:39:36.000000000 +0200
 +++ src/hooks/gaduhook.cc
 @@ -893,6 +893,7 @@ static char *token_ocr(const char *ocr, 
  string gaduhook::handletoken(struct gg_http *h) {
@@ -10,12 +10,12 @@ $NetBSD: patch-ae,v 1.1 2005/07/16 18:55:23 adrianp Exp $
  
      if(!h)
  	return "";
-@@ -906,8 +907,22 @@ string gaduhook::handletoken(struct gg_h
-     if(!(t = (struct gg_token *) h->data) || !h->body)
+@@ -907,8 +908,22 @@ string gaduhook::handletoken(struct gg_h
  	return "";
  
--    fname = (getenv("TMPDIR") ? getenv("TMPDIR") : "/tmp");
--    fname += "/gg.token." + i2str(getpid());
+     do {
+-	fname = (getenv("TMPDIR") ? getenv("TMPDIR") : "/tmp");
+-	fname += "/gg.token." + i2str(getpid()) + i2str(time(0));
 +    while (tmpfilep == NULL) {
 +      char tmpnam[100];
 +      int tmpfiledes;
@@ -32,6 +32,6 @@ $NetBSD: patch-ae,v 1.1 2005/07/16 18:55:23 adrianp Exp $
 +      }
 +      fname = tmpnam;
 +    }
+     } while(!access(fname.c_str(), F_OK));
  
      ofstream bf(fname.c_str());
- 
