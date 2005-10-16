@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.63 2005/07/25 21:08:29 kristerw Exp $
+# $NetBSD: Makefile,v 1.63.2.1 2005/10/16 03:51:46 seb Exp $
 
-DISTNAME=	koffice-1.4.1
+DISTNAME=	koffice-1.4.2
 CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.4.1/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.4.1/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.4.1/src/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.4.2/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.4.2/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.4.2/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite
 
@@ -16,9 +16,9 @@ CONFLICTS+=	koffice3-[0-9]*
 # to unpack krita/plugins/convolutionfilters properly on NetBSD 1.6
 EXTRACT_USING=		gtar
 
-USE_TOOLS+=		gmake perl
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake perl pkg-config
+GNU_CONFIGURE=		yes
 
 GCC_REQD+=		2.95.3
 

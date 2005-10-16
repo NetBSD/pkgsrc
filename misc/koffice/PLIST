@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/07/25 13:05:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.16.2.1 2005/10/16 03:51:46 seb Exp $
 bin/karbon
 bin/kchart
 bin/kexi
@@ -353,7 +353,9 @@ lib/libkwmailmerge_interface.la
 lib/libkwmf.la
 lib/libkwordexportfilters.la
 share/applications/kde/kexi.desktop
+share/applications/kde/kformdesigner.desktop
 share/applications/kde/kivio.desktop
+share/applications/kde/krita.desktop
 share/doc/kde/HTML/en/kchart/common
 share/doc/kde/HTML/en/kchart/cr22-action-chart_line.png
 share/doc/kde/HTML/en/kchart/cr22-action-data.png
@@ -835,12 +837,11 @@ share/kde/applnk/Office/kchart.desktop
 share/kde/applnk/Office/kformula.desktop
 share/kde/applnk/Office/koshell.desktop
 share/kde/applnk/Office/kpresenter.desktop
-share/kde/applnk/Office/krita.desktop
+share/kde/applnk/Office/krita_magick.desktop
 share/kde/applnk/Office/kspread.desktop
 share/kde/applnk/Office/kudesigner.desktop
 share/kde/applnk/Office/kugar.desktop
 share/kde/applnk/Office/kword.desktop
-share/kde/applnk/Utilities/kformdesigner.desktop
 share/kde/apps/karbon/gradients/allcolors.kgr
 share/kde/apps/karbon/gradients/simple.kgr
 share/kde/apps/karbon/icons/crystalsvg/16x16/actions/14_layer_deletelayer.png
@@ -1183,6 +1184,7 @@ share/kde/apps/kivio/icons/crystalsvg/22x22/actions/arrowheads.png
 share/kde/apps/kivio/icons/crystalsvg/22x22/actions/font_bold.png
 share/kde/apps/kivio/icons/crystalsvg/22x22/actions/font_italic.png
 share/kde/apps/kivio/icons/crystalsvg/22x22/actions/font_under.png
+share/kde/apps/kivio/icons/crystalsvg/22x22/actions/kivio_connector.png
 share/kde/apps/kivio/icons/crystalsvg/22x22/actions/open_stencilset.png
 share/kde/apps/kivio/icons/crystalsvg/32x32/actions/arrowheads.png
 share/kde/apps/kivio/icons/crystalsvg/48x48/actions/template_basicflow.png
@@ -1245,6 +1247,7 @@ share/kde/apps/kivio/icons/hicolor/22x22/actions/font_bold.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/font_italic.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/font_under.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/group_stencils.png
+share/kde/apps/kivio/icons/hicolor/22x22/actions/kivio_connector.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/linestyle.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/linewidth.png
 share/kde/apps/kivio/icons/hicolor/22x22/actions/open_stencilset.png
@@ -4088,7 +4091,6 @@ share/kde/templates/TextDocument.desktop
 @dirrm share/kde/apps/karbon/gradients
 @dirrm share/kde/apps/karbon
 @comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Utilities
 @dirrm share/kde/applnk/Office
 @dirrm share/doc/kde/HTML/en/thesaurus
 @dirrm share/doc/kde/HTML/en/kword
