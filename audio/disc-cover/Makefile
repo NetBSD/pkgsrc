@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2005/07/26 20:02:23 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/16 15:29:55 wiz Exp $
 #
 
 DISTNAME=	disc-cover-1.5.4
 CATEGORIES=	audio
-MASTER_SITES=	http://homepages.cwi.nl/~jvhemert/files/
+MASTER_SITES=	http://www.vanhemert.co.uk/files/
 
 MAINTAINER=	drochner@NetBSD.org
-HOMEPAGE=	http://homepages.cwi.nl/~jvhemert/disc-cover.html
+HOMEPAGE=	http://www.vanhemert.co.uk/disc-cover.html
 COMMENT=	Generation of CD covers
 
 DEPENDS+=	p5-Audio-CD>=0.05:../../audio/p5-Audio-CD
