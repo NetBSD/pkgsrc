@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4034 2005/10/16 12:29:42 jmmv Exp $
+$NetBSD: TODO,v 1.4035 2005/10/16 12:53:37 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -694,7 +694,6 @@ Suggested package updates
 	o libggi-2.1.2
 	o libggimisc-2.1.2
 	o libgii-0.9.2
-	o libgnomecups-0.2.2
 	o libhydrogen-0.9.2
 	o libjit-0.0.4 [pkg/30514]
 	o libkipi-0.1.2
