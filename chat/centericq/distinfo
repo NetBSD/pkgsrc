@@ -1,16 +1,24 @@
-$NetBSD: distinfo,v 1.18 2005/09/19 19:42:11 adrianp Exp $
+$NetBSD: distinfo,v 1.19 2005/10/16 19:28:03 tonio Exp $
 
-SHA1 (centericq-4.20.0.tar.bz2) = 14b37c5257039853f0a1b948c7eaa49581a5913c
-RMD160 (centericq-4.20.0.tar.bz2) = 7f17cd87aa4b98269fa65173b3e6317143c7c8ca
-Size (centericq-4.20.0.tar.bz2) = 1287040 bytes
+SHA1 (centericq-4.21.0.tar.bz2) = 26b07c4bdcbe8c6888ceab98140b33007bec8554
+RMD160 (centericq-4.21.0.tar.bz2) = 69207fcaf5c90b9ae4609221526b839659c5ccfc
+Size (centericq-4.21.0.tar.bz2) = 1422126 bytes
 SHA1 (patch-aa) = ba75c486f52d17cb9a0bf8354bf6b01b065b6716
 SHA1 (patch-ab) = 6d9beb28024666bbfef2e95cab648d7058f8136c
 SHA1 (patch-ac) = 74ae25e19bf5d250a407a937bf78405b38cc86da
 SHA1 (patch-ad) = be8ba5c952bf560b0758c97ba81c4faef04ffe49
-SHA1 (patch-ae) = 01b4bf2e26c9974b189ffe5d0361651aabaef549
+SHA1 (patch-ae) = f8e9317634f0c5d838f0309c1a59dcb2f3e55d86
 SHA1 (patch-af) = 5104572b93c4bc1872340ac4d179d74f74958fe8
 SHA1 (patch-ag) = c63b3e1011205f7635ca1710a6e5b39f7ef8986c
 SHA1 (patch-ah) = 2e643c6cfd5812f5f35a08e29cfa858902e1760b
 SHA1 (patch-ai) = 2ac32940347733dbb63e12bdd54212435795b30d
 SHA1 (patch-aj) = 1e4ea16dfc5c8eeae9b70b4bda01a2b367ea2879
 SHA1 (patch-ak) = 155067c43db79d398465bac2d70878e8b714fa8b
+SHA1 (patch-al) = 8866a5601d8242f5b309e1917abd388b47b48af0
+SHA1 (patch-am) = 5011cd97a05f332c430371382a2b27742bd0e2da
+SHA1 (patch-an) = 2fa7bea74bdd6d6aa36f071359459a549dff530a
+SHA1 (patch-ao) = 2b53f7e406046d504280b564e19e919ddd02fb9c
+SHA1 (patch-ap) = 3092f56b292a3fe57cb80ad7a9fe26d8c6842840
+SHA1 (patch-aq) = ce0db172171d874cd35c4b0293ea96f5a580810e
+SHA1 (patch-ar) = b06ba8fad9a2dbcfacb0c81e2689cca02a38dd01
+SHA1 (patch-as) = 55822a88a4fd17e57a06f0f186a6649fe3e4b092
