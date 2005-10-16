@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/09/06 06:07:28 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/10/16 11:41:06 jdolecek Exp $
 
 DISTNAME=	phpPgAdmin-3.5.5
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phppgadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +20,7 @@ NO_BUILD=	YES
 USE_PKGINSTALL=	YES
 
 PHPPGBASE=	${PREFIX}/share/phppgadmin
-PHPPGHIER=	classes/HTML_TreeMenu/images images/themes/default \
+PHPPGHIER=	classes/HTML_TreeMenu/images help images/themes/default \
 		libraries/adodb/datadict libraries/adodb/drivers \
 		classes/database lang/recoded themes/default sql conf
 
@@ -56,6 +56,7 @@ do-install:
 		${PHPPGBASE}/classes/HTML_TreeMenu/images
 	${INSTALL_SCRIPT} ${WRKSRC}/classes/database/* \
 		${PHPPGBASE}/classes/database
+	${INSTALL_SCRIPT} ${WRKSRC}/help/* ${PHPPGBASE}/help
 	${INSTALL_SCRIPT} ${WRKSRC}/sql/* ${PHPPGBASE}/sql
 	${INSTALL_DATA} ${WRKSRC}/images/themes/default/*.png \
 		${PHPPGBASE}/images/themes/default
