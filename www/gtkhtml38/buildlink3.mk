@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/10/12 21:50:51 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/10/16 12:16:25 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTKHTML38_BUILDLINK3_MK:=	${GTKHTML38_BUILDLINK3_MK}+
@@ -15,6 +15,10 @@ BUILDLINK_DEPENDS.gtkhtml38+=	gtkhtml38>=3.8.0
 BUILDLINK_PKGSRCDIR.gtkhtml38?=	../../www/gtkhtml38
 .endif	# GTKHTML38_BUILDLINK3_MK
 
+# XXX: gail is not required by the .pc file but appears as a library
+# '-lgailutil' in the .la file...  I'm not sure about putting the dependency
+# here.
+.include "../../devel/gail/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
