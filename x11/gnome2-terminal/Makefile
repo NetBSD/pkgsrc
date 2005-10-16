@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/10/12 21:58:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.44 2005/10/16 23:41:30 minskim Exp $
 #
 
 DISTNAME=		gnome-terminal-2.12.0
@@ -17,6 +17,7 @@ CONFLICTS=		gnome-core-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
+USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake perl pkg-config
 USE_LIBTOOL=		YES
