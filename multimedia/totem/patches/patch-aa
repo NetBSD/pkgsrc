@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2005/05/02 16:21:21 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2005/10/16 12:14:13 jmmv Exp $
 
---- src/totem-disc.c.orig	2005-03-13 14:37:57.000000000 +0100
-+++ src/totem-disc.c
+--- src/plparse/totem-disc.c.orig	2005-03-13 14:37:57.000000000 +0100
++++ src/plparse/totem-disc.c
 @@ -34,7 +34,6 @@
  #include <stdio.h>
  #include <stdlib.h>
