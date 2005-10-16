@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4031 2005/10/15 23:08:39 tonio Exp $
+$NetBSD: TODO,v 1.4032 2005/10/16 02:43:47 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -547,7 +547,6 @@ Suggested package updates
 	o gcube-0.4
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
-	o getmail-4.3.13
 	o gettext-0.14.5
 	o gfract-0.32
 	o ggiterm-0.7.1
