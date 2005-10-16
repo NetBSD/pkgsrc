@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/10/16 12:58:37 tonio Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
 CATEGORIES=	net
-MASTER_SITES=	http://www.lse.epita.fr/devel/xipdump/
+MASTER_SITES=	http://www.lse.epita.fr/twiki/pub/Projects/XipDump/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	sakamoto@NetBSD.org
-#HOMEPAGE=	http://www.epita.fr/~lse/xipdump/
+HOMEPAGE=	http://www.lse.epita.fr/twiki/bin/view/Projects/XipDump
 COMMENT=	Displays IP packets using X Window System
-
 
 BUILDLINK_DEPENDS.libnet+=	libnet-1.0.*
 
