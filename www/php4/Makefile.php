@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.26 2005/10/08 21:12:53 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.27 2005/10/16 12:06:05 jdolecek Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -18,7 +18,15 @@ CONFIGURE_ARGS+=	--disable-posix
 
 CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-exec-dir=${PREFIX}/libexec/php4
+
+.include "../../mk/bsd.prefs.mk"
+
+# The Solaris system regex structures miss re_magic used by PHP build 
+.if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--with-regex=system
+.else
+CONFIGURE_ARGS+=	--with-regex=php
+.endif
 
 CONFIGURE_ARGS+=	--enable-memory-limit
 CONFIGURE_ARGS+=	--enable-track-vars
