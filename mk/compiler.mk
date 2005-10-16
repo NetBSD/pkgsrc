@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.46 2005/02/16 08:41:20 grant Exp $
+# $NetBSD: compiler.mk,v 1.47 2005/10/16 19:44:44 schwarz Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -15,6 +15,7 @@
 #		distcc		distributed C/C++ (chainable)
 #		f2c		Fortran 77 to C compiler (chainable)
 #		icc		Intel C++ Compiler (Linux)
+#		ido		SGI IRIS Development Option cc (IRIX 5)
 #		gcc		GNU
 #		mipspro		Silicon Graphics, Inc. MIPSpro (n32/n64)
 #		mipspro-ucode	Silicon Graphics, Inc. MIPSpro (o32)
@@ -82,7 +83,7 @@ USE_LANGUAGES:=	c ${USE_LANGUAGES}
 _USE_PKGSRC_GCC=	yes
 .endif
 
-_COMPILERS=		ccc gcc icc mipspro mipspro-ucode sunpro xlc
+_COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode sunpro xlc
 _PSEUDO_COMPILERS=	ccache distcc f2c
 
 .if defined(NOT_FOR_COMPILER) && !empty(NOT_FOR_COMPILER)
