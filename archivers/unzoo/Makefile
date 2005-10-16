@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2005/09/28 19:45:45 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/16 15:02:36 wiz Exp $
 #
 
 DISTNAME=	unzoo.c
 PKGNAME=	unzoo-4.4
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/util/
+MASTER_SITES=	# no dist site available
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	cjep@NetBSD.org
