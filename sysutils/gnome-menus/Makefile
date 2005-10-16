@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/12 21:52:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/16 20:39:57 minskim Exp $
 #
 
 DISTNAME=	gnome-menus-2.12.0
@@ -16,6 +16,8 @@ USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
+
+CONFIGURE_ARGS+=	--disable-python
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libmenu/libgnome-menu.pc.in
 
