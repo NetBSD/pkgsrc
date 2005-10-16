@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1730 2005/10/10 17:37:17 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1731 2005/10/16 17:44:45 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -3905,6 +3905,14 @@ show-var:
 show-vars:
 .for VARNAME in ${VARNAMES}
 	@${ECHO} ${${VARNAME}:Q}
+.endfor
+
+# displays multiple variables as shell expressions
+# VARS is space separated list of VARNAME:shellvarname
+.PHONY: show-vars-eval
+show-vars-eval:
+.for var in ${VARS}
+	@${ECHO} ${var:C/^.*://}="${${var:C/:.*$//}:Q}"
 .endfor
 
 .PHONY: print-build-depends-list
