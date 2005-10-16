@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4033 2005/10/16 09:50:38 heinz Exp $
+$NetBSD: TODO,v 1.4034 2005/10/16 12:29:42 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -504,9 +504,6 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.2
-	o evince-0.4.0
-	o evolution-2.4.1
-	o evolution-webcal-2.4.1
 	o exmh-2.7.2
 	o f2c-20031025
 	o faces-1.7.7
@@ -516,7 +513,6 @@ Suggested package updates
 	o fdgw-20040609
 	o fhist-1.14
 	o file-4.15
-	o file-roller-2.12.1
 	o findutils-4.2.25
 	o flac123-0.0.9
 	o flashplayer-0.4.13
@@ -539,7 +535,6 @@ Suggested package updates
 	o gated-3.6
 	o gauche-0.8.4 [pkg/30535]
 	o gauche-0.8.5
-	o gcalctool-5.6.31
 	o gcc-3.3.6
 	o gcc-4.0.2
 	o gcombust-0.1.55
@@ -568,10 +563,6 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnocatan-0.8.1.30
-	o gnome-2.12.1
-	o gnome-games-2.12.1
-	o gnome-media-2.12.0
-	o gnome-netstatus-2.12.0
 	o gnome-pilot-2.0.13
 	o gnupg-devel-1.9.19
 	o gnustep-objc-1.4.0
@@ -1058,7 +1049,6 @@ Suggested package updates
 	o pnet-0.7.0 [pkg/30516]
 	o pnetC-0.7.0 [pkg/30517]
 	o pnetlib-0.7.0 [pkg/30518]
-	o poppler-0.4.2
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
@@ -1295,7 +1285,6 @@ Suggested package updates
 	o top-3.6beta1
 	o totd-1.5 [pkg/30545]
 	o totd-1.5.1
-	o totem-1.2.0
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.0.1

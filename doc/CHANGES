@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11512 2005/10/16 11:16:04 jmmv Exp $
+$NetBSD: CHANGES,v 1.11513 2005/10/16 12:29:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4634,3 +4634,25 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/p5-Mail-SPF-Query to version 1.997 [heinz 2005-10-16]
 	Updated devel/nspr to 4.4.1nb2 [jmmv 2005-10-16]
 	Updated devel/nss to 3.9.2nb3 [jmmv 2005-10-16]
+	Updated archivers/file-roller to 2.12.1 [jmmv 2005-10-16]
+	Updated math/gcalctool to 5.6.31 [jmmv 2005-10-16]
+	Updated editors/gconf-editor to 2.12.0 [jmmv 2005-10-16]
+	Updated editors/gedit to 2.12.1 [jmmv 2005-10-16]
+	Updated x11/gnopernicus to 0.11.7 [jmmv 2005-10-16]
+	Updated games/gnome2-games to 2.12.1 [jmmv 2005-10-16]
+	Updated sysutils/nautilus-cd-burner to 2.12.1 [jmmv 2005-10-16]
+	Updated multimedia/gnome2-media to 2.12.0 [jmmv 2005-10-16]
+	Updated net/gnome-netstatus to 2.12.0 [jmmv 2005-10-16]
+	Updated sysutils/gnome2-system-monitor to 2.12.1 [jmmv 2005-10-16]
+	Updated misc/gnome2-utils to 2.12.1 [jmmv 2005-10-16]
+	Updated multimedia/totem to 1.2.0 [jmmv 2005-10-16]
+	Updated multimedia/totem-xine to 1.2.0 [jmmv 2005-10-16]
+	Updated time/evolution-webcal to 2.4.1 [jmmv 2005-10-16]
+	Updated mail/evolution to 2.4.1 [jmmv 2005-10-16]
+	Removed mail/ximian-connector [jmmv 2005-10-16]
+	Added mail/evolution-exchange version 2.4.1 [jmmv 2005-10-16]
+	Updated print/poppler to 0.4.2 [jmmv 2005-10-16]
+	Updated print/evince to 0.4.0 [jmmv 2005-10-16]
+	Removed print/ggv2 [jmmv 2005-10-16]
+	Removed print/gpdf [jmmv 2005-10-16]
+	Updated meta-pkgs/gnome to 2.12.1 [jmmv 2005-10-16]
