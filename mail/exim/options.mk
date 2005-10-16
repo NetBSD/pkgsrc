@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2005/10/07 10:28:34 abs Exp $
+# $NetBSD: options.mk,v 1.5 2005/10/16 14:10:57 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-build-eximon exim-content-scan exim-lookup-dnsdb
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
-PKG_SUPPORTED_OPTIONS+= exim-lookup-whoson exim-old-demime gdbm saslauthd
+PKG_SUPPORTED_OPTIONS+= exim-lookup-whoson exim-old-demime gdbm inet6 saslauthd
 PKG_SUGGESTED_OPTIONS=	exim-content-scan exim-lookup-dsearch exim-old-demime
 
 .include "../../mk/bsd.options.mk"
@@ -50,6 +50,10 @@ LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.whoson} -L${
 
 .if !empty(PKG_OPTIONS:Mexim-old-demime)
 LOCAL_MAKEFILE_OPTIONS+=WITH_OLD_DEMIME=YES
+.endif
+
+.if !empty(PKG_OPTIONS:Minet6)
+LOCAL_MAKEFILE_OPTIONS+=HAVE_IPV6=YES
 .endif
 
 .if !empty(PKG_OPTIONS:Mgdbm)
