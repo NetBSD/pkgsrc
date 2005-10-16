@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2005/08/19 16:09:45 drochner Exp $
+# $NetBSD: Makefile,v 1.134 2005/10/16 12:26:15 jmmv Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -33,7 +33,6 @@ SUBDIR+=	epstool
 SUBDIR+=	evince
 SUBDIR+=	foomatic-filters
 SUBDIR+=	foomatic-gswrapper
-SUBDIR+=	ggv2
 SUBDIR+=	ghostscript
 SUBDIR+=	ghostscript-afpl
 SUBDIR+=	ghostscript-esp
@@ -49,7 +48,6 @@ SUBDIR+=	gimp-print-ijs
 SUBDIR+=	gimp-print-lib
 SUBDIR+=	glabels
 SUBDIR+=	gnome-print
-SUBDIR+=	gpdf
 SUBDIR+=	gv
 SUBDIR+=	hpijs
 SUBDIR+=	html2ps
