@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2005/08/06 05:33:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.272 2005/10/16 12:23:15 jmmv Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -40,6 +40,7 @@ SUBDIR+=	etach
 SUBDIR+=	etpan
 SUBDIR+=	evolution
 SUBDIR+=	evolution-data-server
+SUBDIR+=	evolution-exchange
 SUBDIR+=	evolution14
 SUBDIR+=	exim
 SUBDIR+=	exim-html
@@ -210,7 +211,6 @@ SUBDIR+=	wmbiff
 SUBDIR+=	wmmail
 SUBDIR+=	xbuffy
 SUBDIR+=	xfmail
-SUBDIR+=	ximian-connector
 SUBDIR+=	xmailbox
 SUBDIR+=	xmailwatcher
 SUBDIR+=	yatsvrs
