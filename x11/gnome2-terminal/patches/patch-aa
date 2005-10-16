@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.5 2005/10/16 23:41:30 minskim Exp $
+
+--- po/am.po.orig	2005-10-16 16:30:34.000000000 -0700
++++ po/am.po
+@@ -2390,8 +2390,8 @@ msgstr ""
+ #, fuzzy, c-format
+ msgid "Delete this profile?\n"
+ msgid_plural "Delete these %d profiles?\n"
+-msgstr[0] "ግለ መግለጫን አጥፉ"
+-msgstr[1] "ግለ መግለጫን አጥፉ"
++msgstr[0] "ግለ መግለጫን አጥፉ\n"
++msgstr[1] "ግለ መግለጫን አጥፉ\n"
+ 
+ #: src/terminal.c:2627
+ #, c-format
