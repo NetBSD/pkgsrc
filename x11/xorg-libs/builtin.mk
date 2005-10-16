@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/06/24 05:21:31 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2005/10/16 19:53:36 tonio Exp $
 
 BUILTIN_PKG:=	xorg-libs
 
@@ -77,5 +77,6 @@ BUILDLINK_FILES.xorg-libs+=	lib/pkgconfig/xorg-libs.pc
 # XXX
 USE_BUILTIN.Xfixes=	yes
 USE_BUILTIN.Xcomposite=	yes
+USE_BUILTIN.renderext=	yes
 
 .endif	# CHECK_BUILTIN.xorg-libs
