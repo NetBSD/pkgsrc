@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/05 16:34:42 hamajima Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/16 15:12:45 taca Exp $
 #
 
 DISTNAME=	dtcp-20050521
@@ -25,5 +25,5 @@ RCD_SCRIPTS=	dtcpc dtcps
 USE_PKGINSTALL=	YES
 FILES_SUBST+=	RUBY=${RUBY}
 
-.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
