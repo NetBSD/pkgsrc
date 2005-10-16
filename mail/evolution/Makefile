@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2005/10/16 12:19:13 jmmv Exp $
 
-DISTNAME=		evolution-2.2.3
-PKGREVISION=		1
+DISTNAME=		evolution-2.4.1
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -82,8 +81,14 @@ PRINT_PLIST_AWK+=	/smime/ { print "$${HAVE_SMIME}" $$0; next; }
 # add rpath flags to the dependency_libs, but there is an strange comment
 # in the wrapper saying that it shouldn't.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nss}/lib/nss
-# XXX Change to use devel/nss (but a mozilla-nss.pc file is required).
-.  include "../../www/mozilla-gtk2/buildlink3.mk"
+BUILDLINK_DEPENDS.nss+=		nss>=3.9.2nb3
+.  include "../../devel/nss/buildlink3.mk"
+
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.nss}/include/nss/nss
+
+post-wrapper:
+	@cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nspr.pc mozilla-nspr.pc
+	@cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nss.pc mozilla-nss.pc
 .else
 CONFIGURE_ARGS+=	--disable-nss
 PLIST_SUBST+=		HAVE_SMIME="@comment "
@@ -100,10 +105,8 @@ GCONF2_SCHEMAS+=	evolution-mail-2.2.schemas
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
-BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.2.3
-BUILDLINK_DEPENDS.gal2+=	gal2>=2.4.3
+BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.4.1
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
-BUILDLINK_DEPENDS.gtkhtml36+=	gtkhtml36>=3.6.2
 BUILDLINK_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.3
 
 .if !exists(/usr/include/semaphore.h)
@@ -114,7 +117,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/gal2/buildlink3.mk"
+#.include "../../devel/gal2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
@@ -134,7 +137,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/gtkhtml36/buildlink3.mk"
+.include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
