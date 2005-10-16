@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/09/05 18:14:39 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/10/16 11:41:06 jdolecek Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -52,6 +52,12 @@ share/phppgadmin/domains.php
 share/phppgadmin/functions.php
 share/phppgadmin/groups.php
 share/phppgadmin/help.php
+share/phppgadmin/help/PostgresDoc70.php
+share/phppgadmin/help/PostgresDoc71.php
+share/phppgadmin/help/PostgresDoc72.php
+share/phppgadmin/help/PostgresDoc73.php
+share/phppgadmin/help/PostgresDoc74.php
+share/phppgadmin/help/PostgresDoc80.php
 share/phppgadmin/images/themes/default/database.png
 share/phppgadmin/images/themes/default/domains.png
 share/phppgadmin/images/themes/default/functions.png
@@ -213,9 +219,11 @@ share/phppgadmin/views.php
 @dirrm share/phppgadmin/images/themes/default
 @dirrm share/phppgadmin/images/themes
 @dirrm share/phppgadmin/images
+@dirrm share/phppgadmin/help
 @dirrm share/phppgadmin/classes/database
 @dirrm share/phppgadmin/classes/HTML_TreeMenu/images
 @dirrm share/phppgadmin/classes/HTML_TreeMenu
 @dirrm share/phppgadmin/classes
+@dirrm share/phppgadmin
 @dirrm share/examples/phppgadmin
 @dirrm share/doc/phppgadmin
