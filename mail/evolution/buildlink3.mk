@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/10/16 12:19:13 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/10/16 12:19:53 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 EVOLUTION_BUILDLINK3_MK:=	${EVOLUTION_BUILDLINK3_MK}+
@@ -24,7 +24,6 @@ PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution\/2.4$$/ \
 PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution$$/ \
 				{ print "@comment in evolution: " $$0; next }
 
-.include "../../devel/gail/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
