@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.37 2005/08/20 14:37:53 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.38 2005/10/16 19:44:44 schwarz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -253,6 +253,14 @@ _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-mipspro-ucode-cc
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-mipspro-ucode-cc
 _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+.endif
+
+.if !empty(PKGSRC_COMPILER:Mido)
+_WRAP_CACHE_BODY.CC=    ${WRAPPER_TMPDIR}/cache-body-ido-cc
+_WRAP_TRANSFORM.CC=     ${WRAPPER_TMPDIR}/transform-ido-cc
+# enable C++ style (//) commments with the IDO cc
+# just in case increase the optimization threshold from the default 1000
+_WRAP_EXTRA_ARGS.CC+=	-Xcpluscomm -Olimit 6000
 .endif
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
@@ -572,6 +580,12 @@ ${WRAPPER_TMPDIR}/transform-mipspro-ucode-cc:				\
 
 ${WRAPPER_TMPDIR}/cmd-sink-sunpro-cxx:					\
 		${WRAPPER_SRCDIR}/cmd-sink-sunpro-cxx
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/transform-ido-cc:					\
+		${WRAPPER_SRCDIR}/transform-ido-cc
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
