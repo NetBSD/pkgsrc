@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1731 2005/10/16 17:44:45 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1732 2005/10/16 17:48:24 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1568,8 +1568,7 @@ show-needs-update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in `${MAKE} show-all-depends-dirs`; do			\
 		cd ${PKGSRCDIR}/$$i;					\
-		want=`${MAKE} show-var VARNAME=PKGNAME`;		\
-		wild=`${MAKE} show-var VARNAME=PKGWILDCARD`;		\
+		eval `${MAKE} show-vars-eval VARS='PKGNAME:want PKGWILDCARD:wild'`; \
 		have=`${PKG_BEST_EXISTS} "$$wild" || ${TRUE}`;		\
 		if [ -z "$$have" ]; then				\
 			${ECHO} "$$i => (none) => needs install of $$want"; \
