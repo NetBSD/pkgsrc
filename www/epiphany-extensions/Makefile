@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2005/08/10 20:56:25 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/10/16 14:14:57 jmmv Exp $
 #
 
-DISTNAME=	epiphany-extensions-1.6.4
+DISTNAME=	epiphany-extensions-1.8.1
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/1.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/1.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -35,7 +35,7 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/webbrwsr
 .endif
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
