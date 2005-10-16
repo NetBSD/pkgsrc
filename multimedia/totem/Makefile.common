@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2005/08/21 11:34:03 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/10/16 12:14:13 jmmv Exp $
 #
 
-DISTNAME=	totem-1.0.4
+DISTNAME=	totem-1.2.0
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/1.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/1.2/}
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.hadess.net/totem.php3
@@ -27,17 +27,29 @@ GCONF2_SCHEMAS+=	totem-video-thumbnail.schemas
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.totem
+.include "../../www/mozilla/gecko-options.mk"
+.include "../../mk/bsd.options.mk"
+
+BUILDLINK_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
+BUILDLINK_DEPENDS.gstreamer+=		gstreamer>=0.8.4.1
+BUILDLINK_DEPENDS.gst-plugins+=		gstreamer>=0.8.4.1
+
+.include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
-.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../www/mozilla/gecko-depends.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
