@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4035 2005/10/16 12:53:37 jmmv Exp $
+$NetBSD: TODO,v 1.4036 2005/10/16 19:07:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -456,6 +456,7 @@ Suggested package updates
 	o cyrus-sasl-2.1.22
 	o dact-0.8.37
 	o dante-1.1.18
+	o dap-2.1.5
 	o darkice-0.15
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dbus-0.50
@@ -733,7 +734,7 @@ Suggested package updates
 	o mailgraph-1.11
 	o mailscanner-4.46.2.2
 	o mairix-0.16.1
-	o makeself-2.1.3
+	o makeself-2.1.4
 	o maketool-0.8.4
 	o makeztxt-1.60
 	o malsync-2.2.0
@@ -1312,6 +1313,7 @@ Suggested package updates
 	o vfu-4.03
 	o vice-1.17
 	o vifm-0.3a
+	o vim-6.4
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
 	o vlc-0.8.2
 	o vmware-module-3.2.2
@@ -1364,12 +1366,14 @@ Suggested package updates
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-0.3.7
+	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
 	o xmms-fmradio-1.5
 	o xmms-gdancer-0.4.6
 	o xmms-infinity-0.6.1
 	o xmms-iris-0.12
 	o xmms-mad-0.5.7
+	o xmms-musepack-1.8.0
 	o xmms-nebulus-0.7.0
 	o xmms-wma-1.0.5
 	o xmmsctrl-1.8
