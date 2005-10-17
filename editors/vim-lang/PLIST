@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/07 08:07:39 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/17 06:49:34 martti Exp $
 share/vim/${VIM_SUBDIR}/keymap/README.txt
 share/vim/${VIM_SUBDIR}/keymap/accents.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/bulgarian.vim
+share/vim/${VIM_SUBDIR}/keymap/canfr-win.vim
 share/vim/${VIM_SUBDIR}/keymap/czech.vim
 share/vim/${VIM_SUBDIR}/keymap/czech_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/esperanto.vim
@@ -47,6 +49,7 @@ share/vim/${VIM_SUBDIR}/lang/de/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/en_GB/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/es/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/fr/LC_MESSAGES/vim.mo
+share/vim/${VIM_SUBDIR}/lang/ga/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/it/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ja/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ko/LC_MESSAGES/vim.mo
@@ -88,7 +91,10 @@ share/vim/${VIM_SUBDIR}/lang/menu_fr_fr.latin1.vim
 share/vim/${VIM_SUBDIR}/lang/menu_fr_fr.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_french_france.1252.vim
 share/vim/${VIM_SUBDIR}/lang/menu_german_germany.1252.vim
+share/vim/${VIM_SUBDIR}/lang/menu_hu.iso_8859-2.vim
+share/vim/${VIM_SUBDIR}/lang/menu_hu.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_hu_hu.iso_8859-2.vim
+share/vim/${VIM_SUBDIR}/lang/menu_hu_hu.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_it.latin1.vim
 share/vim/${VIM_SUBDIR}/lang/menu_it.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_it_it.latin1.vim
@@ -144,6 +150,7 @@ share/vim/${VIM_SUBDIR}/lang/menu_sv.latin1.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sv.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sv_se.latin1.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sv_se.utf-8.vim
+share/vim/${VIM_SUBDIR}/lang/menu_uk_ua.cp1251.vim
 share/vim/${VIM_SUBDIR}/lang/menu_uk_ua.koi8-u.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh.big5.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh.cp936.vim
@@ -182,6 +189,8 @@ share/vim/${VIM_SUBDIR}/lang/zh_TW/LC_MESSAGES/vim.mo
 @dirrm share/vim/${VIM_SUBDIR}/lang/es
 @dirrm share/vim/${VIM_SUBDIR}/lang/fr/LC_MESSAGES
 @dirrm share/vim/${VIM_SUBDIR}/lang/fr
+@dirrm share/vim/${VIM_SUBDIR}/lang/ga/LC_MESSAGES
+@dirrm share/vim/${VIM_SUBDIR}/lang/ga
 @dirrm share/vim/${VIM_SUBDIR}/lang/it/LC_MESSAGES
 @dirrm share/vim/${VIM_SUBDIR}/lang/it
 @dirrm share/vim/${VIM_SUBDIR}/lang/ja/LC_MESSAGES
