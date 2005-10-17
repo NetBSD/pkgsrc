@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4041 2005/10/17 09:19:54 wiz Exp $
+$NetBSD: TODO,v 1.4042 2005/10/17 09:26:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -488,7 +488,6 @@ Suggested package updates
 	o eclipse-3.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.0.6
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
