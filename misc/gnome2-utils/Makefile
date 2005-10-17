@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/10/16 12:13:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.45 2005/10/17 01:35:22 minskim Exp $
 #
 
 DISTNAME=		gnome-utils-2.12.1
@@ -14,6 +14,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_TOOLS+=		gmake perl pkg-config
 USE_DIRS+=		gnome2-1.5
+USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
