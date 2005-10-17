@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/10/13 20:41:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/17 08:28:57 wiz Exp $
 #
 
-DISTNAME=		libmimedir-0.4
-PKGREVISION=		1
+DISTNAME=		libmimedir-0.5
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libmimedir/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/libmimedir/
