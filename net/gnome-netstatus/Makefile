@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/16 12:13:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/17 04:29:36 minskim Exp $
 #
 
 DISTNAME=	gnome-netstatus-2.12.0
@@ -12,6 +12,7 @@ COMMENT=	Network status applet for the GNOME panel
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
+USE_MSGFMT_PLURALS=	yes
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
