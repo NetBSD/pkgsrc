@@ -1,7 +1,7 @@
-<!-- $NetBSD: introduction.xml,v 1.7 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.8 2005/10/17 06:07:38 hubertf Exp $ -->
 
 <chapter id="introduction">
-  <title>Introduction</title>
+  <title>What is pkgsrc?</title>
 
   <sect1 id="introduction-section">
     <title>Introduction</title>
