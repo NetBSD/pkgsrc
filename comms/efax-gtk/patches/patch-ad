@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2005/08/16 12:56:57 adam Exp $
+$NetBSD: patch-ad,v 1.5 2005/10/17 09:25:43 adam Exp $
 
---- src/main.cpp.orig	2005-08-13 14:20:09.000000000 +0000
+--- src/main.cpp.orig	2005-09-16 21:43:04.000000000 +0000
 +++ src/main.cpp
-@@ -484,7 +484,7 @@ std::string configure_prog(bool reread) 
+@@ -491,7 +491,7 @@ std::string configure_prog(bool reread) 
  
      // we have finished reading the configuration file    
      // now enter parameters common to send and receive of faxes	
