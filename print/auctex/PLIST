@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2005/10/15 20:09:35 tonio Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/10/17 16:17:22 tonio Exp $
 ${EMACS_LISPPREFIX}/auctex.el
-${EMACS_LISPPREFIX}/auctex/.nosearch
 ${EMACS_LISPPREFIX}/auctex/bib-cite.el
 ${EMACS_LISPPREFIX}/auctex/bib-cite.elc
 ${EMACS_LISPPREFIX}/auctex/context-en.el
@@ -31,24 +30,6 @@ ${EMACS_LISPPREFIX}/auctex/images/jumpdvi.xpm
 ${EMACS_LISPPREFIX}/auctex/images/ltx-symb-turn-off.xpm
 ${EMACS_LISPPREFIX}/auctex/images/ltx-symb-turn-on.xpm
 ${EMACS_LISPPREFIX}/auctex/images/pdftex.xpm
-${EMACS_LISPPREFIX}/auctex/images/prverr16.xpm
-${EMACS_LISPPREFIX}/auctex/images/prverr20.xpm
-${EMACS_LISPPREFIX}/auctex/images/prverr24.xbm
-${EMACS_LISPPREFIX}/auctex/images/prverr24.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvtex-cap-up.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvtex12.xbm
-${EMACS_LISPPREFIX}/auctex/images/prvtex12.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvtex16.xbm
-${EMACS_LISPPREFIX}/auctex/images/prvtex16.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvtex20.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvtex24.xbm
-${EMACS_LISPPREFIX}/auctex/images/prvtex24.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvwrk12.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvwrk14.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvwrk16.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvwrk20.xpm
-${EMACS_LISPPREFIX}/auctex/images/prvwrk24.xbm
-${EMACS_LISPPREFIX}/auctex/images/prvwrk24.xpm
 ${EMACS_LISPPREFIX}/auctex/images/pspdf.xpm
 ${EMACS_LISPPREFIX}/auctex/images/sep.xpm
 ${EMACS_LISPPREFIX}/auctex/images/tex.xpm
@@ -235,30 +216,9 @@ ${EMACS_LISPPREFIX}/auctex/texmathp.el
 ${EMACS_LISPPREFIX}/auctex/texmathp.elc
 ${EMACS_LISPPREFIX}/auctex/toolbar-x.el
 ${EMACS_LISPPREFIX}/auctex/toolbar-x.elc
-${EMACS_LISPPREFIX}/preview-latex.el
-${EMACS_LISPPREFIX}/preview/preview.el
-${EMACS_LISPPREFIX}/preview/preview.elc
-${EMACS_LISPPREFIX}/preview/prv-emacs.el
-${EMACS_LISPPREFIX}/preview/prv-emacs.elc
 ${EMACS_LISPPREFIX}/tex-site.el
-share/texmf/doc/latex/styles/preview.dvi
-share/texmf/tex/latex/preview/prauctex.cfg
-share/texmf/tex/latex/preview/prauctex.def
-share/texmf/tex/latex/preview/prcounters.def
-share/texmf/tex/latex/preview/preview.sty
-share/texmf/tex/latex/preview/prfootnotes.def
-share/texmf/tex/latex/preview/prlyx.def
-share/texmf/tex/latex/preview/prshowbox.def
-share/texmf/tex/latex/preview/prshowlabels.def
-share/texmf/tex/latex/preview/prtightpage.def
-share/texmf/tex/latex/preview/prtracingall.def
 var/auctex/.nosearch
 @dirrm var/auctex
-@dirrm share/texmf/tex/latex/preview
-@unexec ${RMDIR} share/texmf/doc/latex/styles 2>/dev/null || ${TRUE}
-@dirrm ${EMACS_LISPPREFIX}/preview
 @dirrm ${EMACS_LISPPREFIX}/auctex/style
 @dirrm ${EMACS_LISPPREFIX}/auctex/images
 @dirrm ${EMACS_LISPPREFIX}/auctex
-@exec %D/bin/mktexlsr
-@unexec %D/bin/mktexlsr
