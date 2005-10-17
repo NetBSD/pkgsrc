@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11526 2005/10/17 08:29:21 wiz Exp $
+$NetBSD: CHANGES,v 1.11527 2005/10/17 08:34:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4671,3 +4671,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/vim to 6.4.0 [martti 2005-10-17]
 	Added games/InterLOGIC version 0.30 [wiz 2005-10-17]
 	Updated devel/libmimedir to 0.5 [wiz 2005-10-17]
+	Updated editors/abiword to 2.4.1 [adam 2005-10-17]
+	Updated editors/abiword-plugins to 2.4.1 [adam 2005-10-17]
