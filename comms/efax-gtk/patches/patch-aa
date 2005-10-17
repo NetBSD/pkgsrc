@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2005/08/16 12:56:57 adam Exp $
+$NetBSD: patch-aa,v 1.7 2005/10/17 09:25:42 adam Exp $
 
---- Makefile.in.orig	2005-08-13 16:41:35.000000000 +0000
+--- Makefile.in.orig	2005-09-18 22:09:47.000000000 +0000
 +++ Makefile.in
-@@ -144,7 +144,7 @@ sharedstatedir = @sharedstatedir@
+@@ -146,7 +146,7 @@ sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.6 2005/08/16 12:56:57 adam Exp $
  
  desktopdir = $(datadir)/applications
  
-@@ -268,12 +268,12 @@ uninstall-desktopDATA:
+@@ -288,12 +288,12 @@ uninstall-desktopDATA:
  sysconfDATA_INSTALL = $(INSTALL_DATA)
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)

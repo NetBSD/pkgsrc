@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2005/09/27 15:13:03 adam Exp $
+# $NetBSD: Makefile,v 1.22 2005/10/17 09:25:42 adam Exp $
 
-DISTNAME=	efax-gtk-3.0.5.src
-PKGNAME=	efax-gtk-3.0.5
+DISTNAME=	efax-gtk-3.0.6.src
+PKGNAME=	efax-gtk-3.0.6
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=efax-gtk/}
 EXTRACT_SUFX=	.tgz
@@ -12,7 +12,7 @@ COMMENT=	GTK frontend for efax
 
 DEPENDS+=	efax>=0.9:../../comms/efax
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
