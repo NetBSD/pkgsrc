@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/10/16 12:13:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2005/10/17 05:11:22 minskim Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.12.1
@@ -14,6 +14,7 @@ COMMENT=	GNOME 2 system monitor program
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
+USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf gmake pkg-config
