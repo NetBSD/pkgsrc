@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11527 2005/10/17 08:34:59 adam Exp $
+$NetBSD: CHANGES,v 1.11528 2005/10/17 09:26:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4673,3 +4673,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libmimedir to 0.5 [wiz 2005-10-17]
 	Updated editors/abiword to 2.4.1 [adam 2005-10-17]
 	Updated editors/abiword-plugins to 2.4.1 [adam 2005-10-17]
+	Updated comms/efax-gtk to 3.0.6 [adam 2005-10-17]
