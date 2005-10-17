@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/10/17 19:45:18 is Exp $
+$NetBSD: distinfo,v 1.3 2005/10/17 20:18:34 is Exp $
 
 SHA1 (mpd.1.0.1.tgz) = 797b505935ccc741fdca6010bc0bd53601a6f262
 RMD160 (mpd.1.0.1.tgz) = 2862ae9220ec0a546ed4193aeee4dc8dc94610a2
@@ -17,5 +17,10 @@ SHA1 (patch-az) = 1560c8ea0b760e2fb97385e565d87a49a879c6a2
 SHA1 (patch-ba) = 21de20ed7f9e064a988cf091253ae7a5ad962487
 SHA1 (patch-bb) = 6214584bde5a05386d0f31690b30a9c0a8c299af
 SHA1 (patch-bc) = be4f8c47486c5b6933494f4e92fd8c340425a167
+SHA1 (patch-bd) = 62556e84f29c32310d27cb105cc6de5b4fd5e817
+SHA1 (patch-be) = 85689a95f9311e3e70c0b4a532d57dae6b931b35
+SHA1 (patch-bf) = 20e66a54a51702ce229ef53e250c467d01e2d3b2
+SHA1 (patch-bg) = 231723cbc6b6baef132aefd450524942fb0108f2
+SHA1 (patch-bh) = c880064e871297a411e2292f78d82222bb46dac4
 SHA1 (patch-bi) = 31fc9eb664dd3e73c7fe12ae6e95fd85b67286fc
 SHA1 (patch-bk) = ffbcc49346ea57a3fd0eed51d7bb00f80e25f3a5
