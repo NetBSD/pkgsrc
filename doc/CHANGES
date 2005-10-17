@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11522 2005/10/17 00:04:09 gdt Exp $
+$NetBSD: CHANGES,v 1.11523 2005/10/17 00:05:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4667,3 +4667,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Moved textproc/gocr to graphics/gocr [wiz 2005-10-16]
 	Updated devel/guile-www to 1.1.1 [gdt 2005-10-16]
 	Updated devel/guile-www to 2.13 [gdt 2005-10-16]
+	Updated inputmethod/imhangul_status_applet to 0.3 [minskim 2005-10-17]
