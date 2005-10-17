@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2005/10/17 09:32:04 martti Exp $
+
+--- libxfcegui4/netk-tasklist.c.orig    2005-05-15 09:53:29.000000000 +0200
++++ libxfcegui4/netk-tasklist.c
+@@ -2237,9 +2237,11 @@ netk_task_create_widgets (NetkTask * tas
+ 
+     if (task->tasklist->priv->show_label) {
+         task->label = gtk_label_new (text);
++        gtk_label_set_width_chars(task->label, 1000);
++        gtk_label_set_ellipsize(task->label, PANGO_ELLIPSIZE_END);
+         gtk_widget_show (task->label);
+         gtk_table_attach (GTK_TABLE (table),
+-                      task->label, 1, 2, 0, 1, GTK_EXPAND, GTK_EXPAND, 0, 0);
++                      task->label, 1, 2, 0, 1, GTK_EXPAND|GTK_FILL|GTK_SHRINK, GTK_EXPAND, 0, 0);
+     }
+ 
+     gtk_container_add (GTK_CONTAINER (task->button), table);
