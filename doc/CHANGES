@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11523 2005/10/17 00:05:39 minskim Exp $
+$NetBSD: CHANGES,v 1.11524 2005/10/17 06:49:41 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4668,3 +4668,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/guile-www to 1.1.1 [gdt 2005-10-16]
 	Updated devel/guile-www to 2.13 [gdt 2005-10-16]
 	Updated inputmethod/imhangul_status_applet to 0.3 [minskim 2005-10-17]
+	Updated editors/vim to 6.4.0 [martti 2005-10-17]
