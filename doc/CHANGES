@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11525 2005/10/17 08:13:16 wiz Exp $
+$NetBSD: CHANGES,v 1.11526 2005/10/17 08:29:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4670,3 +4670,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated inputmethod/imhangul_status_applet to 0.3 [minskim 2005-10-17]
 	Updated editors/vim to 6.4.0 [martti 2005-10-17]
 	Added games/InterLOGIC version 0.30 [wiz 2005-10-17]
+	Updated devel/libmimedir to 0.5 [wiz 2005-10-17]
