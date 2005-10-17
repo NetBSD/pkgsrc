@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2005/10/15 20:09:35 tonio Exp $
+# $NetBSD: Makefile,v 1.23 2005/10/17 16:17:22 tonio Exp $
 
 DISTNAME=		auctex-11.81
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=		print
 MASTER_SITES=		http://ftp.gnu.org/pub/gnu/auctex/
 
@@ -10,7 +11,6 @@ HOMEPAGE=		http://www.nongnu.org/auctex/
 COMMENT=		Enhanced LaTeX mode for Emacs
 
 .include "../../mk/emacs.mk"
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		yes
@@ -22,11 +22,12 @@ EVAL_PREFIX+=		TEX_PREFIX=teTeX
 .if ${EMACS_FLAVOR} == "xemacs"
 CONFIGURE_ARGS+=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp||}
 .endif
+CONFIGURE_ARGS+=	--disable-preview
 
 MAKEFLAGS+=		EMACS=${EMACS_BIN}
 
 LISPDIR=		${EMACS_LISPPREFIX}
-INFO_FILES=	auctex.info preview-latex.info
+INFO_FILES=	auctex.info
 
 PLIST_SUBST+=		INFODIR=${INFODIR}
 MESSAGE_SUBST+=		LISPDIR=${LISPDIR}
