@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11530 2005/10/17 10:29:03 tron Exp $
+$NetBSD: CHANGES,v 1.11531 2005/10/17 10:42:33 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4676,3 +4676,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/efax-gtk to 3.0.6 [adam 2005-10-17]
 	Updated x11/libxfce4gui to 4.2.2nb2 [martti 2005-10-17]
 	Updated devel/apr to 0.9.7.2.0.55 [tron 2005-10-17]
+	Updated www/apache2 to 2.0.55 [tron 2005-10-17]
