@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11532 2005/10/17 13:04:36 wiz Exp $
+$NetBSD: CHANGES,v 1.11533 2005/10/17 20:34:46 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4678,3 +4678,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/apr to 0.9.7.2.0.55 [tron 2005-10-17]
 	Updated www/apache2 to 2.0.55 [tron 2005-10-17]
 	Updated devel/p5-Algorithm-Annotate to 0.10nb3 [wiz 2005-10-17]
+	Added lang/mpd version 1.0.1 [is 2005-10-17]
+	Updated lang/mpd to 1.0.1nb1 [is 2005-10-17]
+	Updated lang/mpd to 1.0.1nb2 [is 2005-10-17]
+	Updated lang/mpd to 1.0.1nb3 [is 2005-10-17]
