@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2005/10/10 08:32:23 adam Exp $
+# $NetBSD: Makefile,v 1.92 2005/10/17 14:09:12 adam Exp $
 
 DISTNAME=	Wine-20050930
 PKGNAME=	${DISTNAME:S/W/w/}
@@ -13,8 +13,6 @@ COMMENT=	Free implementation of Windows on Unix (still alpha)
 
 BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
-CONFLICTS=	rewind-[0-9]*
-
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386 Darwin*-i386
 
@@ -25,8 +23,6 @@ USE_TOOLS+=		bison gmake mktemp
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-trace
-CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
-CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
 UNLIMIT_RESOURCES=	datasize
 
 REPLACE_PERL=		tools/winemaker tools/winedump/function_grep.pl
@@ -50,6 +46,7 @@ LIBS+=			${LDFLAGS}
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
