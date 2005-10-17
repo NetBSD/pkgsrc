@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4039 2005/10/17 04:16:08 taca Exp $
+$NetBSD: TODO,v 1.4040 2005/10/17 06:49:41 martti Exp $
 
 Suggested new packages
 ======================
@@ -1312,7 +1312,6 @@ Suggested package updates
 	o vfu-4.03
 	o vice-1.17
 	o vifm-0.3a
-	o vim-6.4
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
 	o vlc-0.8.2
 	o vmware-module-3.2.2
