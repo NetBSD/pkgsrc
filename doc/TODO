@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4040 2005/10/17 06:49:41 martti Exp $
+$NetBSD: TODO,v 1.4041 2005/10/17 09:19:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -488,6 +488,7 @@ Suggested package updates
 	o eclipse-3.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o efax-gtk-3.0.6
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -1223,6 +1224,7 @@ Suggested package updates
 	o snownews-1.5.7
 	o socat-1.4.3.0
 	o sope-4.5.5
+	o source-highlight-2.2
 	o sox-12.17.8
 	o spamass-milter-1.0
 	o spamassassin-3.1.0 [heinz]
@@ -1234,7 +1236,7 @@ Suggested package updates
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
-	o stella-1.4.2
+	o stella-2.0
 	o stellarium-0.7.1
 	o stlport-4.6.2
 	o strace-4.5.8
@@ -1329,6 +1331,7 @@ Suggested package updates
 	o weechat-0.1.5
 	o weewm-0.01
 	o winbind-3.0.13
+	o windowlab-1.33
 	o wmctrl-1.07
 	o wmweather-2.4.3
 	o www6to4-1.6
