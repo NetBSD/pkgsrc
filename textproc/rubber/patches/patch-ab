@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1 2005/10/17 17:12:04 tonio Exp $
+
+--- Makefile.in.orig	2004-01-20 14:09:14.000000000 +0100
++++ Makefile.in
+@@ -11,17 +11,18 @@ mandir = @mandir@
+ 
+ all:
+ 	@python@ setup.py build
+-	$(MAKE) -C doc all
++	cd doc && $(MAKE) all
+ 
+ clean: clean-local
+-	$(MAKE) -C doc clean
++	cd doc && $(MAKE) clean
++
+ clean-local:
+ 	rm -rf build dist MANIFEST
+-	find \( -name '*~' -or -name '*.py[co]' \) -exec rm {} \;
++	find . \( -name '*~' -or -name '*.py[co]' \) -exec rm {} \;
+ 
+ distclean: clean-local
+-	rm -f rubber.spec Makefile rubber settings.py src/version.py
+-	$(MAKE) -C doc distclean
++	rm -f rubber.spec Makefile rubber rubber-info rubber-pipe settings.py src/version.py
++	cd doc && $(MAKE) distclean
+ 
+ install:
+ 	@python@ setup.py inst ${prefix}
