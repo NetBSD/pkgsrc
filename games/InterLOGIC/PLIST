@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/17 08:08:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/17 08:21:27 wiz Exp $
 bin/interlogic
-share/doc/interLOGIC/README
-@dirrm share/doc/interLOGIC
+share/doc/InterLOGIC/README
+@dirrm share/doc/InterLOGIC
