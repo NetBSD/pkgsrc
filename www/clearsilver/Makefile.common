@@ -1,12 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2005/05/22 20:08:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/10/17 04:15:23 taca Exp $
 
 DISTNAME=		clearsilver-0.9.14
 CLEARSILVER_BASE=       ${DISTNAME:S/-/-base-/}
 CATEGORIES=		www
 MASTER_SITES=		http://www.clearsilver.net/downloads/
-
-# Work around ruby/modules.mk setting DIST_SUBDIR.
-DIST_SUBDIR=		.
 
 MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://www.clearsilver.net/
