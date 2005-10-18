@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11533 2005/10/17 20:34:46 is Exp $
+$NetBSD: CHANGES,v 1.11534 2005/10/18 01:23:40 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4682,3 +4682,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/mpd to 1.0.1nb1 [is 2005-10-17]
 	Updated lang/mpd to 1.0.1nb2 [is 2005-10-17]
 	Updated lang/mpd to 1.0.1nb3 [is 2005-10-17]
+	Updated mail/mairix to 0.16.1 [simonb 2005-10-18]
