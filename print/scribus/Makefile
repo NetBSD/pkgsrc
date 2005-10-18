@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/10/18 15:44:56 reed Exp $
+# $NetBSD: Makefile,v 1.29 2005/10/18 18:00:44 drochner Exp $
 
 DISTNAME=	scribus-1.2.3
 PKGREVISION=	1
@@ -20,6 +20,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=        --with-qt-dir=${QTDIR} \
 			--with-extra-libs=${LOCALBASE}/lib \
 			--with-extra-includes=${LOCALBASE}/include
+# XXX should work with other Python versions, but there are
+# stupid assumptions in the configure script
+PYTHON_VERSION_REQD=	24
+CONFIGURE_ARGS+=	--with-pythondir=${LOCALBASE}
 # avoid CUPS libs to be pulled in
 CONFIGURE_ENV+=		ac_cv_prog_hacups=no
 
@@ -31,5 +35,6 @@ CONFIGURE_ENV+=		ac_cv_prog_hacups=no
 BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"
