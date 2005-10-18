@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/10/06 18:00:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/10/18 18:00:44 drochner Exp $
 bin/scribus
 include/scribus/alignselect.h
 include/scribus/bookmwin.h
@@ -122,6 +122,7 @@ lib/scribus/plugins/libpreview.la
 lib/scribus/plugins/libsaveastemplateplugin.la
 lib/scribus/plugins/libscribusexportpixmap.la
 lib/scribus/plugins/libscribusshortwords.la
+lib/scribus/plugins/libscriptplugin.la
 lib/scribus/plugins/libsvgexplugin.la
 lib/scribus/plugins/libsvgimplugin.la
 lib/scribus/profiles/Fogra27L.icm
@@ -539,7 +540,28 @@ share/scribus/icons/vectorgfx.png
 share/scribus/icons/view.png
 share/scribus/icons/vmirror.png
 share/scribus/plugins/scribus-short-words.rc
+share/scribus/samples/3columnA4.py
+share/scribus/samples/3columnUSLTR.py
+share/scribus/samples/Calendar.py
 share/scribus/samples/LoremIpsum.txt
+share/scribus/samples/ReadMe
+share/scribus/samples/Sample1.py
+share/scribus/samples/boilerplate.py
+share/scribus/samples/golden-mean.py
+share/scribus/samples/htmlimport.py
+share/scribus/samples/legende.py
+share/scribus/samples/moins_10_pourcent_group.py
+share/scribus/samples/plus_10_pourcent_group.py
+share/scribus/samples/pochette_cd.py
+share/scribus/samples/quote.py
+share/scribus/samples/sample_db_usage.py
+share/scribus/samples/trait_de_coupe.py
+share/scribus/samples/wordcount.py
+share/scribus/scripts/ChangeLog
+share/scribus/scripts/FontSample.py
+share/scribus/scripts/NEWS
+share/scribus/scripts/ReadMe
+share/scribus/scripts/TODO
 share/scribus/templates/br1/br1.png
 share/scribus/templates/br1/br1.sla.gz
 share/scribus/templates/br1/br1tn.png
@@ -567,6 +589,7 @@ share/scribus/templates/textbased/textbasedtn.png
 @dirrm share/scribus/templates/nl1
 @dirrm share/scribus/templates/br1
 @dirrm share/scribus/templates
+@dirrm share/scribus/scripts
 @dirrm share/scribus/samples
 @dirrm share/scribus/plugins
 @dirrm share/scribus/icons
