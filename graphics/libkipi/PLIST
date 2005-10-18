@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/24 23:52:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/10/18 09:34:02 seb Exp $
 include/libkipi/batchprogressdialog.h
 include/libkipi/imagecollection.h
 include/libkipi/imagecollectionselector.h
@@ -7,6 +7,7 @@ include/libkipi/imagedialog.h
 include/libkipi/imageinfo.h
 include/libkipi/imageinfoshared.h
 include/libkipi/interface.h
+include/libkipi/libkipi_export.h
 include/libkipi/plugin.h
 include/libkipi/pluginloader.h
 include/libkipi/uploadwidget.h
@@ -21,26 +22,35 @@ share/kde/icons/hicolor/48x48/apps/kipi.png
 share/kde/servicetypes/kipiplugin.desktop
 ${PKGLOCALEDIR}/locale/br/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/mt/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libkipi.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libkipi.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libkipi.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
@@ -49,4 +59,9 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libkipi.mo
 @dirrm share/kde/apps/kipi/data
 @dirrm share/kde/apps/kipi
 @comment in kde: @dirrm share/kde/apps
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm include/libkipi
