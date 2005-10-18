@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/22 09:45:28 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/18 09:44:09 seb Exp $
 bin/digikam
 bin/showfoto
 include/digikam/colorgradientwidget.h
+include/digikam/curveswidget.h
 include/digikam/histogramwidget.h
 include/digikam/imagecurves.h
 include/digikam/imagefilters.h
@@ -15,212 +16,53 @@ include/digikam/imagepreviewwidget.h
 include/digikam/imageregionwidget.h
 include/digikam/imageselectionwidget.h
 include/digikam/imagewidget.h
+include/digikam/thumbbar.h
+include/digikam_export.h
 lib/kde3/digikamimageplugin_core.la
 lib/kde3/kio_digikamio.la
 lib/kde3/kio_digikamtags.la
 lib/kde3/kio_digikamthumbnail.la
 lib/libdigikam.la
 share/applications/kde/showfoto.desktop
-share/doc/kde/HTML/da/digikam/common
-share/doc/kde/HTML/da/digikam/index.cache.bz2
-share/doc/kde/HTML/da/digikam/index.docbook
-share/doc/kde/HTML/en/digikam/README
-share/doc/kde/HTML/en/digikam/addcamera.png
-share/doc/kde/HTML/en/digikam/albumproperties.png
-share/doc/kde/HTML/en/digikam/assigntags.png
-share/doc/kde/HTML/en/digikam/autolevelspreview.png
-share/doc/kde/HTML/en/digikam/cameraclient.png
-share/doc/kde/HTML/en/digikam/cameraclientadvanced.png
-share/doc/kde/HTML/en/digikam/cameraclientdownload.png
-share/doc/kde/HTML/en/digikam/commentstags.png
-share/doc/kde/HTML/en/digikam/common
-share/doc/kde/HTML/en/digikam/convert_brown.png
-share/doc/kde/HTML/en/digikam/convert_bw.png
-share/doc/kde/HTML/en/digikam/convert_cold.png
-share/doc/kde/HTML/en/digikam/convert_platinium.png
-share/doc/kde/HTML/en/digikam/convert_selenium.png
-share/doc/kde/HTML/en/digikam/convert_sepia.png
-share/doc/kde/HTML/en/digikam/digikamlogo.png
-share/doc/kde/HTML/en/digikam/editoradjustcurves.png
-share/doc/kde/HTML/en/digikam/editoradjustlevels.png
-share/doc/kde/HTML/en/digikam/editorautosizebutton.png
-share/doc/kde/HTML/en/digikam/editorbcgadjust.png
-share/doc/kde/HTML/en/digikam/editorblurplugin.png
-share/doc/kde/HTML/en/digikam/editorcolorbalance.png
-share/doc/kde/HTML/en/digikam/editorcropbutton.png
-share/doc/kde/HTML/en/digikam/editorhsladjust.png
-share/doc/kde/HTML/en/digikam/editorimageselection.png
-share/doc/kde/HTML/en/digikam/editornoisereductionplugin.png
-share/doc/kde/HTML/en/digikam/editorraindropsplugin.png
-share/doc/kde/HTML/en/digikam/editorratiocroptool.png
-share/doc/kde/HTML/en/digikam/editorredeyescorrection.png
-share/doc/kde/HTML/en/digikam/editorresizetool.png
-share/doc/kde/HTML/en/digikam/editorsharpenplugin.png
-share/doc/kde/HTML/en/digikam/editorunsharpedmaskplugin.png
-share/doc/kde/HTML/en/digikam/equalizepreview.png
-share/doc/kde/HTML/en/digikam/exifviewer.png
-share/doc/kde/HTML/en/digikam/firstrundialog.png
-share/doc/kde/HTML/en/digikam/foldericon.png
-share/doc/kde/HTML/en/digikam/histogramdescription.png
-share/doc/kde/HTML/en/digikam/histogramimageplugin.png
-share/doc/kde/HTML/en/digikam/histogramsample1.png
-share/doc/kde/HTML/en/digikam/histogramsample2.png
-share/doc/kde/HTML/en/digikam/histogramsample3.png
-share/doc/kde/HTML/en/digikam/imageeditor.png
-share/doc/kde/HTML/en/digikam/imageeditortoolbar.png
-share/doc/kde/HTML/en/digikam/imageproperties.png
-share/doc/kde/HTML/en/digikam/imageproperties2.png
-share/doc/kde/HTML/en/digikam/imageproperties3.png
-share/doc/kde/HTML/en/digikam/index.cache.bz2
-share/doc/kde/HTML/en/digikam/index.docbook
-share/doc/kde/HTML/en/digikam/maintoolbar.png
-share/doc/kde/HTML/en/digikam/mainwindow.png
-share/doc/kde/HTML/en/digikam/normalizepreview.png
-share/doc/kde/HTML/en/digikam/revertbutton.png
-share/doc/kde/HTML/en/digikam/rulethirdlinesexample.png
-share/doc/kde/HTML/en/digikam/setupalbum.png
-share/doc/kde/HTML/en/digikam/setupcamera.png
-share/doc/kde/HTML/en/digikam/setupcollections.png
-share/doc/kde/HTML/en/digikam/setupembededinfo.png
-share/doc/kde/HTML/en/digikam/setupimageeditor.png
-share/doc/kde/HTML/en/digikam/setupkipi.png
-share/doc/kde/HTML/en/digikam/setupmimetypes.png
-share/doc/kde/HTML/en/digikam/setupmisc.png
-share/doc/kde/HTML/en/digikam/stretchcontrastpreview.png
-share/doc/kde/HTML/en/digikam/tagsview.png
-share/doc/kde/HTML/en/digikam/targetalbumdialog.png
-share/doc/kde/HTML/en/digikam/zoombuttons.png
-share/doc/kde/HTML/et/digikam/common
-share/doc/kde/HTML/et/digikam/index.cache.bz2
-share/doc/kde/HTML/et/digikam/index.docbook
-share/doc/kde/HTML/it/digikam/addcamera.png
-share/doc/kde/HTML/it/digikam/common
-share/doc/kde/HTML/it/digikam/imageeditor.png
-share/doc/kde/HTML/it/digikam/index.cache.bz2
-share/doc/kde/HTML/it/digikam/index.docbook
-share/doc/kde/HTML/it/digikam/mainwindow.png
-share/doc/kde/HTML/it/digikam/setupalbum.png
-share/doc/kde/HTML/nl/digikam/common
-share/doc/kde/HTML/nl/digikam/index.cache.bz2
-share/doc/kde/HTML/nl/digikam/index.docbook
-share/doc/kde/HTML/pt/digikam/common
-share/doc/kde/HTML/pt/digikam/index.cache.bz2
-share/doc/kde/HTML/pt/digikam/index.docbook
-share/doc/kde/HTML/pt_BR/digikam/README
-share/doc/kde/HTML/pt_BR/digikam/addcamera.png
-share/doc/kde/HTML/pt_BR/digikam/albumproperties.png
-share/doc/kde/HTML/pt_BR/digikam/assigntags.png
-share/doc/kde/HTML/pt_BR/digikam/autolevelspreview.png
-share/doc/kde/HTML/pt_BR/digikam/cameraclient.png
-share/doc/kde/HTML/pt_BR/digikam/cameraclientadvanced.png
-share/doc/kde/HTML/pt_BR/digikam/cameraclientdownload.png
-share/doc/kde/HTML/pt_BR/digikam/commentstags.png
-share/doc/kde/HTML/pt_BR/digikam/common
-share/doc/kde/HTML/pt_BR/digikam/convert_brown.png
-share/doc/kde/HTML/pt_BR/digikam/convert_bw.png
-share/doc/kde/HTML/pt_BR/digikam/convert_cold.png
-share/doc/kde/HTML/pt_BR/digikam/convert_platinium.png
-share/doc/kde/HTML/pt_BR/digikam/convert_selenium.png
-share/doc/kde/HTML/pt_BR/digikam/convert_sepia.png
-share/doc/kde/HTML/pt_BR/digikam/digikamlogo.png
-share/doc/kde/HTML/pt_BR/digikam/editoradjustcurves.png
-share/doc/kde/HTML/pt_BR/digikam/editoradjustlevels.png
-share/doc/kde/HTML/pt_BR/digikam/editorautosizebutton.png
-share/doc/kde/HTML/pt_BR/digikam/editorbcgadjust.png
-share/doc/kde/HTML/pt_BR/digikam/editorblurplugin.png
-share/doc/kde/HTML/pt_BR/digikam/editorcolorbalance.png
-share/doc/kde/HTML/pt_BR/digikam/editorcropbutton.png
-share/doc/kde/HTML/pt_BR/digikam/editorhsladjust.png
-share/doc/kde/HTML/pt_BR/digikam/editorimageselection.png
-share/doc/kde/HTML/pt_BR/digikam/editornoisereductionplugin.png
-share/doc/kde/HTML/pt_BR/digikam/editorraindropsplugin.png
-share/doc/kde/HTML/pt_BR/digikam/editorratiocroptool.png
-share/doc/kde/HTML/pt_BR/digikam/editorredeyescorrection.png
-share/doc/kde/HTML/pt_BR/digikam/editorresizetool.png
-share/doc/kde/HTML/pt_BR/digikam/editorsharpenplugin.png
-share/doc/kde/HTML/pt_BR/digikam/editorunsharpedmaskplugin.png
-share/doc/kde/HTML/pt_BR/digikam/equalizepreview.png
-share/doc/kde/HTML/pt_BR/digikam/exifviewer.png
-share/doc/kde/HTML/pt_BR/digikam/firstrundialog.png
-share/doc/kde/HTML/pt_BR/digikam/foldericon.png
-share/doc/kde/HTML/pt_BR/digikam/histogramdescription.png
-share/doc/kde/HTML/pt_BR/digikam/histogramimageplugin.png
-share/doc/kde/HTML/pt_BR/digikam/histogramsample1.png
-share/doc/kde/HTML/pt_BR/digikam/histogramsample2.png
-share/doc/kde/HTML/pt_BR/digikam/histogramsample3.png
-share/doc/kde/HTML/pt_BR/digikam/imageeditor.png
-share/doc/kde/HTML/pt_BR/digikam/imageeditortoolbar.png
-share/doc/kde/HTML/pt_BR/digikam/imageproperties.png
-share/doc/kde/HTML/pt_BR/digikam/imageproperties2.png
-share/doc/kde/HTML/pt_BR/digikam/imageproperties3.png
-share/doc/kde/HTML/pt_BR/digikam/index.cache.bz2
-share/doc/kde/HTML/pt_BR/digikam/index.docbook
-share/doc/kde/HTML/pt_BR/digikam/maintoolbar.png
-share/doc/kde/HTML/pt_BR/digikam/mainwindow.png
-share/doc/kde/HTML/pt_BR/digikam/normalizepreview.png
-share/doc/kde/HTML/pt_BR/digikam/revertbutton.png
-share/doc/kde/HTML/pt_BR/digikam/rulethirdlinesexample.png
-share/doc/kde/HTML/pt_BR/digikam/setupalbum.png
-share/doc/kde/HTML/pt_BR/digikam/setupcamera.png
-share/doc/kde/HTML/pt_BR/digikam/setupcollections.png
-share/doc/kde/HTML/pt_BR/digikam/setupembededinfo.png
-share/doc/kde/HTML/pt_BR/digikam/setupimageeditor.png
-share/doc/kde/HTML/pt_BR/digikam/setupkipi.png
-share/doc/kde/HTML/pt_BR/digikam/setupmimetypes.png
-share/doc/kde/HTML/pt_BR/digikam/setupmisc.png
-share/doc/kde/HTML/pt_BR/digikam/stretchcontrastpreview.png
-share/doc/kde/HTML/pt_BR/digikam/tagsview.png
-share/doc/kde/HTML/pt_BR/digikam/targetalbumdialog.png
-share/doc/kde/HTML/pt_BR/digikam/zoombuttons.png
-share/doc/kde/HTML/sv/digikam/addcamera.png
-share/doc/kde/HTML/sv/digikam/albumproperties.png
-share/doc/kde/HTML/sv/digikam/commentstags.png
-share/doc/kde/HTML/sv/digikam/common
-share/doc/kde/HTML/sv/digikam/firstrundialog.png
-share/doc/kde/HTML/sv/digikam/index.cache.bz2
-share/doc/kde/HTML/sv/digikam/index.docbook
-share/doc/kde/HTML/sv/digikam/setupalbum.png
-share/doc/kde/HTML/sv/digikam/setupcamera.png
-share/doc/kde/HTML/sv/digikam/setupcollections.png
-share/doc/kde/HTML/sv/digikam/setupembededinfo.png
-share/doc/kde/HTML/sv/digikam/setupimageeditor.png
-share/doc/kde/HTML/sv/digikam/setupkipi.png
-share/doc/kde/HTML/sv/digikam/setupmimetypes.png
-share/doc/kde/HTML/sv/digikam/setupmisc.png
 share/kde/applnk/Graphics/digikam.desktop
+share/kde/apps/digikam/data/browntone.png
+share/kde/apps/digikam/data/bwgreen.png
+share/kde/apps/digikam/data/bworange.png
+share/kde/apps/digikam/data/bwred.png
+share/kde/apps/digikam/data/bwyellow.png
+share/kde/apps/digikam/data/coldtone.png
 share/kde/apps/digikam/data/image_broken.png
+share/kde/apps/digikam/data/neutralbw.png
+share/kde/apps/digikam/data/platinum.png
+share/kde/apps/digikam/data/selenium.png
+share/kde/apps/digikam/data/sepia.png
 share/kde/apps/digikam/digikam-splash.png
 share/kde/apps/digikam/digikamimageplugin_core_ui.rc
 share/kde/apps/digikam/digikamimagewindowui.rc
 share/kde/apps/digikam/digikamui.rc
 share/kde/apps/digikam/icons/hicolor/32x32/actions/addimagefolder.png
-share/kde/apps/digikam/icons/hicolor/32x32/actions/adjustbcg.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/adjusthsl.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/adjustrgb.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/albumfoldercomment.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/albumfoldernew.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/autolevels.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/blurimage.png
-share/kde/apps/digikam/icons/hicolor/32x32/actions/browntone.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/bwtonal.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/cameradownload.png
-share/kde/apps/digikam/icons/hicolor/32x32/actions/coldtone.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/contrast.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/digitalcam.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/editimage.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/equalize.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/exifinfo.png
-share/kde/apps/digikam/icons/hicolor/32x32/actions/flip_image.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/flip.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/histogram.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/imagecomment.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/importfolders2albums.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/invertimage.png
-share/kde/apps/digikam/icons/hicolor/32x32/actions/neutralbw.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/normalize.png
-share/kde/apps/digikam/icons/hicolor/32x32/actions/platinium.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/ratiocrop.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/redeyes.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/resize_image.png
-share/kde/apps/digikam/icons/hicolor/32x32/actions/selenium.png
-share/kde/apps/digikam/icons/hicolor/32x32/actions/sepia.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/sharpenimage.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/stretchcontrast.png
 share/kde/apps/digikam/icons/hicolor/32x32/actions/tag-events.png
@@ -232,13 +74,20 @@ share/kde/apps/digikam/themes/Clean
 share/kde/apps/digikam/themes/Dreary
 share/kde/apps/digikam/themes/Marine
 share/kde/apps/digikam/tips
+share/kde/apps/showfoto/showfoto-splash.png
 share/kde/apps/showfoto/showfotoui.rc
-share/kde/icons/crystalsvg/128x128/apps/digikam.png
-share/kde/icons/crystalsvg/16x16/apps/digikam.png
-share/kde/icons/crystalsvg/22x22/apps/digikam.png
-share/kde/icons/crystalsvg/32x32/apps/digikam.png
-share/kde/icons/crystalsvg/48x48/apps/digikam.png
-share/kde/icons/crystalsvg/64x64/apps/digikam.png
+share/kde/icons/hicolor/128x128/apps/digikam.png
+share/kde/icons/hicolor/128x128/apps/showfoto.png
+share/kde/icons/hicolor/16x16/apps/digikam.png
+share/kde/icons/hicolor/16x16/apps/showfoto.png
+share/kde/icons/hicolor/22x22/apps/digikam.png
+share/kde/icons/hicolor/22x22/apps/showfoto.png
+share/kde/icons/hicolor/32x32/apps/digikam.png
+share/kde/icons/hicolor/32x32/apps/showfoto.png
+share/kde/icons/hicolor/48x48/apps/digikam.png
+share/kde/icons/hicolor/48x48/apps/showfoto.png
+share/kde/icons/hicolor/64x64/apps/digikam.png
+share/kde/icons/hicolor/64x64/apps/showfoto.png
 share/kde/services/digikamimageplugin_core.desktop
 share/kde/services/digikamio.protocol
 share/kde/services/digikamtags.protocol
@@ -251,6 +100,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/digikam.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/digikam.mo
@@ -265,26 +115,31 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/mt/LC_MESSAGES/digikam.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/digikam.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/digikam.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/digikam.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/digikam.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/digikam.mo
-@comment XXX @dirrm ${PKGLOCALEDIR}/locale/mt/LC_MESSAGES
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/digikam.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @dirrm share/kde/apps/showfoto
 @dirrm share/kde/apps/digikam/themes
 @dirrm share/kde/apps/digikam/icons/hicolor/32x32/actions
@@ -295,22 +150,14 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/digikam.mo
 @dirrm share/kde/apps/digikam
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Graphics
-@dirrm share/doc/kde/HTML/sv/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/pt_BR/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/pt_BR
-@dirrm share/doc/kde/HTML/pt/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/nl/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/et/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/en/digikam
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/html
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/digikam/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/digikam/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam/digikam
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/digikam
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs
 @comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/da/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/da
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3
 @dirrm include/digikam
