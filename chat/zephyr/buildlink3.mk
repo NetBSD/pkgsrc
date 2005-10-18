@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/25 00:38:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/10/18 23:18:52 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZEPHYR_BUILDLINK3_MK:=	${ZEPHYR_BUILDLINK3_MK}+
@@ -13,8 +13,7 @@ BUILDLINK_PACKAGES+=	zephyr
 .if !empty(ZEPHYR_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.zephyr+=	zephyr>=20010518nb1
 BUILDLINK_PKGSRCDIR.zephyr?=	../../chat/zephyr
+BUILDLINK_DEPMETHOD.zephyr?=	build
 .endif	# ZEPHYR_BUILDLINK3_MK
-
-.include "../../devel/readline/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
