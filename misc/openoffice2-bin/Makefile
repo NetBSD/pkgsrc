@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/10/10 20:08:49 mrauch Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/18 15:12:10 mrauch Exp $
 
-PKGNAME=		openoffice2-bin-2.0.0rc2
-PKGREVISION=		1
+PKGNAME=		openoffice2-bin-2.0.0rc3
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=contrib/rc/2.0.0rc2/}
+MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=contrib/rc/2.0.0rc3/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		mrauch@NetBSD.org
@@ -52,28 +51,28 @@ DEINSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 .    if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .    endif
-DISTNAME=	OOo_2.0.0rc2_051005_SolarisSparc_install
-WRKSRC=		#unknown
+DISTNAME=	OOo_2.0.0rc3_051014_SolarisSparc_install
+WRKSRC=		${WRKDIR}/OOO680_m3_native_packed-1_en-US.8968/packages
 .  elif ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_2.0.0rc2_051005_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOO680_m2_native_packed-1_en-US.8964/RPMS
+DISTNAME=	OOo_2.0.0rc3_051015_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOO680_m3_native_packed-2_en-US.8968/RPMS
 .  endif
 .endif
 
 .if ${OPSYS} == "Linux"
 .if ${ARCH} == "i386"
-DISTNAME=	OOo_2.0.0rc2_051005_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOO680_m2_native_packed-1_en-US.8964/RPMS
+DISTNAME=	OOo_2.0.0rc3_051015_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOO680_m3_native_packed-2_en-US.8968/RPMS
 .endif
 .endif
 
 .if ${OPSYS} == "SunOS"
 .if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
-DISTNAME=	OOo_2.0.0rc2_051005_SolarisSparc_install
-WRKSRC=		#unknown
+DISTNAME=	OOo_2.0.0rc3_051014_SolarisSparc_install
+WRKSRC=		${WRKDIR}/OOO680_m3_native_packed-1_en-US.8968/packages
 .elif ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_2.0.0rc2_051005_SolarisIntel_install
-WRKSRC=		#unknown
+DISTNAME=	OOo_2.0.0rc3_051014_Solarisx86_install
+WRKSRC=		${WRKDIR}/OOO680_m3_native_packed-1_en-US.8968/packages
 .endif
 .endif
 
