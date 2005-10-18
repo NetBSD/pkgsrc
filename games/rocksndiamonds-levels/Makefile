@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2005/10/18 20:18:24 reed Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/18 20:22:17 reed Exp $
 
 DISTNAME=	rocksndiamonds-levels-1.0
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/levels/
 DISTFILES=	rockslevels-dx-1.0.tar.gz \
 		rockslevels-emc-1.0.tar.gz \
 		rockslevels-sp-1.0.tar.gz
+WRKSRC=		${WRKDIR}/levels
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/levels.html
@@ -13,15 +15,21 @@ COMMENT=	DX, Emerald Mine, and Sokoban levels for Rocks'N'Diamonds
 
 DEPENDS+=	rocksndiamonds{,-sdl}>=1.4.0:../../games/rocksndiamonds
 
-EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+LANGUAGES=	# none
 
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
 SCORE_PATH=	${VARBASE}/games/rocksndiamonds
 
+CPIO?=		cpio
+
+post-extract:
+	${CHMOD} -R o-w ${WRKSRC}
+
+# XXX: how are these directories cleaned up?
 do-install:
 .for directory in dx_abd dx_achim_haertel \
 	dx_bd4 dx_blunderdash dx_boulderdash5 dx_dc2classic dx_firefox1 \
@@ -66,9 +74,8 @@ do-install:
 		${INSTALL_DATA_DIR} ${SCORE_PATH}/scores/${directory} \
 		&& ${CHMOD} 775 ${SCORE_PATH}/scores/${directory}
 .endfor
-.for levels in ${DISTFILES}
-	cd ${PREFIX}/share/rocksndiamonds && ${PAX} -O -zrf ${DISTDIR}/${levels}
-.endfor
+	cd ${WRKSRC} && ${FIND} DX_Boulderdash Emerald_Mine_Club Supaplex | \
+		${CPIO} -p ${PREFIX}/share/rocksndiamonds/levels
 	${RM} -f ${WRKDIR}/PLIST
 .for levdir in DX_Boulderdash Emerald_Mine_Club Supaplex
 	cd ${PREFIX} && \
