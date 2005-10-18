@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11547 2005/10/18 16:02:13 fredb Exp $
+$NetBSD: CHANGES,v 1.11548 2005/10/18 20:01:21 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4695,3 +4695,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/openoffice2-bin to 2.0.0rc3 [mrauch 2005-10-18]
 	Updated net/snort to 2.4.3 [adrianp 2005-10-18]
 	Updated www/lynx to 2.8.5.3 [fredb 2005-10-18]
+	Updated wm/ctwm to 3.7nb2 [rillig 2005-10-18]
