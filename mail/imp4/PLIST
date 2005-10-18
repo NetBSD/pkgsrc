@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/16 21:36:28 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/18 12:38:11 adrianp Exp $
 share/doc/imp/COPYING
 share/doc/imp/README
 share/doc/imp/CHANGES
@@ -88,6 +88,7 @@ share/horde/imp/lib/version.php
 share/horde/imp/locale/ar_OM/LC_MESSAGES/imp.mo
 share/horde/imp/locale/ar_SY/LC_MESSAGES/imp.mo
 share/horde/imp/locale/bg_BG/LC_MESSAGES/imp.mo
+share/horde/imp/locale/bs_BA/LC_MESSAGES/imp.mo
 share/horde/imp/locale/ca_ES/LC_MESSAGES/imp.mo
 share/horde/imp/locale/ca_ES/help.xml
 share/horde/imp/locale/cs_CZ/LC_MESSAGES/imp.mo
@@ -104,6 +105,7 @@ share/horde/imp/locale/es_ES/help.xml
 share/horde/imp/locale/et_EE/LC_MESSAGES/imp.mo
 share/horde/imp/locale/et_EE/help.xml
 share/horde/imp/locale/fa_IR/LC_MESSAGES/imp.mo
+share/horde/imp/locale/fa_IR/help.xml
 share/horde/imp/locale/fi_FI/LC_MESSAGES/imp.mo
 share/horde/imp/locale/fi_FI/help.xml
 share/horde/imp/locale/fr_FR/LC_MESSAGES/imp.mo
@@ -156,6 +158,7 @@ share/horde/imp/po/README
 share/horde/imp/po/ar_OM.po
 share/horde/imp/po/ar_SY.po
 share/horde/imp/po/bg_BG.po
+share/horde/imp/po/bs_BA.po
 share/horde/imp/po/ca_ES.po
 share/horde/imp/po/cs_CZ.po
 share/horde/imp/po/da_DK.po
@@ -225,6 +228,7 @@ share/horde/imp/templates/filters/notactive.inc
 share/horde/imp/templates/filters/prefs.inc
 share/horde/imp/templates/folders/actions.inc
 share/horde/imp/templates/folders/folders.html
+share/horde/imp/templates/folders/folders_confirm.html
 share/horde/imp/templates/folders/foot.inc
 share/horde/imp/templates/folders/head.inc
 share/horde/imp/templates/folders/import.inc
@@ -252,7 +256,6 @@ share/horde/imp/templates/message/message.inc
 share/horde/imp/templates/message/navbar_actions.inc
 share/horde/imp/templates/message/navbar_navigate.inc
 share/horde/imp/templates/message/navbar_top.inc
-share/horde/imp/templates/message/print.inc
 share/horde/imp/templates/pgp/import_key.inc
 share/horde/imp/templates/pgp/notactive.inc
 share/horde/imp/templates/pgp/open_pgp_import.js
@@ -287,6 +290,7 @@ share/horde/imp/themes/bluewhite/screen.css
 share/horde/imp/themes/brown/screen.css
 share/horde/imp/themes/burntorange/screen.css
 share/horde/imp/themes/cherry/screen.css
+share/horde/imp/themes/cornflower/screen.css
 share/horde/imp/themes/gennevilliers/screen.css
 share/horde/imp/themes/graphics/addressbook-blue.png
 share/horde/imp/themes/graphics/addressbook-red.png
@@ -294,6 +298,7 @@ share/horde/imp/themes/graphics/apple.png
 share/horde/imp/themes/graphics/attachment.png
 share/horde/imp/themes/graphics/compose.png
 share/horde/imp/themes/graphics/empty_trash.png
+share/horde/imp/themes/graphics/encrypted.png
 share/horde/imp/themes/graphics/expand.png
 share/horde/imp/themes/graphics/favicon.ico
 share/horde/imp/themes/graphics/fetchmail.png
@@ -316,6 +321,7 @@ share/horde/imp/themes/graphics/mail_priority_high.png
 share/horde/imp/themes/graphics/mail_priority_low.png
 share/horde/imp/themes/graphics/mail_unseen.png
 share/horde/imp/themes/graphics/manage_attachments.png
+share/horde/imp/themes/graphics/mime/binary.png
 share/horde/imp/themes/graphics/mime/compressed.png
 share/horde/imp/themes/graphics/mime/encryption.png
 share/horde/imp/themes/graphics/mime/html.png
@@ -332,12 +338,17 @@ share/horde/imp/themes/graphics/spellcheck.png
 share/horde/imp/themes/green/screen.css
 share/horde/imp/themes/grey/screen.css
 share/horde/imp/themes/lavander/screen.css
+share/horde/imp/themes/luc/screen.css
+share/horde/imp/themes/lucblue/screen.css
 share/horde/imp/themes/postnuke/screen.css
 share/horde/imp/themes/screen.css
 share/horde/imp/themes/simplex/screen.css
 share/horde/imp/themes/sun/screen.css
 share/horde/imp/thread.php
 share/horde/imp/view.php
+@dirrm share/horde/imp/themes/luc
+@dirrm share/horde/imp/themes/cornflower
+@dirrm share/horde/imp/themes/lucblue
 @dirrm share/horde/imp/themes/sun
 @dirrm share/horde/imp/themes/simplex
 @dirrm share/horde/imp/themes/postnuke
@@ -449,6 +460,8 @@ share/horde/imp/view.php
 @dirrm share/horde/imp/locale/ca_ES
 @dirrm share/horde/imp/locale/bg_BG/LC_MESSAGES
 @dirrm share/horde/imp/locale/bg_BG
+@dirrm share/horde/imp/locale/bs_BA/LC_MESSAGES
+@dirrm share/horde/imp/locale/bs_BA
 @dirrm share/horde/imp/locale/ar_SY/LC_MESSAGES
 @dirrm share/horde/imp/locale/ar_SY
 @dirrm share/horde/imp/locale/ar_OM/LC_MESSAGES
