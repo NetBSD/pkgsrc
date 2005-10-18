@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/13 17:13:58 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/18 12:13:49 adrianp Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -17,7 +17,7 @@ DOCDIR=		${PREFIX}/share/doc/turba
 EGDIR=		${PREFIX}/share/examples/turba
 HORDEDIR=	${PREFIX}/share/horde
 TURBADIR=	${HORDEDIR}/turba
-TURBAVER=	2.0.3
+TURBAVER=	2.0.4
 PAXDIRS=	lib locale po scripts templates themes
 USE_TOOLS+=	perl:run
 
