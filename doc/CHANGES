@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11535 2005/10/18 04:47:05 minskim Exp $
+$NetBSD: CHANGES,v 1.11536 2005/10/18 09:30:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/mpd to 1.0.1nb3 [is 2005-10-17]
 	Updated mail/mairix to 0.16.1 [simonb 2005-10-18]
 	Added net/dnsmasq version 2.23 [minskim 2005-10-18]
+	Updated graphics/libkexif to 0.2.2 [seb 2005-10-18]
