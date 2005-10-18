@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4043 2005/10/18 10:07:22 seb Exp $
+$NetBSD: TODO,v 1.4044 2005/10/18 12:04:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -318,6 +318,7 @@ Suggested package updates
 	o ROMBuild-2.7
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.5.10 [pkg/31569]
+	o TeXmacs-1.0.5.11
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
@@ -475,6 +476,7 @@ Suggested package updates
 	o dnstop-20050405
 	o dnstracer-1.8
 	o dpkg-1.10.28
+	o dspam-3.6.0
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.6
 	o dvipdfmx-20050627
@@ -601,6 +603,7 @@ Suggested package updates
 	o hackbot-2.21
 	o hashcash-1.18
 	o haskell-mode-1.45
+	o hatari-0.80
 	o heimdal-0.7.1
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
@@ -628,12 +631,14 @@ Suggested package updates
 	o ijs-0.35
 	o imap-uw-2004g
 	o imapfilter-1.1
+	o imp-4.0.4
 	o inn-2.4.2
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20050820 [pkg/31132]
 	o iozone-3.248
 	o ipcheck-0.219
+	o ipsec-tools-0.6.2
 	o ipv6calc-0.50
 	o ircd-hybrid-7.0.4
 	o ircservices-5.0.55
@@ -1026,6 +1031,7 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o phpldapadmin-0.9.7
+	o phppgadmin-3.5.6
 	o phylip-3.65
 	o pico-4.64
 	o piewm-1.03
@@ -1226,6 +1232,7 @@ Suggested package updates
 	o spamass-milter-1.0
 	o spamassassin-3.1.0 [heinz]
 	o spim-7.2.1
+	o sqlite-3.2.7
 	o sqlitemanager-1.0.6
 	o sqlrelay-0.35
 	o sqwebmail-5.0.5
@@ -1292,6 +1299,7 @@ Suggested package updates
 	o tspc-2.1.1
 	o ttt-1.8.1
 	o ttyrec-1.0.6
+	o turba-2.0.4
 	o twelf-1.5
 	o txt2html-2.43
 	o txt2man-1.4.8
@@ -1301,6 +1309,7 @@ Suggested package updates
 	o ucl-1.03
 	o uim-0.5.0.1
 	o unix2dos-1.3
+	o unixodbc-2.2.11
 	o userppp-030706
 	o uvscan-4.40 [pkg/30290]
 	o valgrind-3.0.1
