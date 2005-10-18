@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11538 2005/10/18 09:40:29 seb Exp $
+$NetBSD: CHANGES,v 1.11539 2005/10/18 09:44:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4687,3 +4687,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/libkexif to 0.2.2 [seb 2005-10-18]
 	Updated graphics/libkipi to 0.1.2 [seb 2005-10-18]
 	Updated graphics/kipi-plugins to 0.1.0rc1 [seb 2005-10-18]
+	Updated graphics/digikam to 0.7.4 [seb 2005-10-18]
