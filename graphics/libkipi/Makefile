@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:06 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/18 09:34:02 seb Exp $
 
-DISTNAME=	libkipi-0.1.1
+DISTNAME=	libkipi-0.1.2
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/unstable/apps/KDE3.x/graphics/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	seb@NetBSD.ORG
