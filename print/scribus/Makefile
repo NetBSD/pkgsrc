@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2005/10/06 18:00:39 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2005/10/18 15:44:56 reed Exp $
 
 DISTNAME=	scribus-1.2.3
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.scribus.org.uk/downloads/1.2.3/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,6 +28,7 @@ CONFIGURE_ENV+=		ac_cv_prog_hacups=no
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
