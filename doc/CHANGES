@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11544 2005/10/18 12:40:33 adrianp Exp $
+$NetBSD: CHANGES,v 1.11545 2005/10/18 15:14:07 mrauch Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added graphics/digikam-doc version 0.7.4 [seb 2005-10-18]
 	Updated mail/turba to 2.0.4 [adrianp 2005-10-18]
 	Updated mail/imp4 to 4.0.4 [adrianp 2005-10-18]
+	Updated misc/openoffice2-bin to 2.0.0rc3 [mrauch 2005-10-18]
