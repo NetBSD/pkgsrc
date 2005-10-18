@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4044 2005/10/18 12:04:56 wiz Exp $
+$NetBSD: TODO,v 1.4045 2005/10/18 12:15:16 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1299,7 +1299,6 @@ Suggested package updates
 	o tspc-2.1.1
 	o ttt-1.8.1
 	o ttyrec-1.0.6
-	o turba-2.0.4
 	o twelf-1.5
 	o txt2html-2.43
 	o txt2man-1.4.8
