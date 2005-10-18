@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/18 04:41:59 minskim Exp $
+
+SHA1 (dnsmasq-2.23.tar.gz) = 6ddeaaa9b7a457d65c8d02980a69ccbd08925acc
+RMD160 (dnsmasq-2.23.tar.gz) = 3ba342790e1912828a5bb389abfa4679e4d93c2c
+Size (dnsmasq-2.23.tar.gz) = 159102 bytes
