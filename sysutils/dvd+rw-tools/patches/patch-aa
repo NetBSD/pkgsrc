@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2005/09/06 08:10:59 abs Exp $
+$NetBSD: patch-aa,v 1.5 2005/10/18 15:31:57 joerg Exp $
 
---- transport.hxx.orig	2004-04-19 18:25:06.000000000 +0200
+--- transport.hxx.orig	2004-08-25 01:36:29.000000000 +0200
 +++ transport.hxx
 @@ -6,7 +6,7 @@
  // For further details see http://fy.chalmers.se/~appro/linux/DVD+RW/
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.4 2005/09/06 08:10:59 abs Exp $
  
  inline long getmsecs()
  { struct timeval tv;
-@@ -407,7 +410,11 @@ public:
+@@ -413,7 +416,11 @@ public:
      // mounted, so that it could as well just return 0;
      int umount(int f=-1)
      { struct stat    fsb,msb;
@@ -33,7 +33,16 @@ $NetBSD: patch-aa,v 1.4 2005/09/06 08:10:59 abs Exp $
        int            ret=0,mntsize,i;
  
  	if (f==-1) f=fd;
-@@ -603,7 +610,11 @@ public:
+@@ -442,7 +449,7 @@ public:
+     {	return 1;   }
+ };
+ 
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ 
+ #include <sys/ioctl.h>
+ #include <camlib.h>
+@@ -609,7 +616,11 @@ public:
      }
      int umount(int f=-1)
      { struct stat    fsb,msb;

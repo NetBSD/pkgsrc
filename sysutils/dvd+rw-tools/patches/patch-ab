@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2005/10/18 15:31:58 joerg Exp $
+
+--- Makefile.m4.orig	2004-07-23 12:04:39.000000000 +0200
++++ Makefile.m4
+@@ -10,6 +10,7 @@ WARN=#-Wall	# developers are welcomed to
+ ifelse(OS,NetBSD,[define([OS],[BSD])CXXFLAGS+=-D__unix])
+ ifelse(OS,OpenBSD,[define([OS],[BSD])])
+ ifelse(OS,FreeBSD,[define([OS],[BSD])LDLIBS=-lcam])
++ifelse(OS,DragonFly,[define([OS],[BSD])LDLIBS=-lcam])
+ ifelse(OS,BSD,[
+ #
+ # OpenBSD/NetBSD/FreeBSD section
