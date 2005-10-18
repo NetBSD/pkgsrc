@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4045 2005/10/18 12:15:16 adrianp Exp $
+$NetBSD: TODO,v 1.4046 2005/10/18 12:40:34 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ Suggested package updates
 	o ijs-0.35
 	o imap-uw-2004g
 	o imapfilter-1.1
-	o imp-4.0.4
 	o inn-2.4.2
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
