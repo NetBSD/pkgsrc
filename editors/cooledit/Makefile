@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:45 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/19 10:53:43 adam Exp $
 
-DISTNAME=	cooledit-3.17.14
+DISTNAME=	cooledit-3.17.17
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/editors/X/cooledit/
 
@@ -10,9 +10,9 @@ COMMENT=	Full-featured text editor
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
