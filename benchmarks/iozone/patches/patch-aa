@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.6 2004/11/10 14:13:21 adam Exp $
+$NetBSD: patch-aa,v 1.7 2005/10/19 15:27:19 adam Exp $
 
---- makefile.orig	2004-10-29 15:11:36.000000000 +0000
+--- makefile.orig	2005-09-13 17:26:54.000000000 +0000
 +++ makefile
-@@ -67,6 +67,7 @@ all:  
+@@ -69,6 +69,7 @@ all:  
  	@echo "        ->   UWIN                 (32bit)   <-"
  	@echo "        ->   Windows (95/98/NT)   (32bit)   <-"
  	@echo ""
 +	@false
  
  clean:
- 	rm -f *.o iozone
+ 	rm -f *.o iozone fileop
