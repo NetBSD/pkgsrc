@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/08/06 06:19:29 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/19 10:34:33 adrianp Exp $
 #
 
-DISTNAME=	framework-2.4
-PKGNAME=	msf-2.4
-PKGREVISION=	2
+DISTNAME=	framework-2.5
+PKGNAME=	msf-2.5
 CATEGORIES=	security
 MASTER_SITES=	http://www.metasploit.com/tools/
 
@@ -14,7 +13,6 @@ COMMENT=	Platform for developing, testing, and using exploit code
 DEPENDS+=	p5-Net-SSLeay>=1.23:../../security/p5-Net-SSLeay
 DEPENDS+=	p5-Term-ReadLine>=1.14:../../devel/p5-Term-ReadLine
 
-DIST_SUBDIR=	${PKGNAME}
 LICENSE=	inlineegg-license
 
 MSFDIR?=	${PREFIX}/share/msf
@@ -22,8 +20,8 @@ MSFDOC?=	${PREFIX}/share/doc/msf
 MESSAGE_SUBST+= MSFDIR=${MSFDIR}
 
 USE_TOOLS+=	perl:run
-PERL_FILES=	msfcli msfconsole msfencode msflogdump msfpayload \
-		msfpescan msfweb msfupdate msfelfscan
+PERL_FILES=	msfcli msfconsole msfelfscan msfencode msflogdump msfpayload \
+		msfpescan msfupdate msfweb
 REPLACE_PERL+=	${PERL_FILES} tools/socketNinja.pl sdk/formatGen.pl \
 		sdk/patternOffset.pl sdk/spitCode.pl src/shellcode/import.pl
 
@@ -52,8 +50,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${MSFDIR}
 	${INSTALL_DATA_DIR} ${MSFDIR}/docs
 	${INSTALL_DATA_DIR} ${MSFDIR}/data
-	${INSTALL_DATA_DIR} ${MSFDIR}/data/meterpreter
-	${INSTALL_DATA_DIR} ${MSFDIR}/data/msfweb
 	${INSTALL_DATA_DIR} ${MSFDIR}/encoders
 	${INSTALL_DATA_DIR} ${MSFDIR}/exploits
 	${INSTALL_DATA_DIR} ${MSFDIR}/extras
@@ -66,10 +62,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${MSFDIR}/tools
 
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${MSFDIR}/docs
-	${INSTALL_PROGRAM} ${WRKSRC}/data/shelldemo ${MSFDIR}/data
-	${INSTALL_DATA} ${WRKSRC}/data/vncdll.dll ${MSFDIR}/data
-	${INSTALL_DATA} ${WRKSRC}/data/meterpreter/*.dll \
-		${MSFDIR}/data/meterpreter
 	${INSTALL_DATA} ${WRKSRC}/encoders/*.pm ${MSFDIR}/encoders
 	${INSTALL_DATA} ${WRKSRC}/exploits/*.pm ${MSFDIR}/exploits
 	${INSTALL_DATA} ${WRKSRC}/extras/*.tar.gz ${MSFDIR}/extras
@@ -79,7 +71,7 @@ do-install:
 	cd ${WRKSRC}/sdk && ${PAX} -rw . ${MSFDIR}/sdk
 	cd ${WRKSRC}/tools && ${PAX} -rw . ${MSFDIR}/tools
 	cd ${WRKSRC}/src && ${PAX} -rw . ${MSFDIR}/src
-	cd ${WRKSRC}/data/msfweb && ${PAX} -rw . ${MSFDIR}/data/msfweb
+	cd ${WRKSRC}/data && ${PAX} -rw . ${MSFDIR}/data
 
 	${INSTALL_DATA} ${WRKSRC}/nops/*.pm ${MSFDIR}/nops
 	${INSTALL_DATA} ${WRKSRC}/payloads/*.pm ${MSFDIR}/payloads
