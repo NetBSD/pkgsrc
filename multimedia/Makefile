@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2005/06/27 10:41:55 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2005/10/19 04:50:32 minskim Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -80,6 +80,7 @@ SUBDIR+=	vls
 SUBDIR+=	win32-codecs
 SUBDIR+=	xanim
 SUBDIR+=	xawtv
+SUBDIR+=	xfmedia
 SUBDIR+=	xine-lib
 SUBDIR+=	xine-ui
 SUBDIR+=	xvid4conf
