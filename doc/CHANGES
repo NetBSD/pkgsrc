@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11549 2005/10/18 21:11:28 rh Exp $
+$NetBSD: CHANGES,v 1.11550 2005/10/19 01:34:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4697,3 +4697,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/lynx to 2.8.5.3 [fredb 2005-10-18]
 	Updated wm/ctwm to 3.7nb2 [rillig 2005-10-18]
 	Updated pkgtools/url2pkg to 1.31 [rh 2005-10-19]
+	Updated lang/py-psyco to 1.4 [wiz 2005-10-19]
