@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11554 2005/10/19 06:45:40 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11555 2005/10/19 08:49:05 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4703,3 +4703,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added lang/wsbasic version 1.2.4 [minskim 2005-10-19]
 	Added multimedia/xfmedia version 0.9.1 [minskim 2005-10-19]
 	Updated wm/windowlab to 1.33 [xtraeme 2005-10-19]
+	Updated lang/mpd to 1.0.1nb4 [is 2005-10-19]
