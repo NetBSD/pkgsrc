@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11567 2005/10/19 23:35:39 wiz Exp $
+$NetBSD: CHANGES,v 1.11568 2005/10/19 23:43:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated finance/gkrellm-stock to 0.5.1nb3 [wiz 2005-10-19]
 	Updated finance/gkrellm1-stock to 0.2nb8 [wiz 2005-10-19]
 	Updated finance/gnucash to 1.8.11nb4 [wiz 2005-10-19]
+	Updated finance/p5-Finance-Quote to 1.10 [wiz 2005-10-19]
