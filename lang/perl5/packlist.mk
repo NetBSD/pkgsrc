@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.1 2005/10/19 04:40:23 jlam Exp $
+# $NetBSD: packlist.mk,v 1.2 2005/10/19 05:01:52 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -62,5 +62,38 @@ PERL5_GENERATE_PLIST=	${PERL5_PLIST_COMMENT}; \
 			${PERL5_PLIST_DIRS}
 GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 .endif
+
+###########################################################################
+###
+### Packlist MANZ handling -- modify the .packlist so that it properly
+### records either compressed or uncompressed manpages depending on
+### how pkgsrc modifies them after installation.
+###
+
+_PERL5_PACKLIST_MANPAGE_RE=	\
+	^(\/[^ \/]*)*\/man(\/[^ \/]*)?\/(man[1-9ln]\/[^ \/]*\.[1-9ln]|cat[1-9ln]\/[^ \/]*\.[0-9])
+
+_PERL5_PACKLIST_AWK_STRIP_MANZ=						\
+	/${_PERL5_PACKLIST_MANPAGE_RE}\.gz/				\
+		{ $$1 = substr($$1, 1, length($$1) - 3); }
+
+_PERL5_PACKLIST_AWK_ADD_MANZ.no=	# empty
+_PERL5_PACKLIST_AWK_ADD_MANZ.yes=					\
+	/${_PERL5_PACKLIST_MANPAGE_RE}/	{ $$1 = $$1 ".gz"; }
+
+.if defined(_PERL5_PACKLIST)
+post-install: perl-packlist
+.endif
+
+perl-packlist:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TEST} -n ${_PERL5_PACKLIST:Q}"" || exit 0;			\
+	for file in ${_PERL5_PACKLIST}; do				\
+		${AWK} '${_PERL5_PACKLIST_AWK_STRIP_MANZ}		\
+			${_PERL5_PACKLIST_AWK_ADD_MANZ.${_MANZ}}	\
+			{ print $$0 }'					\
+			$$file > $$file.new;				\
+		${MV} -f $$file.new $$file;				\
+	done
 
 .endif	# _PERL5_PACKLIST_MK
