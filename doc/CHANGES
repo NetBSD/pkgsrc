@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11557 2005/10/19 09:46:50 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11558 2005/10/19 10:35:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4706,3 +4706,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/mpd to 1.0.1nb4 [is 2005-10-19]
 	Updated graphics/netpbm to 10.30 [adam 2005-10-19]
 	Updated audio/streamtuner to 0.99.99 [xtraeme 2005-10-19]
+	Updated security/msf to 2.5 [adrianp 2005-10-19]
