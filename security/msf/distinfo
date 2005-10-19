@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/08/03 20:37:44 adrianp Exp $
+$NetBSD: distinfo,v 1.7 2005/10/19 10:34:33 adrianp Exp $
 
-SHA1 (msf-2.4nb2/framework-2.4.tar.gz) = b09ec49e259d812805301dc9152175903e46beb3
-RMD160 (msf-2.4nb2/framework-2.4.tar.gz) = c2791c46d6c7b8ac9490acfb81f88f5be7105855
-Size (msf-2.4nb2/framework-2.4.tar.gz) = 2607730 bytes
-SHA1 (patch-aa) = 318c8136c22d95195ecd40071d36ae22af0807bb
+SHA1 (framework-2.5.tar.gz) = 16d2d3efb2c3930b95913693f01ebf35653fe737
+RMD160 (framework-2.5.tar.gz) = 5470e2a975530f540d35182e8e63af9525bf0483
+Size (framework-2.5.tar.gz) = 2625719 bytes
