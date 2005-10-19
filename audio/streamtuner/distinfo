@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 20:39:52 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/10/19 09:45:09 xtraeme Exp $
 
-SHA1 (streamtuner-0.99.tar.gz) = 6d6d0315a360783be9729b0f035bd38df27230d8
-RMD160 (streamtuner-0.99.tar.gz) = f47696b174515a55f55c381f62db16138817c665
-Size (streamtuner-0.99.tar.gz) = 782084 bytes
+SHA1 (streamtuner-0.99.99.tar.gz) = d912dbe1741ba9d14342ab6d9d818f06e97f6b59
+RMD160 (streamtuner-0.99.99.tar.gz) = b2f7dbc47a148e4c195f85b8f5e77bb843bb7d4e
+Size (streamtuner-0.99.99.tar.gz) = 948075 bytes
