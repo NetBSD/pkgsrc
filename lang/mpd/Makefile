@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/19 04:43:31 is Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/19 08:45:24 is Exp $
 #
 
 PKGNAME=		mpd-1.0.1
@@ -7,6 +7,7 @@ PKGREVISION=		4
 CATEGORIES=		lang parallel
 MASTER_SITES=		http://www.cs.arizona.edu/mpd/download/
 EXTRACT_SUFX=		.tgz
+DIST_SUBDIR=		mpd-language
 
 CONFLICTS=		audio/musicpd
 
