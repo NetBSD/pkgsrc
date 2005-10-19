@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/19 01:33:16 wiz Exp $
 
-DISTNAME=       psyco-1.2-src
+DISTNAME=       psyco-1.4-src
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-src//}
 CATEGORIES=     lang python
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=psyco/}
@@ -15,7 +15,7 @@ PYBINMODULE=	YES
 PY_PATCHPLIST=	YES
 
 ONLY_FOR_PLATFORM=		*-*-i386
-PYTHON_VERSIONS_ACCEPTED=	23 22 21
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
