@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/23 21:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/19 23:34:06 wiz Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -8,7 +8,7 @@ SUBDIR+=	gkrellm1-stock
 SUBDIR+=	gnucash
 SUBDIR+=	gnucash-docs
 SUBDIR+=	kmymoney2
-SUBDIR+=	p5-finance-quote
+SUBDIR+=	p5-Finance-Quote
 SUBDIR+=	tclticker
 SUBDIR+=	xfinans
 SUBDIR+=	xinvest
