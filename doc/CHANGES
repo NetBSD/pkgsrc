@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11551 2005/10/19 01:35:47 wiz Exp $
+$NetBSD: CHANGES,v 1.11552 2005/10/19 03:39:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4700,3 +4700,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/py-gnome2 to 2.12.1 [drochner 2005-10-18]
 	Updated pkgtools/url2pkg to 1.31 [rh 2005-10-19]
 	Updated lang/py-psyco to 1.4 [wiz 2005-10-19]
+	Added lang/wsbasic version 1.2.4 [minskim 2005-10-19]
