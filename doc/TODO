@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4053 2005/10/19 12:21:55 adam Exp $
+$NetBSD: TODO,v 1.4054 2005/10/19 12:39:24 adam Exp $
 
 Suggested new packages
 ======================
@@ -1207,7 +1207,6 @@ Suggested package updates
 	o skill-4.1.2
 	o skkinput-2.06.4
 	o skype-1.2.0.17
-	o slib-3a2
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
