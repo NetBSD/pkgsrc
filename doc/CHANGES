@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11558 2005/10/19 10:35:47 adrianp Exp $
+$NetBSD: CHANGES,v 1.11559 2005/10/19 10:55:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4707,3 +4707,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/netpbm to 10.30 [adam 2005-10-19]
 	Updated audio/streamtuner to 0.99.99 [xtraeme 2005-10-19]
 	Updated security/msf to 2.5 [adrianp 2005-10-19]
+	Updated editors/cooledit to 3.17.17 [adam 2005-10-19]
