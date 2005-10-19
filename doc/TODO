@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4052 2005/10/19 10:55:33 adam Exp $
+$NetBSD: TODO,v 1.4053 2005/10/19 12:21:55 adam Exp $
 
 Suggested new packages
 ======================
@@ -520,7 +520,6 @@ Suggested package updates
 	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
-	o fontforge-20050929
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
