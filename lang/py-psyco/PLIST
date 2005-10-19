@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/01 22:39:06 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/19 01:33:16 wiz Exp $
 ${PYSITELIB}/psyco/__init__.py
 ${PYSITELIB}/psyco/__init__.pyc
 ${PYSITELIB}/psyco/__init__.pyo
@@ -9,6 +9,9 @@ ${PYSITELIB}/psyco/classes.pyo
 ${PYSITELIB}/psyco/core.py
 ${PYSITELIB}/psyco/core.pyc
 ${PYSITELIB}/psyco/core.pyo
+${PYSITELIB}/psyco/kdictproxy.py
+${PYSITELIB}/psyco/kdictproxy.pyc
+${PYSITELIB}/psyco/kdictproxy.pyo
 ${PYSITELIB}/psyco/logger.py
 ${PYSITELIB}/psyco/logger.pyc
 ${PYSITELIB}/psyco/logger.pyo
