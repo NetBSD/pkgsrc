@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2005/08/10 20:56:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/10/19 15:09:37 minskim Exp $
 #
 
 DISTNAME=	bmp-0.9.7
@@ -12,6 +12,9 @@ COMMENT=	Beep Media Player (fork of XMMS to work with GTK+ 2.x)
 DISTINFO_FILE=		${.CURDIR}/../../audio/bmp/distinfo
 FILESDIR=		${.CURDIR}/../../audio/xmms/files
 PATCHDIR=		${.CURDIR}/../../audio/bmp/patches
+PATCH_SITES=		http://izb.knu.ac.kr/~bh/diffs/
+PATCHFILES=		${DISTNAME}-ipv6-simple.diff
+PATCH_DIST_STRIP+=	-p1
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
@@ -35,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-vorbis
 PKGCONFIG_OVERRIDE+=	bmp.pc
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bmp
-PKG_SUPPORTED_OPTIONS=	gnome xmms-eq
+PKG_SUPPORTED_OPTIONS=	gnome inet6 xmms-eq
 
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -45,6 +48,10 @@ CONFIGURE_ARGS+=	--enable-gconf
 CONFIGURE_ARGS+=	--enable-gnome-vfs
 .  include "../../devel/GConf2/buildlink3.mk"
 .  include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mxmms-eq)
