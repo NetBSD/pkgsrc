@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2005/10/10 17:33:15 joerg Exp $
+# $NetBSD: Makefile,v 1.105 2005/10/19 04:40:23 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -268,12 +268,6 @@ SUBST_FILES.dirmode=	installhtml installman installperl		\
 			lib/ExtUtils/Install.pm
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
-USE_PKGINSTALL=		yes
-INSTALL_EXTRA_TMPL+=	${FILESDIR}/install.tmpl
-DEINSTALL_EXTRA_TMPL+=	${FILESDIR}/deinstall.tmpl
-FILES_SUBST+=		PERL5_PACKLIST=
-FILES_SUBST+=		PERL5_COMMENT=\#
-
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
 #
@@ -308,23 +302,25 @@ pre-configure:
 	done
 .endif
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-PLIST_FILE_SED=	-e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,,"
-PLIST_DIR_SED=	${PLIST_FILE_SED}					\
-		-e "s,^,@unexec \${RMDIR} -p %D/,"			\
-		-e "s,/[^/]*$$, 2>/dev/null || ${TRUE},"		\
-
 INSTALLATION_DIRS=	bin man/man1
+PERL5_PACKLIST_DIR_cmd=	eval `${PERL5} -V:installarchlib 2>/dev/null`;	\
+			echo $$installarchlib
+PERL5_PACKLIST_DIR=	${PERL5_PACKLIST_DIR_cmd:sh}
+PERL5_PACKLIST=		.packlist
+FILES_SUBST+=		PERL5_COMMENT=\#
+FILES_SUBST+=		PERL5_PACKLIST=
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/perllink.in		\
 		> ${WRKDIR}/perllink
 
-post-install:
+post-install: perl5-post-install
+
+perl5-post-install:
 	if ${TEST} -x ${PREFIX}/bin/a2p; then				\
 		strip ${PREFIX}/bin/a2p;				\
 	fi
-	eval `${PERL5} -V:installarchlib 2>/dev/null`;			\
 	eval `${PERL5} -V:installsitearch 2>/dev/null`;			\
 	eval `${PERL5} -V:installvendorarch 2>/dev/null`;		\
 	${RMDIR} -p $$installsitearch 2>/dev/null || ${TRUE};		\
@@ -336,18 +332,10 @@ post-install:
 	${RM} -f ${PREFIX}/bin/perllink ${PREFIX}/man/man1/perllink.1;	\
 	${LN} -s $$scriptdir/perllink ${PREFIX}/bin/perllink;		\
 	${LN} -s $$man1dir/perllink.1 ${PREFIX}/man/man1/perllink.1;	\
-	packlist="$$installarchlib/.packlist";				\
 	{ ${CAT} ${PKGDIR}/PLIST;					\
-	  ${ECHO} "@comment The following lines are automatically generated"; \
-	  ${ECHO} "@comment from the installed .packlist files.";	\
-	  { ${ECHO} "$$packlist"; ${CAT} $$packlist;			\
-	    ${ECHO} "$$scriptdir/perllink";				\
-	    ${ECHO} "$$man1dir/perllink.1";				\
-	  } | ${SED} ${PLIST_FILE_SED} | ${SORT} -u;			\
-	  { ${ECHO} "$$packlist"; ${CAT} $$packlist;			\
-	    ${ECHO} "$$scriptdir/perllink";				\
-	    ${ECHO} "$$man1dir/perllink.1";				\
-	  } | ${SED} ${PLIST_DIR_SED} | ${SORT} -ur;			\
-	} > ${PLIST_SRC}
+	  ${ECHO} "$$scriptdir/perllink";				\
+	  ${ECHO} "$$man1dir/perllink.1";				\
+	} | ${SED} -e "s,^"${PREFIX:Q}"/,," > ${PLIST_SRC}
 
+.include "packlist.mk"
 .include "../../mk/bsd.pkg.mk"
