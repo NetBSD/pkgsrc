@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/08 10:33:25 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/19 10:34:33 adrianp Exp $
 share/doc/msf
 share/msf/docs/7f8d5320.0
 share/msf/docs/BUGS
@@ -18,13 +18,16 @@ share/msf/docs/QUICKSTART.msfconsole
 share/msf/docs/QUICKSTART.msfweb
 share/msf/docs/SECURITY
 share/msf/docs/VERSION
-share/msf/docs/RELEASE_2.4.txt
+share/msf/docs/RELEASE_2.5.txt
 share/msf/docs/meterpreter.pdf
 share/msf/docs/userguide.pdf
 share/msf/docs/userguide.tex
 share/msf/docs/cacert.pem
 share/msf/data/shelldemo
 share/msf/data/vncdll.dll
+share/msf/data/passivex/passivex.dll
+share/msf/data/msfpayload/template.exe
+share/msf/data/rpc_names
 share/msf/data/meterpreter/ext_server_fs.dll
 share/msf/data/meterpreter/ext_server_net.dll
 share/msf/data/meterpreter/ext_server_process.dll
@@ -143,6 +146,37 @@ share/msf/exploits/solaris_snmpxdmid.pm
 share/msf/exploits/solaris_ttyprompt.pm
 share/msf/exploits/trackercam_phparg_overflow.pm
 share/msf/exploits/wsftp_server_503_mkd.pm
+share/msf/exploits/Tester.pm
+share/msf/exploits/altn_webadmin.pm
+share/msf/exploits/awstats_configdir_exec.pm
+share/msf/exploits/backupexec_agent.pm
+share/msf/exploits/backupexec_dump.pm
+share/msf/exploits/backupexec_registry.pm
+share/msf/exploits/badblue_ext_overflow.pm
+share/msf/exploits/barracuda_img_exec.pm
+share/msf/exploits/cabrightstor_sqlagent.pm
+share/msf/exploits/cacam_logsecurity_win32.pm
+share/msf/exploits/cacti_graphimage_exec.pm
+share/msf/exploits/edirectory_imonitor.pm
+share/msf/exploits/futuresoft_tftpd.pm
+share/msf/exploits/gnu_mailutils_imap4d.pm
+share/msf/exploits/hpux_ftpd_preauth_list.pm
+share/msf/exploits/hpux_lpd_exec.pm
+share/msf/exploits/ie_objecttype.pm
+share/msf/exploits/mailenable_auth_header.pm
+share/msf/exploits/mailenable_imap.pm
+share/msf/exploits/mdaemon_imap_cram_md5.pm
+share/msf/exploits/mercury_imap.pm
+share/msf/exploits/ms05_039_pnp.pm
+share/msf/exploits/php_vbulletin_template.pm
+share/msf/exploits/php_wordpress_lastpost.pm
+share/msf/exploits/php_xmlrpc_eval.pm
+share/msf/exploits/phpbb_highlight.pm
+share/msf/exploits/rsa_iiswebagent_redirect.pm
+share/msf/exploits/shoutcast_format_win32.pm
+share/msf/exploits/slimftpd_list_concat.pm
+share/msf/exploits/solaris_lpd_unlink.pm
+share/msf/exploits/zenworks_desktop_agent.pm
 share/msf/extras/Net_SSLeay.pm-1.23.tar.gz
 share/msf/extras/Term-ReadLine-Gnu-1.14.tar.gz
 share/msf/lib/Msf/Nop/OptyNop2.pm
@@ -211,6 +245,11 @@ share/msf/lib/Pex/Encoding/XorDwordFeedbackN.pm
 share/msf/lib/Pex/Encoding/XorDwordFeedback.pm
 share/msf/lib/Pex/Encoding/XorDword.pm
 share/msf/lib/Pex/ELFInfo.pm
+share/msf/lib/Pex/jBASE.pm
+share/msf/lib/Pex/BEServerRPC.pm
+share/msf/lib/Digest/HMAC_MD5.pm
+share/msf/lib/Digest/HMAC.pm
+share/msf/lib/Digest/HMAC_SHA1.pm
 share/msf/lib/Pex/Alpha.pm
 share/msf/lib/Msf/PayloadComponent/Windows/ia32/UploadExecStage.pm
 share/msf/lib/Msf/PayloadComponent/Windows/ia32/ShellStage.pm
@@ -334,7 +373,6 @@ share/msf/payloads/cmd_unix_reverse.pm
 share/msf/payloads/cmd_unix_reverse_nss.pm
 share/msf/payloads/cmd_interact.pm
 share/msf/payloads/cmd_localshell.pm
-share/msf/payloads/linux_ia32_dN_reverse.pm
 share/msf/payloads/linux_sparc_findsock.pm
 share/msf/payloads/solaris_sparc_findsock.pm
 share/msf/payloads/win32_passivex.pm
@@ -991,6 +1029,8 @@ share/msf/src/shellcode/win32/dllinject/vncinject/vncdll.txt
 @dirrm share/msf/data/msfweb/themes
 @dirrm share/msf/data/msfweb
 @dirrm share/msf/data/meterpreter
+@dirrm share/msf/data/msfpayload
+@dirrm share/msf/data/passivex
 @dirrm share/msf/data
 @dirrm share/msf/docs
 @dirrm share/msf
