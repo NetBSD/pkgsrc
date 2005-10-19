@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/10/04 12:47:02 adam Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/19 12:21:00 adam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -10,13 +10,13 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.sourceforge.net/
 COMMENT=	Postscript font editor
 
-VERSION=	20050919
+VERSION=	20051018
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-freetype-src
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
