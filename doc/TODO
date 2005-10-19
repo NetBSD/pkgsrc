@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4049 2005/10/19 06:45:41 xtraeme Exp $
+$NetBSD: TODO,v 1.4050 2005/10/19 06:52:39 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -689,7 +689,6 @@ Suggested package updates
 	o lcc-4.2
 	o level9-4.0
 	o lftp-3.3.0
-	o libarchive-1.02.034
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libextractor-0.5.6a
