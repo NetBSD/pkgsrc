@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11550 2005/10/19 01:34:12 wiz Exp $
+$NetBSD: CHANGES,v 1.11551 2005/10/19 01:35:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4696,5 +4696,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/snort to 2.4.3 [adrianp 2005-10-18]
 	Updated www/lynx to 2.8.5.3 [fredb 2005-10-18]
 	Updated wm/ctwm to 3.7nb2 [rillig 2005-10-18]
+	Updated x11/py-gtk2 to 2.8.2 [drochner 2005-10-18]
+	Updated x11/py-gnome2 to 2.12.1 [drochner 2005-10-18]
 	Updated pkgtools/url2pkg to 1.31 [rh 2005-10-19]
 	Updated lang/py-psyco to 1.4 [wiz 2005-10-19]
