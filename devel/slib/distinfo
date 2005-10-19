@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/04/24 22:13:40 perry Exp $
+$NetBSD: distinfo,v 1.8 2005/10/19 12:38:16 adam Exp $
 
-SHA1 (slib3a1.zip) = 8cedb61df26094060bd2f691ded7d03004238e06
-RMD160 (slib3a1.zip) = 9058c89d0da0231bdf06be084e316fb73f456f28
-Size (slib3a1.zip) = 861953 bytes
+SHA1 (slib3a2.tar.gz) = 200821f6991e7a78c244d15492eb5e7229255cd0
+RMD160 (slib3a2.tar.gz) = a58445e0b98e67e8dd0daff9362194244497a3ef
+Size (slib3a2.tar.gz) = 846350 bytes
