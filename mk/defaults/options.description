@@ -250,7 +250,9 @@ socks5			Enable Socks5 support.
 sqlite	
 ssl			Enable SSL support.
 starttls		Enable TLS support.
-static	
+static
+streamtuner-local	Enable local metadata support
+streamtuner-xiph	Enable the Xiph plugin	
 subshell	
 suexec	
 sun-jre-jce		Use unlimited strength cryptograpy extension.
