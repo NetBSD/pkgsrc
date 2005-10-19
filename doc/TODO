@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4054 2005/10/19 12:39:24 adam Exp $
+$NetBSD: TODO,v 1.4055 2005/10/19 15:28:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ Suggested package updates
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20050820 [pkg/31132]
-	o iozone-3.248
 	o ipcheck-0.219
 	o ipsec-tools-0.6.2
 	o ipv6calc-0.50
