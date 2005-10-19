@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11566 2005/10/19 20:36:31 bouyer Exp $
+$NetBSD: CHANGES,v 1.11567 2005/10/19 23:35:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4715,3 +4715,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Added audio/qsynth version 0.2.4 [adam 2005-10-19]
 	Updated www/apache to 1.3.34 [bouyer 2005-10-19]
 	Updated www/ap-ssl to 2.8.25 [bouyer 2005-10-19]
+	Renamed finance/p5-finance-quote to finance/p5-Finance-Quote [wiz 2005-10-19]
+	Updated finance/gkrellm-stock to 0.5.1nb3 [wiz 2005-10-19]
+	Updated finance/gkrellm1-stock to 0.2nb8 [wiz 2005-10-19]
+	Updated finance/gnucash to 1.8.11nb4 [wiz 2005-10-19]
