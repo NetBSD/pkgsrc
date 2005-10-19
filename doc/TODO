@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4050 2005/10/19 06:52:39 xtraeme Exp $
+$NetBSD: TODO,v 1.4051 2005/10/19 09:46:50 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1241,7 +1241,6 @@ Suggested package updates
 	o stellarium-0.7.1
 	o stlport-4.6.2
 	o strace-4.5.8
-	o streamtuner-0.99.99
 	o stunnel-4.12
 	o subtitleripper-0.3.4
 	o suse_base-10.0
