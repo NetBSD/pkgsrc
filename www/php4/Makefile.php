@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.27 2005/10/16 12:06:05 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.28 2005/10/19 18:05:06 tv Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -31,9 +31,6 @@ CONFIGURE_ARGS+=	--with-regex=php
 CONFIGURE_ARGS+=	--enable-memory-limit
 CONFIGURE_ARGS+=	--enable-track-vars
 
-CONFIGURE_ARGS+=	--with-openssl
-.include "../../security/openssl/buildlink3.mk"
-
 # Support for linking some PHP4 extensions statically into the php CGI and
 # into the apache mod_php.so DSO.
 #
@@ -52,7 +49,8 @@ CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.${PKGNAME:C/-[^-]*$//}
-PKG_SUPPORTED_OPTIONS+=	inet6
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl
+PKG_SUGGESTED_OPTIONS+=	ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -60,4 +58,11 @@ PKG_SUPPORTED_OPTIONS+=	inet6
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mssl)
+.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-openssl
+.else
+CONFIGURE_ARGS+=	--without-openssl
 .endif

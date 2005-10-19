@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.10 2005/10/16 12:06:05 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.11 2005/10/19 18:11:26 tv Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -40,11 +40,9 @@ CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-openssl
-.include "../../security/openssl/buildlink3.mk"
-
 PKG_OPTIONS_VAR=		PKG_OPTIONS.${PKGNAME:C/-[^-]*$//}
-PKG_SUPPORTED_OPTIONS+=	inet6
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl
+PKG_SUGGESTED_OPTIONS+=	ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -52,4 +50,11 @@ PKG_SUPPORTED_OPTIONS+=	inet6
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mssl)
+.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-openssl
+.else
+CONFIGURE_ARGS+=	--without-openssl
 .endif
