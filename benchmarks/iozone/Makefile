@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2004/12/03 15:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2005/10/19 15:27:19 adam Exp $
 
-DISTNAME=	iozone3_226
-PKGNAME=	iozone-3.226
+DISTNAME=	iozone3_248
+PKGNAME=	iozone-3.248
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.iozone.org/src/current/
 EXTRACT_SUFX=	.tar
@@ -14,7 +14,7 @@ RESTRICTED=	"Publication of derivative works not allowed"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/src/current
+WRKSRC=			${WRKDIR}/${DISTNAME}/src/current
 MAKEFILE=		makefile
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,9 +40,10 @@ INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKDIR}/docs/iozone.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/docs/iozone.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/IOzone
-	${INSTALL_DATA} ${WRKDIR}/docs/Iozone_ps.gz ${PREFIX}/share/doc/IOzone
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/docs/Iozone_ps.gz \
+		${PREFIX}/share/doc/IOzone
 
 benchmark:
 	@(cd ${WRKSRC}; ./iozone -Ea | tee iozone.out)
