@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11563 2005/10/19 15:10:52 minskim Exp $
+$NetBSD: CHANGES,v 1.11564 2005/10/19 15:15:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/slib to 3.1.2 [adam 2005-10-19]
 	Updated multimedia/gxine to 0.4.9 [adam 2005-10-19]
 	Updated audio/bmp to 0.9.7nb2 [minskim 2005-10-19]
+	Added audio/qsynth version 0.2.4 [adam 2005-10-19]
