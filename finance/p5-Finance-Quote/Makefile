@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/19 23:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/19 23:43:15 wiz Exp $
 
-DISTNAME=	Finance-Quote-1.08
+DISTNAME=	Finance-Quote-1.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Finance/}
 
@@ -12,6 +11,8 @@ COMMENT=	Perl module to get stock quotes from Yahoo
 
 DEPENDS+=	p5-HTML-TableExtract-1.*:../../www/p5-HTML-TableExtract
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
+
+CONFLICTS=	p5-finance-quote-[0-9]*
 
 PERL5_PACKLIST=		auto/Finance/Quote/.packlist
 
