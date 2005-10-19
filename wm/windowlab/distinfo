@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/09/04 06:05:20 xtraeme Exp $
+$NetBSD: distinfo,v 1.4 2005/10/19 06:44:48 xtraeme Exp $
 
-SHA1 (windowlab-1.32.tar) = 3927f214a0411d725aa14afc4f881d9bbda9ed81
-RMD160 (windowlab-1.32.tar) = ad192bf1a7ceddaf6ac078cebfafaeb582248923
-Size (windowlab-1.32.tar) = 163840 bytes
+SHA1 (windowlab-1.33.tar) = 2b57873de149a73116dfa27ac951f230fd452c71
+RMD160 (windowlab-1.33.tar) = 4a4a93406e80e926c0b9adcc4ea388f849c3f8e6
+Size (windowlab-1.33.tar) = 163840 bytes
 SHA1 (patch-aa) = 028b6297d880e293845e01a20ee58d6a4db808f1
-SHA1 (patch-ab) = 3a631fadc8a9a15a1175c41bf0d6ce394578b9fd
