@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/05/02 20:34:06 reed Exp $
+@comment $NetBSD: PLIST,v 1.13.4.1 2005/10/19 22:04:48 salo Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -160,6 +160,7 @@ share/httpd/htdocs/manual/index.html.fr
 share/httpd/htdocs/manual/index.html.html
 share/httpd/htdocs/manual/index.html.ja.jis
 share/httpd/htdocs/manual/install-tpf.html
+share/httpd/htdocs/manual/install-ztpf.html
 share/httpd/htdocs/manual/install.html.en
 share/httpd/htdocs/manual/install.html.es
 share/httpd/htdocs/manual/install.html.fr
