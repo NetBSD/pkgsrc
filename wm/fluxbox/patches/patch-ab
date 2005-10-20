@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.12 2005/10/20 19:01:11 tonio Exp $
+
+--- nls/be_BY/Translation.m.orig	2005-08-31 22:06:09.000000000 +0200
++++ nls/be_BY/Translation.m
+@@ -203,7 +203,6 @@ $set 16 #Windowmenu
+ 9 Прыляпіць
+ 10 Забіць
+ 
+-x
+ $set 17 #Workspace
+ 
+ 1 Працоўнае месца %d
