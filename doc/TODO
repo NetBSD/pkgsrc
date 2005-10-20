@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4068 2005/10/20 01:45:33 wiz Exp $
+$NetBSD: TODO,v 1.4069 2005/10/20 08:34:45 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -470,7 +470,6 @@ Suggested package updates
 	o dnstop-20050405
 	o dnstracer-1.8
 	o dpkg-1.10.28
-	o dspam-3.6.0
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.6
 	o dvipdfmx-20050627
