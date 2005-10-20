@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2005/07/25 15:33:31 tron Exp $
+# $NetBSD: Makefile,v 1.82.2.1 2005/10/20 09:21:01 seb Exp $
 
 DISTNAME=	lynx2.8.5
-PKGNAME=	lynx-2.8.5.2
-PKGREVISION=	2
+PKGNAME=	lynx-2.8.5.3
+#PKGREVISION=	0
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${DISTNAME}/ \
 		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${DISTNAME}/ \
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 PATCH_DIST_STRIP= -p1
 PATCH_SITES=	${MASTER_SITES:=patches/}
-PATCHFILES=	2.8.5rel.2.patch.gz
+PATCHFILES=	2.8.5rel.2.patch.gz 2.8.5rel.3.patch.gz
 
 MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://lynx.isc.org/
