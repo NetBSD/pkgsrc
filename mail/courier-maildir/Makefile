@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2005/08/11 00:03:32 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/20 20:26:15 jlam Exp $
 
-DISTNAME=	courier-0.51.0
+DISTNAME=	courier-0.52.1
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
 PKGBASE=	${PKGNAME:C/-[^-]*$//}
 CATEGORIES=	mail
