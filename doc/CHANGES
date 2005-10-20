@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11593 2005/10/20 18:21:56 drochner Exp $
+$NetBSD: CHANGES,v 1.11594 2005/10/20 19:57:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4752,3 +4752,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ethereal to 0.10.13 [drochner 2005-10-20]
 	Updated math/qalculate-gtk to 0.8.2.1 [drochner 2005-10-20]
 	Updated www/liferea to 1.0rc2 [drochner 2005-10-20]
+	Added audio/streamripper version 1.61.14 [xtraeme 2005-10-20]
