@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4071 2005/10/20 10:41:32 wiz Exp $
+$NetBSD: TODO,v 1.4072 2005/10/20 11:48:13 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -645,7 +645,6 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
-	o jabberd2-2.0s10
 	o java-lang-spec-3.0
 	o jdbc-postgresql-7.3.9
 	o jessie-1.0.0
