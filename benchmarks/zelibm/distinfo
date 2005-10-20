@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/08/02 14:53:25 drochner Exp $
+$NetBSD: distinfo,v 1.3 2005/10/20 17:35:39 wiz Exp $
 
 SHA1 (zelibm.tar.gz) = 2fc4366ed466d766042b59c1ce303a1b53f722d3
+RMD160 (zelibm.tar.gz) = 5c070996216f2a91f4c0b496662210d44b0ac517
 Size (zelibm.tar.gz) = 17616 bytes
 SHA1 (patch-aa) = 117b5146284ff0becd918a2a81cc33ca0c1b6a93
 SHA1 (patch-ab) = 066bfcb106c946fd706d221d5e5b8dd8e9c9ece8
