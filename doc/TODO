@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4057 2005/10/19 23:43:41 wiz Exp $
+$NetBSD: TODO,v 1.4058 2005/10/20 00:01:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -791,7 +791,6 @@ Suggested package updates
 	o navi2ch-1.7.5
 	o nawk-20041222
 	o ncftp2-2.8.2
-	o ncurses-5.5
 	o ncview-1.92e
 	o neon-0.25.3
 	o nessus-0.2.5
