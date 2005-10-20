@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11592 2005/10/20 17:41:01 abs Exp $
+$NetBSD: CHANGES,v 1.11593 2005/10/20 18:21:56 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4749,4 +4749,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/p5-CGI to 3.11 [abs 2005-10-20]
 	Updated devel/p5-Class-Accessor to 0.22 [abs 2005-10-20]
 	Updated devel/p5-Class-MethodMaker to 2.07 [abs 2005-10-20]
-
+	Updated net/ethereal to 0.10.13 [drochner 2005-10-20]
+	Updated math/qalculate-gtk to 0.8.2.1 [drochner 2005-10-20]
+	Updated www/liferea to 1.0rc2 [drochner 2005-10-20]
