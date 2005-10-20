@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.13 2004/03/03 13:36:09 adam Exp $
+$NetBSD: patch-aa,v 1.14 2005/10/20 00:01:32 wiz Exp $
 
---- misc/run_tic.in.orig	2003-09-06 22:31:44.000000000 +0000
+--- misc/run_tic.in.orig	2005-09-18 01:13:49.000000000 +0200
 +++ misc/run_tic.in
-@@ -91,7 +91,7 @@ TICDIR=`echo $TERMINFO | sed -e 's%/shar
+@@ -96,7 +96,7 @@ TICDIR=`echo $TERMINFO | sed -e 's%/shar
  # would generate a lot of confusing error messages if we tried to overwrite it.
  # We explicitly remove its contents rather than the directory itself, in case
  # the directory is actually a symbolic link.
 -( cd $TERMINFO && rm -fr ? 2>/dev/null )
 +#( cd $TERMINFO && rm -fr ? 2>/dev/null )
  
- # If we're not installing into /usr/share/, we'll have to adjust the location
- # of the tabset files in terminfo.src (which are in a parallel directory).
-@@ -123,6 +123,9 @@ else
- 	exit 1
+ if test "$ext_funcs" = 1 ; then
+ cat <<EOF
+@@ -138,6 +138,9 @@ else
+ fi
  fi
  
 +# For NetBSD pkgsrc, don't bother with setting a symbolic link.
