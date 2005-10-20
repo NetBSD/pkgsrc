@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4058 2005/10/20 00:01:53 wiz Exp $
+$NetBSD: TODO,v 1.4059 2005/10/20 00:03:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1094,7 +1094,6 @@ Suggested package updates
 	o py-pexpect-0.99999b
 	o py-psycopg-1.1.21
 	o py-pyrex-0.9.3.1
-	o py-qt3-sip-4.3.1
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
 	o py-sqlite-2.0.4 [www/trac needs 1.x]
