@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2005/09/11 19:58:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.39 2005/10/20 20:26:32 jlam Exp $
 
-DISTNAME=	sqwebmail-5.0.4
-PKGREVISION=	2
+DISTNAME=	sqwebmail-5.0.6
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
@@ -11,7 +10,7 @@ MAINTAINER=	jlam@NetBSD.org
 COMMENT=	webmail CGI for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/sqwebmail/
 
-DEPENDS+=	courier-maildir>=0.51.0:../../mail/courier-maildir
+DEPENDS+=	courier-maildir>=0.52.1:../../mail/courier-maildir
 DEPENDS+=	maildrop>=1.8.1:../../mail/maildrop
 
 USE_TOOLS+=		env gmake perl:run

@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.2 2005/08/11 00:03:51 jlam Exp $
+$NetBSD: patch-aj,v 1.3 2005/10/20 20:26:32 jlam Exp $
 
---- INSTALL.html.orig	2005-04-03 12:15:07.000000000 -0400
+--- INSTALL.html.orig	2005-08-31 21:37:02.000000000 -0400
 +++ INSTALL.html
-@@ -685,7 +685,7 @@ Qmail, and it implements DSNs.</p>
+@@ -701,7 +701,7 @@ Qmail, and it implements DSNs.</p>
  installation. The following presumes that SqWebMail's configuration files are
  installed in <code>/usr/lib/sqwebmail</code> (the default).</p>
  
