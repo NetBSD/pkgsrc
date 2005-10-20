@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/20 00:30:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/10/20 15:31:21 tonio Exp $
 bin/opml2snow
 bin/snownews
 man/de/man1/snownews.1
@@ -10,11 +10,16 @@ man/nl/man1/snownews.1
 man/ru_RU.KOI8-R/man1/snownews.1
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/snownews.mo
+@unexec ${RMDIR} %D/man/ru_RU.KOI8-R/man1 2> /dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru_RU.KOI8-R 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/nl/man1 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/nl 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/it/man1 2> /dev/null || ${TRUE}
