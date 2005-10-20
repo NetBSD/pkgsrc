@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.34 2005/10/19 22:05:45 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.35 2005/10/20 09:22:57 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -83,3 +83,5 @@ Pullup ticket 839 - requested by Thomas Klausner
 security fix for editors/abiword and editors/abiword-plugins                    
 Pullup ticket 842 - requested by Manuel Bouyer
 security update for apache
+Pullup ticket 841 - requested by Frederick Bruckman
+security fix for www/lynx
