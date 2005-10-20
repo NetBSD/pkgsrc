@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4077 2005/10/20 17:37:21 abs Exp $
+$NetBSD: TODO,v 1.4078 2005/10/20 17:41:01 abs Exp $
 
 Suggested new packages
 ======================
@@ -844,7 +844,6 @@ Suggested package updates
 	o p5-Class-Data-Inheritable-0.04
 	o p5-Class-Inspector-1.13
 	o p5-Class-Loader-2.03
-	o p5-Class-MethodMaker-2.07
 	o p5-Class-ReturnValue-0.53
 	o p5-Class-Trigger-0.09 [pkg/29923]
 	o p5-Class-Trigger-0.10
