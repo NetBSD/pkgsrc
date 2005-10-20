@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11578 2005/10/20 08:34:44 adrianp Exp $
+$NetBSD: CHANGES,v 1.11579 2005/10/20 10:29:50 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4735,3 +4735,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/mplayer to 1.0rc7nb3 [minskim 2005-10-20]
 	Updated mail/sylpheed to 2.0.3 [xtraeme 2005-10-20]
 	Updated mail/dspam to 3.6.0 [adrianp 2005-10-20]
+	Updated security/audit-packages to 1.39 [agc 2005-10-20]
