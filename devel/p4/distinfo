@@ -1,23 +1,32 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:22 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/10/20 17:59:49 wiz Exp $
 
 SHA1 (perforce/darwinppc/p4) = 6e8e92ca35d15dd112c81785745a896f377eaaff
+RMD160 (perforce/darwinppc/p4) = e009a34790094e7c602f64694817f407ae9f79ce
 Size (perforce/darwinppc/p4) = 500120 bytes
 SHA1 (perforce/linux24x86/p4) = 83bc0824494aee612b71ce141ab71b7bedfa66fd
+RMD160 (perforce/linux24x86/p4) = de8e8390de02200d98bac5b2e4280e87cc5a9c79
 Size (perforce/linux24x86/p4) = 451808 bytes
 SHA1 (perforce/linux52sparc/p4) = 7f8ce1b8974d8a07e0f9a0a89c4051f1d64d764b
+RMD160 (perforce/linux52sparc/p4) = 6630a4ef7d731a73a2f9a5750130b830eb43975e
 Size (perforce/linux52sparc/p4) = 436892 bytes
 SHA1 (perforce/linuxarm/p4) = fdfe0f9179d163662b09371d22c04d2e4b266d70
+RMD160 (perforce/linuxarm/p4) = 93f4e95b7946b0f27347dd474057e07812c10028
 Size (perforce/linuxarm/p4) = 472656 bytes
 SHA1 (perforce/linuxppc/p4) = 3f48346303291383b62ce23c2857a21a9666c658
+RMD160 (perforce/linuxppc/p4) = 5b3cc8ca4652340c160cddb6e9754c5dc9bff5ee
 Size (perforce/linuxppc/p4) = 840812 bytes
 SHA1 (perforce/netbsdaxp/p4) = b39fb6ade9b37a84cbc600cd8fa1550d80198780
+RMD160 (perforce/netbsdaxp/p4) = 94a950c8db347a7aa4abb5d56d861bf5957eec61
 Size (perforce/netbsdaxp/p4) = 607552 bytes
 SHA1 (perforce/netbsdx86/p4) = 778266ebc5c8051b24090ba5a1857b65abaaa2e9
 RMD160 (perforce/netbsdx86/p4) = 690db4f37dd49d57a78cd4a8cff89bed058da906
 Size (perforce/netbsdx86/p4) = 447312 bytes
 SHA1 (perforce/solaris26/p4) = e22b8d1b616d5c300330eb1b5946e68e60fff2ff
+RMD160 (perforce/solaris26/p4) = 19558a7e34682146e168d33fc5298e2488390026
 Size (perforce/solaris26/p4) = 607448 bytes
 SHA1 (perforce/solaris26x86/p4) = 8218891d7be40643f2034a6661a81fb0b57c870b
+RMD160 (perforce/solaris26x86/p4) = 75f83700cbd039be3b39aa26c842cbfcd8965d47
 Size (perforce/solaris26x86/p4) = 426116 bytes
 SHA1 (perforce/sunos/p4) = cb690dc9333f73eba9b629ce6968c69e8ef8124d
+RMD160 (perforce/sunos/p4) = 39089a6e6addf7ed238a30fc1b3c211156d64e6e
 Size (perforce/sunos/p4) = 548864 bytes
