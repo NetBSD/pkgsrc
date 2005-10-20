@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2005/09/07 02:13:19 reed Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/20 15:31:20 tonio Exp $
 
-DISTNAME=	snownews-1.5.5.1
+DISTNAME=	snownews-1.5.7
 CATEGORIES=	www
-MASTER_SITES=	http://home.kcore.de/~kiza/software/snownews/download/
+MASTER_SITES=	http://kiza.kcore.de/software/snownews/download/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://home.kcore.de/~kiza/software/snownews/
+HOMEPAGE=	http://kiza.kcore.de/software/snownews/
 COMMENT=	Small, curses based RSS feed reader
 
 BUILD_USES_MSGFMT=	YES
 
-USE_TOOLS+=		gmake
+#USE_TOOLS+=		gmake
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
 
@@ -32,7 +32,7 @@ do-install:
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/doc/man/snownews.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/opml2snow.1 ${PREFIX}/man/man1
-.for L in de es nl pt_BR ru sl zh_TW
+.for L in de es ja nl pl pt_BR ru sl zh_TW zh_CN
 	${INSTALL_DATA_DIR} ${PREFIX}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES
 	${INSTALL_DATA} ${WRKSRC}/po/${L}.mo ${PREFIX}/${PKGLOCALEDIR}/locale/${L}/LC_MESSAGES/snownews.mo
 .endfor
