@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2005/08/11 00:04:01 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2005/10/20 20:26:23 jlam Exp $
 
-DISTNAME=	courier-imap-4.0.4
+DISTNAME=	courier-imap-4.0.6
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
@@ -10,7 +10,7 @@ MAINTAINER=	jlam@NetBSD.org
 COMMENT=	IMAP server for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/imap/
 
-DEPENDS+=	courier-maildir>=0.51.0:../../mail/courier-maildir
+DEPENDS+=	courier-maildir>=0.52.1:../../mail/courier-maildir
 
 USE_TOOLS+=		env gmake perl
 USE_LANGUAGES=		c c++
