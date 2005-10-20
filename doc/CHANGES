@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11589 2005/10/20 17:31:54 tron Exp $
+$NetBSD: CHANGES,v 1.11590 2005/10/20 17:36:32 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4746,3 +4746,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/p5-Archive-Zip to 1.16 [abs 2005-10-20]
 	Updated misc/p5-Business-CreditCard to 0.28 [abs 2005-10-20]
 	Updated net/rsync to 2.6.6nb1 [tron 2005-10-20]
+	Updated www/p5-CGI to 3.11 [abs 2005-10-20]
