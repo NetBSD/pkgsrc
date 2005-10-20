@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2005/08/10 20:56:19 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/10/20 08:33:13 adrianp Exp $
 
-DISTNAME=	dspam-3.4.9
+DISTNAME=	dspam-3.6.0
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -14,27 +14,23 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		perl:run pkg-config
 REPLACE_PERL=		tools/dspam_genaliases.in			\
 			tools/dspam_corpus.in				\
-			cgi/*.cgi cgi/configure.pl.in
+			webui/cgi-bin/*.cgi webui/cgi-bin/configure.pl.in
 
-PKGCONFIG_OVERRIDE+=	dspam.pc.in
+PKGCONFIG_OVERRIDE+=	src/dspam.pc.in
 
-SUBST_CLASSES+=		cgi cgi2
+SUBST_CLASSES+=		cgi
 SUBST_STAGE.cgi=	post-patch
-SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi		\
-			cgi/templates/nav_performance.html	\
-			cgi/configure.pl.in
-SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|g"	\
-			-e "s|/var/dspam|${DSPAM_HOME}|g"		\
-			-e "s|/usr/local|${PREFIX}|g"			\
-			-e "s|-deaf|${DSPAM_PSFLAGS}|g"			\
-			-e "s|yourdomain.com|${DSPAM_DOMAIN}|g"
+SUBST_FILES.cgi=	webui/cgi-bin/templates/nav_performance.html	    \
+			webui/cgi-bin/configure.pl.in			    \
+			webui/cgi-bin/dspam.cgi webui/cgi-bin/admin.cgi	    \
+			webui/cgi-bin/graph.cgi webui/cgi-bin/admingraph.cgi
+SUBST_SED.cgi=		-e "s|auxw|${DSPAM_PSFLAGS}|g"			    \
+			-e "s|yourdomain.com|${DSPAM_DOMAIN}|g"		    \
+			-e "s|./admins|${PKG_SYSCONFDIR}/cgi-admins|"	    \
+			-e "s|configure.pl|${PKG_SYSCONFDIR}/configure.pl|" \
+			-e "s|\"\/\";|\"${DSPAM_WWWHOME}\";|" 		    \
+			-e "s|\$$FILE = \"./default.prefs\";|\$$FILE = \"${PKG_SYSCONFDIR}/cgi-default.prefs\";|"
 SUBST_MESSAGE.cgi=	"Fixing paths and default options."
-SUBST_STAGE.cgi2=	post-patch
-SUBST_FILES.cgi2=	cgi/dspam.cgi cgi/admin.cgi cgi/admingraph.cgi	\
-			cgi/graph.cgi
-SUBST_SED.cgi2=		-e "s|./admins|${PKG_SYSCONFDIR}/cgi-admins|"	\
-	-e "s|\$$FILE = \"./default.prefs\";|\$$FILE = \"${PKG_SYSCONFDIR}/cgi-default.prefs\";|" \
-	-e "s|configure.pl|${PKG_SYSCONFDIR}/configure.pl|"
 
 BUILD_DEFS+=		DSPAM_HOME
 BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
@@ -42,6 +38,7 @@ BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
 BUILD_DEFS+=		DSPAM_BINMODE
 BUILD_DEFS+=		DSPAM_LOGDIR
 BUILD_DEFS+=		DSPAM_DOMAIN
+BUILD_DEFS+=		DSPAM_WWWHOME
 BUILD_DEFS+=		DSPAM_PIDDIR
 
 .include "../../mk/bsd.prefs.mk"
@@ -54,6 +51,7 @@ DSPAM_USER?=		dspam
 DSPAM_GROUP?=		dspam
 DSPAM_LOGDIR?=		${DSPAM_HOME}/log
 DSPAM_DOMAIN?=		yourdomain.com
+DSPAM_WWWHOME?=		/dspam
 DSPAM_PIDDIR?=		${VARBASE}/run/dspam
 
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
@@ -79,7 +77,7 @@ RCD_SCRIPTS=		dspam
 PKG_SYSCONFSUBDIR=	dspam
 
 CONF_FILES_PERMS=	${EGDIR}/dspam.conf ${PKG_SYSCONFDIR}/dspam.conf \
-			${BINOWN} ${DSPAM_GROUP} 0640
+			${DSPAM_USER} ${DSPAM_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/cgi-admins ${PKG_SYSCONFDIR}/cgi-admins \
 			${APACHE_USER} ${APACHE_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/cgi-default.prefs \
@@ -94,7 +92,7 @@ SPECIAL_PERMS=		${PREFIX}/bin/dspam ${DSPAM_USER} ${DSPAM_GROUP} \
 			${DSPAM_BINMODE}
 OWN_DIRS_PERMS=		${DSPAM_HOME} ${DSPAM_USER} ${APACHE_GROUP} 0775
 OWN_DIRS_PERMS+=	${DSPAM_LOGDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0775
-OWN_DIRS_PERMS+=	${DSPAM_PIDDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0700
+OWN_DIRS_PERMS+=	${DSPAM_PIDDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0770
 
 FILES_SUBST+=		DSPAM_USER=${DSPAM_USER}
 FILES_SUBST+=		DSPAM_GROUP=${DSPAM_GROUP}
@@ -104,28 +102,35 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	src/dspam.conf.in
 SUBST_SED.conf=		-e "s,@dspam_home@,${DSPAM_HOME},g" \
-			-e "s,@delivery_agent@,${DSPAM_DELIVERY_AGENT_BIN},g"
+			-e "s,@delivery_agent@,${DSPAM_DELIVERY_AGENT_BIN},g" \
+			-e "s|@PREFIX@|${PREFIX}|g" \
+			-e "s|@VARBASE@|${VARBASE}|g" \
+			-e "s|@DSPAM_PIDDIR@|${DSPAM_PIDDIR}|g"
 SUBST_MESSAGE.conf=	"Fixing configuration file."
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/RELEASE.NOTES ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DATADIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/dspam.conf.in ${EGDIR}/dspam.conf
-	${INSTALL_DATA} ${WRKSRC}/cgi/admins ${EGDIR}/cgi-admins
-	${INSTALL_DATA} ${WRKSRC}/cgi/default.prefs ${EGDIR}/cgi-default.prefs
-	${INSTALL_DATA} ${WRKSRC}/cgi/configure.pl ${EGDIR}/configure.pl
+	${INSTALL_DATA} ${WRKSRC}/webui/cgi-bin/admins ${EGDIR}/cgi-admins
+	${INSTALL_DATA} ${WRKSRC}/webui/cgi-bin/default.prefs \
+		${EGDIR}/cgi-default.prefs
+	${INSTALL_DATA} ${WRKSRC}/webui/cgi-bin/configure.pl \
+		${EGDIR}/configure.pl
+	@${RM} ${WRKSRC}/webui/cgi-bin/dspam.cgi.orig
 
-.for d in txt cgi
+.for d in txt webui/cgi-bin webui/htdocs
 	${INSTALL_DATA_DIR} ${DATADIR}/${d}
 	cd ${WRKSRC}/${d} && ${PAX} -rwppm '-s|.*/Makefile.*$$||'	\
 		'-s|./admins.*$$||' '-s|./default.prefs.*$$||'		\
 		'-s|./configure.pl.*$$||' . ${DATADIR}/${d}
 .endfor
-.undef d
+
 .for drv in mysql pgsql
 .  if !empty(DSPAM_STORAGE_DRIVER:M${drv})
 	${INSTALL_DATA_DIR} ${DATADIR}/${drv}
@@ -133,7 +138,7 @@ post-install:
 		${PAX} -rwppm '-s|.*/Makefile.*$$||' . ${DATADIR}/${drv}
 .  endif
 .endfor
-.undef drv
+
 .if !empty(DSPAM_STORAGE_DRIVER:Msqlite*)
 	${INSTALL_DATA_DIR} ${DATADIR}/sqlite
 	 cd ${WRKSRC}/src/tools.sqlite_drv && \

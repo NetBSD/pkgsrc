@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dspam.sh,v 1.3 2005/10/12 20:22:55 xtraeme Exp $
+# $NetBSD: dspam.sh,v 1.4 2005/10/20 08:33:13 adrianp Exp $
 #
 
 # PROVIDE: dspam
@@ -24,8 +24,9 @@ dspam_precmd()
 {
     if [ ! -d @DSPAM_PIDDIR@ ]; then
 	@MKDIR@ @DSPAM_PIDDIR@
-	@CHMOD@ 0700 @DSPAM_PIDDIR@
+	@CHMOD@ 0770 @DSPAM_PIDDIR@
 	@CHOWN@ @DSPAM_USER@ @DSPAM_PIDDIR@
+	@CHGRP@ @DSPAM_GROUP@ @DSPAM_PIDDIR@
     fi
 }
 
@@ -64,8 +65,4 @@ else
 		fi
 		;;
 		esac
-fi
-
-if checkyesno "${rcvar}" && [ "$1" != "stop" -o "$1" != "status" ]; then
-	echo $(check_process $command) > $pidfile
 fi

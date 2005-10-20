@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/05/25 15:36:06 cube Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/10/20 08:33:13 adrianp Exp $
 bin/dspam
 bin/dspam_2sql
 bin/dspam_admin
@@ -22,6 +22,7 @@ include/dspam/libdspam.h
 include/dspam/libdspam_objects.h
 include/dspam/nodetree.h
 include/dspam/storage_driver.h
+include/dspam/tokenizer.h
 lib/libdspam.la
 lib/pkgconfig/dspam.pc
 man/man1/dspam.1
@@ -41,9 +42,10 @@ man/man3/dspam_process.3
 man/man3/libdspam.3
 share/doc/dspam/README
 share/doc/dspam/RELEASE.NOTES
-share/doc/dspam/appliance.txt
+share/doc/dspam/UPGRADING
 share/doc/dspam/courier.txt
 share/doc/dspam/exim.txt
+share/doc/dspam/markov.txt
 share/doc/dspam/mysql_drv.txt
 share/doc/dspam/ora_drv.txt
 share/doc/dspam/osx.txt
@@ -51,28 +53,28 @@ share/doc/dspam/pgsql_drv.txt
 share/doc/dspam/pop3filter.txt
 share/doc/dspam/postfix.txt
 share/doc/dspam/qmail.txt
+share/doc/dspam/relay.txt
 share/doc/dspam/sendmail.txt
 share/doc/dspam/sqlite_drv.txt
-share/doc/dspam/win32.txt
-share/dspam/cgi/admin.cgi
-share/dspam/cgi/admingraph.cgi
-share/dspam/cgi/base.css
-share/dspam/cgi/dspam-logo-small.gif
-share/dspam/cgi/dspam.cgi
-share/dspam/cgi/graph.cgi
-share/dspam/cgi/rgb.txt
-share/dspam/cgi/templates/nav_admin_error.html
-share/dspam/cgi/templates/nav_admin_preferences.html
-share/dspam/cgi/templates/nav_admin_status.html
-share/dspam/cgi/templates/nav_admin_user.html
-share/dspam/cgi/templates/nav_alerts.html
-share/dspam/cgi/templates/nav_analysis.html
-share/dspam/cgi/templates/nav_error.html
-share/dspam/cgi/templates/nav_history.html
-share/dspam/cgi/templates/nav_performance.html
-share/dspam/cgi/templates/nav_preferences.html
-share/dspam/cgi/templates/nav_quarantine.html
-share/dspam/cgi/templates/nav_viewmessage.html
+share/dspam/webui/cgi-bin/admin.cgi
+share/dspam/webui/cgi-bin/admingraph.cgi
+share/dspam/webui/cgi-bin/dspam.cgi
+share/dspam/webui/cgi-bin/graph.cgi
+share/dspam/webui/cgi-bin/rgb.txt
+share/dspam/webui/cgi-bin/templates/nav_admin_error.html
+share/dspam/webui/cgi-bin/templates/nav_admin_preferences.html
+share/dspam/webui/cgi-bin/templates/nav_admin_status.html
+share/dspam/webui/cgi-bin/templates/nav_admin_user.html
+share/dspam/webui/cgi-bin/templates/nav_alerts.html
+share/dspam/webui/cgi-bin/templates/nav_analysis.html
+share/dspam/webui/cgi-bin/templates/nav_error.html
+share/dspam/webui/cgi-bin/templates/nav_history.html
+share/dspam/webui/cgi-bin/templates/nav_performance.html
+share/dspam/webui/cgi-bin/templates/nav_preferences.html
+share/dspam/webui/cgi-bin/templates/nav_quarantine.html
+share/dspam/webui/cgi-bin/templates/nav_viewmessage.html
+share/dspam/webui/htdocs/base.css
+share/dspam/webui/htdocs/dspam-logo-small.gif
 ${MYSQL}share/dspam/mysql/mysql_objects-4.1.sql
 ${MYSQL}share/dspam/mysql/mysql_objects-space.sql
 ${MYSQL}share/dspam/mysql/mysql_objects-speed.sql
@@ -98,8 +100,10 @@ share/examples/rc.d/dspam
 ${PGSQL}@dirrm share/dspam/pgsql
 ${MYSQL}@dirrm share/dspam/mysql
 ${SQLITE}@dirrm share/dspam/sqlite
-@dirrm share/dspam/cgi/templates
-@dirrm share/dspam/cgi
+@dirrm share/dspam/webui/cgi-bin/templates
+@dirrm share/dspam/webui/cgi-bin
+@dirrm share/dspam/webui/htdocs
+@dirrm share/dspam/webui
 @dirrm share/dspam
 @dirrm share/doc/dspam
 @dirrm include/dspam

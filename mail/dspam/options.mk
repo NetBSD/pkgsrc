@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2005/05/25 15:36:06 cube Exp $
+# $NetBSD: options.mk,v 1.11 2005/10/20 08:33:13 adrianp Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -7,7 +7,7 @@ DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
 PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs \
 			domainscale virtualusers preferences-extension \
-			neural
+			neural clamav ldap debug verbose-debug
 
 .include "../../mk/bsd.options.mk"
 
@@ -41,15 +41,19 @@ PKG_FAIL_REASON+=	"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'
 ### This is the backend database used to store the DSPAM signatures as
 ### well as other state information.  The recommended storage driver is
 ### "mysql", even for small installations.
-### Possible: mysql, pgsql, bdb, sqlite or sqlite3
-### Default: sqlite
+### Possible: mysql, pgsql, bdb, sqlite, sqlite3 or hash
+### Default: hash
 ###
-DSPAM_STORAGE_DRIVER?=	sqlite
+DSPAM_STORAGE_DRIVER?=	hash
 BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
 .if empty(DSPAM_STORAGE_DRIVER:Mmysql) && empty(DSPAM_STORAGE_DRIVER:Mpgsql)
 PKG_OPTIONS:=		${PKG_OPTIONS:Nvirtualusers}
+PKG_OPTIONS:=		${PKG_OPTIONS:Npreferences-extension}
+PKG_OPTIONS:=		${PKG_OPTIONS:Nldap}
 .endif
-.if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
+.if !empty(DSPAM_STORAGE_DRIVER:Mhash)
+CONFIGURE_ARGS+=	--with-storage-driver=hash_drv
+.elif !empty(DSPAM_STORAGE_DRIVER:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-mysql4-initialization
 CONFIGURE_ARGS+=	--with-storage-driver=mysql_drv
@@ -65,9 +69,7 @@ CONFIGURE_ARGS+=	\
 	--with-pgsql-libraries=${PGSQL_PREFIX}/lib
 PGSQL_PLIST_SUBST=	PGSQL=
 .elif !empty(DSPAM_STORAGE_DRIVER:Mbdb)
-BDB_ACCEPTED=		db4 db3
-.  include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-storage-driver=lib${BDB_TYPE}_drv
+PKG_FAIL_REASON+=	"Berkeley DB3/4 is deprecated (not recommended). Please migrate to a different storage driver."
 .elif !empty(DSPAM_STORAGE_DRIVER:Msqlite)
 .  include "../../databases/sqlite/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=sqlite_drv
@@ -80,9 +82,10 @@ SQLITE_PLIST_SUBST+=	SQLITE=
 PKG_FAIL_REASON+=	"${PKGBASE}: unknown storage driver \`${DSPAM_STORAGE_DRIVER}\'"
 .endif
 
-# daemon mode only supports MySQL and PostgreSQL
+# daemon mode only supports MySQL, PostgreSQL or hash
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || \
-    !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
+    !empty(DSPAM_STORAGE_DRIVER:Mpgsql) || \
+    !empty(DSPAM_STORAGE_DRIVER:Mhash)
 CONFIGURE_ARGS+=	--enable-daemon
 .endif
 
@@ -95,14 +98,16 @@ PLIST_SUBST+=		${PGSQL_PLIST_SUBST}
 PLIST_SUBST+=		${SQLITE_PLIST_SUBST}
 
 ###
-### Only available for mysql and pgsql backends.
+### The following are only available for mysql and pgsql backends.
 ###
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
-PKG_SUPPORTED_OPTIONS+=	preferences-extension virtualusers
+PKG_SUPPORTED_OPTIONS+=	preferences-extension virtualusers ldap
 .endif
 
-# Used to store user prefernces in the backend instead of flat files
-# (built-in method)
+###
+### Used to store user preferences in the backend instead of flat files
+### (built-in method).
+###
 .if !empty(PKG_OPTIONS:Mpreferences-extension)
 CONFIGURE_ARGS+=	--enable-preferences-extension
 .endif
@@ -113,6 +118,13 @@ CONFIGURE_ARGS+=	--enable-preferences-extension
 ###
 .if !empty(PKG_OPTIONS:Mvirtualusers)
 CONFIGURE_ARGS+=	--enable-virtual-users
+.endif
+
+###
+### Enable LDAP support via libldap
+###
+.if !empty(PKG_OPTIONS:Mldap)
+CONFIGURE_ARGS+=	--enable-ldap
 .endif
 
 ###
@@ -135,12 +147,6 @@ DEPENDS+=	p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
 ###
 .if !empty(PKG_OPTIONS:Mlargescale)
 CONFIGURE_ARGS+=	--enable-large-scale
-SUBST_CLASSES+=		large
-SUBST_STAGE.large=	pre-configure
-SUBST_FILES.large=	cgi/dspam.cgi cgi/admin.cgi
-SUBST_SED.large=	\
-	-e "s|CONFIG{'LARGE_SCALE'}.*=.*0|CONFIG{'LARGE_SCALE'}	= 1|"
-SUBST_MESSAGE.large=	"Enabling large-scale option in DSPAM."
 .endif
 
 ###
@@ -161,7 +167,7 @@ CONFIGURE_ARGS+=	--enable-domain-scale
 ### EXPERIMENTAL:
 ### Support for neural networking, please take a look at the docs.
 ###
-.if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
+.if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
 PKG_SUPPORTED_OPTIONS+=	neural
 .  if !empty(PKG_OPTIONS:Mneural)
 CONFIGURE_ARGS+=	--enable-neural-networking
@@ -172,8 +178,35 @@ CONFIGURE_ARGS+=	--enable-neural-networking
 ### These are the flags used when invoking ps(1) to list all processes.
 ###
 BUILD_DEFS+=		DSPAM_PSFLAGS
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 DSPAM_PSFLAGS?=         -deaf
 .else
 DSPAM_PSFLAGS?=         aux
+.endif
+
+###
+### Enables support for Clam Antivirus. DSPAM can interface directly with
+### clamd to perform virus scanning and can be configured to react in
+### different ways to viruses.
+###
+.if !empty(PKG_OPTIONS:Mclamav)
+CONFIGURE_ARGS+=	--enable-clamav
+.include "../../mail/clamav/buildlink3.mk
+.endif
+
+###
+### Enable debugging support for DSPAM.
+### Don't enable this unless something needs testing!
+###
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
+.endif
+
+###
+### Cause DSPAM produce verbose debug output and write them into
+### LOGDIR/dspam.debug file. Implies '--enable-debug'.
+### Never enable this for production builds !
+###
+.if !empty(PKG_OPTIONS:Mverbose-debug)
+CONFIGURE_ARGS+=	--enable-verbose-debug
 .endif
