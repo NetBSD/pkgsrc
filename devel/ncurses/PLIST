@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/10/20 00:01:32 wiz Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -843,6 +843,7 @@ ${TERMINFODIR}/a/adm42-ns
 ${TERMINFODIR}/a/adm5
 ${TERMINFODIR}/a/aepro
 ${TERMINFODIR}/a/aixterm
+${TERMINFODIR}/a/aixterm-16color
 ${TERMINFODIR}/a/aixterm-m
 ${TERMINFODIR}/a/aixterm-m-old
 ${TERMINFODIR}/a/aj
@@ -1541,6 +1542,7 @@ ${TERMINFODIR}/e/elks-glasstty
 ${TERMINFODIR}/e/elks-vt52
 ${TERMINFODIR}/e/emots
 ${TERMINFODIR}/e/emu
+${TERMINFODIR}/e/emu-220
 ${TERMINFODIR}/e/emx-base
 ${TERMINFODIR}/e/env230
 ${TERMINFODIR}/e/envision230
@@ -1762,6 +1764,7 @@ ${TERMINFODIR}/h/hpgeneric
 ${TERMINFODIR}/h/hpsub
 ${TERMINFODIR}/h/hpterm
 ${TERMINFODIR}/h/htx11
+${TERMINFODIR}/h/hurd
 ${TERMINFODIR}/h/hz1000
 ${TERMINFODIR}/h/hz1420
 ${TERMINFODIR}/h/hz1500
@@ -1952,6 +1955,7 @@ ${TERMINFODIR}/m/minitel1b-80
 ${TERMINFODIR}/m/minix
 ${TERMINFODIR}/m/minix-old
 ${TERMINFODIR}/m/minix-old-am
+${TERMINFODIR}/m/mlterm
 ${TERMINFODIR}/m/mm314
 ${TERMINFODIR}/m/mm340
 ${TERMINFODIR}/m/mod
@@ -1960,6 +1964,7 @@ ${TERMINFODIR}/m/modgraph
 ${TERMINFODIR}/m/modgraph2
 ${TERMINFODIR}/m/modgraph48
 ${TERMINFODIR}/m/mono-emx
+${TERMINFODIR}/m/morphos
 ${TERMINFODIR}/m/mouse-sun
 ${TERMINFODIR}/m/ms-vt-utf8
 ${TERMINFODIR}/m/ms-vt100
@@ -2375,6 +2380,7 @@ ${TERMINFODIR}/r/rt6221
 ${TERMINFODIR}/r/rt6221-w
 ${TERMINFODIR}/r/rtpc
 ${TERMINFODIR}/r/rxvt
+${TERMINFODIR}/r/rxvt+pcfkeys
 ${TERMINFODIR}/r/rxvt-16color
 ${TERMINFODIR}/r/rxvt-basic
 ${TERMINFODIR}/r/rxvt-color
@@ -2394,11 +2400,12 @@ ${TERMINFODIR}/s/scoansi
 ${TERMINFODIR}/s/scoansi-new
 ${TERMINFODIR}/s/scoansi-old
 ${NOT_SUNOS}${TERMINFODIR}/s/screen
-${NOT_SUNOS}${TERMINFODIR}/s/screen-w
-${NOT_SUNOS}${TERMINFODIR}/s/screen.teraterm
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-bce
 ${NOT_SUNOS}${TERMINFODIR}/s/screen-s
+${NOT_SUNOS}${TERMINFODIR}/s/screen-w
 ${NOT_SUNOS}${TERMINFODIR}/s/screen.linux
+${NOT_SUNOS}${TERMINFODIR}/s/screen.teraterm
+${TERMINFODIR}/s/screen.xterm-new
 ${TERMINFODIR}/s/screen.xterm-r6
 ${TERMINFODIR}/s/screen.xterm-xfree86
 ${TERMINFODIR}/s/screen2
@@ -2422,6 +2429,7 @@ ${TERMINFODIR}/s/sun-48
 ${TERMINFODIR}/s/sun-c
 ${TERMINFODIR}/s/sun-cgsix
 ${TERMINFODIR}/s/sun-cmd
+${TERMINFODIR}/s/sun-color
 ${TERMINFODIR}/s/sun-e
 ${TERMINFODIR}/s/sun-e-s
 ${TERMINFODIR}/s/sun-il
@@ -2755,6 +2763,7 @@ ${TERMINFODIR}/v/vt100-nam
 ${TERMINFODIR}/v/vt100-nam-w
 ${TERMINFODIR}/v/vt100-nav
 ${TERMINFODIR}/v/vt100-nav-w
+${TERMINFODIR}/v/vt100-putty
 ${TERMINFODIR}/v/vt100-s
 ${TERMINFODIR}/v/vt100-s-bot
 ${TERMINFODIR}/v/vt100-s-top
@@ -3120,6 +3129,7 @@ ${TERMINFODIR}/x/xnuppc-m-f
 ${TERMINFODIR}/x/xnuppc-m-f2
 ${TERMINFODIR}/x/xtalk
 ${TERMINFODIR}/x/xterm
+${TERMINFODIR}/x/xterm+pcfkeys
 ${TERMINFODIR}/x/xterm+sl
 ${TERMINFODIR}/x/xterm+sl-twm
 ${TERMINFODIR}/x/xterm-1002
@@ -3149,6 +3159,7 @@ ${TERMINFODIR}/x/xterm-xf86-v33
 ${TERMINFODIR}/x/xterm-xf86-v333
 ${TERMINFODIR}/x/xterm-xf86-v40
 ${TERMINFODIR}/x/xterm-xf86-v43
+${TERMINFODIR}/x/xterm-xf86-v44
 ${TERMINFODIR}/x/xterm-xfree86
 ${TERMINFODIR}/x/xterm-xi
 ${TERMINFODIR}/x/xterm1

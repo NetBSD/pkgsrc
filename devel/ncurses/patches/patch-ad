@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2004/03/08 13:26:03 wiz Exp $
+$NetBSD: patch-ad,v 1.9 2005/10/20 00:01:32 wiz Exp $
 
---- c++/Makefile.in.orig	Fri Jan 16 23:44:56 2004
+--- c++/Makefile.in.orig	2005-06-13 00:52:56.000000000 +0200
 +++ c++/Makefile.in
-@@ -149,7 +149,7 @@ LIB_OBJS = \
+@@ -152,7 +152,7 @@ LIB_OBJS = \
  
  ../lib/$(LIBNAME_LIBTOOL) : $(LIB_OBJS)
  	cd ../lib && $(LIBTOOL_LINK) $(CXX) $(CXXFLAGS) \
@@ -11,12 +11,3 @@ $NetBSD: patch-ad,v 1.8 2004/03/08 13:26:03 wiz Exp $
  		-rpath $(INSTALL_PREFIX)$(libdir) \
  		-version-info $(NCURSES_MAJOR):$(NCURSES_MINOR) $(SHLIB_LIST)
  
-@@ -184,7 +184,7 @@ mostlyclean ::
- clean :: mostlyclean
- 	-sh -c "if test -n '$x' ; then $(MAKE) clean x=''; fi"
- 	-rm -rf $(MODEL)/SunWS_cache
--	-$(LIBTOOL_CLEAN) rm -f demo$x $(AUTO_SRC) ../lib/$(LIBNAME) $(LIB_OBJS) $(LIB_OBJS:$o=.lo) $(OBJS_DEMO)
-+	-$(LIBTOOL_CLEAN) rm -f demo$x $(AUTO_SRC) ../lib/$(LIBNAME) $(LIB_OBJS) $(LIB_OBJS:.o=.lo) $(OBJS_DEMO)
- 	-rm -rf .libs
- 
- distclean :: clean
