@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/14 00:44:03 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/20 16:29:18 minskim Exp $
 #
 
 DISTNAME=	dirb18
@@ -12,6 +12,8 @@ COMMENT=	Web Content Scanner
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+BUILDLINK_DEPENDS.curl+=	curl>=7.15.0nb1
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
