@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11574 2005/10/20 00:43:55 wiz Exp $
+$NetBSD: CHANGES,v 1.11575 2005/10/20 01:45:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4728,3 +4728,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/mp3splt to 2.1c [wiz 2005-10-20]
 	Updated games/crimsonfields to 0.4.9 [wiz 2005-10-20]
 	Updated security/gnutls to 1.2.8 [wiz 2005-10-20]
+	Updated emulators/DatLib to 2.8 [wiz 2005-10-20]
+	Updated emulators/DatUtil to 2.20 [wiz 2005-10-20]
+	Updated emulators/MAMEDiff to 2.19 [wiz 2005-10-20]
+	Updated emulators/ROMBuild to 2.7 [wiz 2005-10-20]
