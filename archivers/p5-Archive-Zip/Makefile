@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/09/02 23:12:49 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/20 17:25:38 abs Exp $
 
-DISTNAME=		Archive-Zip-1.14
+DISTNAME=		Archive-Zip-1.16
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
 SVR4_PKGNAME=		p5zip
 CATEGORIES=		archivers perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Archive/}
