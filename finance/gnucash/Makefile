@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.91 2005/10/19 23:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2005/10/20 14:18:24 wiz Exp $
 
-DISTNAME=		gnucash-1.8.11
-PKGREVISION=		4
+DISTNAME=		gnucash-1.8.12
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program
 
@@ -35,6 +34,10 @@ AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS=${AM_MAKEFLAGS:Q}
 
 INFO_FILES=		gnucash-design.info
+
+# empty in 1.8.12, existed before
+post-install:
+	${RMDIR} ${PREFIX}/share/doc/gnucash
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gal/buildlink3.mk"

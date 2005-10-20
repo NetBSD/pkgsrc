@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/02/09 20:20:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2005/10/20 14:18:24 wiz Exp $
 bin/dump-finance-quote
 bin/gnc-prices
 bin/gnc-test-env
@@ -175,50 +175,6 @@ libexec/gnucash/overrides/guile
 man/man1/gnc-prices.1
 man/man1/gnucash.1
 share/aclocal/gnucash.m4
-share/doc/gnucash/Account_8h.html
-share/doc/gnucash/SchedXaction_8h.html
-share/doc/gnucash/TransLog_8h.html
-share/doc/gnucash/Transaction_8h.html
-share/doc/gnucash/annotated.html
-share/doc/gnucash/classes.html
-share/doc/gnucash/combocell_8h.html
-share/doc/gnucash/date_8h.html
-share/doc/gnucash/doxygen.css
-share/doc/gnucash/doxygen.gif
-share/doc/gnucash/files.html
-share/doc/gnucash/functions.html
-share/doc/gnucash/globals.html
-share/doc/gnucash/gnc-hbci-trans-templ_8h.html
-share/doc/gnucash/gnc-log-replay_8h.html
-share/doc/gnucash/gnc-ofx-import_8h.html
-share/doc/gnucash/gnc-pricedb_8h.html
-share/doc/gnucash/gnc-ui-util_8h.html
-share/doc/gnucash/group__Account__Quickfill.html
-share/doc/gnucash/group__Date.html
-share/doc/gnucash/group__Engine.html
-share/doc/gnucash/group__Import__Export.html
-share/doc/gnucash/group__UI.html
-share/doc/gnucash/import-account-matcher_8h.html
-share/doc/gnucash/import-backend_8h.html
-share/doc/gnucash/import-commodity-matcher_8h.html
-share/doc/gnucash/import-main-matcher_8h.html
-share/doc/gnucash/import-match-map_8h.html
-share/doc/gnucash/import-match-picker_8h.html
-share/doc/gnucash/import-settings_8h.html
-share/doc/gnucash/import-utilities_8h.html
-share/doc/gnucash/index.html
-share/doc/gnucash/modules.html
-share/doc/gnucash/structGNCDateEdit.html
-share/doc/gnucash/struct__FormulaCell.html
-share/doc/gnucash/struct__GNCFrequency.html
-share/doc/gnucash/struct__temporalStateData.html
-share/doc/gnucash/structaccount__group__s.html
-share/doc/gnucash/structaccount__s.html
-share/doc/gnucash/structgnc__template__xaction__data.html
-share/doc/gnucash/structgncp__SchedXaction.html
-share/doc/gnucash/structgncp__freq__spec.html
-share/doc/gnucash/structsplit__s.html
-share/doc/gnucash/structtimespec64.html
 share/examples/gnucash/Money95bank_fr.qif
 share/examples/gnucash/Money95invst_fr.qif
 share/examples/gnucash/Money95mfunds_fr.qif
@@ -608,6 +564,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnucash.mo
@@ -657,7 +614,6 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/gnucash/accounts/C
 @dirrm share/gnucash/accounts
 @dirrm share/gnucash
-@dirrm share/doc/gnucash
 @dirrm share/examples/gnucash
 @dirrm libexec/gnucash/overrides
 @dirrm libexec/gnucash
