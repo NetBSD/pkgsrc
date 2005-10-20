@@ -1717,4 +1717,3 @@ subversion/tests/libsvn_wc/translate-test.o: subversion/tests/libsvn_wc/translat
 subversion/tests/svn_test_editor.lo: subversion/tests/svn_test_editor.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
 
 subversion/tests/svn_tests_main.lo: subversion/tests/svn_tests_main.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
-
