@@ -1,4 +1,4 @@
-$NetBSD: patch-ax_gdb_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+$NetBSD: patch-ac,v 1.1 2005/10/20 17:48:49 wiz Exp $
 
 --- gdb/ax-gdb.c.orig	2004-02-06 11:30:47.000000000 -0700
 +++ gdb/ax-gdb.c
