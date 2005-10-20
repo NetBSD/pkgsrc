@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2005/02/18 22:12:53 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2005/10/20 20:26:37 jlam Exp $
 
---- Makefile.in.orig	2004-12-08 21:36:41.000000000 -0500
+--- Makefile.in.orig	2005-09-23 20:27:51.000000000 -0400
 +++ Makefile.in
-@@ -230,21 +230,18 @@ HTML2TXT = `which lynx 2>/dev/null && ec
- SUBDIRS = numlib liblock unicode rfc822 rfc2045 gdbmobj bdbobj maildir maildrop
- EXTRA_DIST = README.html INSTALL.html UPGRADE.html README.postfix maildroptips.txt automake.fix COPYING.GPL manpage.css
+@@ -243,21 +243,18 @@ EXTRA_DIST = README.html INSTALL.html UP
+ 	maildroptips.txt automake.fix COPYING.GPL manpage.css pgpkeys.txt
+ 
  scriptdir = $(pkgdatadir)/scripts
 -htmldir = $(pkgdatadir)/html
 +htmldir = $(prefix)/share/doc/courier
@@ -30,9 +30,9 @@ $NetBSD: patch-aa,v 1.4 2005/02/18 22:12:53 jlam Exp $
 +MAILDROPMAN = lockmail.1 maildrop.1 mailbot.1 maildropex.7 \
 +	maildropfilter.7 maildropgdbm.7 makemime.1 reformail.1 reformime.1
  
- EXTRA_LIBRARIES = librfc822.a librfc2045.a
+ EXTRA_LTLIBRARIES = librfc822.la librfc2045.la
  @DEVEL_TRUE@DEVEL_MAN = rfc822.3 rfc2045.3
-@@ -1007,15 +1004,15 @@ uninstall-man: uninstall-man1 uninstall-
+@@ -1034,15 +1031,15 @@ uninstall-man: uninstall-man1 uninstall-
  #  where deliverquota will be installed.
  #  Create a soft link from bindir/deliverquota to libdir/bin/deliverquota
  
@@ -53,7 +53,7 @@ $NetBSD: patch-aa,v 1.4 2005/02/18 22:12:53 jlam Exp $
  
  @INSTALL_DELIVERQUOTA_FALSE@uninstall-deliverquota:
  
-@@ -1051,7 +1048,6 @@ install-maildrop:
+@@ -1072,7 +1069,6 @@ install-maildrop:
  		$(INSTALL_PROGRAM) maildrop/$$f $(DESTDIR)$(bindir)/$$f ; \
  	done
  	$(INSTALL_PROGRAM) liblock/lockmail $(DESTDIR)$(bindir)/lockmail
