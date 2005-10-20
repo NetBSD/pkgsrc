@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:46 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/20 18:38:29 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME}
@@ -29,7 +29,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-*
 
 .if ${OPSYS} == "Linux"
 DISTNAME=	eclipse-sourceBuild-srcIncluded-${VERSION}
-MASTER_SITES=	ftp://download.eclipse.org/R-3.0-200406251208/
+MASTER_SITES=	ftp://download.eclipse.org/R-3.0.1-200409161125/
 
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 
