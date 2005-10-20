@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11575 2005/10/20 01:45:33 wiz Exp $
+$NetBSD: CHANGES,v 1.11576 2005/10/20 03:48:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4732,3 +4732,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/DatUtil to 2.20 [wiz 2005-10-20]
 	Updated emulators/MAMEDiff to 2.19 [wiz 2005-10-20]
 	Updated emulators/ROMBuild to 2.7 [wiz 2005-10-20]
+	Updated multimedia/mplayer to 1.0rc7nb3 [minskim 2005-10-20]
