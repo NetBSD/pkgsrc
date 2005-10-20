@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/08/23 11:48:47 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2005/10/20 18:32:11 tonio Exp $
 #
 
 DISTNAME=		bitlbee-0.92
@@ -37,7 +37,9 @@ PKG_USERS=		bitlbee:nobody::Bitlbee\ user:${VARBASE}/db/bitlbee
 INSTALLATION_DIRS=	man/man8 sbin
 
 do-install:
-	${INSTALL_DATA_DIR} ${DATADIR} ${DOCDIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DATADIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/bitlbee.conf ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/bitlbee ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/doc/help.txt ${DATADIR}
