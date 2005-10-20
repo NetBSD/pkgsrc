@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4076 2005/10/20 17:36:32 abs Exp $
+$NetBSD: TODO,v 1.4077 2005/10/20 17:37:21 abs Exp $
 
 Suggested new packages
 ======================
@@ -839,7 +839,6 @@ Suggested package updates
 	o p5-CGI-Application-4.04.02
 	o p5-CGI-Minimal-1.24
 	o p5-Cache-Cache-1.04
-	o p5-Class-Accessor-0.22
 	o p5-Class-Autouse-1.21
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Data-Inheritable-0.04
