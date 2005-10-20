@@ -1,4 +1,4 @@
-$NetBSD: patch-remote_fileio_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+$NetBSD: patch-bc,v 1.1 2005/10/20 17:48:49 wiz Exp $
 
 --- gdb/remote-fileio.c.orig	2004-01-27 16:19:51.000000000 -0700
 +++ gdb/remote-fileio.c
