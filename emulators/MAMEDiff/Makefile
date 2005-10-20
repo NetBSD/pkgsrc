@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/09/27 20:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/20 01:43:53 wiz Exp $
 #
 
-DISTNAME=		mdiff218
-PKGNAME=		MAMEDiff-2.18
+DISTNAME=		mdiff219
+PKGNAME=		MAMEDiff-2.19
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/MAMEDiff/
 EXTRACT_SUFX=		.zip
@@ -18,7 +18,7 @@ BUILD_TARGET=		mamediff
 EXTRACT_CMD_OPTS.zip=	-Laaqo
 INSTALLATION_DIRS=	bin
 
-BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.7
+BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.8
 
 post-extract:
 	${MKDIR} ${WRKSRC}/obj
