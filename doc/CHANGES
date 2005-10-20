@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11585 2005/10/20 15:32:59 tonio Exp $
+$NetBSD: CHANGES,v 1.11586 2005/10/20 16:25:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4742,3 +4742,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/openoffice2-bin to 2.0.0 [mrauch 2005-10-20]
 	Updated finance/gnucash to 1.8.12 [wiz 2005-10-20]
 	Updated www/snownews to 1.5.7 [tonio 2005-10-20]
+	Updated www/curl to 7.15.0nb1 [minskim 2005-10-20]
