@@ -1,23 +1,31 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/10/20 21:26:57 wiz Exp $
 
 SHA1 (perforce/darwinppc/p4d) = 749e716e08227e2a711e641e20e0e3948c12e9b2
+RMD160 (perforce/darwinppc/p4d) = 076b04569531b81e03e81f684937c5a75a80b850
 Size (perforce/darwinppc/p4d) = 1285352 bytes
 SHA1 (perforce/linux24x86/p4d) = 156282fea8fdab66fd4a2c5524fcb8cdbdf7019b
 Size (perforce/linux24x86/p4d) = 1122120 bytes
 SHA1 (perforce/linux52sparc/p4d) = dd94e8c2f9acd01f17103de21e7bab06481aa126
+RMD160 (perforce/linux52sparc/p4d) = c1909957ce0a165b374bc51aed519e0a88f6d9d2
 Size (perforce/linux52sparc/p4d) = 1044836 bytes
 SHA1 (perforce/linuxarm/p4d) = 00351c4e649ac4dd31b61938198e6518719e1404
+RMD160 (perforce/linuxarm/p4d) = 48e9d7568fca929d0bf20c4efb82172860da47f7
 Size (perforce/linuxarm/p4d) = 1459148 bytes
 SHA1 (perforce/linuxppc/p4d) = 22a4071a5763e9d68c8f4870be5d28210b1d3271
+RMD160 (perforce/linuxppc/p4d) = 537c72e1b17663fe9f113c8afc2aba8e65954ea6
 Size (perforce/linuxppc/p4d) = 1703324 bytes
 SHA1 (perforce/netbsdaxp/p4d) = d5779f27d204bbc9fceac6c2571f8ef409c482fe
+RMD160 (perforce/netbsdaxp/p4d) = bb24dce3ae2ae8bf9b74d005d270b7b90b86b7aa
 Size (perforce/netbsdaxp/p4d) = 1991936 bytes
 SHA1 (perforce/netbsdx86/p4d) = 3edca6ab97c1974f69339df120c69d6764d3965b
 RMD160 (perforce/netbsdx86/p4d) = d787b1439520ffe7860aa37a0fa96b5083e5a7e6
 Size (perforce/netbsdx86/p4d) = 1174524 bytes
 SHA1 (perforce/solaris26/p4d) = 6c5fe8a455d055218ca36c280ebaaa6265a6da2b
+RMD160 (perforce/solaris26/p4d) = 3452b507c884ced084f1aa7abc74cf3dbef47733
 Size (perforce/solaris26/p4d) = 1505272 bytes
 SHA1 (perforce/solaris26x86/p4d) = 4ed4ffd657cbf5c44ecd61b1fbe9d528d05a3092
+RMD160 (perforce/solaris26x86/p4d) = 7b5caa34cb49da62320f6704c94850a380eebc74
 Size (perforce/solaris26x86/p4d) = 927208 bytes
 SHA1 (perforce/sunos/p4d) = b6ca9a7b4e6ed3ae781515d6c43a2e0eacaca619
+RMD160 (perforce/sunos/p4d) = 2412ebfe1e8781e3c58b4c482ca3c870ac188420
 Size (perforce/sunos/p4d) = 933888 bytes
