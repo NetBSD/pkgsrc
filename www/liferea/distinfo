@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2005/09/08 18:49:33 drochner Exp $
+$NetBSD: distinfo,v 1.15 2005/10/20 17:40:43 drochner Exp $
 
-SHA1 (liferea-0.9.7b.tar.gz) = 86cb810b5d6c0990d3a839eabdf82184f565f2e1
-RMD160 (liferea-0.9.7b.tar.gz) = cab0c1ba54fd665cc6fd953af54d55c471768a9b
-Size (liferea-0.9.7b.tar.gz) = 1232584 bytes
+SHA1 (liferea-1.0-RC2.tar.gz) = 99230c65d7fd1cf319c68e2098953c6b75f86377
+RMD160 (liferea-1.0-RC2.tar.gz) = 350cd68ac715ddea54409400d05898634e427220
+Size (liferea-1.0-RC2.tar.gz) = 1321347 bytes
