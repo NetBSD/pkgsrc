@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4061 2005/10/20 00:23:39 wiz Exp $
+$NetBSD: TODO,v 1.4062 2005/10/20 00:24:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -718,7 +718,6 @@ Suggested package updates
 	o lmbench-2.5
 	o lopster-1.2.2
 	o lout-3.31
-	o lua-sql
 	o lucy-1.19p
 	o lwp-2.1
 	o m1-0.7.7
