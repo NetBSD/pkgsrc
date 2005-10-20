@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.22 2005/08/04 12:02:59 rillig Exp $
+# $NetBSD: audit-packages,v 1.23 2005/10/20 10:26:54 agc Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -50,19 +50,28 @@ fi
 
 vuls="${PKGVULNDIR}/pkg-vulnerabilities"
 
+download=no
 verbose=no
 while [ $# -gt 0 ]; do
 	case "$1" in
+	-d)	download=yes ;;
 	-v)	verbose=yes ;;
 	esac
 	shift
 done
 
+# try to download vulnerability list, as requested
+# the integrity of the list is checked below
+# so just issue a warning if there was a failure
+case "$download" in
+yes)	@PREFIX@/sbin/download-vulnerability-list || \
+		echo "***WARNING***: download-vulnerability-list failure" 1>&2;;
+esac
+
 errmsg=""
 
 # check for missing vulnerabilities file
-if [ ! -f "$vuls" ]
-then
+if [ ! -f "$vuls" ]; then
 	errmsg="Missing vulnerabilities file $vuls"
 	errsolution="$ERR_DOWNLOAD"
 fi
@@ -78,8 +87,7 @@ esac
 
 case "$errmsg" in
 "")	# check that pkg_info is new enough (supports ranges)
-	if [ `@PKG_TOOLS_BIN@/pkg_info -V` -lt "$PKG_INSTALL_REQUIRED" ]
-	then
+	if [ `@PKG_TOOLS_BIN@/pkg_info -V` -lt "$PKG_INSTALL_REQUIRED" ]; then
 		errmsg='Installed pkg_info is too old.'
 		errsolution="$ERR_PKGINSTALL"
 	fi
@@ -90,15 +98,12 @@ case "$errmsg" in
 "")	# check format version of vulnerabilities file
 	file_major=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\\\."); print a[1] }' "$vuls"`
 	file_minor=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\\\."); print a[2] }' "$vuls"`
-	if [ "x$file_major" = "x" -o "x$file_minor" = "x" ]
-	then
+	if [ "x$file_major" = "x" -o "x$file_minor" = "x" ]; then
 		errmsg="No file format version found in $vuls"
 		errsolution="$ERR_DOWNLOAD"
-	elif [ "$file_major" -ne "$FORMAT_MAJOR" -o "$file_minor" -gt "$FORMAT_MINOR" ]
-	then
+	elif [ "$file_major" -ne "$FORMAT_MAJOR" -o "$file_minor" -gt "$FORMAT_MINOR" ]; then
 		errmsg="Unsupported file format version $file_major.$file_minor in $vuls (supported version: $FORMAT_MAJOR.$FORMAT_MINOR)."
-		if [ "$file_major" -le "$FORMAT_MAJOR" ]
-		then
+		if [ "$file_major" -le "$FORMAT_MAJOR" ]; then
 			errsolution="$ERR_DOWNLOAD"
 		else
 			errsolution="$ERR_UPGRADE"
