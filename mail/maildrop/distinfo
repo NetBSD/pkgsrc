@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2005/08/11 00:03:42 jlam Exp $
+$NetBSD: distinfo,v 1.9 2005/10/20 20:26:37 jlam Exp $
 
-SHA1 (maildrop-1.8.1.tar.bz2) = 431754227d64006f1952b7c2fe9a57e60129ebf2
-RMD160 (maildrop-1.8.1.tar.bz2) = 3cbcbe2ebaa3f42894ac79d7445d3b369a4eb83a
-Size (maildrop-1.8.1.tar.bz2) = 2014670 bytes
-SHA1 (patch-aa) = f7522d9b0443e9a2f4c1a8bc844cfd78ea38c1fe
-SHA1 (patch-ab) = 37d36dfd32cc12f9431a11efe7ad747975215a34
+SHA1 (maildrop-2.0.1.tar.bz2) = f9b69d7071c25def5af60893687c00ddb252d75e
+RMD160 (maildrop-2.0.1.tar.bz2) = c8f5e3b450bdf1d458a81dd54a9c9486d361ebd8
+Size (maildrop-2.0.1.tar.bz2) = 2105424 bytes
+SHA1 (patch-aa) = dc260a68f503af729981691010c6e699a8e398b2
+SHA1 (patch-ab) = c7d45179d712afd9e52dc1ef755f440ff11bb82b
