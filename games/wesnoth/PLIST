@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/10/04 18:30:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/10/20 10:41:09 wiz Exp $
 bin/wesnoth
 bin/wmlxgettext
 man/de/man6/wesnoth.6
@@ -783,18 +783,12 @@ share/wesnoth/images/drake-clasher-die-1.png
 share/wesnoth/images/drake-clasher-die-2.png
 share/wesnoth/images/drake-clasher-flying.png
 share/wesnoth/images/drake-clasher.png
-share/wesnoth/images/drake-enforcer-attack-mace.png
-share/wesnoth/images/drake-enforcer-attack-spear.png
-share/wesnoth/images/drake-enforcer-attack-sword.png
-share/wesnoth/images/drake-enforcer-defend.png
 share/wesnoth/images/drake-enforcer.png
 share/wesnoth/images/drake-fighter-attack-close1.png
 share/wesnoth/images/drake-fighter-attack-close2.png
 share/wesnoth/images/drake-fighter-attack-fire1.png
 share/wesnoth/images/drake-fighter-attack-fire2.png
 share/wesnoth/images/drake-fighter-defend.png
-share/wesnoth/images/drake-fighter-die-1.png
-share/wesnoth/images/drake-fighter-die-2.png
 share/wesnoth/images/drake-fighter-flying.png
 share/wesnoth/images/drake-fighter.png
 share/wesnoth/images/drake-fire-attack-close.png
@@ -1472,6 +1466,11 @@ share/wesnoth/images/human-pikeman-attack-ne.png
 share/wesnoth/images/human-pikeman-attack-s.png
 share/wesnoth/images/human-pikeman-attack-se.png
 share/wesnoth/images/human-pikeman-defend.png
+share/wesnoth/images/human-pikeman-die-1.png
+share/wesnoth/images/human-pikeman-die-2.png
+share/wesnoth/images/human-pikeman-die-3.png
+share/wesnoth/images/human-pikeman-die-4.png
+share/wesnoth/images/human-pikeman-die-5.png
 share/wesnoth/images/human-pikeman.png
 share/wesnoth/images/human-princess-attack.png
 share/wesnoth/images/human-princess-defend.png
@@ -1606,12 +1605,20 @@ share/wesnoth/images/mage+female-attack-magic2.png
 share/wesnoth/images/mage+female-attack-staff-1.png
 share/wesnoth/images/mage+female-attack-staff-2.png
 share/wesnoth/images/mage+female-defend.png
+share/wesnoth/images/mage+female-die-1.png
+share/wesnoth/images/mage+female-die-2.png
+share/wesnoth/images/mage+female-die-3.png
+share/wesnoth/images/mage+female-die-4.png
 share/wesnoth/images/mage+female.png
 share/wesnoth/images/mage-attack-magic1.png
 share/wesnoth/images/mage-attack-magic2.png
 share/wesnoth/images/mage-attack-staff1.png
 share/wesnoth/images/mage-attack-staff2.png
 share/wesnoth/images/mage-defend.png
+share/wesnoth/images/mage-die-1.png
+share/wesnoth/images/mage-die-2.png
+share/wesnoth/images/mage-die-3.png
+share/wesnoth/images/mage-die-4.png
 share/wesnoth/images/mage.png
 share/wesnoth/images/maps/wesnoth.png
 share/wesnoth/images/mermaid-diviner-defend.png
@@ -2079,6 +2086,9 @@ share/wesnoth/images/portraits/The_Rise_of_Wesnoth/lich.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/logalmier.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/rithrandil.png
 share/wesnoth/images/portraits/The_Rise_of_Wesnoth/typhon.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/drake-burner.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/drake-fighter.png
+share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/drake-glider.png
 share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/elvish-shaman.png
 share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/ghoul.png
 share/wesnoth/images/portraits/core/Alex_Jarocha-Ernst/mermaid-initiate.png
@@ -2159,6 +2169,10 @@ share/wesnoth/images/random-enemy.png
 share/wesnoth/images/red-mage+female-attack-staff1.png
 share/wesnoth/images/red-mage+female-attack-staff2.png
 share/wesnoth/images/red-mage+female-defend.png
+share/wesnoth/images/red-mage+female-die-1.png
+share/wesnoth/images/red-mage+female-die-2.png
+share/wesnoth/images/red-mage+female-die-3.png
+share/wesnoth/images/red-mage+female-die-4.png
 share/wesnoth/images/red-mage+female-fireball-1.png
 share/wesnoth/images/red-mage+female-fireball-2.png
 share/wesnoth/images/red-mage+female-fireball-3.png
@@ -2166,6 +2180,10 @@ share/wesnoth/images/red-mage+female.png
 share/wesnoth/images/red-mage-attack-staff1.png
 share/wesnoth/images/red-mage-attack-staff2.png
 share/wesnoth/images/red-mage-defend.png
+share/wesnoth/images/red-mage-die-1.png
+share/wesnoth/images/red-mage-die-2.png
+share/wesnoth/images/red-mage-die-3.png
+share/wesnoth/images/red-mage-die-4.png
 share/wesnoth/images/red-mage-fireball-1.png
 share/wesnoth/images/red-mage-fireball-2.png
 share/wesnoth/images/red-mage-fireball-3.png
@@ -3640,6 +3658,10 @@ share/wesnoth/images/white-cleric-magic6.png
 share/wesnoth/images/white-cleric.png
 share/wesnoth/images/white-mage+female-attack-melee.png
 share/wesnoth/images/white-mage+female-defend.png
+share/wesnoth/images/white-mage+female-die-1.png
+share/wesnoth/images/white-mage+female-die-2.png
+share/wesnoth/images/white-mage+female-die-3.png
+share/wesnoth/images/white-mage+female-die-4.png
 share/wesnoth/images/white-mage+female-magic1.png
 share/wesnoth/images/white-mage+female-magic2.png
 share/wesnoth/images/white-mage+female-magic3.png
@@ -3649,6 +3671,10 @@ share/wesnoth/images/white-mage+female-magic6.png
 share/wesnoth/images/white-mage+female.png
 share/wesnoth/images/white-mage-attack-melee.png
 share/wesnoth/images/white-mage-defend.png
+share/wesnoth/images/white-mage-die-1.png
+share/wesnoth/images/white-mage-die-2.png
+share/wesnoth/images/white-mage-die-3.png
+share/wesnoth/images/white-mage-die-4.png
 share/wesnoth/images/white-mage-magic1.png
 share/wesnoth/images/white-mage-magic2.png
 share/wesnoth/images/white-mage-magic3.png
@@ -3690,6 +3716,7 @@ share/wesnoth/images/young-ogre.png
 share/wesnoth/music/elf-land.ogg
 share/wesnoth/music/frantic.ogg
 share/wesnoth/music/main_menu.ogg
+share/wesnoth/music/main_menu_new.ogg
 share/wesnoth/music/underground.ogg
 share/wesnoth/music/wesnoth-1.ogg
 share/wesnoth/music/wesnoth-2.ogg
