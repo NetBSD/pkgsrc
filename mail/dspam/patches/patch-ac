@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2005/10/20 08:33:13 adrianp Exp $
+
+--- webui/cgi-bin/dspam.cgi.orig	2005-10-17 15:31:46.000000000 +0100
++++ webui/cgi-bin/dspam.cgi
+@@ -195,8 +195,8 @@ sub DisplayHistory {
+     }
+     close (LINES);
+ 
+-    $end = $all_lines - (($history_site-1) * $CONFIG{'HISTORY_PER_SITE'});
+-    $begin = $end - $CONFIG{'HISTORY_PER_SITE'} + 1 ;
++    $end = $all_lines - (($history_site-1) * $CONFIG{'HISTORY_PER_PAGE'});
++    $begin = $end - $CONFIG{'HISTORY_PER_PAGE'} + 1 ;
+ 
+     if ($begin < 0) {
+       $begin = 1;

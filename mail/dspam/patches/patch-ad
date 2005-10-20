@@ -1,0 +1,61 @@
+$NetBSD: patch-ad,v 1.1 2005/10/20 08:33:13 adrianp Exp $
+
+--- src/dspam.conf.in.orig	2005-10-10 14:52:21.000000000 +0100
++++ src/dspam.conf.in
+@@ -24,7 +24,7 @@ Home @dspam_home@
+ # this option. If you do not wish to lose all of your data, you will need to
+ # migrate it to the new backend before making this change.
+ #
+-StorageDriver @libdir@/@storage_driver@
++#StorageDriver @libdir@/@storage_driver@
+ 
+ #
+ # Trusted Delivery Agent: Specifies the local delivery agent DSPAM should call 
+@@ -53,7 +53,7 @@ TrustedDeliveryAgent "@delivery_agent@"
+ # the user DSPAM is processing mail for. This configuration parameter is only 
+ # necessary if you plan on allowing untrusted processing.
+ #
+-#UntrustedDeliveryAgent "/usr/bin/procmail -d %u"
++#UntrustedDeliveryAgent "@PREFIX@/bin/procmail -d %u"
+ 
+ #
+ # SMTP or LMTP Delivery: Alternatively, you may wish to use SMTP or LMTP 
+@@ -73,7 +73,7 @@ TrustedDeliveryAgent "@delivery_agent@"
+ # a quarantine agent which will be called with all messages DSPAM thinks is
+ # spam. Use %u to specify the user DSPAM is processing mail for.
+ #
+-#QuarantineAgent	"/usr/bin/procmail -d spam"
++#QuarantineAgent	"@PREFIX@/bin/procmail -d spam"
+ 
+ #
+ # DSPAM can optionally process "plused users" (addresses in the user+detail
+@@ -249,7 +249,7 @@ AllowOverride whitelistThreshold
+ # Storage driver settings: Specific to a particular storage driver. Uncomment
+ # the configuration specific to your installation, if applicable.
+ #
+-#MySQLServer    	/var/lib/mysql/mysql.sock
++#MySQLServer    	/tmp/mysql.sock
+ #MySQLPort
+ #MySQLUser 	     	dspam
+ #MySQLPass    		changeme
+@@ -590,9 +590,9 @@ Opt out
+ # specified. If you want the client machine to perform delivery, use
+ # the --stdout option in conjunction with a local setup. 
+ #
+-#ServerPort		24
++#ServerPort		2400
+ #ServerQueueSize	32
+-#ServerPID              /var/run/dspam.pid
++#ServerPID              @DSPAM_PIDDIR@/dspam.pid
+ 
+ #
+ # ServerMode specifies the type of LMTP server to start. This can be one of:
+@@ -646,7 +646,7 @@ Opt out
+ # If you are a reporting streamlined blackhole list participant, you can
+ # touch ip addresses within the directory the rabl_client process is watching.
+ #
+-#RABLQueue	/var/spool/rabl
++#RABLQueue	@VARBASE@/spool/rabl
+ 
+ # DataSource: If you are using any type of data source that does not include
+ # email-like headers (such as documents), uncomment the line below. This
