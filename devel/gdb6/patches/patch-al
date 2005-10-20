@@ -1,4 +1,4 @@
-$NetBSD: patch-gdb_configure_in,v 1.2 2004/10/04 22:35:17 shannonjr Exp $
+$NetBSD: patch-al,v 1.1 2005/10/20 17:48:49 wiz Exp $
 
 --- gdb/configure.in.orig	2004-07-17 05:29:08.000000000 -0600
 +++ gdb/configure.in

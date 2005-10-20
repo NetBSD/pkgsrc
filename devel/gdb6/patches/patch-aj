@@ -1,4 +1,4 @@
-$NetBSD: patch-config_xm_nbsd_h,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+$NetBSD: patch-aj,v 1.1 2005/10/20 17:48:49 wiz Exp $
 
 --- gdb/config/xm-nbsd.h.orig	2001-12-01 19:57:13.000000000 -0700
 +++ gdb/config/xm-nbsd.h

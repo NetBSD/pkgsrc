@@ -1,4 +1,4 @@
-$NetBSD: patch-nm_nbsd_h,v 1.2 2004/10/04 22:35:17 shannonjr Exp $
+$NetBSD: patch-ba,v 1.1 2005/10/20 17:48:49 wiz Exp $
 
 --- gdb/config/nm-nbsd.h.orig	2004-10-04 08:11:51.000000000 -0600
 +++ gdb/config/nm-nbsd.h

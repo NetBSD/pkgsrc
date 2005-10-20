@@ -1,4 +1,4 @@
-$NetBSD: patch-cli_cmds_c,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+$NetBSD: patch-ai,v 1.1 2005/10/20 17:48:49 wiz Exp $
 
 --- gdb/cli/cli-cmds.c.orig	2004-02-28 11:04:37.000000000 -0700
 +++ gdb/cli/cli-cmds.c
