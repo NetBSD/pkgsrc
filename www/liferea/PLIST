@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/09/08 18:49:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/10/20 17:40:43 drochner Exp $
 bin/liferea
 bin/liferea-bin
 lib/liferea/liblihtmlg.la
@@ -9,8 +9,28 @@ share/liferea/css/adblock.css
 share/liferea/css/liferea.css
 share/liferea/css/liferea2.css
 share/liferea/doc/html/about_en.html
+share/liferea/doc/html/enclosures_en.html
 share/liferea/doc/html/folders_en.html
 share/liferea/doc/html/headlines_en.html
+share/liferea/doc/html/help_feed_available.png
+share/liferea/doc/html/help_feed_error.png
+share/liferea/doc/html/help_feed_ocs.png
+share/liferea/doc/html/help_feed_prop_auth_1.0.0.png
+share/liferea/doc/html/help_feed_prop_cache_1.0.0.png
+share/liferea/doc/html/help_feed_prop_enclosures_1.0.0.png
+share/liferea/doc/html/help_feed_prop_general_1.0.0.png
+share/liferea/doc/html/help_feed_prop_source_1.0.0.png
+share/liferea/doc/html/help_item_flag.png
+share/liferea/doc/html/help_prefs_browser_1.0.0.png
+share/liferea/doc/html/help_prefs_enclosures_1.0.0.png
+share/liferea/doc/html/help_prefs_feeds_1.0.0.png
+share/liferea/doc/html/help_prefs_folders_1.0.0.png
+share/liferea/doc/html/help_prefs_gui_1.0.0.png
+share/liferea/doc/html/help_prefs_headlines_1.0.0.png
+share/liferea/doc/html/help_prefs_proxy_1.0.0.png
+share/liferea/doc/html/help_search_1.0.0.png
+share/liferea/doc/html/help_subscribe_1.0.0.png
+share/liferea/doc/html/help_vfolder_1.0.0.png
 share/liferea/doc/html/preferences_en.html
 share/liferea/doc/html/reference.css
 share/liferea/doc/html/reference_en.html
