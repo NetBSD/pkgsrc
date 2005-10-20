@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4069 2005/10/20 08:34:45 adrianp Exp $
+$NetBSD: TODO,v 1.4070 2005/10/20 09:42:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -983,7 +983,7 @@ Suggested package updates
 	o p5-YAML-0.39
 	o p5-gettext-1.05
 	o p5-glib2-1.100
-	o p5-gtk2-1.100
+	o p5-gtk2-1.110
 	o p5-ispman-1.2
 	o p5-perl-ldap-0.3202
 	o p5-prefork-1.00
@@ -1230,6 +1230,7 @@ Suggested package updates
 	o swish-e-2.4.3
 	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
+	o sylpheed-devel-2.1.4
 	o sympa-5.1
 	o sysinfo-4.2.2
 	o tcl-itcl-3.2.1
@@ -1309,6 +1310,7 @@ Suggested package updates
 	o webmin-1.230
 	o weechat-0.1.5
 	o weewm-0.01
+	o wesnoth-1.0.1
 	o winbind-3.0.13
 	o wmctrl-1.07
 	o wmweather-2.4.3
