@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2005/08/27 06:59:52 dogcow Exp $
+# $NetBSD: Makefile,v 1.21 2005/10/20 03:47:37 minskim Exp $
 
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Software-only MPEG-1/2/4 video decoder
 
@@ -11,6 +11,9 @@ CONFIGURE_ARGS+=	--disable-mencoder
 CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 
 INSTALLATION_DIRS+=	bin
+
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin
