@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2005/08/04 12:02:59 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2005/10/20 10:26:54 agc Exp $
 
-DISTNAME=	audit-packages-1.38
+DISTNAME=	audit-packages-1.39
 CATEGORIES=	security pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -30,6 +30,7 @@ do-build:
 			-e 's|@FETCH_CMD_SHORT@|${FETCH_CMD:T}|g'	\
 			-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'		\
 			-e 's|@PKG_TOOLS_BIN@|${PKG_TOOLS_BIN}|g'	\
+			-e 's|@PREFIX@|${PREFIX}|g'			\
 			-e 's|@SH@|${SH}|g'				\
 			-e 's|@DIGEST@|${DIGEST}|g'			\
 			-e 's|@CHMOD@|${CHMOD}|g'			\

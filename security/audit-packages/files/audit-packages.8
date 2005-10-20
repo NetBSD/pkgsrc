@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.8,v 1.14 2005/08/02 00:23:31 reed Exp $
+.\" $NetBSD: audit-packages.8,v 1.15 2005/10/20 10:26:54 agc Exp $
 .\"
 .\" Copyright (c) 2003 Jeremy C. Reed.  All rights reserved.
 .\"
@@ -39,7 +39,7 @@
 .Nd show vulnerabilities in installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl v
+.Op Fl dv
 .Nm download-vulnerability-list
 .Sh DESCRIPTION
 The
@@ -55,6 +55,11 @@ If the
 option is specified,
 .Nm
 will warn when the vulnerabilities file is more than a week old.
+The
+.Fl d
+option will attempt to download this vulnerabilities
+file before scanning
+the installed packages for vulnerabilities.
 .Pp
 The
 .Nm download-vulnerability-list
