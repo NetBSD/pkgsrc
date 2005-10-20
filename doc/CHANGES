@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11569 2005/10/20 00:01:53 wiz Exp $
+$NetBSD: CHANGES,v 1.11570 2005/10/20 00:23:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4721,3 +4721,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated finance/gnucash to 1.8.11nb4 [wiz 2005-10-19]
 	Updated finance/p5-Finance-Quote to 1.10 [wiz 2005-10-19]
 	Updated devel/ncurses to 5.5 [wiz 2005-10-20]
+	Updated www/links to 2.1.0.19 [wiz 2005-10-20]
+	Updated www/links-gui to 2.1.0.19 [wiz 2005-10-20]
