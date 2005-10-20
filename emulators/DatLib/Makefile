@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/09/27 20:14:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/20 01:43:18 wiz Exp $
 #
 
-DISTNAME=		datlib27
-PKGNAME=		DatLib-2.7
+DISTNAME=		datlib28
+PKGNAME=		DatLib-2.8
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/DatLib/
 EXTRACT_SUFX=		.zip
