@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4072 2005/10/20 11:48:13 xtraeme Exp $
+$NetBSD: TODO,v 1.4073 2005/10/20 15:32:59 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1199,7 +1199,6 @@ Suggested package updates
 	o snd-7.15 [wiz]
 	o snd-7.16
 	o snes9x-1.43
-	o snownews-1.5.7
 	o socat-1.4.3.0
 	o sope-4.5.5
 	o source-highlight-2.2
