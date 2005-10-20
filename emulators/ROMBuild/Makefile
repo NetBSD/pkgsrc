@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:50 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/20 01:44:17 wiz Exp $
 #
 
-DISTNAME=		rbuild26
-PKGNAME=		ROMBuild-2.6
+DISTNAME=		rbuild27
+PKGNAME=		ROMBuild-2.7
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/ROMBuild/
 EXTRACT_SUFX=		.zip
@@ -17,6 +17,8 @@ MAKEFILE=		makefile
 BUILD_TARGET=		rombuild
 EXTRACT_CMD_OPTS.zip=	-Laaqo
 INSTALLATION_DIRS=	bin
+
+BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.8
 
 post-extract:
 	${MKDIR} ${WRKSRC}/obj
