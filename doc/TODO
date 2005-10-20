@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4064 2005/10/20 00:39:16 wiz Exp $
+$NetBSD: TODO,v 1.4065 2005/10/20 00:41:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -437,7 +437,6 @@ Suggested package updates
 	o courier-maildir-0.52
 	o cqcam-0.91
 	o crafty-19.5
-	o crimsonfields-0.4.9
 	o criticalmass-0.9.12
 	o crossfire-client-1.8.0
 	o crossfire-server-1.7.1
