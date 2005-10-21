@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.153 2005/07/22 14:27:52 frueauf Exp $
+# $NetBSD: Makefile,v 1.154 2005/10/21 20:56:50 tonio Exp $
 
 DISTNAME=	fetchmail-6.2.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	http://www.catb.org/~esr/fetchmail/ \
 		http://sunsite.unc.edu/pub/Linux/system/mail/pop/
@@ -22,6 +22,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
 LDFLAGS+=		${CFLAGS}
 USE_TOOLS+=		tbl
+
+.if ${OPSYS} == "Darwin"
+LDFLAGS+=		-lresolv
+CFLAGS.Darwin+=		-DBIND_8_COMPAT -DHAVE_RESOLV_H
+.endif
 
 .include "options.mk"
 
