@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11597 2005/10/21 03:52:01 minskim Exp $
+$NetBSD: CHANGES,v 1.11598 2005/10/21 04:02:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4759,3 +4759,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sqwebmail to 5.0.6 [jlam 2005-10-20]
 	Updated mail/maildrop to 2.0.1 [jlam 2005-10-20]
 	Added emulators/z26 version 2.13 [minskim 2005-10-21]
+	Added sysutils/zidrav version 1.20 [minskim 2005-10-21]
