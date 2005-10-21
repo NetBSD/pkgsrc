@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/09 18:37:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/21 14:47:13 drochner Exp $
 bin/kdissert
 lib/kde3/libkdissOOOdoc.la
 lib/kde3/libkdissOOOdoc.so
@@ -20,9 +20,11 @@ lib/kde3/libkdissprosperslides.la
 lib/kde3/libkdissprosperslides.so
 lib/kde3/libkdissstx.la
 lib/kde3/libkdissstx.so
+share/doc/kde/HTML/en/kdissert/common
 share/doc/kde/HTML/en/kdissert/index.cache.bz2
 share/doc/kde/HTML/en/kdissert/index.docbook
 share/doc/kde/HTML/en/kdissert/screenshot.jpg
+share/doc/kde/HTML/fr/kdissert/common
 share/doc/kde/HTML/fr/kdissert/index.cache.bz2
 share/doc/kde/HTML/fr/kdissert/index.docbook
 share/kde/apps/kdissert/kdissertui.rc
@@ -40,6 +42,7 @@ share/kde/apps/kdissert/templatedata/kdissstx.tar.gz
 share/kde/apps/kdissert/tips
 share/kde/apps/kdissertpart/kdissertpart.rc
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kdissert.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kdissert.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kdissert.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kdissert.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kdissert.mo
