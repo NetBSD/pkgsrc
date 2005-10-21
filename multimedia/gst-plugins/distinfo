@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2005/10/12 21:54:04 jmmv Exp $
+$NetBSD: distinfo,v 1.27 2005/10/21 07:44:08 xtraeme Exp $
 
 SHA1 (gst-plugins-0.8.11.tar.bz2) = 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59
 RMD160 (gst-plugins-0.8.11.tar.bz2) = 833aec123a52cd0f36ec883c349cc8d69090d749
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = ca6dd27984a020f5a01e14d785e425e8cd219e74
 SHA1 (patch-ac) = b40375ef906a77c6819c379ea789f568c2cef907
 SHA1 (patch-ae) = 3509dd08d3e010e9eb85c71ae6c42e28f6f9ec2d
 SHA1 (patch-ag) = 264ef4cb6a4fa8eb65ff55ca1c0947d3566a64b8
+SHA1 (patch-ah) = 9df4c75c56f7fe29279f270ffc1cfa716fae1a98
