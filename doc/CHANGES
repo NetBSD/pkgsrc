@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11600 2005/10/21 07:46:24 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11601 2005/10/21 10:31:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4762,3 +4762,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sysutils/zidrav version 1.20 [minskim 2005-10-21]
 	Updated pkgtools/pkglint to 4.28.2 [rillig 2005-10-21]
 	Added multimedia/gst-plugins-xvid version 0.8.11 [xtraeme 2005-10-21]
+	Updated devel/apr to 0.9.7.2.0.55 [tron 2005-10-21]
