@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11603 2005/10/21 10:34:18 tron Exp $
+$NetBSD: CHANGES,v 1.11604 2005/10/21 21:00:20 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4763,3 +4763,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.28.2 [rillig 2005-10-21]
 	Added multimedia/gst-plugins-xvid version 0.8.11 [xtraeme 2005-10-21]
 	Updated www/apache2 to 2.0.55nb1 [tron 2005-10-21]
+	Updated mail/fetchmail to 6.2.5nb6 [tonio 2005-10-21]
