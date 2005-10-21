@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/05/22 20:07:51 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/10/21 15:46:43 jschauma Exp $
 
 DISTNAME=	gmp-4.1.4
 PKGREVISION=	1
@@ -25,6 +25,12 @@ TEST_TARGET=		check
 .include "../../mk/bsd.prefs.mk"
 .if !empty(LOWER_OPSYS:Mirix5) && !empty(ABI)
 ABI=			o32
+.endif
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro)
+CFLAGS+=	-c99
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
