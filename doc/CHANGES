@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11595 2005/10/20 20:27:54 jlam Exp $
+$NetBSD: CHANGES,v 1.11596 2005/10/21 03:10:34 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4698,6 +4698,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wm/ctwm to 3.7nb2 [rillig 2005-10-18]
 	Updated x11/py-gtk2 to 2.8.2 [drochner 2005-10-18]
 	Updated x11/py-gnome2 to 2.12.1 [drochner 2005-10-18]
+	Updated devel/p5-OOTools to 2.21 [hiramatsu 2005-10-18]
 	Updated pkgtools/url2pkg to 1.31 [rh 2005-10-19]
 	Updated lang/py-psyco to 1.4 [wiz 2005-10-19]
 	Added lang/wsbasic version 1.2.4 [minskim 2005-10-19]
