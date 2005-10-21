@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/03/28 23:09:51 snj Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/21 07:41:53 xtraeme Exp $
 
---- Makefile.orig	2004-02-29 05:25:11.000000000 -0800
-+++ Makefile	2004-03-28 14:32:24.000000000 -0800
-@@ -81,7 +81,7 @@ $(OBJECTS): platform.inc
+--- Makefile.orig	2004-12-19 12:38:46.000000000 +0100
++++ Makefile	2005-10-21 08:26:37.000000000 +0200
+@@ -82,7 +82,7 @@
  
  $(BUILD_DIR):
  	@echo "  D: $(BUILD_DIR)"
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1 2004/03/28 23:09:51 snj Exp $
  
  #-----------------------------------------------------------------------------
  # Generic assembly rule
-@@ -89,7 +89,7 @@ $(BUILD_DIR):
+@@ -90,7 +90,7 @@
  
  .$(ASSEMBLY_EXTENSION).$(OBJECT_EXTENSION):
  	@echo "  A: $(@D)/$(<F)"
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1 2004/03/28 23:09:51 snj Exp $
  	@$(AS) $(AFLAGS) $< -o $(BUILD_DIR)/$@
  
  #-----------------------------------------------------------------------------
-@@ -98,7 +98,7 @@ $(BUILD_DIR):
+@@ -99,7 +99,7 @@
  
  .c.$(OBJECT_EXTENSION):
  	@echo "  C: $(@D)/$(<F)"
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.1 2004/03/28 23:09:51 snj Exp $
  	@$(CC) -c $(ARCHITECTURE) $(BUS) $(ENDIANNESS) $(FEATURES) $(SPECIFIC_CFLAGS) $(CFLAGS) $< -o $(BUILD_DIR)/$@
  
  #-----------------------------------------------------------------------------
-@@ -126,7 +126,7 @@ $(STATIC_LIB): $(BUILD_DIR) $(OBJECTS)
+@@ -127,7 +127,7 @@
  
  $(SHARED_LIB): $(BUILD_DIR) $(OBJECTS)
  	@echo "  L: $(@F)"
@@ -38,3 +38,12 @@ $NetBSD: patch-aa,v 1.1 2004/03/28 23:09:51 snj Exp $
  	@cd $(BUILD_DIR) && $(CC) $(LDFLAGS) $(OBJECTS) -o $(PRE_SHARED_LIB) $(SPECIFIC_LDFLAGS)
  
  #-----------------------------------------------------------------------------
+@@ -139,6 +139,8 @@
+ 	@$(INSTALL) -d $(libdir)
+ 	@echo "  I: $(libdir)/$(SHARED_LIB)"
+ 	@$(INSTALL) -m 755 $(BUILD_DIR)/$(SHARED_LIB) $(libdir)/$(SHARED_LIB)
++	@ln -s $(libdir)/$(SHARED_LIB) $(libdir)/libxvidcore.so
++	@ln -s $(libdir)/$(SHARED_LIB) $(libdir)/libxvidcore.so.$(API_MAJOR)
+ 	@echo "  I: $(libdir)/$(STATIC_LIB)"
+ 	@$(INSTALL) -m 755 $(BUILD_DIR)/$(STATIC_LIB) $(libdir)/$(STATIC_LIB)
+ 	@echo "  D: $(includedir)"
