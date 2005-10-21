@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/21 07:42:39 xtraeme Exp $
+lib/gstreamer-0.8/libgstxvid.la
+@comment in gstreamer: @dirrm lib/gstreamer-0.8
