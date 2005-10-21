@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.299 2005/10/14 09:23:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.300 2005/10/21 07:20:24 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1203,12 +1203,18 @@ sub get_regex_plurals() {
 
 	my @plurals_ok = qw(
 		.*S
+		.*LIST
 		.*_ENV
 		.*_REQD
+		.*_SED
 		BUILDLINK_LDADD
 		BUILDLINK_RECOMMENDED
 		COMMENT
 		EXTRACT_ONLY
+		GENERATE_PLIST
+		PLIST_CAT
+		PLIST_PRE
+		PREPEND_PATH
 		SUBST_SED
 		_.*
 	);
@@ -1226,6 +1232,7 @@ sub get_regex_plurals() {
 		INTERACTIVE_STAGE
 		LICENSE
 		MASTER_SITE_.*
+		MASTER_SORT_REGEX
 		NOT_FOR_COMPILER
 		NOT_FOR_PLATFORM
 		ONLY_FOR_COMPILER
@@ -1259,12 +1266,26 @@ sub checkline_Makefile_vartype($$) {
 	my ($line, $vartypes) = @_;
 	if ($line->text =~ $regex_varassign) {
 		my ($varname, $op, $value) = ($1, $2, $3);
-		if ($value =~ qr"\$") {
-			# ignore values that contain other variables
 
-		} elsif (exists($vartypes->{$varname})) {
+		if ($op eq "+=") {
+			my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
+			my $regex_plurals = get_regex_plurals();
+
+			if ($varbase !~ $regex_plurals) {
+				$line->log_warning("As ${varname} is modified using \"+=\", its name should indicate plural.");
+			}
+		}
+
+		if (exists($vartypes->{$varname})) {
 			my ($type) = ($vartypes->{$varname});
-			if ($type eq "Boolean") {
+
+			if ($type eq "Readonly") {
+				$line->log_error("\"${varname}\" must not be modified by the package or the user.");
+
+			} elsif ($value =~ $regex_unresolved) {
+				# ignore values that contain other variables
+
+			} elsif ($type eq "Boolean") {
 				if ($value !~ $regex_yesno) {
 					$line->log_warning("$varname should be set to YES, yes, NO, or no.");
 				}
@@ -1318,13 +1339,8 @@ sub checkline_Makefile_vartype($$) {
 				$line->log_error("[internal] Type $type unknown.");
 			}
 
-		} elsif ($op eq "+=") {
-			my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
-			my $regex_plurals = get_regex_plurals();
-
-			if ($varbase !~ $regex_plurals) {
-				$line->log_warning("As ${varname} is modified using \"+=\", its name should indicate plural.");
-			}
+		} else {
+			$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}");
 		}
 	}
 }
