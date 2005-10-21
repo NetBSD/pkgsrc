@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.393 2005/10/18 10:04:25 seb Exp $
+# $NetBSD: Makefile,v 1.394 2005/10/21 15:30:13 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -269,6 +269,7 @@ SUBDIR+=	tuxpaint-config
 SUBDIR+=	tuxpaint-stamps
 SUBDIR+=	urt
 SUBDIR+=	vcg
+SUBDIR+=	veusz
 SUBDIR+=	vid
 SUBDIR+=	viewfax
 SUBDIR+=	vp
