@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2005/10/19 04:50:32 minskim Exp $
+# $NetBSD: Makefile,v 1.74 2005/10/21 07:46:24 xtraeme Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -25,6 +25,7 @@ SUBDIR+=	gst-plugins-dvdread
 SUBDIR+=	gst-plugins-mpeg2dec
 SUBDIR+=	gst-plugins-ogg
 SUBDIR+=	gst-plugins-theora
+SUBDIR+=	gst-plugins-xvid
 SUBDIR+=	gstreamer
 SUBDIR+=	gxine
 SUBDIR+=	kdemultimedia3
