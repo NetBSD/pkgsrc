@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/10/06 17:57:49 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2005/10/21 10:55:29 drochner Exp $
 #
 
 DISTNAME=	sip-4.3.1
@@ -48,6 +48,10 @@ SUBST_CLASSES+=		pyversfx
 SUBST_STAGE.pyversfx=	pre-configure
 SUBST_FILES.pyversfx=	sipgen/sipgen.sbf
 SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
+
+# XXX hack: override bogus text file test in mk/subst.mk
+# (NetBSD's file(1) (v4.16) reports "MKS Spell hash list (old format)")
+_SUBST_IS_TEXT_FILE=	true
 
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
