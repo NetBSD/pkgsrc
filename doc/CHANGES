@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11608 2005/10/22 13:25:54 wiz Exp $
+$NetBSD: CHANGES,v 1.11609 2005/10/22 13:52:11 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4768,3 +4768,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/lzo to 2.02 [cube 2005-10-21]
 	Updated devel/pkg-config to 0.20 [wiz 2005-10-22]
 	Updated math/guppi to 0.40.3nb14 [wiz 2005-10-22]
+	Updated print/chktex to 1.6.3 [tonio 2005-10-22]
