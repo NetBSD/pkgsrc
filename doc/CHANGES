@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11612 2005/10/22 15:51:30 rillig Exp $
+$NetBSD: CHANGES,v 1.11613 2005/10/22 17:05:15 sommerfeld Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4773,3 +4773,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/tcpdump to 3.9.3nb1 [wiz 2005-10-22]
 	Updated x11/devilspie to 0.14 [wiz 2005-10-22]
 	Updated devel/libjit to 0.0.4 [rillig 2005-10-22]
+	Added devel/p5-IO-Pager version 0.06 [sommerfeld 2005-10-22]
+	Added devel/p5-File-chdir version 0.06 [sommerfeld 2005-10-22]
+	Updated devel/p5-SVN-Mirror to 0.66 [sommerfeld 2005-10-22]
+	Updated devel/svk to 1.05 [sommerfeld 2005-10-22]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4082 2005/10/22 14:26:12 wiz Exp $
+$NetBSD: TODO,v 1.4083 2005/10/22 17:05:16 sommerfeld Exp $
 
 Suggested new packages
 ======================
@@ -1213,7 +1213,6 @@ Suggested package updates
 	o stunnel-4.12
 	o subtitleripper-0.3.4
 	o suse_base-10.0
-	o svk-1.05
 	o sweep-0.8.4
 	o swfdec-0.3.5
 	o swi-prolog-5.5.33
