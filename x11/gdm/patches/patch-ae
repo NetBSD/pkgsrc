@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2005/06/26 16:52:14 jmmv Exp $
+$NetBSD: patch-ae,v 1.9 2005/10/22 22:07:32 minskim Exp $
 
---- config/Makefile.in.orig	2005-06-10 20:54:02.000000000 +0200
+--- config/Makefile.in.orig	2005-10-03 20:31:14.000000000 -0700
 +++ config/Makefile.in
-@@ -254,7 +254,7 @@ prefix = @prefix@
+@@ -277,13 +277,13 @@ prefix = @prefix@
  program_transform_name = @program_transform_name@
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
@@ -11,7 +11,15 @@ $NetBSD: patch-ae,v 1.8 2005/06/26 16:52:14 jmmv Exp $
  target_alias = @target_alias@
  pixmapdir = $(datadir)/pixmaps
  confdir = $(sysconfdir)/gdm
-@@ -510,10 +510,7 @@ install-data-hook: gdm.conf Xsession gno
+-gdmconfdir = $(GDM_CONFIGDIR)
++gdmconfdir = $(confdir)
+ crossconfdir = $(sysconfdir)/dm
+-localedir = $(sysconfdir)/gdm
++localedir = /usr/pkg/share/locale
+ bisessdir = $(datadir)/gdm/BuiltInSessions
+ instsessdir = $(datadir)/xsessions
+ initdir = $(sysconfdir)/gdm/Init
+@@ -539,10 +539,7 @@ install-data-hook: gdm.conf Xsession gno
  	$(INSTALL_SCRIPT) $(srcdir)/XKeepsCrashing $(DESTDIR)$(confdir)/XKeepsCrashing
  	$(INSTALL_SCRIPT) Xsession $(DESTDIR)$(confdir)/Xsession
  
@@ -23,7 +31,7 @@ $NetBSD: patch-ae,v 1.8 2005/06/26 16:52:14 jmmv Exp $
  
  	if test '!' -d $(DESTDIR)$(bisessdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(bisessdir); \
-@@ -589,18 +586,6 @@ install-data-hook: gdm.conf Xsession gno
+@@ -618,18 +615,6 @@ install-data-hook: gdm.conf Xsession gno
  		chmod 755 $(DESTDIR)$(gnomercdir); \
  	fi
  
