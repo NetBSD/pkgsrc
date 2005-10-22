@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2005/09/05 00:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/22 03:33:29 wiz Exp $
 #
 
 DISTNAME=	cksfv-1.3.6
 CATEGORIES=	misc
-MASTER_SITES=	http://www.modeemi.fi/~shd/foss/cksfv/files/ \
-		http://www.modeemi.fi/~shd/foss/cksfv/files/devel/
+MASTER_SITES=	http://www.iki.fi/shd/foss/cksfv/files/ \
+		http://www.iki.fi/shd/foss/cksfv/files/devel/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dillo@NetBSD.org
-HOMEPAGE=	http://www.modeemi.fi/~shd/foss/cksfv/
+HOMEPAGE=	http://www.iki.fi/shd/foss/cksfv/
 COMMENT=	Check and create simple file verification (SFV) listings
 
 HAS_CONFIGURE=	YES
