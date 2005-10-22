@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11614 2005/10/22 17:57:33 rillig Exp $
+$NetBSD: CHANGES,v 1.11615 2005/10/22 22:13:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4778,3 +4778,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/p5-SVN-Mirror to 0.66 [sommerfeld 2005-10-22]
 	Updated devel/svk to 1.05 [sommerfeld 2005-10-22]
 	Updated mail/coolmail to 1.3nb1 [rillig 2005-10-22]
+	Updated x11/gdm to 2.8.0.5nb1 [minskim 2005-10-22]
