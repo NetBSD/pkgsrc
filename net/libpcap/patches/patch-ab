@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/07/13 14:31:49 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/22 14:14:42 wiz Exp $
 
---- pcap-int.h.orig	2005-07-13 13:32:55.000000000 +0200
+--- pcap-int.h.orig	2005-07-07 08:56:04.000000000 +0200
 +++ pcap-int.h
-@@ -103,6 +103,7 @@ struct pcap_md {
+@@ -112,6 +112,7 @@ struct pcap_md {
   * Ultrix, DEC OSF/1^H^H^H^H^H^H^H^H^HDigital UNIX^H^H^H^H^H^H^H^H^H^H^H^H
   * Tru64 UNIX, and NetBSD pad to make everything line up on a nice boundary.
   */
