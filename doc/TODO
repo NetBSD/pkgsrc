@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4080 2005/10/22 13:52:11 tonio Exp $
+$NetBSD: TODO,v 1.4081 2005/10/22 13:55:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -306,7 +306,7 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GeoIP-1.3.14
-	o GridSim-3.2
+	o GridSim-3.3
 	o ImageMagick-6.2.5.1
 	o MyPasswordSafe-20041210
 	o PAM-0.80
@@ -356,6 +356,7 @@ Suggested package updates
 	o arpwatch-2.1a13
 	o asapm-3.1
 	o asc-1.16.2
+	o aspell-0.60.4
 	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.22
 	o ast-ksh-20040229
@@ -437,6 +438,7 @@ Suggested package updates
 	o cstream-2.6.0
 	o cue-20050808
 	o cuetools-1.3
+	o cvs-1.11.21
 	o cvs2svn-1.2.1 [pkg/30386]
 	o cvsgraph-1.5.2
 	o cvsweb-3.0.6
@@ -457,6 +459,7 @@ Suggested package updates
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.10
+	o devilspie-0.14
 	o devtodo-0.1.19
 	o diffstat-1.41
 	o dinotrace-9.3a
@@ -477,7 +480,7 @@ Suggested package updates
 	o e2fsprogs-1.38
 	o eagle-4.15
 	o ec-fonts-mftraced-1.0.12
-	o eclipse-3.1
+	o eclipse-3.1.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
@@ -1098,7 +1101,7 @@ Suggested package updates
 	o raine-0.43.2
 	o randread-0.2
 	o raptor-1.4.5
-	o rar-linux-3.5.0
+	o rar-linux-3.5.1
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rblcheck-1.5
