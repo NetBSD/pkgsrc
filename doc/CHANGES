@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11611 2005/10/22 14:26:11 wiz Exp $
+$NetBSD: CHANGES,v 1.11612 2005/10/22 15:51:30 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4772,3 +4772,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/libpcap to 0.9.3nb4 [wiz 2005-10-22]
 	Updated net/tcpdump to 3.9.3nb1 [wiz 2005-10-22]
 	Updated x11/devilspie to 0.14 [wiz 2005-10-22]
+	Updated devel/libjit to 0.0.4 [rillig 2005-10-22]
