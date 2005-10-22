@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/10/15 17:14:23 tron Exp $
+$NetBSD: patch-aa,v 1.5 2005/10/22 16:17:14 rillig Exp $
 
 --- Makefile.orig	Thu Jan 11 10:55:40 1996
 +++ Makefile	Thu Jul 16 05:07:04 1998
@@ -25,5 +25,5 @@ $NetBSD: patch-aa,v 1.4 2001/10/15 17:14:23 tron Exp $
 @@ -38,3 +40,3 @@
  
 -LIBS  = $(LIB_DIRS) -lXt -lX11 -lm -lXext
-+LIBS  = $(LIB_DIRS) -lXt -lX11 -lm -lXext -LSM -lcompat
++LIBS  = $(LIB_DIRS) -lXt -lX11 -lm -lXext $(EXTRA_LIBS)
  COPTS = $(CFLAGS) $(AUDIO)
