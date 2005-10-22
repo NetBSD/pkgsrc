@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2005/08/06 06:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/22 17:00:38 sommerfeld Exp $
 
-DISTNAME=	SVK-1.00
+DISTNAME=	SVK-1.05
 PKGNAME=	${DISTNAME:S/SVK/svk/}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
-MAINTAINER=	epg@NetBSD.org
+MAINTAINER=	sommerfeld@NetBSD.org
 HOMEPAGE=	http://svk.elixus.org/
-COMMENT=	A decentralized version control system built on Subversion
+COMMENT=	Decentralized version control system built on Subversion
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -34,7 +33,7 @@ DEPENDS+=	p5-PerlIO-via-symlink>=0.02:../../devel/p5-PerlIO-via-symlink
 DEPENDS+=	p5-Pod-Escapes>=1.04:../../textproc/p5-Pod-Escapes
 DEPENDS+=	p5-Pod-Simple>=3.02:../../textproc/p5-Pod-Simple
 DEPENDS+=	p5-Regexp-Shellish>=0.93:../../devel/p5-Regexp-Shellish
-DEPENDS+=	p5-SVN-Mirror>=0.58:../../devel/p5-SVN-Mirror
+DEPENDS+=	p5-SVN-Mirror>=0.66:../../devel/p5-SVN-Mirror
 DEPENDS+=	p5-SVN-Simple>=0.27:../../devel/p5-SVN-Simple
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
