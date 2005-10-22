@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11613 2005/10/22 17:05:15 sommerfeld Exp $
+$NetBSD: CHANGES,v 1.11614 2005/10/22 17:57:33 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4777,3 +4777,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/p5-File-chdir version 0.06 [sommerfeld 2005-10-22]
 	Updated devel/p5-SVN-Mirror to 0.66 [sommerfeld 2005-10-22]
 	Updated devel/svk to 1.05 [sommerfeld 2005-10-22]
+	Updated mail/coolmail to 1.3nb1 [rillig 2005-10-22]
