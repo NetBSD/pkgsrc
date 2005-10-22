@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2005/10/22 22:07:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.24 2005/10/22 22:11:51 minskim Exp $
 ${DMX}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -31,6 +31,7 @@ share/examples/gdm/PostSession/Default
 share/examples/gdm/PreSession/Default
 share/examples/gdm/XKeepsCrashing
 share/examples/gdm/Xsession
+share/examples/gdm/factory-gdm.conf
 share/examples/gdm/gdm.conf
 share/examples/gdm/locale.alias
 share/examples/gdm/modules/AccessDwellMouseEvents
