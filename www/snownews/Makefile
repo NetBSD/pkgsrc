@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/10/22 09:46:44 tonio Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/22 22:06:21 tonio Exp $
 
 DISTNAME=	snownews-1.5.7
 PKGREVISION=	1
@@ -9,9 +9,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://kiza.kcore.de/software/snownews/
 COMMENT=	Small, curses based RSS feed reader
 
+USE_MSGFMT_PLURALS=	YES
 BUILD_USES_MSGFMT=	YES
 
-USE_MSGFMT_PLURALS=	YES
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
 
