@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/10/22 17:00:38 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/22 23:22:17 sommerfeld Exp $
 
 DISTNAME=	SVK-1.05
 PKGNAME=	${DISTNAME:S/SVK/svk/}
@@ -39,6 +39,7 @@ DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
 DEPENDS+=	p5-YAML>=0.38:../../textproc/p5-YAML
 DEPENDS+=	p5-Class-Autouse>=1.15:../../devel/p5-Class-Autouse
+DEPENDS+=	p5-IO-Pager>=0.06:../../devel/p5-IO-Pager
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
