@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2005/07/16 19:10:40 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/22 13:07:24 wiz Exp $
 #
 
 DISTNAME=	chktex-1.6.1
 PKGREVISION=	3
 CATEGORIES=	print
-MASTER_SITES=	http://savannah.nongnu.org/download/chktex/chktex.pkg/1.6.1/
+MASTER_SITES=	http://savannah.nongnu.org/download/chktex/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/chktex/
