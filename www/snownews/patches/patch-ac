@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2004/11/20 00:30:29 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2005/10/22 22:06:21 tonio Exp $
 
---- Makefile.orig	2004-11-11 16:23:02.000000000 +0100
+--- Makefile.orig	2005-06-05 11:50:22.000000000 +0200
 +++ Makefile
 @@ -1,7 +1,5 @@
 -CC=         gcc
@@ -11,3 +11,12 @@ $NetBSD: patch-ac,v 1.4 2004/11/20 00:30:29 wiz Exp $
  
  ### Compiler/linker flags   ###
  ### Generated via configure ###
+@@ -38,7 +36,7 @@ snownews-static: manpages locales
+ 
+ locales:
+ 	for L in $(LOCALES); do \
+-		msgfmt -o $(LOC)/$$L.mo $(LOC)/$$L; \
++		msgfmt -o $(LOC)/$$L.mo $(LOC)/$$L.po; \
+ 	done
+ 
+ manpages:
