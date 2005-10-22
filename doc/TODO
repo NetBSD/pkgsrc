@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4083 2005/10/22 17:05:16 sommerfeld Exp $
+$NetBSD: TODO,v 1.4084 2005/10/22 23:25:47 sommerfeld Exp $
 
 Suggested new packages
 ======================
@@ -933,7 +933,6 @@ Suggested package updates
 	o p5-PostScript-MailLabels-2.21
 	o p5-Regexp-Common-2.120
 	o p5-SQL-Abstract-1.20
-	o p5-SVN-Mirror-0.67
 	o p5-SVN-Web-0.38
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
