@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2005/10/11 12:43:00 joerg Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/10/23 15:36:48 rillig Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -80,7 +80,7 @@ PKG_SHELL=	bin/zsh
 INSTALL_TARGET=	install install.info
 
 pre-install:
-	@cd ${WRKSRC}/Completion; find . -name \*.orig -exec rm \{\} \;
+	@cd ${WRKSRC}/Completion; ${FIND} . -name \*.orig -exec ${RM} \{\} \;
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zsh

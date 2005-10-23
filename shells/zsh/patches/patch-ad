@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.10 2005/10/23 15:36:48 rillig Exp $
+
 --- Completion/BSD/Command/_chflags.orig	2005-05-09 23:55:24.000000000 +0200
 +++ Completion/BSD/Command/_chflags	2005-05-09 23:55:03.000000000 +0200
 @@ -25,7 +25,7 @@
