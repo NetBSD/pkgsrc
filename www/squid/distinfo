@@ -1,32 +1,14 @@
-$NetBSD: distinfo,v 1.105 2005/10/09 14:47:55 taca Exp $
+$NetBSD: distinfo,v 1.106 2005/10/23 22:32:32 taca Exp $
 
-SHA1 (squid-2.5.11/squid-2.5.STABLE11.tar.bz2) = 0142bde507ea0f30f1ad9548d901b3acf2d5e771
-RMD160 (squid-2.5.11/squid-2.5.STABLE11.tar.bz2) = 4dac10f1657ee76e686d1736186ba45b0de49d16
-Size (squid-2.5.11/squid-2.5.STABLE11.tar.bz2) = 1075431 bytes
-SHA1 (squid-2.5.11/squid-2.5.STABLE11-delaypools_truncated.patch) = 220aa65b665d39b82fd2ebc8673af5b3bb6a02b7
-RMD160 (squid-2.5.11/squid-2.5.STABLE11-delaypools_truncated.patch) = 59a3500ce7a39562ae55d2eff65f434898b1d207
-Size (squid-2.5.11/squid-2.5.STABLE11-delaypools_truncated.patch) = 588 bytes
-SHA1 (squid-2.5.11/squid-2.5.STABLE11-tcp_outgoing_xxx.patch) = 9f1460c1a3d0f7eedc6b00c03e2238eb5867a15a
-RMD160 (squid-2.5.11/squid-2.5.STABLE11-tcp_outgoing_xxx.patch) = c4323024c40cc1ba290cd304efd93088f2b36da2
-Size (squid-2.5.11/squid-2.5.STABLE11-tcp_outgoing_xxx.patch) = 1140 bytes
-SHA1 (squid-2.5.11/squid-2.5.STABLE11-ldap_auth.patch) = 827482df32c57f8952baa6b4ad63c81dda4aafad
-RMD160 (squid-2.5.11/squid-2.5.STABLE11-ldap_auth.patch) = e117f7b7b3e6ffb9e8e25a7433898aba0a93b041
-Size (squid-2.5.11/squid-2.5.STABLE11-ldap_auth.patch) = 4857 bytes
-SHA1 (squid-2.5.11/squid-2.5.STABLE11.accel_single_host_pconn.patch) = 7318a668ff6376035e68c559a57c1a37c9e3d521
-RMD160 (squid-2.5.11/squid-2.5.STABLE11.accel_single_host_pconn.patch) = 57235922e13689e13db1b8afa395c0d081d6d7fd
-Size (squid-2.5.11/squid-2.5.STABLE11.accel_single_host_pconn.patch) = 944 bytes
-SHA1 (squid-2.5.11/squid-2.5.STABLE11-CACHE_HTTP_PORT.patch) = f59892e70b3e2eb411c4a3ed4da7dfe482da5256
-RMD160 (squid-2.5.11/squid-2.5.STABLE11-CACHE_HTTP_PORT.patch) = 10b6099c21bf66da44b77a603e2ec2d8ad9f4d80
-Size (squid-2.5.11/squid-2.5.STABLE11-CACHE_HTTP_PORT.patch) = 4010 bytes
-SHA1 (squid-2.5.11/squid-2.5.STABLE11-CNAME.patch) = e6efb35e10c203758f4970aaa8b52614e36de256
-RMD160 (squid-2.5.11/squid-2.5.STABLE11-CNAME.patch) = fa93a5f0407c3acafbbca7f0b94987e4c6b1fc78
-Size (squid-2.5.11/squid-2.5.STABLE11-CNAME.patch) = 3825 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12.tar.bz2) = 57a046ca0eda0f649d259c2c161dc95c81a5dc09
+RMD160 (squid-2.5.12/squid-2.5.STABLE12.tar.bz2) = 0b332612d90d74681e47505a2afbfb6c962807a4
+Size (squid-2.5.12/squid-2.5.STABLE12.tar.bz2) = 1075111 bytes
 SHA1 (patch-aa) = 25d47b8ab8618af2b1d2a40f1dc3630cdc14038c
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
 SHA1 (patch-ad) = 88b46bc9051ea32ebd74f06ebd362ce16f8c5c4c
 SHA1 (patch-ae) = 860c8ad41ea09282bdb0d626260084354458f653
-SHA1 (patch-ag) = c4e801c39d47162eceb1bf540b258bd1f6888d7d
+SHA1 (patch-ag) = 560f3a2a571cb988a1080e8d45f29a9eafef959e
 SHA1 (patch-aj) = aa2271e53602fe168604aeced6ed66d28fe47707
 SHA1 (patch-ak) = 108b313149271457bee702ecf9489c61715ec9e7
 SHA1 (patch-al) = 51d7c84b007ab9600ae911e1e9206cf91b937120
