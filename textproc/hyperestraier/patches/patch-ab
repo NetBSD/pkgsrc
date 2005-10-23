@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/10/23 19:13:44 minskim Exp $
+
+--- Makefile.in.orig	2005-10-20 23:22:27.000000000 -0700
++++ Makefile.in
+@@ -59,7 +59,7 @@ CPPFLAGS = -I. -I$(HOME)/include -I/usr/
+   -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
+   -DPIC=1 -D_REENTRANT=1 @MYDEFS@
+ CFLAGS = @MYCFLAGS@
+-LDFLAGS = -L. -L$(HOME)/lib -L/usr/local/lib @MYLDOPTS@
++LDFLAGS += -L. -L$(HOME)/lib -L/usr/local/lib @MYLDOPTS@
+ LIBS = @LIBS@
+ MTLIBS = @MYMTLIBS@
+ SKLIBS = @MYSKLIBS@
