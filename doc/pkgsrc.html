@@ -88,8 +88,8 @@ alink="#0000FF">
       <p><b>Table of Contents</b></p>
 
       <dl>
-        <dt><span class="chapter"><a href="#introduction">1.
-        Introduction</a></span></dt>
+        <dt><span class="chapter"><a href="#introduction">1. What
+        is pkgsrc?</a></span></dt>
 
         <dd>
           <dl>
@@ -800,6 +800,10 @@ alink="#0000FF">
                     <dt><span class="sect2"><a href=
                     "#cpp-defines">15.4.1. CPP
                     defines</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#cpp-list">15.4.2. Getting a list of CPP
+                    defines</a></span></dt>
                   </dl>
                 </dd>
 
@@ -980,7 +984,8 @@ alink="#0000FF">
         <div>
           <div>
             <h2 class="title"><a name="introduction" id=
-            "introduction"></a>Chapter&nbsp;1.&nbsp;Introduction</h2>
+            "introduction"></a>Chapter&nbsp;1.&nbsp;What is
+            pkgsrc?</h2>
           </div>
         </div>
       </div>
@@ -1655,7 +1660,7 @@ alink="#0000FF">
           via the Software Update Protocol, SUP. To do so, make
           sure your supfile has a line</p>
           <pre class="programlisting">
-release=pkgsrc
+    release=pkgsrc
 </pre>
 
           <p>in it, see the examples in <code xmlns=
@@ -2265,7 +2270,7 @@ release=pkgsrc
               .termcap entry provides adequate emulation in most
               cases:</p>
               <pre class="programlisting">
-interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+    interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 </pre>
             </div>
           </div>
@@ -2335,7 +2340,7 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
             <p>If you are using SGI's MIPSPro compiler, please
             set</p>
             <pre class="programlisting">
-PKGSRC_COMPILER=mipspro
+    PKGSRC_COMPILER=        mipspro
 </pre>
 
             <p>in <code xmlns=
@@ -2381,8 +2386,8 @@ PKGSRC_COMPILER=mipspro
             <p>To bootstrap using icc, assuming the default icc
             installation directory:</p>
             <pre class="programlisting">
-env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
-                ac_cv___attribute__=yes ./bootstrap
+    env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
+            ac_cv___attribute__=yes ./bootstrap
 </pre>
 
             <div class="note" style=
@@ -2406,7 +2411,7 @@ env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">/etc/mk.conf</code>:</p>
             <pre class="programlisting">
-PKGSRC_COMPILER=icc
+    PKGSRC_COMPILER=        icc
 </pre>
 
             <p>The default installation directory for icc is
@@ -2418,7 +2423,7 @@ PKGSRC_COMPILER=icc
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">/etc/mk.conf</code>:</p>
             <pre class="programlisting">
-ICCBASE=/opt/icc
+    ICCBASE=                /opt/icc
 </pre>
 
             <p>pkgsrc uses the static linking method of the runtime
@@ -2501,11 +2506,11 @@ ICCBASE=/opt/icc
                   work around this by enclosing all the
                   pkgsrc-specific parts of the file with:</p>
                   <pre class="programlisting">
-.ifdef BSD_PKG_MK
-# pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
-.else
-# OpenBSD stuff
-.endif
+    .ifdef BSD_PKG_MK
+    # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
+    .else
+    # OpenBSD stuff
+    .endif
 </pre>
                 </li>
               </ol>
@@ -2631,15 +2636,15 @@ ICCBASE=/opt/icc
               "http://www.w3.org/TR/xhtml1/transitional" class=
               "filename">/etc/mk.conf</code>, e.g.:</p>
               <pre class="programlisting">
-CC=     cc
-CXX=    CC
-CPP=    /usr/ccs/lib/cpp
+    CC=     cc
+    CXX=    CC
+    CPP=    /usr/ccs/lib/cpp
 </pre>
 
               <p>You may also want to build 64-bit binaries,
               e.g.:</p>
               <pre class="programlisting">
-CFLAGS= -xtarget=ultra -xarch=v9
+    CFLAGS= -xtarget=ultra -xarch=v9
 </pre>
 
               <p>Whichever compiler you use, please ensure the
@@ -3505,18 +3510,17 @@ CFLAGS= -xtarget=ultra -xarch=v9
           <span><strong class="command">make
           show-options</strong></span>, for example:</p>
           <pre class="programlisting">
-      The following options are supported by this package:
-      ssl      Enable SSL support.
-      Exactly one of the following gecko options is required:
-      firefox  Use firefox as gecko rendering engine.
-      mozilla  Use mozilla as gecko rendering engine.
-      At most one of the following database options may be selected:
-      mysql    Enable support for MySQL database.
-      pgsql    Enable support for PostgreSQL database.
+    The following options are supported by this package:
+    ssl      Enable SSL support.
+    Exactly one of the following gecko options is required:
+    firefox  Use firefox as gecko rendering engine.
+    mozilla  Use mozilla as gecko rendering engine.
+    At most one of the following database options may be selected:
+    mysql    Enable support for MySQL database.
+    pgsql    Enable support for PostgreSQL database.
 
-      These options are enabled by default: firefox
-      These options are currently enabled: mozilla ssl
-    
+    These options are enabled by default: firefox
+    These options are currently enabled: mozilla ssl
 </pre>
 
           <p>The following variables can be defined in <code xmlns=
@@ -3793,14 +3797,14 @@ CFLAGS= -xtarget=ultra -xarch=v9
               "varname">_ACCEPTABLE=yes</code> accepts <span class=
               "emphasis"><em>all</em></span> licenses.</p>
               <pre class="programlisting">
-PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
-WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
-BSDSRCDIR=      /usr/src
-BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
-OBJHOSTNAME?=   yes               # use work.`hostname`
-FAILOVER_FETCH= yes               # insist on the correct checksum
-PKG_DEVELOPER?= yes
-_ACCEPTABLE=    yes
+    PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
+    WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
+    BSDSRCDIR=      /usr/src
+    BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
+    OBJHOSTNAME?=   yes               # use work.`hostname`
+    FAILOVER_FETCH= yes               # insist on the correct checksum
+    PKG_DEVELOPER?= yes
+    _ACCEPTABLE=    yes
 </pre>
             </div>
 
@@ -3910,10 +3914,10 @@ _ACCEPTABLE=    yes
             <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
             class="filename">rc.local</code>:</p>
             <pre class="programlisting">
-( cd /usr/pkgsrc/security/ssh ; make bulk-install )
-if [ -f /usr/pkg/etc/rc.d/sshd ]; then
-    /usr/pkg/etc/rc.d/sshd
-fi
+    ( cd /usr/pkgsrc/security/ssh ; make bulk-install )
+    if [ -f /usr/pkg/etc/rc.d/sshd ]; then
+        /usr/pkg/etc/rc.d/sshd
+    fi
 </pre>
 
             <p>Not doing so will result in you being not able to
@@ -4731,7 +4735,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 
           <p>To subscribe, do:</p>
           <pre class="programlisting">
-<code class="prompt">%</code> echo subscribe <em class=
+    <code class="prompt">%</code> echo subscribe <em class=
 "replaceable"><code>listname</code></em> | mail majordomo@NetBSD.org
 </pre>
 
@@ -5098,10 +5102,10 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           "filename">wget</code> to resume downloads, you'll have
           to use something like:</p>
           <pre class="programlisting">
-FETCH_CMD=wget
-FETCH_BEFORE_ARGS=--passive-ftp
-FETCH_RESUME_ARGS=-c
-FETCH_OUTPUT_ARGS=-O
+    FETCH_CMD=             wget
+    FETCH_BEFORE_ARGS=     --passive-ftp
+    FETCH_RESUME_ARGS=     -c
+    FETCH_OUTPUT_ARGS=     -O
 </pre>
         </div>
 
@@ -5127,7 +5131,7 @@ FETCH_OUTPUT_ARGS=-O
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">/etc/mk.conf</code>:</p>
           <pre class="programlisting">
-X11_TYPE=XFree86
+    X11_TYPE=XFree86
 </pre>
         </div>
 
@@ -5153,7 +5157,7 @@ X11_TYPE=XFree86
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">/etc/mk.conf</code>:</p>
           <pre class="programlisting">
-X11_TYPE=xorg
+    X11_TYPE=xorg
 </pre>
         </div>
 
@@ -5178,8 +5182,8 @@ X11_TYPE=xorg
           firewalls, and it uses port 80 as the proxy port number.
           So the proxy environment variables are:</p>
           <pre class="programlisting">
-ftp_proxy=ftp://orpheus.amdahl.com:80/
-http_proxy=http://orpheus.amdahl.com:80/
+    ftp_proxy=ftp://orpheus.amdahl.com:80/
+    http_proxy=http://orpheus.amdahl.com:80/
 </pre>
         </div>
 
@@ -5411,9 +5415,9 @@ http_proxy=http://orpheus.amdahl.com:80/
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">/etc/mk.conf</code>:</p>
           <pre class="programlisting">
-.if exists(${LOCALBASE}/bin/sudo)
-SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
-.endif
+    .if exists(${LOCALBASE}/bin/sudo)
+    SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
+    .endif
 </pre>
         </div>
 
@@ -5949,6 +5953,10 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
                   <dt><span class="sect2"><a href=
                   "#cpp-defines">15.4.1. CPP
                   defines</a></span></dt>
+
+                  <dt><span class="sect2"><a href=
+                  "#cpp-list">15.4.2. Getting a list of CPP
+                  defines</a></span></dt>
                 </dl>
               </dd>
 
@@ -6174,14 +6182,14 @@ SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
                 than one is used, they need to be separated by
                 spaces:</p>
                 <pre class="programlisting">
-archivers     cross         geography     meta-pkgs     security
-audio         databases     graphics      misc          shells
-benchmarks    devel         ham           multimedia    sysutils
-biology       editors       inputmethod   net           textproc
-cad           emulators     lang          news          time
-chat          finance       mail          parallel      wm
-comms         fonts         math          pkgtools      www
-converters    games         mbone         print         x11
+    archivers     cross         geography     meta-pkgs     security
+    audio         databases     graphics      misc          shells
+    benchmarks    devel         ham           multimedia    sysutils
+    biology       editors       inputmethod   net           textproc
+    cad           emulators     lang          news          time
+    chat          finance       mail          parallel      wm
+    comms         fonts         math          pkgtools      www
+    converters    games         mbone         print         x11
 </pre>
               </li>
 
@@ -6193,27 +6201,26 @@ converters    games         mbone         print         x11
                 <p>The <code class="varname">MASTER_SITES</code>
                 may make use of the following predefined sites:</p>
                 <pre class="programlisting">
-            ${MASTER_SITE_APACHE}
-            ${MASTER_SITE_BACKUP}
-            ${MASTER_SITE_CYGWIN}
-            ${MASTER_SITE_DEBIAN}
-            ${MASTER_SITE_FREEBSD}
-            ${MASTER_SITE_FREEBSD_LOCAL}
-            ${MASTER_SITE_GNOME}
-            ${MASTER_SITE_GNU}
-            ${MASTER_SITE_GNUSTEP}
-            ${MASTER_SITE_IFARCHIVE}
-            ${MASTER_SITE_MOZILLA}
-            ${MASTER_SITE_OPENOFFICE}
-            ${MASTER_SITE_PERL_CPAN}
-            ${MASTER_SITE_R_CRAN}
-            ${MASTER_SITE_SOURCEFORGE}
-            ${MASTER_SITE_SUNSITE}
-            ${MASTER_SITE_SUSE}
-            ${MASTER_SITE_TEX_CTAN}
-            ${MASTER_SITE_XCONTRIB}
-            ${MASTER_SITE_XEMACS}
-          
+    ${MASTER_SITE_APACHE}
+    ${MASTER_SITE_BACKUP}
+    ${MASTER_SITE_CYGWIN}
+    ${MASTER_SITE_DEBIAN}
+    ${MASTER_SITE_FREEBSD}
+    ${MASTER_SITE_FREEBSD_LOCAL}
+    ${MASTER_SITE_GNOME}
+    ${MASTER_SITE_GNU}
+    ${MASTER_SITE_GNUSTEP}
+    ${MASTER_SITE_IFARCHIVE}
+    ${MASTER_SITE_MOZILLA}
+    ${MASTER_SITE_OPENOFFICE}
+    ${MASTER_SITE_PERL_CPAN}
+    ${MASTER_SITE_R_CRAN}
+    ${MASTER_SITE_SOURCEFORGE}
+    ${MASTER_SITE_SUNSITE}
+    ${MASTER_SITE_SUSE}
+    ${MASTER_SITE_TEX_CTAN}
+    ${MASTER_SITE_XCONTRIB}
+    ${MASTER_SITE_XEMACS}
 </pre>
 
                 <p>If one of these predefined sites is chosen, you
@@ -6223,8 +6230,8 @@ converters    games         mbone         print         x11
                 "emphasis"><em>must</em></span> use the following
                 construct to specify a subdirectory:</p>
                 <pre class="programlisting">
-            ${MASTER_SITE_GNU:=subdirectory/name/}
-            ${MASTER_SITE_SOURCEFORGE:=project_name/}
+    ${MASTER_SITE_GNU:=subdirectory/name/}
+    ${MASTER_SITE_SOURCEFORGE:=project_name/}
 </pre>
 
                 <p>Note the trailing slash after the subdirectory
@@ -6239,10 +6246,10 @@ converters    games         mbone         print         x11
                 &#8220;<span class="quote">foo</span>&#8221;
                 includes the suffix, e.g.:</p>
                 <pre class="programlisting">
-DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=     foo-file.tar.gz
-SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
-        http://www.somewhereelse.com/mirror/somehow/
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+    DISTFILES+=     foo-file.tar.gz
+    SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+            http://www.somewhereelse.com/mirror/somehow/
 </pre>
               </li>
 
@@ -6718,7 +6725,7 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
                 "http://www.w3.org/TR/xhtml1/transitional" class=
                 "filename">Makefile</code>:</p>
                 <pre class="programlisting">
-MESSAGE_SUBST+=  SOMEVAR="somevalue"
+    MESSAGE_SUBST+=  SOMEVAR="somevalue"
 </pre>
 
                 <p>replaces "${SOMEVAR}" with &#8220;<span class=
@@ -7050,17 +7057,16 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
               </div>
             </div>
             <pre class="programlisting">
-STRING=                 foo * bar `date`
-INT_LIST=               # empty
-ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
-EXT_LIST=               # empty
-ANOTHER_EXT_LIST=       a=b c=d
+    STRING=                 foo * bar `date`
+    INT_LIST=               # empty
+    ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
+    EXT_LIST=               # empty
+    ANOTHER_EXT_LIST=       a=b c=d
 
-INT_LIST+=              ${STRING}               # 1
-INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
-EXT_LIST+=              ${STRING:Q}             # 3
-EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
-      
+    INT_LIST+=              ${STRING}               # 1
+    INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
+    EXT_LIST+=              ${STRING:Q}             # 3
+    EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
 </pre>
 
             <p>When you add a string to an external list (example
@@ -7082,11 +7088,10 @@ EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
               </div>
             </div>
             <pre class="programlisting">
-EXT_LIST=       # empty
-.for i in ${INT_LIST}
-EXT_LIST+=      ${i:Q}""
-.endfor
-      
+    EXT_LIST=       # empty
+    .for i in ${INT_LIST}
+    EXT_LIST+=      ${i:Q}""
+    .endfor
 </pre>
 
             <p>This code converts the internal list <code class=
@@ -7109,17 +7114,16 @@ EXT_LIST+=      ${i:Q}""
               </div>
             </div>
             <pre class="programlisting">
-STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
-EXT_LIST=       string=${STRING:Q} x=second\ item
+    STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
+    EXT_LIST=       string=${STRING:Q} x=second\ item
 
-all:
-        echo ${STRING}                  # 1
-        echo "${STRING}"                # 2
-        echo "${STRING:Q}"              # 3
-        echo ${STRING:Q}                # 4
-        echo x${STRING:Q} | sed 1s,.,,  # 5
-        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
-      
+    all:
+            echo ${STRING}                  # 1
+            echo "${STRING}"                # 2
+            echo "${STRING:Q}"              # 3
+            echo ${STRING:Q}                # 4
+            echo x${STRING:Q} | sed 1s,.,,  # 5
+            env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
 </pre>
 
             <p>Example 1 leads to a syntax error in the shell, as
@@ -7206,16 +7210,15 @@ all:
                   value properly trimmed. And here is how we do
                   it:</p>
                   <pre class="programlisting">
-CPPFLAGS=               # empty
-CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
-CPPFLAGS+=              ${MY_CPPFLAGS}
+    CPPFLAGS=               # empty
+    CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
+    CPPFLAGS+=              ${MY_CPPFLAGS}
 
-CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
+    CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
 
-all:
-        echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
-        echo x${CONFIGURE_ARGS}x        # properly trimmed
-        
+    all:
+            echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
+            echo x${CONFIGURE_ARGS}x        # properly trimmed
 </pre>
                 </li>
 
@@ -7242,18 +7245,17 @@ all:
                   different cases which can be solved with the same
                   trick.</p>
                   <pre class="programlisting">
-EMPTY=                  # empty
-empty_test:
-        for i in a ${EMPTY:Q} c; do \
-                echo "$$i"; \
-        done
+    EMPTY=                  # empty
+    empty_test:
+            for i in a ${EMPTY:Q} c; do \
+                    echo "$$i"; \
+            done
 
-for_test:
-.for i in a:\ a:\test.txt
-        echo ${i:Q}
-        echo "foo"
-.endfor
-        
+    for_test:
+    .for i in a:\ a:\test.txt
+            echo ${i:Q}
+            echo "foo"
+    .endfor
 </pre>
 
                   <p>The first example will only print two of the
@@ -7306,8 +7308,7 @@ for_test:
             one of the closing braces is included in <code class=
             "varname">${VAR}</code> after this code executes.</p>
             <pre class="programlisting">
-        VAR:= ${VAR:N${_othervar_:C/-//}}
-      
+    VAR:=   ${VAR:N${_othervar_:C/-//}}
 </pre>
 
             <p>For a more complex code snippet and a workaround,
@@ -7400,7 +7401,7 @@ for_test:
           <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
           class="filename">PLIST</code> file you write:</p>
           <pre class="programlisting">
-@comment $NetBSD$
+    @comment $NetBSD$
 </pre>
         </div>
 
@@ -7465,16 +7466,14 @@ for_test:
           "filename">libdata/foo</code> directory removed from the
           resulting PLIST:</p>
           <pre class="programlisting">
-      PRINT_PLIST_AWK+= /^libdata\/foo/ { next; }
-    
+    PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
 </pre>
 
           <p>And to get all the <code class="varname">@dirrm</code>
           lines referring to a specific (shared) directory
           converted to <code class="varname">@comment</code>s:</p>
           <pre class="programlisting">
-      PRINT_PLIST_AWK+= /^@dirrm share\/specific/ { print "@comment " $$0; next; }
-    
+    PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
 </pre>
         </div>
 
@@ -7600,7 +7599,7 @@ for_test:
           "8.5.&nbsp;Optional files">Section&nbsp;8.5,
           &#8220;Optional files&#8221;</a>):</p>
           <pre class="programlisting">
-PLIST_SUBST+=    SOMEVAR="somevalue"
+    PLIST_SUBST+=   SOMEVAR="somevalue"
 </pre>
 
           <p>This replaces all occurrences of &#8220;<span class=
@@ -7739,8 +7738,7 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
           often not worth to add an extra package to remove it.
           Therefore, one simply does:</p>
           <pre class="programlisting">
-      @unexec ${RMDIR} %D/path/to/shared/directory 2&gt;/dev/null || ${TRUE}
-    
+    @unexec ${RMDIR} %D/path/to/shared/directory 2&gt;/dev/null || ${TRUE}
 </pre>
 
           <p>in the PLISTs of all affected packages, instead of the
@@ -7775,9 +7773,8 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
           <p>From now on, we'll discuss the second solution. To get
           an idea of the *-dirs packages available, issue:</p>
           <pre class="programlisting">
-      <code class="prompt">%</code> cd .../pkgsrc
-      <code class="prompt">%</code> ls -d */*-dirs
-    
+    <code class="prompt">%</code> cd .../pkgsrc
+    <code class="prompt">%</code> ls -d */*-dirs
 </pre>
 
           <p>Their use from other packages is very simple. The
@@ -7792,8 +7789,7 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
           class="filename">share/applications</code>, it should
           have the following line in it:</p>
           <pre class="programlisting">
-      USE_DIRS+= xdg-1.1
-    
+    USE_DIRS+=      xdg-1.1
 </pre>
 
           <p>After regenerating the PLIST using
@@ -7969,12 +7965,12 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
           <p>If a dependency on a particular package is required
           for its libraries and headers, then we replace:</p>
           <pre class="programlisting">
-DEPENDS+=   foo&gt;=1.1.0:../../category/foo
+    DEPENDS+=   foo&gt;=1.1.0:../../category/foo
 </pre>
 
           <p>with</p>
           <pre class="programlisting">
-.include "../../category/foo/buildlink3.mk"
+    .include "../../category/foo/buildlink3.mk"
 </pre>
 
           <p>The buildlink3.mk files usually define the required
@@ -7982,8 +7978,8 @@ DEPENDS+=   foo&gt;=1.1.0:../../category/foo
           dependency when using buildlink3.mk files, then you can
           define it in your Makefile; for example:</p>
           <pre class="programlisting">
-BUILDLINK_DEPENDS.foo+=   foo&gt;=1.1.0
-.include "../../category/foo/buildlink3.mk"
+    BUILDLINK_DEPENDS.foo+=   foo&gt;=1.1.0
+    .include "../../category/foo/buildlink3.mk"
 </pre>
 
           <p>There are several <code xmlns=
@@ -8154,27 +8150,27 @@ BUILDLINK_DEPENDS.foo+=   foo&gt;=1.1.0
             <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
             class="filename">pkgsrc/graphics/tiff</code>:</p>
             <pre class="programlisting">
-# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
+    # $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
+    BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
+    TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=     tiff
-.endif
+    .if !empty(BUILDLINK_DEPTH:M+)
+    BUILDLINK_DEPENDS+=     tiff
+    .endif
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
-BUILDLINK_PACKAGES+=    tiff
+    BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
+    BUILDLINK_PACKAGES+=    tiff
 
-.if !empty(TIFF_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.tiff+=        tiff&gt;=3.6.1
-BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
-.endif  # TIFF_BUILDLINK3_MK
+    .if !empty(TIFF_BUILDLINK3_MK:M+)
+    BUILDLINK_DEPENDS.tiff+=        tiff&gt;=3.6.1
+    BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
+    .endif  # TIFF_BUILDLINK3_MK
 
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+    .include "../../devel/zlib/buildlink3.mk"
+    .include "../../graphics/jpeg/buildlink3.mk"
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} 
+    BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
 </pre>
 
             <p>The header and footer manipulate <code class=
@@ -8544,45 +8540,44 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             <p>The following is the recommended template for
             builtin.mk files:</p>
             <pre class="programlisting">
-.if !defined(IS_BUILTIN.foo)
-#
-# IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
-# genuinely exists in the system or not.
-#
-IS_BUILTIN.foo?=        no
+    .if !defined(IS_BUILTIN.foo)
+    #
+    # IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
+    # genuinely exists in the system or not.
+    #
+    IS_BUILTIN.foo?=        no
 
-# BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
-# version can be determined.
-#
-.  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
-BUILTIN_PKG.foo?=       foo-1.0
-.  endif
-.endif  # IS_BUILTIN.foo
+    # BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
+    # version can be determined.
+    #
+    .  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
+    BUILTIN_PKG.foo?=       foo-1.0
+    .  endif
+    .endif  # IS_BUILTIN.foo
 
-.if !defined(USE_BUILTIN.foo)
-USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
-.  if defined(BUILTIN_PKG.foo)
-.    for _depend_ in ${BUILDLINK_DEPENDS.foo}
-.      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
-USE_BUILTIN.foo!=                                                       \
-      if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
-              ${ECHO} "yes";                                            \
-      else                                                              \
-              ${ECHO} "no";                                             \
-      fi
-.      endif
-.    endfor
-.  endif
-.endif  # USE_BUILTIN.foo
+    .if !defined(USE_BUILTIN.foo)
+    USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
+    .  if defined(BUILTIN_PKG.foo)
+    .    for _depend_ in ${BUILDLINK_DEPENDS.foo}
+    .      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
+    USE_BUILTIN.foo!=                                                       \
+          if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
+                  ${ECHO} "yes";                                            \
+          else                                                              \
+                  ${ECHO} "no";                                             \
+          fi
+    .      endif
+    .    endfor
+    .  endif
+    .endif  # USE_BUILTIN.foo
 
-CHECK_BUILTIN.foo?=     no
-.if !empty(CHECK_BUILTIN.foo:M[nN][oO])
-#
-# Here we place code that depends on whether USE_BUILTIN.foo is set to
-# "yes" or "no".
-#
-.endif  # CHECK_BUILTIN.foo
-      
+    CHECK_BUILTIN.foo?=     no
+    .if !empty(CHECK_BUILTIN.foo:M[nN][oO])
+    #
+    # Here we place code that depends on whether USE_BUILTIN.foo is set to
+    # "yes" or "no".
+    #
+    .endif  # CHECK_BUILTIN.foo
 </pre>
 
             <p>The first section sets <code class=
@@ -8695,9 +8690,8 @@ CHECK_BUILTIN.foo?=     no
             using pkgsrc versions of software for all but the most
             basic bits on a NetBSD system, you can set:</p>
             <pre class="programlisting">
-        PREFER_PKGSRC=  yes
-        PREFER_NATIVE=  getopt skey tcp_wrappers
-      
+    PREFER_PKGSRC=  yes
+    PREFER_NATIVE=  getopt skey tcp_wrappers
 </pre>
 
             <p>A package <span class=
@@ -8835,7 +8829,7 @@ CHECK_BUILTIN.foo?=     no
         "http://www.w3.org/TR/xhtml1/transitional" class=
         "filename">Makefile</code>:</p>
         <pre class="programlisting">
-USE_PKGINSTALL=YES
+    USE_PKGINSTALL= YES
 </pre>
 
         <p>You may be thinking that many of the things described
@@ -8929,7 +8923,7 @@ USE_PKGINSTALL=YES
                   spaces: the directory name, its owner, its group
                   and its numerical mode. For example:</p>
                   <pre class="programlisting">
-MAKE_DIRS_PERMS+= ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+    MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
 </pre>
 
                   <p>The difference between the two is exactly the
@@ -8995,7 +8989,7 @@ MAKE_DIRS_PERMS+= ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
                   numeric permissions, in this order. For
                   example:</p>
                   <pre class="programlisting">
-SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+    SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
 </pre>
 
                   <p>The difference between the two is exactly the
@@ -9181,7 +9175,7 @@ SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} 
             passing an extra flag to the configuration script; this
             is the case of GNU Autoconf- generated files:</p>
             <pre class="programlisting">
-CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+    CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 </pre>
 
             <p>Note that this specifies where the package has to
@@ -9242,8 +9236,8 @@ CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
             target="_top"><code xmlns="" class=
             "filename">mail/mutt</code></a> package:</p>
             <pre class="programlisting">
-EGDIR=        ${PREFIX}/share/doc/mutt/samples
-CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+    EGDIR=        ${PREFIX}/share/doc/mutt/samples
+    CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 </pre>
 
             <p>Note that the <code class="varname">EGDIR</code>
@@ -9318,7 +9312,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
                 <code class="varname">RCD_SCRIPTS</code> variable.
                 Continuing the previous example:</p>
                 <pre class="programlisting">
-RCD_SCRIPTS+= cupsd
+    RCD_SCRIPTS+=   cupsd
 </pre>
               </li>
             </ol>
@@ -9399,7 +9393,7 @@ RCD_SCRIPTS+= cupsd
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">/etc/passwd</code>:</p>
           <pre class="programlisting">
-user:group[:[userid][:[descr][:[home][:shell]]]]
+    user:group[:[userid][:[descr][:[home][:shell]]]]
 </pre>
 
           <p>Only the user and group are required; everything else
@@ -9411,17 +9405,17 @@ user:group[:[userid][:[descr][:[home][:shell]]]]
           <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
           class="filename">/sbin/nologin</code> unless they are
           specified as part of the user element. Note that if the
-          description contains spaces, then spaces should be double
+          description contains spaces, then spaces should be
           backslash-escaped, as in:</p>
           <pre class="programlisting">
-foo:foogrp::The\\ Foomister
+    foo:foogrp::The\ Foomister
 </pre>
 
           <p>Similarly, groups can be created using the
           <code class="varname">PKG_GROUPS</code> variable, whose
           syntax is:</p>
           <pre class="programlisting">
-group[:groupid]
+    group[:groupid]
 </pre>
 
           <p>As before, only the group name is required; the
@@ -9457,8 +9451,8 @@ group[:groupid]
           target="_top"><code xmlns="" class=
           "filename">shells/zsh</code></a>:</p>
           <pre class="programlisting">
-USE_PKGINSTALL= YES
-PKG_SHELL=      ${PREFIX}/bin/zsh
+    USE_PKGINSTALL= YES
+    PKG_SHELL=      ${PREFIX}/bin/zsh
 </pre>
 
           <div class="sect2" lang="en" xml:lang="en">
@@ -9567,50 +9561,51 @@ PKG_SHELL=      ${PREFIX}/bin/zsh
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">Makefile</code>.</p>
           <pre class="programlisting">
-PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
-PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
-PKG_OPTIONS_OPTIONAL_GROUPS=    database
-PKG_OPTIONS_GROUP.database=     mysql pgsql
-PKG_SUGGESTED_OPTIONS=          wibble-foo
-PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
-PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
+    PKG_OPTIONS_VAR=            PKG_OPTIONS.wibble
+    PKG_SUPPORTED_OPTIONS=              wibble-foo ldap
+    PKG_OPTIONS_OPTIONAL_GROUPS=        database
+    PKG_OPTIONS_GROUP.database= mysql pgsql
+    PKG_SUGGESTED_OPTIONS=              wibble-foo
+    PKG_OPTIONS_LEGACY_VARS+=   WIBBLE_USE_OPENLDAP:ldap
+    PKG_OPTIONS_LEGACY_OPTS+=   foo:wibble-foo
 
-.include "../../mk/bsd.prefs.mk"
+    .include "../../mk/bsd.prefs.mk"
 
-# this package was previously named wibble2
-.if defined(PKG_OPTIONS.wibble2)
-PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
-.endif
+    # this package was previously named wibble2
+    .if defined(PKG_OPTIONS.wibble2)
+    PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
+    PKG_OPTIONS_DEPRECATED_WARNINGS+= \
+            "Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+    .endif
 
-.include "../../mk/bsd.options.mk"
+    .include "../../mk/bsd.options.mk"
 
-# Package-specific option-handling
+    # Package-specific option-handling
 
-###
-### FOO support
-###
-.if !empty(PKG_OPTIONS:Mwibble-foo)
-CONFIGURE_ARGS+=        --enable-foo
-.endif
+    ###
+    ### FOO support
+    ###
+    .if !empty(PKG_OPTIONS:Mwibble-foo)
+    CONFIGURE_ARGS+=    --enable-foo
+    .endif
 
-###
-### LDAP support
-###
-.if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
-CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
-.endif
+    ###
+    ### LDAP support
+    ###
+    .if !empty(PKG_OPTIONS:Mldap)
+    .  include "../../databases/openldap/buildlink3.mk"
+    CONFIGURE_ARGS+=    --enable-ldap=${BUILDLINK_PREFIX.openldap}
+    .endif
 
-###
-### database support
-###
-.if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../mk/mysql.buildlink3.mk"
-.endif
-.if !empty(PKG_OPTIONS:Mpgsql)
-.  include "../../mk/pgsql.buildlink3.mk"
-.endif
+    ###
+    ### database support
+    ###
+    .if !empty(PKG_OPTIONS:Mmysql)
+    .  include "../../mk/mysql.buildlink3.mk"
+    .endif
+    .if !empty(PKG_OPTIONS:Mpgsql)
+    .  include "../../mk/pgsql.buildlink3.mk"
+    .endif
 </pre>
 
           <p>The first section contains the information about which
@@ -9764,7 +9759,7 @@ CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
           option is to check whether it is listed in <code class=
           "varname">PKG_OPTIONS</code>:</p>
           <pre class="programlisting">
-.if !empty(PKG_OPTIONS:M<em class=
+    .if !empty(PKG_OPTIONS:M<em class=
 "replaceable"><code>option</code></em>)
 </pre>
         </div>
@@ -10000,10 +9995,10 @@ CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
                 "http://www.w3.org/TR/xhtml1/transitional" class=
                 "filename">pkgsrc/wm/scwm/Makefile</code>:</p>
                 <pre class="programlisting">
-EVAL_PREFIX+=           GTKDIR=gtk+
-CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
-                        --with-gtk-prefix="${GTKDIR}"           \
-                        --enable-multibyte
+    EVAL_PREFIX+=           GTKDIR=gtk+
+    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
+                            --with-gtk-prefix="${GTKDIR}"           \
+                            --enable-multibyte
 </pre>
 
                 <p>Specific defaults can be defined for the
@@ -10011,7 +10006,7 @@ CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
                 "varname">EVAL_PREFIX</code>, by using a definition
                 of the form:</p>
                 <pre class="programlisting">
-GTKDIR_DEFAULT= ${LOCALBASE}
+    GTKDIR_DEFAULT= ${LOCALBASE}
 </pre>
 
                 <p>where <code class="varname">GTKDIR</code>
@@ -10067,7 +10062,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
                 are not present, an attempt will be made to fetch
                 them using commands of the form:</p>
                 <pre class="programlisting">
-${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+    ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 </pre>
 
                 <p>where ${site} varies through several
@@ -10161,10 +10156,10 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
                 "http://www.w3.org/TR/xhtml1/transitional" class=
                 "filename">.msg.gz</code>:</p>
                 <pre class="programlisting">
-     EXTRACT_SUFX=   .msg.gz
-     EXTRACT_CMD=            zcat
-     EXTRACT_BEFORE_ARGS=
-     EXTRACT_AFTER_ARGS=     |sh
+    EXTRACT_SUFX=           .msg.gz
+    EXTRACT_CMD=            zcat
+    EXTRACT_BEFORE_ARGS=
+    EXTRACT_AFTER_ARGS=     |sh
 </pre>
               </dd>
 
@@ -10240,9 +10235,9 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
                 target="_top"><code xmlns="" class=
                 "filename">sysutils/top</code></a> package:</p>
                 <pre class="programlisting">
-HAS_CONFIGURE=          yes
-CONFIGURE_SCRIPT=       Configure
-CONFIGURE_ARGS+=        netbsd13
+    HAS_CONFIGURE=          yes
+    CONFIGURE_SCRIPT=       Configure
+    CONFIGURE_ARGS+=        netbsd13
 </pre>
 
                 <p>If the program uses an Imakefile for
@@ -10305,12 +10300,12 @@ CONFIGURE_ARGS+=        netbsd13
           build</strong></span> will also perform the equivalent
           of:</p>
           <pre class="programlisting">
-make fetch
-make checksum
-make extract
-make patch
-make configure
-make build
+    make fetch
+    make checksum
+    make extract
+    make patch
+    make configure
+    make build
 </pre>
         </div>
 
@@ -10971,6 +10966,9 @@ make build
               <dl>
                 <dt><span class="sect2"><a href=
                 "#cpp-defines">15.4.1. CPP defines</a></span></dt>
+
+                <dt><span class="sect2"><a href="#cpp-list">15.4.2.
+                Getting a list of CPP defines</a></span></dt>
               </dl>
             </dd>
 
@@ -11101,10 +11099,10 @@ make build
             package Makefile before any preprocessor-like .if,
             .ifdef, or .ifndef statements:</p>
             <pre class="programlisting">
-.include "../../mk/bsd.prefs.mk"
-    
+    .include "../../mk/bsd.prefs.mk"
+
     .if defined(USE_MENUS)
-      ...
+    # ...
     .endif
 </pre>
 
@@ -11114,7 +11112,7 @@ make build
             "filename">/etc/mk.conf</code>, please make sure to
             use:</p>
             <pre class="programlisting">
-CFLAGS+=  -your -flags
+    CFLAGS+=  -your -flags
 </pre>
 
             <p>Using <code class="varname">CFLAGS=</code> (i.e.
@@ -11273,7 +11271,7 @@ CFLAGS+=  -your -flags
             "varname">BUILD_DEPENDS</code> and a <code class=
             "varname">DEPENDS</code> definition is:</p>
             <pre class="programlisting">
-&lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
+    &lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
 </pre>
 
             <p>Please note that the &#8220;<span class=
@@ -11295,7 +11293,6 @@ CFLAGS+=  -your -flags
                   use it:</p>
                   <pre class="programlisting">
     .include "../../graphics/jpeg/buildlink3.mk"
-    
 </pre>
                 </li>
 
@@ -11307,7 +11304,7 @@ CFLAGS+=  -your -flags
                   use the <code class=
                   "varname">BUILD_DEPENDS</code> definition:</p>
                   <pre class="programlisting">
-BUILD_DEPENDS+=  autoconf-2.13:../../devel/autoconf
+    BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
 </pre>
                 </li>
 
@@ -11325,13 +11322,13 @@ BUILD_DEPENDS+=  autoconf-2.13:../../devel/autoconf
                   "filename">print/lyx</code></a> package, which
                   uses the xpm library, version 3.4j to build:</p>
                   <pre class="programlisting">
-DEPENDS+=       xpm-3.4j:../../graphics/xpm
+    DEPENDS+=       xpm-3.4j:../../graphics/xpm
 </pre>
 
                   <p>You can also use wildcards in package
                   dependences:</p>
                   <pre class="programlisting">
-DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
+    DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
 </pre>
 
                   <p>Note that such wildcard dependencies are
@@ -11354,7 +11351,7 @@ DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
                   package will only build against a certain minimum
                   version of a pre-requisite:</p>
                   <pre class="programlisting">
-DEPENDS+=       tiff&gt;=3.5.4:../../graphics/tiff
+    DEPENDS+=       tiff&gt;=3.5.4:../../graphics/tiff
 </pre>
 
                   <p>This means that the package will build against
@@ -11372,7 +11369,7 @@ DEPENDS+=       tiff&gt;=3.5.4:../../graphics/tiff
                   Such recommendations can be expressed using
                   <code class="varname">RECOMMENDED</code>:</p>
                   <pre class="programlisting">
-RECOMMENDED+=   tiff&gt;=3.6.1:../../graphics/tiff
+    RECOMMENDED+=   tiff&gt;=3.6.1:../../graphics/tiff
 </pre>
 
                   <p>In addition to the above <code class=
@@ -11430,7 +11427,7 @@ RECOMMENDED+=   tiff&gt;=3.6.1:../../graphics/tiff
                   teTeX package when it runs, and that is
                   specified:</p>
                   <pre class="programlisting">
-DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
+    DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 </pre>
 
                   <p>The comment about wildcard dependencies from
@@ -11449,8 +11446,8 @@ DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
             relies on the jpeg sources being present in source form
             during the build):</p>
             <pre class="programlisting">
-if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
-          cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract;              \
+    if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then    \
+        cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract; \
     fi
 </pre>
 
@@ -11459,8 +11456,8 @@ if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
             package's working files are cleaned up. The easiest way
             to do so is by adding a pre-clean target:</p>
             <pre class="programlisting">
-pre-clean:
-          cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} clean
+    pre-clean:
+            cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} clean
 </pre>
 
             <p>Please also note the <code class=
@@ -11520,14 +11517,14 @@ pre-clean:
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">pkgsrc/x11/Xaw3d/Makefile</code>:</p>
             <pre class="programlisting">
-CONFLICTS=      Xaw-Xpm-[0-9]*
+    CONFLICTS=      Xaw-Xpm-[0-9]*
 </pre>
 
             <p>and in <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">pkgsrc/x11/Xaw-Xpm/Makefile</code>:</p>
             <pre class="programlisting">
-CONFLICTS=      Xaw3d-[0-9]*
+    CONFLICTS=      Xaw3d-[0-9]*
 </pre>
 
             <p>Packages will automatically conflict with other
@@ -11688,8 +11685,8 @@ CONFLICTS=      Xaw3d-[0-9]*
             treated like a &#8220;<span class=
             "quote">.</span>&#8221; by the pkg tools. e.g.</p>
             <pre class="programlisting">
-  DISTNAME= foo-17.42
-    PKGREVISION=  9
+    DISTNAME=       foo-17.42
+    PKGREVISION=    9
 </pre>
 
             <p>will result in a <code class=
@@ -11701,7 +11698,7 @@ CONFLICTS=      Xaw3d-[0-9]*
             removed, e.g. on a new minor release of the above
             package, things should be like:</p>
             <pre class="programlisting">
-DISTNAME=   foo-17.43
+    DISTNAME=       foo-17.43
 </pre>
           </div>
 
@@ -11741,8 +11738,8 @@ DISTNAME=   foo-17.43
               &#8220;<span class="quote">${INSTALL}</span>&#8221;,
               etc. like this:</p>
               <pre class="programlisting">
-${INSTALL_DATA_DIR} ${PREFIX}/dir1
-${INSTALL_DATA_DIR} ${PREFIX}/dir2
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 </pre>
             </div>
           </div>
@@ -11949,7 +11946,8 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
                   -Bshareable</span>&#8221; commands, and instead
                   use:</p>
                   <pre class="programlisting">
-${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info major:minor
+    ${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} \
+        -rpath ${PREFIX}/lib -version-info major:minor
 </pre>
 
                   <p>Note that the library is changed to have a
@@ -11974,22 +11972,22 @@ ${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX
 
                   <p>From the libtool manual:</p>
                   <pre class="programlisting">
-     So, libtool library versions are described by three integers:
+    So, libtool library versions are described by three integers:
 
-CURRENT
-       The most recent interface number that this library implements.
+    CURRENT
+        The most recent interface number that this library implements.
 
-REVISION
-       The implementation number of the CURRENT interface.
+    REVISION
+        The implementation number of the CURRENT interface.
 
-AGE
-       The difference between the newest and oldest interfaces that this
-       library implements.  In other words, the library implements all the
-       interface numbers in the range from number `CURRENT - AGE' to
-       `CURRENT'.
+    AGE
+        The difference between the newest and oldest interfaces that
+        this library implements.  In other words, the library implements
+        all the interface numbers in the range from number `CURRENT -
+        AGE' to `CURRENT'.
        
-     If two libraries have identical CURRENT and AGE numbers, then the
-dynamic linker chooses the library with the greater REVISION number. 
+    If two libraries have identical CURRENT and AGE numbers, then the
+    dynamic linker chooses the library with the greater REVISION number.
 </pre>
 
                   <p>The &#8220;<span class=
@@ -12063,12 +12061,12 @@ dynamic linker chooses the library with the greater REVISION number.
                   "http://www.w3.org/TR/xhtml1/transitional" class=
                   "filename">.la</code> file. e.g.</p>
                   <pre class="programlisting">
-${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
+    ${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
 </pre>
 
                   <p>should be changed to:</p>
                   <pre class="programlisting">
-${LIBTOOL} --mode=link ${CC} -o <em class=
+    ${LIBTOOL} --mode=link ${CC} -o <em class=
 "replaceable"><code>someprog</code></em> <em class=
 "replaceable"><code>../somelib/somelib.la</code></em>
 </pre>
@@ -12092,7 +12090,7 @@ ${LIBTOOL} --mode=link ${CC} -o <em class=
                   "http://www.w3.org/TR/xhtml1/transitional" class=
                   "filename">.la</code>. e.g.</p>
                   <pre class="programlisting">
-${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
+    ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
 </pre>
 
                   <p>This will install the static <code xmlns=
@@ -12218,29 +12216,29 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
 
             <p>For packages that need only autoconf:</p>
             <pre class="programlisting">
-AUTOCONF_REQD=    2.50     # if default version is not good enough
-USE_TOOLS+=     autoconf   # use "autoconf213" for autoconf-2.13
-...
+    AUTOCONF_REQD=  2.50            # if default version is not good enough
+    USE_TOOLS+=     autoconf        # use "autoconf213" for autoconf-2.13
+    ...
 
-pre-configure:
-          cd ${WRKSRC}; autoconf
+    pre-configure:
+            cd ${WRKSRC}; autoconf
 
-...
+    ...
 </pre>
 
             <p>and for packages that need automake and
             autoconf:</p>
             <pre class="programlisting">
-AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
-USE_TOOLS+=     automake   # use "automake14" for automake-1.4
-...
+    AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
+    USE_TOOLS+=     automake        # use "automake14" for automake-1.4
+    ...
 
-pre-configure:
-          cd ${WRKSRC};                                           \
-          aclocal; autoheader;                                    \
-          automake -a --foreign -i; autoconf
+    pre-configure:
+            cd ${WRKSRC};                          \
+            aclocal; autoheader;                   \
+            automake -a --foreign -i; autoconf
 
-...
+    ...
 </pre>
 
             <p>Packages which use GNU Automake will almost
@@ -12291,21 +12289,41 @@ pre-configure:
             "filename">&lt;sys/param.h&gt;</code> on said
             systems.</p>
             <pre class="programlisting">
-#include &lt;sys/param.h&gt;
+    #include &lt;sys/param.h&gt;
 </pre>
 
             <p>and then you can surround the BSD-specific parts of
             your package's C/C++ code using this conditional:</p>
             <pre class="programlisting">
-#if (defined(BSD) &amp;&amp; BSD &gt;= 199306)
+    #if (defined(BSD) &amp;&amp; BSD &gt;= 199306)
     ...
-#endif
+    #endif
 </pre>
 
             <p>Please use the &#8220;<span class=
             "quote">__NetBSD__</span>&#8221; definition sparingly -
             it should only apply to features of NetBSD that are not
             present in other 4.4-lite-derived BSDs.</p>
+          </div>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name="cpp-list" id=
+                  "cpp-list"></a>15.4.2.&nbsp;Getting a list of CPP
+                  defines</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>When your system uses the GNU C Compiler, you can
+            get a list of symbols that are defined by default, e.g.
+            to identify the platform, with the following
+            command:</p>
+            <pre class="programlisting">
+    gcc -E -dM - &lt; /dev/null 
+</pre>
           </div>
         </div>
 
@@ -12363,12 +12381,12 @@ pre-configure:
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">Makefile</code>, e.g.:</p>
             <pre class="programlisting">
-INTERACTIVE_STAGE= build
+    INTERACTIVE_STAGE=      build
 </pre>
 
             <p>Multiple interactive stages can be specified:</p>
             <pre class="programlisting">
-INTERACTIVE_STAGE= configure install
+    INTERACTIVE_STAGE=      configure install
 </pre>
           </div>
 
@@ -12420,20 +12438,20 @@ INTERACTIVE_STAGE= configure install
             target="_top"><code xmlns="" class=
             "filename">graphics/xv</code></a>:</p>
             <pre class="programlisting">
-LICENSE=        xv-license
+    LICENSE=        xv-license
 </pre>
 
             <p>When trying to build, the user will get a notice
             that the package is covered by a license which has not
             been accepted:</p>
             <pre class="programlisting">
-<code class="prompt">%</code> <strong class=
+    <code class="prompt">%</code> <strong class=
 "userinput"><code>make</code></strong>
-===&gt; xv-3.10anb9 has an unacceptable license: xv-license.
-===&gt;     To view the license, enter "/usr/bin/make show-license".
-===&gt;     To indicate acceptance, add this line to your /etc/mk.conf:
-===&gt;     ACCEPTABLE_LICENSES+=xv-license
-*** Error code 1
+    ===&gt; xv-3.10anb9 has an unacceptable license: xv-license.
+    ===&gt;     To view the license, enter "/usr/bin/make show-license".
+    ===&gt;     To indicate acceptance, add this line to your /etc/mk.conf:
+    ===&gt;     ACCEPTABLE_LICENSES+=xv-license
+    *** Error code 1
 </pre>
 
             <p>The license can be viewed with <span><strong class=
@@ -12444,7 +12462,7 @@ LICENSE=        xv-license
             "filename">/etc/mk.conf</code> to indicate acceptance
             of the particular license:</p>
             <pre class="programlisting">
-ACCEPTABLE_LICENSES+=xv-license
+    ACCEPTABLE_LICENSES+=xv-license
 </pre>
 
             <p>When adding a package with a new license, the
@@ -12551,11 +12569,11 @@ ACCEPTABLE_LICENSES+=xv-license
             <span><strong class="command">tclsh</strong></span> in
             this example):</p>
             <pre class="programlisting">
-  REPLACE_INTERPRETER+=     tcl
-    _REPLACE.tcl.old=     .*/bin/tclsh
-    _REPLACE.tcl.new=     ${PREFIX}/bin/tclsh
-    _REPLACE_FILES.tcl=   ...list of tcl scripts which need to be fixed,
-                          relative to ${WRKSRC}, just as in REPLACE_PERL
+    REPLACE_INTERPRETER+=   tcl
+    _REPLACE.tcl.old=       .*/bin/tclsh
+    _REPLACE.tcl.new=       ${PREFIX}/bin/tclsh
+    _REPLACE_FILES.tcl=     # list of tcl scripts which need to be fixed,
+                            # relative to ${WRKSRC}, just as in REPLACE_PERL
 </pre>
           </div>
 
@@ -12593,7 +12611,7 @@ ACCEPTABLE_LICENSES+=xv-license
             "varname">PERL5_PACKLIST</code> to a space-separated
             list of paths to packlist files, e.g.:</p>
             <pre class="programlisting">
-PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
+    PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </pre>
 
             <p>The variables <code class=
@@ -13573,8 +13591,9 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           release tag of &#8220;<span class=
           "quote">pkgsrc-base</span>&#8221;, e.g:</p>
           <pre class="programlisting">
-  % cd .../pkgsrc/category/pkgname
-  % cvs import pkgsrc/category/pkgname TNF pkgsrc-base
+    <code class="prompt">$</code> cd .../pkgsrc/category/pkgname
+    <code class=
+"prompt">$</code> cvs import pkgsrc/category/pkgname TNF pkgsrc-base
 </pre>
 
           <p>Remember to move the directory from which you imported
@@ -13814,21 +13833,21 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             </div>
           </div>
           <pre class="programlisting">
-# $NetBSD$
-#
+    # $NetBSD$
+    #
 
-DISTNAME=       bison-1.25
-CATEGORIES=     devel
-MASTER_SITES=   ${MASTER_SITE_GNU}
+    DISTNAME=       bison-1.25
+    CATEGORIES=     devel
+    MASTER_SITES=   ${MASTER_SITE_GNU}
 
-MAINTAINER=     thorpej@NetBSD.org
-HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
-COMMENT=        GNU yacc clone
+    MAINTAINER=     thorpej@NetBSD.org
+    HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+    COMMENT=        GNU yacc clone
 
-GNU_CONFIGURE=  yes
-INFO_FILES=     bison.info
+    GNU_CONFIGURE=  yes
+    INFO_FILES=     bison.info
 
-.include "../../mk/bsd.pkg.mk"
+    .include "../../mk/bsd.pkg.mk"
 </pre>
         </div>
 
@@ -13842,10 +13861,10 @@ INFO_FILES=     bison.info
             </div>
           </div>
           <pre class="programlisting">
-GNU version of yacc.  Can make re-entrant parsers, and numerous other
-improvements.  Why you would want this when Berkeley <a href=
+    GNU version of yacc.  Can make re-entrant parsers, and numerous other
+    improvements.  Why you would want this when Berkeley <a href=
 "http://netbsd.gw.com/cgi-bin/man-cgi?yacc+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">yacc</span>(1)</span></a> is part
-of the NetBSD source tree is beyond me.
+    of the NetBSD source tree is beyond me.
 </pre>
         </div>
 
@@ -13859,11 +13878,11 @@ of the NetBSD source tree is beyond me.
             </div>
           </div>
           <pre class="programlisting">
-@comment $NetBSD$
-bin/bison
-man/man1/bison.1.gz
-share/bison.simple
-share/bison.hairy
+    @comment $NetBSD$
+    bin/bison
+    man/man1/bison.1.gz
+    share/bison.simple
+    share/bison.hairy
 </pre>
         </div>
 
@@ -14226,64 +14245,63 @@ Registering depends:.
       <p>Layout for precompiled binary packages on
       ftp.NetBSD.org:</p>
       <pre class="programlisting">
-/pub/NetBSD/packages/
-                distfiles/
+    /pub/NetBSD/packages/
+        distfiles/
 
-                # Unpacked pkgsrc trees
-                pkgsrc-current -&gt; /pub/NetBSD/NetBSD-current/pkgsrc
-                pkgsrc-2003Q4 -&gt; N/A
-                pkgsrc-2004Q1/pkgsrc
+        # Unpacked pkgsrc trees
+        pkgsrc-current -&gt; /pub/NetBSD/NetBSD-current/pkgsrc
+        pkgsrc-2003Q4 -&gt; N/A
+        pkgsrc-2004Q1/pkgsrc
 
-                # pkgsrc archives
-                pkgsrc-current.tar.gz -&gt; ../NetBSD-current/tar_files/pkgsrc.tar.gz
-                pkgsrc-2003Q4.tar.gz -&gt; N/A
-                pkgsrc-2004Q1.tar.gz -&gt; N/A
+        # pkgsrc archives
+        pkgsrc-current.tar.gz -&gt; ../NetBSD-current/tar_files/pkgsrc.tar.gz
+        pkgsrc-2003Q4.tar.gz -&gt; N/A
+        pkgsrc-2004Q1.tar.gz -&gt; N/A
 
-                # Per pkgsrc-release/OS-release/arch package archives
-                pkgsrc-2003Q4/
-                        NetBSD-1.6.2/
-                                i386/
-                                        All/
-                                        archivers/
-                                                foo -&gt; ../All/foo
-                                        ...
-                pkgsrc-2004Q1/
-                        NetBSD-1.6.2/
-                                i386/
-                                        All/
-                                        ...
-                        NetBSD-2.0/
-                                i386/
-                                        All/
-                                        ...
-                        SunOS-5.9/
-                                sparc/
-                                        All/
-                                        ...
-                                x86/
-                                        All/
-                                        ...
+        # Per pkgsrc-release/OS-release/arch package archives
+        pkgsrc-2003Q4/
+            NetBSD-1.6.2/
+                i386/
+                    All/
+                    archivers/
+                        foo -&gt; ../All/foo
+                    ...
+        pkgsrc-2004Q1/
+            NetBSD-1.6.2/
+                i386/
+                    All/
+                    ...
+            NetBSD-2.0/
+                i386/
+                    All/
+                    ...
+            SunOS-5.9/
+                sparc/
+                    All/
+                    ...
+                x86/
+                    All/
+                    ...
 
-                # Per os-release package archive convenience links
-                NetBSD-1.6.2 -&gt; 1.6.2
-                1.6.2/
-                        i386 -&gt; ../pkgsrc-2004Q1/NetBSD-1.6.2/i386
-                        m68k/
-                                All/
-                                archivers/
-                                        foo -&gt; ../All/foo
-                                ...
-                        amiga -&gt; m68k
-                        atari -&gt; m68k
-                        ...
+        # Per os-release package archive convenience links
+        NetBSD-1.6.2 -&gt; 1.6.2
+        1.6.2/
+            i386 -&gt; ../pkgsrc-2004Q1/NetBSD-1.6.2/i386
+            m68k/
+                All/
+                archivers/
+                    foo -&gt; ../All/foo
+                ...
+            amiga -&gt; m68k
+            atari -&gt; m68k
+            ...
 
-                2.0 -&gt; NetBSD-2.0       # backward compat, historic
-                NetBSD-2.0/
-                        i386 -&gt; ../pkgsrc-2004Q1/NetBSD-2.0/i386
-                SunOS-5.9/
-                        sparc -&gt; ../pkgsrc-2004Q1/SunOS-5.9/sparc
-                        x86 -&gt; ../pkgsrc-2004Q1/SunOS-5.9/x86
-                        
+        2.0 -&gt; NetBSD-2.0       # backward compat, historic
+        NetBSD-2.0/
+            i386 -&gt; ../pkgsrc-2004Q1/NetBSD-2.0/i386
+        SunOS-5.9/
+            sparc -&gt; ../pkgsrc-2004Q1/SunOS-5.9/sparc
+            x86 -&gt; ../pkgsrc-2004Q1/SunOS-5.9/x86
 </pre>
 
       <p>To create:</p>
@@ -14301,10 +14319,9 @@ Registering depends:.
             <p>Upload /usr/pkgsrc/packages to</p>
             <pre class="programlisting">
     ftp://ftp.NetBSD.org/pub/NetBSD/packages/\
-        pkgsrc-2004Q4/\                         # pkgsrc-branch
-        `uname -s`-`uname -r`/                  # OS &amp; version
-        `uname -p`                              # architecture
-       
+        pkgsrc-2004Q4/\             # pkgsrc-branch
+        `uname -s`-`uname -r`/\     # OS &amp; version
+        `uname -p`                  # architecture
 </pre>
           </li>
 
