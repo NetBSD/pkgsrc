@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/23 20:39:03 minskim Exp $
+
+SHA1 (wmii-20051017.tar.gz) = 41b2b9f820fd247c25f123b76133648dc3df30b7
+RMD160 (wmii-20051017.tar.gz) = f7d63c4539b162201571558fc710b85becf7c95a
+Size (wmii-20051017.tar.gz) = 79781 bytes
+SHA1 (patch-aa) = 6b3e66a305590e3a86020e5002f56dae81dd3b76
+SHA1 (patch-ab) = 196581727542a6e22578a680213f164736a84eb2

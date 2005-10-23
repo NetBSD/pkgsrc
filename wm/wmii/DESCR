@@ -1,0 +1,12 @@
+window manager improved 2 (wmii) is an improved, modularized and
+lightweight X11 window manager which supports tabbed, tiled and
+conventional window management through layouts.
+
+wmii consists of components that are independent processes and
+communicate via a socket-based virtual filesystem which is oriented on
+the "everything is a file" paradigm of the plan9 operating system.
+
+The core distribution of wmii contains the window manager itself, a
+master file system routing utility (wmifs), a generic bar (wmibar), a
+shortcut handler (wmikeys), and a generic interaction menu (wmimenu)
+beside several tiny utilities like wmir, wmiplumb, and wmiwarp.
