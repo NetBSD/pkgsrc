@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11617 2005/10/23 03:13:32 rh Exp $
+$NetBSD: CHANGES,v 1.11618 2005/10/23 06:02:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4781,3 +4781,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gdm to 2.8.0.5nb1 [minskim 2005-10-22]
 	Updated devel/p5-SVN-Mirror to 0.67 [sommerfeld 2005-10-22]
 	Updated devel/ht to 0.9.1 [rh 2005-10-23]
+	Updated emulators/gxemul to 0.3.6.1 [xtraeme 2005-10-23]
