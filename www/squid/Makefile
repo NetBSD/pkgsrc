@@ -1,21 +1,16 @@
-# $NetBSD: Makefile,v 1.161 2005/10/09 14:47:55 taca Exp $
+# $NetBSD: Makefile,v 1.162 2005/10/23 22:32:32 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE11
-PKGNAME=	squid-2.5.11
+DISTNAME=	squid-2.5.STABLE12
+PKGNAME=	squid-2.5.12
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
 EXTRACT_SUFX=	.tar.bz2
 
-PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE11-delaypools_truncated.patch \
-		squid-2.5.STABLE11-tcp_outgoing_xxx.patch \
-		squid-2.5.STABLE11-ldap_auth.patch \
-		squid-2.5.STABLE11.accel_single_host_pconn.patch \
-		squid-2.5.STABLE11-CACHE_HTTP_PORT.patch \
-		squid-2.5.STABLE11-CNAME.patch
-PATCH_DIST_STRIP= -p1
+#PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
+#PATCHFILES=
+#PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
