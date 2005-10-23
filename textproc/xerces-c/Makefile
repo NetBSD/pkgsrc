@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/22 20:08:36 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/10/23 23:35:17 rillig Exp $
 #
 
 DISTNAME=	xerces-c-src_2_3_0
@@ -36,11 +36,13 @@ CONFIGURE_ARGS+=	-m inmem		# message loader
 CONFIGURE_ARGS+=	-r none			# threading
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 
-CONFIGURE_ARGS.gnu-iconv=	-t IconvGNU	# transcoder
-PLIST_SUBST.gnu-iconv=		NATIVEICONV="@comment " GNUICONV=""
+CONFIGURE_ARGS.gnu-iconv+=	-t IconvGNU	# transcoder
+PLIST_SUBST.gnu-iconv+=		NATIVEICONV="@comment "
+PLIST_SUBST.gnu-iconv+=		GNUICONV=""
 
-CONFIGURE_ARGS.native-iconv=	-t native	# transcoder
-PLIST_SUBST.native-iconv=	NATIVEICONV="" GNUICONV="@comment "
+CONFIGURE_ARGS.native-iconv+=	-t native	# transcoder
+PLIST_SUBST.native-iconv+=	NATIVEICONV=""
+PLIST_SUBST.native-iconv+=	GNUICONV="@comment "
 
 CONFIGURE_ENV+=		${XERCES_ENV}
 MAKE_ENV+=		${XERCES_ENV}
