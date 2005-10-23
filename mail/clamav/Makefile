@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/09/27 14:23:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.46 2005/10/23 22:32:20 rillig Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-dbdir=${VIRUSDBDIR}
 CONFIGURE_ARGS+=	--with-uid=${CLAMAV_USER}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
 CONFIGURE_ARGS+=	--with-tcpwrappers
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 .include "../../mk/bsd.prefs.mk"
 
