@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/02 20:34:07 reed Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/10/23 16:51:00 wiz Exp $
 bin/wwwoffle
 bin/wwwoffle-hash
 bin/wwwoffle-ls
@@ -61,10 +61,10 @@ share/doc/wwwoffle/pl/README.1st
 share/doc/wwwoffle/pl/README.lang
 share/examples/rc.d/wwwoffled
 share/examples/wwwoffle.conf
-@unexec rmdir %D/share/doc/wwwoffle/ru 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/wwwoffle/ru 2>/dev/null || ${TRUE}
 @dirrm share/doc/wwwoffle/pl
-@unexec rmdir %D/share/doc/wwwoffle/nl 2>/dev/null || ${TRUE}
-@unexec rmdir %D/share/doc/wwwoffle/it 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/wwwoffle/nl 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/wwwoffle/it 2>/dev/null || ${TRUE}
 @dirrm share/doc/wwwoffle/fr
 @dirrm share/doc/wwwoffle/es
 @dirrm share/doc/wwwoffle/de
