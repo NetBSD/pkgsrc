@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/10/19 09:57:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.36 2005/10/23 17:08:54 minskim Exp $
 #
 
 DISTNAME=		gnome-themes-2.12.1
@@ -20,7 +20,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-INSTALL_MAKE_FLAGS+=	install_sh="${INSTALL_DATA_DIR}"
+INSTALL_MAKE_FLAGS+=	install_sh="${INSTALL} -d"
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
