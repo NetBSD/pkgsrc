@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.31 2005/10/23 00:41:54 hubertf Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.32 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -26,16 +26,20 @@
         Makefile before any preprocessor-like .if, .ifdef, or .ifndef
         statements:</para>
     
-      <programlisting>.include "../../mk/bsd.prefs.mk"
-    
+<programlisting>
+    .include "../../mk/bsd.prefs.mk"
+
     .if defined(USE_MENUS)
-      ...
-    .endif</programlisting>
+    # ...
+    .endif
+</programlisting>
     
       <para>If you wish to set the <varname>CFLAGS</varname> variable
         in <filename>/etc/mk.conf</filename>, please make sure to use: 
     
-        <programlisting>CFLAGS+=  -your -flags</programlisting>
+<programlisting>
+    CFLAGS+=  -your -flags
+</programlisting>
     
         Using <varname>CFLAGS=</varname> (i.e. without the
         <quote>+</quote>) may lead to problems with packages that need
@@ -142,7 +146,9 @@
       <para>The format for a <varname>BUILD_DEPENDS</varname> and a
         <varname>DEPENDS</varname> definition is:</para>
     
-      <programlisting>&lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;</programlisting>
+<programlisting>
+    &lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
+</programlisting>
     
       <para>Please note that the <quote>pre-req-package-name</quote>
         may include any of the wildcard version numbers recognized by
@@ -155,9 +161,9 @@
             <filename>buildlink3.mk</filename> file available, use it:
 </para>
 
-            <programlisting>
+<programlisting>
     .include "../../graphics/jpeg/buildlink3.mk"
-    </programlisting>
+</programlisting>
         </listitem>
     
         <listitem>
@@ -166,7 +172,9 @@
             file available, use the <varname>BUILD_DEPENDS</varname>
             definition:</para>
     
-          <programlisting>BUILD_DEPENDS+=  autoconf-2.13:../../devel/autoconf</programlisting>
+<programlisting>
+    BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
+</programlisting>
         </listitem>
     
         <listitem>
@@ -177,12 +185,15 @@
             is the <filename role="pkg">print/lyx</filename> package, 
 	    which uses the xpm library, version 3.4j to build:</para>
     
-          <programlisting>DEPENDS+=       xpm-3.4j:../../graphics/xpm</programlisting>
+<programlisting>
+    DEPENDS+=       xpm-3.4j:../../graphics/xpm
+</programlisting>
     
-          <para>You can also use wildcards in package dependences:
-</para>
+          <para>You can also use wildcards in package dependences:</para>
     
-          <programlisting>DEPENDS+=       xpm-[0-9]*:../../graphics/xpm</programlisting>
+<programlisting>
+    DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
+</programlisting>
     
           <para>Note that such wildcard dependencies are retained when
             creating binary packages.  The dependency is checked when
@@ -199,7 +210,9 @@
             will only  build against a certain minimum version of a
             pre-requisite:</para>
               
-          <programlisting>DEPENDS+=       tiff>=3.5.4:../../graphics/tiff</programlisting>
+<programlisting>
+    DEPENDS+=       tiff>=3.5.4:../../graphics/tiff
+</programlisting>
     
           <para>This means that the package will build against version
             3.5.4 of the tiff library or newer.  Such a dependency may
@@ -214,7 +227,9 @@
             correctly.  Such recommendations can be expressed using
             <varname>RECOMMENDED</varname>:</para>
     
-          <programlisting>RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff</programlisting>
+<programlisting>
+    RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff
+</programlisting>
 
           <para>In addition to the above <varname>DEPENDS</varname>
             line, this denotes that while a package will build against
@@ -255,7 +270,9 @@
 	    be able to execute the latex binary from the teTeX package
 	    when it runs, and that is specified:</para>
     
-          <programlisting>DEPENDS+=        teTeX-[0-9]*:../../print/teTeX</programlisting>
+<programlisting>
+    DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
+</programlisting>
     
           <para>The comment about wildcard dependencies from previous
             paragraph  applies here, too.</para> 
@@ -268,17 +285,21 @@
 	(it relies on the jpeg sources being present in source form 
 	during the build):</para>
     
-      <programlisting>if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
-          cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract;              \
-    fi</programlisting>
+<programlisting>
+    if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then    \
+        cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract; \
+    fi
+</programlisting>
     
       <para>If you build any other packages that way, please make sure
         the working files are deleted too when this package's working
         files are cleaned up.  The easiest way to do so is by adding a
         pre-clean target:</para>
     
-      <programlisting>pre-clean:
-          cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} clean</programlisting>
+<programlisting>
+    pre-clean:
+            cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} clean
+</programlisting>
     
       <para>Please also note the <varname>BUILD_USES_MSGFMT</varname>
         and <varname>BUILD_USES_GETTEXT_M4</varname> definitions, which
@@ -308,12 +329,16 @@
         install the same shared library, thus you set in
         <filename>pkgsrc/x11/Xaw3d/Makefile</filename>:</para>
     
-      <programlisting>CONFLICTS=      Xaw-Xpm-[0-9]*</programlisting>
+<programlisting>
+    CONFLICTS=      Xaw-Xpm-[0-9]*
+</programlisting>
     
       <para>and in <filename>pkgsrc/x11/Xaw-Xpm/Makefile</filename>:
 </para>
     
-      <programlisting>CONFLICTS=      Xaw3d-[0-9]*</programlisting>
+<programlisting>
+    CONFLICTS=      Xaw3d-[0-9]*
+</programlisting>
     
       <para>Packages will automatically conflict with other packages
         with the name prefix  and a different version
@@ -412,18 +437,21 @@
         (2, ...). The <quote>nb</quote> is treated like a
         <quote>.</quote> by the pkg tools. e.g.</para>
     
-      <programlisting>  DISTNAME= foo-17.42
-    PKGREVISION=  9</programlisting>
+<programlisting>
+    DISTNAME=       foo-17.42
+    PKGREVISION=    9
+</programlisting>
     
       <para>will result in a <varname>PKGNAME</varname> of
         <quote>foo-17.42nb9</quote>.</para>
     
       <para>When a new release of the package is released, the
         <varname>PKGREVISION</varname> should be removed, e.g. on a new
-        minor release of the above package, things should be like:
-</para>
+        minor release of the above package, things should be like:</para>
     
-      <programlisting>DISTNAME=   foo-17.43</programlisting>
+<programlisting>
+    DISTNAME=       foo-17.43
+</programlisting>
     </sect2>
     
     
@@ -442,8 +470,10 @@
           operating systems will not perform more than one operation at a time.
           As such, you should call <quote>${INSTALL}</quote>, etc. like this:</para>
 
-          <programlisting>${INSTALL_DATA_DIR} ${PREFIX}/dir1
-${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
+<programlisting>
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
+</programlisting>
       </sect3>
 
     </sect2>
@@ -554,7 +584,10 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
             <quote>ar</quote>, <quote>ranlib</quote>, and <quote>ld
             -Bshareable</quote> commands, and instead use:</para> 
 
-          <programlisting>${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info major:minor</programlisting>
+<programlisting>
+    ${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} \
+        -rpath ${PREFIX}/lib -version-info major:minor
+</programlisting>
 
           <para>Note that the library is changed to have a
             <filename>.la</filename> extension, and the objects are
@@ -570,23 +603,24 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
 
           <para>From the libtool manual:</para>
 
-          <programlisting>
-     So, libtool library versions are described by three integers:
+<programlisting>
+    So, libtool library versions are described by three integers:
 
-CURRENT
-       The most recent interface number that this library implements.
+    CURRENT
+        The most recent interface number that this library implements.
 
-REVISION
-       The implementation number of the CURRENT interface.
+    REVISION
+        The implementation number of the CURRENT interface.
 
-AGE
-       The difference between the newest and oldest interfaces that this
-       library implements.  In other words, the library implements all the
-       interface numbers in the range from number `CURRENT - AGE' to
-       `CURRENT'.
+    AGE
+        The difference between the newest and oldest interfaces that
+	this library implements.  In other words, the library implements
+	all the interface numbers in the range from number `CURRENT -
+	AGE' to `CURRENT'.
        
-     If two libraries have identical CURRENT and AGE numbers, then the
-dynamic linker chooses the library with the greater REVISION number. </programlisting>
+    If two libraries have identical CURRENT and AGE numbers, then the
+    dynamic linker chooses the library with the greater REVISION number.
+</programlisting>
 
           <para>The <quote>-release</quote> option will produce
             different results for a.out and ELF (excluding symlinks)
@@ -627,11 +661,15 @@ dynamic linker chooses the library with the greater REVISION number. </programli
             expects you to change that argument to be the
             <filename>.la</filename> file. e.g.</para>
 
-          <programlisting>${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib</programlisting>
+<programlisting>
+    ${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
+</programlisting>
 
           <para>should be changed to:</para>
 
-          <programlisting>${LIBTOOL} --mode=link ${CC} -o <replaceable>someprog</replaceable> <replaceable>../somelib/somelib.la</replaceable></programlisting>
+<programlisting>
+    ${LIBTOOL} --mode=link ${CC} -o <replaceable>someprog</replaceable> <replaceable>../somelib/somelib.la</replaceable>
+</programlisting>
 
           <para>and it will do the right thing with the libraries.</para>
         </listitem>
@@ -642,7 +680,9 @@ dynamic linker chooses the library with the greater REVISION number. </programli
             --mode=install</quote>, and change the library name to
             <filename>.la</filename>. e.g.</para>
 
-          <programlisting>${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib</programlisting>
+<programlisting>
+    ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
+</programlisting>
 
           <para>This will install the static <filename>.a</filename>,
             shared library, any needed symlinks, and run
@@ -724,27 +764,31 @@ dynamic linker chooses the library with the greater REVISION number. </programli
 
         <para>For packages that need only autoconf:</para>
 
-        <programlisting>AUTOCONF_REQD=    2.50     # if default version is not good enough
-USE_TOOLS+=	autoconf   # use "autoconf213" for autoconf-2.13
-...
+<programlisting>
+    AUTOCONF_REQD=  2.50            # if default version is not good enough
+    USE_TOOLS+=     autoconf        # use "autoconf213" for autoconf-2.13
+    ...
 
-pre-configure:
-          cd ${WRKSRC}; autoconf
+    pre-configure:
+            cd ${WRKSRC}; autoconf
 
-...</programlisting>
+    ...
+</programlisting>
 
         <para>and for packages that need automake and autoconf:</para> 
 
-<programlisting>AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
-USE_TOOLS+=	automake   # use "automake14" for automake-1.4
-...
+<programlisting>
+    AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
+    USE_TOOLS+=     automake        # use "automake14" for automake-1.4
+    ...
 
-pre-configure:
-          cd ${WRKSRC};                                           \
-          aclocal; autoheader;                                    \
-          automake -a --foreign -i; autoconf
+    pre-configure:
+            cd ${WRKSRC};                          \
+            aclocal; autoheader;                   \
+            automake -a --foreign -i; autoconf
 
-...</programlisting>
+    ...
+</programlisting>
 
         <para>Packages which use GNU Automake will almost certainly
           require GNU Make.</para> 
@@ -778,14 +822,18 @@ pre-configure:
         <filename>&lt;sys/param.h&gt;</filename> on said systems.
 </para>
 
-      <programlisting><![CDATA[#include <sys/param.h>]]></programlisting>
+<programlisting>
+    <![CDATA[#include <sys/param.h>]]>
+</programlisting>
 
       <para>and then you can surround the BSD-specific parts of your
         package's C/C++ code using this conditional:</para>
 
-      <programlisting><![CDATA[#if (defined(BSD) && BSD >= 199306)
+<programlisting>
+    <![CDATA[#if (defined(BSD) && BSD >= 199306)
     ...
-#endif]]></programlisting>
+    #endif]]>
+</programlisting>
 
       <para>Please use the <quote>__NetBSD__</quote> definition sparingly - it
         should only apply to features of &os; that are not present in other
@@ -801,7 +849,9 @@ pre-configure:
 	the platform, with the following command:
       </para>
 
-      <programlisting> gcc -E -dM - < /dev/null </programlisting>
+<programlisting>
+    <![CDATA[gcc -E -dM - < /dev/null ]]>
+</programlisting>
     </sect2>
   </sect1>
   
@@ -837,11 +887,15 @@ pre-configure:
         the pkgsrc mechanism of an interactive stage which will be needed, and
         this should be set in the package's <filename>Makefile</filename>, e.g.:</para>
 
-      <programlisting>INTERACTIVE_STAGE= build</programlisting>
+<programlisting>
+    INTERACTIVE_STAGE=      build
+</programlisting>
 
       <para>Multiple interactive stages can be specified:</para>
 
-      <programlisting>INTERACTIVE_STAGE= configure install</programlisting>
+<programlisting>
+    INTERACTIVE_STAGE=      configure install
+</programlisting>
     </sect2>
 
 
@@ -880,20 +934,23 @@ pre-configure:
         the license, e.g. in 
 	<filename role="pkg">graphics/xv</filename>: </para>
 
-      <programlisting>LICENSE=        xv-license</programlisting>
+<programlisting>
+    LICENSE=        xv-license
+</programlisting>
 
       <para>
 	When trying to build, the user will get a notice that the
         package is covered by a license which has not been
         accepted:</para>
 	
-      <programlisting>
-&cprompt; <userinput>make</userinput>
-===> xv-3.10anb9 has an unacceptable license: xv-license.
-===>     To view the license, enter "/usr/bin/make show-license".
-===>     To indicate acceptance, add this line to your /etc/mk.conf:
-===>     ACCEPTABLE_LICENSES+=xv-license
-*** Error code 1</programlisting>
+<programlisting>
+    &cprompt; <userinput>make</userinput>
+    ===> xv-3.10anb9 has an unacceptable license: xv-license.
+    ===>     To view the license, enter "/usr/bin/make show-license".
+    ===>     To indicate acceptance, add this line to your /etc/mk.conf:
+    ===>     ACCEPTABLE_LICENSES+=xv-license
+    *** Error code 1
+</programlisting>
 
         <para>The license can be viewed with <command>make
           show-license</command>, and if it is considered appropriate,
@@ -901,7 +958,9 @@ pre-configure:
           <filename>/etc/mk.conf</filename> to indicate acceptance of
           the particular license:</para>
 
-        <programlisting>ACCEPTABLE_LICENSES+=xv-license</programlisting>
+<programlisting>
+    ACCEPTABLE_LICENSES+=xv-license
+</programlisting>
 
 	<para>When adding a package with a new license, the license
           text should be added to <filename>pkgsrc/licenses</filename>
@@ -969,11 +1028,13 @@ pre-configure:
         following definitions in your <filename>Makefile</filename> (we
         shall use <command>tclsh</command> in this example):</para>
     
-      <programlisting>  REPLACE_INTERPRETER+=     tcl
-    _REPLACE.tcl.old=     .*/bin/tclsh
-    _REPLACE.tcl.new=     ${PREFIX}/bin/tclsh
-    _REPLACE_FILES.tcl=   ...list of tcl scripts which need to be fixed,
-                          relative to ${WRKSRC}, just as in REPLACE_PERL</programlisting>
+<programlisting>
+    REPLACE_INTERPRETER+=   tcl
+    _REPLACE.tcl.old=       .*/bin/tclsh
+    _REPLACE.tcl.new=       ${PREFIX}/bin/tclsh
+    _REPLACE_FILES.tcl=     # list of tcl scripts which need to be fixed,
+                            # relative to ${WRKSRC}, just as in REPLACE_PERL
+</programlisting>
     </sect2>
 
     
@@ -997,7 +1058,9 @@ pre-configure:
         <varname>PERL5_PACKLIST</varname> to a space-separated list of
         paths to packlist files, e.g.:</para>
   
-      <programlisting>PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist</programlisting>
+<programlisting>
+    PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
+</programlisting>
   
       <para>The variables <varname>PERL5_SITELIB</varname>,
         <varname>PERL5_SITEARCH</varname>, and

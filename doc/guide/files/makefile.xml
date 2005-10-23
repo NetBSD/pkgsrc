@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.18 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.19 2005/10/23 11:25:58 rillig Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -131,18 +131,18 @@ pkgsrc/bootstrap/bmake/var.c 1.2
     <sect2 id="adding-to-list">
       <title>Adding things to a list</title>
 
-      <programlisting>
-STRING=                 foo * bar `date`
-INT_LIST=               # empty
-ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
-EXT_LIST=               # empty
-ANOTHER_EXT_LIST=       a=b c=d
+<programlisting>
+    STRING=                 foo * bar `date`
+    INT_LIST=               # empty
+    ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
+    EXT_LIST=               # empty
+    ANOTHER_EXT_LIST=       a=b c=d
 
-INT_LIST+=              ${STRING}               # 1
-INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
-EXT_LIST+=              ${STRING:Q}             # 3
-EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
-      </programlisting>
+    INT_LIST+=              ${STRING}               # 1
+    INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
+    EXT_LIST+=              ${STRING:Q}             # 3
+    EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
+</programlisting>
 
       <para>When you add a string to an external list (example 3), it
       must be quoted. In all other cases, you must not add a quoting
@@ -155,12 +155,12 @@ EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
     <sect2 id="converting-internal-to-external">
       <title>Converting an internal list into an external list</title>
 
-      <programlisting>
-EXT_LIST=       # empty
-.for i in ${INT_LIST}
-EXT_LIST+=      ${i:Q}""
-.endfor
-      </programlisting>
+<programlisting>
+    EXT_LIST=       # empty
+    .for i in ${INT_LIST}
+    EXT_LIST+=      ${i:Q}""
+    .endfor
+</programlisting>
 
       <para>This code converts the internal list
       <varname>INT_LIST</varname> into the external list
@@ -173,18 +173,18 @@ EXT_LIST+=      ${i:Q}""
     <sect2 id="passing-variable-to-shell">
       <title>Passing variables to a shell command</title>
 
-      <programlisting>
-STRING=         foo bar <    > * `date` $$HOME ' "
-EXT_LIST=       string=${STRING:Q} x=second\ item
+<programlisting>
+    STRING=         foo bar <    > * `date` $$HOME ' "
+    EXT_LIST=       string=${STRING:Q} x=second\ item
 
-all:
-        echo ${STRING}                  # 1
-        echo "${STRING}"                # 2
-        echo "${STRING:Q}"              # 3
-        echo ${STRING:Q}                # 4
-        echo x${STRING:Q} | sed 1s,.,,  # 5
-        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
-      </programlisting>
+    all:
+            echo ${STRING}                  # 1
+            echo "${STRING}"                # 2
+            echo "${STRING:Q}"              # 3
+            echo ${STRING:Q}                # 4
+            echo x${STRING:Q} | sed 1s,.,,  # 5
+            env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
+</programlisting>
 
       <para>Example 1 leads to a syntax error in the shell, as the
       characters are just copied.</para>
@@ -243,17 +243,17 @@ all:
 	pass the <varname>CPPFLAGS</varname> value properly trimmed. And
 	here is how we do it:</para>
 
-        <programlisting>
-CPPFLAGS=               # empty
-CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
-CPPFLAGS+=              ${MY_CPPFLAGS}
+<programlisting>
+    CPPFLAGS=               # empty
+    CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
+    CPPFLAGS+=              ${MY_CPPFLAGS}
 
-CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
+    CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
 
-all:
-        echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
-        echo x${CONFIGURE_ARGS}x        # properly trimmed
-        </programlisting></listitem>
+    all:
+            echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
+            echo x${CONFIGURE_ARGS}x        # properly trimmed
+</programlisting></listitem>
 
 	<listitem><para>The example above contains one bug: The
 	<varname>${PREFIX}</varname> is a properly quoted shell
@@ -272,19 +272,19 @@ all:
 	are two completely different cases which can be solved with the
 	same trick.</para>
 
-        <programlisting>
-EMPTY=                  # empty
-empty_test:
-        for i in a ${EMPTY:Q} c; do \
-                echo "$$i"; \
-        done
+<programlisting>
+    EMPTY=                  # empty
+    empty_test:
+            for i in a ${EMPTY:Q} c; do \
+                    echo "$$i"; \
+            done
 
-for_test:
-.for i in a:\ a:\test.txt
-        echo ${i:Q}
-        echo "foo"
-.endfor
-        </programlisting>
+    for_test:
+    .for i in a:\ a:\test.txt
+            echo ${i:Q}
+            echo "foo"
+    .endfor
+</programlisting>
 
 	<para>The first example will only print two of the three lines
 	we might have expected. This is because
@@ -313,9 +313,9 @@ for_test:
       contains a ``-'' character, one of the closing braces is included
       in <varname>${VAR}</varname> after this code executes.</para>
 
-      <programlisting>
-        VAR:= ${VAR:N${_othervar_:C/-//}}
-      </programlisting>
+<programlisting>
+    VAR:=   ${VAR:N${_othervar_:C/-//}}
+</programlisting>
 
       <para>For a more complex code snippet and a workaround, see the
       package <filename role="pkg">regress/make-quoting</filename>, testcase

@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.9 2005/09/28 13:02:44 rillig Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.10 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -21,7 +21,9 @@
       <filename>PLIST</filename> file you write:
     </para>
 
-    <programlisting>@comment &#36;NetBSD&#36;</programlisting>
+<programlisting>
+    @comment &#36;NetBSD&#36;
+</programlisting>
   </sect1>
     
   <sect1 id="automatic-plist-generation">
@@ -55,17 +57,17 @@
       <filename>libdata/foo</filename> directory removed from the
       resulting PLIST:</para> 
   
-    <programlisting>
-      PRINT_PLIST_AWK+= /^libdata\/foo/ { next; }
-    </programlisting>
+<programlisting>
+    PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
+</programlisting>
   
     <para> And to get all the <varname>@dirrm</varname> lines referring
       to a specific (shared) directory converted to
       <varname>@comment</varname>s: </para> 
   
-    <programlisting>
-      PRINT_PLIST_AWK+= /^@dirrm share\/specific/ { print "@comment " $$0; next; }
-    </programlisting>
+<programlisting>
+    PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
+</programlisting>
   </sect1>
     
   
@@ -156,7 +158,9 @@
       following way, similar to <varname>MESSAGE_SUBST</varname> (see <xref
       linkend="components.optional"/>): </para>
 
-    <programlisting>PLIST_SUBST+=    SOMEVAR="somevalue"</programlisting>
+<programlisting>
+    PLIST_SUBST+=   SOMEVAR="somevalue"
+</programlisting>
 
     <para>This replaces all occurrences of <quote>${SOMEVAR}</quote>
       in the PLIST with <quote>somevalue</quote>.  </para>
@@ -233,9 +237,9 @@
       an extra package to remove it.  Therefore, one simply does:
       </para>
   
-    <programlisting>
-      @unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
-    </programlisting>
+<programlisting>
+    @unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
+</programlisting>
   
     <para> in the PLISTs of all affected packages, instead of the
       regular "@dirrm" line. </para>
@@ -262,10 +266,10 @@
     <para> From now on, we'll discuss the second solution.  To get an
       idea of the *-dirs packages available, issue: </para>
       
-    <programlisting>
-      &cprompt; cd .../pkgsrc
-      &cprompt; ls -d */*-dirs
-    </programlisting>
+<programlisting>
+    &cprompt; cd .../pkgsrc
+    &cprompt; ls -d */*-dirs
+</programlisting>
   
     <para> Their use from other packages is very simple.  The
       <varname>USE_DIRS</varname> variable takes a list of package names
@@ -278,9 +282,9 @@
       following line in it: 
       </para>
   
-    <programlisting>
-      USE_DIRS+= xdg-1.1
-    </programlisting>
+<programlisting>
+    USE_DIRS+=      xdg-1.1
+</programlisting>
   
     <para> After regenerating the PLIST using <command>make
       print-PLIST</command>, you should get the right (commented out)
