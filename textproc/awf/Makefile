@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/23 23:32:47 rillig Exp $
 #
 
 DISTNAME=	nroff-clone
@@ -14,9 +14,6 @@ COMMENT=	Text formatter (nroff-clone) written in awk
 
 EXTRACT_CMD=	${DECOMPRESS_CMD.shar.Z} ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/^\#!/d' | ${SH}
 WRKSRC=		${WRKDIR}
-
-NO_TOOLS=	yes
-NO_WRAPPER=	# defined
 
 SUBST_CLASSES+=		awflib
 SUBST_MESSAGE.awflib=	"Fixing awf library path and awk pathname."
