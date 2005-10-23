@@ -1,4 +1,4 @@
-$NetBSD: patch-bl,v 1.1 2005/06/07 02:43:26 xtraeme Exp $
+$NetBSD: patch-bl,v 1.2 2005/10/23 20:00:06 rillig Exp $
 
 --- programs/Xserver/hw/xfree86/common/xf86Xinput.c.orig	2005-05-16 23:20:56.000000000 +0900
 +++ programs/Xserver/hw/xfree86/common/xf86Xinput.c	2005-05-16 23:23:25.000000000 +0900
@@ -22,4 +22,3 @@ $NetBSD: patch-bl,v 1.1 2005/06/07 02:43:26 xtraeme Exp $
  			}
  		    }
  		    else if (dx || dy) {
-
