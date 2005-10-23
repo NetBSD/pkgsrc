@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.300 2005/10/21 07:20:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.301 2005/10/23 19:20:33 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1207,6 +1207,7 @@ sub get_regex_plurals() {
 		.*_ENV
 		.*_REQD
 		.*_SED
+		.*_SKIP
 		BUILDLINK_LDADD
 		BUILDLINK_RECOMMENDED
 		COMMENT
@@ -1266,9 +1267,12 @@ sub checkline_Makefile_vartype($$) {
 	my ($line, $vartypes) = @_;
 	if ($line->text =~ $regex_varassign) {
 		my ($varname, $op, $value) = ($1, $2, $3);
+		my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
+		my $type = exists($vartypes->{$varname}) ? $vartypes->{$varname}
+			: exists($vartypes->{$varbase}) ? $vartypes->{$varbase}
+			: undef;
 
 		if ($op eq "+=") {
-			my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
 			my $regex_plurals = get_regex_plurals();
 
 			if ($varbase !~ $regex_plurals) {
@@ -1276,71 +1280,64 @@ sub checkline_Makefile_vartype($$) {
 			}
 		}
 
-		if (exists($vartypes->{$varname})) {
-			my ($type) = ($vartypes->{$varname});
+		if (!defined($type)) {
+			$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}");
 
-			if ($type eq "Readonly") {
-				$line->log_error("\"${varname}\" must not be modified by the package or the user.");
+		} elsif ($type eq "Readonly") {
+			$line->log_error("\"${varname}\" must not be modified by the package or the user.");
 
-			} elsif ($value =~ $regex_unresolved) {
-				# ignore values that contain other variables
+		} elsif ($type eq "Boolean") {
+			if ($value !~ $regex_yesno) {
+				$line->log_warning("$varname should be set to YES, yes, NO, or no.");
+			}
 
-			} elsif ($type eq "Boolean") {
-				if ($value !~ $regex_yesno) {
-					$line->log_warning("$varname should be set to YES, yes, NO, or no.");
-				}
+		} elsif ($type eq "Yes_Or_Undefined") {
+			if ($value !~ $regex_yes) {
+				$line->log_warning("$varname should be set to YES or yes.");
+			}
 
-			} elsif ($type eq "Yes_Or_Undefined") {
-				if ($value !~ $regex_yes) {
-					$line->log_warning("$varname should be set to YES or yes.");
-				}
+		} elsif ($type eq "Mail_Address") {
+			if ($value !~ $regex_mail_address) {
+				$line->log_warning("\"$value\" is not a valid mail address.");
+			}
 
-			} elsif ($type eq "Mail_Address") {
-				if ($value !~ $regex_mail_address) {
-					$line->log_warning("\"$value\" is not a valid mail address.");
-				}
+		} elsif ($type eq "URL") {
+			if ($value !~ $regex_unresolved && $value !~ $regex_url) {
+				$line->log_warning("\"$value\" is not a valid URL.");
+			}
 
-			} elsif ($type eq "URL") {
-				if ($value !~ $regex_url) {
-					$line->log_warning("\"$value\" is not a valid URL.");
-				}
+		} elsif ($type eq "Integer") {
+			if ($value !~ qr"^\d+$") {
+				$line->log_warning("\"$value\" is not a valid Integer.");
+			}
 
-			} elsif ($type eq "Integer") {
-				if ($value !~ qr"^\d+$") {
-					$line->log_warning("\"$value\" is not a valid Integer.");
-				}
+		} elsif ($type =~ qr"^List(?: of (.*))?$") {
+			my ($element_type) = ($1);
 
-			} elsif ($type =~ qr"^List(?: of (.*))?$") {
-				my ($element_type) = ($1);
+			if ($op ne "+=" && $value !~ qr"^#") {
+				$line->log_warning("${varname} should be modified using \"+=\".");
+			}
 
-				if ($op ne "+=" && $value !~ qr"^#") {
-					$line->log_warning("${varname} should be modified using \"+=\".");
-				}
+			if (!defined($element_type)) {
+				# no further checks possible.
 
-				if (!defined($element_type)) {
-					# no further checks possible.
-
-				} elsif ($element_type eq "Dependency") {
-					if ($value =~ $regex_unresolved) {
-						# don't even try to check anything
-					} elsif ($value =~ qr":\.\./\.\./") {
-						# great.
-					} elsif ($value =~ qr":\.\./") {
-						$line->log_warning("Dependencies should have the form \"../../category/package\".");
-					} else {
-						$line->log_warning("Unknown dependency format.");
-					}
-
+			} elsif ($element_type eq "Dependency") {
+				if ($value =~ $regex_unresolved) {
+					# don't even try to check anything
+				} elsif ($value =~ qr":\.\./\.\./") {
+					# great.
+				} elsif ($value =~ qr":\.\./") {
+					$line->log_warning("Dependencies should have the form \"../../category/package\".");
 				} else {
-					$line->log_error("[internal] Element-type ${element_type} unknown.");
+					$line->log_warning("Unknown dependency format.");
 				}
 
 			} else {
-				$line->log_error("[internal] Type $type unknown.");
+				$line->log_error("[internal] Element-type ${element_type} unknown.");
 			}
 
 		} else {
-			$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}");
+			$line->log_error("[internal] Type $type unknown.");
 		}
 	}
 }
@@ -2665,7 +2662,6 @@ sub checkdir($) {
 #
 
 sub main() {
-	my ($startsec, $startusec, $endsec, $endusec);
 
 	parse_command_line();
 
