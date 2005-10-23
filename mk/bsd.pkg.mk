@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1732 2005/10/16 17:48:24 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1733 2005/10/23 16:58:42 minskim Exp $
 #
 # This file is in the public domain.
 #
@@ -3669,7 +3669,7 @@ install-depends: pre-install-depends
 			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
 		else							\
 			cd $$dir ;					\
-			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" ${MAKE} ${MAKEFLAGS} $$target PKGNAME_REQD=\'$$pkg\' MAKEFLAGS="" || exit 1; \
+			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD=\'$$pkg\' ${MAKE} ${MAKEFLAGS} $$target || exit 1; \
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
