@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/05 19:43:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/10/23 20:16:52 jlam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -146,6 +146,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Cayenne
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Cayman
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Chicago
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Chihuahua
+${PG_SUBPREFIX}share/postgresql/timezone/America/Coral_Harbour
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Cordoba
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Costa_Rica
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Cuiaba
@@ -363,6 +364,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Adelaide
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Brisbane
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Broken_Hill
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Canberra
+${PG_SUBPREFIX}share/postgresql/timezone/Australia/Currie
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Darwin
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Hobart
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/LHI
