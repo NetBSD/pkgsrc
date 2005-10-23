@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2005/10/23 20:16:52 jlam Exp $
 
 PKG_SUPPORTED_OPTIONS+=		pgsql-hier-query
 
@@ -14,7 +14,9 @@ CONFIGURE_ARGS+=        --with-pam
 
 ###
 ### Support for hierarchical queries with Oracle-like CONNECT BY syntax.
-### See http://gppl.moonbone.ru/README.html for details.
+### See http://gppl.moonbone.ru/README.html for details.  Note that use of
+### this patch is discouraged by PostgreSQL developers because it is
+### considered somewhat buggy and incomplete.
 ###
 .if !empty(PKG_OPTIONS:Mpgsql-hier-query)
 PATCH_SITES=		http://gppl.moonbone.ru/
