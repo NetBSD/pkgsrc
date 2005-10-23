@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/23 21:27:47 rillig Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -15,10 +15,14 @@ RESTRICTED=     "Restrictive copyright (non-commerical use only)"
 NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CFLAGS="-DHAVE_X11_EXTENSIONS_SHAPE_H=1 -O" \
-		X_PRE_LIBS="${X_PRE_LIBS}" \
-		X_EXTRA_LIBS="-lXt"
+CFLAGS+=	-DHAVE_X11_EXTENSIONS_SHAPE_H=1
+CFLAGS+=	-O
+CONFIGURE_ENV+=	CFLAGS=${CFLAGS:Q}
+CONFIGURE_ENV+=	X_PRE_LIBS=${X_PRE_LIBS:Q}
+CONFIGURE_ENV+=	X_EXTRA_LIBS=-lXt
 
 X_PRE_LIBS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 FIX_RPATH+=	X_PRE_LIBS
