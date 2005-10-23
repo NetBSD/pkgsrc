@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.17 2005/10/21 07:20:24 rillig Exp $
+# $NetBSD: makevars.map,v 1.18 2005/10/23 23:14:57 rillig Exp $
 #
 
 # This file tries to guess the type of some variables, according to their
@@ -68,6 +68,7 @@ MAKE_ENV		List
 CONFIGURE_ENV		List
 MAKE_FLAGS		List
 CONFIGURE_ARGS		List
+PLIST_SUBST		List
 
 PKGVERSION		Readonly
 PKGBASE			Readonly
