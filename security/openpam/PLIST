@@ -1,4 +1,4 @@
-@comment
+@comment $NetBSD: PLIST,v 1.3 2005/10/23 20:21:43 rillig Exp $
 include/security/openpam.h
 include/security/openpam_version.h
 include/security/pam_appl.h
