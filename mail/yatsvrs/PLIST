@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/15 13:18:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/10/23 21:45:16 rillig Exp $
 libexec/ascyd
-libexec/yatd
 libexec/yatconfd
+libexec/yatd
 share/doc/yatsvr5/IMPORTANT
 share/doc/yatsvr5/README
 share/doc/yatsvr5/UPDATE
