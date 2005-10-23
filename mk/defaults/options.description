@@ -87,6 +87,7 @@ freetype
 gd	
 gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
+geoip			Enable IP-to-country-lookup using the GeoIP C library.
 ggi			Enable GGI support.
 gif			Enable GIF support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
@@ -172,7 +173,7 @@ mmx			Enable MMX support (i386 only).
 modperl	
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
 modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
-motif	  Enable motif support.
+motif			Enable motif support.
 mozilla			Use mozilla as gecko rendering engine.
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
@@ -288,7 +289,7 @@ w3m-unicode		Use Unicode characters.
 wrap	
 wx	
 x11			Enable X11 support.
-xaw		  Enable Xaw support.
+xaw			Enable Xaw support.
 xface	
 xft	
 xft2	
