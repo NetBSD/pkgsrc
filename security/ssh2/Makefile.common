@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2005/10/23 23:11:09 rillig Exp $
 #
 
 DISTNAME=	ssh-3.2.9.1
@@ -27,7 +27,7 @@ PLIST_SRC=		${.CURDIR}/../../security/ssh2/PLIST
 .if defined(USE_X11)
 PLIST_SUBST+=	X11_SUPPORT=
 .else
-PLIST_SUBST=	X11_SUPPORT='@comment '
+PLIST_SUBST+=	X11_SUPPORT='@comment '
 .endif
 
 .include "../../mk/bsd.prefs.mk"
