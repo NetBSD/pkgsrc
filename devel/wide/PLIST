@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/01 19:11:20 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/23 16:03:11 rillig Exp $
 bin/wide
+libexec/wide/lib/jide-common.jar
+libexec/wide/lib/novaworx.jar
+libexec/wide/lib/wide.jar
+libexec/wide/lib/widex.jar
 share/wide/Study/AddNumbers.wcl
 share/wide/Study/AddNumbers.while
 share/wide/Study/Casing.while
@@ -25,6 +29,14 @@ share/wide/help/debug_1.png
 share/wide/help/debug_2.png
 share/wide/help/execution.html
 share/wide/help/execution_1.png
+share/wide/help/ide_debug_pane.png
+share/wide/help/ide_options.html
+share/wide/help/ide_panes.html
+share/wide/help/ide_run.png
+share/wide/help/ide_run_suspend.png
+share/wide/help/ide_tree.html
+share/wide/help/ide_tree2.png
+share/wide/help/ide_tree3.png
 share/wide/help/images/compile.png
 share/wide/help/images/execute.png
 share/wide/help/images/resume.png
@@ -34,25 +46,17 @@ share/wide/help/images/showViewer.png
 share/wide/help/images/startDebugger.png
 share/wide/help/images/suspend.png
 share/wide/help/images/traceOver.png
-share/wide/help/ide_debug_pane.png
-share/wide/help/ide_options.html
-share/wide/help/ide_panes.html
-share/wide/help/ide_run.png
-share/wide/help/ide_run_suspend.png
-share/wide/help/ide_tree.html
-share/wide/help/ide_tree2.png
-share/wide/help/ide_tree3.png
 share/wide/help/lang_cnst.html
 share/wide/help/lang_intro.html
 share/wide/help/lang_list.html
 share/wide/help/lang_string.html
 share/wide/help/messages_error.png
 share/wide/help/newfile.png
+share/wide/help/options.png
 share/wide/help/options/cube.gif
 share/wide/help/options/sugars.html
 share/wide/help/options/sugars.html.bak
 share/wide/help/options/title.png
-share/wide/help/options.png
 share/wide/help/sp.gif
 share/wide/help/wide_intro.html
 share/wide/images/action/execute.png
@@ -148,10 +152,6 @@ share/wide/project.xml
 share/wide/sugars.ini
 share/wide/version.txt
 share/wide/widehelp.xml
-libexec/wide/lib/jide-common.jar
-libexec/wide/lib/novaworx.jar
-libexec/wide/lib/wide.jar
-libexec/wide/lib/widex.jar
 @dirrm share/wide/images/tool
 @dirrm share/wide/images/table
 @dirrm share/wide/images/prnt
