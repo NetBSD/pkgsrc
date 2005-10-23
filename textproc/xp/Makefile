@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:43 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/23 23:30:54 rillig Exp $
 #
 
 DISTNAME=	xp
@@ -13,8 +13,8 @@ COMMENT=	James Clark's non-validating XML Parser for Java
 
 EXTRACT_ONLY=	# empty
 USE_JAVA=	run
-NO_CONFIGURE=
-NO_BUILD=
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 post-extract:
 	cd ${WRKDIR} && ${LOCALBASE}/bin/unzip -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
