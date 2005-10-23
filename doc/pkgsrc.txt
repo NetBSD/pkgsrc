@@ -26,7 +26,7 @@ creating new packages.
 
 Table of Contents
 
-1. Introduction
+1. What is pkgsrc?
 
     1.1. Introduction
     1.2. Overview
@@ -231,6 +231,7 @@ II. The pkgsrc developer's guide
         15.4. Building considerations
 
             15.4.1. CPP defines
+            15.4.2. Getting a list of CPP defines
 
         15.5. Package specific actions
 
@@ -283,7 +284,7 @@ D. Editing guidelines for the pkgsrc guide
     D.1. Targets
     D.2. Procedure
 
-Chapter 1. Introduction
+Chapter 1. What is pkgsrc?
 
 Table of Contents
 
@@ -521,7 +522,7 @@ and unpack it into /usr/pkgsrc.
 As an alternative to the tar file, you can get pkgsrc via the Software Update
 Protocol, SUP. To do so, make sure your supfile has a line
 
-release=pkgsrc
+    release=pkgsrc
 
 in it, see the examples in /usr/share/examples/supfiles, and that the /usr/
 pkgsrc directory exists. Then, simply run sup -v /path/to/your/supfile.
@@ -786,7 +787,7 @@ the csh and ksh startup shortcuts) is "interix". Most systems don't have a
 termcap/terminfo entry for it, but the following .termcap entry provides
 adequate emulation in most cases:
 
-interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+    interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 
 3.2.4. IRIX
 
@@ -821,7 +822,7 @@ for details.
 
 If you are using SGI's MIPSPro compiler, please set
 
-PKGSRC_COMPILER=mipspro
+    PKGSRC_COMPILER=        mipspro
 
 in /etc/mk.conf. Otherwise, pkgsrc will assume you are using gcc and may end up
 passing invalid flags to the compiler. Note that bootstrap should create an
@@ -843,8 +844,8 @@ Compiler). gcc is the default. icc 8.0 and 8.1 on i386 have been tested.
 
 To bootstrap using icc, assuming the default icc installation directory:
 
-env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
-                ac_cv___attribute__=yes ./bootstrap
+    env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
+            ac_cv___attribute__=yes ./bootstrap
 
 Note
 
@@ -858,13 +859,13 @@ __attribute__ is assumed supported by the compiler.
 
 After bootstrapping, you should set PKGSRC_COMPILER in /etc/mk.conf:
 
-PKGSRC_COMPILER=icc
+    PKGSRC_COMPILER=        icc
 
 The default installation directory for icc is /opt/intel_cc_80, which is also
 the pkgsrc default. If you have installed it into a different directory, set
 ICCBASE in /etc/mk.conf:
 
-ICCBASE=/opt/icc
+    ICCBASE=                /opt/icc
 
 pkgsrc uses the static linking method of the runtime libraries provided by icc,
 so binaries can be run on other systems which do not have the shared libraries
@@ -901,11 +902,11 @@ with the OpenBSD userland tools. There are several steps:
     as well. You can work around this by enclosing all the pkgsrc-specific
     parts of the file with:
 
-    .ifdef BSD_PKG_MK
-    # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
-    .else
-    # OpenBSD stuff
-    .endif
+        .ifdef BSD_PKG_MK
+        # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
+        .else
+        # OpenBSD stuff
+        .endif
 
 
 3.2.7. Solaris
@@ -954,13 +955,13 @@ You will need at least the following packages installed (from WorkShop 5.0)
 
 You should set CC, CXX and optionally, CPP in /etc/mk.conf, e.g.:
 
-CC=     cc
-CXX=    CC
-CPP=    /usr/ccs/lib/cpp
+    CC=     cc
+    CXX=    CC
+    CPP=    /usr/ccs/lib/cpp
 
 You may also want to build 64-bit binaries, e.g.:
 
-CFLAGS= -xtarget=ultra -xarch=v9
+    CFLAGS= -xtarget=ultra -xarch=v9
 
 Whichever compiler you use, please ensure the compiler tools and your $prefix
 are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
@@ -1277,18 +1278,17 @@ experimental features.
 To see which options, if any, a package supports, and which options are
 mutually exclusive, run make show-options, for example:
 
-      The following options are supported by this package:
-      ssl      Enable SSL support.
-      Exactly one of the following gecko options is required:
-      firefox  Use firefox as gecko rendering engine.
-      mozilla  Use mozilla as gecko rendering engine.
-      At most one of the following database options may be selected:
-      mysql    Enable support for MySQL database.
-      pgsql    Enable support for PostgreSQL database.
+    The following options are supported by this package:
+    ssl      Enable SSL support.
+    Exactly one of the following gecko options is required:
+    firefox  Use firefox as gecko rendering engine.
+    mozilla  Use mozilla as gecko rendering engine.
+    At most one of the following database options may be selected:
+    mysql    Enable support for MySQL database.
+    pgsql    Enable support for PostgreSQL database.
 
-      These options are enabled by default: firefox
-      These options are currently enabled: mozilla ssl
-
+    These options are enabled by default: firefox
+    These options are currently enabled: mozilla ssl
 
 The following variables can be defined in /etc/mk.conf to select which options
 to enable for a package: PKG_DEFAULT_OPTIONS, which can be used to select or
@@ -1388,14 +1388,14 @@ mk.conf for details of the default settings. You will want to ensure that
 ACCEPTABLE_LICENSES meet your local policy. As used in this example,
 _ACCEPTABLE=yes accepts all licenses.
 
-PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
-WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
-BSDSRCDIR=      /usr/src
-BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
-OBJHOSTNAME?=   yes               # use work.`hostname`
-FAILOVER_FETCH= yes               # insist on the correct checksum
-PKG_DEVELOPER?= yes
-_ACCEPTABLE=    yes
+    PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
+    WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
+    BSDSRCDIR=      /usr/src
+    BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
+    OBJHOSTNAME?=   yes               # use work.`hostname`
+    FAILOVER_FETCH= yes               # insist on the correct checksum
+    PKG_DEVELOPER?= yes
+    _ACCEPTABLE=    yes
 
 6.3.1.2. build.conf
 
@@ -1429,10 +1429,10 @@ any new instances of the shell any more). Also, if you use NetBSD earlier than
 1.5, or you still want to use the pkgsrc version of ssh for some reason, be
 sure to install ssh before starting it from rc.local:
 
-( cd /usr/pkgsrc/security/ssh ; make bulk-install )
-if [ -f /usr/pkg/etc/rc.d/sshd ]; then
-    /usr/pkg/etc/rc.d/sshd
-fi
+    ( cd /usr/pkgsrc/security/ssh ; make bulk-install )
+    if [ -f /usr/pkg/etc/rc.d/sshd ]; then
+        /usr/pkg/etc/rc.d/sshd
+    fi
 
 Not doing so will result in you being not able to log in via ssh after the bulk
 build is finished or if the machine gets rebooted or crashes. You have been
@@ -1762,7 +1762,7 @@ The following mailing lists may be of interest to pkgsrc users:
 
 To subscribe, do:
 
-% echo subscribe listname | mail majordomo@NetBSD.org
+    % echo subscribe listname | mail majordomo@NetBSD.org
 
 Archives for all these mailing lists are available from http://
 mail-index.NetBSD.org/.
@@ -1871,10 +1871,10 @@ if you are not using default values.
 For example, if you want to use wget to resume downloads, you'll have to use
 something like:
 
-FETCH_CMD=wget
-FETCH_BEFORE_ARGS=--passive-ftp
-FETCH_RESUME_ARGS=-c
-FETCH_OUTPUT_ARGS=-O
+    FETCH_CMD=             wget
+    FETCH_BEFORE_ARGS=     --passive-ftp
+    FETCH_RESUME_ARGS=     -c
+    FETCH_OUTPUT_ARGS=     -O
 
 7.6. How can I install/use XFree86 from pkgsrc?
 
@@ -1882,7 +1882,7 @@ If you want to use XFree86 from pkgsrc instead of your system's own X11 (/usr/
 X11R6, /usr/openwin, ...), you will have to add the following line into /etc/
 mk.conf:
 
-X11_TYPE=XFree86
+    X11_TYPE=XFree86
 
 7.7. How can I install/use X.org from pkgsrc?
 
@@ -1890,7 +1890,7 @@ If you want to use X.org from pkgsrc instead of your system's own X11 (/usr/
 X11R6, /usr/openwin, ...) you will have to add the following line into /etc/
 mk.conf:
 
-X11_TYPE=xorg
+    X11_TYPE=xorg
 
 7.8. How to fetch files from behind a firewall
 
@@ -1900,8 +1900,8 @@ is done using an environment variable in the form of a URL, e.g. in Amdahl, the
 machine "orpheus.amdahl.com" is one of the firewalls, and it uses port 80 as
 the proxy port number. So the proxy environment variables are:
 
-ftp_proxy=ftp://orpheus.amdahl.com:80/
-http_proxy=http://orpheus.amdahl.com:80/
+    ftp_proxy=ftp://orpheus.amdahl.com:80/
+    http_proxy=http://orpheus.amdahl.com:80/
 
 7.9. How do I tell make fetch to do passive FTP?
 
@@ -1985,9 +1985,9 @@ does password caching over a limited time. To use it, install sudo (either as
 binary package or from security/sudo) and then put the following into your /etc
 /mk.conf:
 
-.if exists(${LOCALBASE}/bin/sudo)
-SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
-.endif
+    .if exists(${LOCALBASE}/bin/sudo)
+    SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
+    .endif
 
 7.14. How do I change the location of configuration files?
 
@@ -2153,6 +2153,7 @@ Table of Contents
     15.4. Building considerations
 
         15.4.1. CPP defines
+        15.4.2. Getting a list of CPP defines
 
     15.5. Package specific actions
 
@@ -2225,49 +2226,48 @@ exactly in the order given here.
     Currently the following values are available for CATEGORIES. If more than
     one is used, they need to be separated by spaces:
 
-    archivers     cross         geography     meta-pkgs     security
-    audio         databases     graphics      misc          shells
-    benchmarks    devel         ham           multimedia    sysutils
-    biology       editors       inputmethod   net           textproc
-    cad           emulators     lang          news          time
-    chat          finance       mail          parallel      wm
-    comms         fonts         math          pkgtools      www
-    converters    games         mbone         print         x11
+        archivers     cross         geography     meta-pkgs     security
+        audio         databases     graphics      misc          shells
+        benchmarks    devel         ham           multimedia    sysutils
+        biology       editors       inputmethod   net           textproc
+        cad           emulators     lang          news          time
+        chat          finance       mail          parallel      wm
+        comms         fonts         math          pkgtools      www
+        converters    games         mbone         print         x11
 
   * MASTER_SITES is a list of URLs where the distribution files can be
     downloaded. Each URL must end with a slash.
 
     The MASTER_SITES may make use of the following predefined sites:
 
-                ${MASTER_SITE_APACHE}
-                ${MASTER_SITE_BACKUP}
-                ${MASTER_SITE_CYGWIN}
-                ${MASTER_SITE_DEBIAN}
-                ${MASTER_SITE_FREEBSD}
-                ${MASTER_SITE_FREEBSD_LOCAL}
-                ${MASTER_SITE_GNOME}
-                ${MASTER_SITE_GNU}
-                ${MASTER_SITE_GNUSTEP}
-                ${MASTER_SITE_IFARCHIVE}
-                ${MASTER_SITE_MOZILLA}
-                ${MASTER_SITE_OPENOFFICE}
-                ${MASTER_SITE_PERL_CPAN}
-                ${MASTER_SITE_R_CRAN}
-                ${MASTER_SITE_SOURCEFORGE}
-                ${MASTER_SITE_SUNSITE}
-                ${MASTER_SITE_SUSE}
-                ${MASTER_SITE_TEX_CTAN}
-                ${MASTER_SITE_XCONTRIB}
-                ${MASTER_SITE_XEMACS}
-
+        ${MASTER_SITE_APACHE}
+        ${MASTER_SITE_BACKUP}
+        ${MASTER_SITE_CYGWIN}
+        ${MASTER_SITE_DEBIAN}
+        ${MASTER_SITE_FREEBSD}
+        ${MASTER_SITE_FREEBSD_LOCAL}
+        ${MASTER_SITE_GNOME}
+        ${MASTER_SITE_GNU}
+        ${MASTER_SITE_GNUSTEP}
+        ${MASTER_SITE_IFARCHIVE}
+        ${MASTER_SITE_MOZILLA}
+        ${MASTER_SITE_OPENOFFICE}
+        ${MASTER_SITE_PERL_CPAN}
+        ${MASTER_SITE_R_CRAN}
+        ${MASTER_SITE_SOURCEFORGE}
+        ${MASTER_SITE_SUNSITE}
+        ${MASTER_SITE_SUSE}
+        ${MASTER_SITE_TEX_CTAN}
+        ${MASTER_SITE_XCONTRIB}
+        ${MASTER_SITE_XEMACS}
 
     If one of these predefined sites is chosen, you may want to specify a
     subdirectory of that site. Since these macros may expand to more than one
     actual site, you must use the following construct to specify a
     subdirectory:
 
-                ${MASTER_SITE_GNU:=subdirectory/name/}
-                ${MASTER_SITE_SOURCEFORGE:=project_name/}
+        ${MASTER_SITE_GNU:=subdirectory/name/}
+        ${MASTER_SITE_SOURCEFORGE:=project_name/}
 
     Note the trailing slash after the subdirectory name.
 
@@ -2275,10 +2275,10 @@ exactly in the order given here.
     sites, set SITES_foo to a list of URIs where file "foo" may be found. "foo"
     includes the suffix, e.g.:
 
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-    DISTFILES+=     foo-file.tar.gz
-    SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
-            http://www.somewhereelse.com/mirror/somehow/
+        DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+        DISTFILES+=     foo-file.tar.gz
+        SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+                http://www.somewhereelse.com/mirror/somehow/
 
   * DISTFILES: Name(s) of archive file(s) containing distribution. The default
     is ${DISTNAME}${EXTRACT_SUFX}. Should only be set if you have more than one
@@ -2463,7 +2463,7 @@ MESSAGE
     can modify variables in it easily by using MESSAGE_SUBST in the package's
     Makefile:
 
-    MESSAGE_SUBST+=  SOMEVAR="somevalue"
+        MESSAGE_SUBST+=  SOMEVAR="somevalue"
 
     replaces "${SOMEVAR}" with "somevalue" in MESSAGE.
 
@@ -2583,17 +2583,16 @@ and add it here.
 
 9.2.1. Adding things to a list
 
-STRING=                 foo * bar `date`
-INT_LIST=               # empty
-ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
-EXT_LIST=               # empty
-ANOTHER_EXT_LIST=       a=b c=d
+    STRING=                 foo * bar `date`
+    INT_LIST=               # empty
+    ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
+    EXT_LIST=               # empty
+    ANOTHER_EXT_LIST=       a=b c=d
 
-INT_LIST+=              ${STRING}               # 1
-INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
-EXT_LIST+=              ${STRING:Q}             # 3
-EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
-
+    INT_LIST+=              ${STRING}               # 1
+    INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
+    EXT_LIST+=              ${STRING:Q}             # 3
+    EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
 
 When you add a string to an external list (example 3), it must be quoted. In
 all other cases, you must not add a quoting level. You must not merge internal
@@ -2602,11 +2601,10 @@ interpreted in both lists.
 
 9.2.2. Converting an internal list into an external list
 
-EXT_LIST=       # empty
-.for i in ${INT_LIST}
-EXT_LIST+=      ${i:Q}""
-.endfor
-
+    EXT_LIST=       # empty
+    .for i in ${INT_LIST}
+    EXT_LIST+=      ${i:Q}""
+    .endfor
 
 This code converts the internal list INT_LIST into the external list EXT_LIST.
 As the elements of an internal list are unquoted they must be quoted here. The
@@ -2614,17 +2612,16 @@ reason for appending "" is explained below.
 
 9.2.3. Passing variables to a shell command
 
-STRING=         foo bar <    > * `date` $$HOME ' "
-EXT_LIST=       string=${STRING:Q} x=second\ item
+    STRING=         foo bar <    > * `date` $$HOME ' "
+    EXT_LIST=       string=${STRING:Q} x=second\ item
 
-all:
-        echo ${STRING}                  # 1
-        echo "${STRING}"                # 2
-        echo "${STRING:Q}"              # 3
-        echo ${STRING:Q}                # 4
-        echo x${STRING:Q} | sed 1s,.,,  # 5
-        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
-
+    all:
+            echo ${STRING}                  # 1
+            echo "${STRING}"                # 2
+            echo "${STRING:Q}"              # 3
+            echo ${STRING:Q}                # 4
+            echo x${STRING:Q} | sed 1s,.,,  # 5
+            env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
 
 Example 1 leads to a syntax error in the shell, as the characters are just
 copied.
@@ -2667,16 +2664,15 @@ some of the commonly known ones.
     That's why we better pass the CPPFLAGS value properly trimmed. And here is
     how we do it:
 
-    CPPFLAGS=               # empty
-    CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
-    CPPFLAGS+=              ${MY_CPPFLAGS}
+        CPPFLAGS=               # empty
+        CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
+        CPPFLAGS+=              ${MY_CPPFLAGS}
 
-    CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
+        CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
 
-    all:
-            echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
-            echo x${CONFIGURE_ARGS}x        # properly trimmed
-
+        all:
+                echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
+                echo x${CONFIGURE_ARGS}x        # properly trimmed
 
   * The example above contains one bug: The ${PREFIX} is a properly quoted
     shell expression, but there is the C compiler after it, which also expects
@@ -2690,18 +2686,17 @@ some of the commonly known ones.
     results. Here are two completely different cases which can be solved with
     the same trick.
 
-    EMPTY=                  # empty
-    empty_test:
-            for i in a ${EMPTY:Q} c; do \
-                    echo "$$i"; \
-            done
+        EMPTY=                  # empty
+        empty_test:
+                for i in a ${EMPTY:Q} c; do \
+                        echo "$$i"; \
+                done
 
-    for_test:
-    .for i in a:\ a:\test.txt
-            echo ${i:Q}
-            echo "foo"
-    .endfor
-
+        for_test:
+        .for i in a:\ a:\test.txt
+                echo ${i:Q}
+                echo "foo"
+        .endfor
 
     The first example will only print two of the three lines we might have
     expected. This is because ${EMPTY:Q} expands to the empty string, which the
@@ -2721,8 +2716,7 @@ The pkgsrc bmake program does not handle the following assignment correctly. In
 case _othervar_ contains a ``-'' character, one of the closing braces is
 included in ${VAR} after this code executes.
 
-        VAR:= ${VAR:N${_othervar_:C/-//}}
-
+    VAR:=   ${VAR:N${_othervar_:C/-//}}
 
 For a more complex code snippet and a workaround, see the package regress/
 make-quoting, testcase bug1.
@@ -2750,7 +2744,7 @@ the PLIST file (or files, see below!).
 
 Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
-@comment $NetBSD$
+    @comment $NetBSD$
 
 10.2. Semi-automatic PLIST generation
 
@@ -2774,14 +2768,12 @@ scripting you like to it, but be careful with quoting.
 For example, to get all files inside the libdata/foo directory removed from the
 resulting PLIST:
 
-      PRINT_PLIST_AWK+= /^libdata\/foo/ { next; }
-
+    PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
 
 And to get all the @dirrm lines referring to a specific (shared) directory
 converted to @comments:
 
-      PRINT_PLIST_AWK+= /^@dirrm share\/specific/ { print "@comment " $$0; next; }
-
+    PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
 
 10.4. Variable substitution in PLIST
 
@@ -2828,7 +2820,7 @@ If you want to change other variables not listed above, you can add variables
 and their expansions to this variable in the following way, similar to
 MESSAGE_SUBST (see Section 8.5, "Optional files"):
 
-PLIST_SUBST+=    SOMEVAR="somevalue"
+    PLIST_SUBST+=   SOMEVAR="somevalue"
 
 This replaces all occurrences of "${SOMEVAR}" in the PLIST with "somevalue".
 
@@ -2873,8 +2865,7 @@ Within pkgsrc, you'll find both approaches. If a directory is shared by a few
 unrelated packages, it's often not worth to add an extra package to remove it.
 Therefore, one simply does:
 
-      @unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
-
+    @unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
 
 in the PLISTs of all affected packages, instead of the regular "@dirrm" line.
 
@@ -2891,9 +2882,8 @@ solutions are available:
 From now on, we'll discuss the second solution. To get an idea of the *-dirs
 packages available, issue:
 
-      % cd .../pkgsrc
-      % ls -d */*-dirs
-
+    % cd .../pkgsrc
+    % ls -d */*-dirs
 
 Their use from other packages is very simple. The USE_DIRS variable takes a
 list of package names (without the "-dirs" part) together with the required
@@ -2902,8 +2892,7 @@ version number (always pick the latest one when writing new packages).
 For example, if a package installs files under share/applications, it should
 have the following line in it:
 
-      USE_DIRS+= xdg-1.1
-
+    USE_DIRS+=      xdg-1.1
 
 After regenerating the PLIST using make print-PLIST, you should get the right
 (commented out) lines.
@@ -2966,18 +2955,18 @@ The process of converting packages to use the buildlink3 framework
 If a dependency on a particular package is required for its libraries and
 headers, then we replace:
 
-DEPENDS+=   foo>=1.1.0:../../category/foo
+    DEPENDS+=   foo>=1.1.0:../../category/foo
 
 with
 
-.include "../../category/foo/buildlink3.mk"
+    .include "../../category/foo/buildlink3.mk"
 
 The buildlink3.mk files usually define the required dependencies. If you need a
 newer version of the dependency when using buildlink3.mk files, then you can
 define it in your Makefile; for example:
 
-BUILDLINK_DEPENDS.foo+=   foo>=1.1.0
-.include "../../category/foo/buildlink3.mk"
+    BUILDLINK_DEPENDS.foo+=   foo>=1.1.0
+    .include "../../category/foo/buildlink3.mk"
 
 There are several buildlink3.mk files in pkgsrc/mk that handle special package
 issues:
@@ -3030,27 +3019,27 @@ following command will generate a good starting point for buildlink3.mk files:
 The following real-life example buildlink3.mk is taken from pkgsrc/graphics/
 tiff:
 
-# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
+    # $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
+    BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
+    TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=     tiff
-.endif
+    .if !empty(BUILDLINK_DEPTH:M+)
+    BUILDLINK_DEPENDS+=     tiff
+    .endif
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
-BUILDLINK_PACKAGES+=    tiff
+    BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
+    BUILDLINK_PACKAGES+=    tiff
 
-.if !empty(TIFF_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.tiff+=        tiff>=3.6.1
-BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
-.endif  # TIFF_BUILDLINK3_MK
+    .if !empty(TIFF_BUILDLINK3_MK:M+)
+    BUILDLINK_DEPENDS.tiff+=        tiff>=3.6.1
+    BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
+    .endif  # TIFF_BUILDLINK3_MK
 
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+    .include "../../devel/zlib/buildlink3.mk"
+    .include "../../graphics/jpeg/buildlink3.mk"
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+    BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
 
 The header and footer manipulate BUILDLINK_DEPTH, which is common across all
 buildlink3.mk files and is used to track at what depth we are including
@@ -3166,45 +3155,44 @@ The only requirements of a builtin.mk file for pkg are:
 
 The following is the recommended template for builtin.mk files:
 
-.if !defined(IS_BUILTIN.foo)
-#
-# IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
-# genuinely exists in the system or not.
-#
-IS_BUILTIN.foo?=        no
+    .if !defined(IS_BUILTIN.foo)
+    #
+    # IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
+    # genuinely exists in the system or not.
+    #
+    IS_BUILTIN.foo?=        no
 
-# BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
-# version can be determined.
-#
-.  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
-BUILTIN_PKG.foo?=       foo-1.0
-.  endif
-.endif  # IS_BUILTIN.foo
+    # BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
+    # version can be determined.
+    #
+    .  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
+    BUILTIN_PKG.foo?=       foo-1.0
+    .  endif
+    .endif  # IS_BUILTIN.foo
 
-.if !defined(USE_BUILTIN.foo)
-USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
-.  if defined(BUILTIN_PKG.foo)
-.    for _depend_ in ${BUILDLINK_DEPENDS.foo}
-.      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
-USE_BUILTIN.foo!=                                                       \
-      if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
-              ${ECHO} "yes";                                            \
-      else                                                              \
-              ${ECHO} "no";                                             \
-      fi
-.      endif
-.    endfor
-.  endif
-.endif  # USE_BUILTIN.foo
+    .if !defined(USE_BUILTIN.foo)
+    USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
+    .  if defined(BUILTIN_PKG.foo)
+    .    for _depend_ in ${BUILDLINK_DEPENDS.foo}
+    .      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
+    USE_BUILTIN.foo!=                                                       \
+          if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
+                  ${ECHO} "yes";                                            \
+          else                                                              \
+                  ${ECHO} "no";                                             \
+          fi
+    .      endif
+    .    endfor
+    .  endif
+    .endif  # USE_BUILTIN.foo
 
-CHECK_BUILTIN.foo?=     no
-.if !empty(CHECK_BUILTIN.foo:M[nN][oO])
-#
-# Here we place code that depends on whether USE_BUILTIN.foo is set to
-# "yes" or "no".
-#
-.endif  # CHECK_BUILTIN.foo
-
+    CHECK_BUILTIN.foo?=     no
+    .if !empty(CHECK_BUILTIN.foo:M[nN][oO])
+    #
+    # Here we place code that depends on whether USE_BUILTIN.foo is set to
+    # "yes" or "no".
+    #
+    .endif  # CHECK_BUILTIN.foo
 
 The first section sets IS_BUILTIN.pkg depending on if pkg really exists in the
 base system. This should not be a base system software with similar
@@ -3245,9 +3233,8 @@ neither or in both variables, then PREFER_PKGSRC has precedence over
 PREFER_NATIVE. For example, to require using pkgsrc versions of software for
 all but the most basic bits on a NetBSD system, you can set:
 
-        PREFER_PKGSRC=  yes
-        PREFER_NATIVE=  getopt skey tcp_wrappers
-
+    PREFER_PKGSRC=  yes
+    PREFER_NATIVE=  getopt skey tcp_wrappers
 
 A package must have a builtin.mk file to be listed in PREFER_NATIVE, otherwise
 it is simply ignored in that list.
@@ -3296,7 +3283,7 @@ The following sections inspect each of the above points in detail. Note that in
 order to use any of the described functionalities, you must add the following
 to your package's Makefile:
 
-USE_PKGINSTALL=YES
+    USE_PKGINSTALL= YES
 
 You may be thinking that many of the things described here could be easily done
 with simple code in the package's post-installation target (post-install). This
@@ -3339,7 +3326,7 @@ anywhere in the file system:
     by spaces: the directory name, its owner, its group and its numerical mode.
     For example:
 
-    MAKE_DIRS_PERMS+= ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+        MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
 
     The difference between the two is exactly the same as their non-PERMS
     counterparts.
@@ -3369,7 +3356,7 @@ handle files outside the installation prefix:
     specifies their owner, their group and their numeric permissions, in this
     order. For example:
 
-    SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+        SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
 
     The difference between the two is exactly the same as their non-PERMS
     counterparts.
@@ -3435,7 +3422,7 @@ cases you will have to patch the package Makefiles to achieve it. If you are
 lucky, though, it may be as easy as passing an extra flag to the configuration
 script; this is the case of GNU Autoconf- generated files:
 
-CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+    CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 
 Note that this specifies where the package has to look for its configuration
 files, not where they will be originally installed (although the difference is
@@ -3461,8 +3448,8 @@ the variables CONF_FILES and CONF_FILES_PERMS are used. Check out Section
 12.1.2, "File manipulation" for information about their syntax and their
 purpose. Here is an example, taken from the mail/mutt package:
 
-EGDIR=        ${PREFIX}/share/doc/mutt/samples
-CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+    EGDIR=        ${PREFIX}/share/doc/mutt/samples
+    CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 
 Note that the EGDIR variable is specific to that package and has no meaning
 outside it.
@@ -3489,7 +3476,7 @@ In order to provide system startup scripts, the package has to:
  2. Tell pkginstall to handle it, appending the name of the script, without its
     extension, to the RCD_SCRIPTS variable. Continuing the previous example:
 
-    RCD_SCRIPTS+= cupsd
+        RCD_SCRIPTS+=   cupsd
 
 
 Once this is done, pkginstall will do the following steps for each script in an
@@ -3520,21 +3507,20 @@ it can do so by using the pkginstall framework.
 Users can be created by adding entries to the PKG_USERS variable. Each entry
 has the following syntax, which mimics /etc/passwd:
 
-user:group[:[userid][:[descr][:[home][:shell]]]]
+    user:group[:[userid][:[descr][:[home][:shell]]]]
 
 Only the user and group are required; everything else is optional, but the
 colons must be in the right places when specifying optional bits. By default, a
 new user will have home directory /nonexistent, and login shell /sbin/nologin
 unless they are specified as part of the user element. Note that if the
-description contains spaces, then spaces should be double backslash-escaped, as
-in:
+description contains spaces, then spaces should be backslash-escaped, as in:
 
-foo:foogrp::The\\ Foomister
+    foo:foogrp::The\ Foomister
 
 Similarly, groups can be created using the PKG_GROUPS variable, whose syntax
 is:
 
-group[:groupid]
+    group[:groupid]
 
 As before, only the group name is required; the numeric identifier is optional.
 
@@ -3550,8 +3536,8 @@ variable to its absolute file name. This will add some hooks to the
 installation scripts to handle it. Consider the following example, taken from
 shells/zsh:
 
-USE_PKGINSTALL= YES
-PKG_SHELL=      ${PREFIX}/bin/zsh
+    USE_PKGINSTALL= YES
+    PKG_SHELL=      ${PREFIX}/bin/zsh
 
 12.5.1. Disabling handling of configuration files
 
@@ -3585,50 +3571,51 @@ The following example shows how bsd.options.mk should be used by the
 hypothetical ``wibble'' package, either in the package Makefile, or in a file,
 e.g. options.mk, that is included by the main package Makefile.
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
-PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
-PKG_OPTIONS_OPTIONAL_GROUPS=    database
-PKG_OPTIONS_GROUP.database=     mysql pgsql
-PKG_SUGGESTED_OPTIONS=          wibble-foo
-PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
-PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
+    PKG_OPTIONS_VAR=            PKG_OPTIONS.wibble
+    PKG_SUPPORTED_OPTIONS=              wibble-foo ldap
+    PKG_OPTIONS_OPTIONAL_GROUPS=        database
+    PKG_OPTIONS_GROUP.database= mysql pgsql
+    PKG_SUGGESTED_OPTIONS=              wibble-foo
+    PKG_OPTIONS_LEGACY_VARS+=   WIBBLE_USE_OPENLDAP:ldap
+    PKG_OPTIONS_LEGACY_OPTS+=   foo:wibble-foo
 
-.include "../../mk/bsd.prefs.mk"
+    .include "../../mk/bsd.prefs.mk"
 
-# this package was previously named wibble2
-.if defined(PKG_OPTIONS.wibble2)
-PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
-.endif
+    # this package was previously named wibble2
+    .if defined(PKG_OPTIONS.wibble2)
+    PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
+    PKG_OPTIONS_DEPRECATED_WARNINGS+= \
+            "Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+    .endif
 
-.include "../../mk/bsd.options.mk"
+    .include "../../mk/bsd.options.mk"
 
-# Package-specific option-handling
+    # Package-specific option-handling
 
-###
-### FOO support
-###
-.if !empty(PKG_OPTIONS:Mwibble-foo)
-CONFIGURE_ARGS+=        --enable-foo
-.endif
+    ###
+    ### FOO support
+    ###
+    .if !empty(PKG_OPTIONS:Mwibble-foo)
+    CONFIGURE_ARGS+=    --enable-foo
+    .endif
 
-###
-### LDAP support
-###
-.if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
-CONFIGURE_ARGS+=        --enable-ldap=${BUILDLINK_PREFIX.openldap}
-.endif
+    ###
+    ### LDAP support
+    ###
+    .if !empty(PKG_OPTIONS:Mldap)
+    .  include "../../databases/openldap/buildlink3.mk"
+    CONFIGURE_ARGS+=    --enable-ldap=${BUILDLINK_PREFIX.openldap}
+    .endif
 
-###
-### database support
-###
-.if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../mk/mysql.buildlink3.mk"
-.endif
-.if !empty(PKG_OPTIONS:Mpgsql)
-.  include "../../mk/pgsql.buildlink3.mk"
-.endif
+    ###
+    ### database support
+    ###
+    .if !empty(PKG_OPTIONS:Mmysql)
+    .  include "../../mk/mysql.buildlink3.mk"
+    .endif
+    .if !empty(PKG_OPTIONS:Mpgsql)
+    .  include "../../mk/pgsql.buildlink3.mk"
+    .endif
 
 The first section contains the information about which build options are
 supported by the package, and any default options settings if needed.
@@ -3692,7 +3679,7 @@ The remaining sections contain the logic that is specific to each option. The
 correct way to check for an option is to check whether it is listed in
 PKG_OPTIONS:
 
-.if !empty(PKG_OPTIONS:Moption)
+    .if !empty(PKG_OPTIONS:Moption)
 
 13.3. Option Names
 
@@ -3790,15 +3777,15 @@ When choosing which of these variables to use, follow the following rules:
 
     The following lines are taken from pkgsrc/wm/scwm/Makefile:
 
-    EVAL_PREFIX+=           GTKDIR=gtk+
-    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
-                            --with-gtk-prefix="${GTKDIR}"           \
-                            --enable-multibyte
+        EVAL_PREFIX+=           GTKDIR=gtk+
+        CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
+                                --with-gtk-prefix="${GTKDIR}"           \
+                                --enable-multibyte
 
     Specific defaults can be defined for the packages evaluated using
     EVAL_PREFIX, by using a definition of the form:
 
-    GTKDIR_DEFAULT= ${LOCALBASE}
+        GTKDIR_DEFAULT= ${LOCALBASE}
 
     where GTKDIR corresponds to the first definition in the EVAL_PREFIX pair.
 
@@ -3817,7 +3804,7 @@ fetch
     system in /usr/pkgsrc/distfiles. If they are not present, an attempt will
     be made to fetch them using commands of the form:
 
-    ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+        ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 
     where ${site} varies through several possibilities in turn: first,
     MASTER_SITE_OVERRIDE is tried, then the sites specified in either
@@ -3853,10 +3840,10 @@ extract
     list). Here's an example on how to use the other variables for a program
     that comes with a compressed shell archive whose name ends in .msg.gz:
 
-         EXTRACT_SUFX=   .msg.gz
-         EXTRACT_CMD=            zcat
-         EXTRACT_BEFORE_ARGS=
-         EXTRACT_AFTER_ARGS=     |sh
+        EXTRACT_SUFX=           .msg.gz
+        EXTRACT_CMD=            zcat
+        EXTRACT_BEFORE_ARGS=
+        EXTRACT_AFTER_ARGS=     |sh
 
 patch
 
@@ -3889,9 +3876,9 @@ configure
     it differs from the default "configure". Here's an example from the
     sysutils/top package:
 
-    HAS_CONFIGURE=          yes
-    CONFIGURE_SCRIPT=       Configure
-    CONFIGURE_ARGS+=        netbsd13
+        HAS_CONFIGURE=          yes
+        CONFIGURE_SCRIPT=       Configure
+        CONFIGURE_ARGS+=        netbsd13
 
     If the program uses an Imakefile for configuration, the appropriate steps
     can be invoked by setting USE_IMAKE to "YES". (If you only want the package
@@ -3918,12 +3905,12 @@ If no target is specified, the default is "build". If a subsequent stage is
 requested, all prior stages are made: e.g. make build will also perform the
 equivalent of:
 
-make fetch
-make checksum
-make extract
-make patch
-make configure
-make build
+    make fetch
+    make checksum
+    make extract
+    make patch
+    make configure
+    make build
 
 14.3. Other helpful targets
 
@@ -4194,6 +4181,7 @@ Table of Contents
 15.4. Building considerations
 
     15.4.1. CPP defines
+    15.4.2. Getting a list of CPP defines
 
 15.5. Package specific actions
 
@@ -4230,16 +4218,16 @@ exist, or MAKECONF, should it exist, include the pkgsrc/mk/bsd.prefs.mk file in
 the package Makefile before any preprocessor-like .if, .ifdef, or .ifndef
 statements:
 
-.include "../../mk/bsd.prefs.mk"
+    .include "../../mk/bsd.prefs.mk"
 
     .if defined(USE_MENUS)
-      ...
+    # ...
     .endif
 
 If you wish to set the CFLAGS variable in /etc/mk.conf, please make sure to
 use:
 
-CFLAGS+=  -your -flags
+    CFLAGS+=  -your -flags
 
 Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
 need to add their own flags. Also, you may want to take a look at the devel/
@@ -4310,7 +4298,7 @@ should be noted as a BUILD_DEPENDS.
 
 The format for a BUILD_DEPENDS and a DEPENDS definition is:
 
-<pre-req-package-name>:../../<category>/<pre-req-package>
+    <pre-req-package-name>:../../<category>/<pre-req-package>
 
 Please note that the "pre-req-package-name" may include any of the wildcard
 version numbers recognized by pkg_info(1).
@@ -4320,22 +4308,21 @@ version numbers recognized by pkg_info(1).
 
         .include "../../graphics/jpeg/buildlink3.mk"
 
-
  2. If your package needs to use another package to build itself and there is
     no buildlink3.mk file available, use the BUILD_DEPENDS definition:
 
-    BUILD_DEPENDS+=  autoconf-2.13:../../devel/autoconf
+        BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
 
  3. If your package needs a library with which to link and again there is no
     buildlink3.mk file available, this is specified using the DEPENDS
     definition. An example of this is the print/lyx package, which uses the xpm
     library, version 3.4j to build:
 
-    DEPENDS+=       xpm-3.4j:../../graphics/xpm
+        DEPENDS+=       xpm-3.4j:../../graphics/xpm
 
     You can also use wildcards in package dependences:
 
-    DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
+        DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
 
     Note that such wildcard dependencies are retained when creating binary
     packages. The dependency is checked when installing the binary package and
@@ -4348,7 +4335,7 @@ version numbers recognized by pkg_info(1).
     Wildcards can also be used to specify that a package will only build
     against a certain minimum version of a pre-requisite:
 
-    DEPENDS+=       tiff>=3.5.4:../../graphics/tiff
+        DEPENDS+=       tiff>=3.5.4:../../graphics/tiff
 
     This means that the package will build against version 3.5.4 of the tiff
     library or newer. Such a dependency may be warranted if, for example, the
@@ -4360,7 +4347,7 @@ version numbers recognized by pkg_info(1).
     security updates or ABI changes that do not prevent a package from building
     correctly. Such recommendations can be expressed using RECOMMENDED:
 
-    RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff
+        RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff
 
     In addition to the above DEPENDS line, this denotes that while a package
     will build against tiff>=3.5.4, at least version 3.6.1 is recommended.
@@ -4388,7 +4375,7 @@ version numbers recognized by pkg_info(1).
     variable. The print/lyx package needs to be able to execute the latex
     binary from the teTeX package when it runs, and that is specified:
 
-    DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
+        DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 
     The comment about wildcard dependencies from previous paragraph applies
     here, too.
@@ -4397,16 +4384,16 @@ If your package needs files from another package to build, see the first part
 of the "do-configure" target print/ghostscript5 package (it relies on the jpeg
 sources being present in source form during the build):
 
-if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
-          cd ${_PKGSRCDIR}/../../graphics/jpeg && ${MAKE} extract;              \
+    if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then    \
+        cd ${_PKGSRCDIR}/../../graphics/jpeg && ${MAKE} extract; \
     fi
 
 If you build any other packages that way, please make sure the working files
 are deleted too when this package's working files are cleaned up. The easiest
 way to do so is by adding a pre-clean target:
 
-pre-clean:
-          cd ${_PKGSRCDIR}/../../graphics/jpeg && ${MAKE} clean
+    pre-clean:
+            cd ${_PKGSRCDIR}/../../graphics/jpeg && ${MAKE} clean
 
 Please also note the BUILD_USES_MSGFMT and BUILD_USES_GETTEXT_M4 definitions,
 which are provided as convenience definitions. The former works out whether
@@ -4427,11 +4414,11 @@ In this case you can set CONFLICTS to a space-separated list of packages
 For example, x11/Xaw3d and x11/Xaw-Xpm install the same shared library, thus
 you set in pkgsrc/x11/Xaw3d/Makefile:
 
-CONFLICTS=      Xaw-Xpm-[0-9]*
+    CONFLICTS=      Xaw-Xpm-[0-9]*
 
 and in pkgsrc/x11/Xaw-Xpm/Makefile:
 
-CONFLICTS=      Xaw3d-[0-9]*
+    CONFLICTS=      Xaw3d-[0-9]*
 
 Packages will automatically conflict with other packages with the name prefix
 and a different version string. "Xaw3d-1.5" e.g. will automatically conflict
@@ -4495,8 +4482,8 @@ number in PKGNAME. To avoid conflicting with future versions by the original
 author, a "nb1", "nb2", ... suffix can be used on package versions by setting
 PKGREVISION=1 (2, ...). The "nb" is treated like a "." by the pkg tools. e.g.
 
-  DISTNAME= foo-17.42
-    PKGREVISION=  9
+    DISTNAME=       foo-17.42
+    PKGREVISION=    9
 
 will result in a PKGNAME of "foo-17.42nb9".
 
@@ -4504,7 +4491,7 @@ When a new release of the package is released, the PKGREVISION should be
 removed, e.g. on a new minor release of the above package, things should be
 like:
 
-DISTNAME=   foo-17.43
+    DISTNAME=       foo-17.43
 
 15.1.11. Portability of packages
 
@@ -4519,8 +4506,8 @@ The BSD-compatible install supplied with some operating systems will not
 perform more than one operation at a time. As such, you should call "${INSTALL}
 ", etc. like this:
 
-${INSTALL_DATA_DIR} ${PREFIX}/dir1
-${INSTALL_DATA_DIR} ${PREFIX}/dir2
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 
 15.2. Possible downloading issues
 
@@ -4583,7 +4570,8 @@ Here's how to use libtool in a pkg in seven simple steps:
  3. For the linking of the library, remove any "ar", "ranlib", and "ld
     -Bshareable" commands, and instead use:
 
-    ${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info major:minor
+        ${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} \
+            -rpath ${PREFIX}/lib -version-info major:minor
 
     Note that the library is changed to have a .la extension, and the objects
     are changed to have a .lo extension. Change OBJS as necessary. This
@@ -4594,22 +4582,22 @@ Here's how to use libtool in a pkg in seven simple steps:
 
     From the libtool manual:
 
-         So, libtool library versions are described by three integers:
+        So, libtool library versions are described by three integers:
 
-    CURRENT
-           The most recent interface number that this library implements.
+        CURRENT
+            The most recent interface number that this library implements.
 
-    REVISION
-           The implementation number of the CURRENT interface.
+        REVISION
+            The implementation number of the CURRENT interface.
 
-    AGE
-           The difference between the newest and oldest interfaces that this
-           library implements.  In other words, the library implements all the
-           interface numbers in the range from number `CURRENT - AGE' to
-           `CURRENT'.
+        AGE
+            The difference between the newest and oldest interfaces that
+            this library implements.  In other words, the library implements
+            all the interface numbers in the range from number `CURRENT -
+            AGE' to `CURRENT'.
 
-         If two libraries have identical CURRENT and AGE numbers, then the
-    dynamic linker chooses the library with the greater REVISION number.
+        If two libraries have identical CURRENT and AGE numbers, then the
+        dynamic linker chooses the library with the greater REVISION number.
 
     The "-release" option will produce different results for a.out and ELF
     (excluding symlinks) in only one case. An ELF library of the form
@@ -4634,18 +4622,18 @@ Here's how to use libtool in a pkg in seven simple steps:
     (such as "-L../somelib"), because it expects you to change that argument to
     be the .la file. e.g.
 
-    ${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
+        ${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
 
     should be changed to:
 
-    ${LIBTOOL} --mode=link ${CC} -o someprog ../somelib/somelib.la
+        ${LIBTOOL} --mode=link ${CC} -o someprog ../somelib/somelib.la
 
     and it will do the right thing with the libraries.
 
  6. When installing libraries, preface the install(1) or cp(1) command with "$
     {LIBTOOL} --mode=install", and change the library name to .la. e.g.
 
-    ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
+        ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
 
     This will install the static .a, shared library, any needed symlinks, and
     run ldconfig(8).
@@ -4695,27 +4683,27 @@ executed in a pre-configure target.
 
 For packages that need only autoconf:
 
-AUTOCONF_REQD=    2.50     # if default version is not good enough
-USE_TOOLS+=     autoconf   # use "autoconf213" for autoconf-2.13
-...
+    AUTOCONF_REQD=  2.50            # if default version is not good enough
+    USE_TOOLS+=     autoconf        # use "autoconf213" for autoconf-2.13
+    ...
 
-pre-configure:
-          cd ${WRKSRC}; autoconf
+    pre-configure:
+            cd ${WRKSRC}; autoconf
 
-...
+    ...
 
 and for packages that need automake and autoconf:
 
-AUTOMAKE_REQD=  1.7.1      # if default version is not good enough
-USE_TOOLS+=     automake   # use "automake14" for automake-1.4
-...
+    AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
+    USE_TOOLS+=     automake        # use "automake14" for automake-1.4
+    ...
 
-pre-configure:
-          cd ${WRKSRC};                                           \
-          aclocal; autoheader;                                    \
-          automake -a --foreign -i; autoconf
+    pre-configure:
+            cd ${WRKSRC};                          \
+            aclocal; autoheader;                   \
+            automake -a --foreign -i; autoconf
 
-...
+    ...
 
 Packages which use GNU Automake will almost certainly require GNU Make.
 
@@ -4736,17 +4724,25 @@ that the C pre-processor can do this.
 To test whether you are working on a 4.4 BSD-derived system, you should use the
 BSD definition, which is defined in <sys/param.h> on said systems.
 
-#include <sys/param.h>
+    #include <sys/param.h>
 
 and then you can surround the BSD-specific parts of your package's C/C++ code
 using this conditional:
 
-#if (defined(BSD) && BSD >= 199306)
+    #if (defined(BSD) && BSD >= 199306)
     ...
-#endif
+    #endif
 
 Please use the "__NetBSD__" definition sparingly - it should only apply to
 features of NetBSD that are not present in other 4.4-lite-derived BSDs.
+
+15.4.2. Getting a list of CPP defines
+
+When your system uses the GNU C Compiler, you can get a list of symbols that
+are defined by default, e.g. to identify the platform, with the following
+command:
+
+    gcc -E -dM - < /dev/null
 
 15.5. Package specific actions
 
@@ -4767,11 +4763,11 @@ The INTERACTIVE_STAGE definition is provided to notify the pkgsrc mechanism of
 an interactive stage which will be needed, and this should be set in the
 package's Makefile, e.g.:
 
-INTERACTIVE_STAGE= build
+    INTERACTIVE_STAGE=      build
 
 Multiple interactive stages can be specified:
 
-INTERACTIVE_STAGE= configure install
+    INTERACTIVE_STAGE=      configure install
 
 15.5.2. Handling licenses
 
@@ -4797,23 +4793,23 @@ Denoting that a package is covered by a particular license is done by placing
 the license in pkgsrc/licenses and setting the LICENSE variable to a string
 identifying the license, e.g. in graphics/xv:
 
-LICENSE=        xv-license
+    LICENSE=        xv-license
 
 When trying to build, the user will get a notice that the package is covered by
 a license which has not been accepted:
 
-% make
-===> xv-3.10anb9 has an unacceptable license: xv-license.
-===>     To view the license, enter "/usr/bin/make show-license".
-===>     To indicate acceptance, add this line to your /etc/mk.conf:
-===>     ACCEPTABLE_LICENSES+=xv-license
-*** Error code 1
+    % make
+    ===> xv-3.10anb9 has an unacceptable license: xv-license.
+    ===>     To view the license, enter "/usr/bin/make show-license".
+    ===>     To indicate acceptance, add this line to your /etc/mk.conf:
+    ===>     ACCEPTABLE_LICENSES+=xv-license
+    *** Error code 1
 
 The license can be viewed with make show-license, and if it is considered
 appropriate, the line printed above can be added to /etc/mk.conf to indicate
 acceptance of the particular license:
 
-ACCEPTABLE_LICENSES+=xv-license
+    ACCEPTABLE_LICENSES+=xv-license
 
 When adding a package with a new license, the license text should be added to
 pkgsrc/licenses for displaying. A list of known licenses can be seen in this
@@ -4856,11 +4852,11 @@ interpreters besides (or as well as) perl. To correct the full pathname to the
 script interpreter, you need to set the following definitions in your Makefile
 (we shall use tclsh in this example):
 
-  REPLACE_INTERPRETER+=     tcl
-    _REPLACE.tcl.old=     .*/bin/tclsh
-    _REPLACE.tcl.new=     ${PREFIX}/bin/tclsh
-    _REPLACE_FILES.tcl=   ...list of tcl scripts which need to be fixed,
-                          relative to ${WRKSRC}, just as in REPLACE_PERL
+    REPLACE_INTERPRETER+=   tcl
+    _REPLACE.tcl.old=       .*/bin/tclsh
+    _REPLACE.tcl.new=       ${PREFIX}/bin/tclsh
+    _REPLACE_FILES.tcl=     # list of tcl scripts which need to be fixed,
+                            # relative to ${WRKSRC}, just as in REPLACE_PERL
 
 15.5.6. Packages installing perl modules
 
@@ -4875,7 +4871,7 @@ to the PLIST corresponding to the files listed in the installed .packlist file
 generated by most perl5 modules. This is invoked by defining PERL5_PACKLIST to
 a space-separated list of paths to packlist files, e.g.:
 
-PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
+    PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 
 The variables PERL5_SITELIB, PERL5_SITEARCH, and PERL5_ARCHLIB represent the
 three locations in which perl5 modules may be installed, and may be used by
@@ -5229,8 +5225,8 @@ command is so that it knows where to place the files in the repository. Newly
 created packages should be imported with a vendor tag of "TNF" and a release
 tag of "pkgsrc-base", e.g:
 
-  % cd .../pkgsrc/category/pkgname
-  % cvs import pkgsrc/category/pkgname TNF pkgsrc-base
+    $ cd .../pkgsrc/category/pkgname
+    $ cvs import pkgsrc/category/pkgname TNF pkgsrc-base
 
 Remember to move the directory from which you imported out of the way, or cvs
 will complain the next time you "cvs update" your source tree. Also don't
@@ -5325,35 +5321,35 @@ A.1. files
 
 A.1.1. Makefile
 
-# $NetBSD$
-#
+    # $NetBSD$
+    #
 
-DISTNAME=       bison-1.25
-CATEGORIES=     devel
-MASTER_SITES=   ${MASTER_SITE_GNU}
+    DISTNAME=       bison-1.25
+    CATEGORIES=     devel
+    MASTER_SITES=   ${MASTER_SITE_GNU}
 
-MAINTAINER=     thorpej@NetBSD.org
-HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
-COMMENT=        GNU yacc clone
+    MAINTAINER=     thorpej@NetBSD.org
+    HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+    COMMENT=        GNU yacc clone
 
-GNU_CONFIGURE=  yes
-INFO_FILES=     bison.info
+    GNU_CONFIGURE=  yes
+    INFO_FILES=     bison.info
 
-.include "../../mk/bsd.pkg.mk"
+    .include "../../mk/bsd.pkg.mk"
 
 A.1.2. DESCR
 
-GNU version of yacc.  Can make re-entrant parsers, and numerous other
-improvements.  Why you would want this when Berkeley yacc(1) is part
-of the NetBSD source tree is beyond me.
+    GNU version of yacc.  Can make re-entrant parsers, and numerous other
+    improvements.  Why you would want this when Berkeley yacc(1) is part
+    of the NetBSD source tree is beyond me.
 
 A.1.3. PLIST
 
-@comment $NetBSD$
-bin/bison
-man/man1/bison.1.gz
-share/bison.simple
-share/bison.hairy
+    @comment $NetBSD$
+    bin/bison
+    man/man1/bison.1.gz
+    share/bison.simple
+    share/bison.hairy
 
 A.1.4. Checking a package with pkglint
 
@@ -5595,64 +5591,63 @@ Appendix C. Layout of the FTP server's package archive
 
 Layout for precompiled binary packages on ftp.NetBSD.org:
 
-/pub/NetBSD/packages/
-                distfiles/
+    /pub/NetBSD/packages/
+        distfiles/
 
-                # Unpacked pkgsrc trees
-                pkgsrc-current -> /pub/NetBSD/NetBSD-current/pkgsrc
-                pkgsrc-2003Q4 -> N/A
-                pkgsrc-2004Q1/pkgsrc
+        # Unpacked pkgsrc trees
+        pkgsrc-current -> /pub/NetBSD/NetBSD-current/pkgsrc
+        pkgsrc-2003Q4 -> N/A
+        pkgsrc-2004Q1/pkgsrc
 
-                # pkgsrc archives
-                pkgsrc-current.tar.gz -> ../NetBSD-current/tar_files/pkgsrc.tar.gz
-                pkgsrc-2003Q4.tar.gz -> N/A
-                pkgsrc-2004Q1.tar.gz -> N/A
+        # pkgsrc archives
+        pkgsrc-current.tar.gz -> ../NetBSD-current/tar_files/pkgsrc.tar.gz
+        pkgsrc-2003Q4.tar.gz -> N/A
+        pkgsrc-2004Q1.tar.gz -> N/A
 
-                # Per pkgsrc-release/OS-release/arch package archives
-                pkgsrc-2003Q4/
-                        NetBSD-1.6.2/
-                                i386/
-                                        All/
-                                        archivers/
-                                                foo -> ../All/foo
-                                        ...
-                pkgsrc-2004Q1/
-                        NetBSD-1.6.2/
-                                i386/
-                                        All/
-                                        ...
-                        NetBSD-2.0/
-                                i386/
-                                        All/
-                                        ...
-                        SunOS-5.9/
-                                sparc/
-                                        All/
-                                        ...
-                                x86/
-                                        All/
-                                        ...
+        # Per pkgsrc-release/OS-release/arch package archives
+        pkgsrc-2003Q4/
+            NetBSD-1.6.2/
+                i386/
+                    All/
+                    archivers/
+                        foo -> ../All/foo
+                    ...
+        pkgsrc-2004Q1/
+            NetBSD-1.6.2/
+                i386/
+                    All/
+                    ...
+            NetBSD-2.0/
+                i386/
+                    All/
+                    ...
+            SunOS-5.9/
+                sparc/
+                    All/
+                    ...
+                x86/
+                    All/
+                    ...
 
-                # Per os-release package archive convenience links
-                NetBSD-1.6.2 -> 1.6.2
-                1.6.2/
-                        i386 -> ../pkgsrc-2004Q1/NetBSD-1.6.2/i386
-                        m68k/
-                                All/
-                                archivers/
-                                        foo -> ../All/foo
-                                ...
-                        amiga -> m68k
-                        atari -> m68k
-                        ...
+        # Per os-release package archive convenience links
+        NetBSD-1.6.2 -> 1.6.2
+        1.6.2/
+            i386 -> ../pkgsrc-2004Q1/NetBSD-1.6.2/i386
+            m68k/
+                All/
+                archivers/
+                    foo -> ../All/foo
+                ...
+            amiga -> m68k
+            atari -> m68k
+            ...
 
-                2.0 -> NetBSD-2.0       # backward compat, historic
-                NetBSD-2.0/
-                        i386 -> ../pkgsrc-2004Q1/NetBSD-2.0/i386
-                SunOS-5.9/
-                        sparc -> ../pkgsrc-2004Q1/SunOS-5.9/sparc
-                        x86 -> ../pkgsrc-2004Q1/SunOS-5.9/x86
-
+        2.0 -> NetBSD-2.0       # backward compat, historic
+        NetBSD-2.0/
+            i386 -> ../pkgsrc-2004Q1/NetBSD-2.0/i386
+        SunOS-5.9/
+            sparc -> ../pkgsrc-2004Q1/SunOS-5.9/sparc
+            x86 -> ../pkgsrc-2004Q1/SunOS-5.9/x86
 
 To create:
 
@@ -5661,10 +5656,9 @@ To create:
  2. Upload /usr/pkgsrc/packages to
 
         ftp://ftp.NetBSD.org/pub/NetBSD/packages/\
-            pkgsrc-2004Q4/\                         # pkgsrc-branch
-            `uname -s`-`uname -r`/                  # OS & version
-            `uname -p`                              # architecture
-
+            pkgsrc-2004Q4/\             # pkgsrc-branch
+            `uname -s`-`uname -r`/\     # OS & version
+            `uname -p`                  # architecture
 
  3. If necessary, create a symlink ln -s `uname -m` `uname -p` (amiga -> m68k,
     ...)
