@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11627 2005/10/23 19:33:48 minskim Exp $
+$NetBSD: CHANGES,v 1.11628 2005/10/23 20:01:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4790,4 +4790,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gtkglarea to 1.2.3nb1 [wiz 2005-10-23]
 	Added textproc/hyperestraier version 1.0.1 [minskim 2005-10-23]
 	Updated pkgtools/pkglint to 4.29 [rillig 2005-10-23]
-	Added games/Teg version 0.11.1 [minskim 2005-10-23]
+	Added games/teg version 0.11.1 [minskim 2005-10-23]
