@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 18:02:37 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/10/23 18:30:52 rillig Exp $
 
 DISTNAME=	SDL_mixer-1.2.6
 PKGREVISION=	2
@@ -16,8 +16,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
-CPPFLAGS=		-Dunix=1
-CFLAGS=			-DSYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+.include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS+=		-Dunix=1
+CFLAGS+=		-DSYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 INSTALLATION_DIRS=	bin
 
