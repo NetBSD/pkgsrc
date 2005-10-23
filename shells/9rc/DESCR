@@ -1,0 +1,9 @@
+This is a port of various original plan9 tools for Unix based on
+plan9ports [1], mk-with-libs.tgz [2] and wmii [3].
+
+Many thanks go to Lucent, the Bell Labs which developed this fine stuff
+and to Russ Cox for his plan9ports.
+
+[1] http://www.swtch.com/plan9port/
+[2] http://swtch.com/plan9port/unix/
+[3] http://www.wmii.net
