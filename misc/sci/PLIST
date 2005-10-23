@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:29 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/23 20:14:07 rillig Exp $
 bin/sci
 man/man1/sci.1
 share/doc/sci/COPYING
-share/doc/sci/README
 share/doc/sci/INSTALL
 share/doc/sci/NEWS
+share/doc/sci/README
 @comment @dirrm share/doc/sci
 share/examples/sci/APP.README
 share/examples/sci/Makefile
