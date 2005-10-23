@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/09/28 12:30:35 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/23 18:27:45 jdolecek Exp $
 #
 
 DISTNAME=	make_album_1_6
@@ -18,7 +18,8 @@ MY_SCRIPTS=	index_albums ingest make_album newimagedir populate_master
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	${MY_SCRIPTS}
 
-NO_CONFIGURE=	yes
+# do not disable configure stage via NO_CONFIGURE - REPLACE_PERL is handled
+# in pre-configure stage
 NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin lib
