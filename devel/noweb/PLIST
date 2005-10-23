@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:25:00 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/23 15:45:43 rillig Exp $
+bin/cpif
 bin/htmltoc
 bin/nodefs
 bin/noindex
@@ -9,22 +10,22 @@ bin/nountangle
 bin/noweave
 bin/noweb
 bin/nuweb2noweb
-bin/cpif
 bin/sl2h
 man/man1/cpif.1
+man/man1/htmltoc.1
 man/man1/nodefs.1
+man/man1/noindex.1
 man/man1/noroff.1
 man/man1/noroots.1
-man/man1/noweb.1
-man/man1/noindex.1
-man/man1/nuweb2noweb.1
 man/man1/notangle.1
-man/man1/sl2h.1
-man/man1/htmltoc.1
 man/man1/nountangle.1
 man/man1/noweave.1
-man/man7/nowebstyle.7
+man/man1/noweb.1
+man/man1/nuweb2noweb.1
+man/man1/sl2h.1
 man/man7/nowebfilters.7
+man/man7/nowebstyle.7
+share/emacs/site-lisp/noweb-mode.el
 share/examples/noweb/Makefile
 share/examples/noweb/README
 share/examples/noweb/README.h
@@ -45,7 +46,6 @@ share/examples/noweb/wc.bbl
 share/examples/noweb/wc.nw
 share/examples/noweb/wc.nw2html
 share/examples/noweb/whitespace
-share/emacs/site-lisp/noweb-mode.el
 share/noweb/autodefs.c
 share/noweb/autodefs.icon
 share/noweb/autodefs.lrtl
@@ -66,8 +66,8 @@ share/noweb/nt
 share/noweb/tmac.w
 share/noweb/toascii
 share/noweb/tohtml
-share/noweb/totex
 share/noweb/toroff
+share/noweb/totex
 share/noweb/unmarkup
 share/texmf/tex/noweb/noweb.sty
 share/texmf/tex/noweb/nwmac.tex
