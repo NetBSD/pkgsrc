@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:24 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/23 14:26:39 rillig Exp $
 
 DISTNAME=	connect
 PKGNAME=	${DISTNAME}-1.83
@@ -13,15 +13,8 @@ COMMENT=	Open a TCP connection using a SOCKS4/5 or HTTP proxy server
 EXTRACT_ONLY=	# empty
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == Darwin
-LIBS=	-lresolv
-.elif ${OPSYS} == SunOS
-LIBS=	-lsocket -lnsl
-.else
-LIBS=
-.endif
+LIBS.Darwin+=	-lresolv
+LIBS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin
 
