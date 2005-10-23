@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.16 2005/10/07 18:30:17 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.17 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -44,15 +44,16 @@
 	  <varname>CATEGORIES</varname>. If more than
 	  one is used, they need to be separated by spaces:</para>
 
-	<programlisting>
-archivers     cross         geography     meta-pkgs     security
-audio         databases     graphics      misc          shells
-benchmarks    devel         ham           multimedia    sysutils
-biology       editors       inputmethod   net           textproc
-cad           emulators     lang          news          time
-chat          finance       mail          parallel      wm
-comms         fonts         math          pkgtools      www
-converters    games         mbone         print         x11</programlisting>
+<programlisting>
+    archivers     cross         geography     meta-pkgs     security
+    audio         databases     graphics      misc          shells
+    benchmarks    devel         ham           multimedia    sysutils
+    biology       editors       inputmethod   net           textproc
+    cad           emulators     lang          news          time
+    chat          finance       mail          parallel      wm
+    comms         fonts         math          pkgtools      www
+    converters    games         mbone         print         x11
+</programlisting>
 	</listitem>
 
 	<listitem><para><varname>MASTER_SITES</varname> is a list of URLs where
@@ -62,28 +63,28 @@ converters    games         mbone         print         x11</programlisting>
 	    the following predefined sites:</para>
 
 <!-- sort bsd.sites.mk | sed -n 's/\(^MA[A-Z_]*\).*/        ${\1}/p' -->
-	  <programlisting>
-	    ${MASTER_SITE_APACHE}
-	    ${MASTER_SITE_BACKUP}
-	    ${MASTER_SITE_CYGWIN}
-	    ${MASTER_SITE_DEBIAN}
-	    ${MASTER_SITE_FREEBSD}
-	    ${MASTER_SITE_FREEBSD_LOCAL}
-	    ${MASTER_SITE_GNOME}
-	    ${MASTER_SITE_GNU}
-	    ${MASTER_SITE_GNUSTEP}
-	    ${MASTER_SITE_IFARCHIVE}
-	    ${MASTER_SITE_MOZILLA}
-	    ${MASTER_SITE_OPENOFFICE}
-	    ${MASTER_SITE_PERL_CPAN}
-	    ${MASTER_SITE_R_CRAN}
-	    ${MASTER_SITE_SOURCEFORGE}
-	    ${MASTER_SITE_SUNSITE}
-	    ${MASTER_SITE_SUSE}
-	    ${MASTER_SITE_TEX_CTAN}
-	    ${MASTER_SITE_XCONTRIB}
-	    ${MASTER_SITE_XEMACS}
-	  </programlisting>
+<programlisting>
+    ${MASTER_SITE_APACHE}
+    ${MASTER_SITE_BACKUP}
+    ${MASTER_SITE_CYGWIN}
+    ${MASTER_SITE_DEBIAN}
+    ${MASTER_SITE_FREEBSD}
+    ${MASTER_SITE_FREEBSD_LOCAL}
+    ${MASTER_SITE_GNOME}
+    ${MASTER_SITE_GNU}
+    ${MASTER_SITE_GNUSTEP}
+    ${MASTER_SITE_IFARCHIVE}
+    ${MASTER_SITE_MOZILLA}
+    ${MASTER_SITE_OPENOFFICE}
+    ${MASTER_SITE_PERL_CPAN}
+    ${MASTER_SITE_R_CRAN}
+    ${MASTER_SITE_SOURCEFORGE}
+    ${MASTER_SITE_SUNSITE}
+    ${MASTER_SITE_SUSE}
+    ${MASTER_SITE_TEX_CTAN}
+    ${MASTER_SITE_XCONTRIB}
+    ${MASTER_SITE_XEMACS}
+</programlisting>
 
 	  <para>If one of these predefined sites is chosen, you may
 	    want to specify a subdirectory of that
@@ -91,9 +92,10 @@ converters    games         mbone         print         x11</programlisting>
 	    actual site, you <emphasis>must</emphasis> use the
 	    following construct to specify a subdirectory:</para>
 
-	  <programlisting>
-	    ${MASTER_SITE_GNU:=subdirectory/name/}
-	    ${MASTER_SITE_SOURCEFORGE:=project_name/}</programlisting>
+<programlisting>
+    ${MASTER_SITE_GNU:=subdirectory/name/}
+    ${MASTER_SITE_SOURCEFORGE:=project_name/}
+</programlisting>
 
 	  <para>Note the trailing slash after the subdirectory name.</para>
 
@@ -103,10 +105,13 @@ converters    games         mbone         print         x11</programlisting>
 	    sites, set <varname>SITES_foo</varname> to a list of URIs
 	    where file <quote>foo</quote> may be
 	    found. <quote>foo</quote> includes the suffix, e.g.:</para>
-	  <programlisting>DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=     foo-file.tar.gz
-SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
-        http://www.somewhereelse.com/mirror/somehow/</programlisting>
+
+<programlisting>
+    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+    DISTFILES+=     foo-file.tar.gz
+    SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+            http://www.somewhereelse.com/mirror/somehow/
+</programlisting>
 	</listitem>
 
 	<listitem><para><varname>DISTFILES</varname>: Name(s)
@@ -397,7 +402,9 @@ SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
             <varname>MESSAGE_SUBST</varname> in the package's
             <filename>Makefile</filename>:</para>
 
-          <programlisting>MESSAGE_SUBST+=  SOMEVAR="somevalue"</programlisting>
+<programlisting>
+    MESSAGE_SUBST+=  SOMEVAR="somevalue"
+</programlisting>
 
           <para>replaces "${SOMEVAR}" with <quote>somevalue</quote> in
             <filename>MESSAGE</filename>.</para>
