@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.301 2005/10/23 19:20:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.302 2005/10/23 23:14:57 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -413,8 +413,6 @@ my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 my $regex_validchars	= qr"[\011\040-\176]";
 my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*(.*?)$";
-my $regex_yes		= qr"^(?:YES|yes)$";
-my $regex_yesno		= qr"^(?:YES|yes|NO|no)$";
 
 # Global variables
 my $pkgdir;
@@ -1228,7 +1226,6 @@ sub get_regex_plurals() {
 		.*_TMPL
 		BUILDLINK_DEPMETHOD
 		BUILDLINK_TRANSFORM
-		CONFLICT
 		EVAL_PREFIX
 		INTERACTIVE_STAGE
 		LICENSE
@@ -1287,12 +1284,12 @@ sub checkline_Makefile_vartype($$) {
 			$line->log_error("\"${varname}\" must not be modified by the package or the user.");
 
 		} elsif ($type eq "Boolean") {
-			if ($value !~ $regex_yesno) {
+			if ($value !~ qr"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
 				$line->log_warning("$varname should be set to YES, yes, NO, or no.");
 			}
 
 		} elsif ($type eq "Yes_Or_Undefined") {
-			if ($value !~ $regex_yes) {
+			if ($value !~ qr"^(?:YES|yes)(?:\s+#.*)?$") {
 				$line->log_warning("$varname should be set to YES or yes.");
 			}
 

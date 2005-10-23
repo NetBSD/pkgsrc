@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.10 2005/10/07 10:24:43 rillig Exp $
+# $NetBSD: deprecated.map,v 1.11 2005/10/23 23:14:57 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -46,3 +46,4 @@ USE_PERL5		Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.
 # The following entries can be removed after the 2006Q1 branch.
 NO_TOOLS		You can just remove it.
 NO_WRAPPER		You can just remove it.
+CONFLICT		Use CONFLICTS instead.
