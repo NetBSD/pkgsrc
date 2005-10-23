@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/10/13 13:22:46 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2005/10/23 21:49:01 rillig Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
@@ -51,7 +51,7 @@ post-install:
 	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so
 	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}
 .for f in ${EXAMPLE_FILES}
-	${INSTALL_DATA} ${WRKSRC}/examples/$f ${EXAMPLE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${EXAMPLE_DIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

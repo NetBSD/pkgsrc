@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/23 21:45:57 rillig Exp $
 #
 
 DISTNAME=		ft-0.2.23
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ft ${PREFIX}/bin/ft
 .for f in fcpchk fcpget fcpgetsite fcphello fcpinv fcpkey fcpput fcpputsite
-	${LN} -s -f ft ${PREFIX}/bin/$f
+	${LN} -s -f ft ${PREFIX}/bin/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
