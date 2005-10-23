@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11632 2005/10/23 20:27:44 minskim Exp $
+$NetBSD: CHANGES,v 1.11633 2005/10/23 20:40:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4802,3 +4802,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/postgresql80-pltcl to 8.0.4 [jlam 2005-10-23]
 	Updated databases/postgresql80-server to 8.0.4 [jlam 2005-10-23]
 	Added shells/9rc version 20051017 [minskim 2005-10-23]
+	Added wm/wmii version 20051017 [minskim 2005-10-23]
