@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/10 20:56:14 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/23 18:39:06 rillig Exp $
 #
 
 DISTNAME=	ArX-2.2.3
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	ARXPATCH=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
 CONFIGURE_ARGS+=	ARXTAR=${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tar
 CONFIGURE_ARGS+=	ARXPKGCONFIG=${PKG_CONFIG}
 # XXX Python is needed for build only; this is handled by devel/scons
-CONFIGURE_ARGS+=	ARXPYTHON=/bin/true
+CONFIGURE_ARGS+=	ARXPYTHON=${TRUE}
 
 IMG_FILES=	ArX001.png ArX002.png ArX003.png ArX004.png
 DOC_FILES=	ArX.html ArX.pdf ${IMG_FILES}
