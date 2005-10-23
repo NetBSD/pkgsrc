@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11629 2005/10/23 20:06:35 kristerw Exp $
+$NetBSD: CHANGES,v 1.11630 2005/10/23 20:16:55 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4793,3 +4793,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Added games/teg version 0.11.1 [minskim 2005-10-23]
 	Updated emulators/xmame to 0.101 [kristerw 2005-10-23]
 	Updated emulators/xmess to 0.101 [kristerw 2005-10-23]
+	Updated databases/postgresql80 to 8.0.4 [jlam 2005-10-23]
+	Updated databases/postgresql80-client to 8.0.4 [jlam 2005-10-23]
+	Updated databases/postgresql80-plperl to 8.0.4 [jlam 2005-10-23]
+	Updated databases/postgresql80-plpython to 8.0.4 [jlam 2005-10-23]
+	Updated databases/postgresql80-pltcl to 8.0.4 [jlam 2005-10-23]
+	Updated databases/postgresql80-server to 8.0.4 [jlam 2005-10-23]
