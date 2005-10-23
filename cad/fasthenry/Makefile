@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/04/11 21:45:01 tv Exp $
+# $NetBSD: Makefile,v 1.26 2005/10/23 22:24:11 rillig Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -16,22 +16,21 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=			${WRKDIR}/fasthenry-3.0
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
-CONFIGURE_ARGS=		default
+CONFIGURE_ARGS+=	default
 
 .include "../../mk/bsd.prefs.mk"
 
+LIBS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 .if (${MACHINE_ARCH} == "alpha")
 #
 # optimized libffm (free fast math library)
-#>
+#
 .  include "../../math/libffm/buildlink3.mk"
 DEPENDS+=	libffm-[0-9]*:../../math/libffm
-LIBS=		-L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -lffm -lm
-MAKE_ENV+=	LIBS="${LIBS}"
-.else
-LIBS=		-lm
-MAKE_ENV+=	LIBS="${LIBS}"
+LIBS+=		-lffm
 .endif
+LIBS+=		-lm
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
