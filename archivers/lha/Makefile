@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/04/11 21:44:49 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/10/23 20:40:20 rillig Exp $
 
 DISTNAME=       lha-114i
 PKGNAME=	lha-114.9
@@ -15,9 +15,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 
-MAKE_FLAGS=	MAKE="${MAKE_PROGRAM}"
-
 .include "../../mk/bsd.prefs.mk"
+
+MAKE_FLAGS+=	MAKE=${MAKE_PROGRAM:Q}
 
 LHA_CPPFLAGS=	-DSYSTIME_HAS_NO_TM -DMKTIME -DUSESTRCASECMP -DSYSV_SYSTEM_DIR
 .if ${OPSYS} == "Darwin"
