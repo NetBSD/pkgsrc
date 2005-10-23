@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/03/24 21:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2005/10/23 15:45:43 rillig Exp $
 
 DISTNAME=		noweb-2.9a
 PKGREVISION=		1
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.virginia.edu/~nr/noweb/
 COMMENT=		Simple, extensible literate-programming tool
 
-DEPENDS=		icon>=9.3:../../lang/icon
+DEPENDS+=		icon>=9.3:../../lang/icon
 
 WRKSRC=			${WRKDIR}/src
 
