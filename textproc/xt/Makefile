@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:43 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/10/23 23:31:48 rillig Exp $
 #
 
 DISTNAME=	xt
@@ -15,8 +15,8 @@ DEPENDS+=	XP-[0-9]*:../../textproc/xp
 
 EXTRACT_ONLY=	# empty
 USE_JAVA=	run
-NO_CONFIGURE=
-NO_BUILD=
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 post-extract:
 	cd ${WRKDIR} && ${LOCALBASE}/bin/unzip -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
