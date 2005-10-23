@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11621 2005/10/23 17:49:40 adrianp Exp $
+$NetBSD: CHANGES,v 1.11622 2005/10/23 18:48:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4785,3 +4785,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gnome2-applets to 2.12.0nb1 [minskim 2005-10-23]
 	Updated x11/gnome-panel to 2.12.1nb1 [minskim 2005-10-23]
 	Updated security/pks to 0.9.4nb3 [adrianp 2005-10-23]
+	Updated devel/cpuflags to 0.95 [minskim 2005-10-23]
