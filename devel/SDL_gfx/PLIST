@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/10/23 16:03:10 rillig Exp $
 include/SDL/SDL_framerate.h
 include/SDL/SDL_gfxPrimitives.h
 include/SDL/SDL_gfxPrimitives_font.h
@@ -10,10 +10,10 @@ share/doc/SDL_gfx/framerate-thumb.png
 share/doc/SDL_gfx/framerate.fig
 share/doc/SDL_gfx/framerate.png
 share/doc/SDL_gfx/index.html
-share/doc/SDL_gfx/styles.css
 share/doc/SDL_gfx/Screenshots/SDL_gfxPrimitives-thumb.jpg
 share/doc/SDL_gfx/Screenshots/SDL_gfxPrimitives.jpg
 share/doc/SDL_gfx/Screenshots/SDL_rotozoom-thumb.jpg
 share/doc/SDL_gfx/Screenshots/SDL_rotozoom.jpg
+share/doc/SDL_gfx/styles.css
 @dirrm share/doc/SDL_gfx/Screenshots
 @dirrm share/doc/SDL_gfx
