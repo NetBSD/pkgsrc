@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/08/03 18:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2005/10/23 18:07:10 rillig Exp $
 
 DISTNAME=	zip231
 PKGNAME=	zip-2.31
@@ -22,7 +22,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
-CFLAGS=		-O0
+CFLAGS+=	-O0
 .endif
 
 .include "../../mk/compiler.mk"
@@ -31,7 +31,7 @@ CFLAGS=		-O0
 BUILD_TARGET=	generic_gcc
 .else
 BUILD_TARGET=	generic
-CFLAGS=		-O
+CFLAGS+=	-O
 .endif
 
 .if ${OPSYS} == "Linux"
