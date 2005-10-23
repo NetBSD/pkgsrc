@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/01/08 09:39:56 taca Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/23 21:45:16 rillig Exp $
 #
 
 DISTNAME=		yatsvrs-5.00p6
@@ -37,7 +37,7 @@ DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 .for f in ${EXAMPLES}
-CONF_FILES+=		${EXAMPLESDIR}/$f	${PKG_SYSCONFDIR}/$f
+CONF_FILES+=		${EXAMPLESDIR}/${f}	${PKG_SYSCONFDIR}/${f}
 .endfor
 OWN_DIRS+=		${PKG_SYSCONFDIR}
 
@@ -53,11 +53,11 @@ OLDCONFDIR?=		${PKG_SYSCONFBASE}/yat
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/sample/$f ${EXAMPLESDIR}/$f
+	${INSTALL_DATA} ${WRKSRC}/sample/${f} ${EXAMPLESDIR}/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
