@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/07/16 01:19:11 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/10/23 21:37:32 rillig Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -60,10 +60,10 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/../man/man1/*.1 ${PREFIX}/man/man1/
 	@cd ${PREFIX}/lib/plt && PATH="${OLD_PATH}" ${SH} install || ${TRUE}
 .for f in ${PROGRAMS}
-	@cd ${PREFIX}/bin && ${LN} -s ../lib/plt/bin/$f
+	@cd ${PREFIX}/bin && ${LN} -s ../lib/plt/bin/${f}
 .endfor
 .for f in ${DOCFILES}
-	${PREFIX}/bin/setup-plt ${DISTDIR}/${DIST_SUBDIR}/$f
+	${PREFIX}/bin/setup-plt ${DISTDIR}/${DIST_SUBDIR}/${f}
 .endfor
 
 .include "../../graphics/MesaLib/buildlink3.mk"
