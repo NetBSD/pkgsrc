@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.61 2005/07/22 12:13:12 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.62 2005/10/23 18:47:24 minskim Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -69,6 +69,7 @@ case $hw_machine_arch in
 	*Intel\ Pentium\ III\ *)	FLAGS='-march=pentium3'		;;
 	*Intel\ Mobile\ Pentium\ III\ *) FLAGS='-march=pentium3'	;;
 	*Intel\ Celeron\ \(Mendocino\)\ *) FLAGS='-march=pentium3 -mno-sse' ;;
+	*Intel\ Pentium\ M\ \(\Dothan\)\ *) FLAGS='-march=pentium4m'	;;
 	*Intel\ Pentium\ M\ *)		FLAGS='-march=pentium3m'	;;
 	*Intel\ Mobile\ Pentium\ 4\ *)	FLAGS='-march=pentium4m'	;;
 	*Intel\ Pentium\ 4\ *)		FLAGS='-march=pentium4'		;;
