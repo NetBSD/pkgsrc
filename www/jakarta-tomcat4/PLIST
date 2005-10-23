@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:07 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/23 17:04:28 wiz Exp $
 share/examples/rc.d/tomcat4
 tomcat4/LICENSE
 tomcat4/README.txt
@@ -1451,20 +1451,20 @@ tomcat4/webapps/webdav/index.html
 tomcat4/webapps/webdav/tomcat-power.gif
 tomcat4/webapps/webdav/tomcat.gif
 @comment must explicitly remove webapp working files, but not any user files in webapps
-@unexec /rescue/rm -rf %D/tomcat4/webapps/ROOT
-@unexec /rescue/rm -rf %D/tomcat4/webapps/admin
-@unexec /rescue/rm -rf %D/tomcat4/webapps/examples
-@unexec /rescue/rm -rf %D/tomcat4/webapps/test
-@unexec /rescue/rm -rf %D/tomcat4/webapps/tomcat-docs
-@unexec /rescue/rm -rf %D/tomcat4/webapps/webdav
-@unexec /rescue/rm -rf %D/tomcat4/server/webapps
+@unexec ${RM} -rf %D/tomcat4/webapps/ROOT
+@unexec ${RM} -rf %D/tomcat4/webapps/admin
+@unexec ${RM} -rf %D/tomcat4/webapps/examples
+@unexec ${RM} -rf %D/tomcat4/webapps/test
+@unexec ${RM} -rf %D/tomcat4/webapps/tomcat-docs
+@unexec ${RM} -rf %D/tomcat4/webapps/webdav
+@unexec ${RM} -rf %D/tomcat4/server/webapps
 @comment must explicitly remove tomcat working stash
-@unexec /rescue/rm -rf %D/tomcat4/work
+@unexec ${RM} -rf %D/tomcat4/work
 @comment also remove auto-generated conf fragments, if present
-@unexec /rescue/rm -f %D/tomcat4/conf/iis_redirect.reg-auto
-@unexec /rescue/rm -f %D/tomcat4/conf/mod_jk.conf-auto
-@unexec /rescue/rm -f %D/tomcat4/conf/obj.conf-auto
-@unexec /rescue/rm -f %D/tomcat4/conf/uriworkermap.properties-auto
+@unexec ${RM} -f %D/tomcat4/conf/iis_redirect.reg-auto
+@unexec ${RM} -f %D/tomcat4/conf/mod_jk.conf-auto
+@unexec ${RM} -f %D/tomcat4/conf/obj.conf-auto
+@unexec ${RM} -f %D/tomcat4/conf/uriworkermap.properties-auto
 @dirrm tomcat4/webapps
 @dirrm tomcat4/temp
 @dirrm tomcat4/shared/lib
