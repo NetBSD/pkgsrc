@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:44:49 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/23 20:41:24 rillig Exp $
 #
 
 DISTNAME=	nulibdist-203
@@ -14,9 +14,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/dist/2/}
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--cache-file=${WRKDIR}/config.cache
 
 .include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ARGS+=--cache-file=${WRKDIR}/config.cache
 
 CFLAGS+=	-D__unix__
 
