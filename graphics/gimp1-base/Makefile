@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:55 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/23 18:58:30 wiz Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -60,11 +60,6 @@ pre-build:
 	cd ${WRKSRC} &&							\
 	${CC} -o ${WRKSRC}/docs/pdb_self_doc				\
 		${FILESDIR}/pdb_self_doc.c
-
-post-install:
-	${TEST} ${PREFIX} = ${LOCALBASE} ||				\
-		${LN} -fs ${PREFIX}/share/aclocal/gimp.m4		\
-			${LOCALBASE}/share/aclocal/gimp.m4
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../multimedia/mpeg-lib/buildlink3.mk"
