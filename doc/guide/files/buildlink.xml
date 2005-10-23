@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.10 2005/10/07 09:56:12 rillig Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.11 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -69,19 +69,25 @@
     <para> If a dependency on a particular package is required for its libraries and
       headers, then we replace: </para>
       
-    <programlisting>DEPENDS+=   foo>=1.1.0:../../category/foo</programlisting>
+<programlisting>
+    DEPENDS+=   foo>=1.1.0:../../category/foo
+</programlisting>
 
     <para>with</para>
 
-    <programlisting>.include "../../category/foo/buildlink3.mk"</programlisting>
+<programlisting>
+    .include "../../category/foo/buildlink3.mk"
+</programlisting>
 
     <para>The buildlink3.mk files usually define the required dependencies.
     If you need a newer version of the dependency when using buildlink3.mk
     files, then you can define it in your Makefile; for example:
     </para>
 
-    <programlisting>BUILDLINK_DEPENDS.foo+=   foo>=1.1.0
-.include "../../category/foo/buildlink3.mk"</programlisting>
+<programlisting>
+    BUILDLINK_DEPENDS.foo+=   foo>=1.1.0
+    .include "../../category/foo/buildlink3.mk"
+</programlisting>
 
     <para>There are several <filename>buildlink3.mk</filename>
       files in <filename>pkgsrc/mk</filename>
@@ -177,28 +183,29 @@
         <filename>buildlink3.mk</filename> is taken 
         from <filename>pkgsrc/graphics/tiff</filename>:</para>
 
-      <programlisting>
-# &#36;NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp &#36;
+<programlisting>
+    # &#36;NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp &#36;
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
+    BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
+    TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=     tiff
-.endif
+    .if !empty(BUILDLINK_DEPTH:M+)
+    BUILDLINK_DEPENDS+=     tiff
+    .endif
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
-BUILDLINK_PACKAGES+=    tiff
+    BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
+    BUILDLINK_PACKAGES+=    tiff
 
-.if !empty(TIFF_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.tiff+=        tiff>=3.6.1
-BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
-.endif  # TIFF_BUILDLINK3_MK
+    .if !empty(TIFF_BUILDLINK3_MK:M+)
+    BUILDLINK_DEPENDS.tiff+=        tiff>=3.6.1
+    BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
+    .endif  # TIFF_BUILDLINK3_MK
 
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+    .include "../../devel/zlib/buildlink3.mk"
+    .include "../../graphics/jpeg/buildlink3.mk"
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} </programlisting>
+    BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+</programlisting>
 
       <para> The header and footer manipulate
         <varname>BUILDLINK_DEPTH</varname>, which is common across all
@@ -447,46 +454,46 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//} </programlisting>
       <para>The following is the recommended template for builtin.mk
         files: </para>
 
-      <programlisting>
-.if !defined(IS_BUILTIN.foo)
-#
-# IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
-# genuinely exists in the system or not.
-#
-IS_BUILTIN.foo?=        no
+<programlisting>
+    .if !defined(IS_BUILTIN.foo)
+    #
+    # IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
+    # genuinely exists in the system or not.
+    #
+    IS_BUILTIN.foo?=        no
 
-# BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
-# version can be determined.
-#
-.  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
-BUILTIN_PKG.foo?=       foo-1.0
-.  endif
-.endif  # IS_BUILTIN.foo
+    # BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
+    # version can be determined.
+    #
+    .  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
+    BUILTIN_PKG.foo?=       foo-1.0
+    .  endif
+    .endif  # IS_BUILTIN.foo
 
-.if !defined(USE_BUILTIN.foo)
-USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
-.  if defined(BUILTIN_PKG.foo)
-.    for _depend_ in ${BUILDLINK_DEPENDS.foo}
-.      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
-USE_BUILTIN.foo!=                                                       \
-      if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
-              ${ECHO} "yes";                                            \
-      else                                                              \
-              ${ECHO} "no";                                             \
-      fi
-.      endif
-.    endfor
-.  endif
-.endif  # USE_BUILTIN.foo
+    .if !defined(USE_BUILTIN.foo)
+    USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
+    .  if defined(BUILTIN_PKG.foo)
+    .    for _depend_ in ${BUILDLINK_DEPENDS.foo}
+    .      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
+    USE_BUILTIN.foo!=                                                       \
+          if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
+                  ${ECHO} "yes";                                            \
+          else                                                              \
+                  ${ECHO} "no";                                             \
+          fi
+    .      endif
+    .    endfor
+    .  endif
+    .endif  # USE_BUILTIN.foo
 
-CHECK_BUILTIN.foo?=     no
-.if !empty(CHECK_BUILTIN.foo:M[nN][oO])
-#
-# Here we place code that depends on whether USE_BUILTIN.foo is set to
-# "yes" or "no".
-#
-.endif  # CHECK_BUILTIN.foo
-      </programlisting>
+    CHECK_BUILTIN.foo?=     no
+    .if !empty(CHECK_BUILTIN.foo:M[nN][oO])
+    #
+    # Here we place code that depends on whether USE_BUILTIN.foo is set to
+    # "yes" or "no".
+    #
+    .endif  # CHECK_BUILTIN.foo
+</programlisting>
 
       <para> The first section sets
         <varname>IS_BUILTIN.<replaceable>pkg</replaceable></varname>
@@ -563,10 +570,10 @@ CHECK_BUILTIN.foo?=     no
         using pkgsrc versions of software for all but the most basic
         bits on a NetBSD system, you can set: </para>
 	
-      <programlisting>
-        PREFER_PKGSRC=  yes
-        PREFER_NATIVE=  getopt skey tcp_wrappers
-      </programlisting>
+<programlisting>
+    PREFER_PKGSRC=  yes
+    PREFER_NATIVE=  getopt skey tcp_wrappers
+</programlisting>
 
       <para> A package <emphasis>must</emphasis> have a
         <filename>builtin.mk</filename> 
