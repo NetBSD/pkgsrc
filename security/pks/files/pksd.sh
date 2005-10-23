@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pksd.sh,v 1.7 2002/09/20 02:02:00 grant Exp $
+# $NetBSD: pksd.sh,v 1.8 2005/10/23 17:45:39 adrianp Exp $
 #
 # PROVIDE: pksd
 # REQUIRE: DAEMON
@@ -21,17 +21,19 @@ client_command="@PREFIX@/bin/pksclient"
 conf_file="@PKG_SYSCONFDIR@/${name}.conf"
 required_files="${conf_file}"
 extra_commands="dbinit"
+pksd_user="@PKS_USER@"
+pksd_group="@PKS_GROUP@"
 
 pksd_dbinit()
 {
 	(
-	umask 022
+	umask 007
 	if [ -r ${conf_file} ]
 	then
 		dbdir=`@AWK@ '/db_dir/ { print $2 }' < ${conf_file}`
 		if [ ! -f ${dbdir}/keydb000 -a -x ${client_command} ]
 		then
-			${client_command} ${dbdir} create
+			@SU@ -m ${pksd_user} -c "${client_command} ${dbdir} create"
 		fi
 	fi
 	)
@@ -43,9 +45,9 @@ pksd_start()
 	then
 		@ECHO@ "Starting ${name} (local)."
 		@ECHO@ "${command} ${conf_file}"
-		${command} ${conf_file} &
+		@SU@ -m ${pksd_user} -c "${command} ${conf_file} &"
 		sleep 5
-		${run_command} ${conf_file}
+		@SU@ -m ${pksd_user} -c "${run_command} ${conf_file}"
 	fi
 }
 
@@ -57,7 +59,7 @@ pksd_stop()
 		if [ -S ${socket} ]
 		then
 			@ECHO@ "Stopping ${name} (local)."
-			${ctl_command} ${socket} shutdown
+			@SU@ -m ${pksd_user} -c "${ctl_command} ${socket} shutdown"
 		fi
 	fi
 } 
