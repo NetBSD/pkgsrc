@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:32 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/23 22:03:21 rillig Exp $
 
 DISTNAME=	xjman-0.5
 CATEGORIES=	japanese x11
@@ -55,19 +55,19 @@ post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${WRKSRC};						\
 	  ${FIND} man1/*.1 man3/*.3 man5/*.5 -type f -print |	\
-		${SED} -e 's|^|${XJMANDIR}/|' | sort >> ${PLIST_SRC})
+		${SED} -e 's|^|${XJMANDIR}/|' | ${SORT} >> ${PLIST_SRC})
 .if ${MKCATPAGES} != no
 	@(cd ${WRKSRC};						\
 	  ${FIND} man1/*.1 man3/*.3 man5/*.5 -type f -print |	\
 		${SED} -e 's|^|${XJMANDIR}/|'			\
 		       -e 's|man[135]\(/.*\)\.\([135]\)$$|cat\2\1.0|' | \
-		sort >> ${PLIST_SRC})
+		${SORT} >> ${PLIST_SRC})
 .endif
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xjman
 .for i in COPYRIGHT COPYRIGHT.XJDP
-	@${INSTALL_DATA} ${FILESDIR}/$i ${PREFIX}/share/doc/xjman
+	@${INSTALL_DATA} ${FILESDIR}/${i} ${PREFIX}/share/doc/xjman
 .endfor
 	@${INSTALL_DATA} ${WRKDIR}/man/README ${PREFIX}/share/doc/xjman
 
