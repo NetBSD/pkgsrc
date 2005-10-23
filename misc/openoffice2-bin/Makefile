@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/10/21 12:30:58 mrauch Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/23 14:38:30 mrauch Exp $
 
 PKGNAME=		openoffice-bin-2.0.0
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/2.0.0/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -86,14 +87,21 @@ WRKSRC=		${WRKDIR}/OOO680_m3_native_packed-1_en-US.8968/packages
 DISTNAME=	# Dummy to prevent error from missing DISTNAME
 .endif
 
+.include "options.mk"
+
 do-install:
 	${RM} -f ${WRKDIR}/PLIST.nouniq
 	${RPM2PKG} ${RPM2PKGARGS} ${WRKSRC}/*.rpm
 	uniq ${WRKDIR}/PLIST.nouniq >${WRKDIR}/PLIST
+.if !empty(PKG_JVM)
 	${RM} -f ${PREFIX}/bin/soffice
 	${SED}  -e "s|@@PREFIX@@|${PREFIX}|g" -e "s|@@OO_VER@@|${OO_VER}|g" \
+		-e "s|@@JAVA_HOME@@|${PKG_JAVA_HOME}|g" \
 		< ${FILESDIR}/soffice > ${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
+.else
+	${LN} -sf ../openoffice.org${OO_VER}/program/soffice ${PREFIX}/bin/soffice
+.endif
 .for i in scalc sdraw simpress swriter
 	${LN} -sf ../openoffice.org${OO_VER}/program/${i} ${PREFIX}/bin/${i}
 .endfor
