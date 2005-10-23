@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/08/10 20:56:14 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/10/23 14:08:56 rillig Exp $
 #
 # Check the API before updating this package!  gal-2.5 and above should
 # get their own gal26 package!
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	gal-2.4.pc.in
 
-CONFIGURE_ARGS=		--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "../../converters/libiconv/buildlink3.mk"
