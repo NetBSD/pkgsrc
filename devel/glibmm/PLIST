@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/03 09:54:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/10/23 16:03:10 rillig Exp $
 include/glibmm-2.4/glibmm.h
 include/glibmm-2.4/glibmm/arrayhandle.h
 include/glibmm-2.4/glibmm/class.h
@@ -127,12 +127,12 @@ share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1ArrayHandle-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1ArrayHandle.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Cond-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Cond.html
-share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Container__Helpers_1_1ArrayHandleIterator.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Container__Helpers_1_1ArrayHandleIterator-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Container__Helpers_1_1ArrayHandleIterator.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Container__Helpers_1_1ListHandleIterator-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Container__Helpers_1_1ListHandleIterator.html
-share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Container__Helpers_1_1SListHandleIterator.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Container__Helpers_1_1SListHandleIterator-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Container__Helpers_1_1SListHandleIterator.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1ConvertError-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1ConvertError.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1ConvertError__inherit__graph.png
