@@ -1,4 +1,4 @@
-# $NetBSD
+# $NetBSD: options.mk,v 1.2 2005/10/23 20:11:47 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openoffice-bin
 PKG_SUPPORTED_OPTIONS=	java
