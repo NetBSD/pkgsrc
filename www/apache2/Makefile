@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.82.2.1 2005/10/18 21:21:27 seb Exp $
+# $NetBSD: Makefile,v 1.82.2.2 2005/10/23 09:48:01 seb Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -26,6 +27,8 @@ CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 # Apache Portable Runtime library configure options
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
+
+BUILDLINK_DEPENDS.apr=	apr>=0.9.7.2.0.55
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/apr/buildlink3.mk"
