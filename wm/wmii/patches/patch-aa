@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/23 20:39:03 minskim Exp $
+
+--- config.mk.orig	2005-10-17 14:17:01.000000000 +0000
++++ config.mk
+@@ -1,16 +1,16 @@
+ # Customize to fit your system
+ 
+ # paths
+-PREFIX      = /usr/local
+-CONFPREFIX  = ${PREFIX}/etc
+-MANPREFIX   = ${PREFIX}/share/man
++#PREFIX      = /usr/local
++CONFPREFIX  = ${PREFIX}/share/examples
++MANPREFIX   = ${PREFIX}/man
+ SHAREPREFIX = ${PREFIX}/share
+-9PREFIX     = ${PREFIX}/9
++9PREFIX     = ${PREFIX}
+ 
+ INCDIR      = ${PREFIX}/include
+ LIBDIR      = ${PREFIX}/lib
+-X11INC      = /usr/X11R6/include
+-X11LIB      = /usr/X11R6/lib
++X11INC      = ${X11BASE}/include
++X11LIB      = ${X11BASE}/lib
+ 
+ # includes and libs
+ INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11INC}
+@@ -18,14 +18,14 @@ LIBS        = -L${LIBDIR} -L/usr/lib -lc
+ VERSION     = 20051017
+ 
+ # flags
+-CFLAGS      = -O0 -g -Wall ${INCLUDES} -DVERSION=\"${VERSION}\"
+-LDFLAGS     = -g ${LIBS}
++CFLAGS      += ${INCLUDES} -DVERSION=\"${VERSION}\"
++LDFLAGS     += ${LIBS}
+ 
+ # compiler
+ # Note: - under Solaris add -D__EXTENSIONS__ to CFLAGS
+ MAKE		= make
+ AR          = ar cr
+-CC          = cc
++#CC          = cc
+ RANLIB      = ranlib
+ 
+ # code formatting

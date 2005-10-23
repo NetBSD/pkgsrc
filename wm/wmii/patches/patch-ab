@@ -1,0 +1,54 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/10/23 20:39:03 minskim Exp $
+
+--- Makefile.orig	2005-10-17 14:17:01.000000000 +0000
++++ Makefile
+@@ -5,9 +5,9 @@ include config.mk
+ 
+ SUBDIRS     = libcext liblitz libixp libixp2 libwmii base util
+ 
+-BIN         = base/wmii base/wmiiwm util/wmibar util/wmifs \
++BIN         = base/wmiiwm util/wmibar util/wmifs \
+               util/wmikeys util/wmimenu util/wmiplumb util/wmir \
+-              util/wmirefcard util/wmiwarp
++              util/wmiwarp
+ 
+ MAN1        = base/wmii.1 base/wmiiwm.1 util/wmibar.1 util/wmifs.1 \
+               util/wmikeys.1 util/wmimenu.1 util/wmir.1
+@@ -47,28 +47,17 @@ clean:
+ 
+ install: all
+ 	@echo Installing executable files to ${DESTDIR}${PREFIX}/bin
+-	@mkdir -p ${DESTDIR}${PREFIX}/bin
+-	@cp -f ${BIN} ${DESTDIR}${PREFIX}/bin
+-	@sed 's|SHAREPREFIX|${SHAREPREFIX}|; s|CONFPREFIX|${CONFPREFIX}|; s|9PREFIX|${9PREFIX}|' <base/wmii >${DESTDIR}${PREFIX}/bin/wmii
+-	@sed 's|9PREFIX|${9PREFIX}|' <util/wmirefcard >${DESTDIR}${PREFIX}/bin/wmirefcard
+-	@for i in ${BIN}; do \
+-		chmod 755 ${DESTDIR}${PREFIX}/bin/`basename $$i`; \
+-	done
++	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++	@${BSD_INSTALL_PROGRAM} ${BIN} ${DESTDIR}${PREFIX}/bin
++	@${BSD_INSTALL_SCRIPT} util/wmirefcard base/wmii ${DESTDIR}${PREFIX}/bin
+ 	@echo Installing actions to ${DESTDIR}${CONFPREFIX}/wmii
+-	@mkdir -p ${DESTDIR}${CONFPREFIX}/wmii
+-	@cd action; for i in *; do \
+-		sed 's|9PREFIX|${9PREFIX}|' <$$i >${DESTDIR}${CONFPREFIX}/wmii/$$i; \
+-		chmod 755 ${DESTDIR}${CONFPREFIX}/wmii/$$i; \
+-	done
+-	@mkdir -p ${DESTDIR}${SHAREPREFIX}/wmii
+-	@cp -f README ${DESTDIR}${SHAREPREFIX}/wmii
++	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${CONFPREFIX}/wmii
++	@${BSD_INSTALL_SCRIPT} action/* ${DESTDIR}${CONFPREFIX}/wmii
++	@${BSD_INSTALL_DATA_DIR} ${DESTDIR}${SHAREPREFIX}/wmii
++	@${BSD_INSTALL_DATA} README ${DESTDIR}${SHAREPREFIX}/wmii
+ 	@echo Installing manual pages to ${DESTDIR}${MANPREFIX}/man1
+-	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
+-	@cp -f ${MAN1} ${DESTDIR}${MANPREFIX}/man1
+-	@sed 's|CONFPREFIX|${CONFPREFIX}|' <base/wmii.1 >${DESTDIR}${MANPREFIX}/man1/wmii.1
+-	@for i in ${MAN1}; do \
+-		chmod 444 ${DESTDIR}${MANPREFIX}/man1/`basename $$i`; \
+-	done
++	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
++	@${BSD_INSTALL_MAN} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
+ 	@echo "wmii successfully installed"
+ 
+ uninstall:
