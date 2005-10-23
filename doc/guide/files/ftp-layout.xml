@@ -1,70 +1,70 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.3 2005/05/14 22:34:59 rillig Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.4 2005/10/23 11:25:58 rillig Exp $ -->
 
 <appendix id="ftp-layout">
   <title>Layout of the FTP server's package archive</title>
 
   <para>Layout for precompiled binary packages on ftp.NetBSD.org:</para>
 
-  <!-- BEWARE! Use no tabs here, only spaces! -->
-  <programlisting>
-/pub/NetBSD/packages/
-                distfiles/
+<!-- BEWARE! Use no tabs here, only spaces! -->
+<programlisting>
+    /pub/NetBSD/packages/
+        distfiles/
 
-                # Unpacked pkgsrc trees
-                pkgsrc-current -> /pub/NetBSD/NetBSD-current/pkgsrc
-                pkgsrc-2003Q4 -> N/A
-                pkgsrc-2004Q1/pkgsrc
+        # Unpacked pkgsrc trees
+        pkgsrc-current -> /pub/NetBSD/NetBSD-current/pkgsrc
+        pkgsrc-2003Q4 -> N/A
+        pkgsrc-2004Q1/pkgsrc
 
-                # pkgsrc archives
-                pkgsrc-current.tar.gz -> ../NetBSD-current/tar_files/pkgsrc.tar.gz
-                pkgsrc-2003Q4.tar.gz -> N/A
-                pkgsrc-2004Q1.tar.gz -> N/A
+        # pkgsrc archives
+        pkgsrc-current.tar.gz -> ../NetBSD-current/tar_files/pkgsrc.tar.gz
+        pkgsrc-2003Q4.tar.gz -> N/A
+        pkgsrc-2004Q1.tar.gz -> N/A
 
-                # Per pkgsrc-release/OS-release/arch package archives
-                pkgsrc-2003Q4/
-                        NetBSD-1.6.2/
-                                i386/
-                                        All/
-                                        archivers/
-                                                foo -> ../All/foo
-                                        ...
-                pkgsrc-2004Q1/
-                        NetBSD-1.6.2/
-                                i386/
-                                        All/
-                                        ...
-                        NetBSD-2.0/
-                                i386/
-                                        All/
-                                        ...
-                        SunOS-5.9/
-                                sparc/
-                                        All/
-                                        ...
-                                x86/
-                                        All/
-                                        ...
+        # Per pkgsrc-release/OS-release/arch package archives
+        pkgsrc-2003Q4/
+            NetBSD-1.6.2/
+                i386/
+                    All/
+                    archivers/
+                        foo -> ../All/foo
+                    ...
+        pkgsrc-2004Q1/
+            NetBSD-1.6.2/
+                i386/
+                    All/
+                    ...
+            NetBSD-2.0/
+                i386/
+                    All/
+                    ...
+            SunOS-5.9/
+                sparc/
+                    All/
+                    ...
+                x86/
+                    All/
+                    ...
 
-                # Per os-release package archive convenience links
-                NetBSD-1.6.2 -> 1.6.2
-                1.6.2/
-                        i386 -> ../pkgsrc-2004Q1/NetBSD-1.6.2/i386
-                        m68k/
-                                All/
-                                archivers/
-                                        foo -> ../All/foo
-                                ...
-                        amiga -> m68k
-                        atari -> m68k
-                        ...
+        # Per os-release package archive convenience links
+        NetBSD-1.6.2 -> 1.6.2
+        1.6.2/
+            i386 -> ../pkgsrc-2004Q1/NetBSD-1.6.2/i386
+            m68k/
+                All/
+                archivers/
+                    foo -> ../All/foo
+                ...
+            amiga -> m68k
+            atari -> m68k
+            ...
 
-                2.0 -> NetBSD-2.0       # backward compat, historic
-                NetBSD-2.0/
-                        i386 -> ../pkgsrc-2004Q1/NetBSD-2.0/i386
-                SunOS-5.9/
-                        sparc -> ../pkgsrc-2004Q1/SunOS-5.9/sparc
-                        x86 -> ../pkgsrc-2004Q1/SunOS-5.9/x86
-                        </programlisting>
+        2.0 -> NetBSD-2.0       # backward compat, historic
+        NetBSD-2.0/
+            i386 -> ../pkgsrc-2004Q1/NetBSD-2.0/i386
+        SunOS-5.9/
+            sparc -> ../pkgsrc-2004Q1/SunOS-5.9/sparc
+            x86 -> ../pkgsrc-2004Q1/SunOS-5.9/x86
+</programlisting>
 
   <para>
     To create:</para>
@@ -77,11 +77,12 @@
     <listitem>
       <para> Upload /usr/pkgsrc/packages to </para>
 
-      <programlisting>    ftp://ftp.NetBSD.org/pub/NetBSD/packages/\
-        pkgsrc-2004Q4/\                         # pkgsrc-branch
-        `uname -s`-`uname -r`/                  # OS & version
-        `uname -p`                              # architecture
-       </programlisting>
+<programlisting>
+    ftp://ftp.NetBSD.org/pub/NetBSD/packages/\
+        pkgsrc-2004Q4/\             # pkgsrc-branch
+        `uname -s`-`uname -r`/\     # OS & version
+        `uname -p`                  # architecture
+</programlisting>
 
     </listitem>
 

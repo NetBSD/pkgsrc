@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.14 2005/09/14 17:04:17 reed Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.15 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -297,8 +297,11 @@
 	<para>The TERM setting used for DOS-type console windows (including those
 	  invoked by the csh and ksh startup shortcuts) is "interix".  Most systems
 	  don't have a termcap/terminfo entry for it, but the following .termcap
-	  entry provides adequate emulation in most cases:
-          <programlisting>interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:</programlisting></para>
+	  entry provides adequate emulation in most cases:</para>
+
+<programlisting>
+    interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+</programlisting>
 
       </sect3>
     </sect2>
@@ -338,7 +341,11 @@
 	course, your compiler's man pages for details.</para>
 
       <para>If you are using SGI's MIPSPro compiler, please set
-         <programlisting>PKGSRC_COMPILER=mipspro</programlisting>
+
+<programlisting>
+    PKGSRC_COMPILER=        mipspro
+</programlisting>
+
         in <filename>/etc/mk.conf</filename>.  Otherwise, pkgsrc will assume you
         are using gcc and may end up passing invalid flags to the compiler.  Note that
         bootstrap should create an appropriate <filename>mk.conf.example</filename> by
@@ -365,9 +372,12 @@
       </para>
 
       <para>To bootstrap using icc, assuming the default icc installation
-        directory:
-        <programlisting>env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
-                ac_cv___attribute__=yes ./bootstrap</programlisting></para>
+        directory:</para>
+
+<programlisting>
+    env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
+            ac_cv___attribute__=yes ./bootstrap
+</programlisting>
 
       <note>
         <para>icc 8.1 needs the `-i-static' argument instead of -static-libcxa.</para>
@@ -381,15 +391,21 @@
         compiler.</para>
 
      <para>After bootstrapping, you should set <varname>PKGSRC_COMPILER</varname>
-        in <filename>/etc/mk.conf</filename>:
-        <programlisting>PKGSRC_COMPILER=icc</programlisting></para>
+        in <filename>/etc/mk.conf</filename>:</para>
+
+<programlisting>
+    PKGSRC_COMPILER=        icc
+</programlisting>
 
      <para>The default installation directory for icc is
         <filename>/opt/intel_cc_80</filename>, which
         is also the pkgsrc default. If you have installed it into a different
         directory, set <varname>ICCBASE</varname> in
-        <filename>/etc/mk.conf</filename>:
-        <programlisting>ICCBASE=/opt/icc</programlisting></para>
+        <filename>/etc/mk.conf</filename>:</para>
+
+<programlisting>
+    ICCBASE=                /opt/icc
+</programlisting>
 
      <para>pkgsrc uses the static linking method of the runtime libraries
         provided by icc, so binaries can be run on other systems which do not
@@ -440,11 +456,13 @@
 	    as well. You can work around this by enclosing all the pkgsrc-specific parts 
 	    of the file with:</para>
 
-          <programlisting>.ifdef BSD_PKG_MK
-# pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
-.else
-# OpenBSD stuff
-.endif</programlisting>
+<programlisting>
+    .ifdef BSD_PKG_MK
+    # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
+    .else
+    # OpenBSD stuff
+    .endif
+</programlisting>
 	</listitem>
       </orderedlist>
     </sect2>
@@ -526,13 +544,17 @@
 	  optionally, <varname>CPP</varname> in <filename>/etc/mk.conf</filename>,
 	  e.g.:</para>
 
-        <programlisting>CC=     cc
-CXX=    CC
-CPP=    /usr/ccs/lib/cpp</programlisting>
+<programlisting>
+    CC=     cc
+    CXX=    CC
+    CPP=    /usr/ccs/lib/cpp
+</programlisting>
 
 	<para>You may also want to build 64-bit binaries, e.g.:</para>
 
-        <programlisting>CFLAGS= -xtarget=ultra -xarch=v9</programlisting>
+<programlisting>
+    CFLAGS= -xtarget=ultra -xarch=v9
+</programlisting>
 
 	<para>Whichever compiler you use, please ensure the compiler tools and
 	  your $prefix are in your <varname>PATH</varname>. This includes

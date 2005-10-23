@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.15 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.16 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -47,7 +47,9 @@ users:</para>
 
 <para>To subscribe, do:</para>
 
-<programlisting>&cprompt; echo subscribe <replaceable>listname</replaceable> | mail majordomo@NetBSD.org</programlisting>
+<programlisting>
+    &cprompt; echo subscribe <replaceable>listname</replaceable> | mail majordomo@NetBSD.org
+</programlisting>
 
 <para>Archives for all these mailing lists are available from
 <ulink url="http://mail-index.NetBSD.org/"/>.</para>
@@ -270,10 +272,12 @@ values.</para> <para>For example, if you want to use
 <filename>wget</filename> to resume downloads, you'll have to use something
 like:</para>
 
-<programlisting>FETCH_CMD=wget
-FETCH_BEFORE_ARGS=--passive-ftp
-FETCH_RESUME_ARGS=-c
-FETCH_OUTPUT_ARGS=-O</programlisting>
+<programlisting>
+    FETCH_CMD=             wget
+    FETCH_BEFORE_ARGS=     --passive-ftp
+    FETCH_RESUME_ARGS=     -c
+    FETCH_OUTPUT_ARGS=     -O
+</programlisting>
 
 </sect1>
 
@@ -287,7 +291,9 @@ X11 (<filename>/usr/X11R6</filename>, <filename>/usr/openwin</filename>,
 ...), you will have to add the following line into
 <filename>/etc/mk.conf</filename>:</para>
 
-<programlisting>X11_TYPE=XFree86</programlisting>
+<programlisting>
+    X11_TYPE=XFree86
+</programlisting>
 
 </sect1>
 
@@ -301,7 +307,9 @@ X11 (<filename>/usr/X11R6</filename>, <filename>/usr/openwin</filename>,
 you will have to add the following line into
 <filename>/etc/mk.conf</filename>:</para>
 
-<programlisting>X11_TYPE=xorg</programlisting>
+<programlisting>
+    X11_TYPE=xorg
+</programlisting>
 
 </sect1>
 
@@ -318,8 +326,10 @@ form of a URL, e.g. in Amdahl, the machine
 port 80 as the proxy port number.  So the proxy environment variables
 are:</para>
 
-<programlisting>ftp_proxy=ftp://orpheus.amdahl.com:80/
-http_proxy=http://orpheus.amdahl.com:80/</programlisting>
+<programlisting>
+    ftp_proxy=ftp://orpheus.amdahl.com:80/
+    http_proxy=http://orpheus.amdahl.com:80/
+</programlisting>
 
 </sect1>
 
@@ -452,9 +462,11 @@ use it, install sudo (either as binary package or from
 <filename role="pkg">security/sudo</filename>) and then put the following 
 into your <filename>/etc/mk.conf</filename>:</para>
 
-<programlisting>.if exists(${LOCALBASE}/bin/sudo)
-SU_CMD=${LOCALBASE}/bin/sudo /bin/sh -c
-.endif</programlisting>
+<programlisting>
+    .if exists(${LOCALBASE}/bin/sudo)
+    SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
+    .endif
+</programlisting>
 
 </sect1>
 
