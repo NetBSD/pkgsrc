@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/09/04 05:00:36 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/10/23 21:57:22 rillig Exp $
 #
 
 DISTNAME=	ion-2-20040729
@@ -30,9 +30,8 @@ EGFILES=		floatws.lua ion-bindings.lua ion-menus.lua	\
 			query.lua draw.lua pwm.lua pwm-bindings.lua	\
 			pwm-menus.lua dock.lua dock-draw.lua
 .for f in ${EGFILES}
-CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-.undef f
 
 INSTALLATION_DIRS=	bin lib/ion libexec/ion man/man1
 INSTALLATION_DIRS+=	share/doc/ion share/examples/ion share/ion
