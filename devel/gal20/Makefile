@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/10 20:56:14 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/23 14:10:30 rillig Exp $
 #
 
 DISTNAME=	gal-1.99.11
@@ -18,7 +18,7 @@ BUILD_USES_MSGFMT=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	gal-2.0.pc.in
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/libgnomeui/buildlink3.mk"
