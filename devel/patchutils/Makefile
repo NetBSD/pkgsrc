@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/23 19:42:39 rillig Exp $
 #
 
 DISTNAME=		patchutils-0.2.30
@@ -16,6 +16,6 @@ DEPENDS+=               patch-[0-9]*:../../devel/patch
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--with-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
+CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
 
 .include "../../mk/bsd.pkg.mk"
