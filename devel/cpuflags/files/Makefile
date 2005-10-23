@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3 2005/07/21 08:33:13 abs Exp $
+# $Id: Makefile,v 1.4 2005/10/23 14:03:39 rillig Exp $
 
 VERSION=0.89
 
@@ -30,5 +30,3 @@ dist:
 	cp Makefile *.* out/cpuflags-${VERSION}
 	(cd out;pax -w cpuflags-${VERSION} | bzip2 -9 > cpuflags-${VERSION}.tbz)
 	rm -rf out/cpuflags-${VERSION}
-
-
