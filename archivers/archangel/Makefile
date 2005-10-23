@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/31 22:31:04 agc Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/23 18:00:57 rillig Exp $
 
 DISTNAME=	archangel-20050730
 CATEGORIES=	archivers
@@ -10,7 +10,7 @@ COMMENT=	Compressing archiver which can sign and encrypt entries
 
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 
-GNU_CONFIGURE+=	yes
+GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/archangel
 
 .include "../../archivers/bzip2/buildlink3.mk"
