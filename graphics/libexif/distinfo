@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2005/07/24 00:06:44 dillo Exp $
+$NetBSD: distinfo,v 1.18 2005/10/23 20:02:01 rillig Exp $
 
 SHA1 (libexif-0.6.12.tar.bz2) = 5d2c5976521e179d41ff8908b678b14f2e8e690b
 RMD160 (libexif-0.6.12.tar.bz2) = 24cfdb7663f0566f2907987e5dbc472c21b583d9
@@ -6,4 +6,4 @@ Size (libexif-0.6.12.tar.bz2) = 378650 bytes
 SHA1 (patch-aa) = e32ab9cad1720f0b4d6178240e78193a97c4c876
 SHA1 (patch-ab) = 973ca09fc059d74e3221bba12e6e8f4630db20bb
 SHA1 (patch-ac) = 0aa196539b3e272487dd85a4cccf0f1b7761d132
-SHA1 (patch-ad) = d5402a6c6913d3b5ba2c93142928ae029ed19046
+SHA1 (patch-ad) = de370b315555ef8b83a5582569ac36b808d08879

@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 2005/10/23 20:02:01 rillig Exp $
+
 --- libexif/exif-data.c.orig	Sun Mar 13 03:27:13 2005
 +++ libexif/exif-data.c	Wed Apr 13 22:42:35 2005
 @@ -231,7 +231,7 @@
