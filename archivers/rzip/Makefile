@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:44:50 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/23 17:55:44 rillig Exp $
 
 DISTNAME=	rzip-2.0
 PKGREVISION=	1
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	YES
 post-install:
 	${LN} -f ${PREFIX}/bin/rzip ${PREFIX}/bin/runzip
 	${RM} -f ${PREFIX}/man/man1/runzip.1
-	${LN} -s ${PREFIX}/man/man1/rzip.1 ${PREFIX}/man/man1/runzip.1
+	${LN} -s rzip.1 ${PREFIX}/man/man1/runzip.1
 
 .include "../../mk/bsd.prefs.mk"
 
