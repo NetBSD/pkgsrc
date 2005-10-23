@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 13:41:34 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/23 18:12:24 rillig Exp $
 
 MODNAME=		zlib
 CATEGORIES+=		archivers
-PKGREVISION=		# empty
 COMMENT=		PHP extension for zlib compression
 
 CONFIGURE_ARGS+=	--with-${MODNAME}-dir=${BUILDLINK_DIR}

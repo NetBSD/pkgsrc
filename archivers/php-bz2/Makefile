@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 13:39:40 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/23 18:12:24 rillig Exp $
 
 MODNAME=		bz2
 CATEGORIES+=		archivers
-PKGREVISION=		# empty
 COMMENT=		PHP extension for bzip2 compression
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.bzip2}
