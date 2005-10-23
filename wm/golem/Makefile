@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/10/05 13:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/23 23:16:52 rillig Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -14,7 +14,7 @@ USE_PKGINSTALL=	YES
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS=	--enable-i18n
+CONFIGURE_ARGS+=	--enable-i18n
 
 .if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 CONFIGURE_ARGS+=	--enable-xinerama
@@ -27,10 +27,10 @@ PKG_SUPPORTED_OPTIONS=	esound
 
 .if !empty(PKG_OPTIONS:Mesound)
 CONFIGURE_ARGS+=	--enable-sound
-PLIST_SUBST=		NOT_SOUND=
+PLIST_SUBST+=		NOT_SOUND=
 .include "../../audio/esound/buildlink3.mk"
 .else
-PLIST_SUBST=		NOT_SOUND="@comment "
+PLIST_SUBST+=		NOT_SOUND="@comment "
 .endif
 
 CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
