@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11619 2005/10/23 17:27:23 minskim Exp $
+$NetBSD: CHANGES,v 1.11620 2005/10/23 17:45:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4783,3 +4783,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/ht to 0.9.1 [rh 2005-10-23]
 	Updated emulators/gxemul to 0.3.6.1 [xtraeme 2005-10-23]
 	Updated x11/gnome2-applets to 2.12.0nb1 [minskim 2005-10-23]
+	Updated x11/gnome-panel to 2.12.1nb1 [minskim 2005-10-23]
