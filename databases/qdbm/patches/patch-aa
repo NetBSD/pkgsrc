@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/23 19:01:56 minskim Exp $
+
+--- Makefile.in.orig	2005-09-01 04:19:56.000000000 +0900
++++ Makefile.in
+@@ -45,13 +45,13 @@ MYLIBDIR = @libdir@
+ MYBINDIR = @bindir@
+ MYMAN1DIR = @mandir@/man1
+ MYMAN3DIR = @mandir@/man3
+-MYDATADIR = @datadir@/$(PACKAGE)
++MYDATADIR = @datadir@/doc/$(PACKAGE)
+ MYPCDIR = @libdir@/pkgconfig
+ DESTDIR =
+ 
+ # Building binaries
+ CC = @CC@
+-RELCFLAGS = -O2 -fomit-frame-pointer -DNDEBUG
++RELCFLAGS = $(PTHREAD_CFLAGS) -O2 -fomit-frame-pointer -DNDEBUG
+ CPPFLAGS = -I$(srcdir) -I$(HOME)/include -I/usr/local/include @MYDEFS@ \
+   -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
+   -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1 \
+@@ -59,7 +59,7 @@ CPPFLAGS = -I$(srcdir) -I$(HOME)/include
+ CFLAGS = -Wall -ansi -pedantic -fPIC -fsigned-char $(RELCFLAGS)
+ LD = @LD@
+ LIBS = -lqdbm @LIBS@
+-LIBLDFLAGS = -L. -L$(HOME)/lib -L/usr/local/lib @LIBS@
++LIBLDFLAGS = $(PTHREAD_LDFLAGS) -L. -L$(HOME)/lib -L/usr/local/lib @LIBS@
+ LDFLAGS = -L. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
+ LDENV = LD_RUN_PATH=/lib:/usr/lib:$(HOME)/lib:/usr/local/lib:$(MYLIBDIR)
+ AR = @AR@
