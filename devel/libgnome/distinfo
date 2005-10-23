@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.25 2005/10/22 03:08:22 minskim Exp $
+$NetBSD: distinfo,v 1.26 2005/10/23 16:59:59 minskim Exp $
 
 SHA1 (libgnome-2.12.0.1.tar.bz2) = ec5f1be0e6085226f942535a5dbd45cdbab95f80
 RMD160 (libgnome-2.12.0.1.tar.bz2) = 373d5c5a2ac3272e3669e10e48f01b12331f8e95
 Size (libgnome-2.12.0.1.tar.bz2) = 955235 bytes
-SHA1 (patch-aa) = 426b9a2cca99159257acec02489d075c408207ac
 SHA1 (patch-af) = 783e295d1714b7c121538ed7459ffbcf3ff3713a
