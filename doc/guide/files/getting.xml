@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.4 2005/05/24 12:14:42 wiz Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.5 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="getting">
   <title>Where to get pkgsrc</title>
@@ -23,7 +23,9 @@
       the Software Update Protocol, SUP. To do so, make sure your
       supfile has a line</para>
   
-    <programlisting>release=pkgsrc</programlisting>
+<programlisting>
+    release=pkgsrc
+</programlisting>
   
     <para>in it, see the examples in
       <filename>/usr/share/examples/supfiles</filename>, and that the

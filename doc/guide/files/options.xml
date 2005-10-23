@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.13 2005/10/05 13:59:56 dillo Exp $ -->
+<!-- $NetBSD: options.xml,v 1.14 2005/10/23 11:25:58 rillig Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.42 -->
 
@@ -36,50 +36,51 @@ e.g. <filename>options.mk</filename>, that is included by the
 main package <filename>Makefile</filename>.</para>
 
 <programlisting>
-PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
-PKG_SUPPORTED_OPTIONS=		wibble-foo ldap
-PKG_OPTIONS_OPTIONAL_GROUPS=	database
-PKG_OPTIONS_GROUP.database=	mysql pgsql
-PKG_SUGGESTED_OPTIONS=		wibble-foo
-PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
-PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
+    PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
+    PKG_SUPPORTED_OPTIONS=		wibble-foo ldap
+    PKG_OPTIONS_OPTIONAL_GROUPS=	database
+    PKG_OPTIONS_GROUP.database=	mysql pgsql
+    PKG_SUGGESTED_OPTIONS=		wibble-foo
+    PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
+    PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
 
-.include "../../mk/bsd.prefs.mk"
+    .include "../../mk/bsd.prefs.mk"
 
-# this package was previously named wibble2
-.if defined(PKG_OPTIONS.wibble2)
-PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
-.endif
+    # this package was previously named wibble2
+    .if defined(PKG_OPTIONS.wibble2)
+    PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
+    PKG_OPTIONS_DEPRECATED_WARNINGS+= \
+            "Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+    .endif
 
-.include "../../mk/bsd.options.mk"
+    .include "../../mk/bsd.options.mk"
 
-# Package-specific option-handling
+    # Package-specific option-handling
 
-###
-### FOO support
-###
-.if !empty(PKG_OPTIONS:Mwibble-foo)
-CONFIGURE_ARGS+=	--enable-foo
-.endif
+    ###
+    ### FOO support
+    ###
+    .if !empty(PKG_OPTIONS:Mwibble-foo)
+    CONFIGURE_ARGS+=	--enable-foo
+    .endif
 
-###
-### LDAP support
-###
-.if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-ldap=${BUILDLINK_PREFIX.openldap}
-.endif
+    ###
+    ### LDAP support
+    ###
+    .if !empty(PKG_OPTIONS:Mldap)
+    .  include "../../databases/openldap/buildlink3.mk"
+    CONFIGURE_ARGS+=	--enable-ldap=${BUILDLINK_PREFIX.openldap}
+    .endif
 
-###
-### database support
-###
-.if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../mk/mysql.buildlink3.mk"
-.endif
-.if !empty(PKG_OPTIONS:Mpgsql)
-.  include "../../mk/pgsql.buildlink3.mk"
-.endif
+    ###
+    ### database support
+    ###
+    .if !empty(PKG_OPTIONS:Mmysql)
+    .  include "../../mk/mysql.buildlink3.mk"
+    .endif
+    .if !empty(PKG_OPTIONS:Mpgsql)
+    .  include "../../mk/pgsql.buildlink3.mk"
+    .endif
 </programlisting>
 
 <para>The first section contains the information about which build
@@ -175,7 +176,9 @@ options.</para>
 each option.  The correct way to check for an option is to check
 whether it is listed in <varname>PKG_OPTIONS</varname>:</para>
 
-<programlisting>.if !empty(PKG_OPTIONS:M<replaceable>option</replaceable>)</programlisting>
+<programlisting>
+    .if !empty(PKG_OPTIONS:M<replaceable>option</replaceable>)
+</programlisting>
 
 </sect1>
 
