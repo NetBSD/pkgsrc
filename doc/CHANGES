@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11635 2005/10/23 22:59:18 rillig Exp $
+$NetBSD: CHANGES,v 1.11636 2005/10/23 23:02:37 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4805,3 +4805,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added wm/wmii version 20051017 [minskim 2005-10-23]
 	Updated www/squid to 2.5.12 [taca 2005-10-23]
 	Updated games/xbill to 2.0nb2 [rillig 2005-10-23]
+	Updated x11/xdaemon to 1.0nb1 [rillig 2005-10-23]
