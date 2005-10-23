@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.15 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.16 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -72,14 +72,16 @@
 	  As used in this example, <varname>_ACCEPTABLE=yes</varname>
 	  accepts <emphasis>all</emphasis> licenses.</para>
 
-        <programlisting>PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
-WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
-BSDSRCDIR=      /usr/src
-BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
-OBJHOSTNAME?=   yes               # use work.`hostname`
-FAILOVER_FETCH= yes               # insist on the correct checksum
-PKG_DEVELOPER?= yes
-_ACCEPTABLE=    yes</programlisting>
+<programlisting>
+    PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
+    WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
+    BSDSRCDIR=      /usr/src
+    BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
+    OBJHOSTNAME?=   yes               # use work.`hostname`
+    FAILOVER_FETCH= yes               # insist on the correct checksum
+    PKG_DEVELOPER?= yes
+    _ACCEPTABLE=    yes
+</programlisting>
       </sect3>
 
       <sect3 id="build.conf">
@@ -131,10 +133,12 @@ _ACCEPTABLE=    yes</programlisting>
 	version of ssh for some reason, be sure to install ssh before
 	starting it from <filename>rc.local</filename>:</para>
 
-      <programlisting>( cd /usr/pkgsrc/security/ssh ; make bulk-install )
-if [ -f /usr/pkg/etc/rc.d/sshd ]; then
-    /usr/pkg/etc/rc.d/sshd
-fi</programlisting>
+<programlisting>
+    ( cd /usr/pkgsrc/security/ssh ; make bulk-install )
+    if [ -f /usr/pkg/etc/rc.d/sshd ]; then
+        /usr/pkg/etc/rc.d/sshd
+    fi
+</programlisting>
 
       <para>Not doing so will result in you being not able to log in
 	via ssh after the bulk build is finished or if the machine

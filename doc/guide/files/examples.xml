@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.7 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.8 2005/10/23 11:25:58 rillig Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -15,39 +15,45 @@
     <sect2 id="example-Makefile">
       <title>Makefile</title>
 
-      <programlisting># &#36;NetBSD&#36;
-#
+<programlisting>
+    # &#36;NetBSD&#36;
+    #
 
-DISTNAME=       bison-1.25
-CATEGORIES=     devel
-MASTER_SITES=   ${MASTER_SITE_GNU}
+    DISTNAME=       bison-1.25
+    CATEGORIES=     devel
+    MASTER_SITES=   ${MASTER_SITE_GNU}
 
-MAINTAINER=     thorpej@NetBSD.org
-HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
-COMMENT=        GNU yacc clone
+    MAINTAINER=     thorpej@NetBSD.org
+    HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+    COMMENT=        GNU yacc clone
 
-GNU_CONFIGURE=  yes
-INFO_FILES=     bison.info
+    GNU_CONFIGURE=  yes
+    INFO_FILES=     bison.info
 
-.include "../../mk/bsd.pkg.mk"</programlisting>
+    .include "../../mk/bsd.pkg.mk"
+</programlisting>
     </sect2>
 
     <sect2 id="example-descr">
       <title>DESCR</title>
 
-      <programlisting>GNU version of yacc.  Can make re-entrant parsers, and numerous other
-improvements.  Why you would want this when Berkeley &man.yacc.1; is part
-of the &os; source tree is beyond me.</programlisting>
+<programlisting>
+    GNU version of yacc.  Can make re-entrant parsers, and numerous other
+    improvements.  Why you would want this when Berkeley &man.yacc.1; is part
+    of the &os; source tree is beyond me.
+</programlisting>
     </sect2>
 
     <sect2 id="example-plist">
       <title>PLIST</title>
 
-      <programlisting>@comment &#36;NetBSD&#36;
-bin/bison
-man/man1/bison.1.gz
-share/bison.simple
-share/bison.hairy</programlisting>
+<programlisting>
+    @comment &#36;NetBSD&#36;
+    bin/bison
+    man/man1/bison.1.gz
+    share/bison.simple
+    share/bison.hairy
+</programlisting>
     </sect2>
 
     <sect2 id="checking-package-with-pkglint">

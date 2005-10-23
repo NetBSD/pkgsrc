@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.10 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.11 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -104,15 +104,19 @@
 	<para>The following lines are taken from
 	  <filename>pkgsrc/wm/scwm/Makefile</filename>:</para>
 
-        <programlisting>EVAL_PREFIX+=           GTKDIR=gtk+
-CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
-                        --with-gtk-prefix="${GTKDIR}"           \
-                        --enable-multibyte</programlisting>
+<programlisting>
+    EVAL_PREFIX+=           GTKDIR=gtk+
+    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
+                            --with-gtk-prefix="${GTKDIR}"           \
+                            --enable-multibyte
+</programlisting>
 
 	<para>Specific defaults can be defined for the packages evaluated using
 	  <varname>EVAL_PREFIX</varname>, by using a definition of the form:</para>
 
-        <programlisting>GTKDIR_DEFAULT= ${LOCALBASE}</programlisting>
+<programlisting>
+    GTKDIR_DEFAULT= ${LOCALBASE}
+</programlisting>
 
 	<para>where <varname>GTKDIR</varname> corresponds
 	  to the first definition in
@@ -146,7 +150,9 @@ CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
 	    are not present, an attempt will be made to fetch them using commands
 	    of the form:</para>
 
-          <programlisting>${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}</programlisting>
+<programlisting>
+    ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+</programlisting>
 
 	  <para>where ${site} varies through several possibilities in turn: first,
 	    <varname>MASTER_SITE_OVERRIDE</varname> is tried, then the sites
@@ -208,10 +214,12 @@ CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
 	    for a program that comes with a compressed shell archive
 	    whose name ends in <filename>.msg.gz</filename>:</para>
 
-          <programlisting>     EXTRACT_SUFX=   .msg.gz
-     EXTRACT_CMD=            zcat
-     EXTRACT_BEFORE_ARGS=
-     EXTRACT_AFTER_ARGS=     |sh</programlisting>
+<programlisting>
+    EXTRACT_SUFX=           .msg.gz
+    EXTRACT_CMD=            zcat
+    EXTRACT_BEFORE_ARGS=
+    EXTRACT_AFTER_ARGS=     |sh
+</programlisting>
 	</listitem>
       </varlistentry>
 
@@ -261,9 +269,11 @@ CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
 	    default <quote>configure</quote>. Here's an example from
 	    the <filename role="pkg">sysutils/top</filename> package:</para>
 
-          <programlisting>HAS_CONFIGURE=          yes
-CONFIGURE_SCRIPT=       Configure
-CONFIGURE_ARGS+=        netbsd13</programlisting>
+<programlisting>
+    HAS_CONFIGURE=          yes
+    CONFIGURE_SCRIPT=       Configure
+    CONFIGURE_ARGS+=        netbsd13
+</programlisting>
 
 	  <para>If the program uses an Imakefile for configuration, the appropriate
 	    steps can be invoked by setting <varname>USE_IMAKE</varname> to
@@ -310,13 +320,14 @@ CONFIGURE_ARGS+=        netbsd13</programlisting>
       If a subsequent stage is requested, all prior stages are made: e.g.
       <command>make build</command> will also perform the equivalent of:</para>
 
-    <programlisting>
-make fetch
-make checksum
-make extract
-make patch
-make configure
-make build</programlisting>
+<programlisting>
+    make fetch
+    make checksum
+    make extract
+    make patch
+    make configure
+    make build
+</programlisting>
   </sect1>
 
   <sect1 id="build.helpful-targets">

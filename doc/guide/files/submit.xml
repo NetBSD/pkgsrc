@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.7 2005/06/08 23:03:49 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.8 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -93,8 +93,8 @@ packages here:
 </para>
 
 <programlisting>
-  % cd .../pkgsrc/category/pkgname
-  % cvs import pkgsrc/category/pkgname TNF pkgsrc-base
+    &uprompt; cd .../pkgsrc/category/pkgname
+    &uprompt; cvs import pkgsrc/category/pkgname TNF pkgsrc-base
 </programlisting>
 
 <para>

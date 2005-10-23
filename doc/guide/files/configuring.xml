@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.6 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.7 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -150,19 +150,19 @@
       options are mutually exclusive, run <command>make show-options</command>,
       for example:</para>
 
-    <programlisting>
-      The following options are supported by this package:
-      ssl      Enable SSL support.
-      Exactly one of the following gecko options is required:
-      firefox  Use firefox as gecko rendering engine.
-      mozilla  Use mozilla as gecko rendering engine.
-      At most one of the following database options may be selected:
-      mysql    Enable support for MySQL database.
-      pgsql    Enable support for PostgreSQL database.
+<programlisting>
+    The following options are supported by this package:
+    ssl      Enable SSL support.
+    Exactly one of the following gecko options is required:
+    firefox  Use firefox as gecko rendering engine.
+    mozilla  Use mozilla as gecko rendering engine.
+    At most one of the following database options may be selected:
+    mysql    Enable support for MySQL database.
+    pgsql    Enable support for PostgreSQL database.
 
-      These options are enabled by default: firefox
-      These options are currently enabled: mozilla ssl
-    </programlisting>
+    These options are enabled by default: firefox
+    These options are currently enabled: mozilla ssl
+</programlisting>
 
     <para>The following variables can be defined in
       <filename>/etc/mk.conf</filename> to select which options to enable

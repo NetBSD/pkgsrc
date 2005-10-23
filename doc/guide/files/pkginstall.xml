@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.6 2005/09/02 19:12:37 rillig Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.7 2005/10/23 11:25:58 rillig Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -36,7 +36,9 @@
 Note that in order to use any of the described functionalities, you must
 add the following to your package's <filename>Makefile</filename>:</para>
 
-<programlisting>USE_PKGINSTALL=YES</programlisting>
+<programlisting>
+    USE_PKGINSTALL= YES
+</programlisting>
 
 <para>You may be thinking that many of the things described here could be
 easily done with simple code in the package's post-installation target
@@ -97,7 +99,9 @@ directories anywhere in the file system:</para>
     separated by spaces: the directory name, its owner, its group and its
     numerical mode.  For example:</para>
 
-    <programlisting>MAKE_DIRS_PERMS+= ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700</programlisting>
+<programlisting>
+    MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+</programlisting>
 
     <para>The difference between the two is exactly the same as their
     non-<varname>PERMS</varname> counterparts.</para>
@@ -145,7 +149,9 @@ installation prefix:</para>
     specifies their owner, their group and their numeric permissions, in
     this order.  For example:</para>
 
-    <programlisting>SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700</programlisting>
+<programlisting>
+    SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+</programlisting>
 
     <para>The difference between the two is exactly the same as their
     non-<varname>PERMS</varname> counterparts.</para>
@@ -267,7 +273,9 @@ achieve it.  If you are lucky, though, it may be as easy as passing an
 extra flag to the configuration script; this is the case of GNU Autoconf-
 generated files:</para>
 
-<programlisting>CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}</programlisting>
+<programlisting>
+    CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+</programlisting>
 
 <para>Note that this specifies where the package has to <emphasis>look
 for</emphasis> its configuration files, not where they will be originally
@@ -303,8 +311,10 @@ used.  Check out <xref linkend="files-outside-prefix" /> for information
 about their syntax and their purpose.  Here is an example, taken from the
 <filename role="pkg">mail/mutt</filename> package:</para>
 
-<programlisting>EGDIR=        ${PREFIX}/share/doc/mutt/samples
-CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc</programlisting>
+<programlisting>
+    EGDIR=        ${PREFIX}/share/doc/mutt/samples
+    CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+</programlisting>
 
 <para>Note that the <varname>EGDIR</varname> variable is specific to that
 package and has no meaning outside it.</para>
@@ -355,7 +365,9 @@ to:</para>
     without its extension, to the <varname>RCD_SCRIPTS</varname> variable.
     Continuing the previous example:</para>
 
-    <programlisting>RCD_SCRIPTS+= cupsd</programlisting>
+<programlisting>
+    RCD_SCRIPTS+=   cupsd
+</programlisting>
   </listitem>
 
 </orderedlist>
@@ -418,7 +430,9 @@ installation, it can do so by using the pkginstall framework.</para>
 <varname>PKG_USERS</varname> variable.  Each entry has the following
 syntax, which mimics <filename>/etc/passwd</filename>:</para>
 
-<programlisting>user:group[:[userid][:[descr][:[home][:shell]]]]</programlisting>
+<programlisting>
+    user:group[:[userid][:[descr][:[home][:shell]]]]
+</programlisting>
 
 <para>Only the user and group are required; everything else is optional,
 but the colons must be in the right places when specifying optional bits.
@@ -426,14 +440,18 @@ By default, a new user will have home directory
 <filename>/nonexistent</filename>, and login shell
 <filename>/sbin/nologin</filename> unless they are specified as part of the
 user element.  Note that if the description contains spaces, then spaces
-should be double backslash-escaped, as in:</para>
+should be backslash-escaped, as in:</para>
 
-<programlisting>foo:foogrp::The\\ Foomister</programlisting>
+<programlisting>
+    foo:foogrp::The\ Foomister
+</programlisting>
 
 <para>Similarly, groups can be created using the
 <varname>PKG_GROUPS</varname> variable, whose syntax is:</para>
 
-<programlisting>group[:groupid]</programlisting>
+<programlisting>
+    group[:groupid]
+</programlisting>
 
 <para>As before, only the group name is required; the numeric identifier is
 optional.</para>
@@ -456,8 +474,10 @@ accomplish this task.</para>
 add some hooks to the installation scripts to handle it.  Consider the
 following example, taken from <filename role="pkg">shells/zsh</filename>:</para>
 
-<programlisting>USE_PKGINSTALL= YES
-PKG_SHELL=      ${PREFIX}/bin/zsh</programlisting>
+<programlisting>
+    USE_PKGINSTALL= YES
+    PKG_SHELL=      ${PREFIX}/bin/zsh
+</programlisting>
 
 <!-- ================================================================== -->
 
