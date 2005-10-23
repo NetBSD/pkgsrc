@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:29 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/23 21:54:35 rillig Exp $
 #
 
 DISTNAME=	dfdisk-1.0
@@ -31,10 +31,9 @@ INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 .for f in dfdisk.sh dfdisk.1 dfdisk.conf
-	@${ECHO} "Generating $f..."
-	@${SED} ${FILES_SUBST_SED} < ${FILESDIR}/$f > ${WRKDIR}/$f
+	@${ECHO} "Generating ${f}..."
+	@${SED} ${FILES_SUBST_SED} < ${FILESDIR}/${f} > ${WRKDIR}/${f}
 .endfor
-.undef f
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/dfdisk.sh ${PREFIX}/bin/dfdisk
