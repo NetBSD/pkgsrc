@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.30 2005/09/14 16:46:13 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.31 2005/10/23 00:41:54 hubertf Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -790,6 +790,18 @@ pre-configure:
       <para>Please use the <quote>__NetBSD__</quote> definition sparingly - it
         should only apply to features of &os; that are not present in other
         4.4-lite-derived BSDs.</para>
+    </sect2>
+
+    <sect2 id="cpp-list">
+      <title>Getting a list of CPP defines</title>
+
+      <para>
+	When your system uses the GNU C Compiler, you can get a list
+	of symbols that are defined by default, e.g. to identify 
+	the platform, with the following command:
+      </para>
+
+      <programlisting> gcc -E -dM - < /dev/null </programlisting>
     </sect2>
   </sect1>
   
