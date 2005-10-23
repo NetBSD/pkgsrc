@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/06 13:07:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/10/23 16:03:10 rillig Exp $
 bin/ccmake
 bin/cmake
 bin/ctest
@@ -26,8 +26,8 @@ share/CMake/Modules/CMakeSystem.cmake.in
 share/CMake/Modules/CMakeSystemSpecificInformation.cmake
 share/CMake/Modules/CMakeTestCCompiler.cmake
 share/CMake/Modules/CMakeTestCXXCompiler.cmake
-share/CMake/Modules/CMakeTestGNU.c
 share/CMake/Modules/CMakeTestForFreeVC.cxx
+share/CMake/Modules/CMakeTestGNU.c
 share/CMake/Modules/CMakeTestNMakeCLVersion.c
 share/CMake/Modules/CMakeUnixFindMake.cmake
 share/CMake/Modules/CMakeVS6BackwardCompatibility.cmake
