@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/04 05:00:36 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/23 21:59:59 rillig Exp $
 #
 
 DISTNAME=	ion-3ds-20040906
@@ -35,9 +35,8 @@ EGFILES=		cfg_bindings.lua cfg_dock.lua cfg_floatws.lua	\
 			look_greyviolet.lua look_ios.lua		\
 			look_simpleblue.lua look_wheat2.lua
 .for f in ${EGFILES}
-CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-.undef f
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
@@ -48,4 +47,4 @@ CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 # and ion3's autoconf is rather broken in the way it auto-configures
 # itself for gettext.  Eventually ion3 should be fixed, but right now
 # it is not really possible.
-LIBS=
+LIBS=			# none
