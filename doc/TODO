@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4085 2005/10/23 20:24:55 heinz Exp $
+$NetBSD: TODO,v 1.4086 2005/10/24 08:43:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -700,7 +700,6 @@ Suggested package updates
 	o libstatgrab-0.12
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.20
-	o libtorrent-0.7.5
 	o libwpd-0.8.3
 	o licq-core-1.3.0
 	o lilypond-2.6.3
@@ -1130,7 +1129,6 @@ Suggested package updates
 	o rt-pgsql-3.4.1
 	o rt3-3.4.4
 	o rtcw-1.41.3
-	o rtorrent-0.3.5
 	o ruby-1.8.3 [taca]
 	o ruby-base-1.8.3
 	o ruby-clearsilver-0.10.1
