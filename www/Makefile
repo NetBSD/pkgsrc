@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.414 2005/10/16 05:03:30 minskim Exp $
+# $NetBSD: Makefile,v 1.415 2005/10/24 02:27:47 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -353,6 +353,7 @@ SUBDIR+=	zope25-ZWiki
 SUBDIR+=	zope25-Zippy
 SUBDIR+=	zope25-colorz
 SUBDIR+=	zope25-zopebook
+SUBDIR+=	zope3
 SUBDIR+=	zopeedit
 
 .include "../mk/bsd.pkg.subdir.mk"
