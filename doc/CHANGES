@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11640 2005/10/24 02:27:47 minskim Exp $
+$NetBSD: CHANGES,v 1.11641 2005/10/24 08:43:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4810,3 +4810,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/xteddy2 to 2.0.1nb7 [rillig 2005-10-23]
 	Updated pkgtools/pkglint to 4.29.1 [rillig 2005-10-23]
 	Added www/zope3 version 3.1.0 [minskim 2005-10-24]
+	Updated net/libtorrent to 0.7.5 [adam 2005-10-24]
+	Updated net/rtorrent to 0.3.5 [adam 2005-10-24]
