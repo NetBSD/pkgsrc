@@ -297,6 +297,7 @@ xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xmlimportbugs	
 xmms-eq	
+xrender			Enable Xrender support.
 xterm-256color		Enable 256 color support.
 xterm-88color		Enable 88 color support.
 xterm-luit		Enable locale <> UTF encoding translation.
