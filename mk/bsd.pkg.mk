@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1734 2005/10/24 18:28:42 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1735 2005/10/24 23:23:00 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3519,7 +3519,7 @@ real-su-bin-install:
 		for site in ${BINPKG_SITES} ; do 			\
 			${ECHO} Trying `eval ${ECHO} $$site`/All ; 	\
 			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
-			if ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
+			if ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
 				${ECHO} "${PKGNAME} successfully installed."; \
 				break ; 				\
 			fi ; 						\
