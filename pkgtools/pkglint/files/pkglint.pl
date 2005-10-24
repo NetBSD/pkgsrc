@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.304 2005/10/24 19:56:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.305 2005/10/24 20:37:57 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -961,46 +961,45 @@ sub checkfile_PLIST($$) {
 			} else {
 				$line->log_warning("Unknown PLIST directive \"\@$cmd\"");
 			}
-			next line;
-		}
 
-		if ($text =~ /^\//) {
-			$line->log_error("Use of full pathname disallowed.");
-		}
-
-		if ($opt_warn_plist_sort && $text =~ qr"^\w" && $text !~ $regex_unresolved) {
-			if (defined($last_file_seen)) {
-				if ($last_file_seen gt $text) {
-					$line->log_warning("${text} should be sorted before ${last_file_seen}.");
+		} elsif ($text =~ qr"^[A-Za-z0-9\$]") {
+			if ($opt_warn_plist_sort && $text =~ qr"^\w" && $text !~ $regex_unresolved) {
+				if (defined($last_file_seen)) {
+					if ($last_file_seen gt $text) {
+						$line->log_warning("${text} should be sorted before ${last_file_seen}.");
+					}
 				}
+				$last_file_seen = $text;
 			}
-			$last_file_seen = $text;
-		}
 
-		if ($text =~ qr"^doc/") {
-			$line->log_error("Documentation must be installed under share/doc, not doc.");
+			if ($text =~ qr"^doc/") {
+				$line->log_error("Documentation must be installed under share/doc, not doc.");
 
-		} elsif ($text =~ qr"^etc/rc\.d/") {
-			$line->log_error("RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.");
+			} elsif ($text =~ qr"^etc/rc\.d/") {
+				$line->log_error("RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.");
 
-		} elsif ($text =~ qr"^etc/") {
-			$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/install/bsd.pkginstall.mk.");
+			} elsif ($text =~ qr"^etc/") {
+				$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/install/bsd.pkginstall.mk.");
 
-		} elsif ($text eq "info/dir") {
-			$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
+			} elsif ($text eq "info/dir") {
+				$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
 
-		} elsif ($text =~ qr"^lib/locale/") {
-			$line->log_error("\"lib/locale\" must not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+			} elsif ($text =~ qr"^lib/locale/") {
+				$line->log_error("\"lib/locale\" must not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 
-		} elsif ($text =~ qr"^share/locale/") {
-			$line->log_warning("Use of \"share/locale\" is deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+			} elsif ($text =~ qr"^share/locale/") {
+				$line->log_warning("Use of \"share/locale\" is deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 
-		} elsif ($text =~ qr"^share/man/") {
-			$line->log_warning("Man pages should be installed into man/, not share/man/.");
-		}
+			} elsif ($text =~ qr"^share/man/") {
+				$line->log_warning("Man pages should be installed into man/, not share/man/.");
+			}
 
-		if ($text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
-			$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
+			if ($text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
+				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
+			}
+
+		} else {
+			$line->log_error("Unknown line type.");
 		}
 	}
 	checklines_trailing_empty_lines($plist);
