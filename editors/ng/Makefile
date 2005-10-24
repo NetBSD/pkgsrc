@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/06/16 06:57:49 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/24 19:48:24 rillig Exp $
 
 DISTNAME=	ng-1.4.3
+PKGREVISION=	1
 CATEGORIES=     editors japanese
 MASTER_SITES=   http://tt.sakura.ne.jp/~amura/archives/ng/
 
@@ -10,18 +11,19 @@ COMMENT=	Very light Emacs-clone with japanese support
 
 WRKSRC=         ${WRKDIR}/ng
 
-.include "../../mk/bsd.prefs.mk"	# for USE_CANNA
+PKG_SUPPORTED_OPTIONS=	canna
+PKG_SUGGESTED_OPTIONS=	canna
+PKG_OPTIONS_VAR=	PKG_OPTIONS.ng
+PKG_OPTIONS_LEGACY_VARS=	USE_CANNA:canna
 
-.if !defined(USE_CANNA)
-USE_CANNA=	YES
-.endif
+.include "../../mk/bsd.options.mk"
 
-.if ${USE_CANNA} == "YES"
+.if !empty(PKG_OPTIONS:Mcanna)
 .include "../../inputmethod/canna-lib/buildlink3.mk"
+MAKEFLAGS+=	USE_CANNA=YES
 .endif
 
 BUILD_TARGET=	ng
-MAKEFLAGS+=	USE_CANNA=${USE_CANNA}
 
 INSTALLATION_DIRS=	bin
 
