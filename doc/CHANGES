@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11647 2005/10/24 19:47:39 minskim Exp $
+$NetBSD: CHANGES,v 1.11648 2005/10/24 19:49:16 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4825,3 +4825,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/entropy to 0.9.1.439 [tv 2005-10-24]
 	Updated multimedia/mplayer to 1.0rc7nb4 [minskim 2005-10-24]
 	Updated multimedia/gmplayer to 1.0rc7nb2 [minskim 2005-10-24]
+	Updated editors/ng to 1.4.3nb1 [rillig 2005-10-24]
