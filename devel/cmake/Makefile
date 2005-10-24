@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:07:49 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/24 15:15:25 rillig Exp $
 
 DISTNAME=	cmake-2.0.5
 CATEGORIES=	devel
@@ -12,6 +12,8 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_NCURSES=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_HAS_MANDIR=	no
+CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 BUILD_TARGET=		default_target
 
 post-patch:
