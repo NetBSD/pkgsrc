@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/10/07 19:41:07 perry Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 20:39:55 rillig Exp $
 bin/pymol
 ${PYSITELIB}/chempy/__init__.py
 ${PYSITELIB}/chempy/__init__.pyc
@@ -190,7 +190,6 @@ ${PYSITELIB}/pmg_tk/startup/__init__.pyo
 ${PYSITELIB}/pmg_tk/startup/apbs_tools.py
 ${PYSITELIB}/pmg_tk/startup/apbs_tools.pyc
 ${PYSITELIB}/pmg_tk/startup/apbs_tools.pyo
-
 ${PYSITELIB}/pmg_tk/startup/remote_pdb_load.py
 ${PYSITELIB}/pmg_tk/startup/remote_pdb_load.pyc
 ${PYSITELIB}/pmg_tk/startup/remote_pdb_load.pyo
