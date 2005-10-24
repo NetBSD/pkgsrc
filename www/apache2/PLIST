@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30.4.1 2005/10/18 21:21:27 seb Exp $
+@comment $NetBSD: PLIST,v 1.30.4.2 2005/10/24 00:25:22 seb Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -55,6 +55,7 @@ lib/httpd/httpd.exp
 libexec/cgi-bin/printenv
 libexec/cgi-bin/test-cgi
 man/man1/dbmmanage.1
+man/man1/htdbm.1
 man/man1/htdigest.1
 man/man1/htpasswd.1
 man/man8/ab.8
