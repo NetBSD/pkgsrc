@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/21 17:31:58 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/24 16:22:26 rillig Exp $
 
 DISTNAME=	gimp-2.3.4
 CATEGORIES=	graphics
@@ -21,6 +21,7 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
+USE_MSGFMT_PLURALS=	yes
 
 PKG_SYSCONFSUBDIR=	gimp/2.0
 
