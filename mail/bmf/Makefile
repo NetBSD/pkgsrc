@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:56:43 martti Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/24 23:07:49 rillig Exp $
 #
 
 DISTNAME=	bmf-0.9.4
 CATEGORIES=	mail
-MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=bmf/)
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bmf/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/bmf/
