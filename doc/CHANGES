@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11642 2005/10/24 08:46:06 dogcow Exp $
+$NetBSD: CHANGES,v 1.11643 2005/10/24 08:52:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4813,3 +4813,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/libtorrent to 0.7.5 [adam 2005-10-24]
 	Updated net/rtorrent to 0.3.5 [adam 2005-10-24]
 	Updated devel/gputils to 0.13.3 [dogcow 2005-10-24]
+	Updated graphics/gimp-docs to 2.0.9 [adam 2005-10-24]
