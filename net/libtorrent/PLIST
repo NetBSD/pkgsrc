@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/22 22:24:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/24 08:41:11 adam Exp $
 include/torrent/bencode.h
 include/torrent/common.h
 include/torrent/download.h
 include/torrent/entry.h
+include/torrent/event.h
 include/torrent/exceptions.h
 include/torrent/http.h
 include/torrent/peer.h
+include/torrent/poll.h
+include/torrent/poll_epoll.h
+include/torrent/poll_select.h
 include/torrent/rate.h
 include/torrent/torrent.h
 include/torrent/tracker.h
