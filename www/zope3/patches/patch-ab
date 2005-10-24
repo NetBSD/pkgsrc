@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/10/24 02:25:29 minskim Exp $
+
+--- Dependencies/ZConfig-Zope-3.1.0/ZConfig/scripts/zconfig_schema2html.orig	2005-10-03 03:48:10.000000000 +0900
++++ Dependencies/ZConfig-Zope-3.1.0/ZConfig/scripts/zconfig_schema2html
+@@ -17,2 +17,15 @@
+ 
++if __name__ == "__main__":
++    # Add the zope3 library directory to the module search path
++    import os
++    import sys
++    here = os.path.dirname(os.path.realpath(__file__))
++    swhome = os.path.dirname(here)
++    for parts in [("src",), ("lib", "python"), ("Lib", "site-packages")]:
++        d = os.path.join(swhome, *(parts + ("ZConfig",)))
++        if os.path.isdir(d):
++            d = os.path.join(swhome, *parts)
++            sys.path.insert(0, d)
++            break
++
+ import ZConfig.loader
