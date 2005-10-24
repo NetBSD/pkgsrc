@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/08/17 15:31:52 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/24 17:01:43 tv Exp $
 #
 
 DISTNAME=		entropy_rsa-${ENTROPY_VERSION}
@@ -15,7 +15,7 @@ COMMENT=		Anonymous peer-to-peer networking node (similar to Freenet)
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-ENTROPY_VERSION=	0.9.1-438
+ENTROPY_VERSION=	0.9.1-439
 
 CONFIGURE_ARGS+=	--enable-setproctitle --enable-verbose --disable-posix-sem
 LIBS+=			-L${BUILDLINK_PREFIX.zlib}/lib -lz -L${BUILDLINK_PREFIX.expat}/lib -lexpat
