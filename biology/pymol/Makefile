@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2005/10/07 19:41:07 perry Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/24 20:39:55 rillig Exp $
 
 DISTNAME=	pymol-0_98-src
 PKGNAME=	pymol-0.98
-WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ COMMENT=	Molecular Visualization System
 
 PYTHON_VERSIONS_ACCEPTED= 23 24
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 PYSETUP=	setup.py
