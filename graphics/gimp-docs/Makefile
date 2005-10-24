@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/05/23 08:23:34 adam Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/24 08:51:16 adam Exp $
 
-DISTNAME=	gimp-help-2-0.8
-PKGNAME=	gimp-docs-2.0.8
+DISTNAME=	gimp-help-2-0.9
+PKGNAME=	gimp-docs-2.0.9
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/help/testing/
 
