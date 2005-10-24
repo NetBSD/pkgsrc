@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.305 2005/10/24 20:37:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.306 2005/10/24 23:54:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -412,7 +412,7 @@ my $regex_unresolved	= qr"\$\{";
 my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 my $regex_validchars	= qr"[\011\040-\176]";
-my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*(.*?)$";
+my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
 # Global variables
 my $pkgdir;
@@ -429,7 +429,6 @@ sub readmakefile($$$$);
 sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
-sub check_predefined_sites($$);
 
 sub help($$$) {
 	my ($out, $exitval, $show_all) = @_;
@@ -586,9 +585,14 @@ sub load_make_vars_typemap() {
 	return $vartypes;
 }
 
-sub load_predefined_sites($) {
-	my ($pkgsrc_rootdir) = @_;
-	my ($fname) = ("$pkgsrc_rootdir/mk/bsd.sites.mk");
+my $load_predefined_sites_result = undef;
+sub load_predefined_sites() {
+
+	if (defined($load_predefined_sites_result)) {
+		return $load_predefined_sites_result;
+	}
+
+	my ($fname) = ("${conf_pkgsrcdir}/mk/bsd.sites.mk");
 	my ($lines) = load_file($fname);
 	my ($varname) = undef;
 	my ($ignoring) = false;
@@ -628,6 +632,7 @@ sub load_predefined_sites($) {
 		}
 	}
 	log_info($fname, NO_LINE_NUMBER, sprintf("Loaded %d MASTER_SITE_* definitions.", scalar(keys(%{$predefined_sites}))));
+	$load_predefined_sites_result = $predefined_sites;
 	return $predefined_sites;
 }
 
@@ -1263,10 +1268,74 @@ sub get_regex_plurals() {
 	return $get_regex_plurals_value;
 }
 
+sub checktext_basic_vartype($$$$$) {
+	my ($line, $varname, $type, $value, $comment) = @_;
+
+	if ($type eq "Boolean") {
+		if ($value !~ qr"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
+			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
+		}
+
+	} elsif ($type eq "Dependency") {
+		if ($value =~ $regex_unresolved) {
+			# don't even try to check anything
+		} elsif ($value =~ qr":\.\./\.\./") {
+			# great.
+		} elsif ($value =~ qr":\.\./") {
+			$line->log_warning("Dependencies should have the form \"../../category/package\".");
+		} else {
+			$line->log_warning("Unknown dependency format.");
+		}
+
+	} elsif ($type eq "Integer") {
+		if ($value !~ qr"^\d+$") {
+			$line->log_warning("\"${value}\" is not a valid Integer.");
+		}
+
+	} elsif ($type eq "Mail_Address") {
+		if ($value !~ $regex_mail_address) {
+			$line->log_warning("\"${value}\" is not a valid mail address.");
+		}
+
+	} elsif ($type eq "Readonly") {
+		$line->log_error("\"${varname}\" must not be modified by the package or the user.");
+
+	} elsif ($type eq "URL") {
+		if ($value =~ $regex_unresolved) {
+			# No further checks
+			
+		} elsif ($value =~ $regex_url) {
+			my $sites = load_predefined_sites();
+
+			foreach my $site (keys(%{$sites})) {
+				if (index($value, $site) == 0) {
+					my $subdir = substr($value, length($site));
+					$line->log_warning(sprintf("Please use \${%s:=%s} instead of \"%s\".", $sites->{$site}, $subdir, $value));
+					last;
+				}
+			}
+
+		} elsif ($value eq "" && defined($comment) && $comment =~ qr"^#") {
+			# Ok
+
+		} else {
+			$line->log_warning("\"${value}\" is not a valid URL.");
+		}
+
+	} elsif ($type eq "Yes_Or_Undefined") {
+		if ($value !~ qr"^(?:YES|yes)(?:\s+#.*)?$") {
+			$line->log_warning("${varname} should be set to YES or yes.");
+		}
+
+	} else {
+		$line->log_error("[internal] Type ${type} unknown.");
+	}
+}
+
 sub checkline_Makefile_vartype($$) {
 	my ($line, $vartypes) = @_;
 	if ($line->text =~ $regex_varassign) {
-		my ($varname, $op, $value) = ($1, $2, $3);
+		my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 		my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
 		my $type = exists($vartypes->{$varname}) ? $vartypes->{$varname}
 			: exists($vartypes->{$varbase}) ? $vartypes->{$varbase}
@@ -1283,61 +1352,22 @@ sub checkline_Makefile_vartype($$) {
 		if (!defined($type)) {
 			$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}");
 
-		} elsif ($type eq "Readonly") {
-			$line->log_error("\"${varname}\" must not be modified by the package or the user.");
-
-		} elsif ($type eq "Boolean") {
-			if ($value !~ qr"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
-				$line->log_warning("$varname should be set to YES, yes, NO, or no.");
-			}
-
-		} elsif ($type eq "Yes_Or_Undefined") {
-			if ($value !~ qr"^(?:YES|yes)(?:\s+#.*)?$") {
-				$line->log_warning("$varname should be set to YES or yes.");
-			}
-
-		} elsif ($type eq "Mail_Address") {
-			if ($value !~ $regex_mail_address) {
-				$line->log_warning("\"$value\" is not a valid mail address.");
-			}
-
-		} elsif ($type eq "URL") {
-			if ($value !~ $regex_unresolved && $value !~ $regex_url) {
-				$line->log_warning("\"$value\" is not a valid URL.");
-			}
-
-		} elsif ($type eq "Integer") {
-			if ($value !~ qr"^\d+$") {
-				$line->log_warning("\"$value\" is not a valid Integer.");
-			}
-
 		} elsif ($type =~ qr"^List(?: of (.*))?$") {
 			my ($element_type) = ($1);
+			my (@values) = split(qr"\s+", $value); # XXX: This may be too simple
 
-			if ($op ne "+=" && $value !~ qr"^#") {
+			if ($op ne "+=" && !($value eq "" && defined($comment) && $comment =~ qr"^#") && $varname ne "MASTER_SITES") {
 				$line->log_warning("${varname} should be modified using \"+=\".");
 			}
 
-			if (!defined($element_type)) {
-				# no further checks possible.
-
-			} elsif ($element_type eq "Dependency") {
-				if ($value =~ $regex_unresolved) {
-					# don't even try to check anything
-				} elsif ($value =~ qr":\.\./\.\./") {
-					# great.
-				} elsif ($value =~ qr":\.\./") {
-					$line->log_warning("Dependencies should have the form \"../../category/package\".");
-				} else {
-					$line->log_warning("Unknown dependency format.");
+			if (defined($element_type)) {
+				foreach my $v (@values) {
+					checktext_basic_vartype($line, $varname, $element_type, $v, $comment);
 				}
-
-			} else {
-				$line->log_error("[internal] Element-type ${element_type} unknown.");
 			}
 
 		} else {
-			$line->log_error("[internal] Type $type unknown.");
+			checktext_basic_vartype($line, $varname, $type, $value, $comment);
 		}
 	}
 }
@@ -1536,7 +1566,7 @@ sub checklines_package_Makefile($) {
 		}
 
 		if ($text =~ $regex_varassign) {
-			my ($varname, $op, $value) = ($1, $2, $3);
+			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 
 			if ($varname eq "COMMENT") {
 				if ($value =~ qr"^(a|an)\s+"i) {
@@ -1578,7 +1608,7 @@ sub checklines_package_Makefile($) {
 				}
 			}
 
-			if ($value eq "# defined" && $varname !~ qr".*(?:_MK|_COMMON)$") {
+			if (defined($comment) && $comment eq "# defined" && $varname !~ qr".*(?:_MK|_COMMON)$") {
 				$line->log_warning("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".");
 			}
 
@@ -1868,7 +1898,6 @@ sub checkfile_package_Makefile($$$$$) {
 					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" contains ".
 						"extra \":\".");
 				}
-				check_predefined_sites("$dir/../..", $i);
 			} else {
 				log_info(NO_FILE, NO_LINE_NUMBER, "non-URL \"$i\" ok.");
 			}
@@ -2176,7 +2205,7 @@ sub checkfile_package_Makefile($$$$$) {
 	}
 
 	checklines_package_Makefile($lines);
-	checklines_Makefile_varuse($lines);
+	checklines_Makefile_varuse($loglines);
 }
 
 sub checkextra($$) {
@@ -2258,31 +2287,6 @@ sub checkearlier($@) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\"$i\" has to appear earlier.");
 		}
 	}
-}
-
-my $predefined_sites_rootdir = undef;
-my $predefined_sites = undef;
-sub check_predefined_sites($$) {
-	my ($pkgsrc_rootdir, $url) = @_;
-
-	if (!defined($predefined_sites) || $predefined_sites_rootdir ne $pkgsrc_rootdir) {
-		my $sites = load_predefined_sites($pkgsrc_rootdir);
-		if ($sites != false) {
-			$predefined_sites = $sites;
-			$predefined_sites_rootdir = $pkgsrc_rootdir;
-		}
-	}
-	if (!defined($predefined_sites)) {
-		return false;
-	}
-
-	foreach my $site (keys(%{$predefined_sites})) {
-		next unless (index($url, $site) == 0);
-		my $subdir = substr($url, length($site));
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please use \${$predefined_sites->{$site}:=$subdir} instead of \"$url\".");
-		return;
-	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "URL does not match any of the predefined URLS. Good.");
 }
 
 sub checkdir_root($) {
@@ -2642,7 +2646,6 @@ sub checkdir($) {
 	my ($dir) = @_;
 
 	if (-f "${dir}/../../mk/bsd.pkg.mk") {
-		load_predefined_sites("${dir}/../..");
 		checkdir_package($dir);
 
 	} elsif (-f "${dir}/../mk/bsd.pkg.mk") {
