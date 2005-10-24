@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.21 2005/09/15 15:40:47 taca Exp $
+$NetBSD: patch-ag,v 1.21.2.1 2005/10/24 00:57:29 seb Exp $
 
---- configure.orig	2005-09-13 12:26:12.000000000 +0900
+--- configure.orig	2005-10-22 18:56:01.000000000 +0900
 +++ configure
-@@ -2241,7 +2241,7 @@ if test "${enable_snmp+set}" = set; then
+@@ -2249,7 +2238,7 @@ if test "${enable_snmp+set}" = set; then
  #define SQUID_SNMP 1
  EOF
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.21 2005/09/15 15:40:47 taca Exp $
      
  
  if true; then
-@@ -4062,6 +4062,7 @@ for ac_hdr in \
+@@ -4070,6 +4059,7 @@ for ac_hdr in \
  	libc.h \
  	limits.h \
  	linux/netfilter_ipv4.h \
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.21 2005/09/15 15:40:47 taca Exp $
  	malloc.h \
  	math.h \
  	memory.h \
-@@ -6309,43 +6310,38 @@ fi
+@@ -6317,47 +6307,45 @@ fi
  echo "$ac_t""$ac_cv_type_mode_t" 1>&6
  if test $ac_cv_type_mode_t = no; then
    cat >> confdefs.h <<\EOF
@@ -30,15 +30,18 @@ $NetBSD: patch-ag,v 1.21 2005/09/15 15:40:47 taca Exp $
  fi
  
 -echo $ac_n "checking for fd_mask""... $ac_c" 1>&6
--echo "configure:6301: checking for fd_mask" >&5
+-echo "configure:6327: checking for fd_mask" >&5
 -if eval "test \"`echo '$''{'ac_cv_type_fd_mask'+set}'`\" = set"; then
++
 +echo $ac_n "checking for fd_set""... $ac_c" 1>&6
-+echo "configure:6031: checking for fd_set" >&5
++echo "configure:6318: checking for fd_set" >&5
 +if eval "test \"`echo '$''{'ac_cv_have_fd_mask'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
++  
    cat > conftest.$ac_ext <<EOF
- #line 6306 "configure"
+-#line 6332 "configure"
++#line 6324 "configure"
  #include "confdefs.h"
  #include <sys/types.h>
 -#if STDC_HEADERS
@@ -53,15 +56,16 @@ $NetBSD: patch-ag,v 1.21 2005/09/15 15:40:47 taca Exp $
  EOF
 -if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
 -  egrep "(^|[^a-zA-Z_0-9])fd_mask[^a-zA-Z_0-9]" >/dev/null 2>&1; then
-+if { (eval echo configure:5983: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
++if { (eval echo configure:6333: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
    rm -rf conftest*
 -  ac_cv_type_fd_mask=yes
-+  ac_cv_have_fd_mask=yes
++  ac_cv_have_fd_mask="yes"
  else
 +  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
    rm -rf conftest*
 -  ac_cv_type_fd_mask=no
-+  ac_cv_have_fd_mask=no
++  ac_cv_have_fd_mask="no"
  fi
  rm -f conftest*
  
@@ -73,11 +77,16 @@ $NetBSD: patch-ag,v 1.21 2005/09/15 15:40:47 taca Exp $
 -EOF
 -
 -fi
+ 
 +echo "$ac_t""$ac_cv_have_fd_mask" 1>&6
  
- 
  echo $ac_n "checking size of off_t""... $ac_c" 1>&6
-@@ -7661,8 +7657,8 @@ if test "$GCC" = "yes"; then
+-echo "configure:6361: checking size of off_t" >&5
++echo "configure:6349: checking size of off_t" >&5
+ if eval "test \"`echo '$''{'ac_cv_sizeof_off_t'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+@@ -7669,8 +7657,8 @@ if test "$GCC" = "yes"; then
  	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
  	case "$GCCVER" in
  	2.95.[123])
