@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.302 2005/10/23 23:14:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.303 2005/10/24 18:20:40 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -746,7 +746,12 @@ sub checkline_trailing_whitespace($) {
 
 sub checkline_rcsid_regex($$$) {
 	my ($line, $prefix_regex, $prefix) = @_;
-	if ($line->text !~ qr"^${prefix_regex}\$($opt_rcsidstring)(?::[^\$]*|)\$$") {
+	my ($id) = ($opt_rcsidstring);
+
+	if (Cwd::abs_path($line->file) =~ qr"/wip/") {
+		$id .= "|Id";
+	}
+	if ($line->text !~ qr"^${prefix_regex}\$(${id})(?::[^\$]*|)\$$") {
 		$line->log_error("\"${prefix}\$${opt_rcsidstring}\$\" expected.");
 		return false;
 	}
