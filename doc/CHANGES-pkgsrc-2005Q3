@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.36 2005/10/23 09:49:29 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.37 2005/10/24 00:07:42 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -87,3 +87,5 @@ Pullup ticket 841 - requested by Frederick Bruckman
 security fix for www/lynx
 Pullup ticket 845 - requested by Matthias Scheler
 Fix possible build problem for www/apache2
+Pullup ticket 848 - requested by Adrian Portelli
+sync net/snort with HEAD, including a security update
