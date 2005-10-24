@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1733 2005/10/23 16:58:42 minskim Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1734 2005/10/24 18:28:42 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -2498,7 +2498,7 @@ check-shlibs:
 				${ECHO} "$$ldd $$i";			\
 			fi;						\
 			if [ "$$err" != "" ]; then			\
-				${ECHO} "$$i: $$err";			\
+				${ECHO} "$${i}: $$err";			\
 				error=1;				\
 			fi;						\
 		done;							\
@@ -3660,9 +3660,9 @@ install-depends: pre-install-depends
 				exit 1;					\
 			fi;						\
 		fi;							\
-		${ECHO_MSG} "${_PKGSRC_IN}> Required installed package $$pkg: $${found} found"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Required installed package $${pkg}: $${found} found"; \
 	else								\
-		${ECHO_MSG} "${_PKGSRC_IN}> Required package $$pkg: NOT found"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Required package $${pkg}: NOT found"; \
 		target=${DEPENDS_TARGET:Q};				\
 		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$dir"; 	\
 		if [ ! -d $$dir ]; then					\
