@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/01/27 04:15:10 kent Exp $
+# $NetBSD: Makefile,v 1.17 2005/10/24 19:29:57 rillig Exp $
 
 DISTVERSION=		3.3.3
 MAINTAINER=		peace-sacrifice@hauN.org
@@ -32,7 +32,7 @@ GCC_DISTNAME=		gcc-3.3.3
 GCC_INTVERSION=		3.3.3
 MASTER_SITES+=		${MASTER_SITE_GNU:=gcc/releases/gcc-3.3.3/}
 DISTFILES+=		${GCC_DISTNAME}.tar.gz
-USE_GMAKE=		yes
+USE_TOOLS+=		gmake
 USE_MAKEINFO=		YES
 GCC_LANGUAGES=		c,c++
 CONFIGURE_ENV=		${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" \
