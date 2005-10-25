@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/16 20:20:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/25 02:06:57 wiz Exp $
 bin/gocr
+${TK}bin/gocr.tcl
 include/gocr.h
 lib/libPgm2asc.a
 man/man1/gocr.1

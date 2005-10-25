@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/10/24 15:01:37 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/25 02:06:57 wiz Exp $
 
-DISTNAME=	gocr-0.37
+DISTNAME=	gocr-0.40
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jocr/}
 
@@ -9,8 +9,12 @@ HOMEPAGE=	http://sourceforge.net/projects/jocr
 COMMENT=	GOCR is a set of OCR tools
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
 CONFIGURE_HAS_MANDIR=	no
 CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
-USE_TOOLS+=		gmake
+CONFIGURE_ARGS+=	--with-netpbm=${BUILDLINK_PREFIX.netpbm}
 
+.include "options.mk"
+
+.include "../../graphics/netpbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

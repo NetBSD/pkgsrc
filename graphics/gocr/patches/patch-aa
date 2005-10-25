@@ -1,18 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/16 20:20:41 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/25 02:06:57 wiz Exp $
 
---- configure.orig	2002-08-12 17:18:53.000000000 +0200
+--- configure.orig	2005-03-13 20:23:07.000000000 +0100
 +++ configure
-@@ -946,9 +946,11 @@ else
- fi
- 
- 
--CPPFLAGS=-I/usr/X11R6/include
-+#CPPFLAGS=-I/usr/X11R6/include
-+CPPFLAGS=
- #LDFLAGS="-L/usr/X11R6/lib -lpbm -lpgm -lppm -lpnm"
--LDFLAGS="-L/usr/X11R6/lib -L/usr/local/netpbm/lib"
-+#LDFLAGS="-L/usr/X11R6/lib -L/usr/local/netpbm/lib"
-+LDFLAGS=
- 
- ## pnm can only be found, if LDFLAGS contains -lpgm -lpnm ... etc. 
- ## is there a better solution ?
+@@ -2489,7 +2489,7 @@ fi
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+ if test "$ac_cv_search_pnm_readpnminit" = no; then
+   for ac_lib in netpbm pnm; do
+-    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
++    LIBS="-l$ac_lib -lm $ac_func_search_save_LIBS"
+     cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -2525,7 +2525,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_search_pnm_readpnminit="-l$ac_lib"
++  ac_cv_search_pnm_readpnminit="-l$ac_lib -lm"
+ break
+ else
+   echo "$as_me: failed program was:" >&5
