@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2005/09/08 19:16:51 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/25 11:07:49 drochner Exp $
 #
 
-DISTNAME=	gnome-python-extras-2.10.2
+DISTNAME=	gnome-python-extras-2.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
 CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
@@ -19,6 +19,8 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 USE_TOOLS+=		pkg-config
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
+
+BUILDLINK_DEPENDS.nautilus-cd-burner+=	nautilus-cd-burner>=2.11.1
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
