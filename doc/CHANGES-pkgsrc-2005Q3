@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.40 2005/10/25 11:06:10 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.41 2005/10/25 18:05:26 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -95,3 +95,5 @@ Pullup ticket 850 - requested by Takahiro Kambe
 sync www/squid with HEAD, including security fixes
 Pullup ticket 851 - requested by Matthias Drochner
 security update for ethereal
+Pullup ticket 852 - requested by Takahiro Kambe
+portability fix for squid
