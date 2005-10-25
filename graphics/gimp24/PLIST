@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/21 17:31:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/25 11:31:55 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 bin/gimp-remote-2.3
@@ -1859,6 +1859,11 @@ ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gimp20-std-plug-ins.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gimp20-tips.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gimp20.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gimp20-libgimp.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gimp20-script-fu.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gimp20-std-plug-ins.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gimp20-tips.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gimp20.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gimp20-std-plug-ins.mo
