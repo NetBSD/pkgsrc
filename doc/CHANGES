@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11659 2005/10/25 17:24:36 perry Exp $
+$NetBSD: CHANGES,v 1.11660 2005/10/25 18:23:39 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4841,3 +4841,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/p5-HTML-TableExtract to 2.06 [wiz 2005-10-25]
 	Updated www/squid to 2.5.12nb1 [taca 2005-10-25]
 	Updated net/ttt to 1.8.1 [perry 2005-10-25]
+	Updated x11/py-gnome2-extras to 2.12.0 [drochner 2005-10-25]
+	Updated security/py-amkCrypto to 2.0.1 [drochner 2005-10-25]
+	Updated databases/py-ldap to 2.0.10 [drochner 2005-10-25]
+	Updated devel/codeville to 0.1.13 [drochner 2005-10-25]
+	Updated security/seahorse to 0.8 [drochner 2005-10-25]
+	Updated math/yacas to 1.0.59 [drochner 2005-10-25]
