@@ -1,2 +1,2 @@
-(define (library-vicinity) "%%LOCALBASE%%/share/slib/")
+(define (library-vicinity) "@LOCALBASE@/share/slib/")
 (load (in-vicinity (library-vicinity) "require"))
