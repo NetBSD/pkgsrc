@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11650 2005/10/24 23:55:20 rillig Exp $
+$NetBSD: CHANGES,v 1.11651 2005/10/25 02:07:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4828,3 +4828,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/ng to 1.4.3nb1 [rillig 2005-10-24]
 	Updated mail/sylpheed-devel to 2.1.4 [chris 2005-10-24]
 	Updated pkgtools/pkglint to 4.30 [rillig 2005-10-24]
+	Updated graphics/gocr to 0.40 [wiz 2005-10-25]
