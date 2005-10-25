@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/10/01 20:45:05 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2005/10/25 17:21:47 perry Exp $
 #
 
-DISTNAME=	ttt-1.8
-PKGREVISION=	1
+DISTNAME=	ttt-1.8.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.csl.sony.co.jp/pub/kjc/
 
@@ -14,7 +13,15 @@ GNU_CONFIGURE=	yes
 
 INSTALL_TARGET=	install install-man
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.if empty(OS_VERSION:M1.[56]*)
+.include "../../mk/pthread.buildlink3.mk"
+.endif
+.endif
+
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../x11/blt/buildlink3.mk"
-.include "../../x11/tk83/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
