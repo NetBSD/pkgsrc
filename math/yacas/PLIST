@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/01/21 15:28:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/10/25 17:55:56 drochner Exp $
 bin/yacas
 bin/yacas.sh
 bin/yacas_client
@@ -256,6 +256,7 @@ share/yacas/include/plat/linux32/platdll.h
 share/yacas/include/plat/linux32/platfileio.h
 share/yacas/include/plat/linux32/stubs.inl
 share/yacas/include/platmath.h
+share/yacas/include/plugins_available.h
 share/yacas/include/refcount.h
 share/yacas/include/standard.h
 share/yacas/include/standard.inl
@@ -279,6 +280,7 @@ share/yacas/include/yacasbase.h
 share/yacas/include/yacasprivate.h
 share/yacas/integrate.rep/code.ys
 share/yacas/integrate.rep/code.ys.def
+share/yacas/integrate.rep/om.ys
 share/yacas/io.rep/code.ys
 share/yacas/io.rep/code.ys.def
 share/yacas/io.rep/defaultprint.ys
@@ -369,6 +371,7 @@ share/yacas/specfunc.rep/gamma.ys
 share/yacas/specfunc.rep/gamma.ys.def
 share/yacas/specfunc.rep/gammaconst.ys
 share/yacas/specfunc.rep/gammaconst.ys.def
+share/yacas/specfunc.rep/om.ys
 share/yacas/specfunc.rep/zeta.ys
 share/yacas/specfunc.rep/zeta.ys.def
 share/yacas/standard.ys
@@ -405,6 +408,7 @@ share/yacas/substitute.rep/code.ys
 share/yacas/substitute.rep/code.ys.def
 share/yacas/sums.rep/code.ys
 share/yacas/sums.rep/code.ys.def
+share/yacas/sums.rep/om.ys
 share/yacas/sums.rep/taylor.ys
 share/yacas/sums.rep/taylor.ys.def
 share/yacas/sums.rep/taylor3.ys
