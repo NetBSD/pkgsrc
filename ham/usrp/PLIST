@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/07 23:19:15 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/25 05:12:16 wulf Exp $
 bin/usrper
 include/usrp0.h
 include/usrp_basic.h
@@ -143,6 +143,10 @@ share/doc/usrp-0.8/html/structrate__to__regval-members.html
 share/doc/usrp-0.8/html/structrate__to__regval.html
 share/doc/usrp-0.8/html/structusrp__dboard__eeprom-members.html
 share/doc/usrp-0.8/html/structusrp__dboard__eeprom.html
+share/doc/usrp-0.8/html/tab_b.gif
+share/doc/usrp-0.8/html/tab_l.gif
+share/doc/usrp-0.8/html/tab_r.gif
+share/doc/usrp-0.8/html/tabs.css
 share/doc/usrp-0.8/html/test__usrp0_8cc.html
 share/doc/usrp-0.8/html/test__usrp__standard__rx_8cc.html
 share/doc/usrp-0.8/html/test__usrp__standard__tx_8cc.html
