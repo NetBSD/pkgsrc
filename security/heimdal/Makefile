@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2005/10/25 01:17:57 rillig Exp $
 
 DISTNAME=	heimdal-0.6.5
 PKGREVISION=	2
@@ -27,6 +27,11 @@ CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-krb4
 
 CFLAGS.Darwin+= -DBIND_8_COMPAT
+
+# Though Solaris has a <vis.h> header, it does something very unrelated
+# to the BSD <vis.h> header.
+OPSYSVARS+=		CONFIGURE_ENV
+CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 
 .include "../../mk/bsd.prefs.mk"
 
