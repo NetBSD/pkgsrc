@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/25 04:15:48 taca Exp $
 
 DISTNAME=	racc-${RACC_VERSION}-all-2
 PKGNAME=	${RUBY_PKGPREFIX}-racc-${RACC_VERSION}
@@ -13,6 +13,7 @@ COMMENT=	LALR(1) parser generator for Ruby 1.6
 DEPENDS+= ${RUBY_PKGPREFIX}-strscan>=0.6.1:../../devel/ruby-strscan
 
 RUBY_VERSION=		${RUBY16_VERSION}
+USE_RUBY_DIST_SUBDIR=	yes
 USE_RUBY_SETUP=		YES
 RACC_VERSION=		1.4.3
 CONFIGURE_ARGS+=	--with=racc,raccrt
