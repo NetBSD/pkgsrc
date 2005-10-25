@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/06 17:19:07 taca Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/25 04:15:49 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -13,6 +13,7 @@ COMMENT=	RT to HTML (and hopefully LaTeX in future) table converter
 CONFLICTS+=	ruby[1-9][0-9]-rttool-*
 
 VERSION=	0.1.8
+USE_RUBY_DIST_SUBDIR=	yes
 USE_RUBY_SETUP=	yes
 REPLACE_RUBY=	bin/rt/rt2 lib/rt/rt2html-lib.rb \
 		lib/rt/rt2txt-lib.rb lib/rt/rtparser.rb \
