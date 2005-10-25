@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11656 2005/10/25 13:39:03 wiz Exp $
+$NetBSD: CHANGES,v 1.11657 2005/10/25 13:41:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4834,3 +4834,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/scm to 5.5.1 [adam 2005-10-25]
 	Updated devel/p5-gettext to 1.05 [wiz 2005-10-25]
 	Updated devel/p5-Storable to 2.15 [wiz 2005-10-25]
+	Updated devel/m4 to 1.4.4 [wiz 2005-10-25]
+	Updated misc/cksfv to 1.3.7 [wiz 2005-10-25]
+	Updated devel/libidn to 0.5.20 [wiz 2005-10-25]
+	Added www/p5-HTML-Element-Extended version 1.13 [wiz 2005-10-25]
+	Updated www/p5-HTML-TableExtract to 2.06 [wiz 2005-10-25]
