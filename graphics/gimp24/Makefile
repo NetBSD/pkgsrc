@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/10/24 16:22:26 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/25 11:31:55 adam Exp $
 
 DISTNAME=	gimp-2.3.4
 CATEGORIES=	graphics
@@ -21,7 +21,6 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
-USE_MSGFMT_PLURALS=	yes
 
 PKG_SYSCONFSUBDIR=	gimp/2.0
 
@@ -38,7 +37,6 @@ BUILDLINK_DEPENDS.lcms+=	lcms>=1.12
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl
-#CONFIGURE_ARGS+=	--disable-print
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME_NOREV}
