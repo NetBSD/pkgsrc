@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/24 21:13:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/25 04:15:49 taca Exp $
 
 DISTNAME=	rdtool-0.6.14
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -16,6 +16,7 @@ CONFLICTS+=	ruby[1-9][0-9]-rdtool-*
 
 REPLACE_RUBY=	rd2 rmi2html.rb utils/rdswap.rb
 INSTALL_TARGET=	install install-rmi2html
+USE_RUBY_DIST_SUBDIR=	yes
 
 .include "../../lang/ruby/rubyversion.mk"
 
