@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4093 2005/10/25 13:24:15 wiz Exp $
+$NetBSD: TODO,v 1.4094 2005/10/25 13:38:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1204,7 +1204,6 @@ Suggested package updates
 	o spamass-milter-1.0
 	o spamassassin-3.1.0 [heinz]
 	o spim-7.2.1
-	o sqlite-3.2.7
 	o sqlitemanager-1.1.2
 	o sqlrelay-0.35
 	o srp_client-1.7.5 [jlam]
