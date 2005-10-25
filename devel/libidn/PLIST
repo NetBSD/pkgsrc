@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/13 20:39:37 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/25 13:24:36 wiz Exp $
 bin/idn
 include/idn-free.h
 include/idn-int.h
 include/idna.h
+include/pr29.h
 include/punycode.h
 include/stringprep.h
 include/tld.h
