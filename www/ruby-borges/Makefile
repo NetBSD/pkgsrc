@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/06 17:19:07 taca Exp $
+# $NetBSD: Makefile,v 1.11 2005/10/25 04:15:49 taca Exp $
 
 DISTNAME=	borges-1.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ MAINTAINER=	rasputin@idoru.mine.nu
 HOMEPAGE=	http://borges.rubyforge.org/
 COMMENT=	Ruby web application framework
 
+USE_RUBY_DIST_SUBDIR=		yes
 USE_RUBY_SETUP=			yes
 RUBY_VERSION_SUPPORTED?=	18
 BORGES_SHARE_DIR=		data/doc data/examples
