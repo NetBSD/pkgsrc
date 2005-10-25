@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11653 2005/10/25 06:26:50 jlam Exp $
+$NetBSD: CHANGES,v 1.11654 2005/10/25 09:33:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4831,3 +4831,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/gocr to 0.40 [wiz 2005-10-25]
 	Added sysutils/bacula-doc version 1.36.3 [minskim 2005-10-25]
 	Updated databases/db4 to 4.3.29 [jlam 2005-10-25]
+	Updated lang/scm to 5.5.1 [adam 2005-10-25]
