@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4092 2005/10/25 13:09:12 wiz Exp $
+$NetBSD: TODO,v 1.4093 2005/10/25 13:24:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -979,7 +979,6 @@ Suggested package updates
 	o p5-XML-XUpdate-LibXML-0.5.0
 	o p5-XML-Xerces-2.6.0.2
 	o p5-YAML-0.39
-	o p5-gettext-1.05
 	o p5-glib2-1.100
 	o p5-gtk2-1.110
 	o p5-ispman-1.2
