@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/06 17:19:07 taca Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/25 04:15:48 taca Exp $
 #
 
 DISTNAME=	rexml_${VERSION}
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rasputin@idoru.mine.nu
 HOMEPAGE=	http://www.germane-software.com/software/rexml/
 COMMENT=	Pure Ruby XML parser based on Java Electric XML
+
+USE_RUBY_DIST_SUBDIR=	yes
 
 .include "../../lang/ruby/rubyversion.mk"
 
