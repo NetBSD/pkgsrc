@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:59 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/25 09:32:15 adam Exp $
+#
+# Convert the version number as follows 2d2 -> 2.4.2, where the d is
+# changed to a 4, representing the 4th letter.
+# Thus, 5e1 -> 5.5.1
 #
 
-DISTNAME=	scm5d9
-PKGNAME=	scm-5d9
+DISTNAME=	scm5e1
+PKGNAME=	scm-5.5.1
 CATEGORIES=	lang
 MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
 EXTRACT_SUFX=	.zip
@@ -28,8 +32,9 @@ post-patch:
 
 post-build:
 	${CAT} ${FILESDIR}/buildscm.sh \
-		| ${SED} -e 's|%%PREFIX%%|${PREFIX}|g' \
-		| ${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		| ${SED} -e 's|@CC@|${CC}|g' \
+		| ${SED} -e 's|@CFLAGS@|${CFLAGS}|g' \
+		| ${SED} -e 's|@PREFIX@|${PREFIX}|g' \
 		> ${WRKSRC}/buildscm.sh
 	cd ${WRKSRC} && ${SH} ./buildscm.sh
 
