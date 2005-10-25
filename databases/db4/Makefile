@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2005/05/10 16:24:48 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2005/10/25 06:26:48 jlam Exp $
 
-DISTNAME=		db-4.3.28
+DISTNAME=		db-4.3.29
 PKGNAME=		${DISTNAME:S/db/db4/}
 CATEGORIES=		databases
-MASTER_SITES=		ftp://ftp.sleepycat.com/releases/
+MASTER_SITES=		http://downloads.sleepycat.com/ \
+			ftp://ftp.sleepycat.com/releases/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.sleepycat.com/
@@ -24,9 +25,6 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-compat185
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db4
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
-
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
 
 # NetBSD-sparc64-1.6*'s f77 makes configure failing and as f77 is not
 # needed for this package the following does no harm on other platform.

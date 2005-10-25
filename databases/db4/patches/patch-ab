@@ -1,12 +1,16 @@
-$NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
+$NetBSD: patch-ab,v 1.11 2005/10/25 06:26:48 jlam Exp $
 
---- dist/configure.orig	2004-12-23 04:59:13.000000000 +0200
-+++ dist/configure	2005-01-05 09:40:13.000000000 +0200
-@@ -5419,2 +5419,3 @@
+--- dist/configure.orig	2005-09-06 03:44:24.000000000 -0400
++++ dist/configure
+@@ -5417,6 +5417,7 @@ db_cv_gxx_except=no;
+ if test "$GXX" = "yes"; then
+ 	GXX_VERSION=`${MAKEFILE_CXX} --version`
  	case ${GXX_VERSION} in
 +	egcs*)	CXXFLAGS="-fexceptions $CXXFLAGS";;
  	1.*|2.[01234567].*|*-1.*|*-2.[01234567].*)
-@@ -5832,13 +5832,13 @@ darwin* | rhapsody*)
+ 		db_cv_gxx_except=yes;;
+ 	esac
+@@ -5831,13 +5832,13 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -22,7 +26,7 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
        lt_cv_file_magic_cmd=/usr/bin/file
        lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
        ;;
-@@ -7075,7 +7075,7 @@ else
+@@ -7074,7 +7075,7 @@ else
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -31,7 +35,7 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -8851,7 +8851,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -8850,7 +8851,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -40,7 +44,7 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
        archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec='-R$libdir'
        hardcode_direct=yes
-@@ -9430,7 +9430,7 @@ kfreebsd*-gnu)
+@@ -9429,7 +9430,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -49,7 +53,7 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -11785,7 +11785,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -11784,7 +11785,7 @@ if test -z "$aix_libpath"; then aix_libp
    freebsd-elf*)
      archive_cmds_need_lc_CXX=no
      ;;
@@ -58,7 +62,7 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
      # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
      # conventions
      ld_shlibs_CXX=yes
-@@ -13142,7 +13142,7 @@ kfreebsd*-gnu)
+@@ -13141,7 +13142,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -67,7 +71,7 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -15723,7 +15723,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -15722,7 +15723,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -76,7 +80,7 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
        archive_cmds_F77='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec_F77='-R$libdir'
        hardcode_direct_F77=yes
-@@ -16302,7 +16302,7 @@ kfreebsd*-gnu)
+@@ -16301,7 +16302,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -85,7 +89,7 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -18664,7 +18664,7 @@ kfreebsd*-gnu)
+@@ -18663,7 +18664,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -94,12 +98,16 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -20868,3 +20869,3 @@
+@@ -20866,7 +20867,7 @@ echo "${ECHO_T}$JMODSUFFIX" >&6
+ INSTALLER="\$(LIBTOOL) --mode=install cp -p"
+ 
  MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
 -MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK} -avoid-version"
 +MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
  MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
-@@ -21615,7 +21615,7 @@ if test "$_JTOPDIR" != "/usr"; then
+ MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
+ MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
+@@ -21614,7 +21615,7 @@ if test "$_JTOPDIR" != "/usr"; then
  	case "$host_os" in
  	aix*)		_JNI_INC_SUBDIRS="aix";;
  	bsdi*)		_JNI_INC_SUBDIRS="bsdos";;
@@ -108,8 +116,12 @@ $NetBSD: patch-ab,v 1.10 2005/08/19 19:46:24 reed Exp $
  	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
  	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
  	osf*)		_JNI_INC_SUBDIRS="alpha";;
-@@ -30027,3 +30028,3 @@
+@@ -30025,7 +30026,7 @@ fi
+ #
+ # If the user specified we use POSIX pthreads mutexes, and we fail to find the
  # full interface, try and configure for just intra-process support.
 -if test "$db_cv_mutex" = no -o "$db_cv_mutex" = "posix_only"; then
 +if test "$ac_cv_lib_pthread_main" = yes -a "$db_cv_mutex" = no -o "$db_cv_mutex" = "posix_only"; then
  	LIBS="$LIBS -lpthread"
+ 
+ if test "$cross_compiling" = yes; then
