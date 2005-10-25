@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/14 16:43:54 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/10/25 17:07:27 drochner Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.so
 ${PYSITELIB}/Crypto/Cipher/ARC2.so
 ${PYSITELIB}/Crypto/Cipher/ARC4.so
@@ -24,6 +24,7 @@ ${PYSITELIB}/Crypto/Hash/RIPEMD.so
 ${PYSITELIB}/Crypto/Hash/SHA.py
 ${PYSITELIB}/Crypto/Hash/SHA.pyc
 ${PYSITELIB}/Crypto/Hash/SHA.pyo
+${PYSITELIB}/Crypto/Hash/SHA256.so
 ${PYSITELIB}/Crypto/Hash/__init__.py
 ${PYSITELIB}/Crypto/Hash/__init__.pyc
 ${PYSITELIB}/Crypto/Hash/__init__.pyo
