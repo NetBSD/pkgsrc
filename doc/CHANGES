@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11651 2005/10/25 02:07:28 wiz Exp $
+$NetBSD: CHANGES,v 1.11652 2005/10/25 04:24:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4829,3 +4829,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sylpheed-devel to 2.1.4 [chris 2005-10-24]
 	Updated pkgtools/pkglint to 4.30 [rillig 2005-10-24]
 	Updated graphics/gocr to 0.40 [wiz 2005-10-25]
+	Added sysutils/bacula-doc version 1.36.3 [minskim 2005-10-25]
