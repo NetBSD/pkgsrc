@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2005/08/01 09:49:37 jlam Exp $
+$NetBSD: patch-ag,v 1.5 2005/10/26 15:08:13 jlam Exp $
 
---- servers/slapd/Makefile.in.orig	2004-07-25 18:31:04.000000000 -0400
+--- servers/slapd/Makefile.in.orig	2005-09-27 20:30:30.000000000 -0400
 +++ servers/slapd/Makefile.in
-@@ -74,6 +74,10 @@ XLIBS = $(SLAPD_STATIC_DEPENDS) $(SLAPD_
+@@ -76,6 +76,10 @@ XLIBS = $(SLAPD_STATIC_DEPENDS) $(SLAPD_
  XXLIBS = $(SLAPD_LIBS) $(SECURITY_LIBS) $(LUTIL_LIBS)
  XXXLIBS = $(LTHREAD_LIBS) $(SLAPI_LIBS) $(MODULES_LIBS)
  
@@ -13,3 +13,14 @@ $NetBSD: patch-ag,v 1.4 2005/08/01 09:49:37 jlam Exp $
  BUILD_OPT = "--enable-slapd"
  BUILD_SRV = @BUILD_SLAPD@
  
+@@ -432,9 +436,7 @@ install-db-config: FORCE
+ 	@-$(MKDIR) $(DESTDIR)$(localstatedir) $(DESTDIR)$(sysconfdir)
+ 	@-$(INSTALL) -m 700 -d $(DESTDIR)$(localstatedir)/openldap-data
+ 	$(INSTALL) $(INSTALLFLAGS) -m 600 $(srcdir)/DB_CONFIG \
+-		$(DESTDIR)$(localstatedir)/openldap-data/DB_CONFIG.example
+-	$(INSTALL) $(INSTALLFLAGS) -m 600 $(srcdir)/DB_CONFIG \
+-		$(DESTDIR)$(sysconfdir)/DB_CONFIG.example
++		$(DESTDIR)$(sysconfdir)/DB_CONFIG
+ 
+ install-tools: FORCE
+ 	-$(MKDIR) $(DESTDIR)$(sbindir)
