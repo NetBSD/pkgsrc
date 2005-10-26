@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/10/26 15:58:54 minskim Exp $
+
+--- number.h.orig	2004-06-09 02:20:18.000000000 +0200
++++ number.h
+@@ -26,7 +26,7 @@ class Number{
+     //==============
+     void toString(); //explicit conversion to string strVal
+     void toDouble(); //explicit conversion to double val
+-    void setValue( double d ){ val=d; strVal.clear(); bString=false;}
++    void setValue( double d ){ val=d; bString=false;}
+     void setValue( const string& s ){ strVal=s; bString=true;}
+ 
+     void minus(){ val=-val; }
