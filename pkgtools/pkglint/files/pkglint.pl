@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.306 2005/10/24 23:54:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.307 2005/10/26 23:17:49 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1142,27 +1142,36 @@ sub readmakefile($$$$) {
 		my $text = $line->text;
 
 		push(@{$all_lines}, $line);
-		# try to get any included file
-		if ($text =~ qr"^\.\s*include\s+\"([^\$]+)\"$") {
-			$includefile = $1;
-			if (exists($seen_Makefile_include->{$includefile})) {
-				$contents .= "### pkglint ### skipped $includefile\n";
-				next;
-			}
-			if (!$opt_check_bl3 && $includefile =~ qr"/buildlink3.mk$") {
-				$contents .= "### pkglint ### skipped $includefile\n";
-				next;
-			}
 
-			$seen_Makefile_include->{$includefile} = true;
-			if ($includefile =~ qr"^\.\./[^./][^/]*/[^/]+") {
-				$line->log_warning("Relative directories should look like \"../../cat/pkg\", not \"../pkg\".");
-			}
-			if ($includefile =~ qr"^(?:\.\./(?:\.\./[^/]+/)?[^/]+/)?([^/]+)$") {
-				my ($basename) = ($1);
-				if ($basename ne "buildlink3.mk") {
-					$seen_Makefile_common = true;
+		# try to get any included file
+		my $is_include_line = false;
+		if ($text =~ qr"^\.\s*include\s+\"(.*)\"$") {
+			$includefile = $1;
+			$includefile =~ s/\$\{.CURDIR\}/./;
+			if ($includefile =~ $regex_unresolved) {
+				$includefile =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,g;
+				$includefile =~ s,\$\{SUSE_DIR_PREFIX\},suse91,g;
+				$includefile =~ s,\$\{PYPKGSRCDIR\},../../lang/python23,g;
+				if ($file !~ qr"/mk/" && $includefile =~ $regex_unresolved) {
+					$line->log_warning("Skipping include file \"${includefile}\". This may result in false warnings.");
 				}
+
+			} elsif (exists($seen_Makefile_include->{$includefile})) {
+				# Don't include any file twice
+
+			} else {
+				$is_include_line = true;
+				$seen_Makefile_include->{$includefile} = true;
+			}
+		}
+
+		if ($is_include_line) {
+			if ($includefile =~ qr"^\.\./[^./][^/]*/[^/]+") {
+				$line->log_warning("Relative directories should look like \"../../category/package\", not \"../package\".");
+			}
+			if ($includefile =~ qr"(?:^|/)Makefile.common$"
+			    || ($includefile =~ qr"^(?:\.\./(?:\.\./[^/]+/)?[^/]+/)?([^/]+)$" && $1 ne "buildlink3.mk")) {
+				$seen_Makefile_common = true;
 			}
 			if ($includefile =~ /\/mk\/texinfo\.mk/) {
 				$line->log_error("Do not include $includefile.");
@@ -1185,10 +1194,6 @@ sub readmakefile($$$$) {
 					$contents .= readmakefile($dir, "$dirname/$includefile", $all_lines, $seen_Makefile_include);
 				}
 			}
-
-		} elsif ($text =~ qr"^\.\s*include\s+(.*)") {
-			$line->log_info("Skipping include file $1");
-
 		} else {
 			$contents .= $text . "\n";
 		}
@@ -1271,12 +1276,7 @@ sub get_regex_plurals() {
 sub checktext_basic_vartype($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 
-	if ($type eq "Boolean") {
-		if ($value !~ qr"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
-			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
-		}
-
-	} elsif ($type eq "Dependency") {
+	if ($type eq "Dependency") {
 		if ($value =~ $regex_unresolved) {
 			# don't even try to check anything
 		} elsif ($value =~ qr":\.\./\.\./") {
@@ -1287,14 +1287,17 @@ sub checktext_basic_vartype($$$$$) {
 			$line->log_warning("Unknown dependency format.");
 		}
 
-	} elsif ($type eq "Integer") {
-		if ($value !~ qr"^\d+$") {
-			$line->log_warning("\"${value}\" is not a valid Integer.");
-		}
-
 	} elsif ($type eq "Mail_Address") {
 		if ($value !~ $regex_mail_address) {
 			$line->log_warning("\"${value}\" is not a valid mail address.");
+		}
+
+	} elsif ($type eq "PkgRevision") {
+		if ($value !~ qr"^\d+$") {
+			$line->log_warning("\"${value}\" is not a valid Integer.");
+		}
+		if ($line->file !~ qr"(?:^|/)Makefile$") {
+			$line->log_error("${varname} must not be set outside the package Makefile.");
 		}
 
 	} elsif ($type eq "Readonly") {
@@ -1322,9 +1325,14 @@ sub checktext_basic_vartype($$$$$) {
 			$line->log_warning("\"${value}\" is not a valid URL.");
 		}
 
-	} elsif ($type eq "Yes_Or_Undefined") {
+	} elsif ($type eq "Yes") {
 		if ($value !~ qr"^(?:YES|yes)(?:\s+#.*)?$") {
 			$line->log_warning("${varname} should be set to YES or yes.");
+		}
+
+	} elsif ($type eq "YesNo") {
+		if ($value !~ qr"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
+			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
 		}
 
 	} else {
@@ -2637,7 +2645,7 @@ sub checkdir_package($) {
 		}
 	}
 
-	if (grep { $_ !~ qr"/CVS$" } <$dir/scripts/*>) {
+	if (!is_emptydir("$dir/scripts")) {
 		log_warning("$dir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
 }
