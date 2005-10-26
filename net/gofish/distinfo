@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/26 03:42:21 minskim Exp $
+
+SHA1 (gofish-1.0.tar.gz) = 7581acb68e1facf0619c4ab0759f0743ab7479aa
+RMD160 (gofish-1.0.tar.gz) = 0b4ebc1cf639a4aa8cae83a00becbc5877ddb9e6
+Size (gofish-1.0.tar.gz) = 141992 bytes
+SHA1 (patch-aa) = f2fb96c12b65e00933a0e70b7299ebd16d53b73f
+SHA1 (patch-ab) = 1520fc6b28c5dd2f11adbcb3a20cd56f4854c858
+SHA1 (patch-ac) = a0f4b84b2656695b09a0a6e771b11e713ee2e030
+SHA1 (patch-ad) = cf6d1502fada48bbede3d87e35fd335d6f6bcbb4
