@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/07/03 09:27:00 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/26 04:29:01 minskim Exp $
 
---- Makefile.in.orig	Mon Nov 15 06:07:45 1999
+--- Makefile.in.orig	2004-04-14 17:31:17.000000000 -0500
 +++ Makefile.in
-@@ -28,7 +28,7 @@
+@@ -28,7 +28,7 @@ exec_prefix =	@exec_prefix@
  INSTALL_ROOT =
  
  # Directory from which TkDesk will reference its library of Tcl scripts:
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/07/03 09:27:00 dmcmahill Exp $
  
  # Path name to use when installing library scripts:
  SCRIPT_INSTALL_DIR =	$(INSTALL_ROOT)$(TKDESK_LIBRARY)
-@@ -187,26 +187,28 @@
+@@ -173,28 +173,29 @@ tkdesk_script:
  rm_tkdesk_script:
  	@rm -f tkdesk
  
@@ -31,8 +31,11 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/07/03 09:27:00 dmcmahill Exp $
 +	    $(BSD_INSTALL_SCRIPT) $$f $(BIN_INSTALL_DIR) ;\
  	done
  	@echo "=== Installing TkDesk's library..."
+-	@cd ./tcldesk; tar cf - * | (cd $(SCRIPT_INSTALL_DIR); tar xvf -)
+-	@cd ..
 +	$(BSD_INSTALL_DATA_DIR) $(SCRIPT_INSTALL_DIR)
- 	@cd ./tcldesk; tar cf - * | (cd $(SCRIPT_INSTALL_DIR); tar xvf -)
++	@cd ./tcldesk; ${PAX} -rwpm * ${SCRIPT_INSTALL_DIR}; cd ..
+ 	@cp ChangeLog $(SCRIPT_INSTALL_DIR)/doc/ChangeLog
  	@echo "=== Setting permissions..."
  	find $(SCRIPT_INSTALL_DIR) -type f -exec chmod a+r {} \;
  	find $(SCRIPT_INSTALL_DIR) -type d -exec chmod a+rx {} \;

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/03 09:27:00 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/26 04:29:01 minskim Exp $
 bin/cd-tkdesk
 bin/ed-tkdesk
 bin/od-tkdesk
@@ -58,7 +58,6 @@ lib/tkdesk/cb_tools/popup.tcl
 lib/tkdesk/cb_tools/tclIndex
 lib/tkdesk/cb_tools/tools.tcl
 lib/tkdesk/cb_tools/widgets.tcl
-lib/tkdesk/clrpick.tcl
 lib/tkdesk/config.tcl
 lib/tkdesk/configs/AppBar
 lib/tkdesk/configs/AppBar_Be
@@ -74,7 +73,7 @@ lib/tkdesk/copy.tcl
 lib/tkdesk/cpanels.tcl
 lib/tkdesk/delete.tcl
 lib/tkdesk/diary.tcl
-lib/tkdesk/doc/CHANGES
+lib/tkdesk/doc/ChangeLog
 lib/tkdesk/doc/Guide
 lib/tkdesk/doc/License
 lib/tkdesk/doc/QuickStart
@@ -168,6 +167,7 @@ lib/tkdesk/images/construction.xpm
 lib/tkdesk/images/copy.xpm
 lib/tkdesk/images/copy2.xpm
 lib/tkdesk/images/desk.xpm
+lib/tkdesk/images/desk2.xpm
 lib/tkdesk/images/document.xpm
 lib/tkdesk/images/door_run.xpm
 lib/tkdesk/images/earth.xpm
@@ -268,6 +268,8 @@ lib/tkdesk/images/mail_edit.xpm
 lib/tkdesk/images/mailbox_empty.xpm
 lib/tkdesk/images/mailbox_full.xpm
 lib/tkdesk/images/mailbox_old.xpm
+lib/tkdesk/images/maildog_empty.xpm
+lib/tkdesk/images/maildog_new.xpm
 lib/tkdesk/images/man.xpm
 lib/tkdesk/images/moon.xpm
 lib/tkdesk/images/mosaic.xpm
@@ -403,6 +405,7 @@ lib/tkdesk/images/next/wrench.xpm
 lib/tkdesk/images/orbit.xpm
 lib/tkdesk/images/pacman.xpm
 lib/tkdesk/images/paint.xpm
+lib/tkdesk/images/pda.xpm
 lib/tkdesk/images/pen.xpm
 lib/tkdesk/images/pencil3.xpm
 lib/tkdesk/images/printer.xpm
@@ -415,10 +418,12 @@ lib/tkdesk/images/shell.xpm
 lib/tkdesk/images/stars.xpm
 lib/tkdesk/images/terminal.xpm
 lib/tkdesk/images/tetris.xpm
+lib/tkdesk/images/tkdesk_logo.ppm
 lib/tkdesk/images/tools.xpm
 lib/tkdesk/images/trash.xpm
 lib/tkdesk/images/trashcan.xpm
 lib/tkdesk/images/trashcan_full.xpm
+lib/tkdesk/images/twotexts.xpm
 lib/tkdesk/images/up.xpm
 lib/tkdesk/images/xbm/apple_draft.xbm
 lib/tkdesk/images/xbm/apple_write.xbm
@@ -530,52 +535,13 @@ lib/tkdesk/sounds/metal.au
 lib/tkdesk/sounds/newmail.au
 lib/tkdesk/sounds/robot_dead.au
 lib/tkdesk/sounds/start.au
-lib/tkdesk/static/itcl3.0/itcl.tcl
-lib/tkdesk/static/itcl3.0/pkgIndex.tcl
-lib/tkdesk/static/tcl8.0/history.tcl
-lib/tkdesk/static/tcl8.0/init.tcl
-lib/tkdesk/static/tcl8.0/ldAix
-lib/tkdesk/static/tcl8.0/ldAout.tcl
-lib/tkdesk/static/tcl8.0/parray.tcl
-lib/tkdesk/static/tcl8.0/safe.tcl
-lib/tkdesk/static/tcl8.0/tclIndex
-lib/tkdesk/static/tcl8.0/word.tcl
-lib/tkdesk/static/tk8.0/bgerror.tcl
-lib/tkdesk/static/tk8.0/button.tcl
-lib/tkdesk/static/tk8.0/clrpick.tcl
-lib/tkdesk/static/tk8.0/comdlg.tcl
-lib/tkdesk/static/tk8.0/console.tcl
-lib/tkdesk/static/tk8.0/dialog.tcl
-lib/tkdesk/static/tk8.0/entry.tcl
-lib/tkdesk/static/tk8.0/focus.tcl
-lib/tkdesk/static/tk8.0/listbox.tcl
-lib/tkdesk/static/tk8.0/menu.tcl
-lib/tkdesk/static/tk8.0/msgbox.tcl
-lib/tkdesk/static/tk8.0/obsolete.tcl
-lib/tkdesk/static/tk8.0/optMenu.tcl
-lib/tkdesk/static/tk8.0/palette.tcl
-lib/tkdesk/static/tk8.0/prolog.ps
-lib/tkdesk/static/tk8.0/safetk.tcl
-lib/tkdesk/static/tk8.0/scale.tcl
-lib/tkdesk/static/tk8.0/scrlbar.tcl
-lib/tkdesk/static/tk8.0/tclIndex
-lib/tkdesk/static/tk8.0/tearoff.tcl
-lib/tkdesk/static/tk8.0/text.tcl
-lib/tkdesk/static/tk8.0/tk.tcl
-lib/tkdesk/static/tk8.0/tkfbox.tcl
-lib/tkdesk/static/tk8.0/xmfbox.tcl
 lib/tkdesk/tclIndex
-lib/tkdesk/tkpatches.tcl
 lib/tkdesk/update.tcl
 lib/tkdesk/util.tcl
 man/man1/cd-tkdesk.1
 man/man1/ed-tkdesk.1
 man/man1/od-tkdesk.1
 man/man1/tkdesk.1
-@dirrm lib/tkdesk/static/tk8.0
-@dirrm lib/tkdesk/static/tcl8.0
-@dirrm lib/tkdesk/static/itcl3.0
-@dirrm lib/tkdesk/static
 @dirrm lib/tkdesk/sounds
 @dirrm lib/tkdesk/images/xbm
 @dirrm lib/tkdesk/images/next
