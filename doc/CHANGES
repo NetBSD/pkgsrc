@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11671 2005/10/26 15:44:17 adam Exp $
+$NetBSD: CHANGES,v 1.11672 2005/10/26 16:44:38 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4858,3 +4858,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/openldap to 2.3.11 [jlam 2005-10-26]
 	Updated security/heimdal to 0.7.1 [jlam 2005-10-26]
 	Updated net/ntop to 3.2 [adam 2005-10-26]
+	Updated security/heimdal to 0.7.1nb1 [jlam 2005-10-26]
