@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/10/26 15:58:54 minskim Exp $
+$NetBSD: distinfo,v 1.3 2005/10/26 21:38:30 minskim Exp $
 
-SHA1 (wsbasic-1_2_4.tar.gz) = 5470c247fcdf7d3940d51f824d549c40495b60a5
-RMD160 (wsbasic-1_2_4.tar.gz) = 022c80019a5f6c85073d3a7386b51b41ff9285fe
-Size (wsbasic-1_2_4.tar.gz) = 20850 bytes
-SHA1 (patch-aa) = 0758724f05585c357a530b8979e56f6e15584493
-SHA1 (patch-ab) = 210b1f0dd17a2dfce691a79cbb375d920add9350
-SHA1 (patch-ac) = 62d1dabae7a7b566a4bea236814e28d86ef5227a
+SHA1 (wsbasic-1_2_5.tar.gz) = 7cac105c3d11ee00e008b7d1756f8ddf9a70929e
+RMD160 (wsbasic-1_2_5.tar.gz) = 70b8aeb73a2a2ba9f05b9067645c6feb895ee382
+Size (wsbasic-1_2_5.tar.gz) = 20745 bytes
+SHA1 (patch-aa) = 5217f62abd2efd27faaf9dad9371932a28218230
