@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/10/22 22:06:21 tonio Exp $
+# $NetBSD: Makefile,v 1.20 2005/10/26 12:44:21 tonio Exp $
 
 DISTNAME=	snownews-1.5.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://kiza.kcore.de/software/snownews/download/
 
@@ -9,14 +9,20 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://kiza.kcore.de/software/snownews/
 COMMENT=	Small, curses based RSS feed reader
 
+DEPENDS+=		p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
 USE_MSGFMT_PLURALS=	YES
 BUILD_USES_MSGFMT=	YES
 
+HAS_CONFIGURE=		YES
 USE_NCURSES=		# missing WA_BOLD, WA_REVERSE, KEY_RESIZE
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		perl:run
 
-MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR:Q}
-MAKE_ENV+=	EXTRA_CFLAGS=${CFLAGS:Q} LOCALBASE=${LOCALBASE:Q}
+REPLACE_PERL+=		configure opml2snow snowsync
+
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+MAKE_ENV+=	PKG_LOCALEDIR=${PKGLOCALEDIR:Q}
+MAKE_ENV+=	EXTRA_CFLAGS=${CFLAGS:Q}
 
 # XXX -lintl hack suggested by Jeremy C. Reed: blocking on PR #23369
 .include "../../devel/gettext-lib/buildlink3.mk"
