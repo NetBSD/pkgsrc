@@ -2,13 +2,13 @@
 # With the introduction of a configurable index page using the
 # template toolkit, Bugzilla's main index page is now index.cgi.
 # Most web servers will allow you to use index.cgi as a directory
-# index and many come preconfigured that way, however if yours
-# doesn't you'll need an index.html file that provides redirection
+# index, and many come preconfigured that way, but if yours doesn't
+# then you'll need an index.html file that provides redirection
 # to index.cgi. Setting $index_html to 1 below will allow
 # checksetup.pl to create one for you if it doesn't exist.
 # NOTE: checksetup.pl will not replace an existing file, so if you
 #       wish to have checksetup.pl create one for you, you must
-#       make sure that there isn't already an index.html
+#       make sure that index.html doesn't already exist
 $index_html = 0;
 
 
@@ -32,12 +32,12 @@ $interdiffbin = "@PREFIX@/bin/interdiff";
 
 #
 # The interdiff feature needs diff, so we have to have that path.
-# Please specify only the directory name, with no trailing slash.
+# Please specify the directory name only; do not use trailing slash.
 $diffpath = "/usr/bin";
 
 
 #
-# If you are using Apache for your web server, Bugzilla can create .htaccess
+# If you are using Apache as your web server, Bugzilla can create .htaccess
 # files for you that will instruct Apache not to serve files that shouldn't
 # be accessed from the web (like your local configuration data and non-cgi
 # executable files).  For this to work, the directory your Bugzilla
@@ -52,27 +52,42 @@ $create_htaccess = 1;
 
 
 #
-# This is the group your web server runs on.
+# This is the group your web server runs as.
 # If you have a windows box, ignore this setting.
 # If you do not have access to the group your web server runs under,
 # set this to "". If you do set this to "", then your Bugzilla installation
 # will be _VERY_ insecure, because some files will be world readable/writable,
 # and so anyone who can get local access to your machine can do whatever they
 # want. You should only have this set to "" if this is a testing installation
-# and you cannot set this up any other way. YOU HAVE BEEN WARNED.
-# If you set this to anything besides "", you will need to run checksetup.pl
+# and you cannot set this up any other way. YOU HAVE BEEN WARNED!
+# If you set this to anything other than "", you will need to run checksetup.pl
 # as root, or as a user who is a member of the specified group.
 $webservergroup = "@BZ_WEB_GROUP@";
 
 
 
 #
+# What SQL database to use. Default is mysql. List of supported databases
+# can be obtained by listing Bugzilla/DB directory - every module corresponds
+# to one supported database and the name corresponds to a driver name.
+#
+$db_driver = "mysql";
+
+
+
+#
 # How to access the SQL database:
 #
-$db_host = "localhost";         # where is the database?
-$db_port = 3306;           	# which port to use
-$db_name = "bugs";     		# name of the MySQL database
-$db_user = "user";         	# user to attach to the MySQL database
+$db_host = 'localhost';         # where is the database?
+$db_name = 'bugs';              # name of the SQL database
+$db_user = 'bugs';              # user to attach to the SQL database
+
+# Sometimes the database server is running on a non-standard
+# port. If that's the case for your database server, set this
+# to the port number that your database server is running on.
+# Setting this to 0 means "use the default port for my database
+# server."
+$db_port = 0;
 
 
 
@@ -80,108 +95,23 @@ $db_user = "user";         	# user to attach to the MySQL database
 # Enter your database password here. It's normally advisable to specify
 # a password for your bugzilla database user.
 # If you use apostrophe (') or a backslash (\) in your password, you'll
-# need to escape it by preceding it with a \ character. (\') or (\\)
+# need to escape it by preceding it with a '\' character. (\') or (\)
+# (Far simpler just not to use those characters.)
 #
-$db_pass = 'changemeplease';
+$db_pass = '';
 
 
 
-# Enter a path to the unix socket for mysql. If this is blank, then mysql's
-# compiled-in default will be used. You probably want that.
-$db_sock = '/tmp/mysql.sock';
+# MySQL Only: Enter a path to the unix socket for mysql. If this is 
+# blank, then mysql\'s compiled-in default will be used. You probably 
+# want that.
+$db_sock = '';
 
 
 
 #
-# Should checksetup.pl try to check if your MySQL setup is correct?
-# (with some combinations of MySQL/Msql-mysql/Perl/moonphase this doesn't work)
+# Should checksetup.pl try to verify that your database setup is correct?
+# (with some combinations of database servers/Perl modules/moonphase this 
+# doesn't work)
 #
 $db_check = 1;
-
-
-
-#
-# Which bug and feature-request severities do you want?
-#
-@severities = (
-        "blocker",
-        "critical",
-        "major",
-        "normal",
-        "minor",
-        "trivial",
-        "enhancement"
-);
-
-
-
-#
-# Which priorities do you want to assign to bugs and feature-request?
-#
-@priorities = (
-        "P1",
-        "P2",
-        "P3",
-        "P4",
-        "P5"
-);
-
-
-
-#
-# What operatings systems may your products run on?
-#
-@opsys = (
-        "All",
-        "Windows 3.1",
-        "Windows 95",
-        "Windows 98",
-        "Windows ME",  # Millenium Edition (upgrade of 98)
-        "Windows 2000",
-        "Windows NT",
-        "Windows XP",
-        "Windows Server 2003",
-        "Mac System 7",
-        "Mac System 7.5",
-        "Mac System 7.6.1",
-        "Mac System 8.0",
-        "Mac System 8.5",
-        "Mac System 8.6",
-        "Mac System 9.x",
-        "Mac OS X 10.0",
-        "Mac OS X 10.1",
-        "Mac OS X 10.2",
-        "Mac OS X 10.3",
-        "Linux",
-        "BSD/OS",
-        "FreeBSD",
-        "NetBSD",
-        "OpenBSD",
-        "AIX",
-        "BeOS",
-        "HP-UX",
-        "IRIX",
-        "Neutrino",
-        "OpenVMS",
-        "OS/2",
-        "OSF/1",
-        "Solaris",
-        "SunOS",
-        "other"
-);
-
-
-
-#
-# What hardware platforms may your products run on?
-#
-@platforms = (
-        "All",
-        "DEC",
-        "HP",
-        "Macintosh",
-        "PC",
-        "SGI",
-        "Sun",
-        "Other"
-);
