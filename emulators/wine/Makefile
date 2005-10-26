@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.92 2005/10/17 14:09:12 adam Exp $
+# $NetBSD: Makefile,v 1.93 2005/10/26 08:32:59 adam Exp $
 
-DISTNAME=	Wine-20050930
-PKGNAME=	${DISTNAME:S/W/w/}
+DISTNAME=	wine-0.9
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
-		http://www.ibiblio.org/pub/Linux/ALPHA/wine/development/ \
-		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
+		http://ibiblio.org/pub/linux/system/emulators/wine/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.winehq.com/
