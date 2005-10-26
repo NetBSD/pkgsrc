@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/10/26 03:42:21 minskim Exp $
+
+--- gofish.c.orig	Wed Dec 31 18:12:02 2003
++++ gofish.c
+@@ -209,7 +209,9 @@ setup_privs (void)
+ 			uid = pwd->pw_uid;
+ 		if(gid == (uid_t)-1)
+ 			gid = pwd->pw_gid;
++#ifdef HAVE_INITGROUPS
+ 		initgroups (pwd->pw_name, pwd->pw_gid);
++#endif
+ 	}
+ 
+ 	setgid(gid);
