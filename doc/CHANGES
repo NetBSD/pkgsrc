@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11663 2005/10/26 04:24:05 minskim Exp $
+$NetBSD: CHANGES,v 1.11664 2005/10/26 04:30:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4850,3 +4850,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/sudo to 1.6.8pl9nb1 [cube 2005-10-25]
 	Added net/gofish version 1.0 [minskim 2005-10-26]
 	Updated lang/tcl-itcl to 3.2.1 [minskim 2005-10-26]
+	Updated sysutils/tkdesk to 2.0 [minskim 2005-10-26]
