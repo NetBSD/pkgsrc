@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2005/10/12 21:22:08 reed Exp $
+# $NetBSD: Makefile,v 1.41 2005/10/26 15:43:08 adam Exp $
 
-DISTNAME=	ntop-3.1
-PKGREVISION=	4
+DISTNAME=	ntop-3.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 EXTRACT_SUFX=	.tgz
@@ -12,11 +11,9 @@ COMMENT=	Shows network usage (similar to "top" for processes)
 
 CONFLICTS=	ntop-[0-9]*
 
-WRKSRC=		${WRKDIR}/ntop
-
-USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gawk gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/ntop
