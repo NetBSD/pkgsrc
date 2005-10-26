@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.1 2005/10/26 15:58:54 minskim Exp $
+
+--- executer.cpp.orig	2005-01-27 01:27:53.000000000 +0100
++++ executer.cpp
+@@ -641,7 +641,8 @@ void Executer::execLeft( TreeNode* node 
+   GET_BINARY_OPERANDS
+   string val  = a->strVal;
+   int to      = (int) b->val;
+-  delete a,b;
++  delete a;
++  delete b;
+   runStack.pop();
+ 
+   if( ( to >= 0 ) && ( to < (int)val.size() ) ){
+@@ -658,7 +659,8 @@ void Executer::execRight( TreeNode* node
+   GET_BINARY_OPERANDS
+   string val  = a->strVal;
+   int to      = (int) b->val;
+-  delete a,b;
++  delete a;
++  delete b;
+   runStack.pop();
+ 
+   if( ( to >= 0 ) && ( to < (int)val.size() ) ){
+@@ -681,7 +683,8 @@ void Executer::execMid( TreeNode* node )
+   GET_BINARY_OPERANDS
+   string val  = a->strVal;
+   int    from = (int) b->val-1;
+-  delete a,b;
++  delete a;
++  delete b;
+   runStack.pop();
+ 
+   int to=0;
