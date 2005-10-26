@@ -1,62 +1,67 @@
-# $NetBSD: makevars.map,v 1.19 2005/10/24 23:54:37 rillig Exp $
+# $NetBSD: makevars.map,v 1.20 2005/10/26 23:17:49 rillig Exp $
 #
 
-# This file tries to guess the type of some variables, according to their
-# current use in pkgsrc. The type Boolean is nicer than Yes_Or_Undefined,
-# but most variables are only checked with defined(...) and not with an
-# additional !empty(...:M[Yy][Ee][Ss]). So we have to check both.
+# This file contains the guessed type of some variables, according to
+# their current use in pkgsrc.
 #
-# Beware: For the type Yes_Or_Undefined, even the value NO means YES.
+# The type YesNo is used for variables that are checked using
+#     .if defined(VAR) && !empty(VAR:M[Yy][Ee][Ss])
+#
+# The type Yes is used for variables that are checked using
+#     .if defined(VAR)
+#
+# Type type List is used for variables that should only be initialized
+# to the empty list or have some values appended using the "+=" operator.
 #
 # The type One_Of(...) is just used for explanation. It cannot yet be
 # checked by pkglint.
 
 # some variables from mk/defaults/mk.conf, 1.27
 
-MANZ			Yes_Or_Undefined
-MKCRYPTO		Boolean
-USETBL			Yes_Or_Undefined
+MANZ			Yes
+MKCRYPTO		YesNo
+USETBL			Yes
 #ABI			One_Of(32 64)
-IGNORE_RECOMMENDED	Boolean
-PKG_REGISTER_SHELLS	Boolean
-USE_XPKGWEDGE		Boolean
-LIBTOOLIZE_PLIST	Boolean
-EXTRACT_USING_PAX	Yes_Or_Undefined
-SETGIDGAME		Boolean
+IGNORE_RECOMMENDED	YesNo
+PKG_REGISTER_SHELLS	YesNo
+USE_XPKGWEDGE		YesNo
+LIBTOOLIZE_PLIST	YesNo
+EXTRACT_USING_PAX	Yes
+SETGIDGAME		YesNo
 
 #USE_CRYPTO		One_Of(YES NO)
-USE_CUPS		Yes_Or_Undefined
-USE_I586		Boolean
-USE_INET6		Boolean
-USE_INN			Yes_Or_Undefined
+USE_CUPS		Yes
+USE_I586		YesNo
+USE_INET6		YesNo
+USE_INN			Yes
 #USE_OPENLDAP		One_Of(YES NO)
-USE_OSS			Yes_Or_Undefined
+USE_OSS			Yes
 #USE_SASL		One_Of(YES NO)
 #USE_SASL2		One_Of(YES NO)
 #USE_SJ3		One_Of(YES NO)
 #USE_SOCKS		One_Of(4 5)
 #USE_WNN4		One_Of(YES NO)
-USE_XFACE		Boolean
+USE_XFACE		YesNo
 
 # some variables found in package Makefiles
 
-PKGREVISION		Integer
-GNU_CONFIGURE		Yes_Or_Undefined
+PKGREVISION		PkgRevision
+GNU_CONFIGURE		Yes
 HOMEPAGE		URL
 MAINTAINER		Mail_Address
-NO_CHECKSUM		Yes_Or_Undefined
-NO_CONFIGURE		Yes_Or_Undefined
-NO_BUILD		Yes_Or_Undefined
+NO_CHECKSUM		Yes
+NO_CONFIGURE		Yes
+NO_BUILD		Yes
 #USE_PERL5		One_Of(build run)
-USE_X11			Yes_Or_Undefined
-MANZ			Yes_Or_Undefined
-USE_LIBTOOL		Yes_Or_Undefined
-USE_PKGLOCALEDIR	Boolean
-NO_MTREE		Yes_Or_Undefined
-PKG_PRESERVE		Yes_Or_Undefined
-NO_PKGTOOLS_REQD_CHECK	Yes_Or_Undefined
-NO_PKG_REGISTER		Yes_Or_Undefined
-BUILD_USES_MSGFMT	Yes_Or_Undefined
+USE_X11			Yes
+MANZ			Yes
+USE_LIBTOOL		Yes
+USE_PKGLOCALEDIR	YesNo
+NO_MTREE		Yes
+PKG_PRESERVE		Yes
+NO_PKGTOOLS_REQD_CHECK	Yes
+NO_PKG_REGISTER		Yes
+BUILD_USES_MSGFMT	Yes
 
 DEPENDS			List of Dependency
 BUILD_DEPENDS		List of Dependency
