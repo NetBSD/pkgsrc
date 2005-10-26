@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2005/05/11 22:08:18 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2005/10/26 15:08:13 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -14,8 +14,11 @@ BUILDLINK_PACKAGES+=	openldap
 
 .if !empty(OPENLDAP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.openldap+=		openldap>=2.1.22
-BUILDLINK_RECOMMENDED.openldap+=	openldap>=2.2.18nb1
+BUILDLINK_RECOMMENDED.openldap+=	openldap>=2.3.11
 BUILDLINK_PKGSRCDIR.openldap?=		../../databases/openldap
+
+# Export the deprecated API from the openldap-2.2.x releases.
+BUILDLINK_CPPFLAGS.openldap+=		-DLDAP_DEPRECATED
 .endif	# OPENLDAP_BUILDLINK3_MK
 
 .if !defined(PKG_BUILD_OPTIONS.openldap)

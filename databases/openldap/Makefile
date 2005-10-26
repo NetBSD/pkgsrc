@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2005/08/19 19:59:59 reed Exp $
+# $NetBSD: Makefile,v 1.102 2005/10/26 15:08:13 jlam Exp $
 
-DISTNAME=	openldap-2.2.27
-PKGREVISION=	1
+DISTNAME=	openldap-2.3.11
 SVR4_PKGNAME=	oldap
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
@@ -9,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.OpenLDAP.org/
-COMMENT=	Lightweight directory access protocol server and client package
+COMMENT=	Lightweight Directory Access Protocol server and client
 
 CONFLICTS+=		ldapsdk-[0-9]*
 
@@ -42,16 +41,18 @@ CONFIGURE_ARGS+=	--enable-spasswd
 .endif
 CONFIGURE_ARGS+=	--enable-wrappers
 
-SLAPD_BACKEND_MODULES=	dnssrv ldap ldbm meta \
-			monitor:static null passwd shell
-.for _mod_ in ${SLAPD_BACKEND_MODULES}
-.  if !empty(PKG_OPTIONS:Mdynamic)
-CONFIGURE_ARGS+=	--enable-${_mod_:C/\:.*//}${_mod_:N*\:static:C/.*/=mod/}
-.  else
-CONFIGURE_ARGS+=	--enable-${_mod_:C/\:.*//}
-.  endif
-.endfor
-.undef _mod_
+# SLAPD backends
+CONFIGURE_ARGS+=	--enable-dnssrv
+CONFIGURE_ARGS+=	--enable-ldap
+CONFIGURE_ARGS+=	--enable-ldbm
+CONFIGURE_ARGS+=	--enable-meta
+CONFIGURE_ARGS+=	--enable-monitor
+CONFIGURE_ARGS+=	--enable-null
+CONFIGURE_ARGS+=	--enable-passwd
+CONFIGURE_ARGS+=	--enable-shell
+
+# SLAPD (stackable) overlays
+CONFIGURE_ARGS+=	--enable-overlays
 
 OPENLDAP_FILEPERMS=	${ROOT_USER} ${ROOT_GROUP} 0600
 OPENLDAP_DIRPERMS=	${ROOT_USER} ${ROOT_GROUP} 0700
@@ -61,11 +62,10 @@ EGDIR=			${PREFIX}/share/examples/openldap
 MAKE_DIRS=		${OPENLDAP_ETCDIR} ${OPENLDAP_ETCDIR}/schema
 OWN_DIRS=		${OPENLDAP_VARDIR} ${OPENLDAP_VARDIR}/run
 OWN_DIRS_PERMS=		${OPENLDAP_VARDIR}/openldap-data ${OPENLDAP_DIRPERMS}
-OWN_DIRS_PERMS+=	${OPENLDAP_VARDIR}/openldap-ldbm ${OPENLDAP_DIRPERMS}
 OWN_DIRS_PERMS+=	${OPENLDAP_VARDIR}/openldap-slurp ${OPENLDAP_DIRPERMS}
 
 CNFS=			ldap.conf ${CNFS_SCHEMAS_cmd:sh}
-CNFS_SCHEMAS_cmd=	${SED} -ne "/\.schema$$/{ s,share/examples/openldap/,,; p; }" ${PKGDIR}/PLIST
+CNFS_SCHEMAS_cmd=	${SED} -ne "/\.ldif$$/p;/\.schema$$/p" ${PKGDIR}/PLIST | ${SED} -e "s|share/examples/openldap/||"
 CNFS_PERMS=		slapd.conf
 
 CONF_FILES=		# empty
@@ -77,6 +77,9 @@ CONF_FILES+=		${EGDIR}/${FILE} ${OPENLDAP_ETCDIR}/${FILE}
 CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${OPENLDAP_ETCDIR}/${FILE}	\
 			${OPENLDAP_FILEPERMS}
 .endfor
+CONF_FILES_PERMS+=	${EGDIR}/DB_CONFIG				\
+			${OPENLDAP_VARDIR}/openldap-data/DB_CONFIG	\
+			${OPENLDAP_FILEPERMS}
 RCD_SCRIPTS=		slapd
 
 PTHREAD_OPTS+=		require
@@ -101,5 +104,6 @@ post-install:
 	${CHMOD} ${SHAREMODE} ${EGDIR}/${_file_}
 	${RM} -f ${EGDIR}/${_file_}.default
 .endfor
+	${CHMOD} ${SHAREMODE} ${EGDIR}/DB_CONFIG
 
 .include "../../mk/bsd.pkg.mk"

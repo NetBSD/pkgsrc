@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2005/08/01 09:49:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.24 2005/10/26 15:08:13 jlam Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -18,15 +18,6 @@ include/slapi-plugin.h
 lib/liblber.la
 lib/libldap.la
 lib/libldap_r.la
-${DYNAMIC_MOD}lib/openldap/back_dnssrv.la
-${DYNAMIC_MOD}${HDB_MODULE}lib/openldap/back_hdb.la
-${DYNAMIC_MOD}lib/openldap/back_ldap.la
-${DYNAMIC_MOD}lib/openldap/back_ldbm.la
-${DYNAMIC_MOD}lib/openldap/back_meta.la
-${DYNAMIC_MOD}lib/openldap/back_monitor.la
-${DYNAMIC_MOD}lib/openldap/back_null.la
-${DYNAMIC_MOD}lib/openldap/back_passwd.la
-${DYNAMIC_MOD}lib/openldap/back_shell.la
 libexec/slapd
 libexec/slurpd
 man/man1/ldapadd.1
@@ -122,11 +113,6 @@ man/man3/ldap_get_values.3
 man/man3/ldap_get_values_len.3
 man/man3/ldap_init.3
 man/man3/ldap_is_ldap_url.3
-man/man3/ldap_kerberos_bind1.3
-man/man3/ldap_kerberos_bind1_s.3
-man/man3/ldap_kerberos_bind2.3
-man/man3/ldap_kerberos_bind2_s.3
-man/man3/ldap_kerberos_bind_s.3
 man/man3/ldap_matchingrule2name.3
 man/man3/ldap_matchingrule2str.3
 man/man3/ldap_matchingrule_free.3
@@ -195,11 +181,13 @@ man/man5/slapd-dnssrv.5
 man/man5/slapd-hdb.5
 man/man5/slapd-ldap.5
 man/man5/slapd-ldbm.5
+man/man5/slapd-ldif.5
 man/man5/slapd-meta.5
 man/man5/slapd-monitor.5
 man/man5/slapd-null.5
 man/man5/slapd-passwd.5
 man/man5/slapd-perl.5
+man/man5/slapd-relay.5
 man/man5/slapd-shell.5
 man/man5/slapd-sql.5
 man/man5/slapd-tcl.5
@@ -207,7 +195,23 @@ man/man5/slapd.access.5
 man/man5/slapd.conf.5
 man/man5/slapd.plugin.5
 man/man5/slapd.replog.5
+man/man5/slapo-accesslog.5
+man/man5/slapo-auditlog.5
+man/man5/slapo-chain.5
+man/man5/slapo-dynlist.5
+man/man5/slapo-lastmod.5
+man/man5/slapo-pcache.5
+man/man5/slapo-ppolicy.5
+man/man5/slapo-refint.5
+man/man5/slapo-retcode.5
+man/man5/slapo-rwm.5
+man/man5/slapo-syncprov.5
+man/man5/slapo-translucent.5
+man/man5/slapo-unique.5
+man/man5/slapo-valsort.5
+man/man8/slapacl.8
 man/man8/slapadd.8
+man/man8/slapauth.8
 man/man8/slapcat.8
 man/man8/slapd.8
 man/man8/slapdn.8
@@ -215,15 +219,19 @@ man/man8/slapindex.8
 man/man8/slappasswd.8
 man/man8/slaptest.8
 man/man8/slurpd.8
+sbin/slapacl
 sbin/slapadd
+sbin/slapauth
 sbin/slapcat
 sbin/slapdn
 sbin/slapindex
 sbin/slappasswd
 sbin/slaptest
+share/examples/openldap/DB_CONFIG
 share/examples/openldap/ldap.conf
 share/examples/openldap/schema/README
 share/examples/openldap/schema/corba.schema
+share/examples/openldap/schema/core.ldif
 share/examples/openldap/schema/core.schema
 share/examples/openldap/schema/cosine.schema
 share/examples/openldap/schema/dyngroup.schema
@@ -231,19 +239,12 @@ share/examples/openldap/schema/inetorgperson.schema
 share/examples/openldap/schema/java.schema
 share/examples/openldap/schema/misc.schema
 share/examples/openldap/schema/nis.schema
+share/examples/openldap/schema/openldap.ldif
 share/examples/openldap/schema/openldap.schema
+share/examples/openldap/schema/ppolicy.schema
 share/examples/openldap/slapd.conf
 share/examples/rc.d/slurpd
 share/examples/rc.d/slapd
-share/openldap/ucdata/case.dat
-share/openldap/ucdata/cmbcl.dat
-share/openldap/ucdata/comp.dat
-share/openldap/ucdata/ctype.dat
-share/openldap/ucdata/decomp.dat
-share/openldap/ucdata/kdecomp.dat
-share/openldap/ucdata/num.dat
-@dirrm share/openldap/ucdata
 @dirrm share/openldap
 @dirrm share/examples/openldap/schema
 @dirrm share/examples/openldap
-${DYNAMIC_MOD}@dirrm lib/openldap
