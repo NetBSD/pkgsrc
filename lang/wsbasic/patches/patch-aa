@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/19 03:36:03 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2005/10/26 21:38:30 minskim Exp $
 
 --- Makefile.orig	2005-01-28 02:40:58.000000000 +0100
 +++ Makefile
@@ -8,5 +8,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/10/19 03:36:03 minskim Exp $
  FLAGS       = -O2 -Wall #-D_DEBUG_
 +FLAGS      += $(CXXFLAGS)
  INSTALL_DIR = /usr/local/bin/
- RELEASE	    = 1_2_4
+ RELEASE	    = 1_2_5
  
