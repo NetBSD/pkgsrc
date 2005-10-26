@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/10/19 23:43:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/10/26 02:12:45 wiz Exp $
 
 DISTNAME=	Finance-Quote-1.10
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://finance-quote.sourceforge.net/
 COMMENT=	Perl module to get stock quotes from Yahoo
 
-DEPENDS+=	p5-HTML-TableExtract-1.*:../../www/p5-HTML-TableExtract
+DEPENDS+=	p5-HTML-TableExtract>=1.0:../../www/p5-HTML-TableExtract
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
 
 CONFLICTS=	p5-finance-quote-[0-9]*
