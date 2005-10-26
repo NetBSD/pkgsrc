@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/23 14:38:30 mrauch Exp $
+# $NetBSD: Makefile,v 1.7 2005/10/26 11:56:12 tv Exp $
 
 PKGNAME=		openoffice-bin-2.0.0
 PKGREVISION=		1
@@ -93,7 +93,7 @@ do-install:
 	${RM} -f ${WRKDIR}/PLIST.nouniq
 	${RPM2PKG} ${RPM2PKGARGS} ${WRKSRC}/*.rpm
 	uniq ${WRKDIR}/PLIST.nouniq >${WRKDIR}/PLIST
-.if !empty(PKG_JVM)
+.if defined(PKG_JVM) && !empty(PKG_JVM)
 	${RM} -f ${PREFIX}/bin/soffice
 	${SED}  -e "s|@@PREFIX@@|${PREFIX}|g" -e "s|@@OO_VER@@|${OO_VER}|g" \
 		-e "s|@@JAVA_HOME@@|${PKG_JAVA_HOME}|g" \
