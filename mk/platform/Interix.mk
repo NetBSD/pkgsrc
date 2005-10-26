@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.40 2005/10/26 16:56:33 tv Exp $
+# $NetBSD: Interix.mk,v 1.41 2005/10/26 16:57:46 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -32,9 +32,6 @@
 # ruby18	0x50000000	0x6fffffff	0x00040000	2048
 #   (main lib)	0x48000000
 # zsh		*
-
-BULK_PREREQ+=	converters/libiconv devel/gettext-lib pkgtools/pkg_install-info
-BULK_PREREQ+=	lang/gawk
 
 # "catinstall" not yet supported as there's no shipped [gn]roff
 MANINSTALL=	maninstall
