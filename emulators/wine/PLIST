@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2005/10/10 08:32:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2005/10/26 08:32:59 adam Exp $
 bin/function_grep.pl
 bin/msiexec
 bin/notepad
@@ -245,10 +245,10 @@ include/wine/windows/mssip.h
 include/wine/windows/mswsock.h
 include/wine/windows/msxml.h
 include/wine/windows/msxml.idl
-include/wine/windows/msxmldid.h
 include/wine/windows/msxml2.h
 include/wine/windows/msxml2.idl
 include/wine/windows/msxml2did.h
+include/wine/windows/msxmldid.h
 include/wine/windows/nb30.h
 include/wine/windows/npapi.h
 include/wine/windows/nspapi.h
@@ -305,6 +305,7 @@ include/wine/windows/schemadef.h
 include/wine/windows/schnlsp.h
 include/wine/windows/sddl.h
 include/wine/windows/secext.h
+include/wine/windows/security.h
 include/wine/windows/sensapi.h
 include/wine/windows/sensevts.h
 include/wine/windows/sensevts.idl
