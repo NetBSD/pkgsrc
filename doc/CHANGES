@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11674 2005/10/26 21:38:51 minskim Exp $
+$NetBSD: CHANGES,v 1.11675 2005/10/26 23:19:30 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4861,3 +4861,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/heimdal to 0.7.1nb1 [jlam 2005-10-26]
 	Updated audio/toolame to 02lnb1 [joerg 2005-10-26]
 	Updated lang/wsbasic to 1.2.5 [minskim 2005-10-26]
+	Updated pkgtools/pkglint to 4.31 [rillig 2005-10-26]
