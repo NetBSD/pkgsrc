@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2001/05/01 16:13:54 jtb Exp $
+$NetBSD: patch-ab,v 1.3 2005/10/26 04:22:38 minskim Exp $
 
 --- itcl/Makefile.in.orig	Tue Aug 29 03:58:00 2000
 +++ itcl/Makefile.in
@@ -50,7 +50,7 @@ $NetBSD: patch-ab,v 1.2 2001/05/01 16:13:54 jtb Exp $
 +SHLIB_LD = ${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib
  SHLIB_LDFLAGS = @SHLIB_LDFLAGS@
 -SHLIB_LD_LIBS = @SHLIB_LD_LIBS@
-+SHLIB_LD_LIBS = -Wl,-R${PREFIX}/lib -L${PREFIX}/lib -ltcl83 -lm
++SHLIB_LD_LIBS = -Wl,-R${PREFIX}/lib -L${PREFIX}/lib -ltcl -lm
  STLIB_LD = @STLIB_LD@
  TCL_BIN_DIR = @TCL_BIN_DIR@
  TCL_DEFS = @TCL_DEFS@
