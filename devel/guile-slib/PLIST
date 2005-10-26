@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/03 15:51:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/10/26 09:20:19 adam Exp $
 share/guile/slibcat
-@exec	ln -sf %D/share/slib %D/share/guile/slib
-@unexec	rm -f %D/share/guile/slib
+@exec ${LN} -sf %D/share/slib %D/share/guile/slib
+@unexec	${RM} -f %D/share/guile/slib
