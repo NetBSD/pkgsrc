@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/09/09 18:30:01 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.66 2005/10/26 04:09:37 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
 
 SCIBASE=	scilab-3.1.1
+# don't forget to update SCI and SCIVERSION in the buildlink3.mk file when
+# SCIBASE is updated.
 WRKSRC=		${WRKDIR}/${SCIBASE}
 
 #needs FPC code not found in older versions of NetBSD
