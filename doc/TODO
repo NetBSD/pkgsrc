@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4097 2005/10/25 18:47:14 drochner Exp $
+$NetBSD: TODO,v 1.4098 2005/10/26 06:20:53 taca Exp $
 
 Suggested new packages
 ======================
@@ -1136,7 +1136,7 @@ Suggested package updates
 	o ruby-opengl-0.32g
 	o ruby-redcloth-3.0.4
 	o ruby-rexml-3.1.3
-	o ruby-rttool-1.1.1
+	o ruby-rttool-1.0.0
 	o ruby-syck-0.55
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
