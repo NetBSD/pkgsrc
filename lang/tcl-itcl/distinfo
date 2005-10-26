@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:03:12 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/10/26 04:22:38 minskim Exp $
 
-SHA1 (itcl3.2.tar.gz) = 9e51a309414d4894f2bc7b33a1c44b51c7e1dbd5
-RMD160 (itcl3.2.tar.gz) = dcbea3d5f2c33069e7b654ab70eecd871d306fe4
-Size (itcl3.2.tar.gz) = 1498517 bytes
-SHA1 (patch-aa) = eb96c474ecb44129eba14434e9553def093b4128
-SHA1 (patch-ab) = 4644c9e271a37502fbd51477340a47f4d0ecf8fe
-SHA1 (patch-ac) = ae91e2aefe7d8c3ab3d000b8e1d2405aebc046d6
-SHA1 (patch-ad) = 2f61ebe7d8c4062426d1a79d93ef544b0b46c856
-SHA1 (patch-ae) = e7ebc0443bc4fae29ce67909d8e35e9f65a0ef69
-SHA1 (patch-af) = ca6609bd91fb3e94ec637d50568e5116b83c870a
-SHA1 (patch-ag) = 5b21951b82de53875efd5289dd87abae8bb11073
-SHA1 (patch-ah) = 58985a1b21625fc00dbbfe4e793dcbb2f7ef2929
+SHA1 (itcl3.2.1_src.tgz) = 890f56e61826a9c3522fb24bf3c08f73cea8a1dd
+RMD160 (itcl3.2.1_src.tgz) = 6a6bbc5596e3c7b8bfd6783533d26d07b1c3a7c1
+Size (itcl3.2.1_src.tgz) = 427026 bytes
+SHA1 (patch-aa) = 5357555498f874a5d90de6451847e50df167ab9f
+SHA1 (patch-ab) = f78dd17f2da70187a1b8aca0f484a6813876625c
+SHA1 (patch-ac) = 7885a8d126449068f3af7e748193b2cdf3051fce
+SHA1 (patch-ad) = 9131b2aa318410100f5477a70a7ce5221133f49b
+SHA1 (patch-ae) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-af) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-ag) = 3d12b3a2cf0cd35c39f622cf8f9b4872772c12c6
+SHA1 (patch-ah) = cb47b46d9762d29bbc5b7ba5ae7d3889cd1a0327
