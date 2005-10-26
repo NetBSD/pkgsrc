@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2005/10/26 09:20:19 adam Exp $
+# $NetBSD: Makefile,v 1.29 2005/10/26 13:03:08 gdt Exp $
 
 DISTNAME=	guile-slib-3.1.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -23,7 +24,7 @@ do-install:
 	${RM} -f ${PREFIX}/share/guile/slibcat
 	cd ${PREFIX}/share/guile/slib; \
 		guile -q -l guile.init -c \
-			"(use-modules (ice-9 slib)) (require 'new-catalog)"
+			"(require 'new-catalog)"
 
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
