@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11672 2005/10/26 16:44:38 jlam Exp $
+$NetBSD: CHANGES,v 1.11673 2005/10/26 17:31:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4859,3 +4859,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/heimdal to 0.7.1 [jlam 2005-10-26]
 	Updated net/ntop to 3.2 [adam 2005-10-26]
 	Updated security/heimdal to 0.7.1nb1 [jlam 2005-10-26]
+	Updated audio/toolame to 02lnb1 [joerg 2005-10-26]
