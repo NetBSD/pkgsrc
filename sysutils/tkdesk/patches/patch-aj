@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2002/07/03 09:27:01 dmcmahill Exp $
+$NetBSD: patch-aj,v 1.2 2005/10/26 04:29:01 minskim Exp $
 
---- libdesk/tixImgXpm.c.orig	Sun Nov 14 16:07:47 1999
-+++ libdesk/tixImgXpm.c	Sun Sep  2 22:41:43 2001
-@@ -156,7 +156,7 @@
+--- libdesk/tixImgXpm.c.orig	2004-04-13 21:32:20.000000000 -0500
++++ libdesk/tixImgXpm.c
+@@ -156,7 +156,7 @@ typedef struct PixmapInstance {
   */
  
  static int		ImgXpmCreate _ANSI_ARGS_((Tcl_Interp *interp,
@@ -11,16 +11,16 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/07/03 09:27:01 dmcmahill Exp $
  			    Tk_ImageType *typePtr, Tk_ImageMaster master,
  			    ClientData *clientDataPtr));
  static ClientData	ImgXpmGet _ANSI_ARGS_((Tk_Window tkwin,
-@@ -176,7 +176,7 @@
-     ImgXpmDisplay,		/* displayProc */
+@@ -177,7 +177,7 @@ Tk_ImageType tixPixmapImageType = {
      ImgXpmFree,			/* freeProc */
      ImgXpmDelete,		/* deleteProc */
--    (Tk_ImageType *) NULL	/* nextPtr */
-+    /*	(Tk_ImageType *) NULL	*//* nextPtr */
+     (Tk_ImagePostscriptProc *) NULL, /* postscriptProc ?? */
+-    (struct Tk_ImageType *) NULL /* nextPtr */
++    /* (struct Tk_ImageType *) NULL *//* nextPtr */
  };
  
  /*
-@@ -241,12 +241,12 @@
+@@ -242,12 +242,12 @@ static int xpmTableInited = 0;
   *----------------------------------------------------------------------
   */
  static int
@@ -36,7 +36,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/07/03 09:27:01 dmcmahill Exp $
  				 * include image name or type). */
      Tk_ImageType *typePtr;	/* Pointer to our type record (not used). */
      Tk_ImageMaster master;	/* Token for image, to be used by us in
-@@ -256,6 +256,13 @@
+@@ -257,6 +257,13 @@ ImgXpmCreate(interp, name, argc, argv, t
  {
      PixmapMaster *masterPtr;
  
@@ -50,7 +50,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/07/03 09:27:01 dmcmahill Exp $
      masterPtr = (PixmapMaster *) ckalloc(sizeof(PixmapMaster));
      masterPtr->tkMaster = master;
      masterPtr->interp = interp;
-@@ -269,10 +276,11 @@
+@@ -270,10 +277,11 @@ ImgXpmCreate(interp, name, argc, argv, t
      masterPtr->isDataAlloced = 0;
      masterPtr->instancePtr = NULL;
  
