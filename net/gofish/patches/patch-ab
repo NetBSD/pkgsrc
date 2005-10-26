@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/10/26 03:42:21 minskim Exp $
+
+--- configure.in.orig	Sun May 25 03:52:57 2003
++++ configure.in
+@@ -44,6 +44,9 @@ AC_FUNC_STRFTIME
+ AC_CHECK_FUNCS(gethostname select socket strdup strerror strstr strtol uname)
+ AC_CHECK_FUNCS(writev daemon)
+ 
++dnl Interix does not have initgroups
++AC_CHECK_FUNCS(initgroups)
++
+ dnl poll does not work on the arm
+ dnl if this goes, AC_CANONICAL_HOST and the files
+ dnl config.sub and config.guess can go
