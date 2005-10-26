@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2005/10/25 01:17:57 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2005/10/26 15:12:45 jlam Exp $
 
-DISTNAME=	heimdal-0.6.5
-PKGREVISION=	2
+DISTNAME=	heimdal-0.7.1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.pdc.kth.se/pub/heimdal/src/	\
 		ftp://ftp.sunet.se/pub/unix/admin/mirror-pdc/heimdal/src/
@@ -16,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison
+MAKE_ENV+=		INSTALL_CATPAGES=no
 
 HEIMDAL_STATEDIR?=	${VARBASE}/heimdal
 
@@ -25,8 +25,9 @@ CONFIGURE_ARGS+=	--localstatedir=${HEIMDAL_STATEDIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/krb5
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-krb4
+CONFIGURE_ARGS+=	--enable-kcm
 
-CFLAGS.Darwin+= -DBIND_8_COMPAT
+CFLAGS.Darwin+=		-DBIND_8_COMPAT
 
 # Though Solaris has a <vis.h> header, it does something very unrelated
 # to the BSD <vis.h> header.
@@ -39,28 +40,30 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 # <readline.h>.
 #
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
-BUILDLINK_INCDIRS.readline=	include/readline
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
 BROKEN_READLINE_DETECTION=	yes
 .include "../../devel/readline/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
-USE_OLD_DES_API=	yes
 .include "../../security/openssl/buildlink3.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal
-PKG_SUPPORTED_OPTIONS=	db4 ldap kerberos-prefix-cmds
+PKG_SUPPORTED_OPTIONS=	kerberos-prefix-cmds ldap
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mdb4)
-.  include "../../databases/db4/buildlink3.mk"
-.else
-.  include "../../mk/bdb.buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
+PLIST_SUBST+=		LDAP=""
+
+post-install: heimdal-ldap-schema
+heimdal-ldap-schema:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/heimdal
+	${INSTALL_DATA} ${WRKSRC}/lib/hdb/hdb.schema			\
+		${PREFIX}/share/examples/heimdal
+.else
+PLIST_SUBST+=		LDAP="@comment "
 .endif
 
 # Rename some of Heimdal's applications so they won't conflict with
@@ -84,7 +87,8 @@ CONFIGURE_ARGS+=	--program-transform-name="${HEIMDAL_TRANSFORM}"
 
 USE_PKGINSTALL=		yes
 OWN_DIRS_PERMS=		${HEIMDAL_STATEDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
-RCD_SCRIPTS=		kdc
+SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
+RCD_SCRIPTS=		kadmind kcm kdc kpasswdd
 INFO_FILES=		heimdal.info
 
 # Fix some places in the Heimdal sources that don't point to the correct
@@ -100,6 +104,8 @@ SUBST_SED.heimdal=							\
 	-e "/PATH_RSH/s,\"/usr/bin/rsh\",BINDIR \"${KRB5_PREFIX}rsh\",g" \
 	-e "/PATH_RSH/s,/rsh,/${KRB5_PREFIX}rsh,g"			\
 	-e "/PATH_LOGIN/s,/login,/${KRB5_PREFIX}login,g"
+
+.include "../../mk/bdb.buildlink3.mk"
 
 pre-configure:
 	cd ${WRKSRC}; for f in lib/hdb/hdb.h; do			\
