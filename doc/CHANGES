@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11662 2005/10/26 03:45:47 minskim Exp $
+$NetBSD: CHANGES,v 1.11663 2005/10/26 04:24:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4849,3 +4849,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/yacas to 1.0.59 [drochner 2005-10-25]
 	Updated security/sudo to 1.6.8pl9nb1 [cube 2005-10-25]
 	Added net/gofish version 1.0 [minskim 2005-10-26]
+	Updated lang/tcl-itcl to 3.2.1 [minskim 2005-10-26]
