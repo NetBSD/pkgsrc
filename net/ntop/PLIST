@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/06 11:52:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/10/26 15:43:08 adam Exp $
 bin/ntop
 lib/libicmpPlugin-${PKGVERSION}.so
 lib/libicmpPlugin.a
@@ -36,20 +36,11 @@ lib/ntop/plugins/sflowPlugin.so
 lib/ntop/plugins/snmpPlugin.so
 lib/ntop/plugins/xmldumpPlugin.so
 man/man8/ntop.8
-share/ntop/html/About.html
-share/ntop/html/Admin.html
-share/ntop/html/All.html
-share/ntop/html/Copyright.html
-share/ntop/html/FibreChannel.html
-share/ntop/html/IP.html
 share/ntop/html/JSCookMenu.js
-share/ntop/html/Local.html
 share/ntop/html/Risk_high.gif
 share/ntop/html/Risk_low.gif
 share/ntop/html/Risk_medium.gif
 share/ntop/html/Risk_unknown.gif
-share/ntop/html/SCSI.html
-share/ntop/html/Summary.html
 share/ntop/html/antenna.gif
 share/ntop/html/arrow.gif
 share/ntop/html/arrow_down.gif
@@ -94,7 +85,6 @@ share/ntop/html/gray_bg.gif
 share/ntop/html/help.html
 share/ntop/html/help.png
 share/ntop/html/hostSortNote.html
-share/ntop/html/index.html
 share/ntop/html/info.gif
 share/ntop/html/initiator.gif
 share/ntop/html/lock.png
@@ -107,6 +97,7 @@ share/ntop/html/menuline.png
 share/ntop/html/minor.gif
 share/ntop/html/modifyUser.gif
 share/ntop/html/multihomed.gif
+share/ntop/html/multivlaned.gif
 share/ntop/html/nboxLogo.gif
 share/ntop/html/ntop.gif
 share/ntop/html/ntop.html
@@ -114,6 +105,7 @@ share/ntop/html/ntop_logo.gif
 share/ntop/html/ntopdump.dtd
 share/ntop/html/ntophelp.html
 share/ntop/html/p2p.gif
+share/ntop/html/phone.gif
 share/ntop/html/pie-error.png
 share/ntop/html/printer.gif
 share/ntop/html/privacyNotice.html
@@ -385,3 +377,4 @@ share/ntop/ntop/specialMAC.txt.gz
 @dirrm lib/plugins
 @dirrm lib/ntop/plugins
 @dirrm lib/ntop
+@exec ${MKDIR} %D/lib/plugins
