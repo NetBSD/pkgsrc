@@ -1,10 +1,12 @@
-# $NetBSD: builtin.mk,v 1.5 2005/06/09 06:07:29 jlam Exp $
+# $NetBSD: builtin.mk,v 1.6 2005/10/26 15:12:45 jlam Exp $
 
 BUILTIN_PKG:=	heimdal
 
-BUILTIN_FIND_FILES_VAR:=	H_HEIMDAL
-BUILTIN_FIND_FILES.H_HEIMDAL=	/usr/include/krb5/krb5.h
-BUILTIN_FIND_GREP.H_HEIMDAL=	heimdal_version
+BUILTIN_FIND_FILES_VAR:=		H_HEIMDAL SH_KRB5_CONFIG
+BUILTIN_FIND_FILES.H_HEIMDAL=		/usr/include/krb5/krb5.h
+BUILTIN_FIND_GREP.H_HEIMDAL=		heimdal_version
+BUILTIN_FIND_FILES.SH_KRB5_CONFIG=	/usr/bin/krb5-config
+BUILTIN_FIND_GREP.SH_KRB5_CONFIG=	^[ 	]*--version)
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -26,8 +28,12 @@ MAKEVARS+=	IS_BUILTIN.heimdal
 ###
 .if !defined(BUILTIN_PKG.heimdal) && \
     !empty(IS_BUILTIN.heimdal:M[yY][eE][sS])
+.  if exists(${SH_KRB5_CONFIG})
+BUILTIN_VERSION.heimdal!=	${SH_KRB5_CONFIG} --version |		\
+				${AWK} '{ print $$2; exit }'
+.  else
 #
-# heimdal<=0.6 doesn't have a method of checking the headers to discover
+# heimdal<=0.6.x doesn't have a method of checking files to discover
 # the version number of the software.  Match up heimdal versions with
 # OS versions for an approximate determination of the heimdal version.
 #
@@ -43,14 +49,15 @@ _BLTN_HEIMDAL_0.4e=	NetBSD-1.6[A-H]-*				\
 _BLTN_HEIMDAL_0.3f=	NetBSD-1.5X-*
 _BLTN_HEIMDAL_0.3e=	NetBSD-1.5[UVW]-*				\
 			NetBSD-1.5.*-*
-.  for _heimdal_version_ in ${_BLTN_HEIMDAL_VERSIONS}
-.    for _pattern_ in ${_BLTN_HEIMDAL_${_heimdal_version_}}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+.    for _heimdal_version_ in ${_BLTN_HEIMDAL_VERSIONS}
+.      for _pattern_ in ${_BLTN_HEIMDAL_${_heimdal_version_}}
+.        if !empty(MACHINE_PLATFORM:M${_pattern_})
 BUILTIN_VERSION.heimdal?=	${_heimdal_version_}
-.      endif
+.        endif
+.      endfor
 .    endfor
-.  endfor
 BUILTIN_VERSION.heimdal?=	0.2t
+.  endif
 BUILTIN_PKG.heimdal=		heimdal-${BUILTIN_VERSION.heimdal}
 .endif
 MAKEVARS+=	BUILTIN_PKG.heimdal

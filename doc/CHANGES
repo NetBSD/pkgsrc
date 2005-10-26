@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11669 2005/10/26 15:08:32 jlam Exp $
+$NetBSD: CHANGES,v 1.11670 2005/10/26 15:13:03 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4856,3 +4856,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/guile-slib to 3.1.2 [adam 2005-10-26]
 	Updated devel/bugzilla to 2.20 [adrianp 2005-10-26]
 	Updated databases/openldap to 2.3.11 [jlam 2005-10-26]
+	Updated security/heimdal to 0.7.1 [jlam 2005-10-26]
