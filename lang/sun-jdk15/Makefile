@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2005/10/11 18:07:48 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/27 22:57:27 tv Exp $
 
 DISTNAME=	jdk-1_5_0_05-linux-i586
 PKGNAME=	sun-jdk15-5.0.5
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
-COMMENT=	Sun's Java(tm) 2 SDK, Standard Edition 1.5.0
-
-SHORT=		SDK
+SHORT_NAME=	JDK
 
 DEPENDS=	${PKGNAME_NOREV:S/jdk/jre/}*:../../lang/sun-jre15
 
