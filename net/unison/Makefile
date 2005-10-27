@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2005/09/27 14:46:08 tonio Exp $
+# $NetBSD: Makefile,v 1.29 2005/10/27 12:54:06 tonio Exp $
 
 DISTNAME=	unison-2.13.16
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/
 
@@ -36,12 +37,10 @@ MAKE_FLAGS+=	THREADS=true
 INSTALLATION_DIRS=	bin
 
 post-install:
-		@cd ${WRKSRC} && ./unison -doc install > INSTALL
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/BUGS.txt ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/CONTRIB ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/doc/unison
-		${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/NEWS ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/unison
 		${INSTALL_MAN} ${WRKSRC}/ROADMAP.txt ${PREFIX}/share/doc/unison
