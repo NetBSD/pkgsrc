@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/10/26 13:16:55 dmcmahill Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/10/27 12:15:31 dmcmahill Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OCTAVE_FORGE_BUILDLINK3_MK:=	${OCTAVE_FORGE_BUILDLINK3_MK}+
@@ -15,6 +15,6 @@ BUILDLINK_DEPENDS.octave-forge+=	octave-forge>=2005.06.13
 BUILDLINK_PKGSRCDIR.octave-forge?=	../../math/octave-forge
 .endif	# OCTAVE_FORGE_BUILDLINK3_MK
 
-.include "../../math/octave-current/buildlink3.mk"
+.include "../../math/octave/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
