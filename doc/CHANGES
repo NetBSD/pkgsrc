@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11678 2005/10/27 13:00:03 tonio Exp $
+$NetBSD: CHANGES,v 1.11679 2005/10/27 19:52:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4866,3 +4866,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated converters/bibtex2html to 1.76 [tonio 2005-10-27]
 	Updated net/unison to 2.13.16nb1 [tonio 2005-10-27]
 	Updated net/unison-devel to 2.17.1nb1 [tonio 2005-10-27]
+	Added mail/dkim-milter version 0.1.1 [minskim 2005-10-27]
