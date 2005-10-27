@@ -1,20 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/02/24 11:03:22 bad Exp $
+$NetBSD: patch-ac,v 1.2 2005/10/27 22:09:23 bad Exp $
 
---- src/gui/utils.cpp.orig	Fri Dec  3 05:42:09 2004
-+++ src/gui/utils.cpp	Thu Feb 24 00:25:02 2005
-@@ -244,7 +244,15 @@
-     int sn1  = file.findRev('/',-1);
-     int sn2  = file.findRev('\\',-1);
-     int sn   = (sn1>=0)?sn1:sn2;
-+#if 0
-     QString dir = (sn<0) ? "./" : file.left( sn );
-+#else
-+    QString dir;
-+    if(sn<0)
-+	dir = "./";
-+    else
-+	dir = file.left( sn );
-+#endif
+--- src/gui/platforms.cpp.orig	2005-09-13 06:55:41.000000000 +0200
++++ src/gui/platforms.cpp	2005-10-27 22:56:42.000000000 +0200
+@@ -132,7 +132,7 @@
+     {
+         if (platform=="pix" || platform=="fwsm") 
+         {
+-            QString lst=Resources::platform_res[platform]->getResourceStr(
++            QString lst=Resources::platform_res[(std::string)platform]->getResourceStr(
+                 "/FWBuilderResources/Target/versions").c_str();
  
- #ifdef _WIN32
- /* on windows, if directory is in the root of the drive (like "c:"),
+             QStringList ll=QStringList::split(',', lst);
