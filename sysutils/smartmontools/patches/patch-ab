@@ -1,10 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2005/09/07 07:32:10 martin Exp $
+$NetBSD: patch-ab,v 1.6 2005/10/27 21:36:13 kristerw Exp $
 
 --- os_netbsd.c.orig	2004-04-20 06:53:26.000000000 +0200
 +++ os_netbsd.c	2005-09-06 23:02:45.000000000 +0200
-@@ -21,4 +21,5 @@
- #include "scsicmds.h"
- #include "utility.h"
+@@ -23,2 +23,3 @@
  #include "os_netbsd.h"
 +#include <unistd.h>
  
