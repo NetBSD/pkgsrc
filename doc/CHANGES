@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11675 2005/10/26 23:19:30 rillig Exp $
+$NetBSD: CHANGES,v 1.11676 2005/10/27 08:11:29 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4862,3 +4862,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/toolame to 02lnb1 [joerg 2005-10-26]
 	Updated lang/wsbasic to 1.2.5 [minskim 2005-10-26]
 	Updated pkgtools/pkglint to 4.31 [rillig 2005-10-26]
+	Updated wm/windowmaker to 0.92.0nb3 [joerg 2005-10-27]
