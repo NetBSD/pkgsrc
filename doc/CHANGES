@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11679 2005/10/27 19:52:13 minskim Exp $
+$NetBSD: CHANGES,v 1.11680 2005/10/27 22:11:13 bad Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4867,3 +4867,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/unison to 2.13.16nb1 [tonio 2005-10-27]
 	Updated net/unison-devel to 2.17.1nb1 [tonio 2005-10-27]
 	Added mail/dkim-milter version 0.1.1 [minskim 2005-10-27]
+	Updated security/libfwbuilder to 2.0.9 [bad 2005-10-28]
+	Updated security/fwbuilder to 2.0.9 [bad 2005-10-28]
