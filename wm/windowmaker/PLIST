@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/09/27 13:48:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/10/27 08:10:08 joerg Exp $
 bin/convertfonts
 bin/get-wings-flags
 bin/get-wraster-flags
@@ -345,6 +345,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/WindowMaker.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/WPrefs.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/WindowMaker.mo
 @dirrm share/doc/WindowMaker
+@dirrm share/examples/WindowMaker
 @dirrm share/WindowMaker/Themes
 @dirrm share/WindowMaker/Styles
 @dirrm share/WindowMaker/SoundSets
