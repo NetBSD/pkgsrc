@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.19 2005/09/21 20:37:01 tv Exp $
+# $NetBSD: DragonFly.mk,v 1.20 2005/10/27 22:39:58 tv Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -54,7 +54,7 @@ _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
-_OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
+_OPSYS_SHLIB_TYPE=	ELF	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -z 	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
