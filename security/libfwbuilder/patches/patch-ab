@@ -1,18 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2005/02/24 10:59:56 bad Exp $
+$NetBSD: patch-ab,v 1.3 2005/10/27 22:09:23 bad Exp $
 
---- qmake.inc.in.orig	Wed Sep  8 07:34:44 2004
-+++ qmake.inc.in	Wed Dec 15 17:36:00 2004
-@@ -43,12 +43,10 @@
+--- qmake.inc.in.orig	2005-04-26 09:16:02.000000000 +0200
++++ qmake.inc.in	2005-10-27 21:59:46.000000000 +0200
+@@ -27,11 +27,9 @@
  	migration.path          =$(DDIR)@TEMPLATE_DIR@/migration
  	doc.path                =$(DDIR)@DOCDIR@
  
 -	CONFIG                 += warn_on debug
 +	CONFIG                 += warn_on
- 	INCLUDEPATH            += /usr/include @XML_CFLAGS_Q@ @XSLT_CFLAGS_Q@ @PTHREAD_CFLAGS_Q@ @OPENSSL_CFLAGS_Q@ @LWRES_CFLAGS_Q@
  	QMAKE_CFLAGS_DEBUG     += -Wno-unused-parameter
 -	QMAKE_CFLAGS_RELEASE   += -Wno-unused-parameter
  	QMAKE_CXXFLAGS_DEBUG   += -Wno-unused-parameter
 -	QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
- 	LIBS                   += @PTHREAD_LIBS@ @XML_LIBS@ @XSLT_LIBS@ @OPENSSL_LIBS@ @LIBSNMP_LIBS@ @LWRES_LIBS@ @LIBS@
+ }
  }
  
