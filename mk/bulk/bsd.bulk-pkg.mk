@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.87 2005/10/26 16:54:04 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.88 2005/10/27 13:04:54 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -163,7 +163,7 @@ _ESCPKGPATH=	${PKGPATH:C@\/@\\/@g:C@\+@\\+@g:C@\.@\\.@g:Q}
 # xpkgwedge only become DEPENDS if it is installed
 bulk-cache:
 	@${ECHO_MSG} "BULK> Installing BULK_PREREQ packages"
-.for __prereq in ${BULK_PREREQ}
+.for __prereq in ${BULK_PREREQ} lang/perl5
 	cd ${PKGSRCDIR}/${__prereq} && ${MAKE} bulk-install
 .endfor
 	${RM} -f ${BULK_DBFILE}
