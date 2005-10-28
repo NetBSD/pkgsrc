@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11682 2005/10/28 02:53:46 minskim Exp $
+$NetBSD: CHANGES,v 1.11683 2005/10/28 05:30:02 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4871,3 +4871,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/fwbuilder to 2.0.9 [bad 2005-10-28]
 	Added x11/tzosdclock version 1.0.2 [minskim 2005-10-28]
 	Added x11/mxterm version 129 [minskim 2005-10-28]
+	Updated security/keychain to 2.6.1 [martti 2005-10-28]
