@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/10/28 20:46:26 minskim Exp $
+
+--- balance.h.orig	2004-05-27 05:24:30.000000000 -0700
++++ balance.h
+@@ -6,7 +6,7 @@
+ #include <signal.h>
+ #include <stdlib.h>
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #define BalanceBSD 1
+ #endif 
+ 
