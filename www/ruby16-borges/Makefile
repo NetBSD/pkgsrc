@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/25 04:15:48 taca Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/28 04:38:05 taca Exp $
 
 DISTNAME=	borges-0.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ USE_RUBY_DIST_SUBDIR=	yes
 USE_RUBY_INSTALL=	yes
 NO_BUILD=		yes
 BORGES_SHARE_DIR=	data/doc data/examples
+
+.include "../../lang/ruby/rubyversion.mk"
 
 .if !empty(RUBY_SUFFIX)
 pre-configure:
