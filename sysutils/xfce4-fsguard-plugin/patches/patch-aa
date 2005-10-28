@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/28 06:42:49 martti Exp $
+
+--- panel-plugin/fsguard.c.orig	2005-10-11 16:27:09.000000000 -0400
++++ panel-plugin/fsguard.c
+@@ -45,6 +45,9 @@
+ #include <sys/param.h>
+ #include <sys/mount.h>
+ #endif
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++#define statfs statvfs
++#endif
+ #include <panel/plugins.h>
+ #include <panel/xfce.h>
+ #include <panel/xfce_support.h>
