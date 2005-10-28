@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/28 02:52:33 minskim Exp $
+
+--- main.c.orig	2004-11-05 18:29:49.000000000 -0700
++++ main.c	2004-11-05 17:33:39.000000000 -0700
+@@ -90,6 +90,9 @@
+ #include <error.h>
+ #include <menu.h>
+ 
++#include <utmp.h>
++#include <utmpx.h>
++
+ #ifdef AMOEBA
+ #include <amoeba.h>
+ #include <cmdreg.h>
