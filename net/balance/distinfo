@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/28 20:46:26 minskim Exp $
+
+SHA1 (balance-3.15.tar.gz) = fe9a9999c97faced30b2b23c416f68d69877cea2
+RMD160 (balance-3.15.tar.gz) = 73c8be6273fb14373661b73c6235426fa7c29ed3
+Size (balance-3.15.tar.gz) = 21022 bytes
+SHA1 (patch-aa) = 45aeeeec91c2f4b7beaa1cf9dba45ae87f1896b1
+SHA1 (patch-ab) = 33467c2569969fc6231196da7c1949ea79705863
