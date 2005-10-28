@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.414 2005/10/15 18:54:24 minskim Exp $
+# $NetBSD: Makefile,v 1.415 2005/10/28 02:48:12 minskim Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -216,6 +216,7 @@ SUBDIR+=	tk-Tix
 SUBDIR+=	tk83
 SUBDIR+=	tkinfo
 SUBDIR+=	tkman
+SUBDIR+=	tzosdclock
 SUBDIR+=	unclutter
 SUBDIR+=	vte
 SUBDIR+=	wdm
