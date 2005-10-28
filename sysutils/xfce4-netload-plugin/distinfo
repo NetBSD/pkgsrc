@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/06/23 07:25:06 martti Exp $
+$NetBSD: distinfo,v 1.7 2005/10/28 06:59:18 martti Exp $
 
-SHA1 (xfce4-netload-plugin-0.3.2.tar.bz2) = a259ed8aae65fd15a90f6cf1a82e42748bf1d820
-RMD160 (xfce4-netload-plugin-0.3.2.tar.bz2) = e2c3f2a33b59386340b005da177cc2691b1cfda4
-Size (xfce4-netload-plugin-0.3.2.tar.bz2) = 241002 bytes
+SHA1 (xfce4-netload-plugin-0.3.3.tar.bz2) = 7f43826f7a5cc2256ac27657aa45fede2f2d764f
+RMD160 (xfce4-netload-plugin-0.3.3.tar.bz2) = db0ca8fc0cc8cb5856fdd3a4a9b5e5d52a354925
+Size (xfce4-netload-plugin-0.3.3.tar.bz2) = 247015 bytes
