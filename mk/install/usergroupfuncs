@@ -1,7 +1,7 @@
-# $NetBSD: usergroupfuncs,v 1.1 2005/09/26 22:12:35 jlam Exp $
+# $NetBSD: usergroupfuncs,v 1.2 2005/10/28 19:21:54 jlam Exp $
 #
 # Default implementation of adduser() and addgroup() shell functions
-# for addiing users and groups.  This implementation assumes there are
+# for adding users and groups.  This implementation assumes there are
 # NetBSD/Solaris-compatible versions of useradd(8) and groupadd(8)
 # available through ${USERADD} and ${GROUPADD}, respectively.
 #
