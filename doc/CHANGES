@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11680 2005/10/27 22:11:13 bad Exp $
+$NetBSD: CHANGES,v 1.11681 2005/10/28 02:48:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4869,3 +4869,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added mail/dkim-milter version 0.1.1 [minskim 2005-10-27]
 	Updated security/libfwbuilder to 2.0.9 [bad 2005-10-28]
 	Updated security/fwbuilder to 2.0.9 [bad 2005-10-28]
+	Added x11/tzosdclock version 1.0.2 [minskim 2005-10-28]
