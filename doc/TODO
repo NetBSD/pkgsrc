@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4104 2005/10/28 15:25:00 wiz Exp $
+$NetBSD: TODO,v 1.4105 2005/10/28 16:02:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ Suggested package updates
 	o chemtool-1.6.6
 	o chicken-2.2
 	o chkrootkit-0.45
-	o chmlib-0.37
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
