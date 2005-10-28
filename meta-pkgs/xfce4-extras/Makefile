@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/09/28 19:19:39 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/28 06:45:30 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -24,8 +24,10 @@ do-install:
 .include "../../time/xfce4-datetime-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-cpugraph-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-diskperf-plugin/buildlink3.mk"
+.include "../../sysutils/xfce4-fsguard-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-minicmd-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-netload-plugin/buildlink3.mk"
+.include "../../sysutils/xfce4-quicklauncher-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-showdesktop-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-systemload-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-xkb-plugin/buildlink3.mk"
