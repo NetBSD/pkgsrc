@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.28 2005/09/30 16:39:26 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.29 2005/10/28 20:09:38 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -602,6 +602,7 @@ FILES_SUBST+=		MV=${MV:Q}
 FILES_SUBST+=		PERL5=${PERL5:Q}
 FILES_SUBST+=		PKG_ADMIN=${PKG_ADMIN_CMD:Q}
 FILES_SUBST+=		PKG_INFO=${PKG_INFO_CMD:Q}
+FILES_SUBST+=		PW=${PW:Q}
 FILES_SUBST+=		PWD_CMD=${PWD_CMD:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		RMDIR=${RMDIR:Q}

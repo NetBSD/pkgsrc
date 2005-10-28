@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.20 2005/10/27 22:39:58 tv Exp $
+# $NetBSD: DragonFly.mk,v 1.21 2005/10/28 20:09:38 joerg Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -8,6 +8,7 @@ IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
+PW?=		/usr/sbin/pw
 RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
