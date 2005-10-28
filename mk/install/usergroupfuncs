@@ -1,11 +1,11 @@
-# $NetBSD: usergroupfuncs,v 1.2 2005/10/28 19:21:54 jlam Exp $
+# $NetBSD: usergroupfuncs,v 1.3 2005/10/28 20:05:46 jlam Exp $
 #
 # Default implementation of adduser() and addgroup() shell functions
 # for adding users and groups.  This implementation assumes there are
 # NetBSD/Solaris-compatible versions of useradd(8) and groupadd(8)
 # available through ${USERADD} and ${GROUPADD}, respectively.
 #
-# Platform-specific customizations of this file should be located at:
+# Platform-specific replacements for this file should be located at:
 #
 #	pkgsrc/mk/install/usergroupfuncs.${OPSYS}
 #
