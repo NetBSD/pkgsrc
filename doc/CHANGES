@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11683 2005/10/28 05:30:02 martti Exp $
+$NetBSD: CHANGES,v 1.11684 2005/10/28 06:44:51 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4872,3 +4872,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added x11/tzosdclock version 1.0.2 [minskim 2005-10-28]
 	Added x11/mxterm version 129 [minskim 2005-10-28]
 	Updated security/keychain to 2.6.1 [martti 2005-10-28]
+	Added sysutils/xfce4-fsguard-plugin version 0.2.1 [martti 2005-10-28]
