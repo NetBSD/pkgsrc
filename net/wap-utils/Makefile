@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:02 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/28 22:01:47 kristerw Exp $
 #
 
 DISTNAME=	ap-utils-1.3.2
 PKGNAME=	w${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ap-utils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,5 +18,6 @@ USE_PKGLOCALEDIR=	YES
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
