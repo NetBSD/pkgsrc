@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/10/12 11:18:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/28 11:29:52 wiz Exp $
 #
 
 DISTNAME=	xpdf-turkish-2002-apr-10
-PKGNAME=	${DISTNAME}-20020410
+PKGNAME=	xpdf-turkish-20020410
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		http://gd.tuwien.ac.at/publishing/xpdf/
