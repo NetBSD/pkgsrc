@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4105 2005/10/28 16:02:19 wiz Exp $
+$NetBSD: TODO,v 1.4106 2005/10/28 16:33:03 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1144,7 +1144,6 @@ Suggested package updates
 	o ruby-rexml-3.1.3
 	o ruby-rttool-1.0.0
 	o ruby-syck-0.55
-	o rxvt-unicode-5.8 [pkg/31930]
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
