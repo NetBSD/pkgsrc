@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11687 2005/10/28 16:33:02 minskim Exp $
+$NetBSD: CHANGES,v 1.11688 2005/10/28 20:48:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4877,3 +4877,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/xfce4-notes-plugin to 0.11.1 [martti 2005-10-28]
 	Updated devel/chmlib to 0.37.3 [wiz 2005-10-28]
 	Updated x11/rxvt-unicode to 5.8 [minskim 2005-10-28]
+	Added net/balance version 3.15 [minskim 2005-10-28]

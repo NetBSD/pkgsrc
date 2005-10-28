@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.581 2005/10/26 03:45:47 minskim Exp $
+# $NetBSD: Makefile,v 1.582 2005/10/28 20:48:24 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -23,6 +23,7 @@ SUBDIR+=	arping
 SUBDIR+=	arpwatch
 SUBDIR+=	autonet
 SUBDIR+=	awhois
+SUBDIR+=	balance
 SUBDIR+=	batchftp
 SUBDIR+=	bftpd
 SUBDIR+=	bind4
