@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.415 2005/10/28 02:48:12 minskim Exp $
+# $NetBSD: Makefile,v 1.416 2005/10/28 02:53:46 minskim Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -155,6 +155,7 @@ SUBDIR+=	mowitz
 SUBDIR+=	mrxvt
 SUBDIR+=	multi-aterm
 SUBDIR+=	multi-gnome-terminal
+SUBDIR+=	mxterm
 SUBDIR+=	neXtaw
 SUBDIR+=	numlockx
 SUBDIR+=	ocaml-graphics
