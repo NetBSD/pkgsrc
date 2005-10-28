@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4106 2005/10/28 16:33:03 minskim Exp $
+$NetBSD: TODO,v 1.4107 2005/10/28 21:46:48 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1188,7 +1188,6 @@ Suggested package updates
 	o sml-nj-110.56
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
-	o smokeping-2.0.3
 	o snd-7.15 [wiz]
 	o snd-7.16
 	o snes9x-1.43
