@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/14 00:32:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/28 16:32:26 minskim Exp $
 #
 
-DISTNAME=		rxvt-unicode-5.7
+DISTNAME=		rxvt-unicode-5.8
 CATEGORIES=		x11
 MASTER_SITES=		http://dist.schmorp.de/rxvt-unicode/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,37 +14,12 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake pkg-config
 
-CONFIGURE_ARGS+=	--enable-combining		\
-			--enable-xft			\
-			--enable-font-styles		\
-			--enable-utmp			\
-			--enable-wtmp			\
-			--enable-lastlog		\
-			--enable-xpm-background		\
-			--enable-transparency		\
-			--enable-tinting		\
-			--enable-fading			\
+CONFIGURE_ARGS+=	--enable-transparency	\
 			--enable-menubar		\
-			--enable-rxvt-scroll		\
-			--enable-next-scroll		\
-			--enable-xterm-scroll		\
-			--enable-plain-scroll		\
-			--enable-xim			\
-			--enable-ttygid			\
+			--enable-xpm-background	\
 			--enable-xgetdefault		\
-			--disable-strings		\
-			--enable-swapscreen		\
-			--enable-iso14755		\
-			--enable-frills			\
-			--enable-24bit			\
-			--disable-keepscrolling		\
-			--enable-selectionscrolling	\
-			--enable-mouswheel		\
-			--enable-slipwheeling		\
-			--enable-text-blink		\
-			--enable-pointer-blank		\
-			--with-codesets=all		\
-			--with-term=rxvt
+			--with-term=rxvt	\
+			--enable-24bit
 
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
