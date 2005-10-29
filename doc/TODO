@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4110 2005/10/29 14:30:57 xtraeme Exp $
+$NetBSD: TODO,v 1.4111 2005/10/29 15:33:17 reed Exp $
 
 Suggested new packages
 ======================
@@ -466,7 +466,6 @@ Suggested package updates
 	o dirac-0.5.3
 	o dirdiff-2.1
 	o dmalloc-5.4.2
-	o dmidecode-2.7
 	o dnstop-20050405
 	o dnstracer-1.8
 	o dpkg-1.10.28
