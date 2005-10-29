@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2005/10/28 20:48:24 minskim Exp $
+# $NetBSD: Makefile,v 1.583 2005/10/29 01:07:03 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -45,6 +45,7 @@ SUBDIR+=	btget
 SUBDIR+=	bug-buddy
 SUBDIR+=	cdpd
 SUBDIR+=	cftp
+SUBDIR+=	chksniff
 SUBDIR+=	choparp
 SUBDIR+=	chrony
 SUBDIR+=	cia
