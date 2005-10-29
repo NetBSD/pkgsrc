@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/10/29 16:56:15 minskim Exp $
+
+DISTNAME=	mydns-1.0.0
+CATEGORIES=	net
+MASTER_SITES=	http://mydns.bboy.net/download/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	geert.hendrickx@ua.ac.be
+HOMEPAGE=	http://mydns.bboy.net/
+
+GNU_CONFIGURE=	YES
+USE_PKGLOCALEDIR=	YES
+USE_PKGINSTALL=	YES
+
+CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
+
+MYDNS_USER?=	mydns
+MYDNS_GROUP?=	mydns
+MYDNS_PERMS=	${ROOT_USER} ${ROOT_GROUP} 600
+
+SUBST_CLASSES+=		user
+SUBST_STAGE.user=	pre-build
+SUBST_FILES.user=	src/mydns/conf.c
+SUBST_SED.user=		-e 's/%%MYDNS_USER%%/${MYDNS_USER}/'
+SUBST_SED.user+=	-e 's/%%MYDNS_GROUP%%/${MYDNS_GROUP}/'
+
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES_PERMS=	${EGDIR}/mydns.conf ${PKG_SYSCONFDIR}/mydns.conf ${MYDNS_PERMS}
+RCD_SCRIPTS=	mydns
+
+PKG_GROUPS=	${MYDNS_GROUP}
+PKG_USERS=	${MYDNS_USER}:${MYDNS_GROUP}::MyDNS\ user
+
+post-install:
+		${INSTALL_DATA_DIR} ${EGDIR}
+		${WRKSRC}/src/mydns/mydns --dump-config > ${EGDIR}/mydns.conf
+		${CHMOD} 0600 ${EGDIR}/mydns.conf
+
+.include	"../../mk/bsd.pkg.mk"
