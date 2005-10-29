@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/23 16:03:10 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/10/29 15:57:48 reed Exp $
 bin/ccmake
 bin/cmake
 bin/ctest
@@ -110,6 +110,7 @@ share/CMake/Modules/Platform/AIX.cmake
 share/CMake/Modules/Platform/BSDOS.cmake
 share/CMake/Modules/Platform/CYGWIN.cmake
 share/CMake/Modules/Platform/Darwin.cmake
+share/CMake/Modules/Platform/DragonFly.cmake
 share/CMake/Modules/Platform/FreeBSD.cmake
 share/CMake/Modules/Platform/HP-UX.cmake
 share/CMake/Modules/Platform/IRIX.cmake
@@ -117,7 +118,7 @@ share/CMake/Modules/Platform/IRIX64.cmake
 share/CMake/Modules/Platform/Linux-como.cmake
 share/CMake/Modules/Platform/Linux.cmake
 share/CMake/Modules/Platform/MP-RAS.cmake
-share/CMake/Modules/Platform/${OPSYS}.cmake
+share/CMake/Modules/Platform/NetBSD.cmake
 share/CMake/Modules/Platform/OSF1.cmake
 share/CMake/Modules/Platform/OpenBSD.cmake
 share/CMake/Modules/Platform/RISCos.cmake
