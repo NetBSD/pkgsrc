@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/10/11 10:00:15 tonio Exp $
+# $NetBSD: Makefile,v 1.65 2005/10/29 17:37:20 tonio Exp $
 #
 
 .include "Makefile.common"
@@ -14,7 +14,7 @@ CONF_FILES=		${JAVA_HOME}/jre/lib/security/java.security.default \
 .include "../../mk/bsd.prefs.mk"
 
 UNLIMIT_RESOURCES=        datasize
-LIBS= -lltdl
+LIBS+= -lltdl
 
 PRINT_PLIST_AWK+=	/^java\/kaffe\/jre\/lib\/security\/java.security$$/ \
 				{ next; }
