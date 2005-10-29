@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/25 04:15:48 taca Exp $
+# $NetBSD: Makefile,v 1.10 2005/10/29 12:02:23 wiz Exp $
 #
 
 DISTNAME=	rexml_${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.germane-software.com/archives/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	rasputin@idoru.mine.nu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.germane-software.com/software/rexml/
 COMMENT=	Pure Ruby XML parser based on Java Electric XML
 
