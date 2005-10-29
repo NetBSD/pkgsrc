@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11705 2005/10/29 19:44:51 epg Exp $
+$NetBSD: CHANGES,v 1.11706 2005/10/29 19:50:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4897,3 +4897,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/mydns-mysql version 1.0.0 [minskim 2005-10-29]
 	Updated mail/isync to 1.0.1nb1 [kristerw 2005-10-29]
 	Updated www/clearsilver to 0.10.1 [epg 2005-10-29]
+	Updated security/smtpd to 2.0nb2 [joerg 2005-10-29]
