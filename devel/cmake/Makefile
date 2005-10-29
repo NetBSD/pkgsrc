@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/10/24 15:15:25 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/10/29 15:57:48 reed Exp $
 
 DISTNAME=	cmake-2.0.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.0/
 
@@ -15,6 +16,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_HAS_MANDIR=	no
 CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 BUILD_TARGET=		default_target
+
+post-extract:
+	${CP} ${WRKSRC}/Modules/Platform/FreeBSD.cmake \
+		${WRKSRC}/Modules/Platform/DragonFly.cmake
 
 post-patch:
 	for file in ${WRKSRC}/Modules/FindCurses.cmake; do		\
