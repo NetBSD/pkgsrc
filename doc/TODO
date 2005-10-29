@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4113 2005/10/29 22:17:21 epg Exp $
+$NetBSD: TODO,v 1.4114 2005/10/29 23:47:11 epg Exp $
 
 Suggested new packages
 ======================
@@ -518,7 +518,6 @@ Suggested package updates
 	o fprot-workstation-bin-4.6.1
 	o freeglut-2.4.0
 	o fugu-1.2.3
-	o fvwm-devel-2.5.14
 	o fvwm2-themes-0.7.0
 	o g2-0.50
 	o gamin-0.1.6
