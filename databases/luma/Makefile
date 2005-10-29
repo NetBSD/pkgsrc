@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/08 18:29:56 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2005/10/29 01:44:35 kristerw Exp $
 #
 
 DISTNAME=		luma-2.2.1
@@ -21,6 +21,7 @@ do-build:
 
 do-install:
 	(cd ${WRKSRC} && ${PYTHONBIN} install.py --prefix=${PREFIX})
+	${RM} -f ${PREFIX}/bin/luma.orig
 
 .include "../../lang/python/application.mk"
 .include "../../databases/py-ldap/buildlink3.mk"
