@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11694 2005/10/29 06:19:21 grant Exp $
+$NetBSD: CHANGES,v 1.11695 2005/10/29 08:23:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4884,3 +4884,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/mathomatic to 12.5.0 [minskim 2005-10-29]
 	Added devel/gsoap version 2.7.6c [minskim 2005-10-29]
 	Updated sysutils/vcdimager-devel to 0.7.22nb1 [grant 2005-10-29]
+	Updated devel/chmlib to 0.37.4 [wiz 2005-10-29]
