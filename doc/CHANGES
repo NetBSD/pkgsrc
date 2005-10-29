@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11703 2005/10/29 17:00:52 minskim Exp $
+$NetBSD: CHANGES,v 1.11704 2005/10/29 17:14:58 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4895,3 +4895,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wm/wmii to 20051017nb1 [minskim 2005-10-29]
 	Added net/mydns-pgsql version 1.0.0 [minskim 2005-10-29]
 	Added net/mydns-mysql version 1.0.0 [minskim 2005-10-29]
+	Updated mail/isync to 1.0.1nb1 [kristerw 2005-10-29]
