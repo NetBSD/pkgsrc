@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/29 16:04:38 minskim Exp $
+
+--- config.mk.orig	2005-10-28 18:59:21.000000000 +0000
++++ config.mk
+@@ -1,16 +1,16 @@
+ # Customize to fit your system
+ 
+ # paths
+-PREFIX      = /usr/local/9
+-MANPREFIX   = ${PREFIX}/share/man
++#PREFIX      = /usr/local/9
++MANPREFIX   = ${PREFIX}/man
+ 
+ # flags
+ VERSION     = 20051028
+-CFLAGS      = -Wall -Wno-missing-braces -Wno-parentheses -Wno-switch -Os -c -I. -DPREFIX="\"${PREFIX}\""
+-LDFLAGS     =
++CFLAGS      += -c -I. -DPREFIX="\"${PREFIX}\""
++LDFLAGS     +=
+ O           = o
+ 
+ # compiler
+ AR          = ar rc
+-CC          = cc
++#CC          = cc
+ YACC        = yacc
