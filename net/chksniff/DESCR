@@ -1,0 +1,3 @@
+Chksniff is a small tool to check in what mode network interfaces are
+running.  If they are running in promiscuous mode (which generally
+means an interface is sniffed) this gets displayed by chksniff.
