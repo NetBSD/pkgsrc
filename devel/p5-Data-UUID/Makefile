@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/06 06:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/29 23:27:34 epg Exp $
 
 DISTNAME=	Data-UUID-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PERL5_PACKLIST=		auto/Data/UUID/.packlist
 
 MAKE_ENV+=		PERL_MM_USE_DEFAULT=1
+MAKE_PARAMS+=		DEFINE=-D_POSIX_C_SOURCE
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
