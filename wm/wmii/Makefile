@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/23 20:39:03 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/29 16:12:37 minskim Exp $
 #
 
 DISTNAME=	wmii-20051017
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://wmii.de/snaps/
 
@@ -9,7 +10,7 @@ MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://wmii.de/
 COMMENT=	Modular and keyboard-friendly window manager
 
-DEPENDS+=		9rc-[0-9]*:../../shells/9rc
+DEPENDS+=		9base-[0-9]*:../../sysutils/9base
 
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
