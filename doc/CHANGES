@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11697 2005/10/29 13:22:15 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11698 2005/10/29 14:15:27 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4887,3 +4887,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/chmlib to 0.37.4 [wiz 2005-10-29]
 	Updated emulators/gxemul to 0.3.6.2 [xtraeme 2005-10-29]
 	Updated mail/sylpheed-devel to 2.1.5 [xtraeme 2005-10-29]
+	Updated databases/mysql4-client to 4.1.15 [xtraeme 2005-10-29]
+	Updated databases/mysql4-server to 4.1.15 [xtraeme 2005-10-29]
