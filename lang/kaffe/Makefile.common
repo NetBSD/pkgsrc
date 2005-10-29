@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/10/11 10:00:15 tonio Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/10/29 17:37:20 tonio Exp $
 
 DISTNAME=		kaffe-1.1.6
 CATEGORIES=		lang java
@@ -8,10 +8,11 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.kaffe.org/
 COMMENT=		Virtual machine capable of running Java(tm) code
 
-BUILD_DEPENDS=  unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS=  zip-[0-9]*:../../archivers/zip
+BUILD_DEPENDS+=  unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=  zip-[0-9]*:../../archivers/zip
 DEPENDS+=       jikes>=1.22:../../lang/jikes
 
+EXTRACT_USING=		pax
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 JAVA_HOME=		${PREFIX}/java/kaffe
 JAVA_NAME=		kaffe
