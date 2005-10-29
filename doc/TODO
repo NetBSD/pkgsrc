@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4109 2005/10/29 12:04:12 wiz Exp $
+$NetBSD: TODO,v 1.4110 2005/10/29 14:30:57 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -94,11 +94,6 @@ Suggested new packages
 	linphone
 	http://www.linphone.org/
 	Telephony on Linux (and NetBSD?)
-
-	vnc2swf [wip/vnc2swf]
-	http://www.unixuser.org/~euske/vnc2swf/
-	Vnc2swf captures the live motion of a screen with VNC protocol
-	and generates a Macromedia Flash(TM) movie (.swf).
 
 	Filelight
 	http://www.methylblue.com/filelight/
