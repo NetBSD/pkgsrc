@@ -1,58 +1,62 @@
-$NetBSD: patch-ae,v 1.4 2005/09/06 08:10:59 abs Exp $
+$NetBSD: patch-ae,v 1.5 2005/10/29 01:36:42 grant Exp $
 
---- mpeg3io.c.orig	2001-05-20 05:05:26.000000000 +0200
+--- mpeg3io.c.orig	2001-05-20 13:05:26.000000000 +1000
 +++ mpeg3io.c
-@@ -1,11 +1,20 @@
+@@ -1,8 +1,21 @@
  #include "mpeg3private.h"
  #include "mpeg3protos.h"
  
 -#include <mntent.h>
 -#include <sys/stat.h>
-+#include <sys/param.h>
-+#include <sys/mount.h>
++#ifndef __NetBSD__
++# include <mntent.h>
++# include <sys/stat.h>
++#else
++# include <sys/param.h>
++# include <sys/mount.h>
++
++# if __NetBSD_Version__ >= 299000900   /* 2.99.9 */
++#  define statfs statvfs
++# endif
++
++# include <sys/types.h>
++# include <sys/stat.h>
++#endif
++
  #include <stdlib.h>
  #include <string.h>
  
-+#ifdef __NetBSD__
-+# if __NetBSD_Version__ >= 299000900	/* 2.99.9 */
-+#  define statfs statvfs
-+# endif
-+#endif
-+
-+#include <sys/types.h>
-+#include <sys/stat.h>
-+
- mpeg3_fs_t* mpeg3_new_fs(char *path)
- {
- 	mpeg3_fs_t *fs = calloc(1, sizeof(mpeg3_fs_t));
-@@ -88,27 +97,15 @@ int mpeg3io_read_data(unsigned char *buf
+@@ -88,16 +101,23 @@ int mpeg3io_read_data(unsigned char *buf
  
  int mpeg3io_device(char *path, char *device)
  {
--	struct stat file_st, device_st;
--    struct mntent *mnt;
--	FILE *fp;
-+	struct statfs file_st;
++#ifndef __NetBSD__
+ 	struct stat file_st, device_st;
+     struct mntent *mnt;
+ 	FILE *fp;
  
--	if(stat(path, &file_st) < 0)
-+	if(statfs(path, &file_st) < 0)
+ 	if(stat(path, &file_st) < 0)
++#else
++	struct statfs file_st;
++
++	if (statfs(path, &file_st) < 0)
++#endif
  	{
  		perror("mpeg3io_device");
  		return 1;
  	}
  
--	fp = setmntent(MOUNTED, "r");
--    while(fp && (mnt = getmntent(fp)))
--	{
--		if(stat(mnt->mnt_fsname, &device_st) < 0) continue;
--		if(device_st.st_rdev == file_st.st_dev)
--		{
--			strncpy(device, mnt->mnt_fsname, MPEG3_STRLEN);
--			break;
--		}
--	}
--	endmntent(fp);
++#ifndef __NetBSD__
+ 	fp = setmntent(MOUNTED, "r");
+     while(fp && (mnt = getmntent(fp)))
+ 	{
+@@ -109,6 +129,9 @@ int mpeg3io_device(char *path, char *dev
+ 		}
+ 	}
+ 	endmntent(fp);
++#else
 +	strncpy(device, file_st.f_mntfromname, MPEG3_STRLEN);
++#endif
  
  	return 0;
  }
