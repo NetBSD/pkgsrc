@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/29 16:56:15 minskim Exp $
+bin/mydns-conf
+bin/mydnscheck
+bin/mydnsexport
+bin/mydnsimport
+bin/mydnsptrconvert
+info/mydns.info
+man/man5/mydns.conf.5
+man/man8/mydns-conf.8
+man/man8/mydns.8
+man/man8/mydnscheck.8
+man/man8/mydnsexport.8
+man/man8/mydnsimport.8
+man/man8/mydnsptrconvert.8
+sbin/mydns
+share/examples/mydns-pgsql/mydns.conf
+share/examples/rc.d/mydns
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mydns.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mydns.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/mydns.mo
+@dirrm share/examples/mydns-pgsql
