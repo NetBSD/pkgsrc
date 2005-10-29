@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/06 17:19:08 taca Exp $
+# $NetBSD: Makefile,v 1.16 2005/10/29 12:02:23 wiz Exp $
 #
 
 DISTNAME=	webrick-1.3.1
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.webrick.org/src/
 
-MAINTAINER=	rasputin@idoru.mine.nu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.webrick.org/
 COMMENT=	Ruby library to build HTTP servers
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:51 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/10/29 12:02:23 wiz Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	ap2-${RUBY_PKGPREFIX}-${VERSION}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
-MAINTAINER=	rasputin@idoru.mine.nu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Embedded Ruby for Apache2 (development version)
 

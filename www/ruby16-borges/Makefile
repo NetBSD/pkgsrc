@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/28 04:38:05 taca Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/29 12:02:23 wiz Exp $
 
 DISTNAME=	borges-0.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	www ruby
 MASTER_SITES=	http://segment7.net/projects/ruby/borges/
 
-MAINTAINER=	rasputin@idoru.mine.nu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://segment7.net/projects/ruby/borges/
 COMMENT=	Ruby web application framework
 
