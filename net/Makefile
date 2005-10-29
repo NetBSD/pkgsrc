@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.583 2005/10/29 01:07:03 minskim Exp $
+# $NetBSD: Makefile,v 1.584 2005/10/29 17:00:52 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -190,6 +190,8 @@ SUBDIR+=	mrt
 SUBDIR+=	mrtg
 SUBDIR+=	mtr
 SUBDIR+=	mtr-gtk
+SUBDIR+=	mydns-mysql
+SUBDIR+=	mydns-pgsql
 SUBDIR+=	nam
 SUBDIR+=	nap
 SUBDIR+=	napshare
