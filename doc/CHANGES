@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11706 2005/10/29 19:50:59 joerg Exp $
+$NetBSD: CHANGES,v 1.11707 2005/10/29 22:17:21 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4898,3 +4898,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/isync to 1.0.1nb1 [kristerw 2005-10-29]
 	Updated www/clearsilver to 0.10.1 [epg 2005-10-29]
 	Updated security/smtpd to 2.0nb2 [joerg 2005-10-29]
+	Updated devel/rapidsvn to 0.9.0 [epg 2005-10-29]
