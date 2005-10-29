@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/08/10 20:56:24 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/10/29 06:17:20 grant Exp $
 #
 
 DISTNAME=	vcdimager-0.7.22
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/
 
@@ -20,6 +21,8 @@ PKGCONFIG_OVERRIDE+= libvcdinfo.pc.in
 .if ${OPSYS} == "SunOS"
 BUILDLINK_TRANSFORM+= rm:-Wl,--version-script=libvcdinfo.la.ver
 .endif
+
+BUILDLINK_DEPENDS.libcdio+=	libcdio>=0.72
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
