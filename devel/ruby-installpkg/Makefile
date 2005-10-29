@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/06 17:19:06 taca Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/29 12:02:23 wiz Exp $
 
 DISTNAME=	installpkg-0.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.aracnet.com/~ptkwt/ruby_stuff/InstallPkg/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	rasputin@idoru.mine.nu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Ruby module for writing install.rb files
 
