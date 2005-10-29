@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4114 2005/10/29 23:47:11 epg Exp $
+$NetBSD: TODO,v 1.4115 2005/10/29 23:49:11 epg Exp $
 
 Suggested new packages
 ======================
@@ -781,7 +781,7 @@ Suggested package updates
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o neon-0.25.4
+	o neon-0.25.4 [epg has this ready; waiting for subversion-1.3]
 	o nessus-0.2.5
 	o nessus-core-2.3.1
 	o netatalk1-1.6.4
