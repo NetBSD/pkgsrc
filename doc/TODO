@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4108 2005/10/29 01:46:17 minskim Exp $
+$NetBSD: TODO,v 1.4109 2005/10/29 12:04:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -300,13 +300,17 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
+	o 9base-20051028 [pkg/31945, replacing 9rc]
 	o Cenon-3.71
 	o Chinput-3.0.1
+	o DatLib-2.9
+	o DatUtil-2.21
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o ImageMagick-6.2.5.1
+	o MAMEDiff-2.20
 	o MyPasswordSafe-20041210
 	o PAM-0.80
 	o R-2.2.0
@@ -376,6 +380,8 @@ Suggested package updates
 	o benchfft-3.1
 	o binutils-2.16.1
 	o bioperl-1.5.0
+	o bittornado-0.3.14
+	o bittornado-gui-0.3.14
 	o bittorrent-4.1.4
 	o bittorrent-gui-4.1.4
 	o blackbox-0.70
@@ -454,9 +460,11 @@ Suggested package updates
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
+	o dejavu-ttf-1.15 [pkg/31941]
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.10
+	o devilspie-0.15
 	o devtodo-0.1.19
 	o diffstat-1.41
 	o dinotrace-9.3a
@@ -489,6 +497,7 @@ Suggested package updates
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
+	o enchant-1.2.0
 	o enscript-1.6.4
 	o epstool-3.08
 	o erlang-10b-7 [pkg/31555]
@@ -595,6 +604,7 @@ Suggested package updates
 	o heimdal-0.7.1
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
+	o horde-3.0.6
 	o horde3-3.0.5
 	o hot-babe-0.2.2
 	o ht-0.9.1
@@ -748,8 +758,8 @@ Suggested package updates
 	o mjpegtools-1.8.0
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.6.0
-	o mldonkey-2.6.6
-	o mldonkey-gui-2.6.6
+	o mldonkey-2.6.7
+	o mldonkey-gui-2.6.7
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
