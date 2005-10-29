@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11700 2005/10/29 15:33:17 reed Exp $
+$NetBSD: CHANGES,v 1.11701 2005/10/29 16:09:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4891,3 +4891,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/mysql4-server to 4.1.15 [xtraeme 2005-10-29]
 	Added graphics/vnc2swf version 0.5.0 [xtraeme 2005-10-29]
 	Updated sysutils/dmidecode to 2.7 [reed 2005-10-29]
+	Renamed shells/9rc to sysutils/9base [minskim 2005-10-29]
