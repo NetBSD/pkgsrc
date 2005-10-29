@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2005/09/10 18:15:03 minskim Exp $
+$NetBSD: patch-aa,v 1.16 2005/10/29 01:45:35 minskim Exp $
 
---- makefile.orig	2005-08-29 11:59:12.000000000 -0700
+--- makefile.orig	2005-10-20 03:36:30.000000000 -0700
 +++ makefile
-@@ -5,11 +5,11 @@ CFLAGS		+= -O -DUNIX -DVERSION=\"$(VERSI
+@@ -5,8 +5,8 @@ CFLAGS		+= -O -DUNIX -DVERSION=\"$(VERSI
  LDFLAGS		+= -s
  LIBS		+= -lm
  
@@ -11,10 +11,5 @@ $NetBSD: patch-aa,v 1.15 2005/09/10 18:15:03 minskim Exp $
 +CFLAGS		+= -DREADLINE
 +LIBS		+= -lreadline
  
--prefix		= /usr
--bindir		= /usr/local/bin
-+prefix		= ${PREFIX}
-+bindir		= ${PREFIX}/bin
- mandir		= $(prefix)/share/man
- docdir		= $(prefix)/share/doc
- 
+ prefix		?= /usr/local
+ bindir		?= $(prefix)/bin
