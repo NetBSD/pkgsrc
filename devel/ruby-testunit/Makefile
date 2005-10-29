@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/06 17:19:06 taca Exp $
+# $NetBSD: Makefile,v 1.5 2005/10/29 12:02:23 wiz Exp $
 
 DISTNAME=	testunit-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://testunit.talbott.ws/packages/
 
-MAINTAINER=	rasputin@idoru.mine.nu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://testunit.talbott.ws/packages/
 COMMENT=	Unit testing framework for Ruby
 
