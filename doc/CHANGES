@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11693 2005/10/29 02:03:33 minskim Exp $
+$NetBSD: CHANGES,v 1.11694 2005/10/29 06:19:21 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4883,3 +4883,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/chksniff version 0.2 [minskim 2005-10-29]
 	Updated math/mathomatic to 12.5.0 [minskim 2005-10-29]
 	Added devel/gsoap version 2.7.6c [minskim 2005-10-29]
+	Updated sysutils/vcdimager-devel to 0.7.22nb1 [grant 2005-10-29]
