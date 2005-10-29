@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/23 19:01:56 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/29 15:33:35 minskim Exp $
 #
 
 DISTNAME=	qdbm-1.8.33
@@ -22,8 +22,8 @@ TEST_TARGET=            check
 CONFIGURE_ARGS+=        --without-pthread
 .else
 CONFIGURE_ARGS+=	--enable-pthread
-CONFIGURE_ENV+=		CFLAGS=${PTHREAD_CFLAGS:Q}
-CONFIGURE_ENV+=		LDFLAGS=${PTHREAD_LDFLAGS:Q}
+CFLAGS+=		${PTHREAD_CFLAGS}
+LDFLAGS+=		${PTHREAD_LDFLAGS}
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
 SUBST_FILES.pthread=	configure
