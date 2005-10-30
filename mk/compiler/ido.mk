@@ -1,3 +1,5 @@
+# $NetBSD: ido.mk,v 1.2 2005/10/30 10:33:23 schwarz Exp $
+
 .if !defined(COMPILER_IDO_MK)
 COMPILER_IDO_MK=	defined
 
