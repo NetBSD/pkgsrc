@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11712 2005/10/30 12:55:00 tron Exp $
+$NetBSD: CHANGES,v 1.11713 2005/10/30 13:11:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4903,3 +4903,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wm/fvwm-devel to 2.5.14 [epg 2005-10-29]
 	Updated emulators/fceu to 0.98.13 [wiz 2005-10-30]
 	Updated databases/phpmyadmin to 2.6.4pl3 [tron 2005-10-30]
+	Updated archivers/rar-linux to 3.5.1 [wiz 2005-10-30]
