@@ -1,0 +1,19 @@
+$NetBSD: patch-be,v 1.1.2.2 2005/10/30 22:56:09 salo Exp $
+
+--- util/UnixTransport.c++.orig	2005-10-30 19:44:31.000000000 +0000
++++ util/UnixTransport.c++
+@@ -31,13 +31,13 @@
+ UnixTransport::UnixTransport(FaxClient& c) : Transport(c) {}
+ UnixTransport::~UnixTransport() {}
+ 
++#if CONFIG_UNIXTRANPSORT
+ bool
+ UnixTransport::isA(const char* address)
+ {
+      return Sys::isSocketFile(address);
+ }
+ 
+-#if CONFIG_UNIXTRANSPORT
+ #include "Socket.h"
+ 
+ extern "C" {
