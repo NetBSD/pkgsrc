@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.308 2005/10/30 19:54:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.309 2005/10/30 22:11:38 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -205,9 +205,15 @@ package PkgLint::FileUtil::Line;
 # A Line is a class that contains the read-only fields C<file>, C<lineno>
 # and C<text>, as well as some methods for printing diagnostics easily.
 #==========================================================================
+BEGIN {
+	import PkgLint::Util qw(
+		false true
+	);
+}
+	
 sub new($$$$) {
-	my ($class, $file, $lineno, $text) = @_;
-	my ($self) = ([$file, $lineno, $text]);
+	my ($class, $file, $lines, $text, $physlines) = @_;
+	my ($self) = ([$file, $lines, $text, $physlines, false]);
 	bless($self, $class);
 	return $self;
 }
@@ -251,31 +257,107 @@ BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
-	@EXPORT_OK = qw(load_file);
+	@EXPORT_OK = qw(
+		load_file load_lines
+	);
 
 	import PkgLint::Util qw(
 		false true
 	);
+	import PkgLint::Logging qw(
+		log_error
+	);
+}
+
+sub load_physical_lines($) {
+	my ($fname) = @_;
+	my ($physlines, $line, $lineno);
+
+	$physlines = [];
+	open(F, "< $fname") or return undef;
+	$lineno = 0;
+	while (defined($line = <F>)) {
+		$lineno++;
+		push(@{$physlines}, [$lineno, $line]);
+	}
+	close(F) or return undef;
+	return $physlines;
+}
+
+sub get_logical_line($$$) {
+	my ($fname, $lines, $ref_lineno) = @_;
+	my ($value, $lineno, $first, $firstlineno, $lastlineno);
+
+	$value = "";
+	$first = true;
+	$lineno = ${$ref_lineno};
+	$firstlineno = $lines->[$lineno]->[0];
+
+	for (; $lineno <= $#{$lines}; $lineno++) {
+		if ($lines->[$lineno]->[1] =~ qr"^([ \t]*)(.*?)([ \t]*)(\\?)\n?$") {
+			my ($indent, $text, $outdent, $cont) = ($1, $2, $3, $4);
+
+			if ($first) {
+				$value .= $indent;
+				$first = false;
+			}
+
+			$value .= $text;
+
+			if ($cont eq "\\") {
+				$value .= " ";
+			} else {
+				$value .= $outdent;
+				last;
+			}
+		}
+	}
+
+	$lastlineno = $lines->[$lineno]->[0];
+	${$ref_lineno} = $lineno + 1;
+
+	return PkgLint::FileUtil::Line->new($fname,
+	    $firstlineno == $lastlineno
+		? $firstlineno
+		: "$firstlineno--$lastlineno",
+	    $value);
+}
+
+sub load_lines($$) {
+	my ($fname, $fold_backslash_lines) = @_;
+	my ($physlines, $seen_newline, $loglines) = @_;
+
+	$physlines = load_physical_lines($fname);
+	if (!$physlines) {
+		return false;
+	}
+
+	$seen_newline = true;
+	$loglines = [];
+	if ($fold_backslash_lines) {
+		for (my $lineno = 0; $lineno <= $#{$physlines}; ) {
+			push(@{$loglines}, get_logical_line($fname, $physlines, \$lineno));
+		}
+	} else {
+		foreach my $physline (@{$physlines}) {
+			my $text = $physline->[1];
+
+			$text =~ s/\n$//;
+			push(@{$loglines}, PkgLint::FileUtil::Line->new($fname, $physline->[0], $text, [$physline]));
+		}
+	}
+
+	if (0 <= $#{$physlines} && $physlines->[-1]->[1] !~ qr"\n$") {
+		log_error($fname, $physlines->[-1]->[0], "File must end with a newline.");
+	}
+
+	return $loglines;
 }
 
 sub load_file($) {
 	my ($fname) = @_;
-	my ($result, $line, $lineno, $seen_newline);
 
-	$result = [];
-	open(F, "< $fname") or return undef;
-	$lineno = 0;
-	$seen_newline = true;
-	while (defined($line = <F>)) {
-		$lineno++;
-		$seen_newline = ($line =~ s/\n$//);
-		push(@{$result}, PkgLint::FileUtil::Line->new($fname, $lineno, $line));
-	}
-	if (!$seen_newline) {
-		$result->[-1]->log_error("File must end with a newline.");
-	}
-	close(F) or return undef;
-	return $result;
+	return load_lines($fname, false);
 }
 
 #== End of PkgLint::FileUtil ==============================================
@@ -298,7 +380,7 @@ BEGIN {
 		print_summary_and_exit
 	);
 	import PkgLint::FileUtil qw(
-		load_file
+		load_file load_lines
 	);
 }
 
@@ -512,55 +594,6 @@ sub parse_command_line() {
 			help(*STDERR, 1, false);
 		}
 	}
-}
-
-sub get_logical_line($$) {
-	my ($lines, $ref_lineno) = @_;
-	my ($value, $lineno, $first, $file, $firstlineno, $lastlineno);
-
-	$value = "";
-	$first = true;
-	$lineno = ${$ref_lineno};
-	$file = $lines->[$lineno]->file;
-	$firstlineno = $lines->[$lineno]->lineno;
-
-	for (; $lineno <= $#{$lines}; $lineno++) {
-		if ($lines->[$lineno]->text =~ qr"^(\s*)(.*?)\s*(\\?)$") {
-			my ($indent, $text, $cont) = ($1, $2, $3);
-
-			if ($first) {
-				$value .= $indent;
-				$first = false;
-			}
-
-			$value .= $text;
-
-			if ($cont eq "\\") {
-				$value .= " ";
-			} else {
-				last;
-			}
-		}
-	}
-
-	$lastlineno = $lines->[$lineno]->lineno;
-	${$ref_lineno} = $lineno + 1;
-
-	return PkgLint::FileUtil::Line->new($file,
-	    $firstlineno == $lastlineno
-		? $firstlineno
-		: "$firstlineno--$lastlineno",
-	    $value);
-}
-
-sub to_logical_lines($) {
-	my ($lines) = @_;
-
-	my @loglines = ();
-	for (my $lineno = 0; $lineno <= $#{$lines}; ) {
-		push(@loglines, get_logical_line($lines, \$lineno));
-	}
-	return \@loglines;
 }
 
 sub load_make_vars_typemap() {
@@ -887,7 +920,7 @@ sub checkfile_MESSAGE($$) {
 	log_subinfo("checkfile_MESSAGE", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	if (!defined($message = load_file($fname))) {
+	if (!($message = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
@@ -1134,7 +1167,7 @@ sub readmakefile($$$$) {
 	my $contents = "";
 	my ($includefile, $dirname, $lines);
 
-	$lines = load_file($file);
+	$lines = load_lines($file, true);
 	if (!defined ($lines)) {
 		return false;
 	}
@@ -1563,7 +1596,7 @@ sub checklines_package_Makefile($) {
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
-		if ($line->lineno == 1) {
+		if ($line->lineno eq "1") {
 			checkline_rcsid_regex($line, qr"#\s+", "# ");
 		}
 
@@ -1683,10 +1716,10 @@ sub set_default_value($$) {
 	}
 }
 
-sub load_package_Makefile($$$$$) {
+sub load_package_Makefile($$$$) {
 	my ($subr) = "load_package_Makefile";
-	my ($dir, $fname, $ref_whole, $ref_lines, $ref_loglines) = @_;
-	my ($whole, $lines, $loglines);
+	my ($dir, $fname, $ref_whole, $ref_lines) = @_;
+	my ($whole, $lines);
 
 	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
 
@@ -1695,11 +1728,10 @@ sub load_package_Makefile($$$$$) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
-	$loglines = to_logical_lines($lines);
 
 	if ($opt_dumpmakefile) {
 		print("OK: whole Makefile (with all included files) follows:\n");
-		foreach my $line (@{$loglines}) {
+		foreach my $line (@{$lines}) {
 			printf("%s\n", $line->to_string());
 		}
 	}
@@ -1734,12 +1766,11 @@ sub load_package_Makefile($$$$$) {
 
 	${$ref_whole} = $whole;
 	${$ref_lines} = $lines;
-	${$ref_loglines} = $loglines;
 	return true;
 }
 
-sub checkfile_package_Makefile($$$$$) {
-	my ($dir, $fname, $rawwhole, $lines, $loglines) = @_;
+sub checkfile_package_Makefile($$$$) {
+	my ($dir, $fname, $rawwhole, $loglines) = @_;
 	my ($distname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
 	my ($abspkgdir, $whole, $tmp, $idx, @sections, @varnames);
@@ -1761,7 +1792,7 @@ sub checkfile_package_Makefile($$$$$) {
 		}
 	}
 
-	checklines_deprecated_variables($lines);
+	checklines_deprecated_variables($loglines);
 
 	#
 	# whole file: INTERACTIVE_STAGE
@@ -2212,7 +2243,7 @@ sub checkfile_package_Makefile($$$$$) {
 			"discouraged. Redefine \"do-$1\" instead.");
 	}
 
-	checklines_package_Makefile($lines);
+	checklines_package_Makefile($loglines);
 	checklines_Makefile_varuse($loglines);
 }
 
@@ -2568,7 +2599,7 @@ sub checkdir_category($) {
 sub checkdir_package($) {
 	my ($dir) = @_;
 
-	my ($whole, $lines, $loglines, $have_distinfo, $have_patches);
+	my ($whole, $loglines, $have_distinfo, $have_patches);
 
 	$pkgdir			= ".";
 	$filesdir		= "files";
@@ -2580,7 +2611,7 @@ sub checkdir_package($) {
 	$pkgname		= undef;
 
 	# we need to handle the Makefile first to get some variables
-	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$lines, \$loglines)) {
+	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$loglines)) {
 		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
@@ -2606,7 +2637,7 @@ sub checkdir_package($) {
 			# We don't have a check for non-regular files yet.
 
 		} elsif ($f eq "${dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($dir, $f, $whole, $lines, $loglines);
+			$opt_check_Makefile and checkfile_package_Makefile($dir, $f, $whole, $loglines);
 
 		} elsif ($f =~ qr"/buildlink3.mk$") {
 			$opt_check_bl3 and checkfile_buildlink3_mk($dir, $f);
