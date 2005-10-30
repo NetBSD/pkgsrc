@@ -1,0 +1,93 @@
+$NetBSD: patch-ap,v 1.1.1.1 2005/10/30 21:02:58 agc Exp $
+
+--- src/tests.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/tests.c	8 Oct 2005 23:37:34 -0000	1.3
+@@ -45,10 +45,14 @@
+ #include <sys/types.h>
+ #include <utime.h>
+ 
+-#ifndef FreeBSD
++#ifdef __linux__
+ #include <scsi/scsi.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include "scsi_cmd_codes.h"
++#endif
++
+ #include <unistd.h>
+ #include <netinet/in.h>
+ #include <sys/uio.h>
+@@ -188,8 +192,8 @@
+   } 
+   TRACE(TRACE_SCSI_DEBUG, "Max LBA (lun %u):   %u\n", lun, *max_lba);
+   TRACE(TRACE_SCSI_DEBUG, "Block Len (lun %u): %u\n", lun, *block_len);
+-  *max_lba = NTOHL(*((unsigned *)(data)));
+-  *block_len = NTOHL(*((unsigned *)(data+4)));
++  *max_lba = ISCSI_NTOHL(*((unsigned *)(data)));
++  *block_len = ISCSI_NTOHL(*((unsigned *)(data+4)));
+   if (*max_lba == 0) {
+     TRACE_ERROR("Device returned Maximum LBA of zero\n");
+     return -1;
+@@ -255,7 +259,7 @@
+ #endif
+ 
+     } else {
+-      *((unsigned *)(cdb+0)) = HTONL(i);
++      *((unsigned *)(cdb+0)) = ISCSI_HTONL(i);
+       cdb[0] = WRITE_6;
+       cdb[1] = (cdb[1]&0x1f)|lun<<5;
+       cdb[4] = len;
+@@ -309,7 +313,7 @@
+ #endif
+ 
+     } else {
+-      *((unsigned *)(cdb+0)) = HTONL(i);
++      *((unsigned *)(cdb+0)) = ISCSI_HTONL(i);
+       cdb[0] = READ_6;
+       cdb[1] = (cdb[1]&0x1f)|lun<<5;
+       cdb[4] = len;
+@@ -1160,8 +1164,8 @@
+   PRINT("inquiry() PASSED: device type 0x%x\n", device_type); 
+   PRINT("##END INITIAL TESTS[%i:%i]##\n\n", tid, lun); 
+ 
+-#if 0
+-  // iSCSI Latency Tests
++#if 1
++  /*  iSCSI Latency Tests */
+ 
+   PRINT("##BEGIN iSCSI LATENCY TESTS[%i:%i]##\n", tid, lun);
+   if (nop_test(tid, lun, 1000)!=0) {
+@@ -1219,10 +1223,13 @@
+   // Build AHS for expected bidi read length
+ 
+   if (m->send_len && m->recv_len) {
++	uint32_t	AHS_length;
++
+     memset(ahs_ptr, 0, 8);
+-    *((unsigned  *)ahs_ptr) = HTONS(8);               // AHS length
+-    ahs_ptr[2] = 0x02;                                // Type
+-    *((unsigned *)(ahs_ptr+4)) = HTONL(m->recv_len);  // Expected Read length
++    AHS_length = 8;
++    *((unsigned  *)ahs_ptr) = ISCSI_HTONL(AHS_length);               /*  AHS length */
++    ahs_ptr[2] = 0x02;                                /*  Type */
++    *((unsigned *)(ahs_ptr+4)) = ISCSI_HTONL(m->recv_len);  /*  Expected Read length */
+     ahs_ptr += 8; ahs_len += 8;
+   }
+ 
+@@ -1231,9 +1238,12 @@
+   OSD_ENCAP_CDB(args, cdb);
+   //OSD_PRINT_CDB(cdb, cdb+16);
+   memset(ahs_ptr, 0, 4);
+-  *((uint16_t *)ahs_ptr) = HTONS(CONFIG_OSD_CDB_LEN-15);    // AHS length
+-  ahs_ptr[2] = 0x01;                                        // Type
+-  memcpy(ahs_ptr+4, cdb+16, CONFIG_OSD_CDB_LEN-16);         // Copy remaining CDB
++  {
++	uint16_t	AHS_length = (CONFIG_OSD_CDB_LEN - 15);    /*  AHS length */
++	*((uint16_t *)ahs_ptr) = ISCSI_HTONS(AHS_length);    /*  AHS length */
++  }
++  ahs_ptr[2] = 0x01;                                        /*  Type */
++  memcpy(ahs_ptr+4, cdb+16, CONFIG_OSD_CDB_LEN-16);         /*  Copy remaining CDB */
+   ahs_ptr += CONFIG_OSD_CDB_LEN-15; ahs_len += CONFIG_OSD_CDB_LEN-15; 
+ 
+   // Build ISCSI_SCSI_CMD_T

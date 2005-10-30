@@ -1,0 +1,87 @@
+$NetBSD: patch-ah,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- src/initiator.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/initiator.c	8 Oct 2005 23:52:25 -0000
+@@ -47,21 +47,27 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <stdio.h>
+-#include <linux/fs.h>
+ 
+ 
+ #endif
+ 
+-#ifndef FreeBSD
++#ifdef __linux__
++#include <linux/fs.h>
+ #include <scsi/scsi.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include "scsi_cmd_codes.h"
++#endif
++
+ #include "iscsi.h"
+ #include "initiator.h"
+ 
+-#ifdef __KERNEL__
+-#include <linux/fs.h>
+-#include <linux/module.h>
++#ifdef __linux__
++#  ifdef __KERNEL__
++#    include <linux/fs.h>
++#    include <linux/module.h>
++#  endif
+ #endif
+ 
+ /*
+@@ -76,8 +82,8 @@
+ 
+ static INITIATOR_TARGET_T g_target[CONFIG_INITIATOR_NUM_TARGETS] = {
+ 
+-//	{"150.0.1.1", ISCSI_PORT, "", NULL, 0},
+-	{"151.0.1.1", ISCSI_PORT, "", NULL, 0}};
++/* 	{"150.0.1.1", ISCSI_PORT, "", NULL, 0}, */
++	{"127.0.0.1", ISCSI_PORT, "", NULL, 0}};
+ 
+ 
+ #endif
+@@ -270,7 +276,7 @@
+   }
+  
+ # else /* not KERNEL */
+-    if (!strcmp(g_target[0].ip,"151.0.1.1")) {
++    if (!strcmp(g_target[0].ip,"127.0.0.1")) {
+       int i, num_targets = -1;
+       printf("No target IP address set, enter number of targets or 0 to exit\n");fflush(stdout);
+       scanf("%d",&num_targets);
+@@ -606,9 +612,10 @@
+ 
+     TRACE(TRACE_ISCSI_DEBUG, "enqueing text command to tx worker %llu\n", sess->isid);
+     ISCSI_LOCK_ELSE(&wait.mutex, FFN_ERROR);
++    ISCSI_LOCK_ELSE(&sess->tx_worker.work_mutex, FFN_ERROR);
+     if (iscsi_queue_insert(&sess->tx_queue, cmd)==-1) {
+       TRACE_ERROR("iscsi_queue_insert() failed\n");
+-      FFN_ERROR;
++      ISCSI_UNLOCK_ELSE(&wait.mutex, FFN_ERROR);
+     }
+     ISCSI_SIGNAL_ELSE(&sess->tx_worker.work_cond, FFN_ERROR);
+     ISCSI_UNLOCK_ELSE(&sess->tx_worker.work_mutex, FFN_ERROR);
+@@ -1362,7 +1369,7 @@
+     // Get cmd ptr from hash table
+ 
+     if ((ISCSI_OPCODE(header)!=ISCSI_REJECT)&&(ISCSI_OPCODE(header)!=ISCSI_ASYNC)) {
+-      tag = NTOHL(*((unsigned *)(header+16))); 
++      tag = ISCSI_NTOHL(*((unsigned *)(header+16))); 
+       if (tag != 0xffffffff) {
+  
+ 	/* remove command from g_tag_hash, cmd is local so we only need to lock the 
+@@ -2374,7 +2381,7 @@
+     TRACE_ERROR("iscsi_sock_msg() failed\n");
+     return -1;
+   }
+-  tag = NTOHL(*((unsigned *)(bad_header+16))); 
++  tag = ISCSI_NTOHL(*((unsigned *)(bad_header+16))); 
+   TRACE_ERROR("REJECT PDU: tag 0x%x (reason 0x%x)\n", tag, reject.reason);
+   if (tag != 0xffffffff) {
+     if ((cmd = hash_remove(&g_tag_hash, tag))==NULL) {
