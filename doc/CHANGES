@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11711 2005/10/30 11:49:30 wiz Exp $
+$NetBSD: CHANGES,v 1.11712 2005/10/30 12:55:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4902,3 +4902,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/rapidsvn to 0.9.0 [epg 2005-10-29]
 	Updated wm/fvwm-devel to 2.5.14 [epg 2005-10-29]
 	Updated emulators/fceu to 0.98.13 [wiz 2005-10-30]
+	Updated databases/phpmyadmin to 2.6.4pl3 [tron 2005-10-30]
