@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.129 2005/10/16 19:38:05 schwarz Exp $
+# $NetBSD: replace.mk,v 1.130 2005/10/30 17:32:07 jschauma Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -861,6 +861,8 @@ TOOLS_DEPENDS.patch?=		patch>=2.2:../../devel/patch
 TOOLS_CREATE+=			patch
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.patch=patch
 TOOLS_PATH.patch=		${TOOLS_PREFIX.patch}/bin/gpatch
+_PATCH_CAN_BACKUP=		yes
+_PATCH_BACKUP_ARG?=		-b -V simple -z
 .  endif
 .endif
 
