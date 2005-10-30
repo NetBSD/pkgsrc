@@ -1,0 +1,38 @@
+$NetBSD: patch-bd,v 1.1.2.2 2005/10/30 22:56:09 salo Exp $
+
+--- util/Transport.c++.orig	2005-10-30 19:41:36.000000000 +0000
++++ util/Transport.c++
+@@ -27,7 +27,9 @@
+ #include "Transport.h"
+ #include "FaxClient.h"
+ #include "InetTransport.h"
++#if CONFIG_UNIXTRANSPORT
+ #include "UnixTransport.h"
++#endif
+ #include "Sys.h"
+ 
+ #include <errno.h>
+@@ -50,17 +52,23 @@ Transport::getTransport(FaxClient& clien
+ 	 * An unqualified destination; look for
+ 	 * the best available transport facility.
+ 	 */
++#if CONFIG_UNIXTRANPSORT
+ 	if (UnixTransport::isA(FAX_DEFUNIX)) {
+ 	    client.setHost(FAX_DEFUNIX);
+ 	    return *new UnixTransport(client);
+ 	} else {
++#endif
+ 	    client.setHost(FAX_DEFHOST);
+ 	    return *new InetTransport(client);
++#if CONFIG_UNIXTRANPSORT
+ 	}
++#endif
+     } else {
++#if CONFIG_UNIXTRANPSORT
+ 	if (UnixTransport::isA(address))
+ 	    return *new UnixTransport(client);
+ 	else
++#endif
+ 	    return *new InetTransport(client);
+     }
+ }

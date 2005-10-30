@@ -1,0 +1,28 @@
+$NetBSD: patch-bb,v 1.1.2.2 2005/10/30 22:56:09 salo Exp $
+
+--- util/recvstats.sh.in.orig	2005-10-30 19:15:58.000000000 +0000
++++ util/recvstats.sh.in
+@@ -142,14 +142,15 @@ esac
+ #
+ # Generate an awk program to process the statistics file.
+ #
+-tmpAwk=/tmp/xferfax$$
+-trap "rm -f $tmpAwk; exit 1" 0 1 2 15
+-
+-# security
+-rm -rf $tmpAwk
+-${NOCLOBBER_ON}
+-> $tmpAwk || exit 1
+-${NOCLOBBER_OFF}
++TMPDIR=`(mktemp -d /tmp/.recvstats.XXXXXX) 2>/dev/null`
++if test X$TMPDIR = X; then
++    TMPDIR=/tmp/.recvstats$$
++fi
++
++@RM@ -fr $TMPDIR
++(umask 077 ; mkdir $TMPDIR) || exit 1
++tmpAwk=$TMPDIR/xferfax$$
++trap "@RM@ -f $tmpAwk; @RM@ -fr $TMPDIR; exit 1" 0 1 2 15
+ 
+ ($CAT<<'EOF'
+ #
