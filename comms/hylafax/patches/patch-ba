@@ -1,0 +1,20 @@
+$NetBSD: patch-ba,v 1.1.2.2 2005/10/30 22:56:09 salo Exp $
+
+--- util/faxcron.sh.in.orig	2005-10-30 19:13:07.000000000 +0000
++++ util//faxcron.sh.in
+@@ -69,9 +69,12 @@ TEE=tee
+ UPDATE="date +'%D %H:%M' >$LAST"
+ 
+ # security
+-TMPDIR=/tmp/.faxcron.sh$$
+-rm -rf $TMPDIR
+-mkdir $TMPDIR || exit 1
++TMPDIR=`(mktemp -d /tmp/.faxcron.XXXXXX) 2>/dev/null`
++if test X$TMPDIR = X; then
++    TMPDIR=/tmp/.faxcron$$
++fi
++@RM@ -fr $TMPDIR
++(umask 077 ; mkdir $TMPDIR) || exit 1
+ 
+ JUNK=$TMPDIR/faxjunk$$         # temp file used multiple times
+ AWKTMP=$TMPDIR/faxawk$$                # temp file for awk program
