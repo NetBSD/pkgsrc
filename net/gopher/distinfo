@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2005/08/05 12:14:51 salo Exp $
+$NetBSD: distinfo,v 1.5.2.1 2005/10/30 17:14:52 salo Exp $
 
-SHA1 (gopher_3.0.9.tar.gz) = 2f4dc2681c6f44f770b36292ca275f094fccfe0c
-RMD160 (gopher_3.0.9.tar.gz) = b30e0fa8864b82962e9b1036c7eeed0b79c16eed
-Size (gopher_3.0.9.tar.gz) = 317945 bytes
+SHA1 (gopher_3.0.11.tar.gz) = 7f64d5fcfa8b92967f94276b1697fda127624f98
+RMD160 (gopher_3.0.11.tar.gz) = 197ee4263612901191e9c964a749586826e350c2
+Size (gopher_3.0.11.tar.gz) = 318250 bytes
 SHA1 (patch-aa) = 650c84593fb2c8b2fe7673f222f8409e3324f79d
 SHA1 (patch-ab) = 436aeab07e3c4d24e06fbe58b83182b330b7c0c4
 SHA1 (patch-ac) = 6fe32b527205649fb4d45618643ccd0815c55724
