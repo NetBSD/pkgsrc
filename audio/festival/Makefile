@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/09/29 19:35:50 kristerw Exp $
+# $NetBSD: Makefile,v 1.45 2005/10/30 04:55:59 minskim Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -74,7 +74,7 @@ post-patch:
 .endif
 
 do-configure:
-	cd ${SPEECHTOOLS} && ${ENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+	cd ${SPEECHTOOLS} && ${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
