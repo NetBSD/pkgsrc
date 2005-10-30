@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+SHA1 (iscsi-Jan15.tgz) = 9928feca21448cd7ebe628067f98201e0499cf25
+RMD160 (iscsi-Jan15.tgz) = b334fb52c5906d1dd5689e74300edc4529292a33
+Size (iscsi-Jan15.tgz) = 114431 bytes
+SHA1 (patch-aa) = 57ce4429360399d7381c6e1fb3d215629d2eca50
+SHA1 (patch-ab) = da3236d030f30bd3c70d5aff639369dd70846e38
+SHA1 (patch-ac) = 74ba11f527611aa7ceecaf6bb3a2e5c4271088fc
+SHA1 (patch-ad) = 0493fcf87a889fdb6c98525ae86543aa04f2e83d
+SHA1 (patch-ae) = 478cda607f8b58217b6a8c7f93c335c08230723e
+SHA1 (patch-af) = 45294ce185c6e34b24531ae1f67dc1fb5fc4c8e9
+SHA1 (patch-ag) = 98c76d4c5da97f9c2289584e50bb88d1cdf18ad3
+SHA1 (patch-ah) = 8a1af68c604bb5f52011509d68678cef894eafbc
+SHA1 (patch-ai) = 11447ee63e17ffa9348dc6d8963053e2afba1cac
+SHA1 (patch-ak) = d57505b3e4a6a1236b088318574db63fcdbe3988
+SHA1 (patch-al) = a9d066277c04867881b8932a8ac1a29d9c2d8ad1
+SHA1 (patch-am) = 48783443ad456f7103cd86d9e894c4aa814bcba6
+SHA1 (patch-an) = 23e399d7748972031036a05555c823cd08085902
+SHA1 (patch-ao) = febfe42a7b4b5deafd25bf5ed0554f2013f9cb22
+SHA1 (patch-ap) = a6e307edc30b1c781cfd0ddfe17d5db9b36a4415
+SHA1 (patch-as) = b3dca3b8574e5b78067a1c8d980dcd579fed83ed
+SHA1 (patch-at) = f198963a44cac79ecd769fda864b97e29c42a6bc
+SHA1 (patch-au) = a25dedf289ec77942bfc192bc6cfa9d43686fd16
+SHA1 (patch-av) = cd596bbfaf58998f9d3b254e3b60e8a1b7ec9d5c

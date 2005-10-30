@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- src/driver.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/driver.c	8 Oct 2005 23:37:34 -0000	1.2
+@@ -396,7 +396,7 @@
+       return -1;
+     }
+     memset(scsi_cmd->ahs, 0, 4);
+-    *((uint16_t *)scsi_cmd->ahs) = HTONS(SCpnt->cmd_len-15);      // AHS length
++    *((uint16_t *)scsi_cmd->ahs) = ISCSI_HTONS(SCpnt->cmd_len-15);      // AHS length
+     scsi_cmd->ahs[2] = 0x01;                                      // Type
+     memcpy(scsi_cmd->ahs+4, SCpnt->cmnd+16, SCpnt->cmd_len-16);   // Copy in remaining CDB
+     scsi_cmd->ahs_len = SCpnt->cmd_len-16;
