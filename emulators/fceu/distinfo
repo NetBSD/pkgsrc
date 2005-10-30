@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 18:49:18 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/10/30 11:47:56 wiz Exp $
 
-SHA1 (fceu-0.98.12.src.tar.bz2) = 713faaad9f7d4b5e8dd1cb8a172e2f1ced85c1ec
-RMD160 (fceu-0.98.12.src.tar.bz2) = e405a459196d2e5e9d630c8699157ec4df0f0210
-Size (fceu-0.98.12.src.tar.bz2) = 559571 bytes
-SHA1 (patch-aa) = df9e098102d4c22c2699d5c5bdec79d72b8bac0c
-SHA1 (patch-ab) = 593c40bfe03e8ae8835113972a58a1cf46e882a9
+SHA1 (fceu-0.98.13.src.tar.bz2) = fed37a9858aa8b149472f964b2ca652168e9f29a
+RMD160 (fceu-0.98.13.src.tar.bz2) = fc736006ed1e9aa564de817622ed575f246bad48
+Size (fceu-0.98.13.src.tar.bz2) = 570842 bytes
+SHA1 (patch-aa) = 31ce24167b8f76df2961ce902d42f45b5278e451
 SHA1 (patch-ac) = 8a5297b11484c6eaf5d70a391bb486ff58475f35
-SHA1 (patch-ad) = 2a253539f9103b75a09f31d51427e8849a3b0249
-SHA1 (patch-ae) = d088b473376460ce29b17abd5dc4521513c55057
+SHA1 (patch-af) = a2b55359d65c60ecb7e7d79390ef872873c0eba1
+SHA1 (patch-ah) = cc48e36406b6d9e4cf88179510824135507aa6f9
