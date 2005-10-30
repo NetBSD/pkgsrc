@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.49 2005/10/30 22:24:23 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.50 2005/10/30 22:56:39 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -111,3 +111,5 @@ Pullup ticket 866 - requested by Min Sik Kim
 security update for graphviz
 Pullup ticket 867 - requested by Lubomir Sedlacik
 security fix for xli
+Pullup ticket 868 - requested by Adrian Portelli
+security fixes for hylafax
