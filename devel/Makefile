@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.683 2005/10/29 02:03:33 minskim Exp $
+# $NetBSD: Makefile,v 1.684 2005/10/30 21:04:13 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -192,6 +192,7 @@ SUBDIR+=	hptools
 SUBDIR+=	ht
 SUBDIR+=	id-utils
 SUBDIR+=	idiff
+SUBDIR+=	intel-iscsi
 SUBDIR+=	intel2gas
 SUBDIR+=	isect
 SUBDIR+=	its4
