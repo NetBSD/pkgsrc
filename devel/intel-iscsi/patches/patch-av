@@ -1,0 +1,88 @@
+$NetBSD: patch-av,v 1.1.1.1 2005/10/30 21:02:58 agc Exp $
+
+--- include/osd.h	2005/10/27 20:12:05	1.1
++++ include/osd.h	2005/10/27 20:12:53
+@@ -88,53 +88,53 @@
+ (CDB)[1] = (ARGS)->control;                                                  \
+ (CDB)[6] = (ARGS)->security;                                                 \
+ (CDB)[7] = (ARGS)->add_cdb_len;                                              \
+-*((uint16_t *)((CDB)+8)) = HTONS((ARGS)->service_action);                    \
++*((uint16_t *)((CDB)+8)) = ISCSI_HTONS((ARGS)->service_action);                    \
+ (CDB)[10] = (ARGS)->options_byte;                                            \
+ (CDB)[11] = (ARGS)->second_options_byte;                                     \
+-*((uint32_t *)((CDB)+12)) = HTONL((ARGS)->GroupID);                          \
+-*((uint64_t *)((CDB)+16)) = HTONLL((ARGS)->UserID);                          \
+-*((uint32_t *)((CDB)+24)) = HTONL((ARGS)->SessionID);                        \
+-*((uint64_t *)((CDB)+28)) = HTONLL((ARGS)->length);                          \
+-*((uint64_t *)((CDB)+36)) = HTONLL((ARGS)->offset);                          \
+-*((uint32_t *)((CDB)+44)) = HTONL((ARGS)->get_attributes_page);              \
+-*((uint32_t *)((CDB)+48)) = HTONL((ARGS)->get_attributes_list_length);       \
+-*((uint32_t *)((CDB)+52)) = HTONL((ARGS)->get_attributes_allocation_length); \
+-*((uint32_t *)((CDB)+72)) = HTONL((ARGS)->set_attributes_list_length);
++*((uint32_t *)((CDB)+12)) = ISCSI_HTONL((ARGS)->GroupID);                          \
++*((uint64_t *)((CDB)+16)) = ISCSI_HTONLL((ARGS)->UserID);                          \
++*((uint32_t *)((CDB)+24)) = ISCSI_HTONL((ARGS)->SessionID);                        \
++*((uint64_t *)((CDB)+28)) = ISCSI_HTONLL((ARGS)->length);                          \
++*((uint64_t *)((CDB)+36)) = ISCSI_HTONLL((ARGS)->offset);                          \
++*((uint32_t *)((CDB)+44)) = ISCSI_HTONL((ARGS)->get_attributes_page);              \
++*((uint32_t *)((CDB)+48)) = ISCSI_HTONL((ARGS)->get_attributes_list_length);       \
++*((uint32_t *)((CDB)+52)) = ISCSI_HTONL((ARGS)->get_attributes_allocation_length); \
++*((uint32_t *)((CDB)+72)) = ISCSI_HTONL((ARGS)->set_attributes_list_length);
+ 
+ #define OSD_DECAP_CDB(CDB, EXT_CDB, ARGS)                                           \
+ (ARGS)->opcode = (CDB)[0];                                                          \
+ (ARGS)->control = (CDB)[1];                                                         \
+ (ARGS)->security = (CDB)[6];                                                        \
+ (ARGS)->add_cdb_len = (CDB)[7];                                                     \
+-(ARGS)->service_action = NTOHS(*((uint16_t *)((CDB)+8)));                           \
++(ARGS)->service_action = ISCSI_NTOHS(*((uint16_t *)((CDB)+8)));                           \
+ (ARGS)->options_byte = (CDB)[10];                                                   \
+ (ARGS)->second_options_byte = (CDB)[11];                                            \
+-(ARGS)->GroupID = NTOHL(*((uint32_t *)((CDB)+12)));                                 \
+-(ARGS)->UserID = NTOHLL(*((uint64_t *)((EXT_CDB)-16+16)));                          \
+-(ARGS)->SessionID = NTOHL(*((uint32_t *)((EXT_CDB)-16+24)));                        \
+-(ARGS)->length = NTOHLL(*((uint64_t *)((EXT_CDB)-16+28)));                          \
+-(ARGS)->offset = NTOHLL(*((uint64_t *)((EXT_CDB)-16+36)));                          \
+-(ARGS)->get_attributes_page = NTOHL(*((uint32_t *)((EXT_CDB)-16+44)));              \
+-(ARGS)->get_attributes_list_length = NTOHL(*((uint32_t *)((EXT_CDB)-16+48)));       \
+-(ARGS)->get_attributes_allocation_length = NTOHL(*((uint32_t *)((EXT_CDB)-16+52))); \
+-(ARGS)->set_attributes_list_length = NTOHL(*((uint32_t *)((EXT_CDB)-16+72)));
++(ARGS)->GroupID = ISCSI_NTOHL(*((uint32_t *)((CDB)+12)));                                 \
++(ARGS)->UserID = ISCSI_NTOHLL(*((uint64_t *)((EXT_CDB)-16+16)));                          \
++(ARGS)->SessionID = ISCSI_NTOHL(*((uint32_t *)((EXT_CDB)-16+24)));                        \
++(ARGS)->length = ISCSI_NTOHLL(*((uint64_t *)((EXT_CDB)-16+28)));                          \
++(ARGS)->offset = ISCSI_NTOHLL(*((uint64_t *)((EXT_CDB)-16+36)));                          \
++(ARGS)->get_attributes_page = ISCSI_NTOHL(*((uint32_t *)((EXT_CDB)-16+44)));              \
++(ARGS)->get_attributes_list_length = ISCSI_NTOHL(*((uint32_t *)((EXT_CDB)-16+48)));       \
++(ARGS)->get_attributes_allocation_length = ISCSI_NTOHL(*((uint32_t *)((EXT_CDB)-16+52))); \
++(ARGS)->set_attributes_list_length = ISCSI_NTOHL(*((uint32_t *)((EXT_CDB)-16+72)));
+ 
+ #define OSD_PRINT_CDB(CDB, EXT_CDB)                                      \
+ PRINT("opcode         = 0x%x\n",   CDB[0]);                              \
+ PRINT("control        = 0x%x\n",   CDB[1]);                              \
+ PRINT("security       = 0x%x\n",   CDB[6]);                              \
+ PRINT("add_cdb_len    = %u\n",     CDB[7]);                              \
+-PRINT("service_action = 0x%x\n",   NTOHS(*(uint16_t*)(CDB+8)));          \
++PRINT("service_action = 0x%x\n",   ISCSI_NTOHS(*(uint16_t*)(CDB+8)));          \
+ PRINT("options byte 1 = 0x%x\n",   CDB[10]);                             \
+ PRINT("options byte 2 = 0x%x\n",   CDB[11]);                             \
+-PRINT("group id       = 0x%x\n",   NTOHL(*(uint32_t*)(CDB+12)));         \
+-PRINT("user id        = 0x%llx\n", NTOHLL(*(uint64_t*)(EXT_CDB-16+16))); \
+-PRINT("session id     = 0x%x\n",   NTOHL(*(uint32_t*)(EXT_CDB-16+24)));  \
+-PRINT("length         = %llu\n",   NTOHLL(*(uint64_t*)(EXT_CDB-16+28))); \
+-PRINT("offset         = %llu\n",   NTOHLL(*(uint64_t*)(EXT_CDB-16+36))); \
+-PRINT("get attr page  = %u\n",     NTOHL(*(uint32_t*)(EXT_CDB-16+44)));  \
+-PRINT("get list len   = %u\n",     NTOHL(*(uint32_t*)(EXT_CDB-16+48)));  \
+-PRINT("get alloc len  = %u\n",     NTOHL(*(uint32_t*)(EXT_CDB-16+52)));  \
+-PRINT("set list len   = %u\n",     NTOHL(*(uint32_t*)(EXT_CDB-16+72)));
++PRINT("group id       = 0x%x\n",   ISCSI_NTOHL(*(uint32_t*)(CDB+12)));         \
++PRINT("user id        = 0x%llx\n", ISCSI_NTOHLL(*(uint64_t*)(EXT_CDB-16+16))); \
++PRINT("session id     = 0x%x\n",   ISCSI_NTOHL(*(uint32_t*)(EXT_CDB-16+24)));  \
++PRINT("length         = %llu\n",   ISCSI_NTOHLL(*(uint64_t*)(EXT_CDB-16+28))); \
++PRINT("offset         = %llu\n",   ISCSI_NTOHLL(*(uint64_t*)(EXT_CDB-16+36))); \
++PRINT("get attr page  = %u\n",     ISCSI_NTOHL(*(uint32_t*)(EXT_CDB-16+44)));  \
++PRINT("get list len   = %u\n",     ISCSI_NTOHL(*(uint32_t*)(EXT_CDB-16+48)));  \
++PRINT("get alloc len  = %u\n",     ISCSI_NTOHL(*(uint32_t*)(EXT_CDB-16+52)));  \
++PRINT("set list len   = %u\n",     ISCSI_NTOHL(*(uint32_t*)(EXT_CDB-16+72)));
+ 
+ #endif /* OSD_H */

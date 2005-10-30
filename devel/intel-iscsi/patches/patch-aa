@@ -1,0 +1,489 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- include/iscsi.h	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ include/iscsi.h	10 Oct 2005 21:49:19 -0000
+@@ -120,15 +120,15 @@
+ #define ISCSI_TASK_CMD_TARGET_REASSIGN      8
+ 
+ typedef struct iscsi_task_cmd_t {
+-  int immediate;
+-  unsigned char function;
+-  unsigned long long lun;
+-  unsigned tag;
+-  unsigned ref_tag;
+-  unsigned CmdSN;
+-  unsigned ExpStatSN;
+-  unsigned RefCmdSN;
+-  unsigned ExpDataSN;
++  int32_t immediate;
++  uint8_t function;
++  uint64_t lun;
++  uint32_t tag;
++  uint32_t ref_tag;
++  uint32_t CmdSN;
++  uint32_t ExpStatSN;
++  uint32_t RefCmdSN;
++  uint32_t ExpDataSN;
+ } ISCSI_TASK_CMD_T;
+ 
+ int iscsi_task_cmd_encap(unsigned char *header, ISCSI_TASK_CMD_T *cmd);
+@@ -153,12 +153,12 @@
+ #define ISCSI_TASK_QUAL_NOT_AUTHORIZED     1
+ 
+ typedef struct iscsi_task_rsp_t {
+-  unsigned char response;
+-  unsigned length;
+-  unsigned tag;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
++  uint8_t response;
++  uint32_t length;
++  uint32_t tag;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
+ } ISCSI_TASK_RSP_T;
+ 
+ int iscsi_task_rsp_encap(unsigned char *header, ISCSI_TASK_RSP_T *rsp);
+@@ -171,14 +171,14 @@
+ 
+ 
+ typedef struct iscsi_nop_out_args_t {
+-  int immediate;
+-  unsigned length;
+-  unsigned long long lun;
+-  unsigned tag;
+-  unsigned transfer_tag;
+-  unsigned CmdSN;
+-  unsigned ExpStatSN;
+-  unsigned char *data;
++  int32_t immediate;
++  uint32_t length;
++  uint64_t lun;
++  uint32_t tag;
++  uint32_t transfer_tag;
++  uint32_t CmdSN;
++  uint32_t ExpStatSN;
++  uint8_t *data;
+ } ISCSI_NOP_OUT_T;
+ 
+ int iscsi_nop_out_encap(unsigned char *header, ISCSI_NOP_OUT_T *cmd);
+@@ -191,13 +191,13 @@
+ 
+ 
+ typedef struct iscsi_nop_in_args_t {
+-  unsigned length;
+-  unsigned long long lun;
+-  unsigned tag;
+-  unsigned transfer_tag;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
++  uint32_t length;
++  uint64_t lun;
++  uint32_t tag;
++  uint32_t transfer_tag;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
+ } ISCSI_NOP_IN_T;
+ 
+ int iscsi_nop_in_encap(unsigned char *header, ISCSI_NOP_IN_T *cmd);
+@@ -210,15 +210,15 @@
+ 
+ 
+ typedef struct iscsi_text_cmd_args_t {
+-  int immediate;
+-  int final;
+-  int cont;
+-  unsigned length;
+-  unsigned long long lun;
+-  unsigned tag;
+-  unsigned transfer_tag;
+-  unsigned CmdSN;
+-  unsigned ExpStatSN;
++  int32_t immediate;
++  int32_t final;
++  int32_t cont;
++  uint32_t length;
++  uint64_t lun;
++  uint32_t tag;
++  uint32_t transfer_tag;
++  uint32_t CmdSN;
++  uint32_t ExpStatSN;
+   char *text;
+ } ISCSI_TEXT_CMD_T;
+ 
+@@ -232,15 +232,15 @@
+ 
+ 
+ typedef struct iscsi_text_rsp_args_t {
+-  int final;
+-  int cont;
+-  unsigned length;
+-  unsigned long long lun;
+-  unsigned tag;
+-  unsigned transfer_tag;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
++  int32_t final;
++  int32_t cont;
++  uint32_t length;
++  uint64_t lun;
++  uint32_t tag;
++  uint32_t transfer_tag;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
+ } ISCSI_TEXT_RSP_T;
+ 
+ int iscsi_text_rsp_encap(unsigned char *header, ISCSI_TEXT_RSP_T *rsp);
+@@ -253,20 +253,20 @@
+ 
+ 
+ typedef struct iscsi_login_cmd_args_t {
+-  int transit;
+-  int cont;
+-  unsigned char csg;
+-  unsigned char nsg;
+-  char version_max;
+-  char version_min;
+-  unsigned char AHSlength;
+-  unsigned length;
+-  unsigned long long isid;
+-  unsigned short tsih;
+-  unsigned tag;
+-  unsigned short cid;
+-  unsigned CmdSN;
+-  unsigned ExpStatSN;
++  int32_t transit;
++  int32_t cont;
++  uint8_t csg;
++  uint8_t nsg;
++  int8_t version_max;
++  int8_t version_min;
++  uint8_t AHSlength;
++  uint32_t length;
++  uint64_t isid;
++  uint16_t tsih;
++  uint32_t tag;
++  uint16_t cid;
++  uint32_t CmdSN;
++  uint32_t ExpStatSN;
+   char *text;
+ } ISCSI_LOGIN_CMD_T;
+ 
+@@ -280,22 +280,22 @@
+ 
+ 
+ typedef struct iscsi_login_rsp_args_t {
+-  int transit;
+-  int cont;
+-  unsigned char csg;
+-  unsigned char nsg;
+-  char version_max;
+-  char version_active;
+-  unsigned char AHSlength;
+-  unsigned length;
+-  unsigned long long isid;
+-  unsigned short tsih;
+-  unsigned tag;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
+-  unsigned char status_class;
+-  unsigned char status_detail;
++  int32_t transit;
++  int32_t cont;
++  uint8_t csg;
++  uint8_t nsg;
++  int8_t version_max;
++  int8_t version_active;
++  uint8_t AHSlength;
++  uint32_t length;
++  uint64_t isid;
++  uint16_t tsih;
++  uint32_t tag;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
++  uint8_t status_class;
++  uint8_t status_detail;
+ } ISCSI_LOGIN_RSP_T;
+ 
+ int iscsi_login_rsp_encap(unsigned char *header, ISCSI_LOGIN_RSP_T *rsp);
+@@ -308,12 +308,12 @@
+ 
+ 
+ typedef struct iscsi_logout_cmd_args_t {
+-  int immediate;
+-  unsigned char reason;
+-  unsigned tag;
+-  unsigned short cid;
+-  unsigned CmdSN;
+-  unsigned ExpStatSN;
++  int32_t immediate;
++  uint8_t reason;
++  uint32_t tag;
++  uint16_t cid;
++  uint32_t CmdSN;
++  uint32_t ExpStatSN;
+ } ISCSI_LOGOUT_CMD_T;
+ 
+ int iscsi_logout_cmd_encap(unsigned char *header, ISCSI_LOGOUT_CMD_T *cmd);
+@@ -326,14 +326,14 @@
+ 
+ 
+ typedef struct iscsi_logout_rsp_args_t {
+-  unsigned char response;
+-  unsigned length;
+-  unsigned tag;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
+-  unsigned short Time2Wait;
+-  unsigned short Time2Retain;
++  uint8_t response;
++  uint32_t length;
++  uint32_t tag;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
++  uint16_t Time2Wait;
++  uint16_t Time2Retain;
+ } ISCSI_LOGOUT_RSP_T;
+ 
+ int iscsi_logout_rsp_encap(unsigned char *header, ISCSI_LOGOUT_RSP_T *rsp);
+@@ -346,29 +346,29 @@
+ 
+ 
+ typedef struct iscsi_scsi_cmd_args_t {
+-  int immediate;
+-  int final;
+-  int input;
+-  int output;
+-  unsigned char attr;
+-  unsigned length;
+-  unsigned long long lun;
+-  unsigned tag;
+-  unsigned trans_len;
+-  unsigned bidi_trans_len;
+-  unsigned CmdSN;
+-  unsigned ExpStatSN;
+-  unsigned char *cdb;
+-  unsigned char *ext_cdb;
+-  unsigned char *ahs;
+-  unsigned char ahs_len;
+-  unsigned char *send_data;
+-  int send_sg_len;
+-  unsigned char *recv_data;
+-  int recv_sg_len;
+-  unsigned char status;
+-  unsigned bytes_sent;
+-  unsigned bytes_recv;
++  int32_t immediate;
++  int32_t final;
++  int32_t input;
++  int32_t output;
++  uint8_t attr;
++  uint32_t length;
++  uint64_t lun;
++  uint32_t tag;
++  uint32_t trans_len;
++  uint32_t bidi_trans_len;
++  uint32_t CmdSN;
++  uint32_t ExpStatSN;
++  uint8_t *cdb;
++  uint8_t *ext_cdb;
++  uint8_t *ahs;
++  uint8_t ahs_len;
++  uint8_t *send_data;
++  int32_t send_sg_len;
++  uint8_t *recv_data;
++  int32_t recv_sg_len;
++  uint8_t status;
++  uint32_t bytes_sent;
++  uint32_t bytes_recv;
+ } ISCSI_SCSI_CMD_T;
+ 
+ int iscsi_scsi_cmd_encap(unsigned char *header, ISCSI_SCSI_CMD_T *cmd);
+@@ -381,23 +381,23 @@
+ 
+ 
+ typedef struct iscsi_scsi_rsp_args_t {
+-  int bidi_overflow;
+-  int bidi_underflow;
+-  int overflow;
+-  int underflow;
+-
+-
+-  unsigned char response;
+-  unsigned char status;
+-  unsigned ahs_len; 
+-  unsigned length;
+-  unsigned tag;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
+-  unsigned ExpDataSN;
+-  unsigned bidi_res_cnt;
+-  unsigned basic_res_cnt;
++  int32_t bidi_overflow;
++  int32_t bidi_underflow;
++  int32_t overflow;
++  int32_t underflow;
++
++
++  uint8_t response;
++  uint8_t status;
++  uint32_t ahs_len; 
++  uint32_t length;
++  uint32_t tag;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
++  uint32_t ExpDataSN;
++  uint32_t bidi_res_cnt;
++  uint32_t basic_res_cnt;
+ } ISCSI_SCSI_RSP_T;
+ 
+ int iscsi_scsi_rsp_encap(unsigned char *header, ISCSI_SCSI_RSP_T *rsp);
+@@ -410,16 +410,16 @@
+ 
+ 
+ typedef struct iscsi_r2t_args_t {
+-  unsigned AHSlength;
+-  unsigned long long lun;
+-  unsigned tag;
+-  unsigned transfer_tag;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
+-  unsigned R2TSN;
+-  unsigned offset;
+-  unsigned length;
++  uint32_t AHSlength;
++  uint64_t lun;
++  uint32_t tag;
++  uint32_t transfer_tag;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
++  uint32_t R2TSN;
++  uint32_t offset;
++  uint32_t length;
+ } ISCSI_R2T_T;
+ 
+ int iscsi_r2t_encap(unsigned char *header, ISCSI_R2T_T *cmd);
+@@ -432,14 +432,14 @@
+ 
+ 
+ typedef struct iscsi_write_data_args_t {
+-  int final;
+-  unsigned length;
+-  unsigned long long lun;
+-  unsigned tag;
+-  unsigned transfer_tag;
+-  unsigned ExpStatSN;
+-  unsigned DataSN;
+-  unsigned offset;
++  int32_t final;
++  uint32_t length;
++  uint64_t lun;
++  uint32_t tag;
++  uint32_t transfer_tag;
++  uint32_t ExpStatSN;
++  uint32_t DataSN;
++  uint32_t offset;
+ } ISCSI_WRITE_DATA_T;
+ 
+ int iscsi_write_data_encap(unsigned char *header, ISCSI_WRITE_DATA_T *cmd);
+@@ -452,22 +452,22 @@
+ 
+ 
+ typedef struct iscsi_read_data_args_t {
+-  int final;
+-  int ack;
+-  int overflow;
+-  int underflow;
+-  int S_bit;
+-  unsigned char status;
+-  unsigned length;
+-  unsigned long long lun;
+-  unsigned task_tag;
+-  unsigned transfer_tag;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
+-  unsigned DataSN;
+-  unsigned offset;
+-  unsigned res_count;
++  int32_t final;
++  int32_t ack;
++  int32_t overflow;
++  int32_t underflow;
++  int32_t S_bit;
++  uint8_t status;
++  uint32_t length;
++  uint64_t lun;
++  uint32_t task_tag;
++  uint32_t transfer_tag;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
++  uint32_t DataSN;
++  uint32_t offset;
++  uint32_t res_count;
+ } ISCSI_READ_DATA_T;
+ 
+ int iscsi_read_data_encap(unsigned char *header, ISCSI_READ_DATA_T *cmd);
+@@ -479,12 +479,12 @@
+  */
+ 
+ typedef struct iscsi_reject_args_t {
+-  unsigned char reason;
+-  unsigned length;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
+-  unsigned DataSN;
++  uint8_t reason;
++  uint32_t length;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
++  uint32_t DataSN;
+   char *header;
+ 
+ } ISCSI_REJECT_T;
+@@ -497,16 +497,20 @@
+  */
+ 
+ typedef struct iscsi_async_msg_args_t {
+-  unsigned char AHSlength;
+-  unsigned long long lun;
+-  unsigned StatSN;
+-  unsigned ExpCmdSN;
+-  unsigned MaxCmdSN;
+-  unsigned length;
+-  unsigned char AsyncEvent;
+-  unsigned char AsyncVCode;
++  uint8_t AHSlength;
++  uint64_t lun;
++  uint32_t StatSN;
++  uint32_t ExpCmdSN;
++  uint32_t MaxCmdSN;
++  uint32_t length;
++  uint8_t AsyncEvent;
++  uint8_t AsyncVCode;
+ } ISCSI_AMSG_T;
+ 
+ int iscsi_amsg_decap(unsigned char *header, ISCSI_AMSG_T *msg);
+ 
++#ifndef SOL_TCP
++#define SOL_TCP	IPPROTO_TCP
++#endif
++
+ #endif /* ISCSI_H */

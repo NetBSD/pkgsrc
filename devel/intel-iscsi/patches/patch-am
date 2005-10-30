@@ -1,0 +1,434 @@
+$NetBSD: patch-am,v 1.1.1.1 2005/10/30 21:02:58 agc Exp $
+
+--- src/parameters.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/parameters.c	8 Oct 2005 23:37:34 -0000	1.2
+@@ -44,7 +44,7 @@
+ int param_list_add(ISCSI_PARAMETER_T **head, int type, char *key, char *dflt, char *valid) {
+   ISCSI_PARAMETER_T *param;
+   
+-  // Allocated new parameter type
++  /*  Allocated new parameter type */
+  
+   if (*head==NULL) {
+     if ((*head=iscsi_malloc_atomic(sizeof(ISCSI_PARAMETER_T)))==NULL) {
+@@ -61,21 +61,21 @@
+     param = param->next;
+   }
+ 
+-  // Initilized parameter
++  /*  Initilized parameter */
+ 
+-  param->type = type;                 // type
+-  strcpy(param->key, key);            // key
+-  strcpy(param->dflt, dflt);          // default value
+-  strcpy(param->valid, valid);        // list of valid values
+-  param->tx_offer = 0;                // sent offer
+-  param->rx_offer = 0;                // received offer
+-  param->tx_answer = 0;               // sent answer
+-  param->rx_answer = 0;               // received answer
+-  param->reset = 0;                   // used to erase value_l on next parse
+-  param->next = NULL;                 // terminate list
++  param->type = type;                 /*  type */
++  strcpy(param->key, key);            /*  key */
++  strcpy(param->dflt, dflt);          /*  default value */
++  strcpy(param->valid, valid);        /*  list of valid values */
++  param->tx_offer = 0;                /*  sent offer */
++  param->rx_offer = 0;                /*  received offer */
++  param->tx_answer = 0;               /*  sent answer */
++  param->rx_answer = 0;               /*  received answer */
++  param->reset = 0;                   /*  used to erase value_l on next parse */
++  param->next = NULL;                 /*  terminate list */
+ 
+-  // Allocated space for value list and set first item to default; and
+-  // set offer and answer lists to NULL
++  /*  Allocated space for value list and set first item to default; and */
++  /*  set offer and answer lists to NULL */
+ 
+   if ((param->value_l=iscsi_malloc_atomic(sizeof(ISCSI_PARAMETER_VALUE_T)))==NULL) {
+     TRACE_ERROR("iscsi_malloc_atomic() failed\n");
+@@ -84,7 +84,7 @@
+   param->value_l->next = NULL;
+   strcpy(param->value_l->value, dflt);
+ 
+-  // Arg check
++  /*  Arg check */
+ 
+   switch(type) {
+     case ISCSI_PARAM_TYPE_DECLARATIVE:
+@@ -130,11 +130,11 @@
+     if (tmp->value_l) {
+       for (item_ptr=tmp->value_l; item_ptr!=NULL; item_ptr=next) {
+         next = item_ptr->next;
+-        //TRACE(TRACE_ISCSI_PARAM, "freeing \"%s\" (%p)\n", item_ptr->value, item_ptr);
++        /* TRACE(TRACE_ISCSI_PARAM, "freeing \"%s\" (%p)\n", item_ptr->value, item_ptr); */
+         iscsi_free_atomic(item_ptr);
+       } 
+     }
+-    //TRACE(TRACE_ISCSI_PARAM, "freeing %p\n", tmp);
++    /* TRACE(TRACE_ISCSI_PARAM, "freeing %p\n", tmp); */
+     iscsi_free_atomic(tmp);
+   }
+   return 0;
+@@ -297,7 +297,7 @@
+ 
+   for (ptr=text; ptr-text<text_len; ptr+=(strlen(ptr)+1)) {
+ 
+-    // Skip over any NULLs
++    /*  Skip over any NULLs */
+ 
+     while (!(*ptr)&&((ptr-text)<text_len)) ptr++;
+     if ((ptr-text)>=text_len) break;
+@@ -372,8 +372,8 @@
+     if (!param_in->rx_offer) {
+       param= param_get(head, "CHAP_A");
+       if (param == NULL) PPS_ERROR;
+-      param->tx_offer = 1;   // sending an offer
+-      param->rx_offer = 0;   // reset
++      param->tx_offer = 1;   /*  sending an offer */
++      param->rx_offer = 0;   /*  reset */
+       strcpy(param->offer_tx, param->valid); 
+       PARAM_TEXT_ADD_ELSE(head, param->key, param->valid,
+ 			  text_out, text_len_out, 0, PPS_ERROR);
+@@ -388,8 +388,8 @@
+    
+      param= param_get(head, "CHAP_I");
+      if (param == NULL) PPS_ERROR; 
+-     param->tx_offer = 1;   // sending an offer
+-     param->rx_offer = 0;   // reset
++     param->tx_offer = 1;   /*  sending an offer */
++     param->rx_offer = 0;   /*  reset */
+      GenRandomData(idData, 1);
+      sprintf(chapstring, "%d", idData[0]);
+      strcpy(param->offer_tx, chapstring); 
+@@ -398,8 +398,8 @@
+ 
+      param= param_get(head, "CHAP_C");
+      if (param == NULL) PPS_ERROR;
+-     param->tx_offer = 1;   // sending an offer
+-     param->rx_offer = 0;   // reset
++     param->tx_offer = 1;   /*  sending an offer */
++     param->rx_offer = 0;   /*  reset */
+      GenRandomData(chapdata, ISCSI_CHAP_DATA_LENGTH);
+      HexDataToText(chapdata, ISCSI_CHAP_DATA_LENGTH,
+ 		   chapstring, ISCSI_CHAP_STRING_LENGTH);
+@@ -411,7 +411,7 @@
+ 
+  } else if (strcmp(param_in->key, "CHAP_I") == 0) {
+ 	  
+-   if (param_in->rx_offer) //received answer
++   if (param_in->rx_offer) /* received answer */
+      idData[0] = driver_atoi(param_in->offer_rx);
+    else
+      idData[0] = driver_atoi(param_in->answer_rx);
+@@ -429,8 +429,8 @@
+ 
+    param= param_get(head, "CHAP_N");
+    if (param == NULL) PPS_ERROR;
+-   param->tx_offer = 1;   // sending an offer
+-   param->rx_offer = 0;   // reset
++   param->tx_offer = 1;   /*  sending an offer */
++   param->rx_offer = 0;   /*  reset */
+ 
+    if (param_in->rx_offer)
+      strcpy(param->offer_tx, ISCSI_CHAP_INUSER); 
+@@ -442,8 +442,8 @@
+ 
+    param= param_get(head, "CHAP_R");
+    if (param == NULL) PPS_ERROR;
+-   param->tx_offer = 1;   // sending an offer
+-   param->rx_offer = 0;   // reset
++   param->tx_offer = 1;   /*  sending an offer */
++   param->rx_offer = 0;   /*  reset */
+    MD5Init(context);
+    MD5Update(context, idData, 1);
+ 
+@@ -468,8 +468,8 @@
+ 
+      param= param_get(head, "CHAP_I");
+      if (param == NULL) PPS_ERROR;
+-     param->tx_offer = 1;   // sending an offer
+-     param->rx_offer = 0;   // reset
++     param->tx_offer = 1;   /*  sending an offer */
++     param->rx_offer = 0;   /*  reset */
+      GenRandomData(idData, 1);
+      sprintf(chapstring, "%d", idData[0]);
+      strcpy(param->offer_tx, chapstring); 
+@@ -478,8 +478,8 @@
+ 
+      param= param_get(head, "CHAP_C");
+      if (param == NULL) PPS_ERROR;
+-     param->tx_offer = 1;   // sending an offer
+-     param->rx_offer = 0;   // reset
++     param->tx_offer = 1;   /*  sending an offer */
++     param->rx_offer = 0;   /*  reset */
+      GenRandomData(chapdata, ISCSI_CHAP_DATA_LENGTH);
+      HexDataToText(chapdata, ISCSI_CHAP_DATA_LENGTH,
+ 		   chapstring, ISCSI_CHAP_STRING_LENGTH);
+@@ -565,9 +565,9 @@
+   char c;
+   int ret;
+ 
+-  // Whether incoming or outgoing, some of the params might be offers and some answers.  Incoming 
+-  // text has the potential for creating outgoing text - and this will happen when the incoming 
+-  // text has offers that need an answer.
++  /*  Whether incoming or outgoing, some of the params might be offers and some answers.  Incoming  */
++  /*  text has the potential for creating outgoing text - and this will happen when the incoming  */
++  /*  text has offers that need an answer. */
+ 
+   TRACE(TRACE_ISCSI_PARAM, "parsing %i %s bytes of text parameters\n", text_len_in, outgoing?"outgoing":"incoming");
+ 
+@@ -617,12 +617,12 @@
+ 
+   for (ptr=text_in; ptr-text_in<text_len_in; ptr+=(strlen(ptr)+1)) {
+ 
+-    // Skip over any NULLs
++    /*  Skip over any NULLs */
+ 
+     while (!(*ptr)&&((ptr-text_in)<text_len_in)) ptr++;
+     if ((ptr-text_in)>=text_len_in) break;
+ 
+-    // Extract <key>=<value> token from text_in
++    /*  Extract <key>=<value> token from text_in */
+ 
+     if ((delim_ptr=strchr(ptr, '='))==NULL) {
+       TRACE_ERROR("delimiter \'=\' not found in token \"%s\"\n", ptr);
+@@ -633,7 +633,7 @@
+           if(tmp_key) {
+             strncpy(tmp_key,  ptr, delim_ptr-ptr);
+             tmp_key[delim_ptr-ptr] = '\0';
+-            // Key not understood.
++            /*  Key not understood. */
+             PARAM_TEXT_ADD_ELSE(head, tmp_key, "NotUnderstood", text_out, text_len_out, 0, PTP_ERROR);
+           }
+         } else {
+@@ -645,14 +645,14 @@
+       value = delim_ptr+1;
+     }
+ 
+-    // Find key in param list
++    /*  Find key in param list */
+ 
+     for (param=head; param!=NULL; param=param->next) {
+       if (strcmp(param->key, key)==0) break;
+     }
+     if (param==NULL) {
+ 	  if( !outgoing ) {
+-	    // Key not understood.
++	    /*  Key not understood. */
+         PARAM_TEXT_ADD_ELSE(head, key, "NotUnderstood", text_out, text_len_out, 0, PTP_ERROR);
+ 	  } else {
+         PRINT("ignoring \"%s\"\n", key);
+@@ -662,18 +662,18 @@
+ 
+     RETURN_GREATER("strlen(value)", strlen(value), ISCSI_PARAM_MAX_LEN, PTP_CLEANUP, -1); 
+ 
+-    // We're sending|receiving an offer|answer 
++    /*  We're sending|receiving an offer|answer  */
+ 
+     if (outgoing) {
+       if (param->rx_offer) {   
+-        param->tx_answer = 1;  // sending an answer
++        param->tx_answer = 1;  /*  sending an answer */
+         strcpy(param->answer_tx, value); 
+         TRACE(TRACE_ISCSI_PARAM, "sending answer \"%s\"=\"%s\" for offer \"%s\"\n", 
+               param->key, param->answer_tx, param->offer_rx); 
+         goto negotiate;
+       } else {
+-        param->tx_offer = 1;   // sending an offer
+-        param->rx_offer = 0;   // reset
++        param->tx_offer = 1;   /*  sending an offer */
++        param->rx_offer = 0;   /*  reset */
+         strcpy(param->offer_tx, value); 
+         TRACE(TRACE_ISCSI_PARAM, "sending offer \"%s\"=\"%s\"\n", param->key, param->offer_tx);  
+         if ((param->type == ISCSI_PARAM_TYPE_DECLARATIVE)||
+@@ -684,8 +684,8 @@
+       }
+     } else {
+       if (param->tx_offer) {   
+-        param->rx_answer = 1;  // received an answer
+-        param->tx_offer = 0;   // reset
++        param->rx_answer = 1;  /*  received an answer */
++        param->tx_offer = 0;   /*  reset */
+         strcpy(param->answer_rx, value); 
+         TRACE(TRACE_ISCSI_PARAM, "received answer \"%s\"=\"%s\" for offer \"%s\"\n", 
+               param->key, param->answer_rx, param->offer_tx); 
+@@ -707,7 +707,7 @@
+ 	  PTP_CLEANUP;
+           return (ISCSI_PARAM_STATUS_AUTH_FAILED);
+       } else {
+-        param->rx_offer = 1;   // received an offer
++        param->rx_offer = 1;   /*  received an offer */
+         strcpy(param->offer_rx, value); 
+         TRACE(TRACE_ISCSI_PARAM, "received offer \"%s\"=\"%s\"\n", param->key, param->offer_rx); 
+  
+@@ -729,7 +729,7 @@
+           }
+       	}
+ 
+-        // Answer the offer if it is an inquiry or the type is not DECLARATIVE
++        /*  Answer the offer if it is an inquiry or the type is not DECLARATIVE */
+ 
+         if ((strcmp(param->offer_rx, "?")!=0) && ((param->type == ISCSI_PARAM_TYPE_DECLARATIVE)||(param->type == ISCSI_PARAM_TYPE_DECLARE_MULTI))) {
+           goto negotiate;
+@@ -741,7 +741,7 @@
+ 
+     answer:
+ 
+-    // Answer with current value if this is an inquiry (<key>=?)
++    /*  Answer with current value if this is an inquiry (<key>=?) */
+ 
+     if (!strcmp(value, "?")) {
+       TRACE(TRACE_ISCSI_PARAM, "got inquiry for param \"%s\"\n", param->key);
+@@ -759,7 +759,7 @@
+       goto add_answer;
+     } 
+ 
+-    // Generate answer according to the parameter type
++    /*  Generate answer according to the parameter type */
+ 
+     switch(param->type) {
+ 
+@@ -773,9 +773,9 @@
+           goto add_answer;
+         } 
+         if (strchr(param->valid, ',')!=NULL) {
+-          strcpy(param->answer_tx, value);        // we accept both yes and no, so answer w/ their offer
++          strcpy(param->answer_tx, value);        /*  we accept both yes and no, so answer w/ their offer */
+         } else {
+-          strcpy(param->answer_tx, param->valid); // answer with the only value we support
++          strcpy(param->answer_tx, param->valid); /*  answer with the only value we support */
+         }
+         break;
+ 
+@@ -812,7 +812,7 @@
+ 	  }
+ 	}
+ 
+-        // Find the first valid offer that we support
++        /*  Find the first valid offer that we support */
+        
+         for (p1=p2=param->offer_rx; p2; p1=p2+1) {
+           if ((p2=strchr(p1, ','))) {
+@@ -854,19 +854,19 @@
+         max_i = iscsi_atoi(param->valid);
+         if (param->type == ISCSI_PARAM_TYPE_NUMERICAL_Z) {
+           if (max_i == 0) {
+-            answer_i = offer_i;       // we support anything, so return whatever they offered
++            answer_i = offer_i;       /*  we support anything, so return whatever they offered */
+           } else if (offer_i == 0) {
+-            answer_i = max_i;         // return only what we can support
++            answer_i = max_i;         /*  return only what we can support */
+           } else if (offer_i>max_i) {
+-            answer_i = max_i;         // we are the lower of the two
++            answer_i = max_i;         /*  we are the lower of the two */
+           } else {
+-            answer_i = offer_i;       // they are the lower of the two
++            answer_i = offer_i;       /*  they are the lower of the two */
+           }
+         } else {
+           if (offer_i>max_i) {
+-            answer_i = max_i;         // we are the lower of the two
++            answer_i = max_i;         /*  we are the lower of the two */
+           } else {
+-            answer_i = offer_i;       // they are the lower of the two
++            answer_i = offer_i;       /*  they are the lower of the two */
+           }
+         }
+         sprintf(param->answer_tx, "%i", answer_i);
+@@ -880,7 +880,7 @@
+     goto next;
+   
+ 
+-    // Negotiate after receiving|sending an answer 
++    /*  Negotiate after receiving|sending an answer  */
+ 
+     negotiate: switch(param->type) {
+       case ISCSI_PARAM_TYPE_DECLARE_MULTI:
+@@ -903,11 +903,11 @@
+         } else {
+           strcpy(val1, param->answer_rx); 
+           strcpy(val2, param->offer_tx);
+-		  // Make sure the answer is valid
++		  /*  Make sure the answer is valid */
+ 		  if( strcmp(val1, "Yes") && strcmp(val1, "No") &&
+ 						  strcmp(val1, "yes") && strcmp(val1, "no") &&
+                           strcmp(val1, "Irrelevant")) {
+-		    // Invalid value returned as answer.
++		    /*  Invalid value returned as answer. */
+             TRACE_ERROR("Invalid answer (%s) for key (%s)\n",
+ 							val1, key);
+ 			PTP_ERROR;
+@@ -962,28 +962,28 @@
+       case ISCSI_PARAM_TYPE_LIST:
+         if (outgoing) {
+           if (param->tx_offer) {
+-            TRACE_ERROR("we should not be here\n");  // error - we're sending an offer
++            TRACE_ERROR("we should not be here\n");  /*  error - we're sending an offer */
+             PTP_ERROR;
+           } else if (param->tx_answer) {
+-            strcpy(val1, param->answer_tx);          // we're sending an answer
++            strcpy(val1, param->answer_tx);          /*  we're sending an answer */
+           } else {
+             TRACE_ERROR("unexpected error\n");
+             PTP_ERROR;
+           }
+         } else {
+           if (param->rx_offer) {
+-            TRACE_ERROR("we should not be here\n");  // error - we received an offer
++            TRACE_ERROR("we should not be here\n");  /*  error - we received an offer */
+             PTP_ERROR;
+           } else if (param->rx_answer) {
+-            strcpy(val1, param->answer_rx);          // we received an answer
++            strcpy(val1, param->answer_rx);          /*  we received an answer */
+           } else {
+             TRACE_ERROR("unexpected error\n");
+             PTP_ERROR;
+           }
+         }
+ 
+-        // Make sure incoming or outgoing answer is valid
+-		// None, Reject, Irrelevant and NotUnderstood are valid 
++        /*  Make sure incoming or outgoing answer is valid */
++		/*  None, Reject, Irrelevant and NotUnderstood are valid  */
+ 		if ((!strcmp(val1, "None")) || (!strcmp(val1, "Reject")) ||
+ 			(!strcmp(val1, "Irrelevant")) || (!strcmp(val1, "NotUnderstood"))) {
+ 		  goto value_ok;
+@@ -1013,22 +1013,22 @@
+ 
+     TRACE(TRACE_ISCSI_PARAM, "negotiated \"%s\"=\"%s\"\n", param->key, param->negotiated); 
+ 
+-    // For inquiries, we don't commit the value.
++    /*  For inquiries, we don't commit the value. */
+ 
+     if (param->tx_offer&&!strcmp(param->offer_tx, "?")) {
+-      // we're offering an inquiry 
++      /*  we're offering an inquiry  */
+       TRACE(TRACE_ISCSI_PARAM, "sending an inquiry for \"%s\"\n", param->key); 
+       goto next;
+     } else if (param->rx_offer&&!strcmp(param->offer_rx, "?")) {
+-      // we're receiving an inquiry 
++      /*  we're receiving an inquiry  */
+       TRACE(TRACE_ISCSI_PARAM, "received an inquiry for \"%s\"\n", param->key); 
+       goto next;
+     } else if (param->tx_answer&&!strcmp(param->offer_rx, "?")) {
+-      // we're answering an inquiry 
++      /*  we're answering an inquiry  */
+       TRACE(TRACE_ISCSI_PARAM, "answering an inquiry for \"%s\"\n", param->key); 
+       goto next;
+     } else if (param->rx_answer&&!strcmp(param->offer_tx, "?")) {
+-      // we're receiving an answer for our inquiry 
++      /*  we're receiving an answer for our inquiry  */
+       TRACE(TRACE_ISCSI_PARAM, "received an answer for inquiry on \"%s\"\n", param->key); 
+       goto next;
+     } 
+@@ -1083,8 +1083,8 @@
+ 
+ void set_session_parameters( ISCSI_PARAMETER_T *head, 
+ 							ISCSI_SESS_PARAM_T *sess_params ) {
+-  // These parameters are standard and assuming that they are always
+-  // present in the list (head).
++  /*  These parameters are standard and assuming that they are always */
++  /*  present in the list (head). */
+   memset( sess_params, 0, sizeof(ISCSI_SESS_PARAM_T) );
+   sess_params->max_burst_length = param_atoi(head, "MaxBurstLength");
+   sess_params->first_burst_length = param_atoi(head, "FirstBurstLength");
