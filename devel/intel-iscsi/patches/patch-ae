@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- src/Makefile	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/Makefile	8 Oct 2005 22:24:25 -0000	1.2
+@@ -3,7 +3,6 @@
+ # Compiler Flags. Warning: -O causes problems w/ pthread
+ #
+ 
+-SRC = /usr/src/linux
+ INCLUDE = ../include
+ BIN = ../bin
+ CFLAGS = -g -O2
+@@ -14,9 +13,9 @@
+ 
+ CFLAGS_KERN = $(CFLAGS) -D__KERNEL__ -DMODULE -I$(SRC)/include -I$(SRC)/drivers/scsi
+ 
+-ifeq ($(shell grep 'define CONFIG_MODVERSIONS' $(SRC)/include/linux/autoconf.h | wc -l | sed 's/ //g'),1)
+-CFLAGS_KERN += -DMODVERSIONS -include $(SRC)/include/linux/modversions.h
+-endif
++#ifeq ($(shell grep 'define CONFIG_MODVERSIONS' $(SRC)/include/linux/autoconf.h | wc -l | sed 's/ //g'),1)
++#CFLAGS_KERN += -DMODVERSIONS -include $(SRC)/include/linux/modversions.h
++#endif
+ 
+ #
+ # Compilation Targets

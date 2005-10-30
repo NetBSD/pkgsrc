@@ -1,0 +1,117 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- src/osd.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/osd.c	8 Oct 2005 23:37:34 -0000	1.2
+@@ -305,9 +305,9 @@
+ 
+         TRACE(TRACE_OSD, "OSD_SET_ATTR(lun %llu, GroupID 0x%x, UserID 0x%llx)\n", args->lun, osd_args.GroupID, osd_args.UserID);
+         for (i=0; i<osd_args.set_attributes_list_length;) {
+-          page = NTOHL(*((uint32_t *)(&(set_list[i])))); i+=4;
+-          attr = NTOHL(*((uint32_t *)(&(set_list[i])))); i+=4;
+-          len = NTOHS(*((uint16_t *)(&(set_list[i])))); i+=2;
++          page = ISCSI_NTOHL(*((uint32_t *)(&(set_list[i])))); i+=4;
++          attr = ISCSI_NTOHL(*((uint32_t *)(&(set_list[i])))); i+=4;
++          len = ISCSI_NTOHS(*((uint16_t *)(&(set_list[i])))); i+=2;
+           sprintf(FileName, "%s/lun_%llu/0x%x/0x%llx.0x%x.%u",
+                   base_dir, args->lun, osd_args.GroupID, osd_args.UserID, page, attr);
+           if ((rc=open(FileName, O_WRONLY|O_CREAT, 0644))==-1) {
+@@ -474,18 +474,18 @@
+         int i;
+ 
+         for (i=0; i<osd_args.get_attributes_list_length;) {
+-          page = NTOHL(*((uint32_t *)(&(get_list[i])))); i+=4;
+-          index = NTOHL(*((uint32_t *)(&(get_list[i])))); i+=4;
++          page = ISCSI_NTOHL(*((uint32_t *)(&(get_list[i])))); i+=4;
++          index = ISCSI_NTOHL(*((uint32_t *)(&(get_list[i])))); i+=4;
+           TRACE(TRACE_OSD, "GET(0x%x,%u)\n", page, index);
+ 
+           switch(page) {
+             case (0x40000001):
+               switch(index) {
+                 case (0x1):
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(page);    attr_len +=4;  
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(index);   attr_len +=4;
+-                  *((uint16_t *)&get_data[attr_len]) = HTONS(4);       attr_len +=2;
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(GroupID); attr_len += 4;
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(page);    attr_len +=4;  
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(index);   attr_len +=4;
++                  *((uint16_t *)&get_data[attr_len]) = ISCSI_HTONS(4);       attr_len +=2;
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(GroupID); attr_len += 4;
+                   break;
+                 default:
+                   TRACE_ERROR("unknown attr index %u\n", index);
+@@ -495,16 +495,16 @@
+             case (0x00000001):
+               switch(index) {
+                 case (0x1):
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(page);     attr_len +=4;  
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(index);    attr_len +=4;
+-                  *((uint16_t *)&get_data[attr_len]) = HTONS(4);        attr_len +=2;
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(GroupID);  attr_len += 4;
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(page);     attr_len +=4;  
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(index);    attr_len +=4;
++                  *((uint16_t *)&get_data[attr_len]) = ISCSI_HTONS(4);        attr_len +=2;
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(GroupID);  attr_len += 4;
+                   break;
+                 case (0x2):
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(page);    attr_len +=4;  
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(index);   attr_len +=4;
+-                  *((uint16_t *)&get_data[attr_len]) = HTONS(8);       attr_len +=2;
+-                  *((uint64_t *)&get_data[attr_len]) = HTONLL(UserID); attr_len += 8;
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(page);    attr_len +=4;  
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(index);   attr_len +=4;
++                  *((uint16_t *)&get_data[attr_len]) = ISCSI_HTONS(8);       attr_len +=2;
++                  *((uint64_t *)&get_data[attr_len]) = ISCSI_HTONLL(UserID); attr_len += 8;
+                   break;
+                 default:
+                   TRACE_ERROR("unknown attr index %u\n", index);
+@@ -517,9 +517,9 @@
+             case (0x30000000):
+               switch(index) {
+                 case (0x1):
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(page);    attr_len +=4;  
+-                  *((uint32_t *)&get_data[attr_len]) = HTONL(index);   attr_len +=4;
+-                  *((uint16_t *)&get_data[attr_len]) = HTONS(480);     attr_len +=2;
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(page);    attr_len +=4;  
++                  *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(index);   attr_len +=4;
++                  *((uint16_t *)&get_data[attr_len]) = ISCSI_HTONS(480);     attr_len +=2;
+                   sprintf(FileName, "%s/lun_%llu/0x%x/0x%llx.0x%x.%u",
+                           base_dir, args->lun, osd_args.GroupID, osd_args.UserID, page, index);
+                   if ((rc=open(FileName, O_RDONLY, 0644))==-1) {
+@@ -557,25 +557,25 @@
+         switch (osd_args.get_attributes_page) {
+           case (0x40000001):
+             index = 1;
+-            *((uint32_t *)&get_data[attr_len]) = HTONL(page);    attr_len +=4;  
+-            *((uint32_t *)&get_data[attr_len]) = HTONL(index);   attr_len +=4;
+-            *((uint16_t *)&get_data[attr_len]) = HTONS(4);       attr_len +=2;
+-            *((uint32_t *)&get_data[attr_len]) = HTONL(GroupID); attr_len += 4;
++            *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(page);    attr_len +=4;  
++            *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(index);   attr_len +=4;
++            *((uint16_t *)&get_data[attr_len]) = ISCSI_HTONS(4);       attr_len +=2;
++            *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(GroupID); attr_len += 4;
+             break;
+ 
+           case (0x00000001):
+             index = 2;
+-            *((uint32_t *)&get_data[attr_len]) = HTONL(page);    attr_len +=4;  
+-            *((uint32_t *)&get_data[attr_len]) = HTONL(index);   attr_len +=4;
+-            *((uint16_t *)&get_data[attr_len]) = HTONS(8);       attr_len +=2;
+-            *((uint64_t *)&get_data[attr_len]) = HTONLL(UserID); attr_len += 8;
++            *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(page);    attr_len +=4;  
++            *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(index);   attr_len +=4;
++            *((uint16_t *)&get_data[attr_len]) = ISCSI_HTONS(8);       attr_len +=2;
++            *((uint64_t *)&get_data[attr_len]) = ISCSI_HTONLL(UserID); attr_len += 8;
+             break;
+ 
+           case (0x30000000):
+             index = 1;
+-            *((uint32_t *)&get_data[attr_len]) = HTONL(page);    attr_len +=4;  
+-            *((uint32_t *)&get_data[attr_len]) = HTONL(index);   attr_len +=4;
+-            *((uint16_t *)&get_data[attr_len]) = HTONS(480);     attr_len +=2;
++            *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(page);    attr_len +=4;  
++            *((uint32_t *)&get_data[attr_len]) = ISCSI_HTONL(index);   attr_len +=4;
++            *((uint16_t *)&get_data[attr_len]) = ISCSI_HTONS(480);     attr_len +=2;
+             sprintf(FileName, "%s/lun_%llu/0x%x/0x%llx.0x%x.%u",
+                     base_dir, args->lun, osd_args.GroupID, osd_args.UserID, page, index);
+             if ((rc=open(FileName, O_RDONLY, 0644))==-1) {

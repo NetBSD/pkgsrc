@@ -1,0 +1,200 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- include/util.h	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ include/util.h	10 Oct 2005 21:43:03 -0000	1.4
+@@ -33,17 +33,19 @@
+ 
+ #ifndef _UTIL_H_
+ #define _UTIL_H_
+-#ifdef __KERNEL__
+-#include <linux/smp_lock.h>
+-#else
++
++#include <sys/types.h>
++#include <sys/uio.h>
++#include <sys/socket.h>
++
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <pthread.h>
+ #include <unistd.h>
+-#include <sys/uio.h>
+-#include <sys/socket.h>
+ #include <fcntl.h>
++
++#ifdef __linux__
+ #include <linux/types.h>
+ #endif
+ 
+@@ -51,21 +53,21 @@
+  *
+  */
+ 
+-#define HTONLL6(x) (uint64_t) \
+-      ( ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x0000ff0000000000uL) >> 40))     \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x000000ff00000000uL) >> 24))     \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x00000000ff000000uL) >> 8))      \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x0000000000ff0000uL) << 8))      \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x000000000000ff00uL) << 24))     \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x00000000000000ffuL) << 40)))
+-
+-#define NTOHLL6(x) (uint64_t) \
+-      ( ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x0000ff0000000000uL) >> 40))     \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x000000ff00000000uL) >> 24))     \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x00000000ff000000uL) >> 8))      \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x0000000000ff0000uL) << 8))      \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x000000000000ff00uL) << 24))     \
+-      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x00000000000000ffuL) << 40)))
++#define ISCSI_HTONLL6(x) (uint64_t) \
++      ( ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x0000ff0000000000uLL) >> 40))     \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x000000ff00000000uLL) >> 24))     \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x00000000ff000000uLL) >> 8))      \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x0000000000ff0000uLL) << 8))      \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x000000000000ff00uLL) << 24))     \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x00000000000000ffuLL) << 40)))
++
++#define ISCSI_NTOHLL6(x) (uint64_t) \
++      ( ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x0000ff0000000000uLL) >> 40))     \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x000000ff00000000uLL) >> 24))     \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x00000000ff000000uLL) >> 8))      \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x0000000000ff0000uLL) << 8))      \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x000000000000ff00uLL) << 24))     \
++      | ((uint64_t)( ((uint64_t)(x) & (uint64_t)0x00000000000000ffuLL) << 40)))
+ 
+ /* 
+  * Debugging Levels
+@@ -105,9 +107,10 @@
+  * in Makefile.
+  */
+ 
+-// static unsigned iscsi_debug_level = TRACE_OSD;
+-// static unsigned iscsi_debug_level = TRACE_ALL;
+-static unsigned iscsi_debug_level = TRACE_SCSI_CMD;
++/* static unsigned iscsi_debug_level = TRACE_OSD; */
++/* static unsigned iscsi_debug_level = TRACE_ALL; */
++/* static unsigned iscsi_debug_level = TRACE_SCSI_CMD; */
++static unsigned iscsi_debug_level = 0;
+ 
+ /* 
+  * Debugging Functions
+@@ -161,77 +164,68 @@
+  * Byte Order
+  */
+ 
+-#include <asm/byteorder.h>
+-#include <byteswap.h>
++#ifdef __linux__
++#  include <asm/byteorder.h>
++#  include <byteswap.h>
++
++#  ifdef __KERNEL__
++#    ifndef __BYTE_ORDER
++#      ifdef __BIG_ENDIAN
++#        define __BYTE_ORDER __BIG_ENDIAN
++#      endif
++#      ifdef __LITTLE_ENDIAN
++#        define __BYTE_ORDER __LITTLE_ENDIAN
++#      endif
++#    endif
++#  endif
+ 
+-#ifdef __KERNEL__
+-#ifndef __BYTE_ORDER
+-#ifdef __BIG_ENDIAN
+-#define __BYTE_ORDER __BIG_ENDIAN
+-#endif
+-#ifdef __LITTLE_ENDIAN
+-#define __BYTE_ORDER __LITTLE_ENDIAN
+-#endif
+-#endif
+-#endif
+-
+-#if __BYTE_ORDER == __BIG_ENDIAN
++#  if __BYTE_ORDER == __BIG_ENDIAN
+ BIG??
+-#define NTOHLL(x) (x)
+-#define HTONLL(x) (x)
+-#define NTOHL(x)  (x)
+-#define HTONL(x)  (x)
+-#define NTOHS(x)  (x)
+-#define HTONS(x)  (x)
+-#else
+-#define NTOHLL(x) bswap_64(x)
+-#define HTONLL(x) bswap_64(x)
+-#define NTOHL(x)  bswap_32(x)
+-#define HTONL(x)  bswap_32(x)
+-#define NTOHS(x)  bswap_16(x)
+-#define HTONS(x)  bswap_16(x)
+-#endif
++#    define ISCSI_NTOHLL(x) (x)
++#    define ISCSI_HTONLL(x) (x)
++#    define ISCSI_NTOHL(x)  (x)
++#    define ISCSI_HTONL(x)  (x)
++#    define ISCSI_NTOHS(x)  (x)
++#    define ISCSI_HTONS(x)  (x)
++#  else
++#    define ISCSI_NTOHLL(x) bswap_64(x)
++#    define ISCSI_HTONLL(x) bswap_64(x)
++#    define ISCSI_NTOHL(x)  bswap_32(x)
++#    define ISCSI_HTONL(x)  bswap_32(x)
++#    define ISCSI_NTOHS(x)  bswap_16(x)
++#    define ISCSI_HTONS(x)  bswap_16(x)
++#  endif
++#else
++#  include <machine/endian.h>
++#  define __BYTE_ORDER    _BYTE_ORDER
++#  define __BIG_ENDIAN    _BIG_ENDIAN
++#  define __LITTLE_ENDIAN _LITTLE_ENDIAN
++#  define ISCSI_NTOHLL(x) be64toh(x)
++#  define ISCSI_HTONLL(x) htobe64(x)
++#  define ISCSI_NTOHL(x)  ntohl(x)
++#  define ISCSI_HTONL(x)  htonl(x)
++#  define ISCSI_NTOHS(x)  ntohs(x)
++#  define ISCSI_HTONS(x)  htons(x)
++#endif                          /* !__linux__ */
++
+ 
+ /*
+  * printf and printk
+  */
+ 
+-#ifdef __KERNEL__
+-#define PRINT printk
+-#else
+ #define PRINT printf
+-#endif
+ 
+ /*
+  * Process ID
+  */
+ 
+-#ifdef __KERNEL__
+-#define ISCSI_GETPID current->pid
+-#else
+ #define ISCSI_GETPID getpid()
+-#endif
+ 
+ /*
+  * Sleeping
+  */
+ 
+-#ifdef __KERNEL__
+-#define ISCSI_SLEEP(N) {unsigned future = jiffies+N*HZ; while (jiffies<future) ISCSI_SPIN;}
+-#else
+ #define ISCSI_SLEEP(N) sleep(N)
+-#endif
+-
+-/*
+- * Kernel Versioning
+- */
+-
+-#ifdef __KERNEL__
+-#if !defined(LINUX_VERSION_CODE)
+-#include <linux/version.h>
+-#endif
+-#define LinuxVersionCode(v, p, s) (((v)<<16)+((p)<<8)+(s))
+-#endif
+ 
+ /* 
+  * Memory

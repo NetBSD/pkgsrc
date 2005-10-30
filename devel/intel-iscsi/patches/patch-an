@@ -1,0 +1,46 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/10/30 21:02:58 agc Exp $
+
+--- src/so.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/so.c	8 Oct 2005 23:37:34 -0000	1.2
+@@ -678,7 +678,7 @@
+ 	SRpnt->sr_device->remap = 1;
+ 	SRpnt->sr_device->sector_size = 512;
+ 
+-	//printk("%s : block size assumed to be 512 bytes, osd size 1GB.  \n", nbuff);
++	/* printk("%s : block size assumed to be 512 bytes, osd size 1GB.  \n", nbuff); */
+ 
+ 	/* Wake up a process waiting for device */
+ 
+@@ -772,10 +772,10 @@
+         /* Initialize Things */
+ 
+         for (i=0; i<so_template.dev_max; i++) {
+-          so_blocksizes[i] = 1024;  // minimum request/block size
+-          so_sizes[i]      = 1;     // number of blocks
+-          so_hardsizes[i]  = 512;   // sector size
+-          so[i].nr_sects   = 2;     // number of sectors
++          so_blocksizes[i] = 1024;  /*  minimum request/block size */
++          so_sizes[i]      = 1;     /*  number of blocks */
++          so_hardsizes[i]  = 512;   /*  sector size */
++          so[i].nr_sects   = 2;     /*  number of sectors */
+         }
+ 
+         /* ??? */
+@@ -937,7 +937,7 @@
+ 
+ 	for (i = max_p - 1; i >= 0; i--) {
+ 		int index = start + i;
+-		//invalidate_device(MKDEV(MAJOR(index),MINOR(index)), 1);
++		/* invalidate_device(MKDEV(MAJOR(index),MINOR(index)), 1); */
+ 		so_gendisk.part[index].start_sect = 0;
+ 		so_gendisk.part[index].nr_sects = 0;
+ 		/*
+@@ -987,7 +987,7 @@
+ 
+ 			for (j = max_p - 1; j >= 0; j--) {
+ 				int index = start + j;
+-				//invalidate_device(MKDEV(MAJOR(index),MINOR(index)), 1);
++				/* invalidate_device(MKDEV(MAJOR(index),MINOR(index)), 1); */
+ 				so_gendisk.part[index].start_sect = 0;
+ 				so_gendisk.part[index].nr_sects = 0;
+ 				so_sizes[index] = 0;

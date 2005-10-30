@@ -1,0 +1,1203 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- src/iscsi.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/iscsi.c	8 Oct 2005 23:37:34 -0000	1.3
+@@ -62,16 +62,16 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+  
+-  header[0] |= ISCSI_TASK_CMD;                               // Opcode
+-  if (cmd->immediate) header[0] |= 0x40;		     // Immediate bit 
+-  header[1] = cmd->function&0x80;                            // Function 
+-  *((unsigned long long*)(header+8)) = HTONLL6(cmd->lun);    // LUN
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);              // Tag
+-  *((unsigned *)(header+20)) = HTONL(cmd->ref_tag);          // Reference Tag
+-  *((unsigned *)(header+24)) = HTONL(cmd->CmdSN);            // CmdSN
+- *((unsigned *)(header+28)) = HTONL(cmd->ExpStatSN);        // ExpStatSN
+-  *((unsigned *)(header+32)) = HTONL(cmd->RefCmdSN);         // RefCmdSN
+-  *((unsigned *)(header+36)) = HTONL(cmd->ExpDataSN);        // ExpDataSN
++  header[0] |= ISCSI_TASK_CMD;                               /*  Opcode */
++  if (cmd->immediate) header[0] |= 0x40;		     /*  Immediate bit  */
++  header[1] = cmd->function&0x80;                            /*  Function  */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(cmd->lun);    /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);              /*  Tag */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(cmd->ref_tag);          /*  Reference Tag */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->CmdSN);            /*  CmdSN */
++ *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpStatSN);        /*  ExpStatSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(cmd->RefCmdSN);         /*  RefCmdSN */
++  *((uint32_t *)(header+36)) = ISCSI_HTONL(cmd->ExpDataSN);        /*  ExpDataSN */
+ 
+   return 0;
+ }
+@@ -80,22 +80,22 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_TASK_CMD, NO_CLEANUP, -1);
+ 
+-  cmd->immediate = ((header[0]&0x40)==0x40);                 // Immediate bit 
+-  cmd->function = header[1]&0x80;                            // Function 
+-  cmd->lun = NTOHLL6(*((unsigned long long *)(header+8)));   // LUN
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));              // Tag
+-  cmd->ref_tag = NTOHL(*((unsigned *)(header+20)));          // Reference Tag
+-  cmd->CmdSN = NTOHL(*((unsigned *)(header+24)));            // CmdSN
+-  cmd->ExpStatSN = NTOHL(*((unsigned *)(header+28)));        // ExpStatSN
+-  cmd->RefCmdSN = NTOHL(*((unsigned *)(header+32)));         // RefCmdSN
+-  cmd->ExpDataSN = NTOHL(*((unsigned *)(header+36)));        // ExpDataSN
++  cmd->immediate = ((header[0]&0x40)==0x40);                 /*  Immediate bit  */
++  cmd->function = header[1]&0x80;                            /*  Function  */
++  cmd->lun = ISCSI_NTOHLL6(*((uint64_t *)(header+8)));   /*  LUN */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Tag */
++  cmd->ref_tag = ISCSI_NTOHL(*((uint32_t *)(header+20)));          /*  Reference Tag */
++  cmd->CmdSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));            /*  CmdSN */
++  cmd->ExpStatSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));        /*  ExpStatSN */
++  cmd->RefCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));         /*  RefCmdSN */
++  cmd->ExpDataSN = ISCSI_NTOHL(*((uint32_t *)(header+36)));        /*  ExpDataSN */
+ 
+   RETURN_NOT_EQUAL("Byte 1, bit 0", header[1]&0x80, 0x80, NO_CLEANUP, 1); 
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 4-7", *((unsigned *)(header+4)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 4-7", *((uint32_t *)(header+4)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Immediate: %i\n",   cmd->immediate);
+   TRACE(TRACE_ISCSI_ARGS, "Function:  %u\n",   cmd->function);
+@@ -115,6 +115,7 @@
+  */
+ 
+ int iscsi_task_rsp_encap(unsigned char *header, ISCSI_TASK_RSP_T *rsp) {
++	uint32_t	length;
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Response:  %u\n",   rsp->response);
+   TRACE(TRACE_ISCSI_ARGS, "Length:    %u\n",   rsp->length);
+@@ -125,14 +126,15 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+   
+-  header[0] |= ISCSI_TASK_RSP;                         	     // Opcode
+-  header[1] |= 0x80;					     // Byte 1 bit 0 
+-  header[2] = rsp->response;				     // Response
+-  *((unsigned *)(header+4)) = HTONL(rsp->length&0x00ffffff); // Length
+-  *((unsigned *)(header+16)) = HTONL(rsp->tag);              // Tag
+-  *((unsigned *)(header+24)) = HTONL(rsp->StatSN);           // StatSN
+-  *((unsigned *)(header+28)) = HTONL(rsp->ExpCmdSN);         // ExpCmdSN
+-  *((unsigned *)(header+32)) = HTONL(rsp->MaxCmdSN);         // MaxCmdSN
++  header[0] |= ISCSI_TASK_RSP;                         	     /*  Opcode */
++  header[1] |= 0x80;					     /*  Byte 1 bit 0  */
++  header[2] = rsp->response;				     /*  Response */
++  length = (rsp->length & 0x00ffffff);
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(length); /*  Length */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(rsp->tag);              /*  Tag */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(rsp->StatSN);           /*  StatSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(rsp->ExpCmdSN);         /*  ExpCmdSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(rsp->MaxCmdSN);         /*  MaxCmdSN */
+ 
+   return 0;
+ }
+@@ -141,22 +143,22 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_TASK_RSP, NO_CLEANUP, 1);
+ 
+-  rsp->response = header[2];                                 // Response
+-  rsp->tag = NTOHL(*((unsigned *)(header+16)));              // Tag
+-  rsp->StatSN = NTOHL(*((unsigned *)(header+24)));           // StatSN
+-  rsp->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));         // ExpCmdSN
+-  rsp->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));         // MaxCmdSN
++  rsp->response = header[2];                                 /*  Response */
++  rsp->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Tag */
++  rsp->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));           /*  StatSN */
++  rsp->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));         /*  ExpCmdSN */
++  rsp->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));         /*  MaxCmdSN */
+ 
+   RETURN_NOT_EQUAL("Byte 0, bits 0-1", header[0]&0x00, 0x00, NO_CLEANUP, 1); 
+   RETURN_NOT_EQUAL("Byte 1, bit 0", header[1]&0x80, 0x80, NO_CLEANUP, 1); 
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1); 
+-  RETURN_NOT_EQUAL("Bytes 4-7", *((unsigned *)(header+4)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 8-11", *((unsigned *)(header+8)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 12-15", *((unsigned *)(header+12)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 20-23", *((unsigned *)(header+23)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 36-39", *((unsigned *)(header+36)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 4-7", *((uint32_t *)(header+4)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 8-11", *((uint32_t *)(header+8)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 12-15", *((uint32_t *)(header+12)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 20-23", *((uint32_t *)(header+23)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 36-39", *((uint32_t *)(header+36)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Response:  %u\n",   rsp->response);
+   TRACE(TRACE_ISCSI_ARGS, "Tag:       0x%x\n", rsp->tag);
+@@ -172,6 +174,7 @@
+  */
+ 
+ int iscsi_nop_out_encap(unsigned char *header, ISCSI_NOP_OUT_T *cmd) {
++  uint32_t	length;
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Immediate:    %i\n", cmd->immediate);
+   TRACE(TRACE_ISCSI_ARGS, "Length:       %u\n", cmd->length);
+@@ -183,15 +186,16 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+ 
+-  header[0] = ISCSI_NOP_OUT;                                 // Opcode
+-  if (cmd->immediate) header[0] |= 0x40;                     // Immediate bit
+-  header[1] |= 0x80;                                         // Byte 1 bit 0 and Reserved
+-  *((unsigned *)(header+4)) = HTONL(cmd->length&0x00ffffff); // Length 
+-  *((unsigned long long*)(header+8)) = HTONLL6(cmd->lun);    // LUN
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);              // Tag
+-  *((unsigned *)(header+20)) = HTONL(cmd->transfer_tag);     // Target Transfer Tag 
+-  *((unsigned *)(header+24)) = HTONL(cmd->CmdSN);            // CmdSN
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpStatSN);        // ExpStatSN
++  header[0] = ISCSI_NOP_OUT;                                 /*  Opcode */
++  if (cmd->immediate) header[0] |= 0x40;                     /*  Immediate bit */
++  header[1] |= 0x80;                                         /*  Byte 1 bit 0 and Reserved */
++  length = (cmd->length & 0x00ffffff); /*  Length  */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(length); /*  Length  */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(cmd->lun);    /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);              /*  Tag */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(cmd->transfer_tag);     /*  Target Transfer Tag  */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->CmdSN);            /*  CmdSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpStatSN);        /*  ExpStatSN */
+ 
+   return 0;
+ }
+@@ -200,22 +204,22 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_NOP_OUT, NO_CLEANUP, 1);
+ 
+-  cmd->immediate = ((header[0]&0x40)==0x40);                 // Immediate bit 
+-  cmd->length = NTOHL(*((unsigned *)(header+4)));            // Length
+-  cmd->lun = NTOHLL6(*((unsigned long long *)(header+8)));   // LUN
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));              // Tag
+-  cmd->transfer_tag = NTOHL(*((unsigned *)(header+20)));     // Target Tranfer Tag
+-  cmd->CmdSN = NTOHL(*((unsigned *)(header+24)));            // CmdSN
+-  cmd->ExpStatSN = NTOHL(*((unsigned *)(header+28)));        // ExpStatSN
++  cmd->immediate = ((header[0]&0x40)==0x40);                 /*  Immediate bit  */
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));            /*  Length */
++  cmd->lun = ISCSI_NTOHLL6(*((uint64_t *)(header+8)));   /*  LUN */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Tag */
++  cmd->transfer_tag = ISCSI_NTOHL(*((uint32_t *)(header+20)));     /*  Target Tranfer Tag */
++  cmd->CmdSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));            /*  CmdSN */
++  cmd->ExpStatSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));        /*  ExpStatSN */
+ 
+   RETURN_NOT_EQUAL("Byte 1", header[1], 0x80, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1); 
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1); 
+   RETURN_NOT_EQUAL("Byte 4", header[4], 0, NO_CLEANUP, 1); 
+-  RETURN_NOT_EQUAL("Bytes 32-35", *((unsigned *)(header+32)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 36-39", *((unsigned *)(header+36)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 32-35", *((uint32_t *)(header+32)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 36-39", *((uint32_t *)(header+36)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Immediate:    %i\n", cmd->immediate);
+   TRACE(TRACE_ISCSI_ARGS, "Length:       %u\n", cmd->length);
+@@ -234,6 +238,8 @@
+ 
+ int iscsi_nop_in_encap(unsigned char *header, ISCSI_NOP_IN_T *cmd) {
+ 
++	uint32_t	length;
++
+   TRACE(TRACE_ISCSI_ARGS, "Length:       %u\n", cmd->length);
+   TRACE(TRACE_ISCSI_ARGS, "LUN:          %llu\n", cmd->lun);
+   TRACE(TRACE_ISCSI_ARGS, "Tag:          0x%x\n", cmd->tag);
+@@ -244,15 +250,16 @@
+   
+   memset(header, 0, ISCSI_HEADER_LEN);
+   
+-  header[0] = 0x00|ISCSI_NOP_IN;                             // Opcode 
+-  header[1] |= 0x80;                                         // Reserved
+-  *((unsigned *)(header+4)) = HTONL(cmd->length&0x00ffffff); // Length
+-  *((unsigned long long*)(header+8)) = HTONLL6(cmd->lun);    // LUN
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);              // Tag
+-  *((unsigned *)(header+20)) = HTONL(cmd->transfer_tag);     // Target Transfer Tag       
+-  *((unsigned *)(header+24)) = HTONL(cmd->StatSN);           // StatSN
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpCmdSN);         // ExpCmdSN
+-  *((unsigned *)(header+32)) = HTONL(cmd->MaxCmdSN);         // MaxCmdSN
++  header[0] = 0x00|ISCSI_NOP_IN;                             /*  Opcode  */
++  header[1] |= 0x80;                                         /*  Reserved */
++  length = (cmd->length & 0x00ffffff); /*  Length */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(length); /*  Length */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(cmd->lun);    /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);              /*  Tag */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(cmd->transfer_tag);     /*  Target Transfer Tag        */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->StatSN);           /*  StatSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpCmdSN);         /*  ExpCmdSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(cmd->MaxCmdSN);         /*  MaxCmdSN */
+   
+   return 0;
+ }
+@@ -263,22 +270,22 @@
+ 
+ 
+ 
+-  cmd->length = NTOHL(*((unsigned *)(header+4)));            // Length
+-  cmd->lun = NTOHLL6(*((unsigned long long *)(header+8)));   // LUN
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));              // Tag
+-  cmd->transfer_tag = NTOHL(*((unsigned *)(header+20)));     // Target Transfer Tag
+-  cmd->StatSN = NTOHL(*((unsigned *)(header+24)));           // StatSN 
+-  cmd->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));         // ExpCmdSN
+-  cmd->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));         // MaxCmdSN
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));            /*  Length */
++  cmd->lun = ISCSI_NTOHLL6(*((uint64_t *)(header+8)));   /*  LUN */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Tag */
++  cmd->transfer_tag = ISCSI_NTOHL(*((uint32_t *)(header+20)));     /*  Target Transfer Tag */
++  cmd->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));           /*  StatSN  */
++  cmd->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));         /*  ExpCmdSN */
++  cmd->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));         /*  MaxCmdSN */
+ 
+   RETURN_NOT_EQUAL("Byte 0, bits 0-1", header[0]&0xc0, 0x00, NO_CLEANUP, 1); 
+   RETURN_NOT_EQUAL("Byte 1", header[1], 0x80, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 4", header[4], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 36-39", *((unsigned *)(header+36)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 36-39", *((uint32_t *)(header+36)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Length:       %u\n", cmd->length);
+   TRACE(TRACE_ISCSI_ARGS, "LUN:          %llu\n", cmd->lun);
+@@ -296,6 +303,8 @@
+ 
+ int iscsi_text_cmd_encap(unsigned char *header, ISCSI_TEXT_CMD_T *cmd) {
+ 
++	uint32_t	length;
++
+   TRACE(TRACE_ISCSI_ARGS, "Immediate:    %i\n",   cmd->immediate);
+   TRACE(TRACE_ISCSI_ARGS, "Final:        %i\n",   cmd->final);
+   TRACE(TRACE_ISCSI_ARGS, "Continue:     %i\n",   cmd->cont);
+@@ -308,16 +317,17 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+   
+-  header[0] |= ISCSI_TEXT_CMD;                               // Opcode
+-  if (cmd->immediate) header[0] |= 0x40;                     // Immediate bit
+-  if (cmd->final) header[1] |= 0x80;                         // Final bit
+-  if (cmd->cont) header[1] |= 0x40;                          // Continue bit
+-  *((unsigned *)(header+4)) = HTONL(cmd->length&0x00ffffff); // Length
+-  *((unsigned long long*)(header+8)) = HTONLL6(cmd->lun);    // LUN
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);              // Tag
+-  *((unsigned *)(header+20)) = HTONL(cmd->transfer_tag);     // Transfer Tag
+-  *((unsigned *)(header+24)) = HTONL(cmd->CmdSN);            // CmdSN
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpStatSN);        // ExpStatSN
++  header[0] |= ISCSI_TEXT_CMD;                               /*  Opcode */
++  if (cmd->immediate) header[0] |= 0x40;                     /*  Immediate bit */
++  if (cmd->final) header[1] |= 0x80;                         /*  Final bit */
++  if (cmd->cont) header[1] |= 0x40;                          /*  Continue bit */
++  length = (cmd->length & 0x00ffffff); /*  Length */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(length); /*  Length */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(cmd->lun);    /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);              /*  Tag */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(cmd->transfer_tag);     /*  Transfer Tag */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->CmdSN);            /*  CmdSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpStatSN);        /*  ExpStatSN */
+ 
+   return 0;
+ }
+@@ -326,26 +336,26 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_TEXT_CMD, NO_CLEANUP, 1);
+ 
+-  cmd->immediate = ((header[0]&0x40)==0x40);                 // Immediate bit 
+-  cmd->final = ((header[1]&0x80)==0x80);                     // Final bit
+-  cmd->cont = ((header[1]&0x40)==0x40);                      // Continue bit
+-  cmd->length = NTOHL(*((unsigned *)(header+4)));            // Length
+-  cmd->lun = NTOHLL6(*((unsigned long long *)(header+8)));   // LUN
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));              // Tag
+-  cmd->transfer_tag = NTOHL(*((unsigned *)(header+20)));     // Transfer Tag
+-  cmd->CmdSN = NTOHL(*((unsigned *)(header+24)));            // CmdSN
+-  cmd->ExpStatSN = NTOHL(*((unsigned *)(header+28)));        // ExpStatSN
++  cmd->immediate = ((header[0]&0x40)==0x40);                 /*  Immediate bit  */
++  cmd->final = ((header[1]&0x80)==0x80);                     /*  Final bit */
++  cmd->cont = ((header[1]&0x40)==0x40);                      /*  Continue bit */
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));            /*  Length */
++  cmd->lun = ISCSI_NTOHLL6(*((uint64_t *)(header+8)));   /*  LUN */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Tag */
++  cmd->transfer_tag = ISCSI_NTOHL(*((uint32_t *)(header+20)));     /*  Transfer Tag */
++  cmd->CmdSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));            /*  CmdSN */
++  cmd->ExpStatSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));        /*  ExpStatSN */
+ 
+   RETURN_NOT_EQUAL("Byte 1, Bits 2-7", header[1]&0x00, 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 4", header[4], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 8-11", *((unsigned *)(header+8)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 12-15", *((unsigned *)(header+12)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 32-35", *((unsigned *)(header+32)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 36-39", *((unsigned *)(header+36)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 8-11", *((uint32_t *)(header+8)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 12-15", *((uint32_t *)(header+12)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 32-35", *((uint32_t *)(header+32)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 36-39", *((uint32_t *)(header+36)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Immediate:    %i\n",   cmd->immediate);
+   TRACE(TRACE_ISCSI_ARGS, "Final:        %i\n",   cmd->final);
+@@ -366,6 +376,8 @@
+ 
+ int iscsi_text_rsp_encap(unsigned char *header, ISCSI_TEXT_RSP_T *rsp) {
+ 
++	uint32_t	length;
++
+   TRACE(TRACE_ISCSI_ARGS, "Final:        %i\n",   rsp->final);
+   TRACE(TRACE_ISCSI_ARGS, "Continue:     %i\n",   rsp->cont);
+   TRACE(TRACE_ISCSI_ARGS, "Length:       %u\n",   rsp->length);
+@@ -377,16 +389,17 @@
+   TRACE(TRACE_ISCSI_ARGS, "MaxCmdSN:     %u\n",   rsp->MaxCmdSN);
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+-  header[0] |= 0x00|ISCSI_TEXT_RSP;                               // Opcode
+-  if (rsp->final) header[1] |= 0x80;                         // Final bit
+-  if (rsp->cont) header[1] |= 0x40;                          // Continue
+-  *((unsigned *)(header+4)) = HTONL(rsp->length&0x00ffffff); // Length
+-  *((unsigned long long*)(header+8)) = HTONLL6(rsp->lun);    // LUN
+-  *((unsigned *)(header+16)) = HTONL(rsp->tag);              // Tag
+-  *((unsigned *)(header+20)) = HTONL(rsp->transfer_tag);     // Transfer Tag
+-  *((unsigned *)(header+24)) = HTONL(rsp->StatSN);           // StatSN
+-  *((unsigned *)(header+28)) = HTONL(rsp->ExpCmdSN);         // ExpCmdSN
+-  *((unsigned *)(header+32)) = HTONL(rsp->MaxCmdSN);         // MaxCmdSN
++  header[0] |= 0x00|ISCSI_TEXT_RSP;                               /*  Opcode */
++  if (rsp->final) header[1] |= 0x80;                         /*  Final bit */
++  if (rsp->cont) header[1] |= 0x40;                          /*  Continue */
++  length = (rsp->length & 0x00ffffff); /*  Length */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(length); /*  Length */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(rsp->lun);    /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(rsp->tag);              /*  Tag */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(rsp->transfer_tag);     /*  Transfer Tag */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(rsp->StatSN);           /*  StatSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(rsp->ExpCmdSN);         /*  ExpCmdSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(rsp->MaxCmdSN);         /*  MaxCmdSN */
+ 
+   return 0;
+ }
+@@ -395,25 +408,25 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_TEXT_RSP, NO_CLEANUP, 1);
+ 
+-  rsp->final = ((header[1]&0x80)==0x80);                     // Final bit 
+-  rsp->cont = ((header[1]&0x40)==0x40);                      // Continue bit
+-  rsp->length = NTOHL(*((unsigned *)(header+4)));            // Length
+-  rsp->lun = NTOHLL6(*((unsigned long long *)(header+8)));   // LUN
+-  rsp->tag = NTOHL(*((unsigned *)(header+16)));              // Tag
+-  rsp->transfer_tag = NTOHL(*((unsigned *)(header+20)));     // Transfer Tag
+-  rsp->StatSN = NTOHL(*((unsigned *)(header+24)));           // StatSN
+-  rsp->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));         // ExpCmdSN
+-  rsp->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));         // MaxCmdSN
++  rsp->final = ((header[1]&0x80)==0x80);                     /*  Final bit  */
++  rsp->cont = ((header[1]&0x40)==0x40);                      /*  Continue bit */
++  rsp->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));            /*  Length */
++  rsp->lun = ISCSI_NTOHLL6(*((uint64_t *)(header+8)));   /*  LUN */
++  rsp->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Tag */
++  rsp->transfer_tag = ISCSI_NTOHL(*((uint32_t *)(header+20)));     /*  Transfer Tag */
++  rsp->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));           /*  StatSN */
++  rsp->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));         /*  ExpCmdSN */
++  rsp->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));         /*  MaxCmdSN */
+ 
+   RETURN_NOT_EQUAL("Byte 1, Bits 2-7", header[1]&0x3f, 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 4", header[4], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 8-11", *((unsigned *)(header+8)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 12-15", *((unsigned *)(header+12)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 36-39", *((unsigned *)(header+36)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 8-11", *((uint32_t *)(header+8)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 12-15", *((uint32_t *)(header+12)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 36-39", *((uint32_t *)(header+36)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Final:        %i\n",   rsp->final);
+   TRACE(TRACE_ISCSI_ARGS, "Continue:     %i\n",   rsp->cont);
+@@ -433,6 +446,7 @@
+  */
+ 
+ int iscsi_login_cmd_encap(unsigned char *header, ISCSI_LOGIN_CMD_T *cmd) {
++  uint32_t	length;
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Transit:           %i\n",   cmd->transit);
+   TRACE(TRACE_ISCSI_ARGS, "Continue:          %i\n",   cmd->cont);
+@@ -451,21 +465,22 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+   
+-  header[0] |= 0x40|ISCSI_LOGIN_CMD;                              // Opcode 
+-  if (cmd->transit) header[1]|=0x80;                         // Transit
+-  if (cmd->cont) header[1]|=0x40;                            // Continue
+-  header[1] |= ((cmd->csg)<<2)&0x0c;                         // CSG
+-  header[1] |= (cmd->nsg)&0x03;                              // NSG
+-  header[2] = cmd->version_max;                              // Version-Max 
+-  header[3] = cmd->version_min;                              // Version-Min 
+-  header[4] = cmd->AHSlength;                                // TotalAHSLength
+-  *((unsigned *)(header+4)) = HTONL(cmd->length&0x00ffffff); // Length 
+-  *((unsigned long long*)(header+8)) = HTONLL6(cmd->isid);   // ISID
+-  *((unsigned short *)(header+14)) = HTONS(cmd->tsih);       // TSIH
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);              // Task Tag
+-  *((unsigned short *)(header+20)) = HTONS(cmd->cid);        // CID
+-  *((unsigned *)(header+24)) = HTONL(cmd->CmdSN);            // CmdSN
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpStatSN);        // ExpStatSN
++  header[0] |= 0x40|ISCSI_LOGIN_CMD;                              /*  Opcode  */
++  if (cmd->transit) header[1]|=0x80;                         /*  Transit */
++  if (cmd->cont) header[1]|=0x40;                            /*  Continue */
++  header[1] |= ((cmd->csg)<<2)&0x0c;                         /*  CSG */
++  header[1] |= (cmd->nsg)&0x03;                              /*  NSG */
++  header[2] = cmd->version_max;                              /*  Version-Max  */
++  header[3] = cmd->version_min;                              /*  Version-Min  */
++  header[4] = cmd->AHSlength;                                /*  TotalAHSLength */
++  length = (cmd->length & 0x00ffffff); /*  Length  */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(length); /*  Length  */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(cmd->isid);   /*  ISID */
++  *((uint16_t *)(header+14)) = ISCSI_HTONS(cmd->tsih);       /*  TSIH */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);              /*  Task Tag */
++  *((uint16_t *)(header+20)) = ISCSI_HTONS(cmd->cid);        /*  CID */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->CmdSN);            /*  CmdSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpStatSN);        /*  ExpStatSN */
+ 
+   return 0;
+ }
+@@ -474,20 +489,20 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_LOGIN_CMD, NO_CLEANUP, 1);
+ 
+-  cmd->transit = (header[1]&0x80)?1:0;                      // Transit
+-  cmd->cont = (header[1]&0x40)?1:0;                         // Continue
+-  cmd->csg = (header[1]&0x0c)>>2;                           // CSG
+-  cmd->nsg = header[1]&0x03;                                // NSG
+-  cmd->version_max = header[2];                             // Version-Max 
+-  cmd->version_min = header[3];                             // Version-Min 
+-  cmd->AHSlength = header[4];                               // TotalAHSLength
+-  cmd->length = NTOHL(*((unsigned *)(header+4)));           // Length
+-  cmd->isid = NTOHLL6(*((unsigned long long *)(header+8))); // ISID
+-  cmd->tsih = NTOHS(*((unsigned short *)(header+14)));      // TSIH
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));             // Task Tag
+-  cmd->cid = NTOHS(*((unsigned short *)(header+20)));       // CID
+-  cmd->CmdSN = NTOHL(*((unsigned *)(header+24)));           // CmdSN 
+-  cmd->ExpStatSN = NTOHL(*((unsigned *)(header+28)));       // ExpStatSN
++  cmd->transit = (header[1]&0x80)?1:0;                      /*  Transit */
++  cmd->cont = (header[1]&0x40)?1:0;                         /*  Continue */
++  cmd->csg = (header[1]&0x0c)>>2;                           /*  CSG */
++  cmd->nsg = header[1]&0x03;                                /*  NSG */
++  cmd->version_max = header[2];                             /*  Version-Max  */
++  cmd->version_min = header[3];                             /*  Version-Min  */
++  cmd->AHSlength = header[4];                               /*  TotalAHSLength */
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));           /*  Length */
++  cmd->isid = ISCSI_NTOHLL6(*((uint64_t *)(header+8))); /*  ISID */
++  cmd->tsih = ISCSI_NTOHS(*((uint16_t *)(header+14)));      /*  TSIH */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));             /*  Task Tag */
++  cmd->cid = ISCSI_NTOHS(*((uint16_t *)(header+20)));       /*  CID */
++  cmd->CmdSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));           /*  CmdSN  */
++  cmd->ExpStatSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));       /*  ExpStatSN */
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Transit:           %i\n",   cmd->transit);
+   TRACE(TRACE_ISCSI_ARGS, "Continue:          %i\n",   cmd->cont);
+@@ -505,11 +520,11 @@
+   TRACE(TRACE_ISCSI_ARGS, "ExpStatSN:         %u\n",   cmd->ExpStatSN);
+ 
+   RETURN_NOT_EQUAL("Byte 1, bits 2-3", (header[1]&0x30)>>4, 0, NO_CLEANUP, 1); 
+-  RETURN_NOT_EQUAL("Bytes 22-23", *((unsigned short *)(header+22)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 32-35", *((unsigned *)(header+32)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 36-39", *((unsigned *)(header+36)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 22-23", *((uint16_t *)(header+22)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 32-35", *((uint32_t *)(header+32)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 36-39", *((uint32_t *)(header+36)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   if (cmd->transit) {
+     if (cmd->nsg <= cmd->csg) return -1;
+@@ -545,23 +560,23 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN); 
+   
+-  header[0] |= 0x00|ISCSI_LOGIN_RSP;                           // Opcode 
+-  if (rsp->transit) header[1] |= 0x80;                     // Transit 
+-  if (rsp->cont) header[1] |= 0x40;                       // Continue
+-  header[1] |= ((rsp->csg)<<2)&0x0c;                      // CSG
+-  if (rsp->transit) header[1] |= (rsp->nsg)&0x03;         // NSG
+-  header[2] = rsp->version_max;                           // Version-max
+-  header[3] = rsp->version_active;                        // Version-active
+-  header[4] = rsp->AHSlength;                             // TotalAHSLength
+-  *((unsigned *)(header+4)) = HTONL(rsp->length);         // Length
+-  *((unsigned long long*)(header+8)) = HTONLL6(rsp->isid);// ISID
+-  *((unsigned short *)(header+14)) = HTONS(rsp->tsih);    // TSIH
+-  *((unsigned *)(header+16)) = HTONL(rsp->tag);           // Tag 
+-  *((unsigned *)(header+24)) = HTONL(rsp->StatSN);        // StatRn
+-  *((unsigned *)(header+28)) = HTONL(rsp->ExpCmdSN);      // ExpCmdSN
+-  *((unsigned *)(header+32)) = HTONL(rsp->MaxCmdSN);      // MaxCmdSN
+-  header[36] = rsp->status_class;                         // Status-Class
+-  header[37] = rsp->status_detail;                        // Status-Detail
++  header[0] |= 0x00|ISCSI_LOGIN_RSP;                           /*  Opcode  */
++  if (rsp->transit) header[1] |= 0x80;                     /*  Transit  */
++  if (rsp->cont) header[1] |= 0x40;                       /*  Continue */
++  header[1] |= ((rsp->csg)<<2)&0x0c;                      /*  CSG */
++  if (rsp->transit) header[1] |= (rsp->nsg)&0x03;         /*  NSG */
++  header[2] = rsp->version_max;                           /*  Version-max */
++  header[3] = rsp->version_active;                        /*  Version-active */
++  header[4] = rsp->AHSlength;                             /*  TotalAHSLength */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(rsp->length);         /*  Length */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(rsp->isid);/*  ISID */
++  *((uint16_t *)(header+14)) = ISCSI_HTONS(rsp->tsih);    /*  TSIH */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(rsp->tag);           /*  Tag  */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(rsp->StatSN);        /*  StatRn */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(rsp->ExpCmdSN);      /*  ExpCmdSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(rsp->MaxCmdSN);      /*  MaxCmdSN */
++  header[36] = rsp->status_class;                         /*  Status-Class */
++  header[37] = rsp->status_detail;                        /*  Status-Detail */
+ 
+   return 0;
+ }
+@@ -570,22 +585,22 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_LOGIN_RSP, NO_CLEANUP, 1);
+ 
+-  rsp->transit = (header[1]&0x80)>>7;                            // Transit 
+-  rsp->cont = (header[1]&0x40)>>6;                        // Continue
+-  rsp->csg = (header[1]&0x0c)>>2;                         // CSG 
+-  rsp->nsg = header[1]&0x03;                              // NSG 
+-  rsp->version_max = header[2];                           // Version-max
+-  rsp->version_active = header[3];                        // Version-active
+-  rsp->AHSlength = header[4];                             // TotalAHSLength
+-  rsp->length = NTOHL(*((unsigned *)(header+4)));         // Length
+-  rsp->isid = NTOHLL6(*((unsigned long long*)(header+8)));// ISID
+-  rsp->tsih = NTOHS(*((unsigned short *)(header+14)));    // TSIH
+-  rsp->tag = NTOHL(*((unsigned *)(header+16)));           // Tag
+-  rsp->StatSN = NTOHL(*((unsigned *)(header+24)));        // StatSN
+-  rsp->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));      // ExpCmdSN
+-  rsp->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));      // MaxCmdSN 
+-  rsp->status_class = header[36];                         // Status-Class
+-  rsp->status_detail = header[37];                        // Status-Detail
++  rsp->transit = (header[1]&0x80)>>7;                            /*  Transit  */
++  rsp->cont = (header[1]&0x40)>>6;                        /*  Continue */
++  rsp->csg = (header[1]&0x0c)>>2;                         /*  CSG  */
++  rsp->nsg = header[1]&0x03;                              /*  NSG  */
++  rsp->version_max = header[2];                           /*  Version-max */
++  rsp->version_active = header[3];                        /*  Version-active */
++  rsp->AHSlength = header[4];                             /*  TotalAHSLength */
++  rsp->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));         /*  Length */
++  rsp->isid = ISCSI_NTOHLL6(*((uint64_t*)(header+8)));/*  ISID */
++  rsp->tsih = ISCSI_NTOHS(*((uint16_t *)(header+14)));    /*  TSIH */
++  rsp->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));           /*  Tag */
++  rsp->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));        /*  StatSN */
++  rsp->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));      /*  ExpCmdSN */
++  rsp->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));      /*  MaxCmdSN  */
++  rsp->status_class = header[36];                         /*  Status-Class */
++  rsp->status_detail = header[37];                        /*  Status-Detail */
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Transit:           %i\n",   rsp->transit);
+   TRACE(TRACE_ISCSI_ARGS, "Continue:          %i\n",   rsp->cont);
+@@ -606,11 +621,11 @@
+   TRACE(TRACE_ISCSI_ARGS, "Status-Detail:     %u\n",   rsp->status_detail);
+ 
+   RETURN_NOT_EQUAL("Byte 1, bits 2-3", (header[1]&0x30)>>4, 0, NO_CLEANUP, 1); 
+-  RETURN_NOT_EQUAL("Bytes 20-23", *((unsigned *)(header+20)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 20-23", *((uint32_t *)(header+20)), 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 38", header[38], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 39", header[39], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   return 0;
+ }
+@@ -630,13 +645,13 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+   
+-  header[0] = ISCSI_LOGOUT_CMD;                        // Opcode
+-  if (cmd->immediate) header[0] |= 0x40;               // Immediate
+-  header[1] = cmd->reason|0x80;                        // Reason 
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);        // Tag
+-  *((unsigned short *)(header+20)) = HTONS(cmd->cid);  // CID
+-  *((unsigned *) (header+24)) = HTONL(cmd->CmdSN);     // CmdSN
+-  *((unsigned *) (header+28)) = HTONL(cmd->ExpStatSN); // ExpStatSN 
++  header[0] = ISCSI_LOGOUT_CMD;                        /*  Opcode */
++  if (cmd->immediate) header[0] |= 0x40;               /*  Immediate */
++  header[1] = cmd->reason|0x80;                        /*  Reason  */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);        /*  Tag */
++  *((uint16_t *)(header+20)) = ISCSI_HTONS(cmd->cid);  /*  CID */
++  *((uint32_t *) (header+24)) = ISCSI_HTONL(cmd->CmdSN);     /*  CmdSN */
++  *((uint32_t *) (header+28)) = ISCSI_HTONL(cmd->ExpStatSN); /*  ExpStatSN  */
+ 
+   return 0;
+ }
+@@ -645,12 +660,12 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_LOGOUT_CMD, NO_CLEANUP, 1);
+ 
+-  cmd->immediate = (header[0]&0x40)?1:0;               // Immediate
+-  cmd->reason = header[1]&0x7f;                        // Reason
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));        // Tag
+-  cmd->cid = NTOHS(*((unsigned short *)(header+20)));  // CID
+-  cmd->CmdSN = NTOHL(*((unsigned *)(header+24)));      // CmdSN
+-  cmd->ExpStatSN = NTOHL(*((unsigned *)(header+28)));  // ExpStatSN
++  cmd->immediate = (header[0]&0x40)?1:0;               /*  Immediate */
++  cmd->reason = header[1]&0x7f;                        /*  Reason */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));        /*  Tag */
++  cmd->cid = ISCSI_NTOHS(*((uint16_t *)(header+20)));  /*  CID */
++  cmd->CmdSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));      /*  CmdSN */
++  cmd->ExpStatSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));  /*  ExpStatSN */
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Immediate: %i\n",   cmd->immediate);
+   TRACE(TRACE_ISCSI_ARGS, "Reason:    %u\n",   cmd->reason);
+@@ -664,14 +679,14 @@
+   RETURN_NOT_EQUAL("Byte 1 bit 0", header[1]>>7, 1, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 4-7", *((unsigned *)(header+4)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 8-11", *((unsigned *)(header+8)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 12-15", *((unsigned *)(header+12)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 22-23", *((unsigned *)(header+22)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 32-35", *((unsigned *)(header+32)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 36-39", *((unsigned *)(header+36)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 4-7", *((uint32_t *)(header+4)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 8-11", *((uint32_t *)(header+8)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 12-15", *((uint32_t *)(header+12)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 22-23", *((uint32_t *)(header+22)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 32-35", *((uint32_t *)(header+32)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 36-39", *((uint32_t *)(header+36)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   return 0;
+ }
+@@ -694,16 +709,16 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+   
+-  header[0] |= 0x00|ISCSI_LOGOUT_RSP;                    // Opcode 
+-  header[1] |= 0x80;				  	 // Reserved 
+-  header[2] = rsp->response;                             // Response
+-  *((unsigned *)(header+4)) = HTONL(rsp->length);        // Length
+-  *((unsigned *)(header+16)) = HTONL(rsp->tag);          // Tag
+-  *((unsigned *)(header+24)) = HTONL(rsp->StatSN);       // StatSN
+-  *((unsigned *)(header+28)) = HTONL(rsp->ExpCmdSN);     // ExpCmdSN
+-  *((unsigned *)(header+32)) = HTONL(rsp->MaxCmdSN);     // MaxCmdSN
+-  *((unsigned *)(header+40)) = HTONS(rsp->Time2Wait);    // Time2Wait
+-  *((unsigned *)(header+42)) = HTONS(rsp->Time2Retain);  // Time2Retain
++  header[0] |= 0x00|ISCSI_LOGOUT_RSP;                    /*  Opcode  */
++  header[1] |= 0x80;				  	 /*  Reserved  */
++  header[2] = rsp->response;                             /*  Response */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(rsp->length);        /*  Length */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(rsp->tag);          /*  Tag */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(rsp->StatSN);       /*  StatSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(rsp->ExpCmdSN);     /*  ExpCmdSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(rsp->MaxCmdSN);     /*  MaxCmdSN */
++  *((uint32_t *)(header+40)) = ISCSI_HTONS(rsp->Time2Wait);    /*  Time2Wait */
++  *((uint32_t *)(header+42)) = ISCSI_HTONS(rsp->Time2Retain);  /*  Time2Retain */
+ 
+   return 0;
+ }
+@@ -712,24 +727,24 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_LOGOUT_RSP, NO_CLEANUP, 1);
+   
+-  rsp->response = header[2];                             // Response
+-  rsp->length = NTOHL(*((unsigned *)(header+4)));        // Length
+-  rsp->tag = NTOHL(*((unsigned *)(header+16)));          // Tag
+-  rsp->StatSN = NTOHL(*((unsigned *)(header+24)));       // StatSN
+-  rsp->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));     // ExpCmdSN
+-  rsp->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));     // MaxCmdSN 
+-  rsp->Time2Wait = NTOHS(*((unsigned *)(header+40)));    // Time2Wait
+-  rsp->Time2Retain = NTOHS(*((unsigned *)(header+42)));  // Time2Retain
++  rsp->response = header[2];                             /*  Response */
++  rsp->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));        /*  Length */
++  rsp->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));          /*  Tag */
++  rsp->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));       /*  StatSN */
++  rsp->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));     /*  ExpCmdSN */
++  rsp->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));     /*  MaxCmdSN  */
++  rsp->Time2Wait = ISCSI_NTOHS(*((uint32_t *)(header+40)));    /*  Time2Wait */
++  rsp->Time2Retain = ISCSI_NTOHS(*((uint32_t *)(header+42)));  /*  Time2Retain */
+ 
+   RETURN_NOT_EQUAL("Byte 0 bits 0-1", (header[0]&0x20), 0x20, NO_CLEANUP, -1); 
+   RETURN_NOT_EQUAL("Byte 1 bit 0",  header[1]&0x80, 0x80, NO_CLEANUP, -1); 
+   RETURN_NOT_EQUAL("Byte 3",  header[3], 0, NO_CLEANUP, -1);
+-  RETURN_NOT_EQUAL("Bytes 4-7", *((unsigned *)(header+4)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 8-11", *((unsigned *)(header+8)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 12-15", *((unsigned *)(header+12)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 20-23", *((unsigned *)(header+20)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 36-39", *((unsigned *)(header+36)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 4-7", *((uint32_t *)(header+4)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 8-11", *((uint32_t *)(header+8)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 12-15", *((uint32_t *)(header+12)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 20-23", *((uint32_t *)(header+20)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 36-39", *((uint32_t *)(header+36)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Response:    %u\n",   rsp->response);
+   TRACE(TRACE_ISCSI_ARGS, "Length:      %u\n",   rsp->length);
+@@ -765,20 +780,20 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+ 
+-  header[0] |= ISCSI_SCSI_CMD;                             // Opcode
+-  if (cmd->immediate) header[0] |= 0x40;                   // Immediate
+-  if (cmd->final) header[1] |= 0x80;                       // Final
+-  if (cmd->input) header[1] |= 0x40;                       // Input bit
+-  if (cmd->output) header[1] |= 0x20;                      // Output bit
+-  header[1] |= cmd->attr&0x07;                             // ATTR 
+- *((unsigned *)(header+4)) = HTONL(cmd->length);          // DataSegmentLength
+-  header[4] = cmd->ahs_len;                                // TotalAHSLength 
+-  *((unsigned long long *)(header+8)) = HTONLL6(cmd->lun); // LUN
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);            // Task Tag 
+-  *((unsigned *)(header+20)) = HTONL(cmd->trans_len);      // Expected Transfer Length
+-  *((unsigned *)(header+24)) = HTONL(cmd->CmdSN);          // CmdSN
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpStatSN);      // ExpStatSN
+-  memcpy(header+32, cmd->cdb, 16);                         // CDB
++  header[0] |= ISCSI_SCSI_CMD;                             /*  Opcode */
++  if (cmd->immediate) header[0] |= 0x40;                   /*  Immediate */
++  if (cmd->final) header[1] |= 0x80;                       /*  Final */
++  if (cmd->input) header[1] |= 0x40;                       /*  Input bit */
++  if (cmd->output) header[1] |= 0x20;                      /*  Output bit */
++  header[1] |= cmd->attr&0x07;                             /*  ATTR  */
++ *((uint32_t *)(header+4)) = ISCSI_HTONL(cmd->length);          /*  DataSegmentLength */
++  header[4] = cmd->ahs_len;                                /*  TotalAHSLength  */
++  *((uint64_t *)(header+8)) = ISCSI_HTONLL6(cmd->lun); /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);            /*  Task Tag  */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(cmd->trans_len);      /*  Expected Transfer Length */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->CmdSN);          /*  CmdSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpStatSN);      /*  ExpStatSN */
++  memcpy(header+32, cmd->cdb, 16);                         /*  CDB */
+ 
+   return 0;
+ }
+@@ -787,19 +802,19 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_SCSI_CMD, NO_CLEANUP, 1);
+ 
+-  cmd->immediate = (header[0]&0x40)?1:0;                   // Immediate
+-  cmd->final = (header[1]&0x80)?1:0;                       // Final
+-  cmd->input = (header[1]&0x40)?1:0;                       // Input
+-  cmd->output = (header[1]&0x20)?1:0;                      // Output
+-  cmd->attr = header[1]&0x07;                               // ATTR 
++  cmd->immediate = (header[0]&0x40)?1:0;                   /*  Immediate */
++  cmd->final = (header[1]&0x80)?1:0;                       /*  Final */
++  cmd->input = (header[1]&0x40)?1:0;                       /*  Input */
++  cmd->output = (header[1]&0x20)?1:0;                      /*  Output */
++  cmd->attr = header[1]&0x07;                               /*  ATTR  */
+   cmd->ahs_len = header[4]; header[4] = 0x00; 
+-  cmd->length = NTOHL(*((unsigned *)(header+4)));          // DataSegmentLength
+-  cmd->lun = NTOHLL6(*((unsigned long long *)(header+8))); // LUN
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));            // Task Tag
+-  cmd->trans_len = NTOHL(*((unsigned *)(header+20)));      // Expected Transfer Length
+-  cmd->CmdSN = NTOHL(*((unsigned *)(header+24)));          // CmdSN 
+-  cmd->ExpStatSN = NTOHL(*((unsigned *)(header+28)));      // ExpStatSN
+-  cmd->cdb = header+32;                                    // CDB
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));          /*  DataSegmentLength */
++  cmd->lun = ISCSI_NTOHLL6(*((uint64_t *)(header+8))); /*  LUN */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));            /*  Task Tag */
++  cmd->trans_len = ISCSI_NTOHL(*((uint32_t *)(header+20)));      /*  Expected Transfer Length */
++  cmd->CmdSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));          /*  CmdSN  */
++  cmd->ExpStatSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));      /*  ExpStatSN */
++  cmd->cdb = header+32;                                    /*  CDB */
+ 
+   RETURN_NOT_EQUAL("Byte 1, Bits 3-4", header[1]&0x18, 0,NO_CLEANUP, -1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+@@ -845,23 +860,23 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+ 
+-  header[0] |= 0x00|ISCSI_SCSI_RSP;                              // Opcode 
+-  header[1] |= 0x80;                                         // Byte 1 bit 7
+-  if (rsp->bidi_overflow) header[1] |= 0x10;                // Bidi overflow
+-  if (rsp->bidi_underflow) header[1] |= 0x08;               // Bidi underflow
+-  if (rsp->overflow) header[1] |= 0x04;                     // Overflow
+-  if (rsp->underflow) header[1] |= 0x02;                    // Underflow 
+-  header[2] = rsp->response;                                // iSCSI Response
+-  header[3] = rsp->status;                                  // SCSI Status
+-  header[4] = rsp->ahs_len;                                // TotalAHSLength 
+-  *((unsigned *)(header+4)) = HTONL(rsp->length);           // DataSegmentLength
+-  *((unsigned *)(header+16)) = HTONL(rsp->tag);             // Task Tag
+-  *((unsigned *)(header+24)) = HTONL(rsp->StatSN);          // StatSN
+-  *((unsigned *)(header+28)) = HTONL(rsp->ExpCmdSN);        // ExpCmdSN
+-  *((unsigned *)(header+32)) = HTONL(rsp->MaxCmdSN);        // MaxCmdSN
+-  *((unsigned *)(header+36)) = HTONL(rsp->ExpDataSN);       // ExpDataSN 
+-  *((unsigned *)(header+40)) = HTONL(rsp->bidi_res_cnt);    // Bidi Residual Count
+-  *((unsigned *)(header+44)) = HTONL(rsp->basic_res_cnt);   // Residual Count
++  header[0] |= 0x00|ISCSI_SCSI_RSP;                              /*  Opcode  */
++  header[1] |= 0x80;                                         /*  Byte 1 bit 7 */
++  if (rsp->bidi_overflow) header[1] |= 0x10;                /*  Bidi overflow */
++  if (rsp->bidi_underflow) header[1] |= 0x08;               /*  Bidi underflow */
++  if (rsp->overflow) header[1] |= 0x04;                     /*  Overflow */
++  if (rsp->underflow) header[1] |= 0x02;                    /*  Underflow  */
++  header[2] = rsp->response;                                /*  iSCSI Response */
++  header[3] = rsp->status;                                  /*  SCSI Status */
++  header[4] = rsp->ahs_len;                                /*  TotalAHSLength  */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(rsp->length);           /*  DataSegmentLength */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(rsp->tag);             /*  Task Tag */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(rsp->StatSN);          /*  StatSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(rsp->ExpCmdSN);        /*  ExpCmdSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(rsp->MaxCmdSN);        /*  MaxCmdSN */
++  *((uint32_t *)(header+36)) = ISCSI_HTONL(rsp->ExpDataSN);       /*  ExpDataSN  */
++  *((uint32_t *)(header+40)) = ISCSI_HTONL(rsp->bidi_res_cnt);    /*  Bidi Residual Count */
++  *((uint32_t *)(header+44)) = ISCSI_HTONL(rsp->basic_res_cnt);   /*  Residual Count */
+ 
+   return 0;
+ }
+@@ -870,22 +885,22 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_SCSI_RSP, NO_CLEANUP, 1);
+ 
+-  rsp->bidi_overflow  = (header[1]&0x10)?1:0;                // Bidi overflow
+-  rsp->bidi_underflow = (header[1]&0x08)?1:0;                // Bidi underflow
+-  rsp->overflow       = (header[1]&0x04)?1:0;                // Overflow
+-  rsp->underflow      = (header[1]&0x02)?1:0;                // Underflow
+-
+-  rsp->response = header[2];                                 // iSCSI Response
+-  rsp->status  = header[3];                                  // SCSI Status
+-  rsp->ahs_len =  header[4];                                 // TotalAHSLength 
+-  rsp->length = NTOHL(*((unsigned *)(header+4)));            // DataSegmentLength
+-  rsp->tag = NTOHL(*((unsigned *)(header+16)));              // Task Tag 
+-  rsp->StatSN = NTOHL(*((unsigned *)(header+24)));           // StatSN 
+-  rsp->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));         // ExpCmdSN 
+-  rsp->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));         // MaxCmdSN 
+-  rsp->ExpDataSN = NTOHL(*((unsigned *)(header+36)));        // ExpDataSN 
+-  rsp->bidi_res_cnt = NTOHL(*((unsigned *)(header+40)));     // Bidi Residual Count 
+-  rsp->basic_res_cnt = NTOHL(*((unsigned *)(header+44)));    // Residual Count
++  rsp->bidi_overflow  = (header[1]&0x10)?1:0;                /*  Bidi overflow */
++  rsp->bidi_underflow = (header[1]&0x08)?1:0;                /*  Bidi underflow */
++  rsp->overflow       = (header[1]&0x04)?1:0;                /*  Overflow */
++  rsp->underflow      = (header[1]&0x02)?1:0;                /*  Underflow */
++
++  rsp->response = header[2];                                 /*  iSCSI Response */
++  rsp->status  = header[3];                                  /*  SCSI Status */
++  rsp->ahs_len =  header[4];                                 /*  TotalAHSLength  */
++  rsp->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));            /*  DataSegmentLength */
++  rsp->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Task Tag  */
++  rsp->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));           /*  StatSN  */
++  rsp->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));         /*  ExpCmdSN  */
++  rsp->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));         /*  MaxCmdSN  */
++  rsp->ExpDataSN = ISCSI_NTOHL(*((uint32_t *)(header+36)));        /*  ExpDataSN  */
++  rsp->bidi_res_cnt = ISCSI_NTOHL(*((uint32_t *)(header+40)));     /*  Bidi Residual Count  */
++  rsp->basic_res_cnt = ISCSI_NTOHL(*((uint32_t *)(header+44)));    /*  Residual Count */
+   
+   RETURN_NOT_EQUAL("Byte 0 bits 0-1", header[0]&0x00, 0x00, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 1 bit 0", header[1]&0x80, 0x80, NO_CLEANUP, 1);
+@@ -919,6 +934,8 @@
+ 
+ int iscsi_r2t_encap(unsigned char *header, ISCSI_R2T_T *cmd) {
+ 
++	uint32_t	AHS_length;
++
+   TRACE(TRACE_ISCSI_ARGS, "TotalAHSLength:    %u\n",   cmd->AHSlength);
+   TRACE(TRACE_ISCSI_ARGS, "LUN:          %llu\n",   cmd->lun);
+   TRACE(TRACE_ISCSI_ARGS, "Tag:          0x%x\n", cmd->tag);
+@@ -932,18 +949,19 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+   
+-  header[0] |= 0x00|ISCSI_R2T;                                  // Opcode 
++  header[0] |= 0x00|ISCSI_R2T;                                  /*  Opcode  */
+   header[1] |= 0x80;
+-  *((unsigned *)(header+4)) = HTONL(cmd->AHSlength&0x00ffffff); // AHSLength
+-  *((unsigned long long *)(header+8)) = HTONLL6(cmd->lun);     // LUN
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);            // Tag
+-  *((unsigned *)(header+20)) = HTONL(cmd->transfer_tag);   // Transfer Tag
+-  *((unsigned *)(header+24)) = HTONL(cmd->StatSN);       // StatSN 
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpCmdSN);       // ExpCmdSN
+-  *((unsigned *)(header+32)) = HTONL(cmd->MaxCmdSN);       // MaxCmdSN
+-  *((unsigned *)(header+36)) = HTONL(cmd->R2TSN);          // R2TSN
+-  *((unsigned *)(header+40)) = HTONL(cmd->offset);         // Buffer Offset
+-  *((unsigned *)(header+44)) = HTONL(cmd->length);         // Transfer Length
++  AHS_length = (cmd->AHSlength & 0x00ffffff); /*  AHSLength */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(AHS_length); /*  AHSLength */
++  *((uint64_t *)(header+8)) = ISCSI_HTONLL6(cmd->lun);     /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);            /*  Tag */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(cmd->transfer_tag);   /*  Transfer Tag */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->StatSN);       /*  StatSN  */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpCmdSN);       /*  ExpCmdSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(cmd->MaxCmdSN);       /*  MaxCmdSN */
++  *((uint32_t *)(header+36)) = ISCSI_HTONL(cmd->R2TSN);          /*  R2TSN */
++  *((uint32_t *)(header+40)) = ISCSI_HTONL(cmd->offset);         /*  Buffer Offset */
++  *((uint32_t *)(header+44)) = ISCSI_HTONL(cmd->length);         /*  Transfer Length */
+ 
+   return 0;
+ }
+@@ -952,23 +970,23 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_R2T, NO_CLEANUP, 1);
+ 
+-  cmd->AHSlength = NTOHL(*((unsigned *)(header+4)));         // TotalAHSLength
+-  cmd->lun = NTOHLL6(*((unsigned long long *)(header+8)));   // LUN
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));              // Tag
+-  cmd->transfer_tag = NTOHL(*((unsigned *)(header+20)));     // Transfer Tag
+-  cmd->StatSN = NTOHL(*((unsigned *)(header+24)));           // StatSN
+-  cmd->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));         // ExpCmdSN 
+-  cmd->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));         // MaxCmdSN 
+-  cmd->R2TSN = NTOHL(*((unsigned *)(header+36)));            // R2TSN
+-  cmd->offset = NTOHL(*((unsigned *)(header+40)));           // Offset
+-  cmd->length = NTOHL(*((unsigned *)(header+44)));           // Transfer Length
++  cmd->AHSlength = ISCSI_NTOHL(*((uint32_t *)(header+4)));         /*  TotalAHSLength */
++  cmd->lun = ISCSI_NTOHLL6(*((uint64_t *)(header+8)));   /*  LUN */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Tag */
++  cmd->transfer_tag = ISCSI_NTOHL(*((uint32_t *)(header+20)));     /*  Transfer Tag */
++  cmd->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));           /*  StatSN */
++  cmd->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));         /*  ExpCmdSN  */
++  cmd->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));         /*  MaxCmdSN  */
++  cmd->R2TSN = ISCSI_NTOHL(*((uint32_t *)(header+36)));            /*  R2TSN */
++  cmd->offset = ISCSI_NTOHL(*((uint32_t *)(header+40)));           /*  Offset */
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+44)));           /*  Transfer Length */
+ 
+   RETURN_NOT_EQUAL("Byte 1, Bits 1-7", header[1]&0x7f, 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 4-7", *((unsigned *)(header+4)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 8-11", *((unsigned *)(header+8)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 12-15", *((unsigned *)(header+12)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 4-7", *((uint32_t *)(header+4)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 8-11", *((uint32_t *)(header+8)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 12-15", *((uint32_t *)(header+12)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "AHSLength:    %u\n",   cmd->AHSlength);
+   TRACE(TRACE_ISCSI_ARGS, "LUN:          %llu\n",   cmd->lun);
+@@ -999,15 +1017,15 @@
+   TRACE(TRACE_ISCSI_ARGS, "Buffer Offset:      %u\n",   cmd->offset);
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+-  header[0] = 0x00|ISCSI_WRITE_DATA;                            // Opcode 
+-  if (cmd->final) header[1] |= 0x80;                       // Final
+-  *((unsigned *)(header+4)) = HTONL(cmd->length);          // Length
+-  *((unsigned long long*)(header+8)) = HTONLL6(cmd->lun);    // LUN
+-  *((unsigned *)(header+16)) = HTONL(cmd->tag);            // Tag
+-  *((unsigned *)(header+20)) = HTONL(cmd->transfer_tag);   // Transfer Tag
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpStatSN);      // ExpStatSN
+-  *((unsigned *)(header+36)) = HTONL(cmd->DataSN);         // DataSN
+-  *((unsigned *)(header+40)) = HTONL(cmd->offset);         // Buffer Offset
++  header[0] = 0x00|ISCSI_WRITE_DATA;                            /*  Opcode  */
++  if (cmd->final) header[1] |= 0x80;                       /*  Final */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(cmd->length);          /*  Length */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(cmd->lun);    /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->tag);            /*  Tag */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(cmd->transfer_tag);   /*  Transfer Tag */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpStatSN);      /*  ExpStatSN */
++  *((uint32_t *)(header+36)) = ISCSI_HTONL(cmd->DataSN);         /*  DataSN */
++  *((uint32_t *)(header+40)) = ISCSI_HTONL(cmd->offset);         /*  Buffer Offset */
+ 
+   return 0;
+ }
+@@ -1016,22 +1034,22 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_WRITE_DATA,NO_CLEANUP, 1);
+ 
+-  cmd->final = (header[1]&0x80)?1:0;                         // Final
+-  cmd->length = NTOHL(*((unsigned *)(header+4)));            // Length
+-  cmd->lun = NTOHLL6(*((unsigned long long *)(header+8)));   // LUN
+-  cmd->tag = NTOHL(*((unsigned *)(header+16)));              // Tag
+-  cmd->transfer_tag = NTOHL(*((unsigned *)(header+20)));     // Transfer Tag
+-  cmd->ExpStatSN = NTOHL(*((unsigned *)(header+28)));        // ExpStatSN 
+-  cmd->DataSN = NTOHL(*((unsigned *)(header+36)));           // DataSN   
+-  cmd->offset = NTOHL(*((unsigned *)(header+40)));           // Buffer Offset
++  cmd->final = (header[1]&0x80)?1:0;                         /*  Final */
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));            /*  Length */
++  cmd->lun = ISCSI_NTOHLL6(*((uint64_t *)(header+8)));   /*  LUN */
++  cmd->tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));              /*  Tag */
++  cmd->transfer_tag = ISCSI_NTOHL(*((uint32_t *)(header+20)));     /*  Transfer Tag */
++  cmd->ExpStatSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));        /*  ExpStatSN  */
++  cmd->DataSN = ISCSI_NTOHL(*((uint32_t *)(header+36)));           /*  DataSN    */
++  cmd->offset = ISCSI_NTOHL(*((uint32_t *)(header+40)));           /*  Buffer Offset */
+   
+   RETURN_NOT_EQUAL("Byte 1, Bits 1-7", header[1]&0x7f, 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 4", header[4], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Byte 24-27", *((unsigned *)(header+24)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Byte 32-35", *((unsigned *)(header+32)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Byte 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Byte 24-27", *((uint32_t *)(header+24)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Byte 32-35", *((uint32_t *)(header+32)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Byte 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Final:              %u\n",   cmd->final);
+   TRACE(TRACE_ISCSI_ARGS, "DataSegmentLength:  %u\n",   cmd->length);
+@@ -1070,26 +1088,26 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+ 
+-  header[0] = 0x00|ISCSI_READ_DATA;                             // Opcode 
+-  if (cmd->final) header[1] |= 0x80;                       // Final
+-  if (cmd->ack) header[1] |= 0x40;                         // ACK
+-  if (cmd->overflow) header[1] |= 0x04;                    // Overflow 
+-  if (cmd->underflow) header[1] |= 0x02;                   // Underflow
+-  if (cmd->S_bit) header[1] |= 0x01;                       // S Bit
++  header[0] = 0x00|ISCSI_READ_DATA;                             /*  Opcode  */
++  if (cmd->final) header[1] |= 0x80;                       /*  Final */
++  if (cmd->ack) header[1] |= 0x40;                         /*  ACK */
++  if (cmd->overflow) header[1] |= 0x04;                    /*  Overflow  */
++  if (cmd->underflow) header[1] |= 0x02;                   /*  Underflow */
++  if (cmd->S_bit) header[1] |= 0x01;                       /*  S Bit */
+   if (cmd->S_bit)
+-    header[3] = cmd->status;                                 // Status 
+-  *((unsigned *)(header+4)) = HTONL(cmd->length);          // Length
+-  *((unsigned long long*)(header+8)) = HTONLL6(cmd->lun);  // LUN
+-  *((unsigned *)(header+16)) = HTONL(cmd->task_tag);       // Task Tag
+-  *((unsigned *)(header+20)) = HTONL(cmd->transfer_tag);   // Transfer Tag
++    header[3] = cmd->status;                                 /*  Status  */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(cmd->length);          /*  Length */
++  *((uint64_t*)(header+8)) = ISCSI_HTONLL6(cmd->lun);  /*  LUN */
++  *((uint32_t *)(header+16)) = ISCSI_HTONL(cmd->task_tag);       /*  Task Tag */
++  *((uint32_t *)(header+20)) = ISCSI_HTONL(cmd->transfer_tag);   /*  Transfer Tag */
+   if (cmd->S_bit)
+-    *((unsigned *)(header+24)) = HTONL(cmd->StatSN);       // StatSN
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpCmdSN);       // ExpCmdSN 
+-  *((unsigned *)(header+32)) = HTONL(cmd->MaxCmdSN);       // MaxCmdSN 
+-  *((unsigned *)(header+36)) = HTONL(cmd->DataSN);         // DataSN 
+-  *((unsigned *)(header+40)) = HTONL(cmd->offset);         // Buffer Offset
++    *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->StatSN);       /*  StatSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpCmdSN);       /*  ExpCmdSN  */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(cmd->MaxCmdSN);       /*  MaxCmdSN  */
++  *((uint32_t *)(header+36)) = ISCSI_HTONL(cmd->DataSN);         /*  DataSN  */
++  *((uint32_t *)(header+40)) = ISCSI_HTONL(cmd->offset);         /*  Buffer Offset */
+   if (cmd->S_bit)
+-   *((unsigned *)(header+44)) = HTONL(cmd->res_count);      // Residual Count 
++   *((uint32_t *)(header+44)) = ISCSI_HTONL(cmd->res_count);      /*  Residual Count  */
+ 
+   return 0;
+ }
+@@ -1098,30 +1116,30 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_READ_DATA, NO_CLEANUP, 1);
+ 
+-  cmd->final = (header[1]&0x80)?1:0;                       // Final
+-  cmd->ack = (header[1]&0x40)?1:0;                         // Acknowledge
+-  cmd->overflow = (header[1]&0x04)?1:0;                    // Overflow 
+-  cmd->underflow = (header[1]&0x02)?1:0;                   // Underflow 
+-  cmd->S_bit = (header[1]&0x01)?1:0;                       // S Bit 
+-  cmd->status = header[3];                                 // Status
+-  cmd->length = NTOHL(*((unsigned *)(header+4)));          // Length
+-  cmd->lun = NTOHLL6(*((unsigned long long*)(header+8)));  // LUN 
+-  cmd->task_tag = NTOHL(*((unsigned *)(header+16)));       // Task Tag
+-  cmd->transfer_tag = NTOHL(*((unsigned *)(header+20)));   // Transfer Tag 
+-  cmd->StatSN = NTOHL(*((unsigned *)(header+24)));         // StatSN 
+-  cmd->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));       // ExpCmdSN 
+-  cmd->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));       // MaxCmdSN 
+-  cmd->DataSN = NTOHL(*((unsigned *)(header+36)));         // DataSN 
+-  cmd->offset = NTOHL(*((unsigned *)(header+40)));         // Buffer Offset
+-  cmd->res_count = NTOHL( *((unsigned *)(header+44)));     // Residual Count 
++  cmd->final = (header[1]&0x80)?1:0;                       /*  Final */
++  cmd->ack = (header[1]&0x40)?1:0;                         /*  Acknowledge */
++  cmd->overflow = (header[1]&0x04)?1:0;                    /*  Overflow  */
++  cmd->underflow = (header[1]&0x02)?1:0;                   /*  Underflow  */
++  cmd->S_bit = (header[1]&0x01)?1:0;                       /*  S Bit  */
++  cmd->status = header[3];                                 /*  Status */
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));          /*  Length */
++  cmd->lun = ISCSI_NTOHLL6(*((uint64_t*)(header+8)));  /*  LUN  */
++  cmd->task_tag = ISCSI_NTOHL(*((uint32_t *)(header+16)));       /*  Task Tag */
++  cmd->transfer_tag = ISCSI_NTOHL(*((uint32_t *)(header+20)));   /*  Transfer Tag  */
++  cmd->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));         /*  StatSN  */
++  cmd->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));       /*  ExpCmdSN  */
++  cmd->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));       /*  MaxCmdSN  */
++  cmd->DataSN = ISCSI_NTOHL(*((uint32_t *)(header+36)));         /*  DataSN  */
++  cmd->offset = ISCSI_NTOHL(*((uint32_t *)(header+40)));         /*  Buffer Offset */
++  cmd->res_count = ISCSI_NTOHL( *((uint32_t *)(header+44)));     /*  Residual Count  */
+ 
+   RETURN_NOT_EQUAL("Byte 0, Bits 0-1", header[0]&0xc0, 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 1, Bits 2-4", header[1]&0x38, 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 2", header[2], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 4", header[4], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 8-11", *((unsigned *)(header+8)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 12-15", *((unsigned *)(header+12)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 8-11", *((uint32_t *)(header+8)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 12-15", *((uint32_t *)(header+12)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Final:             %i\n",   cmd->final);
+   TRACE(TRACE_ISCSI_ARGS, "Acknowledge:       %i\n",   cmd->ack);
+@@ -1155,14 +1173,14 @@
+ 
+   memset(header, 0, ISCSI_HEADER_LEN);
+ 
+-  header[0] |= 0x00|ISCSI_REJECT;                                // Opcode 
++  header[0] |= 0x00|ISCSI_REJECT;                                /*  Opcode  */
+   header[1] |= 0x80;
+-  header[2] = cmd->reason;                                  // Reason
+-  *((unsigned *)(header+4)) = HTONL(cmd->length);           // Length 
+-  *((unsigned *)(header+24)) = HTONL(cmd->StatSN);          // StatSN
+-  *((unsigned *)(header+28)) = HTONL(cmd->ExpCmdSN);        // ExpCmdSN
+-  *((unsigned *)(header+32)) = HTONL(cmd->MaxCmdSN);        // MaxCmdSN
+-  *((unsigned *)(header+36)) = HTONL(cmd->DataSN);          // DataSN
++  header[2] = cmd->reason;                                  /*  Reason */
++  *((uint32_t *)(header+4)) = ISCSI_HTONL(cmd->length);           /*  Length  */
++  *((uint32_t *)(header+24)) = ISCSI_HTONL(cmd->StatSN);          /*  StatSN */
++  *((uint32_t *)(header+28)) = ISCSI_HTONL(cmd->ExpCmdSN);        /*  ExpCmdSN */
++  *((uint32_t *)(header+32)) = ISCSI_HTONL(cmd->MaxCmdSN);        /*  MaxCmdSN */
++  *((uint32_t *)(header+36)) = ISCSI_HTONL(cmd->DataSN);          /*  DataSN */
+ 
+   return 0;
+ }
+@@ -1171,22 +1189,22 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_REJECT, NO_CLEANUP, 1);
+ 
+-  cmd->reason = header[2];                                 // Reason
+-  cmd->length = NTOHL(*((unsigned *)(header+4)));          // Length
+-  cmd->StatSN = NTOHL(*((unsigned *)(header+24)));         // StatSN
+-  cmd->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));       // ExpCmdSN
+-  cmd->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));       // MaxCmdSN
+-  cmd->DataSN = NTOHL(*((unsigned *)(header+36)));         // DataSN
++  cmd->reason = header[2];                                 /*  Reason */
++  cmd->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));          /*  Length */
++  cmd->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));         /*  StatSN */
++  cmd->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));       /*  ExpCmdSN */
++  cmd->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));       /*  MaxCmdSN */
++  cmd->DataSN = ISCSI_NTOHL(*((uint32_t *)(header+36)));         /*  DataSN */
+ 
+   RETURN_NOT_EQUAL("Byte 0, Bits 0-1", header[0]&0xc0, 0, NO_CLEANUP, 1); 
+   RETURN_NOT_EQUAL("Byte 1, Bits 1-7", header[1]&0x7f, 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 3", header[3], 0, NO_CLEANUP, 1);
+   RETURN_NOT_EQUAL("Byte 4", header[4], 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 8-11", *((unsigned *)(header+8)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 12-15", *((unsigned *)(header+12)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 20-23", *((unsigned *)(header+20)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 40-43", *((unsigned *)(header+40)), 0, NO_CLEANUP, 1);
+-  RETURN_NOT_EQUAL("Bytes 44-47", *((unsigned *)(header+44)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 8-11", *((uint32_t *)(header+8)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 12-15", *((uint32_t *)(header+12)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 20-23", *((uint32_t *)(header+20)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 40-43", *((uint32_t *)(header+40)), 0, NO_CLEANUP, 1);
++  RETURN_NOT_EQUAL("Bytes 44-47", *((uint32_t *)(header+44)), 0, NO_CLEANUP, 1);
+ 
+   TRACE(TRACE_ISCSI_ARGS, "Reason:   %u\n", cmd->reason);
+   TRACE(TRACE_ISCSI_ARGS, "Length:   %u\n", cmd->length);
+@@ -1201,14 +1219,14 @@
+ 
+   RETURN_NOT_EQUAL("Opcode", ISCSI_OPCODE(header), ISCSI_ASYNC, NO_CLEANUP, 1);
+ 
+-  msg->AHSlength = header[4];                             // TotalAHSLength
+-  msg->length = NTOHL(*((unsigned *)(header+4)));         // Length
+-  msg->lun = NTOHLL6(*((unsigned long long*)(header+8)));  // LUN 
+-  msg->StatSN = NTOHL(*((unsigned *)(header+24)));        // StatSN
+-  msg->ExpCmdSN = NTOHL(*((unsigned *)(header+28)));      // ExpCmdSN
+-  msg->MaxCmdSN = NTOHL(*((unsigned *)(header+32)));      // MaxCmdSN 
+-  msg->AsyncEvent = header[36];                           // Async Event
+-  msg->AsyncVCode = header[37];                        // Async Vendor Code
++  msg->AHSlength = header[4];                             /*  TotalAHSLength */
++  msg->length = ISCSI_NTOHL(*((uint32_t *)(header+4)));         /*  Length */
++  msg->lun = ISCSI_NTOHLL6(*((uint64_t*)(header+8)));  /*  LUN  */
++  msg->StatSN = ISCSI_NTOHL(*((uint32_t *)(header+24)));        /*  StatSN */
++  msg->ExpCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+28)));      /*  ExpCmdSN */
++  msg->MaxCmdSN = ISCSI_NTOHL(*((uint32_t *)(header+32)));      /*  MaxCmdSN  */
++  msg->AsyncEvent = header[36];                           /*  Async Event */
++  msg->AsyncVCode = header[37];                        /*  Async Vendor Code */
+ 
+   TRACE(TRACE_ISCSI_ARGS, "TotalAHSLength:    %u\n",   msg->AHSlength);
+   TRACE(TRACE_ISCSI_ARGS, "DataSegmentLength: %u\n",   msg->length);

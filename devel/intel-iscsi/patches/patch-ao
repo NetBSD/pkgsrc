@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1.1.1 2005/10/30 21:02:58 agc Exp $
+
+--- src/target.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/target.c	8 Oct 2005 23:37:34 -0000	1.2
+@@ -394,7 +394,7 @@
+     TRACE(TRACE_ISCSI_DEBUG, "read %i bytes AHS\n", scsi_cmd.ahs_len);
+     ahs_ptr = scsi_cmd.ahs;
+     while (ahs_ptr<(scsi_cmd.ahs+scsi_cmd.ahs_len-1)) {
+-      ahs_len = NTOHS(*((unsigned short *)ahs_ptr)); 
++      ahs_len = ISCSI_NTOHS(*((unsigned short *)ahs_ptr)); 
+       RETURN_EQUAL("AHS Length", ahs_len, 0, AHS_CLEANUP, -1);
+       ahs_type = *(ahs_ptr+2); 
+       switch(ahs_type) {
+@@ -403,7 +403,7 @@
+           scsi_cmd.ext_cdb = ahs_ptr+4;
+           break;
+         case 0x02:
+-          scsi_cmd.bidi_trans_len = NTOHL(*((unsigned *)(ahs_ptr+4)));
++          scsi_cmd.bidi_trans_len = ISCSI_NTOHL(*((unsigned *)(ahs_ptr+4)));
+           TRACE(TRACE_ISCSI_DEBUG, "Got Bidirectional Read AHS (expected read length %u)\n", scsi_cmd.bidi_trans_len);
+           break;
+         default:

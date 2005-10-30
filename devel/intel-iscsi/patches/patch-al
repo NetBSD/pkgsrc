@@ -1,0 +1,197 @@
+$NetBSD: patch-al,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- src/osdfs.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/osdfs.c	8 Oct 2005 23:37:34 -0000	1.2
+@@ -152,7 +152,7 @@
+   }
+   OSD_ENCAP_CDB(args, cdb);
+ 
+-  // Exec SCSI command
++  /*  Exec SCSI command */
+ 
+   scsi_wait_req(SRpnt, cdb, ptr, len, 5*HZ, 5);
+   if (SRpnt->sr_result!=0) {
+@@ -225,14 +225,14 @@
+   struct inode inode;
+   uint16_t len;
+ 
+-  // Get size of directory
++  /*  Get size of directory */
+ 
+   if (osd_get_one_attr((void *)&dev, root_gid, uid, 0x30000000, 0x0, sizeof(struct inode), &osd_exec_via_scsi, &len, (void *) &inode)!=0) {
+     TRACE_ERROR("osd_get_one_attr() failed\n");
+     return -1;
+   }
+ 
+-  // Write entry at end
++  /*  Write entry at end */
+   
+   sprintf(entry, "%s\n", name);
+   sprintf(entry+strlen(entry), "%li\n", entry_ino);
+@@ -251,7 +251,7 @@
+   uint64_t size;
+   uint64_t dir_uid = (unsigned) dir_ino;
+ 
+-  // Read
++  /*  Read */
+ 
+   if (entries_get(dev, dir_ino, &entries, &num_entries, &size)!=0) {
+     TRACE_ERROR("entries_get() failed\n");
+@@ -349,8 +349,8 @@
+   TRACE(TRACE_OSDFS, "osdfs_get_inode(\"%s\", mode %i (%s))\n", name, mode,
+         S_ISDIR(mode)?"DIR":(S_ISREG(mode)?"REG":"LNK"));
+ 
+-  // iget() gets a free VFS inode and subsequently call 
+-  // osdfds_read_inode() to fill the inode structure.
++  /*  iget() gets a free VFS inode and subsequently call  */
++  /*  osdfds_read_inode() to fill the inode structure. */
+ 
+   if ((inode=iget(sb, ino))==NULL) {
+     TRACE_ERROR("iget() failed\n");
+@@ -376,7 +376,7 @@
+   TRACE(TRACE_OSDFS, "osdfs_read_inode(ino 0x%x, major %i, minor %i)\n",
+         (unsigned) ino, MAJOR(dev), MINOR(dev));
+ 
+-  // Get object attributes for rest of inode
++  /*  Get object attributes for rest of inode */
+ 
+   if ((attr=iscsi_malloc_atomic(sizeof(struct inode)))==NULL) {
+     TRACE_ERROR("iscsi_malloc_atomic() failed\n");
+@@ -516,7 +516,7 @@
+ 
+   TRACE(TRACE_OSDFS, "osdfs_lookup(\"%s\" in dir ino %lu)\n", name, dir->i_ino);
+ 
+-  // Get directory entries
++  /*  Get directory entries */
+ 
+   ISCSI_LOCK_ELSE(&g_mutex, return NULL);
+   if (entries_get(dev, uid, &entries, &num_entries, &size)!=0) {
+@@ -527,7 +527,7 @@
+   ISCSI_UNLOCK_ELSE(&g_mutex, return NULL);
+   TRACE(TRACE_OSDFS, "ino %li has %i entries\n", dir->i_ino, num_entries);
+ 
+-  // Search for this entry
++  /*  Search for this entry */
+ 
+   if (num_entries) {
+     char *ptr = entries;
+@@ -660,14 +660,14 @@
+ 
+   TRACE(TRACE_OSDFS, "osdfs_mknod(\"%s\")\n", dentry->d_name.name);
+ 
+-  // Create object
++  /*  Create object */
+ 
+   if (osd_create((void *)&dev, root_gid, &osd_exec_via_scsi, &uid)!=0) {
+     TRACE_ERROR("osd_create() failed\n");
+     return -1;
+   }
+ 
+-  // Initialize object attributes
++  /*  Initialize object attributes */
+ 
+   memset(&attr, 0, sizeof(struct inode));
+   attr.i_mode = mode;
+@@ -683,7 +683,7 @@
+     return -1;
+   }
+ 
+-  // Assign to an inode
++  /*  Assign to an inode */
+ 
+   if ((inode = osdfs_get_inode(dir->i_sb, mode, dev, name, uid))==NULL) {
+     TRACE_ERROR("osdfs_get_inode() failed\n");
+@@ -691,7 +691,7 @@
+   }
+   d_instantiate(dentry, inode);
+ 
+-  // Add entry to parent directory
++  /*  Add entry to parent directory */
+ 
+   if (inode->i_ino != 1) {
+     ISCSI_LOCK_ELSE(&g_mutex, return -1);
+@@ -725,7 +725,7 @@
+    * of osdfs_unlink() and osdfs_create(). 
+    */
+ 
+-  // Delete entry from old directory
++  /*  Delete entry from old directory */
+ 
+   ISCSI_LOCK_ELSE(&g_mutex, return -1);
+   if (entry_del(dev, old_dir_ino, old_ino, old_name, &old_dir->i_size)!=0) {
+@@ -736,7 +736,7 @@
+   osdfs_write_inode(old_dir, 0);
+   ISCSI_UNLOCK_ELSE(&g_mutex, return -1);
+ 
+-  // Unlink entry from new directory
++  /*  Unlink entry from new directory */
+ 
+   if (new_dentry->d_inode) {
+     TRACE(TRACE_OSDFS, "unlinking existing file\n");
+@@ -746,7 +746,7 @@
+     }
+   }
+ 
+-  // Add entry to new directory (might be the same dir)
++  /*  Add entry to new directory (might be the same dir) */
+ 
+   ISCSI_LOCK_ELSE(&g_mutex, return -1);
+   if (entry_add(dev, new_dir_ino, new_ino, new_name, &new_dir->i_size)!=0) {
+@@ -818,9 +818,9 @@
+   }
+   ISCSI_UNLOCK_ELSE(&g_mutex, return -1);
+ 
+-  // Update the offset if our number of entries has changed since the last 
+-  // call to osdfs_readdir().  filp->private_data stores the number of 
+-  // entries this directory had on the last call.
++  /*  Update the offset if our number of entries has changed since the last  */
++  /*  call to osdfs_readdir().  filp->private_data stores the number of  */
++  /*  entries this directory had on the last call. */
+ 
+   if (offset) {
+     if (((int)filp->private_data)>num_entries) {
+@@ -1001,7 +1001,7 @@
+     }
+   }
+  
+-  // Initialize superblock
++  /*  Initialize superblock */
+ 
+   sb->s_blocksize      = PAGE_CACHE_SIZE;
+   sb->s_blocksize_bits = PAGE_CACHE_SHIFT;
+@@ -1010,7 +1010,7 @@
+ 
+   if ((root_uid==0)||(root_gid==0)) {
+ 
+-    // Create group object for root directory
++    /*  Create group object for root directory */
+ 
+     if (osd_create_group((void *)&sb->s_dev, &osd_exec_via_scsi, &root_gid)!=0) {
+       TRACE_ERROR("osd_create_group() failed\n");
+@@ -1018,7 +1018,7 @@
+     }
+     PRINT("** ROOT DIRECTORY GROUP OBJECT IS 0x%x **\n", root_gid);
+ 
+-    // Create user object for root directory
++    /*  Create user object for root directory */
+ 
+     if (osd_create((void *)&sb->s_dev, root_gid, &osd_exec_via_scsi, &root_uid)!=0) {
+       TRACE_ERROR("osd_create() failed\n");
+@@ -1026,7 +1026,7 @@
+     }
+     PRINT("** ROOT DIRECTORY USER OBJECT IS 0x%llx **\n", root_uid);
+ 
+-    // Initialize Attributes
++    /*  Initialize Attributes */
+ 
+     memset(&attr, 0, sizeof(struct inode));
+     attr.i_mode = S_IFDIR | 0755;
+@@ -1038,7 +1038,7 @@
+     TRACE(TRACE_OSDFS, "using root directory in 0x%x:0x%llx\n", root_gid, root_uid);
+   } 
+ 
+-  // Create inode for root directory
++  /*  Create inode for root directory */
+     
+   if ((inode=osdfs_get_inode(sb, S_IFDIR | 0755, 0, "/", root_uid))==NULL) {
+     TRACE_ERROR("osdfs_get_inode() failed\n");
