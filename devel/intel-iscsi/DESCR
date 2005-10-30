@@ -1,0 +1,12 @@
+This project is Intel Lab's software reference implementation of
+iSCSI.  It has been tested to interoperate with the Cisco initiator,
+and conforms to RFC 3720.
+
+There are 3 forms of the iSCSI target that are produced:
+
+	ufsdisk - standard iSCSI target
+	ufsdisk_mmap - an mmap(2)-based iSCSI target
+	uramdisk - a ramdisk iSCSI target
+
+and a testing-quality user-level iSCSI initiator called utest, which
+can exercise the targets above.
