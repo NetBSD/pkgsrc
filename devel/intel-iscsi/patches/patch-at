@@ -1,0 +1,41 @@
+$NetBSD: patch-at,v 1.1.1.1 2005/10/30 21:02:58 agc Exp $
+
+--- src/util.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ src/util.c	10 Oct 2005 21:42:24 -0000	1.4
+@@ -545,7 +545,7 @@
+   memset((char *)&laddr, 0, sizeof(laddr));
+   laddr.sin_family = AF_INET;
+   laddr.sin_addr.s_addr  = INADDR_ANY;
+-  laddr.sin_port = HTONS(port);
++  laddr.sin_port = ISCSI_HTONS(port);
+ #ifdef __KERNEL__
+   if ((rc=sock->ops->bind(sock, (struct sockaddr*) &laddr, sizeof(laddr)))<0) {
+     TRACE_ERROR("sock->ops->bind() failed: rc %i\n", rc);
+@@ -717,7 +717,7 @@
+ 
+   memset(&addr, 0, sizeof(addr));
+   addr.sin_family = AF_INET;
+-  addr.sin_port = HTONS(port);
++  addr.sin_port = ISCSI_HTONS(port);
+   addr.sin_family = AF_INET;
+ 
+   for (i=0; i<ISCSI_SOCK_CONNECT_TIMEOUT; i++) {
+@@ -830,7 +830,7 @@
+   // the iovec will get altered below on partial sends/recvs.
+ 
+ #ifdef CONFIG_ISCSI_DEBUG
+-    if ((iov_orig=iscsi_malloc_atomic(iov_len*sizeof(struct iovec)))==NULL) {
++    if ((iov_orig=iscsi_malloc_atomic((iov_len + 1)*sizeof(struct iovec)))==NULL) {
+       TRACE_ERROR("iscsi_malloc_atomic() failed\n");
+       return -1;
+     }
+@@ -996,7 +996,9 @@
+ #else
+   pthread_mutexattr_t mattr;
+   pthread_mutexattr_init(&mattr);
++#  ifdef PTHREAD_MUTEX_ADAPTIVE_NP
+   pthread_mutexattr_settype(&mattr, PTHREAD_MUTEX_ADAPTIVE_NP);
++#  endif
+   if(pthread_mutex_init(lock, &mattr)!=0)
+     return -1;
+ #endif	

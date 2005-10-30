@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- /dev/null	1 Jan 1970 00:00:00 -0000
++++ include/scsi_cmd_codes.h	8 Oct 2005 23:08:56 -0000	1.1
+@@ -0,0 +1,17 @@
++/* taken from http://www.arkeia.com/resources/scsi_rsc.html */
++
++#ifndef SCSI_CMD_CODES_H_
++#define SCSI_CMD_CODES_H_
++
++enum {
++	TEST_UNIT_READY = 0x00,
++	WRITE_6 = 0x06,
++	READ_6 = 0x08,
++	INQUIRY = 0x12,
++	READ_CAPACITY = 0x25,
++	READ_10 = 0x28,
++	WRITE_10 = 0x2a,
++	VERIFY = 0x2f
++};
++
++#endif /* !SCSI_CMD_CODES_H_ */

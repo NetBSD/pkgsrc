@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+
+--- include/parameters.h	8 Oct 2005 22:21:15 -0000	1.1.1.1
++++ include/parameters.h	8 Oct 2005 22:36:27 -0000	1.2
+@@ -69,11 +69,11 @@
+  * frequently accessed on an active session
+  */
+ typedef struct iscsi_sess_param_t {
+-  __u32 max_burst_length;
+-  __u32 first_burst_length;
+-  __u32 max_data_seg_length;
+-  __u8 initial_r2t;
+-  __u8 immediate_data;
++  uint32_t max_burst_length;
++  uint32_t first_burst_length;
++  uint32_t max_data_seg_length;
++  uint8_t initial_r2t;
++  uint8_t immediate_data;
+ } ISCSI_SESS_PARAM_T;
+ 
+ typedef struct iscsi_parameter_t {
