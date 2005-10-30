@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/09/28 14:00:51 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2005/10/30 20:30:34 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=	www
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
 		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
 DISTFILES=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://www.opera.com/
 COMMENT=	Small, fast and customizable WWW client
 
