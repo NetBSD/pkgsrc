@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.42 2005/10/26 04:37:40 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.43 2005/10/30 12:54:47 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -99,3 +99,5 @@ Pullup ticket 852 - requested by Takahiro Kambe
 portability fix for squid
 Pullup ticket 855 - requested by Quentin Garnier
 security fix for sudo
+Pullup ticket 858 - requested by Thomas Klausner
+security update for devel/chmlib
