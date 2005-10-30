@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2005/09/12 14:49:10 minskim Exp $
+$NetBSD: patch-aa,v 1.5.2.1 2005/10/30 12:53:01 seb Exp $
 
---- src/chm_lib.c.orig	2005-09-09 05:42:27.000000000 -0700
+--- src/chm_lib.c.orig	2005-10-26 14:17:50.000000000 +0200
 +++ src/chm_lib.c
 @@ -182,8 +182,14 @@ typedef unsigned long           UInt64;
  
