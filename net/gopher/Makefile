@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/08/11 17:29:47 reed Exp $
+# $NetBSD: Makefile,v 1.12 2005/10/30 16:54:03 adrianp Exp $
 #
 
-DISTNAME=		gopher_3.0.9
+DISTNAME=		gopher_3.0.11
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		net
 MASTER_SITES=		http://quux.org/devel/gopher/Downloads/
