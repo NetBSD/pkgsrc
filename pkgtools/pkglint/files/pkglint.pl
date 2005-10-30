@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.309 2005/10/30 22:11:38 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.310 2005/10/30 23:03:41 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -210,6 +210,12 @@ BEGIN {
 		false true
 	);
 }
+
+use constant FILE	=> 0;
+use constant LINES	=> 1;
+use constant TEXT	=> 2;
+use constant PHYSLINES	=> 3;
+use constant CHANGED	=> 4;
 	
 sub new($$$$) {
 	my ($class, $file, $lines, $text, $physlines) = @_;
@@ -218,31 +224,55 @@ sub new($$$$) {
 	return $self;
 }
 sub file($) {
-	return shift(@_)->[0];
+	return shift(@_)->[FILE];
 }
 sub lineno($) {
-	return shift(@_)->[1];
+	return shift(@_)->[LINES];
 }
 sub text($) {
-	return shift(@_)->[2];
+	return shift(@_)->[TEXT];
 }
 
 sub log_error($$) {
 	my ($self, $text) = @_;
-	PkgLint::Logging::log_error($self->file, $self->lineno, $text);
+	PkgLint::Logging::log_error($self->[FILE], $self->[LINES], $text);
 }
 sub log_warning($$) {
 	my ($self, $text) = @_;
-	PkgLint::Logging::log_warning($self->file, $self->lineno, $text);
+	PkgLint::Logging::log_warning($self->[FILE], $self->[LINES], $text);
 }
 sub log_info($$) {
 	my ($self, $text) = @_;
-	PkgLint::Logging::log_info($self->file, $self->lineno, $text);
+	PkgLint::Logging::log_info($self->[FILE], $self->[LINES], $text);
 }
 sub to_string($) {
 	my ($self) = @_;
-	return sprintf("%s:%s: %s", $self->file, $self->lineno, $self->text);
+	return sprintf("%s:%s: %s", $self->[FILE], $self->[LINES], $self->[TEXT]);
 }
+
+sub insert_before($$) {
+	my ($self, $text) = @_;
+	unshift(@{$self->[PHYSLINES]}, [0, "$text\n"]);
+	$self->[CHANGED] = true;
+}
+sub insert_after($$) {
+	my ($self, $text) = @_;
+	push(@{$self->[PHYSLINES]}, [0, "$text\n"]);
+	$self->[CHANGED] = true;
+}
+sub delete($) {
+	my ($self) = @_;
+	my ($newlines) = ([]);
+
+	foreach my $line (@{$self->[PHYSLINES]}) {
+		if ($line->[0] == 0) {
+			push(@{$newlines}, $line);
+		}
+	}
+	$self->[PHYSLINES] = $newlines;
+	$self->[CHANGED] = true;
+}
+
 #== End of PkgLint::FileUtil::Line ========================================
 
 package PkgLint::FileUtil;
