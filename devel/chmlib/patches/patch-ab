@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.2.2.2 2005/10/30 12:53:01 seb Exp $
+
+--- Makefile.in.orig	2005-10-27 14:04:34.000000000 +0200
++++ Makefile.in
+@@ -11,6 +11,7 @@
+ CFLAGS=@CFLAGS@ @CHM_MT@ @CHM_USE_PREAD@ @CHM_USE_IO64@ @DMALLOC_DISABLE@ 
+ LDFLAGS=@LDFLAGS@
+ prefix=@prefix@
++exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
+ CC=@CC@
+@@ -35,11 +36,8 @@ src/libchm.la: src/chm_lib.lo src/lzx.lo
+ install: src/libchm.la
+ 	chmod a+r src/libchm.la
+ 	mkdir -p $(DESTDIR)$(prefix) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+-	install -m0755 src/libchm.la $(DESTDIR)$(libdir)/
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} src/libchm.la $(DESTDIR)$(libdir)/
+ 	install -m0644 $(srcdir)/src/chm_lib.h $(DESTDIR)$(includedir)/
+-	install -m0755 src/.libs/libchm.so.0.0.0 $(DESTDIR)$(libdir)/
+-	ln -s $(libdir)/libchm.so.0.0.0 $(DESTDIR)$(libdir)/libchm.so
+-	ln -s $(libdir)/libchm.so.0.0.0 $(DESTDIR)$(libdir)/libchm.so.0
+ 
+ clean:
+ 	rm -fr src/libchm.la src/*.o src/*.lo .libs src/.libs src/${EXAMPLES}
