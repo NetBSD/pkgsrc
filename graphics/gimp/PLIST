@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2005/05/23 08:25:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2005/10/31 13:07:02 adam Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -468,6 +468,7 @@ share/doc/html/${PKGNAME}/libgimpcolor/libgimpcolor-GimpRGB.html
 share/doc/html/${PKGNAME}/libgimpcolor/libgimpcolor.devhelp
 share/doc/html/${PKGNAME}/libgimpcolor/libgimpcolor.html
 share/doc/html/${PKGNAME}/libgimpcolor/right.png
+share/doc/html/${PKGNAME}/libgimpcolor/style.css
 share/doc/html/${PKGNAME}/libgimpcolor/up.png
 share/doc/html/${PKGNAME}/libgimpmath/home.png
 share/doc/html/${PKGNAME}/libgimpmath/index.html
@@ -480,6 +481,7 @@ share/doc/html/${PKGNAME}/libgimpmath/libgimpmath-GimpVector.html
 share/doc/html/${PKGNAME}/libgimpmath/libgimpmath.devhelp
 share/doc/html/${PKGNAME}/libgimpmath/libgimpmath.html
 share/doc/html/${PKGNAME}/libgimpmath/right.png
+share/doc/html/${PKGNAME}/libgimpmath/style.css
 share/doc/html/${PKGNAME}/libgimpmath/up.png
 share/doc/html/${PKGNAME}/libgimpmodule/GimpModule.html
 share/doc/html/${PKGNAME}/libgimpmodule/GimpModuleDB.html
@@ -490,6 +492,7 @@ share/doc/html/${PKGNAME}/libgimpmodule/left.png
 share/doc/html/${PKGNAME}/libgimpmodule/libgimpmodule.devhelp
 share/doc/html/${PKGNAME}/libgimpmodule/libgimpmodule.html
 share/doc/html/${PKGNAME}/libgimpmodule/right.png
+share/doc/html/${PKGNAME}/libgimpmodule/style.css
 share/doc/html/${PKGNAME}/libgimpmodule/up.png
 share/doc/html/${PKGNAME}/libgimpthumb/GimpThumbnail.html
 share/doc/html/${PKGNAME}/libgimpthumb/home.png
@@ -542,6 +545,7 @@ share/doc/html/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpHelpUI.html
 share/doc/html/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpQueryBox.html
 share/doc/html/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpScrolledPreview.html
 share/doc/html/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpStock.html
+share/doc/html/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpStock.html~
 share/doc/html/${PKGNAME}/libgimpwidgets/libgimpwidgets-GimpWidgets.html
 share/doc/html/${PKGNAME}/libgimpwidgets/libgimpwidgets-cell-renderers.html
 share/doc/html/${PKGNAME}/libgimpwidgets/libgimpwidgets-colordisplay.html
@@ -1734,6 +1738,10 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gimp20-std-plug-ins.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gimp20.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gimp20-libgimp.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gimp20-script-fu.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gimp20-std-plug-ins.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gimp20.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gimp20-std-plug-ins.mo
