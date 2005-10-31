@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/08/08 18:15:14 tron Exp $
+# $NetBSD: Makefile,v 1.24 2005/10/31 20:34:48 tron Exp $
 
 DISTNAME=	xservers-3.3.6.4
 CATEGORIES=	x11
@@ -49,5 +49,9 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 print-x11-release:
+.if exists(${X11BASE}/lib/X11/config/X11.tmpl)
 	@${GREP} '^#define SharedXextRev' ${X11BASE}/lib/X11/config/X11.tmpl \
 	| ${AWK} '{print($$3)}'
+.else
+	@${ECHO} unknown
+.endif
