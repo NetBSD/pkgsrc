@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2005/01/04 13:41:53 adam Exp $
+$NetBSD: patch-ab,v 1.5 2005/10/31 09:05:34 adam Exp $
 
---- common.rules.orig	2004-05-07 14:43:02.000000000 +0000
+--- common.rules.orig	2005-10-29 03:01:11.000000000 +0200
 +++ common.rules
-@@ -26,6 +26,8 @@ MODULE_LIB-$(MODULE) := $(MODULE)/lib$(n
+@@ -27,6 +27,8 @@ MODULE_LIB-$(MODULE) := $(MODULE)/lib$(n
  # If not building as a plugin, add the object files to the main OBJS list
  OBJS += $(MODULE_LIB-$(MODULE))
  
