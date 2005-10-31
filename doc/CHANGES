@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11722 2005/10/31 09:24:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11723 2005/10/31 09:55:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4915,3 +4915,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/irssi to 0.8.9nb7 [rillig 2005-10-31]
 	Added databases/mysql5-client version 5.0.15 [xtraeme 2005-10-31]
 	Added databases/mysql5-server version 5.0.15 [xtraeme 2005-10-31]
+	Updated www/squid to 2.5.12nb2 [taca 2005-10-31]
