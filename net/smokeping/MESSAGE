@@ -1,16 +1,20 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/03/24 15:24:39 bouyer Exp $
+$NetBSD: MESSAGE,v 1.1.1.1.16.1 2005/10/31 22:37:59 seb Exp $
 
 Smokeping is now installed.
 The documentation can be found at ${PREFIX}/share/doc/smokeping/
 
-A sample config file can be found in
-${PREFIX}/share/examples/smokeping/config.dist
+A sample config file can be found in:
+	${PREFIX}/share/examples/smokeping/config.dist
+
 Please copy it as ${PKG_SYSCONFDIR}/config and adjust it as needed.
 You may also want to have a look at basepage.html and smokemail in
 this directory.
+
 Also, make sure that your web's server /cgi-bin/smokeping.cgi refers to
 ${PREFIX}/libexec/cgi-bin/smokeping.cgi, or copy the smokeping in your
 web server's cgi space.
 
+If upgrading from version 1.x there is detailed information on what has 
+changed available on the smokeping homepage.
 ===========================================================================

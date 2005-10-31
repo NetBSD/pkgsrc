@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2005/01/22 21:50:54 adrianp Exp $
+$NetBSD: patch-ab,v 1.4.6.1 2005/10/31 22:37:59 seb Exp $
 
---- htdocs/smokeping.cgi.dist.orig	2005-01-22 19:49:27.000000000 +0000
-+++ htdocs/smokeping.cgi.dist	2005-01-22 19:51:16.000000000 +0000
-@@ -1,12 +1,11 @@
+--- htdocs/smokeping.cgi.dist.orig	2005-10-23 22:16:54.000000000 +0100
++++ htdocs/smokeping.cgi.dist
+@@ -1,13 +1,12 @@
 -#!/usr/sepp/bin/speedy -w
 +#!@PREFIX@/bin/@INTERP@ -w
  # -*-perl-*-
@@ -10,11 +10,33 @@ $NetBSD: patch-ab,v 1.4 2005/01/22 21:50:54 adrianp Exp $
 -use lib qw(/usr/pack/rrdtool-1.0.33-to/lib/perl);
 -use lib qw(/home/oetiker/data/projects/AADJ-smokeping/dist/lib);
 +use lib qw(@PREFIX@/lib/smokeping);
+ use CGI::Carp qw(fatalsToBrowser);
  
- use Smokeping 1.37;
+ use Smokeping 2.000004;
  
 -Smokeping::cgi("/home/oetiker/data/projects/AADJ-smokeping/dist/etc/config");
 +Smokeping::cgi("@PKG_SYSCONFDIR@/config");
  
+ =head1 NAME
  
- BEGIN {
+@@ -37,17 +36,17 @@ Please refer to the installation documen
+ When installing SmokePing, this file has to be adjusted to fit your
+ local system. Three paths have to be entered.
+ 
+- use lib qw(/usr/pack/rrdtool-1.0.33-to/lib/perl);
++ use lib qw(@PREFIX@/lib/smokeping);
+ 
+ One pointing to your B<rrdtool> installation
+ 
+- use lib qw(/home/oetiker/public_html/smokeping/lib);
++ use lib qw(@PREFIX@/lib/smokeping);
+ 
+ One pointing to the place where you have installed the SmokePing libraries
+ 
+  use Smokeping;
+ 
+- Smokeping::cgi("/home/oetiker/.smokeping/config");
++ Smokeping::cgi("@PKG_SYSCONFDIR@/config");
+ 
+ The third path is the argument to the Smokeping::cgi command. It points to
+ the SmokePing configuration file.
