@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/10/31 16:45:46 tv Exp $
 
 DISTNAME=		xmix-2.1
 CATEGORIES=		audio
@@ -10,6 +10,8 @@ PATCHFILES=		xmix-2.1.mixers.patch
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Mixer for X Window System
 
+NOT_FOR_PLATFORM=	Interix-*-*
+
 WRKSRC=			${WRKDIR}/xmix
 USE_IMAKE=		yes
 
@@ -19,4 +21,5 @@ pre-configure:
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/XMix ${PREFIX}/lib/X11/app-defaults
 
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
