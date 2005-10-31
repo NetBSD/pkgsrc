@@ -1,23 +1,29 @@
-# $NetBSD: Makefile,v 1.23 2005/09/04 17:09:54 sjg Exp $
+# $NetBSD: Makefile,v 1.24 2005/10/31 21:34:25 reed Exp $
 #
 
-DISTNAME=       bmake-20050901
+DISTNAME=       bmake-20051002
 CATEGORIES=	devel
-MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+
+# distfile obtained from ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
+# source is kept in files/ for bootstrap purposes
 
 MAINTAINER=	sjg@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
-DEPENDS+=	mk-files>=20030714:../../devel/mk-files
-
 WRKSRC=		${WRKDIR}/bmake
+NO_CHECKSUM=	YES
 
 makesyspath=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
 GNU_CONFIGURE=	no
 CONFIGURE_ARGS+= --with-default-sys-path=${makesyspath}
 
-INSTALLATION_DIRS=	bin man/cat1 man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
+
+do-extract:
+	${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-configure:
 
@@ -31,8 +37,14 @@ BMAKE_CATd=${WRKSRC}/bmake.cat1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${OPSYS}/bmake ${PREFIX}/bin
-	${INSTALL_MAN} ${BMAKE_CAT1} ${PREFIX}/man/cat1/bmake.0
-	${INSTALL_MAN} ${WRKDIR}/${OPSYS}/bmake.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${BMAKE_CAT1} ${PREFIX}/${PKGMANDIR}/cat1/bmake.0
+	${INSTALL_MAN} ${WRKDIR}/${OPSYS}/bmake.1 ${PREFIX}/${PKGMANDIR}/man1
+
+.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")  
+.  include "../../pkgtools/libnbcompat/inplace.mk"
+.else
+.  include "../../pkgtools/libnbcompat/buildlink3.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
 
