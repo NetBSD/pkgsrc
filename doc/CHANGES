@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11728 2005/10/31 15:56:35 tv Exp $
+$NetBSD: CHANGES,v 1.11729 2005/10/31 17:36:38 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4922,3 +4922,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/fam to 2.7.0nb6 [joerg 2005-10-31]
 	Updated graphics/gimp to 2.2.9 [adam 2005-10-31]
 	Added devel/sysexits version 1.0 [tv 2005-10-31]
+	Updated multimedia/kmplayer to 0.9.1 [xtraeme 2005-10-31]
