@@ -1,0 +1,33 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+
+You can start the MySQL server doing the following steps:
+
+$ echo "mysqld=yes" >> /etc/rc.conf # NetBSD or a system with rc.d
+
+If you are using PKG_RCD_SCRIPTS=YES, try the following:
+
+$ ${RCD_SCRIPTS_DIR}/mysqld start
+
+Otherwise try:
+
+$ ${LOCALBASE}/${RCD_SCRIPTS_EXAMPLEDIR}/mysqld start
+
+After the tables are set up and the MySQL server is running,
+please remember to set a password for the MySQL root user!
+This is done by running both:
+
+  ${PREFIX}/bin/mysqladmin -u root -p password 'new-password'
+  ${PREFIX}/bin/mysqladmin -h `hostname` -u root -p password 'new-password'
+
+The "Enter password:" prompt is asking for the existing password.
+As there is no existing password, just press the Return key.
+
+There is a script distributed with MySQL that can help you lock down
+an installation.  This script has been installed to
+
+  ${PREFIX}/bin/mysql_secure_installation.
+
+Please see the manual and the MySQL web site for more instructions.
+
+===========================================================================
