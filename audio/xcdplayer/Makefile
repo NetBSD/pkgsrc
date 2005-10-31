@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/24 21:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/10/31 16:44:19 tv Exp $
 
 DISTNAME=       xcdplayer-2.2
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	CD player for X
+
+NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_IMAKE=	yes
 
