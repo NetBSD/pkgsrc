@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/10/19 15:27:19 adam Exp $
+# $NetBSD: Makefile,v 1.30 2005/10/31 17:26:02 tv Exp $
 
 DISTNAME=	iozone3_248
 PKGNAME=	iozone-3.248
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.iozone.org/
 COMMENT=	Benchmark for file read and write speed
 
 RESTRICTED=	"Publication of derivative works not allowed"
+
+NOT_FOR_PLATFORM=	Interix-*-* # has only 32-bit off_t
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
