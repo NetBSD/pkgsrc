@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:47:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/10/31 18:22:14 tv Exp $
 bin/cascade
 man/man1/cascade.1
-man/cat1/cascade.1
 share/doc/cascade/index.html
 share/doc/cascade/ex1.gif
 share/examples/cascade/README.examples
