@@ -1,0 +1,20 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+
+--- support-files/Makefile.in.orig	2005-09-27 00:00:34.000000000 +0200
++++ support-files/Makefile.in	2005-09-27 00:00:57.000000000 +0200
+@@ -345,14 +345,7 @@
+ 			ndb-config-2-node.ini.sh
+ 
+ SUBDIRS = MacOSX
+-pkgdata_DATA = my-small.cnf \
+-			my-medium.cnf \
+-			my-large.cnf \
+-			my-huge.cnf \
+-      my-innodb-heavy-4G.cnf \
+-			mysql-log-rotate \
+-			binary-configure \
+-			ndb-config-2-node.ini
++pkgdata_DATA =
+ 
+ pkgdata_SCRIPTS = mysql.server
+ noinst_DATA = mysql-@VERSION@.spec \
