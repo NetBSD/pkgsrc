@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/09 12:58:59 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/10/31 09:55:28 rillig Exp $
 freetds/bin/bsqldb
 freetds/bin/defncopy
 freetds/bin/freebcp
@@ -26,7 +26,6 @@ freetds/man/man1/bsqldb.1
 freetds/man/man1/defncopy.1
 freetds/man/man1/freebcp.1
 freetds/man/man1/tsql.1
-
 share/doc/freetds-0.63/images/important.gif
 share/doc/freetds-0.63/images/note.gif
 share/doc/freetds-0.63/images/tip.gif
