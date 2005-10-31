@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:40 jlam Exp $
+# $NetBSD: Makefile,v 1.3.4.1 2005/10/31 00:06:17 salo Exp $
 #
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
+PKGREVISION=		1
 COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
 
 APACHE_MODULE=		YES
