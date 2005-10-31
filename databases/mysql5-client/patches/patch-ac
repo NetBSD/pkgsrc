@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/10/31 09:21:40 xtraeme Exp $
+
+--- configure.orig	2005-10-17 03:29:33.000000000 +0200
++++ configure	2005-10-31 09:16:17.000000000 +0100
+@@ -21984,7 +21984,7 @@
+   FIND_PROC="$PS \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
+ else
+   case $SYSTEM_TYPE in
+-    *freebsd*)
++    *freebsd*|*dragonfly*)
+       FIND_PROC="$PS p \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
+       ;;
+     *darwin*)
+@@ -26258,6 +26258,10 @@
+       MAX_C_OPTIMIZE="-O"
+     fi
+     ;;
++  *dragonfly*)
++  	CXXFLAGS="$CXXFLAGS -DMYSQLD_NET_RETRY_COUNT=1000000"
++   ;;
++
+   *freebsd*)
+     { echo "$as_me:$LINENO: WARNING: Adding fix for interrupted reads" >&5
+ echo "$as_me: WARNING: Adding fix for interrupted reads" >&2;}
+@@ -39729,7 +39733,7 @@
+ main ()
+ {
+ 
+-		char res= *(*rl_completion_entry_function)(0,0);
++		char res= (*rl_completion_entry_function)(0,0);
+ 		completion_matches(0,0);
+ 
+   ;
