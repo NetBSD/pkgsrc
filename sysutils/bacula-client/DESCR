@@ -1,0 +1,11 @@
+Bacula is a set of computer programs that permit you (or the system
+administrator) to manage backup, recovery, and verification of computer data
+across a network of computers of different kinds. In technical terms, it is
+a network client/server based backup program. Bacula is relatively easy to
+use and efficient, while offering many advanced storage management features
+that make it easy to find and recover lost or damaged files. Bacula source
+code has been released under the GPL version 2 license.
+
+This package provides a client-only setup (the bacula file daemon and
+console).  For a complete setup (including the bacula director and storage
+daemon) you should install the bacula package.
