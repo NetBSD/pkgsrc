@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1735 2005/10/24 23:23:00 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1736 2005/10/31 09:42:19 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -715,24 +715,26 @@ _ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
 BUILD_DEFS+=	_DISTFILES _PATCHFILES
 
 .if defined(GNU_CONFIGURE)
-#
-# GNU_CONFIGURE_PREFIX is the argument to the --prefix option passed to the
-# GNU configure script.
-#
+HAS_CONFIGURE=		yes
+
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
+
 USE_GNU_CONFIGURE_HOST?=	yes
 .  if !empty(USE_GNU_CONFIGURE_HOST:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 .  endif
-CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
-HAS_CONFIGURE=		yes
+
 CONFIGURE_HAS_INFODIR?=	yes
+GNU_CONFIGURE_INFODIR?=	${GNU_CONFIGURE_PREFIX}/${INFO_DIR}
 .  if !empty(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}
+CONFIGURE_ARGS+=	--infodir=${GNU_CONFIGURE_INFODIR:Q}
 .  endif
+
 CONFIGURE_HAS_MANDIR?=	yes
+GNU_CONFIGURE_MANDIR?=	${GNU_CONFIGURE_PREFIX}/${PKGMANDIR}
 .  if !empty(CONFIGURE_HAS_MANDIR:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--mandir=${GNU_CONFIGURE_MANDIR:Q}
 .  endif
 #
 # By default, override config.guess and config.sub for GNU configure
