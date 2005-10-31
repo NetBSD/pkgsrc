@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11720 2005/10/31 09:06:14 adam Exp $
+$NetBSD: CHANGES,v 1.11721 2005/10/31 09:19:40 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4912,3 +4912,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/intel-iscsi version 20040115 [agc 2005-10-30]
 	Updated pkgtools/pkg_install to 20051030 [joerg 2005-10-30]
 	Updated games/scummvm to 0.8.0 [adam 2005-10-31]
+	Updated chat/irssi to 0.8.9nb7 [rillig 2005-10-31]
