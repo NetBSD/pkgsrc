@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11719 2005/10/30 21:54:52 joerg Exp $
+$NetBSD: CHANGES,v 1.11720 2005/10/31 09:06:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4911,3 +4911,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/hylafax to 4.2.1nb1 [adrianp 2005-10-30]
 	Added devel/intel-iscsi version 20040115 [agc 2005-10-30]
 	Updated pkgtools/pkg_install to 20051030 [joerg 2005-10-30]
+	Updated games/scummvm to 0.8.0 [adam 2005-10-31]
