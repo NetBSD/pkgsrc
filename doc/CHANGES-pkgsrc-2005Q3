@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.50 2005/10/30 22:56:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.51 2005/10/31 22:40:26 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -113,3 +113,5 @@ Pullup ticket 867 - requested by Lubomir Sedlacik
 security fix for xli
 Pullup ticket 868 - requested by Adrian Portelli
 security fixes for hylafax
+Pullup ticket 859 - requested by Adrian Portelli
+usability fix for net/smokeping
