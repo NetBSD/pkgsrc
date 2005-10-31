@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.316 2005/10/29 16:09:03 minskim Exp $
+# $NetBSD: Makefile,v 1.317 2005/10/31 09:47:30 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -20,6 +20,7 @@ SUBDIR+=	aperture
 SUBDIR+=	asapm
 SUBDIR+=	atitvout
 SUBDIR+=	bacula
+SUBDIR+=	bacula-client
 SUBDIR+=	bacula-doc
 SUBDIR+=	bbsload
 SUBDIR+=	bchunk
