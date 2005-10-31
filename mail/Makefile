@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2005/10/27 19:52:14 minskim Exp $
+# $NetBSD: Makefile,v 1.274 2005/10/31 20:36:05 minskim Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -59,6 +59,7 @@ SUBDIR+=	getmail
 SUBDIR+=	gld
 SUBDIR+=	gmime
 SUBDIR+=	gnus
+SUBDIR+=	gotmail
 SUBDIR+=	grepmail
 SUBDIR+=	hypermail
 SUBDIR+=	ifile
