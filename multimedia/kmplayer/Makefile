@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/10/31 17:35:28 xtraeme Exp $
 #
 
-DISTNAME=	kmplayer-0.9.0a
+DISTNAME=	kmplayer-0.9.1
 CATEGORIES=	multimedia kde
-MASTER_SITES=	http://www.xs4all.nl/~jjvrieze/
+MASTER_SITES=	http://kmplayer.kde.org/pkgs/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.xs4all.nl/~jjvrieze/
+HOMEPAGE=	http://kmplayer.kde.org/
 COMMENT=	KDE frontend to mplayer
 
 BUILD_USES_MSGFMT=	yes
