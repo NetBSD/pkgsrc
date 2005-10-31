@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2005/10/01 10:55:35 minskim Exp $
+$NetBSD: patch-ab,v 1.7 2005/10/31 15:04:17 tv Exp $
 
---- UnAlz.cpp.orig	2005-07-02 07:40:29.000000000 -0700
+--- UnAlz.cpp.orig	2005-07-23 11:27:49.000000000 -0400
 +++ UnAlz.cpp
 @@ -1,6 +1,6 @@
  //#include "stdafx.h"
@@ -22,7 +22,14 @@ $NetBSD: patch-ab,v 1.6 2005/10/01 10:55:35 minskim Exp $
  
  #define swapint64(Data) (INT64) ( (((Data)&0x00000000000000FFLL) << 56) | (((Data)&0x000000000000FF00LL) << 40) | (((Data)&0x0000000000FF0000LL) << 24) | (((Data)&0x00000000FF000000LL) << 8)  | (((Data)&0x000000FF00000000LL) >> 8)  | (((Data)&0x0000FF0000000000LL) >> 24) | (((Data)&0x00FF000000000000LL) >> 40) | (((Data)&0xFF00000000000000LL) >> 56) )
  #define swapint32(a)    ((((a)&0xff)<<24)+(((a>>8)&0xff)<<16)+(((a>>16)&0xff)<<8)+(((a>>24)&0xff)))
-@@ -45,7 +49,7 @@
+@@ -39,13 +43,13 @@
+ //// byte-order : little to host                                        ////
+ ////////////////////////////////////////////////////////////////////////////
+ 
+-#if defined(_WIN32) || defined(__CYGWIN__)		// little to little
++#if defined(_WIN32) || defined(__CYGWIN__) || defined(__INTERIX) // little to little
+ 	inline UINT16	unalz_le16toh(UINT16 a){return a;}
+ 	inline UINT32	unalz_le32toh(UINT32 a){return a;}
  	inline UINT64	unalz_le64toh(UINT64 a){return a;}
  #endif
  
@@ -31,7 +38,7 @@ $NetBSD: patch-ab,v 1.6 2005/10/01 10:55:35 minskim Exp $
  #	include <sys/endian.h>	
  	inline UINT16	unalz_le16toh(UINT16 a){return le16toh(a);}
  	inline UINT32	unalz_le32toh(UINT32 a){return le32toh(a);}
-@@ -413,7 +417,7 @@ BOOL CUnAlz::ReadLocalFileheader()
+@@ -416,7 +420,7 @@ BOOL CUnAlz::ReadLocalFileheader()
  	size_t size;
  	char inbuf[ICONV_BUF_SIZE];
  	char outbuf[ICONV_BUF_SIZE];
