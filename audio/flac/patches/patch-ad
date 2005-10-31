@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.3 2005/10/31 15:10:54 tv Exp $
+
+--- include/FLAC/ordinals.h.orig	2005-01-24 23:12:17.000000000 -0500
++++ include/FLAC/ordinals.h
+@@ -52,8 +52,12 @@ typedef int32_t FLAC__int32;
+ typedef int64_t FLAC__int64;
+ typedef uint16_t FLAC__uint16;
+ typedef uint32_t FLAC__uint32;
++#if defined __INTERIX
++typedef u_int64_t FLAC__uint64;
++#else
+ typedef uint64_t FLAC__uint64;
+ #endif
++#endif
+ 
+ typedef int FLAC__bool;
+ 
