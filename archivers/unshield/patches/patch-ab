@@ -1,17 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/08/01 14:22:02 martin Exp $
+$NetBSD: patch-ab,v 1.2 2005/10/31 05:41:41 minskim Exp $
 
---- src/unshield.c.orig	2005-07-08 16:08:37.000000000 +0200
-+++ src/unshield.c	2005-08-01 15:31:14.000000000 +0200
-@@ -2,5 +2,5 @@
+--- src/unshield.c.orig	2005-07-08 07:08:37.000000000 -0700
++++ src/unshield.c
+@@ -2,3 +2,3 @@
  #define _BSD_SOURCE 1
 -#define _POSIX_C_SOURCE 2
 +/* #define _POSIX_C_SOURCE 2 */
  #include "../lib/libunshield.h"
- #include <ctype.h>
- #include <locale.h>
-@@ -278,10 +278,10 @@
-         break;
- 
+@@ -280,6 +280,6 @@ static bool extract_file(Unshield* unshi
        default:
 -        if (!isprint(*p))
 +        if (!isprint((unsigned char)*p))
@@ -20,11 +16,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/08/01 14:22:02 martin Exp $
 -          *p = tolower(*p);
 +          *p = tolower((unsigned char)*p);
          break;;
-     }
-   }
-@@ -298,10 +298,10 @@
- 
-   for (p = filename; *p != '\0'; p++)
+@@ -300,6 +300,6 @@ static bool extract_file(Unshield* unshi
    {
 -    if (!isprint(*p))
 +    if (!isprint((unsigned char)*p))
@@ -33,5 +25,3 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/08/01 14:22:02 martin Exp $
 -      *p = tolower(*p);
 +      *p = tolower((unsigned char)*p);
    }
- 
-   printf("  extracting: %s\n", filename);
