@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2005/04/11 21:45:25 tv Exp $
+# $NetBSD: Makefile,v 1.39 2005/10/31 02:02:16 dbj Exp $
 
 DISTNAME=	id-utils-3.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=id-utils/}
 
