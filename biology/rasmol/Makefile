@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/10/07 15:17:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/10/31 17:53:26 tv Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
@@ -30,7 +30,7 @@ DEPTHDEF=	-DSIXTEENBIT
 .endif
 DEPTHDEF?=	-DEIGHTBIT
 
-post-patch:
+pre-configure:
 	${LN} -sf ${WRKDIR}/${DISTNAME}/doc  ${WRKSRC}
 	${LN} -sf ${WRKDIR}/${DISTNAME}/data ${WRKSRC}
 	cd ${WRKSRC} && ${SED} "s#@@PREFIX@@#${PREFIX}#" rasmol.h > \
