@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2005/09/04 17:09:54 sjg Exp $
+$NetBSD: distinfo,v 1.20 2005/10/31 21:34:25 reed Exp $
 
 SHA1 (bmake-20050901.tar.gz) = 167e9d637030d4125907b943a3e08d7976018e4f
 RMD160 (bmake-20050901.tar.gz) = e77305eead0fec601c0436158d4dc81a8fd7dd0e
 Size (bmake-20050901.tar.gz) = 343100 bytes
+SHA1 (patch-aa) = 32df79c50ee516f3ec7c006f5c38fad11b909a82
