@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/08/19 18:12:36 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/10/31 16:47:15 tv Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -10,6 +10,7 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.opensound.com/oss.html
 COMMENT=	Open Sound System(TM) soundcard driver
 
+NOT_FOR_PLATFORM=	Interix-*-*
 #ONLY_FOR_PLATFORM=	NetBSD-1.6-i386 NetBSD-1.6.*-i386
 #ONLY_FOR_PLATFORM+=	NetBSD-1.6_*-i386
 OSVERSION_SPECIFIC=	yes
