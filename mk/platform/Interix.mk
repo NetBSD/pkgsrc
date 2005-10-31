@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.41 2005/10/26 16:57:46 tv Exp $
+# $NetBSD: Interix.mk,v 1.42 2005/10/31 19:07:18 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -120,6 +120,9 @@ SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03
 # poll(2) is broken; try to work around it by making autoconf believe
 # it's missing.  (Packages without autoconf will need explicit fixing.)
 CONFIGURE_ENV+=		${GNU_CONFIGURE:Dac_cv_header_poll_h=no ac_cv_func_poll=no}
+
+# Interix has a hstrerror(3), but it's a macro, not a function.
+CONFIGURE_ENV+=		${GNU_CONFIGURE:Dac_cv_func_hstrerror=yes}
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
