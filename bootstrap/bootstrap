@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.40 2005/05/30 19:03:29 jmmv Exp $
+# $NetBSD: bootstrap,v 1.41 2005/10/31 23:05:24 reed Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -241,10 +241,8 @@ while [ $# -gt 0 ]; do
 	case $1 in
 	--workdir=*)	wrkdir=`get_optarg "$1"` ;;
 	--workdir)	wrkdir="$2"; shift ;;
-	--prefix=*)	prefix=`get_optarg "$1"`;
-			sysconfdir=${prefix}/etc ;;
-	--prefix)	prefix="$2"; shift;
-			sysconfdir=${prefix}/etc ;;
+	--prefix=*)	prefix=`get_optarg "$1"` ;;
+	--prefix)	prefix="$2"; shift ;;
 	--pkgdbdir=*)	pkgdbdir=`get_optarg "$1"` ;;
 	--pkgdbdir)	pkgdbdir="$2"; shift ;;
 	--sysconfdir=*)	sysconfdir=`get_optarg "$1"` ;;
