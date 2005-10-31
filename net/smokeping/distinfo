@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 12:14:04 agc Exp $
+$NetBSD: distinfo,v 1.6.6.1 2005/10/31 22:37:59 seb Exp $
 
-SHA1 (smokeping-1.37.tar.gz) = 3a37f0e877d7a35c108d35f61580644a2e8b4361
-RMD160 (smokeping-1.37.tar.gz) = cf7bb6bc43e6461de1144b05ea59cb8daa999ff9
-Size (smokeping-1.37.tar.gz) = 224689 bytes
-SHA1 (patch-aa) = 216a0c1764c6cc7ee381c299aec10e22801c64f0
-SHA1 (patch-ab) = 7c4444c68f251fcb8ec5dc106313effe6665bb1f
-SHA1 (patch-ac) = 6648d456ac5fa107be707d3a7aa5c4366a1904d1
+SHA1 (smokeping-2.0.4.tar.gz) = 253c060e144e0bf6062fa2663f7320c623604007
+RMD160 (smokeping-2.0.4.tar.gz) = beb3ba86ad4e0de571bc5ed18cd2ea47af194a6f
+Size (smokeping-2.0.4.tar.gz) = 375301 bytes
+SHA1 (patch-aa) = d10ea259ae0861dfb76e186c8f3ef9425bb8190a
+SHA1 (patch-ab) = f6173859e5c8b61d56be37707fa12e41554bf216
+SHA1 (patch-ac) = 504f7c3ae3d3369facfafe80f742dfb63f416537
+SHA1 (patch-ad) = c8185b03aef8fafada08ae0c117d302631bba0b3
