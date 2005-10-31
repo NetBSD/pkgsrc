@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:39 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/31 16:09:18 tv Exp $
 
 DISTNAME=		nosefart-2.3-mls
 PKGNAME=		${DISTNAME:S/-mls//}
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		dgriffi@cs.csubak.edu
 HOMEPAGE=		http://nosefart.sourceforge.net/
 COMMENT=		Player for NES Sound Format (NSF) files
+
+NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_TOOLS+=		gmake
 NO_CONFIGURE=		YES
