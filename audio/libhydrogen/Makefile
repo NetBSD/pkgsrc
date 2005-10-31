@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:38 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/10/31 15:42:43 tv Exp $
 
 DISTNAME=	libhydrogen-0.8.0
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hydrogen/}
 MAINTAINER=	chris.wareham@btinternet.com
 HOMEPAGE=	http://hydrogen.sourceforge.net/
 COMMENT=	Shared library for the Hydrogen drum machine
+
+NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
