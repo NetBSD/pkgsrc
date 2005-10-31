@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/24 13:57:50 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/10/31 16:43:05 tv Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -38,9 +38,17 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/WMSound ${EGDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Interix"
+.  include "../../audio/esound/buildlink3.mk"
+CONFIGURE_FLAGS+=	--enable-esound
+.else
+.  include "../../mk/ossaudio.buildlink3.mk"
+.endif
+
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/libdockapp/buildlink3.mk"
 .include "../../devel/libproplist/buildlink3.mk"
 .include "../../wm/windowmaker/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
