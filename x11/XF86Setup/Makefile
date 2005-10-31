@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/04/11 21:48:03 tv Exp $
+# $NetBSD: Makefile,v 1.36 2005/10/31 20:37:47 tron Exp $
 
 DISTNAME=		XF86Setup-3.3.6
 PKGREVISION=		2
@@ -40,5 +40,9 @@ pre-configure:
 .include "../../mk/bsd.pkg.mk"
 
 print-x11-release:
+.if exists(${X11BASE}/lib/X11/config/X11.tmpl)
 	@${GREP} '^#define SharedXextRev' ${X11BASE}/lib/X11/config/X11.tmpl \
 	| ${AWK} '{print($$3)}'
+.else
+	@${ECHO} unknown
+.endif
