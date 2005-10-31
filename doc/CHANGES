@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11724 2005/10/31 09:56:00 wiz Exp $
+$NetBSD: CHANGES,v 1.11725 2005/10/31 09:57:07 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4918,3 +4918,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/squid to 2.5.12nb2 [taca 2005-10-31]
 	Updated sysutils/bacula to 1.36.3nb2 [wiz 2005-10-31]
 	Added sysutils/bacula-client version 1.36.3 [wiz 2005-10-31]
+	Updated databases/freetds to 0.63nb1 [rillig 2005-10-31]
