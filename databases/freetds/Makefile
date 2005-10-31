@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/10/13 18:05:31 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/10/31 09:55:28 rillig Exp $
 
 DISTNAME=	freetds-0.63
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/stable/
 
@@ -14,6 +15,7 @@ USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/freetds
+GNU_CONFIGURE_MANDIR=	${GNU_CONFIGURE_PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
