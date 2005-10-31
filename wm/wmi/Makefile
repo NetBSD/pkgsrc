@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:26 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/31 22:05:22 recht Exp $
 #
 
 DISTNAME=	wmi-10
 CATEGORIES=	wm
-MASTER_SITES=	http://download.berlios.de/wmi/
+MASTER_SITES=	http://wmii.de/download/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://wmi.modprobe.de/
+HOMEPAGE=	http://wmii.de/
 COMMENT=	Minimalist, flexible and highly customizable window manager
 
 USE_LANGUAGES=	c c++
