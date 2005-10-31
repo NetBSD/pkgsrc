@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11726 2005/10/31 13:04:23 joerg Exp $
+$NetBSD: CHANGES,v 1.11727 2005/10/31 13:09:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4920,3 +4920,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sysutils/bacula-client version 1.36.3 [wiz 2005-10-31]
 	Updated databases/freetds to 0.63nb1 [rillig 2005-10-31]
 	Updated sysutils/fam to 2.7.0nb6 [joerg 2005-10-31]
+	Updated graphics/gimp to 2.2.9 [adam 2005-10-31]
