@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2005/08/06 06:19:29 jlam Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2005/10/31 22:37:59 seb Exp $
 
-DISTNAME=	smokeping-1.37
+DISTNAME=	smokeping-2.0.4
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/smokeping/pub/
 
@@ -8,7 +8,7 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://people.ee.ethz.ch/~oetiker/webtools/smokeping/index.en.html
 COMMENT=	Latency/packet loss monitoring/graphing tool
 
-DEPENDS=	rrdtool-1*:../../databases/rrdtool
+DEPENDS=	rrdtool>=1.0:../../databases/rrdtool
 DEPENDS+=	fping>=2.4b2:../../net/fping
 DEPENDS+=	p5-Digest-MD5>=2.20:../../security/p5-Digest-MD5
 DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
@@ -20,13 +20,16 @@ NO_BUILD=	YES
 BUILD_DEFS+=	USE_INET6
 
 PKG_SYSCONFSUBDIR?=     smokeping
+SMOKEPING_HOME=		${VARBASE}/db/smokeping
 MESSAGE_SUBST+=         PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/smokeping
 CONF_FILES= 	${EGDIR}/basepage.html.dist ${PKG_SYSCONFDIR}/basepage.html
 CONF_FILES+= 	${EGDIR}/smokemail.dist ${PKG_SYSCONFDIR}/smokemail
+CONF_FILES+= 	${EGDIR}/config.dist ${PKG_SYSCONFDIR}/config
+CONF_FILES+= 	${EGDIR}/tmail.dist ${PKG_SYSCONFDIR}/tmail
 RCD_SCRIPTS=	smokeping
-REPLACE_PERL=	bin/smokeping.dist
+REPLACE_PERL=	bin/smokeping.dist bin/tSmoke.dist
 
 BUILD_DEFS+=	USE_SPEEDY
 
@@ -46,57 +49,70 @@ INTERP=		perl
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-patch
 SUBST_FILES.files=	bin/smokeping.dist htdocs/smokeping.cgi.dist \
-			etc/config.dist etc/smokemail.dist
+			etc/config.dist etc/smokemail.dist bin/tSmoke.dist
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|@VARBASE@|${VARBASE}|g" \
 			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
 			-e "s|@INTERP@|${INTERP}|g" \
-			-e "s|perl-5.8.0|perl|g" \
+			-e "s|perl-5.8.4|perl|g" \
 			-e "s|/usr/bin/perl|${PERL5}|g"
 SUBST_MESSAGE.files=	"Fixing configuration files."
+
+OWN_DIRS+=		${SMOKEPING_HOME} 
 
 INSTALLATION_DIRS=	bin libexec/cgi-bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/ISG
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/matchers
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/probes
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Config
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Smokeping
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Smokeping/matchers
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Smokeping/probes
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smokeping
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smokeping/matchers
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smokeping/probes
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/smokeping
+
 	for FILE in CHANGES CONTRIBUTORS COPYING COPYRIGHT README TODO; do \
 	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/smokeping; \
 	done
+
 	for FILE in ${WRKSRC}/doc/*.txt; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/smokeping; \
 	done
-	for FILE in ${WRKSRC}/doc/matchers/*.txt; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/smokeping/matchers; \
+
+	for FILE in ${WRKSRC}/doc/examples/config.*; do \
+	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/examples/smokeping; \
 	done
-	for FILE in ${WRKSRC}/doc/probes/*.txt; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/smokeping/probes; \
-	done
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/smokeping.dist \
-		${PREFIX}/bin/smokeping
+
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/smokeping.dist ${PREFIX}/bin/smokeping
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/tSmoke.dist ${PREFIX}/bin/tSmoke
+
 	${INSTALL_SCRIPT} ${WRKSRC}/htdocs/smokeping.cgi.dist \
 		${PREFIX}/libexec/cgi-bin/smokeping.cgi
+
 	for FILE in ${WRKSRC}/lib/*.pm; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping; \
 	done
-	for FILE in ${WRKSRC}/lib/ISG/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/ISG; \
+
+	for FILE in ${WRKSRC}/lib/Config/*.pm; do \
+	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Config; \
 	done
-	for FILE in ${WRKSRC}/lib/probes/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/probes; \
+
+	for FILE in ${WRKSRC}/lib/Smokeping/*.pm; do \
+	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping; \
 	done
-	for FILE in ${WRKSRC}/lib/matchers/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/matchers; \
+
+	for FILE in ${WRKSRC}/lib/Smokeping/matchers/*.pm; do \
+	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping/matchers; \
 	done
+
+	for FILE in ${WRKSRC}/lib/Smokeping/probes/*.pm; do \
+	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping/probes; \
+	done
+
 	for FILE in ${WRKSRC}/etc/config.dist \
 	    ${WRKSRC}/etc/basepage.html.dist \
-	    ${WRKSRC}/etc/config-echoping.dist \
+	    ${WRKSRC}/etc/tmail.dist \
+	    ${WRKSRC}/etc/config.dist \
 	    ${WRKSRC}/etc/smokemail.dist; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/examples/smokeping; \
 	done
