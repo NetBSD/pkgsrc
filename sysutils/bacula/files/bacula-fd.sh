@@ -12,7 +12,7 @@ rcvar=$name
 command="@PREFIX@/sbin/bacula-fd"
 required_files="@BACULA_ETCDIR@/bacula-fd.conf"
 pidfile="@BACULA_PIDDIR@/bacula-fd.9102.pid"
-command_args="-c ${required_files}"
+command_args="-c ${required_files} -g @BACULA_GROUP@"
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config $name
