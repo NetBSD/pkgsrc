@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4118 2005/10/30 13:26:54 wiz Exp $
+$NetBSD: TODO,v 1.4119 2005/10/31 09:38:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,7 @@ Suggested package updates
 	o gkrellm-weather-2.0.7
 	o gkrellm-xmms-2.1.22
 	o gkrellm1-moon-0.6
-	o gkrellm1-snmp-0.21
+	o gkrellm1-snmp-0.22
 	o gkrellm1-wireless-2.0.3
 	o gkrellm1-xmms-0.5.8
 	o glade2-2.12.1
