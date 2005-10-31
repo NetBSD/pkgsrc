@@ -1,21 +1,23 @@
-# $NetBSD: Makefile.common,v 1.12 2005/10/16 11:59:35 wiz Exp $
-#
+# $NetBSD: Makefile.common,v 1.13 2005/10/31 09:45:47 wiz Exp $
 
 DISTNAME=		bacula-1.36.3
-PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		geert.hendrickx@ua.ac.be
 HOMEPAGE=		http://www.bacula.org/
-COMMENT=		Network Backup Solution
-
-.include "options.mk"
+COMMENT=		The Network Backup Solution
 
 USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
+
+BACULA_GROUP?=		bacula
+BACULA_DIR_USER?=	bacula-dir
+BACULA_SD_USER?=	bacula-sd
+
+BUILD_DEFS=		BACULA_DIR_USER BACULA_SD_USER BACULA_GROUP
 
 PKG_SYSCONFSUBDIR?=	bacula
 BACULA_PIDDIR?=		${VARBASE}/run/bacula
@@ -35,23 +37,8 @@ CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bacula
 CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR}
 CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
-CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER} --with-dir-group=${BACULA_GROUP}
-CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER} --with-sd-group=${BACULA_GROUP}
-.if !empty(PKG_OPTIONS:Mcatalog-sqlite)
-.  include "../../databases/sqlite/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite}
-BACULA_DB=		sqlite
-.endif
-.if !empty(PKG_OPTIONS:Mcatalog-pgsql)
-.  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}
-BACULA_DB=		postgresql
-.endif
-.if !empty(PKG_OPTIONS:Mcatalog-mysql)
-.  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${PREFIX}
-BACULA_DB=		mysql
-.endif
+
+PKG_GROUPS=		${BACULA_GROUP}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
@@ -61,19 +48,9 @@ CONFIGURE_ARGS+=	--enable-smartalloc
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
-PKG_GROUPS=	${BACULA_GROUP}
-PKG_USERS=	${BACULA_DIR_USER}:${BACULA_GROUP}
-PKG_USERS+=	${BACULA_SD_USER}:${BACULA_GROUP}
-
-PLIST_SUBST+=	BACULA_DB=${BACULA_DB}
-
-EXAMPLESDIR=	${PREFIX}/share/examples/bacula
-CONF_FILES=	${EXAMPLESDIR}/bacula-dir.conf ${PKG_SYSCONFDIR}/bacula-dir.conf
-CONF_FILES+=	${EXAMPLESDIR}/bacula-fd.conf ${PKG_SYSCONFDIR}/bacula-fd.conf
-CONF_FILES+=	${EXAMPLESDIR}/bacula-sd.conf ${PKG_SYSCONFDIR}/bacula-sd.conf
-CONF_FILES+=	${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
-
-RCD_SCRIPTS=	bacula bacula-dir bacula-sd bacula-fd
+EXAMPLESDIR=		${PREFIX}/share/examples/bacula
+CONF_FILES+=		${EXAMPLESDIR}/bacula-fd.conf ${PKG_SYSCONFDIR}/bacula-fd.conf
+CONF_FILES+=		${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
