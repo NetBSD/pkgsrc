@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/17 20:59:27 tonio Exp $
+# $NetBSD: Makefile,v 1.9 2005/10/31 11:25:14 tonio Exp $
 #
 
 DISTNAME=	chef.l
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAKE_ENV+=	BINDIR=${PREFIX}/bin BINOWN=${BINOWN} BINGRP=${BINGRP}
 
