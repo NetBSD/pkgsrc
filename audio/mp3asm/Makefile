@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/12 12:48:44 itohy Exp $
+# $NetBSD: Makefile,v 1.8 2005/10/31 15:55:30 tv Exp $
 #
 
 DISTNAME=	mp3asm-0.1.3-1
@@ -22,4 +22,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mp3asm
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mp3asm
 
+.include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
