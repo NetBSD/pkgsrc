@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2005/10/31 09:18:45 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.irssi
 PKG_SUPPORTED_OPTIONS=	inet6 irssi-perl ssl
@@ -10,6 +10,7 @@ PERL5_PACKLIST=		auto/Irssi/.packlist
 PERL5_PACKLIST+=	auto/Irssi/Irc/.packlist
 PERL5_PACKLIST+=	auto/Irssi/UI/.packlist
 PERL5_PACKLIST+=	auto/Irssi/TextUI/.packlist
+.include "../../lang/perl5/packlist.mk"
 .include "../../lang/perl5/buildlink3.mk"
 # actually we don't need --with-perl here, irssi is compiled with it by default
 # but who knows what may happen in future versions
