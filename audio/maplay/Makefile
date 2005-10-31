@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/10/31 15:47:05 tv Exp $
 
 DISTNAME=       maplay1_2
 PKGNAME=	maplay-1.2
@@ -12,7 +12,9 @@ COMMENT=	MPEG audio player/decoder for layer I and II MPEG audio streams
 
 WRKSRC=		${WRKDIR}
 
+NOT_FOR_PLATFORM=	Interix-*-*
+
 pre-configure:
-	@(cd ${WRKSRC}; ${MAKE} pre-install)
+	cd ${WRKSRC} && ${MAKE} pre-install
 
 .include "../../mk/bsd.pkg.mk"
