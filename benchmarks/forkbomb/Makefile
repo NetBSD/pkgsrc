@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/13 08:17:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/10/31 17:17:37 tv Exp $
 #
 
 DISTNAME=	forkbomb-1.4
@@ -19,4 +19,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/forkbomb ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/forkbomb.8 ${PREFIX}/${PKGMANDIR}/man8
 
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
