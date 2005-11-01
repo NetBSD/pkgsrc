@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2005/10/20 09:18:44 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2005/11/01 21:48:22 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mldonkey-gui
 PKG_OPTIONS_REQUIRED_GROUPS+=	toolkit
 PKG_OPTIONS_GROUP.toolkit=	lablgtk lablgtk2
-# lablgtk2 GUI segfaults easily
 PKG_SUGGESTED_OPTIONS=	lablgtk
 
 .include "../../mk/bsd.options.mk"
@@ -17,8 +16,7 @@ CONFIGURE_ARGS+=	--enable-gui=newgui1
 CONFIGURE_ARGS+=	--enable-gui=newgui2
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-# 2.4.0nb3 was first version with included optimized files on which
-# mldonkey configure script insists
-BUILDLINK_DEPENDS.lablgtk2+=	lablgtk2>=2.4.0nb3
+# 2.6.0 is the first ~stable version (for mldonkey)
+BUILDLINK_DEPENDS.lablgtk2+=	lablgtk2>=2.6.0
 .include "../../x11/lablgtk2/buildlink3.mk"
 .endif
