@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/01 03:43:36 tv Exp $
 
 DISTNAME=	wistumbler-20020816
 PKGNAME=	wistumbler-20020816.0
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/wistumbler
 
 NOT_FOR_PLATFORM=	NetBSD-0.*-* NetBSD-1.[01234]*-* NetBSD-1.5-*
 NOT_FOR_PLATFORM+=	NetBSD-1.5.*-* NetBSD-1.5[A-V]-*
+NOT_FOR_PLATFORM+=	Interix-*-*
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
