@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.16 2005/11/01 14:16:24 tv Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.17 2005/11/01 14:27:10 tv Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -288,7 +288,7 @@
       <sect3 id="platform.interix-notes">
 	<title>Important notes for using pkgsrc</title>
 
-	<para>The package imanager (either the pkgsrc "su" user, or the user
+	<para>The package manager (either the pkgsrc "su" user, or the user
 	  running "pkg_add") must be a member of the local Administrators
 	  group.  Such a user must also be used to run the bootstrap.  This is
 	  slightly relaxed from the normal pkgsrc requirement of "root".</para>
@@ -310,6 +310,26 @@
 
 <programlisting>
     interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+</programlisting>
+
+      </sect3>
+      <sect3 id="platform.interix-knownissues">
+	<title>Known issues for pkgsrc on Interix</title>
+
+	<para>It is not necessary, in general, to have a "root" user on the
+	  Windows system; any member of the local Administrators group will
+	  suffice.  However, some packages currently assume that the user
+	  named "root" is the privileged user.  To accommodate these, you
+	  may create such a user; make sure it is in the local group
+	  Administrators (or your language equivalent).</para>
+
+	<para>"pkg_add" creates directories of mode 0755, not 0775, in
+	  $PKG_DBDIR.  For the time being, install packages as the local
+	  Administrator (or your language equivalent), or run the following
+	  command after installing a package to work around the issue:</para>
+
+<programlisting>
+    chmod -R g+w $PKG_DBDIR
 </programlisting>
 
       </sect3>
