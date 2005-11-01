@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11750 2005/11/01 23:09:43 rillig Exp $
+$NetBSD: CHANGES,v 1.11751 2005/11/01 23:13:12 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4953,3 +4953,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/python21 to 2.1.3nb8 [adrianp 2005-11-01]
 	Updated lang/python21-pth to 2.1.3nb7 [adrianp 2005-11-01]
 	Updated pkgtools/pkglint to 4.32.2 [rillig 2005-11-01]
+	Updated www/php4 to 4.4.1 [jdolecek 2005-11-01]
