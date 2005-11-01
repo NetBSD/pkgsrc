@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/08/30 00:25:04 lukem Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/01 22:58:42 joerg Exp $
 
 DISTNAME=	ipw2100-fw-1.2
 PKGNAME=	ipw-firmware-1.0
@@ -13,8 +13,6 @@ COMMENT=        Firmware binary images for ipw(4) driver
 LICENSE=	intel-ipw-license
 
 WRKSRC=         ${WRKDIR}
-
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 RESTRICTED=		"Intel Licensed Software: see http://ipw2100.sourceforge.net/firmware.php?fid=3"
 NO_SRC_ON_CDROM=	${RESTRICTED}
