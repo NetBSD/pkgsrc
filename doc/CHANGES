@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11737 2005/11/01 12:52:26 wiz Exp $
+$NetBSD: CHANGES,v 1.11738 2005/11/01 12:57:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4938,3 +4938,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/yap to 5.0.0nb1 [rillig 2005-11-01]
 	Added cad/stdio-wcalc version 0.9 [dmcmahill 2005-11-01]
 	Updated x11/devilspie to 0.15 [wiz 2005-11-01]
+	Updated textproc/p5-YAML to 0.39 [wiz 2005-11-01]
