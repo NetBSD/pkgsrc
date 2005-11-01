@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.51 2005/10/31 22:40:26 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.52 2005/11/01 21:51:55 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -115,3 +115,5 @@ Pullup ticket 868 - requested by Adrian Portelli
 security fixes for hylafax
 Pullup ticket 859 - requested by Adrian Portelli
 usability fix for net/smokeping
+Pullup ticket 877 - requested by Adrian Portelli
+security fix for fetchmailconf, portability fixes for fetchmail
