@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.42 2005/10/31 19:07:18 tv Exp $
+# $NetBSD: Interix.mk,v 1.43 2005/11/01 16:01:16 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -33,9 +33,52 @@
 #   (main lib)	0x48000000
 # zsh		*
 
+###
+### Overrides to standard BSD .mk files
+###
+
 # "catinstall" not yet supported as there's no shipped [gn]roff
 MANINSTALL=	maninstall
 MAKE_FLAGS+=	MKCATPAGES=no NOLINT=1
+
+###
+### Alternate defaults to global pkgsrc settings, to help avoid
+### some of the excessive Interix fork(2) overhead, and reduce the
+### amount of settings required in the user's mk.conf
+###
+
+# NetBSD's faster, vfork-capable shell (not yet in pkgsrc)
+#BULK_PREREQ+=		shells/nbsh
+.if exists(${PREFIX}/bin/nbsh)
+TOOLS_SHELL?=		${PREFIX}/bin/nbsh
+WRAPPER_SHELL?=		${PREFIX}/bin/nbsh
+.endif
+
+INSTALL?=		${PREFIX}/bin/install-sh
+PAX?=			${PREFIX}/bin/pax
+SED?=			${PREFIX}/bin/nbsed
+
+.if exists(/usr/lib/libc.so.3.5)
+OS_VERSION?=		3.5
+.elif exists(/usr/lib/libc.so.3.1)
+OS_VERSION?=		3.1
+.else
+OS_VERSION?=		3.0
+.endif
+LOWER_OS_VERSION?=	${OS_VERSION}
+
+GCC_USE_SYMLINKS?=	yes
+WRAPPER_DEBUG?=		no
+
+.if defined(BATCH)
+BULK_PREREQ+=		lang/perl5
+USE_BULK_BROKEN_CHECK?=	no
+USE_BULK_TIMESTAMPS?=	no
+.endif
+
+###
+### Platform definitions common to pkgsrc/mk/platform/*.mk
+###
 
 ECHO_N?=	/bin/printf %s			# does not support "echo -n"
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
