@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2005/10/25 00:50:47 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/01 21:19:37 wiz Exp $
 #
 
-DISTNAME=	lablgtk-2.4.0
+DISTNAME=	lablgtk-2.6.0
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/
+HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
 COMMENT=	GTK+ 2.x bindings for Objective Caml
 
 GNU_CONFIGURE=		yes
@@ -26,6 +25,7 @@ CONFLICTS=	lablgtk-2.*
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
