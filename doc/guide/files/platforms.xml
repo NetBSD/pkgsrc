@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.18 2005/11/01 17:14:04 tv Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.19 2005/11/01 17:19:09 tv Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -346,12 +346,12 @@
 	    intensive applications may require a faster-than-expected CPU.</para></listitem>
 
 	  <listitem><emphasis role="strong">Audio:</emphasis>
-	    <para>Interix has no native support for audio output.  To provide audio
+	    <para>Interix has no native support for audio output.  For audio
 	    support, pkgsrc uses the <command>esound</command> client/server
 	    audio system on Interix.  Unlike on most platforms, the
 	    <filename role="pkg">audio/esound</filename> package does
-	    <emphasis>not</emphasis> contain the <command>esound</command>
-	    server component.  To output audio, the
+	    <emphasis>not</emphasis> contain the <command>esd</command>
+	    server component.  To output audio via an Interix host, the
 	    <filename role="pkg">emulators/cygwin_esound</filename> package
 	    must also be installed.</para></listitem>
 
