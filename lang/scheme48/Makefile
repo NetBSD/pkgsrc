@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/25 22:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/11/01 20:01:48 tv Exp $
 
 DISTNAME=		scheme48-1.2
 CATEGORIES=		lang
@@ -22,4 +22,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/scheme48
 	${INSTALL_DATA} ${WRKSRC}/doc/html/* ${PREFIX}/share/doc/html/scheme48
 
+.include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
