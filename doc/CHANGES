@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11732 2005/11/01 01:09:45 rillig Exp $
+$NetBSD: CHANGES,v 1.11733 2005/11/01 04:00:34 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4927,3 +4927,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/naim to 0.11.8 [reed 2005-10-31]
 	Updated devel/bmake to 20051002 [reed 2005-10-31]
 	Updated pkgtools/pkglint to 4.32 [rillig 2005-11-01]
+	Added cad/cgi-wcalc-0.9 [dmcmahill 2005-11-01]
+	Added cad/gtk1-wcalc-0.9 [dmcmahill 2005-11-01]
+	Added cad/gtk2-wcalc-0.9 [dmcmahill 2005-11-01]
+	Added cad/mex-wcalc-0.9 [dmcmahill 2005-11-01]
+	Added cad/oct-wcalc-0.9 [dmcmahill 2005-11-01]
+	Added cad/sci-wcalc-0.9 [dmcmahill 2005-11-01]
+	Added cad/wcalc-0.9 [dmcmahill 2005-11-01]
+	Added cad/wcalc-docs-0.9 [dmcmahill 2005-11-01]
