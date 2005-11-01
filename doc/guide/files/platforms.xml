@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.15 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.16 2005/11/01 14:16:24 tv Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -241,11 +241,20 @@
 	  not need to be installed, but Remote Connectivity itself should be
 	  installed in order to have a working inetd.</para>
 
-	<para>Finally, during installation you may be asked whether to enable setuid
+	<para>During installation you may be asked whether to enable setuid
 	  behavior for Interix programs, and whether to make pathnames default to
 	  case-sensitive.  Setuid should be enabled, and case-sensitivity MUST be
 	  enabled.  (Without case-sensitivity, a large number of packages including
 	  perl will not build.)</para>
+
+	<para>NOTE:  Newer Windows service packs change the way binary execution
+	  works (via the Data Execution Prevention feature).  In order to use
+	  pkgsrc and other gcc-compiled binaries reliably, a hotfix containing
+	  POSIX.EXE, PSXDLL.DLL, PSXRUN.EXE, and PSXSS.EXE (899522 or newer)
+	  must be installed.  Hotfixes are available from Microsoft through a
+	  support contract; however, a NetBSD developer has made most Interix
+	  hotfixes available for personal use from <ulink
+	    url="http://www.duh.org/interix/hotfixes.php">http://www.duh.org/interix/hotfixes.php</ulink>.</para>
 
       </sect3>
 
