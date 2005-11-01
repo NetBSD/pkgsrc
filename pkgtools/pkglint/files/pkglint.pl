@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.314 2005/11/01 21:39:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.315 2005/11/01 23:08:42 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -579,7 +579,7 @@ my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
 my $regex_pkgname	= qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 my $regex_shellcmd	= qr"^\t";
 my $regex_unresolved	= qr"\$\{";
-my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
+my $regex_url		= qr"^(?:http://|ftp://)";
 my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 my $regex_validchars	= qr"[\011\040-\176]";
 my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
@@ -706,28 +706,28 @@ sub load_make_vars_typemap() {
 	return $vartypes;
 }
 
-my $load_predefined_sites_result = undef;
-sub load_predefined_sites() {
-
-	if (defined($load_predefined_sites_result)) {
-		return $load_predefined_sites_result;
-	}
-
+my $load_dist_sites_url2name = undef;
+my $load_dist_sites_names = undef;
+sub load_dist_sites() {
 	my ($fname) = ("${conf_pkgsrcdir}/mk/bsd.sites.mk");
 	my ($lines) = load_file($fname);
 	my ($varname) = undef;
 	my ($ignoring) = false;
-	my ($predefined_sites) = {};
+	my ($url2name) = {};
+	my ($names) = {};
 
 	if (!$lines) {
-		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
-		return false;
+		log_error($fname, NO_LINE_NUMBER, "[internal] Could not be read.");
+		$load_dist_sites_url2name = $url2name;
+		$load_dist_sites_names = $names;
+		return;
 	}
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
 		if ($text =~ qr"^(MASTER_SITE_\w+)\+=\s*\\$"o) {
 			$varname = $1;
+			$names->{$varname} = true;
 			$ignoring = false;
 
 		} elsif ($text eq "MASTER_SITE_BACKUP?=\t\\") {
@@ -736,7 +736,7 @@ sub load_predefined_sites() {
 		} elsif ($text =~ qr"^\t($regex_url_directory)(?:|\s*\\)$"o) {
 			if (!$ignoring) {
 				if (defined($varname)) {
-					$predefined_sites->{$1} = $varname;
+					$url2name->{$1} = $varname;
 				} else {
 					$line->log_error("Lonely URL found.");
 				}
@@ -752,9 +752,28 @@ sub load_predefined_sites() {
 			$line->log_error("Unknown line type.");
 		}
 	}
-	log_info($fname, NO_LINE_NUMBER, sprintf("Loaded %d MASTER_SITE_* definitions.", scalar(keys(%{$predefined_sites}))));
-	$load_predefined_sites_result = $predefined_sites;
-	return $predefined_sites;
+
+	# Explicitly allowed, although not defined in mk/bsd.sites.mk.
+	$names->{"MASTER_SITE_SUSE_UPD"} = true;
+	$names->{"MASTER_SITE_LOCAL"} = true;
+
+	log_info($fname, NO_LINE_NUMBER, sprintf("Loaded %d MASTER_SITE_* definitions.", scalar(keys(%{$url2name}))));
+	$load_dist_sites_url2name = $url2name;
+	$load_dist_sites_names = $names;
+}
+
+sub get_dist_sites() {
+	if (!defined($load_dist_sites_url2name)) {
+		load_dist_sites();
+	}
+	return $load_dist_sites_url2name;
+}
+
+sub get_dist_sites_names() {
+	if (!defined($load_dist_sites_names)) {
+		load_dist_sites();
+	}
+	return $load_dist_sites_names;
 }
 
 sub is_committed($) {
@@ -1258,7 +1277,7 @@ sub readmakefile($$$$) {
 	my ($includefile, $dirname, $lines);
 
 	$lines = load_lines($file, true);
-	if (!defined ($lines)) {
+	if (!$lines) {
 		return false;
 	}
 	foreach my $line (@{$lines}) {
@@ -1465,11 +1484,21 @@ sub checktext_basic_vartype($$$$$) {
 		$line->log_error("\"${varname}\" must not be modified by the package or the user.");
 
 	} elsif ($type eq "URL") {
-		if ($value =~ $regex_unresolved) {
+		if ($value =~ qr"\$\{(MASTER_SITE_.*):=(.*)\}$") {
+			my ($name, $subdir) = ($1, $2);
+
+			if (!exists(get_dist_sites_names()->{$name})) {
+				$line->log_error("${name} does not exist.");
+			}
+			if ($subdir !~ qr"/$") {
+				$line->log_error("The subdirectory in ${name} must end with a slash.");
+			}
+
+		} elsif ($value =~ $regex_unresolved) {
 			# No further checks
 			
 		} elsif ($value =~ $regex_url) {
-			my $sites = load_predefined_sites();
+			my $sites = get_dist_sites();
 
 			foreach my $site (keys(%{$sites})) {
 				if (index($value, $site) == 0) {
@@ -2055,25 +2084,9 @@ sub checkfile_package_Makefile($$$$) {
 	# check the URL
 	if ($tmp =~ /\nMASTER_SITES[+?]?=[ \t]*([^\n]*)\n/
 	 && $1 !~ /^[ \t]*$/) {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Seen MASTER_SITES, sanity checking URLs.");
-		my @sites = split(/\s+/, $1);
-		foreach my $i (@sites) {
-			if ($i =~ m#^\w+://#) {
-				if ($i !~ m#/$#) {
-					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" should ".
-						"end with \"/\".");
-				}
-				if ($i =~ m#://[^/]*:/#) {
-					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" contains ".
-						"extra \":\".");
-				}
-			} else {
-				log_info(NO_FILE, NO_LINE_NUMBER, "non-URL \"$i\" ok.");
-			}
 		if ($tmp =~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
 			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "MASTER_SITES and DYNAMIC_MASTER_SITES ".
 				"found. Is this ok?");
-			}
 		}
 
 	} elsif ($tmp !~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
