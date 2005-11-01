@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/10/26 13:03:08 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2005/11/01 01:33:43 gdt Exp $
 
 DISTNAME=	guile-slib-3.1.2
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://swissnet.ai.mit.edu/~jaffer/SLIB.html
 COMMENT=	SLIB glue files for guile 1.6
 
-DEPENDS+=	slib>=3.1.2:../../devel/slib
+DEPENDS+=	slib>=3.1.2nb1:../../devel/slib
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
