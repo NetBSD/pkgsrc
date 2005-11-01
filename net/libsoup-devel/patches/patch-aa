@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/10/30 23:17:35 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/01 19:10:21 rillig Exp $
 
 Needed for ISO C90.
+
+http://bugzilla.gnome.org/show_bug.cgi?id=320349 (fixed)
 
 --- libsoup/soup-xmlrpc-response.c.orig	Tue Jun 14 18:40:23 2005
 +++ libsoup/soup-xmlrpc-response.c	Mon Oct 31 00:14:49 2005
