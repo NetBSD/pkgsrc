@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.312 2005/11/01 00:26:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.313 2005/11/01 01:08:38 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -93,7 +93,7 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
 		NO_FILE NO_LINE_NUMBER
-		log_error log_warning log_info log_subinfo
+		log_error log_warning log_note log_info log_subinfo
 		print_summary_and_exit set_verbose is_verbose
 		set_gcc_output_format
 	);
@@ -162,6 +162,10 @@ sub log_warning($$$) {
 	my ($file, $lineno, $msg) = @_;
 	log_message($file, undef, $lineno, $gcc_output_format ? "warning" : "WARN", $msg);
 	$warnings++;
+}
+sub log_note($$$) {
+	my ($file, $lineno, $msg) = @_;
+	log_message($file, undef, $lineno, $gcc_output_format ? "note" : "NOTE", $msg);
 }
 sub log_info($$$) {
 	my ($file, $lineno, $msg) = @_;
@@ -232,6 +236,12 @@ sub lineno($) {
 sub text($) {
 	return shift(@_)->[TEXT];
 }
+sub physlines($) {
+	return shift(@_)->[PHYSLINES];
+}
+sub is_changed($) {
+	return shift(@_)->[CHANGED];
+}
 
 sub log_error($$) {
 	my ($self, $text) = @_;
@@ -240,6 +250,10 @@ sub log_error($$) {
 sub log_warning($$) {
 	my ($self, $text) = @_;
 	PkgLint::Logging::log_warning($self->[FILE], $self->[LINES], $text);
+}
+sub log_note($$) {
+	my ($self, $text) = @_;
+	PkgLint::Logging::log_note($self->[FILE], $self->[LINES], $text);
 }
 sub log_info($$) {
 	my ($self, $text) = @_;
@@ -289,13 +303,15 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
 		load_file load_lines
+		save_autofix_changes
 	);
 
 	import PkgLint::Util qw(
 		false true
 	);
 	import PkgLint::Logging qw(
-		log_error
+		NO_LINE_NUMBER
+		log_error log_note
 	);
 }
 
@@ -390,6 +406,47 @@ sub load_file($) {
 	return load_lines($fname, false);
 }
 
+sub save_autofix_changes($) {
+	my ($lines) = @_;
+
+	my (%changed, %physlines);
+
+	foreach my $line (@{$lines}) {
+		if ($line->is_changed) {
+			$changed{$line->file}++;
+		}
+		push(@{$physlines{$line->file}}, @{$line->physlines});
+	}
+
+	foreach my $fname (sort(keys(%changed))) {
+		my $old = "${fname}.pkglint.old";
+		my $new = "${fname}.pkglint.new";
+
+		if (!open(F, ">", $new)) {
+			log_error($new, NO_LINE_NUMBER, "$!");
+			next;
+		}
+		foreach my $physline (@{$physlines{$fname}}) {
+			print F ($physline->[1]);
+		}
+		if (!close(F)) {
+			log_error($new, NO_LINE_NUMBER, "$!");
+			next;
+		}
+
+		unlink($old);
+		if (!link($fname, $old)) {
+			log_error($fname, NO_LINE_NUMBER, "$!");
+			next;
+		}
+		if (!rename($new, $fname)) {
+			log_error($fname, NO_LINE_NUMBER, "$!");
+			next;
+		}
+		log_note($fname, NO_LINE_NUMBER, "Has been autofixed.");
+	}
+}
+
 #== End of PkgLint::FileUtil ==============================================
 
 package main;
@@ -411,6 +468,7 @@ BEGIN {
 	);
 	import PkgLint::FileUtil qw(
 		load_file load_lines
+		save_autofix_changes
 	);
 }
 
@@ -2416,7 +2474,7 @@ sub checkdir_root($) {
 sub checkdir_category($) {
 	my ($dir) = @_;
 	my $fname = "${dir}/Makefile";
-	my ($lines, $lineno, $is_wip, @normalized_lines, $can_fix);
+	my ($lines, $lineno, $is_wip);
 
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
@@ -2424,28 +2482,23 @@ sub checkdir_category($) {
 	}
 
 	$is_wip = (basename(Cwd::abs_path($dir)) eq "wip");
-	$can_fix = true;
 	$lineno = 0;
 
 	# The first line must contain the RCS Id
 	if ($lineno <= $#{$lines} && checkline_rcsid_regex($lines->[$lineno], qr"#\s+", "# ")) {
-		push(@normalized_lines, $lines->[$lineno++]->text);
-	} else {
-		# The error message has already been printed by checkline_rcsid_regex().
-		push(@normalized_lines, "# \$NetBSD\$");
+		$lineno++;
 	}
 
 	# Then, arbitrary comments may follow
 	while ($lineno <= $#{$lines} && $lines->[$lineno]->text =~ qr"^#") {
-		push(@normalized_lines, $lines->[$lineno++]->text);
+		$lineno++;
 	}
 
 	# Then we need an empty line
 	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
-		push(@normalized_lines, $lines->[$lineno++]->text);
+		$lineno++;
 	} else {
 		$lines->[$lineno]->log_error("Empty line expected.");
-		push(@normalized_lines, "");
 	}
 
 	# Then comes the COMMENT line
@@ -2453,18 +2506,16 @@ sub checkdir_category($) {
 		my ($comment) = ($1);
 
 		checkline_valid_characters_in_variable($lines->[$lineno], qr"[-\040'(),/0-9A-Za-z]");
-		push(@normalized_lines, $lines->[$lineno++]->text);
+		$lineno++;
 	} else {
 		$lines->[$lineno]->log_error("COMMENT= line expected.");
-		$can_fix = false;
 	}
 
 	# Then we need an empty line
 	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
-		push(@normalized_lines, $lines->[$lineno++]->text);
+		$lineno++;
 	} else {
 		$lines->[$lineno]->log_error("Empty line expected.");
-		push(@normalized_lines, "");
 	}
 
 	# And now to the most complicated part of the category Makefiles,
@@ -2551,20 +2602,20 @@ sub checkdir_category($) {
 		if (!$f_atend && ($m_atend || $f_current lt $m_current)) {
 			if (!exists($m_check{$f_current})) {
 				$line->log_error("${f_current} exists in the file system, but not in the Makefile.");
+				$line->insert_before("SUBDIR+=\t${f_current}");
 			}
 			$f_neednext = true;
-			push(@normalized_lines, "SUBDIR+=\t${f_current}");
 
 		} elsif (!$m_atend && ($f_atend || $m_current lt $f_current)) {
 			if (!exists($f_check{$m_current})) {
 				$line->log_error("${m_current} exists in the Makefile, but not in the file system.");
+				$line->delete();
 			}
 			$m_neednext = true;
 
 		} else { # $f_current eq $m_current
 			$f_neednext = true;
 			$m_neednext = true;
-			push(@normalized_lines, $line->text);
 			if ($m_recurse) {
 				push(@subdirs, "${dir}/${m_current}");
 			}
@@ -2575,25 +2626,23 @@ sub checkdir_category($) {
 	# indexes and READMEs. Just skip them.
 	if ($is_wip) {
 		while ($lineno <= $#{$lines} - 2) {
-			push(@normalized_lines, $lines->[$lineno++]->text);
+			$lineno++;
 		}
 	}
 
 	# Then we need an empty line
 	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
-		push(@normalized_lines, $lines->[$lineno++]->text);
+		$lineno++;
 	} else {
 		$lines->[$lineno]->log_error("Empty line expected.");
-		push(@normalized_lines, "");
 	}
 
 	# And, last but not least, the .include line
 	my $final_line = ".include \"../mk/bsd.pkg.subdir.mk\"";
 	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq $final_line) {
-		push(@normalized_lines, $lines->[$lineno++]->text);
+		$lineno++;
 	} else {
 		$lines->[$lineno]->log_error("Expected this: ${final_line}.");
-		push(@normalized_lines, $final_line);
 	}
 
 	if ($lineno <= $#{$lines}) {
@@ -2602,25 +2651,7 @@ sub checkdir_category($) {
 
 	# If the user has requested automatic fixing and we can do it, we do it.
 	if ($opt_autofix) {
-		my $changed = false;
-		if (scalar(@normalized_lines) != scalar(@{$lines})) {
-			$changed = true;
-		} else {
-			for my $i (0..$#{$lines}) {
-				if ($normalized_lines[$i] ne $lines->[$i]->text) {
-					$changed = true;
-				}
-			}
-		}
-
-		if ($changed && $can_fix) {
-			rename($fname, "${fname}.pkglint-backup") or die;
-			open(F, "> ${fname}") or die;
-			foreach my $line (@normalized_lines) {
-				printf F ("%s\n", $line);
-			}
-			close(F) or die;
-		}
+		save_autofix_changes($lines);
 	}
 
 	if ($opt_recursive) {
