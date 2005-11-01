@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4122 2005/11/01 01:05:30 wiz Exp $
+$NetBSD: TODO,v 1.4123 2005/11/01 12:21:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -612,7 +612,7 @@ Suggested package updates
 	o hydra-5.0
 	o hydrogen-0.9.2
 	o hylafax-4.2.2
-	o hyperestraier-1.0.2
+	o hyperestraier-1.0.3 [pkg/31968]
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icepref-2.3
