@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11731 2005/11/01 00:23:01 reed Exp $
+$NetBSD: CHANGES,v 1.11732 2005/11/01 01:09:45 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added mail/gotmail version 0.8.6 [minskim 2005-10-31]
 	Updated chat/naim to 0.11.8 [reed 2005-10-31]
 	Updated devel/bmake to 20051002 [reed 2005-10-31]
+	Updated pkgtools/pkglint to 4.32 [rillig 2005-11-01]
