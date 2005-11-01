@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.202 2005/11/01 16:18:33 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.203 2005/11/01 16:30:05 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -54,12 +54,18 @@ CUT=echo Unknown
 OPSYS!=			${UNAME} -s | tr -d /
 MAKEFLAGS+=		OPSYS=${OPSYS}
 .endif
+
+# The _CMD indirection allows code below to modify these values
+# without executing the commands at all.  Later, recursed make
+# invocations will skip these blocks entirely thanks to MAKEFLAGS.
 .if !defined(OS_VERSION)
-OS_VERSION!=		${UNAME} -r
+_OS_VERSION_CMD=	${UNAME} -r
+OS_VERSION=		${_OS_VERSION_CMD:sh}
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 .endif
 .if !defined(LOWER_OS_VERSION)
-LOWER_OS_VERSION!=	echo ${OS_VERSION} | tr 'A-Z' 'a-z'
+_LOWER_OS_VERSION_CMD=	echo ${OS_VERSION} | tr 'A-Z' 'a-z'
+LOWER_OS_VERSION=	${_LOWER_OS_VERSION_CMD:sh}
 MAKEFLAGS+=		LOWER_OS_VERSION=${LOWER_OS_VERSION}
 .endif
 
@@ -124,13 +130,20 @@ MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
 .  if ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=		pc
-.  else
-LOWER_VENDOR?=		unknown
 .  endif
+LOWER_VENDOR?=		unknown
 
 .elif ${OPSYS} == "Interix"
 LOWER_OPSYS?=		interix3
 LOWER_VENDOR?=		pc
+.  if exists(/usr/lib/libc.so.3.5)
+OS_VERSION=		3.5
+.  elif exists(/usr/lib/libc.so.3.1)
+OS_VERSION=		3.1
+.  else
+OS_VERSION=		3.0
+.  endif
+LOWER_OS_VERSION=	${OS_VERSION}
 
 .elif !empty(OPSYS:MIRIX*)
 LOWER_ARCH!=		${UNAME} -p
@@ -158,15 +171,14 @@ LOWER_VENDOR?=		redhat
 LOWER_VENDOR?=		slackware
 .  elif ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=          pc
-.  else
-LOWER_VENDOR?=          unknown
 .  endif
+LOWER_VENDOR?=          unknown
 
 .elif ${OPSYS} == "OSF1"
 LOWER_ARCH!=		${UNAME} -p
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 MACHINE_ARCH?=		${LOWER_ARCH}
-OS_VERSION!=		echo ${OS_VERSION} | sed -e 's/^V//'
+OS_VERSION:=		${OS_VERSION:C/^V//}
 LOWER_OPSYS?=		osf${OS_VERSION}
 LOWER_VENDOR?=		dec
 
@@ -191,6 +203,10 @@ LOWER_OPSYS_VERSUFFIX=	2
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
 .endif
+
+# Now commit the [LOWER_]OS_VERSION values computed above, eliding the :sh
+LOWER_OS_VERSION:=	${LOWER_OS_VERSION}
+OS_VERSION:=		${OS_VERSION}
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
 
