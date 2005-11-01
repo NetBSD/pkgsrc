@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2005/07/18 02:33:27 jlam Exp $
+# $NetBSD: Makefile.common,v 1.56 2005/11/01 20:18:36 rillig Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -6,7 +6,7 @@ MASTER_SITES=		ftp://ftp.trolltech.com/qt/source/ \
 			ftp://ftp.bero.org/pub/qt/source/
 EXTRACT_SUFX=		.tar.bz2
 
-.include "../qt3/Makefile.common"
+.include "../../x11/qt3/Makefile.common"
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/qt3-libs/distinfo
 FILESDIR=		${.CURDIR}/../../x11/qt3-libs/files
