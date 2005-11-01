@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.200 2005/08/16 19:55:38 dillo Exp $
+# $NetBSD: bsd.prefs.mk,v 1.201 2005/11/01 16:11:16 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -62,28 +62,18 @@ LOWER_OS_VERSION!=	echo ${OS_VERSION} | tr 'A-Z' 'a-z'
 .endif
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 
-# Preload these for architectures not in all variations of bsd.own.mk.
-GNU_ARCH.alpha?=	alpha
+# Preload these for architectures not in all variations of bsd.own.mk,
+# which do not match their GNU names exactly.
 GNU_ARCH.arm26?=	arm
 GNU_ARCH.arm32?=	arm
-GNU_ARCH.i386?=		i386
 GNU_ARCH.i486?=		i386
 GNU_ARCH.i586?=		i386
 GNU_ARCH.i686?=		i386
 GNU_ARCH.m68000?=	m68010
-GNU_ARCH.m68k?=		m68k
 GNU_ARCH.mips?=		mipsel
-GNU_ARCH.mipseb?=	mipseb
-GNU_ARCH.mipsel?=	mipsel
-GNU_ARCH.ns32k?=	ns32k
-GNU_ARCH.powerpc?=	powerpc
-GNU_ARCH.rs6000?=	rs6000
 GNU_ARCH.sh3eb?=	sh
 GNU_ARCH.sh3el?=	shle
-GNU_ARCH.sparc?=	sparc
-GNU_ARCH.sparc64?=	sparc64
-GNU_ARCH.vax?=		vax
-MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
+MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
 
 .if ${OPSYS} == "NetBSD"
 LOWER_OPSYS?=		netbsd
