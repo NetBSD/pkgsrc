@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/01 19:07:02 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/01 19:07:45 tv Exp $
 #
 
 DISTNAME=		news-0.2
@@ -18,7 +18,7 @@ do-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Interix"
-.  include "../../pkgtools/libnbcompat/buildlink3.mk"
+.  include "../../pkgtools/libnbcompat/buildlink3.mk" # for utimes()
 .endif
 
 .include "../../mk/bsd.pkg.mk"
