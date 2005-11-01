@@ -737,10 +737,18 @@ The Remote Connectivity subcomponent "Windows Remote Shell Service" does not
 need to be installed, but Remote Connectivity itself should be installed in
 order to have a working inetd.
 
-Finally, during installation you may be asked whether to enable setuid behavior
-for Interix programs, and whether to make pathnames default to case-sensitive.
+During installation you may be asked whether to enable setuid behavior for
+Interix programs, and whether to make pathnames default to case-sensitive.
 Setuid should be enabled, and case-sensitivity MUST be enabled. (Without
 case-sensitivity, a large number of packages including perl will not build.)
+
+NOTE: Newer Windows service packs change the way binary execution works (via
+the Data Execution Prevention feature). In order to use pkgsrc and other
+gcc-compiled binaries reliably, a hotfix containing POSIX.EXE, PSXDLL.DLL,
+PSXRUN.EXE, and PSXSS.EXE (899522 or newer) must be installed. Hotfixes are
+available from Microsoft through a support contract; however, a NetBSD
+developer has made most Interix hotfixes available for personal use from http:/
+/www.duh.org/interix/hotfixes.php.
 
 3.2.3.2. What to do if Interix/SFU is already installed
 
@@ -767,7 +775,7 @@ pkgsrc, note the following things.
 
 3.2.3.3. Important notes for using pkgsrc
 
-The package imanager (either the pkgsrc "su" user, or the user running
+The package manager (either the pkgsrc "su" user, or the user running
 "pkg_add") must be a member of the local Administrators group. Such a user must
 also be used to run the bootstrap. This is slightly relaxed from the normal
 pkgsrc requirement of "root".
@@ -788,6 +796,68 @@ termcap/terminfo entry for it, but the following .termcap entry provides
 adequate emulation in most cases:
 
     interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+
+3.2.3.4. Limitations of the Interix platform
+
+Though Interix suffices as a familiar and flexible substitute for a full
+Unix-like platform, it has some drawbacks that should be noted for those
+desiring to make the most of Interix.
+
+  * X-Windows:
+
+    Interix comes with the standard set of X11R6 client libraries, and can run
+    X-Windows based applications, but it does not come with an X server. Some
+    options are StarNet X-Win32, Hummingbird Exceed, and the free X-Windows
+    server included with Cygwin.
+
+    Also, StarNet Communications has graciously provided a free version of
+    their X-Win32 product that accepts connections only from localhost: X-Win32
+    LX, recommended by the maintainer of Interix pkgsrc support.
+
+  * X-Windows acceleration:
+
+    Because Interix runs in a completely different NT subsystem from Win32
+    applications, it does not currently support various X11 protocol extensions
+    for acceleration (such as MIT-SHM or DGA). Most interactive applications to
+    a local X server will run reasonably fast, but full motion video and other
+    graphics intensive applications may require a faster-than-expected CPU.
+
+  * Audio:
+
+    Interix has no native support for audio output. To provide audio support,
+    pkgsrc uses the esound client/server audio system on Interix. Unlike on
+    most platforms, the audio/esound package does not contain the esound server
+    component. To output audio, the emulators/cygwin_esound package must also
+    be installed.
+
+  * CD/DVDs, USB, and SCSI:
+
+    Direct device access is not currently supported in Interix, so it is not
+    currently possible to access CD/DVD drives, USB devices, or SCSI devices
+    through non-filesystem means. Among other things, this makes it impossible
+    to use Interix directly for CD/DVD burning.
+
+  * Tape drives:
+
+    Due to the same limitations as for CD-ROMs and SCSI devices, tape drives
+    are also not directly accessible in Interix. However, support is in work to
+    make tape drive access possible by using Cygwin as a bridge (similarly to
+    audio bridged via Cygwin's esound server).
+
+3.2.3.5. Known issues for pkgsrc on Interix
+
+It is not necessary, in general, to have a "root" user on the Windows system;
+any member of the local Administrators group will suffice. However, some
+packages currently assume that the user named "root" is the privileged user. To
+accommodate these, you may create such a user; make sure it is in the local
+group Administrators (or your language equivalent).
+
+"pkg_add" creates directories of mode 0755, not 0775, in $PKG_DBDIR. For the
+time being, install packages as the local Administrator (or your language
+equivalent), or run the following command after installing a package to work
+around the issue:
+
+# chmod -R g+w $PKG_DBDIR
 
 3.2.4. IRIX
 
@@ -2080,7 +2150,7 @@ Table of Contents
     11.2. Writing buildlink3.mk files
 
         11.2.1. Anatomy of a buildlink3.mk file
-        11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
+        11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
 
     11.3. Writing builtin.mk files
 
@@ -3069,8 +3139,8 @@ dependency on pkg is added. Several important variables are set in the section:
     is selected by setting BUILDLINK_DEPMETHOD.pkg to "build". By default, the
     full dependency is used.
 
-  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS. pkg (not shown above) are
-    lists of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
+  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS.pkg (not shown above) are lists
+    of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
     library search paths. These default to "include" and "lib" respectively.
 
   * BUILDLINK_CPPFLAGS.pkg (not shown above) is the list of preprocessor flags
@@ -3109,7 +3179,7 @@ dependencies. Including these buildlink3.mk files means that the headers and
 libraries for these dependencies are also symlinked into ${BUILDLINK_DIR}
 whenever the pkg buildlink3.mk file is included.
 
-11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
+11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
 
 There are two situations that require increasing the dependency listed in
 BUILDLINK_DEPENDS.pkg after a package update:
@@ -3128,9 +3198,9 @@ settle for an older one which will not contain the necessary shared libraries.
 
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
-versions of packages work just fine with older dependencies. See Section
-15.1.4, "Handling dependencies" for more information about dependencies on
-other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
+versions of packages work just fine with older dependencies. See
+Section 15.1.4, "Handling dependencies" for more information about dependencies
+on other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
 definitions.
 
 11.3. Writing builtin.mk files
@@ -3444,9 +3514,9 @@ original copies available.
 Once the required configuration files are in place (i.e., under the examples
 hierarchy), the pkginstall framework can use them as master copies during the
 package installation to update what is in ${PKG_SYSCONFDIR}. To achieve this,
-the variables CONF_FILES and CONF_FILES_PERMS are used. Check out Section
-12.1.2, "File manipulation" for information about their syntax and their
-purpose. Here is an example, taken from the mail/mutt package:
+the variables CONF_FILES and CONF_FILES_PERMS are used. Check out
+Section 12.1.2, "File manipulation" for information about their syntax and
+their purpose. Here is an example, taken from the mail/mutt package:
 
     EGDIR=        ${PREFIX}/share/doc/mutt/samples
     CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
@@ -3643,14 +3713,14 @@ supported by the package, and any default options settings if needed.
  6. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
     default.
 
- 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE: option" pairs that map
+ 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE:option" pairs that map
     legacy /etc/mk.conf variables to their option counterparts. Pairs should be
     added with "+=" to keep the listing of global legacy variables. A warning
     will be issued if the user uses a legacy variable.
 
- 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option: new-option" pairs that
-    map options that have been renamed to their new counterparts. Pairs should
-    be added with "+=" to keep the listing of global legacy options. A warning
+ 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option:new-option" pairs that map
+    options that have been renamed to their new counterparts. Pairs should be
+    added with "+=" to keep the listing of global legacy options. A warning
     will be issued if the user uses a legacy option.
 
  9. PKG_LEGACY_OPTIONS is a list of options implied by deprecated variables
