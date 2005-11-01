@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.20 2005/10/26 23:17:49 rillig Exp $
+# $NetBSD: makevars.map,v 1.21 2005/11/01 21:39:31 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -75,6 +75,7 @@ MAKE_FLAGS		List
 CONFIGURE_ARGS		List
 PLIST_SUBST		List
 MASTER_SITES		List of URL
+USE_TOOLS		List of Tool
 
 PKGVERSION		Readonly
 PKGBASE			Readonly

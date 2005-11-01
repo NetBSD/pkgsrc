@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.313 2005/11/01 01:08:38 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.314 2005/11/01 21:39:31 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1396,6 +1396,33 @@ sub get_regex_plurals() {
 	return $get_regex_plurals_value;
 }
 
+my $get_tool_names_value = undef;
+sub get_tool_names() {
+	
+	if (defined($get_tool_names_value)) {
+		return $get_tool_names_value;
+	}
+
+	my $fname = "${conf_pkgsrcdir}/mk/tools/defaults.mk";
+	my $lines = load_lines($fname, true);
+	my $tools = {};
+	if (!$lines) {
+		log_error($fname, NO_LINE_NUMBER, "[internal] Cannot be read.");
+	} else {
+		foreach my $line (@{$lines}) {
+			if ($line->text =~ $regex_varassign) {
+				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
+				if ($varname =~ qr"^_TOOLS_VARNAME.(.*)$") {
+					my ($toolname) = ($1);
+					$tools->{$toolname} = $value;
+				}
+			}
+		}
+	}
+	$get_tool_names_value = $tools;
+	return $get_tool_names_value;
+}
+
 sub checktext_basic_vartype($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 
@@ -1421,6 +1448,17 @@ sub checktext_basic_vartype($$$$$) {
 		}
 		if ($line->file !~ qr"(?:^|/)Makefile$") {
 			$line->log_error("${varname} must not be set outside the package Makefile.");
+		}
+
+	} elsif ($type eq "Tool") {
+		if ($value =~ qr"^(.*)(?::(.*))$") {
+			my ($toolname, $tooldep) = ($1, $2);
+			if (!exists(get_tool_names()->{$toolname})) {
+				$line->log_error("Unknown tool \"${toolname}\".");
+			}
+			if (defined($tooldep) && $tooldep !~ qr"^(?:build|pkgsrc|run)$") {
+				$line->log_error("Unknown tool dependency \"${tooldep}\".");
+			}
 		}
 
 	} elsif ($type eq "Readonly") {
@@ -1634,8 +1672,10 @@ sub checklines_direct_tools($) {
 
 			if ($varname =~ $regex_ok_vars) {
 				$line->log_info("Legitimate direct use of \"${tool}\" in variable ${varname}.");
-			} else {
+			} elsif ($varvalue =~ $regex_tools_with_context) {
 				$line->log_warning("Possible direct use of \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
+			} else {
+				# the tool name has appeared in the comment
 			}
 
 		# process shell commands

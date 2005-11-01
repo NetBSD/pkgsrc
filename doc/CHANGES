@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11746 2005/11/01 21:20:15 wiz Exp $
+$NetBSD: CHANGES,v 1.11747 2005/11/01 21:39:58 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4948,3 +4948,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/fetchmailconf to 6.2.5nb3 [adrianp 2005-11-01]
 	Updated net/ethereal to 0.10.13nb1 [frueauf 2005-11-01]
 	Updated x11/lablgtk2 to 2.6.0 [wiz 2005-11-01]
+	Updated pkgtools/pkglint to 4.32.1 [rillig 2005-11-01]
