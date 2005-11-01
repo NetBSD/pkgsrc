@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/24 04:47:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/01 19:01:17 tv Exp $
 #
 
 DISTNAME=		memtester-4.0.5
@@ -8,6 +8,8 @@ MASTER_SITES=		${HOMEPAGE}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://pyropus.ca/software/memtester/
 COMMENT=		Utility for testing the memory subsystem for faults
+
+NOT_FOR_PLATFORM=	Interix-*-* # no m[un]lock(2), so not useful anyway
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
