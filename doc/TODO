@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4128 2005/11/01 13:03:15 wiz Exp $
+$NetBSD: TODO,v 1.4129 2005/11/01 14:14:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -917,7 +917,6 @@ Suggested package updates
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
 	o p5-Math-Pari-2.010604
-	o p5-Module-Build-0.2611
 	o p5-Module-Pluggable-2.96
 	o p5-Module-Signature-0.50
 	o p5-Msgcat-1.03
