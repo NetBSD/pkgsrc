@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2005/07/22 14:27:52 frueauf Exp $
+$NetBSD: distinfo,v 1.31.2.1 2005/11/01 21:51:26 salo Exp $
 
 SHA1 (fetchmail-6.2.5.tar.gz) = 4656ec4393ccd1c137fe7b331f77cb26b576ac0e
 RMD160 (fetchmail-6.2.5.tar.gz) = e32b91a959d0e80c4bd45a8758811cbe95a98180
@@ -10,3 +10,7 @@ SHA1 (patch-ad) = b6bffc59f28992fa0d3de0f9dad250c73bbeffc6
 SHA1 (patch-ae) = 3acbacee78ab2084a615b0c02b7f83e563bfc7ac
 SHA1 (patch-af) = 06e7b84566b0d3ed50b56f88baf23f15ae21eb21
 SHA1 (patch-ag) = e27a4769dc804bec71b449bed7ff318d15ae8bdf
+SHA1 (patch-ah) = d6d08403b241a3e1a891faadbb36b0cd00df1398
+SHA1 (patch-ai) = 16449ab08c266936d80b8be11c93a3dd1ac5c2fe
+SHA1 (patch-aj) = 1051c1eb754b9c9cffad2eab4561791975aebbe1
+SHA1 (patch-ak) = d75b42146597a17a1ce91dddc7ed0821697d7ec2
