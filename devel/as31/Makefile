@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:45 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/01 04:16:58 tv Exp $
 
 DISTNAME=	asm.8051
 PKGNAME=	as31-19900126
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.uu.net/usenet/comp.sources.misc/volume10/ \
 		ftp://sunsite.org.uk/usenet/comp.sources.misc/volume10/
@@ -14,13 +15,12 @@ WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | \
 		${SED} '1,/^.! \/bin\/sh/d' | ${SH}
 MAKEFILE=	makefile
-BUILD_TARGET=	as31 man
+BUILD_TARGET=	as31
 
-INSTALLATION_DIRS=	bin man/cat1 man/man1
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/as31 ${PREFIX}/bin/as31
 	${INSTALL_DATA} ${WRKSRC}/as31.man ${PREFIX}/man/man1/as31.1
-	${INSTALL_DATA} ${WRKSRC}/as31.cat ${PREFIX}/man/cat1/as31.0
 
 .include "../../mk/bsd.pkg.mk"
