@@ -1,0 +1,46 @@
+$NetBSD: patch-ak,v 1.1.2.2 2005/11/01 21:51:26 salo Exp $
+
+--- fetchmailconf.orig	2003-10-15 20:22:31.000000000 +0100
++++ fetchmailconf	2005-10-21 14:48:02.000000000 +0100
+@@ -4,7 +4,19 @@
+ # by Eric S. Raymond, <esr@snark.thyrsus.com>.
+ # Requires Python with Tkinter, and the following OS-dependent services:
+ #       posix, posixpath, socket
+-version = "1.43"
++#
++# Changes by Matthias Andree, in 2005:
++#
++# 1.43.1 - unsuccessful attempt to fix a password exposure bug
++#
++#        thanks to Thomas Wolff and Miloslav Trmac for pointing
++#        out the fix was insufficient
++#
++# 1.43.2 - fix password exposure bug, by restricting umask to 077
++#          before opening the file
++#        - record fetchmailconf version in output file
++#
++version = "1.43.2"
+ 
+ from Tkinter import *
+ from Dialog import *
+@@ -858,14 +870,17 @@
+ 	    # Pre-1.5.2 compatibility...
+ 	    except os.error:
+ 		pass
++	    old_umask = os.umask(077)
+ 	    fm = open(self.outfile, 'w')
++	    os.umask(old_umask)
+ 	if fm:
+-	    fm.write("# Configuration created %s by fetchmailconf\n" % time.ctime(time.time()))
++	    if fm != sys.stdout:
++		os.chmod(self.outfile, 0600)
++	    fm.write("# Configuration created %s by fetchmailconf %s\n"
++		    % (time.ctime(time.time()), version))
+ 	    fm.write(`self.configuration`)
+ 	    if self.outfile:
+ 		fm.close()
+-	    if fm != sys.stdout:
+-		os.chmod(self.outfile, 0600)
+ 	    self.destruct()
+ 
+ #
