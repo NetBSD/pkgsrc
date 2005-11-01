@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11741 2005/11/01 14:41:36 dillo Exp $
+$NetBSD: CHANGES,v 1.11742 2005/11/01 14:57:52 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4943,3 +4943,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/mldonkey-gui to 2.6.7 [wiz 2005-11-01]
 	Updated devel/p5-Module-Build to 0.2611 [wiz 2005-11-01]
 	Updated games/level9 to 4.0 [dillo 2005-11-01]
+	Added games/gtklevel9 version 4.0 [dillo 2005-11-01]
