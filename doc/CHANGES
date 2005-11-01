@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11743 2005/11/01 15:21:58 joerg Exp $
+$NetBSD: CHANGES,v 1.11744 2005/11/01 19:19:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4945,3 +4945,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/level9 to 4.0 [dillo 2005-11-01]
 	Added games/gtklevel9 version 4.0 [dillo 2005-11-01]
 	Updated x11/qt3-psql to 3.3.5nb1 [joerg 2005-11-01]
+	Updated mail/fetchmailconf to 6.2.5nb3 [adrianp 2005-11-01]
