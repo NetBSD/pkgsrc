@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/01 19:02:46 tv Exp $
 
 DISTNAME= 	mtscan-20050129
 CATEGORIES=	sysutils
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mail-index.netbsd.org/port-i386/2005/01/29/0011.html
 COMMENT=	Magtape scanner - reports record and file-mark structure
+
+NOT_FOR_PLATFORM=	Interix-*-* # no local tape ioctls
 
 NO_CHECKSUM=	yes
 
