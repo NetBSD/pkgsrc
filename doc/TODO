@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4121 2005/11/01 00:23:21 reed Exp $
+$NetBSD: TODO,v 1.4122 2005/11/01 01:05:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -299,17 +299,19 @@ Suggested package updates
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o DatLib-2.9
-	o DatUtil-2.21
+	o DatUtil-2.22
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o ImageMagick-6.2.5.1
-	o MAMEDiff-2.20
+	o ImgChk-2.6
+	o MAMEDiff-2.21
 	o MyPasswordSafe-20041210
 	o PAM-0.80
 	o R-2.2.0
 	o REminiscence-0.1.8
+	o ROMInfo-2.4
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.5.10 [pkg/31569]
 	o TeXmacs-1.0.5.11 (please make sure the maxima plugin works)
@@ -317,6 +319,7 @@ Suggested package updates
 	o XFree86-4.5.0
 	o XaoS-3.1.1
 	o YoSucker-73
+	o ZIPIdent-2.5
 	o aap-0.144
 	o acpi-iasl-20040715
 	o adocman-0.13
