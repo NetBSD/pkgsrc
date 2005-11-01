@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.43 2005/11/01 16:01:16 tv Exp $
+# $NetBSD: Interix.mk,v 1.44 2005/11/01 16:30:05 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -57,15 +57,6 @@ WRAPPER_SHELL?=		${PREFIX}/bin/nbsh
 INSTALL?=		${PREFIX}/bin/install-sh
 PAX?=			${PREFIX}/bin/pax
 SED?=			${PREFIX}/bin/nbsed
-
-.if exists(/usr/lib/libc.so.3.5)
-OS_VERSION?=		3.5
-.elif exists(/usr/lib/libc.so.3.1)
-OS_VERSION?=		3.1
-.else
-OS_VERSION?=		3.0
-.endif
-LOWER_OS_VERSION?=	${OS_VERSION}
 
 GCC_USE_SYMLINKS?=	yes
 WRAPPER_DEBUG?=		no
