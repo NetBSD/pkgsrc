@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.41 2005/10/31 23:05:24 reed Exp $
+# $NetBSD: bootstrap,v 1.42 2005/11/01 01:06:02 reed Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -606,9 +606,9 @@ mkdir_p $prefix/man/man8 $prefix/man/cat8
 
 # bootstrap make and *.mk files
 mkdir_p $prefix/share/mk $prefix/lib
-copy_src bmake bmake
+copy_src bmake/mk files-mk
 
-(cd ${wrkdir}/bmake/mk;
+(cd ${wrkdir}/files-mk;
 	if [ -f ${bootstrapdir}/mods/mk/$opsys.sys.mk ]; then
 		run_cmd "$cpprog ${bootstrapdir}/mods/mk/$opsys.sys.mk $prefix/share/mk/sys.mk"
 	else
@@ -617,12 +617,12 @@ copy_src bmake bmake
 	run_cmd "$cpprog bsd.*.mk $prefix/share/mk")
 
 if [ -f mods/mk/$opsys.bsd.lib.mk ] ;  then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk ${wrkdir}/bmake/mk/bsd.lib.mk"
+	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk ${wrkdir}/files-mk/bsd.lib.mk"
 	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk $prefix/share/mk/bsd.lib.mk"
 fi
 
 if [ -f mods/mk/$opsys.bsd.man.mk ] ;  then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk ${wrkdir}/bmake/mk/bsd.man.mk"
+	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk ${wrkdir}/files-mk/bsd.man.mk"
 	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk $prefix/share/mk/bsd.man.mk"
 fi
 
@@ -663,7 +663,10 @@ if [ "$need_mkdir" = "yes" ]; then
 fi
 
 echo_msg "Installing bmake"
-run_cmd "(cd $wrkdir/bmake; env CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure --prefix=$prefix --with-default-sys-path=$prefix/share/mk $configargs && make -f makefile.boot bootstrap && env BINDIR=$prefix/bin MANDIR=$prefix/man $BSTRAP_ENV ./bmake -f Makefile install)"
+copy_src ../devel/bmake/files bmake
+run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./boot-strap -q -o $opsys --prefix=$prefix --sysconfdir=$sysconfdir --with-default-sys-path="$prefix/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk")"
+run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
+#run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/$opsys/bmake.1 $prefix/man/man1/bmake.1"
 
 # bootstrap tnftp
 case "$DEBIAN" in
