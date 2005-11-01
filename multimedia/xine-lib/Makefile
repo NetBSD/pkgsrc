@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2005/10/13 10:48:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2005/11/01 06:20:42 reed Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=		1
 
 COMMENT=		Multimedia player library
 
