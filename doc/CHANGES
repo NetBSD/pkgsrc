@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11735 2005/11/01 10:40:31 taca Exp $
+$NetBSD: CHANGES,v 1.11736 2005/11/01 12:10:02 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4936,3 +4936,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added cad/wcalc version 0.9 [dmcmahill 2005-11-01]
 	Added cad/wcalc-docs version 0.9 [dmcmahill 2005-11-01]
 	Updated lang/yap to 5.0.0nb1 [rillig 2005-11-01]
+	Added cad/stdio-wcalc version 0.9 [dmcmahill 2005-11-01]
