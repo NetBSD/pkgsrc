@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2005/05/22 20:08:46 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2005/11/01 12:22:24 abs Exp $
 
 DISTNAME=	wwwoffle-2.8e
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.freeserve.co.uk/download-wwwoffle/ \
 		ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/
@@ -10,7 +11,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
 COMMENT=	WWW proxy with support for offline browsing
 
-USE_TOOLS+=	gmake gtar
+USE_TOOLS+=	gmake gzip
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 
@@ -18,7 +19,7 @@ CONFIGURE_ARGS+= --with-confdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+= --with-spooldir=${VARBASE}/wwwoffle
 
 PKG_SYSCONFSUBDIR= 	wwwoffle
-PLIST_SUBST+=		GTAR="${GTAR}"
+PLIST_SUBST+=		GZIP_CMD="${GZIP_CMD}"
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
 RCD_SCRIPTS=		wwwoffled
@@ -58,8 +59,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config-2.x-2.5.pl \
 	  ${PREFIX}/sbin/wwwoffle-upgrade-config-2.x-2.5.pl
 # Directories other than html and search are automatically created at run time
-	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz \
-		var/wwwoffle/html var/wwwoffle/search
+	${TAR} cCf / - var/wwwoffle/html var/wwwoffle/search | ${GZIP_CMD} -9 \
+		> ${PREFIX}/libdata/wwwoffle-spool.tar.gz
 	@${ECHO}
 	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
 	@${ECHO}
