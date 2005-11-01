@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11734 2005/11/01 09:25:59 rillig Exp $
+$NetBSD: CHANGES,v 1.11735 2005/11/01 10:40:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4927,12 +4927,12 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/naim to 0.11.8 [reed 2005-10-31]
 	Updated devel/bmake to 20051002 [reed 2005-10-31]
 	Updated pkgtools/pkglint to 4.32 [rillig 2005-11-01]
-	Added cad/cgi-wcalc-0.9 [dmcmahill 2005-11-01]
-	Added cad/gtk1-wcalc-0.9 [dmcmahill 2005-11-01]
-	Added cad/gtk2-wcalc-0.9 [dmcmahill 2005-11-01]
-	Added cad/mex-wcalc-0.9 [dmcmahill 2005-11-01]
-	Added cad/oct-wcalc-0.9 [dmcmahill 2005-11-01]
-	Added cad/sci-wcalc-0.9 [dmcmahill 2005-11-01]
-	Added cad/wcalc-0.9 [dmcmahill 2005-11-01]
-	Added cad/wcalc-docs-0.9 [dmcmahill 2005-11-01]
+	Added cad/cgi-wcalc version 0.9 [dmcmahill 2005-11-01]
+	Added cad/gtk1-wcalc version 0.9 [dmcmahill 2005-11-01]
+	Added cad/gtk2-wcalc version 0.9 [dmcmahill 2005-11-01]
+	Added cad/mex-wcalc version 0.9 [dmcmahill 2005-11-01]
+	Added cad/oct-wcalc version 0.9 [dmcmahill 2005-11-01]
+	Added cad/sci-wcalc version 0.9 [dmcmahill 2005-11-01]
+	Added cad/wcalc version 0.9 [dmcmahill 2005-11-01]
+	Added cad/wcalc-docs version 0.9 [dmcmahill 2005-11-01]
 	Updated lang/yap to 5.0.0nb1 [rillig 2005-11-01]
