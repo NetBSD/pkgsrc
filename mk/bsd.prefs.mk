@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.201 2005/11/01 16:11:16 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.202 2005/11/01 16:18:33 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -52,15 +52,16 @@ CUT=echo Unknown
 
 .if !defined(OPSYS)
 OPSYS!=			${UNAME} -s | tr -d /
-.endif
 MAKEFLAGS+=		OPSYS=${OPSYS}
+.endif
 .if !defined(OS_VERSION)
 OS_VERSION!=		${UNAME} -r
+MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 .endif
 .if !defined(LOWER_OS_VERSION)
 LOWER_OS_VERSION!=	echo ${OS_VERSION} | tr 'A-Z' 'a-z'
+MAKEFLAGS+=		LOWER_OS_VERSION=${LOWER_OS_VERSION}
 .endif
-MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 
 # Preload these for architectures not in all variations of bsd.own.mk,
 # which do not match their GNU names exactly.
@@ -78,8 +79,42 @@ MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
 .if ${OPSYS} == "NetBSD"
 LOWER_OPSYS?=		netbsd
 
+.elif ${OPSYS} == "AIX"
+LOWER_ARCH!=		_cpuid=`/usr/sbin/lsdev -C -c processor -S available | sed 1q | awk '{ print $$1 }'`; \
+			if /usr/sbin/lsattr -El $$_cpuid | grep ' POWER' >/dev/null 2>&1; then \
+				echo rs6000; \
+			else \
+				echo powerpc; \
+			fi
+MACHINE_ARCH?=		${LOWER_ARCH}
+.  if exists(/usr/bin/oslevel)
+_OS_VERSION!=		/usr/bin/oslevel
+.  else
+_OS_VERSION!=		echo `${UNAME} -v`.`${UNAME} -r`
+.  endif
+OS_VERSION!=		echo ${_OS_VERSION} | sed -e 's,\([0-9]*\.[0-9]*\).*,\1,'
+LOWER_OS_VERSION=	${OS_VERSION}
+LOWER_OPSYS_VERSUFFIX=	${_OS_VERSION}
+LOWER_OPSYS?=		aix
+LOWER_VENDOR?=		ibm
+
 .elif ${OPSYS} == "BSDOS"
 LOWER_OPSYS?=		bsdi
+
+.elif ${OPSYS} == "Darwin"
+LOWER_OPSYS?=		darwin
+LOWER_ARCH!=		${UNAME} -p
+MACHINE_ARCH=		${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+LOWER_VENDOR?=		apple
+
+.elif ${OPSYS} == "DragonFly"
+LOWER_OPSYS?=		dragonfly
+LOWER_ARCH!=		${UNAME} -p
+MACHINE_ARCH=		${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
+LOWER_VENDOR?=		pc
 
 .elif ${OPSYS} == "FreeBSD"
 LOWER_OPSYS?=		freebsd
@@ -93,31 +128,14 @@ LOWER_VENDOR?=		pc
 LOWER_VENDOR?=		unknown
 .  endif
 
-.elif ${OPSYS} == "DragonFly"
-LOWER_OPSYS?=		dragonfly
-LOWER_ARCH!=		${UNAME} -p
-MACHINE_ARCH=		${LOWER_ARCH}
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
-LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
+.elif ${OPSYS} == "Interix"
+LOWER_OPSYS?=		interix3
 LOWER_VENDOR?=		pc
 
-.elif ${OPSYS} == "SunOS"
-.  if ${MACHINE_ARCH} == "sparc"
-SPARC_TARGET_ARCH?=	sparcv7
-.  elif ${MACHINE_ARCH} == "sun4"
-MACHINE_ARCH=		sparc
-SPARC_TARGET_ARCH?=	sparcv7
-.  elif ${MACHINE_ARCH} == "i86pc"
-MACHINE_ARCH=		i386
-.  elif ${MACHINE_ARCH} == "unknown"
-.    if !defined(LOWER_ARCH)
+.elif !empty(OPSYS:MIRIX*)
 LOWER_ARCH!=		${UNAME} -p
-.    endif	# !defined(LOWER_ARCH)
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
-.  endif
-LOWER_VENDOR?=		sun
-LOWER_OPSYS?=		solaris
-LOWER_OPSYS_VERSUFFIX=	2
+LOWER_OPSYS?=		irix${OS_VERSION}
+LOWER_VENDOR?=		sgi
 
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
@@ -144,22 +162,6 @@ LOWER_VENDOR?=          pc
 LOWER_VENDOR?=          unknown
 .  endif
 
-.elif ${OPSYS} == "Darwin"
-LOWER_OPSYS?=		darwin
-LOWER_ARCH!=		${UNAME} -p
-MACHINE_ARCH=		${LOWER_ARCH}
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
-LOWER_VENDOR?=		apple
-
-.elif ${OPSYS:MIRIX*} != ""
-LOWER_ARCH!=		${UNAME} -p
-LOWER_OPSYS?=		irix${OS_VERSION}
-LOWER_VENDOR?=		sgi
-
-.elif ${OPSYS} == "Interix"
-LOWER_OPSYS?=		interix3
-LOWER_VENDOR?=		pc
-
 .elif ${OPSYS} == "OSF1"
 LOWER_ARCH!=		${UNAME} -p
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
@@ -168,24 +170,23 @@ OS_VERSION!=		echo ${OS_VERSION} | sed -e 's/^V//'
 LOWER_OPSYS?=		osf${OS_VERSION}
 LOWER_VENDOR?=		dec
 
-.elif ${OPSYS} == "AIX"
-LOWER_ARCH!=		_cpuid=`/usr/sbin/lsdev -C -c processor -S available | sed 1q | awk '{ print $$1 }'`; \
-			if /usr/sbin/lsattr -El $$_cpuid | grep ' POWER' >/dev/null 2>&1; then \
-				echo rs6000; \
-			else \
-				echo powerpc; \
-			fi
-MACHINE_ARCH?=		${LOWER_ARCH}
-.  if exists(/usr/bin/oslevel)
-_OS_VERSION!=		/usr/bin/oslevel
-.  else
-_OS_VERSION!=		echo `${UNAME} -v`.`${UNAME} -r`
+.elif ${OPSYS} == "SunOS"
+.  if ${MACHINE_ARCH} == "sparc"
+SPARC_TARGET_ARCH?=	sparcv7
+.  elif ${MACHINE_ARCH} == "sun4"
+MACHINE_ARCH=		sparc
+SPARC_TARGET_ARCH?=	sparcv7
+.  elif ${MACHINE_ARCH} == "i86pc"
+MACHINE_ARCH=		i386
+.  elif ${MACHINE_ARCH} == "unknown"
+.    if !defined(LOWER_ARCH)
+LOWER_ARCH!=		${UNAME} -p
+.    endif	# !defined(LOWER_ARCH)
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  endif
-OS_VERSION!=		echo ${_OS_VERSION} | sed -e 's,\([0-9]*\.[0-9]*\).*,\1,'
-LOWER_OS_VERSION=	${OS_VERSION}
-LOWER_OPSYS_VERSUFFIX=	${_OS_VERSION}
-LOWER_OPSYS?=		aix
-LOWER_VENDOR?=		ibm
+LOWER_VENDOR?=		sun
+LOWER_OPSYS?=		solaris
+LOWER_OPSYS_VERSUFFIX=	2
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
@@ -193,7 +194,7 @@ LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
 
-LOWER_VENDOR?=
+LOWER_VENDOR?=		# empty ("arch--opsys")
 LOWER_ARCH?=		${MACHINE_GNU_ARCH}
 
 MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
