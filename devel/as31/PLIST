@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/23 16:03:10 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/01 04:16:58 tv Exp $
 bin/as31
-man/cat1/as31.0
 man/man1/as31.1
