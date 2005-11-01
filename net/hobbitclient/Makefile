@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/20 00:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/01 19:16:55 tv Exp $
 #
 
 DISTNAME=		hobbitclient-0.3
@@ -13,4 +13,5 @@ COMMENT=		Client for Hobbit Monitor or Big brother
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		hobbitc
 
+.include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
