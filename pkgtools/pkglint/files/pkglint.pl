@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.311 2005/10/30 23:09:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.312 2005/11/01 00:26:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -913,8 +913,10 @@ sub checkfile_distinfo($$) {
 
 		if ($file =~ /^patch-[A-Za-z0-9]+$/) {
 			if (-f "${dir}/${patchdir}/${file}") {
-				my $chksum = `sed -e '/\$NetBSD.*/d' $dir/$patchdir/$file | digest $alg`;
-				$chksum =~ s/\r*\n*\z//;
+				open(DIG, "sed '/\\\$NetBSD.*/d' ${dir}/${patchdir}/${file} | digest ${alg} |") or die;
+				my $chksum = <DIG>;
+				close(DIG);
+				chomp($chksum);
 				if ($sum ne $chksum) {
 					$line->log_error("${alg} checksum of $file differs (expected ${sum}, got ${chksum}). Rerun '$conf_make makepatchsum'.");
 				}
