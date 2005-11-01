@@ -824,11 +824,11 @@ desiring to make the most of Interix.
 
   * Audio:
 
-    Interix has no native support for audio output. To provide audio support,
-    pkgsrc uses the esound client/server audio system on Interix. Unlike on
-    most platforms, the audio/esound package does not contain the esound server
-    component. To output audio, the emulators/cygwin_esound package must also
-    be installed.
+    Interix has no native support for audio output. For audio support, pkgsrc
+    uses the esound client/server audio system on Interix. Unlike on most
+    platforms, the audio/esound package does not contain the esd server
+    component. To output audio via an Interix host, the emulators/cygwin_esound
+    package must also be installed.
 
   * CD/DVDs, USB, and SCSI:
 
