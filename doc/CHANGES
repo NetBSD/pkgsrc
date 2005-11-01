@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11748 2005/11/01 21:49:07 rillig Exp $
+$NetBSD: CHANGES,v 1.11749 2005/11/01 21:54:11 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4950,3 +4950,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/lablgtk2 to 2.6.0 [wiz 2005-11-01]
 	Updated pkgtools/pkglint to 4.32.1 [rillig 2005-11-01]
 	Updated devel/libstatgrab to 0.12 [rillig 2005-11-01]
+	Updated lang/python21 to 2.1.3nb8 [adrianp 2005-11-01]
+	Updated lang/python21-pth to 2.1.3nb7 [adrianp 2005-11-01]
