@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4124 2005/11/01 12:31:11 wiz Exp $
+$NetBSD: TODO,v 1.4125 2005/11/01 12:48:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -818,7 +818,6 @@ Suggested package updates
 	o openal-20050401
 	o opencobol-0.31
 	o openh323-1.17.2
-	o openldap-2.2.29
 	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openpam-20050616
 	o openssl-0.9.8a
