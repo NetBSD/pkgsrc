@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4135 2005/11/02 20:12:53 abs Exp $
+$NetBSD: TODO,v 1.4136 2005/11/02 21:46:36 reed Exp $
 
 Suggested new packages
 ======================
@@ -290,6 +290,15 @@ Suggested new packages
 	oKle
 	http://okle.sourceforge.net/
 	KDE frontend to the Ogle DVD player.
+
+	LabelNation
+	http://www.red-bean.com/labelnation/
+	Command-line label, business card printing program.
+
+	PostScript::MailLabels perl module
+	http://oplink.net/~ajackson/software/maillabels
+	Perl module (at CPAN) for printing mailing labels on   
+	standard label stock. Also has postal barcodes support.
 
 Suggested package updates
 =========================
