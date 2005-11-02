@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/29 18:02:20 rpaulo Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/02 15:32:38 tv Exp $
 #
 
 DISTNAME=	scamper-cvs-20050529
@@ -17,4 +17,9 @@ MAKE_FLAGS=	WITH_DEBUG=yes	# recommended by the the software developer
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scamper ${PREFIX}/bin
 
+PKG_OPTIONS_VAR=		PKG_OPTIONS.scamper
+PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
+PKG_OPTIONS_GROUP.inet6=	inet6
+
+.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"
