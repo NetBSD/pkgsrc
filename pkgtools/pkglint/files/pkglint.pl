@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.317 2005/11/02 18:55:15 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.318 2005/11/02 19:00:16 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -473,12 +473,12 @@ BEGIN {
 }
 
 # Buildtime configuration
-my $conf_rcsidstring	= 'NetBSD';
-my $conf_pkgsrcdir	= '@PKGSRCDIR@';
-my $conf_localbase	= '@PREFIX@';
-my $conf_distver	= '@DISTVER@';
-my $conf_make		= '@MAKE@';
-my $conf_datadir	= '@DATADIR@';
+use constant conf_rcsidstring	=> 'NetBSD';
+use constant conf_pkgsrcdir	=> '@PKGSRCDIR@';
+use constant conf_localbase	=> '@PREFIX@';
+use constant conf_distver	=> '@DISTVER@';
+use constant conf_make		=> '@MAKE@';
+use constant conf_datadir	=> '@DATADIR@';
 
 # Command Line Options
 
@@ -526,7 +526,7 @@ my $opt_autofix		= false;
 my $opt_dumpmakefile	= false;
 my $opt_quiet		= false;
 my $opt_recursive	= false;
-my $opt_rcsidstring	= $conf_rcsidstring;
+my $opt_rcsidstring	= conf_rcsidstring;
 my (@options) = (
 	# [ usage-opt, usage-message, getopt-opt, getopt-action ]
 	[ "-C{check,...}", "Enable or disable specific checks",
@@ -544,7 +544,7 @@ my (@options) = (
 	[ "-V|--version", "print the version number of pkglint",
 	  "version|V",
 	  sub {
-		print("$conf_distver\n");
+		printf("%s\n", conf_distver);
 		exit(0);
 	  } ],
 	[ "-W{warn,...}", "enable or disable specific warnings",
@@ -682,7 +682,7 @@ sub parse_command_line() {
 sub load_make_vars_typemap() {
 	my ($lines, $vartypes);
 
-	if (!($lines = (load_file("${conf_datadir}/makevars.map")))) {
+	if (!($lines = (load_file(conf_datadir."/makevars.map")))) {
 		return false;
 	}
 	$vartypes = {};
@@ -704,7 +704,7 @@ sub load_make_vars_typemap() {
 my $load_dist_sites_url2name = undef;
 my $load_dist_sites_names = undef;
 sub load_dist_sites() {
-	my ($fname) = ("${conf_pkgsrcdir}/mk/bsd.sites.mk");
+	my ($fname) = (conf_pkgsrcdir."/mk/bsd.sites.mk");
 	my ($lines) = load_file($fname);
 	my ($varname) = undef;
 	my ($ignoring) = false;
@@ -990,7 +990,7 @@ sub checkfile_distinfo($$) {
 				close(DIG);
 				chomp($chksum);
 				if ($sum ne $chksum) {
-					$line->log_error("${alg} checksum of $file differs (expected ${sum}, got ${chksum}). Rerun '$conf_make makepatchsum'.");
+					$line->log_error("${alg} checksum of $file differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
 				}
 			} else {
 				$line->log_warning("$file does not exist.");
@@ -1012,7 +1012,7 @@ sub checkfile_distinfo($$) {
 	foreach my $patch (<${dir}/$patchdir/patch-*>) {
 		$patch = basename($patch);
 		if (!exists($in_distinfo{$patch})) {
-			log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '$conf_make makepatchsum'.");
+			log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '".conf_make." makepatchsum'.");
 		}
 	}
 }
@@ -1417,7 +1417,7 @@ sub get_tool_names() {
 		return $get_tool_names_value;
 	}
 
-	my $fname = "${conf_pkgsrcdir}/mk/tools/defaults.mk";
+	my $fname = conf_pkgsrcdir."/mk/tools/defaults.mk";
 	my $lines = load_lines($fname, true);
 	my $tools = {};
 	if (!$lines) {
@@ -1593,7 +1593,7 @@ sub checklines_Makefile_varuse($) {
 
 sub checklines_deprecated_variables($) {
 	my ($lines) = @_;
-	my ($fname) = ("${conf_datadir}/deprecated.map");
+	my ($fname) = (conf_datadir."/deprecated.map");
 	my ($deprecated) = load_file($fname);
 	my %vars = ();
 
@@ -1973,7 +1973,7 @@ sub checkfile_package_Makefile($$$$) {
 		}
 	} else {
 		if (!-f "${dir}/${distinfo_file}") {
-			log_warning("${dir}/${distinfo_file}", NO_LINE_NUMBER, "File not found. Please run '${conf_make} makesum'.");
+			log_warning("${dir}/${distinfo_file}", NO_LINE_NUMBER, "File not found. Please run '".conf_make." makesum'.");
 		}
 	}
 
@@ -2783,7 +2783,7 @@ sub checkdir_package($) {
 
 	if ($opt_check_distinfo && $opt_check_patches) {
 		if ($have_patches && ! $have_distinfo) {
-			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '$conf_make makepatchsum'.");
+			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '".conf_make." makepatchsum'.");
 		}
 	}
 
