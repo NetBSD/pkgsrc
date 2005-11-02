@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4132 2005/11/02 09:26:50 dillo Exp $
+$NetBSD: TODO,v 1.4133 2005/11/02 14:12:18 taca Exp $
 
 Suggested new packages
 ======================
@@ -1128,8 +1128,6 @@ Suggested package updates
 	o rt-pgsql-3.4.1
 	o rt3-3.4.4
 	o rtcw-1.41.3
-	o ruby-1.8.3 [taca]
-	o ruby-base-1.8.3
 	o ruby-cmd-0.8.0
 	o ruby-opengl-0.32g
 	o ruby-redcloth-3.0.4
