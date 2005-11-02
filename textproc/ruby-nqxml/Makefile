@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/06 17:19:07 taca Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/02 11:36:16 taca Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
@@ -12,8 +12,9 @@ MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=	http://nqxml.sourceforge.net/
 COMMENT=	XML parser written in pure Ruby
 
-USE_RUBY=	yes
 NO_BUILD=	yes
+NO_CONFIGURE=	yes
+USE_RUBY_INSTALL= yes
 
 DOC=		README
 EXAMPLES=	data.xml doc.xml dumpXML.rb parseTestStream.rb \
@@ -25,9 +26,6 @@ TESTS=		dispatchertester.rb oasis.rb streamingparsertester.rb test.rb \
 		testresource.rb tokenizertester.rb treeparsertester.rb \
 		writertester.rb
 REPLACE_RUBY_DIRS=	${WRKSRC}/examples ${WRKSRC}/tests
-
-do-install:
-	cd ${WRKSRC}; ${RUBY} install.rb
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/nqxml
