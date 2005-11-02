@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.20 2005/09/21 14:49:08 joerg Exp $
+$NetBSD: patch-ab,v 1.21 2005/11/02 15:41:25 joerg Exp $
 
 --- configure.orig	2005-06-29 16:43:10.000000000 +0000
 +++ configure
@@ -51,7 +51,7 @@ $NetBSD: patch-ab,v 1.20 2005/09/21 14:49:08 joerg Exp $
  fi
  rm -f conftest*
  
-@@ -2699,7 +2709,7 @@ rm -f conftest*
+@@ -2699,12 +2709,13 @@ rm -f conftest*
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -60,7 +60,13 @@ $NetBSD: patch-ab,v 1.20 2005/09/21 14:49:08 joerg Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -3521,7 +3531,7 @@ fi
+ 	    SHLIB_LD_LIBS='${LIBS}'
+ 	    SHLIB_SUFFIX=".so"
++	    RPATH_FLAG='-Wl,-R'
+ 	    DL_OBJS="tclLoadDl.o"
+ 	    DL_LIBS=""
+ 	    LDFLAGS="$LDFLAGS -export-dynamic"
+@@ -3521,7 +3532,7 @@ fi
  		    ;;
  		IRIX*)
  		    ;;
@@ -69,7 +75,7 @@ $NetBSD: patch-ab,v 1.20 2005/09/21 14:49:08 joerg Exp $
  		    ;;
  		Darwin-*)
  		    ;;
-@@ -3539,16 +3549,16 @@ fi
+@@ -3539,16 +3550,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -90,7 +96,7 @@ $NetBSD: patch-ab,v 1.20 2005/09/21 14:49:08 joerg Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -5091,7 +5101,11 @@ echo "configure:5089: checking for X11 l
+@@ -5091,7 +5102,11 @@ echo "configure:5089: checking for X11 l
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		echo "$ac_t""$i" 1>&6
@@ -103,7 +109,7 @@ $NetBSD: patch-ab,v 1.20 2005/09/21 14:49:08 joerg Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -5100,7 +5114,11 @@ echo "configure:5089: checking for X11 l
+@@ -5100,7 +5115,11 @@ echo "configure:5089: checking for X11 l
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -116,7 +122,7 @@ $NetBSD: patch-ab,v 1.20 2005/09/21 14:49:08 joerg Exp $
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -5172,6 +5190,10 @@ if test "x${x_libraries}" != "x"; then
+@@ -5172,6 +5191,10 @@ if test "x${x_libraries}" != "x"; then
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
@@ -127,7 +133,7 @@ $NetBSD: patch-ab,v 1.20 2005/09/21 14:49:08 joerg Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -5823,11 +5845,18 @@ else
+@@ -5823,11 +5846,18 @@ else
      if test "$SHARED_BUILD" = "0" || test "$TCL_NEEDS_EXP_FILE" = "0"; then
          if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
              eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
