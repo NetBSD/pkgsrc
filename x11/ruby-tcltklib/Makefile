@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 18:03:31 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/02 08:59:24 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-tcltklib-${RUBY_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11 ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -16,7 +15,7 @@ USE_RUBY_EXTCONF=	yes
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/tcltklib
 WRKSRC=			${RUBY_WRKSRC}/ext/tcltklib
 
-CONFIGURE_ARGS=	--with-tcllib="${TCL_LIB}" --with-tklib="${TK_LIB}" \
+CONFIGURE_ARGS+= --with-tcllib="${TCL_LIB}" --with-tklib="${TK_LIB}" \
 		--with-tcl-lib="${BUILDLINK_PREFIX.tcl}/lib/${TCL_DIR}" \
 		--with-tk-lib="${BUILDLINK_PREFIX.tk}/lib/${TK_DIR}" \
 		--with-tcl-include="${BUILDLINK_PREFIX.tcl}/include/${TCL_DIR}" \
