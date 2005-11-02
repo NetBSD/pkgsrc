@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/04 13:53:53 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 11:33:32 taca Exp $
 
 DISTNAME=	cmd-0.7.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,10 +14,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-readline-[0-9]*:../../devel/ruby-readline
 
 USE_RUBY_SETUP=	yes
 
-.include "../../lang/ruby/modules.mk"
-
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/cmd
 	${INSTALL_DATA} ${WRKSRC}/README ${RUBY_DOCDIR}/cmd
 
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
