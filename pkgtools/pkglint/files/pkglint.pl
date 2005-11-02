@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.316 2005/11/02 18:50:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.317 2005/11/02 18:55:15 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -574,11 +574,10 @@ my (@options) = (
 	  } ]
 );
 
-# Constants
-my $regex_pkgname	= qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
-my $regex_unresolved	= qr"\$\{";
-my $regex_validchars	= qr"[\011\040-\176]";
-my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
+use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
+use constant regex_unresolved	=> qr"\$\{";
+use constant regex_validchars	=> qr"[\011\040-\176]";
+use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
 # Global variables
 my $pkgdir;
@@ -865,7 +864,7 @@ sub checkline_valid_characters_in_variable($$) {
 	my ($varname, $rest);
 
 	$rest = $line->text;
-	if ($rest =~ $regex_varassign) {
+	if ($rest =~ regex_varassign) {
 		($varname, undef, $rest) = ($1, $2, $3);
 	} else {
 		return;
@@ -945,7 +944,7 @@ sub checkfile_DESCR($$) {
 	foreach my $line (@{$descr}) {
 		checkline_length($line, $maxchars);
 		checkline_trailing_whitespace($line);
-		checkline_valid_characters($line, $regex_validchars);
+		checkline_valid_characters($line, regex_validchars);
 	}
 	checklines_trailing_empty_lines($descr);
 
@@ -1041,7 +1040,7 @@ sub checkfile_MESSAGE($$) {
 	foreach my $line (@{$message}) {
 		checkline_length($line, 80);
 		checkline_trailing_whitespace($line);
-		checkline_valid_characters($line, $regex_validchars);
+		checkline_valid_characters($line, regex_validchars);
 	}
 	if ($message->[-1]->text ne "=" x 75) {
 		$message->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
@@ -1106,7 +1105,7 @@ sub checkfile_PLIST($$) {
 			}
 
 		} elsif ($text =~ qr"^[A-Za-z0-9\$]") {
-			if ($opt_warn_plist_sort && $text =~ qr"^\w" && $text !~ $regex_unresolved) {
+			if ($opt_warn_plist_sort && $text =~ qr"^\w" && $text !~ regex_unresolved) {
 				if (defined($last_file_seen)) {
 					if ($last_file_seen gt $text) {
 						$line->log_warning("${text} should be sorted before ${last_file_seen}.");
@@ -1286,11 +1285,11 @@ sub readmakefile($$$$) {
 		if ($text =~ qr"^\.\s*include\s+\"(.*)\"$") {
 			$includefile = $1;
 			$includefile =~ s/\$\{.CURDIR\}/./;
-			if ($includefile =~ $regex_unresolved) {
+			if ($includefile =~ regex_unresolved) {
 				$includefile =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,g;
 				$includefile =~ s,\$\{SUSE_DIR_PREFIX\},suse91,g;
 				$includefile =~ s,\$\{PYPKGSRCDIR\},../../lang/python23,g;
-				if ($file !~ qr"/mk/" && $includefile =~ $regex_unresolved) {
+				if ($file !~ qr"/mk/" && $includefile =~ regex_unresolved) {
 					$line->log_warning("Skipping include file \"${includefile}\". This may result in false warnings.");
 				}
 
@@ -1425,7 +1424,7 @@ sub get_tool_names() {
 		log_error($fname, NO_LINE_NUMBER, "[internal] Cannot be read.");
 	} else {
 		foreach my $line (@{$lines}) {
-			if ($line->text =~ $regex_varassign) {
+			if ($line->text =~ regex_varassign) {
 				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
 				if ($varname =~ qr"^_TOOLS_VARNAME.(.*)$") {
 					my ($toolname) = ($1);
@@ -1442,7 +1441,7 @@ sub checktext_basic_vartype($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 
 	if ($type eq "Dependency") {
-		if ($value =~ $regex_unresolved) {
+		if ($value =~ regex_unresolved) {
 			# don't even try to check anything
 		} elsif ($value =~ qr":\.\./\.\./") {
 			# great.
@@ -1490,7 +1489,7 @@ sub checktext_basic_vartype($$$$$) {
 				$line->log_error("The subdirectory in ${name} must end with a slash.");
 			}
 
-		} elsif ($value =~ $regex_unresolved) {
+		} elsif ($value =~ regex_unresolved) {
 			# No further checks
 			
 		} elsif ($value =~ qr"^(?:http://|ftp://)") {
@@ -1528,7 +1527,7 @@ sub checktext_basic_vartype($$$$$) {
 
 sub checkline_Makefile_vartype($$) {
 	my ($line, $vartypes) = @_;
-	if ($line->text =~ $regex_varassign) {
+	if ($line->text =~ regex_varassign) {
 		my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 		my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
 		my $type = exists($vartypes->{$varname}) ? $vartypes->{$varname}
@@ -1616,7 +1615,7 @@ sub checklines_deprecated_variables($) {
 	}
 
 	foreach my $line (@{$lines}) {
-		if ($line->text =~ $regex_varassign) {
+		if ($line->text =~ regex_varassign) {
 			my ($varname, undef, undef) = ($1, $2, $3);
 			if (exists($vars{$varname})) {
 				$line->log_warning("${varname} is deprecated. $vars{$varname}");
@@ -1692,7 +1691,7 @@ sub checklines_direct_tools($) {
 		if ($text =~ qr"^#") {
 
 		# process variable assignments
-		} elsif ($text =~ $regex_varassign) {
+		} elsif ($text =~ regex_varassign) {
 			my ($varname, undef, $varvalue) = ($1, $2, $3);
 
 			if ($varname =~ $regex_ok_vars) {
@@ -1761,7 +1760,7 @@ sub checklines_package_Makefile($) {
 			$line->log_warning("Use tab (not spaces) to make indentation.");
 		}
 
-		if ($text =~ $regex_varassign) {
+		if ($text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 
 			if ($varname eq "COMMENT") {
@@ -1797,7 +1796,7 @@ sub checklines_package_Makefile($) {
 			}
 
 			if ($varname eq "SVR4_PKGNAME") {
-				if ($value =~ $regex_unresolved) {
+				if ($value =~ regex_unresolved) {
 					$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
 				} elsif (length($value) > 5) {
 					$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
@@ -1857,7 +1856,7 @@ sub expand_variable($$) {
 	if (defined($pkgdir)) {
 		$value =~ s,\$\{PKGDIR\},$pkgdir,g;
 	}
-	if ($value =~ $regex_unresolved) {
+	if ($value =~ regex_unresolved) {
 		log_subinfo("expand_variable", NO_FILE, NO_LINE_NUMBER, "The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
 	}
 	return $value;
@@ -1866,7 +1865,7 @@ sub expand_variable($$) {
 sub set_default_value($$) {
 	my ($varref, $value) = @_;
 
-	if (!defined(${$varref}) || ${$varref} =~ $regex_unresolved) {
+	if (!defined(${$varref}) || ${$varref} =~ regex_unresolved) {
 		${$varref} = $value;
 	}
 }
@@ -2114,11 +2113,11 @@ sub checkfile_package_Makefile($$$$) {
 	if ($opt_warn_vague && defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
 	}
-	if ($opt_warn_vague && defined($pkgname) && $pkgname !~ $regex_unresolved && $pkgname !~ $regex_pkgname) {
+	if ($opt_warn_vague && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname !~ regex_pkgname) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME should have the form packagename-version, where version consists only of digits, letters and dots.");
 	}
 
-	if ($opt_warn_vague && !defined($pkgname) && defined($distname) && $distname !~ $regex_unresolved && $distname !~ $regex_pkgname) {
+	if ($opt_warn_vague && !defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
 	}
 
@@ -2138,7 +2137,7 @@ sub checkfile_package_Makefile($$$$) {
 	# should be
 	#	DISTNAME=     package-1.0
 	#	EXTRACT_SUFX= .tgz
-	if ($opt_warn_vague && defined($distfiles) && $distfiles !~ $regex_unresolved && $distfiles =~ /^\S+$/) {
+	if ($opt_warn_vague && defined($distfiles) && $distfiles !~ regex_unresolved && $distfiles =~ /^\S+$/) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Seen DISTFILES with single item, checking value.");
 		log_warning(NO_FILE, NO_LINE_NUMBER, "Use of DISTFILES with single file ".
 			"is discouraged. Distribution filename should be set by ".
