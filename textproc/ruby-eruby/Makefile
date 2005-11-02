@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:42 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/02 08:38:20 taca Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ RUBY_HAS_ARCHLIB=	yes
 ERUBY_VERSION=		1.0.5
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${RUBY} configure.rb
-CONFIGURE_ARGS=		--enable-shared \
+CONFIGURE_ARGS+=	--enable-shared \
 			--with-charset="${ERUBY_DEFAULT_CHARSET}"
 INSTALL_TARGET=		site-install
 PLIST_SUBST+=		ERUBY_MAJOR=${ERUBY_MAJOR} \
