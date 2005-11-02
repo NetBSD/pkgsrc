@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:28 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/02 11:09:14 taca Exp $
 #
 
 DISTNAME=	newfile-1.0.14
@@ -12,6 +12,7 @@ COMMENT=	Tool for creating starter files in various languages
 
 NO_BUILD=	yes
 GNU_CONFIGURE=	yes
+USE_RUBY_DIST_SUBDIR=	yes
 
 .include "../../lang/ruby/rubyversion.mk"
 
