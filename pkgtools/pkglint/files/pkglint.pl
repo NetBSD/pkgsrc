@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.319 2005/11/02 20:16:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.320 2005/11/02 21:33:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -575,11 +575,14 @@ my (@options) = (
 );
 
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
+use constant regex_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
 use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
 # Global variables
+my $current_dir;		# The currently checked directory.
+my $is_wip;			# Is the current directory from pkgsrc-wip?
 my $pkgdir;
 my $filesdir;
 my $patchdir;
@@ -590,7 +593,7 @@ my $seen_Makefile_common;
 my $pkgname;
 my @todo_dirs;
 
-sub readmakefile($$$$);
+sub readmakefile($$$);
 sub checkextra($$);
 sub checkorder($$@);
 sub checkearlier($@);
@@ -924,8 +927,8 @@ sub checklines_trailing_empty_lines($) {
 # Subroutines to check a file.
 #
 
-sub checkfile_DESCR($$) {
-	my ($dir, $fname) = @_;
+sub checkfile_DESCR($) {
+	my ($fname) = @_;
 	my ($maxchars, $maxlines) = (80, 24);
 	my ($descr);
 
@@ -953,8 +956,8 @@ sub checkfile_DESCR($$) {
 	}
 }
 
-sub checkfile_distinfo($$) {
-	my ($dir, $fname) = @_;
+sub checkfile_distinfo($) {
+	my ($fname) = @_;
 	my ($lines, %in_distinfo, %sums);
 
 	log_subinfo("checkfile_distinfo", $fname, NO_LINE_NUMBER, undef);
@@ -984,8 +987,8 @@ sub checkfile_distinfo($$) {
 		my ($alg, $file, $sum) = ($1, $2, $3);
 
 		if ($file =~ /^patch-[A-Za-z0-9]+$/) {
-			if (-f "${dir}/${patchdir}/${file}") {
-				open(DIG, "sed '/\\\$NetBSD.*/d' ${dir}/${patchdir}/${file} | digest ${alg} |") or die;
+			if (-f "${current_dir}/${patchdir}/${file}") {
+				open(DIG, "sed '/\\\$NetBSD.*/d' ${current_dir}/${patchdir}/${file} | digest ${alg} |") or die;
 				my $chksum = <DIG>;
 				close(DIG);
 				chomp($chksum);
@@ -1009,7 +1012,7 @@ sub checkfile_distinfo($$) {
 		}
 	}
 
-	foreach my $patch (<${dir}/$patchdir/patch-*>) {
+	foreach my $patch (<${current_dir}/$patchdir/patch-*>) {
 		$patch = basename($patch);
 		if (!exists($in_distinfo{$patch})) {
 			log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '".conf_make." makepatchsum'.");
@@ -1017,8 +1020,8 @@ sub checkfile_distinfo($$) {
 	}
 }
 
-sub checkfile_MESSAGE($$) {
-	my ($dir, $fname) = @_;
+sub checkfile_MESSAGE($) {
+	my ($fname) = @_;
 	my ($message);
 
 	log_subinfo("checkfile_MESSAGE", $fname, NO_LINE_NUMBER, undef);
@@ -1048,8 +1051,8 @@ sub checkfile_MESSAGE($$) {
 	checklines_trailing_empty_lines($message);
 }
 
-sub checkfile_PLIST($$) {
-	my ($dir, $fname) = @_;
+sub checkfile_PLIST($) {
+	my ($fname) = @_;
 	my ($plist, $last_file_seen);
 
 	log_subinfo("checkfile_PLIST", $fname, NO_LINE_NUMBER, undef);
@@ -1147,8 +1150,8 @@ sub checkfile_PLIST($$) {
 	checklines_trailing_empty_lines($plist);
 }
 
-sub checkfile_buildlink3_mk($$) {
-	my ($dir, $fname) = @_;
+sub checkfile_buildlink3_mk($) {
+	my ($fname) = @_;
 	my ($lines);
 
 	log_subinfo("checkfile_buildlink3_mk", $fname, NO_LINE_NUMBER, undef);
@@ -1162,8 +1165,8 @@ sub checkfile_buildlink3_mk($$) {
 	checklines_direct_tools($lines);
 }
 
-sub checkfile_extra($$) {
-	my ($dir, $fname) = @_;
+sub checkfile_extra($) {
+	my ($fname) = @_;
 	my ($lines);
 
 	log_subinfo("checkfile_extra", $fname, NO_LINE_NUMBER, undef);
@@ -1238,8 +1241,8 @@ sub checklines_multiple_patches($) {
 	}
 }
 
-sub checkfile_patches_patch($$) {
-	my ($dir, $fname) = @_;
+sub checkfile_patches_patch($) {
+	my ($fname) = @_;
 	my ($lines);
 
 	log_subinfo("checkfile_patches_patch", $fname, NO_LINE_NUMBER, undef);
@@ -1266,8 +1269,8 @@ sub checkfile_patches_patch($$) {
 	checklines_multiple_patches($lines);
 }
 
-sub readmakefile($$$$) {
-	my ($dir, $file, $all_lines, $seen_Makefile_include) = @_;
+sub readmakefile($$$) {
+	my ($file, $all_lines, $seen_Makefile_include) = @_;
 	my $contents = "";
 	my ($includefile, $dirname, $lines);
 
@@ -1322,13 +1325,13 @@ sub readmakefile($$$$) {
 				# current file and in the current working directory.
 				# We don't have an include dir list, like make(1) does.
 				if (!-f "$dirname/$includefile") {
-					$dirname = $dir;
+					$dirname = $current_dir;
 				}
 				if (!-f "$dirname/$includefile") {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
 					$line->log_info("Including $dirname/$includefile");
-					$contents .= readmakefile($dir, "$dirname/$includefile", $all_lines, $seen_Makefile_include);
+					$contents .= readmakefile("$dirname/$includefile", $all_lines, $seen_Makefile_include);
 				}
 			}
 		} else {
@@ -1470,10 +1473,20 @@ sub checktext_basic_vartype($$$$$) {
 	} elsif ($type eq "Dependency") {
 		if ($value =~ regex_unresolved) {
 			# don't even try to check anything
-		} elsif ($value =~ qr":\.\./\.\./") {
-			# great.
-		} elsif ($value =~ qr":\.\./") {
+		} elsif ($value =~ qr":\.\./\.\./([^/]+)/([^/]+)$") {
+			my ($cat, $pkg) = ($1, $2);
+			
+			if (!$is_wip && $cat eq "wip") {
+				$line->log_error("A pkgsrc package must not depend on any outside package.");
+			}
+
+			if (!-d "${current_dir}/../../${cat}/${pkg}") {
+				$line->log_error("The package ${cat}/${pkg} does not exist.");
+			}
+
+		} elsif ($value =~ qr":\.\./[^/]+$") {
 			$line->log_warning("Dependencies should have the form \"../../category/package\".");
+
 		} else {
 			$line->log_warning("Unknown dependency format.");
 		}
@@ -1730,8 +1743,9 @@ sub checklines_direct_tools($) {
 			}
 
 		# process shell commands
-		} elsif ($text =~ qr"^\t(.*)$") {
-			my ($short_shellcmd, $remaining_shellcmd) = ($1, $1);
+		} elsif ($text =~ regex_shellcmd) {
+			my ($shellcmd) = ($1);
+			my ($short_shellcmd, $remaining_shellcmd) = ($shellcmd, $shellcmd);
 
 			# Remove known legitimate uses from the string
 			$remaining_shellcmd =~ s,$regex_valid_shellcmds,,g;
@@ -1897,14 +1911,14 @@ sub set_default_value($$) {
 	}
 }
 
-sub load_package_Makefile($$$$) {
+sub load_package_Makefile($$$) {
 	my ($subr) = "load_package_Makefile";
-	my ($dir, $fname, $ref_whole, $ref_lines) = @_;
+	my ($fname, $ref_whole, $ref_lines) = @_;
 	my ($whole, $lines);
 
 	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
 
-	$whole = readmakefile($dir, $fname, $lines = [], {});
+	$whole = readmakefile($fname, $lines = [], {});
 	if (!$whole) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
@@ -1950,8 +1964,8 @@ sub load_package_Makefile($$$$) {
 	return true;
 }
 
-sub checkfile_package_Makefile($$$$) {
-	my ($dir, $fname, $rawwhole, $loglines) = @_;
+sub checkfile_package_Makefile($$$) {
+	my ($fname, $rawwhole, $loglines) = @_;
 	my ($distname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
 	my ($abspkgdir, $whole, $tmp, $idx, @sections, @varnames);
@@ -1960,7 +1974,7 @@ sub checkfile_package_Makefile($$$$) {
 
 	checkperms($fname);
 
-	$abspkgdir = Cwd::abs_path($dir);
+	$abspkgdir = Cwd::abs_path($current_dir);
 	$category = basename(dirname($abspkgdir));
 	$whole = "\n${rawwhole}";
 
@@ -1989,24 +2003,21 @@ sub checkfile_package_Makefile($$$$) {
 
 	if (   $whole !~ qr"\nPLIST_SRC"
 	    && $whole !~ qr"\nNO_PKG_REGISTER"
-	    && !-f "$dir/$pkgdir/PLIST"
-	    && !-f "$dir/$pkgdir/PLIST.common") {
+	    && !-f "${current_dir}/$pkgdir/PLIST"
+	    && !-f "${current_dir}/$pkgdir/PLIST.common") {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
 
 	if ($whole =~ qr"\nNO_CHECKSUM") {
-		if (-f "${dir}/${distinfo_file}") {
-			log_warning("${dir}/${distinfo_file}", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
+		if (-f "${current_dir}/${distinfo_file}") {
+			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
 		}
 	} else {
-		if (!-f "${dir}/${distinfo_file}") {
-			log_warning("${dir}/${distinfo_file}", NO_LINE_NUMBER, "File not found. Please run '".conf_make." makesum'.");
+		if (!-f "${current_dir}/${distinfo_file}") {
+			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "File not found. Please run '".conf_make." makesum'.");
 		}
 	}
 
-	if ($whole =~ /\nUSE_PERL[^5]/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "USE_PERL found -- you probably mean USE_PERL5.");
-	}
 	if ($whole =~ /\nUSE_PKGLOCALEDIR/) {
 		$seen_USE_PKGLOCALEDIR = true;
 	}
@@ -2027,13 +2038,6 @@ sub checkfile_package_Makefile($$$$) {
 	}
 
 	checklines_direct_tools($loglines);
-
-	#
-	# whole file: continuation line in DEPENDS
-	#
-	if ($whole =~ /\n(BUILD_|)DEPENDS[^\n]*\\\n/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please don't use continuation lines in (BUILD_)DEPENDS, use (BUILD_)DEPENDS+= instead.");
-	}
 
 	# whole file: check for pkgsrc-wip remnants
 	#
@@ -2325,7 +2329,7 @@ sub checkfile_package_Makefile($$$$) {
 					if ($m[1] =~ /\/$/) {
 						$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Trailing '/' (slash) for directory $m[1] listed in $j.");
 					}
-					if (! -d "$dir/$m[1]") {
+					if (! -d "${current_dir}/$m[1]") {
 						$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No package directory $m[1] found, even though it is listed in $j.");
 					} else {
 						log_info(NO_FILE, NO_LINE_NUMBER, "Package directory $m[1] found.");
@@ -2493,9 +2497,8 @@ sub checkearlier($@) {
 	}
 }
 
-sub checkdir_root($) {
-	my ($dir) = @_;
-	my ($fname) = "${dir}/Makefile";
+sub checkdir_root() {
+	my ($fname) = "${current_dir}/Makefile";
 	my ($lines, $prev_subdir, @subdirs);
 
 	log_subinfo("checkdir_root", $fname, NO_LINE_NUMBER, "Checking pkgsrc root directory.");
@@ -2521,7 +2524,7 @@ sub checkdir_root($) {
 				$line->log_warning("Indentation should be a single tab character.");
 			}
 
-			if ($subdir =~ qr"\$" || !-f "${dir}/${subdir}/Makefile") {
+			if ($subdir =~ qr"\$" || !-f "${current_dir}/${subdir}/Makefile") {
 				next;
 			}
 
@@ -2536,7 +2539,7 @@ sub checkdir_root($) {
 			$prev_subdir = $subdir;
 
 			if ($comment_flag eq "") {
-				push(@subdirs, "${dir}/${subdir}");
+				push(@subdirs, "${current_dir}/${subdir}");
 			}
 		}
 	}
@@ -2546,17 +2549,15 @@ sub checkdir_root($) {
 	}
 }
 
-sub checkdir_category($) {
-	my ($dir) = @_;
-	my $fname = "${dir}/Makefile";
-	my ($lines, $lineno, $is_wip);
+sub checkdir_category() {
+	my $fname = "${current_dir}/Makefile";
+	my ($lines, $lineno);
 
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
 
-	$is_wip = (basename(Cwd::abs_path($dir)) eq "wip");
 	$lineno = 0;
 
 	# The first line must contain the RCS Id
@@ -2599,7 +2600,7 @@ sub checkdir_category($) {
 
 	my (@f_subdirs, @m_subdirs);
 
-	@f_subdirs = sort(get_subdirs($dir));
+	@f_subdirs = sort(get_subdirs($current_dir));
 
 	my $prev_subdir = undef;
 	while ($lineno <= $#{$lines}) {
@@ -2692,7 +2693,7 @@ sub checkdir_category($) {
 			$f_neednext = true;
 			$m_neednext = true;
 			if ($m_recurse) {
-				push(@subdirs, "${dir}/${m_current}");
+				push(@subdirs, "${current_dir}/${m_current}");
 			}
 		}
 	}
@@ -2734,9 +2735,7 @@ sub checkdir_category($) {
 	}
 }
 
-sub checkdir_package($) {
-	my ($dir) = @_;
-
+sub checkdir_package() {
 	my ($whole, $loglines, $have_distinfo, $have_patches);
 
 	$pkgdir			= ".";
@@ -2749,19 +2748,19 @@ sub checkdir_package($) {
 	$pkgname		= undef;
 
 	# we need to handle the Makefile first to get some variables
-	if (!load_package_Makefile($dir, "${dir}/Makefile", \$whole, \$loglines)) {
-		log_error("${dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
+	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$loglines)) {
+		log_error("${current_dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
 
-	my @files = <${dir}/*>;
+	my @files = <${current_dir}/*>;
 	if ($pkgdir ne ".") {
-		push(@files, <${dir}/${pkgdir}/*>);
+		push(@files, <${current_dir}/${pkgdir}/*>);
 	}
-	push(@files, <${dir}/${filesdir}/*>);
-	push(@files, <${dir}/${patchdir}/*>);
+	push(@files, <${current_dir}/${filesdir}/*>);
+	push(@files, <${current_dir}/${patchdir}/*>);
 	if ($distinfo_file !~ qr"^(?:\./)?distinfo$") {
-		push(@files, "${dir}/${distinfo_file}");
+		push(@files, "${current_dir}/${distinfo_file}");
 	}
 	$have_distinfo = false;
 	$have_patches = false;
@@ -2774,34 +2773,34 @@ sub checkdir_package($) {
 		} elsif (!-f $f) {
 			# We don't have a check for non-regular files yet.
 
-		} elsif ($f eq "${dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($dir, $f, $whole, $loglines);
+		} elsif ($f eq "${current_dir}/Makefile") {
+			$opt_check_Makefile and checkfile_package_Makefile($f, $whole, $loglines);
 
 		} elsif ($f =~ qr"/buildlink3.mk$") {
-			$opt_check_bl3 and checkfile_buildlink3_mk($dir, $f);
+			$opt_check_bl3 and checkfile_buildlink3_mk($f);
 
 		} elsif ($f =~ qr"/DESCR[^/]*$") {
-			$opt_check_DESCR and checkfile_DESCR($dir, $f);
+			$opt_check_DESCR and checkfile_DESCR($f);
 
 		} elsif ($f =~ qr"/distinfo$") {
 			$have_distinfo = true;
-			$opt_check_distinfo and checkfile_distinfo($dir, $f);
+			$opt_check_distinfo and checkfile_distinfo($f);
 
 		} elsif ($f =~ qr"/MESSAGE[^/]*$") {
-			$opt_check_MESSAGE and checkfile_MESSAGE($dir, $f);
+			$opt_check_MESSAGE and checkfile_MESSAGE($f);
 
 		} elsif ($f =~ qr"/PLIST[^/]*$") {
-			$opt_check_PLIST and checkfile_PLIST($dir, $f);
+			$opt_check_PLIST and checkfile_PLIST($f);
 
 		} elsif ($f =~ qr"/patches/patch-[A-Za-z0-9]*$") {
 			$have_patches = true;
-			$opt_check_patches and checkfile_patches_patch($dir, $f);
+			$opt_check_patches and checkfile_patches_patch($f);
 
 		} elsif ($f =~ qr"/patches/[^/]*$") {
 			log_warning($f, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
 
 		} elsif (-T $f) {
-			$opt_check_extra and checkfile_extra($dir, $f);
+			$opt_check_extra and checkfile_extra($f);
 
 		} else {
 			log_warning($f, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
@@ -2810,27 +2809,30 @@ sub checkdir_package($) {
 
 	if ($opt_check_distinfo && $opt_check_patches) {
 		if ($have_patches && ! $have_distinfo) {
-			log_warning("$dir/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '".conf_make." makepatchsum'.");
+			log_warning("${current_dir}/$distinfo_file", NO_LINE_NUMBER, "File not found. Please run '".conf_make." makepatchsum'.");
 		}
 	}
 
-	if (!is_emptydir("$dir/scripts")) {
-		log_warning("$dir/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
+	if (!is_emptydir("${current_dir}/scripts")) {
+		log_warning("${current_dir}/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
 }
 
 sub checkdir($) {
 	my ($dir) = @_;
 
+	$current_dir = Cwd::abs_path($dir);
+	$is_wip = (($current_dir =~ qr"/wip(?:/|$)") ? true : false);
+
 	if (-f "${dir}/../../mk/bsd.pkg.mk") {
-		checkdir_package($dir);
+		checkdir_package();
 
 	} elsif (-f "${dir}/../mk/bsd.pkg.mk") {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
-		checkdir_category($dir);
+		checkdir_category();
 
 	} elsif (-f "${dir}/mk/bsd.pkg.mk") {
-		checkdir_root($dir);
+		checkdir_root();
 
 	} else {
 		log_error($dir, NO_LINE_NUMBER, "Not a pkgsrc directory.");
