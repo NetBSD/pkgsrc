@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/09/26 15:04:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/02 15:54:04 tv Exp $
 #
 
 DISTNAME=	awka-0.7.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang devel
 MASTER_SITES=	http://awka.sourceforge.net/
 
