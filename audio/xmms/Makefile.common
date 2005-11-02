@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/06/01 18:02:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/11/02 15:20:51 joerg Exp $
 #
 
 DISTNAME=	xmms-1.2.10
@@ -70,7 +70,7 @@ PLIST_SUBST+=	LIBAUDIO=libOSS
 # to build the OSS module. explicitly turn it off for all platforms
 # except those which support OSS.
 .if ${OPSYS} != "FreeBSD" && ${OPSYS} != "Linux" && ${OPSYS} != "NetBSD" && \
-	${OPSYS} != "OpenBSD"
+	${OPSYS} != "OpenBSD" && ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--disable-oss
 .endif
 
