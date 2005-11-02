@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/10/25 04:15:49 taca Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/02 11:35:15 taca Exp $
 
 DISTNAME=	amrita-1.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc ruby www
 MASTER_SITES=	http://www.brain-tokyo.jp/research/amrita/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.brain-tokyo.jp/research/amrita/
+HOMEPAGE=	http://amrita.sourceforge.jp/
 COMMENT=	HTML/XHTML template library for Ruby
 
 CONFLICTS+=	ruby[1-9][0-9]-amrita-*
