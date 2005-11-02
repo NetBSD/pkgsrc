@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/04/19 15:24:01 taca Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/02 09:35:42 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
-PKGREVISION=	3
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -12,15 +11,12 @@ HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Ruby programming language ${RUBY_VERSION} meta package
 
 DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../../lang/ruby18-base
-DEPENDS+= ${RUBY_PKGPREFIX}-iconv>=${RUBY_VERSION}nb1:../../converters/ruby-iconv
-DEPENDS+= ${RUBY_PKGPREFIX}-dbm>=${RUBY_VERSION}nb1:../../databases/ruby-dbm
-DEPENDS+= ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}nb1:../../databases/ruby-gdbm
-DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION}nb1:../../devel/ruby-curses
-DEPENDS+= ${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION}nb1:../../devel/ruby-readline
-DEPENDS+= ${RUBY_PKGPREFIX}-digest>=${RUBY_VERSION}nb1:../../security/ruby-digest
-DEPENDS+= ${RUBY_PKGPREFIX}-openssl>=${RUBY_VERSION}nb1:../../security/ruby-openssl
-DEPENDS+= ${RUBY_PKGPREFIX}-tcltklib>=${RUBY_VERSION}nb1:../../x11/ruby-tcltklib
-DEPENDS+= ${RUBY_PKGPREFIX}-tk>=${RUBY_VERSION}nb1:../../x11/ruby-tk
+DEPENDS+= ${RUBY_PKGPREFIX}-iconv>=${RUBY_VERSION}:../../converters/ruby-iconv
+DEPENDS+= ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
+DEPENDS+= ${RUBY_PKGPREFIX}-curses>=${RUBY_VERSION}:../../devel/ruby-curses
+DEPENDS+= ${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION}:../../devel/ruby-readline
+DEPENDS+= ${RUBY_PKGPREFIX}-tcltklib>=${RUBY_VERSION}:../../x11/ruby-tcltklib
+DEPENDS+= ${RUBY_PKGPREFIX}-tk>=${RUBY_VERSION}:../../x11/ruby-tk
 
 RUBY_VERSION=		${RUBY18_VERSION}
 NO_CHECKSUM=		yes
