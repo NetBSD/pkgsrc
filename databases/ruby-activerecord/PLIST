@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/04 14:00:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/02 14:18:31 taca Exp $
 ${RUBY_SITELIBDIR}/active_record.rb
 ${RUBY_SITELIBDIR}/active_record/acts/list.rb
 ${RUBY_SITELIBDIR}/active_record/acts/nested_set.rb
@@ -13,6 +13,11 @@ ${RUBY_SITELIBDIR}/active_record/associations/has_many_association.rb
 ${RUBY_SITELIBDIR}/active_record/associations/has_one_association.rb
 ${RUBY_SITELIBDIR}/active_record/base.rb
 ${RUBY_SITELIBDIR}/active_record/callbacks.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/connection_specification.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/database_statements.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/quoting.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/schema_definitions.rb
+${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract/schema_statements.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract_adapter.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/db2_adapter.rb
 ${RUBY_SITELIBDIR}/active_record/connection_adapters/mysql_adapter.rb
@@ -28,6 +33,8 @@ ${RUBY_SITELIBDIR}/active_record/migration.rb
 ${RUBY_SITELIBDIR}/active_record/observer.rb
 ${RUBY_SITELIBDIR}/active_record/query_cache.rb
 ${RUBY_SITELIBDIR}/active_record/reflection.rb
+${RUBY_SITELIBDIR}/active_record/schema.rb
+${RUBY_SITELIBDIR}/active_record/schema_dumper.rb
 ${RUBY_SITELIBDIR}/active_record/timestamp.rb
 ${RUBY_SITELIBDIR}/active_record/transactions.rb
 ${RUBY_SITELIBDIR}/active_record/validations.rb
@@ -35,14 +42,17 @@ ${RUBY_SITELIBDIR}/active_record/vendor/db2.rb
 ${RUBY_SITELIBDIR}/active_record/vendor/mysql.rb
 ${RUBY_SITELIBDIR}/active_record/vendor/mysql411.rb
 ${RUBY_SITELIBDIR}/active_record/vendor/simple.rb
+${RUBY_SITELIBDIR}/active_record/version.rb
 ${RUBY_SITELIBDIR}/active_record/wrappers/yaml_wrapper.rb
 ${RUBY_SITELIBDIR}/active_record/wrappings.rb
+${RUBY_DOCDIR}/active_record/CHANGELOG
 ${RUBY_DOCDIR}/active_record/README
 @dirrm ${RUBY_DOCDIR}/active_record
 @dirrm ${RUBY_SITELIBDIR}/active_record/wrappers
 @dirrm ${RUBY_SITELIBDIR}/active_record/vendor
 @exec ${MKDIR} ${RUBY_SITELIBDIR}/active_record/support
 @dirrm ${RUBY_SITELIBDIR}/active_record/support
+@dirrm ${RUBY_SITELIBDIR}/active_record/connection_adapters/abstract
 @dirrm ${RUBY_SITELIBDIR}/active_record/connection_adapters
 @dirrm ${RUBY_SITELIBDIR}/active_record/associations
 @dirrm ${RUBY_SITELIBDIR}/active_record/acts

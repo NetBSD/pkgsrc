@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/09/04 14:00:05 taca Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 14:18:31 taca Exp $
 
-DISTNAME=	activerecord-1.11.1
+DISTNAME=	activerecord-1.12.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/5164/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/6569/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -16,11 +16,11 @@ NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_RUBY_INSTALL=	yes
 
-.include "../../lang/ruby/modules.mk"
-
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/active_record/support
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/active_record
+	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${RUBY_DOCDIR}/active_record
 	${INSTALL_DATA} ${WRKSRC}/README ${RUBY_DOCDIR}/active_record
 
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
