@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.11 2005/10/16 15:09:46 taca Exp $
+# $NetBSD: modules.mk,v 1.12 2005/11/02 07:44:24 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -31,7 +31,7 @@ CONFIGURE_ENV+=		RUBY=${RUBY} RDOC=${RDOC}
 
 RUBY_EXTCONF?=		extconf.rb
 INSTALL_TARGET?=	site-install
-CONFIGURE_ARGS+=	--with-opt-dir="${LOCALBASE}"
+CONFIGURE_ARGS+=	--with-opt-dir="${PREFIX}"
 RUBY_EXTCONF_CHECK?=	yes
 RUBY_EXTCONF_MAKEFILE?=	Makefile
 
@@ -141,20 +141,20 @@ ruby-simple-install:
 .include "replace.mk"
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIBDIR:S|${LOCALBASE}/||:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIBDIR:S|${LOCALBASE}/||:S|/|\\/|g}/ \
-			{ gsub(/${RUBY_SITELIBDIR:S|${LOCALBASE}/||:S|/|\\/|g}/, "$${RUBY_SITELIBDIR}"); \
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_SITELIBDIR}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_DOCDIR:S|${LOCALBASE}/||:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_DOCDIR:S|${LOCALBASE}/||:S|/|\\/|g}/ \
-			{ gsub(/${RUBY_DOCDIR:S|${LOCALBASE}/||:S|/|\\/|g}/, "$${RUBY_DOCDIR}"); \
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_DOCDIR}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_EXAMPLESDIR:S|${LOCALBASE}/||:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_EXAMPLESDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_EXAMPLESDIR:S|${LOCALBASE}/||:S|/|\\/|g}/ \
-			{ gsub(/${RUBY_EXAMPLESDIR:S|${LOCALBASE}/||:S|/|\\/|g}/, "$${RUBY_EXAMPLESDIR}"); \
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_EXAMPLESDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_EXAMPLESDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_EXAMPLESDIR}"); \
 			print; next; }
 
 .endif
