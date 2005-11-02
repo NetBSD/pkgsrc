@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/02 09:48:33 taca Exp $
 
 DISTNAME=	filelock-0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel ruby
 MASTER_SITES=	ftp://ftp.ruby-lang.org/pub/ruby/contrib/
 
