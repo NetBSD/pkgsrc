@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4131 2005/11/02 04:15:54 minskim Exp $
+$NetBSD: TODO,v 1.4132 2005/11/02 09:26:50 dillo Exp $
 
 Suggested new packages
 ======================
@@ -677,7 +677,6 @@ Suggested package updates
 	o lbdb-0.31
 	o lcab-1.0b11
 	o lcc-4.2
-	o level9-4.0
 	o lftp-3.3.3
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
