@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/02 14:18:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/02 14:28:45 taca Exp $
 ${RUBY_SITELIBDIR}/active_record.rb
 ${RUBY_SITELIBDIR}/active_record/acts/list.rb
 ${RUBY_SITELIBDIR}/active_record/acts/nested_set.rb
@@ -57,3 +57,8 @@ ${RUBY_DOCDIR}/active_record/README
 @dirrm ${RUBY_SITELIBDIR}/active_record/associations
 @dirrm ${RUBY_SITELIBDIR}/active_record/acts
 @dirrm ${RUBY_SITELIBDIR}/active_record
+${RUBY_EXAMPLESDIR}/activerecord/associations.png
+${RUBY_EXAMPLESDIR}/activerecord/associations.rb
+${RUBY_EXAMPLESDIR}/activerecord/shared_setup.rb
+${RUBY_EXAMPLESDIR}/activerecord/validation.rb
+@dirrm ${RUBY_EXAMPLESDIR}/activerecord
