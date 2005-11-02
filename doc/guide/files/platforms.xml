@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.19 2005/11/01 17:19:09 tv Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.20 2005/11/02 21:52:15 tv Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -322,7 +322,7 @@
 
 	<itemizedlist>
 
-	  <listitem><emphasis role="strong">X-Windows:</emphasis>
+	  <listitem><para><emphasis role="strong">X-Windows:</emphasis></para>
 	    <para>Interix comes with the standard set of X11R6 client libraries,
 	    and can run X-Windows based applications, but it does
 	    <emphasis>not</emphasis> come with an X server.  Some options are
@@ -337,7 +337,7 @@
 	    <ulink url="http://www.starnet.com/xwin32LX/get_xwin32LX.htm">X-Win32 LX</ulink>,
 	    recommended by the maintainer of Interix pkgsrc support.</para></listitem>
 
-	  <listitem><emphasis role="strong">X-Windows acceleration:</emphasis>
+	  <listitem><para><emphasis role="strong">X-Windows acceleration:</emphasis></para>
 	    <para>Because Interix runs in a completely different NT subsystem from
 	    Win32 applications, it does not currently support various X11
 	    protocol extensions for acceleration (such as MIT-SHM or DGA).
@@ -345,7 +345,7 @@
 	    reasonably fast, but full motion video and other graphics
 	    intensive applications may require a faster-than-expected CPU.</para></listitem>
 
-	  <listitem><emphasis role="strong">Audio:</emphasis>
+	  <listitem><para><emphasis role="strong">Audio:</emphasis></para>
 	    <para>Interix has no native support for audio output.  For audio
 	    support, pkgsrc uses the <command>esound</command> client/server
 	    audio system on Interix.  Unlike on most platforms, the
@@ -355,14 +355,14 @@
 	    <filename role="pkg">emulators/cygwin_esound</filename> package
 	    must also be installed.</para></listitem>
 
-	  <listitem><emphasis role="strong">CD/DVDs, USB, and SCSI:</emphasis>
+	  <listitem><para><emphasis role="strong">CD/DVDs, USB, and SCSI:</emphasis></para>
 	    <para>Direct device access is not currently supported in Interix, so it
 	    is not currently possible to access CD/DVD drives, USB devices,
 	    or SCSI devices through non-filesystem means.  Among other things,
 	    this makes it impossible to use Interix directly for CD/DVD
 	    burning.</para></listitem>
 
-	  <listitem><emphasis role="strong">Tape drives:</emphasis>
+	  <listitem><para><emphasis role="strong">Tape drives:</emphasis></para>
 	    <para>Due to the same limitations as for CD-ROMs and SCSI devices, tape
 	    drives are also not directly accessible in Interix.  However,
 	    support is in work to make tape drive access possible by using
