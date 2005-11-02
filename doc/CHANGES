@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11755 2005/11/02 09:14:33 taca Exp $
+$NetBSD: CHANGES,v 1.11756 2005/11/02 10:52:12 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4970,3 +4970,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed devel/ruby-zlib [taca 2005-11-02]
 	Removed security/ruby-digest [taca 2005-11-02]
 	Removed security/ruby-openssl [taca 2005-10-02]
+	Updated www/php4 to 4.4.1nb1 [tron 2005-11-02]
