@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2005/11/02 09:01:50 taca Exp $
+# $NetBSD: Makefile,v 1.253 2005/11/02 09:20:51 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -203,8 +203,8 @@ SUBDIR+=	rc5des
 SUBDIR+=	rid
 SUBDIR+=	rsaref
 SUBDIR+=	ruby-tcpwrap
-SUBDIR+=	ruby16-digest
-SUBDIR+=	ruby16-openssl
+#SUBDIR+=	ruby16-digest
+#SUBDIR+=	ruby16-openssl
 SUBDIR+=	scanssh
 SUBDIR+=	seahorse
 SUBDIR+=	secpanel
