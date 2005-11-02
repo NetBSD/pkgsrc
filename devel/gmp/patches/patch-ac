@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2005/10/21 15:46:43 jschauma Exp $
+$NetBSD: patch-ac,v 1.5 2005/11/02 04:38:43 hiramatsu Exp $
 
---- configure.orig	Fri Oct 21 10:52:28 2005
-+++ configure	Fri Oct 21 10:52:20 2005
+--- configure.orig	Tue Sep 21 22:06:47 2004
++++ configure	Wed Nov  2 09:15:07 2005
 @@ -2269,7 +2269,7 @@
  echo "include_mpn(\`mips32/mips-defs.m4')" >> $gmp_tmpconfigm4i
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2005/10/21 15:46:43 jschauma Exp $
          abilist="n32 64 o32"
  
          cclist_n32="gcc cc"
-@@ -2844,7 +2844,7 @@
+@@ -2844,14 +2844,14 @@
    ac_status=$?
    echo "$as_me:2845: \$? = $ac_status" >&5
    (exit $ac_status); }; then
@@ -20,7 +20,6 @@ $NetBSD: patch-ac,v 1.4 2005/10/21 15:46:43 jschauma Exp $
    echo "$as_me:2848: checking whether $cc is gcc" >&5
  echo $ECHO_N "checking whether $cc is gcc... $ECHO_C" >&6
    echo "$as_me:2850: result: yes" >&5
-@@ -2851,7 +2851,7 @@
  echo "${ECHO_T}yes" >&6
    ccbase=gcc
  else
@@ -376,3 +375,17 @@ $NetBSD: patch-ac,v 1.4 2005/10/21 15:46:43 jschauma Exp $
  
  fi
  echo "$as_me:19964: result: $gmp_cv_asm_x86_shldl_cl" >&5
+@@ -20052,13 +20052,6 @@
+ echo "${ECHO_T}determined" >&6
+ 
+       fi
+-      case $host in
+-        *-*-openbsd*)
+-
+-echo 'define(<_GLOBAL_OFFSET_TABLE_>, <__GLOBAL_OFFSET_TABLE_>)' >>$gmp_tmpconfigm4
+-
+-          ;;
+-      esac
+       ;;
+   esac
+ fi
