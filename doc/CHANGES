@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11760 2005/11/02 14:44:17 gendalia Exp $
+$NetBSD: CHANGES,v 1.11761 2005/11/02 15:11:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4976,3 +4976,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/rake to 0.6.2 [taca 2005-11-02]
 	Updated devel/ruby-activesupport to 1.2.1 [taca 2005-11-02]
 	Updated net/openafs to 1.4.0 [gendalia 2005-11-02]
+	Updated databases/ruby-activerecord to 1.12.1 [taca 2005-11-02]
+	Updated www/ruby-actionpack to 1.10.1 [taca 2005-11-02]
+	Updated mail/ruby-actionmailer to 1.1.1 [taca 2005-11-02]
