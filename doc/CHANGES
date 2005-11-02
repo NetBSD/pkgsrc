@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11761 2005/11/02 15:11:06 taca Exp $
+$NetBSD: CHANGES,v 1.11762 2005/11/02 16:26:21 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4979,3 +4979,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/ruby-activerecord to 1.12.1 [taca 2005-11-02]
 	Updated www/ruby-actionpack to 1.10.1 [taca 2005-11-02]
 	Updated mail/ruby-actionmailer to 1.1.1 [taca 2005-11-02]
+	Updated x11/tk to 8.4.11nb2 [root 2005-11-02]
