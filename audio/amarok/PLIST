@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/10/12 11:15:30 seb Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/11/02 00:20:38 seb Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
@@ -27,28 +27,37 @@ share/doc/kde/HTML/de/amarok/collection.png
 share/doc/kde/HTML/de/amarok/common
 share/doc/kde/HTML/de/amarok/config.docbook
 share/doc/kde/HTML/de/amarok/config_appearance.png
+share/doc/kde/HTML/de/amarok/config_collection.png
 share/doc/kde/HTML/de/amarok/config_engine.png
 share/doc/kde/HTML/de/amarok/config_general.png
 share/doc/kde/HTML/de/amarok/config_osd.png
 share/doc/kde/HTML/de/amarok/config_playback.png
+share/doc/kde/HTML/de/amarok/config_scrobbler.png
 share/doc/kde/HTML/de/amarok/context.png
 share/doc/kde/HTML/de/amarok/coverman.png
 share/doc/kde/HTML/de/amarok/develop.docbook
+share/doc/kde/HTML/de/amarok/dynamic_mode1.png
+share/doc/kde/HTML/de/amarok/dynamic_mode2.png
+share/doc/kde/HTML/de/amarok/equalizer.png
 share/doc/kde/HTML/de/amarok/faq.docbook
 share/doc/kde/HTML/de/amarok/file_browser.png
 share/doc/kde/HTML/de/amarok/hidden.docbook
 share/doc/kde/HTML/de/amarok/index.cache.bz2
 share/doc/kde/HTML/de/amarok/index.docbook
+share/doc/kde/HTML/de/amarok/logo.png
+share/doc/kde/HTML/de/amarok/media_device.png
 share/doc/kde/HTML/de/amarok/menubar.png
+share/doc/kde/HTML/de/amarok/musicbrainz.png
 share/doc/kde/HTML/de/amarok/pl_browser.png
 share/doc/kde/HTML/de/amarok/pl_tip1.png
 share/doc/kde/HTML/de/amarok/play_list.png
 share/doc/kde/HTML/de/amarok/player_window.png
 share/doc/kde/HTML/de/amarok/playlist_window.png
+share/doc/kde/HTML/de/amarok/queue_manager.png
 share/doc/kde/HTML/de/amarok/quick.docbook
 share/doc/kde/HTML/de/amarok/requirements.docbook
 share/doc/kde/HTML/de/amarok/rmb_menu.png
-share/doc/kde/HTML/de/amarok/search.png
+share/doc/kde/HTML/de/amarok/script_manager.png
 share/doc/kde/HTML/de/amarok/status_bar.png
 share/doc/kde/HTML/de/amarok/using.docbook
 share/doc/kde/HTML/de/amarok/vis_window.png
@@ -335,6 +344,7 @@ share/kde/apps/amarok/images/volumeslider-inset.png
 share/kde/apps/amarok/images/wizard_compact.png
 share/kde/apps/amarok/images/wizard_xmms.png
 share/kde/apps/amarok/images/xine_logo.png
+share/kde/apps/amarok/scripts/alarm/COPYING
 share/kde/apps/amarok/scripts/alarm/README
 share/kde/apps/amarok/scripts/alarm/alarm.py
 share/kde/apps/amarok/scripts/amarok_live/README
