@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.1 2005/10/31 21:34:24 reed Exp $	*/
+/*	$NetBSD: job.c,v 1.2 2005/11/02 18:16:04 tv Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.1 2005/10/31 21:34:24 reed Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.2 2005/11/02 18:16:04 tv Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.1 2005/10/31 21:34:24 reed Exp $");
+__RCSID("$NetBSD: job.c,v 1.2 2005/11/02 18:16:04 tv Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -1109,7 +1109,7 @@ JobFinish (Job *job, WAIT_T status)
 #endif
 	    (void)fflush(out);
 	    return;
-	} else if (WIFSTOPPED(status) &&  WTERMSIG(status) == SIGCONT) {
+	} else if (WIFSTOPPED(status) &&  WSTOPSIG(status) == SIGCONT) {
 	    /*
 	     * If the beastie has continued, shift the Job from the stopped
 	     * list to the running one (or re-stop it if concurrency is
