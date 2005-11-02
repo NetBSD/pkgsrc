@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.21 2005/11/01 21:39:31 rillig Exp $
+# $NetBSD: makevars.map,v 1.22 2005/11/02 20:16:02 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -45,6 +45,7 @@ USE_XFACE		YesNo
 
 # some variables found in package Makefiles
 
+CATEGORIES		List* of Category
 PKGREVISION		PkgRevision
 GNU_CONFIGURE		Yes
 HOMEPAGE		URL
@@ -74,7 +75,7 @@ CONFIGURE_ENV		List
 MAKE_FLAGS		List
 CONFIGURE_ARGS		List
 PLIST_SUBST		List
-MASTER_SITES		List of URL
+MASTER_SITES		List* of URL
 USE_TOOLS		List of Tool
 
 PKGVERSION		Readonly

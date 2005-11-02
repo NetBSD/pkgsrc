@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.318 2005/11/02 19:00:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.319 2005/11/02 20:16:02 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -691,7 +691,7 @@ sub load_make_vars_typemap() {
 		if ($line->text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
 
-		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_ ]+)$") {
+		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_* ]+)$") {
 			$vartypes->{$1} = $2;
 
 		} else {
@@ -1440,7 +1440,34 @@ sub get_tool_names() {
 sub checktext_basic_vartype($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 
-	if ($type eq "Dependency") {
+	if ($type eq "Category") {
+		my $allowed_categories = join("|", qw(
+			archivers audio
+			benchmarks biology
+			cad chat chinese comms converters cross crosspkgtools
+			databases devel
+			editors emulators
+			finance fonts
+			games geography gnome gnustep graphics
+			ham
+			inputmethod
+			japanese java
+			kde korean
+			lang
+			mail math mbone meta-pkgs misc multimedia
+			net news
+			packages parallel perl5 pkgtools plan9 print python
+			ruby
+			security shells sysutils
+			tcl textproc time tk
+			windowmaker wm www
+			x11 xmms
+		));
+		if ($value !~ qr"^(?:${allowed_categories})$") {
+			$line->log_error("Invalid category \"${value}\".");
+		}
+
+	} elsif ($type eq "Dependency") {
 		if ($value =~ regex_unresolved) {
 			# don't even try to check anything
 		} elsif ($value =~ qr":\.\./\.\./") {
@@ -1545,11 +1572,11 @@ sub checkline_Makefile_vartype($$) {
 		if (!defined($type)) {
 			$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}");
 
-		} elsif ($type =~ qr"^List(?: of (.*))?$") {
-			my ($element_type) = ($1);
+		} elsif ($type =~ qr"^List(\*?)(?: of (.*))?$") {
+			my ($append_only, $element_type) = ($1 eq "", $2);
 			my (@values) = split(qr"\s+", $value); # XXX: This may be too simple
 
-			if ($op ne "+=" && !($value eq "" && defined($comment) && $comment =~ qr"^#") && $varname ne "MASTER_SITES") {
+			if ($append_only && $op ne "+=" && !($value eq "" && defined($comment) && $comment =~ qr"^#")) {
 				$line->log_warning("${varname} should be modified using \"+=\".");
 			}
 
