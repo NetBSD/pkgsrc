@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:15 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/02 08:57:35 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -12,6 +12,7 @@ HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby extension to DBM library
 
 RUBY_HAS_ARCHLIB=	yes
+RUBY_VERSION=		${RUBY16_VERSION}
 USE_RUBY_EXTCONF=	yes
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
 WRKSRC=			${RUBY_WRKSRC}/ext/dbm
