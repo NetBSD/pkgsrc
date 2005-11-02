@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/09/04 14:12:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/02 15:07:46 taca Exp $
 ${RUBY_SITELIBDIR}/action_mailer.rb
 ${RUBY_SITELIBDIR}/action_mailer/adv_attr_accessor.rb
 ${RUBY_SITELIBDIR}/action_mailer/base.rb
@@ -9,32 +9,10 @@ ${RUBY_SITELIBDIR}/action_mailer/part_container.rb
 ${RUBY_SITELIBDIR}/action_mailer/quoting.rb
 ${RUBY_SITELIBDIR}/action_mailer/utils.rb
 ${RUBY_SITELIBDIR}/action_mailer/vendor/text/format.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/address.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/attachments.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/base64.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/config.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/encode.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/facade.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/header.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/info.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/loader.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/mail.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/mailbox.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/mbox.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/net.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/obsolete.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/parser.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/port.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/quoting.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/scanner.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/scanner_r.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/stringio.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/tmail.rb
-${RUBY_SITELIBDIR}/action_mailer/vendor/tmail/utils.rb
-${RUBY_DOCDIR}/action_mailer/README
-@dirrm ${RUBY_DOCDIR}/action_mailer
-@dirrm ${RUBY_SITELIBDIR}/action_mailer/vendor/tmail
+${RUBY_SITELIBDIR}/action_mailer/version.rb
+${RUBY_DOCDIR}/actionmailer/CHANGELOG
+${RUBY_DOCDIR}/actionmailer/README
+@dirrm ${RUBY_DOCDIR}/actionmailer
 @dirrm ${RUBY_SITELIBDIR}/action_mailer/vendor/text
 @dirrm ${RUBY_SITELIBDIR}/action_mailer/vendor
 @dirrm ${RUBY_SITELIBDIR}/action_mailer
