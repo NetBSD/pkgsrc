@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/23 17:37:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/11/02 08:59:42 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/tkutil.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/multi-tk.rb
 ${RUBY_SITELIBDIR}/remote-tk.rb
@@ -250,14 +250,25 @@ ${RUBY_SITELIBDIR}/tkextlib/tcllib/style.rb
 ${RUBY_SITELIBDIR}/tkextlib/tclx/setup.rb
 ${RUBY_SITELIBDIR}/tkextlib/tclx/tclx.rb
 @dirrm ${RUBY_SITELIBDIR}/tkextlib/tclx
-${RUBY_SITELIBDIR}/tkextlib/tile/tbutton.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/setup.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/style.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tbutton.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/tcheckbutton.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tcombobox.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tentry.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tframe.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/tlabel.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tlabelframe.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/tmenubutton.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/tnotebook.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tpaned.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tprogressbar.rb
 ${RUBY_SITELIBDIR}/tkextlib/tile/tradiobutton.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/treeview.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tscale.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tscrollbar.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tseparator.rb
+${RUBY_SITELIBDIR}/tkextlib/tile/tsquare.rb
 @dirrm ${RUBY_SITELIBDIR}/tkextlib/tile
 ${RUBY_SITELIBDIR}/tkextlib/tkDND/setup.rb
 ${RUBY_SITELIBDIR}/tkextlib/tkDND/shape.rb
@@ -305,6 +316,7 @@ ${RUBY_SITELIBDIR}/tkextlib/winico/setup.rb
 @dirrm ${RUBY_SITELIBDIR}/tkextlib/winico
 ${RUBY_SITELIBDIR}/tkextlib/SUPPORT_STATUS
 @dirrm ${RUBY_SITELIBDIR}/tkextlib
+${RUBY_EXAMPLESDIR}/tk/cd_timer.rb
 ${RUBY_EXAMPLESDIR}/tk/binding_sample.rb
 ${RUBY_EXAMPLESDIR}/tk/bindtag_sample.rb
 ${RUBY_EXAMPLESDIR}/tk/binstr_usage.rb
@@ -316,6 +328,8 @@ ${RUBY_EXAMPLESDIR}/tk/demos-en/ChangeLog.prev
 ${RUBY_EXAMPLESDIR}/tk/demos-en/README
 ${RUBY_EXAMPLESDIR}/tk/demos-en/README.1st
 ${RUBY_EXAMPLESDIR}/tk/demos-en/README.tkencoding
+${RUBY_EXAMPLESDIR}/tk/demos-en/anilabel.rb
+${RUBY_EXAMPLESDIR}/tk/demos-en/aniwave.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/arrow.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/bind.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/bitmap.rb
@@ -343,6 +357,7 @@ ${RUBY_EXAMPLESDIR}/tk/demos-en/filebox.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/floor.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/floor2.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/form.rb
+${RUBY_EXAMPLESDIR}/tk/demos-en/goldberg.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/hello
 ${RUBY_EXAMPLESDIR}/tk/demos-en/hscale.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/icon.rb
@@ -361,6 +376,7 @@ ${RUBY_EXAMPLESDIR}/tk/demos-en/msgbox.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/paned1.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/paned2.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/patch_1.1c1
+${RUBY_EXAMPLESDIR}/tk/demos-en/pendulum.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/plot.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/puzzle.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-en/radio.rb
@@ -388,6 +404,8 @@ ${RUBY_EXAMPLESDIR}/tk/demos-en/widget
 @dirrm ${RUBY_EXAMPLESDIR}/tk/demos-en
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/README
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/README.1st
+${RUBY_EXAMPLESDIR}/tk/demos-jp/anilabel.rb
+${RUBY_EXAMPLESDIR}/tk/demos-jp/aniwave.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/arrow.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/bind.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/bitmap.rb
@@ -415,6 +433,7 @@ ${RUBY_EXAMPLESDIR}/tk/demos-jp/filebox.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/floor.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/floor2.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/form.rb
+${RUBY_EXAMPLESDIR}/tk/demos-jp/goldberg.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/hello
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/hscale.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/icon.rb
@@ -433,6 +452,7 @@ ${RUBY_EXAMPLESDIR}/tk/demos-jp/menubu.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/msgbox.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/paned1.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/paned2.rb
+${RUBY_EXAMPLESDIR}/tk/demos-jp/pendulum.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/plot.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/puzzle.rb
 ${RUBY_EXAMPLESDIR}/tk/demos-jp/radio.rb
@@ -472,6 +492,7 @@ ${RUBY_EXAMPLESDIR}/tk/images/pattern.xbm
 ${RUBY_EXAMPLESDIR}/tk/images/tcllogo.gif
 ${RUBY_EXAMPLESDIR}/tk/images/teapot.ppm
 @dirrm ${RUBY_EXAMPLESDIR}/tk/images
+${RUBY_EXAMPLESDIR}/tk/irbtk.rb
 ${RUBY_EXAMPLESDIR}/tk/iso2022-kr.txt
 ${RUBY_EXAMPLESDIR}/tk/menubar1.rb
 ${RUBY_EXAMPLESDIR}/tk/menubar2.rb
@@ -531,6 +552,28 @@ ${RUBY_EXAMPLESDIR}/tk/tkextlib/ICONS/tkIcons-sample.kde
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/ICONS/tkIcons.kde
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/ICONS/viewIcons.rb
 @dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/ICONS
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/barchart5.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/calendar.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/graph6.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/graph7.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/graph7a.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/graph7b.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/graph7c.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/images/buckskin.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/images/chalk.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/images/qv100.t.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/images/rain.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/images/sample.gif
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/images
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/pareto.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/plot1.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/plot1b.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/readme.txt
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/scripts/stipples.rb
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/scripts
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/winop1.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/blt/winop2.rb
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/blt
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/bwidget/Orig_LICENSE.txt
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/bwidget/basic.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/bwidget/bwidget.xbm
@@ -633,6 +676,29 @@ ${RUBY_EXAMPLESDIR}/tk/tkextlib/tcllib/plotdemos2.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tcllib/plotdemos3.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tcllib/xyplot.rb
 @dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/tcllib
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/Orig_LICENSE.txt
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/demo.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/iconlib.tcl
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/readme.txt
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/repeater.tcl
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc.tcl
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/button-h.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/button-n.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/button-p.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/check-hc.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/check-hu.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/check-nc.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/check-nu.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/radio-hc.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/radio-hu.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/radio-nc.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc/radio-nu.gif
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/kroc
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes/pkgIndex.tcl
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/themes
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tile/toolbutton.tcl
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/tile
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tkHTML/Orig_COPYRIGHT.txt
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tkHTML/README
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tkHTML/hv.rb
@@ -722,6 +788,10 @@ ${RUBY_EXAMPLESDIR}/tk/tkextlib/tkHTML/page4/index.html
 @dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/tkHTML/page4
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tkHTML/ss.rb
 @dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/tkHTML
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tkimg/demo.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tkimg/license_terms_of_Img_extension
+${RUBY_EXAMPLESDIR}/tk/tkextlib/tkimg/readme.txt
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/tkimg
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tktable/Orig_LICENSE.txt
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tktable/basic.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tktable/buttons.rb
@@ -733,16 +803,81 @@ ${RUBY_EXAMPLESDIR}/tk/tkextlib/tktable/spreadsheet.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tktable/tcllogo.gif
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/tktable/valid.rb
 @dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/tktable
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/bitmaps.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/demo.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/explorer.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/help.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/imovie.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/layout.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/mailwasher.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/outlook-folders.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/outlook-newgroup.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/big-dll.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/big-exe.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/big-file.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/big-folder.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/big-txt.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/checked.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/file.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/folder-closed.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/folder-open.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/help-book-closed.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/help-book-open.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/help-page.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/imovie-01.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/imovie-02.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/imovie-03.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/imovie-04.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/imovie-05.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/imovie-06.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/imovie-07.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/internet-check-off.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/internet-check-on.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/internet-print.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/internet-radio-off.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/internet-radio-on.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/internet-search.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/internet-security.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/mac-collapse.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/mac-expand.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-arrow.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-clip.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-deleted.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-draft.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-folder.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-group.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-inbox.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-local.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-main.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-outbox.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-read-2.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-read.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-sent.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-server.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-unread.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/outlook-watch.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/sky.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/small-dll.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/small-exe.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/small-file.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/small-folder.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/small-txt.gif
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics/unchecked.gif
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/pics
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/random.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/readme.txt
+${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl/www-options.rb
+@dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/treectrl
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/Orig_LICENSE.txt
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/README.txt
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/canvItems.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/canvSticker.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/canvSticker2.rb
-${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/dial.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/dial_demo.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/m128_000.xbm
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/oscilloscope.rb
 ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/pie.rb
-${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/vu.rb
+${RUBY_EXAMPLESDIR}/tk/tkextlib/vu/vu_demo.rb
 @dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib/vu
 @dirrm ${RUBY_EXAMPLESDIR}/tk/tkextlib
 ${RUBY_EXAMPLESDIR}/tk/tkfrom.rb
@@ -757,7 +892,9 @@ ${RUBY_EXAMPLESDIR}/tk/tkmultilistbox.rb
 ${RUBY_EXAMPLESDIR}/tk/tkmultilistframe.rb
 ${RUBY_EXAMPLESDIR}/tk/tkoptdb-safeTk.rb
 ${RUBY_EXAMPLESDIR}/tk/tkoptdb.rb
+${RUBY_EXAMPLESDIR}/tk/tkrttimer.rb
 ${RUBY_EXAMPLESDIR}/tk/tktextframe.rb
+${RUBY_EXAMPLESDIR}/tk/tktextio.rb
 ${RUBY_EXAMPLESDIR}/tk/tktimer.rb
 ${RUBY_EXAMPLESDIR}/tk/tktimer2.rb
 ${RUBY_EXAMPLESDIR}/tk/tktimer3.rb
