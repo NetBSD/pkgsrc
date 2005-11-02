@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.42 2005/11/01 01:06:02 reed Exp $
+# $NetBSD: bootstrap,v 1.43 2005/11/02 00:34:23 reed Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -640,11 +640,6 @@ if [ -f mods/mk/$opsys.bsd.sys.mk ]; then
 	run_cmd "$cpprog mods/mk/$opsys.bsd.sys.mk $prefix/share/mk/bsd.sys.mk"
 fi	
 	
-case "$opsys" in
-NetBSD)	run_cmd "$cpprog mods/bmake/Makefile.in ${wrkdir}/bmake/Makefile.in"
-	;;
-esac
-
 if [ "$need_bsd_install" = "yes" ]; then
 	echo_msg "Installing BSD compatible install script"
 	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/install-sh $prefix/bin/install-sh"
