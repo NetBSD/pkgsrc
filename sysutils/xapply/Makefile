@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/07/02 16:52:59 epg Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/02 20:32:24 rillig Exp $
 #
 
 DISTNAME=		xapply-3.4
 PKGREVISION=		1
-CATEGORIES=		mine
+CATEGORIES=		sysutils
 MASTER_SITES=		http://archive.progeny.com/pundits/
 EXTRACT_SUFX=		.tgz
 
