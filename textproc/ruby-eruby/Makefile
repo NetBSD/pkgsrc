@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/11/02 08:38:20 taca Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/02 09:48:34 taca Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 

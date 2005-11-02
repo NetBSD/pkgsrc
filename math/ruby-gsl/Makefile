@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:31 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/02 09:48:34 taca Exp $
 
 DISTNAME=	ruby-gsl-0.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-gsl-0.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-gsl/}
 
