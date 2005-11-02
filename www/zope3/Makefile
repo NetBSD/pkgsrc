@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 04:00:23 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/02 06:26:27 grant Exp $
 #
 
 DISTNAME=		Zope-3.1.0
@@ -20,8 +20,8 @@ CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.6*)
-EXTRACT_USING=         gtar
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-6]*)
+EXTRACT_USING=		gtar
 .endif
 
 BUILD_TARGET=		build
