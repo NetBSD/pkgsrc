@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.320 2005/11/02 21:33:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.321 2005/11/02 23:11:54 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1484,6 +1484,21 @@ sub checktext_basic_vartype($$$$$) {
 				$line->log_error("The package ${cat}/${pkg} does not exist.");
 			}
 
+			if ($pkg eq "msgfmt" || $pkg eq "gettext") {
+				$line->log_warning("Please use BUILD_USES_MSGFMT=yes instead of this dependency.");
+
+			} elsif ($pkg =~ qr"^perl\d+") {
+				$line->log_warning("Please use USE_TOOLS+=perl:run instead of this dependency.");
+
+			} elsif ($pkg eq "gmake") {
+				$line->log_warning("Please use USE_TOOLS+=gmake instead of this dependency.");
+
+			} elsif ($pkg =~ qr"^([-a-zA-Z0-9]+)-dirs[-><=]+(.*)$") {
+				my ($dirs, $version) = ($1, $2);
+
+				$line->log_warning("Please use USE_DIRS+=${dirs}-${version} instead of this dependency.");
+			}
+
 		} elsif ($value =~ qr":\.\./[^/]+$") {
 			$line->log_warning("Dependencies should have the form \"../../category/package\".");
 
@@ -1532,7 +1547,7 @@ sub checktext_basic_vartype($$$$$) {
 		} elsif ($value =~ regex_unresolved) {
 			# No further checks
 			
-		} elsif ($value =~ qr"^(?:http://|ftp://)") {
+		} elsif ($value =~ qr"^(?:http://|ftp://)[-0-9A-Za-z.]+(?::\d+)?/") {
 			my $sites = get_dist_sites();
 
 			foreach my $site (keys(%{$sites})) {
@@ -1968,14 +1983,13 @@ sub checkfile_package_Makefile($$$) {
 	my ($fname, $rawwhole, $loglines) = @_;
 	my ($distname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
-	my ($abspkgdir, $whole, $tmp, $idx, @sections, @varnames);
+	my ($whole, $tmp, $idx, @sections, @varnames);
 	
 	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
 
-	$abspkgdir = Cwd::abs_path($current_dir);
-	$category = basename(dirname($abspkgdir));
+	$category = basename(dirname(Cwd::abs_path($current_dir)));
 	$whole = "\n${rawwhole}";
 
 	#
@@ -2101,12 +2115,6 @@ sub checkfile_package_Makefile($$$) {
 		}
 	}
 
-	# check for pkgsrc-wip remnants in CATEGORIES
-	if ($tmp =~ /\nCATEGORIES=[ \t]*.*wip.*\n/
-	 && $category ne "wip") {
-		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Don't forget to remove \"wip\" from CATEGORIES.");
-	}
-
 	# check the URL
 	if ($tmp =~ /\nMASTER_SITES[+?]?=[ \t]*([^\n]*)\n/
 	 && $1 !~ /^[ \t]*$/) {
@@ -2159,33 +2167,6 @@ sub checkfile_package_Makefile($$$) {
 
 	if (!defined($pkgname)) {
 		$pkgname = $distname;
-	}
-
-	# if DISTFILES have only single item, it is better to avoid DISTFILES
-	# and to use combination of DISTNAME and EXTRACT_SUFX.
-	# example:
-	#	DISTFILES=package-1.0.tgz
-	# should be
-	#	DISTNAME=     package-1.0
-	#	EXTRACT_SUFX= .tgz
-	if ($opt_warn_vague && defined($distfiles) && $distfiles !~ regex_unresolved && $distfiles =~ /^\S+$/) {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Seen DISTFILES with single item, checking value.");
-		log_warning(NO_FILE, NO_LINE_NUMBER, "Use of DISTFILES with single file ".
-			"is discouraged. Distribution filename should be set by ".
-			"DISTNAME and EXTRACT_SUFX.");
-		if (defined($distname) && defined($extract_sufx) && $distfiles eq "${distname}${extract_sufx}") {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of DISTFILES not necessary. ".
-				"DISTFILES is \${DISTNAME}\${EXTRACT_SUFX} by default.");
-		}
-
-		# make an advice only in certain cases.
-		if (defined($pkgname) && $distfiles =~ /^$pkgname([-\.].+)$/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "How about \"DISTNAME=$pkgname\"".
-				(($1 eq '.tar.gz')
-					? ""
-					: " and \"EXTRACT_SUFX=$1\"").
-				", instead of DISTFILES?");
-		}
 	}
 
 	push(@varnames, qw(
@@ -2244,14 +2225,6 @@ sub checkfile_package_Makefile($$$) {
 	$tmp = "\n" . $tmp;
 	if ($tmp !~ /\nHOMEPAGE[+?]?=[ \t]*([^\n]*)\n/ || $1 =~ /^[ \t]*$/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please add HOMEPAGE if the package has one.");
-	} else {
-		my $i = $1;
-		if ($i =~ m#^\w+://#) {
-			if ($i !~ m#^\w+://[^\n/]+/#) {
-				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "URL \"$i\" does not ".
-						"end with \"/\".");
-			}
-		}
 	}
 
 	# warnings for missing COMMENT
@@ -2281,11 +2254,7 @@ sub checkfile_package_Makefile($$$) {
 	$tmp = $sections[$idx];
 
 	my @linestocheck = qw(BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS);
-	if ($tmp =~ /(DEPENDS_TARGET|FETCH_DEPENDS|LIB_DEPENDS|RUN_DEPENDS).*=/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1 is deprecated, please use DEPENDS.");
-	}
-	if ($tmp =~ /(LIB_|BUILD_|RUN_|FETCH_)?DEPENDS/ or
-	    $tmp =~ /BUILD_USES_MSGFMT/) {
+	if ($tmp =~ qr"(?:BUILD_USED_MSGFMT|BUILD_DEPENDS|DEPENDS)") {
 		&checkearlier($tmp, @varnames);
 
 		foreach my $i (grep(/^[A-Z_]*DEPENDS[?+]?=/, split(/\n/, $tmp))) {
@@ -2295,48 +2264,6 @@ sub checkfile_package_Makefile($$$) {
 			foreach my $k (split(/\s+/, $i)) {
 				my $l = (split(':', $k))[0];
 
-				# check BUILD_USES_MSGFMT
-				if ($l =~ /^(msgfmt|gettext)$/) {
-					$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1 ".
-						"listed in $j. Consider using".
-						" BUILD_USES_MSGFMT.");
-				}
-				# check USE_PERL5
-				if ($l =~ /^perl(\.\d+)?$/) {
-					$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to perl ".
-						"listed in $j. Consider using".
-						" USE_PERL5.");
-				}
-
-				# check USE_GMAKE
-				if ($l =~ /^(gmake|\${GMAKE})$/) {
-					$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1 ".
-						"listed in $j. Consider using".
-						" USE_TOOLS+=gmake.");
-				}
-
-				# check direct dependencies on -dirs packages
-				if ($l =~ /^([-a-zA-Z0-9]+)-dirs[-><=]+(.*)/) {
-					$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Dependency to $1-dirs ".
-						"listed in $j. Consider using".
-						" USE_DIRS+=$1-$2.");
-				}
-
-				# check pkg dir existence
-				my @m = split(/:/, $k);
-				if ($#m >= 1) {
-					$m[1] =~ s/\${PKGSRCDIR}/$ENV{'PKGSRCDIR'}/;
-					if ($m[1] =~ /\/$/) {
-						$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Trailing '/' (slash) for directory $m[1] listed in $j.");
-					}
-					if (! -d "${current_dir}/$m[1]") {
-						$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No package directory $m[1] found, even though it is listed in $j.");
-					} else {
-						log_info(NO_FILE, NO_LINE_NUMBER, "Package directory $m[1] found.");
-					}
-				} else {
-					$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Invalid package dependency specification \"$k\".");
-				}
 			}
 		}
 		foreach my $i (@linestocheck) {
@@ -2821,8 +2748,8 @@ sub checkdir_package() {
 sub checkdir($) {
 	my ($dir) = @_;
 
-	$current_dir = Cwd::abs_path($dir);
-	$is_wip = (($current_dir =~ qr"/wip(?:/|$)") ? true : false);
+	$current_dir = $dir;
+	$is_wip = ((Cwd::abs_path($dir) =~ qr"/wip(?:/|$)") ? true : false);
 
 	if (-f "${dir}/../../mk/bsd.pkg.mk") {
 		checkdir_package();
