@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11756 2005/11/02 10:52:12 tron Exp $
+$NetBSD: CHANGES,v 1.11757 2005/11/02 11:19:17 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4971,3 +4971,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed security/ruby-digest [taca 2005-11-02]
 	Removed security/ruby-openssl [taca 2005-10-02]
 	Updated www/php4 to 4.4.1nb1 [tron 2005-11-02]
+	Updated mail/imap-uw to 2004enb2 [adrianp 2005-11-02]
