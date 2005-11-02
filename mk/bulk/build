@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.57 2005/09/21 15:46:06 reed Exp $
+# $NetBSD: build,v 1.58 2005/11/02 05:33:38 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -345,7 +345,7 @@ for pkgname in `${PKG_TOOLS_BIN}/pkg_info -e \*`
 do
 	${PKG_TOOLS_BIN}/pkg_info -qe $pkgname
 	if [ $? -eq 0 ]; then
-		pkgdir=`${GREP} " $pkgname " $INDEXFILE | ${AWK} '{print $1}'`	
+		pkgdir=`${AWK} "/ $pkgname /"'{print $1}{}' $INDEXFILE`
 		case "${BULK_PREREQ}" in
 			*$pkgdir* )
 				echo "Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
