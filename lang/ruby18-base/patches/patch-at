@@ -1,12 +1,34 @@
-$NetBSD: patch-at,v 1.1.1.1 2005/03/06 16:36:57 taca Exp $
+$NetBSD: patch-at,v 1.2 2005/11/02 08:56:40 taca Exp $
 
---- variable.c.orig	2004-10-02 12:50:48.000000000 +0900
+--- variable.c.orig	2005-07-27 12:07:01.000000000 +0900
 +++ variable.c
-@@ -1290,6 +1290,7 @@ rb_autoload(mod, id, file)
+@@ -1329,7 +1329,7 @@ autoload_delete(mod, id)
+     return (NODE *)load;
+ }
+ 
+-void
++VALUE
+ rb_autoload_load(klass, id)
+     VALUE klass;
+     ID id;
+@@ -1338,9 +1338,9 @@ rb_autoload_load(klass, id)
+     NODE *load = autoload_delete(klass, id);
+ 
+     if (!load || !(file = load->nd_lit) || rb_provided(RSTRING(file)->ptr)) {
+-	const_missing(klass, id);
++	return Qfalse;
      }
-     else {
- 	av = Data_Wrap_Struct(rb_cData, rb_mark_tbl, st_free_table, 0);
-+	RBASIC(av)->klass = 0;
- 	st_add_direct(tbl, autoload, av);
- 	DATA_PTR(av) = tbl = st_init_numtable();
-     }
+-    rb_require_safe(file, load->nd_nth);
++    return rb_require_safe(file, load->nd_nth);
+ }
+ 
+ static VALUE
+@@ -1406,7 +1406,7 @@ rb_const_get_0(klass, id, exclude, recur
+     while (tmp) {
+ 	while (RCLASS(tmp)->iv_tbl && st_lookup(RCLASS(tmp)->iv_tbl,id,&value)) {
+ 	    if (value == Qundef) {
+-		rb_autoload_load(tmp, id);
++		if (!RTEST(rb_autoload_load(tmp, id))) break;
+ 		continue;
+ 	    }
+ 	    if (exclude && tmp == rb_cObject && klass != rb_cObject) {
