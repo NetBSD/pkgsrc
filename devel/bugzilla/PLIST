@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2005/10/26 10:16:09 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/11/02 11:35:57 adrianp Exp $
+share/doc/bugzilla/Bugzilla-Guide.txt
+share/doc/bugzilla/QUICKSTART
+share/doc/bugzilla/README
+share/doc/bugzilla/UPGRADING
+share/doc/bugzilla/UPGRADING-pre-2.8
+share/doc/bugzilla/rel_notes.txt
+share/examples/bugzilla/bugzilla.conf
+share/examples/bugzilla/localconfig
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Auth.pm
@@ -485,3 +493,5 @@ share/bugzilla/xml.cgi
 @dirrm share/bugzilla/template/en
 @dirrm share/bugzilla/template
 @dirrm share/bugzilla
+@dirrm share/doc/bugzilla
+@dirrm share/examples/bugzilla
