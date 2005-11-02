@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.315 2005/11/01 23:08:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.316 2005/11/02 18:50:52 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -434,7 +434,7 @@ sub save_autofix_changes($) {
 			next;
 		}
 
-		unlink($old);
+		unlink($old); # without error checking
 		if (!link($fname, $old)) {
 			log_error($fname, NO_LINE_NUMBER, "$!");
 			next;
@@ -553,7 +553,7 @@ my (@options) = (
 		my ($opt, $val) = @_;
 		parse_multioption($val, \%warnings);
 	  } ],
-	[ "-g", "Mimic the gcc output format",
+	[ "-g|--gcc-output-format", "Mimic the gcc output format",
 	  "gcc-output-format|g",
 	  sub {
 		PkgLint::Logging::set_gcc_output_format();
@@ -563,9 +563,9 @@ my (@options) = (
 	  sub {
 		help(*STDOUT, 0, 1);
 	  } ],
-	[ "-q", "don't print a summary line when finishing",
+	[ "-q|--quiet", "don't print a summary line when finishing",
 	  "quiet|q", \$opt_quiet ],
-	[ "-r", "Recursive---check subdirectories, too",
+	[ "-r|--recursive", "Recursive---check subdirectories, too",
 	  "recursive|r", \$opt_recursive ],
 	[ "-v|--verbose", "print progress messages",
 	  "verbose|v",
@@ -575,12 +575,8 @@ my (@options) = (
 );
 
 # Constants
-my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
 my $regex_pkgname	= qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
-my $regex_shellcmd	= qr"^\t";
 my $regex_unresolved	= qr"\$\{";
-my $regex_url		= qr"^(?:http://|ftp://)";
-my $regex_url_directory	= qr"(?:http://|ftp://)\S+/";
 my $regex_validchars	= qr"[\011\040-\176]";
 my $regex_varassign	= qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
@@ -733,7 +729,7 @@ sub load_dist_sites() {
 		} elsif ($text eq "MASTER_SITE_BACKUP?=\t\\") {
 			$ignoring = true;
 
-		} elsif ($text =~ qr"^\t($regex_url_directory)(?:|\s*\\)$"o) {
+		} elsif ($text =~ qr"^\t((?:http://|ftp://)\S+/)(?:|\s*\\)$"o) {
 			if (!$ignoring) {
 				if (defined($varname)) {
 					$url2name->{$1} = $varname;
@@ -1457,7 +1453,7 @@ sub checktext_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Mail_Address") {
-		if ($value !~ $regex_mail_address) {
+		if ($value !~ qr"^[-\w\d_.]+\@[-\w\d.]+$") {
 			$line->log_warning("\"${value}\" is not a valid mail address.");
 		}
 
@@ -1497,7 +1493,7 @@ sub checktext_basic_vartype($$$$$) {
 		} elsif ($value =~ $regex_unresolved) {
 			# No further checks
 			
-		} elsif ($value =~ $regex_url) {
+		} elsif ($value =~ qr"^(?:http://|ftp://)") {
 			my $sites = get_dist_sites();
 
 			foreach my $site (keys(%{$sites})) {
