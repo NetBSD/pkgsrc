@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/26 03:42:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/02 19:13:00 wiz Exp $
 bin/check-files
-bin/gmap2cache
 bin/mkcache
-man/man1/gmap2cache.1
 man/man1/gofish.1
 man/man1/gopherd.1
 man/man1/mkcache.1
