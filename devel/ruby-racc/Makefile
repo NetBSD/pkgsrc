@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/02 11:34:00 taca Exp $
 
 DISTNAME=	racc-${RACC_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-racc-${RACC_VERSION}
 PKGREVISION=	1
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://www.loveruby.net/archive/racc/
+MASTER_SITES=	http://i.loveruby.net/archive/racc/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.loveruby.net/en/racc.html
+HOMEPAGE=	http://i.loveruby.net/en/projects/racc/
 COMMENT=	LALR(1) parser generator for Ruby
 
 RUBY_VERSION_SUPPORTED=	18
