@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2005/10/05 15:49:44 salo Exp $
+# $NetBSD: Makefile,v 1.103 2005/11/02 11:14:30 adrianp Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -6,7 +6,7 @@
 # but not running Kerberos before committing the changes.
 
 DISTNAME=       imap-2004e
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=        ${DISTNAME:S/-/-uw-/}
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
