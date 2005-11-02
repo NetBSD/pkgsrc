@@ -1,29 +1,40 @@
-# $NetBSD: Makefile,v 1.9 2005/09/23 12:01:44 taca Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/02 08:56:39 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	4
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-
-PATCH_SITES=	${MASTER_SITE_RUBY}
-PATCHFILES=	1.8.2-patch1.gz
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby 1.8 based release minimum package
 
 RUBY_VERSION=		${RUBY18_VERSION}
+
+CONFLICTS=		${RUBY_PKGPREFIX}-dbm-[0-9]* \
+			${RUBY_PKGPREFIX}-digest-[0-9]* \
+			${RUBY_PKGPREFIX}-openssl-[0-9]*
+
+USE_PKGINSTALL=		yes
+USE_LANGUAGES=		c
+USE_TOOLS+=		yacc
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
-CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-shared \
+		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
+		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
 CONFIGURE_ENV+=		PREFIX="${PREFIX}"
 INSTALL_TARGET=		install install-doc
 WRKSRC=			${RUBY_WRKSRC}
 
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+
 # Ruby build process depends on config.status's content
 CONFIG_STATUS_OVERRIDE=	# empty
+
+MAKE_DIRS+=	${RUBY_SITERIDIR}
 
 .include "../../lang/ruby/rubyversion.mk"
 
@@ -31,8 +42,11 @@ CONFIG_STATUS_OVERRIDE=	# empty
 CONFIGURE_ARGS+= --program-suffix="${RUBY_SUFFIX}"
 .endif
 
-.include "../../mk/bsd.prefs.mk"
+FILES_SUBST+=	DATE=${DATE}
 
+#
+# IRIX work around should be fixed.
+#
 .if ${OPSYS} == "IRIX"
 PLIST_SUBST+=  HAS_IO="@comment "
 .else
@@ -46,68 +60,46 @@ DOCS=		COPYING COPYING.ja ChangeLog README \
 		doc/shell.rd doc/shell.rd.ja doc/irb/irb-tools.rd.ja \
 		doc/irb/irb.rd doc/irb/irb.rd.ja
 EXT_DOCS=	bigdecimal/bigdecimal_en.html bigdecimal/bigdecimal_ja.html \
+		digest/digest.txt digest/digest.txt.ja \
 		dl/doc/dl.txt enumerator/enumerator.txt \
-		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt
+		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt \
+		zlib/doc/zlib.rd
 
 BIGDECIMAL_EXAMPLES=	linear.rb nlsolve.rb pi.rb
 DL_EXAMPLES=		c++sample.C c++sample.rb drives.rb getch.rb libc.rb \
 			msgbox.rb msgbox2.rb stream.rb
+OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb cert_store_view.rb \
+			certstore.rb cipher.rb crlstore.rb echo_cli.rb \
+			echo_svr.rb gen_csr.rb smime_read.rb smime_write.rb \
+			wget.rb
 PTY_EXAMPLES=		expect_sample.rb script.rb shl.rb
 
-REPLACE_RUBY=	bin/erb bin/irb bin/rdoc bin/ri bin/testrb \
-		ext/bigdecimal/sample/linear.rb \
-		ext/bigdecimal/sample/nlsolve.rb \
-		ext/bigdecimal/sample/pi.rb \
-		lib/rdoc/markup/sample/rdoc2latex.rb \
-		sample/biorhythm.rb sample/cal.rb sample/exyacc.rb \
-		sample/fullpath.rb sample/less.rb sample/from.rb \
-		sample/goodfriday.rb sample/logger/shifting.rb \
-		sample/logger/app.rb sample/logger/log.rb sample/mine.rb \
-		sample/mpart.rb sample/observ.rb sample/optparse/opttest.rb \
-		sample/openssl/c_rehash.rb sample/openssl/cert2text.rb \
-		sample/openssl/cert_store_view.rb \
-		sample/openssl/certstore.rb sample/openssl/cipher.rb \
-		sample/openssl/crlstore.rb sample/openssl/echo_cli.rb \
-		sample/openssl/echo_svr.rb sample/openssl/gen_csr.rb \
-		sample/openssl/smime_read.rb sample/openssl/smime_write.rb \
-		sample/openssl/wget.rb \
-		sample/soap/calc/httpd.rb sample/soap/calc/server.rb \
-		sample/soap/calc/server2.rb sample/soap/icd/icd.rb \
-		sample/soap/babelfish.rb sample/soap/exchange/client.rb \
-		sample/soap/exchange/httpd.rb sample/soap/exchange/server.rb \
-		sample/soap/raa/soap4r.rb sample/soap/sampleStruct/httpd.rb \
-		sample/soap/sampleStruct/server.rb sample/pi.rb \
-		sample/wsdl/amazon/sampleClient.rb \
-		sample/wsdl/googleSearch/sampleClient.rb \
-		sample/wsdl/googleSearch/httpd.rb sample/wsdl/raa/soap4r.rb \
-		sample/test.rb 	sample/trojan.rb sample/time.rb \
-		sample/uumerge.rb
+REPLACE_RUBY_DIRS=	${WRKSRC}/bin ${WRKSRC}/ext ${WRKSRC}/lib \
+			${WRKSRC}/sample
 
 pre-configure:
 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
-	${RM} -f ${WRKSRC}/ext/dbm/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/md5/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/rmd160/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/sha1/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/sha2/extconf.rb
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
 	${RM} -f ${WRKSRC}/ext/iconv/extconf.rb
-	${RM} -f ${WRKSRC}/ext/openssl/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
 	${RM} -f ${WRKSRC}/ext/tcltklib/extconf.rb
 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
-	${RM} -f ${WRKSRC}/ext/zlib/extconf.rb
-	${RM} -f ${WRKSRC}/sample/dbmtest.rb
-	${RM} -fr ${WRKSRC}/sample/openssl
 
 pre-build:
 	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
 
+#
+# XXX: Ruby 1.8.3 create extra directories.
+#
+post-build:
+	@cd ${WRKSRC}/.ext; \
+		${FIND} . -type d -print \
+			-exec ${RMDIR} {} \; > /dev/null 2>&1; ${TRUE}
 post-install:
 	${STRIP} ${RUBY}
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/irb
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/pty
+	${INSTALL_DATA} ${FILESDIR}/CHANGES.pkgsrc ${RUBY_DOCDIR}
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/${f:C/^doc\///}
 .endfor
@@ -128,9 +120,25 @@ post-install:
 	${INSTALL_DATA} ${RUBY_WRKSRC}/ext/dl/sample/${f} \
 		${RUBY_EXAMPLESDIR}/dl
 .endfor
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/openssl
+.for f in ${OPENSSL_EXAMPLES}
+	${INSTALL_DATA} ${RUBY_WRKSRC}/sample/openssl/${f} \
+		${RUBY_EXAMPLESDIR}/openssl
+.endfor
 .for f in ${PTY_EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${RUBY_EXAMPLESDIR}/pty
 .endfor
 
+#
+# XXX:	Ruby extconf shuld select native ndbm(3) or Berkley DB's
+#	ndbm(3) compatible support.
+#
+.if ${OPSYS} != "IRIX" && ${OPSYS} != "SunOS"
+BDB_ACCEPTED?=		db1
+.include "../../mk/bdb.buildlink3.mk"
+.endif
+
 .include "../../lang/ruby/Makefile.common"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
