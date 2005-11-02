@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/11 04:07:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/02 13:54:45 taca Exp $
 bin/rake
+${PKGMANDIR}/man1/rake.1
 ${RUBY_SITELIBDIR}/rake.rb
+${RUBY_SITELIBDIR}/rake/classic_namespace.rb
 ${RUBY_SITELIBDIR}/rake/clean.rb
 ${RUBY_SITELIBDIR}/rake/contrib/compositepublisher.rb
 ${RUBY_SITELIBDIR}/rake/contrib/ftptools.rb
@@ -20,3 +22,18 @@ ${RUBY_SITELIBDIR}/rake/testtask.rb
 @dirrm ${RUBY_SITELIBDIR}/rake/loaders
 @dirrm ${RUBY_SITELIBDIR}/rake/contrib
 @dirrm ${RUBY_SITELIBDIR}/rake
+${RUBY_DOCDIR}/rake/CHANGES
+${RUBY_DOCDIR}/rake/README
+${RUBY_DOCDIR}/rake/TODO
+${RUBY_DOCDIR}/rake/glossary.rdoc
+${RUBY_DOCDIR}/rake/jamis.rb
+${RUBY_DOCDIR}/rake/proto_rake.rdoc
+${RUBY_DOCDIR}/rake/rakefile.rdoc
+${RUBY_DOCDIR}/rake/rational.rdoc
+@dirrm ${RUBY_DOCDIR}/rake
+${RUBY_EXAMPLESDIR}/rake/Rakefile1
+${RUBY_EXAMPLESDIR}/rake/Rakefile2
+${RUBY_EXAMPLESDIR}/rake/a.c
+${RUBY_EXAMPLESDIR}/rake/b.c
+${RUBY_EXAMPLESDIR}/rake/main.c
+@dirrm ${RUBY_EXAMPLESDIR}/rake
