@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2005/11/02 23:44:07 reed Exp $
+# $NetBSD: Makefile,v 1.45 2005/11/03 00:47:11 reed Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 SVR4_PKGNAME=	p5pma
 
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5}
 
 post-configure: perl5-configure
 
+BUILDLINK_DEPENDS.ImageMagick+=         ImageMagick>=${DISTVERSION}
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
