@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11778 2005/11/03 12:35:36 rillig Exp $
+$NetBSD: CHANGES,v 1.11779 2005/11/03 14:32:28 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5029,3 +5029,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/mantis to 1.0.0rc3 [adrianp 2005-11-03]
 	Updated devel/intel-iscsi to 20040115nb1 [agc 2005-11-03]
 	Updated pkgtools/pkglint to 4.33 [rillig 2005-11-03]
+	Updated net/openvpn to 2.0.5 [salo 2005-11-03]
