@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.115.2.1 2005/10/25 11:05:43 salo Exp $
+# $NetBSD: Makefile,v 1.115.2.2 2005/11/03 13:27:30 salo Exp $
 
 DISTNAME=		ethereal-0.10.13
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.ethereal.com/distribution/ \
 			http://ethereal.planetmirror.com/distribution/ \
@@ -15,6 +16,7 @@ MASTER_SITES=		http://www.ethereal.com/distribution/ \
 			http://ftp.sunet.se/pub/network/monitoring/ethereal/ \
 			http://ethereal.netarc.jp/distribution/ \
 			ftp://ftp.ethereal.com/pub/ethereal/old-versions/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		frueauf@NetBSD.org
 HOMEPAGE=		http://www.ethereal.com/
