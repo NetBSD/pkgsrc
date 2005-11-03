@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2005/09/21 14:49:08 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2005/11/03 23:09:24 rillig Exp $
 
---- tkUnixPort.h.orig	2005-07-30 21:02:48.000000000 +0000
-+++ tkUnixPort.h
+--- unix/tkUnixPort.h.orig	2005-07-30 21:02:48.000000000 +0000
++++ unix/tkUnixPort.h
 @@ -119,12 +119,7 @@
  #endif
  #define MASK_SIZE howmany(FD_SETSIZE, NFDBITS)
