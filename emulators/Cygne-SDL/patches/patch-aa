@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/11/02 02:22:22 dillo Exp $
+$NetBSD: patch-aa,v 1.3 2005/11/03 21:38:04 rillig Exp $
 
---- Makefiles/Makefile.unix.orig	2002-03-26 17:50:55.000000000 +0100
-+++ Makefiles/Makefile.unix
+--- src/Makefiles/Makefile.unix.orig	2002-03-26 17:50:55.000000000 +0100
++++ src/Makefiles/Makefile.unix
 @@ -1,5 +1,4 @@
 -CC = gcc
 -LD = gcc 

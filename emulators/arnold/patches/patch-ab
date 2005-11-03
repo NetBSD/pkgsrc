@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/09/24 10:53:27 dillo Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/03 21:40:13 rillig Exp $
 
---- unix/main.c.orig	Sun Nov  4 21:15:22 2001
-+++ unix/main.c
+--- src/unix/main.c.orig	Sun Nov  4 21:15:22 2001
++++ src/unix/main.c
 @@ -63,7 +63,7 @@ int main(int argc, char *argv[])
  		char LocalDirectory[1024];
  		char ProgramDirectory[1024]="";

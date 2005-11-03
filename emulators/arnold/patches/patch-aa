@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/24 10:53:27 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/03 21:40:13 rillig Exp $
 
---- Makefile.in.orig	Sat Jan 19 15:49:14 2002
-+++ Makefile.in
+--- src/Makefile.in.orig	Sat Jan 19 15:49:14 2002
++++ src/Makefile.in
 @@ -25,7 +25,7 @@ SDLINC = @SDL_CFLAGS@
  SDLLIB = @SDL_LIBS@
  
