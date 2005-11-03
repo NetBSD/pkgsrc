@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2005/03/21 17:35:53 dmcmahill Exp $
+$NetBSD: patch-af,v 1.2 2005/11/03 19:56:36 rillig Exp $
 
---- surfer1.cc.orig	1998-12-10 10:10:46.000000000 +0000
-+++ surfer1.cc
+--- src/surfer1.cc.orig	1998-12-10 10:10:46.000000000 +0000
++++ src/surfer1.cc
 @@ -2,8 +2,8 @@
  #include <stdlib.h>
  #include <stdio.h>
