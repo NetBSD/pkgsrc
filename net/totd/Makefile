@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/03 16:55:26 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/03 16:55:46 tv Exp $
 #
 
 DISTNAME=	totd-1.4
@@ -17,7 +17,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/totd.conf.sample \
 		${PREFIX}/share/examples/totd/totd.conf.sample
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.sipcalc
+PKG_OPTIONS_VAR=		PKG_OPTIONS.totd
 PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
 PKG_OPTIONS_GROUP.inet6=	inet6
 
