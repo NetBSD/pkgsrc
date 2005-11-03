@@ -195,9 +195,22 @@ II. The pkgsrc developer's guide
 
     14. The build process
 
-        14.1. Program location
-        14.2. Main targets
-        14.3. Other helpful targets
+        14.1. Introduction
+        14.2. Program location
+        14.3. Directories used during the build process
+        14.4. Running a phase
+        14.5. The fetch phase
+        14.6. The checksum phase
+        14.7. The extract phase
+        14.8. The patch phase
+        14.9. The tools phase
+        14.10. The wrapper phase
+        14.11. The configure phase
+        14.12. The build phase
+        14.13. The test phase
+        14.14. The install phase
+        14.15. The package phase
+        14.16. Other helpful targets
 
     15. Making your package work
 
@@ -1437,7 +1450,7 @@ a binary package.
 
 6.2. Settings for creation of binary packages
 
-See Section 14.3, "Other helpful targets".
+See Section 14.16, "Other helpful targets".
 
 6.3. Doing a bulk build of all packages
 
@@ -2188,9 +2201,22 @@ Table of Contents
 
 14. The build process
 
-    14.1. Program location
-    14.2. Main targets
-    14.3. Other helpful targets
+    14.1. Introduction
+    14.2. Program location
+    14.3. Directories used during the build process
+    14.4. Running a phase
+    14.5. The fetch phase
+    14.6. The checksum phase
+    14.7. The extract phase
+    14.8. The patch phase
+    14.9. The tools phase
+    14.10. The wrapper phase
+    14.11. The configure phase
+    14.12. The build phase
+    14.13. The test phase
+    14.14. The install phase
+    14.15. The package phase
+    14.16. Other helpful targets
 
 15. Making your package work
 
@@ -2819,7 +2845,7 @@ Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 10.2. Semi-automatic PLIST generation
 
 You can use the make print-PLIST command to output a PLIST that matches any new
-files since the package was extracted. See Section 14.3, "Other helpful
+files since the package was extracted. See Section 14.16, "Other helpful
 targets" for more information on this target.
 
 10.3. Tweaking output of make print-PLIST
@@ -3776,9 +3802,31 @@ Chapter 14. The build process
 
 Table of Contents
 
-14.1. Program location
-14.2. Main targets
-14.3. Other helpful targets
+14.1. Introduction
+14.2. Program location
+14.3. Directories used during the build process
+14.4. Running a phase
+14.5. The fetch phase
+14.6. The checksum phase
+14.7. The extract phase
+14.8. The patch phase
+14.9. The tools phase
+14.10. The wrapper phase
+14.11. The configure phase
+14.12. The build phase
+14.13. The test phase
+14.14. The install phase
+14.15. The package phase
+14.16. Other helpful targets
+
+14.1. Introduction
+
+This chapter gives a detailed description on how a package is built. Building a
+package is separated into different phases (for example fetch, build, install),
+all of which are described in the following sections. Each phase is splitted
+into so-called stages, which take the name of the containing stage, prefixed by
+one of pre-, do- or post-. (Examples are pre-configure, post-build.) Most of
+the actual work is done in the do-* stages.
 
 The basic steps for building a program are always the same. First the program's
 source (distfile) must be brought to the local system and then extracted. After
@@ -3788,7 +3836,7 @@ binaries, etc. can be put into place on the system. These are exactly the steps
 performed by the NetBSD package system, which is implemented as a series of
 targets in a central Makefile, pkgsrc/mk/bsd.pkg.mk.
 
-14.1. Program location
+14.2. Program location
 
 Before outlining the process performed by the NetBSD package system in the next
 section, here's a brief discussion on where programs are installed, and which
@@ -3863,126 +3911,180 @@ When choosing which of these variables to use, follow the following rules:
     the exception that manual pages go into ${PREFIX}/man, not ${PREFIX}/share/
     man.
 
-14.2. Main targets
+14.3. Directories used during the build process
 
-The main targets used during the build process defined in bsd.pkg.mk are:
+When building a package, a number of directories is used to store source files,
+temporary files, pkgsrc-internal files, and so on. These directories are
+explained here.
 
-fetch
+Some of the directory variables contain relative pathnames. There are two
+common base directories for these relative directories: PKGSRCDIR/PKGPATH is
+used for directories that are pkgsrc-specific. WRKSRC is used for directories
+inside the package itself. The permissions after each variable indicate whether
+the variable may be changed by the package Makefile.
 
-    This will check if the file(s) given in the variables DISTFILES and
-    PATCHFILES (as defined in the package's Makefile) are present on the local
-    system in /usr/pkgsrc/distfiles. If they are not present, an attempt will
-    be made to fetch them using commands of the form:
+PKGSRCDIR (read-only)
 
-        ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+    This is an absolute pathname that points to the pkgsrc root directory.
+    Generally, you don't need it.
 
-    where ${site} varies through several possibilities in turn: first,
-    MASTER_SITE_OVERRIDE is tried, then the sites specified in either
-    SITES_file if defined, else MASTER_SITES or PATCH_SITES, as applies, then
-    finally the value of MASTER_SITE_BACKUP. The order of all except the first
-    can be optionally sorted by the user, via setting either MASTER_SORT_AWK or
-    MASTER_SORT_REGEX.
+PKGPATH (read-only)
 
-checksum
+    This is a pathname relative to PKGSRCDIR that points to the current
+    package.
 
-    After the distfile(s) are fetched, their checksum is generated and compared
-    with the checksums stored in the distinfo file. If the checksums don't
-    match, the build is aborted. This is to ensure the same distfile is used
-    for building, and that the distfile wasn't changed, e.g. by some malign
-    force, deliberately changed distfiles on the master distribution site or
-    network lossage.
+WRKDIR (read-only)
 
-extract
+    This is an absolute pathname pointing to the directory where all work takes
+    place. This directory typically contains temporary directories used by the
+    various pkgsrc frameworks, like buildlink or the wrappers.
 
-    When the distfiles are present on the local system, they need to be
-    extracted, as they are usually in the form of some compressed archive
-    format, most commonly .tar.gz.
+WRKSRC (read-write)
 
-    If only some of the distfiles need to be uncompressed, the files to be
-    uncompressed should be put into EXTRACT_ONLY.
+    This is an absolute pathname pointing to the directory where the distfiles
+    are extracted. It is usually a direct subdirectory of WRKDIR, and often
+    it's the only directory entry that isn't hidden.
 
-    If the distfiles are not in .tar.gz format, they can be extracted by
-    setting either EXTRACT_SUFX, or EXTRACT_CMD, EXTRACT_BEFORE_ARGS and
-    EXTRACT_AFTER_ARGS. In the former case, pkgsrc knows how to extract a
-    number of suffixes (.tar.gz, .tgz, .tar.gz2, .tbz, .tar.Z, .tar, .shar.gz,
-    .shar.bz2, .shar.Z, .shar, .Z, .bz2 and .gz; see the definition of the
-    various DECOMPRESS_CMD variables in bsd.pkg.extract.mk for a complete
-    list). Here's an example on how to use the other variables for a program
-    that comes with a compressed shell archive whose name ends in .msg.gz:
+14.4. Running a phase
 
-        EXTRACT_SUFX=           .msg.gz
-        EXTRACT_CMD=            zcat
-        EXTRACT_BEFORE_ARGS=
-        EXTRACT_AFTER_ARGS=     |sh
+You can run a particular phase by typing make phase, where phase is the name of
+the phase. This will automatically run all phases that are required for this
+phase. The default phase is build, that is, when you run make without
+parameters in a package directory, the package will be built, but not
+installed.
 
-patch
+14.5. The fetch phase
 
-    After extraction, all the patches named by the PATCHFILES, those present in
-    the patches subdirectory of the package as well as in $LOCALPATCHES/
-    $PKGPATH (e.g. /usr/local/patches/graphics/png) are applied. Patchfiles
-    ending in .Z or .gz are uncompressed before they are applied, files ending
-    in .orig or .rej are ignored. Any special options to patch(1) can be handed
-    in PATCH_DIST_ARGS. See Section 8.3, "patches/*" for more details.
+This will check if the file(s) given in the variables DISTFILES and PATCHFILES
+(as defined in the package's Makefile) are present on the local system in /usr/
+pkgsrc/distfiles. If they are not present, an attempt will be made to fetch
+them using commands of the form:
 
-    By default patch(1) is given special args to make it fail if the patches
-    apply with some lines of fuzz. Please fix (regen) the patches so that they
-    apply cleanly. The rationale behind this is that patches that don't apply
-    cleanly may end up being applied in the wrong place, and cause severe harm
-    there.
+    ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 
-configure
+where ${site} varies through several possibilities in turn: first,
+MASTER_SITE_OVERRIDE is tried, then the sites specified in either SITES_file if
+defined, else MASTER_SITES or PATCH_SITES, as applies, then finally the value
+of MASTER_SITE_BACKUP. The order of all except the first can be optionally
+sorted by the user, via setting either MASTER_SORT_AWK or MASTER_SORT_REGEX.
 
-    Most pieces of software need information on the header files, system calls,
-    and library routines which are available in NetBSD. This is the process
-    known as configuration, and is usually automated. In most cases, a script
-    is supplied with the source, and its invocation results in generation of
-    header files, Makefiles, etc.
+14.6. The checksum phase
 
-    If the program's distfile contains its own configure script, this can be
-    invoked by setting HAS_CONFIGURE. If the configure script is a GNU autoconf
-    script, GNU_CONFIGURE should be specified instead. In either case, any
-    arguments to the configure script can be specified in the CONFIGURE_ARGS
-    variable, and the configure script's name can be set in CONFIGURE_SCRIPT if
-    it differs from the default "configure". Here's an example from the
-    sysutils/top package:
+After the distfile(s) are fetched, their checksum is generated and compared
+with the checksums stored in the distinfo file. If the checksums don't match,
+the build is aborted. This is to ensure the same distfile is used for building,
+and that the distfile wasn't changed, e.g. by some malign force, deliberately
+changed distfiles on the master distribution site or network lossage.
 
-        HAS_CONFIGURE=          yes
-        CONFIGURE_SCRIPT=       Configure
-        CONFIGURE_ARGS+=        netbsd13
+14.7. The extract phase
 
-    If the program uses an Imakefile for configuration, the appropriate steps
-    can be invoked by setting USE_IMAKE to "YES". (If you only want the package
-    installed in $X11PREFIX but xmkmf not being run, set USE_X11BASE instead!)
+When the distfiles are present on the local system, they need to be extracted,
+as they are usually in the form of some compressed archive format, most
+commonly .tar.gz.
 
-build
+If only some of the distfiles need to be uncompressed, the files to be
+uncompressed should be put into EXTRACT_ONLY.
 
-    Once configuration has taken place, the software will be built by invoking
-    $MAKE_PROGRAM on $MAKEFILE with $BUILD_TARGET as the target to build. The
-    default MAKE_PROGRAM is "gmake" if USE_TOOLS contains "gmake", "make"
-    otherwise. MAKEFILE is set to "Makefile" by default, and BUILD_TARGET
-    defaults to "all". Any of these variables can be set in the package's
-    Makefile to change the default build process.
+If the distfiles are not in .tar.gz format, they can be extracted by setting
+either EXTRACT_SUFX, or EXTRACT_CMD, EXTRACT_BEFORE_ARGS and
+EXTRACT_AFTER_ARGS. In the former case, pkgsrc knows how to extract a number of
+suffixes (.tar.gz, .tgz, .tar.gz2, .tbz, .tar.Z, .tar, .shar.gz, .shar.bz2,
+.shar.Z, .shar, .Z, .bz2 and .gz; see the definition of the various
+DECOMPRESS_CMD variables in bsd.pkg.extract.mk for a complete list). Here's an
+example on how to use the other variables for a program that comes with a
+compressed shell archive whose name ends in .msg.gz:
 
-install
+    EXTRACT_SUFX=           .msg.gz
+    EXTRACT_CMD=            zcat
+    EXTRACT_BEFORE_ARGS=
+    EXTRACT_AFTER_ARGS=     |sh
 
-    Once the build stage has completed, the final step is to install the
-    software in public directories, so users can access the programs and files.
-    As in the build-target, $MAKE_PROGRAM is invoked on $MAKEFILE here, but
-    with the $INSTALL_TARGET instead, the latter defaulting to "install" (plus
-    "install.man", if USE_IMAKE is set).
+14.8. The patch phase
 
-If no target is specified, the default is "build". If a subsequent stage is
-requested, all prior stages are made: e.g. make build will also perform the
-equivalent of:
+After extraction, all the patches named by the PATCHFILES, those present in the
+patches subdirectory of the package as well as in $LOCALPATCHES/$PKGPATH (e.g.
+/usr/local/patches/graphics/png) are applied. Patchfiles ending in .Z or .gz
+are uncompressed before they are applied, files ending in .orig or .rej are
+ignored. Any special options to patch(1) can be handed in PATCH_DIST_ARGS. See
+Section 8.3, "patches/*" for more details.
 
-    make fetch
-    make checksum
-    make extract
-    make patch
-    make configure
-    make build
+By default patch(1) is given special args to make it fail if the patches apply
+with some lines of fuzz. Please fix (regen) the patches so that they apply
+cleanly. The rationale behind this is that patches that don't apply cleanly may
+end up being applied in the wrong place, and cause severe harm there.
 
-14.3. Other helpful targets
+14.9. The tools phase
+
+[TODO]
+
+14.10. The wrapper phase
+
+[TODO]
+
+14.11. The configure phase
+
+Most pieces of software need information on the header files, system calls, and
+library routines which are available on the platform they run on. The process
+of determining this information is known as configuration, and is usually
+automated. In most cases, a script is supplied with the distfiles, and its
+invocation results in generation of header files, Makefiles, etc.
+
+If the package contains a configure script, this can be invoked by setting
+HAS_CONFIGURE to "yes". If the configure script is a GNU autoconf script, you
+should set GNU_CONFIGURE to "yes" instead. What happens in the configure phase
+is roughly:
+
+    .for d in ${CONFIGURE_DIRS}
+            cd ${WRKSRC} && cd ${d} && env ${CONFIGURE_ENV} \
+                ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+    .endfor
+
+CONFIGURE_DIRS (default: ".") is a list of pathnames relative to WRKSRC. In
+each of these directories, the configure script is run with the environment
+CONFIGURE_ENV and arguments CONFIGURE_ARGS. The variables CONFIGURE_ENV,
+CONFIGURE_SCRIPT (default: "./configure") and CONFIGURE_ARGS may all be changed
+by the package.
+
+If the program uses an Imakefile for configuration, the appropriate steps can
+be invoked by setting USE_IMAKE to "yes". (If you only want the package
+installed in ${X11PREFIX} but xmkmf not being run, set USE_X11BASE instead.)
+
+14.12. The build phase
+
+For building a package, a rough equivalent of the following code is executed.
+
+    .for d in ${BUILD_DIRS}
+            cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
+                ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+                    -f ${MAKEFILE} ${BUILD_TARGET}
+    .endfor
+
+BUILD_DIRS (default: ".") is a list of pathnames relative to WRKSRC. In each of
+these directories, MAKE_PROGRAM is run with the environment MAKE_ENV and
+arguments BUILD_MAKE_FLAGS. The variables MAKE_ENV, BUILD_MAKE_FLAGS, MAKEFILE
+and BUILD_TARGET may all be changed by the package.
+
+The default value of MAKE_PROGRAM is "gmake" if USE_TOOLS contains "gmake",
+"make" otherwise. The default value of MAKEFILE is "Makefile", and BUILD_TARGET
+defaults to "all".
+
+14.13. The test phase
+
+[TODO]
+
+14.14. The install phase
+
+Once the build stage has completed, the final step is to install the software
+in public directories, so users can access the programs and files. As in the
+build-target, $MAKE_PROGRAM is invoked on $MAKEFILE here, but with the
+$INSTALL_TARGET instead, the latter defaulting to "install" (plus
+"install.man", if USE_IMAKE is set).
+
+14.15. The package phase
+
+[TODO]
+
+14.16. Other helpful targets
 
 pre/post-*
 
@@ -4817,6 +4919,7 @@ should use the following code.
 If this distinction is not fine enough, you can also use the following defines.
 
     FreeBSD     __FreeBSD__
+    DragonFly   __DragonFly__
     Linux       linux, __linux, __linux__
     NetBSD      __NetBSD__
     OpenBSD     __OpenBSD__
