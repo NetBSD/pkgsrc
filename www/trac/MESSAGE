@@ -1,18 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/11/20 00:49:12 epg Exp $
+$NetBSD: MESSAGE,v 1.2 2005/11/03 23:04:29 epg Exp $
 
-The database schema was changed between 0.7.x and 0.8. Existing
-environments must be upgraded before they can be used with Trac
-0.8.  The following command will perform the upgrade:
+You must upgrade existing Trac environments before using a new
+version:
 
   trac-admin /path/to/projectenv upgrade
 
-Trac environments are created with a default set of wiki pages.
-It's recommended to update these pages on existing environments
-whenever Trac is upgraded to get up-to-date documentation and
-additional functionality.  The following command will perform the
-update:
+It is recommended to update the standard wiki pages whenever Trac is
+upgraded to get up-to-date documentation and additional functionality:
 
   trac-admin /path/to/projectenv wiki upgrade
+
+mod_python users will need to change the name of the mod_python handler in
+the Apache HTTPD configuration to:
+
+  PythonHandler trac.web.modpython_frontend
 
 ===========================================================================
