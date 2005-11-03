@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.20 2005/11/02 21:52:15 tv Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.21 2005/11/03 17:30:50 tv Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -327,7 +327,9 @@
 	    and can run X-Windows based applications, but it does
 	    <emphasis>not</emphasis> come with an X server.  Some options are
 	    <ulink url="http://www.starnet.com/products/xwin32/">StarNet X-Win32</ulink>,
-	    <ulink url="http://connectivity.hummingbird.com/products/nc/exceed/">Hummingbird Exceed</ulink>,
+	    <ulink url="http://connectivity.hummingbird.com/products/nc/exceed/">Hummingbird Exceed</ulink>
+	    (available in a trimmed version for Interix from Interop Systems as the
+	    <ulink url="http://www.interopsystems.com/InteropXserver.htm">Interop X Server</ulink>),
 	    and the free X-Windows server included with
 	    <ulink url="http://x.cygwin.com/">Cygwin</ulink>.</para>
 
