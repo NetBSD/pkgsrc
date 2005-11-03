@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/09/29 15:04:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/03 19:56:36 rillig Exp $
 #
 
 DISTNAME=	simian_12_98
@@ -20,15 +20,16 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 USE_LANGUAGES=		c++
 GCC_REQD=		3.0
 
-WRKSRC=		${WRKDIR}/Simian/src
+WRKSRC=		${WRKDIR}/Simian
+BUILD_DIRS=	src
 
 BUILD_TARGET=	simian
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/simian ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/simian ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/simian
-	${INSTALL_DATA} ${WRKSRC}/../examples/* ${PREFIX}/share/examples/simian
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/simian
 
 .include "../../mk/bsd.pkg.mk"

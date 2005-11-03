@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2005/03/21 17:35:53 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.2 2005/11/03 19:56:36 rillig Exp $
 
---- linklist.cc.orig	1998-12-07 08:28:51.000000000 +0000
-+++ linklist.cc
+--- src/linklist.cc.orig	1998-12-07 08:28:51.000000000 +0000
++++ src/linklist.cc
 @@ -1,12 +1,13 @@
 +#include <iostream>
 +#include <sstream>
