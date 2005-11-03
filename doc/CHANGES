@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11774 2005/11/03 07:06:45 taca Exp $
+$NetBSD: CHANGES,v 1.11775 2005/11/03 08:41:33 rh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5025,3 +5025,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed x11/ruby16-tk [taca 2005-11-03]
 	Removed lang/ruby16-base [taca 2005-11-03]
 	Removed net/ruby-xmlrpc4r [taca 2005-11-03]
+	Updated devel/Gorm to 1.0.0 [rh 2005-11-03]
