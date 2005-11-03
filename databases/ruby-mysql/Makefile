@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/02 09:48:33 taca Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/03 07:17:39 taca Exp $
 #
 
 DISTNAME=	mysql-ruby-2.7
@@ -12,7 +12,6 @@ HOMEPAGE=       http://www.tmtm.org/en/mysql/ruby/
 COMMENT=	Ruby extension for MySQL
 
 RUBY_HAS_ARCHLIB=	yes
-RUBY_VERSION_SUPPORTED=	18
 RUBY_REQD=		1.8.2
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install
