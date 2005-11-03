@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/29 16:59:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/03 03:03:31 minskim Exp $
 bin/mydns-conf
 bin/mydnscheck
 bin/mydnsexport
 bin/mydnsimport
 bin/mydnsptrconvert
 info/mydns.info
-lib/charset.alias
 man/man5/mydns.conf.5
 man/man8/mydns-conf.8
 man/man8/mydns.8
@@ -18,6 +17,5 @@ share/examples/mydns-mysql/mydns.conf
 share/examples/rc.d/mydns
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mydns.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mydns.mo
-${PKGLOCALEDIR}/locale/locale.alias
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/mydns.mo
 @dirrm share/examples/mydns-mysql
