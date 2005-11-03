@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2005/08/28 04:25:31 uebayasi Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/03 13:47:46 rillig Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	${EMACS_PKGNAME_PREFIX}w3-4.0b47
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/emacs-w3/ \
-		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/emacs-w3/ \
-		ftp://ftp.usyd.edu.au/pub/Xemacs/emacs-w3/ \
-		ftp://ftp.lab.kdd.co.jp/xemacs/emacs-w3/ \
-		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/emacs-w3/
+MASTER_SITES=	${MASTER_SITE_XEMACS:=emacs-w3/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.indiana.edu/elisp/w3/docs.html
