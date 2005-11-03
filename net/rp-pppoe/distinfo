@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 12:14:03 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/11/03 22:49:40 rillig Exp $
 
 SHA1 (rp-pppoe-3.5.tar.gz) = f81f351e8559b4c861c9b99adc4ef9756cecab83
 RMD160 (rp-pppoe-3.5.tar.gz) = 2746444a209fec0fcca23bcafa5ba884cbeeb7e4
 Size (rp-pppoe-3.5.tar.gz) = 189321 bytes
-SHA1 (patch-aa) = d01a245850e077d10c6219eb441911e1f5d40cdb
-SHA1 (patch-ab) = 4a16b96d6b2069fab9efb42c856b71af14f672f1
-SHA1 (patch-ac) = 2c76eded4e98fb3564a70dd136f4c66fe41a165f
-SHA1 (patch-ad) = b56e4e664902f0e3518678ac3b1e3c66c602a956
-SHA1 (patch-ae) = 5fa68935a3dc116a26062730cc00e56399575bd6
-SHA1 (patch-af) = 9a8a5973a99faa5fcc315c231c81d4d87f7b0955
-SHA1 (patch-ag) = 8dc96cb3084e7b3f2bf70a21f1c5d686ec887541
+SHA1 (patch-aa) = 381c1a90115565066dd67837206c1da816b1c718
+SHA1 (patch-ab) = 2c2287a02383d611b42c026d4ac66a5c48ad52e1
+SHA1 (patch-ac) = 04f8bcfb039305d580265c27321bcb4aa15cdb54
+SHA1 (patch-ad) = 555943ea178124ac17bbbd223da77f0e89b07632
+SHA1 (patch-ae) = 0ad70a1320c5a1d56b8b6781c9187566534e8968
+SHA1 (patch-af) = b6e6371a021916b127a474ca6ee7c9212627fd96
+SHA1 (patch-ag) = 6ee706683df96ff7fb0aa5a93626265c2177d543
