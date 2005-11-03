@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.321 2005/11/02 23:11:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.322 2005/11/03 10:34:26 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -482,18 +482,18 @@ use constant conf_datadir	=> '@DATADIR@';
 
 # Command Line Options
 
+my $opt_check_bl3	= true;
 my $opt_check_DESCR	= true;
 my $opt_check_distinfo	= true;
 my $opt_check_extra	= true;
-my $opt_check_bl3	= true;
 my $opt_check_Makefile	= true;
 my $opt_check_MESSAGE	= true;
 my $opt_check_patches	= true;
 my $opt_check_PLIST	= true;
 my (%checks) = (
+	"bl3"		=> [\$opt_check_bl3, "check buildlink3 files"],
 	"DESCR"		=> [\$opt_check_DESCR, "check DESCR file"],
 	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
-	"bl3"		=> [\$opt_check_bl3, "check buildlink3 files"],
 	"extra"		=> [\$opt_check_extra, "check various additional files"],
 	"Makefile"	=> [\$opt_check_Makefile, "check Makefiles"],
 	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
@@ -581,17 +581,23 @@ use constant regex_validchars	=> qr"[\011\040-\176]";
 use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
 # Global variables
+
 my $current_dir;		# The currently checked directory.
 my $is_wip;			# Is the current directory from pkgsrc-wip?
-my $pkgdir;
-my $filesdir;
-my $patchdir;
-my $distinfo_file;
-my $scriptdir;
-my $seen_USE_PKGLOCALEDIR;
-my $seen_Makefile_common;
-my $pkgname;
-my @todo_dirs;
+
+my $pkgdir;			# PKGDIR from the package Makefile
+my $filesdir;			# FILESDIR from the package Makefile
+my $patchdir;			# PATCHDIR from the package Makefile
+my $distinfo_file;		# DISTINFO_FILE from the package Makefile
+my $scriptdir;			# SCRIPTDIR from the package Makefile
+my $pkgname;			# PKGNAME from the package Makefile
+
+my $seen_USE_PKGLOCALEDIR;	# Does the package use PKGLOCALEDIR?
+my $seen_Makefile_common;	# Does the package have any .includes?
+
+my @todo_dirs;			# The list of directories that still need
+				# to be checked. Mostly relevant with
+				# --recursive.
 
 sub readmakefile($$$);
 sub checkextra($$);
@@ -889,11 +895,8 @@ sub checkline_trailing_whitespace($) {
 
 sub checkline_rcsid_regex($$$) {
 	my ($line, $prefix_regex, $prefix) = @_;
-	my ($id) = ($opt_rcsidstring);
+	my ($id) = ($opt_rcsidstring . ($is_wip ? "|Id" : ""));
 
-	if (Cwd::abs_path($line->file) =~ qr"/wip/") {
-		$id .= "|Id";
-	}
 	if ($line->text !~ qr"^${prefix_regex}\$(${id})(?::[^\$]*|)\$$") {
 		$line->log_error("\"${prefix}\$${opt_rcsidstring}\$\" expected.");
 		return false;
@@ -1079,10 +1082,8 @@ sub checkfile_PLIST($) {
 		}
 		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
-			if ($cmd eq "cwd" || $cmd eq "cd") {
-				$line->log_error("\@cwd and \@cd must not be used anymore.");
 
-			} elsif ($cmd eq "unexec" && $arg =~ /^rmdir/) {
+			if ($cmd eq "unexec" && $arg =~ /^rmdir/) {
 				$line->log_warning("Use \"\@dirrm\" instead of \"\@unexec rmdir\".");
 
 			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
@@ -1093,15 +1094,8 @@ sub checkfile_PLIST($) {
 					$line->log_error("ldconfig must be used with \"||/usr/bin/true\".");
 				}
 
-			} elsif ($cmd eq "comment") {
+			} elsif ($cmd eq "comment" || $cmd eq "dirrm") {
 				# nothing to do
-
-			} elsif ($cmd eq "dirrm" || $cmd eq "option") {
-				# no check made
-
-			} elsif ($cmd eq "mode" || $cmd eq "owner" || $cmd eq "group") {
-				$line->log_warning("\"\@mode/owner/group\" are deprecated, please use chmod/".
-					"chown/chgrp in the pkg Makefile and let tar do the rest.");
 
 			} else {
 				$line->log_warning("Unknown PLIST directive \"\@$cmd\"");
@@ -1980,7 +1974,7 @@ sub load_package_Makefile($$$) {
 }
 
 sub checkfile_package_Makefile($$$) {
-	my ($fname, $rawwhole, $loglines) = @_;
+	my ($fname, $rawwhole, $lines) = @_;
 	my ($distname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
 	my ($whole, $tmp, $idx, @sections, @varnames);
@@ -2001,7 +1995,7 @@ sub checkfile_package_Makefile($$$) {
 		}
 	}
 
-	checklines_deprecated_variables($loglines);
+	checklines_deprecated_variables($lines);
 
 	#
 	# whole file: INTERACTIVE_STAGE
@@ -2051,7 +2045,7 @@ sub checkfile_package_Makefile($$$) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1: no need to use '-' before command.");
 	}
 
-	checklines_direct_tools($loglines);
+	checklines_direct_tools($lines);
 
 	# whole file: check for pkgsrc-wip remnants
 	#
@@ -2339,8 +2333,8 @@ sub checkfile_package_Makefile($$$) {
 			"discouraged. Redefine \"do-$1\" instead.");
 	}
 
-	checklines_package_Makefile($loglines);
-	checklines_Makefile_varuse($loglines);
+	checklines_package_Makefile($lines);
+	checklines_Makefile_varuse($lines);
 }
 
 sub checkextra($$) {
@@ -2663,7 +2657,7 @@ sub checkdir_category() {
 }
 
 sub checkdir_package() {
-	my ($whole, $loglines, $have_distinfo, $have_patches);
+	my ($whole, $lines, $have_distinfo, $have_patches);
 
 	$pkgdir			= ".";
 	$filesdir		= "files";
@@ -2675,7 +2669,7 @@ sub checkdir_package() {
 	$pkgname		= undef;
 
 	# we need to handle the Makefile first to get some variables
-	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$loglines)) {
+	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$lines)) {
 		log_error("${current_dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
@@ -2701,7 +2695,7 @@ sub checkdir_package() {
 			# We don't have a check for non-regular files yet.
 
 		} elsif ($f eq "${current_dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($f, $whole, $loglines);
+			$opt_check_Makefile and checkfile_package_Makefile($f, $whole, $lines);
 
 		} elsif ($f =~ qr"/buildlink3.mk$") {
 			$opt_check_bl3 and checkfile_buildlink3_mk($f);
