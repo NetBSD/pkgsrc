@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.33 2005/11/03 02:51:45 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.34 2005/11/03 16:04:55 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -849,6 +849,7 @@
 
 <programlisting>
     FreeBSD     __FreeBSD__
+    DragonFly	__DragonFly__
     Linux       linux, __linux, __linux__
     NetBSD      __NetBSD__
     OpenBSD     __OpenBSD__
