@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2005/09/22 01:40:23 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/03 05:59:14 taca Exp $
 
-DISTNAME=	RedCloth-${VER}
-PKGNAME=	${RUBY_PKGPREFIX}-redcloth-${VER}
-PKGREVISION=	1
+DISTNAME=	RedCloth-${VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-redcloth-${VERSION}
 CATEGORIES=	textproc
-MASTER_SITES=	http://rubyforge.org/frs/download.php/2896/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/6064/
 
 MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.whytheluckystiff.net/ruby/redcloth/
 COMMENT=	Textile library for Ruby
 
+VERSION=	3.0.4
 USE_RUBY_SETUP=	yes
-RUBY_SETUP=	install.rb
-VER=		3.0.3
+DOCS=		CHANGELOG README REFERENCE
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/redcloth
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${RUBY_DOCDIR}/redcloth
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${RUBY_DOCDIR}/redcloth
+.endfor
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
