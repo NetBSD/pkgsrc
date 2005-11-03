@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2005/01/22 02:35:44 minskim Exp $
+$NetBSD: patch-ab,v 1.5 2005/11/03 21:24:29 rillig Exp $
 
---- configure.orig	2000-05-02 21:27:53.000000000 -0500
-+++ configure
+--- build/configure.orig	2000-05-02 21:27:53.000000000 -0500
++++ build/configure
 @@ -1852,10 +1852,11 @@ else
    echo "$ac_t""no" 1>&6
  fi
