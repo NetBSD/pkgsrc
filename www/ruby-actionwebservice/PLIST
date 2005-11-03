@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/04 14:17:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/03 05:41:39 taca Exp $
 ${RUBY_SITELIBDIR}/action_web_service.rb
 ${RUBY_SITELIBDIR}/action_web_service/api.rb
 ${RUBY_SITELIBDIR}/action_web_service/base.rb
@@ -39,6 +39,7 @@ ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/apis/blogger_service.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/apis/meta_weblog_api.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/apis/meta_weblog_service.rb
 ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/controllers/xmlrpc_controller.rb
+${RUBY_SITELIBDIR}/action_web_service/version.rb
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/controllers
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog/apis
 @dirrm ${RUBY_EXAMPLESDIR}/action_web_service/metaWeblog
