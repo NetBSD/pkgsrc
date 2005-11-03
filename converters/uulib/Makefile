@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/09/28 20:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2005/11/03 20:05:54 rillig Exp $
 #
 
 DISTNAME=       uudeview-0.5.20
@@ -12,10 +12,11 @@ HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	Library for uu/xx/Base64/BinHex de-/encoding
 
 # "kdesupport-2.1b" included "uu" library.
-CONFLICTS=	kdesupport-2.1b
+CONFLICTS+=	kdesupport-2.1b
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/uulib
 GNU_CONFIGURE=	yes
+CONFIGURE_DIRS=	uulib
+BUILD_DIRS=	uulib
 USE_LIBTOOL=	yes
 
 BUILD_TARGET=	libuu.la
@@ -29,14 +30,14 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 INSTALLATION_DIRS=	include lib man/man3
 
 do-install:
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libuu.la ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/uudeview.h ${PREFIX}/include
+	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/uulib/libuu.la ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/uulib/uudeview.h ${PREFIX}/include
 	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' \
 		< ${FILESDIR}/uulib.3 > ${WRKSRC}/uulib.3
 	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${PREFIX}/man/man3
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uulib
 .for docfile in ${DOCFILES}
-	@${INSTALL_MAN} ${WRKSRC}/../${docfile} ${PREFIX}/share/doc/uulib
+	@${INSTALL_MAN} ${WRKSRC}/${docfile} ${PREFIX}/share/doc/uulib
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
