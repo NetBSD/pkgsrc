@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/22 08:34:54 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/11/03 22:30:35 rillig Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
@@ -21,7 +21,6 @@ COMMENT=	Generic Mapping Tools
 EXTRACT_SUFX=	.tar.bz2
 DIST_SUBDIR=	${DISTNAME}
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
@@ -55,7 +54,7 @@ post-install:
 	cd ${WRKSRC}/tutorial && ${INSTALL_DATA} bermuda.grd quakes.cpt \
 		ship.xyz us.grd data quakes.ngdc 			\
 		${PREFIX}/share/examples/gmt/tutorial;
-	${INSTALL_DATA} ${WRKSRC}/../share/* ${PREFIX}/share/gmt
+	${INSTALL_DATA} ${WRKDIR}/share/* ${PREFIX}/share/gmt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/examples/
 	cd ${WRKSRC}/examples && ${PAX} -rw . ${PREFIX}/share/examples/gmt
