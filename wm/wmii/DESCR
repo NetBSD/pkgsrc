@@ -4,7 +4,7 @@ conventional window management through layouts.
 
 wmii consists of components that are independent processes and
 communicate via a socket-based virtual filesystem which is oriented on
-the "everything is a file" paradigm of the plan9 operating system.
+the "everything is a file" paradigm of the Plan 9 operating system.
 
 The core distribution of wmii contains the window manager itself, a
 master file system routing utility (wmifs), a generic bar (wmibar), a
