@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11779 2005/11/03 14:32:28 salo Exp $
+$NetBSD: CHANGES,v 1.11780 2005/11/03 15:52:59 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/intel-iscsi to 20040115nb1 [agc 2005-11-03]
 	Updated pkgtools/pkglint to 4.33 [rillig 2005-11-03]
 	Updated net/openvpn to 2.0.5 [salo 2005-11-03]
+	Updated www/libwww to 5.4.0nb4 [salo 2005-11-03]
