@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11772 2005/11/03 06:05:41 taca Exp $
+$NetBSD: CHANGES,v 1.11773 2005/11/03 06:44:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4996,7 +4996,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/ruby-html-parser to 19990912p2 [taca 2005-11-03]
 	Updated textproc/ruby-rdtool to 0.6.18 [taca 2005-11-03]
 	Updated devel/ruby-rd-mode to 0.6.18 [taca 2005-11-03]
-	Updated tectproc/ruby-rttool to 1.0.1 [taca 2005-11-03]
+	Updated textproc/ruby-rttool to 1.0.1 [taca 2005-11-03]
 	Updated graphics/ruby-opengl to 0.32g [taca 2005-11-03]
 	Updated www/ruby-actionwebservice to 0.9.1 [taca 2005-11-03]
 	Updated textproc/ruby-redcloth to 3.0.4 [taca 2005-11-03]
