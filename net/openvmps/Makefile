@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/06 16:07:43 bouyer Exp $
+# $NetBSD: Makefile,v 1.1.1.1.4.1 2005/11/03 22:21:45 salo Exp $
 
 DISTNAME=	vmpsd-1.3
 PKGNAME= 	openvmps-1.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vmps/}
 
