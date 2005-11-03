@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11770 2005/11/03 03:10:57 minskim Exp $
+$NetBSD: CHANGES,v 1.11771 2005/11/03 05:34:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4990,3 +4990,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/mydns-pgsql to 1.0.0nb1 [minskim 2005-11-03]
 	Updated net/mydns-mysql to 1.0.0nb1 [minskim 2005-11-03]
 	Updated sysutils/xfce4-quicklauncher-plugin to 0.81nb1 [minskim 2005-11-03]
+	Updated graphics/ruby-RMagick to 1.9.3 [taca 2005-11-03]
+	Updated misc/rubygems to 0.8.11nb1 [taca 2005-11-03]
+	Updated net/dtcp to 20050521nb1 [taca 2005-11-03]
+	Updated textproc/ruby-html-parser to 19990912p2 [taca 2005-11-03]
+	Updated textproc/ruby-rdtool to 0.6.18 [taca 2005-11-03]
+	Updated devel/ruby-rd-mode to 0.6.18 [taca 2005-11-03]
+	Updated tectproc/ruby-rttool to 1.0.1 [taca 2005-11-03]
+	Updated graphics/ruby-opengl to 0.32g [taca 2005-11-03]
