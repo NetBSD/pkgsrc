@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/24 14:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/03 21:42:46 rillig Exp $
 #
 
 DISTNAME=		sms_sdl-0.9.4a-r7.1-src
@@ -11,17 +11,18 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://membres.lycos.fr/cyxdown/smssdl/
 COMMENT=		SMS Plus emulator port to SDL
 
-WRKSRC=			${WRKDIR}/sms_sdl-0.9.4a-r7.1/sdl
+WRKSRC=			${WRKDIR}/sms_sdl-0.9.4a-r7.1
+BUILD_DIRS=		sdl
 EXTRACT_CMD_OPTS.zip=	-aqo
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sms_sdl ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/sdl/sms_sdl ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sms_sdl
-	${INSTALL_DATA} ${WRKSRC}/README.TXT ${PREFIX}/share/doc/sms_sdl
-	${INSTALL_DATA} ${WRKSRC}/../license ${PREFIX}/share/doc/sms_sdl
-	${INSTALL_DATA} ${WRKSRC}/../README.TXT \
+	${INSTALL_DATA} ${WRKSRC}/sdl/README.TXT ${PREFIX}/share/doc/sms_sdl
+	${INSTALL_DATA} ${WRKSRC}/license ${PREFIX}/share/doc/sms_sdl
+	${INSTALL_DATA} ${WRKSRC}/README.TXT \
 		${PREFIX}/share/doc/sms_sdl/README-CORE.TXT
-	${INSTALL_DATA} ${WRKSRC}/../SOURCE.TXT ${PREFIX}/share/doc/sms_sdl
+	${INSTALL_DATA} ${WRKSRC}/SOURCE.TXT ${PREFIX}/share/doc/sms_sdl
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
