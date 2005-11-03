@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/03 19:52:44 rillig Exp $
 #
 
 DISTNAME=		xylem.1.8.7
@@ -11,27 +11,28 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://home.cc.umanitoba.ca/~psgendb/XYLEM.html
 COMMENT=		Tools for manipulation of genetic databases
 
-WRKSRC=                 ${WRKDIR}/xylem/src.c
+WRKSRC=                 ${WRKDIR}/xylem
+BUILD_DIRS=		src.c # yes, it's a directory
 INSTALLATION_DIRS=	bin
 
 do-configure:
-	${CP} ${WRKSRC}/p2c.h.standard ${WRKSRC}/p2c.h
+	${CP} ${WRKSRC}/src.c/p2c.h.standard ${WRKSRC}/src.c/p2c.h
 
 # Rename some binaries to avoid confusion with base system or conflicts
 post-build:
-	${RM} -f ${WRKSRC}/../test/testxylem.csh.orig
-	${MV} ${WRKSRC}/identify ${WRKSRC}/xyl-identify
-	${MV} ${WRKSRC}/shuffle ${WRKSRC}/xyl-shuffle
+	${RM} -f ${WRKSRC}/test/testxylem.csh.orig
+	${MV} ${WRKSRC}/src.c/identify ${WRKSRC}/src.c/xyl-identify
+	${MV} ${WRKSRC}/src.c/shuffle ${WRKSRC}/src.c/xyl-shuffle
 
 do-install:
 .for PROGRAM in dbstat getloc getob xyl-identify prot2nuc reform ribosome \
 	splitdb xyl-shuffle flat2phyl phyl2flat
-	${INSTALL_PROGRAM} ${WRKSRC}/${PROGRAM} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src.c/${PROGRAM} ${PREFIX}/bin
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xylem
-	${INSTALL_DATA} ${WRKSRC}/../doc/* ${PREFIX}/share/doc/xylem/
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/xylem/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xylem
-	${INSTALL_DATA} ${WRKSRC}/../test/sample.* ${PREFIX}/share/examples/xylem
-	${INSTALL_SCRIPT} ${WRKSRC}/../test/testxylem.csh ${PREFIX}/share/examples/xylem
+	${INSTALL_DATA} ${WRKSRC}/test/sample.* ${PREFIX}/share/examples/xylem
+	${INSTALL_SCRIPT} ${WRKSRC}/test/testxylem.csh ${PREFIX}/share/examples/xylem
 
 .include "../../mk/bsd.pkg.mk"
