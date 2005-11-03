@@ -1,8 +1,26 @@
-$NetBSD: patch-ak,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+$NetBSD: patch-ak,v 1.2 2005/11/03 23:58:41 agc Exp $
 
 --- src/osd.c	8 Oct 2005 22:21:15 -0000	1.1.1.1
 +++ src/osd.c	8 Oct 2005 23:37:34 -0000	1.2
-@@ -305,9 +305,9 @@
+@@ -51,12 +51,15 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <unistd.h>
+-#include <sys/vfs.h>
+ #include <utime.h>
+ #endif
+-#ifndef FreeBSD
++#ifdef __linux__
++#include <sys/vfs.h>
+ #include <scsi/scsi.h>
+ #endif
++#ifdef __NetBSD__
++#include "scsi_cmd_codes.h"
++#endif
+ #include "iscsi.h"
+ #include "util.h"
+ #include "device.h"
+@@ -305,9 +308,9 @@
  
          TRACE(TRACE_OSD, "OSD_SET_ATTR(lun %llu, GroupID 0x%x, UserID 0x%llx)\n", args->lun, osd_args.GroupID, osd_args.UserID);
          for (i=0; i<osd_args.set_attributes_list_length;) {
@@ -15,7 +33,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
            sprintf(FileName, "%s/lun_%llu/0x%x/0x%llx.0x%x.%u",
                    base_dir, args->lun, osd_args.GroupID, osd_args.UserID, page, attr);
            if ((rc=open(FileName, O_WRONLY|O_CREAT, 0644))==-1) {
-@@ -474,18 +474,18 @@
+@@ -474,18 +477,18 @@
          int i;
  
          for (i=0; i<osd_args.get_attributes_list_length;) {
@@ -40,7 +58,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
                    break;
                  default:
                    TRACE_ERROR("unknown attr index %u\n", index);
-@@ -495,16 +495,16 @@
+@@ -495,16 +498,16 @@
              case (0x00000001):
                switch(index) {
                  case (0x1):
@@ -65,7 +83,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
                    break;
                  default:
                    TRACE_ERROR("unknown attr index %u\n", index);
-@@ -517,9 +517,9 @@
+@@ -517,9 +520,9 @@
              case (0x30000000):
                switch(index) {
                  case (0x1):
@@ -78,7 +96,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
                    sprintf(FileName, "%s/lun_%llu/0x%x/0x%llx.0x%x.%u",
                            base_dir, args->lun, osd_args.GroupID, osd_args.UserID, page, index);
                    if ((rc=open(FileName, O_RDONLY, 0644))==-1) {
-@@ -557,25 +557,25 @@
+@@ -557,25 +560,25 @@
          switch (osd_args.get_attributes_page) {
            case (0x40000001):
              index = 1;
