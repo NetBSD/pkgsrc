@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/10/25 04:15:49 taca Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/03 05:26:10 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.rubyist.net/~rubikitch/archive/
 
@@ -12,13 +11,14 @@ COMMENT=	RT to HTML (and hopefully LaTeX in future) table converter
 
 CONFLICTS+=	ruby[1-9][0-9]-rttool-*
 
-VERSION=	0.1.8
+VERSION=		1.0.1
 USE_RUBY_DIST_SUBDIR=	yes
-USE_RUBY_SETUP=	yes
-REPLACE_RUBY=	bin/rt/rt2 lib/rt/rt2html-lib.rb \
-		lib/rt/rt2txt-lib.rb lib/rt/rtparser.rb \
-		lib/rt/rtvisitor.rb lib/rt/w3m.rb
-EXAMPLES=	rttest.rd test1.rt test2.rt
+USE_RUBY_SETUP=		yes
+REPLACE_RUBY_DIRS=	${WRKSRC}/bin/rt ${WRKSRC}/lib/rt
+HTMLDOCS=		rttool.en.html rttool.ja.html
+DOCS=			rttool.en.rd rttool.ja.rd
+SRCS=			rt2html-lib.rb rt2txt-lib.rb rtparser.rb \
+			rtvisitor.rb w3m.rb
 
 .include "../../lang/ruby/rubyversion.mk"
 
@@ -26,18 +26,14 @@ EXAMPLES=	rttest.rd test1.rt test2.rt
 DEPENDS+=	${RUBY_PKGPREFIX}-optparse>=0.7:../../devel/ruby-optparse
 .endif
 
-pre-configure:
-	${RM} -f ${WRKSRC}/setup/rt.rb ${WRKSRC}/lib/rt/rtparser-test.rb
-
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rt
-	${INSTALL_DATA} ${WRKSRC}/rt.html ${RUBY_DOCDIR}/rt/rt.ja.html
-	${INSTALL_DATA} ${WRKSRC}/rt.rd ${RUBY_DOCDIR}/rt/rt.ja.rd
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/rt
-	${INSTALL_DATA} ${WRKSRC}/dot.rt.rd2rc ${RUBY_EXAMPLESDIR}/rt
-.for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/rt
+.for f in ${DOCS} ${HTMLDOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/rt
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/rt
 .endfor
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/rt
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${RUBY_EXAMPLESDIR}/rt
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
