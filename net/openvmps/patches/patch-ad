@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/11/03 22:21:45 salo Exp $
+
+--- log.c.orig	2005-11-02 23:52:09.000000000 +0100
++++ log.c	2005-11-02 23:52:32.000000000 +0100
+@@ -27,11 +27,10 @@
+ 			log_opened = 1;
+ 		}
+ 		vsnprintf(str, 256, fmt, ap);
+-		syslog(LOG_INFO, str);
++		syslog(LOG_INFO, "%s", str);
+ 
+ 		if ( debug ) { 
+-			fprintf(stderr,str);
+-			fprintf(stderr,"\n");
++			fprintf(stderr,"%s\n", str);
+ 		}
+ 			 
+ 		va_end(ap);
