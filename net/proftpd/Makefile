@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/08/06 11:51:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2005/11/03 14:53:22 rillig Exp $
 
 DISTNAME=	proftpd-1.2.10
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
 		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
 		ftp://ftp.fsn.hu/pub/proftpd/distrib/source/ \
-		ftp://ftp.middle-earth.it/proftpd/ \
+		ftp://ftp.middle-earth.it/proftpd/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martti@NetBSD.org
