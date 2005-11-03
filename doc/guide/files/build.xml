@@ -1,7 +1,21 @@
-<!-- $NetBSD: build.xml,v 1.11 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.12 2005/11/03 16:43:59 rillig Exp $ -->
 
 <chapter id="build">
-  <title>The build process</title>
+<title>The build process</title>
+
+<sect1 id="build.intro">
+<title>Introduction</title>
+
+<para>This chapter gives a detailed description on how a package is
+built. Building a package is separated into different
+<emphasis>phases</emphasis> (for example <varname>fetch</varname>,
+<varname>build</varname>, <varname>install</varname>), all of which are
+described in the following sections. Each phase is splitted into
+so-called <emphasis>stages</emphasis>, which take the name of the
+containing stage, prefixed by one of <varname>pre-</varname>,
+<varname>do-</varname> or <varname>post-</varname>. (Examples are
+<varname>pre-configure</varname>, <varname>post-build</varname>.) Most
+of the actual work is done in the <varname>do-*</varname> stages.</para>
 
   <para>The basic steps for building a program are always the same.  First the
     program's source (<emphasis>distfile</emphasis>) must be brought to the
@@ -11,6 +25,8 @@
     put into place on the system. These are exactly the steps performed by
     the &os; package system, which is implemented as a series of targets
     in a central Makefile, <filename>pkgsrc/mk/bsd.pkg.mk</filename>.</para>
+
+</sect1>
 
   <sect1 id="build.prefix">
     <title>Program location</title>
@@ -132,17 +148,21 @@
     </itemizedlist>
   </sect1>
 
-  <sect1 id="main-targets">
-    <title>Main targets</title>
+<sect1 id="build.running">
+<title>Running a phase</title>
 
-    <para>The main targets used during the build process defined in
-      <filename>bsd.pkg.mk</filename> are:</para>
+<para>You can run a particular phase by typing <command>make
+phase</command>, where <emphasis>phase</emphasis> is the name of the
+phase. This will automatically run all phases that are required for this
+phase. The default phase is <varname>build</varname>, that is, when you
+run <command>make</command> without parameters in a package directory,
+the package will be built, but not installed.</para>
 
-    <variablelist>
-      <varlistentry>
-	<term>fetch</term>
+</sect1>
 
-	<listitem>
+<sect1 id="build.fetch">
+<title>The <emphasis>fetch</emphasis> phase</title>
+
 	  <para>This will check if the file(s) given in the variables
 	    <varname>DISTFILES</varname> and <varname>PATCHFILES</varname> (as
 	    defined in the package's Makefile) are present on the
@@ -163,26 +183,24 @@
 	    first can be optionally sorted by the user, via setting either
 	    <varname>MASTER_SORT_AWK</varname> or
 	    <varname>MASTER_SORT_REGEX</varname>.</para>
-	</listitem>
-      </varlistentry>
 
-      <varlistentry>
-	<term>checksum</term>
+</sect1>
 
-	<listitem>
+<sect1 id="build.checksum">
+<title>The <emphasis>checksum</emphasis> phase</title>
+
 	  <para>After the distfile(s) are fetched, their checksum is generated and
 	    compared with the checksums stored in the distinfo file. If the
 	    checksums don't match, the build is aborted. This is to ensure the same
 	    distfile is used for building, and that the distfile wasn't changed,
 	    e.g. by some malign force, deliberately changed distfiles on the master
 	    distribution site or network lossage.</para>
-	</listitem>
-      </varlistentry>
 
-      <varlistentry>
-	<term>extract</term>
+</sect1>
 
-	<listitem>
+<sect1 id="build.extract">
+<title>The <emphasis>extract</emphasis> phase</title>
+
 	  <para>When the distfiles are present on the local system,
 	    they need to be extracted, as they are usually in the form
 	    of some compressed archive format, most commonly
@@ -220,13 +238,12 @@
     EXTRACT_BEFORE_ARGS=
     EXTRACT_AFTER_ARGS=     |sh
 </programlisting>
-	</listitem>
-      </varlistentry>
 
-      <varlistentry>
-	<term>patch</term>
+</sect1>
 
-	<listitem>
+<sect1 id="build.patch">
+<title>The <emphasis>patch</emphasis> phase</title>
+
 	  <para>After extraction, all the patches named by the
 	    <varname>PATCHFILES</varname>, those present in the patches
 	    subdirectory of the package as well as in $LOCALPATCHES/$PKGPATH (e.g.
@@ -243,13 +260,26 @@
 	    so that they apply cleanly. The rationale behind this is that
 	    patches that don't apply cleanly may end up being applied in the wrong
 	    place, and cause severe harm there.</para>
-	</listitem>
-      </varlistentry>
 
-      <varlistentry>
-	<term>configure</term>
+</sect1>
 
-	<listitem>
+<sect1 id="build.tools">
+<title>The <emphasis>tools</emphasis> phase</title>
+
+<para>[TODO]</para>
+
+</sect1>
+
+<sect1 id="build.wrapper">
+<title>The <emphasis>wrapper</emphasis> phase</title>
+
+<para>[TODO]</para>
+
+</sect1>
+
+<sect1 id="build.configure">
+<title>The <emphasis>configure</emphasis> phase</title>
+
 	  <para>Most pieces of software need information on the header files,
 	    system calls, and library routines which are available in &os;.
 	    This is the process known as configuration, and is usually
@@ -280,13 +310,12 @@
 	    <quote>YES</quote>. (If you only want the package installed in
 	    <varname>$X11PREFIX</varname> but xmkmf not being run, set
 	    <varname>USE_X11BASE</varname> instead!)</para>
-	</listitem>
-      </varlistentry>
 
-      <varlistentry>
-	<term>build</term>
+</sect1>
 
-	<listitem>
+<sect1 id="build.build">
+<title>The <emphasis>build</emphasis> phase</title>
+
 	  <para>Once configuration has taken place, the software will be built 
 	    by invoking <varname>$MAKE_PROGRAM</varname> on
 	    <varname>$MAKEFILE</varname> with <varname>$BUILD_TARGET</varname> as
@@ -297,13 +326,19 @@
 	    defaults to <quote>all</quote>.  Any of these variables
 	    can be set in the package's Makefile to change the default
 	    build process.</para> 
-	</listitem>
-      </varlistentry>
 
-      <varlistentry>
-	<term>install</term>
+</sect1>
 
-	<listitem>
+<sect1 id="build.test">
+<title>The <emphasis>test</emphasis> phase</title>
+
+<para>[TODO]</para>
+
+</sect1>
+
+<sect1 id="build.install">
+<title>The <emphasis>install</emphasis> phase</title>
+
 	  <para>Once the build stage has completed, the final step is to install
 	    the software in public directories, so users can access
 	    the programs and files.  As in the
@@ -312,23 +347,15 @@
 	    <varname>$INSTALL_TARGET</varname> instead, the latter defaulting to
 	    <quote>install</quote> (plus <quote>install.man</quote>, if
 	    <varname>USE_IMAKE</varname> is set).</para>
-	</listitem>
-      </varlistentry>
-    </variablelist>
 
-    <para>If no target is specified, the default is <quote>build</quote>.
-      If a subsequent stage is requested, all prior stages are made: e.g.
-      <command>make build</command> will also perform the equivalent of:</para>
+</sect1>
 
-<programlisting>
-    make fetch
-    make checksum
-    make extract
-    make patch
-    make configure
-    make build
-</programlisting>
-  </sect1>
+<sect1 id="build.package">
+<title>The <emphasis>package</emphasis> phase</title>
+
+<para>[TODO]</para>
+
+</sect1>
 
   <sect1 id="build.helpful-targets">
     <title>Other helpful targets</title>
