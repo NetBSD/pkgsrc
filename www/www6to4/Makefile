@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/03 16:33:43 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/03 16:56:04 tv Exp $
 #
 
 DISTNAME=	www6to4-1.5
@@ -21,7 +21,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/www6to4_forward.conf \
 		${PREFIX}/share/examples/www6to4
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.sipcalc
+PKG_OPTIONS_VAR=		PKG_OPTIONS.www6to4
 PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
 PKG_OPTIONS_GROUP.inet6=	inet6
 
