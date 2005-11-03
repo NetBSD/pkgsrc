@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.15 2005/11/03 19:06:50 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.16 2005/11/03 19:29:54 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -342,13 +342,15 @@ happens in the <emphasis>configure</emphasis> phase is roughly:</para>
     .endfor
 </programlisting>
 
-<para><varname>CONFIGURE_DIRS</varname> is a list of pathnames relative
-to <varname>WRKSRC</varname>. In each of these directories, the
-configure script is run with the same environment and arguments. The
-variables <varname>CONFIGURE_ENV</varname>,
-<varname>CONFIGURE_SCRIPT</varname> (default:
-<quote>./configure</quote>) and <varname>CONFIGURE_ARGS</varname> may
-all be changed by the package.</para>
+<para><varname>CONFIGURE_DIRS</varname> (default: <quote>.</quote>) is a
+list of pathnames relative to <varname>WRKSRC</varname>. In each of
+these directories, the configure script is run with the environment
+<varname>CONFIGURE_ENV</varname> and arguments
+<varname>CONFIGURE_ARGS</varname>. The variables
+<varname>CONFIGURE_ENV</varname>, <varname>CONFIGURE_SCRIPT</varname>
+(default: <quote>./configure</quote>) and
+<varname>CONFIGURE_ARGS</varname> may all be changed by the
+package.</para>
 
 <para>If the program uses an <filename>Imakefile</filename> for
 configuration, the appropriate steps can be invoked by setting
@@ -361,16 +363,31 @@ being run, set <varname>USE_X11BASE</varname> instead.)</para>
 <sect1 id="build.build">
 <title>The <emphasis>build</emphasis> phase</title>
 
-	  <para>Once configuration has taken place, the software will be built 
-	    by invoking <varname>$MAKE_PROGRAM</varname> on
-	    <varname>$MAKEFILE</varname> with <varname>$BUILD_TARGET</varname> as
-	    the target to build.  The default <varname>MAKE_PROGRAM</varname> is
-	    <quote>gmake</quote> if <varname>USE_TOOLS</varname> contains <quote>gmake</quote>,
-	    <quote>make</quote> otherwise. <varname>MAKEFILE</varname> is set to
-	    <quote>Makefile</quote> by default, and <varname>BUILD_TARGET</varname>
-	    defaults to <quote>all</quote>.  Any of these variables
-	    can be set in the package's Makefile to change the default
-	    build process.</para> 
+<para>For building a package, a rough equivalent of the following code
+is executed.</para>
+
+<programlisting>
+    .for d in ${BUILD_DIRS}
+            cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
+                ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+                    -f ${MAKEFILE} ${BUILD_TARGET}
+    .endfor
+</programlisting>
+
+<para><varname>BUILD_DIRS</varname> (default: <quote>.</quote>) is a
+list of pathnames relative to <varname>WRKSRC</varname>. In each of
+these directories, <varname>MAKE_PROGRAM</varname> is run with the
+environment <varname>MAKE_ENV</varname> and arguments
+<varname>BUILD_MAKE_FLAGS</varname>. The variables
+<varname>MAKE_ENV</varname>, <varname>BUILD_MAKE_FLAGS</varname>,
+<varname>MAKEFILE</varname> and <varname>BUILD_TARGET</varname> may all
+be changed by the package.</para>
+
+<para>The default value of <varname>MAKE_PROGRAM</varname> is
+<quote>gmake</quote> if <varname>USE_TOOLS</varname> contains
+<quote>gmake</quote>, <quote>make</quote> otherwise. The default value
+of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
+<varname>BUILD_TARGET</varname> defaults to <quote>all</quote>.</para> 
 
 </sect1>
 
