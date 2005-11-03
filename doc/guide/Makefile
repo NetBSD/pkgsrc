@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/10/07 12:14:26 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/03 01:57:15 tv Exp $
 #
 
 DISTNAME=		htdocs-share-20050727
@@ -31,34 +31,17 @@ HTDOCSDIR?=		../../../htdocs
 BUILD_DEFS+=		OUTPUTS
 OUTPUTS?=		lint html html-split ascii pdf
 
+.if defined(OUTPUTS)
+.  if !empty(OUTPUTS:Mascii)
 # the html is needed to build the ascii version.
-.if !empty(OUTPUTS:Mascii)
 OUTPUTS+=		html
+.  endif
+
+# only override the Makefile.common default if it is explicitly set
+_GUIDE_OUTPUTS=		${OUTPUTS}
 .endif
 
-# html output
-BUILD_DEPENDS+=		docbook>=4.0:../../textproc/docbook
-BUILD_DEPENDS+=		docbook-xml>=4.0:../../textproc/docbook-xml
-BUILD_DEPENDS+=		docbook-xsl>=1.62.4:../../textproc/docbook-xsl
-BUILD_DEPENDS+=		dsssl-docbook-modular>=1.54:../../textproc/dsssl-docbook-modular
-BUILD_DEPENDS+=		opensp>=1.5:../../textproc/opensp
-BUILD_DEPENDS+=		libxslt>=1.0.30:../../textproc/libxslt
-
-.if !empty(OUTPUTS:Mhtml*)
-BUILD_DEPENDS+=		tidy>=20021108:../../www/tidy
-.endif
-
-.if !empty(OUTPUTS:Mascii)
-BUILD_DEPENDS+=		w3m>=0.4:../../www/w3m
-.endif
-
-.if !empty(OUTPUTS:Mps) || !empty(OUTPUTS:Mpdf)
-BUILD_DEPENDS+=		openjade>=1.3.2:../../textproc/openjade
-BUILD_DEPENDS+=		tex-jadetex>=3.13:../../print/tex-jadetex
-USE_GHOSTSCRIPT=	build
-GHOSTSCRIPT_REQD=	7.05
-.  include "../../mk/ghostscript.mk"
-.endif
+.include "Makefile.common"
 
 pre-extract:
 	${MKDIR} ${WRKSRC}
