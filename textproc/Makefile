@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2005/11/02 09:20:51 taca Exp $
+# $NetBSD: Makefile,v 1.301 2005/11/03 06:35:30 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -251,16 +251,12 @@ SUBDIR+=	rtf-tools
 SUBDIR+=	rtfm
 SUBDIR+=	rubber
 SUBDIR+=	ruby-amrita
-#SUBDIR+=	ruby-erb
 SUBDIR+=	ruby-eruby
 SUBDIR+=	ruby-html-parser
 SUBDIR+=	ruby-nqxml
-#SUBDIR+=	ruby-rdoc
 SUBDIR+=	ruby-rdtool
 SUBDIR+=	ruby-redcloth
-#SUBDIR+=	ruby-rexml
 SUBDIR+=	ruby-rttool
-#SUBDIR+=	ruby-syck
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xmlscan
 SUBDIR+=	sablotron
