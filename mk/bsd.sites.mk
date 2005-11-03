@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.43 2005/08/02 14:19:13 xtraeme Exp $
+# $NetBSD: bsd.sites.mk,v 1.44 2005/11/03 13:35:22 rillig Exp $
 #
 # Default MASTER_SITES
 
@@ -145,7 +145,9 @@ MASTER_SITE_XEMACS+=    \
 	http://public.planetmirror.com.au/pub/xemacs/ \
 	ftp://mirror.aarnet.edu.au/pub/xemacs/ \
 	ftp://mirror.cict.fr/xemacs/ \
-	ftp://ftp.t.ring.gr.jp/pub/text/xemacs/
+	ftp://ftp.t.ring.gr.jp/pub/text/xemacs/ \
+	ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/emacs-w3/ \
+	ftp://ftp.tu-darmstadt.de/pub/editors/xemacs/emacs-w3/
 
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
