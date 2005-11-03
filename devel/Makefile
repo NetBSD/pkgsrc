@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.688 2005/11/03 06:35:30 taca Exp $
+# $NetBSD: Makefile,v 1.689 2005/11/03 06:42:50 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -558,7 +558,6 @@ SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-curses
 SUBDIR+=	ruby-filelock
-SUBDIR+=	ruby-installpkg
 SUBDIR+=	ruby-mode
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-rd-mode
