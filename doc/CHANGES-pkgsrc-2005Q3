@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.54 2005/11/02 22:33:30 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.55 2005/11/03 13:27:52 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -121,3 +121,5 @@ Pullup ticket 874 - requested by Takahiro Kambe
 portability fix for squid
 Pullup ticket 881 - requested by David Brownlee
 security update for skype
+Pullup ticket 882 - requested by Adrian Portelli
+security fix for ethereal
