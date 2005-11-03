@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/09/08 13:39:21 martin Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/03 22:03:18 rillig Exp $
 #
 
 DISTNAME=	xscavenger-1.4.4
@@ -13,8 +13,9 @@ COMMENT=	Loderunner clone with sound for X11
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
-USE_IMAKE=	yes
+USE_IMAKE=		yes
+CONFIGURE_DIRS=		src
+BUILD_DIRS=		${CONFIGURE_DIRS}
 NO_INSTALL_MANPAGES=	yes
 
 CPPFLAGS+=	-DSOUNDDEV="\"${DEVOSSSOUND}\""
@@ -24,8 +25,8 @@ INSTALLATION_DIRS=	man/man6
 .include "../../mk/ossaudio.buildlink3.mk"
 
 post-install:
-	@ ${INSTALL_MAN} ${WRKSRC}/scavenger.6 ${PREFIX}/man/man6/
-	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scavenger
-	@ ${INSTALL_MAN} ${WRKSRC}/../DOC ${PREFIX}/share/doc/scavenger
+	@${INSTALL_MAN} ${WRKSRC}/src/scavenger.6 ${PREFIX}/man/man6/
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scavenger
+	@${INSTALL_MAN} ${WRKSRC}/DOC ${PREFIX}/share/doc/scavenger
 
 .include "../../mk/bsd.pkg.mk"
