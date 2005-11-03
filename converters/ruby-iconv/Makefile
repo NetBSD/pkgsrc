@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/02 09:09:39 taca Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/03 07:17:18 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -10,7 +10,6 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Iconv wrapper class for Ruby
 
-RUBY_VERSION_SUPPORTED=	18
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
