@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2004/06/06 21:29:33 minskim Exp $
+$NetBSD: patch-ae,v 1.1.12.1 2005/11/03 22:11:27 salo Exp $
 
---- mkdir.c.orig	2001-12-05 22:54:41.000000000 -0600
-+++ mkdir.c
-@@ -51,8 +51,8 @@ extern int errno;
+--- lib/mkdir.c.orig	2005-11-03 18:48:32.000000000 +0000
++++ lib/mkdir.c
+@@ -52,8 +52,8 @@ extern int errno;
  
  int
  mkdir (dpath, dmode)

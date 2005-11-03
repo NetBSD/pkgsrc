@@ -1,14 +1,14 @@
-$NetBSD: patch-ag,v 1.1 2005/01/18 16:04:39 tv Exp $
+$NetBSD: patch-ag,v 1.1.6.1 2005/11/03 22:11:27 salo Exp $
 
---- system.h.orig	2005-01-18 11:03:19.000000000 -0500
-+++ system.h
-@@ -59,6 +59,9 @@ off_t lseek ();
- /* Since major is a function on SVR4, we can't use `ifndef major'.  */
- #ifdef MAJOR_IN_MKDEV
- #include <sys/mkdev.h>
+--- lib/system.h.orig	2005-11-03 18:51:50.000000000 +0000
++++ lib/system.h
+@@ -282,6 +282,9 @@ extern int errno;
+ 
+ #if MAJOR_IN_MKDEV
+ # include <sys/mkdev.h>
 +# if !defined(makedev) && defined(mkdev)
 +#  define makedev(a,b) mkdev((a),(b))
 +# endif
- #define HAVE_MAJOR
+ # define GOT_MAJOR
  #endif
  

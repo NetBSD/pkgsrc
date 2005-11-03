@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.2.2 2005/11/03 22:11:27 salo Exp $
+
+--- doc/cpio.1.orig	2004-08-30 17:21:48.000000000 +0100
++++ doc/cpio.1
+@@ -20,7 +20,7 @@ cpio \- copy files to and from archives
+ [\-\-unconditional] [\-\-verbose] [\-\-block-size=blocks] [\-\-swap-halfwords]
+ [\-\-io-size=bytes] [\-\-pattern-file=file] [\-\-format=format]
+ [\-\-owner=[user][:.][group]] [\-\-no-preserve-owner] [\-\-message=message]
+-[\-\-force\-local] [\-\-no\-absolute\-filenames] [\-\-sparse]
++[\-\-force\-local] [\-\-absolute\-filenames] [\-\-sparse]
+ [\-\-only\-verify\-crc] [\-\-quiet] [\-\-rsh-command=command] [\-\-help]
+ [\-\-version] [pattern...] [< archive]
+ 
