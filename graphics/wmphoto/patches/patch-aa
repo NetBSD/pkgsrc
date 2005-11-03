@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/27 13:35:09 agc Exp $
---- Makefile.orig	Wed Mar 28 10:09:18 2001
-+++ Makefile	Wed Mar 28 10:15:59 2001
+$NetBSD: patch-aa,v 1.2 2005/11/03 22:12:36 rillig Exp $
+
+--- wmphoto/Makefile.orig	Wed Mar 28 10:09:18 2001
++++ wmphoto/Makefile	Wed Mar 28 10:15:59 2001
 @@ -1,19 +1,8 @@
  # wmphoto Makefile
  
