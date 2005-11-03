@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/03 05:21:18 taca Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/03 07:21:28 taca Exp $
 
 DISTNAME=	rdtool-0.6.18
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,13 +14,6 @@ COMMENT=	RD (Ruby Document) converter to HTML/man/etc
 CONFLICTS+=	ruby[1-9][0-9]-rdtool-*
 
 USE_RUBY_DIST_SUBDIR=	yes
-
-.include "../../lang/ruby/rubyversion.mk"
-
-.if ${RUBY_VER} == "16"
-DEPENDS+=	${RUBY_PKGPREFIX}-optparse>=0.7:../../devel/ruby-optparse
-DEPENDS+=	${RUBY_PKGPREFIX}-strscan>=0.6.1:../../devel/ruby-strscan
-.endif
 
 USE_RUBY_SETUP=	yes
 USE_PKGINSTALL=	yes
