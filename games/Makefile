@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2005/10/23 20:01:18 minskim Exp $
+# $NetBSD: Makefile,v 1.261 2005/11/03 06:26:25 wiz Exp $
 #
 
 COMMENT=	Games
@@ -100,6 +100,7 @@ SUBDIR+=	golddig
 SUBDIR+=	grhino
 SUBDIR+=	gtetrinet
 SUBDIR+=	gtkballs
+SUBDIR+=	gtklevel9
 SUBDIR+=	gtkmagnetic
 SUBDIR+=	gturing
 SUBDIR+=	heretic2-demo
