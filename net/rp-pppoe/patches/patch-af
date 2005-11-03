@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2002/10/09 08:30:43 tron Exp $
+$NetBSD: patch-af,v 1.2 2005/11/03 22:49:41 rillig Exp $
 
---- ../scripts/adsl-connect.in.orig	Mon Jul  8 16:38:24 2002
-+++ ../scripts/adsl-connect.in	Mon Oct  7 22:31:42 2002
+--- scripts/adsl-connect.in.orig	Mon Jul  8 16:38:24 2002
++++ scripts/adsl-connect.in	Mon Oct  7 22:31:42 2002
 @@ -218,12 +218,20 @@
  
  # Jigger DNS if required...
