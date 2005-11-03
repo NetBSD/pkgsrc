@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11764 2005/11/02 20:12:53 abs Exp $
+$NetBSD: CHANGES,v 1.11765 2005/11/03 01:56:45 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4982,3 +4982,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/tk to 8.4.11nb2 [root 2005-11-02]
 	Updated net/gofish to 1.1 [wiz 2005-11-02]
 	Updated net/skype to 1.2.0.18 [abs 2005-11-02]
+	Updated graphics/glitz to 0.4.4nb1 [rillig 2005-11-03]
+	Updated graphics/cairo to 1.0.2nb1 [rillig 2005-11-03]
