@@ -1,7 +1,7 @@
-<!-- $NetBSD: fixes.xml,v 1.32 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.33 2005/11/03 02:51:45 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
-  <title>Notes on fixes for packages</title>
+  <title>Making your package work</title>
 
   <sect1 id="general-operation">
     <title>General operation</title>
@@ -804,40 +804,74 @@
   </sect1>
   
   
-  <sect1 id="building-considerations">
-    <title>Building considerations</title>
+  <sect1 id="fixes-build">
+    <title>Building the package</title>
 
     <sect2 id="cpp-defines">
       <title>CPP defines</title>
-    
-      <para>
-        To port an application to NetBSD, it's usually necessary for the
-        compiler to be able to judge the system on which it's compiling, and
-        we use definitions so that the C pre-processor can do this.
-</para>
 
-      <para>
-        To test whether you are working on a 4.4 BSD-derived system, you
-        should use the BSD definition, which is defined in
-        <filename>&lt;sys/param.h&gt;</filename> on said systems.
-</para>
+      <para>Sometimes you need to compile different code depending on
+      the target platform. The C preprocessor has a set of predefined
+      macros that can be queried by using <varname>#ifdef FOO</varname>
+      or <varname>#if defined(FOO)</varname>. Among these macros are
+      usually ones that describe the target CPU and operating system.
+      Depending of which of the macros are defined, you can write code
+      that uses features unique to a specific platform. The best way to
+      handle these differences is to use the GNU autotools (automake,
+      autoconf, etc.) to check for specific features (like the existence
+      of a header file, a function or a library).</para>
+
+      <para>If that is not possible you can use the predefined macros
+      below to configure your code to the platform it runs on. Almost
+      every operating system, hardware architecture and compiler has its
+      own macro. For example, if the macros <varname>__GNUC__</varname>,
+      <varname>__i386__</varname> and <varname>__NetBSD__</varname> are
+      all defined, you know that you are using NetBSD on an Intel CPU,
+      and your compiler is GCC.</para>
+
+      <sect3 id="fixes-build-cpp-opsys">
+        <title>CPP defines for operating systems</title>
+
+        <para>To distinguish between 4.4 BSD-derived systems and the
+        rest of the world, you should use the following code.</para>
+
+<programlisting><![CDATA[
+    #include <sys/param.h>
+    #if (defined(BSD) && BSD >= 199306)
+      /* your BSD-specific code goes here */
+    #else
+      /* non-BSD-specific code */
+    #endif
+]]></programlisting>
+
+        <para>If this distinction is not fine enough, you can also use
+        the following defines.</para>
 
 <programlisting>
-    <![CDATA[#include <sys/param.h>]]>
+    FreeBSD     __FreeBSD__
+    Linux       linux, __linux, __linux__
+    NetBSD      __NetBSD__
+    OpenBSD     __OpenBSD__
+    Solaris     sun, __sun (GCC and SunPro), __sun__ (only GCC)
 </programlisting>
 
-      <para>and then you can surround the BSD-specific parts of your
-        package's C/C++ code using this conditional:</para>
+      </sect3><sect3 id="fixes-build-cpp-cpu">
+        <title>CPP defines for CPUs</title>
 
 <programlisting>
-    <![CDATA[#if (defined(BSD) && BSD >= 199306)
-    ...
-    #endif]]>
+    i386        i386, __i386, __i386__
+    MIPS        __mips
+    SPARC       sparc, __sparc
 </programlisting>
 
-      <para>Please use the <quote>__NetBSD__</quote> definition sparingly - it
-        should only apply to features of &os; that are not present in other
-        4.4-lite-derived BSDs.</para>
+      </sect3><sect3 id="fixes-build-cpp-compiler">
+        <title>CPP defines for compilers</title>
+
+<programlisting>
+    GCC         __GNUC__ (major version), __GNUC_MINOR__
+</programlisting>
+
+      </sect3>
     </sect2>
 
     <sect2 id="cpp-list">
