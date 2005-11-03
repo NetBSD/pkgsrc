@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2003/08/14 09:31:40 agc Exp $
+$NetBSD: patch-ab,v 1.4 2005/11/03 21:51:57 rillig Exp $
 
---- Makefile.orig	Wed Apr 11 17:43:07 2001
-+++ Makefile
+--- src/Makefile.orig	Wed Apr 11 17:43:07 2001
++++ src/Makefile
 @@ -22,10 +22,10 @@
  #
  ###############################################################################

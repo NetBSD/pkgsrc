@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2003/08/14 09:31:40 agc Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/03 21:51:57 rillig Exp $
 
 fix tests for endianness and use our own header files to get
 int64_t and uint64_t
 
---- swarm_types.h.orig	Tue Apr 10 09:46:10 2001
-+++ swarm_types.h
+--- src/swarm_types.h.orig	Tue Apr 10 09:46:10 2001
++++ src/swarm_types.h
 @@ -26,9 +26,10 @@
  #ifndef __SWARM_TYPES_H__
  #define __SWARM_TYPES_H__

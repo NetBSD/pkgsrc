@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/06/01 18:02:56 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/11/03 22:09:28 rillig Exp $
 #
 
 DISTNAME=	hp2xx-3.4.4
@@ -10,12 +10,12 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/hp2xx/hp2xx.html
 COMMENT=	HPGL converter and previewer
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/sources
+BUILD_DIRS=	sources
 USE_MAKEINFO=	YES
 INFO_FILES=	hp2xx.info
 
 post-extract:
-	${CP} ${WRKSRC}/../makes/generic.mak ${WRKSRC}/Makefile
+	${CP} ${WRKSRC}/makes/generic.mak ${WRKSRC}/sources/Makefile
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

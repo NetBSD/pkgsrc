@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 2004/08/12 19:59:51 agc Exp $
+$NetBSD: patch-ah,v 1.2 2005/11/03 21:51:57 rillig Exp $
 
---- armproc.h	2004/08/12 18:45:56	1.1
-+++ armproc.h	2004/08/12 18:46:08
+--- src/armproc.h	2004/08/12 18:45:56	1.1
++++ src/armproc.h	2004/08/12 18:46:08
 @@ -29,7 +29,7 @@
  #include "core.h"
  #include "cache.h"

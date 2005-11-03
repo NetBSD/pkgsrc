@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2004/08/12 19:59:51 agc Exp $
+$NetBSD: patch-ag,v 1.2 2005/11/03 21:51:57 rillig Exp $
 
---- syscopro.cpp	2004/08/12 18:34:07	1.1
-+++ syscopro.cpp	2004/08/12 18:37:39
+--- src/syscopro.cpp	2004/08/12 18:34:07	1.1
++++ src/syscopro.cpp	2004/08/12 18:37:39
 @@ -26,10 +26,12 @@
  #include "syscopro.h"
  #include <string.h>
