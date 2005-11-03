@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:03:07 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/03 22:39:38 rillig Exp $
 
 DISTNAME=	IglooFTP-0.6.1
 PKGREVISION=	4
@@ -11,10 +11,10 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.littleigloo.org/iglooftp.php3
 COMMENT=	Easy to use FTP client for X Window System
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+BUILD_DIRS=	src
 
 post-extract:
-	${RM} ${WRKSRC}/../share/docs/LICENSE~
+	${RM} ${WRKSRC}/share/docs/LICENSE~
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
