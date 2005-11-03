@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/08/08 10:32:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/11/03 08:39:54 rh Exp $
 share/GNUstep/System/Applications/Gorm.app/Gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/0Menus
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuAttributesInspector.gorm/data.classes
@@ -111,21 +111,33 @@ share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormClassInsp
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormClassPanel.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormClassPanel.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormClassPanel.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormConnectionInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormConnectionInspector.gorm/data.info
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormConnectionInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormCustomClassInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormCustomClassInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormCustomClassInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormDocument.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormDocument.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormDocument.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormDummyInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormDummyInspector.gorm/data.info
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormDummyInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormFontView.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormFontView.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormFontView.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormImageInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormImageInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormImageInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormInspectorPanel.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormInspectorPanel.gorm/data.info
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormInspectorPanel.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormNSSplitViewInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormNSSplitViewInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormNSSplitViewInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormObjectInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormObjectInspector.gorm/data.info
+share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormObjectInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormPrefColors.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormPrefColors.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormPrefColors.gorm/objects.gorm
@@ -240,6 +252,7 @@ share/GNUstep/System/Library/Headers/GormCore/GormClassEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormClassInspector.h
 share/GNUstep/System/Library/Headers/GormCore/GormClassManager.h
 share/GNUstep/System/Library/Headers/GormCore/GormClassPanelController.h
+share/GNUstep/System/Library/Headers/GormCore/GormConnectionInspector.h
 share/GNUstep/System/Library/Headers/GormCore/GormControlEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormCustomClassInspector.h
 share/GNUstep/System/Library/Headers/GormCore/GormCustomView.h
@@ -257,6 +270,7 @@ share/GNUstep/System/Library/Headers/GormCore/GormInternalViewEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormMatrixEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormNSSplitViewInspector.h
 share/GNUstep/System/Library/Headers/GormCore/GormObjectEditor.h
+share/GNUstep/System/Library/Headers/GormCore/GormObjectInspector.h
 share/GNUstep/System/Library/Headers/GormCore/GormOpenGLView.h
 share/GNUstep/System/Library/Headers/GormCore/GormOutlineView.h
 share/GNUstep/System/Library/Headers/GormCore/GormPalettesManager.h
@@ -265,6 +279,7 @@ share/GNUstep/System/Library/Headers/GormCore/GormPrivate.h
 share/GNUstep/System/Library/Headers/GormCore/GormProtocol.h
 share/GNUstep/System/Library/Headers/GormCore/GormResource.h
 share/GNUstep/System/Library/Headers/GormCore/GormResourceEditor.h
+share/GNUstep/System/Library/Headers/GormCore/GormResourceManager.h
 share/GNUstep/System/Library/Headers/GormCore/GormScrollViewAttributesInspector.h
 share/GNUstep/System/Library/Headers/GormCore/GormSetNameController.h
 share/GNUstep/System/Library/Headers/GormCore/GormSound.h
@@ -274,7 +289,7 @@ share/GNUstep/System/Library/Headers/GormCore/GormSoundView.h
 share/GNUstep/System/Library/Headers/GormCore/GormSplitViewEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormViewEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormViewKnobs.h
-share/GNUstep/System/Library/Headers/GormCore/GormViewResourceManager.h
+share/GNUstep/System/Library/Headers/GormCore/GormViewSizeInspector.h
 share/GNUstep/System/Library/Headers/GormCore/GormViewWindow.h
 share/GNUstep/System/Library/Headers/GormCore/GormViewWithContentViewEditor.h
 share/GNUstep/System/Library/Headers/GormCore/GormViewWithSubviewsEditor.h
@@ -343,11 +358,15 @@ share/GNUstep/System/Library/Libraries/libGormPrefs.so.0.0.1
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormPrefGuideline.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormPrefGeneral.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormPrefColors.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormObjectInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormNSSplitViewInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormInspectorPanel.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormImageInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormFontView.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormDummyInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormDocument.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormCustomClassInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormConnectionInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormClassPanel.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/GormClassInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/English.lproj/Gorm.gorm
