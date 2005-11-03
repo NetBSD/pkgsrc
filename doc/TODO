@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4139 2005/11/03 06:27:14 wiz Exp $
+$NetBSD: TODO,v 1.4140 2005/11/03 14:32:28 salo Exp $
 
 Suggested new packages
 ======================
@@ -828,7 +828,6 @@ Suggested package updates
 	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openpam-20050616
 	o openssl-0.9.8a
-	o openvpn-2.0 [pkg/30239]
 	o oroborus-2.0.15
 	o osh-050219
 	o oss-3.99.3c
