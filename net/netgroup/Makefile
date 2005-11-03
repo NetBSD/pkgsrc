@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/10/10 17:08:18 hira Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/03 17:00:38 tv Exp $
 #
 
 DISTNAME=	netgroup-0.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.astron.com/pub/netgroup/
 MAINTAINER=	christos@NetBSD.org
 COMMENT=	Netgroup membership listing and testing functions
 
-.include "../../mk/bsd.prefs.mk"
+NOT_FOR_PLATFORM=	Interix-*-* # no netgroups
 
 INSTALL_TARGET=	inst-all
 
