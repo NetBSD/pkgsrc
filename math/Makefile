@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2005/11/02 09:20:50 taca Exp $
+# $NetBSD: Makefile,v 1.140 2005/11/03 06:35:30 taca Exp $
 #
 
 COMMENT=	Mathematics
@@ -100,7 +100,6 @@ SUBDIR+=	qalculate-kde
 SUBDIR+=	qalculate-units
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
-#SUBDIR+=	ruby-bigfloat
 SUBDIR+=	ruby-bitvector
 SUBDIR+=	ruby-gsl
 SUBDIR+=	sc
