@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2001/05/22 06:38:09 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2005/11/03 22:35:53 rillig Exp $
 
---- ../prelude.h.orig	Thu May 27 23:29:25 1999
-+++ ../prelude.h	Sat May 20 04:06:55 2000
+--- src/prelude.h.orig	Thu May 27 23:29:25 1999
++++ src/prelude.h	Sat May 20 04:06:55 2000
 @@ -566,10 +566,12 @@
   * eval, print loop
   */
