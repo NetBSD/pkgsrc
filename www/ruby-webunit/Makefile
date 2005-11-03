@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/10/29 12:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/03 07:22:24 taca Exp $
 
 DISTNAME=	webunit-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -20,10 +20,6 @@ VERSION=	20040429++
 
 DEPENDS+= ${RUBY_PKGPREFIX}-html-parser>=19990912p1:../../textproc/ruby-html-parser
 DEPENDS+= ${RUBY_PKGPREFIX}-htmlsplit>=1.0.2:../../www/ruby-htmlsplit
-.if ${RUBY_VER} == 16
-DEPENDS+= ${RUBY_PKGPREFIX}-testunit>=0.1:../../devel/ruby-testunit
-DEPENDS+= ${RUBY_PKGPREFIX}-rexml>=2.4.8:../../textproc/ruby-rexml
-.endif
 
 pre-patch:
 	cd ${WRKSRC}/lib; \
