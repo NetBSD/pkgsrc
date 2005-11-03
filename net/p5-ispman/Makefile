@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/09/11 11:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/03 23:12:43 rillig Exp $
 #
 
 DISTNAME=		ispman-0.5
@@ -19,24 +19,21 @@ DEPENDS+=		p5-IMAP-Admin>=1.2.5:../../mail/p5-IMAP-Admin
 DEPENDS+=		p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1
 DEPENDS+=		p5-IO-stringy>=1.213:../../devel/p5-IO-stringy
 
-WRKSRC=			${WRKDIR}/ispman/Modules/ISPMan
+WRKSRC=			${WRKDIR}/ispman/Modules
 PERL5_PACKLIST=		auto/ISPMan/.packlist
-PERL5_CONFIGURE_DIRS=	${WRKSRC} ${WRKSRC}/../IO-stringy-1.212_patched
+PERL5_CONFIGURE_DIRS=	${WRKSRC}/ISPMan ${WRKSRC}/IO-stringy-1.212_patched
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
-INSTALL_DIRS=		${WRKSRC}
+INSTALL_DIRS=		${WRKSRC}/ISPMan
 
 MAKE_PARAMS+=		--noprompt
 
-pre-configure:
-	cd ${WRKSRC} &&							\
-	for i in `${FIND} * -type f -print` ; do			\
-		${CP} $$i $$i.old &&					\
-		${SED} < $$i.old > $$i -e 's:/etc:${PREFIX}/etc:g' &&	\
-		${RM} $$i.old ;						\
-	done
+SUBST_CLASSES+=		etc-fix
+SUBST_STAGE.etc-fix=	pre-configure
+SUBST_FILES.etc-fix=	ISPMan/*
+SUBST_SED.etc-fix=	-e 's:/etc:${PREFIX}/etc:g'
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/../IO-stringy-1.212_patched/lib/IO/Scalar.pm \
+	${INSTALL_DATA} ${WRKSRC}/IO-stringy-1.212_patched/lib/IO/Scalar.pm \
 		${PERL5_INSTALLVENDORLIB}/IO/ScalarPatched.pm
 
 .include "../../lang/perl5/module.mk"

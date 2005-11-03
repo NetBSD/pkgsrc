@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/10/21 18:57:04 rh Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/03 23:12:43 rillig Exp $
 
---- ISPMan/Config.pm.orig	Tue Aug  1 16:18:21 2000
-+++ ISPMan/Config.pm
+--- ISPMan/ISPMan/Config.pm.orig	Tue Aug  1 16:18:21 2000
++++ ISPMan/ISPMan/Config.pm
 @@ -16,7 +16,7 @@
     my $class = ref($proto) || $proto;   
     
