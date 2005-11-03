@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/07/23 19:01:41 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/03 21:38:04 rillig Exp $
 
---- Usage.h.orig	2002-03-26 16:55:20.000000000 +0100
-+++ Usage.h
+--- src/Usage.h.orig	2002-03-26 16:55:20.000000000 +0100
++++ src/Usage.h
 @@ -1,13 +1,13 @@
  void Usage()
  {
