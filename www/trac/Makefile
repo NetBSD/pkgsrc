@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.12 2005/06/20 19:20:11 epg Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/03 23:04:29 epg Exp $
 #
 
-DISTNAME=	trac-0.8.4
+DISTNAME=	trac-0.9
 CATEGORIES=	devel www
 MASTER_SITES=	http://ftp.edgewall.com/pub/trac/
 
 MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://www.edgewall.com/products/trac/
-COMMENT=	Enhanced wiki and issue tracking system
+COMMENT=	Subversion repository browser, wiki, and issue tracking system
 
-DEPENDS+=	${PYPKGPREFIX}-clearsilver>=0.9.7:../../www/py-clearsilver
-DEPENDS+=	${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite
-DEPENDS+=	${PYPKGPREFIX}-subversion>=0.37:../../devel/py-subversion
+DEPENDS+=	${PYPKGPREFIX}-clearsilver>=0.9.14:../../www/py-clearsilver
+DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
+DEPENDS+=	${PYPKGPREFIX}-{PgSQL>=2.4,psycopg>=1.1.14,sqlite>=0.5}:../../databases/py-sqlite
 
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
-PYTHON_PATCH_SCRIPTS=	contrib/*.py
+PYTHON_PATCH_SCRIPTS=	contrib/*.py contrib/*-hook
+PYTHON_VERSIONS_ACCEPTED=	24 23
 
 EGDIR=		${PREFIX}/share/examples/trac
 
