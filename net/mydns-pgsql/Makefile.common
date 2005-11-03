@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2005/10/29 16:56:15 minskim Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/11/03 03:03:31 minskim Exp $
 
 DISTNAME=	mydns-1.0.0
 CATEGORIES=	net
@@ -30,6 +30,8 @@ RCD_SCRIPTS=	mydns
 
 PKG_GROUPS=	${MYDNS_GROUP}
 PKG_USERS=	${MYDNS_USER}:${MYDNS_GROUP}::MyDNS\ user
+
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 post-install:
 		${INSTALL_DATA_DIR} ${EGDIR}
