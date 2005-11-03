@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2004/05/07 01:50:15 danw Exp $
+$NetBSD: patch-ae,v 1.2 2005/11/03 20:20:12 rillig Exp $
 
---- ../include/sload.h.orig	Sat Mar 13 00:47:08 2004
-+++ ../include/sload.h	Sat Mar 13 00:47:14 2004
+--- include/sload.h.orig	Sat Mar 13 00:47:08 2004
++++ include/sload.h	Sat Mar 13 00:47:14 2004
 @@ -21,9 +21,6 @@
  #else
  #  include <strings.h>

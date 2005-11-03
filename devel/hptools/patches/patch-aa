@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2004/05/07 01:50:15 danw Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/03 20:20:12 rillig Exp $
 
---- ../rplcomp/masd.c.orig	Sat Mar 13 00:47:19 2004
-+++ ../rplcomp/masd.c	Sat Mar 13 00:47:25 2004
+--- rplcomp/masd.c.orig	Sat Mar 13 00:47:19 2004
++++ rplcomp/masd.c	Sat Mar 13 00:47:25 2004
 @@ -11,9 +11,6 @@
  #else
  #  include <strings.h>
