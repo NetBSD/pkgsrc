@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/01 05:57:30 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/03 13:25:16 rillig Exp $
 #
 
 DISTNAME=		heme-0.4
@@ -6,7 +6,7 @@ CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heme/}
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://keihanna.dl.sourceforge.net/sourceforge/heme/
+HOMEPAGE=		http://sourceforge.net/projects/heme/
 COMMENT=		Fast and portable console hex editor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
