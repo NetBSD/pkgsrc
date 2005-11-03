@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.322 2005/11/03 10:34:26 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.323 2005/11/03 12:32:07 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1450,7 +1450,7 @@ sub checktext_basic_vartype($$$$$) {
 			inputmethod
 			japanese java
 			kde korean
-			lang
+			lang linux
 			mail math mbone meta-pkgs misc multimedia
 			net news
 			packages parallel perl5 pkgtools plan9 print python
