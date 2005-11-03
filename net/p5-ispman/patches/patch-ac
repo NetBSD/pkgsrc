@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/10/21 18:57:04 rh Exp $
+$NetBSD: patch-ac,v 1.2 2005/11/03 23:12:43 rillig Exp $
 
---- ISPMan/LDAP.pm.orig	Thu Oct 19 16:39:09 2000
-+++ ISPMan/LDAP.pm
+--- ISPMan/ISPMan/LDAP.pm.orig	Thu Oct 19 16:39:09 2000
++++ ISPMan/ISPMan/LDAP.pm
 @@ -4,7 +4,7 @@
  use Net::LDAP;
  use Net::LDAP::Entry;
