@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/03 16:33:43 tv Exp $
 #
 
 DISTNAME=	www6to4-1.5
@@ -11,10 +11,6 @@ COMMENT=	Lightweight http proxy, helps IPv4 only browsers
 
 BUILD_TARGET=	# empty
 
-.include "../../mk/bsd.prefs.mk"
-# always IPv6 ready
-BUILD_DEFS+=	USE_INET6
-
 INSTALLATION_DIRS=	sbin
 
 do-install:
@@ -25,4 +21,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/www6to4_forward.conf \
 		${PREFIX}/share/examples/www6to4
 
+PKG_OPTIONS_VAR=		PKG_OPTIONS.sipcalc
+PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
+PKG_OPTIONS_GROUP.inet6=	inet6
+
+.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"
