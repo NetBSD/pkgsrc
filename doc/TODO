@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4138 2005/11/03 02:48:52 minskim Exp $
+$NetBSD: TODO,v 1.4139 2005/11/03 06:27:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -639,6 +639,7 @@ Suggested package updates
 	o intercal-0.24 [dillo]
 	o ion3-20051029
 	o ion3-devel-20050820 [pkg/31132]
+	o iozone-3.254
 	o ipcheck-0.219
 	o ipsec-tools-0.6.2
 	o ipv6calc-0.50
@@ -665,6 +666,7 @@ Suggested package updates
 	o jgrasp-183
 	o jigdo-0.7.2
 	o jove-4.16.0.69
+	o jpilot-0.99.8
 	o jwhois-3.2.3
 	o kajaani-kombat-0.7
 	o kapooka-0.3
@@ -1208,7 +1210,7 @@ Suggested package updates
 	o stellarium-0.7.1
 	o stlport-4.6.2
 	o strace-4.5.8
-	o stunnel-4.12
+	o stunnel-4.14
 	o subtitleripper-0.3.4
 	o suse_base-10.0
 	o sweep-0.8.4
