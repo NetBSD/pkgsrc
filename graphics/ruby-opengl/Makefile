@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2005/06/01 18:02:57 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/11/03 05:29:03 taca Exp $
 
 DISTNAME=	rbogl-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-opengl-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://www2.giganet.net/~yoshi/
 
@@ -13,7 +12,7 @@ COMMENT=	OpenGL/GLU/GLUT interface modules for Ruby
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
 WRKSRC=			${WRKDIR}/opengl-${VERSION}
-VERSION=		0.32f
+VERSION=		0.32g
 INSTALL_TARGET=		site-install
 CONFIGURE_ARGS+=	--with-ruby-dir="${LOCALBASE}" \
 			--with-x11-dir="${X11BASE}"
