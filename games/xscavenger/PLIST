@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:57:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/03 22:03:18 rillig Exp $
 bin/scavenger
 man/man6/scavenger.6
+share/doc/scavenger/DOC
 share/scavenger/badguy.lbm
 share/scavenger/brownblue.lbm
 share/scavenger/death.raw
@@ -14,6 +15,5 @@ share/scavenger/reddevil.lbm
 share/scavenger/regularguy.lbm
 share/scavenger/spiralthing.lbm
 share/scavenger/victory.raw
-@dirrm share/scavenger
-share/doc/scavenger/DOC
 @dirrm share/doc/scavenger
+@dirrm share/scavenger
