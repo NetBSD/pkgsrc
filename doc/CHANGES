@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11767 2005/11/03 02:00:57 tv Exp $
+$NetBSD: CHANGES,v 1.11768 2005/11/03 02:48:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4986,3 +4986,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/cairo to 1.0.2nb1 [rillig 2005-11-03]
 	Added meta-pkgs/pkgsrc-guide-tools version 1.0 [tv 2005-11-03]
 	Updated meta-pkgs/php4-extensions to 4.4nb3 [tv 2005-11-03]
+	Updated wm/wmii to 20051031 [minskim 2005-11-03]
