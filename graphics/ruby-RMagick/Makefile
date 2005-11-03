@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/03 05:10:16 taca Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/03 07:20:28 taca Exp $
 
 DISTNAME=	RMagick-1.9.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://rmagick.rubyforge.org/
 COMMENT=	Ruby ImageMagick extension
 
-RUBY_VERSION_SUPPORTED=	18	# build error with Ruby 1.6.8
 RUBY_HAS_ARCHLIB=	yes
 GNU_CONFIGURE=		yes
 USE_GHOSTSCRIPT=	build
