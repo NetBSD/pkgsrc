@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:26 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/03 20:41:43 rillig Exp $
 #
 
 DISTNAME=	john-1.6
@@ -10,9 +10,8 @@ MAINTAINER=	DawS@irc.pl
 HOMEPAGE=	http://www.openwall.com/john/
 COMMENT=	Unix Password Cracker
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
-
 NO_CONFIGURE=	yes
+BUILD_DIRS=	src
 
 .include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -36,14 +35,14 @@ BUILD_TARGET=	generic
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/../run/john ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/run/john ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/../run/all.chr ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/../run/alpha.chr ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/../run/digits.chr ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/../run/john.ini ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/../run/mailer ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/../run/password.lst ${PREFIX}/share/john
+	${INSTALL_DATA} ${WRKSRC}/run/all.chr ${PREFIX}/share/john
+	${INSTALL_DATA} ${WRKSRC}/run/alpha.chr ${PREFIX}/share/john
+	${INSTALL_DATA} ${WRKSRC}/run/digits.chr ${PREFIX}/share/john
+	${INSTALL_DATA} ${WRKSRC}/run/john.ini ${PREFIX}/share/john
+	${INSTALL_DATA} ${WRKSRC}/run/mailer ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/run/password.lst ${PREFIX}/share/john
 	${LN} -sf ${PREFIX}/bin/john ${PREFIX}/bin/unafs
 	${LN} -sf ${PREFIX}/bin/john ${PREFIX}/bin/unique
 	${LN} -sf ${PREFIX}/bin/john ${PREFIX}/bin/unshadow
