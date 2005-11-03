@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/03 19:36:39 rillig Exp $
 #
 
 DISTNAME=		GeneSplicer
@@ -15,15 +15,15 @@ EXAMPLES=		arabidopsis drosophila malaria pyoelii human rice \
 			training_data_sets/Arabidopsis			  \
 			training_data_sets/Human
 MAKEFILE=		makefile
-WRKSRC=			${WRKDIR}/GeneSplicer/sources
+BUILD_DIRS=		sources
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/genesplicer ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/sources/genesplicer ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${EXDIR}
 .for DOC in readme fasta.example fasta.results
-	${INSTALL_DATA} ${WRKSRC}/${DOC} ${EXDIR}
+	${INSTALL_DATA} ${WRKSRC}/sources/${DOC} ${EXDIR}
 .endfor
-	cd ${WRKSRC}/../ && ${PAX} -rw ${EXAMPLES} ${EXDIR}/
+	cd ${WRKSRC} && ${PAX} -rw ${EXAMPLES} ${EXDIR}/
 
 .include "../../mk/bsd.pkg.mk"
