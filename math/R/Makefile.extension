@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.6 2004/01/20 12:20:04 agc Exp $
+# $NetBSD: Makefile.extension,v 1.7 2005/11/03 12:00:32 rillig Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -13,6 +13,8 @@ PKGNAME?=		R-${R_PKGNAME}-${R_PKGVER:S/-/./}
 MASTER_SITES?=		${MASTER_SITE_R_CRAN:=contrib/}
 DIST_SUBDIR?=		R
 CATEGORIES+=		math
+
+R_HOMEPAGE_BASE=	http://cran.r-project.org/src/contrib/Descriptions
 
 R_DEPENDS?=		R>=1.7.0
 DEPENDS+=               ${R_DEPENDS}:../../math/R
