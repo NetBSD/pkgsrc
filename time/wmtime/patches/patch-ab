@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2003/03/12 03:56:31 jschauma Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/03 23:01:54 rillig Exp $
 
 --- /dev/null	Tue Mar 11 22:46:14 2003
-+++ wmtime.man	Tue Mar 11 22:46:07 2003
++++ wmtime/wmtime.man	Tue Mar 11 22:46:07 2003
 @@ -0,0 +1,83 @@
 +.TH WMTIME 1
 +.SH NAME

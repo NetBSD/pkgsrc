@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:45 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/03 23:01:54 rillig Exp $
 #
 
 DISTNAME=	wmtime-1.0b2
@@ -9,11 +9,13 @@ MASTER_SITES=	ftp://ftp.alpha.alt.ru/pub/UNIX/X11/WMaker/ \
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Time/Date applet for WindowMaker
 
-WRKSRC=		${WRKDIR}/wmtime.app/wmtime
+WRKSRC=		${WRKDIR}/wmtime.app
 USE_IMAKE=	YES
+CONFIGURE_DIRS=	wmtime
+BUILD_DIRS=	${CONFIGURE_DIRS}
 
 post-extract:
-	${CP} ${WRKSRC}/../Imakefile ${WRKSRC}/Imakefile
+	${CP} ${WRKSRC}/Imakefile ${WRKSRC}/wmtime/Imakefile
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
