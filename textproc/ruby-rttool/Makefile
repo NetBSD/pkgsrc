@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/03 05:26:10 taca Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/03 07:21:40 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -19,12 +19,6 @@ HTMLDOCS=		rttool.en.html rttool.ja.html
 DOCS=			rttool.en.rd rttool.ja.rd
 SRCS=			rt2html-lib.rb rt2txt-lib.rb rtparser.rb \
 			rtvisitor.rb w3m.rb
-
-.include "../../lang/ruby/rubyversion.mk"
-
-.if ${RUBY_VER} == 16
-DEPENDS+=	${RUBY_PKGPREFIX}-optparse>=0.7:../../devel/ruby-optparse
-.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rt
