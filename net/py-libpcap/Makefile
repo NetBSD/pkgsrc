@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/10 13:51:01 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/03 13:44:27 rillig Exp $
 #
 
 DISTNAME=		pylibpcap-0.5
 PKGNAME=		${PYPKGPREFIX}-libpcap-0.5
 CATEGORIES=		net
-MASTER_SITES=		http://heanet.dl.sourceforge.net/sourceforge/pylibpcap/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pylibpcap/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://pylibpcap.sourceforge.net/
