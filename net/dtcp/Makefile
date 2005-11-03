@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/03 05:15:09 taca Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/03 07:20:56 taca Exp $
 #
 
 DISTNAME=	dtcp-20050521
@@ -12,12 +12,6 @@ HOMEPAGE=	http://www.imasy.or.jp/~ume/dtcp/
 COMMENT=	Dynamic Tunnel Configuration Protocol daemon and client
 
 DEPENDS+=	qpopper-[0-9]*:../../mail/qpopper
-
-.include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} == "16"
-DEPENDS+=	${RUBY_PKGPREFIX}-dbm-[0-9]*:../../databases/ruby-dbm
-DEPENDS+=	${RUBY_PKGPREFIX}-digest-[0-9]*:../../security/ruby${RUBY_VER}-digest
-.endif
 
 RCD_SCRIPTS=	dtcpc dtcps
 USE_PKGINSTALL=	YES
