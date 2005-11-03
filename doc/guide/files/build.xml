@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.13 2005/11/03 17:06:13 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.14 2005/11/03 18:15:47 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -155,27 +155,37 @@ of the actual work is done in the <varname>do-*</varname> stages.</para>
 source files, temporary files, pkgsrc-internal files, and so on. These
 directories are explained here.</para>
 
+<para>Some of the directory variables contain relative pathnames. There
+are two common base directories for these relative directories:
+<varname>PKGSRCDIR/PKGPATH</varname> is used for directories that are
+pkgsrc-specific. <varname>WRKSRC</varname> is used for directories
+inside the package itself. The permissions after each variable indicate
+whether the variable may be changed by the package Makefile.</para>
+
 <variablelist>
 
-<varlistentry><term>PKGSRCDIR</term><listitem><para>This is an absolute
-pathname that points to the pkgsrc root directory. Generally, you don't
-need it.</para></listitem></varlistentry>
+<varlistentry><term><varname>PKGSRCDIR</varname> (read-only)</term>
+<listitem><para>This is an absolute pathname that points to the pkgsrc
+root directory. Generally, you don't need
+it.</para></listitem></varlistentry>
 
-<varlistentry><term>PKGPATH</term><listitem><para>This is a pathname
-relative to <varname>PKGSRCDIR</varname> that points to the current
+<varlistentry><term><varname>PKGPATH</varname> (read-only)</term>
+<listitem><para>This is a pathname relative to
+<varname>PKGSRCDIR</varname> that points to the current
 package.</para></listitem></varlistentry>
 
-<varlistentry><term>WRKDIR</term><listitem><para>This is an absolute
-pathname pointing to the directory where all work takes place. This
-directory typically contains temporary directories used by the various
-pkgsrc frameworks, like <emphasis>buildlink</emphasis> or the
+<varlistentry><term><varname>WRKDIR</varname> (read-only)</term>
+<listitem><para>This is an absolute pathname pointing to the directory
+where all work takes place. This directory typically contains temporary
+directories used by the various pkgsrc frameworks, like
+<emphasis>buildlink</emphasis> or the
 <emphasis>wrappers</emphasis>.</para></listitem></varlistentry>
 
-<varlistentry><term>WRKSRC</term><listitem><para>This is an absolute
-pathname pointing to the directory where the distfiles are extracted. It
-is usually a direct subdirectory of <varname>WRKDIR</varname>, and often
-it's the only directory entry that doesn't start with a
-dot.</para></listitem></varlistentry>
+<varlistentry><term><varname>WRKSRC</varname> (read-write)</term>
+<listitem><para>This is an absolute pathname pointing to the directory
+where the distfiles are extracted. It is usually a direct subdirectory
+of <varname>WRKDIR</varname>, and often it's the only directory entry
+that isn't hidden.</para></listitem></varlistentry>
 
 </variablelist>
 </sect1>
