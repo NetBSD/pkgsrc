@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/03/26 14:44:41 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/03 22:01:10 rillig Exp $
 
---- gnuan.c.orig	Sat Apr  3 05:58:53 1999
-+++ gnuan.c	Wed Nov 17 23:57:25 1999
+--- src/gnuan.c.orig	Sat Apr  3 05:58:53 1999
++++ src/gnuan.c	Wed Nov 17 23:57:25 1999
 @@ -1348,12 +1348,12 @@
      fpout = stderr;
      fprintf (fpout, "Input the file with the algebraic moves of the game.\n");
