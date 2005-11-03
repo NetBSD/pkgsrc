@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11773 2005/11/03 06:44:58 wiz Exp $
+$NetBSD: CHANGES,v 1.11774 2005/11/03 07:06:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5000,3 +5000,28 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/ruby-opengl to 0.32g [taca 2005-11-03]
 	Updated www/ruby-actionwebservice to 0.9.1 [taca 2005-11-03]
 	Updated textproc/ruby-redcloth to 3.0.4 [taca 2005-11-03]
+	Removed lang/ruby16 [taca 2005-11-03]
+	Removed devel/ruby-installpkg [taca 2005-11-03]
+	Removed devel/ruby-optparse [taca 2005-11-03]
+	Removed devel/ruby-strscan [taca 2005-11-03]
+	Removed devel/ruby-testunit [taca 2005-11-03]
+	Removed devel/ruby-textbuf [taca 2005-11-03]
+	Removed devel/ruby-unit [taca 2005-11-03]
+	Removed math/ruby-bigfloat [taca 2005-11-03]
+	Removed net/ruby-drb [taca 2005-11-03]
+	Removed textproc/ruby-erb [taca 2005-11-03]
+	Removed textproc/ruby-rdoc [taca 2005-11-03]
+	Removed textproc/ruby-rexml [taca 2005-11-03]
+	Removed textproc/ruby-syck [taca 2005-11-03]
+	Removed www/ruby-webrick [taca 2005-11-03]
+	Removed converters/ruby16-iconv [taca 2005-11-03]
+	Removed devel/ruby16-racc [taca 2005-11-03]
+	Removed www/ruby16-borges [taca 2005-11-03]
+	Removed devel/ruby16-curses [taca 2005-11-03]
+	Removed devel/ruby16-zlib [taca 2005-11-03]
+	Removed security/ruby16-digest [taca 2005-11-03]
+	Removed security/ruby16-openssl [taca 2005-11-03]
+	Removed x11/ruby16-tcltk [taca 2005-11-03]
+	Removed x11/ruby16-tk [taca 2005-11-03]
+	Removed lang/ruby16-base [taca 2005-11-03]
+	Removed net/ruby-xmlrpc4r [taca 2005-11-03]
