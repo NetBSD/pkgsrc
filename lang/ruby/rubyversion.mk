@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.15 2005/11/02 08:56:17 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.16 2005/11/03 07:23:41 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -7,7 +7,6 @@ _RUBYVERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # current supported Ruby's version
-RUBY16_VERSION?=	1.6.8
 RUBY18_VERSION?=	1.8.3
 
 # RUBY_VERSION_DEFAULT defines default version for Ruby related
@@ -22,9 +21,7 @@ RUBY_VERSION_DEFAULT?=	1.8
 #	Default value is set to ${RUBY_VERSION_DEFAULT}
 #
 .if !defined(RUBY_VERSION)
-.if ${RUBY_VERSION_DEFAULT} == "1.6"
-RUBY_VERSION?=		${RUBY16_VERSION}
-.elif ${RUBY_VERSION_DEFAULT} == "1.8"
+.if ${RUBY_VERSION_DEFAULT} == "1.8"
 RUBY_VERSION?=		${RUBY18_VERSION}
 .endif
 .endif
@@ -33,18 +30,18 @@ RUBY_VERSION?=		${RUBY18_VERSION}
 #	supported by the package.  It should be defined by The pacakges
 #	for specific version Ruby.
 #
-RUBY_VERSION_SUPPORTED?= 16 18
+RUBY_VERSION_SUPPORTED?= 18
 
 # RUBY_VERSION_LIST defines the list of ${RUBY_VER} which is known to
 #	this framework.
 #
-RUBY_VERSION_LIST= 16,18
+RUBY_VERSION_LIST= 18
 
 # RUBY_NOVERSION should be set to "Yes" if the package dosen't depend on
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name is begin
-#	with ${RUBY_NAME}; "ruby16-", "ruby18" and so on.
+#	with ${RUBY_NAME}; "ruby18", "ruby19",  and so on.
 #
 #	It also affects to RUBY_DOCDIR, RUBY_EXAMPLESDIR...
 #
@@ -67,15 +64,11 @@ RUBY_VER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
 # RUBY_REQD		Minimum required Ruby's version
 #
 .if defined(RUBY_HAS_ARCHLIB) && empty(RUBY_HAS_ARCHLIB:M[nN][oO])
-.if ${RUBY_VER} == "16"
-RUBY_REQD?=		${RUBY16_VERSION}
-.elif ${RUBY_VER} == "18"
+.if ${RUBY_VER} == "18"
 RUBY_REQD?=		${RUBY18_VERSION}
 .endif
 .else
-.if ${RUBY_VER} == "16"
-RUBY_REQD?=		1.6.8
-.elif ${RUBY_VER} == "18"
+.if ${RUBY_VER} == "18"
 RUBY_REQD?=		1.8.1
 .endif
 .endif
@@ -122,11 +115,7 @@ RDOC?=			${PREFIX}/bin/rdoc${RUBY_VER}
 #
 # RUBY_ARCH is used architecture depended direcotry name.
 #
-.if ${OPSYS} == "Linux" && ${RUBY_VER} == "16"
-RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}-gnu
-.else
 RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
-.endif
 
 #
 # Ruby shared library version handling.
