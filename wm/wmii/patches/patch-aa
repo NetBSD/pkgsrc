@@ -1,19 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/23 20:39:03 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/03 02:47:58 minskim Exp $
 
---- config.mk.orig	2005-10-17 14:17:01.000000000 +0000
+--- config.mk.orig	2005-10-31 12:34:04.000000000 +0000
 +++ config.mk
-@@ -1,16 +1,16 @@
+@@ -1,15 +1,15 @@
  # Customize to fit your system
  
  # paths
 -PREFIX      = /usr/local
 -CONFPREFIX  = ${PREFIX}/etc
 -MANPREFIX   = ${PREFIX}/share/man
+-9PREFIX     = ${PREFIX}/9
 +#PREFIX      = /usr/local
 +CONFPREFIX  = ${PREFIX}/share/examples
-+MANPREFIX   = ${PREFIX}/man
- SHAREPREFIX = ${PREFIX}/share
--9PREFIX     = ${PREFIX}/9
++MANPREFIX   = ${PREFIX}/${PKGMANDIR}
 +9PREFIX     = ${PREFIX}
  
  INCDIR      = ${PREFIX}/include
@@ -25,8 +24,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/10/23 20:39:03 minskim Exp $
  
  # includes and libs
  INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11INC}
-@@ -18,14 +18,14 @@ LIBS        = -L${LIBDIR} -L/usr/lib -lc
- VERSION     = 20051017
+@@ -17,14 +17,14 @@ LIBS        = -L${LIBDIR} -L/usr/lib -lc
+ VERSION     = 20051031
  
  # flags
 -CFLAGS      = -O0 -g -Wall ${INCLUDES} -DVERSION=\"${VERSION}\"
@@ -36,7 +35,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/10/23 20:39:03 minskim Exp $
  
  # compiler
  # Note: - under Solaris add -D__EXTENSIONS__ to CFLAGS
- MAKE		= make
+-MAKE		= make
++#MAKE		= make
  AR          = ar cr
 -CC          = cc
 +#CC          = cc
