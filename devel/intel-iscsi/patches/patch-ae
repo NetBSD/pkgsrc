@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
+$NetBSD: patch-ae,v 1.2 2005/11/03 23:58:41 agc Exp $
 
 --- src/Makefile	8 Oct 2005 22:21:15 -0000	1.1.1.1
 +++ src/Makefile	8 Oct 2005 22:24:25 -0000	1.2
@@ -23,3 +23,15 @@ $NetBSD: patch-ae,v 1.1.1.1 2005/10/30 21:02:57 agc Exp $
  
  #
  # Compilation Targets
+@@ -67,8 +66,10 @@
+ #
+ 
+ USER_TARGET_OBJS = utarget.o target.o iscsi.o util.o parameters.o
+-uosd: osd.o $(USER_TARGET_OBJS)
++$(BIN)/uosd: osd.o $(USER_TARGET_OBJS)
+ 	$(CC) $(CFLAGS) osd.o $(USER_TARGET_OBJS) -lpthread -o $(BIN)/uosd
++uosd: osd.o $(USER_TARGET_OBJS)
++	$(CC) $(CFLAGS) osd.o $(USER_TARGET_OBJS) -lpthread -o uosd
+ $(BIN)/uramdisk: disk.c $(USER_TARGET_OBJS)
+ 	$(CC) $(CFLAGS) -DCONFIG_DISK_RAMDISK disk.c $(USER_TARGET_OBJS) -lpthread -o $(BIN)/uramdisk
+ $(BIN)/ufsdisk: disk.c $(USER_TARGET_OBJS)
