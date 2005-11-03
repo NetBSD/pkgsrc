@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/06/22 22:43:37 salo Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/11/03 19:09:46 martti Exp $
 bin/ftpcount
 bin/ftpdctl
 bin/ftptop
@@ -19,6 +19,10 @@ share/doc/proftpd/README
 share/doc/proftpd/README.IPv6
 share/doc/proftpd/README.LDAP
 share/doc/proftpd/README.PAM
+share/doc/proftpd/README.capabilities
+share/doc/proftpd/README.classes
+share/doc/proftpd/README.controls
+share/doc/proftpd/README.facl
 share/doc/proftpd/README.modules
 share/doc/proftpd/faq.html
 share/doc/proftpd/license.txt
