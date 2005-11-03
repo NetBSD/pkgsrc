@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2004/11/28 15:12:11 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.8 2005/11/03 22:09:28 rillig Exp $
 
---- Makefile.orig	Sat Nov 27 23:52:19 2004
-+++ Makefile
+--- sources/Makefile.orig	Sat Nov 27 23:52:19 2004
++++ sources/Makefile
 @@ -28,13 +28,13 @@ SHELL    = /bin/sh
  
  CHMOD    = chmod

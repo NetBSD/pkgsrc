@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2004/11/28 15:12:11 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.5 2005/11/03 22:09:28 rillig Exp $
 
---- getopt.c.orig	Sat Jun 21 15:31:51 2003
-+++ getopt.c
+--- sources/getopt.c.orig	Sat Jun 21 15:31:51 2003
++++ sources/getopt.c
 @@ -56,6 +56,8 @@ void Eprintf(const char *, ...);
  #endif
  

@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2004/08/12 19:59:51 agc Exp $
+$NetBSD: patch-ae,v 1.2 2005/11/03 21:51:57 rillig Exp $
 
---- core.cpp	2004/08/12 17:16:45	1.1
-+++ core.cpp	2004/08/12 17:17:18
+--- src/core.cpp	2004/08/12 17:16:45	1.1
++++ src/core.cpp	2004/08/12 17:17:18
 @@ -26,7 +26,7 @@
  #include "core.h"
  #include "isa.h"

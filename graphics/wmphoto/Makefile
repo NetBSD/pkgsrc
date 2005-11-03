@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:07 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/03 22:12:35 rillig Exp $
 #
 
 DISTNAME=	wmphoto-0.3a
@@ -9,15 +9,15 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.dcc.uchile.cl/~amartoq/wmphoto/
 COMMENT=	Dock-app that can show you a photo
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/wmphoto
+BUILD_DIRS=	wmphoto
 USE_X11BASE=	YES
 USE_TOOLS+=	gmake
 MAKE_ENV+=	X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmphoto
-	${INSTALL_DATA} ${WRKSRC}/../README ${PREFIX}/share/doc/wmphoto
-	${INSTALL_DATA} ${WRKSRC}/../HINTS ${PREFIX}/share/doc/wmphoto
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmphoto
+	${INSTALL_DATA} ${WRKSRC}/HINTS ${PREFIX}/share/doc/wmphoto
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

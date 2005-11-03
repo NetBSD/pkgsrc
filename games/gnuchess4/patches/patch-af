@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2000/03/27 10:25:25 jlam Exp $
+$NetBSD: patch-af,v 1.2 2005/11/03 22:01:10 rillig Exp $
 
---- ../doc/gnuchess.6.orig	Sun Sep 27 23:41:10 1998
-+++ ../doc/gnuchess.6	Sun Mar 26 16:17:18 2000
+--- doc/gnuchess.6.orig	Sun Sep 27 23:41:10 1998
++++ doc/gnuchess.6	Sun Mar 26 16:17:18 2000
 @@ -1,8 +1,8 @@
 -.TH gnuchess 6
 +.TH gnuchess4 6
