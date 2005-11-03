@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:47:01 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/03 16:55:26 tv Exp $
 #
 
 DISTNAME=	totd-1.4
@@ -12,13 +12,14 @@ COMMENT=	DNS proxy that supports IPv6 <==> IPv4 record translation
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 
-.include "../../mk/bsd.prefs.mk"
-# always IPv6 ready
-BUILD_DEFS+=	USE_INET6
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/totd
 	${INSTALL_DATA} ${FILESDIR}/totd.conf.sample \
 		${PREFIX}/share/examples/totd/totd.conf.sample
 
+PKG_OPTIONS_VAR=		PKG_OPTIONS.sipcalc
+PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
+PKG_OPTIONS_GROUP.inet6=	inet6
+
+.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"
