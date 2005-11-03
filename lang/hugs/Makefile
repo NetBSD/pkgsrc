@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/09/28 20:52:23 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/11/03 22:35:53 rillig Exp $
 
 DISTNAME=	hugs98-Dec2001
 PKGNAME=	hugs98-200112
@@ -10,9 +10,10 @@ MAINTAINER=	nathanw@mit.edu
 HOMEPAGE=	http://www.haskell.org/hugs/
 COMMENT=	Nottingham and Yale Haskell interpreter and programming environment
 
-WRKSRC=			${WRKDIR}/hugs98-Dec2001/src/unix
 GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		src/unix
 CONFIGURE_ARGS+=	--with-readline
+BUILD_DIRS=		src
 BUILD_TARGET=		default
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,16 +26,8 @@ CONFIGURE_ENV+=		ac_cv_header_nlist_h=no
 
 INSTALLATION_DIRS=	man/man1
 
-do-build:
-	@cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
-
-do-install:
-	@cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
-
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/../../docs/hugs.1 ${PREFIX}/man/man1/hugs.1
+	${INSTALL_MAN} ${WRKSRC}/docs/hugs.1 ${PREFIX}/man/man1/hugs.1
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/15 18:27:52 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/03 22:37:28 rillig Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
@@ -13,20 +13,20 @@ LICENSE=	fee-based-commercial-use
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=		${WRKDIR}/dgd/src
-
-USE_TOOLS+=	gtar
+USE_TOOLS+=		gtar
+WRKSRC=			${WRKDIR}/dgd
+BUILD_DIRS=		src
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths and command names."
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	../mud.dgd
+SUBST_FILES.paths=	mud.dgd
 SUBST_SED.paths=	-e 's,/home/dworkin/,${PREFIX}/libdata/,g'
 
 INSTALLATION_DIRS=	libexec
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/a.out ${PREFIX}/libexec/dgd
+	${INSTALL_PROGRAM} ${WRKSRC}/src/a.out ${PREFIX}/libexec/dgd
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dgd
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dgd
 	${INSTALL_DATA_DIR} ${PREFIX}/libdata/dgd/tmp
@@ -37,6 +37,6 @@ do-install:
 	${GTAR} cCf ${WRKDIR}/dgd - mud | ${GTAR} xCf ${PREFIX}/libdata/dgd -
 	${CHOWN} -R ${BINOWN}:${BINGRP}  ${PREFIX}/libdata/dgd \
 		${PREFIX}/share/doc/dgd
-	${INSTALL_DATA} ${WRKSRC}/../mud.dgd ${PREFIX}/share/examples/dgd
+	${INSTALL_DATA} ${WRKSRC}/mud.dgd ${PREFIX}/share/examples/dgd
 
 .include "../../mk/bsd.pkg.mk"
