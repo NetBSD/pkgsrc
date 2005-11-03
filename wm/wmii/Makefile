@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/10/29 16:12:37 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/03 02:47:58 minskim Exp $
 #
 
-DISTNAME=	wmii-20051017
-PKGREVISION=	1
+DISTNAME=	wmii-20051031
 CATEGORIES=	wm x11
 MASTER_SITES=	http://wmii.de/snaps/
 
@@ -19,22 +18,14 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	post-patch
-SUBST_FILES.vars=	base/wmii util/wmirefcard action/* base/wmii.1
-SUBST_SED.vars=		-e 's|SHAREPREFIX|${PREFIX}/share|g'
-SUBST_SED.vars+=	-e 's|CONFPREFIX|${PREFIX}/share/examples|g'
+SUBST_FILES.vars=	cmd/wm/wmii rc/* cmd/wm/wmii.1
+SUBST_SED.vars=		-e 's|CONFPREFIX|${PREFIX}/share/examples|g'
 SUBST_SED.vars+=	-e 's|9PREFIX|${PREFIX}|g'
 
-PKG_SYSCONFSUBDIR=	wmii
-EGDIR=			${PREFIX}/share/examples/wmii
-EGFILES=		actions attach border clientupdate	\
-			close cnext cprev detach fnext fprev	\
-			fresize ftoggle	icons kbare kmove 	\
-			knorm kresize lfloat lgrid lmax lock	\
-			ltiled lvsplit max p pager pageupdate	\
-			plumbgoogle plumburl pnew pnext pprev 	\
-			premove presize programs ptoggle quit	\
-			scr status tab term wmirc wmire www	\
-			zoom
+PKG_SYSCONFSUBDIR=	wmii-3
+EGDIR=			${PREFIX}/share/examples/wmii-3
+EGFILES=		_clabel extern progmenu rcmenu status	\
+			wmirc _plabel kmode quit rmpg welcome
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
