@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/28 02:36:35 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/03 19:56:36 rillig Exp $
 
---- Makefile.orig	Mon Dec  7 03:28:52 1998
-+++ Makefile		Fri Apr 27 17:09:20 2001
+--- src/Makefile.orig	Mon Dec  7 03:28:52 1998
++++ src/Makefile		Fri Apr 27 17:09:20 2001
 @@ -1,6 +1,4 @@
  
 -SHELL = /bin/csh
