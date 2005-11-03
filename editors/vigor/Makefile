@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/19 17:40:22 kristerw Exp $
+# $NetBSD: Makefile,v 1.21 2005/11/03 21:24:29 rillig Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -12,17 +12,17 @@ COMMENT=	nvi with excessive online "help"
 
 CONFLICTS+=	nvi-[0-9]*
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/build
-
 GNU_CONFIGURE=	yes
+CONFIGURE_DIRS=	build
+CONFIGURE_ENV+=	TCLCONFIG_SH=${TCLCONFIG_SH:Q}
+CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH:Q}
 CONFIGURE_ARGS+=--with-x
 #		--enable-perlinterp \
 #		--disable-curses \
 #		--disable-db \
 #		--disable-re
-CONFIGURE_ENV+=	TCLCONFIG_SH=${TCLCONFIG_SH:Q}
-CONFIGURE_ENV+=	vi_cv_path_shell="${TOOLS_SH}"
 USE_TOOLS+=	sh
+BUILD_DIRS=	${CONFIGURE_DIRS}
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
@@ -30,10 +30,10 @@ USE_TOOLS+=	sh
 .if exists(/usr/include/sys/queue.h)
 # this file obscures the system header
 post-patch:
-	${RM} -f ${WRKSRC}/../include/sys/queue.h
+	${RM} -f ${WRKSRC}/include/sys/queue.h
 .endif
 
 post-build:
-	nroff -mandoc ${WRKSRC}/../docs/USD.doc/vi.man/vi.1 >${WRKSRC}/../docs/USD.doc/vi.man/vi.0
+	nroff -mandoc ${WRKSRC}/docs/USD.doc/vi.man/vi.1 >${WRKSRC}/docs/USD.doc/vi.man/vi.0
 
 .include "../../mk/bsd.pkg.mk"
