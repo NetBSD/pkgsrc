@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11796 2005/11/04 08:05:20 rillig Exp $
+$NetBSD: CHANGES,v 1.11797 2005/11/04 08:06:26 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5048,3 +5048,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added wip/R-chron version 2.2.31 [rillig 2005-11-04]
 	Added wip/R-DAAG version 0.37 [rillig 2005-11-04]
 	Added wip/R-GRASS version 0.2.20 [rillig 2005-11-04]
+	Added wip/R-ISwR version 1.0.3 [rillig 2005-11-04]
