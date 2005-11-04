@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.38 2005/11/04 19:27:13 jlam Exp $
+# $NetBSD: defaults.mk,v 1.39 2005/11/04 19:28:33 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -139,6 +139,7 @@ _TOOLS_VARNAME.yacc=		YACC
 
 _TOOLS_VARNAME_GNU.awk=		AWK
 _TOOLS_VARNAME_GNU.bison-yacc=	YACC
+_TOOLS_VARNAME_GNU.byacc=	YACC
 _TOOLS_VARNAME_GNU.chmod=	CHMOD
 _TOOLS_VARNAME_GNU.cmp=		CMP
 _TOOLS_VARNAME_GNU.cp=		CP
