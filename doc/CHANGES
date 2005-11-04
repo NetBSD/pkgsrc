@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11817 2005/11/04 08:19:17 rillig Exp $
+$NetBSD: CHANGES,v 1.11818 2005/11/04 08:19:28 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5069,3 +5069,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added wip/R-pixmap version 0.4.1 [rillig 2005-11-04]
 	Added wip/R-sgeostat version 1.0.19 [rillig 2005-11-04]
 	Added wip/R-shapefiles version 0.3 [rillig 2005-11-04]
+	Added wip/R-statmod version 1.0.6 [rillig 2005-11-04]
