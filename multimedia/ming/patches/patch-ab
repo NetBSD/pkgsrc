@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/04 02:59:54 minskim Exp $
+
+--- py_ext/Makefile.orig	2001-08-18 02:05:55.000000000 +0900
++++ py_ext/Makefile
+@@ -7,7 +7,7 @@ PYLIBDIR = /usr/local/lib/python2.0
+ all:
+ 
+ mingcmodule.so: ming_wrap.o
+-	gcc -g -Wall -shared -o mingcmodule.so ming_wrap.o -lming
++	${CC} ${LDFLAGS} -shared -o mingcmodule.so ming_wrap.o -lming
+ 
+ mingc.pyd: ming_wrap.o
+ 	dllwrap --dllname mingc.pyd --driver-name gcc --def mingc.def \
+@@ -15,7 +15,7 @@ mingc.pyd: ming_wrap.o
+ 	  --target=i386-mingw32 -Llib/ -lpython15
+ 
+ ming_wrap.o: ming_wrap.c
+-	gcc -g -Wall -I .. -I ${PYINCDIR} -fpic -c ming_wrap.c
++	${CC} ${CFLAGS} -I .. -fpic -c ming_wrap.c
+ 
+ ../libming.a:
+ 	cd ..; make static
+@@ -27,4 +27,4 @@ clean:
+ 	rm -f mingcmodule.so core *~ *.o ming.pyc
+ 
+ install:
+-	cp mingcmodule.so ming.py ${PYLIBDIR}/site-packages
++	${BSD_INSTALL_DATA} mingcmodule.so ming.py ${PREFIX}/${PYSITELIB}
