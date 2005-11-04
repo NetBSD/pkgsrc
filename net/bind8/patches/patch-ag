@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.3 2003/03/06 11:43:28 is Exp $
+$NetBSD: patch-ag,v 1.4 2005/11/04 19:36:01 rillig Exp $
 
---- port/netbsd/Makefile.set.orig	Mon Jun 24 00:33:02 2002
-+++ port/netbsd/Makefile.set
+--- src/port/netbsd/Makefile.set.orig	Mon Jun 24 00:33:02 2002
++++ src/port/netbsd/Makefile.set
 @@ -1,11 +1,13 @@
  'CC=cc'
  'CDEBUG=-O2 -g'
