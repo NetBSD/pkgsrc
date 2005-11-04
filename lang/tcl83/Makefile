@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/04 06:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/04 06:54:20 wiz Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -26,11 +26,6 @@ TEST_TARGET=		test
 USE_LIBTOOL=		yes
 
 INSTALL_TARGET=		install
-
-# Initially install the man pages into ${WRKDIR}/man, as we need a staged
-# install to avoid overwriting existing manpages in ${PREFIX}/man.
-#
-CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
 
 # Add ${VIEWBASE}/lib/tcl to the list of locations for Tcl packages.
 CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
