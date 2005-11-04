@@ -1,12 +1,12 @@
-# $NetBSD: plugins.mk,v 1.5 2005/03/06 16:45:47 chris Exp $
+# $NetBSD: plugins.mk,v 1.6 2005/11/04 11:10:57 rillig Exp $
 #
 
 .include "../../mail/sylpheed-claws/Makefile.common"
 
 PKGNAME=	sylpheed-claws-${PLUGIN_NAME:S/_/-/}-${SYLPHEED_VERSION}
 
-BUILD_DIRS=	${WRKDIR}/${DISTNAME}/src/plugins/${PLUGIN_NAME}
 CONFIGURE_DIRS=	${WRKDIR}/${DISTNAME}
+BUILD_DIRS=	${WRKDIR}/${DISTNAME}/src/plugins/${PLUGIN_NAME}
 INSTALL_DIRS=	${WRKDIR}/${DISTNAME}/src/plugins/${PLUGIN_NAME}
 
 DEPENDS+=       sylpheed-claws>=${SYLPHEED_VERSION}:../../mail/sylpheed-claws
