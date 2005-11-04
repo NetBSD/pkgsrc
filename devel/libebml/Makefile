@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/20 14:12:19 grant Exp $
+# $NetBSD: Makefile,v 1.20 2005/11/04 18:41:31 rillig Exp $
 #
 
 DISTNAME=	libebml-0.7.5
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c++
 NO_CONFIGURE=	yes
 MAKEFLAGS+=	prefix=${PREFIX:Q}
 MAKE_ENV+=	CXXFLAGS=${CXXFLAGS:Q} RANLIB=${RANLIB:Q}
-BUILD_DIRS=	${WRKDIR}/${DISTNAME}/make/linux
+BUILD_DIRS=	make/linux
 BUILD_TARGET=	staticlib
 INSTALL_TARGET=	install_headers install_staticlib
 
