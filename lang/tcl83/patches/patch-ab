@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2005/09/21 14:49:08 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2005/11/04 09:56:09 rillig Exp $
 
---- configure.orig	2001-10-20 10:24:15.000000000 +1000
-+++ configure
+--- unix/configure.orig	2001-10-20 10:24:15.000000000 +1000
++++ unix/configure
 @@ -4776,6 +4776,7 @@ fi
      # Step 3: set configuration options based on system name and version.
  

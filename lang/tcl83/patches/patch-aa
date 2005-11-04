@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/10/10 11:58:29 grant Exp $
+$NetBSD: patch-aa,v 1.3 2005/11/04 09:56:09 rillig Exp $
 
---- Makefile.in.orig	2001-10-20 10:24:15.000000000 +1000
-+++ Makefile.in
+--- unix/Makefile.in.orig	2001-10-20 10:24:15.000000000 +1000
++++ unix/Makefile.in
 @@ -87,7 +87,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
