@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/04 11:05:02 rillig Exp $
 
 DISTNAME=	objc-3.2.6
 CATEGORIES=	lang
@@ -13,6 +13,7 @@ DIST_BS=	objc-bootstrap-3.1.33
 WRKSRC_BS=	${WRKDIR}/${DIST_BS}
 
 CONFIGURE_DIRS=		${WRKSRC_BS} ${WRKSRC}
+BUILD_DIRS=		${WRKSRC}
 PREPEND_PATH+=		${WRKSRC_BS}
 BUILD_TARGET=		default
 
