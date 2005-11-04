@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/04 06:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/04 09:56:09 rillig Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -18,8 +18,9 @@ CONFLICTS+=		tclman80-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		unix
+BUILD_DIRS=		${CONFIGURE_DIRS}
 MAKE_ENV+=		TOUCH="${TOUCH}"
 TEST_TARGET=		test
 
@@ -47,7 +48,7 @@ CONFIGURE_ARGS+=	--enable-64bit
 # linked to a longer filename.
 #
 post-patch:
-	@cd ${WRKSRC};							\
+	@cd ${WRKSRC}/unix;						\
 	${MV} -f mkLinks mkLinks.tmp;					\
 	${GREP} -v "^exit 0" mkLinks.tmp > mkLinks;			\
 	${CAT} mkLinks.tmp						\
@@ -60,34 +61,34 @@ post-patch:
 	${CHMOD} +x mkLinks;
 
 post-build:
-	cd ${WRKSRC}; for file in					\
+	cd ${WRKSRC}/unix; for file in					\
 		tclUnixInit.o libtcl83.so tclsh;			\
 	do								\
 		${TOUCH} $${file};					\
 	done
 	${SED} 								\
-		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
-		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}/include/tcl|"	\
-		${WRKSRC}/tclConfig.sh > ${WRKSRC}/tclConfig.sh.tmp &&	\
-		${MV} ${WRKSRC}/tclConfig.sh.tmp ${WRKSRC}/tclConfig.sh
+		-e "s|${WRKSRC}/unix|${PREFIX}/lib|"			\
+		-e "s|${WRKSRC}|${PREFIX}/include/tcl|"			\
+		${WRKSRC}/unix/tclConfig.sh > ${WRKSRC}/tclConfig.sh.tmp &&	\
+		${MV} ${WRKSRC}/tclConfig.sh.tmp ${WRKSRC}/unix/tclConfig.sh
 
 post-install:
 	cd ${PREFIX}/bin && ${LN} -s tclsh8.3 tclsh
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/unix
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/tclUnixPort.h ${PREFIX}/include/tcl/unix
-	${INSTALL_DATA} ${WRKSRC}/../generic/tcl.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclCompile.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclIO.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclInitScript.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclInt.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclIntDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclIntPlatDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclMath.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclPlatDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclPort.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclRegexp.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/unix/tclUnixPort.h ${PREFIX}/include/tcl/unix
+	${INSTALL_DATA} ${WRKSRC}/generic/tcl.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclCompile.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclDecls.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclIO.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclInitScript.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclInt.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclIntDecls.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclIntPlatDecls.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclMath.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclPlatDecls.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclPort.h ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/tclRegexp.h ${PREFIX}/include/tcl/generic
 
 .include "../../mk/bsd.pkg.mk"
