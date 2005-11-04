@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.44 2005/11/01 16:30:05 tv Exp $
+# $NetBSD: Interix.mk,v 1.45 2005/11/04 19:50:31 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -32,6 +32,13 @@
 # ruby18	0x50000000	0x6fffffff	0x00040000	2048
 #   (main lib)	0x48000000
 # zsh		*
+
+# ADDITIONAL NOTES:
+#
+# * It appears that www/curl 1.15.0+ has support for SIOCGIFADDR via
+#   an undocumented ioctl interface.  It may be worthwhile to look at
+#   adding that hack into a more proper <net/if.h> to be supplied by
+#   pkgsrc's compiler wrappers.  [tv]
 
 ###
 ### Overrides to standard BSD .mk files
