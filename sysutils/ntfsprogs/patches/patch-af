@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2005/09/06 08:10:59 abs Exp $
+$NetBSD: patch-af,v 1.3 2005/11/04 21:46:12 dbj Exp $
 
---- ntfsprogs/ntfsclone.c.orig	Sat Sep  4 06:16:32 2004
-+++ ntfsprogs/ntfsclone.c
-@@ -30,6 +30,17 @@
+--- ntfsprogs/ntfsclone.c.orig	2004-09-04 06:16:32.000000000 -0400
++++ ntfsprogs/ntfsclone.c	2005-09-25 10:43:27.000000000 -0400
+@@ -30,6 +30,19 @@
  #include <errno.h>
  #include <getopt.h>
  
@@ -15,12 +15,14 @@ $NetBSD: patch-af,v 1.2 2005/09/06 08:10:59 abs Exp $
 +#  else
 +#    define F_TYPE	f_type
 +#  endif
++#else
++#  define F_TYPE	f_type
 +#endif
 +
  #include "debug.h"
  #include "types.h"
  #include "support.h"
-@@ -66,7 +77,11 @@
+@@ -66,7 +79,11 @@
  	int restore_image;
  	char *output;
  	char *volume;
@@ -32,7 +34,7 @@ $NetBSD: patch-af,v 1.2 2005/09/06 08:10:59 abs Exp $
  } opt;
  
  struct bitmap {
-@@ -338,16 +353,13 @@
+@@ -338,16 +355,13 @@
  	}	
  		
  	msg_out = stdout;
@@ -54,7 +56,7 @@ $NetBSD: patch-af,v 1.2 2005/09/06 08:10:59 abs Exp $
  }
  
  static void progress_init(struct progress_bar *p, u64 start, u64 stop, int res)
-@@ -462,7 +474,7 @@
+@@ -462,7 +476,7 @@
  	if (write_all(&fd_out, buff, csize) == -1) {
  		int err = errno;
  		perr_printf("Write failed");
@@ -63,7 +65,7 @@ $NetBSD: patch-af,v 1.2 2005/09/06 08:10:59 abs Exp $
  			Printf("Apparently you tried to clone to a remote "
  			       "Windows computer but they don't\nhave "
  			       "efficient sparse file handling by default. "
-@@ -1152,12 +1164,12 @@
+@@ -1152,12 +1166,12 @@
  	if (fstatfs(fd_out, &opt.stfs) == -1)
  		Printf("WARNING: Couldn't get filesystem type: "
  		       "%s\n", strerror(errno));
@@ -78,7 +80,7 @@ $NetBSD: patch-af,v 1.2 2005/09/06 08:10:59 abs Exp $
  		Printf("WARNING: You're using SMBFS and if the remote share "
  		       "isn't Samba but a Windows\ncomputer then the clone "
  		       "operation will be very inefficient and may fail!\n");
-@@ -1168,7 +1180,7 @@
+@@ -1168,7 +1182,7 @@
  		if (err == E2BIG) {
  			Printf("Your system or the destination filesystem "
  			       "doesn't support large files.\n");
