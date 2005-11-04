@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.21 2005/10/12 16:28:29 jlam Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.22 2005/11/04 20:02:01 jlam Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -57,6 +57,7 @@ TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
+TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
