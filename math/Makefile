@@ -1,9 +1,36 @@
-# $NetBSD: Makefile,v 1.140 2005/11/03 06:35:30 taca Exp $
+# $NetBSD: Makefile,v 1.141 2005/11/04 08:29:08 rillig Exp $
 #
 
 COMMENT=	Mathematics
 
 SUBDIR+=	R
+SUBDIR+=	R-CGIwithR
+SUBDIR+=	R-DAAG
+SUBDIR+=	R-GRASS
+SUBDIR+=	R-ISwR
+SUBDIR+=	R-Matrix
+SUBDIR+=	R-PHYLOGR
+SUBDIR+=	R-R2HTML
+SUBDIR+=	R-RArcInfo
+SUBDIR+=	R-Rcmdr
+SUBDIR+=	R-VR
+SUBDIR+=	R-abind
+SUBDIR+=	R-chron
+SUBDIR+=	R-clim.pact
+SUBDIR+=	R-date
+SUBDIR+=	R-genetics
+SUBDIR+=	R-geoR
+SUBDIR+=	R-gstat
+SUBDIR+=	R-httpRequest
+SUBDIR+=	R-hwde
+SUBDIR+=	R-lmm
+SUBDIR+=	R-mapproj
+SUBDIR+=	R-maps
+SUBDIR+=	R-pixmap
+SUBDIR+=	R-sgeostat
+SUBDIR+=	R-shapefiles
+SUBDIR+=	R-statmod
+SUBDIR+=	R-wle
 SUBDIR+=	abs
 SUBDIR+=	admesh
 SUBDIR+=	algae
