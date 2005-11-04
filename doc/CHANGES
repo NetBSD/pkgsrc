@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11791 2005/11/04 04:56:11 minskim Exp $
+$NetBSD: CHANGES,v 1.11792 2005/11/04 07:06:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5041,3 +5041,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added multimedia/py-ming version 0.2 [minskim 2005-11-04]
 	Added multimedia/ruby-ming version 0.1.6 [minskim 2005-11-04]
 	Added multimedia/php-ming version 5.0.5 [minskim 2005-11-04]
+	Removed net/ruby-dbm [taca 2005-11-04]
