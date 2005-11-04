@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/04 07:10:12 rillig Exp $
+
+--- 4stattack.orig	2002-10-01 16:38:03.000000000 +0200
++++ 4stattack	2003-07-13 15:37:19.000000000 +0200
+@@ -1,9 +1,10 @@
+ #!/bin/sh
+-FAHOME=/usr/share/forcedattack2
++FAHOME=@FAHOME@
++
+ if [ ! -f ~/.4stattackrc ]; then
+ 	cp $FAHOME/settings.ini ~/.4stattackrc
+ fi
+ if [ -x $FAHOME/4stattack.py ]; then
+-	$FAHOME/4stattack.py -ini ~/.4stattackrc
++	( cd $FAHOME && $FAHOME/4stattack.py -ini ~/.4stattackrc )
+ fi
+ 
