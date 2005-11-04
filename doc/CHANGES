@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11794 2005/11/04 08:00:09 rillig Exp $
+$NetBSD: CHANGES,v 1.11795 2005/11/04 08:04:24 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5046,3 +5046,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added graphics/Coin version 2.2.1 [rillig 2005-11-04]
 	Added math/R-CGIwithR version 0.61 [rillig 2005-11-04]
 	Added wip/R-chron version 2.2.31 [rillig 2005-11-04]
+	Added wip/R-DAAG version 0.37 [rillig 2005-11-04]
