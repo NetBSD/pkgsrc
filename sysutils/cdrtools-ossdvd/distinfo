@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/06/24 21:47:57 wiz Exp $
+$NetBSD: distinfo,v 1.7 2005/11/04 22:20:37 dbj Exp $
 
 SHA1 (cdrtools-2.01.01a01.tar.bz2) = a55443f1ff9419155b403a6cd3dfcbdd2159d199
 RMD160 (cdrtools-2.01.01a01.tar.bz2) = 2f07b2364a966d9950d01a4d138f5e4fd7e9ceab
@@ -15,3 +15,5 @@ SHA1 (patch-bb) = f731a120143e4b875712afa332c56fbbb7f54006
 SHA1 (patch-ca) = 12111a160a9e968d71c73f84685d998d4330ade6
 SHA1 (patch-cb) = 3a2dac733caf087e63e545011a018953bdebd91f
 SHA1 (patch-cc) = a14098dd14e0b58d3fed1167341a22167eea7c19
+SHA1 (patch-cd) = 77b1d17ad5cc444862e3e7b976d9a519cfaafd50
+SHA1 (patch-ce) = ecfb8bf57e05d6db8a45af0c95c79aa5ab52cb26
