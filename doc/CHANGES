@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11792 2005/11/04 07:06:00 taca Exp $
+$NetBSD: CHANGES,v 1.11793 2005/11/04 07:50:35 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5042,3 +5042,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Added multimedia/ruby-ming version 0.1.6 [minskim 2005-11-04]
 	Added multimedia/php-ming version 5.0.5 [minskim 2005-11-04]
 	Removed net/ruby-dbm [taca 2005-11-04]
+	Added games/4stAttack version 2.1.4nb1 [rillig 2005-11-04]
+	Added graphics/Coin version 2.2.1 [rillig 2005-11-04]
+	Added math/R-CGIwithR version 0.61 [rillig 2005-11-04]
