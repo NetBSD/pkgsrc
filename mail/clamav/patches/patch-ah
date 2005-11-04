@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.5 2005/10/13 18:09:06 rillig Exp $
+$NetBSD: patch-ah,v 1.6 2005/11/04 03:47:49 grant Exp $
 
---- clamav-milter/clamav-milter.c.orig	Fri Sep 16 00:24:41 2005
-+++ clamav-milter/clamav-milter.c	Thu Oct 13 20:07:24 2005
+--- clamav-milter/clamav-milter.c.orig	2005-10-26 07:40:59.000000000 +1000
++++ clamav-milter/clamav-milter.c
 @@ -2973,7 +2973,7 @@ clamfi_eom(SMFICTX *ctx)
  						 * the postmaster, so include
  						 * some useful information
@@ -20,17 +20,6 @@ $NetBSD: patch-ah,v 1.5 2005/10/13 18:09:06 rillig Exp $
  							smfi_getsymval(ctx, "j"), privdata->from,
  							smfi_getsymval(ctx, "_"));
  						fputs(_("For your information, the original message headers were:\n\n"), sendmail);
-@@ -3439,9 +3439,9 @@ clamd_recv(int sock, char *buf, size_t l
- {
- 	fd_set rfds;
- 	struct timeval tv;
-+	int ret;
- 
- 	assert(sock >= 0);
--	int ret;
- 
- 	if(readTimeout == 0) {
- 		do
 @@ -4150,7 +4150,7 @@ qfile(struct privdata *privdata, const c
  
  	if(move(privdata->filename, newname) < 0) {
