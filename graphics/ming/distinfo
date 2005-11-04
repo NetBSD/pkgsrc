@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/04 02:47:10 minskim Exp $
+
+SHA1 (ming-0.2a.tgz) = 9f8b4d9afcee51351b326e6f072352cc8ac013f5
+RMD160 (ming-0.2a.tgz) = 2dc888ca8ffda1e219002081973de8855b3faf61
+Size (ming-0.2a.tgz) = 316447 bytes
+SHA1 (patch-aa) = ac4794d4d8684475d0166707f112cfb263defacb
+SHA1 (patch-ab) = 82ce4f817902e0a589bf1bb0db5e5a1e4018eae6
