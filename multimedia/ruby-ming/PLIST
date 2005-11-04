@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 04:35:42 minskim Exp $
+${RUBY_SITEARCHLIBDIR}/ming/ming.${RUBY_DLEXT}
+@dirrm ${RUBY_SITEARCHLIBDIR}/ming
+${RUBY_EXAMPLESDIR}/ming/README
+${RUBY_EXAMPLESDIR}/ming/action.rb
+${RUBY_EXAMPLESDIR}/ming/button.rb
+${RUBY_EXAMPLESDIR}/ming/drag.rb
+${RUBY_EXAMPLESDIR}/ming/gradient.rb
+${RUBY_EXAMPLESDIR}/ming/gradientxform.rb
+${RUBY_EXAMPLESDIR}/ming/keypress.rb
+${RUBY_EXAMPLESDIR}/ming/mousetrack.rb
+${RUBY_EXAMPLESDIR}/ming/newbutton.rb
+${RUBY_EXAMPLESDIR}/ming/shape.rb
+${RUBY_EXAMPLESDIR}/ming/sparks.rb
+${RUBY_EXAMPLESDIR}/ming/sprite.rb
+@dirrm ${RUBY_EXAMPLESDIR}/ming
