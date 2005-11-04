@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11826 2005/11/04 17:18:40 gdt Exp $
+$NetBSD: CHANGES,v 1.11827 2005/11/04 19:29:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5077,3 +5077,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.36 [rillig 2005-11-04]
 	Updated sysutils/xraidadmin to 1.3.1 [jschauma 2005-11-04]
 	Added graphics/exiftool version 5.72 [gdt 2005-11-04]
+	Updated graphics/exiftool to 5.67 [gdt 2005-11-04]
