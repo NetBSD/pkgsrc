@@ -1,7 +1,7 @@
 PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
 
 NNAAMMEE
-     ppkkgglliinntt - a verifier for pkgsrc directories
+     ppkkgglliinntt -- a verifier for pkgsrc directories
 
 SSYYNNOOPPSSIISS
      ppkkgglliinntt [--ooppttiioonnss] [_d_i_r _._._.]
@@ -26,6 +26,9 @@ DDEESSCCRRIIPPTTIIOONN
                                including all the files that are slurped in via
                                .include directives.  This flag is mainly for
                                debugging.
+
+           --ii|----iimmppoorrtt         Check if a package is ready to be imported into
+                               pkgsrc.
 
            --qq|----qquuiieett          Don't print the errors and warnings summary
                                before terminating.
@@ -86,10 +89,7 @@ DDEESSCCRRIIPPTTIIOONN
            [[nnoo--]]ttyyppeess          Warn for some Makefile variables if their
                                assigned values do not match their type.
 
-           [[nnoo--]]wwoorrkkddiirr        Warn about existing _w_o_r_k_* directories.  They
-                               might be committed to CVS accidentally.
-
-           OOtthheerr aarrgguummeennttss
+     OOtthheerr aarrgguummeennttss
 
            _d_i_r _._._.             The pkgsrc directories to be checked.  If omit-
                                ted, the current directory is checked.
@@ -135,4 +135,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-NetBSD 2.0                    September 28, 2005                    NetBSD 2.0
+pkgsrc                         November 04, 2005                        pkgsrc
