@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.37 2005/07/26 20:00:50 jlam Exp $
+# $NetBSD: defaults.mk,v 1.38 2005/11/04 19:27:13 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -56,6 +56,7 @@ _TOOLS_VARNAME.awk=		AWK
 _TOOLS_VARNAME.basename=	BASENAME
 _TOOLS_VARNAME.bash=		BASH
 _TOOLS_VARNAME.bison-yacc=	YACC
+_TOOLS_VARNAME.byacc=		YACC
 _TOOLS_VARNAME.bzcat=		BZCAT
 _TOOLS_VARNAME.cat=		CAT
 _TOOLS_VARNAME.chgrp=		CHGRP
@@ -106,6 +107,7 @@ _TOOLS_VARNAME.patch=		PATCH
 _TOOLS_VARNAME.pax=		PAX
 _TOOLS_VARNAME.perl=		PERL5
 _TOOLS_VARNAME.pod2man=		POD2MAN
+_TOOLS_VARNAME.printf=		PRINTF
 _TOOLS_VARNAME.pwd=		PWD_CMD
 _TOOLS_VARNAME.rm=		RM
 _TOOLS_VARNAME.rmdir=		RMDIR
