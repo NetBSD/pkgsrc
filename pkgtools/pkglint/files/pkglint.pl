@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.332 2005/11/04 21:30:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.333 2005/11/04 21:43:12 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1453,6 +1453,12 @@ sub get_tool_names() {
 				}
 			}
 		}
+	}
+
+	# As long as there is no reliable way to get a list of all valid
+	# tool names, this is the best I can do.
+	foreach my $tool (qw(autoconf autoconf213 automake automake14 bdftopcf bison flex pkg-config)) {
+		$tools->{$tool} = true;
 	}
 	$get_tool_names_value = $tools;
 	return $get_tool_names_value;
