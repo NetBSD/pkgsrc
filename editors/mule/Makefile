@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/06/30 10:20:49 markd Exp $
+# $NetBSD: Makefile,v 1.32 2005/11/04 19:30:00 reed Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	2
@@ -26,6 +26,7 @@ CHECK_WRKREF_SKIP+=	${PREFIX}/bin/mule-19.28
 
 WRKSRC=		${WRKDIR}/mule
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}/man1
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-x --with-x-toolkit=lucid
