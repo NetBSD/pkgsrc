@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2005/11/02 00:45:02 hiramatsu Exp $
+$NetBSD: patch-ab,v 1.10 2005/11/04 20:11:47 tv Exp $
 
 This patch makes imlib2 compile on systems that don't have an lround
 function, which is defined in C99.
@@ -14,7 +14,7 @@ Needed at least for NetBSD-1.6.2 and NetBSD-2.0.
 +#include <sys/param.h>
 +#endif
 +
-+#if defined(__NetBSD__) || defined(__OpenBSD__) || \
++#if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__INTERIX) || \
 +    (defined(__DragonFly__) && __DragonFly_version <= 130002)
 +#define lround(x) my_lround(x)
 +static long my_lround(double x)
