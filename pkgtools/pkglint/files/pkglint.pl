@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.327 2005/11/04 13:57:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.328 2005/11/04 17:00:58 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -110,8 +110,8 @@ my $warnings		= 0;
 my $verbose_flag	= false;
 my $gcc_output_format	= false;
 
-sub log_message($$$$$) {
-	my ($file, $subr, $lineno, $type, $message) = @_;
+sub log_message($$$$$$) {
+	my ($out, $file, $subr, $lineno, $type, $message) = @_;
 	my ($text, $sep);
 
 	if (defined($file)) {
@@ -150,33 +150,39 @@ sub log_message($$$$$) {
 		$sep = "";
 	}
 
-	print("${text}\n");
+	print $out ("${text}\n");
+}
+
+sub log_fatal($$$) {
+	my ($file, $lineno, $msg) = @_;
+	log_message(*STDERR, $file, undef, $lineno, $gcc_output_format ? "fatal" : "FATAL", $msg);
+	exit(1);
 }
 
 sub log_error($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message($file, undef, $lineno, $gcc_output_format ? "error" : "ERROR", $msg);
+	log_message(*STDOUT, $file, undef, $lineno, $gcc_output_format ? "error" : "ERROR", $msg);
 	$errors++;
 }
 sub log_warning($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message($file, undef, $lineno, $gcc_output_format ? "warning" : "WARN", $msg);
+	log_message(*STDOUT, $file, undef, $lineno, $gcc_output_format ? "warning" : "WARN", $msg);
 	$warnings++;
 }
 sub log_note($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message($file, undef, $lineno, $gcc_output_format ? "note" : "NOTE", $msg);
+	log_message(*STDOUT, $file, undef, $lineno, $gcc_output_format ? "note" : "NOTE", $msg);
 }
 sub log_info($$$) {
 	my ($file, $lineno, $msg) = @_;
 	if ($verbose_flag) {
-		log_message($file, undef, $lineno, $gcc_output_format ? "info" : "OK", $msg);
+		log_message(*STDOUT, $file, undef, $lineno, $gcc_output_format ? "info" : "OK", $msg);
 	}
 }
 sub log_subinfo($$$$) {
 	my ($subr, $file, $lineno, $msg) = @_;
 	if ($verbose_flag) {
-		log_message($file, $subr, $lineno, $gcc_output_format ? "info" : "OK", $msg);
+		log_message(*STDOUT, $file, $subr, $lineno, $gcc_output_format ? "info" : "OK", $msg);
 	}
 }
 
@@ -246,6 +252,10 @@ sub is_changed($) {
 	return shift(@_)->[CHANGED];
 }
 
+sub log_fatal($$) {
+	my ($self, $text) = @_;
+	PkgLint::Logging::log_fatal($self->[FILE], $self->[LINES], $text);
+}
 sub log_error($$) {
 	my ($self, $text) = @_;
 	PkgLint::Logging::log_error($self->[FILE], $self->[LINES], $text);
@@ -712,11 +722,11 @@ sub load_make_vars_typemap() {
 		if ($line->text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
 
-		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_* {}]+)$") {
+		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([-.+\w\d_* \{\}]+)$") {
 			$vartypes->{$1} = $2;
 
 		} else {
-			$line->log_error("[internal] Unknown line format.");
+			$line->log_fatal("Unknown line format.");
 		}
 	}
 	return $vartypes;
@@ -733,7 +743,7 @@ sub load_dist_sites() {
 	my ($names) = {};
 
 	if (!$lines) {
-		log_error($fname, NO_LINE_NUMBER, "[internal] Could not be read.");
+		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
 		$load_dist_sites_url2name = $url2name;
 		$load_dist_sites_names = $names;
 		return;
@@ -1319,10 +1329,7 @@ sub readmakefile($$$) {
 			    || ($includefile =~ qr"^(?:\.\./(?:\.\./[^/]+/)?[^/]+/)?([^/]+)$" && $1 ne "buildlink3.mk")) {
 				$seen_Makefile_common = true;
 			}
-			if ($includefile =~ /\/mk\/texinfo\.mk/) {
-				$line->log_error("Do not include $includefile.");
-			}
-			if ($includefile =~ /\/mk\/(?:bsd|java)/) {
+			if ($includefile =~ qr"/mk/") {
 				# skip these files
 				$contents .= $text . "\n";
 			} else {
@@ -1430,7 +1437,7 @@ sub get_tool_names() {
 	my $lines = load_lines($fname, true);
 	my $tools = {};
 	if (!$lines) {
-		log_error($fname, NO_LINE_NUMBER, "[internal] Cannot be read.");
+		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
 	} else {
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ regex_varassign) {
@@ -1527,11 +1534,6 @@ sub checktext_basic_vartype($$$$$) {
 			$line->log_warning("\"${value}\" is not a valid filename mask.");
 		}
 
-	} elsif ($type eq "Language") {
-		if ($value !~ qr"^(?:c|c\+\+|fortran)$") {
-			$line->log_warning("\"${value}\" is not a valid language.");
-		}
-
 	} elsif ($type eq "Mail_Address") {
 		if ($value !~ qr"^[-\w\d_.]+\@[-\w\d.]+$") {
 			$line->log_warning("\"${value}\" is not a valid mail address.");
@@ -1611,11 +1613,14 @@ sub checktext_basic_vartype($$$$$) {
 			$line->log_warning("\"${value}\" is not a valid URL.");
 		}
 
+	} elsif ($type eq "Userdefined") {
+		$line->log_error("\"${varname}\" may only be set by the user, not the package.");
+
 	} elsif ($type eq "Varname") {
 		if ($value ne "" && $value_novar eq "") {
 			# The value of another variable
 
-		} elsif ($value_novar !~ qr"^[A-Z][0-9A-Z_]*(?:[.].*)?$") {
+		} elsif ($value_novar !~ qr"^[A-Z_][0-9A-Z_]*(?:[.].*)?$") {
 			$line->log_warning("\"${value}\" is not a valid variable name.");
 		}
 
@@ -1657,7 +1662,7 @@ sub checktext_basic_vartype($$$$$) {
 		}
 
 	} else {
-		$line->log_error("[internal] Type ${type} unknown.");
+		$line->log_fatal("Type ${type} unknown.");
 	}
 }
 
@@ -1746,7 +1751,7 @@ sub checklines_deprecated_variables($) {
 			$vars{$1} = $2;
 
 		} else {
-			$line->log_error("[internal] Unknown line format.");
+			$line->log_fatal("Unknown line format.");
 		}
 	}
 
