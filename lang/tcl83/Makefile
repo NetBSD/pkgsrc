@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/31 09:40:15 seb Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/04 06:52:43 wiz Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -77,8 +77,6 @@ post-build:
 		${MV} ${WRKSRC}/tclConfig.sh.tmp ${WRKSRC}/tclConfig.sh
 
 post-install:
-	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
-	${RM} -rf ${WRKDIR}/man
 	cd ${PREFIX}/bin && ${LN} -s tclsh8.3 tclsh
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/unix
