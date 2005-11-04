@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.328 2005/11/04 17:00:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.329 2005/11/04 17:04:49 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1120,7 +1120,7 @@ sub checkfile_PLIST($) {
 				# nothing to do
 
 			} else {
-				$line->log_warning("Unknown PLIST directive \"\@$cmd\"");
+				$line->log_warning("Unknown PLIST directive \"\@$cmd\".");
 			}
 
 		} elsif ($text =~ qr"^[A-Za-z0-9\$]") {
@@ -1343,7 +1343,7 @@ sub readmakefile($$$) {
 				if (!-f "$dirname/$includefile") {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
-					$line->log_info("Including $dirname/$includefile");
+					$line->log_info("Including \"$dirname/$includefile\".");
 					$contents .= readmakefile("$dirname/$includefile", $all_lines, $seen_Makefile_include);
 				}
 			}
@@ -1567,7 +1567,7 @@ sub checktext_basic_vartype($$$$$) {
 
 	} elsif ($type eq "Stage") {
 		if ($value !~ qr"^(?:pre|do|post)-(?:patch|configure|build|install)$") {
-			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{patch,configure,build,install}");
+			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{patch,configure,build,install}.");
 		}
 
 	} elsif ($type eq "Tool") {
@@ -1684,7 +1684,7 @@ sub checkline_Makefile_vartype($$) {
 		}
 
 		if (!defined($type)) {
-			$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}");
+			$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}.");
 
 		} elsif ($type =~ qr"^List(\*?)(?: of (.*))?$") {
 			my ($append_only, $element_type) = ($1 eq "", $2);
@@ -1878,7 +1878,7 @@ sub checklines_direct_tools($) {
 		} elsif ($text =~ qr"^([-\w.]+):") {
 
 		} else {
-			$line->log_error("[internal:checklines_direct_tools] unknown line format");
+			$line->log_error("[internal:checklines_direct_tools] unknown line format.");
 		}
 	}
 }
@@ -2116,14 +2116,14 @@ sub checkfile_package_Makefile($$$) {
 		$seen_USE_PKGLOCALEDIR = true;
 	}
 	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR");
+		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR.");
 	}
 	if ($whole =~ m|\${INSTALL}(.*)\n|) {
 		my $args = $1;
 		if ($args =~ /-d/) {
 			if ($args !~ /-[ogm]/) {
 				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${INSTALL}$args: " .
-					"consider using INSTALL_*_DIR");
+					"consider using INSTALL_*_DIR.");
 			}
 		}
 	}
