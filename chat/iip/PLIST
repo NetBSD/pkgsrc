@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 08:53:54 rillig Exp $
+bin/isproxy
+man/man1/isproxy.1
+share/examples/iip/node.ref
+@dirrm share/examples/iip
