@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/08/17 19:58:34 tron Exp $
+@comment $NetBSD: PLIST,v 1.13.2.1 2005/11/04 08:07:02 salo Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -183,7 +183,6 @@ include/php/main/logos.h
 include/php/main/internal_functions_registry.h
 include/php/main/fopen_wrappers.h
 include/php/main/config.w32.h
-include/php/main/config.nw.h
 include/php/main/build-defs.h
 include/php/main/win95nt.h
 include/php/main/php_embed.h
