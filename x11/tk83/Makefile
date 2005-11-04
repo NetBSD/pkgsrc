@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/31 09:40:15 seb Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/04 07:05:30 wiz Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -20,11 +20,6 @@ MAKE_ENV+=		TOUCH="${TOUCH}"
 
 USE_LIBTOOL=		yes
 TEST_TARGET=		test
-
-# Initially install the man pages into ${WRKDIR}/man, as we need a staged
-# install to avoid overwriting existing manpages in ${PREFIX}/man.
-#
-CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -61,8 +56,6 @@ post-build:
 		${MV} ${WRKSRC}/tkConfig.sh.tmp ${WRKSRC}/tkConfig.sh
 
 post-install:
-	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}
-	${RM} -rf ${WRKDIR}/man
 	${RM} -f ${PREFIX}/bin/wish
 	cd ${PREFIX}/bin && ${LN} -s wish8.3 wish
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tk
