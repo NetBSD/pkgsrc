@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/04 07:21:24 rillig Exp $
+
+SHA1 (Coin-2.2.1.tar.gz) = 3b79dbb51c53894027ae73c2db79b9ed978b12b1
+RMD160 (Coin-2.2.1.tar.gz) = 9eda53c57b3e27f34463d97aa75ad42cbe817d4f
+Size (Coin-2.2.1.tar.gz) = 3011673 bytes
