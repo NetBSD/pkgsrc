@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 04:29:14 minskim Exp $
+${PYSITELIB}/ming.py
+${PYSITELIB}/ming.pyc
+${PYSITELIB}/mingcmodule.so
