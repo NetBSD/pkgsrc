@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.326 2005/11/04 09:32:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.327 2005/11/04 13:57:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -679,6 +679,7 @@ sub parse_multioption($$) {
 			if (exists($optdefs->{$opt})) {
 				${$optdefs->{$opt}->[0]} = $value;
 			} else {
+				printf STDERR ("Invalid option: ${opt}\n");
 				help(*STDERR, 1, 0);
 			}
 		}
@@ -711,7 +712,7 @@ sub load_make_vars_typemap() {
 		if ($line->text =~ qr"^(?:#.*|\s*)$") {
 			# ignore empty and comment lines
 
-		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_* ]+)$") {
+		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_* {}]+)$") {
 			$vartypes->{$1} = $2;
 
 		} else {
@@ -1447,7 +1448,12 @@ sub get_tool_names() {
 
 sub checktext_basic_vartype($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
+	my ($value_novar);
 
+	$value_novar = $value;
+	while ($value_novar =~ s/\$\{[^{}]*\}//g) {
+	}
+	
 	if ($type eq "Category") {
 		my $allowed_categories = join("|", qw(
 			archivers audio
@@ -1511,9 +1517,39 @@ sub checktext_basic_vartype($$$$$) {
 			$line->log_warning("Unknown dependency format.");
 		}
 
+	} elsif ($type eq "Filename") {
+		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%]*$") {
+			$line->log_warning("\"${value}\" is not a valid filename.");
+		}
+
+	} elsif ($type eq "Filemask") {
+		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?]*$") {
+			$line->log_warning("\"${value}\" is not a valid filename mask.");
+		}
+
+	} elsif ($type eq "Language") {
+		if ($value !~ qr"^(?:c|c\+\+|fortran)$") {
+			$line->log_warning("\"${value}\" is not a valid language.");
+		}
+
 	} elsif ($type eq "Mail_Address") {
 		if ($value !~ qr"^[-\w\d_.]+\@[-\w\d.]+$") {
 			$line->log_warning("\"${value}\" is not a valid mail address.");
+		}
+
+	} elsif ($type eq "Option") {
+		if ($value !~ qr"^-?[a-z][-0-9a-z]*$") {
+			$line->log_warning("\"${value}\" is not a valid option name.");
+		}
+
+	} elsif ($type eq "Pathname") {
+		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%/]*$") {
+			$line->log_warning("\"${value}\" is not a valid pathname.");
+		}
+
+	} elsif ($type eq "Pathmask") {
+		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?/]*$") {
+			$line->log_warning("\"${value}\" is not a valid pathname mask.");
 		}
 
 	} elsif ($type eq "PkgRevision") {
@@ -1522,6 +1558,14 @@ sub checktext_basic_vartype($$$$$) {
 		}
 		if ($line->file !~ qr"(?:^|/)Makefile$") {
 			$line->log_error("${varname} must not be set outside the package Makefile.");
+		}
+
+	} elsif ($type eq "Readonly") {
+		$line->log_error("\"${varname}\" is a read-only variable and therefore must not be modified.");
+
+	} elsif ($type eq "Stage") {
+		if ($value !~ qr"^(?:pre|do|post)-(?:patch|configure|build|install)$") {
+			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{patch,configure,build,install}");
 		}
 
 	} elsif ($type eq "Tool") {
@@ -1534,9 +1578,6 @@ sub checktext_basic_vartype($$$$$) {
 				$line->log_error("Unknown tool dependency \"${tooldep}\".");
 			}
 		}
-
-	} elsif ($type eq "Readonly") {
-		$line->log_error("\"${varname}\" must not be modified by the package or the user.");
 
 	} elsif ($type eq "URL") {
 		if ($value =~ qr"\$\{(MASTER_SITE_.*):=(.*)\}$") {
@@ -1552,7 +1593,7 @@ sub checktext_basic_vartype($$$$$) {
 		} elsif ($value =~ regex_unresolved) {
 			# No further checks
 			
-		} elsif ($value =~ qr"^(?:http://|ftp://)[-0-9A-Za-z.]+(?::\d+)?/") {
+		} elsif ($value =~ qr"^(?:http://|ftp://)[-0-9A-Za-z.]+(?::\d+)?/~?([-%&+,./0-9:=?\@A-Z_a-z]|\\#)*?$") {
 			my $sites = get_dist_sites();
 
 			foreach my $site (keys(%{$sites})) {
@@ -1570,6 +1611,27 @@ sub checktext_basic_vartype($$$$$) {
 			$line->log_warning("\"${value}\" is not a valid URL.");
 		}
 
+	} elsif ($type eq "Varname") {
+		if ($value ne "" && $value_novar eq "") {
+			# The value of another variable
+
+		} elsif ($value_novar !~ qr"^[A-Z][0-9A-Z_]*(?:[.].*)?$") {
+			$line->log_warning("\"${value}\" is not a valid variable name.");
+		}
+
+	} elsif ($type eq "WrksrcSubdirectory") {
+		if ($value =~ qr"^(\$\{WRKSRC\}(?:/|$))") {
+			my ($prefix) = ($1);
+			# TODO: uncomment after 2005Q4
+			#$line->log_note("The \"${prefix}\" prefix is not needed here.");
+
+		} elsif ($value ne "" && $value_novar eq "") {
+			# The value of another variable
+
+		} elsif ($value_novar !~ qr"^(?:\.|[0-9A-Za-z][-0-9A-Za-z._/+]*)$") {
+			$line->log_warning("\"${value}\" is not a valid subdirectory.");
+		}
+
 	} elsif ($type eq "Yes") {
 		if ($value !~ qr"^(?:YES|yes)(?:\s+#.*)?$") {
 			$line->log_warning("${varname} should be set to YES or yes.");
@@ -1578,6 +1640,20 @@ sub checktext_basic_vartype($$$$$) {
 	} elsif ($type eq "YesNo") {
 		if ($value !~ qr"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
 			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
+		}
+
+	} elsif ($type =~ qr"^\{\s*(.*?)\s*\}$") {
+		my ($values) = ($1);
+		my @enum = split(qr"\s+", $values);
+		my $found = false;
+
+		foreach my $v (@enum) {
+			if ($v eq $value) {
+				$found = true;
+			}
+		}
+		if (!$found) {
+			$line->log_warning(sprintf("%s should be set to one of %s.", $varname, join(", ", @enum)));
 		}
 
 	} else {
@@ -1854,12 +1930,6 @@ sub checklines_package_Makefile($) {
 				}
 			}
 
-			if ($varname eq "PKG_SUPPORTED_OPTIONS" || $varname eq "PKG_SUGGESTED_OPTIONS") {
-				if ($value =~ qr"_") {
-					$line->log_warning("Options should not contain underscores.");
-				}
-			}
-
 			if ($varname eq "SVR4_PKGNAME") {
 				if ($value =~ regex_unresolved) {
 					$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
@@ -1877,10 +1947,6 @@ sub checklines_package_Makefile($) {
 				if (($what ne "SRC" && $what ne "BIN") || ($where ne "FTP" && $where ne "CDROM")) {
 					$line->log_error("Misspelled variable: Valid names are USE_{BIN,SRC}_ON_{FTP,CDROM}.");
 				}
-			}
-
-			if ($varname =~ qr"^SUBST_STAGE\." && $value !~ qr"^(?:pre|do|post)-(?:patch|configure|build|install)$") {
-				$line->log_warning("SUBST_STAGE should be one of {pre,do,post}-{patch,configure,build,install}");
 			}
 
 			if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {

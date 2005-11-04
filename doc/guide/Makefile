@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/03 01:57:15 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/04 13:58:17 rillig Exp $
 #
 
 DISTNAME=		htdocs-share-20050727
@@ -45,7 +45,7 @@ _GUIDE_OUTPUTS=		${OUTPUTS}
 
 pre-extract:
 	${MKDIR} ${WRKSRC}
-	@cd ${FILESDIR} && ${PAX} -rw . ${WRKSRC}
+	@${LN} -s ${FILESDIR}/* ${WRKSRC}
 
 do-build:
 .for _output_ in ${OUTPUTS}
