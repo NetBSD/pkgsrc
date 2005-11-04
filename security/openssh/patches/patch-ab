@@ -1,13 +1,11 @@
-$NetBSD: patch-ab,v 1.21 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-ab,v 1.22 2005/11/04 15:27:34 tv Exp $
 
---- configure.ac.orig	2005-08-31 11:59:49.000000000 -0500
+--- configure.ac.orig	2005-08-31 12:59:49.000000000 -0400
 +++ configure.ac
-@@ -570,8 +570,24 @@
-         AC_DEFINE(MISSING_HOWMANY)
-         AC_DEFINE(BROKEN_SETVBUF, 1, [LynxOS has broken setvbuf() implementation])
-         ;;
-+
-+
+@@ -305,6 +305,15 @@ main() { if (NSVersionOfRunTimeLibrary("
+ 		;;
+ 	esac
+ 	;;
 +*-*-interix3*)
 +        AC_DEFINE(HAVE_INTERIX)
 +        AC_DEFINE(DISABLE_FD_PASSING)
@@ -15,10 +13,13 @@ $NetBSD: patch-ab,v 1.21 2005/09/21 18:07:09 reed Exp $
 +        AC_DEFINE(IP_TOS_IS_BROKEN)
 +        AC_DEFINE(MISSING_HOWMANY)
 +        AC_DEFINE(NO_IPPORT_RESERVED_CONCEPT)
-+        AC_DEFINE(SETGROUPS_NOOP)
 +        AC_DEFINE(USE_PIPES)
 +        ;;
-+
+ *-*-irix5*)
+ 	PATH="$PATH:/usr/etc"
+ 	AC_DEFINE(BROKEN_INET_NTOA)
+@@ -572,6 +581,9 @@ mips-sony-bsd|mips-sony-newsos4)
+         ;;
  esac
  
 +# pkgsrc handles any rpath settings this package needs
@@ -27,7 +28,7 @@ $NetBSD: patch-ab,v 1.21 2005/09/21 18:07:09 reed Exp $
  # Allow user to specify flags
  AC_ARG_WITH(cflags,
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -3358,9 +3374,17 @@
+@@ -3358,9 +3370,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -47,7 +48,7 @@ $NetBSD: patch-ab,v 1.21 2005/09/21 18:07:09 reed Exp $
  	AC_DEFINE_UNQUOTED(CONF_UTMPX_FILE, "$conf_utmpx_location")
  fi
  
-@@ -3383,9 +3407,17 @@
+@@ -3383,9 +3403,17 @@ AC_TRY_COMPILE([
  )
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -67,7 +68,7 @@ $NetBSD: patch-ab,v 1.21 2005/09/21 18:07:09 reed Exp $
  	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location")
  fi
  
-@@ -3431,7 +3463,7 @@
+@@ -3431,7 +3459,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
