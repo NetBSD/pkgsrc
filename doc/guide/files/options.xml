@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.14 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: options.xml,v 1.15 2005/11/04 09:49:37 salo Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.42 -->
 
@@ -92,7 +92,7 @@ if needed.</para>
 <listitem><para><varname>PKG_OPTIONS_VAR</varname> is the name of the
 &man.make.1; variable that the user can set to override the default
 options.  It should be set to
-<quote>PKG_OPTIONS.<replaceable>pkgbase</replaceable></quote>.</para></listitem>
+PKG_OPTIONS.<replaceable>pkgbase</replaceable>.</para></listitem>
 
 <listitem><para><varname>PKG_SUPPORTED_OPTIONS</varname> is a list of
 build options supported by the package.</para></listitem>
