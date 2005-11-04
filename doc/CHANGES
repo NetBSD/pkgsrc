@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11790 2005/11/04 04:37:24 minskim Exp $
+$NetBSD: CHANGES,v 1.11791 2005/11/04 04:56:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5040,3 +5040,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/clamav to 0.87.1 [grant 2005-11-04]
 	Added multimedia/py-ming version 0.2 [minskim 2005-11-04]
 	Added multimedia/ruby-ming version 0.1.6 [minskim 2005-11-04]
+	Added multimedia/php-ming version 5.0.5 [minskim 2005-11-04]
