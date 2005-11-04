@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.333 2005/11/04 21:43:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.334 2005/11/04 21:59:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1447,13 +1447,14 @@ sub get_tool_names() {
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ regex_varassign) {
 				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
-				if ($varname =~ qr"^_TOOLS_VARNAME.(.*)$") {
+				if ($varname =~ qr"^_TOOLS_VARNAME\.(.*)$") {
 					my ($toolname) = ($1);
 					$tools->{$toolname} = $value;
 				}
 			}
 		}
 	}
+	log_info($fname, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
 
 	# As long as there is no reliable way to get a list of all valid
 	# tool names, this is the best I can do.
@@ -1787,12 +1788,22 @@ sub checklines_direct_tools($) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking direct use of tool names.");
 
 	my @tools = qw(
-		awk basename cat chmod chown chgrp cmp cp cut digest
-		dirname echo egrep false file find gmake grep gtar gzcat
-		id ident install ldconfig ln md5 mkdir mtree mv patch
-		pax pkg_add pkg_create pkg_delete pkg_info rm rmdir sed
-		setenv sh sort su tail test touch tr true type wc
-		xmkmf);
+		awk
+		basename
+		cat chgrp chmod chown cmp cp cut
+		digest dirname
+		echo egrep
+		false file find
+		gmake grep gtar gzcat
+		id ident install
+		ldconfig ln
+		md5 mkdir mtree mv
+		patch pax pkg_add pkg_create pkg_delete pkg_info
+		rm rmdir sed setenv sh sort su
+		tail test touch tr true type
+		wc
+		xmkmf
+	);
 	my @cmd_tools = qw(
 		file gunzip gzip);
 	my $tools = join("|", @tools, @cmd_tools);
