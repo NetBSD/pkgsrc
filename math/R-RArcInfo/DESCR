@@ -1,0 +1,13 @@
+RArcInfo is a package for the R statistical program  to import
+Arc/Info V7.x binary coverages. It is based on the library Avcelib
+written by Daniel Morissette.
+
+Currently, RArcInfo supports most of the file formats stored by these
+type of coverages. The geographical information (arcs, polygons,
+topological relationships, etc.) are stored using lists, but all the
+tables containing related information are imported into a data frame.
+
+Once the desired data are imported, the user can draw maps, even filling
+the polygons according to the value of a given covariate. Although R is
+not designed for heavy G.I.S. work, this package is very helpful to work
+with binary coverages inside R.
