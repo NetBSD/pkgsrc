@@ -1,28 +1,25 @@
-# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:44 tv Exp $
+# $NetBSD: Makefile,v 1.32 2005/11/04 19:36:01 rillig Exp $
 
-DISTNAME=	bind
-PKGNAME=	bind-${BIND_VERSION}
+DISTNAME=	bind-${BIND_VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/${BIND_VERSION}/
-DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
+DISTFILES=	bind-src.tar.gz bind-doc.tar.gz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
 COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
 
-Y2K=		http://www.isc.org/ISC/y2k.html
-
-WRKSRC=		${WRKDIR}/src
+WRKSRC=		${WRKDIR}
 BIND_VERSION=	8.4.6
 DIST_SUBDIR=	bind/${BIND_VERSION}
-EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	named
 
-BUILD_DIRS=	${WRKSRC} ${WRKDIR}/doc/man
+BUILD_DIRS=	src doc/man
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,14 +30,13 @@ OWN_DIRS_PERMS=	${PKG_SYSCONFDIR}/ndc.d root other 700
 .endif
 
 MAKEFLAGS+=	PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=	INSTALL_LIB=-o\ ${LIBOWN}\ -g\ ${LIBGRP}
 
 post-extract:
-	cd ${WRKDIR}/doc/man &&						\
-		${RM} -f *.lst* *~ *.BAK *.CKP *.orig
+	cd ${WRKSRC}/doc/man && ${RM} -f *.lst* *~ *.BAK *.CKP *.orig
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bind8
-	cd ${WRKDIR}/doc/html && 					\
-		${PAX} -rw * ${PREFIX}/share/doc/html/bind8
+	cd ${WRKSRC}/doc/html && ${PAX} -rw * ${PREFIX}/share/doc/html/bind8
 
 .include "../../mk/bsd.pkg.mk"

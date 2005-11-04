@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.3 2003/03/06 11:43:28 is Exp $
+$NetBSD: patch-af,v 1.4 2005/11/04 19:36:01 rillig Exp $
 
---- port/linux/Makefile.set.orig	Mon Jun 24 00:32:57 2002
-+++ port/linux/Makefile.set
+--- src/port/linux/Makefile.set.orig	Mon Jun 24 00:32:57 2002
++++ src/port/linux/Makefile.set
 @@ -1,11 +1,13 @@
  'CC=gcc -D_GNU_SOURCE'
  'CDEBUG=-O -g'
