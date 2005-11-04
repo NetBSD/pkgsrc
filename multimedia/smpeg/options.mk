@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2005/09/04 05:20:05 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2005/11/04 17:22:08 rillig Exp $
 
-PKG_OPTIONS_VAR=	smpeg
+PKG_OPTIONS_VAR=	PKG_OPTIONS.smpeg
 PKG_SUPPORTED_OPTIONS=	gtk-player opengl-player
 
 .include "../../mk/bsd.options.mk"
