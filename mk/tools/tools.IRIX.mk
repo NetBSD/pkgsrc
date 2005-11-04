@@ -1,4 +1,4 @@
-# $NetBSD: tools.IRIX.mk,v 1.14 2005/06/24 20:59:59 jlam Exp $
+# $NetBSD: tools.IRIX.mk,v 1.15 2005/11/04 20:02:01 jlam Exp $
 #
 # System-supplied tools for the IRIX operating system.
 
@@ -53,6 +53,7 @@ TOOLS_PLATFORM.rm?=		/sbin/rm
 TOOLS_PLATFORM.rmdir?=		/usr/bin/rmdir
 TOOLS_PLATFORM.sed?=		/sbin/sed
 TOOLS_PLATFORM.sh?=		/bin/ksh
+TOOLS_PLATFORM.sleep?=		/sbin/sleep
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
