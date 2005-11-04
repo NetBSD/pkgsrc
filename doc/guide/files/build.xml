@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.16 2005/11/03 19:29:54 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.17 2005/11/04 11:55:31 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -176,10 +176,10 @@ package.</para></listitem></varlistentry>
 
 <varlistentry><term><varname>WRKDIR</varname> (read-only)</term>
 <listitem><para>This is an absolute pathname pointing to the directory
-where all work takes place. This directory typically contains temporary
-directories used by the various pkgsrc frameworks, like
-<emphasis>buildlink</emphasis> or the
-<emphasis>wrappers</emphasis>.</para></listitem></varlistentry>
+where all work takes place. The distfiles are extraced to this
+directory. It also contains temporary directories and log files used by
+the various pkgsrc frameworks, like <emphasis>buildlink</emphasis> or
+the <emphasis>wrappers</emphasis>.</para></listitem></varlistentry>
 
 <varlistentry><term><varname>WRKSRC</varname> (read-write)</term>
 <listitem><para>This is an absolute pathname pointing to the directory
