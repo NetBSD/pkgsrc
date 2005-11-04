@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2002/12/07 21:34:04 cjep Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/04 19:36:01 rillig Exp $
 
---- ../doc/man/Makefile.orig	Mon Nov 29 19:22:07 1999
-+++ ../doc/man/Makefile
+--- doc/man/Makefile.orig	Mon Nov 29 19:22:07 1999
++++ doc/man/Makefile
 @@ -52,12 +52,12 @@
  # Target directory for the manual directory tree. Eg., may be used to 
  # specify the path of an NFS-mounted directory for common files.
