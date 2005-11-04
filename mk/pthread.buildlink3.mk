@@ -1,70 +1,54 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.20 2005/04/13 16:16:50 rillig Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.21 2005/11/04 14:36:23 rillig Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
-# package as the Official Pthread Replacement (OPR).  A package that uses
-# pthreads may do one of the following:
+# package as the Official Pthread Replacement (OPR).  The following
+# variables may be set before including this file:
 #
-#   (1) Simply include pthread.buildlink3.mk.  This will make the package
-#	use the native pthread library if it's available, or else the OPR
-#	package.  The value of PTHREAD_TYPE may be checked to be either
-#	"native", or the name of the OPR package, or "none", e.g.
+# PTHREAD_OPTS?= # empty
+#	A list of options to configure the search for a suitable pthreads
+#	implementation.
 #
-#	#
-#	# package Makefile stuff...
-#	#
-#	.include "../../mk/pthread.buildlink3.mk"
+#	"native" means that only a native pthreads implementation is
+#		acceptable.
 #
-#	.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-#	CONFIGURE_ARGS+=	--without-pthreads
-#	.endif
+#	"optional" will override the effects of any instance of
+#		"require".  This should _only_ be used by those packages
+#		that can be built with or without pthreads independently
+#		of whether any of its dependencies need pthreads.
+#		Currently, this is only www/mozilla, which uses its own
+#		threading library if native pthreads are unavailable,
+#		despite that it uses GTK+, which _does_ need pthreads.
 #
-#	.include "../../mk/bsd.pkg.mk"
+#	"require" means that the package is skipped silently when no
+#		implementation can be found.
+#
+#	By default, the native pthreads implementation is used if it's
+#	available. Otherwise the OPR is used.
+#
+# PTHREAD_AUTO_VARS?= no
+#	This variable specifies whether the values of the variables
+#	PTHREAD_{CFLAGS,CPPFLAGS,LDFLAGS,LIBS} should be automatically
+#	added to their respective variables.
+#
+# After inclusion of this file, the following variables may be examined:
+#
+# PTHREAD_TYPE
+#	The type of pthreads implementation that has been found.
+#
+#	"native" means that the native pthreads implementation is used.
+#
+#	"none" means that no suitable pthreads implementation could be
+#		found.
+#
+#	Any other value is the name of the package that is used as the
+#	pthread implementation.
 #
 #	Note that it's only safe to check and use the value of PTHREAD_TYPE
 #	after all other buildlink3.mk files have been included.
 #
-#   (2) Add "native" to PTHREAD_OPTS prior to including
-#	pthread.buildlink3.mk.  This is like case (1), but we only check for
-#	the native pthread library, e.g.,
-#
-#	PTHREAD_OPTS+=	native
-#	#
-#	# package Makefile stuff...
-#	#
-#	.include "../../mk/pthread.buildlink3.mk"
-#
-#	.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-#	CONFIGURE_ARGS+=	--without-pthreads
-#	.endif
-#
-#	.include "../../mk/bsd.pkg.mk"
-#
-#   (3)	Add "require" to PTHREAD_OPTS prior to including
-#	pthread.buildlink3.mk.  This will make the package use the native
-#	pthread library or else use the OPR package, and will otherwise set
-#	PKG_SKIP_REASON if neither can be used, e.g.,
-#
-#	PTHREAD_OPTS+=	require
-#	#
-#	# package Makefile stuff...
-#	#
-#	.include "../../mk/pthread.buildlink3.mk"
-#	.include "../../mk/bsd.pkg.mk"
-#
-#   (4) Add both "require" and "native" to PTHREAD_OPTS prior to including
-#	pthread.buildlink3.mk.  This is like case (3), but we only check for
-#	the native pthread library, e.g.,
-#
-#	PTHREAD_OPTS+=	require native
-#	#
-#	# more package Makefile stuff...
-#	#
-#	.include "../../mk/pthread.buildlink3.mk"
-#	.include "../../mk/bsd.pkg.mk"
-#
 # The case where a package must use either the native pthread library or
-# some pthread package aside from the OPR is a special case of (2), e.g.,
-# if the required pthread package is "ptl2", then:
+# some pthread package aside from the OPR (e.g. "ptl2") can be solved as
+# follows:
 #
 #	PTHREAD_OPTS+=	native
 #	#
@@ -77,40 +61,18 @@
 #	.endif
 #
 #	.include "../../mk/bsd.pkg.mk"
-#
-# A package Makefile may add the word "optional" to PTHREAD_OPTS, which
-# will override the effects of any instance of the word "require".  This
-# should _only_ be used by those packages that can be built with or
-# without pthreads _independently_ of whether any of its dependencies need
-# pthreads.  Currently, this only only www/mozilla, which uses its own
-# threading library if native pthreads is unavailable, despite that it
-# uses GTK+, which _does_ need pthreads.
-#
-###########################################################################
-#
-# PTHREAD_OPTS represents whether this package requires pthreads, and also
-#	whether it needs to be native.  It may include the word "require"
-#	to denote that a pthreads implementation is required, and may also
-#	include the word "native" to denote that only native pthreads are
-#	acceptable.
-#
-# PTHREAD_AUTO_VARS is "yes" or "no" for whether the values of the variables
-#	PTHREAD_{CFLAGS,CPPFLAGS,LDFLAGS,LIBS} should be automatically added
-#	to their respective variables.  Defaults to "no".
-#
-# _PKG_PTHREAD is the fall-back package pthread implementation use by
-#	pthread.buildlink3.mk.
-#
-# _PKG_PTHREAD_COMPAT_PATTERNS matches the ONLY_FOR_PLATFORMS from the
-#	Makefile for ${_PKG_PTHREAD}.  It's used to see if ${_PKG_PTHREADS}
-#	can actually be used to replace a native pthreads.
-#
+
 PTHREAD_BUILDLINK3_MK:=	${PTHREAD_BUILDLINK3_MK}+
 
+# The fall-back package pthread implementation
 _PKG_PTHREAD?=			pth
 _PKG_PTHREAD_DEPENDS?=		pth>=2.0.0
 _PKG_PTHREAD_PKGSRCDIR?=	../../devel/${_PKG_PTHREAD}
 _PKG_PTHREAD_BUILDLINK3_MK?=	${_PKG_PTHREAD_PKGSRCDIR}/buildlink3.mk
+
+# _PKG_PTHREAD_COMPAT_PATTERNS matches the ONLY_FOR_PLATFORMS from the
+# Makefile for ${_PKG_PTHREAD}.  It is used to see if ${_PKG_PTHREADS}
+# can actually be used to replace a native pthreads.
 _PKG_PTHREAD_COMPAT_PATTERNS=	*-*-*
 
 .include "../../mk/bsd.prefs.mk"
