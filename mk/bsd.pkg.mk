@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1739 2005/11/04 11:27:41 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1740 2005/11/04 20:06:14 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -822,11 +822,11 @@ USE_TOOLS+=	date
 USE_TOOLS+=	mail
 .endif
 
-# We need shlock if we're using locking to synchronize multiple builds
-# over the same pkgsrc tree.
+# We need shlock and sleep if we're using locking to synchronize multiple
+# builds over the same pkgsrc tree.
 #
 .if ${PKGSRC_LOCKTYPE} != "none"
-USE_TOOLS+=	shlock
+USE_TOOLS+=	shlock sleep
 .endif
 
 # If MANZ is defined, then we want the final man pages to be compressed.
@@ -1634,7 +1634,7 @@ _ACQUIRE_LOCK=								\
 		${ECHO} "=> Lock is held by pid `cat ${LOCKFILE}`";	\
 		case "${PKGSRC_LOCKTYPE}" in				\
 		once)	exit 1 ;;					\
-		sleep)	sleep ${PKGSRC_SLEEPSECS} ;;			\
+		sleep)	${SLEEP} ${PKGSRC_SLEEPSECS} ;;			\
 		esac							\
 	done;								\
 	if [ "${PKG_VERBOSE}" != "" ]; then				\
@@ -2099,7 +2099,10 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in ${INSTALLATION_DIRS}; do				\
 		case $$dir in						\
-		/*)	;;						\
+		${PREFIX}/*)	;;					\
+		*)		continue ;;				\
+		done;							\
+		case $$dir in						\
 		*bin|*bin/*|*libexec|*libexec/*)			\
 			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
 		${PKGMANDIR}/*)						\
