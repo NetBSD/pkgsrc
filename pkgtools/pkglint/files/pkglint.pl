@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.330 2005/11/04 17:29:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.331 2005/11/04 20:39:49 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1415,6 +1415,11 @@ sub get_regex_plurals() {
 		REPLACE_RUBY
 		RESTRICTED
 		SITES_.*
+		TOOLS_ALIASES\.*
+		TOOLS_BROKEN
+		TOOLS_CREATE
+		TOOLS_GNU_MISSING
+		TOOLS_NOOP
 	);
 	my $plurals = join("|",
 		@plurals_ok,
@@ -1566,12 +1571,12 @@ sub checktext_basic_vartype($$$$$) {
 		$line->log_error("\"${varname}\" is a read-only variable and therefore must not be modified.");
 
 	} elsif ($type eq "Stage") {
-		if ($value !~ qr"^(?:pre|do|post)-(?:patch|configure|build|install)$") {
-			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{patch,configure,build,install}.");
+		if ($value !~ qr"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
+			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{extract,patch,configure,build,install}.");
 		}
 
 	} elsif ($type eq "Tool") {
-		if ($value =~ qr"^(.*)(?::(.*))$") {
+		if ($value =~ qr"^(\w+)(?::(\w+))?$") {
 			my ($toolname, $tooldep) = ($1, $2);
 			if (!exists(get_tool_names()->{$toolname})) {
 				$line->log_error("Unknown tool \"${toolname}\".");
@@ -1579,6 +1584,8 @@ sub checktext_basic_vartype($$$$$) {
 			if (defined($tooldep) && $tooldep !~ qr"^(?:build|pkgsrc|run)$") {
 				$line->log_error("Unknown tool dependency \"${tooldep}\".");
 			}
+		} else {
+			$line->log_error("Invalid tool syntax: \"${value}\".");
 		}
 
 	} elsif ($type eq "URL") {
@@ -1658,7 +1665,7 @@ sub checktext_basic_vartype($$$$$) {
 			}
 		}
 		if (!$found) {
-			$line->log_warning(sprintf("%s should be set to one of %s.", $varname, join(", ", @enum)));
+			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of ${type} instead.");
 		}
 
 	} else {
