@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/02 11:10:45 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/04 19:52:30 rillig Exp $
 
---- makefile.orig	2004-07-04 16:52:14.000000000 +0200
-+++ makefile
+--- clit18/makefile.orig	2004-07-04 16:52:14.000000000 +0200
++++ clit18/makefile
 @@ -1,9 +1,9 @@
  all: clit
  

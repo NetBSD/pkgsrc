@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/02 11:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/04 19:52:30 rillig Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -15,10 +15,16 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		${CONVERTLIT_HOMEPAGE}
 COMMENT=		Convert Microsoft Legal Reader format eBooks into open format
 
-WRKSRC=			${WRKDIR}/clit18
-BUILD_DIRS=		${WRKDIR}/lib ${WRKSRC}
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		lib clit18
 MAKEFILE=		makefile
 USE_TOOLS+=		gmake
+
+SUBST_CLASSES+=		d2u
+SUBST_STAGE.d2u=	pre-configure
+SUBST_MESSAGE.d2u=	"Stripping CRLF line ends."
+SUBST_FILES.d2u+=		*.h *.c */*.h */*.c */*/*.h */*/*.c
+SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
 
 RESTRICTED=		Possible legal problems
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -27,7 +33,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/clit ${PREFIX}/bin/convertlit
+	${INSTALL_PROGRAM} ${WRKSRC}/clit18/clit ${PREFIX}/bin/convertlit
 
 .include "../../math/ltm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
