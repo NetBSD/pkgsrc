@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.14 2005/10/11 10:00:15 tonio Exp $
+$NetBSD: patch-aa,v 1.15 2005/11/04 21:21:02 tonio Exp $
 
---- configure.orig	2005-09-19 05:08:29.000000000 +0200
+--- configure.orig	2005-09-20 02:33:57.000000000 +0200
 +++ configure
 @@ -490,7 +490,6 @@ ac_includes_default="\
  #endif"
@@ -24,7 +24,23 @@ $NetBSD: patch-aa,v 1.14 2005/10/11 10:00:15 tonio Exp $
  
  
  
-@@ -51688,7 +51687,6 @@ CLASSPATH_INCLUDES="-I\$(top_srcdir)/lib
+@@ -25084,6 +25083,15 @@ echo "$as_me: error: Missing library lib
+ 
+ 	VMLIBS="$VM_LIBS $PTHREAD_LIBS"
+ 	CPPFLAGS="$CPPFLAGS -D_REENTRANT"
++
++	        if test "x$Khost_os" = "xnetbsd1"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define KAFFE_BUGGY_NETBSD_SIGWAIT 1
++_ACEOF
++
++		fi
++
+  else
+         CPPFLAGS="$CPPFLAGS -DBR_PTHREADS=0"
+ fi
+@@ -51688,7 +51696,6 @@ CLASSPATH_INCLUDES="-I\$(top_srcdir)/lib
  
  
  
