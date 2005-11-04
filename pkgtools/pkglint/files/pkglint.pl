@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.324 2005/11/03 18:49:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.325 2005/11/04 08:41:00 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -220,10 +220,12 @@ use constant LINES	=> 1;
 use constant TEXT	=> 2;
 use constant PHYSLINES	=> 3;
 use constant CHANGED	=> 4;
+use constant BEFORE	=> 5;
+use constant AFTER	=> 6;
 	
 sub new($$$$) {
 	my ($class, $file, $lines, $text, $physlines) = @_;
-	my ($self) = ([$file, $lines, $text, $physlines, false]);
+	my ($self) = ([$file, $lines, $text, $physlines, false, [], []]);
 	bless($self, $class);
 	return $self;
 }
@@ -237,7 +239,8 @@ sub text($) {
 	return shift(@_)->[TEXT];
 }
 sub physlines($) {
-	return shift(@_)->[PHYSLINES];
+	my ($self) = @_;
+	return [@{$self->[BEFORE]}, @{$self->[PHYSLINES]}, @{$self->[AFTER]}];
 }
 sub is_changed($) {
 	return shift(@_)->[CHANGED];
@@ -264,26 +267,29 @@ sub to_string($) {
 	return sprintf("%s:%s: %s", $self->[FILE], $self->[LINES], $self->[TEXT]);
 }
 
-sub insert_before($$) {
+sub prepend_before($$) {
 	my ($self, $text) = @_;
-	unshift(@{$self->[PHYSLINES]}, [0, "$text\n"]);
+	unshift(@{$self->[BEFORE]}, [0, "$text\n"]);
 	$self->[CHANGED] = true;
 }
-sub insert_after($$) {
+sub append_before($$) {
 	my ($self, $text) = @_;
-	push(@{$self->[PHYSLINES]}, [0, "$text\n"]);
+	push(@{$self->[BEFORE]}, [0, "$text\n"]);
+	$self->[CHANGED] = true;
+}
+sub prepend_after($$) {
+	my ($self, $text) = @_;
+	unshift(@{$self->[AFTER]}, [0, "$text\n"]);
+	$self->[CHANGED] = true;
+}
+sub append_after($$) {
+	my ($self, $text) = @_;
+	push(@{$self->[AFTER]}, [0, "$text\n"]);
 	$self->[CHANGED] = true;
 }
 sub delete($) {
 	my ($self) = @_;
-	my ($newlines) = ([]);
-
-	foreach my $line (@{$self->[PHYSLINES]}) {
-		if ($line->[0] == 0) {
-			push(@{$newlines}, $line);
-		}
-	}
-	$self->[PHYSLINES] = $newlines;
+	$self->[PHYSLINES] = [];
 	$self->[CHANGED] = true;
 }
 
@@ -528,6 +534,7 @@ my (%warnings) = (
 
 my $opt_autofix		= false;
 my $opt_dumpmakefile	= false;
+my $opt_import		= false;
 my $opt_quiet		= false;
 my $opt_recursive	= false;
 my $opt_rcsidstring	= conf_rcsidstring;
@@ -567,7 +574,9 @@ my (@options) = (
 	  sub {
 		help(*STDOUT, 0, 1);
 	  } ],
-	[ "-q|--quiet", "don't print a summary line when finishing",
+	[ "-i|--import", "Prepare the import of a wip package",
+	  "import|i", \$opt_import ],
+	[ "-q|--quiet", "Don't print a summary line when finishing",
 	  "quiet|q", \$opt_quiet ],
 	[ "-r|--recursive", "Recursive---check subdirectories, too",
 	  "recursive|r", \$opt_recursive ],
@@ -2607,7 +2616,7 @@ sub checkdir_category() {
 		if (!$f_atend && ($m_atend || $f_current lt $m_current)) {
 			if (!exists($m_check{$f_current})) {
 				$line->log_error("${f_current} exists in the file system, but not in the Makefile.");
-				$line->insert_before("SUBDIR+=\t${f_current}");
+				$line->append_before("SUBDIR+=\t${f_current}");
 			}
 			$f_neednext = true;
 
@@ -2751,7 +2760,7 @@ sub checkdir($) {
 	my ($dir) = @_;
 
 	$current_dir = $dir;
-	$is_wip = ((Cwd::abs_path($dir) =~ qr"/wip(?:/|$)") ? true : false);
+	$is_wip = !$opt_import && (Cwd::abs_path($dir) =~ qr"/wip(?:/|$)");
 
 	if (-f "${dir}/../../mk/bsd.pkg.mk") {
 		checkdir_package();
