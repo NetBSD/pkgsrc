@@ -1,0 +1,6 @@
+Models and tests for departure from Hardy-Weinberg equilibrium and
+independence between loci.
+
+Fits models for genotypic disequilibria, as described in Huttley and
+Wilson (2000), Weir (1996) and Weir and Wilson (1986). Contrast terms
+are available that account for first order interactions between loci.
