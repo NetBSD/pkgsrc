@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.325 2005/11/04 08:41:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.326 2005/11/04 09:32:03 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -519,7 +519,6 @@ my $opt_warn_paren	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
 my $opt_warn_vague	= false;
-my $opt_warn_workdir	= true;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
@@ -529,7 +528,6 @@ my (%warnings) = (
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"vague"		=> [\$opt_warn_vague, "show old (unreliable, vague) warnings"],
-	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
 
 my $opt_autofix		= false;
@@ -2704,8 +2702,8 @@ sub checkdir_package() {
 	$have_patches = false;
 	foreach my $f (@files) {
 		if      ($f =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
-			if ($opt_warn_workdir) {
-				log_warning($f, NO_LINE_NUMBER, "Should be cleaned up before committing the package.");
+			if ($opt_import) {
+				log_error($f, NO_LINE_NUMBER, "Must be cleaned up before committing the package.");
 			}
 
 		} elsif (!-f $f) {
