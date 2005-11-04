@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.37 2005/07/09 01:11:15 kristerw Exp $
+# $NetBSD: pyversion.mk,v 1.38 2005/11/04 18:24:37 rillig Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -137,8 +137,9 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 PKG_SKIP_REASON+=   "No valid Python version"
 .endif
 
-PTHREAD_OPTS=	require
+PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
+
 .if defined(PYTHON_FOR_BUILD_ONLY)
 BUILDLINK_DEPMETHOD.python?=	build
 .endif
