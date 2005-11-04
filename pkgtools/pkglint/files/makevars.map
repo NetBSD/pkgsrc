@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.25 2005/11/04 17:00:58 rillig Exp $
+# $NetBSD: makevars.map,v 1.26 2005/11/04 17:29:02 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -148,7 +148,7 @@ PKG_SKIP_REASON		List
 PKG_SUFX		Userdefined
 PKG_SUGGESTED_OPTIONS	List* of Option
 PKG_SUPPORTED_OPTIONS	List* of Option
-PLIST_SRC		List of Pathname
+PLIST_SRC		List* of Pathname
 PLIST_SUBST		List
 PLIST_TYPE		{ dynamic static }
 PTHREAD_AUTO_VARS	YesNo
