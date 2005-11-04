@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/04 08:11:36 rillig Exp $
+
+SHA1 (R/abind_1.1-0.tar.gz) = d0c4c2aff944e1ee7c97fba8dccc5861096986e9
+RMD160 (R/abind_1.1-0.tar.gz) = 728391990ae80b68ff715eeedf36fca2bfe73c34
+Size (R/abind_1.1-0.tar.gz) = 10280 bytes
