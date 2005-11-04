@@ -1,10 +1,20 @@
-# $NetBSD: motif.buildlink3.mk,v 1.8 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: motif.buildlink3.mk,v 1.9 2005/11/04 15:29:21 rillig Exp $
+#
+# Package-settable variables:
 #
 # MOTIFBASE
 #	choose the Motif-2.0 installation at the named location.
 #
 # MOTIF_TYPE
 #	choose a specific Motif-2.0 package.
+#
+# Result variables:
+#
+# MOTIFBASE
+#	The chosen Motif installation.
+#
+# MOTIF_TYPE
+#	The chosen Motif package.
 
 .if !defined(MOTIF_BUILDLINK3_MK)
 MOTIF_BUILDLINK3_MK=	# defined
