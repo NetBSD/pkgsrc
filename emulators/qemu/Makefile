@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/10/01 04:12:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/04 21:05:51 dbj Exp $
 #
 
 DISTNAME=		qemu-0.7.2
@@ -30,6 +30,14 @@ SUBST_MESSAGE.snd=	"Fixing hardcoded audio device."
 # Remove -march/-mcpu from CFLAGS, otherwise it will fail
 # to build in the SSE code.
 BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
+
+.include "../../mk/compiler.mk"
+
+# qemu cannot yet use gcc 4, see the faq/mailing lists
+# (hint: use gcc_select on darwin/macos to choose gcc 3.3 instead)
+.if !empty(CC_VERSION:Mgcc-4*)
+PKG_FAIL_REASON+=	"${PKGNAME} cannot use ${CC_VERSION}"
+.endif
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
