@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.329 2005/11/04 17:04:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.330 2005/11/04 17:29:02 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1540,7 +1540,7 @@ sub checktext_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Option") {
-		if ($value !~ qr"^-?[a-z][-0-9a-z]*$") {
+		if ($value_novar !~ qr"^-?[a-z][-0-9a-z]*$") {
 			$line->log_warning("\"${value}\" is not a valid option name.");
 		}
 
@@ -1634,7 +1634,7 @@ sub checktext_basic_vartype($$$$$) {
 			# The value of another variable
 
 		} elsif ($value_novar !~ qr"^(?:\.|[0-9A-Za-z][-0-9A-Za-z._/+]*)$") {
-			$line->log_warning("\"${value}\" is not a valid subdirectory.");
+			$line->log_warning("\"${value}\" is not a valid subdirectory of \${WRKSRC}.");
 		}
 
 	} elsif ($type eq "Yes") {
