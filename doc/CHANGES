@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11809 2005/11/04 08:14:31 rillig Exp $
+$NetBSD: CHANGES,v 1.11810 2005/11/04 08:14:55 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5061,3 +5061,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added wip/R-genetics version 1.0.4 [rillig 2005-11-04]
 	Added wip/R-geoR version 1.5.5 [rillig 2005-11-04]
 	Added wip/R-gstat version 0.9.13 [rillig 2005-11-04]
+	Added wip/R-httpRequest version 0.0.5 [rillig 2005-11-04]
