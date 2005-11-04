@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:19 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/04 18:53:28 rillig Exp $
 
 DISTNAME=	aribas-1.53
 CATEGORIES=	math
@@ -10,7 +10,7 @@ COMMENT=	Multi-precision floating point and big integer arithmetic calculator
 
 CPPFLAGS+=	-DUNiX -DPROTO
 
-BUILD_DIRS=	${WRKDIR}/${DISTNAME}/src
+BUILD_DIRS=	src
 
 INSTALLATION_DIRS=	bin man/man1
 
