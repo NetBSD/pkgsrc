@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11802 2005/11/04 08:10:20 rillig Exp $
+$NetBSD: CHANGES,v 1.11803 2005/11/04 08:11:23 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5054,3 +5054,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added wip/R-R2HTML version 1.53 [rillig 2005-11-04]
 	Added wip/R-RArcInfo version 0.4.4 [rillig 2005-11-04]
 	Added wip/R-Rcmdr version 0.9.11 [rillig 2005-11-04]
+	Added wip/R-VR version 7.2.4 [rillig 2005-11-04]
