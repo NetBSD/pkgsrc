@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.261 2005/11/03 06:26:25 wiz Exp $
+# $NetBSD: Makefile,v 1.262 2005/11/04 11:48:01 rillig Exp $
 #
 
 COMMENT=	Games
 
 SUBDIR+=	0verkill
+SUBDIR+=	4stAttack
 SUBDIR+=	InterLOGIC
 SUBDIR+=	KoboDeluxe
 SUBDIR+=	REminiscence
