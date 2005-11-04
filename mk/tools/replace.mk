@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.130 2005/10/30 17:32:07 jschauma Exp $
+# $NetBSD: replace.mk,v 1.131 2005/11/04 20:02:01 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -991,6 +991,17 @@ TOOLS_DEPENDS.shlock?=		shlock>=20020114:../../pkgtools/shlock
 TOOLS_CREATE+=			shlock
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.shlock=shlock
 TOOLS_PATH.shlock=		${TOOLS_PREFIX.shlock}/bin/shlock
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.sleep) && !empty(_USE_TOOLS:Msleep)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=			TOOLS_IGNORE.sleep=
+.  elif !empty(_TOOLS_USE_PKGSRC.sleep:M[yY][eE][sS])
+TOOLS_DEPENDS.sleep?=		coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_CREATE+=			sleep
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.sleep=coreutils
+TOOLS_PATH.sleep=		${TOOLS_PREFIX.sleep}/bin/${GNU_PROGRAM_PREFIX}sleep
 .  endif
 .endif
 

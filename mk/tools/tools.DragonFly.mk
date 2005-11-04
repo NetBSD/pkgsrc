@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.19 2005/10/12 16:28:29 jlam Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.20 2005/11/04 20:02:01 jlam Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -56,6 +56,7 @@ TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.shlock?=		/usr/bin/shlock
+TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail

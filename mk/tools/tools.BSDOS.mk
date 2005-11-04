@@ -1,4 +1,4 @@
-# $NetBSD: tools.BSDOS.mk,v 1.15 2005/08/28 01:43:56 reed Exp $
+# $NetBSD: tools.BSDOS.mk,v 1.16 2005/11/04 20:02:01 jlam Exp $
 #
 # System-supplied tools for the BSD/OS operating system.
 
@@ -64,6 +64,7 @@ TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/bash
+TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
