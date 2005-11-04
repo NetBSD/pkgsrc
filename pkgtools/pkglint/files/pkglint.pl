@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.334 2005/11/04 21:59:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.335 2005/11/04 22:54:59 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1438,23 +1438,28 @@ sub get_tool_names() {
 		return $get_tool_names_value;
 	}
 
-	my $fname = conf_pkgsrcdir."/mk/tools/defaults.mk";
-	my $lines = load_lines($fname, true);
 	my $tools = {};
-	if (!$lines) {
-		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
-	} else {
+	foreach my $file (qw(autoconf automake ldconfig make replace rpcgen texinfo)) {
+		my $fname = conf_pkgsrcdir."/mk/tools/${file}.mk";
+		my $lines = load_lines($fname, true);
+
+		if (!$lines) {
+			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+			next;
+		}
+
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ regex_varassign) {
 				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
-				if ($varname =~ qr"^_TOOLS_VARNAME\.(.*)$") {
-					my ($toolname) = ($1);
-					$tools->{$toolname} = $value;
+				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+)$") {
+					$tools->{$value} = true;
+				} elsif ($varname =~ qr"^TOOLS_PATH\.([-\w.]+)$") {
+					$tools->{$1} = true;
 				}
 			}
 		}
 	}
-	log_info($fname, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
+	log_info(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
 
 	# As long as there is no reliable way to get a list of all valid
 	# tool names, this is the best I can do.
