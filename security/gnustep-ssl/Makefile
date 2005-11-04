@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/03 13:44:59 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/04 11:22:24 rillig Exp $
 #
 
 DISTNAME=		gnustep-base-1.10.1
@@ -14,8 +14,7 @@ BUILDLINK_DEPENDS.gnustep-base=	gnustep-base>1.10.1
 
 PTHREAD_LIBS=		-lpthread
 
-CONFIGURE_DIRS=		${WRKDIR}/${DISTNAME}
-WRKSRC=			${CONFIGURE_DIRS}/SSL
+BUILD_DIRS=		SSL
 MAKEFILE=		GNUmakefile
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -23,12 +22,10 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 
-pre-configure:
-.for pfile in configure ../base.make.in
-	${CP} ${WRKSRC}/${pfile} ${WRKSRC}/${pfile}.tmpl
-	${SED} 's|@PTHREAD_LIBS@|${PTHREAD_LIBS}|g'			\
-		<${WRKSRC}/${pfile}.tmpl >${WRKSRC}/${pfile}
-.endfor
+SUBST_CLASSES+=		gsssl
+SUBST_STAGE.gsssl=	pre-configure
+SUBST_FILES.gsssl=	SSL/configure base.make.in
+SUBST_SED.gsssl=	-e 's|@PTHREAD_LIBS@|${PTHREAD_LIBS}|g'
 
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
