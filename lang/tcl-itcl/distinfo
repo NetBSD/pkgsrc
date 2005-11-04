@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/10/26 04:22:38 minskim Exp $
+$NetBSD: distinfo,v 1.7 2005/11/04 16:35:58 minskim Exp $
 
 SHA1 (itcl3.2.1_src.tgz) = 890f56e61826a9c3522fb24bf3c08f73cea8a1dd
 RMD160 (itcl3.2.1_src.tgz) = 6a6bbc5596e3c7b8bfd6783533d26d07b1c3a7c1
@@ -10,4 +10,4 @@ SHA1 (patch-ad) = 9131b2aa318410100f5477a70a7ce5221133f49b
 SHA1 (patch-ae) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-af) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-ag) = 3d12b3a2cf0cd35c39f622cf8f9b4872772c12c6
-SHA1 (patch-ah) = cb47b46d9762d29bbc5b7ba5ae7d3889cd1a0327
+SHA1 (patch-ah) = 759946f4f066b5e6d41a4120c983b1a169dff3df
