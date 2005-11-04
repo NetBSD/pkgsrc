@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/04 08:18:43 rillig Exp $
+
+SHA1 (R/sgeostat_1.0-19.tar.gz) = 70d8068206b21b2ffd794fd1022c29c94da00cf2
+RMD160 (R/sgeostat_1.0-19.tar.gz) = 34bdb3fb7d3c76f00fd4ade00b8f7862f6106578
+Size (R/sgeostat_1.0-19.tar.gz) = 93792 bytes
