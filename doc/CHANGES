@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11829 2005/11/04 20:43:14 rillig Exp $
+$NetBSD: CHANGES,v 1.11830 2005/11/04 21:05:15 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5080,3 +5080,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/exiftool to 5.67 [gdt 2005-11-04]
 	Updated net/bind8 to 8.4.6nb1 [rillig 2005-11-04]
 	Updated pkgtools/pkglint to 4.37 [rillig 2005-11-04]
+	Added math/R-VR-7.2.4 version rillig [2005-11-04 ]
