@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.65 2005/11/05 16:36:16 rillig Exp $
+# $NetBSD: build,v 1.66 2005/11/05 21:38:34 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -35,46 +35,47 @@
 #
 
 usage() {
-	echo "Usage:"
-	echo "   $0 [-m | --mirror_only] [-r | --restart | restart]"
-	echo "         [-s | --specific-pkgs] [-c|--config <fname>]"
-	echo "   $0 -h|--help"
-	echo ""
-	echo "Runs a bulk pkgsrc build."
-	echo ""
-	echo "The following options are supported:"
-	echo ""
-	echo " -h|--help             Displays this message."
-	echo ""
-	echo " -m|--mirror_only      Downloads all distfiles need for the"
-	echo "                       build but does not run the build."
-	echo "                       IMPORTANT:  Note that this will still"
-	echo "                       run all the pre-build stuff which involves"
-	echo "                       removing all of your installed packages."
-	echo ""
-	echo "                       The only difference between this option"
-	echo "                       and a regular bulk build is that the packages"
-	echo "                       are not actually built."
-	echo ""
-	echo " -r|--restart|restart  Restart a previously interrupted bulk build."
-	echo " --resume              last form of this option is for backwards"
-	echo "                       compatibility and may be removed in future"
-	echo "                       versions of this script."
-	echo ""
-	echo "                       The --restart option may be combined with the"
-	echo "                       --mirror_only option."
-	echo ""
-	echo " -s|--specific-pkgs    Sets SPECIFIC_PKGS=1 when building packages."
-	echo "                       This option is used for building a subset of"
-	echo "                       pkgsrc."
-	echo ""
-	echo " -e|--no-email         Don't send email when the bulk build is"
-	echo "                       finished, it will put the results into a file"
-	echo "                       (FTP/pkgsrc-results.txt)."
-	echo ""
-	echo " -c|--config <file>    Load the following configuration file instead"
-	echo "                       of the default one."
-	echo ""
+	cat <<EOF
+usage: $0 [options]
+       $0 -h | --help
+
+Runs a bulk pkgsrc build.
+
+The following options are supported:
+
+   -c | --config <file>
+        Load the following configuration file instead of the default
+	one.
+
+   -e | --no-email
+        Don't send email when the bulk build is finished, it will put
+        the results into a file (FTP/pkgsrc-results.txt).
+
+   -h | --help
+        Displays this message.
+
+   -m | --mirror_only
+        Downloads all distfiles needed for the build but does not run
+	the build.  IMPORTANT:  Note that this will still run all the
+        pre-build stuff which involves removing all of your installed
+        packages.
+
+        The only difference between this option and a regular bulk build
+	is that the packages are not actually built.
+
+   -r | --restart | --resume | restart
+        Restart a previously interrupted bulk build.  The last form of
+        this option is for backwards compatibility and may be removed in
+	future versions of this script.
+
+        The --restart option may be combined with the --mirror_only
+        option.
+
+   -s | --specific-pkgs
+        Sets SPECIFIC_PKGS=1 when building packages.  This option is
+        used for building a subset of pkgsrc.
+
+EOF
 }
 
 die() {
@@ -212,7 +213,7 @@ pkg_install_dir="${USR_PKGSRC}/pkgtools/pkg_install"
 pkglint_dir="${USR_PKGSRC}/pkgtools/pkglint"
 
 #
-# Set up variables specifically for the bulk build.
+# Set up variables specific for the bulk build.
 #
 BATCH="1"
 DEPENDS_TARGET="bulk-install"
