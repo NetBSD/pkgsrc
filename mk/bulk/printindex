@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.16 2005/05/03 16:34:02 jlam Exp $
+# $NetBSD: printindex,v 1.17 2005/11/05 14:01:07 rillig Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -48,74 +48,63 @@
 # Start in $USR_PKGSRC.
 #
 
-if [ ! -z "$1" ]; then
-	brokenfile=$1
-else
-	brokenfile=/dev/null
-fi
+set -e
+
+case $# in
+0)	brokenfile="/dev/null"
+	;;
+1)	brokenfile="$1"
+	;;
+*)	echo "usage: $0 [brokenfile]" 1>&2
+	exit 1
+	;;
+esac
+
+case ${BMAKE-""} in "")
+	echo "$0: error: BMAKE must be set." 1>&2
+	exit 1;;
+esac
 
 # $USR_PKGSRC
-cwd=$PWD
+cwd="${PWD}"
 
 # get some initial variables
-cd $cwd/pkgtools/pkglint
+cd "${cwd}/pkgtools/pkglint"
+BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ`
 GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep`
 SED=`${BMAKE} show-var VARNAME=SED USE_TOOLS=sed`
-cd $cwd
+cd "${cwd}"
 
-if [ -r ${cwd}/.pkglist ]; then
-	. ${cwd}/.pkglist
+if [ -r "${cwd}/.pkglist" ]; then
+	. "${cwd}/.pkglist"
 else
 	# fall back to all packages.
 	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
 fi
 
-for pkgdir in $list
-do
-	if [ ! -d $pkgdir ]; then
-		echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr
-		echo $pkgdir | ${SED} 's;/.*;/Makefile;g' > /dev/stderr
-		echo "but the directory does not exist.  Please fix this!" > /dev/stderr
-	else
-		cd $pkgdir
-		pkgname=`${BMAKE} show-var VARNAME=PKGNAME`
-		if [ $? != 0 ]; then
-			echo "ERROR: printindex could not extract PKGNAME for $pkgdir" > /dev/stderr
-			echo "${BMAKE} show-var VARNAME=PKGNAME failed" > $brokenfile
-			${BMAKE} show-var VARNAME=PKGNAME >> $brokenfile 2>&1
-			#exit 1
-		fi
-		echo "$pkgdir          $pkgname "
-	fi
-	cd $cwd
-done
+done_pkgs=""
+detect_duplicates=no
+for pkgdir in $list :detect_duplicates: $BULK_PREREQ; do
 
-# Get the list of packages which should always be installed during the build.
-# Make sure these ended up in the index file.  For example, xpkgwedge, might
-# not be enabled for builds in pkgtools/xpkgwedge, but we may want to have
-# it listed in the index file.
-
-cd $cwd/pkgtools/pkglint && BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ`
-cd $cwd
-
-for pkgdir in $BULK_PREREQ
-do
-	case $list in
-		*$pkgdir*)
-			# its already listed, do nothing
-			;;
-		*)
-			cd $cwd/$pkgdir
-			pkgname=`${BMAKE} show-var VARNAME=PKGNAME`
-			if [ $? != 0 ]; then
-				echo "ERROR: printindex could not extract PKNAME for $pkgdir" > /dev/stderr
-				echo "${BMAKE} show-var VARNAME=PKGNAME failed" > $brokenfile
-				${BMAKE} show-var VARNAME=PKGNAME >> $brokenfile 2>&1
-				#exit 1
-			fi
-			echo "$pkgdir          $pkgname "
-			cd $cwd
-			;;
+	case $pkgdir in :detect_duplicates:)
+		detect_duplicates=yes
+		continue;;
 	esac
+	case $detect_duplicates in yes)
+		case $done_pkgs in *=${pkgdir}=*)
+			continue;;
+		esac;;
+	esac
+	
+	if cd "${cwd}/${pkgdir}"; then
+		if pkgname=`${BMAKE} show-var VARNAME=PKGNAME`; then
+			echo "${pkgdir}	${pkgname}"
+			done_pkgs="${done_pkgs} =${pkgdir}="
+		else
+			echo "$0: error: could not extract PKGNAME for ${pkgdir} -- skipping." 1>&2
+			{ echo "===> ${BMAKE} show-var VARNAME=PKGNAME failed"
+			  cd "${cwd}/${pkgdir}" && ${BMAKE} show-var VARNAME=PKGNAME || true
+			} >> "${brokenfile}" 2>&1
+		fi
+	fi
 done
-
