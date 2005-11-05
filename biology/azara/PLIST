@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/05 01:47:41 minskim Exp $
+bin/azara
+bin/bin2asc
+bin/combine
+bin/connect
+bin/contours
+bin/deflate
+bin/extract
+bin/float2int
+bin/int2float
+bin/look_at
+bin/look_byte
+bin/look_for
+bin/mat2par
+bin/par2mat
+bin/peak_find
+bin/peak_fit
+bin/plot1
+bin/plot2
+bin/process
+bin/project
+bin/reflate
+bin/slides
+bin/swap
+bin/unblock
+bin/viewer
