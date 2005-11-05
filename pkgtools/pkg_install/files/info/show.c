@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.8 2005/05/30 13:23:32 wiz Exp $	*/
+/*	$NetBSD: show.c,v 1.9 2005/11/05 13:20:09 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: show.c,v 1.11 1997/10/08 07:47:38 charnier Exp";
 #else
-__RCSID("$NetBSD: show.c,v 1.8 2005/05/30 13:23:32 wiz Exp $");
+__RCSID("$NetBSD: show.c,v 1.9 2005/11/05 13:20:09 wiz Exp $");
 #endif
 #endif
 
@@ -107,7 +107,7 @@ static const show_t showv[] = {
 };
 
 void
-show_file(char *pkg, char *title, char *fname)
+show_file(char *pkg, char *title, char *fname, Boolean separator)
 {
 	FILE   *fp;
 	char    line[1024];
@@ -128,49 +128,20 @@ show_file(char *pkg, char *title, char *fname)
 		if (append_nl)
 			printf("\n");
 	}
-	printf("\n");		/* just in case */
+	if (!Quiet || separator) {
+		printf("\n");		/* just in case */
+	}
 }
 
 void
 show_var(const char *fname, const char *variable)
 {
-	FILE   *fp;
-	char   *line;
-	size_t  len;
-	size_t  varlen;
+	char   *value;
 
-	fp = fopen(fname, "r");
-	if (!fp) {
-		warnx("show_var: can't open '%s' for reading", fname);
-		return;
+	if ((value=var_get(fname, variable)) != NULL) {
+	    (void) printf("%s\n", value);
+	    free(value);
 	}
-
-	varlen = strlen(variable);
-	if (varlen > 0) {
-		while ((line = fgetln(fp, &len)) != (char *) NULL) {
-			/*
-			 * We expect lines to look like one of the following
-			 * forms:
-			 *      VAR=value
-			 *      VAR= value
-			 * We print out the value of VAR, or nothing if it
-			 * doesn't exist.
-			 */
-			if (line[len - 1] == '\n')
-				line[len - 1] = '\0';
-			if (strncmp(variable, line, varlen) == 0) {
-				line += varlen;
-				if (*line != '=')
-					continue;
-				++line;
-				if (*line == ' ')
-					++line;
-				(void) printf("%s\n", line);
-			}
-		}
-	}
-	(void) fclose(fp);
-	return;
 }
 
 void
