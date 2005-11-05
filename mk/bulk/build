@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.60 2005/11/05 08:34:10 rillig Exp $
+# $NetBSD: build,v 1.61 2005/11/05 14:23:30 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -39,39 +39,39 @@ usage() {
 	echo "   $0 [-m | --mirror_only] [-r | --restart | restart]"
 	echo "         [-s | --specific-pkgs] [-c|--config <fname>]"
 	echo "   $0 -h|--help"
-	echo " "
+	echo ""
 	echo "Runs a bulk pkgsrc build."
-	echo " "
+	echo ""
 	echo "The following options are supported:"
-	echo " "
+	echo ""
 	echo " -h|--help             Displays this message."
-	echo " "
+	echo ""
 	echo " -m|--mirror_only      Downloads all distfiles need for the"
 	echo "                       build but does not run the build."
 	echo "                       IMPORTANT:  Note that this will still"
 	echo "                       run all the pre-build stuff which involves"
 	echo "                       removing all of your installed packages."
-	echo " "
+	echo ""
 	echo "                       The only difference between this option"
 	echo "                       and a regular bulk build is that the packages"
 	echo "                       are not actually built."
-	echo " "
+	echo ""
 	echo " -r|--restart|restart  Restart a previously interrupted bulk build."
 	echo "                       last form of this option is for backwards"
 	echo "                       compatibility and may be removed in future"
 	echo "                       versions of this script."
-	echo " "
+	echo ""
 	echo "                       The --restart option may be combined with the"
 	echo "                       --mirror_only option."
-	echo " "
+	echo ""
 	echo " -s|--specific-pkgs    Sets SPECIFIC_PKGS=1 when building packages."
 	echo "                       This option is used for building a subset of"
 	echo "                       pkgsrc."
-	echo " "
+	echo ""
 	echo " -e|--no-email         Don't send email when the bulk build is"
 	echo "                       finished, it will put the results into a file"
 	echo "                       (FTP/pkgsrc-results.txt)."
-	echo " "
+	echo ""
 	echo " -c|--config <file>    Load the following configuration file instead"
 	echo "                       of the default one."
 	echo ""
@@ -118,8 +118,8 @@ while [ ${#} -ge 1 ] ; do
 		;;
 
 	-* )
-		echo "unknown option:  $1"
-		usage
+		echo "unknown option:  $1" 1>&2
+		usage 1>&2
 		exit 1
 		;;
 
@@ -140,7 +140,6 @@ case "$opsys" in
 NetBSD)	BMAKE=make ;;
 *)	BMAKE=bmake ;;
 esac
-
 export BMAKE
 
 # Set resource limits as high as possible
@@ -148,7 +147,7 @@ ulimit -S -s `ulimit -H -s`
 ulimit -S -d `ulimit -H -d`
 
 
-echo Bulk build started: `date`
+echo "Bulk build started: `date`"
 echo ""
 
 # Pull in ADMIN etc.:
@@ -186,24 +185,29 @@ unset CDPATH		# ensure cd does not print new cwd to stdout, which
 unset DISPLAY		# allow sane failure for gimp, xlispstat
 
 # Check that the pkg_tools are up to date
-(cd ${USR_PKGSRC}/pkgtools/pkglint && 					\
-	${BMAKE} fetch >/dev/null 2>&1 ) ||				\
-	( echo "Updating pkgtools" && 					\
-	  cd ${USR_PKGSRC}/pkgtools/pkg_install && ${BMAKE} clean &&	\
-		${BMAKE} install && ${BMAKE} clean )
+(
+	cd ${USR_PKGSRC}/pkgtools/pkglint \
+	&& ${BMAKE} fetch >/dev/null 2>&1
+) || (
+	echo "Updating pkgtools" \
+	&& cd ${USR_PKGSRC}/pkgtools/pkg_install \
+	&& ${BMAKE} clean \
+	&& ${BMAKE} install \
+	&& ${BMAKE} clean
+)
 
 cd ${USR_PKGSRC}
 
 
 if [ "x$restart" = "xyes" ]; then
-	echo Restarting - skipping pre-build script
+	echo "Restarting - skipping pre-build script"
 else
-	sh mk/bulk/pre-build	# make veryveryclean :)
-	if [ $? != 0 ]
-	then
-		echo "Error during bulk-build preparations, aborting."
+	# make veryveryclean :)
+	sh mk/bulk/pre-build \
+	|| {
+		echo "Error during bulk-build preparations, aborting." 1>&2
 		exit 1
-	fi
+	}
 fi
 
 fail=no
@@ -229,14 +233,14 @@ if [ -d pkgtools/pkglint ]; then
 	OS_VERSION=`${BMAKE} show-var VARNAME=OS_VERSION` || fail=yes
 	PKG_TOOLS_BIN=`${BMAKE} show-var VARNAME=PKG_TOOLS_BIN` || fail=yes
 else
-	echo "The pkgtools/pkglint directory does not exist.  Please update"
-	echo "your pkgsrc tree in ${USR_PKGSRC}"
+	echo "The pkgtools/pkglint directory does not exist." 1>&2
+	echo "Please update your pkgsrc tree in ${USR_PKGSRC}." 1>&2
 	exit 1
 fi
 
-echo "----------------------------------"
-echo "| Build Temporary Files:         |"
-echo "----------------------------------"
+echo "+----------------------------------------+"
+echo "| Some variables used in the bulk build: |"
+echo "+----------------------------------------+"
 echo "BULK_DBFILE     = $BULK_DBFILE"
 echo "DEPENDSTREEFILE = $DEPENDSTREEFILE"
 echo "DEPENDSFILE     = $DEPENDSFILE"
@@ -256,7 +260,7 @@ echo "MACHINE_ARCH    = $MACHINE_ARCH"
 echo "OPSYS           = $OPSYS"
 echo "OS_VERSION      = $OS_VERSION"
 echo "PKG_TOOLS_BIN   = $PKG_TOOLS_BIN"
-echo "----------------------------------"
+echo "------------------------------------------"
 
 # make sure we have values for these very important
 # variables
@@ -281,13 +285,11 @@ if [ $fail = "yes" -o \
 	-z "$PKG_TOOLS_BIN" -o \
 	-z "$OS_VERSION" \
 	]; then
-	echo "ERROR:  build failed to extract certain key variables."
-	echo "        please examine the above list and correct the"
-	echo "        problem."
+	echo "ERROR:  build failed to extract certain key variables." 1>&2
+	echo "        please examine the above list and correct the" 1>&2
+	echo "        problem." 1>&2
 	exit 1
 fi
-
-cd ${USR_PKGSRC}	
 
 # get the list of packages which should always be installed during the build
 cd ${USR_PKGSRC}/pkgtools/pkglint
@@ -309,7 +311,7 @@ cd ${USR_PKGSRC}
 if [ "x$restart" != "xyes" ]; then
 	cd ${USR_PKGSRC} && ${BMAKE} bulk-cache $makeargs
 	if [ $? != 0 ]; then
-		echo "$0: Cache creation failed.  Aborting build."
+		echo "$0: Cache creation failed.  Aborting build." 1>&2
 		exit 1
 	fi
 fi
@@ -407,4 +409,4 @@ fi
 
 # Done!
 echo ""
-echo Bulk build ended: `date`
+echo "Bulk build ended: `date`"
