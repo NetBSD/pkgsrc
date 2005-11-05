@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1745 2005/11/05 09:37:10 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1746 2005/11/05 13:31:43 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -167,7 +167,7 @@ _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
 
 # Latest versions of tools required for correct pkgsrc operation.
 DIGEST_REQD=		20010302
-PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20050204}
+PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20051103}
 
 PKG_DB_TMPDIR=		${WRKDIR}/.pkgdb
 DDIR=			${WRKDIR}/.DDIR
@@ -3498,6 +3498,9 @@ BIN_INSTALL_FLAGS?= 	# -v
 PKG_ARGS_ADD=		-W ${LOCALBASE} -w ${DEFAULT_VIEW}
 .endif
 _BIN_INSTALL_FLAGS=	${BIN_INSTALL_FLAGS}
+.if defined(_AUTOMATIC) && !empty(_AUTOMATIC:Myes)
+_BIN_INSTALL_FLAGS+=	-a
+.endif
 _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 
 # Install binary pkg, without strict uptodate-check first
@@ -3670,7 +3673,7 @@ install-depends: pre-install-depends
 			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
 		else							\
 			cd $$dir ;					\
-			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD=\'$$pkg\' ${MAKE} ${MAKEFLAGS} $$target || exit 1; \
+			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD=\'$$pkg\' ${MAKE} ${MAKEFLAGS} _AUTOMATIC=YES $$target || exit 1; \
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
@@ -4410,6 +4413,9 @@ register-pkg: post-install-fake-pkg
 		esac;							\
 		${MKDIR} ${_PKG_DBDIR}/${PKGNAME};			\
 		${CP} ${PKG_DB_TMPDIR}/+* ${_PKG_DBDIR}/${PKGNAME};	\
+		if [ "${_AUTOMATIC}" = "YES" ]; then			\
+			${PKG_ADMIN} set automatic=yes ${PKGNAME};	\
+		fi;							\
 		;;							\
 	esac
 .  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && \
