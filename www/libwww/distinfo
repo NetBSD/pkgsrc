@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2005/05/31 20:51:46 salo Exp $
+$NetBSD: distinfo,v 1.20.4.1 2005/11/05 17:25:26 snj Exp $
 
 SHA1 (w3c-libwww-5.4.0.tgz) = 2394cb4e0dc4e2313a9a0ddbf508e4b726e9af63
 RMD160 (w3c-libwww-5.4.0.tgz) = 12e55ecb2435f9048d627e56f8ae60d4c246648b
@@ -19,3 +19,4 @@ SHA1 (patch-al) = dae1e731f7a9ff36ef1f60f2a4a6cc97e359ae63
 SHA1 (patch-am) = 8252ce567efc056daa10af39eeca314f9a915f90
 SHA1 (patch-an) = e7195c25ce08e13e0c8b64b05b737e9a5f5157a8
 SHA1 (patch-ao) = fa5c98f6c4e873f816e5a5bc48481d1462c946dc
+SHA1 (patch-ap) = 506ee8ddd2e627aa6ba84b933ca39a6934b95689
