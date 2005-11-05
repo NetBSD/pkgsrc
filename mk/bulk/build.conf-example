@@ -1,4 +1,4 @@
-# $NetBSD: build.conf-example,v 1.29 2005/11/05 20:54:38 rillig Exp $
+# $NetBSD: build.conf-example,v 1.30 2005/11/05 23:22:05 rillig Exp $
 #
 # This is an example configuration file for pkgsrc bulk builds.
 # Actually it's a shell script that is sourced in by the pre-build,
@@ -17,6 +17,10 @@ arch=`uname -m`
 
 # Where our pkgsrc is located
 USR_PKGSRC="/usr/pkgsrc"
+
+# An absolute pathname to your mk.conf file.
+# The file must be outside ${PREFIX}, or it will be overwritten.
+#MAKECONF="$HOME/etc/mk.conf"
 
 
 #

@@ -1,0 +1,53 @@
+# $NetBSD: post-build-conf,v 1.1 2005/11/05 23:22:05 rillig Exp $
+#
+
+# This file is included after the build.conf file by the "build" and
+# "pre-build" scripts. It provides two functions for printing and
+# exporting the configuration variables.
+
+# usage: show_variable varname
+show_variable() {
+	eval "fnv_isset=\${$1+set}"
+	case $fnv_isset in
+	"set")	eval "fnv_val=\${$1-}"
+		printf "   %-25s = %s\\n" "$1" "${fnv_val}"
+		;;
+	*)	printf "   %-25s (undefined)\\n" "$1"
+		;;
+	esac
+}
+
+# usage: section title varname...
+section() {
+	printf "%s\\n" "$1"
+	shift
+	for i in "$@"; do
+		show_variable "$i"
+	done
+	printf "\\n"
+}
+
+# usage: show_config_vars
+show_config_vars() {
+	section "System information" \
+		osrev arch BULK_BUILD_CONF USR_PKGSRC MAKECONF
+	section "Keeping pkgsrc up-to-date" \
+		CVS_USER CVS_FLAGS
+	section "Getting distfiles" \
+		PRUNEDISTFILES ftp_proxy http_proxy
+	section "Building packages" \
+		PKGLIST NICE_LEVEL ADMIN ADMINSIG
+	section "Uploading binary packages" \
+		UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS \
+		RSYNC_DST RSYNC_OPTS FTPHOST FTP
+}
+
+# usage: export_config_vars
+export_config_vars() {
+	export osrev arch BULK_BUILD_CONF USR_PKGSRC MAKECONF
+	export CVS_USER CVS_FLAGS
+	export PRUNEDISTFILES ftp_proxy http_proxy
+	export PKGLIST NICE_LEVEL ADMIN ADMINSIG
+	export UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS
+	export RSYNC_DST RSYNC_OPTS FTPHOST FTP
+}
