@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11833 2005/11/05 02:00:28 minskim Exp $
+$NetBSD: CHANGES,v 1.11834 2005/11/05 03:21:35 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5084,3 +5084,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/kaffe to 1.1.6nb1 [tonio 2005-11-04]
 	Added biology/azara version 2.7 [minskim 2005-11-05]
 	Added www/py-nevow version 0.3 [minskim 2005-11-05]
+	Added sysutils/cvsreport-0.3.5 version rillig [2005-11-05 ]
