@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.61 2005/11/05 15:28:30 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.62 2005/11/05 15:49:50 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -135,3 +135,5 @@ Pullup ticket 894 - requested by Adrian Portelli
 security update for mantis
 Pullup ticket 864 - requested by Min Sik Kim
 sync audio/festival with HEAD, potential build problem and PLIST fix
+Pullup ticket 895 - requested by Adrian Portelli
+security fix for python21
