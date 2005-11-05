@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.5.10.1 2005/11/05 14:03:41 salo Exp $
+
+--- lib/gifalloc.c.orig	2004-05-29 19:59:59.000000000 +0100
++++ lib/gifalloc.c
+@@ -420,8 +420,10 @@ FreeSavedImages(GifFileType * GifFile) {
+     }
+     for (sp = GifFile->SavedImages;
+          sp < GifFile->SavedImages + GifFile->ImageCount; sp++) {
+-        if (sp->ImageDesc.ColorMap)
++      if (sp->ImageDesc.ColorMap) {
+             FreeMapObject(sp->ImageDesc.ColorMap);
++	    sp->ImageDesc.ColorMap = NULL;
++      }
+ 
+         if (sp->RasterBits)
+             free((char *)sp->RasterBits);

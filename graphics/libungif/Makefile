@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2005/04/11 21:46:06 tv Exp $
+# $NetBSD: Makefile,v 1.34.4.1 2005/11/05 14:03:41 salo Exp $
 
 DISTNAME=	libungif-4.1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libungif/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,7 +27,7 @@ HTMLDIR=		${PREFIX}/share/doc/html/libungif
 REPLACE_PERL=		util/gifburst
 
 post-patch:
-	${RM} ${WRKSRC}/doc/gif2x11.html
+	@${RM} ${WRKSRC}/doc/gif2x11.html
 
 post-install:
 	cd ${PREFIX}/lib && 						\
