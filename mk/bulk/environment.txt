@@ -1,4 +1,4 @@
-# $NetBSD: environment.txt,v 1.1 2005/11/05 01:57:01 rillig Exp $
+# $NetBSD: environment.txt,v 1.2 2005/11/05 02:12:56 rillig Exp $
 #
 
 ===> Environment variables used by the bulk build scripts
@@ -63,7 +63,7 @@ which they are used.
 	BROKENFILE
 	BROKENWRKLOG
 	BUILDLOG
-	LINPKGSRC_DB
+	LINTPKGSRC_DB
 	STARTFILE
 	LOCALBASE
 	X11BASE
