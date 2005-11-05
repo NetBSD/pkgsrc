@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/14 17:56:41 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2005/11/05 17:15:52 rillig Exp $
 
 DISTNAME=		xgalaga-2.0.34
 PKGREVISION=		2
@@ -16,8 +16,6 @@ CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
 SETGIDGAME=		yes
 MAKE_ENV+=		GAMEOWN=${GAMEOWN} GAMEGRP=${GAMEGRP} \
 			GAMEMODE=${GAMEMODE} GAMEDATAMODE=${GAMEDATAMODE}
-
-WRKSRC=			${WRKDIR}/${PKGNAME:C,nb${PKGREVISION},,}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/xgalaga/README
