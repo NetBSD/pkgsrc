@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2005/10/07 21:37:15 perry Exp $
+# $NetBSD: Makefile,v 1.26 2005/11/05 01:49:34 minskim Exp $
 #
 
 COMMENT=	Software for the biological sciences
 
 SUBDIR+=	arka
+SUBDIR+=	azara
 SUBDIR+=	bioperl
 SUBDIR+=	chemtool
 SUBDIR+=	clustalw
