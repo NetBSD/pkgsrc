@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11837 2005/11/05 13:30:52 wiz Exp $
+$NetBSD: CHANGES,v 1.11838 2005/11/05 13:34:55 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5087,3 +5087,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sysutils/cvsreport version 0.3.5 [rillig 2005-11-05]
 	Updatex x11/xlockmore to 5.20.1 [hubertf 2005-11-05]
 	Updated pkgtools/pkg_install to 20051103 [wiz 2005-11-05]
+	Updated graphics/libungif to 4.1.3nb3 [adrianp 2005-11-05]
