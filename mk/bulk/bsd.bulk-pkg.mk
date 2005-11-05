@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.89 2005/11/05 15:02:28 kristerw Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.90 2005/11/05 16:58:34 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -278,7 +278,7 @@ bulk-package:
 	fi \
 	) 2>&1 | ${TEE} -a ${BUILDLOG}
 	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
-	if ${PKG_INFO} -qe "${PKGNAME:C/-[^-]*$/-[0-9]*/}" ; then \
+	if ${PKG_INFO} -qe ${PKGWILDCARD:Q} ; then \
 		installed=1; \
 	else \
 		installed=0; \
@@ -295,9 +295,9 @@ bulk-package:
 			${ECHO_MSG} "BULK> Removing outdated (installed) package ${PKGNAME} first." ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
 			${DO}       ${MAKE} deinstall ; \
-			if ${PKG_INFO} -qe ${PKGWILDCARD} ; then \
-				${ECHO_MSG} ${PKG_DELETE} -r ${PKGWILDCARD} ;\
-				${DO} ${PKG_DELETE} -r ${PKGWILDCARD} ;\
+			if ${PKG_INFO} -qe ${PKGWILDCARD:Q} ; then \
+				${ECHO_MSG} ${PKG_DELETE} -r ${PKGWILDCARD:Q} ;\
+				${DO} ${PKG_DELETE} -r ${PKGWILDCARD:Q} ;\
 			fi ;\
 		fi ; \
 		if [ -f ${PKGFILE} ]; then \
