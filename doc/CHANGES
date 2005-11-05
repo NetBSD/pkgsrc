@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11838 2005/11/05 13:34:55 adrianp Exp $
+$NetBSD: CHANGES,v 1.11839 2005/11/05 20:14:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5088,3 +5088,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updatex x11/xlockmore to 5.20.1 [hubertf 2005-11-05]
 	Updated pkgtools/pkg_install to 20051103 [wiz 2005-11-05]
 	Updated graphics/libungif to 4.1.3nb3 [adrianp 2005-11-05]
+	Updated lang/ruby-doc-stdlib to 0.10.1 [minskim 2005-11-05]
