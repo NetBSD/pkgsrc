@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.64 2005/11/05 16:10:06 rillig Exp $
+# $NetBSD: build,v 1.65 2005/11/05 16:36:16 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -95,12 +95,18 @@ post_filter_cmd() {
 	${SED} "s;^;`date '+%Y/%m/%d %H:%M:%S'`  ${built}/${tot}=${percent} ${pkgdir} @ ${MACHINE_ARCH}> ;g"
 }
 
+#
+# Default values for command line options.
+#
 restart=no
 mirror_only=no
 target=bulk-package
 makeargs=""
 noemail=no
 
+#
+# Parse the command line.
+#
 while [ ${#} -ge 1 ] ; do
 	case $1 in
 
@@ -153,6 +159,9 @@ if [ $# -ne 0 ]; then
 	exit 1
 fi
 
+#
+# Choose an appropriate value for BMAKE depending on the operating system.
+#
 opsys=`uname -s`
 case "$opsys" in
 NetBSD)	BMAKE=make ;;
@@ -160,15 +169,21 @@ NetBSD)	BMAKE=make ;;
 esac
 export BMAKE
 
+#
 # Set resource limits as high as possible
+#
 ulimit -S -s `ulimit -H -s`
 ulimit -S -d `ulimit -H -d`
 
-
+#
+# It starts ...
+#
 echo "Bulk build started: `date`"
 echo ""
 
-# Pull in ADMIN etc.:
+#
+# Find the configuration file.
+#
 : ${BULK_BUILD_CONF:=`dirname $0`/build.conf}
 case $BULK_BUILD_CONF in
 /*) ;;
@@ -176,25 +191,31 @@ case $BULK_BUILD_CONF in
 esac
 export BULK_BUILD_CONF
 
+#
+# Load the variables from the configuration file.
+#
 if [ -f "${BULK_BUILD_CONF}" ]; then
 	. "${BULK_BUILD_CONF}"
 else
 	die	"Cannot find config file ${BULK_BUILD_CONF}, aborting."
 fi
 
+#
 # Check if a valid pkgsrc root directory is given.
+#
 case ${USR_PKGSRC-""} in
 /*)	;;
 *)	die	"USR_PKGSRC must be set to an absolute pathname.";;
 esac
 pkgsrc_dir="${USR_PKGSRC}"
-perl5_dir="${USR_PKGSRC}/lang/perl5"
 pkg_install_dir="${USR_PKGSRC}/pkgtools/pkg_install"
 pkglint_dir="${USR_PKGSRC}/pkgtools/pkglint"
 
-# set up variables specifically for the bulk build
-BATCH=1
-DEPENDS_TARGET=bulk-install
+#
+# Set up variables specifically for the bulk build.
+#
+BATCH="1"
+DEPENDS_TARGET="bulk-install"
 export BATCH DEPENDS_TARGET
 
 if [ "$http_proxy" != "" ]; then
@@ -207,11 +228,16 @@ if [ "$ftp_proxy" != "" ]; then
 fi
 echo ""
 
+#
+# Unset some environment variables that could disturbe the build.
+#
 unset CDPATH		# ensure cd does not print new cwd to stdout, which
 			# confuses the printindex script.
 unset DISPLAY		# allow sane failure for gimp, xlispstat
 
-# Check that the pkg_tools are up to date
+#
+# Check that the package tools are up to date.
+#
 ( cd "${pkglint_dir}" \
   && ${BMAKE} fetch >/dev/null 2>&1
 ) || {
@@ -223,6 +249,9 @@ unset DISPLAY		# allow sane failure for gimp, xlispstat
 	) || die "Could not update the package tools."
 }
 
+#
+# Run the pre-build script if necessary.
+#
 case $restart in
 yes)	echo "Resuming -- skipping pre-build script";;
 *)	# make veryveryclean :)
@@ -231,6 +260,9 @@ yes)	echo "Resuming -- skipping pre-build script";;
 	) || die "Error during bulk-build preparations, aborting.";;
 esac
 
+#
+# Load pkgsrc variables that affect the build process.
+#
 fail=no
 if cd "${pkglint_dir}"; then
 	BULK_DBFILE=`${BMAKE} show-var VARNAME=BULK_DBFILE` || fail=yes
@@ -311,8 +343,12 @@ if [ $fail = "yes" -o \
 		"Please examine the above list and correct the problem."
 fi
 
-# install prerequisite packages.  Note:  we do this _before_ the depends tree
-# because some packages like xpkgwedge only become DEPENDS if its installed
+#
+# Install prerequisite packages.
+#
+# Note: we do this _before_ the depends tree because some packages like
+# xpkgwedge only become DEPENDS if they are installed.
+#
 echo "Installing prerequisite packages specified with BULK_PREREQ..."
 for pkgdir in $BULK_PREREQ; do
 	echo "===> Installing prerequisite package $pkgdir"
@@ -321,24 +357,20 @@ for pkgdir in $BULK_PREREQ; do
 	) || die "Could not install prerequisite packages."
 done
 
-# Create the bulk cache files
+#
+# Create the bulk cache files.
+#
 if [ "x$restart" != "xyes" ]; then
 	( cd "${pkgsrc_dir}" \
 	  && ${BMAKE} bulk-cache $makeargs
 	) || die "Could not create the bulk build cache."
 fi
 
+#
+# Everything is prepared. We can start building the real packages now.
+#
 cd "${pkgsrc_dir}" || die "The pkgsrc directory does not exist."
-
 echo "Starting actual build using the order specified in $ORDERFILE..."
-
-# make sure we have something to grep in in the build loop
-touch "${BUILDLOG}"
-
-# set the nice level for bulk builds
-#case "${NICE_LEVEL}" in
-#"")	NICE_LEVEL="nice -n 20" ;;
-#esac
 
 # Loop over every package in the correct order.  Before building
 # each one, check to see if we've already processed this package
@@ -349,6 +381,9 @@ touch "${BUILDLOG}"
 # it to the top level buildlog
 # (usually '.make' or '.make.${MACHINE}').  As a side benefit, this
 # can make a progress-meter very simple to add!
+
+# make sure we have something to grep in in the build loop
+touch "${BUILDLOG}"
 
 tot=`wc -l $ORDERFILE | ${AWK} '{print $1}'`
 for pkgdir in `cat $ORDERFILE`
@@ -366,7 +401,6 @@ do
 done
 
 echo "Build finished.  Removing all installed packages left over from build..."
-
 for pkgname in `${PKG_TOOLS_BIN}/pkg_info -e \*`
 do
 	${PKG_TOOLS_BIN}/pkg_info -qe $pkgname
@@ -406,20 +440,29 @@ echo "Post processing bulk build results..."
 # Re-install BULK_PREREQ as we may need functionality (e.g. SMTP) provided by
 # them for post-build to run.
 echo "Re-installing prerequisite packages specified with BULK_PREREQ..."
-for pkgdir in $BULK_PREREQ
+for pkgdir in $BULK_PREREQ lang/perl5
 do
-	echo $pkgdir
-	( cd "${pkgsrc_dir}/${pkgdir}" && ${BMAKE} bulk-install )
+	echo "===> Installing prerequisite package $pkgdir"
+	( cd "${pkgsrc_dir}/${pkgdir}" \
+	  && ${BMAKE} bulk-install
+	) || die "Failed to install prerequisite packages."
 done
 
-# Perl was wiped, reinstall it!
-( cd "${perl5_dir}" && ${BMAKE} bulk-install )
+#
+# Generate the post-build report.
+#
 BUILDDATE=`date +%Y-%m-%d`
-mkdir -p ${FTP}
-${PERL5} mk/bulk/post-build > ${FTP}/pkgsrc-results-${BUILDDATE}.txt
-if [ "$noemail" = "no" ]; then
-${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" $ADMIN < ${FTP}/pkgsrc-results-${BUILDDATE}.txt
-fi
+mkdir -p "${FTP}"
+${PERL5} mk/bulk/post-build \
+> ${FTP}/pkgsrc-results-${BUILDDATE}.txt
+
+#
+# Notify the ADMIN of the finished build.
+#
+case $noemail in no)
+	cat ${FTP}/pkgsrc-results-${BUILDDATE}.txt \
+	| ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" $ADMIN
+esac
 
 # Done!
 echo ""
