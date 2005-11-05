@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.2.2 2005/11/05 14:03:41 salo Exp $
+
+--- lib/egif_lib.c.orig	2004-05-29 22:53:36.000000000 +0100
++++ lib/egif_lib.c
+@@ -712,10 +712,14 @@ EGifCloseFile(GifFileType * GifFile) {
+     Buf = ';';
+     WRITE(GifFile, &Buf, 1);
+ 
+-    if (GifFile->Image.ColorMap)
++    if (GifFile->Image.ColorMap) {
+         FreeMapObject(GifFile->Image.ColorMap);
+-    if (GifFile->SColorMap)
++	GifFile->Image.ColorMap = NULL;
++    }
++    if (GifFile->SColorMap) {
+         FreeMapObject(GifFile->SColorMap);
++	GifFile->SColorMap = NULL;
++    }
+     if (Private) {
+         free((char *)Private);
+     }

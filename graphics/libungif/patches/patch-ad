@@ -1,0 +1,63 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/11/05 14:03:41 salo Exp $
+
+--- lib/dgif_lib.c.orig	2004-05-29 19:59:59.000000000 +0100
++++ lib/dgif_lib.c
+@@ -263,6 +263,7 @@ DGifGetScreenDesc(GifFileType * GifFile)
+         for (i = 0; i < GifFile->SColorMap->ColorCount; i++) {
+             if (READ(GifFile, Buf, 3) != 3) {
+                 FreeMapObject(GifFile->SColorMap);
++		GifFile->SColorMap = NULL;
+                 _GifError = D_GIF_ERR_READ_FAILED;
+                 return GIF_ERROR;
+             }
+@@ -363,6 +364,7 @@ DGifGetImageDesc(GifFileType * GifFile) 
+         for (i = 0; i < GifFile->Image.ColorMap->ColorCount; i++) {
+             if (READ(GifFile, Buf, 3) != 3) {
+                 FreeMapObject(GifFile->Image.ColorMap);
++		GifFile->Image.ColorMap = NULL;
+                 _GifError = D_GIF_ERR_READ_FAILED;
+                 return GIF_ERROR;
+             }
+@@ -923,6 +925,12 @@ DGifDecompressInput(GifFileType * GifFil
+         0x0fff
+     };
+ 
++    /* The image can't contain more than LZ_BITS per code. */
++    if (Private->RunningBits > LZ_BITS) {
++        _GifError = D_GIF_ERR_IMAGE_DEFECT;
++        return GIF_ERROR;
++    }    
++
+     while (Private->CrntShiftState < Private->RunningBits) {
+         /* Needs to get more bytes from input stream for next code: */
+         if (DGifBufferedInput(GifFile, Private->Buf, &NextByte) == GIF_ERROR) {
+@@ -938,8 +946,12 @@ DGifDecompressInput(GifFileType * GifFil
+     Private->CrntShiftState -= Private->RunningBits;
+ 
+     /* If code cannot fit into RunningBits bits, must raise its size. Note
+-     * however that codes above 4095 are used for special signaling.  */
+-    if (++Private->RunningCode > Private->MaxCode1 &&
++     * however that codes above 4095 are used for special signaling.
++     * If we're using LZ_BITS bits already and we're at the max code, just
++     * keep using the table as it is, don't increment Private->RunningCode.
++     */
++    if (Private->RunningCode < LZ_MAX_CODE + 2 &&
++	++Private->RunningCode > Private->MaxCode1 &&
+         Private->RunningBits < LZ_BITS) {
+         Private->MaxCode1 <<= 1;
+         Private->RunningBits++;
+@@ -964,6 +976,14 @@ DGifBufferedInput(GifFileType * GifFile,
+             _GifError = D_GIF_ERR_READ_FAILED;
+             return GIF_ERROR;
+         }
++        /* There shouldn't be any empty data blocks here as the LZW spec
++         * says the LZW termination code should come first.  Therefore we
++         * shouldn't be inside this routine at that point.
++         */
++        if (Buf[0] == 0) {
++            _GifError = D_GIF_ERR_IMAGE_DEFECT;
++            return GIF_ERROR;
++        }
+         if (READ(GifFile, &Buf[1], Buf[0]) != Buf[0]) {
+             _GifError = D_GIF_ERR_READ_FAILED;
+             return GIF_ERROR;

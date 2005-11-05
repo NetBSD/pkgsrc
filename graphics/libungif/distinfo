@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.9 2005/03/20 11:07:33 schwarz Exp $
+$NetBSD: distinfo,v 1.9.6.1 2005/11/05 14:03:41 salo Exp $
 
 SHA1 (libungif-4.1.3.tar.bz2) = 04aab31b3e9e719a80320667bc23b3ee35505a34
 RMD160 (libungif-4.1.3.tar.bz2) = 287abf7560f5394e62c475f0d722938842ba6786
 Size (libungif-4.1.3.tar.bz2) = 439960 bytes
 SHA1 (patch-aa) = eb2d1f1d21e19adc8bc33dcbd24be5c20560f4fd
 SHA1 (patch-ab) = a93e2fe0a93aacda4566e723e681fd316fe2cb2a
+SHA1 (patch-ac) = 58985225879ea2d60a1eb9e8a17595f8a0ed95a5
+SHA1 (patch-ad) = dc5e0123b950674abe46be6508f3f8bb1a69641d
+SHA1 (patch-ae) = 43b271ae9ec6eddd8341526e6b8636c503cd209c
