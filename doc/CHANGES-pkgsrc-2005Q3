@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.63 2005/11/05 17:20:33 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.64 2005/11/05 17:25:35 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -139,3 +139,5 @@ Pullup ticket 895 - requested by Adrian Portelli
 security fix for python21
 Pullup ticket 885 - requested by Lubomir Sedlacik
 security fix for libgda
+Pullup ticket 886 - requested by Lubomir Sedlacik
+security fix for libwww
