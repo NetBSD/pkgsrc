@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.61 2005/11/05 14:23:30 rillig Exp $
+# $NetBSD: build,v 1.62 2005/11/05 14:33:17 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -75,6 +75,14 @@ usage() {
 	echo " -c|--config <file>    Load the following configuration file instead"
 	echo "                       of the default one."
 	echo ""
+}
+
+die() {
+	echo "$0: error:" 1>&2
+	for i in "$@"; do
+		echo "    $i" 1>&2
+	done
+	exit 1
 }
 
 restart=no
@@ -161,8 +169,7 @@ export BULK_BUILD_CONF
 if [ -f "${BULK_BUILD_CONF}" ]; then
 	. "${BULK_BUILD_CONF}"
 else
-	echo "$0: Cannot find config file ${BULK_BUILD_CONF}, aborting." 1>&2
-	exit 1
+	die	"Cannot find config file ${BULK_BUILD_CONF}, aborting."
 fi
 
 # set up variables specifically for the bulk build
@@ -204,10 +211,7 @@ if [ "x$restart" = "xyes" ]; then
 else
 	# make veryveryclean :)
 	sh mk/bulk/pre-build \
-	|| {
-		echo "Error during bulk-build preparations, aborting." 1>&2
-		exit 1
-	}
+	|| die	"Error during bulk-build preparations, aborting."
 fi
 
 fail=no
@@ -233,9 +237,8 @@ if [ -d pkgtools/pkglint ]; then
 	OS_VERSION=`${BMAKE} show-var VARNAME=OS_VERSION` || fail=yes
 	PKG_TOOLS_BIN=`${BMAKE} show-var VARNAME=PKG_TOOLS_BIN` || fail=yes
 else
-	echo "The pkgtools/pkglint directory does not exist." 1>&2
-	echo "Please update your pkgsrc tree in ${USR_PKGSRC}." 1>&2
-	exit 1
+	die	"The pkgtools/pkglint directory does not exist." \
+		"Please update your pkgsrc tree in ${USR_PKGSRC}."
 fi
 
 echo "+----------------------------------------+"
@@ -285,10 +288,9 @@ if [ $fail = "yes" -o \
 	-z "$PKG_TOOLS_BIN" -o \
 	-z "$OS_VERSION" \
 	]; then
-	echo "ERROR:  build failed to extract certain key variables." 1>&2
-	echo "        please examine the above list and correct the" 1>&2
-	echo "        problem." 1>&2
-	exit 1
+
+	die	"Failed to extract certain key variables." \
+		"Please examine the above list and correct the problem."
 fi
 
 # get the list of packages which should always be installed during the build
@@ -309,11 +311,8 @@ done
 # Create the bulk cache files
 cd ${USR_PKGSRC}
 if [ "x$restart" != "xyes" ]; then
-	cd ${USR_PKGSRC} && ${BMAKE} bulk-cache $makeargs
-	if [ $? != 0 ]; then
-		echo "$0: Cache creation failed.  Aborting build." 1>&2
-		exit 1
-	fi
+	(cd ${USR_PKGSRC} && ${BMAKE} bulk-cache $makeargs) \
+	||	die "Cache creation failed.  Aborting build."
 fi
 
 echo "Starting actual build using the order specified in $ORDERFILE..."
