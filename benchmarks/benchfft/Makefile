@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/11/05 21:04:36 joerg Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=	1
@@ -21,12 +21,11 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKDIR}/fftw-2.0.1/ltconfig
 CONFIG_GUESS_OVERRIDE=	config.guess ../fftw-*/config.guess
 CONFIG_SUB_OVERRIDE=	config.sub ../fftw-*/config.sub
+CONFIG_STATUS_OVERRIDE=	config.status ../fftw-*/config.status
 
 INSTALLATION_DIRS=	bin
 
-pre-configure:
-	CONFIGURE_DIRS=${WRKDIR}/fftw-2.0.1 ${MAKE} ${MAKEFLAGS} do-configure
-	BUILD_DIRS=${WRKDIR}/fftw-2.0.1 ${MAKE} ${MAKEFLAGS} do-build
+CONFIGURE_DIRS=		${WRKDIR}/fftw-2.0.1 ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bench ${PREFIX}/bin/bench-fft
