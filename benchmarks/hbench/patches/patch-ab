@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.4 2005/04/12 01:00:42 rillig Exp $
+$NetBSD: patch-ab,v 1.5 2005/11/05 19:47:51 kristerw Exp $
 
---- scripts/create-all-analyses.orig	Mon Nov 15 14:15:28 1999
-+++ scripts/create-all-analyses	Mon Nov 15 14:15:28 1999
-@@ -34,10 +34,7 @@
+--- scripts/create-all-analyses.orig	1997-06-27 02:37:12.000000000 +0200
++++ scripts/create-all-analyses	2005-11-05 20:39:31.000000000 +0100
+@@ -33,6 +33,3 @@
+ 
 -# Step 1: Discover hbench root path
 -HBENCHROOT=`(cd \`dirname $0\`/.. ; pwd)`
 -
 -for dir in */*
 +for dir in @PREFIX@/share/hbench/*/*
  do
-     if [ -d $dir ]; then
+@@ -40,3 +37,3 @@
  	echo "Running analysis on $dir..."
 -	${HBENCHROOT}/scripts/gen-analysis $dir > ${dir}/analysis
 +	@PREFIX@/bin/hbench/gen-analysis $dir > ${dir}/analysis
      fi
- done
