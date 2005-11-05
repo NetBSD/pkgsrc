@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.67 2005/11/05 21:52:33 rillig Exp $
+# $NetBSD: build,v 1.68 2005/11/05 23:22:05 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -44,36 +44,36 @@ Runs a bulk pkgsrc build.
 The following options are supported:
 
    -c | --config <file>
-        Load the following configuration file instead of the default
+	Load the following configuration file instead of the default
 	one.
 
    -e | --no-email
-        Don't send email when the bulk build is finished, it will put
-        the results into a file (FTP/pkgsrc-results.txt).
+	Don't send email when the bulk build is finished, it will put
+	the results into a file (FTP/pkgsrc-results.txt).
 
    -h | --help
-        Displays this message.
+	Displays this message.
 
    -m | --mirror_only
-        Downloads all distfiles needed for the build but does not run
+	Downloads all distfiles needed for the build but does not run
 	the build.  IMPORTANT:  Note that this will still run all the
-        pre-build stuff which involves removing all of your installed
-        packages.
+	pre-build stuff which involves removing all of your installed
+	packages.
 
-        The only difference between this option and a regular bulk build
+	The only difference between this option and a regular bulk build
 	is that the packages are not actually built.
 
    -r | --restart | --resume | restart
-        Restart a previously interrupted bulk build.  The last form of
-        this option is for backwards compatibility and may be removed in
+	Restart a previously interrupted bulk build.  The last form of
+	this option is for backwards compatibility and may be removed in
 	future versions of this script.
 
-        The --restart option may be combined with the --mirror_only
-        option.
+	The --restart option may be combined with the --mirror_only
+	option.
 
    -s | --specific-pkgs
-        Sets SPECIFIC_PKGS=1 when building packages.  This option is
-        used for building a subset of pkgsrc.
+	Sets SPECIFIC_PKGS=1 when building packages.  This option is
+	used for building a subset of pkgsrc.
 
 EOF
 }
@@ -95,6 +95,13 @@ die() {
 post_filter_cmd() {
 	${SED} "s;^;`date '+%Y/%m/%d %H:%M:%S'`  ${built}/${tot}=${percent} ${pkgdir} @ ${MACHINE_ARCH}> ;g"
 }
+
+
+#
+# Find out where we are
+#
+scriptdir=`dirname "$0"`
+scriptdir=`cd "${scriptdir}" && pwd`
 
 #
 # Default values for command line options.
@@ -160,27 +167,22 @@ ulimit -S -s `ulimit -H -s`
 ulimit -S -d `ulimit -H -d`
 
 #
-# It starts ...
-#
-echo "Bulk build started: `date`"
-echo ""
-
-#
 # Find the configuration file.
 #
-: ${BULK_BUILD_CONF:=`dirname $0`/build.conf}
+BULK_BUILD_CONF="${BULK_BUILD_CONF-${scriptdir}/build.conf}"
 case $BULK_BUILD_CONF in
 /*) ;;
-*)	BULK_BUILD_CONF="`pwd`/${BULK_BUILD_CONF}"
+*)	BULK_BUILD_CONF="${PWD}/${BULK_BUILD_CONF}"
 esac
-export BULK_BUILD_CONF
 
 #
 # Load the variables from the configuration file.
 #
 { test -f "${BULK_BUILD_CONF}" \
-  && . "${BULK_BUILD_CONF}"
-} || die "Cannot find config file ${BULK_BUILD_CONF}, aborting."
+  && . "${BULK_BUILD_CONF}" \
+  && . "${scriptdir}/post-build-conf" \
+  && export_config_vars
+} || die "Cannot load config file ${BULK_BUILD_CONF}, aborting."
 
 #
 # Check if a valid pkgsrc root directory is given.
@@ -200,22 +202,19 @@ BATCH="1"
 DEPENDS_TARGET="bulk-install"
 export BATCH DEPENDS_TARGET
 
-if [ "$http_proxy" != "" ]; then
-	echo "Using HTTP proxy $http_proxy"
-	export http_proxy
-fi
-if [ "$ftp_proxy" != "" ]; then
-	echo "Using FTP proxy $ftp_proxy"
-	export ftp_proxy
-fi
-echo ""
-
 #
 # Unset some environment variables that could disturbe the build.
 #
 unset CDPATH		# ensure cd does not print new cwd to stdout, which
 			# confuses the printindex script.
 unset DISPLAY		# allow sane failure for gimp, xlispstat
+
+#
+# It starts ...
+#
+echo "Bulk build started: `date`"
+echo ""
+show_config_vars
 
 #
 # Check that the package tools are up to date.
@@ -435,8 +434,10 @@ done
 #
 BUILDDATE=`date +%Y-%m-%d`
 mkdir -p "${FTP}"
-${PERL5} mk/bulk/post-build \
-> ${FTP}/pkgsrc-results-${BUILDDATE}.txt
+( cd "${pkgsrc_dir}" \
+  && ${PERL5} ${pkgsrc_dir} mk/bulk/post-build \
+     > ${FTP}/pkgsrc-results-${BUILDDATE}.txt
+) || die "Could not write the results file."
 
 #
 # Notify the ADMIN of the finished build.
