@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.58 2005/11/04 08:07:37 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.59 2005/11/05 14:04:20 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -129,3 +129,5 @@ Pullup ticket 888 - requested by Adrian Portelli
 security fix for openvmps
 Pullup ticket 890 - requested by Takahiro Kambe
 security update for php4
+Pullup ticket 893 - requested by Adrian Portelli
+security fix for libungif
