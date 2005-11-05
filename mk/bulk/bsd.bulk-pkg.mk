@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.88 2005/10/27 13:04:54 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.89 2005/11/05 15:02:28 kristerw Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -311,15 +311,9 @@ bulk-package:
 			done ;\
 		fi; \
 		${ECHO_MSG} "BULK> Full rebuild in progress..." ; \
-		${ECHO_MSG} "BULK> Cleaning package ${PKGNAME} and pre-requisite packages" ;\
-		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
-			for pkgdir in ${PKGPATH} `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}`; do \
-				${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
-			done ;\
-		else \
-			${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES;\
-			${DO} ${MAKE} clean CLEANDEPENDS=YES;\
-		fi; \
+		${ECHO_MSG} "BULK> Cleaning package ${PKGNAME}" ;\
+		${ECHO_MSG} ${MAKE} clean;\
+		${DO} ${MAKE} clean;\
 		if [ "${PRECLEAN}" = "yes" ]; then \
 			${ECHO_MSG} "BULK> Removing installed packages which are not needed to build ${PKGNAME}" ; \
 			for pkgname in `${PKG_INFO} -e \*` ; \
@@ -455,15 +449,9 @@ bulk-package:
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
 		yes|YES)	;;					\
-		*)	${ECHO_MSG} "BULK> Cleaning package ${PKGNAME} and pre-requisite packages"; \
-		 	if [ "${USE_BULK_CACHE}" = "yes" ]; then	\
-				for pkgdir in ${PKGPATH} `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}`; do \
-					${DO}       (cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
-				done;					\
-			else						\
-				${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES;\
-				${DO} ${MAKE} clean CLEANDEPENDS=YES;	\
-			fi ;;						\
+		*)	${ECHO_MSG} "BULK> Cleaning package ${PKGNAME}"; \
+			${ECHO_MSG} ${MAKE} clean;\
+			${DO} ${MAKE} clean;	\
 		esac;							\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
