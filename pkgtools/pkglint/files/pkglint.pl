@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.335 2005/11/04 22:54:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.336 2005/11/05 11:02:53 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1461,11 +1461,6 @@ sub get_tool_names() {
 	}
 	log_info(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
 
-	# As long as there is no reliable way to get a list of all valid
-	# tool names, this is the best I can do.
-	foreach my $tool (qw(autoconf autoconf213 automake automake14 bdftopcf bison flex pkg-config)) {
-		$tools->{$tool} = true;
-	}
 	$get_tool_names_value = $tools;
 	return $get_tool_names_value;
 }
@@ -1552,7 +1547,13 @@ sub checktext_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Mail_Address") {
-		if ($value !~ qr"^[-\w\d_.]+\@[-\w\d.]+$") {
+		if ($value =~ qr"^([-\w\d_.]+)\@([-\w\d.]+)$") {
+			my (undef, $domain) = ($1, $2);
+			if ($domain =~ qr"^NetBSD.org"i && $domain ne "NetBSD.org") {
+				$line->log_warning("Please write NetBSD.org instead of ${domain}.");
+			}
+
+		} else {
 			$line->log_warning("\"${value}\" is not a valid mail address.");
 		}
 
