@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.66 2005/11/05 21:38:34 rillig Exp $
+# $NetBSD: build,v 1.67 2005/11/05 21:52:33 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -108,57 +108,40 @@ noemail=no
 #
 # Parse the command line.
 #
-while [ ${#} -ge 1 ] ; do
+while test $# -gt 0; do
 	case $1 in
-
-	--help|-h )
+	-c|--config)
+		shift
+		BULK_BUILD_CONF=$1; shift
+		;;
+	-e|--no-email)
+		noemail=yes
+		shift
+		;;
+	-h|--help)
 		usage
 		exit 0
 		;;
-
-	--mirror_only|-m )
+	-m|--mirror_only)
 		mirror_only=yes
 		target=mirror-distfiles
 		shift
 		;;
-
-	--restart|-r|restart|--resume )
+	-r|--restart|--resume|restart)
 		restart=yes
 		shift
 		;;
-
-	--specific-pkgs|-s )
+	-s|--specific-pkgs)
 		makeargs="$makeargs SPECIFIC_PKGS=1"
 		shift
 		;;
-	
-	--no-email|-e )
-		noemail=yes
-		shift
-		;;
-
-	--config|-c )
-		shift
-		BULK_BUILD_CONF=$1; shift
-		;;
-
-	-* )
+	*)
 		echo "unknown option:  $1" 1>&2
 		usage 1>&2
 		exit 1
 		;;
-
-	* )
-		break
-		;;
-
 	esac
 done
-
-if [ $# -ne 0 ]; then
-	usage
-	exit 1
-fi
 
 #
 # Choose an appropriate value for BMAKE depending on the operating system.
@@ -195,11 +178,9 @@ export BULK_BUILD_CONF
 #
 # Load the variables from the configuration file.
 #
-if [ -f "${BULK_BUILD_CONF}" ]; then
-	. "${BULK_BUILD_CONF}"
-else
-	die	"Cannot find config file ${BULK_BUILD_CONF}, aborting."
-fi
+{ test -f "${BULK_BUILD_CONF}" \
+  && . "${BULK_BUILD_CONF}"
+} || die "Cannot find config file ${BULK_BUILD_CONF}, aborting."
 
 #
 # Check if a valid pkgsrc root directory is given.
