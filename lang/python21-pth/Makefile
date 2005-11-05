@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:46:15 tv Exp $
+# $NetBSD: Makefile,v 1.16.4.1 2005/11/05 15:47:36 salo Exp $
 #
 
 DISTNAME=	Python-2.1.3
 PKGNAME=	python21-pth-2.1.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang python
 MASTER_SITES=	# empty
 DISTFILES=	# empty
