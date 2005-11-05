@@ -6,7 +6,7 @@ NNAAMMEE
 SSYYNNOOPPSSIISS
      ppkkgg__iinnffoo [--BBbbccDDddFFffhhIIiikkLLmmNNnnppqqRRrrSSssVVvv] [--ee _p_a_c_k_a_g_e] [--KK _p_k_g___d_b_d_i_r]
               [--ll _p_r_e_f_i_x] _p_k_g_-_n_a_m_e _._._.
-     ppkkgg__iinnffoo [--aa _f_l_a_g_s]
+     ppkkgg__iinnffoo [--aa | --uu] [flags]
      ppkkgg__iinnffoo [--QQ _v_a_r_i_a_b_l_e] _p_k_g_-_n_a_m_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
@@ -22,10 +22,14 @@ DDEESSCCRRIIPPTTIIOONN
 
      The following command-line options are supported:
 
-     --aa      Show information for all currently installed packages.
+     --aa      Show information for all currently installed packages.  See also
+             --uu.
 
      --BB      Show some of the important definitions used when building the
-             binary package (the "Build information") for each package.
+             binary package (the ``Build information'') for each package.
+             Additionally, any installation information variables (lowercase)
+             can be queried, too.  In particular, _a_u_t_o_m_a_t_i_c tells if a package
+             was installed automatically as a dependency of another package.
 
      --bb      Show the NetBSD RCS Id strings from the files used in the con-
              struction of the binary package (the "Build version") for each
@@ -102,6 +106,10 @@ DDEESSCCRRIIPPTTIIOONN
 
      --ss      Show the size of this package in bytes.  The size is calculated
              by adding up the size of each file of the package.
+
+     --uu      Show information for all user-installed packages.  Automatically
+             installed packages (as dependencies of other packages) are not
+             displayed.  See also --aa.
 
      --VV      Print version number and exit.
 
@@ -184,4 +192,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, depends displaying,
              pkg size display etc.
 
-NetBSD 3.0                       May 30, 2005                       NetBSD 3.0
+NetBSD 3.0                     November 1, 2005                     NetBSD 3.0

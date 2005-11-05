@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.16 2005/02/04 09:10:13 jlam Exp $ */
+/* $NetBSD: lib.h,v 1.17 2005/11/05 13:20:09 wiz Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -152,11 +152,15 @@ enum {
 #define MTREE_FNAME		"+MTREE_DIRS"
 #define BUILD_VERSION_FNAME	"+BUILD_VERSION"
 #define BUILD_INFO_FNAME	"+BUILD_INFO"
+#define INSTALLED_INFO_FNAME	"+INSTALLED_INFO"
 #define SIZE_PKG_FNAME		"+SIZE_PKG"
 #define SIZE_ALL_FNAME		"+SIZE_ALL"
 #define PRESERVE_FNAME		"+PRESERVE"
 #define VIEWS_FNAME		"+VIEWS"
 #define DEPOT_FNAME		"+DEPOT"
+
+/* The names of special variables */
+#define AUTOMATIC_VARNAME	"automatic"
 
 /*
  * files which we expect to be in every package, passed to
@@ -284,9 +288,19 @@ int	fexec(const char *, ...);
 int	fexec_skipempty(const char *, ...);
 int	fcexec(const char *, const char *, ...);
 
+/* variables file handling */
+
+char   *var_get(const char *, const char *);
+int	var_set(const char *, const char *, const char *);
+
+/* automatically installed as dependency */
+
+Boolean	is_automatic_installed(const char *);
+int	mark_as_automatic_installed(const char *, int);
+
 /* String */
 char   *get_dash_string(char **);
-void    str_lowercase(char *);
+void    str_lowercase(unsigned char *);
 const char *basename_of(const char *);
 const char *dirname_of(const char *);
 const char *suffix_of(const char *);
@@ -347,7 +361,7 @@ void    add_plist_top(package_t *, pl_ent_t, const char *);
 void    delete_plist(package_t *, Boolean, pl_ent_t, char *);
 void    write_plist(package_t *, FILE *, char *);
 void    read_plist(package_t *, FILE *);
-int     plist_cmd(char *, char **);
+int     plist_cmd(unsigned char *, char **);
 int     delete_package(Boolean, Boolean, package_t *, Boolean);
 
 /* Package Database */

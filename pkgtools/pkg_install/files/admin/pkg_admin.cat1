@@ -121,6 +121,16 @@ OOPPTTIIOONNSS
 
              Needs to be run as root.
 
+     sseett _v_a_r_i_a_b_l_e_=_v_a_l_u_e _p_k_g _._._.
+             Set variable with information about the installed package.  Use
+             uunnsseett to remove a variable.
+
+             Packages that are not installed directly by the user but pulled
+             in as dependencies are marked by setting ``automatic=YES''.
+
+     uunnsseett _v_a_r_i_a_b_l_e _p_k_g _._._.
+             Remove an installation variable.
+
 EENNVVIIRROONNMMEENNTT
      PKG_DBDIR
              If the --KK flag isn't given, then PKG_DBDIR is the location of the
@@ -141,4 +151,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 3.0                      August 13, 2004                     NetBSD 3.0
+NetBSD 3.0                     November 1, 2005                     NetBSD 3.0
