@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11831 2005/11/04 21:27:06 tonio Exp $
+$NetBSD: CHANGES,v 1.11832 2005/11/05 01:49:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5082,3 +5082,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.37 [rillig 2005-11-04]
 	Added math/R-VR-7.2.4 version rillig [2005-11-04 ]
 	Updated lang/kaffe to 1.1.6nb1 [tonio 2005-11-04]
+	Added biology/azara version 2.7 [minskim 2005-11-05]
