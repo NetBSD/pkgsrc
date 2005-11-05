@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.58 2005/11/02 05:33:38 tv Exp $
+# $NetBSD: build,v 1.59 2005/11/05 02:20:52 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -37,7 +37,7 @@
 usage() {
 	echo "Usage:"
 	echo "   $0 [-m | --mirror_only] [-r | --restart | restart]"
-	echo "         [-s | --specific-pkgs]"
+	echo "         [-s | --specific-pkgs] [-c|--config <fname>]"
 	echo "   $0 -h|--help"
 	echo " "
 	echo "Runs a bulk pkgsrc build."
@@ -72,6 +72,9 @@ usage() {
 	echo "                       finished, it will put the results into a file"
 	echo "                       (FTP/pkgsrc-results.txt)."
 	echo " "
+	echo " -c|--config <file>    Load the following configuration file instead"
+	echo "                       of the default one."
+	echo ""
 }
 
 restart=no
@@ -107,6 +110,11 @@ while [ ${#} -ge 1 ] ; do
 	--no-email|-e )
 		noemail=yes
 		shift
+		;;
+
+	--config|-c )
+		shift
+		BULK_BUILD_CONF=$1; shift
 		;;
 
 	-* )
