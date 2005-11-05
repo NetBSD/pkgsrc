@@ -1,0 +1,73 @@
+$NetBSD: patch-bf,v 1.1.2.2 2005/11/05 15:47:36 salo Exp $
+
+--- Modules/pypcre.c.orig	2000-08-02 14:41:18.000000000 +0100
++++ Modules/pypcre.c
+@@ -1162,14 +1162,31 @@ read_repeat_counts(const uschar *p, int 
+ int min = 0;
+ int max = -1;
+ 
++/* Read the minimum value and do a paranoid check: a negative value indicates
++an integer overflow. */
++
+ while ((pcre_ctypes[*p] & ctype_digit) != 0) min = min * 10 + *p++ - '0';
+ 
++if (min < 0 || min > 65535)
++  {
++  *errorptr = ERR5;
++  return p;
++  }
++
++/* Read the maximum value if there is one, and again do a paranoid on its size
++. Also, max must not be less than min. */
++
+ if (*p == '}') max = min; else
+   {
+   if (*(++p) != '}')
+     {
+     max = 0;
+     while((pcre_ctypes[*p] & ctype_digit) != 0) max = max * 10 + *p++ - '0';
++    if (max < 0 || max > 65535)
++      {
++      *errorptr = ERR5;
++      return p;
++      }
+     if (max < min)
+       {
+       *errorptr = ERR4;
+@@ -2266,6 +2283,7 @@ int c, size;
+ int bracount = 0;
+ int brastack[200];
+ int top_backref = 0;
++BOOL capturing;
+ unsigned int brastackptr = 0;
+ uschar *code;
+ const uschar *ptr;
+@@ -2445,7 +2463,8 @@ while ((c = *(++ptr)) != 0)
+     /* Brackets may be genuine groups or special things */
+ 
+     case '(':
+-
++    capturing = FALSE;
++    
+     /* Handle special forms of bracket, which all start (? */
+ 
+     if (ptr[1] == '?') switch (c = ptr[2])
+@@ -2541,11 +2560,16 @@ while ((c = *(++ptr)) != 0)
+         }
+       continue;                      /* End of this bracket handling */
+       }
++    
++    /* Ordinary parentheses, not followed by '?', are capturing unless
++    PCRE_NO_AUTO_CAPTURE is set. */
+ 
++    else capturing = (options & PCRE_NO_AUTO_CAPTURE) == 0;
++    
+     /* Extracting brackets must be counted so we can process escapes in a
+     Perlish way. */
+-
+-    else bracount++;
++    
++    if (capturing) bracount++;
+ 
+     /* Non-special forms of bracket. Save length for computing whole length
+     at end if there's a repeat that requires duplication of the group. */
