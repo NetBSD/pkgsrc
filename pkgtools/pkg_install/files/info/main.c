@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.13 2005/02/10 23:51:18 grant Exp $	*/
+/*	$NetBSD: main.c,v 1.14 2005/11/05 13:20:09 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.13 2005/02/10 23:51:18 grant Exp $");
+__RCSID("$NetBSD: main.c,v 1.14 2005/11/05 13:20:09 wiz Exp $");
 #endif
 #endif
 
@@ -50,10 +50,10 @@ __RCSID("$NetBSD: main.c,v 1.13 2005/02/10 23:51:18 grant Exp $");
 #include "lib.h"
 #include "info.h"
 
-static const char Options[] = ".aBbcDde:fFhIiK:kLl:mNnpQ:qRrsSvV";
+static const char Options[] = ".aBbcDde:fFhIiK:kLl:mNnpQ:qRrsSuvV";
 
 int     Flags = 0;
-Boolean AllInstalled = FALSE;
+enum which Which = WHICH_LIST;
 Boolean File2Pkg = FALSE;
 Boolean Quiet = FALSE;
 char   *InfoPrefix = "";
@@ -69,8 +69,8 @@ usage(void)
 {
 	fprintf(stderr, "%s\n%s\n%s\n%s\n",
 	    "usage: pkg_info [-BbcDdFfhIikLmNnpqRrSsVv] [-e package] [-K pkg_dbdir] [-l prefix]",
-	    "                pkg-name [pkg-name ...]",
-	    "       pkg_info -a [flags]",
+	    "                pkg-name [...]",
+	    "       pkg_info [-a | -u] [flags]",
 	    "       pkg_info -Q variable pkg-name [pkg-name ...]");
 	exit(1);
 }
@@ -89,7 +89,7 @@ main(int argc, char **argv)
 			break;
 
 		case 'a':
-			AllInstalled = TRUE;
+			Which = WHICH_ALL;
 			break;
 
 		case 'B':
@@ -189,6 +189,10 @@ main(int argc, char **argv)
 			Flags |= SHOW_ALL_SIZE;
 			break;
 
+		case 'u':
+			Which = WHICH_USER;
+			break;
+
 		case 'v':
 			Verbose = TRUE;
 			/* Reasonable definition of 'everything' */
@@ -212,13 +216,20 @@ main(int argc, char **argv)
 	argv += optind;
 
 	if (argc == 0 && !Flags && !CheckPkg) {
-		/* No argument or flags specified - assume -Ia */
+		/* No argument or relevant flags specified - assume -I */
 		Flags = SHOW_INDEX;
-		AllInstalled = TRUE;
+		/* assume -a if neither -u nor -a is given */
+		if (Which == WHICH_LIST)
+			Which = WHICH_ALL;
+	}
+
+	if (argc != 0 && Which != WHICH_LIST) {
+		warnx("can't use both -a/-u and package name");
+		usage();
 	}
 
 	/* Don't do FTP stuff when operating on all pkgs */
-	if (AllInstalled && getenv("PKG_PATH") != 0) {
+	if (Which != WHICH_LIST && getenv("PKG_PATH") != 0) {
 		warnx("disabling PKG_PATH when operating on all packages.");
 		unsetenv("PKG_PATH");
 	}
@@ -251,7 +262,7 @@ main(int argc, char **argv)
 	TAILQ_INIT(&pkgs);
 
 	/* Get all the remaining package names, if any */
-	if (File2Pkg && !AllInstalled)
+	if (File2Pkg && Which == WHICH_LIST)
 		if (!pkgdb_open(ReadOnly)) {
 			err(EXIT_FAILURE, "cannot open pkgdb");
 		}
@@ -294,7 +305,7 @@ main(int argc, char **argv)
 		pkgdb_close();
 
 	/* If no packages, yelp */
-	if (TAILQ_FIRST(&pkgs) == NULL && !AllInstalled && !CheckPkg)
+	if (TAILQ_FIRST(&pkgs) == NULL && Which == WHICH_LIST && !CheckPkg)
 		warnx("missing package name(s)"), usage();
 
 	if (isatty(STDOUT_FILENO)) {

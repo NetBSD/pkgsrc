@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.18 2005/03/11 21:20:15 rillig Exp $	*/
+/*	$NetBSD: main.c,v 1.19 2005/11/05 13:20:09 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.18 2005/03/11 21:20:15 rillig Exp $");
+__RCSID("$NetBSD: main.c,v 1.19 2005/11/05 13:20:09 wiz Exp $");
 #endif
 
 /*
@@ -68,6 +68,9 @@ __RCSID("$NetBSD: main.c,v 1.18 2005/03/11 21:20:15 rillig Exp $");
 #if HAVE_STDIO_H
 #include <stdio.h>
 #endif
+#if HAVE_STRING_H
+#include <string.h>
+#endif
 
 #include "lib.h"
 
@@ -81,10 +84,11 @@ int     pkgcnt;
 static int	quiet;
 
 static int checkpattern_fn(const char *, void *);
+static void set_unset_variable(char **, Boolean);
 
 /* print usage message and exit */
 static void 
-usage(const char *prog)
+usage(void)
 {
 	(void) fprintf(stderr, "usage: %s [-bqSV] [-d lsdir] [-K pkg_dbdir] [-s sfx] command args ...\n"
 	    "Where 'commands' and 'args' are:\n"
@@ -92,6 +96,8 @@ usage(const char *prog)
 	    " check [pkg ...]             - check md5 checksum of installed files\n"
 	    " add pkg ...                 - add pkg files to database\n"
 	    " delete pkg ...              - delete file entries for pkg in database\n"
+	    " set variable=value pkg ...  - set installation variable for package\n"
+	    " unset variable pkg ...      - unset installation variable for package\n"
 #ifdef PKGDB_DEBUG
 	    " addkey key value            - add key and value\n"
 	    " delkey key                  - delete reference to key\n"
@@ -100,7 +106,7 @@ usage(const char *prog)
 	    " lsbest /path/to/pkgpattern  - list pkgs matching the pattern best\n"
 	    " dump                        - dump database\n"
 	    " pmatch pattern pkg          - returns true if pkg matches pattern, otherwise false\n",
-	    prog);
+	    getprogname());
 	exit(EXIT_FAILURE);
 }
 
@@ -444,7 +450,6 @@ lsbasepattern_fn(const char *pkg, void *vp)
 int 
 main(int argc, char *argv[])
 {
-	const char	*prog;
 	Boolean		 use_default_sfx = TRUE;
 	Boolean 	 show_basename_only = FALSE;
 	char		 lsdir[MaxPathSize];
@@ -452,10 +457,10 @@ main(int argc, char *argv[])
 	char		*lsdirp = NULL;
 	int		 ch;
 
-	setprogname(prog = argv[0]);
+	setprogname(argv[0]);
 
 	if (argc < 2)
-		usage(prog);
+		usage();
 
 	while ((ch = getopt(argc, argv, Options)) != -1)
 		switch (ch) {
@@ -491,7 +496,7 @@ main(int argc, char *argv[])
 			break;
 
 		default:
-			usage(prog);
+			usage();
 			/* NOTREACHED */
 		}
 
@@ -499,7 +504,7 @@ main(int argc, char *argv[])
 	argv += optind;
 
 	if (argc <= 0) {
-		usage(prog);
+		usage();
 	}
 
 	if (use_default_sfx)
@@ -512,7 +517,7 @@ main(int argc, char *argv[])
 		argv++;		/* "pmatch" */
 
 		if (argv[0] == NULL || argv[1] == NULL) {
-			usage(prog);
+			usage();
 		}
 
 		pattern = argv[0];
@@ -690,6 +695,12 @@ main(int argc, char *argv[])
 			delete1pkg(*argv);
 			argv++;
 		}
+	} else if (strcasecmp(argv[0], "set") == 0) {
+		argv++;		/* "set" */
+		set_unset_variable(argv, FALSE);
+	} else if (strcasecmp(argv[0], "unset") == 0) {
+		argv++;		/* "unset" */
+		set_unset_variable(argv, TRUE);
 	}
 #ifdef PKGDB_DEBUG
 	else if (strcasecmp(argv[0], "delkey") == 0) {
@@ -734,10 +745,107 @@ main(int argc, char *argv[])
 	}
 #endif
 	else {
-		usage(prog);
+		usage();
 	}
 
 	return 0;
+}
+
+struct varval {
+    char *variable;
+    char *value;
+};
+
+static int
+set_installed_info_var(const char *name, void *ud)
+{
+	char filename[BUFSIZ];
+	struct varval *varval;
+
+	varval = ud;
+
+	(void)snprintf(filename, sizeof(filename), "%s/%s", name,
+		       INSTALLED_INFO_FNAME);
+
+	return var_set(filename, varval->variable, varval->value);
+}
+
+static void
+set_unset_variable(char **argv, Boolean unset)
+{
+	struct varval varval;
+	int ret = 0;
+	char *eq;
+	char *variable;
+
+	if (argv[0] == NULL || argv[1] == NULL)
+		usage();
+	
+	variable = NULL;
+
+	if (unset) {
+		varval.variable = argv[0];
+		varval.value = NULL;
+	} else {	
+		eq = NULL;
+		if ((eq=strchr(argv[0], '=')) == NULL)
+			usage();
+		
+		variable = malloc(eq-argv[0]+1);
+		strlcpy(variable, argv[0], eq-argv[0]+1);
+		
+		varval.variable = variable;
+		varval.value = eq+1;
+		
+		if (strcmp(variable, AUTOMATIC_VARNAME) == 0 &&
+		    strcasecmp(varval.value, "yes") != 0 &&
+		    strcasecmp(varval.value, "no") != 0) {
+			errx(EXIT_FAILURE,
+			     "unknown value `%s' for " AUTOMATIC_VARNAME,
+			     varval.value);
+		}
+	}
+	if (strcspn(varval.variable, "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+	    != strlen(varval.variable)) {
+		free(variable);
+		errx(EXIT_FAILURE,
+		     "variable name must not contain uppercase letters");
+	}
+
+	chdir(_pkgdb_getPKGDB_DIR());
+	argv++;
+	while (*argv != NULL) {
+		if (ispkgpattern(*argv)) {
+			if (findmatchingname(_pkgdb_getPKGDB_DIR(),
+					     *argv, set_installed_info_var,
+					     &varval) <= 0) {
+				warnx("no matching pkg for `%s'", *argv);
+				ret++;
+			}
+		} else if (isdir(*argv) || islinktodir(*argv))
+			set_installed_info_var(*argv, &varval);
+		else {
+			/* try 'pkg-[0-9]*' */
+			char try[MaxPathSize];
+
+			snprintf(try, sizeof(try), "%s-[0-9]*", *argv);
+			if (findmatchingname(_pkgdb_getPKGDB_DIR(),
+					     try, set_installed_info_var,
+					     &varval) <= 0) {
+				warnx("cannot find package %s", *argv);
+				ret++;
+			}
+		}
+
+		argv++;
+	}
+
+	if (ret > 0)
+		exit(EXIT_FAILURE);
+
+	free(variable);
+
+	return;
 }
 
 void

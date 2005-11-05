@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: pkg_install2nbcompat,v 1.2 2005/02/03 23:53:23 jlam Exp $
+#	$NetBSD: pkg_install2nbcompat,v 1.3 2005/11/05 13:20:09 wiz Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,7 +47,7 @@ if [ ! -d "${BSDSRCDIR}" ]; then
 	exit 1
 fi
 
-src2nbcompat="${PKGSRCDIR}/pkgtools/libnbcompat/files/src2nbcompat"
+src2nbcompat="${PKGSRCDIR}/pkgtools/pkg_install/files/pi2nbcompat"
 dest=$1
 
 $src2nbcompat ${BSDSRCDIR}/usr.sbin/pkg_install		$dest

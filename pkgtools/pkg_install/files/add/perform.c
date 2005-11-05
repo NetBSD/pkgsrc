@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.33 2005/07/25 13:13:00 hubertf Exp $	*/
+/*	$NetBSD: perform.c,v 1.34 2005/11/05 13:20:09 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.33 2005/07/25 13:13:00 hubertf Exp $");
+__RCSID("$NetBSD: perform.c,v 1.34 2005/11/05 13:20:09 wiz Exp $");
 #endif
 #endif
 
@@ -191,7 +191,8 @@ installprereq(const char *name, int *errc, int doupdate)
 			    Viewbase ? "-W" : "", Viewbase ? Viewbase : "",
 			    Force ? "-f" : "",
 			    Prefix ? "-p" : "", Prefix ? Prefix : "",
-			    Verbose ? "-v" : "", name, NULL)) {
+			    Verbose ? "-v" : "",
+			    "-A", name, NULL)) {
 		warnx("autoload of dependency `%s' failed%s",
 			name, Force ? " (proceeding anyway)" : "!");
 		if (!Force)
@@ -346,6 +347,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 			 * take up once it's unpacked.  I've noticed that most packages
 			 * compress an average of 75%, so multiply by 4 for good measure.
 			 */
+
 			needed = 4 * (uint64_t) sb.st_size;
 			if (!inPlace && min_free(playpen) < needed) {
 				warnx("projected size of %" PRIu64 " bytes exceeds available free space\n"
@@ -497,7 +499,15 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 
 	/* See if this package (exact version) is already registered */
 	if ((isdir(LogDir) || islinktodir(LogDir)) && !Force) {
-		warnx("package `%s' already recorded as installed", PkgName);
+		if (!Automatic && is_automatic_installed(LogDir)) {
+			mark_as_automatic_installed(LogDir, 0);
+			warnx("package `%s' was already installed as "
+			      "dependency, now marked as installed manually",
+			      PkgName);
+		} else {
+			warnx("package `%s' already recorded as installed",
+			      PkgName);
+		}
 		goto success;	/* close enough for government work */
 	}
 
@@ -941,6 +951,8 @@ ignore_replace_depends_check:
 					warnx("cannot properly close file %s", contents);
 			}
 		}
+		if (Automatic)
+			mark_as_automatic_installed(LogDir, 1);
 		if (Verbose)
 			printf("Package %s registered in %s\n", PkgName, LogDir);
 	}
@@ -1064,4 +1076,3 @@ pkg_perform(lpkg_head_t *pkgs)
 	
 	return err_cnt;
 }
-
