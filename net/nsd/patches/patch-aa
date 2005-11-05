@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2005/01/19 02:11:24 itojun Exp $
+$NetBSD: patch-aa,v 1.9 2005/11/05 21:27:53 joerg Exp $
 
 --- Makefile.in-	2005-01-19 11:05:06.000000000 +0900
 +++ Makefile.in	2005-01-19 11:06:59.000000000 +0900
@@ -9,8 +9,8 @@ $NetBSD: patch-aa,v 1.8 2005/01/19 02:11:24 itojun Exp $
 -	$(INSTALL_DATA) nsdc.conf.sample $(configfile).sample
 -	$(INSTALL_DATA) nsd.zones.sample $(zonesfile).sample
 +	mkdir -p $(prefix)/share/examples/nsd
-+	$(INSTALL_DATA) nsdc.conf.sample $(prefix)/share/examples/nsd
-+	$(INSTALL_DATA) nsd.zones.sample $(prefix)/share/examples/nsd
++	$(INSTALL_DATA) nsdc.conf.sample $(prefix)/share/examples/nsd/nsdc.conf
++	$(INSTALL_DATA) nsd.zones.sample $(prefix)/share/examples/nsd/nsd.zones
  
  uninstall:
  	@echo
