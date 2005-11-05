@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11836 2005/11/05 08:50:57 rillig Exp $
+$NetBSD: CHANGES,v 1.11837 2005/11/05 13:30:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5086,3 +5086,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added www/py-nevow version 0.3 [minskim 2005-11-05]
 	Added sysutils/cvsreport version 0.3.5 [rillig 2005-11-05]
 	Updatex x11/xlockmore to 5.20.1 [hubertf 2005-11-05]
+	Updated pkgtools/pkg_install to 20051103 [wiz 2005-11-05]
