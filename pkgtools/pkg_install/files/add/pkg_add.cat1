@@ -1,11 +1,11 @@
 PKG_ADD(1)              NetBSD General Commands Manual              PKG_ADD(1)
 
 NNAAMMEE
-     ppkkgg__aadddd - a utility for installing and upgrading software package distri-
-     butions
+     ppkkgg__aadddd -- a utility for installing and upgrading software package dis-
+     tributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aadddd [--ffIILLMMnnRRSSuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e]
+     ppkkgg__aadddd [--AAffIILLMMnnRRSSuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e]
              [--tt _t_e_m_p_l_a_t_e] [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w]
              [[ftp|http]://[_u_s_e_r[:_p_a_s_s_w_o_r_d_]@]_h_o_s_t[:_p_o_r_t]][/_p_a_t_h_/]pkg-name ...
 
@@ -44,6 +44,15 @@ OOPPTTIIOONNSS
              named by the PKG_PATH environment variable.  Any dependencies
              required by the installed package will be searched in the same
              location that the original package was installed from.
+
+     --AA      Mark package as installed automatically, as dependency of another
+             package.  You can use
+                   ppkkgg__aaddmmiinn sseett aauuttoommaattiicc==YYEESS
+             to mark packages this way after installation, and
+                   ppkkgg__aaddmmiinn uunnsseett aauuttoommaattiicc
+             to remove the mark.  If you ppkkgg__aadddd a package without specifying
+             --AA after it had already been automatically installed, the mark is
+             removed.
 
      --ff      Force installation to proceed even if prerequisite packages are
              not installed or the requirements script fails.  Although ppkkgg__aadddd
@@ -214,9 +223,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
 
            7.   The package build information from _+_B_U_I_L_D___I_N_F_O is then checked
                 for IGNORE_RECOMMENDED.  If the package was built with depen-
-                dency recommendations ignored, installation will be aborted.
-                This behavior is overridable with the --ff flag and the
-                PKG_IGNORE_RECOMMENDED environment variable.
+                dency recommendations ignored, a warning will be issued.
 
            8.   If the package contains a _r_e_q_u_i_r_e script (see pkg_create(1)),
                 it is executed with the following arguments:
@@ -380,4 +387,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 2.0                        May 7, 2005                       NetBSD 2.0
+NetBSD 3.0                     November 1, 2005                     NetBSD 3.0
