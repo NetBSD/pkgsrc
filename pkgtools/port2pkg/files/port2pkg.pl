@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.13 2004/01/10 16:27:06 cjep Exp $
+# $NetBSD: port2pkg.pl,v 1.14 2005/11/05 17:23:35 rillig Exp $
 #
 
 require 'getopts.pl';
@@ -180,7 +180,7 @@ sub conv_Makefile {
 		s|^\.include <bsd.port.mk>|.include \"../../mk/bsd.pkg.mk\"|;
 		s|^FETCH_(DEPENDS)|BUILD_$1|;
 		s|^LIB_(DEPENDS)|$1|;
-		s|\$\{PORTNAME\}|\${PKGNAME:C/-[^-]*\$//}|g;
+		s|\$\{PORTNAME\}|\${PKGBASE}|g;
 		s|\$\{PORTSDIR\}|../..|g;
 		s|PLIST_SUB|PLIST_SUBST|;
 
