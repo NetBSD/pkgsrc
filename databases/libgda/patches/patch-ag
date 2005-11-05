@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.2.2 2005/11/05 17:20:22 snj Exp $
+
+--- libgda/gda-log.c.orig	2005-10-26 11:28:57.000000000 +0200
++++ libgda/gda-log.c
+@@ -111,7 +111,7 @@ gda_log_message (const gchar *format, ..
+ #ifdef LIBGDA_WIN32
+ 	g_log ("Gda", G_LOG_LEVEL_INFO, "%s", msg);
+ #else
+-	syslog (LOG_USER | LOG_INFO, msg);
++	syslog (LOG_USER | LOG_INFO, "%s", msg);
+ #endif
+ 	g_free (msg);
+ }
+@@ -144,7 +144,7 @@ gda_log_error (const gchar * format, ...
+ #ifdef LIBGDA_WIN32
+ 	g_log ("Gda", G_LOG_LEVEL_ERROR, "%s", msg);
+ #else
+-	syslog (LOG_USER | LOG_ERR, msg);
++	syslog (LOG_USER | LOG_ERR, "%s", msg);
+ #endif
+  	g_free (msg);
+ }
