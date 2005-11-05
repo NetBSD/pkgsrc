@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/06/16 23:34:44 kristerw Exp $
+# $NetBSD: Makefile,v 1.43.4.1 2005/11/05 15:26:45 seb Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -74,7 +74,7 @@ post-patch:
 .endif
 
 do-configure:
-	cd ${SPEECHTOOLS} && ${ENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+	cd ${SPEECHTOOLS} && ${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
@@ -82,6 +82,7 @@ do-install:
 	${FIND} ${FESTIVAL}/lib -type d -print | ${XARGS} ${CHMOD} 755
 	-@${MV} ${FESTIVAL}/lib/etc/unknown_${OPSYS} ${FESTIVAL}/lib/etc/pkgsrc
 	cd ${FESTIVAL} && ${PAX} -rw lib examples ${FHOME}
+	${RM} ${FHOME}/examples/Makefile.orig
 	${RM} -f ${FHOME}/lib/etc/unknown_${OPSYS}/audsp ${FHOME}/lib/etc/pkgsrc/audsp
 	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/pkgsrc/audsp ${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival ${PREFIX}/libexec/festival.naked
