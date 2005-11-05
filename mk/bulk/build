@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.63 2005/11/05 15:41:53 rillig Exp $
+# $NetBSD: build,v 1.64 2005/11/05 16:10:06 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -57,7 +57,7 @@ usage() {
 	echo "                       are not actually built."
 	echo ""
 	echo " -r|--restart|restart  Restart a previously interrupted bulk build."
-	echo "                       last form of this option is for backwards"
+	echo " --resume              last form of this option is for backwards"
 	echo "                       compatibility and may be removed in future"
 	echo "                       versions of this script."
 	echo ""
@@ -115,7 +115,7 @@ while [ ${#} -ge 1 ] ; do
 		shift
 		;;
 
-	--restart|-r|restart )
+	--restart|-r|restart|--resume )
 		restart=yes
 		shift
 		;;
@@ -223,14 +223,13 @@ unset DISPLAY		# allow sane failure for gimp, xlispstat
 	) || die "Could not update the package tools."
 }
 
-if [ "x$restart" = "xyes" ]; then
-	echo "Restarting - skipping pre-build script"
-else
-	# make veryveryclean :)
+case $restart in
+yes)	echo "Resuming -- skipping pre-build script";;
+*)	# make veryveryclean :)
 	( cd "${pkgsrc_dir}" \
 	  && /bin/sh mk/bulk/pre-build
-	) || die "Error during bulk-build preparations, aborting."
-fi
+	) || die "Error during bulk-build preparations, aborting.";;
+esac
 
 fail=no
 if cd "${pkglint_dir}"; then
@@ -253,6 +252,7 @@ if cd "${pkglint_dir}"; then
 	OPSYS=`${BMAKE} show-var VARNAME=OPSYS` || fail=yes
 	OS_VERSION=`${BMAKE} show-var VARNAME=OS_VERSION` || fail=yes
 	PKG_TOOLS_BIN=`${BMAKE} show-var VARNAME=PKG_TOOLS_BIN` || fail=yes
+	BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ` || fail=yes
 else
 	die	"The pkgtools/pkglint directory does not exist." \
 		"Please update your pkgsrc tree in ${pkgsrc_dir}."
@@ -262,6 +262,7 @@ echo "+----------------------------------------+"
 echo "| Some variables used in the bulk build: |"
 echo "+----------------------------------------+"
 echo "BULK_DBFILE     = $BULK_DBFILE"
+echo "BULK_PREREQ     = $BULK_PREREQ"
 echo "DEPENDSTREEFILE = $DEPENDSTREEFILE"
 echo "DEPENDSFILE     = $DEPENDSFILE"
 echo "SUPPORTSFILE    = $SUPPORTSFILE"
@@ -283,7 +284,7 @@ echo "PKG_TOOLS_BIN   = $PKG_TOOLS_BIN"
 echo "------------------------------------------"
 
 # make sure we have values for these very important
-# variables
+# variables; BULK_PREREQ may be empty.
 if [ $fail = "yes" -o \
 	-z "$BULK_DBFILE" -o \
 	-z "$DEPENDSTREEFILE" -o \
@@ -310,18 +311,11 @@ if [ $fail = "yes" -o \
 		"Please examine the above list and correct the problem."
 fi
 
-# get the list of packages which should always be installed during the build
-{ cd "${pkglint_dir}" \
-  && BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ`
-} || die "Could not get the value of BULK_PREREQ."
-
 # install prerequisite packages.  Note:  we do this _before_ the depends tree
 # because some packages like xpkgwedge only become DEPENDS if its installed
 echo "Installing prerequisite packages specified with BULK_PREREQ..."
-for pkgdir in $BULK_PREREQ
-do
-	echo $pkgdir
-	# make sure its installed _and_ packaged
+for pkgdir in $BULK_PREREQ; do
+	echo "===> Installing prerequisite package $pkgdir"
 	( cd "${pkgsrc_dir}/${pkgdir}" \
 	  && ${BMAKE} bulk-install
 	) || die "Could not install prerequisite packages."
