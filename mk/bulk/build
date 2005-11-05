@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.59 2005/11/05 02:20:52 rillig Exp $
+# $NetBSD: build,v 1.60 2005/11/05 08:34:10 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -152,16 +152,18 @@ echo Bulk build started: `date`
 echo ""
 
 # Pull in ADMIN etc.:
-if [ -f "$BULK_BUILD_CONF" ]; then
-    . $BULK_BUILD_CONF
+: ${BULK_BUILD_CONF:=`dirname $0`/build.conf}
+case $BULK_BUILD_CONF in
+/*) ;;
+*)	BULK_BUILD_CONF="`pwd`/${BULK_BUILD_CONF}"
+esac
+export BULK_BUILD_CONF
+
+if [ -f "${BULK_BUILD_CONF}" ]; then
+	. "${BULK_BUILD_CONF}"
 else
-	conf=`dirname $0`/build.conf
-	if [ -f "$conf" ]; then
-		. $conf
-	else
-		echo "$0: Cannot find config file $conf, aborting."
-		exit 1
-	fi
+	echo "$0: Cannot find config file ${BULK_BUILD_CONF}, aborting." 1>&2
+	exit 1
 fi
 
 # set up variables specifically for the bulk build
