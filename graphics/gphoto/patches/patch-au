@@ -1,4 +1,4 @@
-$NetBSD: patch-au,v 1.1 2004/01/19 15:52:40 cube Exp $
+$NetBSD: patch-au,v 1.2 2005/11/05 18:58:04 kristerw Exp $
 
 --- sony/command.c.orig	1999-05-27 20:32:06.000000000 +0200
 +++ sony/command.c
