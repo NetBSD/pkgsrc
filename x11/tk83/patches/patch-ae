@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2005/09/21 14:49:09 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2005/11/05 03:27:56 rillig Exp $
 
---- tkUnixPort.h.orig	2001-10-13 01:25:10.000000000 +0000
-+++ tkUnixPort.h
+--- unix/tkUnixPort.h.orig	2001-10-13 01:25:10.000000000 +0000
++++ unix/tkUnixPort.h
 @@ -123,8 +123,10 @@
   * Not all systems declare the errno variable in errno.h. so this
   * file does it explicitly.
