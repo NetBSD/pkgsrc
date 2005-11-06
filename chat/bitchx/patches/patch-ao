@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2005/11/06 17:40:47 adrianp Exp $
+
+--- source/term.c.orig	2005-11-06 17:14:05.000000000 +0000
++++ source/term.c
+@@ -92,7 +92,10 @@ extern	int		tgetflag();
+ #endif
+ 
+ extern  char    *getenv();
++
++#if !defined(__FreeBSD__)
+ extern	char	*tparm();
++#endif
+ 
+ /*
+  * The old code assumed termcap. termcap is almost always present, but on
