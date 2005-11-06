@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/06 10:36:46 minskim Exp $
+
+g++-2.95 needs a bit help on complex type casts.
+
+--- source/geom/MultiLineString.cpp.orig	Thu Jul 22 10:45:50 2004
++++ source/geom/MultiLineString.cpp	Thu Apr  7 03:45:20 2005
+@@ -127,8 +127,8 @@ bool MultiLineString::isClosed() const {
+ 
+ bool MultiLineString::isSimple() const {
+ 	IsSimpleOp iso;
+-	Geometry *in = toInternalGeometry(this);
+-	bool issimple = iso.isSimple((MultiLineString *)in);
++	MultiLineString *in = dynamic_cast<MultiLineString *>(toInternalGeometry(this));
++	bool issimple = iso.isSimple(in);
+ 	if ( in != this ) delete(in);
+ 	return issimple;
+ }
+@@ -137,7 +137,7 @@ Geometry* MultiLineString::getBoundary()
+ 	if (isEmpty()) {
+ 		return getFactory()->createGeometryCollection(NULL);
+ 	}
+-	Geometry *in = toInternalGeometry(this);
++	MultiLineString *in = dynamic_cast<MultiLineString *>(toInternalGeometry(this));
+ 	GeometryGraph gg(0, in);
+ 	CoordinateSequence *pts=gg.getBoundaryPoints();
+ 	if ( in != this ) delete(in);
