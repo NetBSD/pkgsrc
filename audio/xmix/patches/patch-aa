@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/07/02 21:42:32 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/06 23:49:03 joerg Exp $
 
 --- Imakefile.orig	Tue Feb  1 23:54:35 1994
 +++ Imakefile
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.4 2001/07/02 21:42:32 jlam Exp $
  all::  $(PROGRAMS)
  
 -LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB)
-+LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB) -lossaudio
++LOCAL_LIBRARIES = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB) $(LIBOSSAUDIO)
  
 -NormalProgramTarget(xmix,$(OBJS1),,$(LOCAL_LIBRARIES),)
 +PROGRAM = $(PROGRAMS)
