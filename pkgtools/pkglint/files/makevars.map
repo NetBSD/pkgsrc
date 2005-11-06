@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.27 2005/11/04 20:39:49 rillig Exp $
+# $NetBSD: makevars.map,v 1.28 2005/11/06 15:54:06 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -158,6 +158,7 @@ REPLACE_EMACS		List of Pathname
 SUBST_CLASSES		List
 SUBST_FILES		List* of Pathmask
 SUBST_SED		List*
+# ^^ This may be changed to a List later.
 SUBST_STAGE		Stage
 TOOLS_ALIASES		List of Filename
 TOOLS_BROKEN		List of Tool
