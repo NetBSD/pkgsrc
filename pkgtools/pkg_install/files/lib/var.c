@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.1 2005/11/05 13:20:09 wiz Exp $	*/
+/*	$NetBSD: var.c,v 1.2 2005/11/06 12:37:43 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2005 The NetBSD Foundation, Inc.
@@ -32,15 +32,29 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#include <nbcompat.h>
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
-__RCSID("$NetBSD: var.c,v 1.1 2005/11/05 13:20:09 wiz Exp $");
+__RCSID("$NetBSD: var.c,v 1.2 2005/11/06 12:37:43 wiz Exp $");
 #endif
 
+#if HAVE_SYS_STAT_H
 #include <sys/stat.h>
+#endif
+#if HAVE_ERR_H
 #include <err.h>
+#endif
+#if HAVE_ERRNO_H
 #include <errno.h>
+#endif
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
 
 #include "lib.h"
 
