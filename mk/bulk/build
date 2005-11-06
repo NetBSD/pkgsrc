@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.68 2005/11/05 23:22:05 rillig Exp $
+# $NetBSD: build,v 1.69 2005/11/06 10:27:57 seb Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -435,7 +435,7 @@ done
 BUILDDATE=`date +%Y-%m-%d`
 mkdir -p "${FTP}"
 ( cd "${pkgsrc_dir}" \
-  && ${PERL5} ${pkgsrc_dir} mk/bulk/post-build \
+  && ${PERL5} mk/bulk/post-build \
      > ${FTP}/pkgsrc-results-${BUILDDATE}.txt
 ) || die "Could not write the results file."
 
