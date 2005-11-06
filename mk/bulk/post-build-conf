@@ -1,11 +1,11 @@
-# $NetBSD: post-build-conf,v 1.3 2005/11/06 17:12:55 rillig Exp $
+# $NetBSD: post-build-conf,v 1.4 2005/11/06 17:14:07 rillig Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
 # "pre-build" scripts. It provides functions for printing, checking and
 # exporting the configuration variables.
 
-# Note: All function whose name start with "pbc_" are considered private
+# Note: All functions whose names start with "pbc_" are considered private
 # to this file. The "pbc" prefix is an abbreviation for "post-build-conf".
 
 # usage: pbc_showvar varname
