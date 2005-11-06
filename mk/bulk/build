@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.69 2005/11/06 10:27:57 seb Exp $
+# $NetBSD: build,v 1.70 2005/11/06 17:12:55 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -181,6 +181,7 @@ esac
 { test -f "${BULK_BUILD_CONF}" \
   && . "${BULK_BUILD_CONF}" \
   && . "${scriptdir}/post-build-conf" \
+  && check_config_vars \
   && export_config_vars
 } || die "Cannot load config file ${BULK_BUILD_CONF}, aborting."
 
