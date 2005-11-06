@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11842 2005/11/06 10:37:52 minskim Exp $
+$NetBSD: CHANGES,v 1.11843 2005/11/06 15:32:36 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5092,3 +5092,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/nsd to 2.2.0nb1 [joerg 2005-11-05]
 	Added wm/vtwm version 5.4.7 [minskim 2005-11-06]
 	Added geography/geos version 2.0.0 [minskim 2005-11-06]
+	Updated devel/cpuflags to 0.96 [abs 2005-11-06]
