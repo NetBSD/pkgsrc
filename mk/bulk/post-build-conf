@@ -1,14 +1,17 @@
-# $NetBSD: post-build-conf,v 1.2 2005/11/06 10:32:58 seb Exp $
+# $NetBSD: post-build-conf,v 1.3 2005/11/06 17:12:55 rillig Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
-# "pre-build" scripts. It provides two functions for printing and
+# "pre-build" scripts. It provides functions for printing, checking and
 # exporting the configuration variables.
 
-# usage: show_variable varname
-show_variable() {
-	eval "fnv_isset=\${$1+set}"
-	case $fnv_isset in
+# Note: All function whose name start with "pbc_" are considered private
+# to this file. The "pbc" prefix is an abbreviation for "post-build-conf".
+
+# usage: pbc_showvar varname
+pbc_showvar() {
+	eval "pbc_isset=\${$1+set}"
+	case $pbc_isset in
 	"set")	eval "fnv_val=\${$1-}"
 		printf "   %-25s = %s\\n" "$1" "${fnv_val}"
 		;;
@@ -17,27 +20,27 @@ show_variable() {
 	esac
 }
 
-# usage: section title varname...
-section() {
+# usage: pbc_section title varname...
+pbc_section() {
 	printf "%s\\n" "$1"
 	shift
-	for i in "$@"; do
-		show_variable "$i"
+	for pbc_var in "$@"; do
+		pbc_showvar "${pbc_var}"
 	done
 	printf "\\n"
 }
 
 # usage: show_config_vars
 show_config_vars() {
-	section "System information" \
+	pbc_section "System information" \
 		osrev arch BULK_BUILD_CONF USR_PKGSRC MAKECONF
-	section "Keeping pkgsrc up-to-date" \
+	pbc_section "Keeping pkgsrc up-to-date" \
 		CVS_USER CVS_FLAGS
-	section "Getting distfiles" \
+	pbc_section "Getting distfiles" \
 		PRUNEDISTFILES ftp_proxy http_proxy
-	section "Building packages" \
+	pbc_section "Building packages" \
 		PKGLIST NICE_LEVEL ADMIN ADMINSIG
-	section "Uploading binary packages" \
+	pbc_section "Uploading binary packages" \
 		UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS \
 		RSYNC_DST RSYNC_OPTS FTPHOST FTP
 }
@@ -50,5 +53,110 @@ export_config_vars() {
 	export PKGLIST NICE_LEVEL ADMIN ADMINSIG
 	export UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS
 	export RSYNC_DST RSYNC_OPTS FTPHOST FTP
-	if [ -n "$MAKECONF" ]; then export MAKECONF; fi	
+}
+
+# usage: pbc_die error-message
+pbc_die() {
+	exec 1>&2
+	printf "error: %s\\n" "$1"
+	printf "       Please check your bulk build configuration file:\\n"
+	case ${BULK_BUILD_CONF+set} in
+	"set")	printf "       %s\\n" "${BULK_BUILD_CONF}"
+	esac
+	exit 1
+}
+
+# usage: pbc_checkyesno varname
+pbc_checkyesno() {
+	eval "pbc_val=\${$1-}"
+	case $pbc_val in
+	[Yy][Ee][Ss]|[Nn][Oo]) ;;
+	*)	pbc_die "$1 must be set to one of YES, yes, NO, no.";;
+	esac
+}
+
+# usage: pbc_checkexistingfile varname
+pbc_checkexistingfile() {
+	eval "pbc_val=\${$1-}"
+
+	case $pbc_val in
+	/*)	;;
+	*)	pbc_die "$1 must be an absolute pathname.";;
+	esac
+
+	test -f "${pbc_val}" \
+	|| pbc_die "$1 must be the name of an existing file."
+}
+
+# usage: pbc_checkexistingdir varname
+pbc_checkexistingdir() {
+	eval "pbc_val=\${$1-}"
+
+	case $pbc_val in
+	/*)	;;
+	*)	pbc_die "$1 must be an absolute pathname.";;
+	esac
+
+	test -d "${pbc_val}" \
+	|| pbc_die "$1 must be the name of an existing directory."
+}
+
+# usage: pbc_checknonempty varname
+pbc_checknonempty() {
+	eval "pbc_isset=\${$1+set}"
+	eval "pbc_val=\${$1-}"
+
+	case $pbc_isset in
+	"set")	case $pbc_val in
+		"")	pbc_die "$1 must be non-empty.";;
+		esac;;
+	*)	pbc_die "$1 must be defined and non-empty.";;
+	esac
+}
+
+# usage: pbc_checkdefined varname
+pbc_checkdefined() {
+	eval "pbc_val=\${$1+set}"
+
+	case $pbc_val in
+	"set")	;;
+	*)	pbc_die "$1 must be defined.";;
+	esac
+}
+
+# usage: check_config_vars
+check_config_vars() {
+	# section "System information"
+	pbc_checknonempty osrev
+	pbc_checknonempty arch
+	pbc_checkexistingfile BULK_BUILD_CONF
+	pbc_checkexistingdir USR_PKGSRC
+	case ${MAKECONF+set} in set)
+		pbc_checkexistingfile MAKECONF;;
+	esac
+
+	# section "Keeping pkgsrc up-to-date"
+	# no checks for CVS_USER
+	# no checks for CVS_FLAGS
+
+	# section "Getting distfiles"
+	pbc_checkyesno PRUNEDISTFILES
+	# no checks for ftp_proxy
+	# no checks for http_proxy
+
+	# section "Building packages"
+	# no checks for PKGLIST
+	# no checks for NICE_LEVEL
+	# no checks for ADMIN
+	# no checks for ADMINSIG
+
+	# section "Uploading binary packages"
+	pbc_checkyesno UPDATE_VULNERABILITY_LIST
+	pbc_checkyesno PRUNEPACKAGES
+	pbc_checkyesno MKSUMS
+	# no checks for SIGN_AS
+	# no checks for RSYNC_DST
+	# no checks for RSYNC_OPTS
+	# no checks for FTPHOST
+	# no checks for FTP
 }
