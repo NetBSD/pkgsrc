@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.18 2005/07/22 12:13:12 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.19 2005/11/06 15:31:20 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -39,6 +39,7 @@ case $hw_machine_arch in
 	"Mobile Intel(R) Pentium(R) 4 - M "*) FLAGS='-march=pentium4m'	;;
 	"Pentium III (Coppermine)")	FLAGS='-march=pentium3'		;;
 	"Pentium III (Katmai)")		FLAGS='-march=pentium3'		;;
+	"AMD Athlon(tm) 64"*)		FLAGS='-march=athlon-xp'	;;
 	"Intel(R) Celeron(R) CPU "* | "Intel(R) Xeon(TM) CPU "*)
 	    case "$hw_flags" in
 		*" sse2 "*)
