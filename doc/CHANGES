@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11841 2005/11/06 00:44:29 minskim Exp $
+$NetBSD: CHANGES,v 1.11842 2005/11/06 10:37:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5091,3 +5091,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/ruby-doc-stdlib to 0.10.1 [minskim 2005-11-05]
 	Updated net/nsd to 2.2.0nb1 [joerg 2005-11-05]
 	Added wm/vtwm version 5.4.7 [minskim 2005-11-06]
+	Added geography/geos version 2.0.0 [minskim 2005-11-06]
