@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/10/08 19:55:21 seb Exp $
+# $NetBSD: Makefile,v 1.43 2005/11/06 23:54:46 rillig Exp $
 
 DISTNAME=	graphviz-2.6
 CATEGORIES=	graphics
@@ -23,6 +23,11 @@ PKGCONFIG_OVERRIDE+=	lib/gvc/libgvc.pc.in
 PKGCONFIG_OVERRIDE+=	lib/pathplan/libpathplan.pc.in
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-2*)
+BUILDLINK_TRANSFORM+=	rm:-Wno-unused-parameter
+.endif
 
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH}
