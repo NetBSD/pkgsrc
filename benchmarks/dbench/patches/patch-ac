@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/11/06 19:39:49 joerg Exp $
+
+--- system.c.orig	2005-11-06 19:15:46.000000000 +0000
++++ system.c
+@@ -30,7 +30,7 @@ ssize_t sys_getxattr (const char *path, 
+ {
+ #if defined(HAVE_GETXATTR)
+ 	return getxattr(path, name, value, size);
+-#elif defined(HAVE_EXTATTR_GET_FILE)
++#elif defined(HAVE_EXTATTR_GET_FILE) && !defined(__DragonFly__)
+ 	char *s;
+ 	int attrnamespace = (strncmp(name, "system", 6) == 0) ? 
+ 		EXTATTR_NAMESPACE_SYSTEM : EXTATTR_NAMESPACE_USER;
