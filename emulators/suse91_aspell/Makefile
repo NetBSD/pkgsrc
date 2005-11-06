@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:44 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/06 14:52:43 salo Exp $
 
 DISTNAME=		suse_aspell-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -17,7 +18,7 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		aspell-0.50.5-35.${SUSE_ARCH}.rpm
+RPMFILES=		aspell-0.50.5-38.4.${SUSE_ARCH}.rpm
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
