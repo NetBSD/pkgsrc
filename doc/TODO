@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4144 2005/11/05 11:36:34 wiz Exp $
+$NetBSD: TODO,v 1.4145 2005/11/06 12:36:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -539,7 +539,7 @@ Suggested package updates
 	o garmin-utils-2.2
 	o gated-3.6
 	o gauche-0.8.4 [pkg/30535]
-	o gauche-0.8.5
+	o gauche-0.8.6
 	o gcc-3.3.6
 	o gcc-4.0.2
 	o gcombust-0.1.55
@@ -554,6 +554,7 @@ Suggested package updates
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
 	o gift-openft-0.2.1.4
+	o gimp24-2.3.5
 	o git-4.3.20
 	o gkrellm-multiping-2.0.10
 	o gkrellm-weather-2.0.7
@@ -721,6 +722,7 @@ Suggested package updates
 	o libtorrent-0.7.6
 	o libwpd-0.8.3
 	o licq-core-1.3.0
+	o lighttpd-1.4.7
 	o lilypond-2.6.3
 	o linuxsms-0.77
 	o lmbench-2.5
@@ -758,7 +760,7 @@ Suggested package updates
 	o micq-0.5.0.4
 	o micro_httpd-20050629
 	o milter-regex-1.6
-	o mimedefang-2.53
+	o mimedefang-2.54
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
 	o mjpegtools-1.8.0
