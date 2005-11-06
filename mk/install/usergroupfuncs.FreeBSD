@@ -1,0 +1,58 @@
+# $NetBSD: usergroupfuncs.FreeBSD,v 1.1 2005/11/06 19:45:08 joerg Exp $
+#
+# Platform-specific adduser and addgroup functionality
+# on top of pw(8).
+
+# adduser user group [userid] [descr] [home] [shell]
+adduser()
+{
+	user="$1"; group="$2"; userid="$3"
+	descr="$4"; home="$5" shell="$6"
+	${TEST} $# -eq 6 || return 1
+	${TEST} -n "$user" || return 2
+	${TEST} -n "$group" || return 2
+
+	PW="@PW@"
+
+	: ${descr:="${PKGNAME%-[0-9]*} $user user"}
+	: ${home:="@PKG_USER_HOME@"}
+	: ${shell:="@PKG_USER_SHELL@"}
+
+	if ${TEST} -n "${PW}" -a -x "${PW}"; then
+		${ECHO} "Creating user: $user"
+		case $userid in
+		"")
+			${PW} useradd					\
+				$user					\
+				-c "$descr" -d "$home" -s "$shell"	\
+				-g $group
+			;;
+		*)
+			${PW} useradd					\
+				$user					\
+				-c "$descr" -d "$home" -s "$shell"	\
+				-g $group -u $userid
+			;;
+		esac
+	fi
+	return 0
+}
+
+# adduser group [groupid]
+addgroup()
+{
+	group="$1"; groupid="$2"
+	${TEST} $# -eq 2 || return 1
+	${TEST} -n "$group" || return 2
+
+	PW="@PW@"
+
+	if ${TEST} -n "${PW}" -a -x "${PW}"; then
+		${ECHO} "Creating group: $group";
+		case $groupid in
+		"")	${PW} groupadd $group ;;
+		*)	${PW} groupadd $group -g $groupid ;;
+		esac
+	fi
+	return 0
+}
