@@ -8,3 +8,4 @@
 * ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
 * -Wl,-rpath
 * include "../../mk/bsd.prefs.mk" before using "+=".
+* include "../../mk/bsd.prefs.mk" before any .if
