@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:25 martti Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/06 22:11:26 kristerw Exp $
 #
 
 COMMENT=	Streaming multimedia plugin for Netscape (communicator)
 
 BINNAME=	communicator
-COMMONDIR=	../ns-plugger-common
+COMMONDIR=	../../www/ns-plugger-common
 
 DEPENDS+=	ns-plugger-common-[0-9]*:${COMMONDIR}
 
