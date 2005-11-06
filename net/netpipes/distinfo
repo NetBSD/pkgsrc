@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/06 23:58:34 jlam Exp $
+
+SHA1 (netpipes-4.2-export.tar.gz) = e8a52168b2893a12d943cc31e5d3a7f0bb3502b0
+RMD160 (netpipes-4.2-export.tar.gz) = 26c982c0b9e4382d96335f10a5e54813f776db29
+Size (netpipes-4.2-export.tar.gz) = 74977 bytes
+SHA1 (patch-aa) = 08b395d0c47e4099461bd0c31f6bea600cab043e
+SHA1 (patch-ab) = e2ff692a1153687c5c42da9df06cdc3012c6989a
