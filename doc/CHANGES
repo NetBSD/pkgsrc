@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11844 2005/11/06 16:41:57 joerg Exp $
+$NetBSD: CHANGES,v 1.11845 2005/11/06 16:57:56 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5094,3 +5094,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added geography/geos version 2.0.0 [minskim 2005-11-06]
 	Updated devel/cpuflags to 0.96 [abs 2005-11-06]
 	Updated net/nsd to 2.2.0nb2 [joerg 2005-11-06]
+	Updated www/lighttpd to 1.4.7 [joerg 2005-11-06]
