@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.13 2005/08/02 00:23:31 reed Exp $
+# $NetBSD: FreeBSD.mk,v 1.14 2005/11/06 19:45:08 joerg Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -7,6 +7,7 @@ IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
+PW?=		/usr/sbin/pw
 RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
