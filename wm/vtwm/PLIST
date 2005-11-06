@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/06 00:43:11 minskim Exp $
+bin/vtwm
+lib/X11/vtwm/system.vtwmrc
+man/cat1/vtwm.0.gz
+@dirrm lib/X11/vtwm
