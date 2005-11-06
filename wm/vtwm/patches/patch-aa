@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/06 00:43:11 minskim Exp $
+
+--- Imakefile.orig	2005-05-09 08:46:24.000000000 -0400
++++ Imakefile
+@@ -57,7 +57,7 @@ XCOMM Installation path for the binary
+        VTWMBINDIR = $(BINDIR)
+ 
+ XCOMM Installation path for the system resource file
+-       VTWMLIBDIR = $(LIBDIR)/twm
++       VTWMLIBDIR = $(LIBDIR)/vtwm
+ 
+ XCOMM Installation path for the man page
+        VTWMMANDIR = $(MANDIR)

@@ -1,0 +1,5 @@
+VTWM is a X11 window manager based on TWM.  It adds support for a
+virtual desktop, processing configuration files using m4, support for
+sound effects using rplay, and 3D buttons, frames, titlebars, etc.
+VTWM also has support for regular expressions in the configuration
+files.
