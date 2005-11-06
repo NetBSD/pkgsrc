@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:44 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/06 14:52:44 salo Exp $
 
 DISTNAME=		suse_freetype2-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -17,7 +18,7 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		freetype2-2.1.7-53.${SUSE_ARCH}.rpm
+RPMFILES=		freetype2-2.1.7-53.6.${SUSE_ARCH}.rpm
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
