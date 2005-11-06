@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/09/25 10:40:18 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/06 19:39:49 joerg Exp $
 
---- fileio.c.orig	Mon Dec 13 03:47:59 2004
-+++ fileio.c	Sat Sep 24 23:06:17 2005
-@@ -19,6 +19,10 @@
+--- fileio.c.orig	2004-12-13 02:47:59.000000000 +0000
++++ fileio.c
+@@ -19,6 +19,14 @@
  */
  
  #include "dbench.h"
@@ -10,10 +10,14 @@ $NetBSD: patch-aa,v 1.4 2005/09/25 10:40:18 rillig Exp $
 +#include <sys/aio.h>
 +#define fdatasync fsync
 +#endif
++
++#ifdef __DragonFly__
++#define O_SYNC O_FSYNC
++#endif
  
  #define MAX_FILES 200
  
-@@ -375,12 +379,14 @@ void nb_qfileinfo(struct child_struct *c
+@@ -375,12 +383,14 @@ void nb_qfileinfo(struct child_struct *c
  
  void nb_qfsinfo(struct child_struct *child, int level, const char *status)
  {
