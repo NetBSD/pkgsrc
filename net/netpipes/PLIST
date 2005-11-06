@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/06 23:58:34 jlam Exp $
+bin/encapsulate
+bin/faucet
+bin/getpeername
+bin/getsockname
+bin/hose
+bin/sockdown
+bin/timelimit
+man/man1/encapsulate.1
+man/man1/faucet.1
+man/man1/getpeername.1
+man/man1/hose.1
+man/man1/netpipes.1
+man/man1/sockdown.1
+man/man1/timelimit.1
