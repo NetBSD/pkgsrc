@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2005/10/11 15:44:00 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/06 16:47:33 joerg Exp $
 
-DISTNAME=	lighttpd-1.4.6
+DISTNAME=	lighttpd-1.4.7
 CATEGORIES=	www
 MASTER_SITES=	http://www.lighttpd.net/download/
 
