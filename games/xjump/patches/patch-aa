@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/12 00:01:18 snj Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/06 19:25:23 tonio Exp $
 
---- Makefile.orig	2002-01-24 03:44:14.000000000 -0800
-+++ Makefile	2004-03-11 15:41:57.000000000 -0800
+--- Makefile.orig	2002-01-24 12:44:14.000000000 +0100
++++ Makefile
 @@ -1,13 +1,12 @@
  ########################################################
  
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/12 00:01:18 snj Exp $
  
  # レコードファイルのディレクトリを指定
 -RECORD_DIR  = /var/games/xjump
-+RECORD_DIR  = /var/games
++RECORD_DIR  = ${VARBASE}/games
  
  #レコードファイルのファイル名を指定(注：これはバイナリに埋め込まれます)
 -RECORD_FILE  = $(RECORD_DIR)/record
