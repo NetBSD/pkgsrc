@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/11/07 20:35:20 tv Exp $
 
 DISTNAME=	smtpfeed-1.18
 PKGREVISION=	1
@@ -41,4 +41,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$i ${DOCDIR}; \
 	done
 
+.include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
