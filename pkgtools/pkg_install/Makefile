@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2005/11/07 06:32:58 jlam Exp $
+# $NetBSD: Makefile,v 1.120 2005/11/07 06:52:24 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -79,6 +79,7 @@ do-extract:
 
 post-build:
 	${SED}	-e "s|@PKG_DBDIR@|${PKG_DBDIR}|g"			\
+		-e "s|@PKG_TOOLS_BIN@|${PKG_TOOLS_BIN}|g"		\
 		-e "s|@MKDIR@|${MKDIR}|g"				\
 		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	${CHMOD} +x ${INSTALL_FILE}
