@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/08/11 00:03:16 jlam Exp $
+# $NetBSD: options.mk,v 1.7 2005/11/07 16:43:49 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -75,6 +75,7 @@ post-install-ldap:
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authldaprc.dist
 	${CHMOD} ${SHAREMODE} ${EGDIR}/authldaprc.dist
 	${INSTALL_DATA} ${WRKSRC}/README.ldap ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/authldap.schema ${EGDIR}
 .else
 CONFIGURE_ARGS+=	--without-authldap
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/11 00:03:16 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/07 16:43:49 jlam Exp $
 
 .include "Makefile.common"
 
@@ -91,7 +91,6 @@ post-install: ${POST_INSTALL_TARGETS}
 post-install-common:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/makedat/makedat ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/authldap.schema ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/INSTALL.html ${DOCDIR}
