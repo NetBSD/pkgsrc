@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.90 2005/11/05 16:58:34 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.91 2005/11/07 18:22:22 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -89,6 +89,13 @@ BROKENFILE?=	.broken${BULK_ID}.html
 
 # This file is the work log for a broken package
 BROKENWRKLOG?=	.broken${BULK_ID}.work.html
+
+# This file is human-created to force a package to show up as broken
+# (it is never cleaned by the bulk build, and contains the broken reason)
+FORCEBROKENFILE?= .forcebroken
+.if exists(${PKGDIR}/${FORCEBROKENFILE})
+PKG_FAIL_REASON+= "${PKGNAME} is marked as broken by the bulk build administrator: `cat ${PKGDIR}/${FORCEBROKENFILE}`"
+.endif
 
 # This file is where the log of the build goes
 BUILDLOG?=	.make${BULK_ID}
