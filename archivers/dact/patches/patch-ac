@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2005/10/07 17:15:40 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2005/11/07 12:55:06 joerg Exp $
 
---- net.c.orig	2005-10-07 19:06:20.000000000 +0200
+--- net.c.orig	2001-09-07 20:29:03.000000000 +0000
 +++ net.c
-@@ -85,7 +85,7 @@ int open_net(const char *pathname, int f
+@@ -22,7 +22,6 @@
+ #include "parse.h"
+ #include "crc.h"
+ 
+-extern int errno;
+ char *dact_urls[256];
+ 
+ /*
+@@ -85,7 +84,7 @@ int open_net(const char *pathname, int f
  	mode_t mode;
  
  	va_start(args, flags);
@@ -11,7 +19,7 @@ $NetBSD: patch-ac,v 1.1 2005/10/07 17:15:40 joerg Exp $
  	va_end(args);
  
  	if (!parse_url(pathname,scheme,username,password,host,&port,file)) {
-@@ -292,7 +292,7 @@ int open_net(const char *pathname, int f
+@@ -292,7 +291,7 @@ int open_net(const char *pathname, int f
  	mode_t mode;
  
  	va_start(args, flags);
