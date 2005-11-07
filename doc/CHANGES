@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11848 2005/11/07 00:45:35 rillig Exp $
+$NetBSD: CHANGES,v 1.11849 2005/11/07 01:24:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5098,3 +5098,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/netpipes version 4.2 [jlam 2005-11-06]
 	Updated audio/xmix to 2.1nb1 [joerg 2005-11-06]
 	Updated pkgtools/pkglint to 4.38 [rillig 2005-11-07]
+	Added graphics/lprof version 1.10.1 [gdt 2005-11-06]
