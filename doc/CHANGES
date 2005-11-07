@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11849 2005/11/07 01:24:33 gdt Exp $
+$NetBSD: CHANGES,v 1.11850 2005/11/07 11:39:40 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5099,3 +5099,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/xmix to 2.1nb1 [joerg 2005-11-06]
 	Updated pkgtools/pkglint to 4.38 [rillig 2005-11-07]
 	Added graphics/lprof version 1.10.1 [gdt 2005-11-06]
+	Added devel/p5-Curses-UI version 0.95 [martti 2005-11-07]
+	Added devel/p5-Curses-UI-POE version 0.02801 [martti 2005-11-07]
+	Added devel/p5-Term-Size version 0.2 [martti 2005-11-07]
+	Added databases/p5-Data-Table version 1.43 [martti 2005-11-07]
+	Added net/p5-POE-Component-SNMP version 0.93 [martti 2005-11-07]
+	Added sysutils/p5-Sys-CpuLoad version 0.03 [martti 2005-11-07]
