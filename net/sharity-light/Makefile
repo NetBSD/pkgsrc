@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/07 21:47:14 tv Exp $
 #
 
 DISTNAME=	Sharity-Light.1.2
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.obdev.at/ftp/pub/Products/Sharity-Light/ \
 MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://www.obdev.at/Products/shlight.html
 COMMENT=	Userland smbfs -- SMB to NFS protocol converter
+
+NOT_FOR_PLATFORM=	Interix-*-* # SMB is all native
 
 # avoid picking up a bad value from a users environment
 MAKE_ENV+=	"ARCH=	"
