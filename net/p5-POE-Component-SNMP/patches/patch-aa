@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/07 11:30:34 martti Exp $
+
+--- Makefile.PL.orig	2005-11-06 06:12:13.000000000 +0200
++++ Makefile.PL	2005-11-06 06:12:45.000000000 +0200
+@@ -15,7 +15,7 @@
+ exit 0 if -e $CONFIG_FILE;
+ 
+ print "The test suite requires the use of an SNMP agent.\n";
+-my $hostname = prompt("enter a hostname [leave empty to skip all tests]");
++my $hostname = "";
+ 
+ if ($hostname) {
+     my $rcomm    = prompt("enter read community string", 'public');
