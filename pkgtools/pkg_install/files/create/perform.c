@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.8 2004/12/29 12:16:56 agc Exp $	*/
+/*	$NetBSD: perform.c,v 1.9 2005/11/07 22:57:48 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.8 2004/12/29 12:16:56 agc Exp $");
+__RCSID("$NetBSD: perform.c,v 1.9 2005/11/07 22:57:48 wiz Exp $");
 #endif
 #endif
 
@@ -174,7 +174,7 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	}
 
 	fclose(totar);
-	wait(&ret);
+	waitpid(-1, &ret, 0);
 	/* assume either signal or bad exit is enough for us */
 	if (ret) {
 		cleanup(0);
