@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2005/11/07 18:38:37 joerg Exp $
+
+--- camlibs/sonydscf1/chotplay.c.orig	2005-11-07 18:27:21.000000000 +0000
++++ camlibs/sonydscf1/chotplay.c
+@@ -28,8 +28,6 @@
+ #include "getuint.h"
+ #include "pmp.h"
+ 
+-extern int errno;
+-
+ #define MAX_PICTURE_NUM 200
+ 
+ u_char picture_index[MAX_PICTURE_NUM];

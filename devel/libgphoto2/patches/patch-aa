@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2005/11/07 18:38:37 joerg Exp $
+
+--- libgphoto2_port/serial/unix.c.orig	2005-11-07 18:17:05.000000000 +0000
++++ libgphoto2_port/serial/unix.c
+@@ -438,7 +438,7 @@ gp_port_serial_open (GPPort *dev)
+ 	}
+ 	dev->pl->fd = -1;
+ 
+-#if defined(__FreeBSD__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
+         dev->pl->fd = open (port, O_RDWR | O_NOCTTY | O_NONBLOCK);
+ #elif OS2
+         fd = open (port, O_RDWR | O_BINARY);
