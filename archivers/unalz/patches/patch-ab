@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2005/10/31 15:04:17 tv Exp $
+$NetBSD: patch-ab,v 1.8 2005/11/07 13:43:41 joerg Exp $
 
---- UnAlz.cpp.orig	2005-07-23 11:27:49.000000000 -0400
+--- UnAlz.cpp.orig	2005-07-23 15:27:49.000000000 +0000
 +++ UnAlz.cpp
 @@ -1,6 +1,6 @@
  //#include "stdafx.h"
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.7 2005/10/31 15:04:17 tv Exp $
  #endif
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  #	include <sys/endian.h>	
  	inline UINT16	unalz_le16toh(UINT16 a){return le16toh(a);}
  	inline UINT32	unalz_le32toh(UINT32 a){return le32toh(a);}
