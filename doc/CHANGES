@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11856 2005/11/07 19:45:43 tv Exp $
+$NetBSD: CHANGES,v 1.11857 2005/11/07 22:02:50 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5110,3 +5110,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated benchmarks/bytebench to 4.1.0nb2 [joerg 2005-11-07]
 	Updated audio/p5-CDDB_get to 2.25 [reed 2005-11-07]
 	Updated devel/check to 0.9.3 [tv 2005-11-07]
+	Updated net/sipcalc to 1.1.3 [seb 2005-11-07]
