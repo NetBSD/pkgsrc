@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 14:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/07 20:07:31 tv Exp $
 #
 
 DISTNAME=	libaura-2.0
@@ -25,4 +25,5 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/libaura.so* ${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/*.a ${PREFIX}/lib
 
+.include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
