@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11855 2005/11/07 17:29:09 reed Exp $
+$NetBSD: CHANGES,v 1.11856 2005/11/07 19:45:43 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5109,3 +5109,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/p5-POE to 0.3202 [martti 2005-11-07]
 	Updated benchmarks/bytebench to 4.1.0nb2 [joerg 2005-11-07]
 	Updated audio/p5-CDDB_get to 2.25 [reed 2005-11-07]
+	Updated devel/check to 0.9.3 [tv 2005-11-07]
