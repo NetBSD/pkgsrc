@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/22 17:56:31 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/07 21:17:07 tv Exp $
 
 DISTNAME=		coolmail-1.3
 PKGREVISION=		1
@@ -10,8 +10,9 @@ MAINTAINER=		root@garbled.net
 COMMENT=		Xbiff replacement with 3D animation and sound
 
 OPSYSVARS+=		EXTRA_LIBS
-EXTRA_LIBS.*=		-LSM -lcompat
-EXTRA_LIBS.IRIX=	-LSM
+EXTRA_LIBS.*=		-lcompat
+EXTRA_LIBS.Interix=	-lSM
+EXTRA_LIBS.IRIX=	# empty
 MAKE_ENV+=		EXTRA_LIBS=${EXTRA_LIBS:Q}
 MAKE_ENV+=		X11BASE=${PREFIX}
 USE_X11BASE=		yes
