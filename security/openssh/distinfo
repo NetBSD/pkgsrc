@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2005/11/07 19:35:23 tv Exp $
+$NetBSD: distinfo,v 1.50 2005/11/07 19:50:20 tv Exp $
 
 SHA1 (openssh-4.2p1.tar.gz) = 5e7231cfa8ec673ea856ce291b78fac8b380eb78
 RMD160 (openssh-4.2p1.tar.gz) = e1f45333e66d0afceb9934ab73401b4ca06f03a6
@@ -27,4 +27,4 @@ SHA1 (patch-ar) = fe7d5b715ac51bece44d6f3ba9c3c6245d27d00d
 SHA1 (patch-as) = 6af976b7c018c1a9b0841617edbffdb8b977a2d6
 SHA1 (patch-at) = 2468567cc0e91ea375f43c9ebae57644f50a5f27
 SHA1 (patch-au) = 052b0b6d8869ad09144e4fc9e1b3c5e03c669c44
-SHA1 (patch-av) = 5efc471716cecfaa7317c05771ee6d6293ecd1e3
+SHA1 (patch-av) = e4116ca18ca2f182761270ae8022987b1553c6b7
