@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2005/10/04 01:47:32 minskim Exp $
+$NetBSD: patch-aa,v 1.8 2005/11/07 18:13:54 joerg Exp $
 
---- configure.orig	2005-09-20 08:03:25.000000000 -0700
+--- configure.orig	2005-09-20 17:03:25.000000000 +0200
 +++ configure
+@@ -1815,7 +1815,7 @@ _ACEOF
+ 
+     DEFAULT_DEFAULT_wxUSE_MOTIF=1
+   ;;
+-  *-*-freebsd*)
++  *-*-freebsd* | *-*-dragonfly*)
+     USE_BSD=1
+     USE_FREEBSD=1
+     cat >>confdefs.h <<\_ACEOF
 @@ -22529,7 +22529,8 @@ SEARCH_INCLUDE="\
      /usr/XFree86/include/X11  \
      /usr/pkg/include          \
@@ -12,3 +21,40 @@ $NetBSD: patch-aa,v 1.7 2005/10/04 01:47:32 minskim Exp $
  
  echo "$as_me:$LINENO: checking for libraries directory" >&5
  echo $ECHO_N "checking for libraries directory... $ECHO_C" >&6
+@@ -35616,6 +35617,9 @@ echo "$as_me: WARNING: BeOS threads are 
+                     THREAD_OPTS="-mt $THREAD_OPTS"
+                 fi
+                 ;;
++	  *-*-dragonfly*)
++                THREAD_OPTS="-pthread $THREAD_OPTS"
++		;;
+           *-*-freebsd*)
+                                                 THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
+                 ;;
+@@ -35749,7 +35753,7 @@ echo $ECHO_N "checking if more special f
+                                                                                                                 LDFLAGS="-L/usr/lib/threads $LDFLAGS"
+                 flag="-D_THREAD_SAFE"
+                 ;;
+-            *-freebsd*)
++            *-freebsd*|*-*-dragonfly*)
+                 flag="-D_THREAD_SAFE"
+                 ;;
+             *-hp-hpux* )
+@@ -44116,7 +44120,7 @@ EOF
+       ;;
+ 
+       powerpc-apple-macos* | \
+-      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
++      *-*-dragonfly* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+       *-*-dgux5* | \
+@@ -44158,7 +44162,7 @@ echo "$as_me: error: unknown system type
+     SONAME_FLAG=
+ 
+     case "${BAKEFILE_HOST}" in
+-      *-*-linux* | *-*-freebsd* | *-*-k*bsd*-gnu )
++      *-*-linux* | *-*-freebsd* | *-*-k*bsd*-gnu | *-*-dragonfly*)
+         SONAME_FLAG="-Wl,-soname,"
+         USE_SOVERSION=1
+         USE_SOVERLINUX=1
