@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.8 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-af,v 1.9 2005/11/07 19:35:23 tv Exp $
 
 --- auth-passwd.c.orig	2005-07-26 06:54:12.000000000 -0500
 +++ auth-passwd.c
@@ -17,7 +17,7 @@ $NetBSD: patch-af,v 1.8 2005/09/21 18:07:09 reed Exp $
  #endif
 +
 +#ifdef HAVE_INTERIX
-+        result = (!setuser(pw->pw_name, password, SU_CHECK);
++        result = (!setuser(pw->pw_name, password, SU_CHECK));
 +#else
  	result = sys_auth_passwd(authctxt, password);
 +#endif
