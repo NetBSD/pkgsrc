@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
+$NetBSD: patch-ab,v 1.6 2005/11/07 13:55:32 joerg Exp $
 
---- ttcp.c.orig	1997-02-27 22:30:23.000000000 +0100
+--- ttcp.c.orig	1997-02-27 21:30:23.000000000 +0000
 +++ ttcp.c
 @@ -55,6 +55,7 @@ static char RCSid[] = "ttcp.c $Revision:
  #include <arpa/inet.h>
@@ -10,7 +10,15 @@ $NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
  
  #if defined(SYSV)
  #include <sys/times.h>
-@@ -151,7 +152,7 @@ main(argc,argv)
+@@ -99,7 +100,6 @@ char fmt = 'K';			/* output format: k = 
+ int touchdata = 0;		/* access data after reading */
+ 
+ struct hostent *addr;
+-extern int errno;
+ extern int optind;
+ extern char *optarg;
+ 
+@@ -151,7 +151,7 @@ main(argc,argv)
  int argc;
  char **argv;
  {
@@ -19,7 +27,7 @@ $NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
  	int c;
  
  	if (argc < 2) goto usage;
-@@ -263,29 +264,30 @@ char **argv;
+@@ -263,29 +263,30 @@ char **argv;
  	if ( (buf = (char *)malloc(buflen+bufalign)) == (char *)NULL)
  		err("malloc");
  	if (bufalign != 0)
@@ -57,7 +65,7 @@ $NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
  		err("bind");
  
  #if defined(SO_SNDBUF) || defined(SO_RCVBUF)
-@@ -326,7 +328,7 @@ char **argv;
+@@ -326,7 +327,7 @@ char **argv;
  			mes("nodelay");
  		}
  #endif
@@ -66,7 +74,7 @@ $NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
  			err("connect");
  		mes("connect");
  	    } else {
-@@ -348,11 +350,11 @@ char **argv;
+@@ -348,11 +349,11 @@ char **argv;
  		}
  		fromlen = sizeof(frominet);
  		domain = AF_INET;
@@ -80,7 +88,7 @@ $NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
  				&peerlen) < 0) {
  			err("getpeername");
  		  }
-@@ -412,25 +414,25 @@ char **argv;
+@@ -412,25 +413,25 @@ char **argv;
  	}
  	if( cput <= 0.0 )  cput = 0.001;
  	if( realt <= 0.0 )  realt = 0.001;
@@ -111,7 +119,7 @@ $NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
  		"ttcp%s: buffer address %#x\n",
  		trans?"-t":"-r",
  		buf);
-@@ -752,7 +754,7 @@ int count;
+@@ -752,7 +753,7 @@ int count;
  	int len = sizeof(from);
  	register int cnt;
  	if( udp )  {
@@ -120,7 +128,7 @@ $NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
  		numCalls++;
  	} else {
  		if( b_flag )
-@@ -782,7 +784,7 @@ int count;
+@@ -782,7 +783,7 @@ int count;
  	register int cnt;
  	if( udp )  {
  again:
@@ -129,7 +137,7 @@ $NetBSD: patch-ab,v 1.5 2004/07/30 10:16:52 he Exp $
  		numCalls++;
  		if( cnt<0 && errno == ENOBUFS )  {
  			delay(18000);
-@@ -803,7 +805,7 @@ delay(us)
+@@ -803,7 +804,7 @@ delay(us)
  
  	tv.tv_sec = 0;
  	tv.tv_usec = us;
