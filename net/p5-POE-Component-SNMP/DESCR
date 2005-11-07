@@ -1,0 +1,2 @@
+This module is an event-driven SNMP interface for POE.
+POE::Component::SNMP uses the Net::SNMP module.
