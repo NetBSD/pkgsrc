@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2005/11/06 22:17:53 jlam Exp $
+# $NetBSD: Makefile,v 1.119 2005/11/07 06:32:58 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -34,6 +34,7 @@ NO_CHECKSUM=		yes
 NO_MTREE=		yes
 PKG_PRESERVE=		# defined
 INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
+INSTALL_SCRIPTS_ENV+=	PKG_PREFIX=${PREFIX}
 
 # These are needed to solve a chicken-and-egg problem where pkgsrc uses
 # newer features of pkg_install, but older NetBSD installations won't
