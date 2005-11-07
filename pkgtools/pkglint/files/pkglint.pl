@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.336 2005/11/05 11:02:53 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.337 2005/11/07 00:45:01 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -620,11 +620,6 @@ my @todo_dirs;			# The list of directories that still need
 				# to be checked. Mostly relevant with
 				# --recursive.
 
-sub readmakefile($$$);
-sub checkextra($$);
-sub checkorder($$@);
-sub checkearlier($@);
-
 sub help($$$) {
 	my ($out, $exitval, $show_all) = @_;
 	my ($prog) = (basename($0));
@@ -1159,6 +1154,10 @@ sub checkfile_PLIST($) {
 				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
 			}
 
+			if ($text =~ qr"/CVS/") {
+				$line->log_warning("CVS files should not be in the PLIST.");
+			}
+
 		} else {
 			$line->log_error("Unknown line type.");
 		}
@@ -1285,6 +1284,7 @@ sub checkfile_patches_patch($) {
 	checklines_multiple_patches($lines);
 }
 
+sub readmakefile($$$);
 sub readmakefile($$$) {
 	my ($file, $all_lines, $seen_Makefile_include) = @_;
 	my $contents = "";
@@ -1570,6 +1570,11 @@ sub checktext_basic_vartype($$$$$) {
 	} elsif ($type eq "Pathmask") {
 		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?/]*$") {
 			$line->log_warning("\"${value}\" is not a valid pathname mask.");
+		}
+
+	} elsif ($type eq "PkgName") {
+		if ($value eq $value_novar && $value !~ regex_pkgname) {
+			$line->log_warning("\"${value}\" is not a valid package name.");
 		}
 
 	} elsif ($type eq "PkgRevision") {
@@ -1913,6 +1918,145 @@ sub checklines_direct_tools($) {
 	}
 }
 
+sub checklines_package_Makefile_varorder($) {
+	my ($lines) = @_;
+
+# TODO: Add support for optional sections with non-optional variables.
+
+	use constant once	=> 0;
+	use constant optional	=> 1;
+	use constant many	=> 2;
+	my (@sections) = (
+		[ "initial comments", once,
+			[
+			]
+		],
+		[ "DISTNAME", once,
+			[
+				[ "DISTNAME", once ],
+				[ "PKGNAME",  optional ],
+				[ "PKGREVISION", optional ],
+				[ "SVR4_PKGNAME", optional ],
+				[ "CATEGORIES", once ],
+				[ "MASTER_SITES", once ],
+				[ "DYNAMIC_MASTER_SITES", optional ],
+				[ "MASTER_SITE_SUBDIR", optional ],
+				[ "EXTRACT_SUFX", optional ],
+				[ "DISTFILES", optional ],
+# The following are questionable.
+#				[ "NOT_FOR_PLATFORM", optional ],
+#				[ "ONLY_FOR_PLATFORM", optional ],
+#				[ "NO_BIN_ON_FTP", optional ],
+#				[ "NO_SRC_ON_FTP", optional ],
+#				[ "NO_BIN_ON_CDROM", optional ],
+#				[ "NO_SRC_ON_CDROM", optional ],
+			]
+		],
+		[ "PATCH_SITES", optional,
+			[
+				[ "PATCH_SITES", optional ], # or once?
+				[ "PATCH_SITE_SUBDIR", optional ],
+				[ "PATCHFILES", optional ], # or once?
+				[ "PATCH_DIST_ARGS", optional ],
+				[ "PATCH_DIST_STRIP", optional ],
+				[ "PATCH_DIST_CAT", optional ],
+			]
+		],
+		[ "MAINTAINER", once,
+			[
+				[ "MAINTAINER", once ],
+				[ "HOMEPAGE", optional ],
+				[ "COMMENT", once ],
+			]
+		],
+		[ "DEPENDS", optional,
+			[
+				[ "BUILD_DEPENDS", many ],
+				[ "DEPENDS", many ],
+			]
+		]
+	);
+
+	if ($seen_Makefile_common) {
+		return;
+	}
+
+	my ($lineno, $sectindex, $varindex) = (0, -1, 0);
+	my ($next_section, $vars, $below, $below_what) = (true, undef, {}, undef);
+
+	# In each interation, one of the following becomes true:
+	# - new.lineno > old.lineno
+	# - new.sectindex > old.sectindex
+	# - new.sectindex == old.sectindex && new.varindex > old.varindex
+	# - next_section == true
+	while ($lineno <= $#{$lines}) {
+		my $line = $lines->[$lineno];
+		my $text = $line->text;
+
+		if ($next_section) {
+			$next_section = false;
+			$sectindex++;
+			last if ($sectindex > $#sections);
+			$vars = $sections[$sectindex]->[2];
+			$varindex = 0;
+		}
+
+		if ($text =~ qr"^#") {
+			$lineno++;
+
+		} elsif ($text =~ regex_varassign) {
+			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+
+			if (exists($below->{$varname})) {
+				if (defined($below->{$varname})) {
+					$line->log_warning("${varname} appears too late. Please put it below $below->{$varname}.");
+				} else {
+					$line->log_warning("${varname} appears too late. It should be the very first definition.");
+				}
+				$lineno++;
+				next;
+			}
+
+			while ($varindex <= $#{$vars} && $varname ne $vars->[$varindex]->[0] && $vars->[$varindex]->[1] != once) {
+				$below->{$vars->[$varindex]->[0]} = $below_what;
+				$varindex++;
+			}
+			if ($varindex > $#{$vars}) {
+				if ($sections[$sectindex]->[1] != optional) {
+					$line->log_warning("Empty line expected.");
+				}
+				$next_section = true;
+
+			} elsif ($varname ne $vars->[$varindex]->[0]) {
+				$line->log_warning(sprintf("Expected %s, but found %s.", $vars->[$varindex]->[0], $varname));
+				$lineno++;
+
+			} else {
+				if ($vars->[$varindex]->[1] != many) {
+					$below->{$vars->[$varindex]->[0]} = $below_what;
+					$varindex++;
+				}
+				$lineno++;
+			}
+			$below_what = $varname;
+
+		} else {
+			while ($varindex <= $#{$vars}) {
+				if ($vars->[$varindex]->[1] == once) {
+					$line->log_warning(sprintf("%s should be set here.", $vars->[$varindex]->[0]));
+				}
+				$below->{$vars->[$varindex]->[0]} = $below_what;
+				$varindex++;
+			}
+			$next_section = true;
+			if ($text eq "") {
+				$below_what = "the previous empty line";
+				$lineno++;
+			}
+		}
+	}
+}
+
 # This subroutine contains "local" checks that can be made looking only
 # at a single line at a time. The other checks are in
 # checkfile_package_Makefile.
@@ -2093,7 +2237,7 @@ sub checkfile_package_Makefile($$$) {
 	my ($fname, $rawwhole, $lines) = @_;
 	my ($distname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
-	my ($whole, $tmp, $idx, @sections, @varnames);
+	my ($whole, $tmp, $idx, @sections);
 	
 	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
 
@@ -2207,24 +2351,6 @@ sub checkfile_package_Makefile($$$) {
 	log_info($fname, NO_LINE_NUMBER, "Checking DISTNAME section.");
 	$tmp = $sections[$idx++];
 
-	# check the order of items.
-	&checkorder('DISTNAME', $tmp, qw(
-		DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES
-		MASTER_SITES DYNAMIC_MASTER_SITES MASTER_SITE_SUBDIR
-		EXTRACT_SUFX DISTFILES ONLY_FOR_ARCHS NO_SRC_ON_FTP
-		NO_BIN_ON_FTP));
-
-	# check the items that have to be there.
-	$tmp = "\n" . $tmp;
-	foreach my $i ('DISTNAME', 'CATEGORIES') {
-		if (!$seen_Makefile_common && $tmp !~ /\n$i=/) {
-			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "$i has to be there.");
-		}
-		if ($tmp =~ /\n$i(\?=)/) {
-			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "$i has to be set by \"=\", not by \"$1\".");
-		}
-	}
-
 	# check the URL
 	if ($tmp =~ /\nMASTER_SITES[+?]?=[ \t]*([^\n]*)\n/
 	 && $1 !~ /^[ \t]*$/) {
@@ -2279,10 +2405,6 @@ sub checkfile_package_Makefile($$$) {
 		$pkgname = $distname;
 	}
 
-	push(@varnames, qw(
-		DISTNAME PKGNAME SVR4_PKGNAME CATEGORIES MASTER_SITES
-		MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES));
-
 	#
 	# section 3: PATCH_SITES/PATCHFILES(optional)
 	#
@@ -2290,46 +2412,14 @@ sub checkfile_package_Makefile($$$) {
 	$tmp = $sections[$idx];
 
 	if ($tmp =~ /(PATCH_SITES|PATCH_SITE_SUBDIR|PATCHFILES|PATCH_DIST_STRIP|PATCH_DIST_CAT)/) {
-		&checkearlier($tmp, @varnames);
-
-		$tmp = "\n$tmp";
-
-		if ($tmp =~ /\n(PATCH_SITES)=/) {
-			log_info(NO_FILE, NO_LINE_NUMBER, "Seen PATCH_SITES.");
-			$tmp =~ s/$1[^\n]+\n//;
-		}
-		if ($tmp =~ /\n(PATCH_SITE_SUBDIR)=/) {
-			log_info(NO_FILE, NO_LINE_NUMBER, "Seen PATCH_SITE_SUBDIR.");
-			$tmp =~ s/$1[^\n]+\n//;
-		}
-		if ($tmp =~ /\n(PATCHFILES)=/) {
-			log_info(NO_FILE, NO_LINE_NUMBER, "Seen PATCHFILES.");
-			$tmp =~ s/$1[^\n]+\n//;
-		}
-		if ($tmp =~ /\n(PATCH_DIST_ARGS)=/) {
-			log_info(NO_FILE, NO_LINE_NUMBER, "Seen PATCH_DIST_ARGS.");
-			$tmp =~ s/$1[^\n]+\n//;
-		}
-		if ($tmp =~ /\n(PATCH_DIST_STRIP)=/) {
-			log_info(NO_FILE, NO_LINE_NUMBER, "Seen PATCH_DIST_STRIP.");
-			$tmp =~ s/$1[^\n]+\n//;
-		}
-
-		&checkextra($tmp, 'PATCH_SITES');
-
 		$idx++;
 	}
-
-	push(@varnames, qw(PATCH_SITES PATCHFILES PATCH_DIST_STRIP));
 
 	#
 	# section 4: MAINTAINER
 	#
 	log_info($fname, NO_LINE_NUMBER, "Checking MAINTAINER section.");
 	$tmp = $sections[$idx++];
-
-	# check the order of items.
-	&checkorder('MAINTAINER', $tmp, qw(MAINTAINER HOMEPAGE COMMENT));
 
 	# warnings for missing or incorrect HOMEPAGE
 	$tmp = "\n" . $tmp;
@@ -2342,7 +2432,6 @@ sub checkfile_package_Makefile($$$) {
 		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Please add a short COMMENT describing the package.");
 	}
 
-	checkearlier($tmp, @varnames);
 	$tmp = "\n" . $tmp;
 	if ($tmp =~ /\nMAINTAINER=[^@]+\@netbsd.org/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\@netbsd.org should be \@NetBSD.org in MAINTAINER.");
@@ -2355,38 +2444,15 @@ sub checkfile_package_Makefile($$$) {
 	}
 	$tmp =~ s/\n\n+/\n/g;
 
-	push(@varnames, qw(MAINTAINER HOMEPAGE COMMENT));
-
 	#
 	# section 5: *_DEPENDS (may not be there)
 	#
 	log_info($fname, NO_LINE_NUMBER, "Checking optional DEPENDS section.");
 	$tmp = $sections[$idx];
 
-	my @linestocheck = qw(BUILD_USES_MSGFMT BUILD_DEPENDS DEPENDS);
 	if ($tmp =~ qr"(?:BUILD_USED_MSGFMT|BUILD_DEPENDS|DEPENDS)") {
-		&checkearlier($tmp, @varnames);
-
-		foreach my $i (grep(/^[A-Z_]*DEPENDS[?+]?=/, split(/\n/, $tmp))) {
-			$i =~ s/^([A-Z_]*DEPENDS)[?+]?=[ \t]*//;
-			my $j = $1;
-			log_info(NO_FILE, NO_LINE_NUMBER, "Checking packages listed in $j.");
-			foreach my $k (split(/\s+/, $i)) {
-				my $l = (split(':', $k))[0];
-
-			}
-		}
-		foreach my $i (@linestocheck) {
-			$tmp =~ s/$i[?+]?=[^\n]+\n//g;
-		}
-
-		&checkextra($tmp, '*_DEPENDS');
-
 		$idx++;
 	}
-
-	push(@varnames, @linestocheck);
-	&checkearlier($tmp, @varnames);
 
 	#
 	# Makefile 6: check the rest of file
@@ -2395,8 +2461,6 @@ sub checkfile_package_Makefile($$$) {
 	$tmp = join("\n\n", @sections[$idx .. $#{sections}]);
 
 	$tmp = "\n" . $tmp;	# to make the begin-of-line check easier
-
-	&checkearlier($tmp, @varnames);
 
 	# check WRKSRC
 	#
@@ -2450,88 +2514,8 @@ sub checkfile_package_Makefile($$$) {
 	}
 
 	checklines_package_Makefile($lines);
+	checklines_package_Makefile_varorder($lines);
 	checklines_Makefile_varuse($lines);
-}
-
-sub checkextra($$) {
-	my ($str, $section) = @_;
-
-	$str = "\n" . $str if ($str !~ /^\n/);
-	$str =~ s/\n#[^\n]*/\n/g;
-	$str =~ s/\n\n+/\n/g;
-	$str =~ s/^\s+//;
-	$str =~ s/\s+$//;
-	return if ($str eq '');
-
-	if ($str =~ /^([\w\d]+)/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Extra item placed in the ".
-			"$section section, ".
-			"for example, \"$1\".");
-	} else {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Extra item placed in the ".
-			"$section section.");
-	}
-}
-
-sub checkorder($$@) {
-	my ($section, $str, @order) = @_;
-
-	if ($seen_Makefile_common || !$opt_warn_order) {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Skipping the Makefile order checks.");
-		return;
-	}
-
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking the order of $section section.");
-
-	my @items = ();
-	foreach my $i (split("\n", $str)) {
-		$i =~ s/[+?]?=.*$//;
-		push(@items, $i);
-	}
-
-	@items = reverse(@items);
-	my $j = -1;
-	my $invalidorder = 0;
-	while (@items) {
-		my $i = pop(@items);
-		my $k = 0;
-		while ($k < @order && $order[$k] ne $i) {
-			$k++;
-		}
-		if ($k <= $#order) {
-			if ($k < $j) {
-				$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "$i appears out-of-order.");
-				$invalidorder++;
-			} else {
-				log_info(NO_FILE, NO_LINE_NUMBER, "Seen $i, in order.");
-			}
-			$j = $k;
-		} else {
-			$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Extra item \"$i\" placed in".
-				" the $section section.");
-		}
-	}
-	if ($invalidorder) {
-		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Order must be " . join('/', @order) . '.');
-	} else {
-		log_info(NO_FILE, NO_LINE_NUMBER, "$section section is ordered properly.");
-	}
-}
-
-sub checkearlier($@) {
-	my ($str, @varnames) = @_;
-
-	if ($seen_Makefile_common || !$opt_warn_order) {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Skipping the Makefile earlier checks.");
-		return;
-	}
-
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking items that have to appear earlier.");
-	foreach my $i (@varnames) {
-		if ($str =~ /\n$i[?+]?=/) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\"$i\" has to appear earlier.");
-		}
-	}
 }
 
 sub checkdir_root() {

@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.28 2005/11/06 15:54:06 rillig Exp $
+# $NetBSD: makevars.map,v 1.29 2005/11/07 00:45:01 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -117,6 +117,7 @@ PAM_TYPE		Readonly
 PGSQL_VERSIONS_ACCEPTED	List* of { 73 74 80 }
 PGSQL_VERSION_DEFAULT	Userdefined
 PKGBASE			Readonly
+PKGNAME			PkgName
 PKGNAME_NOREV		Readonly
 PKGREPOSITORY		Userdefined
 PKGREPOSITORY		Userdefined
