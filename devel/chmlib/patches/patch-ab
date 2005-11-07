@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2005/11/07 19:56:47 tv Exp $
+
+--- Makefile.in.orig	2005-10-28 13:26:18.000000000 -0400
++++ Makefile.in
+@@ -35,8 +35,8 @@ src/libchm.la: src/chm_lib.lo src/lzx.lo
+ 
+ install: src/libchm.la
+ 	mkdir -p $(DESTDIR)$(prefix) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+-	${LIBTOOL} --mode=install install -m0755 src/libchm.la $(DESTDIR)$(libdir)/
+-	install -m0644 $(srcdir)/src/chm_lib.h $(DESTDIR)$(includedir)/
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} src/libchm.la $(DESTDIR)$(libdir)/
++	${BSD_INSTALL_DATA} $(srcdir)/src/chm_lib.h $(DESTDIR)$(includedir)/
+ 
+ clean:
+ 	rm -fr src/libchm.la src/*.o src/*.lo .libs src/.libs src/${EXAMPLES}
