@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/06 06:19:40 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/08 20:06:43 tonio Exp $
 
 DISTNAME=		Template-Generate-0.04
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Template/}
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/~autrijus/Template-Generate/
 COMMENT=		Perl5 module for generating TT2 templates from TT2-rendered documents
+
+LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 DEPENDS+=	p5-Template-Toolkit>=2.0:../../www/p5-Template-Toolkit
 
@@ -25,9 +27,9 @@ DEPENDS+=	p5-XML-DOM>=1.43:../../textproc/p5-XML-DOM
 DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-RSS>=0.9:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-XML-XPath>=1.08:../../textproc/p5-XML-XPath
-DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 
 PERL5_PACKLIST=		auto/Template/Generate/.packlist
 
 .include "../../lang/perl5/module.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
