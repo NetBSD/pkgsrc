@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.340 2005/11/08 22:27:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.341 2005/11/08 22:55:22 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -494,8 +494,6 @@ BEGIN {
 
 # Buildtime configuration
 use constant conf_rcsidstring	=> 'NetBSD';
-use constant conf_pkgsrcdir	=> '@PKGSRCDIR@';
-use constant conf_localbase	=> '@PREFIX@';
 use constant conf_distver	=> '@DISTVER@';
 use constant conf_make		=> '@MAKE@';
 use constant conf_datadir	=> '@DATADIR@';
@@ -606,6 +604,7 @@ use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*
 my $current_dir;		# The currently checked directory.
 my $is_wip;			# Is the current directory from pkgsrc-wip?
 
+my $pkgsrcdir;			# The pkgsrc root directory
 my $pkgdir;			# PKGDIR from the package Makefile
 my $filesdir;			# FILESDIR from the package Makefile
 my $patchdir;			# PATCHDIR from the package Makefile
@@ -730,7 +729,7 @@ sub load_make_vars_typemap() {
 my $load_dist_sites_url2name = undef;
 my $load_dist_sites_names = undef;
 sub load_dist_sites() {
-	my ($fname) = (conf_pkgsrcdir."/mk/bsd.sites.mk");
+	my ($fname) = ("${pkgsrcdir}/mk/bsd.sites.mk");
 	my ($lines) = load_file($fname);
 	my ($varname) = undef;
 	my ($ignoring) = false;
@@ -1440,7 +1439,7 @@ sub get_tool_names() {
 
 	my $tools = {};
 	foreach my $file (qw(autoconf automake ldconfig make replace rpcgen texinfo)) {
-		my $fname = conf_pkgsrcdir."/mk/tools/${file}.mk";
+		my $fname = "${pkgsrcdir}/mk/tools/${file}.mk";
 		my $lines = load_lines($fname, true);
 
 		if (!$lines) {
@@ -2845,13 +2844,16 @@ sub checkdir($) {
 	$is_wip = !$opt_import && (Cwd::abs_path($dir) =~ qr"/wip(?:/|$)");
 
 	if (-f "${dir}/../../mk/bsd.pkg.mk") {
+		$pkgsrcdir = "${dir}/../..";
 		checkdir_package();
 
 	} elsif (-f "${dir}/../mk/bsd.pkg.mk") {
 		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
+		$pkgsrcdir = "${dir}/..";
 		checkdir_category();
 
 	} elsif (-f "${dir}/mk/bsd.pkg.mk") {
+		$pkgsrcdir = $dir;
 		checkdir_root();
 
 	} else {
