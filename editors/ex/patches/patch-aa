@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2004/02/18 21:29:10 kristerw Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/08 21:46:03 rillig Exp $
 
---- Makefile.orig	2004-01-03 23:22:47.000000000 +0900
-+++ Makefile	2004-02-16 07:24:39.000000000 +0900
+--- Makefile.orig	Sat Jan  3 15:22:47 2004
++++ Makefile	Tue Nov  8 22:41:34 2005
 @@ -83,13 +83,15 @@
  BINDIR		= bin
  LIBEXECDIR	= libexec
@@ -52,3 +52,12 @@ $NetBSD: patch-aa,v 1.4 2004/02/18 21:29:10 kristerw Exp $
  
  #
  # Since ex uses sbrk() internally, a conflict with the libc's version of
+@@ -297,7 +299,7 @@
+ 		mv $(DESTDIR)/$(BINDIR)/ex $(DESTDIR)/$(BINDIR)/ex.old.$$$$; \
+ 		rm -f $(DESTDIR)/$(BINDIR)/ex.old.$$$$; \
+ 	fi
+-	$(INSTALL) -c -s -m 1755 ex $(DESTDIR)/$(BINDIR)/ex
++	$(INSTALL) -c -s -m 755 ex $(DESTDIR)/$(BINDIR)/ex
+ 	test -d $(DESTDIR)/$(LIBEXECDIR) || mkdir $(DESTDIR)/$(LIBEXECDIR)
+ 	$(INSTALL) -c -s exrecover $(DESTDIR)/$(LIBEXECDIR)/exrecover
+ 	$(INSTALL) -c -s expreserve $(DESTDIR)/$(LIBEXECDIR)/expreserve
