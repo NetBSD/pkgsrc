@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.132 2005/11/08 03:36:13 tv Exp $
+# $NetBSD: replace.mk,v 1.133 2005/11/08 17:38:52 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -198,17 +198,6 @@ _TOOLS_USE_PKGSRC.${_t_}?=	yes
 # command, e.g., TOOLS_TBL, TOOLS_YACC, etc., provided that "TOOL" has
 # been associated with <tool>.
 #
-.if !defined(TOOLS_IGNORE.[) && !empty(_USE_TOOLS:M\[)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.[=
-.  elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
-TOOLS_DEPENDS.[?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			[
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.[=coreutils
-TOOLS_PATH.[=			${TOOLS_PREFIX.[}/bin/${GNU_PROGRAM_PREFIX}[
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.awk) && !empty(_USE_TOOLS:Mawk)
 .  if !empty(PKGPATH:Mlang/nawk)
 MAKEFLAGS+=			TOOLS_IGNORE.awk=
@@ -220,17 +209,6 @@ TOOLS_PATH.awk=			${TOOLS_PREFIX.awk}/bin/nawk
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.basename) && !empty(_USE_TOOLS:Mbasename)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.basename=
-.  elif !empty(_TOOLS_USE_PKGSRC.basename:M[yY][eE][sS])
-TOOLS_DEPENDS.basename?=	coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			basename
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.basename=coreutils
-TOOLS_PATH.basename=		${TOOLS_PREFIX.basename}/bin/${GNU_PROGRAM_PREFIX}basename
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.bash) && !empty(_USE_TOOLS:Mbash)
 .  if !empty(PKGPATH:Mshells/bash)
 MAKEFLAGS+=			TOOLS_IGNORE.bash=
@@ -239,25 +217,6 @@ TOOLS_DEPENDS.bash?=		bash-[0-9]*:../../shells/bash
 TOOLS_CREATE+=			bash
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bash=bash
 TOOLS_PATH.bash=		${TOOLS_PREFIX.bash}/bin/bash
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.bdftopcf) && !empty(_USE_TOOLS:Mbdftopcf)
-.  if !empty(PKGPATH:Mx11/XFree86-clients) || !empty(PKGPATH:Mx11/xorg-clients)
-MAKEFLAGS+=			TOOLS_IGNORE.bdftopcf=
-.  elif !empty(_TOOLS_USE_PKGSRC.bdftopcf:M[yY][eE][sS])
-TOOLS_CREATE+=			bdftopcf
-.    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.bdftopcf?=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftopcf=imake
-TOOLS_PATH.bdftopcf=		${TOOLS_PREFIX.bdftopcf}/${X11ROOT_PREFIX}/bin/bdftopcf
-.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.bdftopcf?=	xorg-clients>=6.8:../../x11/xorg-clients
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftopcf=xorg-clients
-TOOLS_PATH.bdftopcf=		${TOOLS_PREFIX.bdftopcf}/${X11ROOT_PREFIX}/bin/bdftopcf
-.    else # !empty(X11_TYPE:Mnative)
-TOOLS_PATH.bdftopcf=		${X11BASE}/bin/bdftopcf
-.    endif
 .  endif
 .endif
 
@@ -315,72 +274,6 @@ TOOLS_PATH.bzcat=		${TOOLS_PREFIX.bzcat}/bin/bzcat
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.cat) && !empty(_USE_TOOLS:Mcat)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.cat=
-.  elif !empty(_TOOLS_USE_PKGSRC.cat:M[yY][eE][sS])
-TOOLS_DEPENDS.cat?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			cat
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.cat=coreutils
-TOOLS_PATH.cat=			${TOOLS_PREFIX.cat}/bin/${GNU_PROGRAM_PREFIX}cat
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.chgrp) && !empty(_USE_TOOLS:Mchgrp)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.chgrp=
-.  elif !empty(_TOOLS_USE_PKGSRC.chgrp:M[yY][eE][sS])
-TOOLS_DEPENDS.chgrp?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			chgrp
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.chgrp=coreutils
-TOOLS_PATH.chgrp=		${TOOLS_PREFIX.chgrp}/bin/${GNU_PROGRAM_PREFIX}chgrp
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.chmod) && !empty(_USE_TOOLS:Mchmod)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.chmod=
-.  elif !empty(_TOOLS_USE_PKGSRC.chmod:M[yY][eE][sS])
-TOOLS_DEPENDS.chmod?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			chmod
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.chmod=coreutils
-TOOLS_PATH.chmod=		${TOOLS_PREFIX.chmod}/bin/${GNU_PROGRAM_PREFIX}chmod
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.chown) && !empty(_USE_TOOLS:Mchown)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.chown=
-.  elif !empty(_TOOLS_USE_PKGSRC.chown:M[yY][eE][sS])
-TOOLS_DEPENDS.chown?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			chown
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.chown=coreutils
-TOOLS_PATH.chown=		${TOOLS_PREFIX.chown}/bin/${GNU_PROGRAM_PREFIX}chown
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.cmp) && !empty(_USE_TOOLS:Mcmp)
-.  if !empty(PKGPATH:Mdevel/diffutils)
-MAKEFLAGS+=			TOOLS_IGNORE.cmp=
-.  elif !empty(_TOOLS_USE_PKGSRC.cmp:M[yY][eE][sS])
-TOOLS_DEPENDS.cmp?=		diffutils>=2.8.1:../../devel/diffutils
-TOOLS_CREATE+=			cmp
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.cmp=diffutils
-TOOLS_PATH.cmp=			${TOOLS_PREFIX.cmp}/bin/${GNU_PROGRAM_PREFIX}cmp
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.cp) && !empty(_USE_TOOLS:Mcp)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.cp=
-.  elif !empty(_TOOLS_USE_PKGSRC.cp:M[yY][eE][sS])
-TOOLS_DEPENDS.cp?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			cp
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.cp=coreutils
-TOOLS_PATH.cp=			${TOOLS_PREFIX.cp}/bin/${GNU_PROGRAM_PREFIX}cp
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.csh) && !empty(_USE_TOOLS:Mcsh)
 .  if !empty(PKGPATH:Mshells/tcsh)
 MAKEFLAGS+=			TOOLS_IGNORE.csh=
@@ -389,116 +282,6 @@ TOOLS_DEPENDS.csh?=		tcsh-[0-9]*:../../shells/tcsh
 TOOLS_CREATE+=			csh
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.csh=tcsh
 TOOLS_PATH.csh=			${TOOLS_PREFIX.csh}/bin/tcsh
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.cut) && !empty(_USE_TOOLS:Mcut)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.cut=
-.  elif !empty(_TOOLS_USE_PKGSRC.cut:M[yY][eE][sS])
-TOOLS_DEPENDS.cut?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			cut
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.cut=coreutils
-TOOLS_PATH.cut=			${TOOLS_PREFIX.cut}/bin/${GNU_PROGRAM_PREFIX}cut
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.date) && !empty(_USE_TOOLS:Mdate)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.date=
-.  elif !empty(_TOOLS_USE_PKGSRC.date:M[yY][eE][sS])
-TOOLS_DEPENDS.date?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			date
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.date=coreutils
-TOOLS_PATH.date=		${TOOLS_PREFIX.date}/bin/${GNU_PROGRAM_PREFIX}date
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.diff) && !empty(_USE_TOOLS:Mdiff)
-.  if !empty(PKGPATH:Mdevel/diffutils)
-MAKEFLAGS+=			TOOLS_IGNORE.diff=
-.  elif !empty(_TOOLS_USE_PKGSRC.diff:M[yY][eE][sS])
-TOOLS_DEPENDS.diff?=		diffutils>=2.8.1:../../devel/diffutils
-TOOLS_CREATE+=			diff
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.diff=diffutils
-TOOLS_PATH.diff=		${TOOLS_PREFIX.diff}/bin/${GNU_PROGRAM_PREFIX}diff
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.dirname) && !empty(_USE_TOOLS:Mdirname)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.dirname=
-.  elif !empty(_TOOLS_USE_PKGSRC.dirname:M[yY][eE][sS])
-TOOLS_DEPENDS.dirname?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			dirname
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.dirname=coreutils
-TOOLS_PATH.dirname=		${TOOLS_PREFIX.dirname}/bin/${GNU_PROGRAM_PREFIX}dirname
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.echo) && !empty(_USE_TOOLS:Mecho)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.echo=
-.  elif !empty(_TOOLS_USE_PKGSRC.echo:M[yY][eE][sS])
-TOOLS_DEPENDS.echo?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			echo
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.echo=coreutils
-TOOLS_PATH.echo=		${TOOLS_PREFIX.echo}/bin/${GNU_PROGRAM_PREFIX}echo
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.egrep) && !empty(_USE_TOOLS:Megrep)
-.  if !empty(PKGPATH:Mtextproc/grep)
-MAKEFLAGS+=			TOOLS_IGNORE.egrep=
-.  elif !empty(_TOOLS_USE_PKGSRC.egrep:M[yY][eE][sS])
-TOOLS_DEPENDS.egrep?=		grep>=2.5.1:../../textproc/grep
-TOOLS_CREATE+=			egrep
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.egrep=grep
-TOOLS_PATH.egrep=		${TOOLS_PREFIX.egrep}/bin/${GNU_PROGRAM_PREFIX}egrep
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.env) && !empty(_USE_TOOLS:Menv)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.env=
-.  elif !empty(_TOOLS_USE_PKGSRC.env:M[yY][eE][sS])
-TOOLS_DEPENDS.env?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			env
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.env=coreutilsj
-TOOLS_PATH.env=			${TOOLS_PREFIX.env}/bin/${GNU_PROGRAM_PREFIX}env
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.expr) && !empty(_USE_TOOLS:Mexpr)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.expr=
-.  elif !empty(_TOOLS_USE_PKGSRC.expr:M[yY][eE][sS])
-TOOLS_DEPENDS.expr?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			expr
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.expr=coreutils
-TOOLS_PATH.expr=		${TOOLS_PREFIX.expr}/bin/${GNU_PROGRAM_PREFIX}expr
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.false) && !empty(_USE_TOOLS:Mfalse)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.false=
-.  elif !empty(_TOOLS_USE_PKGSRC.false:M[yY][eE][sS])
-TOOLS_DEPENDS.false?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			false
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.false=coreutils
-TOOLS_PATH.false=		${TOOLS_PREFIX.false}/bin/${GNU_PROGRAM_PREFIX}false
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.fgrep) && !empty(_USE_TOOLS:Mfgrep)
-.  if !empty(PKGPATH:Mtextproc/grep)
-MAKEFLAGS+=			TOOLS_IGNORE.fgrep=
-.  elif !empty(_TOOLS_USE_PKGSRC.fgrep:M[yY][eE][sS])
-TOOLS_DEPENDS.fgrep?=		grep>=2.5.1:../../textproc/grep
-TOOLS_CREATE+=			fgrep
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.fgrep=grep
-TOOLS_PATH.fgrep=		${TOOLS_PREFIX.fgrep}/bin/${GNU_PROGRAM_PREFIX}fgrep
 .  endif
 .endif
 
@@ -576,17 +359,6 @@ TOOLS_PATH.gmake=		${TOOLS_PREFIX.gmake}/bin/gmake
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.grep) && !empty(_USE_TOOLS:Mgrep)
-.  if !empty(PKGPATH:Mtextproc/grep)
-MAKEFLAGS+=			TOOLS_IGNORE.grep=
-.  elif !empty(_TOOLS_USE_PKGSRC.grep:M[yY][eE][sS])
-TOOLS_DEPENDS.grep?=		grep>=2.5.1:../../textproc/grep
-TOOLS_CREATE+=			grep
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.grep=grep
-TOOLS_PATH.grep=		${TOOLS_PREFIX.grep}/bin/${GNU_PROGRAM_PREFIX}grep
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.gsed) && !empty(_USE_TOOLS:Mgsed)
 .  if !empty(PKGPATH:Mtextproc/gsed)
 MAKEFLAGS+=			TOOLS_IGNORE.gsed=
@@ -645,39 +417,6 @@ TOOLS_ARGS.gzip=		-nf ${GZIP}
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.head) && !empty(_USE_TOOLS:Mhead)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.head=
-.  elif !empty(_TOOLS_USE_PKGSRC.head:M[yY][eE][sS])
-TOOLS_DEPENDS.head?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			head
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.head=coreutils
-TOOLS_PATH.head=		${TOOLS_PREFIX.head}/bin/${GNU_PROGRAM_PREFIX}head
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.hostname) && !empty(_USE_TOOLS:Mhostname)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.hostname=
-.  elif !empty(_TOOLS_USE_PKGSRC.hostname:M[yY][eE][sS])
-TOOLS_DEPENDS.hostname?=	coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			hostname
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.hostname=coreutils
-TOOLS_PATH.hostname=		${TOOLS_PREFIX.hostname}/bin/${GNU_PROGRAM_PREFIX}hostname
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.id) && !empty(_USE_TOOLS:Mid)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.id=
-.  elif !empty(_TOOLS_USE_PKGSRC.id:M[yY][eE][sS])
-TOOLS_DEPENDS.id?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			id
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.id=coreutils
-TOOLS_PATH.id=			${TOOLS_PREFIX.id}/bin/${GNU_PROGRAM_PREFIX}id
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.imake) && !empty(_USE_TOOLS:Mimake)
 .  if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
 MAKEFLAGS+=			TOOLS_IGNORE.imake=
@@ -697,17 +436,6 @@ TOOLS_PATH.imake=		${IMAKE}
 .    else
 TOOLS_PATH.imake=		${X11BASE}/bin/imake
 .    endif
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.install) && !empty(_USE_TOOLS:Minstall)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.install=
-.  elif !empty(_TOOLS_USE_PKGSRC.install:M[yY][eE][sS])
-TOOLS_DEPENDS.install?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			install
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.install=coreutils
-TOOLS_PATH.install=		${TOOLS_PREFIX.install}/bin/${GNU_PROGRAM_PREFIX}install
 .  endif
 .endif
 
@@ -738,28 +466,6 @@ TOOLS_PATH.lha=			${TOOLS_PREFIX.lha}/bin/lha
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.ln) && !empty(_USE_TOOLS:Mln)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.ln=
-.  elif !empty(_TOOLS_USE_PKGSRC.ln:M[yY][eE][sS])
-TOOLS_DEPENDS.ln?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			ln
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ln=coreutils
-TOOLS_PATH.ln=			${TOOLS_PREFIX.ln}/bin/${GNU_PROGRAM_PREFIX}ln
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.ls) && !empty(_USE_TOOLS:Mls)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.ls=
-.  elif !empty(_TOOLS_USE_PKGSRC.ls:M[yY][eE][sS])
-TOOLS_DEPENDS.ls?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			ls
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ls=coreutils
-TOOLS_PATH.ls=			${TOOLS_PREFIX.ls}/bin/${GNU_PROGRAM_PREFIX}ls
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.m4) && !empty(_USE_TOOLS:Mm4)
 .  if !empty(PKGPATH:Mdevel/m4)
 MAKEFLAGS+=			TOOLS_IGNORE.m4=
@@ -779,18 +485,6 @@ TOOLS_DEPENDS.mail?=		nail>=11.22:../../mail/nail
 TOOLS_CREATE+=			mail
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mail=nail
 TOOLS_PATH.mail=		${TOOLS_PREFIX.mail}/bin/nail
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.mkdir) && !empty(_USE_TOOLS:Mmkdir)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.mkdir=
-.  elif !empty(_TOOLS_USE_PKGSRC.mkdir:M[yY][eE][sS])
-TOOLS_DEPENDS.mkdir?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			mkdir
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkdir=coreutils
-TOOLS_PATH.mkdir=		${TOOLS_PREFIX.mkdir}/bin/${GNU_PROGRAM_PREFIX}mkdir
-TOOLS_ARGS.mkdir=		-p
 .  endif
 .endif
 
@@ -817,28 +511,6 @@ MAKEFLAGS+=			TOOLS_IGNORE.mtree=
 TOOLS_CREATE+=			mtree
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mtree=mtree
 TOOLS_PATH.mtree=		${TOOLS_PREFIX.mtree}/bin/mtree
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.mv) && !empty(_USE_TOOLS:Mmv)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.mv=
-.  elif !empty(_TOOLS_USE_PKGSRC.mv:M[yY][eE][sS])
-TOOLS_DEPENDS.mv?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			mv
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mv=coreutils
-TOOLS_PATH.mv=			${TOOLS_PREFIX.mv}/bin/${GNU_PROGRAM_PREFIX}mv
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.nice) && !empty(_USE_TOOLS:Mnice)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.nice=
-.  elif !empty(_TOOLS_USE_PKGSRC.nice:M[yY][eE][sS])
-TOOLS_DEPENDS.nice?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			nice
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.nice=coreutils
-TOOLS_PATH.nice=		${TOOLS_PREFIX.nice}/bin/${GNU_PROGRAM_PREFIX}nice
 .  endif
 .endif
 
@@ -916,50 +588,6 @@ TOOLS_PATH.pod2man=		${TOOLS_PREFIX.pod2man}/bin/pod2man
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.printf) && !empty(_USE_TOOLS:Mprintf)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.printf=
-.  elif !empty(_TOOLS_USE_PKGSRC.printf:M[yY][eE][sS])
-TOOLS_DEPENDS.printf?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			printf
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.printf=coreutils
-TOOLS_PATH.printf=		${TOOLS_PREFIX.printf}/bin/${GNU_PROGRAM_PREFIX}printf
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.pwd) && !empty(_USE_TOOLS:Mpwd)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.pwd=
-.  elif !empty(_TOOLS_USE_PKGSRC.pwd:M[yY][eE][sS])
-TOOLS_DEPENDS.pwd?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			pwd
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pwd=coreutils
-TOOLS_PATH.pwd=			${TOOLS_PREFIX.pwd}/bin/${GNU_PROGRAM_PREFIX}pwd
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.rm) && !empty(_USE_TOOLS:Mrm)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.rm=
-.  elif !empty(_TOOLS_USE_PKGSRC.rm:M[yY][eE][sS])
-TOOLS_DEPENDS.rm?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			rm
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.rm=coreutils
-TOOLS_PATH.rm=			${TOOLS_PREFIX.rm}/bin/${GNU_PROGRAM_PREFIX}rm
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.rmdir) && !empty(_USE_TOOLS:Mrmdir)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.rmdir=
-.  elif !empty(_TOOLS_USE_PKGSRC.rmdir:M[yY][eE][sS])
-TOOLS_DEPENDS.rmdir?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			rmdir
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.rmdir=coreutils
-TOOLS_PATH.rmdir=		${TOOLS_PREFIX.rmdir}/bin/${GNU_PROGRAM_PREFIX}rmdir
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.sed) && !empty(_USE_TOOLS:Msed)
 .  if !empty(PKGPATH:Mtextproc/nbsed)
 MAKEFLAGS+=			TOOLS_IGNORE.sed=
@@ -994,17 +622,6 @@ TOOLS_PATH.shlock=		${TOOLS_PREFIX.shlock}/bin/shlock
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.sleep) && !empty(_USE_TOOLS:Msleep)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.sleep=
-.  elif !empty(_TOOLS_USE_PKGSRC.sleep:M[yY][eE][sS])
-TOOLS_DEPENDS.sleep?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			sleep
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.sleep=coreutils
-TOOLS_PATH.sleep=		${TOOLS_PREFIX.sleep}/bin/${GNU_PROGRAM_PREFIX}sleep
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.soelim) && !empty(_USE_TOOLS:Msoelim)
 .  if !empty(PKGPATH:Mtextproc/groff)
 MAKEFLAGS+=			TOOLS_IGNORE.soelim=
@@ -1013,28 +630,6 @@ TOOLS_DEPENDS.soelim?=		groff>=1.19nb4:../../textproc/groff
 TOOLS_CREATE+=			soelim
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.soelim=groff
 TOOLS_PATH.soelim=		${TOOLS_PREFIX.soelim}/bin/soelim
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.sort) && !empty(_USE_TOOLS:Msort)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.sort=
-.  elif !empty(_TOOLS_USE_PKGSRC.sort:M[yY][eE][sS])
-TOOLS_DEPENDS.sort?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			sort
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.sort=coreutils
-TOOLS_PATH.sort=		${TOOLS_PREFIX.sort}/bin/${GNU_PROGRAM_PREFIX}sort
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.tail) && !empty(_USE_TOOLS:Mtail)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.tail=
-.  elif !empty(_TOOLS_USE_PKGSRC.tail:M[yY][eE][sS])
-TOOLS_DEPENDS.tail?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			tail
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tail=coreutils
-TOOLS_PATH.tail=		${TOOLS_PREFIX.tail}/bin/${GNU_PROGRAM_PREFIX}tail
 .  endif
 .endif
 
@@ -1061,72 +656,6 @@ TOOLS_DEPENDS.tbl?=		groff>=1.19nb4:../../textproc/groff
 TOOLS_CREATE+=			tbl
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tbl=groff
 TOOLS_PATH.tbl=			${TOOLS_PREFIX.tbl}/bin/tbl
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.tee) && !empty(_USE_TOOLS:Mtee)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.tee=
-.  elif !empty(_TOOLS_USE_PKGSRC.tee:M[yY][eE][sS])
-TOOLS_DEPENDS.tee?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			tee
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tee=coreutils
-TOOLS_PATH.tee=			${TOOLS_PREFIX.tee}/bin/${GNU_PROGRAM_PREFIX}tee
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.test) && !empty(_USE_TOOLS:Mtest)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.test=
-.  elif !empty(_TOOLS_USE_PKGSRC.test:M[yY][eE][sS])
-TOOLS_DEPENDS.test?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			test
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.test=coreutils
-TOOLS_PATH.test=		${TOOLS_PREFIX.test}/bin/${GNU_PROGRAM_PREFIX}test
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.touch) && !empty(_USE_TOOLS:Mtouch)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.touch=
-.  elif !empty(_TOOLS_USE_PKGSRC.touch:M[yY][eE][sS])
-TOOLS_DEPENDS.touch?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			touch
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.touch=coreutils
-TOOLS_PATH.touch=		${TOOLS_PREFIX.touch}/bin/${GNU_PROGRAM_PREFIX}touch
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.tr) && !empty(_USE_TOOLS:Mtr)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.tr=
-.  elif !empty(_TOOLS_USE_PKGSRC.tr:M[yY][eE][sS])
-TOOLS_DEPENDS.tr?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			tr
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tr=coreutils
-TOOLS_PATH.tr=			${TOOLS_PREFIX.tr}/bin/${GNU_PROGRAM_PREFIX}tr
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.true) && !empty(_USE_TOOLS:Mtrue)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.true=
-.  elif !empty(_TOOLS_USE_PKGSRC.true:M[yY][eE][sS])
-TOOLS_DEPENDS.true?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			true
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.true=coreutils
-TOOLS_PATH.true=		${TOOLS_PREFIX.true}/bin/${GNU_PROGRAM_PREFIX}true
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.tsort) && !empty(_USE_TOOLS:Mtsort)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.tsort=
-.  elif !empty(_TOOLS_USE_PKGSRC.tsort:M[yY][eE][sS])
-TOOLS_DEPENDS.tsort?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			tsort
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tsort=coreutils
-TOOLS_PATH.tsort=		${TOOLS_PREFIX.tsort}/bin/${GNU_PROGRAM_PREFIX}tsort
 .  endif
 .endif
 
@@ -1160,17 +689,6 @@ TOOLS_DEPENDS.unzoo?=		unzoo-[0-9]*:../../archivers/unzoo
 TOOLS_CREATE+=			unzoo
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.unzoo=unzoo
 TOOLS_PATH.unzoo=		${TOOLS_PREFIX.unzoo}/bin/unzoo
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.wc) && !empty(_USE_TOOLS:Mwc)
-.  if !empty(PKGPATH:Msysutils/coreutils)
-MAKEFLAGS+=			TOOLS_IGNORE.wc=
-.  elif !empty(_TOOLS_USE_PKGSRC.wc:M[yY][eE][sS])
-TOOLS_DEPENDS.wc?=		coreutils>=5.2.1:../../sysutils/coreutils
-TOOLS_CREATE+=			wc
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.wc=coreutils
-TOOLS_PATH.wc=			${TOOLS_PREFIX.wc}/bin/${GNU_PROGRAM_PREFIX}wc
 .  endif
 .endif
 
@@ -1225,6 +743,114 @@ TOOLS_PATH.yacc=		${TOOLS_PREFIX.yacc}/bin/bison
 TOOLS_ARGS.yacc=		-y
 .  endif
 .endif
+
+######################################################################
+
+# These tools are all supplied by the sysutuils/coreutils package if
+# there is no native tool available.
+#
+_TOOLS.coreutils=	basename cat chgrp chmod chown cp cut date	\
+			dirname echo env expr false head hostname id	\
+			install ln ls mkdir mv nice printf pwd rm rmdir	\
+			sleep sort tail tee test touch tr true tsort wc
+
+.for _t_ in ${_TOOLS.coreutils}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=	coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_CREATE+=		${_t_}
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=coreutils
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+.    endif
+.  endif
+.endfor
+
+# The ``['' tool is special because it matches a token that's interpreted
+# by bmake.
+#
+.if !defined(TOOLS_IGNORE.[) && !empty(_USE_TOOLS:M\[)
+.  if !empty(PKGPATH:Msysutils/coreutils)
+MAKEFLAGS+=		TOOLS_IGNORE.[=
+.  elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
+TOOLS_DEPENDS.[?=	coreutils>=5.2.1:../../sysutils/coreutils
+TOOLS_CREATE+=		[
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.[=coreutils
+TOOLS_PATH.[=		${TOOLS_PREFIX.[}/bin/${GNU_PROGRAM_PREFIX}[
+.  endif
+.endif
+
+######################################################################
+
+# These tools are all supplied by the textproc/grep package if there is
+# no native tool available.
+#
+_TOOLS.grep=	egrep fgrep grep
+
+.for _t_ in ${_TOOLS.grep}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mtextproc/grep)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=	grep>=2.5.1:../../textproc/grep
+TOOLS_CREATE+=		${_t_}
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=grep
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+.    endif
+.  endif
+.endfor
+
+######################################################################
+
+# These tools are all supplied by the devel/diffutils package if there is
+# no native tool available.
+#
+_TOOLS.diffutils=	cmp diff
+
+.for _t_ in ${_TOOLS.diffutils}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mdevel/diffutils)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=	diffutils>=2.8.1:../../devel/diffutils
+TOOLS_CREATE+=		${_t_}
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=diffutils
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+.    endif
+.  endif
+.endfor
+
+######################################################################
+
+# These tools are all supplied by an X11 clients package if there is no
+# native tool available.
+#
+_TOOLS.x11-clients=	bdftopcf
+
+.for _t_ in ${_TOOLS.x11-clients}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mx11/XFree86-clients) || \
+        !empty(PKGPATH:Mx11/xorg-clients)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_CREATE+=		${_t_}
+.      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+TOOLS_DEPENDS.${_t_}?=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+.      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+TOOLS_DEPENDS.${_t_}?=	xorg-clients>=6.8:../../x11/xorg-clients
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-clients
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+.      else # !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
+.      endif
+.    endif
+.  endif
+.endfor
+
+######################################################################
 
 # Compute the locations of the pkgsrc-supplied tools.
 FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
