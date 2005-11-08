@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/08 16:50:51 tv Exp $
 #
 
 DISTNAME=		lrmi-0.8
@@ -11,6 +11,8 @@ HOMEPAGE=		http://sourceforge.net/projects/lrmi/
 COMMENT=		Wrapper to the i386 vm86 mode
 
 ONLY_FOR_PLATFORM=	*-*-i386
+NOT_FOR_PLATFORM+=	Interix-*-* # cannot call real mode from Windows
+
 MAKEFILE=		Makefile.bsd
 INSTALLATION_DIRS=	bin include lib
 
