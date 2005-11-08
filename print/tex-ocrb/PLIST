@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 00:50:02 mjl Exp $
-share/texmf/doc/fonts/ocrb/ocrbinfo
-share/texmf/fonts/source/ocrb/ocrb10.mf
-share/texmf/fonts/source/ocrb/ocrb10e.mf
-share/texmf/fonts/source/ocrb/ocrb10f.mf
-share/texmf/fonts/source/ocrb/ocrb10g.mf
-share/texmf/fonts/source/ocrb/ocrb10l.mf
-share/texmf/fonts/source/ocrb/ocrb10s.mf
-share/texmf/fonts/source/ocrb/ocrb10x.mf
-share/texmf/fonts/source/ocrb/ocrb5.mf
-share/texmf/fonts/source/ocrb/ocrb6.mf
-share/texmf/fonts/source/ocrb/ocrb7.mf
-share/texmf/fonts/source/ocrb/ocrb8.mf
-share/texmf/fonts/source/ocrb/ocrb9.mf
-share/texmf/fonts/source/ocrb/ocrbdef.mf
-share/texmf/fonts/source/ocrb/ocrbmac.mf
-@unexec ${RM} -rf %D/share/texmf/fonts/tfm/ocrb || ${TRUE}
+@comment $NetBSD: PLIST,v 1.2 2005/11/08 21:45:01 tonio Exp $
+${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb/ocrbinfo
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10e.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10f.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10g.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10l.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10s.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10x.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb5.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb6.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb7.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb8.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb9.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrbdef.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrbmac.mf
+@unexec ${RM} -rf %D/${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ocrb || ${TRUE}
 @exec %D/bin/texconfig rehash
 @unexec %D/bin/texconfig rehash
-@dirrm share/texmf/fonts/source/ocrb
-@dirrm share/texmf/doc/fonts/ocrb
+@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb
