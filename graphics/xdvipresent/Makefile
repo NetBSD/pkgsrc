@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/08 19:51:57 tonio Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/xdvipresent
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-STYDIR=		${PREFIX}/share/texmf/tex/latex/other
+STYDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/other
 EXAMPLES_DIR=	${PREFIX}/share/examples/xdvipresent
 MAN_DIR=	${PREFIX}/man/
 HTML_DIR=	${PREFIX}/share/doc/html/xdvipresent
@@ -36,5 +36,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/xdvipresent_html/* ${HTML_DIR}
 	${PREFIX}/bin/texconfig rehash
 
-.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
