@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.26 2005/11/04 20:02:01 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.27 2005/11/08 03:36:13 tv Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -129,6 +129,9 @@ TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sed?=		${TOOLS_PLATFORM.gsed}
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
+.if exists(/usr/bin/soelim)
+TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
+.endif
 .if exists(/bin/sort)
 TOOLS_PLATFORM.sort?=		/bin/sort
 .elif exists(/usr/bin/sort)
