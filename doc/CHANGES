@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11867 2005/11/08 20:37:42 bouyer Exp $
+$NetBSD: CHANGES,v 1.11868 2005/11/08 21:20:17 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/udfclient to 0.5 [reinoud 2005-11-08]
 	Updated www/php4 to 4.4.1nb2 [bouyer 2005-11-08]
 	Updated www/ap-php to 4.4.1nb3 [bouyer 2005-11-08]
+	Updated print/tex-IEEEtran to 1.6c [tonio 2005-11-08]
