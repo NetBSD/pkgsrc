@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/07/16 19:10:41 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/11/08 15:40:28 joerg Exp $
 #
 
 DISTNAME=		gdkxft-1.5
@@ -11,10 +11,6 @@ HOMEPAGE=		http://gdkxft.sourceforge.net/
 COMMENT=		Transparently add anti-aliased font support to gtk+ applications
 
 .include "../../mk/bsd.prefs.mk"
-
-.if !exists(${X11BASE}/lib/libXft.a)
-PKG_FAIL_REASON=	"${PKGNAME} requires XFree86-4.0 or higher"
-.endif
 
 USE_DIRS+=		xdg-1.1
 USE_X11BASE=		YES
