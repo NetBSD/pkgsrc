@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/07/18 02:37:22 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2005/11/08 20:46:18 tonio Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	4
@@ -12,13 +12,13 @@ COMMENT=	Customizable, extensible automatic printer filter
 #
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
 
 USE_TOOLS+=	gmake gzip
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GHOSTSCRIPT=${LOCALBASE}/bin/gs
 CONFIGURE_ENV+= GZIP=${TOOLS_GZIP_CMD:Q}
+LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
@@ -45,4 +45,5 @@ post-install:
 	@${ECHO} "@dirrm ${FILTER_DIR}" >>${PLIST_SRC}
 
 .include "../../mk/ghostscript.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
