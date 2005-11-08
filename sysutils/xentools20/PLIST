@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/08/06 17:43:14 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/11/08 00:47:35 jlam Exp $
 bin/xencons
 bin/xenperf
 include/xc.h
@@ -179,6 +179,7 @@ sbin/xensv
 sbin/xfrd
 sbin/xm
 share/examples/rc.d/xend
+share/examples/rc.d/xendomains
 share/examples/xen/block-enbd
 share/examples/xen/block-file
 share/examples/xen/network
