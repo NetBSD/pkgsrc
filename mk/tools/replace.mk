@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.133 2005/11/08 17:38:52 jlam Exp $
+# $NetBSD: replace.mk,v 1.134 2005/11/08 17:41:26 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -826,7 +826,7 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
 # These tools are all supplied by an X11 clients package if there is no
 # native tool available.
 #
-_TOOLS.x11-clients=	bdftopcf
+_TOOLS.x11-clients=	bdftopcf mkfontdir mkfontscale
 
 .for _t_ in ${_TOOLS.x11-clients}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
