@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/15 18:27:53 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/08 23:03:10 tonio Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -27,6 +27,7 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/texk/web2c/ptex-${TEXFAMILY_PTEXVERSION}
 MAINTAINER=	kei@NetBSD.org
 COMMENT=	TeXfamily (pTeX, JTeX, MuLTeX) - executables
 
+LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 DEPENDS+=	TeXfamily-share>=1.2.1nb3:../../print/texfamily-share
 DEPENDS+=	ja-vflib-lib-[0-9]*:../../print/ja-vflib-lib
 
@@ -115,8 +116,8 @@ post-extract:
 		${LOCALBASE}/share/texmf.local/ptex/plain/base/ptex.tex > \
 		${WRKSRC}/texk/web2c/ptex-${TEXFAMILY_PTEXVERSION}/ptex.tex
 	${RM} -f ${WRKSRC}/texmf ${WRKSRC}/texmf.local
-	${LN} -s ${LOCALBASE}/share/texmf ${WRKSRC}
-	${LN} -s ${LOCALBASE}/share/texmf.local ${WRKSRC}
+	${LN} -s ${PKG_TEXMFPREFIX}/ ${WRKSRC}/texmf
+	${LN} -s ${LOCALBASE}/share/texmf.local ${WRKSRC}/texmf.local
 
 pre-patch:
 	${PATCH} -d ${WRKSRC}/texk/dvipsk --quiet -E -p1 < \
@@ -168,4 +169,5 @@ post-install:
 pre-clean:
 	cd ../../print/teTeX1-bin && ${MAKE} clean
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
