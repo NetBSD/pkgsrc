@@ -1,25 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:10 zuntum Exp $
-share/texmf/doc/fonts/eurosym/README
-share/texmf/fonts/source/eurosym/Makefile
-share/texmf/fonts/source/eurosym/fey.mf
-share/texmf/fonts/source/eurosym/fey.old.mf
-share/texmf/fonts/source/eurosym/feybl10.mf
-share/texmf/fonts/source/eurosym/feybo10.mf
-share/texmf/fonts/source/eurosym/feybr10.mf
-share/texmf/fonts/source/eurosym/feyml10.mf
-share/texmf/fonts/source/eurosym/feymo10.mf
-share/texmf/fonts/source/eurosym/feymr10.mf
-share/texmf/fonts/source/eurosym/makemfs
-share/texmf/fonts/tfm/eurosym/feybl10.tfm
-share/texmf/fonts/tfm/eurosym/feybo10.tfm
-share/texmf/fonts/tfm/eurosym/feybr10.tfm
-share/texmf/fonts/tfm/eurosym/feyml10.tfm
-share/texmf/fonts/tfm/eurosym/feymo10.tfm
-share/texmf/fonts/tfm/eurosym/feymr10.tfm
-share/texmf/tex/latex/eurosym/eurosym.sty
+@comment $NetBSD: PLIST,v 1.2 2005/11/08 21:16:09 tonio Exp $
+${PKG_LOCALTEXMFPREFIX}/doc/fonts/eurosym/README
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/Makefile
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/fey.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/fey.old.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/feybl10.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/feybo10.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/feybr10.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/feyml10.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/feymo10.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/feymr10.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym/makemfs
+${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym/feybl10.tfm
+${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym/feybo10.tfm
+${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym/feybr10.tfm
+${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym/feyml10.tfm
+${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym/feymo10.tfm
+${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym/feymr10.tfm
+${PKG_LOCALTEXMFPREFIX}/tex/latex/eurosym/eurosym.sty
 @exec %D/bin/texconfig rehash
 @unexec %D/bin/texconfig rehash
-@dirrm share/texmf/tex/latex/eurosym
-@dirrm share/texmf/fonts/tfm/eurosym
-@dirrm share/texmf/fonts/source/eurosym
-@dirrm share/texmf/doc/fonts/eurosym
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/eurosym
+@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym
+@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/fonts/eurosym
