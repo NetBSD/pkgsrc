@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/15 18:27:50 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/08 18:22:09 jlam Exp $
 #
 
 DISTNAME=	ko-kaist-20010718
@@ -13,7 +13,7 @@ COMMENT=	X11 fonts for Korean KSC 5601 standard (kaist foundry)
 CONFLICTS+=	ksc5601fonts-[0-9]*
 
 USE_X11BASE=		yes
-USE_TOOLS+=		gzip gunzip
+USE_TOOLS+=		gzip gunzip mkfontdir:run
 EXTRACT_ONLY=		# empty
 
 MAKE_ENV+=	FONTDIR=${FONTDIR} GZIP_CMD="${GZIP_CMD}"
