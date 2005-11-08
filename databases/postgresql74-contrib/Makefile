@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 14:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/08 16:40:38 joerg Exp $
 
 PKGNAME=		postgresql74-contrib-${BASE_VERS}
 PKGREVISION=		# empty
@@ -13,6 +13,19 @@ CONFIGURE_ARGS+=	--with-readline
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
 BUILD_DIRS=		${WRKSRC}/contrib
+
+pre-configure:
+	${TOUCH} ${WRKSRC}/src/template/dragonfly
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.c
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
+	${CP} ${WRKSRC}/src/include/port/freebsd.h \
+		${WRKSRC}/src/include/port/dragonfly.h
+	${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd \
+		${WRKSRC}/src/makefiles/Makefile.dragonfly
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC}/src/backend && \
