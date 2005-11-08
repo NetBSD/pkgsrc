@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/10/22 13:47:01 tonio Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/08 20:30:29 tonio Exp $
 #
 
 DISTNAME=	chktex-1.6.3
@@ -24,5 +24,5 @@ MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" EGDIR="${EGDIR}"
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
-.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/09/29 14:21:08 tonio Exp $
+# $NetBSD: Makefile,v 1.23 2005/11/08 20:30:29 tonio Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
@@ -10,13 +10,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jwise@NetBSD.org
 COMMENT=	Source pretty printer for LaTeX
 
-DEPENDS+=	teTeX-bin>=1.0:../../print/teTeX-bin
-
 WRKSRC=		${WRKDIR}/lgrind/source
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 NO_CONFIGURE=	yes
+LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 .include "../../mk/x11.buildlink3.mk"
+
+MAKE_ENV+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX}
 
 pre-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile-prepatch
@@ -31,8 +32,8 @@ pre-build:
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${WRKSRC}/lgrindef.5.bak > ${WRKSRC}/lgrindef.5
 
 pre-install:
-	-mkdir ${PREFIX}/share/texmf/tex/latex/lgrind
-	-mkdir ${PREFIX}/share/texmf/doc/latex/lgrind
+	-mkdir ${PKG_LOCALTEXMFPREFIX}/tex/latex/lgrind
+	-mkdir ${PKG_LOCALTEXMFPREFIX}/doc/latex/lgrind
 
 post-install:
 	${PREFIX}/bin/texconfig rehash
@@ -45,4 +46,5 @@ post-wrapper:
 			> ${BUILDLINK_DIR}/include/malloc.h;	\
 	fi
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
