@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4147 2005/11/08 03:26:36 dan Exp $
+$NetBSD: TODO,v 1.4148 2005/11/08 05:05:40 ben Exp $
 
 Suggested new packages
 ======================
@@ -1422,6 +1422,9 @@ Suggested pkgsrc enhancements
 	  to ${WRKDIR}.  In particular this should help catch packages which 
 	  pickup the tools directory with AC_PATH_PROG.  This is in a similar
 	  spirit as the runtime path checks which already exist.
+
+	o Use libarchive in pkg_install instead of forking tar or pax.
+	  http://people.freebsd.org/~kientzle/libarchive/
 
 Suggested other platform enhancements
 =====================================
