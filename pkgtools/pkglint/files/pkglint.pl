@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.339 2005/11/08 21:13:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.340 2005/11/08 22:27:12 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2084,7 +2084,8 @@ sub checklines_package_Makefile($) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 
 			if ($varname =~ qr"^_") {
-				$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
+				# TODO: enable this when lang/perl5 has been fixed.
+				#$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
 			}
 
 			if ($varname eq "COMMENT") {
