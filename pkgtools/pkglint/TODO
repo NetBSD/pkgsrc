@@ -12,4 +12,4 @@
 * check Makefile directives
 * check _every_ line of the Makefiles
 * warn about the use of ${SED} in {pre,do,post}-install
-* check for magic numbers like 0755, 755, 644
+* check for direct use of user names and group names
