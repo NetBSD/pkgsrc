@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:20 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/08 23:03:10 tonio Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -19,8 +19,10 @@ XDVIK_JP_PATCH_VERS=	j1.14
 
 .if defined(USE_TEXFAMILY)
 DEPENDS+=	TeXfamily>=1.2.1:../../print/texfamily
+LATEX_ACCEPTED=	teTeX1
 .else
 DEPENDS+=	ja-ptex-bin>=3.1.2:../../print/ja-ptex-bin
+LATEX_ACCEPTED=	teTeX2
 .endif
 
 XDVI_DIR=	${WRKDIR}/${DISTNAME}/texk/xdvik
@@ -70,11 +72,7 @@ do-build:
 do-install:
 	cd ${XDVI_DIR} && ${MAKE_PROGRAM} install
 
-.if defined(USE_TEXFAMILY)
-.include "../../print/teTeX1-bin/kpathsea.buildlink3.mk"
-.else
-.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
-.endif
+.include "../../mk/tex.buildlink3.mk"
 .include "../../www/libwww/buildlink3.mk"
 .include "../../print/ja-vflib-lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

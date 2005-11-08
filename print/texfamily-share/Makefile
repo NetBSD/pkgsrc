@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/08 23:03:10 tonio Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	5
@@ -19,8 +19,6 @@ DISTFILES=	ptex-texmf-2.0${EXTRACT_SUFX} \
 MAINTAINER=	kei@NetBSD.org
 COMMENT=	Machine-independent part of TeXfamily (pTeX, JTeX, MuLTeX)
 
-DEPENDS+=	teTeX>=1.0.7nb1:../../print/teTeX
-
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	TeXfamily
 EXTRACT_ONLY=	jis${EXTRACT_SUFX} nmin-ngoth${EXTRACT_SUFX} \
@@ -29,6 +27,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST_SRC
+LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/texmf.local
@@ -67,4 +66,5 @@ post-install:
 	 	${ECHO} "@dirrm $$DIR" >>${PLIST_SRC}; \
 	 done
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
