@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/12 20:22:57 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/08 00:59:37 tv Exp $
 
 DISTNAME=	fluidsynth-1.0.6
 CATEGORIES=	audio
@@ -18,6 +18,7 @@ PTHREAD_AUTO_VARS=	yes
 CFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LDFLAGS+=		${LIBOSSAUDIO}
 
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
