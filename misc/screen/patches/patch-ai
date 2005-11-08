@@ -1,10 +1,18 @@
-$NetBSD: patch-ai,v 1.1 2002/09/15 06:51:37 kim Exp $
+$NetBSD: patch-ai,v 1.2 2005/11/08 12:58:47 joerg Exp $
 
-Use utmpx on NetBSD where available.
-
---- os.h.orig	Tue Jan  8 10:42:33 2002
-+++ os.h	Sun Sep 15 01:47:33 2002
-@@ -260,9 +260,15 @@
+--- os.h.orig	2002-01-08 15:42:33.000000000 +0000
++++ os.h
+@@ -62,9 +62,6 @@
+ # undef exit
+ #endif /* sun */
+ 
+-#ifndef linux /* all done in <errno.h> */
+-extern int errno;
+-#endif /* linux */
+ #ifndef HAVE_STRERROR
+ /* No macros, please */
+ #undef strerror
+@@ -260,9 +257,15 @@ extern int errno;
  #endif
  
  #if defined(UTMPOK) || defined(BUGGYGETLOGIN)
