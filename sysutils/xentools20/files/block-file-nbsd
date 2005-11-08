@@ -1,34 +1,59 @@
 #!/bin/sh
 #
-# $NetBSD: block-file-nbsd,v 1.1 2005/10/01 02:10:10 xtraeme Exp $
+# $NetBSD: block-file-nbsd,v 1.2 2005/11/08 00:47:35 jlam Exp $
 #
-# Usage: block_file [bind file|unbind node]
+# Usage: block-file bind file
 #
-# The file argument to the bind command is the file we are to bind to a
-# vnd device.  We print the path to the vnd device node to stdout.
+#    The file argument is the path to the file to which a vnd(4) device
+#    will be bound.
 #
-# The node argument to unbind is the name of the device node we are to
-# unbind.
+# Usage: block-file unbind node
+#
+#    The node argument is the name of the device node to unbind.
+#
 
-case $1 in
-	bind)
-		for dev in /dev/vnd?d; do
-			if /usr/sbin/vnconfig $dev $2; then
-				echo $dev
-				exit 0
-			fi
-		done
-		exit 1
+case "$1" in
+bind)
+	FILE="$2"
+
+	# Store the list of available vnd(4) devices in ``available_disks'',
+	# and mark them as ``free''.
+	#
+	list=`/bin/ls -1 /dev/vnd[0-9]*d | sed "s,/dev/vnd,,;s,d,," | sort -n`
+	for i in $list; do
+		disk="vnd$i"
+		available_disks="$available_disks $disk"
+		eval $disk=free
+	done
+
+	# Mark the used vnd(4) devices as ``used''.
+	for disk in `sysctl hw.disknames`; do
+		case $disk in
+		vnd[0-9]*) eval $disk=used ;;
+		esac
+	done
+
+	# Configure the first free vnd(4) device.
+	for disk in $available_disks; do
+		eval status=\$$disk
+		if [ "$status" = "free" ] && \
+		   vnconfig /dev/${disk}d $FILE >/dev/null; then
+			echo /dev/${disk}d
+			exit 0
+		fi
+	done
+	exit 1
 	;;
 
-	unbind)
-		/usr/sbin/vnconfig -u $2
-		exit 0
+unbind)
+	NODE="$2"
+	vnconfig -u $NODE
+	exit 0
 	;;
 
-	*)
-		echo 'Unknown command: ' $1
-		echo 'Valid commands are: bind, unbind'
-		exit 1
+*)
+	echo "Unknown command: $1"
+	echo "Valid commands are: bind, unbind"
+	exit 1
 	;;
 esac

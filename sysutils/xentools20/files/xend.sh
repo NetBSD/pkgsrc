@@ -1,13 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: xend.sh,v 1.4 2005/07/13 02:12:59 grant Exp $
+# $NetBSD: xend.sh,v 1.5 2005/11/08 00:47:35 jlam Exp $
 #
 # PROVIDE: xend
 # REQUIRE: disks network
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+. /etc/rc.subr
 
 name="xend"
 rcvar=$name

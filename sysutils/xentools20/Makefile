@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2005/10/01 02:10:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2005/11/08 00:47:35 jlam Exp $
 #
 
 DISTNAME=		xen-2.0.7-src
 PKGNAME=		xentools20-2.0.7
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=		.tgz
@@ -24,6 +24,7 @@ CONFLICTS+=		libxen-[0-9]*
 WRKSRC=			${WRKDIR}/xen-2.0/tools
 
 EGDIR=			${PREFIX}/share/examples/xen
+MESSAGE_SUBST=		EGDIR=${EGDIR}
 
 USE_TOOLS+=		gmake
 MAKE_ENV+=		EGDIR="${EGDIR}"
@@ -73,45 +74,41 @@ PROCPATH=		/kern
 PROCPATH=		/proc
 .endif
 
-RCD_SCRIPTS=		xend
+RCD_SCRIPTS=		xend xendomains
 FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN}
 FILES_SUBST+=		PROCPATH=${PROCPATH}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-INSTALLATION_DIRS=	share/examples/xen
-
-XEND_SCRIPTS=		network block-enbd vif-bridge block-file \
-			xmexample1 xmexample2 xmexample3
+XEND_SCRIPTS=		network block-enbd vif-bridge block-file
 
 CONF_FILES=		${EGDIR}/xend-config.sxp \
 			${PKG_SYSCONFDIR}/xend-config.sxp
-.for f in ${XEND_SCRIPTS}
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.for s in ${XEND_SCRIPTS}
+CONF_FILES_PERMS+=	${EGDIR}/${s} ${PKG_SYSCONFDIR}/${s}		\
+			${ROOT_USER} ${ROOT_GROUP} 0755
 .endfor
-
-CONF_FILES_MODE=	0755
 
 pre-build:
 	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
 	${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/examples/xend-config.sxp \
-		${EGDIR}/xend-config.sxp
-.if ${OPSYS} == "Linux"
-.  for s in ${XEND_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
-.  endfor
-.else
-.  for f in vif-bridge block-file
-	${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
-		${FILESDIR}/${f}-nbsd > ${WRKSRC}/${f}-nbsd
-	${INSTALL_SCRIPT} ${WRKSRC}/${f}-nbsd ${EGDIR}/${f}
-.  endfor
-.  for f in ${XEND_SCRIPTS:S/vif-bridge//:S/block-file//}
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/${f} ${EGDIR}/${f}
-.  endfor
+.if ${OPSYS} == "NetBSD"
+post-build:
+	cd ${FILESDIR}; for src in *-nbsd; do				\
+		dst="$${src%-nbsd}";					\
+		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
+			$$src > ${WRKSRC}/examples/$$dst;		\
+	done
 .endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	for f in xend-config.sxp xmexample1 xmexample2 xmexample3; do	\
+		${INSTALL_DATA} ${WRKSRC}/examples/$$f ${EGDIR}/$$f;	\
+	done
+.for s in ${XEND_SCRIPTS}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
+.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
