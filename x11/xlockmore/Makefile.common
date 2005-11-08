@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2005/11/05 06:19:57 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.35 2005/11/08 17:53:18 wiz Exp $
 #
 # This Makefile.common is included by:
 #
@@ -20,6 +20,7 @@ HOMEPAGE=	http://www.tux.org/~bagleyd/xlockmore.html
 
 CONFLICTS+=	xlockmore-[0-9]* xlockmore-lite-[0-9]*
 
+DIST_SUBDIR=		xlockmore-5.20.1v2
 DISTINFO_FILE?=		${.CURDIR}/../xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../xlockmore/patches
 PLIST_SRC?=		${.CURDIR}/../xlockmore/PLIST
