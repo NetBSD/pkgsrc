@@ -1,28 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/09 14:15:22 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/08 19:49:52 tonio Exp $
 bin/ttf2pk
 bin/ttf2tfm
 man/man1/ttf2pk.1
 man/man1/ttf2tfm.1
-share/texmf/doc/ttf2pk/BUGS
-share/texmf/doc/ttf2pk/README
-share/texmf/doc/ttf2pk/TODO
-share/texmf/doc/ttf2pk/ttf2pk.doc
-share/texmf/doc/ttf2pk/ttfonts.map
-share/texmf/ttf2pk
-share/texmf/ttf2tfm/base/Big5.sfd
-share/texmf/ttf2tfm/base/ET5.enc
-share/texmf/ttf2tfm/base/EUC.sfd
-share/texmf/ttf2tfm/base/SJIS.sfd
-share/texmf/ttf2tfm/base/T1-WGL4.enc
-share/texmf/ttf2tfm/base/UBg5plus.sfd
-share/texmf/ttf2tfm/base/UBig5.sfd
-share/texmf/ttf2tfm/base/UGB.sfd
-share/texmf/ttf2tfm/base/UGBK.sfd
-share/texmf/ttf2tfm/base/UJIS.sfd
-share/texmf/ttf2tfm/base/UKS.sfd
-share/texmf/ttf2tfm/base/Unicode.sfd
-share/texmf/ttf2tfm/base/VPS.rpl
-share/texmf/ttf2tfm/base/ttfonts.map
+${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk/BUGS
+${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk/README
+${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk/TODO
+${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk/ttf2pk.doc
+${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk/ttfonts.map
+${PKG_LOCALTEXMFPREFIX}/ttf2pk
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/Big5.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ET5.enc
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/EUC.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/SJIS.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/T1-WGL4.enc
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UBg5plus.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UBig5.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UGB.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UGBK.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UJIS.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UKS.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/Unicode.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/VPS.rpl
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ttfonts.map
 @dirrm share/texmf/ttf2tfm/base
 @dirrm share/texmf/ttf2tfm
 @dirrm share/texmf/doc/ttf2pk
