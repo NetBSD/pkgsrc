@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/17 22:00:13 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/08 23:03:10 tonio Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -27,6 +27,7 @@ DEPENDS+=	ja-ptex-share>=2.1:../../print/ja-ptex-share
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
+LATEX_ACCEPTED=		teTeX2
 .include "../../print/teTeX-bin/Makefile.common"
 
 PTEX_VERS=		3.1.2
@@ -43,7 +44,7 @@ WRKSRC=			${TETEX_DIR}
 WRKSRC_PTEX=		${WRKSRC}/texk/web2c/${DISTNAME:S/-src//}
 EXTRACT_ONLY=		# none
 
-TEXMF=			${PREFIX}/share/texmf
+TEXMF=			${PKG_TEXMFPREFIX}
 TEXMFLOCAL=		${PREFIX}/share/texmf.local
 FILES_SUBST+=		TEXMFLOCAL=${TEXMFLOCAL}
 FILES_SUBST+=		TEXMFSITE=${TEXMFSITE}
@@ -112,5 +113,5 @@ do-install:
 pre-clean:
 	cd ../../print/teTeX-bin && ${MAKE} clean
 
-.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
