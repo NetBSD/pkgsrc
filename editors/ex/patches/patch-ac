@@ -1,12 +1,14 @@
-$NetBSD: patch-ac,v 1.1 2005/10/31 20:04:46 tv Exp $
+$NetBSD: patch-ac,v 1.2 2005/11/08 21:39:12 rillig Exp $
 
 --- mapmalloc.c.orig	2003-01-28 15:04:25.000000000 -0500
 +++ mapmalloc.c
-@@ -54,6 +54,7 @@
+@@ -54,6 +54,9 @@
  #include <fcntl.h>
  #include <errno.h>
  #include <limits.h>
++#if defined(__INTERIX)
 +#include <stdlib.h>
++#endif
  #ifdef	__GLIBC__
  /*
   * Broken GNU libc will include stdlib.h with conflicting
