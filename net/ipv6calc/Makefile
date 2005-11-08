@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.28 2005/05/22 20:08:24 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/11/08 21:50:15 hubertf Exp $
 #
 
-DISTNAME=	ipv6calc-0.48
+DISTNAME=	ipv6calc-0.50
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 
 MAINTAINER=	hubertf@NetBSD.org
-HOMEPAGE=	http://www.bieringer.de/linux/IPv6/ipv6calc/
+HOMEPAGE=	http://www.deepspace6.net/projects/ipv6calc.html
 COMMENT=	Manipulates IPv6 addresses
 
 # This package does not set or evaluate USE_INET6, but it should still
@@ -15,7 +15,6 @@ COMMENT=	Manipulates IPv6 addresses
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	root=${PREFIX}
 INSTALL_TARGET=	installonly
 
 .include "../../mk/bsd.pkg.mk"
