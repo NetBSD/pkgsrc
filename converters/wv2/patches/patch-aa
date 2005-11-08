@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2004/11/18 10:20:00 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/08 13:52:58 joerg Exp $
 
 --- configure.orig	2004-05-09 14:23:32.000000000 -0600
 +++ configure
@@ -31,3 +31,28 @@ $NetBSD: patch-aa,v 1.1 2004/11/18 10:20:00 shannonjr Exp $
  
  echo "$as_me:$LINENO: checking whether $CXX supports -Wundef" >&5
  echo $ECHO_N "checking whether $CXX supports -Wundef... $ECHO_C" >&6
+@@ -13961,6 +13961,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++#include <math.h>
+ 
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ #ifdef __cplusplus
+@@ -13968,13 +13969,12 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char isnan ();
++double val = 0.0;
++   
+ int
+ main ()
+ {
+-isnan ();
+-  ;
+-  return 0;
++  return isnan (val);
+ }
+ _ACEOF
+ rm -f conftest.$ac_objext conftest$ac_exeext
