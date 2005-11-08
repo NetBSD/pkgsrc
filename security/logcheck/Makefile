@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/23 21:55:11 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/08 03:56:31 tv Exp $
 
 DISTNAME=	logcheck-1.1.1
 PKGREVISION=	1
@@ -34,4 +34,5 @@ pre-configure:
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
+.include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
