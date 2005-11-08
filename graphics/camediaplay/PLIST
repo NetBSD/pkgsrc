@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:21 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/08 22:35:54 rillig Exp $
 bin/camediaplay
+man/man1/camediaplay.1.gz
+share/doc/camediaplay/PROTOCOL
 share/doc/camediaplay/README.english
 share/doc/camediaplay/README.japanese
-share/doc/camediaplay/PROTOCOL
-man/man1/camediaplay.1.gz
 @dirrm share/doc/camediaplay
