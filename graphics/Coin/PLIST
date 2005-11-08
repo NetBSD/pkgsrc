@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/04 07:21:24 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/08 20:10:08 rillig Exp $
 bin/coin-config
 include/Inventor/C/base/hash.h
 include/Inventor/C/base/heap.h
@@ -12,11 +12,13 @@ include/Inventor/C/errors/debugerror.h
 include/Inventor/C/errors/error.h
 include/Inventor/C/glue/dl.h
 include/Inventor/C/glue/gl.h
+include/Inventor/C/glue/spidermonkey.h
 include/Inventor/C/threads/barrier.h
 include/Inventor/C/threads/common.h
 include/Inventor/C/threads/condvar.h
 include/Inventor/C/threads/fifo.h
 include/Inventor/C/threads/mutex.h
+include/Inventor/C/threads/recmutex.h
 include/Inventor/C/threads/rwmutex.h
 include/Inventor/C/threads/sched.h
 include/Inventor/C/threads/storage.h
@@ -254,6 +256,7 @@ include/Inventor/elements/SoGLCacheContextElement.h
 include/Inventor/elements/SoGLClipPlaneElement.h
 include/Inventor/elements/SoGLColorIndexElement.h
 include/Inventor/elements/SoGLCoordinateElement.h
+include/Inventor/elements/SoGLDisplayList.h
 include/Inventor/elements/SoGLDrawStyleElement.h
 include/Inventor/elements/SoGLEnvironmentElement.h
 include/Inventor/elements/SoGLLazyElement.h
@@ -320,6 +323,7 @@ include/Inventor/elements/SoSubElement.h
 include/Inventor/elements/SoSwitchElement.h
 include/Inventor/elements/SoTextOutlineEnabledElement.h
 include/Inventor/elements/SoTexture3EnabledElement.h
+include/Inventor/elements/SoTextureCombineElement.h
 include/Inventor/elements/SoTextureCoordinateBindingElement.h
 include/Inventor/elements/SoTextureCoordinateElement.h
 include/Inventor/elements/SoTextureEnabledElement.h
@@ -490,12 +494,14 @@ include/Inventor/misc/SoContextHandler.h
 include/Inventor/misc/SoGLBigImage.h
 include/Inventor/misc/SoGLImage.h
 include/Inventor/misc/SoGlyph.h
+include/Inventor/misc/SoJavaScriptEngine.h
 include/Inventor/misc/SoLightPath.h
 include/Inventor/misc/SoNormalGenerator.h
 include/Inventor/misc/SoNotRec.h
 include/Inventor/misc/SoNotification.h
 include/Inventor/misc/SoProto.h
 include/Inventor/misc/SoProtoInstance.h
+include/Inventor/misc/SoScriptEngine.h
 include/Inventor/misc/SoState.h
 include/Inventor/misc/SoTempPath.h
 include/Inventor/misc/SoTranReceiver.h
@@ -608,13 +614,17 @@ include/Inventor/nodes/SoTexture2.h
 include/Inventor/nodes/SoTexture2Transform.h
 include/Inventor/nodes/SoTexture3.h
 include/Inventor/nodes/SoTexture3Transform.h
+include/Inventor/nodes/SoTextureCombine.h
 include/Inventor/nodes/SoTextureCoordinate2.h
 include/Inventor/nodes/SoTextureCoordinate3.h
 include/Inventor/nodes/SoTextureCoordinateBinding.h
+include/Inventor/nodes/SoTextureCoordinateCube.h
+include/Inventor/nodes/SoTextureCoordinateCylinder.h
 include/Inventor/nodes/SoTextureCoordinateDefault.h
 include/Inventor/nodes/SoTextureCoordinateEnvironment.h
 include/Inventor/nodes/SoTextureCoordinateFunction.h
 include/Inventor/nodes/SoTextureCoordinatePlane.h
+include/Inventor/nodes/SoTextureCoordinateSphere.h
 include/Inventor/nodes/SoTextureScalePolicy.h
 include/Inventor/nodes/SoTextureUnit.h
 include/Inventor/nodes/SoTransform.h
