@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/07/15 18:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/11/08 16:40:39 joerg Exp $
 
 PKGNAME=		postgresql74-lib-${BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		pstgl
 COMMENT=		PostgreSQL database headers and libraries
 
@@ -25,7 +25,7 @@ BUILD_DIRS+=		${WRKSRC}/src/pl
 # As told by Josh Berkus
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native" \
-	&& ${OPSYS} != "NetBSD"
+	&& ${OPSYS} != "NetBSD" && ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--enable-thread-safety
 .endif
 
@@ -44,6 +44,20 @@ post-wrapper:
 .if (${OPSYS} == "SunOS")
 	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
 .endif
+
+pre-configure:
+	${TOUCH} ${WRKSRC}/src/template/dragonfly
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.c
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
+	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
+	${CP} ${WRKSRC}/src/include/port/freebsd.h \
+		${WRKSRC}/src/include/port/dragonfly.h
+	${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd \
+		${WRKSRC}/src/makefiles/Makefile.dragonfly
+
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
 		${MAKE_PROGRAM} -C src/include install
