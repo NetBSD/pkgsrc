@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2005/11/08 16:41:30 tv Exp $
+
+--- src/mesa/drivers/x11/xmesaP.h.orig	2004-03-04 11:22:01.000000000 -0500
++++ src/mesa/drivers/x11/xmesaP.h
+@@ -30,7 +30,7 @@
+ #ifdef XFree86Server
+ # include "GL/xf86glx.h"
+ # include "xf86glx_util.h"
+-#elif defined(USE_XSHM)
++#elif defined(USE_XSHM) || defined(USE_XSHM_HDRONLY)
+ # include <X11/extensions/XShm.h>
+ #endif
+ #include "GL/xmesa.h"
+@@ -185,7 +185,7 @@ struct xmesa_buffer {
+ 				/*    0 = not available			*/
+ 				/*    1 = XImage support available	*/
+ 				/*    2 = Pixmap support available too	*/
+-#ifdef USE_XSHM
++#if defined(USE_XSHM) || defined(USE_XSHM_HDRONLY)
+    XShmSegmentInfo shminfo;
+ #endif
+ #endif
