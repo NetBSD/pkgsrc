@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.18 2005/11/05 18:34:45 rillig Exp $
+# $NetBSD: printindex,v 1.19 2005/11/08 13:55:29 rillig Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -116,16 +116,16 @@ for pkgdir in $list :detect_duplicates: $BULK_PREREQ; do
 			echo "$0: error: could not extract PKGNAME for ${pkgdir} -- skipping." 1>&2
 
 			case $have_brokenbasedir in
-			yes)	brokendir="${brokenbasedir}/${pkgdir}"
+			yes)	broken_path="${brokenbasedir}/${pkgdir}/${brokenfile}"
 				${MKDIR} "${brokendir}"
 				;;
-			*)	brokendir="."
+			*)	broken_path="${brokenfile}"
 				;;
 			esac
 
 			{ echo "===> ${BMAKE} show-var VARNAME=PKGNAME failed"
 			  ${BMAKE} show-var VARNAME=PKGNAME || true
-			} >> "${brokendir}/${brokenfile}" 2>&1
+			} >> "${broken_path}" 2>&1
 		fi
 	fi
 done
