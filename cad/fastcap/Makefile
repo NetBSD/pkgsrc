@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/16 06:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/11/08 17:49:19 tonio Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -11,13 +11,14 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Fast 3-D capacitance solver
 
-BUILD_DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 EXTRACT_USING=	gtar	# cannot be extracted with pax as tar
 
 WRKSRC=			${WRKDIR}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		4
+LATEX_DEPMETHOD=	build
+LATEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
@@ -82,4 +83,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/ug.ps  ${PREFIX}/share/doc/fastcap
 	${INSTALL_DATA} ${WRKSRC}/README.docs ${PREFIX}/share/doc/fastcap
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
