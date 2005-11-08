@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:42 agc Exp $
+$NetBSD: patch-aa,v 1.3 2005/11/08 13:47:40 tv Exp $
 
---- lib/error.c.old	Sun Apr  5 00:38:04 1998
-+++ lib/error.c	Fri Jun 26 14:16:52 1998
-@@ -143,7 +143,7 @@
+--- lib/error.c.orig	1998-04-04 17:38:04.000000000 -0500
++++ lib/error.c
+@@ -143,13 +143,16 @@ file_error (severity, filename)
       int severity;
       char *filename;
  {
@@ -11,3 +11,21 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:42 agc Exp $
    extern int sys_nerr;
    extern char *sys_errlist[];
  #endif
+ 
+-  char *error_text;
++  const char *error_text;
+ 
++#ifdef __INTERIX
++  error_text = strerror(errno);
++#else
+   if (errno) {
+     if (errno < sys_nerr)
+       error_text = sys_errlist[errno];
+@@ -158,6 +161,7 @@ file_error (severity, filename)
+   } else {
+     error_text = "(Hmm, no error?)";
+   }
++#endif
+ 
+   if (filename == (char *)NULL)
+     handle_error (severity, "%s", error_text, NULL, NULL);
