@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.3 2005/11/08 15:52:38 minskim Exp $
+
+--- Makefile.in.orig	2005-11-05 09:25:06.000000000 -0800
++++ Makefile.in
+@@ -92,11 +92,11 @@ all:
+ 
+ miniruby$(EXEEXT):
+ 		@$(RM) $@
+-		$(PURIFY) $(CC) $(MAINOBJ) $(MINIOBJS) $(LIBRUBY_A) $(LIBS) $(OUTFLAG)$@ $(LDFLAGS) $(MAINLIBS)
++		$(PURIFY) $(CC) $(MAINOBJ) $(MINIOBJS) $(LIBRUBY_A) $(LIBS) $(OUTFLAG) $@ $(LDFLAGS) $(MAINLIBS)
+ 
+ $(PROGRAM):
+ 		@$(RM) $@
+-		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINLIBS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) $(OUTFLAG)$@
++		$(PURIFY) $(CC) $(LDFLAGS) $(XLDFLAGS) $(MAINLIBS) $(MAINOBJ) $(EXTOBJS) $(LIBRUBYARG) $(LIBS) $(OUTFLAG) $@
+ 
+ # We must `rm' the library each time this rule is invoked because "updating" a
+ # MAB library on Apple/NeXT (see --enable-fat-binary in configure) is not
+@@ -107,7 +107,7 @@ $(LIBRUBY_A):
+ 		@-$(RANLIB) $@ 2> /dev/null || true
+ 
+ $(LIBRUBY_SO):
+-		$(LDSHARED) $(DLDFLAGS) $(OBJS) $(DLDOBJS) $(SOLIBS) $(OUTFLAG)$@
++		$(LDSHARED) $(DLDFLAGS) $(OBJS) $(DLDOBJS) $(SOLIBS) $(OUTFLAG) $@
+ 		@-$(MINIRUBY) -e 'ARGV.each{|link| File.delete link if File.exist? link; \
+ 						  File.symlink "$(LIBRUBY_SO)", link}' \
+ 				$(LIBRUBY_ALIASES) || true
