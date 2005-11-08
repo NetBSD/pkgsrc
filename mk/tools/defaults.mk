@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.40 2005/11/04 20:02:01 jlam Exp $
+# $NetBSD: defaults.mk,v 1.41 2005/11/08 03:36:13 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -115,6 +115,7 @@ _TOOLS_VARNAME.sed=		SED
 _TOOLS_VARNAME.sh=		SH
 _TOOLS_VARNAME.shlock=		SHLOCK
 _TOOLS_VARNAME.sleep=		SLEEP
+_TOOLS_VARNAME.soelim=		SOELIM
 _TOOLS_VARNAME.sort=		SORT
 _TOOLS_VARNAME.tail=		TAIL
 _TOOLS_VARNAME.tar=		TAR

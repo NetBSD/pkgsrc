@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.131 2005/11/04 20:02:01 jlam Exp $
+# $NetBSD: replace.mk,v 1.132 2005/11/08 03:36:13 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1002,6 +1002,17 @@ TOOLS_DEPENDS.sleep?=		coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=			sleep
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.sleep=coreutils
 TOOLS_PATH.sleep=		${TOOLS_PREFIX.sleep}/bin/${GNU_PROGRAM_PREFIX}sleep
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.soelim) && !empty(_USE_TOOLS:Msoelim)
+.  if !empty(PKGPATH:Mtextproc/groff)
+MAKEFLAGS+=			TOOLS_IGNORE.soelim=
+.  elif !empty(_TOOLS_USE_PKGSRC.soelim:M[yY][eE][sS])
+TOOLS_DEPENDS.soelim?=		groff>=1.19nb4:../../textproc/groff
+TOOLS_CREATE+=			soelim
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.soelim=groff
+TOOLS_PATH.soelim=		${TOOLS_PREFIX.soelim}/bin/soelim
 .  endif
 .endif
 
