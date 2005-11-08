@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2004/06/08 19:51:36 jschauma Exp $
+$NetBSD: patch-ab,v 1.5 2005/11/08 03:27:32 tv Exp $
 
---- page.c.orig	Sat Apr 27 00:57:38 1996
+--- page.c.orig	1996-04-26 18:57:38.000000000 -0400
 +++ page.c
 @@ -3,6 +3,7 @@
  #include <unistd.h>
@@ -15,11 +15,20 @@ $NetBSD: patch-ab,v 1.4 2004/06/08 19:51:36 jschauma Exp $
  static caddr_t	startAddr = (caddr_t) 0;
  
 -#if ( !defined(sgi) && !defined(_AIX) )
-+#if ( !defined(sgi) && !defined(_AIX) && !(defined(BSD) && BSD >= 199306)) && !defined(linux)
++#if ( !defined(sgi) && !defined(_AIX) && !(defined(BSD) && BSD >= 199306)) && !defined(linux) && !defined(__INTERIX)
  extern int	sys_nerr;
  extern char *	sys_errlist[];
  #endif
-@@ -70,7 +71,7 @@
+@@ -39,7 +40,7 @@ stringErrorReport(void)
+ {
+ #if ( defined(sgi) )
+ 	return strerror(oserror());
+-#elif ( defined(_AIX) )
++#elif ( defined(_AIX) || defined(__INTERIX) )
+ 	return strerror(errno);
+ #else
+ 	if ( errno > 0 && errno < sys_nerr )
+@@ -70,7 +71,7 @@ Page_Create(size_t size)
  	 */
  	allocation = (caddr_t) mmap(
  	 startAddr
@@ -28,7 +37,7 @@ $NetBSD: patch-ab,v 1.4 2004/06/08 19:51:36 jschauma Exp $
  	,PROT_READ|PROT_WRITE
  	,MAP_PRIVATE|MAP_ANONYMOUS
  	,-1
-@@ -122,7 +123,7 @@
+@@ -122,7 +123,7 @@ Page_Create(size_t size)
  	 */
  	allocation = (caddr_t) mmap(
  	 startAddr
