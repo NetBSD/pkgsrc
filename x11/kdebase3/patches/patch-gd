@@ -1,4 +1,4 @@
-$NetBSD: patch-gd,v 1.2 2005/05/31 14:21:23 markd Exp $
+$NetBSD: patch-gd,v 1.3 2005/11/08 18:25:44 joerg Exp $
 
 --- kcontrol/usbview/usbdevices.cpp.orig	2005-05-24 00:13:32.000000000 +1200
 +++ kcontrol/usbview/usbdevices.cpp
@@ -43,7 +43,7 @@ $NetBSD: patch-gd,v 1.2 2005/05/31 14:21:23 markd Exp $
  	
  	// determine the speed
 -#if __FreeBSD_version > 490102
-+#if (defined(Q_OS_FREEBSD) && __FreeBSD_version > 490102) || defined(Q_OS_NETBSD)
++#if defined(__DragonFly__) || (defined(Q_OS_FREEBSD) && __FreeBSD_version > 490102) || defined(Q_OS_NETBSD)
  	switch (di.udi_speed) {
  		case USB_SPEED_LOW:  _speed = 1.5;   break;
  		case USB_SPEED_FULL: _speed = 12.0;  break;

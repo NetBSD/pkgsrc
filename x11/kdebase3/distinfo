@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.74 2005/10/13 12:38:49 markd Exp $
+$NetBSD: distinfo,v 1.75 2005/11/08 18:25:44 joerg Exp $
 
 SHA1 (kdebase-3.4.3.tar.bz2) = 87b72aaf291fdb78fa9feb9acf4476d41485e486
 RMD160 (kdebase-3.4.3.tar.bz2) = 7af02903b0fc750e7b9778391ef8948b54f69ce7
@@ -12,7 +12,7 @@ Size (Daemon.README) = 2191 bytes
 SHA1 (NetBSD-flag-1.0.png) = a9cf264a52ae0a602eec956d91222e299c7dee5c
 RMD160 (NetBSD-flag-1.0.png) = 2eac20df70396169819059a704e6a85ae10234b0
 Size (NetBSD-flag-1.0.png) = 4532 bytes
-SHA1 (patch-aa) = be18dabe9c66af9a7384ee652a80b7d971d4b5d6
+SHA1 (patch-aa) = 9d4454b56193adaafe093b1fc7e0f50cd4c7038c
 SHA1 (patch-ac) = 8be0f15be839f4f01d3e079501b83e27f1fab2eb
 SHA1 (patch-ad) = 031e5622acb376ce1867d08b35c55bce101e8855
 SHA1 (patch-ae) = e281920c63ab6cea8ed41c406275e63120d27490
@@ -24,6 +24,12 @@ SHA1 (patch-al) = 555384dc03ab59845e5794e081dd5d1a92e2959e
 SHA1 (patch-bb) = 4c85002b95661db18619283e50512f3ab131a0ba
 SHA1 (patch-bc) = c236cc8b3f9caebf2540425232f2d90ec66c70d1
 SHA1 (patch-bx) = d58d16fd484fc0a46c1ae93267af19e73af6f990
+SHA1 (patch-da) = 06da421a8adcb54712e7c04125cffa9bef9003fb
+SHA1 (patch-db) = f67ffaf0676484db40759574cc2822ad0d6933bd
+SHA1 (patch-dc) = dd44652ad806d49d45ef86cbff58a01e506deeee
+SHA1 (patch-dd) = 4c98e62275ce9a632f79f99110e8fb4995e3f017
+SHA1 (patch-de) = 94d7f083784b8b56c2b23c320772a80a27df19d1
+SHA1 (patch-df) = ee6f6967d77d13217055d69dcf8be98b48d40598
 SHA1 (patch-ep) = 10e341753321415043b08cad0494a269f8d19643
 SHA1 (patch-er) = 77df7513b54e09ef81100a75da45c2ed2e520380
 SHA1 (patch-ev) = 551dc4d79b637e15a580eb1dcd2f0930ff1e3dbc
@@ -37,5 +43,5 @@ SHA1 (patch-ff) = a027ccd5f578d41560e970aa54fca9b5760da0ac
 SHA1 (patch-fg) = bdd6fbbf1f82e174d5ceb70e67763813c13b14dd
 SHA1 (patch-ga) = 40ab73f3e32e8d8e8c58662df7c5dc54bd4acd29
 SHA1 (patch-gb) = b36e23cf6c64e42269b396f389c5a0e24a40e67e
-SHA1 (patch-gc) = f3d732fc8d7754b86a0fd9a160857f08ce7a5254
-SHA1 (patch-gd) = 32450558645a51699f04c4721fb9218c2f700095
+SHA1 (patch-gc) = e02ddb93ae7aa249b3b3e68690f587b2c98255b8
+SHA1 (patch-gd) = ded2a08514f818b25603fbd54d6750afceff4636
