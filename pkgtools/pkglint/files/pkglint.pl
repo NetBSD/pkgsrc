@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.337 2005/11/07 00:45:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.338 2005/11/08 21:09:48 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2083,6 +2083,10 @@ sub checklines_package_Makefile($) {
 		if ($text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 
+			if ($varname =~ qr"^_") {
+				$line->error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
+			}
+
 			if ($varname eq "COMMENT") {
 				if ($value =~ qr"^(a|an)\s+"i) {
 					$line->log_warning("COMMENT should not begin with '$1'.");
@@ -2307,13 +2311,6 @@ sub checkfile_package_Makefile($$$) {
 
 	checklines_direct_tools($lines);
 
-	# whole file: check for pkgsrc-wip remnants
-	#
-	if ($whole =~ /\/wip\//
-	 && $category ne "wip") {
-		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Possible pkgsrc-wip pathname detected.");
-	}
-
 	if ($whole =~ /etc\/rc\.d/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use RCD_SCRIPTS mechanism to install rc.d ".
 			"scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
@@ -2514,7 +2511,8 @@ sub checkfile_package_Makefile($$$) {
 	}
 
 	checklines_package_Makefile($lines);
-	checklines_package_Makefile_varorder($lines);
+	# Disabled, as I don't like the current ordering scheme.
+	#checklines_package_Makefile_varorder($lines);
 	checklines_Makefile_varuse($lines);
 }
 
