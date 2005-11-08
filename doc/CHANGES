@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11859 2005/11/08 03:26:35 dan Exp $
+$NetBSD: CHANGES,v 1.11860 2005/11/08 13:26:40 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5112,4 +5112,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/check to 0.9.3 [tv 2005-11-07]
 	Updated net/sipcalc to 1.1.3 [seb 2005-11-07]
 	Updated sysutils/xentools20 to 2.0.7nb5 [jlam 2005-11-08]
-	Updated devel/monotone-viz to 0.12 [dan 2005-11-08]
+	Updated devel/monotone-viz to 0.12 [dan 2005-11-08]	Updated misc/dialog to 1.0.20050911nb1 [root 2005-11-08]
