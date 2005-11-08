@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/08 16:57:59 tv Exp $
 #
 
 DISTNAME=	rp-l2tp-0.3
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rp-l2tp/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/rp-l2tp/
 COMMENT=	User-space implementation of layer 2 tunnelling protocol
+
+NOT_FOR_PLATFORM=	Interix-*-* # no userland protocol stack support
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
