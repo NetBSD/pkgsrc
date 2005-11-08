@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2005/11/08 13:20:45 joerg Exp $
+$NetBSD: distinfo,v 1.9 2005/11/08 14:42:10 joerg Exp $
 
 SHA1 (dialog-1.0-20050911.tgz) = 96c11fb4a98d5f9f074d8339fe2bad501e0f5786
 RMD160 (dialog-1.0-20050911.tgz) = 9fe5698fd2dda5cd2391302d39b081abf6f86ab8
 Size (dialog-1.0-20050911.tgz) = 307686 bytes
-SHA1 (patch-aa) = f1603548145704ea9ef4ff539ce6ec650f1fd8d3
+SHA1 (patch-aa) = b732f91c113e45b7baab2f557f2719154a5ed0a1
