@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/07 10:20:49 rillig Exp $
-bin/xscrabble
+@comment $NetBSD: PLIST,v 1.3 2005/11/08 22:35:10 rillig Exp $
 bin/xscrab
+bin/xscrabble
 lib/X11/app-defaults/XScrabble
 share/games/xscrabble/OSPD3.gz
 share/games/xscrabble/scrabble_permutations

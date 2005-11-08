@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/08 22:33:19 rillig Exp $
+bin/Wormz
+bin/Wormz-client16
+bin/Wormz-client24
+bin/Wormz-client8
+bin/Wormz-server
 share/Wormz/ArrowL.tga
 share/Wormz/ArrowR.tga
 share/Wormz/CPUChip.tga
@@ -21,12 +26,7 @@ share/Wormz/linux.tga
 share/Wormz/parquet.tga
 share/Wormz/plasma.tga
 share/Wormz/plasma2-cubism.tga
-share/Wormz/plasma2.tga
 share/Wormz/plasma2-mosaic.tga
+share/Wormz/plasma2.tga
 share/Wormz/plasma3-mosaic.tga
-bin/Wormz
-bin/Wormz-server
-bin/Wormz-client8
-bin/Wormz-client16
-bin/Wormz-client24
 @dirrm share/Wormz
