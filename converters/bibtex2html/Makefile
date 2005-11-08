@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/27 09:12:01 tonio Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/08 17:57:25 tonio Exp $
 
 DISTNAME=	bibtex2html-1.76
 CATEGORIES=	converters
@@ -9,10 +9,10 @@ HOMEPAGE=	http://www.lri.fr/~filliatr/bibtex2html/
 COMMENT=	Collection of tools for translating from BibTeX to HTML
 
 BUILD_DEPENDS+=	hevea-[0-9]*:../../textproc/hevea
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
+LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
@@ -37,4 +37,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/manual.ps ${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
