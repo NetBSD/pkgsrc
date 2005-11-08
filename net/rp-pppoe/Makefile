@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/11/03 22:49:40 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2005/11/08 16:57:40 tv Exp $
 
 DISTNAME=	rp-pppoe-3.5
 PKGREVISION=	2
@@ -9,6 +9,8 @@ MASTER_SITES=	${HOMEPAGE} \
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.roaringpenguin.com/pppoe/
 COMMENT=	Roaring Penguin's PPP over Ethernet client
+
+NOT_FOR_PLATFORM+=	Interix-*-* # no userland protocol stack support
 
 CONFLICTS+=	mouse_pppoe<20000912nb1
 
