@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1999/12/16 14:34:10 agc Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/08 20:30:29 tonio Exp $
 
---- Makefile.orig	Tue Aug  4 15:02:00 1998
-+++ Makefile	Tue Dec  7 21:48:48 1999
+--- Makefile.orig	2005-11-08 21:18:37.000000000 +0100
++++ Makefile
 @@ -3,13 +3,13 @@
  # Id: Makefile,v 2.0 96/02/19 23:54:15 gvr Exp 
  
@@ -11,10 +11,13 @@ $NetBSD: patch-aa,v 1.4 1999/12/16 14:34:10 agc Exp $
 +BASEDIR=${PREFIX}/share
 +DESTDIR=${PREFIX}/bin
  #DEFSFILE=/home/mike/LGrind/lgrindef
- DEFSFILE=${BASEDIR}/texmf/tex/latex/lgrind/lgrindef
- TEXINPUTS=${BASEDIR}/texmf/tex/latex/lgrind
- DOC=${BASEDIR}/texmf/doc/latex/lgrind
+-DEFSFILE=${BASEDIR}/texmf/tex/latex/lgrind/lgrindef
+-TEXINPUTS=${BASEDIR}/texmf/tex/latex/lgrind
+-DOC=${BASEDIR}/texmf/doc/latex/lgrind
 -MAN=${BASEDIR}/man
++DEFSFILE=${PKG_TEXMFPREFIX}/tex/latex/lgrind/lgrindef
++TEXINPUTS=${PKG_TEXMFPREFIX}/tex/latex/lgrind
++DOC=${PKG_TEXMFPREFIX}/doc/latex/lgrind
 +MAN=${PREFIX}/man
  
  CC=gcc
