@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.20 2005/11/04 20:02:01 jlam Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.21 2005/11/08 03:36:13 tv Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -62,6 +62,7 @@ TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
+TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
