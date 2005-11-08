@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/08/02 14:48:43 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/08 21:17:36 tonio Exp $
 #
 
-DISTNAME=	IEEEtran-1.6b
-PKGNAME=	tex-IEEEtran-1.6b
+DISTNAME=	IEEEtran-1.6c
+PKGNAME=	tex-IEEEtran-1.6c
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/IEEEtran/}
 
@@ -13,13 +13,11 @@ COMMENT=	LaTeX class for IEEE journals and conferences
 DIST_SUBDIR=	${DISTNAME}
 DISTFILES= IEEEtran.cls IEEEtran_HOWTO.pdf README bare_conf.tex bare_jrnl.tex
 
-DEPENDS+=       teTeX-bin-[0-9]*:../../print/teTeX-bin
-
 EXTRACT_ONLY=	# nothing
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-IEEETRANDIR=	${PREFIX}/share/texmf/tex/latex/IEEEtran
+IEEETRANDIR=	${PKG_LOCALTEXMFPREFIX}/tex/latex/IEEEtran
 
 do-install:
 	${INSTALL_DATA_DIR} ${IEEETRANDIR}
@@ -30,4 +28,5 @@ do-install:
 post-install:
 	${LOCALBASE}/bin/texconfig rehash
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
