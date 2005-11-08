@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/08 18:56:56 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/08 19:37:21 tv Exp $
 #
 
 DISTNAME=		helpdeco-2.1.1
@@ -11,7 +11,7 @@ COMMENT=		Windows .hlp to .rtf converter
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
 CFLAGS+=		-DHAVE_STRLCPY
 .endif
 
