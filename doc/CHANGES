@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11864 2005/11/08 16:42:10 joerg Exp $
+$NetBSD: CHANGES,v 1.11865 2005/11/08 20:10:36 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5117,3 +5117,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/sysexits to 1.1 [tv 2005-11-08]
 	Added audio/cplay version 1.49 [tonio 2005-11-08]
 	Updated databases/postgresql74-lib to 7.4.8nb2 [root 2005-11-08]
+	Updated graphics/Coin to 2.4.4 [rillig 2005-11-08]
