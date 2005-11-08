@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4148 2005/11/08 05:05:40 ben Exp $
+$NetBSD: TODO,v 1.4149 2005/11/08 16:00:34 tonio Exp $
 
 Suggested new packages
 ======================
@@ -122,10 +122,6 @@ Suggested new packages
 	Sphinx-4
 	http://cmusphinx.sourceforge.net/sphinx4/
 	Speaker-independent, continuous speech recognition system.
-
-	cplay
-	http://www.tf.hut.fi/~flu/cplay/
-	Curses front-end for various audio players
 
 	doxywizard
 	QT-based wizard for doxygen documentation generator.
