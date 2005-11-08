@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.36 2005/11/08 03:45:37 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.37 2005/11/08 16:39:47 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1188,9 +1188,9 @@
 	<filename>/usr/pkg/share/man/</filename> by default.
       </para>
 
-      <note>The support for a custom <varname>PKGMANDIR</varname>
+      <note><para>The support for a custom <varname>PKGMANDIR</varname>
 	is not complete.
-      </note>
+      </para></note>
 
       <para>The <filename>PLIST</filename> files can just
 	use <filename>man/</filename> as the top level directory
