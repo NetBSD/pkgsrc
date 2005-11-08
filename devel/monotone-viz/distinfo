@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/05/31 16:00:58 drochner Exp $
+$NetBSD: distinfo,v 1.2 2005/11/08 03:24:32 dan Exp $
 
-SHA1 (monotone-viz-0.9.tar.gz) = 1b765225beb78b89e81a020351b4c5ebd183b28b
-RMD160 (monotone-viz-0.9.tar.gz) = a3eb564adf729531a5fbbe28cf561ddfe1900f8a
-Size (monotone-viz-0.9.tar.gz) = 89640 bytes
-SHA1 (patch-aa) = b0c1ad8e25596a8e5daae8fc5839c85c44bd70e5
-SHA1 (patch-ab) = c291dabc3837e07fcb8ebb98d16b8b7f0c6c941a
+SHA1 (monotone-viz-0.12.tar.gz) = 143223fa703a749d52adb29e39e4f0eb8c6798b9
+RMD160 (monotone-viz-0.12.tar.gz) = bd54312d47c8e7d8d9277bb23f9b34f93be774b1
+Size (monotone-viz-0.12.tar.gz) = 501151 bytes
+SHA1 (patch-aa) = c030924dc07d43bb5c7a9844408f4925ca6a9dda
