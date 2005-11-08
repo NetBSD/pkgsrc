@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:50 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/08 18:22:09 jlam Exp $
 #
 
 DISTNAME=	xfntmizi-1.1-2.noarch
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
 CONFLICTS+=	ksc5601fonts-[0-9]*
 
 USE_X11BASE=		yes
-USE_TOOLS+=		gzip gunzip
+USE_TOOLS+=		gzip gunzip mkfontdir:run
 
 MAKE_ENV+=	FONTDIR=${FONTDIR} GZIP_CMD="${GZIP_CMD}"
 
