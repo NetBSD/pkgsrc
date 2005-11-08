@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2005/01/04 15:49:24 adam Exp $
+$NetBSD: patch-ac,v 1.8 2005/11/08 16:41:30 tv Exp $
 
---- Makefile.orig	2004-12-05 18:25:19.000000000 +0000
+--- Makefile.orig	2004-12-05 13:25:19.000000000 -0500
 +++ Makefile
 @@ -2,7 +2,7 @@
  
@@ -11,7 +11,15 @@ $NetBSD: patch-ac,v 1.7 2005/01/04 15:49:24 adam Exp $
  
  
  default: $(TOP)/configs/current
-@@ -100,6 +100,7 @@ linux-x86-64-static \
+@@ -64,6 +64,7 @@ hpux11-64 \
+ hpux11-64-static \
+ hpux9 \
+ hpux9-gcc \
++interix3 \
+ irix6-64 \
+ irix6-64-static \
+ irix6-n32 \
+@@ -100,6 +101,7 @@ linux-x86-64-static \
  linux-x86-glide \
  linux-x86-static \
  netbsd \
