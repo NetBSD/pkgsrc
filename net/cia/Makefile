@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/22 11:27:58 tron Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/08 15:36:06 tv Exp $
 
 DISTNAME=	cia-20030922
 CATEGORIES=	net
@@ -18,4 +18,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLES_DIR}
 	${INSTALL_DATA} ${WRKSRC}/ipstat/examples/*.cfg ${EXAMPLES_DIR}
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
