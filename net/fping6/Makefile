@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/08 15:25:07 tv Exp $
 
 DISTNAME=	fping-2.4b2_to-ipv6
 PKGNAME=	fping6-2.4b2
@@ -17,4 +17,9 @@ post-patch:
 post-install:
 	${CHMOD} 4555 ${PREFIX}/sbin/fping6
 
+PKG_OPTIONS_VAR=		PKG_OPTIONS.fping6
+PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
+PKG_OPTIONS_GROUP.inet6=	inet6
+
+.include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.pkg.mk"
