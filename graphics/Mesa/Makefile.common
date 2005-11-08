@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2005/06/16 06:57:57 jlam Exp $
+# $NetBSD: Makefile.common,v 1.44 2005/11/08 16:41:30 tv Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -50,6 +50,8 @@ BUILD_TARGET=		solaris-x86
 BUILD_TARGET=		solaris-x86-gcc
 .    endif
 .  endif
+.elif ${OPSYS} == "Interix"
+BUILD_TARGET=		interix3
 .else
 BUILD_TARGET=		pkgsrc
 .endif
