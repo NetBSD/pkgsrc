@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:24 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/08 15:32:43 tv Exp $
 #
 
 DISTNAME=	CMU-dhcp-3.3.7+PU-9
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://heymon.princeton.edu/software/dhcpd/
 COMMENT=	CMU BootP and DHCP server, plus Princeton patches
+
+NOT_FOR_PLATFORM=	Interix-*-* # no userland routing table support
 
 WRKSRC=		${WRKDIR}/CMU-dhcp-3.3.7+PU-9
 GNU_CONFIGURE=	YES
