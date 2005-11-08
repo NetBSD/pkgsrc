@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/28 20:52:22 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/08 19:49:52 tonio Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -23,7 +23,7 @@ BUILD_TARGET=		depend all
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf
 
-TEXMF=			${PREFIX}/share/texmf
+TEXMF=			${PKG_LOCALTEXMFPREFIX}
 INSTALLATION_DIRS=	bin man/man1
 
 pre-configure:
@@ -55,6 +55,6 @@ do-install:
 			${PREFIX}/bin/mktexlsr
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
-.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
+.include "../../mk/tex.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
