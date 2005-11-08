@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:46:46 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/11/08 14:10:40 tv Exp $
 
 DISTNAME=       gated-3-5-11
 PKGNAME=        gated-3.5.11
@@ -11,6 +11,8 @@ MASTER_SITES=	http://ftp.rge.com/pub/networking/gated/ \
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gated.org/
 COMMENT=	Routing protocol daemon
+
+NOT_FOR_PLATFORM=	Interix-*-* # no userland routing table support
 
 RESTRICTED=		"Required license from Merit"
 NO_SRC_ON_FTP=		${RESTRICTED}
