@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/08 15:56:40 tonio Exp $
+bin/cplay
+man/man1/cplay.1
+share/examples/cplay/cplayrc
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/cplay.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/cplay.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/cplay.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/cplay.mo
+@dirrm share/examples/cplay
