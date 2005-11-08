@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/10/20 20:26:37 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/11/08 13:23:49 tv Exp $
 
 DISTNAME=	maildrop-2.0.1
 PKGBASE=	${DISTNAME:C/-[^-]*$//}
@@ -49,4 +49,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/maildroptips.txt ${DOCDIR}
 
+.include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
