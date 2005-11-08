@@ -1,47 +1,39 @@
 #!/bin/sh
-#
-# $NetBSD: vif-bridge-nbsd,v 1.2 2005/10/01 02:38:51 xtraeme Exp $
-#
 #============================================================================
+# $NetBSD: vif-bridge-nbsd,v 1.3 2005/11/08 00:47:35 jlam Exp $
+#
 # @PKG_SYSCONFDIR@/vif-bridge
 #
-# Script for configuring a vif in bridged mode.
-# Xend calls a vif script when bringing a vif up or down.
-# This script is the default - but it can be configured for each vif.
+# Script for configuring a vif in bridged mode with a dom0 interface.
+# The xend(8) daemon calls a vif script when bringing a vif up or down.
+# The script name to use is defined in @PKG_SYSCONFDIR@/xend-config.sxp
+# in the ``vif-script'' field.
+#
+# Usage: vif-bridge up|down [var=value ...]
+#
+# Actions:
+#    up		Adds the vif interface to the bridge.
+#    down	Removes the vif interface from the bridge.
+#
+# Variables:
+#    domain	name of the domain the interface is on (required).
+#    vifq	vif interface name (required).
+#    mac	vif MAC address (required).
+#    bridge	bridge to add the vif to (required).
 #
 # Example invocation:
 #
-# vif-bridge up domain=VM1 vif=xvif1.0 bridge=bridge0 ip="128.232.38.45/28 10.10.10.55/24"
+# vif-bridge up domain=VM1 vif=xvif1.0 mac="ee:14:01:d0:ec:af" bridge=bridge0
 #
-#
-# Usage:
-# vif-bridge (up|down) {VAR=VAL}*
-#
-# Vars:
-#
-# domain  name of the domain the interface is on (required).
-# vif     vif interface name (required).
-# mac     vif MAC address (required).
-# bridge  bridge to add the vif to (required).
-# ip      list of IP networks for the vif, space-separated (optional).
-#
-# up:
-# Enslaves the vif interface to the bridge and adds iptables rules
-# for its ip addresses (if any).
-#
-# down:
-# Removes the vif interface from the bridge and removes the iptables
-# rules for its ip addresses (if any).
 #============================================================================
 
 # Exit if anything goes wrong
-set -e
+set -e 
 
 echo "vif-bridge $*"
 
 # Operation name.
-OP=$1
-shift
+OP=$1; shift
 
 # Pull variables in args into environment
 for arg ; do export "${arg}" ; done
@@ -52,26 +44,30 @@ vif=${vif:?}
 mac=${mac:?}
 bridge=${bridge:?}
 
+# Optional parameters. Set defaults.
+ip=${ip:-''}   # default to null (do nothing)
+
 # Are we going up or down?
 case $OP in
-    up)
-        brcmd='add'
-        ;;
-    down)
-        brcmd='delete'
-        ;;
-    *)
-        echo 'Invalid command: ' $OP
-        echo 'Valid commands are: up, down'
-        exit 1
-        ;;
+up)	brcmd='add' ;;
+down)	brcmd='delete' ;;
+*)
+	echo 'Invalid command: ' $OP
+	echo 'Valid commands are: up, down'
+	exit 1
+	;;
 esac
 
 # Don't do anything if the bridge is "null".
 if [ "${bridge}" = "null" ] ; then
-    exit
+	exit
+fi
+
+# Don't do anything if the bridge doesn't exist.
+if ! ifconfig -l | grep "${bridge}" >/dev/null; then
+	exit
 fi
 
 # Add/remove vif to/from bridge.
-/sbin/brconfig ${bridge} ${brcmd} x${vif}
-/sbin/ifconfig x${vif} $OP
+ifconfig x${vif} $OP
+brconfig ${bridge} ${brcmd} x${vif}
