@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2005/05/16 22:30:24 jschauma Exp $
-share/texmf/fonts/source/chemarrow/arrow.mf
-share/texmf/fonts/tfm/chemarrow/arrow.tfm
-share/texmf/tex/latex/chemarrow/chemarrow.sty
+@comment $NetBSD: PLIST,v 1.2 2005/11/08 21:45:01 tonio Exp $
+${PKG_LOCALTEXMFPREFIX}/fonts/source/chemarrow/arrow.mf
+${PKG_LOCALTEXMFPREFIX}/fonts/tfm/chemarrow/arrow.tfm
+${PKG_LOCALTEXMFPREFIX}/tex/latex/chemarrow/chemarrow.sty
 share/fonts/chemarrow/Arrow.vfb
 share/fonts/chemarrow/arrow.afm
 share/fonts/chemarrow/arrow.inf
@@ -10,5 +10,5 @@ share/fonts/chemarrow/arrow.pfm
 @unexec ${RM} -rf %D/share/texmf/fonts/tfm/chemarrow || ${TRUE}
 @exec %D/bin/texconfig rehash
 @unexec %D/bin/texconfig rehash
-@dirrm share/texmf/fonts/source/chemarrow
+@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/source/chemarrow
 @dirrm share/fonts/chemarrow
