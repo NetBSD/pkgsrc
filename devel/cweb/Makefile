@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/16 06:57:45 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/11/08 18:45:24 tonio Exp $
 #
 # XXX This package needs to be installed with the same PREFIX as teTeX
 #
@@ -14,7 +14,7 @@ COMMENT=		CWEB System of Structured Documentation
 
 CONFLICTS+=		teTeX-bin>=2.0		# Part of teTeX>=2.0
 
-DEPENDS+= 		teTeX-[0-9]*:../../print/teTeX1
+LATEX_ACCEPTED=		teTeX1
 
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin man/man1
@@ -43,4 +43,5 @@ do-install:
 post-install:
 	${PREFIX}/bin/mktexlsr
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
