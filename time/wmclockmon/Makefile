@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/23 22:06:33 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/08 02:37:55 tv Exp $
 #
 
 DISTNAME=	wmclockmon-0.8.1
@@ -11,6 +11,6 @@ COMMENT=	Windowmaker dockapp for time/date
 
 GNU_CONFIGURE=	yes
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
