@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/09 18:33:38 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/08 21:45:01 tonio Exp $
 #
 
 DISTNAME=		unicode
@@ -11,14 +11,12 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.unruh.de/DniQ/latex/unicode/
 COMMENT=		LaTeX UTF-8 support
 
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
-
 WRKSRC=		${WRKDIR}/ucs
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 UCSFILES=	ucs.sty utf8x.def ucsencs.def
-UCSDIR=		${PREFIX}/share/texmf/tex/latex/ucs
+UCSDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs
 
 do-install:
 	${INSTALL_DATA_DIR} ${UCSDIR}
@@ -31,4 +29,5 @@ do-install:
 post-install:
 	${LOCALBASE}/bin/texconfig rehash
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

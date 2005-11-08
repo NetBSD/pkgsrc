@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/09/28 14:31:08 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/08 21:45:01 tonio Exp $
 #
 
 NAME=		textpos
@@ -17,7 +17,7 @@ DIST_SUBDIR=	${NAME}
 DISTFILES=	textpos.ins LICENCE README textpos.dtx VERSION
 
 # included in teTeX3
-DEPENDS+=       teTeX-bin<3.0:../../print/teTeX-bin
+LATEX_ACCEPTED= teTeX1 teTeX2
 CONFLICTS+=	teTeX-bin>=3.0
 
 NO_CONFIGURE=	yes
@@ -26,14 +26,15 @@ NO_BUILD=	yes
 do-extract:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/tex/latex/textpos
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos
 	for f in ${DISTFILES}; do \
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$f \
-			${PREFIX}/share/texmf/tex/latex/textpos; \
+			${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos; \
 	done
 
 post-install:
-	cd ${PREFIX}/share/texmf/tex/latex/textpos; latex textpos.ins
+	cd ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos; latex textpos.ins
 	${LOCALBASE}/bin/texconfig rehash
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

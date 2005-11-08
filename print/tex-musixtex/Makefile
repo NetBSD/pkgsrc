@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/08 21:45:01 tonio Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -11,13 +11,13 @@ MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://icking-music-archive.sunsite.dk/
 COMMENT=	TeX macros to typeset music
 
-DEPENDS+=       teTeX>=2:../../print/teTeX
+LATEX_ACCEPTED=	teTeX2 teTeX3
 
 WRKSRC=		${WRKDIR}/musixtex-T112
 NO_CONFIGURE=	yes
 
-TEXMF=		${LOCALBASE}/share/texmf
-TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
+TEXMF=		${PKG_TEXMFPREFIX}
+TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
 
 .include "../../mk/bsd.prefs.mk"
 .if exists(${LOCALBASE}/bin/initex)
@@ -38,25 +38,25 @@ do-build:
 	cd ${WRKSRC}/system/c-source; ${CC} -o musixflx musixflx.c
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/doc/musixtex
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/tfm/musixtex
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/source/musixtex
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/tex/latex/musixtex
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/musixtex
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/musixtex
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/source/musixtex
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex
 
 	${INSTALL_DATA} ${WRKSRC}/doc/* \
-		${PREFIX}/share/texmf/doc/musixtex
+		${PKG_LOCALTEXMFPREFIX}/doc/musixtex
 
 	${INSTALL_DATA} ${WRKSRC}/tex/musixtex.fmt \
-		${PREFIX}/share/texmf/web2c
+		${PKG_LOCALTEXMFPREFIX}/web2c
 
 	${INSTALL_DATA} ${WRKSRC}/tex/* \
-		${PREFIX}/share/texmf/tex/latex/musixtex
+		${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex
 
 	${INSTALL_DATA} ${WRKSRC}/mf/*.mf \
-		${PREFIX}/share/texmf/fonts/source/musixtex
+		${PKG_LOCALTEXMFPREFIX}/fonts/source/musixtex
 
 	${INSTALL_DATA} ${WRKSRC}/tfm/*.tfm \
-		${PREFIX}/share/texmf/fonts/tfm/musixtex
+		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/musixtex
 
 	${INSTALL_PROGRAM} ${WRKSRC}/system/c-source/musixflx \
 		${PREFIX}/bin
@@ -74,7 +74,7 @@ do-install:
 
 post-install:
 	@${ECHO} "======> Building musixdoc.ps"
-	cd ${PREFIX}/share/texmf/doc/musixtex ; \
+	cd ${PKG_LOCALTEXMFPREFIX}/doc/musixtex ; \
 		latex musixdoc ; \
 		musixflx musixdoc ; \
 		latex  musixdoc ; \
@@ -84,4 +84,5 @@ post-install:
 		latex  musixdoc ; \
 		dvips musixdoc.dvi -o musixdoc.ps
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

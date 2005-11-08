@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 19:07:49 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/08 21:45:01 tonio Exp $
 #
 
 DISTNAME=	prosper-1.00.4
@@ -12,13 +12,11 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://prosper.sourceforge.net/
 COMMENT=	LaTeX class for writing transparencies
 
-DEPENDS=	teTeX-bin-[0-9]*:../../print/teTeX-bin
-
 WRKSRC=		${WRKDIR}/prosper
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-TEXMF=		${LOCALBASE}/share/texmf
+TEXMF=		${PKG_LOCALTEXMFPREFIX}
 PROSPERDIR=	${TEXMF}/tex/latex/misc/prosper
 
 DOCS=		AUTHORS ChangeLog FAQ INSTALL NEWS README TODO \
@@ -44,4 +42,5 @@ do-install:
 .endfor
 	${LOCALBASE}/bin/mktexlsr
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

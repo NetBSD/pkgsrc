@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 14:31:08 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/08 21:45:01 tonio Exp $
 #
 
 DISTNAME=	ocr-b
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/${DISTNAME}/}
 MAINTAINER=	tech-pkg@NetBSD.org
 # HOMEPAGE=
 COMMENT=	OCR-B font for LaTeX
-
-DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
 WRKSRC=		${WRKDIR}/ocr-b
 DIST_SUBDIR=	${DISTNAME}
@@ -29,13 +27,14 @@ do-extract:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/doc/fonts/ocrb
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/source/ocrb
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/tfm/ocrb
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ocrb
 	${INSTALL_DATA} ${WRKSRC}/ocrbinfo \
-		${PREFIX}/share/texmf/doc/fonts/ocrb
+		${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb
 	${INSTALL_DATA} ${WRKSRC}/*.mf \
-		${PREFIX}/share/texmf/fonts/source/ocrb
+		${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb
 	${LOCALBASE}/bin/texconfig rehash
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
