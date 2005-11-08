@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.134 2005/11/08 17:41:26 jlam Exp $
+# $NetBSD: replace.mk,v 1.135 2005/11/08 23:06:38 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -659,6 +659,17 @@ TOOLS_PATH.tbl=			${TOOLS_PREFIX.tbl}/bin/tbl
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.tclsh) && !empty(_USE_TOOLS:Mtclsh)
+.  if !empty(PKGPATH:Mlang/tcl)
+MAKEFLAGS+=			TOOLS_IGNORE.tclsh=
+.  elif !empty(_TOOLS_USE_PKGSRC.tclsh:M[yY][eE][sS])
+TOOLS_DEPENDS.tclsh?=		tcl>=8.4:../../lang/tcl
+TOOLS_CREATE+=			tclsh
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tclsh=tcl
+TOOLS_PATH.tclsh=		${TOOLS_PREFIX.tclsh}/bin/tclsh
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.unrar) && !empty(_USE_TOOLS:Munrar)
 .  if !empty(PKGPATH:Marchivers/unrar)
 MAKEFLAGS+=			TOOLS_IGNORE.unrar=
@@ -689,6 +700,17 @@ TOOLS_DEPENDS.unzoo?=		unzoo-[0-9]*:../../archivers/unzoo
 TOOLS_CREATE+=			unzoo
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.unzoo=unzoo
 TOOLS_PATH.unzoo=		${TOOLS_PREFIX.unzoo}/bin/unzoo
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.wish) && !empty(_USE_TOOLS:Mwish)
+.  if !empty(PKGPATH:Mx11/tk)
+MAKEFLAGS+=			TOOLS_IGNORE.wish=
+.  elif !empty(_TOOLS_USE_PKGSRC.wish:M[yY][eE][sS])
+TOOLS_DEPENDS.wish?=		tk>=8.4:../../x11/tk
+TOOLS_CREATE+=			wish
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.wish=tk
+TOOLS_PATH.wish=		${TOOLS_PREFIX.wish}/bin/wish
 .  endif
 .endif
 
