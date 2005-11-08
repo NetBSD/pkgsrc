@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4146 2005/11/07 17:27:01 reed Exp $
+$NetBSD: TODO,v 1.4147 2005/11/08 03:26:36 dan Exp $
 
 Suggested new packages
 ======================
@@ -770,7 +770,6 @@ Suggested package updates
 	o mmix-20050922
 	o molden-4.4
 	o mono-1.1.9.2
-	o monotone-viz-0.11
 	o moscow_ml-2.01
 	o most-4.10.2
 	o mowitz-0.3.0
