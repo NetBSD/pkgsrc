@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.14 2005/09/03 21:34:44 markd Exp $
+$NetBSD: patch-aa,v 1.15 2005/11/08 18:25:44 joerg Exp $
 
---- configure.orig	2005-07-21 09:08:37.000000000 +1200
+--- configure.orig	2005-11-06 18:05:17.000000000 +0100
 +++ configure
 @@ -30769,7 +30769,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
  	# if you're trying to debug this check and think it's incorrect,
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.14 2005/09/03 21:34:44 markd Exp $
  		kde_cv_uic_plugins=yes
  	fi
  fi
-@@ -42372,6 +42372,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -42502,6 +42502,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.14 2005/09/03 21:34:44 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -45004,6 +45021,9 @@ case "$host" in
+@@ -45346,6 +45363,9 @@ case "$host" in
    *-*-freebsd*)
  	FOUND_USBVIEW=yes
  	;;
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.14 2005/09/03 21:34:44 markd Exp $
  esac
  
  
-@@ -46214,7 +46234,7 @@ acimake:
+@@ -46730,7 +46750,7 @@ acimake:
  
  EOF
      if $XMKMF >&5 2>&1 && test -f Makefile; then
@@ -54,7 +54,24 @@ $NetBSD: patch-aa,v 1.14 2005/09/03 21:34:44 markd Exp $
  	kde_cv_defines_imake_version=$imkv
      else
          echo "$as_me:$LINENO: result: failed" >&5
-@@ -53104,6 +53124,7 @@ fi
+@@ -53339,6 +53359,7 @@ case "$host" in
+   *-*-osf*) ksysguardd_compile=yes; UNAME='Tru64' ;;
+   *-*-irix*) ksysguardd_compile=yes; UNAME='Irix' ;;
+   *-*-openbsd*) ksysguardd_compile=yes; UNAME='OpenBSD' ;;
++  *-*-dragonfly*) ksysguardd_compile=yes; UNAME='DragonFly' ;;
+   *) ksysguardd_compile=no; UNAME='' ;;
+ esac
+ 
+@@ -53367,7 +53388,7 @@ fi
+ 
+ 
+ 
+-if test "$UNAME" = FreeBSD; then
++if test "$UNAME" = FreeBSD || test "$UNAME" = DragonFly; then
+   include_ksysguardd_freebsd_TRUE=
+   include_ksysguardd_freebsd_FALSE='#'
+ else
+@@ -53523,6 +53544,7 @@ fi
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
