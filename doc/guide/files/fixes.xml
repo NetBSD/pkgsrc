@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.35 2005/11/03 17:31:57 tv Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.36 2005/11/08 03:45:37 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1176,6 +1176,51 @@
         <command>makeinfo</command> command or exit on error.</para>
     </sect2>
 
+    <sect2 id="manpages">
+      <title>Packages installing man pages</title>
+
+      <para>Many packages install manual pages. The man pages
+	are installed under <varname>${PREFIX}/${PKGMANDIR}</varname>
+	which is <filename>/usr/pkg/man</filename> by default.
+	<varname>PKGMANDIR</varname> defaults to <quote>man</quote>.
+	For example, you can set <varname>PKGMANDIR</varname> to
+	<quote>share/man</quote> to have man pages install under
+	<filename>/usr/pkg/share/man/</filename> by default.
+      </para>
+
+      <note>The support for a custom <varname>PKGMANDIR</varname>
+	is not complete.
+      </note>
+
+      <para>The <filename>PLIST</filename> files can just
+	use <filename>man/</filename> as the top level directory
+	for the man page file entries
+	and the pkgsrc framework will convert as needed.
+      </para>
+
+      <para> Packages that are
+	configured with <varname>GNU_CONFIGURE</varname> set as
+	<quote>yes</quote>, by default will use the
+	<filename>./configure</filename>
+	--mandir switch to set where the man pages should be installed.
+	The path is <varname>GNU_CONFIGURE_MANDIR</varname> which defaults
+	to <varname>${PREFIX}/${PKGMANDIR}</varname>.
+      </para>
+
+      <para>
+	Packages that use <varname>GNU_CONFIGURE</varname> but do not
+	use --mandir, can set <varname>CONFIGURE_HAS_MANDIR</varname>
+	to <quote>no</quote>.
+	Or if the <filename>./configure</filename> script uses
+	a non-standard use of --mandir, you can set
+	<varname>GNU_CONFIGURE_MANDIR</varname> as needed.
+      </para>
+
+      <para>See <xref linkend="manpage-compression"/> for
+	information on installation of compressed manual pages.
+      </para>
+
+    </sect2>
 
     <sect2 id="gconf2-data-files">
       <title>Packages installing GConf2 data files</title>
