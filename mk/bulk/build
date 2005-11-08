@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.70 2005/11/06 17:12:55 rillig Exp $
+# $NetBSD: build,v 1.71 2005/11/08 21:57:59 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -186,14 +186,9 @@ esac
 } || die "Cannot load config file ${BULK_BUILD_CONF}, aborting."
 
 #
-# Check if a valid pkgsrc root directory is given.
+# Set the paths to commonly used directories.
 #
-case ${USR_PKGSRC-""} in
-/*)	;;
-*)	die	"USR_PKGSRC must be set to an absolute pathname.";;
-esac
 pkgsrc_dir="${USR_PKGSRC}"
-pkg_install_dir="${USR_PKGSRC}/pkgtools/pkg_install"
 pkglint_dir="${USR_PKGSRC}/pkgtools/pkglint"
 
 #
@@ -224,7 +219,7 @@ show_config_vars
   && ${BMAKE} fetch >/dev/null 2>&1
 ) || {
 	echo "Updating pkgtools"
-	( cd "${pkg_install_dir}" \
+	( cd "${pkgsrc_dir}/pkgtools/pkg_install" \
 	  && ${BMAKE} clean \
 	  && ${BMAKE} install \
 	  && ${BMAKE} clean
