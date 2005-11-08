@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/08 04:03:08 tv Exp $
 #
 
 DISTNAME=	pulsar-0.1.1
@@ -19,5 +19,6 @@ MANCOMPRESSED=	yes
 pre-configure:
 	cd ${WRKSRC}; autoconf
 
+.include "../../devel/sysexits/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
