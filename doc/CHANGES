@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11866 2005/11/08 20:30:57 reinoud Exp $
+$NetBSD: CHANGES,v 1.11867 2005/11/08 20:37:42 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5118,5 +5118,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Added audio/cplay version 1.49 [tonio 2005-11-08]
 	Updated databases/postgresql74-lib to 7.4.8nb2 [root 2005-11-08]
 	Updated graphics/Coin to 2.4.4 [rillig 2005-11-08]
-	Updated misc/udfclient to 0.5 [reinoud-11-08]
-
+	Updated misc/udfclient to 0.5 [reinoud 2005-11-08]
+	Updated www/php4 to 4.4.1nb2 [bouyer 2005-11-08]
+	Updated www/ap-php to 4.4.1nb3 [bouyer 2005-11-08]
