@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/02/11 00:57:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/08 21:16:09 tonio Exp $
 #
 
 DISTNAME=	eurosym-1.0
@@ -12,7 +12,7 @@ HOMEPAGE=	ftp://ftp.univie.ac.at/packages/tex/fonts/eurosym/
 COMMENT=	Euro symbols for LaTeX
 
 # included in teTeX[23]
-DEPENDS+=	teTeX-bin-1.0.*:../../print/teTeX1-bin
+LATEX_ACCEPTED= teTeX1
 CONFLICTS+=	teTeX>1
 
 WRKSRC=		${WRKDIR}/eurosym
@@ -20,18 +20,19 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/doc/fonts/eurosym
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/source/eurosym
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/tfm/eurosym
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/tex/latex/eurosym
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/fonts/eurosym
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/eurosym
 	${INSTALL_DATA} ${WRKSRC}/README \
-		${PREFIX}/share/texmf/doc/fonts/eurosym
+		${PKG_LOCALTEXMFPREFIX}/doc/fonts/eurosym
 	${INSTALL_DATA} ${WRKSRC}/src/* \
-		${PREFIX}/share/texmf/fonts/source/eurosym
+		${PKG_LOCALTEXMFPREFIX}/fonts/source/eurosym
 	${INSTALL_DATA} ${WRKSRC}/tfm/* \
-		${PREFIX}/share/texmf/fonts/tfm/eurosym
+		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/eurosym
 	${INSTALL_DATA} ${WRKSRC}/sty/* \
-		${PREFIX}/share/texmf/tex/latex/eurosym
+		${PKG_LOCALTEXMFPREFIX}/tex/latex/eurosym
 	${LOCALBASE}/bin/texconfig rehash
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
