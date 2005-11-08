@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.103 2005/05/25 17:41:18 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.104 2005/11/08 23:05:22 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -32,9 +32,9 @@ my(	$pkglist,		# list of Pkg packages
 
 $ENV{PATH} .= ':/bin:/usr/bin:/sbin:/usr/sbin:@PREFIX@/sbin:@PREFIX@/bin';
 
-if (! getopts('BDE:I:K:LM:OP:RSVdg:hilmopru', \%opt) || $opt{h} ||
+if (! getopts('BDE:I:K:LM:OP:RSVdg:himopru', \%opt) || $opt{h} ||
 	! ( defined($opt{d}) || defined($opt{g}) || defined($opt{i}) ||
-	    defined($opt{l}) || defined($opt{m}) || defined($opt{o}) ||
+	                        defined($opt{m}) || defined($opt{o}) ||
 	    defined($opt{p}) || defined($opt{r}) || defined($opt{u}) ||
 	    defined($opt{B}) || defined($opt{D}) || defined($opt{R}) ||
 	    defined($opt{O}) || defined($opt{S}) || defined($opt{V}) ||
@@ -70,11 +70,10 @@ if ($opt{D} && @ARGV)
 
 # main
     {
-    my($pkglint_flags, $pkgsrcdir, $pkgdistdir);
+    my($pkgsrcdir, $pkgdistdir);
 
     $pkgsrcdir = $default_vars->{PKGSRCDIR};
     $pkgdistdir = $default_vars->{DISTDIR};
-    $pkglint_flags = $ENV{"PKGLINT_FLAGS"} || '-q -Wno-workdir';
 
     if ($opt{r} && !$opt{o} && !$opt{m} && !$opt{p})
 	{ $opt{o} = $opt{m} = $opt{p} = 1; }
@@ -245,8 +244,6 @@ if ($opt{D} && @ARGV)
 		}
 	    }
 	}
-    if ($opt{l})
-	{ pkglint_all_pkgsrc($pkgsrcdir, $pkglint_flags); }
     if ($opt{E})
 	{
 	scan_pkgsrc_makefiles($pkgsrcdir);
@@ -1145,32 +1142,6 @@ sub parse_eval_make_false
     $false;
     }
 
-# Run pkglint on every pkgsrc entry
-#
-sub pkglint_all_pkgsrc
-    {
-    my($pkgsrcdir, $pkglint_flags) = @_;
-    my(@categories, @output);
-
-    @categories = list_pkgsrc_categories($pkgsrcdir);
-    foreach my $cat ( sort @categories )
-	{
-	safe_chdir("$pkgsrcdir/$cat");
-	foreach my $pkgdir (list_pkgsrc_pkgdirs($pkgsrcdir, $cat))
-	    {
-	    if (-f "$pkgdir/Makefile")
-		{
-		if (!open(PKGLINT, "cd $pkgdir && pkglint $pkglint_flags |"))
-		    { fail("Unable to run pkglint: $!"); }
-		@output = <PKGLINT>;
-		close(PKGLINT);
-		if (@output)
-		    { print "===> $cat/$pkgdir\n\n", @output, "\n"; }
-		}
-	    }
-	}
-    }
-
 # chdir() || fail()
 #
 sub safe_chdir
@@ -1415,7 +1386,6 @@ Misc:
   -E file : Export the internal pkgsrc database to file
   -I file : Import the internal pkgsrc database to file (for use with -i)
   -g file : Generate 'pkgname pkgdir pkgver' map in file
-  -l	  : Pkglint all packages
   -r	  : Remove bad files (Without -m -o -p or -V implies all, can use -R)
 
 Modifiers:

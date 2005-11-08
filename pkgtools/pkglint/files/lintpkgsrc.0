@@ -1,11 +1,11 @@
-LINTPKGSRC(1)               NetBSD Reference Manual              LINTPKGSRC(1)
+LINTPKGSRC(1)           NetBSD General Commands Manual           LINTPKGSRC(1)
 
 NNAAMMEE
-     lliinnttppkkggssrrcc - verifier for the pkgsrc tree
+     lliinnttppkkggssrrcc -- verifier for the pkgsrc tree
 
 SSYYNNOOPPSSIISS
-     lliinnttppkkggssrrcc [--BBDDLLOORRSSVVddhhiillmmoopprruu] [--EE _f_i_l_e] [--gg _p_k_g_s_r_c_m_a_p] [--II _f_i_l_e] [--KK
-                _P_A_C_K_A_G_E_S] [--MM _D_I_S_T_D_I_R] [--PP _P_K_G_S_R_C_D_I_R] [_m_a_k_e_f_i_l_e _._._.]
+     lliinnttppkkggssrrcc [--BBDDLLOORRSSVVddhhiillmmoopprruu] [--EE _f_i_l_e] [--gg _p_k_g_s_r_c_m_a_p] [--II _f_i_l_e]
+                [--KK _P_A_C_K_A_G_E_S] [--MM _D_I_S_T_D_I_R] [--PP _P_K_G_S_R_C_D_I_R] [_m_a_k_e_f_i_l_e _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
      lliinnttppkkggssrrcc tries to verify the entire contents of the pkgsrc tree.
@@ -14,7 +14,6 @@ DDEESSCCRRIIPPTTIIOONN
      plete Makefile parser.
 
    OOppttiioonnss
-
      --BB            List packages marked as BROKEN.
 
      --DD _p_a_t_h_s      Parse Makefiles and output contents (useful for debugging).
@@ -64,10 +63,8 @@ DDEESSCCRRIIPPTTIIOONN
 
                    Which would be an alternative to --KK.
 
-     --LL            List the filenames of Makefiles as they are parsed (for de-
-                   bugging).
-
-     --ll            Run pkglint(1) on every package in pkgsrc.
+     --LL            List the filenames of Makefiles as they are parsed (for
+                   debugging).
 
      --MM _D_I_S_T_D_I_R    Set directory for distfiles, defaults to
                    _$_{_P_K_G_S_R_C_D_I_R_}_/_d_i_s_t_f_i_l_e_s.
@@ -103,36 +100,32 @@ DDEESSCCRRIIPPTTIIOONN
 
      --SS            List packages missing from category _S_U_B_D_I_R lists.
 
-     --uu            As --ii plus for mismatched packages, display REQUIRED de-
-                   tails and run `@MAKE@ fetch-list | sh' to ensure all the
+     --uu            As --ii plus for mismatched packages, display REQUIRED
+                   details and run `@MAKE@ fetch-list | sh' to ensure all the
                    distfiles needed for the latest version are present.
 
-                   Warning: The behaviour of this command may change in a lat-
-                   er version.
+                   Warning: The behaviour of this command may change in a
+                   later version.
 
      --VV            List any prebuilt packages in any subdirs of _P_A_C_K_A_G_E_S with
                    known vulnerabilities, based on the data in
                    _$_{_P_K_G_S_R_C_D_I_R_}_/_d_i_s_t_f_i_l_e_s_/_p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s.
 
-EENNVVIIRROONNMMEENNTT
-     PKGLINT_FLAGS are the flags passed to pkglint(1) when lliinnttppkkggssrrcc is in-
-     voked with the --ll option.
-
 AAUUTTHHOORRSS
      David Brownlee <abs@netbsd.org>
 
 BBUUGGSS
-     The --RR, --VV, and --pp options default to using _P_A_C_K_A_G_E_S as the base directo-
-     ry from which to search for binary packages. If this includes OS or ar-
-     chitecture information then packages for other OS/architecture combina-
+     The --RR, --VV, and --pp options default to using _P_A_C_K_A_G_E_S as the base direc-
+     tory from which to search for binary packages. If this includes OS or
+     architecture information then packages for other OS/architecture combina-
      tions will be missed.  In this case _P_A_C_K_A_G_E_S can be overridden with --KK or
      set conditionally in _/_e_t_c_/_m_k_._c_o_n_f based on the value of _L_I_N_T_P_K_G_S_R_C.
 
-     The `Makefile parsing' algorithm used to obtain package versions and DE-
-     PENDS information is geared towards speed rather than perfection, though
-     it has got somewhat better over time, it only parses the simplest Make-
-     file conditionals. (a == b, no && etc).
+     The `Makefile parsing' algorithm used to obtain package versions and
+     DEPENDS information is geared towards speed rather than perfection,
+     though it has got somewhat better over time, it only parses the simplest
+     Makefile conditionals. (a == b, no && etc).
 
      Potentially others, but non serious to date.
 
-                                April 19, 1999                               3
+pkgsrc                         November 08, 2005                        pkgsrc
