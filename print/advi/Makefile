@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/08 20:30:29 tonio Exp $
 
 DISTNAME=		advi-1.6.0
 CATEGORIES=		print
@@ -9,9 +9,9 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://pauillac.inria.fr/advi/
 COMMENT=		Active-DVI Presenter
 
-DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
 BUILD_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
 
+LATEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
@@ -49,5 +49,6 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../x11/ocaml-graphics/buildlink3.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
