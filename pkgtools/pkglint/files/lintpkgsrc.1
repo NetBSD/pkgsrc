@@ -1,9 +1,9 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.27 2005/09/10 22:32:43 wiz Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.28 2005/11/08 23:05:22 rillig Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
 .\"
-.Dd April 19, 1999
+.Dd November 08, 2005
 .Dt LINTPKGSRC 1
 .Sh NAME
 .Nm lintpkgsrc
@@ -102,10 +102,6 @@ Which would be an alternative to
 .Fl K .
 .It Fl L
 List the filenames of Makefiles as they are parsed (for debugging).
-.It Fl l
-Run
-.Xr pkglint 1
-on every package in pkgsrc.
 .It Fl M Ar DISTDIR
 Set directory for distfiles, defaults to
 .Pa ${PKGSRCDIR}/distfiles .
@@ -166,15 +162,6 @@ List any prebuilt packages in any subdirs of
 with known vulnerabilities, based on the data in
 .Pa ${PKGSRCDIR}/distfiles/pkg-vulnerabilities .
 .El
-.Sh ENVIRONMENT
-.Ev PKGLINT_FLAGS
-are the flags passed to
-.Xr pkglint 1
-when
-.Nm
-is invoked with the
-.Fl l
-option.
 .Sh AUTHORS
 .An David Brownlee Aq abs@netbsd.org
 .Sh BUGS
