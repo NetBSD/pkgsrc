@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/10/31 17:34:20 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/08 13:34:39 tv Exp $
 #
 
-DISTNAME=	sysexits-1.0
+DISTNAME=	sysexits-1.1
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/10/31 15:53:19 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/11/08 13:34:39 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SYSEXITS_BUILDLINK3_MK:=	${SYSEXITS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsysexits}
 BUILDLINK_PACKAGES+=	sysexits
 
 .if !empty(SYSEXITS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.sysexits+=	sysexits>=1.0
+BUILDLINK_DEPENDS.sysexits+=	sysexits>=1.1
 BUILDLINK_DEPMETHOD.sysexits?=	build
 BUILDLINK_PKGSRCDIR.sysexits?=	../../devel/sysexits
 .endif	# SYSEXITS_BUILDLINK3_MK
