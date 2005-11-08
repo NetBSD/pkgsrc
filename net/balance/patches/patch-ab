@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2005/11/04 16:41:30 minskim Exp $
+$NetBSD: patch-ab,v 1.3 2005/11/08 15:50:03 tv Exp $
 
 --- balance.h.orig	2004-05-27 05:24:30.000000000 -0700
 +++ balance.h
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.2 2005/11/04 16:41:30 minskim Exp $
  #include <stdlib.h>
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__INTERIX)
  #define BalanceBSD 1
  #endif 
  
