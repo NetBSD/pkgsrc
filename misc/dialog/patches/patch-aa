@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.11 2005/11/08 13:20:45 joerg Exp $
+
+--- util.c.orig	2005-11-08 13:00:19.000000000 +0000
++++ util.c
+@@ -262,7 +262,7 @@ init_dialog(FILE *input, FILE *output)
+ 	if ((fd1 = open_terminal(&device, O_RDONLY)) >= 0
+ 	    && (fd2 = dup(fileno(stdin))) >= 0) {
+ 	    dialog_state.pipe_input = fdopen(fd2, "r");
+-	    *stdin = *freopen(device, "r", stdin);
++	    stdin = freopen(device, "r", stdin);
+ 	    if (fileno(stdin) != 0)	/* some functions may read fd #0 */
+ 		(void) dup2(fileno(stdin), 0);
+ 	}
