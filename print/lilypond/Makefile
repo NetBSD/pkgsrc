@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/11/08 20:48:32 tonio Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
@@ -46,8 +46,8 @@ post-install:
 .include "../../fonts/mftrace/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/emacs.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
