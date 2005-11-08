@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.21 2005/11/03 17:30:50 tv Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.22 2005/11/08 22:19:34 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -322,15 +322,15 @@
 
 	<itemizedlist>
 
-	  <listitem><para><emphasis role="strong">X-Windows:</emphasis></para>
+	  <listitem><para><emphasis role="strong">X11:</emphasis></para>
 	    <para>Interix comes with the standard set of X11R6 client libraries,
-	    and can run X-Windows based applications, but it does
+	    and can run X11 based applications, but it does
 	    <emphasis>not</emphasis> come with an X server.  Some options are
 	    <ulink url="http://www.starnet.com/products/xwin32/">StarNet X-Win32</ulink>,
 	    <ulink url="http://connectivity.hummingbird.com/products/nc/exceed/">Hummingbird Exceed</ulink>
 	    (available in a trimmed version for Interix from Interop Systems as the
 	    <ulink url="http://www.interopsystems.com/InteropXserver.htm">Interop X Server</ulink>),
-	    and the free X-Windows server included with
+	    and the free X11 server included with
 	    <ulink url="http://x.cygwin.com/">Cygwin</ulink>.</para>
 
 	    <para>Also, StarNet Communications has graciously provided a free
@@ -339,7 +339,7 @@
 	    <ulink url="http://www.starnet.com/xwin32LX/get_xwin32LX.htm">X-Win32 LX</ulink>,
 	    recommended by the maintainer of Interix pkgsrc support.</para></listitem>
 
-	  <listitem><para><emphasis role="strong">X-Windows acceleration:</emphasis></para>
+	  <listitem><para><emphasis role="strong">X11 acceleration:</emphasis></para>
 	    <para>Because Interix runs in a completely different NT subsystem from
 	    Win32 applications, it does not currently support various X11
 	    protocol extensions for acceleration (such as MIT-SHM or DGA).
