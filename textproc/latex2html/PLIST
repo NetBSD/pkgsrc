@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/08 22:32:07 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/11/08 20:02:52 tonio Exp $
 bin/latex2html
 bin/pstoimg
 bin/texexpand
@@ -332,19 +332,19 @@ share/latex2html/versions/table.pl
 share/latex2html/versions/techexpl.pl
 share/latex2html/versions/unicode.pl
 share/latex2html/versions/utf8.pl
-share/texmf/tex/latex/html/floatflt.ins
-share/texmf/tex/latex/html/frames.sty
-share/texmf/tex/latex/html/heqn.sty
-share/texmf/tex/latex/html/hthtml.sty
-share/texmf/tex/latex/html/html.sty
-share/texmf/tex/latex/html/htmllist.sty
-share/texmf/tex/latex/html/justify.sty
-share/texmf/tex/latex/html/latin9.def
-share/texmf/tex/latex/html/ldump.sty
-share/texmf/tex/latex/html/techexplHTML.tex
-share/texmf/tex/latex/html/url.sty
-share/texmf/tex/latex/html/verbatimfiles.sty
-@dirrm share/texmf/tex/latex/html
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/floatflt.ins
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/frames.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/heqn.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/hthtml.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/html.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/htmllist.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/justify.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/latin9.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/ldump.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/techexplHTML.tex
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/url.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/html/verbatimfiles.sty
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/html
 @dirrm share/latex2html/versions
 @dirrm share/latex2html/texinputs
 @dirrm share/latex2html/styles
