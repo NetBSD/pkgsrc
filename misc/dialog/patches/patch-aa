@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.12 2005/11/08 14:42:10 joerg Exp $
+$NetBSD: patch-aa,v 1.13 2005/11/08 18:05:23 reed Exp $
 
---- util.c.orig	2005-11-08 13:00:19.000000000 +0000
-+++ util.c
-@@ -262,7 +262,7 @@ init_dialog(FILE *input, FILE *output)
+--- util.c.orig	2005-10-30 12:15:17.000000000 -0800
++++ util.c	2005-10-31 15:55:28.000000000 -0800
+@@ -264,7 +264,8 @@
  	if ((fd1 = open_terminal(&device, O_RDONLY)) >= 0
  	    && (fd2 = dup(fileno(stdin))) >= 0) {
  	    dialog_state.pipe_input = fdopen(fd2, "r");
 -	    *stdin = *freopen(device, "r", stdin);
-+	    freopen(device, "r", stdin);
++	    if (freopen(device, "r", stdin) == 0)
++		dlg_exiterr("cannot open tty-input");
  	    if (fileno(stdin) != 0)	/* some functions may read fd #0 */
  		(void) dup2(fileno(stdin), 0);
  	}
