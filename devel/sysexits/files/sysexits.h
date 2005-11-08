@@ -91,6 +91,15 @@
  *		CANTCREAT, but rather for higher level permissions.
  */
 
+/*
+ * Hack for Interix -- it uses a bad UnixWare value for EX_OK, so
+ * preload <unistd.h> and undefine its bad macro
+ */
+#ifdef __INTERIX
+#include <unistd.h>
+#undef EX_OK
+#endif
+
 #define EX_OK		0	/* successful termination */
 
 #define EX__BASE	64	/* base value for error messages */
