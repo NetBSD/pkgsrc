@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:52 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/08 19:49:52 tonio Exp $
 
 DISTNAME=	mftrace-1.1.1
 PKGREVISION=	1
@@ -13,7 +13,6 @@ DEPENDS+=	autotrace>=0.31:../../graphics/autotrace
 DEPENDS+=	potrace>=1.5:../../graphics/potrace
 DEPENDS+=	fontforge>=20041115:../../fonts/fontforge
 DEPENDS+=	t1utils>=1.27:../../fonts/t1utils
-DEPENDS+=	teTeX>=2.0.2:../../print/teTeX
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -39,4 +38,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/tfm.pyc ${PREFIX}/${PYSITELIB}
 
 .include "../../lang/python/application.mk"
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
