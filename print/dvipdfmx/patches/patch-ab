@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/11/09 00:24:03 tonio Exp $
+
+--- data/Makefile.in.orig	2002-10-25 07:42:10.000000000 +0200
++++ data/Makefile.in
+@@ -61,7 +61,7 @@ MAKEINFO = @MAKEINFO@
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ 
+-pkgdatadir = $(datadir)/texmf/dvipdfm
++pkgdatadir = ${PKG_LOCALTEXMFPREFIX}/dvipdfm
+ pkgdata_DATA = CMap config
+ DIST_COMMON = Makefile.in $(pkgdata_DATA)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
