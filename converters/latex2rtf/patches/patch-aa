@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2005/11/09 07:17:04 reed Exp $
+$NetBSD: patch-aa,v 1.4 2005/11/09 21:04:57 rillig Exp $
 
 --- Makefile.orig	2004-11-07 18:59:18.000000000 -0800
 +++ Makefile	2005-11-03 15:42:07.000000000 -0800
-@@ -1,6 +1,6 @@
- # $Id: patch-aa,v 1.3 2005/11/09 07:17:04 reed Exp $
+@@ -2,5 +2,5 @@
  
 -CC=gcc
 +CC?=gcc
