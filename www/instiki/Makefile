@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/09/28 12:24:44 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/11/09 04:27:34 taca Exp $
 
 DISTNAME=	instiki-0.9.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://rubyforge.org/frs/download.php/2515/
 EXTRACT_SUFX=	.tgz
@@ -10,16 +10,12 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://instiki.org/
 COMMENT=	Wiki clone that focuses on simple installation and running
 
-DEPENDS+=	${RUBY_PKGPREFIX}-digest-[0-9]*:../../security/ruby-digest
-DEPENDS+=	${RUBY_PKGPREFIX}-zlib-[0-9]*:../../devel/ruby-zlib
-
 NO_BUILD=	yes
 USE_PKGINSTALL=	yes
 
 RCD_SCRIPTS=	instiki
 FILES_SUBST+=	RUBY=${RUBY}
 
-RUBY_VERSION_SUPPORTED=	18
 REPLACE_RUBY=		instiki
 
 INSTIKI_DIR=	${PREFIX}/share/${PKGBASE}
