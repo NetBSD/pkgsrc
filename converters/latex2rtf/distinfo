@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/11/09 07:17:04 reed Exp $
+$NetBSD: distinfo,v 1.6 2005/11/09 21:04:57 rillig Exp $
 
 SHA1 (latex2rtf-1.9.16a.tar.gz) = e4f522d600b0386fa544f0fe59a7024325d0b567
 RMD160 (latex2rtf-1.9.16a.tar.gz) = 0bea62eafdbd6c240d76e3d7d6bac5cf7a14f8fe
 Size (latex2rtf-1.9.16a.tar.gz) = 633884 bytes
-SHA1 (patch-aa) = 47e490a62a65473bd554d31660fc28e502187f98
+SHA1 (patch-aa) = 5411c3b527eb4a3553a39a22d1a217b0ffb9d6c2
