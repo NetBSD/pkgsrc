@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/09 08:12:54 tonio Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/09 09:03:22 tonio Exp $
 #
 
 DISTNAME=		ec-fonts-mftraced-1.0.8
@@ -13,6 +13,7 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 MAKEFILE=		GNUmakefile
+MAKE_ENV+=		PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX}
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
 
 post-install:
