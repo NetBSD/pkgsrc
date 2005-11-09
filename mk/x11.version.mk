@@ -1,11 +1,12 @@
-# $NetBSD: x11.version.mk,v 1.2 2005/06/20 20:59:45 jlam Exp $
+# $NetBSD: x11.version.mk,v 1.3 2005/11/09 01:07:37 reed Exp $
 #
 # The following variables may be set in /etc/mk.conf:
 #
 #    X11_TYPE sets the X11 distribution used when building X11 packages.
 #	Possible values are "xorg" (use x11/xorg-libs), "XFree86" (use
 #	x11/XFree86-libs), or "native" (use the native X11 distribution).
-#	The default X11_TYPE is "native".
+#	The default X11_TYPE is "native" unless defined for a specific
+#	operating system in mk/platform/${OPSYS}.mk.
 #
 # The following variables are provided by this file:
 #
