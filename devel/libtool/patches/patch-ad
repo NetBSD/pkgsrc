@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
+$NetBSD: patch-ad,v 1.27 2005/11/09 18:05:56 tv Exp $
 
---- libltdl/configure.orig	2005-07-03 15:36:30.000000000 -0400
+--- libltdl/configure.orig	2005-11-09 12:32:46.000000000 -0500
 +++ libltdl/configure
 @@ -322,11 +322,11 @@ else
  
@@ -264,7 +264,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      *)
        lt_prog_compiler_pic='-fPIC'
        ;;
-@@ -7338,6 +7360,17 @@ EOF
+@@ -7338,6 +7360,21 @@ EOF
        fi
        ;;
  
@@ -277,12 +277,16 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      archive_expsym_cmds='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      export_dynamic_flag_spec='${wl}-E'
++      hardcode_direct=yes
++      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++      hardcode_shlibpath_var=no
 +      ;;
 +
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -7525,7 +7558,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -7525,7 +7562,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -292,7 +296,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7585,7 +7619,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -7585,7 +7623,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -302,7 +306,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7701,7 +7736,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -7701,7 +7740,7 @@ if test -z "$aix_libpath"; then aix_libp
           archive_cmds='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           module_cmds='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -311,7 +315,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
            module_expsym_cmds='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -7816,6 +7851,21 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -7816,6 +7855,21 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -322,7 +326,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +      # all libraries, leading to runtime relocations -- slow and very
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      archive_expsym_cmds='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec='${wl}-E'
 +      hardcode_direct=yes
@@ -333,7 +337,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -8219,6 +8269,7 @@ beos*)
+@@ -8219,6 +8273,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -341,7 +345,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -8336,15 +8387,16 @@ freebsd* | dragonfly*)
+@@ -8336,15 +8391,16 @@ freebsd* | dragonfly*)
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -364,7 +368,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -8420,15 +8472,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -8420,15 +8476,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -376,7 +380,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +  soname_spec='${libname}${release}${shared_ext}$major'
 +  dynamic_linker='Interix 3.x ld.so'
 +  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
++  shlibpath_overrides_runpath=no
 +  hardcode_into_libs=yes
 +  ;;
 +
@@ -393,7 +397,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -8505,11 +8564,11 @@ knetbsd*-gnu)
+@@ -8505,11 +8568,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -407,7 +411,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -8540,14 +8599,14 @@ nto-qnx*)
+@@ -8540,14 +8603,14 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -424,7 +428,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -8795,7 +8854,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -8795,7 +8858,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -434,7 +438,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8898,7 +8958,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -8898,7 +8962,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -444,7 +448,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8963,7 +9024,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -8963,7 +9028,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -454,7 +458,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9056,7 +9118,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -9056,7 +9122,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -464,7 +468,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9121,7 +9184,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -9121,7 +9188,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -474,7 +478,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9187,7 +9251,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -9187,7 +9255,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -484,7 +488,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9253,7 +9318,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -9253,7 +9322,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -494,7 +498,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -10106,9 +10172,7 @@ echo "$as_me: error: tag name \"$tagname
+@@ -10106,9 +10176,7 @@ echo "$as_me: error: tag name \"$tagname
  
        case $tagname in
        CXX)
@@ -505,7 +509,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
  	  ac_ext=cc
  ac_cpp='$CXXCPP $CPPFLAGS'
  ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-@@ -10495,7 +10559,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -10495,7 +10563,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -515,7 +519,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -10556,7 +10621,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -10556,7 +10625,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -525,7 +529,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -10684,7 +10750,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10684,7 +10754,7 @@ if test -z "$aix_libpath"; then aix_libp
            archive_cmds_CXX='$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
            module_cmds_CXX='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -534,7 +538,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
            module_expsym_cmds_CXX='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -10842,6 +10908,16 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10842,6 +10912,20 @@ if test -z "$aix_libpath"; then aix_libp
  	;;
      esac
      ;;
@@ -545,13 +549,17 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +    # all libraries, leading to runtime relocations -- slow and very
 +    # memory consuming.  To do this, we pick a random 256KB-aligned
 +    # start address between 0x50000000 and 0x6ffc0000 at link time.
-+    archive_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++    archive_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +    archive_expsym_cmds_CXX='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++    export_dynamic_flag_spec_CXX='${wl}-E'
++    hardcode_direct_CXX=yes
++    hardcode_libdir_flag_spec_CXX='${wl}-rpath,$libdir'
++    hardcode_shlibpath_var_CXX=no
 +    ;;
    irix5* | irix6*)
      case $cc_basename in
        CC*)
-@@ -10972,14 +11048,29 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10972,14 +11056,29 @@ if test -z "$aix_libpath"; then aix_libp
      ;;
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
@@ -583,7 +591,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      ;;
    openbsd2*)
      # C++ shared libraries are fairly broken
-@@ -11366,6 +11457,21 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -11366,6 +11465,21 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
      esac
    done
  
@@ -605,7 +613,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -11413,9 +11519,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11413,9 +11527,11 @@ echo $ECHO_N "checking for $compiler opt
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -618,7 +626,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -11437,6 +11545,10 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11437,6 +11553,10 @@ echo $ECHO_N "checking for $compiler opt
  	;;
        esac
        ;;
@@ -629,7 +637,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      *)
        lt_prog_compiler_pic_CXX='-fPIC'
        ;;
-@@ -11511,6 +11623,8 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11511,6 +11631,8 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -638,7 +646,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC*)
-@@ -11991,6 +12105,7 @@ beos*)
+@@ -11991,6 +12113,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -646,7 +654,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -12108,15 +12223,16 @@ freebsd* | dragonfly*)
+@@ -12108,15 +12231,16 @@ freebsd* | dragonfly*)
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -669,7 +677,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -12192,15 +12308,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -12192,15 +12316,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -681,7 +689,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +  soname_spec='${libname}${release}${shared_ext}$major'
 +  dynamic_linker='Interix 3.x ld.so'
 +  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
++  shlibpath_overrides_runpath=no
 +  hardcode_into_libs=yes
 +  ;;
 +
@@ -698,7 +706,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -12277,11 +12400,11 @@ knetbsd*-gnu)
+@@ -12277,11 +12408,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -712,7 +720,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -12312,14 +12435,14 @@ nto-qnx*)
+@@ -12312,14 +12443,14 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -729,7 +737,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -12567,7 +12690,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -12567,7 +12698,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -739,7 +747,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -12670,7 +12794,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -12670,7 +12802,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -749,7 +757,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -12735,7 +12860,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -12735,7 +12868,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -759,7 +767,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -12828,7 +12954,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -12828,7 +12962,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -769,7 +777,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -12893,7 +13020,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -12893,7 +13028,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -779,7 +787,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -12959,7 +13087,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -12959,7 +13095,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -789,7 +797,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -13025,7 +13154,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -13025,7 +13162,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -799,7 +807,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -13887,9 +14017,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -13887,9 +14025,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -812,7 +820,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -13918,6 +14050,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -13918,6 +14058,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -824,7 +832,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      *)
        lt_prog_compiler_pic_F77='-fPIC'
        ;;
-@@ -14386,6 +14523,17 @@ EOF
+@@ -14386,6 +14531,21 @@ EOF
        fi
        ;;
  
@@ -837,12 +845,16 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      archive_expsym_cmds_F77='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      export_dynamic_flag_spec_F77='${wl}-E'
++      hardcode_direct_F77=yes
++      hardcode_libdir_flag_spec_F77='${wl}-rpath,$libdir'
++      hardcode_shlibpath_var_F77=no
 +      ;;
 +
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -14563,7 +14711,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -14563,7 +14723,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -852,7 +864,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -14613,7 +14762,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -14613,7 +14774,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -862,7 +874,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -14729,7 +14879,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14729,7 +14891,7 @@ if test -z "$aix_libpath"; then aix_libp
           archive_cmds_F77='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           module_cmds_F77='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -871,7 +883,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
            module_expsym_cmds_F77='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -14844,6 +14994,21 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14844,6 +15006,21 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -882,7 +894,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +      # all libraries, leading to runtime relocations -- slow and very
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      archive_expsym_cmds_F77='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec_F77='${wl}-E'
 +      hardcode_direct_F77=yes
@@ -893,7 +905,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -15247,6 +15412,7 @@ beos*)
+@@ -15247,6 +15424,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -901,7 +913,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15364,15 +15530,16 @@ freebsd* | dragonfly*)
+@@ -15364,15 +15542,16 @@ freebsd* | dragonfly*)
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -924,7 +936,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -15448,15 +15615,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -15448,15 +15627,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -936,7 +948,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +  soname_spec='${libname}${release}${shared_ext}$major'
 +  dynamic_linker='Interix 3.x ld.so'
 +  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
++  shlibpath_overrides_runpath=no
 +  hardcode_into_libs=yes
 +  ;;
 +
@@ -953,7 +965,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15533,11 +15707,11 @@ knetbsd*-gnu)
+@@ -15533,11 +15719,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -967,7 +979,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -15568,14 +15742,14 @@ nto-qnx*)
+@@ -15568,14 +15754,14 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -984,7 +996,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -16335,9 +16509,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -16335,9 +16521,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -997,7 +1009,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -16366,6 +16542,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -16366,6 +16554,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -1009,7 +1021,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      *)
        lt_prog_compiler_pic_GCJ='-fPIC'
        ;;
-@@ -16834,6 +17015,17 @@ EOF
+@@ -16834,6 +17027,21 @@ EOF
        fi
        ;;
  
@@ -1022,12 +1034,16 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      archive_expsym_cmds_GCJ='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      export_dynamic_flag_spec_GCJ='${wl}-E'
++      hardcode_direct_GCJ=yes
++      hardcode_libdir_flag_spec_GCJ='${wl}-rpath,$libdir'
++      hardcode_shlibpath_var_GCJ=no
 +      ;;
 +
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -17021,7 +17213,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -17021,7 +17229,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1037,7 +1053,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -17081,7 +17274,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -17081,7 +17290,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1047,7 +1063,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -17197,7 +17391,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -17197,7 +17407,7 @@ if test -z "$aix_libpath"; then aix_libp
           archive_cmds_GCJ='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           module_cmds_GCJ='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -1056,7 +1072,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
            module_expsym_cmds_GCJ='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -17312,6 +17506,21 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -17312,6 +17522,21 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -1067,7 +1083,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +      # all libraries, leading to runtime relocations -- slow and very
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      archive_expsym_cmds_GCJ='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec_GCJ='${wl}-E'
 +      hardcode_direct_GCJ=yes
@@ -1078,7 +1094,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -17715,6 +17924,7 @@ beos*)
+@@ -17715,6 +17940,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -1086,7 +1102,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -17832,15 +18042,16 @@ freebsd* | dragonfly*)
+@@ -17832,15 +18058,16 @@ freebsd* | dragonfly*)
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -1109,7 +1125,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -17916,15 +18127,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -17916,15 +18143,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -1121,7 +1137,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
 +  soname_spec='${libname}${release}${shared_ext}$major'
 +  dynamic_linker='Interix 3.x ld.so'
 +  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
++  shlibpath_overrides_runpath=no
 +  hardcode_into_libs=yes
 +  ;;
 +
@@ -1138,7 +1154,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -18001,11 +18219,11 @@ knetbsd*-gnu)
+@@ -18001,11 +18235,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -1152,7 +1168,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -18036,14 +18254,14 @@ nto-qnx*)
+@@ -18036,14 +18270,14 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -1169,7 +1185,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -18291,7 +18509,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -18291,7 +18525,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1179,7 +1195,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -18394,7 +18613,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -18394,7 +18629,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1189,7 +1205,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -18459,7 +18679,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -18459,7 +18695,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1199,7 +1215,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -18552,7 +18773,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -18552,7 +18789,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1209,7 +1225,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -18617,7 +18839,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -18617,7 +18855,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1219,7 +1235,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -18683,7 +18906,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -18683,7 +18922,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1229,7 +1245,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -18749,7 +18973,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -18749,7 +18989,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1239,7 +1255,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20014,7 +20239,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -20014,7 +20255,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1249,7 +1265,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20086,7 +20312,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20086,7 +20328,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1259,7 +1275,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20140,7 +20367,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20140,7 +20383,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1269,7 +1285,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20211,7 +20439,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20211,7 +20455,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1279,7 +1295,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20265,7 +20494,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20265,7 +20510,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1289,7 +1305,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20517,7 +20747,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20517,7 +20763,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1299,7 +1315,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20586,7 +20817,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20586,7 +20833,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1309,7 +1325,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20657,7 +20889,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20657,7 +20905,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1319,7 +1335,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20717,7 +20950,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20717,7 +20966,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1329,7 +1345,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20776,7 +21010,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20776,7 +21026,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1339,7 +1355,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20847,7 +21082,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20847,7 +21098,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1349,7 +1365,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -20945,7 +21181,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20945,7 +21197,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1359,7 +1375,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -21070,7 +21307,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21070,7 +21323,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1369,7 +1385,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -21391,7 +21629,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -21391,7 +21645,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1379,7 +1395,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -21542,7 +21781,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -21542,7 +21797,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1389,7 +1405,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -21654,7 +21894,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21654,7 +21910,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1399,7 +1415,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -21747,7 +21988,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -21747,7 +22004,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1409,7 +1425,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -21899,7 +22141,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -21899,7 +22157,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1419,7 +1435,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -22049,7 +22292,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -22049,7 +22308,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1429,7 +1445,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -22235,7 +22479,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -22235,7 +22495,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1439,7 +1455,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -22337,7 +22582,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -22337,7 +22598,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1449,7 +1465,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -22439,7 +22685,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -22439,7 +22701,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1459,7 +1475,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -22541,7 +22788,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -22541,7 +22804,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1469,7 +1485,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -22644,7 +22892,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -22644,7 +22908,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -1479,7 +1495,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -23587,6 +23836,11 @@ esac
+@@ -23587,6 +23852,11 @@ esac
    *) ac_INSTALL=$ac_top_builddir$INSTALL ;;
    esac
  
@@ -1491,7 +1507,7 @@ $NetBSD: patch-ad,v 1.26 2005/07/03 19:42:14 tv Exp $
    # Let's still pretend it is `configure' which instantiates (i.e., don't
    # use $as_me), people would be surprised to read:
    #    /* config.h.  Generated by config.status.  */
-@@ -23625,12 +23879,6 @@ echo "$as_me: error: cannot find input f
+@@ -23625,12 +23895,6 @@ echo "$as_me: error: cannot find input f
  	 fi;;
        esac
      done` || { (exit 1); exit 1; }

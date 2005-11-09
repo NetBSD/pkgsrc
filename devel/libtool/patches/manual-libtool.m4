@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
 
 --- libtool.m4.orig	2005-05-15 09:41:23.000000000 -0400
 +++ libtool.m4
@@ -59,7 +59,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
 +  soname_spec='${libname}${release}${shared_ext}$major'
 +  dynamic_linker='Interix 3.x ld.so'
 +  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=yes
++  shlibpath_overrides_runpath=no
 +  hardcode_into_libs=yes
 +  ;;
 +
@@ -171,7 +171,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
            _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -3157,6 +3156,16 @@ case $host_os in
+@@ -3157,6 +3156,20 @@ case $host_os in
  	;;
      esac
      ;;
@@ -182,13 +182,17 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
 +    # all libraries, leading to runtime relocations -- slow and very
 +    # memory consuming.  To do this, we pick a random 256KB-aligned
 +    # start address between 0x50000000 and 0x6ffc0000 at link time.
-+    _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++    _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +    _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++    _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
++    _LT_AC_TAGVAR(hardcode_direct, $1)=yes
++    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++    _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
 +    ;;
    irix5* | irix6*)
      case $cc_basename in
        CC*)
-@@ -3287,14 +3296,29 @@ case $host_os in
+@@ -3287,14 +3300,29 @@ case $host_os in
      ;;
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
@@ -220,7 +224,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
      ;;
    openbsd2*)
      # C++ shared libraries are fairly broken
-@@ -3734,6 +3758,21 @@ if AC_TRY_EVAL(ac_compile); then
+@@ -3734,6 +3762,21 @@ if AC_TRY_EVAL(ac_compile); then
      esac
    done
  
@@ -242,7 +246,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -4698,9 +4737,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4698,9 +4741,11 @@ AC_MSG_CHECKING([for $compiler option to
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -255,7 +259,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -4722,6 +4763,10 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4722,6 +4767,10 @@ AC_MSG_CHECKING([for $compiler option to
  	;;
        esac
        ;;
@@ -266,7 +270,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -4796,6 +4841,8 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4796,6 +4845,8 @@ AC_MSG_CHECKING([for $compiler option to
  	    ;;
  	esac
  	;;
@@ -275,7 +279,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC*)
-@@ -4967,9 +5014,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4967,9 +5018,11 @@ AC_MSG_CHECKING([for $compiler option to
        ;;
  
      darwin* | rhapsody*)
@@ -288,7 +292,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -4998,6 +5047,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4998,6 +5051,11 @@ AC_MSG_CHECKING([for $compiler option to
        esac
        ;;
  
@@ -300,7 +304,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -5370,6 +5424,17 @@ EOF
+@@ -5370,6 +5428,21 @@ EOF
        fi
        ;;
  
@@ -313,12 +317,16 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
++      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
++      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
 +      ;;
 +
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5633,7 +5698,7 @@ EOF
+@@ -5633,7 +5706,7 @@ EOF
           _LT_AC_TAGVAR(archive_cmds, $1)='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
            # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
@@ -327,7 +335,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
            _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -5748,6 +5813,21 @@ EOF
+@@ -5748,6 +5821,21 @@ EOF
        fi
        ;;
  
@@ -338,7 +346,7 @@ $NetBSD: manual-libtool.m4,v 1.16 2005/07/03 19:42:14 tv Exp $
 +      # all libraries, leading to runtime relocations -- slow and very
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
 +      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
