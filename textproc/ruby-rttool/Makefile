@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/11/03 07:21:40 taca Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/09 04:26:07 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.rubyist.net/~rubikitch/archive/
 
@@ -10,6 +11,11 @@ HOMEPAGE=	http://www.rubyist.net/~rubikitch/computer/rt/
 COMMENT=	RT to HTML (and hopefully LaTeX in future) table converter
 
 CONFLICTS+=	ruby[1-9][0-9]-rttool-*
+
+USE_RUBY_DIST_SUBDIR=	yes
+.include "../../lang/ruby/rubyversion.mk"
+# install a library file to rdtool's directory, too
+BUILDLINK_DEPMETHOD.${RUBY_PKGPREFIX}-rdtool= full
 
 VERSION=		1.0.1
 USE_RUBY_DIST_SUBDIR=	yes
@@ -30,4 +36,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${RUBY_EXAMPLESDIR}/rt
 
 .include "../../lang/ruby/modules.mk"
+.include "../../textproc/ruby-rdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
