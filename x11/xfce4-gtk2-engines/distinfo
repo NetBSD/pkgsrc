@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2005/05/18 06:10:31 martti Exp $
+$NetBSD: distinfo,v 1.13 2005/11/09 06:42:59 martti Exp $
 
-SHA1 (gtk-xfce-engine-2.2.7.tar.gz) = 55a2e7f00bb7e1dcf07a5756b154774bfb6fc075
-RMD160 (gtk-xfce-engine-2.2.7.tar.gz) = cbc95f5e75e37e22db89b2ac9b1d60cb739e6d23
-Size (gtk-xfce-engine-2.2.7.tar.gz) = 381970 bytes
+SHA1 (gtk-xfce-engine-2.2.8.tar.gz) = b9458b5639a81dfb5be675921fd4a2d2f4cb4305
+RMD160 (gtk-xfce-engine-2.2.8.tar.gz) = 7ca5285a98f059c525ee6a661d6896194fed1f18
+Size (gtk-xfce-engine-2.2.8.tar.gz) = 391386 bytes

@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/18 06:10:30 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/11/09 06:42:58 martti Exp $
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfwm4.mo
@@ -9,6 +10,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfwm4.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfwm4.mo
@@ -23,6 +25,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfwm4.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfwm4.mo
@@ -35,6 +38,7 @@ ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfwm4.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfwm4.mo
@@ -708,6 +712,15 @@ share/xfce4/doc/fr/images/titlebar.png
 share/xfce4/doc/fr/images/workspace_margins.png
 share/xfce4/doc/fr/images/xfwm_workspaces.png
 share/xfce4/doc/fr/xfwm4.html
+share/xfce4/doc/he/images/compose_shortcut.png
+share/xfce4/doc/he/images/decoration_style.png
+share/xfce4/doc/he/images/focus.png
+share/xfce4/doc/he/images/keyboard_shortcuts.png
+share/xfce4/doc/he/images/misc_wm_prefs.png
+share/xfce4/doc/he/images/titlebar.png
+share/xfce4/doc/he/images/workspace_margins.png
+share/xfce4/doc/he/images/xfwm_workspaces.png
+share/xfce4/doc/he/xfwm4.html
 share/xfwm4/defaults
 @dirrm share/themes/Wildbush/xfwm4
 @dirrm share/themes/Wildbush

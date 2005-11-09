@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/05/18 06:10:30 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/11/09 06:42:58 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_APPFINDER_BUILDLINK3_MK:=	${XFCE4_APPFINDER_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-appfinder}
 BUILDLINK_PACKAGES+=	xfce4-appfinder
 
 .if !empty(XFCE4_APPFINDER_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-appfinder+=	xfce4-appfinder>=4.2.2
+BUILDLINK_DEPENDS.xfce4-appfinder+=	xfce4-appfinder>=4.2.3
 BUILDLINK_PKGSRCDIR.xfce4-appfinder?=	../../sysutils/xfce4-appfinder
 .endif	# XFCE4_APPFINDER_BUILDLINK3_MK
 

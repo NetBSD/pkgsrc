@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/18 06:10:31 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/11/09 06:42:59 martti Exp $
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -6,9 +7,11 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/bn_IN/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -23,6 +26,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -34,6 +38,7 @@ ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce-mcs-plugins.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -71,4 +76,10 @@ share/xfce4/doc/fr/images/keyboard_settings.png
 share/xfce4/doc/fr/images/mouse_settings.png
 share/xfce4/doc/fr/images/user_interface_settings.png
 share/xfce4/doc/fr/xfce-mcs-plugins.html
+share/xfce4/doc/he/images/display_preferences.png
+share/xfce4/doc/he/images/font_selection.png
+share/xfce4/doc/he/images/keyboard_settings.png
+share/xfce4/doc/he/images/mouse_settings.png
+share/xfce4/doc/he/images/user_interface_settings.png
+share/xfce4/doc/he/xfce-mcs-plugins.html
 @dirrm lib/xfce4/mcs-plugins
