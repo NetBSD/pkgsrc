@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:29 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/09 21:34:26 tonio Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Machine-independent part of teTeX
 
 CONFLICTS+=	teTeX2-share-[2-9]*
+CONFLICTS+=	teTeX-texmf-[0-9]*
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	teTeX
