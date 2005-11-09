@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11872 2005/11/09 06:24:03 minskim Exp $
+$NetBSD: CHANGES,v 1.11873 2005/11/09 06:43:10 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5127,3 +5127,26 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/ruby-rttool to 1.0.1nb1 [taca 2005-11-09]
 	Updated www/instiki to 0.9.2nb4 [taca 2005-11-09]
 	Updated multimedia/gmplayer to 1.0rc7nb3 [minskim 2005-11-09]
+	Updated x11/libxfce4gui to 4.2.3 [martti 2005-11-09]
+	Updated x11/libxfce4mcs to 4.2.3 [martti 2005-11-09]
+	Updated x11/libxfce4util to 4.2.3.1 [martti 2005-11-09]
+	Updated meta-pkgs/xfce4 to 4.2.3.1 [martti 2005-11-09]
+	Updated sysutils/xfce4-appfinder to 4.2.3 [martti 2005-11-09]
+	Updated time/xfce4-calendar to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-desktop to 4.2.3 [martti 2005-11-09]
+	Updated sysutils/xfce4-fm to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-gtk2-engine-2.2.8 [martti 2005-11-09]
+	Updated graphics/xfce4-icon-theme to 4.2.3 [martti 2005-11-09]
+	Updated graphics/xfce4-iconbox to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-mcs-manager to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-mcs-plugins to 4.2.3 [martti 2005-11-09]
+	Updated audio/xfce4-mixer to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-panel to 4.2.3 [martti 2005-11-09]
+	Updated print/xfce4-print to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-session to 4.2.3 [martti 2005-11-09]
+	Updated sysutils/xfce4-systray to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-toys to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-trigger-launcher to 4.2.3 [martti 2005-11-09]
+	Updated x11/xfce4-utils to 4.2.3 [martti 2005-11-09]
+	Updated wm/xfce4-wm to 4.2.3.1 [martti 2005-11-09]
+	Updated wm/xfce4-wm-themes to 4.2.3 [martti 2005-11-09]
