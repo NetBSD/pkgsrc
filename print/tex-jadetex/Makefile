@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/07/19 10:15:30 grant Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/09 21:40:20 tonio Exp $
 #
 
 DISTNAME=	jadetex-3.13
 PKGNAME=	tex-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jadetex/}
 
@@ -12,16 +13,16 @@ COMMENT=	Process tex files produced by the TeX backend of Jade
 DEPENDS+=	tex-hugelatex>=1.0nb1:../../print/tex-hugelatex
 
 NO_BUILD=	yes
-TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
+TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
 
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-jadetex
 	${CAT} ${FILESDIR}/texmf.cnf-add >>${TEXMF_CNF}
-	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf/web2c \
+	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf-var/web2c \
 	       ${MAKE} ${MAKEFLAGS};
-	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf/web2c \
+	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf-var/web2c \
 	       ${MAKE} ${MAKEFLAGS} install
 	:
 	${RM} -f ${PREFIX}/bin/jadetex
@@ -45,4 +46,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pdfjadetex.ini ${PREFIX}/share/sgml/jade
 	${PREFIX}/bin/mktexlsr
 
+.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
