@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11877 2005/11/09 15:32:42 minskim Exp $
+$NetBSD: CHANGES,v 1.11878 2005/11/09 16:24:23 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5152,3 +5152,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wm/xfce4-wm-themes to 4.2.3 [martti 2005-11-09]
 	Updated textproc/lout to 3.26nb1 [grant 2005-11-09]
 	Updated print/teTeX3-texmf to 3.0nb2 [minskim 2005-11-09]
+	Updated converters/latex2rtf to 1.9.16a [reed 2005-11-09]
