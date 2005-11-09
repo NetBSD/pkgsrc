@@ -1,4 +1,4 @@
-# $NetBSD: post-build-conf,v 1.4 2005/11/06 17:14:07 rillig Exp $
+# $NetBSD: post-build-conf,v 1.5 2005/11/09 18:48:22 rillig Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
@@ -131,8 +131,8 @@ check_config_vars() {
 	pbc_checknonempty arch
 	pbc_checkexistingfile BULK_BUILD_CONF
 	pbc_checkexistingdir USR_PKGSRC
-	case ${MAKECONF+set} in set)
-		pbc_checkexistingfile MAKECONF;;
+	case ${MAKECONF+set} in
+	"set")	pbc_checkexistingfile MAKECONF;;
 	esac
 
 	# section "Keeping pkgsrc up-to-date"
@@ -140,7 +140,9 @@ check_config_vars() {
 	# no checks for CVS_FLAGS
 
 	# section "Getting distfiles"
-	pbc_checkyesno PRUNEDISTFILES
+	case ${PRUNEDISTFILES+set} in
+	"set")	pbc_checkyesno PRUNEDISTFILES
+	esac
 	# no checks for ftp_proxy
 	# no checks for http_proxy
 
@@ -152,7 +154,9 @@ check_config_vars() {
 
 	# section "Uploading binary packages"
 	pbc_checkyesno UPDATE_VULNERABILITY_LIST
-	pbc_checkyesno PRUNEPACKAGES
+	case ${PRUNEPACKAGES+set} in
+	"set")	pbc_checkyesno PRUNEPACKAGES
+	esac
 	pbc_checkyesno MKSUMS
 	# no checks for SIGN_AS
 	# no checks for RSYNC_DST
