@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2005/11/09 06:42:58 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2005/11/09 08:56:17 martti Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XFCE4_BUILDLINK3_MK:=	${XFCE4_BUILDLINK3_MK}+
@@ -26,7 +26,7 @@ BUILDLINK_PKGSRCDIR.xfce4?=	../../meta-pkgs/xfce4
 .include "../../wm/xfce4-wm-themes/buildlink3.mk"
 .include "../../wm/xfce4-wm/buildlink3.mk"
 .include "../../x11/xfce4-desktop/buildlink3.mk"
-.include "../../x11/xfce4-gtk2-engines/buildlink3.mk"
+.include "../../x11/xfce4-gtk2-engine/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../x11/xfce4-session/buildlink3.mk"
 .include "../../x11/xfce4-toys/buildlink3.mk"
