@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2005/05/18 12:16:53 abs Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/09 07:09:04 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 PKGNAME=	xfce4-print-${XFCE4_VERSION}
 DISTNAME=	xfprint-${XFCE4_VERSION}
 CATEGORIES=	print
-COMMENT=	XFce4 print dialog
+COMMENT=	Xfce print dialog
 
 CONFIGURE_ARGS+=	--with-printcap=/etc/printcap
 
