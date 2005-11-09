@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11869 2005/11/08 21:52:27 hubertf Exp $
+$NetBSD: CHANGES,v 1.11870 2005/11/09 04:31:16 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5123,3 +5123,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/ap-php to 4.4.1nb3 [bouyer 2005-11-08]
 	Updated print/tex-IEEEtran to 1.6c [tonio 2005-11-08]
 	Updated net/ipv6calc to 0.50 [hubertf 2005-11-08]
+	Removed misc/cdialog [uebayasi 2005-11-09]
