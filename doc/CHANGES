@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11870 2005/11/09 04:31:16 uebayasi Exp $
+$NetBSD: CHANGES,v 1.11871 2005/11/09 04:42:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5124,3 +5124,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/tex-IEEEtran to 1.6c [tonio 2005-11-08]
 	Updated net/ipv6calc to 0.50 [hubertf 2005-11-08]
 	Removed misc/cdialog [uebayasi 2005-11-09]
+	Updated textproc/ruby-rttool to 1.0.1nb1 [taca 2005-11-09]
+	Updated www/instiki to 0.9.2nb4 [taca 2005-11-09]
