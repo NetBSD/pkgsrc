@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2005/06/24 17:04:00 kristerw Exp $
+# $NetBSD: Makefile,v 1.82 2005/11/09 21:25:39 tv Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		6
@@ -15,7 +15,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection, version 2
 
-NOT_FOR_PLATFORM=	Darwin-*-* *-*-x86_64
+NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-* *-*-x86_64
 
 USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
