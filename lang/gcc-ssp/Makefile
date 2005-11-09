@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/09/28 14:31:07 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2005/11/09 21:25:39 tv Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -27,7 +27,7 @@ GCC_FILESDIR=		${.CURDIR}/../gcc/files
 #			NetBSD-*-powerpc NetBSD-*-macppc \
 #			NetBSD-*-prep NetBSD-*-bebox NetBSD-*-ofppc \
 #			NetBSD-*-amigappc NetBSD-*-sandpoint
-NOT_FOR_PLATFORM=	*-*-x86_64
+NOT_FOR_PLATFORM=	Interix-*-* *-*-x86_64
 
 USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
