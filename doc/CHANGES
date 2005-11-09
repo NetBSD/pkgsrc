@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11879 2005/11/09 21:21:50 tv Exp $
+$NetBSD: CHANGES,v 1.11880 2005/11/09 21:53:36 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5155,3 +5155,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated converters/latex2rtf to 1.9.16a [reed 2005-11-09]
 	Updated devel/libtool-base to 1.5.18nb6 [tv 2005-11-09]
 	Updated databases/unixodbc to 2.0.11nb5 [tv 2005-11-09]
+	Updated print/tex-jadetex to 3.13nb1 [tonio 2005-11-09]
