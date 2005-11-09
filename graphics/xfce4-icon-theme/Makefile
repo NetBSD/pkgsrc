@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/05/18 06:10:30 martti Exp $
+# $NetBSD: Makefile,v 1.4 2005/11/09 07:09:04 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-icon-theme-${XFCE4_VERSION}
 CATEGORIES=	graphics
-COMMENT=	XFce4 icon themes
+COMMENT=	Xfce icon themes
 
 .include "../../mk/bsd.pkg.mk"
