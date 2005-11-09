@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2005/06/15 09:00:15 hira Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/09 06:42:59 martti Exp $
 
---- Makefile.in.orig	2005-06-13 18:40:55.000000000 +0900
-+++ Makefile.in	2005-06-13 18:41:43.000000000 +0900
+--- Makefile.in.orig	2005-11-06 12:38:13.000000000 +0200
++++ Makefile.in	2005-11-07 08:54:08.000000000 +0200
 @@ -275,7 +275,7 @@
  
  SUBDIRS = backdrops common doc po settings src modules pixmaps \
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.1 2005/06/15 09:00:15 hira Exp $
 +confdir = $(datadir)/examples/xfce4/desktop
  conf_DATA = \
  	menu.xml 							\
- 	menu.xml.cs							\
+ 	menu.xml.ca							\
