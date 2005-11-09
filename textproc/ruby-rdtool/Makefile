@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/03 07:21:28 taca Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/09 04:25:09 taca Exp $
 
 DISTNAME=	rdtool-0.6.18
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -30,6 +30,9 @@ SUBST_MESSAGE.path=	"Fixing PKG_SYSCONFDIR paths."
 DOCS_RD=	README.rd README.rd.ja doc/rd-draft.rd doc/rd-draft.rd.ja
 DOCS=		${DOCS_RD} ${DOCS_RD:S/.rd/.html/}
 
+pre-configure:
+	@cd ${WRKSRC}/bin; ${MV} rdswap.rb rdswap; ${CHMOD} ${BINMODE} rdswap
+
 post-build:
 .for f in ${DOCS_RD}
 	cd ${WRKSRC}; ${RUBY} -I./lib bin/rd2 -r lib/rd/rd2html-lib.rb ${f} \
@@ -37,7 +40,6 @@ post-build:
 .endfor
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/rdswap.rb ${PREFIX}/bin/rdswap
 	${INSTALL_DATA} ${WRKSRC}/lib/rd/dot.rd2rc \
 		${RUBY_SITELIBDIR}/rd/dot.rd2rc
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rd
