@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2005/06/15 09:01:59 hira Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/11/09 06:42:59 martti Exp $
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce4-panel.mo
@@ -10,6 +11,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfce4-panel.mo
@@ -21,9 +23,11 @@ ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/hy/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce4-panel.mo
@@ -36,9 +40,11 @@ ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce4-panel.mo
@@ -68,6 +74,7 @@ share/examples/xfce4/panel/contents.xml.ar
 share/examples/xfce4/panel/contents.xml.az
 share/examples/xfce4/panel/contents.xml.ca
 share/examples/xfce4/panel/contents.xml.da
+share/examples/xfce4/panel/contents.xml.el
 share/examples/xfce4/panel/contents.xml.eu
 share/examples/xfce4/panel/contents.xml.fi
 share/examples/xfce4/panel/contents.xml.fr
@@ -79,9 +86,11 @@ share/examples/xfce4/panel/contents.xml.ko
 share/examples/xfce4/panel/contents.xml.lt
 share/examples/xfce4/panel/contents.xml.ms
 share/examples/xfce4/panel/contents.xml.nl
+share/examples/xfce4/panel/contents.xml.pl
 share/examples/xfce4/panel/contents.xml.ro
 share/examples/xfce4/panel/contents.xml.ru
 share/examples/xfce4/panel/contents.xml.sk
+share/examples/xfce4/panel/contents.xml.sv
 share/examples/xfce4/panel/contents.xml.tr
 share/examples/xfce4/panel/contents.xml.vi
 share/examples/xfce4/panel/contents.xml.zh_CN
@@ -131,5 +140,18 @@ share/xfce4/doc/fr/images/pager-properties.png
 share/xfce4/doc/fr/images/panel-settings.png
 share/xfce4/doc/fr/images/systembuttons-properties.png
 share/xfce4/doc/fr/xfce4-panel.html
+share/xfce4/doc/he/images/add-item-dialog.png
+share/xfce4/doc/he/images/clock-properties.png
+share/xfce4/doc/he/images/default_panel.png
+share/xfce4/doc/he/images/handle-popup.png
+share/xfce4/doc/he/images/item-popup.png
+share/xfce4/doc/he/images/launcher-properties.png
+share/xfce4/doc/he/images/mailcheck-properties.png
+share/xfce4/doc/he/images/menuitem-properties.png
+share/xfce4/doc/he/images/nooptions-properties.png
+share/xfce4/doc/he/images/pager-properties.png
+share/xfce4/doc/he/images/panel-settings.png
+share/xfce4/doc/he/images/systembuttons-properties.png
+share/xfce4/doc/he/xfce4-panel.html
 @dirrm lib/xfce4/panel-plugins
 @dirrm include/xfce4/panel

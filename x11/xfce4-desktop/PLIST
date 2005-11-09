@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2005/06/15 09:00:15 hira Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/11/09 06:42:59 martti Exp $
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfdesktop.mo
@@ -10,6 +11,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfdesktop.mo
@@ -21,9 +23,11 @@ ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/hy/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfdesktop.mo
@@ -36,6 +40,7 @@ ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfdesktop.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfdesktop.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfdesktop.mo
@@ -52,21 +57,26 @@ man/man1/xfdesktop.1
 share/applications/xfce-backdrop-settings.desktop
 share/applications/xfce-menueditor.desktop
 share/examples/xfce4/desktop/menu.xml
+share/examples/xfce4/desktop/menu.xml.ca
 share/examples/xfce4/desktop/menu.xml.cs
 share/examples/xfce4/desktop/menu.xml.da
 share/examples/xfce4/desktop/menu.xml.de
+share/examples/xfce4/desktop/menu.xml.el
 share/examples/xfce4/desktop/menu.xml.es
 share/examples/xfce4/desktop/menu.xml.et
 share/examples/xfce4/desktop/menu.xml.fi
 share/examples/xfce4/desktop/menu.xml.fr
 share/examples/xfce4/desktop/menu.xml.he
+share/examples/xfce4/desktop/menu.xml.hu
 share/examples/xfce4/desktop/menu.xml.ja
 share/examples/xfce4/desktop/menu.xml.ko
 share/examples/xfce4/desktop/menu.xml.nl
+share/examples/xfce4/desktop/menu.xml.pl
 share/examples/xfce4/desktop/menu.xml.pt_BR
 share/examples/xfce4/desktop/menu.xml.ro
 share/examples/xfce4/desktop/menu.xml.ru
 share/examples/xfce4/desktop/menu.xml.sk
+share/examples/xfce4/desktop/menu.xml.sv
 share/examples/xfce4/desktop/menu.xml.uk
 share/examples/xfce4/desktop/menu.xml.vi
 share/examples/xfce4/desktop/menu.xml.zh_TW
@@ -74,13 +84,16 @@ share/examples/xfce4/desktop/xfce-registered-categories.xml
 share/examples/xfce4/desktop/xfce-registered-categories.xml.cs
 share/examples/xfce4/desktop/xfce-registered-categories.xml.eu
 share/examples/xfce4/desktop/xfce-registered-categories.xml.fi
+share/examples/xfce4/desktop/xfce-registered-categories.xml.he
 share/examples/xfce4/desktop/xfce-registered-categories.xml.hu
 share/examples/xfce4/desktop/xfce-registered-categories.xml.ja
 share/examples/xfce4/desktop/xfce-registered-categories.xml.nl
+share/examples/xfce4/desktop/xfce-registered-categories.xml.pl
 share/examples/xfce4/desktop/xfce-registered-categories.xml.pt_BR
 share/examples/xfce4/desktop/xfce-registered-categories.xml.ro
 share/examples/xfce4/desktop/xfce-registered-categories.xml.ru
 share/examples/xfce4/desktop/xfce-registered-categories.xml.sk
+share/examples/xfce4/desktop/xfce-registered-categories.xml.sv
 share/examples/xfce4/desktop/xfce-registered-categories.xml.zh_CN
 share/examples/xfce4/desktop/xfce-registered-categories.xml.zh_TW
 share/icons/hicolor/32x32/apps/xfce4-backdrop.png
@@ -119,4 +132,12 @@ share/xfce4/doc/fr/images/xfdesktop-editor.png
 share/xfce4/doc/fr/images/xfdesktop-list.png
 share/xfce4/doc/fr/images/xfdesktop-menu-tab.png
 share/xfce4/doc/fr/xfdesktop.html
+share/xfce4/doc/he/images/root_menu.png
+share/xfce4/doc/he/images/root_menu2.png
+share/xfce4/doc/he/images/select_bg_color.png
+share/xfce4/doc/he/images/xfdesktop-background.png
+share/xfce4/doc/he/images/xfdesktop-editor.png
+share/xfce4/doc/he/images/xfdesktop-list.png
+share/xfce4/doc/he/images/xfdesktop-menu-tab.png
+share/xfce4/doc/he/xfdesktop.html
 @unexec ${RMDIR} %D/share/xfce4/backdrops 2>/dev/null || ${TRUE}

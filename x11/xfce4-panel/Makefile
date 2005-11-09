@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2005/08/20 19:16:22 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/09 06:42:59 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-panel-${XFCE4_VERSION}
-PKGREVISION=	2
+#PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	XFce4 panel
 
@@ -15,8 +15,8 @@ USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR=	xdg/xfce4/panel
 EGDIR=			${XFCE4_EGBASE}/panel
 CONF_FILES=		${EGDIR}/contents.xml ${PKG_SYSCONFDIR}/contents.xml
-.for _l in ar az ca da eu fi fr he hu it ja ko lt ms nl ro ru sk tr vi zh_CN \
-	zh_TW
+.for _l in ar az ca da el eu fi fr he hu it ja ko lt ms nl pl ro ru sk sv \
+	tr vi zh_CN zh_TW
 CONF_FILES+=		${EGDIR}/contents.xml.${_l} \
 			${PKG_SYSCONFDIR}/contents.xml.${_l}
 .endfor

@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2005/05/18 06:10:30 martti Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/11/09 06:42:58 martti Exp $
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xffm.mo
@@ -21,6 +22,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xffm.mo
@@ -31,6 +33,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xffm.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xffm.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xffm.mo
@@ -246,6 +249,39 @@ share/xfce4/doc/fr/images/tools_menu.png
 share/xfce4/doc/fr/images/trash_popup.png
 share/xfce4/doc/fr/images/xffm_default.png
 share/xfce4/doc/fr/xffm.html
+share/xfce4/doc/he/images/book_popup.png
+share/xfce4/doc/he/images/column_titles_popup.png
+share/xfce4/doc/he/images/diagnostics_window.png
+share/xfce4/doc/he/images/directory_popup.png
+share/xfce4/doc/he/images/directory_popup_unmount.png
+share/xfce4/doc/he/images/file_popup.png
+share/xfce4/doc/he/images/file_subpopup.png
+share/xfce4/doc/he/images/filter_box.png
+share/xfce4/doc/he/images/frequent_popup.png
+share/xfce4/doc/he/images/fstab_popup_mount.png
+share/xfce4/doc/he/images/go_menu.png
+share/xfce4/doc/he/images/hide_show_buttons.png
+share/xfce4/doc/he/images/icon_title_smartbutton.png
+share/xfce4/doc/he/images/main_menu.png
+share/xfce4/doc/he/images/mcs-plugin.png
+share/xfce4/doc/he/images/netfile_popup.png
+share/xfce4/doc/he/images/netshare_popup.png
+share/xfce4/doc/he/images/open_menu.png
+share/xfce4/doc/he/images/options_menu.png
+share/xfce4/doc/he/images/preferences_menu.png
+share/xfce4/doc/he/images/recent_popup.png
+share/xfce4/doc/he/images/sidebar_filesubmenu.png
+share/xfce4/doc/he/images/sidebar_go.png
+share/xfce4/doc/he/images/sidebar_multiple_select.png
+share/xfce4/doc/he/images/sidebar_open.png
+share/xfce4/doc/he/images/sidebar_options.png
+share/xfce4/doc/he/images/sidebar_paste.png
+share/xfce4/doc/he/images/sidebar_tools.png
+share/xfce4/doc/he/images/sort_subpopup.png
+share/xfce4/doc/he/images/tools_menu.png
+share/xfce4/doc/he/images/trash_popup.png
+share/xfce4/doc/he/images/xffm_default.png
+share/xfce4/doc/he/xffm.html
 share/xfce4/xffm/AUTHORS
 share/xfce4/xffm/AUTHORS.vi
 share/xfce4/xffm/xffm.spec

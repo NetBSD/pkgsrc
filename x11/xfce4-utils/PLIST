@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2005/06/15 09:04:32 hira Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/11/09 06:42:59 martti Exp $
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce-utils.mo
@@ -10,6 +11,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfce-utils.mo
@@ -21,9 +23,11 @@ ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/hy/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-utils.mo
@@ -35,6 +39,7 @@ ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce-utils.mo
@@ -80,6 +85,7 @@ share/xfce4/AUTHORS.html.ro
 share/xfce4/AUTHORS.html.ru
 share/xfce4/AUTHORS.html.sk
 share/xfce4/AUTHORS.html.vi
+share/xfce4/AUTHORS.html.zh_TW
 share/xfce4/AUTHORS.it
 share/xfce4/AUTHORS.ja
 share/xfce4/AUTHORS.lt
@@ -88,6 +94,7 @@ share/xfce4/AUTHORS.ru
 share/xfce4/AUTHORS.sk
 share/xfce4/AUTHORS.uk
 share/xfce4/AUTHORS.vi
+share/xfce4/AUTHORS.zh_TW
 share/xfce4/BSD
 share/xfce4/BSD.html
 share/xfce4/COPYING
@@ -152,5 +159,22 @@ share/xfce4/doc/fr/xfce4-install.html
 share/xfce4/doc/fr/xfce4-intro.html
 share/xfce4/doc/fr/xfce4-use.html
 share/xfce4/doc/fr/xfce4-user-guide.html
+share/xfce4/doc/he/BSD.html
+share/xfce4/doc/he/GPL.html
+share/xfce4/doc/he/LGPL.html
+share/xfce4/doc/he/images/about-dialog.png
+share/xfce4/doc/he/images/default-session.png
+share/xfce4/doc/he/images/link_xfce.jpg
+share/xfce4/doc/he/images/run-dialog.png
+share/xfce4/doc/he/images/taskbar_settings.png
+share/xfce4/doc/he/index.html
+share/xfce4/doc/he/xfce-utils.html
+share/xfce4/doc/he/xfce4-components.html
+share/xfce4/doc/he/xfce4-copyright.html
+share/xfce4/doc/he/xfce4-install.html
+share/xfce4/doc/he/xfce4-intro.html
+share/xfce4/doc/he/xfce4-use.html
+share/xfce4/doc/he/xfce4-user-guide.html
 share/xfce4/doc/xfce-mouse.png
+share/xfce4/doc/xfce-rtl.css
 share/xfce4/doc/xfce.css

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/05/18 06:10:30 martti Exp $
+$NetBSD: distinfo,v 1.5 2005/11/09 06:42:58 martti Exp $
 
-SHA1 (xfce4-icon-theme-4.2.2.tar.gz) = 614ea3c1109659d01ed218fa5ea4bd77d5614da8
-RMD160 (xfce4-icon-theme-4.2.2.tar.gz) = a81100b5e5085e9c1a25d542f41ce6c8177071d4
-Size (xfce4-icon-theme-4.2.2.tar.gz) = 1560723 bytes
+SHA1 (xfce4-icon-theme-4.2.3.tar.gz) = 85e0abb949b3674478e5cac245f928c0d195695d
+RMD160 (xfce4-icon-theme-4.2.3.tar.gz) = c24cdfca8d0de5b431a42cd0669f94ba35a84b91
+Size (xfce4-icon-theme-4.2.3.tar.gz) = 1560798 bytes
