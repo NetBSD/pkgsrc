@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.203 2005/11/01 16:30:05 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.204 2005/11/09 01:06:48 reed Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -394,6 +394,22 @@ USE_XPKGWEDGE=	yes
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 USE_XPKGWEDGE=		yes
+.endif
+
+# Default installation prefix for meta-pkgs/XFree86 and
+# meta-pkgs/xorg.
+.if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+X11ROOT_PREFIX?=	XFree86
+.elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+X11ROOT_PREFIX?=	xorg
+.else
+X11ROOT_PREFIX?=	# empty
+.endif
+
+.if ((defined(X11_TYPE) && !empty(X11_TYPE:MXFree86) || \
+     defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)) && \
+     defined(X11_TYPE) && empty(X11_TYPE:Mnative))
+X11BASE?=		${LOCALBASE}/${X11ROOT_PREFIX}
 .endif
 
 # Set X11PREFIX to reflect the install directory of X11 packages.
