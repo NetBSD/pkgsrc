@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/31 22:09:18 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/09 22:23:05 minskim Exp $
 bin/a2ping
 bin/afm2tfm
 bin/aleph
@@ -353,7 +353,6 @@ share/texmf/dvips/base/tex.pro
 share/texmf/dvips/base/texc.pro
 share/texmf/dvips/base/texps.pro
 share/texmf/dvips/gsftopk/render.ps
-share/texmf/ls-R
 share/texmf/release-tetex-src.txt
 share/texmf/texconfig/README
 share/texmf/texconfig/g/generic
@@ -393,9 +392,15 @@ share/texmf/xdvi/xdvi.cfg
 @dirrm share/texmf/dvips/base
 @comment In teTeX-texmf:   @dirrm share/texmf/doc/tetex
 @dirrm share/texmf-var/web2c
+@unexec ${RM} -f %D/share/texmf-var/ls-R
 @dirrm share/texmf-var/fonts/map/pdftex/updmap
+@dirrm share/texmf-var/fonts/map/pdftex
 @dirrm share/texmf-var/fonts/map/dvips/updmap
+@dirrm share/texmf-var/fonts/map/dvips
 @dirrm share/texmf-var/fonts/map/dvipdfm/updmap
+@dirrm share/texmf-var/fonts/map/dvipdfm
+@dirrm share/texmf-var/fonts/map
+@dirrm share/texmf-var/fonts
 @dirrm share/texmf-var
 @comment In teTeX-texmf:   @dirrm share/texmf
 @dirrm include/kpathsea
