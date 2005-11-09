@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1746 2005/11/05 13:31:43 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1747 2005/11/09 18:42:32 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -384,7 +384,7 @@ CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 CONFIGURE_ENV+=		LIBS=${LIBS:M*:Q}
 CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
-.  if defined(USE_LIBTOOL) && defined(_OPSYS_MAX_CMDLEN_CMD)
+.  if (defined(USE_LIBTOOL) || !empty(PKGDIR:M*/libtool-base)) && defined(_OPSYS_MAX_CMDLEN_CMD)
 CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
 .  endif
 .endif
