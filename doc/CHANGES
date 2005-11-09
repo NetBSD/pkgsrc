@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11874 2005/11/09 06:43:57 grant Exp $
+$NetBSD: CHANGES,v 1.11875 2005/11/09 08:43:59 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5135,7 +5135,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated time/xfce4-calendar to 4.2.3 [martti 2005-11-09]
 	Updated x11/xfce4-desktop to 4.2.3 [martti 2005-11-09]
 	Updated sysutils/xfce4-fm to 4.2.3 [martti 2005-11-09]
-	Updated x11/xfce4-gtk2-engine-2.2.8 [martti 2005-11-09]
+	Updated x11/xfce4-gtk2-engines to 2.2.8 [martti 2005-11-09]
 	Updated graphics/xfce4-icon-theme to 4.2.3 [martti 2005-11-09]
 	Updated graphics/xfce4-iconbox to 4.2.3 [martti 2005-11-09]
 	Updated x11/xfce4-mcs-manager to 4.2.3 [martti 2005-11-09]
