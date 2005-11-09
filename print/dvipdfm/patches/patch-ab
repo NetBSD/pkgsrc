@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/11/09 00:05:28 tonio Exp $
+
+--- configure.orig	Tue Nov  8 23:46:52 2005
++++ configure	Tue Nov  8 23:47:45 2005
+@@ -1102,7 +1102,7 @@
+ fi
+ 
+ 
+-TEXMF='${datadir}/texmf'
++TEXMF=${PKG_LOCALTEXMFPREFIX}
+ 
+ 
+ _cppflags=$CPPFLAGS
