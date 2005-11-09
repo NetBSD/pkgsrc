@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/09/28 20:52:23 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/11/09 21:26:45 tv Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		3
@@ -17,6 +17,8 @@ PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
 BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
+
+NOT_FOR_PLATFORM+=	Interix-*-*
 
 WRKSRC=			${WRKDIR}/gcc-2.95.3
 USE_TOOLS+=		gmake
