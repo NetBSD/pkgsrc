@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/31 19:00:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/09 00:05:28 tonio Exp $
 bin/dvipdfm
 bin/dvipdft
 bin/ebb
 man/man1/dvipdfm.1
-share/texmf/dvipdfm/base/ot1.enc
-share/texmf/dvipdfm/base/ot1alt.enc
-share/texmf/dvipdfm/base/ot1r.enc
-share/texmf/dvipdfm/config/cmr.map
-share/texmf/dvipdfm/config/config
-share/texmf/dvipdfm/config/lw35urw.map
-share/texmf/dvipdfm/config/lw35urwa.map
-share/texmf/dvipdfm/config/psbase14.map
-share/texmf/dvipdfm/config/t1fonts.map
-@dirrm share/texmf/dvipdfm/config
-@dirrm share/texmf/dvipdfm/base
-@dirrm share/texmf/dvipdfm
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/base/ot1.enc
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/base/ot1alt.enc
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/base/ot1r.enc
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/cmr.map
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/config
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/lw35urw.map
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/lw35urwa.map
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/psbase14.map
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/t1fonts.map
+@dirrm ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config
+@dirrm ${PKG_LOCALTEXMFPREFIX}/dvipdfm/base
+@dirrm ${PKG_LOCALTEXMFPREFIX}/dvipdfm
 @exec %D/bin/mktexlsr
 @unexec %D/bin/mktexlsr
