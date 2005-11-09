@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/16 06:57:59 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/09 21:24:12 tv Exp $
 
 DISTNAME=		cint5.15
 PKGNAME=		cint-5.15.174
@@ -35,6 +35,8 @@ do-build:
 		${SH} ./setup platform/netbsd ;;		\
 	SunOS)							\
 		${SH} ./setup platform/solaris_gcc ;;		\
+	*)							\
+		${ECHO} 'not yet ported to ${OPSYS}'; exit 1 ;;	\
 	esac
 
 do-install:
