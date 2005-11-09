@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4151 2005/11/09 16:24:24 reed Exp $
+$NetBSD: TODO,v 1.4152 2005/11/09 22:42:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -336,6 +336,7 @@ Suggested package updates
 	o algae-4.3.6
 	o aliados-0.2.0
 	o allegro-4.2.0
+	o amarok-1.3.6
 	o amavis-0.3.12
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
@@ -477,6 +478,7 @@ Suggested package updates
 	o dnstop-20050405
 	o dnstracer-1.8
 	o dpkg-1.10.28
+	o dspam-3.6.1
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.6
 	o dvipdfmx-20050627
@@ -526,7 +528,7 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
-	o fox-1.4.21
+	o fox-1.4.22
 	o fprot-workstation-bin-4.6.1
 	o freeglut-2.4.0
 	o fugu-1.2.3
@@ -545,7 +547,7 @@ Suggested package updates
 	o gcube-0.4
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
-	o getmail-4.3.14
+	o getmail-4.4.0
 	o gettext-0.14.5
 	o gfract-0.32
 	o ggiterm-0.7.1
@@ -572,6 +574,7 @@ Suggested package updates
 	o gnupg-devel-1.9.19
 	o gnustep-1.11.1
 	o gnustep-objc-1.4.0
+	o gnutls-1.2.9
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
 	o gopher-3.0.11
@@ -1210,6 +1213,7 @@ Suggested package updates
 	o swfdec-0.3.5
 	o swi-prolog-5.5.33
 	o swish-e-2.4.3
+	o sylpheed-2.0.4
 	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.1
