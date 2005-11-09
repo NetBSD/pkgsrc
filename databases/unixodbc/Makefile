@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/10/15 11:54:10 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/09 21:21:10 tv Exp $
 
 PKGNAME=		unixodbc-${ODBC_BASE_VERS}
-PKGREVISION=		4
+PKGREVISION=		5
 COMMENT=		ODBC 2.x/3.x driver manager
 
 CONFLICTS+=		iodbc-[0-9]*
@@ -9,6 +9,7 @@ CONFLICTS+=		iodbc-[0-9]*
 .include "../../databases/unixodbc/Makefile.common"
 
 USE_PKGINSTALL=		yes
+USE_TOOLS+=		flex # to get libodbctxt.la
 CONFIGURE_ARGS+=	--disable-gui
 
 PLIST_SUBST+=		UNIXODBC_DRIVERS_DIR=${UNIXODBC_DRIVERS_DIR}
