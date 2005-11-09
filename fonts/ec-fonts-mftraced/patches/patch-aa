@@ -1,15 +1,28 @@
-$NetBSD: patch-aa,v 1.2 2005/03/09 11:03:28 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.3 2005/11/09 08:12:54 tonio Exp $
 
---- GNUmakefile.orig	2004-11-04 17:47:34.000000000 -0500
-+++ GNUmakefile	2005-03-08 19:10:18.605935000 -0500
-@@ -26,5 +26,5 @@
+--- GNUmakefile.orig	2004-11-04 23:47:34.000000000 +0100
++++ GNUmakefile
+@@ -25,15 +25,15 @@ DISTDIR=$(builddir)/$(NAME)-$(VERSION)
+ TARBALL=$(DISTDIR).tar.gz
  WWWDIR=base.lilypond.org:/var/www/lilypond/download/fonts/
  
 -prefix=$(DESTDIR)/usr
 +prefix=$(PREFIX)
  docdir=$(prefix)/share/doc
  sysconfdir=$(DESTDIR)/etc
-@@ -88,15 +88,15 @@
+ 
+ TEXMF=
+ export TEXMF
+ 
+-TEXDIR=$(prefix)/share/texmf
+-TEXCONFDIR=$(prefix)/share/texmf
++TEXDIR=${PKG_LOCALTEXMFPREFIX}
++TEXCONFDIR=${PKG_TEXMFPREFIX}
+ ##TEXCONFDIR=$(sysconfdir)/texmf
+ 
+ PATHSUF=$(NAME)
+@@ -87,17 +87,17 @@ $(MAPFILE): GNUmakefile
+ 	($(foreach ec,$(ECFONTS), echo '$(ec) $(ec) <$(ec).pfa' && ) true) > $@
  
  install: $(TFMS) $(PFAS)
 -	install -d $(PFADIR)
@@ -33,3 +46,4 @@ $NetBSD: patch-aa,v 1.2 2005/03/09 11:03:28 dmcmahill Exp $
 +	${BSD_INSTALL_DATA} $(README_FILES) $(docdir)/$(NAME)
  
  	@echo "Run texhash before using."
+ 
