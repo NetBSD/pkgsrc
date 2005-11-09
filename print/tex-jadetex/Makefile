@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/09 21:40:20 tonio Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/09 22:31:20 tonio Exp $
 #
 
 DISTNAME=	jadetex-3.13
@@ -26,9 +26,9 @@ do-install:
 	       ${MAKE} ${MAKEFLAGS} install
 	:
 	${RM} -f ${PREFIX}/bin/jadetex
-	${LN} -s tex ${PREFIX}/bin/jadetex
+	${LN} -s etex ${PREFIX}/bin/jadetex
 	${RM} -f ${PREFIX}/bin/pdfjadetex
-	${LN} -s pdftex ${PREFIX}/bin/pdfjadetex
+	${LN} -s pdfetex ${PREFIX}/bin/pdfjadetex
 	${INSTALL_MAN} ${WRKSRC}/jadetex.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/pdfjadetex.1 ${PREFIX}/man/man1
 	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/jadetex
