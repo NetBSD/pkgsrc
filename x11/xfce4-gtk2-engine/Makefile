@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/11/09 07:09:05 martti Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2005/11/09 08:50:31 martti Exp $
 #
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
