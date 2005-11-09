@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.72 2005/11/08 22:12:42 rillig Exp $
+# $NetBSD: build,v 1.73 2005/11/09 22:12:16 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -242,6 +242,8 @@ esac
 #
 fail=no
 if cd "${pkglint_dir}"; then
+	echo "BULK> Extracting relevant pkgsrc variables..."
+
 	BULK_DBFILE=`${BMAKE} show-var VARNAME=BULK_DBFILE` || fail=yes
 	DEPENDSTREEFILE=`${BMAKE} show-var VARNAME=DEPENDSTREEFILE` || fail=yes
 	DEPENDSFILE=`${BMAKE} show-var VARNAME=DEPENDSFILE` || fail=yes
