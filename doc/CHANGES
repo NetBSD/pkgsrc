@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11880 2005/11/09 21:53:36 tonio Exp $
+$NetBSD: CHANGES,v 1.11881 2005/11/09 22:23:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5156,3 +5156,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libtool-base to 1.5.18nb6 [tv 2005-11-09]
 	Updated databases/unixodbc to 2.0.11nb5 [tv 2005-11-09]
 	Updated print/tex-jadetex to 3.13nb1 [tonio 2005-11-09]
+	Updated print/teTeX3-bin to 3.0nb3 [minskim 2005-11-09]
