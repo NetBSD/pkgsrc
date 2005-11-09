@@ -1,24 +1,42 @@
-$NetBSD: patch-aa,v 1.2 2003/09/22 09:06:36 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2005/11/09 07:17:04 reed Exp $
 
---- ./Makefile.in.orig	Tue Mar  7 23:37:35 2000
-+++ ./Makefile.in	Tue Mar  7 23:45:10 2000
-@@ -115,8 +115,8 @@
- #
- # Where support files are searched for by the executable
- # prefix defaults to /usr/local, but may be set on the command line
--prefix=/usr/local
--LIBDIR=$(prefix)/lib/latex2rtf
-+prefix=@PREFIX@
-+LIBDIR=$(prefix)/share/latex2rtf
- # You can give several Directories separated by ':' for the following
- # install targets
- #
-@@ -165,7 +165,7 @@
-     debian.control debian.rules util.c util.h  ChangeLog parser.c parser.h
- SUPPORT=cfg/direct.cfg cfg/fonts.cfg cfg/ignore.cfg \
-     cfg/english.cfg cfg/german.cfg cfg/spanish.cfg \
--    l2r.bat l2r.exe
-+#   l2r.bat l2r.exe
- MANUALS=latex2rtf.1
- MSDOS=l2r.bat l2r.exe
- DOCS=doc/latex2rtf.info doc/l2r.html doc/l2r.pdf doc/l2r.txt\
+--- Makefile.orig	2004-11-07 18:59:18.000000000 -0800
++++ Makefile	2005-11-03 15:42:07.000000000 -0800
+@@ -1,6 +1,6 @@
+ # $Id: patch-aa,v 1.3 2005/11/09 07:17:04 reed Exp $
+ 
+-CC=gcc
++CC?=gcc
+ MKDIR=mkdir -p
+ 
+ CFLAGS:=-DUNIX
+@@ -18,14 +18,14 @@
+ #CFLAGS:=$(CFLAGS) -Zwin32  
+ 
+ #Base directory - adapt as needed
+-PREFIX=$(PREFIX_DRIVE)/usr/local
++PREFIX?=$(PREFIX_DRIVE)/usr/local
+ 
+ #Name of executable binary --- beware of 8.3 restriction under DOS
+ BINARY_NAME=latex2rtf$(EXE_SUFFIX)
+ 
+ # Location of binary, man, info, and support files - adapt as needed
+ BIN_INSTALL=$(PREFIX)/bin
+-MAN_INSTALL=$(PREFIX)/man/man1
++MAN_INSTALL=$(PREFIX)/$(PKGMANDIR)/man1
+ INFO_INSTALL=$(PREFIX)/info
+ SUPPORT_INSTALL=$(PREFIX)/share/latex2rtf
+ CFG_INSTALL=$(PREFIX)/share/latex2rtf/cfg
+@@ -176,9 +176,9 @@
+ 	cp doc/latex2rtf.1    $(MAN_INSTALL)
+ 	cp doc/latex2png.1    $(MAN_INSTALL)
+ 	cp $(CFGS)            $(CFG_INSTALL)
+-	cp doc/latex2rtf.html $(SUPPORT_INSTALL)
+-	cp doc/latex2rtf.pdf  $(SUPPORT_INSTALL)
+-	cp doc/latex2rtf.txt  $(SUPPORT_INSTALL)
++	cp doc/latex2rtf.html $(PREFIX)/share/doc/latex2rtf
++	cp doc/latex2rtf.pdf  $(PREFIX)/share/doc/latex2rtf
++#	cp doc/latex2rtf.txt  $(SUPPORT_INSTALL)
+ 	@echo "******************************************************************"
+ 	@echo "*** latex2rtf successfully installed as \"$(BINARY_NAME)\""
+ 	@echo "*** in directory \"$(BIN_INSTALL)\""
