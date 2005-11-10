@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2003/01/07 06:19:06 rh Exp $
+$NetBSD: patch-aa,v 1.10 2005/11/10 14:29:01 itohy Exp $
 
---- fig2dev/Imakefile.orig	Thu Dec 19 10:33:44 2002
-+++ fig2dev/Imakefile
-@@ -20,13 +20,13 @@
+--- fig2dev/Imakefile.orig	Fri Oct 28 01:56:02 2005
++++ fig2dev/Imakefile	Wed Nov  9 22:49:57 2005
+@@ -34,7 +34,7 @@
  XCOMM You should point XFIGLIBDIR to the same directory you did when you compiled
  XCOMM and installed xfig.
  
@@ -10,15 +10,8 @@ $NetBSD: patch-aa,v 1.9 2003/01/07 06:19:06 rh Exp $
 +XFIGLIBDIR =	$(PROJECTROOT)/lib/X11/xfig
  
  XCOMM ******
- XCOMM If your system has the strerror() function (doesn't have sys_errlist) then
- XCOMM comment out NEED_STRERROR with an XCOMM comment.
- 
--NEED_STRERROR = -DNEED_STRERROR
-+XCOMM NEED_STRERROR = -DNEED_STRERROR
- 
- XCOMM The following probably only applies to Windows 9x/NT:
- XCOMM If your system can open files in text and binary modes and has the
-@@ -39,7 +39,7 @@
+ XCOMM If your system doesn't have the strerror() function (has sys_errlist) then
+@@ -53,7 +53,7 @@
  XCOMM inline functions. With the "INLINE" keyword, you should notice that
  XCOMM the display will be a bit faster in complex figures
  
@@ -27,43 +20,57 @@ $NetBSD: patch-aa,v 1.9 2003/01/07 06:19:06 rh Exp $
  
  XCOMM ****************
  XCOMM Change RGB if necessary, to point to your rgb.txt color database
-@@ -61,7 +61,7 @@
- 
+@@ -76,7 +76,7 @@
  #ifdef USEPNG
  PNGLIBDIR = $(USRLIBDIR)
+ ZLIBDIR = $(USRLIBDIR)
 -PNGINC = -I/usr/include/X11
 +PNGINC = -I$(LOCALBASE)/include
  #endif
  
  XCOMM ****************
-@@ -73,11 +73,11 @@
- XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
- XCOMM
- 
--XCOMM #define USEXPM
-+#define USEXPM
+@@ -92,7 +92,19 @@
  
  #ifdef USEXPM
  XPMLIBDIR = $(USRLIBDIR)
 -XPMINC = -I/usr/include/X11
 +XPMINC = -I$(LOCALBASE)/include/X11
++#endif
++
++XCOMM ****************
++XCOMM Uncomment the #define for USEICONV if you want to use the iconv(3). If the
++XCOMM iconv(3) is in separate library (-liconv), define USELIBICONV too.
++
++#define USEICONV
++XCOMM #define USELIBICONV
++
++#ifdef USEICONV
++ICONVLIBDIR = $(USRLIBDIR)
++ICONVINC = -I$(LOCALBASE)/include
  #endif
  
  XCOMM ****************
-@@ -126,7 +126,7 @@
+@@ -141,8 +153,8 @@
  
  #ifdef I18N
  I18N_DEFS = -DI18N 
 -FIG2DEV_LIBDIR = /usr/local/lib/fig2dev
+-I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR=$(FIG2DEV_LIBDIR) -DFIG2DEV_LIBDIR_STR=\\\"$(FIG2DEV_LIBDIR)\\\"
 +FIG2DEV_LIBDIR = $(PROJECTROOT)/lib/fig2dev
- I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR=\\\"$(FIG2DEV_LIBDIR)\\\"
++I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR=$(FIG2DEV_LIBDIR)
  
- install::
-@@ -158,12 +158,12 @@
+ #endif /* I18N */
+ 
+@@ -150,30 +162,37 @@
+ XCOMM *** You shouldn't have to change anything below this point ***
+ XCOMM **************************************************************
+ 
+-DIR_DEFS=	-DBITMAPDIR=\\\"$(DESTDIR)$(XFIGLIBDIR)/bitmaps\\\"
++DIR_DEFS=	-DBITMAPDIR=\\\"$(DESTDIR)$(XFIGLIBDIR)/bitmaps\\\" -DFIG2DEV_LIBDIR_STR=\\\"$(FIG2DEV_LIBDIR)\\\"
  
  #ifdef USEPNG
  DUSEPNG = -DUSE_PNG
--PNGLIBS = -L$(PNGLIBDIR) -lpng -lz
+-PNGLIBS = -L$(PNGLIBDIR) -lpng -L$(ZLIBDIR) -lz
 +PNGLIBS = -Wl,-R$(LOCALBASE)/lib -L$(PNGLIBDIR) -lpng -lz
  #endif /* USEPNG */
  
@@ -73,13 +80,40 @@ $NetBSD: patch-aa,v 1.9 2003/01/07 06:19:06 rh Exp $
 +XPMLIBS = -Wl,-R$(XPMLIBDIR) -L$(XPMLIBDIR) -lXpm -lX11
  #endif /* USEXPM */
  
++#ifdef USEICONV
++DUSEICONV = -DUSE_ICONV
++#ifdef USELIBICONV
++ICONVLIBS = -L$(ICONVLIBDIR) -liconv
++#endif /* USELIBICONV */
++#endif /* USEICONV */
++
  #if defined(NOSTRSTR) 
-@@ -177,7 +177,7 @@
+ STRSTRC=	strstr.c
+ STRSTRO=	strstr.o
+ #endif /* defined(NOSTRSTR) */
  
- IMAKE_DEFINES = $(DUSEPNG) $(DUSEXPM)
+ DEFINES = $(NEED_STRERROR) $(HAVE_NO_STRCASECMP) $(HAVE_NO_STRNCASECMP) $(DDNFSS) $(USEINLINE) \
+-	$(I18N_DEFS) $(HAVE_SETMODE) $(DUSEPNG) $(DUSEXPM) $(PNGINC) $(XPMINC)
++	$(I18N_DEFS) $(HAVE_SETMODE) $(DUSEPNG) $(DUSEXPM) $(DUSEICONV) $(PNGINC) $(XPMINC) $(ICONVINC)
  
--DEVDEFINES = $(DUSEPNG) $(DUSEXPM) $(XPMINC) $(DDNFSS) $(DDA4) \
-+DEVDEFINES = $(DUSEPNG) $(DUSEXPM) $(PNGINC) $(XPMINC) $(DDNFSS) $(DDA4) \
+ 
+-IMAKE_DEFINES = $(DUSEPNG) $(DUSEXPM) $(I18N_DEV_DEFS) 
++IMAKE_DEFINES = $(DUSEPNG) $(DUSEXPM) $(I18N_DEV_DEFS) $(DUSEICONV)
+ 
+-DEVDEFINES = $(DUSEPNG) $(DUSEXPM) $(PNGINC) $(XPMINC) $(DDNFSS) $(DDA4) \
++DEVDEFINES = $(DUSEPNG) $(DUSEXPM) $(DUSEICONV) $(PNGINC) $(XPMINC) $(ICONVINC) $(DDNFSS) $(DDA4) \
  		$(DDLATEX2E_GRAPHICS) $(DDEPSFIG) $(DDIBMGEC) $(DDDVIPS) $(I18N_DEV_DEFS)
  
  #define IHaveSubdirs
+@@ -189,9 +208,9 @@
+ 
+ LOCAL_LIBRARIES = $(LIBTRANSFIG)
+ #if defined(NetBSDArchitecture) || defined(FreeBSDArchitecture)
+-SYS_LIBRARIES = $(PNGLIBS) $(XPMLIBS) -lm -lcompat
++SYS_LIBRARIES = $(PNGLIBS) $(XPMLIBS) $(ICONVLIBS) -lm -lcompat
+ #else
+-SYS_LIBRARIES = $(PNGLIBS) $(XPMLIBS) -lm
++SYS_LIBRARIES = $(PNGLIBS) $(XPMLIBS) $(ICONVLIBS) -lm
+ #endif
+ DEPLIBS = $(LIBTRANSFIG)
+ 
