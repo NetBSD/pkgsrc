@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11882 2005/11/10 00:13:45 reed Exp $
+$NetBSD: CHANGES,v 1.11883 2005/11/10 09:06:02 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5158,3 +5158,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/tex-jadetex to 3.13nb1 [tonio 2005-11-09]
 	Updated print/teTeX3-bin to 3.0nb3 [minskim 2005-11-09]
 	Updated devel/bmake to 20051105 [reed 2005-11-10]
+	Updated audio/cplay to 1.49nb1 [tonio 2005-11-10]
