@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.93 2005/11/10 07:11:37 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.94 2005/11/10 07:19:17 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -418,7 +418,7 @@ bulk-package:
 				tmp=`${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:[ ]*;;p" ${SUPPORTSFILE}` ; \
 				if test -n "$$tmp" ; then \
 					for pkgdir in $$tmp ; do \
-						pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
+						pkgname=`${AWK} '$$1 == "'"$$pkgdir"'" { print $$2; }' ${INDEXFILE}`; \
 						if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
 						${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
 						pkgerr='-1'; pkgignore=''; pkgskip=''; \
