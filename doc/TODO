@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4153 2005/11/10 21:03:48 wiz Exp $
+$NetBSD: TODO,v 1.4154 2005/11/10 21:13:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -318,8 +318,6 @@ Suggested package updates
 	o REminiscence-0.1.8
 	o ROMInfo-2.4
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.5.10 [pkg/31569]
-	o TeXmacs-1.0.5.12 [please make sure the maxima plugin works]
 	o ViPEC-3.2.0
 	o XFree86-4.5.0
 	o XaoS-3.1.1
