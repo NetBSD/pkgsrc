@@ -1,17 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/11/08 21:17:36 tonio Exp $
+$NetBSD: distinfo,v 1.3 2005/11/10 05:22:00 minskim Exp $
 
-SHA1 (IEEEtran-1.6c/IEEEtran.cls) = f70465caf68a9e22ed708d67ea0c7ee7dd109d92
-RMD160 (IEEEtran-1.6c/IEEEtran.cls) = 9a1a9de530d910cf52bf7ed2503f933aeef50a27
-Size (IEEEtran-1.6c/IEEEtran.cls) = 196786 bytes
-SHA1 (IEEEtran-1.6c/IEEEtran_HOWTO.pdf) = 58b8a84b5c631fceadfe6a266a8f5bd6dd476485
-RMD160 (IEEEtran-1.6c/IEEEtran_HOWTO.pdf) = e5f696033c026e37f1a69c37f1adf498ff5682aa
-Size (IEEEtran-1.6c/IEEEtran_HOWTO.pdf) = 349290 bytes
-SHA1 (IEEEtran-1.6c/README) = 8de46606d97589f8ccf84c219fddfbd67a932a00
-RMD160 (IEEEtran-1.6c/README) = 7414452014436f35e6a87e0a0e2e88ab4e176462
-Size (IEEEtran-1.6c/README) = 2187 bytes
-SHA1 (IEEEtran-1.6c/bare_conf.tex) = 79327fe363e21908396db858d22bf3776ef65b17
-RMD160 (IEEEtran-1.6c/bare_conf.tex) = 2c97f59edca2b56d45baf807dcf9e89f9ceb3533
-Size (IEEEtran-1.6c/bare_conf.tex) = 19579 bytes
-SHA1 (IEEEtran-1.6c/bare_jrnl.tex) = 127bc7b0b401081add597e694b7183f6125dcb58
-RMD160 (IEEEtran-1.6c/bare_jrnl.tex) = 5769b7cf5b66fe1b412f11725bf35ac725aaffe5
-Size (IEEEtran-1.6c/bare_jrnl.tex) = 23609 bytes
+SHA1 (tex-IEEEtran-1.6c/IEEEtran.tar.gz) = 6d7f434df848c2878bda0d7fc8a6a3c519a59bb3
+RMD160 (tex-IEEEtran-1.6c/IEEEtran.tar.gz) = 0b45828f03edb335a3ed6cb7ac09f40419cd78ec
+Size (tex-IEEEtran-1.6c/IEEEtran.tar.gz) = 348962 bytes
