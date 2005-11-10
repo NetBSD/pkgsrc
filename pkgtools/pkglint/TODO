@@ -13,3 +13,6 @@
 * check _every_ line of the Makefiles
 * warn about the use of ${SED} in {pre,do,post}-install
 * check for direct use of user names and group names
+* Find a reliable, secure way to delete all CVS directories inside
+  ${WRKSRC}. When that is finished, add a warning that using ${XARGS}
+  is insecure.
