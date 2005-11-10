@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.91 2005/11/07 18:22:22 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.92 2005/11/10 07:04:00 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -326,7 +326,7 @@ bulk-package:
 			for pkgname in `${PKG_INFO} -e \*` ; \
 			do \
 				if [ "${USE_BULK_CACHE}" = "yes" ]; then \
-					pkgdir=`${GREP} " $$pkgname " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+					pkgdir=`${AWK} '$$2 == "'"$$pkgname"'" {print $$1}' ${INDEXFILE}`; \
 					if [ -z "$$pkgdir" ]; then \
 					    pkgdir=unknown ; \
 					fi; \
