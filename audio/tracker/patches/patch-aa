@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2004/07/10 16:33:01 minskim Exp $
+$NetBSD: patch-aa,v 1.6 2005/11/10 20:07:17 joerg Exp $
 
---- Makefile.orig	1996-05-07 10:20:50.000000000 -0500
+--- Makefile.orig	1996-05-07 15:20:50.000000000 +0000
 +++ Makefile
 @@ -20,7 +20,7 @@ CC = gcc
  
@@ -20,10 +20,19 @@ $NetBSD: patch-aa,v 1.5 2004/07/10 16:33:01 minskim Exp $
  LIBS_freebsd = -lm
  AUDIODIR_freebsd=PCux/
  CONFIG_freebsd = PCux/freebsd_
-@@ -175,6 +175,15 @@ EXE_freebsd = 
+@@ -175,6 +175,24 @@ EXE_freebsd = 
  UI_freebsd = Unix/
  SHELL_freebsd = /bin/sh
  
++CFLAGS_dragonfly = -O2 -funroll-loops -finline-functions
++LIBS_dragonfly = -lm
++AUDIODIR_dragonfly = PCux/
++CONFIG_dragonfly = PCux/freebsd_
++O_dragonfly = .o
++EXE_dragonfly =
++UI_dragonfly = Unix/
++SHELL_dragonfly = /bin/sh
++
 +CFLAGS_netbsd = -O2 -funroll-loops -finline-functions
 +LIBS_netbsd = -lm
 +AUDIODIR_netbsd=PCux/
@@ -36,7 +45,7 @@ $NetBSD: patch-aa,v 1.5 2004/07/10 16:33:01 minskim Exp $
  CFLAGS_aix = -O
  LIBS_aix = -lm
  AUDIODIR_aix = Aix/
-@@ -220,9 +229,9 @@ EXE_sbos2 = .exe
+@@ -220,9 +238,9 @@ EXE_sbos2 = .exe
  UI_sbos2 = OS2/./
  SHELL_sbos2 = /bin/sh
  
@@ -48,7 +57,7 @@ $NetBSD: patch-aa,v 1.5 2004/07/10 16:33:01 minskim Exp $
  CONFIG = Arch/$(CONFIG_${MACHINE})
  AUDIODIR = Arch/$(AUDIODIR_${MACHINE})
  AUDIONAME = $(AUDIONAME_${MACHINE})
-@@ -250,7 +259,7 @@ OBJ_SPLITMOD = split$O time$O st_read$O 
+@@ -250,7 +268,7 @@ OBJ_SPLITMOD = split$O time$O st_read$O 
  display$O prefs$O autoinit$O $(UI)ui$O empty$O color$O version$O \
  st_virt$O automaton$O
  
@@ -57,7 +66,7 @@ $NetBSD: patch-aa,v 1.5 2004/07/10 16:33:01 minskim Exp $
  
  config.h: $(CONFIG)config.h 
  	rm -f config.h
-@@ -272,9 +281,8 @@ version.c: Makefile
+@@ -272,9 +290,8 @@ version.c: Makefile
  install: 
  	$(INSTALL) $(INST_BIN_OPT) tracker $(BIN_DIR)
  	$(INSTALL) $(INST_BIN_OPT) randomize $(BIN_DIR)
