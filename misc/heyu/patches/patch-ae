@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2003/11/11 10:17:39 wiz Exp $
+$NetBSD: patch-ae,v 1.4 2005/11/10 18:00:09 joerg Exp $
 
---- Configure.orig	Mon Mar 31 08:58:14 2003
+--- Configure.orig	2003-03-31 06:58:14.000000000 +0000
 +++ Configure
 @@ -15,9 +15,9 @@ EoF
  
@@ -15,6 +15,15 @@ $NetBSD: patch-ae,v 1.3 2003/11/11 10:17:39 wiz Exp $
  GROUP = sys
  OWNER = root
  
+@@ -81,7 +81,7 @@ EoF
+ 		LIBS = -lm -lc
+ EoF
+ 	;;
+-    freebsd|openbsd)
++    freebsd|openbsd|dragonfly)
+ 	cat >> Makefile <<-EoF
+ 		CC = gcc
+ 		CFLAGS = -g -O \$(DFLAGS) -Wall
 @@ -117,7 +117,7 @@ EoF
  	;;
      netbsd)
