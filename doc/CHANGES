@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11883 2005/11/10 09:06:02 tonio Exp $
+$NetBSD: CHANGES,v 1.11884 2005/11/10 11:04:30 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5159,3 +5159,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/teTeX3-bin to 3.0nb3 [minskim 2005-11-09]
 	Updated devel/bmake to 20051105 [reed 2005-11-10]
 	Updated audio/cplay to 1.49nb1 [tonio 2005-11-10]
+	Updated pkgtools/pkglint to 4.39 [rillig 2005-11-10]
