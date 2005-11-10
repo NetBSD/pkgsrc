@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.205 2005/11/10 09:09:26 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.206 2005/11/10 09:48:04 rillig Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -346,6 +346,16 @@ PHASES_AFTER_CONFIGURE=	configure ${PHASES_AFTER_BUILD}
 PHASES_AFTER_BUILD=	build ${PHASES_AFTER_INSTALL}
 PHASES_AFTER_INSTALL=	install ${PHASES_AFTER_PACKAGE}
 PHASES_AFTER_PACKAGE=	package
+
+PKG_INSTALLATION_TYPES?= overwrite
+# This is a whitespace-separated list of installation types supported
+# by the package.
+#
+# *NOTE*: This variable *must* be set in the package Makefile *before*
+#         the inclusion of bsd.prefs.mk.
+#
+# Possible: any of: overwrite, pkgviews
+# Default: overwrite
 
 # Set the style of installation to be performed for the package.  The
 # funky make variable modifiers just select the first word of the value
