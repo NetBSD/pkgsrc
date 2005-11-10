@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.5 2005/01/24 21:24:48 tv Exp $
+$NetBSD: patch-ad,v 1.6 2005/11/10 22:48:07 joerg Exp $
 
---- scsh/syscalls1.c.orig	2005-01-24 16:23:12.000000000 -0500
+--- scsh/syscalls1.c.orig	2004-03-11 15:54:06.000000000 +0000
 +++ scsh/syscalls1.c
-@@ -671,7 +671,9 @@ s48_value scsh_fsync(s48_value sch_fdes)
+@@ -42,7 +42,6 @@
+ /* Make sure our exports match up w/the implementation: */
+ #include "syscalls1.h"
+ 
+-extern int errno;
+ extern char **environ;
+ 
+ /* Sux because it's dependent on 32-bitness. */
+@@ -671,7 +670,9 @@ s48_value scsh_fsync(s48_value sch_fdes)
  
  s48_value scsh_sync()
  {
