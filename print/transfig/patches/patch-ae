@@ -1,16 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2005/09/07 14:10:57 adam Exp $
+$NetBSD: patch-ae,v 1.4 2005/11/10 14:29:01 itohy Exp $
 
---- fig2dev/fig2dev.h.orig	2002-12-18 22:45:28.000000000 +0000
-+++ fig2dev/fig2dev.h	2005-09-02 14:20:02.000000000 +0100
-@@ -22,7 +22,6 @@
- #include <sys/file.h>
- #include <signal.h>
- #include <string.h>
--#include <varargs.h>
- #include <pwd.h>
- #include <errno.h>
- #include <time.h>
-@@ -210,13 +209,14 @@
+--- fig2dev/fig2dev.h.orig	Wed Jul 16 01:21:12 2003
++++ fig2dev/fig2dev.h	Wed Nov  9 21:52:22 2005
+@@ -213,13 +213,14 @@
  #endif /* MAXPATHLEN */
  #endif /* PATH_MAX */
  
