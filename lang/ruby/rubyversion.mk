@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.16 2005/11/03 07:23:41 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.17 2005/11/10 00:17:36 minskim Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -113,7 +113,7 @@ RUBY?=			${PREFIX}/bin/${RUBY_NAME}
 RDOC?=			${PREFIX}/bin/rdoc${RUBY_VER}
 
 #
-# RUBY_ARCH is used architecture depended direcotry name.
+# RUBY_ARCH is used as architecture-dependent directory name.
 #
 RUBY_ARCH?= ${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 
