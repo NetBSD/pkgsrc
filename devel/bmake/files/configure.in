@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.1 2005/10/31 21:34:24 reed Exp $
+dnl	$Id: configure.in,v 1.2 2005/11/10 00:09:34 reed Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
@@ -190,6 +190,15 @@ no)    ;;
 *)     force_machine=FORCE_; machine=$with_force_machine;;
 esac])
 dnl
+force_machine_arch=
+AC_ARG_WITH(force_machine_arch,
+[  --with-force-machine-arch=MACHINE  set FORCE_MACHINE_ARCH],
+[case "${withval}" in
+yes)   force_machine_arch=FORCE_;;
+no)    ;;
+*)     force_machine_arch=FORCE_; machine_arch=$with_force_machine;;
+esac])
+dnl
 AC_ARG_WITH(machine_arch,
 [  --with-machine_arch=MACHINE_ARCH  explicitly set MACHINE_ARCH],
 [case "${withval}" in
@@ -204,25 +213,17 @@ echo "Using: ${force_machine}MACHINE=$machine, MACHINE_ARCH=$machine_arch" 1>&6
 dnl
 dnl Allow folk to control _PATH_DEFSYSPATH
 dnl
+default_sys_path=\${prefix}/share/mk
 AC_ARG_WITH(default-sys-path,
 [  --with-default-sys-path=PATH:DIR:LIST  use an explicit _PATH_DEFSYSPATH
 	MAKESYSPATH is a ':' separated list of directories 
 	that bmake will search for system .mk files. 
 	_PATH_DEFSYSPATH is its default value.],
 [case "${withval}" in
-yes)   AC_MSG_ERROR(bad value ${withval} given for bmake _PATH_DEFSYSPATH) ;;
-no)    ;;
-*)     CPPFLAGS="$CPPFLAGS \"-D_PATH_DEFSYSPATH=\\\"$with_default_sys_path\\\"\"" ;;
-esac])
-dnl
-dnl Or just to prefix it 
-dnl
-AC_ARG_WITH(prefix-sys-path,
-[  --with-prefix-sys-path=PATH:DIR:LIST  prefix _PATH_PREFIX_SYSPATH],
-[case "${withval}" in
-yes)   AC_MSG_ERROR(bad value ${withval} given for bmake _PATH_PREFIX_SYSPATH) ;;
-no)    ;;
-*)     CPPFLAGS="$CPPFLAGS \"-D_PATH_PREFIX_SYSPATH=\\\"$with_prefix_sys_path\\\"\"" ;;
+yes)	AC_MSG_ERROR(bad value ${withval} given for bmake _PATH_DEFSYSPATH) ;;
+no)	;;
+*)	default_sys_path="$with_default_sys_path"
+	;;
 esac])
 dnl
 dnl Some folk don't like this one
@@ -281,6 +282,7 @@ AC_SUBST(machine)
 AC_SUBST(force_machine)
 AC_SUBST(machine_arch)
 AC_SUBST(mksrc)
+AC_SUBST(default_sys_path)
 AC_SUBST(INSTALL)
 AC_SUBST(GCC)
 AC_SUBST(diff_u)

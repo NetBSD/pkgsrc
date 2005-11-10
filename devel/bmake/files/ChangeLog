@@ -1,3 +1,30 @@
+2005-11-05  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20051105
+	* configure.in: always set default_sys_path 
+	  default is ${prefix}/share/mk
+	  - remove prefix_sys_path, anyone wanting more than above
+	    needs to set it manually.
+
+2005-11-04  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* boot-strap: make this a bit easier for pkgsrc folk.
+	  bootstrap still fails on IRIX64 since MACHINE_ARCH gets set to
+	  'mips' while pkgsrc wants 'mipseb' or 'mipsel'
+
+2005-11-02  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20051102
+	* job.c (JobFinish): fix likely ancient merge lossage
+	fix from Todd Vierling.
+	* boot-strap (srcdir): allow setting mksrc=none
+
+2005-10-31  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20051031
+	* ranlib.h: skip on OSF too.
+	  (NetBSD PR 31864)
+
 2005-10-10  Simon J. Gerraty  <sjg@void.crufty.net>
 
 	* Makefile.in (BMAKE_VERSION): bump to 20051002

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2005/11/02 18:16:04 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/11/10 00:09:34 reed Exp $
 #
 
-DISTNAME=       bmake-20051002
-PKGREVISION=	2
+DISTNAME=       bmake-20051105
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -18,8 +17,6 @@ WRKSRC=		${WRKDIR}/bmake
 NO_CHECKSUM=	YES
 
 makesyspath=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
-GNU_CONFIGURE=	no
-CONFIGURE_ARGS+= --with-default-sys-path=${makesyspath}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
@@ -29,7 +26,10 @@ do-extract:
 do-configure:
 
 do-build:
-	cd ${WRKDIR} && ./bmake/boot-strap -q -o ${OPSYS} ${CONFIGURE_ARGS}
+	cd ${WRKDIR} && \
+		./bmake/boot-strap -q -o ${OPSYS} --prefix=${PREFIX} \
+		--with-default-sys-path=${makesyspath} --mksrc none \
+		--sysconfdir=${PKG_SYSCONFDIR}
 
 # we use locally formatted version if available
 BMAKE_CATg=${WRKDIR}/${OPSYS}/bmake.cat1
