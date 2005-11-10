@@ -1,11 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2004/04/21 12:08:10 dillo Exp $
+$NetBSD: patch-ac,v 1.6 2005/11/10 22:48:07 joerg Exp $
 
---- configure.orig	Thu Mar 11 16:53:58 2004
+--- configure.orig	2004-03-11 15:53:58.000000000 +0000
 +++ configure
-@@ -3129,6 +3129,7 @@ echo "${ECHO_T}$scsh_cv_elf" >&6
+@@ -3128,7 +3128,8 @@ echo "${ECHO_T}$scsh_cv_elf" >&6
+   ;;
  
    ## NetBSD and FreeBSD ( and maybe 386BSD also)
-   *-*-*bsd*|*-*-darwin* )
+-  *-*-*bsd*|*-*-darwin* )
++  *-*-*bsd*|*-*-darwin*|*-*-dragonfly* )
 +  LDFLAGS="-Wl,--export-dynamic"
    dir=bsd
  
