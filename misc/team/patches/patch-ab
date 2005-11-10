@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
+$NetBSD: patch-ab,v 1.4 2005/11/10 18:29:01 joerg Exp $
 
---- team.c-orig	Fri May 22 15:35:25 1998
-+++ team.c	Fri May 22 15:35:59 1998
-@@ -58,8 +58,8 @@
+--- team.c.orig	1995-07-01 15:33:24.000000000 +0000
++++ team.c
+@@ -58,8 +58,8 @@ static char Notice[] =
    upstream to it, which has much the same effect.
  */
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  
  #define TeamLBUFSZ	(64)		/* Low buffer size		*/
  #define TeamDBUFSZ	(60*512)	/* Default buffer size		*/
-@@ -84,11 +84,23 @@
+@@ -84,11 +84,23 @@ static char Notice[] =
  #include <sys/file.h>
  #include <sys/stat.h>
  #include <fcntl.h>
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  #if (PCG)
  # include "Extend.h"
  # include "Here.h"
-@@ -99,6 +111,7 @@
+@@ -99,6 +111,7 @@ static char Notice[] =
  # define fast		register
  # define global     	/* extern */
  # define local		static
@@ -45,15 +45,17 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  # define when		break; case
  # define otherwise	break; default
  # define mode(which,name) typedef which name name; which name
-@@ -160,6 +173,7 @@
+@@ -160,8 +173,8 @@ mesg(a,b,c,d,e,f,g,h,i)
  
  local bool		verbose = false;
  local bool		report = true;
 +local bool		guyhaderror = false;
  
- extern int		errno;
+-extern int		errno;
  local time_t		origin;
-@@ -190,7 +204,7 @@
+ 
+ extern time_t		time of((time_t *));
+@@ -190,7 +203,7 @@ mode(struct,Fd)
  {
    int 	    fd;
    short	    status;
@@ -62,7 +64,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  };
  
  local Fd		FdIn,FdOut;
-@@ -199,7 +213,7 @@
+@@ -199,7 +212,7 @@ local bool		FdOpen on((fd,ffd,size)) is
  (
    fast Fd		  *fd
  _ int			  ffd
@@ -71,7 +73,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  )
  {
    fd->status = (ffd >= 0) ? FdOPEN :   FdCLOSED;
-@@ -252,12 +266,12 @@
+@@ -252,12 +265,12 @@ _ fast Fd		  *from
    to->fd	= from->fd;
  }
  
@@ -87,7 +89,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  )
  {
    int			  tty;
-@@ -286,16 +300,21 @@
+@@ -286,16 +299,21 @@ _ long unsigned		  space
    do
    {
  #if (defined i386 || defined sun)
@@ -111,7 +113,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  
      read(tty,reply,sizeof reply);
    }
-@@ -320,7 +339,7 @@
+@@ -320,7 +338,7 @@ _ long unsigned		  space
  local unsigned		FdCanDo on((remaining,available)) is
  (
    fast address		  remaining
@@ -120,7 +122,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  )
  {
    return (remaining < available)
-@@ -332,16 +351,16 @@
+@@ -332,16 +350,16 @@ local address		FdRead on((fd,buffer,todo
    fast Fd		  *fd
  _ pointer		  buffer
  _ fast address		  todo
@@ -140,7 +142,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
    when FdERROR:   return -1;
    when FdCLOSED:  return -1;
  
-@@ -373,16 +392,16 @@
+@@ -373,16 +391,16 @@ local address		FdWrite on((fd,buffer,tod
    fast Fd		  *fd
  _ pointer		  buffer
  _ fast address		  todo
@@ -160,7 +162,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
    when FdERROR:   return -1;
    when FdCLOSED:  return -1;
  
-@@ -453,7 +472,7 @@
+@@ -453,7 +471,7 @@ mode(struct,StreamMsg)
  {
    Token			  token;
    short			  status;
@@ -169,7 +171,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  };
  
  local bool		StreamSend on((fd,token,status,done)) is
-@@ -461,7 +480,7 @@
+@@ -461,7 +479,7 @@ local bool		StreamSend on((fd,token,stat
    fast Fd		  *fd
  _ Token 		  token
  _ short 		  status
@@ -178,7 +180,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  )
  {
    fast int		  n;
-@@ -483,7 +502,7 @@
+@@ -483,7 +501,7 @@ local bool		StreamReceive on((fd,tokenp,
    fast Fd		  *fd
  _ Token 		  *tokenp
  _ short 		  *statusp
@@ -187,7 +189,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  )
  {
    fast int		  n;
-@@ -536,7 +555,7 @@
+@@ -536,7 +554,7 @@ _ Fd			  *downstream
  #define GuyRECEIVE(guy,tokenp,statusp,donep) \
    StreamReceive(&guy->upStream,tokenp,statusp,donep)
  
@@ -196,7 +198,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  
  local bool		GuyStart on((guy,bufsize)) is
  (
-@@ -547,7 +566,7 @@
+@@ -547,7 +565,7 @@ _ address		  bufsize
    fast char		  *buffer;
    Token 		  token;
    short 		  status;
@@ -205,7 +207,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
    bool		  received;
    static int 		  bytesRead,bytesWritten;
  
-@@ -564,7 +583,7 @@
+@@ -564,7 +582,7 @@ _ address		  bufsize
    while ((received = GuyRECEIVE(guy,&token,&status,&done)) && token != TokenSTOP)
    switch (token)
    {
@@ -214,7 +216,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
      FdIn.status = status;
  
      Mesg(("GuyStart reading %d chars\n",bufsize));
-@@ -577,7 +596,7 @@
+@@ -577,7 +595,7 @@ _ address		  bufsize
      done += bytesRead;
  
      if (verbose)
@@ -223,7 +225,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  
      if (!GuySEND(guy,TokenREAD,FdIn.status,done))
        GuyStop(guy,"guy cannot send READ",done);
-@@ -595,7 +614,7 @@
+@@ -595,7 +613,7 @@ _ address		  bufsize
      done += bytesWritten;
  
      if (verbose)
@@ -232,7 +234,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  
      if (!GuySEND(guy,TokenWRITE,FdOut.status,done))
        GuyStop(guy,"guy cannot send WRITE",done);
-@@ -619,7 +638,7 @@
+@@ -619,7 +637,7 @@ local bool		GuyStop on((guy,errormsg,don
  (
    fast Guy		  *guy
  _ char			  *errormsg
@@ -241,7 +243,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  )
  {
    Mesg(("GuyStop guy %#o\n",guy));
-@@ -627,8 +646,8 @@
+@@ -627,8 +645,8 @@ _ long unsigned		  done
    if (done)
    {
      if (report)
@@ -252,7 +254,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
      else if (verbose)
        mesg("\n");
    }
-@@ -637,7 +656,7 @@
+@@ -637,7 +655,7 @@ _ long unsigned		  done
    {
      mesg("team: guy pid %u: %s\n",guy->pid,errormsg);
      call GuySEND(guy,TokenABORT,FdERROR,0L);
@@ -261,7 +263,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
      /*NOTREACHED*/
    }
  
-@@ -697,8 +716,8 @@
+@@ -697,8 +715,8 @@ local bool		TeamStart on((team,bufsize,i
  (
    fast Team		  *team
  _ address		  bufsize
@@ -272,7 +274,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  )
  {
    /*
-@@ -797,6 +816,9 @@
+@@ -797,6 +815,9 @@ _ long unsigned		  osize
      {
        pid = getpid();
  
@@ -282,7 +284,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
        if (!FdClose(&last_downstream))
  	perror("cannot close inherited first link");
  
-@@ -816,13 +838,13 @@
+@@ -816,13 +837,13 @@ _ long unsigned		  osize
      }
    }
  
@@ -298,7 +300,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
    {
      perror("cannot send first WRITE token");
      return false;
-@@ -864,6 +886,14 @@
+@@ -864,6 +885,14 @@ local bool		TeamWait on((team)) is
  
      --team->active;
  
@@ -313,7 +315,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
      if (status != 0   && team->active != 0)
        return false;
    }
-@@ -914,8 +944,8 @@
+@@ -914,8 +943,8 @@ local void		usage of((noparms))
  syntax: team [-[vr]] [-iI[bkm] [-oO[bkm] [N[bkm] [P]]\n\
    copies standard input to output\n\
    -v gives ongoing report, -r final report\n\
@@ -324,7 +326,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
    N is buffer size (default %luk)\n\
    P is number of processes (default %u)\n\
    (postfix b means *512, k means *1KB, m means *1MB)\n\
-@@ -927,19 +957,19 @@
+@@ -927,19 +956,19 @@ syntax: team [-[vr]] [-iI[bkm] [-oO[bkm]
    /*NOTREACHED*/
  }
  
@@ -347,7 +349,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  
    if (*s == 'b') l *= (1L<<9);
    if (*s == 'k') l *= (1L<<10);
-@@ -958,8 +988,8 @@
+@@ -958,8 +987,8 @@ _ char			  *(argv[])
    short unsigned	  teamsize;
  
    address		  bufsize;
@@ -358,7 +360,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
    int			  opt;
  
    teamsize = TeamDTEAMSZ;
-@@ -971,11 +1001,11 @@
+@@ -971,11 +1000,11 @@ _ char			  *(argv[])
    while ((opt = getopt(argc,argv,"vri:o:")) != -1)
      switch (opt)
      {
@@ -372,7 +374,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  	usage();
        }
    
-@@ -983,7 +1013,7 @@
+@@ -983,7 +1012,7 @@ _ char			  *(argv[])
        osize = atos(optarg);
        if (osize < TeamLVOLSZ || osize > TeamHVOLSZ)
        {
@@ -381,7 +383,7 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
  	usage();
        }
  
-@@ -1032,6 +1062,11 @@
+@@ -1032,6 +1061,11 @@ _ char			  *(argv[])
  
    origin = time((time_t *) 0);
  
@@ -393,16 +395,15 @@ $NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
    if (!TeamStart(&team,bufsize,isize,osize))
    {
      mesg("team: cannot start the team\n");
-@@ -1052,6 +1087,12 @@
-   if (!TeamClose(&team))
-   {
-     mesg("team: cannot close the team\n");
-+    return 1;
-+  }
-+
-+  if (guyhaderror)
-+  {
-+    mesg("team: guy had error\n");
+@@ -1055,5 +1089,11 @@ _ char			  *(argv[])
      return 1;
    }
  
++  if (guyhaderror)
++  {
++    mesg("team: guy had error\n");
++    return 1;
++  }
++
+   return 0;
+ }
