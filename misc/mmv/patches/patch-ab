@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2005/11/08 03:03:44 tv Exp $
+$NetBSD: patch-ab,v 1.4 2005/11/10 18:10:36 joerg Exp $
 
---- mmv.c.orig	1993-10-25 06:29:39.000000000 -0400
+--- mmv.c.orig	1993-10-25 10:29:39.000000000 +0000
 +++ mmv.c
-@@ -123,10 +123,13 @@ extern unsigned _stklen = 10000;
+@@ -123,10 +123,14 @@ extern unsigned _stklen = 10000;
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <sys/file.h>
 +#include <sys/param.h>
++#include <limits.h>
  
 +#if !(defined(BSD) && BSD >= 199306)
  extern char *getenv();
@@ -16,7 +17,7 @@ $NetBSD: patch-ab,v 1.3 2005/11/08 03:03:44 tv Exp $
  
  #ifdef HAS_DIRENT
  #include <dirent.h>
-@@ -188,7 +191,7 @@ extern char *strcpy(), *strchr();
+@@ -188,7 +192,7 @@ extern char *strcpy(), *strchr();
  #include <fcntl.h>
  #endif
  
@@ -25,7 +26,7 @@ $NetBSD: patch-ab,v 1.3 2005/11/08 03:03:44 tv Exp $
  
  /* for System V and Version 7*/
  struct utimbuf {
-@@ -197,6 +200,9 @@ struct utimbuf {
+@@ -197,6 +201,9 @@ struct utimbuf {
  };
  #define utimes(f, t) utime((f), &(t))
  
@@ -35,7 +36,35 @@ $NetBSD: patch-ab,v 1.3 2005/11/08 03:03:44 tv Exp $
  #ifndef HAS_RENAME
  #ifndef MV_DIR
  # define MV_DIR "/usr/lib/mv_dir"
-@@ -2631,7 +2637,7 @@ static int copy(ff, len)
+@@ -436,7 +443,7 @@ static CHUNK *freechunks = NULL;
+ static SLICER slicer[2] = {{NULL, NULL, 0}, {NULL, NULL, 0}};
+ 
+ static int badreps = 0, paterr = 0, direrr, failed = 0, gotsig = 0, repbad;
+-static FILE *outfile = stdout;
++static FILE *outfile;
+ 
+ static char IDF[] = "$$mmvdid.";
+ static char TEMP[] = "$$mmvtmp.";
+@@ -497,6 +504,8 @@ int main(argc, argv)
+ {
+ 	char *frompat, *topat;
+ 
++	outfile = stdout;
++
+ 	init();
+ 	procargs(argc, argv, &frompat, &topat);
+ 	domatch(frompat, topat);
+@@ -1415,6 +1424,9 @@ static int badname(s)
+ 		(*ext == '.' && strchr(ext + 1, '.') != NULL) ||
+ 		strlen(ext) >= MAXEXT ||
+ 		strncmp(s, IDF, STRLEN(IDF)) == 0
++#elif defined(NAME_MAX)
++		(*s == '.' && (s[1] == '\0' || strcmp(s, "..") == 0)) ||
++		strlen(s) > NAME_MAX
+ #else
+ 		(*s == '.' && (s[1] == '\0' || strcmp(s, "..") == 0)) ||
+ 		strlen(s) > MAXNAMLEN
+@@ -2631,7 +2643,7 @@ static int copy(ff, len)
  #ifdef IS_MSDOS
  	struct ftime tim;
  #else
@@ -44,7 +73,7 @@ $NetBSD: patch-ab,v 1.3 2005/11/08 03:03:44 tv Exp $
  	struct utimbuf tim;
  #else
  	struct timeval tim[2];
-@@ -2706,7 +2712,7 @@ static int copy(ff, len)
+@@ -2706,7 +2718,7 @@ static int copy(ff, len)
  #else
  			stat(pathbuf, &fstat) ||
  			(
