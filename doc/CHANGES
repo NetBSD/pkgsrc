@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11888 2005/11/10 16:27:18 rillig Exp $
+$NetBSD: CHANGES,v 1.11889 2005/11/10 21:13:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5164,3 +5164,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/vtk-data to 4.2nb1 [rillig 2005-11-10]
 	Updated print/transfig to 3.2.5alpha7 [itohy 2005-11-10]
 	Updated pkgtools/pkglint to 4.40 [rillig 2005-11-10]
+	Updated editors/TeXmacs to 1.0.5.12 [wiz 2005-11-10]
