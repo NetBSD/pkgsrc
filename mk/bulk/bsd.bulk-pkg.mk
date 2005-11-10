@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.92 2005/11/10 07:04:00 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.93 2005/11/10 07:11:37 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -365,8 +365,8 @@ bulk-package:
 			${SHCOMMENT} "Install required depends via binarypkgs XXX" ; \
 			${ECHO_MSG} "BULK> Installing packages which are required to build ${PKGNAME}." ;\
 			for pkgdir in `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}` ${BULK_PREREQ} ; do \
-				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
-				if [ -z "$$pkgname" ]; then continue ; fi ;\
+				pkgname=`${AWK} '$$1 == "'"$$pkgdir"'" { print $$2; }' ${INDEXFILE}`; \
+				if [ -z "$$pkgname" ]; then ${ECHO} "BULK> WARNING: could not find package name for directory $$pkgdir"; continue ; fi ;\
 				pkgfile=${PACKAGES}/All/$${pkgname}${PKG_SUFX} ;\
 				if ${PKG_INFO} -qe $$pkgname ; then \
 					${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
