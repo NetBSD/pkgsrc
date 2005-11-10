@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.341 2005/11/08 22:55:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.342 2005/11/10 07:46:24 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -93,7 +93,7 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
 		NO_FILE NO_LINE_NUMBER
-		log_error log_warning log_note log_info log_subinfo
+		log_fatal log_error log_warning log_note log_info log_subinfo
 		print_summary_and_exit set_verbose is_verbose
 		set_gcc_output_format
 	);
@@ -483,7 +483,7 @@ BEGIN {
 	);
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER
-		log_error log_warning log_info log_subinfo
+		log_fatal log_error log_warning log_info log_subinfo
 		print_summary_and_exit
 	);
 	import PkgLint::FileUtil qw(
@@ -705,24 +705,47 @@ sub parse_command_line() {
 }
 
 sub load_make_vars_typemap() {
-	my ($lines, $vartypes);
+	my ($vartypes);
+	my ($fname);
 
-	if (!($lines = (load_file(conf_datadir."/makevars.map")))) {
-		return false;
-	}
 	$vartypes = {};
 
-	foreach my $line (@{$lines}) {
-		if ($line->text =~ qr"^(?:#.*|\s*)$") {
-			# ignore empty and comment lines
+	$fname = conf_datadir."/makevars.map";
+	if ((my $lines = load_file($fname))) {
+		foreach my $line (@{$lines}) {
+			if ($line->text =~ qr"^(?:#.*|\s*)$") {
+				# ignore empty and comment lines
 
-		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([-.+\w\d_* \{\}]+)$") {
-			$vartypes->{$1} = $2;
+			} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([-.+\w\d_* \{\}]+)$") {
+				$vartypes->{$1} = $2;
 
-		} else {
-			$line->log_fatal("Unknown line format.");
+			} else {
+				$line->log_fatal("Unknown line format.");
+			}
 		}
+	} else {
+		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
 	}
+
+# TODO: Enable when the time is ripe.
+if (false) {
+	# Additionally, scan mk/defaults/mk.conf for variable
+	# definitions. All these variables are reserved for the user and
+	# must not be set within packages.
+	$fname = "${pkgsrcdir}/mk/defaults/mk.conf";
+	if ((my $lines = load_file($fname))) {
+		foreach my $line (@{$lines}) {
+			if ($line->text =~ qr"^#?([\w_]+)\?=") {
+				my ($varname) = ($1);
+				$line->log_info("Found user-definable variable ${varname}.");
+				$vartypes->{$varname} = "Userdefined";
+			}
+		}
+	} else {
+		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+	}
+}
+
 	return $vartypes;
 }
 
