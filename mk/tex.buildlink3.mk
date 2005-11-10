@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.1 2005/11/08 17:32:51 tonio Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.2 2005/11/10 21:21:13 minskim Exp $
 #
 # A Makefile fragment for tex and latex packages
 #
@@ -132,6 +132,12 @@ PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf
 PLIST_SUBST+=	LATEX_TYPE=${LATEX_TYPE}
 PLIST_SUBST+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:C|^${PREFIX}/||}
+
+PRINT_PLIST_AWK+=	/^@dirrm ${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}(\/tex(\/latex)?)?$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, "$${PKG_LOCALTEXMFPREFIX}"); \
+			print; next; }
 
 .endif	# TEX_BUILDLINK3_MK
 
