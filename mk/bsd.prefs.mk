@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.204 2005/11/09 01:06:48 reed Exp $
+# $NetBSD: bsd.prefs.mk,v 1.205 2005/11/10 09:09:26 rillig Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -229,6 +229,7 @@ MAKE_ENV+=		USETOOLS=no
 OBJECT_FMT?=		Mach-O
 .endif
 
+# Load the settings from MAKECONF, which is /etc/mk.conf by default.
 .include <bsd.own.mk>
 
 # /usr/share/mk/bsd.own.mk on NetBSD 1.3 does not define OBJECT_FMT
