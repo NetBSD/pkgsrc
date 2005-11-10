@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.344 2005/11/10 11:03:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.345 2005/11/10 11:14:03 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1475,7 +1475,7 @@ sub get_tool_names() {
 				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
 				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+)$") {
 					$tools->{$value} = true;
-				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_VARNAME)\.([-\w.]+)$") {
+				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD|_TOOLS_VARNAME)\.([-\w.]+)$") {
 					$tools->{$1} = true;
 				}
 			}
