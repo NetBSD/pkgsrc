@@ -14,11 +14,31 @@
 #	(http://www.crufty.net/FreeWare/configs.html), $prefix/bin
 #	and a suitable ~/*bin directory.
 #
+#	Possibly useful configure_args:
+#
+#	--with-machine="machine"
+#		set "machine" to override that determined by
+#		machine.sh
+#	
+#	--with-force-machine="machine"
+#		force "machine" even if uname(3) provides a value.
+#
+#	--with-machine_arch="machine_arch"
+#		set "machine_arch" to override that determined by
+#		machine.sh
+#
+#	--with-default-sys-path="syspath"
+#		set an explicit default "syspath" which is where bmake
+#		will look for sys.mk and friends.
+#	
+#	--with-prefix-sys-path="syspath"
+#		prefix the built in default syspath with "syspath"
+#
 # AUTHOR:
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: boot-strap,v 1.1 2005/10/31 21:34:24 reed Exp $
+#	$Id: boot-strap,v 1.2 2005/11/10 00:09:34 reed Exp $
 #
 #	@(#) Copyright (c) 2001 Simon J. Gerraty
 #
@@ -69,12 +89,12 @@ do
 	--prefix=*) prefix=`IFS="="; set -- $1; echo $2`; shift;;
 	--src=*) srcdir=`IFS="="; set -- $1; echo $2`; shift;;
 	--with-mksrc=*) mksrc=`IFS="="; set -- $1; echo $2`; shift;;
-	--*) CONFIGURE_ARGS="$CONFIGURE_ARGS $1"; shift;;
-	*=*) eval "$1"; export `IFS="="; set -- $1; echo $1`; shift;;
 	-s|--src) srcdir=$2; shift 2;;
 	-m|--mksrc) mksrc=$2; shift 2;;
-	-o) objdir=$2; shift 2;;
+	-o|--objdir) objdir=$2; shift 2;;
 	-q) quiet=; shift;;
+	--*) CONFIGURE_ARGS="$CONFIGURE_ARGS $1"; shift;;
+	*=*) eval "$1"; export `IFS="="; set -- $1; echo $1`; shift;;
 	*) break;;
 	esac
 done
@@ -106,9 +126,16 @@ GetDir() {
 }
 	
 srcdir=`GetDir /bmake $srcdir $2 $Mydir ./bmake* $Mydir/../bmake*`
-[ -d $srcdir ] || Usage
-mksrc=`GetDir /mk $mksrc $3 ./mk* $srcdir/mk* $srcdir/../mk*`
-[ -d $mksrc ] || Usage
+[ -d ${srcdir:-/dev/null} ] || Usage
+case "$mksrc" in
+none|-) # we don't want it
+	mksrc=
+	;;
+*)	# guess we want mksrc...
+	mksrc=`GetDir /mk $mksrc $3 ./mk* $srcdir/mk* $srcdir/../mk*`
+	[ -d ${mksrc:-/dev/null} ] || Usage
+	;;
+esac
 
 # Ok, get to work...
 objdir=${objdir:-$OS}
@@ -116,16 +143,12 @@ objdir=${objdir:-$OS}
 [ -d $objdir ] || mkdir $objdir
 cd $objdir || exit 1
 
-defsyspath=/usr/share/mk:/share/mk:/usr/local/share/mk:/opt/share/mk
-prefix=${prefix:-${1:-/usr/local}}
-case "$prefix" in
-/usr/local) makesyspath=$defsyspath;;
-*) makesyspath=`echo $prefix/share/mk:$defsyspath | sed "s,:$prefix/share/mk,,"`;;
-esac
-
 AddConfigure --prefix= $prefix
-AddConfigure --with-default-sys-path= $makesyspath
-AddConfigure --with-mksrc= $mksrc
+case "$CONFIGURE_ARGS" in
+*--with-prefix-sys-path*) ;;	# skip
+*) AddConfigure --with-default-sys-path= $prefix/share/mk;;
+esac
+[ "$mksrc" ] && AddConfigure --with-mksrc= $mksrc
 $srcdir/configure $CONFIGURE_ARGS || exit 1
 ${MAKE:-make} -f makefile.boot clean
 ${MAKE:-make} -f makefile.boot bootstrap || exit 1
@@ -144,7 +167,7 @@ install_prefix() {
        echo cp $objdir/bmake $bdir/$make_version
        echo rm -f $bdir/bmake
        echo ln -s $make_version $bdir/bmake
-       echo $mksrc/install-mk $1/share/mk
+       [ "$mksrc" ] && echo $mksrc/install-mk $1/share/mk
 }
 
 case $prefix/ in

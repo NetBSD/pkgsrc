@@ -308,7 +308,7 @@ ac_includes_default="\
 # include <unistd.h>
 #endif"
 
-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP EGREP INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA ac_exe_suffix LIBOBJS machine force_machine machine_arch mksrc INSTALL GCC diff_u LTLIBOBJS'
+ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP EGREP INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA ac_exe_suffix LIBOBJS machine force_machine machine_arch mksrc default_sys_path prefix_sys_path INSTALL GCC diff_u LTLIBOBJS'
 ac_subst_files=''
 
 # Initialize some variables set by options.
@@ -849,12 +849,12 @@ Optional Packages:
   --with-defshell=SHELL  explicitly set DEFSHELL to either /bin/sh or /bin/ksh
   --with-machine=MACHINE  explicitly set MACHINE
   --with-force-machine=MACHINE  set FORCE_MACHINE
+  --with-force-machine-arch=MACHINE  set FORCE_MACHINE_ARCH
   --with-machine_arch=MACHINE_ARCH  explicitly set MACHINE_ARCH
   --with-default-sys-path=PATH:DIR:LIST  use an explicit _PATH_DEFSYSPATH
 	MAKESYSPATH is a ':' separated list of directories
 	that bmake will search for system .mk files.
 	_PATH_DEFSYSPATH is its default value.
-  --with-prefix-sys-path=PATH:DIR:LIST  prefix _PATH_PREFIX_SYSPATH
   --with-path-objdirprefix=PATH  override _PATH_OBJDIRPREFIX
   --with-mksrc=PATH tell makefile.boot where to find mk src
 
@@ -5835,6 +5835,17 @@ no)    ;;
 *)     force_machine=FORCE_; machine=$with_force_machine;;
 esac
 fi;
+force_machine_arch=
+
+# Check whether --with-force_machine_arch or --without-force_machine_arch was given.
+if test "${with_force_machine_arch+set}" = set; then
+  withval="$with_force_machine_arch"
+  case "${withval}" in
+yes)   force_machine_arch=FORCE_;;
+no)    ;;
+*)     force_machine_arch=FORCE_; machine_arch=$with_force_machine;;
+esac
+fi;
 
 # Check whether --with-machine_arch or --without-machine_arch was given.
 if test "${with_machine_arch+set}" = set; then
@@ -5848,28 +5859,18 @@ no)    ;;
 esac
 fi;
 echo "Using: ${force_machine}MACHINE=$machine, MACHINE_ARCH=$machine_arch" 1>&6
+default_sys_path=\${prefix}/share/mk
 
 # Check whether --with-default-sys-path or --without-default-sys-path was given.
 if test "${with_default_sys_path+set}" = set; then
   withval="$with_default_sys_path"
   case "${withval}" in
-yes)   { { echo "$as_me:$LINENO: error: bad value ${withval} given for bmake _PATH_DEFSYSPATH" >&5
+yes)	{ { echo "$as_me:$LINENO: error: bad value ${withval} given for bmake _PATH_DEFSYSPATH" >&5
 echo "$as_me: error: bad value ${withval} given for bmake _PATH_DEFSYSPATH" >&2;}
    { (exit 1); exit 1; }; } ;;
-no)    ;;
-*)     CPPFLAGS="$CPPFLAGS \"-D_PATH_DEFSYSPATH=\\\"$with_default_sys_path\\\"\"" ;;
-esac
-fi;
-
-# Check whether --with-prefix-sys-path or --without-prefix-sys-path was given.
-if test "${with_prefix_sys_path+set}" = set; then
-  withval="$with_prefix_sys_path"
-  case "${withval}" in
-yes)   { { echo "$as_me:$LINENO: error: bad value ${withval} given for bmake _PATH_PREFIX_SYSPATH" >&5
-echo "$as_me: error: bad value ${withval} given for bmake _PATH_PREFIX_SYSPATH" >&2;}
-   { (exit 1); exit 1; }; } ;;
-no)    ;;
-*)     CPPFLAGS="$CPPFLAGS \"-D_PATH_PREFIX_SYSPATH=\\\"$with_prefix_sys_path\\\"\"" ;;
+no)	;;
+*)	default_sys_path="$with_default_sys_path"
+	;;
 esac
 fi;
 
@@ -5926,6 +5927,8 @@ do
 done
 mksrc=`echo $mksrc | sed "s,$srcdir,\\\${srcdir},"`
 echo "Using: MKSRC=$mksrc" 1>&6
+
+
 
 
 
@@ -6565,6 +6568,8 @@ s,@machine@,$machine,;t t
 s,@force_machine@,$force_machine,;t t
 s,@machine_arch@,$machine_arch,;t t
 s,@mksrc@,$mksrc,;t t
+s,@default_sys_path@,$default_sys_path,;t t
+s,@prefix_sys_path@,$prefix_sys_path,;t t
 s,@INSTALL@,$INSTALL,;t t
 s,@GCC@,$GCC,;t t
 s,@diff_u@,$diff_u,;t t
