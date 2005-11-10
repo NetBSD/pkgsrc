@@ -95,8 +95,7 @@ DDEESSCCRRIIPPTTIIOONN
                                ted, the current directory is checked.
 
 FFIILLEESS
-     @PKGSRCDIR@/mk/bsd.pkg.mk  The pkgsrc master Makefile.
-     @PKGSRCDIR@/*              Other pkgsrc files.
+     pkgsrc/mk/*  Files from the pkgsrc infrastructure.
 
 EEXXAAMMPPLLEESS
      ppkkgglliinntt --CCnnoonnee,,ppaattcchheess ..
