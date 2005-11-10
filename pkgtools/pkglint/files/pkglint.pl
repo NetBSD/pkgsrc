@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.342 2005/11/10 07:46:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.343 2005/11/10 10:26:46 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1461,7 +1461,7 @@ sub get_tool_names() {
 	}
 
 	my $tools = {};
-	foreach my $file (qw(autoconf automake ldconfig make replace rpcgen texinfo)) {
+	foreach my $file (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
 		my $fname = "${pkgsrcdir}/mk/tools/${file}.mk";
 		my $lines = load_lines($fname, true);
 
@@ -1475,7 +1475,7 @@ sub get_tool_names() {
 				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
 				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+)$") {
 					$tools->{$value} = true;
-				} elsif ($varname =~ qr"^TOOLS_PATH\.([-\w.]+)$") {
+				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_VARNAME)\.([-\w.]+)$") {
 					$tools->{$1} = true;
 				}
 			}
