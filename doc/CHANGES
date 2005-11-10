@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11887 2005/11/10 14:30:29 itohy Exp $
+$NetBSD: CHANGES,v 1.11888 2005/11/10 16:27:18 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5163,3 +5163,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/csound-manual to 4.23nb3 [rillig 2005-11-10]
 	Updated graphics/vtk-data to 4.2nb1 [rillig 2005-11-10]
 	Updated print/transfig to 3.2.5alpha7 [itohy 2005-11-10]
+	Updated pkgtools/pkglint to 4.40 [rillig 2005-11-10]
