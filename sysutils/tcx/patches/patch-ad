@@ -1,10 +1,20 @@
-$NetBSD: patch-ad,v 1.2 2003/09/23 08:46:46 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2005/11/10 16:30:04 joerg Exp $
 
-Minor security audit
-
---- tcx.c.orig	Mon Dec 27 03:25:17 1993
-+++ tcx.c	Tue Sep 23 09:24:12 2003
-@@ -120,16 +120,16 @@
+--- tcx.c.orig	1993-12-27 03:25:17.000000000 +0000
++++ tcx.c
+@@ -17,11 +17,8 @@
+ /*  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.		*/
+ /************************************************************************/
+ 
+-
+ #include	"config.h"
+ 
+-extern	int	errno;
+-
+ int	main(int, char *[]);
+ int	is_tcx(int);
+ int	doencode(int, int);
+@@ -120,16 +117,16 @@ int	islocal;
  	/* If cannot, warn user and quit */
  
  	if(strrchr(argv[1], '/') == NULL)
@@ -25,7 +35,7 @@ Minor security audit
  	}
  
  	lck.l_type = F_WRLCK; lck.l_whence = 0; lck.l_start = 0; lck.l_len = 0;
-@@ -213,7 +213,7 @@
+@@ -213,7 +210,7 @@ int	islocal;
  
  	/* Spit out header and start encoding executable */
  
@@ -34,7 +44,7 @@ Minor security audit
  	if(write(outfd, header, strlen(header)) < 0) { (void)perror("write"); exit(-1); }
  
  	c = 0;	if((write(outfd, &c, 1)) < 0) { (void)perror("write"); exit(-1); }
-@@ -291,7 +291,11 @@
+@@ -291,7 +288,11 @@ int
  doencode(int infd, int outfd)
  {
  int	pid;
