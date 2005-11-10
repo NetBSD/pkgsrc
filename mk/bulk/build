@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.73 2005/11/09 22:12:16 rillig Exp $
+# $NetBSD: build,v 1.74 2005/11/10 07:19:17 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -384,7 +384,7 @@ echo "Build finished.  Removing all installed packages left over from build..."
 for pkgname in `${PKG_TOOLS_BIN}/pkg_info -e \*`
 do
 	if ${PKG_TOOLS_BIN}/pkg_info -qe $pkgname; then
-		pkgdir=`${AWK} "/ $pkgname /"'{print $1}{}' $INDEXFILE`
+		pkgdir=`${AWK} '$2 == "'"$pkgname"'" { print $1; }' "$INDEXFILE"`
 		case "${BULK_PREREQ}" in
 			*$pkgdir* )
 				echo "Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
