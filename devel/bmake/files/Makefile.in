@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.1 2005/10/31 21:34:24 reed Exp $
+#	$NetBSD: Makefile.in,v 1.2 2005/11/10 00:09:34 reed Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.1 2005/10/31 21:34:24 reed Exp $
+#	$Id: Makefile.in,v 1.2 2005/11/10 00:09:34 reed Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -22,13 +22,14 @@ srcdir= @srcdir@
 CC?= @CC@
 
 # Base version on src date
-BMAKE_VERSION= 20051002
+BMAKE_VERSION= 20051105
 # knowing when it was built is also handy
 BUILD_DATE!= date +%Y%m%d
 MAKE_VERSION:= bmake-${BMAKE_VERSION} build-${BUILD_DATE}
 MACHINE=@machine@
 MACHINE_ARCH=@machine_arch@
 
+CFLAGS+= -D_PATH_DEFSYSPATH=\"@default_sys_path@\"
 CFLAGS+= -I. -I${srcdir} @DEFS@ @CPPFLAGS@ ${XDEFS} -DMAKE_NATIVE
 CFLAGS+= ${CFLAGS_${.TARGET:T}} 
 CFLAGS_main.o= "-DMAKE_VERSION=\"${MAKE_VERSION}\""
