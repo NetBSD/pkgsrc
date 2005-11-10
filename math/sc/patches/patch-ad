@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/11/10 17:23:18 joerg Exp $
+
+--- cmds.c.orig	2005-11-10 17:17:35.000000000 +0000
++++ cmds.c
+@@ -39,8 +39,6 @@ void	openrow();
+ void	syncref();
+ void	unspecial();
+ 
+-extern	int	errno;
+-
+ /* a linked list of free [struct ent]'s, uses .next as the pointer */
+ extern	struct ent *freeents;
+ 
