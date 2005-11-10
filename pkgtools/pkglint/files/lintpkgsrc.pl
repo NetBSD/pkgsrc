@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.104 2005/11/08 23:05:22 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.105 2005/11/10 14:30:56 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -440,7 +440,7 @@ sub get_default_makefile_vars
     if ($opt{P})
 	{ $default_vars->{PKGSRCDIR} = $opt{P}; }
     else
-	{ $default_vars->{PKGSRCDIR} = '@PKGSRCDIR@'; }
+	{ $default_vars->{PKGSRCDIR} = '/usr/pkgsrc'; }
 
     $default_vars->{DESTDIR} = '';
     $default_vars->{LOCALBASE} = '/usr/pkg';
@@ -1391,7 +1391,7 @@ Misc:
 Modifiers:
   -K path : Set PACKAGES basedir (default PKGSRCDIR/packages)
   -M path : Set DISTDIR		 (default PKGSRCDIR/distfiles)
-  -P path : Set PKGSRCDIR	 (default @PKGSRCDIR@)
+  -P path : Set PKGSRCDIR	 (default /usr/pkgsrc)
   -D      : Debug makefile and glob parsing
   -L      : List each Makefile when scanned
 ";
