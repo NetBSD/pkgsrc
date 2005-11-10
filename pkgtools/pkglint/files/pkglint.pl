@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.345 2005/11/10 11:14:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.346 2005/11/10 12:04:11 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1522,6 +1522,20 @@ sub checktext_basic_vartype($$$$$) {
 			$line->log_error("Invalid category \"${value}\".");
 		}
 
+	} elsif ($type eq "Comment") {
+		if ($value =~ qr"^(a|an)\s+"i) {
+			$line->log_warning("COMMENT should not begin with '$1'.");
+		}
+		if ($value =~ qr"^[a-z]") {
+			$line->log_warning("COMMENT should start with a capital letter.");
+		}
+		if ($value =~ qr"\.$") {
+			$line->log_warning("COMMENT should not end with a period.");
+		}
+		if (length($value) > 70) {
+			$line->log_warning("COMMENT should not be longer than 70 characters.");
+		}
+
 	} elsif ($type eq "Dependency") {
 		if ($value =~ regex_unresolved) {
 			# don't even try to check anything
@@ -2008,11 +2022,11 @@ sub checklines_package_Makefile_varorder($) {
 	my ($lineno, $sectindex, $varindex) = (0, -1, 0);
 	my ($next_section, $vars, $below, $below_what) = (true, undef, {}, undef);
 
-	# In each interation, one of the following becomes true:
+	# In each iteration, one of the following becomes true:
 	# - new.lineno > old.lineno
 	# - new.sectindex > old.sectindex
 	# - new.sectindex == old.sectindex && new.varindex > old.varindex
-	# - next_section == true
+	# - new.next_section == true && old.next_section == false
 	while ($lineno <= $#{$lines}) {
 		my $line = $lines->[$lineno];
 		my $text = $line->text;
@@ -2110,21 +2124,6 @@ sub checklines_package_Makefile($) {
 			if ($varname =~ qr"^_") {
 				# TODO: enable this when lang/perl5 has been fixed.
 				#$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
-			}
-
-			if ($varname eq "COMMENT") {
-				if ($value =~ qr"^(a|an)\s+"i) {
-					$line->log_warning("COMMENT should not begin with '$1'.");
-				}
-				if ($value =~ qr"^[a-z]") {
-					$line->log_warning("COMMENT should start with a capital letter.");
-				}
-				if ($value =~ qr"\.$") {
-					$line->log_warning("COMMENT should not end with a period.");
-				}
-				if (length($value) > 70) {
-					$line->log_warning("COMMENT should not be longer than 70 characters.");
-				}
 			}
 
 			if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname =~ qr"^p5-(.*)-[0-9].*") {

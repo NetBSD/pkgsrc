@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.29 2005/11/07 00:45:01 rillig Exp $
+# $NetBSD: makevars.map,v 1.30 2005/11/10 12:04:11 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -60,6 +60,7 @@ BUILTIN_X11_VERSION	Readonly
 CATEGORIES		List* of Category
 CC_VERSION		Readonly
 CFLAGS			List
+COMMENT			Comment
 CONFIGURE_ARGS		List
 CONFIGURE_DIRS		List* of WrksrcSubdirectory
 CONFIGURE_ENV		List
