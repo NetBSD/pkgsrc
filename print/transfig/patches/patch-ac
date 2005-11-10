@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2003/01/07 06:19:07 rh Exp $
+$NetBSD: patch-ac,v 1.4 2005/11/10 14:29:01 itohy Exp $
 
---- transfig/Imakefile.orig	Wed Dec 18 15:44:03 2002
-+++ transfig/Imakefile
-@@ -18,7 +18,7 @@
+--- transfig/Imakefile.orig	Wed Mar 26 05:52:37 2003
++++ transfig/Imakefile	Wed Nov  9 21:44:38 2005
+@@ -32,7 +32,7 @@
  XCOMM \\usepackage{} command for LaTeX2e. 
  XCOMM The default is to use \\documentstyle{} for LaTeX209.
  
 -XCOMM USELATEX2E = -DLATEX2E
 +USELATEX2E = -DLATEX2E
  
- XCOMM ******* DON'T CHANGE ANYTHIN BELOW THIS POINT *******
+ XCOMM ******* DON'T CHANGE ANYTHING BELOW THIS POINT *******
  
