@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/06/28 13:21:48 ben Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/11/10 11:37:39 rillig Exp $
 share/doc/html/csound/a.html
 share/doc/html/csound/abetarand.html
 share/doc/html/csound/abexprnd.html
@@ -165,9 +165,6 @@ share/doc/html/csound/equals.html
 share/doc/html/csound/event.html
 share/doc/html/csound/examples/0dbfs.orc
 share/doc/html/csound/examples/0dbfs.sco
-share/doc/html/csound/examples/CVS/Entries
-share/doc/html/csound/examples/CVS/Repository
-share/doc/html/csound/examples/CVS/Root
 share/doc/html/csound/examples/HRTFcompact
 share/doc/html/csound/examples/a.orc
 share/doc/html/csound/examples/a.sco
@@ -1107,9 +1104,6 @@ share/doc/html/csound/igauss.html
 share/doc/html/csound/igoto.html
 share/doc/html/csound/ihold.html
 share/doc/html/csound/ilinrand.html
-share/doc/html/csound/images/CVS/Entries
-share/doc/html/csound/images/CVS/Repository
-share/doc/html/csound/images/CVS/Root
 share/doc/html/csound/images/adsr.png
 share/doc/html/csound/images/caution.gif
 share/doc/html/csound/images/flanger.png
