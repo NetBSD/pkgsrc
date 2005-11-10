@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 1999/09/12 16:50:41 kim Exp $
+$NetBSD: patch-ab,v 1.3 2005/11/10 17:31:48 joerg Exp $
 
---- sem.c.orig	Wed Jul 14 11:59:18 1993
-+++ sem.c	Sun Sep 12 12:45:24 1999
+--- sem.c.orig	1994-10-04 16:44:53.000000000 +0000
++++ sem.c
 @@ -32,8 +32,10 @@
  #include <sys/ipc.h>
  #include <sys/sem.h>
@@ -14,7 +14,15 @@ $NetBSD: patch-ab,v 1.2 1999/09/12 16:50:41 kim Exp $
  union semun {
  	int val;
  	struct semid_ds *buf;
-@@ -148,10 +150,17 @@
+@@ -60,7 +62,6 @@ sem_set( sem_id, semn, val )
+ 	int val;
+ {
+ 	union semun arg;
+-	extern int errno;
+ 
+ 	arg.val = val;
+ 
+@@ -148,10 +149,17 @@ void
  remove_sems( sem_id )
  	int sem_id;
  {
