@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.343 2005/11/10 10:26:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.344 2005/11/10 11:03:57 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1856,7 +1856,9 @@ sub checklines_direct_tools($) {
 		USE_TOOLS);
 	my @valid_shellcmds = (
 		qr"for file in",
-		qr"(?:\./Build|\$\{JAM_COMMAND\})\s+(?:install|test)",
+		qr"\./${regex_tools}\b",
+		qr"(?:\./Build|\$\{(?:BJAM_CMD|JAM_COMMAND)\})\s+(?:install|test)",
+		qr"\$\{(?:GMAKE|MAKE_PROGRAM)\}\s+(?:install)",
 		qr"\"[^\"]*${regex_tools}[^\"]*\"",
 		qr"\'[^\']*${regex_tools}[^\']*\'",
 		qr"#.*",
@@ -1893,9 +1895,9 @@ sub checklines_direct_tools($) {
 			my ($varname, undef, $varvalue) = ($1, $2, $3);
 
 			if ($varname =~ $regex_ok_vars) {
-				$line->log_info("Legitimate direct use of \"${tool}\" in variable ${varname}.");
+				$line->log_info("Legitimate direct use of tool \"${tool}\" in variable ${varname}.");
 			} elsif ($varvalue =~ $regex_tools_with_context) {
-				$line->log_warning("Possible direct use of \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
+				$line->log_warning("Possible direct use of tool \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
 			} else {
 				# the tool name has appeared in the comment
 			}
@@ -1923,9 +1925,9 @@ sub checklines_direct_tools($) {
 			}
 
 			if ($remaining_shellcmd =~ $regex_tools_with_context) {
-				$line->log_warning("Possible direct use of \"${tool}\" in shell command \"${short_shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
+				$line->log_warning("Possible direct use of tool \"${tool}\" in shell command \"${short_shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
 			} else {
-				$line->log_info("Legitimate direct use of \"${tool}\" in shell command \"${short_shellcmd}\".");
+				$line->log_info("Legitimate direct use of tool \"${tool}\" in shell command \"${short_shellcmd}\".");
 			}
 
 		# skip processing directives
