@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/18 22:12:53 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/10 01:29:44 rillig Exp $
 bin/lockmail
 bin/mailbot
 bin/maildrop
@@ -15,13 +15,13 @@ man/man7/maildropex.7
 man/man7/maildropfilter.7
 man/man7/maildropgdbm.7
 share/doc/courier/README.postfix
-share/doc/courier/maildroptips.txt
 share/doc/courier/lockmail.html
 share/doc/courier/mailbot.html
 share/doc/courier/maildrop.html
 share/doc/courier/maildropex.html
 share/doc/courier/maildropfilter.html
 share/doc/courier/maildropgdbm.html
+share/doc/courier/maildroptips.txt
 share/doc/courier/makemime.html
 share/doc/courier/manpage.css
 share/doc/courier/reformail.html
