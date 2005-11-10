@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11885 2005/11/10 11:45:27 rillig Exp $
+$NetBSD: CHANGES,v 1.11886 2005/11/10 11:49:11 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5161,3 +5161,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/cplay to 1.49nb1 [tonio 2005-11-10]
 	Updated pkgtools/pkglint to 4.39 [rillig 2005-11-10]
 	Updated audio/csound-manual to 4.23nb3 [rillig 2005-11-10]
+	Updated graphics/vtk-data to 4.2nb1 [rillig 2005-11-10]
