@@ -1,23 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/08 15:56:40 tonio Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/10 09:04:25 tonio Exp $
 
---- cplay.orig	2003-12-05 09:20:56.000000000 +0100
+--- cplay.orig	2005-11-10 09:50:37.000000000 +0100
 +++ cplay
-@@ -46,6 +46,7 @@ except: pass
- # ------------------------------------------
- _locale_domain = "cplay"
- _locale_dir = "/usr/local/share/locale"
-+pipes = os.pipe(), os.pipe(), os.pipe()
+@@ -1165,13 +1165,15 @@ def get_tag(pathname):
  
- try:
-     import gettext  # python 2.0
-@@ -1169,9 +1170,7 @@ class Player:
+ # ------------------------------------------
+ class Player:
++
++    stdin_r, stdin_w = os.pipe()
++    stdout_r, stdout_w = os.pipe()
++    stderr_r, stderr_w = os.pipe()
++
+     def __init__(self, commandline, files, fps=1):
          self.commandline = commandline
          self.re_files = re.compile(files, re.I)
          self.fps = fps
 -        self.stdin_r, self.stdin_w = os.pipe()
 -        self.stdout_r, self.stdout_w = os.pipe()
 -        self.stderr_r, self.stderr_w = os.pipe()
-+	(self.stdin_r, self.stdin_w), (self.stdout_r, self.stdout_w), (self.stderr_r, self.stderr_w) = pipes
          self.entry = None
          self.stopped = 0
          self.paused = 0
