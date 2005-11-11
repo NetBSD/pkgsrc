@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/09 23:15:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/11 20:26:43 wiz Exp $
 #
 
 DISTNAME=	fortunes-futurama-0.2
@@ -8,9 +8,9 @@ EXTRACT_SUFX=	.gz
 
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.netmeister.org/misc.html
-COMMENT=	Fortunes from the famous Calvin & Hobbes comic strips
+COMMENT=	Fortunes from the Futurama animated TV series
 
-BUILD_DEPENDS+=	fortune-strfile-*:../../games/fortune-strfile
+BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 
 STRFILE=	${LOCALBASE}/bin/strfile
 WRKSRC=		${WRKDIR}
