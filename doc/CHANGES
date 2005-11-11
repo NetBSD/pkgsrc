@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11895 2005/11/11 21:15:24 wiz Exp $
+$NetBSD: CHANGES,v 1.11896 2005/11/11 21:35:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/mad123 to 0.8.5nb1 [joerg 2005-11-11]
 	Updated multimedia/vlc to 0.7.2nb5 [wiz 2005-11-11]
 	Updated net/gofish to 1.1nb1 [wiz 2005-11-11]
+	Renamed sysutils/bacula-client to sysutils/bacula-clientonly [wiz 2005-11-11]
