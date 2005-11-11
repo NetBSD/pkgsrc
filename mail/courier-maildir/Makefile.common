@@ -1,7 +1,11 @@
-# $NetBSD: Makefile.common,v 1.6 2005/11/11 07:29:26 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/11/11 07:42:08 rillig Exp $
 #
 # Package Makefiles should include this file after setting PKGNAME and
 # PKG_SUPPORTED_OPTIONS.
+
+.if !defined(PKGNAME)
+PKG_FAIL_REASON+=	"[courier-mail/Makefile.common] PKGNAME must be set."
+.endif
 
 PKG_SYSCONFSUBDIR?=	courier
 DOCDIR=			${PREFIX}/share/doc/courier
