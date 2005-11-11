@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/11 18:50:25 tonio Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/11 19:13:09 tonio Exp $
 bin/bbconf
-lib/bbconf/plugins/libbbconf.la
-lib/bbconf/plugins/libkeybindings.la
-lib/bbconf/plugins/libmenu.la
-lib/bbconf/plugins/libthemes.la
 man/man1/bbconf.1
+share/bbconf/plugins/libbbconf.la
+share/bbconf/plugins/libkeybindings.la
+share/bbconf/plugins/libmenu.la
+share/bbconf/plugins/libthemes.la
 share/doc/bbconf/AUTHORS
 share/doc/bbconf/COPYING
 share/doc/bbconf/ChangeLog
 share/doc/bbconf/README
 share/doc/bbconf/README.html
 share/doc/bbconf/TODO
+@dirrm share/bbconf/plugins
+@dirrm share/bbconf
 @dirrm share/doc/bbconf
-@dirrm lib/bbconf/plugins
-@dirrm lib/bbconf
