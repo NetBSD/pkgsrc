@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.5 2005/11/11 07:18:41 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/11/11 07:29:26 rillig Exp $
 #
-# Package Makefiles should include this file after setting PKGBASE and
+# Package Makefiles should include this file after setting PKGNAME and
 # PKG_SUPPORTED_OPTIONS.
 
 PKG_SYSCONFSUBDIR?=	courier
