@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.13 2005/11/05 17:18:28 rillig Exp $
+# $NetBSD: Makefile.php,v 1.14 2005/11/11 07:10:06 rillig Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -40,7 +40,9 @@ CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGBASE}
+# Note: This expression is the same as ${PKGBASE}, but the latter is
+# not defined yet, so we cannot use it here.
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl
 PKG_SUGGESTED_OPTIONS+=	ssl
 

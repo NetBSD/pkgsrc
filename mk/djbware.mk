@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.11 2005/10/05 05:46:54 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.12 2005/11/11 07:19:40 rillig Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -76,7 +76,9 @@ PKG_SUGGESTED_OPTIONS+=	djbware-errno-hack
 .if exists(${PKGDIR}/options.mk)
 . include "${PKGDIR}/options.mk"
 .else
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGBASE}
+# Note: This expression is the same as ${PKGBASE}, but the latter is
+# not defined yet, so we cannot use it here.
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 .include "../../mk/bsd.options.mk"
 .endif
 
