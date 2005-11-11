@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/08 21:45:01 tonio Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/11 18:50:25 tonio Exp $
 ${PKG_LOCALTEXMFPREFIX}/fonts/source/chemarrow/arrow.mf
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/chemarrow/arrow.tfm
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/chemarrow/chemarrow.sty
@@ -11,4 +11,5 @@ share/fonts/chemarrow/arrow.pfm
 @exec %D/bin/texconfig rehash
 @unexec %D/bin/texconfig rehash
 @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/source/chemarrow
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/chemarrow
 @dirrm share/fonts/chemarrow
