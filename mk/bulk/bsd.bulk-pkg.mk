@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.94 2005/11/10 07:19:17 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.95 2005/11/11 10:40:41 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -155,6 +155,15 @@ BULK_DBFILE?=	${BULKFILESDIR}/.bulk_db${BULK_ID}
 # /etc/mk.conf to do an xpkgwedged bulk build.
 BULK_PREREQ+=		pkgtools/digest
 
+# Commands for printing informational messages from the bulk build.
+# BULK_MSG_CONT is used for continuing a message started with BULK_MSG
+BULK_MSG?=	${ECHO_MSG} "BULK>"
+BULK_MSG_CONT?=	${ECHO_MSG} "     "
+
+#
+# Private variables
+#
+
 # by default, clean up any broken packages
 _PRESERVE_WRKDIR?=	no
 
@@ -169,7 +178,7 @@ _ESCPKGPATH=	${PKGPATH:C@\/@\\/@g:C@\+@\\+@g:C@\.@\\.@g:Q}
 # extracting the depends tree because some packages like
 # xpkgwedge only become DEPENDS if it is installed
 bulk-cache:
-	@${ECHO_MSG} "BULK> Installing BULK_PREREQ packages"
+	@${BULK_MSG} "Installing BULK_PREREQ packages"
 .for __prereq in ${BULK_PREREQ} lang/perl5
 	cd ${PKGSRCDIR}/${__prereq} && ${MAKE} bulk-install
 .endfor
@@ -178,18 +187,18 @@ bulk-cache:
 .if !defined(SPECIFIC_PKGS)
 	@${ECHO} "This file is unused for a full pkgsrc bulk build" >> ${BULK_DBFILE}
 	@${ECHO} "It is only used for a SPECIFIC_PKGS bulk build" >> ${BULK_DBFILE}
-	@${ECHO_MSG} "BULK> Building complete pkgsrc dependency tree (this may take a while)."
+	@${BULK_MSG} "Building complete pkgsrc dependency tree (this may take a while)."
 	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
-	@${ECHO_MSG} "BULK> Generating package name <=> package directory cross reference file"
-	@${ECHO_MSG} "      (this may take a while)."
+	@${BULK_MSG} "Generating package name <=> package directory cross reference file"
+	@${BULK_MSG_CONT} "(this may take a while)."
 	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
 .else
-	@${ECHO_MSG} "BULK> Extracting database for SPECIFIC_PKGS subset of pkgsrc"
-	@${ECHO_MSG} "      along with their dependencies"
+	@${BULK_MSG} "Extracting database for SPECIFIC_PKGS subset of pkgsrc"
+	@${BULK_MSG_CONT} "along with their dependencies"
 .for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl5 pkgtools/pkglint
 	cd ${PKGSRCDIR}/${__tmp__} && ${SETENV} BMAKE=${MAKE} AWK=${AWK} EXPR=${EXPR} ${SH} ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE}
 .endfor
-	@${ECHO_MSG} "BULK> Extracting dependency tree file"
+	@${BULK_MSG} "Extracting dependency tree file"
 	${AWK} '/^(build_)?depends/ {pkgs[$$2] = 1; cat=$$2; sub(/\/.*/, "", cat); \
 		for(i=3; i<=NF; i=i+1){ \
 			listed[$$2] = 1; \
@@ -200,12 +209,12 @@ bulk-cache:
 		for(pkg in pkgs) {if( pkg in listed ) {} else{ print pkg " " pkg;}} \
 		}' \
 		${BULK_DBFILE} | ${SORT} -u > ${DEPENDSTREEFILE}
-	@${ECHO_MSG} "BULK> Extracting package name <=> package directory cross reference file"
+	@${BULK_MSG} "Extracting package name <=> package directory cross reference file"
 	${AWK} '/^index/ {print $$2 " " $$3 " "}' ${BULK_DBFILE} > ${INDEXFILE}
 .endif
-	@${ECHO_MSG} "BULK> Sorting build order."
+	@${BULK_MSG} "Sorting build order."
 	${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
-	@${ECHO_MSG} "BULK> Generating up and down dependency files."
+	@${BULK_MSG} "Generating up and down dependency files."
 	${LOCALBASE}/bin/perl ${PKGSRCDIR}/mk/bulk/tflat ${SUPPORTSFILE} ${DEPENDSFILE} < ${DEPENDSTREEFILE}
 
 # note explicit pathname on "perl" above, so that we do NOT auto-set
@@ -226,23 +235,23 @@ bulk-check-uptodate:
 	@uptodate=1; \
 	if [ -f "${REF}" ]; then \
 		if [ "${REF:T}" != "${PKGFILE:T}" ]; then \
-			${ECHO_MSG} >&2 "BULK> ${REF} is out of date (new version ${PKGNAME}); rebuilding..."; \
+			${BULK_MSG} 1>&2 "${REF} is out of date (new version ${PKGNAME}); rebuilding..."; \
 			uptodate=0; \
 		elif [ "${USE_BULK_TIMESTAMPS}" = "yes" ]; then \
 			${SHCOMMENT} "Check files of this package"; \
 			newfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || ${TRUE}`"; \
 			nnewfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`"; \
 			if [ "$$nnewfiles" -gt 0 ]; then \
-				${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..."; \
+				${BULK_MSG} 1>&2 "Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..."; \
 				uptodate=0; \
 			else \
-				${ECHO_MSG} >&2 "BULK> ${REF} is up to date."; \
+				${BULK_MSG} 1>&2 "${REF} is up to date."; \
 			fi; \
 		else \
-			${ECHO_MSG} >&2 "BULK> ${REF} is up to date."; \
+			${BULK_MSG} 1>&2 "${REF} is up to date."; \
 		fi; \
 	else \
-		${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} not built yet, packaging..."; \
+		${BULK_MSG} 1>&2 "Package ${PKGNAME} not built yet, packaging..."; \
 		uptodate=0; \
 	fi; \
 	if [ "$$uptodate" = "1" ]; then \
@@ -253,13 +262,13 @@ bulk-check-uptodate:
 			${SHCOMMENT} "(Only one should be returned here, really...)"; \
 			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"`; \
 			if [ -z "$$pkg" ]; then \
-				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding..."; \
+				${BULK_MSG} 1>&2 "Required binary package $$dep does not exist, rebuilding..."; \
 				exit 1; \
 			elif [ "${USE_BULK_TIMESTAMPS}" = "yes" ] && [ -n "`${FIND} $$pkg -prune -newer ${REF} -print`" ]; then \
-				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding..."; \
+				${BULK_MSG} 1>&2 "Required binary package $$dep (`basename $$pkg`) is newer, rebuilding..."; \
 				exit 1; \
 			else \
-				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is usable."; \
+				${BULK_MSG} 1>&2 "Required binary package $$dep (`basename $$pkg`) is usable."; \
 			fi; \
 		done) || uptodate=0; \
 	fi; \
@@ -269,7 +278,7 @@ bulk-check-uptodate:
 # set DO to ":" to not actually do anything (debugging, ...)
 bulk-package:
 	@if [ -f ${BROKENFILE} ]; then \
-		${ECHO_MSG} "BULK> *** Package ${PKGNAME} seems broken and needs attention:" ; \
+		${BULK_MSG} "*** Package ${PKGNAME} seems broken and needs attention:" ; \
 		${LS} -la ${BROKENFILE}; \
 		exit 1; \
 	fi
@@ -292,14 +301,14 @@ bulk-package:
 	fi ; \
 	if [ $$uptodate = 1 ]; then \
 		( if [ $$installed = 1 ]; then \
-			${ECHO_MSG} "BULK> Package ${PKGNAME} is up-to-date, and still installed" ; \
+			${BULK_MSG} "Package ${PKGNAME} is up-to-date, and still installed" ; \
 		else \
-			${ECHO_MSG} "BULK> Nothing to be done." ; \
+			${BULK_MSG} "Nothing to be done." ; \
 		fi \
 		) 2>&1 | ${TEE} -a ${BUILDLOG}; \
 	else \
 		( if [ $$installed = 1 ]; then \
-			${ECHO_MSG} "BULK> Removing outdated (installed) package ${PKGNAME} first." ; \
+			${BULK_MSG} "Removing outdated (installed) package ${PKGNAME} first." ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
 			${DO}       ${MAKE} deinstall ; \
 			if ${PKG_INFO} -qe ${PKGWILDCARD:Q} ; then \
@@ -308,7 +317,7 @@ bulk-package:
 			fi ;\
 		fi ; \
 		if [ -f ${PKGFILE} ]; then \
-			${ECHO_MSG} "BULK> Removing old binary package..." ; \
+			${BULK_MSG} "Removing old binary package..." ; \
 			${ECHO_MSG} ${RM} -f ${PKGFILE} ; \
 			${DO}       ${RM} -f ${PKGFILE} ; \
 			for cat in ${CATEGORIES} ;\
@@ -317,12 +326,12 @@ bulk-package:
 				${DO} ${RM} -f ${PACKAGES}/$$cat/${PKGNAME}${PKG_SUFX}; \
 			done ;\
 		fi; \
-		${ECHO_MSG} "BULK> Full rebuild in progress..." ; \
-		${ECHO_MSG} "BULK> Cleaning package ${PKGNAME}" ;\
+		${BULK_MSG} "Full rebuild in progress..." ; \
+		${BULK_MSG} "Cleaning package ${PKGNAME}" ;\
 		${ECHO_MSG} ${MAKE} clean;\
 		${DO} ${MAKE} clean;\
 		if [ "${PRECLEAN}" = "yes" ]; then \
-			${ECHO_MSG} "BULK> Removing installed packages which are not needed to build ${PKGNAME}" ; \
+			${BULK_MSG} "Removing installed packages which are not needed to build ${PKGNAME}" ; \
 			for pkgname in `${PKG_INFO} -e \*` ; \
 			do \
 				if [ "${USE_BULK_CACHE}" = "yes" ]; then \
@@ -335,11 +344,11 @@ bulk-package:
 						pkgdir2=`${ECHO} "$$pkgdir" | ${AWK} '{gsub(/\//,"\\\\/"); gsub(/\+/,"\\\\+"); gsub(/ /,"\\\\ "); gsub(/\./,"\\\\."); print}'` ; \
 						tmp=`${SED} -n -e "/^${_ESCPKGPATH} .* $$pkgdir2 / s;.*;yes;p" ${DEPENDSFILE}` ; \
 						if test "X$$tmp" = "Xyes" ; then \
-							${ECHO_MSG} "BULK> ${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
+							${BULK_MSG} "${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
 						else \
 							case "${BULK_PREREQ}" in \
 								*$$pkgdir* ) \
-									${ECHO_MSG} "BULK> Keeping BULK_PREREQ: $$pkgname ($$pkgdir)" ;\
+									${BULK_MSG} "Keeping BULK_PREREQ: $$pkgname ($$pkgdir)" ;\
 									;; \
 								* ) \
 									${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
@@ -363,25 +372,25 @@ bulk-package:
 		fi ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			${SHCOMMENT} "Install required depends via binarypkgs XXX" ; \
-			${ECHO_MSG} "BULK> Installing packages which are required to build ${PKGNAME}." ;\
+			${BULK_MSG} "Installing packages which are required to build ${PKGNAME}." ;\
 			for pkgdir in `${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:;;p" ${DEPENDSFILE}` ${BULK_PREREQ} ; do \
 				pkgname=`${AWK} '$$1 == "'"$$pkgdir"'" { print $$2; }' ${INDEXFILE}`; \
-				if [ -z "$$pkgname" ]; then ${ECHO} "BULK> WARNING: could not find package name for directory $$pkgdir"; continue ; fi ;\
+				if [ -z "$$pkgname" ]; then ${BULK_MSG} "WARNING: could not find package name for directory $$pkgdir"; continue ; fi ;\
 				pkgfile=${PACKAGES}/All/$${pkgname}${PKG_SUFX} ;\
 				if ${PKG_INFO} -qe $$pkgname ; then \
-					${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
+					${BULK_MSG} "Required package $$pkgname ($$pkgdir) is already installed" ; \
 				else \
 					if [ -f $$pkgfile ]; then \
-						${ECHO_MSG} "BULK> ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
+						${BULK_MSG} "${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
 						${DO} ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${ECHO_MSG} "warning: could not add $$pkgfile." ; \
 					else \
-						${ECHO_MSG} "BULK> warning: $$pkgfile does not exist.  It will be rebuilt." ;\
+						${BULK_MSG} "warning: $$pkgfile does not exist.  It will be rebuilt." ;\
 					fi ;\
 				fi ;\
 			done ;\
 		fi ;\
 		if [ -f ${_INTERACTIVE_COOKIE} ]; then \
-			${ECHO_MSG} "BULK> Removing old marker for INTERACTIVE_STAGE..." ; \
+			${BULK_MSG} "Removing old marker for INTERACTIVE_STAGE..." ; \
 			${ECHO_MSG} ${RM} -f ${_INTERACTIVE_COOKIE} ; \
 			${DO}       ${RM} -f ${_INTERACTIVE_COOKIE} ; \
 		fi ;\
@@ -408,35 +417,35 @@ bulk-package:
 				${ECHO_MSG} "<pre>"; \
 				${ECHO_MSG} ""; \
 			fi ; \
-			${ECHO_MSG} "BULK> ${PKGNAME} was marked as broken:" ; \
+			${BULK_MSG} "${PKGNAME} was marked as broken:" ; \
 			${LS} -la ${BROKENFILE} ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
 			${DO}       ${MAKE} deinstall ; \
 			nbrokenby=0;\
 			if [ "${USE_BULK_CACHE}" = "yes" ]; then \
-				${ECHO_MSG} "BULK> Marking all packages which depend upon ${PKGNAME} as broken:"; \
+				${BULK_MSG} "Marking all packages which depend upon ${PKGNAME} as broken:"; \
 				tmp=`${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:[ ]*;;p" ${SUPPORTSFILE}` ; \
 				if test -n "$$tmp" ; then \
 					for pkgdir in $$tmp ; do \
 						pkgname=`${AWK} '$$1 == "'"$$pkgdir"'" { print $$2; }' ${INDEXFILE}`; \
 						if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
-						${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
+						${BULK_MSG} "marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
 						pkgerr='-1'; pkgignore=''; pkgskip=''; \
 						if [ "${USE_BULK_BROKEN_CHECK}" = 'yes' ]; then \
 							pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
 							pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
 						fi; \
 						if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
-							 ${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-							 ${ECHO_MSG} "BULK> $$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-							 ${ECHO_MSG} "BULK> $$pkgskip" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+							 ${BULK_MSG} "$$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+							 ${BULK_MSG} "$$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+							 ${BULK_MSG} "$$pkgskip" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 							if [ "${USE_BULK_BROKEN_CHECK}" != 'yes' ] || [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
 								pkgerr="0"; \
 							else \
 								pkgerr="1"; \
 							fi; \
 						fi; \
-						${ECHO_MSG} "BULK> $$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken." \
+						${BULK_MSG} "$$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken." \
 							>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 						${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>.<br />" \
 							>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
@@ -456,13 +465,13 @@ bulk-package:
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
 		yes|YES)	;;					\
-		*)	${ECHO_MSG} "BULK> Cleaning package ${PKGNAME}"; \
+		*)	${BULK_MSG} "Cleaning package ${PKGNAME}"; \
 			${ECHO_MSG} ${MAKE} clean;\
 			${DO} ${MAKE} clean;	\
 		esac;							\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
-		${ECHO_MSG} "BULK> Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${BROKENFILE} ; \
+		${BULK_MSG} "Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${BROKENFILE} ; \
 		false; \
 	else \
 		${RM} -f ${BUILDLOG} ;\
@@ -476,7 +485,7 @@ bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ${PKG_INFO} -qe ${PKGNAME} ; then :; else \
 			${DO} ${MAKE} install-depends ; \
-			${ECHO_MSG} "BULK>" ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
+			${BULK_MSG} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 		fi ; \
 	else \
