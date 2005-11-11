@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.20 2005/11/11 09:18:57 rillig Exp $
+# $NetBSD: printindex,v 1.21 2005/11/11 10:50:14 rillig Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -71,8 +71,8 @@ case $# in
 	;;
 esac
 
-case ${BMAKE-""} in "")
-	echo "$0: error: BMAKE must be set." 1>&2
+case ${BMAKE-""} in
+"")	echo "$0: error: BMAKE must be set." 1>&2
 	exit 1;;
 esac
 
