@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.95 2005/11/11 10:40:41 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.96 2005/11/11 13:17:58 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -427,28 +427,32 @@ bulk-package:
 				tmp=`${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:[ ]*;;p" ${SUPPORTSFILE}` ; \
 				if test -n "$$tmp" ; then \
 					for pkgdir in $$tmp ; do \
+						pkg_brokenfile=${PKGSRCDIR:Q}"/$$pkgdir/"${BROKENFILE:Q}; \
 						pkgname=`${AWK} '$$1 == "'"$$pkgdir"'" { print $$2; }' ${INDEXFILE}`; \
-						if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
+						case $$pkgname in \
+						"")	pkgname="unknown"; \
+							${BULK_MSG} "WARNING: unknown pkgname in $$pkgdir.";; \
+						esac; \
 						${BULK_MSG} "marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
 						pkgerr='-1'; pkgignore=''; pkgskip=''; \
 						if [ "${USE_BULK_BROKEN_CHECK}" = 'yes' ]; then \
 							pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
 							pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
 						fi; \
-						if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f ${PKGSRCDIR}/$$pkgdir/${BROKENFILE} ]; then \
-							 ${BULK_MSG} "$$pkgname ($$pkgdir) may not be packaged because:" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-							 ${BULK_MSG} "$$pkgignore" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-							 ${BULK_MSG} "$$pkgskip" >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f "$${pkg_brokenfile}" ]; then \
+							{ ${BULK_MSG} "$$pkgname ($$pkgdir) may not be packaged because:"; \
+							  ${BULK_MSG} "$$pkgignore"; \
+							  ${BULK_MSG} "$$pkgskip"; \
+							} >> "${pkg_brokenfile}"; \
 							if [ "${USE_BULK_BROKEN_CHECK}" != 'yes' ] || [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
 								pkgerr="0"; \
 							else \
 								pkgerr="1"; \
 							fi; \
 						fi; \
-						${BULK_MSG} "$$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken." \
-							>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
-						${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>.<br />" \
-							>> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
+						{ ${BULK_MSG} "$$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken."; \
+						  ${ECHO} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>.<br />"; \
+						} >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE}; \
 						nbrokenby=`expr $$nbrokenby + 1`;\
 						if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} ; then :; else \
 							${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${PKGSRCDIR}/${BROKENFILE} ;\
