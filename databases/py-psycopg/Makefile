@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:45:15 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/11/11 23:10:19 joerg Exp $
 #
 
-DISTNAME=	psycopg-1.1.14
-PKGNAME=	${PYPKGPREFIX}-psycopg-1.1.14
+DISTNAME=	psycopg-1.1.21
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	http://initd.org/pub/software/psycopg/
 
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+= \
  --with-postgres-libraries=${PGSQL_PREFIX}/lib
 BUILD_TARGET=	default
 
-PYTHON_VERSIONS_ACCEPTED= 23 22 21
+PYTHON_VERSIONS_ACCEPTED= 24 23 22 21
 PY_PATCHPLIST=	yes
 
 .include "../../lang/python/extension.mk"
