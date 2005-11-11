@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.32 2005/11/05 17:25:39 rillig Exp $
+# $NetBSD: Makefile.php,v 1.33 2005/11/11 07:04:57 rillig Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -42,7 +42,9 @@ CONFIGURE_ARGS+=	${PHP4_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGBASE}
+# Note: This expression is the same as ${PKGBASE}, but the latter is
+# not defined yet, so we cannot use it here.
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl
 PKG_SUGGESTED_OPTIONS+=	ssl
 
