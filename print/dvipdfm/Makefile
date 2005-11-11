@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/11/09 00:05:28 tonio Exp $
+# $NetBSD: Makefile,v 1.20 2005/11/11 18:50:24 tonio Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGREVISION=	4
@@ -12,7 +12,7 @@ COMMENT=	DVI to PDF translator
 CONFLICTS+=	dvipdfmx-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 CONFLICTS+=	teTeX-bin>=2.0			# Part of teTeX>=2.0
-LATEX_ACCEPTED=	teTeX1
+TEX_ACCEPTED=	teTeX1
 
 WRKSRC=			${WRKDIR}/dvipdfm
 GNU_CONFIGURE=		yes

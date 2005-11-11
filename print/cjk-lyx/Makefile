@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/08 20:33:50 tonio Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/11 18:50:24 tonio Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
@@ -22,7 +22,7 @@ CONFLICTS=	lyx-[0-9]*
 
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 
-LATEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
+TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl:run

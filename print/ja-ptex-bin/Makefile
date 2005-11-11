@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/08 23:03:10 tonio Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/11 18:50:24 tonio Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -27,7 +27,7 @@ DEPENDS+=	ja-ptex-share>=2.1:../../print/ja-ptex-share
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
-LATEX_ACCEPTED=		teTeX2
+TEX_ACCEPTED=		teTeX2
 .include "../../print/teTeX-bin/Makefile.common"
 
 PTEX_VERS=		3.1.2

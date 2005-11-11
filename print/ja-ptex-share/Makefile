@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/08 23:03:10 tonio Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/11 18:50:24 tonio Exp $
 
 DISTNAME=	ptex-texmf-2.1
 PKGNAME=	ja-ptex-share-2.1
@@ -18,7 +18,7 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.ascii.co.jp/pb/ptex/
 COMMENT=	Library files for pTeX
 
-LATEX_ACCEPTED=	teTeX2
+TEX_ACCEPTED=	teTeX2
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		teTeX

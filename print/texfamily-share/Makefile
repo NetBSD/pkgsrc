@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/08 23:03:10 tonio Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/11 18:50:25 tonio Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	5
@@ -27,7 +27,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST_SRC
-LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/texmf.local

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/08 17:50:41 tonio Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/11 18:50:24 tonio Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -18,8 +18,8 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++ fortran
-LATEX_DEPMOD=	build
-LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
+TEX_DEPMOD=	build
+TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 post-patch:
 	${MV} ${WRKSRC}/tnt ${WRKSRC}/tnt-mmtl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/08 21:16:09 tonio Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/11 18:50:25 tonio Exp $
 #
 
 DISTNAME=	eurosym-1.0
@@ -12,7 +12,7 @@ HOMEPAGE=	ftp://ftp.univie.ac.at/packages/tex/fonts/eurosym/
 COMMENT=	Euro symbols for LaTeX
 
 # included in teTeX[23]
-LATEX_ACCEPTED= teTeX1
+TEX_ACCEPTED=	teTeX1
 CONFLICTS+=	teTeX>1
 
 WRKSRC=		${WRKDIR}/eurosym

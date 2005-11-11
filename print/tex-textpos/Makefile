@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/08 21:45:01 tonio Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/11 18:50:25 tonio Exp $
 #
 
 NAME=		textpos
@@ -17,7 +17,7 @@ DIST_SUBDIR=	${NAME}
 DISTFILES=	textpos.ins LICENCE README textpos.dtx VERSION
 
 # included in teTeX3
-LATEX_ACCEPTED= teTeX1 teTeX2
+TEX_ACCEPTED=	teTeX1 teTeX2
 CONFLICTS+=	teTeX-bin>=3.0
 
 NO_CONFIGURE=	yes
