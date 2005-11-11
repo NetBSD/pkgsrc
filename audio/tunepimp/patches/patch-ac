@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/11/11 16:04:29 joerg Exp $
+
+--- lib/threads/posix/Makefile.in.orig	2005-11-11 15:54:34.000000000 +0000
++++ lib/threads/posix/Makefile.in
+@@ -204,7 +204,7 @@ target_alias = @target_alias@
+ INCLUDES = -I$(top_srcdir)/include/tunepimp
+ noinst_LTLIBRARIES = libtpthread.la
+ libtpthread_la_SOURCES = mutex.cpp mutex.h thread.cpp thread.h semaphore.cpp semaphore.h
+-@FREEBSD_FALSE@libtpthread_la_LIBADD = -lpthread
++@FREEBSD_FALSE@libtpthread_la_LIBADD = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ @FREEBSD_TRUE@libtpthread_la_LIBADD = -lthr
+ all: all-am
+ 
