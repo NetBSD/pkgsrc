@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/08/07 14:57:15 bjh21 Exp $
+# $NetBSD: Makefile,v 1.35 2005/11/11 21:19:11 joerg Exp $
 
 DISTNAME=	sox-12.17.7
 PKGREVISION=	1
@@ -12,14 +12,16 @@ COMMENT=	SOund eXchange - universal sound sample translator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fast-ulaw
 CONFIGURE_ARGS+=	--enable-fast-alaw
+.if ${OPSYS} != "DragonFly" && ${OPSYS} != "FreeBSD"
 CONFIGURE_ARGS+=	--disable-oss-dsp
+.endif
 CONFIGURE_ARGS+=	--with-ogg-vorbislib=${BUILDLINK_PREFIX.libvorbis}/lib
 CONFIGURE_ARGS+=	--with-ogg-vorbisinc=${BUILDLINK_PREFIX.libvorbis}/include
-
-.include "../../mk/bsd.prefs.mk"
 
 PLIST_SRC=		${PKGDIR}/PLIST.common
 
