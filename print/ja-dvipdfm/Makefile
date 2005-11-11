@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/08 23:03:10 tonio Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/11 18:50:24 tonio Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGNAME=	ja-${DISTNAME}
@@ -16,7 +16,7 @@ COMMENT=	DVI to PDF translator with Japanese patch
 
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	dvipdfmx-[0-9]*
-LATEX_ACCEPTED=	teTeX1
+TEX_ACCEPTED=	teTeX1
 
 WRKSRC=		${WRKDIR}/dvipdfm
 GNU_CONFIGURE=	yes
