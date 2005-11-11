@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11889 2005/11/10 21:13:02 wiz Exp $
+$NetBSD: CHANGES,v 1.11890 2005/11/11 07:26:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5165,3 +5165,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/transfig to 3.2.5alpha7 [itohy 2005-11-10]
 	Updated pkgtools/pkglint to 4.40 [rillig 2005-11-10]
 	Updated editors/TeXmacs to 1.0.5.12 [wiz 2005-11-10]
+	Updated sysutils/bacula to 1.38.0 [wiz 2005-11-11]
+	Updated sysutils/bacula-client to 1.38.0 [wiz 2005-11-11]
+	Updated sysutils/bacula-doc to 1.38.0 [wiz 2005-11-11]
