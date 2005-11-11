@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2005/11/11 16:01:20 tonio Exp $
+
+--- configure.orig	2003-12-11 00:23:05.000000000 +0100
++++ configure
+@@ -22842,7 +22842,7 @@ echo "$as_me: error: error compiling tes
+    { (exit 1); exit 1; }; }
+ fi
+ 
+-./libtool --mode=link $CC $CFLAGS $LDFLAGS -rpath /usr/lib conftest.lo -lm -o libconftest.la > /dev/null
++./libtool --mode=link --tag=CC $CC $CFLAGS $LDFLAGS -rpath /usr/lib conftest.lo -lm -o libconftest.la > /dev/null
+ if test ! -s .libs/libconftest.a; then
+   { { echo "$as_me:$LINENO: error: error, can't even find .a library" >&5
+ echo "$as_me: error: error, can't even find .a library" >&2;}
