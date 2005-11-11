@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.14 2005/10/31 09:52:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/11/11 07:23:15 wiz Exp $
 
-DISTNAME=		bacula-1.36.3
+DISTNAME=		bacula-1.38.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
@@ -12,12 +12,11 @@ USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
+MANCOMPRESSED=		yes
 
 BACULA_GROUP?=		bacula
 BACULA_DIR_USER?=	bacula-dir
 BACULA_SD_USER?=	bacula-sd
-
-BUILD_DEFS=		BACULA_DIR_USER BACULA_SD_USER BACULA_GROUP
 
 PKG_SYSCONFSUBDIR?=	bacula
 BACULA_PIDDIR?=		${VARBASE}/run

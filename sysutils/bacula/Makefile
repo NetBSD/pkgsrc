@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/31 09:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/11 07:23:15 wiz Exp $
 
 CONFLICTS+=		bacula-client-[0-9]*
 
@@ -21,15 +21,15 @@ BACULA_DB=		mysql
 .endif
 
 PLIST_SUBST+=		BACULA_DB=${BACULA_DB}
+MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
 CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER} --with-dir-group=${BACULA_GROUP}
 CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER} --with-sd-group=${BACULA_GROUP}
 
+BUILD_DEFS+=		BACULA_DIR_USER BACULA_SD_USER BACULA_GROUP
+
 PKG_USERS=		${BACULA_DIR_USER}:${BACULA_GROUP}
 PKG_USERS+=		${BACULA_SD_USER}:${BACULA_GROUP}
-
-OWN_DIRS_PERMS=		${BACULA_PIDDIR} root ${BACULA_GROUP} 770
-OWN_DIRS_PERMS+=	${BACULA_WORKINGDIR} root ${BACULA_GROUP} 770
 
 CONF_FILES+=		${EXAMPLESDIR}/bacula-dir.conf ${PKG_SYSCONFDIR}/bacula-dir.conf
 CONF_FILES+=		${EXAMPLESDIR}/bacula-sd.conf ${PKG_SYSCONFDIR}/bacula-sd.conf
@@ -37,7 +37,5 @@ CONF_FILES+=		${EXAMPLESDIR}/bacula-sd.conf ${PKG_SYSCONFDIR}/bacula-sd.conf
 RCD_SCRIPTS=		bacula bacula-dir bacula-sd bacula-fd
 
 .include "Makefile.common"
-
-PKGREVISION=		2
 
 .include "../../mk/bsd.pkg.mk"

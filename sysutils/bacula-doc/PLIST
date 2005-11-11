@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1 2005/11/11 07:23:15 wiz Exp $
+share/doc/bacula/developers.pdf
+share/doc/bacula/developers/bacula-logo.png
+share/doc/bacula/developers/developers.css
+share/doc/bacula/developers/index.html
+share/doc/bacula/developers/smartall.png
+share/doc/bacula/manual.pdf
+share/doc/bacula/manual/Bacula-tray-monitor.png
+share/doc/bacula/manual/Conf-Diagram.png
+share/doc/bacula/manual/access-is-denied.png
+share/doc/bacula/manual/bacula-applications.png
+share/doc/bacula/manual/bacula-logo.png
+share/doc/bacula/manual/bacula-objects.png
+share/doc/bacula/manual/bacula.css
+share/doc/bacula/manual/bimagemgr1.png
+share/doc/bacula/manual/bimagemgr2.png
+share/doc/bacula/manual/bimagemgr3.png
+share/doc/bacula/manual/confirm.png
+share/doc/bacula/manual/error.png
+share/doc/bacula/manual/flow.png
+share/doc/bacula/manual/idle.png
+share/doc/bacula/manual/index.html
+share/doc/bacula/manual/menu.png
+share/doc/bacula/manual/properties-security-advanced-owner.png
+share/doc/bacula/manual/properties-security.png
+share/doc/bacula/manual/running.png
+share/doc/bacula/manual/tray-icon.png
+share/doc/bacula/manual/view-only.png
+share/doc/bacula/manual/win32-finish.png
+share/doc/bacula/manual/win32-location.png
+share/doc/bacula/manual/win32-nsis.png
+share/doc/bacula/manual/win32-pkg.png
+share/doc/bacula/manual/win32-service-ok.png
+share/doc/bacula/manual/win32-service.png
+share/doc/bacula/manual/win32-start.png
+share/doc/bacula/manual/win32-welcome.png
+@dirrm share/doc/bacula/manual
+@dirrm share/doc/bacula/developers
+@dirrm share/doc/bacula
