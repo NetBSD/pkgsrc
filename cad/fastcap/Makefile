@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/11/08 17:49:19 tonio Exp $
+# $NetBSD: Makefile,v 1.26 2005/11/11 18:50:24 tonio Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -17,8 +17,8 @@ WRKSRC=			${WRKDIR}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		4
-LATEX_DEPMETHOD=	build
-LATEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
+TEX_DEPMETHOD=	build
+TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/08 18:53:02 tonio Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/11 18:50:24 tonio Exp $
 
 DISTNAME=		darcs-1.0.3
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=		Distributed revision control system
 
 BUILD_DEPENDS+=		latex2html>=2002.2.1nb3:../../textproc/latex2html
 
-LATEX_DEPMETHOD=	build
+TEX_DEPMETHOD=		build
 USE_TOOLS+=		gmake
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		yes

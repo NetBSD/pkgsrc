@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/08 17:57:25 tonio Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/11 18:50:24 tonio Exp $
 
 DISTNAME=	bibtex2html-1.76
 CATEGORIES=	converters
@@ -12,7 +12,7 @@ BUILD_DEPENDS+=	hevea-[0-9]*:../../textproc/hevea
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
-LATEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."

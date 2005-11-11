@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2005/11/08 18:56:34 tonio Exp $
+# $NetBSD: Makefile.common,v 1.30 2005/11/11 18:50:24 tonio Exp $
 #
 
 DISTNAME=		lyx-1.3.6
@@ -27,7 +27,7 @@ USE_TOOLS+=		gmake perl:run
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GCC_REQD+=		2.95
-LATEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
+TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 
 CONFIGURE_ARGS+=	--with-pspell-lib=${BUILDLINK_PREFIX.aspell}/lib \
 			--with-pspell-include=${BUILDLINK_PREFIX.aspell}/include/pspell \

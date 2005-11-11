@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/11/08 19:57:11 tonio Exp $
+# $NetBSD: Makefile,v 1.30 2005/11/11 18:50:24 tonio Exp $
 
 DISTNAME=	pari-2.1.6
 CATEGORIES=	math
@@ -9,8 +9,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://pari.math.u-bordeaux.fr/
 COMMENT=	Software package for computer-aided number theory
 
-LATEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
-LATEX_DEPMETHOD=	build
+TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
+TEX_DEPMETHOD=	build
 
 USE_GNU_READLINE=	yes	# rl_save_prompt()
 USE_LIBTOOL=		yes

@@ -1,9 +1,9 @@
-# $NetBSD: tex.buildlink3.mk,v 1.2 2005/11/10 21:21:13 minskim Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.3 2005/11/11 18:50:24 tonio Exp $
 #
 # A Makefile fragment for tex and latex packages
 #
 # 	* Determine the version of teTeX to be used.
-#     Modify LATEX_DEFAULT to change the default version (default to teTeX2)
+#     Modify TEX_DEFAULT to change the default version (default to teTeX2)
 #
 #	* tex files are installed...
 #	  	teTeX[1-2]
@@ -19,16 +19,16 @@
 #   PKG_TEXMFPREFIX=PKG_LOCALTEXMFPREFIX=${PREFIX}/share/texmf
 #
 #	* Assume each package supports teTeX{2,3} by default.
-#	  To change the supported latex versions, define LATEX_ACCEPTED
+#	  To change the supported latex versions, define TEX_ACCEPTED
 #	  explicitly before including mk/latex.buildlink3.mk.  Note that the order is
 #	  important.
 #
-# * Optionally set LATEX_DEPMETHOD to "build" to only add a build-time
+# * Optionally set TEX_DEPMETHOD to "build" to only add a build-time
 #   dependency on Latex. That may be useful for creating documentation
 #
 # Variables for users:
 #
-# LATEX_DEFAULT
+# TEX_DEFAULT
 #   Description:
 #     The user's favorite latex implementation
 #   Possible values:
@@ -38,7 +38,7 @@
 #
 # Variables tex packages can provide:
 #
-# LATEX_DEPMETHOD
+# TEX_DEPMETHOD
 #  Description:
 #    Set latex as DEPENDS or BUILD_DEPENDS
 #  Possible values:
@@ -46,7 +46,7 @@
 #  Default value:
 #    run
 #
-# LATEX_ACCEPTED
+# TEX_ACCEPTED
 #  Description:
 #    Versions the package accepts (supports).
 #  Possible values:
@@ -70,7 +70,7 @@
 #   	${PREFIX}/share/texmf
 #     ${PREFIX}/share/texmf-local
 #
-# LATEX_TYPE
+# TEX_TYPE
 #   Description:
 #     The type of the used latex package
 #   Possible values:
@@ -81,11 +81,11 @@ TEX_BUILDLINK3_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-LATEX_DEFAULT?=		teTeX2
-LATEX_DEPMETHOD?= run
+TEX_DEFAULT?=		teTeX2
+TEX_DEPMETHOD?= run
 
 # Assume only teTeX {2-3} are supported by default.
-LATEX_ACCEPTED?=	teTeX2 teTeX3
+TEX_ACCEPTED?=	teTeX2 teTeX3
 
 # set up variables for buildlink or depends
 #
@@ -98,38 +98,38 @@ BUILDLINK_PKGSRCDIR.teTeX3=	../../print/teTeX3-bin
 
 # Determine the Latex version to be used.
 #
-.if !defined(_LATEX_TYPE)
-_LATEX_TYPE=	${LATEX_DEFAULT}
+.if !defined(_TEX_TYPE)
+_TEX_TYPE=	${TEX_DEFAULT}
 .endif
 
-.if !empty(LATEX_ACCEPTED:M${_LATEX_TYPE})
-LATEX_TYPE=	${_LATEX_TYPE}
+.if !empty(TEX_ACCEPTED:M${_TEX_TYPE})
+TEX_TYPE=	${_TEX_TYPE}
 .else
-LATEX_TYPE=	none
+TEX_TYPE=	none
 .endif
 
 # Set version specifics.
 #
-.if ${LATEX_TYPE} == "teTeX3"
-_LATEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX3}
-_LATEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX3}
+.if ${TEX_TYPE} == "teTeX3"
+_TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX3}
+_TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX3}
 #PKG_TEXMFPREFIX=	${PREFIX}/share/texmf-dist
 PKG_TEXMFPREFIX=	${PREFIX}/share/texmf
 #PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf-local
 PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf
-.elif ${LATEX_TYPE} == "teTeX2"
-_LATEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX2}
-_LATEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX2}
+.elif ${TEX_TYPE} == "teTeX2"
+_TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX2}
+_TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX2}
 PKG_TEXMFPREFIX=	${PREFIX}/share/texmf
 PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf
-.elif ${LATEX_TYPE} == "teTeX1"
-_LATEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX1}
-_LATEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX1}
+.elif ${TEX_TYPE} == "teTeX1"
+_TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX1}
+_TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX1}
 PKG_TEXMFPREFIX=	${PREFIX}/share/texmf
 PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf
 .endif
 
-PLIST_SUBST+=	LATEX_TYPE=${LATEX_TYPE}
+PLIST_SUBST+=	TEX_TYPE=${TEX_TYPE}
 PLIST_SUBST+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:C|^${PREFIX}/||}
 
@@ -141,14 +141,14 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/ 
 
 .endif	# TEX_BUILDLINK3_MK
 
-.if ${LATEX_TYPE} == "none"
+.if ${TEX_TYPE} == "none"
 PKG_FAIL_REASON=	\
-	"${_LATEX_TYPE} is not an acceptable latex version for ${PKGNAME}."
+	"${_TEX_TYPE} is not an acceptable latex version for ${PKGNAME}."
 .else
-.if (${LATEX_DEPMETHOD} == "build")
-BUILD_DEPENDS+=	${_LATEX_DEPENDENCY}:${_LATEX_PKGSRCDIR}
+.if (${TEX_DEPMETHOD} == "build")
+BUILD_DEPENDS+=	${_TEX_DEPENDENCY}:${_TEX_PKGSRCDIR}
 .else
-LATEX_DEPMETHOD:= run
-.  include "${_LATEX_PKGSRCDIR}/buildlink3.mk"
+TEX_DEPMETHOD:= run
+.  include "${_TEX_PKGSRCDIR}/buildlink3.mk"
 .endif
 .endif
