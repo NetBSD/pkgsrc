@@ -1,29 +1,30 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/25 04:20:33 minskim Exp $
-#
+# $NetBSD: Makefile,v 1.2 2005/11/11 07:23:15 wiz Exp $
 
-DISTNAME=		bacula-doc-1.36.3
+DISTNAME=		bacula-docs-1.38.0
+PKGNAME=		${DISTNAME:S/docs/doc/}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		geert.hendrickx@ua.ac.be
 HOMEPAGE=		http://www.bacula.org/
 COMMENT=		Documentation for Bacula - The Network Backup Solution
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
-HTMLDIR=	share/doc/bacula
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-
-post-extract:
-	${RM} -rf ${WRKSRC}/CVS ${WRKSRC}/publishdoc ${WRKSRC}/*.bak
+DOCDIR=			share/doc/bacula
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
-	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${WRKSRC} && ${PAX} -rw -pe [A-Za-z]* ${PREFIX}/${HTMLDIR}
-	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
+	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}/manual
+	${INSTALL_DATA} ${WRKSRC}/manual/index.html ${PREFIX}/${DOCDIR}/manual/
+	${INSTALL_DATA} ${WRKSRC}/manual/bacula.css  ${PREFIX}/${DOCDIR}/manual/
+	${INSTALL_DATA} ${WRKSRC}/manual/*.png  ${PREFIX}/${DOCDIR}/manual/
+	${INSTALL_DATA} ${WRKSRC}/manual/bacula.pdf  ${PREFIX}/${DOCDIR}/manual.pdf
+	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}/developers
+	${INSTALL_DATA} ${WRKSRC}/developers/index.html ${PREFIX}/${DOCDIR}/developers/
+	${INSTALL_DATA} ${WRKSRC}/developers/developers.css  ${PREFIX}/${DOCDIR}/developers/
+	${INSTALL_DATA} ${WRKSRC}/developers/*.png  ${PREFIX}/${DOCDIR}/developers/
+	${INSTALL_DATA} ${WRKSRC}/developers/developers.pdf  ${PREFIX}/${DOCDIR}/developers.pdf
 
 .include "../../mk/bsd.pkg.mk"

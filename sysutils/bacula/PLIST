@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/03 15:50:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/11 07:23:15 wiz Exp $
 libexec/bacula/bacula
 libexec/bacula/bconsole
 libexec/bacula/btraceback.dbx
@@ -10,6 +10,7 @@ libexec/bacula/drop_${BACULA_DB}_database
 libexec/bacula/drop_${BACULA_DB}_tables
 libexec/bacula/drop_bacula_database
 libexec/bacula/drop_bacula_tables
+libexec/bacula/dvd-handler
 libexec/bacula/gconsole
 libexec/bacula/grant_${BACULA_DB}_privileges
 libexec/bacula/grant_bacula_privileges
@@ -22,6 +23,7 @@ libexec/bacula/startmysql
 libexec/bacula/stopmysql
 libexec/bacula/update_${BACULA_DB}_tables
 libexec/bacula/update_bacula_tables
+man/man8/bacula.8
 sbin/bacula-dir
 sbin/bacula-fd
 sbin/bacula-sd
