@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/01 14:56:14 dillo Exp $
-bin/level9
-share/doc/level9/level9.txt
-@dirrm share/doc/level9
+@comment $NetBSD: PLIST,v 1.2 2005/11/11 21:35:16 dillo Exp $
+bin/gtklevel9
+share/doc/gtklevel9/level9.txt
+@dirrm share/doc/gtklevel9

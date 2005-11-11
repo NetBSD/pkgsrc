@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/01 14:56:14 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/11 21:35:16 dillo Exp $
 
 DISTNAME=		Level9_4.0_Source
 PKGNAME=		gtklevel9-4.0
@@ -16,9 +16,9 @@ INSTALLATION_DIRS=	bin
 BUILD_TARGET=		gtklevel9
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/level9
-	${INSTALL_DATA} ${WRKDIR}/level9.txt ${PREFIX}/share/doc/level9
-	${INSTALL_PROGRAM} ${WRKSRC}/level9 ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gtklevel9
+	${INSTALL_DATA} ${WRKDIR}/level9.txt ${PREFIX}/share/doc/gtklevel9
+	${INSTALL_PROGRAM} ${WRKSRC}/gtklevel9 ${PREFIX}/bin
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
