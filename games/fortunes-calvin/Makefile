@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/10/10 19:13:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/11 20:26:57 wiz Exp $
 #
 
 DISTNAME=	fortunes-calvin-0.2
@@ -10,7 +10,7 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.netmeister.org/misc.html
 COMMENT=	Fortunes from the famous Calvin & Hobbes comic strips
 
-BUILD_DEPENDS+=	fortune-strfile-*:../../games/fortune-strfile
+BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 
 STRFILE=	${LOCALBASE}/bin/strfile
 WRKSRC=		${WRKDIR}
