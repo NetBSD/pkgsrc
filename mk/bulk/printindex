@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.19 2005/11/08 13:55:29 rillig Exp $
+# $NetBSD: printindex,v 1.20 2005/11/11 09:18:57 rillig Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -94,6 +94,15 @@ else
 	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
 fi
 
+#
+# Print the table of PKGPATH and PKGNAME.
+#
+# The check for duplicates is necessary to prevents double entries in
+# the table. The use of the :detect_duplicates: delimiter prevents the
+# inner "case" from occuring too often, as the $done_pkgs string grows
+# to about 100k during one run of the program. This saves about
+# 40 seconds on a 1 GHz Athlon.
+#
 done_pkgs=""
 detect_duplicates=no
 for pkgdir in $list :detect_duplicates: $BULK_PREREQ; do
@@ -103,7 +112,7 @@ for pkgdir in $list :detect_duplicates: $BULK_PREREQ; do
 		continue;;
 	esac
 	case $detect_duplicates in yes)
-		case $done_pkgs in *=${pkgdir}=*)
+		case $done_pkgs in *="${pkgdir}"=*)
 			continue;;
 		esac;;
 	esac
