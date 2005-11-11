@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/11 21:31:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/11 21:34:03 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/-/-clientonly-/}
 COMMENT+=		client only
@@ -10,6 +10,8 @@ PATCHDIR=		${.CURDIR}/../../sysutils/bacula/patches
 FILESDIR=		${.CURDIR}/../../sysutils/bacula/files
 
 CONFIGURE_ARGS+=	--enable-client-only
+
+BUILD_DEFS+=		BACULA_GROUP
 
 RCD_SCRIPTS=		bacula-fd
 
