@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.45 2005/11/11 22:53:10 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.46 2005/11/11 23:00:18 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -132,10 +132,8 @@ MASTER_SITE_MOZILLA+=   \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.mozilla.org/pub/ \
 	ftp://sunsite.auc.dk/pub/mozilla/ \
 	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/ \
-	ftp://ftp.sunsite.kth.se/archive/www/ftp.mozilla.org/ \
 	http://public.planetmirror.com.au/pub/mozilla/releases/ \
 	ftp://ftp2.sinica.edu.tw/pub3/www/mozilla/ \
-	ftp://ftp.is.co.za/networking/info-service/www/clients/netscape/mozilla/ \
 	ftp://ftp.rediris.es/mirror/mozilla/ \
 	ftp://ftp.chg.ru/pub/WWW/mozilla/
 
@@ -184,20 +182,17 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.cz.debian.org/debian/ \
 	http://ftp.de.debian.org/debian/ \
 	http://ftp2.de.debian.org/debian/ \
-	http://ftp.dk.debian.org/debian/ \
 	http://ftp.ee.debian.org/debian/ \
 	http://ftp.es.debian.org/debian/ \
 	http://ftp.fi.debian.org/debian/ \
 	http://ftp.fr.debian.org/debian/ \
 	http://ftp2.fr.debian.org/debian/ \
 	http://ftp.uk.debian.org/debian/ \
-	http://ftp.hk.debian.org/debian/ \
 	http://ftp.hr.debian.org/debian/ \
 	http://ftp.hu.debian.org/debian/ \
 	http://ftp.ie.debian.org/debian/ \
 	http://ftp.is.debian.org/debian/ \
 	http://ftp.it.debian.org/debian/ \
-	http://ftp2.it.debian.org/debian/ \
 	http://ftp.jp.debian.org/debian/ \
 	http://ftp.nl.debian.org/debian/ \
 	http://ftp.no.debian.org/debian/ \
@@ -220,7 +215,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://openoffice.behrsolutions.com/ \
 	http://www.ibiblio.org/pub/mirrors/openoffice/ \
 	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
-	ftp://mirror.telentente.com/pub/OpenOffice/ \
 	http://openoffice.mirrors.pair.com/ \
 	http://gd.tuwien.ac.at/office/openoffice/ \
 	http://ftp.belnet.be/pub/mirror/ftp.openoffice.org/ \
@@ -247,12 +241,10 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://ftp.iasi.roedu.net/mirrors/openoffice.org/ \
 	ftp://ftp.arnes.si/packages/OpenOffice.org/ \
 	ftp://ftp.saix.net/pub/OpenOffice.org/ \
-	ftp://ftp.cyberfenix.net/pub/openoffice/ \
 	http://ftp.rediris.es/ftp/mirror/openoffice.org/ \
 	http://ftp.sunet.se/pub/Office/OpenOffice.org/ \
 	ftp://mirror.switch.ch/mirror/OpenOffice/ \
 	ftp://ftp.ksu.edu.tr/pub/OpenOffice/ \
-	ftp://ftp.mirror.ac.uk/sites/ny1.mirror.openoffice.org/ \
 	http://mirror.pacific.net.au/openoffice/ \
 	http://public.planetmirror.com.au/pub/openoffice/ \
 	http://komo.vlsm.org/openoffice/ \
@@ -270,7 +262,6 @@ MASTER_SITE_CYGWIN+= \
 	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
 
 MASTER_SITE_IFARCHIVE+= \
-	http://ifarchive.jmac.org/if-archive/ \
 	http://ifarchive.flavorplex.com/if-archive/ \
 	http://ifarchive.heanet.ie/if-archive/ \
 	http://ifarchive.giga.or.at/if-archive/
