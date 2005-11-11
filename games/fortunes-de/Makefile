@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/21 15:20:38 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/11 20:26:57 wiz Exp $
 #
 
 DISTNAME=	fortunes-de_0.19.orig
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/unstable/games/fortunes-de.html
 COMMENT=	German data files for fortune
 
-BUILD_DEPENDS+=	fortune-strfile-*:../../games/fortune-strfile
+BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 STRFILE=	${LOCALBASE}/bin/strfile
 
 WRKSRC=		${WRKDIR}/fortunes-de-0.19
