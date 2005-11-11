@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/11 21:31:39 wiz Exp $
+libexec/bacula/bacula
+libexec/bacula/bconsole
+libexec/bacula/btraceback.dbx
+libexec/bacula/btraceback.gdb
+libexec/bacula/gconsole
+libexec/bacula/mtx-changer
+libexec/bacula/startmysql
+libexec/bacula/stopmysql
+sbin/bacula-fd
+sbin/bconsole
+sbin/btraceback
+share/examples/bacula/bacula-fd.conf
+share/examples/bacula/bconsole.conf
+share/examples/rc.d/bacula-fd
+@dirrm share/examples/bacula
+@dirrm libexec/bacula
