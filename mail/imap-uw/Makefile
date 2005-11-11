@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2005/11/02 11:14:30 adrianp Exp $
+# $NetBSD: Makefile,v 1.104 2005/11/11 23:22:33 wiz Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -43,14 +43,15 @@ BUILD_TARGET=	osf
 .else
 BUILD_TARGET=	neb
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.imap-uw
-PKG_SUPPORTED_OPTIONS+=	inet6
 # Kerberos is explicitly not enabled on NetBSD 1.x due to interoperability
 # issues with later versions of OpenSSL (e.g. 0.9.7)
 .  if empty(MACHINE_PLATFORM:MNetBSD-1.*)
 PKG_SUPPORTED_OPTIONS+=		kerberos
 .  endif
 .endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.imap-uw
+PKG_SUPPORTED_OPTIONS+=	inet6
 
 .include "../../mk/bsd.options.mk"
 
