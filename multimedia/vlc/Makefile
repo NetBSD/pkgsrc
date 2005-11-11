@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/08/07 11:34:22 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2005/11/11 19:25:46 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -45,6 +45,11 @@ CONFIGURE_ARGS+=	--disable-dvd
 PLIST_SUBST+=		DVDCSS="@comment "
 .endif
 
+# vlc-0.7.2 hasn't been updated for changes to these libraries,
+# so disable the dependency for now. Revisit on updates!
+CONFIGURE_ARGS+=	--enable-cdda=no
+CONFIGURE_ARGS+=	--enable-cddax=no
+
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/admin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins/default
@@ -76,7 +81,7 @@ BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
-.include "../../audio/libcddb/buildlink3.mk"
+#.include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -84,7 +89,7 @@ BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../misc/libcdio/buildlink3.mk"
+#.include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi/buildlink3.mk"
