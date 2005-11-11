@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11893 2005/11/11 18:59:26 joerg Exp $
+$NetBSD: CHANGES,v 1.11894 2005/11/11 19:26:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5171,3 +5171,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/mathomatic to 12.5.1 [minskim 2005-11-11]
 	Updated audio/icecast1 to 1.3.12nb6 [joerg 2005-11-11]
 	Updated audio/mad123 to 0.8.5nb1 [joerg 2005-11-11]
+	Updated multimedia/vlc to 0.7.2nb5 [wiz 2005-11-11]
