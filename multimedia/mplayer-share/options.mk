@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.9 2005/11/05 17:21:01 rillig Exp $
+# $NetBSD: options.mk,v 1.10 2005/11/11 06:47:35 rillig Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGBASE}
+# Note: This expression is the same as ${PKGBASE}, but the latter is
+# not defined yet, so we cannot use it here.
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
 .include "../../mk/bsd.prefs.mk"
 
