@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4159 2005/11/11 23:12:22 wiz Exp $
+$NetBSD: TODO,v 1.4160 2005/11/11 23:41:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1086,7 +1086,6 @@ Suggested package updates
 	o py-metakit-2.4.9.4
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
-	o py-psycopg-1.1.21
 	o py-pyrex-0.9.3.1
 	o py-soappy-0.11.6
 	o py-sqlite-2.0.4 [www/trac needs 1.x]
