@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.96 2005/11/11 13:17:58 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.97 2005/11/11 18:09:13 kristerw Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -327,8 +327,6 @@ bulk-package:
 			done ;\
 		fi; \
 		${BULK_MSG} "Full rebuild in progress..." ; \
-		${BULK_MSG} "Cleaning package ${PKGNAME}" ;\
-		${ECHO_MSG} ${MAKE} clean;\
 		${DO} ${MAKE} clean;\
 		if [ "${PRECLEAN}" = "yes" ]; then \
 			${BULK_MSG} "Removing installed packages which are not needed to build ${PKGNAME}" ; \
@@ -469,9 +467,7 @@ bulk-package:
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
 		yes|YES)	;;					\
-		*)	${BULK_MSG} "Cleaning package ${PKGNAME}"; \
-			${ECHO_MSG} ${MAKE} clean;\
-			${DO} ${MAKE} clean;	\
+		*)	${DO} ${MAKE} clean;;				\
 		esac;							\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
