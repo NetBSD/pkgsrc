@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/10/20 20:26:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/11/11 07:18:41 rillig Exp $
 #
 # Package Makefiles should include this file after setting PKGBASE and
 # PKG_SUPPORTED_OPTIONS.
@@ -23,7 +23,9 @@ CONFIGURE_ARGS+=	--with-db=db
 
 CONFIGURE_ENV+=		SYSCONFTOOL_PERL=${PERL5:Q}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGBASE}
+# Note: This expression is the same as ${PKGBASE}, but the latter is
+# not defined yet, so we cannot use it here.
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 PKG_SUPPORTED_OPTIONS+=	fam
 .include "../../mk/bsd.options.mk"
 
