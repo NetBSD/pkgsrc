@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11891 2005/11/11 16:31:26 minskim Exp $
+$NetBSD: CHANGES,v 1.11892 2005/11/11 17:22:53 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5169,3 +5169,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/bacula-client to 1.38.0 [wiz 2005-11-11]
 	Updated sysutils/bacula-doc to 1.38.0 [wiz 2005-11-11]
 	Updated math/mathomatic to 12.5.1 [minskim 2005-11-11]
+	Updated audio/icecast1 to 1.3.12nb6 [joerg 2005-11-11]
