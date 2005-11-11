@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/11/10 01:30:05 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2005/11/11 07:34:30 rillig Exp $
 
 DISTNAME=	maildrop-2.0.1
 CATEGORIES=     security
@@ -18,7 +18,10 @@ USE_LIBTOOL=		yes
 PKG_SUPPORTED_OPTIONS=	authlib
 PKG_SUGGESTED_OPTIONS=	authlib
 
+# PKGNAME is a parameter to the following file.
+PKGNAME=	${DISTNAME}
 .include "../../mail/courier-maildir/Makefile.common"
+
 .include "../../security/courier-authlib/Makefile.common"
 
 # These are the users that may invoke maildrop with the "-d user"
