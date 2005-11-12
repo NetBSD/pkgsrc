@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11908 2005/11/12 17:56:30 minskim Exp $
+$NetBSD: CHANGES,v 1.11909 2005/11/12 19:54:26 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5186,3 +5186,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/dspam to 3.6.1 [adrianp 2005-11-12]
 	Updated databases/lbdb to 0.31 [tonio 2005-11-12]
 	Updated mail/esmtp to 0.5.1nb1 [minskim 2005-11-12]
+	Updated chat/bitlbee to 0.99 [tonio 2005-11-12]
