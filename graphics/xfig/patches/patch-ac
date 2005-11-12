@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2003/01/07 06:30:36 rh Exp $
+$NetBSD: patch-ac,v 1.5 2005/11/12 16:08:21 itohy Exp $
 
---- f_util.c.orig	Mon Dec  2 17:05:47 2002
-+++ f_util.c
-@@ -111,15 +111,15 @@
+--- f_util.c.orig	Wed Jan  7 04:46:08 2004
++++ f_util.c	Sat Nov 12 14:16:03 2005
+@@ -111,15 +111,15 @@ change_directory(path)
  get_directory(direct)
      char	   *direct;
  {
@@ -19,11 +19,11 @@ $NetBSD: patch-ac,v 1.4 2003/01/07 06:30:36 rh Exp $
 -#if defined(SYSV) || defined(SVR4) || defined(_POSIX_SOURCE)
 +#if defined(SYSV) || defined(SVR4) || defined(_POSIX_SOURCE) || defined(__NetBSD__)
      if (getcwd(direct, PATH_MAX) == NULL) {	/* get current working dir */
- 	put_msg("Can't get current directory");
+ 	file_msg("Can't get current directory");
  	beep();
-@@ -127,7 +127,7 @@
+@@ -127,7 +127,7 @@ get_directory(direct)
      if (getwd(direct) == NULL) {		/* get current working dir */
- 	put_msg("%s", direct);			/* err msg is in directory */
+ 	file_msg("%s", direct);			/* err msg is in direct var */
  	beep();
 -#endif /* defined(SYSV) || defined(SVR4) || defined(_POSIX_SOURCE) */
 +#endif /* defined(SYSV) || defined(SVR4) || defined(_POSIX_SOURCE) || defined(__NetBSD__) */

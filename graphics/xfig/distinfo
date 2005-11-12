@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.12 2005/02/24 08:45:14 agc Exp $
+$NetBSD: distinfo,v 1.13 2005/11/12 16:08:21 itohy Exp $
 
-SHA1 (xfig.3.2.4.full.tar.gz) = 723bf10355a92c079be08cd7be18b75baaccfbdc
-RMD160 (xfig.3.2.4.full.tar.gz) = 3cae7c8d3f2a89ef54fd4a4693e84fa7a9bacf44
-Size (xfig.3.2.4.full.tar.gz) = 5163150 bytes
-SHA1 (xfig-3.2.4-Xaw3d-1.5E.udiff) = 8516f66602b11f55b0aa23049ca4c3af60ca7cca
-RMD160 (xfig-3.2.4-Xaw3d-1.5E.udiff) = 0ddc33554a8f327e8367a45eddc7ec506838001c
-Size (xfig-3.2.4-Xaw3d-1.5E.udiff) = 34728 bytes
+SHA1 (xfig.3.2.5-alpha5.full.tar.gz) = ed99caf4505bc401ac34ecbe3d4c0aa783c4cc62
+RMD160 (xfig.3.2.5-alpha5.full.tar.gz) = 47fd9d74b117518d1870297228e31591f312df2d
+Size (xfig.3.2.5-alpha5.full.tar.gz) = 5836544 bytes
 SHA1 (patch-aa) = 3ff914bd2ca913f7c4e2ea2a648a0776cd5098bf
-SHA1 (patch-ab) = fe6f367f039048f54fa91a6646163880bfa6a235
-SHA1 (patch-ac) = 2c562f7956700d7382cb3576ecf15473bb750779
-SHA1 (patch-ad) = acf393046af68be92031895a06e76d3d86a2a4aa
+SHA1 (patch-ab) = ceedc22d4a9d2cd5939d1129361d68cdfc3bb661
+SHA1 (patch-ac) = 63ac4774439cab4bda5c75a3912103080bc1c6fd
+SHA1 (patch-ad) = 80ae2ce2eea6a747862d1b223ffff56feaa73f1a

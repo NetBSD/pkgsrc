@@ -1,24 +1,48 @@
-$NetBSD: patch-ab,v 1.10 2005/02/18 15:56:18 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
 
---- Imakefile.orig	2005-02-18 16:32:46.000000000 +0100
-+++ Imakefile
-@@ -44,12 +44,13 @@ XCOMM purpose of DESTDIR is to test an i
- XCOMM BINDIR = /usr/bin/X11
- XCOMM MKDIRHIER = /bin/sh /usr/bin/X11/mkdirhier
- XCOMM XAPPLOADDIR = /home/user/xfig
-+      XAPPLOADDIR      = $(LIBDIR)/app-defaults
+--- Imakefile.orig	Tue Apr 27 05:24:41 2004
++++ Imakefile	Sat Nov 12 19:58:54 2005
+@@ -45,6 +45,7 @@
+ XCOMM purpose of DESTDIR is to test an install process by installing in a benign area.
  
- XCOMM Redefine the following if your PNG library and/or include file
+ XCOMM XAPPLOADDIR = /home/user/xfig
++      XAPPLOADDIR = $(LIBDIR)/app-defaults
+ 
+ XCOMM Uncomment the following definition for XAW3D if you want to use
+ XCOMM the 3d Athena Widget Set (highly recommended!)
+@@ -58,21 +59,24 @@
+ 
+ #ifdef XAW3D1_5E
+     DUSEXAW3D = -DXAW3D -DXAW3D1_5E
+-    XAWLIB = -lXaw3d15e
++    XAWLIB = -lXaw3d
+ #else
+-    XAW_SRC = w_menuentry.c SmeCascade.c SmeBSB.c SimpleMenu.c
+-    XAW_OBJ = w_menuentry.o SmeCascade.o SmeBSB.o SimpleMenu.o
+ #   ifdef XAW3D
+-	DUSEXAW3D = -DXAW3D
+-	XAWLIB = -lXaw3d
++      DUSEXAW3D = -DXAW3D
++      XAWLIB = -lXaw3d
++      XAW_SRC = SmeCascade.c
++      XAW_OBJ = SmeCascade.o
++#   else
++      XAW_SRC = w_menuentry.c SmeCascade.c SmeBSB.c SimpleMenu.c
++      XAW_OBJ = w_menuentry.o SmeCascade.o SmeBSB.o SimpleMenu.o
+ #   endif /* XAW3D */
+ #endif /* XAW3D1_5E */
+ 
+ XCOMM Redefine the following if your PNG library, zlib library and/or include file
  XCOMM are in different places
  
 -PNGLIBDIR = $(USRLIBDIR)
 -PNGINC = -I/usr/local/include
 +PNGLIBDIR = $(LOCALBASE)/lib
 +PNGINC = -I$(LOCALBASE)/include
+ ZLIBDIR = $(USRLIBDIR)
  
  XCOMM If don't want JPEG support, comment out the #define USEJPEG line
- XCOMM Uncomment the #define for USEJPEG if you want to be able to import
-@@ -68,8 +69,8 @@ XCOMM You must have version 5b or newer 
+@@ -92,8 +96,8 @@
  
  #ifdef USEJPEG
  #ifdef USEINSTALLEDJPEG
@@ -29,14 +53,8 @@ $NetBSD: patch-ab,v 1.10 2005/02/18 15:56:18 wiz Exp $
  #else
  JPEGLIBDIR = ../jpeg
  JPEGINC = -I$(JPEGLIBDIR)
-@@ -87,12 +88,12 @@ XCOMM   in /contrib/libraries.
- XCOMM Change XPMLIBDIR if necessary to point to the xpm library (libXpm)
- XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
- 
--XCOMM #define USEXPM
--XCOMM #define USEXPM_ICON
-+#define USEXPM
-+#define USEXPM_ICON
+@@ -115,8 +119,8 @@
+ #define USEXPM_ICON
  
  #ifdef USEXPM
 -XPMLIBDIR = $(USRLIBDIR)
@@ -46,16 +64,7 @@ $NetBSD: patch-ab,v 1.10 2005/02/18 15:56:18 wiz Exp $
  #endif
  
  XCOMM Uncomment the following definiton if you want to use the small icons
-@@ -108,7 +109,7 @@ XCOMM 3D Athena widget headers are locat
- XCOMM #define XAW3D
- 
- #ifdef XAW3D
--XAW3DINC = -I/usr/include/X11/Xaw3d
-+XAW3DINC = -I$(LOCALBASE)/include/X11/Xaw3d
- DUSEXAW3D = -DXAW3D
- XAWLIB = -lXaw3d
- #else
-@@ -157,7 +158,7 @@ XCOMM uncomment the following line if yo
+@@ -157,7 +161,7 @@
  XCOMM inline functions. With the "INLINE" keyword, you should notice that
  XCOMM the display will be a bit faster in complex figures
  
@@ -64,7 +73,7 @@ $NetBSD: patch-ab,v 1.10 2005/02/18 15:56:18 wiz Exp $
  
  XCOMM use (and change) the following if you want the multi-key data base file
  XCOMM somewhere other than the standard X11 library directory
-@@ -169,7 +170,7 @@ XFIGLIBDIR = $(LIBDIR)/xfig
+@@ -169,7 +173,7 @@
  
  XCOMM XFIGDOCDIR tells where the html and pdf documentation should go
  XCOMM XFIGDOCDIR = $(DOCDIR)/xfig
@@ -73,7 +82,7 @@ $NetBSD: patch-ab,v 1.10 2005/02/18 15:56:18 wiz Exp $
  
  XCOMM MANDIR tells where the standard man pages should go (no need to change it
  XCOMM if you want the man pages installed in the standard place on your system
-@@ -227,7 +228,7 @@ XCOMM **********************************
+@@ -229,7 +233,7 @@
  #ifdef USEJPEG
  
  #ifdef USEINSTALLEDJPEG
@@ -82,16 +91,16 @@ $NetBSD: patch-ab,v 1.10 2005/02/18 15:56:18 wiz Exp $
  #else
  JPEGCONF = configure
  JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
-@@ -264,7 +265,7 @@ InstallManPageLong(file,dest,file)
+@@ -266,7 +270,7 @@
  DUSESMALLICONS = -DUSE_SMALL_ICONS
  #endif /* USESMALLICONS */
  
--PNGLIBS = -L$(PNGLIBDIR) -lpng -lz
+-PNGLIBS = -L$(PNGLIBDIR) -lpng -L$(ZLIBDIR) -lz
 +PNGLIBS = -Wl,-R$(LOCALBASE)/lib -L$(PNGLIBDIR) -lpng -lz
  
  #ifdef USEJPEG
  DUSEJPEG = -DUSE_JPEG
-@@ -274,7 +275,7 @@ READJPEGO = f_readjpg.o
+@@ -276,7 +280,7 @@
  
  #ifdef USEXPM
  DUSEXPM = -DUSE_XPM
@@ -100,7 +109,7 @@ $NetBSD: patch-ab,v 1.10 2005/02/18 15:56:18 wiz Exp $
  READXPMS = f_readxpm.c
  READXPMO = f_readxpm.o
  #ifdef USEXPM_ICON
-@@ -410,6 +411,8 @@ install.html::
+@@ -411,6 +415,8 @@
  install.rhtml::
  	@(cd Doc ; \
  	echo Copying pdf and html files to $(DESTDIR)$(XFIGDOCDIR) ; \
