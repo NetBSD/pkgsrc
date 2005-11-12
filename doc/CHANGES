@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11901 2005/11/12 07:41:42 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11902 2005/11/12 12:37:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5179,3 +5179,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added mail/esmtp version 0.5.1 [minskim 2005-11-12]
 	Updated sysutils/grub to 0.97nb3 [jlam 2005-11-12]
 	Updated mail/sylpheed-devel to 2.1.6 [xtraeme 2005-11-12]
+	Added textproc/libxml++2 version 2.10.0 [wiz 2005-11-12]
