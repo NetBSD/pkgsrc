@@ -1,0 +1,4 @@
+libxml++ is a C++ wrapper for the libxml XML parser library. It has SAX and
+DOM-like APIs, but does not attempt to conform exactly to the DOM
+specifications because they are not aimed at C++. Its API is much simpler
+than the underlying libxml C API.
