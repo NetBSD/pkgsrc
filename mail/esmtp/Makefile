@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/12 04:13:12 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/12 17:55:59 minskim Exp $
 #
 
 DISTNAME=	esmtp-0.5.1
 CATEGORIES=	mail
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=esmtp/}
 EXTRACT_SUFX=	.tar.bz2
 
@@ -28,7 +29,7 @@ PKG_SYSCONFSUBDIR=	esmtp
 
 EGDIR=			${PREFIX}/share/examples/esmtp
 CONF_FILES=		${EGDIR}/sample.esmtprc \
-			${PKG_SYSCONFDIR}/sample.esmtprc
+			${PKG_SYSCONFDIR}/esmtprc
 
 .include "../../mail/libesmtp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
