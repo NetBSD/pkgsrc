@@ -1,4 +1,4 @@
-# $NetBSD: post-build-conf,v 1.6 2005/11/10 08:28:49 rillig Exp $
+# $NetBSD: post-build-conf,v 1.7 2005/11/12 11:10:08 seb Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
@@ -47,12 +47,15 @@ show_config_vars() {
 
 # usage: export_config_vars
 export_config_vars() {
-	export osrev arch BULK_BUILD_CONF USR_PKGSRC MAKECONF
+	export osrev arch BULK_BUILD_CONF USR_PKGSRC
 	export CVS_USER CVS_FLAGS
 	export PRUNEDISTFILES ftp_proxy http_proxy
 	export PKGLIST NICE_LEVEL ADMIN ADMINSIG
 	export UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS
 	export RSYNC_DST RSYNC_OPTS FTPHOST FTP
+	case ${MAKECONF+set} in
+	"set")	export MAKECONF;;
+	esac
 }
 
 # usage: pbc_die error-message
