@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/12 04:13:12 minskim Exp $
+
+--- Makefile.in.orig	2005-03-10 18:00:26.000000000 +0000
++++ Makefile.in
+@@ -630,11 +630,9 @@ info-am:
+ 
+ install-data-am: install-man
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ 
+ install-exec-am: install-binPROGRAMS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
+ 
+ install-info: install-info-am
+ 
