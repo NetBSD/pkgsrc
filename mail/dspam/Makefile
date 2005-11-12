@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2005/10/20 08:33:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.40 2005/11/12 16:53:19 adrianp Exp $
 
-DISTNAME=	dspam-3.6.0
+DISTNAME=	dspam-3.6.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -40,6 +40,7 @@ BUILD_DEFS+=		DSPAM_LOGDIR
 BUILD_DEFS+=		DSPAM_DOMAIN
 BUILD_DEFS+=		DSPAM_WWWHOME
 BUILD_DEFS+=		DSPAM_PIDDIR
+BUILD_DEFS+=		DSPAM_WWWUSER DSPAM_WWWGROUP
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,6 +54,8 @@ DSPAM_LOGDIR?=		${DSPAM_HOME}/log
 DSPAM_DOMAIN?=		yourdomain.com
 DSPAM_WWWHOME?=		/dspam
 DSPAM_PIDDIR?=		${VARBASE}/run/dspam
+DSPAM_WWWUSER?=		${APACHE_USER}
+DSPAM_WWWGROUP?=	${APACHE_GROUP}
 
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
 CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
@@ -77,20 +80,20 @@ RCD_SCRIPTS=		dspam
 PKG_SYSCONFSUBDIR=	dspam
 
 CONF_FILES_PERMS=	${EGDIR}/dspam.conf ${PKG_SYSCONFDIR}/dspam.conf \
-			${DSPAM_USER} ${DSPAM_GROUP} 0640
+			${DSPAM_USER} ${DSPAM_WWWGROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/cgi-admins ${PKG_SYSCONFDIR}/cgi-admins \
-			${APACHE_USER} ${APACHE_GROUP} 0640
+			${DSPAM_WWWUSER} ${DSPAM_WWWGROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/cgi-default.prefs \
 			${PKG_SYSCONFDIR}/cgi-default.prefs \
-			${APACHE_USER} ${APACHE_GROUP} 0640
+			${DSPAM_WWWUSER} ${DSPAM_WWWGROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/configure.pl ${PKG_SYSCONFDIR}/configure.pl \
-			${APACHE_USER} ${APACHE_GROUP} 0640
+			${DSPAM_WWWUSER} ${DSPAM_WWWGROUP} 0640
 
 PKG_GROUPS=		${DSPAM_GROUP}
 PKG_USERS=		${DSPAM_USER}:${DSPAM_GROUP}
 SPECIAL_PERMS=		${PREFIX}/bin/dspam ${DSPAM_USER} ${DSPAM_GROUP} \
 			${DSPAM_BINMODE}
-OWN_DIRS_PERMS=		${DSPAM_HOME} ${DSPAM_USER} ${APACHE_GROUP} 0775
+OWN_DIRS_PERMS=		${DSPAM_HOME} ${DSPAM_USER} ${DSPAM_WWWGROUP} 0775
 OWN_DIRS_PERMS+=	${DSPAM_LOGDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0775
 OWN_DIRS_PERMS+=	${DSPAM_PIDDIR} ${DSPAM_USER} ${DSPAM_GROUP} 0770
 
@@ -122,7 +125,6 @@ post-install:
 		${EGDIR}/cgi-default.prefs
 	${INSTALL_DATA} ${WRKSRC}/webui/cgi-bin/configure.pl \
 		${EGDIR}/configure.pl
-	@${RM} ${WRKSRC}/webui/cgi-bin/dspam.cgi.orig
 
 .for d in txt webui/cgi-bin webui/htdocs
 	${INSTALL_DATA_DIR} ${DATADIR}/${d}
