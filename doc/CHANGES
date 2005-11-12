@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11903 2005/11/12 14:19:19 adrianp Exp $
+$NetBSD: CHANGES,v 1.11904 2005/11/12 16:09:59 itohy Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5181,3 +5181,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sylpheed-devel to 2.1.6 [xtraeme 2005-11-12]
 	Added textproc/libxml++2 version 2.10.0 [wiz 2005-11-12]
 	Updated security/sudo to sudo-1.6.8pl9nb2 [adrianp 2005-11-12]
+	Updated graphics/xfig to 3.2.5alpha5 [itohy 2005-11-12]
