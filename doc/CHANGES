@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11899 2005/11/12 04:15:12 minskim Exp $
+$NetBSD: CHANGES,v 1.11900 2005/11/12 06:35:27 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5177,3 +5177,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/py-psycopg to 1.1.21 [joerg 2005-11-11]
 	Updated multimedia/vlc to 0.7.2nb6 [wiz 2005-11-11]
 	Added mail/esmtp version 0.5.1 [minskim 2005-11-12]
+	Updated sysutils/grub to 0.97nb3 [jlam 2005-11-12]
