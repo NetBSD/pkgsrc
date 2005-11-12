@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2005/10/29 12:36:50 recht Exp $
+# $NetBSD: options.mk,v 1.13 2005/11/12 16:53:19 adrianp Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -53,6 +53,7 @@ PKG_OPTIONS:=		${PKG_OPTIONS:Nldap}
 .endif
 .if !empty(DSPAM_STORAGE_DRIVER:Mhash)
 CONFIGURE_ARGS+=	--with-storage-driver=hash_drv
+HASH_PLIST_SUBST+=	HASH=
 .elif !empty(DSPAM_STORAGE_DRIVER:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-mysql4-initialization
@@ -92,10 +93,12 @@ CONFIGURE_ARGS+=	--enable-daemon
 MYSQL_PLIST_SUBST?=	MYSQL="@comment "
 PGSQL_PLIST_SUBST?=	PGSQL="@comment "
 SQLITE_PLIST_SUBST?=	SQLITE="@comment "
+HASH_PLIST_SUBST?=	HASH="@comment "
 
 PLIST_SUBST+=		${MYSQL_PLIST_SUBST}
 PLIST_SUBST+=		${PGSQL_PLIST_SUBST}
 PLIST_SUBST+=		${SQLITE_PLIST_SUBST}
+PLIST_SUBST+=		${HASH_PLIST_SUBST}
 
 ###
 ### The following are only available for mysql and pgsql backends.
