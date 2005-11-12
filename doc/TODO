@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4161 2005/11/12 16:48:01 chris Exp $
+$NetBSD: TODO,v 1.4162 2005/11/12 17:45:26 tonio Exp $
 
 Suggested new packages
 ======================
@@ -696,7 +696,6 @@ Suggested package updates
 	o kth-krb4-1.2.2
 	o latd-1.21
 	o lavaps-2.7
-	o lbdb-0.31
 	o lcab-1.0b11
 	o lcc-4.2
 	o lftp-3.3.3
