@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2005/04/11 21:46:10 tv Exp $
+# $NetBSD: Makefile,v 1.43 2005/11/12 16:08:21 itohy Exp $
 
-DISTNAME=	xfig.3.2.4.full
-PKGNAME=	xfig-3.2.4
-PKGREVISION=	3
+DISTNAME=	xfig.3.2.5-alpha5.full
+PKGNAME=	xfig-3.2.5alpha5
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://www.xfig.org/xfigdist/
-
-PATCH_SITES=	ftp://ftp.visi.com/users/hawkeyd/X/
-PATCHFILES=	xfig-3.2.4-Xaw3d-1.5E.udiff
+MASTER_SITES=	ftp://epb.lbl.gov/xfig/alpha/
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.xfig.org/
@@ -18,7 +14,7 @@ DEPENDS+=	transfig>=3.2.4:../../print/transfig
 # version means we need a patch, which is currently used unconditionally
 BUILDLINK_DEPENDS.Xaw3d+=	Xaw3d>=1.5E
 
-WRKSRC=			${WRKDIR}/xfig.3.2.4
+WRKSRC=			${WRKDIR}/xfig.3.2.5-alpha5
 USE_IMAKE=		YES
 XAW_TYPE?=		3d
 
@@ -28,11 +24,23 @@ CFLAGS+=		-I${X11PREFIX}/include/X11
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(XAW_TYPE) && (${XAW_TYPE} != "3d" && ${XAW_TYPE} != "xpm")
 pre-configure:
+.if defined(XAW_TYPE) && ${XAW_TYPE} == "3d"
+	# define XAW3D and XAW3D1_5E
 	cd ${WRKSRC} &&	\
 	  if [ ! -f Imakefile.bak ]; then ${MV} Imakefile Imakefile.bak; fi && \
-	  ${SED} 's/#define.XAW3D/XCOMM &/' Imakefile.bak > Imakefile
+	  ${SED} -e 's/.*\(#define.XAW3D\)/\1/' Imakefile.bak > Imakefile
+.elif defined(XAW_TYPE) && ${XAW_TYPE} == "xpm"
+	#  define XAW3D, undef XAW3D1_5E
+	cd ${WRKSRC} &&	\
+	  if [ ! -f Imakefile.bak ]; then ${MV} Imakefile Imakefile.bak; fi && \
+	  ${SED} -e 's/.*\(#define.XAW3D1_5E\)/XCOMM \1/' -e t \
+	  	 -e 's/.*\(#define.XAW3D\)/\1/' Imakefile.bak > Imakefile
+.else
+	# undef XAW3D and XAW3D1_5E
+	cd ${WRKSRC} &&	\
+	  if [ ! -f Imakefile.bak ]; then ${MV} Imakefile Imakefile.bak; fi && \
+	  ${SED} 's/.*\(#define.XAW3D\)/XCOMM \1/' Imakefile.bak > Imakefile
 .endif
 
 XFIGDOCDIR=		${PREFIX}/share/doc/xfig
