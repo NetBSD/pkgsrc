@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4162 2005/11/12 17:45:26 tonio Exp $
+$NetBSD: TODO,v 1.4163 2005/11/12 19:05:20 tonio Exp $
 
 Suggested new packages
 ======================
@@ -615,7 +615,6 @@ Suggested package updates
 	o hashcash-1.18
 	o haskell-mode-1.45
 	o hatari-0.80
-	o heimdal-0.7.1
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
 	o horde-3.0.6
