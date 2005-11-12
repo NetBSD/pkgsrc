@@ -1,22 +1,22 @@
-$NetBSD: patch-ad,v 1.3 2003/01/15 07:11:44 rh Exp $
+$NetBSD: patch-ad,v 1.4 2005/11/12 16:08:21 itohy Exp $
 
---- SimpleMenu.c.orig	Sat Sep 21 05:28:45 2002
-+++ SimpleMenu.c
-@@ -39,10 +39,17 @@
- #include <X11/IntrinsicP.h>
- #include <X11/StringDefs.h>
- 
-+#ifdef XAW3D
- #include <X11/Xaw3d/XawInit.h>
- #include <X11/Xaw3d/SimpleMenP.h>
- #include <X11/Xaw3d/SmeBSB.h>
- #include <X11/Xaw3d/Cardinals.h>
-+#else
-+#include <X11/Xaw/XawInit.h>
-+#include <X11/Xaw/SimpleMenP.h>
-+#include <X11/Xaw/SmeBSB.h>
-+#include <X11/Xaw/Cardinals.h>
-+#endif
- 
- #include <X11/Xmu/Initer.h>
- #include <X11/Xmu/CharSet.h>
+--- w_cmdpanel.c.orig	Wed Mar 17 09:53:55 2004
++++ w_cmdpanel.c	Sat Nov 12 19:55:19 2005
+@@ -349,7 +349,7 @@ rebuild_file_menu(menu)
+ 	    sprintf(id, "%1d", j + 1);
+ 	    FirstArg(XtNvertSpace, 10);
+ 	    NextArg(XtNunderline, 0); /* underline # digit */
+-#ifndef XAW3D1_5E
++#ifndef XAW3D
+ 	    entry = XtCreateWidget(id, figSmeBSBObjectClass, menu, Args, ArgCount);
+ #else
+ 	    entry = XtCreateWidget(id, smeBSBObjectClass, menu, Args, ArgCount);
+@@ -407,7 +407,7 @@ create_menu_item(menup)
+ 		    NextArg(XtNleftMargin, 12);
+ 		}
+ 		NextArg(XtNunderline, menup->menu[i].u_line); /* any underline */
+-#ifndef XAW3D1_5E
++#ifndef XAW3D
+ 		entry = XtCreateManagedWidget(menup->menu[i].name, figSmeBSBObjectClass, 
+ 					menu, Args, ArgCount);
+ #else
