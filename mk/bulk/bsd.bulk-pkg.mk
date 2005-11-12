@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.97 2005/11/11 18:09:13 kristerw Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.98 2005/11/12 16:44:20 kristerw Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -441,7 +441,7 @@ bulk-package:
 							{ ${BULK_MSG} "$$pkgname ($$pkgdir) may not be packaged because:"; \
 							  ${BULK_MSG} "$$pkgignore"; \
 							  ${BULK_MSG} "$$pkgskip"; \
-							} >> "${pkg_brokenfile}"; \
+							} >> "$${pkg_brokenfile}"; \
 							if [ "${USE_BULK_BROKEN_CHECK}" != 'yes' ] || [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=BROKEN)`" ]; then \
 								pkgerr="0"; \
 							else \
