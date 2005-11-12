@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dspam.sh,v 1.4 2005/10/20 08:33:13 adrianp Exp $
+# $NetBSD: dspam.sh,v 1.5 2005/11/12 16:53:19 adrianp Exp $
 #
 
 # PROVIDE: dspam
@@ -16,8 +16,6 @@ rcvar="${name}"
 command="@PREFIX@/bin/${name}"
 pidfile="@DSPAM_PIDDIR@/${name}.pid"
 command_args="--daemon > /dev/null 2>&1 &"
-dspam_user="@DSPAM_USER@"
-dspam_group="@DSPAM_GROUP@"
 start_precmd="dspam_precmd"
 
 dspam_precmd()
