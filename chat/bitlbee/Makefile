@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2005/10/20 18:32:11 tonio Exp $
+# $NetBSD: Makefile,v 1.26 2005/11/12 19:51:24 tonio Exp $
 #
 
-DISTNAME=		bitlbee-0.92
+DISTNAME=		bitlbee-0.99
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.bitlbee.org/
 COMMENT=		IRC to other chat networks gateway
 
@@ -42,7 +42,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/bitlbee.conf ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/bitlbee ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/doc/help.txt ${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/user-guide/help.txt ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/motd.txt ${DATADIR}
 	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.8 ${PREFIX}/man/man8
 .for f in AUTHORS FAQ README TODO
@@ -56,6 +56,8 @@ PKG_SUPPORTED_OPTIONS=	inet6
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--ipv6=1
+.else
+CONFIGURE_ARGS+=	--ipv6=0
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
