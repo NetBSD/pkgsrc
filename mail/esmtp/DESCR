@@ -1,0 +1,14 @@
+esmtp is a user-configurable relay-only Mail Transfer Agent (MTA) with
+a sendmail-compatible syntax.  It is based on libESMTP supporting the
+AUTH (including the CRAM-MD5 and NTLM SASL mechanisms) and the
+StartTLS SMTP extensions.
+
+Features include:
+  * fully sendmail command-line compatible,
+  * supports the AUTH SMTP extension, with the CRAM-MD5 and NTLM SASL
+    mechanisms,
+  * supports the StartTLS SMTP extension,
+  * requires no administration privileges,
+  * individual user configuration,
+  * does not receive mail, expand aliases or manage a queue,
+  * local mail delivery via a MDA.

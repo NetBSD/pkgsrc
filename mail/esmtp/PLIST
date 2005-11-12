@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/12 04:13:12 minskim Exp $
+bin/esmtp
+man/man1/esmtp.1
+man/man5/esmtprc.5
+share/doc/esmtp/README
+share/examples/esmtp/sample.esmtprc
+@dirrm share/examples/esmtp
+@dirrm share/doc/esmtp
