@@ -1,4 +1,10 @@
-# $NetBSD: Makefile,v 1.83 2005/10/18 15:59:20 fredb Exp $
+# $NetBSD: Makefile,v 1.84 2005/11/12 13:59:28 adrianp Exp $
+
+#
+# NOTE: Please do not enable the lynxcgi feature unless it is lynx
+# version 2.8.6dev.15 or later.  There is a known security issue
+# with this feature in earlier versions.
+#
 
 DISTNAME=	lynx2.8.5
 PKGNAME=	lynx-2.8.5.3
