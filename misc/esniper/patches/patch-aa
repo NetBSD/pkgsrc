@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/13 17:51:40 heinz Exp $
+
+--- auction.c.orig	Wed Oct 19 13:37:59 2005
++++ auction.c
+@@ -1189,7 +1189,7 @@ ebayLogin(auctionInfo *aip)
+ 	char *url, *logUrl;
+ 	pageInfo_t *pp;
+ 	int ret = 0;
+-	char *password;
++	char *password, *escapedPassword;
+ 
+ 	if (!(mp = httpGet(LOGIN_1_URL, NULL)))
+ 		return httpError(aip);
+@@ -1198,11 +1198,18 @@ ebayLogin(auctionInfo *aip)
+ 
+ 	urlLen = sizeof(LOGIN_2_URL) + strlen(options.username);
+ 	password = getPassword();
+-	url = malloc(urlLen + strlen(password));
++	if ((escapedPassword = curl_escape(password, strlen(password))) == NULL) {
++		log(("ebayLogin(): Could not URL-encode the password"));
++		freePassword(password);
++		return 1;
++	}
++	freePassword(password);
++
++	url = malloc(urlLen + strlen(escapedPassword));
+ 	logUrl = malloc(urlLen + 5);
+ 
+-	sprintf(url, LOGIN_2_URL, options.username, password);
+-	freePassword(password);
++	sprintf(url, LOGIN_2_URL, options.username, escapedPassword);
++	curl_free(escapedPassword);
+ 	sprintf(logUrl, LOGIN_2_URL, options.username, "*****");
+ 
+ 	mp = httpGet(url, logUrl);
