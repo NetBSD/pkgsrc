@@ -255,14 +255,16 @@ II. The pkgsrc developer's guide
             15.5.5. Packages with hardcoded paths to other interpreters
             15.5.6. Packages installing perl modules
             15.5.7. Packages installing info files
-            15.5.8. Packages installing GConf2 data files
-            15.5.9. Packages installing scrollkeeper data files
-            15.5.10. Packages installing X11 fonts
-            15.5.11. Packages installing GTK2 modules
-            15.5.12. Packages installing SGML or XML data
-            15.5.13. Packages installing extensions to the MIME database
-            15.5.14. Packages using intltool
-            15.5.15. Packages installing startup scripts
+            15.5.8. Packages installing man pages
+            15.5.9. Packages installing GConf2 data files
+            15.5.10. Packages installing scrollkeeper data files
+            15.5.11. Packages installing X11 fonts
+            15.5.12. Packages installing GTK2 modules
+            15.5.13. Packages installing SGML or XML data
+            15.5.14. Packages installing extensions to the MIME database
+            15.5.15. Packages using intltool
+            15.5.16. Packages installing startup scripts
+            15.5.17. Packages installing TeX modules
 
         15.6. Feedback to the author
 
@@ -816,18 +818,19 @@ Though Interix suffices as a familiar and flexible substitute for a full
 Unix-like platform, it has some drawbacks that should be noted for those
 desiring to make the most of Interix.
 
-  * X-Windows:
+  * X11:
 
     Interix comes with the standard set of X11R6 client libraries, and can run
-    X-Windows based applications, but it does not come with an X server. Some
-    options are StarNet X-Win32, Hummingbird Exceed, and the free X-Windows
+    X11 based applications, but it does not come with an X server. Some options
+    are StarNet X-Win32, Hummingbird Exceed (available in a trimmed version for
+    Interix from Interop Systems as the Interop X Server), and the free X11
     server included with Cygwin.
 
     Also, StarNet Communications has graciously provided a free version of
     their X-Win32 product that accepts connections only from localhost: X-Win32
     LX, recommended by the maintainer of Interix pkgsrc support.
 
-  * X-Windows acceleration:
+  * X11 acceleration:
 
     Because Interix runs in a completely different NT subsystem from Win32
     applications, it does not currently support various X11 protocol extensions
@@ -2163,7 +2166,7 @@ Table of Contents
     11.2. Writing buildlink3.mk files
 
         11.2.1. Anatomy of a buildlink3.mk file
-        11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
+        11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
 
     11.3. Writing builtin.mk files
 
@@ -2260,14 +2263,16 @@ Table of Contents
         15.5.5. Packages with hardcoded paths to other interpreters
         15.5.6. Packages installing perl modules
         15.5.7. Packages installing info files
-        15.5.8. Packages installing GConf2 data files
-        15.5.9. Packages installing scrollkeeper data files
-        15.5.10. Packages installing X11 fonts
-        15.5.11. Packages installing GTK2 modules
-        15.5.12. Packages installing SGML or XML data
-        15.5.13. Packages installing extensions to the MIME database
-        15.5.14. Packages using intltool
-        15.5.15. Packages installing startup scripts
+        15.5.8. Packages installing man pages
+        15.5.9. Packages installing GConf2 data files
+        15.5.10. Packages installing scrollkeeper data files
+        15.5.11. Packages installing X11 fonts
+        15.5.12. Packages installing GTK2 modules
+        15.5.13. Packages installing SGML or XML data
+        15.5.14. Packages installing extensions to the MIME database
+        15.5.15. Packages using intltool
+        15.5.16. Packages installing startup scripts
+        15.5.17. Packages installing TeX modules
 
     15.6. Feedback to the author
 
@@ -3165,8 +3170,8 @@ dependency on pkg is added. Several important variables are set in the section:
     is selected by setting BUILDLINK_DEPMETHOD.pkg to "build". By default, the
     full dependency is used.
 
-  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS. pkg (not shown above) are
-    lists of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
+  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS.pkg (not shown above) are lists
+    of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
     library search paths. These default to "include" and "lib" respectively.
 
   * BUILDLINK_CPPFLAGS.pkg (not shown above) is the list of preprocessor flags
@@ -3205,7 +3210,7 @@ dependencies. Including these buildlink3.mk files means that the headers and
 libraries for these dependencies are also symlinked into ${BUILDLINK_DIR}
 whenever the pkg buildlink3.mk file is included.
 
-11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
+11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
 
 There are two situations that require increasing the dependency listed in
 BUILDLINK_DEPENDS.pkg after a package update:
@@ -3224,9 +3229,9 @@ settle for an older one which will not contain the necessary shared libraries.
 
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
-versions of packages work just fine with older dependencies. See Section
-15.1.4, "Handling dependencies" for more information about dependencies on
-other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
+versions of packages work just fine with older dependencies. See
+Section 15.1.4, "Handling dependencies" for more information about dependencies
+on other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
 definitions.
 
 11.3. Writing builtin.mk files
@@ -3540,9 +3545,9 @@ original copies available.
 Once the required configuration files are in place (i.e., under the examples
 hierarchy), the pkginstall framework can use them as master copies during the
 package installation to update what is in ${PKG_SYSCONFDIR}. To achieve this,
-the variables CONF_FILES and CONF_FILES_PERMS are used. Check out Section
-12.1.2, "File manipulation" for information about their syntax and their
-purpose. Here is an example, taken from the mail/mutt package:
+the variables CONF_FILES and CONF_FILES_PERMS are used. Check out
+Section 12.1.2, "File manipulation" for information about their syntax and
+their purpose. Here is an example, taken from the mail/mutt package:
 
     EGDIR=        ${PREFIX}/share/doc/mutt/samples
     CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
@@ -3717,7 +3722,7 @@ The first section contains the information about which build options are
 supported by the package, and any default options settings if needed.
 
  1. PKG_OPTIONS_VAR is the name of the make(1) variable that the user can set
-    to override the default options. It should be set to "PKG_OPTIONS.pkgbase".
+    to override the default options. It should be set to PKG_OPTIONS.pkgbase.
 
  2. PKG_SUPPORTED_OPTIONS is a list of build options supported by the package.
 
@@ -3739,14 +3744,14 @@ supported by the package, and any default options settings if needed.
  6. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
     default.
 
- 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE: option" pairs that map
+ 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE:option" pairs that map
     legacy /etc/mk.conf variables to their option counterparts. Pairs should be
     added with "+=" to keep the listing of global legacy variables. A warning
     will be issued if the user uses a legacy variable.
 
- 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option: new-option" pairs that
-    map options that have been renamed to their new counterparts. Pairs should
-    be added with "+=" to keep the listing of global legacy options. A warning
+ 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option:new-option" pairs that map
+    options that have been renamed to their new counterparts. Pairs should be
+    added with "+=" to keep the listing of global legacy options. A warning
     will be issued if the user uses a legacy option.
 
  9. PKG_LEGACY_OPTIONS is a list of options implied by deprecated variables
@@ -3936,8 +3941,9 @@ PKGPATH (read-only)
 WRKDIR (read-only)
 
     This is an absolute pathname pointing to the directory where all work takes
-    place. This directory typically contains temporary directories used by the
-    various pkgsrc frameworks, like buildlink or the wrappers.
+    place. The distfiles are extraced to this directory. It also contains
+    temporary directories and log files used by the various pkgsrc frameworks,
+    like buildlink or the wrappers.
 
 WRKSRC (read-write)
 
@@ -4364,14 +4370,16 @@ Table of Contents
     15.5.5. Packages with hardcoded paths to other interpreters
     15.5.6. Packages installing perl modules
     15.5.7. Packages installing info files
-    15.5.8. Packages installing GConf2 data files
-    15.5.9. Packages installing scrollkeeper data files
-    15.5.10. Packages installing X11 fonts
-    15.5.11. Packages installing GTK2 modules
-    15.5.12. Packages installing SGML or XML data
-    15.5.13. Packages installing extensions to the MIME database
-    15.5.14. Packages using intltool
-    15.5.15. Packages installing startup scripts
+    15.5.8. Packages installing man pages
+    15.5.9. Packages installing GConf2 data files
+    15.5.10. Packages installing scrollkeeper data files
+    15.5.11. Packages installing X11 fonts
+    15.5.12. Packages installing GTK2 modules
+    15.5.13. Packages installing SGML or XML data
+    15.5.14. Packages installing extensions to the MIME database
+    15.5.15. Packages using intltool
+    15.5.16. Packages installing startup scripts
+    15.5.17. Packages installing TeX modules
 
 15.6. Feedback to the author
 
@@ -4920,6 +4928,7 @@ If this distinction is not fine enough, you can also use the following defines.
 
     FreeBSD     __FreeBSD__
     DragonFly   __DragonFly__
+    Interix     __INTERIX
     Linux       linux, __linux, __linux__
     NetBSD      __NetBSD__
     OpenBSD     __OpenBSD__
@@ -5116,7 +5125,33 @@ message. The script overriding makeinfo logs a message and according to the
 value of USE_MAKEINFO and TEXINFO_REQD either run the appropriate makeinfo
 command or exit on error.
 
-15.5.8. Packages installing GConf2 data files
+15.5.8. Packages installing man pages
+
+Many packages install manual pages. The man pages are installed under ${PREFIX}
+/${PKGMANDIR} which is /usr/pkg/man by default. PKGMANDIR defaults to "man".
+For example, you can set PKGMANDIR to "share/man" to have man pages install
+under /usr/pkg/share/man/ by default.
+
+Note
+
+The support for a custom PKGMANDIR is not complete.
+
+The PLIST files can just use man/ as the top level directory for the man page
+file entries and the pkgsrc framework will convert as needed.
+
+Packages that are configured with GNU_CONFIGURE set as "yes", by default will
+use the ./configure --mandir switch to set where the man pages should be
+installed. The path is GNU_CONFIGURE_MANDIR which defaults to ${PREFIX}/$
+{PKGMANDIR}.
+
+Packages that use GNU_CONFIGURE but do not use --mandir, can set
+CONFIGURE_HAS_MANDIR to "no". Or if the ./configure script uses a non-standard
+use of --mandir, you can set GNU_CONFIGURE_MANDIR as needed.
+
+See Section 10.5, "Man page compression" for information on installation of
+compressed manual pages.
+
+15.5.9. Packages installing GConf2 data files
 
 If a package installs .schemas or .entries files, used by GConf2, you need to
 take some extra steps to make sure they get registered in the database:
@@ -5143,7 +5178,7 @@ take some extra steps to make sure they get registered in the database:
     .entries files installed by the package, if any. Names must not contain any
     directories in them.
 
-15.5.9. Packages installing scrollkeeper data files
+15.5.10. Packages installing scrollkeeper data files
 
 If a package installs .omf files, used by scrollkeeper, you need to take some
 extra steps to make sure they get registered in the database:
@@ -5159,7 +5194,7 @@ extra steps to make sure they get registered in the database:
  3. Remove the share/omf directory from the PLIST. It will be handled by
     scrollkeeper.
 
-15.5.10. Packages installing X11 fonts
+15.5.11. Packages installing X11 fonts
 
 If a package installs font files, you will need to rebuild the fonts database
 in the directory where they get installed at installation and deinstallation
@@ -5175,7 +5210,7 @@ Note that you should not create new directories for fonts; instead use the
 standard ones to avoid that the user needs to manually configure his X server
 to find them.
 
-15.5.11. Packages installing GTK2 modules
+15.5.12. Packages installing GTK2 modules
 
 If a package installs GTK2 immodules or loaders, you need to take some extra
 steps to get them registered in the GTK2 database properly:
@@ -5198,7 +5233,7 @@ steps to get them registered in the GTK2 database properly:
  5. Check the PLIST and remove any entries under the libdata/gtk-2.0 directory,
     as they will be handled automatically.
 
-15.5.12. Packages installing SGML or XML data
+15.5.13. Packages installing SGML or XML data
 
 If a package installs SGML or XML data files that need to be registered in
 system-wide catalogs (like DTDs, sub-catalogs, etc.), you need to take some
@@ -5224,7 +5259,7 @@ extra steps:
     (specifically, arguments recognized by the 'add' action). Note that you
     will normally not use this variable.
 
-15.5.13. Packages installing extensions to the MIME database
+15.5.14. Packages installing extensions to the MIME database
 
 If a package provides extensions to the MIME database by installing .xml files
 inside ${PREFIX}/share/mime/packages, you need to take some extra steps to
@@ -5245,7 +5280,7 @@ ensure that the database is kept consistent with respect to these new files:
  3. Remove any share/mime/* directories from the PLIST. They will be handled by
     the shared-mime-info package.
 
-15.5.14. Packages using intltool
+15.5.15. Packages using intltool
 
 If a package uses intltool during its build, include the ../../textproc/
 intltool/buildlink3.mk file, which forces it to use the intltool package
@@ -5255,13 +5290,34 @@ This tracks intltool's build-time dependencies and uses the latest available
 version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
-15.5.15. Packages installing startup scripts
+15.5.16. Packages installing startup scripts
 
 If a package contains a rc.d script, it won't be copied into the startup
 directory by default, but you can enable it, by adding the option
 PKG_RCD_SCRIPTS=YES in /etc/mk.conf. This option will copy the scripts into /
 etc/rc.d when a package is installed, and it will automatically remove the
 scripts when the package is deinstalled.
+
+15.5.17. Packages installing TeX modules
+
+If a package installs TeX packages into the texmf tree, the ls-R database of
+the tree needs to be updated.
+
+Note
+
+Except the main TeX packages such as teTeX-texmf, packages should install files
+into PKG_LOCALTEXMFPREFIX, not PKG_TEXMFPREFIX.
+
+ 1. Include ../../print/teTeX/module.mk instead of ../../mk/tex.buildlink3.mk.
+    This takes care of rebuilding the ls-R database at installation and
+    deinstallation time.
+
+ 2. If your package installs files into a texmf tree other than the one at
+    PKG_LOCALTEXMFPREFIX, set TEXMFDIRS to the list of all texmf trees that
+    need database update.
+
+ 3. Make sure that none of ls-R databases are included in PLIST, as they will
+    be removed only by the teTeX-bin package.
 
 15.6. Feedback to the author
 
