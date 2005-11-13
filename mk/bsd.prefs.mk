@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.207 2005/11/10 09:55:21 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.208 2005/11/13 17:40:00 rillig Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -606,10 +606,5 @@ PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 
 USE_TOOLS+=		awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc	\
 			sed:pkgsrc tr:pkgsrc uname:pkgsrc
-
-MANINSTALL?= maninstall catinstall
-# Specify manpage installation types.
-# Possible: maninstall, catinstall, both types or empty
-# Default: maninstall catinstall
 
 .endif	# BSD_PKG_MK
