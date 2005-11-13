@@ -1,23 +1,24 @@
-SpamAssassin is a mail filter to identify spam.
+SpamAssassin is a mail filter to identify spam. It will examine
+each message presented to it, and assign a score indicating the
+likelihood that the mail is spam.
 
-Using its rule base, it uses a wide range of heuristic tests on mail
-headers and body text to identify "spam", also known as unsolicited
-commercial email.
-Once identified, the mail can then be optionally tagged as spam for
-later filtering using the user's own mail user-agent application.
+It applies a wide range of heuristic tests on mail headers and body text
+to identify "spam", also known as unsolicited commercial email. The mail
+can then be optionally tagged as spam for later filtering.
 
-The spam-identification tactics used include header analysis, text
-analysis, a Bayesian-style form of probability-analysis classification,
-blacklists and Razor.
+The spam-identification tactics used include header analysis, text analysis,
+a Bayesian-style form of probability-analysis classification and DNS
+blacklists. It also includes plugins to support reporting spam messages to
+collaborative filtering databases such as Pyzor, DCC, and Vipul's Razor.
 
-The distribution provides a command line tool to perform filtering,
-along with Mail::SpamAssassin, a set of perl modules which implement a
-Mail::Audit plugin, allowing SpamAssassin to be used in a Mail::Audit
-filter.
-In addition, there is "spamd", a persistently running, daemonized
-version of the command line tool "spamassassin". Together with the small
-client "spamc" this allows processing of large volumes of mail without
-the cost of starting the perl interpreter for each one.
+The distribution provides a command line tool to perform filtering, along
+with a set of perl modules which allows SpamAssassin to be used in a
+variety of different spam-blocking scenarios.
+
+In addition, "spamd", a daemonized version of SpamAssassin which runs
+persistently, is available. Using its counterpart, "spamc", a lightweight
+client written in C, an MTA can process large volumes of mail through
+SpamAssassin without having to fork/exec a perl interpreter for each message.
 
 SpamAssassin does not deliver mail to the users mailbox. You need a
 different program (procmail is recommended) for local mail delivery.
