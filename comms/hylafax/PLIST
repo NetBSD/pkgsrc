@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/05/02 20:33:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/11/13 22:50:26 wiz Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -20,6 +20,7 @@ libexec/hylafax/faxrcvd
 libexec/hylafax/mkcover
 libexec/hylafax/notify
 libexec/hylafax/notify-4.1
+libexec/hylafax/notify.awk
 libexec/hylafax/pcl2fax
 libexec/hylafax/pdf2fax.gs
 libexec/hylafax/pollrcvd
@@ -44,7 +45,7 @@ man/cat1/sendfax.0
 man/cat1/sendpage.0
 man/cat1/sgi2fax.0
 man/cat1/textfmt.0
-man/cat5/cid.0
+man/cat5/callid.0
 man/cat5/destctrls.0
 man/cat5/dialrules.0
 man/cat5/doneq.0
@@ -144,6 +145,7 @@ share/hylafax/config_template/class1.0
 share/hylafax/config_template/class2
 share/hylafax/config_template/class2.0
 share/hylafax/config_template/class2.1
+share/hylafax/config_template/conexant-1.0
 share/hylafax/config_template/davicom-2
 share/hylafax/config_template/digi
 share/hylafax/config_template/digi-2

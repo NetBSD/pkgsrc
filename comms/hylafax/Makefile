@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.44 2005/10/30 20:14:07 adrianp Exp $
+# $NetBSD: Makefile,v 1.45 2005/11/13 22:50:26 wiz Exp $
 
-DISTNAME=	hylafax-4.2.1
-PKGREVISION=	1
+VERS=		4.2.2
+DISTNAME=	hylafax-${VERS}
 CATEGORIES=	comms
-MASTER_SITES=	ftp://ftp.hylafax.org/source/ \
-		ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
+MASTER_SITES_BETA=	ftp://ftp.hylafax.org/source/BETA/
+MASTER_SITES_RELEASE=   ftp://ftp.hylafax.org/source/ \
+                ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
+MASTER_SITES=   ${MASTER_SITES_RELEASE}
 
-MAINTAINER=	hallmanns@surfeu.de
+MAINTAINER=	hallmann@ahatec.de
 HOMEPAGE=	http://www.hylafax.org/
 COMMENT=	Telecommunication and fax server system
 
 DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 
-DIST_SUBDIR=	hylafax
-
-CONFLICTS=	mgetty-[0-9]*
+CONFLICTS=	hylafax-devel-[0-9]* mgetty-[0-9]*
 
 USE_PKGINSTALL=		yes
 USE_LANGUAGES=		c c++
@@ -33,6 +33,18 @@ RCD_SCRIPTS=	hylafax
 
 SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
 		${PREFIX}/bin/faxrm ${PREFIX}/bin/faxalter
+
+PKG_OPTIONS_VAR=      PKG_OPTIONS.hylafax
+PKG_SUPPORTED_OPTIONS=        pam
+#pam doesn't work right now, so disabled by default
+#PKG_SUGGESTED_OPTIONS=       pam
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpam)
+.include "../../mk/pam.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-pam
+.endif
 
 post-install:
 	${CHOWN} ${FAXUSER} ${SUID_EXES}
