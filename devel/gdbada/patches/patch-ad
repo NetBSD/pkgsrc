@@ -1,27 +1,28 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/06/03 11:16:43 shannonjr Exp $
+$NetBSD: patch-ad,v 1.2 2005/11/13 14:16:05 shannonjr Exp $
 
---- etc/Makefile.in.orig	2002-01-26 21:35:45.000000000 +0000
-+++ etc/Makefile.in
-@@ -67,20 +67,8 @@ info:
- 	  fi; \
- 	done
+--- gdb/cli/cli-dump.c.orig	2004-10-20 17:12:51.000000000 -0600
++++ gdb/cli/cli-dump.c
+@@ -72,7 +72,6 @@ scan_expression_with_cleanup (char **cmd
+ static void
+ do_fclose_cleanup (void *arg)
+ {
+-  FILE *file = arg;
+   fclose (arg);
+ }
  
--install-info: info
--	$(SHELL) $(srcdir)/../mkinstalldirs $(infodir)
--	if test ! -f standards.info; then cd $(srcdir); fi; \
--	if test -f standards.info; then \
--	  for i in standards.info*; do \
--	    $(INSTALL_DATA) $$i $(infodir)/$$i; \
--	  done; \
--	fi
--	if test ! -f configure.info; then cd $(srcdir); fi; \
--	if test -f configure.info; then \
--	  for i in configure.info*; do \
--	    $(INSTALL_DATA) $$i $(infodir)/$$i; \
--	  done; \
--	fi
-+install-info:
-+	true
+@@ -233,7 +232,6 @@ dump_memory_to_file (char *cmd, char *mo
+   void *buf;
+   char *lo_exp;
+   char *hi_exp;
+-  int len;
  
- dvi:
- 	for f in $(DVIFILES); do \
+   /* Open the file.  */
+   filename = scan_filename_with_cleanup (&cmd, NULL);
+@@ -521,7 +519,6 @@ static void
+ restore_binary_file (char *filename, struct callback_data *data)
+ {
+   FILE *file = fopen_with_cleanup (filename, FOPEN_RB);
+-  int status;
+   char *buf;
+   long len;
+ 
