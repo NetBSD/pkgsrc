@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11911 2005/11/13 03:11:14 minskim Exp $
+$NetBSD: CHANGES,v 1.11912 2005/11/13 04:04:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5189,3 +5189,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/bitlbee to 0.99 [tonio 2005-11-12]
 	Removed www/navigator3 [tv 2005-11-13]
 	Added mail/mpop version 0.8.2nb1 [minskim 2005-11-13]
+	Updated print/tex-IEEEtran to 1.6cnb1 [minskim 2005-11-13]
