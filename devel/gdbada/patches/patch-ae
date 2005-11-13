@@ -1,15 +1,15 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/06/03 11:16:43 shannonjr Exp $
+$NetBSD: patch-ae,v 1.2 2005/11/13 14:16:05 shannonjr Exp $
 
---- opcodes/Makefile.am.orig	2002-08-28 10:38:50.000000000 +0000
-+++ opcodes/Makefile.am
-@@ -312,8 +312,8 @@ install_libopcodes: $(bfdlib_LTLIBRARIES
- 	$(mkinstalldirs) $(DESTDIR)$(bfdincludedir)
- 	@list='$(bfdlib_LTLIBRARIES)'; for p in $$list; do \
- 	  if test -f $$p; then \
--	    echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(bfdlibdir)/$$p"; \
--	    $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(bfdlibdir)/$$p; \
-+	    echo "$(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(bfdlibdir)/$$p"; \
-+	    $(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(bfdlibdir)/$$p; \
- 	  else :; fi; \
- 	done
- 	$(INSTALL_DATA) $(INCDIR)/dis-asm.h $(DESTDIR)$(bfdincludedir)/dis-asm.h
+--- gdb/cli/cli-script.c.orig	2004-10-20 17:12:51.000000000 -0600
++++ gdb/cli/cli-script.c
+@@ -1083,9 +1083,8 @@ define_command (char *comname, int from_
+       CMD_POST_HOOK
+     };
+   struct command_line *cmds;
+-  struct cmd_list_element *c, *newc, *oldc, *hookc = 0;
++  struct cmd_list_element *c, *newc, *hookc = 0;
+   char *tem = comname;
+-  char *tem2; 
+   char tmpbuf[MAX_TMPBUF];
+   int  hook_type      = CMD_NO_HOOK;
+   int  hook_name_size = 0;
