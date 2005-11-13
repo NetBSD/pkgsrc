@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11920 2005/11/13 17:58:16 heinz Exp $
+$NetBSD: CHANGES,v 1.11921 2005/11/13 18:37:49 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5207,3 +5207,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/nload version 0.6.0 [minskim 2005-11-13]
 	Updated devel/gdbada to 6.3 [shannonjr 2005-11-13]
 	Added misc/esniper version 2.14.0 [heinz 2005-11-13]
+	Added sysutils/xenconsole version 0.15b1.1 [martti 2005-11-13]
+	Added mail/squirrelmail-decode version 1.0 [martti 2005-11-13]
