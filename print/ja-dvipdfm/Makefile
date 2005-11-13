@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/13 05:30:11 minskim Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGNAME=	ja-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print converters
 MASTER_SITES=	ftp://ftp.kettering.edu/pub/outgoing/mwicks/dvipdfm/
 
@@ -31,10 +31,7 @@ post-patch:
 	${SED} -e "s/^p letter/p $$PAPER/"  ${WRKSRC}/config.in > ${WRKSRC}/config
 .endif
 
-post-install:
-	${PREFIX}/bin/mktexlsr
-
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
+.include "../../print/teTeX/module.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

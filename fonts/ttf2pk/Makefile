@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2005/11/08 19:49:52 tonio Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/13 05:30:11 minskim Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
 
 PKGNAME=		ttf2pk-1.3.1
+PKGREVISION=		1
 CATEGORIES=		print
 
 MAINTAINER=		bernhard@SDG.de,hubertf@NetBSD.org
@@ -25,6 +26,9 @@ USE_TOOLS+=		autoconf
 
 TEXMF=			${PKG_LOCALTEXMFPREFIX}
 INSTALLATION_DIRS=	bin man/man1
+
+.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../print/teTeX/module.mk"
 
 pre-configure:
 			cd ${T2PSRC}; autoconf
@@ -52,9 +56,5 @@ do-install:
 						${T2PSRC}/data/*.sfd \
 						${TEXMF}/ttf2tfm/base
 			${TOUCH}		${TEXMF}/ttf2tfm/base/ttfonts.map
-			${PREFIX}/bin/mktexlsr
-
-.include "../../graphics/freetype-lib/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

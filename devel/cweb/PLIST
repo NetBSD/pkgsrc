@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/17 13:11:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/11/13 05:30:10 minskim Exp $
 bin/ctangle
 bin/cweave
 man/man1/cweb.1
@@ -24,8 +24,6 @@ share/examples/cweb/wordtest.w
 share/examples/cweb/xlib_types.w
 share/examples/cweb/xview_types.w
 share/texmf/tex/plain/base/cwebmac.tex
-@exec %D/bin/mktexlsr
-@unexec %D/bin/mktexlsr
 @unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 @dirrm share/examples/cweb

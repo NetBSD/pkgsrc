@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/11/09 22:31:20 tonio Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/13 05:30:11 minskim Exp $
 #
 
 DISTNAME=	jadetex-3.13
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jadetex/}
 
@@ -16,6 +16,8 @@ NO_BUILD=	yes
 TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
 
 INSTALLATION_DIRS=	bin
+
+.include "../../print/teTeX/module.mk"
 
 do-install:
 	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-jadetex
@@ -44,7 +46,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jadetex.ini ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/jadetex.ins ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/pdfjadetex.ini ${PREFIX}/share/sgml/jade
-	${PREFIX}/bin/mktexlsr
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
