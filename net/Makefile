@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.588 2005/11/07 11:36:22 martti Exp $
+# $NetBSD: Makefile,v 1.589 2005/11/13 08:33:25 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -218,6 +218,7 @@ SUBDIR+=	netsaint-plugins
 SUBDIR+=	ngrep
 SUBDIR+=	nicotine
 SUBDIR+=	nidentd
+SUBDIR+=	nload
 SUBDIR+=	nmap
 SUBDIR+=	nmapfe
 SUBDIR+=	nocol
