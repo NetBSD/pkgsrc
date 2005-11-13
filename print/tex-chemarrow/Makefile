@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/11/08 21:45:01 tonio Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/13 05:30:11 minskim Exp $
 #
 
 DISTNAME=	chemarrow
 PKGNAME=	tex-${DISTNAME}-0.1
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
 EXTRACT_SUFX=	.zip
@@ -13,6 +14,8 @@ COMMENT=	New arrow heads for chemical reaction schemes
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+.include "../../print/teTeX/module.mk"
 
 post-extract:
 	@(cd ${WRKSRC}/type1 && ${EXTRACT_CMD.zip} arrow.PC.zip)
@@ -30,8 +33,5 @@ do-install:
 		${PKG_LOCALTEXMFPREFIX}/tex/latex/chemarrow
 	cd ${WRKSRC}/type1/arrow\ PC && ${PAX} -rw . 		\
 		${PREFIX}/share/fonts/chemarrow/
-	${LOCALBASE}/bin/texconfig rehash
-	${LOCALBASE}/bin/mktexlsr
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

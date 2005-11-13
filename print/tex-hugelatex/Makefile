@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/11/08 21:57:53 tonio Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/13 05:30:11 minskim Exp $
 #
 
 DISTNAME=	hugelatex-2.0
 PKGNAME=	tex-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	# none
 DISTFILES=	# nada
@@ -17,6 +18,8 @@ NO_BUILD=	yes
 
 TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
 
+.include "../../print/teTeX/module.mk"
+
 do-install:
 	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-hugelatex
 	${CAT} ${FILESDIR}/texmf.cnf-add >>${TEXMF_CNF}
@@ -29,7 +32,5 @@ do-install:
 	${RM} -f texsys.aux
 	${RM} -f ${PREFIX}/bin/hugelatex
 	${LN} -s latex ${PREFIX}/bin/hugelatex
-	${PREFIX}/bin/mktexlsr
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

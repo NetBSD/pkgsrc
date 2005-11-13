@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/09 00:05:28 tonio Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/13 05:30:11 minskim Exp $
 bin/dvipdfm
 bin/dvipdft
 bin/ebb
@@ -15,5 +15,3 @@ ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/t1fonts.map
 @dirrm ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config
 @dirrm ${PKG_LOCALTEXMFPREFIX}/dvipdfm/base
 @dirrm ${PKG_LOCALTEXMFPREFIX}/dvipdfm
-@exec %D/bin/mktexlsr
-@unexec %D/bin/mktexlsr
