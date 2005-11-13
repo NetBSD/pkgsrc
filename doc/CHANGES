@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11915 2005/11/13 05:32:36 minskim Exp $
+$NetBSD: CHANGES,v 1.11916 2005/11/13 06:16:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5200,3 +5200,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/tex-chemarrow to 0.1nb1 [minskim 2005-11-13]
 	Updated print/tex-hugelatex to 2.0nb1 [minskim 2005-11-13]
 	Updated print/tex-jadetex to 3.13nb2 [minskim 2005-11-13]
+	Added textproc/tex-xmltex version 1.9 [minskim 2005-11-13]
