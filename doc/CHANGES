@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11921 2005/11/13 18:37:49 martti Exp $
+$NetBSD: CHANGES,v 1.11922 2005/11/13 19:54:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5209,3 +5209,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added misc/esniper version 2.14.0 [heinz 2005-11-13]
 	Added sysutils/xenconsole version 0.15b1.1 [martti 2005-11-13]
 	Added mail/squirrelmail-decode version 1.0 [martti 2005-11-13]
+	Added pkgtools/p5-pkgsrc-Dewey version 1.0 [wiz 2005-11-13]
