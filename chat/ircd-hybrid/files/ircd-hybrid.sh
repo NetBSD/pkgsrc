@@ -1,61 +1,31 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ircd-hybrid.sh,v 1.2 2003/08/23 10:52:50 seb Exp $
+# $NetBSD: ircd-hybrid.sh,v 1.3 2005/11/13 22:40:00 adrianp Exp $
 #
 # PROVIDE: ircdhybrid
 # REQUIRE: DAEMON
 
-name="ircdhybrid"
-rcvar=$name
-pidfile="@PPATH@"
-command="@SPATH@"
-conffile="@DPATH@/ircd.conf"
-required_files="$conffile"
-start_precmd=set_pid_file
-
-set_pid_file () {
-	@TOUCH@ $pidfile && @CHOWN@ @USER@ $pidfile && @CHMOD@ 600 $pidfile
-}
-
-if [ -d /etc/rc.d ]; then :; else
-	command=${1:-start}
-
-	case ${command} in
-	start)
-	if [ -x @SPATH@ -a -f  "$conffile" ]
-	then
-		echo "Starting ${name}."
-		set_pid_file || exit 1
-		exec @SPATH@
-	fi
-	;;
-	stop)
-	if [ -f ${pidfile} ]; then
-		pid=`head -1 ${pidfile}`
-		echo "Stopping ${name}."
-		kill -TERM ${pid}
-	else
-		echo "${name} not running?"
-	fi
-	;;
-	restart)
-	( $0 stop )
-	sleep 1
-	$0 start
-	;;
-	status)
-	if [ -f ${pidfile} ]; then
-		pid=`head -1 ${pidfile}`
-		echo "${name} is running as pid ${pid}."
-	else
-		echo "${name} is not running."
-	fi
-	;;
-	esac
-	exit 0
+if [ -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
 fi
 
-. /etc/rc.subr
+name="ircdhybrid"
+rcvar=$name
+pidfile="@VARBASE@/run/ircd-hybrid/ircd.pid"
+command="@PREFIX@/bin/ircd"
+conffile="@PKG_SYSCONFDIR@/ircd.conf"
+required_files="$conffile"
+ircdhybrid_user="@IRCD_HYBRID_IRC_USER@"
+ircdhybrid_group="@IRCD_HYBRID_IRC_GROUP@"
+start_precmd="set_pid_file"
+
+set_pid_file () {
+	@TOUCH@ $pidfile 
+	@CHOWN@ @IRCD_HYBRID_IRC_USER@ $pidfile 
+	@CHGRP@ @IRCD_HYBRID_IRC_GROUP@ $pidfile
+	@CHMOD@ 0640 $pidfile
+}
 
 load_rc_config $name
 run_rc_command "$1"
