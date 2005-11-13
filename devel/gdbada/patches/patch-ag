@@ -1,32 +1,21 @@
-$NetBSD: patch-ag,v 1.1 2005/04/12 10:13:36 shannonjr Exp $
+$NetBSD: patch-ag,v 1.2 2005/11/13 14:16:05 shannonjr Exp $
 
---- gdb/i386bsd-nat.c.orig	2003-01-16 02:46:34.000000000 -0700
-+++ gdb/i386bsd-nat.c
-@@ -150,6 +150,9 @@ fill_gregset (gregset_t *gregsetp, int r
- }
+--- gdb/cli/cli-cmds.c.orig	2004-10-20 17:51:34.000000000 -0600
++++ gdb/cli/cli-cmds.c
+@@ -225,7 +225,6 @@ compare_strings (const void *arg1, const
+ static void
+ complete_command (char *arg, int from_tty)
+ {
+-  int i;
+   int argpoint;
+   char **completions, *point, *arg_prefix;
  
- #include "i387-tdep.h"
-+#ifdef HAVE_SYS_PROCFS_H
-+#include <sys/procfs.h>
-+#endif
- 
- /* Fill GDB's register array with the floating-point register values
-    in *FPREGSETP.  */
-@@ -419,7 +422,7 @@ _initialize_i386bsd_nat (void)
- 
-   /* Override the default value for the offset of the program counter
-      in the sigcontext structure.  */
--  sc_pc_offset = offsetof (struct sigcontext, sc_pc);
-+  sc_pc_offset = offsetof (ucontext_t, uc_mcontext.__gregs[_REG_EIP]);
- 
-   if (SC_PC_OFFSET != sc_pc_offset)
-     {
-@@ -432,7 +435,7 @@ Please report this to <bug-gdb@gnu.org>.
-   SC_PC_OFFSET = sc_pc_offset;
- 
-   /* Likewise for the stack pointer.  */
--  sc_sp_offset = offsetof (struct sigcontext, sc_sp);
-+  sc_pc_offset = offsetof (ucontext_t, uc_mcontext.__gregs[_REG_UESP]);
- 
-   if (SC_SP_OFFSET != sc_sp_offset)
-     {
+@@ -841,7 +840,7 @@ disassemble_command (char *arg, int from
+ {
+   CORE_ADDR low, high;
+   char *name;
+-  CORE_ADDR pc, pc_masked;
++  CORE_ADDR pc;
+   char *space_index;
+ #if 0
+   asection *section;

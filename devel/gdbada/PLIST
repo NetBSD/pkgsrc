@@ -1,42 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/13 14:16:05 shannonjr Exp $
 gdbada/bin/gdb
+gdbada/bin/gdbtui
 gdbada/include/ansidecl.h
 gdbada/include/bfd.h
 gdbada/include/bfdlink.h
 gdbada/include/dis-asm.h
 gdbada/include/symcat.h
+gdbada/info/annotate.info
 gdbada/info/bfd.info
-gdbada/info/bfd.info-1
-gdbada/info/bfd.info-2
-gdbada/info/bfd.info-3
-gdbada/info/bfd.info-4
-gdbada/info/bfd.info-5
-gdbada/info/bfd.info-6
-gdbada/info/bfd.info-7
-gdbada/info/bfd.info-8
-gdbada/info/bfd.info-9
+gdbada/info/configure.info
 gdbada/info/gdb.info
 gdbada/info/gdbint.info
-gdbada/info/gdbint.info-1
-gdbada/info/gdbint.info-2
-gdbada/info/gdbint.info-3
-gdbada/info/gdbint.info-4
-gdbada/info/gdbint.info-5
-gdbada/info/gdbint.info-6
-gdbada/info/gdbint.info-7
-gdbada/info/mmalloc.info
 gdbada/info/stabs.info
-gdbada/info/stabs.info-1
-gdbada/info/stabs.info-2
-gdbada/info/stabs.info-3
-gdbada/info/stabs.info-4
+gdbada/info/standards.info
 gdbada/lib/libbfd.la
 gdbada/lib/libiberty.a
-gdbada/lib/libmmalloc.a
 gdbada/lib/libopcodes.la
-gdbada/man/man1/gdb.1
-@dirrm gdbada/man/man1
-@dirrm gdbada/man
+man/man1/gdb.1
+man/man1/gdbtui.1
 @dirrm gdbada/lib
 @dirrm gdbada/info
 @dirrm gdbada/include
