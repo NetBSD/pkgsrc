@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4165 2005/11/12 23:16:19 grant Exp $
+$NetBSD: TODO,v 1.4166 2005/11/13 10:18:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,6 +347,7 @@ Suggested package updates
 	o amavis-0.3.12
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
+	o antiword-0.37
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
 	o ap-auth-pam-1.1.1
@@ -474,6 +475,7 @@ Suggested package updates
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.10
+	o devilspie-0.16
 	o devtodo-0.1.19
 	o diffstat-1.41
 	o dinotrace-9.3a
@@ -696,6 +698,7 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b11
 	o lcc-4.2
+	o leafpad-0.8.5
 	o lftp-3.3.3
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
@@ -774,7 +777,7 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
-	o mono-1.1.9.2
+	o mono-1.1.10
 	o moscow_ml-2.01
 	o most-4.10.2
 	o mowitz-0.3.0
@@ -1293,7 +1296,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wdm-1.28
 	o webmin-1.240
-	o weechat-0.1.5
+	o weechat-0.1.6
 	o weewm-0.01
 	o winbind-3.0.13
 	o wine-0.9.1
@@ -1364,6 +1367,7 @@ Suggested package updates
 	o yasm-0.4.0 [pkg/30445]
 	o yaz-2.1.8
 	o yencode-0.46
+	o yodl-2.01.02
 	o ysm-2.9.6
 	o ytalk-3.2.0 [pkg/28840]
 	o zebra-0.95a
