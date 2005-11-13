@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/11/13 22:40:00 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2005/11/13 22:47:40 adrianp Exp $
 
 DISTNAME=	ircd-hybrid-7.1.3
 EXTRACT_SUFX=	.tgz
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ircd-hybrid/}
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://ircd-hybrid.com/
 COMMENT=	IRC server with many options
+
+CONFLICTS+=	ircu-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
