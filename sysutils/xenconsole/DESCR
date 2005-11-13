@@ -1,0 +1,4 @@
+xenConsole (aka xcon) is a curses-based tty/console monitor for Xen 2.0,
+basically presenting the output from 'xm list' in a full-screen interface
+with additional domain information from SNMP, colours and somewhat realtime
+updates.
