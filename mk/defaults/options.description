@@ -63,6 +63,7 @@ dvdread			Enable reproduction of DVDs.
 dynamic	
 eb			Enable EB dictionary library support.
 edit	
+efnet			Enable tweaks to support EFNet.
 emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 esound			Enable support for the Enlightment Sound Daemon.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
@@ -107,6 +108,7 @@ gtk			Enable support for GTK.
 gtkfe
 gtkspell		Enable gtkspell support.	
 gucharmap	
+halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hdf5	
 homedir	
 hpn-patch	
@@ -241,6 +243,7 @@ sis
 skey	
 slang			Enable S-Lang support.
 slp	
+small-net		Tune for a smaller networks.
 snmp	
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
@@ -307,4 +310,4 @@ xterm-luit		Enable locale <> UTF encoding translation.
 xvid			Enable usage of XVid codecs.
 zaptel	
 zip	
-ziplinks	
+ziplinks		Compress data before transmitting it between servers.
