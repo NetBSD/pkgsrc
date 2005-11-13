@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/13 04:12:43 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/13 04:14:31 minskim Exp $
 #
 
 DISTNAME=	unicode
@@ -19,7 +19,7 @@ NO_BUILD=	yes
 UCSFILES=	ucs.sty utf8x.def ucsencs.def
 UCSDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs
 
-.include "../../mk/module.mk"
+.include "../../print/teTeX/module.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${UCSDIR}
