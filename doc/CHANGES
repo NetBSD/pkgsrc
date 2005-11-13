@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11912 2005/11/13 04:04:25 minskim Exp $
+$NetBSD: CHANGES,v 1.11913 2005/11/13 04:15:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed www/navigator3 [tv 2005-11-13]
 	Added mail/mpop version 0.8.2nb1 [minskim 2005-11-13]
 	Updated print/tex-IEEEtran to 1.6cnb1 [minskim 2005-11-13]
+	Updated print/tex-ucs to 20041710nb1 [minskim 2005-11-13]
