@@ -1,148 +1,124 @@
-# $NetBSD: Makefile,v 1.19 2005/08/23 11:48:47 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.20 2005/11/13 22:40:00 adrianp Exp $
 
-DISTNAME=	ircd-hybrid-6.2
-PKGREVISION=	3
+DISTNAME=	ircd-hybrid-7.1.3
+EXTRACT_SUFX=	.tgz
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ircd-hybrid/}
-EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.ircd-hybrid.net/
+MAINTAINER=	adrianp@NetBSD.org
+HOMEPAGE=	http://ircd-hybrid.com/
 COMMENT=	IRC server with many options
 
 GNU_CONFIGURE=	YES
-
-USE_PKGINSTALL=		YES
-
-PKG_SYSCONFSUBDIR=	ircd-hybrid
-IRCD_HYBRID_DPATH=	${PKG_SYSCONFDIR}
+USE_PKGINSTALL=	YES
+BUILD_DEFS+=	IRCD_HYBRID_SYSLOG_FACILITY IRCD_HYBRID_NICLEN \
+		IRCD_HYBRID_TOPICLEN IRCD_HYBRID_MAXCONN \
+		IRCD_HYBRID_SYSLOG_EVENTS IRCD_HYBRID_IRC_USER \
+		IRCD_HYBRID_IRC_GROUP
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${IRCD_HYBRID_SMALL_NET} == "YES"
-IRCD_HYBRID_LINK_PREALLOCATE?=		64
-IRCD_HYBRID_CLIENTS_PREALLOCATE?=	64
-IRCD_HYBRID_USERS_PREALLOCATE?=		64
-IRCD_HYBRID_NICKNAMEHISTORYLENGTH?=	1000
-IRCD_HYBRID_MAXSENDQLENGTH?=		500000
-IRCD_HYBRID_INITIAL_DBUFS?=		300
-IRCD_HYBRID_HARD_FDLIMIT_?=		90
-IRCD_HYBRID_INIT_MAXCLIENTS?=		40
-.endif
-
-# this is not supposed to be changed
-IRCD_HYBRID_SPATH=		${PREFIX}/sbin/ircd-hybrid
-IRCD_HYBRID_SDIR=		${IRCD_HYBRID_SPATH:C|/[^/]*$||}
-
-# throw all the settings in _DEFS
-.for def in \
-	IRCD_HYBRID_LINK_PREALLOCATE IRCD_HYBRID_CLIENTS_PREALLOCATE \
-	IRCD_HYBRID_USERS_PREALLOCATE IRCD_HYBRID_NICKNAMEHISTORYLENGTH \
-	IRCD_HYBRID_MAXSENDQLENGTH IRCD_HYBRID_INITIAL_DBUFS \
-	IRCD_HYBRID_HARD_FDLIMIT_ IRCD_HYBRID_INIT_MAXCLIENTS
-.  ifdef ${def}
-_DEFS+=		-D${def:S|^IRCD_HYBRID_||}=${${def}}
-.  endif
-.endfor
-.for def in \
-	IRCD_HYBRID_NETWORK_NAME IRCD_HYBRID_NETWORK_DESC
-.  ifdef ${def}
-_DEFS+=		-D${def:S|^IRCD_HYBRID_||}=\"${${def}:Q}\"
-.  endif
-.endfor
-.for def in \
-	IRCD_HYBRID_DPATH IRCD_HYBRID_SPATH \
-	IRCD_HYBRID_FNAME_USERLOG IRCD_HYBRID_FNAME_OPERLOG IRCD_HYBRID_PPATH \
-	IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
-_DEFS+=		-D${def:S|^IRCD_HYBRID_||}=\"${${def}}\"
-.endfor
-.if ${IRCD_HYBRID_USE_SYSLOG} == "YES"
-_DEFS+=		-DUSE_SYSLOG=1
-_DEFS+=		-DLOG_FACILITY=${IRCD_HYBRID_SYSLOG_FACILITY}
-.endif
-.if ${IRCD_HYBRID_USE_LOGFILE} == "YES"
-_DEFS+=		-DUSE_LOGFILE=1
-_DEFS+=		-DLPATH=\"${IRCD_HYBRID_LPATH}\"
-.endif
-_DEFS+=		-DINIT_LOG_LEVEL=${IRCD_HYBRID_INIT_LOG_LEVEL}
-
-# and pass then down to make as DEFS
-MAKE_FLAGS+=	DEFS='${_DEFS}'
-
-# and few other things for install target
-MAKE_FLAGS+=	SPATH=${IRCD_HYBRID_SPATH} SDIR=${IRCD_HYBRID_SDIR}
-MAKE_FLAGS+=	PREFIX=${PREFIX} DESTDIR=${DESTDIR}
-
-# for the records
-.for def in \
-	IRCD_HYBRID_LINK_PREALLOCATE IRCD_HYBRID_CLIENTS_PREALLOCATE \
-	IRCD_HYBRID_USERS_PREALLOCATE IRCD_HYBRID_NICKNAMEHISTORYLENGTH \
-	IRCD_HYBRID_MAXSENDQLENGTH IRCD_HYBRID_INITIAL_DBUFS \
-	IRCD_HYBRID_HARD_FDLIMIT_ IRCD_HYBRID_INIT_MAXCLIENTS \
-	IRCD_HYBRID_NETWORK_NAME IRCD_HYBRID_NETWORK_DESC \
-	IRCD_HYBRID_FNAME_OPERLOG IRCD_HYBRID_PPATH \
-	IRCD_HYBRID_IRC_USER IRCD_HYBRID_IRC_GROUP
-.  ifdef ${def}
-BUILD_DEFS+=	${def}
-.  endif
-.endfor
-.ifdef ${IRCD_HYBRID_USE_SYSLOG} == "YES"
-BUILD_DEFS+=	IRCD_HYBRID_USE_SYSLOG
-BUILD_DEFS+=	IRCD_HYBRID_SYSLOG_FACILITY
-.else
-BUILD_DEFS+=	IRCD_HYBRID_FNAME_USERLOG
-.endif
-.if ${IRCD_HYBRID_USE_LOGFILE} == "YES"
-BUILD_DEFS+=	IRCD_HYBRID_USE_LOGFILE
-BUILD_DEFS+=	IRCD_HYBRID_LPATH
-.endif
-
-FILES_SUBST+=		PPATH=${IRCD_HYBRID_PPATH:Q}
-FILES_SUBST+=		SPATH=${IRCD_HYBRID_SPATH:Q}
-FILES_SUBST+=		USER=${IRCD_HYBRID_IRC_USER:Q}
-FILES_SUBST+=		DPATH=${IRCD_HYBRID_DPATH:Q}
-FILES_SUBST+=		GROUP=${IRCD_HYBRID_IRC_GROUP}
-FILES_SUBST+=		SYSLOG_FACILITY=${IRCD_HYBRID_SYSLOG_FACILITY}
-
+PKG_SYSCONFSUBDIR=	ircd-hybrid
+HYBRID_EG=		${PREFIX}/share/examples/ircd-hybrid
+HYBRID_DOC=		${PREFIX}/share/doc/ircd-hybrid
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 RCD_SCRIPTS=		ircd-hybrid
 
-PKG_USERS=		${IRCD_HYBRID_IRC_USER}:${IRCD_HYBRID_IRC_GROUP}::IRC\ User::${NOLOGIN}
+CONF_FILES_PERMS=	${HYBRID_EG}/example.conf ${PKG_SYSCONFDIR}/ircd.conf \
+			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 0640
+OWN_DIRS_PERMS+=	${VARBASE}/log/ircd-hybrid \
+			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 0770
+OWN_DIRS_PERMS+=	${VARBASE}/log/ircd-hybrid/logs \
+			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 0770
+OWN_DIRS_PERMS+=	${VARBASE}/run/ircd-hybrid \
+			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 0770
+
+FILES_SUBST+=		IRCD_HYBRID_IRC_USER=${IRCD_HYBRID_IRC_USER}
+FILES_SUBST+=		IRCD_HYBRID_IRC_GROUP=${IRCD_HYBRID_IRC_GROUP}
+FILES_SUBST+=		VARBASE=${VARBASE}
+
+PKG_USERS=		${IRCD_HYBRID_IRC_USER}:${IRCD_HYBRID_IRC_GROUP}::ircd-hybrid\ User::${NOLOGIN}
 PKG_GROUPS=		${IRCD_HYBRID_IRC_GROUP}
 
-CONF_FILES=		${PREFIX}/share/examples/ircd-hybrid/opers.txt \
-			${IRCD_HYBRID_DPATH}/opers.txt
-CONF_FILES_PERMS=	/dev/null ${IRCD_HYBRID_FNAME_OPERLOG} \
-			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 600
-CONF_FILES_PERMS+=	/dev/null ${IRCD_HYBRID_FNAME_USERLOG} \
-			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 600
-.if ${IRCD_HYBRID_USE_LOGFILE} == "YES"
-CONF_FILES_PERMS+=	/dev/null ${IRCD_HYBRID_LPATH} \
-			${IRCD_HYBRID_IRC_USER} ${IRCD_HYBRID_IRC_GROUP} 600
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	etc/example.conf etc/example.efnet.conf \
+			etc/example.conf.quick doc/ircd.8
+SUBST_SED.paths=	-e "s|/usr/local/ircd/etc|${PKG_SYSCONFDIR}|g" \
+			-e "s|/usr/local/ircd/bin|${PREFIX}/bin|g" \
+			-e "s|/usr/local/ircd/modules|${PREFIX}/lib/ircd-hybrid/modules|g" \
+			-e "s|/usr/share/ircd|${PKG_SYSCONFDIR}|g" \
+			-e "s|/var/log|${VARBASE}/log/ircd-hybrid/logs|g"
+
+SUBST_CLASSES+=		bpaths
+SUBST_MESSAGE.bpaths=	"Fixing hardcoded build paths."
+SUBST_STAGE.bpaths=	post-configure
+SUBST_FILES.bpaths=	include/defaults.h
+SUBST_SED.bpaths=	-e "s|etc|etc/ircd-hybrid|g" \
+			-e "s|modules|lib/ircd-hybrid/modules|g" \
+			-e "s|IRCD_PREFIX \"/logs\"|\"${VARBASE}/log/ircd-hybrid/logs\"|g" \
+			-e "s|ETCPATH \"/ircd.pid\"|\"${VARBASE}/run/ircd-hybrid/ircd.pid\"|g" \
+			-e "s|messages|share/ircd-hybrid/messages|g"
+
+CONFIGURE_ARGS+=	--with-nicklen=${IRCD_HYBRID_NICLEN}
+CONFIGURE_ARGS+=	--with-topiclen=${IRCD_HYBRID_TOPICLEN}
+CONFIGURE_ARGS+=	--enable-syslog=${IRCD_HYBRID_SYSLOG_EVENTS}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/ircd-hybrid
+CONFIGURE_ARGS+=	--enable-clobber
+
+.if defined(IRCD_HYBRID_SYSLOG_EVENTS)
+CONFIGURE_ARGS+=	--enable-syslog-facility=${IRCD_HYBRID_SYSLOG_FACILITY}
 .endif
 
-post-build:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${CP} ${FILESDIR}/pkg-setup.txt ${WRKDIR}/pkg-setup.txt
-.if ${IRCD_HYBRID_USE_SYSLOG} != "YES"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${SED} -e '/SYSLOG_FACILITY/d' ${WRKDIR}/.pkg-setup.txt	\
-		> ${WRKDIR}/pkg-setup.txt
+.if defined(IRCD_HYBRID_MAXCONN)
+CONFIGURE_ARGS+=	--with-maxconn=${IRCD_HYBRID_MAXCONN}
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MV} ${WRKDIR}/pkg-setup.txt ${WRKDIR}/.pkg-setup.txt
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${SED} ${FILES_SUBST_SED} ${WRKDIR}/.pkg-setup.txt	\
-		> ${WRKDIR}/pkg-setup.txt
+
+.include "options.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ircd-hybrid
-	${INSTALL_DATA} ${WRKDIR}/pkg-setup.txt ${PREFIX}/share/doc/ircd-hybrid/pkg-setup.txt
-	for f in operguide.txt opermyth.txt; do \
-		${INSTALL_DATA} ${WRKDIR}/ircd-hybrid-6.2/doc/$$f  ${PREFIX}/share/doc/ircd-hybrid/$$f ; \
-	done
+	${INSTALL_DATA_DIR} ${HYBRID_EG}
+	${INSTALL_DATA_DIR} ${HYBRID_DOC}
+	${INSTALL_DATA_DIR} ${HYBRID_DOC}/doc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/ircd-hybrid
+	${INSTALL_DATA_DIR} ${PREFIX}/share/ircd-hybrid/messages
 
-.include "../../devel/zlib/buildlink3.mk"
+	${INSTALL_DATA} ${WRKSRC}/etc/example.conf ${HYBRID_EG}
+	${INSTALL_DATA} ${WRKSRC}/etc/example.efnet.conf ${HYBRID_EG}
+	${INSTALL_DATA} ${WRKSRC}/etc/example.conf.quick ${HYBRID_EG}
+	${INSTALL_DATA} ${WRKSRC}/etc/simple.conf ${HYBRID_EG}
+
+	${INSTALL_DATA} ${WRKSRC}/BUGS ${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/README.FIRST ${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/README.PLATFORMS ${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/RELNOTES ${HYBRID_DOC}
+	${INSTALL_DATA} ${WRKSRC}/messages/README ${HYBRID_DOC}/README.messages
+	${INSTALL_DATA} ${WRKSRC}/tools/README.mkpasswd \
+		${HYBRID_DOC}/README.ircd-hybrid-mkpasswd
+
+	cd ${WRKSRC}/doc && ${PAX} -s /\Makefile.in// -s /\Makefile// \
+		-rwppm . ${HYBRID_DOC}/doc
+
+	cd ${WRKSRC}/contrib && \
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install_help
+
+	cd ${WRKSRC}/messages && \
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install
+
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/convertconf \
+		${PREFIX}/bin/ircd-hybrid-convertconf
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/convertilines \
+		${PREFIX}/bin/convertilines
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/convertklines \
+		${PREFIX}/bin/convertklines
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/encspeed \
+		${PREFIX}/bin/encspeed
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkpasswd \
+		${PREFIX}/bin/ircd-hybrid-mkpasswd
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/viconf \
+		${PREFIX}/bin/ircd-hybrid-viconf
+
 .include "../../mk/bsd.pkg.mk"
