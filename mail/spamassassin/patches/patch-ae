@@ -1,20 +1,20 @@
-$NetBSD: patch-ae,v 1.10 2005/01/15 21:44:55 schmonz Exp $
+$NetBSD: patch-ae,v 1.11 2005/11/13 22:48:32 heinz Exp $
 
---- spamd/spamd.raw.orig	2004-10-22 11:21:26.000000000 -0400
+--- spamd/spamd.raw.orig	Wed Sep 14 04:07:32 2005
 +++ spamd/spamd.raw
-@@ -1811,8 +1811,9 @@ sub restart_handler {
+@@ -2073,8 +2073,9 @@ sub backtrace_handler {
+ }
  
  sub daemonize {
- 
 -  # Pretty command line in ps
--  $0 = join ( ' ', $ORIG_ARG0, @ORIG_ARGV ) unless ( $opt{'debug'} );
-+  # no pretty 'ps' command line (easier for NetBSD rc script)
+-  $0 = join (' ', $ORIG_ARG0, @ORIG_ARGV) unless would_log("dbg");
++  # no pretty 'ps' command line (easier for pkgsrc rc script)
 +  # # Pretty command line in ps
-+  # $0 = join ( ' ', $ORIG_ARG0, @ORIG_ARGV ) unless ( $opt{'debug'} );
++  # $0 = join (' ', $ORIG_ARG0, @ORIG_ARGV) unless would_log("dbg");
  
-   # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
-   chdir '/' or die "Can't chdir to /: $!\n";
-@@ -1988,12 +1989,12 @@ Create user preferences files if they do
+   # be a nice daemon and chdir to the root so we don't block any
+   # unmount attempts
+@@ -2273,12 +2274,12 @@ Create user preferences files if they do
  =item B<-C> I<path>, B<--configpath>=I<path>
  
  Use the specified path for locating the distributed configuration files.

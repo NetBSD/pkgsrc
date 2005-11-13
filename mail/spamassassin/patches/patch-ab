@@ -1,92 +1,28 @@
-$NetBSD: patch-ab,v 1.10 2005/02/13 21:20:25 heinz Exp $
+$NetBSD: patch-ab,v 1.11 2005/11/13 22:48:32 heinz Exp $
 
---- Makefile.PL.orig	Fri Oct 22 17:21:08 2004
+--- Makefile.PL.orig	Fri Aug 12 02:38:58 2005
 +++ Makefile.PL
-@@ -64,6 +64,8 @@ my @ATT_KEYS = (
-   'ENABLE_SSL',       # Set to 'yes' to build spamc with SSL support.
-   'CONTACT_ADDRESS',  # To not ask for the contact address, use this.
-   'RUN_NET_TESTS',    # To not ask whether net tests should be run, use this.
-+  'RUN_AWL_SQL_TESTS',  # To not ask whether sql tests for the awl should be run, use this
-+  'RUN_BAYES_SQL_TESTS',# To not ask whether sql tests for bayes should be run, use this
- );
- 
- 
-@@ -100,6 +102,8 @@ my %opt = (
-   'enable_ssl'      => undef,
-   'contact_address' => undef,
-   'run_net_tests'   => undef,
-+  'run_awl_sql_tests'   => undef,
-+  'run_bayes_sql_tests' => undef,
-   'destdir'         => undef,
-   '__cruft'         => undef,
-   'ignore_cruft'    => undef,
-@@ -161,6 +165,7 @@ my %makefile = (
- 
-     'EXE_FILES'	=> [
-         'spamassassin', 'sa-learn',
-+	'spamc/qmail-spamc$(EXE_EXT)',
-         'spamc/spamc$(EXE_EXT)', # must next to last one
-         'spamd/spamd',	# must be the last one
-     ],
-@@ -365,14 +370,16 @@ else {
- $makefile{'macro'}{'RUN_NET_TESTS'} = yesno($opt{'run_net_tests'});
- 
- if (HAS_DBI) {
--  $opt{'run_awl_sql_tests'} = prompt(
--    "Run SQL-based Auto-whitelist tests during 'make test' (additional\n".
--    "information required) (y/n)", "n");
--  print "\n";
--
--  $opt{'run_awl_sql_tests'} = bool($opt{'run_awl_sql_tests'});
-+  if (!defined $opt{'run_awl_sql_tests'}) {
-+    $opt{'run_awl_sql_tests'} = prompt(
-+      "Run SQL-based Auto-whitelist tests during 'make test' (additional\n".
-+      "information required) (y/n)", "n");
-+    print "\n";
-+  }
- }
- 
-+$opt{'run_awl_sql_tests'} = bool($opt{'run_awl_sql_tests'});
-+
- if ($opt{'run_awl_sql_tests'}) {
-   my $user_awl_dsn = prompt("SQL AWL DSN (user_awl_dsn): ", "dbi:mysql:spamassassin:localhost");
-   my $user_awl_sql_username = prompt("SQL AWL DB username (user_awl_sql_username): ", "");
-@@ -395,14 +402,16 @@ else {
- }
- 
- if (HAS_DBI) {
--  $opt{'run_bayes_sql_tests'} = prompt(
--    "Run Bayes SQL storage tests during 'make test' (additional\n".
--    "information required)? (y/n)", 'n');
--  print "\n";
--
--  $opt{'run_bayes_sql_tests'} = bool($opt{'run_bayes_sql_tests'});
-+  if (!defined $opt{'run_bayes_sql_tests'}) {
-+    $opt{'run_bayes_sql_tests'} = prompt(
-+      "Run Bayes SQL storage tests during 'make test' (additional\n".
-+      "information required)? (y/n)", 'n');
-+    print "\n";
-+  }
- }
- 
-+$opt{'run_bayes_sql_tests'} = bool($opt{'run_bayes_sql_tests'});
-+
- if ($opt{'run_bayes_sql_tests'}) {
-   my $bayes_sql_dsn = prompt("Bayes SQL DSN (bayes_sql_dsn): ", "dbi:mysql:spamassassin:localhost");
-   my $bayes_sql_username = prompt("Bayes SQL DB username (bayes_sql_username): ", "");
-@@ -1144,17 +1153,18 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
- 
+@@ -158,6 +158,7 @@ my %makefile = (
+       'spamassassin.raw' => 'spamassassin',
+       'sa-learn.raw'     => 'sa-learn',
+       'sa-update.raw'    => 'sa-update',
++      'spamc/qmail-spamc.c' => 'spamc/qmail-spamc$(EXE_EXT)',
+       'spamc/spamc.c'    => 'spamc/spamc$(EXE_EXT)',
+       'spamd/spamd.raw'  => 'spamd/spamd',
+     },
+@@ -1087,16 +1088,17 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
+ #        # $(SYMLINK) $(INST_SCRIPT)/sa-filter $(B_SCRIPTDIR)/spamassassin
  
  conf__install:
 -	-$(MKPATH) $(B_CONFDIR)
--	$(PERL) -MFile::Spec -MFile::Copy \
+-	$(PERL) -MFile::Copy -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf}"
+-	$(PERL) -MFile::Copy -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre}"
+-	$(PERL) -MFile::Copy -e "copy(q{rules/v310.pre}, q{$(B_CONFDIR)/v310.pre}) unless -f q{$(B_CONFDIR)/v310.pre}"
 +	-$(BSD_INSTALL_DATA_DIR) $(B_CONFDIR)
-+	@ # manage local.cf and init.pre through pkgsrc .mk files
-+	@ # $(PERL) -MFile::Spec -MFile::Copy \
- 	  -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf};"
--	$(PERL) -MFile::Spec -MFile::Copy \
-+	@ # $(PERL) -MFile::Spec -MFile::Copy \
- 	  -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre};"
++	@ # manage local.cf and *.pre through pkgsrc .mk files
++	@ # $(PERL) -MFile::Copy -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf}"
++	@ # $(PERL) -MFile::Copy -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre}"
++	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v310.pre}, q{$(B_CONFDIR)/v310.pre}) unless -f q{$(B_CONFDIR)/v310.pre}"
  
  data__install:
 -	-$(MKPATH) $(B_DATADIR)

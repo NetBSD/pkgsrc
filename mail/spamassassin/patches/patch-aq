@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.5 2005/01/15 21:44:55 schmonz Exp $
+$NetBSD: patch-aq,v 1.6 2005/11/13 22:48:32 heinz Exp $
 
---- README.orig	2004-10-22 11:21:14.000000000 -0400
+--- README.orig	Wed Sep 14 04:07:32 2005
 +++ README
-@@ -76,30 +76,30 @@ Mail::SpamAssassin::Conf class (run the 
+@@ -99,18 +99,18 @@ Mail::SpamAssassin::Conf class (run the 
  the standard defaults that people use.  There is an explanation of all the
  default locations that SpamAssassin will look at the end.
  
@@ -18,6 +18,19 @@ $NetBSD: patch-aq,v 1.5 2005/01/15 21:44:55 schmonz Exp $
    	Site config files, for system admins to create, modify, and
  	add local rules and scores to.  Modifications here will be
  	appended to the config loaded from the above directory.
+ 
+-  - /etc/mail/spamassassin/*.pre:
++  - @PKG_SYSCONFDIR@/*.pre:
+ 
+         Plugin control files, installed from the distribution. These are
+         used to control what plugins are loaded.  Modifications here will
+@@ -119,22 +119,22 @@ default locations that SpamAssassin will
+         
+         You want to modify these files if you want to load additional
+         plugins, or inhibit loading a plugin that is enabled by default.
+-        If the files exist in /etc/mail/spamassassin, they will not
++        If the files exist in @PKG_SYSCONFDIR@, they will not
+         be overwritten during future installs.
  
 -  - /usr/share/spamassassin/user_prefs.template:
 +  - @@PREFIX@@/share/spamassassin/user_prefs.template:
@@ -37,4 +50,17 @@ $NetBSD: patch-aq,v 1.5 2005/01/15 21:44:55 schmonz Exp $
 +        "@PKG_SYSCONFDIR@" directory ending in ".cf". This file is
          just a template, which will be copied to a user's home directory
          for them to change.
+ 
+@@ -187,6 +187,12 @@ These are:
+   /usr/local    /usr/local/share/spamassassin  /etc/mail/spamassassin
+   /opt/$DIR     /opt/$DIR/share/spamassassin   /etc/opt/mail/spamassassin
+   $DIR          $DIR/share/spamassassin        $DIR/etc/mail/spamassassin
++
++(Pkgsrc note: the pkgsrc build process used the following path names
++  __prefix__:          @@PREFIX@@
++  __def_rules_dir__:   @@PREFIX@@/share/spamassassin
++  __local_rules_dir__: @PKG_SYSCONFDIR@
++)
+ 
+ The files themselves are then looked for in these paths:
  
