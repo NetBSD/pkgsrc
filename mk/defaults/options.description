@@ -23,8 +23,6 @@ ati
 audiofile	
 authlib	
 avifile	
-awl-sql-tests	
-bayes-sql-tests	
 bdb	
 bktr	
 blender-exppython	Enable the Experimental Python support.
@@ -188,7 +186,6 @@ nas			Enable usage of the Network Audio System.
 native	
 ncurses			Enable ncurses support.
 neomagic	
-net-tests	
 newport	
 nogui	
 nospoof	
@@ -206,8 +203,6 @@ patchviewer
 pcre	
 perf-tuning	
 perl	
-perl-taint-checks	
-perl-warnings	
 pf	
 pgsql			Enable PostgreSQL support.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
@@ -249,6 +244,12 @@ slp
 snmp	
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
+spamassassin-perl-warnings	Enable Perl warnings at run-time.
+spamassassin-taint-checks	Enable Perl taint checks to improve security.
+spamassassin-test-awl-sql	Enable tests of the SQL module for the automatic whitelist.
+spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
+spamassassin-test-net		Enable Internet based tests during 'make test'.
+spamassassin-test-prefork	Enable spamd prefork test (kills processes containing 'spam child').
 sqlite	
 ssl			Enable SSL support.
 starttls		Enable TLS support.
