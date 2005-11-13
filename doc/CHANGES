@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11914 2005/11/13 04:20:01 minskim Exp $
+$NetBSD: CHANGES,v 1.11915 2005/11/13 05:32:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5192,3 +5192,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/tex-IEEEtran to 1.6cnb1 [minskim 2005-11-13]
 	Updated print/tex-ucs to 20041710nb1 [minskim 2005-11-13]
 	Updated print/tex-prosper to 1.00.4nb2 [minskim 2005-11-13]
+	Updated devel/cweb to 3.64nb3 [minskim 2005-11-13]
+	Updated fonts/ec-fonts-mftraced to 1.0.8nb1 [minskim 2005-11-13]
+	Updated fonts/ttf2pk to 1.3.1nb1 [minskim 2005-11-13]
+	Updated print/dvipdfm to 0.13.2cnb5 [minskim 2005-11-13]
+	Updated print/ja-dvipdfm to 0.13.2cnb4 [minskim 2005-11-13]
+	Updated print/tex-chemarrow to 0.1nb1 [minskim 2005-11-13]
+	Updated print/tex-hugelatex to 2.0nb1 [minskim 2005-11-13]
+	Updated print/tex-jadetex to 3.13nb2 [minskim 2005-11-13]
