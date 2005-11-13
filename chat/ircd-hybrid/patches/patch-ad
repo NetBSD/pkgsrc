@@ -1,14 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/10/21 21:26:52 seb Exp $
+$NetBSD: patch-ad,v 1.2 2005/11/13 22:40:00 adrianp Exp $
 
---- src/client.c.orig	Fri Aug  3 17:12:56 2001
-+++ src/client.c
-@@ -64,7 +64,9 @@
-  * This means you call MyMalloc 30 some odd times,
-  * rather than 30k times -Dianora
-  */
-+#ifndef CLIENTS_PREALLOCATE
- #define CLIENTS_PREALLOCATE 1024
-+#endif
+--- messages/Makefile.in.orig	2005-11-13 21:47:12.000000000 +0000
++++ messages/Makefile.in
+@@ -5,7 +5,7 @@ MV            = @MV@
+ INSTALL       = @INSTALL@
+ INSTALL_DATA  = @INSTALL_DATA@
+ prefix        = $(DESTDIR)@prefix@
+-messagedir    = $(prefix)/messages
++messagedir    = $(prefix)/share/ircd-hybrid/messages
  
- /* 
-  * for Wohali's block allocator 
+ CLOBBER=@CLOBBER@
+ 
