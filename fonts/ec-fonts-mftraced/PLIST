@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/09 08:12:54 tonio Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/13 05:30:10 minskim Exp $
 share/doc/ec-fonts-mftraced/ChangeLog
 share/doc/ec-fonts-mftraced/LICENSE
 share/doc/ec-fonts-mftraced/README
@@ -119,5 +119,3 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/type1/public/ec-fonts-mftraced/ectt9.pfa
 @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/public/ec-fonts-mftraced
 @dirrm ${PKG_TEXMFPREFIX}/dvips/ec-fonts-mftraced
 @dirrm share/doc/ec-fonts-mftraced
-@exec %D/bin/mktexlsr
-@unexec %D/bin/mktexlsr
