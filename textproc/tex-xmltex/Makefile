@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/13 06:13:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/13 06:32:40 minskim Exp $
 
 DISTNAME=	base
 PKGNAME=	tex-xmltex-1.9
@@ -24,6 +24,6 @@ do-build:
 
 do-install:
 	@cd ${WRKSRC}; \
-	${INSTALL_DATA} xmltex.fmt pdfxmltex.fmt ${PKG_TEXMFPREFIX}/web2c;
+	${INSTALL_DATA} xmltex.fmt pdfxmltex.fmt ${PKG_LOCALTEXMFPREFIX}/web2c;
 
 .include "../../mk/bsd.pkg.mk"
