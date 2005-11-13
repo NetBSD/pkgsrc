@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.37 2005/11/08 16:39:47 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.38 2005/11/13 03:27:20 minskim Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1491,6 +1491,39 @@
         into <filename>/etc/rc.d</filename> when a package is installed, and
         it will automatically remove the scripts when the package is
         deinstalled.</para>
+    </sect2>
+    
+    <sect2 id="tex-packages">
+      <title>Packages installing TeX modules</title>
+    
+      <para>If a package installs TeX packages into the texmf tree,
+        the <filename>ls-R</filename> database of the tree needs to be
+        updated.</para>
+      <note><para>Except the main TeX packages such as teTeX-texmf,
+	  packages should install files
+	  into <varname>PKG_LOCALTEXMFPREFIX</varname>,
+	  not <varname>PKG_TEXMFPREFIX</varname>.</para></note>
+      
+      <orderedlist>
+	<listitem><para>Include
+            <filename>../../print/teTeX/module.mk</filename> instead
+            of <filename>../../mk/tex.buildlink3.mk</filename>.  This
+            takes care of rebuilding the <filename>ls-R</filename>
+            database at installation and deinstallation time.</para>
+	</listitem>
+	
+	<listitem><para>If your package installs files into a texmf
+            tree other than the one
+            at <varname>PKG_LOCALTEXMFPREFIX</varname>,
+            set <varname>TEXMFDIRS</varname> to the list of all texmf
+            trees that need database update.</para>
+	</listitem>
+      
+	<listitem><para>Make sure that none of <filename>ls-R</filename>
+            databases are included in <filename>PLIST</filename>, as
+            they will be removed only by the teTeX-bin package.</para>
+	</listitem>
+      </orderedlist>
     </sect2>
     
   </sect1>
