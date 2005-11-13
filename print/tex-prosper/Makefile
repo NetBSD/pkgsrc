@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/11/10 16:49:28 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/13 04:19:00 minskim Exp $
 #
 
 DISTNAME=	prosper-1.00.4
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prosper/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} PPRblends.sty.gz
@@ -24,6 +24,8 @@ DOCS=		AUTHORS ChangeLog FAQ INSTALL NEWS README TODO \
 DOCDIR=		${LOCALBASE}/share/doc/tex-prosper
 EGDIR=		${LOCALBASE}/share/examples/tex-prosper
 
+.include "../../print/teTeX/module.mk"
+
 post-extract:
 	${MV} ${WRKDIR}/PPRblends.sty ${WRKSRC}/contrib
 	${MV} ${WRKSRC}/doc/doc-examples ${WRKSRC}/examples
@@ -40,7 +42,5 @@ do-install:
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
-	${LOCALBASE}/bin/mktexlsr
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

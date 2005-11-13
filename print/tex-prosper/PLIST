@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/08 21:45:01 tonio Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/13 04:19:00 minskim Exp $
 share/doc/tex-prosper/AUTHORS
 share/doc/tex-prosper/ChangeLog
 share/doc/tex-prosper/FAQ
@@ -85,7 +85,5 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/misc/prosper/prosper.cls
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/misc/prosper/contrib/img
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/misc/prosper/contrib
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/misc/prosper
-@exec %D/bin/mktexlsr
-@unexec %D/bin/mktexlsr
 @dirrm share/examples/tex-prosper
 @dirrm share/doc/tex-prosper
