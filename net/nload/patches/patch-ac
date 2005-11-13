@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/11/13 08:31:05 minskim Exp $
+
+--- configure.orig	2003-12-14 23:41:34.000000000 -0800
++++ configure
+@@ -3833,7 +3833,7 @@ fi
+ done
+ 
+         ;;
+-    *bsd*)
++    *bsd* | *darwin*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_BSD 1
