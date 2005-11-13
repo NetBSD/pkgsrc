@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11917 2005/11/13 06:37:02 minskim Exp $
+$NetBSD: CHANGES,v 1.11918 2005/11/13 08:33:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5202,3 +5202,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/tex-jadetex to 3.13nb2 [minskim 2005-11-13]
 	Added textproc/tex-xmltex version 1.9 [minskim 2005-11-13]
 	Added print/tex-passivetex version 1.24 [minskim 2005-11-13]
+	Added net/nload version 0.6.0 [minskim 2005-11-13]
