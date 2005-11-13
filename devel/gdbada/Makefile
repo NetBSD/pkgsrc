@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/07/17 19:03:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/13 14:16:05 shannonjr Exp $
 
-DISTNAME=	gdbada-5.3
-PKGREVISION=	1
+DISTNAME=	gdbada-6.3
+#PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=		http://www.johnrshannon.com/download/
 EXTRACT_SUFX=		.tgz
@@ -13,7 +13,7 @@ COMMENT=        GNAT GDB : An Ada 95 Debugger
 # Not yet ported to AMD 64-bit machines or Darwin
 NOT_FOR_PLATFORM=	*-*-x86_64 Darwin-*-*
 
-WRKSRC=		${WRKDIR}/gdb-5.3
+WRKSRC=		${WRKDIR}/gdb-6.3
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GDB_SUBPREFIX=	gdbada
@@ -35,6 +35,9 @@ CONFIGURE_ARGS+=	--datadir=${GDB_PREFIX}/share
 CONFIGURE_ARGS+=	--disable-nls
 USE_MAKEINFO=		YES
 USE_NEW_TEXINFO=	YES
+
+pre-patch:
+	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/pthread.buildlink3.mk"

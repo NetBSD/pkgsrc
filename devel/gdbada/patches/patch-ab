@@ -1,15 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/06/03 11:16:42 shannonjr Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/13 14:16:05 shannonjr Exp $
 
---- bfd/Makefile.am.orig	2002-08-30 08:11:44.000000000 +0000
-+++ bfd/Makefile.am
-@@ -724,8 +724,8 @@ install_libbfd: $(bfdlib_LTLIBRARIES) $(
- 	$(mkinstalldirs) $(DESTDIR)$(bfdincludedir)
- 	@list='$(bfdlib_LTLIBRARIES)'; for p in $$list; do \
- 	  if test -f $$p; then \
--	    echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(bfdlibdir)/$$p"; \
--	    $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(bfdlibdir)/$$p; \
-+	    echo "$(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(bfdlibdir)/$$p"; \
-+	    $(LIBTOOL)  --mode=install $(INSTALL_DATA) $$p $(DESTDIR)$(bfdlibdir)/$$p; \
- 	  else :; fi; \
- 	done
- 	$(INSTALL_DATA) $(BFD_H) $(DESTDIR)$(bfdincludedir)/bfd.h
+--- gdb/ax-gdb.c.orig	2004-10-20 17:11:37.000000000 -0600
++++ gdb/ax-gdb.c
+@@ -743,6 +743,8 @@ gen_usual_unary (struct agent_expr *ax, 
+     case TYPE_CODE_ENUM:
+       value->type = builtin_type_int;
+       break;
++    default:
++      ;
+     }
+ 
+   /* If the value is an lvalue, dereference it.  */

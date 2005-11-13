@@ -1,27 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/06/03 11:16:42 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2005/11/13 14:16:05 shannonjr Exp $
 
---- Makefile.in.orig	2002-12-10 21:30:40.000000000 +0000
-+++ Makefile.in
-@@ -75,10 +75,10 @@ PWD = $${PWDCMD-pwd}
- # cygwin host.
- INSTALL_PROGRAM_ARGS =
+--- gdb/i386bsd-nat.c.orig	2004-10-20 17:12:05.000000000 -0600
++++ gdb/i386bsd-nat.c
+@@ -389,7 +389,7 @@ _initialize_i386bsd_nat (void)
  
--INSTALL = $(SHELL) $$s/install-sh -c
--INSTALL_PROGRAM = $(INSTALL) $(INSTALL_PROGRAM_ARGS)
--INSTALL_SCRIPT = $(INSTALL)
--INSTALL_DATA = $(INSTALL) -m 644
-+INSTALL = $(BSD_INSTALL)
-+INSTALL_PROGRAM = $(BSD_INSTALL_PROGRAM)
-+INSTALL_SCRIPT = $(BSD_INSTALL_SCRIPT)
-+INSTALL_DATA = $(BSD_INSTALL_DATA)
+   /* Override the default value for the offset of the program counter
+      in the sigcontext structure.  */
+-  offset = offsetof (struct sigcontext, sc_pc);
++  offset = offsetof (ucontext_t, uc_mcontext.__gregs[_REG_EIP]);
  
- INSTALL_DOSREL = install-dosrel-fake
+   if (SC_PC_OFFSET != offset)
+     {
+@@ -402,7 +402,7 @@ Please report this to <bug-gdb@gnu.org>.
+   SC_PC_OFFSET = offset;
  
-@@ -707,7 +707,6 @@ INSTALL_MODULES = \
- 	install-perl \
- 	install-prms \
- 	install-rcs \
--	install-readline \
- 	install-recode \
- 	install-sed \
- 	install-send-pr \
+   /* Likewise for the stack pointer.  */
+-  offset = offsetof (struct sigcontext, sc_sp);
++  offset = offsetof (ucontext_t, uc_mcontext.__gregs[_REG_UESP]);
+ 
+   if (SC_SP_OFFSET != offset)
+     {
+@@ -415,7 +415,7 @@ Please report this to <bug-gdb@gnu.org>.
+   SC_SP_OFFSET = offset;
+ 
+   /* And the frame pointer.  */
+-  offset = offsetof (struct sigcontext, sc_fp);
++  offset = offsetof (ucontext_t, uc_stack);
+ 
+   if (SC_FP_OFFSET != offset)
+     {
