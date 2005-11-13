@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 15:59:12 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/11/13 22:40:00 adrianp Exp $
 
-SHA1 (ircd-hybrid-6.2.tgz) = 5ca86d7986d43cd3fc63943fc6100041d7d35aaf
-RMD160 (ircd-hybrid-6.2.tgz) = 8c02e728a68c065a081391e90ea300154bb8a84a
-Size (ircd-hybrid-6.2.tgz) = 638589 bytes
-SHA1 (patch-aa) = 7b4ac6f55779fb698569c6d03bd6de00135f8a31
-SHA1 (patch-ab) = 9c1419f74ec617ecf669880613a0053022c0def8
-SHA1 (patch-ac) = 5025c8e5a1892d09cfd7f48ebb46bec33d502327
-SHA1 (patch-ad) = 6377ecb0b803e6eb0d0af4d95cbeaefbb61b3bf5
-SHA1 (patch-ae) = 4853fc2ece303121b12adcb513992e739a8e5d56
-SHA1 (patch-af) = 1d2b125a1e9eabb108aef398d6bd8ff2db2455a1
-SHA1 (patch-ag) = b66c0151713dd268d43f77305bb09ce5390973ec
+SHA1 (ircd-hybrid-7.1.3.tgz) = 302b7d82f0a40844fb522f476eb6ba957a36a746
+RMD160 (ircd-hybrid-7.1.3.tgz) = 32684e1e39fc361956d8cc57a82cff857993c877
+Size (ircd-hybrid-7.1.3.tgz) = 1167422 bytes
+SHA1 (patch-aa) = 4b1e58cdaca2c6b0f4f1f7a9a81e48dcd54b5613
+SHA1 (patch-ab) = 1f7fbfb91c7ef039c3de26fb36b4c5c036373bc3
+SHA1 (patch-ac) = 5bc7624d7626ecbd5fb0a576cc8538c181fdbd73
+SHA1 (patch-ad) = 7ed782cb6df7586223201847e2cbed56a882154c
