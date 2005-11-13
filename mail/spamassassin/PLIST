@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.16 2005/05/02 20:34:01 reed Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/11/13 22:48:32 heinz Exp $
 @comment Most of this PLIST is auto-generated; see Makefile.
 share/examples/rc.d/spamd
 share/examples/spamassassin/init.pre
 share/examples/spamassassin/local.cf
 share/examples/spamassassin/netbsd_lists.cf
 share/examples/spamassassin/procmailrc.example
+share/examples/spamassassin/v310.pre
 share/spamassassin/languages
 share/spamassassin/triplets.txt
 share/spamassassin/user_prefs.template
