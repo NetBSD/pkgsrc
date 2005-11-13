@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/13 18:36:00 martti Exp $
+
+--- xen_list.pm.orig	2005-11-05 05:23:18.000000000 +0900
++++ xen_list.pm
+@@ -59,7 +59,7 @@ our @ISA = qw( gothix::oobase );
+ 
+ # --- Globals -------------------------------------------------------------
+     
+-our $pn_xen_xm = '/usr/sbin/xm';
++our $pn_xen_xm = '@LOCALBASE@/sbin/xm';
+ my $pn_xm_list = $pn_xen_xm . ' list|';
+ my $pn_xm_info = $pn_xen_xm . ' info|';
+ 
