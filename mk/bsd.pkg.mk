@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1747 2005/11/09 18:42:32 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1748 2005/11/14 04:41:17 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -284,7 +284,7 @@ ${_var_}+=	${${_var_}.*}
 .endfor
 
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
- 
+
 ALL_ENV+=	CC=${CC:Q}
 ALL_ENV+=	CFLAGS=${CFLAGS:M*:Q}
 ALL_ENV+=	CPPFLAGS=${CPPFLAGS:M*:Q}
@@ -677,8 +677,7 @@ _MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
 .endif # DIST_SUBDIR
 
 # Where to put distfiles that don't have any other master site
-MASTER_SITE_LOCAL?= \
-	${MASTER_SITE_BACKUP:=LOCAL_PORTS/} \
+MASTER_SITE_LOCAL?=	${MASTER_SITE_BACKUP:=LOCAL_PORTS/}
 
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
 CKSUMFILES?=	${ALLFILES}
@@ -830,7 +829,7 @@ USE_TOOLS+=	shlock sleep
 .endif
 
 # If MANZ is defined, then we want the final man pages to be compressed.
-# If MANZ is not defined, then we want the final man pages to be 
+# If MANZ is not defined, then we want the final man pages to be
 # uncompressed.
 #
 # We need to figure out if during installation, we need either gunzip or
@@ -838,7 +837,7 @@ USE_TOOLS+=	shlock sleep
 # sets MANCOMPRESSED to "yes" or "no", then it's an indication to the
 # install code that the package itself installed the man pages either
 # compressed or uncompressed.  If a package sets MANCOMPRESSED_IF_MANZ,
-# then the package uses BSD-style makefiles, so we need to determine if 
+# then the package uses BSD-style makefiles, so we need to determine if
 # the BSD-style makefile causes the man pages to be compressed or not.
 #
 .if !defined(_MANCOMPRESSED)
@@ -4725,7 +4724,7 @@ ${DESCR}: ${DESCR_SRC}
 	@\
 	${ECHO}			>>${DESCR} ; \
 	${ECHO} "Homepage:"	>>${DESCR} ; \
-	${ECHO} '${HOMEPAGE}'	>>${DESCR}	
+	${ECHO} '${HOMEPAGE}'	>>${DESCR}
 .endif
 
 .include "../../mk/subst.mk"
