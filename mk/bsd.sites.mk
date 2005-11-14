@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.46 2005/11/11 23:00:18 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.47 2005/11/14 04:50:47 rillig Exp $
 #
 # Default MASTER_SITES
 
@@ -265,7 +265,7 @@ MASTER_SITE_IFARCHIVE+= \
 	http://ifarchive.flavorplex.com/if-archive/ \
 	http://ifarchive.heanet.ie/if-archive/ \
 	http://ifarchive.giga.or.at/if-archive/
- 
+
 MASTER_SITE_FREEBSD+= \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/ \
 	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/distfiles/
@@ -274,7 +274,7 @@ MASTER_SITE_FREEBSD_LOCAL+= \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/ \
 	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/
 
-# The primary backup site. 
+# The primary backup site.
 MASTER_SITE_BACKUP?=	\
 	http://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
