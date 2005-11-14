@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mailgraph.sh,v 1.1.1.1 2004/12/31 21:36:59 kim Exp $
+# $NetBSD: mailgraph.sh,v 1.2 2005/11/14 12:34:57 kleink Exp $
 #
 
 # PROVIDE: mailgraph
@@ -11,7 +11,7 @@
 name="@PKGBASE@"
 rcvar=$name
 pidfile="@VARBASE@/run/${name}.pid"
-command_interpreter="@PERL@"
+command_interpreter="@PERL5@"
 command="@PREFIX@/sbin/mailgraph"
 command_args="-d"
 
