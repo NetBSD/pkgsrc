@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.350 2005/11/14 04:30:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.351 2005/11/14 04:38:27 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -599,7 +599,7 @@ use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 use constant regex_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
-use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
+use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}\[]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
 # Global variables
 
@@ -1462,7 +1462,7 @@ sub get_tool_names() {
 				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+)$") {
 					$tools->{$value} = true;
 
-				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD|_TOOLS_VARNAME)\.([-\w.]+)$") {
+				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD|_TOOLS_VARNAME)\.([-\w.]+|\[)$") {
 					$tools->{$1} = true;
 
 				} elsif ($varname eq "_TOOLS.x11-clients") {
@@ -1622,7 +1622,7 @@ sub checktext_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Tool") {
-		if ($value =~ qr"^([-\w]+)(?::(\w+))?$") {
+		if ($value =~ qr"^([-\w]+|\[)(?::(\w+))?$") {
 			my ($toolname, $tooldep) = ($1, $2);
 			if (!exists(get_tool_names()->{$toolname})) {
 				$line->log_error("Unknown tool \"${toolname}\".");
