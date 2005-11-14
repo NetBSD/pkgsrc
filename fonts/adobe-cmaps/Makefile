@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/14 05:57:41 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/14 05:58:07 minskim Exp $
 
 DISTNAME=	adobe-cmaps-20040605
 CATEGORIES=	fonts print
@@ -24,12 +24,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://partners.adobe.com/asn/acrobat/technotes.jsp
 COMMENT=	Adobe CMap files for CJK
 
-DIST_SUBDIR=		${PKGNAME_NOREV}
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
-USE_TOOLS+=		unzip
+DIST_SUBDIR=	${PKGNAME_NOREV}
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+USE_TOOLS+=	unzip
 
-RESOURCEDIR=		${PREFIX}/share/Adobe/Resource
+RESOURCEDIR=	${PREFIX}/share/Adobe/Resource
 
 do-install:
 	${INSTALL_DATA_DIR} ${RESOURCEDIR}
