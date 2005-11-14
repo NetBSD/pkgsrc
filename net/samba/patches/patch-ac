@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.12 2004/01/11 02:26:31 jlam Exp $
+$NetBSD: patch-ac,v 1.13 2005/11/14 08:05:27 jlam Exp $
 
---- include/local.h.orig	Fri Nov  7 12:37:33 2003
+--- include/local.h.orig	2005-10-12 13:03:38.000000000 -0400
 +++ include/local.h
 @@ -170,10 +170,10 @@
   * Default passwd chat script.
