@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.21 2005/11/11 10:50:14 rillig Exp $
+# $NetBSD: printindex,v 1.22 2005/11/14 21:37:16 rillig Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -126,7 +126,7 @@ for pkgdir in $list :detect_duplicates: $BULK_PREREQ; do
 
 			case $have_brokenbasedir in
 			yes)	broken_path="${brokenbasedir}/${pkgdir}/${brokenfile}"
-				${MKDIR} "${brokendir}"
+				${MKDIR} "${brokenbasedir}/${pkgdir}"
 				;;
 			*)	broken_path="${brokenfile}"
 				;;
