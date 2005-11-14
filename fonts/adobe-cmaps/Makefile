@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2005/11/14 05:58:07 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/14 06:05:20 minskim Exp $
 
-DISTNAME=	adobe-cmaps-20040605
+DISTNAME=	adobe-cmaps-20051109
 CATEGORIES=	fonts print
 MASTER_SITES=	# empty
 
-CMAP_FILES=	ac14 ag14 ai0 aj16 aj20 ak12
+CMAP_FILES=	ac15 ag14 ai0 aj16 aj20 ak12
 RKSJ_FILES=	rksj-cmaps
 CMAP_DISTFILES=	${CMAP_FILES:S/$/.tar.Z/} ${RKSJ_FILES:S/$/.tar.Z/}
 .for FILE in ${CMAP_DISTFILES}
@@ -20,8 +20,8 @@ SITES_${FILE}+=	http://partners.adobe.com/public/developer/en/pdf/
 .endfor
 DISTFILES+=	${PDFCORE_DISTFILES}
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://partners.adobe.com/asn/acrobat/technotes.jsp
+MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://partners.adobe.com/public/developer/opentype/
 COMMENT=	Adobe CMap files for CJK
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
