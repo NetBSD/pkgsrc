@@ -1,0 +1,31 @@
+$NetBSD: patch-ay,v 1.1 2005/11/14 08:05:27 jlam Exp $
+
+--- script/installswat.sh.orig	2005-10-12 13:03:44.000000000 -0400
++++ script/installswat.sh
+@@ -84,7 +84,7 @@ if [ -d $SRCDIR../docs/htmldocs/ ]; then
+       
+       INSTALLDIR=$SWATDIR/help/`echo $dir | sed 's/htmldocs\///g'`
+       if [ ! -d $INSTALLDIR ]; then
+-        mkdir $INSTALLDIR
++        mkdir -p $INSTALLDIR
+       fi
+ 
+       for f in $SRCDIR../docs/$dir/*.html; do
+@@ -96,7 +96,7 @@ if [ -d $SRCDIR../docs/htmldocs/ ]; then
+ 
+       if [ -d $SRCDIR../docs/$dir/images/ ]; then
+           if [ ! -d $INSTALLDIR/images/ ]; then
+-              mkdir $INSTALLDIR/images
++              mkdir -p $INSTALLDIR/images
+               if [ ! -d $INSTALLDIR/images/ ]; then
+                   echo Failed to make directory $SWATDIR/help/images, does $USER have privileges?
+                   exit 1
+@@ -120,7 +120,7 @@ if [ "x$BOOKDIR" != "x" -a -f $SRCDIR../
+ 
+     for d in $BOOKDIR $BOOKDIR/figs ; do
+         if [ ! -d $d ]; then
+-            mkdir $d
++            mkdir -p $d
+             if [ ! -d $d ]; then
+                 echo Failed to make directory $d, does $USER have privileges?
+                 exit 1

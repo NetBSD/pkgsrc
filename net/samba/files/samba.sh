@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: samba.sh,v 1.16 2005/03/08 01:36:16 lukem Exp $
+# $NetBSD: samba.sh,v 1.17 2005/11/14 08:05:27 jlam Exp $
 #
 # KEYWORD: nostart
 #
@@ -10,9 +10,7 @@
 #	which are controlled via their appropriate rc.conf(5) settings.
 #
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+. /etc/rc.subr
 
 rcd_dir=`@DIRNAME@ $0`
 
@@ -42,7 +40,7 @@ reverse_commands()
 	done
 }
 
-COMMAND_LIST="nmbd smbd winbindd"
+COMMAND_LIST="nmbd winbindd smbd"
 
 name="samba"
 start_cmd="forward_commands"
@@ -51,10 +49,4 @@ reload_cmd="forward_commands"
 status_cmd="forward_commands"
 extra_commands="reload status"
 
-if [ -f /etc/rc.subr ]; then
-	run_rc_command "$1"
-else
-	@ECHO@ -n " ${name}"
-	_arg="$1"
-	${start_cmd}
-fi
+run_rc_command "$1"

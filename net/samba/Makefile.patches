@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.patches,v 1.1 2005/11/14 08:05:27 jlam Exp $
+#
+# This Makefile fragment describes the recommended patches for the
+# currently packaged version of Samba.  All recommended patches for
+# particular release of Samba are also integrated into the next release
+# of Samba, so upon updating to the latest release of Samba, the
+# PATCHFILES variable should be empty.
+#
+
+# The PATCHFILES are listed in chronological order according to the time
+# they are added to ${PATCH_SITES}.
+#
+PATCH_SITES=	http://www.samba.org/samba/patches/
+PATCHFILES=	# empty
+
+PATCHFILES+=	print_lprm.patch
+PATCH_DIST_STRIP.print_lprm.patch=	-p2
+
+PATCHFILES+=	quota.patch
+PATCH_DIST_STRIP.quota.patch=           -p2
+
+PATCHFILES+=	bug3201_wbinfo.patch
+PATCH_DIST_STRIP.bug3201_wbinfo.patch=  -p0
