@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/11/11 16:04:29 joerg Exp $
+$NetBSD: distinfo,v 1.6 2005/11/14 08:56:07 markd Exp $
 
 SHA1 (libtunepimp-0.3.0.tar.gz) = 54c60232f3b06f2316e2b1130eb981352995dfc8
 RMD160 (libtunepimp-0.3.0.tar.gz) = f471f96185aa79eff8a83fd5366904d009791628
@@ -6,3 +6,4 @@ Size (libtunepimp-0.3.0.tar.gz) = 524889 bytes
 SHA1 (patch-aa) = 5dc5f48d01b7b1cdc1462f0bf07d0eb917fdb3c7
 SHA1 (patch-ab) = 1f5c3ea550800edac66ee8c7365cf436811233a9
 SHA1 (patch-ac) = d117d9df0b0811b1ef046920c2f1c32ce3378c5f
+SHA1 (patch-ad) = 0d6ca1a3778fe5a87bb5578a3b668ff0c39063d1
