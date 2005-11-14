@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2005/09/27 19:24:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/11/14 21:03:29 veego Exp $
 #
 
-DISTNAME=		BitTornado-0.3.13
+DISTNAME=		BitTornado-0.3.14
 CATEGORIES=		net
 MASTER_SITES=		http://www.bittornado.com/download/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		veego@NetBSD.org
 HOMEPAGE=		http://bittornado.com/
 COMMENT=		Experimental bittorrent client
 
