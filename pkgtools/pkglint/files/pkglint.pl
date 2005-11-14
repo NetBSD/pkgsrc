@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.355 2005/11/14 12:32:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.356 2005/11/14 12:51:57 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1573,6 +1573,11 @@ sub checktext_basic_vartype($$$$$) {
 
 		} else {
 			$line->log_warning("Unknown dependency format.");
+		}
+
+	} elsif ($type eq "DistSuffix") {
+		if ($value eq ".tar.gz") {
+			$line->log_note("\"${varname} is \".tar.gz\" by default, so this definition may be redundant.");
 		}
 
 	} elsif ($type eq "Filename") {
