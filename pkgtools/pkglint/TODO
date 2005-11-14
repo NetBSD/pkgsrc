@@ -17,3 +17,5 @@
   ${WRKSRC}. When that is finished, add a warning that using ${XARGS}
   is insecure.
 * detect spelling errors (like CONFLICT => CONFLICTS)
+* warn about the use of ${WRKDIR:=...}, as this construct should only
+  be used with lists.
