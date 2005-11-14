@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.5 2005/11/14 08:05:27 jlam Exp $
+
+--- sam/idmap_rid.c.orig	2005-10-12 13:03:38.000000000 -0400
++++ sam/idmap_rid.c
+@@ -24,8 +24,6 @@
+ #undef DBGC_CLASS
+ #define DBGC_CLASS DBGC_IDMAP
+ 
+-NTSTATUS init_module(void);
+-
+ struct dom_entry {
+ 	fstring name;
+ 	fstring sid;
+@@ -548,7 +546,7 @@ static struct idmap_methods rid_methods 
+ 	rid_idmap_status
+ };
+ 
+-NTSTATUS init_module(void)
++NTSTATUS idmap_rid_init(void)
+ {
+ 	return smb_register_idmap(SMB_IDMAP_INTERFACE_VERSION, "idmap_rid", &rid_methods);
+ 	return smb_register_idmap(SMB_IDMAP_INTERFACE_VERSION, "rid", &rid_methods);

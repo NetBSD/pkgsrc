@@ -1,0 +1,68 @@
+$NetBSD: patch-bs,v 1.1 2005/11/14 08:05:28 jlam Exp $
+
+--- param/loadparm.c.orig	2005-10-12 13:03:28.000000000 -0400
++++ param/loadparm.c
+@@ -106,6 +106,7 @@ typedef struct
+ 	char *szDeletePrinterCommand;
+ 	char *szOs2DriverMap;
+ 	char *szLockDir;
++	char *szStateDir;
+ 	char *szPidDir;
+ 	char *szRootdir;
+ 	char *szDefaultService;
+@@ -275,6 +276,7 @@ typedef struct
+ 	BOOL bUnixPasswdSync;
+ 	BOOL bPasswdChatDebug;
+ 	int iPasswdChatTimeout;
++	BOOL bPasswdExpandGecos;
+ 	BOOL bTimestampLogs;
+ 	BOOL bNTSmbSupport;
+ 	BOOL bNTPipeSupport;
+@@ -844,6 +846,7 @@ static struct parm_struct parm_table[] =
+ 	{"passwd chat", P_STRING, P_GLOBAL, &Globals.szPasswdChat, NULL, NULL, FLAG_ADVANCED}, 
+ 	{"passwd chat debug", P_BOOL, P_GLOBAL, &Globals.bPasswdChatDebug, NULL, NULL, FLAG_ADVANCED}, 
+ 	{"passwd chat timeout", P_INTEGER, P_GLOBAL, &Globals.iPasswdChatTimeout, NULL, NULL, FLAG_ADVANCED}, 
++	{"passwd expand gecos", P_BOOL, P_GLOBAL, &Globals.bPasswdExpandGecos, NULL, NULL, FLAG_ADVANCED}, 
+ 	{"check password script", P_STRING, P_GLOBAL, &Globals.szCheckPasswordScript, NULL, NULL, FLAG_ADVANCED}, 
+ 	{"username map", P_STRING, P_GLOBAL, &Globals.szUsernameMap, NULL, NULL, FLAG_ADVANCED}, 
+ 	{"password level", P_INTEGER, P_GLOBAL, &Globals.pwordlevel, NULL, NULL, FLAG_ADVANCED}, 
+@@ -1160,6 +1163,7 @@ static struct parm_struct parm_table[] =
+ 	{"auto services", P_STRING, P_GLOBAL, &Globals.szAutoServices, NULL, NULL, FLAG_ADVANCED}, 
+ 	{"lock directory", P_STRING, P_GLOBAL, &Globals.szLockDir, NULL, NULL, FLAG_ADVANCED}, 
+ 	{"lock dir", P_STRING, P_GLOBAL, &Globals.szLockDir, NULL, NULL, FLAG_HIDE}, 
++	{"state directory", P_STRING, P_GLOBAL, &Globals.szStateDir, NULL, NULL, FLAG_ADVANCED}, 
+ 	{"pid directory", P_STRING, P_GLOBAL, &Globals.szPidDir, NULL, NULL, FLAG_ADVANCED}, 
+ #ifdef WITH_UTMP
+ 	{"utmp directory", P_STRING, P_GLOBAL, &Globals.szUtmpDir, NULL, NULL, FLAG_ADVANCED}, 
+@@ -1402,6 +1406,7 @@ static void init_globals(void)
+ 	string_set(&Globals.szPasswdProgram, "");
+ 	string_set(&Globals.szPidDir, dyn_PIDDIR);
+ 	string_set(&Globals.szLockDir, dyn_LOCKDIR);
++	string_set(&Globals.szStateDir, dyn_STATEDIR);
+ 	string_set(&Globals.szSocketAddress, "0.0.0.0");
+ 	pstrcpy(s, "Samba ");
+ 	pstrcat(s, SAMBA_VERSION_STRING);
+@@ -1480,6 +1485,7 @@ static void init_globals(void)
+ 	Globals.bPamPasswordChange = False;
+ 	Globals.bPasswdChatDebug = False;
+ 	Globals.iPasswdChatTimeout = 2; /* 2 second default. */
++	Globals.bPasswdExpandGecos = False;
+ 	Globals.bNTPipeSupport = True;	/* Do NT pipes by default. */
+ 	Globals.bNTStatusSupport = True; /* Use NT status by default. */
+ 	Globals.bStatCache = True;	/* use stat cache by default */
+@@ -1705,6 +1711,7 @@ FN_GLOBAL_STRING(lp_addprinter_cmd, &Glo
+ FN_GLOBAL_STRING(lp_deleteprinter_cmd, &Globals.szDeletePrinterCommand)
+ FN_GLOBAL_STRING(lp_os2_driver_map, &Globals.szOs2DriverMap)
+ FN_GLOBAL_STRING(lp_lockdir, &Globals.szLockDir)
++FN_GLOBAL_STRING(lp_statedir, &Globals.szStateDir)
+ FN_GLOBAL_STRING(lp_piddir, &Globals.szPidDir)
+ FN_GLOBAL_STRING(lp_mangling_method, &Globals.szManglingMethod)
+ FN_GLOBAL_INTEGER(lp_mangle_prefix, &Globals.mangle_prefix)
+@@ -1833,6 +1840,7 @@ FN_GLOBAL_BOOL(lp_pam_password_change, &
+ FN_GLOBAL_BOOL(lp_unix_password_sync, &Globals.bUnixPasswdSync)
+ FN_GLOBAL_BOOL(lp_passwd_chat_debug, &Globals.bPasswdChatDebug)
+ FN_GLOBAL_INTEGER(lp_passwd_chat_timeout, &Globals.iPasswdChatTimeout)
++FN_GLOBAL_BOOL(lp_passwd_expand_gecos, &Globals.bPasswdExpandGecos)
+ FN_GLOBAL_BOOL(lp_nt_pipe_support, &Globals.bNTPipeSupport)
+ FN_GLOBAL_BOOL(lp_nt_status_support, &Globals.bNTStatusSupport)
+ FN_GLOBAL_BOOL(lp_stat_cache, &Globals.bStatCache)
