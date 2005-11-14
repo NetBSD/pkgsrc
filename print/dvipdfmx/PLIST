@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/09 00:22:39 tonio Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/11/14 17:01:36 minskim Exp $
 bin/dvipdfmx
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/78-EUC-H
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/78-EUC-V
@@ -27,6 +27,7 @@ ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-CNS1-1
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-CNS1-2
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-CNS1-3
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-CNS1-4
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-CNS1-5
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-CNS1-UCS2
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-0
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-1
