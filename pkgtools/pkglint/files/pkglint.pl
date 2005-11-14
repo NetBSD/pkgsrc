@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.353 2005/11/14 05:57:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.354 2005/11/14 11:45:52 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -502,20 +502,24 @@ use constant conf_datadir	=> '@DATADIR@';
 
 # Command Line Options
 
+my $opt_check_ALTERNATIVES = true;
 my $opt_check_bl3	= true;
 my $opt_check_DESCR	= true;
 my $opt_check_distinfo	= true;
-my $opt_check_extra	= true;
+my $opt_check_extra	= false;
+my $opt_check_INSTALL	= true;
 my $opt_check_Makefile	= true;
 my $opt_check_MESSAGE	= true;
 my $opt_check_mk	= true;
 my $opt_check_patches	= true;
 my $opt_check_PLIST	= true;
 my (%checks) = (
+	"ALTERNATIVES"	=> [\$opt_check_ALTERNATIVES, "check ALTERNATIVES files"],
 	"bl3"		=> [\$opt_check_bl3, "check buildlink3 files"],
 	"DESCR"		=> [\$opt_check_DESCR, "check DESCR file"],
 	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
 	"extra"		=> [\$opt_check_extra, "check various additional files"],
+	"INSTALL"	=> [\$opt_check_INSTALL, "check INSTALL and DEINSTALL scripts"],
 	"Makefile"	=> [\$opt_check_Makefile, "check Makefiles"],
 	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
 	"mk"		=> [\$opt_check_mk, "check other .mk files"],
@@ -2252,6 +2256,32 @@ sub load_package_Makefile($$$) {
 	return true;
 }
 
+sub checkfile_ALTERNATIVES($) {
+	my ($fname) = @_;
+	my ($lines);
+
+	log_subinfo("checkfile_ALTERNATIVES", $fname, NO_LINE_NUMBER, undef);
+
+	checkperms($fname);
+	if (!($lines = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+}
+
+sub checkfile_INSTALL($) {
+	my ($fname) = @_;
+	my ($lines);
+
+	log_subinfo("checkfile_INSTALL", $fname, NO_LINE_NUMBER, undef);
+
+	checkperms($fname);
+	if (!($lines = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+}
+
 sub checkfile_mk($) {
 	my ($fname) = @_;
 	my ($lines);
@@ -2548,6 +2578,77 @@ sub checkfile_package_Makefile($$$) {
 	checklines_Makefile_varuse($lines);
 }
 
+sub checkfile($) {
+	my ($fname) = @_;
+	my ($st, $basename);
+
+	log_subinfo("checkfile", $fname, NO_LINE_NUMBER, undef);
+
+	$basename = basename($fname);
+	if ($basename =~ qr"^(?:work.*|.*~|.*\.orig|.*\.rej)$") {
+		if ($opt_import) {
+			log_error($fname, NO_LINE_NUMBER, "Must be cleaned up before committing the package.");
+		}
+		return;
+	}
+
+	if (!($st = lstat($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "$!");
+		return;
+	}
+	if (S_ISDIR($st->mode)) {
+		if ($basename eq "files" || $basename eq "patches" || $basename eq "CVS") {
+			# Ok
+
+		} else {
+			log_warning($fname, NO_LINE_NUMBER, "Unknown directory name.");
+		}
+
+	} elsif (!S_ISREG($st->mode)) {
+		log_error($fname, NO_LINE_NUMBER, "Only files and directories are allowed in pkgsrc.");
+
+	} elsif ($basename eq "ALTERNATIVES") {
+		$opt_check_ALTERNATIVES and checkfile_ALTERNATIVES($fname);
+
+	} elsif ($basename eq "buildlink3.mk") {
+		$opt_check_bl3 and checkfile_mk($fname);
+
+	} elsif ($basename =~ qr"^(?:.*\.mk|Makefile.*)$") {
+		$opt_check_mk and checkfile_mk($fname);
+
+	} elsif ($basename =~ qr"^DESCR") {
+		$opt_check_DESCR and checkfile_DESCR($fname);
+
+	} elsif ($basename =~ qr"^distinfo") {
+		$opt_check_distinfo and checkfile_distinfo($fname);
+
+	} elsif ($basename eq "DEINSTALL" || $basename eq "INSTALL") {
+		$opt_check_INSTALL and checkfile_INSTALL($fname);
+
+	} elsif ($basename =~ qr"^MESSAGE") {
+		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
+
+	} elsif ($basename =~ qr"^patch-[A-Za-z0-9]*$") {
+		$opt_check_patches and checkfile_patches_patch($fname);
+
+	} elsif ($fname =~ qr"(?:^|/)patches/[^/]*$") {
+		log_warning($fname, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
+
+	} elsif ($basename =~ qr"^PLIST") {
+		$opt_check_PLIST and checkfile_PLIST($fname);
+
+	} elsif ($basename eq "TODO") {
+		# Ok
+
+	} elsif (!-T $fname) {
+		log_warning($fname, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
+
+	} else {
+		log_warning($fname, NO_LINE_NUMBER, "Unexpected file found.");
+		$opt_check_extra and checkfile_extra($fname);
+	}
+}
+
 sub checkdir_root() {
 	my ($fname) = "${current_dir}/Makefile";
 	my ($lines, $prev_subdir, @subdirs);
@@ -2786,49 +2887,6 @@ sub checkdir_category() {
 	}
 }
 
-sub checkfile($) {
-	my ($fname) = @_;
-
-	if      ($fname =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
-		if ($opt_import) {
-			log_error($fname, NO_LINE_NUMBER, "Must be cleaned up before committing the package.");
-		}
-
-	} elsif (!-f $fname) {
-		# We don't have a check for non-regular files yet.
-
-	} elsif ($fname =~ qr"(?:^|/)buildlink3\.mk$") {
-		$opt_check_bl3 and checkfile_mk($fname);
-
-	} elsif ($fname =~ qr"\.mk$") {
-		$opt_check_mk and checkfile_mk($fname);
-
-	} elsif ($fname =~ qr"(?:^|/)DESCR[^/]*$") {
-		$opt_check_DESCR and checkfile_DESCR($fname);
-
-	} elsif ($fname =~ qr"(?:^|/)distinfo$") {
-		$opt_check_distinfo and checkfile_distinfo($fname);
-
-	} elsif ($fname =~ qr"(?:^|/)MESSAGE[^/]*$") {
-		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
-
-	} elsif ($fname =~ qr"(?:^|/)PLIST[^/]*$") {
-		$opt_check_PLIST and checkfile_PLIST($fname);
-
-	} elsif ($fname =~ qr"(?:^|/)patches/patch-[A-Za-z0-9]*$") {
-		$opt_check_patches and checkfile_patches_patch($fname);
-
-	} elsif ($fname =~ qr"(?:^|/)patches/[^/]*$") {
-		log_warning($fname, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
-
-	} elsif (-T $fname) {
-		$opt_check_extra and checkfile_extra($fname);
-
-	} else {
-		log_warning($fname, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
-	}
-}
-
 sub checkdir_package() {
 	my ($whole, $lines, $have_distinfo, $have_patches);
 
@@ -2842,7 +2900,9 @@ sub checkdir_package() {
 	if ($pkgdir ne ".") {
 		push(@files, <${current_dir}/${pkgdir}/*>);
 	}
-	push(@files, <${current_dir}/${filesdir}/*>);
+	if ($opt_check_extra) {
+		push(@files, <${current_dir}/${filesdir}/*>);
+	}
 	push(@files, <${current_dir}/${patchdir}/*>);
 	if ($distinfo_file !~ qr"^(?:\./)?distinfo$") {
 		push(@files, "${current_dir}/${distinfo_file}");

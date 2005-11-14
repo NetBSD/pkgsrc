@@ -52,6 +52,10 @@ DDEESSCCRRIIPPTTIIOONN
 
            nnoonnee                Disable all checks.
 
+           [[nnoo--]]AALLTTEERRNNAATTIIVVEESS   Check the alternatives file.
+
+           [[nnoo--]]IINNSSTTAALLLL        Check the INSTALL and DEINSTALL scripts.
+
            [[nnoo--]]MMaakkeeffiillee       Check the package Makefile, including all
                                included files.
 
