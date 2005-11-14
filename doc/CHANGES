@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11926 2005/11/14 02:42:44 minskim Exp $
+$NetBSD: CHANGES,v 1.11927 2005/11/14 03:12:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5213,3 +5213,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/ircd-hybrid to 7.1.3 [adrianp 2005-11-13]
 	Updated comms/hylafax to 4.2.2 [wiz 2005-11-13]
 	Updated print/tex-IEEEtran to 1.6cnb2 [minskim 2005-11-14]
+	Added databases/py-mssql version 0.7.3 [minskim 2005-11-14]
