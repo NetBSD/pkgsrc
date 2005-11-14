@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/07 22:30:13 seb Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/14 08:58:51 seb Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -46,9 +46,9 @@ INSTALLATION_DIRS+=	sbin
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 
-LIBKVER_STANDALONE_DIR?=	/libkver
+LIBKVER_STANDALONE_PREFIX?=	/libkver
 standalone-install:
-	${MAKE} ${MAKEFLAGS} PKG_DBDIR=${LIBKVER_STANDALONE_DIR}/pkg	\
-	  PREFIX=${LIBKVER_STANDALONE_DIR} install
+	${MAKE} ${MAKEFLAGS} PKG_DBDIR=${LIBKVER_STANDALONE_PREFIX}/pkg	\
+	  PREFIX=${LIBKVER_STANDALONE_PREFIX} install
 
 .include "../../mk/bsd.pkg.mk"
