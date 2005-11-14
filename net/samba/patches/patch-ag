@@ -1,54 +1,23 @@
-$NetBSD: patch-ag,v 1.4 2004/11/13 21:48:11 kim Exp $
+$NetBSD: patch-ag,v 1.5 2005/11/14 08:05:27 jlam Exp $
 
---- passdb/passdb.c.orig	2004-08-19 09:39:13.000000000 -0400
-+++ passdb/passdb.c	2004-10-28 00:22:15.000000000 -0400
-@@ -246,6 +246,11 @@
+--- passdb/passdb.c.orig	2005-10-12 13:03:35.000000000 -0400
++++ passdb/passdb.c
+@@ -246,6 +246,7 @@ static NTSTATUS pdb_set_sam_sids(SAM_ACC
  NTSTATUS pdb_fill_sam_pw(SAM_ACCOUNT *sam_account, const struct passwd *pwd)
  {
  	NTSTATUS ret;
-+#ifdef BSD
-+# define BUFLEN 1024
-+	char *bp, *gecos, *p, buf[BUFLEN];
-+	int buflen;
-+#endif
++	char *gecos;
  
  	if (!pwd) {
  		return NT_STATUS_UNSUCCESSFUL;
-@@ -254,7 +259,37 @@
+@@ -254,7 +255,9 @@ NTSTATUS pdb_fill_sam_pw(SAM_ACCOUNT *sa
  	pdb_fill_default_sam(sam_account);
  
  	pdb_set_username(sam_account, pwd->pw_name, PDB_SET);
-+ 
-+#ifdef BSD
-+	gecos = pwd->pw_gecos;
-+	if (*gecos == '*')
-+		gecos++;
-+	bp = buf;
-+
-+	/* copy gecos, interpolating & to be full name */
-+	for (p = gecos; *p != '\0'; p++) {
-+		if (bp >= &buf[BUFLEN - 1]) {
-+			/* buffer overflow */
-+			gecos = pwd->pw_name;
-+			goto gecos_done;
-+		}
-+		if (*p == '&') {
-+			/* interpolate full name */
-+			snprintf(bp, BUFLEN - (bp - buf), "%s", pwd->pw_name);
-+			*bp = toupper(*bp);
-+			bp += strlen(bp);
-+		}
-+		else
-+			*bp++ = *p;
-+	}
-+	*bp = '\0';
-+	gecos = buf;
-+
-+  gecos_done:
+-	pdb_set_fullname(sam_account, pwd->pw_gecos, PDB_SET);
++	gecos = passwd_expand_gecos(pwd);
 +	pdb_set_fullname(sam_account, gecos, PDB_SET);
-+#else
- 	pdb_set_fullname(sam_account, pwd->pw_gecos, PDB_SET);
-+#endif
++	SAFE_FREE(gecos);
  
  	pdb_set_unix_homedir(sam_account, pwd->pw_dir, PDB_SET);
  

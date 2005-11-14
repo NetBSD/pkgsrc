@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2004/09/15 08:51:44 adam Exp $
+$NetBSD: patch-ab,v 1.24 2005/11/14 08:05:27 jlam Exp $
 
---- script/installbin.sh.orig	2004-09-15 10:28:42.000000000 +0000
+--- script/installbin.sh.orig	2005-10-12 13:03:44.000000000 -0400
 +++ script/installbin.sh
-@@ -22,6 +22,7 @@ for p in $*; do
+@@ -22,11 +22,12 @@ for p in $*; do
   fi
   cp $p $BINDIR/
   chmod $INSTALLPERMS $BINDIR/$p2
@@ -10,3 +10,9 @@ $NetBSD: patch-ab,v 1.23 2004/09/15 08:51:44 adam Exp $
  
   # this is a special case, mount needs this in a specific location
   if [ $p2 = smbmount ]; then
+    if [ ! -d $DESTDIR/sbin ]; then
+-      mkdir $DESTDIR/sbin
++      mkdir -p $DESTDIR/sbin
+    fi 
+    ln -sf $BINDIR/$p2 $DESTDIR/sbin/mount.smbfs
+  fi

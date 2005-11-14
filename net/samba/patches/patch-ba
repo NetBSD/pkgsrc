@@ -1,0 +1,86 @@
+$NetBSD: patch-ba,v 1.1 2005/11/14 08:05:27 jlam Exp $
+
+--- Makefile.in.orig	2005-10-12 13:03:23.000000000 -0400
++++ Makefile.in
+@@ -90,6 +90,9 @@ SWATDIR = @swatdir@
+ # the directory where lock files go
+ LOCKDIR = @lockdir@
+ 
++# the directory where persistent-state files go
++STATEDIR = @statedir@
++
+ # the directory where pid files go
+ PIDDIR = @piddir@
+ 
+@@ -113,7 +116,7 @@ PASSWD_FLAGS = -DSMB_PASSWD_FILE=\"$(SMB
+ PATH_FLAGS1 = -DCONFIGFILE=\"$(CONFIGFILE)\"  -DSBINDIR=\"$(SBINDIR)\"
+ PATH_FLAGS2 = $(PATH_FLAGS1) -DBINDIR=\"$(BINDIR)\" -DDRIVERFILE=\"$(DRIVERFILE)\" 
+ PATH_FLAGS3 = $(PATH_FLAGS2) -DLMHOSTSFILE=\"$(LMHOSTSFILE)\" 
+-PATH_FLAGS4 = $(PATH_FLAGS3) -DSWATDIR=\"$(SWATDIR)\"  -DLOCKDIR=\"$(LOCKDIR)\" -DPIDDIR=\"$(PIDDIR)\"
++PATH_FLAGS4 = $(PATH_FLAGS3) -DSWATDIR=\"$(SWATDIR)\" -DLOCKDIR=\"$(LOCKDIR)\" -DSTATEDIR=\"$(STATEDIR)\" -DPIDDIR=\"$(PIDDIR)\"
+ PATH_FLAGS5 = $(PATH_FLAGS4) -DLIBDIR=\"$(LIBDIR)\" \
+ 	      -DLOGFILEBASE=\"$(LOGFILEBASE)\" -DSHLIBEXT=\"@SHLIBEXT@\"
+ PATH_FLAGS6 = $(PATH_FLAGS5) -DCONFIGDIR=\"$(CONFIGDIR)\"
+@@ -908,7 +911,7 @@ bin/pdbedit@EXEEXT@: $(PDBEDIT_OBJ) @BUI
+ 
+ bin/smbget@EXEEXT@: $(SMBGET_OBJ) @BUILD_POPT@ bin/.dummy
+ 	@echo Linking $@
+-	@$(CC) $(FLAGS) @PIE_LDFLAGS@ -o $@ $(SMBGET_OBJ) $(LDFLAGS) $(DYNEXP) $(LIBS) @POPTLIBS@  $(KRB5LIBS) $(LDAP_LIBS)
++	@$(CC) $(FLAGS) @PIE_LDFLAGS@ -o $@ $(SMBGET_OBJ) $(LDFLAGS) $(DYNEXP) $(LIBS) @POPTLIBS@  $(KRB5LIBS) $(LDAP_LIBS) $(PASSDB_LIBS)
+ 
+ bin/samtest@EXEEXT@: $(SAMTEST_OBJ) @BUILD_POPT@ bin/.dummy
+ 	@echo Linking $@
+@@ -936,11 +939,11 @@ bin/msgtest@EXEEXT@: $(MSGTEST_OBJ) bin/
+ 
+ bin/smbcacls@EXEEXT@: $(SMBCACLS_OBJ) @BUILD_POPT@ bin/.dummy
+ 	@echo Linking $@
+-	@$(CC) $(FLAGS) @PIE_LDFLAGS@ -o $@ $(SMBCACLS_OBJ) $(DYNEXP) $(LDFLAGS) $(LIBS) @POPTLIBS@ $(KRB5LIBS) $(LDAP_LIBS)
++	@$(CC) $(FLAGS) @PIE_LDFLAGS@ -o $@ $(SMBCACLS_OBJ) $(DYNEXP) $(LDFLAGS) $(LIBS) @POPTLIBS@ $(KRB5LIBS) $(LDAP_LIBS) $(PASSDB_LIBS)
+ 
+ bin/smbcquotas@EXEEXT@: $(SMBCQUOTAS_OBJ) @BUILD_POPT@ bin/.dummy
+ 	@echo Linking $@
+-	@$(CC) $(FLAGS) @PIE_LDFLAGS@ -o $@ $(SMBCQUOTAS_OBJ) $(DYNEXP) $(LDFLAGS) $(LIBS) @POPTLIBS@ $(KRB5LIBS) $(LDAP_LIBS)
++	@$(CC) $(FLAGS) @PIE_LDFLAGS@ -o $@ $(SMBCQUOTAS_OBJ) $(DYNEXP) $(LDFLAGS) $(LIBS) @POPTLIBS@ $(KRB5LIBS) $(LDAP_LIBS) $(PASSDB_LIBS)
+ 
+ bin/locktest@EXEEXT@: $(LOCKTEST_OBJ) bin/.dummy
+ 	@echo Linking $@
+@@ -995,7 +998,7 @@ bin/smbwrapper.@SHLIBEXT@: $(PICOBJS) bi
+ bin/libsmbclient.@SHLIBEXT@: $(LIBSMBCLIENT_PICOBJS)
+ 	@echo Linking libsmbclient shared library $@
+ 	@$(SHLD) $(LDSHFLAGS) -o $@ $(LIBSMBCLIENT_PICOBJS) $(LDFLAGS) $(LIBS) \
+-		$(KRB5LIBS) $(LDAP_LIBS) \
++		$(KRB5LIBS) $(LDAP_LIBS) $(PASSDB_LIBS) \
+ 		@SONAMEFLAG@`basename $@`.$(LIBSMBCLIENT_MAJOR)
+ 
+ bin/libsmbclient.a: $(LIBSMBCLIENT_PICOBJS)
+@@ -1275,11 +1278,11 @@ bin/ntlm_auth@EXEEXT@: $(NTLM_AUTH_OBJ) 
+ 	@echo Linking $@
+ 	@$(CC) $(FLAGS) @PIE_LDFLAGS@ -o $@ $(LDFLAGS) $(DYNEXP) $(NTLM_AUTH_OBJ) \
+ 		$(PARAM_OBJ) $(LIB_NONSMBD_OBJ) $(LIBS) \
+-		@POPTLIBS@ $(KRB5LIBS) $(LDAP_LIBS)
++		@POPTLIBS@ $(KRB5LIBS) $(LDAP_LIBS) $(PASSDB_LIBS)
+ 
+ bin/pam_smbpass.@SHLIBEXT@: $(PAM_SMBPASS_PICOOBJ)
+ 	@echo "Linking shared library $@"
+-	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_PICOOBJ) -lpam $(DYNEXP) $(LIBS) -lc $(LDAP_LIBS) $(KRB5LIBS)
++	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_PICOOBJ) -lpam $(DYNEXP) $(LIBS) -lc $(LDAP_LIBS) $(KRB5LIBS) $(PASSDB_LIBS)
+ 
+ bin/libmsrpc.a: $(LIBMSRPC_PICOBJ)
+ 	@-$(AR) -rc $@ $(LIBMSRPC_PICOBJ) 
+@@ -1325,7 +1328,7 @@ install-everything: install installmodul
+ # is not used
+ 
+ installdirs:
+-	@$(SHELL) $(srcdir)/script/installdirs.sh $(DESTDIR)$(BASEDIR) $(DESTDIR)$(BINDIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(VARDIR) $(DESTDIR)$(PRIVATEDIR) $(DESTDIR)$(PIDDIR) $(DESTDIR)$(LOCKDIR) $(DESTDIR)$(MANDIR)
++	@$(SHELL) $(srcdir)/script/installdirs.sh $(DESTDIR)$(BASEDIR) $(DESTDIR)$(BINDIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(VARDIR) $(DESTDIR)$(PRIVATEDIR) $(DESTDIR)$(PIDDIR) $(DESTDIR)$(LOCKDIR) $(DESTDIR)$(STATEDIR) $(DESTDIR)$(MANDIR)
+ 
+ installservers: all installdirs
+ 	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(DESTDIR)$(BASEDIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(VARDIR) $(SBIN_PROGS)
+@@ -1421,6 +1424,7 @@ showlayout: 
+ 	@echo "  privatedir:  $(PRIVATE_DIR)"
+ 	@echo "  configdir:   $(CONFIGDIR)"
+ 	@echo "  lockdir:     $(LOCKDIR)"
++	@echo "  statedir:    $(STATEDIR)"
+ 	@echo "  piddir:      $(PIDDIR)"
+ 	@echo "  swatdir:     $(SWATDIR)"
+ 

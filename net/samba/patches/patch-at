@@ -1,26 +1,178 @@
-$NetBSD: patch-at,v 1.2 2005/06/08 20:15:20 jlam Exp $
+$NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
 
---- configure.orig	2005-04-14 02:23:50.000000000 -0400
+--- configure.orig	2005-10-12 22:20:04.000000000 -0400
 +++ configure
-@@ -4794,7 +4794,7 @@ cat >>confdefs.h <<\_ACEOF
- _ACEOF
+@@ -310,7 +310,7 @@ ac_includes_default="\
+ # include <unistd.h>
+ #endif"
  
- 		;;
--	*freebsd*|*DragonFly*)
-+	*freebsd*|*dragonfly*)
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS configdir lockdir piddir logfilebase privatedir swatdir LDSHFLAGS SONAMEFLAG SHLD HOST_OS PICFLAGS PICSUFFIX libc_cv_fpie PIE_CFLAGS PIE_LDFLAGS SHLIBEXT INSTALLCLIENT INSTALLCLIENTCMD_SH INSTALLCLIENTCMD_A LIBSMBCLIENT_SHARED LIBSMBCLIENT LIBSMBSHAREMODES_SHARED LIBSMBSHAREMODES PRINT_LIBS AUTH_LIBS ACL_LIBS PASSDB_LIBS IDMAP_LIBS KRB5_LIBS LDAP_LIBS SHLIB_PROGS SMBWRAPPER SMBWRAP_OBJS SMBWRAP_INC EXTRA_BIN_PROGS EXTRA_SBIN_PROGS EXTRA_ALL_TARGETS SOCKWRAP CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA AWK PERL AR ac_ct_AR BROKEN_CC build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os EGREP CUPS_CONFIG LIBOBJS TERMLIBS TERMLDFLAGS ROFF DYNEXP SMBLDAP SMBLDAPUTIL KRB5CONFIG XML2_CONFIG XML_CFLAGS XML_LIBS MYSQL_CONFIG MYSQL_CFLAGS MYSQL_LIBS PGSQL_CONFIG PGSQL_CFLAGS PGSQL_LIBS WINBIND_NSS WINBIND_WINS_NSS WINBIND_NSS_LDSHFLAGS WINBIND_NSS_EXTRA_OBJS WINBIND_NSS_EXTRA_LIBS BUILD_POPT POPTLIBS FLAGS1 PYTHON PDB_STATIC PDB_MODULES RPC_STATIC RPC_MODULES IDMAP_STATIC IDMAP_MODULES CHARSET_STATIC CHARSET_MODULES AUTH_STATIC AUTH_MODULES VFS_STATIC VFS_MODULES builddir LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS configdir lockdir statedir piddir logfilebase privatedir swatdir LDSHFLAGS SONAMEFLAG SHLD HOST_OS PICFLAGS PICSUFFIX libc_cv_fpie PIE_CFLAGS PIE_LDFLAGS SHLIBEXT INSTALLCLIENT INSTALLCLIENTCMD_SH INSTALLCLIENTCMD_A LIBSMBCLIENT_SHARED LIBSMBCLIENT LIBSMBSHAREMODES_SHARED LIBSMBSHAREMODES PRINT_LIBS AUTH_LIBS ACL_LIBS PASSDB_LIBS IDMAP_LIBS KRB5_LIBS LDAP_LIBS SHLIB_PROGS SMBWRAPPER SMBWRAP_OBJS SMBWRAP_INC EXTRA_BIN_PROGS EXTRA_SBIN_PROGS EXTRA_ALL_TARGETS SOCKWRAP CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA AWK PERL AR ac_ct_AR BROKEN_CC build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os EGREP CUPS_CONFIG LIBOBJS TERMLIBS TERMLDFLAGS ROFF DYNEXP SMBLDAP SMBLDAPUTIL KRB5CONFIG XML2_CONFIG XML_CFLAGS XML_LIBS MYSQL_CONFIG MYSQL_CFLAGS MYSQL_LIBS PGSQL_CONFIG PGSQL_CFLAGS PGSQL_LIBS WINBIND_NSS WINBIND_WINS_NSS WINBIND_NSS_LDSHFLAGS WINBIND_NSS_EXTRA_OBJS WINBIND_NSS_EXTRA_LIBS BUILD_POPT POPTLIBS FLAGS1 PYTHON PDB_STATIC PDB_MODULES RPC_STATIC RPC_MODULES IDMAP_STATIC IDMAP_MODULES CHARSET_STATIC CHARSET_MODULES AUTH_STATIC AUTH_MODULES VFS_STATIC VFS_MODULES builddir LTLIBOBJS'
+ ac_subst_files=''
  
- cat >>confdefs.h <<\_ACEOF
- #define FREEBSD 1
-@@ -22517,7 +22517,7 @@ cat >>confdefs.h <<\_ACEOF
- _ACEOF
+ # Initialize some variables set by options.
+@@ -863,6 +863,7 @@ Optional Packages:
+   --with-fhs              Use FHS-compliant paths (default=no)
+   --with-privatedir=DIR   Where to put smbpasswd ($ac_default_prefix/private)
+   --with-lockdir=DIR      Where to put lock files ($ac_default_prefix/var/locks)
++  --with-statedir=DIR     Where to put state files ($ac_default_prefix/var/locks)
+   --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)
+   --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)
+   --with-configdir=DIR    Where to put configuration files ($libdir)
+@@ -1424,6 +1425,7 @@ fi
  
- 			;;
--		*netbsd* | *freebsd* | *DragonFly* )
-+		*netbsd* | *freebsd* | *dragonfly* )
- 			BLDSHARED="true"
- 			LDSHFLAGS="-shared"
- 			DYNEXP="-Wl,--export-dynamic"
-@@ -29701,9 +29701,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+ 
+ lockdir="\${VARDIR}/locks"
++statedir="\${VARDIR}/locks"
+ piddir="\${VARDIR}/locks"
+ mandir="\${prefix}/man"
+ logfilebase="\${VARDIR}"
+@@ -1438,7 +1440,8 @@ if test "${with_fhs+set}" = set; then
+   withval="$with_fhs"
+    case "$withval" in
+   yes)
+-    lockdir="\${VARDIR}/lib/samba"
++    lockdir="\${VARDIR}/run/samba"
++    statedir="\${VARDIR}/lib/samba"
+     piddir="\${VARDIR}/run"
+     mandir="\${prefix}/share/man"
+     logfilebase="\${VARDIR}/log/samba"
+@@ -1491,6 +1494,26 @@ echo "$as_me: WARNING: --with-lockdir ca
+ fi;
+ 
+ #################################################
++# set state directory location
++
++# Check whether --with-statedir or --without-statedir was given.
++if test "${with_statedir+set}" = set; then
++  withval="$with_statedir"
++   case "$withval" in
++  yes|no)
++  #
++  # Just in case anybody calls it without argument
++  #
++    { echo "$as_me:$LINENO: WARNING: --with-statedir called without argument - will use default" >&5
++echo "$as_me: WARNING: --with-statedir called without argument - will use default" >&2;}
++  ;;
++  * )
++    statedir="$withval"
++    ;;
++  esac
++fi;
++
++#################################################
+ # set pid directory location
+ 
+ # Check whether --with-piddir or --without-piddir was given.
+@@ -16912,6 +16935,107 @@ done
+ 
+ 
+ 
++for ac_func in getpwent_r
++do
++as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
++echo "$as_me:$LINENO: checking for $ac_func" >&5
++echo $ECHO_N "checking for $ac_func... $ECHO_C" >&6
++if eval "test \"\${$as_ac_var+set}\" = set"; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++/* Define $ac_func to an innocuous variant, in case <limits.h> declares $ac_func.
++   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
++#define $ac_func innocuous_$ac_func
++
++/* System header to define __stub macros and hopefully few prototypes,
++    which can conflict with char $ac_func (); below.
++    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
++    <limits.h> exists even on freestanding compilers.  */
++
++#ifdef __STDC__
++# include <limits.h>
++#else
++# include <assert.h>
++#endif
++
++#undef $ac_func
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
++{
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
++char $ac_func ();
++/* The GNU C library defines this for functions which it implements
++    to always fail with ENOSYS.  Some functions are actually named
++    something starting with __ and the normal name is an alias.  */
++#if defined (__stub_$ac_func) || defined (__stub___$ac_func)
++choke me
++#else
++char (*f) () = $ac_func;
++#endif
++#ifdef __cplusplus
++}
++#endif
++
++int
++main ()
++{
++return f != $ac_func;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  eval "$as_ac_var=yes"
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++eval "$as_ac_var=no"
++fi
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++fi
++echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
++echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
++if test `eval echo '${'$as_ac_var'}'` = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++done
++
+ for ac_func in syslog vsyslog timegm
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+@@ -31314,9 +31438,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
@@ -33,7 +185,7 @@ $NetBSD: patch-at,v 1.2 2005/06/08 20:15:20 jlam Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -29719,11 +29719,11 @@ extern "C"
+@@ -31332,11 +31456,11 @@ extern "C"
  #endif
  /* We use char because int might match the return type of a gcc2
     builtin and then its argument prototype would still apply.  */
@@ -47,7 +199,7 @@ $NetBSD: patch-at,v 1.2 2005/06/08 20:15:20 jlam Exp $
    ;
    return 0;
  }
-@@ -29750,22 +29750,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -31363,22 +31487,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -75,12 +227,56 @@ $NetBSD: patch-at,v 1.2 2005/06/08 20:15:20 jlam Exp $
    cat >>confdefs.h <<_ACEOF
  #define HAVE_DES_SET_KEY 1
  _ACEOF
-@@ -38099,7 +38099,7 @@ echo "${ECHO_T}no" >&6;
- 	fi
- 
- 	;;
--	*freebsd* | *DragonFly* )
-+	*freebsd* | *dragonfly* )
- 		echo "$as_me:$LINENO: checking for freebsd sendfile support" >&5
- echo $ECHO_N "checking for freebsd sendfile support... $ECHO_C" >&6
- if test "${samba_cv_HAVE_SENDFILE+set}" = set; then
+@@ -41304,13 +41428,37 @@ case "$host_os" in
+ 	*linux*)
+ 		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
+ 		;;
+-	*freebsd[5-9]*)
+-		# FreeBSD winbind client is implemented as a wrapper around
+-		# the Linux version.
+-		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_freebsd.o \
+-		    nsswitch/winbind_nss_linux.o"
+-		WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
+-		WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
++	*freebsd*)
++		case "$UNAME_R" in
++		[5-9]*)
++			# FreeBSD winbind client is implemented as a wrapper
++			# around the Linux version.
++			WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_freebsd.o \
++			    nsswitch/winbind_nss_linux.o"
++			WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
++			WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
++			;;
++		esac
++		;;
++	*netbsd*)
++		case "$UNAME_R" in
++		[3-9]*)
++			# NetBSD winbind client is implemented as a wrapper
++			# around the Linux version. It needs getpwent_r() to
++			# indicate libc's use of the correct nsdispatch API.
++			#
++			if test x"$ac_cv_func_getpwent_r" = x"yes"; then
++				WINBIND_NSS_EXTRA_OBJS=" \
++				    nsswitch/winbind_nss_netbsd.o \
++				    nsswitch/winbind_nss_linux.o"
++				WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
++				WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
++			else
++				HAVE_WINBIND=no
++				winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
++			fi
++			;;
++		esac
+ 		;;
+ 	*irix*)
+ 		# IRIX has differently named shared libraries
+@@ -44539,6 +44687,7 @@ s,@ECHO_T@,$ECHO_T,;t t
+ s,@LIBS@,$LIBS,;t t
+ s,@configdir@,$configdir,;t t
+ s,@lockdir@,$lockdir,;t t
++s,@statedir@,$statedir,;t t
+ s,@piddir@,$piddir,;t t
+ s,@logfilebase@,$logfilebase,;t t
+ s,@privatedir@,$privatedir,;t t

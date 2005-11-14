@@ -1,0 +1,33 @@
+$NetBSD: patch-bu,v 1.1 2005/11/14 08:05:28 jlam Exp $
+
+--- ../docs/manpages/smb.conf.5.orig	2005-08-19 13:53:26.000000000 -0400
++++ ../docs/manpages/smb.conf.5
+@@ -2963,6 +2963,12 @@ This integer specifies the number of sec
+ Default: \fB\fIpasswd chat timeout\fR = 2 \fR 
+ 
+ .TP
++passwd expand gecos (G)
++This boolean specifies if ampersand characters in the GECOS field of a passwd database entry should be replaced with the capitalized login name for that entry when the information is used by various Samba programs\&. This parameter is off by default\&.
++
++Default: \fB\fIpasswd expand gecos\fR = no \fR 
++
++.TP
+ passwd program (G)
+ The name of a program that can be used to set UNIX user passwords\&. Any occurrences of \fI%u\fR will be replaced with the user name\&. The user name is checked for existence before calling the password changing program\&.
+ 
+@@ -3923,6 +3929,15 @@ This parameter determines if \fBsmbd\fR(
+ Default: \fB\fIstat cache\fR = yes \fR 
+ 
+ .TP
++state directory (G)
++This parameter defines the directory the Samba daemon processes will use for storing state files that must persist across machine reboots\&.
++
++Default: \fB\fIstate directory\fR = ${prefix}/var/locks \fR 
++
++Example: \fB\fIstate directory\fR = /var/db/samba \fR 
++
++
++.TP
+ store dos attributes (S)
+ If this parameter is set Samba no longer attempts to map DOS attributes like SYSTEM, HIDDEN, ARCHIVE or READ\-ONLY to UNIX permission bits (such as the map hidden\&. Instead, DOS attributes will be stored onto an extended attribute in the UNIX filesystem, associated with the file or directory\&. For this to operate correctly, the parameters map hidden, map system, map archive must be set to off\&. This parameter writes the DOS attributes as a string into the extended attribute named "user\&.DOSATTRIB"\&. This extended attribute is explicitly hidden from smbd clients requesting an EA list\&. On Linux the filesystem must have been mounted with the mount option user_xattr in order for extended attributes to work, also extended attributes must be compiled into the Linux kernel\&.
+ 
