@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.356 2005/11/14 12:51:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.357 2005/11/14 13:03:32 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1692,6 +1692,9 @@ sub checktext_basic_vartype($$$$$) {
 		} elsif ($value_novar !~ qr"^[A-Z_][0-9A-Z_]*(?:[.].*)?$") {
 			$line->log_warning("\"${value}\" is not a valid variable name.");
 		}
+
+	} elsif ($type eq "WrkdirSubdirectory") {
+		# TODO: check for ${WRKDIR}/${DISTNAME}/foo
 
 	} elsif ($type eq "WrksrcSubdirectory") {
 		if ($value =~ qr"^(\$\{WRKSRC\}(?:/|$))") {
