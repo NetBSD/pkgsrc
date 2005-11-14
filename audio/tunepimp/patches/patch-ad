@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/11/14 08:56:08 markd Exp $
+
+--- lib/Makefile.in.orig	2005-11-14 21:34:21.000000000 +1300
++++ lib/Makefile.in
+@@ -250,7 +250,7 @@ libtunepimp_la_SOURCES = tunepimp.cpp fi
+ #     increment age.
+ #  6. If any interfaces have been removed since the last public release, then 
+ #     set age to 0. 
+-libtunepimp_la_LDFLAGS = -version-info 2:0:0
++libtunepimp_la_LDFLAGS = -version-info 2:0:0 ${PTHREAD_LDFLAGS}
+ libtunepimp_la_LIBADD = threads/posix/libtpthread.la utf8/libutf8.la id3tag/libid3tag.la @TP_LIBS@
+ noinst_HEADERS = analyzer.h dirsearch.h fstrcmp.h i18n.h id3_meta.h lookup.h mp3_trm.h flac_trm.h flac_meta.h ov_trm.h submit.h trm.h vcedit.h vorbis_meta.h wav_trm.h ape_meta.h ape_trm.h filecache.h filelookup.h file_meta.h fstrcmp.h lookuptools.h write.h metadata.h watchdog.h
+ all: all-recursive
