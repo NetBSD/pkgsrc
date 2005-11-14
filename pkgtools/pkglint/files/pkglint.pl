@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.351 2005/11/14 04:38:27 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.352 2005/11/14 04:47:44 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1538,7 +1538,7 @@ sub checktext_basic_vartype($$$$$) {
 				$line->log_error("A pkgsrc package must not depend on any outside package.");
 			}
 
-			if (!-d "${current_dir}/../../${cat}/${pkg}") {
+			if (!-d "${pkgsrcdir}/${cat}/${pkg}") {
 				$line->log_error("The package ${cat}/${pkg} does not exist.");
 			}
 
