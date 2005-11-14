@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/28 14:16:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/11/14 23:04:13 wiz Exp $
 bin/antiword
 bin/kantiword
 man/man1/antiword.1
 share/antiword/8859-1.txt
 share/antiword/8859-10.txt
+share/antiword/8859-11.txt
 share/antiword/8859-13.txt
 share/antiword/8859-14.txt
 share/antiword/8859-15.txt
