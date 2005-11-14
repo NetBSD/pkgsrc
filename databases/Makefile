@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2005/11/07 11:35:32 martti Exp $
+# $NetBSD: Makefile,v 1.189 2005/11/14 03:12:42 minskim Exp $
 #
 
 COMMENT=	Databases
@@ -142,6 +142,7 @@ SUBDIR+=	py-bsddb3
 SUBDIR+=	py-gdbm
 SUBDIR+=	py-ldap
 SUBDIR+=	py-metakit
+SUBDIR+=	py-mssql
 SUBDIR+=	py-mysqldb
 SUBDIR+=	py-pgnotify
 SUBDIR+=	py-postgresql
