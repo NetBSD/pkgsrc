@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.31 2005/11/14 12:51:57 rillig Exp $
+# $NetBSD: makevars.map,v 1.32 2005/11/14 13:03:32 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -178,5 +178,6 @@ USE_PKGLOCALEDIR	YesNo
 USE_PKGSRC_GCC		Userdefined
 USE_TOOLS		List of Tool
 USE_X11			Yes
+WRKSRC			WrkdirSubdirectory
 X11_PKGSRCDIR		Readonly
 X11_TYPE		Userdefined
