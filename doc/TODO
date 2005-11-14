@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4172 2005/11/14 18:22:58 kleink Exp $
+$NetBSD: TODO,v 1.4173 2005/11/14 21:04:07 veego Exp $
 
 Suggested new packages
 ======================
@@ -394,8 +394,6 @@ Suggested package updates
 	o benchfft-3.1
 	o binutils-2.16.1
 	o bioperl-1.5.0
-	o bittornado-0.3.14
-	o bittornado-gui-0.3.14
 	o bittorrent-4.1.7
 	o bittorrent-gui-4.1.7
 	o blackbox-0.70
