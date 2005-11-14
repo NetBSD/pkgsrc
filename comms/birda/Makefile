@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2003/09/30 21:53:00 seb Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/14 08:05:06 augustss Exp $
 #
 
-DISTNAME=       birda-1.1
+DISTNAME=       birda-1.2
 CATEGORIES=	comms
 MASTER_SITES=   ftp://ftp.augustsson.net/pub/netbsd/
 
 MAINTAINER=	lennart@augustsson.net
 COMMENT=	Bohlin's IrDA utilities
-
-CFLAGS+=	-Dlog=birda_log
 
 .include "../../mk/bsd.pkg.mk"
