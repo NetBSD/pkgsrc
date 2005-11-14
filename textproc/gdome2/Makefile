@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/12 21:22:08 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/14 15:12:59 adam Exp $
 
 DISTNAME=	gdome2-0.8.1
 PKGREVISION=	1
@@ -9,12 +9,12 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gdome2.cs.unibo.it/
 COMMENT=	Gnome DOM (Document Object Model) engine
 
+USE_LIBTOOL=		yes
+USE_TOOLS=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
-USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gdome2.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
