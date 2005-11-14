@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/13 06:32:40 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/14 22:10:54 tonio Exp $
 
 DISTNAME=	base
 PKGNAME=	tex-xmltex-1.9
@@ -13,14 +13,14 @@ COMMENT=	Non-validating XML parser implemented in TeX
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
-TEX_ACCEPTED=	teTeX3
+TEX_ACCEPTED=	teTeX2 teTeX3
 
 .include "../../print/teTeX/module.mk"
 
 do-build:
 	cd ${WRKSRC}; \
-	pdfetex -ini -progname=xmltex "&latex" xmltex.ini; \
-	pdfetex -ini -progname=pdfxmltex "&pdflatex" pdfxmltex.ini
+	${TEX} -ini -progname=xmltex "&latex" xmltex.ini; \
+	${PDFTEX} -ini -progname=pdfxmltex "&pdflatex" pdfxmltex.ini
 
 do-install:
 	@cd ${WRKSRC}; \
