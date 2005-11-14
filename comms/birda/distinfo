@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2005/02/23 16:05:29 agc Exp $
+$NetBSD: distinfo,v 1.15 2005/11/14 08:05:06 augustss Exp $
 
-SHA1 (birda-1.1.tar.gz) = 1033aa2f0025179ff8d82e619aed6831596f4658
-RMD160 (birda-1.1.tar.gz) = 8a8fa1107382369e85dbb55891e43f96a0b1e449
-Size (birda-1.1.tar.gz) = 56077 bytes
+SHA1 (birda-1.2.tar.gz) = 4f68ace8572ee69919ed3571a5c2a8b0a4d69463
+RMD160 (birda-1.2.tar.gz) = 28aca684a4a532885016f92fa0f534fe05c8e351
+Size (birda-1.2.tar.gz) = 56497 bytes
