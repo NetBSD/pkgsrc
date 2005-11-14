@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.352 2005/11/14 04:47:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.353 2005/11/14 05:57:54 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -474,7 +474,9 @@ use strict;
 use warnings;
 
 use Getopt::Long qw(:config no_ignore_case bundling require_order);
+use Fcntl qw(:mode);
 use File::Basename;
+use File::stat;
 use Cwd;
 
 BEGIN {
@@ -2873,9 +2875,19 @@ sub checkdir_package() {
 
 sub checkitem($) {
 	my ($item) = @_;
-	my ($is_dir);
+	my ($st, $is_dir, $is_reg);
 
-	$is_dir = (-d $item) ? true : false;
+	if (!($st = lstat($item))) {
+		log_error($item, NO_LINE_NUMBER, "Does not exist.");
+		return;
+	}
+
+	$is_dir = S_ISDIR($st->mode);
+	$is_reg = S_ISREG($st->mode);
+	if (!$is_reg && !$is_dir) {
+		log_error($item, NO_LINE_NUMBER, "Must be a file or directory.");
+		return;
+	}
 
 	# Initialize global variables.
 	$pkgdir			= ".";
@@ -2893,27 +2905,26 @@ sub checkitem($) {
 		$pkgsrcdir = "${current_dir}/../..";
 		if ($is_dir) {
 			checkdir_package();
-		} else {
-			checkfile($item);
 		}
 
 	} elsif (-f "${current_dir}/../mk/bsd.pkg.mk") {
 		$pkgsrcdir = "${current_dir}/..";
 		if ($is_dir) {
 			checkdir_category();
-		} else {
-			checkfile($item);
 		}
 
 	} elsif (-f "${current_dir}/mk/bsd.pkg.mk") {
 		$pkgsrcdir = $current_dir;
 		if ($is_dir) {
 			checkdir_root();
-		} else {
-			checkfile($item);
 		}
 	} else {
 		log_error($item, NO_LINE_NUMBER, sprintf("Don't know how to check this %s.", ($is_dir) ? "directory" : "file"));
+		return;
+	}
+
+	if ($is_reg) {
+		checkfile($item);
 	}
 }
 
