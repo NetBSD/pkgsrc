@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.18 2005/11/05 10:14:43 rillig Exp $
+# $NetBSD: printdepends,v 1.19 2005/11/14 20:58:12 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -78,15 +78,6 @@ fi
 # cache the package list for printindex
 echo list='"'${list}'"' > .pkglist
 
-pkgbar=""
-for i in $list; do
-  pkgbar="${pkgbar} a"
-done
-npackages=`echo "$pkgbar" | wc -w`
-npackages=`echo $npackages`
-
-cpackages=0
-cpackages_mod_50=""
 for pkgdir in $list
 do
 	if [ ! -d $pkgdir ]; then
@@ -115,11 +106,4 @@ do
 			fi
 		fi
 	fi
-	cpackages_mod_50="${cpackages_mod_50}+";
-	case $cpackages_mod_50 in
-	++++++++++++++++++++++++++++++++++++++++++++++++++)
-		cpackages_mod_50=""
-		cpackages=`expr $cpackages + 50`
-		echo "${cpackages} of ${npackages} packages finished." 1>&2;;
-	esac
 done
