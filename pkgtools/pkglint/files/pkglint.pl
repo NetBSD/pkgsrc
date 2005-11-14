@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.349 2005/11/14 04:24:14 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.350 2005/11/14 04:30:31 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2257,7 +2257,7 @@ sub checkfile_mk($) {
 	log_subinfo("checkfile_mk", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
-	if (!($lines = load_file($fname))) {
+	if (!($lines = load_lines($fname, true))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
