@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.26 2005/11/14 04:05:22 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.27 2005/11/14 11:45:52 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -67,6 +67,10 @@ For a list of warnings, see below.
 Enable all checks.
 .It Cm none
 Disable all checks.
+.It Cm [no-]ALTERNATIVES
+Check the alternatives file.
+.It Cm [no-]INSTALL
+Check the INSTALL and DEINSTALL scripts.
 .It Cm [no-]Makefile
 Check the package Makefile, including all included files.
 .It Cm [no-]MESSAGE
