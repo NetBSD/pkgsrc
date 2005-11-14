@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4170 2005/11/14 18:16:29 wiz Exp $
+$NetBSD: TODO,v 1.4171 2005/11/14 18:18:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -582,7 +582,6 @@ Suggested package updates
 	o gnupg-devel-1.9.19
 	o gnustep-1.11.1
 	o gnustep-objc-1.4.0
-	o gnutls-1.2.9
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
 	o gopher-3.0.11
