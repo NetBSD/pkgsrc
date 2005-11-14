@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.354 2005/11/14 11:45:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.355 2005/11/14 12:32:58 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1302,16 +1302,21 @@ sub readmakefile($$$);
 sub readmakefile($$$) {
 	my ($file, $all_lines, $seen_Makefile_include) = @_;
 	my $contents = "";
-	my ($includefile, $dirname, $lines);
+	my ($includefile, $dirname, $lines, $is_main_Makefile);
 
 	$lines = load_lines($file, true);
 	if (!$lines) {
 		return false;
 	}
+
+	$is_main_Makefile = (@{$all_lines} == 0);
+
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
-		push(@{$all_lines}, $line);
+		if ($is_main_Makefile) {
+			push(@{$all_lines}, $line);
+		}
 
 		# try to get any included file
 		my $is_include_line = false;
