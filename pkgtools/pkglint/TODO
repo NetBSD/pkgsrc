@@ -16,3 +16,4 @@
 * Find a reliable, secure way to delete all CVS directories inside
   ${WRKSRC}. When that is finished, add a warning that using ${XARGS}
   is insecure.
+* detect spelling errors (like CONFLICT => CONFLICTS)
