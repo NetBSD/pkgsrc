@@ -1,0 +1,30 @@
+$NetBSD: patch-bt,v 1.1 2005/11/14 08:05:28 jlam Exp $
+
+--- ../docs/htmldocs/manpages/smb.conf.5.html.orig	2005-08-19 13:56:11.000000000 -0400
++++ ../docs/htmldocs/manpages/smb.conf.5.html
+@@ -2797,6 +2797,11 @@ passdb backend = mysql:my_plugin_args td
+     the subsequent answers must be received in one tenth of this time. The default it
+     two seconds.</p><p>Default: <span class="emphasis"><em><em class="parameter"><code>passwd chat timeout</code></em> = 2
+ </em></span>
++</p></dd><dt><span class="term"><a name="PASSWDEXPANDGECOS"></a>passwd expand gecos (G)</span></dt><dd><p>This boolean specifies if ampersand characters in the GECOS field of a passwd
++    database entry should be replaced with the capitalized login name for that entry
++    when the information is used by various Samba programs. This parameter if off by
++    default.</p><p>Default: <span class="emphasis"><em><em class="parameter"><code>passwd expand gecos</code></em> = no
++</em></span>
+ </p></dd><dt><span class="term"><a name="PASSWDPROGRAM"></a>passwd program (G)</span></dt><dd><p>The name of a program that can be used to set 
+     UNIX user passwords.  Any occurrences of <em class="parameter"><code>%u</code></em> 
+     will be replaced with the user name. The user name is checked for 
+@@ -3613,6 +3618,13 @@ smb passwd file = /etc/samba/smbpasswd
+ 	speed up case insensitive name mappings. You should never need 
+ 	to change this parameter.</p><p>Default: <span class="emphasis"><em><em class="parameter"><code>stat cache</code></em> = yes
+ </em></span>
++</p></dd><dt><span class="term"><a name="STATEDIRECTORY"></a>state directory (G)</span></dt><dd><p>This parameter defines the directory the Samba daemon
++	processes will use for storing state files that must persist
++	across machine reboots.
++	</p><p>Default: <span class="emphasis"><em><em class="parameter"><code>state directory</code></em> = ${prefix}/var/locks
++</em></span>
++</p><p>Example: <span class="emphasis"><em><em class="parameter"><code>state directory</code></em> = /var/db/samba
++</em></span>
+ </p></dd><dt><span class="term"><a name="STOREDOSATTRIBUTES"></a>store dos attributes (S)</span></dt><dd><p>If this parameter is set Samba no longer attempts to
+ 	map DOS attributes like SYSTEM, HIDDEN, ARCHIVE or READ-ONLY
+ 	to UNIX permission bits (such as the <a class="indexterm" name="id2536336"></a>map hidden. Instead, DOS attributes will be stored onto an extended

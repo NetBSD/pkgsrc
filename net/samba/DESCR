@@ -1,7 +1,7 @@
-Samba is a suite of applications that speak the Server Message Block (SMB)
-protocol.  Samba allows a UNIX machine to perform client-server networking
-for file and printer sharing with Microsoft Windows systems using their
-native network protocol and to appear as another Windows system on the
-network from the perspective of a Windows client.  The Samba suite also
-includes client tools that allow users to access folders and printers that
-Windows systems and Samba servers offer on the network.
+Samba is a suite of applications that speak the Server Message Block
+(SMB) protocol.  Samba allows a UNIX machine to perform client-server
+networking for file and printer sharing with Microsoft Windows systems
+using their native network protocol and to appear as another Windows
+system on the network from the perspective of a Windows client.  The
+Samba suite also includes client tools that allow users to access folders
+and printers that Windows systems and Samba servers offer on the network.

@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.6 2004/09/14 17:18:06 jlam Exp $
+$NetBSD: patch-af,v 1.7 2005/11/14 08:05:27 jlam Exp $
 
---- ../examples/smb.conf.default.orig	Thu Jul  8 13:06:16 2004
+--- ../examples/smb.conf.default.orig	2005-10-12 13:03:50.000000000 -0400
 +++ ../examples/smb.conf.default
 @@ -26,7 +26,7 @@
     workgroup = MYGROUP
@@ -42,12 +42,25 @@ $NetBSD: patch-af,v 1.6 2004/09/14 17:18:06 jlam Exp $
  
  # These scripts are used on a domain controller or stand-alone 
  # machine to add or delete corresponding unix accounts
-@@ -191,7 +191,7 @@
+@@ -189,14 +189,14 @@
+ 
+ # NOTE: If you have a BSD-style print system there is no need to 
  # specifically define each individual printer
- [printers]
-    comment = All Printers
+-[printers]
+-   comment = All Printers
 -   path = /usr/spool/samba
-+   path = /var/tmp
-    browseable = no
+-   browseable = no
++;[printers]
++;   comment = All Printers
++;   path = /var/tmp
++;   browseable = no
  # Set public = yes to allow user 'guest account' to print
-    guest ok = no
+-   guest ok = no
+-   writable = no
+-   printable = yes
++;   guest ok = no
++;   writable = no
++;   printable = yes
+ 
+ # This one is useful for people to share files
+ ;[tmp]

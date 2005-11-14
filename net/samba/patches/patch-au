@@ -1,26 +1,65 @@
-$NetBSD: patch-au,v 1.2 2005/06/08 20:15:20 jlam Exp $
+$NetBSD: patch-au,v 1.3 2005/11/14 08:05:27 jlam Exp $
 
---- configure.in.orig	2005-04-14 02:14:26.000000000 -0400
+--- configure.in.orig	2005-10-12 13:03:39.000000000 -0400
 +++ configure.in
-@@ -533,7 +533,7 @@ case "$host_os" in
- 	*irix*)
- 		AC_DEFINE(SYSV, 1, [Whether to enable System V compatibility])
- 		;;
--	*freebsd*|*DragonFly*)
-+	*freebsd*|*dragonfly*)
- 		AC_DEFINE(FREEBSD, 1, [Whether the host os is FreeBSD])
- 		;;
- #
-@@ -1223,7 +1223,7 @@ if test "$enable_shared" = "yes"; then
- 			AC_DEFINE(STAT_ST_BLOCKSIZE,512)
- 			AC_DEFINE(BROKEN_GETGRNAM,1,[Does getgrnam work correctly])
- 			;;
--		*netbsd* | *freebsd* | *DragonFly* )  
-+		*netbsd* | *freebsd* | *dragonfly* )
- 			BLDSHARED="true"
- 			LDSHFLAGS="-shared"
- 			DYNEXP="-Wl,--export-dynamic"
-@@ -2788,7 +2788,7 @@ if test x"$with_ads_support" != x"no"; t
+@@ -23,6 +23,7 @@ fi
+ AC_PREFIX_DEFAULT(/usr/local/samba)
+ 
+ lockdir="\${VARDIR}/locks"
++statedir="\${VARDIR}/locks"
+ piddir="\${VARDIR}/locks"
+ mandir="\${prefix}/man"
+ logfilebase="\${VARDIR}"
+@@ -35,7 +36,8 @@ AC_ARG_WITH(fhs, 
+ [  --with-fhs              Use FHS-compliant paths (default=no)],
+ [ case "$withval" in
+   yes)
+-    lockdir="\${VARDIR}/lib/samba"
++    lockdir="\${VARDIR}/run/samba"
++    statedir="\${VARDIR}/lib/samba"
+     piddir="\${VARDIR}/run"
+     mandir="\${prefix}/share/man"
+     logfilebase="\${VARDIR}/log/samba"
+@@ -79,6 +81,22 @@ AC_ARG_WITH(lockdir,
+   esac])
+ 
+ #################################################
++# set state directory location
++AC_ARG_WITH(statedir,
++[  --with-statedir=DIR     Where to put state files ($ac_default_prefix/var/locks)],
++[ case "$withval" in
++  yes|no)
++  #
++  # Just in case anybody calls it without argument
++  #
++    AC_MSG_WARN([--with-statedir called without argument - will use default])
++  ;;
++  * )
++    statedir="$withval"
++    ;;
++  esac])
++
++#################################################
+ # set pid directory location
+ AC_ARG_WITH(piddir,
+ [  --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)],
+@@ -195,6 +213,7 @@ done
+ 
+ AC_SUBST(configdir)
+ AC_SUBST(lockdir)
++AC_SUBST(statedir)
+ AC_SUBST(piddir)
+ AC_SUBST(logfilebase)
+ AC_SUBST(privatedir)
+@@ -1134,6 +1153,7 @@ AC_CHECK_FUNCS(setpriv setgidx setuidx s
+ AC_CHECK_FUNCS(lstat64 fopen64 atexit grantpt dup2 lseek64 ftruncate64)
+ AC_CHECK_FUNCS(fseek64 fseeko64 ftell64 ftello64 setluid getpwanam setlinebuf)
+ AC_CHECK_FUNCS(opendir64 readdir64 seekdir64 telldir64 rewinddir64 closedir64)
++AC_CHECK_FUNCS(getpwent_r)
+ AC_CHECK_FUNCS(srandom random srand rand setenv usleep strcasecmp fcvt fcvtl symlink readlink)
+ AC_CHECK_FUNCS(syslog vsyslog timegm)
+ AC_CHECK_FUNCS(setlocale nl_langinfo)
+@@ -2996,7 +3016,7 @@ if test x"$with_ads_support" != x"no"; t
    AC_CHECK_LIB_EXT(k5crypto, KRB5_LIBS, krb5_encrypt_data)
  
    # Heimdal checks.
@@ -29,12 +68,48 @@ $NetBSD: patch-au,v 1.2 2005/06/08 20:15:20 jlam Exp $
    AC_CHECK_LIB_EXT(asn1, KRB5_LIBS, copy_Authenticator)
    AC_CHECK_LIB_EXT(roken, KRB5_LIBS, roken_getaddrinfo_hostspec)
  
-@@ -4108,7 +4108,7 @@ samba_cv_HAVE_BROKEN_LINUX_SENDFILE=yes,
- 	fi
- 
- 	;;
--	*freebsd* | *DragonFly* )
-+	*freebsd* | *dragonfly* )
- 		AC_CACHE_CHECK([for freebsd sendfile support],samba_cv_HAVE_SENDFILE,[
- 		AC_TRY_LINK([\
- #include <sys/types.h>
+@@ -4710,13 +4730,37 @@ case "$host_os" in
+ 	*linux*)
+ 		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
+ 		;;
+-	*freebsd[[5-9]]*)
+-		# FreeBSD winbind client is implemented as a wrapper around
+-		# the Linux version.
+-		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_freebsd.o \
+-		    nsswitch/winbind_nss_linux.o"
+-		WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
+-		WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
++	*freebsd*)
++		case "$UNAME_R" in
++		[5-9]*)
++			# FreeBSD winbind client is implemented as a wrapper
++			# around the Linux version.
++			WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_freebsd.o \
++			    nsswitch/winbind_nss_linux.o"
++			WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
++			WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
++			;;
++		esac
++		;;
++	*netbsd*)
++		case "$UNAME_R" in
++		[3-9]*)
++			# NetBSD winbind client is implemented as a wrapper
++			# around the Linux version. It needs getpwent_r() to
++			# indicate libc's use of the correct nsdispatch API.
++			#
++			if test x"$ac_cv_func_getpwent_r" = x"yes"; then
++				WINBIND_NSS_EXTRA_OBJS=" \
++				    nsswitch/winbind_nss_netbsd.o \
++				    nsswitch/winbind_nss_linux.o"
++				WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
++				WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
++			else
++				HAVE_WINBIND=no
++				winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
++			fi
++			;;
++		esac
+ 		;;
+ 	*irix*)
+ 		# IRIX has differently named shared libraries

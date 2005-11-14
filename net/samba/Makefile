@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.146 2005/08/19 18:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.147 2005/11/14 08:05:27 jlam Exp $
 
-DISTNAME=		samba-3.0.14a
-PKGREVISION=		1
+.include "Makefile.mirrors"
+
+DISTNAME=		samba-3.0.20b
+PKGNAME=		samba-3.0.20.2
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba/old-versions/ \
-			ftp://samba.anu.edu.au/pub/samba/old-versions/ \
-			ftp://ftp.sunet.se/pub/unix/utilities/samba/old-versions/
-COUNTRY_MIRRORS=	au1 ca fi fr it pl ru sg se us1 us6
-.for COUNTRY in ${COUNTRY_MIRRORS}
-MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/old-versions/
-.endfor
+MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
+DIST_SUBDIR=		${DISTNAME}
+
+.include "Makefile.patches"
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite
 
-CONFLICTS+=		ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
+CONFLICTS+=		ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]*	\
+			winbind-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -30,10 +29,11 @@ PKG_SYSCONFVAR=		samba
 
 SAMBA_ETCDIR?=		${PKG_SYSCONFDIR}
 SAMBA_LIBDIR?=		${PREFIX}/lib/samba
-SAMBA_LOCKDIR?=		${SAMBA_VARDIR}/db/samba
+SAMBA_LOCKDIR?=		${SAMBA_VARDIR}/run/samba
 SAMBA_LOGDIR?=		${SAMBA_VARDIR}/log
 SAMBA_PIDDIR?=		${SAMBA_VARDIR}/run
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
+SAMBA_STATEDIR?=	${SAMBA_VARDIR}/db/samba
 SAMBA_VARDIR?=		${VARBASE}
 
 FILES_SUBST=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
@@ -41,6 +41,7 @@ FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
 FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
 FILES_SUBST+=		SAMBA_PIDDIR=${SAMBA_PIDDIR}
 FILES_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
+FILES_SUBST+=		SAMBA_STATEDIR=${SAMBA_STATEDIR}
 FILES_SUBST+=		SAMBA_VARDIR=${SAMBA_VARDIR}
 
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
@@ -49,11 +50,11 @@ CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
 CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
 CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
+CONFIGURE_ARGS+=	--with-statedir=${SAMBA_STATEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
 
 CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
 CONFIGURE_ARGS+=	--with-libsmbclient
-CONFIGURE_ARGS+=	--with-winbind
 
 .include "../../converters/libiconv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
@@ -63,6 +64,16 @@ USE_GNU_READLINE=	yes
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
 .include "options.mk"
+
+# Only Linux supports smbmount for mounting a Samba share into the
+# filesystem.
+#
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-smbmount
+PLIST_SUBST+=		SMBMOUNT=
+.else
+PLIST_SUBST+=		SMBMOUNT="@comment "
+.endif
 
 # mktemp is useful for the replacement adduser script, but don't require
 # a full dependency since it's not actually needed by samba.
@@ -77,49 +88,28 @@ MAKEFLAGS+=	PWD_MKDB=${PWD_MKDB:Q}
 FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
-.if !empty(NSS_WINBIND)
-PLIST_SUBST+=	NSS_WINBIND=lib/${NSS_WINBIND}
-.else
-PLIST_SUBST+=	NSS_WINBIND="@comment no NSS winbind module"
-.endif
-.if !empty(NSS_WINS)
-PLIST_SUBST+=	NSS_WINS=lib/${NSS_WINS}
-.else
-PLIST_SUBST+=	NSS_WINS="@comment no NSS WINS module"
-.endif
-
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 USE_PKGINSTALL=		yes
 CONF_FILES=		${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
-CONF_FILES_PERMS=	${EGDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser	\
-			${ROOT_USER} ${ROOT_GROUP} 0755
-CONF_FILES_PERMS+=	${EGDIR}/deluser.sh ${SAMBA_ETCDIR}/deluser	\
-			${ROOT_USER} ${ROOT_GROUP} 0755
 MAKE_DIRS=		${SAMBA_VARDIR} ${SAMBA_LOGDIR} ${SAMBA_PIDDIR}
-OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
+OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR} ${SAMBA_STATEDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0700
-RCD_SCRIPTS=		samba nmbd smbd winbindd
-
-INSTALL_LIBRARY=	\
-	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+RCD_SCRIPTS+=		samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adduser.sh > ${WRKDIR}/adduser.sh
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
 
 post-install:
-	-cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so libsmbclient.so.0
+	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/include
+	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/images
+	${RMDIR} ${PREFIX}/share/samba/swat/lang/tr/include
 	for d in auth idmap pdb rpc; do					\
 		${RMDIR} ${SAMBA_LIBDIR}/$$d;				\
 	done
-.if !empty(NSS_WINBIND)
-	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINBIND} ${PREFIX}/lib
-.endif
-.if !empty(NSS_WINS)
-	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINS} ${PREFIX}/lib
-.endif
+	-cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so libsmbclient.so.0
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}/../docs/registry; for f in *.reg; do		\
 		${INSTALL_DATA} $${f} ${DOCDIR}/$${f};			\
@@ -133,19 +123,5 @@ post-install:
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${EGDIR}
-.if !empty(PKG_OPTIONS:Mpam)
-	${INSTALL_DATA_DIR} ${PAM_INSTMODULEDIR}
-	${INSTALL_LIBRARY} ${WRKSRC}/bin/pam_smbpass.so ${PAM_INSTMODULEDIR}
-	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/pam_winbind.so ${PAM_INSTMODULEDIR}
-	${INSTALL_DATA} ${WRKSRC}/pam_smbpass/README			\
-		${DOCDIR}/README.pam_smbpass
-	${INSTALL_DATA_DIR} ${EGDIR}/pam_smbpass
-	cd ${WRKSRC}/pam_smbpass/samples; for f in [a-z]*; do		\
-		${INSTALL_DATA} $${f} ${EGDIR}/pam_smbpass/$${f};	\
-	done
-.endif
-.if !empty(PKG_OPTIONS:Mcups)
-	cd ${PREFIX}/libexec/cups/backend && ${LN} -s ../../../bin/smbspool smb
-.endif
 
 .include "../../mk/bsd.pkg.mk"

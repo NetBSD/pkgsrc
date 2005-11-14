@@ -1,13 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nmbd.sh,v 1.9 2004/01/11 02:26:31 jlam Exp $
+# $NetBSD: nmbd.sh,v 1.10 2005/11/14 08:05:27 jlam Exp $
 #
 # PROVIDE: nmbd
 # REQUIRE: DAEMON
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+. /etc/rc.subr
 
 name="nmbd"
 rcvar=$name
@@ -19,10 +17,5 @@ command_args="-D"		# _must_ start as daemon from rc.d;
 
 reload_cmd=":"			# avoid dumping debug output on SIGHUP
 
-if [ -f /etc/rc.subr ]; then
-	load_rc_config $name
-	run_rc_command "$1"
-else
-	@ECHO@ -n " ${name}"
-	${command} ${nmbd_flags} ${command_args}
-fi
+load_rc_config $name
+run_rc_command "$1"

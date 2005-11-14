@@ -1,0 +1,13 @@
+$NetBSD: patch-bk,v 1.1 2005/11/14 08:05:28 jlam Exp $
+
+--- utils/net_idmap.c.orig	2005-10-12 13:03:42.000000000 -0400
++++ utils/net_idmap.c
+@@ -126,7 +126,7 @@ static NTSTATUS net_idmap_fixup_hwm(void
+ 		return NT_STATUS_UNSUCCESSFUL;
+ 	}
+ 
+-	tdbfile = SMB_STRDUP(lock_path("winbindd_idmap.tdb"));
++	tdbfile = SMB_STRDUP(state_path("winbindd_idmap.tdb"));
+ 	if (!tdbfile) {
+ 		DEBUG(0, ("idmap_init: out of memory!\n"));
+ 		return NT_STATUS_NO_MEMORY;
