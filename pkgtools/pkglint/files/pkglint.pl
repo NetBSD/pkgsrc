@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.347 2005/11/10 19:47:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.348 2005/11/14 04:05:22 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -506,6 +506,7 @@ my $opt_check_distinfo	= true;
 my $opt_check_extra	= true;
 my $opt_check_Makefile	= true;
 my $opt_check_MESSAGE	= true;
+my $opt_check_mk	= true;
 my $opt_check_patches	= true;
 my $opt_check_PLIST	= true;
 my (%checks) = (
@@ -515,6 +516,7 @@ my (%checks) = (
 	"extra"		=> [\$opt_check_extra, "check various additional files"],
 	"Makefile"	=> [\$opt_check_Makefile, "check Makefiles"],
 	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
+	"mk"		=> [\$opt_check_mk, "check other .mk files"],
 	"patches"	=> [\$opt_check_patches, "check patches"],
 	"PLIST"		=> [\$opt_check_PLIST, "check PLIST files"],
 );
@@ -615,7 +617,7 @@ my $pkgname;			# PKGNAME from the package Makefile
 my $seen_USE_PKGLOCALEDIR;	# Does the package use PKGLOCALEDIR?
 my $seen_Makefile_common;	# Does the package have any .includes?
 
-my @todo_dirs;			# The list of directories that still need
+my @todo_items;			# The list of directory entries that still need
 				# to be checked. Mostly relevant with
 				# --recursive.
 
@@ -1185,21 +1187,6 @@ sub checkfile_PLIST($) {
 		}
 	}
 	checklines_trailing_empty_lines($plist);
-}
-
-sub checkfile_buildlink3_mk($) {
-	my ($fname) = @_;
-	my ($lines);
-
-	log_subinfo("checkfile_buildlink3_mk", $fname, NO_LINE_NUMBER, undef);
-
-	if (!($lines = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
-	checklines_deprecated_variables($lines);
-	checklines_trailing_empty_lines($lines);
-	checklines_direct_tools($lines);
 }
 
 sub checkfile_extra($) {
@@ -2267,6 +2254,24 @@ sub load_package_Makefile($$$) {
 	return true;
 }
 
+sub checkfile_mk($) {
+	my ($fname) = @_;
+	my ($lines);
+
+	log_subinfo("checkfile_mk", $fname, NO_LINE_NUMBER, undef);
+
+	checkperms($fname);
+	if (!($lines = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+
+	checklines_deprecated_variables($lines);
+	checklines_direct_tools($lines);
+	checklines_package_Makefile($lines);
+	checklines_Makefile_varuse($lines);
+}
+
 sub checkfile_package_Makefile($$$) {
 	my ($fname, $rawwhole, $lines) = @_;
 	my ($distname, $category, $distfiles,
@@ -2594,7 +2599,7 @@ sub checkdir_root() {
 	}
 
 	if ($opt_recursive) {
-		push(@todo_dirs, @subdirs);
+		push(@todo_items, @subdirs);
 	}
 }
 
@@ -2780,7 +2785,50 @@ sub checkdir_category() {
 	}
 
 	if ($opt_recursive) {
-		unshift(@todo_dirs, @subdirs);
+		unshift(@todo_items, @subdirs);
+	}
+}
+
+sub checkfile($) {
+	my ($fname) = @_;
+
+	if      ($fname =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
+		if ($opt_import) {
+			log_error($fname, NO_LINE_NUMBER, "Must be cleaned up before committing the package.");
+		}
+
+	} elsif (!-f $fname) {
+		# We don't have a check for non-regular files yet.
+
+	} elsif ($fname =~ qr"(?:^|/)buildlink3\.mk$") {
+		$opt_check_bl3 and checkfile_mk($fname);
+
+	} elsif ($fname =~ qr"\.mk$") {
+		$opt_check_mk and checkfile_mk($fname);
+
+	} elsif ($fname =~ qr"(?:^|/)DESCR[^/]*$") {
+		$opt_check_DESCR and checkfile_DESCR($fname);
+
+	} elsif ($fname =~ qr"(?:^|/)distinfo$") {
+		$opt_check_distinfo and checkfile_distinfo($fname);
+
+	} elsif ($fname =~ qr"(?:^|/)MESSAGE[^/]*$") {
+		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
+
+	} elsif ($fname =~ qr"(?:^|/)PLIST[^/]*$") {
+		$opt_check_PLIST and checkfile_PLIST($fname);
+
+	} elsif ($fname =~ qr"(?:^|/)patches/patch-[A-Za-z0-9]*$") {
+		$opt_check_patches and checkfile_patches_patch($fname);
+
+	} elsif ($fname =~ qr"(?:^|/)patches/[^/]*$") {
+		log_warning($fname, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
+
+	} elsif (-T $fname) {
+		$opt_check_extra and checkfile_extra($fname);
+
+	} else {
+		log_warning($fname, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
 	}
 }
 
@@ -2813,46 +2861,16 @@ sub checkdir_package() {
 	}
 	$have_distinfo = false;
 	$have_patches = false;
-	foreach my $f (@files) {
-		if      ($f =~ qr"(?:work[^/]*|~|\.orig|\.rej)$") {
-			if ($opt_import) {
-				log_error($f, NO_LINE_NUMBER, "Must be cleaned up before committing the package.");
-			}
-
-		} elsif (!-f $f) {
-			# We don't have a check for non-regular files yet.
-
-		} elsif ($f eq "${current_dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($f, $whole, $lines);
-
-		} elsif ($f =~ qr"/buildlink3.mk$") {
-			$opt_check_bl3 and checkfile_buildlink3_mk($f);
-
-		} elsif ($f =~ qr"/DESCR[^/]*$") {
-			$opt_check_DESCR and checkfile_DESCR($f);
-
-		} elsif ($f =~ qr"/distinfo$") {
-			$have_distinfo = true;
-			$opt_check_distinfo and checkfile_distinfo($f);
-
-		} elsif ($f =~ qr"/MESSAGE[^/]*$") {
-			$opt_check_MESSAGE and checkfile_MESSAGE($f);
-
-		} elsif ($f =~ qr"/PLIST[^/]*$") {
-			$opt_check_PLIST and checkfile_PLIST($f);
-
-		} elsif ($f =~ qr"/patches/patch-[A-Za-z0-9]*$") {
-			$have_patches = true;
-			$opt_check_patches and checkfile_patches_patch($f);
-
-		} elsif ($f =~ qr"/patches/[^/]*$") {
-			log_warning($f, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
-
-		} elsif (-T $f) {
-			$opt_check_extra and checkfile_extra($f);
-
+	foreach my $fname (@files) {
+		if ($fname eq "${current_dir}/Makefile") {
+			$opt_check_Makefile and checkfile_package_Makefile($fname, $whole, $lines);
 		} else {
-			log_warning($f, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
+			checkfile($fname);
+		}
+		if ($fname =~ qr"/patches/patch-[A-Za-z0-9]*$") {
+			$have_patches = true;
+		} elsif ($fname =~ qr"/distinfo$") {
+			$have_distinfo = true;
 		}
 	}
 
@@ -2867,27 +2885,40 @@ sub checkdir_package() {
 	}
 }
 
-sub checkdir($) {
-	my ($dir) = @_;
+sub checkitem($) {
+	my ($item) = @_;
+	my ($is_dir);
 
-	$current_dir = $dir;
-	$is_wip = !$opt_import && (Cwd::abs_path($dir) =~ qr"/wip(?:/|$)");
+	$is_dir = (-d $item) ? true : false;
 
-	if (-f "${dir}/../../mk/bsd.pkg.mk") {
-		$pkgsrcdir = "${dir}/../..";
-		checkdir_package();
+	$current_dir = $is_dir ? $item : dirname($item);
+	$is_wip = !$opt_import && (Cwd::abs_path($current_dir) =~ qr"/wip(?:/|$)");
 
-	} elsif (-f "${dir}/../mk/bsd.pkg.mk") {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Checking category Makefile.");
-		$pkgsrcdir = "${dir}/..";
-		checkdir_category();
+	if (-f "${current_dir}/../../mk/bsd.pkg.mk") {
+		$pkgsrcdir = "${current_dir}/../..";
+		if ($is_dir) {
+			checkdir_package();
+		} else {
+			checkfile($item);
+		}
 
-	} elsif (-f "${dir}/mk/bsd.pkg.mk") {
-		$pkgsrcdir = $dir;
-		checkdir_root();
+	} elsif (-f "${current_dir}/../mk/bsd.pkg.mk") {
+		$pkgsrcdir = "${current_dir}/..";
+		if ($is_dir) {
+			checkdir_category();
+		} else {
+			checkfile($item);
+		}
 
+	} elsif (-f "${current_dir}/mk/bsd.pkg.mk") {
+		$pkgsrcdir = $current_dir;
+		if ($is_dir) {
+			checkdir_root();
+		} else {
+			checkfile($item);
+		}
 	} else {
-		log_error($dir, NO_LINE_NUMBER, "Not a pkgsrc directory.");
+		log_error($item, NO_LINE_NUMBER, sprintf("Don't know how to check this %s.", ($is_dir) ? "directory" : "file"));
 	}
 }
 
@@ -2899,9 +2930,9 @@ sub main() {
 
 	parse_command_line();
 
-	@todo_dirs = (@ARGV != 0) ? @ARGV : (".");
-	while (@todo_dirs != 0) {
-		checkdir(shift(@todo_dirs));
+	@todo_items = (@ARGV != 0) ? @ARGV : (".");
+	while (@todo_items != 0) {
+		checkitem(shift(@todo_items));
 	}
 
 	print_summary_and_exit($opt_quiet);
