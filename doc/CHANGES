@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11927 2005/11/14 03:12:42 minskim Exp $
+$NetBSD: CHANGES,v 1.11928 2005/11/14 04:06:06 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5214,3 +5214,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/hylafax to 4.2.2 [wiz 2005-11-13]
 	Updated print/tex-IEEEtran to 1.6cnb2 [minskim 2005-11-14]
 	Added databases/py-mssql version 0.7.3 [minskim 2005-11-14]
+	Updated pkgtools/pkglint to 4.41 [rillig 2005-11-14]
