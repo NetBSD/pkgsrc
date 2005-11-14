@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11934 2005/11/14 12:38:57 augustss Exp $
+$NetBSD: CHANGES,v 1.11935 2005/11/14 17:02:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5221,3 +5221,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/birda to 1.2 [augustss 2005-11-14]
 	Updated pkgtools/pkglint to 4.42 [rillig 2005-11-14]
 	Updated comms/birda to 1.3 [augustss 2005-11-14]
+	Updated print/dvipdfmx to 0.0.0.20031116nb4 [minskim 2005-11-14]
