@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.4 2005/11/14 08:05:27 jlam Exp $
+
+--- sam/idmap_ad.c.orig	2005-10-12 13:03:37.000000000 -0400
++++ sam/idmap_ad.c
+@@ -40,8 +40,6 @@
+ 
+ #define WINBIND_CCACHE_NAME "MEMORY:winbind_ccache"
+ 
+-NTSTATUS init_module(void);
+-
+ static ADS_STRUCT *ad_idmap_ads = NULL;
+ static char *ad_idmap_uri = NULL;
+ 
+@@ -400,7 +398,7 @@ static struct idmap_methods ad_methods =
+ 
+ 
+ /* support for new authentication subsystem */
+-NTSTATUS init_module(void)
++NTSTATUS idmap_ad_init(void)
+ {
+ 	return smb_register_idmap(SMB_IDMAP_INTERFACE_VERSION, "ad", &ad_methods);
+ }
