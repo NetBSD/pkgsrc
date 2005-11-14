@@ -17,3 +17,4 @@
   ${WRKSRC}. When that is finished, add a warning that using ${XARGS}
   is insecure.
 * detect spelling errors (like CONFLICT => CONFLICTS)
+* avoid duplicate warnings.
