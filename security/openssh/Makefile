@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2005/10/07 17:42:35 reed Exp $
+# $NetBSD: Makefile,v 1.160 2005/11/14 22:36:17 grant Exp $
 
 DISTNAME=		openssh-4.2p1
 PKGNAME=		openssh-4.2.1
@@ -70,6 +70,10 @@ CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT}
 CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 .endif
+
+# pkgsrc already enforces a "secure" version of zlib via dependencies,
+# so skip this bogus version check.
+CONFIGURE_ARGS+=	--without-zlib-version-check
 
 # the openssh configure script finds and uses ${LD} if defined and
 # defaults to ${CC} if not. we override LD here, since running the
