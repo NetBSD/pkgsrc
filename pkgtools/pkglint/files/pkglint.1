@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.25 2005/11/10 14:30:56 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.26 2005/11/14 04:05:22 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -48,6 +48,11 @@ Don't print the errors and warnings summary before terminating.
 Allow other RCS Id strings than NetBSD.
 Multiple strings may be concatenated with
 .Ql | .
+.It Fl r
+Check subdirectories, too.
+The subdirectories are those that are mentioned in a
+.Ql SUBDIR+=
+line.
 .It Fl v Ns | Ns Fl -verbose
 Be verbose.
 Show the progress report for items that are being checked.
@@ -68,10 +73,14 @@ Check the package Makefile, including all included files.
 Check MESSAGE files.
 .It Cm [no-]PLIST
 Check PLIST files.
+.It Cm [no-]bl3
+Check buildlink3 Makefiles.
 .It Cm [no-]distinfo
 Check the distinfo file.
 .It Cm [no-]extra
 Check remaining files in the package directory.
+.It Cm [no-]mk
+Check Makefile fragments besides buildlink3.
 .It Cm [no-]patches
 Check the pkgsrc specific patch files.
 .El
