@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/13 05:30:11 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/14 20:41:38 tonio Exp $
 #
 
 DISTNAME=	jadetex-3.13
@@ -19,18 +19,28 @@ INSTALLATION_DIRS=	bin
 
 .include "../../print/teTeX/module.mk"
 
+.if (${TEX_TYPE} == "teTeX3")
+TEX=etex
+PDFTEX=pdfetex
+.else
+TEX=tex
+PDFTEX=pdftex
+.endif
+
 do-install:
 	${CP} -p ${TEXMF_CNF} ${TEXMF_CNF}-before-jadetex
 	${CAT} ${FILESDIR}/texmf.cnf-add >>${TEXMF_CNF}
-	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf-var/web2c \
+	cd ${WRKSRC}; ${SETENV} TEX=${TEX} PDFTEX=${PDFTEX} \
+		TEXFORMATS=${LOCALBASE}/share/texmf-var/web2c \
 	       ${MAKE} ${MAKEFLAGS};
-	cd ${WRKSRC}; ${SETENV} TEXFORMATS=${LOCALBASE}/share/texmf-var/web2c \
+	cd ${WRKSRC}; ${SETENV} TEX=${TEX} PDFTEX=${PDFTEX} \
+       		TEXFORMATS=${LOCALBASE}/share/texmf-var/web2c \
 	       ${MAKE} ${MAKEFLAGS} install
 	:
 	${RM} -f ${PREFIX}/bin/jadetex
-	${LN} -s etex ${PREFIX}/bin/jadetex
+	${LN} -s ${TEX} ${PREFIX}/bin/jadetex
 	${RM} -f ${PREFIX}/bin/pdfjadetex
-	${LN} -s pdfetex ${PREFIX}/bin/pdfjadetex
+	${LN} -s ${PDFTEX} ${PREFIX}/bin/pdfjadetex
 	${INSTALL_MAN} ${WRKSRC}/jadetex.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/pdfjadetex.1 ${PREFIX}/man/man1
 	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/jadetex
