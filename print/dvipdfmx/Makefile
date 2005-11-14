@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/11/09 00:22:39 tonio Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/14 17:01:36 minskim Exp $
 
 DISTNAME=	dvipdfmx-20031116
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print converters
 MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/release/
 
@@ -10,21 +10,22 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/dvipdfmx/
 COMMENT=	Dvi to pdf converter with CID-keyed font support
 
-DEPENDS+=	adobe-cmaps-[0-9]*:../../fonts/adobe-cmaps
+DEPENDS+=	adobe-cmaps>=20051109:../../fonts/adobe-cmaps
 
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 
-USE_PKGINSTALL=		YES
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
-
 GNU_CONFIGURE=		YES
-#CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
+
+post-install:
+	cd ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap; \
+	for file in ../../../Adobe/Resource/CMap/*; do \
+		${LN} -s $$file `${BASENAME} $$file`; \
+	done
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/ghostscript.mk"
+.include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"
