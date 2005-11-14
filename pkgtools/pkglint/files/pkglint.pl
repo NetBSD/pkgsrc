@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.357 2005/11/14 13:03:32 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.358 2005/11/14 16:49:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1298,9 +1298,9 @@ sub checkfile_patches_patch($) {
 	checklines_multiple_patches($lines);
 }
 
-sub readmakefile($$$);
-sub readmakefile($$$) {
-	my ($file, $all_lines, $seen_Makefile_include) = @_;
+sub readmakefile($$$$);
+sub readmakefile($$$$) {
+	my ($file, $main_lines, $all_lines, $seen_Makefile_include) = @_;
 	my $contents = "";
 	my ($includefile, $dirname, $lines, $is_main_Makefile);
 
@@ -1309,14 +1309,15 @@ sub readmakefile($$$) {
 		return false;
 	}
 
-	$is_main_Makefile = (@{$all_lines} == 0);
+	$is_main_Makefile = (@{$main_lines} == 0);
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
 		if ($is_main_Makefile) {
-			push(@{$all_lines}, $line);
+			push(@{$main_lines}, $line);
 		}
+		push(@{$all_lines}, $line);
 
 		# try to get any included file
 		my $is_include_line = false;
@@ -1363,7 +1364,7 @@ sub readmakefile($$$) {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
 					$line->log_info("Including \"$dirname/$includefile\".");
-					$contents .= readmakefile("$dirname/$includefile", $all_lines, $seen_Makefile_include);
+					$contents .= readmakefile("$dirname/$includefile", $main_lines, $all_lines, $seen_Makefile_include);
 				}
 			}
 		} else {
@@ -2219,14 +2220,14 @@ sub set_default_value($$) {
 	}
 }
 
-sub load_package_Makefile($$$) {
+sub load_package_Makefile($$$$) {
 	my ($subr) = "load_package_Makefile";
-	my ($fname, $ref_whole, $ref_lines) = @_;
-	my ($whole, $lines);
+	my ($fname, $ref_whole, $ref_main_lines, $ref_all_lines) = @_;
+	my ($whole, $main_lines, $all_lines);
 
 	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
 
-	$whole = readmakefile($fname, $lines = [], {});
+	$whole = readmakefile($fname, $main_lines = [], $all_lines = [], {});
 	if (!$whole) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
@@ -2234,7 +2235,7 @@ sub load_package_Makefile($$$) {
 
 	if ($opt_dumpmakefile) {
 		print("OK: whole Makefile (with all included files) follows:\n");
-		foreach my $line (@{$lines}) {
+		foreach my $line (@{$all_lines}) {
 			printf("%s\n", $line->to_string());
 		}
 	}
@@ -2265,7 +2266,8 @@ sub load_package_Makefile($$$) {
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "PKGDIR=$pkgdir");
 
 	${$ref_whole} = $whole;
-	${$ref_lines} = $lines;
+	${$ref_main_lines} = $main_lines;
+	${$ref_all_lines} = $all_lines;
 	return true;
 }
 
@@ -2313,8 +2315,8 @@ sub checkfile_mk($) {
 	checklines_Makefile_varuse($lines);
 }
 
-sub checkfile_package_Makefile($$$) {
-	my ($fname, $rawwhole, $lines) = @_;
+sub checkfile_package_Makefile($$$$) {
+	my ($fname, $rawwhole, $main_lines, $lines) = @_;
 	my ($distname, $category, $distfiles,
 	    $extract_sufx, $wrksrc);
 	my ($whole, $tmp, $idx, @sections);
@@ -2335,7 +2337,7 @@ sub checkfile_package_Makefile($$$) {
 		}
 	}
 
-	checklines_deprecated_variables($lines);
+	checklines_deprecated_variables($main_lines);
 
 	#
 	# whole file: INTERACTIVE_STAGE
@@ -2384,7 +2386,7 @@ sub checkfile_package_Makefile($$$) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1: no need to use '-' before command.");
 	}
 
-	checklines_direct_tools($lines);
+	checklines_direct_tools($main_lines);
 
 	if ($whole =~ /etc\/rc\.d/) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use RCD_SCRIPTS mechanism to install rc.d ".
@@ -2585,10 +2587,10 @@ sub checkfile_package_Makefile($$$) {
 			"discouraged. Redefine \"do-$1\" instead.");
 	}
 
-	checklines_package_Makefile($lines);
+	checklines_package_Makefile($main_lines);
 	# Disabled, as I don't like the current ordering scheme.
 	#checklines_package_Makefile_varorder($lines);
-	checklines_Makefile_varuse($lines);
+	checklines_Makefile_varuse($main_lines);
 }
 
 sub checkfile($) {
@@ -2901,10 +2903,10 @@ sub checkdir_category() {
 }
 
 sub checkdir_package() {
-	my ($whole, $lines, $have_distinfo, $have_patches);
+	my ($whole, $main_lines, $lines, $have_distinfo, $have_patches);
 
 	# we need to handle the Makefile first to get some variables
-	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$lines)) {
+	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$main_lines, $lines)) {
 		log_error("${current_dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
@@ -2924,7 +2926,7 @@ sub checkdir_package() {
 	$have_patches = false;
 	foreach my $fname (@files) {
 		if ($fname eq "${current_dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($fname, $whole, $lines);
+			$opt_check_Makefile and checkfile_package_Makefile($fname, $whole, $main_lines, $lines);
 		} else {
 			checkfile($fname);
 		}
