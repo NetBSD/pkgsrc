@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2005/11/14 08:05:28 jlam Exp $
+
+--- nsswitch/winbindd_util.c.orig	2005-10-12 13:03:28.000000000 -0400
++++ nsswitch/winbindd_util.c
+@@ -1159,7 +1159,7 @@ BOOL winbindd_upgrade_idmap(void)
+ 	SMB_STRUCT_STAT stbuf;
+ 	TDB_CONTEXT *idmap_tdb;
+ 
+-	pstrcpy(idmap_name, lock_path("winbindd_idmap.tdb"));
++	pstrcpy(idmap_name, state_path("winbindd_idmap.tdb"));
+ 
+ 	if (!file_exist(idmap_name, &stbuf)) {
+ 		/* nothing to convert return */

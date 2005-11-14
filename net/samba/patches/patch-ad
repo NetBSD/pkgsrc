@@ -1,55 +1,13 @@
-$NetBSD: patch-ad,v 1.15 2004/12/17 18:55:47 tron Exp $
+$NetBSD: patch-ad,v 1.16 2005/11/14 08:05:27 jlam Exp $
 
---- lib/util_getent.c.orig	Fri Feb 13 11:02:10 2004
+--- lib/util_getent.c.orig	2005-10-12 13:03:30.000000000 -0400
 +++ lib/util_getent.c
-@@ -133,6 +133,11 @@ struct sys_pwent * getpwent_list(void)
- 	struct sys_pwent *plist;
- 	struct sys_pwent *pent;
- 	struct passwd *pwd;
-+#ifdef BSD
-+# define GECOS_BUFLEN 1024
-+	char *bp, *gecos, *p, buf[GECOS_BUFLEN];
-+	int buflen;
-+#endif
- 	
- 	pent = SMB_MALLOC_P(struct sys_pwent);
- 	if (pent == NULL) {
-@@ -156,9 +161,38 @@ struct sys_pwent * getpwent_list(void)
+@@ -156,7 +156,7 @@ struct sys_pwent * getpwent_list(void)
  		pent->pw_uid = pwd->pw_uid;
  		pent->pw_gid = pwd->pw_gid;
  		if (pwd->pw_gecos) {
-+#ifdef BSD
-+			gecos = pwd->pw_gecos;
-+			if (*gecos == '*')
-+				gecos++;
-+			bp = buf;
-+
-+			/* copy gecos, interpolating & to be full name */
-+			for (p = gecos; *p != '\0'; p++) {
-+				if (bp >= &buf[GECOS_BUFLEN - 1])
-+					/* buffer overflow */
-+					goto gecos_done;
-+				if (*p == '&') {
-+					/* interpolate full name */
-+					snprintf(bp, GECOS_BUFLEN - (bp - buf),
-+						 "%s", pwd->pw_name);
-+					*bp = toupper(*bp);
-+					bp += strlen(bp);
-+				} else {
-+					*bp++ = *p;
-+				}
-+			}
-+			*bp = '\0';
-+			if ((pent->pw_gecos = SMB_STRDUP(buf)) == NULL)
-+				goto err;
-+#else
- 			if ((pent->pw_gecos = SMB_STRDUP(pwd->pw_gecos)) == NULL)
+-			if ((pent->pw_gecos = SMB_STRDUP(pwd->pw_gecos)) == NULL)
++			if ((pent->pw_gecos = passwd_expand_gecos(pwd)) == NULL)
  				goto err;
-+#endif
  		}
-+#ifdef BSD
-+  gecos_done:
-+#endif
  		if (pwd->pw_dir) {
- 			if ((pent->pw_dir = SMB_STRDUP(pwd->pw_dir)) == NULL)
- 				goto err;

@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 2005/11/14 08:05:27 jlam Exp $
+
+--- script/installmodules.sh.orig	2005-10-12 13:03:44.000000000 -0400
++++ script/installmodules.sh
+@@ -9,7 +9,7 @@ shift
+ 
+ for d in $BASEDIR $LIBDIR; do
+ if [ ! -d $d ]; then
+-mkdir $d
++mkdir -p $d
+ if [ ! -d $d ]; then
+   echo Failed to make directory $d
+   exit 1

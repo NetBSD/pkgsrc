@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.mirrors,v 1.1 2005/11/14 08:05:27 jlam Exp $
+#
+# This Makefile fragment contains the mirror sites for fetching Samba.
+
+###
+### This list was last updated on 20051024 from:
+###	http://www.samba.org/samba/download/ftp_mirrors.html
+###
+SAMBA_MIRRORS=	\
+	ftp://ftp.samba.org/pub/samba/ \
+	ftp://gd.tuwien.ac.at/infosys/servers/samba/ \
+	ftp://ftp.easynet.be/samba/ \
+	ftp://ftp.pucpr.br/samba/ \
+	ftp://ca.samba.org/ \
+	ftp://mirror.kn.vutbr.cz/pub/MIRRORS/samba/ \
+	ftp://mirrors.dotsrc.org/samba/ \
+	ftp://fi.samba.org/pub/samba/ \
+	ftp://de.samba.org/samba.org/ \
+	ftp://ftp.ntua.gr/pub/net/samba/ \
+	ftp://ie.samba.org/mirrors/ftp.samba.org/pub/samba/ \
+	ftp://ftp.heanet.ie/pub/samba/ \
+	ftp://ftp.ring.gr.jp/pub/net/samba/ \
+	ftp://ftp.bit.nl/mirror/samba/ \
+	ftp://www.bibsyst.no/pub/samba/ \
+	ftp://giswitch.sggw.waw.pl/pub/unix/samba/ \
+	ftp://pl.samba.org/pub/unix/net/samba/ \
+	ftp://ftp.citkit.ru/pub/samba/ \
+	ftp://ru.samba.org/pub/samba/ \
+	ftp://ru2.samba.org// \
+	ftp://ftp.chg.ru/packages/samba/ \
+	ftp://cs.samba.org/pub/samba/ \
+	ftp://ftp.oss.eznetsols.org/samba/ \
+	ftp://ftp.k2.net/mirrors/samba/ \
+	ftp://se.samba.org/pub/samba/ \
+	ftp://us1.samba.org/pub/samba/ \
+	ftp://us5.samba.org/pub/samba-ftp/ \
+	ftp://us2.samba.org/pub/samba/ \
+	ftp://us4.samba.org/pub/samba/ \
+	ftp://sunsite.org.uk/package/samba/
