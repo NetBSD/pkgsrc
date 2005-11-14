@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.348 2005/11/14 04:05:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.349 2005/11/14 04:24:14 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -611,7 +611,6 @@ my $pkgdir;			# PKGDIR from the package Makefile
 my $filesdir;			# FILESDIR from the package Makefile
 my $patchdir;			# PATCHDIR from the package Makefile
 my $distinfo_file;		# DISTINFO_FILE from the package Makefile
-my $scriptdir;			# SCRIPTDIR from the package Makefile
 my $pkgname;			# PKGNAME from the package Makefile
 
 my $seen_USE_PKGLOCALEDIR;	# Does the package use PKGLOCALEDIR?
@@ -1174,7 +1173,7 @@ sub checkfile_PLIST($) {
 				$line->log_warning("Man pages should be installed into man/, not share/man/.");
 			}
 
-			if ($text =~ /\${PKGLOCALEDIR}/ && !$seen_USE_PKGLOCALEDIR) {
+			if ($text =~ /\${PKGLOCALEDIR}/ && defined($seen_USE_PKGLOCALEDIR) && !$seen_USE_PKGLOCALEDIR) {
 				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
 			}
 
@@ -2008,7 +2007,7 @@ sub checklines_package_Makefile_varorder($) {
 		]
 	);
 
-	if ($seen_Makefile_common) {
+	if (!defined($seen_Makefile_common) || $seen_Makefile_common) {
 		return;
 	}
 
@@ -2240,14 +2239,11 @@ sub load_package_Makefile($$$) {
 	set_default_value(\$filesdir, "files");
 	$patchdir = expand_variable($whole, "PATCHDIR");
 	set_default_value(\$patchdir, "patches");
-	$scriptdir = expand_variable($whole, "SCRIPTDIR");
-	set_default_value(\$scriptdir, "scripts");
 
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "DISTINFO_FILE=$distinfo_file");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "FILESDIR=$filesdir");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "PATCHDIR=$patchdir");
 	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "PKGDIR=$pkgdir");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "SCRIPTDIR=$scriptdir");
 
 	${$ref_whole} = $whole;
 	${$ref_lines} = $lines;
@@ -2325,9 +2321,8 @@ sub checkfile_package_Makefile($$$) {
 		}
 	}
 
-	if ($whole =~ /\nUSE_PKGLOCALEDIR/) {
-		$seen_USE_PKGLOCALEDIR = true;
-	}
+	$seen_USE_PKGLOCALEDIR = ($whole =~ /\nUSE_PKGLOCALEDIR/) ? true : false;
+
 	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR.");
 	}
@@ -2835,15 +2830,6 @@ sub checkfile($) {
 sub checkdir_package() {
 	my ($whole, $lines, $have_distinfo, $have_patches);
 
-	$pkgdir			= ".";
-	$filesdir		= "files";
-	$patchdir		= "patches";
-	$distinfo_file		= "distinfo";
-	$scriptdir		= "scripts";
-	$seen_USE_PKGLOCALEDIR	= false;
-	$seen_Makefile_common	= false;
-	$pkgname		= undef;
-
 	# we need to handle the Makefile first to get some variables
 	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$lines)) {
 		log_error("${current_dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
@@ -2890,6 +2876,15 @@ sub checkitem($) {
 	my ($is_dir);
 
 	$is_dir = (-d $item) ? true : false;
+
+	# Initialize global variables.
+	$pkgdir			= ".";
+	$filesdir		= "files";
+	$patchdir		= "patches";
+	$distinfo_file		= "distinfo";
+	$seen_USE_PKGLOCALEDIR	= undef;
+	$seen_Makefile_common	= undef;
+	$pkgname		= undef;
 
 	$current_dir = $is_dir ? $item : dirname($item);
 	$is_wip = !$opt_import && (Cwd::abs_path($current_dir) =~ qr"/wip(?:/|$)");
