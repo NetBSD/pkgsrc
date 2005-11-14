@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/22 15:15:43 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/11/14 06:05:20 minskim Exp $
 share/Adobe/Resource/CMap/78-EUC-H
 share/Adobe/Resource/CMap/78-EUC-V
 share/Adobe/Resource/CMap/78-H
@@ -26,6 +26,7 @@ share/Adobe/Resource/CMap/Adobe-CNS1-1
 share/Adobe/Resource/CMap/Adobe-CNS1-2
 share/Adobe/Resource/CMap/Adobe-CNS1-3
 share/Adobe/Resource/CMap/Adobe-CNS1-4
+share/Adobe/Resource/CMap/Adobe-CNS1-5
 share/Adobe/Resource/CMap/Adobe-CNS1-UCS2
 share/Adobe/Resource/CMap/Adobe-GB1-0
 share/Adobe/Resource/CMap/Adobe-GB1-1
@@ -196,46 +197,47 @@ share/Adobe/Resource/CMap/UniKS-UTF8-H
 share/Adobe/Resource/CMap/UniKS-UTF8-V
 share/Adobe/Resource/CMap/V
 share/Adobe/Resource/CMap/WP-Symbol
-share/Adobe/Resource/ac14/CMap/Adobe-CNS1-0
-share/Adobe/Resource/ac14/CMap/Adobe-CNS1-1
-share/Adobe/Resource/ac14/CMap/Adobe-CNS1-2
-share/Adobe/Resource/ac14/CMap/Adobe-CNS1-3
-share/Adobe/Resource/ac14/CMap/Adobe-CNS1-4
-share/Adobe/Resource/ac14/CMap/B5-H
-share/Adobe/Resource/ac14/CMap/B5-V
-share/Adobe/Resource/ac14/CMap/B5pc-H
-share/Adobe/Resource/ac14/CMap/B5pc-V
-share/Adobe/Resource/ac14/CMap/CNS-EUC-H
-share/Adobe/Resource/ac14/CMap/CNS-EUC-V
-share/Adobe/Resource/ac14/CMap/CNS1-H
-share/Adobe/Resource/ac14/CMap/CNS1-V
-share/Adobe/Resource/ac14/CMap/CNS2-H
-share/Adobe/Resource/ac14/CMap/CNS2-V
-share/Adobe/Resource/ac14/CMap/ETHK-B5-H
-share/Adobe/Resource/ac14/CMap/ETHK-B5-V
-share/Adobe/Resource/ac14/CMap/ETen-B5-H
-share/Adobe/Resource/ac14/CMap/ETen-B5-V
-share/Adobe/Resource/ac14/CMap/HKdla-B5-H
-share/Adobe/Resource/ac14/CMap/HKdla-B5-V
-share/Adobe/Resource/ac14/CMap/HKdlb-B5-H
-share/Adobe/Resource/ac14/CMap/HKdlb-B5-V
-share/Adobe/Resource/ac14/CMap/HKgccs-B5-H
-share/Adobe/Resource/ac14/CMap/HKgccs-B5-V
-share/Adobe/Resource/ac14/CMap/HKm314-B5-H
-share/Adobe/Resource/ac14/CMap/HKm314-B5-V
-share/Adobe/Resource/ac14/CMap/HKm471-B5-H
-share/Adobe/Resource/ac14/CMap/HKm471-B5-V
-share/Adobe/Resource/ac14/CMap/HKscs-B5-H
-share/Adobe/Resource/ac14/CMap/HKscs-B5-V
-share/Adobe/Resource/ac14/CMap/UniCNS-UCS2-H
-share/Adobe/Resource/ac14/CMap/UniCNS-UCS2-V
-share/Adobe/Resource/ac14/CMap/UniCNS-UTF16-H
-share/Adobe/Resource/ac14/CMap/UniCNS-UTF16-V
-share/Adobe/Resource/ac14/CMap/UniCNS-UTF32-H
-share/Adobe/Resource/ac14/CMap/UniCNS-UTF32-V
-share/Adobe/Resource/ac14/CMap/UniCNS-UTF8-H
-share/Adobe/Resource/ac14/CMap/UniCNS-UTF8-V
-share/Adobe/Resource/ac14/cid2code.txt
+share/Adobe/Resource/ac15/CMap/Adobe-CNS1-0
+share/Adobe/Resource/ac15/CMap/Adobe-CNS1-1
+share/Adobe/Resource/ac15/CMap/Adobe-CNS1-2
+share/Adobe/Resource/ac15/CMap/Adobe-CNS1-3
+share/Adobe/Resource/ac15/CMap/Adobe-CNS1-4
+share/Adobe/Resource/ac15/CMap/Adobe-CNS1-5
+share/Adobe/Resource/ac15/CMap/B5-H
+share/Adobe/Resource/ac15/CMap/B5-V
+share/Adobe/Resource/ac15/CMap/B5pc-H
+share/Adobe/Resource/ac15/CMap/B5pc-V
+share/Adobe/Resource/ac15/CMap/CNS-EUC-H
+share/Adobe/Resource/ac15/CMap/CNS-EUC-V
+share/Adobe/Resource/ac15/CMap/CNS1-H
+share/Adobe/Resource/ac15/CMap/CNS1-V
+share/Adobe/Resource/ac15/CMap/CNS2-H
+share/Adobe/Resource/ac15/CMap/CNS2-V
+share/Adobe/Resource/ac15/CMap/ETHK-B5-H
+share/Adobe/Resource/ac15/CMap/ETHK-B5-V
+share/Adobe/Resource/ac15/CMap/ETen-B5-H
+share/Adobe/Resource/ac15/CMap/ETen-B5-V
+share/Adobe/Resource/ac15/CMap/HKdla-B5-H
+share/Adobe/Resource/ac15/CMap/HKdla-B5-V
+share/Adobe/Resource/ac15/CMap/HKdlb-B5-H
+share/Adobe/Resource/ac15/CMap/HKdlb-B5-V
+share/Adobe/Resource/ac15/CMap/HKgccs-B5-H
+share/Adobe/Resource/ac15/CMap/HKgccs-B5-V
+share/Adobe/Resource/ac15/CMap/HKm314-B5-H
+share/Adobe/Resource/ac15/CMap/HKm314-B5-V
+share/Adobe/Resource/ac15/CMap/HKm471-B5-H
+share/Adobe/Resource/ac15/CMap/HKm471-B5-V
+share/Adobe/Resource/ac15/CMap/HKscs-B5-H
+share/Adobe/Resource/ac15/CMap/HKscs-B5-V
+share/Adobe/Resource/ac15/CMap/UniCNS-UCS2-H
+share/Adobe/Resource/ac15/CMap/UniCNS-UCS2-V
+share/Adobe/Resource/ac15/CMap/UniCNS-UTF16-H
+share/Adobe/Resource/ac15/CMap/UniCNS-UTF16-V
+share/Adobe/Resource/ac15/CMap/UniCNS-UTF32-H
+share/Adobe/Resource/ac15/CMap/UniCNS-UTF32-V
+share/Adobe/Resource/ac15/CMap/UniCNS-UTF8-H
+share/Adobe/Resource/ac15/CMap/UniCNS-UTF8-V
+share/Adobe/Resource/ac15/cid2code.txt
 share/Adobe/Resource/ag14/.nfsFA55
 share/Adobe/Resource/ag14/CMap/Adobe-GB1-0
 share/Adobe/Resource/ag14/CMap/Adobe-GB1-1
@@ -474,7 +476,7 @@ share/Adobe/Resource/rksj-cmaps/TCVN-RKSJ-H
 @dirrm share/Adobe/Resource/ai0
 @dirrm share/Adobe/Resource/ag14/CMap
 @dirrm share/Adobe/Resource/ag14
-@dirrm share/Adobe/Resource/ac14/CMap
-@dirrm share/Adobe/Resource/ac14
+@dirrm share/Adobe/Resource/ac15/CMap
+@dirrm share/Adobe/Resource/ac15
 @dirrm share/Adobe/Resource/CMap
 @unexec ${RMDIR} -p %D/share/Adobe/Resource 2>/dev/null || ${TRUE}
