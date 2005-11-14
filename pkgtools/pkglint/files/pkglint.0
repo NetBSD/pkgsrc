@@ -36,6 +36,10 @@ DDEESSCCRRIIPPTTIIOONN
            --RR|----rrccssiiddssttrriinngg    Allow other RCS Id strings than NetBSD.  Multi-
                                ple strings may be concatenated with `|'.
 
+           --rr                  Check subdirectories, too.  The subdirectories
+                               are those that are mentioned in a `SUBDIR+='
+                               line.
+
            --vv|----vveerrbboossee        Be verbose.  Show the progress report for items
                                that are being checked.
 
@@ -55,9 +59,13 @@ DDEESSCCRRIIPPTTIIOONN
 
            [[nnoo--]]PPLLIISSTT          Check PLIST files.
 
+           [[nnoo--]]bbll33            Check buildlink3 Makefiles.
+
            [[nnoo--]]ddiissttiinnffoo       Check the distinfo file.
 
            [[nnoo--]]eexxttrraa          Check remaining files in the package directory.
+
+           [[nnoo--]]mmkk             Check Makefile fragments besides buildlink3.
 
            [[nnoo--]]ppaattcchheess        Check the pkgsrc specific patch files.
 
