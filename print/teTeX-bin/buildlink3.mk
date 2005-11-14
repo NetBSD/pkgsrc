@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/08 23:42:24 tonio Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/11/14 21:57:00 tonio Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TETEX_BIN_BUILDLINK3_MK:=	${TETEX_BIN_BUILDLINK3_MK}+
@@ -13,7 +13,9 @@ BUILDLINK_PACKAGES+=	teTeX-bin
 .if !empty(TETEX_BIN_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.teTeX-bin+=	teTeX-bin-2.[0-9]*
 BUILDLINK_PKGSRCDIR.teTeX-bin?=	../../print/teTeX-bin
-
 .endif	# TETEX_BIN_BUILDLINK3_MK
+
+TEX=tex
+PDFTEX=pdftex
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
