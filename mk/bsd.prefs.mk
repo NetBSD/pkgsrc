@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.208 2005/11/13 17:40:00 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.209 2005/11/14 04:51:47 rillig Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -429,7 +429,7 @@ X11BASE?=		${LOCALBASE}/${X11ROOT_PREFIX}
 # The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
 # is to catch users of xpkgwedge<1.0.
 #
-.if !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss]) 
+.if !empty(USE_XPKGWEDGE:M[Yy][Ee][Ss])
 X11PREFIX=		${LOCALBASE}
 .else
 X11PREFIX=		${X11BASE}
