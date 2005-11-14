@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.49 2005/09/05 15:24:08 dillo Exp $
+# $NetBSD: bsd.options.mk,v 1.50 2005/11/14 04:25:50 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -63,7 +63,7 @@
 #	PKG_OPTIONS_REQUIRED_GROUPS, and PKG_OPTIONS_NONEMPTY_SETS are
 #	defined, PKG_OPTIONS is set to the empty list and the package
 #	is otherwise treated as not using the options framework.
-#		
+#
 #
 # Optionally, the user may define the following variables in /etc/mk.conf:
 #
