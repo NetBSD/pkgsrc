@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.359 2005/11/15 03:10:21 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.360 2005/11/15 13:37:55 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2470,11 +2470,6 @@ sub checkfile_package_Makefile($$$$) {
 
 	if ($opt_warn_vague && !defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
-	}
-
-	if (defined($distname) && $distname =~ qr"(nb\d+)") {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Is '$1' really ok on DISTNAME, ".
-				"or is it intended for PKGNAME?");
 	}
 
 	if (!defined($pkgname)) {
