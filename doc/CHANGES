@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11944 2005/11/15 07:15:25 minskim Exp $
+$NetBSD: CHANGES,v 1.11945 2005/11/15 11:28:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5231,3 +5231,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added print/tex-foiltex version 2.1.4a [minskim 2005-11-15]
 	Updated print/teTeX3-bin to 3.0nb4 [minskim 2005-11-15]
 	Added print/tex-hlatex version 1.0.1 [minskim 2005-11-15]
+	Updated net/samba to 3.0.20.2nb2 [tron 2005-11-15]
