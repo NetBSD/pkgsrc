@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.66 2005/11/05 20:18:53 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.67 2005/11/15 09:52:39 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -145,3 +145,5 @@ Pullup ticket 891 - requested by Lubomir Sedlacik
 security update for clamav
 Pullup ticket 884 - requested by Lubomir Sedlacik
 security update of net/openvpn
+Pullup ticket 871 - requested by Min Sik Kim
+portability fix for macutil
