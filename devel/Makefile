@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.692 2005/11/15 02:07:21 rillig Exp $
+# $NetBSD: Makefile,v 1.693 2005/11/15 20:57:21 shannonjr Exp $
 #
 
 COMMENT=	Development utilities
@@ -613,6 +613,7 @@ SUBDIR+=	trio
 SUBDIR+=	tvision
 SUBDIR+=	ucl
 SUBDIR+=	unidiff
+SUBDIR+=	uno
 SUBDIR+=	valgrind
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
