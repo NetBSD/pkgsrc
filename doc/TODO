@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4174 2005/11/14 23:07:39 wiz Exp $
+$NetBSD: TODO,v 1.4175 2005/11/15 18:07:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,7 @@ Suggested package updates
 	o cdlabelgen-3.5.0 [pkg/30721]
 	o cdlabelgen-3.6.0
 	o cdrtools-2.01.01a03
-	o cfengine2-2.1.16
+	o cfengine2-2.1.17
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
 	o cgdb-0.5.3
@@ -535,6 +535,7 @@ Suggested package updates
 	o fortunes-de-0.20
 	o fox-1.4.22
 	o fprot-workstation-bin-4.6.1
+	o freeciv-2.0.7
 	o freeglut-2.4.0
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
@@ -645,7 +646,7 @@ Suggested package updates
 	o intercal-0.24 [dillo]
 	o ion3-20051029
 	o ion3-devel-20050820 [pkg/31132]
-	o iozone-3.254
+	o iozone-3.257
 	o ipcheck-0.219
 	o ipsec-tools-0.6.2
 	o ipv6calc-0.50
@@ -993,6 +994,7 @@ Suggested package updates
 	o p5-perl-ldap-0.3202
 	o p5-prefork-1.00
 	o p5-sybperl-2.18
+	o p5-xmltv-0.5.41
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
@@ -1082,6 +1084,8 @@ Suggested package updates
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
 	o py-pyrex-0.9.3.1
+	o py-qt3-3.15.1
+	o py-qt3-sip-4.3.2
 	o py-soappy-0.11.6
 	o py-sqlite-2.0.4 [www/trac needs 1.x]
 	o py-sqlite-2.0.5
@@ -1306,6 +1310,7 @@ Suggested package updates
 	o xblast-2.10.0
 	o xboard-4.2.7
 	o xcb-2.4
+	o xchat-2.6.0
 	o xchat-gnome-0.6
 	o xcircuit-3.4.0
 	o xdaliclock-2.20
