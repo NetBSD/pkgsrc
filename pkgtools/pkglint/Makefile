@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.295 2005/11/14 11:45:52 rillig Exp $
+# $NetBSD: Makefile,v 1.296 2005/11/15 01:55:00 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.42
@@ -34,10 +34,6 @@ SUBST_SED.pkglint+=	-e 's|@PERL@|${PERL5}|g'
 SUBST_SED.pkglint+=	-e 's|@DATADIR@|${PREFIX}/share/pkglint|g'
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "AIX" || ${OPSYS} == "SunOS"
-MANINSTALL=		catinstall
-.endif
 
 do-extract:
 .for f in lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl
