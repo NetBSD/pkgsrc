@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.2.2.2 2005/11/15 10:08:22 salo Exp $
+
+--- sha1/sha1ossl.h.orig	2002-09-27 02:44:33.000000000 +0900
++++ sha1/sha1ossl.h
+@@ -3,6 +3,7 @@
+ #ifndef SHA1OSSL_H_INCLUDED
+ #define SHA1OSSL_H_INCLUDED
+ 
++#include <stddef.h>
+ #include <openssl/sha.h>
+ 
+ #define SHA1_CTX	SHA_CTX
