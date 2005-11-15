@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.360 2005/11/15 13:37:55 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.361 2005/11/15 13:48:42 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1878,6 +1878,7 @@ sub checklines_direct_tools($) {
 		INTERACTIVE_STAGE
 		MANSOURCEPATH MASTER_SITES
 		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON
+		SUBST_CLASSES
 		SUBST_MESSAGE\\..*
 		.*_TARGET
 		USE_TOOLS);
