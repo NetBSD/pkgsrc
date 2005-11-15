@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2005/11/15 11:28:23 tron Exp $
+# $NetBSD: Makefile,v 1.150 2005/11/15 13:58:14 jlam Exp $
 
 .include "Makefile.mirrors"
 
@@ -36,6 +36,7 @@ SAMBA_PIDDIR?=		${SAMBA_VARDIR}/run
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 SAMBA_STATEDIR?=	${SAMBA_VARDIR}/db/samba
 SAMBA_VARDIR?=		${VARBASE}
+WINBINDD_RCD_SCRIPT=	# empty
 
 FILES_SUBST=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
