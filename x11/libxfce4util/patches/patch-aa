@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2.2.2 2005/11/15 10:32:51 salo Exp $
+
+--- libxfce4util/licenses-texts.c.orig	2005-11-05 18:23:41.000000000 +0100
++++ libxfce4util/licenses-texts.c	2005-11-05 18:24:05.000000000 +0100
+@@ -1,7 +1,7 @@
+ /* Auto generated file, do not edit */
+ 
+ /* Keep the license stuff in one section if possible */
+-#if defined(__GNUC__)
++#if defined(__GNUC__) && !defined(__APPLE__)
+ #define SECTION __attribute__((section(".xfce.LICENSES")))
+ #else
+ #define SECTION
