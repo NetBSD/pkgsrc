@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11942 2005/11/15 03:02:52 minskim Exp $
+$NetBSD: CHANGES,v 1.11943 2005/11/15 07:10:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5229,3 +5229,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/bittornado-gui to 0.3.14 [veego 2005-11-14]
 	Updated textproc/antiword to 0.37 [wiz 2005-11-14]
 	Added print/tex-foiltex version 2.1.4a [minskim 2005-11-15]
+	Updated print/teTeX3-bin to 3.0nb4 [minskim 2005-11-15]
