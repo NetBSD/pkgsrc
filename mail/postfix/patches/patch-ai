@@ -1,8 +1,17 @@
-$NetBSD: patch-ai,v 1.13 2005/03/22 18:09:33 xtraeme Exp $
+$NetBSD: patch-ai,v 1.13.4.1 2005/11/15 11:42:44 salo Exp $
 
 --- makedefs.orig	2005-02-22 13:35:52.000000000 +0100
-+++ makedefs	2005-03-21 22:45:02.000000000 +0100
-@@ -124,7 +124,7 @@
++++ makedefs
+@@ -116,6 +116,8 @@ case "$SYSTEM.$RELEASE" in
+ 		;;
+   FreeBSD.5*)	SYSTYPE=FREEBSD5
+ 		;;
++  DragonFly.1*) SYSTYPE=FREEBSD4
++		;;
+   OpenBSD.2*)	SYSTYPE=OPENBSD2
+ 		;;
+   OpenBSD.3*)	SYSTYPE=OPENBSD3
+@@ -124,7 +126,7 @@ case "$SYSTEM.$RELEASE" in
  		;;
     NetBSD.1*)	SYSTYPE=NETBSD1
  		;;
@@ -11,7 +20,7 @@ $NetBSD: patch-ai,v 1.13 2005/03/22 18:09:33 xtraeme Exp $
  		;;
     BSD/OS.2*)	SYSTYPE=BSDI2
  		;;
-@@ -175,13 +175,6 @@
+@@ -175,13 +177,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -25,7 +34,7 @@ $NetBSD: patch-ai,v 1.13 2005/03/22 18:09:33 xtraeme Exp $
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -213,25 +206,8 @@
+@@ -213,25 +208,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -51,7 +60,7 @@ $NetBSD: patch-ai,v 1.13 2005/03/22 18:09:33 xtraeme Exp $
  		# GDBM locks the DBM .pag file after open. This breaks postmap.
  		# if [ -f /usr/include/gdbm-ndbm.h ]
  		# then
-@@ -242,7 +218,6 @@
+@@ -242,7 +220,6 @@ case "$SYSTEM.$RELEASE" in
  		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
  		#     GDBM_LIBS=gdbm
  		# fi
@@ -59,7 +68,7 @@ $NetBSD: patch-ai,v 1.13 2005/03/22 18:09:33 xtraeme Exp $
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -270,25 +245,13 @@
+@@ -270,25 +247,13 @@ case "$SYSTEM.$RELEASE" in
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"

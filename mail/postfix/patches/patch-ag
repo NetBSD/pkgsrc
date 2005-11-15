@@ -1,16 +1,18 @@
-$NetBSD: patch-ag,v 1.16 2005/09/06 08:10:58 abs Exp $
+$NetBSD: patch-ag,v 1.16.2.1 2005/11/15 11:42:44 salo Exp $
 
---- src/util/sys_defs.h.orig	2005-02-04 02:07:44.000000000 +0200
-+++ src/util/sys_defs.h	2005-04-04 20:55:05.000000000 +0300
-@@ -157,5 +157,11 @@
+--- src/util/sys_defs.h.orig	2005-07-15 00:28:33.000000000 +0300
++++ src/util/sys_defs.h	2005-11-13 09:22:07.000000000 +0200
+@@ -52,3 +52,3 @@
+ #define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin"
+-#if (defined(__NetBSD_Version__) && __NetBSD_Version__ > 200040000)
++#if (defined(__NetBSD_Version__) && __NetBSD_Version__ > 299000900)
+ # define USE_STATVFS
+@@ -124,3 +124,3 @@
+ 
+-#if __NetBSD_Version__ >= 200060000	/* 2.0F */
++#if __NetBSD_Version__ >= 299000900	/* 2.99.9 */
+ #define HAS_CLOSEFROM
+@@ -157,2 +157,3 @@
  #define GETTIMEOFDAY(t) gettimeofday(t,(struct timezone *) 0)
 +#define RESOLVE_H_NEEDS_NAMESER8_COMPAT_H
  #define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin"
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
-+#define USE_STATVFS
-+#define STATVFS_IN_SYS_STATVFS_H
-+#else
- #define USE_STATFS
- #define STATFS_IN_SYS_MOUNT_H
-+#endif
- #define HAS_POSIX_REGEXP
