@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11948 2005/11/15 20:00:25 minskim Exp $
+$NetBSD: CHANGES,v 1.11949 2005/11/15 20:59:51 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5236,3 +5236,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added fonts/tex-uhc-fonts-base version 1.0 [minskim 2005-11-15]
 	Added fonts/tex-uhc-fonts-extra version 1.0 [minskim 2005-11-15]
 	Updated print/tex-hlatex to 1.0.1nb1 [minskim 2005-11-15]
+	Added devel/uno version uno_v28 [shannonjr 2005-11-15]
