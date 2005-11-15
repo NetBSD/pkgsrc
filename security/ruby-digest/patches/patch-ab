@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.2.2.2 2005/11/15 10:08:22 salo Exp $
+
+--- rmd160/rmd160ossl.h.orig	2002-09-27 02:26:46.000000000 +0900
++++ rmd160/rmd160ossl.h
+@@ -3,6 +3,7 @@
+ #ifndef RMD160OSSL_H_INCLUDED
+ #define RMD160OSSL_H_INCLUDED
+ 
++#include <stddef.h>
+ #include <openssl/ripemd.h>
+ 
+ #define RMD160_CTX	RIPEMD160_CTX
