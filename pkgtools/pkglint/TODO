@@ -19,3 +19,4 @@
 * detect spelling errors (like CONFLICT => CONFLICTS)
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
+* mention the SUBST framework whenever ${SED} is used.
