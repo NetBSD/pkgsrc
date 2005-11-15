@@ -1,4 +1,4 @@
-# $NetBSD: patch-ac,v 1.1 2005/11/13 19:18:14 martin Exp $
+$NetBSD: patch-ac,v 1.2 2005/11/15 14:32:58 rillig Exp $
 
 --- src/image.cc.orig	2001-03-03 10:44:27.000000000 +0100
 +++ src/image.cc	2005-11-13 19:59:35.000000000 +0100
