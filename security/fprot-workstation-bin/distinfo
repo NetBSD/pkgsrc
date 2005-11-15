@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.14 2005/03/20 14:14:26 ben Exp $
+$NetBSD: distinfo,v 1.15 2005/11/15 14:30:19 rillig Exp $
+
 SHA1 (fp-netbsd-ws-4.5.4/fp-netbsd-ws-4.5.4.tar.gz) = 23fb673d1578ed8e8c10410a53e9e7617c3d20cb
 RMD160 (fp-netbsd-ws-4.5.4/fp-netbsd-ws-4.5.4.tar.gz) = 8b24d2d0c7753f4c08b42139829ac118a61b6938
 Size (fp-netbsd-ws-4.5.4/fp-netbsd-ws-4.5.4.tar.gz) = 2942750 bytes
