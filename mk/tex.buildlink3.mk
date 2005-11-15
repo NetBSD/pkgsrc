@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.5 2005/11/15 12:54:35 tonio Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.6 2005/11/15 17:22:40 minskim Exp $
 #
 # A Makefile fragment for tex and latex packages
 #
@@ -20,7 +20,7 @@
 #
 #	* Assume each package supports teTeX{2,3} by default.
 #	  To change the supported latex versions, define TEX_ACCEPTED
-#	  explicitly before including mk/latex.buildlink3.mk.  Note that the
+#	  explicitly before including mk/tex.buildlink3.mk.  Note that the
 #	  order is important.
 #
 # * Optionally set TEX_DEPMETHOD to "build" to only add a build-time
