@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/11/15 19:54:20 minskim Exp $
+
+DISTNAME=	uhc-fonts-1.0
+CATEGORIES=	fonts
+MASTER_SITES=	ftp://ftp.ktug.or.kr/pub/ktug/hlatex/fonts/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${UHC_FONTS}
+
+MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://project.ktug.or.kr/hlatex/install-fonts.html
+
+TEX_ACCEPTED=	teTeX3
+
+BUILDLINK_DEPENDS.teTeX-bin+=	teTeX-bin>=3.0nb4
+
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+NO_BUILD=	yes
+NO_CONFIGURE=	yes
+
+.include "../../print/teTeX/module.mk"
+
+do-install:
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/map/hlatex
+	${INSTALL_DATA} ${WRKSRC}/${TEXFONTMAPS} \
+		${PKG_LOCALTEXMFPREFIX}/fonts/map/hlatex/
+.for f in ${UHC_FONTS}
+	extract_file=${_DISTDIR:Q}/${f}; \
+	cd ${PKG_LOCALTEXMFPREFIX}/fonts; ${EXTRACT_CMD.tar.gz}
+.endfor
+
+.include "../../mk/bsd.pkg.mk"
