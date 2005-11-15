@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1748 2005/11/14 04:41:17 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1749 2005/11/15 16:29:10 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -2523,7 +2523,7 @@ show-shlib-type:
 	sotype=none;							\
 	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
 		${ECHO} "int main() { return(0); }" > a.$$$$.c;		\
-		${SETENV} PATH=${PATH}					\
+		${SETENV} PATH=${PATH:Q}				\
 		${CC} ${CFLAGS} a.$$$$.c -o a.$$$$.out;			\
 		case `${FILE_CMD} a.$$$$.out` in			\
 		*ELF*dynamically*)					\
@@ -2814,7 +2814,7 @@ _SU_TARGET=								\
 		fi;                                             	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming ${ROOT_USER}@`${HOSTNAME_CMD}` to $$action ${PKGBASE}."; \
 		${ECHO_N} "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
+		${SU_CMD} 'cd ${.CURDIR}; path=$${PATH}:${SU_CMD_PATH_APPEND:Q}; ${SETENV} PATH="$${path}" ${MAKE} '"$$args"' ${MAKEFLAGS} '"$$realtarget"' '"$$realflags"''; \
 	fi
 
 .PHONY: do-su-install
