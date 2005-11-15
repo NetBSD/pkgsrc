@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/09 22:23:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/15 07:00:08 minskim Exp $
 bin/a2ping
 bin/afm2tfm
 bin/aleph
@@ -297,18 +297,18 @@ man/man1/weave.1
 man/man1/xdvi.1
 man/man1/xdvizilla.1
 man/man5/fmtutil.cnf.5
-share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm.map
-share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm_dl14.map
-share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm_ndl14.map
-share/texmf-var/fonts/map/dvips/updmap/builtin35.map
-share/texmf-var/fonts/map/dvips/updmap/download35.map
-share/texmf-var/fonts/map/dvips/updmap/ps2pk.map
-share/texmf-var/fonts/map/dvips/updmap/psfonts.map
-share/texmf-var/fonts/map/dvips/updmap/psfonts_pk.map
-share/texmf-var/fonts/map/dvips/updmap/psfonts_t1.map
-share/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-share/texmf-var/fonts/map/pdftex/updmap/pdftex_dl14.map
-share/texmf-var/fonts/map/pdftex/updmap/pdftex_ndl14.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm_dl14.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm_ndl14.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/builtin35.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/download35.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/ps2pk.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/psfonts.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/psfonts_pk.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/psfonts_t1.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/pdftex/updmap/pdftex_dl14.map
+@unexec ${RM} -f %D/share/texmf-var/fonts/map/pdftex/updmap/pdftex_ndl14.map
 share/texmf-var/web2c/aleph.fmt
 share/texmf-var/web2c/aleph.log
 share/texmf-var/web2c/cont-en.fmt
@@ -339,7 +339,7 @@ share/texmf-var/web2c/pdftex.fmt
 share/texmf-var/web2c/pdftex.log
 share/texmf-var/web2c/tex.fmt
 share/texmf-var/web2c/tex.log
-share/texmf-var/web2c/updmap.log
+@unexec ${RM} -f %D/share/texmf-var/web2c/updmap.log
 share/texmf/doc/tetex/TETEXDOC.dvi
 share/texmf/doc/tetex/TETEXDOC.pdf
 share/texmf/doc/tetex/TETEXDOC.ps
@@ -406,4 +406,6 @@ share/texmf/xdvi/xdvi.cfg
 @dirrm include/kpathsea
 @comment The next file is changed by various sub-pkgs (hugetex, ...)
 @exec %D/bin/mktexlsr
+@exec %D/bin/updmap-sys
 @unexec ${RM} -f %D/share/texmf/ls-R
+@unexec ${RM} -rf %D/share/texmf-config
