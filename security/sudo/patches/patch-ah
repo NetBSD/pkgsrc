@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1.2.2 2005/10/26 04:37:23 snj Exp $
+$NetBSD: patch-ah,v 1.1.2.3 2005/11/15 12:15:16 salo Exp $
 
---- env.c.orig	2005-02-06 16:37:01.000000000 +0100
+--- env.c.orig	2005-02-06 15:37:01.000000000 +0000
 +++ env.c
 @@ -89,6 +89,8 @@ static char *format_env		__P((char *, ..
  static const char *initial_badenv_table[] = {
@@ -11,3 +11,13 @@ $NetBSD: patch-ah,v 1.1.2.2 2005/10/26 04:37:23 snj Exp $
      "LOCALDOMAIN",
      "RES_OPTIONS",
      "HOSTALIASES",
+@@ -124,6 +126,9 @@ static const char *initial_badenv_table[
+     "TERMCAP",			/* XXX - only if it starts with '/' */
+     "ENV",
+     "BASH_ENV",
++    "PERLLIB",
++    "PERL5LIB",
++    "PERL5OPT",
+     NULL
+ };
+ 
