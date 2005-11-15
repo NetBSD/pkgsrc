@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.71 2005/11/15 11:43:07 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.72 2005/11/15 12:05:39 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -155,3 +155,5 @@ Pullup ticket 896 - requested by Martti Kuparinen
 portability fix for libxfce4util
 Pullup ticket 905 - requested by Martti Kuparinen
 portability fixes for postfix
+Pullup ticket 908 - requested by Manuel Bouyer
+php4 bugfix
