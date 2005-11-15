@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/11/14 17:02:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/11/15 12:49:03 hira Exp $
 bin/gsf-office-thumbnailer
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
@@ -52,6 +52,7 @@ lib/libgsf-1.la
 lib/libgsf-gnome-1.la
 lib/pkgconfig/libgsf-1.pc
 lib/pkgconfig/libgsf-gnome-1.pc
+man/man1/gsf-office-thumbnailer.1
 share/doc/libgsf/gsf/api.html
 share/doc/libgsf/gsf/gsf-Bononbo.html
 share/doc/libgsf/gsf/gsf-Compression.html
