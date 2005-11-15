@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.358 2005/11/14 16:49:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.359 2005/11/15 03:10:21 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -618,6 +618,7 @@ my $filesdir;			# FILESDIR from the package Makefile
 my $patchdir;			# PATCHDIR from the package Makefile
 my $distinfo_file;		# DISTINFO_FILE from the package Makefile
 my $pkgname;			# PKGNAME from the package Makefile
+my $hack_php_patches;		# Ignore non-existing patches in distinfo
 
 my $seen_USE_PKGLOCALEDIR;	# Does the package use PKGLOCALEDIR?
 my $seen_Makefile_common;	# Does the package have any .includes?
@@ -1044,7 +1045,7 @@ sub checkfile_distinfo($) {
 				if ($sum ne $chksum) {
 					$line->log_error("${alg} checksum of $file differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
 				}
-			} else {
+			} elsif (!$hack_php_patches) {
 				$line->log_warning("$file does not exist.");
 			}
 		} else {
@@ -2241,9 +2242,10 @@ sub load_package_Makefile($$$$) {
 	}
 
 	# HACK
-	if ($whole !~ qr"\nUSE_PHP_EXT_PATCHES") {
+	if ($whole =~ qr"\nPHPEXT_MK" && $whole !~ qr"\nUSE_PHP_EXT_PATCHES") {
 		log_info($fname, NO_LINE_NUMBER, "[hack] USE_PHP_EXT_PATCHES");
 		$whole =~ s,\nPATCHDIR=.*PHPPKGSRCDIR.*,,;
+		$hack_php_patches = true;
 	}
 	# HACK
 	if ($whole =~ qr"\nPECL_VERSION") {
@@ -2972,6 +2974,7 @@ sub checkitem($) {
 	$seen_USE_PKGLOCALEDIR	= undef;
 	$seen_Makefile_common	= undef;
 	$pkgname		= undef;
+	$hack_php_patches	= false;
 
 	$current_dir = $is_dir ? $item : dirname($item);
 	$is_wip = !$opt_import && (Cwd::abs_path($current_dir) =~ qr"/wip(?:/|$)");
