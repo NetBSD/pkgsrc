@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.32 2005/11/14 13:03:32 rillig Exp $
+# $NetBSD: makevars.map,v 1.33 2005/11/15 13:42:50 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -170,7 +170,7 @@ TOOLS_GNU_MISSING	List of Tool
 TOOLS_NOOP		List of Tool
 TOOLS_PATH		Pathname
 USE_JAVA		{ run yes }
-USE_JAVA2		{ yes 1.4 1.5 }
+USE_JAVA2		{ YES yes 1.4 1.5 }
 USE_LANGUAGES		List* of { c c++ fortran java objc }
 USE_LIBTOOL		Yes
 USE_PKGINSTALL		Yes
