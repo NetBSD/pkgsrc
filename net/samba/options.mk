@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2005/11/14 16:51:42 jlam Exp $
+# $NetBSD: options.mk,v 1.11 2005/11/15 13:58:14 jlam Exp $
 
 # Recommended package options for various setups:
 #
@@ -127,7 +127,6 @@ SAMBA_STATIC_MODULES:=	${SAMBA_STATIC_MODULES},idmap_ad
 .  endif
 
 WINBINDD_RCD_SCRIPT=	winbindd
-FILES_SUBST+=		WINBINDD_RCD_SCRIPT=${WINBINDD_RCD_SCRIPT}
 PLIST_SUBST+=		WINBIND=
 
 # Determine the proper name for the winbind and WINS NSS modules.
@@ -189,7 +188,6 @@ samba-nss-wins-install:
 .  endif
 .else
 CONFIGURE_ARGS+=	--without-winbind
-FILES_SUBST+=		WINBINDD_RCD_SCRIPT=
 PLIST_SUBST+=		WINBIND="@comment "
 PLIST_SUBST+=		PAM_WINBIND="@comment no PAM winbind module"
 PLIST_SUBST+=		NSS_WINBIND="@comment no NSS winbind module"
