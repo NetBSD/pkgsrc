@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/15 14:48:13 rillig Exp $
 #
 
 DISTNAME=	tpb-0.6.1
@@ -13,6 +13,7 @@ COMMENT=	Utility to enable the IBM ThinkPad(tm) special keys
 ONLY_FOR_PLATFORM= *-*-i386
 
 USE_PKGINSTALL=	YES
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
