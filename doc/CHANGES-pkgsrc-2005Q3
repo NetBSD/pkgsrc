@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.70 2005/11/15 10:33:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.71 2005/11/15 11:43:07 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -153,3 +153,5 @@ Pullup ticket 875 - requested by Takahiro Kambe
 portability fix for ruby-openssl
 Pullup ticket 896 - requested by Martti Kuparinen
 portability fix for libxfce4util
+Pullup ticket 905 - requested by Martti Kuparinen
+portability fixes for postfix
