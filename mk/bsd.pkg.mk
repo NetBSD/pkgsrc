@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1750 2005/11/15 18:03:40 gavan Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1751 2005/11/15 21:21:01 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -918,12 +918,15 @@ _PATH_ORIG:=		${PATH}
 MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
 .endif
 
-.if !empty(PREPEND_PATH)
+.if !empty(PREPEND_PATH:M*)
 # This is very Special.  Because PREPEND_PATH is set with += in reverse order,
-# the awk expression reverses the order again (since bootstrap bmake doesn't
+# this command reverses the order again (since bootstrap bmake doesn't
 # yet support the :[-1..1] construct).
-_PATH_CMD=		${ECHO} `${ECHO} ${PREPEND_PATH:Q} | ${AWK} '{ORS=":";for (i=NF;i>0;i--) print $$i}'`${_PATH_ORIG}
-PATH=			${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
+_PATH_CMD= \
+	path=${_PATH_ORIG:Q};						\
+	for i in ${PREPEND_PATH}; do path="$$i:$$path"; done;		\
+	${ECHO} "$$path"
+PATH=	${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
 .endif
 
 # Add these bits to the environment use when invoking the sub-make
