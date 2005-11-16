@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2005/11/10 00:09:34 reed Exp $
+# $NetBSD: Makefile,v 1.28 2005/11/16 13:53:51 joerg Exp $
 #
 
 DISTNAME=       bmake-20051105
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +17,7 @@ COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 WRKSRC=		${WRKDIR}/bmake
 NO_CHECKSUM=	YES
 
-makesyspath=${PREFIX}/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk
+makesyspath=	${PREFIX}/share/mk
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
