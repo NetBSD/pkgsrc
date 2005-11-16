@@ -1,4 +1,46 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/08 21:45:01 tonio Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/11/16 21:45:15 minskim Exp $
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/UnicodeT.sfd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/autofe.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/c00enc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/c10enc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/c40enc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/c42enc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/c61enc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/cenccmn.tex
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/cp1252.enc
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ldvarial.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ldvc2000.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ldvenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/letc2000.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/letenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/letgfzem.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/letjiret.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/lklenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/lklkli.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltaarial.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltac2000.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltaenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltgc2000.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltgenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltlcmr.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltlenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltwdsnol.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltwdsque.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltwdssin.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/ltwenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/lucarial.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/lucc2000.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/lucenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/mkrenc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/mkrezra.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/mkrhadas.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/mkromega.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/mkrrashi.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/t2dcmr.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/t2denc.def
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/tengwarDS.enc
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/xscmr.fd
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib/xsenc.def
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/data/uni-0.def
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/data/uni-1.def
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/data/uni-100.def
@@ -176,4 +218,5 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/ucs.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/ucsencs.def
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/utf8x.def
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/data
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs/contrib
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/ucs
