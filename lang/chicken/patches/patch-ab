@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.6 2004/09/05 18:31:59 seb Exp $
+$NetBSD: patch-ab,v 1.7 2005/11/16 22:36:40 rillig Exp $
 
---- Makefile.in.orig	2004-08-19 18:37:55.000000000 +0200
+--- Makefile.in.orig	2005-07-13 18:18:22.000000000 +0200
 +++ Makefile.in
-@@ -472,7 +472,7 @@ am__CONFIG_DISTCLEAN_FILES = config.stat
+@@ -465,7 +465,7 @@ am__CONFIG_DISTCLEAN_FILES = config.stat
   configure.lineno
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
 -	  $(AUTOMAKE) --foreign  Makefile
-+	  $(AUTOMAKE) --foreign  --ignore-deps  Makefile
++	  $(AUTOMAKE) --foreign  --ignore-deps Makefile
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)
  
-@@ -1343,8 +1343,8 @@ csc.scm: csc.scm.in
+@@ -1596,8 +1596,8 @@ csc.scm: csc.scm.in
  
  # Install docs and sources.
  install-data-local : chicken.html
@@ -22,12 +22,3 @@ $NetBSD: patch-ab,v 1.6 2004/09/05 18:31:59 seb Exp $
  	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
  
  chicken.html: chicken.texi
-@@ -1533,7 +1533,7 @@ paranoid :
- .PHONY : test
- 
- test :
--	cd testsuites; $(MAKE) CC="$(CC)" CHICKEN="../chicken" LIBDIR=../.libs CFLAGS="$(CFLAGS)"; cd ..
-+	cd testsuites; $(MAKE) CHICKEN="../chicken" LIBDIR=../.libs; cd ..
- 
- # Benchmarks:
- 
