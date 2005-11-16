@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11953 2005/11/16 06:53:30 martti Exp $
+$NetBSD: CHANGES,v 1.11954 2005/11/16 13:54:45 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5243,3 +5243,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/jalbum to 6.0 [martti 2005-11-16]
 	Updated mail/postfix to 2.2.5nb1 [martti 2005-11-16]
 	Updated mail/postfix-current to 2.3-20050922nb1 [martti 2005-11-16]
+	Updated devel/bmake to 20051105nb1 [joerg 2005-11-16]
