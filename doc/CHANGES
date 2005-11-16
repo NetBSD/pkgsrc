@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11956 2005/11/16 16:05:47 adam Exp $
+$NetBSD: CHANGES,v 1.11957 2005/11/16 19:20:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5248,3 +5248,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated games/freeciv-share to 2.0.7 [adam 2005-11-16]
 	Updated games/freeciv-client to 2.0.7 [adam 2005-11-16]
 	Updated games/freeciv-server to 2.0.7 [adam 2005-11-16]
+	Updated lang/python20 to 2.0.1nb11 [joerg 2005-11-16]
+	Updated lang/python21 to 2.1.3nb9 [joerg 2005-11-16]
+	Updated lang/python22 to 2.2.3nb7 [joerg 2005-11-16]
+	Updated lang/python23 to 2.3.5nb4 [joerg 2005-11-16]
+	Updated lang/python24 to 2.4.2nb1 [joerg 2005-11-16]
