@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.24 2005/11/16 22:07:19 rillig Exp $
+# $NetBSD: printindex,v 1.25 2005/11/16 22:11:11 rillig Exp $
 #
 
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -176,6 +176,6 @@ for pkgdir in $list :detect_duplicates: $BULK_PREREQ; do
 		{ echo "[printindex] command failed: cd ${pkgsrcdir}/${pkgdir}"
 		  ( cd "${pkgsrcdir}/${pkgdir}"
 		  ) || true
-		} >> "${bulkfilesdir}/${brokenfile}" 2>&1
+		} 1>&2
 	fi
 done
