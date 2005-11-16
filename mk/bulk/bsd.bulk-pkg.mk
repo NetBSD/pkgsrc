@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.98 2005/11/12 16:44:20 kristerw Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.99 2005/11/16 22:58:59 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -93,9 +93,6 @@ BROKENWRKLOG?=	.broken${BULK_ID}.work.html
 # This file is human-created to force a package to show up as broken
 # (it is never cleaned by the bulk build, and contains the broken reason)
 FORCEBROKENFILE?= .forcebroken
-.if exists(${PKGDIR}/${FORCEBROKENFILE})
-PKG_FAIL_REASON+= "${PKGNAME} is marked as broken by the bulk build administrator: `cat ${PKGDIR}/${FORCEBROKENFILE}`"
-.endif
 
 # This file is where the log of the build goes
 BUILDLOG?=	.make${BULK_ID}
@@ -173,6 +170,34 @@ _PRESERVE_WRKDIR?=	no
 # literally.  So, turn it into foo\/bar\.baz\+\+
 _ESCPKGPATH=	${PKGPATH:C@\/@\\/@g:C@\+@\\+@g:C@\.@\\.@g:Q}
 
+# The directory where package-specific log files are saved.
+_BULK_PKGLOGDIR=	${BULKFILESDIR}/${PKGPATH}
+
+# Package-specific log files.
+_BROKENFILE=		${_BULK_PKGLOGDIR}/${BROKENFILE}
+_BROKENWRKLOG=		${_BULK_PKGLOGDIR}/${BROKENWRKLOG}
+_BUILDLOG=		${_BULK_PKGLOGDIR}/${BUILDLOG}
+_FORCEBROKENFILE=	${_BULK_PKGLOGDIR}/${FORCEBROKENFILE}
+
+# Only create directories if ${PKGSRCDIR} != ${BULKFILESDIR}
+.if ${PKGSRCDIR} != ${BULKFILESDIR}
+_BULK_MKDIR=		${MKDIR}
+.else
+_BULK_MKDIR=		${DO_NADA}
+.endif
+
+#
+# Sanity checks
+#
+
+.if exists(${_FORCEBROKENFILE:Q})
+PKG_FAIL_REASON+= "${PKGNAME} is marked as broken by the bulk build administrator: `cat ${_FORCEBROKENFILE:Q:Q}`"
+.endif
+
+#
+# Make targets
+#
+
 # build the cache files used as part of a full bulk build
 # Note:  we have to install the BULK_PREREQ packages _before_
 # extracting the depends tree because some packages like
@@ -188,10 +213,10 @@ bulk-cache:
 	@${ECHO} "This file is unused for a full pkgsrc bulk build" >> ${BULK_DBFILE}
 	@${ECHO} "It is only used for a SPECIFIC_PKGS bulk build" >> ${BULK_DBFILE}
 	@${BULK_MSG} "Building complete pkgsrc dependency tree (this may take a while)."
-	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
+	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printdepends ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${DEPENDSTREEFILE:Q}
 	@${BULK_MSG} "Generating package name <=> package directory cross reference file"
 	@${BULK_MSG_CONT} "(this may take a while)."
-	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
+	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printindex ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${INDEXFILE:Q}
 .else
 	@${BULK_MSG} "Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${BULK_MSG_CONT} "along with their dependencies"
@@ -277,9 +302,10 @@ bulk-check-uptodate:
 # rebuild binpkg if any of the pkg files is newer than the binary archive
 # set DO to ":" to not actually do anything (debugging, ...)
 bulk-package:
-	@if [ -f ${BROKENFILE} ]; then \
+	@${_BULK_MKDIR} ${_BULK_PKGLOGDIR:Q}
+	@if [ -f ${_BROKENFILE:Q} ]; then \
 		${BULK_MSG} "*** Package ${PKGNAME} seems broken and needs attention:" ; \
-		${LS} -la ${BROKENFILE}; \
+		${LS} -la ${_BROKENFILE:Q}; \
 		exit 1; \
 	fi
 	@( \
@@ -292,7 +318,7 @@ bulk-package:
 		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} '^d' | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO_MSG} '###' ; \
 	fi \
-	) 2>&1 | ${TEE} -a ${BUILDLOG}
+	) 2>&1 | ${TEE} -a ${_BUILDLOG:Q}
 	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
 	if ${PKG_INFO} -qe ${PKGWILDCARD:Q} ; then \
 		installed=1; \
@@ -305,7 +331,7 @@ bulk-package:
 		else \
 			${BULK_MSG} "Nothing to be done." ; \
 		fi \
-		) 2>&1 | ${TEE} -a ${BUILDLOG}; \
+		) 2>&1 | ${TEE} -a ${_BUILDLOG:Q}; \
 	else \
 		( if [ $$installed = 1 ]; then \
 			${BULK_MSG} "Removing outdated (installed) package ${PKGNAME} first." ; \
@@ -394,20 +420,20 @@ bulk-package:
 		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
 		${DO}     ( ${MAKE} package 2>&1 ); \
-		) 2>&1 | ${TEE} -a ${BUILDLOG} ; \
+		) 2>&1 | ${TEE} -a ${_BUILDLOG:Q} ; \
 		if [ -f ${PKGFILE} ]; then \
-			${RM} ${BUILDLOG} ; \
+			${RM} ${_BUILDLOG:Q} ; \
 		else \
-			${MV} ${BUILDLOG} ${BROKENFILE} ;\
+			${MV} ${_BUILDLOG:Q} ${_BROKENFILE:Q} ;\
 			if [ -f "${WRKLOG}" ]; then \
 				(${ECHO_MSG} "<pre>"; \
 				${ECHO_MSG} ""; \
 				${TO_HTML} ${WRKLOG}; \
 				${ECHO_MSG} "</pre>"; \
-				) >> ${BROKENWRKLOG}; \
+				) >> ${_BROKENWRKLOG:Q}; \
 			fi; \
 			( \
-			if [ -f "${BROKENWRKLOG}" ]; then \
+			if [ -f "${_BROKENWRKLOG:Q}" ]; then \
 				${ECHO_MSG} "</pre>"; \
 				${ECHO_MSG} "<p>"; \
 				${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENWRKLOG}\">work log for ${PKGNAME}</a>"; \
@@ -416,7 +442,7 @@ bulk-package:
 				${ECHO_MSG} ""; \
 			fi ; \
 			${BULK_MSG} "${PKGNAME} was marked as broken:" ; \
-			${LS} -la ${BROKENFILE} ; \
+			${LS} -la ${_BROKENFILE:Q} ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
 			${DO}       ${MAKE} deinstall ; \
 			nbrokenby=0;\
@@ -425,7 +451,8 @@ bulk-package:
 				tmp=`${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:[ ]*;;p" ${SUPPORTSFILE}` ; \
 				if test -n "$$tmp" ; then \
 					for pkgdir in $$tmp ; do \
-						pkg_brokenfile=${PKGSRCDIR:Q}"/$$pkgdir/"${BROKENFILE:Q}; \
+						pkg_brokendir=${BULKFILESDIR:Q}/"$$pkgdir"; \
+						pkg_brokenfile="$$pkg_brokendir"/${BROKENFILE:Q}; \
 						pkgname=`${AWK} '$$1 == "'"$$pkgdir"'" { print $$2; }' ${INDEXFILE}`; \
 						case $$pkgname in \
 						"")	pkgname="unknown"; \
@@ -448,22 +475,23 @@ bulk-package:
 								pkgerr="1"; \
 							fi; \
 						fi; \
+						${_BULK_MKDIR} "$${pkg_brokendir}"; \
 						{ ${BULK_MSG} "$$pkgname ($$pkgdir) is broken because it depends upon ${PKGNAME} (${PKGPATH}) which is broken."; \
 						  ${ECHO} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>.<br />"; \
-						} >> ${PKGSRCDIR}/$$pkgdir/${BROKENFILE}; \
+						} >> "$${pkg_brokenfile}"; \
 						nbrokenby=`expr $$nbrokenby + 1`;\
-						if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${PKGSRCDIR}/${BROKENFILE} ; then :; else \
-							${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${PKGSRCDIR}/${BROKENFILE} ;\
+						if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${BULKFILESDIR:Q}/${BROKENFILE:Q} ; then :; else \
+							${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${BULKFILESDIR:Q}/${BROKENFILE:Q} ;\
 						fi ;\
 					done ;\
 				fi ;\
 			fi ;\
-			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
+			nerrors=`${GREP} -c '^\*\*\* Error code' ${_BROKENFILE:Q} || true`; \
 			if [ -f ${_INTERACTIVE_COOKIE} ]; then \
 				nerrors="0"; \
 			fi; \
-			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${PKGSRCDIR}/${BROKENFILE} \
-			) 2>&1 | ${TEE} -a ${BROKENFILE}; \
+			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${BULKFILESDIR}/${BROKENFILE} \
+			) 2>&1 | ${TEE} -a ${_BROKENFILE:Q}; \
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
 		yes|YES)	;;					\
@@ -471,10 +499,10 @@ bulk-package:
 		esac;							\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
-		${BULK_MSG} "Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${BROKENFILE} ; \
+		${BULK_MSG} "Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${_BROKENFILE:Q} ; \
 		false; \
 	else \
-		${RM} -f ${BUILDLOG} ;\
+		${RM} -f ${_BUILDLOG:Q} ;\
 	fi
 
 # Install pkg - if possible from binary pkg (i.e. available & up-to-date)
@@ -492,4 +520,3 @@ bulk-install:
 		${ECHO_MSG} ${MAKE} bulk-package PRECLEAN=no; \
 		${DO}       ${MAKE} bulk-package PRECLEAN=no; \
 	fi
-
