@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11950 2005/11/16 01:32:19 seb Exp $
+$NetBSD: CHANGES,v 1.11951 2005/11/16 01:41:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5238,3 +5238,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/tex-hlatex to 1.0.1nb1 [minskim 2005-11-15]
 	Added devel/uno version uno_v28 [shannonjr 2005-11-15]
 	Updated pkgtools/pkg_comp to 1.24 [seb 2005-11-16]
+	Updated audio/amarok to 1.3.6 [seb 2005-11-16]
