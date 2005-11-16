@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.22 2005/09/27 09:37:32 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/11/16 16:03:50 adam Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.0.6
+FC_VERS=	2.0.7
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.freeciv.org/pub/freeciv/stable/ \
 		http://www.freeciv.org/ftp/stable/ \
@@ -21,7 +21,7 @@ PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
 
 PYTHON_PATCH_SCRIPTS=	${WRKSRC}/common/generate_packets.py
 
-SUBST_CLASSES=		data
+SUBST_CLASSES+=		data
 SUBST_STAGE.data=	post-patch
 SUBST_FILES.data=	data/Makefile.in
 SUBST_SED.data+=	-e "s|@CLIENT_FALSE@|@MAKE_DATA_FALSE@|g"
