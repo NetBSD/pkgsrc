@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/06 06:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/16 19:37:19 tv Exp $
 
 DISTNAME=		Test-Pod-1.20
 PKGNAME=		p5-${DISTNAME}
@@ -12,8 +12,12 @@ HOMEPAGE=		http://search.cpan.org/dist/Test-Pod/
 COMMENT=		Perl5 module to check for POD errors in files
 
 DEPENDS+=		p5-Pod-Simple>=3.02nb1:../../textproc/p5-Pod-Simple
-# These are only for the 'test' target.
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
 BUILD_DEPENDS+=		p5-Test-Builder-Tester-[0-9]*:../../devel/p5-Test-Builder-Tester
+.endif
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Test/Pod/.packlist
