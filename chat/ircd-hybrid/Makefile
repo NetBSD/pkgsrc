@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/11/13 22:47:40 adrianp Exp $
+# $NetBSD: Makefile,v 1.22 2005/11/16 22:59:19 adrianp Exp $
 
 DISTNAME=	ircd-hybrid-7.1.3
 EXTRACT_SUFX=	.tgz
@@ -101,8 +101,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/README.mkpasswd \
 		${HYBRID_DOC}/README.ircd-hybrid-mkpasswd
 
-	cd ${WRKSRC}/doc && ${PAX} -s /\Makefile.in// -s /\Makefile// \
-		-rwppm . ${HYBRID_DOC}/doc
+	@${RM} ${WRKSRC}/doc/Makefile
+	@${RM} ${WRKSRC}/doc/Makefile.in
+	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${HYBRID_DOC}/doc
 
 	cd ${WRKSRC}/contrib && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install_help
