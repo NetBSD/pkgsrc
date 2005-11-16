@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.209 2005/11/14 04:51:47 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.210 2005/11/16 20:59:23 erh Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -497,6 +497,7 @@ PKG_DELETE_CMD?=	${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
 PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
+AUDIT_PACKAGES_CMD?=	${LOCALBASE}/sbin/audit-packages
 
 .if !defined(PKGTOOLS_VERSION)
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
@@ -527,6 +528,7 @@ PKG_DELETE?=		${PKGTOOLS_ENV} ${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
 PKG_INFO?=		${PKGTOOLS_ENV} ${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
 PKG_VIEW?=		${PKGTOOLS_ENV} ${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
 LINKFARM?=		${LINKFARM_CMD}
+AUDIT_PACKAGES?=	${PKGTOOLS_ENV} ${AUDIT_PACKAGES_CMD} ${PKGTOOLS_ARGS}
 
 # "${PKG_BEST_EXISTS} pkgpattern" prints out the name of the installed
 # package that best matches pkgpattern.  Use this instead of
