@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.8,v 1.16 2005/11/16 20:47:56 erh Exp $
+.\" $NetBSD: audit-packages.8,v 1.17 2005/11/16 22:54:58 wiz Exp $
 .\"
 .\" Copyright (c) 2003 Jeremy C. Reed.  All rights reserved.
 .\"
@@ -30,7 +30,7 @@
 .\" NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 .\" SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd June 9, 2005
+.Dd November 16, 2005
 .Os
 .Dt AUDIT-PACKAGES 8
 .Sh NAME
@@ -40,8 +40,9 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl dv
-.Op Fl K Ar pkg_dbdir
 .Op Fl i Ar ignore-list
+.Op Fl K Ar pkg_dbdir
+.Op Fl p Ar package
 .Nm download-vulnerability-list
 .Sh DESCRIPTION
 The
@@ -60,17 +61,20 @@ The following flags are supported:
 will attempt to download the vulnerabilities
 file before scanning
 the installed packages for vulnerabilities.
-.It Fl i
-Specify an list of vulnerabilities or packages to ignore.
+.It Fl i Oo Cm vulnid: Ns Ar vulnid Ns | Ns Cm pkgpat: Ns Ar pattern Oc
+Specify a list of vulnerabilities or packages to ignore.
 Packages can be specified using package wildcards (see
-.Xr pkg_info 1
-).
+.Xr pkg_info 1 ) .
 Vulnerabilities can be specified with the form
-.Sm off
-.Cm vulnid:
-.Ar vulnid .
-.Sm on
+.Cm vulnid: Ns Ar vulnid .
 Vulnerability ids are only present in file format 1.0.1 or higher.
+.It Fl K Ar pkg_dbdir
+Use package database directory
+.Ar pkg_dbdir .
+.It Fl p Ar package
+Check only the package
+.Ar package
+for vulnerabilities.
 .It Fl v
 Set verbose mode.
 .Nm
@@ -86,17 +90,14 @@ using
 This vulnerabilities file documents all known security issues in
 pkgsrc packages and is kept up-to-date by the
 .Nx
-packages team.
+pkgsrc-security team.
 .Pp
 Each line lists the package and vulnerable versions, the type of exploit,
 and an Internet address for further information:
 .Bl -item
 .It
 .Aq package pattern
-.Sm off
-.Aq vulnid ,
-.Aq type
-.Sm on
+.Ao vulnid Ac Ns , Ns Aq type
 .Aq url
 .El
 .Pp
@@ -179,6 +180,8 @@ directory.
 This can be changed by defining the environment variable
 .Ev PKGVULNDIR
 to the directory containing the vulnerabilities file.
+.Sh EXIT STATUS
+.Ex -std audit-packages
 .Sh ENVIRONMENT
 These variables can also be defined in the
 @PKG_SYSCONFDIR@/audit-packages.conf
@@ -193,7 +196,6 @@ file.
 Specifies optional arguments for the ftp client.
 .El
 .Sh FILES
-.Pp
 @PKGVULNDIR@/pkg-vulnerabilities
 .Pp
 @PKG_SYSCONFDIR@/audit-packages.conf
@@ -221,11 +223,7 @@ command can be forced to use IPv4 with the following setting in
 .Pp
 export FETCH_ARGS="-4"
 .Sh DIAGNOSTICS
-The
-.Nm
-utility exits 0 on success, and \*[Gt]0 if an error occurs.
-.Pp
-The following errors can occur: 
+The following errors can occur:
 .Bl -tag -width 10n
 .It Checksum mismatch
 The vulnerabilities file is corrupted.
@@ -256,7 +254,7 @@ If it's too new, update the
 package.
 .It Installed pkg_info too old
 .Nm
-requires a newer version of 
+requires a newer version of
 .Xr pkg_info 1 .
 Update the
 .Pa pkgtools/pkg_install
@@ -283,5 +281,3 @@ pkgsrc by
 .An Alistair Crooks
 on September 19, 2000.
 The original idea came from Roland Dowdeswell and Bill Sommerfeld.
-.\" .Sh AUTHORS
-.\" .Sh SECURITY CONSIDERATIONS
