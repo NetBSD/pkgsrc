@@ -3695,6 +3695,37 @@ alink="#0000FF">
                 progress with <span><strong class="command">set
                 -x</strong></span> will be displayed.</p>
               </li>
+
+              <li>
+                <p><code class=
+                "varname">ALLOW_VULNERABILITIES.<em class=
+                "replaceable"><code>pkgbase</code></em></code>: A
+                space separated list of vulnerability IDs that may
+                be ignored when performing the automated security
+                checks. These IDs are listed in the
+                pkg-vulnerabilities file and are displayed by
+                <span><strong class=
+                "command">audit-packages</strong></span> when it
+                finds a vulnerable package.</p>
+              </li>
+
+              <li>
+                <p><code class=
+                "varname">SKIP_AUDIT_PACKAGES</code>: If this is
+                set to &#8220;<span class=
+                "quote">yes</span>&#8221;, the automated security
+                checks (which use the <a xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" href=
+                "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html"
+                target="_top"><code xmlns="" class=
+                "filename">security/audit-packages</code></a>
+                package) will be <span class=
+                "strong"><strong>entirely</strong></span> skipped
+                for <span class=
+                "strong"><strong>all</strong></span> packages
+                built. Normally you'll want to use
+                ALLOW_VULNERABILITIES instead of this.</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -5722,6 +5753,13 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           read the package's message, which you can get by running
           <strong class="userinput"><code>pkg_info -D
           audit-package</code></strong>.</p>
+
+          <p>If this package is installed, pkgsrc builds will use
+          it to perform a security check before building any
+          package. See <a href="#variables-affecting-build" title=
+          "5.2.&nbsp;Variables affecting the build process">Section&nbsp;5.2,
+          &#8220;Variables affecting the build process&#8221;</a>
+          for way to control this check.</p>
         </div>
       </div>
     </div>
