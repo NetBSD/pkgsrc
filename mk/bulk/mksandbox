@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.40 2005/04/21 21:44:56 dmcmahill Exp $
+# $NetBSD: mksandbox,v 1.41 2005/11/16 17:42:20 tv Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -78,6 +78,11 @@ Darwin)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
+	;;
+Interix)
+	echo >&2 "This script cannot be used on Interix; a different procedure is required."
+	echo >&2 "(To be documented.)"
+	exit 1
 	;;
 Linux)
 	bmakeprog=bmake
