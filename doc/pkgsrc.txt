@@ -1355,6 +1355,16 @@ XXX
     their invocation, and their actual execution progress with set -x will be
     displayed.
 
+  * ALLOW_VULNERABILITIES.pkgbase: A space separated list of vulnerability IDs
+    that may be ignored when performing the automated security checks. These
+    IDs are listed in the pkg-vulnerabilities file and are displayed by
+    audit-packages when it finds a vulnerable package.
+
+  * SKIP_AUDIT_PACKAGES: If this is set to "yes", the automated security checks
+    (which use the security/audit-packages package) will be entirely skipped
+    for all packages built. Normally you'll want to use ALLOW_VULNERABILITIES
+    instead of this.
+
 5.4. Selecting Build Options
 
 Some packages have build time options, usually to select between different
@@ -2120,6 +2130,10 @@ packages installed on a system can take place. To do this, install the security
 Use of the security/audit-packages package is strongly recommended! After
 "audit-packages" is installed, please read the package's message, which you can
 get by running pkg_info -D audit-package.
+
+If this package is installed, pkgsrc builds will use it to perform a security
+check before building any package. See Section 5.2, "Variables affecting the
+build process" for way to control this check.
 
 Part II. The pkgsrc developer's guide
 
