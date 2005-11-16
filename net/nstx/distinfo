@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/16 02:04:39 minskim Exp $
+
+SHA1 (nstx-1.1-beta6.tgz) = 82d339f499c6e625708371f5f729b7f7bf38a6a0
+RMD160 (nstx-1.1-beta6.tgz) = 1392d7f96c9668cc40b65fa30cbaf8cf1b64feb2
+Size (nstx-1.1-beta6.tgz) = 20458 bytes
+SHA1 (patch-aa) = 89d95177ab802da016d42de15bf118941e9843b0
