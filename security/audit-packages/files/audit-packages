@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.23 2005/10/20 10:26:54 agc Exp $
+# $NetBSD: audit-packages,v 1.24 2005/11/16 20:47:56 erh Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -41,7 +41,24 @@ ERR_PKGINSTALL="Please upgrade pkgtools/pkg_install to the newest version."
 
 FORMAT_MAJOR=1
 FORMAT_MINOR=0
+FORMAT_TEENY=1
 PKG_INSTALL_REQUIRED=20050530
+
+usage() {
+	argv0="${1##*/}"
+	cat <<EOF
+$2
+Usage: $argv0 [-vd] [-K <pkg_dbdir>] [-p <package>]
+               [-i [<vulnid>|pkgpat:<pkgpat> [...]]
+    -v : Verbose mode
+    -d : Run download-vulnerability-list before anything else.
+    -i : Ignore packages matching one of the specified vulnerabilities,
+          or matching one of the provided patterns.
+          Repeated -i options add to the ignore list.
+    -p : Check a specific package for vulnerabilities.
+EOF
+	exit 1
+}
 
 if [ -r @PKG_SYSCONFDIR@/audit-packages.conf ]; then
 	echo "Reading settings from @PKG_SYSCONFDIR@/audit-packages.conf"
@@ -52,12 +69,42 @@ vuls="${PKGVULNDIR}/pkg-vulnerabilities"
 
 download=no
 verbose=no
+ignore_list=
+pkg_patterns=
+vulnids=
+one_package=
 while [ $# -gt 0 ]; do
 	case "$1" in
 	-d)	download=yes ;;
 	-v)	verbose=yes ;;
+	-i)
+		ignore_list="$ignore_list $2"
+		shift
+		;;
+	-p)
+		one_package="$2"
+		shift
+		;;
+	-K)
+	 	export PKG_DBDIR="$2"
+		shift
+		;;
+	*)
+		usage "$0" "Unknown option $1"
 	esac
 	shift
+done
+
+for ign in $ignore_list ; do
+	case "$ign" in
+	pkgpat:*)
+		ign="${ign#*:}"
+		pkg_patterns="$pkg_patterns $ign"
+		;;
+	*)
+		vulnids="$vulnids $ign"
+		;;
+	esac
 done
 
 # try to download vulnerability list, as requested
@@ -96,14 +143,20 @@ esac
 
 case "$errmsg" in
 "")	# check format version of vulnerabilities file
-	file_major=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\\\."); print a[1] }' "$vuls"`
-	file_minor=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\\\."); print a[2] }' "$vuls"`
+	file_major=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\\\."); print a[1]; exit; }' "$vuls"`
+	file_minor=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\\\."); print a[2]; exit; }' "$vuls"`
+	file_teeny=`@AWK@ '$1 == "#FORMAT" { split($2, a, "\\\\."); print a[3]; exit; }' "$vuls"`
+	if [ -z "$file_teeny" ] ; then
+		file_teeny=0
+	fi
 	if [ "x$file_major" = "x" -o "x$file_minor" = "x" ]; then
 		errmsg="No file format version found in $vuls"
 		errsolution="$ERR_DOWNLOAD"
 	elif [ "$file_major" -ne "$FORMAT_MAJOR" -o "$file_minor" -gt "$FORMAT_MINOR" ]; then
-		errmsg="Unsupported file format version $file_major.$file_minor in $vuls (supported version: $FORMAT_MAJOR.$FORMAT_MINOR)."
-		if [ "$file_major" -le "$FORMAT_MAJOR" ]; then
+		errmsg="Unsupported file format version $file_major.$file_minor${file_teeny:+.${file_teeny}} in $vuls (supported version: $FORMAT_MAJOR.$FORMAT_MINOR.$FORMAT_TEENY)."
+		if [ "$file_major" -le "$FORMAT_MAJOR" -o
+		     \( "$file_major" -eq "$FORMAT_MAJOR" -a
+		        "$file_minor" -lt "$FORMAT_MINOR" \) ]; then
 			errsolution="$ERR_DOWNLOAD"
 		else
 			errsolution="$ERR_UPGRADE"
@@ -151,10 +204,45 @@ while read pat type url; do
 	\#*|'') continue;;
 	esac
 
-	if @PKG_TOOLS_BIN@/pkg_info -qe "$pat"; then
-		echo Package `@PKG_TOOLS_BIN@/pkg_info -e "$pat"` has a \
-			"$type" vulnerability, see "$url"
+	vulnid=unknown
+	if [ $file_teeny -gt 0 ] ; then
+		vulnid=${type%%,*}
+		type=${type#*,}
+
+		skipit=0
+		for ign in $vulnids; do
+			if [ "$ign" = "$vulnid" ] ; then
+				skipit=1
+			fi
+		done
+		if [ $skipit -eq 1 ] ; then
+			continue;
+		fi
 	fi
+
+	if [ -z "$one_package" ] ; then
+		vulnpkgs=`@PKG_TOOLS_BIN@/pkg_info -e "$pat"`
+	else
+		vulnpkgs=
+		if `@PKG_TOOLS_BIN@/pkg_admin pmatch "$pat" "$one_package"` ; then
+			vulnpkgs=$one_package
+		fi
+	fi
+	for pkg in $vulnpkgs ; do
+		skipit=0
+		for ign in $pkg_patterns; do
+			ign="${ign#*:}"
+			if @PKG_TOOLS_BIN@/pkg_admin pmatch "${ign}" "$pkg" ; then
+				skipit=1
+				break
+			fi
+		done
+		if [ $skipit -eq 1 ] ; then
+			continue
+		fi
+		echo "Package $pkg has a" \
+			"$type vulnerability (vulnid:$vulnid), see $url"
+	done
 done < "$vuls"
 
 exit 0
