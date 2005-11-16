@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1751 2005/11/15 21:21:01 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1752 2005/11/16 20:59:22 erh Exp $
 #
 # This file is in the public domain.
 #
@@ -1363,35 +1363,45 @@ batch-check-distfiles:
 	esac
 
 # check for any vulnerabilities in the package
-# Please do not modify the leading "@" here
+
+_AUDIT_PACKAGES_MIN_VERSION=0.40
+_AUDIT_PACKAGES_OK!=	${PKG_INFO} -qe 'audit-packages>=${AUDIT_PACKAGES_MIN_VERSION}' ; echo $$?
+
+# Note: _any_ output from check-vulnerable is considered an error by do-fetch.
 .PHONY: check-vulnerable
 check-vulnerable:
-	@if [ ! -z "${PKG_SYSCONFDIR.audit-packages}" -a -f ${PKG_SYSCONFDIR.audit-packages}/audit-packages.conf ]; then \
-		. ${PKG_SYSCONFDIR.audit-packages}/audit-packages.conf; \
-	elif [ ! -z "${PKG_SYSCONFDIR}" -a -f ${PKG_SYSCONFDIR}/audit-packages.conf ]; then \
-		. ${PKG_SYSCONFDIR}/audit-packages.conf;		\
-	fi;								\
-	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
-		${SETENV} PKGNAME=${PKGNAME:Q}				\
-			  PKGBASE=${PKGBASE:Q}				\
-			${AWK} '/^$$/ { next }				\
-				/^#.*/ { next }				\
-				$$1 !~ ENVIRON["PKGBASE"] && $$1 !~ /\{/ { next } \
-				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/pkg-vulnerabilities || ${FALSE}; \
-	fi
+.if empty(AUDIT_PACKAGES_OK:M0)
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** The audit-packages package must be at least version ${AUDIT_PACKAGES_MIN_VERSION}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** Please install pkgsrc/security/audit-packages package and run";
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** '${LOCALBASE}/sbin/download-vulnerability-list'.";
+	@false
+.else
+	@${AUDIT_PACKAGES} -i ""${ALLOW_VULNERABILITIES.${PKGBASE}:Q} -p ${PKGNAME:Q}
+.endif
+
+
+.if defined(ALLOW_VULNERABILITIES.${PKGBASE})
+_ALLOW_VULNERABILITIES=${ALLOW_VULNERABILITIES.${PKGBASE}}
+.else
+_ALLOW_VULNERABILITIES=#none
+.endif
 
 .PHONY: do-fetch
 .if !target(do-fetch)
 do-fetch:
-.  if !defined(ALLOW_VULNERABLE_PACKAGES)
+.  if empty(SKIP_AUDIT_PACKAGES:M[Yy][Ee][Ss]) && empty(_ALLOW_VULNERABILITIES:M[Yy][Ee][Ss])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
 		${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"; \
 		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
 		case "$$vul" in						\
 		"")	;;						\
-		*)	${ECHO} "$$vul";				\
-			${ECHO} "or define ALLOW_VULNERABLE_PACKAGES if this package is absolutely essential"; \
+		*)	vulnids=`echo "$$vul" | sed -e's/.*vulnid:\\([[:digit:]]*\\).*/\\1/'`; \
+			${ECHO} "$$vul";				\
+			${ECHO} "or if this package is absolutely essential, add this to mk.conf:"; \
+			for vulnid in $$vulnids ; do \
+				${ECHO} " ALLOW_VULNERABILITIES.${PKGBASE}+=$$vulnid"; \
+			done ; \
 			${FALSE} ;;					\
 		esac;							\
 	else								\
@@ -1400,6 +1410,8 @@ do-fetch:
 		${ECHO_MSG} "${_PKGSRC_IN}> *** the pkgsrc/security/audit-packages package and run"; \
 		${ECHO_MSG} "${_PKGSRC_IN}> *** '${LOCALBASE}/sbin/download-vulnerability-list'."; \
 	fi
+.  else
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** Skipping vulnerability checks for ${PKGNAME}"
 .  endif
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
