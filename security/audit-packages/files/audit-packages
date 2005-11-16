@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.24 2005/11/16 20:47:56 erh Exp $
+# $NetBSD: audit-packages,v 1.25 2005/11/16 22:57:24 wiz Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -48,14 +48,15 @@ usage() {
 	argv0="${1##*/}"
 	cat <<EOF
 $2
-Usage: $argv0 [-vd] [-K <pkg_dbdir>] [-p <package>]
-               [-i [<vulnid>|pkgpat:<pkgpat> [...]]
-    -v : Verbose mode
+Usage: $argv0 [-dv] [-i vulnid:id|pkgpat:pattern]
+		     [-K pkg_dbdir] [-p package]
     -d : Run download-vulnerability-list before anything else.
     -i : Ignore packages matching one of the specified vulnerabilities,
           or matching one of the provided patterns.
           Repeated -i options add to the ignore list.
+    -K : Use pkg_dbdir as PKG_DBDIR.
     -p : Check a specific package for vulnerabilities.
+    -v : Verbose mode
 EOF
 	exit 1
 }
