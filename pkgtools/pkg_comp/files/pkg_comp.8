@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.27 2005/10/02 09:38:39 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.28 2005/11/16 01:31:35 seb Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -231,12 +231,23 @@ If set to
 .Ql no ,
 no special action is taken (this is useful if the system version inside
 the chroot matches the outside one).
-Otherwise, the file
-.Pa /libkver_osrelease
-inside the chroot will hold this variable's value.
-The pkgsrc system will pick up this file and fake the
-.Xr uname 1
-command's output.
+Otherwise, the package
+.Pa pkgtools/libkver
+will be installed inside the chroot, in a special purpose
+prefix which value can be set in
+.Pa $DESTDIR/etc/mk.conf
+with
+.Va LIBKVER_STANDALONE_PREFIX .
+The libkver library will be configured inside the chroot, with the symbolic link
+.Pa $DESTDIR/libkver_osrelease
+and
+.Va LD_PRELOAD
+in default shells environments,
+so that the NetBSD version specified in
+.Va NETBSD_RELEASE
+overrides the host system version. See
+.Xr kver 3
+for more information.
 Defaults to
 .Ql no .
 .It PKG_SYSCONFBASE
