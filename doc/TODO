@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4177 2005/11/16 16:05:47 adam Exp $
+$NetBSD: TODO,v 1.4178 2005/11/16 20:43:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -311,8 +311,8 @@ Suggested package updates
 	o 9base-20051028 [pkg/31945, replacing 9rc]
 	o Cenon-3.71
 	o Chinput-3.0.1
-	o DatLib-2.9
-	o DatUtil-2.22
+	o DatLib-2.11
+	o DatUtil-2.23
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
@@ -532,7 +532,7 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
-	o fox-1.4.22
+	o fox-1.4.24
 	o fprot-workstation-bin-4.6.1
 	o freeglut-2.4.0
 	o fugu-1.2.3
@@ -569,12 +569,13 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade2-2.12.1
 	o gld-1.6
+	o glib2-2.8.4
 	o gmpc-0.12.0
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnocatan-0.8.1.30
 	o gnome-pilot-2.0.13
-	o gnumeric-1.6.0
+	o gnumeric-1.6.1
 	o gnupg-devel-1.9.19
 	o gnustep-1.11.1
 	o gnustep-objc-1.4.0
@@ -598,6 +599,7 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-20030623
+	o gtk2+-2.8.7
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -1016,7 +1018,7 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o phpldapadmin-0.9.7
-	o phpmyadmin-2.6.4pl3
+	o phpmyadmin-2.6.4pl4
 	o phppgadmin-3.5.6
 	o phylip-3.65
 	o pico-4.64
