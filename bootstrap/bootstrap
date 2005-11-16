@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.44 2005/11/10 00:10:35 reed Exp $
+# $NetBSD: bootstrap,v 1.45 2005/11/16 13:53:51 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -659,7 +659,7 @@ fi
 
 echo_msg "Installing bmake"
 copy_src ../devel/bmake/files bmake
-run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./boot-strap -q -o $opsys --prefix=$prefix --sysconfdir=$sysconfdir --mksrc none --with-default-sys-path="$prefix/share/mk:/usr/share/mk:/usr/local/share/mk:/opt/share/mk")"
+run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./boot-strap -q -o $opsys --prefix=$prefix --sysconfdir=$sysconfdir --mksrc none --with-default-sys-path="$prefix/share/mk")"
 run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
 #run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/$opsys/bmake.1 $prefix/man/man1/bmake.1"
 
