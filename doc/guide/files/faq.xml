@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.16 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.17 2005/11/16 22:07:04 erh Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -541,6 +541,11 @@ package is strongly recommended!  After
 <quote>audit-packages</quote> is installed, please read
 the package's message, which you can get by running <userinput>pkg_info -D
 audit-package</userinput>.</para>
+
+<para>If this package is installed, pkgsrc builds will use it to perform
+a security check before building any package.  See
+<xref linkend="variables-affecting-build"/> for way to control this check.
+</para>
 
 </sect1>
 

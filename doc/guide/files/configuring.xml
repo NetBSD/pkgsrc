@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.7 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.8 2005/11/16 22:07:04 erh Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -101,7 +101,6 @@
   <!--	PKG_SYSCONFDIR.foobar -->
 
   <!-- Security -->
-  <!--	ALLOW_VULNERABLE_PACKAGES -->
   <!--	PKGVULNDIR -->
 
   <sect1 id="developer-advanced-settings">
@@ -131,6 +130,22 @@
 	    the shell commands before their invocation, and their
 	    actual execution progress with <command>set -x</command>
 	    will be displayed.</para></listitem>
+	<listitem><para><varname>ALLOW_VULNERABILITIES.<replaceable>pkgbase</replaceable></varname>:
+	    A space separated list of vulnerability IDs that may be ignored when
+		performing the automated security checks.  These IDs are listed in the
+		pkg-vulnerabilities file and are displayed by
+		<command>audit-packages</command> when
+		it finds a vulnerable package.  
+	  </para>
+	</listitem>
+	<listitem><para><varname>SKIP_AUDIT_PACKAGES</varname>:
+	    If this is set to <quote>yes</quote>, the automated security checks
+		(which use the <filename role="pkg">security/audit-packages</filename>
+		package) will be <emphasis role="strong">entirely</emphasis> skipped
+		for <emphasis role="strong">all</emphasis> packages built.  Normally
+		you'll want to use ALLOW_VULNERABILITIES instead of this.
+	  </para>
+	</listitem>
       </itemizedlist>
     </para>
   </sect1>
