@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.589 2005/11/13 08:33:25 minskim Exp $
+# $NetBSD: Makefile,v 1.590 2005/11/16 02:08:23 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -227,6 +227,7 @@ SUBDIR+=	ns
 SUBDIR+=	nsca
 SUBDIR+=	nsd
 SUBDIR+=	nslint
+SUBDIR+=	nstx
 SUBDIR+=	ntop
 SUBDIR+=	ntop1
 SUBDIR+=	ntp4
