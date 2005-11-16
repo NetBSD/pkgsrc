@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11959 2005/11/16 21:46:08 minskim Exp $
+$NetBSD: CHANGES,v 1.11960 2005/11/16 22:37:43 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5255,3 +5255,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/python24 to 2.4.2nb1 [joerg 2005-11-16]
 	Updated security/audit-packages to 0.40 [erh 2005-11-16]
 	Updated print/tex-ucs to 20041710nb2 [minskim 2005-11-16]
+	Updated lang/chicken to 2.2 [rillig 2005-11-16]
