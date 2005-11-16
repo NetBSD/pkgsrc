@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11955 2005/11/16 15:34:17 joerg Exp $
+$NetBSD: CHANGES,v 1.11956 2005/11/16 16:05:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5245,3 +5245,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/postfix-current to 2.3-20050922nb1 [martti 2005-11-16]
 	Updated devel/bmake to 20051105nb1 [joerg 2005-11-16]
 	Updated www/zope25-ZPsycopgDA to 1.1.21 [joerg 2005-11-16]
+	Updated games/freeciv-share to 2.0.7 [adam 2005-11-16]
+	Updated games/freeciv-client to 2.0.7 [adam 2005-11-16]
+	Updated games/freeciv-server to 2.0.7 [adam 2005-11-16]
