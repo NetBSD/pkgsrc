@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.8,v 1.15 2005/10/20 10:26:54 agc Exp $
+.\" $NetBSD: audit-packages.8,v 1.16 2005/11/16 20:47:56 erh Exp $
 .\"
 .\" Copyright (c) 2003 Jeremy C. Reed.  All rights reserved.
 .\"
@@ -40,6 +40,8 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl dv
+.Op Fl K Ar pkg_dbdir
+.Op Fl i Ar ignore-list
 .Nm download-vulnerability-list
 .Sh DESCRIPTION
 The
@@ -50,16 +52,30 @@ file and reports any known security issues to standard output.
 This output contains the name and version of the package, the
 type of vulnerability, and an URL for further information for each
 vulnerable package.
-If the
-.Fl v
-option is specified,
+.Pp
+The following flags are supported:
+.Bl -tag -width Ar
+.It Fl d
 .Nm
-will warn when the vulnerabilities file is more than a week old.
-The
-.Fl d
-option will attempt to download this vulnerabilities
+will attempt to download the vulnerabilities
 file before scanning
 the installed packages for vulnerabilities.
+.It Fl i
+Specify an list of vulnerabilities or packages to ignore.
+Packages can be specified using package wildcards (see
+.Xr pkg_info 1
+).
+Vulnerabilities can be specified with the form
+.Sm off
+.Cm vulnid:
+.Ar vulnid .
+.Sm on
+Vulnerability ids are only present in file format 1.0.1 or higher.
+.It Fl v
+Set verbose mode.
+.Nm
+will warn when the vulnerabilities file is more than a week old.
+.El
 .Pp
 The
 .Nm download-vulnerability-list
@@ -73,7 +89,17 @@ pkgsrc packages and is kept up-to-date by the
 packages team.
 .Pp
 Each line lists the package and vulnerable versions, the type of exploit,
-and an Internet address for further information.
+and an Internet address for further information:
+.Bl -item
+.It
+.Aq package pattern
+.Sm off
+.Aq vulnid ,
+.Aq type
+.Sm on
+.Aq url
+.El
+.Pp
 The type of exploit can be any text, although
 some common types of exploits listed are:
 .Bl -bullet -compact -offset indent
