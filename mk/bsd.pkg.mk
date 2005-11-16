@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1752 2005/11/16 20:59:22 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1753 2005/11/16 21:43:40 erh Exp $
 #
 # This file is in the public domain.
 #
@@ -1370,8 +1370,8 @@ _AUDIT_PACKAGES_OK!=	${PKG_INFO} -qe 'audit-packages>=${AUDIT_PACKAGES_MIN_VERSI
 # Note: _any_ output from check-vulnerable is considered an error by do-fetch.
 .PHONY: check-vulnerable
 check-vulnerable:
-.if empty(AUDIT_PACKAGES_OK:M0)
-	@${ECHO_MSG} "${_PKGSRC_IN}> *** The audit-packages package must be at least version ${AUDIT_PACKAGES_MIN_VERSION}"
+.if empty(_AUDIT_PACKAGES_OK:M0)
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** The audit-packages package must be at least version ${_AUDIT_PACKAGES_MIN_VERSION}"
 	@${ECHO_MSG} "${_PKGSRC_IN}> *** Please install pkgsrc/security/audit-packages package and run";
 	@${ECHO_MSG} "${_PKGSRC_IN}> *** '${LOCALBASE}/sbin/download-vulnerability-list'.";
 	@false
