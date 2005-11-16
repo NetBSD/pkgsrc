@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.5 2005/11/16 18:06:12 reed Exp $
+
+--- src/frontends/qt2/lyx_gui.C.orig	2005-10-12 16:16:12.000000000 -0700
++++ src/frontends/qt2/lyx_gui.C	2005-10-12 16:19:15.000000000 -0700
+@@ -123,7 +123,12 @@
+ LQApplication::~LQApplication()
+ {
+ #ifdef QT_THREAD_SUPPORT
++/* For some reason it doesn't indicate it is locked on NetBSD
++   resulting in a Error detected by libpthread: Destroying locked mutex.
++*/
++#if !defined(__NetBSD__)
+ 	if (locked())
++#endif
+ 		unlock();
+ #endif
+ }
