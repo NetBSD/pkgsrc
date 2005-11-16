@@ -1,0 +1,3 @@
+NSTX (the Nameserver Transfer Protocol) makes it possible to create IP
+tunnels using DNS queries and replies for IP packet encapsulation
+where IP traffic other than DNS isn't possible.
