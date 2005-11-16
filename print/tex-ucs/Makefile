@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/11/15 23:28:02 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/16 21:45:15 minskim Exp $
 #
 
 DISTNAME=	unicode
 PKGNAME=	tex-ucs-20041710
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://www.unruh.de/DniQ/latex/unicode/
 EXTRACT_SUFX=	.tgz
@@ -28,5 +28,7 @@ do-install:
 .endfor
 	${INSTALL_DATA_DIR} ${UCSDIR}/data
 	${INSTALL_DATA} ${WRKSRC}/data/* ${UCSDIR}/data/
+	${INSTALL_DATA_DIR} ${UCSDIR}/contrib
+	${INSTALL_DATA} ${WRKSRC}/contrib/* ${UCSDIR}/contrib/
 
 .include "../../mk/bsd.pkg.mk"
