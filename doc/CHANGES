@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11957 2005/11/16 19:20:35 joerg Exp $
+$NetBSD: CHANGES,v 1.11958 2005/11/16 20:49:21 erh Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5253,3 +5253,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/python22 to 2.2.3nb7 [joerg 2005-11-16]
 	Updated lang/python23 to 2.3.5nb4 [joerg 2005-11-16]
 	Updated lang/python24 to 2.4.2nb1 [joerg 2005-11-16]
+	Updated security/audit-packages to 0.40 [erh 2005-11-16]
