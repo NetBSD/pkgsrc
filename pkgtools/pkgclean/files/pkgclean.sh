@@ -1,5 +1,5 @@
 #! @SH@
-# $NetBSD: pkgclean.sh,v 1.1 2005/11/17 22:30:30 rillig Exp $
+# $NetBSD: pkgclean.sh,v 1.2 2005/11/17 22:58:36 rillig Exp $
 #
 
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
@@ -67,6 +67,10 @@ esac
 #
 
 for wrkdir in "${pkgsrcdir}"/*/*/"${wrkdir_basename}"; do
+	case $wrkdir in
+	"${pkgsrcdir}/*/*/${wrkdir_basename}") continue;;
+	esac
+
 	echo "===> Cleaning in ${wrkdir}"
 
 	# When WRKOBJDIR is set, ${wrkdir_basename} is just a symlink to
