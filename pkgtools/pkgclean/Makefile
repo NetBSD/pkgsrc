@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:05 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/17 22:30:09 rillig Exp $
 
-DISTNAME=	pkgclean-20050118
+DISTNAME=	pkgclean-20051116
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,25 +10,24 @@ COMMENT=	Quickly clean up all work directories in pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin man/man1
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 
-do-build:
-	${CC} ${CFLAGS} -o ${WRKSRC}/pkgclean ${WRKSRC}/pkgclean.c
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pkgclean ${PREFIX}/bin/pkgclean
+	${INSTALL_SCRIPT} ${WRKSRC}/pkgclean.sh ${PREFIX}/bin/pkgclean
 	${INSTALL_MAN} ${WRKSRC}/pkgclean.1 ${PREFIX}/man/man1/pkgclean.1
 
 SUBST_CLASSES=          path
 SUBST_STAGE.path=       post-patch
-SUBST_FILES.path=       pkgclean.c pkgclean.1
-SUBST_SED.path=         -e "s,@PKGSRCDIR@,${PKGSRCDIR},g"
+SUBST_FILES.path=       pkgclean.sh pkgclean.1
+SUBST_SED.path+=	-e 's,@SH@,${SH},g'
+SUBST_SED.path+=	-e 's,@PKGSRCDIR@,${PKGSRCDIR},g'
 SUBST_MESSAGE.path=     "Adjusting pkgsrc directory."
 
 .include "../../mk/bsd.pkg.mk"
