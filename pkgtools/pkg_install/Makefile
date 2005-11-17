@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2005/11/07 06:52:24 jlam Exp $
+# $NetBSD: Makefile,v 1.121 2005/11/17 17:05:30 erh Exp $
 
 # Notes to package maintainers:
 #
@@ -29,6 +29,7 @@ USE_TOOLS=		mtree pax tar
 USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
 			sed sort touch
 
+SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
