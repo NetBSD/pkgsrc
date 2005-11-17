@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:29 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/17 22:12:37 wiz Exp $
 #
 
-DISTNAME=		MyPasswordSafe-20041004.src
-PKGNAME=		MyPasswordSafe-20041004
+DISTNAME=		MyPasswordSafe-20050615.src
+PKGNAME=		MyPasswordSafe-20050615
 CATEGORIES=		security
-MASTER_SITES=		http://www.semanticgap.com/myps/release/devel/
+MASTER_SITES=		http://www.semanticgap.com/myps/release/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
