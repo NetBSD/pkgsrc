@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.2 2004/12/02 13:33:32 dmcmahill Exp $
+$NetBSD: patch-af,v 1.3 2005/11/17 13:17:56 dmcmahill Exp $
 
---- doc/ngspice.texi.orig	Sun Nov  2 14:16:21 2003
+--- doc/ngspice.texi.orig	2005-08-15 22:24:58.000000000 +0000
 +++ doc/ngspice.texi
-@@ -6,6 +6,15 @@
- @c %**end of header
- 
- @ifinfo
+@@ -3,6 +3,15 @@
+ @c %**start of header
+ @setfilename ngspice.info
+ @include version.texi
 +@format
 +INFO-DIR-SECTION Simulation
 +START-INFO-DIR-ENTRY
@@ -15,6 +15,6 @@ $NetBSD: patch-af,v 1.2 2004/12/02 13:33:32 dmcmahill Exp $
 +END-INFO-DIR-ENTRY
 +@end format
 +
- This file documents NGSPICE.
- 
- Copyright 1996 The Regents of the University of California.
+ @settitle NGSPICE User Manual
+ @setchapternewpage odd
+ @c %**end of header
