@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11966 2005/11/17 22:13:47 wiz Exp $
+$NetBSD: CHANGES,v 1.11967 2005/11/17 22:29:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5268,3 +5268,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/MAMEDiff to 2.21 [wiz 2005-11-17]
 	Updated emulators/ZIPIdent to 2.5 [wiz 2005-11-17]
 	Updated security/MyPasswordSafe to 20050615 [wiz 2005-11-17]
+	Added print/hugeotp2ocp version 3.0 [minskim 2005-11-17]
