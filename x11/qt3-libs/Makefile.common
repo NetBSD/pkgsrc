@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2005/11/01 20:18:36 rillig Exp $
+# $NetBSD: Makefile.common,v 1.57 2005/11/17 04:33:20 hubertf Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -75,7 +75,7 @@ CONFIGURE_ARGS+=	-no-xinerama
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt3
-PKG_SUPPORTED_OPTIONS=	cups
+PKG_SUPPORTED_OPTIONS=	cups debug
 
 .include "../../mk/bsd.options.mk"
 
@@ -85,6 +85,14 @@ CONFIGURE_ARGS+=	-cups
 .else
 CONFIGURE_ARGS+=	-no-cups
 .endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CC+=			-ggdb
+CXX+=			-ggdb
+CONFIGURE_ARGS+=	--debug
+INSTALL_UNSTRIPPED=	yes
+.endif
+
 
 #
 # Reverse the change to how templates are handled made between 3.0.4
