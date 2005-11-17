@@ -1,24 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2005/03/18 22:44:22 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/17 13:17:56 dmcmahill Exp $
 
---- src/frontend/aspice.c.orig	2004-08-29 13:54:58.000000000 -0400
-+++ src/frontend/aspice.c
-@@ -176,9 +176,7 @@ sigchild(void)
-  * whether the exit was normal or not.
-  */
+--- src/frontend/com_shell.c.orig	2005-05-30 20:28:30.000000000 +0000
++++ src/frontend/com_shell.c
+@@ -8,7 +8,7 @@
+ #include <wordlist.h>
  
--#if defined(__NetBSD__) || defined(SOLARIS)
--    pid_t status;
--#elif defined(__FreeBSD__)
-+#if defined(__NetBSD__) || defined(__sun__) || defined(__FreeBSD__)
-     int status;    
- #else
-     union wait status;
-@@ -192,7 +190,7 @@ ft_checkkids(void)
-     struct proc *p = NULL, *lp = NULL;
-     char buf[BSIZE_SP];
-     FILE *fp;
--    int pid = 0;
-+    pid_t pid = 0;
-     static bool here = FALSE;   /* Don't want to be re-entrant. */
+ #include "com_shell.h"
+-
++#include "cpextern.h"
  
-     if (!numchanged || here)
+ /* Fork a shell. */
+ 
