@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2005/11/15 07:15:25 minskim Exp $
+# $NetBSD: Makefile,v 1.138 2005/11/17 22:29:52 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -51,6 +51,7 @@ SUBDIR+=	gnome-print
 SUBDIR+=	gv
 SUBDIR+=	hpijs
 SUBDIR+=	html2ps
+SUBDIR+=	hugeotp2ocp
 SUBDIR+=	if-psprint
 SUBDIR+=	ijs
 SUBDIR+=	img2eps
