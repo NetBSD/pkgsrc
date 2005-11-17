@@ -1,27 +1,18 @@
-$NetBSD: patch-ac,v 1.4 2004/12/02 13:33:32 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.5 2005/11/17 13:17:56 dmcmahill Exp $
 
---- src/Makefile.in.orig	Mon Sep  6 09:49:02 2004
+--- src/Makefile.in.orig	2005-08-30 07:58:00.000000000 +0000
 +++ src/Makefile.in
-@@ -15,7 +15,7 @@
- @SET_MAKE@
- 
- 
--SOURCES = $(makeidx_SOURCES) $(nghelp_SOURCES) $(ngmultidec_SOURCES) $(ngnutmeg_SOURCES) $(ngproc2mod_SOURCES) $(ngsconvert_SOURCES) $(ngspice_SOURCES)
-+SOURCES = $(ngmakeidx_SOURCES) $(nghelp_SOURCES) $(ngmultidec_SOURCES) $(ngnutmeg_SOURCES) $(ngproc2mod_SOURCES) $(ngsconvert_SOURCES) $(ngspice_SOURCES)
- 
- srcdir = @srcdir@
- top_srcdir = @top_srcdir@
-@@ -40,7 +40,7 @@ POST_UNINSTALL = :
+@@ -38,7 +38,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
  host_triplet = @host@
  bin_PROGRAMS = ngspice$(EXEEXT) ngnutmeg$(EXEEXT) nghelp$(EXEEXT) \
- 	ngsconvert$(EXEEXT) ngproc2mod$(EXEEXT) ngmultidec$(EXEEXT) \
--	makeidx$(EXEEXT)
-+	ngmakeidx$(EXEEXT)
- subdir = src
- DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
- 	$(srcdir)/spinit.in ChangeLog
-@@ -54,9 +54,9 @@ CONFIG_CLEAN_FILES = spinit
- am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(helpdatadir)" "$(DESTDIR)$(initdatadir)"
+-	makeidx$(EXEEXT) $(am__EXEEXT_1)
++	ngmakeidx$(EXEEXT) $(am__EXEEXT_1)
+ @WINDOWS_FALSE@am__append_1 = ngsconvert ngproc2mod ngmultidec
+ @WINDOWS_TRUE@am__append_2 = winmain.c
+ @WINDOWS_TRUE@am__append_3 = winmain.c
+@@ -59,9 +59,9 @@ am__installdirs = "$(DESTDIR)$(bindir)" 
+ 	"$(DESTDIR)$(initdatadir)"
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  PROGRAMS = $(bin_PROGRAMS)
 -am_makeidx_OBJECTS = makeidx.$(OBJEXT)
@@ -30,41 +21,32 @@ $NetBSD: patch-ac,v 1.4 2004/12/02 13:33:32 dmcmahill Exp $
 +am_ngmakeidx_OBJECTS = makeidx.$(OBJEXT)
 +ngmakeidx_OBJECTS = $(am_ngmakeidx_OBJECTS)
 +ngmakeidx_LDADD = $(LDADD)
- am_nghelp_OBJECTS = nghelp.$(OBJEXT)
- nghelp_OBJECTS = $(am_nghelp_OBJECTS)
- nghelp_DEPENDENCIES = frontend/help/libhlp.a \
-@@ -130,7 +130,7 @@ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(t
- depcomp = $(SHELL) $(top_srcdir)/depcomp
- am__depfiles_maybe = depfiles
- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/conf.Po ./$(DEPDIR)/main.Po \
--@AMDEP_TRUE@	./$(DEPDIR)/makeidx.Po ./$(DEPDIR)/nghelp.Po \
-+@AMDEP_TRUE@	./$(DEPDIR)/ngmakeidx.Po ./$(DEPDIR)/nghelp.Po \
- @AMDEP_TRUE@	./$(DEPDIR)/ngmultidec.Po ./$(DEPDIR)/ngnutmeg.Po \
- @AMDEP_TRUE@	./$(DEPDIR)/ngproc2mod.Po \
- @AMDEP_TRUE@	./$(DEPDIR)/ngsconvert.Po ./$(DEPDIR)/ngspice.Po
-@@ -142,10 +142,10 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
+ am__nghelp_SOURCES_DIST = conf.c nghelp.c winmain.c
+ @WINDOWS_TRUE@am__objects_1 = winmain.$(OBJEXT)
+ am_nghelp_OBJECTS = conf.$(OBJEXT) nghelp.$(OBJEXT) $(am__objects_1)
+@@ -151,10 +151,10 @@ LTCOMPILE = $(LIBTOOL) --tag=CC --mode=c
  CCLD = $(CC)
- LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
 -SOURCES = $(makeidx_SOURCES) $(nghelp_SOURCES) $(ngmultidec_SOURCES) \
 +SOURCES = $(ngmakeidx_SOURCES) $(nghelp_SOURCES) $(ngmultidec_SOURCES) \
  	$(ngnutmeg_SOURCES) $(ngproc2mod_SOURCES) \
  	$(ngsconvert_SOURCES) $(ngspice_SOURCES)
--DIST_SOURCES = $(makeidx_SOURCES) $(nghelp_SOURCES) \
-+DIST_SOURCES = $(ngmakeidx_SOURCES) $(nghelp_SOURCES) \
- 	$(ngmultidec_SOURCES) $(ngnutmeg_SOURCES) \
- 	$(ngproc2mod_SOURCES) $(ngsconvert_SOURCES) $(ngspice_SOURCES)
- RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
-@@ -416,7 +416,7 @@ ngmultidec_LDADD = \
- 	maths/sparse/libsparse.a \
- 	misc/libmisc.a 
+-DIST_SOURCES = $(makeidx_SOURCES) $(am__nghelp_SOURCES_DIST) \
++DIST_SOURCES = $(ngmakeidx_SOURCES) $(am__nghelp_SOURCES_DIST) \
+ 	$(am__ngmultidec_SOURCES_DIST) $(am__ngnutmeg_SOURCES_DIST) \
+ 	$(am__ngproc2mod_SOURCES_DIST) $(am__ngsconvert_SOURCES_DIST) \
+ 	$(am__ngspice_SOURCES_DIST)
+@@ -427,7 +427,7 @@ nghelp_LDADD = \
+ @WINDOWS_FALSE@	maths/sparse/libsparse.a \
+ @WINDOWS_FALSE@	misc/libmisc.a 
  
 -makeidx_SOURCES = makeidx.c
 +ngmakeidx_SOURCES = makeidx.c
  INCLUDES = -I$(top_srcdir)/src/include -I$(top_srcdir)/src/spicelib/devices @X_CFLAGS@
  MAINTAINERCLEANFILES = Makefile.in
  all: all-recursive
-@@ -482,9 +482,9 @@ clean-binPROGRAMS:
+@@ -493,9 +493,9 @@ clean-binPROGRAMS:
  	  echo " rm -f $$p $$f"; \
  	  rm -f $$p $$f ; \
  	done
@@ -77,16 +59,7 @@ $NetBSD: patch-ac,v 1.4 2004/12/02 13:33:32 dmcmahill Exp $
  nghelp$(EXEEXT): $(nghelp_OBJECTS) $(nghelp_DEPENDENCIES) 
  	@rm -f nghelp$(EXEEXT)
  	$(LINK) $(nghelp_LDFLAGS) $(nghelp_OBJECTS) $(nghelp_LDADD) $(LIBS)
-@@ -512,7 +512,7 @@ distclean-compile:
- 
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conf.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/makeidx.Po@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ngmakeidx.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nghelp.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ngmultidec.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ngnutmeg.Po@am__quote@
-@@ -858,8 +858,8 @@ winmain.o: winmain.c
+@@ -881,8 +881,8 @@ winmain.o: winmain.c
  spice.o: main.c
  		$(COMPILE) -DSIMULATOR -o spice.o  -c $(srcdir)/main.c
  

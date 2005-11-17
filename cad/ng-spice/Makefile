@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2005/06/01 18:02:40 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/11/17 13:17:56 dmcmahill Exp $
 #
 
-DISTNAME=	ng-spice-rework-15c
-PKGNAME=	ng-spice-15c
+DISTNAME=	ng-spice-rework-17
+PKGNAME=	ng-spice-17
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
 
@@ -10,7 +10,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://ngspice.sourceforge.net/
 COMMENT=	Next generation circuit simulation program
 
-WRKSRC=			${WRKDIR}/ng-spice-rework-15
+WRKSRC=			${WRKDIR}/ng-spice-rework-17
 USE_LIBTOOL=		YES
 USE_MAKEINFO=		YES
 USE_TOOLS+=		gmake

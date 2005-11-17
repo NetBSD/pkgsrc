@@ -1,13 +1,12 @@
-$NetBSD: patch-ae,v 1.5 2004/12/02 13:33:32 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.6 2005/11/17 13:17:56 dmcmahill Exp $
 
---- configure.orig	Mon Sep  6 09:49:40 2004
-+++ configure
-@@ -3295,7 +3295,7 @@ fi
- if test "$enable_debug" = "no"; then
- 	{ echo "$as_me:$LINENO: WARNING: Removing debugging option!" >&5
- echo "$as_me: WARNING: Removing debugging option!" >&2;}
--	CFLAGS=" "
-+	CFLAGS="`echo $CFLAGS | sed 's;-g;;g'` "
- fi
+--- src/makeidx.c.orig	2005-05-19 15:21:59.000000000 +0000
++++ src/makeidx.c
+@@ -5,6 +5,7 @@ Copyright 1990 Regents of the University
+ /* from FILENAME.txt, make FILENAME.idx */
  
- 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include "cpdefs.h"
+ #include "hlpdefs.h"
