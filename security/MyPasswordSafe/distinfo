@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:10:04 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/11/17 22:12:37 wiz Exp $
 
-SHA1 (MyPasswordSafe-20041004.src.tgz) = 6145988be66a10b35df5f88395263018a4ca7725
-RMD160 (MyPasswordSafe-20041004.src.tgz) = 7c2ddbfc33e67a525dc09a778f60688d29bac7e7
-Size (MyPasswordSafe-20041004.src.tgz) = 807655 bytes
-SHA1 (patch-aa) = 5a41f666f0f4e29440dc878e7f7ff2c95a643ec7
-SHA1 (patch-ab) = e1d44a990418e8280f918327b4515f2bd20f12bd
-SHA1 (patch-ac) = ba79a5a8bc3c8289547827d094425fe10fd9e8e7
+SHA1 (MyPasswordSafe-20050615.src.tgz) = 80f3569722617a0884ffcb637dca156708dd4c68
+RMD160 (MyPasswordSafe-20050615.src.tgz) = 9020e75d4cfaf0188f124541691be1feae1224e3
+Size (MyPasswordSafe-20050615.src.tgz) = 823130 bytes
+SHA1 (patch-aa) = 2e0b231b50a39d48b7124381f27e0de968c8e7bf
+SHA1 (patch-ab) = 41f42aa0fa4f9d97431a9a01807a0a2cc838a753
+SHA1 (patch-ac) = f2a1911cb3a7b0de9d99e8ec70299a79c2392b4a
