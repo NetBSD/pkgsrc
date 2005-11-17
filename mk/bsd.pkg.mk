@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1754 2005/11/17 03:58:16 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1755 2005/11/17 04:12:54 erh Exp $
 #
 # This file is in the public domain.
 #
@@ -1372,7 +1372,7 @@ _AUDIT_PACKAGES_OK!=	${PKG_INFO} -qe 'audit-packages>=${_AUDIT_PACKAGES_MIN_VERS
 check-vulnerable:
 .if empty(_AUDIT_PACKAGES_OK:M0)
 	@${ECHO_MSG} "${_PKGSRC_IN}> *** The audit-packages package must be at least version ${_AUDIT_PACKAGES_MIN_VERSION}"
-	@${ECHO_MSG} "${_PKGSRC_IN}> *** Please install pkgsrc/security/audit-packages package and run";
+	@${ECHO_MSG} "${_PKGSRC_IN}> *** Please install the security/audit-packages package and run";
 	@${ECHO_MSG} "${_PKGSRC_IN}> *** '${LOCALBASE}/sbin/download-vulnerability-list'.";
 	@false
 .else
@@ -1396,13 +1396,15 @@ do-fetch:
 		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
 		case "$$vul" in						\
 		"")	;;						\
-		*)	vulnids=`echo "$$vul" | sed -e's/.*vulnid:\\([[:digit:]]*\\).*/\\1/'`; \
+		*vulnid:*)	vulnids=`echo "$$vul" | grep vulnid: | sed -e's/.*vulnid:\\([[:digit:]]*\\).*/\\1/'`; \
 			${ECHO} "$$vul";				\
 			${ECHO} "or if this package is absolutely essential, add this to mk.conf:"; \
 			for vulnid in $$vulnids ; do \
 				${ECHO} " ALLOW_VULNERABILITIES.${PKGBASE}+=$$vulnid"; \
 			done ; \
 			${FALSE} ;;					\
+		*) ${ECHO} "$$vul";				\
+			${FALSE} ;;                 \
 		esac;							\
 	else								\
 		${ECHO_MSG} "${_PKGSRC_IN}> *** No ${PKGVULNDIR}/pkg-vulnerabilities file found,"; \
