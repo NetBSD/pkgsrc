@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.17 2005/11/16 22:07:04 erh Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.18 2005/11/17 17:48:49 wiz Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -544,7 +544,7 @@ audit-package</userinput>.</para>
 
 <para>If this package is installed, pkgsrc builds will use it to perform
 a security check before building any package.  See
-<xref linkend="variables-affecting-build"/> for way to control this check.
+<xref linkend="variables-affecting-build"/> for ways to control this check.
 </para>
 
 </sect1>
