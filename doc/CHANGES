@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11965 2005/11/17 18:38:53 wiz Exp $
+$NetBSD: CHANGES,v 1.11966 2005/11/17 22:13:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5267,3 +5267,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/DatUtil to 2.23 [wiz 2005-11-17]
 	Updated emulators/MAMEDiff to 2.21 [wiz 2005-11-17]
 	Updated emulators/ZIPIdent to 2.5 [wiz 2005-11-17]
+	Updated security/MyPasswordSafe to 20050615 [wiz 2005-11-17]
