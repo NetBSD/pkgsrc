@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1753 2005/11/16 21:43:40 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1754 2005/11/17 03:58:16 erh Exp $
 #
 # This file is in the public domain.
 #
@@ -1364,8 +1364,8 @@ batch-check-distfiles:
 
 # check for any vulnerabilities in the package
 
-_AUDIT_PACKAGES_MIN_VERSION=0.40
-_AUDIT_PACKAGES_OK!=	${PKG_INFO} -qe 'audit-packages>=${AUDIT_PACKAGES_MIN_VERSION}' ; echo $$?
+_AUDIT_PACKAGES_MIN_VERSION=1.40
+_AUDIT_PACKAGES_OK!=	${PKG_INFO} -qe 'audit-packages>=${_AUDIT_PACKAGES_MIN_VERSION}' ; echo $$?
 
 # Note: _any_ output from check-vulnerable is considered an error by do-fetch.
 .PHONY: check-vulnerable
