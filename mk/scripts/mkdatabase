@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkdatabase,v 1.4 2003/05/06 17:42:05 jmmv Exp $
+# $NetBSD: mkdatabase,v 1.5 2005/11/17 21:46:42 rillig Exp $
 #
 # Script for generating a database with complete dependency information
 # for a particular package
@@ -90,11 +90,8 @@ clean_and_exit(){
 DEBUG=
 append=no
 
-while
-    test -n "$1"
-do
-    case "$1"
-    in
+while test $# -gt 0; do
+    case $1 in
 
     # Append to the database
     -a|--append)
@@ -142,8 +139,8 @@ if [ "x$DEBUG" = "xyes" ]; then
     set -v
 fi
 
-if [ ! -d $TMPDIR ]; then
-	mkdir -p $TMPDIR
+if [ ! -d "$TMPDIR" ]; then
+	mkdir -p "$TMPDIR"
 fi
 
 prompt="----> "
@@ -163,38 +160,38 @@ esac
 
 if [ "X$append" = "Xyes" ]; then
     echo "$prompt Appending to database in ${DATABASE}"
-    if [ ! -f ${DATABASE} ]; then
-	touch ${DATABASE}
+    if [ ! -f "${DATABASE}" ]; then
+	touch "${DATABASE}"
     fi
     # make sure we haven't already been listed before
     # appending ourselves.
     here=`pwd`
-    tmp1=`dirname $here`
-    pkgcat=`basename $tmp1`
-    pkg=`basename $here`
+    tmp1=`dirname "$here"`
+    pkgcat=`basename "$tmp1"`
+    pkg=`basename "$here"`
     pkgpath=$pkgcat/$pkg
     if [ "x$DEBUG" = "xyes" ]; then
 	echo "Looking for $pkgpath before appending"
     fi
-    if grep "^index $pkgpath " ${DATABASE} >/dev/null 2>&1 ; then
+    if grep "^index $pkgpath " "${DATABASE}" >/dev/null 2>&1 ; then
 	echo "$prompt $pkgpath has already been depended.  Skipping..."
 	exit 0
     else
-	${BMAKE} print-summary-data >> ${DATABASE} || exit 1
+	${BMAKE} print-summary-data >> "${DATABASE}" || exit 1
     fi
 else
     echo "$prompt Creating new database in ${DATABASE}"
-    ${BMAKE} print-summary-data > ${DATABASE} || exit 1
+    ${BMAKE} print-summary-data > "${DATABASE}" || exit 1
 fi
 here=`pwd`
 echo "$prompt Depending in $here (pass #1)"
-dirs=`${AWK} -f ../../mk/scripts/chkdatabase.awk debug=${DEBUG} ${DATABASE}`
+dirs=`${AWK} -f ../../mk/scripts/chkdatabase.awk debug=${DEBUG} "${DATABASE}"`
 pass=2
-while [ ! -z "$dirs" -a $pass -lt ${MAX_PASS} ]; do
+while [ ! -z "$dirs" -a $pass -lt "${MAX_PASS}" ]; do
 	for d in $dirs ; do
 		echo "$prompt Depending in ../../$d (pass #$pass)" ;\
-		cd ../../$d && ${BMAKE} print-summary-data >> ${DATABASE} || exit 1
-		cd $here
+		cd "../../$d" && ${BMAKE} print-summary-data >> "${DATABASE}" || exit 1
+		cd "$here"
 	done
 	dirs=`${AWK} -f ../../mk/scripts/chkdatabase.awk debug=${DEBUG} ${DATABASE}`
 	pass=`${EXPR} $pass + 1`
@@ -209,4 +206,3 @@ if [ $pass -eq ${MAX_PASS} ]; then
 else
 	echo "Complete dependency database left in ${DATABASE}"
 fi
-
