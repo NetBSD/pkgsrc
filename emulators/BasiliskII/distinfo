@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2005/11/03 21:34:23 rillig Exp $
+$NetBSD: distinfo,v 1.11 2005/11/17 16:56:39 joerg Exp $
 
 SHA1 (BasiliskII_src_22032005.tar.bz2) = e6c6efe9dded3e50b204fc641f42d15447819109
 RMD160 (BasiliskII_src_22032005.tar.bz2) = 6fac78005ed8a8794c192a07d36285a68ad1ccfa
@@ -7,3 +7,10 @@ SHA1 (patch-aa) = d1886fa85a58c2974ad355e6d8eb73cc611316bf
 SHA1 (patch-ab) = 462964cfa794f6ad97774fef525a9f210bd99d1b
 SHA1 (patch-ac) = ac4d313a8c60a807a5ea563dcca995e092be9c15
 SHA1 (patch-ad) = 6a215532e891848fe449ef5fe4307793c34bb9d6
+SHA1 (patch-ae) = dcac9287614535fa72fe9c8b0e3c516575e40887
+SHA1 (patch-af) = 03ec1ba0a7662e3e7f73e1523cba4ee3dd072924
+SHA1 (patch-ag) = db67f8999719402d5cd6bb0f2e72f7b5d276f885
+SHA1 (patch-ah) = 880b59812c983a03d39267e7ba5e9ff1995020b6
+SHA1 (patch-ai) = 9479f2daefbb2b62adc8fa816a65eb1be3cdb71d
+SHA1 (patch-aj) = 095ac43cfc8817f4f7c7861fb8422aac4c81b011
+SHA1 (patch-ak) = 3763edf1a5a9a3c3b5d404214fd918de131e49a0
