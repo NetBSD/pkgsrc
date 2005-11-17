@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.73 2005/11/15 12:15:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.74 2005/11/17 17:24:48 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -159,3 +159,5 @@ Pullup ticket 908 - requested by Manuel Bouyer
 php4 bugfix
 Pullup ticket 909 - requested by Adrian Portelli
 security fix for sudo
+Pullup ticket 870 - requested by Min Sik Kim
+distfile fixes for chef
