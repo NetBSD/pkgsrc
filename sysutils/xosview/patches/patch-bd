@@ -1,0 +1,39 @@
+$NetBSD: patch-bd,v 1.1 2005/11/17 15:53:01 rillig Exp $
+
+The Solaris SunPro compiler does not know the old <strstream.h> header.
+I fixed it to use the new one. The #define is ugly, but I wanted to keep
+the patch short.
+
+--- sunos5/cpumeter.cc.orig	1999-01-31 21:26:38.000000000 +0100
++++ sunos5/cpumeter.cc	2005-02-22 14:44:47.640675500 +0100
+@@ -8,7 +8,10 @@
+ #include <unistd.h>
+ #include <ctype.h>
+ #include <string.h>
+-#include <strstream.h>
++#include <sstream>
++
++#define ostrstream std::ostringstream
++using std::ends;
+ 
+ CPUMeter::CPUMeter(XOSView *parent, kstat_ctl_t *_kc, int cpuid)
+ 	: FieldMeterGraph(parent, CPU_STATES, toUpper(cpuStr(cpuid)),
+@@ -91,15 +94,15 @@ const char *CPUMeter::toUpper(const char
+ 
+ const char *CPUMeter::cpuStr(int num)
+ {
+-	static char buffer[32];
+-	ostrstream str(buffer, 32);
++	static std::string buffer;
++	std::ostringstream str(buffer);
+ 
+ 	str << "cpu";
+ 	if (num != 0)
+ 		str << (num - 1);
+ 	str << ends;
+ 
+-	return buffer;
++	return buffer.c_str();
+ }
+ 
+ int CPUMeter::countCPUs(kstat_ctl_t *kc)
