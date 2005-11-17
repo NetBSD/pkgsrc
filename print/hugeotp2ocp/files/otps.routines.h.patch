@@ -1,0 +1,13 @@
+$NetBSD: otps.routines.h.patch,v 1.1.1.1 2005/11/17 22:27:05 minskim Exp $
+
+--- routines.h.orig	2004-09-15 01:14:19.000000000 -0700
++++ routines.h
+@@ -102,7 +102,7 @@ extern int no_lefts;
+ extern void store_alias P2H(string, left);
+ extern left lookup_alias P1H(string);
+ 
+-#define ARRAY_SIZE 10000
++#define ARRAY_SIZE 160000
+ typedef struct {
+ 	int length;
+ 	char * str;
