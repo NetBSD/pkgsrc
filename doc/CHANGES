@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11964 2005/11/17 17:03:06 rillig Exp $
+$NetBSD: CHANGES,v 1.11965 2005/11/17 18:38:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5262,3 +5262,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cad/ng-spice to 17 [dmcmahill 2005-11-17]
 	Updated sysutils/xosview to 1.8.2nb1 [rillig 2005-11-17]
 	Updated pkgtools/pkg_filecheck to 0.1nb1 [rillig 2005-11-17]
+	Updated emulators/DatLib to 2.11 [wiz 2005-11-17]
+	Updated emulators/DatUtil to 2.22 [wiz 2005-11-17]
+	Updated emulators/DatUtil to 2.23 [wiz 2005-11-17]
+	Updated emulators/MAMEDiff to 2.21 [wiz 2005-11-17]
+	Updated emulators/ZIPIdent to 2.5 [wiz 2005-11-17]
