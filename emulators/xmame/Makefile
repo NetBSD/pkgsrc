@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2005/10/23 20:03:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.137 2005/11/17 19:55:54 joerg Exp $
 #
 
 DISTNAME=		xmame-0.101
@@ -51,6 +51,7 @@ MAME_CPU.${MACHINE_ARCH}?=	${_MAME_CPU.${MACHINE_ENDIAN}-endian}
 MAME_ARCH.NetBSD?=	netbsd
 MAME_ARCH.Linux?=	linux
 MAME_ARCH.SunOS?=	solaris
+MAME_ARCH.DragonFly?=	dragonfly
 .if !defined(MAME_ARCH.${OPSYS})
 MAME_ARCH.${OPSYS}?=	generic
 .endif
