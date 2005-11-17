@@ -1,17 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/10/06 00:13:20 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2005/11/17 22:12:37 wiz Exp $
 
---- src/pwsafe/Util.h.orig	2004-05-05 00:47:07.000000000 +0200
-+++ src/pwsafe/Util.h
-@@ -10,8 +10,12 @@
- #include <assert.h>
- 
- #ifndef WIN32
-+#ifdef __NetBSD__
-+#include <sys/endian.h>
-+#else
- #include <endian.h>
- #endif
-+#endif
- 
- #include <string>
- using std::string;
+qt3-3.3.5 fix. Can probably be removed after next qt3 release.
+
+--- src/mypasswordsafe.ui.orig	2004-12-06 17:03:46.000000000 +0100
++++ src/mypasswordsafe.ui
+@@ -1006,6 +1006,5 @@
+ <pixmapinproject/>
+ <layoutdefaults spacing="6" margin="11"/>
+ <includehints>
+-    <includehint>safelistview.h</includehint>
+ </includehints>
+ </UI>
