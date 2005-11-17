@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1757 2005/11/17 17:18:01 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1758 2005/11/17 19:30:22 erh Exp $
 #
 # This file is in the public domain.
 #
@@ -1393,10 +1393,10 @@ do-fetch:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
 		${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"; \
-		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
+		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable || ${TRUE}`;		\
 		case "$$vul" in						\
 		"")	;;						\
-		*vulnid:*)	vulnids=`echo "$$vul" | grep vulnid: | sed -e's/.*vulnid:\\([[:digit:]]*\\).*/\\1/'`; \
+		*vulnid:*)	vulnids=`echo "$$vul" | ${GREP} vulnid: | ${SED} -e's/.*vulnid:\\([[:digit:]]*\\).*/\\1/'`; \
 			${ECHO} "$$vul";				\
 			${ECHO} "or if this package is absolutely essential, add this to mk.conf:"; \
 			for vulnid in $$vulnids ; do \
