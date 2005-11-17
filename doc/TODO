@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4178 2005/11/16 20:43:03 wiz Exp $
+$NetBSD: TODO,v 1.4179 2005/11/17 17:49:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,7 +308,7 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
-	o 9base-20051028 [pkg/31945, replacing 9rc]
+	o 9base-20051114 [pkg/32095]
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o DatLib-2.11
@@ -384,6 +384,7 @@ Suggested package updates
 	o avl-2.0.1
 	o avr-libc-1.2.3
 	o baci-20040415
+	o bacula-1.38.1
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
@@ -570,6 +571,7 @@ Suggested package updates
 	o glade2-2.12.1
 	o gld-1.6
 	o glib2-2.8.4
+	o gliv-1.9.4
 	o gmpc-0.12.0
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -1019,7 +1021,7 @@ Suggested package updates
 	o photopc-3.05
 	o phpldapadmin-0.9.7
 	o phpmyadmin-2.6.4pl4
-	o phppgadmin-3.5.6
+	o phppgadmin-4.0
 	o phylip-3.65
 	o pico-4.64
 	o piewm-1.03
@@ -1136,7 +1138,7 @@ Suggested package updates
 	o rox-wrappers-1.0.3
 	o roxirc-2.0
 	o rp-l2tp-0.4
-	o rp-pppoe-3.6
+	o rp-pppoe-3.7
 	o rpc2-1.28
 	o rpm-4.1
 	o rsnapshot-1.2.3
@@ -1186,7 +1188,7 @@ Suggested package updates
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
 	o smartmontools-5.33
-	o sml-nj-110.56
+	o sml-nj-110.57
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
 	o snd-7.15 [wiz]
@@ -1299,6 +1301,7 @@ Suggested package updates
 	o winbind-3.0.13
 	o wine-0.9.1
 	o wmctrl-1.07
+	o wmii-20051114 [pkg/32096]
 	o wmweather-2.4.3
 	o wv-1.2.0
 	o www6to4-1.6
