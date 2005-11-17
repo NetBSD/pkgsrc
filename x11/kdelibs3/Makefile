@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2005/10/13 12:31:59 markd Exp $
+# $NetBSD: Makefile,v 1.94 2005/11/17 04:33:20 hubertf Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -55,7 +55,7 @@ SUBST_FILES.kdemagic=	kio/magic
 SUBST_SED.kdemagic=	-n -e 'p' -e 's:/usr/local/bin:${LOCALBASE}/bin:p'
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdelibs
-PKG_SUPPORTED_OPTIONS=	cups
+PKG_SUPPORTED_OPTIONS=	cups debug
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcups)
@@ -64,6 +64,14 @@ PLIST_SUBST+=		CUPS=
 .else
 CONFIGURE_ARGS+=	--disable-cups
 PLIST_SUBST+=		CUPS="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CC+=			-ggdb
+CXX+=			-ggdb
+CONFIGURE_ARGS+=	--enable-debug=full
+CONFIGURE_ENV+=		INSTALL_STRIP_FLAG=
+INSTALL_UNSTRIPPED=	yes
 .endif
 
 .if ${OPSYS} == "NetBSD"

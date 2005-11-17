@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2005/11/09 22:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2005/11/17 04:33:20 hubertf Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -78,7 +78,7 @@ CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase
-PKG_SUPPORTED_OPTIONS=	sasl samba
+PKG_SUPPORTED_OPTIONS=	sasl samba debug
 PKG_SUGGESTED_OPTIONS=	sasl
 
 .include "../../mk/bsd.options.mk"
@@ -92,6 +92,14 @@ LIBS+=			-L${BUILDLINK_PREFIX.samba}/lib/samba -Wl,-R${BUILDLINK_PREFIX.samba}/l
 PLIST_SUBST+=		HAVE_SMB=""
 .else
 PLIST_SUBST+=		HAVE_SMB="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CC+=			-ggdb
+CXX+=			-ggdb
+CONFIGURE_ARGS+=	--enable-debug=full
+CONFIGURE_ENV+=		INSTALL_STRIP_FLAG=
+INSTALL_UNSTRIPPED=	yes
 .endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
