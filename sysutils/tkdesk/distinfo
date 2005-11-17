@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/10/26 04:29:01 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/11/17 23:38:03 rillig Exp $
 
 SHA1 (tkdesk-2.0.tar.gz) = 6ee7e290c094a957b92647fa83e23b0765556bf7
 RMD160 (tkdesk-2.0.tar.gz) = bd3983465e44aa0c294d1936fc5f3f450535d9c2
@@ -6,11 +6,6 @@ Size (tkdesk-2.0.tar.gz) = 907432 bytes
 SHA1 (patch-aa) = c4ce261aa0032a6ff41cbd4d615aca0d9592be35
 SHA1 (patch-ab) = 0250bf748da921d25b2c0e96841f3fbed42fd96e
 SHA1 (patch-ac) = 286a2bb4177431f87b778ed943cd57961aeb48ab
-SHA1 (patch-ad) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-ae) = c09cd944af50c2a31020a7478c1568e847b0cb02
-SHA1 (patch-af) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ag) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ah) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ai) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-aj) = e0aa89498cff3cde0be007c0586e9d32acb411c1
 SHA1 (patch-ak) = 441a1eefd5872786981b25aa07482a8d6d9515aa
