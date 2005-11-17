@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:50 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/17 18:36:39 wiz Exp $
 #
 
-DISTNAME=		zident24
-PKGNAME=		ZIPIdent-2.4
+DISTNAME=		zident25
+PKGNAME=		ZIPIdent-2.5
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/ZIPIdent/
 EXTRACT_SUFX=		.zip
@@ -17,6 +17,8 @@ MAKEFILE=		makefile
 BUILD_TARGET=		zipident
 EXTRACT_CMD_OPTS.zip=	-Laaqo
 INSTALLATION_DIRS=	bin
+
+BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.11
 
 post-extract:
 	${MKDIR} ${WRKSRC}/obj
