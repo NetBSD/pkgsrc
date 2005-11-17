@@ -1,0 +1,15 @@
+$NetBSD: patch-bf,v 1.1 2005/11/17 15:53:01 rillig Exp $
+
+SunPro complains about an unknown variable cerr.
+
+--- sunos5/loadmeter.cc.orig	1999-01-31 21:26:38.000000000 +0100
++++ sunos5/loadmeter.cc	2005-02-22 14:20:47.410939700 +0100
+@@ -8,6 +8,8 @@
+ #include <kstat.h>
+ /*#include <sys/loadavg.h>*/
+ 
++using std::cerr;
++
+ LoadMeter::LoadMeter(XOSView *parent, kstat_ctl_t *_kc)
+ 	: FieldMeterGraph(parent, 2, "LOAD", "PROCS/MIN", 1, 1, 0)
+ {
