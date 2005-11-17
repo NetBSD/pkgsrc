@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11960 2005/11/16 22:37:43 rillig Exp $
+$NetBSD: CHANGES,v 1.11961 2005/11/17 08:16:44 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5256,3 +5256,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/audit-packages to 0.40 [erh 2005-11-16]
 	Updated print/tex-ucs to 20041710nb2 [minskim 2005-11-16]
 	Updated lang/chicken to 2.2 [rillig 2005-11-16]
+	Updated x11/libxfce4util to 4.2.3.2 [martti 2005-11-17]
+	Updated wm/xfce4-wm to 4.2.3.2 [martti 2005-11-17]
+	Updated meta-pkgs/xfce4 to 4.2.3.2 [martti 2005-11-17]
