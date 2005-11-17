@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1 2005/11/17 15:53:01 rillig Exp $
+
+The Solaris SunPro compiler also has a bool type, not only gcc.
+
+--- general.h.orig	2003-10-09 06:35:59.000000000 +0200
++++ general.h	2005-02-22 14:16:47.160972300 +0100
+@@ -17,7 +17,7 @@
+       includes but before any local includes.  It should NOT be included
+       by any .h files unless there is a REALLY good reason.  */
+ 
+-#ifndef __GNUC__
++#if !defined(__GNUC__) && !defined(__sun)
+   /*  Every GNU system has _G_config.h, I believe, which tells us
+       whether or not the bool define exists.  However, for simplicity,
+       let's just redefine them all.  The following lines are directly

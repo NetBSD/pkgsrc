@@ -1,0 +1,16 @@
+$NetBSD: patch-bg,v 1.1 2005/11/17 15:53:01 rillig Exp $
+
+This patch fixes the MIN and MAX macros. To my knowledge, only gcc can
+handle ({...}) expressions, so let's express that.
+
+--- xosview.cc.orig	2003-10-09 05:40:54.000000000 +0200
++++ xosview.cc	2005-02-22 14:16:47.380960800 +0100
+@@ -22,7 +22,7 @@ static const char * const versionString 
+ 
+ static const char NAME[] = "xosview@";
+ 
+-#ifdef sgi
++#if !defined(__GNUC__)
+ 
+ #define MIN(x,y)		\
+ (				\
