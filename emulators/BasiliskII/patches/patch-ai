@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2005/11/17 16:56:39 joerg Exp $
+
+--- src/Unix/prefs_editor_gtk.cpp.orig	2005-11-17 14:29:15.000000000 +0000
++++ src/Unix/prefs_editor_gtk.cpp
+@@ -1109,7 +1109,7 @@ static GList *add_serial_names(void)
+ 		while ((de = readdir(d)) != NULL) {
+ #if defined(__linux__)
+ 			if (strncmp(de->d_name, "ttyS", 4) == 0 || strncmp(de->d_name, "lp", 2) == 0) {
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ 			if (strncmp(de->d_name, "cuaa", 4) == 0 || strncmp(de->d_name, "lpt", 3) == 0) {
+ #elif defined(__NetBSD__)
+ 			if (strncmp(de->d_name, "tty0", 4) == 0 || strncmp(de->d_name, "lpt", 3) == 0) {
+@@ -1148,7 +1148,7 @@ static GList *add_ether_names(void)
+ 			struct ifreq req, *ifr = ifc.ifc_req;
+ 			for (int i=0; i<ifc.ifc_len; i+=sizeof(ifreq), ifr++) {
+ 				req = *ifr;
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(sgi)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(sgi) || defined(__DragonFly__)
+ 				if (ioctl(s, SIOCGIFADDR, &req) == 0 && (req.ifr_addr.sa_family == ARPHRD_ETHER || req.ifr_addr.sa_family == ARPHRD_ETHER+1)) {
+ #elif defined(__linux__)
+ 				if (ioctl(s, SIOCGIFHWADDR, &req) == 0 && req.ifr_hwaddr.sa_family == ARPHRD_ETHER) {

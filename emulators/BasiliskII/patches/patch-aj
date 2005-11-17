@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2005/11/17 16:56:39 joerg Exp $
+
+--- src/Unix/ether_unix.cpp.orig	2005-11-17 14:30:02.000000000 +0000
++++ src/Unix/ether_unix.cpp
+@@ -31,7 +31,7 @@
+ #include <stdio.h>
+ #include <map>
+ 
+-#if defined(__FreeBSD__) || defined(sgi)
++#if defined(__FreeBSD__) || defined(sgi) defined(__DragonFly__)
+ #include <net/if.h>
+ #endif
+ 
