@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:12:33 agc Exp $
+$NetBSD: distinfo,v 1.2.6.1 2005/11/17 17:24:24 salo Exp $
 
-SHA1 (chef.l.txt) = 6bb58b4b42b08dbbbeb4649cf7f057e8aa74f1e1
-RMD160 (chef.l.txt) = 02855be02fcb40427d3f3e32dd60ea17ae974e16
-Size (chef.l.txt) = 2428 bytes
+SHA1 (chef-19920415/chef.l.txt) = 87d95cb4e0a7110a6aa11d02ba454a93c811e8c3
+RMD160 (chef-19920415/chef.l.txt) = 0a659d431391e54cfa1779481af953f41d0697d7
+Size (chef-19920415/chef.l.txt) = 2428 bytes
