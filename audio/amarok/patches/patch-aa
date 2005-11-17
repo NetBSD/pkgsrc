@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.8 2005/11/17 16:45:52 joerg Exp $
+
+--- amarok/src/vis/xmmswrapper/xmmswrapper.cpp.orig	2005-11-17 16:04:50.000000000 +0000
++++ amarok/src/vis/xmmswrapper/xmmswrapper.cpp
+@@ -3,6 +3,8 @@
+ 
+ #include <config.h>
+ 
++#include <stddef.h>		/* NULL */
++
+ #include <xmms/configfile.h> //visplugins use this stuff, see extern "C" block
+ 
+ #include <dirent.h>
