@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4179 2005/11/17 17:49:28 wiz Exp $
+$NetBSD: TODO,v 1.4180 2005/11/17 18:38:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -311,15 +311,11 @@ Suggested package updates
 	o 9base-20051114 [pkg/32095]
 	o Cenon-3.71
 	o Chinput-3.0.1
-	o DatLib-2.11
-	o DatUtil-2.23
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o ImageMagick-6.2.5.1
-	o ImgChk-2.6
-	o MAMEDiff-2.21
 	o MyPasswordSafe-20041210
 	o PAM-0.80
 	o R-2.2.0
@@ -330,7 +326,6 @@ Suggested package updates
 	o XFree86-4.5.0
 	o XaoS-3.1.1
 	o YoSucker-73
-	o ZIPIdent-2.5
 	o aap-0.144
 	o acpi-iasl-20040715
 	o adocman-0.13
