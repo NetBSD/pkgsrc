@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2003/09/21 18:22:15 kristerw Exp $
+$NetBSD: patch-aa,v 1.11 2005/11/17 14:21:02 joerg Exp $
 --- Makefile.orig	Tue Sep 18 08:03:58 2001
 +++ Makefile	Sun Sep 21 19:48:50 2003
 @@ -1,14 +1,14 @@
@@ -67,12 +67,12 @@ $NetBSD: patch-aa,v 1.10 2003/09/21 18:22:15 kristerw Exp $
  UNZIPDEFINES=-DUNZIP_SUPPORT
  endif
  
-+EXTRALIBS += -lossaudio
++EXTRALIBS += ${LIBOSSAUDIO}
  ifdef THREAD_SOUND
 -CPUDEFINES += -DUSE_THREADS
 -EXTRALIBS += -lpthread
 +CPUDEFINES += -DUSE_THREADS -I${BUILDLINK_DIR}/include
-+EXTRALIBS += -Wl,-R${LOCALBASE}/lib -L${BUILDLINK_DIR}/lib -lpthread
++EXTRALIBS += -Wl,-R${LOCALBASE}/lib -L${BUILDLINK_DIR}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  endif
  
  ifdef GLIDE
