@@ -1,0 +1,3 @@
+hugeotp2ocp is a utility that converts OTP files to OCP files used by
+Omega.  This program can process OTP files requiring more memory than
+regular otp2ocp in teTeX can handle.
