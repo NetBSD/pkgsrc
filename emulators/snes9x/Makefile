@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/11/17 14:21:02 joerg Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
@@ -67,6 +67,7 @@ MAKE_ENV+=	USBHID_H=1
 .endif
 .endif
 
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

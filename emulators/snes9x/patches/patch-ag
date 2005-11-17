@@ -1,12 +1,13 @@
-$NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
+$NetBSD: patch-ag,v 1.6 2005/11/17 14:21:02 joerg Exp $
+
 --- unix/unix.cpp.orig	2001-09-18 06:03:40.000000000 +0000
-+++ unix/unix.cpp	2003-09-21 17:59:18.000000000 +0000
++++ unix/unix.cpp
 @@ -51,7 +51,7 @@
  #include <ctype.h>
  #include <dirent.h>
  
 -#if defined(__linux) || defined(__sun)
-+#if defined(__linux) || defined(__sun) || defined(__NetBSD__)
++#if defined(__linux) || defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
  #undef USE_THREADS
  #define USE_THREADS
  #include <unistd.h>
@@ -22,39 +23,46 @@ $NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
  
  pthread_t thread;
  pthread_mutex_t mutex;
-@@ -72,6 +76,9 @@
+@@ -72,6 +76,11 @@ pthread_mutex_t mutex;
  #include <sys/soundcard.h>
  #include <sys/mman.h>
  #endif
 +#ifdef __NetBSD__
 +#include <soundcard.h>
++#elif defined(__DragonFly__)
++#include <sys/soundcard.h>
 +#endif
  
  #ifdef __sun
  #ifdef __SVR4
-@@ -84,6 +91,9 @@
+@@ -84,6 +93,9 @@ pthread_mutex_t mutex;
  #if defined(__sun) && defined(__GNUC__)
  typedef void (*SIG_PF)();
  #endif
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +typedef void (*SIG_PF)(int);
 +#endif
  
  #include "snes9x.h"
  #include "memmap.h"
-@@ -111,6 +121,51 @@
+@@ -111,6 +123,56 @@ uint32 joypads [5] = {0};
  int NumControllers = 5;
  
  #ifdef JOYSTICK_SUPPORT
-+#ifdef __NetBSD__
++#if defined( __NetBSD__) || defined(__DragonFly__)
 +#ifdef HAVE_USBHID_H
 +#include <usbhid.h>
 +#else
 +#include <usb.h>
 +#endif
 +#define class Class
++#if defined(__DragonFly__)
++#include <bus/usb/usb.h>
++#include <bus/usb/usbhid.h>
++#else
 +#include <dev/usb/usb.h>
 +#include <dev/usb/usbhid.h>
++#endif
 +
 +struct priv_joydata_struct
 +{
@@ -94,20 +102,20 @@ $NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
  #ifdef __linux
  #include <linux/joystick.h>
  int js_fd [4] = {-1, -1, -1, -1};
-@@ -168,7 +223,7 @@
+@@ -168,7 +230,7 @@ void *S9xProcessSound (void *);
  char *rom_filename = NULL;
  char *snapshot_filename = NULL;
  
 -#if defined(__linux) || defined(__sun)
-+#if defined(__linux) || defined(__sun) || defined(__NetBSD__)
++#if defined(__linux) || defined(__sun) || defined(__NetBSD__) || defined(__DragonFly__)
  static void sigbrkhandler(int)
  {
  #ifdef DEBUGGER
-@@ -612,6 +667,106 @@
+@@ -612,6 +674,106 @@ void S9xInitInputDevices ()
  #ifdef JOYSTICK_SUPPORT
  void InitJoysticks ()
  {
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +    int i, size, is_joystick, report_id = 0;
 +    struct hid_data *d;
 +    struct hid_item h;
@@ -210,11 +218,11 @@ $NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
  #ifdef JSIOCGVERSION
      int version;
      unsigned char axes, buttons;
-@@ -664,6 +819,77 @@
+@@ -664,6 +826,77 @@ void InitJoysticks ()
  
  void ReadJoysticks ()
  {
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +    int i, usage, page, d;
 +    struct hid_item *h;
 +
@@ -288,16 +296,16 @@ $NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
  #ifdef JSIOCGVERSION
      struct js_event js_ev;
      int i;
-@@ -1422,7 +1648,7 @@
+@@ -1422,7 +1655,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
  }
  #endif
  
 -#if defined(__linux)
-+#if defined(__linux) || defined(__NetBSD__)
++#if defined(__linux) || defined(__NetBSD__) || defined(__DragonFly__)
  static int Rates[8] =
  {
      0, 8192, 11025, 16500, 22050, 29300, 36600, 44000
-@@ -1437,11 +1663,19 @@
+@@ -1437,11 +1670,19 @@ bool8 S9xOpenSoundDevice (int mode, bool
  {
      int J, K;
  
@@ -317,7 +325,7 @@ $NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
  
  #ifdef MMAP_SOUND 
     if (ioctl (so.sound_fd, SNDCTL_DSP_GETCAPS, &J) < 0)
-@@ -1485,14 +1719,14 @@
+@@ -1485,14 +1726,14 @@ bool8 S9xOpenSoundDevice (int mode, bool
  	so.sixteen_bit = TRUE;
  
      so.stereo = stereo;
@@ -334,7 +342,7 @@ $NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
      {
  	perror ("ioctl SNDCTL_DSP_SPEED");
  	return (FALSE);
-@@ -1517,7 +1751,7 @@
+@@ -1517,7 +1758,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
  	perror ("ioctl SNDCTL_DSP_SETFRAGMENT");
  	return (FALSE);
      }
@@ -343,21 +351,21 @@ $NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
      
  #ifdef MMAP_SOUND
      J = PCM_ENABLE_OUTPUT;
-@@ -1541,7 +1775,7 @@
+@@ -1541,7 +1782,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
  }
  #endif
  
 -#if defined (__linux) || defined (__sun)
-+#if defined (__linux) || defined (__sun) || defined(__NetBSD__)
++#if defined (__linux) || defined (__sun) || defined(__NetBSD__) || defined(__DragonFly__)
  void S9xUnixProcessSound (void)
  {
  }
-@@ -1640,7 +1874,7 @@
+@@ -1640,7 +1881,7 @@ void S9xGenerateSound ()
  
  void *S9xProcessSound (void *)
  {
 -#ifdef __linux
-+#if defined(__linux) || defined(__NetBSD__)
++#if defined(__linux) || defined(__NetBSD__) || defined(__DragonFly__)
      audio_buf_info info;
  
      if (!Settings.ThreadSound &&
