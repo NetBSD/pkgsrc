@@ -1,4 +1,4 @@
-# $NetBSD: texmf.tmpl,v 1.3 2005/11/16 22:27:38 minskim Exp $
+# $NetBSD: texmf.tmpl,v 1.4 2005/11/17 00:42:14 minskim Exp $
 #
 # Rebuild the ls-R database.
 #
@@ -6,12 +6,12 @@
 case ${STAGE} in
 POST-INSTALL)
 	@MKTEXLSR@ @TEXMFDIRS@
-	for map in @TEXFONTMAPS@; do
+	for map in @TEX_FONTMAPS@; do
 		@UPDMAP_SYS@ --enable Map=${map}
 	done
 	;;
 DEINSTALL)
-	for map in @TEXFONTMAPS@; do
+	for map in @TEX_FONTMAPS@; do
 		@UPDMAP_SYS@ --disable ${map}
 	done
 	;;
