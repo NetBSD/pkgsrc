@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/15 19:55:59 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/17 00:42:14 minskim Exp $
 
 PKGNAME=	tex-${DISTNAME:S/fonts/fonts-extra/}
 COMMENT=	Extra UHC fonts for HLaTeX
 
 DEPENDS+=	tex-uhc-fonts-base>=1.0:../../fonts/tex-uhc-fonts-base
 
-TEXFONTMAPS=	uhc-extra.map
+TEX_FONTMAPS=	uhc-extra.map
 
 UHC_FONTS=	uhc-graphic-1.0.tar.gz \
 		uhc-gungseo-1.0.tar.gz \
