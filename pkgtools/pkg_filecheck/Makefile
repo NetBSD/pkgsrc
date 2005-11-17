@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/17 17:02:04 rillig Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
+PKGREVISION=		1
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -46,4 +47,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pkg_filecheck.conf \
 		${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf
 
+.include "../../pkgtools/libnbcompat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
