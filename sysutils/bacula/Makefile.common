@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2005/11/11 07:23:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/11/18 07:21:04 wiz Exp $
 
 DISTNAME=		bacula-1.38.0
 CATEGORIES=		sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
 MAINTAINER=		geert.hendrickx@ua.ac.be
 HOMEPAGE=		http://www.bacula.org/
-COMMENT=		The Network Backup Solution
+COMMENT?=		The Network Backup Solution
 
 USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
