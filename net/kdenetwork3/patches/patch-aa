@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2004/08/21 14:56:18 markd Exp $
+$NetBSD: patch-aa,v 1.14 2005/11/18 15:04:57 joerg Exp $
 
---- configure.orig	2004-06-01 02:06:53.000000000 +1200
+--- configure.orig	2005-10-05 21:04:45.000000000 +0000
 +++ configure
-@@ -26504,72 +26504,6 @@ _ACEOF
+@@ -27460,72 +27460,6 @@ _ACEOF
  
  
  
@@ -75,3 +75,24 @@ $NetBSD: patch-aa,v 1.13 2004/08/21 14:56:18 markd Exp $
  # darwin needs this to initialize the environment
  
  for ac_header in crt_externs.h
+@@ -41114,7 +41048,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <unistd.h>
+ #include <arpa/inet.h>
++#ifdef __DragonFly__
++#include <net/ppp_layer/ppp_defs.h>
++#else
+ #include <net/ppp_defs.h>
++#endif
+ #include <netinet/in.h>
+ 
+ #ifdef __svr4__
+@@ -41130,6 +41068,8 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 
+     #if defined(linux)
+       #include <linux/if_ppp.h>
++    #elif defined(__DragonFly__)
++      #include <net/ppp/if_ppp.h>
+     #else
+       #include <net/if_ppp.h>                /* BSD, NeXT, etc. */
+     #endif
