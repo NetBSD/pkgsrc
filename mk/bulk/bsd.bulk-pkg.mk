@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.99 2005/11/16 22:58:59 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.100 2005/11/18 08:35:58 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -190,8 +190,11 @@ _BULK_MKDIR=		${DO_NADA}
 # Sanity checks
 #
 
-.if exists(${_FORCEBROKENFILE:Q})
-PKG_FAIL_REASON+= "${PKGNAME} is marked as broken by the bulk build administrator: `cat ${_FORCEBROKENFILE:Q:Q}`"
+# Allow FORCEBROKENFILE files to be created in either PKGSRCDIR or BULKFILESDIR.
+.if exists(${FORCEBROKENFILE})
+PKG_FAIL_REASON+=	"${PKGNAME} is marked as broken by the bulk build administrator: `cat ${FORCEBROKENFILE:Q:Q}`"
+.elif exists(${_FORCEBROKENFILE})
+PKG_FAIL_REASON+=	"${PKGNAME} is marked as broken by the bulk build administrator: `cat ${_FORCEBROKENFILE:Q:Q}`"
 .endif
 
 #
