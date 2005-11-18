@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2005/07/19 17:49:33 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2005/11/18 16:47:35 reed Exp $
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/lyx.mo
@@ -906,12 +906,12 @@ share/lyx/templates/linuxdoc_article.lyx
 share/lyx/templates/revtex.lyx
 share/lyx/templates/revtex4.lyx
 share/lyx/templates/slides.lyx
-share/lyx/tex/broadway.cls
-share/lyx/tex/cv.cls
-share/lyx/tex/hollywood.cls
-share/lyx/tex/lyxchess.sty
-share/lyx/tex/lyxskak.sty
-share/lyx/tex/revtex.cls
+${PKG_TEXMFPREFIX}/tex/latex/lyx/broadway.cls
+${PKG_TEXMFPREFIX}/tex/latex/lyx/cv.cls
+${PKG_TEXMFPREFIX}/tex/latex/lyx/hollywood.cls
+${PKG_TEXMFPREFIX}/tex/latex/lyx/lyxchess.sty
+${PKG_TEXMFPREFIX}/tex/latex/lyx/lyxskak.sty
+${PKG_TEXMFPREFIX}/tex/latex/lyx/revtex.cls
 share/lyx/textclass.lst
 share/lyx/ui/default.ui
 share/lyx/xfonts/PSres.upr
@@ -927,7 +927,7 @@ share/lyx/xfonts/msbm10.pfb
 share/lyx/xfonts/wasy10.pfb
 @dirrm share/lyx/xfonts
 @dirrm share/lyx/ui
-@dirrm share/lyx/tex
+@dirrm ${PKG_TEXMFPREFIX}/tex/latex/lyx
 @dirrm share/lyx/templates
 @dirrm share/lyx/scripts
 @dirrm share/lyx/reLyX/Text
