@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4182 2005/11/18 04:00:42 dmcmahill Exp $
+$NetBSD: TODO,v 1.4183 2005/11/18 11:28:13 gdt Exp $
 
 Suggested new packages
 ======================
@@ -337,6 +337,7 @@ Suggested package updates
 	o algae-4.3.6
 	o aliados-0.2.0
 	o allegro-4.2.0
+	o amanda-*-2.4.5p1
 	o amavis-0.3.12
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
