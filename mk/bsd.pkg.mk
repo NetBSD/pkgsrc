@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1759 2005/11/18 14:31:54 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1760 2005/11/18 14:40:21 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -616,21 +616,11 @@ PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`"
 .  if defined(CONFLICTS) && (${PKG_INSTALLATION_TYPE} == "overwrite")
 PKG_ARGS_COMMON+=	-C "${CONFLICTS}"
 .  endif
-.  if defined(INSTALL_FILE)
-PKG_ARGS_COMMON+=	-i ${INSTALL_FILE}
-.  endif
-.  if defined(DEINSTALL_FILE)
-PKG_ARGS_COMMON+=	-k ${DEINSTALL_FILE}
-.  endif
-.  if defined(MESSAGE)
-PKG_ARGS_COMMON+=	-D ${MESSAGE}
-.  endif
-.  if !defined(NO_MTREE)
-PKG_ARGS_COMMON+=	-m ${MTREE_FILE}
-.  endif
-.  if defined(PKG_PRESERVE)
-PKG_ARGS_COMMON+=	-n ${PRESERVE_FILE}
-.  endif
+PKG_ARGS_COMMON+=	${INSTALL_FILE:D-i ${INSTALL_FILE}}
+PKG_ARGS_COMMON+=	${DEINSTALL_FILE:D-k ${DEINSTALL_FILE}}
+PKG_ARGS_COMMON+=	${MESSAGE:D-D ${MESSAGE}}
+PKG_ARGS_COMMON+=	${NO_MTREE:D:U-m ${MTREE_FILE}}
+PKG_ARGS_COMMON+=	${PKG_PRESERVE:D-n ${PRESERVE_FILE}}
 
 PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
 PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
@@ -643,11 +633,7 @@ PKG_ARGS_BINPKG+=	-E	# create an empty views file in the binpkg
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
-.if defined(SMART_MESSAGES)
-_PKGSRC_IN?=		===> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===
-.else
-_PKGSRC_IN?=		===
-.endif
+_PKGSRC_IN?=		===${SMART_MESSAGES:D> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===}
 
 # Used to print all the '===>' style prompts - override this to turn them off.
 ECHO_MSG?=		${ECHO}
@@ -657,9 +643,7 @@ ECHO_MSG?=		${ECHO}
 DO_NADA?=		${TRUE}
 
 # If this host is behind a filtering firewall, use passive ftp(1)
-.if defined(PASSIVE_FETCH)
-FETCH_BEFORE_ARGS += -p
-.endif
+FETCH_BEFORE_ARGS+=	${PASSIVE_FETCH:D-p}
 
 # Include popular master sites
 .include "../../mk/bsd.sites.mk"
@@ -678,22 +662,10 @@ CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
 
 # List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
 .if defined(DIST_SUBDIR)
-.  if ${CKSUMFILES} != ""
 _CKSUMFILES?=	${CKSUMFILES:S/^/${DIST_SUBDIR}\//}
-.  endif
-.  if !empty(DISTFILES)
 _DISTFILES?=	${DISTFILES:S/^/${DIST_SUBDIR}\//}
-.  else
-_DISTFILES?=	# empty
-.  endif
-.  if defined(IGNOREFILES) && !empty(IGNOREFILES)
 _IGNOREFILES?=	${IGNOREFILES:S/^/${DIST_SUBDIR}\//}
-.  endif
-.  if defined(PATCHFILES) && !empty(PATCHFILES)
 _PATCHFILES?=	${PATCHFILES:S/^/${DIST_SUBDIR}\//}
-.  else
-_PATCHFILES?=	# empty
-.  endif
 .else
 _CKSUMFILES?=	${CKSUMFILES}
 _DISTFILES?=	${DISTFILES}
