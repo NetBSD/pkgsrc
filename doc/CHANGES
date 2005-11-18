@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11973 2005/11/18 18:47:15 gdt Exp $
+$NetBSD: CHANGES,v 1.11974 2005/11/18 23:46:18 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5277,3 +5277,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/gimp-ufraw to 0.6 [gdt 2005-11-18]
 	Added graphics/gqview-devel version 2.1.1 [gdt 2005-11-18]
 	Renamed graphics/exiftool to graphics/p5-Image-ExifTool [gdt 2005-11-18]
+	Added security/md4-collision version 20051118 [agc 2005-11-18]
+	Added security/md5-collision version 20051118 [agc 2005-11-18]
