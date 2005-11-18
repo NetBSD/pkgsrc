@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1760 2005/11/18 14:40:21 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1761 2005/11/18 17:07:13 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -368,14 +368,7 @@ _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 BUILD_DEFS+=		_PLIST_IGNORE_FILES
 
 # Automatically increase process limit where necessary for building.
-_ULIMIT_CMD=
-.if defined(UNLIMIT_RESOURCES)
-.  for __tmp__ in ${UNLIMIT_RESOURCES}
-.    if defined(ULIMIT_CMD_${__tmp__})
-_ULIMIT_CMD+=	${ULIMIT_CMD_${__tmp__}} ;
-.    endif
-.  endfor
-.endif
+_ULIMIT_CMD=		${UNLIMIT_RESOURCES:@_lim_@${ULIMIT_CMD_${_lim_}};@}
 
 # If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
 # also pass in a CONFIG_SHELL to avoid picking up bash
@@ -947,12 +940,8 @@ PKG_FAIL_REASON+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
 .  endif
 
 .  if defined(LICENSE)
-.    if defined(ACCEPTABLE_LICENSES)
-.      for _lic in ${ACCEPTABLE_LICENSES}
-.        if ${LICENSE} == "${_lic}"
+.    if defined(ACCEPTABLE_LICENSES) && !empty(ACCEPTABLE_LICENSES:M${LICENSE})
 _ACCEPTABLE=	yes
-.        endif	# LICENSE == _lic
-.      endfor	# _lic
 .    endif	# ACCEPTABLE_LICENSES
 .    if !defined(_ACCEPTABLE)
 PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
