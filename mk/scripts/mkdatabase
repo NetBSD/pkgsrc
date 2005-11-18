@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkdatabase,v 1.6 2005/11/18 10:51:53 rillig Exp $
+# $NetBSD: mkdatabase,v 1.7 2005/11/18 10:55:30 rillig Exp $
 #
 # Script for generating a database with complete dependency information
 # for a particular package
@@ -128,15 +128,10 @@ while test $# -gt 0; do
 	exit 0
         ;;
 
-    -*) echo "$prog:  ERROR:  $1 is not a valid option"
+    *)	echo "$prog:  ERROR:  $1 is not a valid option"
 	usage
 	exit 1
 	;;
-
-    *) 
-	break
-	;;
-
     esac
 done
 
