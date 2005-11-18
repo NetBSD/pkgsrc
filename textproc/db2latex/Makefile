@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:33 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/18 08:04:25 minskim Exp $
 
 DISTNAME=	db2latex-xsl-0.8pre1
 PKGNAME=	${DISTNAME:S/xsl-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=db2latex/}
 
@@ -26,6 +26,9 @@ XML_ENTRIES=	system "http://db2latex.sourceforge.net/xsl/docbook.xsl" \
 
 post-extract:
 	cd ${WRKSRC} && ${FIND} . -name "*\**" -exec ${RM} {} \;
+
+pre-install:
+	${FIND} ${WRKSRC} -name \*.orig -exec ${RM} {} \;
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
