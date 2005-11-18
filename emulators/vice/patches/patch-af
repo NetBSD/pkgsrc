@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.5 2005/11/18 20:44:55 kristerw Exp $
+
+--- src/arch/unix/x11/video.c.orig	2005-11-18 20:57:10.000000000 +0100
++++ src/arch/unix/x11/video.c	2005-11-18 20:57:47.000000000 +0100
+@@ -204,7 +204,7 @@
+ 
+ /* ------------------------------------------------------------------------- */
+ 
+-static GC _video_gc;
++GC _video_gc;
+ static void (*_refresh_func)();
+ 
+ /* This is set to 1 if the Shared Memory Extensions can actually be used. */
