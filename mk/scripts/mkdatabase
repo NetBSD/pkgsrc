@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkdatabase,v 1.8 2005/11/18 10:58:37 rillig Exp $
+# $NetBSD: mkdatabase,v 1.9 2005/11/18 11:07:27 rillig Exp $
 #
 # Script for generating a database with complete dependency information
 # for a particular package
@@ -139,6 +139,7 @@ yes)	set -v;;
 esac
 
 if [ ! -d "$TMPDIR" ]; then
+	# FIXME: wouldn't it be better to fail in this case?
 	mkdir -p "$TMPDIR"
 fi
 
@@ -151,6 +152,8 @@ case ${DATABASE} in
 	;;
 
     *)
+	# FIXME: wouldn't it be better to fail in this case?
+
 	# make sure we have the full path to the database file
 	DATABASE=`pwd`/${DATABASE}
 	;;
@@ -172,6 +175,7 @@ if [ $append_flag = yes ]; then
     case $debug_flag in
     yes)	echo "Looking for $pkgpath before appending";;
     esac
+    # FIXME: $pkgpath may contain special regex characters.
     if grep "^index $pkgpath " "${DATABASE}" >/dev/null 2>&1 ; then
 	echo "$prompt $pkgpath has already been depended.  Skipping..."
 	exit 0
