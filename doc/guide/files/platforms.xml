@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.22 2005/11/08 22:19:34 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.23 2005/11/18 14:44:45 yyamano Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -137,7 +137,7 @@
 	  place the package database directory outside the
 	  <emphasis>prefix</emphasis>. e.g.</para>
 
-	<screen>&rprompt; <userinput>./bootstrap --pkgdbdir /usr/pkg/pkgdb --pkgsrcdir /Volumes/ufs/pkgsrc</userinput></screen>
+	<screen>&rprompt; <userinput>./bootstrap --pkgdbdir /usr/pkg/pkgdb</userinput></screen>
 
 	<para>If you created your partitions at the time of installing Mac OS X
 	  and formatted the target partition as UFS, it should automatically
