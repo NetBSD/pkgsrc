@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.101 2005/11/18 08:42:35 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.102 2005/11/18 08:48:09 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -97,7 +97,8 @@ FORCEBROKENFILE?= .forcebroken
 # This file is where the log of the build goes
 BUILDLOG?=	.make${BULK_ID}
 
-# This is the directory in which bulk build global files should be kept.
+# This is the directory in which all temporary files and log files from the
+# bulk build are kept.
 # It defaults to ${PKGSRCDIR}, but may be better suited to another directory
 # if pkgsrc is on a remote (e.g., nfs) filesystem.
 BULKFILESDIR?=	${PKGSRCDIR}
