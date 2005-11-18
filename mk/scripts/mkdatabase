@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkdatabase,v 1.5 2005/11/17 21:46:42 rillig Exp $
+# $NetBSD: mkdatabase,v 1.6 2005/11/18 10:51:53 rillig Exp $
 #
 # Script for generating a database with complete dependency information
 # for a particular package
@@ -39,47 +39,53 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+#
+# Global variables, based on environment variables
+#
 
 TMPDIR=${TMPDIR:-/tmp}
 BMAKE=${BMAKE:-make}
 AWK=${AWK:-/usr/bin/awk}
 DATABASE=${DATABASE:-${TMPDIR}/pkgdb.$$}
 EXPR=${EXPR:-expr}
-
 # as of 2003-01-04, metapkgs/gnome gets to pass #6 so
 # it is very likely that if you reach 25, something is broken
 MAX_PASS=${MAX_PASS:-25}
 
-prog=$0
+#
+# Global variables
+#
 
-usage(){
+prog=$0
+debug_flag=""		# meaning "no"
+
+#
+# Helper functions
+#
+
+usage() {
     echo "$prog - Generates a complete dependency tree for a particular package"
     echo "Usage:      $prog [-a|--append] [-d|--debug] [-f|--database database]"
-    echo " "
+    echo ""
     echo "            $prog -h|--help"
-    echo " "
+    echo ""
     echo "            $prog -v|--version"
-    echo " "
+    echo ""
     echo "The options supported by $prog are: "
-    echo " "
+    echo ""
     echo "  -a|--append           Append to the database rather than overwriting it"
-    echo " "
+    echo ""
     echo "  -d|--debug            Enables debugging output"
-    echo " "
+    echo ""
     echo "  -f|--database <file>  Writes the database into file specified by <file>"
-    echo " "
+    echo ""
     echo "  -h|--help             Displays this help message"
-    echo " "
+    echo ""
     echo "  -v|--version          Displays the version of this script and exits."
-    echo " "
+    echo ""
     echo "Example:    cd /usr/pkgsrc/graphics/gimp && $prog -d /tmp/gimp_database"
-    echo " "
+    echo ""
 }
-
-clean_and_exit(){
-    exit 1
-}
-
 
 ######################################################################
 #
@@ -87,7 +93,6 @@ clean_and_exit(){
 #
 ######################################################################
 
-DEBUG=
 append=no
 
 while test $# -gt 0; do
@@ -101,7 +106,7 @@ while test $# -gt 0; do
 
     # Turn on debugging
     -d|--debug)
-	DEBUG=yes
+	debug_flag=yes
 	shift
 	;;
 
@@ -125,7 +130,7 @@ while test $# -gt 0; do
 
     -*) echo "$prog:  ERROR:  $1 is not a valid option"
 	usage
-	clean_and_exit
+	exit 1
 	;;
 
     *) 
@@ -135,9 +140,9 @@ while test $# -gt 0; do
     esac
 done
 
-if [ "x$DEBUG" = "xyes" ]; then
-    set -v
-fi
+case $debug_flag in
+yes)	set -v;;
+esac
 
 if [ ! -d "$TMPDIR" ]; then
 	mkdir -p "$TMPDIR"
@@ -170,9 +175,9 @@ if [ "X$append" = "Xyes" ]; then
     pkgcat=`basename "$tmp1"`
     pkg=`basename "$here"`
     pkgpath=$pkgcat/$pkg
-    if [ "x$DEBUG" = "xyes" ]; then
-	echo "Looking for $pkgpath before appending"
-    fi
+    case $debug_flag in
+    yes)	echo "Looking for $pkgpath before appending";;
+    esac
     if grep "^index $pkgpath " "${DATABASE}" >/dev/null 2>&1 ; then
 	echo "$prompt $pkgpath has already been depended.  Skipping..."
 	exit 0
@@ -185,7 +190,7 @@ else
 fi
 here=`pwd`
 echo "$prompt Depending in $here (pass #1)"
-dirs=`${AWK} -f ../../mk/scripts/chkdatabase.awk debug=${DEBUG} "${DATABASE}"`
+dirs=`${AWK} -f ../../mk/scripts/chkdatabase.awk debug=${debug_flag} "${DATABASE}"`
 pass=2
 while [ ! -z "$dirs" -a $pass -lt "${MAX_PASS}" ]; do
 	for d in $dirs ; do
@@ -193,7 +198,7 @@ while [ ! -z "$dirs" -a $pass -lt "${MAX_PASS}" ]; do
 		cd "../../$d" && ${BMAKE} print-summary-data >> "${DATABASE}" || exit 1
 		cd "$here"
 	done
-	dirs=`${AWK} -f ../../mk/scripts/chkdatabase.awk debug=${DEBUG} ${DATABASE}`
+	dirs=`${AWK} -f ../../mk/scripts/chkdatabase.awk debug=${debug_flag} ${DATABASE}`
 	pass=`${EXPR} $pass + 1`
 done
 
