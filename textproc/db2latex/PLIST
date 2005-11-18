@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/25 20:47:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/11/18 08:04:25 minskim Exp $
 share/doc/db2latex/AUTHOR
 share/doc/db2latex/COPYING
 share/doc/db2latex/COPYRIGHT
@@ -1463,7 +1463,7 @@ share/xsl/db2latex/xsldoc.ent
 @dirrm share/xsl/db2latex/figures
 @dirrm share/xsl/db2latex/common
 @dirrm share/xsl/db2latex
-@dirrm share/xsl
+@unexec ${RMDIR} %D/share/xsl 2>/dev/null || ${TRUE}
 @dirrm share/doc/db2latex/reference
 @dirrm share/doc/db2latex/images
 @dirrm share/doc/db2latex/graphics/navicons/triangle/other
