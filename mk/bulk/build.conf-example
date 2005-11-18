@@ -1,4 +1,4 @@
-# $NetBSD: build.conf-example,v 1.30 2005/11/05 23:22:05 rillig Exp $
+# $NetBSD: build.conf-example,v 1.31 2005/11/18 12:11:51 rillig Exp $
 #
 # This is an example configuration file for pkgsrc bulk builds.
 # Actually it's a shell script that is sourced in by the pre-build,
@@ -49,7 +49,7 @@ PRUNEDISTFILES=no
 
 
 #
-# Building packages
+# Building the packages
 #
 
 # List of package directories to build.
@@ -63,12 +63,21 @@ NICE_LEVEL="nice -n 20"
 # can be set to 'yes' or 'no'.
 LINTPKGSRC_CACHE=no
 
+#
+# Generating the report
+#
+
 # Where build will mail the report
 ADMIN="you@some.whe.re"
 
 # Who the report is signed by
 ADMINSIG="-Your Name"
 
+# Some paths for output files and paths to log files
+FTPx=`date +%Y%m%d.%H%M`
+FTPURL="pub/NetBSD/pkgstat/${FTPx}"		# relative to ~ftp !
+FTP="/home/ftp/${FTPURL}"			# absolute base path
+FTPHOST="ftp://ftp.machi.ne"			# host for broken.html
 
 #
 # Uploading binary packages
@@ -91,13 +100,6 @@ MKSUMS=yes
 # Destination for packages and rsync options 
 RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/i386
 RSYNC_OPTS='-e ssh'
-
-# Some paths for output files and paths to log files
-FTPx=`date +%Y%m%d.%H%M`
-FTPURL="pub/NetBSD/pkgstat/${FTPx}"		# relative to ~ftp !
-FTP="/home/ftp/${FTPURL}"			# absolute base path
-FTPHOST="ftp://ftp.machi.ne"			# host for broken.html
-
 
 ###########################################################################
 ### No changes should be needed below this line !!!
