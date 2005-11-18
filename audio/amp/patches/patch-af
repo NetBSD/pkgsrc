@@ -1,13 +1,23 @@
-$NetBSD: patch-af,v 1.1 2003/03/22 05:44:38 dillo Exp $
+$NetBSD: patch-af,v 1.2 2005/11/18 14:52:44 joerg Exp $
 
---- configure.old	Sun Oct 26 11:18:18 1997
-+++ configure	Sun Oct 26 11:18:45 1997
-@@ -1398,7 +1398,7 @@
+--- configure.orig	1997-08-23 11:11:24.000000000 +0000
++++ configure
+@@ -1398,7 +1398,7 @@ case "$OS_TYPE" in
      DEFINES="-DOS_$OS_TYPE -DARCH_$ARCH_TYPE"
      ;;
  
 -  Linux|FreeBSD)
-+  Linux|FreeBSD|NetBSD)
++  Linux|FreeBSD|NetBSD|DragonFly)
      CC="gcc"
      if test "$ARCH_TYPE" = "i486" ; then
        CFLAGS_ARCH="-m486"
+@@ -1409,6 +1409,9 @@ case "$OS_TYPE" in
+     if test "$OS_TYPE" = "FreeBSD" ; then
+       OS_TYPE="BSD"
+     fi
++    if test "$OS_TYPE" = "DragonFly" ; then
++      OS_TYPE="BSD"
++    fi
+     CFLAGS="-O6 -ffast-math -fomit-frame-pointer ${CFLAGS_ARCH}"
+     DEFINES="-DNO_BYTE_SWAPPING -DOS_$OS_TYPE -DARCH_$ARCH_TYPE" 
+     ;;
