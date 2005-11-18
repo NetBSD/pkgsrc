@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11971 2005/11/18 08:05:16 minskim Exp $
+$NetBSD: CHANGES,v 1.11972 2005/11/18 11:25:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5274,3 +5274,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cad/dinotrace to 9.3a [dmcmahill 2005-11-18]
 	Updated cad/dinotrace-mode to 9.3a [dmcmahill 2005-11-18]
 	Updated textproc/db2latex to 0.8pre1nb2 [minskim 2005-11-18]
+	Updated graphics/gimp-ufraw to 0.6 [gdt 2005-11-18]
