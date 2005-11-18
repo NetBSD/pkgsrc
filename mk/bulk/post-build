@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.58 2005/09/25 15:05:40 jschauma Exp $
+# $NetBSD: post-build,v 1.59 2005/11/18 10:18:05 rillig Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -11,12 +11,34 @@ use POSIX qw(strftime);
 use strict;
 use warnings;
 
+#
+# Global variables
+#
+
 my %vars;
 my $verbose = 1; # set to 2 to see more command execution detail
 
+#
+# Helper functions
+#
+
+sub pb_die($$) {
+	my ($fname, $msg) = @_;
+	my ($text, $sep);
+
+	$text = "[post-build] error: ";
+	$sep = "";
+	if (defined($fname)) {
+		$text .= "${sep}${fname}";
+		$sep = ": ";
+	}
+	$text .= "${sep}${msg}";
+	die "${text}\n";
+}
+
 sub my_system (@) {
 	print STDERR '> '.join(' ', @_)."\n" if ($verbose >= 2);
-	system(@_);
+	return system(@_);
 }
 
 # Where config vars are stored (/bin/sh syntax)
@@ -24,20 +46,47 @@ sub my_system (@) {
 my $BULK_BUILD_CONF = $ENV{BULK_BUILD_CONF} || (dirname($0).'/build.conf');
 $BULK_BUILD_CONF = "./$BULK_BUILD_CONF" if ($BULK_BUILD_CONF !~ m:^/:);
 
-# Dig given variable out of config file, and set it
-sub getconf (@) {
-	open(I, ". $BULK_BUILD_CONF; for var in ".join(' ', @_)."; do eval echo \\\${\$var}; done |") || die 'cannot open pipe';
-	
-	foreach my $var (@_) {
-		$vars{$var} = <I>;
-		chomp $vars{$var};
-		die "\$$var not defined by $BULK_BUILD_CONF" if ($vars{$var} eq '');
+if (!-f $BULK_BUILD_CONF) {
+	pb_die($BULK_BUILD_CONF, "Does not exist.");
+}
 
-		print STDERR "> $var=$vars{$var}\n" if ($verbose >= 2);
+# Dig given variable out of config file, and set it
+sub get_build_conf_vars(@) {
+	my (@varnames) = @_;
+	my ($is_set, $value);
+
+	foreach my $varname (@varnames) {
+		open(CMD, ". '$BULK_BUILD_CONF'; echo \"\${${varname}+set}\"; echo \"\${${varname}-}\" |")
+			or pb_die($BULK_BUILD_CONF, "Could not evaluate configuration file.");
+
+		chomp($is_set = <CMD>);
+		{ local $/ = undef; $value = <CMD>; }
+		chomp($value);	# This must be outside the above {...} block
+
+		close(CMD) or pb_die($BULK_BUILD_CONF, "Could not evaluate configuration file (close).");
+
+		#
+		# Sanity checks
+		#
+
+		if ($is_set ne "set") {
+			pb_die($BULK_BUILD_CONF, "${varname} must be set.");
+		}
+		if ($value =~ qr"^\s+$") {
+			pb_die($BULK_BUILD_CONF, "${varname} must be non-empty.");
+		}
+		if ($value =~ qr"\n") {
+			pb_die($BULK_BUILD_CONF, "${varname} must not contain newlines.");
+		}
+
+		$vars{$varname} = $value;
+		if ($verbose >= 2) {
+			print STDERR "> $varname=$vars{$varname}\n";
+		}
 	}
 }
 
-getconf(
+get_build_conf_vars(
 	'ADMINSIG',		# "-Your Name"
 	'FTPURL',		# "pub/NetBSD/pkgstat/`date +%Y%m%d.%H%M`"
 	'FTP',			# "/disk1/ftp/${FTPURL}"
@@ -52,26 +101,39 @@ my $reportf = basename($vars{REPORT});
 my $os = `uname -s`;
 chomp $os;
 
-my $BMAKE = $ENV{BMAKE} || die '$BMAKE not defined in environment';
+my $BMAKE = $ENV{BMAKE} || pb_die(undef, "The BMAKE environment variable must be set.");
 
-sub getmakevars (@) {
-	open(I, "cd $vars{USR_PKGSRC}/pkgtools/pkglint && $BMAKE show-vars BATCH=1 VARNAMES='".join(' ', @_)."' |") || die 'cannot open pipe';
+sub get_mk_conf_vars (@) {
+	my ($rest);
+
+	open(I, "set -e; . '$BULK_BUILD_CONF'; . '$vars{USR_PKGSRC}/mk/bulk/post-build-conf'; export_config_vars; cd $vars{USR_PKGSRC}/pkgtools/pkglint && $BMAKE show-vars BATCH=1 VARNAMES='".join(' ', @_)."' |")
+		or pb_die(undef, "Cannot get mk.conf variables.");
 
 	foreach my $var (@_) {
-		$vars{$var} = <I>;
-		chomp $vars{$var};
-		die "\${$var} not defined by $BMAKE" if ($vars{$var} eq '');
+		chomp($vars{$var} = <I>);
+
+		if ($vars{$var} eq "") {
+			pb_die(undef, "\${$var} must be defined in your mk.conf");
+		}
 
 		print STDERR "> $var=$vars{$var}\n" if ($verbose >= 2);
 	}
+
+	{ local $/ = undef; $rest = <I>; }
+	if (defined($rest) && $rest ne "") {
+		pb_die(undef, "Output of $BMAKE show-vars too long:\n${rest}");
+	}
+
+	close(I) or die pb_die(undef, "Cannot get mk.conf variables (close).");
 }
 
 # Extract the names of the files used for the build log and broken build logs.
 # These have defaults set by bsd.bulk-pkg.mk and may be overridden in
 # /etc/mk.conf
-getmakevars(qw(
+get_mk_conf_vars(qw(
 	BROKENFILE
 	BROKENWRKLOG
+	BULKFILESDIR
 	BULK_DBFILE
 	DEPENDSFILE
 	DEPENDSTREEFILE
@@ -97,7 +159,7 @@ my $ordfile = basename($vars{ORDERFILE});
 
 my $startdate = (stat($vars{STARTFILE}))[9];
 my $enddate = '';
-if ($startdate == 0) {
+if (!defined($startdate) || $startdate == 0) {
 	$startdate = "unknown";
 } else {
 	local $ENV{TZ} = "UTC";
@@ -115,18 +177,20 @@ EOF
 # $pkg, $nbrokenby, $maintainer
 
 
-my_system("mkdir -p $vars{FTP}");
+my_system("mkdir", "-p", "--", $vars{FTP});
 
 # Copy over the output from the build process
-chdir($vars{USR_PKGSRC});
+chdir($vars{"BULKFILESDIR"}) or pb_die($vars{"BULKFILESDIR"}, "Cannot change directory.");
 my_system("find . -name $vars{BROKENFILE} -print -o -name $vars{BROKENWRKLOG} -print | $vars{PAX} -r -w -X -p e $vars{FTP}");
 
 # Copy over the cache files used during the build
 foreach my $f qw(BULK_DBFILE DEPENDSTREEFILE DEPENDSFILE SUPPORTSFILE INDEXFILE ORDERFILE) {
-	my_system("cp $vars{$f} $vars{FTP}") if -f $vars{$f};
+	if (-f $vars{$f}) {
+		my_system("cp", "--", $vars{$f}, $vars{FTP});
+	}
 }
 
-chdir($vars{FTP});
+chdir($vars{FTP}) or pb_die($vars{"FTP"}, "Cannot change directory.");
 writeReport();
 
 #
@@ -146,7 +210,7 @@ writeReport();
 #
 {
 	chdir($vars{FTP});
-	my_system("mkdir -p leftovers-$vars{MACHINE_ARCH}");
+	my_system("mkdir", "-p", "leftovers-$vars{MACHINE_ARCH}");
 
 	# Find files since last build:
 	my $leftovers_txt = "leftovers-$vars{MACHINE_ARCH}.txt";
