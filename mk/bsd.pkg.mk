@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1758 2005/11/17 19:30:22 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1759 2005/11/18 14:31:54 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -664,17 +664,8 @@ FETCH_BEFORE_ARGS += -p
 # Include popular master sites
 .include "../../mk/bsd.sites.mk"
 
-.if defined(DIST_SUBDIR)
-_MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}/}
-.  if defined(MASTER_SITE_OVERRIDE)
-_MASTER_SITE_OVERRIDE:=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}/}
-.  endif # MASTER_SITE_OVERRIDE
-.else  # !DIST_SUBDIR
-_MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP}
-.  if defined(MASTER_SITE_OVERRIDE)
-_MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
-.  endif # MASTER_SITE_OVERRIDE
-.endif # DIST_SUBDIR
+_MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
+_MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 
 # Where to put distfiles that don't have any other master site
 MASTER_SITE_LOCAL?=	${MASTER_SITE_BACKUP:=LOCAL_PORTS/}
