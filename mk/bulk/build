@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.76 2005/11/16 22:44:06 rillig Exp $
+# $NetBSD: build,v 1.77 2005/11/18 08:58:12 agc Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -215,16 +215,20 @@ show_config_vars
 #
 # Check that the package tools are up to date.
 #
-( cd "${pkglint_dir}" \
-  && ${BMAKE} fetch >/dev/null 2>&1
-) || {
-	echo "Updating pkgtools"
-	( cd "${pkgsrc_dir}/pkgtools/pkg_install" \
-	  && ${BMAKE} clean \
-	  && ${BMAKE} install \
-	  && ${BMAKE} clean
-	) || die "Could not update the package tools."
-}
+if [ -f /sandbox -a -x /sandbox ]; then
+	echo "Building in a sandbox - using existing pkgtools"
+else
+	( cd "${pkglint_dir}" \
+	  && ${BMAKE} fetch >/dev/null 2>&1
+	) || {
+		echo "Updating pkgtools"
+		( cd "${pkgsrc_dir}/pkgtools/pkg_install" \
+		  && ${BMAKE} clean \
+		  && ${BMAKE} install \
+		  && ${BMAKE} clean
+		) || die "Could not update the package tools."
+	}
+fi
 
 #
 # Run the pre-build script if necessary.
