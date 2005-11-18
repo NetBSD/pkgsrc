@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2005/05/04 12:35:54 simonb Exp $
+$NetBSD: patch-ab,v 1.12 2005/11/18 01:06:27 simonb Exp $
 
---- scripts/adzap.conf.orig	Sat Apr  7 21:41:33 2005
-+++ scripts/adzap.conf	Sat Apr  7 21:41:33 2005
-@@ -0,0 +1,35 @@
+--- scripts/adzap.conf.orig	Fri Nov 18 11:53:35 2005
++++ scripts/adzap.conf	Fri Nov 18 11:53:35 2005
+@@ -0,0 +1,36 @@
 +# example adzap configuration file
 +# copy this file over to /etc/adzap.conf,
 +# then modify this to match your install
@@ -36,5 +36,6 @@ $NetBSD: patch-ab,v 1.11 2005/05/04 12:35:54 simonb Exp $
 +STUBURL_COUNTERHTML=$ZAP_BASE/no-op-counter.html
 +STUBURL_WEBBUG=$ZAP_BASE/webbug.gif
 +STUBURL_WEBBUGJS=$ZAP_BASE/webbug.js
++STUBURL_WEBBUGHTML=$ZAP_BASE/webbug.html
 +
 +STUBURL_PRINT=				# off by default, set to 1
