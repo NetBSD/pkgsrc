@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.59 2005/11/18 10:18:05 rillig Exp $
+# $NetBSD: post-build,v 1.60 2005/11/18 11:38:00 rillig Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -41,7 +41,10 @@ sub my_system (@) {
 	return system(@_);
 }
 
-# Where config vars are stored (/bin/sh syntax)
+#
+# Load configuration variables from the bulk.conf file, which is a shell
+# script.
+#
 
 my $BULK_BUILD_CONF = $ENV{BULK_BUILD_CONF} || (dirname($0).'/build.conf');
 $BULK_BUILD_CONF = "./$BULK_BUILD_CONF" if ($BULK_BUILD_CONF !~ m:^/:);
@@ -167,21 +170,28 @@ if (!defined($startdate) || $startdate == 0) {
 	$enddate = strftime("%c %Z", gmtime(time()));
 }
 
-my $report_head = <<EOF;
-Package                    Breaks  Maintainer
---------------------------------------------------------------
-EOF
-my $report_form = <<EOF;
-@<<<<<<<<<<<<<<<<<<<<<<<<< @<<<<<< @<<<<<<<<<<<<<<<<<<<<<<<<
-EOF
-# $pkg, $nbrokenby, $maintainer
+sub print_summary_line($$) {
+	my ($name, $value) = @_;
 
+	printf("        %-30s  %s\n", $name, $value);
+}
+
+sub print_report_line($$$) {
+	my ($pkgpath, $breaks, $maintainer) = @_;
+
+	printf("%-26s %-7s %s\n", $pkgpath, $breaks, $maintainer);
+}
+
+sub print_report_header() {
+	print_report_line("Package", "Breaks", "Maintainer");
+	print("--------------------------------------------------------------\n");
+}
 
 my_system("mkdir", "-p", "--", $vars{FTP});
 
 # Copy over the output from the build process
 chdir($vars{"BULKFILESDIR"}) or pb_die($vars{"BULKFILESDIR"}, "Cannot change directory.");
-my_system("find . -name $vars{BROKENFILE} -print -o -name $vars{BROKENWRKLOG} -print | $vars{PAX} -r -w -X -p e $vars{FTP}");
+my_system("find . -name $vars{BROKENFILE} -print -o -name $vars{BROKENWRKLOG} -print | $vars{PAX} -r -w -X $vars{FTP}");
 
 # Copy over the cache files used during the build
 foreach my $f qw(BULK_DBFILE DEPENDSTREEFILE DEPENDSFILE SUPPORTSFILE INDEXFILE ORDERFILE) {
@@ -247,7 +257,7 @@ writeReport();
 
 	if (scalar(@leftovers)) {
 		# Store leftovers, for easier identification:
-		my_system("$vars{PAX} -r -w -X -p e leftovers-$vars{MACHINE_ARCH} < $leftovers_txt");
+		my_system("$vars{PAX} -r -w -X leftovers-$vars{MACHINE_ARCH} < $leftovers_txt");
 	}
 
 	# Add links to leftover list:
@@ -307,7 +317,7 @@ sub pkgResult ($$) {
 		if $nbrokenby > 0;
 
 	if ($pinfo->{nerrors} != 0 && $verbose && ($state eq "broken" || $state eq "topten")) {
-		print swrite($report_form, $pkg, $nbrokenby > 0 ? $nbrokenby : "", $maintainer);
+		print_report_line($pkg, $nbrokenby > 0 ? $nbrokenby : "", $maintainer);
 	}
 
 	return <<EOHTML;
@@ -345,18 +355,15 @@ $os $vars{osrev}/$vars{MACHINE_ARCH}
 Summary:
 
 EOF
-		my $summary_form = <<EOF;
-        @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  @<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-EOF
-		print swrite($summary_form, "Build started:", $startdate);
-		print swrite($summary_form, "Build ended:", $enddate);
-		print swrite($summary_form, '', '');
-		print swrite($summary_form, "Successfully packaged:", $nsuccessful);
-		print swrite($summary_form, "Packages really broken:", $nbroken);
-		print swrite($summary_form, "Pkgs broken due to them:", $nbrokendep);
-		print swrite($summary_form, "Total broken:", $nbrokentot);
-		print swrite($summary_form, "Not packaged:", $nunpackaged);
-		print swrite($summary_form, "Total:", $ntotal);
+		print_summary_line("Build started:", $startdate);
+		print_summary_line("Build ended:", $enddate);
+		print("\n");
+		print_summary_line("Successfully packaged:", $nsuccessful);
+		print_summary_line("Packages really broken:", $nbroken);
+		print_summary_line("Pkgs broken due to them:", $nbrokendep);
+		print_summary_line("Total broken:", $nbrokentot);
+		print_summary_line("Not packaged:", $nunpackaged);
+		print_summary_line("Total:", $ntotal);
 		print <<EOF;
 
 Packages not listed here resulted in a binary package. The build
@@ -536,7 +543,7 @@ EOHTML
 		
 		if ($verbose && ($state eq "topten" || $state eq "broken")) {
 			print "\n\n$state_head{$state}\n\n";
-		print $report_head;
+		print_report_header();
 	}
 
 
@@ -646,12 +653,4 @@ sub getBroken {
 	}
 
 	return $res;
-}
-
-sub swrite {
-	my $format = shift;
-	$^A = "";
-	formline($format, @_);
-	$^A =~ s/\n\n/\n/;
-	return $^A;
 }
