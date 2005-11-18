@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/18 23:43:05 agc Exp $
+
+SHA1 (md4coll.c) = eb74f3405ca53462711d09c8a8191f5fcf628e1b
+RMD160 (md4coll.c) = e2e2e83cc2c1b4b0c62039ebc392c4765d8527c0
+Size (md4coll.c) = 16814 bytes
