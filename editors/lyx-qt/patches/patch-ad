@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 2005/11/18 06:23:09 reed Exp $
+
+--- boost/boost/config/select_platform_config.hpp.orig	2005-08-23 23:29:40.000000000 -0700
++++ boost/boost/config/select_platform_config.hpp	2005-08-23 22:29:53.000000000 -0700
+@@ -16,7 +16,7 @@
+ // linux:
+ #  define BOOST_PLATFORM_CONFIG "boost/config/platform/linux.hpp"
+ 
+-#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ // BSD:
+ #  define BOOST_PLATFORM_CONFIG "boost/config/platform/bsd.hpp"
+ 
