@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.c,v 1.8 2005/11/18 03:31:11 grant Exp $	*/
+/*	$NetBSD: vis.c,v 1.9 2005/11/18 09:03:06 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -68,7 +68,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: vis.c,v 1.8 2005/11/18 03:31:11 grant Exp $");
+__RCSID("$NetBSD: vis.c,v 1.9 2005/11/18 09:03:06 grant Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #if 0
@@ -107,8 +107,9 @@ __weak_alias(vis,_vis)
 #define MAXEXTRAS	5
 
 
-#define MAKEEXTRALIST(flag, extra, orig)				      \
+#define MAKEEXTRALIST(flag, extra, orig_str)				      \
 do {									      \
+	const char *orig = orig_str;					      \
 	const char *o = orig;						      \
 	char *e;							      \
 	while (*o++)							      \
@@ -329,11 +330,10 @@ vis(dst, c, flag, nextc)
 
 {
 	char *extra;
-	const char *emptystr = "";
 
 	_DIAGASSERT(dst != NULL);
 
-	MAKEEXTRALIST(flag, extra, emptystr);
+	MAKEEXTRALIST(flag, extra, "");
 	if (flag & VIS_HTTPSTYLE)
 		HVIS(dst, c, flag, nextc, extra);
 	else
@@ -360,9 +360,8 @@ strvis(dst, src, flag)
 	int flag;
 {
 	char *extra;
-	const char *emptystr = "";
 
-	MAKEEXTRALIST(flag, extra, emptystr);
+	MAKEEXTRALIST(flag, extra, "");
 	return (strsvis(dst, src, flag, extra));
 }
 
@@ -375,8 +374,7 @@ strvisx(dst, src, len, flag)
 	int flag;
 {
 	char *extra;
-	const char *emptystr = "";
 
-	MAKEEXTRALIST(flag, extra, emptystr);
+	MAKEEXTRALIST(flag, extra, "");
 	return (strsvisx(dst, src, len, flag, extra));
 }
