@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/10/10 09:07:22 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/11/18 11:23:34 gdt Exp $
 
-DISTNAME=		ufraw-0.5
+DISTNAME=		ufraw-0.6
 PKGNAME=		gimp-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
@@ -18,8 +17,6 @@ USE_TOOLS+=		perl:run pod2man
 # This package uses too much C99 code to be patched.
 GCC_REQD+=		3.0
 BUILDLINK_TRANSFORM+=	rm:-std=gnu99
-
-CONFIGURE_ARGS+=	--enable-extras
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
