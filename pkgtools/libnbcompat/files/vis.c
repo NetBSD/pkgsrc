@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.c,v 1.7 2004/08/23 03:32:13 jlam Exp $	*/
+/*	$NetBSD: vis.c,v 1.8 2005/11/18 03:31:11 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -68,7 +68,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: vis.c,v 1.7 2004/08/23 03:32:13 jlam Exp $");
+__RCSID("$NetBSD: vis.c,v 1.8 2005/11/18 03:31:11 grant Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #if 0
@@ -329,10 +329,11 @@ vis(dst, c, flag, nextc)
 
 {
 	char *extra;
+	const char *emptystr = "";
 
 	_DIAGASSERT(dst != NULL);
 
-	MAKEEXTRALIST(flag, extra, "");
+	MAKEEXTRALIST(flag, extra, emptystr);
 	if (flag & VIS_HTTPSTYLE)
 		HVIS(dst, c, flag, nextc, extra);
 	else
@@ -359,8 +360,9 @@ strvis(dst, src, flag)
 	int flag;
 {
 	char *extra;
+	const char *emptystr = "";
 
-	MAKEEXTRALIST(flag, extra, "");
+	MAKEEXTRALIST(flag, extra, emptystr);
 	return (strsvis(dst, src, flag, extra));
 }
 
@@ -373,7 +375,8 @@ strvisx(dst, src, len, flag)
 	int flag;
 {
 	char *extra;
+	const char *emptystr = "";
 
-	MAKEEXTRALIST(flag, extra, "");
+	MAKEEXTRALIST(flag, extra, emptystr);
 	return (strsvisx(dst, src, len, flag, extra));
 }
