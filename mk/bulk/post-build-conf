@@ -1,4 +1,4 @@
-# $NetBSD: post-build-conf,v 1.7 2005/11/12 11:10:08 seb Exp $
+# $NetBSD: post-build-conf,v 1.8 2005/11/18 12:27:26 rillig Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
@@ -38,11 +38,13 @@ show_config_vars() {
 		CVS_USER CVS_FLAGS
 	pbc_section "Getting distfiles" \
 		PRUNEDISTFILES ftp_proxy http_proxy
-	pbc_section "Building packages" \
-		PKGLIST NICE_LEVEL ADMIN ADMINSIG
+	pbc_section "Building the packages" \
+		PKGLIST NICE_LEVEL
+	pbc_section "Generating the report" \
+		ADMIN ADMINSIG FTPHOST FTP
 	pbc_section "Uploading binary packages" \
 		UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS \
-		RSYNC_DST RSYNC_OPTS FTPHOST FTP
+		RSYNC_DST RSYNC_OPTS
 }
 
 # usage: export_config_vars
@@ -149,11 +151,15 @@ check_config_vars() {
 	# no checks for ftp_proxy
 	# no checks for http_proxy
 
-	# section "Building packages"
+	# section "Building the packages"
 	# no checks for PKGLIST
 	# no checks for NICE_LEVEL
+
+	# section "Generating the report"
 	# no checks for ADMIN
 	# no checks for ADMINSIG
+	# no checks for FTPHOST
+	# no checks for FTP
 
 	# section "Uploading binary packages"
 	pbc_checkyesno UPDATE_VULNERABILITY_LIST
@@ -164,6 +170,4 @@ check_config_vars() {
 	# no checks for SIGN_AS
 	# no checks for RSYNC_DST
 	# no checks for RSYNC_OPTS
-	# no checks for FTPHOST
-	# no checks for FTP
 }
