@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.361 2005/11/15 13:48:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.362 2005/11/19 13:34:41 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1616,6 +1616,11 @@ sub checktext_basic_vartype($$$$$) {
 	} elsif ($type eq "Pathmask") {
 		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?/]*$") {
 			$line->log_warning("\"${value}\" is not a valid pathname mask.");
+		}
+
+	} elsif ($type eq "Perl5Packlist") {
+		if ($value ne $value_novar) {
+			$line->log_warning("${varname} should not depend on other variables.");
 		}
 
 	} elsif ($type eq "PkgName") {
