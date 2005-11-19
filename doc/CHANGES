@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11976 2005/11/19 07:53:31 minskim Exp $
+$NetBSD: CHANGES,v 1.11977 2005/11/19 10:47:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5281,3 +5281,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added security/md5-collision version 20051118 [agc 2005-11-18]
 	Updated graphics/graphviz to 2.6nb1 [minskim 2005-11-19]
 	Updated devel/cppunit to 1.10.2nb3 [minskim 2005-11-19]
+	Updated mail/sylpheed-devel to 2.1.7 [xtraeme 2005-11-19]
