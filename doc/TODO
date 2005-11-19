@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4184 2005/11/18 15:49:31 wiz Exp $
+$NetBSD: TODO,v 1.4185 2005/11/19 04:40:50 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1391,6 +1391,9 @@ Suggested package updates
 
 Infrastructure problems which need addressing
 =============================================
+
+	o Correct and consistent handling of file names containing
+	  white-space and other special characters.
 
 	o bootstrap building of gcc2/gcc3.
 
