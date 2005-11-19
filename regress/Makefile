@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/06 20:33:56 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/11/19 21:28:35 rillig Exp $
 #
 
 COMMENT=	Regression tests for pkgsrc infrastructure
@@ -12,5 +12,6 @@ SUBDIR+=	make-quoting
 SUBDIR+=	pkg-options
 SUBDIR+=	pkgfail
 SUBDIR+=	print-plist
+SUBDIR+=	tools
 
 .include "../mk/bsd.pkg.subdir.mk"
