@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1761 2005/11/18 17:07:13 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1762 2005/11/19 12:30:41 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -3638,7 +3638,8 @@ install-depends: pre-install-depends
 		target=${DEPENDS_TARGET:Q};				\
 		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$dir"; 	\
 		if [ ! -d $$dir ]; then					\
-			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
+			${ECHO_MSG} "=> [bsd.pkg.mk] error: The directory $$dir does not exist."; \
+			exit 1;						\
 		else							\
 			cd $$dir ;					\
 			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD=\'$$pkg\' ${MAKE} ${MAKEFLAGS} _AUTOMATIC=YES $$target || exit 1; \
