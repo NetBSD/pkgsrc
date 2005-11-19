@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.27 2005/11/14 11:45:52 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.28 2005/11/19 17:22:21 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -53,6 +53,9 @@ Check subdirectories, too.
 The subdirectories are those that are mentioned in a
 .Ql SUBDIR+=
 line.
+.It Fl s Ns | Ns Fl -source
+For all diagnostics having file and line number information, show the
+source code along with the diagnostics.
 .It Fl v Ns | Ns Fl -verbose
 Be verbose.
 Show the progress report for items that are being checked.
