@@ -1,9 +1,10 @@
 #! /bin/sh
-# $NetBSD: awk-test.sh,v 1.1.1.1 2005/11/19 21:27:06 rillig Exp $
+# $NetBSD: awk-test.sh,v 1.2 2005/11/19 21:31:10 rillig Exp $
 #
 
 set -e
 
+# usage: assert_equal <expected> <got>
 assert_equal() {
 	case $1 in
 	"$2")	;;
@@ -20,4 +21,6 @@ test_assignment() {
 
 test_assignment "foo" "foo"
 test_assignment "foo bar baz" "foo bar baz"
+# The Solaris /usr/bin/awk does not conform to the POSIX specification,
+# but passes the right hand side of the assignment uninterpreted.
 test_assignment "CPPFLAGS=\\\"-Dfoo=bar\\\"" "CPPFLAGS=\"-Dfoo=bar\""
