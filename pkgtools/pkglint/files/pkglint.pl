@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.365 2005/11/19 17:58:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.366 2005/11/19 18:26:32 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -662,7 +662,7 @@ my $distinfo_file;		# DISTINFO_FILE from the package Makefile
 my $pkgname;			# PKGNAME from the package Makefile
 my $hack_php_patches;		# Ignore non-existing patches in distinfo
 
-my $seen_USE_PKGLOCALEDIR;	# Does the package use PKGLOCALEDIR?
+my $makevar;			# Table of variables and values
 my $seen_Makefile_common;	# Does the package have any .includes?
 
 my @todo_items;			# The list of directory entries that still need
@@ -1219,7 +1219,7 @@ sub checkfile_PLIST($) {
 				$line->log_warning("Man pages should be installed into man/, not share/man/.");
 			}
 
-			if ($text =~ /\${PKGLOCALEDIR}/ && defined($seen_USE_PKGLOCALEDIR) && !$seen_USE_PKGLOCALEDIR) {
+			if ($text =~ /\${PKGLOCALEDIR}/ && defined($makevar) && !exists($makevar->{"USE_PKGLOCALEDIR"})) {
 				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
 			}
 
@@ -1407,6 +1407,14 @@ sub readmakefile($$$$) {
 					$contents .= readmakefile("$dirname/$includefile", $main_lines, $all_lines, $seen_Makefile_include);
 				}
 			}
+		} elsif ($text =~ regex_varassign) {
+			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+
+			if ($op ne "?=" || !exists($makevar->{$varname})) {
+				$makevar->{$varname} = $line;
+			}
+			$contents .= $text . "\n";
+
 		} else {
 			$contents .= $text . "\n";
 		}
@@ -2421,8 +2429,6 @@ sub checkfile_package_Makefile($$$$) {
 		}
 	}
 
-	$seen_USE_PKGLOCALEDIR = ($whole =~ /\nUSE_PKGLOCALEDIR/) ? true : false;
-
 	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR.");
 	}
@@ -2925,6 +2931,9 @@ sub checkdir_category() {
 sub checkdir_package() {
 	my ($whole, $main_lines, $lines, $have_distinfo, $have_patches);
 
+	# Initialize global variables
+	$makevar = {};
+
 	# we need to handle the Makefile first to get some variables
 	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$main_lines, $lines)) {
 		log_error("${current_dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
@@ -2989,7 +2998,7 @@ sub checkitem($) {
 	$filesdir		= "files";
 	$patchdir		= "patches";
 	$distinfo_file		= "distinfo";
-	$seen_USE_PKGLOCALEDIR	= undef;
+	$makevar		= undef;
 	$seen_Makefile_common	= undef;
 	$pkgname		= undef;
 	$hack_php_patches	= false;
