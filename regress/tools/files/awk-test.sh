@@ -1,8 +1,13 @@
 #! /bin/sh
-# $NetBSD: awk-test.sh,v 1.3 2005/11/19 21:59:51 rillig Exp $
+# $NetBSD: awk-test.sh,v 1.4 2005/11/19 22:03:54 rillig Exp $
 #
 
 set -e
+
+# usage: testcase_start <testname>
+testcase_start() {
+	printf "Running testcase %s\\n" "$1"
+}
 
 # usage: assert_equal <testname> <expected> <got>
 assert_equal() {
@@ -15,12 +20,14 @@ assert_equal() {
 
 # usage: test_assignment <testname> <input> <expected-output>
 test_assignment() {
+	testcase_start "$1"
 	o=`echo "" | awk '{print var}' var="$2"`
 	assert_equal "$1" "$3" "${o}"
 }
 
 # usage: test_passline <testname> <input>
 test_passline() {
+	testcase_start "$1"
 	o=`awk '{print}' <<EOF
 $2
 EOF
