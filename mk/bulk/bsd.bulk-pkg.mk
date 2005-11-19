@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.102 2005/11/18 08:48:09 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.103 2005/11/19 03:53:50 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -301,7 +301,7 @@ bulk-check-uptodate:
 			fi; \
 		done) || uptodate=0; \
 	fi; \
-	${ECHO_MSG} $$uptodate
+	${ECHO} $$uptodate
 
 # rebuild binpkg if any of the pkg files is newer than the binary archive
 # set DO to ":" to not actually do anything (debugging, ...)
@@ -314,13 +314,13 @@ bulk-package:
 	fi
 	@( \
 	if [ "${PRECLEAN}" = "yes" ]; then \
-		${ECHO_MSG} '<pre>' ; \
-		${ECHO_MSG} '' ; \
-		${ECHO_MSG} '###' ; \
-		${ECHO_MSG} '###' `date`: ; \
-		${ECHO_MSG} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
-		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} '^d' | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
-		${ECHO_MSG} '###' ; \
+		${ECHO} '<pre>' ; \
+		${ECHO} '' ; \
+		${ECHO} '###' ; \
+		${ECHO} '###' `date`: ; \
+		${ECHO} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
+		${ECHO} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} '^d' | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
+		${ECHO} '###' ; \
 	fi \
 	) 2>&1 | ${TEE} -a ${_BUILDLOG:Q}
 	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
@@ -430,20 +430,20 @@ bulk-package:
 		else \
 			${MV} ${_BUILDLOG:Q} ${_BROKENFILE:Q} ;\
 			if [ -f "${WRKLOG}" ]; then \
-				(${ECHO_MSG} "<pre>"; \
-				${ECHO_MSG} ""; \
+				(${ECHO} "<pre>"; \
+				${ECHO} ""; \
 				${TO_HTML} ${WRKLOG}; \
-				${ECHO_MSG} "</pre>"; \
+				${ECHO} "</pre>"; \
 				) >> ${_BROKENWRKLOG:Q}; \
 			fi; \
 			( \
 			if [ -f "${_BROKENWRKLOG:Q}" ]; then \
-				${ECHO_MSG} "</pre>"; \
-				${ECHO_MSG} "<p>"; \
-				${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENWRKLOG}\">work log for ${PKGNAME}</a>"; \
-				${ECHO_MSG} "</p>"; \
-				${ECHO_MSG} "<pre>"; \
-				${ECHO_MSG} ""; \
+				${ECHO} "</pre>"; \
+				${ECHO} "<p>"; \
+				${ECHO} "Please view the <a href=\"../../${PKGPATH}/${BROKENWRKLOG}\">work log for ${PKGNAME}</a>"; \
+				${ECHO} "</p>"; \
+				${ECHO} "<pre>"; \
+				${ECHO} ""; \
 			fi ; \
 			${BULK_MSG} "${PKGNAME} was marked as broken:" ; \
 			${LS} -la ${_BROKENFILE:Q} ; \
@@ -494,7 +494,7 @@ bulk-package:
 			if [ -f ${_INTERACTIVE_COOKIE} ]; then \
 				nerrors="0"; \
 			fi; \
-			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${BULKFILESDIR}/${BROKENFILE} \
+			${ECHO} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${BULKFILESDIR:Q}/${BROKENFILE:Q} \
 			) 2>&1 | ${TEE} -a ${_BROKENFILE:Q}; \
 		fi ; \
 		case ${_PRESERVE_WRKDIR} in				\
