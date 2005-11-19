@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/26 23:17:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/19 10:55:37 xtraeme Exp $
 
 DISTNAME=		moc-2.3.2
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.daper.net/pub/soft/moc/stable/
 EXTRACT_SUFX=		.tar.bz2
