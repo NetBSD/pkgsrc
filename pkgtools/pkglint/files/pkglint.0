@@ -40,6 +40,10 @@ DDEESSCCRRIIPPTTIIOONN
                                are those that are mentioned in a `SUBDIR+='
                                line.
 
+           --ss|----ssoouurrccee         For all diagnostics having file and line number
+                               information, show the source code along with
+                               the diagnostics.
+
            --vv|----vveerrbboossee        Be verbose.  Show the progress report for items
                                that are being checked.
 
