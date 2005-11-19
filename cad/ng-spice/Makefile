@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/11/17 13:17:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.30 2005/11/19 20:38:30 dmcmahill Exp $
 #
 
 DISTNAME=	ng-spice-rework-17
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--with-readline
 LIBS+=			${BUILDLINK_LDADD.getopt}
 
 INFO_FILES=	ngspice.info
+TEXINFO_REQD=	4.6
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
