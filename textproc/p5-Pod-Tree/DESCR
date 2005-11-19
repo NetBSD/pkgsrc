@@ -1,0 +1,3 @@
+Pod::Tree parses a POD ("plain old documentation") text into a static
+syntax tree. Applications walk the tree to recover the structure and
+content of the POD.
