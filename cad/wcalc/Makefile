@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/01 03:54:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/19 15:37:08 rillig Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -33,11 +33,10 @@ ONLY_FOR_PLATFORM=	Linux-*-i386 SunOS-*-sparc*
 DEPENDS+=	mex-wcalc-${VER}*:../../cad/mex-wcalc
 .endif
 
-EXTRACT_ONLY=	# defined
-NO_CHECKSUM=	# defined
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
-NO_MTREE=	# defined
+EXTRACT_ONLY=	# none
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_MTREE=	yes
 
 do-install:	# empty
 
