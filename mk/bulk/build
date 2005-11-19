@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.78 2005/11/18 11:43:25 agc Exp $
+# $NetBSD: build,v 1.79 2005/11/19 00:30:54 agc Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -216,7 +216,7 @@ show_config_vars
 # Check that the package tools are up to date.
 #
 ( cd "${pkglint_dir}" \
-  && ${BMAKE} fetch >/dev/null 2>&1
+  && ${BMAKE} fetch SKIP_AUDIT_PACKAGES=yes >/dev/null 2>&1
 ) || {
 	echo "Updating pkgtools"
 	( cd "${pkgsrc_dir}/pkgtools/pkg_install" \
