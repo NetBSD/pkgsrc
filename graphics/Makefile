@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.401 2005/11/18 19:42:50 gdt Exp $
+# $NetBSD: Makefile,v 1.402 2005/11/19 09:10:25 agc Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -65,7 +65,6 @@ SUBDIR+=	epeg
 SUBDIR+=	exif
 SUBDIR+=	exifprobe
 SUBDIR+=	exiftags
-SUBDIR+=	exiftool
 SUBDIR+=	exiv2
 SUBDIR+=	fbm
 SUBDIR+=	feh
@@ -211,6 +210,7 @@ SUBDIR+=	p5-Gdk-Imlib
 SUBDIR+=	p5-Gdk-Pixbuf
 SUBDIR+=	p5-Gnome
 SUBDIR+=	p5-GraphViz
+SUBDIR+=	p5-Image-ExifTool
 SUBDIR+=	p5-Image-Imlib2
 SUBDIR+=	p5-Image-Info
 SUBDIR+=	p5-Image-Size
