@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.366 2005/11/19 18:26:32 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.367 2005/11/19 19:18:56 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2378,48 +2378,27 @@ sub checkfile_mk($) {
 }
 
 sub checkfile_package_Makefile($$$$) {
-	my ($fname, $rawwhole, $main_lines, $lines) = @_;
-	my ($distname, $category, $distfiles, $wrksrc);
-	my ($whole, $tmp, $idx, @sections);
+	my ($fname, $whole, $main_lines, $lines) = @_;
+	my ($distname, $category, $distfiles);
 	
 	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
 
 	checkperms($fname);
 
 	$category = basename(dirname(Cwd::abs_path($current_dir)));
-	$whole = "\n${rawwhole}";
 
-	#
-	# whole file: $(VARIABLE)
-	#
-	if ($opt_warn_paren) {
-		if ($whole =~ /[^\$]\$\([\w\d]+\)/) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use \${VARIABLE} instead of \$(VARIABLE).");
-		}
-	}
+	# TODO: "Use \${VARIABLE} instead of \$(VARIABLE)."
 
 	checklines_deprecated_variables($main_lines);
 
-	#
-	# whole file: INTERACTIVE_STAGE
-	#
-	$whole =~ s/\n#[^\n]*/\n/g;
-	$whole =~ s/\n\n+/\n/g;
-	if ($whole =~ /\nINTERACTIVE_STAGE/) {
-		if ($whole !~ /defined\((BATCH|FOR_CDROM)\)/) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use of INTERACTIVE_STAGE discouraged. ".
-				"Provide batch mode by using BATCH and/or FOR_CDROM.");
-		}
-	}
-
-	if (   $whole !~ qr"\nPLIST_SRC"
-	    && $whole !~ qr"\nNO_PKG_REGISTER"
+	if (!exists($makevar->{"PLIST_SRC"})
+	    && !exists($makevar->{"NO_PKG_REGISTER"})
 	    && !-f "${current_dir}/$pkgdir/PLIST"
 	    && !-f "${current_dir}/$pkgdir/PLIST.common") {
 		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
 	}
 
-	if ($whole =~ qr"\nNO_CHECKSUM") {
+	if (exists($makevar->{"NO_CHECKSUM"})) {
 		if (-f "${current_dir}/${distinfo_file}") {
 			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
 		}
@@ -2452,55 +2431,21 @@ sub checkfile_package_Makefile($$$$) {
 			"scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
 
-	#
-	# break the makefile into sections.
-	#
-	@sections = split(/\n\n+/, $rawwhole);
-	foreach my $i (0..$#sections) {
-		if ($sections[$i] !~ /\n$/) {
-			$sections[$i] .= "\n";
+	if (exists($makevar->{"MASTER_SITES"})) {
+		if (exists($makevar->{"DYNAMIC_MASTER_SITES"})) {
+			$makevar->{"MASTER_SITES"}->log_warning("MASTER_SITES and ...");
+			$makevar->{"DYNAMIC_MASTER_SITES"}->log_warning("... DYNAMIC_MASTER_SITES conflict.");
 		}
-	}
-	$idx = 0;
-
-	# section 1 (comment lines): No checks needed
-	$idx++;
-
-	#
-	# for the rest of the checks, comment lines are not important.
-	#
-	foreach my $i (0..$#sections) {
-		$sections[$i] =~ s/^#[^\n]*//g;
-		$sections[$i] =~ s/\n#[^\n]*//g;
-		$sections[$i] =~ s/\n\n+/\n/g;
-		$sections[$i] =~ s/^\n+//g;
-		$sections[$i] =~ s/\\\n/ /g;
-	}
-
-	#
-	#
-	# section 2: DISTNAME/PKGNAME/...
-	#
-	log_info($fname, NO_LINE_NUMBER, "Checking DISTNAME section.");
-	$tmp = $sections[$idx++];
-
-	# check the URL
-	if ($tmp =~ /\nMASTER_SITES[+?]?=[ \t]*([^\n]*)\n/
-	 && $1 !~ /^[ \t]*$/) {
-		if ($tmp =~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "MASTER_SITES and DYNAMIC_MASTER_SITES ".
-				"found. Is this ok?");
+	} else {
+		if (!exists($makevar->{"DYNAMIC_MASTER_SITES"})) {
+			log_warning($fname, NO_LINE_NUMBER, "Neither MASTER_SITES nor DYNAMIC_MASTER_SITES found.");
 		}
-
-	} elsif ($tmp !~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "no MASTER_SITES or DYNAMIC_MASTER_SITES found. ".
-			"Is this ok?");
 	}
 
 	# check DISTFILES and related items.
-	$distname     = expand_variable($tmp, "DISTNAME");
-	$pkgname      = expand_variable($tmp, "PKGNAME");
-	$distfiles    = expand_variable($tmp, "DISTFILES");
+	$distname     = expand_variable($whole, "DISTNAME");
+	$pkgname      = expand_variable($whole, "PKGNAME");
+	$distfiles    = expand_variable($whole, "DISTFILES");
 
 	if ($opt_warn_vague && defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
@@ -2517,100 +2462,13 @@ sub checkfile_package_Makefile($$$$) {
 		$pkgname = $distname;
 	}
 
-	#
-	# section 3: PATCH_SITES/PATCHFILES(optional)
-	#
-	log_info($fname, NO_LINE_NUMBER, "Checking optional PATCH section.");
-	$tmp = $sections[$idx];
-
-	if ($tmp =~ /(PATCH_SITES|PATCH_SITE_SUBDIR|PATCHFILES|PATCH_DIST_STRIP|PATCH_DIST_CAT)/) {
-		$idx++;
+	if (!exists($makevar->{"COMMENT"})) {
+		log_warning($fname, NO_LINE_NUMBER, "No COMMENT given.");
 	}
 
-	#
-	# section 4: MAINTAINER
-	#
-	log_info($fname, NO_LINE_NUMBER, "Checking MAINTAINER section.");
-	$tmp = $sections[$idx++];
-
-	# warnings for missing or incorrect HOMEPAGE
-	$tmp = "\n" . $tmp;
-	if ($tmp !~ /\nHOMEPAGE[+?]?=[ \t]*([^\n]*)\n/ || $1 =~ /^[ \t]*$/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Please add HOMEPAGE if the package has one.");
-	}
-
-	# warnings for missing COMMENT
-	if ($tmp !~ /\nCOMMENT=\s*(.*)$/) {
-		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Please add a short COMMENT describing the package.");
-	}
-
-	#
-	# section 5: *_DEPENDS (may not be there)
-	#
-	log_info($fname, NO_LINE_NUMBER, "Checking optional DEPENDS section.");
-	$tmp = $sections[$idx];
-
-	if ($tmp =~ qr"(?:BUILD_USED_MSGFMT|BUILD_DEPENDS|DEPENDS)") {
-		$idx++;
-	}
-
-	#
-	# Makefile 6: check the rest of file
-	#
-	log_info($fname, NO_LINE_NUMBER, "Checking the rest of the file.");
-	$tmp = join("\n\n", @sections[$idx .. $#{sections}]);
-
-	$tmp = "\n" . $tmp;	# to make the begin-of-line check easier
-
-	# check WRKSRC
-	#
-	# do not use DISTFILES/DISTNAME to control over WRKSRC.
-	# DISTNAME is for controlling distribution filename.
-	# example:
-	#	DISTNAME= package
-	#	PKGNAME=  package-1.0
-	#	DISTFILES=package-1.0.tgz
-	# should be
-	#	DISTNAME=    package-1.0
-	#	EXTRACT_SUFX=.tgz
-	#	WRKSRC=      ${WRKDIR}/package
-	#
-	$wrksrc = '';
-	$wrksrc = $1 if ($tmp =~ /\nWRKSRC[+?]?=[ \t]*([^\n]*)\n/);
-
-	if (defined($distfiles) && $distfiles =~ qr"^\S+$" && defined($distname)) {
-		if (defined($wrksrc) && $wrksrc ne "\${WRKDIR\}") {
-		    $opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Do not use DISTFILES and DISTNAME ".
-			"to control WRKSRC. how about ".
-			"\"WRKSRC=\${WRKDIR}/$distname\"?");
-		} else {
-		    $opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "DISTFILES/DISTNAME affects WRKSRC. ".
-			"Use caution when changing them.");
-		}
-	}
-
-	foreach my $i (grep(/^(\W+_ENV)[?+]?=/, split(/\n/, $tmp))) {
-		$i =~ s/^(\W+_ENV)[?+]?=[ \t]*//;
-		my $j = $1;
-		foreach my $k (split(/\s+/, $i)) {
-			if ($k !~/^".*"$/ && $k =~ /\${/ && $k !~/:Q}/) {
-				# FIXME: don't "quote", always use :Q
-				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Definition of $k in $j. ".
-				"should use :Q or be quoted.");
-			}
-		}
-	}
-
-	# check USE_X11 and USE_IMAKE
-	if ($tmp =~ /\nUSE_IMAKE[?+]?=/ && $tmp =~ /\nUSE_X11[?+]?=/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Since you already have USE_IMAKE, ".
-			"you don't need USE_X11.");
-	}
-
-	# check direct use of important make targets.
-	if ($tmp =~ /\n(fetch|extract|patch|configure|build|install):/) {
-		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Direct redefinition of make target \"$1\" ".
-			"discouraged. Redefine \"do-$1\" instead.");
+	if (exists($makevar->{"USE_IMAKE"}) && exists($makevar->{"USE_X11"})) {
+		$makevar->{"USE_IMAKE"}->log_note("USE_IMAKE makes ...");
+		$makevar->{"USE_X11"}->log_note("... USE_X11 superfluous.");
 	}
 
 	checklines_package_Makefile($main_lines);
