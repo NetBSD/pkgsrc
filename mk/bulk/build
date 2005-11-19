@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.80 2005/11/19 09:35:20 rillig Exp $
+# $NetBSD: build,v 1.81 2005/11/19 17:31:40 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -423,8 +423,7 @@ echo "Post processing bulk build results..."
 # Re-install BULK_PREREQ as we may need functionality (e.g. SMTP) provided by
 # them for post-build to run.
 echo "Re-installing prerequisite packages specified with BULK_PREREQ..."
-for pkgdir in $BULK_PREREQ lang/perl5
-do
+for pkgdir in $BULK_PREREQ lang/perl5; do
 	echo "===> Installing prerequisite package $pkgdir"
 	( cd "${pkgsrc_dir}/${pkgdir}" \
 	  && ${BMAKE} bulk-install
