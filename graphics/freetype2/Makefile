@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/11/04 11:01:08 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2005/11/19 14:11:30 rillig Exp $
 
 DISTNAME=	freetype-2.1.10
 PKGNAME=	freetype2-2.1.10
@@ -44,12 +44,6 @@ PKG_SUPPORTED_OPTIONS=	truetype
 ###
 .if !empty(PKG_OPTIONS:Mtruetype)
 CFLAGS+=	-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
-.endif
-
-# reduce optimization level on alpha to avoid compiler bugs
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
-CPPFLAGS:=	${CPPFLAGS:C/-O[0-9]*/-O/g}
-CFLAGS:=	${CFLAGS:C/-O[0-9]*/-O/g}
 .endif
 
 # source code breaks strict aliasing in gcc>=2.95
