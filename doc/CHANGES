@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11979 2005/11/19 12:47:24 rillig Exp $
+$NetBSD: CHANGES,v 1.11980 2005/11/19 18:42:29 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5284,3 +5284,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/sylpheed-devel to 2.1.7 [xtraeme 2005-11-19]
 	Added www/p5-HTML-Stream version 1.55 [rillig 2005-11-19]
 	Added textproc/p5-Pod-Tree version 1.11 [rillig 2005-11-19]
+	Updated databases/openldap to 2.3.11nb1 [root 2005-11-19]
