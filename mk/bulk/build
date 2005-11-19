@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.79 2005/11/19 00:30:54 agc Exp $
+# $NetBSD: build,v 1.80 2005/11/19 09:35:20 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -419,8 +419,6 @@ if [ "x$mirror_only" = "xyes" ]; then
 fi
 
 echo "Post processing bulk build results..."
-
-#rm $DEPENDSTREEFILE $DEPENDSFILE $SUPPORTSFILE $INDEXFILE $ORDERFILE
 
 # Re-install BULK_PREREQ as we may need functionality (e.g. SMTP) provided by
 # them for post-build to run.
