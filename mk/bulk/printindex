@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.26 2005/11/19 10:55:45 rillig Exp $
+# $NetBSD: printindex,v 1.27 2005/11/19 11:19:10 rillig Exp $
 #
 
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -118,15 +118,17 @@ fi
 # Sanity checks, part 2
 #
 
+alnum="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 case $BULK_PREREQ in
-*[!-\ +./0-9A-Z_a-z]*)
-	echo "$0: error: BULK_PREREQ contains invalid characters. (Its value is \"${BULK_PREREQ}\".)" 1>&2
+*[!-\ +./${alnum}_]*)
+	inval=`echo "${BULK_PREREQ}" | tr -d " +\\\\-./${alnum}_"`
+	echo "$0: error: BULK_PREREQ contains invalid characters (${inval})." 1>&2
 	exit 1
 esac
 case $list in
-*[!-\ +./0-9A-Z_a-z]*)
-	echo "$0: error: The package list contains invalid characters. (Its value is \"${list}\".)" 1>&2
-	echo "$list" | tr ' ' '\n' > .list
+*[!-\ +./${alnum}_]*)
+	inval=`echo "${list}" | tr -d " +\\\\-./${alnum}_"`
+	echo "$0: error: The package list contains invalid characters (${inval})." 1>&2
 	exit 1
 esac
 
