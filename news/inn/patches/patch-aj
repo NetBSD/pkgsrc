@@ -1,0 +1,38 @@
+$NetBSD: patch-aj,v 1.1 2005/11/19 12:03:22 rillig Exp $
+
+Use double quotes around command variables to make them work even if
+they consist of multiple words.
+
+--- scripts/innshellvars.in.orig	Wed Jan  7 23:47:19 2004
++++ scripts/innshellvars.in	Sat Nov 19 12:57:17 2005
+@@ -67,20 +67,20 @@ SERVERPID=${INNDDIR}/innd.pid
+ INNWSTATUS=${INNDDIR}/innwatch.status
+ WATCHPID=${INNDDIR}/innwatch.pid
+ 
+-AWK=@_PATH_AWK@
+-SED=@_PATH_SED@
++AWK="@_PATH_AWK@"
++SED="@_PATH_SED@"
+ INNDF=${NEWSBIN}/inndf
+-EGREP=@_PATH_EGREP@
+-PERL=@_PATH_PERL@
+-GPGV=@PATH_GPGV@
+-PGP=@_PATH_PGP@
++EGREP="@_PATH_EGREP@"
++PERL="@_PATH_PERL@"
++GPGV="@PATH_GPGV@"
++PGP="@_PATH_PGP@"
+ SORT="@_PATH_SORT@"
+ GETFTP="@GETFTP@"
+-COMPRESS=@COMPRESS@
+-GZIP=@GZIP@
++COMPRESS="@COMPRESS@"
++GZIP="@GZIP@"
+ UNCOMPRESS="@UNCOMPRESS@"
+-LOG_COMPRESS=@LOG_COMPRESS@
+-Z=@LOG_COMPRESSEXT@
++LOG_COMPRESS="@LOG_COMPRESS@"
++Z="@LOG_COMPRESSEXT@"
+ 
+ if [ "$OVMETHOD" = "ovdb" ]; then
+     DB_HOME="${PATHOVERVIEW}"
