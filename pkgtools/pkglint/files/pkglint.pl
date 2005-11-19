@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.362 2005/11/19 13:34:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.363 2005/11/19 17:22:21 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -96,6 +96,7 @@ BEGIN {
 		log_fatal log_error log_warning log_note log_info log_subinfo
 		print_summary_and_exit set_verbose is_verbose
 		set_gcc_output_format
+		get_show_source_flag set_show_source_flag
 	);
 	import PkgLint::Util qw(
 		false true
@@ -109,6 +110,7 @@ my $errors		= 0;
 my $warnings		= 0;
 my $verbose_flag	= false;
 my $gcc_output_format	= false;
+my $show_source_flag	= false;
 
 sub log_message($$$$$$) {
 	my ($out, $file, $subr, $lineno, $type, $message) = @_;
@@ -189,6 +191,10 @@ sub log_subinfo($$$$) {
 sub print_summary_and_exit($) {
 	my ($quiet) = @_;
 
+	if ($show_source_flag) {
+		print("\n");
+	}
+
 	if (!$quiet) {
 		if ($errors != 0 || $warnings != 0) {
 			print("$errors errors and $warnings warnings found.\n");
@@ -199,6 +205,9 @@ sub print_summary_and_exit($) {
 	exit($errors != 0);
 }
 
+sub is_verbose() {
+	return $verbose_flag;
+}
 sub set_verbose($) {
 	my ($verbose) = @_;
 	$verbose_flag = $verbose;
@@ -206,6 +215,13 @@ sub set_verbose($) {
 
 sub set_gcc_output_format() {
 	$gcc_output_format = true;
+}
+
+sub get_show_source_flag() {
+	return $show_source_flag;
+}
+sub set_show_source_flag() {
+	$show_source_flag = true;
 }
 
 #== End of PkgLint::Logging ===============================================
@@ -252,24 +268,42 @@ sub is_changed($) {
 	return shift(@_)->[CHANGED];
 }
 
+sub show_source($$) {
+	my ($self, $out) = @_;
+
+	if (PkgLint::Logging::get_show_source_flag()) {
+		printf $out ("\n");
+		foreach my $line (@{$self->physlines}) {
+			printf $out ("> %s", $line->[1]);
+		}
+	}
+}
+
 sub log_fatal($$) {
 	my ($self, $text) = @_;
+	$self->show_source(*STDERR);
 	PkgLint::Logging::log_fatal($self->[FILE], $self->[LINES], $text);
 }
 sub log_error($$) {
 	my ($self, $text) = @_;
+	$self->show_source(*STDOUT);
 	PkgLint::Logging::log_error($self->[FILE], $self->[LINES], $text);
 }
 sub log_warning($$) {
 	my ($self, $text) = @_;
+	$self->show_source(*STDOUT);
 	PkgLint::Logging::log_warning($self->[FILE], $self->[LINES], $text);
 }
 sub log_note($$) {
 	my ($self, $text) = @_;
+	$self->show_source(*STDOUT);
 	PkgLint::Logging::log_note($self->[FILE], $self->[LINES], $text);
 }
 sub log_info($$) {
 	my ($self, $text) = @_;
+	if (PkgLint::Logging::is_verbose()) {
+		$self->show_source(*STDOUT);
+	}
 	PkgLint::Logging::log_info($self->[FILE], $self->[LINES], $text);
 }
 sub to_string($) {
@@ -348,12 +382,13 @@ sub load_physical_lines($) {
 
 sub get_logical_line($$$) {
 	my ($fname, $lines, $ref_lineno) = @_;
-	my ($value, $lineno, $first, $firstlineno, $lastlineno);
+	my ($value, $lineno, $first, $firstlineno, $lastlineno, $physlines);
 
 	$value = "";
 	$first = true;
 	$lineno = ${$ref_lineno};
 	$firstlineno = $lines->[$lineno]->[0];
+	$physlines = [];
 
 	for (; $lineno <= $#{$lines}; $lineno++) {
 		if ($lines->[$lineno]->[1] =~ qr"^([ \t]*)(.*?)([ \t]*)(\\?)\n?$") {
@@ -365,6 +400,7 @@ sub get_logical_line($$$) {
 			}
 
 			$value .= $text;
+			push(@{$physlines}, $lines->[$lineno]);
 
 			if ($cont eq "\\") {
 				$value .= " ";
@@ -386,7 +422,8 @@ sub get_logical_line($$$) {
 	    $firstlineno == $lastlineno
 		? $firstlineno
 		: "$firstlineno--$lastlineno",
-	    $value);
+	    $value,
+	    $physlines);
 }
 
 sub load_lines($$) {
@@ -594,6 +631,11 @@ my (@options) = (
 	  "quiet|q", \$opt_quiet ],
 	[ "-r|--recursive", "Recursive---check subdirectories, too",
 	  "recursive|r", \$opt_recursive ],
+	[ "-s|--source", "Show the source lines together with diagnostics",
+	  "source|s",
+	  sub {
+		PkgLint::Logging::set_show_source_flag();
+	  } ],
 	[ "-v|--verbose", "print progress messages",
 	  "verbose|v",
 	  sub {
@@ -1124,9 +1166,6 @@ sub checkfile_PLIST($) {
 
 		checkline_trailing_whitespace($line);
 
-		if ($text =~ /<\$ARCH>/) {
-			$line->log_warning("use of <\$ARCH> is deprecated, use \${MACHINE_ARCH} instead.");
-		}
 		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 
@@ -1814,14 +1853,14 @@ sub checklines_Makefile_varuse($) {
 sub checklines_deprecated_variables($) {
 	my ($lines) = @_;
 	my ($fname) = (conf_datadir."/deprecated.map");
-	my ($deprecated) = load_file($fname);
-	my %vars = ();
+	my ($deprecated, $varnames, $varuse_regex, %vars);
 
-	if (!$deprecated) {
+	if (!($deprecated = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
 
+	%vars = ();
 	foreach my $line (@{$deprecated}) {
 		if ($line->text =~ qr"^#" || $line->text =~ qr"^\s*$") {
 			next;
@@ -1833,12 +1872,19 @@ sub checklines_deprecated_variables($) {
 			$line->log_fatal("Unknown line format.");
 		}
 	}
+	$varnames = join("|", sort(keys(%vars)));
+	$varuse_regex = qr"\$\{(${varnames})[:}]";
 
 	foreach my $line (@{$lines}) {
 		if ($line->text =~ regex_varassign) {
-			my ($varname, undef, undef) = ($1, $2, $3);
+			my ($varname, undef, $value) = ($1, $2, $3);
 			if (exists($vars{$varname})) {
 				$line->log_warning("${varname} is deprecated. $vars{$varname}");
+			}
+
+			if ($value =~ $varuse_regex) {
+				my ($varuse_name) = ($1);
+				$line->log_warning("Use of ${varuse_name} is deprecated. $vars{$varuse_name}");
 			}
 		}
 	}
