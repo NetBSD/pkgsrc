@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.363 2005/11/19 17:22:21 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.364 2005/11/19 17:54:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2554,18 +2554,6 @@ sub checkfile_package_Makefile($$$$) {
 	if ($tmp !~ /\nCOMMENT=\s*(.*)$/) {
 		$opt_warn_vague && log_error(NO_FILE, NO_LINE_NUMBER, "Please add a short COMMENT describing the package.");
 	}
-
-	$tmp = "\n" . $tmp;
-	if ($tmp =~ /\nMAINTAINER=[^@]+\@netbsd.org/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\@netbsd.org should be \@NetBSD.org in MAINTAINER.");
-
-	} elsif ($tmp =~ /\nMAINTAINER=[^\n]+/) {
-		$tmp =~ s/\nMAINTAINER=[^\n]+//;
-
-	} else {
-		$opt_warn_vague && log_error($fname, NO_LINE_NUMBER, "No MAINTAINER found.");
-	}
-	$tmp =~ s/\n\n+/\n/g;
 
 	#
 	# section 5: *_DEPENDS (may not be there)
