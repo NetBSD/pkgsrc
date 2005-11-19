@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2005/11/19 17:22:21 rillig Exp $
+# $NetBSD: Makefile,v 1.301 2005/11/19 17:23:49 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.43
@@ -20,7 +20,6 @@ WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
-FOO_BAR=	${NO_CDROM}
 
 INSTALLATION_DIRS=	bin man/cat1 man/man1 share/pkglint
 
