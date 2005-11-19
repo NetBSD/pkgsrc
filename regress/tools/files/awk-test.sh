@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: awk-test.sh,v 1.4 2005/11/19 22:03:54 rillig Exp $
+# $NetBSD: awk-test.sh,v 1.5 2005/11/19 22:55:24 rillig Exp $
 #
 
 set -e
@@ -55,10 +55,13 @@ done
 
 #
 # Passing strings from stdin to stdout. awk should be able to handle at
-# least 2^20 characters per line.
+# least 2^12 characters per line.
+#
+# Solaris 9 /usr/bin/awk: 2559 bytes
+# Solaris 9 /usr/bin/nawk: 6144 bytes
 #
 line="a"
-for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do
+for i in 0 1 2 3 4 5 6 7 8 9 10 11 12; do
 	test_passline "line.2^${i}" "${line}"
 	line="${line}${line}"
 done
