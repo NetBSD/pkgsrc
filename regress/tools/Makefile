@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/19 21:27:06 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/19 22:03:54 rillig Exp $
 #
 
 DISTNAME=	regress-tools-1.0
@@ -15,7 +15,7 @@ USE_TOOLS+=	awk
 do-build:
 .for t in ${REGRESS_TESTS}
 	@${_PKG_SILENT}${_PKG_DEBUG}set -e; cd ${WRKSRC:Q};		\
-	${ECHO_MSG} "Running testcase "${t:Q};				\
+	${ECHO_MSG} "Running testsuite "${t:Q};				\
 	${SH} ${FILESDIR:Q}/${t:Q}-test.sh
 .endfor
 
