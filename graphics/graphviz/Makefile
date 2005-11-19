@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2005/11/06 23:54:46 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2005/11/19 07:36:35 minskim Exp $
 
 DISTNAME=	graphviz-2.6
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -35,6 +36,8 @@ CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
 # build fails when PHP and/or Ruby are also installed
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=
+
+CPPFLAGS+=	-DNO_POSTSCRIPT_ALIAS=1
 
 # prevent another config.status run
 pre-build:
