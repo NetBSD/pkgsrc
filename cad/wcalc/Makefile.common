@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2005/11/01 03:54:44 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/11/19 15:37:08 rillig Exp $
 #
 
 DISTNAME=       wcalc-0.9
@@ -48,4 +48,3 @@ MESSAGE_SUBST+=	WCALC_DIR=${WCALC_DIR}
 PLIST_SUBST+=	WCALC_CGIDIR=${WCALC_CGIDIR}
 PLIST_SUBST+=	WCALC_HTMLDIR=${WCALC_HTMLDIR}
 PLIST_SUBST+=	WCALC_DIR=${WCALC_DIR}
-
