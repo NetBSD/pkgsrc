@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.364 2005/11/19 17:54:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.365 2005/11/19 17:58:12 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2371,8 +2371,7 @@ sub checkfile_mk($) {
 
 sub checkfile_package_Makefile($$$$) {
 	my ($fname, $rawwhole, $main_lines, $lines) = @_;
-	my ($distname, $category, $distfiles,
-	    $extract_sufx, $wrksrc);
+	my ($distname, $category, $distfiles, $wrksrc);
 	my ($whole, $tmp, $idx, @sections);
 	
 	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
@@ -2495,23 +2494,7 @@ sub checkfile_package_Makefile($$$$) {
 	# check DISTFILES and related items.
 	$distname     = expand_variable($tmp, "DISTNAME");
 	$pkgname      = expand_variable($tmp, "PKGNAME");
-	$extract_sufx = expand_variable($tmp, "EXTRACT_SUFX");
 	$distfiles    = expand_variable($tmp, "DISTFILES");
-
-	if (defined($extract_sufx)) {
-		log_info(NO_FILE, NO_LINE_NUMBER, "Seen EXTRACT_SUFX, checking value.");
-		if (defined($distfiles)) {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "no need to define EXTRACT_SUFX if ".
-				"DISTFILES is defined.");
-		}
-		if ($extract_sufx eq '.tar.gz') {
-			$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "EXTRACT_SUFX is \".tar.gz.\" ".
-				"by default. You don't need to specify it.");
-		}
-	} else {
-		log_info(NO_FILE, NO_LINE_NUMBER, "No EXTRACT_SUFX seen, using default value.");
-		$extract_sufx = '.tar.gz';
-	}
 
 	if ($opt_warn_vague && defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
 		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
