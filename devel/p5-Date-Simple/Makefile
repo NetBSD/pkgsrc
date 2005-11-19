@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/03 14:19:16 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/11/19 13:36:09 rillig Exp $
 #
 
 DISTNAME=	Date-Simple-3.02
@@ -10,7 +10,7 @@ MAINTAINER=	geeogeegeeoh@users.sourceforge.net
 HOMEPAGE=	http://search.cpan.org/~yves/Date-Simple/
 COMMENT=	A simple date object
 
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Date/Simple/.packlist
+PERL5_PACKLIST=	auto/Date/Simple/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
