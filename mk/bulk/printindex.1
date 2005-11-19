@@ -1,4 +1,4 @@
-.\"	$NetBSD: printindex.1,v 1.1 2005/11/19 10:55:45 rillig Exp $
+.\"	$NetBSD: printindex.1,v 1.2 2005/11/19 11:19:57 rillig Exp $
 .\"
 .\" Copyright (c) 2005 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -86,9 +86,11 @@ A cache for the list of packages when PKGLIST is unset.
 .El
 .\" .Sh EXAMPLES
 .Sh DIAGNOSTICS
-All diagnostics start with the string
-.Ql [printindex]
-and may span multiple lines.
+Diagnostics have one of the two forms
+.Ql Nm Ns : error: ...
+or
+.Ql [printindex] ... Ns .
+The latter may span multiple lines.
 .Sh SEE ALSO
 .Xr printdepends 1
 .\" .Sh STANDARDS
