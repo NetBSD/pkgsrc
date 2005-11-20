@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/20 18:51:53 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/20 19:14:50 minskim Exp $
 
 DISTNAME=	dvipdfmx-20050627
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
@@ -20,7 +20,7 @@ MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
-.include "../../wip-kr/dvipdfmx/map.mk"
+.include "../../print/dvipdfmx/map.mk"
 .include "../../print/teTeX/module.mk"
 
 post-install:
@@ -28,7 +28,8 @@ post-install:
 	for file in ../../../Adobe/Resource/CMap/*; do \
 		${LN} -s $$file `${BASENAME} $$file`; \
 	done
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dvipdfmx
 	${MV} ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx.cfg \
-		${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx-base.cfg
+		${PREFIX}/share/examples/dvipdfmx/
 
 .include "../../mk/bsd.pkg.mk"
