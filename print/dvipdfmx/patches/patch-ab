@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2005/11/09 00:24:03 tonio Exp $
+$NetBSD: patch-ab,v 1.2 2005/11/20 18:51:54 minskim Exp $
 
---- data/Makefile.in.orig	2002-10-25 07:42:10.000000000 +0200
+--- data/Makefile.in.orig	2005-06-27 04:57:15.000000000 -0700
 +++ data/Makefile.in
-@@ -61,7 +61,7 @@ MAKEINFO = @MAKEINFO@
- PACKAGE = @PACKAGE@
- VERSION = @VERSION@
- 
+@@ -57,7 +57,7 @@ am__installdirs = "$(DESTDIR)$(pkgdatadi
+ pkgdataDATA_INSTALL = $(INSTALL_DATA)
+ DATA = $(pkgdata_DATA)
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 -pkgdatadir = $(datadir)/texmf/dvipdfm
-+pkgdatadir = ${PKG_LOCALTEXMFPREFIX}/dvipdfm
- pkgdata_DATA = CMap config
- DIST_COMMON = Makefile.in $(pkgdata_DATA)
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
++pkgdatadir = $(PKG_LOCALTEXMFPREFIX)/dvipdfm
+ ACLOCAL = @ACLOCAL@
+ AMDEP_FALSE = @AMDEP_FALSE@
+ AMDEP_TRUE = @AMDEP_TRUE@

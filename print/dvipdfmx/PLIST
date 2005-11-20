@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/14 17:01:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/11/20 18:51:53 minskim Exp $
 bin/dvipdfmx
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/78-EUC-H
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/78-EUC-V
@@ -35,7 +35,6 @@ ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-2
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-3
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-4
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-UCS2
-${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-Identity-UCS2
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-Japan1-0
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-Japan1-1
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-Japan1-2
@@ -203,5 +202,7 @@ ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/UniKSCms-UCS2-V
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/V
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/WP-Symbol
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/cid-x.map
-${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx.cfg
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx-base.cfg
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/glyphlist.txt
+@unexec ${RM} -f %D/${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx.cfg
 @dirrm ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap

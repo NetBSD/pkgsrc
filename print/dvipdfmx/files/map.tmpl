@@ -1,4 +1,4 @@
-# $NetBSD: map.tmpl,v 1.1 2005/11/20 18:46:22 minskim Exp $
+# $NetBSD: map.tmpl,v 1.2 2005/11/20 18:51:54 minskim Exp $
 #
 # Update dvipdfmx.cfg.
 #
@@ -29,7 +29,7 @@ eof
 case ${STAGE} in
 POST-INSTALL)
 	if ${TEST} ! -f @DVIPDFMX_CONFIG_DIR@/dvipdfmx.cfg; then
-		@CP@ @DVIPDFMX_CONFIG_DIR@/sample.dvipdfmx.cfg \
+		@CP@ @DVIPDFMX_CONFIG_DIR@/dvipdfmx-base.cfg \
 		     @DVIPDFMX_CONFIG_DIR@/dvipdfmx.cfg
 	fi
 	for map in @DVIPDFMX_FONTMAPS@; do

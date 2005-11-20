@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2005/11/14 17:01:36 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/20 18:51:53 minskim Exp $
 
-DISTNAME=	dvipdfmx-20031116
+DISTNAME=	dvipdfmx-20050627
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
-PKGREVISION=	4
 CATEGORIES=	print converters
 MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/release/
 
@@ -18,14 +17,18 @@ CONFLICTS+=	ja-dvipdfm-[0-9]*
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
 
+.include "../../graphics/png/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/ghostscript.mk"
+.include "../../wip-kr/dvipdfmx/map.mk"
+.include "../../print/teTeX/module.mk"
+
 post-install:
 	cd ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap; \
 	for file in ../../../Adobe/Resource/CMap/*; do \
 		${LN} -s $$file `${BASENAME} $$file`; \
 	done
+	${MV} ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx.cfg \
+		${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx-base.cfg
 
-.include "../../graphics/png/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/ghostscript.mk"
-.include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"
