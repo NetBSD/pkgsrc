@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/15 21:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/20 12:43:44 rillig Exp $
 #
 
 DISTNAME=		uno_v28
@@ -12,6 +12,12 @@ COMMENT=		Tool for source code analysis
 
 WRKSRC=			${WRKDIR}/Uno/src
 MAKEFILE=		makefile
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+BUILDLINK_TRANSFORM+=	rm:-m32
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/uno ${PREFIX}/bin
