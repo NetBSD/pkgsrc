@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/11/01 03:52:12 dmcmahill Exp $
+$NetBSD: MESSAGE,v 1.2 2005/11/20 14:04:54 rillig Exp $
 
 You have configured cgi-wcalc to install the cgi programs to the directory
 ${PREFIX}/${WCALC_CGIDIR}.
@@ -7,8 +7,8 @@ You will need to configure your web server to allow CGI programs to
 execute from that directory.
 
 In addition, you configured cgi-wcalc to use ${WCALC_CGIPATH} as the URI
-for the CGI programs.  You will need to configure your web server so that 
-http://your.name${WCALC_CGIPATH} will access the CGI programs in 
+for the CGI programs.  You will need to configure your web server so that
+http://your.name${WCALC_CGIPATH} will access the CGI programs in
 ${PREFIX}/${WCALC_CGIDIR}.
 
 A typical apache httpd.conf setup would be:
