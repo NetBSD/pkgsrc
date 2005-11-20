@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.301 2005/11/19 17:23:49 rillig Exp $
+# $NetBSD: Makefile,v 1.302 2005/11/20 10:55:43 rillig Exp $
 #
 
-DISTNAME=	pkglint-4.43
+DISTNAME=	pkglint-4.43.1
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -27,6 +27,11 @@ SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
 SUBST_FILES.pkglint+=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl
 SUBST_FILES.pkglint+=	pkglint.0 pkglint.1 pkglint.pl
+.if defined(BATCH)
+SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|/usr/pkgsrc|g'
+.else
+SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'
+.endif
 SUBST_SED.pkglint+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.pkglint+=	-e 's|@DISTVER@|${DISTNAME:S/pkglint-//}|g'
 SUBST_SED.pkglint+=	-e 's|@MAKE@|${MAKE}|g'

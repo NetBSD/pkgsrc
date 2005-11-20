@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.105 2005/11/10 14:30:56 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.106 2005/11/20 10:55:43 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -20,6 +20,11 @@ use Getopt::Std;
 use File::Find;
 use File::Basename;
 use Cwd 'realpath', 'getcwd';
+
+# Buildtime configuration
+my $conf_pkgsrcdir		= '@PKGSRCDIR@';
+my $conf_prefix			= '@PREFIX@';
+
 my(	$pkglist,		# list of Pkg packages
 	$pkg_installver,	# installed version of pkg_install pseudo-pkg
 	$default_vars,		# Set for Makefiles, inc PACKAGES & PKGSRCDIR
@@ -30,7 +35,7 @@ my(	$pkglist,		# list of Pkg packages
 	%prebuilt_pkgdir_cache,	# To avoid symlink loops in prebuilt_pkgdirs
 	);
 
-$ENV{PATH} .= ':/bin:/usr/bin:/sbin:/usr/sbin:@PREFIX@/sbin:@PREFIX@/bin';
+$ENV{PATH} .= ":/bin:/usr/bin:/sbin:/usr/sbin:${conf_prefix}/sbin:${conf_prefix}/bin";
 
 if (! getopts('BDE:I:K:LM:OP:RSVdg:himopru', \%opt) || $opt{h} ||
 	! ( defined($opt{d}) || defined($opt{g}) || defined($opt{i}) ||
@@ -230,7 +235,7 @@ if ($opt{D} && @ARGV)
 		    }
 		print "\n";
 		}
-	    print "\nRunning '@MAKE@ fetch-list | sh' for each package:\n";
+	    print "\nRunning '${conf_make} fetch-list | sh' for each package:\n";
 	    foreach my $pkgver (@update)
 		{
 		my($pkgdir);
@@ -240,7 +245,7 @@ if ($opt{D} && @ARGV)
 		    { fail('Unable to determine '.$pkgver->pkg.' directory'); }
 		print "$pkgsrcdir/$pkgdir\n";
 		safe_chdir("$pkgsrcdir/$pkgdir");
-		system('@MAKE@ fetch-list | sh');
+		system("${conf_make} fetch-list | sh");
 		}
 	    }
 	}
@@ -756,7 +761,7 @@ sub parse_makefile_pkgsrc
 	{
 	# invoke make here as a last resort
 	my($pkgsrcdir) = ($file =~ m:(/.*)/:);
-	my($makepkgname) = `cd $pkgsrcdir ; @MAKE@ show-vars VARNAMES=PKGNAME`;
+	my($makepkgname) = `cd $pkgsrcdir ; ${conf_make} show-vars VARNAMES=PKGNAME`;
 	if ($makepkgname =~ /(.*)-(\d.*)/)
 	    { $pkgname = $makepkgname; }
 	}
