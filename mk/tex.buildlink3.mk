@@ -1,6 +1,6 @@
-# $NetBSD: tex.buildlink3.mk,v 1.6 2005/11/15 17:22:40 minskim Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.7 2005/11/20 18:14:49 minskim Exp $
 #
-# A Makefile fragment for tex and latex packages
+# A Makefile fragment for TeX and LaTeX packages
 #
 # 	* Determine the version of teTeX to be used.
 #     Modify TEX_DEFAULT to change the default version (default to teTeX2)
@@ -14,23 +14,23 @@
 #   texmf tree, where teTeX should install his own texmf tree, and the local
 #   texmf tree, which is the place where other packages should install their
 #   latex files, like additional styles.
-#   NOTE: before all latex related packages are converted to use these
+#   NOTE: before all TeX-related packages are converted to use these
 #   variables, we will keep
 #   PKG_TEXMFPREFIX=PKG_LOCALTEXMFPREFIX=${PREFIX}/share/texmf
 #
 #	* Assume each package supports teTeX{2,3} by default.
-#	  To change the supported latex versions, define TEX_ACCEPTED
+#	  To change the supported TeX versions, define TEX_ACCEPTED
 #	  explicitly before including mk/tex.buildlink3.mk.  Note that the
 #	  order is important.
 #
 # * Optionally set TEX_DEPMETHOD to "build" to only add a build-time
-#   dependency on Latex. That may be useful for creating documentation
+#   dependency on TeX.  That may be useful for creating documentation
 #
 # Variables for users:
 #
 # TEX_DEFAULT
 #   Description:
-#     The user's favorite latex implementation
+#     The user's favorite TeX implementation
 #   Possible values:
 #     teTeX1, teTeX2, teTeX3
 #   Default value:
@@ -40,7 +40,7 @@
 #
 # TEX_DEPMETHOD
 #  Description:
-#    Set latex as DEPENDS or BUILD_DEPENDS
+#    Set tex as DEPENDS or BUILD_DEPENDS
 #  Possible values:
 #    run, build
 #  Default value:
@@ -72,7 +72,7 @@
 #
 # TEX_TYPE
 #   Description:
-#     The type of the used latex package
+#     The type of the used TeX package
 #   Possible values:
 #     teTeX1, teTeX2, teTeX3
 
@@ -95,7 +95,7 @@ BUILDLINK_PKGSRCDIR.teTeX2=	../../print/teTeX-bin
 BUILDLINK_DEPENDS.teTeX3=	teTeX-bin-3.[0-9]*
 BUILDLINK_PKGSRCDIR.teTeX3=	../../print/teTeX3-bin
 
-# Determine the Latex version to be used.
+# Determine the TeX version to be used.
 #
 .if !defined(_TEX_TYPE)
 _TEX_TYPE=	${TEX_DEFAULT}
@@ -142,7 +142,7 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/ 
 
 .if ${TEX_TYPE} == "none"
 PKG_FAIL_REASON=	\
-	"${_TEX_TYPE} is not an acceptable latex version for ${PKGNAME}."
+	"${_TEX_TYPE} is not an acceptable TeX version for ${PKGNAME}."
 .else
 .if (${TEX_DEPMETHOD} == "build")
 BUILD_DEPENDS+=	${_TEX_DEPENDENCY}:${_TEX_PKGSRCDIR}
