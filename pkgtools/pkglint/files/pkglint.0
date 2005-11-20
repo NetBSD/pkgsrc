@@ -88,15 +88,8 @@ DDEESSCCRRIIPPTTIIOONN
            [[nnoo--]]ddiirreeccttccmmdd      Warn if a system command name is used instead
                                of a variable (e.g. sed instead of ${SED}).
 
-           [[nnoo--]]eexxeecc           Warn if a file in the package directory is exe-
-                               cutable.  Most files should not be executable
-                               until they are installed.
-
            [[nnoo--]]oorrddeerr          Warn if Makefile variables are not in the pre-
                                ferred order.
-
-           [[nnoo--]]ppaarreenn          Warn if variables are used like $(VAR) in Make-
-                               files.  They should always be used like ${VAR}.
 
            [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted
                                alphabetically.  This warning is disabled by
