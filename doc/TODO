@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4188 2005/11/20 16:50:39 wiz Exp $
+$NetBSD: TODO,v 1.4189 2005/11/20 18:57:07 minskim Exp $
 
 Suggested new packages
 ======================
@@ -477,7 +477,6 @@ Suggested package updates
 	o dspam-3.6.1
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.6
-	o dvipdfmx-20050627
 	o dvipng-1.7 [http://sourceforge.net/projects/dvipng/]
 	o dx-4.3.3
 	o dylan-compiler-2.4.0
