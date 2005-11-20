@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.50 2005/08/26 07:24:53 reed Exp $
+# $NetBSD: pre-build,v 1.51 2005/11/20 14:55:13 rillig Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -25,7 +25,6 @@ PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
 # These have defaults set by bsd.bulk-pkg.mk and may be overridden in
 # /etc/mk.conf
 BROKENF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENFILE )`;
-export BROKENF
 if [ "$BROKENF" = "" ]; then
 	echo "Had problems determining the name of the .broken files"
 	exit 1
@@ -277,6 +276,7 @@ if [ x"$BMAKE" = x"bmake" ]; then
 fi
 
 if [ -f mk/bulk/pre-build.local ]; then
+	export BROKENF
 	. mk/bulk/pre-build.local
 fi
 
