@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.81 2005/11/19 17:31:40 rillig Exp $
+# $NetBSD: build,v 1.82 2005/11/20 11:18:45 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -259,6 +259,7 @@ if cd "${pkglint_dir}"; then
 	GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep` || fail=yes
 	SED=`${BMAKE} show-var VARNAME=SED USE_TOOLS=sed` || fail=yes
 	MAIL_CMD=`${BMAKE} show-var VARNAME=MAIL_CMD USE_TOOLS=mail` || fail=yes
+	MKDIR=`${BMAKE} show-var VARNAME=MKDIR USE_TOOLS=mkdir` || fail=yes
 	PERL5=`${BMAKE} show-var VARNAME=PERL5 USE_TOOLS=perl` || fail=yes
 	MACHINE_ARCH=`${BMAKE} show-var VARNAME=MACHINE_ARCH` || fail=yes
 	OPSYS=`${BMAKE} show-var VARNAME=OPSYS` || fail=yes
@@ -287,6 +288,7 @@ echo "BUILDLOG        = $BUILDLOG"
 echo "STARTFILE       = $STARTFILE"
 echo "AWK             = $AWK"
 echo "GREP            = $GREP"
+echo "MKDIR           = $MKDIR"
 echo "SED             = $SED"
 echo "MAIL_CMD        = $MAIL_CMD"
 echo "PERL5           = $PERL5"
@@ -311,6 +313,7 @@ if [ $fail = "yes" -o \
 	-z "$STARTFILE" -o \
 	-z "$AWK" -o \
 	-z "$GREP" -o \
+	-z "$MKDIR" -o \
 	-z "$SED" -o \
 	-z "$MAIL_CMD" -o \
 	-z "$PERL5" -o \
@@ -328,6 +331,13 @@ fi
 # Get the location of commonly used files
 #
 main_buildlog="${BULKFILESDIR}/${BUILDLOG}"
+
+#
+# Create the directory for the log files if necessary
+#
+if [ "${BULKFILESDIR}" != "${pkgsrc_dir}" ]; then
+	${MKDIR} "${BULKFILESDIR}"
+fi
 
 #
 # Install prerequisite packages.
@@ -350,6 +360,11 @@ if [ "x$restart" != "xyes" ]; then
 	( cd "${pkgsrc_dir}" \
 	  && env PKGLIST="${PKGLIST-}" ${BMAKE} bulk-cache $makeargs
 	) || die "Could not create the bulk build cache."
+else
+	if [ ! -f "${ORDERFILE}" ]; then
+		die	"The ${ORDERFILE} does not exist." \
+			"(You cannot resume a bulk build that has not yet started.)"
+	fi
 fi
 
 #
