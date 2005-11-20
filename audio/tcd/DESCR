@@ -1,0 +1,2 @@
+Tcd is a tiny audio CD player using ncurses. It can play CDs and manage
+a little CD database in cddb format.
