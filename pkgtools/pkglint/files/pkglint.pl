@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.370 2005/11/20 13:14:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.371 2005/11/20 13:59:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2527,7 +2527,7 @@ sub checkfile($) {
 		if ($basename eq "files" || $basename eq "patches" || $basename eq "CVS") {
 			# Ok
 
-		} else {
+		} elsif (!is_emptydir($fname)) {
 			log_warning($fname, NO_LINE_NUMBER, "Unknown directory name.");
 		}
 
