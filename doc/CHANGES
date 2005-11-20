@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11983 2005/11/20 11:09:19 cjep Exp $
+$NetBSD: CHANGES,v 1.11984 2005/11/20 13:30:14 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/openldap to 2.3.11nb1 [joerg 2005-11-19]
 	Added audio/tcd version 2.2.0 [rillig 2005-11-20]
 	Updated mail/nail to 11.25 [cjep 2005-11-20]
+	Added emulators/vmips version 1.3.1 [rillig 2005-11-20]
