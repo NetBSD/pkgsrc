@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1762 2005/11/19 12:30:41 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1763 2005/11/20 01:11:14 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -2782,8 +2782,9 @@ _SU_TARGET=								\
 			${PRE_ROOT_CMD};				\
 		fi;                                             	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming ${ROOT_USER}@`${HOSTNAME_CMD}` to $$action ${PKGBASE}."; \
+		${ECHO_MSG} "cd ${.CURDIR}; ${SETENV} PATH='$${PATH}:${SU_CMD_PATH_APPEND}' ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 		${ECHO_N} "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} 'cd ${.CURDIR}; path=$${PATH}:${SU_CMD_PATH_APPEND:Q}; ${SETENV} PATH="$${path}" ${MAKE} '"$$args"' ${MAKEFLAGS} '"$$realtarget"' '"$$realflags"''; \
+		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH='$${PATH}:${SU_CMD_PATH_APPEND}' ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
 
 .PHONY: do-su-install
