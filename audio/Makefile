@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.291 2005/11/08 15:58:16 tonio Exp $
+# $NetBSD: Makefile,v 1.292 2005/11/20 11:47:06 rillig Exp $
 #
 
 COMMENT=	Audio tools
@@ -229,6 +229,7 @@ SUBDIR+=	streamripper
 SUBDIR+=	streamtuner
 SUBDIR+=	sweep
 SUBDIR+=	taglib
+SUBDIR+=	tcd
 SUBDIR+=	tcl-snack
 SUBDIR+=	terminatorx
 SUBDIR+=	tfmxplay
