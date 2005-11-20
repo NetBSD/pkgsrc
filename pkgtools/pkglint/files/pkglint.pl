@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.373 2005/11/20 19:58:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.374 2005/11/20 20:09:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -622,17 +622,13 @@ my (%checks) = (
 
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
-my $opt_warn_exec	= true;
 my $opt_warn_order	= true;
-my $opt_warn_paren	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
-	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
-	"paren"		=> [\$opt_warn_paren, "warn about use of \$(VAR) instead of \${VAR} in Makefiles"],
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 );
@@ -1001,7 +997,7 @@ sub get_subdirs($) {
 sub checkperms($) {
 	my ($fname) = @_;
 
-	if ($opt_warn_exec && -f $fname && -x $fname && !is_committed($fname)) {
+	if (-f $fname && -x $fname && !is_committed($fname)) {
 		log_warning($fname, NO_LINE_NUMBER, "Should not be executable.");
 	}
 }
