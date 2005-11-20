@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.106 2005/11/20 10:55:43 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.107 2005/11/20 12:27:18 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -22,6 +22,7 @@ use File::Basename;
 use Cwd 'realpath', 'getcwd';
 
 # Buildtime configuration
+my $conf_make			= '@MAKE@';
 my $conf_pkgsrcdir		= '@PKGSRCDIR@';
 my $conf_prefix			= '@PREFIX@';
 
