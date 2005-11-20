@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2005/11/19 09:10:25 agc Exp $
+# $NetBSD: Makefile,v 1.403 2005/11/20 17:00:07 xtraeme Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -66,6 +66,7 @@ SUBDIR+=	exif
 SUBDIR+=	exifprobe
 SUBDIR+=	exiftags
 SUBDIR+=	exiv2
+SUBDIR+=	f4l
 SUBDIR+=	fbm
 SUBDIR+=	feh
 SUBDIR+=	flphoto
