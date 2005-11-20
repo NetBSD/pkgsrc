@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11987 2005/11/20 17:54:28 magick Exp $
+$NetBSD: CHANGES,v 1.11988 2005/11/20 18:55:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gtk2 to 2.8.7 [wiz 2005-11-20]
 	Added graphics/f4l version 0.2 [xtraeme 2005-11-20]
 	Updated misc/nxtvepg to 2.7.6 [magick 2005-11-20]
+	Updated print/dvipdfmx to 0.0.0.20050627 [minskim 2005-11-20]
