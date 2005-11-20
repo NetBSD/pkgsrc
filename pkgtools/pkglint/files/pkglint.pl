@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.369 2005/11/20 10:07:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.370 2005/11/20 13:14:17 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1589,6 +1589,11 @@ sub checktext_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Dependency") {
+		if ($value eq $value_novar && $value !~ qr"^[-*+.0-9<=>\@A-Z_a-z\[\]]+$") {
+			$line->log_warning("\"${value}\" is not a valid dependency.");
+		}
+
+	} elsif ($type eq "DependencyWithPath") {
 		if ($value =~ regex_unresolved) {
 			# don't even try to check anything
 		} elsif ($value =~ qr":\.\./\.\./([^/]+)/([^/]+)$") {
@@ -1683,8 +1688,30 @@ sub checktext_basic_vartype($$$$$) {
 			$line->log_error("${varname} must not be set outside the package Makefile.");
 		}
 
+	} elsif ($type eq "PlatformTuple") {
+		my $part = qr"(?:\[[^\]]+\]|[^-\[])+";
+		if ($value =~ qr"^(${part})-(${part})-(${part})$") {
+			my ($opsys, $os_version, $arch) = ($1, $2, $3);
+
+			if ($opsys !~ qr"^(?:\*|Darwin|DragonFly|FreeBSD|Interix|Linux|NetBSD|OpenBSD|SunOS|IRIX)$") {
+				$line->log_warning("Unknown operating system: ${opsys}");
+			}
+			# no check for $os_version
+			if ($arch !~ qr"^(?:\*|i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$") {
+				$line->log_warning("Unknown hardware architecture: ${arch}");
+			}
+
+		} else {
+			$line->log_warning("\"${value}\" is not a valid platform tuple.");
+		}
+			
 	} elsif ($type eq "Readonly") {
 		$line->log_error("\"${varname}\" is a read-only variable and therefore must not be modified.");
+
+	} elsif ($type eq "RelativePkgDir") {
+		if ($value !~ qr"^\.\./\.\./[^/]+/[^/]+$") {
+			$line->log_warning("\"${value}\" is not a valid relative package directory.");
+		}
 
 	} elsif ($type eq "Stage") {
 		if ($value !~ qr"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
