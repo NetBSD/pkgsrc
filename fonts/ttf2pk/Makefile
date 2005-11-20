@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/13 05:30:11 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/11/20 06:27:24 minskim Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -22,7 +22,7 @@ BUILD_DIRS=		${T2PSRC}
 BUILD_TARGET=		depend all
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf
+USE_TOOLS+=		autoconf213
 
 TEXMF=			${PKG_LOCALTEXMFPREFIX}
 INSTALLATION_DIRS=	bin man/man1
