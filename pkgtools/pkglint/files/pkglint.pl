@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.372 2005/11/20 19:04:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.373 2005/11/20 19:58:46 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -30,8 +30,9 @@
 
 package PkgLint::Util;
 #==========================================================================
-# This package is a catch-all for everything that does not fit in any other
-# package. Currently it contains the boolean constants C<false> and C<true>.
+# This package is a catch-all for subroutines that are not application-spe-
+# cific. Currently it contains the boolean constants C<false> and C<true>,
+# as well as a function to print text in a table format.
 #==========================================================================
 BEGIN {
 	use Exporter;
@@ -43,6 +44,9 @@ BEGIN {
 use constant false	=> 0;
 use constant true	=> 1;
 
+# Prints the C<$table> on the C<$out> stream. The C<$table> shall be an
+# array of rows, each row shall be an array of cells, and each cell shall
+# be a string.
 sub print_table($$) {
 	my ($out, $table) = @_;
 	my (@width) = ();
@@ -72,17 +76,19 @@ sub print_table($$) {
 
 package PkgLint::Logging;
 #==========================================================================
-# This package provides the subroutines log_error, log_warning and log_info
-# for printing messages to the user in a common format. The three subrou-
-# tines have the parameters $file, $lineno and $message. In case there's no
-# file appropriate for the message, NO_FILE may be passed, likewise for
-# $lineno and NO_LINE_NUMBER. At the end of the program, the subroutine
-# print_summary_and_exit should be called.
+# This package provides subroutines for printing messages to the user in a
+# common format. The subroutines all have the parameters C<$fname>,
+# C<$lineno> and C<$message>. In case there's no appropriate filename for
+# the message, NO_FILE may be passed, likewise for C<$lineno> and
+# NO_LINE_NUMBER. Before printing, the filename is normalized, that is,
+# "/foo/bar/../../" components are removed, as well as "." components.
 #
+At the end of the program, the subroutine
+# print_summary_and_exit should be called. 
 # Examples:
 #   log_error(NO_FILE, NO_LINE_NUMBER, "Invalid command line.");
-#   log_warning($file, NO_LINE_NUMBER, "Not found.");
-#   log_info($file, $lineno, sprintf("invalid character (0x%02x).", $c));
+#   log_warning($fname, NO_LINE_NUMBER, "Not found.");
+#   log_info($fname, $lineno, sprintf("invalid character (0x%02x).", $c));
 #==========================================================================
 
 use strict;
@@ -228,8 +234,22 @@ sub set_show_source_flag() {
 
 package PkgLint::FileUtil::Line;
 #==========================================================================
-# A Line is a class that contains the read-only fields C<file>, C<lineno>
-# and C<text>, as well as some methods for printing diagnostics easily.
+# When files are read in by pkglint, they are interpreted in terms of
+# lines. For Makefiles, line continuations are handled properly, allowing
+# multiple physical lines to end in a single logical line. For other files
+# there is a 1:1 translation.
+#
+# A difference between the physical and the logical lines is that the
+# physical lines include the line end sequence, whereas the logical lines
+# do not.
+#
+# A logical line is a class having the read-only fields C<file>,
+# C<lines>, C<text>, C<physlines> and C<is_changed>, as well as some
+# methods for printing diagnostics easily.
+#
+# Some other methods allow modification of the physical lines, but leave
+# the logical line (the C<text>) untouched. These methods are used in the
+# --autofix mode.
 #==========================================================================
 BEGIN {
 	import PkgLint::Util qw(
@@ -254,7 +274,7 @@ sub new($$$$) {
 sub file($) {
 	return shift(@_)->[FILE];
 }
-sub lineno($) {
+sub lines($) {
 	return shift(@_)->[LINES];
 }
 sub text($) {
@@ -341,8 +361,12 @@ sub delete($) {
 
 package PkgLint::FileUtil;
 #==========================================================================
-# This package provides the subroutine load_file, which reads a file
-# completely into memory as an array of lines.
+# This package provides subroutines for loading and saving line-oriented
+# files. The load_file() subroutine loads a file completely into memory,
+# optionally handling continuation line folding. The load_lines() subrou-
+# tine is an abbreviation for the common case of loading files without
+# continuation lines. The save_autofix_lines() subroutine examines an array
+# of lines if some of them have changed. It then saves the modified files.
 #==========================================================================
 use strict;
 use warnings;
@@ -507,6 +531,33 @@ sub save_autofix_changes($) {
 #== End of PkgLint::FileUtil ==============================================
 
 package main;
+#==========================================================================
+# This package contains the application-specific code of pkglint.
+# Most subroutines in this package follow a strict naming convention:
+#
+# The get_*() functions provide easy access to important non-trivial data
+# structures that are loaded from external files and are therefore cached.
+#
+# The is_*() functions return a boolean value and have no side effects.
+#
+# The checkline_*() procedures check a single line for compliance with some
+# rules.
+#
+# The checklines_*() procedures check an array of lines for compliance.
+# Usually they make use of several checkline_*() procedures.
+#
+# The checkfile_*() procedures load a file and check the lines of that
+# file. Usually they make use of several checklines_*() and checkline_*()
+# procedures.
+#
+# The checkdir_*() procedures check the files of a directory and call
+# checkfile_*() on them.
+#
+# Note: The order of subroutines in the file is mostly historical. One
+# important property is that there are no back-references, that is, if
+# you start reading the code from the top to the bottom you won't find a
+# call to a subroutine you haven't yet seen.
+#==========================================================================
 use strict;
 use warnings;
 
@@ -531,13 +582,18 @@ BEGIN {
 	);
 }
 
+#
 # Buildtime configuration
+#
+
 use constant conf_rcsidstring	=> 'NetBSD';
 use constant conf_distver	=> '@DISTVER@';
 use constant conf_make		=> '@MAKE@';
 use constant conf_datadir	=> '@DATADIR@';
 
+#
 # Command Line Options
+#
 
 my $opt_check_ALTERNATIVES = true;
 my $opt_check_bl3	= true;
@@ -641,13 +697,19 @@ my (@options) = (
 	  } ]
 );
 
+#
+# Commonly used regular expressions.
+#
+
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 use constant regex_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
 use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}\[]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
-# Global variables
+#
+# Global variables.
+#
 
 my $current_dir;		# The currently checked directory.
 my $is_wip;			# Is the current directory from pkgsrc-wip?
@@ -666,6 +728,10 @@ my $seen_Makefile_common;	# Does the package have any .includes?
 my @todo_items;			# The list of directory entries that still need
 				# to be checked. Mostly relevant with
 				# --recursive.
+
+#
+# Command line parsing and handling.
+#
 
 sub help($$$) {
 	my ($out, $exitval, $show_all) = @_;
@@ -751,6 +817,10 @@ sub parse_command_line() {
 		}
 	}
 }
+
+#
+# Loading pkglint-specific data from files, part 1.
+#
 
 sub load_make_vars_typemap() {
 	my ($vartypes);
@@ -866,6 +936,10 @@ sub get_dist_sites_names() {
 	}
 	return $load_dist_sites_names;
 }
+
+#
+# Miscellaneous functions
+#
 
 sub is_committed($) {
 	my ($fname) = @_;
@@ -997,7 +1071,7 @@ sub checkline_rcsid($$) {
 }
 
 #
-# Subroutines to check an array of lines.
+# Procedures to check an array of lines, part 1.
 #
 
 sub checklines_trailing_empty_lines($) {
@@ -1014,7 +1088,7 @@ sub checklines_trailing_empty_lines($) {
 }
 
 #
-# Subroutines to check a file.
+# Procedures to check a file, part 1.
 #
 
 sub checkfile_DESCR($) {
@@ -1247,6 +1321,10 @@ sub checkfile_extra($) {
 	checkperms($fname);
 }
 
+#
+# Procedures to check an array of lines, part 2.
+#
+
 sub checklines_multiple_patches($) {
 	my ($lines) = @_;
 	my ($files_in_patch, $patch_state, $line_type, $dellines);
@@ -1308,6 +1386,10 @@ sub checklines_multiple_patches($) {
 	}
 }
 
+#
+# Procedures to check a file, part 2.
+#
+
 sub checkfile_patches_patch($) {
 	my ($fname) = @_;
 	my ($lines);
@@ -1335,6 +1417,10 @@ sub checkfile_patches_patch($) {
 
 	checklines_multiple_patches($lines);
 }
+
+#
+# Loading package-specific data from files.
+#
 
 sub readmakefile($$$$);
 sub readmakefile($$$$) {
@@ -1419,6 +1505,10 @@ sub readmakefile($$$$) {
 	}
 	return $contents;
 }
+
+#
+# Loading data from pkglint-specific files, part 2.
+#
 
 # The pkglint author thinks that variables containing lists of things
 # should have a name indicating some plural form. Sadly, there are other
@@ -1537,7 +1627,11 @@ sub get_tool_names() {
 	return $get_tool_names_value;
 }
 
-sub checktext_basic_vartype($$$$$) {
+#
+# Procedures to check a single line, part 3.
+#
+
+sub checkline_basic_vartype($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 	my ($value_novar);
 
@@ -1849,15 +1943,19 @@ sub checkline_Makefile_vartype($$) {
 
 			if (defined($element_type)) {
 				foreach my $v (@values) {
-					checktext_basic_vartype($line, $varname, $element_type, $v, $comment);
+					checkline_basic_vartype($line, $varname, $element_type, $v, $comment);
 				}
 			}
 
 		} else {
-			checktext_basic_vartype($line, $varname, $type, $value, $comment);
+			checkline_basic_vartype($line, $varname, $type, $value, $comment);
 		}
 	}
 }
+
+#
+# Procedures to check an array of lines, part 3.
+#
 
 my $checklines_Makefile_varuse_map = undef;
 sub checklines_Makefile_varuse($) {
@@ -2204,7 +2302,7 @@ sub checklines_package_Makefile($) {
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
-		if ($line->lineno eq "1") {
+		if ($line->lines eq "1") {
 			checkline_rcsid_regex($line, qr"#\s+", "# ");
 		}
 
@@ -2294,6 +2392,10 @@ sub checklines_package_Makefile($) {
 	checklines_trailing_empty_lines($lines);
 }
 
+#
+# Miscellaneous procedures.
+#
+
 sub expand_variable($$) {
 	my ($whole, $varname) = @_;
 	my ($value, $re);
@@ -2329,6 +2431,10 @@ sub set_default_value($$) {
 		${$varref} = $value;
 	}
 }
+
+#
+# Loading data from package-specific files, part 2.
+#
 
 sub load_package_Makefile($$$$) {
 	my ($subr) = "load_package_Makefile";
@@ -2381,6 +2487,10 @@ sub load_package_Makefile($$$$) {
 	${$ref_all_lines} = $all_lines;
 	return true;
 }
+
+#
+# Procedures to check a file, part 3.
+#
 
 sub checkfile_ALTERNATIVES($) {
 	my ($fname) = @_;
@@ -2579,6 +2689,10 @@ sub checkfile($) {
 		$opt_check_extra and checkfile_extra($fname);
 	}
 }
+
+#
+# Procedures to check a directory including the files in it.
+#
 
 sub checkdir_root() {
 	my ($fname) = "${current_dir}/Makefile";
@@ -2866,6 +2980,10 @@ sub checkdir_package() {
 		log_warning("${current_dir}/scripts", NO_LINE_NUMBER, "This directory and its contents are deprecated! Please call the script(s) explicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
 }
+
+#
+# Selecting the proper checking procedures for a directory entry.
+#
 
 sub checkitem($) {
 	my ($item) = @_;
