@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2005/11/20 15:08:35 tonio Exp $
+
+--- adig.c.orig	2001-05-18 22:59:51.000000000 +0200
++++ adig.c
+@@ -35,6 +35,10 @@ static const char rcsid[] = "$Id: adig.c
+ #define	INADDR_NONE 0xffffffff
+ #endif
+ 
++#ifndef T_SRV
++#define T_SRV 33
++#endif /* T_SRV */
++
+ extern int optind;
+ extern char *optarg;
+ 
