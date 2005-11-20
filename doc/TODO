@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4185 2005/11/19 04:40:50 rillig Exp $
+$NetBSD: TODO,v 1.4186 2005/11/20 11:55:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,6 +309,7 @@ Suggested package updates
 
 	o 0verkill-0.16
 	o 9base-20051114 [pkg/32095]
+	o ArX2-2.2.4
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o GMT-4.0
@@ -371,6 +372,7 @@ Suggested package updates
 	o aspell-faroese-0.2.22
 	o aspell-ukrainian-1.1
 	o ast-ksh-20040229
+	o asterisk-1.2.0
 	o astyle-1.15.3
 	o aterm-1.0.0
 	o autogen-5.7.3
@@ -388,7 +390,7 @@ Suggested package updates
 	o benchfft-3.1
 	o binutils-2.16.1
 	o bioperl-1.5.0
-	o bittorrent-4.1.7
+	o bittorrent-4.1.8
 	o bittorrent-gui-4.1.7
 	o blackbox-0.70
 	o blur6ex-0.3.462
@@ -767,6 +769,7 @@ Suggested package updates
 	o mjpegtools-1.8.0
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.6.0
+	o mldonkey-2.7.0
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
@@ -788,7 +791,6 @@ Suggested package updates
 	o multitail-3.6.0
 	o muse-0.9.1
 	o nagios-2.0b3 [replacing netsaint]
-	o nail-11.25
 	o nano-1.3.8
 	o nap-1.5.3
 	o navi2ch-1.7.5
@@ -1122,7 +1124,7 @@ Suggested package updates
 	o rep-gtk-0.18
 	o resize_image-0.7
 	o rhythmbox-0.9.0
-	o riece-2.0.0
+	o riece-2.0.2
 	o rio500-0.8.1
 	o ripmime-1.4.0.4
 	o rman-3.2
@@ -1161,6 +1163,7 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scilab-3.1
+	o scmxx-0.8.2
 	o scponly-4.1
 	o scrollz-1.9.5
 	o sdig-0.40
