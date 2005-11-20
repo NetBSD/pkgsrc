@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2005/11/20 18:51:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/11/20 19:14:50 minskim Exp $
 bin/dvipdfmx
+share/examples/dvipdfmx/dvipdfmx.cfg
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/78-EUC-H
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/78-EUC-V
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/78-H
@@ -202,7 +203,7 @@ ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/UniKSCms-UCS2-V
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/V
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/WP-Symbol
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/cid-x.map
-${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx-base.cfg
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/glyphlist.txt
 @unexec ${RM} -f %D/${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx.cfg
 @dirrm ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap
+@dirrm share/examples/dvipdfmx
