@@ -35,11 +35,12 @@ Table of Contents
 
 I. The pkgsrc user's guide
 
-    2. Where to get pkgsrc
+    2. Where to get pkgsrc and how to keep it up-to-date
 
         2.1. As tar file
         2.2. Via SUP
         2.3. Via CVS
+        2.4. Keeping pkgsrc up-to-date via CVS
 
     3. Using pkgsrc on systems other than NetBSD
 
@@ -438,11 +439,12 @@ Part I. The pkgsrc user's guide
 
 Table of Contents
 
-2. Where to get pkgsrc
+2. Where to get pkgsrc and how to keep it up-to-date
 
     2.1. As tar file
     2.2. Via SUP
     2.3. Via CVS
+    2.4. Keeping pkgsrc up-to-date via CVS
 
 3. Using pkgsrc on systems other than NetBSD
 
@@ -516,13 +518,14 @@ Table of Contents
     7.14. How do I change the location of configuration files?
     7.15. Automated security checks
 
-Chapter 2. Where to get pkgsrc
+Chapter 2. Where to get pkgsrc and how to keep it up-to-date
 
 Table of Contents
 
 2.1. As tar file
 2.2. Via SUP
 2.3. Via CVS
+2.4. Keeping pkgsrc up-to-date via CVS
 
 There are three ways to get pkgsrc. Either as a tar file, via SUP, or via CVS.
 All three ways are described here.
@@ -562,6 +565,17 @@ make sure you have CVS_RSH set as above, then do:
 Please also note that it is possible to have multiple copies of the pkgsrc
 hierarchy in use at any one time - all work is done relatively within the
 pkgsrc tree.
+
+2.4. Keeping pkgsrc up-to-date via CVS
+
+If your copy of pkgsrc contains a lot of CVS directories, you can update it
+using the cvs(1) program. First, cd to the top level directory of pkgsrc. Then
+run cvs -q update -dP, and you're done.
+
+If that doesn't work and the file CVS/Root contains the string ":pserver:", you
+have to run cvs login once to get known to the NetBSD CVS server. The cvs
+utility will then ask you for a password. Just enter "anoncvs". Then try again
+to update.
 
 Chapter 3. Using pkgsrc on systems other than NetBSD
 
@@ -611,11 +625,11 @@ Installing the bootstrap kit should be as simple as:
 # cd pkgsrc/bootstrap
 # ./bootstrap
 
-See Chapter 2, Where to get pkgsrc for other ways to get pkgsrc before
-bootstrapping. The given bootstrap command will use the defaults of /usr/pkg
-for the prefix where programs will be installed in, and /var/db/pkg for the
-package database directory where pkgsrc will do its internal bookkeeping.
-However, these can also be set using command-line arguments.
+See Chapter 2, Where to get pkgsrc and how to keep it up-to-date for other ways
+to get pkgsrc before bootstrapping. The given bootstrap command will use the
+defaults of /usr/pkg for the prefix where programs will be installed in, and /
+var/db/pkg for the package database directory where pkgsrc will do its internal
+bookkeeping. However, these can also be set using command-line arguments.
 
 Binary packages for the pkgsrc tools and an initial set of packages is
 available for supported platforms. An up-to-date list of these can be found on
@@ -669,7 +683,7 @@ possible to use the default prefix of /usr/pkg by symlinking /usr/pkg to a
 directory on a UFS file system. Obviously, another symlink is required if you
 want to place the package database directory outside the prefix. e.g.
 
-# ./bootstrap --pkgdbdir /usr/pkg/pkgdb --pkgsrcdir /Volumes/ufs/pkgsrc
+# ./bootstrap --pkgdbdir /usr/pkg/pkgdb
 
 If you created your partitions at the time of installing Mac OS X and formatted
 the target partition as UFS, it should automatically mount on /Volumes/<volume
@@ -2133,7 +2147,7 @@ get by running pkg_info -D audit-package.
 
 If this package is installed, pkgsrc builds will use it to perform a security
 check before building any package. See Section 5.2, "Variables affecting the
-build process" for way to control this check.
+build process" for ways to control this check.
 
 Part II. The pkgsrc developer's guide
 
@@ -2180,7 +2194,7 @@ Table of Contents
     11.2. Writing buildlink3.mk files
 
         11.2.1. Anatomy of a buildlink3.mk file
-        11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
+        11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
 
     11.3. Writing builtin.mk files
 
@@ -3184,8 +3198,8 @@ dependency on pkg is added. Several important variables are set in the section:
     is selected by setting BUILDLINK_DEPMETHOD.pkg to "build". By default, the
     full dependency is used.
 
-  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS.pkg (not shown above) are lists
-    of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
+  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS. pkg (not shown above) are
+    lists of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
     library search paths. These default to "include" and "lib" respectively.
 
   * BUILDLINK_CPPFLAGS.pkg (not shown above) is the list of preprocessor flags
@@ -3224,7 +3238,7 @@ dependencies. Including these buildlink3.mk files means that the headers and
 libraries for these dependencies are also symlinked into ${BUILDLINK_DIR}
 whenever the pkg buildlink3.mk file is included.
 
-11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
+11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
 
 There are two situations that require increasing the dependency listed in
 BUILDLINK_DEPENDS.pkg after a package update:
@@ -3243,9 +3257,9 @@ settle for an older one which will not contain the necessary shared libraries.
 
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
-versions of packages work just fine with older dependencies. See
-Section 15.1.4, "Handling dependencies" for more information about dependencies
-on other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
+versions of packages work just fine with older dependencies. See Section
+15.1.4, "Handling dependencies" for more information about dependencies on
+other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
 definitions.
 
 11.3. Writing builtin.mk files
@@ -3559,9 +3573,9 @@ original copies available.
 Once the required configuration files are in place (i.e., under the examples
 hierarchy), the pkginstall framework can use them as master copies during the
 package installation to update what is in ${PKG_SYSCONFDIR}. To achieve this,
-the variables CONF_FILES and CONF_FILES_PERMS are used. Check out
-Section 12.1.2, "File manipulation" for information about their syntax and
-their purpose. Here is an example, taken from the mail/mutt package:
+the variables CONF_FILES and CONF_FILES_PERMS are used. Check out Section
+12.1.2, "File manipulation" for information about their syntax and their
+purpose. Here is an example, taken from the mail/mutt package:
 
     EGDIR=        ${PREFIX}/share/doc/mutt/samples
     CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
@@ -3758,14 +3772,14 @@ supported by the package, and any default options settings if needed.
  6. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
     default.
 
- 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE:option" pairs that map
+ 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE: option" pairs that map
     legacy /etc/mk.conf variables to their option counterparts. Pairs should be
     added with "+=" to keep the listing of global legacy variables. A warning
     will be issued if the user uses a legacy variable.
 
- 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option:new-option" pairs that map
-    options that have been renamed to their new counterparts. Pairs should be
-    added with "+=" to keep the listing of global legacy options. A warning
+ 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option: new-option" pairs that
+    map options that have been renamed to their new counterparts. Pairs should
+    be added with "+=" to keep the listing of global legacy options. A warning
     will be issued if the user uses a legacy option.
 
  9. PKG_LEGACY_OPTIONS is a list of options implied by deprecated variables
