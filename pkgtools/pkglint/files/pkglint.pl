@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.371 2005/11/20 13:59:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.372 2005/11/20 19:04:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -571,7 +571,6 @@ my $opt_warn_order	= true;
 my $opt_warn_paren	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
-my $opt_warn_vague	= false;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
@@ -580,7 +579,6 @@ my (%warnings) = (
 	"paren"		=> [\$opt_warn_paren, "warn about use of \$(VAR) instead of \${VAR} in Makefiles"],
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
-	"vague"		=> [\$opt_warn_vague, "show old (unreliable, vague) warnings"],
 );
 
 my $opt_autofix		= false;
@@ -1677,7 +1675,7 @@ sub checktext_basic_vartype($$$$$) {
 
 	} elsif ($type eq "PkgName") {
 		if ($value eq $value_novar && $value !~ regex_pkgname) {
-			$line->log_warning("\"${value}\" is not a valid package name.");
+			$line->log_warning("\"${value}\" is not a valid package name. A valid package name has the form packagename-version, where version consists only of digits, letters and dots.");
 		}
 
 	} elsif ($type eq "PkgRevision") {
@@ -2267,6 +2265,29 @@ sub checklines_package_Makefile($) {
 					$line->log_info("Use of PKGNAME in ${varname}.");
 				}
 			}
+
+		} elsif ($text =~ regex_shellcmd) {
+			my ($shellcmd) = ($1);
+
+			# TODO: parse the shell command correctly
+
+			if ($shellcmd =~ qr"\$\{MKDIR\}[^&;|]*\$\{PREFIX\}/[/0-9a-zA-Z\${}]*") {
+				$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of MKDIR.");
+			}
+
+			if ($shellcmd =~ qr"\$\{INSTALL\}([^&;|]*)") {
+				my ($args) = ($1);
+
+				if ($args =~ qr"-d" && $args !~ qr"-[ogm]") {
+					$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of \${INSTALL}${args}.");
+				}
+			}
+
+			if ($shellcmd =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
+				my ($mkdir_cmd) = ($1);
+
+				$line->log_note("You don't need to use \"-\" before ${mkdir_cmd}.");
+			}
 		}
 	}
 
@@ -2423,7 +2444,7 @@ sub checkfile_package_Makefile($$$$) {
 	    && !exists($makevar->{"NO_PKG_REGISTER"})
 	    && !-f "${current_dir}/$pkgdir/PLIST"
 	    && !-f "${current_dir}/$pkgdir/PLIST.common") {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "No PLIST or PLIST.common, and PLIST_SRC and NO_PKG_REGISTER unset. Are you sure PLIST handling is ok?");
+		log_warning($fname, NO_LINE_NUMBER, "Neither PLIST nor PLIST.common exist, and PLIST_SRC and NO_PKG_REGISTER are unset. Are you sure PLIST handling is ok?");
 	}
 
 	if (exists($makevar->{"NO_CHECKSUM"})) {
@@ -2436,27 +2457,10 @@ sub checkfile_package_Makefile($$$$) {
 		}
 	}
 
-	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${MKDIR} $1: consider using INSTALL_*_DIR.");
-	}
-	if ($whole =~ m|\${INSTALL}(.*)\n|) {
-		my $args = $1;
-		if ($args =~ /-d/) {
-			if ($args !~ /-[ogm]/) {
-				$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "\${INSTALL}$args: " .
-					"consider using INSTALL_*_DIR.");
-			}
-		}
-	}
-	if ($whole =~ /\n\t-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)/g) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "$1: no need to use '-' before command.");
-	}
-
 	checklines_direct_tools($main_lines);
 
 	if ($whole =~ /etc\/rc\.d/) {
-		$opt_warn_vague && log_warning(NO_FILE, NO_LINE_NUMBER, "Use RCD_SCRIPTS mechanism to install rc.d ".
-			"scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
+		log_warning($fname, NO_LINE_NUMBER, "Use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
 
 	if (exists($makevar->{"MASTER_SITES"})) {
@@ -2475,15 +2479,15 @@ sub checkfile_package_Makefile($$$$) {
 	$pkgname      = expand_variable($whole, "PKGNAME");
 	$distfiles    = expand_variable($whole, "DISTFILES");
 
-	if ($opt_warn_vague && defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
+	if (defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
+		log_warning($fname, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
 	}
-	if ($opt_warn_vague && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname !~ regex_pkgname) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "PKGNAME should have the form packagename-version, where version consists only of digits, letters and dots.");
+	if (defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname !~ regex_pkgname) {
+		log_warning($fname, NO_LINE_NUMBER, "PKGNAME should have the form packagename-version, where version consists only of digits, letters and dots.");
 	}
 
-	if ($opt_warn_vague && !defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
+	if (!defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {
+		log_warning($fname, NO_LINE_NUMBER, "As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
 	}
 
 	if (!defined($pkgname)) {
