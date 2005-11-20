@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4186 2005/11/20 11:55:08 wiz Exp $
+$NetBSD: TODO,v 1.4187 2005/11/20 13:31:41 rillig Exp $
 
 Suggested new packages
 ======================
@@ -66,11 +66,6 @@ Suggested new packages
 	info2man
 	http://freshmeat.net/projects/info2man/
 	requires perl, provides info2man and info2pod
-
-	vmips
-	http://vmips.sourceforge.net/
-	vmips is a virtual machine simulator based around a MIPS
-	R3000 RISC CPU core.
 
 	sgmltools-lite [wip/sgmltools-lite, PR 14849]
 	Generates various output formats from DocBook SGML documents
