@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.51 2005/11/20 14:55:13 rillig Exp $
+# $NetBSD: pre-build,v 1.52 2005/11/20 15:25:39 rillig Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -10,7 +10,7 @@
 
 # Pull in USR_PKGSRC, CVS_USER:
 if [ -f "$BULK_BUILD_CONF" ]; then
-    . $BULK_BUILD_CONF
+    . "$BULK_BUILD_CONF"
 else
     . `dirname $0`/build.conf
 fi
@@ -101,13 +101,13 @@ DEPOTBASE=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=DEPOTBASE)`
 PKG_TOOLS_BIN=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=PKG_TOOLS_BIN)`
 
 for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
-	echo Removing all installed packages in $dbdir
+	echo "Removing all installed packages in ${dbdir}"
 	if [ -d $dbdir ]; then
 		cd $dbdir
 		for pkg in *
 		do
 			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
-				echo ${PKG_TOOLS_BIN}/pkg_delete -r $pkg
+				echo "${PKG_TOOLS_BIN}/pkg_delete -r ${pkg}"
 				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -r $pkg
 			fi
 		done
@@ -118,7 +118,7 @@ for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
 		for pkg in *
 		do
 			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
-				echo ${PKG_TOOLS_BIN}/pkg_delete -f $pkg
+				echo "${PKG_TOOLS_BIN}/pkg_delete -f ${pkg}"
 				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -f $pkg
 			fi
 		done
@@ -152,7 +152,7 @@ rm -fr /tmp/mod*
 
 # Clean up state files
 cd ${USR_PKGSRC}
-echo Cleaning up leftover state files from previous runs
+echo "Cleaning up leftover state files from previous runs"
 rm -f */*/$BROKENF */*/$BRKWRKLOG */*/$BLDLOG
 rm -f $BROKENF $BRKWRKLOG $BLDLOG $STARTFILE
 
@@ -164,22 +164,22 @@ rm -f $BROKENF $BRKWRKLOG $BLDLOG $STARTFILE
 #
 if [ "$CVS_USER" != "" ]; then
 	if [ ! -f /usr/bin/cvs ]; then
-		echo Installing required cvs pkgs for CVS update
+		echo "Installing required cvs pkgs for CVS update"
 		( cd ${USR_PKGSRC}/devel/cvs ; ${BMAKE} bulk-install )
 	fi
 	if [ ! -f /usr/bin/ssh ]; then
-		echo Installing required ssh pkgs for CVS update
+		echo "Installing required ssh pkgs for CVS update"
 		( cd ${USR_PKGSRC}/security/ssh ; ${BMAKE} bulk-install )
 	fi
-	echo Performing CVS update - this will take some time
+	echo "Performing CVS update - this will take some time"
 	su - ${CVS_USER} -c "stty sane ; cd ${USR_PKGSRC} ;                  \
 		env CVS_RSH=ssh cvs -q update -Pd ${CVS_FLAGS} || exit 0"
         if [ $? != 0 ]
         then
-                echo CVS update not successful, aborting.
+                echo "CVS update not successful, aborting."
                 exit 1
         fi
-	echo CVS update done.
+	echo "CVS update done."
 fi
 
 #
@@ -199,7 +199,7 @@ yes|YES)
 	echo "Creating lintpkgsrc cache database."
 	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -E $LINTPKGSRC_DB
 	lintpkgsrc_cache="-I $LINTPKGSRC_DB"
-	echo done.
+	echo "done."
 	;;
 *)
 	lintpkgsrc_cache=''
@@ -210,7 +210,7 @@ case "$PRUNEDISTFILES" in
 yes|YES)
 	echo "Removing old/broken distfiles"
 	lintpkgsrc $lintpkgsrc_cache -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
-	echo done.
+	echo "done."
 	;;
 *)
 	echo "Skipping distfile pruning."
@@ -221,7 +221,7 @@ case "$PRUNEPACKAGES" in
 yes|YES)
 	echo "Removing old (out of date) binary packages"
 	lintpkgsrc $lintpkgsrc_cache -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
-	echo done.
+	echo "done."
 	;;
 *)
 	echo "Skipping packages pruning."
@@ -239,7 +239,7 @@ yes|YES)
 			rm $f
 		fi
 	done
-	echo done.
+	echo "done."
 	;;
 *)
 	echo "Skipping pruning of packages links."
@@ -249,13 +249,13 @@ esac
 # Clean out the packages added above so that the real bulk build
 # is started in a consistent state.
 for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
-	echo Removing all installed packages in $dbdir
+	echo "Removing all installed packages in ${dbdir}"
 	if [ -d $dbdir ]; then
 		cd $dbdir
 		for pkg in *
 		do
 			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
-				echo ${PKG_TOOLS_BIN}/pkg_delete -r $pkg
+				echo "${PKG_TOOLS_BIN}/pkg_delete -r ${pkg}"
 				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -r $pkg
 			fi
 		done
