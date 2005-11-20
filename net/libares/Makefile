@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:49 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/11/20 15:08:35 tonio Exp $
 #
 
 DISTNAME=	ares-1.1.1
@@ -12,5 +12,7 @@ MAINTAINER=	sommerfeld@NetBSD.org
 COMMENT=	Asynchronous DNS resolver library
 
 GNU_CONFIGURE=	YES
+
+CFLAGS.Darwin+=         -DBIND_8_COMPAT
 
 .include "../../mk/bsd.pkg.mk"
