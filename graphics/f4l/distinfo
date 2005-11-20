@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/20 16:58:12 xtraeme Exp $
+
+SHA1 (f4l-0.2.tar.bz2) = 63bf71482c3b05ac89dbb1b3e3e21bda68c1b62d
+RMD160 (f4l-0.2.tar.bz2) = 2c4de4c72f67fc7e5465f267f3ed19b3ca4d6c77
+Size (f4l-0.2.tar.bz2) = 1071432 bytes
+SHA1 (patch-aa) = 80f63b18d4f7cab19f50d7780c18277eb5214dd6
