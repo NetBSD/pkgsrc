@@ -1,15 +1,19 @@
-# $NetBSD: Makefile.common,v 1.24 2005/10/11 07:23:52 abs Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/11/20 23:10:44 jlam Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.07
 GS_VERS=	${BASEGS_VERS}.1
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.easysw.com/pub/ghostscript/ \
+ESP_SITES=	http://ftp.easysw.com/pub/ghostscript/ \
+		ftp://ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp2.easysw.com/pub/ghostscript/ \
+		ftp://ftp3.easysw.com/pub/ghostscript/ \
+		http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/ghostscript/ \
-		ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/ghostscript/ \
-		ftp://ftp.ntua.gr/pub/gnu/ghostscript/ \
-		ftp://ftp.fisek.com.tr/pub/ghostscript/
+		ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/ghostscript/ \
+		http://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/ghostscript/
+MASTER_SITES=   ${ESP_SITES:=${GS_VERS}/}
+
 EXTRACT_SUFX=   .tar.bz2
 
 MAINTAINER=	jlam@NetBSD.org
