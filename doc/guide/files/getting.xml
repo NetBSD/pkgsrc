@@ -1,7 +1,7 @@
-<!-- $NetBSD: getting.xml,v 1.5 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.6 2005/11/20 10:02:31 rillig Exp $ -->
 
 <chapter id="getting">
-  <title>Where to get pkgsrc</title>
+  <title>Where to get pkgsrc and how to keep it up-to-date</title>
 
   <para>There are three ways to get pkgsrc. Either as a tar file, via SUP, or
     via CVS. All three ways are described here.</para>
@@ -56,5 +56,22 @@
     <para>Please also note that it is possible to have multiple copies of the
       pkgsrc hierarchy in use at any one time - all work is done relatively
       within the pkgsrc tree.</para>
+  </sect1>
+
+  <sect1 id="uptodate-cvs">
+    <title>Keeping pkgsrc up-to-date via CVS</title>
+
+      <para>If your copy of pkgsrc contains a lot of
+      <filename>CVS</filename> directories, you can update it using the
+      &man.cvs.1; program. First, <command>cd</command> to the top level
+      directory of pkgsrc. Then run <command>cvs -q update
+      -dP</command>, and you're done.</para>
+
+      <para>If that doesn't work and the file
+      <filename>CVS/Root</filename> contains the string
+      <quote>:pserver:</quote>, you have to run <command>cvs
+      login</command> once to get known to the NetBSD CVS server. The
+      <command>cvs</command> utility will then ask you for a password.
+      Just enter <quote>anoncvs</quote>. Then try again to update.</para>
   </sect1>
 </chapter>
