@@ -1,4 +1,4 @@
-.\"	$NetBSD: printindex.1,v 1.2 2005/11/19 11:19:57 rillig Exp $
+.\"	$NetBSD: printindex.1,v 1.3 2005/11/20 01:44:32 wiz Exp $
 .\"
 .\" Copyright (c) 2005 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -35,11 +35,11 @@
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
 .Dd November 19, 2005
-.Dt printindex 1
+.Dt PRINTINDEX 1
 .Os
 .Sh NAME
 .Nm printindex
-.Nd generate a PKGPATH <=> PKGNAME database file
+.Nd generate a PKGPATH to PKGNAME mapping database file
 .Sh SYNOPSIS
 .Nm
 .Op Ar brokenfile Op Ar bulkfilesdir
@@ -55,7 +55,7 @@ If
 is given, package-specific errors are logged to
 .Ar bulkfilesdir Ns / Ns
 .Va ${pkgdir} Ns / Ns
-.Ar brokenfile Ns .
+.Ar brokenfile .
 Otherwise no additional logging takes place.
 .Pp
 The default for
@@ -72,24 +72,26 @@ must be called from a pkgsrc root directory.
 Non-zero if writing to a log file fails, zero otherwise.
 .Sh ENVIRONMENT
 .Bl -tag -width XXXXXX
-.It BMAKE
+.It Ev BMAKE
 The
 .Xr make 1
 program used to build packages.
-.It PKGLIST (optional)
-The list of packages to build an index from.
+.It Ev PKGLIST Pq optional
+The list of packages from which to build an index.
 .El
 .Sh FILES
 .Bl -tag -width XXXXXX
 .It Ar bulkfilesdir Ns / Ns .pkglist
-A cache for the list of packages when PKGLIST is unset.
+A cache for the list of packages when
+.Ev PKGLIST
+is unset.
 .El
 .\" .Sh EXAMPLES
 .Sh DIAGNOSTICS
 Diagnostics have one of the two forms
-.Ql Nm Ns : error: ...
+.Ql Nm : error: ...
 or
-.Ql [printindex] ... Ns .
+.Ql [printindex] ... .
 The latter may span multiple lines.
 .Sh SEE ALSO
 .Xr printdepends 1
