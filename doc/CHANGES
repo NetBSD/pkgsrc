@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11986 2005/11/20 17:00:07 xtraeme Exp $
+$NetBSD: CHANGES,v 1.11987 2005/11/20 17:54:28 magick Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5291,3 +5291,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/glib2 to 2.8.4 [wiz 2005-11-20]
 	Updated x11/gtk2 to 2.8.7 [wiz 2005-11-20]
 	Added graphics/f4l version 0.2 [xtraeme 2005-11-20]
+	Updated misc/nxtvepg to 2.7.6 [magick 2005-11-20]
