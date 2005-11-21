@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4194 2005/11/21 15:32:45 wiz Exp $
+$NetBSD: TODO,v 1.4195 2005/11/21 23:47:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -393,7 +393,6 @@ Suggested package updates
 	o bmon-2.1.0
 	o boaconstructor-0.4.4
 	o bochs-2.2.1
-	o bogofilter-0.96.2
 	o boolean-6.8
 	o boson-0.11
 	o browser-bookmarks-menu-0.4
