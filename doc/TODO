@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4192 2005/11/21 05:54:39 schmonz Exp $
+$NetBSD: TODO,v 1.4193 2005/11/21 09:24:01 dan Exp $
 
 Suggested new packages
 ======================
@@ -1034,6 +1034,7 @@ Suggested package updates
 	o posh-0.4.3
 	o postgresql74-7.4.9
 	o postgresql73-7.3.11
+	o postgresql81-8.1.0
 	o postgresql_autodoc-1.25
 	o potrace-1.7
 	o pptp-1.6.0 [pkg/26842]
