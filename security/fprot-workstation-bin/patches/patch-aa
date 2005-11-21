@@ -1,28 +1,60 @@
-$NetBSD: patch-aa,v 1.3 2005/03/20 14:14:26 ben Exp $
+$NetBSD: patch-aa,v 1.4 2005/11/21 02:06:50 ben Exp $
 
---- tools/check-updates.pl.orig	2005-02-09 17:15:33.000000000 -0800
+--- tools/check-updates.pl.orig	2005-10-19 08:40:56.000000000 -0700
 +++ tools/check-updates.pl
-@@ -247,7 +247,7 @@ sub constructHeaders
- 	# We assume the default directory structure, therefore this script
- 	# resides one directory (tools) below the f-prot program 
- 	# giving this path:  /path/to/this_script/../f-prot 
--	my $output = `$dir../f-prot -verno` || warn "Error occured:  Can't find f-prot command!";
-+	my $output = `$dir../bin/f-prot -verno` || warn "Error occured:  Can't find f-prot command!";
- 	my ($version) = $output =~ /Program version: (.+)/;
+@@ -149,6 +149,8 @@ my $signatureDirectory = findDEFDirector
+ sub findDEFDirectory {
+     my $dir;
  
- 	$version ||= "4.x"; # Default value if something fails due to improper setup
-@@ -305,10 +305,13 @@ sub printHelp
- # exists, and if it doesn't exist it tries to create it.
- sub checkTemporaryDirectory
- {
-+	my $fix_temporaryDirectory = $temporaryDirectory;
-+	$fix_temporaryDirectory =~ s/\/$//;
++    return qq(XXXFPDIRXXX/);
 +
- 	# If your temporary directory does not exist, you must create it.
- 	if (! -e $temporaryDirectory)
- 	{
--		mkdir($temporaryDirectory, $creationMask) || 
-+		mkdir($fix_temporaryDirectory, $creationMask) || 
- 		die "Error: Unable to create directory: $temporaryDirectory\nError: $!\n\n"
- 	                . "Exiting...\n";
- 		return;
+     # Try FindBin
+     eval 'use FindBin qw($Bin); $dir = $Bin if $Bin;';    
+     unless ($@){        
+@@ -344,12 +346,14 @@ sub printHelp {
+ # A sub function which checks if the temporary directory you are using
+ # exists, and if it doesn't exist it tries to create it.
+ sub checkTemporaryDirectory {
++    my $fixTemporaryDirectory = $temporaryDirectory;
++    $fixTemporaryDirectory =~ s/\/$//;
+ 
+     # If your temporary directory does not exist, you must create it.
+-    if (!-e $temporaryDirectory) {
+-        mkdir($temporaryDirectory, $creationMask)
++    if (!-e $fixTemporaryDirectory) {
++        mkdir($fixTemporaryDirectory, $creationMask)
+           || die "Error: Unable to create directory: "         
+-               . "$temporaryDirectory\nError: $!\n\n"
++               . "$fixTemporaryDirectory\nError: $!\n\n"
+                . "Exiting...\n";
+         return;
+     }
+@@ -359,21 +363,21 @@ sub checkTemporaryDirectory {
+     # a directory since it's declared by default ending with a slash /.
+     # But! In case someone will change this script (namely the
+     # temporaryDirectory variable), it won't hurt having this check.
+-    if (-f $temporaryDirectory) {
+-        die "$temporaryDirectory is a file, not a directory. You can\n"
+-          . "either change the location of the \$temporaryDirectory\n"
++    if (-f $fixTemporaryDirectory) {
++        die "$fixTemporaryDirectory is a file, not a directory. You can\n"
++          . "either change the location of the \$fixTemporaryDirectory\n"
+           . "in the script, or you can remove this file and let this\n"
+           . "script create a new directory.\n\n";
+     }
+-    elsif (-l $temporaryDirectory) {
++    elsif (-l $fixTemporaryDirectory) {
+         die "Error: There exists a symbolic link with the same name as the\n"
+-          . "temporary directory you've declared: $temporaryDirectory \n"
++          . "temporary directory you've declared: $fixTemporaryDirectory \n"
+           . "Please remove this link and re-run the script.\n"
+           . "Exiting...\n";
+     }
+-    elsif (!-o $temporaryDirectory) {
++    elsif (!-o $fixTemporaryDirectory) {
+         die "Error: You are not the owner of the temporary directory\n"
+-          . "which this script is using: $temporaryDirectory.\n"
++          . "which this script is using: $fixTemporaryDirectory.\n"
+           . "Please change the file permissions and try again\n"
+           . "Exiting...\n";
+     }
