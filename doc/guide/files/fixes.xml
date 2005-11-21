@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.39 2005/11/21 09:27:04 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.40 2005/11/21 09:33:39 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -890,13 +890,13 @@
 
       <variablelist>
 	<varlistentry><term>SunPro 5.7 + Solaris 8 + SPARC</term>
-        <listitem><para>__SVR4 __sparc __sun __unix sparc sun
-        unix</para></listitem></varlistentry>
+        <listitem><para>__SVR4, __sparc, __sun, __unix, sparc, sun,
+        unix.</para></listitem></varlistentry>
 
 	<varlistentry><term>GCC 4 + Solaris 8 + SPARC</term>
-        <listitem><para>__ELF__ __sparc __sparc__ __sun __sun__ __SVR4
-        __svr4__ __unix __unix__ sparc sun unix</para></listitem>
-        </varlistentry>
+        <listitem><para>__ELF__, __sparc, __sparc__, __sun, __sun__,
+        __SVR4, __svr4__, __unix, __unix__, sparc, sun,
+        unix.</para></listitem></varlistentry>
 
       </variablelist>
     </sect2>
