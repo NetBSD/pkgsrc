@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.svn-base,v 1.1.1.1 2005/11/21 19:43:06 minskim Exp $
+bin/synergyc
+bin/synergys

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="342"
+   name=""
+   committed-date="2005-10-26T17:41:12.428162Z"
+   url="svn+ssh://minskim@kldp.net/svnroot/pkgsrc-wip/trunk/wip-kr/synergy"
+   last-author="minskim"
+   kind="dir"
+   uuid="29a96212-56fd-0310-96e6-dcb058db4e01"
+   revision="358"/>
+<entry
+   committed-rev="338"
+   name="distinfo"
+   text-time="2005-10-28T02:53:05.000000Z"
+   committed-date="2005-10-25T15:21:33.413951Z"
+   checksum="de0216b3e811967945f3ffe410563508"
+   last-author="yui"
+   kind="file"
+   prop-time="2005-10-28T02:53:05.000000Z"/>
+<entry
+   committed-rev="338"
+   name="DESCR"
+   text-time="2005-10-28T02:53:05.000000Z"
+   committed-date="2005-10-25T15:21:33.413951Z"
+   checksum="48fcb3d2b7ea77f7acae309ec7217e0e"
+   last-author="yui"
+   kind="file"
+   prop-time="2005-10-28T02:53:05.000000Z"/>
+<entry
+   committed-rev="338"
+   name="PLIST"
+   text-time="2005-10-28T02:53:05.000000Z"
+   committed-date="2005-10-25T15:21:33.413951Z"
+   checksum="5696cab78280ed42e2e3092644a6a8c8"
+   last-author="yui"
+   kind="file"
+   prop-time="2005-10-28T02:53:05.000000Z"/>
+<entry
+   committed-rev="342"
+   name="Makefile"
+   text-time="2005-10-28T02:53:05.000000Z"
+   committed-date="2005-10-26T17:41:12.428162Z"
+   checksum="bad049bbc4a3064b5e17da3309907c58"
+   last-author="minskim"
+   kind="file"
+   prop-time="2005-10-28T02:53:05.000000Z"/>
+</wc-entries>
