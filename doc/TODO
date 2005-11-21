@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4193 2005/11/21 09:24:01 dan Exp $
+$NetBSD: TODO,v 1.4194 2005/11/21 15:32:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -310,6 +310,7 @@ Suggested package updates
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
+	o Gorm-1.0.1
 	o GridSim-3.3
 	o ImageMagick-6.2.5.1
 	o PAM-0.80
@@ -374,7 +375,7 @@ Suggested package updates
 	o avcheck-0.91
 	o avidemux-2.0.42
 	o avl-2.0.1
-	o avr-libc-1.2.3
+	o avr-libc-1.4.0
 	o baci-20040415
 	o bacula-1.38.1
 	o bbkeys-0.9.0
@@ -404,6 +405,7 @@ Suggested package updates
 	o catdoc-0.94
 	o catdoc-tk-0.94
 	o cbmconvert-2.1.2
+	o cbrowser-0.8 [pkg/30972]
 	o ccd2iso-0.2
 	o cdl3-1.2.6
 	o cdlabelgen-3.5.0 [pkg/30721]
@@ -456,6 +458,7 @@ Suggested package updates
 	o dante-1.1.18
 	o dap-2.1.5
 	o darkice-0.15
+	o db4-4.4.16
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dbus-0.50
 	o dbxml-2.1.8
@@ -516,7 +519,7 @@ Suggested package updates
 	o fetchmail-6.2.5.4
 	o fhist-1.14
 	o file-4.15
-	o findutils-4.2.25
+	o findutils-4.2.26
 	o flac123-0.0.9
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -595,7 +598,7 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o guile-pg-0.29
 	o guile-www-1.1.1
-	o gwenview-1.3.0 [pkg/31299]
+	o gwenview-1.3.1 [pkg/32134]
 	o gworkspace-0.7.2
 	o gxine-0.5.0
 	o gzrecover-0.3
@@ -662,6 +665,7 @@ Suggested package updates
 	o jgrasp-183
 	o jigdo-0.7.2
 	o jove-4.16.0.69
+	o jpegpixi-1.1.1
 	o jpilot-0.99.8
 	o jwhois-3.2.3
 	o kajaani-kombat-0.7
@@ -1166,7 +1170,7 @@ Suggested package updates
 	o sign-1.0.7
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
 	o simh-3.5.0
-	o sipsak-0.9.2
+	o sipsak-0.9.5
 	o sitecopy-0.16.1
 	o sitescooper-3.1.2
 	o sjeng-11.2
@@ -1275,6 +1279,7 @@ Suggested package updates
 	o vlc-0.8.2
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
+	o vnc2swf-0.8.0
 	o vobcopy-0.5.14
 	o vp-1.6
 	o vpnc-0.3.3
