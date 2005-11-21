@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.25 2005/11/16 22:57:24 wiz Exp $
+# $NetBSD: audit-packages,v 1.26 2005/11/21 10:39:50 agc Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -61,8 +61,9 @@ EOF
 	exit 1
 }
 
+settingsmsg=""
 if [ -r @PKG_SYSCONFDIR@/audit-packages.conf ]; then
-	echo "Reading settings from @PKG_SYSCONFDIR@/audit-packages.conf"
+	settingsmsg="Reading settings from @PKG_SYSCONFDIR@/audit-packages.conf"
 	. @PKG_SYSCONFDIR@/audit-packages.conf
 fi
 
@@ -95,6 +96,15 @@ while [ $# -gt 0 ]; do
 	esac
 	shift
 done
+
+case $verbose in
+yes)	case "$settingsmsg" in
+	"")	;;
+	*)	echo "$settingsmsg"
+		;;
+	esac
+	;;
+esac
 
 for ign in $ignore_list ; do
 	case "$ign" in
