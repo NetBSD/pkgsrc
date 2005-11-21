@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11989 2005/11/20 20:10:04 rillig Exp $
+$NetBSD: CHANGES,v 1.11990 2005/11/21 02:08:38 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5294,3 +5294,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/nxtvepg to 2.7.6 [magick 2005-11-20]
 	Updated print/dvipdfmx to 0.0.0.20050627 [minskim 2005-11-20]
 	Updated pkgtools/pkglint to 4.44 [rillig 2005-11-20]
+	Updated security/fprot-workstation-bin to 4.6.2 [ben 2005-11-20]
