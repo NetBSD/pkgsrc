@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/10/08 21:04:36 jdolecek Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/21 09:13:28 joerg Exp $
 #
 
 PKGNAME=		php-${PHP_BASE_VERS}
@@ -12,10 +12,20 @@ USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 LIBTOOL_OVERRIDE=	# empty
 
+PKG_OPTIONS_REQUIRED_GROUPS+=	sapi
+PKG_OPTIONS_GROUP.sapi=	cgi fastcgi
+PKG_SUGGESTED_OPTIONS+=	cgi
+
 .include "Makefile.php"
 
+.if !empty(PKG_OPTIONS:Mcgi)
 CONFIGURE_ARGS+=	--enable-discard-path
 CONFIGURE_ARGS+=	--enable-force-cgi-redirect
+.endif
+
+.if !empty(PKG_OPTIONS:Mfastcgi)
+CONFIGURE_ARGS+=	--enable-fastcgi
+.endif
 
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
