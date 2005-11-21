@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.374 2005/11/20 20:09:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.375 2005/11/21 07:24:51 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -82,9 +82,9 @@ package PkgLint::Logging;
 # the message, NO_FILE may be passed, likewise for C<$lineno> and
 # NO_LINE_NUMBER. Before printing, the filename is normalized, that is,
 # "/foo/bar/../../" components are removed, as well as "." components.
+# At the end of the program, the subroutine print_summary_and_exit should
+# be called.
 #
-At the end of the program, the subroutine
-# print_summary_and_exit should be called. 
 # Examples:
 #   log_error(NO_FILE, NO_LINE_NUMBER, "Invalid command line.");
 #   log_warning($fname, NO_LINE_NUMBER, "Not found.");
