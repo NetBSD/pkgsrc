@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11999 2005/11/21 22:12:53 rillig Exp $
+$NetBSD: CHANGES,v 1.12000 2005/11/21 23:47:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5304,3 +5304,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/phpmyadmin to 2.6.4pl4 [tron 2005-11-21]
 	Added net/synergy version 1.2.4 [minskim 2005-11-21]
 	Updated pkgtools/pkglint to 4.45 [rillig 2005-11-21]
+	Updated mail/bogofilter to 0.96.6 [wiz 2005-11-21]
