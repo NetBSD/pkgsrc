@@ -870,7 +870,11 @@ alink="#0000FF">
                     defines</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#cpp-list">15.4.2. Getting a list of CPP
+                    "#cpp-list-examples">15.4.2. Examples of CPP
+                    defines for some platforms</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#cpp-list">15.4.3. Getting a list of CPP
                     defines</a></span></dt>
                   </dl>
                 </dd>
@@ -6331,7 +6335,11 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                   defines</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#cpp-list">15.4.2. Getting a list of CPP
+                  "#cpp-list-examples">15.4.2. Examples of CPP
+                  defines for some platforms</a></span></dt>
+
+                  <dt><span class="sect2"><a href=
+                  "#cpp-list">15.4.3. Getting a list of CPP
                   defines</a></span></dt>
                 </dl>
               </dd>
@@ -11623,7 +11631,11 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <dt><span class="sect2"><a href=
                 "#cpp-defines">15.4.1. CPP defines</a></span></dt>
 
-                <dt><span class="sect2"><a href="#cpp-list">15.4.2.
+                <dt><span class="sect2"><a href=
+                "#cpp-list-examples">15.4.2. Examples of CPP
+                defines for some platforms</a></span></dt>
+
+                <dt><span class="sect2"><a href="#cpp-list">15.4.3.
                 Getting a list of CPP defines</a></span></dt>
               </dl>
             </dd>
@@ -12983,9 +12995,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <pre class="programlisting">
     #include &lt;sys/param.h&gt;
     #if (defined(BSD) &amp;&amp; BSD &gt;= 199306)
-      /* your BSD-specific code goes here */
+      /* BSD-specific code goes here */
     #else
-      /* non-BSD-specific code */
+      /* non-BSD-specific code goes here */
     #endif
 </pre>
 
@@ -12998,7 +13010,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
     Linux       linux, __linux, __linux__
     NetBSD      __NetBSD__
     OpenBSD     __OpenBSD__
-    Solaris     sun, __sun (GCC and SunPro), __sun__ (only GCC)
+    Solaris     sun, __sun
 </pre>
             </div>
 
@@ -13032,6 +13044,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               </div>
               <pre class="programlisting">
     GCC         __GNUC__ (major version), __GNUC_MINOR__
+    SunPro      __SUNPRO_C (0x570 for version 5.7)
 </pre>
             </div>
           </div>
@@ -13040,20 +13053,67 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div class="titlepage">
               <div>
                 <div>
+                  <h3 class="title"><a name="cpp-list-examples" id=
+                  "cpp-list-examples"></a>15.4.2.&nbsp;Examples of
+                  CPP defines for some platforms</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>The list of the CPP identification macros for
+            hardware and operating system may depend on the
+            compiler that is used. The following list contains some
+            examples that may help you to choose the right ones.
+            For example, if you want to conditionally compile code
+            on Solaris, don't use <code class=
+            "varname">__sun__</code>, as the SunPro compiler does
+            not define it. Use <code class="varname">__sun</code>
+            instead.</p>
+
+            <div class="variablelist">
+              <dl>
+                <dt><span class="term">SunPro 5.7 + Solaris 8 +
+                SPARC</span></dt>
+
+                <dd>
+                  <p>__SVR4, __sparc, __sun, __unix, sparc, sun,
+                  unix.</p>
+                </dd>
+
+                <dt><span class="term">GCC 4 + Solaris 8 +
+                SPARC</span></dt>
+
+                <dd>
+                  <p>__ELF__, __sparc, __sparc__, __sun, __sun__,
+                  __SVR4, __svr4__, __unix, __unix__, sparc, sun,
+                  unix.</p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="sect2" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
                   <h3 class="title"><a name="cpp-list" id=
-                  "cpp-list"></a>15.4.2.&nbsp;Getting a list of CPP
+                  "cpp-list"></a>15.4.3.&nbsp;Getting a list of CPP
                   defines</h3>
                 </div>
               </div>
             </div>
 
-            <p>When your system uses the GNU C Compiler, you can
-            get a list of symbols that are defined by default, e.g.
-            to identify the platform, with the following
-            command:</p>
+            <p>If your system uses the GNU C Compiler, you can get
+            a list of symbols that are defined by default, e.g. to
+            identify the platform, with the following command:</p>
             <pre class="programlisting">
     gcc -E -dM - &lt; /dev/null 
 </pre>
+
+            <p>On other systems you may get the list by using the
+            system's syscall trace utility (ktrace, truss, strace)
+            to have a look which arguments are passed to the actual
+            compiler.</p>
           </div>
         </div>
 
@@ -14778,9 +14838,9 @@ looks fine.
 </pre>
 
           <p>Depending on the supplied command line arguments (see
-          pkglint(1)), more verbose checks will be performed. Use
-          e.g. <span><strong class="command">pkglint
-          -v</strong></span> for a very verbose check.</p>
+          pkglint(1)), more checks will be performed. Use e.g.
+          <span><strong class="command">pkglint -Call
+          -Wall</strong></span> for a very thorough check.</p>
         </div>
       </div>
 
