@@ -20,3 +20,4 @@
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
 * mention the SUBST framework whenever ${SED} is used.
+* warn about unportable CPP macros in patches.
