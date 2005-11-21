@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2004/06/10 15:31:47 minskim Exp $
+$NetBSD: patch-ab,v 1.8 2005/11/21 09:47:45 rillig Exp $
 
 --- config.h.orig	1993-11-24 09:36:07.000000000 -0600
 +++ config.h
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.7 2004/06/10 15:31:47 minskim Exp $
  #endif
  
  #ifdef SYSV
-+#if !(defined(__sun__) && defined(__svr4__)) && !defined(LINUX)
++#if !(defined(__sun__) && defined(__svr4__)) && !defined(LINUX) && !(defined(__sun) && defined(__SVR4))
  #define killpg(a, b) kill(-(a), (b))
 +#endif
  #define bcopy(a, b, c) memcpy(b, a, c)
