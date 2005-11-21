@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4189 2005/11/20 18:57:07 minskim Exp $
+$NetBSD: TODO,v 1.4190 2005/11/21 02:08:38 ben Exp $
 
 Suggested new packages
 ======================
@@ -525,7 +525,6 @@ Suggested package updates
 	o fort77-1.18
 	o fortunes-de-0.20
 	o fox-1.4.24
-	o fprot-workstation-bin-4.6.1
 	o freeglut-2.4.0
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
