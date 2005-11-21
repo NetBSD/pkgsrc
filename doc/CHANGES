@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11997 2005/11/21 13:49:24 tron Exp $
+$NetBSD: CHANGES,v 1.11998 2005/11/21 19:46:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5302,3 +5302,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/ghostscript-esp-nox11 to 8.15.1 [jlam 2005-11-21]
 	Updated security/audit-packages to 1.41 [agc 2005-11-21]
 	Updated databases/phpmyadmin to 2.6.4pl4 [tron 2005-11-21]
+	Added net/synergy version 1.2.4 [minskim 2005-11-21]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.590 2005/11/16 02:08:23 minskim Exp $
+# $NetBSD: Makefile,v 1.591 2005/11/21 19:46:46 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -381,6 +381,7 @@ SUBDIR+=	spread
 SUBDIR+=	srsh
 SUBDIR+=	ssync
 SUBDIR+=	stripes
+SUBDIR+=	synergy
 SUBDIR+=	tacacs
 SUBDIR+=	tcl-scotty
 SUBDIR+=	tcpdmerge
