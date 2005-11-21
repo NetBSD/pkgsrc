@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.3 2004/10/26 05:41:41 snj Exp $
+$NetBSD: patch-aa,v 1.4 2005/11/21 23:47:02 wiz Exp $
 
---- Makefile.in.orig	2004-10-19 17:39:42.000000000 -0700
-+++ Makefile.in	2004-10-25 22:11:33.000000000 -0700
-@@ -204,6 +204,7 @@ SYSCONFDIR = @sysconfdir@
+--- Makefile.in.orig	2005-11-12 23:36:29.000000000 +0100
++++ Makefile.in
+@@ -258,6 +258,7 @@ SYSCONFDIR = @sysconfdir@
  
  # what to build
  sysconf_DATA = bogofilter.cf.example
 +egdir = $(prefix)/share/examples/bogofilter
  
  # what to distribute
- EXTRA_DIST = autogen.sh gsl config.rpath \
-@@ -254,14 +255,8 @@ bogofilter.spec: $(top_builddir)/config.
- 	cd $(top_builddir) && $(SHELL) ./config.status $@
+ EXTRA_DIST = autogen.sh gsl config.rpath bogofilter.cf.example \
+@@ -361,14 +362,8 @@ bogogrep.obj: contrib/bogogrep.c
+ @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o bogogrep.obj `if test -f 'contrib/bogogrep.c'; then $(CYGPATH_W) 'contrib/bogogrep.c'; else $(CYGPATH_W) '$(srcdir)/contrib/bogogrep.c'; fi`
  uninstall-info-am:
  install-sysconfDATA: $(sysconf_DATA)
 -	@$(NORMAL_INSTALL)
 -	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
 -	@list='$(sysconf_DATA)'; for p in $$list; do \
 -	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
--	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  f=$(am__strip_dir) \
 -	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
 -	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
 -	done
