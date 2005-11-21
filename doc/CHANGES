@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11998 2005/11/21 19:46:46 minskim Exp $
+$NetBSD: CHANGES,v 1.11999 2005/11/21 22:12:53 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5303,3 +5303,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/audit-packages to 1.41 [agc 2005-11-21]
 	Updated databases/phpmyadmin to 2.6.4pl4 [tron 2005-11-21]
 	Added net/synergy version 1.2.4 [minskim 2005-11-21]
+	Updated pkgtools/pkglint to 4.45 [rillig 2005-11-21]
