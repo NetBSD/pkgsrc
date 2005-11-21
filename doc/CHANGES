@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.11991 2005/11/21 05:24:23 schmonz Exp $
+$NetBSD: CHANGES,v 1.11992 2005/11/21 05:38:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5296,3 +5296,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.44 [rillig 2005-11-20]
 	Updated security/fprot-workstation-bin to 4.6.2 [ben 2005-11-20]
 	Updated mail/getmail to 4.4.2 [schmonz 2005-11-21]
+	Updated devel/bglibs to 1.027nb1 [schmonz 2005-11-21]
