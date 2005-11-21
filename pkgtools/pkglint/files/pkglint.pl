@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.375 2005/11/21 07:24:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.376 2005/11/21 22:06:30 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -435,7 +435,7 @@ sub get_logical_line($$$) {
 		}
 	}
 
-	if ($lineno > $#{@{$lines}}) {
+	if ($lineno > $#{$lines}) {
 		# The last line in the file is a continuation line
 		$lineno--;
 	}
@@ -561,6 +561,7 @@ package main;
 use strict;
 use warnings;
 
+use Digest::SHA1;
 use Getopt::Long qw(:config no_ignore_case bundling require_order);
 use Fcntl qw(:mode);
 use File::Basename;
@@ -1147,11 +1148,13 @@ sub checkfile_distinfo($) {
 		my ($alg, $file, $sum) = ($1, $2, $3);
 
 		if ($file =~ /^patch-[A-Za-z0-9]+$/) {
-			if (-f "${current_dir}/${patchdir}/${file}") {
-				open(DIG, "sed '/\\\$NetBSD.*/d' ${current_dir}/${patchdir}/${file} | digest ${alg} |") or die;
-				my $chksum = <DIG>;
-				close(DIG);
-				chomp($chksum);
+			if (open(PATCH, "< ${current_dir}/${patchdir}/${file}")) {
+				my $data = "";
+				foreach my $patchline (<PATCH>) {
+					$data .= $patchline unless $patchline =~ qr"\$NetBSD.*\$";
+				}
+				close(PATCH);
+				my $chksum = Digest::SHA1::sha1_hex($data);
 				if ($sum ne $chksum) {
 					$line->log_error("${alg} checksum of $file differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
 				}
@@ -2587,9 +2590,6 @@ sub checkfile_package_Makefile($$$$) {
 
 	if (defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
 		log_warning($fname, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
-	}
-	if (defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname !~ regex_pkgname) {
-		log_warning($fname, NO_LINE_NUMBER, "PKGNAME should have the form packagename-version, where version consists only of digits, letters and dots.");
 	}
 
 	if (!defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {

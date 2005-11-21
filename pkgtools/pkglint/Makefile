@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.304 2005/11/20 20:09:35 rillig Exp $
+# $NetBSD: Makefile,v 1.305 2005/11/21 22:06:30 rillig Exp $
 #
 
-DISTNAME=	pkglint-4.44
-CATEGORIES=	pkgtools devel
+DISTNAME=	pkglint-4.45
+CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
@@ -10,7 +10,7 @@ MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://www.netbsd.org/Documentation/pkgsrc/
 COMMENT=	Verifier for NetBSD packages and complete pkgsrc tree
 
-DEPENDS+=	digest>=20010101:../../pkgtools/digest
+DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
