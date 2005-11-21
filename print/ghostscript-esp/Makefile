@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 18:03:09 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/11/21 06:17:58 jlam Exp $
+
+.include "Makefile.common"
 
 PKGNAME=	ghostscript-esp-${GS_VERS}
-PKGREVISION=	4
 COMMENT=	ESP/CUPS Postscript interpreter
 
 CONFIGURE_ARGS+=	--with-x
 
 .include "../../mk/x11.buildlink3.mk"
-.include "Makefile.common"
+.include "../../mk/bsd.pkg.mk"
