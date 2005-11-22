@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2005/05/31 16:20:43 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2005/11/22 00:01:40 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 ogg
-PKG_SUGGESTED_OPTIONS=	aac audiofile flac iconv id3 ogg
+PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod ogg
+PKG_SUGGESTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod ogg
 
 .include "../../mk/bsd.options.mk"
 
@@ -40,6 +40,13 @@ CONFIGURE_ARGS+=	--disable-iconv
 CONFIGURE_ARGS+=	--with-id3tag=${BUILDLINK_PREFIX.libid3tag}
 .else
 CONFIGURE_ARGS+=	--disable-id3
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibmikmod)
+.  include "../../audio/libmikmod/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libmikmod=${BUILDLINK_PREFIX.libmikmod}
+.else
+CONFIGURE_ARGS+=	--disable-libmikmod
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
