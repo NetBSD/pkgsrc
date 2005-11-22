@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12012 2005/11/22 22:59:03 wiz Exp $
+$NetBSD: CHANGES,v 1.12013 2005/11/22 23:16:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5328,3 +5328,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed devel/p5-SortVersions [wiz 2005-11-22]
 	Updated devel/p5-Class-Inspector to 1.13 [wiz 2005-11-22]
 	Updated devel/p5-ExtUtils-AutoInstall to 0.63 [wiz 2005-11-22]
+	Updated textproc/p5-Pod-Simple to 3.03 [wiz 2005-11-22]
+	Removed devel/p5-Test-Builder-Tester [wiz 2005-11-22]
+	Updated devel/p5-Test-Pod to 1.22 [wiz 2005-11-22]
+	Updated devel/p5-prefork to 1.00 [wiz 2005-11-22]
+	Updated devel/p5-Class-Autouse to 1.21 [wiz 2005-11-22]
