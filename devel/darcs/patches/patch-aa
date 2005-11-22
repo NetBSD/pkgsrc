@@ -1,21 +1,41 @@
-$NetBSD: patch-aa,v 1.2 2005/05/28 09:14:39 augustss Exp $
---- GNUmakefile.orig	2005-05-28 10:49:28.000000000 +0200
-+++ GNUmakefile	2005-05-28 10:48:15.000000000 +0200
-@@ -86,9 +86,6 @@
- 	$(INSTALL) -d $(DESTDIR)/$(bindir)
- 	$(INSTALL) darcs $(DESTDIR)/$(bindir)
- 
--	$(INSTALL) -d $(DESTDIR)/$(sysconfdir)/bash_completion.d/
--	$(INSTALL_DATA) darcs_completion $(DESTDIR)/$(sysconfdir)/bash_completion.d/darcs
--
- 	$(INSTALL) -d $(DESTDIR)/$(mandir)/man1
- 	$(INSTALL_DATA) darcs.1 $(DESTDIR)/$(mandir)/man1/
- 
-@@ -100,6 +97,7 @@
- 	$(INSTALL) -d $(DESTDIR)/$(datadir)/doc/darcs/examples
- 	$(INSTALL_DATA) zsh_completion_new $(DESTDIR)/$(datadir)/doc/darcs/examples/
- 	$(INSTALL_DATA) zsh_completion_old $(DESTDIR)/$(datadir)/doc/darcs/examples/
-+	$(INSTALL_DATA) darcs_completion $(DESTDIR)/$(datadir)/doc/darcs/examples/
- 
- installserver:	darcs-createrepo cgi/darcs.cgi
- 	$(INSTALL) -d $(DESTDIR)/$(libexecdir)/cgi-bin
+*** GNUmakefile.orig	Sun Nov 13 22:28:27 2005
+--- GNUmakefile	Tue Nov 22 12:54:49 2005
+***************
+*** 91,104 ****
+  
+  config: configure autoconf.mk
+  
+  installbin:	all
+  	test -d $(DESTDIR)/$(bindir) || $(INSTALL) -d $(DESTDIR)/$(bindir)
+  	$(INSTALL) darcs $(DESTDIR)/$(bindir)
+  
+- 	test -d $(DESTDIR)/$(sysconfdir)/bash_completion.d || \
+- 		$(INSTALL) -d $(DESTDIR)/$(sysconfdir)/bash_completion.d
+- 	$(INSTALL_DATA) darcs_completion $(DESTDIR)/$(sysconfdir)/bash_completion.d/darcs
+- 
+  	test -d $(DESTDIR)/$(mandir)/man1 || \
+  		$(INSTALL) -d $(DESTDIR)/$(mandir)/man1
+  	$(INSTALL_DATA) darcs.1 $(DESTDIR)/$(mandir)/man1/
+--- 91,102 ----
+  
+  config: configure autoconf.mk
+  
++ install:	installbin installdocs
++ 
+  installbin:	all
+  	test -d $(DESTDIR)/$(bindir) || $(INSTALL) -d $(DESTDIR)/$(bindir)
+  	$(INSTALL) darcs $(DESTDIR)/$(bindir)
+  
+  	test -d $(DESTDIR)/$(mandir)/man1 || \
+  		$(INSTALL) -d $(DESTDIR)/$(mandir)/man1
+  	$(INSTALL_DATA) darcs.1 $(DESTDIR)/$(mandir)/man1/
+***************
+*** 113,118 ****
+--- 111,117 ----
+  		$(INSTALL) -d $(DESTDIR)/$(datadir)/doc/darcs/examples
+  	$(INSTALL_DATA) zsh_completion_new $(DESTDIR)/$(datadir)/doc/darcs/examples/
+  	$(INSTALL_DATA) zsh_completion_old $(DESTDIR)/$(datadir)/doc/darcs/examples/
++ 	$(INSTALL_DATA) darcs_completion $(DESTDIR)/$(datadir)/doc/darcs/examples/
+  
+  installserver:	darcs-createrepo cgi/darcs.cgi
+  	test -d $(DESTDIR)/$(libexecdir)/cgi-bin || \
