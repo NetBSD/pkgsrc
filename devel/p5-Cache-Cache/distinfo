@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:23 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/11/22 21:58:33 wiz Exp $
 
-SHA1 (Cache-Cache-1.03.tar.gz) = 83c83a6cc52b8c293d865517072e48cf854d9d70
-RMD160 (Cache-Cache-1.03.tar.gz) = dd54ee3497dad8f8d5136152af4aa5c5ebd58442
-Size (Cache-Cache-1.03.tar.gz) = 33947 bytes
+SHA1 (Cache-Cache-1.04.tar.gz) = 7cdcac7abc8f3c11f4a3591b4049fe6c558ca167
+RMD160 (Cache-Cache-1.04.tar.gz) = d48712ef7c8b398099a8fa95571a17c28762dbde
+Size (Cache-Cache-1.04.tar.gz) = 33448 bytes
