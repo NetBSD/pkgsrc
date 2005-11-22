@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12006 2005/11/22 16:27:23 tron Exp $
+$NetBSD: CHANGES,v 1.12007 2005/11/22 19:07:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5311,3 +5311,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/darcs to 1.0.4nb1 [augustss 2005-11-22]
 	Updated mail/spamassassin to 3.1.0nb2 [rillig 2005-11-22]
 	Updated security/ipsec-tools to 0.6.3 [tron 2005-11-22]
+	Updated sysutils/bacula to 1.38.1 [wiz 2005-11-22]
+	Updated sysutils/bacula-clientonly to 1.38.1 [wiz 2005-11-22]
+	Updated comms/scmxx to 0.8.2 [wiz 2005-11-22]
+	Updated sysutils/bacula-doc to 1.38.1 [wiz 2005-11-22]
