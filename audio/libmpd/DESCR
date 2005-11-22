@@ -1,0 +1,5 @@
+libmpd is trying to provide a easy to use high level, callback
+based access to mpd. It tries to be fast and keep the data transfer
+with mpd to the minimum. To do this it implements queues for deleting
+and adding songs. There is extra functionallity added for the ease
+of the programmer.
