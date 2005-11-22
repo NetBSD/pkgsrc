@@ -1,24 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/11/22 18:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/11/22 19:33:06 tv Exp $
 
 CONFLICTS+=		bacula-client-[0-9]*
 
 .include "options.mk"
-
-.if !empty(PKG_OPTIONS:Mcatalog-sqlite)
-.  include "../../databases/sqlite/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite}
-BACULA_DB=		sqlite
-.endif
-.if !empty(PKG_OPTIONS:Mcatalog-pgsql)
-.  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}
-BACULA_DB=		postgresql
-.endif
-.if !empty(PKG_OPTIONS:Mcatalog-mysql)
-.  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${PREFIX}
-BACULA_DB=		mysql
-.endif
 
 PLIST_SUBST+=		BACULA_DB=${BACULA_DB}
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
