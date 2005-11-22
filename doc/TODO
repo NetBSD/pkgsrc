@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4199 2005/11/22 21:45:36 wiz Exp $
+$NetBSD: TODO,v 1.4200 2005/11/22 22:59:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -844,11 +844,9 @@ Suggested package updates
 	o p5-CDDB-1.16
 	o p5-CGI-Application-4.04.02
 	o p5-CGI-Minimal-1.24
-	o p5-Cache-Cache-1.04
 	o p5-Class-Autouse-1.21
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Data-Inheritable-0.04
-	o p5-Class-Inspector-1.13
 	o p5-Class-Loader-2.03
 	o p5-Class-ReturnValue-0.53
 	o p5-Class-Trigger-0.09 [pkg/29923]
@@ -877,7 +875,6 @@ Suggested package updates
 	o p5-DateTime-TimeZone-0.37
 	o p5-Devel-Cycle-1.04
 	o p5-Devel-SmallProf-2.00_03
-	o p5-Devel-StackTrace-1.12
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
@@ -953,7 +950,6 @@ Suggested package updates
 	o p5-Test-Harness-2.46
 	o p5-Test-Inline-2.103
 	o p5-Test-Memory-Cycle-1.02
-	o p5-Test-Simple-0.61
 	o p5-Text-Autoformat-1.12
 	o p5-Text-Balanced-1.95
 	o p5-Text-BibTeX-0.34
