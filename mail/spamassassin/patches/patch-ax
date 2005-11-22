@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.2.2.2 2005/11/22 00:34:24 salo Exp $
+
+--- lib/Mail/SpamAssassin/Message.pm.orig	Mon Jun  6 03:31:23 2005
++++ lib/Mail/SpamAssassin/Message.pm
+@@ -324,7 +324,7 @@ sub get_pristine_header {
+   my ($self, $hdr) = @_;
+   
+   return $self->{pristine_headers} unless $hdr;
+-  my(@ret) = $self->{pristine_headers} =~ /^(?:$hdr:[ \t]+(.*\n(?:\s+\S.*\n)*))/mig;
++  my(@ret) = $self->{pristine_headers} =~ /^\Q$hdr\E:[ \t]+(.*?\n(?![ \t]))/smgi;
+   if (@ret) {
+     return wantarray ? @ret : $ret[-1];
+   }
