@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/11/11 07:23:15 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/11/22 18:35:25 wiz Exp $
 
-SHA1 (bacula-1.38.0.tar.gz) = a080625119f999c4182dd81b977c92367a66ceed
-RMD160 (bacula-1.38.0.tar.gz) = 10db9bcffcb94ebccea69575d1a59afa5a4dce58
-Size (bacula-1.38.0.tar.gz) = 1847955 bytes
+SHA1 (bacula-1.38.1.tar.gz) = 5fba6bab72d28f83adb4b71bd69359ebc11de28b
+RMD160 (bacula-1.38.1.tar.gz) = 3c8b970dac9916b8e62cfa0ab9a96bb00d937e16
+Size (bacula-1.38.1.tar.gz) = 1856508 bytes
 SHA1 (patch-aa) = 3369d0c37108f05828ea7c33b7aabc287e0213fd
 SHA1 (patch-ac) = 295dbf7fc6d1f5104b13d37a8ff32ea8580d4019
 SHA1 (patch-ae) = ad4b7d5cb83f021235c11504a034def897fffcac
