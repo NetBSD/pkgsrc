@@ -45,7 +45,7 @@ cyrix
 darwin			Build and/or run on Darwin and Mac OS X.
 db	
 db2	
-db4	
+db4			Enable db4 support.
 dbh			Enable DBH support.
 debug			Enable debugging facilities in the package.
 deliver-suid		Install deliver executable setuid root.
@@ -253,7 +253,7 @@ spamassassin-test-awl-sql	Enable tests of the SQL module for the automatic white
 spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
 spamassassin-test-net		Enable Internet based tests during 'make test'.
 spamassassin-test-prefork	Enable spamd prefork test (kills processes containing 'spam child').
-sqlite	
+sqlite			Enable SQLite support.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
 static
