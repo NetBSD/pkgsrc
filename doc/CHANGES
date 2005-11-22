@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12011 2005/11/22 21:45:35 wiz Exp $
+$NetBSD: CHANGES,v 1.12012 2005/11/22 22:59:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5320,3 +5320,11 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/opera to 8.51 [jdolecek 2005-11-22]
 	Updated net/mldonkey to 2.7.0 [wiz 2005-11-22]
 	Updated net/mldonkey-gui to 2.7.0 [wiz 2005-11-22]
+	Updated devel/p5-Test-Simple to 0.62 [wiz 2005-11-22]
+	Updated devel/p5-Cache-Cache to 1.04 [wiz 2005-11-22]
+	Updated devel/p5-Devel-StackTrace to 1.12 [wiz 2005-11-22]
+	Added devel/p5-Sort-Versions version 1.5 [wiz 2005-11-22]
+	Updated security/p5-Crypt-RSA to 1.50nb3 [wiz 2005-11-22]
+	Removed devel/p5-SortVersions [wiz 2005-11-22]
+	Updated devel/p5-Class-Inspector to 1.13 [wiz 2005-11-22]
+	Updated devel/p5-ExtUtils-AutoInstall to 0.63 [wiz 2005-11-22]
