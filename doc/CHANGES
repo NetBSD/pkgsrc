@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12001 2005/11/22 00:02:13 wiz Exp $
+$NetBSD: CHANGES,v 1.12002 2005/11/22 03:12:19 dan Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5306,3 +5306,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgtools/pkglint to 4.45 [rillig 2005-11-21]
 	Updated mail/bogofilter to 0.96.6 [wiz 2005-11-21]
 	Updated audio/musicpd to 0.11.5nb4 [wiz 2005-11-22]
+	Updated devel/monotone-viz to 0.12nb1 [dan 2005-11-22]
