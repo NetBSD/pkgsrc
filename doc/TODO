@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4196 2005/11/22 18:11:12 wiz Exp $
+$NetBSD: TODO,v 1.4197 2005/11/22 19:07:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ Suggested package updates
 	o avl-2.0.1
 	o avr-libc-1.4.0
 	o baci-20040415
-	o bacula-1.38.1
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
@@ -1157,7 +1156,6 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scilab-3.1
-	o scmxx-0.8.2
 	o scponly-4.1
 	o scrollz-1.9.5
 	o sdig-0.40
