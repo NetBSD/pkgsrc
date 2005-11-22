@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4195 2005/11/21 23:47:31 wiz Exp $
+$NetBSD: TODO,v 1.4196 2005/11/22 18:11:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -633,6 +633,7 @@ Suggested package updates
 	o ijs-0.35
 	o imap-uw-2004g
 	o imapfilter-1.1
+	o inkscape-0.43
 	o inn-2.4.2
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
@@ -640,7 +641,6 @@ Suggested package updates
 	o ion3-devel-20050820 [pkg/31132]
 	o iozone-3.257
 	o ipcheck-0.219
-	o ipsec-tools-0.6.2
 	o ipv6calc-0.50
 	o ircservices-5.0.55
 	o ircu-2.10.12.0
@@ -742,6 +742,7 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.0.32
 	o matchbox-0.9.5
+	o mathomatic-12.5.2
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -1168,6 +1169,7 @@ Suggested package updates
 	o siag-3.6.0
 	o sign-1.0.7
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
+	o silc-toolkit-1.0.1
 	o simh-3.5.0
 	o sipsak-0.9.5
 	o sitecopy-0.16.1
@@ -1307,7 +1309,7 @@ Suggested package updates
 	o xboard-4.2.7
 	o xcb-2.4
 	o xchat-2.6.0
-	o xchat-gnome-0.6
+	o xchat-gnome-0.7
 	o xcircuit-3.4.0
 	o xdaliclock-2.20
 	o xdesktopwaves-1.3
