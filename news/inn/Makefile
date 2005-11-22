@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2005/10/07 18:08:25 reed Exp $
+# $NetBSD: Makefile,v 1.73 2005/11/22 16:14:49 tron Exp $
 
 DISTNAME=		inn-2.4.1
 PKGREVISION=		8
@@ -11,7 +11,7 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.isc.org/inn.html
 COMMENT=		The public release of InterNet News (INN)
 
-CONFLICTS+=		nntpclnt-[0-9]*
+CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
 
 .include "Makefile.common"
 BUILD_DEFS+=		USE_INET6
