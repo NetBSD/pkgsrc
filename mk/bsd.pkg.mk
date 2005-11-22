@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1765 2005/11/20 15:34:33 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1766 2005/11/22 03:38:40 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1626,7 +1626,6 @@ ${WRKDIR}:
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 .if defined(WRKOBJDIR)
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 .    if !exists(${LOCKFILE})
@@ -1642,6 +1641,8 @@ ${WRKDIR}:
 .  endif
 .endif # WRKOBJDIR
 
+${PKG_DB_TMPDIR}: ${WRKDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 
 # Configure
 
@@ -2568,7 +2569,7 @@ fetch:
 
 .PHONY: extract
 .if !target(extract)
-extract: checksum ${WRKDIR} acquire-extract-lock ${_EXTRACT_COOKIE} release-extract-lock
+extract: checksum ${WRKDIR} ${PKG_DB_TMPDIR} acquire-extract-lock ${_EXTRACT_COOKIE} release-extract-lock
 .endif
 
 .PHONY: patch
