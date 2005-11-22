@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12010 2005/11/22 20:07:58 jdolecek Exp $
+$NetBSD: CHANGES,v 1.12011 2005/11/22 21:45:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5318,3 +5318,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added audio/libmpd version 0.01 [wiz 2005-11-22]
 	Updated audio/gmpc to 0.12.0 [wiz 2005-11-22]
 	Updated www/opera to 8.51 [jdolecek 2005-11-22]
+	Updated net/mldonkey to 2.7.0 [wiz 2005-11-22]
+	Updated net/mldonkey-gui to 2.7.0 [wiz 2005-11-22]
