@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1766 2005/11/22 03:38:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1767 2005/11/22 03:41:20 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2604,7 +2604,7 @@ test: build ${_TEST_COOKIE}
 
 .PHONY: install
 .if !target(install)
-install: ${_PKGSRC_BUILD_TARGETS} acquire-install-lock ${_INSTALL_COOKIE} release-install-lock
+install: ${_PKGSRC_BUILD_TARGETS} ${PKG_DB_TMPDIR} acquire-install-lock ${_INSTALL_COOKIE} release-install-lock
 .endif
 
 .PHONY: package
