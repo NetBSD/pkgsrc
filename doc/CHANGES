@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12007 2005/11/22 19:07:16 wiz Exp $
+$NetBSD: CHANGES,v 1.12008 2005/11/22 19:08:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5308,7 +5308,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/musicpd to 0.11.5nb4 [wiz 2005-11-22]
 	Updated devel/monotone-viz to 0.12nb1 [dan 2005-11-22]
 	Updated mail/spamassassin to 3.1.0nb1 [rillig 2005-11-22]
-	Updated devel/darcs to 1.0.4nb1 [augustss 2005-11-22]
+	Updated devel/darcs to 1.0.4 [augustss 2005-11-22]
 	Updated mail/spamassassin to 3.1.0nb2 [rillig 2005-11-22]
 	Updated security/ipsec-tools to 0.6.3 [tron 2005-11-22]
 	Updated sysutils/bacula to 1.38.1 [wiz 2005-11-22]
