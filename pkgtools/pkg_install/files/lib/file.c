@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.14 2005/02/04 09:10:13 jlam Exp $	*/
+/*	$NetBSD: file.c,v 1.15 2005/11/22 15:44:59 ben Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,11 +7,17 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
+#if HAVE_SYS_PARAM_H
+#include <sys/param.h>
+#endif
+#if HAVE_SYS_QUEUE_H
+#include <sys/queue.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.14 2005/02/04 09:10:13 jlam Exp $");
+__RCSID("$NetBSD: file.c,v 1.15 2005/11/22 15:44:59 ben Exp $");
 #endif
 #endif
 
@@ -616,13 +622,23 @@ remove_files(const char *path, const char *pattern)
  * Unpack a tar file
  */
 int
-unpack(const char *pkg, const char *flist)
+unpack(const char *pkg, const lfile_head_t *filesp)
 {
-	char args[10] = "-";
 	char cmd[MaxPathSize];
 	const char *decompress_cmd = NULL;
 	const char *suf;
+	int count = 0;
+	lfile_t	*lfp;
+	char **up_argv;
+	int up_argc = 7;
+	int index = 0;
+	int result;
 
+	if (filesp != NULL)
+		TAILQ_FOREACH(lfp, filesp, lf_link)
+			count++;
+	up_argc += count;
+	up_argv = malloc((count + up_argc + 1) * sizeof(char *));
 	if (!IS_STDIN(pkg)) {
 		suf = suffix_of(pkg);
 		if (!strcmp(suf, "tbz") || !strcmp(suf, "bz2"))
@@ -636,16 +652,34 @@ unpack(const char *pkg, const char *flist)
 	} else
 		decompress_cmd = GZIP_CMD;
 
-	strlcat(args, "xpf", sizeof(args));
-	sprintf(cmd, "%s %s %s %s %s %s %s", TAR_CMD,
-	    flist ? "--fast-read" : "",
-	    decompress_cmd != NULL ? "--use-compress-program" : "",
-	    decompress_cmd != NULL ? decompress_cmd : "", args, pkg,
-	    flist ? flist : "");
+	up_argv[index] = strrchr(TAR_CMD, '/');
+	if (up_argv[index] == NULL)
+		up_argv[index] = TAR_CMD;
+	else
+		up_argv[index]++;  /* skip / character */
+	if (count > 0)
+		up_argv[++index] = "--fast-read";
+	if (decompress_cmd != NULL) {
+		up_argv[++index] = "--use-compress-program";
+		up_argv[++index] = (char *)decompress_cmd;
+	}
+	up_argv[++index] = "-xpf";
+	up_argv[++index] = (char *)pkg;
+	if (count > 0)
+		TAILQ_FOREACH(lfp, filesp, lf_link)
+			up_argv[++index] = lfp->lf_name;
+	up_argv[++index] = NULL;
 
-	if (Verbose)
-		printf("running: %s\n", cmd);
-	if (system(cmd) != 0) {
+	if (Verbose) {
+		printf("running: %s", TAR_CMD);
+		for (index = 1; up_argv[index] != NULL; index++)
+			printf(" %s", up_argv[index]);
+		printf("\n");
+	}
+
+	result = pfcexec(NULL, (const char **)up_argv);
+	free(up_argv);
+	if (result != 0) {
 		warnx("extract of %s failed", pkg);
 		return 1;
 	}
