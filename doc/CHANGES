@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12009 2005/11/22 19:28:31 wiz Exp $
+$NetBSD: CHANGES,v 1.12010 2005/11/22 20:07:58 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5317,3 +5317,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/bacula-doc to 1.38.1 [wiz 2005-11-22]
 	Added audio/libmpd version 0.01 [wiz 2005-11-22]
 	Updated audio/gmpc to 0.12.0 [wiz 2005-11-22]
+	Updated www/opera to 8.51 [jdolecek 2005-11-22]
