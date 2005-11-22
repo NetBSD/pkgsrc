@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/11 07:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/11/22 18:35:25 wiz Exp $
 
 CONFLICTS+=		bacula-client-[0-9]*
 
@@ -22,6 +22,7 @@ BACULA_DB=		mysql
 
 PLIST_SUBST+=		BACULA_DB=${BACULA_DB}
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
+MESSAGE_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV}
 
 CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER} --with-dir-group=${BACULA_GROUP}
 CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER} --with-sd-group=${BACULA_GROUP}
