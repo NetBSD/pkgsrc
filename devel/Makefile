@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.694 2005/11/22 22:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.695 2005/11/22 23:12:50 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -463,7 +463,6 @@ SUBDIR+=	p5-Term-ReadKey
 SUBDIR+=	p5-Term-ReadLine
 SUBDIR+=	p5-Term-Screen
 SUBDIR+=	p5-Term-Size
-SUBDIR+=	p5-Test-Builder-Tester
 SUBDIR+=	p5-Test-ClassAPI
 SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Exception
