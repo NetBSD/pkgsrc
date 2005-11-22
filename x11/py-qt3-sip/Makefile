@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2005/10/21 15:28:10 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2005/11/22 18:50:30 drochner Exp $
 #
 
-DISTNAME=	sip-4.3.1
+DISTNAME=	sip-4.3.2
 PKGNAME=	${PYPKGPREFIX}-qt3-${DISTNAME}
 CATEGORIES=	x11 devel python
 MASTER_SITES=	http://www.river-bank.demon.co.uk/download/sip/
