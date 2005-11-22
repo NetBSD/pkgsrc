@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.10 2005/11/14 09:17:40 dillo Exp $
+# $NetBSD: Makefile.in,v 1.11 2005/11/22 15:44:59 ben Exp $
 
 srcdir=		@srcdir@
 
@@ -17,7 +17,7 @@ CFLAGS=		@CFLAGS@
 LIB=	libinstall.a
 
 OBJS=	automatic.o dewey.o fexec.o file.o ftpio.o global.o lpkg.o path.o pen.o \
-	pkgdb.o plist.o str.o var.o version.o
+	pexec.o pkgdb.o plist.o str.o var.o version.o
 
 all: $(LIB)
 
