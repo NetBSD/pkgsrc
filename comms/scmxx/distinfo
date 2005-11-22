@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2005/09/30 10:28:01 wiz Exp $
+$NetBSD: distinfo,v 1.30 2005/11/22 18:45:07 wiz Exp $
 
-SHA1 (scmxx-0.8.1.tar.bz2) = 4a5a7735e4fb8591f1fd0d355c6936e7fdec9447
-RMD160 (scmxx-0.8.1.tar.bz2) = ca579a4a186edd4d98ebce08bee269b6ed1bab26
-Size (scmxx-0.8.1.tar.bz2) = 220540 bytes
+SHA1 (scmxx-0.8.2.tar.bz2) = fc2da6ec9d4b70f59799f34099535f2255233438
+RMD160 (scmxx-0.8.2.tar.bz2) = 69c6d786fb1895677b16a23964d20d77e053c01c
+Size (scmxx-0.8.2.tar.bz2) = 222339 bytes
