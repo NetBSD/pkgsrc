@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2005/11/22 20:07:13 jdolecek Exp $
+# $NetBSD: Makefile,v 1.47 2005/11/22 22:14:51 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=	www
-MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
-		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
+MASTER_SITES=	ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
 		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/ \
 		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/ \
 		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/ \
