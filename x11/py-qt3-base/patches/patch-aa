@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/22 18:52:45 drochner Exp $
 
---- configure.py.orig	2005-08-30 19:42:52.000000000 +0200
+--- configure.py.orig	2005-11-14 18:31:26.000000000 +0100
 +++ configure.py
-@@ -733,7 +733,7 @@ def check_license():
+@@ -736,7 +736,7 @@ def check_license():
      print "Type 'no' to decline the terms of the license."
      print
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
          try:
              resp = raw_input("Do you accept the terms of the license? ")
          except:
-@@ -769,7 +769,7 @@ def create_makefiles():
+@@ -772,7 +772,7 @@ def create_makefiles():
  
          sipconfig.inform("Creating pyuic Makefile...")
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
              buildfile= "pyuic-prof.sbf"
  
              for xml in ("qdom.cpp", "qxml.cpp"):
-@@ -790,7 +790,7 @@ def create_makefiles():
+@@ -793,7 +793,7 @@ def create_makefiles():
          makefile.extra_defines.append("UIC")
          makefile.extra_defines.append("QT_INTERNAL_XML")
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
              makefile.extra_defines.append("QT_MODULE_XML")
  
          if sipcfg.qt_version < 0x030100:
-@@ -801,7 +801,7 @@ def create_makefiles():
+@@ -804,7 +804,7 @@ def create_makefiles():
  
          sipconfig.inform("Creating pylupdate Makefile...")
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
              buildfile= "pylupdate-prof.sbf"
  
              shutil.copyfile(sipcfg.qt_dir + "/src/xml/qxml.cpp", "pylupdate3/qxml.cpp")
-@@ -820,7 +820,7 @@ def create_makefiles():
+@@ -823,7 +823,7 @@ def create_makefiles():
  
          makefile.extra_defines.append("QT_INTERNAL_XML")
  
@@ -47,8 +47,8 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
              makefile.extra_defines.append("QT_MODULE_XML")
  
          makefile.generate()
-@@ -937,26 +937,26 @@ def main(argv):
-             sipconfig.error("This version of PyQt requires SIP v%s or later" % sipcfg.version_to_string(minv))
+@@ -942,26 +942,26 @@ def main(argv):
+             sipconfig.error("This version of PyQt requires SIP v%s or later" % sipconfig.version_to_string(minv))
  
      # Check for QScintilla.
 -    check_qscintilla()
