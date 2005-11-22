@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2005/11/22 18:52:45 drochner Exp $
 
---- configure.py.orig	2005-08-30 19:42:52.000000000 +0200
+--- configure.py.orig	2005-11-14 18:31:26.000000000 +0100
 +++ configure.py
-@@ -38,7 +38,7 @@ pyqt_version_str = "3.15"
+@@ -38,7 +38,7 @@ pyqt_version_str = "3.15.1"
  sip_min_v3_version = 0x030c00
  sip_min_v4_version = 0x040300
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
  qt_sip_flags = []
  qtext_sip_flags = []
  qtpe_sip_flags = []
-@@ -733,7 +733,7 @@ def check_license():
+@@ -736,7 +736,7 @@ def check_license():
      print "Type 'no' to decline the terms of the license."
      print
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
          try:
              resp = raw_input("Do you accept the terms of the license? ")
          except:
-@@ -767,64 +767,64 @@ def create_makefiles():
+@@ -770,64 +770,64 @@ def create_makefiles():
          # The Professional Edition needs special handling.
          prof = (sipcfg.qt_edition == "professional")
  
@@ -138,8 +138,8 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
      elif sipcfg.qt_version >= 0x020000:
          sipconfig.inform("Creating pyuic Makefile...")
  
-@@ -937,7 +937,7 @@ def main(argv):
-             sipconfig.error("This version of PyQt requires SIP v%s or later" % sipcfg.version_to_string(minv))
+@@ -942,7 +942,7 @@ def main(argv):
+             sipconfig.error("This version of PyQt requires SIP v%s or later" % sipconfig.version_to_string(minv))
  
      # Check for QScintilla.
 -    check_qscintilla()
@@ -147,7 +147,7 @@ $NetBSD: patch-aa,v 1.4 2005/10/06 17:57:49 drochner Exp $
  
      # Check which modules to build.
      check_module("qtcanvas", "qcanvas.h", "QCanvas()")
-@@ -955,8 +955,8 @@ def main(argv):
+@@ -960,8 +960,8 @@ def main(argv):
              if sys.platform == "win32" and sipcfg.sip_version >= 0x040200:
                  check_module("qtaxcontainer", "qaxobject.h", "QAxObject()", lib="qaxcontainer")
  
