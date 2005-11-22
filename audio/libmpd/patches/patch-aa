@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/22 19:26:08 wiz Exp $
+
+--- src/libmpd.c.orig	2005-08-14 20:06:20.000000000 +0200
++++ src/libmpd.c
+@@ -2729,7 +2729,8 @@ regex_t ** mpd_misc_tokenize(char *strin
+ 			char * temp=NULL;
+ 			result = (regex_t **)realloc(result,(tokens+2)*sizeof(regex_t *));
+ 			result[tokens] = malloc(sizeof(regex_t));
+-			temp = (char *)strndup((const char *)&string[bpos], i-bpos);
++			temp = (char *)strdup((const char *)&string[bpos]);
++			temp[i-bpos] = '\0';
+ 			if(regcomp(result[tokens], temp, REG_EXTENDED|REG_ICASE|REG_NOSUB))
+ 			{
+ 				result[tokens+1] = NULL;

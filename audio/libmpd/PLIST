@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/22 19:26:08 wiz Exp $
+include/${PKGNAME}/libmpd/debug_printf.h
+include/${PKGNAME}/libmpd/libmpd.h
+include/${PKGNAME}/libmpd/libmpdclient.h
+lib/${PKGNAME}.la
+lib/pkgconfig/${PKGNAME}.pc
+@dirrm include/${PKGNAME}/libmpd
+@dirrm include/${PKGNAME}
