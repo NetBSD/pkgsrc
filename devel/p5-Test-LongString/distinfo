@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/23 22:02:57 wiz Exp $
+
+SHA1 (Test-LongString-0.09.tar.gz) = 3f8a82ad6cb7250571d82fd61ca961d8a07371a8
+RMD160 (Test-LongString-0.09.tar.gz) = bf567999f671a0deecbf0794fc5036088a0cde35
+Size (Test-LongString-0.09.tar.gz) = 6263 bytes
