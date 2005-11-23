@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.105 2005/11/20 09:52:51 agc Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.106 2005/11/23 20:45:11 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -88,7 +88,7 @@ BULK_ID?=
 BROKENFILE?=	.broken${BULK_ID}.html
 
 # This file is the work log for a broken package
-BROKENWRKLOG?=	.broken${BULK_ID}.work.html
+BROKENWRKLOG?=	.broken${BULK_ID}.work.txt
 
 # This file is human-created to force a package to show up as broken
 # (it is never cleaned by the bulk build, and contains the broken reason)
@@ -430,11 +430,7 @@ bulk-package:
 		else \
 			${MV} ${_BUILDLOG:Q} ${_BROKENFILE:Q} ;\
 			if [ -f "${WRKLOG}" ]; then \
-				(${ECHO} "<pre>"; \
-				${ECHO} ""; \
-				${TO_HTML} ${WRKLOG}; \
-				${ECHO} "</pre>"; \
-				) >> ${_BROKENWRKLOG:Q}; \
+				${CP} ${WRKLOG:Q} ${_BROKENWRKLOG:Q}; \
 			fi; \
 			( \
 			if [ -f "${_BROKENWRKLOG:Q}" ]; then \
