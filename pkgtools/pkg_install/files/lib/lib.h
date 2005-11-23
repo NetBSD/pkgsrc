@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.18 2005/11/22 15:44:59 ben Exp $ */
+/* $NetBSD: lib.h,v 1.19 2005/11/23 04:49:51 ben Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -95,6 +95,11 @@
 /* Define tar as a string, in case it's called gtar or something */
 #ifndef TAR_CMD
 #define TAR_CMD	"tar"
+#endif
+
+/* Define pax as a string, used to copy files from staging area */
+#ifndef PAX_CMD
+#define PAX_CMD	"tar"
 #endif
 
 /* Define gzip and bzip2, used to unpack binary packages */
