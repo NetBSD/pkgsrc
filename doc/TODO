@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4203 2005/11/23 05:26:59 minskim Exp $
+$NetBSD: TODO,v 1.4204 2005/11/23 07:33:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1056,8 +1056,6 @@ Suggested package updates
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
 	o py-pyrex-0.9.3.1
-	o py-qt3-3.15.1
-	o py-qt3-sip-4.3.2
 	o py-soappy-0.11.6
 	o py-sqlite-2.0.4 [www/trac needs 1.x]
 	o py-sqlite-2.0.5
