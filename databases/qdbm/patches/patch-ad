@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/11/23 06:20:36 minskim Exp $
+
+--- java/Makefile.in.orig	2005-08-18 05:18:37.000000000 +0900
++++ java/Makefile.in
+@@ -37,7 +37,7 @@ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ MYHEADDIR = @includedir@
+ MYLIBDIR = @libdir@
+-MYDATADIR = @datadir@/$(PACKAGE)/java
++MYDATADIR = @datadir@/doc/$(PACKAGE)/java
+ DESTDIR =
+ 
+ # Building binaries

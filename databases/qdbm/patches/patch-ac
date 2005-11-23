@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1 2005/11/23 06:20:36 minskim Exp $
+
+--- cgi/Makefile.in.orig	2004-08-18 20:17:02.000000000 +0900
++++ cgi/Makefile.in
+@@ -22,20 +22,20 @@ MYDOCS = cgispex.html cgispex-ja.html
+ 
+ # Building binaries
+ CC = gcc
+-RELCFLAGS = -O2 -DNDEBUG
++RELCFLAGS = ${PTHREAD_CFLAGS} -O2 -DNDEBUG
+ CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I$(HOME)/include -I/usr/local/include \
+   -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
+   -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1
+ CFLAGS = -Wall -ansi -pedantic -fsigned-char $(RELCFLAGS)
+ LIBS = -lqdbm @LIBS@
+-LDFLAGS = -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
++LDFLAGS = @LDFLAGS@ -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
+ LDENV = LD_RUN_PATH=/lib:/usr/lib:$(HOME)/lib:/usr/local/lib:$(prefix)/lib
+ 
+ # Install destinations
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+-MYLIBEXECDIR = @libexecdir@
+-MYDATADIR = @datadir@/$(PACKAGE)/cgi
++MYLIBEXECDIR = @libexecdir@/cgi-bin
++MYDATADIR = @datadir@/doc/$(PACKAGE)/cgi
+ DESTDIR =
+ 
+ 

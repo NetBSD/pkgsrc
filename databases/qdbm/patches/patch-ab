@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1 2005/11/23 06:20:36 minskim Exp $
+
+--- perl/Makefile.in.orig	2005-06-19 08:12:23.000000000 +0900
++++ perl/Makefile.in
+@@ -21,7 +21,7 @@ MYDOCS = plspex.html plspex-ja.html plap
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ MYBINDIR = @bindir@
+-MYDATADIR = @datadir@/$(PACKAGE)/perl
++MYDATADIR = @datadir@/doc/$(PACKAGE)/perl
+ DESTDIR =
+ 
+ # Building binaries
+@@ -42,15 +42,15 @@ RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr
+ all :
+ 	cd depot && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+-	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
++	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" INSTALLDIRS=vendor ; \
+ 	  $(RUNENV) make
+ 	cd curia && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+-	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
++	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" INSTALLDIRS=vendor ; \
+ 	  $(RUNENV) make
+ 	cd villa && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+-	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
++	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" INSTALLDIRS=vendor ; \
+ 	  $(RUNENV) make
+ 	@printf '\n'
+ 	@printf '#================================================================\n'
