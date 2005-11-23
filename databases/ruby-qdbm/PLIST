@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/23 06:42:38 minskim Exp $
+${RUBY_SITEARCHLIBDIR}/mod_curia.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/mod_depot.${RUBY_DLEXT}
+${RUBY_SITEARCHLIBDIR}/mod_villa.${RUBY_DLEXT}
+${RUBY_SITELIBDIR}/curia.rb
+${RUBY_SITELIBDIR}/depot.rb
+${RUBY_SITELIBDIR}/villa.rb
+bin/rbcrtest
+bin/rbdptest
+bin/rbvltest
+share/doc/qdbm/ruby/rbspex.html
+share/doc/qdbm/ruby/rbspex-ja.html
+share/doc/qdbm/ruby/rbapidoc/curia.rb.html
+share/doc/qdbm/ruby/rbapidoc/depot.rb.html
+share/doc/qdbm/ruby/rbapidoc/index.html
+share/doc/qdbm/ruby/rbapidoc/villa.rb.html
+@dirrm share/doc/qdbm/ruby/rbapidoc
+@dirrm share/doc/qdbm/ruby
