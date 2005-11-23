@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/23 06:33:35 minskim Exp $
+bin/plcrtest
+bin/pldptest
+bin/plvltest
+share/doc/qdbm/perl/plspex.html
+share/doc/qdbm/perl/plspex-ja.html
+share/doc/qdbm/perl/plapidoc/Curia.pm.html
+share/doc/qdbm/perl/plapidoc/Depot.pm.html
+share/doc/qdbm/perl/plapidoc/Villa.pm.html
+share/doc/qdbm/perl/plapidoc/index.html
+@dirrm share/doc/qdbm/perl/plapidoc
+@dirrm share/doc/qdbm/perl
