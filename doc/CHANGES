@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12014 2005/11/23 05:26:59 minskim Exp $
+$NetBSD: CHANGES,v 1.12015 2005/11/23 05:50:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5334,3 +5334,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/p5-prefork to 1.00 [wiz 2005-11-22]
 	Updated devel/p5-Class-Autouse to 1.21 [wiz 2005-11-22]
 	Updated math/mathomatic to 12.5.2 [minskim 2005-11-23]
+	Updated fonts/alee-ttf to 6.0 [minskim 2005-11-23]
