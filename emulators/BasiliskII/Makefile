@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2005/11/03 21:34:23 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2005/11/23 12:17:56 adam Exp $
 
-DISTNAME=	BasiliskII_src_22032005
-PKGNAME=	BasiliskII-1.0.20050322
+DISTNAME=	BasiliskII_src_22112005
+PKGNAME=	BasiliskII-1.0.20051122
 CATEGORIES=	emulators
-MASTER_SITES=	http://gwenole.beauchesne.online.fr/basilisk2/files/
+MASTER_SITES=	http://www.gibix.net/projects/basilisk2/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://gwenole.beauchesne.online.fr/basilisk2/
+HOMEPAGE=	http://www.gibix.net/projects/basilisk2/
 COMMENT=	Open Source 68k Macintosh emulator
 
 WRKSRC=			${WRKDIR}/BasiliskII-1.0
