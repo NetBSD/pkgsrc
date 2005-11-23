@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/08/06 06:19:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/23 22:21:01 wiz Exp $
 
-DISTNAME=	Algorithm-Dependency-1.03
+DISTNAME=	Algorithm-Dependency-1.101
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Algorithm-Dependency/
 COMMENT=	Algorithmic framework for implementing dependency tree
 
 DEPENDS+=	p5-Test-ClassAPI>=0.6:../../devel/p5-Test-ClassAPI
+DEPENDS+=	p5-Params-Util>=0.07:../../devel/p5-Params-Util
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
