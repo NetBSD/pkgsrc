@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12020 2005/11/23 06:59:44 minskim Exp $
+$NetBSD: CHANGES,v 1.12021 2005/11/23 07:33:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5333,6 +5333,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/p5-Test-Pod to 1.22 [wiz 2005-11-22]
 	Updated devel/p5-prefork to 1.00 [wiz 2005-11-22]
 	Updated devel/p5-Class-Autouse to 1.21 [wiz 2005-11-22]
+	Updated x11/py-qt3-sip to 4.3.2 [drochner 2005-11-22]
+	Updated x11/py-qt3-base to 3.15.1 [drochner 2005-11-22]
+	Updated x11/py-qt3-modules to 3.15.1 [drochner 2005-11-22]
+	Updated x11/py-qt3-qscintilla to 3.15.1 [drochner 2005-11-22]
 	Updated math/mathomatic to 12.5.2 [minskim 2005-11-23]
 	Updated fonts/alee-ttf to 6.0 [minskim 2005-11-23]
 	Updated databases/qdbm to 1.8.34 [minskim 2005-11-23]
