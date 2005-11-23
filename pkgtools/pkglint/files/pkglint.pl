@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.378 2005/11/23 06:05:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.379 2005/11/23 22:12:03 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -99,8 +99,8 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
 		NO_FILE NO_LINE_NUMBER
-		log_fatal log_error log_warning log_note log_info log_subinfo
-		print_summary_and_exit set_verbose is_verbose
+		log_fatal log_error log_warning log_note log_info log_debug
+		print_summary_and_exit set_verbosity get_verbosity
 		set_gcc_output_format
 		get_show_source_flag set_show_source_flag
 	);
@@ -114,12 +114,12 @@ use constant NO_LINE_NUMBER	=> undef;
 
 my $errors		= 0;
 my $warnings		= 0;
-my $verbose_flag	= false;
+my $verbosity		= 0;
 my $gcc_output_format	= false;
 my $show_source_flag	= false;
 
-sub log_message($$$$$$) {
-	my ($out, $file, $subr, $lineno, $type, $message) = @_;
+sub log_message($$$$$) {
+	my ($out, $file, $lineno, $type, $message) = @_;
 	my ($text, $sep);
 
 	if (defined($file)) {
@@ -149,10 +149,6 @@ sub log_message($$$$$$) {
 		$text .= "${sep}${type}:";
 		$sep = " ";
 	}
-	if (defined($subr)) {
-		$text .= "${sep}[${subr}]";
-		$sep = " ";
-	}
 	if (defined($message)) {
 		$text .= "${sep}${message}";
 		$sep = "";
@@ -163,34 +159,34 @@ sub log_message($$$$$$) {
 
 sub log_fatal($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message(*STDERR, $file, undef, $lineno, $gcc_output_format ? "fatal" : "FATAL", $msg);
+	log_message(*STDERR, $file, $lineno, $gcc_output_format ? "fatal" : "FATAL", $msg);
 	exit(1);
 }
 
 sub log_error($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message(*STDOUT, $file, undef, $lineno, $gcc_output_format ? "error" : "ERROR", $msg);
+	log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "error" : "ERROR", $msg);
 	$errors++;
 }
 sub log_warning($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message(*STDOUT, $file, undef, $lineno, $gcc_output_format ? "warning" : "WARN", $msg);
+	log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "warning" : "WARN", $msg);
 	$warnings++;
 }
 sub log_note($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message(*STDOUT, $file, undef, $lineno, $gcc_output_format ? "note" : "NOTE", $msg);
+	log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "note" : "NOTE", $msg);
 }
 sub log_info($$$) {
 	my ($file, $lineno, $msg) = @_;
-	if ($verbose_flag) {
-		log_message(*STDOUT, $file, undef, $lineno, $gcc_output_format ? "info" : "OK", $msg);
+	if ($verbosity >= 1) {
+		log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "info" : "OK", $msg);
 	}
 }
-sub log_subinfo($$$$) {
-	my ($subr, $file, $lineno, $msg) = @_;
-	if ($verbose_flag) {
-		log_message(*STDOUT, $file, $subr, $lineno, $gcc_output_format ? "info" : "OK", $msg);
+sub log_debug($$$) {
+	my ($file, $lineno, $msg) = @_;
+	if ($verbosity >= 2) {
+		log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "debug" : "DEBUG", $msg);
 	}
 }
 
@@ -211,12 +207,11 @@ sub print_summary_and_exit($) {
 	exit($errors != 0);
 }
 
-sub is_verbose() {
-	return $verbose_flag;
+sub get_verbosity() {
+	return $verbosity;
 }
-sub set_verbose($) {
-	my ($verbose) = @_;
-	$verbose_flag = $verbose;
+sub set_verbosity($) {
+	($verbosity) = @_;
 }
 
 sub set_gcc_output_format() {
@@ -321,11 +316,19 @@ sub log_note($$) {
 }
 sub log_info($$) {
 	my ($self, $text) = @_;
-	if (PkgLint::Logging::is_verbose()) {
+	if (PkgLint::Logging::get_verbosity() >= 1) {
 		$self->show_source(*STDOUT);
 	}
 	PkgLint::Logging::log_info($self->[FILE], $self->[LINES], $text);
 }
+sub log_debug($$) {
+	my ($self, $text) = @_;
+	if (PkgLint::Logging::get_verbosity() >= 2) {
+		$self->show_source(*STDOUT);
+	}
+	PkgLint::Logging::log_debug($self->[FILE], $self->[LINES], $text);
+}
+
 sub to_string($) {
 	my ($self) = @_;
 	return sprintf("%s:%s: %s", $self->[FILE], $self->[LINES], $self->[TEXT]);
@@ -574,8 +577,7 @@ BEGIN {
 	);
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER
-		log_fatal log_error log_warning log_info log_subinfo
-		print_summary_and_exit
+		log_fatal log_error log_warning log_info log_debug
 	);
 	import PkgLint::FileUtil qw(
 		load_file load_lines
@@ -690,7 +692,7 @@ my (@options) = (
 	[ "-v|--verbose", "print progress messages",
 	  "verbose|v",
 	  sub {
-		PkgLint::Logging::set_verbose(true);
+		PkgLint::Logging::set_verbosity(PkgLint::Logging::get_verbosity() + 1);
 	  } ]
 );
 
@@ -703,6 +705,10 @@ use constant regex_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
 use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}\[]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
+
+# This "constant" is often used in contexts where interpolation comes
+# handy, so it is a variable. Nevertheless it is not modified.
+my $regex_shellword		=  qr"\s*((?:'[^']*'|\"(?:\\.|[^\\])*\"|\\.|[^'\"\\\s])+)"s;
 
 #
 # Global variables.
@@ -1093,7 +1099,7 @@ sub checkfile_DESCR($) {
 	my ($maxchars, $maxlines) = (80, 24);
 	my ($descr);
 
-	log_subinfo("checkfile_DESCR", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_DESCR]");
 
 	checkperms($fname);
 	if (!($descr = load_file($fname))) {
@@ -1121,7 +1127,7 @@ sub checkfile_distinfo($) {
 	my ($fname) = @_;
 	my ($lines, %in_distinfo, %sums);
 
-	log_subinfo("checkfile_distinfo", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_distinfo]");
 
 	checkperms($fname);
 	if (!($lines = load_file($fname))) {
@@ -1187,7 +1193,7 @@ sub checkfile_MESSAGE($) {
 	my ($fname) = @_;
 	my ($message);
 
-	log_subinfo("checkfile_MESSAGE", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_MESSAGE]");
 
 	checkperms($fname);
 	if (!($message = load_file($fname))) {
@@ -1218,7 +1224,7 @@ sub checkfile_PLIST($) {
 	my ($fname) = @_;
 	my ($plist, $last_file_seen);
 
-	log_subinfo("checkfile_PLIST", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_PLIST]");
 
 	checkperms($fname);
 	if (!($plist = load_file($fname))) {
@@ -1309,7 +1315,7 @@ sub checkfile_extra($) {
 	my ($fname) = @_;
 	my ($lines);
 
-	log_subinfo("checkfile_extra", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_extra]");
 
 	$lines = load_file($fname);
 	if (!$lines) {
@@ -1393,7 +1399,7 @@ sub checkfile_patches_patch($) {
 	my ($fname) = @_;
 	my ($lines);
 
-	log_subinfo("checkfile_patches_patch", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_patches_patch]");
 
 	checkperms($fname);
 	if (!($lines = load_file($fname))) {
@@ -1619,7 +1625,7 @@ sub get_tool_names() {
 			}
 		}
 	}
-	log_info(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
+	log_debug(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
 
 	$get_tool_names_value = $tools;
 	return $get_tool_names_value;
@@ -2098,9 +2104,9 @@ sub checklines_direct_tools($) {
 	my $valid_shellcmds = join("|", @valid_shellcmds);
 	my $regex_valid_shellcmds = qr"(?:${valid_shellcmds})";
 
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_tools=${regex_tools}");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_ok_vars=${regex_ok_vars}");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "regex_valid_shellcmds=${regex_valid_shellcmds}");
+	log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] regex_tools=${regex_tools}");
+	log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] regex_ok_vars=${regex_ok_vars}");
+	log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] regex_valid_shellcmds=${regex_valid_shellcmds}");
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
@@ -2395,6 +2401,12 @@ sub checklines_package_Makefile($) {
 
 				$line->log_note("You don't need to use \"-\" before ${mkdir_cmd}.");
 			}
+
+			$line->log_debug("ShellCmd: $shellcmd");
+			while ($shellcmd =~ /$regex_shellword/g) {
+				$line->log_debug("ShellWord: $1");
+			}
+
 		}
 	}
 
@@ -2428,7 +2440,7 @@ sub expand_variable($$) {
 		$value =~ s,\$\{PKGDIR\},$pkgdir,g;
 	}
 	if ($value =~ regex_unresolved) {
-		log_subinfo("expand_variable", NO_FILE, NO_LINE_NUMBER, "The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
+		log_info(NO_FILE, NO_LINE_NUMBER, "[expand_variable] The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
 	}
 	return $value;
 }
@@ -2486,10 +2498,10 @@ sub load_package_Makefile($$$$) {
 	$patchdir = expand_variable($whole, "PATCHDIR");
 	set_default_value(\$patchdir, "patches");
 
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "DISTINFO_FILE=$distinfo_file");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "FILESDIR=$filesdir");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "PATCHDIR=$patchdir");
-	log_subinfo($subr, NO_FILE, NO_LINE_NUMBER, "PKGDIR=$pkgdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] DISTINFO_FILE=$distinfo_file");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] FILESDIR=$filesdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] PATCHDIR=$patchdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] PKGDIR=$pkgdir");
 
 	${$ref_whole} = $whole;
 	${$ref_main_lines} = $main_lines;
@@ -2505,7 +2517,7 @@ sub checkfile_ALTERNATIVES($) {
 	my ($fname) = @_;
 	my ($lines);
 
-	log_subinfo("checkfile_ALTERNATIVES", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_ALTERNATIVES]");
 
 	checkperms($fname);
 	if (!($lines = load_file($fname))) {
@@ -2518,7 +2530,7 @@ sub checkfile_INSTALL($) {
 	my ($fname) = @_;
 	my ($lines);
 
-	log_subinfo("checkfile_INSTALL", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_INSTALL]");
 
 	checkperms($fname);
 	if (!($lines = load_file($fname))) {
@@ -2531,7 +2543,7 @@ sub checkfile_mk($) {
 	my ($fname) = @_;
 	my ($lines);
 
-	log_subinfo("checkfile_mk", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_mk]");
 
 	checkperms($fname);
 	if (!($lines = load_lines($fname, true))) {
@@ -2549,7 +2561,7 @@ sub checkfile_package_Makefile($$$$) {
 	my ($fname, $whole, $main_lines, $lines) = @_;
 	my ($distname, $category, $distfiles);
 	
-	log_subinfo("checkfile_package_Makefile", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_package_Makefile]");
 
 	checkperms($fname);
 
@@ -2629,7 +2641,7 @@ sub checkfile($) {
 	my ($fname) = @_;
 	my ($st, $basename);
 
-	log_subinfo("checkfile", $fname, NO_LINE_NUMBER, undef);
+	log_info($fname, NO_LINE_NUMBER, "[checkfile]");
 
 	$basename = basename($fname);
 	if ($basename =~ qr"^(?:work.*|.*~|.*\.orig|.*\.rej)$") {
@@ -2704,7 +2716,7 @@ sub checkdir_root() {
 	my ($fname) = "${current_dir}/Makefile";
 	my ($lines, $prev_subdir, @subdirs);
 
-	log_subinfo("checkdir_root", $fname, NO_LINE_NUMBER, "Checking pkgsrc root directory.");
+	log_info($fname, NO_LINE_NUMBER, "[checkdir_root] Checking pkgsrc root directory.");
 
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
@@ -3060,7 +3072,7 @@ sub main() {
 		checkitem(shift(@todo_items));
 	}
 
-	print_summary_and_exit($opt_quiet);
+	PkgLint::Logging::print_summary_and_exit($opt_quiet);
 }
 
 main();
