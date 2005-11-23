@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.376 2005/11/21 22:06:30 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.377 2005/11/23 05:18:46 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1802,6 +1802,12 @@ sub checkline_basic_vartype($$$$$) {
 	} elsif ($type eq "RelativePkgDir") {
 		if ($value !~ qr"^\.\./\.\./[^/]+/[^/]+$") {
 			$line->log_warning("\"${value}\" is not a valid relative package directory.");
+		}
+
+	} elsif ($type eq "ShellWord") {
+		if ($value =~ qr"^[\w_]+=\"\$\{([\w_]+)\}\"$") {
+			my ($vname) = ($1);
+			$line->log_warning("Please use \${${vname}:Q} instead of \"\${${vname}}\".");
 		}
 
 	} elsif ($type eq "Stage") {
