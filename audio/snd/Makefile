@@ -1,36 +1,34 @@
-# $NetBSD: Makefile,v 1.39 2005/06/01 18:02:38 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/11/23 22:39:12 wiz Exp $
 #
 
-DISTNAME=		snd
-PKGNAME=		snd-19980212
-PKGREVISION=		2
+DISTNAME=		snd-7.15
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=snd/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://ccrma-www.stanford.edu/CCRMA/Software/snd/snd.html
+HOMEPAGE=		http://ccrma.stanford.edu/software/snd/
 COMMENT=		X based sound editor
 
-NO_SRC_ON_FTP=		Already on MASTER_SITE_LOCAL
+DEPENDS+=		flac-[0-9]*:../../audio/flac
+DEPENDS+=		speex-[0-9]*:../../audio/speex
+DEPENDS+=		vorbis-tools-[0-9]*:../../audio/vorbis-tools
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
 
-WRKSRC=			${WRKDIR}
-
-MAKEFILE=		makefile.netbsd
 BUILD_TARGET=		snd
+MAKEFILE=		makefile
+WRKSRC=			${WRKDIR}/snd-7
 
-HTMLDIR=		${PREFIX}/share/doc/html/snd
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/po/de.gmo \
+		${PREFIX}/${PKGLOCALEDIR}/locale/de/LC_MESSAGES/snd.mo
 
-INSTALLATION_DIRS=	bin lib/X11/app-defaults
+.include "options.mk"
 
-do-install:
-	cd ${WRKSRC} ; ${INSTALL_PROGRAM} snd ${PREFIX}/bin
-	cd ${WRKSRC} ; ${INSTALL_DATA} Snd.ad ${PREFIX}/lib/X11/app-defaults/Snd
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC} ; ${INSTALL_DATA} *.gif *.html *.txt README.Snd ${HTMLDIR}
-
-.include "../../graphics/xpm/buildlink3.mk"
-.include "../../mk/motif.buildlink3.mk"
-
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
