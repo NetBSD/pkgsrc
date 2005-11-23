@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2005/08/06 06:19:39 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/23 22:16:36 wiz Exp $
 #
 
-DISTNAME=		HTML-Tagset-3.04
+DISTNAME=		HTML-Tagset-3.10
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5htg
-PKGREVISION=		2
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
