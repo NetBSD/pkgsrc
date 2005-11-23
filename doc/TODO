@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4206 2005/11/23 22:03:51 wiz Exp $
+$NetBSD: TODO,v 1.4207 2005/11/23 22:24:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -816,15 +816,11 @@ Suggested package updates
 	o oss-3.99.3c
 	o otpCalc-0.97
 	o p11-2.10c
-	o p5-Algorithm-Dependency-1.04
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookie-3.09.01
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
-	o p5-Apache-Session-1.80
 	o p5-Apache-Session-Wrapper-0.26
-	o p5-Apache-Test-1.26
-	o p5-Array-Compare-1.13
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-2.09
 	o p5-Authen-SASL-Cyrus-0.13
@@ -834,7 +830,6 @@ Suggested package updates
 	o p5-CGI-Application-4.04.02
 	o p5-CGI-Minimal-1.24
 	o p5-Class-DBI-AbstractSearch-0.07
-	o p5-Class-Data-Inheritable-0.04
 	o p5-Class-Loader-2.03
 	o p5-Class-ReturnValue-0.53
 	o p5-Class-Trigger-0.09 [pkg/29923]
@@ -861,22 +856,18 @@ Suggested package updates
 	o p5-DateTime-0.29.01
 	o p5-DateTime-Set-0.25
 	o p5-DateTime-TimeZone-0.37
-	o p5-Devel-Cycle-1.04
 	o p5-Devel-SmallProf-2.00_03
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
 	o p5-Digest-Hashcash-0.03
 	o p5-Digest-SHA-5.31
-	o p5-Exception-Class-1.22
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-ExtUtils-XSBuilder-0.27
 	o p5-File-DirSync-1.12
-	o p5-File-Remove-0.30
 	o p5-FileHandle-Unget-0.16.2.1
-	o p5-Font-AFM-1.19
 	o p5-Font-TTF-0.35
 	o p5-GD-2.23 [pkg/30532]
 	o p5-Graph-0.20105
@@ -890,11 +881,8 @@ Suggested package updates
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
-	o p5-Locale-Maketext-Lexicon-0.49
 	o p5-Log-Agent-0.307
-	o p5-Log-Dispatch-2.11
 	o p5-MARC-1.38
-	o p5-MIME-tools-5.418
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
@@ -918,43 +906,32 @@ Suggested package updates
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
 	o p5-PV-1.5
-	o p5-Params-Validate-0.78
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
-	o p5-Regexp-Common-2.120
 	o p5-SQL-Abstract-1.20
 	o p5-SVN-Web-0.38
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
-	o p5-Scalar-List-Utils-1.17
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-Scalar-1.20
 	o p5-String-Approx-3.25
 	o p5-Template-Extract-0.40
 	o p5-Test-Cmd-1.05
-	o p5-Test-Exception-0.21
 	o p5-Test-Harness-2.46
 	o p5-Test-Inline-2.103
-	o p5-Test-Memory-Cycle-1.02
-	o p5-Text-Autoformat-1.12
 	o p5-Text-Balanced-1.95
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Tabs+Wrap-2005.0824
-	o p5-Text-Template-1.44
 	o p5-Text-WikiFormat-0.76
 	o p5-Tie-EncryptedHash-1.21
 	o p5-Time-HiRes-1.74
 	o p5-Time-Piece-2.00.01
-	o p5-Tree-Simple-1.15
 	o p5-WWW-Amazon-Wishlist-1.4
-	o p5-WWW-Mechanize-1.14
-	o p5-Want-0.09
 	o p5-X11-Protocol-0.54
 	o p5-XML-LibXSLT-1.57
 	o p5-XML-NamespaceSupport-1.09
 	o p5-XML-RAI-1.04
-	o p5-XML-RSS-1.05
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
 	o p5-XML-Twig-3.22
