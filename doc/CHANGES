@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12017 2005/11/23 06:38:38 minskim Exp $
+$NetBSD: CHANGES,v 1.12018 2005/11/23 06:44:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5337,3 +5337,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fonts/alee-ttf to 6.0 [minskim 2005-11-23]
 	Updated databases/qdbm to 1.8.34 [minskim 2005-11-23]
 	Added databases/p5-qdbm version 1.0.0.1.8.34 [minskim 2005-11-23]
+	Added databases/ruby-qdbm version 1.0.0.1.8.34 [minskim 2005-11-23]
