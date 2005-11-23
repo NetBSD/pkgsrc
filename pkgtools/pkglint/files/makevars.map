@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.36 2005/11/20 13:14:17 rillig Exp $
+# $NetBSD: makevars.map,v 1.37 2005/11/23 05:18:46 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -63,9 +63,9 @@ CATEGORIES		List* of Category
 CC_VERSION		Readonly
 CFLAGS			List
 COMMENT			Comment
-CONFIGURE_ARGS		List
+CONFIGURE_ARGS		List of ShellWord
 CONFIGURE_DIRS		List* of WrksrcSubdirectory
-CONFIGURE_ENV		List
+CONFIGURE_ENV		List of ShellWord
 CPPFLAGS		List
 DEPENDS			List of DependencyWithPath
 DISTFILES		List* of Filename
@@ -87,7 +87,7 @@ FAMBASE			Readonly
 FAM_ACCEPTED		List* of { fam gamin }
 FAM_DEFAULT		Userdefined
 FAM_TYPE		Readonly
-FILES_SUBST		List
+FILES_SUBST		List of ShellWord
 GCC_REQD		List
 GNU_CONFIGURE		Yes
 HOMEPAGE		URL
@@ -101,10 +101,10 @@ KRB5_TYPE		Readonly
 LDFLAGS			List
 LIBS			List
 MAINTAINER		Mail_Address
-MAKEFLAGS		List
+MAKEFLAGS		List of ShellWord
 MAKEVARS		List of Varname
-MAKE_ENV		List
-MAKE_FLAGS		List
+MAKE_ENV		List of ShellWord
+MAKE_FLAGS		List of ShellWord
 MANZ			Yes
 MASTER_SITES		List* of URL
 MYSQL_VERSIONS_ACCEPTED	List* of { 40 41 50 }
@@ -140,7 +140,7 @@ PKG_APACHE_ACCEPTED	List* of { apache13 apache2 }
 PKG_APACHE_DEFAULT	Userdefined
 PKG_DEBUG_LEVEL		Userdefined
 PKG_DEFAULT_OPTIONS	Userdefined
-PKG_FAIL_REASON		List
+PKG_FAIL_REASON		List of ShellWord
 PKG_INSTALLATION_TYPES	List* of { overwrite pkgviews }
 PKG_JAVA_HOME		Readonly
 PKG_JVM			Readonly
@@ -148,7 +148,7 @@ PKG_JVMS_ACCEPTED	List* of { blackdown-jdk13 jdk jdk14 kaffe sun-jdk13 sun-jdk14
 PKG_JVM_DEFAULT		Userdefined
 PKG_LEGACY_OPTIONS	List* of Option
 PKG_OPTIONS		Readonly
-PKG_OPTIONS_DEPRECATED_WARNINGS	List*
+PKG_OPTIONS_DEPRECATED_WARNINGS	List* of ShellWord
 PKG_OPTIONS_GROUP	List*
 PKG_OPTIONS_LEGACY_OPTS	List*
 PKG_OPTIONS_LEGACY_VARS	List*
@@ -158,12 +158,12 @@ PKG_OPTIONS_REQUIRED_GROUPS	List*
 PKG_OPTIONS_SET		List*
 PKG_OPTIONS_VAR		Varname
 PKG_PRESERVE		Yes
-PKG_SKIP_REASON		List
+PKG_SKIP_REASON		List of ShellWord
 PKG_SUFX		Userdefined
 PKG_SUGGESTED_OPTIONS	List* of Option
 PKG_SUPPORTED_OPTIONS	List* of Option
 PLIST_SRC		List* of Pathname
-PLIST_SUBST		List
+PLIST_SUBST		List of ShellWord
 PLIST_TYPE		{ dynamic static }
 PTHREAD_AUTO_VARS	YesNo
 PTHREAD_OPTS		List of { native optional require }
