@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4205 2005/11/23 19:25:01 markd Exp $
+$NetBSD: TODO,v 1.4206 2005/11/23 22:03:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -360,7 +360,7 @@ Suggested package updates
 	o arj-3.10.22
 	o arla-0.40
 	o arnold-20040104
-	o arpwatch-2.1a13
+	o arpwatch-2.1a13 [pkg/32151]
 	o asapm-3.1
 	o asc-1.16.2
 	o aspell-0.60.4
@@ -377,6 +377,7 @@ Suggested package updates
 	o avl-2.0.1
 	o avr-libc-1.4.0
 	o baci-20040415
+	o bacula-1.38.2
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
@@ -385,7 +386,7 @@ Suggested package updates
 	o benchfft-3.1
 	o binutils-2.16.1
 	o bioperl-1.5.0
-	o bittorrent-4.1.8
+	o bittorrent-4.2.0
 	o bittorrent-gui-4.1.7
 	o blackbox-0.70
 	o blur6ex-0.3.462
@@ -602,7 +603,7 @@ Suggested package updates
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
 	o horde-2.2.9
-	o horde3-3.0.6
+	o horde3-3.0.7
 	o hot-babe-0.2.2
 	o html2ps-1.0b4
 	o html2wml-0.4.11
