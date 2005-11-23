@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.377 2005/11/23 05:18:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.378 2005/11/23 06:05:52 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1537,7 +1537,6 @@ sub get_regex_plurals() {
 		PLIST_CAT
 		PLIST_PRE
 		PREPEND_PATH
-		_.*
 	);
 	my @plurals_missing_an_s = qw(
 		.*_OVERRIDE
@@ -1805,9 +1804,16 @@ sub checkline_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "ShellWord") {
-		if ($value =~ qr"^[\w_]+=\"\$\{([\w_]+)\}\"$") {
-			my ($vname) = ($1);
-			$line->log_warning("Please use \${${vname}:Q} instead of \"\${${vname}}\".");
+		if ($value =~ qr"^[\w_]+=(([\"']?)\$\{([\w_]+)\}\2)$") {
+			my ($vexpr, undef, $vname) = ($1, $2, $3);
+			my $mod = ($vname =~ get_regex_plurals()) ? ":M*:Q" : ":Q";
+			$line->log_warning("Please use \${${vname}${mod}} instead of ${vexpr}.");
+
+		} elsif ($value =~ qr"^[\w_]+=(\$\{([\w_]+):Q\})$") {
+			my ($vexpr, $vname) = ($1, $2);
+			if ($vname =~ get_regex_plurals()) {
+				$line->log_warning("Please use \${${vname}:M*:Q} instead of ${vexpr}.");
+			}
 		}
 
 	} elsif ($type eq "Stage") {
@@ -1926,9 +1932,7 @@ sub checkline_Makefile_vartype($$) {
 			: undef;
 
 		if ($op eq "+=") {
-			my $regex_plurals = get_regex_plurals();
-
-			if ($varbase !~ $regex_plurals) {
+			if ($varbase !~ qr"^_" && $varbase !~ get_regex_plurals()) {
 				$line->log_warning("As ${varname} is modified using \"+=\", its name should indicate plural.");
 			}
 		}
