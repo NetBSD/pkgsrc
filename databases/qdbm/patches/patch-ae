@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1 2005/11/23 06:20:36 minskim Exp $
+
+--- plus/Makefile.in.orig	2005-08-18 05:18:11.000000000 +0900
++++ plus/Makefile.in
+@@ -34,12 +34,12 @@ exec_prefix = @exec_prefix@
+ MYHEADDIR = @includedir@
+ MYLIBDIR = @libdir@
+ MYBINDIR = @bindir@
+-MYDATADIR = @datadir@/$(PACKAGE)/plus
++MYDATADIR = @datadir@/doc/$(PACKAGE)/plus
+ DESTDIR =
+ 
+ # Building binaries
+ CXX = @CXX@
+-RELCXXFLAGS = -O1 -DNDEBUG
++RELCXXFLAGS = -O1 -DNDEBUG ${PTHREAD_CFLAGS}
+ CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I$(HOME)/include -I/usr/local/include \
+   -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
+   -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1 \
+@@ -47,8 +47,8 @@ CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I
+ CXXFLAGS = -Wall -ansi -pedantic -fsigned-char -fPIC $(RELCXXFLAGS)
+ LD = @LD@
+ LIBS = -lqdbm @LIBS@
+-LIBLDFLAGS = -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
+-LDFLAGS = -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib -lxqdbm $(LIBS)
++LIBLDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
++LDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib -lxqdbm $(LIBS)
+ LDENV = LD_RUN_PATH=/lib:/usr/lib:$(HOME)/lib:/usr/local/lib:$(MYLIBDIR)
+ AR = @AR@
+ ARFLAGS = rcsv
