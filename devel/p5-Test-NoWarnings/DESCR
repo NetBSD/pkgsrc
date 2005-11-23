@@ -1,0 +1,11 @@
+In general, your tests shouldn't produce warnings. This modules
+causes any warnings to be captured and stored. It automatically
+adds an extra test that will run when your script ends to check
+that there were no warnings. If there were any warnings, the test
+will give a "not ok" and diagnostics of where, when, and what the
+warning was, including a stack trace of what was going on when it
+occurred.
+
+If some of your tests are supposed to produce warnings then you
+should be capturing and checking them with Test::Warn, that way
+Test::NoWarnings will not see them and so not complain.
