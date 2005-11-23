@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12021 2005/11/23 07:33:14 wiz Exp $
+$NetBSD: CHANGES,v 1.12022 2005/11/23 12:19:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5344,3 +5344,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added databases/ruby-qdbm version 1.0.0.1.8.34 [minskim 2005-11-23]
 	Added databases/qdbm-cgi version 0.0.1.1.8.34 [minskim 2005-11-23]
 	Added databases/qdbm-plus version 1.0.0.1.8.34 [minskim 2005-11-23]
+	Updated emulators/BasiliskII to 1.0.20051122 [adam 2005-11-23]
