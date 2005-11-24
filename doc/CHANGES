@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12030 2005/11/24 10:17:25 rillig Exp $
+$NetBSD: CHANGES,v 1.12031 2005/11/24 18:55:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5384,3 +5384,14 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/p5-Digest-SHA to 5.31 [wiz 2005-11-23]
 	Updated devel/Gorm to 1.0.1 [rh 2005-11-24]
 	Updated pkgtools/pkglint to 4.46 [rillig 2005-11-24]
+	Added devel/p5-capitalization version 0.03 [wiz 2005-11-24]
+	Added textproc/p5-Pod-Tests version 0.18 [wiz 2005-11-24]
+	Added databases/p5-DBIx-Schema version 0.07 [wiz 2005-11-24]
+	Added databases/p5-DBIx-DBSchema version 0.27 [wiz 2005-11-24]
+	Added databases/p5-DBIx-Abstract version 1.006 [wiz 2005-11-24]
+	Updated pkgtools/revbump to 1.1 [wiz 2005-11-24]
+	Updated devel/p5-Test-Inline to 2.103 [wiz 2005-11-24]
+	Updated devel/p5-Class-ReturnValue to 0.53 [wiz 2005-11-24]
+	Updated databases/p5-DBD-SQLite to 1.09 [wiz 2005-11-24]
+	Updated databases/p5-DBIx-SearchBuilder to 1.35 [wiz 2005-11-24]
+	Updated devel/libmm to 1.4.0 [wiz 2005-11-24]
