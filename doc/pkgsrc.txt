@@ -4933,15 +4933,15 @@ The C preprocessor has a set of predefined macros that can be queried by using
 #ifdef FOO or #if defined(FOO). Among these macros are usually ones that
 describe the target CPU and operating system. Depending of which of the macros
 are defined, you can write code that uses features unique to a specific
-platform. The best way to handle these differences is to use the GNU autotools
-(automake, autoconf, etc.) to check for specific features (like the existence
-of a header file, a function or a library).
+platform. Generally you should rather use the GNU autotools (automake,
+autoconf, etc.) to check for specific features (like the existence of a header
+file, a function or a library), but sometimes this is not possible or desired.
 
-If that is not possible you can use the predefined macros below to configure
-your code to the platform it runs on. Almost every operating system, hardware
-architecture and compiler has its own macro. For example, if the macros
-__GNUC__, __i386__ and __NetBSD__ are all defined, you know that you are using
-NetBSD on an Intel CPU, and your compiler is GCC.
+In that case you can use the predefined macros below to configure your code to
+the platform it runs on. Almost every operating system, hardware architecture
+and compiler has its own macro. For example, if the macros __GNUC__, __i386__
+and __NetBSD__ are all defined, you know that you are using NetBSD on an i386
+compatible CPU, and your compiler is GCC.
 
 15.4.1.1. CPP defines for operating systems
 
@@ -4984,14 +4984,27 @@ that may help you to choose the right ones. For example, if you want to
 conditionally compile code on Solaris, don't use __sun__, as the SunPro
 compiler does not define it. Use __sun instead.
 
-SunPro 5.7 + Solaris 8 + SPARC
+GCC 3.3.3 + SuSE Linux 9.1 + i386
 
-    __SVR4, __sparc, __sun, __unix, sparc, sun, unix.
+    __ELF__, __gnu_linux__, __i386, _i386__, __linux, __linux__, __unix,
+    __unix__, i386, linux, unix.
+
+GCC 2.95 + NetBSD 1.6.2 + i386
+
+    __ELF__, __NetBSD__, __i386, _i386__, i386.
+
+GCC 3.3.3 + NetBSD 2.0 + i386
+
+    __ELF__, __NetBSD__, __i386, _i386__, i386.
 
 GCC 4 + Solaris 8 + SPARC
 
     __ELF__, __sparc, __sparc__, __sun, __sun__, __SVR4, __svr4__, __unix,
     __unix__, sparc, sun, unix.
+
+SunPro 5.7 + Solaris 8 + SPARC
+
+    __SVR4, __sparc, __sun, __unix, sparc, sun, unix.
 
 15.4.3. Getting a list of CPP defines
 
