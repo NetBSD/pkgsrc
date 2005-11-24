@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.383 2005/11/24 10:16:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.384 2005/11/24 10:47:51 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -131,6 +131,7 @@ my $verbosity		= 0;
 my $gcc_output_format	= false;
 my $explain_flag	= false;
 my $show_source_flag	= false;
+my $indent		= "";	# The width of the last diagnostics type.
 
 sub log_message($$$$$) {
 	my ($out, $file, $lineno, $type, $message) = @_;
@@ -152,6 +153,7 @@ sub log_message($$$$$) {
 	if (!$gcc_output_format && defined($type)) {
 		$text .= "${sep}${type}:";
 		$sep = " ";
+		$indent = " " x length($type);
 	}
 	if (defined($file)) {
 		$text .= defined($lineno)
@@ -208,7 +210,7 @@ sub explain($$$) {
 	my ($file, $lines, $msg) = @_;
 	
 	if ($explain_flag) {
-		print STDOUT ("\t${msg}\n");
+		print STDOUT ("${indent}  ${msg}\n");
 	}
 }
 
@@ -667,7 +669,6 @@ my (%warnings) = (
 
 my $opt_autofix		= false;
 my $opt_dumpmakefile	= false;
-my $opt_explain		= false;
 my $opt_import		= false;
 my $opt_quiet		= false;
 my $opt_recursive	= false;
@@ -699,7 +700,9 @@ my (@options) = (
 		parse_multioption($val, \%warnings);
 	  } ],
 	[ "-e|--explain", "Explain the diagnostics or give further help",
-	  "explain|e", \$opt_explain ],
+	  "explain|e", sub {
+		PkgLint::Logging::set_explain();
+	  } ],
 	[ "-g|--gcc-output-format", "Mimic the gcc output format",
 	  "gcc-output-format|g",
 	  sub {
