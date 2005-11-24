@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.106 2005/11/23 20:45:11 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.107 2005/11/24 12:14:32 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -84,6 +84,10 @@ BULK_ID?=	.${MACHINE_ARCH}
 BULK_ID?=
 .endif
 
+#
+# Package-specific files
+#
+
 # This file exists to mark a package as broken
 BROKENFILE?=	.broken${BULK_ID}.html
 
@@ -96,6 +100,10 @@ FORCEBROKENFILE?= .forcebroken
 
 # This file is where the log of the build goes
 BUILDLOG?=	.make${BULK_ID}
+
+#
+# Top level databases and log files
+#
 
 # This is the directory in which all temporary files and log files from the
 # bulk build are kept.
@@ -480,7 +488,8 @@ bulk-package:
 						  ${ECHO} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>.<br />"; \
 						} >> "$${pkg_brokenfile}"; \
 						nbrokenby=`expr $$nbrokenby + 1`;\
-						if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${BULKFILESDIR:Q}/${BROKENFILE:Q} ; then :; else \
+						if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${BULKFILESDIR:Q}/${BROKENFILE:Q} ; then :; \
+						else \
 							${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${BULKFILESDIR:Q}/${BROKENFILE:Q} ;\
 						fi ;\
 					done ;\
@@ -511,7 +520,8 @@ bulk-package:
 # been modified and need rebuilding.
 bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
-		if ${PKG_INFO} -qe ${PKGNAME} ; then :; else \
+		if ${PKG_INFO} -qe ${PKGNAME} ; then :; \
+		else \
 			${DO} ${MAKE} install-depends ; \
 			${BULK_MSG} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
