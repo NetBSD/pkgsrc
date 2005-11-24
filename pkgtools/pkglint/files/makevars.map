@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.37 2005/11/23 05:18:46 rillig Exp $
+# $NetBSD: makevars.map,v 1.38 2005/11/24 08:05:01 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -10,8 +10,11 @@
 # The type Yes is used for variables that are checked using
 #     .if defined(VAR)
 #
-# Type type List is used for variables that should only be initialized
+# Type type List is used for lists of things. There are two modifiers
+# for lists: The "+" means that this variable should only be initialized
 # to the empty list or have some values appended using the "+=" operator.
+# The "!" means that the list is an internal list. See the pkgsrc guide,
+# chapter "Makefiles" for a detailed explanation.
 
 # some variables from mk/defaults/mk.conf, 1.27
 
@@ -45,30 +48,30 @@ USE_XFACE		YesNo
 ALTERNATIVES_FILE	Filename
 BDB185_DEFAULT		Userdefined
 BDBBASE			Readonly
-BDB_ACCEPTED		List* of { db1 db2 db3 db4 }
+BDB_ACCEPTED		List of { db1 db2 db3 db4 }
 BDB_DEFAULT		Userdefined
 BDB_LIBS		Readonly
 BDB_TYPE		Readonly
-BUILDLINK_DEPENDS	List of Dependency
+BUILDLINK_DEPENDS	List!+ of Dependency
 BUILDLINK_PKGSRCDIR	RelativePkgDir
-BUILDLINK_RECOMMENDED	List of Dependency
-BUILDLINK_TRANSFORM	List
-BUILD_DEFS		List of Varname
-BUILD_DEPENDS		List of DependencyWithPath
-BUILD_DIRS		List* of WrksrcSubdirectory
+BUILDLINK_RECOMMENDED	List!+ of Dependency
+BUILDLINK_TRANSFORM	List+
+BUILD_DEFS		List+ of Varname
+BUILD_DEPENDS		List!+ of DependencyWithPath
+BUILD_DIRS		List of WrksrcSubdirectory
 BUILD_USES_MSGFMT	Yes
 BUILTIN_X11_TYPE	Readonly
 BUILTIN_X11_VERSION	Readonly
-CATEGORIES		List* of Category
+CATEGORIES		List of Category
 CC_VERSION		Readonly
-CFLAGS			List
+CFLAGS			List+
 COMMENT			Comment
-CONFIGURE_ARGS		List of ShellWord
-CONFIGURE_DIRS		List* of WrksrcSubdirectory
-CONFIGURE_ENV		List of ShellWord
-CPPFLAGS		List
-DEPENDS			List of DependencyWithPath
-DISTFILES		List* of Filename
+CONFIGURE_ARGS		List+ of ShellWord
+CONFIGURE_DIRS		List of WrksrcSubdirectory
+CONFIGURE_ENV		List+ of ShellWord
+CPPFLAGS		List+
+DEPENDS			List!+ of DependencyWithPath
+DISTFILES		List of Filename
 DISTNAME		Filename
 EMACS_BIN		Readonly
 EMACS_ETCPREFIX		Readonly
@@ -78,53 +81,53 @@ EMACS_LISPPREFIX	Readonly
 EMACS_PKGNAME_PREFIX	Readonly
 EMACS_TYPE		Userdefined
 EMACS_USE_LEIM		Yes
-EMACS_VERSIONS_ACCEPTED	List* of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 }
-EXTRACT_ELEMENTS	List* of Pathmask
-EXTRACT_ONLY		List* of Pathname
+EMACS_VERSIONS_ACCEPTED	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 }
+EXTRACT_ELEMENTS	List of Pathmask
+EXTRACT_ONLY		List of Pathname
 EXTRACT_SUFX		DistSuffix
 EXTRACT_USING		{ gtar nbtar pax }
 FAMBASE			Readonly
-FAM_ACCEPTED		List* of { fam gamin }
+FAM_ACCEPTED		List of { fam gamin }
 FAM_DEFAULT		Userdefined
 FAM_TYPE		Readonly
-FILES_SUBST		List of ShellWord
-GCC_REQD		List
+FILES_SUBST		List+ of ShellWord
+GCC_REQD		List+
 GNU_CONFIGURE		Yes
 HOMEPAGE		URL
-INCOMPAT_CURSES		List* of PlatformTuple
-INSTALL_DIRS		List* of WrksrcSubdirectory
+INCOMPAT_CURSES		List of PlatformTuple
+INSTALL_DIRS		List of WrksrcSubdirectory
 INSTALL_UNSTRIPPED	YesNo
 KRB5BASE		Readonly
-KRB5_ACCEPTED		List* of { heimdal mit-krb5 }
+KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		Userdefined
 KRB5_TYPE		Readonly
-LDFLAGS			List
-LIBS			List
+LDFLAGS			List+
+LIBS			List+
 MAINTAINER		Mail_Address
-MAKEFLAGS		List of ShellWord
-MAKEVARS		List of Varname
-MAKE_ENV		List of ShellWord
-MAKE_FLAGS		List of ShellWord
+MAKEFLAGS		List+ of ShellWord
+MAKEVARS		List+ of Varname
+MAKE_ENV		List+ of ShellWord
+MAKE_FLAGS		List+ of ShellWord
 MANZ			Yes
-MASTER_SITES		List* of URL
-MYSQL_VERSIONS_ACCEPTED	List* of { 40 41 50 }
+MASTER_SITES		List of URL
+MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 }
 MYSQL_VERSION_DEFAULT	Userdefined
-NOT_FOR_COMPILER	List* of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
-NOT_FOR_PLATFORM	List* of PlatformTuple
+NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
+NOT_FOR_PLATFORM	List of PlatformTuple
 NO_BUILD		Yes
 NO_CHECKSUM		Yes
 NO_CONFIGURE		Yes
 NO_MTREE		Yes
 NO_PKGTOOLS_REQD_CHECK	Yes
 NO_PKG_REGISTER		Yes
-ONLY_FOR_COMPILER	List* of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
-ONLY_FOR_PLATFORM	List* of PlatformTuple
+ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
+ONLY_FOR_PLATFORM	List of PlatformTuple
 PAMBASE			Readonly
-PAM_ACCEPTED		List* of { linux-pam openpam solaris-pam }
+PAM_ACCEPTED		List of { linux-pam openpam solaris-pam }
 PAM_DEFAULT		Userdefined
 PAM_TYPE		Readonly
 PERL5_PACKLIST		Perl5Packlist
-PGSQL_VERSIONS_ACCEPTED	List* of { 73 74 80 }
+PGSQL_VERSIONS_ACCEPTED	List of { 73 74 80 }
 PGSQL_VERSION_DEFAULT	Userdefined
 PKGBASE			Readonly
 PKGNAME			PkgName
@@ -136,58 +139,58 @@ PKGSRC_COMPILER		Userdefined
 PKGVERSION		Readonly
 PKGWILDCARD		Readonly
 PKG_APACHE		Readonly
-PKG_APACHE_ACCEPTED	List* of { apache13 apache2 }
+PKG_APACHE_ACCEPTED	List of { apache13 apache2 }
 PKG_APACHE_DEFAULT	Userdefined
 PKG_DEBUG_LEVEL		Userdefined
 PKG_DEFAULT_OPTIONS	Userdefined
-PKG_FAIL_REASON		List of ShellWord
-PKG_INSTALLATION_TYPES	List* of { overwrite pkgviews }
+PKG_FAIL_REASON		List+ of ShellWord
+PKG_INSTALLATION_TYPES	List of { overwrite pkgviews }
 PKG_JAVA_HOME		Readonly
 PKG_JVM			Readonly
-PKG_JVMS_ACCEPTED	List* of { blackdown-jdk13 jdk jdk14 kaffe sun-jdk13 sun-jdk14 sun-jdk15 }
+PKG_JVMS_ACCEPTED	List of { blackdown-jdk13 jdk jdk14 kaffe sun-jdk13 sun-jdk14 sun-jdk15 }
 PKG_JVM_DEFAULT		Userdefined
-PKG_LEGACY_OPTIONS	List* of Option
+PKG_LEGACY_OPTIONS	List of Option
 PKG_OPTIONS		Readonly
-PKG_OPTIONS_DEPRECATED_WARNINGS	List* of ShellWord
-PKG_OPTIONS_GROUP	List*
-PKG_OPTIONS_LEGACY_OPTS	List*
-PKG_OPTIONS_LEGACY_VARS	List*
-PKG_OPTIONS_NONEMPTY_SETS	List*
-PKG_OPTIONS_OPTIONAL_GROUPS	List*
-PKG_OPTIONS_REQUIRED_GROUPS	List*
-PKG_OPTIONS_SET		List*
+PKG_OPTIONS_DEPRECATED_WARNINGS	List of ShellWord
+PKG_OPTIONS_GROUP	List
+PKG_OPTIONS_LEGACY_OPTS	List
+PKG_OPTIONS_LEGACY_VARS	List
+PKG_OPTIONS_NONEMPTY_SETS	List
+PKG_OPTIONS_OPTIONAL_GROUPS	List
+PKG_OPTIONS_REQUIRED_GROUPS	List
+PKG_OPTIONS_SET		List
 PKG_OPTIONS_VAR		Varname
 PKG_PRESERVE		Yes
-PKG_SKIP_REASON		List of ShellWord
+PKG_SKIP_REASON		List+ of ShellWord
 PKG_SUFX		Userdefined
-PKG_SUGGESTED_OPTIONS	List* of Option
-PKG_SUPPORTED_OPTIONS	List* of Option
-PLIST_SRC		List* of Pathname
-PLIST_SUBST		List of ShellWord
+PKG_SUGGESTED_OPTIONS	List of Option
+PKG_SUPPORTED_OPTIONS	List of Option
+PLIST_SRC		List of Pathname
+PLIST_SUBST		List+ of ShellWord
 PLIST_TYPE		{ dynamic static }
 PTHREAD_AUTO_VARS	YesNo
-PTHREAD_OPTS		List of { native optional require }
+PTHREAD_OPTS		List+ of { native optional require }
 PTHREAD_TYPE		Readonly
-REPLACE_EMACS		List of Pathname
-SUBST_CLASSES		List
-SUBST_FILES		List* of Pathmask
-SUBST_SED		List*
-# ^^ This may be changed to a List later.
+REPLACE_EMACS		List+ of Pathname
+SUBST_CLASSES		List+
+SUBST_FILES		List of Pathmask
+SUBST_SED		List
+# ^^ This may be changed to a List+ later.
 SUBST_STAGE		Stage
-TOOLS_ALIASES		List of Filename
-TOOLS_BROKEN		List of Tool
-TOOLS_CREATE		List of Tool
-TOOLS_GNU_MISSING	List of Tool
-TOOLS_NOOP		List of Tool
+TOOLS_ALIASES		List+ of Filename
+TOOLS_BROKEN		List+ of Tool
+TOOLS_CREATE		List+ of Tool
+TOOLS_GNU_MISSING	List+ of Tool
+TOOLS_NOOP		List+ of Tool
 TOOLS_PATH		Pathname
 USE_JAVA		{ run yes }
 USE_JAVA2		{ YES yes 1.4 1.5 }
-USE_LANGUAGES		List* of { c c++ fortran java objc }
+USE_LANGUAGES		List of { c c++ fortran java objc }
 USE_LIBTOOL		Yes
 USE_PKGINSTALL		Yes
 USE_PKGLOCALEDIR	YesNo
 USE_PKGSRC_GCC		Userdefined
-USE_TOOLS		List of Tool
+USE_TOOLS		List+ of Tool
 USE_X11			Yes
 WRKSRC			WrkdirSubdirectory
 X11_PKGSRCDIR		Readonly

@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.380 2005/11/24 01:22:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.381 2005/11/24 08:05:01 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -715,8 +715,8 @@ my $regex_shellword		=  qr"\s*(
 	|	\"(?:\\.|[^\"\\])*\"
 	|	\`[^\`]*\`
 	|	\\.
-	|	[^'\"\\\s;&\|]
-	)+ | ;;? | &&? | \|\|? )"sx;
+	|	[^'\"\\\s;&\|<>\#]
+	)+ | ;;? | &&? | \|\|? | <<? | >>? | \#.*)"sx;
 
 #
 # Global variables.
@@ -845,7 +845,7 @@ sub load_make_vars_typemap() {
 			if ($line->text =~ qr"^(?:#.*|\s*)$") {
 				# ignore empty and comment lines
 
-			} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([-.+\w\d_* \{\}]+)$") {
+			} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([-!\+.\w\d_ \{\}]+)$") {
 				$vartypes->{$1} = $2;
 
 			} else {
@@ -1820,14 +1820,18 @@ sub checkline_basic_vartype($$$$$) {
 	} elsif ($type eq "ShellWord") {
 		if ($value =~ qr"^[\w_]+=(([\"']?)\$\{([\w_]+)\}\2)$") {
 			my ($vexpr, undef, $vname) = ($1, $2, $3);
+			# XXX: The following heuristics are too simple (example: OPSYS is not a plural).
 			my $mod = ($vname =~ get_regex_plurals()) ? ":M*:Q" : ":Q";
 			$line->log_warning("Please use \${${vname}${mod}} instead of ${vexpr}.");
 
 		} elsif ($value =~ qr"^[\w_]+=(\$\{([\w_]+):Q\})$") {
 			my ($vexpr, $vname) = ($1, $2);
+			# XXX: The following heuristics are too simple (example: OPSYS is not a plural).
 			if ($vname =~ get_regex_plurals()) {
 				$line->log_warning("Please use \${${vname}:M*:Q} instead of ${vexpr}.");
 			}
+		} elsif ($value ne "" && $value !~ qr"^${regex_shellword}$") {
+			$line->log_warning("Invalid shell word \"${value}\".");
 		}
 
 	} elsif ($type eq "Stage") {
@@ -1956,18 +1960,35 @@ sub checkline_Makefile_vartype($$) {
 				$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}.");
 			}
 
-		} elsif ($type =~ qr"^List(\*?)(?: of (.*))?$") {
-			my ($append_only, $element_type) = ($1 eq "", $2);
-			my (@values) = split(qr"\s+", $value); # XXX: This may be too simple
+		} elsif ($type =~ qr"^List(!?)(\+?)(?: of (.*))?$") {
+			my ($internal_list, $append_only, $element_type) = ($1 eq "!", $2 eq "+", $3);
+			my (@words, $rest);
 
 			if ($append_only && $op ne "+=" && !($value eq "" && defined($comment) && $comment =~ qr"^#")) {
 				$line->log_warning("${varname} should be modified using \"+=\".");
 			}
 
-			if (defined($element_type)) {
-				foreach my $v (@values) {
-					checkline_basic_vartype($line, $varname, $element_type, $v, $comment);
+			if ($internal_list) {
+				@words = split(qr"\s+", $value);
+				$rest = "";
+			} else {
+				@words = ();
+				$rest = $value;
+				while ($rest =~ s/^$regex_shellword//) {
+					my ($word) = ($1);
+					last if ($word =~ qr"^#");
+					push(@words, $1);
 				}
+			}
+
+			foreach my $word (@words) {
+				if (defined($element_type)) {
+					checkline_basic_vartype($line, $varname, $element_type, $word, $comment);
+				}
+			}
+
+			if ($rest !~ qr"^\s*$") {
+				$line->log_warning("Invalid shell word \"${value}\" at the end.");
 			}
 
 		} else {
@@ -2411,10 +2432,12 @@ sub checklines_package_Makefile($) {
 			}
 
 			$line->log_debug("ShellCmd: $shellcmd");
-			while ($shellcmd =~ /$regex_shellword/g) {
+			while ($shellcmd =~ s/^$regex_shellword//) {
 				$line->log_debug("ShellWord: $1");
 			}
-
+			if ($shellcmd !~ qr"^\s*$") {
+				$line->log_warning("Invalid shell word \"${shellcmd}\".");
+			}
 		}
 	}
 
