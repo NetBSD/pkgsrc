@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.24 2005/11/17 23:17:02 rillig Exp $
+# $NetBSD: subst.mk,v 1.25 2005/11/24 20:02:40 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -96,8 +96,10 @@ ${_SUBST_COOKIE.${_class_}}:
 				${SUBST_POSTCMD.${_class_}};		\
 				${ECHO} "$$file" >> ${.TARGET};		\
 			fi;						\
-		else							\
+		elif ${TEST} -f "$$file"; then				\
 			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-text file \"$$file\"." 1>&2; \
+		else							\
+			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-existant file \"$$file\"." 1>&2; \
 		fi;							\
 	done
 .endfor
