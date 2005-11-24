@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12029 2005/11/24 04:27:48 rh Exp $
+$NetBSD: CHANGES,v 1.12030 2005/11/24 10:17:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5383,3 +5383,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/snd to 7.15 [wiz 2005-11-23]
 	Updated security/p5-Digest-SHA to 5.31 [wiz 2005-11-23]
 	Updated devel/Gorm to 1.0.1 [rh 2005-11-24]
+	Updated pkgtools/pkglint to 4.46 [rillig 2005-11-24]

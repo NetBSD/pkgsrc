@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.29 2005/11/20 20:09:35 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.30 2005/11/24 10:16:54 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -29,25 +29,49 @@ packages and to allow automatic conformance tests.
 Packages following these rules are assumed to make future changes to the
 pkgsrc infrastructure easier.
 .Pp
+.\" =======================================================================
 .Sy Options
 .Bl -tag -width 18n -offset indent
 .It Fl C{[no-]check,...}
 Enable or disable specific checks.
 For a list of checks, see below.
-.It Fl h Ns | Ns Fl -help
-Show the summary of command line options, then exit.
+.It Fl F Ns | Fl -autofix
+Repair trivial things automatically.
+Currently this only works for the synchronization of category
+.Pa Makefile Ns
+s.
 .It Fl I
-Show the Makefile that is constructed by including all the files that
-are slurped in via .include directives.
+Show the
+.Pa Makefile
+that is constructed by including all the files that
+are slurped in via
+.Ql .include
+directives.
 This flag is mainly for debugging.
-.It Fl i Ns | Ns Fl -import
-Check if a package is ready to be imported into pkgsrc.
-.It Fl q Ns | Ns Fl -quiet
-Don't print the errors and warnings summary before terminating.
 .It Fl R Ns | Ns Fl -rcsidstring
 Allow other RCS Id strings than NetBSD.
 Multiple strings may be concatenated with
 .Ql | .
+.It Fl V Ns | Ns Fl -version
+Print the current
+.Nm
+version number and exit.
+.It Fl W{[no-]warn,...}
+Enable or disable specific warnings.
+For a list of warnings, see below.
+.It Fl e Ns | Ns Fl -explain
+Print further explanations for diagnostics.
+Sometimes the reasons for diagnostics are not obvious and need further
+explanation.
+.It Fl g Ns | Ns Fl -gcc-output-format
+Use a format for the diagnostics that is understood by most programs,
+especially editors, so they can provide a point-and-goto interface.
+.It Fl h Ns | Ns Fl -help
+Show the summary of command line options, then exit.
+.It Fl i Ns | Ns Fl -import
+Check if a package is ready to be imported into pkgsrc.
+.It Fl q Ns | Ns Fl -quiet
+Don't print the errors and warnings summary before terminating.
 .It Fl r
 Check subdirectories, too.
 The subdirectories are those that are mentioned in a
@@ -59,11 +83,10 @@ source code along with the diagnostics.
 .It Fl v Ns | Ns Fl -verbose
 Be verbose.
 Show the progress report for items that are being checked.
-.It Fl W{[no-]warn,...}
-Enable or disable specific warnings.
-For a list of warnings, see below.
+If given more than once, debugging messages are also shown.
 .El
 .Pp
+.\" =======================================================================
 .Sy Checks
 .Bl -tag -width 18n -offset indent
 .It Cm all
@@ -92,6 +115,7 @@ Check Makefile fragments besides buildlink3.
 Check the pkgsrc specific patch files.
 .El
 .Pp
+.\" =======================================================================
 .Sy Warnings
 .Bl -tag -width 18n -offset indent
 .It Cm all
@@ -113,6 +137,7 @@ Warn for some Makefile variables if their assigned values do not match
 their type.
 .El
 .Pp
+.\" =======================================================================
 .Sy Other arguments
 .Bl -tag -width 18n -offset indent
 .It Ar dir ...
