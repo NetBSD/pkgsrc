@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.384 2005/11/24 10:47:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.385 2005/11/24 21:51:10 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -206,11 +206,13 @@ sub log_debug($$$) {
 	}
 }
 
-sub explain($$$) {
-	my ($file, $lines, $msg) = @_;
+sub explain($$@) {
+	my ($file, $lines, @texts) = @_;
 	
 	if ($explain_flag) {
-		print STDOUT ("${indent}  ${msg}\n");
+		foreach my $text (@texts) {
+			print STDOUT ("${indent}  ${text}\n");
+		}
 	}
 }
 
@@ -355,9 +357,9 @@ sub log_debug($$) {
 	}
 	PkgLint::Logging::log_debug($self->[FILE], $self->[LINES], $text);
 }
-sub explain($$) {
-	my ($self, $text) = @_;
-	PkgLint::Logging::explain($self->[FILE], $self->[LINES], $text);
+sub explain($@) {
+	my ($self, @texts) = @_;
+	PkgLint::Logging::explain($self->[FILE], $self->[LINES], @texts);
 }
 
 sub to_string($) {
@@ -756,6 +758,15 @@ my $regex_shellword		=  qr"\s*(
 	)+ | ;;? | &&? | \|\|? | <<? | >>? | \#.*)"sx;
 
 #
+# Commonly used explanations for diagnostics.
+#
+
+use constant expl_relative_dirs	=> (
+	"Directories in the form \"category/package\" make it easier to move",
+	"a package around in pkgsrc, for example from pkgsrc-wip to the main",
+	"pkgsrc repository.");
+
+#
 # Global variables.
 #
 
@@ -1063,6 +1074,10 @@ sub checkline_length($$) {
 
 	if (length($line->text) > $maxlength) {
 		$line->log_warning("Line too long (should be no more than $maxlength characters).");
+		$line->explain(
+			"Back in the old time, terminals with 80x25 characters were common.",
+			"And this is still the default size of many terminal emulators.",
+			"Moderately short lines also make reading easier.");
 	}
 }
 
@@ -1098,7 +1113,7 @@ sub checkline_valid_characters_in_variable($$) {
 sub checkline_trailing_whitespace($) {
 	my ($line) = @_;
 	if ($line->text =~ /\s+$/) {
-		$line->log_warning("Trailing white-space.");
+		$line->log_note("Trailing white-space.");
 	}
 }
 
@@ -1131,7 +1146,7 @@ sub checklines_trailing_empty_lines($) {
 		$last--;
 	}
 	if ($last != $max) {
-		$lines->[$last]->log_warning("Trailing empty lines.");
+		$lines->[$last]->log_note("Trailing empty lines.");
 	}
 }
 
@@ -1164,7 +1179,13 @@ sub checkfile_DESCR($) {
 	checklines_trailing_empty_lines($descr);
 
 	if (@{$descr} > $maxlines) {
-		log_warning($fname, NO_LINE_NUMBER, "File too long (should be no more than $maxlines lines).");
+		my $line = $descr->[$maxlines];
+
+		$line->log_warning("File too long (should be no more than $maxlines lines).");
+		$line->explain(
+			"A common terminal size is 80x25 characters. The DESCR file should",
+			"fit on one screen. It is also intended to give a _brief_ summary",
+			"about the package's contents.");
 	}
 }
 
@@ -1188,6 +1209,7 @@ sub checkfile_distinfo($) {
 	checkline_rcsid($lines->[0], "");
 	if (1 <= $#{$lines} && $lines->[1]->text ne "") {
 		$lines->[1]->log_warning("Empty line expected.");
+		$lines->[1]->explain("This is merely for aesthetical purposes.");
 	}
 
 	foreach my $line (@{$lines}[2..$#{$lines}]) {
@@ -1211,6 +1233,9 @@ sub checkfile_distinfo($) {
 				}
 			} elsif (!$hack_php_patches) {
 				$line->log_warning("$file does not exist.");
+				$line->explain(
+					"All patches that are mentioned in a distinfo file should actually exist.",
+					"What's the use of a checksum if there is no file to check?");
 			}
 		} else {
 			$sums{$alg}->{$file} = $line;
@@ -1238,6 +1263,12 @@ sub checkfile_MESSAGE($) {
 	my ($fname) = @_;
 	my ($message);
 
+	my @explanation = (
+		"A MESSAGE file should consist of a header line, having 75 \"=\"",
+		"characters, followed by a line containing only the RCS Id, then an",
+		"empty line, your text and finally the footer line, which is the",
+		"same as the header line.");
+
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_MESSAGE]");
 
 	checkperms($fname);
@@ -1248,10 +1279,12 @@ sub checkfile_MESSAGE($) {
 
 	if (@{$message} < 3) {
 		log_warning($fname, NO_LINE_NUMBER, "File too short.");
+		explain($fname, NO_LINE_NUMBER, @explanation);
 		return;
 	}
 	if ($message->[0]->text ne "=" x 75) {
 		$message->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
+		explain($fname, NO_LINE_NUMBER, @explanation);
 	}
 	checkline_rcsid($message->[1], "");
 	foreach my $line (@{$message}) {
@@ -1261,6 +1294,7 @@ sub checkfile_MESSAGE($) {
 	}
 	if ($message->[-1]->text ne "=" x 75) {
 		$message->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
+		explain($fname, NO_LINE_NUMBER, @explanation);
 	}
 	checklines_trailing_empty_lines($message);
 }
@@ -1291,8 +1325,11 @@ sub checkfile_PLIST($) {
 		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 
-			if ($cmd eq "unexec" && $arg =~ /^rmdir/) {
-				$line->log_warning("Use \"\@dirrm\" instead of \"\@unexec rmdir\".");
+			if ($cmd eq "unexec" && $arg =~ qr"^(rmdir|\$\{RMDIR\})(.*)") {
+				my ($rmdir, $rest) = ($1, $2);
+				if ($rest !~ qr"(?:true|\$\{TRUE\})") {
+					$line->log_warning("Use \"\@dirrm\" instead of \"\@unexec rmdir\".");
+				}
 
 			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
 				if ($arg =~ /(?:install-info|\$\{INSTALL_INFO\})/) {
@@ -1556,6 +1593,7 @@ sub readmakefile($$$$) {
 		if ($is_include_line) {
 			if ($includefile =~ qr"^\.\./[^./][^/]*/[^/]+") {
 				$line->log_warning("Relative directories should look like \"../../category/package\", not \"../package\".");
+				$line->explain(expl_relative_dirs);
 			}
 			if ($includefile =~ qr"(?:^|/)Makefile.common$"
 			    || ($includefile =~ qr"^(?:\.\./(?:\.\./[^/]+/)?[^/]+/)?([^/]+)$" && $1 ne "buildlink3.mk")) {
@@ -1770,6 +1808,9 @@ sub checkline_basic_vartype($$$$$) {
 	} elsif ($type eq "Dependency") {
 		if ($value eq $value_novar && $value !~ qr"^[-*+.0-9<=>\@A-Z_a-z\[\]]+$") {
 			$line->log_warning("\"${value}\" is not a valid dependency.");
+			$line->explain(
+				"Typical dependencies have the form \"package>=2.5\", \"package-[0-9]*\"",
+				"or \"package-3.141\".");
 		}
 
 	} elsif ($type eq "DependencyWithPath") {
@@ -1803,9 +1844,15 @@ sub checkline_basic_vartype($$$$$) {
 
 		} elsif ($value =~ qr":\.\./[^/]+$") {
 			$line->log_warning("Dependencies should have the form \"../../category/package\".");
+			$line->explain(expl_relative_dirs);
 
 		} else {
 			$line->log_warning("Unknown dependency format.");
+			$line->explain(
+				"Examples for valid dependencies are:",
+				"  package-[0-9]*:../../category/package",
+				"  package>=3.41:../../category/package",
+				"  package-2.718:../../category/package");
 		}
 
 	} elsif ($type eq "DistSuffix") {
@@ -1890,6 +1937,10 @@ sub checkline_basic_vartype($$$$$) {
 	} elsif ($type eq "RelativePkgDir") {
 		if ($value !~ qr"^\.\./\.\./[^/]+/[^/]+$") {
 			$line->log_warning("\"${value}\" is not a valid relative package directory.");
+			$line->explain(
+				"A relative package directory always starts with \"../../\", followed",
+				"by a category, a slash and a the directory name of the package.",
+				"For example, \"../../misc/screen\" is a relative package directory.");
 		}
 
 	} elsif ($type eq "ShellWord") {
@@ -2663,13 +2714,11 @@ sub checkfile_mk($) {
 
 sub checkfile_package_Makefile($$$$) {
 	my ($fname, $whole, $main_lines, $lines) = @_;
-	my ($distname, $category, $distfiles);
+	my ($distname, $distfiles);
 	
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_package_Makefile]");
 
 	checkperms($fname);
-
-	$category = basename(dirname(Cwd::abs_path($current_dir)));
 
 	# TODO: "Use \${VARIABLE} instead of \$(VARIABLE)."
 
