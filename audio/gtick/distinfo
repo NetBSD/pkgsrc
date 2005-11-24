@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/24 23:19:51 rpaulo Exp $
+
+SHA1 (gtick-0.3.7.tar.gz) = 08e10d13fe6f4364340ad6da3749a0fbf764f827
+RMD160 (gtick-0.3.7.tar.gz) = ab2de888eebd2ed1ab748f6e1f952e15a2da7ac7
+Size (gtick-0.3.7.tar.gz) = 395475 bytes
