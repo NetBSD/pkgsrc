@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.84 2005/11/24 18:21:54 rillig Exp $
+# $NetBSD: build,v 1.85 2005/11/24 22:01:54 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -459,8 +459,8 @@ mkdir -p "${FTP}"
 #
 # Notify the ADMIN of the finished build.
 #
-case $noemail in no)
-	cat "${FTP}/pkgsrc-results-${BUILDDATE}.txt" \
+case $noemail in
+no)	cat "${FTP}/pkgsrc-results-${BUILDDATE}.txt" \
 	| ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" "$ADMIN"
 esac
 
