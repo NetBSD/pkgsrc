@@ -1,0 +1,9 @@
+This module helps abstract the process of working with complex
+schemas of relational SQL database tables. As with DBI, it lets
+you work with data a row at a time, but gives you the extra ability
+to, with a single method call, reach across and grab rows of related
+data from tables located elsewhere in your database, without having
+to construct an SQL join clause yourself. The 'distance' from the
+originating table to the related one can be arbitrarily long, so
+long as they are related in some way -- i.e., could both return
+data through a single (though perhaps quite lengthy) SQL query.
