@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4212 2005/11/24 18:55:54 wiz Exp $
+$NetBSD: TODO,v 1.4213 2005/11/24 19:03:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -832,8 +832,6 @@ Suggested package updates
 	o p5-CGI-Minimal-1.24
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03
-	o p5-Class-Trigger-0.09 [pkg/29923]
-	o p5-Class-Trigger-0.10
 	o p5-Compress-Bzip2-2.09
 	o p5-Convert-ASN1-0.19
 	o p5-Convert-BER-1.3101
@@ -866,7 +864,6 @@ Suggested package updates
 	o p5-File-DirSync-1.12
 	o p5-FileHandle-Unget-0.16.2.1
 	o p5-Font-TTF-0.35
-	o p5-GD-2.23 [pkg/30532]
 	o p5-Graph-0.20105
 	o p5-HTML-FillInForm-1.05
 	o p5-HTMLObject-2.26

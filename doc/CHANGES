@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12031 2005/11/24 18:55:53 wiz Exp $
+$NetBSD: CHANGES,v 1.12032 2005/11/24 19:03:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5395,3 +5395,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/p5-DBD-SQLite to 1.09 [wiz 2005-11-24]
 	Updated databases/p5-DBIx-SearchBuilder to 1.35 [wiz 2005-11-24]
 	Updated devel/libmm to 1.4.0 [wiz 2005-11-24]
+	Updated devel/p5-Class-Trigger to 0.10 [wiz 2005-11-24]
+	Updated graphics/p5-GD to 2.30 [wiz 2005-11-24]
