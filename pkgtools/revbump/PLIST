@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/05 00:31:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/11/24 18:49:07 wiz Exp $
 bin/blbump
 bin/revbump
+man/man1/blbump.1
+man/man1/revbump.1
