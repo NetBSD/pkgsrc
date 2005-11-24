@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/19 22:03:54 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/24 19:39:23 rillig Exp $
 #
 
 DISTNAME=	regress-tools-1.0
@@ -9,8 +9,8 @@ MAINTAINER=	rillig@NetBSD.org
 COMMENT=	Test whether the TOOLS do what I expect
 
 WRKSRC=		${WRKDIR}
-REGRESS_TESTS=	awk
-USE_TOOLS+=	awk
+REGRESS_TESTS=	awk tr
+USE_TOOLS+=	awk tr
 
 do-build:
 .for t in ${REGRESS_TESTS}
