@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.211 2005/11/23 18:27:13 erh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.212 2005/11/24 13:24:10 rillig Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -507,11 +507,11 @@ MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
 # correct package database directory.
 #
 .if ${PKGTOOLS_VERSION} < 20030823
-PKGTOOLS_ENV?=		PKG_DBDIR=${_PKG_DBDIR}
+PKGTOOLS_ENV?=		PKG_DBDIR=${_PKG_DBDIR:Q}
 PKGTOOLS_ARGS?=		# empty
 .else
 PKGTOOLS_ENV?=		# empty
-PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
+PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR:Q}
 .endif
 
 # Views are rooted in ${LOCALBASE}, all packages are depoted in
