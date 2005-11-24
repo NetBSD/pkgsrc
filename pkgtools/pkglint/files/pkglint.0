@@ -19,22 +19,41 @@ DDEESSCCRRIIPPTTIIOONN
            --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list
                                of checks, see below.
 
-           --hh|----hheellpp           Show the summary of command line options, then
+           --FF| ----aauuttooffiixx       Repair trivial things automatically.  Currently
+                               this only works for the synchronization of cat-
+                               egory _M_a_k_e_f_i_l_es.
+
+           --II                  Show the _M_a_k_e_f_i_l_e that is constructed by
+                               including all the files that are slurped in via
+                               `.include' directives.  This flag is mainly for
+                               debugging.
+
+           --RR|----rrccssiiddssttrriinngg    Allow other RCS Id strings than NetBSD.  Multi-
+                               ple strings may be concatenated with `|'.
+
+           --VV|----vveerrssiioonn        Print the current ppkkgglliinntt version number and
                                exit.
 
-           --II                  Show the Makefile that is constructed by
-                               including all the files that are slurped in via
-                               .include directives.  This flag is mainly for
-                               debugging.
+           --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a
+                               list of warnings, see below.
+
+           --ee|----eexxppllaaiinn        Print further explanations for diagnostics.
+                               Sometimes the reasons for diagnostics are not
+                               obvious and need further explanation.
+
+           --gg|----ggcccc--oouuttppuutt--ffoorrmmaatt
+                               Use a format for the diagnostics that is under-
+                               stood by most programs, especially editors, so
+                               they can provide a point-and-goto interface.
+
+           --hh|----hheellpp           Show the summary of command line options, then
+                               exit.
 
            --ii|----iimmppoorrtt         Check if a package is ready to be imported into
                                pkgsrc.
 
            --qq|----qquuiieett          Don't print the errors and warnings summary
                                before terminating.
-
-           --RR|----rrccssiiddssttrriinngg    Allow other RCS Id strings than NetBSD.  Multi-
-                               ple strings may be concatenated with `|'.
 
            --rr                  Check subdirectories, too.  The subdirectories
                                are those that are mentioned in a `SUBDIR+='
@@ -45,10 +64,8 @@ DDEESSCCRRIIPPTTIIOONN
                                the diagnostics.
 
            --vv|----vveerrbboossee        Be verbose.  Show the progress report for items
-                               that are being checked.
-
-           --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a
-                               list of warnings, see below.
+                               that are being checked.  If given more than
+                               once, debugging messages are also shown.
 
      CChheecckkss
 

@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.382 2005/11/24 08:46:34 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.383 2005/11/24 10:16:54 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -32,13 +32,16 @@ package PkgLint::Util;
 #==========================================================================
 # This package is a catch-all for subroutines that are not application-spe-
 # cific. Currently it contains the boolean constants C<false> and C<true>,
-# as well as a function to print text in a table format.
+# as well as a function to print text in a table format, and a function
+# that converts an array into a hash. The latter is just for convenience
+# because I don't know of a Perl operator similar to qw() that can be used
+# for creating a hash.
 #==========================================================================
 BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
-	@EXPORT_OK = qw(false print_table true);
+	@EXPORT_OK = qw(array_to_hash false print_table true);
 }
 
 use constant false	=> 0;
@@ -72,6 +75,15 @@ sub print_table($$) {
 	}
 }
 
+sub array_to_hash(@) {
+	my ($result) = {};
+
+	foreach my $arg (@_) {
+		$result->{$arg} = 1;
+	}
+	return $result;
+}
+
 #== End of PkgLint::Util ==================================================
 
 package PkgLint::Logging;
@@ -100,8 +112,9 @@ BEGIN {
 	@EXPORT_OK = qw(
 		NO_FILE NO_LINE_NUMBER
 		log_fatal log_error log_warning log_note log_info log_debug
+		explain
 		print_summary_and_exit set_verbosity get_verbosity
-		set_gcc_output_format
+		set_explain set_gcc_output_format
 		get_show_source_flag set_show_source_flag
 	);
 	import PkgLint::Util qw(
@@ -116,6 +129,7 @@ my $errors		= 0;
 my $warnings		= 0;
 my $verbosity		= 0;
 my $gcc_output_format	= false;
+my $explain_flag	= false;
 my $show_source_flag	= false;
 
 sub log_message($$$$$) {
@@ -190,6 +204,14 @@ sub log_debug($$$) {
 	}
 }
 
+sub explain($$$) {
+	my ($file, $lines, $msg) = @_;
+	
+	if ($explain_flag) {
+		print STDOUT ("\t${msg}\n");
+	}
+}
+
 sub print_summary_and_exit($) {
 	my ($quiet) = @_;
 
@@ -214,6 +236,9 @@ sub set_verbosity($) {
 	($verbosity) = @_;
 }
 
+sub set_explain() {
+	$explain_flag = true;
+}
 sub set_gcc_output_format() {
 	$gcc_output_format = true;
 }
@@ -327,6 +352,10 @@ sub log_debug($$) {
 		$self->show_source(*STDOUT);
 	}
 	PkgLint::Logging::log_debug($self->[FILE], $self->[LINES], $text);
+}
+sub explain($$) {
+	my ($self, $text) = @_;
+	PkgLint::Logging::explain($self->[FILE], $self->[LINES], $text);
 }
 
 sub to_string($) {
@@ -573,7 +602,7 @@ use Cwd;
 
 BEGIN {
 	import PkgLint::Util qw(
-		false true
+		array_to_hash false true
 	);
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER
@@ -638,6 +667,7 @@ my (%warnings) = (
 
 my $opt_autofix		= false;
 my $opt_dumpmakefile	= false;
+my $opt_explain		= false;
 my $opt_import		= false;
 my $opt_quiet		= false;
 my $opt_recursive	= false;
@@ -668,6 +698,8 @@ my (@options) = (
 		my ($opt, $val) = @_;
 		parse_multioption($val, \%warnings);
 	  } ],
+	[ "-e|--explain", "Explain the diagnostics or give further help",
+	  "explain|e", \$opt_explain ],
 	[ "-g|--gcc-output-format", "Mimic the gcc output format",
 	  "gcc-output-format|g",
 	  sub {
@@ -1426,6 +1458,44 @@ sub checkfile_patches_patch($) {
 		if ($line->text =~ qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)(?::[^\$]*?|)\$") {
 			my ($tag) = ($1);
 			$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
+		}
+
+		if ($line->text =~ qr"^\+") {
+			use constant good_macros => PkgLint::Util::array_to_hash(qw(
+				__GNUC__ __GNUC_MINOR__
+				__SUNPRO_C
+
+				__i386
+				__mips
+				__sparc
+
+				__DragonFly__
+				__FreeBSD__
+				__linux__
+				__NetBSD__
+				__OpenBSD__
+				__SVR4
+				__sun
+			));
+			use constant bad_macros  => {
+				"__sun__" => "__sun",
+				"__svr4__" => "__SVR4",
+			};
+			my $rest = $line->text;
+			my $re_ifdef = qr"defined\((__[\w_]+)\)";
+
+			while ($rest =~ s/$re_ifdef//) {
+				my ($macro) = ($1);
+
+				if (exists(good_macros->{$macro})) {
+					$line->log_debug("Found good macro \"${macro}\".");
+				} elsif (exists(bad_macros->{$macro})) {
+					$line->log_warning("The macro \"${macro}\" is unportable. Please use \"".bad_macros->{$macro}."\" instead.");
+					$line->explain("See the pkgsrc guide, section \"CPP defines\" for details.");
+				} else {
+					$line->log_info("Found unknown macro \"${macro}\".");
+				}
+			}
 		}
 	}
 	checklines_trailing_empty_lines($lines);
