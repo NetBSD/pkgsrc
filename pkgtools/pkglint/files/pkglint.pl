@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.381 2005/11/24 08:05:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.382 2005/11/24 08:46:34 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -700,6 +700,8 @@ my (@options) = (
 # Commonly used regular expressions.
 #
 
+use constant regex_gnu_configure_volatile_vars
+				=> qr"^(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 use constant regex_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
@@ -1820,14 +1822,12 @@ sub checkline_basic_vartype($$$$$) {
 	} elsif ($type eq "ShellWord") {
 		if ($value =~ qr"^[\w_]+=(([\"']?)\$\{([\w_]+)\}\2)$") {
 			my ($vexpr, undef, $vname) = ($1, $2, $3);
-			# XXX: The following heuristics are too simple (example: OPSYS is not a plural).
-			my $mod = ($vname =~ get_regex_plurals()) ? ":M*:Q" : ":Q";
+			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
 			$line->log_warning("Please use \${${vname}${mod}} instead of ${vexpr}.");
 
 		} elsif ($value =~ qr"^[\w_]+=(\$\{([\w_]+):Q\})$") {
 			my ($vexpr, $vname) = ($1, $2);
-			# XXX: The following heuristics are too simple (example: OPSYS is not a plural).
-			if ($vname =~ get_regex_plurals()) {
+			if ($vname =~ regex_gnu_configure_volatile_vars) {
 				$line->log_warning("Please use \${${vname}:M*:Q} instead of ${vexpr}.");
 			}
 		} elsif ($value ne "" && $value !~ qr"^${regex_shellword}$") {
