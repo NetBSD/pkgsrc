@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/24 20:17:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/24 20:18:38 wiz Exp $
 
 DISTNAME=	koffice-i18n-es-1.3.5
 CATEGORIES=	misc kde
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
-COMMENT=	Spanish language pack for Koffice
+COMMENT=	Spanish language pack for KOffice
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
