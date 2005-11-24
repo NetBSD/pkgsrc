@@ -1,4 +1,4 @@
-In general, your tests shouldn't produce warnings. This modules
+In general, your tests shouldn't produce warnings. This module
 causes any warnings to be captured and stored. It automatically
 adds an extra test that will run when your script ends to check
 that there were no warnings. If there were any warnings, the test
