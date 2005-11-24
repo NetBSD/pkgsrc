@@ -1,7 +1,6 @@
 * --autofix
 * fix false positive warnings
 * quoting check for Makefile variables
-* -E/--explain
 * check for absolute paths
 * check for direct use of /usr/pkgsrc etc.
 * check for direct use of *DIR
@@ -20,4 +19,7 @@
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
 * mention the SUBST framework whenever ${SED} is used.
-* warn about unportable CPP macros in patches.
+* extract the DISTFILES if they exist and check all files in them for:
+  - security holes,
+  - coding style violations,
+  - possible unportable constructs
