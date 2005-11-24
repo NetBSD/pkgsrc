@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.16 2005/10/31 20:33:24 tv Exp $
+$NetBSD: distinfo,v 1.17 2005/11/24 19:34:01 wiz Exp $
 
 SHA1 (pcre-6.4.tar.bz2) = 778fb963b7ec24e0dce34c8e21b8633b32a02704
 RMD160 (pcre-6.4.tar.bz2) = c2e48a301fa08ce255aa60ecb5a8961a8266aa53
 Size (pcre-6.4.tar.bz2) = 566309 bytes
 SHA1 (patch-aa) = e32943de7fb5dad5d40e1fc8e942be7439b43907
 SHA1 (patch-ab) = 1bb79ce010f30fdd4ab3b579faa45fa06c01ce90
+SHA1 (patch-ac) = 14e67eb1b7c4d343b0b3acf62484b5c556b7a739
+SHA1 (patch-ad) = 771d41edfa41c8600fcb90cf676a3d767c59aae9
+SHA1 (patch-ae) = 561cb7239ebe019de58f92ae9d8a24a620250de9
