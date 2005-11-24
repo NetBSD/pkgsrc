@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.83 2005/11/23 18:27:13 erh Exp $
+# $NetBSD: build,v 1.84 2005/11/24 18:21:54 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -371,6 +371,7 @@ fi
 # Everything is prepared. We can start building the real packages now.
 #
 cd "${pkgsrc_dir}" || die "The pkgsrc directory does not exist."
+
 echo "Starting actual build using the order specified in $ORDERFILE..."
 
 # Loop over every package in the correct order.  Before building
@@ -386,8 +387,8 @@ echo "Starting actual build using the order specified in $ORDERFILE..."
 # make sure we have something to grep in in the build loop
 touch "${main_buildlog}" || die "Cannot write to ${main_buildlog}."
 
-tot=`wc -l $ORDERFILE | ${AWK} '{print $1}'`
-for pkgdir in `cat $ORDERFILE`
+tot=`wc -l "${ORDERFILE}" | ${AWK} '{print $1}'`
+for pkgdir in `cat "${ORDERFILE}"`
 do
 	if ${GREP} -q "^${pkgdir}\$" "${main_buildlog}"; then
 		: "skip this package"
@@ -395,7 +396,7 @@ do
 		built=`wc -l "${main_buildlog}" | ${AWK} '{print $1}'`
 		percent=`echo $built $tot | ${AWK} '{printf("%4.1f%%",$1*100/$2);}'`
 		( cd "${pkgsrc_dir}/${pkgdir}" \
-		  && ${NICE_LEVEL} ${BMAKE} USE_BULK_CACHE=yes $target \
+		  && ${NICE_LEVEL} ${BMAKE} USE_BULK_CACHE=yes "${target}" \
 			$makeargs </dev/null | post_filter_cmd
 		) || true
 		echo "$pkgdir" >> "${main_buildlog}"
@@ -405,18 +406,18 @@ done
 echo "Build finished.  Removing all installed packages left over from build..."
 for pkgname in `${PKG_TOOLS_BIN}/pkg_info -e \*`
 do
-	if ${PKG_TOOLS_BIN}/pkg_info -qe $pkgname; then
+	if ${PKG_TOOLS_BIN}/pkg_info -qe "${pkgname}"; then
 		pkgdir=`${AWK} '$2 == "'"$pkgname"'" { print $1; }' "$INDEXFILE"`
 		case "${BULK_PREREQ}" in
-			*$pkgdir* )
+			*"${pkgdir}"* )
 				echo "Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
 				;;
 			* )
-				echo ${PKG_TOOLS_BIN}/pkg_delete -r $pkgname
-				${PKG_TOOLS_BIN}/pkg_delete -r $pkgname
-				if ${PKG_TOOLS_BIN}/pkg_info -qe $pkgname; then
+				echo ${PKG_TOOLS_BIN}/pkg_delete -r "${pkgname}"
+				${PKG_TOOLS_BIN}/pkg_delete -r "${pkgname}"
+				if ${PKG_TOOLS_BIN}/pkg_info -qe "${pkgname}"; then
 					echo "$pkgname ($pkgdir) did not deinstall nicely.  Forcing the deinstall"
-					${PKG_TOOLS_BIN}/pkg_delete -f $pkgname || true
+					${PKG_TOOLS_BIN}/pkg_delete -f "${pkgname}" || true
 				fi
 				;;
 		esac
@@ -459,8 +460,8 @@ mkdir -p "${FTP}"
 # Notify the ADMIN of the finished build.
 #
 case $noemail in no)
-	cat ${FTP}/pkgsrc-results-${BUILDDATE}.txt \
-	| ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" $ADMIN
+	cat "${FTP}/pkgsrc-results-${BUILDDATE}.txt" \
+	| ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" "$ADMIN"
 esac
 
 # Done!
