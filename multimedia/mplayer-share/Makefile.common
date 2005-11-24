@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/09/15 13:27:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/11/24 03:59:12 ben Exp $
 
 MPLAYER_DIST_VERSION=	1.0pre7
 
@@ -39,7 +39,7 @@ HAS_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--prefix="${PREFIX}" \
-			--with-extraincdir="${LOCALBASE}/include" \
+			--with-extraincdir="${LOCALBASE}/include:${LOCALBASE}/include/faad2" \
 			--with-extralibdir="${LOCALBASE}/lib" \
 			--with-x11incdir="${X11BASE}/include" \
 			--with-x11libdir="${X11BASE}/lib" \
