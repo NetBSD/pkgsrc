@@ -4986,16 +4986,16 @@ compiler does not define it. Use __sun instead.
 
 GCC 3.3.3 + SuSE Linux 9.1 + i386
 
-    __ELF__, __gnu_linux__, __i386, _i386__, __linux, __linux__, __unix,
+    __ELF__, __gnu_linux__, __i386, __i386__, __linux, __linux__, __unix,
     __unix__, i386, linux, unix.
 
 GCC 2.95 + NetBSD 1.6.2 + i386
 
-    __ELF__, __NetBSD__, __i386, _i386__, i386.
+    __ELF__, __NetBSD__, __i386, __i386__, i386.
 
 GCC 3.3.3 + NetBSD 2.0 + i386
 
-    __ELF__, __NetBSD__, __i386, _i386__, i386.
+    __ELF__, __NetBSD__, __i386, __i386__, i386.
 
 GCC 4 + Solaris 8 + SPARC
 
