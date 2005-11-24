@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/24 23:19:51 rpaulo Exp $
+bin/gtick
+man/man1/gtick.1
+${PKGLOCALEDIR}/en@quot/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/en@boldquot/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/af/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/ca/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/de/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/cs/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/es/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/eu/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/fi/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/fr/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/ga/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/it/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/nl/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/pt_BR/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/ro/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/ru/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/sv/LC_MESSAGES/gtick.mo
+${PKGLOCALEDIR}/vi/LC_MESSAGES/gtick.mo
