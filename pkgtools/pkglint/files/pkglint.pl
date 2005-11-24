@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.379 2005/11/23 22:12:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.380 2005/11/24 01:22:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -707,8 +707,16 @@ use constant regex_validchars	=> qr"[\011\040-\176]";
 use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}\[]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
 # This "constant" is often used in contexts where interpolation comes
-# handy, so it is a variable. Nevertheless it is not modified.
-my $regex_shellword		=  qr"\s*((?:'[^']*'|\"(?:\\.|[^\\])*\"|\\.|[^'\"\\\s])+)"s;
+# handy, so it is a variable. Nevertheless it is not modified. Of course
+# it cannot parse all kinds of shell programs, but this pattern will
+# catch all shell programs that are portable enough to be used in pkgsrc.
+my $regex_shellword		=  qr"\s*(
+	(?:	'[^']*'
+	|	\"(?:\\.|[^\"\\])*\"
+	|	\`[^\`]*\`
+	|	\\.
+	|	[^'\"\\\s;&\|]
+	)+ | ;;? | &&? | \|\|? )"sx;
 
 #
 # Global variables.
