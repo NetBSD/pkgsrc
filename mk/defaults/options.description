@@ -122,6 +122,8 @@ id3
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 idn			Internationalized Domain Names (IDN) support.
 ifevents	
+imapuw-cleartextpwd	Allow cleartext passwords over non-encrypted connections.
+imapuw-whoson		Enable whoson support.
 imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
 imstt	
