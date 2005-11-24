@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2005/11/11 23:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2005/11/24 19:04:34 wiz Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -18,8 +18,8 @@ COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 
 USE_LIBTOOL=	yes
 
-INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
-INST_LIB=	${LIBTOOL} ${INSTALL_LIB}
+INST_PROG=	${LIBTOOL} --mode=install ${INSTALL_PROGRAM}
+INST_LIB=	${LIBTOOL} --mode=install ${INSTALL_LIB}
 INC_DIR=	${PREFIX}/include/c-client
 LIB_DIR=	${PREFIX}/lib
 DOC_DIR=	${PREFIX}/share/doc/imap-uw
@@ -42,32 +42,11 @@ BUILD_TARGET=	sgi
 BUILD_TARGET=	osf
 .else
 BUILD_TARGET=	neb
-
-# Kerberos is explicitly not enabled on NetBSD 1.x due to interoperability
-# issues with later versions of OpenSSL (e.g. 0.9.7)
-.  if empty(MACHINE_PLATFORM:MNetBSD-1.*)
-PKG_SUPPORTED_OPTIONS+=		kerberos
-.  endif
 .endif
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.imap-uw
-PKG_SUPPORTED_OPTIONS+=	inet6
+.include "options.mk"
 
-.include "../../mk/bsd.options.mk"
-
-.if empty(PKG_OPTIONS:Minet6)
-MAKE_ENV+=	IP=4
-.else
-MAKE_ENV+=	IP=6
-.endif
-
-.if !empty(PKG_OPTIONS:Mkerberos)
-PKG_USE_KERBEROS=	yes
-
-BUILD_TARGET+=	EXTRAAUTHENTICATORS="gss"
-.endif
-
-BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT IMAP_UW_USE_WHOSON
+BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_MAILSPOOLHOME
 CCLIENT_INCS=	c-client.h env.h env_unix.h flocksim.h flstring.h	\
 		fs.h ftl.h imap4r1.h linkage.c linkage.h mail.h misc.h	\
 		netmsg.h newsrc.h nl.h nntp.h osdep.h rfc822.h		\
@@ -81,10 +60,10 @@ CCLIENT_MFILES=	src/imapd/Makefile					\
 		src/mtest/Makefile					\
 		src/osdep/unix/Makefile
 
-MESSAGE_SUBST+=	SSLCERTS="${SSLCERTS}"
-MESSAGE_SUBST+=	SSLKEYS="${SSLKEYS}"
-PLIST_SUBST+=	CCLIENT_MAJOR="${CCLIENT_MAJOR}"
-PLIST_SUBST+=	CCLIENT_MINOR="${CCLIENT_MINOR}"
+MESSAGE_SUBST+=	SSLCERTS=${SSLCERTS:Q}
+MESSAGE_SUBST+=	SSLKEYS=${SSLKEYS:Q}
+PLIST_SUBST+=	CCLIENT_MAJOR=${CCLIENT_MAJOR:Q}
+PLIST_SUBST+=	CCLIENT_MINOR=${CCLIENT_MINOR:Q}
 
 MANFILES=	src/imapd/imapd.8 src/ipopd/ipopd.8
 
@@ -96,19 +75,8 @@ MAKE_ENV+=	CCLIENT_MINOR=${CCLIENT_MINOR:Q}
 MAKE_ENV+=	CREATEPROTO=${IMAP_UW_CCLIENT_MBOX_FMT:Q}proto
 
 BUILD_TARGET+=	CC="${LIBTOOL} ${CC}"
-.if defined(IMAP_UW_USE_WHOSON) && ${IMAP_UW_USE_WHOSON} == "YES"
-BUILD_TARGET+=	EXTRALDFLAGS="${LDFLAGS} -lwhoson"
-BUILD_TARGET+=	EXTRACFLAGS="${CFLAGS} -DUSE_WHOSON"
-.else
 BUILD_TARGET+=	EXTRALDFLAGS="${LDFLAGS}"
 BUILD_TARGET+=	EXTRACFLAGS="${CFLAGS}"
-.endif
-.if defined(IMAP_UW_NO_CLEARTEXT) && ${IMAP_UW_NO_CLEARTEXT} == "YES"
-BUILD_TARGET+=	SSLTYPE="nopwd"
-.elif !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
-BUILD_TARGET+=	SPECIALAUTHENTICATORS="ssl"
-BUILD_TARGET+=	SSLTYPE="unix"
-.endif
 
 # reduce optimization level on alpha to avoid compiler bugs
 .if ${OPSYS} == "NetBSD"
@@ -142,8 +110,6 @@ post-extract:
 			$${FILE}.broken > $${FILE};			\
 	done
 
-BUILD_DEFS+=	IMAP_UW_MAILSPOOLHOME
-
 post-patch:
 .if defined(IMAP_UW_MAILSPOOLHOME)
 	cd ${WRKSRC}/src/osdep/unix &&					\
@@ -163,7 +129,7 @@ post-patch:
 #
 post-build:
 	cd ${WRKSRC}/c-client;						\
-	${LIBTOOL} ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
+	${LIBTOOL} --mode=link ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
 
 do-install:
 	${INSTALL_DATA_DIR} ${INC_DIR}
@@ -208,13 +174,5 @@ do-install:
 	${INST_PROG} ${WRKSRC}/mlock/mlock ${PREFIX}/bin
 	${INST_PROG} ${WRKSRC}/tmail/tmail ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/src/tmail/tmail.1 ${PREFIX}/man/man1
-
-.if !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
-.include "../../security/openssl/buildlink3.mk"
-.endif
-
-.if defined(IMAP_UW_USE_WHOSON) && ${IMAP_UW_USE_WHOSON} == "YES"
-.include "../../net/whoson/buildlink3.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
