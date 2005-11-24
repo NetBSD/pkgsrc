@@ -1,11 +1,36 @@
 #! /bin/sh
-# $NetBSD: awk-test.sh,v 1.6 2005/11/24 19:18:45 rillig Exp $
+# $NetBSD: awk-test.sh,v 1.7 2005/11/24 19:20:18 rillig Exp $
 #
 
 set -e
 
 mydir=`dirname "$0"`
 . "${mydir}/tests.subr"
+
+#
+# Functions specific for the awk testsuite.
+#
+
+# usage: test_assignment <testname> <input> <expected-output>
+test_assignment() {
+	testcase_start "$1"
+	o=`echo "" | awk '{print var}' var="$2"`
+	assert_equal "$1" "$3" "${o}"
+}
+
+# usage: test_passline <testname> <input>
+test_passline() {
+	testcase_start "$1"
+	o=`awk '{print}' <<EOF
+$2
+EOF
+`
+	assert_equal "$1" "$2" "${o}"
+}
+
+#
+# The actual test.
+#
 
 #
 # Assignment of variables from the command line. The Solaris
