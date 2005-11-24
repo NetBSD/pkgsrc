@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: tr-test.sh,v 1.1 2005/11/24 19:39:23 rillig Exp $
+# $NetBSD: tr-test.sh,v 1.2 2005/11/24 19:46:45 rillig Exp $
 #
 
 set -e
@@ -26,6 +26,7 @@ EOF
 #
 # The actual test.
 #
+
 nl="
 "
 
@@ -35,3 +36,21 @@ tr_test "tolower" \
 	"The Great Green Fox" "the great green fox" "A-Z" "a-z"
 tr_test "eat-newlines" \
 	"foo${nl}bar${nl}" "foobar" -d "\\n"
+tr_test "eat-minus" \
+	"describe-function" "describefunction" -d "-"
+# The following test does not work on NetBSD 1.6.2.
+#tr_test "eat-minus-d" \
+#	"describe-function" "escribefunction" -d "-d"
+tr_test "eat-d-minus" \
+	"describe-function" "escribefunction" -d "d-"
+
+s="0123456789abcdef"
+s="$s$s$s$s$s$s$s$s$s$s$s$s$s$s$s$s"
+s="$s$s$s$s$s$s$s$s$s$s$s$s$s$s$s$s"
+s="$s$s$s$s$s$s$s$s$s$s$s$s$s$s$s$s"
+f="ffffffffffffffff"
+f="$f$f$f$f$f$f$f$f$f$f$f$f$f$f$f$f"
+f="$f$f$f$f$f$f$f$f$f$f$f$f$f$f$f$f"
+
+tr_test "65536" \
+	"$s" "$f" -d "0-9a-e"
