@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:23 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/11/24 18:52:20 wiz Exp $
 
-SHA1 (Class-ReturnValue-0.52.tar.gz) = 654ac1eb19523c3b8ba136432c52f977d4576fb2
-RMD160 (Class-ReturnValue-0.52.tar.gz) = 9aa85cb1438eb02eda69b54d6dec6f4a559d3b0d
-Size (Class-ReturnValue-0.52.tar.gz) = 19430 bytes
+SHA1 (Class-ReturnValue-0.53.tar.gz) = 391d752f7a34b32f1ef4827054ef2fe48d334096
+RMD160 (Class-ReturnValue-0.53.tar.gz) = 71f1a8382edfd5c815af806fd4f27dc09cbf4942
+Size (Class-ReturnValue-0.53.tar.gz) = 19473 bytes
