@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4211 2005/11/24 18:35:54 wiz Exp $
+$NetBSD: TODO,v 1.4212 2005/11/24 18:55:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -697,7 +697,6 @@ Suggested package updates
 	o libmatchbox-1.7
 	o libmatheval-1.1.2
 	o libmilter-8.13.5
-	o libmm-1.4.0
 	o libmpeg3-1.6
 	o libnasl-2.3.1
 	o libntlm-0.3.9
@@ -833,7 +832,6 @@ Suggested package updates
 	o p5-CGI-Minimal-1.24
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03
-	o p5-Class-ReturnValue-0.53
 	o p5-Class-Trigger-0.09 [pkg/29923]
 	o p5-Class-Trigger-0.10
 	o p5-Compress-Bzip2-2.09
@@ -847,11 +845,9 @@ Suggested package updates
 	o p5-Crypt-RSA-1.56
 	o p5-Crypt-Random-1.25
 	o p5-DBD-Oracle-1.16
-	o p5-DBD-SQLite-1.09
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-postgresql-1.32
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-DBIx-SearchBuilder-1.33
 	o p5-DB_File-1.810
 	o p5-Data-FormValidator-4.02
 	o p5-Data-TemporaryBag-0.08
@@ -920,7 +916,6 @@ Suggested package updates
 	o p5-Template-Extract-0.40
 	o p5-Test-Cmd-1.05
 	o p5-Test-Harness-2.46
-	o p5-Test-Inline-2.103
 	o p5-Text-Balanced-1.95
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Tabs+Wrap-2005.0824
