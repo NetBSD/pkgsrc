@@ -1,9 +1,11 @@
-This module helps abstract the process of working with complex
-schemas of relational SQL database tables. As with DBI, it lets
-you work with data a row at a time, but gives you the extra ability
-to, with a single method call, reach across and grab rows of related
-data from tables located elsewhere in your database, without having
-to construct an SQL join clause yourself. The 'distance' from the
-originating table to the related one can be arbitrarily long, so
-long as they are related in some way -- i.e., could both return
-data through a single (though perhaps quite lengthy) SQL query.
+This module implements an OO-interface to database schemas.  Using
+this module, you can create a database schema with an OO Perl
+interface.  You can read the schema from an existing database.
+You can save the schema to disk and restore it from different
+process.  Most importantly, DBIx::DBSchema can write SQL CREATE
+statements for different databases from a single source.
+
+Currently supported databases are MySQL, PostgreSQL, Oracle and
+Sybase.  DBIx::DBSchema will attempt to use generic SQL syntax for
+other databases.  Assistance adding support for other databases is
+welcomed.
