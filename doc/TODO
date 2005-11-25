@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4215 2005/11/25 19:59:54 wiz Exp $
+$NetBSD: TODO,v 1.4216 2005/11/25 21:22:48 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -602,8 +602,6 @@ Suggested package updates
 	o hatari-0.80
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
-	o horde-2.2.9
-	o horde3-3.0.7
 	o hot-babe-0.2.2
 	o html2ps-1.0b4
 	o html2wml-0.4.11
