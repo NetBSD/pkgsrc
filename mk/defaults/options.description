@@ -214,6 +214,7 @@ plplot
 png			Enable PNG support.
 portals	
 prefix-cmds	
+proftpd-readme		Enable mod_readme
 python	
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
 qmail-bigdns		Patch to handle oversized responses to MX queries.
