@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2005/11/25 13:37:30 martti Exp $
+# $NetBSD: options.mk,v 1.3 2005/11/25 15:02:23 martti Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proftpd
-PKG_SUPPORTED_OPTIONS=	pam wrap quota ldap mysql pgsql readme
+PKG_SUPPORTED_OPTIONS=	pam wrap quota ldap proftpd-readme
+PKG_OPTIONS_OPTIONAL_GROUPS+=	sql
+PKG_OPTIONS_GROUP.sql=		mysql pgsql
 
 .include "../../mk/bsd.options.mk"
 
@@ -32,7 +34,7 @@ MODULES:=	${MODULES}:mod_sql:mod_sql_mysql
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
-MODULES:=	${MODULES}:mod_sql:mod_sql_pgsql
+MODULES:=	${MODULES}:mod_sql:mod_sql_postgres
 .include "../../mk/pgsql.buildlink3.mk"
 .endif
 
