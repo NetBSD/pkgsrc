@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4213 2005/11/24 19:03:46 wiz Exp $
+$NetBSD: TODO,v 1.4214 2005/11/25 19:59:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -741,7 +741,6 @@ Suggested package updates
 	o metakit-2.4.9.4
 	o mftrace-1.1.16
 	o mgetty-1.1.33
-	o micq-0.5.0.4
 	o micro_httpd-20050629
 	o milter-regex-1.6
 	o mimedefang-2.54

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12034 2005/11/25 02:01:15 heinz Exp $
+$NetBSD: CHANGES,v 1.12035 2005/11/25 19:59:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5399,3 +5399,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/p5-GD to 2.30 [wiz 2005-11-24]
 	Added audio/gtick version 0.3.7 [rpaulo 2005-11-24]
 	Added converters/convmv version 1.08 [heinz 2005-11-25]
+	Updated chat/micq to 0.5.0.4 [wiz 2005-11-25]
