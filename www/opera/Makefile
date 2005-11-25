@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2005/09/22 21:50:03 jdolecek Exp $
+# $NetBSD: Makefile,v 1.42.2.1 2005/11/25 20:59:30 snj Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
-PKGREVISION=	# empty
 CATEGORIES=	www
-MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
-		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
+MASTER_SITES=	ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
 		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/ \
 		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/ \
 		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/ \
@@ -12,7 +10,7 @@ MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
 		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
 DISTFILES=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://www.opera.com/
 COMMENT=	Small, fast and customizable WWW client
 
@@ -29,9 +27,9 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20050916
-OPERA_PKG_VERSION=	8.50
-OPERA_PKG_VERSION_DIR=	850
+OPERA_VER_DATE=		20051114
+OPERA_PKG_VERSION=	8.51
+OPERA_PKG_VERSION_DIR=	851
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
@@ -46,7 +44,7 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
-OPERA_DIR=		linux/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
+OPERA_DIR=		linux/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 RPMFILES=	${DISTFILES}
@@ -54,7 +52,7 @@ RPM2PKGSTRIP=	0
 
 .elif (${_OPERA_OPSYS} == FreeBSD)
 OPERA_ARCH=		.i386.freebsd
-OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/shared/gcc-2.95
+OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
@@ -64,7 +62,7 @@ OWN_DIRS=		${PREFIX}/share/opera/plugins
 .elif (${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)
 EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		-sol8-sparc-local
-OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/static
+OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
@@ -136,7 +134,8 @@ post-install:
 
 # regenerate distinfo for all ports supported by this package
 opera-distinfo:
-	( ${ECHO} '$$NetBSD: Makefile,v 1.42 2005/09/22 21:50:03 jdolecek Exp $$'; ${ECHO} ''; \
+	( ${ECHO} '$$'NetBSD'$$'; \
+	  ${ECHO} ''; \
 	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
 		${GREP} opera distinfo; \
 	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
@@ -145,5 +144,5 @@ opera-distinfo:
 		${GREP} opera distinfo; \
 	) > distinfo.new
 	${MV} -f distinfo.new distinfo
-	
+
 .include "../../mk/bsd.pkg.mk"
