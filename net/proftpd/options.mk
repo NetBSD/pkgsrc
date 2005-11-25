@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/11/25 15:02:23 martti Exp $
+# $NetBSD: options.mk,v 1.4 2005/11/25 17:20:10 martti Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proftpd
@@ -38,7 +38,7 @@ MODULES:=	${MODULES}:mod_sql:mod_sql_postgres
 .include "../../mk/pgsql.buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mreadme)
+.if !empty(PKG_OPTIONS:Mproftpd-readme)
 MODULES:=	${MODULES}:mod_readme
 .endif
 
