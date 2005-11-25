@@ -1,0 +1,91 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
+
+--- suite/dotests.sh.orig	Sun Dec 14 05:56:54 2003
++++ suite/dotests.sh
+@@ -1,63 +1,72 @@
+ #!/bin/sh
+-for d in `ls -d test*` ; do cd $d ; ls -R -g -G --time-style=+ >../out-$d ; cd .. ; done
++
++# make this overridable on non-GNU systems which may have those commands
++# as gls and gcp
++CONVMV_LS=${CONVMV_LS:-ls}
++CONVMV_CP=${CONVMV_CP:-cp}
++
++# to get 0777 permissions for symlinks on non-Linux systems
++umask 0
++
++for d in `${CONVMV_LS} -d test*` ; do cd $d ; ${CONVMV_LS} -R -g -G --time-style=+ >../out-$d ; cd .. ; done
+ #
+ rm -rf test2
+-cp -a test test2
++${CONVMV_CP} -a test test2
+ ../convmv -f iso8859-15 -t utf8 --notest -r test2
+ cd test2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ diff out-test out2 || { echo "smartness-test failed." ; exit 1; }
+ #
+ ../convmv -f iso8859-15 -t utf8 --notest -r --nosmart test2
+ cd test2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ pwd
+ diff out-test-utf8 out2 || { echo "double-utf8 test failed." ; exit 1; }
+ #
+ ../convmv -f utf8 -t iso8859-15 --notest -r test2
+ cd test2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ pwd
+ diff out-test out2 || { echo undo-double-utf8 test failed. ; exit 1; }
+ #
+ rm -r test2
+-cp -a test test2
++${CONVMV_CP} -a test test2
+ ../convmv -f utf8 -t iso8859-15 --notest -r test2
+ cd test2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ diff out-test-iso8859-15 out2 || { echo iso8859-15-test failed. ; exit 1; }
+ #
+ rm -r test2
+-cp -a test test2
++${CONVMV_CP} -a test test2
+ ../convmv -f utf8 -t utf8 --nfd --notest -r test2
+ cd test2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ diff out-test-nfd out2 || { echo nfd-test failed. ; exit 1; }
+ #
+ ../convmv -f utf8 -t utf8 --nfc --notest -r test2
+ cd test2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ diff out-test out2 || { echo nfc-test failed. ; exit 1; }
+ #
+ rm -r test2
+-cp -a test-escaped test2
++${CONVMV_CP} -a test-escaped test2
+ ../convmv --unescape --notest -r test2
+ cd test2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ diff out-test out2 || { echo escaped-test failed. ; exit 1; }
+ #
+ rm -r test2
+-cp -a test test2
++${CONVMV_CP} -a test test2
+ ../convmv --upper -f utf8 --notest -r test2
+ cd TEST2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ rm -r TEST2
+ diff out-test-upper out2 || { echo upper-test failed. ; exit 1; }
