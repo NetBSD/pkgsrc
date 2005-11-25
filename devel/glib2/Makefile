@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2005/11/20 16:40:02 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2005/11/25 21:30:17 wiz Exp $
 
 DISTNAME=		glib-2.8.4
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -46,6 +46,8 @@ CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
 CONFIGURE_ENV+=		F77=${FALSE}
 
 CONFIGURE_ENV+=		PERL_PATH=${PERL5}
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
