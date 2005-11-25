@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/13 18:13:22 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/11/25 20:59:15 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -689,10 +689,6 @@ share/horde/templates/admin/user/nolist.inc
 share/horde/templates/admin/user/remove.inc
 share/horde/templates/admin/user/removequeued.inc
 share/horde/templates/admin/user/update.inc
-share/horde/templates/categorytree/rowend.inc
-share/horde/templates/categorytree/rowstart.inc
-share/horde/templates/categorytree/tablefoot.inc
-share/horde/templates/categorytree/tablehead.inc
 share/horde/templates/common-footer.inc
 share/horde/templates/common-header.inc
 share/horde/templates/contents/open_view_win.js
@@ -1321,8 +1317,6 @@ share/horde/themes/simplex/graphics/background.png
 share/horde/themes/simplex/info.php
 share/horde/themes/simplex/screen.css
 share/horde/util/barcode.php
-share/horde/util/google_example.php
-share/horde/util/icon_browser.php
 share/horde/util/regex_test.php
 @dirrm share/horde/util
 @dirrm share/horde/themes/simplex/graphics
@@ -1383,7 +1377,6 @@ share/horde/util/regex_test.php
 @dirrm share/horde/templates/help
 @dirrm share/horde/templates/data
 @dirrm share/horde/templates/contents
-@dirrm share/horde/templates/categorytree
 @dirrm share/horde/templates/admin/user
 @dirrm share/horde/templates/admin/setup
 @dirrm share/horde/templates/admin/groups
