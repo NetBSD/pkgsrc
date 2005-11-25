@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2005/11/15 12:49:03 hira Exp $
+$NetBSD: patch-ab,v 1.7 2005/11/25 21:12:29 wiz Exp $
 
---- doc/Makefile.in.orig	2005-11-15 21:06:41.000000000 +0900
-+++ doc/Makefile.in	2005-11-15 21:07:09.000000000 +0900
-@@ -278,7 +278,7 @@
+--- doc/Makefile.in.orig	2005-10-27 17:39:59.000000000 +0200
++++ doc/Makefile.in
+@@ -302,7 +302,7 @@ extra_files = 
+ # if $(DOC_MODULE).types is non-empty.
  GTKDOC_CFLAGS = -I$(top_srcdir) $(LIBGSF_CFLAGS)
  GTKDOC_LIBS = $(top_builddir)/gsf/libgsf-1.la $(LIBGSF_LIBS)
- 
 -manpagedir = $(datadir)/man/man1
 +manpagedir = $(mandir)/man1
  manpage_DATA = gsf-office-thumbnailer.1
  @GTK_DOC_INSTALLED_TRUE@@GTK_DOC_USE_LIBTOOL_FALSE@GTKDOC_CC = $(CC) $(INCLUDES) $(AM_CFLAGS) $(CFLAGS)
- 
+ @GTK_DOC_INSTALLED_TRUE@@GTK_DOC_USE_LIBTOOL_TRUE@GTKDOC_CC = $(LIBTOOL) --mode=compile $(CC) $(INCLUDES) $(AM_CFLAGS) $(CFLAGS)

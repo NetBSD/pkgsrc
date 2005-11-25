@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/11/15 12:49:03 hira Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/11/25 21:12:29 wiz Exp $
 bin/gsf-office-thumbnailer
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
@@ -30,6 +30,7 @@ include/libgsf-1/gsf/gsf-input.h
 include/libgsf-1/gsf/gsf-libxml.h
 include/libgsf-1/gsf/gsf-meta-names.h
 include/libgsf-1/gsf/gsf-msole-utils.h
+include/libgsf-1/gsf/gsf-opendoc-utils.h
 include/libgsf-1/gsf/gsf-outfile-impl.h
 include/libgsf-1/gsf/gsf-outfile-msole.h
 include/libgsf-1/gsf/gsf-outfile-stdio.h
@@ -53,13 +54,14 @@ lib/libgsf-gnome-1.la
 lib/pkgconfig/libgsf-1.pc
 lib/pkgconfig/libgsf-gnome-1.pc
 man/man1/gsf-office-thumbnailer.1
+share/doc/libgsf/gsf/GsfBlob.html
+share/doc/libgsf/gsf/GsfClipData.html
 share/doc/libgsf/gsf/api.html
+share/doc/libgsf/gsf/dependencies.html
 share/doc/libgsf/gsf/gsf-Bononbo.html
 share/doc/libgsf/gsf/gsf-Compression.html
 share/doc/libgsf/gsf/gsf-GIOChannel.html
 share/doc/libgsf/gsf/gsf-GnomeVFS.html
-share/doc/libgsf/gsf/gsf-GsfBlob.html
-share/doc/libgsf/gsf/gsf-GsfClipData.html
 share/doc/libgsf/gsf/gsf-Infile-reading-structed-files.html
 share/doc/libgsf/gsf/gsf-Input-from-unstructured-files.html
 share/doc/libgsf/gsf/gsf-MS-OLE2.html
@@ -70,14 +72,17 @@ share/doc/libgsf/gsf/gsf-Structured-Blobs.html
 share/doc/libgsf/gsf/gsf-Text.html
 share/doc/libgsf/gsf/gsf-XML-and-libxml.html
 share/doc/libgsf/gsf/gsf-Zip.html
+share/doc/libgsf/gsf/gsf-gsf-opendoc-utils.html
 share/doc/libgsf/gsf/gsf-memory.html
 share/doc/libgsf/gsf/gsf-metadata.html
+share/doc/libgsf/gsf/gsf-users.html
 share/doc/libgsf/gsf/gsf-utils.html
 share/doc/libgsf/gsf/gsf.devhelp
+share/doc/libgsf/gsf/history.html
 share/doc/libgsf/gsf/home.png
 share/doc/libgsf/gsf/index.html
 share/doc/libgsf/gsf/index.sgml
-share/doc/libgsf/gsf/into.html
+share/doc/libgsf/gsf/intro.html
 share/doc/libgsf/gsf/io.html
 share/doc/libgsf/gsf/ix01.html
 share/doc/libgsf/gsf/left.png
