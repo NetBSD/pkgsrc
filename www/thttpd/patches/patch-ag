@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.2.16.1 2005/11/26 10:42:15 salo Exp $
+
+--- extras/syslogtocern.orig	2005-11-26 09:54:31.000000000 +0000
++++ extras/syslogtocern
+@@ -31,8 +31,8 @@ if [ $# -lt 1 ] ; then
+     exit 1
+ fi
+ 
+-tmp1=/tmp/stc1.$$
+-rm -f $tmp1
++tmp1=``mktemp -t stc1.XXXXXX` || { echo "$0: Cannot create temporary file" >&2; exit 1;  }
++trap " [ -f \"$tmp1\" ] && /bin/rm -f -- \"$tmp1\"" 0 1 2 3 13 15
+ 
+ # Gather up all the thttpd entries.
+ egrep -h ' thttpd\[' "$@" > $tmp1
