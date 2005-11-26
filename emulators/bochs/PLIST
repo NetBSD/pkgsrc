@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/12 00:10:31 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/11/26 06:15:00 ben Exp $
 bin/bochs
 bin/bxcommit
 bin/bximage
@@ -15,8 +15,9 @@ share/bochs/VGABIOS-elpin-2.40
 share/bochs/VGABIOS-elpin-LICENSE
 share/bochs/VGABIOS-lgpl-README
 share/bochs/VGABIOS-lgpl-latest
+share/bochs/VGABIOS-lgpl-latest-cirrus
+share/bochs/VGABIOS-lgpl-latest-cirrus-debug
 share/bochs/VGABIOS-lgpl-latest-debug
-share/bochs/keymaps/convertmap.pl
 share/bochs/keymaps/sdl-pc-de.map
 share/bochs/keymaps/sdl-pc-us.map
 share/bochs/keymaps/x11-pc-be.map
@@ -25,12 +26,14 @@ share/bochs/keymaps/x11-pc-de.map
 share/bochs/keymaps/x11-pc-es.map
 share/bochs/keymaps/x11-pc-fr.map
 share/bochs/keymaps/x11-pc-it.map
+share/bochs/keymaps/x11-pc-ru.map
 share/bochs/keymaps/x11-pc-se.map
 share/bochs/keymaps/x11-pc-uk.map
 share/bochs/keymaps/x11-pc-us.map
 share/doc/bochs/CHANGES
 share/doc/bochs/COPYING
 share/doc/bochs/README
+share/doc/bochs/TODO
 share/doc/bochs/bochsrc-sample.txt
 @dirrm share/doc/bochs
 @dirrm share/bochs/keymaps
