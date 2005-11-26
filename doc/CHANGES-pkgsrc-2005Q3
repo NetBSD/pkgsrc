@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.79 2005/11/25 20:59:40 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.80 2005/11/26 07:17:56 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -171,3 +171,5 @@ Pullup ticket 920 - requested by Matthias Scheler
 security update for ipsec-tools
 Pullup ticket 921 - requested by Lubomir Sedlacik
 security update for opera
+Pullup ticket 924 - requested by Thomas Klausner
+security update for micq
