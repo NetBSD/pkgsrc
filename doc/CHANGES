@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12042 2005/11/26 06:01:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12043 2005/11/26 06:15:52 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5408,3 +5408,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/mplayer to 1.0rc7nb5 [ben 2005-11-25]
 	Added comms/asterisk-sounds-de-x9media-20051126 [mjl 2005-11-26]
 	Updated emulators/gxemul to 0.3.7 [xtraeme 2005-11-26]
+	Updated emulators/bochs to 2.2.1 [ben 2005-11-26]

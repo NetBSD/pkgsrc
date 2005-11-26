@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4217 2005/11/25 21:40:06 wiz Exp $
+$NetBSD: TODO,v 1.4218 2005/11/26 06:15:52 ben Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,6 @@ Suggested package updates
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o boaconstructor-0.4.4
-	o bochs-2.2.1
 	o boolean-6.8
 	o boson-0.11
 	o browser-bookmarks-menu-0.4
