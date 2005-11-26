@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:23:31 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/11/26 21:19:20 markd Exp $
 
 SHA1 (sge-5.3p6.tar.gz) = be0ff4ea59d14a1186e5fd35987df6f15fbc21fe
 RMD160 (sge-5.3p6.tar.gz) = 847bb04de3b8dff9b84421cb59fb3618b5e60779
@@ -37,3 +37,4 @@ SHA1 (patch-be) = b195148431d2225abe937934608959d94dd9b10a
 SHA1 (patch-bf) = 65c9d44a435802be2c209260bbd5c78c60560298
 SHA1 (patch-bg) = d0d25bafcfd3ac60f21c82df51648811bd6b9b64
 SHA1 (patch-bh) = cbe5e126b8cff831361c0cc6957e1c282d0d2aa7
+SHA1 (patch-bi) = e1e383801e288537ae42ea40d24cd9feec136211
