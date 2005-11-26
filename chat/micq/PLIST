@@ -1,22 +1,43 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/01 08:37:07 shell Exp $
+@comment $NetBSD: PLIST,v 1.5.16.1 2005/11/26 07:10:24 salo Exp $
 bin/micq
+man/de/man1/micq.1
+man/de/man5/micqrc.5
+man/de/man7/micq.7
+man/es/man1/micq.1
+man/es/man5/micqrc.5
+man/es/man7/micq.7
+man/fr/man1/micq.1
+man/fr/man5/micqrc.5
+man/fr/man7/micq.7
+man/it/man1/micq.1
 man/man1/micq.1
 man/man5/micqrc.5
 man/man7/micq.7
+man/pt_BR/man1/micq.1
+man/pt_BR/man5/micqrc.5
+man/pt_BR/man7/micq.7
+man/ru/man1/micq.1
+man/ru/man5/micqrc.5
+man/ru/man7/micq.7
+man/sk/man1/micq.1
+man/sk/man5/micqrc.5
+man/sk/man7/micq.7
+man/sr/man1/micq.1
+man/sr/man5/micqrc.5
+man/sr/man7/micq.7
+man/uk/man1/micq.1
+man/uk/man7/micq.7
 share/micq/C.i18n
 share/micq/bg.i18n
 share/micq/de.i18n
-share/micq/de@fun.i18n
 share/micq/de_CH.i18n
 share/micq/en.i18n
-share/micq/en@fun.i18n
 share/micq/es.i18n
 share/micq/fi.i18n
 share/micq/fr.i18n
 share/micq/hr.i18n
 share/micq/id.i18n
 share/micq/it.i18n
-share/micq/ja.UTF-8.i18n
 share/micq/ja.i18n
 share/micq/nl.i18n
 share/micq/pl.i18n
@@ -24,9 +45,29 @@ share/micq/pt.i18n
 share/micq/ro.i18n
 share/micq/ru.i18n
 share/micq/se.i18n
-share/micq/sr.UTF-8.i18n
+share/micq/sk.i18n
 share/micq/sr.i18n
 share/micq/uk.i18n
 share/micq/yu.i18n
 share/micq/zh_CN.i18n
+@unexec ${RMDIR} %D/man/uk/man7 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/uk/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/uk 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sr/man7 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sr/man5 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sr/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sr 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sk/man7 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sk/man5 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sk/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sk 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru/man7 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru/man5 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pt_BR/man7 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pt_BR/man5 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pt_BR/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/pt_BR 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it/man1 2>/dev/null || ${TRUE}
 @dirrm share/micq
