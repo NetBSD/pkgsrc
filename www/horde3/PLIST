@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/30 21:58:08 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2005/11/26 15:33:00 salo Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -40,16 +40,19 @@ share/horde/config/nls.php.dist
 share/horde/config/prefs.php.dist
 share/horde/config/registry.php.dist
 share/horde/index.php
+share/horde/js/addEvent.php
 share/horde/js/alphaImageLoader.php
 share/horde/js/enter_key_trap.js
 share/horde/js/form_assign.js
 share/horde/js/form_helpers.js
 share/horde/js/hideable.js
 share/horde/js/httpclient.js
+share/horde/js/ieEscGuard.js
 share/horde/js/image.js
 share/horde/js/open_colorpicker.js
 share/horde/js/popup.js
 share/horde/js/sorter.js
+share/horde/js/stripe.js
 share/horde/js/tooltip.js
 share/horde/lib/Block/color.php
 share/horde/lib/Block/fortune.php
@@ -59,6 +62,7 @@ share/horde/lib/Block/metar.php
 share/horde/lib/Block/moon.php
 share/horde/lib/Block/sunrise.php
 share/horde/lib/Block/time.php
+share/horde/lib/Block/weatherdotcom_strings.php
 share/horde/lib/Block/weatherdotcom.php
 share/horde/lib/File/PDF.php
 share/horde/lib/File/PDF/fonts/courier.php
@@ -202,7 +206,6 @@ share/horde/lib/Horde/MIME/Viewer/default.php
 share/horde/lib/Horde/MIME/Viewer/enriched.php
 share/horde/lib/Horde/MIME/Viewer/enscript.php
 share/horde/lib/Horde/MIME/Viewer/html.php
-share/horde/lib/Horde/MIME/Viewer/icalendar.php
 share/horde/lib/Horde/MIME/Viewer/images.php
 share/horde/lib/Horde/MIME/Viewer/msexcel.php
 share/horde/lib/Horde/MIME/Viewer/mspowerpoint.php
@@ -286,7 +289,10 @@ share/horde/lib/Horde/Secret.php
 share/horde/lib/Horde/Serialize.php
 share/horde/lib/Horde/SessionHandler.php
 share/horde/lib/Horde/SessionHandler/dbm.php
+share/horde/lib/Horde/SessionHandler/ldap.php
+share/horde/lib/Horde/SessionHandler/memcached.php
 share/horde/lib/Horde/SessionHandler/mysql.php
+share/horde/lib/Horde/SessionHandler/none.php
 share/horde/lib/Horde/SessionHandler/oci8.php
 share/horde/lib/Horde/SessionHandler/pgsql.php
 share/horde/lib/Horde/SessionHandler/sapdb.php
@@ -295,29 +301,26 @@ share/horde/lib/Horde/SessionObjects.php
 share/horde/lib/Horde/Share.php
 share/horde/lib/Horde/String.php
 share/horde/lib/Horde/SyncML.php
+share/horde/lib/Horde/SyncML/Backend.php
 share/horde/lib/Horde/SyncML/Command.php
 share/horde/lib/Horde/SyncML/Command/Alert.php
 share/horde/lib/Horde/SyncML/Command/Final.php
 share/horde/lib/Horde/SyncML/Command/Get.php
 share/horde/lib/Horde/SyncML/Command/Map.php
 share/horde/lib/Horde/SyncML/Command/Put.php
-share/horde/lib/Horde/SyncML/Command/Replace.php
 share/horde/lib/Horde/SyncML/Command/Results.php
 share/horde/lib/Horde/SyncML/Command/Status.php
 share/horde/lib/Horde/SyncML/Command/Sync.php
-share/horde/lib/Horde/SyncML/Command/Sync/Add.php
-share/horde/lib/Horde/SyncML/Command/Sync/ContentSyncElement.php
-share/horde/lib/Horde/SyncML/Command/Sync/Delete.php
-share/horde/lib/Horde/SyncML/Command/Sync/Replace.php
-share/horde/lib/Horde/SyncML/Command/Sync/SyncElement.php
+share/horde/lib/Horde/SyncML/Command/SyncElement.php
+share/horde/lib/Horde/SyncML/Constants.php
+share/horde/lib/Horde/SyncML/Device.php
+share/horde/lib/Horde/SyncML/Device/P800.php
+share/horde/lib/Horde/SyncML/Device/Sync4j.php
+share/horde/lib/Horde/SyncML/Device/Synthesis.php
+share/horde/lib/Horde/SyncML/DeviceInfo.php
+share/horde/lib/Horde/SyncML/ResultsSender.php
 share/horde/lib/Horde/SyncML/State.php
 share/horde/lib/Horde/SyncML/Sync.php
-share/horde/lib/Horde/SyncML/Sync/OneWayFromClientSync.php
-share/horde/lib/Horde/SyncML/Sync/OneWayFromServerSync.php
-share/horde/lib/Horde/SyncML/Sync/RefreshFromClientSync.php
-share/horde/lib/Horde/SyncML/Sync/RefreshFromServerSync.php
-share/horde/lib/Horde/SyncML/Sync/SlowSync.php
-share/horde/lib/Horde/SyncML/Sync/TwoWaySync.php
 share/horde/lib/Horde/Template.php
 share/horde/lib/Horde/Text.php
 share/horde/lib/Horde/Text/Filter.php
@@ -423,6 +426,7 @@ share/horde/lib/core.php
 share/horde/lib/prefs.php
 share/horde/lib/version.php
 share/horde/locale/ar_SY/LC_MESSAGES/horde.mo
+share/horde/locale/bs_BA/LC_MESSAGES/horde.mo
 share/horde/locale/bg_BG/LC_MESSAGES/horde.mo
 share/horde/locale/bg_BG/help.xml
 share/horde/locale/ca_ES/LC_MESSAGES/horde.mo
@@ -440,6 +444,7 @@ share/horde/locale/es_ES/help.xml
 share/horde/locale/et_EE/LC_MESSAGES/horde.mo
 share/horde/locale/et_EE/help.xml
 share/horde/locale/fa_IR/LC_MESSAGES/horde.mo
+share/horde/locale/fa_IR/help.xml
 share/horde/locale/fi_FI/LC_MESSAGES/horde.mo
 share/horde/locale/fi_FI/help.xml
 share/horde/locale/fr_FR/LC_MESSAGES/horde.mo
@@ -489,6 +494,7 @@ share/horde/locale/zh_TW/help.xml
 share/horde/login.php
 share/horde/po/README
 share/horde/po/ar_SY.po
+share/horde/po/bs_BA.po
 share/horde/po/bg_BG.po
 share/horde/po/ca_ES.po
 share/horde/po/cs_CZ.po
@@ -529,6 +535,7 @@ share/horde/po/zh_TW.po
 share/horde/rpc.php
 share/horde/scripts/SCRIPTS
 share/horde/scripts/create-symlinks.php
+share/horde/scripts/sql/create.msde.sql
 share/horde/scripts/crond
 share/horde/scripts/get_login.php
 share/horde/scripts/http_login_refer.php
@@ -682,10 +689,6 @@ share/horde/templates/admin/user/nolist.inc
 share/horde/templates/admin/user/remove.inc
 share/horde/templates/admin/user/removequeued.inc
 share/horde/templates/admin/user/update.inc
-share/horde/templates/categorytree/rowend.inc
-share/horde/templates/categorytree/rowstart.inc
-share/horde/templates/categorytree/tablefoot.inc
-share/horde/templates/categorytree/tablehead.inc
 share/horde/templates/common-footer.inc
 share/horde/templates/common-header.inc
 share/horde/templates/contents/open_view_win.js
@@ -1314,8 +1317,6 @@ share/horde/themes/simplex/graphics/background.png
 share/horde/themes/simplex/info.php
 share/horde/themes/simplex/screen.css
 share/horde/util/barcode.php
-share/horde/util/google_example.php
-share/horde/util/icon_browser.php
 share/horde/util/regex_test.php
 @dirrm share/horde/util
 @dirrm share/horde/themes/simplex/graphics
@@ -1376,7 +1377,6 @@ share/horde/util/regex_test.php
 @dirrm share/horde/templates/help
 @dirrm share/horde/templates/data
 @dirrm share/horde/templates/contents
-@dirrm share/horde/templates/categorytree
 @dirrm share/horde/templates/admin/user
 @dirrm share/horde/templates/admin/setup
 @dirrm share/horde/templates/admin/groups
@@ -1480,6 +1480,8 @@ share/horde/util/regex_test.php
 @dirrm share/horde/locale/ca_ES
 @dirrm share/horde/locale/bg_BG/LC_MESSAGES
 @dirrm share/horde/locale/bg_BG
+@dirrm share/horde/locale/bs_BA/LC_MESSAGES
+@dirrm share/horde/locale/bs_BA
 @dirrm share/horde/locale/ar_SY/LC_MESSAGES
 @dirrm share/horde/locale/ar_SY
 @dirrm share/horde/locale
@@ -1518,8 +1520,7 @@ share/horde/util/regex_test.php
 @dirrm share/horde/lib/Horde/Text/tests
 @dirrm share/horde/lib/Horde/Text/Filter
 @dirrm share/horde/lib/Horde/Text
-@dirrm share/horde/lib/Horde/SyncML/Sync
-@dirrm share/horde/lib/Horde/SyncML/Command/Sync
+@dirrm share/horde/lib/Horde/SyncML/Device
 @dirrm share/horde/lib/Horde/SyncML/Command
 @dirrm share/horde/lib/Horde/SyncML
 @dirrm share/horde/lib/Horde/SessionHandler
@@ -1563,6 +1564,7 @@ share/horde/util/regex_test.php
 @dirrm share/horde/lib/File/PDF
 @dirrm share/horde/lib/File/tests
 @dirrm share/horde/lib/File
+@dirrm share/horde/lib/data
 @dirrm share/horde/lib/Block
 @dirrm share/horde/lib
 @dirrm share/horde/js
