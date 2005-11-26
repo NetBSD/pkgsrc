@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12040 2005/11/26 01:33:22 ben Exp $
+$NetBSD: CHANGES,v 1.12041 2005/11/26 01:45:47 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4201,6 +4201,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/bittorrent-gui to 4.0.4 [adam 2005-09-30]
 	Updated textproc/docbook-xml to 4.4 [wiz 2005-09-30]
 	Updated textproc/libxml2 to 2.6.22 [wiz 2005-09-30]
+	Added comms/asterisk-sounds-extra 1.0.9 [mjl 2005-09-30]
 	Updated misc/dialog to 1.0.20050911 [wiz 2005-09-30]
 	Updated devel/gnustep-make to 1.11.1 [rh 2005-09-30]
 	Updated devel/gnustep-base to 1.11.1 [rh 2005-09-30]
@@ -5405,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libgsf to 1.13.3 [wiz 2005-11-25]
 	Updated inputmethod/uim to 0.4.9.1nb1 [wiz 2005-11-25]
 	Updated multimedia/mplayer to 1.0rc7nb5 [ben 2005-11-25]
+	Added comms/asterisk-sounds-de-x9media-20051126 [mjl 2005-11-26]
