@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/11/26 06:00:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2005/11/26 19:03:14 xtraeme Exp $
 #
 
 DISTNAME=	gxemul-0.3.7
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://gavare.se/gxemul/src/
 
@@ -22,9 +23,7 @@ do-install:
 .for f in README HISTORY BUGS TODO RELEASE LICENSE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/${PKGBASE}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/*.gif ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/doc/*.png ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/doc/*.c ${PREFIX}/share/doc/${PKGBASE}
+	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${PREFIX}/share/doc/${PKGBASE} 
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gxemul
 PKG_SUPPORTED_OPTIONS=	x11
