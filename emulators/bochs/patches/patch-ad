@@ -1,14 +1,14 @@
-$NetBSD: patch-ad,v 1.6 2004/02/12 00:10:32 hubertf Exp $
+$NetBSD: patch-ad,v 1.7 2005/11/26 06:15:00 ben Exp $
 
---- Makefile.in.orig	Mon Dec 29 22:53:03 2003
+--- Makefile.in.orig	2005-07-06 13:28:23.000000000 -0700
 +++ Makefile.in
-@@ -70,8 +70,8 @@ MKDIR=mkdir
- RMDIR=rmdir
+@@ -71,8 +71,8 @@ RMDIR=rmdir
  TAR=tar
  CHMOD=chmod
--GZIP=gzip -9
+ # the GZIP variable is reserved by gzip program
+-GZIP_BIN=gzip -9
 -GUNZIP=gunzip
-+GZIP=${GZIP_CMD} -9
++GZIP_BIN=${GZIP_CMD} -9
 +GUNZIP=${GUNZIP_CMD}
  ZIP=zip
  UNIX2DOS=unix2dos
