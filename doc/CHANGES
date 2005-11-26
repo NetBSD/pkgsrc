@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12044 2005/11/26 09:42:17 salo Exp $
+$NetBSD: CHANGES,v 1.12045 2005/11/26 10:04:00 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/gxemul to 0.3.7 [xtraeme 2005-11-26]
 	Updated emulators/bochs to 2.2.1 [ben 2005-11-26]
 	Updated graphics/gdk-pixbuf to 0.22.0nb6 [salo 2005-11-26]
+	Updated www/thttpd to 2.25bnb4 [adrianp 2005-11-26]
