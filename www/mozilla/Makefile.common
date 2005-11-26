@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2005/09/17 02:35:19 jlam Exp $
+# $NetBSD: Makefile.common,v 1.64 2005/11/26 22:09:25 martin Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -42,7 +42,6 @@ PKGCONFIG_OVERRIDE+=	build/unix/mozilla-xpcom.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 CONFIGURE_ARGS+= --disable-tests \
-		--disable-debug \
 		--disable-pedantic \
 		--with-system-jpeg=${BUILDLINK_PREFIX.jpeg} \
 		--with-system-png=${BUILDLINK_PREFIX.png} \
@@ -200,3 +199,5 @@ SUBST_FILES.pc=		build/unix/*.pc.in
 SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
 			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
 SUBST_MESSAGE.pc=	"Fixing pkgconfig files."
+
+.include "../../www/mozilla/options.mk"
