@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2005/11/24 03:59:12 ben Exp $
+# $NetBSD: options.mk,v 1.12 2005/11/26 01:31:50 ben Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -17,7 +17,11 @@ PKG_SUPPORTED_OPTIONS=	gif jpeg mad dv dvdread oss png theora vorbis
 
 # Set options based on the specific package being built.
 .if !empty(PKGNAME:M*mplayer*)
-PKG_SUPPORTED_OPTIONS+=	aalib esound faad ggi mplayer-menu nas sdl
+PKG_OPTIONS_OPTIONAL_GROUPS=	faadgroup
+PKG_OPTIONS_GROUP.faadgroup=	faad mplayer-internal-faad
+PKG_SUGGESTED_OPTIONS+=		faad
+
+PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas sdl
 
 .  if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=	arts
@@ -47,7 +51,7 @@ PKG_SUPPORTED_OPTIONS+=	mplayer-real
 # Define PKG_SUGGESTED_OPTIONS.
 # -------------------------------------------------------------------------
 
-.for _o_ in aalib arts cdparanoia dv dvdread esound faad gif jpeg \
+.for _o_ in aalib arts cdparanoia dv dvdread esound gif jpeg \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-runtime-cpudetection mplayer-win32 \
 	    nas oss png sdl theora vorbis xvid
@@ -102,12 +106,15 @@ CONFIGURE_ARGS+=	--enable-esd
 CONFIGURE_ARGS+=	--disable-esd
 .endif
 
-.if !empty(PKG_OPTIONS:Mfaad)
+
+.if empty(PKG_OPTIONS:Mfaad) && empty(PKG_OPTIONS:Mmplayer-internal-faad)
+CONFIGURE_ARGS+=	--disable-external-faad
+CONFIGURE_ARGS+=	--disable-internal-faad
+.elif !empty(PKG_OPTIONS:Mfaad)
 CONFIGURE_ARGS+=	--enable-external-faad
 .  include "../../audio/faad2/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-external-faad
-CONFIGURE_ARGS+=	--disable-internal-faad
+CONFIGURE_ARGS+=	--enable-internal-faad
 .endif
 
 .if !empty(PKG_OPTIONS:Mggi)
