@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12039 2005/11/25 22:17:56 wiz Exp $
+$NetBSD: CHANGES,v 1.12040 2005/11/26 01:33:22 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5404,3 +5404,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/horde to 2.2.9 [adrianp 2005-11-25]
 	Updated devel/libgsf to 1.13.3 [wiz 2005-11-25]
 	Updated inputmethod/uim to 0.4.9.1nb1 [wiz 2005-11-25]
+	Updated multimedia/mplayer to 1.0rc7nb5 [ben 2005-11-25]
