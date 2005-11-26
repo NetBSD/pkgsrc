@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2005/10/26 00:04:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2005/11/26 15:41:16 uebayasi Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -15,6 +15,8 @@ COMMENT=	The Z shell
 
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR}
 
 USE_MAKEINFO=		yes
 INFO_FILES=		zsh.info
