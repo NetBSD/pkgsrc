@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.2.2 2005/11/26 15:33:00 salo Exp $
+
+--- lib/Horde/Auth/login.php.orig	2005-03-29 02:59:56.000000000 -0800
++++ lib/Horde/Auth/login.php
+@@ -88,7 +88,7 @@ class Auth_login extends Auth {
+             Horde::fatal(_("No password provided for Login authentication."), __FILE__, __LINE__);
+         }
+ 
+-        $proc = popen($this->_location . ' -c /bin/true ' . $userId, 'w');
++        $proc = popen($this->_location . ' ' . $userId . ' -c exit 0', 'w');
+         if (!is_resource($proc)) {
+             return false;
+         }
