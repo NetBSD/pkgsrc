@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.80 2005/11/26 07:17:56 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.81 2005/11/26 10:42:36 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -173,3 +173,5 @@ Pullup ticket 921 - requested by Lubomir Sedlacik
 security update for opera
 Pullup ticket 924 - requested by Thomas Klausner
 security update for micq
+Pullup ticket 927 - requested by Adrian Portelli
+security fix for thttpd
