@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12047 2005/11/26 19:47:42 wiz Exp $
+$NetBSD: CHANGES,v 1.12048 2005/11/27 17:16:27 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5412,3 +5412,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/gdk-pixbuf to 0.22.0nb6 [salo 2005-11-26]
 	Updated www/thttpd to 2.25bnb4 [adrianp 2005-11-26]
 	Updated shells/zsh to 4.25nb2 [uebayasi 2005-11-26]
+	Updated print/ghostscript-afpl to 8.51nb1 [adrianp 2005-11-27]
+	Updated print/ghostscript-esp to 8.15.1nb1 [adrianp 2005-11-27]
+	Updated print/ghostscript-esp-nox11 to 8.15.1nb1 [adrianp 2005-11-27]
+	Updated print/ghostscript-gnu to 8.15nb1 [adrianp 2005-11-27]
+	Updated print/ghostscript-gnu-nox11 to 8.15nb1 [adrianp 2005-11-27]
+	Updated print/ghostscript to 6.01nb6 [adrianp 2005-11-27]
+	Updated print/ghostscript-nox11 to 6.01nb6 [adrianp 2005-11-27]
