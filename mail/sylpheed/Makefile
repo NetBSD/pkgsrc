@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2005/08/26 13:18:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.79.2.1 2005/11/27 21:38:49 snj Exp $
 
-DISTNAME=	sylpheed-2.0.1
+DISTNAME=	sylpheed-2.0.4
 CATEGORIES=	mail news x11
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/v2.0/
@@ -18,7 +18,7 @@ CONFLICTS=		sylpheed-claws-[0-9]* sylpheed-gtk2-[0-9]*
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=            yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls
