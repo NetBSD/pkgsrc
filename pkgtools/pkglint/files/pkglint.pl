@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.389 2005/11/27 21:18:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.390 2005/11/27 23:48:01 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -392,6 +392,15 @@ sub delete($) {
 	$self->[PHYSLINES] = [];
 	$self->[CHANGED] = true;
 }
+sub replace($$$) {
+	my ($self, $from, $to) = @_;
+	my $phys = $self->[PHYSLINES];
+	foreach my $i (0..$#{$phys}) {
+		if ($phys->[$i]->[0] != 0 && $phys->[$i]->[1] =~ s/\Q$from\E/$to/g) {
+			$self->[CHANGED] = true;
+		}
+	}
+}
 
 #== End of PkgLint::FileUtil::Line ========================================
 
@@ -401,8 +410,9 @@ package PkgLint::FileUtil;
 # files. The load_file() subroutine loads a file completely into memory,
 # optionally handling continuation line folding. The load_lines() subrou-
 # tine is an abbreviation for the common case of loading files without
-# continuation lines. The save_autofix_lines() subroutine examines an array
-# of lines if some of them have changed. It then saves the modified files.
+# continuation lines. The save_autofix_changes() subroutine examines an
+# array of lines if some of them have changed. It then saves the modified
+# files.
 #==========================================================================
 use strict;
 use warnings;
@@ -536,8 +546,7 @@ sub save_autofix_changes($) {
 	}
 
 	foreach my $fname (sort(keys(%changed))) {
-		my $old = "${fname}.pkglint.old";
-		my $new = "${fname}.pkglint.new";
+		my $new = "${fname}.pkglint.tmp";
 
 		if (!open(F, ">", $new)) {
 			log_error($new, NO_LINE_NUMBER, "$!");
@@ -551,16 +560,11 @@ sub save_autofix_changes($) {
 			next;
 		}
 
-		unlink($old); # without error checking
-		if (!link($fname, $old)) {
-			log_error($fname, NO_LINE_NUMBER, "$!");
-			next;
-		}
 		if (!rename($new, $fname)) {
 			log_error($fname, NO_LINE_NUMBER, "$!");
 			next;
 		}
-		log_note($fname, NO_LINE_NUMBER, "Has been autofixed.");
+		log_note($fname, NO_LINE_NUMBER, "Has been autofixed. Please re-run pkglint.");
 	}
 }
 
@@ -1000,6 +1004,14 @@ sub get_dist_sites_names() {
 #
 # Miscellaneous functions
 #
+
+sub autofix($) {
+	my ($lines) = @_;
+
+	if ($opt_autofix) {
+		save_autofix_changes($lines);
+	}
+}
 
 sub is_committed($) {
 	my ($fname) = @_;
@@ -1953,12 +1965,15 @@ sub checkline_basic_vartype($$$$$) {
 			my ($vexpr, undef, $vname) = ($1, $2, $3);
 			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
 			$line->log_warning("Please use \${${vname}${mod}} instead of ${vexpr}.");
+			$line->replace($vexpr, "\${${vname}${mod}}");
 
 		} elsif ($value =~ qr"^[\w_]+=(\$\{([\w_]+):Q\})$") {
 			my ($vexpr, $vname) = ($1, $2);
 			if ($vname =~ regex_gnu_configure_volatile_vars) {
 				$line->log_warning("Please use \${${vname}:M*:Q} instead of ${vexpr}.");
+				$line->replace($vexpr, "\${${vname}:M*:Q}");
 			}
+
 		} elsif ($value ne "" && $value !~ qr"^${regex_shellword}$") {
 			$line->log_warning("Invalid shell word \"${value}\".");
 		}
@@ -2630,14 +2645,14 @@ sub set_default_value($$) {
 # Loading data from package-specific files, part 2.
 #
 
-sub load_package_Makefile($$$$) {
+sub load_package_Makefile($$$) {
 	my ($subr) = "load_package_Makefile";
-	my ($fname, $ref_whole, $ref_main_lines, $ref_all_lines) = @_;
-	my ($whole, $main_lines, $all_lines);
+	my ($fname, $ref_whole, $ref_lines) = @_;
+	my ($whole, $lines, $all_lines);
 
 	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
 
-	$whole = readmakefile($fname, $main_lines = [], $all_lines = [], {});
+	$whole = readmakefile($fname, $lines = [], $all_lines = [], {});
 	if (!$whole) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
@@ -2677,8 +2692,7 @@ sub load_package_Makefile($$$$) {
 	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] PKGDIR=$pkgdir");
 
 	${$ref_whole} = $whole;
-	${$ref_main_lines} = $main_lines;
-	${$ref_all_lines} = $all_lines;
+	${$ref_lines} = $lines;
 	return true;
 }
 
@@ -2730,8 +2744,8 @@ sub checkfile_mk($) {
 	checklines_Makefile_varuse($lines);
 }
 
-sub checkfile_package_Makefile($$$$) {
-	my ($fname, $whole, $main_lines, $lines) = @_;
+sub checkfile_package_Makefile($$$) {
+	my ($fname, $whole, $lines) = @_;
 	my ($distname, $distfiles);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_package_Makefile]");
@@ -2740,7 +2754,7 @@ sub checkfile_package_Makefile($$$$) {
 
 	# TODO: "Please use \${VARIABLE} instead of \$(VARIABLE)."
 
-	checklines_deprecated_variables($main_lines);
+	checklines_deprecated_variables($lines);
 
 	if (!exists($makevar->{"PLIST_SRC"})
 	    && !exists($makevar->{"NO_PKG_REGISTER"})
@@ -2759,7 +2773,7 @@ sub checkfile_package_Makefile($$$$) {
 		}
 	}
 
-	checklines_direct_tools($main_lines);
+	checklines_direct_tools($lines);
 
 	if ($whole =~ /etc\/rc\.d/) {
 		log_warning($fname, NO_LINE_NUMBER, "Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
@@ -2802,10 +2816,11 @@ sub checkfile_package_Makefile($$$$) {
 		$makevar->{"USE_X11"}->log_note("... USE_X11 superfluous.");
 	}
 
-	checklines_package_Makefile($main_lines);
+	checklines_package_Makefile($lines);
 	# Disabled, as I don't like the current ordering scheme.
 	#checklines_package_Makefile_varorder($lines);
-	checklines_Makefile_varuse($main_lines);
+	checklines_Makefile_varuse($lines);
+	autofix($lines);
 }
 
 sub checkfile($) {
@@ -3111,10 +3126,7 @@ sub checkdir_category() {
 		$lines->[$lineno]->log_error("The file should end here.");
 	}
 
-	# If the user has requested automatic fixing and we can do it, we do it.
-	if ($opt_autofix) {
-		save_autofix_changes($lines);
-	}
+	autofix($lines);
 
 	if ($opt_recursive) {
 		unshift(@todo_items, @subdirs);
@@ -3122,13 +3134,13 @@ sub checkdir_category() {
 }
 
 sub checkdir_package() {
-	my ($whole, $main_lines, $lines, $have_distinfo, $have_patches);
+	my ($whole, $lines, $have_distinfo, $have_patches);
 
 	# Initialize global variables
 	$makevar = {};
 
 	# we need to handle the Makefile first to get some variables
-	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$main_lines, $lines)) {
+	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$lines)) {
 		log_error("${current_dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
@@ -3148,7 +3160,7 @@ sub checkdir_package() {
 	$have_patches = false;
 	foreach my $fname (@files) {
 		if ($fname eq "${current_dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($fname, $whole, $main_lines, $lines);
+			$opt_check_Makefile and checkfile_package_Makefile($fname, $whole, $lines);
 		} else {
 			checkfile($fname);
 		}
