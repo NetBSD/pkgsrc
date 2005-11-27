@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.386 2005/11/27 20:12:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.387 2005/11/27 20:25:49 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1977,7 +1977,10 @@ sub checkline_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "URL") {
-		if ($value =~ qr"\$\{(MASTER_SITE_.*):=(.*)\}$") {
+		if ($value eq "" && defined($comment) && $comment =~ qr"^#") {
+			# Ok
+
+		} elsif ($value =~ qr"\$\{(MASTER_SITE_.*):=(.*)\}$") {
 			my ($name, $subdir) = ($1, $2);
 
 			if (!exists(get_dist_sites_names()->{$name})) {
@@ -2001,8 +2004,18 @@ sub checkline_basic_vartype($$$$$) {
 				}
 			}
 
-		} elsif ($value eq "" && defined($comment) && $comment =~ qr"^#") {
-			# Ok
+		} elsif ($value =~ qr"^([0-9A-Za-z]+)://([^/]+)(.*)$") {
+			my ($scheme, $host, $abs_path) = ($1, $2, $3);
+
+			if ($scheme ne "ftp" && $scheme ne "http") {
+				$line->log_warning("\"${value}\" is not a valid URL. Only http:// and ftp:// URLs are allowed here.");
+
+			} elsif ($abs_path eq "") {
+				$line->log_note("For consistency, please add a trailing slash to \"${value}\".");
+
+			} else {
+				$line->log_warning("\"${value}\" is not a valid URL.");
+			}
 
 		} else {
 			$line->log_warning("\"${value}\" is not a valid URL.");
