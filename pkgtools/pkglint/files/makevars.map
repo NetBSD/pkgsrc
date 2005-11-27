@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.38 2005/11/24 08:05:01 rillig Exp $
+# $NetBSD: makevars.map,v 1.39 2005/11/27 21:18:43 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -94,7 +94,7 @@ FILES_SUBST		List+ of ShellWord
 GCC_REQD		List+
 GNU_CONFIGURE		Yes
 HOMEPAGE		URL
-INCOMPAT_CURSES		List of PlatformTuple
+INCOMPAT_CURSES		List of PlatformTriple
 INSTALL_DIRS		List of WrksrcSubdirectory
 INSTALL_UNSTRIPPED	YesNo
 KRB5BASE		Readonly
@@ -113,7 +113,7 @@ MASTER_SITES		List of URL
 MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 }
 MYSQL_VERSION_DEFAULT	Userdefined
 NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
-NOT_FOR_PLATFORM	List of PlatformTuple
+NOT_FOR_PLATFORM	List of PlatformTriple
 NO_BUILD		Yes
 NO_CHECKSUM		Yes
 NO_CONFIGURE		Yes
@@ -121,7 +121,7 @@ NO_MTREE		Yes
 NO_PKGTOOLS_REQD_CHECK	Yes
 NO_PKG_REGISTER		Yes
 ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
-ONLY_FOR_PLATFORM	List of PlatformTuple
+ONLY_FOR_PLATFORM	List of PlatformTriple
 PAMBASE			Readonly
 PAM_ACCEPTED		List of { linux-pam openpam solaris-pam }
 PAM_DEFAULT		Userdefined
