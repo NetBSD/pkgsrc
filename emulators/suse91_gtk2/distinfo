@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 18:49:20 agc Exp $
+$NetBSD: distinfo,v 1.3.6.1 2005/11/27 21:28:43 snj Exp $
 
 SHA1 (suse91/i586/atk-1.4.1-124.i586.rpm) = 4c0ccbd8a54960c792de95b85f1d006d289aa8c6
 RMD160 (suse91/i586/atk-1.4.1-124.i586.rpm) = fde8091cdaaea8a1160c801ec79cc876ea51ea05
@@ -6,9 +6,9 @@ Size (suse91/i586/atk-1.4.1-124.i586.rpm) = 130678 bytes
 SHA1 (suse91/i586/glib2-2.2.3-117.i586.rpm) = 72f7472c7cd95bc4e183dc81fce409cce03593e9
 RMD160 (suse91/i586/glib2-2.2.3-117.i586.rpm) = 9b5c9d5f7bd48b239eccdd9a6956b7a73457f70d
 Size (suse91/i586/glib2-2.2.3-117.i586.rpm) = 434726 bytes
-SHA1 (suse91/i586/gtk2-2.2.4-125.4.i586.rpm) = d9c49ecd55e2a25fb6be199e1ea3b264ac909569
-RMD160 (suse91/i586/gtk2-2.2.4-125.4.i586.rpm) = 3eeb54ab1ac40a6c30741ac2daac2f82aebbb60e
-Size (suse91/i586/gtk2-2.2.4-125.4.i586.rpm) = 2404700 bytes
+SHA1 (suse91/i586/gtk2-2.2.4-125.10.i586.rpm) = a8e4cb37aff4c57e73e7b0cd0ac58dab6348e6e5
+RMD160 (suse91/i586/gtk2-2.2.4-125.10.i586.rpm) = 976c50faa176bbdc146439f794d5ab4c2ab2e639
+Size (suse91/i586/gtk2-2.2.4-125.10.i586.rpm) = 2404171 bytes
 SHA1 (suse91/i586/pango-1.2.5-170.i586.rpm) = 085b6640bf649cd905b69799485e421a7d7fc995
 RMD160 (suse91/i586/pango-1.2.5-170.i586.rpm) = 7a591674c531812b3563bb7a63670600f5e13a21
 Size (suse91/i586/pango-1.2.5-170.i586.rpm) = 327533 bytes
