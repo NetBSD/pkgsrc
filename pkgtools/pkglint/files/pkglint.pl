@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.385 2005/11/24 21:51:10 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.386 2005/11/27 20:12:44 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -208,7 +208,7 @@ sub log_debug($$$) {
 
 sub explain($$@) {
 	my ($file, $lines, @texts) = @_;
-	
+
 	if ($explain_flag) {
 		foreach my $text (@texts) {
 			print STDOUT ("${indent}  ${text}\n");
@@ -288,7 +288,7 @@ use constant PHYSLINES	=> 3;
 use constant CHANGED	=> 4;
 use constant BEFORE	=> 5;
 use constant AFTER	=> 6;
-	
+
 sub new($$$$) {
 	my ($class, $file, $lines, $text, $physlines) = @_;
 	my ($self) = ([$file, $lines, $text, $physlines, false, [], []]);
@@ -1714,7 +1714,7 @@ sub get_regex_plurals() {
 
 my $get_tool_names_value = undef;
 sub get_tool_names() {
-	
+
 	if (defined($get_tool_names_value)) {
 		return $get_tool_names_value;
 	}
@@ -1763,7 +1763,7 @@ sub checkline_basic_vartype($$$$$) {
 	$value_novar = $value;
 	while ($value_novar =~ s/\$\{[^{}]*\}//g) {
 	}
-	
+
 	if ($type eq "Category") {
 		my $allowed_categories = join("|", qw(
 			archivers audio
@@ -1818,7 +1818,7 @@ sub checkline_basic_vartype($$$$$) {
 			# don't even try to check anything
 		} elsif ($value =~ qr":\.\./\.\./([^/]+)/([^/]+)$") {
 			my ($cat, $pkg) = ($1, $2);
-			
+
 			if (!$is_wip && $cat eq "wip") {
 				$line->log_error("A pkgsrc package must not depend on any outside package.");
 			}
@@ -1930,7 +1930,7 @@ sub checkline_basic_vartype($$$$$) {
 		} else {
 			$line->log_warning("\"${value}\" is not a valid platform tuple.");
 		}
-			
+
 	} elsif ($type eq "Readonly") {
 		$line->log_error("\"${varname}\" is a read-only variable and therefore must not be modified.");
 
@@ -1989,7 +1989,7 @@ sub checkline_basic_vartype($$$$$) {
 
 		} elsif ($value =~ regex_unresolved) {
 			# No further checks
-			
+
 		} elsif ($value =~ qr"^(?:http://|ftp://)[-0-9A-Za-z.]+(?::\d+)?/~?([-%&+,./0-9:=?\@A-Z_a-z]|\\#)*?$") {
 			my $sites = get_dist_sites();
 
@@ -2715,7 +2715,7 @@ sub checkfile_mk($) {
 sub checkfile_package_Makefile($$$$) {
 	my ($fname, $whole, $main_lines, $lines) = @_;
 	my ($distname, $distfiles);
-	
+
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_package_Makefile]");
 
 	checkperms($fname);
