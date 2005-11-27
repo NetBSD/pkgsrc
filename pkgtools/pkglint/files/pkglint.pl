@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.388 2005/11/27 21:10:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.389 2005/11/27 21:18:43 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1915,7 +1915,7 @@ sub checkline_basic_vartype($$$$$) {
 			$line->log_error("${varname} must not be set outside the package Makefile.");
 		}
 
-	} elsif ($type eq "PlatformTuple") {
+	} elsif ($type eq "PlatformTriple") {
 		my $part = qr"(?:\[[^\]]+\]|[^-\[])+";
 		if ($value =~ qr"^(${part})-(${part})-(${part})$") {
 			my ($opsys, $os_version, $arch) = ($1, $2, $3);
@@ -1929,7 +1929,11 @@ sub checkline_basic_vartype($$$$$) {
 			}
 
 		} else {
-			$line->log_warning("\"${value}\" is not a valid platform tuple.");
+			$line->log_warning("\"${value}\" is not a valid platform triple.");
+			$line->explain(
+				"A platform triple has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
+				"Each of these components may be a shell globbing expression.",
+				"Examples: NetBSD-*-i386, *-*-*, Linux-*-*.");
 		}
 
 	} elsif ($type eq "Readonly") {
