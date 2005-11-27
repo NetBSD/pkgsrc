@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.387 2005/11/27 20:25:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.388 2005/11/27 21:10:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -611,6 +611,7 @@ BEGIN {
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER
 		log_fatal log_error log_warning log_info log_debug
+		explain
 	);
 	import PkgLint::FileUtil qw(
 		load_file load_lines
@@ -1328,7 +1329,7 @@ sub checkfile_PLIST($) {
 			if ($cmd eq "unexec" && $arg =~ qr"^(rmdir|\$\{RMDIR\})(.*)") {
 				my ($rmdir, $rest) = ($1, $2);
 				if ($rest !~ qr"(?:true|\$\{TRUE\})") {
-					$line->log_warning("Use \"\@dirrm\" instead of \"\@unexec rmdir\".");
+					$line->log_warning("Please use \"\@dirrm\" instead of \"\@unexec rmdir\".");
 				}
 
 			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
@@ -2490,7 +2491,7 @@ sub checklines_package_Makefile($) {
 		checkline_trailing_whitespace($line);
 
 		if ($text =~ /^\040{8}/) {
-			$line->log_warning("Use tab (not spaces) to make indentation.");
+			$line->log_warning("Please use tab (not spaces) to make indentation.");
 		}
 
 		if ($text =~ qr"\$\{WRKSRC\}/\.\./") {
@@ -2733,7 +2734,7 @@ sub checkfile_package_Makefile($$$$) {
 
 	checkperms($fname);
 
-	# TODO: "Use \${VARIABLE} instead of \$(VARIABLE)."
+	# TODO: "Please use \${VARIABLE} instead of \$(VARIABLE)."
 
 	checklines_deprecated_variables($main_lines);
 
@@ -2757,7 +2758,7 @@ sub checkfile_package_Makefile($$$$) {
 	checklines_direct_tools($main_lines);
 
 	if ($whole =~ /etc\/rc\.d/) {
-		log_warning($fname, NO_LINE_NUMBER, "Use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
+		log_warning($fname, NO_LINE_NUMBER, "Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
 
 	if (exists($makevar->{"MASTER_SITES"})) {
