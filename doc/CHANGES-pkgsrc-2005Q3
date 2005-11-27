@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.84 2005/11/26 15:33:34 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.85 2005/11/27 21:39:10 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -181,3 +181,11 @@ Pullup ticket 929 - requested by Adrian Portelli
 security update for horde
 Pullup ticket 930 - requested by Adrian Portelli
 security fix for horde3
+Pullup ticket 925 - requested by Lubomir Sedlacik
+security fix for gdk-pixbuf
+Pullup ticket 926 - requested by Lubomir Sedlacik
+security fix for gtk2
+Pullup ticket 931 - requested by Lubomir Sedlacik
+security update for suse91_gtk2
+Pullup ticket 932 - requested by Lubomir Sedlacik
+security update for sylpheed
