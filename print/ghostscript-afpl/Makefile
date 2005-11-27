@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/10/13 13:10:05 hira Exp $
+# $NetBSD: Makefile,v 1.5 2005/11/27 17:04:18 adrianp Exp $
 #
 
 DISTNAME=		ghostscript-8.51
 PKGNAME=		ghostscript-afpl-8.51
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 EXTRACT_SUFX=		.tar.bz2
