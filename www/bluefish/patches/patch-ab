@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.8 2005/11/28 14:45:39 rillig Exp $
+
+The function get_metaname_from_tag() is only used in calls to DEBUG_MSG.
+With gcc, having varargs macros, the call is suppressed completely. With
+other compilers, this function is called, but never defined. The result
+is then passed to g_none(), which does not even evaluate its arguments.
+
+--- src/highlight.c.orig	2005-08-27 23:59:31.000000000 +0200
++++ src/highlight.c	2005-11-28 15:21:40.245921700 +0100
+@@ -214,6 +214,9 @@ static gboolean my_own_iter_forward_to_t
+ 	}
+ 	return FALSE;
+ }
++#else
++/* The result of this macro will not be used at all. */
++#  define get_metaname_from_tag() "(get_metaname_from_tag)"
+ #endif /* DEBUG */
+ 
+ #ifdef HL_PROFILING
