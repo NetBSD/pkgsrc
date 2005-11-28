@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.87 2005/11/28 21:11:36 rillig Exp $
+# $NetBSD: build,v 1.88 2005/11/28 21:18:20 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -347,7 +347,7 @@ fi
 #
 echo "build> Installing prerequisite packages specified with BULK_PREREQ..."
 for pkgdir in $BULK_PREREQ; do
-	echo "===> Installing prerequisite package $pkgdir"
+	echo "build> Installing prerequisite package $pkgdir"
 	( cd "${pkgsrc_dir}/${pkgdir}" \
 	  && ${BMAKE} bulk-install
 	) || die "Could not install prerequisite packages."
@@ -410,13 +410,13 @@ do
 		pkgdir=`${AWK} '$2 == "'"$pkgname"'" { print $1; }' "$INDEXFILE"`
 		case "${BULK_PREREQ}" in
 			*"${pkgdir}"* )
-				echo "Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
+				echo "build> Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
 				;;
 			* )
-				echo ${PKG_TOOLS_BIN}/pkg_delete -r "${pkgname}"
+				echo "build> ${PKG_TOOLS_BIN}/pkg_delete -r ${pkgname}"
 				${PKG_TOOLS_BIN}/pkg_delete -r "${pkgname}"
 				if ${PKG_TOOLS_BIN}/pkg_info -qe "${pkgname}"; then
-					echo "$pkgname ($pkgdir) did not deinstall nicely.  Forcing the deinstall"
+					echo "build> $pkgname ($pkgdir) did not deinstall nicely.  Forcing the deinstall"
 					${PKG_TOOLS_BIN}/pkg_delete -f "${pkgname}" || true
 				fi
 				;;
@@ -430,7 +430,7 @@ done
 # network speed, etc.
 
 if [ "x$mirror_only" = "xyes" ]; then
-	echo "Bulk mirror of distfiles completed: `date`"
+	echo "build> Bulk mirror of distfiles completed: `date`"
 	exit 0
 fi
 
