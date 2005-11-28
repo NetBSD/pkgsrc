@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/09/22 16:13:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.37 2005/11/28 23:44:02 adrianp Exp $
 
 DISTNAME=	freeradius-1.0.5
 PKGREVISION=	2
@@ -81,7 +81,6 @@ EGFILES=	acct_users attrs certs/demoCA/index.txt.old \
 .for f in ${EGFILES}
 CONF_FILES+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-.undef f
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
@@ -100,6 +99,10 @@ SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
 SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
 				-lpthread|g"
+.endif
+
+.if ${MACHINE_ARCH} == "amd64"
+CFLAGS+= -fPIC
 .endif
 
 pre-build:
