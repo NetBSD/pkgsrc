@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/10/10 20:10:37 reed Exp $
+# $NetBSD: Makefile,v 1.20 2005/11/28 06:41:21 jlam Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
@@ -22,7 +22,7 @@ WRKSRC=		${WRKDIR}/apsfilter
 HAS_CONFIGURE=	YES
 USE_BZIP2=	YES
 USE_PKGINSTALL=	YES
-USE_TOOLS+=	awk
+USE_TOOLS+=	awk gs:run
 
 CONFIGURE_ARGS+=--prefix=${PREFIX}
 CONFIGURE_ARGS+=--with-shell=${SH}
@@ -43,5 +43,4 @@ post-patch:
 		${MV} ${WRKSRC}/$$i.done ${WRKSRC}/$$i;			\
 	done
 
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
