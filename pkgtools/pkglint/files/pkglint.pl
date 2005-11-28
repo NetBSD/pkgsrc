@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.390 2005/11/27 23:48:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.391 2005/11/28 00:33:55 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1961,17 +1961,19 @@ sub checkline_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "ShellWord") {
-		if ($value =~ qr"^[\w_]+=(([\"']?)\$\{([\w_]+)\}\2)$") {
-			my ($vexpr, undef, $vname) = ($1, $2, $3);
+		if ($value =~ qr"^([\w_]+)=(([\"']?)\$\{([\w_]+)\}\2)$") {
+			my ($key, $vexpr, undef, $vname) = ($1, $2, $3, $4);
 			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
-			$line->log_warning("Please use \${${vname}${mod}} instead of ${vexpr}.");
-			$line->replace($vexpr, "\${${vname}${mod}}");
+			my $fixed_vexpr = "\${${vname}${mod}}";
+			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
+			$line->replace($value, "${key}=${fixed_vexpr}");
 
-		} elsif ($value =~ qr"^[\w_]+=(\$\{([\w_]+):Q\})$") {
-			my ($vexpr, $vname) = ($1, $2);
+		} elsif ($value =~ qr"^([\w_]+)=(\$\{([\w_]+):Q\})$") {
+			my ($key, $vexpr, $vname) = ($1, $2, $3);
+			my $fixed_vexpr = "\${${vname}:M*:Q}";
 			if ($vname =~ regex_gnu_configure_volatile_vars) {
-				$line->log_warning("Please use \${${vname}:M*:Q} instead of ${vexpr}.");
-				$line->replace($vexpr, "\${${vname}:M*:Q}");
+				$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
+				$line->replace($value, "${key}=${fixed_vexpr}");
 			}
 
 		} elsif ($value ne "" && $value !~ qr"^${regex_shellword}$") {
