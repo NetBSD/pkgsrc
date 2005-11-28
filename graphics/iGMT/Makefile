@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/16 06:57:58 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/11/28 06:41:20 jlam Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -19,6 +19,7 @@ DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
 WRKSRC=			${WRKDIR}/igmt_1.2
 NO_BUILD=		yes
 
+USE_TOOLS=		gs:run
 GMT_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		GMT_PREFIX=GMT
 EVAL_PREFIX+=		TK_PREFIX=tk
@@ -53,5 +54,4 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} example*.ps.gz			\
 		${WRKSRC}/example*.dat ${PREFIX}/share/examples/igmt/
 
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

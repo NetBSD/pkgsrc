@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/28 06:41:21 jlam Exp $
 #
 
 DISTNAME=	html2ps-1.0b4
@@ -16,7 +16,7 @@ DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	weblint-[0-9]*:../../www/weblint
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	gs:run perl:run
 TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 NO_CONFIGURE=	yes
@@ -27,6 +27,5 @@ do-install:
 	@cd ${WRKSRC} && ./install ${PREFIX}
 	@${INSTALL_DATA} ${WRKSRC}/sample ${PREFIX}/lib/html2ps/sample.rc
 
-.include "../../mk/ghostscript.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

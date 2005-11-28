@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/28 06:41:22 jlam Exp $
 #
 
 DISTNAME=	if-psprint-1.7
@@ -12,7 +12,7 @@ COMMENT=	Print text or postscript to arbitrary printer, can use smb
 
 DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	gs:run perl:run
 
 INSTALLATION_DIRS=	libexec man/man1
 
@@ -26,5 +26,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/if-psprint ${PREFIX}/libexec/if-psprint
 	${INSTALL_MAN} ${WRKSRC}/if-psprint.1 ${PREFIX}/man/man1/if-psprint.1
 
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

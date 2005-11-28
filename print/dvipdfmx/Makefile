@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/20 19:14:50 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/28 06:41:21 jlam Exp $
 
 DISTNAME=	dvipdfmx-20050627
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
@@ -14,12 +14,12 @@ DEPENDS+=	adobe-cmaps>=20051109:../../fonts/adobe-cmaps
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 
+USE_TOOLS+=		gs:run
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/ghostscript.mk"
 .include "../../print/dvipdfmx/map.mk"
 .include "../../print/teTeX/module.mk"
 

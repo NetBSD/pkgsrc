@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2005/06/01 18:03:09 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2005/11/28 06:41:21 jlam Exp $
 
 DISTNAME=		gnome-print-0.37
 CATEGORIES=		print gnome
@@ -11,6 +11,7 @@ COMMENT=		Prototype implementation of the Gnome Printing Architecture
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
+USE_TOOLS+=		gs:run
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-admin		# currently unstable
@@ -22,5 +23,4 @@ MAKE_ENV+=		HOME=${WRKSRC}
 .include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
 .include "../../textproc/libunicode/buildlink3.mk"
 .include "../../textproc/libxml/buildlink3.mk"
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

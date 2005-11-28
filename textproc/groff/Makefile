@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/07/16 01:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/11/28 06:41:22 jlam Exp $
 #
 
 DISTNAME=	groff-1.19.1
@@ -16,7 +16,7 @@ DEPENDS+=	psutils>=1.17:../../print/psutils
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERLPATH="${PERL5}"
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		gs:run perl:run
 
 INFO_FILES=	groff
 
@@ -40,5 +40,4 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mdoc.local \
 		${PREFIX}/share/groff/site-tmac
 
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

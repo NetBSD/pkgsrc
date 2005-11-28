@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/08/19 15:49:52 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2005/11/28 06:41:21 jlam Exp $
 
 DISTNAME=	pstoedit-3.41
 CATEGORIES=	converters graphics print
@@ -11,6 +11,9 @@ COMMENT=	Convert PostScript / PDF into various vector graphic formats
 RESTRICTED?=	"The author writes: If you include this program on a CDROM, please send me a copy of the CD, or if it goes with a book, of the book."
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+# XXX Avoid hard dependency on Ghostscript
+#USE_TOOLS+=	gs:run
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c++
@@ -37,6 +40,4 @@ post-install:
 
 .include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
-# XXX avoid hard dependency
-#.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

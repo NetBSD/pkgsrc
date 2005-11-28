@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/11/28 06:41:20 jlam Exp $
 #
 
 DISTNAME=	doc2html
@@ -16,7 +16,7 @@ DEPENDS+=	rtf2html-[0-9]*:../../converters/rtf2html
 DEPENDS+=	xpdf-[0-9]*:../../print/xpdf
 DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	gs:run perl:run
 
 INSTALLATION_DIRS=	bin
 
@@ -33,5 +33,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/doc2html ${PREFIX}/bin/doc2html
 	${INSTALL_SCRIPT} ${WRKSRC}/pdf2html ${PREFIX}/bin/pdf2html
 
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
