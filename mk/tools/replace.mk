@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.136 2005/11/28 05:39:20 jlam Exp $
+# $NetBSD: replace.mk,v 1.137 2005/11/28 06:06:16 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -839,6 +839,79 @@ TOOLS_DEPENDS.${_t_}?=	diffutils>=2.8.1:../../devel/diffutils
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=diffutils
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+.    endif
+.  endif
+.endfor
+
+######################################################################
+
+# These tools are all supplied by a Ghostscript package if there is no
+# native tool available.
+#
+_TOOLS.ghostscript=	gs pdf2ps ps2pdf
+
+# This is the minimum version of Ghostscript required by the current
+# package.
+#
+GHOSTSCRIPT_REQD?=	6.01
+
+# Set TOOLS_DEPENDS.ghostscript to an appropriate dependency based on
+# various package options.
+#
+.if !defined(TOOLS_DEPENDS.ghostscript)
+_TOOLS_DEP.ghostscript:=	ghostscript
+_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-afpl
+_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-esp
+_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-gnu
+_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-gnu-x11
+.  if !defined(USE_X11)
+_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-esp-nox11
+_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-gnu-nox11
+_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-nox11
+.  endif
+#
+# Determine the default Ghostscript package to build based on the
+# PKG_OPTIONS for the current package.
+#
+# XXX There are some legacy variable issues here.  "NO_X11" is undocumented,
+# XXX and "USE_CUPS" should eventually go away.  We preserve them here for
+# XXX backwards-compatibility.
+#
+.  if defined(NO_X11)
+.    if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups)) || \
+        (defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS]))
+_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
+.    else
+_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-gnu
+.    endif
+.  else
+.    if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups)) || \
+        (defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS]))
+_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
+.    else
+_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-gnu
+.    endif
+.  endif
+TOOLS_DEPENDS.ghostscript=	{${_TOOLS_DEP.ghostscript}}>=${GHOSTSCRIPT_REQD}:${_TOOLS_PKGSRCDIR.ghostscript}
+MAKEVARS+=			${TOOLS_DEPENDS.ghostscript}
+.endif
+
+.for _t_ in ${_TOOLS.ghostscript}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mprint/ghostscript) || \
+        !empty(PKGPATH:Mprint/ghostscript-afpl) || \
+        !empty(PKGPATH:Mprint/ghostscript-esp) || \
+        !empty(PKGPATH:Mprint/ghostscript-esp-nox11) || \
+        !empty(PKGPATH:Mprint/ghostscript-gnu) || \
+        !empty(PKGPATH:Mprint/ghostscript-gnu-nox11) || \
+        !empty(PKGPATH:Mprint/ghostscript-gnu-x11) || \
+        !empty(PKGPATH:Mprint/ghostscript-nox11)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=	${TOOLS_DEPENDS.ghostscript}
+TOOLS_CREATE+=		${_t_}
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=${TOOLS_DEPENDS.ghostscript:C/:.*//}
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .    endif
 .  endif
 .endfor
