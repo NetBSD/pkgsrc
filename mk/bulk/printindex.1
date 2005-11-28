@@ -1,4 +1,4 @@
-.\"	$NetBSD: printindex.1,v 1.4 2005/11/20 15:46:48 rillig Exp $
+.\"	$NetBSD: printindex.1,v 1.5 2005/11/28 01:14:35 rillig Exp $
 .\"
 .\" Copyright (c) 2005 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -74,19 +74,12 @@ must be called from a pkgsrc root directory.
 Non-zero if writing to a log file fails, zero otherwise.
 .Sh ENVIRONMENT
 .Bl -tag -width XXXXXX
-.It Ev BMAKE
+.It Ev BMAKE Pq mandatory
 The
 .Xr make 1
 program used to build packages.
 .It Ev PKGLIST Pq optional
 The list of packages from which to build an index.
-.El
-.Sh FILES
-.Bl -tag -width XXXXXX
-.It Ar bulkfilesdir Ns / Ns .pkglist
-A cache for the list of packages when
-.Ev PKGLIST
-is unset.
 .El
 .\" .Sh EXAMPLES
 .Sh DIAGNOSTICS
