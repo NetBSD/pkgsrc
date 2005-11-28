@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.9 2005/08/20 02:11:15 grant Exp $
+# $NetBSD: transform-sunpro-cc,v 1.10 2005/11/28 13:43:24 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -156,7 +156,7 @@ case $arg in
 ######################################################################
 # Ignore some flags that are unnecessary for SunPro.
 ######################################################################
--ansi|-pedantic|-traditional)
+-ansi|-pedantic|-pipe|-traditional)
 	arg=
 	msg_log $wrapperlog "   (transform-sunpro-cc) to: $arg"
 	addtocache=yes
