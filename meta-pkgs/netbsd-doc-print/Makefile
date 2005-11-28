@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/19 10:16:53 grant Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/28 06:41:21 jlam Exp $
 #
 
 DISTNAME=	netbsd-doc-print-1.2
@@ -18,9 +18,9 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+USE_TOOLS+=	gs:run
 
 do-install:	# empty
 
 .include "../../textproc/opensp/buildlink3.mk"
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

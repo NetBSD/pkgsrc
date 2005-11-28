@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/13 05:30:11 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/28 06:41:22 jlam Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGNAME=	ja-${DISTNAME}
@@ -19,6 +19,7 @@ CONFLICTS+=	dvipdfmx-[0-9]*
 TEX_ACCEPTED=	teTeX1
 
 WRKSRC=		${WRKDIR}/dvipdfm
+USE_TOOLS+=	gs:run
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 
@@ -33,5 +34,4 @@ post-patch:
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/teTeX/module.mk"
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
