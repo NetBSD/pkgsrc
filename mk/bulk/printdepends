@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.20 2005/11/16 22:18:03 rillig Exp $
+# $NetBSD: printdepends,v 1.21 2005/11/28 01:22:53 rillig Exp $
 #
 
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -130,10 +130,6 @@ case ${PKGLIST} in
 *)	list="${PKGLIST}"
 	;;
 esac
-
-# cache the package list for printindex
-${mkbulkdir} "${bulkfilesdir}"
-echo list='"'${list}'"' > "${bulkfilesdir}/.pkglist"
 
 for pkgdir in $list; do
 	if cd "${pkgsrcdir}/${pkgdir}"; then
