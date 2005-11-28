@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/11/26 10:02:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.34 2005/11/28 09:48:10 rillig Exp $
 
 DISTNAME=	thttpd-2.25b
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${NETBSD_LOGO}
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.acme.com/software/thttpd/
