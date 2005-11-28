@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.86 2005/11/28 20:17:27 rillig Exp $
+# $NetBSD: build,v 1.87 2005/11/28 21:11:36 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -208,7 +208,7 @@ unset DISPLAY		# allow sane failure for gimp, xlispstat
 #
 # It starts ...
 #
-echo "Bulk build started: `date`"
+echo "build> Bulk build started: `date`"
 echo ""
 show_config_vars
 
@@ -218,7 +218,7 @@ show_config_vars
 ( cd "${pkglint_dir}" \
   && ${BMAKE} fetch >/dev/null 2>&1
 ) || {
-	echo "Updating pkgtools"
+	echo "build> Updating pkgtools"
 	( cd "${pkgsrc_dir}/pkgtools/pkg_install" \
 	  && ${BMAKE} clean \
 	  && ${BMAKE} install \
@@ -230,7 +230,7 @@ show_config_vars
 # Run the pre-build script if necessary.
 #
 case $restart in
-yes)	echo "Resuming -- skipping pre-build script";;
+yes)	echo "build> Resuming -- skipping pre-build script";;
 *)	# make veryveryclean :)
 	( cd "${pkgsrc_dir}" \
 	  && /bin/sh mk/bulk/pre-build
@@ -242,7 +242,7 @@ esac
 #
 fail=no
 if cd "${pkglint_dir}"; then
-	echo "Extracting relevant pkgsrc variables..."
+	echo "build> Extracting relevant pkgsrc variables..."
 
 	BULKFILESDIR=`${BMAKE} show-var VARNAME=BULKFILESDIR` || fail=yes
 	BULK_DBFILE=`${BMAKE} show-var VARNAME=BULK_DBFILE` || fail=yes
@@ -345,7 +345,7 @@ fi
 # Note: we do this _before_ the depends tree because some packages like
 # xpkgwedge only become DEPENDS if they are installed.
 #
-echo "Installing prerequisite packages specified with BULK_PREREQ..."
+echo "build> Installing prerequisite packages specified with BULK_PREREQ..."
 for pkgdir in $BULK_PREREQ; do
 	echo "===> Installing prerequisite package $pkgdir"
 	( cd "${pkgsrc_dir}/${pkgdir}" \
@@ -372,7 +372,7 @@ fi
 #
 cd "${pkgsrc_dir}" || die "The pkgsrc directory does not exist."
 
-echo "Starting actual build using the order specified in $ORDERFILE..."
+echo "build> Starting actual build using the order specified in $ORDERFILE..."
 
 # Loop over every package in the correct order.  Before building
 # each one, check to see if we've already processed this package
@@ -403,7 +403,7 @@ do
 	fi
 done
 
-echo "Build finished.  Removing all installed packages left over from build..."
+echo "build> Build finished.  Removing all installed packages left over from build..."
 for pkgname in `${PKG_TOOLS_BIN}/pkg_info -e \*`
 do
 	if ${PKG_TOOLS_BIN}/pkg_info -qe "${pkgname}"; then
@@ -434,13 +434,13 @@ if [ "x$mirror_only" = "xyes" ]; then
 	exit 0
 fi
 
-echo "Post processing bulk build results..."
+echo "build> Post processing bulk build results..."
 
 # Re-install BULK_PREREQ as we may need functionality (e.g. SMTP) provided by
 # them for post-build to run.
-echo "Re-installing prerequisite packages specified with BULK_PREREQ..."
+echo "build> Re-installing prerequisite packages specified with BULK_PREREQ..."
 for pkgdir in $BULK_PREREQ lang/perl5; do
-	echo "===> Installing prerequisite package $pkgdir"
+	echo "build> Installing prerequisite package $pkgdir"
 	( cd "${pkgsrc_dir}/${pkgdir}" \
 	  && ${BMAKE} bulk-install
 	) || die "Failed to install prerequisite packages."
@@ -449,7 +449,7 @@ done
 #
 # Generate the post-build report.
 #
-echo "Generating the bulk build report..."
+echo "build> Generating the bulk build report..."
 BUILDDATE=`date +%Y-%m-%d`
 mkdir -p "${FTP}"
 ( cd "${pkgsrc_dir}" \
@@ -467,4 +467,4 @@ esac
 
 # Done!
 echo ""
-echo "Bulk build ended: `date`"
+echo "build> Bulk build ended: `date`"
