@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.27 2005/11/19 11:19:10 rillig Exp $
+# $NetBSD: printindex,v 1.28 2005/11/28 01:14:35 rillig Exp $
 #
 
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -107,27 +107,29 @@ yes)	mkbulkdir="${MKDIR}";;
 *)	mkbulkdir=":";;
 esac
 
-if [ -r "${bulkfilesdir}/.pkglist" ]; then
-	. "${bulkfilesdir}/.pkglist"
-else
-	# fall back to all packages.
-	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
-fi
+case ${PKGLIST-""} in
+"")	# List of all packages, from pkgsrc/*/Makefile
+	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${GREP} -v regress/ | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
+	;;
+*)	list="${PKGLIST}"
+	;;
+esac
 
 #
 # Sanity checks, part 2
 #
 
-alnum="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+allowed="
+ +./0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_"
 case $BULK_PREREQ in
-*[!-\ +./${alnum}_]*)
-	inval=`echo "${BULK_PREREQ}" | tr -d " +\\\\-./${alnum}_"`
+*[!-"${allowed}"]*)
+	inval=`echo "${BULK_PREREQ}" | tr -d " +\\\\-${allowed}"`
 	echo "$0: error: BULK_PREREQ contains invalid characters (${inval})." 1>&2
 	exit 1
 esac
 case $list in
-*[!-\ +./${alnum}_]*)
-	inval=`echo "${list}" | tr -d " +\\\\-./${alnum}_"`
+*[!-"${allowed}"]*)
+	inval=`echo "${list}" | tr -d " +\\\\-${allowed}"`
 	echo "$0: error: The package list contains invalid characters (${inval})." 1>&2
 	exit 1
 esac
