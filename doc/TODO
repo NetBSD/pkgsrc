@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4219 2005/11/26 10:32:56 wiz Exp $
+$NetBSD: TODO,v 1.4220 2005/11/28 21:06:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -574,7 +574,7 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gpsim-0.21.4
 	o gpsim-devel-20041104
-	o grace-5.1.18
+	o grace-5.1.19
 	o gramofile-1.6P
 	o grap-1.36
 	o grep-2.5.1a
@@ -934,6 +934,7 @@ Suggested package updates
 	o p5-perl-ldap-0.3202
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.41
+	o p7zip-4.30
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
@@ -958,7 +959,7 @@ Suggested package updates
 	o photopc-3.05
 	o php-5.1.0
 	o phpldapadmin-0.9.7
-	o phppgadmin-4.0
+	o phppgadmin-4.0.1
 	o phylip-3.65
 	o pico-4.64
 	o piewm-1.03
@@ -1220,10 +1221,10 @@ Suggested package updates
 	o vice-1.17
 	o vifm-0.3a
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
-	o vlc-0.8.2
+	o vlc-0.8.4
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
-	o vnc2swf-0.8.0
+	o vnc2swf-0.8.1
 	o vobcopy-0.5.14
 	o vp-1.6
 	o vpnc-0.3.3
@@ -1287,7 +1288,7 @@ Suggested package updates
 	o xmms-wma-1.0.5
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmule-1.12.0
+	o xmule-1.12.1
 	o xnap-2.5r3
 	o xorp-1.1
 	o xpad-2.9
