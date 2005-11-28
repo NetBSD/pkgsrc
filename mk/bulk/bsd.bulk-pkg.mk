@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.107 2005/11/24 12:14:32 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.108 2005/11/28 20:08:37 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -513,6 +513,10 @@ bulk-package:
 	else \
 		${RM} -f ${_BUILDLOG:Q} ;\
 	fi
+.if ${BULKFILESDIR} != ${PKGSRCDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RMDIR} ${_BULK_PKGLOGDIR:Q} 2>/dev/null 1>&2 || ${TRUE}
+.endif
 
 # Install pkg - if possible from binary pkg (i.e. available & up-to-date)
 # else revert to the old recompiling.
