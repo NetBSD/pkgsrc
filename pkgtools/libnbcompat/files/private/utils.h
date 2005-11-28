@@ -1,4 +1,4 @@
-/*	$NetBSD: utils.h,v 1.1 2004/08/23 03:32:13 jlam Exp $	*/
+/*	$NetBSD: utils.h,v 1.2 2005/11/28 20:47:29 schwarz Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993, 1994
@@ -72,7 +72,11 @@
  */
 
 /* utility definitions */
+#ifdef _POSIX2_RE_DUP_MAX
 #define	DUPMAX		_POSIX2_RE_DUP_MAX	/* xxx is this right? */
+#else
+#define DUPMAX		255			/* xxx is that reasonable? */
+#endif
 #define	INFINITY	(DUPMAX + 1)
 #define	NC		(CHAR_MAX - CHAR_MIN + 1)
 typedef unsigned char uch;
