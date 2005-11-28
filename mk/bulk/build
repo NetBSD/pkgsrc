@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.85 2005/11/24 22:01:54 rillig Exp $
+# $NetBSD: build,v 1.86 2005/11/28 20:17:27 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -449,6 +449,7 @@ done
 #
 # Generate the post-build report.
 #
+echo "Generating the bulk build report..."
 BUILDDATE=`date +%Y-%m-%d`
 mkdir -p "${FTP}"
 ( cd "${pkgsrc_dir}" \
