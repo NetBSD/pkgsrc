@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/17 12:44:42 salo Exp $
+# $NetBSD: Makefile,v 1.17 2005/11/28 06:41:22 jlam Exp $
 #
 
 DISTNAME=	stylewriter
@@ -13,6 +13,7 @@ COMMENT=	Apple StyleWriter driver for un*x
 
 DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
+USE_TOOLS+=	gs:run
 NO_CONFIGURE=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST
@@ -58,5 +59,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/styl.ppd ${PREFIX}/share/examples/stylewriter
 	${INSTALL_DATA_DIR} /var/spool/lpd/stylps
 
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

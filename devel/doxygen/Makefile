@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.40 2005/11/28 06:41:20 jlam Exp $
 
 DISTNAME=	doxygen-1.4.5.src
 PKGNAME=	doxygen-1.4.5
@@ -12,7 +12,7 @@ COMMENT=	Documentation system for C++, Java, IDL and C
 
 TEX_ACCEPTED= teTeX1 teTeX2 teTeX3
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_TOOLS+=		gmake perl flex
+USE_TOOLS+=		gmake gs:run perl flex
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--make ${GMAKE}
@@ -36,6 +36,5 @@ post-install:
 
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../mk/ghostscript.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

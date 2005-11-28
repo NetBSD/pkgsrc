@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/11/13 22:50:26 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2005/11/28 06:41:20 jlam Exp $
 
 VERS=		4.2.2
 DISTNAME=	hylafax-${VERS}
@@ -18,6 +18,7 @@ CONFLICTS=	hylafax-devel-[0-9]* mgetty-[0-9]*
 
 USE_PKGINSTALL=		yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		gs:run
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-MAKE=${MAKE_PROGRAM}
 CONFIGURE_ARGS+=	--with-INSTALL="" --nointeractive
@@ -54,5 +55,4 @@ post-install:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
