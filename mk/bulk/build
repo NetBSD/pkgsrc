@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.88 2005/11/28 21:18:20 rillig Exp $
+# $NetBSD: build,v 1.89 2005/11/28 21:50:01 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -264,7 +264,8 @@ if cd "${pkglint_dir}"; then
 	MACHINE_ARCH=`${BMAKE} show-var VARNAME=MACHINE_ARCH` || fail=yes
 	OPSYS=`${BMAKE} show-var VARNAME=OPSYS` || fail=yes
 	OS_VERSION=`${BMAKE} show-var VARNAME=OS_VERSION` || fail=yes
-	PKG_TOOLS_BIN=`${BMAKE} show-var VARNAME=PKG_TOOLS_BIN` || fail=yes
+	PKG_DELETE=`${BMAKE} show-var VARNAME=PKG_DELETE` || fail=yes
+	PKG_INFO=`${BMAKE} show-var VARNAME=PKG_INFO` || fail=yes
 	BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ` || fail=yes
 else
 	die	"The pkgtools/pkglint directory does not exist." \
@@ -295,7 +296,8 @@ echo "PERL5           = $PERL5"
 echo "MACHINE_ARCH    = $MACHINE_ARCH"
 echo "OPSYS           = $OPSYS"
 echo "OS_VERSION      = $OS_VERSION"
-echo "PKG_TOOLS_BIN   = $PKG_TOOLS_BIN"
+echo "PKG_DELETE      = $PKG_DELETE"
+echo "PKG_INFO        = $PKG_INFO"
 echo "------------------------------------------"
 
 # make sure we have values for these very important
@@ -319,7 +321,8 @@ if [ $fail = "yes" -o \
 	-z "$PERL5" -o \
 	-z "$MACHINE_ARCH" -o \
 	-z "$OPSYS" -o \
-	-z "$PKG_TOOLS_BIN" -o \
+	-z "$PKG_DELETE" -o \
+	-z "$PKG_INFO" -o \
 	-z "$OS_VERSION" \
 	]; then
 
@@ -404,20 +407,20 @@ do
 done
 
 echo "build> Build finished.  Removing all installed packages left over from build..."
-for pkgname in `${PKG_TOOLS_BIN}/pkg_info -e \*`
+for pkgname in `${PKG_INFO} -e \*`
 do
-	if ${PKG_TOOLS_BIN}/pkg_info -qe "${pkgname}"; then
+	if ${PKG_INFO} -qe "${pkgname}"; then
 		pkgdir=`${AWK} '$2 == "'"$pkgname"'" { print $1; }' "$INDEXFILE"`
 		case "${BULK_PREREQ}" in
 			*"${pkgdir}"* )
 				echo "build> Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
 				;;
 			* )
-				echo "build> ${PKG_TOOLS_BIN}/pkg_delete -r ${pkgname}"
-				${PKG_TOOLS_BIN}/pkg_delete -r "${pkgname}"
-				if ${PKG_TOOLS_BIN}/pkg_info -qe "${pkgname}"; then
+				echo "build> ${PKG_DELETE} -r ${pkgname}"
+				${PKG_DELETE} -r "${pkgname}"
+				if ${PKG_INFO} -qe "${pkgname}"; then
 					echo "build> $pkgname ($pkgdir) did not deinstall nicely.  Forcing the deinstall"
-					${PKG_TOOLS_BIN}/pkg_delete -f "${pkgname}" || true
+					${PKG_DELETE} -f "${pkgname}" || true
 				fi
 				;;
 		esac
