@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/28 06:41:21 jlam Exp $
 
 DISTNAME=		advi-1.6.0
 CATEGORIES=		print
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
 TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake gs:run
 
 post-extract:
 	@${CP} ${WRKSRC}/tex/*.eps ${WRKSRC}/doc
@@ -50,5 +50,4 @@ post-install:
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../x11/ocaml-graphics/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"

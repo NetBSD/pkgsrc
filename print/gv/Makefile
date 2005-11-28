@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/06/01 19:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2005/11/28 06:41:21 jlam Exp $
 
 DISTNAME=	gv-3.6.1
 CATEGORIES=	print
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.gnu.org/software/gv/
 COMMENT=	PostScript and PDF previewer
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake gs:run
 
 USE_MAKEINFO=		yes
 TEXINFO_REQD=		4.2
@@ -23,5 +23,4 @@ post-extract:
 .endif
 
 .include "../../x11/Xaw3d/buildlink3.mk"
-.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
