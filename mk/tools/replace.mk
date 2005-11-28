@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.135 2005/11/08 23:06:38 jlam Exp $
+# $NetBSD: replace.mk,v 1.136 2005/11/28 05:39:20 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -780,7 +780,7 @@ _TOOLS.coreutils=	basename cat chgrp chmod chown cp cut date	\
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Msysutils/coreutils)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
-.    elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=coreutils
@@ -814,7 +814,7 @@ _TOOLS.grep=	egrep fgrep grep
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mtextproc/grep)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
-.    elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	grep>=2.5.1:../../textproc/grep
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=grep
@@ -834,7 +834,7 @@ _TOOLS.diffutils=	cmp diff
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mdevel/diffutils)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
-.    elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	diffutils>=2.8.1:../../devel/diffutils
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=diffutils
