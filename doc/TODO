@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4221 2005/11/29 08:52:34 adam Exp $
+$NetBSD: TODO,v 1.4222 2005/11/29 17:44:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -528,6 +528,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
+	o galeon-2.0.0
 	o gamin-0.1.6
 	o gap-4r4p3
 	o garmin-utils-2.2
@@ -587,6 +588,7 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-20030623
+	o gtk2+-2.8.8
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -726,7 +728,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
-	o maradns-1.0.32
+	o maradns-1.0.35
 	o matchbox-0.9.5
 	o md-whois-4.7.8
 	o mdd-20050318
@@ -759,7 +761,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpfr-2.2.0
 	o mpich-1.2.7
-	o mplayer-plugin-firefox-2.85
+	o mplayer-plugin-firefox-3.16
 	o mrproject-0.9.1
 	o mserv-devel-0.41
 	o mtail-1.1.1
@@ -1150,6 +1152,8 @@ Suggested package updates
 	o stunnel-4.14
 	o subtitleripper-0.3.4
 	o sudo-1.6.8p12
+	o sun-jdk14-2.10
+	o sun-jre14-2.10
 	o suse_base-10.0
 	o sweep-0.8.4
 	o swfdec-0.3.5
