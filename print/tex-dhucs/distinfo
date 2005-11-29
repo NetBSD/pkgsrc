@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/11/29 22:37:39 minskim Exp $
+
+SHA1 (dhucs-2.60cvs-20051117.tar.gz) = c11c36a9490ab1889290216ce5629fe3caf35918
+RMD160 (dhucs-2.60cvs-20051117.tar.gz) = d876ab060250ffd007e83ca5611ad65f283fa4b2
+Size (dhucs-2.60cvs-20051117.tar.gz) = 325180 bytes
+SHA1 (tex-unttf-dhucs-20051115.tar.bz2) = 648de1a693487788e1e452d320ee619ea0a465fd
+RMD160 (tex-unttf-dhucs-20051115.tar.bz2) = 16ad0bc320baf20fa98cbcbbdef90276a804aba2
+Size (tex-unttf-dhucs-20051115.tar.bz2) = 1097 bytes
