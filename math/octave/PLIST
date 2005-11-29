@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/30 18:12:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/11/29 13:11:05 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -638,6 +638,7 @@ share/doc/html/octave/Octave-FAQ_1.html
 share/doc/html/octave/Octave-FAQ_10.html
 share/doc/html/octave/Octave-FAQ_11.html
 share/doc/html/octave/Octave-FAQ_12.html
+share/doc/html/octave/Octave-FAQ_13.html
 share/doc/html/octave/Octave-FAQ_2.html
 share/doc/html/octave/Octave-FAQ_3.html
 share/doc/html/octave/Octave-FAQ_4.html
@@ -1088,9 +1089,11 @@ share/octave/${PKGVERSION}/m/plot/meshgrid.m
 share/octave/${PKGVERSION}/m/plot/mplot.m
 share/octave/${PKGVERSION}/m/plot/multiplot.m
 share/octave/${PKGVERSION}/m/plot/oneplot.m
+share/octave/${PKGVERSION}/m/plot/orient.m
 share/octave/${PKGVERSION}/m/plot/plot.m
 share/octave/${PKGVERSION}/m/plot/plot_border.m
 share/octave/${PKGVERSION}/m/plot/polar.m
+share/octave/${PKGVERSION}/m/plot/print.m
 share/octave/${PKGVERSION}/m/plot/semilogx.m
 share/octave/${PKGVERSION}/m/plot/semilogxerr.m
 share/octave/${PKGVERSION}/m/plot/semilogy.m
