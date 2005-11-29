@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2005/06/01 19:48:32 wiz Exp $
+$NetBSD: distinfo,v 1.18 2005/11/29 06:18:52 joerg Exp $
 
 SHA1 (kterm-6.2.0.tar.gz) = 23b612254e9f7c9f5e233a4bcacc651887a3f7ee
 RMD160 (kterm-6.2.0.tar.gz) = d23c755f119b5602a3c6f6ac97e27e10c43a8bfe
@@ -14,4 +14,6 @@ RMD160 (KTerm-BGP-1.0.patch.gz) = 0ebf751938da6b2a31739f3c6542941ea2fe7227
 Size (KTerm-BGP-1.0.patch.gz) = 6582 bytes
 SHA1 (patch-aa) = 6afc18d4c35f86077e00d3444d8ba6953463f073
 SHA1 (patch-ab) = 011b1fc5033f61784e57030c78f6cca5a82722d1
+SHA1 (patch-ac) = 926a43c2bb1b78cd87dae39b10800a1e7cdfe0ce
 SHA1 (patch-ad) = d85043a7b7a31f50ff92fe574fb4649f57d7bb66
+SHA1 (patch-ae) = 52a2e974fee9330465f3036267bb99fd8df40f67
