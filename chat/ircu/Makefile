@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/08/23 11:48:47 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2005/11/29 19:05:12 adrianp Exp $
 #
 
 DISTNAME=	ircu2.10.11.07
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=undernet-ircu/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://coder-com.undernet.org/
 COMMENT=	Internet Relay Chat server customized for Undernet
+
+CONFLICTS+=	ircd-hybrid-[0-9]*
 
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
@@ -45,7 +47,7 @@ MESSAGE_SUBST+=		IRCD_GROUP=${IRCD_GROUP}
 PKG_GROUPS=		${IRCD_GROUP}
 PKG_USERS=		${IRCD_USER}:${IRCD_GROUP}::IRC\ server\ user:/nonexistant:${SH}
 
-SUBST_CLASSES=		paths
+SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	tools/README doc/ircd.conf.sample
 SUBST_SED.paths=	-e "s|/usr/local/lib/irc|${PKG_SYSCONFDIR}|g" \
