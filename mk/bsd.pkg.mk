@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1768 2005/11/23 18:27:13 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1769 2005/11/29 22:18:38 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -4294,7 +4294,7 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	ELF)	bins=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^(bin|sbin|libexec)\// { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		libs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^lib\/lib.*\.so\.[0-9]+$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
-			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} 'NF == 3 { print $$3 }' | ${SORT} -u`; \
+			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} '$$2 == "=>" && $$3 ~ "/" { print $$3 }' | ${SORT} -u`; \
 		fi;							\
 		linklibs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^[^@].*\.so\.[0-9\.]+$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		for i in $${linklibs}; do				\
