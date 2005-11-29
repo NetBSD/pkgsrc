@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.16 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.17 2005/11/29 09:58:27 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -51,15 +51,32 @@
     <para>If you want to get a full set of precompiled binary
       packages, this section describes how to get them. Beware that
       the bulk build will remove all currently installed packages from
-      your system! Having an FTP server configured either on the
+      your system!</para>
+
+      <para>Having an FTP server configured either on the
       machine doing the bulk builds or on a nearby NFS server can help
-      to make the packages available to everyone. See &man.ftpd.8; for
+      to make the packages available to other machines that can then
+      save time by installing only the binary packages. See &man.ftpd.8; for
       more information. If you use a remote NFS server's storage, be
       sure to not actually compile on NFS storage, as this slows
       things down a lot.</para>
 
     <sect2 id="binary.configuration">
       <title>Configuration</title>
+
+      <sect3 id="binary.bulk.build.conf">
+	<title><filename>build.conf</filename></title>
+
+        <para>The <filename>build.conf</filename> file is the main
+        configuration file for bulk builds. You can configure how your
+        copy of pkgsrc is kept up to date, how the distfiles are
+        downloaded, how the packages are built and how the report is
+        generated. You can find an annotated example file in
+        <filename>pkgsrc/mk/bulk/build.conf-example</filename>. To use
+        it, copy <filename>build.conf-example</filename> to
+        <filename>build.conf</filename> and edit it, following the
+        comments in that file.</para>
+      </sect3>
 
       <sect3 id="binary.mk.conf">
 	<title>/etc/mk.conf</title>
@@ -82,19 +99,6 @@
     PKG_DEVELOPER?= yes
     _ACCEPTABLE=    yes
 </programlisting>
-      </sect3>
-
-      <sect3 id="build.conf">
-	<title><filename>build.conf</filename></title>
-
-	<para>In <filename>pkgsrc/mk/bulk</filename>, copy
-	  <filename>build.conf-example</filename> to
-	  <filename>build.conf</filename> and
-	  edit it, following the comments in that file. This is the config
-	  file that determines where log files are generated after the build,
-	  where to mail the build report to, where your pkgsrc tree is
-	  located and the user to which user to &man.su.8; to do a
-	  <command>cvs update</command>.</para>
       </sect3>
 
       <sect3 id="pre-build.local">
