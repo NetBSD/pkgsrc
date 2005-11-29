@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12059 2005/11/29 19:35:33 adrianp Exp $
+$NetBSD: CHANGES,v 1.12060 2005/11/29 22:39:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5430,3 +5430,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/gtk2 to 2.8.8 [wiz 2005-11-29]
 	Added devel/tre version 0.7.2 [adrianp 2005-11-29]
 	Added chat/unrealircd version 3.2.3 [adrianp 2005-11-29]
+	Added fonts/tex-unttf version 1.0.1.20051115 [minskim 2005-11-29]
+	Added print/tex-dhucs version 2.60.20051117 [minskim 2005-11-29]
