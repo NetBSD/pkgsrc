@@ -49,6 +49,7 @@ db4			Enable db4 support.
 dbh			Enable DBH support.
 debug			Enable debugging facilities in the package.
 deliver-suid		Install deliver executable setuid root.
+disableusermod		Disable /sethost, /setident, /chgname, /chghost, and /chgident.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
 djbfft-pentium		Optimize for Pentium{,MMX} processors.
@@ -191,6 +192,7 @@ native
 ncurses			Enable ncurses support.
 neomagic	
 newport	
+no-operoverride		Disable operator override.
 nogui	
 nospoof			Enable anti-spoof protection for older TCP/IP stacks.
 nsc	
@@ -200,6 +202,7 @@ okinawa_dict
 openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
 openssl	
+operoverride-verify	Require opers to /invite themselves into a +s or +p channel.
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for MacOSX Address Book.
 pam			Enable PAM support.
@@ -214,6 +217,7 @@ plplot
 png			Enable PNG support.
 portals	
 prefix-cmds	
+prefixaq		Enable prefixes for chanadmin and chanowner.
 proftpd-readme		Enable mod_readme.
 python	
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
@@ -241,6 +245,8 @@ saslauthd		Use the Cyrus saslauthd daemon for authentication.
 savage	
 sdl			Use SDL as display library.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
+showlistmodes		Show the modes a channel has set in the /list output.
+shunnotices		Notify a user when they are no longer shunned.
 siliconmotion	
 sis	
 skey	
@@ -274,11 +280,11 @@ tdfx
 tga	
 theora			Use the theora codecs.
 tls			Enable TLS support.
+topicisnuhost		/topic command to show the nick!user@host of the person who set the topic.
 trident	
 truetype	
 tseng	
 unicode	
-unrealircd	
 vesa	
 vflib	
 vfs	
