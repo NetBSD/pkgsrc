@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:45:11 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/11/29 06:45:28 joerg Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -25,6 +25,8 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
+CONFIG_SUB_OVERRIDE+=	../dist/config.sub
+CONFIG_GUESS_OVERRIDE+=	../dist/config.guess
 
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db3_,
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db3
