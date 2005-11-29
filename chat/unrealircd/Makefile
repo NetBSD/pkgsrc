@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/29 19:23:29 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2005/11/29 21:11:55 adrianp Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	--with-permissions=0660
 CONFIGURE_ARGS+=	--enable-dynamic-linking
 
 CONFIGURE_ARGS+=	--with-hostname=${UIRCD_HOST}
-CONFIGURE_ARGS+=	--enable-prefixaq
 CONFIGURE_ARGS+=	--with-listen=${UIRCD_LISTEN}
 CONFIGURE_ARGS+=	--with-sendq=${UIRCD_SENDQ}
 CONFIGURE_ARGS+=	--with-bufferpool=${UIRCD_BUFFER}
