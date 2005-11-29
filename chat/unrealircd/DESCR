@@ -1,0 +1,16 @@
+UnrealIRCd is an IRC server based on the branch of IRCu called Dreamforge,
+formerly used by the DALnet IRC Network. Since development started on it
+(around May 1999) many new features has been added, modified, and many bugs
+fixed. Unreal runs both on *nix platforms, Amiga & Windows 95/98/2k/NT.
+Some features to mention: Channel Halfops, No-color channel mode,
+Strip-colors channel mode, channelmode +q & +a - protect modes, Oper and
+Admin only channels, exception bans, Nokicks mode (channel and user), Flood
+limiter, Channel links, Host cloaking, Net* Tech and Co-Admin modes, Whois
+notifies, Foreign connects monitor, Oper suspend, G:Lines, T:Lines, channel
+restriction (people can only go to these channels if enabled), Trojan/DCC
+Deny, RPING/RPONG, Sethost family, Token in server<->server etc.
+FDlists/High Traffic Mode, SOCKS check on connect, Speeded up server
+synchs, limited WebTV Client support, /vhost, and many dreamforge
+optimations. UnrealIRCd is aimed to be an advanced, not an easy IRCd.
+
+Also includes SSL and IPv6 support.
