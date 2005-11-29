@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12055 2005/11/29 10:21:35 rillig Exp $
+$NetBSD: CHANGES,v 1.12056 2005/11/29 13:12:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5425,3 +5425,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/hdf5 to 1.6.5 [adam 2005-11-29]
 	Updated net/kphone to 4.2 [tron 2005-11-29]
 	Updated pkgtools/pkgse to 0.3 [rillig 2005-11-29]
+	Updated math/octave to 2.1.72 [adam 2005-11-29]
