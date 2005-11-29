@@ -1,8 +1,22 @@
-$NetBSD: patch-at,v 1.6 2005/06/07 00:59:49 minskim Exp $
+$NetBSD: patch-at,v 1.7 2005/11/29 07:02:47 joerg Exp $
 
 --- configure.orig	2005-01-24 09:22:46.000000000 -0600
 +++ configure
-@@ -573,6 +573,7 @@ case "$host" in
+@@ -481,7 +481,7 @@ mksharedlibrpath=''
+ 
+ if test $withsharedlibs = "yes"; then
+   case "$host" in
+-    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*)
++    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-dragonfly*)
+       sharedcccompopts="-fPIC"
+       mksharedlib="$bytecc -shared -o"
+       bytecclinkopts="$bytecclinkopts -Wl,-E"
+@@ -569,10 +569,12 @@ case "$host" in
+   sparc*-*-linux*)              arch=sparc; system=linux;;
+   i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
+   i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
++  i[3456]86-*-dragonfly*)       arch=i386; system=bsd_`sh ./runtest elf.c`;;
+   i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         arch=i386; system=solaris;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -10,7 +24,7 @@ $NetBSD: patch-at,v 1.6 2005/06/07 00:59:49 minskim Exp $
    mips-*-irix6*)                arch=mips; system=irix;;
    hppa1.1-*-hpux*)              arch=hppa; system=hpux;;
    hppa2.0*-*-hpux*)             arch=hppa; system=hpux;;
-@@ -657,6 +658,7 @@ case "$arch,$model,$system" in
+@@ -657,6 +659,7 @@ case "$arch,$model,$system" in
      profiling='prof'
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
@@ -18,7 +32,15 @@ $NetBSD: patch-at,v 1.6 2005/06/07 00:59:49 minskim Exp $
    *) profiling='noprof';;
  esac
  
-@@ -1123,6 +1125,7 @@ fi
+@@ -1077,6 +1080,7 @@ if test "$pthread_wanted" = "yes"; then
+   case "$host" in
+     *-*-solaris*)  pthread_link="-lpthread -lposix4";;
+     *-*-freebsd*)  pthread_link="-pthread";;
++    *-*-dragonfly*)  pthread_link="-pthread";;
+     *-*-openbsd*)  pthread_link="-pthread";;
+     *)             pthread_link="-lpthread";;
+   esac
+@@ -1123,6 +1127,7 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -26,7 +48,7 @@ $NetBSD: patch-at,v 1.6 2005/06/07 00:59:49 minskim Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1169,6 +1172,7 @@ do
+@@ -1169,6 +1174,7 @@ do
      break
    fi
  done
@@ -34,7 +56,7 @@ $NetBSD: patch-at,v 1.6 2005/06/07 00:59:49 minskim Exp $
  
  if test "$x11_include" = "not found"; then
    x11_try_lib_dir=''
-@@ -1257,31 +1261,8 @@ dbm_include="not found"
+@@ -1258,31 +1264,8 @@ dbm_include="not found"
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -68,7 +90,7 @@ $NetBSD: patch-at,v 1.6 2005/06/07 00:59:49 minskim Exp $
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1293,8 +1274,8 @@ else
+@@ -1294,8 +1277,8 @@ else
    fi
    echo "DBM_INCLUDES=$dbm_include" >> Makefile
    echo "DBM_LINK=$dbm_link" >> Makefile
