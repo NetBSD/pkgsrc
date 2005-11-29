@@ -1,7 +1,5 @@
-$NetBSD: patch-ad,v 1.1 2004/07/21 21:49:02 scw Exp $
-
---- dissipate2/udpmessagesocket.cpp.orig	2004-03-04 11:22:57.000000000 +0000
-+++ dissipate2/udpmessagesocket.cpp	2004-07-21 12:34:43.000000000 +0100
+--- dissipate2/udpmessagesocket.cpp.orig	2005-04-18 14:04:40.000000000 +0100
++++ dissipate2/udpmessagesocket.cpp	2005-11-24 16:49:55.000000000 +0000
 @@ -1,5 +1,7 @@
  #include <sys/types.h>
  #include <sys/socket.h>
@@ -10,12 +8,12 @@ $NetBSD: patch-ad,v 1.1 2004/07/21 21:49:02 scw Exp $
  #include <netinet/ip.h>
  #include <errno.h>
  #include <string.h>
-@@ -52,7 +54,7 @@
- 	socklen_t optlen;
- 	tos=IPTOS_PREC_CRITIC_ECP;
+@@ -57,7 +59,7 @@
+ 	tos=IPTOS_LOWDELAY;
+ #endif
  	optlen=1;
 -	if(setsockopt(socketfd,SOL_IP,IP_TOS,&tos,optlen) != 0){
 +	if(setsockopt(socketfd,IPPROTO_IP,IP_TOS,&tos,optlen) != 0){
  		perror("UDPMessageSocket::SetTOS");
+                 return -1 ;
  	}
- 	return 0;
