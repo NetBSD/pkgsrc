@@ -112,7 +112,7 @@ halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hdf5	
 homedir	
 hpn-patch	
-hub	
+hub			IRC hub server
 i128	
 i586-optimized		Optimize for i586 (only).
 i740	
@@ -148,7 +148,7 @@ largefile
 largescale	
 ldap			Enable LDAP support.
 ldap-compat	
-leaf	
+leaf			IRC leaf node server
 libcrack	
 libgcrypt	
 libnet10	
@@ -192,7 +192,7 @@ ncurses			Enable ncurses support.
 neomagic	
 newport	
 nogui	
-nospoof	
+nospoof			Enable anti-spoof protection for older TCP/IP stacks.
 nsc	
 nv	
 ogg			Enable Ogg support.
@@ -230,7 +230,7 @@ radius
 rc5	
 readline	
 recommended-db	
-remoteinc	
+remoteinc		Enable remote includes.
 rendition	
 rrdtool	
 s3	
