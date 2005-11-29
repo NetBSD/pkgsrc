@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12051 2005/11/29 00:28:33 dan Exp $
+$NetBSD: CHANGES,v 1.12052 2005/11/29 08:52:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5421,3 +5421,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/ghostscript-nox11 to 6.01nb6 [adrianp 2005-11-27]
 	Updated emulators/suse91_gtk2 to 9.1nb4 [salo 2005-11-27]
 	Updated devel/monotone to 0.24 [dan 2005-11-29]
+	Updated graphics/ImageMagick to 6.2.5.5 [adam 2005-11-29]
