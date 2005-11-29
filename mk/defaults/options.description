@@ -36,7 +36,7 @@ cdparanoia		Use cdparanoia to rip CDDA media.
 charset	
 charts	
 chips	
-chroot	
+chroot			Enable support for running in a chroot jail.
 cirrus	
 cups	
 curl			Enable curl support.
