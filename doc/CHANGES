@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12058 2005/11/29 17:46:19 wiz Exp $
+$NetBSD: CHANGES,v 1.12059 2005/11/29 19:35:33 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5428,3 +5428,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated math/octave to 2.1.72 [adam 2005-11-29]
 	Updated fonts/fontforge to 20051028 [adam 2005-11-29]
 	Updated x11/gtk2 to 2.8.8 [wiz 2005-11-29]
+	Added devel/tre version 0.7.2 [adrianp 2005-11-29]
+	Added chat/unrealircd version 3.2.3 [adrianp 2005-11-29]
