@@ -1,9 +1,7 @@
-$NetBSD: patch-af,v 1.6 2005/05/26 21:01:07 tron Exp $
-
---- configure.orig	2004-12-07 13:16:23.000000000 +0100
-+++ configure	2005-05-26 22:38:17.000000000 +0200
-@@ -1262,8 +1262,8 @@
-   fi
+--- configure.orig	2005-06-22 09:37:20.000000000 +0100
++++ configure	2005-11-24 16:55:26.000000000 +0000
+@@ -1295,8 +1295,8 @@
+ 	echo "$ac_t""no" 1>&6
  fi
  
 -CFLAGS="-I$ac_cv_qt_inc -Wall"
@@ -13,16 +11,16 @@ $NetBSD: patch-af,v 1.6 2005/05/26 21:01:07 tron Exp $
  
  ac_ext=c
  # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
-@@ -1538,7 +1538,7 @@
+@@ -1571,7 +1571,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lssl  $LIBS"
 +LIBS="-lssl -lcrypto $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 1544 "configure"
+ #line 1577 "configure"
  #include "confdefs.h"
-@@ -2116,7 +2116,6 @@
+@@ -2149,7 +2149,6 @@
           CFLAGS="$CFLAGS -g -DDEBUG"
  echo "$ac_t""yes" 1>&6
  else
