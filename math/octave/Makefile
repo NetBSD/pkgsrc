@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/07/01 11:49:02 adam Exp $
+# $NetBSD: Makefile,v 1.59 2005/11/29 13:11:05 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	2.1.71
+OCTAVE_VER=	2.1.72
 CONFLICTS+=	octave-current-*
 
 .if (${MACHINE_ARCH} == "arm32")
@@ -29,7 +29,7 @@ USE_MAKEINFO=		yes
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++ fortran
 
 # needed for loading of shared objects such as those in the
