@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.2 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-aw,v 1.3 2005/11/29 07:02:47 joerg Exp $
 
 --- ocamldoc/Makefile.orig	2004-10-15 15:32:30.000000000 +0100
 +++ ocamldoc/Makefile	2004-10-15 15:38:04.000000000 +0100
-@@ -252,24 +252,24 @@
+@@ -252,24 +252,24 @@ odoc_see_lexer.ml: odoc_see_lexer.mll
  # Installation targets
  ######################
  install: dummy
@@ -15,7 +15,7 @@ $NetBSD: patch-aw,v 1.2 2005/02/04 21:35:51 adrianp Exp $
 +	if test -d $(INSTALL_BINDIR); then : ; else ${BSD_INSTALL_PROGRAM_DIR} $(INSTALL_BINDIR); fi
 +	if test -d $(INSTALL_LIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALL_LIBDIR); fi
 +	if test -d $(INSTALL_CUSTOMDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALL_CUSTOMDIR); fi
-+	${BSD_INSTALL_PROGRAM} $(OCAMLDOC)$(EXE) $(INSTALL_BINDIR)/$(OCAMLDOC)$(EXE)
++	${BSD_INSTALL_SCRIPT} $(OCAMLDOC)$(EXE) $(INSTALL_BINDIR)/$(OCAMLDOC)$(EXE)
 +	${BSD_INSTALL_DATA} ocamldoc.hva *.cmi $(OCAMLDOC_LIBCMA) $(INSTALL_LIBDIR)
 +	${BSD_INSTALL_DATA} $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
  	if test -d $(INSTALL_MANODIR); then : ; else $(MKDIR) $(INSTALL_MANODIR); fi
