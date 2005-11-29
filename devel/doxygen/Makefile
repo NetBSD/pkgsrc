@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/11/28 06:41:20 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/11/29 04:40:38 joerg Exp $
 
 DISTNAME=	doxygen-1.4.5.src
 PKGNAME=	doxygen-1.4.5
@@ -27,6 +27,12 @@ SUBST_CLASSES+=		pybin
 SUBST_STAGE.pybin=	pre-configure
 SUBST_FILES.pybin=	doc/Makefile.in
 SUBST_SED.pybin=	-e "s|@PYTHONBIN@|${PYTHONBIN}|g"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=        -platform freebsd-g++
+.endif
 
 post-patch:
 	${TOUCH} ${WRKSRC}/src/doxytag.l
