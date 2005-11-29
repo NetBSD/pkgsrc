@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12053 2005/11/29 10:04:38 adam Exp $
+$NetBSD: CHANGES,v 1.12054 2005/11/29 10:15:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5423,3 +5423,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/monotone to 0.24 [dan 2005-11-29]
 	Updated graphics/ImageMagick to 6.2.5.5 [adam 2005-11-29]
 	Updated devel/hdf5 to 1.6.5 [adam 2005-11-29]
+	Updated net/kphone to 4.2 [tron 2005-11-29]
