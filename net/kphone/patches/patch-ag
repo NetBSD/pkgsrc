@@ -1,7 +1,5 @@
-$NetBSD: patch-ag,v 1.4 2005/04/14 17:53:40 schwarz Exp $
-
---- kphone/Makefile.in.orig	Thu Apr  7 21:10:26 2005
-+++ kphone/Makefile.in	Thu Apr  7 21:11:15 2005
+--- kphone/Makefile.in.orig	2005-06-22 09:37:20.000000000 +0100
++++ kphone/Makefile.in	2005-11-24 16:59:45.000000000 +0000
 @@ -6,7 +6,7 @@
  SHARE_DIR=@datadir@/apps/kphone
  BIN_DIR=@bindir@
@@ -9,5 +7,5 @@ $NetBSD: patch-ag,v 1.4 2005/04/14 17:53:40 schwarz Exp $
 -MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DPO_DIR=\"${prefix}/share/kphone/translations//\" 
 +MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DPO_DIR=\"${prefix}/share/kphone/translations//\" -DDEVOSSAUDIO=\"$(DEVOSSAUDIO)\"
  
- CFLAGS=@CFLAGS@ -I. -I../gsm -I../ilbc -I../dissipate2 @DEFS@ $(MOREDEFS)
- CXXFLAGS=$(CFLAGS)
+ ifeq (@ENABLE_SRTP@,yes)
+ CFLAGS=-I/usr/local/include/srtp -I- @CFLAGS@ -I. -I../gsm -I../ilbc -I../dissipate2 @DEFS@ $(MOREDEFS)

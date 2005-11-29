@@ -1,7 +1,5 @@
-$NetBSD: patch-ac,v 1.1 2004/07/21 21:49:02 scw Exp $
-
---- dissipate2/siputil.cpp.orig	2004-03-04 11:22:57.000000000 +0000
-+++ dissipate2/siputil.cpp	2004-07-21 12:11:34.000000000 +0100
+--- dissipate2/siputil.cpp.orig	2005-06-21 12:14:49.000000000 +0100
++++ dissipate2/siputil.cpp	2005-11-24 16:47:03.000000000 +0000
 @@ -5,6 +5,9 @@
  #include <sys/time.h>
  #include <sys/errno.h>
@@ -12,15 +10,15 @@ $NetBSD: patch-ac,v 1.1 2004/07/21 21:49:02 scw Exp $
  #include <net/if_arp.h>
  #include <net/route.h>
  #include <net/if.h>
-@@ -12,6 +15,7 @@
- #include <arpa/inet.h>
+@@ -13,6 +16,7 @@
+ #include <qobject.h>
  #include <qmessagebox.h>
  #include <netdb.h>
 +#include <errno.h>
  #include <fcntl.h>
  #include <stdio.h>
  #include <unistd.h>
-@@ -25,6 +29,8 @@
+@@ -26,6 +30,8 @@
  /* max number of network interfaces*/
  #define MAX_IF 5
  
@@ -29,7 +27,7 @@ $NetBSD: patch-ac,v 1.1 2004/07/21 21:49:02 scw Exp $
  /* Path to the route entry in proc filesystem */
  #define PROCROUTE "/proc/net/route"
  
-@@ -40,6 +46,8 @@
+@@ -41,6 +47,8 @@
  #define SIOCGIFCOUNT 0x8935
  #endif
  
@@ -38,7 +36,7 @@ $NetBSD: patch-ac,v 1.1 2004/07/21 21:49:02 scw Exp $
  char iface[16];
  
  
-@@ -61,6 +69,7 @@
+@@ -62,6 +70,7 @@
   */
  char *getdefaultdev()
  {
@@ -46,7 +44,7 @@ $NetBSD: patch-ac,v 1.1 2004/07/21 21:49:02 scw Exp $
  	FILE *fp = fopen( PROCROUTE, "r");
  	char buff[4096], gate_addr[128], net_addr[128];
  	char mask_addr[128];
-@@ -84,19 +93,49 @@
+@@ -85,19 +94,49 @@
  			return iface;
  	}
  	fclose(fp);
@@ -99,7 +97,7 @@ $NetBSD: patch-ac,v 1.1 2004/07/21 21:49:02 scw Exp $
  	netconf.ifc_len = 32 * MAX_IF;
  	netconf.ifc_buf = buffer;
  	sock=socket( PF_INET, SOCK_DGRAM, 0 );
-@@ -104,9 +143,11 @@
+@@ -105,9 +144,11 @@
  	if ( err < 0 ) printf( "Error in ioctl: %i.\n", errno );
  	close( sock );
  	if_count = netconf.ifc_len / 32;
@@ -111,7 +109,7 @@ $NetBSD: patch-ac,v 1.1 2004/07/21 21:49:02 scw Exp $
  	if ( if_count == 1 ) {
  		strncpy( if_name[j], netconf.ifc_req[0].ifr_name, 20 );
  		strncpy( if_addr[j], inet_ntoa(((struct sockaddr_in*)(&netconf.ifc_req[0].ifr_addr))->sin_addr), 20 );
-@@ -120,6 +161,8 @@
+@@ -122,6 +163,8 @@
  			}
  		}
  	}
