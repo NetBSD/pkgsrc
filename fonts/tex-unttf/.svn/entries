@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="361"
+   name=""
+   committed-date="2005-11-20T22:40:52.854616Z"
+   url="svn+ssh://minskim@kldp.net/svnroot/pkgsrc-wip/trunk/wip-kr/tex-unttf"
+   last-author="minskim"
+   kind="dir"
+   uuid="29a96212-56fd-0310-96e6-dcb058db4e01"
+   revision="368"/>
+<entry
+   committed-rev="349"
+   name="distinfo"
+   text-time="2005-11-16T07:20:57.000000Z"
+   committed-date="2005-11-19T00:28:47.299895Z"
+   checksum="4675739e2eee9df0bb003aba565f8888"
+   last-author="minskim"
+   kind="file"/>
+<entry
+   committed-rev="349"
+   name="DESCR"
+   text-time="2005-11-19T00:26:47.000000Z"
+   committed-date="2005-11-19T00:28:47.299895Z"
+   checksum="3de4e314fc1087b7801a5b01ff6e58fa"
+   last-author="minskim"
+   kind="file"/>
+<entry
+   committed-rev="349"
+   name="PLIST"
+   text-time="2005-11-16T18:07:55.000000Z"
+   committed-date="2005-11-19T00:28:47.299895Z"
+   checksum="df6f06f3690b4df94610f9abddaec084"
+   last-author="minskim"
+   kind="file"/>
+<entry
+   committed-rev="361"
+   name="Makefile"
+   text-time="2005-11-20T22:39:30.000000Z"
+   committed-date="2005-11-20T22:40:52.854616Z"
+   checksum="cdca0b7d99748d32259407462639d778"
+   last-author="minskim"
+   kind="file"
+   prop-time="2005-11-20T21:50:42.000000Z"/>
+</wc-entries>
