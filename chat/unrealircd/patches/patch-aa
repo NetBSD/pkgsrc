@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/11/29 19:17:03 adrianp Exp $
+
+--- configure.orig	2005-03-25 09:51:47.000000000 +0000
++++ configure
+@@ -10614,39 +10614,6 @@ IRCDLIBS="$IRCDLIBS -lresolv "
+ ;;
+ esac
+ 
+-tre_version="0.7.2"
+-echo "$as_me:$LINENO: result: extracting TRE regex library" >&5
+-echo "${ECHO_T}extracting TRE regex library" >&6
+-cur_dir=`pwd`
+-cd extras
+-rm -rf tre-$tre_version
+-if test "x$ac_cv_path_GUNZIP" = "x" ; then
+-	tar xfz tre.tar.gz
+-else
+-	cp tre.tar.gz tre.tar.gz.bak
+-	gunzip -f tre.tar.gz
+-	cp tre.tar.gz.bak tre.tar.gz
+-	tar xf tre.tar
+-fi
+-echo "$as_me:$LINENO: result: configuring TRE regex library" >&5
+-echo "${ECHO_T}configuring TRE regex library" >&6
+-cd tre-$tre_version
+-./configure --disable-agrep --disable-shared --disable-system-abi --disable-wchar --disable-multibyte --prefix=$cur_dir/extras/regexp
+-echo "$as_me:$LINENO: result: compiling TRE regex library" >&5
+-echo "${ECHO_T}compiling TRE regex library" >&6
+-$ac_cv_prog_MAKER
+-echo "$as_me:$LINENO: result: installing TRE regex library" >&5
+-echo "${ECHO_T}installing TRE regex library" >&6
+-$ac_cv_prog_MAKER install
+-TREINCDIR="$cur_dir/extras/regexp/include"
+-
+-if test "x$ac_cv_path_PKGCONFIG" = "x" ; then
+-	TRELIBS="-L../extras/regexp/lib -ltre"
+-else
+-	TRELIBS=`$ac_cv_path_PKGCONFIG --libs tre.pc`
+-fi
+-
+-cd $cur_dir
+ ac_config_files="$ac_config_files Makefile src/modules/Makefile unreal ircdcron/ircdchk"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure

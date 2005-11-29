@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/11/29 19:17:03 adrianp Exp $
+
+--- Makefile.in.orig	2005-11-29 18:38:58.000000000 +0000
++++ Makefile.in
+@@ -112,7 +112,7 @@ FD_SETSIZE=@FD_SETSIZE@
+ # Where is your openssl binary
+ OPENSSLPATH=@OPENSSLPATH@
+ 
+-CFLAGS=-I$(INCLUDEDIR) $(XCFLAGS) @LDFLAGS@ $(FD_SETSIZE)
++CFLAGS=-I$(INCLUDEDIR) $(XCFLAGS) $(FD_SETSIZE)
+ 
+ SHELL=/bin/sh
+ SUBDIRS=src
