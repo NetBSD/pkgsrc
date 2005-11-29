@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/11/29 19:17:03 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2005/11/29 21:11:55 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 PKG_SUPPORTED_OPTIONS=	inet6 nospoof hub leaf ziplinks remoteinc ssl chroot
-PKG_SUGGESTED_OPTIONS=	leaf
+PKG_SUPPORTED_OPTIONS+=	prefixaq showlistmodes topicisnuhost shunnotices
+PKG_SUPPORTED_OPTIONS+=	no-operoverride disableusermod operoverride-verify
+PKG_SUGGESTED_OPTIONS=	hub showlistmodes
 
 .include "../../mk/bsd.options.mk"
 
@@ -74,4 +76,60 @@ CONFIGURE_ARGS+=		--enable-libcurl
 ###
 .if !empty(PKG_OPTIONS:Mchroot)
 CFLAGS+=	-DCHROOTDIR
+.endif
+
+###
+### Enable prefixes for chanadmin and chanowner.
+### This will give +a the & prefix and ~ for +q (just like +o is @)
+### Supported by the major clients: 
+###	mIRC, xchat, epic, eggdrop, Klient, PJIRC, etc.
+### with the notable exceptions of:
+###	irssi, KVIrc and CGI:IRC.
+### This feature should be enabled/disabled network-wide.
+###
+.if !empty(PKG_OPTIONS:Mprefixaq)
+CONFIGURE_ARGS+=		--enable-prefixaq
+.endif
+
+###
+### Show the modes a channel has set in the /list output.
+###
+.if !empty(PKG_OPTIONS:Mshowlistmodes)
+CONFIGURE_ARGS+=		--with-showlistmodes
+.endif
+
+###
+### /topic command to show the nick!user@host of the person
+### who set the topic, rather than just the nickname.
+###
+.if !empty(PKG_OPTIONS:Mtopicisnuhost)
+CONFIGURE_ARGS+=		--with-topicisnuhost
+.endif
+
+###
+### Notify a user when they are no longer shunned.
+###
+.if !empty(PKG_OPTIONS:Mshunnotices)
+CONFIGURE_ARGS+=		--with-shunnotices
+.endif
+
+###
+### Disable oper override.
+###
+.if !empty(PKG_OPTIONS:Mno-operoverride)
+CONFIGURE_ARGS+=		--with-no-operoverride
+.endif
+
+###
+### Disable /sethost, /setident, /chgname, /chghost, and /chgident.
+###
+.if !empty(PKG_OPTIONS:Mdisableusermod)
+CONFIGURE_ARGS+=		--with-disableusermod
+.endif
+
+###
+### Require opers to /invite themselves into a +s or +p channel.
+###
+.if !empty(PKG_OPTIONS:Moperoverride-verify)
+CONFIGURE_ARGS+=		--with-operoverride-verify
 .endif
