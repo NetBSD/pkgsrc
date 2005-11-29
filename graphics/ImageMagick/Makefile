@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2005/08/08 09:18:09 adam Exp $
+# $NetBSD: Makefile,v 1.132 2005/11/29 08:51:17 adam Exp $
 
 .include "Makefile.common"
 
@@ -32,7 +32,7 @@ GCC_REQD+=		3.0
 
 # Avoid compiler bug on "mipsel" (cobalt?)
 .if ${MACHINE_ARCH} == "mipsel"
-CFLAGS=			-O
+CFLAGS+=		-O
 .endif
 
 # Some configure_args come from Makefile.common
