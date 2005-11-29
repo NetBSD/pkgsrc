@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.6 2005/11/29 07:02:47 joerg Exp $
+
+--- byterun/sys.c.orig	2005-11-29 06:21:52.000000000 +0000
++++ byterun/sys.c
+@@ -47,10 +47,6 @@
+ #include "stacks.h"
+ #include "sys.h"
+ 
+-#ifndef _WIN32
+-extern int errno;
+-#endif
+-
+ static char * error_message(void)
+ {
+   return strerror(errno);
