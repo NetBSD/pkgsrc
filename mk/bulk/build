@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.89 2005/11/28 21:50:01 rillig Exp $
+# $NetBSD: build,v 1.90 2005/11/30 18:00:16 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -201,9 +201,9 @@ export BATCH DEPENDS_TARGET
 #
 # Unset some environment variables that could disturbe the build.
 #
-unset CDPATH		# ensure cd does not print new cwd to stdout, which
+unset CDPATH || true	# ensure cd does not print new cwd to stdout, which
 			# confuses the printindex script.
-unset DISPLAY		# allow sane failure for gimp, xlispstat
+unset DISPLAY || true	# allow sane failure for gimp, xlispstat
 
 #
 # It starts ...
