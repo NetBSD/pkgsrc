@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4224 2005/11/30 07:13:11 markd Exp $
+$NetBSD: TODO,v 1.4225 2005/11/30 17:49:52 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -633,7 +633,6 @@ Suggested package updates
 	o ion3-devel-20050820 [pkg/31132]
 	o iozone-3.257
 	o ipcheck-0.219
-	o ircservices-5.0.55
 	o ircu-2.10.12.0
 	o iroffer-1.3b10 [pkg/31859]
 	o irrd-2.2.8

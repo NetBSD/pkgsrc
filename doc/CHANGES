@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12061 2005/11/30 14:03:15 martti Exp $
+$NetBSD: CHANGES,v 1.12062 2005/11/30 17:49:51 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5433,3 +5433,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added fonts/tex-unttf version 1.0.1.20051115 [minskim 2005-11-29]
 	Added print/tex-dhucs version 2.60.20051117 [minskim 2005-11-29]
 	Updated mail/postfix-current to 2.3-20051128 [martti 2005-11-30]
+	Updated chat/ircservices to 5.0.56 [adrianp 2005-11-30]
