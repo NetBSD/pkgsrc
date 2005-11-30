@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.391 2005/11/28 00:33:55 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.392 2005/11/30 19:19:25 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2574,6 +2574,9 @@ sub checklines_package_Makefile($) {
 
 			if ($shellcmd =~ qr"\$\{MKDIR\}[^&;|]*\$\{PREFIX\}/[/0-9a-zA-Z\${}]*") {
 				$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of MKDIR.");
+				$line->explain(
+					"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
+					"INSTALL_DATA_DIR, INSTALL_MAN_DIR.");
 			}
 
 			if ($shellcmd =~ qr"\$\{INSTALL\}([^&;|]*)") {
