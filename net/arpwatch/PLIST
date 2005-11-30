@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/10 23:32:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/11/30 22:36:43 bouyer Exp $
 sbin/arpwatch
 sbin/arpsnmp
-etc/ethercodes.dat
+share/arpwatch/ethercodes.dat
 man/man8/arpwatch.8
 man/man8/arpsnmp.8
+share/examples/rc.d/arpwatch
 @exec ${MKDIR} ${VARBASE}/db/arpwatch
 @exec /usr/bin/touch ${VARBASE}/db/arpwatch/arp.dat
+@dirrm share/arpwatch
