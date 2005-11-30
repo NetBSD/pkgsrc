@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.392 2005/11/30 19:19:25 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.393 2005/11/30 19:23:43 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2259,7 +2259,7 @@ sub checklines_direct_tools($) {
 
 	my @ok_vars = qw(
 		BUILDLINK_TRANSFORM BUILD_DEPENDS
-		COMMENT CONFLICTS
+		CFLAGS CPPFLAGS COMMENT CONFLICTS
 		DEPENDS DISTNAME
 		EXTRACT_SUFX EXTRACT_USING
 		INTERACTIVE_STAGE
