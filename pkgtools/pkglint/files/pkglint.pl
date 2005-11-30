@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.394 2005/11/30 19:53:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.395 2005/11/30 20:16:15 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1514,6 +1514,8 @@ sub checkfile_patches_patch($) {
 
 		if ($line->text =~ qr"^\+") {
 			use constant good_macros => PkgLint::Util::array_to_hash(qw(
+				__STDC__
+
 				__GNUC__ __GNUC_MINOR__
 				__SUNPRO_C
 
@@ -1523,13 +1525,17 @@ sub checkfile_patches_patch($) {
 
 				__DragonFly__
 				__FreeBSD__
+				__INTERIX
 				__linux__
 				__NetBSD__
 				__OpenBSD__
 				__SVR4
 				__sun
+
+				__GLIBC__
 			));
 			use constant bad_macros  => {
+				"__sparc__" => "__sparc",
 				"__sun__" => "__sun",
 				"__svr4__" => "__SVR4",
 			};
