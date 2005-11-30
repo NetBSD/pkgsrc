@@ -1,30 +1,30 @@
-$NetBSD: patch-aa,v 1.5 2004/12/10 23:32:34 minskim Exp $
+$NetBSD: patch-aa,v 1.6 2005/11/30 22:36:43 bouyer Exp $
 
---- Makefile.in.orig	Thu Jun 15 01:39:55 2000
+--- Makefile.in.orig	2000-06-15 02:39:55.000000000 +0200
 +++ Makefile.in
-@@ -30,8 +30,10 @@
+@@ -30,8 +30,10 @@ exec_prefix = @exec_prefix@
  BINDEST = @sbindir@
  # Pathname of directory to install the man page
  MANDEST = @mandir@
 +# Pathname of directory to install ethernet vendor codes
-+ETCDEST = $(prefix)/etc
++SHAREDEST = $(prefix)/share/arpwatch
  # Pathname of directory to install database file
 -ARPDIR = $(prefix)/arpwatch
 +ARPDIR = ${VARBASE}/db/arpwatch
  
  # VPATH
  srcdir = @srcdir@
-@@ -45,7 +47,8 @@
+@@ -45,7 +47,8 @@ CC = @CC@
  PROG = arpwatch
  CCOPT = @V_CCOPT@
  INCLS = -I. @V_INCLS@
 -DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" -DPATH_SENDMAIL=\"$(SENDMAIL)\"
 +DEFS = -DDEBUG @DEFS@ -DARPDIR=\"$(ARPDIR)\" -DPATH_SENDMAIL=\"$(SENDMAIL)\" \
-+       -DETHERCODES=\"$(ETCDEST)/ethercodes.dat\"
++       -DETHERCODES=\"$(SHAREDEST)/ethercodes.dat\"
  
  # Standard CFLAGS
  CFLAGS = $(CCOPT) $(DEFS) $(INCLS)
-@@ -110,8 +113,8 @@
+@@ -110,8 +113,8 @@ zap: zap.o intoa.o
  	$(CC) $(CFLAGS) -o $@ zap.o intoa.o -lutil
  
  install: force
