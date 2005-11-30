@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/09/30 06:04:32 martti Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/11/30 14:02:47 martti Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -43,6 +43,7 @@ man/man1/sendmail.1
 man/man5/access.5
 man/man5/aliases.5
 man/man5/body_checks.5
+man/man5/bounce.5
 man/man5/canonical.5
 man/man5/cidr_table.5
 man/man5/generic.5
@@ -148,6 +149,7 @@ share/examples/postfix/LICENSE
 share/examples/postfix/TLS_LICENSE
 share/examples/postfix/access
 share/examples/postfix/aliases
+share/examples/postfix/bounce.cf.default
 share/examples/postfix/canonical
 share/examples/postfix/generic
 share/examples/postfix/header_checks
