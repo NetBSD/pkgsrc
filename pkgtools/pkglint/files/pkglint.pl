@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.393 2005/11/30 19:23:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.394 2005/11/30 19:53:37 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -627,7 +627,6 @@ BEGIN {
 # Buildtime configuration
 #
 
-use constant conf_rcsidstring	=> 'NetBSD';
 use constant conf_distver	=> '@DISTVER@';
 use constant conf_make		=> '@MAKE@';
 use constant conf_datadir	=> '@DATADIR@';
@@ -679,7 +678,7 @@ my $opt_dumpmakefile	= false;
 my $opt_import		= false;
 my $opt_quiet		= false;
 my $opt_recursive	= false;
-my $opt_rcsidstring	= conf_rcsidstring;
+my $opt_rcsidstring	= "NetBSD";
 my (@options) = (
 	# [ usage-opt, usage-message, getopt-opt, getopt-action ]
 	[ "-C{check,...}", "Enable or disable specific checks",
