@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4225 2005/11/30 17:49:52 adrianp Exp $
+$NetBSD: TODO,v 1.4226 2005/11/30 18:03:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -473,6 +473,7 @@ Suggested package updates
 	o dnstop-20050405
 	o dnstracer-1.8
 	o dpkg-1.10.28
+	o dspam-3.6.2
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.6
 	o dvipng-1.7 [http://sourceforge.net/projects/dvipng/]
@@ -661,7 +662,7 @@ Suggested package updates
 	o kapooka-0.3
 	o kazehakase-0.3.2
 	o kbiff-3.8
-	o kdbg-2.0.1
+	o kdbg-2.0.2
 	o kde-3.5.0 [markd]
 	o kdrill-6.4
 	o kgeography-0.4
@@ -806,7 +807,7 @@ Suggested package updates
 	o openal-20050401
 	o opencobol-0.31
 	o openh323-1.17.2
-	o openmotif-2.2.3 [http://www.openmotif.org/]
+	o openmotif-2.3.0 [http://www.openmotif.org/]
 	o openpam-20050616
 	o openssl-0.9.8a
 	o oroborus-2.0.15
@@ -937,6 +938,7 @@ Suggested package updates
 	o p7zip-4.30
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
+	o pango-1.10.2
 	o pari-2.1.7
 	o parrot-0.2.1 [pkg/30586]
 	o patchutils-0.2.31
@@ -1220,7 +1222,7 @@ Suggested package updates
 	o vcdimager-devel-0.7.23
 	o verilog-0.8.2
 	o vfu-4.03
-	o vice-1.17
+	o vice-1.18
 	o vifm-0.3a
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
 	o vlc-0.8.4
@@ -1273,8 +1275,10 @@ Suggested package updates
 	o xlispstat-3.52.20
 	o xm7-303
 	o xmahjongg-3.7
+	o xmame-0.102
 	o xmbdfed-4.6
 	o xmcd-3.3.0
+	o xmess-0.102
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-0.3.7
