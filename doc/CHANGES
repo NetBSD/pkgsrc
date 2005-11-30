@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12060 2005/11/29 22:39:48 minskim Exp $
+$NetBSD: CHANGES,v 1.12061 2005/11/30 14:03:15 martti Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5432,3 +5432,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added chat/unrealircd version 3.2.3 [adrianp 2005-11-29]
 	Added fonts/tex-unttf version 1.0.1.20051115 [minskim 2005-11-29]
 	Added print/tex-dhucs version 2.60.20051117 [minskim 2005-11-29]
+	Updated mail/postfix-current to 2.3-20051128 [martti 2005-11-30]
