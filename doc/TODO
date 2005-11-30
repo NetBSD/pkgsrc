@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4223 2005/11/29 17:46:20 wiz Exp $
+$NetBSD: TODO,v 1.4224 2005/11/30 07:13:11 markd Exp $
 
 Suggested new packages
 ======================
@@ -663,6 +663,7 @@ Suggested package updates
 	o kazehakase-0.3.2
 	o kbiff-3.8
 	o kdbg-2.0.1
+	o kde-3.5.0 [markd]
 	o kdrill-6.4
 	o kgeography-0.4
 	o kinput2-3.1
