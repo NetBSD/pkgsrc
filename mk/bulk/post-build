@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.60 2005/11/18 11:38:00 rillig Exp $
+# $NetBSD: post-build,v 1.61 2005/11/30 18:33:14 rillig Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -96,7 +96,7 @@ get_build_conf_vars(
 	'FTPHOST',		# ftp://ftp.machi.ne/
 	'REPORT',		# "broken.html"
 	'USR_PKGSRC',		# "/usr/pkgsrc"
-	'osrev',	       	# `uname -r`
+	'osrev',		# `uname -r`
 );
 
 my $reportf = basename($vars{REPORT});
@@ -270,14 +270,14 @@ writeReport();
 EOOUT
 	foreach (@leftovers) {
 		chomp;
-	    	print OUT "<a href=\"$vars{FTPHOST}/$vars{FTPURL}/leftovers-$vars{MACHINE_ARCH}$_\">$_</a>\n";
+		print OUT "<a href=\"$vars{FTPHOST}/$vars{FTPURL}/leftovers-$vars{MACHINE_ARCH}$_\">$_</a>\n";
 	}
 	print OUT <<EOOUT2;
 </pre>
 </body>
 </html>
 EOOUT2
-    	close(OUT);
+	close(OUT);
 }
 
 # print the result of a single broken package
@@ -311,7 +311,7 @@ sub pkgResult ($$) {
 
 	(my $state_style = $state) =~ s/ //g;
 
-	my $nbrokenby_html = '<td>&nbsp;</td>'; 
+	my $nbrokenby_html = '<td>&nbsp;</td>';
 	$nbrokenby_html =
 		'<td align="right" class="pkg-'.$state_style.'">'.$nbrokenby.'</td>'
 		if $nbrokenby > 0;
@@ -540,7 +540,7 @@ EOHTML
 
 	foreach my $state ("topten", "broken", "broken depends", "not packaged") {
 		next unless scalar(@{$broken->{$state}});
-		
+
 		if ($verbose && ($state eq "topten" || $state eq "broken")) {
 			print "\n\n$state_head{$state}\n\n";
 		print_report_header();
@@ -587,7 +587,7 @@ The following cache files were used during the build:
 </ul>
 <hr>
 
-<p>    
+<p>
 <ul>
 <!-- <li>See the list of <a href="../index.html">all log files</a>. -->
 <li>Visit the <a href="http://www.NetBSD.org">NetBSD web site</a>.
