@@ -1,0 +1,39 @@
+--- arpwatch.c.orig	2005-10-25 12:53:57.000000000 +0200
++++ arpwatch.c	2005-10-25 12:56:40.000000000 +0200
+@@ -107,6 +107,8 @@
+ 
+ char *prog;
+ 
++char *Watcher = NULL;
++
+ int can_checkpoint;
+ int swapped;
+ int nobogons;
+@@ -170,7 +172,7 @@
+ 	interface = NULL;
+ 	rfilename = NULL;
+ 	pd = NULL;
+-	while ((op = getopt(argc, argv, "df:i:n:Nr:")) != EOF)
++	while ((op = getopt(argc, argv, "df:i:m:n:Nr:")) != EOF)
+ 		switch (op) {
+ 
+ 		case 'd':
+@@ -189,6 +191,10 @@
+ 			interface = optarg;
+ 			break;
+ 
++		case 'm':
++			Watcher = optarg;
++			break;
++
+ 		case 'n':
+ 			if (!addnet(optarg))
+ 				usage();
+@@ -751,6 +757,6 @@
+ 
+ 	(void)fprintf(stderr, "Version %s\n", version);
+ 	(void)fprintf(stderr, "usage: %s [-dN] [-f datafile] [-i interface]"
+-	    " [-n net[/width]] [-r file]\n", prog);
++	    " [-m email] [-n net[/width]] [-r file]\n", prog);
+ 	exit(1);
+ }
