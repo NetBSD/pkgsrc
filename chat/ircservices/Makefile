@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:07 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/11/30 17:47:54 adrianp Exp $
 #
 
-DISTNAME=	ircservices-5.0.49
+DISTNAME=	ircservices-5.0.56
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.esper.net/ircservices/ \
 		ftp://ftp.esper.net/ircservices/old/ \
@@ -16,6 +16,7 @@ HAS_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 USE_TOOLS+=	gmake grep gsed perl
 RCD_SCRIPTS=	ircservices
+PKG_GROUPS=	services
 
 CONFIGURE_ARGS=	-prefix ${PREFIX}
 
