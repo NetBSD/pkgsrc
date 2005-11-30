@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12064 2005/11/30 18:27:38 tonio Exp $
+$NetBSD: CHANGES,v 1.12065 2005/11/30 22:48:24 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5436,3 +5436,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/ircservices to 5.0.56 [adrianp 2005-11-30]
 	Updated devel/pango to 1.10.2 [wiz 2005-11-30]
 	Updated print/a2ps to 4.13.0.2nb9 [tonio 2005-11-30]
+	Updated net/arpwatch to 2.1a13 [bouyer 2005-11-30]

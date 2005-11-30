@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4227 2005/11/30 18:10:12 wiz Exp $
+$NetBSD: TODO,v 1.4228 2005/11/30 22:48:25 bouyer Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,6 @@ Suggested package updates
 	o arj-3.10.22
 	o arla-0.40
 	o arnold-20040104
-	o arpwatch-2.1a13 [pkg/32151]
 	o asapm-3.1
 	o asc-1.16.2
 	o aspell-0.60.4
