@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.399 2005/12/01 03:12:09 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.400 2005/12/01 09:03:00 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1507,7 +1507,7 @@ sub checkfile_patches_patch($) {
 	checkline_rcsid($lines->[0], "");
 
 	foreach my $line (@{$lines}[1..$#{$lines}]) {
-		if ($line->text =~ qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)(?::[^\$]*?|)\$") {
+		if ($line->text =~ qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)[:\$]") {
 			my ($tag) = ($1);
 			$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
 		}
