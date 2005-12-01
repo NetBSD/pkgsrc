@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2005/12/01 20:17:48 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/12/01 20:18:29 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pgp2
 PKG_SUPPORTED_OPTIONS=	rsaref
-PKG_SUGGESTED_OPTIONS=	rsaref
 
 .include "../../mk/bsd.prefs.mk"
 
