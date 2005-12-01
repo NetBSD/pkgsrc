@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2005/02/24 12:13:58 agc Exp $
+$NetBSD: distinfo,v 1.12 2005/12/01 20:25:44 wiz Exp $
 
 SHA1 (libnet-1.19.tar.gz) = 8da9d05f1ef346e07d9e1c74327174d98b13b13a
 RMD160 (libnet-1.19.tar.gz) = a8d5c9b306cd29a220201dec067074ba0a08f308
 Size (libnet-1.19.tar.gz) = 64835 bytes
-SHA1 (patch-aa) = 655b2ee1c751818c7f90123dfde0cb06a8237b34
+SHA1 (patch-aa) = 982c1b169f7be3ec06457f1227d612bb9e1062d2
