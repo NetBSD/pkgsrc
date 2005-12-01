@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- lib-src/Makefile.in.in.orig	Mon Dec 19 13:13:45 1994
-+++ lib-src/Makefile.in.in	Sun Sep 27 19:22:21 1998
-@@ -206,7 +206,7 @@
+--- lib-src/Makefile.in.in.orig	1994-12-19 05:13:45.000000000 +0100
++++ lib-src/Makefile.in.in
+@@ -206,7 +206,7 @@ ${archlibdir}: all
          if [ `(cd ${archlibdir} && /bin/pwd)` \
               != `(cd ${srcdir} && /bin/pwd)` ]; then \
  	  for file in ${SCRIPTS}; do \
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
  	  done ; \
  	fi
  
-@@ -219,7 +219,7 @@
+@@ -219,7 +219,7 @@ install: ${archlibdir}
  	  (cd ..; $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
  	done
  	for file in ${INSTALLABLE_SCRIPTS} ; do \

@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-ah,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/fileio.c.orig	Mon Sep 20 23:29:04 1999
-+++ src/fileio.c	Mon Sep 20 23:30:03 1999
-@@ -2604,8 +2604,6 @@
+--- src/fileio.c.orig	1995-06-23 12:25:18.000000000 +0200
++++ src/fileio.c
+@@ -2604,8 +2604,6 @@ The value is an integer.")
    return value;
  }
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
  DEFUN ("unix-sync", Funix_sync, Sunix_sync, 0, 0, "",
    "Tell Unix to finish all pending disk updates.")
    ()
-@@ -2614,8 +2612,6 @@
+@@ -2614,8 +2612,6 @@ DEFUN ("unix-sync", Funix_sync, Sunix_sy
    return Qnil;
  }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
  DEFUN ("file-newer-than-file-p", Ffile_newer_than_file_p, Sfile_newer_than_file_p, 2, 2, 0,
    "Return t if file FILE1 is newer than file FILE2.\n\
  If FILE1 does not exist, the answer is nil;\n\
-@@ -4507,7 +4503,5 @@
+@@ -4507,7 +4503,5 @@ This applies only to the operation `inhi
    defsubr (&Sread_file_name_internal);
    defsubr (&Sread_file_name);
  

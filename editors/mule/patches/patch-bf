@@ -1,6 +1,6 @@
-$NetBSD: patch-bf,v 1.1 2004/02/16 23:41:26 seb Exp $
+$NetBSD: patch-bf,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/emacs.c.orig	1995-06-08 05:58:13.000000000 +0000
+--- src/emacs.c.orig	1995-06-08 07:58:13.000000000 +0200
 +++ src/emacs.c
 @@ -410,6 +410,8 @@ __main ()
  NXZone *emacszone;

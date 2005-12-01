@@ -1,6 +1,6 @@
-$NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
+$NetBSD: patch-bb,v 1.4 2005/12/01 18:13:24 wiz Exp $
 
---- man/texinfo.tex.orig	Fri Oct 21 05:19:39 1994
+--- man/texinfo.tex.orig	1994-10-21 05:19:39.000000000 +0100
 +++ man/texinfo.tex
 @@ -1,5 +1,7 @@
 -%% TeX macros to handle texinfo files
@@ -317,7 +317,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % @w prevents a word break.  Without the \leavevmode, @w at the
  % beginning of a paragraph, when TeX is still in vertical mode, would
-@@ -507,15 +591,32 @@
+@@ -507,15 +591,32 @@ where each line of input produces a line
  \leftline{\hskip\leftskip{\rm#1}}}}
  
 +% @inmargin{TEXT} puts TEXT in the margin next to the current paragraph.
@@ -358,14 +358,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \input\thisfile
  \endgroup}
  
-@@ -532,5 +633,5 @@
+@@ -532,5 +633,5 @@ where each line of input produces a line
  
  \def\sp{\parsearg\spxxx}
 -\def\spxxx #1{\par \vskip #1\baselineskip}
 +\def\spxxx #1{\vskip #1\baselineskip}
  
  % @comment ...line which is ignored...
-@@ -545,4 +646,7 @@
+@@ -545,4 +646,7 @@ where each line of input produces a line
  \let\c=\comment
  
 +% @paragraphindent  is defined for the Info formatting commands only.
@@ -373,13 +373,13 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % Prevent errors for section commands.
  % Used in @ignore and in failing conditionals.
-@@ -579,4 +683,5 @@
+@@ -579,4 +683,5 @@ where each line of input produces a line
  %
  \def\ignoremorecommands{%
 +  \let\defcodeindex = \relax
    \let\defcv = \relax
    \let\deffn = \relax
-@@ -602,4 +707,13 @@
+@@ -602,4 +707,13 @@ where each line of input produces a line
    \let\pxref = \relax
    \let\settitle = \relax
 +  \let\setchapternewpage = \relax
@@ -393,13 +393,13 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \let\headings = \relax
    \let\include = \relax
    \let\lowersections = \relax
-@@ -610,5 +724,4 @@
+@@ -610,5 +724,4 @@ where each line of input produces a line
    \let\clear = \relax
    \let\item = \relax
 -  \let\message = \relax
  }
  
-@@ -617,10 +730,22 @@
+@@ -617,10 +730,22 @@ where each line of input produces a line
  \def\ignore{\doignore{ignore}}
  
 -% Also ignore @ifinfo, @menu, and @direntry text.
@@ -423,7 +423,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % Ignore text until a line `@end #1'.
  %
-@@ -654,9 +779,10 @@
+@@ -654,9 +779,10 @@ where each line of input produces a line
      \immediate\write16{If you are running Unix TeX 3.0, kill this TeX process.}
      \immediate\write16{  Then upgrade your TeX installation if you can.}
 +    \immediate\write16{  (See ftp://ftp.gnu.ai.mit.edu/pub/gnu/TeX.README.)}
@@ -435,7 +435,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +    \global\warnedobstrue
      \fi
  }
-@@ -734,7 +860,10 @@
+@@ -734,7 +860,10 @@ where each line of input produces a line
  % empty), we can't just use \parsearg; we have to insert a space of our
  % own to delimit the rest of the line, and then take it out again if we
 -% didn't need it.
@@ -448,7 +448,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \parsearg\setxxx}
  \def\setxxx#1{\setyyy#1 \endsetyyy}
  \def\setyyy#1 #2\endsetyyy{%
-@@ -743,6 +872,10 @@
+@@ -743,6 +872,10 @@ where each line of input produces a line
    \else \setzzz{#1}#2\endsetzzz % Remove the trailing space \setxxx inserted.
    \fi
 +  \endgroup
@@ -460,7 +460,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\setzzz#1#2 \endsetzzz{\expandafter\gdef\csname SET#1\endcsname{#2}}
  
  % @clear VAR clears (i.e., unsets) the variable VAR.
-@@ -753,8 +886,14 @@
+@@ -753,8 +886,14 @@ where each line of input produces a line
  % @value{foo} gets the text saved in variable foo.
  %
 -\def\value#1{\expandafter
@@ -479,13 +479,13 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\endgroup}
  
  % @ifset VAR ... @end ifset reads the `...' iff VAR has been defined
-@@ -856,4 +995,5 @@
+@@ -856,4 +995,5 @@ where each line of input produces a line
  \global\let\lastnode=\relax}
  
 +% @refill is a no-op.
  \let\refill=\relax
  
-@@ -870,9 +1010,22 @@
+@@ -870,9 +1010,22 @@ where each line of input produces a line
  }
  
 +% @bye.
@@ -511,7 +511,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  
  \message{fonts,}
-@@ -886,89 +1039,127 @@
+@@ -886,89 +1039,127 @@ where each line of input produces a line
  \let\li = \sf % Sometimes we call it \li, not \sf.
  
 +% We don't need math for this one.
@@ -687,14 +687,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\setfont\ssecsc\scbshape{10}{\magstep1}
  \font\sseci=cmmi12 scaled \magstephalf
  \font\ssecsy=cmsy10 scaled \magstep1
-@@ -977,5 +1168,5 @@
+@@ -977,5 +1168,5 @@ where each line of input produces a line
  
  % Fonts for title page:
 -\font\titlerm = cmbx12 scaled \magstep3
 +\setfont\titlerm\rmbshape{12}{\magstep3}
  \let\authorrm = \secrm
  
-@@ -996,32 +1187,33 @@
+@@ -996,32 +1187,33 @@ where each line of input produces a line
  % of just \STYLE.  We do this so that font changes will continue to work
  % in math mode, where it is the current \fam that is relevant in most
 -% cases, not the current.  Plain TeX does, for example,
@@ -740,7 +740,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \resetmathfonts \setleading{12pt}}
  
  % Set up the default fonts, so we can use them for creating boxes.
-@@ -1033,7 +1225,7 @@
+@@ -1033,7 +1225,7 @@ where each line of input produces a line
  
  % Fonts for short table of contents.
 -\font\shortcontrm=cmr12
@@ -751,7 +751,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\setfont\shortcontsl\slshape{12}{1000}
  
  %% Add scribe-like font environments, plus @l for inline lisp (usually sans
-@@ -1062,11 +1254,19 @@
+@@ -1062,11 +1254,19 @@ where each line of input produces a line
  
  \def\t#1{%
 -  {\tt \nohyphenation \rawbackslash \frenchspacing #1}%
@@ -775,14 +775,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +%\def\key #1{{\ttsl \nohyphenation \uppercase{#1}}\null}
  \def\ctrl #1{{\tt \rawbackslash \hat}#1}
  
-@@ -1097,5 +1297,5 @@
+@@ -1097,5 +1297,5 @@ where each line of input produces a line
  
  % We *must* turn on hyphenation at `-' and `_' in \code.
 -% Otherwise, it is too hard to avoid overful hboxes
 +% Otherwise, it is too hard to avoid overfull hboxes
  % in the Emacs manual, the Library manual, etc.
  
-@@ -1103,9 +1303,10 @@
+@@ -1103,9 +1303,10 @@ where each line of input produces a line
  % both hyphenation at - and hyphenation within words.
  % We must therefore turn them both off (\tclose does that)
 -% and arrange explicitly to hyphenate an a dash.
@@ -794,7 +794,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\catcode`\|=\active
  \global\def\code{\begingroup \catcode`\-=\active \let-\codedash \catcode`\_=\active \let_\codeunder \codex}
  % The following is used by \doprintindex to insure that long function names
-@@ -1113,10 +1314,15 @@
+@@ -1113,10 +1314,15 @@ where each line of input produces a line
  % read from the file, as \entry parses the arguments long before \code is
  % ever called.  -- mycroft
 -\global\def\indexbreaks{\catcode`\-=\active \let-\realdash \catcode`\_=\active \let_\realunder}
@@ -813,7 +813,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\codeunder{\ifusingtt{\normalunderscore\discretionary{}{}{}}{\_}}
  \def\codex #1{\tclose{#1}\endgroup}
  
-@@ -1125,10 +1331,23 @@
+@@ -1125,10 +1331,23 @@ where each line of input produces a line
  % @kbd is like @code, except that if the argument is just one @key command,
  % then @kbd has no effect.
 -
@@ -840,7 +840,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\ifmonospace{\ifdim\fontdimen3\font=0pt }
  
  % Typeset a dimension, e.g., `in' or `pt'.  The only reason for the
-@@ -1140,10 +1359,17 @@
+@@ -1140,10 +1359,17 @@ where each line of input produces a line
  \def\kbd#1{\def\look{#1}\expandafter\kbdfoo\look??\par}
  
 -\def\l#1{{\li #1}\null}		%
@@ -862,14 +862,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  
  \message{page headings,}
-@@ -1160,5 +1386,5 @@
+@@ -1160,5 +1386,5 @@ where each line of input produces a line
  \def\shorttitlepage{\parsearg\shorttitlepagezzz}
  \def\shorttitlepagezzz #1{\begingroup\hbox{}\vskip 1.5in \chaprm \centerline{#1}%
 -	\endgroup\page\hbox{}\page}
 +        \endgroup\page\hbox{}\page}
  
  \def\titlepage{\begingroup \parindent=0pt \textfonts
-@@ -1177,7 +1403,7 @@
+@@ -1177,7 +1403,7 @@ where each line of input produces a line
     \def\title{\parsearg\titlezzz}%
     \def\titlezzz##1{\leftline{\titlefont{##1}}
 -		    % print a rule at the page bottom also.
@@ -880,14 +880,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +                    \vskip4pt \hrule height 4pt width \hsize \vskip4pt}%
     % No rule at page bottom unless we print one at the top with @title.
     \finishedtitlepagetrue
-@@ -1197,5 +1423,5 @@
+@@ -1197,5 +1423,5 @@ where each line of input produces a line
     \def\page{%
        \iffinishedtitlepage\else
 -	 \finishtitlepage
 +         \finishtitlepage
        \fi
        \oldpage
-@@ -1285,12 +1511,13 @@
+@@ -1285,12 +1511,13 @@ where each line of input produces a line
  }% unbind the catcode of @.
  
 -% @headings double	turns headings on for double-sided printing.
@@ -908,13 +908,13 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +% and turned `on' after @end titlepage.
  
  \def\headings #1 {\csname HEADINGS#1\endcsname}
-@@ -1306,5 +1533,4 @@
+@@ -1306,5 +1533,4 @@ where each line of input produces a line
  % edge of all pages.
  \def\HEADINGSdouble{
 -%\pagealignmacro
  \global\pageno=1
  \global\evenfootline={\hfil}
-@@ -1312,9 +1538,11 @@
+@@ -1312,9 +1538,11 @@ where each line of input produces a line
  \global\evenheadline={\line{\folio\hfil\thistitle}}
  \global\oddheadline={\line{\thischapter\hfil\folio}}
 +\global\let\contentsalignmacro = \chapoddpage
@@ -927,52 +927,52 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 -%\pagealignmacro
  \global\pageno=1
  \global\evenfootline={\hfil}
-@@ -1322,4 +1550,5 @@
+@@ -1322,4 +1550,5 @@ where each line of input produces a line
  \global\evenheadline={\line{\thischapter\hfil\folio}}
  \global\oddheadline={\line{\thischapter\hfil\folio}}
 +\global\let\contentsalignmacro = \chappager
  }
  \def\HEADINGSon{\HEADINGSdouble}
-@@ -1332,4 +1561,5 @@
+@@ -1332,4 +1561,5 @@ where each line of input produces a line
  \global\evenheadline={\line{\folio\hfil\thistitle}}
  \global\oddheadline={\line{\thischapter\hfil\folio}}
 +\global\let\contentsalignmacro = \chapoddpage
  }
  
-@@ -1340,4 +1570,5 @@
+@@ -1340,4 +1570,5 @@ where each line of input produces a line
  \global\evenheadline={\line{\thischapter\hfil\folio}}
  \global\oddheadline={\line{\thischapter\hfil\folio}}
 +\global\let\contentsalignmacro = \chappager
  }
  
-@@ -1363,4 +1594,5 @@
+@@ -1363,4 +1594,5 @@ July\or August\or September\or October\o
  \def\settitlezzz #1{\gdef\thistitle{#1}}
  
 +
  \message{tables,}
  
-@@ -1395,5 +1627,5 @@
+@@ -1395,5 +1627,5 @@ July\or August\or September\or October\o
  \newif\ifitemxneedsnegativevskip
  
 -\def\itemxpar{\par\ifitemxneedsnegativevskip\vskip-\parskip\nobreak\fi}
 +\def\itemxpar{\par\ifitemxneedsnegativevskip\nobreak\vskip-\parskip\nobreak\fi}
  
  \def\internalBitem{\smallbreak \parsearg\itemzzz}
-@@ -1502,5 +1734,5 @@
+@@ -1502,5 +1734,5 @@ July\or August\or September\or October\o
  \aboveenvbreak %
  \begingroup %
 -\def\Edescription{\Etable}% Neccessary kludge.
 +\def\Edescription{\Etable}% Necessary kludge.
  \let\itemindex=#1%
  \ifnum 0#3>0 \advance \leftskip by #3\mil \fi %
-@@ -1659,5 +1891,5 @@
+@@ -1659,5 +1891,5 @@ July\or August\or September\or October\o
  \advance\itemno by 1
  {\let\par=\endgraf \smallbreak}%
 -\ifhmode \errmessage{\in hmode at itemizeitem}\fi
 +\ifhmode \errmessage{In hmode at itemizeitem}\fi
  {\parskip=0in \hskip 0pt
  \hbox to 0pt{\hss \itemcontents\hskip \itemmargin}%
-@@ -1666,8 +1898,8 @@
+@@ -1666,8 +1898,8 @@ July\or August\or September\or October\o
  
  % @multitable macros
 -% Amy Hendrickson, 8/18/94
@@ -984,7 +984,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +% Contents of each column will wrap at width given in preamble.  Width
  % can be specified either with sample text given in a template line,
  % or in percent of \hsize, the current width of text on page.
-@@ -1677,24 +1909,34 @@
+@@ -1677,24 +1909,34 @@ July\or August\or September\or October\o
  % To make preamble:
  %
 -% Either define widths of columns in terms of percent of \hsize: 
@@ -1025,7 +1025,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +% @item, @tab, @multitable or @end multitable do not need to be on their
  % own lines, but it will not hurt if they are.
  
-@@ -1703,34 +1945,36 @@
+@@ -1703,34 +1945,36 @@ July\or August\or September\or October\o
  %   @multitable {Column 1 template} {Column 2 template} {Column 3 template}
  %   @item first col stuff @tab second col stuff @tab third col
 -%   @item 
@@ -1084,7 +1084,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\multitablelinespace=0pt
  
  %%%%
-@@ -1738,58 +1982,71 @@
+@@ -1738,58 +1982,71 @@ July\or August\or September\or October\o
  \let\endsetuptable\relax
  \def\xendsetuptable{\endsetuptable}
 -\let\percentofhsize\relax
@@ -1176,7 +1176,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 + %  If a template has been used, we will add \multitablecolspace
   % to the width of each template entry.
   %  If user has set preamble in terms of percent of \hsize
-@@ -1803,18 +2060,56 @@
+@@ -1803,18 +2060,56 @@ July\or August\or September\or October\o
    \else
     % If user has <not> set preamble in terms of percent of \hsize
 -   % we will advance \hsize by \spacebetweencols 
@@ -1242,14 +1242,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  
  \message{indexing,}
-@@ -1830,5 +2125,5 @@
+@@ -1830,5 +2125,5 @@ July\or August\or September\or October\o
  % \fooindex ...rest of line... puts an entry in the index foo.
  % It also defines \fooindfile to be the number of the output channel for
 -% the file that	accumulates this index.  The file's extension is foo.
 +% the file that accumulates this index.  The file's extension is foo.
  % The name of an index should be no more than 2 characters long
  % for the sake of vms.
-@@ -1836,6 +2131,6 @@
+@@ -1836,6 +2131,6 @@ July\or August\or September\or October\o
  \def\newindex #1{
  \expandafter\newwrite \csname#1indfile\endcsname% Define number for output file
 -\openout \csname#1indfile\endcsname \jobname.#1	% Open the file
@@ -1258,7 +1258,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\expandafter\xdef\csname#1index\endcsname{%     % Define \xxxindex
  \noexpand\doindex {#1}}
  }
-@@ -1849,6 +2144,6 @@
+@@ -1849,6 +2144,6 @@ July\or August\or September\or October\o
  \def\newcodeindex #1{
  \expandafter\newwrite \csname#1indfile\endcsname% Define number for output file
 -\openout \csname#1indfile\endcsname \jobname.#1	% Open the file
@@ -1267,21 +1267,21 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\expandafter\xdef\csname#1index\endcsname{%     % Define \xxxindex
  \noexpand\docodeindex {#1}}
  }
-@@ -1861,5 +2156,5 @@
+@@ -1861,5 +2156,5 @@ July\or August\or September\or October\o
  \expandafter\let\expandafter\synindexfoo\expandafter=\csname#2indfile\endcsname
  \expandafter\let\csname#1indfile\endcsname=\synindexfoo
 -\expandafter\xdef\csname#1index\endcsname{%	% Define \xxxindex
 +\expandafter\xdef\csname#1index\endcsname{%     % Define \xxxindex
  \noexpand\doindex {#2}}%
  }
-@@ -1870,5 +2165,5 @@
+@@ -1870,5 +2165,5 @@ July\or August\or September\or October\o
  \expandafter\let\expandafter\synindexfoo\expandafter=\csname#2indfile\endcsname
  \expandafter\let\csname#1indfile\endcsname=\synindexfoo
 -\expandafter\xdef\csname#1index\endcsname{%	% Define \xxxindex
 +\expandafter\xdef\csname#1index\endcsname{%     % Define \xxxindex
  \noexpand\docodeindex {#2}}%
  }
-@@ -1918,8 +2213,13 @@
+@@ -1918,8 +2213,13 @@ July\or August\or September\or October\o
  \def\ss{\realbackslash ss}%
  % Take care of texinfo commands likely to appear in an index entry.
 +% (Must be a way to avoid doing expansion at all, and thus not have to
@@ -1296,14 +1296,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +%\def\rm{\realbackslash rm }%
  \def\sl{\realbackslash sl }%
  \def\sf{\realbackslash sf}%
-@@ -1928,5 +2228,5 @@
+@@ -1928,5 +2228,5 @@ July\or August\or September\or October\o
  \def\less{\realbackslash less}%
  \def\hat{\realbackslash hat}%
 -\def\char{\realbackslash char}%
 +%\def\char{\realbackslash char}%
  \def\TeX{\realbackslash TeX}%
  \def\dots{\realbackslash dots }%
-@@ -1934,9 +2234,12 @@
+@@ -1934,9 +2234,12 @@ July\or August\or September\or October\o
  \def\tclose##1{\realbackslash tclose {##1}}%
  \def\code##1{\realbackslash code {##1}}%
 +\def\dotless##1{\realbackslash dotless {##1}}%
@@ -1317,7 +1317,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\sc##1{\realbackslash sc {##1}}%
  \def\cite##1{\realbackslash cite {##1}}%
  \def\key##1{\realbackslash key {##1}}%
-@@ -1946,6 +2249,13 @@
+@@ -1946,6 +2249,13 @@ July\or August\or September\or October\o
  \def\dfn##1{\realbackslash dfn {##1}}%
  \def\emph##1{\realbackslash emph {##1}}%
 +\unsepspaces
@@ -1331,25 +1331,25 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % \indexnofonts no-ops all font-change commands.
  % This is used when outputting the strings to sort the index by.
-@@ -1956,4 +2266,5 @@
+@@ -1956,4 +2266,5 @@ July\or August\or September\or October\o
  \def\indexnofonts{%
  % Just ignore accents.
 +\let\,=\indexdummyfont
  \let\"=\indexdummyfont
  \let\`=\indexdummyfont
-@@ -1968,4 +2279,5 @@
+@@ -1968,4 +2279,5 @@ July\or August\or September\or October\o
  \let\v=\indexdummyfont
  \let\H=\indexdummyfont
 +\let\dotless=\indexdummyfont
  % Take care of the plain tex special European modified letters.
  \def\oe{oe}%
-@@ -2001,4 +2313,5 @@
+@@ -2001,4 +2313,5 @@ July\or August\or September\or October\o
  \let\TeX=\indexdummytex
  \let\dots=\indexdummydots
 +\def\@{@}%
  }
  
-@@ -2012,24 +2325,39 @@
+@@ -2012,24 +2325,39 @@ July\or August\or September\or October\o
  \let\indexbackslash=0  %overridden during \printindex.
  
 +\let\SETmarginindex=\relax %initialize!
@@ -1408,7 +1408,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +}
  
  \def\dosubind #1#2#3{%
-@@ -2085,32 +2413,14 @@
+@@ -2085,32 +2413,14 @@ July\or August\or September\or October\o
  % Define the macros used in formatting output of the sorted index material.
  
 -% This is what you call to cause a particular index to get printed.
@@ -1449,14 +1449,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \indexbreaks
    %
    % See if the index file exists and is nonempty.
-@@ -2122,5 +2432,5 @@
+@@ -2122,5 +2432,5 @@ July\or August\or September\or October\o
      % there is some text.
      (Index is nonexistent)
 -    \else
 +  \else
      %
      % If the index file exists but is empty, then \openin leaves \ifeof
-@@ -2131,11 +2441,18 @@
+@@ -2131,11 +2441,18 @@ July\or August\or September\or October\o
        (Index is empty)
      \else
 +      % Index files are almost Texinfo source, but we use \ as the escape
@@ -1478,14 +1478,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\endgroup}
  
  % These macros are used by the sorted index file itself.
-@@ -2191,5 +2508,5 @@
+@@ -2191,5 +2508,5 @@ July\or August\or September\or October\o
    % Insert the text of the index entry.  TeX will do line-breaking on it.
    #1%
 -  % The following is kluged to not output a line of dots in the index if
 +  % The following is kludged to not output a line of dots in the index if
    % there are no page numbers.  The next person who breaks this will be
    % cursed by a Unix daemon.
-@@ -2228,20 +2545,35 @@
+@@ -2228,20 +2545,35 @@ July\or August\or September\or October\o
  }}
  
 -%% Define two-column mode, which is used in indexes.
@@ -1530,7 +1530,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \output = {\doublecolumnout}%
    %
    % Change the page size parameters.  We could do this once outside this
-@@ -2249,11 +2581,11 @@
+@@ -2249,11 +2581,11 @@ July\or August\or September\or October\o
    % format, but then we repeat the same computation.  Repeating a couple
    % of assignments once per index is clearly meaningless for the
 -  % execution time, so we may as well do it once.
@@ -1545,7 +1545,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  % as it did when we hard-coded it.
    %
    % We put the result in a separate register, \doublecolumhsize, so we
-@@ -2269,64 +2601,68 @@
+@@ -2269,64 +2601,68 @@ July\or August\or September\or October\o
    % since nobody clobbers \vsize.)
    \vsize = 2\vsize
 -  \doublecolumnpagegoal
@@ -1662,7 +1662,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\opencontents{\openout\contentsfile = \jobname.toc }
  
  % Each @chapter defines this as the name of the chapter.
-@@ -2334,40 +2670,39 @@
+@@ -2334,40 +2670,39 @@ July\or August\or September\or October\o
  
  \def\thischapter{} \def\thissection{}
 -\def\seccheck#1{\if \pageno<0 %
@@ -1736,14 +1736,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \def\dfn##1{\realbackslash dfn{##1}}%
  }
  
-@@ -2448,5 +2783,5 @@
+@@ -2448,5 +2783,5 @@ July\or August\or September\or October\o
  \def\chapterzzz #1{\seccheck{chapter}%
  \secno=0 \subsecno=0 \subsubsecno=0
 -\global\advance \chapno by 1 \message{Chapter \the\chapno}%
 +\global\advance \chapno by 1 \message{\putwordChapter \the\chapno}%
  \chapmacro {#1}{\the\chapno}%
  \gdef\thissection{#1}%
-@@ -2456,5 +2791,6 @@
+@@ -2456,5 +2791,6 @@ July\or August\or September\or October\o
  \xdef\thischapter{\putwordChapter{} \the\chapno: \noexpand\thischaptername}%
  {\chapternofonts%
 -\edef\temp{{\realbackslash chapentry {#1}{\the\chapno}{\noexpand\folio}}}%
@@ -1751,7 +1751,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\edef\temp{{\realbackslash chapentry{\the\toks0}{\the\chapno}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp  %
-@@ -2475,6 +2811,7 @@
+@@ -2475,6 +2811,7 @@ July\or August\or September\or October\o
  \xdef\thischapter{\putwordAppendix{} \appendixletter: \noexpand\thischaptername}%
  {\chapternofonts%
 -\edef\temp{{\realbackslash chapentry
@@ -1761,7 +1761,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  {\putwordAppendix{} \appendixletter}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp  %
-@@ -2485,4 +2822,8 @@
+@@ -2485,4 +2822,8 @@ July\or August\or September\or October\o
  }}
  
 +% @centerchap is like @unnumbered, but the heading is centered.
@@ -1770,7 +1770,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  \outer\def\top{\parsearg\unnumberedyyy}
  \outer\def\unnumbered{\parsearg\unnumberedyyy}
-@@ -2506,5 +2847,6 @@
+@@ -2506,5 +2847,6 @@ July\or August\or September\or October\o
  \gdef\thischapter{#1}\gdef\thissection{#1}%
  {\chapternofonts%
 -\edef\temp{{\realbackslash unnumbchapentry {#1}{\noexpand\folio}}}%
@@ -1778,7 +1778,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\edef\temp{{\realbackslash unnumbchapentry{\the\toks0}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp  %
-@@ -2521,6 +2863,7 @@
+@@ -2521,6 +2863,7 @@ July\or August\or September\or October\o
  \gdef\thissection{#1}\secheading {#1}{\the\chapno}{\the\secno}%
  {\chapternofonts%
 +\toks0 = {#1}%
@@ -1787,14 +1787,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +{\the\toks0}{\the\chapno}{\the\secno}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp %
-@@ -2529,5 +2872,5 @@
+@@ -2529,5 +2872,5 @@ July\or August\or September\or October\o
  }}
  
 -\outer\def\appenixsection{\parsearg\appendixsecyyy}
 +\outer\def\appendixsection{\parsearg\appendixsecyyy}
  \outer\def\appendixsec{\parsearg\appendixsecyyy}
  \def\appendixsecyyy #1{\apphead1{#1}} % normally calls appendixsectionzzz
-@@ -2536,6 +2879,7 @@
+@@ -2536,6 +2879,7 @@ July\or August\or September\or October\o
  \gdef\thissection{#1}\secheading {#1}{\appendixletter}{\the\secno}%
  {\chapternofonts%
 +\toks0 = {#1}%
@@ -1803,7 +1803,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +{\the\toks0}{\appendixletter}{\the\secno}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp %
-@@ -2549,5 +2893,6 @@
+@@ -2549,5 +2893,6 @@ July\or August\or September\or October\o
  \plainsecheading {#1}\gdef\thissection{#1}%
  {\chapternofonts%
 -\edef\temp{{\realbackslash unnumbsecentry{#1}{\noexpand\folio}}}%
@@ -1811,7 +1811,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\edef\temp{{\realbackslash unnumbsecentry{\the\toks0}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp %
-@@ -2562,6 +2907,7 @@
+@@ -2562,6 +2907,7 @@ July\or August\or September\or October\o
  \subsecheading {#1}{\the\chapno}{\the\secno}{\the\subsecno}%
  {\chapternofonts%
 +\toks0 = {#1}%
@@ -1820,7 +1820,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +{\the\toks0}{\the\chapno}{\the\secno}{\the\subsecno}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp %
-@@ -2576,6 +2922,7 @@
+@@ -2576,6 +2922,7 @@ July\or August\or September\or October\o
  \subsecheading {#1}{\appendixletter}{\the\secno}{\the\subsecno}%
  {\chapternofonts%
 +\toks0 = {#1}%
@@ -1829,7 +1829,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +{\the\toks0}{\appendixletter}{\the\secno}{\the\subsecno}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp %
-@@ -2587,7 +2934,8 @@
+@@ -2587,7 +2934,8 @@ July\or August\or September\or October\o
  \def\unnumberedsubsecyyy #1{\unnmhead2{#1}} %normally calls unnumberedsubseczzz
  \def\unnumberedsubseczzz #1{\seccheck{unnumberedsubsec}%
 -\plainsecheading {#1}\gdef\thissection{#1}%
@@ -1840,7 +1840,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\edef\temp{{\realbackslash unnumbsubsecentry{\the\toks0}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp %
-@@ -2603,6 +2951,6 @@
+@@ -2603,6 +2951,6 @@ July\or August\or September\or October\o
    {\the\chapno}{\the\secno}{\the\subsecno}{\the\subsubsecno}%
  {\chapternofonts%
 -\edef\temp{{\realbackslash subsubsecentry %
@@ -1849,7 +1849,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\edef\temp{{\realbackslash subsubsecentry{\the\toks0}
    {\the\chapno}{\the\secno}{\the\subsecno}{\the\subsubsecno}
    {\noexpand\folio}}}%
-@@ -2620,5 +2968,6 @@
+@@ -2620,5 +2968,6 @@ July\or August\or September\or October\o
    {\appendixletter}{\the\secno}{\the\subsecno}{\the\subsubsecno}%
  {\chapternofonts%
 -\edef\temp{{\realbackslash subsubsecentry{#1}%
@@ -1857,7 +1857,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\edef\temp{{\realbackslash subsubsecentry{\the\toks0}%
    {\appendixletter}
    {\the\secno}{\the\subsecno}{\the\subsubsecno}{\noexpand\folio}}}%
-@@ -2632,7 +2981,8 @@
+@@ -2632,7 +2981,8 @@ July\or August\or September\or October\o
  \def\unnumberedsubsubsecyyy #1{\unnmhead3{#1}} %normally unnumberedsubsubseczzz
  \def\unnumberedsubsubseczzz #1{\seccheck{unnumberedsubsubsec}%
 -\plainsecheading {#1}\gdef\thissection{#1}%
@@ -1868,7 +1868,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\edef\temp{{\realbackslash unnumbsubsubsecentry{\the\toks0}{\noexpand\folio}}}%
  \escapechar=`\\%
  \write \contentsfile \temp %
-@@ -2670,8 +3020,8 @@
+@@ -2670,8 +3020,8 @@ July\or August\or September\or October\o
  % NOTE on use of \vbox for chapter headings, section headings, and
  % such:
 -%	1) We use \vbox rather than the earlier \line to permit
@@ -1881,7 +1881,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +%          heading is obnoxious; this forbids it.
  %       3) Likewise, headings look best if no \parindent is used, and
  %          if justification is not attempted.  Hence \raggedright.
-@@ -2691,9 +3041,8 @@
+@@ -2691,9 +3041,8 @@ July\or August\or September\or October\o
                    \rm #1\hfill}}\bigskip \par\penalty 200}
  
 -\def\heading{\parsearg\secheadingi}
@@ -1895,14 +1895,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\subsubheading{\parsearg\plainsubsubsecheading}
  
  % These macros generate a chapter, section, etc. heading only
-@@ -2709,5 +3058,5 @@
+@@ -2709,5 +3058,5 @@ July\or August\or September\or October\o
  % Parameter controlling skip before chapter headings (if needed)
  
 -\newskip \chapheadingskip \chapheadingskip = 30pt plus 8pt minus 4pt
 +\newskip\chapheadingskip
  
  \def\chapbreak{\dobreak \chapheadingskip {-4000}}
-@@ -2718,8 +3067,10 @@
+@@ -2718,8 +3067,10 @@ July\or August\or September\or October\o
  
  \def\CHAPPAGoff{
 +\global\let\contentsalignmacro = \chappager
@@ -1913,13 +1913,13 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\global\let\contentsalignmacro = \chappager
  \global\let\pchapsepmacro=\chappager
  \global\let\pagealignmacro=\chappager
-@@ -2727,4 +3078,5 @@
+@@ -2727,4 +3078,5 @@ July\or August\or September\or October\o
  
  \def\CHAPPAGodd{
 +\global\let\contentsalignmacro = \chapoddpage
  \global\let\pchapsepmacro=\chapoddpage
  \global\let\pagealignmacro=\chapoddpage
-@@ -2735,23 +3087,37 @@
+@@ -2735,23 +3087,37 @@ July\or August\or September\or October\o
  \def\CHAPFplain{
  \global\let\chapmacro=\chfplain
 -\global\let\unnumbchapmacro=\unnchfplain}
@@ -1970,7 +1970,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  \CHAPFplain % The default
  
-@@ -2767,57 +3133,61 @@
+@@ -2767,57 +3133,61 @@ July\or August\or September\or October\o
  }
  
 +\def\centerchfopen #1{%
@@ -2074,7 +2074,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\message{toc printing,}
  % Finish up the main text and prepare to read what we've written
  % to \contentsfile.
-@@ -2825,14 +3195,19 @@
+@@ -2825,14 +3195,19 @@ July\or August\or September\or October\o
  \newskip\contentsrightmargin \contentsrightmargin=1in
  \def\startcontents#1{%
 -   \pagealignmacro
@@ -2097,26 +2097,26 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +      \catcode`\^=7 % to see ^^e4 as \"a etc. juha@piuha.ydi.vtt.fi
        \raggedbottom             % Worry more about breakpoints than the bottom.
        \advance\hsize by -\contentsrightmargin % Don't use the full line length.
-@@ -2858,4 +3233,5 @@
+@@ -2858,4 +3233,5 @@ July\or August\or September\or October\o
        \let\rm=\shortcontrm \let\bf=\shortcontbf \let\sl=\shortcontsl
        \rm
 +      \hyphenpenalty = 10000
        \advance\baselineskip by 1pt % Open it up a little.
        \def\secentry ##1##2##3##4{}
-@@ -2901,5 +3277,5 @@
+@@ -2901,5 +3277,5 @@ July\or August\or September\or October\o
    % widest letter (M) is 1em, at least in the Computer Modern fonts.
    % (This space doesn't include the extra space that gets added after
 -  % the label; that gets put in in \shortchapentry above.)
 +  % the label; that gets put in by \shortchapentry above.)
    \advance\dimen0 by 1.1em
    \hbox to \dimen0{#1\hfil}%
-@@ -2922,5 +3298,4 @@
+@@ -2922,5 +3298,4 @@ July\or August\or September\or October\o
  \def\unnumbsubsubsecentry#1#2{\dosubsubsecentry{#1}{#2}}
  
 -
  % This parameter controls the indentation of the various levels.
  \newdimen\tocindent \tocindent = 3pc
-@@ -2929,13 +3304,13 @@
+@@ -2929,13 +3304,13 @@ July\or August\or September\or October\o
  % page number.
  %
 -% If the toc has to be broken over pages, we would want to be at chapters
@@ -2133,7 +2133,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +   \nobreak\vskip .25\baselineskip plus.1\baselineskip
  }
  
-@@ -2960,7 +3335,8 @@
+@@ -2960,7 +3335,8 @@ July\or August\or September\or October\o
  % of hyphenated-identifiers-that-do-not-fit-on-a-line-and-nothing-else.)
  %
 +% \turnoffactive is for the sake of @" used for umlauts.
@@ -2144,14 +2144,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \entry{\turnoffactive #1}{\turnoffactive #2}%
  \endgroup}
  
-@@ -2986,6 +3362,4 @@
+@@ -2986,6 +3362,4 @@ July\or August\or September\or October\o
  \newbox\equivbox       \newbox\errorbox
  
 -\let\ptexequiv = \equiv
 -
  %{\tentt
  %\global\setbox\dblarrowbox = \hbox to 1em{\hfil$\Rightarrow$\hfil}
-@@ -2998,10 +3372,9 @@
+@@ -2998,10 +3372,9 @@ July\or August\or September\or October\o
  %}
  
 +% @point{}, @result{}, @expansion{}, @print{}, @equiv{}.
@@ -2163,21 +2163,21 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 -
  \def\equiv{\leavevmode\lower.1ex\hbox to 1em{\hfil$\ptexequiv$\hfil}}
  
-@@ -3035,5 +3408,5 @@
+@@ -3035,5 +3408,5 @@ July\or August\or September\or October\o
  \catcode `\^=7 \catcode `\_=8 \catcode `\~=13 \let~=\tie
  \catcode `\%=14
 -\catcode 43=12
 +\catcode 43=12 % plus
  \catcode`\"=12
  \catcode`\==12
-@@ -3043,5 +3416,5 @@
+@@ -3043,5 +3416,5 @@ July\or August\or September\or October\o
  \escapechar=`\\
  %
 -\let\~=\ptextilde
 +\let\,=\ptexcomma
  \let\{=\ptexlbrace
  \let\}=\ptexrbrace
-@@ -3049,8 +3422,9 @@
+@@ -3049,8 +3422,9 @@ July\or August\or September\or October\o
  \let\*=\ptexstar
  \let\dots=\ptexdots
 +\def\endldots{\mathinner{\ldots\ldots\ldots\ldots}}%
@@ -2189,7 +2189,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\let\b=\ptexb \let\c=\ptexc \let\i=\ptexi \let\t=\ptext
  %
  \let\Etex=\endgroup}
-@@ -3111,9 +3485,9 @@
+@@ -3111,9 +3485,9 @@ July\or August\or September\or October\o
  \def\cbr{{\hskip 6pt\circle\char'011}}
  \def\carttop{\hbox to \cartouter{\hskip\lskip
 -	\ctl\leaders\hrule height\circthick\hfil\ctr
@@ -2203,7 +2203,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +        \hskip\rskip}}
  %
  \newskip\lskip\newskip\rskip
-@@ -3121,38 +3495,38 @@
+@@ -3121,38 +3495,38 @@ July\or August\or September\or October\o
  \long\def\cartouche{%
  \begingroup
 -	\lskip=\leftskip \rskip=\rightskip
@@ -2275,7 +2275,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +        \egroup
  \endgroup
  }}
-@@ -3217,6 +3591,5 @@
+@@ -3217,6 +3591,5 @@ July\or August\or September\or October\o
    \let\Esmallexample = \nonfillfinish
    %
 -  % Smaller interline space and fonts for small examples.
@@ -2283,7 +2283,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  % Smaller fonts for small examples.
    \indexfonts \tt
    \rawbackslash % make \ output the \ character from the current font (tt)
-@@ -3307,9 +3680,13 @@
+@@ -3307,9 +3680,13 @@ July\or August\or September\or October\o
  \gdef\functionparens{\boldbrax\let&=\amprm\parencount=0 }
  \gdef\boldbrax{\let(=\opnr\let)=\clnr\let[=\lbrb\let]=\rbrb}
 +% This is used to turn on special parens
@@ -2299,7 +2299,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +}
  %
  % This is the definition of ( when already inside a level of parens.
-@@ -3317,7 +3694,7 @@
+@@ -3317,7 +3694,7 @@ July\or August\or September\or October\o
  %
  \gdef\clrm{% Print a paren in roman if it is taking us back to depth of 0.
 -% also in that case restore the outer-level definition of (.
@@ -2310,7 +2310,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \global\advance \parencount by -1 }
  % If we encounter &foo, then turn on ()-hacking afterwards
  \gdef\amprm#1 {{\rm\&#1}\let(=\oprm \let)=\clrm\ }
-@@ -3327,6 +3704,9 @@
+@@ -3327,6 +3704,9 @@ July\or August\or September\or October\o
  %% These parens (in \boldbrax) actually are a little bolder than the
  %% contained text.  This is especially needed for [ and ]
 -\def\opnr{{\sf\char`\(}} \def\clnr{{\sf\char`\)}} \def\ampnr{\&}
@@ -2322,14 +2322,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\rbrb{{\bf\char`\]}}
  
  % First, defname, which formats the header line itself.
-@@ -3421,5 +3801,5 @@
+@@ -3421,5 +3801,5 @@ July\or August\or September\or October\o
  % This is used for \def{tp,vr}parsebody.  It could probably be used for
  % some of the others, too, with some judicious conditionals.
 -% 
 +%
  \def\parsebodycommon#1#2#3{%
    \begingroup\inENV %
-@@ -3455,15 +3835,14 @@
+@@ -3455,15 +3835,14 @@ July\or August\or September\or October\o
  
  % Fine, but then we have to eventually remove the \empty *and* the
 -% braces (if any).  That's what this does, putting the result in \tptemp.
@@ -2350,14 +2350,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  #1{\removeemptybraces#2\relax}{#3}%
  }%
  
-@@ -3506,5 +3885,5 @@
+@@ -3506,5 +3885,5 @@ July\or August\or September\or October\o
  #1%
  \hyphenchar\tensl=45
 -\ifnum\parencount=0 \else \errmessage{unbalanced parens in @def arguments}\fi%
 +\ifnum\parencount=0 \else \errmessage{Unbalanced parentheses in @def}\fi%
  \interlinepenalty=10000
  \advance\rightskip by 0pt plus 1fil
-@@ -3515,5 +3894,6 @@
+@@ -3515,5 +3894,6 @@ July\or August\or September\or October\o
  % Expand, preventing hyphenation at `-' chars.
  % Note that groups don't affect changes in \hyphenchar.
 -\functionparens
@@ -2365,14 +2365,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\boldbraxnoamp
  \tclose{#1}% avoid \code because of side effects on active chars
  \interlinepenalty=10000
-@@ -3552,5 +3932,5 @@
+@@ -3552,5 +3932,5 @@ July\or August\or September\or October\o
  \def\deftypefunheaderx #1#2 #3\relax{%
  \doind {fn}{\code{#2}}% Make entry in function index
 -\begingroup\defname {\code{#1} #2}{Function}%
 +\begingroup\defname {\defheaderxcond#1\relax$$$#2}{Function}%
  \deftypefunargs {#3}\endgroup %
  \catcode 61=\other % Turn off change made in \defparsebody
-@@ -3561,4 +3941,8 @@
+@@ -3561,4 +3941,8 @@ July\or August\or September\or October\o
  \def\deftypefn{\defmethparsebody\Edeftypefn\deftypefnx\deftypefnheader}
  
 +% \defheaderxcond#1\relax$$$
@@ -2381,20 +2381,20 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % #1 is the classification.  #2 is the data type.  #3 is the name and args.
  \def\deftypefnheader #1#2#3{\deftypefnheaderx{#1}{#2}#3 \relax}
-@@ -3569,5 +3953,5 @@
+@@ -3569,5 +3953,5 @@ July\or August\or September\or October\o
  \normalparens % notably, turn off `&' magic, which prevents
  %               at least some C++ text from working
 -\defname {\code{#2} #3}{#1}%
 +\defname {\defheaderxcond#2\relax$$$#3}{#1}%
  \deftypefunargs {#4}\endgroup %
  \catcode 61=\other % Turn off change made in \defparsebody
-@@ -3602,4 +3986,5 @@
+@@ -3602,4 +3986,5 @@ July\or August\or September\or October\o
  \def\defspecx #1 {\errmessage{@defspecx in invalid context}}
  \def\deftypefnx #1 {\errmessage{@deftypefnx in invalid context}}
 +\def\deftypemethodx #1 {\errmessage{@deftypemethodx in invalid context}}
  \def\deftypeunx #1 {\errmessage{@deftypeunx in invalid context}}
  
-@@ -3617,4 +4002,14 @@
+@@ -3617,4 +4002,14 @@ July\or August\or September\or October\o
  }
  
 +% @deftypemethod foo-class return-type foo-method args
@@ -2409,7 +2409,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % @defmethod == @defop Method
  
-@@ -3694,11 +4089,13 @@
+@@ -3694,11 +4089,13 @@ July\or August\or September\or October\o
  \def\deftypevar{\defvarparsebody\Edeftypevar\deftypevarx\deftypevarheader}
  
 -% #1 is the data type.  #2 is the name.
@@ -2426,7 +2426,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\dovarind#1 #2\relax{\doind{vr}{\code{#1}}}
  
  % @deftypevr {Global Flag} int enable
-@@ -3706,6 +4103,6 @@
+@@ -3706,6 +4103,6 @@ July\or August\or September\or October\o
  \def\deftypevr{\defvrparsebody\Edeftypevr\deftypevrx\deftypevrheader}
  
 -\def\deftypevrheader #1#2#3{\doind {vr}{\code{#3}}%
@@ -2435,13 +2435,13 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\begingroup\defname {\defheaderxcond#2\relax$$$#3}{#1}
  \interlinepenalty=10000
  \endgraf\penalty 10000\vskip -\parskip\penalty 10000
-@@ -3738,4 +4135,5 @@
+@@ -3738,4 +4135,5 @@ July\or August\or September\or October\o
  \def\deftpx #1 {\errmessage{@deftpx in invalid context}}
  
 +
  \message{cross reference,}
  % Define cross-reference macros
-@@ -3745,4 +4143,9 @@
+@@ -3745,4 +4143,9 @@ July\or August\or September\or October\o
  \newif\ifwarnedxrefs  % True if we warned once that they aren't known.
  
 +% @inforef is simple.
@@ -2451,7 +2451,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % \setref{foo} defines a cross-reference point named foo.
  
-@@ -3778,5 +4181,8 @@
+@@ -3778,5 +4181,8 @@ July\or August\or September\or October\o
    \ifdim \wd0 = 0pt
      % No printed node name was explicitly given.
 -    \ifx\SETxref-automatic-section-title\relax %
@@ -2461,14 +2461,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +    \else
        % Use the actual chapter/section title appear inside
        % the square brackets.  Use the real section title if we have it.
-@@ -3787,5 +4193,5 @@
+@@ -3787,5 +4193,5 @@ July\or August\or September\or October\o
          \ifhavexrefs
            % We know the real title if we have the xref values.
 -          \def\printednodename{\refx{#1-title}}%
 +          \def\printednodename{\refx{#1-title}{}}%
          \else
            % Otherwise just copy the Info node name.
-@@ -3793,8 +4199,4 @@
+@@ -3793,8 +4199,4 @@ July\or August\or September\or October\o
          \fi%
        \fi
 -      \def\printednodename{#1-title}%
@@ -2477,14 +2477,14 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 -      \def\printednodename{\ignorespaces #1}%
      \fi
    \fi
-@@ -3824,5 +4226,5 @@
+@@ -3824,5 +4226,5 @@ July\or August\or September\or October\o
  % Use \turnoffactive so that punctuation chars such as underscore
  % work in node names.
 -\def\dosetq #1#2{{\let\folio=0 \turnoffactive%
 +\def\dosetq #1#2{{\let\folio=0 \turnoffactive
  \edef\next{\write\auxfile{\internalsetq {#1}{#2}}}%
  \next}}
-@@ -3893,81 +4295,99 @@
+@@ -3893,81 +4295,99 @@ July\or August\or September\or October\o
  }
  
 -% Read the last existing aux file, if any.  No error if none exists.
@@ -2658,7 +2658,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \openout\auxfile=\jobname.aux
  \endgroup}
  
-@@ -3980,5 +4400,6 @@
+@@ -3980,5 +4400,6 @@ July\or August\or September\or October\o
  % vital for proper filling; pages come out unaligned when you do a
  % pagealignmacro call if that space before the closing brace is
 -% removed.
@@ -2666,7 +2666,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +% space to prevent strange expansion errors.)
  \def\supereject{\par\penalty -20000\footnoteno =0 }
  
-@@ -4009,5 +4430,9 @@
+@@ -4009,5 +4430,9 @@ July\or August\or September\or October\o
  % footnote text as a parameter.  Our footnotes don't need to be so general.
  %
 -\long\gdef\footnotezzz#1{\insert\footins{%
@@ -2677,7 +2677,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\long\gdef\footnotezzz{\insert\footins\bgroup
    % We want to typeset this text as a normal paragraph, even if the
    % footnote reference occurs in (for example) a display environment.
-@@ -4031,6 +4456,11 @@
+@@ -4031,6 +4456,11 @@ July\or August\or September\or October\o
    % provide a place where TeX can split the footnote.
    \footstrut
 -  #1\strut}%
@@ -2690,7 +2690,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\@foot{\strut\egroup}
  
  }%end \catcode `\@=11
-@@ -4105,11 +4535,16 @@
+@@ -4105,11 +4535,16 @@ July\or August\or September\or October\o
  % Set some numeric style parameters, for 8.5 x 11 format.
  
 -%\hsize = 6.5in
@@ -2710,7 +2710,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % Prevent underfull vbox error messages.
  \vbadness=10000
-@@ -4134,28 +4569,26 @@
+@@ -4134,28 +4569,26 @@ July\or August\or September\or October\o
  % Use @smallbook to reset parameters for 7x9.5 format  (or else 7x9.25)
  \def\smallbook{
 -
@@ -2761,7 +2761,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +  \global\def\Esmallexample{\Esmalllisp}
  }
  
-@@ -4180,10 +4613,17 @@
+@@ -4180,10 +4613,17 @@ July\or August\or September\or October\o
  }
  
 +\bindingoffset=0pt
@@ -2782,7 +2782,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 + \global\topskip= #6
   \advance\vsize by \topskip
   \global\voffset= #3
-@@ -4198,7 +4638,18 @@
+@@ -4198,7 +4638,18 @@ July\or August\or September\or October\o
   \global\bindingoffset= #5}
  
 -% This layout is compatible with Latex on A4 paper.
@@ -2804,7 +2804,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\changepagesizes{9.5in}{6.5in}{\hoffset}{\normaloffset}{\bindingoffset}{7mm}}
  
  % Define macros to output various characters with catcode for normal text.
-@@ -4248,12 +4699,5 @@
+@@ -4248,12 +4699,5 @@ July\or August\or September\or October\o
  \def_{\ifusingtt\normalunderscore\_}
  % Subroutine for the previous macro.
 -\def\_{\lvvmode \kern.06em \vbox{\hrule width.3em height.1ex}}
@@ -2818,7 +2818,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +\def\_{\leavevmode \kern.06em \vbox{\hrule width.3em height.1ex}}
  
  \catcode`\|=\active
-@@ -4274,4 +4718,13 @@
+@@ -4274,4 +4718,13 @@ July\or August\or September\or October\o
  \global\def={{\tt \char 61}}}
  
 +\catcode`+=\active
@@ -2832,7 +2832,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  \catcode`\@=0
  
-@@ -4316,4 +4769,8 @@
+@@ -4316,4 +4769,8 @@ July\or August\or September\or October\o
  @let+=@normalplus}
  
 +% Make _ and + \other characters, temporarily.
@@ -2841,7 +2841,7 @@ $NetBSD: patch-bb,v 1.3 2000/12/16 13:54:50 wiz Exp $
 +
  % If a .fmt file is being used, we don't want the `\input texinfo' to show up.
  % That is what \eatinput is for; after that, the `\' should revert to printing
-@@ -4326,6 +4783,9 @@
+@@ -4326,6 +4783,9 @@ July\or August\or September\or October\o
  % the first `\{ in the file would cause an error. This macro tries to fix
  % that, assuming it is called before the first `\' could plausibly occur.
 +% Also back turn on active characters that might appear in the input

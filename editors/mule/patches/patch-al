@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-al,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/lread.c.orig	Mon Sep 20 23:44:46 1999
-+++ src/lread.c	Mon Sep 20 23:45:25 1999
-@@ -86,9 +86,9 @@
+--- src/lread.c.orig	1995-02-17 08:57:05.000000000 +0100
++++ src/lread.c
+@@ -86,9 +86,9 @@ extern int errno;
  
  Lisp_Object Qread_char, Qget_file_char, Qstandard_input, Qcurrent_load_list;
  Lisp_Object Qvariable_documentation, Vvalues, Vstandard_input, Vafter_load_alist;

@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-aj,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/getloadavg.c.orig	Mon Sep 20 23:29:10 1999
-+++ src/getloadavg.c	Mon Sep 20 23:30:54 1999
+--- src/getloadavg.c.orig	1994-10-21 05:20:18.000000000 +0100
++++ src/getloadavg.c
 @@ -64,10 +64,7 @@
  /* Both the Emacs and non-Emacs sections want this.  Some
     configuration files' definitions for the LOAD_AVE_CVT macro (like

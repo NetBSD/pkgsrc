@@ -1,18 +1,16 @@
-$NetBSD: patch-ba,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-ba,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
-*** man/vip.texi.orig	Fri Nov 17 13:58:36 2000
---- man/vip.texi	Fri Nov 17 14:58:20 2000
-***************
-*** 25,30 ****
---- 25,35 ----
-  @setfilename ../info/vip
-  @settitle VIP
-  
-+ @dircategory Editors
-+ @direntry
-+ * VIP: (vip).		An VI-emulation for Emacs.
-+ @end direntry
-+ 
-  @iftex
-  @finalout
-  @end iftex
+--- man/vip.texi.orig	1994-07-17 20:32:29.000000000 +0200
++++ man/vip.texi
+@@ -25,6 +25,11 @@
+ @setfilename ../info/vip
+ @settitle VIP
+ 
++@dircategory Editors
++@direntry
++* VIP: (vip).		An VI-emulation for Emacs.
++@end direntry
++
+ @iftex
+ @finalout
+ @end iftex

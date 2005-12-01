@@ -1,8 +1,8 @@
-$NetBSD: patch-bd,v 1.1 2001/03/18 14:14:24 kei Exp $
+$NetBSD: patch-bd,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/fns.c.orig	Fri Oct 21 13:20:15 1994
-+++ src/fns.c	Sat Mar 17 15:31:28 2001
-@@ -64,7 +64,9 @@
+--- src/fns.c.orig	1994-10-21 05:20:15.000000000 +0100
++++ src/fns.c
+@@ -64,7 +64,9 @@ With argument t, set the random number s
    unsigned long denominator;
    extern long random ();
    extern srandom ();
