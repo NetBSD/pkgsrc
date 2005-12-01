@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 1999/12/28 05:37:28 wiz Exp $
---- configure.bad	Fri Jun 26 02:22:51 1998
-+++ configure	Fri Jun 26 02:23:39 1998
+$NetBSD: patch-ab,v 1.4 2005/12/01 18:29:58 wiz Exp $
+--- build/configure.bad	Fri Jun 26 02:22:51 1998
++++ build/configure	Fri Jun 26 02:23:39 1998
 @@ -1686,10 +1686,8 @@
  		case "$host_os" in
  		bsdi2.1)

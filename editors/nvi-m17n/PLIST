@@ -1,15 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:23:16 zuntum Exp $
-bin/nvi
+@comment $NetBSD: PLIST,v 1.2 2005/12/01 18:29:58 wiz Exp $
 bin/nex
+bin/nvi
+bin/nvi-big5
+bin/nvi-euc-cn
+bin/nvi-euc-jp
+bin/nvi-euc-kr
+bin/nvi-euc-tw
+bin/nvi-hz
+bin/nvi-iso-2022-cn
+bin/nvi-iso-2022-jp
+bin/nvi-iso-2022-kr
+bin/nvi-sjis
 bin/nview
-bin/regular
 bin/qregular
-man/man1/nvi.1
+bin/regular
 man/man1/nex.1
+man/man1/nvi.1
 man/man1/nview.1
 share/vi/README.english
 share/vi/README.japanese
-share/vi/recover
 share/vi/catalog/dutch
 share/vi/catalog/english
 share/vi/catalog/french
@@ -21,6 +30,7 @@ share/vi/perl/forall.pl
 share/vi/perl/make.pl
 share/vi/perl/tk.pl
 share/vi/perl/wc.pl
+share/vi/recover
 share/vi/tcl/errors.tcl
 share/vi/tcl/gnats.tcl
 share/vi/tcl/mailprocs.tcl

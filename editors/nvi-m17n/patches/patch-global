@@ -1,8 +1,8 @@
-$NetBSD: patch-global,v 1.1 2000/05/08 11:52:12 sakamoto Exp $
+$NetBSD: patch-global,v 1.2 2005/12/01 18:29:58 wiz Exp $
 
 diff -NrU2 ../build/Makefile.in ../../nvi-1.79/build/Makefile.in
---- ../build/Makefile.in	Mon May  8 16:05:17 2000
-+++ ../../nvi-1.79/build/Makefile.in	Mon May  8 16:06:15 2000
+--- build/Makefile.in	Mon May  8 16:05:17 2000
++++ build/Makefile.in	Mon May  8 16:06:15 2000
 @@ -4,5 +4,5 @@
  CC=	@CC@
  OPTFLAG=@OPTFLAG@
@@ -11,8 +11,8 @@ diff -NrU2 ../build/Makefile.in ../../nvi-1.79/build/Makefile.in
  LDFLAGS=@LDFLAGS@
  PERL=	@vi_cv_path_perl@
 diff -NrU2 ../common/main.c ../../nvi-1.79/common/main.c
---- ../common/main.c	Sat Oct 12 07:28:28 1996
-+++ ../../nvi-1.79/common/main.c	Mon May  8 16:06:15 2000
+--- common/main.c	Sat Oct 12 07:28:28 1996
++++ ../nvi-1.79/common/main.c	Mon May  8 16:06:15 2000
 @@ -65,4 +65,7 @@
  	u_int flags;
  	int ch, flagchk, lflag, secure, startup, readonly, rval, silent;
@@ -59,8 +59,8 @@ diff -NrU2 ../common/main.c ../../nvi-1.79/common/main.c
  	if (secure)
  		*oargp++ = O_SECURE;
 diff -NrU2 ../common/options.c ../../nvi-1.79/common/options.c
---- ../common/options.c	Mon May  8 16:05:18 2000
-+++ ../../nvi-1.79/common/options.c	Mon May  8 16:20:26 2000
+--- common/options.c	Mon May  8 16:05:18 2000
++++ ../nvi-1.79/common/options.c	Mon May  8 16:20:26 2000
 @@ -129,4 +129,8 @@
  /* O_FLASH	    HPUX */
  	{"flash",	NULL,		OPT_1BOOL,	0},
@@ -79,8 +79,8 @@ diff -NrU2 ../common/options.c ../../nvi-1.79/common/options.c
  #endif
  	{"ht",		O_HARDTABS},		/*     4BSD */
 diff -NrU2 ../docs/USD.doc/vi.man/vi.1 ../../nvi-1.79/docs/USD.doc/vi.man/vi.1
---- ../docs/USD.doc/vi.man/vi.1	Fri Oct 11 10:34:05 1996
-+++ ../../nvi-1.79/docs/USD.doc/vi.man/vi.1	Mon May  8 16:06:15 2000
+--- docs/USD.doc/vi.man/vi.1	Fri Oct 11 10:34:05 1996
++++ ../nvi-1.79/docs/USD.doc/vi.man/vi.1	Mon May  8 16:06:15 2000
 @@ -18,5 +18,5 @@
  .B ex
  [\c
@@ -134,8 +134,8 @@ diff -NrU2 ../docs/USD.doc/vi.man/vi.1 ../../nvi-1.79/docs/USD.doc/vi.man/vi.1
  .TP
  .B "hardtabs, ht [8]"
 diff -NrU2 ../ex/ex.h ../../nvi-1.79/ex/ex.h
---- ../ex/ex.h	Mon May  8 16:05:18 2000
-+++ ../../nvi-1.79/ex/ex.h	Mon May  8 16:06:15 2000
+--- ex/ex.h	Mon May  8 16:05:18 2000
++++ ../nvi-1.79/ex/ex.h	Mon May  8 16:06:15 2000
 @@ -165,4 +165,7 @@
  #define	E_USELASTCMD	0x02000000	/* Use the last command. */
  #define	E_VISEARCH	0x04000000	/* It's really a vi search command. */
@@ -145,8 +145,8 @@ diff -NrU2 ../ex/ex.h ../../nvi-1.79/ex/ex.h
  	u_int32_t flags;		/* Current flags. */
  };
 diff -NrU2 ../ex/ex_cmd.c ../../nvi-1.79/ex/ex_cmd.c
---- ../ex/ex_cmd.c	Wed Oct 23 22:31:01 1996
-+++ ../../nvi-1.79/ex/ex_cmd.c	Mon May  8 16:06:15 2000
+--- ex/ex_cmd.c	Wed Oct 23 22:31:01 1996
++++ ../nvi-1.79/ex/ex_cmd.c	Mon May  8 16:06:15 2000
 @@ -303,4 +303,11 @@
  	    "rew[ind][!]",
  	    "re-edit all the files in the file argument list"},
@@ -160,8 +160,8 @@ diff -NrU2 ../ex/ex_cmd.c ../../nvi-1.79/ex/ex_cmd.c
  /*
   * !!!
 diff -NrU2 ../ex/ex_tag.c ../../nvi-1.79/ex/ex_tag.c
---- ../ex/ex_tag.c	Mon Sep 16 05:02:43 1996
-+++ ../../nvi-1.79/ex/ex_tag.c	Mon May  8 16:06:15 2000
+--- ex/ex_tag.c	Mon Sep 16 05:02:43 1996
++++ ../nvi-1.79/ex/ex_tag.c	Mon May  8 16:06:15 2000
 @@ -47,4 +47,8 @@
  static void	 ctag_file __P((SCR *, TAGF *, char *, char **, size_t *));
  static int	 ctag_search __P((SCR *, char *, size_t, char *));
@@ -335,8 +335,8 @@ diff -NrU2 ../ex/ex_tag.c ../../nvi-1.79/ex/ex_tag.c
  /*
   * ctag_slist --
 diff -NrU2 ../include/ex_def.h ../../nvi-1.79/include/ex_def.h
---- ../include/ex_def.h	Wed Oct 23 22:53:09 1996
-+++ ../../nvi-1.79/include/ex_def.h	Mon May  8 16:06:15 2000
+--- include/ex_def.h	Wed Oct 23 22:53:09 1996
++++ ../nvi-1.79/include/ex_def.h	Mon May  8 16:06:15 2000
 @@ -48,31 +48,32 @@
  #define C_RESIZE 47
  #define C_REWIND 48
@@ -400,8 +400,8 @@ diff -NrU2 ../include/ex_def.h ../../nvi-1.79/include/ex_def.h
 +#define C_Z 77
 +#define C_SUBTILDE 78
 diff -NrU2 ../include/ex_extern.h ../../nvi-1.79/include/ex_extern.h
---- ../include/ex_extern.h	Wed Oct 23 22:53:10 1996
-+++ ../../nvi-1.79/include/ex_extern.h	Mon May  8 16:06:15 2000
+--- include/ex_extern.h	Wed Oct 23 22:53:10 1996
++++ ../nvi-1.79/include/ex_extern.h	Mon May  8 16:06:15 2000
 @@ -90,4 +90,5 @@
  void re_error __P((SCR *, int, regex_t *));
  int ex_tag_first __P((SCR *, char *));
@@ -409,8 +409,8 @@ diff -NrU2 ../include/ex_extern.h ../../nvi-1.79/include/ex_extern.h
  int ex_tag_push __P((SCR *, EXCMD *));
  int ex_tag_next __P((SCR *, EXCMD *));
 diff -NrU2 ../include/options_def.h ../../nvi-1.79/include/options_def.h
---- ../include/options_def.h	Mon May  8 16:05:18 2000
-+++ ../../nvi-1.79/include/options_def.h	Mon May  8 16:24:38 2000
+--- include/options_def.h	Mon May  8 16:05:18 2000
++++ ../nvi-1.79/include/options_def.h	Mon May  8 16:24:38 2000
 @@ -25,65 +25,66 @@
  #define O_FILEENCODING 24
  #define O_FLASH 25
@@ -542,8 +542,8 @@ diff -NrU2 ../include/options_def.h ../../nvi-1.79/include/options_def.h
 +#define O_WRITEANY 88
 +#define O_OPTIONCOUNT 89
 diff -NrU2 ../vi/v_ex.c ../../nvi-1.79/vi/v_ex.c
---- ../vi/v_ex.c	Mon May  8 16:05:18 2000
-+++ ../../nvi-1.79/vi/v_ex.c	Mon May  8 16:06:15 2000
+--- vi/v_ex.c	Mon May  8 16:05:18 2000
++++ ../nvi-1.79/vi/v_ex.c	Mon May  8 16:06:15 2000
 @@ -227,4 +227,9 @@
  	EXCMD cmd;
  
