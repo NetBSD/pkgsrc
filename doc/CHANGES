@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12068 2005/12/01 03:56:01 minskim Exp $
+$NetBSD: CHANGES,v 1.12069 2005/12/01 04:12:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5440,3 +5440,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/pax to 20051108 [minskim 2005-12-01]
 	Added sysutils/detox version 1.2.0rc1 [minskim 2005-12-01]
 	Added sysutils/clex version 3.14 [minskim 2005-12-01]
+	Updated pkgtools/pkglint to 4.47 [rillig 2005-12-01]
