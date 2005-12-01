@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/08/26 06:09:42 reed Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/01 16:41:29 rillig Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -23,7 +23,7 @@ INFO_FILES=		remsync.info sharutils.info
 USE_TOOLS+=		sh:run mktemp:run
 
 CONFIGURE_ARGS+=	--disable-uucode
-CONFIGURE_ENV+=		SH="${TOOLS_SH}"
+CONFIGURE_ENV+=		SH=${TOOLS_SH:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,7 +42,7 @@ CPPFLAGS+=		-D_nl_default_dirname=libintl_nl_default_dirname
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 .endif
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 post-patch:
