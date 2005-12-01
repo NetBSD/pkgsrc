@@ -202,6 +202,7 @@ ogg			Enable Ogg support.
 okinawa_dict	
 openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
+openldap		Enable OpenLDAP support.
 openssl	
 operoverride-verify	Require opers to /invite themselves into a +s or +p channel.
 oss			Enable support for the Open Sound System audio library.
