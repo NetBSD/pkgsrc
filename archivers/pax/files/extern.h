@@ -1,4 +1,4 @@
-/*	$NetBSD: extern.h,v 1.5 2004/06/20 10:11:02 grant Exp $	*/
+/*	$NetBSD: extern.h,v 1.6 2005/12/01 03:00:01 minskim Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -83,13 +83,17 @@ int ar_fow(off_t, off_t *);
 int ar_rev(off_t );
 int ar_next(void);
 void ar_summary(int);
-int ar_dochdir(char *);
+int ar_dochdir(const char *);
 
 /*
  * ar_subs.c
  */
 extern u_long flcnt;
 extern ARCHD archd;
+int updatepath(void);
+int dochdir(const char *);
+int fdochdir(int);
+int domkdir(const char *, mode_t);
 void list(void);
 void extract(void);
 void append(void);
@@ -151,10 +155,11 @@ int bcpio_wr(ARCHD *);
  * file_subs.c
  */
 extern char *gnu_name_string, *gnu_link_string;
+extern size_t gnu_name_length, gnu_link_length;
 extern char *xtmp_name;
-int file_creat(ARCHD *);
+int file_creat(ARCHD *, int);
 void file_close(ARCHD *, int);
-int lnk_creat(ARCHD *);
+int lnk_creat(ARCHD *, int *);
 int cross_lnk(ARCHD *);
 int chk_same(ARCHD *);
 int node_creat(ARCHD *);
@@ -210,6 +215,11 @@ int opt_add(const char *);
 int bad_opt(void);
 int mkpath(char *);
 char *chdname;
+#if !HAVE_NBTOOL_CONFIG_H
+#ifdef HAVE_FCHROOT
+int do_chroot;
+#endif /* HAVE_FCHROOT */
+#endif
 
 /*
  * pat_rep.c

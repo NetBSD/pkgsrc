@@ -1,4 +1,4 @@
-/*	$NetBSD: tables.h,v 1.3 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: tables.h,v 1.4 2005/12/01 03:00:01 minskim Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -77,7 +77,7 @@ typedef struct hrdlnk {
 typedef struct ftm {
 	int		namelen;	/* file name length */
 	time_t		mtime;		/* files last modification time */
-	off_t		seek;		/* loacation in scratch file */
+	off_t		seek;		/* location in scratch file */
 	struct ftm	*fow;
 } FTM;
 
