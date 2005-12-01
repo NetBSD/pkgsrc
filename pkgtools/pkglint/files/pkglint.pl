@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.395 2005/11/30 20:16:15 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.396 2005/12/01 01:19:30 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1966,7 +1966,7 @@ sub checkline_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "ShellWord") {
-		if ($value =~ qr"^([\w_]+)=(([\"']?)\$\{([\w_]+)\}\2)$") {
+		if ($value =~ qr"^([\w_]+)=(([\"']?)\$\{([\w_]+)\}\3)$") {
 			my ($key, $vexpr, undef, $vname) = ($1, $2, $3, $4);
 			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
 			my $fixed_vexpr = "\${${vname}${mod}}";
