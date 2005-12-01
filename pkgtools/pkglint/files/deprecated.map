@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.16 2005/12/01 19:08:15 wiz Exp $
+# $NetBSD: deprecated.map,v 1.17 2005/12/01 19:11:20 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -20,6 +20,7 @@ USE_SASL		Use the PKG_OPTIONS framework (option sasl) instead.
 USE_SASL2		Use the PKG_OPTIONS framework (option sasl) instead.
 USE_SJ3			Use the PKG_OPTIONS framework (option sj3) instead.
 USE_WNN4		Use the PKG_OPTIONS framework (option wnn4) instead.
+USE_XFACE		Use the PKG_OPTIONS framework instead.
 
 # The following entries can be removed after the 2006Q1 branch.
 NO_TOOLS		You can just remove it.
