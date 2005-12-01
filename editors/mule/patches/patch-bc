@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.1 2001/03/18 14:14:24 kei Exp $
+$NetBSD: patch-bc,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/m/alpha.h.orig	Fri Feb 17 16:47:36 1995
-+++ src/m/alpha.h	Sat Mar 17 14:37:23 2001
-@@ -108,7 +108,9 @@
+--- src/m/alpha.h.orig	1995-02-17 08:47:36.000000000 +0100
++++ src/m/alpha.h
+@@ -108,7 +108,9 @@ NOTE-START
     in the file alloca.s should be used.  */
  
  #define HAVE_ALLOCA
@@ -12,7 +12,7 @@ $NetBSD: patch-bc,v 1.1 2001/03/18 14:14:24 kei Exp $
  
  /* Define NO_REMAP if memory segmentation makes it not work well
     to change the boundary between the text section and data section
-@@ -134,7 +136,9 @@
+@@ -134,7 +136,9 @@ NOTE-START
  
  #define START_FILES pre-crt0.o 
  
@@ -22,7 +22,7 @@ $NetBSD: patch-bc,v 1.1 2001/03/18 14:14:24 kei Exp $
  
  #define PNTR_COMPARISON_TYPE unsigned long
  
-@@ -149,7 +153,9 @@
+@@ -149,7 +153,9 @@ extern unsigned long _edata;
  #define DATA_END &_edata
  
  #define ORDINARY_LINK

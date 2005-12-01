@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/12/01 17:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/12/01 18:13:24 wiz Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	2
@@ -40,11 +40,6 @@ MAN1=		coco.1 ctags.1 etags.1 m2ps.1 mule.1
 
 .include "../../mk/x11.buildlink3.mk"
 
-post-patch:
-	@${ECHO_MSG} "===> Applying jumbo patches in info directory"
-	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/info.patch
-	@${RM} -f ${WRKSRC}/info/*.orig
-
 # Fix character mapping for pkgsrc/fonts/intlfonts
 post-install:
 	${SED} \
@@ -53,5 +48,13 @@ post-install:
 		-e 's/jiskan24/j83-48/' \
 		< ${WRKSRC}/etc/CHARSETS > ${PREFIX}/lib/mule/19.28/etc/CHARSETS
 	#diff -u		${WRKSRC}/etc/CHARSETS ${PREFIX}/lib/mule/19.28/etc/CHARSETS
+.for f in info/CCL.orig info/ISO2022.orig info/R2L.orig info/XFONT.orig \
+info/antenews-jp.orig info/canna-jp.orig info/egg-jp-1.orig \
+info/egg-jp-2.orig info/egg-jp.orig info/egg.orig info/kbd-trans.orig \
+info/languages.orig info/m2ps.orig info/mule-jp-1.orig info/mule-jp-2.orig \
+info/mule-jp-3.orig info/mule-jp.orig info/mule.orig info/quail.orig \
+info/terminology.orig
+	${RM} ${PREFIX}/${f}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"

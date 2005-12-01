@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/s/netbsd.h.orig	Thu Oct 12 19:53:15 1995
-+++ src/s/netbsd.h	Sun Sep 19 12:36:05 1999
+--- src/s/netbsd.h.orig	1995-10-12 11:53:15.000000000 +0100
++++ src/s/netbsd.h
 @@ -3,6 +3,10 @@
  /* Get most of the stuff from bsd4.3 */
  #include "bsd4-3.h"

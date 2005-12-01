@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-ag,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/coding.c.orig	Mon Sep 20 23:39:02 1999
-+++ src/coding.c	Mon Sep 20 23:39:41 1999
-@@ -154,7 +154,7 @@
+--- src/coding.c.orig	1996-09-28 02:41:51.000000000 +0200
++++ src/coding.c
+@@ -154,7 +154,7 @@ char code_priority_category[IDX_BIN + 1]
  /* 92.4.3, 92.12.18 by K.Handa */
  Lisp_Object Qcoding_system, Qcoding_system_p, Qnon_nil_coding_system_p;
  Lisp_Object Qeol_type;
