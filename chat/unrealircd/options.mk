@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2005/12/01 18:09:37 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2005/12/01 18:20:09 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
 PKG_OPTIONS_REQUIRED_GROUPS= role
-PKG_OPTIONS_OPTIONAL_GROUPS= role
 PKG_OPTIONS_GROUP.role= leaf hub
 
 PKG_SUPPORTED_OPTIONS=	inet6 nospoof hub leaf ziplinks remoteinc ssl chroot
