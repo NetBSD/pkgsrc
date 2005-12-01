@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.9 2005/12/01 23:11:27 joerg Exp $
+
+--- src/main/util.c.orig	2005-12-01 22:46:34.000000000 +0000
++++ src/main/util.c
+@@ -41,7 +41,7 @@
+ #ifdef HAVE_ALLOCA_H
+ #include <alloca.h>
+ #endif
+-#if !HAVE_DECL_ALLOCA && !defined(__FreeBSD__)
++#if !HAVE_DECL_ALLOCA && !defined(__FreeBSD__) && !defined(__DragonFly__)
+ extern char *alloca(size_t);
+ #endif
+ 
