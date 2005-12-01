@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.40 2005/12/01 18:26:01 wiz Exp $
+# $NetBSD: makevars.map,v 1.41 2005/12/01 19:08:15 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -34,9 +34,7 @@ USE_INET6		YesNo
 USE_INN			Yes
 USE_OPENLDAP		{ YES NO }
 USE_OSS			Yes
-USE_SJ3			{ YES NO }
 USE_SOCKS		{ 4 5 }
-USE_WNN4		{ YES NO }
 USE_XFACE		YesNo
 
 # some other variables, sorted alphabetically
