@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2005/12/01 18:33:48 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2005/12/01 18:46:53 wiz Exp $
 
---- build/Makefile.in.orig	2005-12-01 19:32:57.000000000 +0100
+--- build/Makefile.in.orig	2005-12-01 19:37:32.000000000 +0100
 +++ build/Makefile.in
 @@ -88,9 +88,9 @@ install: all install_common
  	cd $(bindir) && $(chmod) $(emode) `echo vi | sed '$(transform)'`
