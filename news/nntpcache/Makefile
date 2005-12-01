@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/01 20:10:41 wiz Exp $
 
 DISTNAME=		nntpcache-3.0.1
 CATEGORIES=		news
@@ -11,22 +11,11 @@ COMMENT=		NNTP multi-server caching daemon
 
 LICENSE=		fee-based-commercial-use
 
-# enable pgp signed nocem support?
-NNTP_USE_PGP?=		no
-
-.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
-DEPENDS+=		openldap-[0-9]*:../../databases/openldap
-.endif
-
-.if ${NNTP_USE_PGP} ==	yes
-DEPENDS+=		pgp-2.*:../../security/pgp2
-.endif
-
-BUILD_DEFS+=		USE_OPENLDAP NNTP_USE_PGP
+.include "options.mk"
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/spool
-CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+CONFIGURE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 USE_TOOLS+=		gmake
 
 INSTALL_TARGET=		SUBDIRS="cf src filters http doc pgp contrib/newshound contrib/perlnewshound innreport scripts unixauth" \
