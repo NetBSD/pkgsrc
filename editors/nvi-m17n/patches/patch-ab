@@ -1,5 +1,5 @@
-$NetBSD: patch-ab,v 1.5 2005/12/01 18:33:48 wiz Exp $
---- build/configure.orig	2005-12-01 19:32:57.000000000 +0100
+$NetBSD: patch-ab,v 1.6 2005/12/01 18:46:53 wiz Exp $
+--- build/configure.orig	2005-12-01 19:37:32.000000000 +0100
 +++ build/configure
 @@ -1805,10 +1805,8 @@ if test "$vi_cv_canna" = "yes"; then
  		case "$host_os" in
