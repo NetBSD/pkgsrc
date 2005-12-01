@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1769 2005/11/29 22:18:38 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1770 2005/12/01 00:17:05 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -974,8 +974,9 @@ PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 # Now print some error messages that we know we should ignore the pkg
 #
 .  if defined(PKG_FAIL_REASON) || defined(PKG_SKIP_REASON)
+.PHONY: do-check-pkg-fail-or-skip-reason
 fetch checksum extract patch configure all build install package \
-update install-depends:
+update install-depends do-check-pkg-fail-or-skip-reason:
 .    if defined(SKIP_SILENT)
 	@${DO_NADA}
 .    else
@@ -988,6 +989,17 @@ update install-depends:
 .    endif
 .  endif # SKIP
 .endif # !NO_SKIP
+
+.PHONY: do-check-pkg-fail-reason
+do-check-pkg-fail-reason:
+	@${DO_NADA}
+
+# This target should appear as a dependency of every top level target that
+# is intended to be called by the user or by a package different from the
+# current package.
+.if defined(PKG_FAIL_REASON)
+do-check-pkg-fail-reason: do-check-pkg-fail-or-skip-reason
+.endif
 
 # Add these defs to the ones dumped into +BUILD_DEFS
 BUILD_DEFS+=	PKGPATH
@@ -1390,7 +1402,7 @@ do-fetch:
 .PHONY: show-depends-dirs
 .if !target(show-depends-dirs)
 _ALL_DEPENDS=		${DEPENDS} ${BUILD_DEPENDS}
-show-depends-dirs:
+show-depends-dirs: do-check-pkg-fail-reason
 	@dlist="";							\
 	depends=${_ALL_DEPENDS:C/^[^:]*://:O:u:Q};			\
 	for reldir in $$depends; do					\
