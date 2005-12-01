@@ -249,6 +249,7 @@ showlistmodes		Show the modes a channel has set in the /list output.
 shunnotices		Notify a user when they are no longer shunned.
 siliconmotion	
 sis	
+sj3			Use SJ3 for Kana-to-Kanji conversion.
 skey	
 slang			Enable S-Lang support.
 slp	
