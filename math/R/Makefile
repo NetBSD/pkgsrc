@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2005/09/28 20:52:24 rillig Exp $
+# $NetBSD: Makefile,v 1.75 2005/12/01 23:11:26 joerg Exp $
 
 DISTNAME=		R-2.1.1
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -18,6 +19,7 @@ TEST_TARGET=		check
 USE_TOOLS+=		gmake perl:run sed xmkmf
 USE_GNU_READLINE=	# uses callback interface
 USE_LANGUAGES=		c fortran
+USE_LIBTOOL=		yes
 USE_MAKEINFO=		yes
 TEXINFO_REQD=		4.5
 
@@ -84,6 +86,7 @@ CONFIGURE_ARGS+=	--enable-mbcs=no
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
