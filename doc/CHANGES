@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12066 2005/12/01 03:01:10 minskim Exp $
+$NetBSD: CHANGES,v 1.12067 2005/12/01 03:35:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/a2ps to 4.13.0.2nb9 [tonio 2005-11-30]
 	Updated net/arpwatch to 2.1a13 [bouyer 2005-11-30]
 	Updated archivers/pax to 20051108 [minskim 2005-12-01]
+	Added sysutils/detox version 1.2.0rc1 [minskim 2005-12-01]
