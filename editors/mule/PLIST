@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/16 21:34:18 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/12/01 18:12:11 wiz Exp $
 bin/any2ps
 bin/b2m
 bin/coco
@@ -6,9 +6,8 @@ bin/ctags
 bin/emacsclient
 bin/etags
 bin/m2ps
+bin/mule
 bin/mule-19.28
-@exec ln %D/%F %B/mule
-@unexec ${RM} %B/mule
 bin/rcs-checkin
 man/man1/coco.1
 man/man1/ctags.1
