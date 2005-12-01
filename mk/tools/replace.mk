@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.140 2005/12/01 18:25:27 wiz Exp $
+# $NetBSD: replace.mk,v 1.141 2005/12/01 18:38:45 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -873,21 +873,10 @@ _TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-nox11
 # Determine the default Ghostscript package to build based on the
 # PKG_OPTIONS for the current package.
 #
-# XXX There are some legacy variable issues here.  "NO_X11" is undocumented.
-# XXX We preserve it here for backwards-compatibility.
-#
-.  if defined(NO_X11)
-.    if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups))
-_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp-nox11
-.    else
-_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-gnu-nox11
-.    endif
-.  else
-.    if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups))
+.  if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups))
 _TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
-.    else
+.  else
 _TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-gnu
-.    endif
 .  endif
 TOOLS_DEPENDS.ghostscript=	{${_TOOLS_DEP.ghostscript}}>=${GHOSTSCRIPT_REQD}:${_TOOLS_PKGSRCDIR.ghostscript}
 MAKEVARS+=			${TOOLS_DEPENDS.ghostscript}
