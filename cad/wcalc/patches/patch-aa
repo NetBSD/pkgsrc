@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/12/01 23:58:16 dmcmahill Exp $
+
+The "" was getting eaten by the wrapper scripts causing the shared modules
+to not be built.
+
+--- mex-wcalc/mexlink.orig	2005-10-24 12:12:06.000000000 -0400
++++ mex-wcalc/mexlink	2005-11-30 10:43:27.000000000 -0500
+@@ -65,4 +65,4 @@
+ 
+ set -x
+-$LIBTOOL --mode=link $CC -avoid-version -export-dynamic -module -shrext "" -rpath $pkglibexecdir $args
++$LIBTOOL --mode=link $CC -avoid-version -export-dynamic -module -shrext '""' -rpath $pkglibexecdir $args
+ 
