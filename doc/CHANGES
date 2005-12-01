@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12070 2005/12/01 06:46:54 martti Exp $
+$NetBSD: CHANGES,v 1.12071 2005/12/01 13:44:36 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5442,3 +5442,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sysutils/clex version 3.14 [minskim 2005-12-01]
 	Updated pkgtools/pkglint to 4.47 [rillig 2005-12-01]
 	Updated mail/postfix to 2.2.6 [martti 2005-12-01]
+	Updated pkgtools/pkglint to 4.49 [rillig 2005-12-01]
