@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.39 2005/11/27 21:18:43 rillig Exp $
+# $NetBSD: makevars.map,v 1.40 2005/12/01 18:26:01 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -30,14 +30,10 @@ EXTRACT_USING_PAX	Yes
 SETGIDGAME		YesNo
 
 USE_CRYPTO		{ YES NO }
-USE_CUPS		Yes
-USE_I586		YesNo
 USE_INET6		YesNo
 USE_INN			Yes
 USE_OPENLDAP		{ YES NO }
 USE_OSS			Yes
-USE_SASL		{ YES NO }
-USE_SASL2		{ YES NO }
 USE_SJ3			{ YES NO }
 USE_SOCKS		{ 4 5 }
 USE_WNN4		{ YES NO }
