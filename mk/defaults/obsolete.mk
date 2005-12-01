@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.22 2005/12/01 20:11:52 wiz Exp $
+# $NetBSD: obsolete.mk,v 1.23 2005/12/01 20:21:10 wiz Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -36,7 +36,6 @@ PKG_OPTIONS_LEGACY_OPTS+=	postgresql73:pgsql
 PKG_OPTIONS_LEGACY_OPTS+=	postgresql74:pgsql
 
 PKG_OPTIONS_LEGACY_VARS+=	USE_INET6:inet6
-PKG_OPTIONS_LEGACY_VARS+=	USE_RSAREF2:rsaref
 
 # remove after 2005Q4
 PKG_OPTIONS_LEGACY_VARS+=	USE_CANNA:canna
@@ -44,6 +43,7 @@ PKG_OPTIONS_LEGACY_VARS+=	USE_CUPS:cups
 PKG_OPTIONS_LEGACY_VARS+=	USE_I586:i586
 PKG_OPTIONS_LEGACY_VARS+=	USE_OPENLDAP:ldap
 PKG_OPTIONS_LEGACY_VARS+=	USE_OSS:oss
+PKG_OPTIONS_LEGACY_VARS+=	USE_RSAREF2:rsaref
 PKG_OPTIONS_LEGACY_VARS+=	USE_SASL:sasl
 PKG_OPTIONS_LEGACY_VARS+=	USE_SASL2:sasl
 PKG_OPTIONS_LEGACY_VARS+=	USE_SJ3:sj3
