@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.404 2005/12/01 14:31:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.405 2005/12/01 15:21:56 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1079,6 +1079,20 @@ sub checkperms($) {
 	}
 }
 
+sub resolve_relative_path($) {
+	my ($relpath) = @_;
+
+	$relpath =~ s,\$\{\.CURDIR\},.,;
+	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,;
+	$relpath =~ s,\$\{SUSE_DIR_PREFIX\},suse91,;
+	$relpath =~ s,\$\{PYPKGSRCDIR\},../../lang/python23,;
+	if (defined($pkgdir)) {
+		$relpath =~ s,\$\{PKGDIR\},$pkgdir,g;
+	}
+
+	return $relpath;
+}
+
 #
 # Subroutines to check a single line.
 #
@@ -1149,14 +1163,12 @@ sub checkline_rcsid($$) {
 
 sub checkline_relative_path($$) {
 	my ($line, $path) = @_;
-	my ($fname);
 
 	if (!$is_wip && $path =~ qr"/wip/") {
 		$line->log_error("A pkgsrc package must not depend on any outside package.");
 	}
-	($fname = "${current_dir}/${path}") =~ s/^\.\.\/\.\.\//${pkgsrcdir}\//;
-	$fname =~ s,\$\{\.CURDIR\},.,;
-	if (!-d $fname && !-f $fname) {
+	$path = resolve_relative_path($path);
+	if ($path !~ regex_unresolved && !-e "${current_dir}/${path}") {
 		$line->log_error("\"${path}\" does not exist.");
 	}
 }
@@ -1605,13 +1617,9 @@ sub readmakefile($$$$) {
 		# try to get any included file
 		my $is_include_line = false;
 		if ($text =~ qr"^\.\s*include\s+\"(.*)\"$") {
-			$includefile = $1;
-			$includefile =~ s/\$\{.CURDIR\}/./;
+			$includefile = resolve_relative_path($1);
 			if ($includefile =~ regex_unresolved) {
-				$includefile =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,g;
-				$includefile =~ s,\$\{SUSE_DIR_PREFIX\},suse91,g;
-				$includefile =~ s,\$\{PYPKGSRCDIR\},../../lang/python23,g;
-				if ($file !~ qr"/mk/" && $includefile =~ regex_unresolved) {
+				if ($file !~ qr"/mk/") {
 					$line->log_warning("Skipping include file \"${includefile}\". This may result in false warnings.");
 				}
 
@@ -2795,12 +2803,7 @@ sub expand_variable($$) {
 		return undef;
 	}
 
-	$value =~ s,\$\{\.CURDIR\},.,g;
-	$value =~ s,\$\{PKGSRCDIR\},../..,g;
-	$value =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,g;
-	if (defined($pkgdir)) {
-		$value =~ s,\$\{PKGDIR\},$pkgdir,g;
-	}
+	$value = resolve_relative_path($value);
 	if ($value =~ regex_unresolved) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "[expand_variable] The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
 	}
