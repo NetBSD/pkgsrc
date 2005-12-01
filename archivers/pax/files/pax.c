@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.c,v 1.7 2004/08/21 03:28:56 jlam Exp $	*/
+/*	$NetBSD: pax.c,v 1.8 2005/12/01 03:00:01 minskim Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -50,7 +50,7 @@ __COPYRIGHT("@(#) Copyright (c) 1992, 1993\n\
 #if 0
 static char sccsid[] = "@(#)pax.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: pax.c,v 1.7 2004/08/21 03:28:56 jlam Exp $");
+__RCSID("$NetBSD: pax.c,v 1.8 2005/12/01 03:00:01 minskim Exp $");
 #endif
 #endif /* not lint */
 
@@ -107,7 +107,7 @@ static int gen_init(void);
 int	act = ERROR;		/* read/write/append/copy */
 FSUB	*frmt = NULL;		/* archive format type */
 int	cflag;			/* match all EXCEPT pattern/file */
-int	cwdfd;			/* starting cwd */
+int	cwdfd = -1;		/* starting cwd */
 int	dflag;			/* directory member match only  */
 int	iflag;			/* interactive file/archive rename */
 int	jflag;			/* pass through bzip2 */
@@ -280,6 +280,17 @@ main(int argc, char **argv)
 	listf = stderr;
 
 	/*
+	 * parse options, determine operational mode
+	 */
+	options(argc, argv);
+
+	/*
+	 * general init
+	 */
+	if ((gen_init() < 0) || (tty_init() < 0))
+		return(exit_val);
+
+	/*
 	 * Keep a reference to cwd, so we can always come back home.
 	 */
 	cwdfd = open(".", O_RDONLY);
@@ -287,6 +298,8 @@ main(int argc, char **argv)
 		syswarn(0, errno, "Can't open current working directory.");
 		return(exit_val);
 	}
+	if (updatepath() == -1)
+		return(exit_val);
 
 	/*
 	 * Where should we put temporary files?
@@ -305,13 +318,6 @@ main(int argc, char **argv)
 		memcpy(tempfile, tmpdir, tdlen);
 	tempbase = tempfile + tdlen;
 	*tempbase++ = '/';
-
-	/*
-	 * parse options, determine operational mode, general init
-	 */
-	options(argc, argv);
-	if ((gen_init() < 0) || (tty_init() < 0))
-		return(exit_val);
 
 	(void)time(&starttime);
 #ifdef SIGINFO

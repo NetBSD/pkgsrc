@@ -17,6 +17,9 @@
 /* Define to 1 if you have the <err.h> header file. */
 #undef HAVE_ERR_H
 
+/* Define to 1 if you have the `fchroot' function. */
+#undef HAVE_FCHROOT
+
 /* Define to 1 if you have the <fnctl.h> header file. */
 #undef HAVE_FNCTL_H
 

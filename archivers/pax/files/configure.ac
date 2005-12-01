@@ -30,7 +30,7 @@ AH_BOTTOM([/* Define to 1 if the user- and root-changeable masks were detected *
 ])
 
 # Checks for library functions.
-AC_CHECK_FUNCS([lutimes])
+AC_CHECK_FUNCS([fchroot lutimes])
 AC_CHECK_FUNCS([getrlimit setrlimit])
 
 AC_CONFIG_FILES([Makefile])
