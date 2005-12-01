@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2005/11/09 02:40:22 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.37 2005/12/01 19:17:54 wiz Exp $
 #
 # This Makefile.common is included by:
 #
@@ -27,18 +27,22 @@ PLIST_SRC?=		${.CURDIR}/../xlockmore/PLIST
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.xlockmore
-PKG_SUPPORTED_OPTIONS=  xlockmore-allow-root xlockmore-dpms
-PKG_SUGGESTED_OPTIONS=  xlockmore-allow-root xlockmore-dpms
+.include "../../mk/bsd.prefs.mk"
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xlockmore
+PKG_SUPPORTED_OPTIONS=	xlockmore-allow-root xlockmore-dpms
+.if ${OPSYS} == "NetBSD"
+PKG_SUPPORTED_OPTIONS+=	oss
+.endif
+PKG_SUGGESTED_OPTIONS=	xlockmore-allow-root xlockmore-dpms
 PKG_OPTIONS_LEGACY_VARS+=XLOCK_DISABLE_ALLOW_ROOT:-xlockmore-allow-root
 PKG_OPTIONS_LEGACY_VARS+=XLOCK_NO_DPMS:-xlockmore-dpms
+
 .include "../../mk/bsd.options.mk"
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		xmkmf
 USE_X11BASE=		YES
-
-.include "../../mk/bsd.prefs.mk"
 
 XLOCK_SOUNDDIR=		${PREFIX}/lib/X11/xlock/sounds
 XLOCK_MODULEDIR=	${PREFIX}/lib/X11/xlock/modules
@@ -56,7 +60,7 @@ CONFIGURE_ARGS+=        --without-nas
 CONFIGURE_ARGS+=        --without-gtk
 
 .if ${OPSYS} == "NetBSD"
-.  if defined(USE_OSS)
+.if !empty(PKG_OPTIONS:Moss)
 .    include "../../audio/oss/buildlink3.mk"
 XLOCK_AUDIOPLAY?=	${BUILDLINK_PREFIX.oss}/bin/ossplay
 .  else
