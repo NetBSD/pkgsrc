@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.45 2005/11/16 13:53:51 joerg Exp $
+# $NetBSD: bootstrap,v 1.46 2005/12/01 03:03:51 minskim Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -35,7 +35,7 @@
 #
 #set -x
 
-BOOTSTRAP_VERSION=20050419
+BOOTSTRAP_VERSION=20051201
 
 ignorecasecheck=no
 ignoreusercheck=no
