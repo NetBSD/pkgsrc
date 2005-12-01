@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.1 2002/11/29 00:24:48 kei Exp $
+$NetBSD: patch-be,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/config.h.in.orig	Fri Nov 29 01:35:25 2002
-+++ src/config.h.in	Fri Nov 29 01:35:48 2002
-@@ -177,7 +177,7 @@
+--- src/config.h.in.orig	1995-07-17 03:37:51.000000000 +0200
++++ src/config.h.in
+@@ -177,7 +177,7 @@ and this notice must be preserved on all
  
  /* Define if you have the ANSI `strerror' function.
     Otherwise you must have the variable `char *sys_errlist[]'.  */

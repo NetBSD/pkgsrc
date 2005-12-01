@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-ai,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/floatfns.c.orig	Mon Sep 20 23:43:32 1999
-+++ src/floatfns.c	Mon Sep 20 23:43:41 1999
-@@ -49,7 +49,7 @@
+--- src/floatfns.c.orig	1995-02-17 08:47:39.000000000 +0100
++++ src/floatfns.c
+@@ -49,7 +49,7 @@ the Free Software Foundation, 675 Mass A
  #include "lisp.h"
  #include "syssignal.h"
  
