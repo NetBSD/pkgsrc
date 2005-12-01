@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2005/12/01 19:02:45 joerg Exp $
+
+--- src/lib/runtime/gr_error_handler.cc.orig	2005-12-01 18:18:08.000000000 +0000
++++ src/lib/runtime/gr_error_handler.cc
+@@ -48,6 +48,10 @@
+ #include <assert.h>
+ #include <stdexcept>
+ 
++#ifdef HAVE_UNISTD_H
++#include <unistd.h>
++#endif
++
+ static gr_error_handler	*s_default_handler = 0;
+ static gr_error_handler *s_silent_handler = 0;
+ 
