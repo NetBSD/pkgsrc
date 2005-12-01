@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1 2005/12/01 19:02:45 joerg Exp $
+
+--- src/lib/runtime/gr_dispatcher.cc.orig	2005-12-01 18:16:32.000000000 +0000
++++ src/lib/runtime/gr_dispatcher.cc
+@@ -29,18 +29,17 @@
+ #include <errno.h>
+ 
+ #ifdef HAVE_SELECT
++#  ifdef HAVE_SYS_TIME_H
++#    include <sys/time.h>
++#  endif
+ #  ifdef HAVE_SYS_SELECT_H
+ #    include <sys/select.h>
+-#  else
+-#    ifdef HAVE_SYS_TIME_H
+-#      include <sys/time.h>
+-#    endif
+-#    ifdef HAVE_SYS_TYPES_H
+-#      include <sys/types.h>
+-#    endif
+-#    ifdef HAVE_UNISTD_H
+-#      include <unistd.h>
+-#    endif
++#  endif
++#  ifdef HAVE_SYS_TYPES_H
++#    include <sys/types.h>
++#  endif
++#  ifdef HAVE_UNISTD_H
++#    include <unistd.h>
+ #  endif
+ #endif
+ 
