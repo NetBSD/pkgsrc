@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.397 2005/12/01 01:45:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.398 2005/12/01 03:10:16 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2579,23 +2579,16 @@ sub checklines_package_Makefile($) {
 
 		} elsif ($text =~ regex_shellcmd) {
 			my ($shellcmd) = ($1);
+			my ($rest, $state);
 
-			# TODO: parse the shell command correctly
-
-			if ($shellcmd =~ qr"\$\{MKDIR\}[^&;|]*\$\{PREFIX\}/[/0-9a-zA-Z\${}]*") {
-				$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of MKDIR.");
-				$line->explain(
-					"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
-					"INSTALL_DATA_DIR, INSTALL_MAN_DIR.");
-			}
-
-			if ($shellcmd =~ qr"\$\{INSTALL\}([^&;|]*)") {
-				my ($args) = ($1);
-
-				if ($args =~ qr"-d" && $args !~ qr"-[ogm]") {
-					$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of \${INSTALL}${args}.");
-				}
-			}
+			use constant SCST_START		=>  0;
+			use constant SCST_INSTALL	=> 10;
+			use constant SCST_INSTALL_D	=> 11;
+			use constant SCST_MKDIR		=> 20;
+			use constant SCST_PAX		=> 30;
+			use constant SCST_PAX_S		=> 31;
+			use constant SCST_SED		=> 40;
+			use constant SCST_SED_E		=> 41;
 
 			if ($shellcmd =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
 				my ($mkdir_cmd) = ($1);
@@ -2603,11 +2596,73 @@ sub checklines_package_Makefile($) {
 				$line->log_note("You don't need to use \"-\" before ${mkdir_cmd}.");
 			}
 
-			$line->log_debug("ShellCmd: $shellcmd");
-			while ($shellcmd =~ s/^$regex_shellword//) {
-				$line->log_debug("ShellWord: $1");
+			$rest = $shellcmd;
+			$state = SCST_START;
+			while ($rest =~ s/^$regex_shellword//) {
+				my ($shellword) = ($1);
+
+				#
+				# Actions associated with the current state
+				# and the symbol on the "input tape".
+				#
+
+				if (($state != SCST_PAX_S && $state != SCST_SED_E) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
+					$line->log_warning("Found absolute pathname: ${sw}");
+					$line->explain(
+						"Absolute pathnames are often an indicator for unportable code. As"
+						"pkgsrc aims to be a portable system, absolute pathnames should be",
+						"avoided whenever possible.");
+				}
+
+				if (($state == SCST_INSTALL_D || $state == SCST_MKDIR) && $shellword =~ qr"^\$\{PREFIX\}/") {
+					$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of "
+						. (($state == SCST_MKDIR) ? "\${MKDIR}" : "\${INSTALL} -d")
+						. ".");
+					$line->explain(
+						"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
+						"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
+				}
+
+				#
+				# State transition.
+				#
+
+				if ($shellword =~ qr"^[;&\|]+$") {
+					$state = SCST_START;
+
+				} elsif ($state == SCST_START) {
+					if ($shellword eq "\${INSTALL}") {
+						$state = SCST_INSTALL;
+					} elsif ($shellword eq "\${MKDIR}") {
+						$state = SCST_MKDIR;
+					} elsif ($shellword eq "\${PAX}") {
+						$state = SCST_PAX;
+					} elsif ($shellword eq "\${SED}") {
+						$state = SCST_SED;
+					}
+
+				} elsif ($state == SCST_INSTALL && $shellword eq "-d") {
+					$state = SCST_INSTALL_D;
+
+				} elsif (($state == SCST_INSTALL || $state == SCST_INSTALL_D) && $shellword =~ qr"^-[ogm]$") {
+					$state = SCST_START;
+
+				} elsif ($state == SCST_PAX && $shellword eq "-s") {
+					$state = SCST_PAX_S;
+
+				} elsif ($state == SCST_PAX_S) {
+					$state = SCST_PAX;
+
+				} elsif ($state == SCST_SED && $shellword eq "-e") {
+					$state = SCST_SED_E;
+
+				} elsif ($state == SCST_SED_E) {
+					$state = SCST_SED;
+
+				}
 			}
-			if ($shellcmd !~ qr"^\s*$") {
+
+			if ($rest !~ qr"^\s*$") {
 				$line->log_warning("Invalid shell word \"${shellcmd}\".");
 			}
 		}
