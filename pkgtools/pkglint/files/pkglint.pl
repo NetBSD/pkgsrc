@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.398 2005/12/01 03:10:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.399 2005/12/01 03:12:09 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2607,9 +2607,9 @@ sub checklines_package_Makefile($) {
 				#
 
 				if (($state != SCST_PAX_S && $state != SCST_SED_E) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
-					$line->log_warning("Found absolute pathname: ${sw}");
+					$line->log_warning("Found absolute pathname: ${shellword}");
 					$line->explain(
-						"Absolute pathnames are often an indicator for unportable code. As"
+						"Absolute pathnames are often an indicator for unportable code. As",
 						"pkgsrc aims to be a portable system, absolute pathnames should be",
 						"avoided whenever possible.");
 				}
