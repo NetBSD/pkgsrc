@@ -1,4 +1,4 @@
-/*	$NetBSD: file_subs.c,v 1.10 2004/08/21 04:20:50 jlam Exp $	*/
+/*	$NetBSD: file_subs.c,v 1.11 2005/12/01 03:00:01 minskim Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)file_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: file_subs.c,v 1.10 2004/08/21 04:20:50 jlam Exp $");
+__RCSID("$NetBSD: file_subs.c,v 1.11 2005/12/01 03:00:01 minskim Exp $");
 #endif
 #endif /* not lint */
 
@@ -122,7 +122,7 @@ static int warn_broken;
  */
 
 int
-file_creat(ARCHD *arcn)
+file_creat(ARCHD *arcn, int write_to_hardlink)
 {
 	int fd = -1;
 	int oerrno;
@@ -142,6 +142,19 @@ file_creat(ARCHD *arcn)
 		}
 		return -1;
 	}
+
+	/*
+	 * In "cpio" archives it's usually the last record of a set of
+	 * hardlinks which includes the contents of the file. We cannot
+	 * use a tempory file in that case because we couldn't link it
+	 * with the existing other hardlinks after restoring the contents
+	 * to it. And it's also useless to create the hardlink under a
+	 * temporary name because the other hardlinks would have partial
+	 * contents while restoring.
+	 */
+	if (write_to_hardlink)
+		return (open(arcn->name, O_TRUNC | O_EXCL | O_RDWR, 0));
+	
 	/*
 	 * Create a temporary file name so that the file doesn't have partial
 	 * contents while restoring.
@@ -151,7 +164,7 @@ file_creat(ARCHD *arcn)
 		syswarn(1, errno, "Cannot malloc %d bytes", arcn->nlen + 8);
 		return(-1);
 	}
-	if (xtmp_name)
+	if (xtmp_name != NULL)
 		abort();
 	xtmp_name = arcn->tmp_name;
 
@@ -191,13 +204,17 @@ file_creat(ARCHD *arcn)
 void
 file_close(ARCHD *arcn, int fd)
 {
-	int res = 0;
+	char *tmp_name;
+	int res;
 
 	if (fd < 0)
 		return;
+
+	tmp_name = (arcn->tmp_name != NULL) ? arcn->tmp_name : arcn->name;
+
 	if (close(fd) < 0)
 		syswarn(0, errno, "Cannot close file descriptor on %s",
-		    arcn->tmp_name);
+		    tmp_name);
 
 	/*
 	 * set owner/groups first as this may strip off mode bits we want
@@ -205,7 +222,9 @@ file_close(ARCHD *arcn, int fd)
 	 * modification times.
 	 */
 	if (pids)
-		res = set_ids(arcn->tmp_name, arcn->sb.st_uid, arcn->sb.st_gid);
+		res = set_ids(tmp_name, arcn->sb.st_uid, arcn->sb.st_gid);
+	else
+		res = 0;
 
 	/*
 	 * IMPORTANT SECURITY NOTE:
@@ -215,19 +234,24 @@ file_close(ARCHD *arcn, int fd)
 	if (!pmode || res)
 		arcn->sb.st_mode &= ~SETBITS(0);
 	if (pmode)
-		set_pmode(arcn->tmp_name, arcn->sb.st_mode);
+		set_pmode(tmp_name, arcn->sb.st_mode);
 	else
-		set_pmode(arcn->tmp_name, arcn->sb.st_mode & FILEBITS(0));
+		set_pmode(tmp_name, arcn->sb.st_mode & FILEBITS(0));
 	if (patime || pmtime)
-		set_ftime(arcn->tmp_name, arcn->sb.st_mtime, arcn->sb.st_atime, 0);
+		set_ftime(tmp_name, arcn->sb.st_mtime, arcn->sb.st_atime, 0);
+
+	/* Did we write directly to the target file? */
+	if (arcn->tmp_name == NULL)
+		return;
+
 	/*
 	 * Finally, now the temp file is fully instantiated rename it to
 	 * the desired file name.
 	 */
-	if (rename(arcn->tmp_name, arcn->name) < 0) {
+	if (rename(tmp_name, arcn->name) < 0) {
 		syswarn(0, errno, "Cannot rename %s to %s",
-		    arcn->tmp_name, arcn->name);
-		(void)unlink(arcn->tmp_name);
+		    tmp_name, arcn->name);
+		(void)unlink(tmp_name);
 	}
 
 #if HAVE_FILE_FLAGS
@@ -249,12 +273,21 @@ file_close(ARCHD *arcn, int fd)
  */
 
 int
-lnk_creat(ARCHD *arcn)
+lnk_creat(ARCHD *arcn, int *payload)
 {
 	struct stat sb;
 
 	/*
-	 * we may be running as root, so we have to be sure that link target
+	 * Check if this hardlink carries the "payload". In "cpio" archives
+	 * it's usually the last record of a set of hardlinks which includes
+	 * the contents of the file.
+	 *
+	 */
+	*payload = S_ISREG(arcn->sb.st_mode) &&
+	    (arcn->sb.st_size > 0) && (arcn->sb.st_size <= arcn->skip);
+
+	/*
+	 * We may be running as root, so we have to be sure that link target
 	 * is not a directory, so we lstat and check
 	 */
 	if (lstat(arcn->ln_name, &sb) < 0) {
@@ -461,8 +494,7 @@ node_creat(ARCHD *arcn)
 					nm = target;
 				}
 			}
-			res = mkdir(nm, file_mode);
-
+			res = domkdir(nm, file_mode);
 badlink:
 			if (ign)
 				res = 0;
@@ -717,7 +749,7 @@ chk_path(char *name, uid_t st_uid, gid_t st_gid)
 		 * the path fails at this point, see if we can create the
 		 * needed directory and continue on
 		 */
-		if (mkdir(name, S_IRWXU | S_IRWXG | S_IRWXO) < 0) {
+		if (domkdir(name, S_IRWXU | S_IRWXG | S_IRWXO) == -1) {
 			*spt = '/';
 			retval = -1;
 			break;
@@ -747,7 +779,14 @@ chk_path(char *name, uid_t st_uid, gid_t st_gid)
 		*(spt++) = '/';
 		continue;
 	}
-	return(retval);
+	/*
+	 * We perform one final check here, because if someone else
+	 * created the directory in parallel with us, we might return
+	 * the wrong error code, even if the directory exists now.
+	 */
+	if (retval == -1 && stat(name, &sb) == 0 && S_ISDIR(sb.st_mode))
+		retval = 0;
+	return retval;
 }
 
 /*
@@ -914,6 +953,7 @@ file_write(int fd, char *str, int cnt, int *rem, int *isempt, int sz,
 	int wcnt;
 	char *st = str;
 	char **strp;
+	size_t *lenp;
 
 	/*
 	 * while we have data to process
@@ -973,26 +1013,29 @@ file_write(int fd, char *str, int cnt, int *rem, int *isempt, int sz,
 		 * have non-zero data in this file system block, have to write
 		 */
 		switch (fd) {
-		case -1:
+		case -PAX_GLF:
 			strp = &gnu_name_string;
+			lenp = &gnu_name_length;
 			break;
-		case -2:
+		case -PAX_GLL:
 			strp = &gnu_link_string;
+			lenp = &gnu_link_length;
 			break;
 		default:
 			strp = NULL;
+			lenp = NULL;
 			break;
 		}
 		if (strp) {
-			if (*strp)
-				err(1, "WARNING! Major Internal Error! GNU hack Failing!");
-			*strp = malloc(wcnt + 1);
-			if (*strp == NULL) {
+			char *nstr = *strp ? realloc(*strp, *lenp + wcnt + 1) :
+				malloc(wcnt + 1);
+			if (nstr == NULL) {
 				tty_warn(1, "Out of memory");
 				return(-1);
 			}
-			strlcpy(*strp, st, wcnt);
-			break;
+			(void)strlcpy(&nstr[*lenp], st, wcnt + 1);
+			*strp = nstr;
+			*lenp += wcnt;
 		} else if (xwrite(fd, st, wcnt) != wcnt) {
 			syswarn(1, errno, "Failed write to file %s", name);
 			return(-1);
