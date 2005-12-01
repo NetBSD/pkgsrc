@@ -1,20 +1,17 @@
-# $NetBSD: options.mk,v 1.2 2005/11/29 21:11:55 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2005/12/01 18:09:37 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
+
+PKG_OPTIONS_REQUIRED_GROUPS= role
+PKG_OPTIONS_OPTIONAL_GROUPS= role
+PKG_OPTIONS_GROUP.role= leaf hub
+
 PKG_SUPPORTED_OPTIONS=	inet6 nospoof hub leaf ziplinks remoteinc ssl chroot
 PKG_SUPPORTED_OPTIONS+=	prefixaq showlistmodes topicisnuhost shunnotices
 PKG_SUPPORTED_OPTIONS+=	no-operoverride disableusermod operoverride-verify
 PKG_SUGGESTED_OPTIONS=	hub showlistmodes
 
 .include "../../mk/bsd.options.mk"
-
-###
-### Can't be both a leaf and a hub IRC server
-###
-.if !empty(PKG_OPTIONS:Mhub) && !empty(PKG_OPTIONS:Mleaf)
-PKG_FAIL_REASON+=	"The server cannot be both a hub and a leaf." \
-			"Please change ${PKG_OPTIONS_VAR} to one or the other."
-.endif
 
 ###
 ### Enable IPv6 support
@@ -63,9 +60,9 @@ CONFIGURE_ARGS+=		--enable-ziplinks
 ### Compile in support for remote include files.
 ###
 .if !empty(PKG_OPTIONS:Mremoteinc)
-CONFIGURE_ARGS+=		--enable-libcurl
+CONFIGURE_ARGS+=		--enable-libcurl=${PREFIX}
 .	include "../../www/curl/buildlink3.mk"
-.	include "../../wip/c-ares/buildlink3.mk"
+.	include "../../net/libcares/buildlink3.mk"
 .endif
 
 ###
@@ -81,7 +78,7 @@ CFLAGS+=	-DCHROOTDIR
 ###
 ### Enable prefixes for chanadmin and chanowner.
 ### This will give +a the & prefix and ~ for +q (just like +o is @)
-### Supported by the major clients: 
+### Supported by the major clients:
 ###	mIRC, xchat, epic, eggdrop, Klient, PJIRC, etc.
 ### with the notable exceptions of:
 ###	irssi, KVIrc and CGI:IRC.
