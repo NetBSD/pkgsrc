@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-ae,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
 NetBSD patch-bd,v 1.2 1999/06/04 04:15:44 mycroft Exp
 original patch from editors/emacs pkg.
 
---- /dev/null	Mon Sep 20 13:51:57 1999
-+++ src/m/powerpc.h	Mon Sep 20 23:21:37 1999
+--- src/m/powerpc.h.orig	2005-12-01 18:47:01.000000000 +0100
++++ src/m/powerpc.h
 @@ -0,0 +1,165 @@
 +/* machine description file For the PowerPC chip.
 +   Copyright (C) 1994, 1997 Free Software Foundation, Inc.
