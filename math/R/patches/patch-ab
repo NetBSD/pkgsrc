@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.17 2005/12/01 23:11:26 joerg Exp $
+
+--- src/main/errors.c.orig	2005-12-01 22:38:35.000000000 +0000
++++ src/main/errors.c
+@@ -39,7 +39,7 @@ extern void R_ProcessEvents(void);
+ #ifdef HAVE_ALLOCA_H
+ #include <alloca.h>
+ #endif
+-#if !HAVE_DECL_ALLOCA && !defined(__FreeBSD__)
++#if !HAVE_DECL_ALLOCA && !defined(__FreeBSD__) && !defined(__DragonFly__)
+ extern char *alloca(size_t);
+ #endif
+ 
