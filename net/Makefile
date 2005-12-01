@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.591 2005/11/21 19:46:46 minskim Exp $
+# $NetBSD: Makefile,v 1.592 2005/12/01 17:27:57 adrianp Exp $
 #
 
 COMMENT=	Networking tools
@@ -164,6 +164,7 @@ SUBDIR+=	lft
 SUBDIR+=	lftp
 SUBDIR+=	libIDL
 SUBDIR+=	libares
+SUBDIR+=	libcares
 SUBDIR+=	libdnet
 SUBDIR+=	liblive
 SUBDIR+=	libnids
