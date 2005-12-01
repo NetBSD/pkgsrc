@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12065 2005/11/30 22:48:24 bouyer Exp $
+$NetBSD: CHANGES,v 1.12066 2005/12/01 03:01:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5437,3 +5437,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/pango to 1.10.2 [wiz 2005-11-30]
 	Updated print/a2ps to 4.13.0.2nb9 [tonio 2005-11-30]
 	Updated net/arpwatch to 2.1a13 [bouyer 2005-11-30]
+	Updated archivers/pax to 20051108 [minskim 2005-12-01]
