@@ -50,7 +50,8 @@ DDEESSCCRRIIPPTTIIOONN
                                exit.
 
            --ii|----iimmppoorrtt         Check if a package is ready to be imported into
-                               pkgsrc.
+                               pkgsrc.  This is especially useful for packages
+                               from the pkgsrc-wip project.
 
            --qq|----qquuiieett          Don't print the errors and warnings summary
                                before terminating.
