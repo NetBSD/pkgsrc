@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.323 2005/12/01 03:35:44 minskim Exp $
+# $NetBSD: Makefile,v 1.324 2005/12/01 03:56:01 minskim Exp $
 #
 
 COMMENT=	System utilities
@@ -37,6 +37,7 @@ SUBDIR+=	cfengine2
 SUBDIR+=	cfengine2-doc
 SUBDIR+=	checkpassword
 SUBDIR+=	checkpassword-pam
+SUBDIR+=	clex
 SUBDIR+=	coreutils
 SUBDIR+=	cpogm
 SUBDIR+=	cpuburn
