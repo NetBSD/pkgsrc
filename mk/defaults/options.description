@@ -239,6 +239,7 @@ recommended-db
 remoteinc		Enable remote includes.
 rendition	
 rrdtool	
+rsaref			Use RSAREF library.
 s3	
 s3virge	
 samba	
