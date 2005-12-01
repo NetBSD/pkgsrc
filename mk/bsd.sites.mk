@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.48 2005/11/25 20:01:42 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.49 2005/12/01 20:40:42 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -91,23 +91,22 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.dit.upm.es/linux/gnome/
 
 MASTER_SITE_SOURCEFORGE+=	\
+	http://belnet.dl.sourceforge.net/sourceforge/ \
+	http://citkit.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
-	http://jaist.dl.sourceforge.net/sourceforge/ \
+	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://keihanna.dl.sourceforge.net/sourceforge/ \
 	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
 	http://nchc.dl.sourceforge.net/sourceforge/ \
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
-	http://peterhost.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
 	http://surfnet.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://ufpr.dl.sourceforge.net/sourceforge/ \
-	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/
-#	http://citkit.dl.sourceforge.net/sourceforge/
 #	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://sf.gds.tuwien.ac.at/
