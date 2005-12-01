@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.7 2005/12/01 23:11:27 joerg Exp $
+
+--- src/main/vfonts.c.orig	2005-12-01 22:47:24.000000000 +0000
++++ src/main/vfonts.c
+@@ -32,7 +32,7 @@
+ #ifdef HAVE_ALLOCA_H
+ #include <alloca.h>
+ #endif
+-#if !HAVE_DECL_ALLOCA && !defined(__FreeBSD__)
++#if !HAVE_DECL_ALLOCA && !defined(__FreeBSD__) && !defined(__DragonFly__)
+ extern char *alloca(size_t);
+ #endif
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.4 2005/12/01 23:11:27 joerg Exp $
+
+--- src/library/grDevices/src/devPS.c.orig	2005-12-01 22:54:39.000000000 +0000
++++ src/library/grDevices/src/devPS.c
+@@ -47,7 +47,7 @@ extern int errno;
+ 
+ #ifdef HAVE_ALLOCA_H
+ #include <alloca.h>
+-#elif !defined (__FreeBSD__)
++#elif !defined (__FreeBSD__) && !defined(__DragonFly__)
+ extern char *alloca(size_t);
+ #endif
+ 
