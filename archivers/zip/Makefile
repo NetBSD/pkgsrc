@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/10/23 20:55:14 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2005/12/01 16:41:30 rillig Exp $
 
 DISTNAME=	zip231
 PKGNAME=	zip-2.31
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_FLAGS+=	LOCAL_ZIP=${CFLAGS:Q}
+MAKE_FLAGS+=	LOCAL_ZIP=${CFLAGS:M*:Q}
 MAKE_FLAGS+=	LFLAGS1=${_STRIPFLAG_CC:Q}
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
 CFLAGS+=	-O0

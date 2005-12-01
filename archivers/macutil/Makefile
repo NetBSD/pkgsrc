@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/04/11 21:44:49 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/01 16:41:29 rillig Exp $
 
 DISTNAME=		macutil2.0b3
 PKGNAME=		macutil-2.0b3
@@ -12,7 +12,7 @@ COMMENT=		Create & extract Mac archive files
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKEFILE=		makefile
-MAKE_ENV+=		CF="${CFLAGS}"
+MAKE_ENV+=		CF=${CFLAGS:M*:Q}
 
 WRKSRC=			${WRKDIR}/macutil
 
