@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.20 2005/12/01 20:13:16 wiz Exp $
+# $NetBSD: deprecated.map,v 1.21 2005/12/01 20:21:55 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -10,7 +10,6 @@ NO_CDROM		Use NO_BIN_ON_CDROM and/or NO_SRC_ON_CDROM instead.
 NO_PACKAGE		Don't use it to enforce license restrictions.
 PKG_JVM			Use PKG_DEFAULT_JVM instead.
 USE_BUILDLINK3		You can just remove it.
-USE_RSAREF2		Use the PKG_OPTIONS framework instead.
 
 # The following entries can be removed after the 2005Q4 branch.
 USE_PERL5		Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.
@@ -19,6 +18,7 @@ USE_I586		Use the PKG_OPTIONS framework (option i586) instead.
 USE_INN			Use the PKG_OPTIONS framework instead.
 USE_OPENLDAP		Use the PKG_OPTIONS framework (option openldap) instead.
 USE_OSS			Use the PKG_OPTIONS framework (option oss) instead.
+USE_RSAREF2		Use the PKG_OPTIONS framework (option rsaref) instead.
 USE_SASL		Use the PKG_OPTIONS framework (option sasl) instead.
 USE_SASL2		Use the PKG_OPTIONS framework (option sasl) instead.
 USE_SJ3			Use the PKG_OPTIONS framework (option sj3) instead.
