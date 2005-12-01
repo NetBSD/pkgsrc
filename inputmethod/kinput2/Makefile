@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:46:11 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/01 18:58:39 wiz Exp $
 
 DISTNAME=	kinput2-v3
 PKGNAME=	kinput2-3.0
@@ -13,40 +13,9 @@ USE_IMAKE=	YES
 
 PLIST_SRC=	${PKGDIR}/PLIST-common
 
-.include "../../mk/bsd.prefs.mk"
-.if defined(USE_CANNA) && ${USE_CANNA} != YES &&	\
-    defined(USE_WNN4) && ${USE_WNN4} != YES &&		\
-    defined(USE_WNN6) && ${USE_WNN6} != YES &&		\
-    defined(USE_SJ3) && ${USE_SJ3} != YES
-PKG_FAIL_REASON= ${PKGNAME} is ignored. because USE_CANNA,USE_WNN4,USE_WNN6,USE_SJ3 are "NO"
-.endif
+.include "options.mk"
 
-.if !defined(USE_CANNA) || ${USE_CANNA} == YES
-.include "../../inputmethod/canna-lib/buildlink3.mk"
-KINPUT2_DEF+=	-DUseCanna -Dport_CANNASRC=${BUILDLINK_PREFIX.Canna-lib}/include \
-		-Dport_CANNALIB="${LDFLAGS} -lcanna16"
-.endif
-
-#.if defined(USE_WNN6) && ${USE_WNN6} == YES
-#DEPENDS+=
-#KINPUT2_DEF+=	-DUseWnn -DUseWnn6 -Dport_WNNINCDIR=${LOCALBASE}/include/wnn \
-#		-Dport_WNNLIB="${LDFLAGS} -lwnn6 -lcrypt"
-#.elif (!defined(USE_WNN4) || ${USE_WNN4} == YES)
-.if !defined(USE_WNN4) || ${USE_WNN4} == YES
-.include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
-KINPUT2_DEF+=	-DUseWnn -Dport_WNNINCDIR=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/include/wnn \
-		-Dport_WNNLIB="${LDFLAGS} -lwnn -lcrypt"
-PLIST_SRC+=	${PKGDIR}/PLIST-freewnn
-.endif
-
-.if !defined(USE_SJ3) || ${USE_SJ3} == YES
-.include "../../inputmethod/sj3-lib/buildlink3.mk"
-KINPUT2_DEF+=	-DUseSj3 -Dport_SJ3SRC=${BUILDLINK_PREFIX.sj3-lib}/include \
-		-Dport_SJ3LIB="${LDFLAGS} -lsj3lib"
-PLIST_SRC+=	${PKGDIR}/PLIST-sj3
-.endif
-
-MAKE_ENV+=	PORT_IMAKE_DEFINES='${KINPUT2_DEF}'
+MAKE_ENV+=	PORT_IMAKE_DEFINES=${KINPUT2_DEFS:Q}
 
 pre-configure:
 	${MV} -f ${WRKSRC}/Kinput2.conf ${WRKSRC}/Kinput2.conf.org
