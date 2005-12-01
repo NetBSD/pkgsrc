@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.137 2005/11/28 06:06:16 jlam Exp $
+# $NetBSD: replace.mk,v 1.138 2005/12/01 09:24:09 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -878,15 +878,17 @@ _TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-nox11
 # XXX backwards-compatibility.
 #
 .  if defined(NO_X11)
-.    if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups)) || \
-        (defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS]))
+.    if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups))
+_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
+.    elif (defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS]))
 _TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
 .    else
 _TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-gnu
 .    endif
 .  else
-.    if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups)) || \
-        (defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS]))
+.    if (defined(PKG_OPTIONS) && !empty(PKG_OPTIONS:Mcups))
+_TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
+.    elif (defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS]))
 _TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-esp
 .    else
 _TOOLS_PKGSRCDIR.ghostscript=	../../print/ghostscript-gnu
