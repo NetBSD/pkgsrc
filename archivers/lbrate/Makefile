@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:44:49 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/01 16:41:29 rillig Exp $
 
 DISTNAME=	lbrate-1.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Extract/decompress CP/M LBR archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
 LBRATE_DOCSDIR=	${PREFIX}/share/doc/lbrate
 
 post-install:
