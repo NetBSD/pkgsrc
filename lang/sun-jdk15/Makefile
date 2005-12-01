@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/10/27 22:57:27 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/01 15:39:27 tv Exp $
 
-DISTNAME=	jdk-1_5_0_05-linux-i586
-PKGNAME=	sun-jdk15-5.0.5
-PKGREVISION=	1
+DISTNAME=	jdk-1_5_0_06-linux-i586
+PKGNAME=	sun-jdk15-5.0.6
 MASTER_SITES=	# empty
 
 SHORT_NAME=	JDK
