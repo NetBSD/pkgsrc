@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.400 2005/12/01 09:03:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.401 2005/12/01 13:40:39 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -743,11 +743,13 @@ my (@options) = (
 
 use constant regex_gnu_configure_volatile_vars
 				=> qr"^(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
+use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
+use constant regex_mk_include	=> qr"^\.\s*s?include\s+\"([^\"]+)\"(?:\s*#.*)?$";
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
 use constant regex_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
-use constant regex_varassign	=> qr"^([-A-Z_a-z0-9.\${}\[]+)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
+use constant regex_varassign	=> qr"^([-*+A-Z_a-z0-9.\${}\[]+?)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
 
 # This "constant" is often used in contexts where interpolation comes
 # handy, so it is a variable. Nevertheless it is not modified. Of course
@@ -2511,6 +2513,13 @@ sub checklines_package_Makefile_varorder($) {
 # checkfile_package_Makefile.
 sub checklines_package_Makefile($) {
 	my ($lines) = @_;
+	my ($allowed_targets, $for_variables) = ({}, {});
+
+	foreach my $prefix (qw(pre do post)) {
+		foreach my $action (qw(fetch extract patch tools wrapper configure build test install package clean)) {
+			$allowed_targets->{"${prefix}-${action}"} = true;
+		}
+	}
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
@@ -2529,7 +2538,10 @@ sub checklines_package_Makefile($) {
 			$line->log_error("Using \"\${WRKSRC}/..\" is conceptually wrong. Use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
 		}
 
-		if ($text =~ regex_varassign) {
+		if ($text =~ qr"^\s*$" || $text =~ qr"^#") {
+			# Ignore empty lines and comments
+
+		} elsif ($text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 
 			if ($varname =~ qr"^_") {
@@ -2665,6 +2677,90 @@ sub checklines_package_Makefile($) {
 			if ($rest !~ qr"^\s*$") {
 				$line->log_warning("Invalid shell word \"${shellcmd}\".");
 			}
+
+		} elsif ($text =~ regex_mk_include) {
+			my ($includefile) = ($1);
+
+			$line->log_debug("includefile=${includefile}");
+			# TODO: check the includefile.
+
+		} elsif ($text =~ qr"^\.\s*(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$") {
+			my ($directive, $args) = ($1, $2);
+
+			use constant regex_directives_with_args => qr"^(?:if|ifdef|ifndef|elif|for|undef)$";
+
+			if ($directive =~ regex_directives_with_args && !defined($args)) {
+				$line->log_error("\".${directive}\" must be given some arguments.");
+
+			} elsif ($directive !~ regex_directives_with_args && defined($args)) {
+				$line->log_error("\".${directive}\" does not take arguments.");
+
+				if ($directive eq "else") {
+					$line->log_note("If you meant \"else if\", use \".elif\".");
+				}
+
+			} elsif ($directive eq "if" || $directive eq "elif") {
+				# TODO
+
+			} elsif ($directive eq "ifdef" || $directive eq "ifndef") {
+				if ($args =~ qr"\s") {
+					$line->log_error("The \".${directive}\" directive can only handle _one_ argument.");
+				} else {
+					$line->log_warning("The \".${directive}\" directive is deprecated. Please use \".if "
+						. (($directive eq "ifdef" ? "" : "!"))
+						. "defined(${args})\" instead.");
+				}
+
+			} elsif ($directive eq "for") {
+				if ($args =~ qr"^(\S+(?:\s*\S+)*?)\s+in\s+(.*)$") {
+					my ($vars, $values) = ($1, $2);
+
+					foreach my $var ($vars) {
+						$for_variables->{$var} = true;
+					}
+				}
+
+			} elsif ($directive eq "undef" && defined($args)) {
+				foreach my $var (split(qr"\s+", $args)) {
+					if (exists($for_variables->{$var})) {
+						$line->log_note("Using \".undef\" after a \".for\" loop is unnecessary.");
+					}
+				}
+			}
+
+		} elsif ($text =~ regex_mk_dependency) {
+			my ($targets, $dependencies) = ($1, $2);
+
+			$line->log_debug("targets=${targets}, dependencies=${dependencies}");
+			foreach my $target (split(/\s+/, $targets)) {
+				if ($target eq ".PHONY") {
+					foreach my $dep (split(qr"\s+", $dependencies)) {
+						$allowed_targets->{$dep} = true;
+					}
+
+				} elsif (!exists($allowed_targets->{$target})) {
+					$line->log_warning("Unusual target \"${target}\".");
+					$line->explain(
+						"If you really want to define your own targets, you can \"declare\"",
+						"them by inserting a \".PHONY: my-target\" line before this line. This",
+						"will tell make(1) to not interpret this target's name as a filename.");
+				}
+			}
+
+		} elsif ($text =~ qr"^\.\s*(\S*)") {
+			my ($directive) = ($1);
+
+			$line->log_error("Unknown directive \".${directive}\".");
+
+		} elsif ($text =~ qr"^ ") {
+			$line->log_warning("Makefile lines should not start with space characters.");
+			$line->explain(
+				"If you want this line to contain a shell program, use a tab",
+				"character for indentation. Otherwise please remove the leading",
+				"white-space.");
+
+		} else {
+			$line->log_error("[Internal] Unknown line format: $text");
 		}
 	}
 
