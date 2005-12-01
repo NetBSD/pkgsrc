@@ -38,7 +38,7 @@ charts
 chips	
 chroot			Enable support for running in a chroot jail.
 cirrus	
-cups	
+cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses	
 cyrix	
@@ -301,6 +301,7 @@ w3m-lynx-key		Enable lynx-like key bindings.
 w3m-m17n		Multilingual support.
 w3m-unicode		Use Unicode characters.
 wcalc-gtk1		Use GTK-1.2.x instead of GKT-2.x for gtk-wcalc.
+wnn4			Use wnn for Kana-to-Kanji conversion.
 wrap	
 wx	
 x11			Enable X11 support.
