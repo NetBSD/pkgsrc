@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/10/08 22:42:08 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2005/12/01 20:17:48 wiz Exp $
 
 DISTNAME=	pgp263is
 CATEGORIES=	security
@@ -11,29 +11,13 @@ COMMENT=	Public-key encryption and digital signature utility (v2)
 
 WRKSRC=		${WRKDIR}/src
 CRYPTO=		yes
-USE_RSAREF2=	NO
 
 # use of IDEA as crypto function
 LICENCE=	fee-based-commercial-use
 
+.include "options.mk"
+
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-PKGNAME=	pgp-2.6.3a
-DEPENDS+=	rsaref-2.0p3:../../security/rsaref
-RSAINC=		-I${PREFIX}/include
-RSALIBS=	${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib -lrsaref
-RSAOBJS=	rsaglue2.o
-CFLAGS=		-DUSA
-.else
-PKGNAME=	pgp-2.6.3ia
-RSAINC=
-RSALIBS=
-RSAOBJS=	rsaglue1.o
-CFLAGS=
-.endif
-
-FIX_RPATH+=	RSALIBS
 
 PGPLIB=		${PREFIX}/share/pgp
 CFLAGS+=	-DPGP_SYSTEM_DIR="\"${PGPLIB}/\""
@@ -41,14 +25,6 @@ CFLAGS+=	-DPGP_SYSTEM_DIR="\"${PGPLIB}/\""
 .if (${MACHINE_ARCH} == "i386")
 OBJS_EXT=	_80386.o _zmatch.o
 ASMFLAG=	-DASM
-.elif (${MACHINE_ARCH} == "m68k")
-.ifdef M68060
-OBJS_EXT=
-ASMFLAG=	-m68060 -DPORTABLE -DMPORTABLE
-.else
-OBJS_EXT=	mc68020.o
-ASMFLAG=
-.endif
 .elif (${MACHINE_ARCH} == "sparc") && (${OPSYS} != SunOS)
 OBJS_EXT=	sparc.o
 ASMFLAG=
@@ -63,20 +39,9 @@ ASMFLAG=	-DPORTABLE -DMPORTABLE
 CFLAGS+=        -DHIGHFIRST
 .endif
 
-BUILD_DEFS+=	USE_RSAREF2 M68060 ASMFLAG
+BUILD_DEFS+=	ASMFLAG
 
 INSTALLATION_DIRS=	bin man/man1
-
-.if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
-pre-fetch:
-	@${ECHO} ""
-	@${ECHO} "The variable USE_RSAREF2 must be set to either YES or NO"
-	@${ECHO} "in order to build this package.  USA residents that are"
-	@${ECHO} "no licensees of the RSA algorithm MUST set this variable"
-	@${ECHO} "to YES.  Users outside the USA MUST set this variable to"
-	@${ECHO} "NO.  Licensees may choose -- NO is faster."
-	@${FALSE}
-.endif
 
 post-extract:
 	cd ${WRKDIR} && ${TAR} xf pgp263ii.tar && ${RM} -f pgp263ii.tar
