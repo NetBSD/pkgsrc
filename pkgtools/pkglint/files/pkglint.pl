@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.405 2005/12/01 15:21:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.406 2005/12/01 16:11:27 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1082,6 +1082,7 @@ sub checkperms($) {
 sub resolve_relative_path($) {
 	my ($relpath) = @_;
 
+	$relpath =~ s,\$\{PKGSRCDIR\},$pkgsrcdir,;
 	$relpath =~ s,\$\{\.CURDIR\},.,;
 	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,;
 	$relpath =~ s,\$\{SUSE_DIR_PREFIX\},suse91,;
@@ -1168,7 +1169,9 @@ sub checkline_relative_path($$) {
 		$line->log_error("A pkgsrc package must not depend on any outside package.");
 	}
 	$path = resolve_relative_path($path);
-	if ($path !~ regex_unresolved && !-e "${current_dir}/${path}") {
+	if ($path =~ regex_unresolved) {
+		$line->log_info("Unresolved path: \"${path}\".");
+	} elsif (!-e "${current_dir}/${path}") {
 		$line->log_error("\"${path}\" does not exist.");
 	}
 }
