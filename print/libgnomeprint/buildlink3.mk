@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:18:05 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/12/01 18:16:50 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEPRINT_BUILDLINK3_MK:=	${LIBGNOMEPRINT_BUILDLINK3_MK}+
@@ -25,8 +25,16 @@ BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 
-.if defined(USE_CUPS) && !empty(USE_CUPS:M[Yy][Ee][Ss])
-.  include "../../print/cups/buildlink3.mk"
+.if !defined(PKG_BUILD_OPTIONS.libgnomeprint)
+PKG_BUILD_OPTIONS.libgnomeprint!=					\
+	cd ${BUILDLINK_PKGSRCDIR.libgnomeprint} &&			\
+	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
+MAKEFLAGS+=	PKG_BUILD_OPTIONS.libgnomeprint=${PKG_BUILD_OPTIONS.libgnomeprint:Q}
+.endif
+MAKEVARS+=	PKG_BUILD_OPTIONS.libgnomeprint
+
+.if !empty(PKG_BUILD_OPTIONS.libgnomeprint:Mcups)
+.  include "../../print/libgnomecups/buildlink3.mk"
 .endif
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
