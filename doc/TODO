@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4228 2005/11/30 22:48:25 bouyer Exp $
+$NetBSD: TODO,v 1.4229 2005/12/01 17:23:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -368,6 +368,7 @@ Suggested package updates
 	o asterisk-1.2.0
 	o astyle-1.15.3
 	o aterm-1.0.0
+	o audacity-1.2.4
 	o autogen-5.7.3
 	o avcheck-0.91
 	o avidemux-2.0.42
@@ -407,6 +408,7 @@ Suggested package updates
 	o cdlabelgen-3.6.0
 	o cdrdao-1.2.1
 	o cdrtools-2.01.01a03
+	o cdrtools-ossdvd-2.01.01a03
 	o cfengine2-2.1.17
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
@@ -505,6 +507,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
+	o exim-4.60
 	o exmh-2.7.2
 	o f2c-20031025
 	o faces-1.7.7
@@ -594,7 +597,7 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o guile-pg-0.29
 	o gworkspace-0.7.2
-	o gxine-0.5.0
+	o gxine-0.5.1
 	o gzrecover-0.3
 	o h5utils-1.10
 	o hackbot-2.21
@@ -617,6 +620,7 @@ Suggested package updates
 	o hyperestraier-1.0.6
 	o i2ocfg-1.1
 	o icdprog-0.5
+	o icecast-2.3.1
 	o icepref-2.3
 	o icsi-finger-1.0.29
 	o icu-3.4
@@ -659,7 +663,7 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kajaani-kombat-0.7
 	o kapooka-0.3
-	o kazehakase-0.3.2
+	o kazehakase-0.3.3
 	o kbiff-3.8
 	o kdbg-2.0.2
 	o kde-3.5.0 [markd]
@@ -678,6 +682,7 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b11
 	o lcc-4.2
+	o lcms-1.15
 	o leafnode-1.11.4
 	o leafpad-0.8.5
 	o lftp-3.3.4
@@ -698,6 +703,7 @@ Suggested package updates
 	o libmpeg3-1.6
 	o libnasl-2.3.1
 	o libntlm-0.3.9
+	o libogg-1.1.3
 	o libpcap-0.9.4
 	o libpqxx-2.5.5
 	o libsmi-0.4.3
@@ -705,11 +711,13 @@ Suggested package updates
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.20
 	o libtorrent-0.7.6
+	o libvorbis-1.1.2
 	o libwpd-0.8.3
 	o licq-core-1.3.0
 	o lighttpd-1.4.8
 	o lilypond-2.6.3
 	o linuxsms-0.77
+	o liquidwar-5.6.3
 	o lmbench-2.5
 	o lopster-1.2.2
 	o lout-3.31
@@ -1130,7 +1138,7 @@ Suggested package updates
 	o sml-nj-110.57
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
-	o snd-7.16
+	o snd-7.17
 	o snes9x-1.43
 	o socat-1.4.3.0
 	o sope-4.5.5
@@ -1160,6 +1168,7 @@ Suggested package updates
 	o swish-e-2.4.3
 	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
+	o sylpheed-devel-2.1.8
 	o sympa-5.1
 	o sysinfo-4.2.2
 	o tcl-postgresql74-7.4.9
@@ -1236,7 +1245,7 @@ Suggested package updates
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wdm-1.28
-	o webmin-1.240
+	o webmin-1.250
 	o weechat-0.1.6
 	o weewm-0.01
 	o winbind-3.0.13
@@ -1267,6 +1276,7 @@ Suggested package updates
 	o xeukleides-1.0.1
 	o xfe-0.72
 	o xfmail-1.5.4
+	o xfstt-1.7
 	o xine-lib-1.1.1
 	o xine-ui-0.99.4
 	o xkbset-0.5
@@ -1279,7 +1289,7 @@ Suggested package updates
 	o xmess-0.102
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
-	o xmms-crossfade-0.3.7
+	o xmms-crossfade-0.3.9
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
 	o xmms-fmradio-1.5
