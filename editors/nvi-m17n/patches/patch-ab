@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2005/12/01 18:29:58 wiz Exp $
---- build/configure.bad	Fri Jun 26 02:22:51 1998
-+++ build/configure	Fri Jun 26 02:23:39 1998
-@@ -1686,10 +1686,8 @@
+$NetBSD: patch-ab,v 1.5 2005/12/01 18:33:48 wiz Exp $
+--- build/configure.orig	2005-12-01 19:32:57.000000000 +0100
++++ build/configure
+@@ -1805,10 +1805,8 @@ if test "$vi_cv_canna" = "yes"; then
  		case "$host_os" in
  		bsdi2.1)
  			vi_cannapath="/usr/contrib/canna";;
