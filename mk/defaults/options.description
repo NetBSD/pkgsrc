@@ -192,6 +192,7 @@ native
 ncurses			Enable ncurses support.
 neomagic	
 newport	
+nntpcache-pgp		Enable pgp signed nocem support.
 no-operoverride		Disable operator override.
 nogui	
 nospoof			Enable anti-spoof protection for older TCP/IP stacks.
@@ -283,6 +284,8 @@ theora			Use the theora codecs.
 tls			Enable TLS support.
 topicisnuhost		/topic command to show the nick!user@host of the person who set the topic.
 trident	
+trn-inn			Use INN as NNTP client.
+trn-nntpclnt		Use nntpclnt as NNTP client.
 truetype	
 tseng	
 unicode	
