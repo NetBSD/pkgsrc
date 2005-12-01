@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.396 2005/12/01 01:19:30 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.397 2005/12/01 01:45:54 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1756,7 +1756,7 @@ sub get_tool_names() {
 				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD|_TOOLS_VARNAME)\.([-\w.]+|\[)$") {
 					$tools->{$1} = true;
 
-				} elsif ($varname eq "_TOOLS.x11-clients") {
+				} elsif ($varname =~ qr"^_TOOLS\.") {
 					foreach my $tool (split(qr"\s+", $value)) {
 						$tools->{$tool} = true;
 					}
@@ -1991,6 +1991,10 @@ sub checkline_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Tool") {
+# FIXME: There are two different kinds of tools in pkgsrc.
+# I've asked jlam for appropriate checks. Until I get a
+# definite answer, this check will be disabled.
+if (false) {
 		if ($value =~ qr"^([-\w]+|\[)(?::(\w+))?$") {
 			my ($toolname, $tooldep) = ($1, $2);
 			if (!exists(get_tool_names()->{$toolname})) {
@@ -2002,6 +2006,7 @@ sub checkline_basic_vartype($$$$$) {
 		} else {
 			$line->log_error("Invalid tool syntax: \"${value}\".");
 		}
+}
 
 	} elsif ($type eq "URL") {
 		if ($value eq "" && defined($comment) && $comment =~ qr"^#") {
