@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:44:49 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/01 16:41:29 rillig Exp $
 #
 
 DISTNAME=	nomarch-1.3
@@ -11,9 +11,9 @@ COMMENT=	Free replacement for the arc program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-MAKE_FLAGS+=	PREFIX=${PREFIX}
-MAKE_FLAGS+=	CC="${CC}"
-MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
+MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:M*:Q}
 
 INSTALLATION_DIRS=	bin man/man1
 
