@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12067 2005/12/01 03:35:44 minskim Exp $
+$NetBSD: CHANGES,v 1.12068 2005/12/01 03:56:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5439,3 +5439,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/arpwatch to 2.1a13 [bouyer 2005-11-30]
 	Updated archivers/pax to 20051108 [minskim 2005-12-01]
 	Added sysutils/detox version 1.2.0rc1 [minskim 2005-12-01]
+	Added sysutils/clex version 3.14 [minskim 2005-12-01]
