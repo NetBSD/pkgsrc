@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/12/01 19:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/01 19:33:10 wiz Exp $
 
 DISTNAME=	nn-6.6.5
 CATEGORIES=	news
@@ -29,7 +29,7 @@ MFILE=         m-mipsel.h
 MFILE=		m-${LOWER_ARCH}.h
 .endif
 
-MAKE_ENV+=	CC="${CC}"
+MAKE_ENV+=	CC=${CC:Q}
 
 post-patch:
 	@${SED} -e ' \
