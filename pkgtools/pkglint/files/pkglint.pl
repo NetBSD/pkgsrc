@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.406 2005/12/01 16:11:27 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.407 2005/12/01 17:00:52 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -400,6 +400,11 @@ sub replace($$$) {
 			$self->[CHANGED] = true;
 		}
 	}
+}
+sub set_text($$) {
+	my ($self, $text) = @_;
+	$self->[PHYSLINES] = [[0, "$text\n"]];
+	$self->[CHANGED] = true;
 }
 
 #== End of PkgLint::FileUtil::Line ========================================
@@ -1540,7 +1545,12 @@ sub checkfile_patches_patch($) {
 	foreach my $line (@{$lines}[1..$#{$lines}]) {
 		if ($line->text =~ qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)[:\$]") {
 			my ($tag) = ($1);
-			$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
+			if ($line->text =~ qr"^(\@\@.*?\@\@)") {
+				$line->log_warning("Patches should not contain RCS tags.");
+				$line->set_text($1);
+			} else {
+				$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
+			}
 		}
 
 		if ($line->text =~ qr"^\+") {
@@ -1590,6 +1600,8 @@ sub checkfile_patches_patch($) {
 	checklines_trailing_empty_lines($lines);
 
 	checklines_multiple_patches($lines);
+
+	autofix($lines);
 }
 
 #
