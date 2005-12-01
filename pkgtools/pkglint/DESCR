@@ -1,10 +1,7 @@
-pkglint tries to verify the content of a package directory.
-The purpose of pkglint can be separated into two parts:
- (1) to let the submitters easily polish her/his own package
-     directory, and
- (2) to decrease the labor of the committers.
+pkglint is for pkgsrc packages what lint(1) is for C files. It checks
+for various things that the used languages cannot detect, for example
+application-specific restrictions on certain variables.
 
-pkglint uses very simple regular-expression matching for verifying
-files that make up a package directory.  Note that it does NOT implement
-complete parser for those files.  Because of this the user may see some
-extra warnings, especially when checking complex Makefiles.
+Before importing a new package or making changes to an existing package,
+pkglint should be run in the package's directory to check for common
+errors.
