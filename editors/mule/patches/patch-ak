@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+$NetBSD: patch-ak,v 1.2 2005/12/01 18:13:24 wiz Exp $
 
---- src/keyboard.c.orig	Mon Sep 20 23:36:21 1999
-+++ src/keyboard.c	Mon Sep 20 23:37:10 1999
-@@ -301,7 +301,7 @@
+--- src/keyboard.c.orig	1995-02-03 02:21:28.000000000 +0100
++++ src/keyboard.c
+@@ -301,7 +301,7 @@ Lisp_Object Vlast_event_frame;
  
  /* The timestamp of the last input event we received from the X server.
     X Windows wants this for selection ownership.  */
