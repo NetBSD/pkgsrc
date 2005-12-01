@@ -1,4 +1,4 @@
-/*	$NetBSD: buf_subs.c,v 1.5 2004/08/21 03:28:56 jlam Exp $	*/
+/*	$NetBSD: buf_subs.c,v 1.6 2005/12/01 03:00:01 minskim Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)buf_subs.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: buf_subs.c,v 1.5 2004/08/21 03:28:56 jlam Exp $");
+__RCSID("$NetBSD: buf_subs.c,v 1.6 2005/12/01 03:00:01 minskim Exp $");
 #endif
 #endif /* not lint */
 
@@ -771,7 +771,7 @@ rd_wrfile(ARCHD *arcn, int ofd, off_t *left)
 	 * written. just closing with the file offset moved forward may not put
 	 * a hole at the end of the file.
 	 */
-	if (ofd != -1 && isem && (arcn->sb.st_size > 0L))
+	if (ofd >= 0 && isem && (arcn->sb.st_size > 0L))
 		file_flush(ofd, fnm, isem);
 
 	/*
@@ -911,10 +911,13 @@ buf_fill(void)
 
 		/*
 		 * errors require resync, EOF goes to next archive
+		 * but in case we have not determined yet the format,
+		 * this means that we have a very short file, so we
+		 * are done again.
 		 */
 		if (cnt < 0)
 			break;
-		if (ar_next() < 0) {
+		if (frmt == NULL || ar_next() < 0) {
 			fini = 1;
 			return(0);
 		}

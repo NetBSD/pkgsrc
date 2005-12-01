@@ -1,4 +1,4 @@
-/*	$NetBSD: ar_io.c,v 1.8 2004/08/21 03:28:56 jlam Exp $	*/
+/*	$NetBSD: ar_io.c,v 1.9 2005/12/01 03:00:01 minskim Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,12 +48,15 @@
 #if 0
 static char sccsid[] = "@(#)ar_io.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: ar_io.c,v 1.8 2004/08/21 03:28:56 jlam Exp $");
+__RCSID("$NetBSD: ar_io.c,v 1.9 2005/12/01 03:00:01 minskim Exp $");
 #endif
 #endif /* not lint */
 
 #if HAVE_SYS_TYPES_H
 #include <sys/types.h>
+#endif
+#if HAVE_SYS_PARAM_H
+#include <sys/param.h>
 #endif
 #if HAVE_SYS_TIME_H
 #include <sys/time.h>
@@ -70,9 +73,6 @@ __RCSID("$NetBSD: ar_io.c,v 1.8 2004/08/21 03:28:56 jlam Exp $");
 #endif
 #if HAVE_SYS_MTIO_H
 #include <sys/mtio.h>
-#endif
-#if HAVE_SYS_PARAM_H
-#include <sys/param.h>
 #endif
 #if HAVE_SYS_WAIT_H
 #include <sys/wait.h>
@@ -238,10 +238,8 @@ ar_open(const char *name)
 		return(-1);
 
 	if (chdname != NULL)
-		if (chdir(chdname) != 0) {
-			syswarn(1, errno, "Failed chdir to %s", chdname);
+		if (dochdir(chdname) == -1)
 			return(-1);
-		}
 	/*
 	 * set up is based on device type
 	 */
@@ -261,13 +259,14 @@ ar_open(const char *name)
 		return(-1);
 	}
 
-	if (S_ISCHR(arsb.st_mode))
+	if (S_ISCHR(arsb.st_mode)) {
 #ifdef SUPPORT_TAPE
 		artyp = ioctl(arfd, MTIOCGET, &mb) ? ISCHR : ISTAPE;
 #else
-		artyp = ISCHR;
+		tty_warn(1, "System does not have tape support");
+		artyp = ISREG;
 #endif /* SUPPORT_TAPE */
-	else if (S_ISBLK(arsb.st_mode))
+	} else if (S_ISBLK(arsb.st_mode))
 		artyp = ISBLK;
 	else if ((lseek(arfd, (off_t)0L, SEEK_CUR) == -1) && (errno == ESPIPE))
 		artyp = ISPIPE;
@@ -1025,8 +1024,8 @@ ar_rdsync(void)
 #ifdef SUPPORT_RMT
 	case ISRMT:
 #endif /* SUPPORT_RMT */
-#ifdef SUPPORT_TAPE
 	case ISTAPE:
+#ifdef SUPPORT_TAPE
 		/*
 		 * if the last i/o was a successful data transfer, we assume
 		 * the fault is just a bad record on the tape that we are now
@@ -1054,8 +1053,10 @@ ar_rdsync(void)
 		}
 #endif /* SUPPORT_RMT */
 		lstrval = 1;
-		break;
+#else
+		tty_warn(1, "System does not have tape support");
 #endif /* SUPPORT_TAPE */
+		break;
 	case ISREG:
 	case ISCHR:
 	case ISBLK:
@@ -1172,9 +1173,9 @@ ar_rev(off_t sksz)
 {
 	off_t cpos;
 #ifdef SUPPORT_TAPE
+	int phyblk;
 	struct mtop mb;
 #endif /* SUPPORT_TAPE */
-	int phyblk;
 
 	/*
 	 * make sure we do not have try to reverse on a flawed archive
@@ -1238,11 +1239,11 @@ ar_rev(off_t sksz)
 			return(-1);
 		}
 		break;
-#ifdef SUPPORT_TAPE
 	case ISTAPE:
 #ifdef SUPPORT_RMT
 	case ISRMT:
 #endif /* SUPPORT_RMT */
+#ifdef SUPPORT_TAPE
 		/*
 		 * Calculate and move the proper number of PHYSICAL tape
 		 * blocks. If the sksz is not an even multiple of the physical
@@ -1295,8 +1296,10 @@ ar_rev(off_t sksz)
 			lstrval = -1;
 			return(-1);
 		}
-		break;
+#else
+		tty_warn(1, "System does not have tape support");
 #endif /* SUPPORT_TAPE */
+		break;
 	}
 	lstrval = 1;
 	return(0);
@@ -1781,16 +1784,12 @@ ar_summary(int n)
  */
 
 int
-ar_dochdir(char *name)
+ar_dochdir(const char *name)
 {
-	/* First fchdir() back... */
-	if (fchdir(cwdfd) < 0) {
-		syswarn(1, errno, "Can't fchdir to starting directory");
-		return(-1);
-	}
-	if (chdir(name) < 0) {
-		syswarn(1, errno, "Can't chdir to %s", name);
-		return(-1);
-	}
-	return (0);
+	/* First fdochdir() back... */
+	if (fdochdir(cwdfd) == -1)
+		return -1;
+	if (dochdir(name) == -1)
+		return -1;
+	return 0;
 }
