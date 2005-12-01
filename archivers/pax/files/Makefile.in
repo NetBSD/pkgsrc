@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.8 2004/08/21 06:33:39 jlam Exp $
+#	$NetBSD: Makefile.in,v 1.9 2005/12/01 03:00:01 minskim Exp $
 
 srcdir=		@srcdir@
 
@@ -22,10 +22,10 @@ INSTALL=	@INSTALL@
 
 PROG=		pax
 
-OBJS=	ar_io.o ar_subs.o buf_subs.o cpio.o file_subs.o ftree.o \
+OBJS=	ar_io.o ar_subs.o buf_subs.o file_subs.o ftree.o \
 	gen_subs.o getoldopt.o options.o pat_rep.o pax.o sel_subs.o tables.o \
 	tar.o tty_subs.o \
-	getid.o spec.o misc.o stat_flags.o pack_dev.o
+	getid.o spec.o misc.o stat_flags.o pack_dev.o cpio.o
 
 all: $(PROG)
 
