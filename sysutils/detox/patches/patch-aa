@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/12/01 03:32:03 minskim Exp $
+
+--- Makefile.in.orig	2005-08-28 07:46:30.000000000 +0200
++++ Makefile.in
+@@ -124,7 +124,7 @@ install-safe-config:
+ 	fi
+ 
+ install-unsafe-config:
+-	${INSTALL} -m 644 detoxrc ${DESTDIR}${sysconfdir}
++#	${INSTALL} -m 644 detoxrc ${DESTDIR}${sysconfdir}
+ 	${INSTALL} -m 644 iso8859_1.tbl ${DESTDIR}${datadir}/detox
+ 	${INSTALL} -m 644 unicode.tbl ${DESTDIR}${datadir}/detox
+ 

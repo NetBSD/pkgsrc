@@ -1,0 +1,4 @@
+Detox is a utility designed to clean up filenames.  It replaces
+difficult to work with characters, such as spaces, with standard
+equivalents.  It will also clean up filenames with UTF-8 or Latin-1
+(or CP-1252) characters in them.
