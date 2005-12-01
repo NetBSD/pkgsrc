@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/07/15 18:27:51 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/12/01 13:06:07 dmcmahill Exp $
 
 DISTNAME=	f2c-20001205
 PKGREVISION=	8
@@ -35,9 +35,17 @@ WRKSRC=		${WRKDIR}/f2c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gunzip
 
+# work around a problem gunzipping 00lastchange.gz with
+# some versions of zlib found on NetBSD and also Gentoo
 post-extract:
 	@${RM} ${WRKSRC}/index.html
-	@${GUNZIP_CMD} ${WRKSRC}/*.gz
+	@for f in ${WRKSRC}/*.gz ; do \
+		if test "$$f" = "${WRKSRC}/00lastchange.gz" ; then \
+			${ECHO} "Skipping $$f" ; \
+		else \
+			${GUNZIP_CMD} $$f ; \
+		fi ; \
+	done
 	@cd ${WRKSRC} ; ${SH} libf77 ; ${SH} libi77
 	@${RM} ${WRKSRC}/src/index.html
 	@${MV} ${WRKSRC}/src/.depend  ${WRKSRC}/src/depend.orig
