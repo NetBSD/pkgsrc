@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/01 03:54:26 minskim Exp $
+
+SHA1 (clex-3.14.tar.gz) = 8ed56610d2e6bb8db9af5ddbcc44b289d1b2d97c
+RMD160 (clex-3.14.tar.gz) = a23df661efa0451bd6cf1db31f9254354cee5b73
+Size (clex-3.14.tar.gz) = 178492 bytes
