@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.401 2005/12/01 13:40:39 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.402 2005/12/01 14:01:59 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1147,6 +1147,19 @@ sub checkline_rcsid($$) {
 	checkline_rcsid_regex($line, quotemeta($prefix), $prefix);
 }
 
+sub checkline_relative_path($$) {
+	my ($line, $path) = @_;
+	my ($fname);
+
+	if (!$is_wip && $path =~ qr"/wip/") {
+		$line->log_error("A pkgsrc package must not depend on any outside package.");
+	}
+	($fname = $path) =~ s/^\.\.\/\.\.\//${pkgsrcdir}\//;
+	if (!-d $fname && !-f $fname) {
+		$line->log_error("\"${path}\" does not exist.");
+	}
+}
+
 #
 # Procedures to check an array of lines, part 1.
 #
@@ -1836,16 +1849,10 @@ sub checkline_basic_vartype($$$$$) {
 	} elsif ($type eq "DependencyWithPath") {
 		if ($value =~ regex_unresolved) {
 			# don't even try to check anything
-		} elsif ($value =~ qr":\.\./\.\./([^/]+)/([^/]+)$") {
-			my ($cat, $pkg) = ($1, $2);
+		} elsif ($value =~ qr":(\.\./\.\./([^/]+)/([^/]+))$") {
+			my ($relpath, $cat, $pkg) = ($1, $2, $3);
 
-			if (!$is_wip && $cat eq "wip") {
-				$line->log_error("A pkgsrc package must not depend on any outside package.");
-			}
-
-			if (!-d "${pkgsrcdir}/${cat}/${pkg}") {
-				$line->log_error("The package ${cat}/${pkg} does not exist.");
-			}
+			checkline_relative_path($line, $relpath);
 
 			if ($pkg eq "msgfmt" || $pkg eq "gettext") {
 				$line->log_warning("Please use BUILD_USES_MSGFMT=yes instead of this dependency.");
@@ -2682,7 +2689,7 @@ sub checklines_package_Makefile($) {
 			my ($includefile) = ($1);
 
 			$line->log_debug("includefile=${includefile}");
-			# TODO: check the includefile.
+			checkline_relative_path($line, $includefile);
 
 		} elsif ($text =~ qr"^\.\s*(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$") {
 			my ($directive, $args) = ($1, $2);
