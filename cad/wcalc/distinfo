@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/01 03:54:45 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2005/12/01 23:58:16 dmcmahill Exp $
 
 SHA1 (wcalc-0.9.tar.gz) = d59d03a8b1e1eceaae032ab755f0ee9ca30d0b95
 RMD160 (wcalc-0.9.tar.gz) = cccbbac6f4eca55a2a695d73da62cc4535e47edf
 Size (wcalc-0.9.tar.gz) = 1341805 bytes
+SHA1 (patch-aa) = 484dd40f6773230d43d5c66f1985fd0dba5d56e5
