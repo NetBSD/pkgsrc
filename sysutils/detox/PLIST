@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/01 03:32:03 minskim Exp $
+bin/detox
+man/man1/detox.1
+man/man5/detox.tbl.5
+man/man5/detoxrc.5
+share/detox/iso8859_1.tbl
+share/detox/unicode.tbl
+share/examples/detox/detoxrc
+@dirrm share/examples/detox
+@dirrm share/detox
