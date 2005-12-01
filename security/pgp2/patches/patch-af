@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1 2005/12/01 20:19:57 wiz Exp $
+
+--- usuals.h.orig	1995-09-15 14:18:52.000000000 +0200
++++ usuals.h
+@@ -3,6 +3,13 @@
+ #ifndef USUALS /* Assures no redefinitions of usual types...*/
+ #define USUALS
+ 
++#ifdef __NetBSD__
++#include <sys/types.h>
++#if BYTE_ORDER == BIG_ENDIAN
++#define HIGHFIRST
++#endif
++#endif
++
+ typedef unsigned char boolean;	/* values are TRUE or FALSE */
+ typedef unsigned char byte;	/* values are 0-255 */
+ typedef byte *byteptr;	/* pointer to byte */
