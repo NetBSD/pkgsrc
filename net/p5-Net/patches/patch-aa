@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2001/11/22 08:35:58 martti Exp $
+$NetBSD: patch-aa,v 1.9 2005/12/01 20:25:44 wiz Exp $
 
 --- Configure.orig	Thu Mar 22 06:15:29 2001
 +++ Configure	Sat Nov 17 02:40:26 2001
@@ -133,7 +133,7 @@ $NetBSD: patch-aa,v 1.8 2001/11/22 08:35:58 martti Exp $
  EDQ
  
 -if(get_bool($msg,0)) {
-+# XXX Should probably honor USE_SOCKS? --mjl
++# XXX Should probably honor socks option? --mjl
 +if(0 && get_bool($msg,0)) {
  
    $msg = <<'EDQ';
