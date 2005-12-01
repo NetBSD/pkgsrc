@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2005/08/08 14:44:07 taca Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/01 18:29:58 wiz Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040401
-#PKGREVISION=
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
 
@@ -14,46 +13,35 @@ COMMENT=	Clone of vi/ex, with multilingual patch
 
 CONFLICTS=	vigor-[0-9]* nvi-[0-9]*
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/build
+CONFIGURE_DIRS=	${WRKSRC}/build
 GNU_CONFIGURE=	YES
-PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -E -f
-CONFIGURE_ENV=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
-CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
 
-CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH}
-USE_TOOLS+=	sh
-
-.include "../../mk/bsd.prefs.mk"
-
+PATCH_DIST_ARGS+=	-d ${WRKSRC} --forward --quiet -E -f
 PATCH_FUZZ_FACTOR=	-F1
 
-.if !defined(USE_CANNA) || ${USE_CANNA} == YES
-.include "../../inputmethod/canna-lib/buildlink3.mk"
-CONFIGURE_ARGS+=--enable-canna=${BUILDLINK_PREFIX.canna-lib}
-CANNA_OPT.euc-jp=canna cannactrl cannakey=
-CANNA_OPT.sjis=${CANNA_OPT.euc-jp}
-CANNA_OPT.iso-2022-jp=${CANNA_OPT.euc-jp}
-.endif
+CONFIGURE_ENV+=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
+CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
 
-PLIST_TMP=	${WRKDIR}/PLIST
-PLIST_SRC+=	${PKGDIR}/PLIST ${PLIST_TMP}
+CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH:Q}
+USE_TOOLS+=	sh
 
-AUTODETECT.euc-jp=jp
-AUTODETECT.sjis=jp
-AUTODETECT.iso-2022-jp=jp
+.include "options.mk"
 
-AUTODETECT.euc-cn=cn
 AUTODETECT.big5=cn
+AUTODETECT.euc-cn=cn
+AUTODETECT.euc-jp=jp
+AUTODETECT.euc-kr=kr
+AUTODETECT.euc-tw=tw
 AUTODETECT.hz=cn
 AUTODETECT.iso-2022-cn=cn
-
-AUTODETECT.euc-tw=tw
-
-AUTODETECT.euc-kr=kr
+AUTODETECT.iso-2022-jp=jp
 AUTODETECT.iso-2022-kr=kr
+AUTODETECT.sjis=jp
 
-ENCODING+=	iso-2022-cn iso-2022-jp iso-2022-kr
-ENCODING+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
+ENCODINGS+=	iso-2022-cn iso-2022-jp iso-2022-kr
+ENCODINGS+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 # XXX ignore NetBSD 2.0F and later's grantpt(3) and SysV pty for just now
@@ -62,26 +50,25 @@ CONFIGURE_ENV+=         vi_cv_sys5_pty=no
 
 post-patch:
 .if ${OPSYS} == "NetBSD"
-	${RM} -f ${WRKSRC}/../include/sys/queue.h
+	${RM} -f ${WRKSRC}/include/sys/queue.h
 .endif
 
 post-build:
-.for encoding in ${ENCODING}
+.for encoding in ${ENCODINGS}
 	@${SED} -e 's|$${CANNA_OPT}|${CANNA_OPT.${encoding}}|'		\
 		-e 's|$${AUTODETECT}|${AUTODETECT.${encoding}}|'	\
 		-e 's|$${ENCODING}|${encoding}|g'			\
 		-e 's|$${PREFIX}|${PREFIX}|'				\
 		${FILESDIR}/nvi-m17n > ${WRKDIR}/nvi-${encoding}
-	@${ECHO} "bin/nvi-${encoding}" >> ${PLIST_TMP}
 .endfor
 
 post-install:
-.for encoding in ${ENCODING}
-	@${INSTALL_SCRIPT} ${WRKDIR}/nvi-${encoding} ${PREFIX}/bin
+.for encoding in ${ENCODINGS}
+	${INSTALL_SCRIPT} ${WRKDIR}/nvi-${encoding} ${PREFIX}/bin
 .endfor
-	@${CP} ${WRKSRC}/../README.english \
+	${INSTALL_DATA} ${WRKSRC}/README.english \
 		${PREFIX}/share/vi/
-	@${CP} ${WRKSRC}/../README.japanese \
+	${INSTALL_DATA} ${WRKSRC}/README.japanese \
 		${PREFIX}/share/vi/
 
 .include "../../mk/bsd.pkg.mk"
