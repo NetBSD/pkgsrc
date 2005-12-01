@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.30 2005/11/24 10:16:54 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.31 2005/12/01 08:45:37 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -70,6 +70,7 @@ especially editors, so they can provide a point-and-goto interface.
 Show the summary of command line options, then exit.
 .It Fl i Ns | Ns Fl -import
 Check if a package is ready to be imported into pkgsrc.
+This is especially useful for packages from the pkgsrc-wip project.
 .It Fl q Ns | Ns Fl -quiet
 Don't print the errors and warnings summary before terminating.
 .It Fl r
