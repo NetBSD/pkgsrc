@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.22 2005/12/02 09:44:03 rillig Exp $
+# $NetBSD: deprecated.map,v 1.23 2005/12/02 17:09:12 wiz Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -21,6 +21,7 @@ USE_RSAREF2		Use the PKG_OPTIONS framework (option rsaref) instead.
 USE_SASL		Use the PKG_OPTIONS framework (option sasl) instead.
 USE_SASL2		Use the PKG_OPTIONS framework (option sasl) instead.
 USE_SJ3			Use the PKG_OPTIONS framework (option sj3) instead.
+USE_SOCKS		Use the PKG_OPTIONS framework (socks4 and socks5 options) instead.
 USE_WNN4		Use the PKG_OPTIONS framework (option wnn4) instead.
 USE_XFACE		Use the PKG_OPTIONS framework instead.
 
