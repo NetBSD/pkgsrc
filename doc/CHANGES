@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12086 2005/12/02 17:18:22 schmonz Exp $
+$NetBSD: CHANGES,v 1.12087 2005/12/02 17:57:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5458,3 +5458,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/clamsmtp to 1.6 [xtraeme 2005-12-02]
 	Updated mail/getmail to 4.4.3 [schmonz 2005-12-02]
 	Updated devel/bglibs to 1.031 [schmonz 2005-12-02]
+	Updated devel/monotone-server to 0.24 [jmmv 2005-12-02]
