@@ -1,5 +1,5 @@
 # RCSid:
-#	$Id: makefile.boot.in,v 1.1 2005/10/31 21:52:26 reed Exp $
+#	$Id: makefile.boot.in,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $
 
 srcdir=@srcdir@
 VPATH=.:$(srcdir)
