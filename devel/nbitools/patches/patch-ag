@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2004/12/28 10:30:58 minskim Exp $
+$NetBSD: patch-ag,v 1.3 2005/12/02 22:59:40 joerg Exp $
 
 --- config/imake/imake.c.orig	2002-02-13 10:32:00.000000000 -0600
 +++ config/imake/imake.c
@@ -7,7 +7,34 @@ $NetBSD: patch-ag,v 1.2 2004/12/28 10:30:58 minskim Exp $
   *	<add any global targets like 'clean' and long dependencies>
   */
 -#if defined(__FreeBSD__) || defined(__NetBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__linux__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__linux__) || defined(__DragonFly__)
  /* This needs to be before _POSIX_SOURCE gets defined */
  # include <sys/param.h>
  # include <sys/types.h>
+@@ -1028,7 +1028,7 @@ static void get_ld_version(inFile)
+ }
+ #endif
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ static void
+ get_binary_format(FILE *inFile)
+ {
+@@ -1064,7 +1064,7 @@ static void get_gcc_incdir(inFile)
+   FILE* inFile;
+ {
+   static char* gcc_path[] = {
+-#if defined(linux) || defined(__OpenBSD__)
++#if defined(linux) || defined(__OpenBSD__) || defined(__DragonFly__)
+     "/usr/bin/cc",	/* for Linux PostIncDir */
+ #endif
+     "/usr/local/bin/gcc",
+@@ -1161,7 +1161,7 @@ define_os_defaults(inFile)
+     get_ld_version(inFile);
+ #endif
+     get_gcc_incdir(inFile);
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+     get_binary_format(inFile);
+ #endif
+ #endif /* WIN32 */
