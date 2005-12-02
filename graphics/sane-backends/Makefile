@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/09/27 09:29:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/02 23:40:36 joerg Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/sane-${SANE_VERSION}
 .if (${OPSYS} == "SunOS")
 PLIST_SUBST+=	SANE_PINT="@comment "
 PLIST_SUBST+=	SANE_SM3600="@comment "
-.elif (${OPSYS} == "Linux")
+.elif (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly")
 PLIST_SUBST+=	SANE_PINT="@comment "
 PLIST_SUBST+=   SANE_SM3600=""
 .else
