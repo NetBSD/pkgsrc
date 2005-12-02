@@ -1,8 +1,20 @@
-$NetBSD: patch-ab,v 1.1 2004/12/18 15:59:55 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/02 19:41:18 joerg Exp $
 
 --- src/Makefile.shlib.orig	2003-01-11 12:22:34.000000000 -0500
 +++ src/Makefile.shlib
-@@ -204,7 +204,7 @@ ifeq ($(PORTNAME), beos)
+@@ -125,6 +125,11 @@ ifeq ($(PORTNAME), netbsd)
+   endif
+ endif
+ 
++ifeq ($(PORTNAME), dragonfly)
++  shlib			:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
++  LINK.shared		= $(COMPILER) -shared -Wl,-x,-soname,$(soname)
++endif
++
+ ifeq ($(PORTNAME), hpux)
+   shlib			:= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+   LINK.shared		= $(LD) +h $(soname) -b +b $(libdir)
+@@ -204,7 +209,7 @@ ifeq ($(PORTNAME), beos)
    SHLIB_LINK		+= -ltermcap -lstdc++.r4 -lbind -lsocket -L/boot/develop/lib/x86
  endif
  
