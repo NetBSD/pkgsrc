@@ -1,14 +1,17 @@
-# $NetBSD: options.mk,v 1.4 2005/12/01 18:20:09 adrianp Exp $
+# $NetBSD: options.mk,v 1.5 2005/12/02 17:59:53 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
 PKG_OPTIONS_REQUIRED_GROUPS= role
-PKG_OPTIONS_GROUP.role= leaf hub
+PKG_OPTIONS_GROUP.role= unrealircd-leaf unrealircd-hub
 
-PKG_SUPPORTED_OPTIONS=	inet6 nospoof hub leaf ziplinks remoteinc ssl chroot
-PKG_SUPPORTED_OPTIONS+=	prefixaq showlistmodes topicisnuhost shunnotices
-PKG_SUPPORTED_OPTIONS+=	no-operoverride disableusermod operoverride-verify
-PKG_SUGGESTED_OPTIONS=	hub showlistmodes
+PKG_SUPPORTED_OPTIONS=	inet6 unrealircd-nospoof unrealircd-leaf
+PKG_SUPPORTED_OPTIONS+=	unrealircd-ziplinks unrealircd-remoteinc ssl
+PKG_SUPPORTED_OPTIONS+=	unrealircd-chroot unrealircd-prefixaq
+PKG_SUPPORTED_OPTIONS+=	unrealircd-showlistmodes unrealircd-topicisnuhost
+PKG_SUPPORTED_OPTIONS+=	unrealircd-shunnotices unrealircd-operoverride-verify
+PKG_SUPPORTED_OPTIONS+=	unrealircd-no-operoverride unrealircd-disableusermod
+PKG_SUGGESTED_OPTIONS=	unrealircd-showlistmodes
 
 .include "../../mk/bsd.options.mk"
 
@@ -33,16 +36,16 @@ CONFIGURE_ARGS+=	--enable-ssl=${SSLBASE}
 ###
 ### Enable Anti-Spoofing protection for older OS's with an insecure IPv4 stack
 ###
-.if !empty(PKG_OPTIONS:Mnospoof)
+.if !empty(PKG_OPTIONS:Munrealircd-nospoof)
 CONFIGURE_ARGS+=	--enable-nospoof
 .endif
 
 ###
 ### Compile as a hub or leaf server
 ###
-.if !empty(PKG_OPTIONS:Mhub)
+.if !empty(PKG_OPTIONS:Munrealircd-hub)
 CONFIGURE_ARGS+=	--enable-hub
-.	elif !empty(PKG_OPTIONS:Mleaf)
+.	elif !empty(PKG_OPTIONS:Munrealircd-leaf)
 CONFIGURE_ARGS+=	--enable-leaf
 .endif
 
@@ -50,7 +53,7 @@ CONFIGURE_ARGS+=	--enable-leaf
 ### Compile in support for ziplinks.  This compresses data sent from
 ### server <-> server with zlib.
 ###
-.if !empty(PKG_OPTIONS:Mziplinks)
+.if !empty(PKG_OPTIONS:Munrealircd-ziplinks)
 CONFIGURE_ARGS+=		--enable-ziplinks
 .	include "../../devel/zlib/buildlink3.mk"
 .endif
@@ -58,7 +61,7 @@ CONFIGURE_ARGS+=		--enable-ziplinks
 ###
 ### Compile in support for remote include files.
 ###
-.if !empty(PKG_OPTIONS:Mremoteinc)
+.if !empty(PKG_OPTIONS:Munrealircd-remoteinc)
 CONFIGURE_ARGS+=		--enable-libcurl=${PREFIX}
 .	include "../../www/curl/buildlink3.mk"
 .	include "../../net/libcares/buildlink3.mk"
@@ -70,7 +73,7 @@ CONFIGURE_ARGS+=		--enable-libcurl=${PREFIX}
 ### unrealircd docs/source for further information on this.  By default
 ### CHROOTDIR is defined as ${IRCD_HOME}.
 ###
-.if !empty(PKG_OPTIONS:Mchroot)
+.if !empty(PKG_OPTIONS:Munrealircd-chroot)
 CFLAGS+=	-DCHROOTDIR
 .endif
 
@@ -83,14 +86,14 @@ CFLAGS+=	-DCHROOTDIR
 ###	irssi, KVIrc and CGI:IRC.
 ### This feature should be enabled/disabled network-wide.
 ###
-.if !empty(PKG_OPTIONS:Mprefixaq)
+.if !empty(PKG_OPTIONS:Munrealircd-prefixaq)
 CONFIGURE_ARGS+=		--enable-prefixaq
 .endif
 
 ###
 ### Show the modes a channel has set in the /list output.
 ###
-.if !empty(PKG_OPTIONS:Mshowlistmodes)
+.if !empty(PKG_OPTIONS:Munrealircd-showlistmodes)
 CONFIGURE_ARGS+=		--with-showlistmodes
 .endif
 
@@ -98,34 +101,34 @@ CONFIGURE_ARGS+=		--with-showlistmodes
 ### /topic command to show the nick!user@host of the person
 ### who set the topic, rather than just the nickname.
 ###
-.if !empty(PKG_OPTIONS:Mtopicisnuhost)
+.if !empty(PKG_OPTIONS:Munrealircd-topicisnuhost)
 CONFIGURE_ARGS+=		--with-topicisnuhost
 .endif
 
 ###
 ### Notify a user when they are no longer shunned.
 ###
-.if !empty(PKG_OPTIONS:Mshunnotices)
+.if !empty(PKG_OPTIONS:Munrealircd-shunnotices)
 CONFIGURE_ARGS+=		--with-shunnotices
 .endif
 
 ###
 ### Disable oper override.
 ###
-.if !empty(PKG_OPTIONS:Mno-operoverride)
+.if !empty(PKG_OPTIONS:Munrealircd-no-operoverride)
 CONFIGURE_ARGS+=		--with-no-operoverride
 .endif
 
 ###
 ### Disable /sethost, /setident, /chgname, /chghost, and /chgident.
 ###
-.if !empty(PKG_OPTIONS:Mdisableusermod)
+.if !empty(PKG_OPTIONS:Munrealircd-disableusermod)
 CONFIGURE_ARGS+=		--with-disableusermod
 .endif
 
 ###
 ### Require opers to /invite themselves into a +s or +p channel.
 ###
-.if !empty(PKG_OPTIONS:Moperoverride-verify)
+.if !empty(PKG_OPTIONS:Munrealircd-operoverride-verify)
 CONFIGURE_ARGS+=		--with-operoverride-verify
 .endif
