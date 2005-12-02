@@ -32,7 +32,6 @@ catalog-sqlite		Store Bacula catalog in SQLite database.
 cdparanoia		Use cdparanoia to rip CDDA media.
 charset	
 charts	
-chroot			Enable support for running in a chroot jail.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses	
@@ -43,7 +42,6 @@ db4			Enable db4 support.
 dbh			Enable DBH support.
 debug			Enable debugging facilities in the package.
 deliver-suid		Install deliver executable setuid root.
-disableusermod		Disable /sethost, /setident, /chgname, /chghost, and /chgident.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
 djbfft-pentium		Optimize for Pentium{,MMX} processors.
@@ -105,7 +103,6 @@ halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hdf5	
 homedir	
 hpn-patch	
-hub			IRC hub server
 i586-optimized		Optimize for i586 (only).
 iconv	
 id3	
@@ -138,7 +135,6 @@ largefile
 largescale	
 ldap			Enable LDAP support.
 ldap-compat	
-leaf			IRC leaf node server
 libcrack	
 libgcrypt	
 libnet10	
@@ -179,16 +175,13 @@ nas			Enable usage of the Network Audio System.
 native	
 ncurses			Enable ncurses support.
 nntpcache-pgp		Enable pgp signed nocem support.
-no-operoverride		Disable operator override.
 nogui	
-nospoof			Enable anti-spoof protection for older TCP/IP stacks.
 ogg			Enable Ogg support.
 okinawa_dict	
 openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
 openldap		Enable OpenLDAP support.
 openssl	
-operoverride-verify	Require opers to /invite themselves into a +s or +p channel.
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for MacOSX Address Book.
 pam			Enable PAM support.
@@ -203,7 +196,6 @@ plplot
 png			Enable PNG support.
 portals	
 prefix-cmds	
-prefixaq		Enable prefixes for chanadmin and chanowner.
 proftpd-readme		Enable mod_readme.
 python	
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
@@ -220,7 +212,6 @@ radius
 rc5	
 readline	
 recommended-db	
-remoteinc		Enable remote includes.
 rrdtool	
 rsaref			Use RSAREF library.
 samba	
@@ -228,8 +219,6 @@ sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
 sdl			Use SDL as display library.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
-showlistmodes		Show the modes a channel has set in the /list output.
-shunnotices		Notify a user when they are no longer shunned.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
 skey	
 slang			Enable S-Lang support.
@@ -260,11 +249,23 @@ tcpwrappers
 tdb	
 theora			Use the theora codecs.
 tls			Enable TLS support.
-topicisnuhost		/topic command to show the nick!user@host of the person who set the topic.
 trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
 truetype	
 unicode	
+unrealircd-chroot	Enable support for running in a chroot jail.
+unrealircd-disableusermod	Disable /sethost, /setident, /chgname, /chghost, and /chgident.
+unrealircd-hub		IRC hub server.
+unrealircd-leaf		IRC leaf node server.
+unrealircd-no-operoverride	Disable operator override.
+unrealircd-nospoof	Enable anti-spoof protection for older TCP/IP stacks.
+unrealircd-operoverride-verify	Require opers to /invite themselves into a +s or +p channel.
+unrealircd-prefixaq	Enable prefixes for chanadmin and chanowner.
+unrealircd-remoteinc	Enable remote includes.
+unrealircd-showlistmodes	Show the modes a channel has set in the /list output.
+unrealircd-shunnotices	Notify a user when they are no longer shunned.
+unrealircd-topicisnuhost	/topic command to show the nick!user@host of the person who set the topic.
+unrealircd-ziplinks	Compress data before transmitting it between servers.
 vflib	
 vfs	
 virtualchroot	
@@ -329,4 +330,3 @@ xterm-luit		Enable locale <> UTF encoding translation.
 xvid			Enable usage of XVid codecs.
 zaptel	
 zip	
-ziplinks		Compress data before transmitting it between servers.
