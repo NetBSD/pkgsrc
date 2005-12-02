@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: monotone.sh,v 1.1.1.1 2005/01/12 12:52:50 jmmv Exp $
+# $NetBSD: monotone.sh,v 1.2 2005/12/02 17:56:25 jmmv Exp $
 #
 # PROVIDE: monotone
 # REQUIRE: DAEMON
@@ -25,7 +25,7 @@ command="@PREFIX@/bin/monotone"
 command_args="--norc \
               --rcfile=@PKG_SYSCONFDIR@/hooks.conf \
               --db=${monotone_home}/monotone.db \
-              serve 0.0.0.0 ${monotone_branches} \
+              serve ${monotone_branches} \
               >>${monotone_home}/monotone.log 2>&1 &"
 required_files="@PKG_SYSCONFDIR@/branches.conf \
                 @PKG_SYSCONFDIR@/hooks.conf \
