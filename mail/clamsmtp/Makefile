@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2005/08/08 01:52:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/02 08:48:37 xtraeme Exp $
 
-DISTNAME=		clamsmtp-1.5
+DISTNAME=		clamsmtp-1.6
 CATEGORIES=		mail
 MASTER_SITES=		http://memberwebs.com/nielsen/software/clamsmtp/
 
