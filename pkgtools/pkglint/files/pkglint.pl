@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.411 2005/12/02 09:01:32 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.412 2005/12/02 20:15:00 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -619,7 +619,7 @@ BEGIN {
 	);
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER
-		log_fatal log_error log_warning log_info log_debug
+		log_fatal log_error log_warning log_note log_info log_debug
 		explain
 	);
 	import PkgLint::FileUtil qw(
@@ -1863,7 +1863,7 @@ sub checkline_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Dependency") {
-		if ($value eq $value_novar && $value !~ qr"^[-*+.0-9<=>\@A-Z_a-z\[\]]+$") {
+		if ($value eq $value_novar && $value !~ qr"^[-*+,.0-9<=>\?\@A-Z_a-z\[\]\{\}]+$") {
 			$line->log_warning("\"${value}\" is not a valid dependency.");
 			$line->explain(
 				"Typical dependencies have the form \"package>=2.5\", \"package-[0-9]*\"",
@@ -1912,7 +1912,7 @@ sub checkline_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Filename") {
-		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%]*$") {
+		if ($value_novar !~ qr"^[-0-9\@A-Za-z.,_~+%]*$") {
 			$line->log_warning("\"${value}\" is not a valid filename.");
 		}
 
@@ -2058,7 +2058,7 @@ if (false) {
 		} elsif ($value =~ regex_unresolved) {
 			# No further checks
 
-		} elsif ($value =~ qr"^(?:http://|ftp://)[-0-9A-Za-z.]+(?::\d+)?/~?([-%&+,./0-9:=?\@A-Z_a-z]|\\#)*?$") {
+		} elsif ($value =~ qr"^(?:http://|ftp://|gopher://)[-0-9A-Za-z.]+(?::\d+)?/~?([-%&+,./0-9:=?\@A-Z_a-z]|\\#)*?$") {
 			my $sites = get_dist_sites();
 
 			foreach my $site (keys(%{$sites})) {
@@ -2072,8 +2072,8 @@ if (false) {
 		} elsif ($value =~ qr"^([0-9A-Za-z]+)://([^/]+)(.*)$") {
 			my ($scheme, $host, $abs_path) = ($1, $2, $3);
 
-			if ($scheme ne "ftp" && $scheme ne "http") {
-				$line->log_warning("\"${value}\" is not a valid URL. Only http:// and ftp:// URLs are allowed here.");
+			if ($scheme ne "ftp" && $scheme ne "http" && $scheme ne "gopher") {
+				$line->log_warning("\"${value}\" is not a valid URL. Only http, ftp and gopher URLs are allowed here.");
 
 			} elsif ($abs_path eq "") {
 				$line->log_note("For consistency, please add a trailing slash to \"${value}\".");
@@ -2579,7 +2579,7 @@ sub checklines_package_Makefile($) {
 				$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
 			}
 
-			if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
+			if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
 				my ($guess) = ($1);
 				$guess =~ s/-/\//g;
 				$guess = "auto/${guess}/.packlist";
@@ -2995,7 +2995,7 @@ sub checkfile_package_Makefile($$$) {
 	$distfiles    = expand_variable($whole, "DISTFILES");
 
 	if (defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
-		log_warning($fname, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
+		log_note($fname, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
 	}
 
 	if (!defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {
