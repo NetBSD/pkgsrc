@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.48 2005/12/02 17:09:12 wiz Exp $
+# $NetBSD: makevars.map,v 1.49 2005/12/02 18:47:58 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -53,12 +53,15 @@ BUILTIN_X11_TYPE	Readonly
 BUILTIN_X11_VERSION	Readonly
 CATEGORIES		List of Category
 CC_VERSION		Readonly
+CC			Readonly
 CFLAGS			List+
 COMMENT			Comment
 CONFIGURE_ARGS		List+ of ShellWord
 CONFIGURE_DIRS		List of WrksrcSubdirectory
 CONFIGURE_ENV		List+ of ShellWord
+CONFLICTS		List of Dependency
 CPPFLAGS		List+
+CXX			Readonly
 DEPENDS			List!+ of DependencyWithPath
 DISTFILES		List of Filename
 DISTNAME		Filename
