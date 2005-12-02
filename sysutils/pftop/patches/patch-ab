@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/11/05 15:08:33 peter Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/02 12:25:24 peter Exp $
 
 This patch fixes the following:
 * compile problem on NetBSD.
-* compile problem on PF > 3.5.
+* compile problem with PF > 3.5.
 * fixes at least two segfaults in batch mode.
 * implements a better (less buggy) screen refresh method.
 * changes some errx/warnx to err/warn for better errors.
 
 --- pftop.c.orig	2003-08-05 03:20:39.000000000 +0200
-+++ pftop.c	2004-10-27 00:21:10.000000000 +0200
++++ pftop.c	2005-11-16 13:58:27.000000000 +0100
 @@ -31,6 +31,11 @@
   */
  #include "config.h"
@@ -156,7 +156,21 @@ This patch fixes the following:
  				tbprintf("! ");
  #ifdef HAVE_ADDR_WRAP
  			tb_print_addrw(&dst->addr, PT_MASK(dst), af);
-@@ -2486,12 +2495,6 @@
+@@ -1890,8 +1899,13 @@
+ #ifdef HAVE_RULE_STATES
+ 	print_fld_size(FLD_STATS, pr->states);
+ #endif
++#if OS_LEVEL > 37
++	print_fld_size(FLD_PKTS, pr->packets[0] + pr->packets[1]);
++	print_fld_size(FLD_BYTES, pr->bytes[0] + pr->bytes[1]);
++#else
+ 	print_fld_size(FLD_PKTS, pr->packets);
+ 	print_fld_size(FLD_BYTES, pr->bytes);
++#endif
+ 	print_fld_uint(FLD_RULE, pr->nr);
+ 	print_fld_str(FLD_DIR, pr->direction == PF_OUT ? "Out" : "In");
+ 	if (pr->quick)
+@@ -2486,12 +2500,6 @@
  }
  
  void
@@ -169,7 +183,7 @@ This patch fixes the following:
  usage()
  {
  	extern char *__progname;
-@@ -2544,7 +2547,9 @@
+@@ -2544,7 +2552,9 @@
  	line++;
  	mvprintw(line++, 6, "press any key to continue ...");
  
@@ -179,7 +193,7 @@ This patch fixes the following:
  }
  
  void
-@@ -2577,8 +2582,9 @@
+@@ -2577,8 +2587,9 @@
  		keypad(stdscr, TRUE);
  		intrflush(stdscr, FALSE);
  
@@ -190,7 +204,7 @@ This patch fixes the following:
  	}
  
  	if (maxstates == 0)
-@@ -2597,7 +2603,6 @@
+@@ -2597,7 +2608,6 @@
  		cmdbuf[0] = 0;
  	}
  	curr_cmd = cmd;
@@ -198,7 +212,7 @@ This patch fixes the following:
  	return prev;
  }
  
-@@ -2618,10 +2623,8 @@
+@@ -2618,10 +2628,8 @@
  {
  	int del;
  	del = atoi(cmdbuf);
@@ -210,7 +224,7 @@ This patch fixes the following:
  }
  
  void
-@@ -2646,7 +2649,6 @@
+@@ -2646,7 +2654,6 @@
  		if (cmd_len < sizeof(cmdbuf) - 1) {
  			cmdbuf[cmd_len++] = ch;
  			cmdbuf[cmd_len] = 0;
@@ -218,7 +232,7 @@ This patch fixes the following:
  		} else
  			beep();
  	}
-@@ -2663,10 +2665,9 @@
+@@ -2663,10 +2670,9 @@
  	case KEY_BACKSPACE:
  	case KEY_DC:
  	case CTRL_H:
@@ -231,7 +245,7 @@ This patch fixes the following:
  			beep();
  		break;
  	default:
-@@ -2687,9 +2688,6 @@
+@@ -2687,9 +2693,6 @@
  	}
  
  	switch (ch) {
@@ -241,7 +255,7 @@ This patch fixes the following:
  	case 'c':
  		cachestates = !cachestates;
  		update_cache();
-@@ -2698,25 +2696,21 @@
+@@ -2698,25 +2701,21 @@
  		/* FALLTHROUGH */
  	case 'h':
  		show_help();
@@ -267,7 +281,7 @@ This patch fixes the following:
  		break;
  	case 's':
  		command_set(&cm_delay);
-@@ -2737,49 +2731,40 @@
+@@ -2737,49 +2736,40 @@
  		/* FALLTHROUGH */
  	case CTRL_N:
  		dispstart++;
@@ -318,7 +332,7 @@ This patch fixes the following:
  		set_view_hotkey(ch);
  }
  
-@@ -2790,6 +2775,7 @@
+@@ -2790,6 +2780,7 @@
  	extern int optind;
  
  	struct pf_status status;
@@ -326,7 +340,7 @@ This patch fixes the following:
  
  	char *orderstr = NULL;
  	char *viewstr = NULL;
-@@ -2872,7 +2858,6 @@
+@@ -2872,7 +2863,6 @@
  	signal(SIGINT, sig_close);
  	signal(SIGQUIT, sig_close);
  	signal(SIGWINCH, sig_resize);
@@ -334,7 +348,7 @@ This patch fixes the following:
  
  #ifdef HAVE_DEVICE_RO
  	dev = open("/dev/pf", O_RDONLY);
-@@ -2884,7 +2869,7 @@
+@@ -2884,7 +2874,7 @@
  
  	/* preallocate existing states if possible */
  	if (ioctl(dev, DIOCGETSTATUS, &status)) {
@@ -343,7 +357,7 @@ This patch fixes the following:
  		alloc_buf(0);
  	} else
  		alloc_buf(status.states);
-@@ -2910,36 +2895,7 @@
+@@ -2910,36 +2900,7 @@
  	if (rawmode && countmax == 0)
  		countmax = 1;
  
@@ -380,7 +394,7 @@ This patch fixes the following:
  		if (gotsig_close)
  			break;
  		if (gotsig_resize) {
-@@ -2947,12 +2903,30 @@
+@@ -2947,12 +2908,30 @@
  				endwin();
  			setup_term(maxstates);
  			gotsig_resize = 0;
