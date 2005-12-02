@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2005/12/02 08:13:26 xtraeme Exp $
+
+--- mysys/Makefile.in.orig	2005-12-02 08:52:03.000000000 +0100
++++ mysys/Makefile.in	2005-12-02 08:52:12.000000000 +0100
+@@ -473,7 +473,7 @@
+ INCLUDES = @ZLIB_INCLUDES@ -I$(top_builddir)/include \
+ 			-I$(top_srcdir)/include -I$(srcdir)
+ 
+-pkglib_LIBRARIES = libmysys.a
++pkglib_LIBRARIES =
+ LDADD = libmysys.a ../dbug/libdbug.a \
+ 			../strings/libmystrings.a
+ 

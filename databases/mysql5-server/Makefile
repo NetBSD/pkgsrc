@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/02 08:13:26 xtraeme Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 #PKGREVISION=		1
@@ -7,7 +7,7 @@ COMMENT=		MySQL 5, a free SQL database (server)
 
 CONFLICTS=		{mysql-server-[0-9]*,mysql3-server-[0-9]*}
 
-.include "../mysql5-client/Makefile.common"
+.include "../../databases/mysql5-client/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--with-raid

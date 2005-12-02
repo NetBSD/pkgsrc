@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.1.1.1 2005/10/31 09:21:40 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2005/12/02 08:13:26 xtraeme Exp $
 
---- scripts/Makefile.in.orig	2005-10-31 09:12:57.000000000 +0100
-+++ scripts/Makefile.in	2005-10-31 09:13:33.000000000 +0100
-@@ -337,23 +337,10 @@
- yassl_dir = @yassl_dir@
- yassl_integer_extra_cxxflags = @yassl_integer_extra_cxxflags@
+--- scripts/Makefile.in.orig	2005-11-29 20:46:22.000000000 +0100
++++ scripts/Makefile.in	2005-11-29 20:47:23.000000000 +0100
+@@ -341,23 +341,10 @@
+ yassl_libs = @yassl_libs@
+ yassl_libs_with_path = @yassl_libs_with_path@
  zlib_dir = @zlib_dir@
 -bin_SCRIPTS = @server_scripts@ \
 -			msql2mysql \

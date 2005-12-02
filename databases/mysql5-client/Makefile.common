@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.2 2005/11/09 19:48:44 tv Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/12/02 08:13:26 xtraeme Exp $
 
-DISTNAME=		mysql-5.0.15
+DISTNAME=		mysql-5.0.16
 CATEGORIES=		databases
 MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-5.0/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-5.0/ \
@@ -72,7 +72,7 @@ CONFIGURE_ARGS+=	--enable-assembler
 .endif
 
 # Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 CPPFLAGS+=		-Dunix
 CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
@@ -99,9 +99,8 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 SUBST_CLASSES+=		mk scripts
 SUBST_STAGE.mk=		post-patch
-SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in isam/Makefile.in \
-			merge/Makefile.in mysys/Makefile.in \
-			strings/Makefile.in
+SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in	\
+			mysys/Makefile.in strings/Makefile.in
 SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
 SUBST_MESSAGE.mk=	"Fixing Makefiles."
 SUBST_STAGE.scripts=	post-patch

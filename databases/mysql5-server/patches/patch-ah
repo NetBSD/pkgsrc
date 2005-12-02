@@ -1,21 +1,19 @@
-$NetBSD: patch-ah,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+$NetBSD: patch-ah,v 1.2 2005/12/02 08:13:26 xtraeme Exp $
 
---- man/Makefile.in.orig	2005-10-31 09:41:52.000000000 +0100
-+++ man/Makefile.in	2005-10-31 09:42:12.000000000 +0100
-@@ -334,14 +334,8 @@
- yassl_dir = @yassl_dir@
- yassl_integer_extra_cxxflags = @yassl_integer_extra_cxxflags@
+--- include/Makefile.in.orig	2005-12-02 07:54:42.000000000 +0100
++++ include/Makefile.in	2005-12-02 07:55:26.000000000 +0100
+@@ -343,13 +343,7 @@
+ yassl_libs_with_path = @yassl_libs_with_path@
  zlib_dir = @zlib_dir@
--man_MANS = mysql.1 mysql_zap.1 mysqlaccess.1 \
--		mysqladmin.1 mysqld.1 mysqld_multi.1 mysqldump.1 mysqlshow.1 \
--		perror.1 replace.1 mysqld_safe.1 mysql_fix_privilege_tables.1
--
--EXTRA_DIST = mysql.1.in mysql_zap.1.in \
--		mysqlaccess.1.in mysqladmin.1.in mysqld.1.in mysqld_multi.1.in \
--		mysqldump.1.in mysqlshow.1.in perror.1.in replace.1.in mysqlman.1.in \
--		mysqld_safe.1.in mysql_fix_privilege_tables.1.in
-+man_MANS = mysqld.1 mysqld_multi.1
-+EXTRA_DIST = mysqld.1.in mysqld_multi.1.in
+ BUILT_SOURCES = mysql_version.h m_ctype.h my_config.h
+-pkginclude_HEADERS = my_dbug.h m_string.h my_sys.h my_list.h my_xml.h \
+-			mysql.h mysql_com.h mysql_embed.h \
+-		  	my_semaphore.h my_pthread.h my_no_pthread.h raid.h \
+-			errmsg.h my_global.h my_net.h my_alloc.h \
+-			my_getopt.h sslopt-longopts.h my_dir.h typelib.h \
+-			sslopt-vars.h sslopt-case.h sql_common.h keycache.h \
+-			mysql_time.h $(BUILT_SOURCES)
++pkginclude_HEADERS = 
  
- CLEANFILES = $(man_MANS)
- SUFFIXES = .in
+ noinst_HEADERS = config-win.h config-os2.h config-netware.h \
+ 			heap.h my_bitmap.h\

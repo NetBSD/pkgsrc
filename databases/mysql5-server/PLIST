@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/02 08:13:26 xtraeme Exp $
 bin/comp_err
 bin/innochecksum
 bin/my_print_defaults
@@ -37,6 +37,7 @@ share/mysql-test/client-cert.pem
 share/mysql-test/client-key.pem
 share/mysql-test/include/big_test.inc
 share/mysql-test/include/check_var_limit.inc
+share/mysql-test/include/common-tests.inc
 share/mysql-test/include/ctype_common.inc
 share/mysql-test/include/ctype_filesort.inc
 share/mysql-test/include/ctype_innodb_like.inc
@@ -44,6 +45,7 @@ share/mysql-test/include/ctype_like_escape.inc
 share/mysql-test/include/endspace.inc
 share/mysql-test/include/federated.inc
 share/mysql-test/include/federated_cleanup.inc
+share/mysql-test/include/gis_generic.inc
 share/mysql-test/include/have_archive.inc
 share/mysql-test/include/have_bdb.inc
 share/mysql-test/include/have_big5.inc
@@ -64,7 +66,6 @@ share/mysql-test/include/have_lowercase0.inc
 share/mysql-test/include/have_multi_ndb.inc
 share/mysql-test/include/have_ndb.inc
 share/mysql-test/include/have_openssl.inc
-share/mysql-test/include/have_openssl_1.inc
 share/mysql-test/include/have_outfile.inc
 share/mysql-test/include/have_query_cache.inc
 share/mysql-test/include/have_sjis.inc
@@ -112,6 +113,7 @@ share/mysql-test/r/analyse.result
 share/mysql-test/r/analyze.result
 share/mysql-test/r/ansi.result
 share/mysql-test/r/archive.result
+share/mysql-test/r/archive_gis.result
 share/mysql-test/r/auto_increment.result
 share/mysql-test/r/backup.result
 share/mysql-test/r/bdb-alter-table-1.result
@@ -120,6 +122,7 @@ share/mysql-test/r/bdb-crash.result
 share/mysql-test/r/bdb-deadlock.result
 share/mysql-test/r/bdb.result
 share/mysql-test/r/bdb_cache.result
+share/mysql-test/r/bdb_gis.result
 share/mysql-test/r/bench_count_distinct.result
 share/mysql-test/r/big_test.require
 share/mysql-test/r/bigint.result
@@ -135,6 +138,7 @@ share/mysql-test/r/check_var_limit.require
 share/mysql-test/r/client_xml.result
 share/mysql-test/r/comments.result
 share/mysql-test/r/compare.result
+share/mysql-test/r/compress.result
 share/mysql-test/r/connect.result
 share/mysql-test/r/consistent_snapshot.result
 share/mysql-test/r/constraints.result
@@ -149,6 +153,7 @@ share/mysql-test/r/ctype_collate.result
 share/mysql-test/r/ctype_cp1250_ch.result
 share/mysql-test/r/ctype_cp1251.result
 share/mysql-test/r/ctype_cp932.result
+share/mysql-test/r/ctype_cp932_binlog.result
 share/mysql-test/r/ctype_create.result
 share/mysql-test/r/ctype_eucjpms.result
 share/mysql-test/r/ctype_gbk.result
@@ -253,7 +258,6 @@ share/mysql-test/r/have_met_timezone.require
 share/mysql-test/r/have_moscow_leap_timezone.require
 share/mysql-test/r/have_ndb.require
 share/mysql-test/r/have_openssl.require
-share/mysql-test/r/have_openssl_1.require
 share/mysql-test/r/have_outfile.require
 share/mysql-test/r/have_query_cache.require
 share/mysql-test/r/have_raid.require
@@ -289,6 +293,7 @@ share/mysql-test/r/innodb-lock.result
 share/mysql-test/r/innodb-replace.result
 share/mysql-test/r/innodb.result
 share/mysql-test/r/innodb_cache.result
+share/mysql-test/r/innodb_gis.result
 share/mysql-test/r/innodb_handler.result
 share/mysql-test/r/insert.result
 share/mysql-test/r/insert_select-binlog.result
@@ -329,6 +334,7 @@ share/mysql-test/r/mysql.result
 share/mysql-test/r/mysql_protocols.result
 share/mysql-test/r/mysqlbinlog.result
 share/mysql-test/r/mysqlbinlog2.result
+share/mysql-test/r/mysqlcheck.result
 share/mysql-test/r/mysqldump-max.result
 share/mysql-test/r/mysqldump.result
 share/mysql-test/r/mysqlshow.result
@@ -348,6 +354,7 @@ share/mysql-test/r/ndb_condition_pushdown.result
 share/mysql-test/r/ndb_config.result
 share/mysql-test/r/ndb_database.result
 share/mysql-test/r/ndb_default_cluster.require
+share/mysql-test/r/ndb_gis.result
 share/mysql-test/r/ndb_grant.result
 share/mysql-test/r/ndb_index.result
 share/mysql-test/r/ndb_index_ordered.result
@@ -397,6 +404,7 @@ share/mysql-test/r/query_cache_merge.result
 share/mysql-test/r/query_cache_notembedded.result
 share/mysql-test/r/raid.result
 share/mysql-test/r/range.result
+share/mysql-test/r/read_only.result
 share/mysql-test/r/rename.result
 share/mysql-test/r/repair.result
 share/mysql-test/r/replace.result
@@ -514,6 +522,8 @@ share/mysql-test/r/sp-threads.result
 share/mysql-test/r/sp.result
 share/mysql-test/r/sp_trans.result
 share/mysql-test/r/sql_mode.result
+share/mysql-test/r/ssl.result
+share/mysql-test/r/ssl_compress.result
 share/mysql-test/r/status.result
 share/mysql-test/r/strict.result
 share/mysql-test/r/subselect.result
@@ -581,6 +591,7 @@ share/mysql-test/std_data/loaddata2.dat
 share/mysql-test/std_data/loaddata3.dat
 share/mysql-test/std_data/loaddata4.dat
 share/mysql-test/std_data/loaddata5.dat
+share/mysql-test/std_data/loaddata_dq.dat
 share/mysql-test/std_data/loaddata_pair.dat
 share/mysql-test/std_data/master-bin.000001
 share/mysql-test/std_data/ndb_config_mycnf1.cnf
@@ -600,6 +611,7 @@ share/mysql-test/t/analyse.test
 share/mysql-test/t/analyze.test
 share/mysql-test/t/ansi.test
 share/mysql-test/t/archive.test
+share/mysql-test/t/archive_gis.test
 share/mysql-test/t/auto_increment.test
 share/mysql-test/t/backup-master.sh
 share/mysql-test/t/backup.test
@@ -611,6 +623,7 @@ share/mysql-test/t/bdb-deadlock.test
 share/mysql-test/t/bdb.test
 share/mysql-test/t/bdb_cache-master.opt
 share/mysql-test/t/bdb_cache.test
+share/mysql-test/t/bdb_gis.test
 share/mysql-test/t/bench_count_distinct.test
 share/mysql-test/t/bigint.test
 share/mysql-test/t/binary.test
@@ -625,6 +638,7 @@ share/mysql-test/t/check.test
 share/mysql-test/t/client_xml.test
 share/mysql-test/t/comments.test
 share/mysql-test/t/compare.test
+share/mysql-test/t/compress.test
 share/mysql-test/t/connect.test
 share/mysql-test/t/consistent_snapshot.test
 share/mysql-test/t/constraints.test
@@ -640,6 +654,7 @@ share/mysql-test/t/ctype_collate.test
 share/mysql-test/t/ctype_cp1250_ch.test
 share/mysql-test/t/ctype_cp1251.test
 share/mysql-test/t/ctype_cp932.test
+share/mysql-test/t/ctype_cp932_binlog.test
 share/mysql-test/t/ctype_create.test
 share/mysql-test/t/ctype_eucjpms.test
 share/mysql-test/t/ctype_gbk.test
@@ -763,6 +778,7 @@ share/mysql-test/t/innodb-replace.test
 share/mysql-test/t/innodb.test
 share/mysql-test/t/innodb_cache-master.opt
 share/mysql-test/t/innodb_cache.test
+share/mysql-test/t/innodb_gis.test
 share/mysql-test/t/innodb_handler.test
 share/mysql-test/t/insert.test
 share/mysql-test/t/insert_select-binlog.test
@@ -816,6 +832,7 @@ share/mysql-test/t/mysql_protocols.test
 share/mysql-test/t/mysqlbinlog-master.opt
 share/mysql-test/t/mysqlbinlog.test
 share/mysql-test/t/mysqlbinlog2.test
+share/mysql-test/t/mysqlcheck.test
 share/mysql-test/t/mysqldump-max.test
 share/mysql-test/t/mysqldump.test
 share/mysql-test/t/mysqlshow.test
@@ -835,6 +852,7 @@ share/mysql-test/t/ndb_charset.test
 share/mysql-test/t/ndb_condition_pushdown.test
 share/mysql-test/t/ndb_config.test
 share/mysql-test/t/ndb_database.test
+share/mysql-test/t/ndb_gis.test
 share/mysql-test/t/ndb_index.test
 share/mysql-test/t/ndb_index_ordered.test
 share/mysql-test/t/ndb_index_unique.test
@@ -852,6 +870,7 @@ share/mysql-test/t/ndb_truncate.test
 share/mysql-test/t/ndb_types.test
 share/mysql-test/t/ndb_update.test
 share/mysql-test/t/negation_elimination.test
+share/mysql-test/t/not_embedded_server-master.opt
 share/mysql-test/t/not_embedded_server.test
 share/mysql-test/t/null.test
 share/mysql-test/t/null_key.test
@@ -881,6 +900,7 @@ share/mysql-test/t/query_cache_merge.test
 share/mysql-test/t/query_cache_notembedded.test
 share/mysql-test/t/raid.test
 share/mysql-test/t/range.test
+share/mysql-test/t/read_only.test
 share/mysql-test/t/rename.test
 share/mysql-test/t/repair.test
 share/mysql-test/t/replace.test
@@ -1049,6 +1069,8 @@ share/mysql-test/t/sp-threads.test
 share/mysql-test/t/sp.test
 share/mysql-test/t/sp_trans.test
 share/mysql-test/t/sql_mode.test
+share/mysql-test/t/ssl.test
+share/mysql-test/t/ssl_compress.test
 share/mysql-test/t/status.test
 share/mysql-test/t/strict.test
 share/mysql-test/t/subselect.test
