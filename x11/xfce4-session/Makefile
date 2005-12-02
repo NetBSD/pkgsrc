@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/02 14:23:01 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/02 14:49:24 joerg Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -14,7 +14,7 @@ EGDIR=			${XFCE4_EGBASE}/session
 CONF_FILES=		${EGDIR}/xfce4-session.rc \
 			${PKG_SYSCONFDIR}/xfce4-session.rc
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE} ac_cv_path_ICEAUTH=${TOOLS_PATH.iceauth}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE} ICEAUTH=${TOOLS_PATH.iceauth}
 
 REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 
