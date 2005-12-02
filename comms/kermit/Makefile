@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/06/16 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2005/12/02 17:01:35 wiz Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
@@ -16,11 +16,10 @@ LICENSE=	kermit-license
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
-BUILD_DEFS+=	KERMIT_SUID_UUCP KFLAGS LIBS MANINSTALL
-MAKE_ENV+=	KFLAGS="${KFLAGS}" LIBS="${LIBS}"
-MAKE_ENV+=	SSLINC="${SSLINC}" SSLLIB="${SSLLIB}"
+BUILD_DEFS+=	KFLAGS LIBS MANINSTALL
+MAKE_ENV+=	KFLAGS=${KFLAGS:Q} LIBS=${LIBS:Q}
+MAKE_ENV+=	SSLINC=${SSLINC:Q} SSLLIB=${SSLLIB:Q}
 MAKEFILE=	makefile
-PLIST_SRC=	${WRKDIR}/PLIST
 
 #KFLAGS+=	-DNODEBUG -DNOOLDMODEMS
 
@@ -28,11 +27,24 @@ PLIST_SRC=	${WRKDIR}/PLIST
 SSLINC=		-I${WRKDIR}/.buildlink/include
 SSLLIB=		-L${WRKDIR}/.buildlink/lib ${COMPILER_RPATH_FLAG}${WRKDIR}/.buildlink/lib
 
+.if !empty(MANINSTALL:Mcatinstall)
+PLIST_SUBST+=	HAVE_CATPAGE=""
+.else
+PLIST_SUBST+=	HAVE_CATPAGE="@comment "
+.endif
+
+.if !empty(MANINSTALL:Mmaninstall)
+PLIST_SUBST+=	HAVE_MANPAGE=""
+.else
+PLIST_SUBST+=	HAVE_MANPAGE="@comment "
+.endif
+
+.include "options.mk"
+
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kermit
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/kermit
 	for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
@@ -41,43 +53,19 @@ do-install:
 		nroff -man ${WRKSRC}/ckuker.nr > ${WRKSRC}/kermit.0; \
 		${INSTALL_MAN_DIR} ${PREFIX}/man/cat1; \
 		${INSTALL_MAN} ${WRKSRC}/kermit.0 ${PREFIX}/man/cat1/kermit.0; \
-		${ECHO} man/cat1/kermit.0 >>${PLIST_SRC}; \
 		;; \
 	    maninstall) \
 		${INSTALL_MAN_DIR} ${PREFIX}/man/man1; \
 		${INSTALL_MAN} ${WRKSRC}/ckuker.nr ${PREFIX}/man/man1/kermit.1; \
-		${ECHO} man/man1/kermit.1 >>${PLIST_SRC}; \
 		;; \
 	  esac; \
 	done
-
-.if defined(KERMIT_SUID_UUCP)
-.if ${KERMIT_SUID_UUCP} == "yes" || ${KERMIT_SUID_UUCP} == "YES"
-BINOWN=		uucp
-BINMODE=	4555
-.endif
-.endif
 
 .for __tmp__ in NetBSD-1.3*
 .if ${MACHINE_PLATFORM:M${__tmp__}} != ""
 LIBS+=          -ltermcap
 .endif
 .endfor
-
-# XXX This needs to be tested. XXX
-#
-# Include SOCKS firewall support
-.if defined(USE_SOCKS)
-.if ${USE_SOCKS} == 4
-KFLAGS+=	-DSOCKS
-LIBS+=		-L${PREFIX}/lib -lsocks4
-.include "../../net/socks4/buildlink3.mk"
-.elif ${USE_SOCKS} == 5
-KFLAGS+=	-DSOCKS -DCK_SOCKS5
-LIBS+=		-L${PREFIX}/lib -lsocks5
-.include "../../net/socks5/buildlink3.mk"
-.endif
-.endif
 
 .if ${OPSYS} == "Darwin"
 .if empty(OS_VERSION:M[0-6]\.*)
