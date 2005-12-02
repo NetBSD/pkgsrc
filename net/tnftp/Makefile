@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/09/28 20:52:25 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/02 17:03:06 wiz Exp $
 #
 
 DISTNAME=		tnftp-20050625
@@ -19,24 +19,7 @@ CONFLICTS+=		lukemftp-[0-9]*
 
 NO_CHECKSUM=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-# Include SOCKS firewall support
-.if defined(USE_SOCKS) && (${USE_SOCKS} == "4" || ${USE_SOCKS} == "5")
-.  if ${USE_SOCKS} == "4"
-DEPENDS+=		socks4-2.2:../../net/socks4
-CONFIGURE_ARGS+=	--with-socks4
-.  else
-DEPENDS+=		socks5-1.0.2:../../net/socks5
-CONFIGURE_ARGS+=	--with-socks5
-.  endif
-.endif
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
+.include "options.mk"
 
 OPSYSVARS+=		MAKE_ENV
 MAKE_ENV.SunOS+=	CPPFLAGS=""
