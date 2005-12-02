@@ -8,9 +8,7 @@ ads
 alsa	
 anthy			Use Anthy as Japanese conversion program.
 antialias	
-apm	
 apop	
-ark	
 arping1	
 arping2	
 arts			Use the aRts audio daemon.
@@ -19,7 +17,6 @@ aterm-big5		Enable Chinese support.
 aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
 aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
-ati	
 audiofile	
 authlib	
 avifile	
@@ -35,13 +32,10 @@ catalog-sqlite		Store Bacula catalog in SQLite database.
 cdparanoia		Use cdparanoia to rip CDDA media.
 charset	
 charts	
-chips	
 chroot			Enable support for running in a chroot jail.
-cirrus	
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses	
-cyrix	
 darwin			Build and/or run on Darwin and Mac OS X.
 db	
 db2	
@@ -58,7 +52,6 @@ djbfft-sparc		Optimize for UltraSPARC-{I,II} processors.
 djbware-errno-hack	Patch to #include <errno.h> for correctness.
 domainscale	
 drac			Enable DRAC support.
-dummy	
 dv			Enable usage of the libdv library.
 dvdread			Enable reproduction of DVDs.
 dynamic	
@@ -92,7 +85,6 @@ ggi			Enable GGI support.
 gif			Enable GIF support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
 glib1	
-glint	
 glpk	
 gnome	
 gnupg	
@@ -114,10 +106,7 @@ hdf5
 homedir	
 hpn-patch	
 hub			IRC hub server
-i128	
 i586-optimized		Optimize for i586 (only).
-i740	
-i810	
 iconv	
 id3	
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
@@ -127,7 +116,6 @@ imapuw-cleartextpwd	Allow cleartext passwords over non-encrypted connections.
 imapuw-whoson		Enable whoson support.
 imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
-imstt	
 inet6			Enable support for IPv6.
 ipfilter	
 iptables	
@@ -169,7 +157,6 @@ magick
 mdc2	
 metarefresh	
 mex			Enable matlab mex support (Linux and Solaris only).
-mga	
 mhash	
 milter	
 mjpegtools-cmov		Enable CMOV support (i386 only).
@@ -191,14 +178,10 @@ mysql4
 nas			Enable usage of the Network Audio System.
 native	
 ncurses			Enable ncurses support.
-neomagic	
-newport	
 nntpcache-pgp		Enable pgp signed nocem support.
 no-operoverride		Disable operator override.
 nogui	
 nospoof			Enable anti-spoof protection for older TCP/IP stacks.
-nsc	
-nv	
 ogg			Enable Ogg support.
 okinawa_dict	
 openal			Enable OpenAL support.
@@ -238,21 +221,15 @@ rc5
 readline	
 recommended-db	
 remoteinc		Enable remote includes.
-rendition	
 rrdtool	
 rsaref			Use RSAREF library.
-s3	
-s3virge	
 samba	
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
-savage	
 sdl			Use SDL as display library.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 showlistmodes		Show the modes a channel has set in the /list output.
 shunnotices		Notify a user when they are no longer shunned.
-siliconmotion	
-sis	
 sj3			Use SJ3 for Kana-to-Kanji conversion.
 skey	
 slang			Enable S-Lang support.
@@ -281,24 +258,16 @@ syncdir			Force synchronous link() and related syscalls.
 tcpd	
 tcpwrappers	
 tdb	
-tdfx	
-tga	
 theora			Use the theora codecs.
 tls			Enable TLS support.
 topicisnuhost		/topic command to show the nick!user@host of the person who set the topic.
-trident	
 trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
 truetype	
-tseng	
 unicode	
-vesa	
 vflib	
 vfs	
-vga	
-via	
 virtualchroot	
-vmware	
 vorbis			Enable Ogg Vorbis support.
 vpop	
 w3m-image-gdk-pixbuf	Use gdk-pixbuf as imaging library for W3m.
@@ -320,6 +289,39 @@ xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xmlimportbugs	
 xmms-eq	
+xorg-server-apm	
+xorg-server-ark	
+xorg-server-ati	
+xorg-server-chips	
+xorg-server-cirrus	
+xorg-server-cyrix	
+xorg-server-dummy	
+xorg-server-fbdev	
+xorg-server-glint	
+xorg-server-i128	
+xorg-server-i740	
+xorg-server-i810	
+xorg-server-imstt	
+xorg-server-mga	
+xorg-server-neomagic	
+xorg-server-newport	
+xorg-server-nsc	
+xorg-server-nv	
+xorg-server-rendition	
+xorg-server-s3	
+xorg-server-s3virge	
+xorg-server-savage	
+xorg-server-siliconmotion	
+xorg-server-sis	
+xorg-server-tdfx	
+xorg-server-tga	
+xorg-server-trident	
+xorg-server-tseng	
+xorg-server-v4l	
+xorg-server-vesa	
+xorg-server-vga	
+xorg-server-via	
+xorg-server-vmware	
 xrender			Enable Xrender support.
 xterm-256color		Enable 256 color support.
 xterm-88color		Enable 88 color support.
