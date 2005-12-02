@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12079 2005/12/01 23:17:27 joerg Exp $
+$NetBSD: CHANGES,v 1.12080 2005/12/02 04:10:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5450,3 +5450,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added textproc/tex2page version 20051023 [gdt 2005-12-01]
 	Updated chat/unrealircd to 3.2.3nb1 [adrianp 2005-12-01]
 	Updated math/R to 2.1.1nb1 [joerg 2005-12-01]
+	Added textproc/p5-Text-Emoticon-MSN version 0.02 [minskim 2005-12-02]
