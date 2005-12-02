@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2005/10/18 00:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2005/12/02 17:10:04 wiz Exp $
 #
 
 DISTNAME=	cvs-1.11.20
@@ -14,7 +14,6 @@ COMMENT=	Concurrent Versions System
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
-KERBEROS=1
 
 .include "options.mk"
 
