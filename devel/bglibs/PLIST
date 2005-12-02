@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/08/23 19:33:52 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/12/02 17:18:05 schmonz Exp $
 bin/bg-installer
 bin/crc-gentab
 include/bglibs/adt/common.h
@@ -17,6 +17,7 @@ include/bglibs/crc/crc32.h
 include/bglibs/crc/crc32c.h
 include/bglibs/crc/crc64.h
 include/bglibs/crc/gcrc.h
+include/bglibs/crypto/hmac.h
 include/bglibs/crypto/md5.h
 include/bglibs/crypto/sha1.h
 include/bglibs/crypto/sha256.h
