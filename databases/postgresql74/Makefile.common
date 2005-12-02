@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/09/12 13:19:22 hira Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/12/02 21:01:34 joerg Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -130,6 +130,25 @@ post-extract:
 		${RM} -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch]; \
 		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]			\
 			${WRKSRC}/src/backend/port/dynloader/;		\
+	fi
+	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
+		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.c; \
+		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
+		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
+	fi
+	if [ -d ${WRKSRC}/src/template ]; then				\
+		${TOUCH} ${WRKSRC}/src/template/dragonfly;		\
+	fi
+	if [ -d ${WRKSRC}/src/include/port ]; then			\
+		${CP} ${WRKSRC}/src/include/port/freebsd.h		\
+			${WRKSRC}/src/include/port/dragonfly.h;		\
+	fi
+	if [ -d ${WRKSRC}/src/makefiles ]; then				\
+		${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd		\
+			${WRKSRC}/src/makefiles/Makefile.dragonfly;	\
 	fi
 
 .if ${OPSYS} == "Interix"
