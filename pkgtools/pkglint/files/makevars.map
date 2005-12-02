@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.46 2005/12/02 08:56:09 rillig Exp $
+# $NetBSD: makevars.map,v 1.47 2005/12/02 09:01:32 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -44,7 +44,7 @@ BDB_LIBS		Readonly
 BDB_TYPE		Readonly
 BUILDLINK_DEPENDS	List!+ of Dependency
 BUILDLINK_PKGSRCDIR	RelativePkgDir
-#BUILDLINK_RECOMMENDED	List!+ of Dependency
+BUILDLINK_RECOMMENDED	List!+ of Dependency
 BUILDLINK_TRANSFORM	List+
 BUILD_DEFS		List+ of Varname
 BUILD_DEPENDS		List!+ of DependencyWithPath
