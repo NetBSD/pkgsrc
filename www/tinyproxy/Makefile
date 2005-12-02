@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/08/23 11:48:52 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/02 17:06:03 wiz Exp $
 #
 
 DISTNAME=	tinyproxy-1.6.2
@@ -20,19 +20,16 @@ TINYPROXY_USER?=	tinyproxy
 TINYPROXY_GROUP?=	tinyproxy
 PKG_GROUPS=		${TINYPROXY_GROUP}
 PKG_USERS=		${TINYPROXY_USER}:${TINYPROXY_GROUP}::Tinyproxy\ user
-FILES_SUBST+=		TINYPROXY_USER="${TINYPROXY_USER}"
-FILES_SUBST+=		TINYPROXY_GROUP="${TINYPROXY_GROUP}"
+FILES_SUBST+=		TINYPROXY_USER=${TINYPROXY_USER:Q}
+FILES_SUBST+=		TINYPROXY_GROUP=${TINYPROXY_GROUP:Q}
 
 CONFIGURE_ARGS+=	--with-config=${PKG_SYSCONFDIR}/tinyproxy.conf
 CONFIGURE_ARGS+=	--enable-transparent-proxy
 
 # Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
-# Socks support
-.if defined(USE_SOCKS) && ${USE_SOCKS} == YES
-CONFIGURE_ARGS+=        --enable-socks
-.endif
+.include "options.mk"
 
 EGDIR=		${PREFIX}/share/examples/tinyproxy
 
