@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12082 2005/12/02 08:11:04 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12083 2005/12/02 08:14:53 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5453,3 +5453,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added textproc/p5-Text-Emoticon-MSN version 0.02 [minskim 2005-12-02]
 	Updated mail/sylpheed-devel to 2.1.8 [xtraeme 2005-12-02]
 	Updated mail/dspam to 3.6.2 [xtraeme 2005-12-02]
+	Updated databases/mysql5-client to 5.0.16 [xtraeme 2005-12-02]
+	Updated databases/mysql5-server to 5.0.16 [xtraeme 2005-12-02]
