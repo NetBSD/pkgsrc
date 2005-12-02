@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.24 2005/12/02 17:07:14 wiz Exp $
+# $NetBSD: obsolete.mk,v 1.25 2005/12/02 17:29:42 wiz Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -21,10 +21,6 @@ PKG_LEGACY_OPTIONS+=	kerberos
 PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable KERBEROS used, use PKG_DEFAULT_OPTIONS+=kerberos instead."
 .  endif
 .endif
-
-PKG_OPTIONS_LEGACY_OPTS+=	postgresql:pgsql
-PKG_OPTIONS_LEGACY_OPTS+=	postgresql73:pgsql
-PKG_OPTIONS_LEGACY_OPTS+=	postgresql74:pgsql
 
 PKG_OPTIONS_LEGACY_VARS+=	USE_INET6:inet6
 
