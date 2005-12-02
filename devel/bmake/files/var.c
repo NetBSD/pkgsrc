@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $	*/
+/*	$NetBSD: var.c,v 1.2 2005/12/02 00:14:56 sjg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: var.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $";
+static char rcsid[] = "$NetBSD: var.c,v 1.2 2005/12/02 00:14:56 sjg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)var.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: var.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $");
+__RCSID("$NetBSD: var.c,v 1.2 2005/12/02 00:14:56 sjg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -125,7 +125,16 @@ __RCSID("$NetBSD: var.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $");
 
 #ifndef NO_REGEX
 #include    <sys/types.h>
+#include    <nbcompat/nbconfig.h>
+/* bmake supplies its own <sys/cdefs.h> so this header is always present. */
+#ifndef HAVE_SYS_CDEFS_H
+#define HAVE_SYS_CDEFS_H 1
+#endif
+#if HAVE_REGEX_H
 #include    <regex.h>
+#else
+#include    <nbcompat/regex.h>
+#endif
 #endif
 #include    <ctype.h>
 #include    <stdlib.h>
