@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:07:46 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/02 17:28:37 wiz Exp $
 
 DISTNAME=		sqlrelay-0.33.1
 PKGREVISION=		1
@@ -14,22 +14,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 
-#SQLRELAY_DATABASES+=	mysql postgresql
-SQLRELAY_DATABASES?=	# empty
-
-.for _db_ in ${SQLRELAY_DATABASES}
-SQLRELAY.${_db_}?=	YES
-.endfor
-
-.if defined(SQLRELAY.mysql) && ${SQLRELAY.mysql} == "YES"
-.  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_DIR}
-.endif
-
-.if defined(SQLRELAY.postgresql) && ${SQLRELAY.postgresql} == "YES"
-.  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_DIR}
-.endif
+.include "options.mk"
 
 .include "../../devel/rudiments/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
