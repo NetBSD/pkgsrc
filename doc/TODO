@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4231 2005/12/02 08:11:04 xtraeme Exp $
+$NetBSD: TODO,v 1.4232 2005/12/02 12:54:44 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -348,6 +348,7 @@ Suggested package updates
 	o ap-xslt-1.3.8
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
+	o apache-2.2.0
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
 	o apr-1.2.1
 	o apsfilter-7.2.6
