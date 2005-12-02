@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4232 2005/12/02 12:54:44 xtraeme Exp $
+$NetBSD: TODO,v 1.4233 2005/12/02 17:03:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -391,6 +391,7 @@ Suggested package updates
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o boaconstructor-0.4.4
+	o bogofilter-1.0.0
 	o boolean-6.8
 	o boson-0.11
 	o browser-bookmarks-menu-0.4
@@ -515,7 +516,7 @@ Suggested package updates
 	o fakeroot-1.5.4
 	o fd-2.07b
 	o fdgw-20040609
-	o fetchmail-6.2.5.4
+	o fetchmail-6.3.0
 	o fhist-1.14
 	o file-4.15
 	o findutils-4.2.26
@@ -546,6 +547,7 @@ Suggested package updates
 	o gcube-0.4
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o getmail-4.4.3
 	o gettext-0.14.5
 	o gfract-0.32
 	o ggiterm-0.7.1
@@ -737,6 +739,7 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.0.35
 	o matchbox-0.9.5
+	o mathomatic-12.5.3
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -814,7 +817,7 @@ Suggested package updates
 	o openal-20050401
 	o opencobol-0.31
 	o openh323-1.17.2
-	o openmotif-2.3.0 [http://www.openmotif.org/]
+	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openpam-20050616
 	o openssl-0.9.8a
 	o oroborus-2.0.15
@@ -1243,6 +1246,7 @@ Suggested package updates
 	o w32api-3.2
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
+	o wcalc-2.1.2
 	o wdm-1.28
 	o webmin-1.250
 	o weechat-0.1.6
