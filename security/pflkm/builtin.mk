@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2005/06/23 19:32:43 peter Exp $
+# $NetBSD: builtin.mk,v 1.6 2005/12/02 12:23:45 peter Exp $
 
 BUILTIN_PKG:=	pflkm
 
@@ -13,14 +13,18 @@ BUILTIN_FIND_FILES.H_PFLKM=	/usr/include/net/pfvar.h
 .if !defined(PF_VERSION)
 PF_VERSION=	3.7	# package default
 .  if exists(${H_PFLKM})
+# OpenBSD 3.8: pf_socket_lookup added
+_BLTN_PF_3_8!=	${GREP} -c pf_socket_lookup ${H_PFLKM} || ${TRUE}
 # OpenBSD 3.7: pf_threshold added
 _BLTN_PF_3_7!=	${GREP} -c pf_threshold ${H_PFLKM} || ${TRUE}
 # OpenBSD 3.6: pf_cksum_fixup added
 _BLTN_PF_3_6!=	${GREP} -c pf_cksum_fixup ${H_PFLKM} || ${TRUE}
 
-.    if ${_BLTN_PF_3_7} == "1"
+.    if ${_BLTN_PF_3_8} != "0"
+PF_VERSION=	3.8
+.    elif ${_BLTN_PF_3_7} != "0"
 PF_VERSION=	3.7
-.    elif ${_BLTN_PF_3_6} == "1"
+.    elif ${_BLTN_PF_3_6} != "0"
 PF_VERSION=	3.6
 .    else
 PF_VERSION=	3.5
@@ -47,7 +51,9 @@ MAKEVARS+=	IS_BUILTIN.pflkm
 ###
 .if !defined(BUILTIN_PKG.pflkm) && \
     !empty(IS_BUILTIN.pflkm:M[yY][eE][sS])
-.  if ${PF_VERSION} == "3.7"
+.  if ${PF_VERSION} == "3.8"
+BUILTIN_PKG.pflkm=	pflkm-20051101	# release date for PF API 3.8
+.  elif ${PF_VERSION} == "3.7"
 BUILTIN_PKG.pflkm=	pflkm-20050519	# release date for PF API 3.7
 .  elif ${PF_VERSION} == "3.6"
 BUILTIN_PKG.pflkm=	pflkm-20041101	# release date for PF API 3.6
