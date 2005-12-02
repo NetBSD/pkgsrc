@@ -22,3 +22,6 @@
   - security holes,
   - coding style violations,
   - possible unportable constructs
+* check that all values used for the PKG_OPTIONS are documented in
+  mk/defaults/options.description. Requested by Antoine Reilles via
+  private mail.
