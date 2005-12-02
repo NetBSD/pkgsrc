@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.23 2005/12/01 20:21:10 wiz Exp $
+# $NetBSD: obsolete.mk,v 1.24 2005/12/02 17:07:14 wiz Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -21,6 +21,14 @@ PKG_LEGACY_OPTIONS+=	kerberos
 PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable KERBEROS used, use PKG_DEFAULT_OPTIONS+=kerberos instead."
 .  endif
 .endif
+
+PKG_OPTIONS_LEGACY_OPTS+=	postgresql:pgsql
+PKG_OPTIONS_LEGACY_OPTS+=	postgresql73:pgsql
+PKG_OPTIONS_LEGACY_OPTS+=	postgresql74:pgsql
+
+PKG_OPTIONS_LEGACY_VARS+=	USE_INET6:inet6
+
+# remove everything below this line after 2005Q4
 .if defined(USE_SOCKS)
 .  if ${USE_SOCKS} == "4" && !empty(PKG_SUPPORTED_OPTIONS:Msocks4)
 PKG_LEGACY_OPTIONS+=	socks4
@@ -30,14 +38,6 @@ PKG_LEGACY_OPTIONS+=	socks5
 PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable SOCKS used, use PKG_DEFAULT_OPTIONS+=socks5 instead."
 .  endif
 .endif
-
-PKG_OPTIONS_LEGACY_OPTS+=	postgresql:pgsql
-PKG_OPTIONS_LEGACY_OPTS+=	postgresql73:pgsql
-PKG_OPTIONS_LEGACY_OPTS+=	postgresql74:pgsql
-
-PKG_OPTIONS_LEGACY_VARS+=	USE_INET6:inet6
-
-# remove after 2005Q4
 PKG_OPTIONS_LEGACY_VARS+=	USE_CANNA:canna
 PKG_OPTIONS_LEGACY_VARS+=	USE_CUPS:cups
 PKG_OPTIONS_LEGACY_VARS+=	USE_I586:i586
