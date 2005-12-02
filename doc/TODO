@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4230 2005/12/02 07:49:34 xtraeme Exp $
+$NetBSD: TODO,v 1.4231 2005/12/02 08:11:04 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -474,7 +474,6 @@ Suggested package updates
 	o dnstop-20050405
 	o dnstracer-1.8
 	o dpkg-1.10.28
-	o dspam-3.6.2
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.6
 	o dvipng-1.7 [http://sourceforge.net/projects/dvipng/]
