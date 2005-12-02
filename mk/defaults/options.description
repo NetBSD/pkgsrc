@@ -141,6 +141,7 @@ jwhois-enable-cache	Enable cache support.
 kde	
 kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
+kermit-suid-uucp	Install kermit setuid uucp.
 kqueue	
 krb4	
 krb5	
