@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2005/11/03 15:51:59 salo Exp $
+# $NetBSD: Makefile,v 1.63 2005/12/02 17:05:04 wiz Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -22,11 +22,13 @@ USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
+CONFIGURE_ARGS+=	--with-zlib --with-regex --without-x
 CONFIGURE_ARGS+=	--with-ssl="${SSLBASE}"
 
 # Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
+
+.include "options.mk"
 
 DOCDIR=			${PREFIX}/share/doc/libwww
 
@@ -50,19 +52,6 @@ PLIST_SUBST+=	MD5LIB="@comment "
 CONFIGURE_ARGS+=	--with-md5="${SSLBASE}"
 .  endif
 PLIST_SUBST+=	MD5LIB=""
-.endif
-
-# Include SOCKS firewall support
-.if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-.if ${USE_SOCKS} == 4
-.include "../../net/socks4/buildlink3.mk"
-CONFIGURE_ARGS+= 	--with-socks4=${BUILDLINK_PREFIX.socks4}/lib/libsocks4.a
-CONFIGURE_ARGS+=	--with-socks5=no
-.else
-.include "../../net/socks5/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-socks4=no
-CONFIGURE_ARGS+= 	--with-socks5=${BUILDLINK_prefix.socks5}/lib/libsocks5.a
-.endif
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
