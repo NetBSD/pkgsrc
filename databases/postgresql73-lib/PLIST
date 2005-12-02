@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/24 22:17:58 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/02 19:46:40 joerg Exp $
 bin/ecpg
 include/postgresql/ecpgerrno.h
 include/postgresql/ecpglib.h
@@ -214,6 +214,7 @@ include/postgresql/server/port/beos.h
 include/postgresql/server/port/bsdi.h
 include/postgresql/server/port/darwin.h
 include/postgresql/server/port/dgux.h
+include/postgresql/server/port/dragonfly.h
 include/postgresql/server/port/freebsd.h
 include/postgresql/server/port/hpux.h
 include/postgresql/server/port/irix5.h
