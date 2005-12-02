@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/03 09:53:46 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/02 22:59:40 joerg Exp $
 include/itools/X11/Xfuncproto.h
 include/itools/X11/Xos.h
 include/itools/X11/Xosdefs.h
 lib/itools/X11/config/Amoeba.cf
 lib/itools/X11/config/DGUX.cf
 lib/itools/X11/config/Darwin.cf
+lib/itools/X11/config/DragonFly.cf
 lib/itools/X11/config/FreeBSD.cf
 lib/itools/X11/config/Imake.cf
 lib/itools/X11/config/Imake.rules

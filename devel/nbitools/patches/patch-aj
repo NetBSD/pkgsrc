@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2005/05/08 03:14:35 minskim Exp $
+$NetBSD: patch-aj,v 1.2 2005/12/02 22:59:40 joerg Exp $
 
 --- config/cf/Imake.cf.orig	2005-05-07 21:33:29.000000000 -0500
 +++ config/cf/Imake.cf
@@ -24,3 +24,35 @@ $NetBSD: patch-aj,v 1.1 2005/05/08 03:14:35 minskim Exp $
  #if defined(clipper) || defined(__clipper__)
  # undef clipper
  # define MacroIncludeFile <ingr.cf>
+@@ -264,9 +279,30 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+ #  define playstation2Architecture
+ #  undef playstation2
+ # endif
++# ifdef __x86_64__
++#  define AMD64Architecture
++#  undef __x86_64__
++# endif
+ #endif /* NetBSD */
+ 
+-#ifdef __FreeBSD__
++#ifdef __DragonFly__
++# define MacroIncludeFile <DragonFly.cf>
++# define MacroFile DragonFly.cf
++# undef __DragonFly__
++# define DragonFlyArchitecture
++# define FreeBSDArchitecture
++# define KFreeBSDArchitecture
++# ifdef __i386__
++#  define i386BsdArchitecture
++#  define i386Architecture
++#  undef i386
++# endif
++# ifdef __amd64__
++#  define AMD64Architecture
++#  undef __amd64__
++#  undef __x86_64__
++# endif
++#elif defined __FreeBSD__
+ # define MacroIncludeFile <FreeBSD.cf>
+ # define MacroFile FreeBSD.cf
+ # undef __FreeBSD__
