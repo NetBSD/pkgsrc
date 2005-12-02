@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.410 2005/12/02 08:44:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.411 2005/12/02 09:01:32 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2166,7 +2166,7 @@ sub checkline_Makefile_vartype($$) {
 			my ($internal_list, $append_only, $element_type) = ($1 eq "!", $2 eq "+", $3);
 			my (@words, $rest);
 
-			if ($append_only && $op ne "+=" && !($value eq "" && defined($comment) && $comment =~ qr"^#")) {
+			if ($append_only && $op ne "+=" && $op ne "?=" && !($value eq "" && defined($comment) && $comment =~ qr"^#")) {
 				$line->log_warning("${varname} should be modified using \"+=\".");
 			}
 
