@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/05/22 20:07:46 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/02 21:46:50 joerg Exp $
 
 DISTNAME=		sqlite-2.8.16
 CATEGORIES=		databases
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../sqlite-2.8.16/configure
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ENV+=		config_TARGET_READLINE_INC="-I${BUILDLINK_PREFIX.readline}/include"
+CONFIG_GUESS_OVERRIDE=	../sqlite-2.8.16/config.guess
+CONFIG_SUB_OVERRIDE=	../sqlite-2.8.16/config.sub
 
 CFLAGS+=		-DUINT32_TYPE=u_int32_t -DUINT16_TYPE=u_int16_t \
 			-DUINT8_TYPE=u_int8_t -DINTPTR_TYPE=long
