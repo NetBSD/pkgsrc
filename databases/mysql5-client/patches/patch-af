@@ -1,16 +1,15 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/10/31 09:21:40 xtraeme Exp $
+$NetBSD: patch-af,v 1.2 2005/12/02 08:13:26 xtraeme Exp $
 
---- man/Makefile.in.orig	2005-10-31 09:11:58.000000000 +0100
-+++ man/Makefile.in	2005-10-31 09:12:27.000000000 +0100
-@@ -334,9 +334,8 @@
- yassl_dir = @yassl_dir@
- yassl_integer_extra_cxxflags = @yassl_integer_extra_cxxflags@
+--- man/Makefile.in.orig	2005-11-29 20:47:54.000000000 +0100
++++ man/Makefile.in	2005-11-29 20:49:58.000000000 +0100
+@@ -338,7 +338,9 @@
+ yassl_libs = @yassl_libs@
+ yassl_libs_with_path = @yassl_libs_with_path@
  zlib_dir = @zlib_dir@
--man_MANS = mysql.1 mysql_zap.1 mysqlaccess.1 \
--		mysqladmin.1 mysqld.1 mysqld_multi.1 mysqldump.1 mysqlshow.1 \
--		perror.1 replace.1 mysqld_safe.1 mysql_fix_privilege_tables.1
-+man_MANS =	mysql.1 mysql_zap.1 mysqlaccess.1 mysqladmin.1 \
-+		mysqldump.1 mysqlshow.1 mysql_fix_privilege_tables.1
+-man1_MANS = @man1_files@
++man1_MANS = mysql.1 mysql_zap.1 mysqlaccess.1 mysqladmin.1 \
++	    mysqldump.1 mysqlshow.1 mysql_fix_privilege_tables.1
++
+ EXTRA_DIST = $(man1_MANS)
+ all: all-am
  
- EXTRA_DIST = mysql.1.in mysql_zap.1.in \
- 		mysqlaccess.1.in mysqladmin.1.in mysqld.1.in mysqld_multi.1.in \

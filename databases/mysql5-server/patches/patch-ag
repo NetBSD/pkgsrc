@@ -1,21 +1,15 @@
-$NetBSD: patch-ag,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+$NetBSD: patch-ag,v 1.2 2005/12/02 08:13:26 xtraeme Exp $
 
---- include/Makefile.in.orig	2005-10-31 09:40:49.000000000 +0100
-+++ include/Makefile.in	2005-10-31 09:41:21.000000000 +0100
-@@ -338,14 +338,8 @@
- yassl_dir = @yassl_dir@
- yassl_integer_extra_cxxflags = @yassl_integer_extra_cxxflags@
+--- man/Makefile.in.orig	2005-11-29 21:02:07.000000000 +0100
++++ man/Makefile.in	2005-11-29 21:02:39.000000000 +0100
+@@ -338,8 +338,8 @@
+ yassl_libs = @yassl_libs@
+ yassl_libs_with_path = @yassl_libs_with_path@
  zlib_dir = @zlib_dir@
--BUILT_SOURCES = mysql_version.h m_ctype.h my_config.h
--pkginclude_HEADERS = my_dbug.h m_string.h my_sys.h my_list.h my_xml.h \
--			mysql.h mysql_com.h mysql_embed.h \
--		  	my_semaphore.h my_pthread.h my_no_pthread.h raid.h \
--			errmsg.h my_global.h my_net.h my_alloc.h \
--			my_getopt.h sslopt-longopts.h my_dir.h typelib.h \
--			sslopt-vars.h sslopt-case.h sql_common.h keycache.h \
--			mysql_time.h $(BUILT_SOURCES)
-+BUILT_SOURCES =
-+pkginclude_HEADERS =
+-man1_MANS = @man1_files@
+-EXTRA_DIST = $(man1_MANS)
++man1_MANS = mysqld.1 mysqld_multi.1
++EXTRA_DIST = mysqld.1.in mysqld_multi.1.in
+ all: all-am
  
- noinst_HEADERS = config-win.h config-os2.h config-netware.h \
- 			heap.h my_bitmap.h\
+ .SUFFIXES:
