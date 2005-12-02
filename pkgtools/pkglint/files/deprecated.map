@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.21 2005/12/01 20:21:55 wiz Exp $
+# $NetBSD: deprecated.map,v 1.22 2005/12/02 09:44:03 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -8,7 +8,6 @@
 KERBEROS		Use the PKG_OPTIONS framework instead.
 NO_CDROM		Use NO_BIN_ON_CDROM and/or NO_SRC_ON_CDROM instead.
 NO_PACKAGE		Don't use it to enforce license restrictions.
-PKG_JVM			Use PKG_DEFAULT_JVM instead.
 USE_BUILDLINK3		You can just remove it.
 
 # The following entries can be removed after the 2005Q4 branch.
