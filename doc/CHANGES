@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12084 2005/12/02 08:49:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12085 2005/12/02 16:38:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5456,3 +5456,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/mysql5-client to 5.0.16 [xtraeme 2005-12-02]
 	Updated databases/mysql5-server to 5.0.16 [xtraeme 2005-12-02]
 	Updated mail/clamsmtp to 1.6 [xtraeme 2005-12-02]
+	Updated mail/getmail to 4.4.3 [schmonz 2005-12-02]
