@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2005/12/02 04:10:05 minskim Exp $
+# $NetBSD: Makefile,v 1.308 2005/12/03 00:47:30 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -238,6 +238,7 @@ SUBDIR+=	py-expat
 SUBDIR+=	py-feedparser
 SUBDIR+=	py-gdick
 SUBDIR+=	py-gnosis-utils
+SUBDIR+=	py-html2text
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-textile
