@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/08/23 11:48:48 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/03 23:00:06 joerg Exp $
 
 DISTNAME=	mailman-2.1.6
 PKGREVISION=	# empty
@@ -94,6 +94,8 @@ BUILD_DEFS+=		MAILMAN_GROUP
 BUILD_DEFS+=		MAILMAN_CGIGROUP
 BUILD_DEFS+=		MAILMAN_MAILGROUP
 BUILD_DEFS+=		MAILMAN_CGIEXT
+
+BROKEN_GETTEXT_DETECTION=	no
 
 post-patch:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailman.conf.dist \
