@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2005/11/03 06:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2005/12/03 04:18:59 dmcmahill Exp $
 #
 
 COMMENT=	CAD tools
@@ -45,7 +45,6 @@ SUBDIR+=	ng-spice
 SUBDIR+=	ntesla
 SUBDIR+=	oct-wcalc
 SUBDIR+=	pcb
-SUBDIR+=	pcb-current
 SUBDIR+=	py-MyHDL
 SUBDIR+=	py-simpy
 SUBDIR+=	qcad
