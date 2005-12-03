@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.53 2005/11/30 17:31:06 joerg Exp $
+# $NetBSD: pre-build,v 1.54 2005/12/03 01:00:37 rillig Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -8,7 +8,7 @@
 
 #set -v		# Debug
 
-# Pull in USR_PKGSRC, CVS_USER:
+# Pull in USR_PKGSRC:
 if [ -f "$BULK_BUILD_CONF" ]; then
     . "$BULK_BUILD_CONF"
 else
@@ -165,31 +165,6 @@ echo "Cleaning up leftover state files from previous runs"
 rm -f "${BULKFILESDIR}"/*/*/"$BROKENF" "${BULKFILESDIR}"/*/*/"$BRKWRKLOG" "${BULKFILESDIR}"/*/*/"$BLDLOG"
 rm -f "${BULKFILESDIR}/$BROKENF" "${BULKFILESDIR}/$BRKWRKLOG" "${BULKFILESDIR}/$BLDLOG" "$STARTFILE"
 
-
-
-
-#
-# Install cvs package and do a cvs update here
-#
-if [ "$CVS_USER" != "" ]; then
-	if [ ! -f /usr/bin/cvs ]; then
-		echo "Installing required cvs pkgs for CVS update"
-		( cd ${USR_PKGSRC}/devel/cvs ; ${BMAKE} bulk-install )
-	fi
-	if [ ! -f /usr/bin/ssh ]; then
-		echo "Installing required ssh pkgs for CVS update"
-		( cd ${USR_PKGSRC}/security/ssh ; ${BMAKE} bulk-install )
-	fi
-	echo "Performing CVS update - this will take some time"
-	su - ${CVS_USER} -c "stty sane ; cd ${USR_PKGSRC} ;                  \
-		env CVS_RSH=ssh cvs -q update -Pd ${CVS_FLAGS} || exit 0"
-        if [ $? != 0 ]
-        then
-                echo "CVS update not successful, aborting."
-                exit 1
-        fi
-	echo "CVS update done."
-fi
 
 #
 # Remove old/broken distfiles and binary packages
