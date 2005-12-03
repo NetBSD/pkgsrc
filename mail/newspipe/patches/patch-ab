@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/12/03 06:34:01 schmonz Exp $
+
+--- newspipe.orig	2005-12-03 01:21:02.000000000 -0500
++++ newspipe
+@@ -0,0 +1,7 @@
++#!/bin/sh
++set -e
++if [ ! -d ~/.newspipe ]; then
++	mkdir ~/.newspipe
++fi
++cd ~/.newspipe
++exec @PYTHONBIN@ @PREFIX@/share/newspipe/newspipe.py $*
