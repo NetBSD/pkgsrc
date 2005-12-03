@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.61 2005/11/30 18:33:14 rillig Exp $
+# $NetBSD: post-build,v 1.62 2005/12/03 13:39:04 rillig Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -153,12 +153,12 @@ get_mk_conf_vars(qw(
 	PKG_TOOLS_BIN
 ));
 
-my $bulkdbfile = basename($vars{BULK_DBFILE});
-my $dtfile = basename($vars{DEPENDSTREEFILE});
-my $depfile = basename($vars{DEPENDSFILE});
-my $supfile = basename($vars{SUPPORTSFILE});
-my $indfile = basename($vars{INDEXFILE});
-my $ordfile = basename($vars{ORDERFILE});
+my $bulk_dbfile_base = basename($vars{BULK_DBFILE});
+my $dependstreefile_base = basename($vars{DEPENDSTREEFILE});
+my $dependsfile_base = basename($vars{DEPENDSFILE});
+my $supportsfile_base = basename($vars{SUPPORTSFILE});
+my $indexfile_base = basename($vars{INDEXFILE});
+my $orderfile_base = basename($vars{ORDERFILE});
 
 my $startdate = (stat($vars{STARTFILE}))[9];
 my $enddate = '';
@@ -578,12 +578,12 @@ EOHTML
 The following cache files were used during the build:
 </p>
 <ul>
-<li>The <a href="$bulkdbfile">SPECIFIC_PKGS bulk database file</a>.</li>
-<li>The <a href="$dtfile">depends tree file</a>.</li>
-<li>The <a href="$depfile">depends file</a>.</li>
-<li>The <a href="$supfile">supports file</a>.</li>
-<li>The <a href="$indfile">index file</a>.</li>
-<li>The <a href="$ordfile">build order file</a>.</li>
+<li>The <a href="$bulk_dbfile_base">SPECIFIC_PKGS bulk database file</a>.</li>
+<li>The <a href="$dependstreefile_base">depends tree file</a>.</li>
+<li>The <a href="$dependsfile_base">depends file</a>.</li>
+<li>The <a href="$supportsfile_base">supports file</a>.</li>
+<li>The <a href="$indexfile_base">index file</a>.</li>
+<li>The <a href="$orderfile_base">build order file</a>.</li>
 </ul>
 <hr>
 
