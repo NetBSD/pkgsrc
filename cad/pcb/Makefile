@@ -1,67 +1,33 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:02 tv Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/03 04:18:59 dmcmahill Exp $
+#
 
-DISTNAME=	pcb-1.6.3
-PKGREVISION=	3
+DISTNAME=	pcb-${SNAPDATE}
 CATEGORIES=	cad
-MASTER_SITES=	ftp://ftp.linuxppc.org/pub/linuxppc/users/harry/PCB/ \
-		ftp://ftp.uni-ulm.de/pub/pcb/mirror/
-EXTRACT_SUFX=	.tgz
-DISTFILES=	pcb-1.6.3.tgz \
-		pcb-docs-1.6.3.tar.gz
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://bach.ece.jhu.edu/~haceaton/pcb/
-COMMENT=	X11 interactive printed circuit board layout system
+HOMEPAGE=	http://pcb.sourceforge.net/
+COMMENT=	Printed circuit board layout system
 
-DEPENDS+=	m4>=1.4:../../devel/m4
+DEPENDS+=	tk>=8.3:../../x11/tk
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	pcb-current-[0-9]*
 
-USE_PKGINSTALL=	yes
-USE_IMAKE=	yes
+SNAPDATE=		20050609
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		bison gm4:run gmake lex
 
-PKG_SYSCONFSUBDIR=	pcb
-DOCDIR=			${PREFIX}/share/doc/pcb
-EGDIR=			${PREFIX}/share/examples/pcb
-INFODIR=		${PREFIX}/info
-M4DIR=			${PREFIX}/lib/X11/pcb/m4
+# needed for XWarpPointer in action.c
+LIBS+=		-lX11
 
 INFO_FILES=	pcb.info
-CONF_FILES=	${EGDIR}/local.inc ${PKG_SYSCONFDIR}/local.inc
 
-# avoid picking up any user config files during the build
-MAKE_ENV+=	HOME=${WRKSRC}
+.include "../../mk/bsd.prefs.mk"
 
-post-patch:
-	for file in ${WRKSRC}/config.h; do				\
-		${SED}	-e "s|@sysconfdir@|${PKG_SYSCONFDIR}|g"		\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
+EVAL_PREFIX+=   TKDIR=tk
+CONFIGURE_ENV+=	WISH=${TKDIR}/bin/wish
 
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/index.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/pcb.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/pcb.info ${INFODIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/pcb.ps ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/refcard.ps ${DOCDIR}
-	for file in ${M4DIR}/common.m4; do				\
-		${AWK} '						\
-		/^divert\(0\)dnl/ {					\
-			printf("include(${PKG_SYSCONFDIR}/local.inc)\n"); \
-			printf("sinclude(site-config.inc)\n");		\
-			printf("sinclude(user-config.inc)\n");		\
-			printf("sinclude(proj-config.inc)\n");		\
-		}							\
-		{							\
-			gsub(/^include\(/,"include(${M4DIR}/");		\
-			print;						\
-		}'							\
-		$${file} > $${file}.fixed;				\
-		${MV} -f $${file}.fixed $${file};			\
-	done
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${ECHO} "# list your local includes here" > ${EGDIR}/local.inc
-
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

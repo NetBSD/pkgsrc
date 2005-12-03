@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/07 14:30:34 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/03 04:18:59 dmcmahill Exp $
 
---- src/Imakefile.orig	Wed May 13 12:29:46 1998
-+++ src/Imakefile	Fri Nov  6 15:13:28 1998
-@@ -79,6 +79,10 @@
- 	@echo "creating application default resource from raw file"
- 	@sed -f sed.script  < Pcb.ad.raw > $@
+A double semicolon counts as an empty statement, after which ISO C90
+does not allow any further variable declarations.
+
+--- src/gui-netlist-window.c.orig	Tue Mar  1 06:33:01 2005
++++ src/gui-netlist-window.c	Thu Aug  4 18:06:36 2005
+@@ -692,7 +692,7 @@ gui_netlist_highlight_node(gchar *node_n
+ 	{
+ 	GtkTreePath			*path;
+ 	GtkTreeIter			iter;
+-	LibraryMenuType		*net;;
++	LibraryMenuType		*net;
+ 	gchar				*name;
  
-+pcb.man: ../doc/pcb.man.raw
-+	@(cd ../doc && ${MAKE} ${MFLAGS} ${PARALLELMFLAGS} pcb.man)
-+	@ln -s ../doc/pcb.man pcb.man
-+
- parse_y.h parse_y.c: parse_y.y global.h
- 	$(YACC) -d parse_y.y
- 	$(MV) y.tab.c parse_y.c
+ 	if (!node_name)

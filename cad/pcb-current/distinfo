@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/08/04 16:13:39 rillig Exp $
-
-SHA1 (pcb-20050609.tar.gz) = 5c6c47d36c6c3398c1410a8c5cf0c008b294e4c5
-RMD160 (pcb-20050609.tar.gz) = 4296b437a46e8a331cf773f29749b2bb8f8cb6ad
-Size (pcb-20050609.tar.gz) = 2371793 bytes
-SHA1 (patch-aa) = 3d31486ff101a2ab7698209e325ee85c9630a399
