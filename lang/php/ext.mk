@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.11 2005/12/03 13:16:36 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.12 2005/12/03 13:32:42 jdolecek Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -80,7 +80,7 @@ do-module-install:
 .if defined(USE_PHP_EXT_PATCHES)
 PATCHDIR=		${.CURDIR}/${PHPPKGSRCDIR}/patches
 do-patch:
-	${_PKG_SILENT}${_PKG_DEBUG}
+	${_PKG_SILENT}${_PKG_DEBUG}	\
 	cd ${WRKSRC};			\
 	for p in `${EGREP} -l '^\+\+\+ ext/${MODNAME}/' ${PATCHDIR}/patch-*`;do\
 		${SED} -e 's,^+++ ext/${MODNAME}/,+++ ,' $$p | ${PATCH} ${PATCH_ARGS}; \
