@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.85 2005/11/27 21:39:10 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.86 2005/12/03 00:19:42 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -189,3 +189,5 @@ Pullup ticket 931 - requested by Lubomir Sedlacik
 security update for suse91_gtk2
 Pullup ticket 932 - requested by Lubomir Sedlacik
 security update for sylpheed
+Pullup ticket 936 - requested by Thomas Klausner
+MASTER_SITE updates
