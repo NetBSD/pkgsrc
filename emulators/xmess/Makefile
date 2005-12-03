@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2005/11/17 19:54:08 joerg Exp $
+# $NetBSD: Makefile,v 1.78 2005/12/03 10:58:22 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.101
-PKGNAME=		xmess-0.101
+DISTNAME=		xmame-0.102
+PKGNAME=		xmess-0.102
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -104,7 +104,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
 
 # Pragma once is not needed, and case warnings/errors on gcc
-SUBST_CLASSES=		pragma
+SUBST_CLASSES+=		pragma
 SUBST_STAGE.pragma=	pre-configure
 SUBST_FILES.pragma=	src/*.h
 SUBST_SED.pragma=	-e "s|\#pragma once||g"
