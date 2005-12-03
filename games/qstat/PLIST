@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/18 17:51:19 peter Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/03 23:19:43 peter Exp $
 bin/qstat
 share/doc/${PKGBASE}/qstatdoc.html
-share/doc/${PKGBASE}/template/README.txt
 share/doc/${PKGBASE}/template/brocTh.html
 share/doc/${PKGBASE}/template/brocTp.html
 share/doc/${PKGBASE}/template/brocTs.html
 share/doc/${PKGBASE}/template/brocTt.html
-share/doc/${PKGBASE}/template/ghostrecon.lst
 share/doc/${PKGBASE}/template/ghostreconTh.html
 share/doc/${PKGBASE}/template/ghostreconTp.html
 share/doc/${PKGBASE}/template/ghostreconTs.html
