@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/09 13:11:18 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/03 17:24:28 jdolecek Exp $
 
-MODNAME=		PDO
-PKGMODNAME=		pdo
-PKGNAME=		php-${PKGMODNAME}-${PHP_BASE_VERS}.${PECL_VERSION}
-PKGREVISION=		# empty
-PECL_VERSION=		1.0RC1
-CATEGORIES+=		databases
-MAINTAINER=		tech-pkg@NetBSD.org
+PDO_DRIVER=		# empty
+PDO_VERSION=		1.0.2
+
+.include "../../databases/php-pdo/module.mk"
+
 COMMENT=		PHP extension for PHP Data Objects (base)
 
 CONFIGURE_ARGS+=	--with-${PKGMODNAME}
