@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12096 2005/12/03 15:08:29 salo Exp $
+$NetBSD: CHANGES,v 1.12097 2005/12/03 16:19:14 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5470,3 +5470,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/xmame to 1.102 [kristerw 2005-12-03]
 	Updated emulators/xmess to 1.102 [kristerw 2005-12-03]
 	Updated archivers/unalz to 0.53 [salo 2005-12-03]
+	Updated sysutils/webmin to 1.170nb2 [adrianp 2005-12-03]
