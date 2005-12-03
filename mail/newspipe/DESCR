@@ -1,0 +1,9 @@
+Newspipe is an RSS/Atom aggregator with a difference: it allows
+you to keep track of your feeds through email. You create an OPML
+file listing your feeds and Newspipe will collect them, convert
+them to e-mail messages and send them to your mailbox.
+
+This means you can read, organize and archive news feeds using your
+current mail client (or even webmail), without needing to use a
+separate program. Newspipe can send you news items as plaintext or
+HTML mail, both as single items or grouped in a digest.
