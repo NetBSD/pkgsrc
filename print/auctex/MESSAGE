@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/10/15 20:11:35 tonio Exp $
+$NetBSD: MESSAGE,v 1.5 2005/12/03 11:12:28 wiz Exp $
 
 To customize AUC TeX you will need to edit the file
 
-	`${PREFIX}/${LISPDIR}/tex-site.el'
+	`${LISPDIR}/tex-site.el'
 
 in the site lisp directory.  Add the parts of `tex.el' (in the
 `auctex' subdirectory) which need to be changed to `tex-site.el'. This
