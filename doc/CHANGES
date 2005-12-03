@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12091 2005/12/03 00:52:45 schmonz Exp $
+$NetBSD: CHANGES,v 1.12092 2005/12/03 01:36:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5463,3 +5463,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/nbitools to 6.3nb3 [joerg 2005-12-02]
 	Added textproc/py-html2text version 2.23 [schmonz 2005-12-03]
 	Updated mail/rss2email to 2.55nb1 [schmonz 2005-12-03]
+	Updated lang/python15 to 1.5.2nb4 [joerg 2005-12-03]
