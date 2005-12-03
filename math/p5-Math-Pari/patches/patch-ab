@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.2 2004/03/22 12:01:07 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2005/12/03 01:46:26 joerg Exp $
 
 --- utils/Math/PariBuild.pm.orig	Sun Feb  1 10:30:06 2004
 +++ utils/Math/PariBuild.pm
+@@ -674,7 +674,7 @@ sub find_machine_architecture () {
+ 
+   if ($os =~ /^hp/) {
+     $machine = 'hppa';
+-  } elsif ($os eq 'os2' or $os eq 'freebsd') {
++  } elsif ($os eq 'os2' or $os eq 'freebsd' or $os eq 'dragonfly') {
+     $machine = 'ix86';
+   } elsif (0 and $os =~ /win32/i and not $Config{gccversion}) {
+     # Not needed with rename of kernel1.s to kernel1.c?
 @@ -714,6 +714,24 @@ sub find_machine_architecture () {
      } elsif ((split ' ', $Config{myuname})[3] eq 'sun') {
        $machine = 'm86k';
