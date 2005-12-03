@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.412 2005/12/02 20:15:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.413 2005/12/03 03:16:18 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -892,13 +892,17 @@ sub parse_command_line() {
 # Loading pkglint-specific data from files, part 1.
 #
 
-sub load_make_vars_typemap() {
-	my ($vartypes);
-	my ($fname);
+my $get_make_vars_typemap_result = undef;
+sub get_make_vars_typemap() {
+	my ($fname, $vartypes);
 
-	$vartypes = {};
+	if (defined($get_make_vars_typemap_result)) {
+		return $get_make_vars_typemap_result;
+	}
 
 	$fname = conf_datadir."/makevars.map";
+	$vartypes = {};
+
 	if ((my $lines = load_file($fname))) {
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ qr"^(?:#.*|\s*)$") {
@@ -934,7 +938,7 @@ if (false) {
 	}
 }
 
-	return $vartypes;
+	return ($get_make_vars_typemap_result = $vartypes);
 }
 
 my $load_dist_sites_url2name = undef;
@@ -1373,7 +1377,7 @@ sub checkfile_PLIST($) {
 		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 
-			if ($cmd eq "unexec" && $arg =~ qr"^(rmdir|\$\{RMDIR\})(.*)") {
+			if ($cmd eq "unexec" && $arg =~ qr"^(rmdir|\$\{RMDIR\} \%D/)(.*)") {
 				my ($rmdir, $rest) = ($1, $2);
 				if ($rest !~ qr"(?:true|\$\{TRUE\})") {
 					$line->log_warning("Please use \"\@dirrm\" instead of \"\@unexec rmdir\".");
@@ -2004,6 +2008,7 @@ sub checkline_basic_vartype($$$$$) {
 			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
 			my $fixed_vexpr = "\${${vname}${mod}}";
 			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
+			$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
 			$line->replace($value, "${key}=${fixed_vexpr}");
 
 		} elsif ($value =~ qr"^([\w_]+)=(\$\{([\w_]+):Q\})$") {
@@ -2011,6 +2016,7 @@ sub checkline_basic_vartype($$$$$) {
 			my $fixed_vexpr = "\${${vname}:M*:Q}";
 			if ($vname =~ regex_gnu_configure_volatile_vars) {
 				$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
+				$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
 				$line->replace($value, "${key}=${fixed_vexpr}");
 			}
 
@@ -2203,7 +2209,6 @@ sub checkline_Makefile_vartype($$) {
 # Procedures to check an array of lines, part 3.
 #
 
-my $checklines_Makefile_varuse_map = undef;
 sub checklines_Makefile_varuse($) {
 	my ($lines) = @_;
 
@@ -2215,17 +2220,12 @@ sub checklines_Makefile_varuse($) {
 		}
 	}
 
-	return if (!$opt_warn_types);
+	if ($opt_warn_types) {
+		my $typemap = get_make_vars_typemap();
 
-	# Load variable type definitions
-	if (!defined($checklines_Makefile_varuse_map)) {
-		$checklines_Makefile_varuse_map = load_make_vars_typemap();
-	}
-	return if (!$checklines_Makefile_varuse_map);
-
-	# Check variable types
-	foreach my $line (@{$lines}) {
-		checkline_Makefile_vartype($line, $checklines_Makefile_varuse_map);
+		foreach my $line (@{$lines}) {
+			checkline_Makefile_vartype($line, $typemap);
+		}
 	}
 }
 
