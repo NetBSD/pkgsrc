@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.12 2005/12/03 13:32:42 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.13 2005/12/03 18:52:54 jdolecek Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -54,6 +54,11 @@ PLIST_SRC+=		${.CURDIR}/../../lang/php/PLIST.module
 MESSAGE_SRC=		${.CURDIR}/../../lang/php/MESSAGE.module
 MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
 MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
+
+# Also include extension-specific message
+.if exists(${.CURDIR}/MESSAGE)
+MESSAGE_SRC+=		${.CURDIR}/MESSAGE
+.endif
 
 pre-configure:	phpize-module
 
