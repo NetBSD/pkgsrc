@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2005/12/03 00:49:36 schmonz Exp $
+
+--- rss2email.py.orig	2005-12-01 00:46:49.000000000 -0500
++++ rss2email.py
+@@ -113,6 +113,7 @@ else: smtpserver = None
+ import feedparser
+ feedparser.USER_AGENT = "rss2email/"+__version__+ " +http://www.aaronsw.com/2002/rss2email/"
+ 
++sys.path.append("@LOCALBASE@/share/html2text")
+ import html2text as h2t
+ 
+ h2t.UNICODE_SNOB = UNICODE_SNOB
