@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.43 2005/08/02 14:19:13 xtraeme Exp $
+# $NetBSD: bsd.sites.mk,v 1.43.2.1 2005/12/03 00:11:05 salo Exp $
 #
 # Default MASTER_SITES
 
@@ -35,16 +35,17 @@ MASTER_SITE_GNUSTEP+=   \
 	http://www.peanuts.org/peanuts/Mirrors/GNUstep/gnustep/ \
 	ftp://archive.progeny.com/gnustep/ \
 	http://archive.progeny.com/gnustep/ \
-	ftp://ftp.easynet.nl/mirror/GNUstep/ \
-	http://ftp.easynet.nl/mirror/GNUstep/
+	ftp://ftp.easynet.nl/mirror/GNUstep/pub/gnustep/ \
+	http://ftp.easynet.nl/mirror/GNUstep/pub/gnustep/
 
 MASTER_SITE_PERL_CPAN+= \
 	ftp://cpan.pair.com/modules/by-module/ \
 	ftp://mirrors.cloud9.net/mirrors/CPAN/modules/by-module/ \
-	ftp://ftp.uvsq.fr/pub/perl/CPAN/modules/by-module/ \
+	http://ftp.u-paris10.fr/perl/CPAN/modules/by-module/ \
+	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/ \
 	ftp://ftp.gmd.de/mirrors/CPAN/modules/by-module/ \
 	ftp://ftp.tuwien.ac.at/pub/CPAN/modules/by-module/ \
-	ftp://cpan.perl.org/CPAN/modules/by-module/
+	http://cpan.perl.org/CPAN/modules/by-module/
 
 MASTER_SITE_R_CRAN+=    \
 	http://cran.r-project.org/src/ \
@@ -56,7 +57,6 @@ MASTER_SITE_R_CRAN+=    \
 	http://cran.uk.r-project.org/src/ \
 	http://cran.us.r-project.org/src/ \
 	http://lib.stat.cmu.edu/R/CRAN/src/ \
-	http://www.stat.unipg.it/pub/stat/statlib/R/CRAN/src/ \
 	ftp://ftp.u-aizu.ac.jp/pub/lang/R/CRAN/src/ \
 	http://stat.ethz.ch/CRAN/src/ \
 	http://www.stats.bris.ac.uk/R/src/
@@ -88,27 +88,25 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.kddlabs.co.jp/pub/GNOME/ \
 	ftp://ftp.chg.ru/pub/X11/gnome/ \
 	ftp://ftp.dataplus.se/pub/linux/gnome/ \
-	ftp://ftp.dit.upm.es/linux/gnome/ \
-	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/
+	ftp://ftp.dit.upm.es/linux/gnome/
 
 MASTER_SITE_SOURCEFORGE+=	\
+	http://belnet.dl.sourceforge.net/sourceforge/ \
+	http://citkit.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
-	http://jaist.dl.sourceforge.net/sourceforge/ \
+	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://keihanna.dl.sourceforge.net/sourceforge/ \
 	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
 	http://nchc.dl.sourceforge.net/sourceforge/ \
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
-	http://peterhost.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
 	http://surfnet.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://ufpr.dl.sourceforge.net/sourceforge/ \
-	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/
-#	http://citkit.dl.sourceforge.net/sourceforge/
 #	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://sf.gds.tuwien.ac.at/
@@ -117,7 +115,6 @@ MASTER_SITE_SUSE+=	\
 	ftp://rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://fr.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
-	ftp://speakeasy.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://ftp.duth.gr/pub/suse/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://ftp.kddlabs.co.jp/Linux/packages/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://sunsite.cnlab-switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
@@ -127,16 +124,11 @@ MASTER_SITE_SUSE+=	\
 MASTER_SITE_MOZILLA+=   \
 	ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/ \
 	ftp://ftp.fu-berlin.de/unix/network/www/mozilla/releases/ \
-	ftp://ftp.informatik.uni-bonn.de/pub/www/mozilla/ \
-	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.mozilla.org/pub/ \
-	ftp://sunsite.auc.dk/pub/mozilla/ \
-	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/ \
-	ftp://ftp.sunsite.kth.se/archive/www/ftp.mozilla.org/ \
+	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.mozilla.org/pub/mozilla/releases/ \
+	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/mozilla/releases/ \
 	http://public.planetmirror.com.au/pub/mozilla/releases/ \
-	ftp://ftp2.sinica.edu.tw/pub3/www/mozilla/ \
-	ftp://ftp.is.co.za/networking/info-service/www/clients/netscape/mozilla/ \
-	ftp://ftp.rediris.es/mirror/mozilla/ \
-	ftp://ftp.chg.ru/pub/WWW/mozilla/
+	ftp://ftp.rediris.es/mirror/mozilla/releases/ \
+	ftp://ftp.chg.ru/pub/WWW/mozilla/mozilla/releases/
 
 MASTER_SITE_XEMACS+=    \
 	ftp://ftp.xemacs.org/pub/xemacs/ \
@@ -145,7 +137,9 @@ MASTER_SITE_XEMACS+=    \
 	http://public.planetmirror.com.au/pub/xemacs/ \
 	ftp://mirror.aarnet.edu.au/pub/xemacs/ \
 	ftp://mirror.cict.fr/xemacs/ \
-	ftp://ftp.t.ring.gr.jp/pub/text/xemacs/
+	ftp://ftp.t.ring.gr.jp/pub/text/xemacs/ \
+	ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/ \
+	ftp://ftp.tu-darmstadt.de/pub/editors/xemacs/
 
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
@@ -181,20 +175,16 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.cz.debian.org/debian/ \
 	http://ftp.de.debian.org/debian/ \
 	http://ftp2.de.debian.org/debian/ \
-	http://ftp.dk.debian.org/debian/ \
 	http://ftp.ee.debian.org/debian/ \
 	http://ftp.es.debian.org/debian/ \
 	http://ftp.fi.debian.org/debian/ \
 	http://ftp.fr.debian.org/debian/ \
 	http://ftp2.fr.debian.org/debian/ \
 	http://ftp.uk.debian.org/debian/ \
-	http://ftp.hk.debian.org/debian/ \
 	http://ftp.hr.debian.org/debian/ \
-	http://ftp.hu.debian.org/debian/ \
 	http://ftp.ie.debian.org/debian/ \
 	http://ftp.is.debian.org/debian/ \
 	http://ftp.it.debian.org/debian/ \
-	http://ftp2.it.debian.org/debian/ \
 	http://ftp.jp.debian.org/debian/ \
 	http://ftp.nl.debian.org/debian/ \
 	http://ftp.no.debian.org/debian/ \
@@ -211,14 +201,11 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://mirrors.isc.org/pub/openoffice/ \
 	http://ftp.stardiv.de/pub/OpenOffice.org/ \
 	http://openoffice.mirrors.ilisys.com.au/ \
-	http://linorg.usp.br/OpenOffice.org/ \
-	http://oobr.querencialivre.rs.gov.br/openoffice/ \
 	ftp://ftp.pucpr.br/openoffice/ \
 	http://openoffice.behrsolutions.com/ \
 	http://www.ibiblio.org/pub/mirrors/openoffice/ \
 	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
-	ftp://mirror.telentente.com/pub/OpenOffice/ \
-	http://openoffice.mirrors.pair.com/ \
+	http://openoffice.mirrors.pair.com/ftp/ \
 	http://gd.tuwien.ac.at/office/openoffice/ \
 	http://ftp.belnet.be/pub/mirror/ftp.openoffice.org/ \
 	ftp://ftp.kulnet.kuleuven.ac.be/pub/mirror/openoffice.org/ \
@@ -233,7 +220,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	ftp://ftp.join.uni-muenster.de/pub/software/OpenOffice/ \
 	http://ftp.leo.org/download/pub/comp/general/office/openoffice/ \
 	ftp://openoffice.tu-bs.de/OpenOffice.org/ \
-	http://www.ellak.gr/pub/openoffice/ \
 	http://ftp.ntua.gr/pub/OpenOffice/ \
 	http://ftp.fsf.hu/OpenOffice.org/ \
 	http://ftp.rhnet.is/pub/OpenOffice/ \
@@ -244,12 +230,9 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://ftp.iasi.roedu.net/mirrors/openoffice.org/ \
 	ftp://ftp.arnes.si/packages/OpenOffice.org/ \
 	ftp://ftp.saix.net/pub/OpenOffice.org/ \
-	ftp://ftp.cyberfenix.net/pub/openoffice/ \
 	http://ftp.rediris.es/ftp/mirror/openoffice.org/ \
 	http://ftp.sunet.se/pub/Office/OpenOffice.org/ \
 	ftp://mirror.switch.ch/mirror/OpenOffice/ \
-	ftp://ftp.ksu.edu.tr/pub/OpenOffice/ \
-	ftp://ftp.mirror.ac.uk/sites/ny1.mirror.openoffice.org/ \
 	http://mirror.pacific.net.au/openoffice/ \
 	http://public.planetmirror.com.au/pub/openoffice/ \
 	http://komo.vlsm.org/openoffice/ \
@@ -263,15 +246,14 @@ MASTER_SITE_CYGWIN+= \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
 	http://mirrors.rcn.net/pub/sourceware/cygwin/ \
 	http://mirrors.xmission.com/cygwin/ \
-	ftp://ftp.t.ring.gr.jp/archives/pc/gnu-win32/ \
+	ftp://ftp.t.ring.gr.jp/pub/pc/gnu-win32/ \
 	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
 
 MASTER_SITE_IFARCHIVE+= \
-	http://ifarchive.jmac.org/if-archive/ \
 	http://ifarchive.flavorplex.com/if-archive/ \
 	http://ifarchive.heanet.ie/if-archive/ \
 	http://ifarchive.giga.or.at/if-archive/
- 
+
 MASTER_SITE_FREEBSD+= \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/ \
 	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/distfiles/
@@ -280,7 +262,7 @@ MASTER_SITE_FREEBSD_LOCAL+= \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/ \
 	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/
 
-# The primary backup site. 
+# The primary backup site.
 MASTER_SITE_BACKUP?=	\
 	http://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
