@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.49 2005/12/01 20:40:42 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.50 2005/12/03 21:15:48 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -153,7 +153,6 @@ MASTER_SITE_APACHE+=    \
 	http://apache.osuosl.org/ \
 	http://sunsite.tus.ac.jp/pub/apache/ \
 	http://www.mirrorservice.org/sites/ftp.apache.org/ \
-	http://ftp.plusline.de/ftp.apache.org/ \
 	ftp://ftp.ccs.neu.edu/net/mirrors/Apache/dist/ \
 	ftp://ftp.planetmirror.com.au/pub/apache/dist/ \
 	ftp://ftp.tux.org/pub/net/apache/dist/ \
@@ -161,8 +160,7 @@ MASTER_SITE_APACHE+=    \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
 	ftp://apache.secsup.org/pub/apache/dist/ \
 	ftp://sunsite.tus.ac.jp/pub/archives/www/apache/ \
-	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/ \
-	ftp://ftp.plusline.de/pub/ftp.apache.org/
+	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/
 
 MASTER_SITE_DEBIAN+= \
 	http://ftp.debian.org/debian/ \
