@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.5 2004/11/08 16:30:59 adam Exp $
+$NetBSD: patch-an,v 1.6 2005/12/03 01:41:56 joerg Exp $
 
 --- config-scripts/cups-directories.m4.orig	Tue Dec 17 10:56:39 2002
 +++ config-scripts/cups-directories.m4
@@ -80,7 +80,7 @@ $NetBSD: patch-an,v 1.5 2004/11/08 16:30:59 adam Exp $
 -esac
 +if test x$localedir = x; then
 +	case "$uname" in
-+		Linux* | *BSD* | Darwin*)
++		Linux* | *BSD* | Darwin* | DragonFly*)
 +			CUPS_LOCALEDIR="$datadir/locale"
 +			;;
  
