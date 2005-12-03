@@ -1,4 +1,4 @@
-# $NetBSD: post-build-conf,v 1.8 2005/11/18 12:27:26 rillig Exp $
+# $NetBSD: post-build-conf,v 1.9 2005/12/03 01:00:37 rillig Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
@@ -34,8 +34,6 @@ pbc_section() {
 show_config_vars() {
 	pbc_section "System information" \
 		osrev arch BULK_BUILD_CONF USR_PKGSRC MAKECONF
-	pbc_section "Keeping pkgsrc up-to-date" \
-		CVS_USER CVS_FLAGS
 	pbc_section "Getting distfiles" \
 		PRUNEDISTFILES ftp_proxy http_proxy
 	pbc_section "Building the packages" \
@@ -50,7 +48,6 @@ show_config_vars() {
 # usage: export_config_vars
 export_config_vars() {
 	export osrev arch BULK_BUILD_CONF USR_PKGSRC
-	export CVS_USER CVS_FLAGS
 	export PRUNEDISTFILES ftp_proxy http_proxy
 	export PKGLIST NICE_LEVEL ADMIN ADMINSIG
 	export UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS
@@ -63,7 +60,7 @@ export_config_vars() {
 # usage: pbc_die error-message
 pbc_die() {
 	exec 1>&2
-	printf "error: %s\\n" "$1"
+	printf "error: %s\\n" "$@"
 	printf "       Please check your bulk build configuration file:\\n"
 	case ${BULK_BUILD_CONF+set} in
 	"set")	printf "       %s\\n" "${BULK_BUILD_CONF}"
@@ -140,9 +137,12 @@ check_config_vars() {
 	"set")	pbc_checkexistingfile MAKECONF;;
 	esac
 
-	# section "Keeping pkgsrc up-to-date"
-	# no checks for CVS_USER
-	# no checks for CVS_FLAGS
+	# LEGACY: remove after 2006Q1
+	case ${CVS_USER-""}${CVS_FLAGS+set} in
+	?*)	pbc_die "CVS_USER and CVS_FLAGS must not be set." \
+			"See http://mail-index.netbsd.org/pkgsrc-bulk/2005/11/20/0013.html" \
+			"and http://mail-index.netbsd.org/pkgsrc-bulk/2005/11/24/0003.html";;
+	esac
 
 	# section "Getting distfiles"
 	case ${PRUNEDISTFILES+set} in

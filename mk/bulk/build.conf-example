@@ -1,4 +1,4 @@
-# $NetBSD: build.conf-example,v 1.31 2005/11/18 12:11:51 rillig Exp $
+# $NetBSD: build.conf-example,v 1.32 2005/12/03 01:00:37 rillig Exp $
 #
 # This is an example configuration file for pkgsrc bulk builds.
 # Actually it's a shell script that is sourced in by the pre-build,
@@ -21,18 +21,6 @@ USR_PKGSRC="/usr/pkgsrc"
 # An absolute pathname to your mk.conf file.
 # The file must be outside ${PREFIX}, or it will be overwritten.
 #MAKECONF="$HOME/etc/mk.conf"
-
-
-#
-# Keeping pkgsrc up-to-date
-#
-
-# As which user to run "cvs updates". Leave empty for no update.
-CVS_USER="yourlogin"
-
-# Flags to pass to 'cvs update', e.g. to get a certain branch
-#CVS_FLAGS="-rnetbsd-2005Q1"
-#CVS_FLAGS="-A"				# pkgsrc-current
 
 
 #
@@ -98,7 +86,7 @@ MKSUMS=yes
 #SIGN_AS=username@NetBSD.org
 
 # Destination for packages and rsync options 
-RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/i386
+RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/i386
 RSYNC_OPTS='-e ssh'
 
 ###########################################################################
