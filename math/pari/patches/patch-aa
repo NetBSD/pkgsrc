@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2005/09/08 08:39:59 adam Exp $
+$NetBSD: patch-aa,v 1.12 2005/12/03 00:54:11 joerg Exp $
 
 --- Configure.orig	2004-11-25 15:58:25.000000000 +0000
 +++ Configure
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.11 2005/09/08 08:39:59 adam Exp $
  I know of the following Operating Systems
  EOM
 -  rep='os2 freebsd cygwin linux hpux aix osf1 solaris sunos nextstep concentrix irix';
-+  rep='os2 freebsd netbsd cygwin linux hpux aix osf1 solaris sunos nextstep concentrix irix';
++  rep='os2 freebsd netbsd cygwin linux hpux aix osf1 solaris sunos nextstep concentrix irix dragonfly';
    . ./display
    echo $n ..."Any of these apply ? $c"
    dflt=$osname; . ./myread
@@ -95,8 +95,12 @@ $NetBSD: patch-aa,v 1.11 2005/09/08 08:39:59 adam Exp $
    fx2800)        asmarch=none;          pretty="Alliant FX/2800" ;;
    none)          asmarch=none;          pretty="unknown" ;;
    *)             asmarch=none;          pretty=$arch
-@@ -329,6 +308,9 @@ case "$osname" in
-   nextstep|cygwin*|linux|freebsd|os2|gnu)
+@@ -326,9 +305,12 @@ esac
+ #   Modifications for pretty name and asm file
+ #
+ case "$osname" in
+-  nextstep|cygwin*|linux|freebsd|os2|gnu)
++  nextstep|cygwin*|linux|freebsd|os2|gnu|dragonfly)
         pretty="$pretty running $osname";
          if test "$arch" = m68k; then asmarch=none; fi ;;
 +  netbsd)
@@ -235,6 +239,15 @@ $NetBSD: patch-aa,v 1.11 2005/09/08 08:39:59 adam Exp $
          ";
          pth=`echo $x11pth | s,/lib,/include,g`
          x=`./locate X11/Xos.h '' $pth`
+@@ -867,7 +794,7 @@ else
+                   OPTFLAGS=-O; cflags=-Aa; DLCFLAGS=+z;;
+     # best tuning option, even for PPC604:
+     aix-*)        OPTFLAGS=-O2; cflags='-qlanglvl=ansi -qtune=601';;
+-    cygwin*|linux-i?86|freebsd-i?86)
++    cygwin*|linux-i?86|freebsd-i?86|dragonfly-i?86)
+                   OPTFLAGS=-O2; cflags=-m486;;
+     osf1-*)       OPTFLAGS='-O4 -migrate -ifo -Olimit 9999';;
+     sunos-*)      OPTFLAGS=-fast; PRFFLAGS='-pg -Bstatic';;
 @@ -877,7 +804,7 @@ else
    esac
    PRFFLAGS="$PRFFLAGS $OPTFLAGS"
@@ -252,7 +265,33 @@ $NetBSD: patch-aa,v 1.11 2005/09/08 08:39:59 adam Exp $
    osf1-alpha)
        LD=$ld; LIBS="$LIBS -lots -lc"; runpathprefix='-rpath '
        LDFLAGS='-std0 -call_shared /usr/lib/cmplrs/cc/crt0.o'
-@@ -1207,8 +1135,8 @@ if test -z "$share_prefix"; then
+@@ -1006,7 +934,7 @@ if test "$optimization" = profiling; the
+ #    aix-*)  DLSUFFIX=a  ;; dynamic linking does not work!
+     sunos-*) sodest=$VersionMajor$VersionMinor.$patch
+              soname=$sodest;;
+-    gnu-*|*-alpha|solaris-*|linux-*|freebsd-*)
++    gnu-*|*-alpha|solaris-*|linux-*|freebsd-*|dragonfly-*)
+       case $libpari_base in
+         pari) sodest=$version.$patch;; # released versions
+         *) sodest=$patch.0.0;; # unstable versions
+@@ -1042,6 +970,7 @@ if test -n "$DLLD"; then
+       aix-*)      DLLDFLAGS="-r" ;;
+       hpux-*)     DLLDFLAGS="-b -E" ;;
+       freebsd-*)  DLLDFLAGS="-Bshareable -x" ;;
++      dragonfly-*)  DLLDFLAGS="-Bshareable -x" ;;
+       gnu-*|linux-*)    DLLDFLAGS="-shared -soname \$(LIBPARI_SONAME)" ;;
+       irix-*)     DLLDFLAGS="-shared -elf -no_unresolved -all" ;;
+       *-alpha)    DLLDFLAGS="-shared"; EXTRADLLDFLAGS='${LIBS}'
+@@ -1054,7 +983,7 @@ if test -n "$DLLD"; then
+     esac
+   fi
+   case "$osname" in 
+-    freebsd|linux|sunos|solaris) DLLDFLAGS="$DLLDFLAGS -lc -lm";;
++    dragonfly|freebsd|linux|sunos|solaris) DLLDFLAGS="$DLLDFLAGS -lc -lm";;
+   esac
+ 
+   if test "$fastread" != yes; then
+@@ -1207,8 +1136,8 @@ if test -z "$share_prefix"; then
    dfltman=$prefix/man/man1
    dfltall=$prefix/lib/pari
  else
@@ -263,7 +302,7 @@ $NetBSD: patch-aa,v 1.11 2005/09/08 08:39:59 adam Exp $
  fi
  
  echo $n ..."\"gp\" executable ? $c"
-@@ -1289,6 +1217,7 @@ fi
+@@ -1289,6 +1218,7 @@ fi
  case "$osname" in
    *cygwin*) LDDYN="-L$libdir -lpari_dll" ; runpath="$libdir" ;
  	    DYNLIBS=-lpari_dll ; DYNFLAGS=-Dlibpari_USE_DLL ;;
