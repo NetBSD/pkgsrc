@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4235 2005/12/03 11:36:04 wiz Exp $
+$NetBSD: TODO,v 1.4236 2005/12/03 23:21:03 peter Exp $
 
 Suggested new packages
 ======================
@@ -1050,7 +1050,6 @@ Suggested package updates
 	o qDecoder-7.1.1
 	o qbrew-0.3.5
 	o qcad-2.0.4.0 [pkgsrc-wip]
-	o qstat-2.8
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
