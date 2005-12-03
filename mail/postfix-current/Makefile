@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/11/30 14:02:47 martti Exp $
+# $NetBSD: Makefile,v 1.48 2005/12/03 19:29:37 martti Exp $
 
 DISTNAME=	postfix-2.3-20051128
 #PKGREVISION=	1
@@ -15,6 +15,8 @@ DIST_SUBDIR=	postfix
 CONFLICTS+=	sendmail-[0-9]* fastforward>=0.51nb2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+BUILD_DEPENDS+=	perl>=5.8.0:../../lang/perl5
 
 .include "../../mk/bsd.prefs.mk"
 
