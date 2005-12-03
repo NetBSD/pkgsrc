@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/10/30 04:55:59 minskim Exp $
+# $NetBSD: Makefile,v 1.46 2005/12/03 04:14:05 joerg Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -20,6 +20,8 @@ FESTIVAL=	${WRKSRC}/festival
 
 FHOME=		${PREFIX}/share/festival
 
+GNU_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	${SPEECHTOOLS}/configure
 CONFIG_GUESS_OVERRIDE=	${SPEECHTOOLS}/config.guess ${FESTIVAL}/config.guess
 CONFIG_SUB_OVERRIDE=	${SPEECHTOOLS}/config.sub ${FESTIVAL}/config.sub
 
@@ -34,6 +36,7 @@ PKG_COMPILER_cmd=	case "${CC_VERSION}" in				\
 			gcc-2.8.*)	${ECHO} gcc28;;			\
 			gcc-2.95.*)	${ECHO} gcc295;;		\
 			gcc-3.3.*)	${ECHO} gcc32;;			\
+			gcc-3.4.*)	${ECHO} gcc32;;			\
 			egcs*)		${ECHO} egcs;;			\
 			*)		${ECHO} ;;			\
 			esac
@@ -72,9 +75,6 @@ post-patch:
 	@${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${SPEECHTOOLS}/config/systems/unknown_${OPSYS}.mak
 	@${CP} ${FILESDIR}/unknown_${OPSYS}.mak ${FESTIVAL}/config/systems/unknown_${OPSYS}.mak
 .endif
-
-do-configure:
-	cd ${SPEECHTOOLS} && ${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
