@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2004/06/23 15:54:08 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/03 01:35:36 joerg Exp $
 
 --- Lib/dos-8x3/posixfil.py.orig	1999-04-08 15:27:43.000000000 -0500
 +++ Lib/dos-8x3/posixfil.py
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 2004/06/23 15:54:08 minskim Exp $
          # additions for AIX by Vladimir.Marangozov@imag.fr
          import sys, os
 -        if sys.platform in ('netbsd1',
-+        if sys.platform in ('netbsd1', 'netbsd2',
++        if sys.platform in ('netbsd1', 'netbsd2', 'dragonfly1',
                              'freebsd2', 'freebsd3',
                              'bsdos2', 'bsdos3', 'bsdos4'):
              flock = struct.pack('lxxxxlxxxxlhh', \
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.1 2004/06/23 15:54:08 minskim Exp $
  
          if '?' in how:
 -            if sys.platform in ('netbsd1',
-+            if sys.platform in ('netbsd1', 'netbsd2',
++            if sys.platform in ('netbsd1', 'netbsd2', 'dragonfly1',
                                  'freebsd2', 'freebsd3',
                                  'bsdos2', 'bsdos3', 'bsdos4'):
                  l_start, l_len, l_pid, l_type, l_whence = \
