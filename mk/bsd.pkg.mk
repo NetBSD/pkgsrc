@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1772 2005/12/01 11:18:30 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1773 2005/12/04 15:52:32 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -3360,10 +3360,6 @@ makesum: fetch uptodate-digest
 .endif
 
 .if !target(makepatchsum)
-.  if defined(NO_CHECKSUM) && !empty(NO_CHECKSUM:M[Yy][Ee][Ss])
-makepatchsum mps:
-	@${DO_NADA}
-.  else
 makepatchsum mps: uptodate-digest
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	newfile=${DISTINFO_FILE}.$$$$;					\
@@ -3389,7 +3385,6 @@ makepatchsum mps: uptodate-digest
 	else								\
 		${MV} $$newfile ${DISTINFO_FILE};			\
 	fi
-.  endif
 .endif
 
 # This target is done by invoking a sub-make so that DISTINFO_FILE gets
