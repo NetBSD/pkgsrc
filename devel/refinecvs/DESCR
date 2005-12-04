@@ -1,0 +1,3 @@
+refinecvsl is a perl script which converts CVS repositories to
+a SVN dump, suitable to load into a subversion repository by
+the "svnadmin load" command.
