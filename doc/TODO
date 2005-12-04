@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4238 2005/12/04 13:52:59 uebayasi Exp $
+$NetBSD: TODO,v 1.4239 2005/12/04 20:09:44 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -1319,7 +1319,6 @@ Suggested package updates
 	o xzip-182
 	o yaesu-0.13
 	o yafc-1.1
-	o yasm-0.4.0 [pkg/30445]
 	o yaz-2.1.8
 	o yencode-0.46
 	o yodl-2.01.02
