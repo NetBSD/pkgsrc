@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2005/12/03 18:53:57 jdolecek Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/04 21:28:07 jdolecek Exp $
 #
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		# empty
+PKGREVISION=		1
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
@@ -33,7 +33,11 @@ EGDIR=			${PREFIX}/share/examples/php
 CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
 
+# pear must be patched using post-install, it's extracted from binary .phar
+# file during installation; this replaces former patches/patch-al
 post-install:
+	${SED} -e 's,\(-d output_buffering=1\) \(\$$INCDIR/pearcmd.php\),\1 -n \2,' ${PREFIX}/bin/pear > ${PREFIX}/bin/pear.new && \
+		${MV} ${PREFIX}/bin/pear.new ${PREFIX}/bin/pear
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
 	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/man/man1/php.1
 	${INSTALL_DATA_DIR} ${CGIDIR}
