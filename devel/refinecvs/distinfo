@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/04 17:52:23 mjl Exp $
+
+SHA1 (refinecvs-0.86.1251.tar.gz) = a3e53afd8b1fb070d82dfa321204fcedee9b0579
+RMD160 (refinecvs-0.86.1251.tar.gz) = be7ed8c75e03a2a2b548bae5c3b2e71922134f4e
+Size (refinecvs-0.86.1251.tar.gz) = 46361 bytes
