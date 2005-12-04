@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2005/12/04 16:34:34 kim Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/04 17:02:54 kim Exp $
 #
 
 DISTNAME=	html2ps-1.0b4
-PKGREVISION=	1
-CATEGORIES=	www
+PKGREVISION=	2
+CATEGORIES=	print
 MASTER_SITES=	http://www.tdb.uu.se/~jan/
 
 MAINTAINER=	kim@tac.nyc.ny.us
@@ -23,9 +23,9 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/html2ps
+	${INSTALL_DATA_DIR} ${PREFIX}/share/html2ps
 	@cd ${WRKSRC} && PATH=${LOCALBASE}/bin:${PREFIX}/bin ./install ${PREFIX}
-	@${INSTALL_DATA} ${WRKSRC}/sample ${PREFIX}/lib/html2ps/sample.rc
+	@${INSTALL_DATA} ${WRKSRC}/sample ${PREFIX}/share/html2ps/sample.rc
 
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
