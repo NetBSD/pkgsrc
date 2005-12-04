@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2005/10/16 21:56:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.94 2005/12/04 09:09:47 hira Exp $
 
 DISTNAME=		evolution-2.4.1
+PKGREVISION=		1
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -98,10 +99,11 @@ PLIST_SUBST+=		HAVE_SMIME="@comment "
 PKGCONFIG_OVERRIDE=	camel.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
 
-GCONF2_SCHEMAS=		apps_evolution_addressbook-2.2.schemas
-GCONF2_SCHEMAS+=	apps_evolution_calendar-2.2.schemas
-GCONF2_SCHEMAS+=	apps_evolution_shell-2.2.schemas
-GCONF2_SCHEMAS+=	evolution-mail-2.2.schemas
+GCONF2_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.4.schemas
+GCONF2_SCHEMAS+=	apps_evolution_addressbook-2.4.schemas
+GCONF2_SCHEMAS+=	apps_evolution_calendar-2.4.schemas
+GCONF2_SCHEMAS+=	apps_evolution_shell-2.4.schemas
+GCONF2_SCHEMAS+=	evolution-mail-2.4.schemas
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
