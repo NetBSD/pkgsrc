@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.17 2005/10/07 16:10:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/12/04 16:49:45 hira Exp $
 bin/gnomevfs-cat
 bin/gnomevfs-copy
 bin/gnomevfs-info
 bin/gnomevfs-ls
 bin/gnomevfs-mkdir
+bin/gnomevfs-monitor
 bin/gnomevfs-mv
 bin/gnomevfs-rm
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-address.h
@@ -139,6 +140,7 @@ share/gconf/schemas/desktop_gnome_url_handlers.schemas
 share/gconf/schemas/system_dns_sd.schemas
 share/gconf/schemas/system_http_proxy.schemas
 share/gconf/schemas/system_smb.schemas
+share/gconf/schemas/system_storage.schemas
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-vfs-2.0.mo
