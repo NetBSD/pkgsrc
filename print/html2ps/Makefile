@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/28 06:41:21 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/04 16:34:34 kim Exp $
 #
 
 DISTNAME=	html2ps-1.0b4
@@ -24,7 +24,7 @@ NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/html2ps
-	@cd ${WRKSRC} && ./install ${PREFIX}
+	@cd ${WRKSRC} && PATH=${LOCALBASE}/bin:${PREFIX}/bin ./install ${PREFIX}
 	@${INSTALL_DATA} ${WRKSRC}/sample ${PREFIX}/lib/html2ps/sample.rc
 
 .include "../../mk/tex.buildlink3.mk"
