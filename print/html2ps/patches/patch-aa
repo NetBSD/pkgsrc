@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
 
---- install.orig	2005-03-03 13:25:29.000000000 +0100
-+++ install
-@@ -17,7 +17,7 @@ if(-e '/dev/null') {
+--- install.orig	2005-03-03 14:25:29.000000000 +0200
++++ install	2005-12-04 18:54:52.000000000 +0200
+@@ -17,7 +17,7 @@
      $pathsep = ':';
      $dirsep = '/';
      $sys = 'unix';
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
  } elsif (-e 'nul') {
      $pathsep = ';';
      $dirsep = '\\';
-@@ -57,8 +57,8 @@ where the abovementioned packages are. Y
+@@ -57,8 +57,8 @@
  the directories where the files should be placed.
  EOD
  
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
  
  print "\n";
  for $req (@perl) {
-@@ -134,19 +134,20 @@ if(@reqpath) {
+@@ -134,19 +134,22 @@
  
  chop ($cd = `pwd`);
  
@@ -30,7 +30,8 @@ $NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
 - "\nBy default all files will be installed in subdirectories 'bin', 'lib',\n"
 - ."and 'man' in a common directory. Is this OK?");
 -$def = $ans=~/^y/i;
--
++$sharedir = "share";
+ 
 -if($def) {
 -    &getval($prefix, "$prefix", "\nEnter the name of this directory");
 -    &fixdir($prefix);
@@ -40,7 +41,7 @@ $NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
 -    &makedir($prefix,0);
 -}
 +#&getval($ans, "y",
-+# "\nBy default all files will be installed in subdirectories 'bin', 'lib',\n"
++# "\nBy default all files will be installed in subdirectories 'bin', '$sharedir',\n"
 +# ."and 'man' in a common directory. Is this OK?");
 +#$def = $ans=~/^y/i;
 +$def = 1;
@@ -56,7 +57,19 @@ $NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
  
  if($def) {
      $bindir = "$prefix${dirsep}bin";
-@@ -198,7 +199,7 @@ $cophy = 1;
+@@ -159,9 +162,9 @@
+ &makedir($bindir,$def);
+ 
+ if($def) {
+-    $glob = "$prefix${dirsep}lib${dirsep}html2ps";
++    $glob = "$prefix${dirsep}${sharedir}${dirsep}html2ps";
+ } else {
+-    &getval($glob, "$prefix${dirsep}lib${dirsep}html2ps",
++    &getval($glob, "$prefix${dirsep}${sharedir}${dirsep}html2ps",
+      "\nEnter the the directory where the global configuration file for\n"
+     ."html2ps should be put");
+     $glob =~ s|/$||g;
+@@ -198,7 +201,7 @@
  if($exist{'TeX'}) {
      $hfile = "";
      ($texdir = $dir{'TeX'}) =~ s|/bin$||;
@@ -65,7 +78,7 @@ $NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
          "lib/inputs","lib/tex/macros","lib/tex/inputs") {
          if(-f "$texdir/$_/ushyph1.tex") {
              $hyph = "$texdir/$_";
-@@ -212,15 +213,15 @@ if($exist{'TeX'}) {
+@@ -212,15 +215,15 @@
          }
      }
      if($hfile) {
@@ -89,7 +102,41 @@ $NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
      } else {
          &getval($hfile, "", "$ht I cannot find the pattern\nfile for English "
           ."in your TeX installation. (It should be called\n'hyphen.tex', "
-@@ -268,12 +269,13 @@ if($def) {
+@@ -236,9 +239,9 @@
+     }
+     if(!$hfile) {
+         if($def) {
+-            $hyph = "$prefix${dirsep}lib${dirsep}html2ps";
++            $hyph = "$prefix${dirsep}${sharedir}${dirsep}html2ps";
+         } else {
+-            &getval($hyph, "$prefix${dirsep}lib${dirsep}html2ps",
++            &getval($hyph, "$prefix${dirsep}${sharedir}${dirsep}html2ps",
+              "\nOK, I will use the supplied pattern file for English. Enter "
+             ."the directory\nwhere this file should be put");
+             &fixdir($hyph);
+@@ -246,9 +249,9 @@
+     }
+ } else {
+     if($def) {
+-        $hyph = "$prefix${dirsep}lib${dirsep}html2ps";
++        $hyph = "$prefix${dirsep}${sharedir}${dirsep}html2ps";
+     } else {
+-    &getval($hyph, "$prefix${dirsep}lib${dirsep}html2ps", "$ht A pattern file for English is\n"
++    &getval($hyph, "$prefix${dirsep}${sharedir}${dirsep}html2ps", "$ht A pattern file for English is\n"
+      ."included with html2ps (see the documentation how to install pattern\n"
+      ."files for other languages). Enter the directory where this file\n"
+      ."should be put");
+@@ -260,20 +263,21 @@
+ }
+ 
+ if($def) {
+-    $html = "$prefix${dirsep}lib${dirsep}html2ps";
++    $html = "$prefix${dirsep}${sharedir}${dirsep}html2ps";
+ } else {
+-    &getval($html, "$prefix${dirsep}lib${dirsep}html2ps",
++    &getval($html, "$prefix${dirsep}${sharedir}${dirsep}html2ps",
+      "\nEnter a directory where to put the HTML document describing\nhtml2ps");
+     &fixdir($html);
  }
  &makedir($html,$def);
  
@@ -109,3 +156,12 @@ $NetBSD: patch-aa,v 1.2 2005/07/08 19:23:28 hubertf Exp $
  if($format !~ /^other$/i) {
      $paper .= "    type: $format;";
  } else {
+@@ -431,7 +435,7 @@
+     copy $from => $_[0].$dirsep.$_[1] or die "*** Cannot write to $_[0]\n";
+ }
+ sub goodprefix {
+-    for ($prefix, "$prefix${dirsep}bin", "$prefix${dirsep}lib",
++    for ($prefix, "$prefix${dirsep}bin", "$prefix${dirsep}${sharedir}",
+ 	 "$prefix${dirsep}man")
+     {
+ 	if (-d $_ && !-w $_) {
