@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2005/06/03 19:12:50 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2005/12/04 01:46:45 rxg Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -16,7 +16,7 @@ IS_BUILTIN.xcursor=	no
 .  if exists(${H_XCURSOR})
 BUILTIN_IMAKE_CHECK:=	xcursor:BuildXcursorLibrary
 .    include "../../mk/buildlink3/imake-check.mk"
-IS_BUILTIN.Xcursor=	${BUILTIN_IMAKE_CHECK.Xcursor}
+IS_BUILTIN.xcursor=	${BUILTIN_IMAKE_CHECK.xcursor}
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.xcursor
