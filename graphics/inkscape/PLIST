@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/10 11:40:09 salo Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2005/12/04 23:56:35 seb Exp $
 bin/inkscape
 bin/inkview
 man/fr/man1/inkscape.1
@@ -26,6 +26,8 @@ share/inkscape/examples/tesselation-P3.svg
 share/inkscape/examples/text-on-path.svg
 share/inkscape/examples/tiger.svgz
 share/inkscape/extensions/SpSVG.pm
+share/inkscape/extensions/addnodes.inx
+share/inkscape/extensions/addnodes.py
 share/inkscape/extensions/ai_input.inx
 share/inkscape/extensions/ai_output.inx
 share/inkscape/extensions/bezmisc.py
@@ -35,7 +37,11 @@ share/inkscape/extensions/dia2svg.sh
 share/inkscape/extensions/dots.inx
 share/inkscape/extensions/dots.py
 share/inkscape/extensions/dropshadow.inx
+share/inkscape/extensions/dxf_input.inx
+share/inkscape/extensions/dxf_output.inx
 share/inkscape/extensions/embed_raster_in_svg.pl
+share/inkscape/extensions/embedimage.inx
+share/inkscape/extensions/embedimage.py
 share/inkscape/extensions/eps_input.inx
 share/inkscape/extensions/epsi_output.inx
 share/inkscape/extensions/ffgeom.py
@@ -63,6 +69,7 @@ share/inkscape/extensions/lindenmayer.py
 share/inkscape/extensions/motion.inx
 share/inkscape/extensions/motion.py
 share/inkscape/extensions/pdf_output.inx
+share/inkscape/extensions/ps2dxf.sh
 share/inkscape/extensions/ps2epsi.sh
 share/inkscape/extensions/ps2pdf.sh
 share/inkscape/extensions/ps_input.inx
@@ -77,6 +84,8 @@ share/inkscape/extensions/sk2svg.sh
 share/inkscape/extensions/sk_input.inx
 share/inkscape/extensions/straightseg.inx
 share/inkscape/extensions/straightseg.py
+share/inkscape/extensions/summersnight.inx
+share/inkscape/extensions/summersnight.py
 share/inkscape/extensions/svg_dropshadow
 share/inkscape/extensions/svgz_input.inx
 share/inkscape/extensions/svgz_output.inx
@@ -84,6 +93,8 @@ share/inkscape/extensions/txt2svg.inx
 share/inkscape/extensions/txt2svg.pl
 share/inkscape/extensions/wavy.inx
 share/inkscape/extensions/wavy.py
+share/inkscape/extensions/whirl.inx
+share/inkscape/extensions/whirl.py
 share/inkscape/extensions/wmf_input.inx
 share/inkscape/fonts/README
 share/inkscape/gradients/README
@@ -94,6 +105,7 @@ share/inkscape/icons/inkscape.svg
 share/inkscape/keyboards/README
 share/inkscape/markers/markers.svg
 share/inkscape/palettes/README
+share/inkscape/palettes/Tango-Palette.gpl
 share/inkscape/palettes/svg.gpl
 share/inkscape/palettes/webhex.gpl
 share/inkscape/palettes/websafe22.gpl
@@ -112,8 +124,11 @@ share/inkscape/templates/black_opaque.svg
 share/inkscape/templates/business_card_90x50mm.svg
 share/inkscape/templates/default.cs.svg
 share/inkscape/templates/default.de.svg
+share/inkscape/templates/default.es.svg
 share/inkscape/templates/default.fr.svg
+share/inkscape/templates/default.hu.svg
 share/inkscape/templates/default.it.svg
+share/inkscape/templates/default.pl.svg
 share/inkscape/templates/default.svg
 share/inkscape/templates/default_mm.svg
 share/inkscape/templates/default_pt.svg
@@ -131,21 +146,22 @@ share/inkscape/templates/web_banner_468x60.svg
 share/inkscape/templates/web_banner_728x90.svg
 share/inkscape/templates/white_opaque.svg
 share/inkscape/tutorials/README
-share/inkscape/tutorials/elementsofdesign.sl.svg
 share/inkscape/tutorials/gpl-2.svg
 share/inkscape/tutorials/making_markers.svg
 share/inkscape/tutorials/oldguitar.jpg
+share/inkscape/tutorials/potrace-de.png
 share/inkscape/tutorials/potrace-fr.png
 share/inkscape/tutorials/potrace.png
-share/inkscape/tutorials/tipsandtricks.sl.svg
+share/inkscape/tutorials/tutorial-advanced.es.svg
 share/inkscape/tutorials/tutorial-advanced.fr.svg
-share/inkscape/tutorials/tutorial-advanced.jp.svg
+share/inkscape/tutorials/tutorial-advanced.ja.svg
 share/inkscape/tutorials/tutorial-advanced.sl.svg
 share/inkscape/tutorials/tutorial-advanced.svg
 share/inkscape/tutorials/tutorial-basic.ca.svg
+share/inkscape/tutorials/tutorial-basic.de.svg
 share/inkscape/tutorials/tutorial-basic.es.svg
 share/inkscape/tutorials/tutorial-basic.fr.svg
-share/inkscape/tutorials/tutorial-basic.jp.svg
+share/inkscape/tutorials/tutorial-basic.ja.svg
 share/inkscape/tutorials/tutorial-basic.nn.svg
 share/inkscape/tutorials/tutorial-basic.ru.svg
 share/inkscape/tutorials/tutorial-basic.sl.svg
@@ -156,16 +172,22 @@ share/inkscape/tutorials/tutorial-calligraphy.sl.svg
 share/inkscape/tutorials/tutorial-calligraphy.svg
 share/inkscape/tutorials/tutorial-elements.es.svg
 share/inkscape/tutorials/tutorial-elements.fr.svg
+share/inkscape/tutorials/tutorial-elements.sl.svg
 share/inkscape/tutorials/tutorial-elements.svg
+share/inkscape/tutorials/tutorial-shapes.ca.svg
 share/inkscape/tutorials/tutorial-shapes.es.svg
 share/inkscape/tutorials/tutorial-shapes.fr.svg
-share/inkscape/tutorials/tutorial-shapes.jp.svg
+share/inkscape/tutorials/tutorial-shapes.ja.svg
 share/inkscape/tutorials/tutorial-shapes.sl.svg
 share/inkscape/tutorials/tutorial-shapes.svg
+share/inkscape/tutorials/tutorial-tips.es.svg
 share/inkscape/tutorials/tutorial-tips.fr.svg
+share/inkscape/tutorials/tutorial-tips.sl.svg
 share/inkscape/tutorials/tutorial-tips.svg
+share/inkscape/tutorials/tutorial-tracing.de.svg
 share/inkscape/tutorials/tutorial-tracing.es.svg
 share/inkscape/tutorials/tutorial-tracing.fr.svg
+share/inkscape/tutorials/tutorial-tracing.sl.svg
 share/inkscape/tutorials/tutorial-tracing.svg
 share/inkscape/tutorials/tux.png
 share/inkscape/ui/keybindings.rc
