@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/12/04 20:00:01 kristerw Exp $
+
+--- m4/Makefile.in.orig	2004-10-31 13:00:09.000000000 +0900
++++ m4/Makefile.in	2005-06-05 01:46:32.000000000 +0900
+@@ -45,7 +45,7 @@
+ 	$(top_srcdir)/m4/progtest.m4 $(top_srcdir)/configure.ac
+ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
+ 	$(ACLOCAL_M4)
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = mkdir -p
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ SOURCES =

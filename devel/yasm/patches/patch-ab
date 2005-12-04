@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/12/04 20:00:01 kristerw Exp $
+
+--- Makefile.in.orig	2004-10-31 13:00:08.000000000 +0900
++++ Makefile.in	2005-06-05 01:46:38.000000000 +0900
+@@ -192,7 +192,7 @@
+ 	$(ACLOCAL_M4)
+ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
+  configure.lineno configure.status.lineno
+-mkinstalldirs = $(mkdir_p)
++mkinstalldirs = mkdir -p
+ CONFIG_HEADER = config.h
+ CONFIG_CLEAN_FILES =
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkglibdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man7dir)" "$(DESTDIR)$(includedir)" "$(DESTDIR)$(modincludedir)"

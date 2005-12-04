@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/12/04 20:00:01 kristerw Exp $
 bin/yasm
 include/libyasm.h
 include/libyasm/arch.h
+include/libyasm/assocdat.h
 include/libyasm/bc-int.h
 include/libyasm/bitvect.h
 include/libyasm/bytecode.h
 include/libyasm/compat-queue.h
-include/libyasm/config.h
 include/libyasm/coretype.h
 include/libyasm/dbgfmt.h
 include/libyasm/errwarn.h
@@ -17,23 +17,31 @@ include/libyasm/floatnum.h
 include/libyasm/hamt.h
 include/libyasm/intnum.h
 include/libyasm/linemgr.h
+include/libyasm/listfmt.h
 include/libyasm/objfmt.h
 include/libyasm/optimizer.h
 include/libyasm/parser.h
 include/libyasm/preproc.h
 include/libyasm/section.h
 include/libyasm/symrec.h
-include/libyasm/util.h
 include/libyasm/valparam.h
 lib/libyasm.la
-lib/yasm_basic.la
-lib/yasm_bin.la
-lib/yasm_coff.la
-lib/yasm_dbg.la
-lib/yasm_nasm.la
-lib/yasm_null.la
-lib/yasm_raw.la
-lib/yasm_win32.la
-lib/yasm_x86.la
-lib/yasm_yapp.la
+lib/yasm/arch_lc3b.la
+lib/yasm/arch_x86.la
+lib/yasm/dbgfmt_null.la
+lib/yasm/dbgfmt_stabs.la
+lib/yasm/listfmt_nasm.la
+lib/yasm/objfmt_bin.la
+lib/yasm/objfmt_coff.la
+lib/yasm/objfmt_dbg.la
+lib/yasm/objfmt_elf.la
+lib/yasm/objfmt_win32.la
+lib/yasm/objfmt_xdf.la
+lib/yasm/optimizer_basic.la
+lib/yasm/parser_nasm.la
+lib/yasm/preproc_nasm.la
+lib/yasm/preproc_raw.la
+man/man1/yasm.1
+man/man7/yasm_arch.7
+@dirrm lib/yasm
 @dirrm include/libyasm
