@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/12/04 10:17:01 seb Exp $
+
+<locale.h> is needed to declare LC_ALL.
+
+--- main.cpp.orig	Wed Jul 27 15:31:54 2005
++++ main.cpp	Sat Oct 22 20:10:14 2005
+@@ -2,6 +2,7 @@
+ #	pragma warning( disable : 4786 )		// stl warning ¾ø¾Ö±â
+ #endif
+ 
++#include <locale.h>
+ #include <stdio.h>
+ #include <iostream>
+ #include <time.h>
