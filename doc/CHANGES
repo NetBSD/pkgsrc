@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12114 2005/12/04 20:09:44 kristerw Exp $
+$NetBSD: CHANGES,v 1.12115 2005/12/04 22:13:32 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5495,3 +5495,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/gnome-vfs2 to 2.12.1.1nb1 [hira 2005-12-04]
 	Added devel/refinecvs version 0.86.1251 [mjl 2005-12-04]
 	Updated devel/yasm to 0.4.0 [kristerw 2005-12-04]
+	Updated net/lftp to 3.3.5 [salo 2005-12-04]
