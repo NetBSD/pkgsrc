@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12110 2005/12/04 15:03:57 wiz Exp $
+$NetBSD: CHANGES,v 1.12111 2005/12/04 15:51:33 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5491,3 +5491,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added textproc/p5-Number-Format version 1.45 [mjl 2005-12-04]
 	Added textproc/p5-Template-Plugin-Number-Format version 1.01 [mjl 2005-12-04]
 	Updated www/p5-SVN-Web to 0.41 [mjl 2005-12-04]
+	Updated textproc/helpdeco to 2.1.3 [ben 2005-12-04]
