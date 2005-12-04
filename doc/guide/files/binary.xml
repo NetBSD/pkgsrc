@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.17 2005/11/29 09:58:27 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.18 2005/12/04 17:05:22 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -99,6 +99,29 @@
     PKG_DEVELOPER?= yes
     _ACCEPTABLE=    yes
 </programlisting>
+
+	<para>Some options that are especially useful for bulk builds
+	can be found at the top lines of the file
+	<filename>mk/bulk/bsd.bulk-pkg.mk</filename>. The most useful
+	options of these are briefly described here.</para>
+
+	<itemizedlist>
+
+	<listitem><para>If you are on a slow machine, you may want to
+	set <varname>USE_BULK_BROKEN_CHECK</varname> to
+	<quote>no</quote>.</para></listitem>
+
+	<listitem><para>If you are doing bulk builds from a read-only
+	copy of pkgsrc, you have to set <varname>BULKFILESDIR</varname>
+	to the directory where all log files are created. Otherwise the
+	log files are created in the pkgsrc directory.</para></listitem>
+
+	<listitem><para>Another important variable is
+	<varname>BULK_PREREQ</varname>, which is a list of packages that
+	should be always available while building other
+	packages.</para></listitem>
+
+	</itemizedlist>
       </sect3>
 
       <sect3 id="pre-build.local">
