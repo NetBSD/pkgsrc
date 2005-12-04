@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12105 2005/12/04 01:18:19 joerg Exp $
+$NetBSD: CHANGES,v 1.12106 2005/12/04 08:55:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5480,7 +5480,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/php-pdo_pgsql to 1.0.1 [jdolecek 2005-12-03]
 	Updated databases/php-pdo_sqlite to 1.0 [jdolecek 2005-12-03]
 	Updated lang/php5 to 5.1.1 [jdolecek 2005-12-03]
-	Updated meta-pkgs/php5-extension to 5.1 [jdolecek 2005-12-03]
+	Updated meta-pkgs/php5-extensions to 5.1 [jdolecek 2005-12-03]
 	Updated x11/wmweather to 2.4.2nb4 [joerg 2005-12-03]
 	Updated games/qstat to 2.8 [peter 2005-12-04]
 	Updated x11/xautolock to 1.15nb2 [joerg 2005-12-04]
