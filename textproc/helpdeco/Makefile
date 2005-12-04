@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2005/11/08 19:37:21 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/04 15:50:13 ben Exp $
 #
 
-DISTNAME=		helpdeco-2.1.1
+DISTNAME=		helpdeco-2.1.3
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=helpdeco/}
 
