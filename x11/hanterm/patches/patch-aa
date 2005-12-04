@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2003/10/20 08:17:17 junyoung Exp $
+$NetBSD: patch-aa,v 1.5 2005/12/04 01:10:33 joerg Exp $
 
---- misc.c.orig	2003-10-05 16:23:49.000000000 -0500
+--- misc.c.orig	2002-01-09 00:41:11.000000000 +0000
 +++ misc.c
+@@ -35,7 +35,7 @@
+ #include <pwd.h>
+ #include <errno.h>
+ 
+-#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DARWIN__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DARWIN__) || defined(__DragonFly__)
+ #include <sys/param.h>
+ #endif
+ 
 @@ -913,7 +913,6 @@ char *SysErrorMsg (n)
      extern char *sys_errlist[];
  #endif
