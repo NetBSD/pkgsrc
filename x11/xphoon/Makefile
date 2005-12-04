@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/03 13:50:58 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/04 00:49:33 joerg Exp $
 #
 
 DISTNAME=	xphoon.tar
@@ -24,7 +24,7 @@ MAKE_FLAGS+=	EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS}
 GCC_REQD+=	2.95.3
 .endif
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
 EXTRA_LOCAL_LIBS=	-lcompat
 .endif
 
