@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/04 01:17:43 joerg Exp $
 bin/xautolock
-man/cat1/xautolock.0
-man/man1/xautolock.1
+${IMAKE_MAN_DIR}/xautolock.${IMAKE_MANNEWSUFFIX}
