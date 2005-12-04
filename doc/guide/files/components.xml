@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.18 2005/12/02 13:52:31 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.19 2005/12/04 17:22:24 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -430,9 +430,12 @@
   <sect1 id="files-dir">
     <title><filename>files/*</filename></title>
 
-    <para>If you have any files that you wish to be placed in the
-    package prior to configuration or building, you should place these
-    files here and use a <quote>${CP}</quote> command in the
-    <quote>pre-configure</quote> target to achieve this.</para>
+    <para>If you have any files that you wish to be placed in the package prior
+      to configuration or building, you could place these files here and use
+      a <quote>${CP}</quote> command in the
+      <quote>pre-configure</quote> target to achieve 
+      this. Alternatively, you could simply diff the file against
+      <filename>/dev/null</filename> and use the patch mechanism to manage
+      the creation of this file.</para>
   </sect1>
 </chapter>
