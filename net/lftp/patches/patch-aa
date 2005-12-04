@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.7 2004/05/27 14:37:16 salo Exp $
+$NetBSD: patch-aa,v 1.8 2005/12/04 22:12:07 salo Exp $
 
---- src/Makefile.in.orig	2004-05-21 14:32:31.000000000 +0200
-+++ src/Makefile.in	2004-05-27 15:08:32.000000000 +0200
-@@ -833,7 +833,7 @@
+--- src/Makefile.in.orig	2005-12-01 12:45:18.000000000 +0100
++++ src/Makefile.in	2005-12-04 22:12:02.000000000 +0100
+@@ -304,7 +304,7 @@
+ localedir = $(datadir)/locale
+ pkgverlibdir = $(pkglibdir)/$(VERSION)
+ bin_SCRIPTS = lftpget
+-pkgdata_SCRIPTS = import-ncftp import-netscape verify-file convert-netscape-cookies
++pkgdata_SCRIPTS = import-ncftp import-netscape
+ noinst_SCRIPTS = ftpget
+ EXTRA_DIST = $(pkgdata_SCRIPTS) $(bin_SCRIPTS) $(noinst_SCRIPTS) \
+ 	example1.cc example2.cc
+@@ -793,7 +793,7 @@
  check: check-am
  all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(SCRIPTS)
  installdirs:
