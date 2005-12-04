@@ -1,39 +1,38 @@
-$NetBSD: patch-aa,v 1.2 2005/03/02 16:18:47 minskim Exp $
+$NetBSD: patch-aa,v 1.2.6.1 2005/12/04 10:17:01 seb Exp $
 
---- Makefile.orig	2004-11-27 10:58:24.000000000 -0600
+--- Makefile.orig	2005-07-08 18:32:15.000000000 -0700
 +++ Makefile
-@@ -1,9 +1,10 @@
+@@ -1,9 +1,9 @@
 -CPP = g++
 -CC  = gcc
--OBJ = main.o UnAlz.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o zlib/adler32.o zlib/crc32.o zlib/infback.o zlib/inffast.o zlib/inflate.o zlib/inftrees.o zlib/zutil.o bzip2/blocksort.o bzip2/compress.o bzip2/crctable.o bzip2/huffman.o bzip2/randtable.o
+-OBJ = main.o UnAlz.o UnAlzUtils.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o zlib/adler32.o zlib/crc32.o zlib/infback.o zlib/inffast.o zlib/inflate.o zlib/inftrees.o zlib/zutil.o bzip2/blocksort.o bzip2/compress.o bzip2/crctable.o bzip2/huffman.o bzip2/randtable.o
 +#CPP = g++
 +#CC  = gcc
-+OBJ = main.o UnAlz.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o
++OBJ = main.o UnAlz.o UnAlzUtils.o UnAlzBz2decompress.o UnAlzBzip2.o
  BIN = unalz
 -LDFLAGS = 
 -CFLAGS = -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 
 +LDFLAGS += -lz -lbz2
-+CFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 
-+CXXFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_UNALZ_ICONV
++CFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_UNALZ_ICONV -D_UNALZ_UTF8
  
  all:
  	@echo ""
-@@ -21,8 +22,7 @@ all:
- 	@echo ""
- 
- posix: unalz
--	$(CPP) -c UnAlz.cpp  -c main.cpp -D_UNALZ_ICONV $(CFLAGS) 
--	$(CPP) $(OBJ) $(LDFLAGS) -liconv -o $(BIN) 
-+	$(CXX) $(OBJ) $(LDFLAGS) -liconv -o $(BIN) 
+@@ -26,8 +26,7 @@ posix: unalz
+ 	$(CPP) $(OBJ) $(LDFLAGS) -liconv -o $(BIN) 
  
  posix-utf8: unalz
- 	$(CPP) -c UnAlz.cpp -c main.cpp -D_UNALZ_ICONV -D_UNALZ_UTF8 $(CFLAGS)
-@@ -37,6 +37,8 @@ clean:
+-	$(CPP) -c UnAlz.cpp -c UnAlzUtils.cpp -c main.cpp -D_UNALZ_ICONV -D_UNALZ_UTF8 $(CFLAGS)
+-	$(CPP) $(OBJ) $(LDFLAGS) -liconv -o $(BIN)
++	$(CXX) $(OBJ) $(LDFLAGS) -liconv -o $(BIN)
+ 
+ posix-noiconv: unalz
+ 	$(CPP) -c UnAlz.cpp -c UnAlzUtils.cpp -c main.cpp $(CFLAGS)
+@@ -45,6 +44,8 @@ clean:
  
  $(BIN): $(OBJ)
  
 +.cpp.o:
-+	${CXX} ${CXXFLAGS} -c ${.IMPSRC} -o ${.TARGET}
++	${CXX} ${CPPFLAGS} ${CXXFLAGS} -c ${.IMPSRC} -o ${.TARGET}
  
  zlib/adler32.o: zlib/adler32.c
  	$(CC) -c zlib/adler32.c -o zlib/adler32.o $(CFLAGS)
