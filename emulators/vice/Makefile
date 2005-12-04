@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/10/05 13:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2005/12/04 00:51:36 joerg Exp $
 #
 
 DISTNAME=		vice-1.16
@@ -21,7 +21,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake bdftopcf mkfontdir
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-fullscreen
