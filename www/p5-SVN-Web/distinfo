@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/12/04 13:52:30 mjl Exp $
 
-SHA1 (SVN-Web-0.35.tar.gz) = 48caf64ad48706e657aa3a092e27be13be8cbc83
-RMD160 (SVN-Web-0.35.tar.gz) = d30b4dd44705e6c70298daef3c29361e1583ed15
-Size (SVN-Web-0.35.tar.gz) = 7851 bytes
+SHA1 (SVN-Web-0.41.tar.gz) = 5c58333d7b57537d4c4f3f119d16f1c5aaf5dc11
+RMD160 (SVN-Web-0.41.tar.gz) = 93909a52895c083dc289d725aa0e37a61ce3ccd8
+Size (SVN-Web-0.41.tar.gz) = 52430 bytes
