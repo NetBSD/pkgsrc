@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12108 2005/12/04 13:51:38 uebayasi Exp $
+$NetBSD: CHANGES,v 1.12109 2005/12/04 13:54:40 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5486,3 +5486,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/xautolock to 1.15nb2 [joerg 2005-12-04]
 	Updated mail/evolution to 2.4.1nb1 [hira 2005-12-04]
 	Updated graphics/inkscape to 0.43 [uebayasi 2005-12-04]
+	Updated textproc/p5-Pod-POM to 0.17 [mjl 2005-12-04]
+	Added textproc/p5-Text-Diff-HTML-0.04 [mjl 2005-12-04]
+	Added textproc/p5-Number-Format-1.45 [mjl 2005-12-04]
+	Added textproc/p5-Template-Plugin-Number-Format-1.01 [mjl 2005-12-04]
+	Updated www/p5-SVN-Web to 0.41 [mjl 2005-12-04]
