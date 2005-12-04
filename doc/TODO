@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4239 2005/12/04 20:09:44 kristerw Exp $
+$NetBSD: TODO,v 1.4240 2005/12/04 22:13:33 salo Exp $
 
 Suggested new packages
 ======================
@@ -686,7 +686,6 @@ Suggested package updates
 	o lcms-1.15
 	o leafnode-1.11.4
 	o leafpad-0.8.5
-	o lftp-3.3.4
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libextractor-0.5.7
