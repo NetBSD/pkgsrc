@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/04 20:00:01 kristerw Exp $
 #
 
-DISTNAME=	yasm-0.2.2
-PKGREVISION=	2
+DISTNAME=	yasm-0.4.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.tortall.net/projects/yasm/releases/
 
@@ -14,7 +13,6 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		perl
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
