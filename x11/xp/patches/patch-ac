@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2005/12/04 01:21:00 joerg Exp $
+
+--- xp.c.orig	2005-12-04 00:57:12.000000000 +0000
++++ xp.c
+@@ -434,7 +434,6 @@ newfile(file,data, size)
+     int size;
+ 
+ {
+-    extern int errno;
+     extern char* uerror();
+     extern char* readfile();
+     char *mess = NULL;
+@@ -649,8 +648,6 @@ main (argc, argv)
+     filedata = readfile(argc > 1 ? argv[1] : "-", &size);
+ 
+     if (argc == 2 && !filedata) {
+-	extern int errno;
+-
+ 	fprintf(stderr,"%s: %s: %s\n", argv[0], argv[1], uerror());
+ 	exit (1);
+     }
