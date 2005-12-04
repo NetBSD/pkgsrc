@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/16 02:57:48 salo Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/12/04 22:12:07 salo Exp $
 bin/lftp
 bin/lftpget
 lib/lftp/${PKGVERSION}/cmd-mirror.so
