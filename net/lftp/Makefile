@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2005/09/06 15:28:09 adam Exp $
+# $NetBSD: Makefile,v 1.59 2005/12/04 22:12:07 salo Exp $
 
-DISTNAME=		lftp-3.2.1
-PKGREVISION=		1
+DISTNAME=		lftp-3.3.5
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/ \
-			ftp://ftp.tuwien.ac.at/infosys/browsers/ftp/lftp/ \
-			http://tactical.wiretapped.net/mirrors/lftp/ \
-			ftp://ftp.130th.net/pub/mirror/lftp/ \
-			ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/ \
-			ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/old/
+MASTER_SITES=		http://ftp.yars.free.net/pub/source/lftp/ \
+			ftp://ftp.iasi.roedu.net/pub/os/Linux/network/ftp/lftp/ \
+			http://ftp.yars.free.net/pub/source/lftp/old/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		salo@NetBSD.org
@@ -28,6 +24,8 @@ SHLIBTOOL_OVERRIDE=	libtool
 
 .include "options.mk"
 
+PLIST_SRC+=		${PKGDIR}/PLIST
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-modules
 
@@ -38,7 +36,7 @@ CONF_FILES=		${EGDIR}/lftp.conf.default ${PKG_SYSCONFDIR}/lftp.conf
 
 INSTALLATION_DIRS=	bin lib/lftp man/man1 share/examples/lftp share/lftp
 
-post-install:
+post-install: post-install-perl
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/lftp.conf ${EGDIR}/lftp.conf.default
 
