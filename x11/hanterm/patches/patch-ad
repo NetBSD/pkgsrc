@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2001/05/03 18:37:49 fredb Exp $
+$NetBSD: patch-ad,v 1.2 2005/12/04 01:10:33 joerg Exp $
 
---- data.h.orig	Wed Feb 24 05:04:50 1999
+--- data.h.orig	1999-02-24 11:04:50.000000000 +0000
 +++ data.h
 @@ -24,6 +24,8 @@
   * SOFTWARE.
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1 2001/05/03 18:37:49 fredb Exp $
  extern XPoint VTbox[];
  extern XPoint hVTbox[];
  extern Char *bptr;
-@@ -34,7 +36,7 @@
+@@ -34,7 +36,7 @@ extern char *ptydev;
  extern char *ttydev;
  extern char *xterm_name;
  extern Char buffer[];
@@ -20,3 +20,11 @@ $NetBSD: patch-ad,v 1.1 2001/05/03 18:37:49 fredb Exp $
  extern fd_set Select_mask;
  #else
  extern int Select_mask;
+@@ -45,7 +47,6 @@ extern int bcnt;
+ #ifdef DEBUG
+ extern int debug;
+ #endif	/* DEBUG */
+-extern int errno;
+ extern int max_plus1;
+ extern int pty_mask;
+ extern int switchfb[];
