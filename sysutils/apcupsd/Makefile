@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/12/05 20:50:59 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2005/12/05 23:55:19 rillig Exp $
 
 DISTNAME=		apcupsd-3.8.6
 PKGREVISION=		4
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
 CONFIGURE_ARGS+=	--enable-nls		# i18n support
 CONFIGURE_ARGS+=	--with-lock-dir=${VARBASE}/spool/lock
 CONFIGURE_ARGS+=	--with-serial-dev=/dev/tty01
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 # configure sets sbindir to '${prefix}/sbin' without expanding $prefix
 # this breaks .in files that uses @sbindir@
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin

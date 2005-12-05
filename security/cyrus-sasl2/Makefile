@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/12/05 20:50:55 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2005/12/05 23:55:17 rillig Exp $
 
 .include "Makefile.common"
 
@@ -18,14 +18,14 @@ USE_DB185=		no
 .  include "../../mk/bdb.buildlink3.mk"
 .endif
 
-CONFIGURE_ARGS+=	--with-dblib=${SASL_DBTYPE}
+CONFIGURE_ARGS+=	--with-dblib=${SASL_DBTYPE:Q}
 CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
 
 # Support using Cyrus saslauthd (security/cyrus-saslauthd) for plaintext
 # password authentication.
 #
 SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
-CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR}
+CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR:Q}
 BUILD_DEFS+=		SASLSOCKETDIR
 
 # Support using the Courier authdaemond (security/courier-authlib) for
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--enable-checkapop
 SASL_ENTROPY_SOURCE?=	/dev/urandom
 .endif
 .if defined(SASL_ENTROPY_SOURCE)
-CONFIGURE_ARGS+=	--with-devrandom=${SASL_ENTROPY_SOURCE}
+CONFIGURE_ARGS+=	--with-devrandom=${SASL_ENTROPY_SOURCE:Q}
 .endif
 BUILD_DEFS+=		SASL_ENTROPY_SOURCE
 

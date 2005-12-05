@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/05 20:49:52 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 23:55:02 rillig Exp $
 #
 
 DISTNAME=		bitlbee-0.99
@@ -13,11 +13,11 @@ HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_PKGINSTALL=		yes
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
-CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--datadir=${DATADIR}
-CONFIGURE_ARGS+=	--config=${STATEDIR}
+CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
+CONFIGURE_ARGS+=	--config=${STATEDIR:Q}
 CONFIGURE_ARGS+=	--flood=1
 CONFIGURE_ARGS+=	--ssl=openssl
 

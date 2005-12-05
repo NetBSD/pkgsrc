@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2005/12/05 20:50:59 rillig Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/12/05 23:55:19 rillig Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -34,13 +34,13 @@ CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
 TOOLS_DEPENDS.gtar=	{gtar,gtar-base}>=1.12:../../archivers/gtar-base
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-user=${AMANDA_USER}
-CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP}
-CONFIGURE_ARGS+=	--with-owner=${ROOT_USER}
+CONFIGURE_ARGS+=	--with-user=${AMANDA_USER:Q}
+CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP:Q}
+CONFIGURE_ARGS+=	--with-owner=${ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-mmap
 CONFIGURE_ARGS+=	--with-amandahosts
-CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP}
-CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR}
+CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP:Q}
+CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR:Q}
 CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists
 CONFIGURE_ARGS+=	--with-dump-honor-nodump
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

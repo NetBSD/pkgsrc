@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2005/12/05 20:51:10 rillig Exp $
+# $NetBSD: Makefile,v 1.94 2005/12/05 23:55:22 rillig Exp $
 
 DISTNAME=		mod_ssl-2.8.25-1.3.34
 PKGNAME=		ap-ssl-2.8.25
@@ -19,7 +19,7 @@ USE_PKGINSTALL=		yes
 APACHE_MODULE=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

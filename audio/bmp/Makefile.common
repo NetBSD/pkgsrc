@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2005/10/19 15:09:37 minskim Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/12/05 23:55:02 rillig Exp $
 #
 
 DISTNAME=	bmp-0.9.7
@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=	--with-xmms-eq
 
 .if ${OPSYS} == "NetBSD"
 RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
-CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}			\
+CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND:Q}			\
 			--with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}	\
 			--with-cdda-dir=/cdrom/
 

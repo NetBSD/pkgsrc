@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/11/12 14:17:45 adrianp Exp $
+# $NetBSD: Makefile,v 1.84 2005/12/05 23:55:18 rillig Exp $
 #
 
 DISTNAME=		sudo-1.6.8p9
@@ -25,7 +25,7 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--disable-root-mailer
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "options.mk"
 

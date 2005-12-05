@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/10/07 17:15:40 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 23:55:01 rillig Exp $
 #
 
 DISTNAME=	dact-0.8.3
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		ac_cv_lib_mcrypt_main=no
 
 INSTALLATION_DIRS=	bin man/man1
