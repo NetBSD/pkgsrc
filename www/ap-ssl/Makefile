@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2005/10/19 20:33:44 bouyer Exp $
+# $NetBSD: Makefile,v 1.93 2005/12/05 20:51:10 rillig Exp $
 
 DISTNAME=		mod_ssl-2.8.25-1.3.34
 PKGNAME=		ap-ssl-2.8.25
@@ -13,7 +13,7 @@ COMMENT=		SSL/TLS protocols module for Apache
 
 CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
-BUILDLINK_DEPENDS.apache=	apache>=1.3.33
+BUILDLINK_DEPENDS.apache+=	apache>=1.3.33
 
 USE_PKGINSTALL=		yes
 APACHE_MODULE=		yes
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 
 SSL_RPATH_LDFLAGS=	${LINKER_RPATH_FLAG} ${SSLBASE}/lib
 FIX_RPATH+=		SSL_RPATH_LDFLAGS
-MAKE_ENV+=		SSL_RPATH_LDFLAGS="${SSL_RPATH_LDFLAGS}"
+MAKE_ENV+=		SSL_RPATH_LDFLAGS=${SSL_RPATH_LDFLAGS:Q}
 
 PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd

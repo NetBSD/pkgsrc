@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/04 11:22:24 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:56 rillig Exp $
 #
 
 DISTNAME=		gnustep-base-1.10.1
@@ -10,7 +10,7 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnustep.org/
 COMMENT=		GNUstep SSL bundle
 
-BUILDLINK_DEPENDS.gnustep-base=	gnustep-base>1.10.1
+BUILDLINK_DEPENDS.gnustep-base+=	gnustep-base>1.10.1
 
 PTHREAD_LIBS=		-lpthread
 
@@ -20,7 +20,7 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
-CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_SCRIPT}"
+CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 
 SUBST_CLASSES+=		gsssl
 SUBST_STAGE.gsssl=	pre-configure

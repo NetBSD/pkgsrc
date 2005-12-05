@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:05 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:19 rillig Exp $
 #
 
 DISTNAME=		exiv2-0.6.1
@@ -10,7 +10,7 @@ HOMEPAGE=		http://home.arcor.de/ahuggel/exiv2/
 COMMENT=		Image metadata manipulation
 
 USE_LANGUAGES=		c c++
-GCC_REQD=		3.3
+GCC_REQD+=		3.3
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:08 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:23 rillig Exp $
 #
 
 DISTNAME=	tlf-0.9.20
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 BUILD_USES_MSGFMT=yes
 PTHREAD_OPTS+=	require
 
-CONFIGURE_ARGS=	--enable-hamlib
+CONFIGURE_ARGS+=	--enable-hamlib
 
 post-patch:
 	${ECHO} SC_DEVICE=/dev/tty00 >> ${WRKSRC}/share/logcfg.dat

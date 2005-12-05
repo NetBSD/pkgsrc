@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2005/05/23 20:53:28 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/12/05 20:50:15 rillig Exp $
 
-.ifndef XORG_FONTSENCODINGS_COMMON
-XORG_FONTSENCODINGS_COMMON=	defined
+.if !defined(XORG_FONTSENCODINGS_COMMON)
+XORG_FONTSENCODINGS_COMMON=	# defined
 
 BUILD_DEPENDS+=	xorg-clients>=${XORG_VER}:../../x11/xorg-clients
 

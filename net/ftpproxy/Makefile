@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:45 rillig Exp $
 #
 
 DISTNAME=	ftpproxy-${VERSION}
@@ -20,7 +20,7 @@ VERSION=	1.2.3
 LIBS+=		"-lsocket -lnsl"
 OSFLAG=		-DSOLARIS
 .endif
-MAKE_ENV+=	OSFLAG=${OSFLAG} OSLIB=${LIBS} VERSION=${VERSION}
+MAKE_ENV+=	OSFLAG=${OSFLAG:Q} OSLIB=${LIBS:M*:Q} VERSION=${VERSION:Q}
 
 INSTALLATION_DIRS=	libexec man/man8
 

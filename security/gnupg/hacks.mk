@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.2 2005/10/04 22:50:41 wiz Exp $
+# $NetBSD: hacks.mk,v 1.3 2005/12/05 20:50:56 rillig Exp $
 
-.ifndef GNUPG_HACKS_MK
-GNUPG_HACKS_MK=         #defined
+.if !defined(GNUPG_HACKS_MK)
+GNUPG_HACKS_MK=	# defined
 
 ### workaround for a GCC optimizer bug on sparc:
 ### drop any -mcpu flag

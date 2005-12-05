@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2005/11/19 18:41:15 joerg Exp $
+# $NetBSD: Makefile,v 1.104 2005/12/05 20:49:58 rillig Exp $
 
 DISTNAME=	openldap-2.3.11
 PKGREVISION=	1
@@ -19,7 +19,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
 
-MAKE_ENV+=		LIBMODE=${LIBMODE}
+MAKE_ENV+=		LIBMODE=${LIBMODE:Q}
 OPENLDAP_ETCDIR=	${PKG_SYSCONFDIR}/openldap
 OPENLDAP_MODULEDIR=	${PREFIX}/lib/openldap
 OPENLDAP_VARDIR=	${VARBASE}/openldap

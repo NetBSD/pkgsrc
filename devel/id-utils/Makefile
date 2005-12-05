@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/10/31 02:02:16 dbj Exp $
+# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:04 rillig Exp $
 
 DISTNAME=	id-utils-3.2
 PKGREVISION=	6
@@ -20,11 +20,11 @@ GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifdef USE_XEMACS
+.if defined(USE_XEMACS)
 EMACS=			${LOCALBASE}/bin/xemacs
 BUILD_DEPENDS+=		xemacs-[0-9]*:../../editors/xemacs
 BUILD_DEPENDS+=		xemacs-packages-[0-9]*:../../editors/xemacs-packages
-.elifdef USE_EMACS
+.elif defined(USE_EMACS)
 EMACS=			${LOCALBASE}/bin/emacs
 BUILD_DEPENDS+=		emacs-[0-9]*:../../editors/emacs
 .endif
@@ -43,12 +43,12 @@ CLISPDIR?=		'@comment '
 # so configure won't search further for emacs
 EMACS?=			${FALSE:S|^false$|/usr/bin/false|}
 
-CONFIGURE_ENV+=		EMACS=${EMACS}
+CONFIGURE_ENV+=		EMACS=${EMACS:Q}
 BUILD_DEFS+=		EMACS
-MAKE_ENV+=		BSD_SETENV=${SETENV}
+MAKE_ENV+=		BSD_SETENV=${SETENV:Q}
 
-PLIST_SUBST+=		LISPDIR=${LISPDIR}
-PLIST_SUBST+=		CLISPDIR=${CLISPDIR}
+PLIST_SUBST+=		LISPDIR=${LISPDIR:Q}
+PLIST_SUBST+=		CLISPDIR=${CLISPDIR:Q}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

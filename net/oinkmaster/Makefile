@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/06 06:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:47 rillig Exp $
 
 DISTNAME=	oinkmaster-1.2
 PKGREVISION=	1
@@ -26,7 +26,7 @@ REPLACE_PERL+=	${WRKSRC}/oinkmaster.pl
 
 PKG_SYSCONFSUBDIR=	snort
 
-SUBST_CLASSES=		pub
+SUBST_CLASSES+=		pub
 SUBST_STAGE.pub=	post-patch
 SUBST_FILES.pub=	oinkmaster.pl oinkmaster.conf oinkmaster.1
 SUBST_SED.pub=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g" \
@@ -42,7 +42,6 @@ do-install:
 .	for f in ${DOCS}
 		${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
 .	endfor
-.	undef f
 
 	${INSTALL_DATA} ${WRKSRC}/oinkmaster.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/template-examples.conf ${EGDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/10/17 10:28:46 tron Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/05 20:50:02 rillig Exp $
 
 .include "../../www/apache2/Makefile.common"
 
@@ -19,7 +19,7 @@ BUILD_DIRS=		${WRKSRC}/apr ${WRKSRC}/apr-util
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		LIBS="${LIBS}"
+CONFIGURE_ENV+=		LIBS=${LIBS:M*:Q}
 LIBS.SunOS+=		-lnsl
 
 APR_CONFIGURE_ARGS= \

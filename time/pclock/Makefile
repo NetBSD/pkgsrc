@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 18:03:23 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:51:09 rillig Exp $
 #
 
 DISTNAME=	pclock_0.13.1.orig
@@ -12,7 +12,7 @@ COMMENT=	Simple analog clock designed for Window Maker
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.orig
 
-MAKE_ENV+=	LN=${LN}
+MAKE_ENV+=	LN=${LN:Q}
 
 post-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/pclock

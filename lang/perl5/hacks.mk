@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2005/06/24 06:43:45 jlam Exp $
+# $NetBSD: hacks.mk,v 1.2 2005/12/05 20:50:26 rillig Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -16,7 +16,7 @@ _GCC_IS_TOO_OLD!=	\
 	else								\
 		${ECHO} "no";						\
 	fi
-MAKEFLAGS+=	_GCC_IS_TOO_OLD=${_GCC_IS_TOO_OLD}
+MAKEFLAGS+=	_GCC_IS_TOO_OLD=${_GCC_IS_TOO_OLD:Q}
 .    endif
 .    if !empty(_GCC_IS_TOO_OLD:M[yY][eE][sS])
 PKG_HACKS+=	sparc64-codegen

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/10/23 20:16:52 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:00 rillig Exp $
 
 PKGNAME=	postgresql80-server-${BASE_VERS}
 COMMENT=	PostgreSQL database server programs
@@ -56,9 +56,9 @@ PKG_SUPPORTED_OPTIONS=	pam
 PGUSER?=		pgsql
 PGGROUP?=		pgsql
 PGHOME?=		${PREFIX}/${PGUSER}
-FILES_SUBST+=		PGUSER=${PGUSER}
-FILES_SUBST+=		PGGROUP=${PGGROUP}
-FILES_SUBST+=		PGHOME=${PGHOME}
+FILES_SUBST+=		PGUSER=${PGUSER:Q}
+FILES_SUBST+=		PGGROUP=${PGGROUP:Q}
+FILES_SUBST+=		PGHOME=${PGHOME:Q}
 BUILD_DEFS+=		PGUSER PGGROUP PGHOME
 
 PKG_USERS=		${PGUSER}:${PGGROUP}::PostgreSQL\ database\ administrator:${PGHOME}:${SH}

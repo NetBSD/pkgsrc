@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2005/07/27 17:16:32 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2005/12/05 20:49:47 rillig Exp $
 
 DISTNAME=		esound-0.2.36
 CATEGORIES=		audio
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--disable-local-sound
 .else
 .include "../../mk/ossaudio.buildlink3.mk"
 MAKE_ENV+=		AM_CPPFLAGS='-DDEV_DSP=\"${DEVOSSAUDIO}\"'
-SUBST_CLASSES=		oss
+SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	configure
 SUBST_SED.oss=		-e 's,-lossaudio,${LIBOSSAUDIO},g'

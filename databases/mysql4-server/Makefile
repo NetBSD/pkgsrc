@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/10/29 14:14:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:49:57 rillig Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 #PKGREVISION=		1
@@ -7,7 +7,7 @@ COMMENT=		MySQL 4, a free SQL database (server)
 
 CONFLICTS=		{mysql-server-[0-9]*,mysql3-server-[0-9]*}
 
-.include "../mysql4-client/Makefile.common"
+.include "../../databases/mysql4-client/Makefile.common"
 
 
 CONFIGURE_ARGS+=	--with-libwrap
@@ -26,9 +26,9 @@ PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}::MySQL\ database\ administrator:${MYSQL
 PKG_GROUPS=		${MYSQL_GROUP}
 RCD_SCRIPTS=		mysqld
 
-FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD} \
-			MYSQL_DATADIR=${MYSQL_DATADIR} \
-			MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
+FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q} \
+			MYSQL_DATADIR=${MYSQL_DATADIR:Q} \
+			MYSQL_USER=${MYSQL_USER:Q} MYSQL_GROUP=${MYSQL_GROUP:Q}
 MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR} \
 			MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
 BUILD_DEFS+=		MYSQL_DATADIR

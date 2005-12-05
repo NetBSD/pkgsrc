@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:23 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:43 rillig Exp $
 #
 
 DISTNAME=	install_flash_player_6_linux
@@ -22,7 +22,7 @@ NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/install_flash_player_6_linux
 
 DOCDIR=		share/doc/moz-bin-flash
-PLIST_SUBST+=	DOCDIR="${DOCDIR}"
+PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 
 INSTALLATION_DIRS=	lib/mozilla-linux/components lib/mozilla-linux/plugins
 

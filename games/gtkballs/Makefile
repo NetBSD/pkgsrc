@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:16 rillig Exp $
 
 DISTNAME=	gtkballs-3.1.5
 CATEGORIES=	games
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 
-PLIST_SUBST+=	VARBASE=${VARBASE}
+PLIST_SUBST+=	VARBASE=${VARBASE:Q}
 
 post-install:
 	${MV} ${PREFIX}/man/man6/gtkballs.6x ${PREFIX}/man/man6/gtkballs.6

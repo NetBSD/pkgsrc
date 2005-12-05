@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/08/04 11:26:34 martti Exp $
+# $NetBSD: Makefile,v 1.67 2005/12/05 20:50:03 rillig Exp $
 #
 
 DISTNAME=	ddd-3.3.11
@@ -20,7 +20,7 @@ USE_X11BASE=		YES
 GCC_REQD+=		3.0
 
 CONFIGURE_ARGS+=	--with-ncurses=no
-CONFIGURE_ENV+=		COMPFACE="${FALSE}"
+CONFIGURE_ENV+=		COMPFACE=${FALSE:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

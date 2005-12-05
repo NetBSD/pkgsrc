@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/10/01 22:02:00 jdolecek Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 20:49:54 rillig Exp $
 
 PSI_VERSION=	0.9.3
 DISTNAME=	psi-${PSI_VERSION}
@@ -26,9 +26,10 @@ HAS_CONFIGURE=	yes
 
 CONFIG_SHELL=	${SH}
 
-CONFIGURE_ARGS= --prefix="${PREFIX}" --qtdir="${QTDIR}"
-CONFIGURE_ARGS+=	--with-qca-inc="${BUILDLINK_PREFIX.qca}/include" \
-			--with-qca-lib="${BUILDLINK_PREFIX.qca}/lib"
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--qtdir=${QTDIR:Q}
+CONFIGURE_ARGS+=	--with-qca-inc=${BUILDLINK_PREFIX.qca:Q}/include
+CONFIGURE_ARGS+=	--with-qca-lib=${BUILDLINK_PREFIX.qca:Q}/lib
 
 LANG_FILES=	psi_zh.qm psi_nl.qm psi_sk.qm psi_fr.qm psi_cs.qm	\
 		psi_de.qm psi_et.qm psi_pl.qm psi_mk.qm psi_el.qm	\

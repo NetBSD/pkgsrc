@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:03:05 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:39 rillig Exp $
 #
 
 DISTNAME=	fooseti-0.6.6
@@ -23,7 +23,6 @@ post-install:
 .for doc in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/fooseti
 .endfor
-.undef doc
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

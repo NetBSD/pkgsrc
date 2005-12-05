@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/07/26 19:28:55 kristerw Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:54 rillig Exp $
 #
 
 DISTNAME=	amavis-0.2.1
@@ -30,7 +30,7 @@ VIRUSMAILTO?=	security		# whom to notify about viruses
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
-CONFIGURE_ENV+=	BASH=${TOOLS_SH}
+CONFIGURE_ENV+=	BASH=${TOOLS_SH:Q}
 CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR}
 CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO}
 

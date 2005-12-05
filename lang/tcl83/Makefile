@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/04 09:56:09 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:28 rillig Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -21,7 +21,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
-MAKE_ENV+=		TOUCH="${TOUCH}"
+MAKE_ENV+=		TOUCH=${TOUCH:Q}
 TEST_TARGET=		test
 
 USE_LIBTOOL=		yes

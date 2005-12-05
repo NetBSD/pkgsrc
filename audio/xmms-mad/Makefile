@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/10 20:56:12 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:49:50 rillig Exp $
 #
 
 DISTNAME=		xmms-mad-0.5.5
@@ -15,7 +15,7 @@ USE_TOOLS+=		pkg-config
 
 CPPFLAGS.NetBSD+=	-DHAVE_NANOSLEEP=1
 
-BUILDLINK_DEPENDS.libmad=	libmad>=0.15.0bnb1
+BUILDLINK_DEPENDS.libmad+=	libmad>=0.15.0bnb1
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"

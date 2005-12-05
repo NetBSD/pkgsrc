@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2005/10/11 15:49:48 tv Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:27 rillig Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
 DISTNAME=	j2re-1_4_2_09-linux-i586
 PKGNAME=	sun-jre14-2.9
-PKGREVISION=	# none
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
@@ -52,7 +51,7 @@ do-configure:
 
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
-	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
+	cd ${WRKDIR}/jce ; ${PAX} -rw -pe -v . ${WRKSRC}/lib/security
 	${SED} 's/@SUN_JRE14_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .else
 	${SED} '/@SUN_JRE14_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}

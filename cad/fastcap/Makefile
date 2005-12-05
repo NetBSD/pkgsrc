@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/05 20:49:51 rillig Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -16,7 +16,7 @@ EXTRACT_USING=	gtar	# cannot be extracted with pax as tar
 WRKSRC=			${WRKDIR}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
-CONFIGURE_ARGS=		4
+CONFIGURE_ARGS+=	4
 TEX_DEPMETHOD=	build
 TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 

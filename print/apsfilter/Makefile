@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/11/28 06:41:21 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:52 rillig Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.apsfilter.org/
 COMMENT=	Flexible magic filter for printing under Unix environment
 
-DEPENDS=	recode-[0-9]*:../../converters/recode
+DEPENDS+=	recode-[0-9]*:../../converters/recode
 #DEPENDS+=	html2ps-[0-9]*:../../print/html2ps
 DEPENDS+=	transfig-[0-9]*:../../print/transfig
 DEPENDS+=	jpeg>=6b:../../graphics/jpeg

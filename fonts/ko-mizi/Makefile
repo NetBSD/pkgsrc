@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/08 18:22:09 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:14 rillig Exp $
 #
 
 DISTNAME=	xfntmizi-1.1-2.noarch
@@ -17,7 +17,7 @@ CONFLICTS+=	ksc5601fonts-[0-9]*
 USE_X11BASE=		yes
 USE_TOOLS+=		gzip gunzip mkfontdir:run
 
-MAKE_ENV+=	FONTDIR=${FONTDIR} GZIP_CMD="${GZIP_CMD}"
+MAKE_ENV+=	FONTDIR=${FONTDIR:Q} GZIP_CMD=${GZIP_CMD:Q}
 
 # fonts
 MIZI_PCF=	mzgt16e.pcf mzgt16h1.pcf mzmj16h.pcf mzpg16h.pcf mzsm16h.pcf \

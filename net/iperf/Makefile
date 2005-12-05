@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/07 20:29:52 markd Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:46 rillig Exp $
 
 DISTNAME=	iperf-2.0.2
 CATEGORIES=	net
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	share/doc/html/${PKGBASE}
 
-PTHREAD_OPTS=	native optional
+PTHREAD_OPTS+=	native optional
 .include "../../mk/pthread.buildlink3.mk"
 
 post-install:

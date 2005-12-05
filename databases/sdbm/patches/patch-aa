@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/04/28 00:20:22 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2005/12/05 20:50:01 rillig Exp $
 
 --- sdbm.c.orig	2004-04-27 19:10:43.000000000 -0500
 +++ sdbm.c
-@@ -25,6 +25,10 @@ static char rcsid[] = "$Id: sdbm.c,v 1.1
+@@ -25,6 +25,10 @@
  #endif
  #include <errno.h>
  #include <string.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.4 2004/04/28 00:20:22 minskim Exp $
  
  #ifdef __STDC__
  #include <stddef.h>
-@@ -35,17 +39,6 @@ static char rcsid[] = "$Id: sdbm.c,v 1.1
+@@ -35,17 +39,6 @@
  #endif
  
  /*

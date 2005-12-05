@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2005/11/20 15:08:35 tonio Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/05 20:50:47 rillig Exp $
 
 --- adig.c.orig	2001-05-18 22:59:51.000000000 +0200
 +++ adig.c
-@@ -35,6 +35,10 @@ static const char rcsid[] = "$Id: adig.c
+@@ -35,6 +35,10 @@
  #define	INADDR_NONE 0xffffffff
  #endif
  

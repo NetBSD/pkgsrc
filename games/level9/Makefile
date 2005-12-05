@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/01 14:39:45 dillo Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:16 rillig Exp $
 
 DISTNAME=		Level9_4.0_Source
 PKGNAME=		level9-4.0
@@ -12,8 +12,8 @@ COMMENT=		Curses port of the Level 9 text adventure interpreter
 
 WRKSRC=			${WRKDIR}/Unix
 # uses halfkey (present since 1.6M)
-INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6-* NetBSD-1.6.*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
+INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]*-* NetBSD-1.5*-* NetBSD-1.6-* NetBSD-1.6.*-*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*-*
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/16 01:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:33 rillig Exp $
 #
 
 DISTNAME=		MailScanner-4.30.3-2
@@ -23,7 +23,7 @@ DEPENDS+=		p5-MIME-tools>=0:../../mail/p5-MIME-tools
 DEPENDS+=		tnef>=1.0:../../mail/tnef
 
 NO_BUILD=		YES
-USE_TOOLS=		perl:run
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		bin/MailScanner
 
 DOCSDIR=		${LOCALBASE}/share/doc/MailScanner
@@ -34,10 +34,10 @@ LIBEXECDIR=		${LOCALBASE}/libexec/MailScanner
 OWN_DIRS=		${PKG_SYSCONFDIR}/CustomFunctions
 OWN_DIRS+=		${PKG_SYSCONFDIR}/rules
 
-PLIST_SUBST+=		DOCSDIR=${DOCSDIR}
-PLIST_SUBST+=		EGDIR=${EGDIR}
-PLIST_SUBST+=		LIBDIR=${LIBDIR}
-PLIST_SUBST+=		LIBEXECDIR=${LIBEXECDIR}
+PLIST_SUBST+=		DOCSDIR=${DOCSDIR:Q}
+PLIST_SUBST+=		EGDIR=${EGDIR:Q}
+PLIST_SUBST+=		LIBDIR=${LIBDIR:Q}
+PLIST_SUBST+=		LIBEXECDIR=${LIBEXECDIR:Q}
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/12/05 20:50:51 rillig Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		1
@@ -25,7 +25,7 @@ MPI_RSH?=		ssh
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS=		-prefix=${PREFIX}
+CONFIGURE_ARGS+=	-prefix=${PREFIX}
 CONFIGURE_ARGS+=	-docdir=${PREFIX}/share/doc/mpi-ch
 CONFIGURE_ARGS+=	-htmldir=${PREFIX}/share/doc/html/mpi-ch
 CONFIGURE_ARGS+=	-opt=-O
@@ -35,16 +35,16 @@ CONFIGURE_ARGS+=	--with-mpe
 CONFIGURE_ARGS+=	--disable-devdebug
 CONFIGURE_ARGS+=	--disable-f90
 CONFIGURE_ARGS+=	--disable-f90modules
-CONFIGURE_ENV+=		sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ENV+=		PERL=${PERL5}
-CONFIGURE_ENV+=		PERLFULLPATH=${PERL5}
+CONFIGURE_ENV+=		sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ENV+=		PERL=${PERL5:Q}
+CONFIGURE_ENV+=		PERLFULLPATH=${PERL5:Q}
 
 # build PATH in the config file is not a problem
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/examples/mpi-ch/perftest/config.system
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-arch=netbsd
-PLIST_SUBST+=		MPICH_OPSYS="${LOWER_OPSYS}"
+PLIST_SUBST+=		MPICH_OPSYS=${LOWER_OPSYS:Q}
 .elif ${OPSYS} == "IRIX"
 CONFIGURE_ARGS+=	--with-arch=IRIX${ABI:S/32/N32/}
 PLIST_SUBST+=		MPICH_OPSYS="${OPSYS}${ABI:S/32/N32/}"
@@ -55,7 +55,7 @@ PLIST_SUBST+=		MPICH_OPSYS="${OPSYS}${ABI:S/32/N32/}"
 CONFIGURE_ARGS+=	--disable-weak-symbols
 .endif
 
-MAKE_ENV+=		RSHCOMMAND="${MPI_RSH}"
+MAKE_ENV+=		RSHCOMMAND=${MPI_RSH:Q}
 
 BUILD_DEFS+=		MPI_RSH
 

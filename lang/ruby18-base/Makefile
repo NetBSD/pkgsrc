@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/08 11:18:02 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:27 rillig Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -24,7 +24,7 @@ TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared \
 		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
 		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
-CONFIGURE_ENV+=		PREFIX="${PREFIX}"
+CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 INSTALL_TARGET=		install install-doc
 WRKSRC=			${RUBY_WRKSRC}
 
@@ -42,7 +42,7 @@ MAKE_DIRS+=	${RUBY_SITERIDIR}
 CONFIGURE_ARGS+= --program-suffix="${RUBY_SUFFIX}"
 .endif
 
-FILES_SUBST+=	DATE=${DATE}
+FILES_SUBST+=	DATE=${DATE:Q}
 
 #
 # IRIX work around should be fixed.
