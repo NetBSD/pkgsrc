@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4240 2005/12/04 22:13:33 salo Exp $
+$NetBSD: TODO,v 1.4241 2005/12/05 02:30:51 snj Exp $
 
 Suggested new packages
 ======================
@@ -967,7 +967,6 @@ Suggested package updates
 	o pgpool-2.6.3
 	o phoon-20050629
 	o photopc-3.05
-	o php-5.1.0
 	o phpldapadmin-0.9.7
 	o phppgadmin-4.0.1
 	o phylip-3.65
