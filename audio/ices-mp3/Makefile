@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:03 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 01:52:58 kim Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
 PKGNAME=		ices-mp3-${ICES_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 ICES_VERSION=		0.4
 CATEGORIES=		audio
 MASTER_SITES=		http://svn.xiph.org/releases/ices/
@@ -58,7 +58,7 @@ do-install:
 .include "../../audio/libshout/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .if defined(ICES_USE_PERL) && (${ICES_USE_PERL} == "YES")
-USE_TOOLS+=		perl:run
+.include "../../lang/perl5/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 .endif
 .if defined(ICES_USE_PYTHON) && (${ICES_USE_PYTHON} == "YES")
