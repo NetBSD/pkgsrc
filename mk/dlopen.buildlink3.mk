@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.9 2005/06/26 13:11:22 minskim Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.10 2005/12/05 22:07:07 rillig Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -35,10 +35,10 @@ PKG_SKIP_REASON=	"${PKGNAME} requires a working dlopen()."
 DL_CFLAGS=	${BUILDLINK_CFLAGS.dl}
 DL_LDFLAGS=	${BUILDLINK_LDFLAGS.dl}
 DL_LIBS=	${BUILDLINK_LIBS.dl}
-CONFIGURE_ENV+=	DL_CFLAGS="${DL_CFLAGS}"
-CONFIGURE_ENV+=	DL_LDFLAGS="${DL_LDFLAGS}"
-CONFIGURE_ENV+=	DL_LIBS="${DL_LIBS}"
-MAKE_ENV+=	DL_CFLAGS="${DL_CFLAGS}"
-MAKE_ENV+=	DL_LDFLAGS="${DL_LDFLAGS}"
-MAKE_ENV+=	DL_LIBS="${DL_LIBS}"
+CONFIGURE_ENV+=	DL_CFLAGS=${DL_CFLAGS:Q}
+CONFIGURE_ENV+=	DL_LDFLAGS=${DL_LDFLAGS:Q}
+CONFIGURE_ENV+=	DL_LIBS=${DL_LIBS:Q}
+MAKE_ENV+=	DL_CFLAGS=${DL_CFLAGS:Q}
+MAKE_ENV+=	DL_LDFLAGS=${DL_LDFLAGS:Q}
+MAKE_ENV+=	DL_LIBS=${DL_LIBS:Q}
 .endif	# DLOPEN_BUILDLINK3_MK

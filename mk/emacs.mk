@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.22 2005/09/01 22:23:41 rillig Exp $
+# $NetBSD: emacs.mk,v 1.23 2005/12/05 22:07:07 rillig Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -314,7 +314,7 @@ _EMACS_FOR.${_EMACS_TYPE}=	""
 _EMACS_NOTFOR.${EMACS_FLAVOR}=	"@comment "
 _EMACS_NOTFOR.${_EMACS_TYPE}=	"@comment "
 
-PLIST_SUBST+=	EMACS_VERSION=${_EMACS_VERSION_NOREV}
+PLIST_SUBST+=	EMACS_VERSION=${_EMACS_VERSION_NOREV:Q}
 PLIST_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	FOR_emacs=${_EMACS_FOR.emacs}
 PLIST_SUBST+=	FOR_emacs21=${_EMACS_FOR.emacs21}
