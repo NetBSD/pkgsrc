@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4241 2005/12/05 02:30:51 snj Exp $
+$NetBSD: TODO,v 1.4242 2005/12/05 03:05:44 snj Exp $
 
 Suggested new packages
 ======================
@@ -1110,7 +1110,6 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scilab-3.1
-	o scponly-4.1
 	o scrollz-1.9.5
 	o sdig-0.40
 	o semantic-1.4.4
