@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2005/12/01 18:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2005/12/05 19:44:01 wiz Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040401
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
 
@@ -24,6 +25,8 @@ CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
 
 CONFIGURE_ENV+=	vi_cv_path_shell=${TOOLS_SH:Q}
 USE_TOOLS+=	sh
+
+CPPFLAGS+=	-DGTAGS
 
 .include "options.mk"
 
