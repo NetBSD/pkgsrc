@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.6 2004/12/28 14:38:03 wiz Exp $
+# $NetBSD: fonts.mk,v 1.7 2005/12/05 22:07:07 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # fonts (most of them in the fonts category).  It takes care of updating the
@@ -31,7 +31,7 @@ HEADER_EXTRA_TMPL+=	${.CURDIR}/../../mk/install/fonts
 EVAL_PREFIX+=			TTMKFDIR_PREFIX=ttmkfdir
 TTMKFDIR_PREFIX_DEFAULT=	${LOCALBASE}
 FILES_SUBST+=		FONTS_TTF="YES"
-FILES_SUBST+=		FONTS_TTF_DIRS="${FONTS_TTF_DIRS}"
+FILES_SUBST+=		FONTS_TTF_DIRS=${FONTS_TTF_DIRS:Q}
 FILES_SUBST+=		TTMKFDIR="${TTMKFDIR_PREFIX}/bin/ttmkfdir"
 DEPENDS+=		ttmkfdir2>=20021109:../../fonts/ttmkfdir2
 # also need to run mkfontdir there
@@ -42,7 +42,7 @@ FONTS_X11_DIRS+=	${FONTS_TTF_DIRS}
 EVAL_PREFIX+=			TYPE1INST_PREFIX=type1inst
 TYPE1INST_PREFIX_DEFAULT=	${LOCALBASE}
 FILES_SUBST+=		FONTS_TYPE1="YES"
-FILES_SUBST+=		FONTS_TYPE1_DIRS="${FONTS_TYPE1_DIRS}"
+FILES_SUBST+=		FONTS_TYPE1_DIRS=${FONTS_TYPE1_DIRS:Q}
 FILES_SUBST+=		TYPE1INST="${TYPE1INST_PREFIX}/bin/type1inst"
 DEPENDS+=		type1inst>=0.6.1:../../fonts/type1inst
 # also need to run mkfontdir there
@@ -51,7 +51,7 @@ FONTS_X11_DIRS+=	${FONTS_TYPE1_DIRS}
 
 .if !empty(FONTS_X11_DIRS)
 FILES_SUBST+=		FONTS_X11="YES"
-FILES_SUBST+=		FONTS_X11_DIRS="${FONTS_X11_DIRS}"
+FILES_SUBST+=		FONTS_X11_DIRS=${FONTS_X11_DIRS:Q}
 FILES_SUBST+=		MKFONTDIR="${X11BASE}/bin/mkfontdir"
 .endif
 
