@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.164 2005/10/31 09:53:41 taca Exp $
+# $NetBSD: Makefile,v 1.165 2005/12/05 14:06:03 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE12
 PKGNAME=	squid-2.5.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -30,13 +30,13 @@ DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 PKG_SYSCONFSUBDIR?=	squid
 
 USE_PKGINSTALL=		yes
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--localstatedir=${DATADIR}
 
-MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-MAKE_ENV+=	PKG_PREFIX="${PREFIX}" VARBASE="${VARBASE}"
+MAKE_ENV+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+MAKE_ENV+=	PKG_PREFIX=${PREFIX:Q} VARBASE=${VARBASE:Q}
 PLIST_SRC=	${WRKDIR}/PLIST
 RCD_SCRIPTS=	squid
 
