@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12115 2005/12/04 22:13:32 salo Exp $
+$NetBSD: CHANGES,v 1.12116 2005/12/05 03:05:44 snj Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5496,3 +5496,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/refinecvs version 0.86.1251 [mjl 2005-12-04]
 	Updated devel/yasm to 0.4.0 [kristerw 2005-12-04]
 	Updated net/lftp to 3.3.5 [salo 2005-12-04]
+	Updated shells/scponly to 4.1 [snj 2005-12-05]
