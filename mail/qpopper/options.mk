@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2005/09/28 21:55:32 rillig Exp $
+# $NetBSD: options.mk,v 1.10 2005/12/05 14:13:05 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qpopper
 PKG_SUPPORTED_OPTIONS=	drac inet6 kerberos pam qpopper-servermode ssl
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
+CONFIGURE_ENV+=		O_DEFS=${O_DEFS:Q} CFLAGS="-DINET6"
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
