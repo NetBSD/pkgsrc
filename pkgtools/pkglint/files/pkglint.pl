@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.415 2005/12/05 21:46:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.416 2005/12/05 21:56:13 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2750,16 +2750,10 @@ sub checklines_package_Makefile($) {
 				}
 
 			} elsif ($directive eq "undef" && defined($args)) {
-				my $all_unnecessary = true;
 				foreach my $var (split(qr"\s+", $args)) {
 					if (exists($for_variables->{$var})) {
 						$line->log_note("Using \".undef\" after a \".for\" loop is unnecessary.");
-					} else {
-						$all_unnecessary = false;
 					}
-				}
-				if ($all_unnecessary) {
-					$line->delete();
 				}
 			}
 
