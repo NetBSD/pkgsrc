@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/09/07 18:17:22 reed Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:20:10 rillig Exp $
 
 DISTNAME=	dar-2.2.2
 PKGREVISION=	1
@@ -21,6 +21,9 @@ CONFIGURE_ARGS+=	--disable-nodump-flag
 CONFIGURE_ARGS+=	--disable-dar-static
 CONFIGURE_ARGS+=	--enable-examples
 CONFIGURE_ARGS+=	--disable-upx
+
+# Needed for getopt() with SunPro
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
