@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.416 2005/12/05 21:56:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.417 2005/12/05 23:50:16 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -765,6 +765,7 @@ my $regex_shellword		=  qr"\s*(
 	|	\"(?:\\.|[^\"\\])*\"
 	|	\`[^\`]*\`
 	|	\\.
+	|	\$\{[^}]+\}
 	|	[^'\"\\\s;&\|<>\#]
 	)+ | ;;? | &&? | \|\|? | <<? | >>? | \#.*)"sx;
 
