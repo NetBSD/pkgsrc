@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/03/06 16:42:30 taca Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/12/05 20:50:27 rillig Exp $
 #
 # Ruby base distribution common definition
 
@@ -36,10 +36,10 @@ DIST_SUBDIR?=		${RUBY_DIST_SUBDIR}
 #
 # PLIST substitution
 #
-PLIST_SUBST+=		RUBY_SHLIBVER="${RUBY_SHLIBVER}" \
-			RUBY_SHLIBMAJOR="${RUBY_SHLIBMAJOR}" \
-			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
-			RUBY_NAME="${RUBY_NAME}"
+PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
+			RUBY_SHLIBMAJOR=${RUBY_SHLIBMAJOR:Q} \
+			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR:Q} \
+			RUBY_NAME=${RUBY_NAME:Q}
 
 # Common macros.
 .if ${OPSYS} == "NetBSD"

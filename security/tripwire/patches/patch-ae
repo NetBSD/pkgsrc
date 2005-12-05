@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/12/05 05:40:32 ben Exp $
+$NetBSD: patch-ae,v 1.2 2005/12/05 20:50:58 rillig Exp $
 
 --- src/config.parse.c.orig	1994-07-20 18:03:26.000000000 -0700
 +++ src/config.parse.c
-@@ -55,7 +55,6 @@ static char rcsid[] = "$Id: config.parse
+@@ -55,7 +55,6 @@
  #endif
  
  /* prototypes */

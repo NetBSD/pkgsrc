@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/09/24 02:30:57 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:26 rillig Exp $
 
 DISTNAME=		mzscheme-205.src.unix
 PKGNAME=		mzscheme-205
@@ -9,7 +9,7 @@ MAINTAINER=		pooka@NetBSD.org
 HOMEPAGE=		http://www.plt-scheme.org/software/mzscheme/
 COMMENT=		R5RS-compliant scheme
 
-CONFLICTS+=		drscheme*:../drscheme
+CONFLICTS+=		drscheme-[0-9]*
 
 WRKSRC=			${WRKDIR}/plt/src
 GNU_CONFIGURE=		yes

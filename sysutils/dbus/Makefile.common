@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/08/10 20:56:23 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/12/05 20:51:00 rillig Exp $
 #
 
 # XXX Do not update to 0.30 or above yet.  The API in the 0.2x series is
@@ -72,7 +72,6 @@ BUILD_DIRS+=		${WRKSRC}/${f}
 INSTALL_DIRS+=		${WRKSRC}/${f}
 SUBST_FILES.paths+=	${f}/Makefile.in
 .  endfor
-.  undef f
 
 BUILDLINK_DEPENDS.dbus+=	dbus>=${DBUS_VERSION}
 .  include "../../sysutils/dbus/buildlink3.mk"

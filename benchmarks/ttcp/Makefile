@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/07/30 15:50:38 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:49:51 rillig Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
@@ -14,15 +14,15 @@ COMMENT=	TCP testing and performance measuring tool
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}	\
-		MANOWN=${MANOWN} MANGRP=${MANGRP}
+MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}	\
+		MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 MANCOMPRESSED_IF_MANZ=	YES
 
 .if (${OPSYS} == Darwin)
-MAKE_FLAGS=	CFLAGS="-Din_addr_t=\"unsigned long\""
+MAKE_FLAGS+=	CFLAGS="-Din_addr_t=\"unsigned long\""
 .endif
 
 INSTALLATION_DIRS=	bin man/cat1 man/man1

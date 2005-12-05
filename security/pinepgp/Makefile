@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/24 18:29:14 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:58 rillig Exp $
 #
 
 DISTNAME=		pinepgp-0.18.0
@@ -17,7 +17,7 @@ DEPENDS+=		bash>=2:../../shells/bash2
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		cat
-CONFIGURE_ENV+=		CAT="${TOOLS_CAT}"
+CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q}
 
 PINEPGP_USEGPG?=	yes
 PINEPGP_USEPGP5?=	yes

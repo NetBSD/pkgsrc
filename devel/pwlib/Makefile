@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/07/15 18:27:49 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2005/12/05 20:50:07 rillig Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/openh323/
 COMMENT=	Portable Windows Libary
 
-BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 WRKSRC=			${WRKDIR}/pwlib
 USE_TOOLS+=		gmake tar
@@ -24,9 +24,9 @@ CONFIGURE_ARGS+=	--disable-expat --disable-video --disable-qos
 PTHREAD_OPTS+=		require
 
 BUILD_TARGET=		opt
-MAKE_ENV+=		PWLIBDIR="${WRKSRC}" CC="${CC}" CPLUS="${CXX}"
+MAKE_ENV+=		PWLIBDIR=${WRKSRC:Q} CC=${CC:Q} CPLUS=${CXX:Q}
 
-FILES_SUBST+=		LIBTOOL="${LIBTOOL}"
+FILES_SUBST+=		LIBTOOL=${LIBTOOL:Q}
 FILES_SUBST+=		PTHREADS_PREFIX="${BUILDLINK_PREFIX.pthread}"
 
 post-extract:

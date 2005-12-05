@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/10/11 01:59:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:51:00 rillig Exp $
 
 DISTNAME=	findutils-4.1
 PKGREVISION=	4
@@ -12,7 +12,7 @@ COMMENT=	The GNU find, xargs and locate utilities
 GNU_CONFIGURE=		YES
 CONFIGURE_HAS_INFODIR=	NO
 CONFIGURE_HAS_MANDIR=	NO
-MAKE_ENV+=		INFO_DIR=${INFO_DIR}
+MAKE_ENV+=		INFO_DIR=${INFO_DIR:Q}
 LDFLAGS.IRIX+=		-lgen
 
 INFO_FILES=		find.info
@@ -28,7 +28,7 @@ PLIST_SUBST+=	USE_CATMAN=""
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 .endif
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .include "../../devel/gettext-lib/buildlink3.mk"

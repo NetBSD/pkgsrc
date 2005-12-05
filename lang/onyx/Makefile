@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:46:15 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:26 rillig Exp $
 
 DISTNAME=	onyx-${VERS}
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	Embeddable stack-based threaded interpreted language
 BUILD_DEPENDS+=	cook-[0-9]*:../../devel/cook
 
 # needs EL_CLIENTDATA in /usr/include/histedit.h
-ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]*-* NetBSD-1.6*-* NetBSD-1.7*-* NetBSD-[2-9]*
+ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]*-* NetBSD-1.6*-* NetBSD-1.7*-* NetBSD-[2-9]*-*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}
 BUILDLINK_DEPENDS.pcre?=        pcre>=4.0
 
 VERS=		5.1.1
-PLIST_SUBST+=	VERS=${VERS}
+PLIST_SUBST+=	VERS=${VERS:Q}
 
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} cook)

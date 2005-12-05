@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/10/12 19:24:42 abs Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/05 20:50:01 rillig Exp $
 #
 
 DISTNAME=	rrdtool-1.2.11
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 
-CONFIGURE_ARGS=		--enable-shared
+CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
 
 PERL5_CONFIGURE=	NO

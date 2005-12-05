@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/05 11:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:49:56 rillig Exp $
 
 DISTNAME=	bfd-crunchide-1.1
 PKGREVISION=	1
@@ -18,7 +18,7 @@ NO_CONFIGURE=	yes
 
 USE_CROSSBASE=	yes
 CPPFLAGS+=	-I${PREFIX}/include
-MAKE_ENV+=	LIBS="${BFD_LIBS}"
+MAKE_ENV+=	LIBS=${BFD_LIBS:Q}
 
 BFD_LIBS=	${PREFIX}/lib/libbfd.a ${PREFIX}/lib/libiberty.a ${PREFIX}/lib/libintl.a
 

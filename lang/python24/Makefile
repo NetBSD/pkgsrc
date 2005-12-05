@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/16 19:18:59 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:27 rillig Exp $
 #
 
 DISTNAME=	Python-2.4.2
@@ -19,16 +19,16 @@ CONFLICTS+=	python-[0-9]*
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	OPT="${CFLAGS}"
+CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
 
-PTHREAD_OPTS=   require
+PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
 .if ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-pth
 .endif
 
 # fdatasync()
-LIBS.SunOS=		-lrt
+LIBS.SunOS+=		-lrt
 
 PY_VER_SUFFIX=		2.4
 
@@ -49,7 +49,7 @@ PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
 .else
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
-PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME}
+PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 # the dl module isn't built for 64 bit archs and Darwin
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "amd64" \
@@ -76,8 +76,8 @@ OSSAUDIODEV_SUBST=
 EXTRA_SO_SUBST=
 .endif
 
-PLIST_SUBST+=	EXTRA_SO=${EXTRA_SO_SUBST}
-PLIST_SUBST+=	OSSAUDIODEV=${OSSAUDIODEV_SUBST}
+PLIST_SUBST+=	EXTRA_SO=${EXTRA_SO_SUBST:Q}
+PLIST_SUBST+=	OSSAUDIODEV=${OSSAUDIODEV_SUBST:Q}
 
 # Make sure python modules can link correctly
 .if ${OPSYS} == "Darwin"
@@ -94,7 +94,7 @@ PLIST_SUBST+=	BSDDBMODULE="@comment "
 PLIST_SUBST+=	NOSHLIB="@comment "
 .else
 .  include "../../mk/bdb.buildlink3.mk"
-MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
+MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE:Q}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 PLIST_SUBST+=	BSDDBMODULE=
@@ -103,10 +103,10 @@ PLIST_SUBST+=	NISMODULE=
 .endif
 
 .if defined(BUILDLINK_TRANSFORM)
-MAKE_ENV+=	PY_BDB_TRANSFORM="${BUILDLINK_TRANSFORM}"
+MAKE_ENV+=	PY_BDB_TRANSFORM=${BUILDLINK_TRANSFORM:Q}
 .endif
 
-PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX}
+PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall

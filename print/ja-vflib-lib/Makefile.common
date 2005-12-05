@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/04/11 21:47:08 tv Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/12/05 20:50:53 rillig Exp $
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
 CATEGORIES+=		japanese print
@@ -11,21 +11,21 @@ MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://TypeHack.aial.hiroshima-u.ac.jp/VFlib/
 
 VFLIB_VERSION=		2.24.2
-PLIST_SUBST+=		VFLIB_VERSION=${VFLIB_VERSION}
+PLIST_SUBST+=		VFLIB_VERSION=${VFLIB_VERSION:Q}
 PLIST_SUBST+=		VFLIB_SO_VERSION=${VFLIB_VERSION:C/^2.//}
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 FT_LIB=			ttf -lintl
 FT_INCLUDEDIR=		${BUILDLINK_PREFIX.freetype}/include/freetype
 FT_LIBDIR=		${BUILDLINK_PREFIX.freetype}/lib
 
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-freetype="${FT_LIB}"
-CONFIGURE_ARGS+=	--with-freetype-includedir=${FT_INCLUDEDIR}
-CONFIGURE_ARGS+=	--with-freetype-libdir=${FT_LIBDIR}
-MAKE_ENV+=		LOCAL_LDFLAGS="${LDFLAGS}"
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-freetype=${FT_LIB:Q}
+CONFIGURE_ARGS+=	--with-freetype-includedir=${FT_INCLUDEDIR:Q}
+CONFIGURE_ARGS+=	--with-freetype-libdir=${FT_LIBDIR:Q}
+MAKE_ENV+=		LOCAL_LDFLAGS=${LDFLAGS:M*:Q}
 
 DISTINFO_FILE=		${.CURDIR}/../../print/ja-vflib-lib/distinfo
 PATCHDIR=		${.CURDIR}/../../print/ja-vflib-lib/patches

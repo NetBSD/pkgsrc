@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:09 rillig Exp $
 
 DISTNAME=	beav_1.40-11
 PKGNAME=	beav-1.40.11
@@ -9,7 +9,7 @@ MAINTAINER=	bad@NetBSD.org
 COMMENT=	Binary Editor And Viewer, a full featured binary file editor
 
 WRKSRC=		${WRKDIR}/beav-1.40
-MAKE_ENV+=	SED="${SED}"
+MAKE_ENV+=	SED=${SED:Q}
 
 pre-patch:
 	${MV} ${WRKSRC}/beav.1 ${WRKSRC}/beav.1.in

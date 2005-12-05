@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.php,v 1.15 2005/12/03 18:53:57 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.16 2005/12/05 20:50:26 rillig Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
 
 DISTINFO_FILE=	${.CURDIR}/../../lang/php5/distinfo
 
-BUILD_DEFS=		USE_INET6
+BUILD_DEFS+=		USE_INET6
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
 PHP_EXTENSION_DIR=	lib/php/20040412
-PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
+PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

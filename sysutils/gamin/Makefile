@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/08/30 23:24:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:51:00 rillig Exp $
 
 DISTNAME=	gamin-0.1.5
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.gnome.org/~veillard/gamin/sources/
 CONFLICTS=	fam-[0-9]*
 
 MAINTAINER=	jlam@NetBSD.org
-COMMENT=	file alteration monitor
+COMMENT=	File alteration monitor
 HOMEPAGE=	http://www.gnome.org/~veillard/gamin/
 
 USE_LIBTOOL=		yes

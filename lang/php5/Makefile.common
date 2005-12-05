@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2005/12/03 18:53:57 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/12/05 20:50:26 rillig Exp $
 #
 
 DISTNAME?=		php-${PHP_BASE_VERS}
@@ -17,7 +17,7 @@ HOMEPAGE?=		http://www.php.net/
 PHP_BASE_VERS=		5.1.1
 
 PHP_EXTENSION_DIR=	lib/php/20040412
-PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
+PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
 
 PKG_SYSCONFVAR?=	php
 

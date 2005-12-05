@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/10/16 12:58:37 tonio Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:50 rillig Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -17,7 +17,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${PREFIX}/include ${LIBNET_CFLAGS_CMD:sh}
-LIBS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lnet
+LIBS+=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lnet
 
 LIBNET_CFLAGS_CMD= ${BUILDLINK_PREFIX.libnet}/bin/libnet-config --defines
 

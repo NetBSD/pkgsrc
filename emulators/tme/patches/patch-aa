@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/07/27 07:29:26 skrll Exp $
+$NetBSD: patch-aa,v 1.3 2005/12/05 20:50:12 rillig Exp $
 
 --- tme/threads.h.orig	2003-06-27 21:09:10.000000000 +0000
 +++ tme/threads.h
-@@ -41,6 +41,7 @@ _TME_RCSID("$Id: threads.h,v 1.6 2003/06
+@@ -41,6 +41,7 @@
  
  /* includes: */
  #include <errno.h>

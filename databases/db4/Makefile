@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/11/04 18:47:52 tv Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/05 20:49:57 rillig Exp $
 
 DISTNAME=		db-4.3.29
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
 
 # NetBSD-sparc64-1.6*'s f77 makes configure failing and as f77 is not
 # needed for this package the following does no harm on other platform.
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 # Along with a hack in patch-ab, this forces shlib detection via
 # the pkgsrc-supplied libtool only.
@@ -37,7 +37,7 @@ OPSYSVARS+=		LIBSO_LIBS
 LIBSO_LIBS.Interix+=	-lrpclib
 LIBS.Interix+=		-lrpclib # needed for in-tree programs, too
 LIBSO_LIBS.SunOS+=	-lnsl -lrt
-CONFIGURE_ENV+=		LIBSO_LIBS="${LIBSO_LIBS}"
+CONFIGURE_ENV+=		LIBSO_LIBS=${LIBSO_LIBS:Q}
 
 # DB4 only want pthreads because it's really after POSIX 1003.1
 # inter-process mutexes.  In this case, we only care to use the native

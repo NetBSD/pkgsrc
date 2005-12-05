@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.12 2005/11/02 07:44:24 taca Exp $
+# $NetBSD: modules.mk,v 1.13 2005/12/05 20:50:27 rillig Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -16,7 +16,7 @@ DEPENDS+= ruby${RUBY_VER}-base>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}-base
 .include "../../lang/ruby/buildlink3.mk"
 .endif
 
-CONFIGURE_ENV+=		RUBY=${RUBY} RDOC=${RDOC}
+CONFIGURE_ENV+=		RUBY=${RUBY:Q} RDOC=${RDOC:Q}
 
 #
 # extconf.rb support

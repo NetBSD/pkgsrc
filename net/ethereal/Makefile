@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2005/11/01 20:09:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.119 2005/12/05 20:50:45 rillig Exp $
 
 DISTNAME=		ethereal-0.10.13
 PKGREVISION=		1
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ENV+=		ac_cv_func_pcap_compile_nopcap=no
 
-PTHREAD_OPTS=		require
+PTHREAD_OPTS+=		require
 
 .include "../../mk/bsd.prefs.mk"
 

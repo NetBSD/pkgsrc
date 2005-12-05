@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/11/19 07:36:35 minskim Exp $
+# $NetBSD: Makefile,v 1.45 2005/12/05 20:50:20 rillig Exp $
 
 DISTNAME=	graphviz-2.6
 PKGREVISION=	1
@@ -30,9 +30,9 @@ PKGCONFIG_OVERRIDE+=	lib/pathplan/libpathplan.pc.in
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-parameter
 .endif
 
-CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH}
-CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH}
-CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
+CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH:Q}
+CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH:Q}
+CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX:Q} X11BASE=${X11BASE:Q}
 # build fails when PHP and/or Ruby are also installed
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=

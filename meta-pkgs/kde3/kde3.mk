@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.9 2005/06/01 18:03:04 jlam Exp $
+# $NetBSD: kde3.mk,v 1.10 2005/12/05 20:50:37 rillig Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-xinerama
 .endif
 
-CONFIGURE_ENV+=		USER_LDFLAGS="${LDFLAGS}"
+CONFIGURE_ENV+=		USER_LDFLAGS=${LDFLAGS:M*:Q}
 LDFLAGS+=		-L${QTDIR}/lib
 
 _KDE3_EXTRA_INCLUDES?=	${LOCALBASE}/include:${X11BASE}/include
@@ -71,8 +71,8 @@ _KDE3_EXTRA_INCLUDES?=	${LOCALBASE}/include:${X11BASE}/include
 KDE_CONFIG_SITE?=	${KDEDIR}/share/kde/config.site			\
 			${PKG_SYSCONFDIR}/kde/config.site
 
-CONFIGURE_ENV+=		KDEDIR="${KDEDIR}"
-CONFIGURE_ENV+=		CONFIG_SITE="${KDE_CONFIG_SITE}"
+CONFIGURE_ENV+=		KDEDIR=${KDEDIR:Q}
+CONFIGURE_ENV+=		CONFIG_SITE=${KDE_CONFIG_SITE:Q}
 CONFIGURE_ENV+=		kde_appsdir="${KDEDIR}/share/kde/applnk"
 CONFIGURE_ENV+=		kde_cgidir="${KDEDIR}/kde-cgi-bin"
 CONFIGURE_ENV+=		kde_confdir="${KDEDIR}/share/kde/config"

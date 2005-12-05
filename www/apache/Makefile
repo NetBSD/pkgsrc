@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2005/10/19 20:30:20 bouyer Exp $
+# $NetBSD: Makefile,v 1.174 2005/12/05 20:51:10 rillig Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -43,9 +43,9 @@ CONFIGURE_ARGS+=	--enable-rule=EAPI				\
 CONFIGURE_ARGS+=	--without-confadjust
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
-CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
+CONFIGURE_ENV+=		OPTIM=${APACHE_CUSTOM_CFLAGS:Q}
 CONFIGURE_ENV+=		EAPI_MM="${BUILDLINK_PREFIX.libmm}"
-CONFIGURE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP}
+CONFIGURE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -118,7 +118,7 @@ APACHE_CUSTOM_CFLAGS+=	-D_FILE_OFFSET_BITS=64
 .if ${OPSYS} == "NetBSD"
 .  if ${OBJECT_FMT} == "ELF"
 LINK_LIBGCC_LDFLAGS=	${LINK_ALL_LIBGCC_HACK}
-MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
+MAKE_ENV+=		LINK_LIBGCC_LDFLAGS=${LINK_LIBGCC_LDFLAGS:Q}
 #
 # If we are using gcc3, we need to link against libgcc_s, too.  This
 # ensures modules can resolve symbols they require from gcc.
@@ -148,8 +148,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 PKG_GROUPS=		${APACHE_GROUP}
 PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\ user
 
-MAKE_ENV+=		CHMOD="${CHMOD}" CHOWN="${CHOWN}" XARGS="${XARGS}"
-MAKE_ENV+=		FIND="${FIND}" CHGRP="${CHGRP}"
+MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q} XARGS=${XARGS:Q}
+MAKE_ENV+=		FIND=${FIND:Q} CHGRP=${CHGRP:Q}
 
 .include "../../devel/libmm/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

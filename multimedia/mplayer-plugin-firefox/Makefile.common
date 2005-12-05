@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/12/05 20:50:43 rillig Exp $
 #
 
 DISTNAME=		mplayerplug-in-2.70
@@ -24,7 +24,7 @@ DISTINFO_FILE=	${.CURDIR}/../../multimedia/mplayer-plugin-firefox/distinfo
 PLIST_SRC=	${.CURDIR}/../../multimedia/mplayer-plugin-firefox/PLIST
 DESCR_SRC=	${.CURDIR}/../../multimedia/mplayer-plugin-firefox/DESCR
 
-PLIST_SUBST+=	BROWSER=${BROWSER}
+PLIST_SUBST+=	BROWSER=${BROWSER:Q}
 
 post-extract:
 .for f in nspr xpcom plugin

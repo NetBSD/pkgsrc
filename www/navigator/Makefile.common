@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.78 2005/09/28 12:17:23 rillig Exp $
+# $NetBSD: Makefile.common,v 1.79 2005/12/05 20:51:13 rillig Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -45,7 +45,7 @@ DEPENDS+=	ns-flash>4.0:../../multimedia/ns-flash
 
 .elif ${MACHINE_ARCH} == "alpha"
 .  if !exists(/emul/osf1/sbin/loader)
-PKG_FAIL_REASON= "${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
+PKG_FAIL_REASON+=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
 .  endif
 NS_VERS=	4.78
 PKGNAME=	${BINNAME}-${NS_VERS}
@@ -65,7 +65,7 @@ DIST_DIR_NAME=	unsupported/bsdi21
 WRKNAME=	x86-bsdi-bsd2
 VENDOR_NAME=	BSD/OS 2.1
 
-BUILD_DEPENDS=  binpatch>=1.0:../../pkgtools/binpatch
+BUILD_DEPENDS+=	binpatch>=1.0:../../pkgtools/binpatch
 
 post-install:
 	${SH} ../../www/navigator/files/binpatch-x86-bsdi-bsd2-4.75.sh \
@@ -90,7 +90,7 @@ post-install:
 .endif
 .elif ((${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64") && defined(NS_USE_SUNOS))
 .  if !exists(/emul/sunos/usr/lib/ld.so)
-PKG_FAIL_REASON= "${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
+PKG_FAIL_REASON+=	"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
 .  endif
 NS_VERS=	4.61
 PKGNAME=	${BINNAME}-${NS_VERS}
@@ -106,7 +106,7 @@ MASTER_SITES=	ftp://archive.netscape.com/archive/communicator/${SUB}/
 .elif ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 PLIST_ARCH=	solaris-sparc
 .  if !exists(/emul/svr4/usr/lib/ld.so.1)
-PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
+PKG_FAIL_REASON+=	"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .  endif
 NS_VERS=	4.79
 PKGNAME=	${BINNAME}-${NS_VERS}
@@ -118,9 +118,9 @@ VENDOR_NAME=    Solaris 2.5.1
 # powerpc is "unusual"
 .elif ${MACHINE_ARCH} == "powerpc"
 .  if ${BINNAME} == "navigator"
-PKG_FAIL_REASON=  "There is no navigator-only package for PowerPC"
-PKG_FAIL_REASON+= "platform.  Please cd to ../communicator and"
-PKG_FAIL_REASON+= "install communicator package instead."
+PKG_FAIL_REASON+=	"There is no navigator-only package for PowerPC"
+PKG_FAIL_REASON+=	"platform.  Please cd to ../communicator and"
+PKG_FAIL_REASON+=	"install communicator package instead."
 .  endif
 NS_VERS=	4.73
 PKGNAME=	${BINNAME}-${NS_VERS}
@@ -130,7 +130,7 @@ WRKSRC=		${WRKDIR}
 MASTER_SITES=	http://www.gmd.de/ftp/mirrors3/ftp.linuxppc.org/linuxppc-halloween/software/
 EXTRACT_SUFX=	.rpm
 HOMEPAGE=	http://linuxppc.org/software/index/linuxppc_stable/software/netscape-4.7-3.ppc.html
-BUILD_DEPENDS=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
+BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 DESCR_SRC=	${WRKDIR}/DESCR.linux-powerpc
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 RPM2PKG=	rpm2pkg
@@ -199,7 +199,7 @@ NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 PLIST_SRC=	${PKGDIR}/PLIST.pre \
 		${PKGDIR}/PLIST.${PLIST_ARCH} \
 		${PKGDIR}/PLIST.post
-PLIST_SUBST+=	NS_VERS=${NS_VERS} LDAP_VERS=${LDAP_VERS} BINNAME=${BINNAME}
+PLIST_SUBST+=	NS_VERS=${NS_VERS:Q} LDAP_VERS=${LDAP_VERS:Q} BINNAME=${BINNAME:Q}
 
 do-install:
 	${INSTALL_DATA_DIR} ${MOZILLA_HOME}/java/classes

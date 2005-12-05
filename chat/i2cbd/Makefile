@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/08/19 18:12:36 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:49:53 rillig Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA1
@@ -16,7 +16,7 @@ USE_PKGINSTALL=		YES
 
 BUILD_DEFS+=		ICBD_OWNER
 ICBD_OWNER?=		${ROOT_USER}
-PLIST_SUBST+=		ICBD_OWNER=${ICBD_OWNER}
+PLIST_SUBST+=		ICBD_OWNER=${ICBD_OWNER:Q}
 
 PKG_SYSCONFSUBDIR=	icbd
 EGDIR=			${PREFIX}/share/examples/i2cbd
@@ -26,7 +26,6 @@ CONF_FILES_PERMS=	# empty
 CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 			${ICBD_OWNER} ${ROOT_GROUP} 644
 .endfor
-.undef f
 CONF_FILES_PERMS+=	/dev/null /var/log/icbd.log \
 			${ICBD_OWNER} ${ROOT_GROUP} 644
 
@@ -42,7 +41,6 @@ post-install:
 .for f in ${EGFILES}
 	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
-.undef f
 	${INSTALL_SCRIPT} ${WRKDIR}/icbd.sh ${PREFIX}/etc/rc.d/icbd
 
 .include "../../mk/bsd.pkg.mk"

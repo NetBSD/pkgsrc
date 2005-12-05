@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/17 03:50:22 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:40 rillig Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -16,7 +16,7 @@ BUILDLINK_PASSTHRU_DIRS=${PREFIX}/root/lib
 USE_TOOLS+=		gmake
 
 BUILD_TARGET=		netbsd
-MAKE_ENV=		LD_LIBRARY_PATH=${WRKDIR}/lib ROOTSYS=${WRKDIR}
+MAKE_ENV+=		LD_LIBRARY_PATH=${WRKDIR:Q}/lib ROOTSYS=${WRKDIR:Q}
 
 .if (${MACHINE_ARCH} == "arm")
 BROKEN= 	Compilation stops due to internal compiler error

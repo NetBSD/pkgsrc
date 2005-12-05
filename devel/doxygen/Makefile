@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/11/29 04:40:38 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/05 20:50:03 rillig Exp $
 
 DISTNAME=	doxygen-1.4.5.src
 PKGNAME=	doxygen-1.4.5
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--install ${INSTALL}
 CONFIGURE_ARGS+=	--dot ${PREFIX}/bin/dot
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc
-MAKE_ENV+=		PKGSRC_CFLAGS="${CFLAGS}"
+MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:M*:Q}
 
 SUBST_CLASSES+=		pybin
 SUBST_STAGE.pybin=	pre-configure

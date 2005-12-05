@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:08 rillig Exp $
 #
 
 DISTNAME=		teem-1.8.0-src
@@ -31,10 +31,10 @@ do-configure:
 .elif ${OPSYS} == "Linux" && ${MACHINE_ARCH} == "i386"
 TEEM_ARCH=linux.32
 .else
-PKG_FAIL_REASON="Support for this platform has not yet been added."
+PKG_FAIL_REASON+=	"Support for this platform has not yet been added."
 .endif
 
-MAKE_ENV+=	TEEM_ARCH=${TEEM_ARCH}					\
+MAKE_ENV+=	TEEM_ARCH=${TEEM_ARCH:Q}					\
 		TEEM_PNG=1 TEEM_BZIP2=1 TEEM_ZLIB=1 TEEM_PTHREAD=1	\
 		TEEM_PNG_IPATH="-I${BUILDLINK_PREFIX.png}/include"	\
 		TEEM_PNG_LPATH="-L${BUILDLINK_PREFIX.png}/lib"		\

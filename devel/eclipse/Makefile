@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/19 15:42:56 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:03 rillig Exp $
 #
 
 DISTNAME=	${PKGNAME}
@@ -17,8 +17,8 @@ DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 
 PKG_JVMS_ACCEPTED= sun-jdk15 sun-jdk14
 
-MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
-MAKE_ENV+=	ANT_HOME=${PREFIX}
+MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
+MAKE_ENV+=	ANT_HOME=${PREFIX:Q}
 
 VERSION=	3.0.1
 

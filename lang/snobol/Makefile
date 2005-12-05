@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/15 18:27:51 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:27 rillig Exp $
 #
 
 DISTNAME=	snobol-0.99.4
@@ -12,7 +12,7 @@ MAINTAINER=	refling@comet.lbl.gov
 HOMEPAGE=	http://people.ne.mediaone.net/philbudne/snobol.html
 COMMENT=	Macro implementation of SNOBOL4 in C
 
-BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/09/22 14:53:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:11 rillig Exp $
 
 DISTNAME=	apc_gui-1.0.3
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -21,7 +21,7 @@ USE_PKGINSTALL=	YES
 PKG_SYSCONFSUBDIR?=	httpd
 APC_GUI_DIR=		${PREFIX}/share/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-PLIST_SUBST+=		PKGBASE=${PKGBASE}
+PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 MESSAGE_SUBST+=		APC_GUI_DIR=${APC_GUI_DIR}
 
 CONF_FILES=	${EGDIR}/apc_gui.conf ${PKG_SYSCONFDIR}/apc_gui.conf

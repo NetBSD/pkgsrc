@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:53 rillig Exp $
 
 DISTNAME=	lgrind
 PKGNAME=	lgrind-3.5
@@ -17,7 +17,7 @@ TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 .include "../../mk/x11.buildlink3.mk"
 
-MAKE_ENV+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX}
+MAKE_ENV+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX:Q}
 
 pre-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile-prepatch

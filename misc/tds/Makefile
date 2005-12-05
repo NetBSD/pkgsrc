@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:15 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:40 rillig Exp $
 #
 
 DISTNAME=	tds-1.4.2
@@ -12,7 +12,7 @@ COMMENT=	Web diary system
 
 USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	PERL5="${PERL5}"
+CONFIGURE_ENV+=	PERL5=${PERL5:Q}
 
 NO_BUILD=	YES
 

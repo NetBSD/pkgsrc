@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/04 06:57:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 20:51:09 rillig Exp $
 #
 
 DISTNAME=	mlvwm091
@@ -24,7 +24,7 @@ post-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/pixmap/*.xpm ${PREFIX}/share/mlvwm
 
-SUBST_CLASSES=		xpm
+SUBST_CLASSES+=		xpm
 SUBST_STAGE.xpm=	post-configure
 SUBST_FILES.xpm=	sample_rc/Mlvwmrc
 SUBST_SED.xpm=		-e "s,@PREFIX@,${PREFIX},"

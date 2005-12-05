@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/24 10:43:32 adam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:16 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 COMMENT=	Freeciv game server
@@ -12,9 +12,9 @@ CONFIGURE_ARGS+=	--with-readline
 LIBS+=			-ltermcap
 
 # Uses rl_filename_completion_function() which was introduced in readline-4.2
-BUILDLINK_DEPENDS.readline=	readline>=4.2
+BUILDLINK_DEPENDS.readline+=	readline>=4.2
 
-.include "../freeciv-share/Makefile.common"
+.include "../../games/freeciv-share/Makefile.common"
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

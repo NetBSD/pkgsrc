@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/23 21:45:21 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 20:50:06 rillig Exp $
 
 MODNAME=		pcntl
 CATEGORIES+=		devel
-PKGREVISION=		# empty
 COMMENT=		PHP extension for Process Control functions
 
 

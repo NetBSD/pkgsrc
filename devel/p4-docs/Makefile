@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:47 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:06 rillig Exp $
 #
 
 DISTNAME=	p4-docs
@@ -40,8 +40,8 @@ EXTRACT_CMD.zip=	${LOCALBASE}/bin/unzip -Laq $${extract_file} \
 
 DOCDIR=		share/doc/p4
 HTMLDIR=	share/doc/html/p4
-PLIST_SUBST+=	DOCDIR=${DOCDIR}
-PLIST_SUBST+=	HTMLDIR=${HTMLDIR}
+PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
+PLIST_SUBST+=	HTMLDIR=${HTMLDIR:Q}
 
 INSTALLATION_DIRS=	man/man1
 

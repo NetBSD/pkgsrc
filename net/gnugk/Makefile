@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:24 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:46 rillig Exp $
 
 DISTNAME=	gnugk-2.2.0
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnugk.org/
 COMMENT=	H.323 Gatekeeper
 
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 USE_PKGINSTALL=         yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_PTLIB_CONFIG=${PREFIX}/bin/ptlib-config
@@ -18,7 +18,7 @@ CONFIGURE_ENV+=		PWLIBDIR=${PREFIX}/share/pwlib
 CONFIGURE_ENV+=		OPENH323DIR=${PREFIX}/share/openh323
 
 CFLAGS+=	-fexceptions
-MAKE_ENV+=	LIBTOOL="${LIBTOOL}" SYSLIBDIR="${PREFIX}/lib"
+MAKE_ENV+=	LIBTOOL=${LIBTOOL:Q} SYSLIBDIR="${PREFIX}/lib"
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
