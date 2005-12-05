@@ -1,0 +1,6 @@
+Smbchartool is File name conversion tool for Samba.
+
+Samba, SMB/CIFS protocol server suite supports various file name encoding
+and these encoded file name needs to be converted when Samba's configuration
+need to be changed.  Smbchartool support these file name conversion
+processing mainly Japanese character encoding.
