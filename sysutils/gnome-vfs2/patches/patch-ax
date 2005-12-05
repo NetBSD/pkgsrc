@@ -1,0 +1,15 @@
+$NetBSD: patch-ax,v 1.1 2005/12/05 07:52:49 rillig Exp $
+
+--- libgnomevfs/gnome-vfs-mime-handlers.c.orig	2005-05-26 14:25:10.000000000 +0200
++++ libgnomevfs/gnome-vfs-mime-handlers.c	2005-12-05 08:49:19.899254800 +0100
+@@ -40,6 +40,10 @@
+ 
+ #define GCONF_DEFAULT_VIEWER_EXEC_PATH   "/desktop/gnome/applications/component_viewer/exec"
+ 
++#ifdef __SUNPRO_C
++#define __FUNCTION__ __func__
++#endif
++
+ #define MIXED_API_WARNING "Cannot call %s with a GNOMEVFSMimeApplication structure "\
+ 			  "constructed by the deprecated application registry", \
+ 			  __FUNCTION__
