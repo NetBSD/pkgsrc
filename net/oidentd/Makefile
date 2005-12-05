@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/07 12:51:32 tron Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 23:55:14 rillig Exp $
 
 DISTNAME=	oidentd-2.0.7
 PKGREVISION=	4
@@ -10,7 +10,7 @@ HOMEPAGE=	http://dev.ojnk.net/
 COMMENT=	Configurable IDENT server that supports NAT/IP masq
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		oidentd
 OSVERSION_SPECIFIC=	YES

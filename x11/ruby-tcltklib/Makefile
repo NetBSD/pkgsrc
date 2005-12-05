@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/11/03 07:22:46 taca Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:24 rillig Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-tcltklib-${RUBY_VERSION}
@@ -14,12 +14,12 @@ USE_RUBY_EXTCONF=	yes
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/tcltklib
 WRKSRC=			${RUBY_WRKSRC}/ext/tcltklib
 
-CONFIGURE_ARGS+= --with-tcllib="${TCL_LIB}" --with-tklib="${TK_LIB}" \
+CONFIGURE_ARGS+= --with-tcllib=${TCL_LIB:Q} --with-tklib=${TK_LIB:Q} \
 		--with-tcl-lib="${BUILDLINK_PREFIX.tcl}/lib/${TCL_DIR}" \
 		--with-tk-lib="${BUILDLINK_PREFIX.tk}/lib/${TK_DIR}" \
 		--with-tcl-include="${BUILDLINK_PREFIX.tcl}/include/${TCL_DIR}" \
 		--with-tk-include="${BUILDLINK_PREFIX.tk}/include/${TK_DIR}" \
-		--with-X11-dir="${X11BASE}"
+		--with-X11-dir=${X11BASE:Q}
 REPLACE_RUBY=	demo/lines1.rb demo/lines2.rb demo/safeTk.rb
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/11/22 19:48:32 tv Exp $
+# $NetBSD: options.mk,v 1.7 2005/12/05 23:55:19 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
 PKG_OPTIONS_REQUIRED_GROUPS=	database
@@ -17,10 +17,10 @@ CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 BACULA_DB=		sqlite3
 .elif !empty(PKG_OPTIONS:Mcatalog-pgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}
+CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX:Q}
 BACULA_DB=		postgresql
 .elif !empty(PKG_OPTIONS:Mcatalog-mysql)
 .  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${PREFIX}
+CONFIGURE_ARGS+=	--with-mysql=${PREFIX:Q}
 BACULA_DB=		mysql
 .endif

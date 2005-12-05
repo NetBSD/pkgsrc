@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/09/28 20:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:03 rillig Exp $
 #
 
 DISTNAME=		binkd098
@@ -16,7 +16,7 @@ COMMENT=		FidoNet-over-IP transport program utilizing BINKP protocol
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64
 

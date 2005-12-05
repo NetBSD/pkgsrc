@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 20:51:07 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 23:55:20 rillig Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -18,9 +18,9 @@ GNU_CONFIGURE=	YES
 
 INFO_FILES=	ndtpd-ja.info ndtpd.info
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${NDTPD_RUNDIR}
-CONFIGURE_ARGS+=	--with-logdir=${NDTPD_LOGDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${NDTPD_RUNDIR:Q}
+CONFIGURE_ARGS+=	--with-logdir=${NDTPD_LOGDIR:Q}
 CONFIGURE_ARGS+=	--with-eb
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR.eb}/eb.conf

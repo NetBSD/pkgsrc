@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/07/16 19:10:38 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/05 23:55:03 rillig Exp $
 
 .include "../../comms/pilot-link/Makefile.common"
 
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 USE_TOOLS+=		gmake perl:run
 USE_GNU_READLINE=	YES
 
-CONFIGURE_ARGS+=	--with-perl5=${PERL5}
+CONFIGURE_ARGS+=	--with-perl5=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-readline21
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:37 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 23:55:12 rillig Exp $
 
 DISTNAME=	pari-2.1.6
 CATEGORIES=	math
@@ -18,7 +18,7 @@ USE_TOOLS+=		perl:run
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
 CONFIGURE_ARGS+=	--graphic=X11
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--share-prefix=${PREFIX}/share
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 CONFIGURE_ENV+=		PERL5=${PERL5:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/02 19:46:40 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 23:55:04 rillig Exp $
 
 PKGNAME=		postgresql73-lib-${BASE_VERS}
 PKGREVISION=		1
@@ -9,7 +9,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../databases/postgresql73/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 BUILD_DIRS=		${WRKSRC}/src/include
 BUILD_DIRS+=		${WRKSRC}/src/interfaces
 BUILD_DIRS+=		${WRKSRC}/src/pl

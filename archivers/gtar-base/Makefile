@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/12/01 16:41:29 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2005/12/05 23:55:01 rillig Exp $
 #
 
 DISTNAME=       tar-1.15.1
@@ -30,7 +30,7 @@ GTAR_PROGRAM_PREFIX?=	g
 # pax installs a "tar" also
 CONFLICTS+=		pax-[0-9]*
 .else
-CONFIGURE_ARGS+=	--program-prefix=${GTAR_PROGRAM_PREFIX}
+CONFIGURE_ARGS+=	--program-prefix=${GTAR_PROGRAM_PREFIX:Q}
 .endif
 
 # lie to configure about gettext -- it does not need GNU gettext

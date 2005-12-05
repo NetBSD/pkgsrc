@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/08/10 20:56:25 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 23:55:21 rillig Exp $
 
 DISTNAME=	openbox-3.2
 PKGREVISION=	1
@@ -22,7 +22,7 @@ USE_PKGLOCALEDIR=	YES
 PKGCONFIG_OVERRIDE=	parser/obparser-3.0.pc.in
 PKGCONFIG_OVERRIDE+=	render/obrender-3.0.pc.in
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 PKG_SYSCONFSUBDIR=	xdg
 OWN_DIRS=		${PKG_SYSCONFDIR}/openbox
 

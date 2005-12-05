@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:56 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 23:55:17 rillig Exp $
 #
 
 DISTNAME=		jessie-0.9.7
@@ -16,7 +16,7 @@ USE_JAVA2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-java-prefix=${PKG_JAVA_HOME}
+CONFIGURE_ARGS+=	--with-java-prefix=${PKG_JAVA_HOME:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/lib/java/jessie
 CONFIGURE_ENV+=		JAVA=${PKG_JAVA_HOME}/bin/java
 CONFIGURE_ENV+=		JAVAC=${PKG_JAVA_HOME}/bin/javac

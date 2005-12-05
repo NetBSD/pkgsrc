@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:52 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:16 rillig Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -19,13 +19,13 @@ USE_TOOLS+=		chgrp chown gmake
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-lpd_perms_path="${LPD_PERMS_PATH}"
-CONFIGURE_ARGS+=	--with-lpd_printcap_path="${LPD_PRINTCAP_PATH}"
-CONFIGURE_ARGS+=	--with-printcap_path="${PRINTCAP_PATH}"
-CONFIGURE_ARGS+=	--with-filterdir="${FILTER_DIR}"
-CONFIGURE_ARGS+=	--with-filter_path="${FILTER_PATH}"
-CONFIGURE_ARGS+=	--with-ld_library_path="${FILTER_LD_PATH}"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-lpd_perms_path=${LPD_PERMS_PATH:Q}
+CONFIGURE_ARGS+=	--with-lpd_printcap_path=${LPD_PRINTCAP_PATH:Q}
+CONFIGURE_ARGS+=	--with-printcap_path=${PRINTCAP_PATH:Q}
+CONFIGURE_ARGS+=	--with-filterdir=${FILTER_DIR:Q}
+CONFIGURE_ARGS+=	--with-filter_path=${FILTER_PATH:Q}
+CONFIGURE_ARGS+=	--with-ld_library_path=${FILTER_LD_PATH:Q}
 CONFIGURE_ENV+=		CHGRP=${TOOLS_CHGRP:Q}
 CONFIGURE_ENV+=		CHOWN=${TOOLS_CHOWN:Q}
 

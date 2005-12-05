@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/01 16:41:29 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 23:55:01 rillig Exp $
 #
 
 DISTNAME=       cpio-2.6
@@ -25,7 +25,7 @@ LIBS+=		-lgnumalloc
 .endif
 
 .if defined(GNU_PROGRAM_PREFIX)
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX

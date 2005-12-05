@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/12/05 20:50:35 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/05 23:55:11 rillig Exp $
 
 DISTNAME=	sqwebmail-5.0.6
 CATEGORIES=	mail www
@@ -41,22 +41,22 @@ MIME_TYPES=		${PKG_SYSCONFDIR}/mime.types:${PKG_SYSCONFBASEDIR}/httpd/mime.types
 # This is used by the sqwebmail configure script to set the location of
 # the sqwebmaild socket file and lockfile.
 #
-CONFIGURE_ARGS+=	--localstatedir=${SQWEBMAIL_STATEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${SQWEBMAIL_STATEDIR:Q}
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/courier
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 
 CONFIGURE_ARGS+=	--enable-cgibindir=${PREFIX}/libexec/cgi-bin
 CONFIGURE_ARGS+=	--enable-https=auto
-CONFIGURE_ARGS+=	--enable-imagedir=${SQWEBMAIL_IMAGEDIR}
-CONFIGURE_ARGS+=	--enable-imageurl=${SQWEBMAIL_IMAGEURL}
-CONFIGURE_ARGS+=	--enable-mimetypes="${MIME_TYPES}"
-CONFIGURE_ARGS+=	--with-cachedir=${SQWEBMAIL_CACHEDIR}
-CONFIGURE_ARGS+=	--with-cacheowner=${ROOT_USER}
-CONFIGURE_ARGS+=	--with-calendardir=${SQWEBMAIL_CALENDARDIR}
+CONFIGURE_ARGS+=	--enable-imagedir=${SQWEBMAIL_IMAGEDIR:Q}
+CONFIGURE_ARGS+=	--enable-imageurl=${SQWEBMAIL_IMAGEURL:Q}
+CONFIGURE_ARGS+=	--enable-mimetypes=${MIME_TYPES:Q}
+CONFIGURE_ARGS+=	--with-cachedir=${SQWEBMAIL_CACHEDIR:Q}
+CONFIGURE_ARGS+=	--with-cacheowner=${ROOT_USER:Q}
+CONFIGURE_ARGS+=	--with-calendardir=${SQWEBMAIL_CALENDARDIR:Q}
 CONFIGURE_ARGS+=	--with-ispell="${LOCALBASE}/bin/ispell"
 CONFIGURE_ARGS+=	--with-mailer="${SENDMAIL} -oi -t"
-CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP}
+CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP:Q}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 
 CONFIGURE_ENV+=		GPG="${LOCALBASE}/bin/gpg"

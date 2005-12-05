@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/12/05 23:55:05 rillig Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -18,7 +18,7 @@ ODBC_BASE_VERS=		${ODBC_DIST_VERS}
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-threads
 PTHREAD_OPTS+=		require
 
@@ -61,5 +61,5 @@ fix-ltdl-and-lexlib:
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 CONFIGURE_ARGS+=	--enable-gnuthreads
-CONFIGURE_ARGS+=	--with-pth=${PTHREADBASE}
+CONFIGURE_ARGS+=	--with-pth=${PTHREADBASE:Q}
 .endif

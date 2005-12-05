@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.22 2005/09/22 14:14:04 jlam Exp $
+# $NetBSD: Makefile-firefox.common,v 1.23 2005/12/05 23:55:22 rillig Exp $
 
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	1.0.7
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--enable-single-profile
 CONFIGURE_ARGS+=	--without-gssapi
 
 MOZILLA_EXTENSIONS=	cookie,gnomevfs,inspector,negotiateauth,pref,transformiix,universalchardet,webservices,xml-rpc,xmlextras
-CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS}
+CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS:Q}
 
 USE_LANGUAGES+=		c++
 BUILD_MATHML=		# defined
