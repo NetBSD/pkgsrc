@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.46 2005/12/05 23:55:21 rillig Exp $
 
 DISTNAME=		icewm-1.2.20
 CATEGORIES=		x11 wm
@@ -22,8 +22,8 @@ CONFIGURE_ARGS+=	--enable-antialiasing
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-cfgdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-cfgdir=${PKG_SYSCONFDIR:Q}
 .if !exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 CONFIGURE_ARGS+=	--disable-xinerama
 .endif

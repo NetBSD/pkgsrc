@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/11/04 21:10:42 dbj Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:07 rillig Exp $
 #
 
 DISTNAME=		qemu-0.7.2
@@ -18,7 +18,7 @@ HAS_CONFIGURE=		yes
 
 GCC_REQD+=		3.0
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
 
 SUBST_CLASSES+=		snd

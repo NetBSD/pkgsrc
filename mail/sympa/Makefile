@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/10/07 18:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 23:55:12 rillig Exp $
 #
 
 DISTNAME=	sympa-4.1.2
@@ -35,13 +35,13 @@ OPSYSVARS+=	DEPENDS
 
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-cgidir=${SYMPA_BIN}
+CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-cgidir=${SYMPA_BIN:Q}
 CONFIGURE_ARGS+=	--with-iconsdir=${SYMPA_PREFIX}/httpd/icons
-CONFIGURE_ARGS+=	--with-bindir=${SYMPA_BIN}
-CONFIGURE_ARGS+=	--with-sbindir=${SYMPA_BIN}
-CONFIGURE_ARGS+=	--with-libexecdir=${SYMPA_BIN}
-CONFIGURE_ARGS+=	--with-libdir=${SYMPA_BIN}
+CONFIGURE_ARGS+=	--with-bindir=${SYMPA_BIN:Q}
+CONFIGURE_ARGS+=	--with-sbindir=${SYMPA_BIN:Q}
+CONFIGURE_ARGS+=	--with-libexecdir=${SYMPA_BIN:Q}
+CONFIGURE_ARGS+=	--with-libdir=${SYMPA_BIN:Q}
 CONFIGURE_ARGS+=	--with-datadir=${SYMPA_BIN}/etc
 CONFIGURE_ARGS+=	--with-expldir=${SYMPA_VARBASE}/expl
 CONFIGURE_ARGS+=	--with-mandir=${PREFIX}/${PKGMANDIR}
@@ -50,14 +50,14 @@ CONFIGURE_ARGS+=	--with-piddir=${SYMPA_VARBASE}/run
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}/sympa
 CONFIGURE_ARGS+=	--with-nlsdir=${SYMPA_PREFIX}/nls
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/sympa
-CONFIGURE_ARGS+=	--with-scriptdir=${SYMPA_BIN}
+CONFIGURE_ARGS+=	--with-scriptdir=${SYMPA_BIN:Q}
 CONFIGURE_ARGS+=	--with-sampledir=${PREFIX}/share/examples/sympa
-CONFIGURE_ARGS+=	--with-spooldir=${SYMPA_SPOOL}
-CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-spooldir=${SYMPA_SPOOL:Q}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-mhonarc=${MHONARC_PREFIX}/bin/mhonarc
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}/bin/openssl
-CONFIGURE_ARGS+=	--with-user=${SYMPA_USER}
-CONFIGURE_ARGS+=	--with-group=${SYMPA_GROUP}
+CONFIGURE_ARGS+=	--with-user=${SYMPA_USER:Q}
+CONFIGURE_ARGS+=	--with-group=${SYMPA_GROUP:Q}
 
 MHONARC_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		MHONARC_PREFIX=mhonarc

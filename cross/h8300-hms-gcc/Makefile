@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/05/22 20:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 23:55:04 rillig Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -22,7 +22,7 @@ H8300_PREFIX=		${LOCALBASE}/libexec/cross-h8300-hms
 WRKSRC=			${WRKDIR}/objdir
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${H8300_PREFIX}
+CONFIGURE_ARGS+=	--prefix=${H8300_PREFIX:Q}
 CONFIGURE_ARGS+=	--infodir=${H8300_PREFIX}/gcc
 CONFIGURE_ARGS+=	--target=h8300-hms
 CONFIGURE_ARGS+=	--enable-languages=c

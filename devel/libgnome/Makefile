@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/12/05 20:50:05 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2005/12/05 23:55:06 rillig Exp $
 #
 
 DISTNAME=	libgnome-2.12.0.1
@@ -24,8 +24,8 @@ USE_PKGINSTALL=		YES
 PKGCONFIG_OVERRIDE=	libgnome/libgnome-2.0.pc.in
 
 CONFIGURE_ARGS= 	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 INSTALL_MAKE_FLAGS+=	soundlistdir=${PREFIX}/share/examples/libgnome/sound/events
 

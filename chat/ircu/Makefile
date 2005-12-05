@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:49:53 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 23:55:03 rillig Exp $
 #
 
 DISTNAME=	ircu2.10.11.07
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-cpath=${PKG_SYSCONFDIR}/ircd.conf
-CONFIGURE_ARGS+=	--with-dpath=${DATADIR}
+CONFIGURE_ARGS+=	--with-dpath=${DATADIR:Q}
 CONFIGURE_ARGS+=	--with-lpath=${DATADIR}/ircd.log
 CONFIGURE_ARGS+=	--with-mode=555
 CONFIGURE_ARGS+=	--with-owner=0

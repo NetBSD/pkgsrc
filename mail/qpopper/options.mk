@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2005/12/05 14:13:05 taca Exp $
+# $NetBSD: options.mk,v 1.11 2005/12/05 23:55:11 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qpopper
 PKG_SUPPORTED_OPTIONS=	drac inet6 kerberos pam qpopper-servermode ssl
@@ -10,7 +10,7 @@ PKG_OPTIONS_LEGACY_VARS+=	QPOPPER_USE_DRAC:drac
 
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif

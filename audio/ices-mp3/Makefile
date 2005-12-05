@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 01:52:58 kim Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 23:55:02 rillig Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -21,9 +21,9 @@ ICES_USE_PERL?=		NO
 ICES_USE_PYTHON?=	NO
 
 CONFIGURE_ARGS+=	--program-suffix=-mp3
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-docdir=${DOCDIR}
-CONFIGURE_ARGS+=	--with-moddir=${MODDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-docdir=${DOCDIR:Q}
+CONFIGURE_ARGS+=	--with-moddir=${MODDIR:Q}
 
 PKG_SYSCONFSUBDIR=	icecast
 #RCD_SCRIPTS=		${PKGBASE}
@@ -59,11 +59,11 @@ do-install:
 .include "../../audio/libvorbis/buildlink3.mk"
 .if defined(ICES_USE_PERL) && (${ICES_USE_PERL} == "YES")
 .include "../../lang/perl5/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 .endif
 .if defined(ICES_USE_PYTHON) && (${ICES_USE_PYTHON} == "YES")
 .include "../../lang/python/application.mk"
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN:Q}
 .endif
 .include "../../textproc/libxml2/buildlink3.mk"
 

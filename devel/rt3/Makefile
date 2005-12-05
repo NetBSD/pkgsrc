@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/09/21 21:23:46 cube Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 23:55:06 rillig Exp $
 
 DISTNAME=		rt-3.2.3
 PKGREVISION=		2
@@ -85,10 +85,10 @@ PKG_SYSCONFSUBDIR=	rt3
 PKG_GROUPS=		${RT_GROUP}
 
 CONFIGURE_ARGS+=	--enable-layout=pkgsrc
-CONFIGURE_ARGS+=	--with-rt-group=${RT_GROUP}
-CONFIGURE_ARGS+=	--with-db-type=${_RT_DB_TYPE}
-CONFIGURE_ARGS+=	--with-web-user=${APACHE_USER}
-CONFIGURE_ARGS+=	--with-web-group=${APACHE_GROUP}
+CONFIGURE_ARGS+=	--with-rt-group=${RT_GROUP:Q}
+CONFIGURE_ARGS+=	--with-db-type=${_RT_DB_TYPE:Q}
+CONFIGURE_ARGS+=	--with-web-user=${APACHE_USER:Q}
+CONFIGURE_ARGS+=	--with-web-group=${APACHE_GROUP:Q}
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 MESSAGE_SUBST+=		RT_GROUP=${RT_GROUP}

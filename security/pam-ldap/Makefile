@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/08/29 09:49:07 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:18 rillig Exp $
 #
 
 DISTNAME=	pam_ldap-180
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--with-ldap-lib=openldap
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap}
 CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/pam_ldap.conf
 CONFIGURE_ARGS+=	--with-ldap-secret-file=${PKG_SYSCONFDIR}/pam_ldap.secret
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 MAKE_ENV+=		SHLIBTOOL=$(SHLIBTOOL)
 

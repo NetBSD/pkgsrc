@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/11/13 10:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2005/12/05 23:55:13 rillig Exp $
 #
 
 DISTNAME=		ORBit2-2.12.4
@@ -19,7 +19,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 #TEST_TARGET=		check
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE=	ORBit-2.0.pc.in

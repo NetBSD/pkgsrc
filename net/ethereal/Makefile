@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2005/12/05 20:50:45 rillig Exp $
+# $NetBSD: Makefile,v 1.120 2005/12/05 23:55:13 rillig Exp $
 
 DISTNAME=		ethereal-0.10.13
 PKGREVISION=		1
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=        --enable-static=no
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk2}
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-net-snmp
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}

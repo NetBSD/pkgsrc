@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/10/23 23:18:49 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 23:55:22 rillig Exp $
 
 DISTNAME=	dillo-0.8.5
 CATEGORIES=	www
@@ -12,7 +12,7 @@ COMMENT=	Very small and fast graphical web-browser
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/dillo
 CONF_FILES=	${EGDIR}/dillorc.default ${PKG_SYSCONFDIR}/dillorc

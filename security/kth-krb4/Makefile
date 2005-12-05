@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/12/05 23:55:17 rillig Exp $
 #
 
 DISTNAME=		krb4-1.2.1
@@ -36,7 +36,7 @@ PLIST_SUBST+=		KRB4_PREFIX=k4
 KTH_KRB4_TRANSFORM=	s/^ftp$$/k4&/	# always k4ftp
 PLIST_SUBST+=		KRB4_PREFIX=
 .endif
-CONFIGURE_ARGS+=	--program-transform="${KTH_KRB4_TRANSFORM}"
+CONFIGURE_ARGS+=	--program-transform=${KTH_KRB4_TRANSFORM:Q}
 
 INFO_FILES=		kth-krb.info
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/10/16 12:12:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/05 23:55:24 rillig Exp $
 #
 
 DISTNAME=		gnopernicus-0.11.7
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 PKG_SYSCONFSUBDIR=	gnopernicus
 OWN_DIRS+=		${PKG_SYSCONFDIR}/translation_tables
 EGDIR=			${PREFIX}/share/examples/gnopernicus

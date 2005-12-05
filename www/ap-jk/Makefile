@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/05/22 20:08:44 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/12/05 23:55:21 rillig Exp $
 
 DISTNAME=	jakarta-tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	ap-jk-${JK_VERSION}
@@ -24,12 +24,12 @@ SUBST_SED.jk-lt=	-e "s|^\(LIBTOOL =\) [^ ]*$$|\1 \$$(SHELL) \$$(top_builddir)/li
 SUBST_MESSAGE.jk-lt=	"Fixing libtool references."
 
 # XXX The standard --with-apxs2 when using apache2 doesn't work
-CONFIGURE_ARGS+=	--with-apxs="${APXS}"
+CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 
 .if defined(JK_ENABLE_JNI)
 USE_JAVA=	yes
 CONFIGURE_ARGS+=	--enable-jni
-CONFIGURE_ARGS+=	--with-java-home=${JAVA_HOME}
+CONFIGURE_ARGS+=	--with-java-home=${JAVA_HOME:Q}
 SUBST_FILES.jk-lt+=	jni/Makefile
 .endif
 

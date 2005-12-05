@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/08/28 04:25:28 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:03 rillig Exp $
 #
 
 DISTNAME=	riece-1.0.7a
@@ -19,14 +19,14 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C|[^0-9]$||}
 
 GNU_CONFIGURE=	YES
 .if ${EMACS_FLAVOR} == "emacs"
-CONFIGURE_ARGS+=--with-emacs=${EMACS_BIN}
+CONFIGURE_ARGS+=--with-emacs=${EMACS_BIN:Q}
 .elif ${EMACS_FLAVOR} == "xemacs"
-CONFIGURE_ARGS+=--with-xemacs=${EMACS_BIN}
+CONFIGURE_ARGS+=--with-xemacs=${EMACS_BIN:Q}
 CONFIGURE_ARGS+=--with-packagedir=${EMACS_LISPPREFIX:C|/lisp\$||}
 .elif ${EMACS_FLAVOR} == "xemacs"
 .endif
 # Riece digs sub directory.
-CONFIGURE_ARGS+=--with-lispdir=${EMACS_LISPPREFIX}
+CONFIGURE_ARGS+=--with-lispdir=${EMACS_LISPPREFIX:Q}
 
 INFO_FILES=	riece-ja.info
 

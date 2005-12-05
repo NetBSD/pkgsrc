@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2005/12/05 20:51:00 rillig Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/12/05 23:55:19 rillig Exp $
 #
 
 DISTNAME=		gnome-vfs-2.12.1.1
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+= 	--disable-openssl
 CONFIGURE_ARGS+= 	--disable-samba
 CONFIGURE_ARGS+= 	--enable-gnutls
 CONFIGURE_ARGS+=	--enable-platform-gnome-2
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""

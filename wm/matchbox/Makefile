@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/08/10 20:56:25 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:21 rillig Exp $
 #
 
 DISTNAME=		matchbox-window-manager-0.9.3
@@ -14,7 +14,7 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 
 PKG_SYSCONFSUBDIR=	matchbox
 EGDIR=			${PREFIX}/share/examples/matchbox

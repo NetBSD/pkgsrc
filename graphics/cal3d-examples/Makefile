@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/18 01:31:54 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:07 rillig Exp $
 #
 
 PKGNAME=		cal3d-examples-${CAL3D_VERSION}
@@ -13,8 +13,8 @@ COMMENT=	        Tools and demos for cal3d library
 
 USE_TOOLS+=		automake
 
-CONFIGURE_ARGS+=	--with-cal3d=${PREFIX}
-CONFIGURE_ARGS+=	--with-glut=${PREFIX}
+CONFIGURE_ARGS+=	--with-cal3d=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-glut=${PREFIX:Q}
 CONFIGURE_DIRS=		${WRKSRC}/examples/cally \
 			${WRKSRC}/examples/miniviewer_gl \
 			${WRKSRC}/tools/converter

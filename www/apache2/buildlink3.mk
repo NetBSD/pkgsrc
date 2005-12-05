@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2005/12/05 20:51:11 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2005/12/05 23:55:22 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APACHE_BUILDLINK3_MK:=	${APACHE_BUILDLINK3_MK}+
@@ -27,7 +27,7 @@ APXS?=		${BUILDLINK_PREFIX.apache}/sbin/apxs
 
 .if !empty(APACHE_BUILDLINK3_MK:M+)
 .  if defined(GNU_CONFIGURE)
-CONFIGURE_ARGS+=	--with-apxs2="${APXS}"
+CONFIGURE_ARGS+=	--with-apxs2=${APXS:Q}
 .  endif
 .endif	# APACHE_BUILDLINK3_MK
 

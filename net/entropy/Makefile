@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:45 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:13 rillig Exp $
 #
 
 DISTNAME=		entropy_rsa-${ENTROPY_VERSION}
@@ -47,7 +47,7 @@ ENTROPY_STORE_TYPE?=	tree
 .if ${ENTROPY_STORE_TYPE} == "tree"
 CONFIGURE_ARGS+=	--with-tree
 .elif ${ENTROPY_STORE_TYPE} == "mysql"
-CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE:Q}
 .include "../../mk/mysql.buildlink3.mk"
 .elif ${ENTROPY_STORE_TYPE} != "monolithic"
 PKG_FAIL_REASON+=	"unknown ENTROPY_STORE_TYPE: "${ENTROPY_STORE_TYPE:Q}""
@@ -55,7 +55,7 @@ PKG_FAIL_REASON+=	"unknown ENTROPY_STORE_TYPE: "${ENTROPY_STORE_TYPE:Q}""
 
 # maximum allowed peer connections (and child processes); default 64
 .if defined(ENTROPY_MAX_PEERS)
-CONFIGURE_ARGS+=	--enable-max-peers=${ENTROPY_MAX_PEERS}
+CONFIGURE_ARGS+=	--enable-max-peers=${ENTROPY_MAX_PEERS:Q}
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"

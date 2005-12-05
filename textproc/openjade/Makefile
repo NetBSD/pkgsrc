@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:51:07 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 23:55:20 rillig Exp $
 #
 
 DISTNAME=	openjade-1.3.2
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	CXXFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--enable-default-catalog=${OPENJADE_DATA_DIR}/catalog \
-		--datadir=${OPENJADE_DATA_DIR}
+		--datadir=${OPENJADE_DATA_DIR:Q}
 
 SGML_CATALOGS=		${PREFIX}/share/sgml/openjade/catalog
 

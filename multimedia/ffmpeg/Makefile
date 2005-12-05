@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:41 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 23:55:12 rillig Exp $
 
 DISTNAME=	ffmpeg-0.4.8
 PKGREVISION=	3
@@ -22,7 +22,7 @@ MAKE_ENV+=	EXTRA_LIBS=${BUILDLINK_LDADD.getopt:Q} \
 		LOCALBASE=${LOCALBASE:Q}
 
 CONFIGURE_ARGS+=	--cc=${CC:Q}
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-pp
 CONFIGURE_ARGS+=	--disable-vhook
 CONFIGURE_ARGS+=	--disable-debug

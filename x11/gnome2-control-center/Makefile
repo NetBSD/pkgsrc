@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/11/25 21:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2005/12/05 23:55:24 rillig Exp $
 #
 
 DISTNAME=	control-center-2.12.1
@@ -23,7 +23,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-alsa
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/06/01 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/05 23:55:11 rillig Exp $
 
 .include "Makefile.common"
 
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-spamassassin-plugin
 CONFIGURE_ARGS+=	--disable-mathml-viewer-plugin
 
 PKG_SYSCONFSUBDIR=	sylpheed
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

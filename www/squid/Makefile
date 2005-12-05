@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2005/12/05 14:06:03 taca Exp $
+# $NetBSD: Makefile,v 1.166 2005/12/05 23:55:23 rillig Exp $
 
 DISTNAME=	squid-2.5.STABLE12
 PKGNAME=	squid-2.5.12
@@ -32,8 +32,8 @@ PKG_SYSCONFSUBDIR?=	squid
 USE_PKGINSTALL=		yes
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
-			--localstatedir=${DATADIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
+			--localstatedir=${DATADIR:Q}
 
 MAKE_ENV+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 MAKE_ENV+=	PKG_PREFIX=${PREFIX:Q} VARBASE=${VARBASE:Q}

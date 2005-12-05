@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/12/05 20:50:47 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2005/12/05 23:55:14 rillig Exp $
 
 DISTNAME=	net-snmp-5.2.1.2
 PKGREVISION=	1
@@ -45,8 +45,8 @@ NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/t
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-defaults
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}/lib
-CONFIGURE_ARGS+=	--with-sys-contact="${NET_SNMP_SYS_CONTACT}"
-CONFIGURE_ARGS+=	--with-sys-location="${NET_SNMP_SYS_LOCATION}"
+CONFIGURE_ARGS+=	--with-sys-contact=${NET_SNMP_SYS_CONTACT:Q}
+CONFIGURE_ARGS+=	--with-sys-location=${NET_SNMP_SYS_LOCATION:Q}
 #
 # NOTE:  if you specify a logfile then this file will be written to by
 # default and although it can be disabled on the command line, the
@@ -54,9 +54,9 @@ CONFIGURE_ARGS+=	--with-sys-location="${NET_SNMP_SYS_LOCATION}"
 # will use '-s' to enable standard syslog logging anyway.
 #
 CONFIGURE_ARGS+=	--with-logfile=none
-CONFIGURE_ARGS+=	--with-persistent-directory="${NET_SNMP_PERSISTENTDIR}"
+CONFIGURE_ARGS+=	--with-persistent-directory=${NET_SNMP_PERSISTENTDIR:Q}
 .if !empty(NET_SNMP_MIBDIRS)
-CONFIGURE_ARGS+=	--with-mibdirs="${NET_SNMP_MIBDIRS}"
+CONFIGURE_ARGS+=	--with-mibdirs=${NET_SNMP_MIBDIRS:Q}
 .endif
 CONFIGURE_ARGS+=	--with-mib-modules="smux host"
 .if (${OPSYS} == "Darwin")

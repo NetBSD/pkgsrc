@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/03/06 12:01:32 grant Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/12/05 23:55:15 rillig Exp $
 
 DISTNAME=       ytalk-3.1.1
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	Multi-user replacement for UNIX talk
 GNU_CONFIGURE=	yes
 USE_PKGINSTALL=	yes
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/ytalk
 CONF_FILES=	${EGDIR}/ytalkrc ${PKG_SYSCONFDIR}/ytalkrc

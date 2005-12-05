@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2005/12/05 20:50:50 rillig Exp $
+# $NetBSD: Makefile,v 1.75 2005/12/05 23:55:15 rillig Exp $
 
 DISTNAME=		inn-2.4.1
 PKGREVISION=		8
@@ -24,15 +24,15 @@ GNU_CONFIGURE_PREFIX=	${INN_PREFIX}
 CONFIGURE_ARGS+=	--enable-setgid-inews 				\
 			--enable-uucp-rnews 				\
 			--with-perl					\
-			--with-openssl=${SSLBASE}			\
+			--with-openssl=${SSLBASE:Q}			\
 			--with-tmp-dir=${INN_DATA_DIR}/tmp		\
 			--with-db-dir=${INN_DATA_DIR}/db 		\
 			--with-etc-dir=${INN_DATA_DIR}/etc 		\
 			--with-log-dir=${INN_DATA_DIR}/log 		\
 			--with-run-dir=${INN_DATA_DIR}/run 		\
-			--with-spool-dir=${INN_SPOOL}			\
-			--with-news-user=${INN_USER}			\
-			--with-news-group=${INN_GROUP}
+			--with-spool-dir=${INN_SPOOL:Q}			\
+			--with-news-user=${INN_USER:Q}			\
+			--with-news-group=${INN_GROUP:Q}
 CONFIGURE_ENV+=		_PATH_PERL=${PERL5:Q}
 CONFIGURE_ENV+=		_PATH_AWK=${TOOLS_AWK:Q}
 CONFIGURE_ENV+=		_PATH_EGREP=${TOOLS_EGREP:Q}

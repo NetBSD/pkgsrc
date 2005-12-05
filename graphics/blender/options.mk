@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:49 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2005/12/05 23:55:07 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.blender
 PKG_SUPPORTED_OPTIONS=
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--disable-exppython
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
-CONFIGURE_ARGS+=	--with-ogg=${PREFIX}
+CONFIGURE_ARGS+=	--with-ogg=${PREFIX:Q}
 .include "../../multimedia/libogg/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ogg --disable-oggtest
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--enable-openal
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
-CONFIGURE_ARGS+=	--with-vorbis=${PREFIX}
+CONFIGURE_ARGS+=	--with-vorbis=${PREFIX:Q}
 .include "../../audio/libvorbis/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-vorbis --disable-vorbistest

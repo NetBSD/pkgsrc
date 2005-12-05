@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:50 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:15 rillig Exp $
 #
 
 DISTNAME=		tor-0.1.0.15
@@ -26,7 +26,7 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIR_PERMS+=		${PKG_HOME} ${USER_GROUP} 0755
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor/tor-tsocks.conf

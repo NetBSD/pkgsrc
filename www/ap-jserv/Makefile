@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/07/16 01:19:25 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 23:55:21 rillig Exp $
 
 DISTNAME=	ApacheJServ-1.1.2
 PKGNAME=	ap-jserv-1.1.2
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/src/scripts/build/unix/ltconfig
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apxs=${LOCALBASE}/sbin/apxs
-CONFIGURE_ARGS+=	--with-jdk-home=${PKG_JAVA_HOME}
+CONFIGURE_ARGS+=	--with-jdk-home=${PKG_JAVA_HOME:Q}
 CONFIGURE_ARGS+=	--with-JSDK=${PREFIX}/lib/java/jsdk.jar
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/httpd
 CONFIGURE_ARGS+=	--with-servlets=${LOCALBASE}/share/httpd/servlets

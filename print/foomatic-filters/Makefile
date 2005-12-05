@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/28 06:41:21 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 23:55:16 rillig Exp $
 
 DISTNAME=	foomatic-filters-3.0.2
 PKGREVISION=	1
@@ -25,7 +25,7 @@ CONFIG_SUB_OVERRIDE=    ${WRKSRC}/config.sub
 CONFIGURE_ENV+= 	CUPS=${LOCALBASE}/share/cups
 CONFIGURE_ENV+= 	CUPS_FILTERS=${LOCALBASE}/lib/cups/filter
 CONFIGURE_ENV+= 	PRINTCAP=/etc/printcap
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
 USE_TOOLS+=	gmake gs:run perl:run
 USE_PKGINSTALL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2005/12/02 21:01:34 joerg Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/12/05 23:55:04 rillig Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -71,7 +71,7 @@ PGSQL_TEMPLATE.IRIX=		irix5
 PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/postgresql
 CONFIGURE_ARGS+=	--with-template="${PGSQL_TEMPLATE.${OPSYS}}"
 CONFIGURE_ARGS+=	--without-readline

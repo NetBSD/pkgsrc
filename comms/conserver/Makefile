@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/03 20:07:23 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 23:55:03 rillig Exp $
 #
 
 DISTNAME=	conserver-7.2.7
@@ -16,9 +16,9 @@ GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 CONFLICTS+=	conserver8-[0-9]*
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-master=${CONSERVER_DEFAULTHOST}
-CONFIGURE_ARGS+=	--with-port=${CONSERVER_DEFAULTPORT}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-master=${CONSERVER_DEFAULTHOST:Q}
+CONFIGURE_ARGS+=	--with-port=${CONSERVER_DEFAULTPORT:Q}
 CONFIGURE_ARGS+=	--with-regex
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver

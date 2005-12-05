@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/06/01 18:02:46 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2005/12/05 23:55:06 rillig Exp $
 
 DISTNAME=	xemacs-21.5.19
 
@@ -45,14 +45,14 @@ INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--error-checking=none
 CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--without-ncurses
 CONFIGURE_ARGS+=	--without-msw
 CONFIGURE_ARGS+=	${WITH_WIDGETS}
-CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
+CONFIGURE_ARGS+=	--infopath=${INFOPATH:Q}
 CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
 CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
 

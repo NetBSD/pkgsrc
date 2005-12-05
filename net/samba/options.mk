@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2005/11/15 13:58:14 jlam Exp $
+# $NetBSD: options.mk,v 1.12 2005/12/05 23:55:15 rillig Exp $
 
 # Recommended package options for various setups:
 #
@@ -25,7 +25,7 @@ SAMBA_STATIC_MODULES:=	# empty
 PKG_OPTIONS+=		ldap
 .  endif
 CONFIGURE_ARGS+=	--with-ads
-CONFIGURE_ARGS+=	--with-krb5=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-krb5=${KRB5BASE:Q}
 .else
 CONFIGURE_ARGS+=	--without-ads
 CONFIGURE_ARGS+=	--without-krb5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:49 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 23:55:15 rillig Exp $
 
 DISTNAME=		speedtouch-1.3.1
 PKGREVISION=		3
@@ -25,7 +25,7 @@ DEPENDS+=		userppp>=001107:../../net/userppp
 
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 RCD_SCRIPTS=		adsl

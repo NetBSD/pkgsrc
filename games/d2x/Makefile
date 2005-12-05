@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:07 rillig Exp $
 #
 
 DISTNAME=	d2x-0.2.5
@@ -22,8 +22,8 @@ MESSAGE_SUBST+=		D2X_DATA=${D2X_DATA}
 # support
 #
 CONFIGURE_ARGS+=	--disable-network
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-sharepath=${D2X_DATA}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-sharepath=${D2X_DATA:Q}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"

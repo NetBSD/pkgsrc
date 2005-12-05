@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/10/31 16:43:05 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 23:55:02 rillig Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -17,7 +17,7 @@ USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}	# not really needed
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}	# not really needed
 PKG_SYSCONFSUBDIR=	WindowMaker
 EGDIR=			${PREFIX}/share/examples/wsoundserver
 CONF_FILES=		${EGDIR}/WMSound ${PKG_SYSCONFDIR}/WMSound

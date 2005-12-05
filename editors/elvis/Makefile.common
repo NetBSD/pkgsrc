@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/04/11 21:45:40 tv Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/12/05 23:55:06 rillig Exp $
 #
 
 DISTNAME=	elvis-2.2_0
@@ -14,7 +14,7 @@ DISTINFO_FILE=	${.CURDIR}/../elvis/distinfo
 
 USE_PKGINSTALL=		YES
 HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/elvis
 
 PKG_SYSCONFSUBDIR?=	elvis

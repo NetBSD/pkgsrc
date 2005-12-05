@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:18 rillig Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	3
@@ -43,13 +43,13 @@ OWN_DIRS_PERMS+=	${PKS_HOME}/db ${PKS_USER} ${PKS_GROUP} 0770
 OWN_DIRS_PERMS+=	${PKS_HOME}/incoming ${PKS_USER} ${PKS_GROUP} 0770
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/pks
-CONFIGURE_ARGS+=	--localstatedir=${PKS_HOME}
+CONFIGURE_ARGS+=	--localstatedir=${PKS_HOME:Q}
 #
 # pksd doesn't actually look for its config file anywhere; it must be
 # specified directly on the command-line.  Setting sysconfdir here just
 # causes the example pksd.conf file to be installed at the named location.
 #
-CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."

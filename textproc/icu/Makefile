@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/12/05 20:51:03 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2005/12/05 23:55:20 rillig Exp $
 #
 
 DISTNAME=	icu-3.2
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ENV+=		U_MAKE=${TOOLS_GMAKE:Q}
 
 # ICU's configure script will automatically append "/icu" to the sysconfdir.
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 PKG_SYSCONFSUBDIR=	icu
 
 CONVRTRS_EG=		${CONVRTRS_EG_DIR}/convrtrs.txt

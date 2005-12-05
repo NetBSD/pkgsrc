@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/12/05 20:50:29 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2005/12/05 23:55:10 rillig Exp $
 
 DISTNAME=	dspam-3.6.2
 CATEGORIES=	mail
@@ -57,15 +57,15 @@ DSPAM_PIDDIR?=		${VARBASE}/run/dspam
 DSPAM_WWWUSER?=		${APACHE_USER}
 DSPAM_WWWGROUP?=	${APACHE_GROUP}
 
-CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
-CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
-			--with-dspam-home-owner=${DSPAM_USER}		\
-			--with-dspam-home-group=${DSPAM_GROUP}		\
-			--with-dspam-owner=${DSPAM_USER}		\
-			--with-dspam-group=${DSPAM_GROUP}		\
-			--with-dspam-mode=${DSPAM_BINMODE}		\
-			--with-logdir=${DSPAM_LOGDIR}			\
-			--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE:Q}
+CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME:Q}			\
+			--with-dspam-home-owner=${DSPAM_USER:Q}		\
+			--with-dspam-home-group=${DSPAM_GROUP:Q}		\
+			--with-dspam-owner=${DSPAM_USER:Q}		\
+			--with-dspam-group=${DSPAM_GROUP:Q}		\
+			--with-dspam-mode=${DSPAM_BINMODE:Q}		\
+			--with-logdir=${DSPAM_LOGDIR:Q}			\
+			--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "options.mk"
 .include "../../mk/pthread.buildlink3.mk"

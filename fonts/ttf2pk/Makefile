@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/20 06:27:24 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 23:55:07 rillig Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.freetype.org/
 COMMENT=		TrueType to TeX PK font converter
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--prefix=${LOCALBASE:Q}
 CONFIGURE_ARGS+=	--with-kpathsea-dir=${PREFIX}/lib
 
 T2PSRC=			${WRKSRC}/contrib/ttf2pk

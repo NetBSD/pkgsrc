@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/08/10 20:56:13 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/05 23:55:02 rillig Exp $
 
 DISTNAME=	gnomeicu-0.99.5
 CATEGORIES=	chat gnome
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 
 EGDIR=			${PREFIX}/share/examples/gnomeicu
 CONF_FILES=		${EGDIR}/sound/events/GnomeICU.soundlist \

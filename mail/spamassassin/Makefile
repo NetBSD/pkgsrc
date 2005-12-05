@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/12/05 20:50:35 rillig Exp $
+# $NetBSD: Makefile,v 1.66 2005/12/05 23:55:11 rillig Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.1.0
 PKGNAME=	spamassassin-3.1.0
@@ -47,7 +47,7 @@ PLIST_SRC=		${PKGDIR}/PLIST ${PLIST_ADD}
 PERL5_PACKLIST=		auto/Mail/SpamAssassin/.packlist
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_DIRS=		${WRKSRC}/spamc
 BUILD_DIRS=		${WRKSRC}
 PERL5_CONFIGURE=	NO # we need the default "do-configure" target

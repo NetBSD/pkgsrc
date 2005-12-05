@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/11/11 07:42:08 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/12/05 23:55:10 rillig Exp $
 #
 # Package Makefiles should include this file after setting PKGNAME and
 # PKG_SUPPORTED_OPTIONS.
@@ -14,8 +14,8 @@ EGDIR=			${PREFIX}/share/examples/courier
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 CONFIGURE_ARGS+=	--disable-root-check
 CONFIGURE_ARGS+=	--enable-unicode

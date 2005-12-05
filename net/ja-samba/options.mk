@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/06/19 18:38:40 taca Exp $
+# $NetBSD: options.mk,v 1.5 2005/12/05 23:55:14 rillig Exp $
 
 # Global and legacy options
 
@@ -60,7 +60,7 @@ PLIST_SUBST+=		SMBMOUNT="@comment "
 .if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
+CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE:Q}
 CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 .else
 CONFIGURE_ARGS+=	--without-ssl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:46:38 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 23:55:12 rillig Exp $
 #
 
 DISTNAME=       less-382
@@ -12,6 +12,6 @@ COMMENT=	Pager similar to more and pg
 
 GNU_CONFIGURE=  	yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "../../mk/bsd.pkg.mk"

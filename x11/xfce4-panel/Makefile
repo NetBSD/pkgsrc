@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/11/09 07:09:05 martti Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:24 rillig Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -21,7 +21,7 @@ CONF_FILES+=		${EGDIR}/contents.xml.${_l} \
 			${PKG_SYSCONFDIR}/contents.xml.${_l}
 .endfor
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 
 REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 

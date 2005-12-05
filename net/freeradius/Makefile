@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/12/05 20:50:45 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2005/12/05 23:55:13 rillig Exp $
 
 DISTNAME=	freeradius-1.0.5
 PKGREVISION=	2
@@ -31,8 +31,8 @@ BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7
 #LIBTOOL_OVERRIDE=	libtool
 
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--disable-ltdl-install
 CONFIGURE_ARGS+=	--with-ltdl-lib=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include

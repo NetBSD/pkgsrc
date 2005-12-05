@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2005/12/05 20:50:20 rillig Exp $
+# $NetBSD: Makefile,v 1.96 2005/12/05 23:55:08 rillig Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGREVISION=	2
@@ -21,7 +21,7 @@ UNLIMIT_RESOURCES=	datasize
 CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
 CONFIGURE_ENV+=		X_LDFLAGS=${X_LDFLAGS:Q}
-CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 PKG_SYSCONFSUBDIR=	imlib
 EGDIR=			${PREFIX}/share/examples/imlib

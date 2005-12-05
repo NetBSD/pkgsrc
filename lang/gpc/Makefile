@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 23:55:09 rillig Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		3
@@ -41,8 +41,8 @@ GPC_SUBPREFIX=		${_GCC_SUBPREFIX}/
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
-CONFIGURE_ARGS+=	--prefix=${GPC_PREFIX}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--prefix=${GPC_PREFIX:Q}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-languages=pascal

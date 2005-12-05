@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/01 20:08:01 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 23:55:14 rillig Exp $
 
 DISTNAME=	openslp-1.2.1
 CATEGORIES=	net
@@ -15,8 +15,8 @@ USE_TOOLS+=		automake bison lex
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--enable-slpv2-security
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR} DOC_DIR=${DOCDIR}
 

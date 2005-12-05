@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:57 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:18 rillig Exp $
 
 DISTNAME=	openpam-20050201
 CATEGORIES=	security
@@ -12,7 +12,7 @@ CONFLICTS+=	PAM-[0-9]*
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--without-pam-su
 CONFIGURE_ARGS+=	--with-pam-unix
 CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/lib/security

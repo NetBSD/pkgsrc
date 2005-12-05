@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2005/12/05 20:50:10 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/12/05 23:55:06 rillig Exp $
 
 DISTNAME=	xemacs-21.4.17
 CATEGORIES=	editors
@@ -83,7 +83,7 @@ INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
 .if ${OPSYS} != "Linux"
@@ -91,7 +91,7 @@ CONFIGURE_ARGS+=	--with-ncurses=no
 .endif
 CONFIGURE_ARGS+=	--with-msw=no
 CONFIGURE_ARGS+=	${WITH_DIALOGS}
-CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
+CONFIGURE_ARGS+=	--infopath=${INFOPATH:Q}
 
 CFLAGS+=		-Dunix
 

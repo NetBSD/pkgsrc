@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/16 06:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:02 rillig Exp $
 
 DISTNAME=	eggdrop1.6.17
 PKGNAME=	eggdrop-1.6.17
@@ -13,7 +13,7 @@ COMMENT=	IRC robot with TCL scripting and multi-channel ability
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 BUILD_DEFS+=		USE_INET6
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
 
 .include "../../mk/bsd.prefs.mk"

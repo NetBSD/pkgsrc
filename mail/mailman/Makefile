@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:33 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 23:55:11 rillig Exp $
 
 DISTNAME=	mailman-2.1.6
 CATEGORIES=	mail www
@@ -72,15 +72,15 @@ PYTHON_PATCH_SCRIPTS+=	admin/bin/faq2ht.py
 PYTHON_PATCH_SCRIPTS+=	admin/bin/mm2do
 PYTHON_PATCH_SCRIPTS+=	bin/msgfmt.py
 
-CONFIGURE_ARGS+=	--with-cgi-gid=${MAILMAN_CGIGROUP}
+CONFIGURE_ARGS+=	--with-cgi-gid=${MAILMAN_CGIGROUP:Q}
 .if ${MAILMAN_CGIEXT} != "none"
-CONFIGURE_ARGS+=	--with-cgi-ext=${MAILMAN_CGIEXT}
+CONFIGURE_ARGS+=	--with-cgi-ext=${MAILMAN_CGIEXT:Q}
 .endif
-CONFIGURE_ARGS+=	--with-groupname=${MAILMAN_GROUP}
-CONFIGURE_ARGS+=	--with-mail-gid=${MAILMAN_MAILGROUP}
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
-CONFIGURE_ARGS+=	--with-username=${MAILMAN_USER}
-CONFIGURE_ARGS+=	--with-var-prefix=${MAILMAN_DATADIR}
+CONFIGURE_ARGS+=	--with-groupname=${MAILMAN_GROUP:Q}
+CONFIGURE_ARGS+=	--with-mail-gid=${MAILMAN_MAILGROUP:Q}
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN:Q}
+CONFIGURE_ARGS+=	--with-username=${MAILMAN_USER:Q}
+CONFIGURE_ARGS+=	--with-var-prefix=${MAILMAN_DATADIR:Q}
 CONFIGURE_ARGS+=	--without-permcheck
 
 # Put in externally invalid defaults (MESSAGE directs how to fix it)

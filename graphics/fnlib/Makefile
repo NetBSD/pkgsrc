@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/06/01 18:02:55 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 23:55:07 rillig Exp $
 #
 
 DISTNAME=		fnlib-0.5
@@ -20,7 +20,7 @@ USE_LIBTOOL=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 EGDIR=			${PREFIX}/share/examples/fnlib
 CONF_FILES=		${EGDIR}/fnrc ${PKG_SYSCONFDIR}/fnrc
 

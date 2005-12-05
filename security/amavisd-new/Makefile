@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:54 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 23:55:16 rillig Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -68,9 +68,9 @@ PKG_SUPPORTED_OPTIONS=	milter
 
 .if !empty(PKG_OPTIONS:Mmilter)
 GNU_CONFIGURE=  	yes
-CONFIGURE_ARGS+=	--with-runtime-dir=${AMAVIS_DIR}
+CONFIGURE_ARGS+=	--with-runtime-dir=${AMAVIS_DIR:Q}
 CONFIGURE_ARGS+=	--with-sockname=${AMAVIS_DIR}/amavisd.sock
-CONFIGURE_ARGS+=	--with-user=${AMAVIS_USER}
+CONFIGURE_ARGS+=	--with-user=${AMAVIS_USER:Q}
 CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
 CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
 CONFIGURE_DIRS=		${WRKSRC}/helper-progs

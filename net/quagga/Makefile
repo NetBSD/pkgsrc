@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:48 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 23:55:15 rillig Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES
 
 PKG_SYSCONFSUBDIR?=	zebra
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-exampledir=${PREFIX}/share/examples/quagga
 #CONFIGURE_ARGS+=	--enable-pkgsrcrcdir=${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run/zebra

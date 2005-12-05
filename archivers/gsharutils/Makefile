@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/12/01 16:41:29 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 23:55:01 rillig Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -40,7 +40,7 @@ CPPFLAGS+=		-D_nl_default_dirname=libintl_nl_default_dirname
 .endif
 
 .if defined(GNU_PROGRAM_PREFIX)
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX

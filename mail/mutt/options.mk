@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: options.mk,v 1.8 2005/12/05 23:55:11 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_SUPPORTED_OPTIONS=	slang ncurses ssl buffy-size
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif

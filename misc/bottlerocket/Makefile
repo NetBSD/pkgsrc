@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:14 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 23:55:12 rillig Exp $
 
 DISTNAME=	bottlerocket-0.04c
 CATEGORIES=	misc
@@ -13,7 +13,7 @@ GNU_CONFIGURE=	yes
 BUILD_TARGET=	br
 
 X10_PORT?=	${DEFAULT_SERIAL_DEVICE}
-CONFIGURE_ARGS+=--with-x10port=${X10_PORT}
+CONFIGURE_ARGS+=--with-x10port=${X10_PORT:Q}
 BUILD_DEFS+=	X10_PORT
 
 .include "../../mk/bsd.pkg.mk"

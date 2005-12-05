@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/05/22 20:07:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/12/05 23:55:04 rillig Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
@@ -43,7 +43,7 @@ GNU_CONFIGURE=		YES
 # This variable controls the language encoding on the backend process.
 
 .if defined(PG_MB_ENCODING)
-CONFIGURE_ARGS+=	--enable-multibyte=${PG_MB_ENCODING}
+CONFIGURE_ARGS+=	--enable-multibyte=${PG_MB_ENCODING:Q}
 .else
 CONFIGURE_ARGS+=	--enable-multibyte	# accept default
 .endif
@@ -60,13 +60,13 @@ CONFIGURE_ARGS+=	--without-tk
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/pgsql
 CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/html/postgresql
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 
 CONFIGURE_ARGS+=	--disable-readline
 CONFIGURE_ARGS+=	--enable-locale
 CONFIGURE_ARGS+=	--enable-syslog
 CONFIGURE_ARGS+=	--with-CXX
-CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}"
+CONFIGURE_ARGS+=	--with-template=${LOWER_OPSYS:Q}
 
 BUILD_DIRS=		${WRKSRC}/src/interfaces/odbc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2005/12/05 20:51:10 rillig Exp $
+# $NetBSD: Makefile,v 1.175 2005/12/05 23:55:22 rillig Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--enable-module=most				\
 CONFIGURE_ARGS+=	--enable-rule=EAPI				\
 			--disable-module=ssl
 CONFIGURE_ARGS+=	--without-confadjust
-CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM=${APACHE_CUSTOM_CFLAGS:Q}
 CONFIGURE_ENV+=		EAPI_MM="${BUILDLINK_PREFIX.libmm}"
@@ -60,8 +60,8 @@ APACHE_USER?=		www
 APACHE_GROUP?=		www
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 
-CONFIGURE_ARGS+=	--server-uid=${APACHE_USER}
-CONFIGURE_ARGS+=	--server-gid=${APACHE_GROUP}
+CONFIGURE_ARGS+=	--server-uid=${APACHE_USER:Q}
+CONFIGURE_ARGS+=	--server-gid=${APACHE_GROUP:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=	perf-tuning suexec

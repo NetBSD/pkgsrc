@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:42 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 23:55:13 rillig Exp $
 #
 
 DISTNAME=	ogmtools-1.5
@@ -13,7 +13,7 @@ COMMENT=	Ogg Media files manipulation tools
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+=	--with-dvdread-includes=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-dvdread-includes=${BUILDLINK_DIR:Q}
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"

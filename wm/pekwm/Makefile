@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 20:51:09 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 23:55:21 rillig Exp $
 #
 
 DISTNAME=	pekwm-0.1.3
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
 CONFIGURE_ARGS+=	--enable-harbour
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 REPLACE_PERL=		data/scripts/pekwm_themeset.pl \
 			data/scripts/pekwm_ws_menu.pl

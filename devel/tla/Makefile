@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:08 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:06 rillig Exp $
 #
 
 DISTNAME=	tla-1.3.3
@@ -22,7 +22,7 @@ USE_TOOLS+=	gmake
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
-CONFIGURE_ARGS+= --prefix=${PREFIX}
+CONFIGURE_ARGS+= --prefix=${PREFIX:Q}
 CONFIGURE_ARGS+= --with-gnu-diff=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
 CONFIGURE_ARGS+= --with-gnu-diff3=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff3
 CONFIGURE_ARGS+= --with-gnu-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch

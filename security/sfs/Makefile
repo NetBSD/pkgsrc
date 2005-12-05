@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/08/23 11:48:51 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:18 rillig Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -14,8 +14,8 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-sfsuser=sfs
 CONFIGURE_ARGS+=	--with-sfsgroup=sfs
-CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-sfsdir=${SFS_ROOT}
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-sfsdir=${SFS_ROOT:Q}
 CONFIGURE_ARGS+=	--disable-uvfs
 
 USE_PKGINSTALL=		yes

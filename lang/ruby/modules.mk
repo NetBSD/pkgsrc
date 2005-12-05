@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.13 2005/12/05 20:50:27 rillig Exp $
+# $NetBSD: modules.mk,v 1.14 2005/12/05 23:55:10 rillig Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -31,7 +31,7 @@ CONFIGURE_ENV+=		RUBY=${RUBY:Q} RDOC=${RDOC:Q}
 
 RUBY_EXTCONF?=		extconf.rb
 INSTALL_TARGET?=	site-install
-CONFIGURE_ARGS+=	--with-opt-dir="${PREFIX}"
+CONFIGURE_ARGS+=	--with-opt-dir=${PREFIX:Q}
 RUBY_EXTCONF_CHECK?=	yes
 RUBY_EXTCONF_MAKEFILE?=	Makefile
 

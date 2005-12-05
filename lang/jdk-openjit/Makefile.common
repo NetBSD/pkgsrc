@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/12/05 23:55:10 rillig Exp $
 
 OPENJIT_VERSION=1.1.16
 
@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/java-vm.mk"
 
-CONFIGURE_ARGS+=--with-jdk=${PKG_JAVA_HOME}
+CONFIGURE_ARGS+=--with-jdk=${PKG_JAVA_HOME:Q}
 
 PLIST_SUBST+=	CLASSDIR=${CLASSDIR:Q} JRELIB=${JRELIB:Q} JAVADIR=${PKG_JAVA_HOME:C|^${PREFIX}/||}
 

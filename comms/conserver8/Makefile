@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/12 14:39:06 he Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 23:55:03 rillig Exp $
 #
 
 DISTNAME=	conserver-8.1.11
@@ -18,9 +18,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-master=${CONSERVER_DEFAULTHOST}
-CONFIGURE_ARGS+=	--with-port=${CONSERVER_DEFAULTPORT}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-master=${CONSERVER_DEFAULTHOST:Q}
+CONFIGURE_ARGS+=	--with-port=${CONSERVER_DEFAULTPORT:Q}
 CONFIGURE_ARGS+=	--with-regex
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--with-uds
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 . include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-openssl

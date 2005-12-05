@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2005/12/05 20:50:29 rillig Exp $
+# $NetBSD: Makefile,v 1.58 2005/12/05 23:55:10 rillig Exp $
 
 DISTNAME=	cyrus-imapd-2.2.12
 PKGREVISION=	2
@@ -30,14 +30,14 @@ BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 FILES_SUBST+=		CYRUS_USER=${CYRUS_USER:Q}
 FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP:Q}
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
-CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER:Q}
+CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP:Q}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=${VARBASE}/run
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
-CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ENV+=		ac_cv_lib_wrap_request_init=yes
 
@@ -66,7 +66,7 @@ CONFIGURE_ARGS+=	--with-krb=/usr
 .elif !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-auth=krb5
-CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
+CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE:Q}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
@@ -99,7 +99,7 @@ BUILD_DEFS+=		CYRUS_IDLE
     (${CYRUS_IDLE} != "no")
 PKG_FAIL_REASON+=	"CYRUS_IDLE must be poll, idled or no"
 .endif
-CONFIGURE_ARGS+=	--with-idle=${CYRUS_IDLE}
+CONFIGURE_ARGS+=	--with-idle=${CYRUS_IDLE:Q}
 .if ${CYRUS_IDLE} == "idled"
 PLIST_SUBST+=		IDLED=
 .else
