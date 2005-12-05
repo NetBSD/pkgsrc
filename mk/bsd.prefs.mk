@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.214 2005/12/02 17:08:49 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.215 2005/12/05 22:07:07 rillig Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -52,7 +52,7 @@ CUT=echo Unknown
 
 .if !defined(OPSYS)
 OPSYS!=			${UNAME} -s | tr -d /
-MAKEFLAGS+=		OPSYS=${OPSYS}
+MAKEFLAGS+=		OPSYS=${OPSYS:Q}
 .endif
 
 # The _CMD indirection allows code below to modify these values
@@ -61,12 +61,12 @@ MAKEFLAGS+=		OPSYS=${OPSYS}
 .if !defined(OS_VERSION)
 _OS_VERSION_CMD=	${UNAME} -r
 OS_VERSION=		${_OS_VERSION_CMD:sh}
-MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
+MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 .endif
 .if !defined(LOWER_OS_VERSION)
 _LOWER_OS_VERSION_CMD=	echo ${OS_VERSION} | tr 'A-Z' 'a-z'
 LOWER_OS_VERSION=	${_LOWER_OS_VERSION_CMD:sh}
-MAKEFLAGS+=		LOWER_OS_VERSION=${LOWER_OS_VERSION}
+MAKEFLAGS+=		LOWER_OS_VERSION=${LOWER_OS_VERSION:Q}
 .endif
 
 # Preload these for architectures not in all variations of bsd.own.mk,
@@ -111,14 +111,14 @@ LOWER_OPSYS?=		bsdi
 LOWER_OPSYS?=		darwin
 LOWER_ARCH!=		${UNAME} -p
 MACHINE_ARCH=		${LOWER_ARCH}
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_VENDOR?=		apple
 
 .elif ${OPSYS} == "DragonFly"
 LOWER_OPSYS?=		dragonfly
 LOWER_ARCH!=		${UNAME} -p
 MACHINE_ARCH=		${LOWER_ARCH}
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
 LOWER_VENDOR?=		pc
 
@@ -126,7 +126,7 @@ LOWER_VENDOR?=		pc
 LOWER_OPSYS?=		freebsd
 LOWER_ARCH!=		${UNAME} -p
 MACHINE_ARCH=		${LOWER_ARCH}
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
 .  if ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=		pc
@@ -159,7 +159,7 @@ LOWER_ARCH!=		${UNAME} -m | sed -e 's/i.86/i386/' -e 's/ppc/powerpc/'
 .  endif # !defined(LOWER_ARCH)
 .  if ${MACHINE_ARCH} == "unknown" || ${MACHINE_ARCH} == ""
 MACHINE_ARCH=		${LOWER_ARCH}
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 .  endif
 .  if exists(/etc/debian_version)
 LOWER_VENDOR?=		debian
@@ -176,7 +176,7 @@ LOWER_VENDOR?=          unknown
 
 .elif ${OPSYS} == "OSF1"
 LOWER_ARCH!=		${UNAME} -p
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 MACHINE_ARCH?=		${LOWER_ARCH}
 OS_VERSION:=		${OS_VERSION:C/^V//}
 LOWER_OPSYS?=		osf${OS_VERSION}
@@ -194,7 +194,7 @@ MACHINE_ARCH=		i386
 .    if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -p
 .    endif	# !defined(LOWER_ARCH)
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
 .  endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
@@ -208,7 +208,7 @@ LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
 LOWER_OS_VERSION:=	${LOWER_OS_VERSION}
 OS_VERSION:=		${OS_VERSION}
 
-MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
+MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS:Q}
 
 LOWER_VENDOR?=		# empty ("arch--opsys")
 LOWER_ARCH?=		${MACHINE_GNU_ARCH}
@@ -463,7 +463,7 @@ NO_WHOLE_ARCHIVE_FLAG?=	${_OPSYS_NO_WHOLE_ARCHIVE_FLAG}
 
 .if !defined(DIGEST)
 DIGEST:=		${LOCALBASE}/bin/digest
-MAKEFLAGS+=		DIGEST=${DIGEST}
+MAKEFLAGS+=		DIGEST=${DIGEST:Q}
 .endif
 
 # Only add the DIGEST_VERSION value to MAKEFLAGS when we know
@@ -475,7 +475,7 @@ MAKEFLAGS+=		DIGEST=${DIGEST}
 DIGEST_VERSION=		20010301
 .elif !defined(DIGEST_VERSION)
 DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
-MAKEFLAGS+=		DIGEST_VERSION=${DIGEST_VERSION}
+MAKEFLAGS+=		DIGEST_VERSION=${DIGEST_VERSION:Q}
 .endif
 
 # This is the package database directory for the default view.
@@ -500,7 +500,7 @@ LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
 .if !defined(PKGTOOLS_VERSION)
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
-MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
+MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION:Q}
 .endif
 
 # The binary pkg_install tools all need to consistently to refer to the
@@ -574,13 +574,13 @@ BUILD_DIR!=		cd ${.CURDIR} && ${PWD_CMD}
 .if defined(OBJHOSTNAME)
 .  if !defined(_HOSTNAME)
 _HOSTNAME!=		${UNAME} -n
-MAKEFLAGS+=		_HOSTNAME=${_HOSTNAME}
+MAKEFLAGS+=		_HOSTNAME=${_HOSTNAME:Q}
 .  endif
 WRKDIR_BASENAME?=	work.${_HOSTNAME:C|\..*||}
-MAKEFLAGS+=		OBJHOSTNAME=${OBJHOSTNAME}
+MAKEFLAGS+=		OBJHOSTNAME=${OBJHOSTNAME:Q}
 .elif defined(OBJMACHINE)
 WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
-MAKEFLAGS+=		OBJMACHINE=${OBJMACHINE}
+MAKEFLAGS+=		OBJMACHINE=${OBJMACHINE:Q}
 .else
 WRKDIR_BASENAME?=	work
 .endif

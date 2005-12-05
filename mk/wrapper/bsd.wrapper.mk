@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.38 2005/10/16 19:44:44 schwarz Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.39 2005/12/05 22:07:08 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -60,8 +60,8 @@ PREPEND_PATH+=		${WRAPPER_BINDIR}
 .if !empty(PHASES_AFTER_WRAPPER:M${PKG_PHASE})
 
 WRAPPER_DEBUG?=		yes
-CONFIGURE_ENV+=		WRAPPER_DEBUG="${WRAPPER_DEBUG}"
-MAKE_ENV+=		WRAPPER_DEBUG="${WRAPPER_DEBUG}"
+CONFIGURE_ENV+=		WRAPPER_DEBUG=${WRAPPER_DEBUG:Q}
+MAKE_ENV+=		WRAPPER_DEBUG=${WRAPPER_DEBUG:Q}
 SCRIPTS_ENV+=		WRAPPER_DEBUG="${WRAPPER_DEBUG}"
 
 # The caching code, which greatly speeds up the build process, doesn't
@@ -77,8 +77,8 @@ WRAPPER_UPDATE_CACHE=	no
 .    endif
 .  endfor
 .endif
-CONFIGURE_ENV+=		WRAPPER_UPDATE_CACHE="${WRAPPER_UPDATE_CACHE}"
-MAKE_ENV+=		WRAPPER_UPDATE_CACHE="${WRAPPER_UPDATE_CACHE}"
+CONFIGURE_ENV+=		WRAPPER_UPDATE_CACHE=${WRAPPER_UPDATE_CACHE:Q}
+MAKE_ENV+=		WRAPPER_UPDATE_CACHE=${WRAPPER_UPDATE_CACHE:Q}
 
 # Only do the (expensive) reordering step if we have reordering
 # transformations.

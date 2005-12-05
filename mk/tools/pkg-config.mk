@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config.mk,v 1.4 2005/10/01 14:30:15 jmmv Exp $
+# $NetBSD: pkg-config.mk,v 1.5 2005/12/05 22:07:08 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,10 +47,10 @@ TOOLS_SCRIPT.pkg-config=	\
 
 CONFIGURE_ENV+=	PKG_CONFIG=${TOOLS_CMD.pkg-config:Q}
 CONFIGURE_ENV+=	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q}
-CONFIGURE_ENV+=	PKG_CONFIG_LOG=${_PKG_CONFIG_LOG}
+CONFIGURE_ENV+=	PKG_CONFIG_LOG=${_PKG_CONFIG_LOG:Q}
 MAKE_ENV+=	PKG_CONFIG=${TOOLS_CMD.pkg-config:Q}
 MAKE_ENV+=	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q}
-MAKE_ENV+=	PKG_CONFIG_LOG=${_PKG_CONFIG_LOG}
+MAKE_ENV+=	PKG_CONFIG_LOG=${_PKG_CONFIG_LOG:Q}
 
 .if defined(PKG_DEVELOPER)
 post-build: pkgconfig-post-build
