@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2005/10/03 16:03:19 mrauch Exp $
+# $NetBSD: Makefile,v 1.72 2005/12/05 20:50:40 rillig Exp $
 
 DISTNAME=		openoffice-1.1.5
 CATEGORIES=		misc
@@ -21,7 +21,7 @@ BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 WRKSRC=			${WRKDIR}/OOo_1.1.5/config_office
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 USE_LANGUAGES+=		c c++
 
 .include "../../mk/bsd.prefs.mk"
@@ -45,8 +45,8 @@ TEMP?=			${WRKDIR}
 UNLIMIT_RESOURCES+=	datasize
 
 PLIST_SRC+=		PLIST.common
-PLIST_SUBST+=		OPENOFFICE_DLLSUFFIX=${OPENOFFICE_DLLSUFFIX}
-PLIST_SUBST+=		OPENOFFICE_VERSION=${OPENOFFICE_VERSION}
+PLIST_SUBST+=		OPENOFFICE_DLLSUFFIX=${OPENOFFICE_DLLSUFFIX:Q}
+PLIST_SUBST+=		OPENOFFICE_VERSION=${OPENOFFICE_VERSION:Q}
 .if exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC+=             ${PKGDIR}/PLIST.${OPSYS}
 . endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/10/14 21:45:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 20:51:17 rillig Exp $
 #
 
 DISTNAME=	gtksourceview-1.4.2
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake perl pkg-config
 
 PKGCONFIG_OVERRIDE=	gtksourceview-1.0.pc.in
 
-CONFIGURE_ARGS=		--disable-build-tests
+CONFIGURE_ARGS+=	--disable-build-tests
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "../../devel/gettext-lib/buildlink3.mk"

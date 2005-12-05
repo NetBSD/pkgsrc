@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/03 07:20:08 taca Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:07 rillig Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-subversion-${SVNVER}
 PKGREVISION=	1
@@ -9,7 +9,7 @@ COMMENT=	Ruby bindings for Subversion
 USE_RUBY_DIST_SUBDIR=	no
 REPLACE_RUBY_DIRS=	${WRKSRC}/tools
 
-CONFIGURE_ENV+=		RUBY=${RUBY}
+CONFIGURE_ENV+=		RUBY=${RUBY:Q}
 
 BUILD_TARGET=		swig-rb-lib swig-rb
 INSTALL_TARGET=		install-swig-rb

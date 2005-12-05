@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/04/20 12:03:25 kim Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:34 rillig Exp $
 
 MODNAME=		imap
-PKGREVISION=		# empty
 CATEGORIES+=		mail
 COMMENT=		PHP extension for IMAP (Internet Mailbox Access Protocol)
 
@@ -18,7 +17,7 @@ CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 # PHP_OPENSSL is set. For a self contained extension build like for
 # this package this is not the case of course.
 
-CONFIGURE_ENV+=		PHP_OPENSSL=${SSLBASE}
+CONFIGURE_ENV+=		PHP_OPENSSL=${SSLBASE:Q}
 
 .include "../../mail/imap-uw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/08 19:15:25 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:51:00 rillig Exp $
 #
 
 DISTNAME=	fdgw-20020130
@@ -15,7 +15,7 @@ _IMG_DST_DIR =	${PREFIX}/fdgw/${MACHINE_ARCH}
 ONLY_FOR_PLATFORM=	NetBSD-1.5.*-i386
 
 BUILD_TARGET=	dist-build
-MAKE_ENV+=	BSDSRCDIR="${BSDSRCDIR}"
+MAKE_ENV+=	BSDSRCDIR=${BSDSRCDIR:Q}
 
 pre-fetch:
 	@ ${ECHO} "";
@@ -50,7 +50,7 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(${X11BASE}/bin/lndir) && ${OPSYS} == "NetBSD"
-PKG_FAIL_REASON= "${PKGNAME} requires the 'lndir' command, and hence X11"
+PKG_FAIL_REASON+=	"${PKGNAME} requires the 'lndir' command, and hence X11"
 .endif
 
 # we need the NetBSD source tree.

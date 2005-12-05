@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/08/25 10:09:48 grant Exp $
+# $NetBSD: Makefile,v 1.51 2005/12/05 20:51:10 rillig Exp $
 
 DISTNAME=       analog-6.0
 CATEGORIES=	www
@@ -13,7 +13,7 @@ COMMENT=	Extremely fast program for analysing WWW logfiles
 
 WRKSRC=		${WRKDISTDIR}/src
 BUILD_TARGET=	analog
-MAKE_ENV+=	PREFIX=${PREFIX} SYSCONFDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=	PREFIX=${PREFIX:Q} SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 WRKDISTDIR=	${WRKDIR}/${DISTNAME}
 
 USE_PKGINSTALL=	yes
@@ -28,7 +28,7 @@ INSTALLATION_DIRS=	bin man/man1
 
 LIBS+=		-lm
 LIBS.SunOS+=	-lnsl -lsocket
-MAKE_ENV+=	LIBS=${LIBS:Q}
+MAKE_ENV+=	LIBS=${LIBS:M*:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDISTDIR}/analog ${PREFIX}/bin

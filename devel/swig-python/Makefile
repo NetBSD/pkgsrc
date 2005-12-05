@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:08 rillig Exp $
 
 PKGNAME=	swig-python-${SWIG_VERSION}
 PKGREVISION=	1
 COMMENT=	Simplified Wrapper and Interface Generator, Python runtime
 
-.include "../swig-build/Makefile.common"
+.include "../../devel/swig-build/Makefile.common"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	21 21pth 20 15
 

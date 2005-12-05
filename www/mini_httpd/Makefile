@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/09/07 02:15:12 reed Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:51:13 rillig Exp $
 
 DISTNAME=	mini_httpd-1.19
 PKGREVISION=	2
@@ -11,7 +11,7 @@ COMMENT=	Small, forking webserver with IPv6 and SSL support
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-MAKE_ENV+=	PKG_CFLAGS="${CFLAGS}"
+MAKE_ENV+=	PKG_CFLAGS=${CFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

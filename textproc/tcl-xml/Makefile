@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/09 01:22:58 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:51:08 rillig Exp $
 #
 
 DISTNAME=	TclXML-1.2
@@ -15,8 +15,8 @@ DEPENDS+=       tcl>=8.3.2:../../lang/tcl
 # old name for this package...
 CONFLICTS+=	TclXML-[0-9]*
 
-NO_CONFIGURE=
-NO_BUILD=
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl/TclXML

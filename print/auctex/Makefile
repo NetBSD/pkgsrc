@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/10/17 16:17:22 tonio Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:52 rillig Exp $
 
 DISTNAME=		auctex-11.81
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -24,12 +24,12 @@ CONFIGURE_ARGS+=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp||}
 .endif
 CONFIGURE_ARGS+=	--disable-preview
 
-MAKEFLAGS+=		EMACS=${EMACS_BIN}
+MAKEFLAGS+=		EMACS=${EMACS_BIN:Q}
 
 LISPDIR=		${EMACS_LISPPREFIX}
 INFO_FILES=	auctex.info
 
-PLIST_SUBST+=		INFODIR=${INFODIR}
+PLIST_SUBST+=		INFODIR=${INFODIR:Q}
 MESSAGE_SUBST+=		LISPDIR=${LISPDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2005/09/28 20:52:25 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2005/12/05 20:50:51 rillig Exp $
 
 DISTNAME=	xpkgwedge-1.14
 CATEGORIES=	pkgtools devel x11
@@ -52,12 +52,12 @@ do-build:
 .if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg) || \
     defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
 X11TYPEFLAGS?=		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
-SUBST_CLASSES=		fix
+SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch
 SUBST_FILES.fix=	xpkgwedge.def
 SUBST_SED.fix=		-e "s|@X11TYPEFLAGS@|${X11TYPEFLAGS}|"
 .else # X11_TYPE == XFree86 || X11_TYPE == xorg.
-SUBST_CLASSES=		foo
+SUBST_CLASSES+=		foo
 SUBST_STAGE.foo=	post-patch
 SUBST_FILES.foo=	xpkgwedge.def
 SUBST_SED.foo=		-e "s|\#define ExtraLoadFlags @X11TYPEFLAGS@||"

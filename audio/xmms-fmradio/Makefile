@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:39 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:49:50 rillig Exp $
 #
 
 DISTNAME=		xmms-FMRadio-1.4
@@ -12,7 +12,7 @@ MAINTAINER=		jmcneill@NetBSD.org
 HOMEPAGE=		http://silicone.free.fr/xmms-FMRadio/
 COMMENT=		Use a Radio Tuner card in XMMS
 
-ONLY_FOR_PLATFORM=      NetBSD-1.5Z[A-Z]-*-* NetBSD-1.6*-* NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=      NetBSD-1.5Z[A-Z]-* NetBSD-1.6*-* NetBSD-[2-9]*-*
 
 BINOWN?=		${ROOT_USER}
 BINGRP?=		${ROOT_GROUP}

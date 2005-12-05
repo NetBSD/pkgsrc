@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/03 21:40:13 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:10 rillig Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -23,7 +23,7 @@ BUILD_TARGET=		arnold
 
 SHAREDIR=		${PREFIX}/share/arnold
 DOCDIR=			${PREFIX}/share/doc/arnold
-MAKE_ENV+=		SHAREDIR=${SHAREDIR}
+MAKE_ENV+=		SHAREDIR=${SHAREDIR:Q}
 INSTALLATION_DIRS=	bin
 
 do-install:

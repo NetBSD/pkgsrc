@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:44 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:01 rillig Exp $
 
 PKGNAME=		unixodbc-ODBCConfig-${ODBC_BASE_VERS}
 PKGREVISION=		4
@@ -13,9 +13,9 @@ CONFIGURE_ARGS+=	--with-extra-libs="${_EXTRA_LIBS}"
 CONFIGURE_ARGS+=	--disable-rpath
 
 CONFIGURE_ENV+=		UIC="${QTDIR}/bin/uic"
-CONFIGURE_ENV+=		USER_LDFLAGS="${LDFLAGS}"
-CONFIGURE_ENV+=		ac_cv_have_x="${_AC_CV_HAVE_X}"
-CONFIGURE_ENV+=		ac_cv_have_qt="${_AC_CV_HAVE_QT}"
+CONFIGURE_ENV+=		USER_LDFLAGS=${LDFLAGS:M*:Q}
+CONFIGURE_ENV+=		ac_cv_have_x=${_AC_CV_HAVE_X:Q}
+CONFIGURE_ENV+=		ac_cv_have_qt=${_AC_CV_HAVE_QT:Q}
 
 MAKE_FLAGS+=		ODBCConfig_DEPENDENCIES=""
 

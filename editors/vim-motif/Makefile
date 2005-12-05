@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2005/07/19 10:18:59 grant Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:10 rillig Exp $
 
 PKGNAME=		vim-motif-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
 
 COMMENT=		Vim editor (vi clone) with X11 Motif GUI
 
-.include		"../vim-share/Makefile.common"
+.include "../../editors/vim-share/Makefile.common"
 
 DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../editors/vim-share
 CONFLICTS+=		vim-[0-9]* vim-gtk-[0-9]* vim-gtk2-[0-9]*
@@ -14,8 +14,8 @@ CONFLICTS+=		vim-xaw-[0-9]* vim-kde-[0-9]*
 CONFIGURE_ARGS+=	--enable-gui=motif
 CONFIGURE_ARGS+=	--with-tlib=ncurses
 
-CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
-MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
+CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
+MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 
 BUILD_TARGET=		vim
 INSTALL_TARGET=		installvimbin

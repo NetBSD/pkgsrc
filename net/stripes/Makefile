@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:49 rillig Exp $
 #
 
 DISTNAME=		stripes-2.1
@@ -14,7 +14,7 @@ DEPENDS+=		p5-Net-Telnet>=3.02:../../net/p5-Net-Telnet
 
 PKG_SYSCONFSUBDIR?=	httpd
 BUILD_TARGET=		all
-MAKE_FLAGS+=		DEST=${PREFIX} PERL=${PERL5} \
+MAKE_FLAGS+=		DEST=${PREFIX:Q} PERL=${PERL5:Q} \
 			CONFIGFILE=${PKG_SYSCONFDIR}/lg.conf
 
 USE_TOOLS+=		perl:run

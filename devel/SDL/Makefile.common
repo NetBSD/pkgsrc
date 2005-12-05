@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/09/07 10:15:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/12/05 20:50:01 rillig Exp $
 
 DISTNAME=	SDL-1.2.9
 CATEGORIES=	devel games
@@ -39,7 +39,7 @@ MAKE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
 # finding various libraries.  This ensure that any unusual -Wl,-R options
 # are noted correctly in the generated sdl-config.
 #
-CONFIGURE_ENV+=		SYSTEM_LIBS="${LDFLAGS}"
+CONFIGURE_ENV+=		SYSTEM_LIBS=${LDFLAGS:M*:Q}
 
 # buildlink passthru the directories required for the Cocoa framework
 # on Darwin if they exist.
@@ -55,7 +55,7 @@ BUILDLINK_PASSTHRU_DIRS+=	${_dir_}
 .include "../../mk/ossaudio.buildlink3.mk"
 .  if defined(HAVE_OSS) && ${HAVE_OSS} == "YES"
 AM_CFLAGS=		-D_PATH_DEV_DSP="\"${DEVOSSAUDIO}\""
-MAKE_ENV+=		AM_CFLAGS="${AM_CFLAGS}"
+MAKE_ENV+=		AM_CFLAGS=${AM_CFLAGS:Q}
 .endif
 
 # Irix comes with GL, which works fine for SDL

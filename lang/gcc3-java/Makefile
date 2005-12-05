@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/16 06:58:00 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:25 rillig Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-java-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - Java compiler
@@ -56,6 +56,6 @@ do-install:
 .  if ${MACHINE_ARCH} == "alpha"
 CONFIG_CFLAGS=		${CFLAGS:C/-O[0-9]*//g}
 CONFIG_CPPFLAGS=	${CPPFLAGS:C/-O[0-9]*//g}
-CONFIGURE_ENV+=		CFLAGS="${CONFIG_CFLAGS}" CPPFLAGS="${CONFIG_CPPFLAGS}"
+CONFIGURE_ENV+=		CFLAGS=${CONFIG_CFLAGS:Q} CPPFLAGS=${CONFIG_CPPFLAGS:Q}
 .  endif
 .endif

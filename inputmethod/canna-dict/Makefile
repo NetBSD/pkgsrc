@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2005/07/19 10:17:17 grant Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:23 rillig Exp $
 #
-.include "../canna/Makefile.common"
+.include "../../inputmethod/canna/Makefile.common"
 
 CANNA_MODULE=	dict
 
@@ -32,7 +32,7 @@ do-build:
 do-install:
 	@cd ${WRKSRC}/dic/ideo; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
 
-.include "../canna/Makefile.include"
+.include "../../inputmethod/canna/Makefile.include"
 
 # Need to set this here _after_ bsd.pkg.mk
 PREFIX=		${IMDICTDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/11/05 10:30:06 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:25 rillig Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -45,7 +45,7 @@ AS_VERSION!=	${AS} --version | ${AWK} '{	\
 	}'
 USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
 .    endif
-MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS}
+MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS:Q}
 .  endif
 .endif
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
@@ -71,14 +71,14 @@ ALT_GCC_RTS!=	${ALT_GCC} --print-file-name=adalib
 .        if !empty(ALT_GCC_RTS)
 RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
 .        else
-PKG_SKIP_REASON=	"${ALT_GCC} does not appear to be an Ada compiler"
+PKG_SKIP_REASON+=	"${ALT_GCC} does not appear to be an Ada compiler"
 .        endif
 .	else
-PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
+PKG_SKIP_REASON+=	"Missing bootstrap Ada compiler"
 .	endif
 .endif
 .if !defined(USE_GCC34) && !defined(ALT_GCC)
-PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified"
+PKG_SKIP_REASON+=	"An Ada bootstrap compiler must be specified"
 .endif
 
 # Make location overridable, to allow ping-pong bootstraps.
@@ -94,9 +94,9 @@ GCC_PLATFORM=		${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 GCC_ARCHSUBDIR=		${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=		${PREFIX}/${GCC_ARCHSUBDIR}
-PLIST_SUBST+=		GCC_SUBPREFIX=${GCC_SUBPREFIX}
-FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
-FILES_SUBST+=		PKGNAME=${PKGNAME}
+PLIST_SUBST+=		GCC_SUBPREFIX=${GCC_SUBPREFIX:Q}
+FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX:Q}
+FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 PTHREAD_OPTS+=		require native

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:18 rillig Exp $
 
 DISTNAME=	xbomb-2.1a
 CATEGORIES=	games x11
@@ -13,7 +13,7 @@ COMMENT=	Square, hexagonal, and triangual minesweeper clone
 
 USE_TOOLS+=		gmake
 BUILD_TARGET=		xbomb
-MAKE_ENV+=		SCORE_PATH="${SCORE_PATH}"
+MAKE_ENV+=		SCORE_PATH=${SCORE_PATH:Q}
 
 SCORE_PATH=	${VARBASE}/games/xbomb
 SCORE_USER=	games
@@ -21,7 +21,7 @@ SCORE_GROUP=	games
 PKG_USERS=	${SCORE_USER}:${SCORE_GROUP}
 PKG_GROUPS=	${SCORE_GROUP}
 
-PLIST_SUBST+=	SCORE_PATH=${SCORE_PATH}
+PLIST_SUBST+=	SCORE_PATH=${SCORE_PATH:Q}
 PLIST_SUBST+=	GAME_DIR="${INSTALL} -d -o ${SCORE_USER} -g ${SCORE_GROUP} -m 775"
 
 .include "../../mk/x11.buildlink3.mk"

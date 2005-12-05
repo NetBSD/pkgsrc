@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/09/28 20:52:24 rillig Exp $
+# $NetBSD: Makefile,v 1.59 2005/12/05 20:50:34 rillig Exp $
 
 DISTNAME=		nmh-1.0.4
 PKGREVISION=		6
@@ -33,18 +33,18 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-nmh-pop
 CONFIGURE_ARGS+=	--with-mts=${NMH_MTA}
 
-.ifdef NMH_EDITOR
+.if defined(NMH_EDITOR)
 CONFIGURE_ARGS+=	--with-editor=${NMH_EDITOR}
 .endif
 
-.ifdef NMH_PAGER
+.if defined(NMH_PAGER)
 CONFIGURE_ARGS+=	--with-pager=${NMH_PAGER}
 .endif
 
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=	yes
 .if ${OPSYS} == "NetBSD"
-LIBS=			-lroken -lcrypt -lcom_err
+LIBS+=			-lroken -lcrypt -lcom_err
 .endif
 CONFIGURE_ARGS+=	--with-krb4
 .else
@@ -87,7 +87,6 @@ CONF_FILES=		# empty
 			tmac.h
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-.undef f
 
 # This hopefully makes sure the permissions and ownership are right.
 pre-install:

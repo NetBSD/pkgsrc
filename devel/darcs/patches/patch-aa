@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 2005/12/05 20:50:03 rillig Exp $
+
 *** GNUmakefile.orig	Sun Nov 13 22:28:27 2005
 --- GNUmakefile	Tue Nov 22 12:54:49 2005
 ***************

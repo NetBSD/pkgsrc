@@ -1,7 +1,7 @@
-# $NetBSD: vars.mk,v 1.1 2005/04/03 21:23:15 jdolecek Exp $
+# $NetBSD: vars.mk,v 1.2 2005/12/05 20:50:12 rillig Exp $
 
-.ifndef SUSE_VARS_MK
-SUSE_VARS_MK=1
+.if !defined(SUSE_VARS_MK)
+SUSE_VARS_MK=	# defined
 
 SUSE_VERSION=		7.3
 SUSE_DIR_PREFIX=	suse

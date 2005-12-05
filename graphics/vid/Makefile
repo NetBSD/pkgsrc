@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:59 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:23 rillig Exp $
 #
 
 DISTNAME=	vid-1.0.1
@@ -14,7 +14,7 @@ BUILD_TARGET=	vid
 
 
 DOCDIR=		share/doc/${PKGBASE}
-PLIST_SUBST+=	DOCDIR=${DOCDIR}
+PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/06/27 14:08:15 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/05 20:51:18 rillig Exp $
 
 PKGVER=		2.1.30
 DISTNAME=	openmotif${PKGVER}
@@ -32,7 +32,7 @@ USE_TOOLS+=		tbl
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
-FILES_SUBST+=		X11BASE=${X11BASE}
+FILES_SUBST+=		X11BASE=${X11BASE:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

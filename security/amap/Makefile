@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:31 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 20:50:54 rillig Exp $
 #
 
 DISTNAME=       amap-5.0
@@ -22,7 +22,7 @@ CONF_FILES=	${EGDIR}/appdefs.resp ${PKG_SYSCONFDIR}/appdefs.resp
 CONF_FILES+=	${EGDIR}/appdefs.rpc ${PKG_SYSCONFDIR}/appdefs.rpc
 CONF_FILES+=	${EGDIR}/appdefs.trig ${PKG_SYSCONFDIR}/appdefs.trig
 
-SUBST_CLASSES=		conf
+SUBST_CLASSES+=		conf
 SUBST_FILES.conf=	configure
 SUBST_STAGE.conf=	pre-configure
 SUBST_SED.conf=		-e 's|@PREFIX@|${PREFIX}|g' \

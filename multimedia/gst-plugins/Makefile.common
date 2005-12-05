@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/10/12 21:54:04 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/12/05 20:50:41 rillig Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.11
@@ -129,7 +129,6 @@ CONFIGURE_ENV+=		have_func=no
 		xvideo
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
-.undef driver
 
 # A package building a single plugin of gst-plugins has to include this
 # file and define the following variables:

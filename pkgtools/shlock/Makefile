@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/08 21:40:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:51 rillig Exp $
 #
 
 DISTNAME=	shlock-20020114
@@ -12,14 +12,14 @@ COMMENT=	Shell utility to perform dot-locking
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	#empty
-NO_CHECKSUM=	#defined
+NO_CHECKSUM=	yes
 MANCOMPRESSED_IF_MANZ=	yes
 PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
 MAKE_ENV+=	BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/man
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
-MAKE_ENV+=	MANOWN=${BINOWN} MANGRP=${BINGRP}
+MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
+MAKE_ENV+=	MANOWN=${BINOWN:Q} MANGRP=${BINGRP:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

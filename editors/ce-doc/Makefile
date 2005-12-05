@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 20:52:20 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:09 rillig Exp $
 #
 
-.include "../ce/Makefile.common"
+.include "../../editors/ce/Makefile.common"
 
 PKGNAME=		ce-doc-${VERSION}
 COMMENT+=		, documentation

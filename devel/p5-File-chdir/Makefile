@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/22 16:47:39 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 20:50:06 rillig Exp $
 #
 
 DISTNAME=	File-chdir-0.06
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=        ${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSCHWERN/}
 
-MAINTAINER=	sommerfeld@netbsd.org
+MAINTAINER=	sommerfeld@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-chdir/
 COMMENT=	Perl module with a more sensible way to change directories
 

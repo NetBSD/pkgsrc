@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/22 20:07:57 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:10 rillig Exp $
 
 DISTNAME=	atari800-1.3.6
 CATEGORIES=	emulators
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 .include "options.mk"
 
 # override HOME to avoid picking up a bad ${HOME}/.atari800 during the build
-MAKE_FLAGS+=	HOME=${WRKSRC}
+MAKE_FLAGS+=	HOME=${WRKSRC:Q}
 
 post-extract:
 	@cd ${WRKDIR} && ${LOCALBASE}/bin/unzip -Lqo ${DISTDIR}/xf25.zip

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/09 09:17:50 wennmach Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:39 rillig Exp $
 
 DISTNAME=	jitterbug-1.6.2
 PKGREVISION=	1
@@ -49,11 +49,11 @@ JB_FQHOSTNAME=	${JB_LONGNAME}
 JB_EMAIL?=	${JB_LOCALMAIL}@${JB_FQHOSTNAME}
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-MESSAGE_SUBST+=	JB_USER=${JB_USER}		\
-		JB_PACKAGE=${JB_PACKAGE}	\
-		JB_LOCALMAIL=${JB_LOCALMAIL}
+MESSAGE_SUBST+=	JB_USER=${JB_USER:Q}		\
+		JB_PACKAGE=${JB_PACKAGE:Q}	\
+		JB_LOCALMAIL=${JB_LOCALMAIL:Q}
 
 pre-extract:
 	@(if [ "X${JB_HOSTNAME}" = "X${JB_LONGNAME}" ]; then                  \

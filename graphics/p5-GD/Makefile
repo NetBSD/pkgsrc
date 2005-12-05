@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/11/24 19:02:52 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:21 rillig Exp $
 
 DISTNAME=	GD-2.30
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ BUILDLINK_DEPENDS.gd+=	gd>=2.0.28
 PERL5_PACKLIST=		auto/GD/.packlist
 PERL5_OPTIONS+=		threads
 
-MAKE_ENV+=		GD_LIBS="${LDFLAGS}"
+MAKE_ENV+=		GD_LIBS=${LDFLAGS:M*:Q}
 MAKE_PARAMS+=		-lib_gd_path=${BUILDLINK_PREFIX.gd}
 
 .include "../../graphics/gd/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/10 17:18:55 reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 20:51:15 rillig Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-imake-${XF_VER}
@@ -35,7 +35,6 @@ post-extract:
 .for F in ${SYSTEMS}
 	@${MV} ${WRKSRC}/config/cf/${F}.cf ${WRKSRC}/config/cf/${F}.cf.in
 .endfor
-.undef F
 
 pre-configure:
 .for F in ${SYSTEMS}
@@ -45,7 +44,6 @@ pre-configure:
 		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g" \
 		${WRKSRC}/config/cf/${F}.cf.in > ${WRKSRC}/config/cf/${F}.cf
 .endfor
-.undef F
 
 do-build:
 	@${TOUCH} ${WRKSRC}/config/cf/version.def

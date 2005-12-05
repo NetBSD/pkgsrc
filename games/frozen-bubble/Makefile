@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/11/17 15:21:57 tonio Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:16 rillig Exp $
 #
 
 DISTNAME=	frozen-bubble-1.0.0
@@ -15,7 +15,7 @@ DEPENDS+=	p5-SDL>=1.19.2:../../devel/p5-SDL
 
 USE_TOOLS+=	gmake perl:run
 
-MAKE_ENV+=	PERL5="${PERL5}" CP="${CP}" INSTALLDIRS="vendor"
+MAKE_ENV+=	PERL5=${PERL5:Q} CP=${CP:Q} INSTALLDIRS="vendor"
 
 REPLACE_PERL=	frozen-bubble*
 PERL5_PACKLIST=	auto/fb_c_stuff/.packlist

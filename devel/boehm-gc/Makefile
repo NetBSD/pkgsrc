@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/10/04 16:44:13 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2005/12/05 20:50:02 rillig Exp $
 
 DISTNAME=	gc6.6
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-cplusplus
 INSTALLATION_DIRS=	man/man3
 
-MAKE_ENV+=		COPTS=${CFLAGS:Q}
+MAKE_ENV+=		COPTS=${CFLAGS:M*:Q}
 
 #TEST_TARGET=		check
 

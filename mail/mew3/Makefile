@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/28 04:25:30 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:34 rillig Exp $
 
 DISTNAME=	mew-3.3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -19,12 +19,12 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 
 MEW_CONTRIB_DIR=${EMACS_LISPPREFIX}/mew/contrib
 
-MAKE_FLAGS+=	prefix=${PREFIX}
-MAKE_FLAGS+=	EMACS=${EMACS_BIN}
+MAKE_FLAGS+=	prefix=${PREFIX:Q}
+MAKE_FLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_FLAGS+=	elispdir=${EMACS_LISPPREFIX}/mew
 MAKE_FLAGS+=	etcdir=${PREFIX}/share/mew
 
-SUBST_CLASSES=		local
+SUBST_CLASSES+=		local
 SUBST_STAGE.local=	post-configure
 SUBST_FILES.local=	Makefile bin/configure info/Makefile
 SUBST_SED.local=	-e 's|/usr/local|${PREFIX}|g'

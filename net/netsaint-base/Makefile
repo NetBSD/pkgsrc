@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/09/27 16:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:47 rillig Exp $
 #
 
 DISTNAME=		netsaint-0.0.7
@@ -21,7 +21,6 @@ OWN_DIRS_PERMS=
 		/var/run/netsaint /var/run/netsaint/rw
 OWN_DIRS_PERMS+=	${dir} ${NETSAINT_USER} ${NETSAINT_GROUP} 0755
 .endfor
-.undef dir
 
 INSTALL_TARGET=		install install-config
 

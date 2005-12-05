@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/05/22 20:08:35 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/05 20:51:08 rillig Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -14,7 +14,7 @@ COMMENT=		Open Document Cataloging Project
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS=		docbook-xml>=4.2nb7:../../textproc/docbook-xml
+DEPENDS+=		docbook-xml>=4.2nb7:../../textproc/docbook-xml
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
@@ -22,7 +22,7 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS= 	--localstatedir=${SCROLLKEEPER_DATADIR}
+CONFIGURE_ARGS+= 	--localstatedir=${SCROLLKEEPER_DATADIR}
 CONFIGURE_ARGS+=	--sharedstatedir=${SCROLLKEEPER_DATADIR}
 CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+= 	--with-partial-db-dir=db
@@ -41,8 +41,8 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 SCROLLKEEPER_DATADIR=	${PREFIX}/libdata/scrollkeeper
 SCROLLKEEPER_REBUILDDB=	${PREFIX}/bin/scrollkeeper-rebuilddb
-FILES_SUBST+=		SCROLLKEEPER_DATADIR="${SCROLLKEEPER_DATADIR}"
-FILES_SUBST+=		SCROLLKEEPER_REBUILDDB="${SCROLLKEEPER_REBUILDDB}"
+FILES_SUBST+=		SCROLLKEEPER_DATADIR=${SCROLLKEEPER_DATADIR:Q}
+FILES_SUBST+=		SCROLLKEEPER_REBUILDDB=${SCROLLKEEPER_REBUILDDB:Q}
 
 EGDIR=		${PREFIX}/share/examples/scrollkeeper
 CONF_FILES=	${EGDIR}/scrollkeeper.conf ${PKG_SYSCONFDIR}/scrollkeeper.conf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:14:35 martti Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:33 rillig Exp $
 
 DISTNAME=	squirrelmail-1.4.5
 PKGNAME=	ja-${DISTNAME}
@@ -40,7 +40,7 @@ ATTACHMENTS_DIR=	${DATADIR}/attachments
 USER_PREFS_DIR=		${DATADIR}/data
 
 MESSAGE_SUBST+=		SMDIR=${SMDIR}
-FILES_SUBST+=		SMDIR=${SMDIR}
+FILES_SUBST+=		SMDIR=${SMDIR:Q}
 
 CONF_FILES=	${SMDIR}/config/config_default.php ${SMDIR}/config/config.php
 CONF_FILES+=	${SMDIR}/data/default_pref ${DATADIR}/data/default_pref

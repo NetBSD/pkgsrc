@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2005/12/04 22:12:07 salo Exp $
+# $NetBSD: Makefile,v 1.60 2005/12/05 20:50:47 rillig Exp $
 
 DISTNAME=		lftp-3.3.5
 CATEGORIES=		net
@@ -29,7 +29,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-modules
 
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 EGDIR=			${PREFIX}/share/examples/lftp
 CONF_FILES=		${EGDIR}/lftp.conf.default ${PKG_SYSCONFDIR}/lftp.conf

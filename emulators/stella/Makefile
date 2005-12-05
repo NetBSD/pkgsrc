@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:50:12 rillig Exp $
 
 STELLA_VERSION=	1.4.1
 DISTNAME=	stella-${STELLA_VERSION}-src
@@ -27,7 +27,7 @@ BUILD_TARGET=	linux
 GCC_REQD+=	3.0
 .endif
 
-MAKE_ENV=	CXXFLAGS="${CXXFLAGS} -fno-rtti"
+MAKE_ENV+=	CXXFLAGS=${CXXFLAGS:Q}\ -fno-rtti
 
 DOCDIR=${PREFIX}/share/doc/html/stella
 DATADIR=${PREFIX}/share/stella

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:46 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:04 rillig Exp $
 #
 
 DISTNAME=	jam-2.5
@@ -13,7 +13,7 @@ COMMENT=	Program construction tool, like make(1)
 
 CONFLICTS=	acunia-jam-[0-9]*
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}nb1
 WRKSRC=		${WRKDIR}
 
 DOCDIR=		share/doc/${PKGBASE}

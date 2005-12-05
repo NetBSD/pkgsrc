@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/24 14:33:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:51:07 rillig Exp $
 #
 
 DISTNAME=	PyXML-0.8.4
@@ -14,7 +14,7 @@ CONFLICTS+=	PyXML-[0-9]*
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
-BUILDLINK_DEPENDS.expat= expat>=1.95.6
+BUILDLINK_DEPENDS.expat+=	expat>=1.95.6
 PYSETUPBUILDARGS+=	--with-libexpat=${BUILDLINK_DIR}
 PYSETUPBUILDARGS+=	--ldflags="${EXPAT_LDFLAGS}"
 EXPAT_LDFLAGS=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.expat}/lib
@@ -29,7 +29,7 @@ post-extract:
 .endfor
 
 PYTHON_PATCH_SCRIPTS=	${PYXML_SCRIPTS:S/$/${PYVERSSUFFIX}/g}
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/python/extension.mk"

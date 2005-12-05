@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/06 13:47:41 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/12/05 20:50:20 rillig Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 HICOLOR_ICON_THEME_BUILDLINK3_MK:=	${HICOLOR_ICON_THEME_BUILDLINK3_MK}+
@@ -22,7 +22,6 @@ dirs!=	${GREP} "^@dirrm" ${.CURDIR}/../../graphics/hicolor-icon-theme/PLIST | \
 PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
 			{ print "@comment in hicolor-icon-theme: " $$0; next; }
 .  endfor
-.  undef d
 .  undef dirs
 .endif	# HICOLOR_ICON_THEME_BUILDLINK3_MK
 

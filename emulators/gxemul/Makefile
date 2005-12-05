@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/26 19:03:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:11 rillig Exp $
 #
 
 DISTNAME=	gxemul-0.3.7
@@ -23,7 +23,7 @@ do-install:
 .for f in README HISTORY BUGS TODO RELEASE LICENSE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/${PKGBASE}
 .endfor
-	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${PREFIX}/share/doc/${PKGBASE} 
+	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${PREFIX}/share/doc/${PKGBASE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gxemul
 PKG_SUPPORTED_OPTIONS=	x11
@@ -33,7 +33,7 @@ PKG_SUGGESTED_OPTIONS=	x11
 
 .if !empty(PKG_OPTIONS:Mx11)
 GLOBAL_LDFLAGS=		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
-SUBST_CLASSES=		x11
+SUBST_CLASSES+=		x11
 SUBST_STAGE.x11=	post-patch
 SUBST_FILES.x11=	configure
 SUBST_SED.x11=		-e "s|-L/usr/X11R6/lib|${GLOBAL_LDFLAGS}|g" \

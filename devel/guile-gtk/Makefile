@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/09/28 20:52:19 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:50:04 rillig Exp $
 #
 
 DISTNAME=		guile-gtk-0.40.91
@@ -12,7 +12,7 @@ COMMENT=		Library to make GTK 1.2 accessible from guile
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 
 # Skip glade, because it pulls in gnome-libs.
 # Later, make a new package for just the glade parts,

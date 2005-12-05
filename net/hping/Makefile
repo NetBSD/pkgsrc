@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/13 14:18:22 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:46 rillig Exp $
 #
 
 DISTNAME=		hping2.0.0-rc2
@@ -13,8 +13,8 @@ COMMENT=		Traceroute and ping using TCP and UDP as well as ICMP
 WRKSRC=			${WRKDIR}/hping2-rc2
 HAS_CONFIGURE=		YES
 MANPATH=		${PREFIX}/man
-CONFIGURE_ENV+=		MANPATH="${MANPATH}"
-NOT_FOR_PLATFORM=	NetBSD-0.* NetBSD-1.[0-4]*
+CONFIGURE_ENV+=		MANPATH=${MANPATH:Q}
+NOT_FOR_PLATFORM=	NetBSD-0.*-* NetBSD-1.[0-4]*-*
 
 BINMODE=		4755
 INSTALLATION_DIRS=	man/man8 sbin

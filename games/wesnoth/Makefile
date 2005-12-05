@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/10/20 10:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:18 rillig Exp $
 
 DISTNAME=	wesnoth-1.0.1
 CATEGORIES=	games
@@ -14,8 +14,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 UNLIMIT_RESOURCES+=	datasize
 
-BUILDLINK_DEPENDS.SDL=	SDL>=1.2.7
-BUILDLINK_DEPENDS.SDL_mixer=	SDL_mixer>=1.2.5nb3
+BUILDLINK_DEPENDS.SDL+=		SDL>=1.2.7
+BUILDLINK_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

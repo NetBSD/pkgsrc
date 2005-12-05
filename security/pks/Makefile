@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/10/23 19:59:54 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:58 rillig Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	3
@@ -35,8 +35,8 @@ EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/pksd.conf ${PKG_SYSCONFDIR}/pksd.conf
 RCD_SCRIPTS=	pksd
 
-FILES_SUBST+=	PKS_USER=${PKS_USER}
-FILES_SUBST+=	PKS_GROUP=${PKS_GROUP}
+FILES_SUBST+=	PKS_USER=${PKS_USER:Q}
+FILES_SUBST+=	PKS_GROUP=${PKS_GROUP:Q}
 
 OWN_DIRS_PERMS+=	${PKS_HOME} ${PKS_USER} ${PKS_GROUP} 0770
 OWN_DIRS_PERMS+=	${PKS_HOME}/db ${PKS_USER} ${PKS_GROUP} 0770
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--localstatedir=${PKS_HOME}
 #
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 
-SUBST_CLASSES=		paths
+SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	pks-commands.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/01/23 15:02:07 agc Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/12/05 20:51:03 rillig Exp $
 
 DISTNAME=	rus-ispell-0.99f5
 CATEGORIES=	textproc
@@ -14,6 +14,6 @@ PATCHDIR=	${.CURDIR}/../../textproc/ispell-russian/patches
 DISTINFO_FILE=	${.CURDIR}/../../textproc/ispell-russian/distinfo
 
 WRKSRC=		${WRKDIR}
-MAKE_ENV+=	CAT=${CAT} RM=${RM} SED=${SED} TR=${TR} UNIQ="uniq"
+MAKE_ENV+=	CAT=${CAT:Q} RM=${RM:Q} SED=${SED:Q} TR=${TR:Q} UNIQ="uniq"
 
 .include "../../mk/bsd.pkg.mk"

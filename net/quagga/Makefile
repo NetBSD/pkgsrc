@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:48 rillig Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -39,7 +39,6 @@ PKG_USERS=	quagga:quagga
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/quagga/log_syslog.conf \
 			${PKG_SYSCONFDIR}/${_file_} quagga quagga 0600
 .endfor
-.undef _file_
 
 BUILD_DEFS+=			USE_ZEBRA_VTYSH USE_ZEBRA_OSPF_OPAQUELSA
 USE_ZEBRA_VTYSH?=		YES
@@ -68,7 +67,6 @@ RCD_SCRIPTS+=		ospf6d ripngd
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/quagga/log_syslog.conf \
 			${PKG_SYSCONFDIR}/${_file_} quagga quagga 0600
 .endfor
-.undef _file_
 .else
 CONFIGURE_ARGS+=	--disable-ospf6d
 CONFIGURE_ARGS+=	--disable-ripngd

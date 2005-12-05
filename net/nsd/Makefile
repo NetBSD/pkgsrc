@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/11/06 16:36:48 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:47 rillig Exp $
 
 DISTNAME=	nsd-2.2.0
 CATEGORIES=	net
@@ -16,7 +16,7 @@ BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=--enable-bind8-stats
 CONFIGURE_ARGS+=--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 .if !defined(USE_INET6)

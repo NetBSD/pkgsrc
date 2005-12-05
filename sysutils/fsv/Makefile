@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/24 21:15:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:51:00 rillig Exp $
 #
 
 DISTNAME=	fsv-0.9
@@ -12,7 +12,7 @@ COMMENT=	3D filesystem visualizer
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		file gmake
-CONFIGURE_ENV+=		FILE_CMD="${TOOLS_FILE_CMD}"
+CONFIGURE_ENV+=		FILE_CMD=${TOOLS_FILE_CMD:Q}
 
 .include "../../x11/gtkglarea/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

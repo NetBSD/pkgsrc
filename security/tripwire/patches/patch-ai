@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2003/12/05 05:40:32 ben Exp $
+$NetBSD: patch-ai,v 1.2 2005/12/05 20:50:58 rillig Exp $
 
 --- src/siggen.c.orig	1994-07-25 08:24:12.000000000 -0700
 +++ src/siggen.c
-@@ -52,7 +52,6 @@ static char rcsid[] = "$Id: siggen.c,v 1
+@@ -52,7 +52,6 @@
  
  extern int optind;
  int debuglevel = 0;

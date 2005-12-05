@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/11/16 19:18:58 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:50:27 rillig Exp $
 #
 
 DISTNAME=	Python-2.1.3
@@ -17,7 +17,7 @@ CONFLICTS+=	python-[0-9]*
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
-PTHREAD_OPTS=   require
+PTHREAD_OPTS+=   require
 .include "../../mk/pthread.buildlink3.mk"
 .if ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-pth
@@ -45,7 +45,7 @@ PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
 .else
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
-PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME}
+PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 PLAT_SOCKET=	"@comment "
 PLAT_TERMIOS=	"@comment "
@@ -57,7 +57,7 @@ PLAT_SOCKET=	""
 PLAT_TERMIOS=	""
 .  endif
 .endif
-PLIST_SUBST+=	PLAT_SOCKET=${PLAT_SOCKET} PLAT_TERMIOS=${PLAT_TERMIOS}
+PLIST_SUBST+=	PLAT_SOCKET=${PLAT_SOCKET:Q} PLAT_TERMIOS=${PLAT_TERMIOS:Q}
 
 # bsddb.so is not built on Solaris (or IRIX?)
 BSDDB=
@@ -65,13 +65,13 @@ BSDDB=
 BSDDB=		"@comment "
 .else
 .include "../../mk/bdb.buildlink3.mk"
-MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
+MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE:Q}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 .endif
-PLIST_SUBST+=	BSDDB=${BSDDB}
+PLIST_SUBST+=	BSDDB=${BSDDB:Q}
 
-PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX}
+PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 
 post-extract:
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}

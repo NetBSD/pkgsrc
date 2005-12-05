@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2005/10/18 01:24:25 simonb Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:33 rillig Exp $
 #
 
 DISTNAME=		mairix-0.16.1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rpcurnow.force9.co.uk/mairix/
 
-MAINTAINER=		simonb@NetBSD.ORG
+MAINTAINER=		simonb@NetBSD.org
 HOMEPAGE=		http://www.rc0.org.uk/mairix/
 COMMENT=		Program for indexing and searching email messages
 

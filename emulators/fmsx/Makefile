@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/16 06:57:50 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:11 rillig Exp $
 
 DISTNAME=	fMSX24.tar
 PKGNAME=	fmsx-2.4
@@ -27,7 +27,7 @@ DEFS+=		-DMITSHM -D${CUR_DEPTH} -DSOUND
 DEFS+=		-DSUN_AUDIO
 .endif
 
-MAKE_ENV=	DEFS="${DEFS}"
+MAKE_ENV+=	DEFS=${DEFS:Q}
 
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/03 02:47:58 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:51:10 rillig Exp $
 #
 
 DISTNAME=	wmii-20051031
@@ -29,7 +29,6 @@ EGFILES=		_clabel extern progmenu rcmenu status	\
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-.undef f
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:51 rillig Exp $
 #
 
 DISTNAME=		sge-5.3p6
@@ -17,11 +17,11 @@ USE_TOOLS+=		gmake perl:run
 
 CFLAGS+=		-D${UPPER_OPSYS}
 CONFIGURE_ENV+=		REMOTE=sge
-CONFIGURE_ENV+=		CFLAGS="${CFLAGS}"
+CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--with-grd=${SGE_BUILDARCH}
-PLIST_SUBST+=		SGE_ARCH=${SGE_ARCH}
+PLIST_SUBST+=		SGE_ARCH=${SGE_ARCH:Q}
 MESSAGE_SUBST+=		SGE_ROOT=${SGE_ROOT}
-MAKE_ENV+=		PERL5=${PERL5}
+MAKE_ENV+=		PERL5=${PERL5:Q}
 
 USE_PKGINSTALL=		YES
 SGE_USER?=		sgeadmin
@@ -67,7 +67,7 @@ SGE_BUILDARCH_cmd=	${ECHO} "${SGE_ARCH}" | ${TR} a-z A-Z
 SGE_ARCH=		darwin
 SGE_BUILDARCH=		DARWIN
 .else
-PKG_FAIL_REASON=	"SGE_ARCH and SGE_BUILDARCH need to be confgured for your OS"
+PKG_FAIL_REASON+=	"SGE_ARCH and SGE_BUILDARCH need to be configured for your OS"
 .endif
 SGE_BUILDARCH?=		${SGE_BUILDARCH_cmd:sh}
 

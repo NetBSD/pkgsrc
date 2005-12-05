@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2005/11/29 13:11:05 adam Exp $
+# $NetBSD: Makefile,v 1.60 2005/12/05 20:50:36 rillig Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--enable-dl
 .include "options.mk"
 
 GNU_PLATFORM_DIR!=	${.CURDIR}/../../mk/gnu-config/config.sub ${MACHINE_GNU_PLATFORM}
-PLIST_SUBST+=	GNU_PLATFORM_DIR=${GNU_PLATFORM_DIR}
+PLIST_SUBST+=	GNU_PLATFORM_DIR=${GNU_PLATFORM_DIR:Q}
 
 INFO_FILES=	octave.info liboctave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \

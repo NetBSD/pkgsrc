@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/02 09:48:34 taca Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:51:08 rillig Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -20,9 +20,9 @@ CONFIGURE_SCRIPT=	${RUBY} configure.rb
 CONFIGURE_ARGS+=	--enable-shared \
 			--with-charset="${ERUBY_DEFAULT_CHARSET}"
 INSTALL_TARGET=		site-install
-PLIST_SUBST+=		ERUBY_MAJOR=${ERUBY_MAJOR} \
-			ERUBY_MINOR=${ERUBY_MINOR} \
-			ERUBY_TEENY=${ERUBY_TEENY}
+PLIST_SUBST+=		ERUBY_MAJOR=${ERUBY_MAJOR:Q} \
+			ERUBY_MINOR=${ERUBY_MINOR:Q} \
+			ERUBY_TEENY=${ERUBY_TEENY:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

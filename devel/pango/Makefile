@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/11/30 18:09:40 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2005/12/05 20:50:06 rillig Exp $
 #
 
 DISTNAME=		pango-1.10.2
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-qt=no
 
 # Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0

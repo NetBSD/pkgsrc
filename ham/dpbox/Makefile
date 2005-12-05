@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:23 rillig Exp $
 #
 
 DISTNAME=	dpbox-60000
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
 USE_TOOLS+=	gmake
 MAKEFILE=	Makefile.netbsd
 
-MAKE_ENV+=	prefix="${PREFIX}"
+MAKE_ENV+=	prefix=${PREFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

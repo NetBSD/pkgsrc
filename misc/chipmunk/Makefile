@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/17 03:50:21 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:38 rillig Exp $
 #
 
 DISTNAME=       chipmunk-1.4
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 
 BUILD_TARGET=	chipmunk
-MAKE_ENV+=	CONFIG_OPTIONS="${CPPFLAGS}"
+MAKE_ENV+=	CONFIG_OPTIONS=${CPPFLAGS:M*:Q}
 MAKE_ENV+=	EXTRA_LIBS=-li386
 
 INSTALLATION_DIRS=	sbin

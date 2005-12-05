@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/10/10 17:22:05 reed Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:38 rillig Exp $
 
 DISTNAME=	XFree86-${XF_VER}-src-1
 PKGNAME=	XFree86-man-${XF_VER}
@@ -10,7 +10,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Manuals
 
-DEPENDS=	XFree86-imake>=${XF_VER}:../../x11/XFree86-imake
+DEPENDS+=	XFree86-imake>=${XF_VER}:../../x11/XFree86-imake
 
 USE_LANGUAGES=		# empty
 NO_XFREE86_TARGETS=	yes
@@ -28,7 +28,6 @@ pre-configure:
 .for F in general X11 GL GL/gl GL/glx GLU GLw Xv Xau Xt Xext Xext/dbe Xi
 	@${LN} -sf ${WRKSRC}/host.def ${WRKSRC}/${F}/
 .endfor
-.undef F
 
 do-configure:
 	(cd ${WRKSRC} ; \

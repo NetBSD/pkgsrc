@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/18 12:38:11 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:32 rillig Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -58,7 +58,7 @@ CONF_FILES_PERMS+=	${IMPDIR}/config/trailer.txt.dist \
 			${IMPDIR}/config/trailer.txt \
 			${APACHE_USER} ${ROOT_GROUP} 0440
 
-SUBST_CLASSES=		files
+SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	imp.conf.dist
 SUBST_SED.files=	-e "s|@IMPDIR@|${IMPDIR}|g"
@@ -84,12 +84,10 @@ do-install:
 .	for d in ${PAXDIRS}
 		${INSTALL_DATA_DIR} ${IMPDIR}/${d}
 .	endfor
-.	undef d
 
 .	for d in ${PAXDIRS}
 		cd ${WRKSRC}/${d} && ${PAX} -rw . ${IMPDIR}/${d}
 .	endfor
-.	undef d
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${IMPDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${IMPDIR}

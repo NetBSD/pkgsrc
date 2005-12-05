@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:22 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:51:00 rillig Exp $
 #
 
 DISTNAME=	gkrellm-1.2.13
@@ -23,7 +23,7 @@ BUILD_TARGET=		netbsd
 INSTALL_TARGET=		install_netbsd
 
 MAKE_ENV+=	PTHREAD_INC="-I${LOCALBASE}/include"
-MAKE_ENV+=	EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+MAKE_ENV+=	EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gkrellm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:46:01 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:19 rillig Exp $
 #
 
 DISTNAME=		cambevao-2.2
@@ -10,7 +10,7 @@ MAINTAINER=		abs@NetBSD.org
 HOMEPAGE=		http://core.de/~coto/projects/cambevao/
 COMMENT=		Grabs images as jpg from bktr and ov511+ based USB webcams
 
-MAKE_ENV=		prefix=${PREFIX}
+MAKE_ENV+=		prefix=${PREFIX:Q}
 RCD_SCRIPTS=		cambevao
 USE_PKGINSTALL=		yes
 

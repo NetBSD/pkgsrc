@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/05/29 14:38:32 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/12/05 20:50:51 rillig Exp $
 
 SHA1 (glunix-release-1-0a.tar.gz) = 8c69f5252e00fc4143a088c9b555b5e0c5b350f8
 RMD160 (glunix-release-1-0a.tar.gz) = a718ebe775b697ebae14ba3a277994dc6c5a4c8d
@@ -50,7 +50,7 @@ SHA1 (patch-br) = d013a9091c7270b83c76e80afb1178985bf35968
 SHA1 (patch-bs) = b625e5fefd631e8277574efc5cfe1e7604751a30
 SHA1 (patch-bt) = 328c06576c24a7fe4ce25ff4d816d4f51029023a
 SHA1 (patch-bu) = 80ba6229ebbbe981bacaece312b3882541a7a276
-SHA1 (patch-bv) = 32df71b44baba4bb47d0cdf124f7d620c534309a
+SHA1 (patch-bv) = fbe100fa1a6bd8c3a4dd7c1ae401a129122537e1
 SHA1 (patch-bw) = 3f42749265da2b783b429ca357ee5c0f6f67f371
 SHA1 (patch-bx) = ed841b216f4d41ed2777081dbd0eaa6bb426ff09
 SHA1 (patch-by) = 7f15f359d307ba064f7cc3d0ed98d0a8189eff39

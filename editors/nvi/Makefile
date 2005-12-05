@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/09/11 18:08:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:10 rillig Exp $
 #
 
 DISTNAME=	nvi-1.81.5
@@ -29,7 +29,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--with-db3=${BUILDLINK_PREFIX.db3}
 CONFIGURE_ARGS+=	--program-transform-name='s,^,n,'
-CONFIGURE_ENV+=		vi_cv_path_shell=${TOOLS_SH}
+CONFIGURE_ENV+=		vi_cv_path_shell=${TOOLS_SH:Q}
 USE_TOOLS+=		sh
 USE_LIBTOOL=		YES
 

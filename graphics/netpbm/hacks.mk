@@ -1,6 +1,6 @@
-# $NetBSD: hacks.mk,v 1.1 2005/01/24 20:48:05 tv Exp $
+# $NetBSD: hacks.mk,v 1.2 2005/12/05 20:50:21 rillig Exp $
 
-.ifndef NETPBM_HACKS_MK
+.if !defined(NETPBM_HACKS_MK)
 NETPBM_HACKS_MK=	# defined
 
 ### [historic : ???]

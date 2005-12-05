@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/05 20:50:17 rillig Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -10,7 +10,7 @@ MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.viagenie.qc.ca/en/ipv6-quake.shtml
 COMMENT=	Quake over IPv6
 
-DEPENDS=	quakedata-[0-9]*:../../games/quakedata
+DEPENDS+=	quakedata-[0-9]*:../../games/quakedata
 
 WRKSRC=		${WRKDIR}/quakeforge
 
@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
 .if !(defined(USE_INET6) && ${USE_INET6} == "YES")
-PKG_FAIL_REASON= "${PKGNAME} requires IPv6 support"
+PKG_FAIL_REASON+=	"${PKGNAME} requires IPv6 support"
 .endif
 
 # "bindir" setting is very non-standard for GNU autoconf

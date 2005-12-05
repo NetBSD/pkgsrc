@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/03 22:12:35 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:23 rillig Exp $
 #
 
 DISTNAME=	wmphoto-0.3a
@@ -12,7 +12,7 @@ COMMENT=	Dock-app that can show you a photo
 BUILD_DIRS=	wmphoto
 USE_X11BASE=	YES
 USE_TOOLS+=	gmake
-MAKE_ENV+=	X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
+MAKE_ENV+=	X11PREFIX=${X11PREFIX:Q} X11BASE=${X11BASE:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmphoto

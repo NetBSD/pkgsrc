@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/11 17:21:11 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:49:48 rillig Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -32,7 +32,6 @@ EGFILES=		groups.aut mounts.aut users.aut icecast.conf
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f}.dist ${PKG_SYSCONFDIR}/${f}
 .endfor
-.undef f
 
 .include "../../mk/bsd.prefs.mk"
 

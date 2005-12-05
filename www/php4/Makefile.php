@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.33 2005/11/11 07:04:57 rillig Exp $
+# $NetBSD: Makefile.php,v 1.34 2005/12/05 20:51:13 rillig Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -6,7 +6,7 @@
 DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
 PATCHDIR=		${.CURDIR}/../../www/php4/patches
 
-BUILD_DEFS=		USE_INET6
+BUILD_DEFS+=		USE_INET6
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

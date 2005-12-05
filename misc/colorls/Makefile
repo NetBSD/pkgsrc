@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/26 22:31:49 reed Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:38 rillig Exp $
 
 DISTNAME=		ls
 PKGNAME=		colorls-2.2
@@ -14,8 +14,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 MANCOMPRESSED_IF_MANZ=	yes
-MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} \
-			MANOWN=${MANOWN} MANGRP=${MANGRP}
+MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} \
+			MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
 INSTALLATION_DIRS=	bin man/man1 man/cat1
 
 pre-patch:

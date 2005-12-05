@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/12/02 08:48:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:28 rillig Exp $
 
 DISTNAME=		clamsmtp-1.6
 CATEGORIES=		mail
@@ -15,7 +15,7 @@ USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		clamsmtpd
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
-FILES_SUBST+=		CLAMAV_USER=${CLAMAV_USER}
+FILES_SUBST+=		CLAMAV_USER=${CLAMAV_USER:Q}
 
 # Doesn't work with GNU pth (missing required mutex features)
 PTHREAD_OPTS+=		require native

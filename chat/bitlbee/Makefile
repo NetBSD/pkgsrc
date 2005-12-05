@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/11/12 19:51:24 tonio Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/05 20:49:52 rillig Exp $
 #
 
 DISTNAME=		bitlbee-0.99
@@ -48,7 +48,6 @@ do-install:
 .for f in AUTHORS FAQ README TODO
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCDIR}
 .endfor
-.undef f
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bitlbee
 PKG_SUPPORTED_OPTIONS=	inet6

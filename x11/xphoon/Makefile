@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/04 00:49:33 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:51:20 rillig Exp $
 #
 
 DISTNAME=	xphoon.tar
@@ -16,7 +16,7 @@ COMMENT=	Set the root window to the moon in its current phase
 WRKSRC=		${WRKDIR}/xphoon
 USE_IMAKE=      yes
 
-MAKE_FLAGS+=	EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS}
+MAKE_FLAGS+=	EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

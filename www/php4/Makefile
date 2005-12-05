@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/11/21 09:13:28 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2005/12/05 20:51:13 rillig Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		2
@@ -39,12 +39,12 @@ EGDIR=			${PREFIX}/share/examples/php
 # libtool without change.
 #
 .if ${OPSYS} == "NetBSD" && ${OBJECT_FMT} == "ELF"
-MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_ALL_LIBGCC_HACK}"
+MAKE_ENV+=		LINK_LIBGCC_LDFLAGS=${LINK_ALL_LIBGCC_HACK:Q}
 .endif
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 
 CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/20 12:51:54 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:55 rillig Exp $
 #
 
 DISTNAME=	fsh-1.2
@@ -14,7 +14,7 @@ COMMENT=	Fast remote command execution
 GNU_CONFIGURE=	YES
 INFO_FILES=	fsh.info
 
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

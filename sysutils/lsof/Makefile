@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2005/09/13 20:18:27 christos Exp $
+# $NetBSD: Makefile,v 1.87 2005/12/05 20:51:01 rillig Exp $
 #
 
 DISTNAME=		lsof_4.76
@@ -18,7 +18,7 @@ COMMENT=		Lists information about open files
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS=		-n ${LOWER_OPSYS}
+CONFIGURE_ARGS+=	-n ${LOWER_OPSYS}
 CONFIGURE_ENV+=		LSOF_CC="${CC} ${CFLAGS}"
 MAKE_FLAGS+=		LSOF_BLDCMT="NetBSD pkgsrc rocks!"
 CPPFLAGS+=		-DLSOF_MORE_SECURE=${LSOF_MORE_SECURE} \

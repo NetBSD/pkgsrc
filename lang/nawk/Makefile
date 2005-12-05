@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/05/22 19:11:12 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:50:26 rillig Exp $
 #
 
 DISTNAME=       awk
@@ -15,13 +15,13 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://cm.bell-labs.com/who/bwk/
 COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	yacc
 WRKSRC=		${WRKDIR}
 CFLAGS+=	${CPPFLAGS}
-MAKE_FLAGS+=	CC=${CC:Q} YACC=${YACC:Q} CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	CC=${CC:Q} YACC=${YACC:Q} CFLAGS=${CFLAGS:M*:Q}
 BUILD_TARGET=	a.out
 
 INSTALLATION_DIRS=	bin man/man1

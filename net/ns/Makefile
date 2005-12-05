@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/09/08 02:50:58 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:47 rillig Exp $
 
 DISTNAME=	ns-src-2.28
 PKGNAME=	${DISTNAME:S/-src//}
@@ -18,7 +18,7 @@ PTHREAD_OPTS+=	require
 # Perl is only needed if you want to run the validation tests.
 #USE_TOOLS+=		perl
 
-CONFIGURE_ARGS+=	LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; echo $$TCL_LIBS'`"
+CONFIGURE_ARGS+=	LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; ${ECHO} $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tcl-ver=8.4
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}

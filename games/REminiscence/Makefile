@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/08 00:10:21 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 20:50:15 rillig Exp $
 #
 
 DISTNAME=		REminiscence-0.1.6
@@ -11,7 +11,7 @@ HOMEPAGE=		http://membres.lycos.fr/cyxdown/reminiscence/
 COMMENT=		Engine to play Flashback by Delphine Software
 
 BUILD_TARGET=		rs
-MAKE_ENV+=		DEFINES="${DEFINES}"
+MAKE_ENV+=		DEFINES=${DEFINES:Q}
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "big"

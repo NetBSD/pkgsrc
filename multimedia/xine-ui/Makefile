@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/01 18:03:07 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:43 rillig Exp $
 #
 
 DISTNAME=		xine-ui-0.99.2
@@ -12,7 +12,7 @@ COMMENT=		Skinned xlib-based xine GUI
 
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.curl=	curl>7.10.2
+BUILDLINK_DEPENDS.curl+=	curl>7.10.2
 
 USE_PKGLOCALEDIR=	YES
 USE_DIRS+=		xdg-1.1

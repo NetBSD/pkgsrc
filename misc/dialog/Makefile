@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/11/08 13:25:12 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:38 rillig Exp $
 
 DISTNAME=	dialog-1.0-20050911
 PKGNAME=	${DISTNAME:C/-2/.2/}
@@ -14,7 +14,7 @@ COMMENT=	Display dialog boxes from shell scripts
 GNU_CONFIGURE=	yes
 MAKEFILE=	makefile
 
-INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]* NetBSD-1.6[A-P]-*
+INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-P]-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

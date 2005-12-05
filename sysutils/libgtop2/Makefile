@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/10/12 21:49:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:51:01 rillig Exp $
 
 DISTNAME=		libgtop-2.12.0
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -50,7 +50,7 @@ PRINT_PLIST_AWK+=	/^include\/libgtop-2.0\/glibtop_suid.h$$/ \
 	(${MACHINE_ARCH} != mipsel) && (${MACHINE_ARCH} != powerpc) && \
 	(${MACHINE_ARCH} != sparc) && (${MACHINE_ARCH} != sparc64) && \
 	(${MACHINE_ARCH} != x86_64)
-PKG_FAIL_REASON=	"${PKGNAME} has not yet been ported to ${MACHINE_ARCH}."
+PKG_FAIL_REASON+=	"${PKGNAME} has not yet been ported to ${MACHINE_ARCH}."
 PKG_FAIL_REASON+=	"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
 PKG_FAIL_REASON+=	"and update ${WRKSRC}/sysdeps/freebsd/prockernel.c appropriately."
 PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"

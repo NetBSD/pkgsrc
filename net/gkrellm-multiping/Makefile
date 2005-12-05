@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:46 rillig Exp $
 #
 
 DISTNAME=	gkrellm-multiping-2.0.8
@@ -16,7 +16,7 @@ SPECIAL_PERMS+=	${PREFIX}/lib/gkrellm2/plugins/pinger ${SETUID_ROOT_PERMS}
 
 USE_TOOLS+=		pkg-config
 
-PTHREAD_OPTS=		require
+PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
 post-patch:

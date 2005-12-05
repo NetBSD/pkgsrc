@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/10/26 04:09:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.67 2005/12/05 20:50:37 rillig Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -37,14 +37,14 @@ CONFIGURE_ENV+=		TCL_CONFIG_SH=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ENV+=		TK_CONFIG_SH=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 
 # override HOME to avoid picking up a bad ${HOME}/.scilab during the build
-MAKE_ENV+=		HOME=${WRKSRC}
-MAKE_ENV+=		PVM_ROOT=${PVM_ROOT}
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
+MAKE_ENV+=		HOME=${WRKSRC:Q}
+MAKE_ENV+=		PVM_ROOT=${PVM_ROOT:Q}
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 
 PVM_ROOT?=		${LOCALBASE}/pvm3
-CONFIGURE_ENV+=		PVM_ROOT=${PVM_ROOT}
-CONFIGURE_ENV+=		X11BASE=${X11BASE}
-PLIST_SUBST+=		SCIBASE=${SCIBASE}
+CONFIGURE_ENV+=		PVM_ROOT=${PVM_ROOT:Q}
+CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
+PLIST_SUBST+=		SCIBASE=${SCIBASE:Q}
 
 UNWRAP_FILES+=		Makemex config/configuration config/Makeso.incl
 
@@ -107,7 +107,7 @@ GCC_REQD+=		2.95.3
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will
 # fail if SCI is set to anything.
-MAKE_ENV+=	SCI=${WRKSRC}
+MAKE_ENV+=	SCI=${WRKSRC:Q}
 do-test:
 	cd ${WRKSRC}/tests && \
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \

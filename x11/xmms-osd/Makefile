@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:18:40 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:51:20 rillig Exp $
 #
 
-.include "../xosd/Makefile.common"
+.include "../../x11/xosd/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/xosd/xmms-osd/}
 PKGREVISION=	1

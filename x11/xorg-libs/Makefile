@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/11/09 01:05:06 reed Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:51:20 rillig Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -12,7 +12,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.x.org/
 COMMENT=		X.org Libraries
 
-BUILD_DEPENDS=		xorg-imake>=${XORG_VER}:../../x11/xorg-imake
+BUILD_DEPENDS+=		xorg-imake>=${XORG_VER}:../../x11/xorg-imake
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/25 20:59:15 adrianp Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:12 rillig Exp $
 
 DISTNAME=	horde-3.0.7
 CATEGORIES=	www
@@ -59,7 +59,7 @@ CONF_FILES_PERMS+=	${HORDEDIR}/config/hooks.php.dist \
 			${HORDEDIR}/config/hooks.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
 
-SUBST_CLASSES=		files
+SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	horde.conf.dist config/conf.xml config/conf.xml.dist \
 			scripts/set_perms.sh

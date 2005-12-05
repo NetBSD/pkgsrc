@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:03:23 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:02 rillig Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -13,8 +13,9 @@ COMMENT=	Tk GUI + Tcl Shell for accessing HFS volumes
 
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib \
-		--with-tk=${BUILDLINK_PREFIX.tk}/lib --disable-cli
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
+CONFIGURE_ARGS+=	--disable-cli
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.libhfs}/include/libhfs
 
 .include "../../devel/libhfs/buildlink3.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2005/11/07 13:55:32 joerg Exp $
+$NetBSD: patch-ab,v 1.7 2005/12/05 20:49:51 rillig Exp $
 
 --- ttcp.c.orig	1997-02-27 21:30:23.000000000 +0000
 +++ ttcp.c
-@@ -55,6 +55,7 @@ static char RCSid[] = "ttcp.c $Revision:
+@@ -55,6 +55,7 @@
  #include <arpa/inet.h>
  #include <netdb.h>
  #include <sys/time.h>		/* struct timeval */

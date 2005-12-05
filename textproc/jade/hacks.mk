@@ -1,6 +1,6 @@
-# $NetBSD: hacks.mk,v 1.1 2005/01/25 20:26:06 tv Exp $
+# $NetBSD: hacks.mk,v 1.2 2005/12/05 20:51:03 rillig Exp $
 
-.ifndef JADE_HACKS_MK
+.if !defined(JADE_HACKS_MK)
 JADE_HACKS_MK=		# defined
 
 ### [Tue Jan 25 20:25:41 UTC 2005 : tv]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/11/19 14:11:30 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2005/12/05 20:50:19 rillig Exp $
 
 DISTNAME=	freetype-2.1.10
 PKGNAME=	freetype2-2.1.10
@@ -23,14 +23,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 BUILD_DIRS=		${WRKSRC}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
-CONFIGURE_ENV+=		ac_cv_path_GREP="${GREP}" ac_cv_path_EGREP="${EGREP}"
+CONFIGURE_ENV+=		ac_cv_path_GREP=${GREP:Q} ac_cv_path_EGREP=${EGREP:Q}
 
 PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-PKG_OPTIONS_VAR+=	PKG_OPTIONS.freetype2
+PKG_OPTIONS_VAR=	PKG_OPTIONS.freetype2
 PKG_SUPPORTED_OPTIONS=	truetype
 
 .include "../../mk/bsd.options.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/09 01:52:32 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:51:03 rillig Exp $
 
 DISTNAME=	freepwing-1.4.4
 PKGREVISION=	3
@@ -15,6 +15,6 @@ USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-perllibdir=${PERL5_INSTALLVENDORLIB}
 CONFIGURE_ARGS+=	--with-pkgdocdir=${PREFIX}/share/doc/freepwing
-CONFIGURE_ENV+=		GNUMAKE="${GMAKE}"
+CONFIGURE_ENV+=		GNUMAKE=${GMAKE:Q}
 
 .include "../../mk/bsd.pkg.mk"

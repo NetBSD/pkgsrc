@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/02 11:35:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:02 rillig Exp $
 #
 
 DISTNAME=	bugzilla-2.20
@@ -45,7 +45,7 @@ PAX_DIRS=	Bugzilla skins template
 
 REPLACE_PERL=	*.pl *.cgi
 
-SUBST_CLASSES=		conf
+SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	bugzilla.conf localconfig Bugzilla/BugMail.pm
 SUBST_SED.conf=		-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"		\

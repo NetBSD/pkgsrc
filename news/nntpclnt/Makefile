@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/17 03:50:29 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:50 rillig Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	5
@@ -20,7 +20,7 @@ PKG_GROUPS=	news
 USE_PKGINSTALL=	yes
 PKG_SYSCONFSUBDIR=	nntp
 
-PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+PLIST_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

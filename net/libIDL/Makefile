@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/08/18 13:17:01 adam Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/05 20:50:47 rillig Exp $
 
 DISTNAME=	libIDL-0.8.6
 CATEGORIES=	net gnome
@@ -26,7 +26,7 @@ CONFIGURE_ENV.SunOS+=	CPP=/usr/lib/cpp
 .endif
 
 # Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

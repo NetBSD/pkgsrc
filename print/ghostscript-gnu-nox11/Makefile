@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/27 17:06:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:52 rillig Exp $
 
 PKGNAME=	ghostscript-gnu-nox11-${GS_VERS}
 PKGREVISION=	1
@@ -6,4 +6,4 @@ COMMENT=	GNU Postscript interpreter without X11 drivers
 
 CONFIGURE_ARGS+=	--without-x
 
-.include "../ghostscript-gnu/Makefile.common"
+.include "../../print/ghostscript-gnu/Makefile.common"

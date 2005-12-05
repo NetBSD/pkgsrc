@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/07 16:43:49 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:55 rillig Exp $
 
 .include "Makefile.common"
 
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--without-stdheaderdir
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=	--with-authdaemonvar=${AUTHDAEMONVAR}
 OWN_DIRS_PERMS=		${AUTHDAEMONVAR} ${COURIER_USER} ${COURIER_GROUP} 0750
-FILES_SUBST+=		AUTHDAEMONVAR=${AUTHDAEMONVAR}
+FILES_SUBST+=		AUTHDAEMONVAR=${AUTHDAEMONVAR:Q}
 
 # Expect is used to change the password from within the courier webmail
 # application (sqwebmail).
@@ -42,8 +42,8 @@ AUTHLIBDIR=		lib/courier-authlib
 AUTHLIBEXECDIR=		libexec/courier-authlib
 AUTHEXAMPLEDIR=		share/examples/courier-authlib
 AUTHDOCDIR=		share/doc/courier-authlib
-FILES_SUBST+=		AUTHLIBEXECDIR=${AUTHLIBEXECDIR}
-FILES_SUBST+=		AUTHEXAMPLEDIR=${AUTHEXAMPLEDIR}
+FILES_SUBST+=		AUTHLIBEXECDIR=${AUTHLIBEXECDIR:Q}
+FILES_SUBST+=		AUTHEXAMPLEDIR=${AUTHEXAMPLEDIR:Q}
 
 PKG_SYSCONFSUBDIR?=	courier
 

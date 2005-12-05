@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/16 06:57:47 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:07 rillig Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -11,7 +11,7 @@ COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:

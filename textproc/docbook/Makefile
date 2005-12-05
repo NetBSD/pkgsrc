@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/04/11 21:47:33 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/12/05 20:51:02 rillig Exp $
 
 DISTNAME=	docbook-4.4
 CATEGORIES=	textproc
@@ -19,7 +19,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.oasis-open.org/docbook
 COMMENT=	SGML DTD designed for computer documentation
 
-BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 
 WRKSRC=		${WRKDIR}
@@ -34,7 +34,6 @@ SGML_CATALOGS=
 .for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2 4.3 4.4
 SGML_CATALOGS+=	${INSTDIR}/${ver}/catalog
 .endfor
-.undef ver
 
 do-build:
 .for ver in 241 30 31 40 41 42 43 44

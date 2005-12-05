@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:49:56 rillig Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-3.2
 CROSS_DISTFILES=
@@ -21,7 +21,7 @@ CROSS_DISTFILES+=	gcc-${GCC_VERSION}.tar.gz gcc-3.3.3-20040217-1-src.diff.gz \
 MASTER_SITES+=		${MASTER_SITE_GNU:=gcc/releases/gcc-3.3.3/}
 GCC_WIN32_PATCH=	${WRKDIR}/gcc-3.3.3-20040217-1-src.diff
 GCC_WRKSRC=		${WRKDIR}/gcc-${GCC_VERSION}
-PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION}
+PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION:Q}
 CROSS_DISTFILES+=	mingw-runtime-3.2.tar.gz
 MINGW_WRKSRC=		${WRKDIR}/mingw-runtime-3.2
 CROSS_DISTFILES+=	w32api-2.5.tar.gz
@@ -68,7 +68,7 @@ bu-configure:
 	cd ${BINUTILS_WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./configure \
 		--prefix=${PREFIX} --target=${TARGET_ARCH} --disable-nls
 gcc-configure:
-	-${MKDIR} ${GCC_WRKSRC}/${TARGET_ARCH}
+	${MKDIR} ${GCC_WRKSRC}/${TARGET_ARCH}
 	cd ${GCC_WRKSRC}/${TARGET_ARCH} && ${SETENV} ${CONFIGURE_ENV} ../configure \
 		--prefix=${PREFIX} --target=${TARGET_ARCH} \
 		--with-gnu-as --with-gnu-ld --disable-multilib --disable-nls \

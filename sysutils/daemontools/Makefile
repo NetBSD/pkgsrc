@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/05/17 08:41:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:51:00 rillig Exp $
 
 DISTNAME=		daemontools-0.76
 CATEGORIES=		sysutils
@@ -26,7 +26,7 @@ SAMPLERC=		svscan.sh.sample
 SERVICEDIR?=		${VARBASE}/spool/service
 CMDDIR=			${WRKSRC}/command
 
-PLIST_SUBST+=		SERVICEDIR=${SERVICEDIR}
+PLIST_SUBST+=		SERVICEDIR=${SERVICEDIR:Q}
 DEINSTALL_FILE=		${WRKDIR}/.DEINSTALL
 
 INSTALLATION_DIRS=	bin man man/man8 share/examples/daemontools

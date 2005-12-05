@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/11/25 21:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2005/12/05 20:50:16 rillig Exp $
 
 DISTNAME=		gnome-games-2.12.1
 PKGREVISION=		1
@@ -26,7 +26,7 @@ USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # This package installs files in sysconfdir but does not read them directly,
 # so the following configuration argument is safe.
@@ -39,9 +39,8 @@ CONF_FILES=
 			sound/events/iagno.soundlist
 CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
 .endfor
-.undef conffile
 
-FILES_SUBST+=		INSTALL="${INSTALL}"
+FILES_SUBST+=		INSTALL=${INSTALL:Q}
 
 GCONF2_SCHEMAS=		aisleriot.schemas
 GCONF2_SCHEMAS+=	blackjack.schemas

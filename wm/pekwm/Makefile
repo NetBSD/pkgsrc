@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/07/16 01:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:51:09 rillig Exp $
 #
 
 DISTNAME=	pekwm-0.1.3
@@ -35,7 +35,6 @@ CONF_FILES=
 .for f in autoproperties config keys menu mouse start
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-.undef f
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

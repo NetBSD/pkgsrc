@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:54 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:51:10 rillig Exp $
 
-.include "../iasp/Makefile.common"
+.include "../../www/iasp/Makefile.common"
 
 PKGNAME=	ap-iasp-${IASP_VERSION}
 COMMENT=	Apache connector for accessing a iASP proxy server

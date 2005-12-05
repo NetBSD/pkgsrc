@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/25 21:23:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:51:18 rillig Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.12.0
@@ -16,7 +16,7 @@ PY_PATCHPLIST=	YES
 USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	gnome-python-extras-2.0.pc.in
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=		pkg-config
 
 PYTHON_VERSIONS_ACCEPTED=	24 23

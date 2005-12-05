@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/11/08 00:47:35 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:51:02 rillig Exp $
 #
 
 DISTNAME=		xen-2.0.7-src
@@ -27,8 +27,8 @@ EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST=		EGDIR=${EGDIR}
 
 USE_TOOLS+=		gmake
-MAKE_ENV+=		EGDIR="${EGDIR}"
-MAKE_ENV+=		MV="${MV}" PYTHON="${PYTHONBIN}" SED="${SED}"
+MAKE_ENV+=		EGDIR=${EGDIR:Q}
+MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 PYTHON_VERSIONS_ACCEPTED= 24 23 22
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS=	python/xen/util/console_client.py
@@ -44,7 +44,7 @@ PYTHON_PATCH_SCRIPTS+=	misc/netfix
 PYTHON_PATCH_SCRIPTS+=	misc/xend
 PYTHON_PATCH_SCRIPTS+=	xentrace/xentrace_format
 
-SUBST_CLASSES=          paths py conf
+SUBST_CLASSES+=          paths py conf
 SUBST_STAGE.paths=      pre-configure
 SUBST_FILES.paths=      python/xen/xend/server/SrvDaemon.py
 SUBST_FILES.paths+=	python/xen/xend/XendDomainInfo.py
@@ -75,9 +75,9 @@ PROCPATH=		/proc
 .endif
 
 RCD_SCRIPTS=		xend xendomains
-FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN}
-FILES_SUBST+=		PROCPATH=${PROCPATH}
-FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN:Q}
+FILES_SUBST+=		PROCPATH=${PROCPATH:Q}
+FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 XEND_SCRIPTS=		network block-enbd vif-bridge block-file
 

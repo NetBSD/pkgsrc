@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/09/28 20:52:19 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/05 20:50:05 rillig Exp $
 #
 
 DISTNAME=	libnet-1.0.2a
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:C/l/L/}
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBNET_CONFIG_CFLAGS="-I${PREFIX}/include" \
-		LIBNET_CONFIG_LIBS="${LDFLAGS}"
+		LIBNET_CONFIG_LIBS=${LDFLAGS:M*:Q}
 
 INSTALLATION_DIRS=	bin lib share/examples
 

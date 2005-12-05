@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:43 rillig Exp $
 #
 
 .include "../../multimedia/libflash/Makefile.common"
@@ -16,8 +16,8 @@ USE_LIBTOOL=	YES
 
 BUILD_DIRS=	${WRKSRC}/Plugin
 CPPFLAGS+=	-DDEV_DSP="\"${DEVOSSSOUND}\""
-MAKE_ENV+=	SHLIBTOOL="${SHLIBTOOL}"
-MAKE_ENV+=	MOZ_PLUGDIR="${MOZ_PLUGDIR}"
+MAKE_ENV+=	SHLIBTOOL=${SHLIBTOOL:Q}
+MAKE_ENV+=	MOZ_PLUGDIR=${MOZ_PLUGDIR:Q}
 
 MOZ_PLUGDIR=	${PREFIX}/lib/mozilla/plugins
 

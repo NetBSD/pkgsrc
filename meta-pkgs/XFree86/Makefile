@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/10/10 17:22:05 reed Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:37 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	XFree86-${XF_VER}
@@ -10,7 +10,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 meta-package
 
-DEPENDS=	XFree86-imake>=4.4.0:../../x11/XFree86-imake
+DEPENDS+=	XFree86-imake>=4.4.0:../../x11/XFree86-imake
 DEPENDS+=	XFree86-libs>=4.4.0:../../x11/XFree86-libs
 DEPENDS+=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
 DEPENDS+=	XFree86-server>=4.4.0:../../x11/XFree86-server

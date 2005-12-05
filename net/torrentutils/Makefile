@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:50 rillig Exp $
 #
 
 DISTNAME=		torrentutils-0.3.0
@@ -14,7 +14,7 @@ DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 
-USE_TOOLS=		gmake perl:run
+USE_TOOLS+=		gmake perl:run
 REPLACE_PERL=		torrenttool.in
 
 post-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:09 rillig Exp $
 #
 
 DISTNAME=	part01
@@ -12,7 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	#
 COMMENT=	Converts between uni-diffs and context diffs
 
-BUILD_DEPENDS=	gsharutils>=4.2.1:../../archivers/gsharutils
+BUILD_DEPENDS+=	gsharutils>=4.2.1:../../archivers/gsharutils
 
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | ${PREFIX}/bin/gunshar

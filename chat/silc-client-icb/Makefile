@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:49:54 rillig Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	YES
 
 IRSSI_DIR=	${WRKDIR}/${SILC_CLIENT_DISTNAME}/irssi
 
-CONFIGURE_ARGS=	--with-irssi=${IRSSI_DIR}
+CONFIGURE_ARGS+=	--with-irssi=${IRSSI_DIR:Q}
 
 post-extract:
 	${CP} ${SILC_CLIENT_CONFIG_H} ${IRSSI_DIR}/config.h

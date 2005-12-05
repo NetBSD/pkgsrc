@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 20:51:08 rillig Exp $
 #
 
 DISTNAME=		time-1.7
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		time.info
 
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX="${GNU_PROGRAM_PREFIX}"
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .include "../../mk/bsd.pkg.mk"

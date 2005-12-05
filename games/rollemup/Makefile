@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/07/15 18:27:51 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 20:50:17 rillig Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -37,8 +37,8 @@ ONLY_FOR_PLATFORM=	*-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 CHECK_SHLIBS=	no
 .endif
 
@@ -61,7 +61,7 @@ do-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${PREFIX}; \
 	  ${FIND} ${GAMES_DIR}/Rollemup -type f -print >> ${PLIST_SRC}; \
-	  for DIR in `${FIND} ${GAMES_DIR}/Rollemup -type d -print | sort -r`; do \
+	  for DIR in `${FIND} ${GAMES_DIR}/Rollemup -type d -print | ${SORT} -r`; do \
 	    ${ECHO} "@dirrm $$DIR" >> ${PLIST_SRC}; \
 	  done)
 	@${CHOWN} ${ROOT_USER}:games ${PREFIX}/bin/Rollemup

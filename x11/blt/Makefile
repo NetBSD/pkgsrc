@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/10/07 17:39:26 perry Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:51:15 rillig Exp $
 #
 
 DISTNAME=	BLT2.4z
@@ -18,8 +18,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
-CONFIGURE_ENV+=		X11BASE=${X11BASE}
-MAKE_ENV+=		CP=${CP}
+CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
+MAKE_ENV+=		CP=${CP:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

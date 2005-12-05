@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/10 20:56:22 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:46 rillig Exp $
 #
 
 DISTNAME=		gnet-1.1.8
@@ -17,7 +17,7 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	gnet.pc.in
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS=		--enable-glib2
+CONFIGURE_ARGS+=	--enable-glib2
 TEST_TARGET=		check
 
 .include "../../devel/glib2/buildlink3.mk"

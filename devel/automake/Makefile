@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2005/08/06 06:19:07 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2005/12/05 20:50:02 rillig Exp $
 #
 
 DISTNAME=	automake-1.9.6
@@ -11,7 +11,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/automake/automake.html
 COMMENT=	GNU Standards-compliant Makefile generator
 
-DEPENDS=	autoconf>=2.58:../../devel/autoconf
+DEPENDS+=	autoconf>=2.58:../../devel/autoconf
 
 USE_TOOLS+=	gm4:run perl:run
 

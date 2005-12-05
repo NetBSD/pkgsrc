@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/04/18 11:42:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:49:56 rillig Exp $
 #
 
 DISTVERSION=		2.02.0
@@ -15,7 +15,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.delorie.com/djgpp/
 COMMENT=		Cross-compile environment for MS-DOS on 386 and higher
 
-BUILD_DEPENDS=		unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 SITES_wmemu2b.zip=	http://ftp.delorie.com/pub/djgpp/beta/ \
 			ftp://ftp.delorie.com/pub/djgpp/beta/ \
@@ -66,4 +66,4 @@ do-install:
 	${LN} -f ${TARGET_DIR}/bin/stubedit ${PREFIX}/bin/${TARGET_ARCH}-stubify
 	${INSTALL_DATA} ${WRKSRC}/bin/wmemu387.dxe ${TARGET_DIR}/lib/
 
-.include "../COMMON/cross.mk"
+.include "../../cross/COMMON/cross.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.10 2005/03/24 22:42:58 jlam Exp $
+# $NetBSD: schemas.mk,v 1.11 2005/12/05 20:50:01 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GConf2 schema files.  It takes care of registering them in the GConf2
@@ -42,11 +42,11 @@ CONFIGURE_ARGS+=	--with-gconf-schema-file-dir=${GCONF2_SCHEMAS_DIR}
 
 .if (defined(GCONF2_SCHEMAS) && !empty(GCONF2_SCHEMAS)) || \
     (defined(GCONF2_ENTRIES) && !empty(GCONF2_ENTRIES))
-FILES_SUBST+=		GCONFTOOL2="${GCONFTOOL2}"
-FILES_SUBST+=		GCONF2_CONFIG_SOURCE="${GCONF2_CONFIG_SOURCE}"
-FILES_SUBST+=		GCONF2_ENTRIES="${GCONF2_ENTRIES}"
-FILES_SUBST+=		GCONF2_SCHEMAS="${GCONF2_SCHEMAS}"
-FILES_SUBST+=		GCONF2_SCHEMAS_DIR="${GCONF2_SCHEMAS_DIR}"
+FILES_SUBST+=		GCONFTOOL2=${GCONFTOOL2:Q}
+FILES_SUBST+=		GCONF2_CONFIG_SOURCE=${GCONF2_CONFIG_SOURCE:Q}
+FILES_SUBST+=		GCONF2_ENTRIES=${GCONF2_ENTRIES:Q}
+FILES_SUBST+=		GCONF2_SCHEMAS=${GCONF2_SCHEMAS:Q}
+FILES_SUBST+=		GCONF2_SCHEMAS_DIR=${GCONF2_SCHEMAS_DIR:Q}
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../devel/GConf2/files/install.tmpl
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../devel/GConf2/files/deinstall.tmpl
 USE_PKGINSTALL=		YES

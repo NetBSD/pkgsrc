@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/09/28 20:52:25 rillig Exp $
+# $NetBSD: Makefile,v 1.70 2005/12/05 20:50:50 rillig Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 
 DISTNAME=	zebra-0.95
@@ -24,7 +24,7 @@ CONF_FILES=	${EGDIR}/bgpd.conf.sample ${PKG_SYSCONFDIR}/bgpd.conf \
 		${EGDIR}/zebra.conf.sample ${PKG_SYSCONFDIR}/zebra.conf
 # with optimization, the timer/scheduler (esp. for MRT dump rotation) appears
 # to have problems.
-CFLAGS=	-O0
+CFLAGS+=	-O0
 
 CONFLICTS+=		quagga-[0-9]*
 

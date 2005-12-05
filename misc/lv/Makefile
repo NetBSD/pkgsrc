@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/03 17:43:47 christos Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:40 rillig Exp $
 
 DISTNAME=	lv451
 PKGNAME=	lv-4.51
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT= ../src/configure
 
-MAKE_ENV+=	LN=${LN}
+MAKE_ENV+=	LN=${LN:Q}
 INSTALLATION_DIRS=	lib/lv
 
 .include "../../mk/bsd.pkg.mk"

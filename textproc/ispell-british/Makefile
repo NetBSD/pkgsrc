@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/07 12:44:44 markd Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:51:03 rillig Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -16,7 +16,7 @@ BUILD_TARGET=	config.sh all-languages
 
 DICT_LANG=	british
 
-MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
+MAKE_FLAGS+=	TMPDIR=${WRKDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
@@ -33,7 +33,7 @@ do-configure:
 	${ECHO} "#define LANGUAGES \"{${DICT_LANG},MASTERDICTS=${DICT_LANG}.xlg,HASHFILES=${DICT_LANG}xlg.hash,EXTRADICT=}\""  >>local.h; \
 	${ECHO} '#define MASTERHASH "${DICT_LANG}xlg.hash"'  >> local.h ;	\
 	${ECHO} "#undef WORDS"  >> local.h ;				\
-	${ECHO} '#define WORDS   "${WORDS}"'  >> local.h ;	\
+	${ECHO} '#define WORDS   "${WORDS}"'  >> local.h
 
 do-install:
 	${CP} ${WRKSRC}/languages/${DICT_LANG}/${DICT_LANG}xlg.hash ${PREFIX}/lib

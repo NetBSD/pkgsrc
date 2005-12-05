@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/23 21:54:35 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:51 rillig Exp $
 #
 
 DISTNAME=	dfdisk-1.0
@@ -17,7 +17,7 @@ USE_PKGINSTALL=	yes
 EGDIR=		${PREFIX}/share/examples/dfdisk
 CONF_FILES=	${EGDIR}/dfdisk.conf ${PKG_SYSCONFDIR}/dfdisk.conf
 
-FILES_SUBST+=	PKGVERSION="${PKGVERSION}"
+FILES_SUBST+=	PKGVERSION=${PKGVERSION:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

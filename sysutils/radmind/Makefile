@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/08 20:09:00 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:51:01 rillig Exp $
 #
 
 DISTNAME=	radmind-1.5.0
@@ -14,7 +14,7 @@ COMMENT=	Remote file administration and integrity tool
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-radminddir=${VARBASE}/radmind
-CONFIGURE_ENV+=		diffpath="${TOOLS_DIFF}"
+CONFIGURE_ENV+=		diffpath=${TOOLS_DIFF:Q}
 USE_TOOLS+=		diff
 
 BUILD_TARGET=	all man rash

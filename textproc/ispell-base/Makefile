@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/15 20:14:03 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:51:03 rillig Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -14,7 +14,7 @@ CONFLICTS+=	ispell-[0-9]*
 
 USE_TOOLS+=	mktemp:run
 
-MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
+MAKE_FLAGS+=	TMPDIR=${WRKDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

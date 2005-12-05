@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:18 rillig Exp $
 
 DISTNAME=	tworld-1.2.1
 PKGNAME=	${DISTNAME:S/^t/tile/}
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	YES
 
 BUILD_TARGET=	tworld
 
-MAKE_ENV+=	ECHO="${ECHO}" DATE="${DATE}"
+MAKE_ENV+=	ECHO=${ECHO:Q} DATE=${DATE:Q}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

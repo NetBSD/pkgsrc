@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/27 22:09:23 bad Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:55 rillig Exp $
 
 DISTNAME=	fwbuilder-2.0.9
 CATEGORIES=	security net
@@ -15,8 +15,8 @@ USE_LANGUAGES=	c++
 UNLIMIT_RESOURCES+=	datasize
 
 QMAKE=		${QTDIR}/bin/qmake
-CONFIGURE_ENV+=	QMAKE="${QMAKE}"
-MAKE_ENV+=	QMAKE="${QMAKE}"
+CONFIGURE_ENV+=	QMAKE=${QMAKE:Q}
+MAKE_ENV+=	QMAKE=${QMAKE:Q}
 
 .include "../../security/libfwbuilder/buildlink3.mk"
 

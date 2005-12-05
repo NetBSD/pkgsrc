@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/04/11 21:46:30 tv Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:37 rillig Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -22,7 +22,7 @@ BUILD_USES_MSGFMT=	yes
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-Dunix=1
-CONFIGURE_ARGS=	--sysconfdir="${PKG_SYSCONFDIR}"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 INFO_FILES=	pspp.info
 

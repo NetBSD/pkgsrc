@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/23 15:38:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:51:13 rillig Exp $
 
 DISTNAME=	FastTemplate-1_1_0
 PKGNAME=	php-FastTemplate-1.1.0
@@ -24,8 +24,8 @@ PHP_LIB_DIR=	${PREFIX}/${PHP_LIB_SUBDIR}
 DOCDIR=		${PREFIX}/share/doc/html/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
-PLIST_SUBST+=	PHP_LIB_SUBDIR=${PHP_LIB_SUBDIR}
-PLIST_SUBST+=	PKGBASE=${PKGBASE}
+PLIST_SUBST+=	PHP_LIB_SUBDIR=${PHP_LIB_SUBDIR:Q}
+PLIST_SUBST+=	PKGBASE=${PKGBASE:Q}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PHP_LIB_DIR}

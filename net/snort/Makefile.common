@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2005/10/18 15:15:04 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/12/05 20:50:49 rillig Exp $
 #
 
 DISTNAME=		snort-2.4.3
@@ -25,7 +25,7 @@ SNORT_USER?=		snort
 SNORT_GROUP?=		snort
 PKG_GROUPS=		${SNORT_GROUP}
 PKG_USERS=		${SNORT_USER}:${SNORT_GROUP}::Snort\ user
-FILES_SUBST+=		SNORT_USER="${SNORT_USER}" SNORT_GROUP="${SNORT_GROUP}"
+FILES_SUBST+=		SNORT_USER=${SNORT_USER:Q} SNORT_GROUP=${SNORT_GROUP:Q}
 
 OWN_DIRS_PERMS=		${VARBASE}/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
 CONF_FILES=		${EGDIR}/snort.conf.default \
@@ -50,7 +50,7 @@ CONF_FILES+=		${EGDIR}/unicode.map \
 EGDIR=			${PREFIX}/share/examples/snort
 SNORTDIR=		${PREFIX}/share/snort
 
-SUBST_CLASSES=		paths
+SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/snort.conf src/snort.c
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g" \

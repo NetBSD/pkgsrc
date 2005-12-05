@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/23 20:41:46 recht Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:23 rillig Exp $
 #
 
 PKGNAME=	vtk-python-${VTKDIST_VERSION}
@@ -38,7 +38,7 @@ post-install:
 	${RM} -f ${PREFIX}/bin/vtkpython
 	${LN} -s ${PYTHONBIN} ${PREFIX}/bin/vtkpython
 
-DEPENDS=	vtk>=${VTK_VERSION}:../../graphics/vtk
+DEPENDS+=	vtk>=${VTK_VERSION}:../../graphics/vtk
 
 .include "../../graphics/vtk/Makefile.vtkdist"
 

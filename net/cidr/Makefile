@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/10/12 07:10:57 seb Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:44 rillig Exp $
 #
 
 DISTNAME=	cidr-current
@@ -13,6 +13,6 @@ COMMENT=	RFC 1878 subnet calculator / helper
 WRKSRC=		${WRKDIR}/cidr-2.3
 
 LIBS.SunOS+=	-lnsl -lsocket
-MAKE_ENV+=	LIBS="${LIBS}"
+MAKE_ENV+=	LIBS=${LIBS:M*:Q}
 
 .include "../../mk/bsd.pkg.mk"

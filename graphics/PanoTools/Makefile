@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/16 06:57:57 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:19 rillig Exp $
 #
 
 DISTNAME=		PanoTools
@@ -81,7 +81,7 @@ EMULSUBDIR=
 .endif
 
 EMULDIR=		${PREFIX}/${EMULSUBDIR}
-PLIST_SUBST+=		EMULSUBDIR="${EMULSUBDIR}"
+PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

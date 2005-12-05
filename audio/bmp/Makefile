@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/19 15:09:37 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:49:47 rillig Exp $
 #
 
 BMP_ENABLE_ENCODERS=	yes
@@ -14,7 +14,7 @@ DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 # library is loaded, and is the one causing problems.  See PR pkg/26846
 # for more information.
 USE_LANGUAGES=		c c++
-LDFLAGS.NetBSD=		-lstdc++ -lm
+LDFLAGS.NetBSD+=	-lstdc++ -lm
 
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

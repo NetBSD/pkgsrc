@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2005/05/22 21:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2005/12/05 20:50:59 rillig Exp $
 
 DISTNAME=	cdrtools-2.00.3
 PKGNAME=	cdrecord-2.00.3
@@ -21,8 +21,8 @@ USE_TOOLS+=		gmake tbl
 # avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""
 MAKE_ENV+=      MAKEPROG="gmake"
-MAKE_ENV+=	COPTX="${CFLAGS}"
-MAKE_ENV+=	LDOPTX="${LDFLAGS}"
+MAKE_ENV+=	COPTX=${CFLAGS:M*:Q}
+MAKE_ENV+=	LDOPTX=${LDFLAGS:M*:Q}
 
 # if we're using a gcc which is named gcc, we need to set CCOM=gcc
 # in MAKE_ENV so the make infrastructure picks the right options.
@@ -80,7 +80,7 @@ do-install:
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
 
-SUBST_CLASSES=		fix
+SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch
 SUBST_FILES.fix=	cdrecord/defaults.c cdrecord/cdrecord.1 \
 			readcd/readcd.1

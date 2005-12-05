@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/19 10:23:42 grant Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:12 rillig Exp $
 
 DISTNAME=		suse_slang-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -23,5 +23,5 @@ post-install:
 	${LN} -sf ${PREFIX}/${EMULSUBDIR}/usr/lib/libslang-utf8.so.1 \
 		${PREFIX}/${EMULSUBDIR}/usr/lib/libslang.so.1
 
-.include "../suse91_linux/Makefile.common"
+.include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

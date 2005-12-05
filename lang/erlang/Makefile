@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/16 01:19:11 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:25 rillig Exp $
 
 DISTNAME=		otp_src_R9C-0
 PKGNAME=		erlang-9.2
@@ -19,7 +19,7 @@ USE_JAVA2=		yes
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
-SUBST_CLASSES=		target
+SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
 SUBST_FILES.target=	make/target.mk
 SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"

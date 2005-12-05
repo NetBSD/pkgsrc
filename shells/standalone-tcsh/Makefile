@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/29 18:32:18 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:59 rillig Exp $
 #
 
 NO_MTREE=		YES
@@ -17,7 +17,8 @@ PKG_INFO:=		${PKG_INFO}
 PKG_CREATE:=		${PKG_CREATE}
 PREFIX=			/
 NLSDIR=			usr/share/nls
-CONFIGURE_ARGS=		--prefix=${PREFIX} --bindir=/bin
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--bindir=/bin
 CONFIGURE_ARGS+=	--mandir=/usr/share/man
 
 DISTINFO_FILE=		${.CURDIR}/../../shells/tcsh/distinfo

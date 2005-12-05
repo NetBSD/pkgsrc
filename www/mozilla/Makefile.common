@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2005/11/26 22:09:25 martin Exp $
+# $NetBSD: Makefile.common,v 1.65 2005/12/05 20:51:13 rillig Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -55,7 +55,7 @@ UNLIMIT_RESOURCES=	datasize memorysize stacksize
 .include	"../../graphics/freetype2/buildlink3.mk"
 .include	"../../graphics/jpeg/buildlink3.mk"
 .include	"../../graphics/png/buildlink3.mk"
-.ifdef _MOZILLA_USE_GTK2
+.if defined(_MOZILLA_USE_GTK2)
 .include	"../../net/libIDL/buildlink3.mk"
 .include	"../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+= --enable-default-toolkit=gtk2 --disable-gnomevfs
@@ -69,25 +69,25 @@ CONFIGURE_ARGS+= --enable-default-toolkit=gtk
 # NetBSD-*-m68k builds, but "regchrome" dumps core.
 NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
 
-MAKE_ENV+=	MOZILLA_PKG_NAME=${MOZILLA}
+MAKE_ENV+=	MOZILLA_PKG_NAME=${MOZILLA:Q}
 
 MOZ_LIBDIR=	${PREFIX}/lib/${MOZILLA}
-MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
-CONFIGURE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
+MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR:Q}
+CONFIGURE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR:Q}
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${MOZ_LIBDIR}
 
-.ifdef BUILD_SVG
+.if defined(BUILD_SVG)
 MAKE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-svg-renderer-libart
 .endif
 
-.ifdef BUILD_CALENDAR
+.if defined(BUILD_CALENDAR)
 CONFIGURE_ARGS+=	--enable-calendar
 .endif
 
-.ifdef BUILD_MATHML
+.if defined(BUILD_MATHML)
 CONFIGURE_ARGS+=	--enable-mathml
 .endif
 
@@ -100,10 +100,10 @@ CONFIGURE_ARGS+=	--enable-xinerama
 # directory
 SCRIPTS_ENV+=	HOME="${WRKDIR}"
 
-PLIST_SUBST+=	MOZILLA=${MOZILLA}
-PLIST_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
-FILES_SUBST+=	MOZILLA=${MOZILLA}
-FILES_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
+PLIST_SUBST+=	MOZILLA=${MOZILLA:Q}
+PLIST_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN:Q}
+FILES_SUBST+=	MOZILLA=${MOZILLA:Q}
+FILES_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN:Q}
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=	so
 SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
@@ -114,14 +114,14 @@ SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_LIB}"
 SO_SUFFIX=	so.1.0
 SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
 .endif
-PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
+PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX:Q}
 
 .if (${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc")
 SUNOSLIB=
 .else
 SUNOSLIB=	"@comment "
 .endif
-PLIST_SUBST+=	SUNOSLIB=${SUNOSLIB}
+PLIST_SUBST+=	SUNOSLIB=${SUNOSLIB:Q}
 
 SCRIPTS_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
 SCRIPTS_ENV+=	PLIST_SRC=${PLIST_SRC:Q}
@@ -193,7 +193,7 @@ CONFIGURE_ARGS+=	--enable-xft
 .endif
 
 # Fix for firefox* packages.
-SUBST_CLASSES=		pc
+SUBST_CLASSES+=		pc
 SUBST_STAGE.pc=		post-extract
 SUBST_FILES.pc=		build/unix/*.pc.in
 SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \

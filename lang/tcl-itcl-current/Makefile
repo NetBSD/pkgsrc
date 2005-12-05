@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/13 20:06:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:28 rillig Exp $
 
 DISTNAME=	tcl-itcl-20040920
 PKGNAME=	${DISTNAME:S/itcl/itcl-current/}
@@ -18,9 +18,9 @@ WRKSRC=		${WRKDIR}/tcl-itcl-${ITCL_VERS}
 ITCL_VERS=	3.3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-CONFIGURE_ARGS= --with-tcl=${BUILDLINK_PREFIX.tcl}/lib	\
-		--with-tk=${BUILDLINK_PREFIX.tk}/lib	\
-		--enable-shared
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl:Q}/lib
+CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk:Q}/lib
+CONFIGURE_ARGS+=	--enable-shared
 
 MAKE_ENV+=	TCL_HEADER_DIR=${BUILDLINK_PREFIX.tcl}/include/tcl
 

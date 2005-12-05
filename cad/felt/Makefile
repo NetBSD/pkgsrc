@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/09/28 20:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 20:49:51 rillig Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -17,9 +17,9 @@ WRKSRC=			${WRKDIR}/FElt-3.05
 USE_X11BASE=		yes
 XAW_TYPE?=		3d
 
-MAKE_ENV+=		CCOPTS="${CFLAGS}"
-MAKE_ENV+=		LDOPTS="${LDFLAGS}"
-MAKE_ENV+=		SH="${SH}"
+MAKE_ENV+=		CCOPTS=${CFLAGS:M*:Q}
+MAKE_ENV+=		LDOPTS=${LDFLAGS:M*:Q}
+MAKE_ENV+=		SH=${SH:Q}
 
 USE_GNU_READLINE=	# uses remove_history() and history_list()
 

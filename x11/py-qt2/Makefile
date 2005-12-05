@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/09/28 20:52:28 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:51:18 rillig Exp $
 #
 
 DISTNAME=	PyQt-3.1-Qt-2.3.1
@@ -15,12 +15,12 @@ WRKSRC=			${WRKDIR}/PyQt-3.1
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--with-python=${PYTHONBIN} \
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN} \
 			--with-qt-dir=${QTDIR}
 
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/extension.mk"
 

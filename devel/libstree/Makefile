@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:45:28 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:05 rillig Exp $
 #
 
 DISTNAME=	libstree-0.4.0
@@ -11,6 +11,6 @@ HOMEPAGE=	http://www.cl.cam.ac.uk/~cpk25/libstree/
 COMMENT=	Suffix tree library
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc/html
 
 .include "../../mk/bsd.pkg.mk"

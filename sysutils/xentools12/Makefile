@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:33 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:51:02 rillig Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -25,8 +25,8 @@ CONF_FILES+=		${EGDIR}/democd ${PKG_SYSCONFDIR}/democd
 CONF_FILES+=		${EGDIR}/netbsd ${PKG_SYSCONFDIR}/netbsd
 
 USE_TOOLS+=		gmake
-MAKE_ENV+=		EGDIR="${EGDIR}"
-MAKE_ENV+=		MV="${MV}" PYTHON="${PYTHONBIN}" SED="${SED}"
+MAKE_ENV+=		EGDIR=${EGDIR:Q}
+MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 PYTHON_VERSIONS_ACCEPTED= 22 23
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS=	examples/xc_dom_control.py examples/xc_dom_create.py

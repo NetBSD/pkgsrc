@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2005/09/28 14:31:08 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:38 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/-kde-/}
 PKGREVISION=	1
 
 COMMENT=	KDE frontend for free real-time 3D space simulator
 
-DEPENDS=	celestia-${CELESTIA_VERS}*:../../misc/celestia
+DEPENDS+=	celestia-${CELESTIA_VERS}*:../../misc/celestia
 
 CONFIGURE_ARGS+=	--with-kde
 

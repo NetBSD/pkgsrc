@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/01 18:02:57 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:22 rillig Exp $
 #
 
 DISTNAME=	plnode141
@@ -14,7 +14,7 @@ COMMENT=	Examples for the ploticus data plotting suite
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-DIST_SUBDIR=	${PKGNAME:S/-examples//}
+DIST_SUBDIR=	${PKGNAME_NOREV:S/-examples//}
 EXDIR=		${PREFIX}/share/examples/ploticus
 
 .include "../../mk/x11.buildlink3.mk"

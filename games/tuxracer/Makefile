@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/02 23:02:06 reed Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:18 rillig Exp $
 #
 
 DISTNAME=	tuxracer-0.61
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	YES
 CFLAGS+=	-DGLX_GLXEXT_PROTOTYPES
 CONFIGURE_ARGS+=	--with-data-dir=${PREFIX}/share/tuxracer
 CONFIGURE_ARGS+=	--with-tcl-libs=${BUILDLINK_PREFIX.tcl}/lib
-CONFIGURE_ENV+=		CFLAGS="${CFLAGS}"
+CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 
 post-install:
 	@-${MKDIR} ${PREFIX}/share/doc/html/tuxracer ${PREFIX}/share/examples/tuxracer ${PREFIX}/share/tuxracer

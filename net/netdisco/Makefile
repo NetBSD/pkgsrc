@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/11 11:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:47 rillig Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
@@ -43,7 +43,7 @@ REPLACE_PERL+=  mibs/rm_cisco_dups
 REPLACE_PERL+=  mibs/chk_mibs
 REPLACE_PERL+=  mibs/snmpwalkmib
 
-SUBST_CLASSES=			installdir path var
+SUBST_CLASSES+=			installdir path var
 SUBST_STAGE.installdir=		pre-configure
 SUBST_FILES.installdir=		sql/pg_run sql/pg_init sql/pg_back
 SUBST_FILES.installdir+=	bin/netdisco_daemon
@@ -81,7 +81,7 @@ SUBST_MESSAGE.var=	"Fixing data directory."
 
 NETDISCOUSER?=	netdisco
 NETDISCOGROUP?=	netdisco
-BUILD_DEFS=	NETDISCOUSER NETDISCOGROUP
+BUILD_DEFS+=	NETDISCOUSER NETDISCOGROUP
 
 PKG_USERS=	${NETDISCOUSER}:${NETDISCOGROUP}::Netdisco\ administrator:${PREFIX}/netdisco:${SH}
 PKG_GROUPS=	${NETDISCOGROUP}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/09/28 14:31:08 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:51 rillig Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -22,12 +22,12 @@ USE_LANGUAGES=		fortran
 USE_LIBTOOL=		yes
 
 PVM_ROOT=		${WRKSRC}
-MAKE_ENV+=		PVM_ROOT=${WRKSRC}
+MAKE_ENV+=		PVM_ROOT=${WRKSRC:Q}
 MAKE_ENV+=		PVM_ARCH=
-MAKE_ENV+=		SSH=${PVM_SSH}
-MAKE_ENV+=		MKDIR="${MKDIR}"
+MAKE_ENV+=		SSH=${PVM_SSH:Q}
+MAKE_ENV+=		MKDIR=${MKDIR:Q}
 MAKE_ENV+=		PVMLIB_VER=3:4
-MAKE_ENV+=		PVM_DIR=${PVM_DIR}
+MAKE_ENV+=		PVM_DIR=${PVM_DIR:Q}
 BUILD_TARGET=		all install
 
 # Set PVM_ARCH to the correct value for this machine platform.

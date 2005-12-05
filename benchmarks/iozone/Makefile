@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/10/31 17:26:02 tv Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 20:49:51 rillig Exp $
 
 DISTNAME=	iozone3_248
 PKGNAME=	iozone-3.248
@@ -22,20 +22,20 @@ MAKEFILE=		makefile
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "Linux"
-  BUILD_TARGET=		${LOWER_OPSYS}
+BUILD_TARGET=		${LOWER_OPSYS}
 .elif (${OPSYS} == "SunOS")
-  BUILD_TARGET=		Solaris
+BUILD_TARGET=		Solaris
 .elif (${OPSYS} == "Darwin")
-  BUILD_TARGET=		macosx
+BUILD_TARGET=		macosx
 .elif (${OPSYS} == "IRIX")
-  BUILD_TARGET=		${OPSYS}${ABI:M64}
+BUILD_TARGET=		${OPSYS}${ABI:M64}
 .elif (${OPSYS} == "BSDOS")
-  BUILD_TARGET=		bsdi
+BUILD_TARGET=		bsdi
 .elif (${OPSYS} == "AIX")
-  BUILD_TARGET=		${OPSYS}
+BUILD_TARGET=		${OPSYS}
 .else
-  # XXX: generic should work, but specific target would be better
-  BUILD_TARGET=		generic
+# XXX: generic should work, but specific target would be better
+BUILD_TARGET=		generic
 .endif
 
 INSTALLATION_DIRS=	bin man/man1

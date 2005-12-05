@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:49 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:51:18 rillig Exp $
 #
 
 DISTNAME=	pygtk-0.6.11
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.pygtk.org/
 COMMENT=	Python Bindings for the GTK Widget Set
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 PY_PATCHPLIST=	yes

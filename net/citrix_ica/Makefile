@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/09/27 16:09:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:44 rillig Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -35,7 +35,7 @@ PKGNAME=	citrix_ica-7.00.77757
 
 # see http://www.citrix.com/download/unix-downloads.htm
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
-DEPENDS=        suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=        suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
 LICENSE=                citrix_ica-license
@@ -46,14 +46,14 @@ NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}
 
 WRKSRC=         ${WRKDIR}
-DIST_SUBDIR=    ${PKGNAME}
+DIST_SUBDIR=    ${PKGNAME_NOREV}
 
 CDIR=           ${PREFIX}/lib/ICAClient
 BINDIR=         ${PREFIX}/bin
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
 .  if !exists(/emul/svr4/usr/lib/ld.so)
-PKG_FAIL_REASON= "${PKGNAME} requires SVR4 compability - see compat_svr4(8)"
+PKG_FAIL_REASON+=	"${PKGNAME} requires SVR4 compability - see compat_svr4(8)"
 .  endif
 .endif
 

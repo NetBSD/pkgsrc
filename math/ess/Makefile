@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/28 04:25:30 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:36 rillig Exp $
 
 DISTNAME=	ess-5.1.24
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://software.biostat.washington.edu/statsoft/ess/
 COMMENT=	Emacs Speaks Statistics
 
-MAKEFLAGS+=	EMACS=${EMACS_BIN}
+MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 
 USE_MAKEINFO=	YES
 USE_TOOLS+=	perl
@@ -25,7 +25,7 @@ INFO_FILES=	ess.info
 INSTALLATION_DIRS=	${INFODIR}
 
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/ess
-PLIST_SUBST+=	INFODIR=${INFODIR}
+PLIST_SUBST+=	INFODIR=${INFODIR:Q}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/ess

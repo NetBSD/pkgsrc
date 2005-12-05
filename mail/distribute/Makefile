@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/08 13:25:38 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:29 rillig Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
@@ -35,8 +35,8 @@ MAKE_ENV+=	DEFAULTCONFIG='-DDEF_SEQ_PATH="\"${MAILINGLIST_DIR}\"" \
 			-DDEF_MAJORDOMO_RECIPIENT_PATH="\"${MAJORDOMO_LIST_DIR}\"" \
 			-DDEF_DOMAINNAME="\"${DEF_DOMAINNAME}\"" \
 			-DDEF_ARCHIVE_PATH="\"${ARCHIVE_DIR}\""' \
-		INSTALL="${INSTALL}" \
-		INSTALL_MAN="${INSTALL_MAN}"
+		INSTALL=${INSTALL:Q} \
+		INSTALL_MAN=${INSTALL_MAN:Q}
 
 pre-build:
 	${TOUCH} ${WRKSRC}/logging.h ${WRKSRC}/strsep.c

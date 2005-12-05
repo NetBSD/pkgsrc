@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/11/29 06:45:28 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:49:57 rillig Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -32,9 +32,9 @@ CONFIGURE_ARGS+=	--program-transform-name=s,db_,db3_,
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db3
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-java
-CONFIGURE_ENV+=		JAVAC="${JAVAC}"
-CONFIGURE_ENV+=		JAVACABS="${JAVACABS}"
-CONFIGURE_ENV+=		JAR="${JAR}"
+CONFIGURE_ENV+=		JAVAC=${JAVAC:Q}
+CONFIGURE_ENV+=		JAVACABS=${JAVACABS:Q}
+CONFIGURE_ENV+=		JAR=${JAR:Q}
 
 CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PKG_JVM}}
 

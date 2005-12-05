@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/09/06 14:53:36 adam Exp $
+# $NetBSD: Makefile,v 1.52 2005/12/05 20:50:23 rillig Exp $
 
 DISTNAME=       xpaint-2.7.8
 CATEGORIES=	graphics x11
@@ -11,10 +11,10 @@ COMMENT=	Simple paint program
 
 USE_IMAKE=      	yes
 USE_TOOLS+=		gmake
-MAKE_ENV+=		XMKMF="${XMKMF}"
+MAKE_ENV+=		XMKMF=${XMKMF:Q}
 BUILD_TARGET=		xaw3dg
 
-SUBST_CLASSES=		foo
+SUBST_CLASSES+=		foo
 SUBST_STAGE.foo=	pre-configure
 SUBST_FILES.foo=	Local.config configure
 SUBST_SED.foo=		-e "s|@LOCALBASE@|${LOCALBASE}|g" \

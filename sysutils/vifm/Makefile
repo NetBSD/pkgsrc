@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:33 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:51:01 rillig Exp $
 #
 
 DISTNAME=	vifm-0.1
@@ -13,8 +13,8 @@ COMMENT=	Ncurses based file manager with vi like keybindings
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*
+INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
 
 pre-configure:
 	@${SED} -e "s/cfg.use_screen = 0/cfg.use_screen = 1/" \

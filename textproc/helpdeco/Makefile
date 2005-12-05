@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/04 15:50:13 ben Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:51:03 rillig Exp $
 #
 
 DISTNAME=		helpdeco-2.1.3
@@ -15,7 +15,7 @@ COMMENT=		Windows .hlp to .rtf converter
 CFLAGS+=		-DHAVE_STRLCPY
 .endif
 
-MAKE_ENV+=		CFLAGS="${CFLAGS}"
+MAKE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 BUILD_TARGET=		build
 USE_TOOLS+=		gmake
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:18:38 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/12/05 20:51:19 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT2_LIBS_BUILDLINK3_MK:=	${QT2_LIBS_BUILDLINK3_MK}+
@@ -27,9 +27,9 @@ BUILDLINK_LIBDIRS.qt2-libs=	qt2/lib
 .include "../../graphics/png/buildlink3.mk"
 
 QTDIR=		${BUILDLINK_PREFIX.qt2-libs}/qt2
-CONFIGURE_ENV+=	QTDIR="${QTDIR}"
+CONFIGURE_ENV+=	QTDIR=${QTDIR:Q}
 CONFIGURE_ENV+=	MOC="${QTDIR}/bin/moc"
-MAKE_ENV+=	QTDIR="${QTDIR}"
+MAKE_ENV+=	QTDIR=${QTDIR:Q}
 MAKE_ENV+=	MOC="${QTDIR}/bin/moc"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

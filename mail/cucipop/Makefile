@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:29 rillig Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -17,8 +17,8 @@ USE_PKGINSTALL=	YES
 
 LICENSE=	cucipop-license
 
-MAKE_ENV+=	ROOT_USER="${ROOT_USER}"
-MAKE_ENV+=	ROOT_GROUP="${ROOT_GROUP}"
+MAKE_ENV+=	ROOT_USER=${ROOT_USER:Q}
+MAKE_ENV+=	ROOT_GROUP=${ROOT_GROUP:Q}
 
 REQD_DIRS+=	${PREFIX}/share/cucipop/bulletins
 SPECIAL_PERMS+=	${PREFIX}/sbin/cucipop ${ROOT_USER} ${ROOT_GROUP} 2755
@@ -32,7 +32,7 @@ PKG_SUPPORTED_OPTIONS=	db inet6
 .if !empty(PKG_OPTIONS:Mdb)
 BDB_ACCEPTED=	db2
 CFLAGS+=	-DUSE_DB
-MAKE_ENV+=	LIBS=${BDB_LIBS}
+MAKE_ENV+=	LIBS=${BDB_LIBS:Q}
 .  include "../../mk/bdb.buildlink3.mk"
 .endif
 

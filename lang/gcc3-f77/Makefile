@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/19 00:10:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:25 rillig Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-f77-${GCC_VERSION}
 PKGREVISION=	1
@@ -11,7 +11,7 @@ INSTLIBS=	libf2c/libg2c.la
 .include "../../lang/gcc3/language.mk"
 
 USE_TOOLS+=		chmod
-MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod="${TOOLS_CHMOD}"
+MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
 CONFIGURE_ARGS+=	--enable-languages="f77"
 
 ONLY_FOR_COMPILER=	gcc

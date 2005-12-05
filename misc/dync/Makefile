@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/08 21:09:36 kristerw Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:38 rillig Exp $
 #
 
 DISTNAME=		dync-1.1
@@ -13,7 +13,7 @@ COMMENT=		awk-like utility with C as language
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		tst
 USE_TOOLS+=		file_cmd
-CONFIGURE_ENV+=		FILE_CMD="${TOOLS_FILE_CMD}"
-CONFIGURE_ENV+=		ac_cv_path_LDCONFIG="${TOOLS_LDCONFIG}"
+CONFIGURE_ENV+=		FILE_CMD=${TOOLS_FILE_CMD:Q}
+CONFIGURE_ENV+=		ac_cv_path_LDCONFIG=${TOOLS_LDCONFIG:Q}
 
 .include "../../mk/bsd.pkg.mk"

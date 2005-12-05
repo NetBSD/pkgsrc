@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/23 18:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:20 rillig Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -41,8 +41,8 @@ CONFIGURE_ENV+=		GAP_DECODE_MPEG="gap_decode_mpeg"
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-MAKE_ENV+=		X11BASE=${X11BASE}
-PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+MAKE_ENV+=		X11BASE=${X11BASE:Q}
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}
 
 .include "options.mk"
 

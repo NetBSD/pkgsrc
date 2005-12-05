@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/14 22:25:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:49:56 rillig Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
@@ -24,8 +24,8 @@ WRKSRC=		${WRKDIR}
 # for other cross compilers.
 #USE_CROSSBASE=	yes
 TARGET_DIR=	${PREFIX}/cross-ps2
-PLIST_SUBST+=	SUBDIR="cross-ps2" TARGET_ARCH="${TARGET_ARCH}" \
-		GCC_VERSION="${GCC_VERSION}"
+PLIST_SUBST+=	SUBDIR="cross-ps2" TARGET_ARCH=${TARGET_ARCH:Q} \
+		GCC_VERSION=${GCC_VERSION:Q}
 
 #
 # binutils

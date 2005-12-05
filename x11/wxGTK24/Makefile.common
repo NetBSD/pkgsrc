@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/08/10 20:56:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/12/05 20:51:19 rillig Exp $
 #
 
 DISTNAME=		wxGTK-2.4.2
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-libjpeg=sys
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-libpng=sys
 CONFIGURE_ARGS+=	--with-libtiff=sys
-CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
+CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 
 CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
