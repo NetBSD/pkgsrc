@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:15 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:26 rillig Exp $
 #
 
 DISTNAME=		open-cobol-0.23
@@ -28,7 +28,7 @@ CONF_FILES=		${EGDIR}/libconf.conf ${PKG_SYSCONFDIR}/libconf.conf
 
 .include "../../mk/bsd.prefs.mk"
 
-SUBST_CLASSES=		lnk
+SUBST_CLASSES+=		lnk
 SUBST_STAGE.lnk=	post-patch
 SUBST_FILES.lnk=	configure
 SUBST_SED.lnk=		-e "s|COBC_LIBS=\"\"|COBC_LIBS=\"\$$LDFLAGS\"|g" \

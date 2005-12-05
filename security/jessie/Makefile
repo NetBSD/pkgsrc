@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:30 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:56 rillig Exp $
 #
 
 DISTNAME=		jessie-0.9.7
@@ -11,7 +11,7 @@ COMMENT=		GPL implementation of the Java Secure Sockets Extension
 
 DEPENDS+=		gnu-crypto>=2.0:../../security/gnu-crypto
 
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 USE_JAVA2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/07/19 04:25:43 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:48 rillig Exp $
 
 DISTNAME=	radiusd-cistron-1.6.7
 PKGREVISION=	1
@@ -33,7 +33,6 @@ CONF_FILES=
 		naslist.sample naspasswd.sample realms.sample users.sample
 CONF_FILES+=	${EGDIR}/${cfile} ${PKG_SYSCONFDIR}/${cfile:S/.sample//}
 .endfor
-.undef cfile
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/radiusd-cistron

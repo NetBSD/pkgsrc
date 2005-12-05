@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 20:51:09 rillig Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
@@ -11,14 +11,14 @@ DEPENDS+=		sawfish-replibs-${SF_VERS}nb5:../../wm/sawfish-replibs
 USE_DIRS+=		xdg-1.1
 USE_X11BASE=		yes
 
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
-MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 BUILD_USES_MSGFMT=	YES
 
 USE_MAKEINFO=		YES
 INFO_FILES=		sawfish.info
 
-PLIST_SUBST+=		SF_VERS=${SF_VERS}
+PLIST_SUBST+=		SF_VERS=${SF_VERS:Q}
 
 .include "../../mk/x11.buildlink3.mk"
 

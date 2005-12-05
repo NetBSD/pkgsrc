@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:14:40 agc Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:11 rillig Exp $
 #
 
 DISTNAME=		doscmd-19960502-2
@@ -13,7 +13,7 @@ COMMENT=		MS-DOS emulator (NetBSD/i386 only)
 ONLY_FOR_PLATFORM=	NetBSD-1.[345]*-i386
 
 WRKSRC=			${WRKDIR}/doscmd
-MAKE_ENV=		X11BASE=${X11BASE}
+MAKE_ENV+=		X11BASE=${X11BASE:Q}
 
 MANCOMPRESSED_IF_MANZ=	yes
 

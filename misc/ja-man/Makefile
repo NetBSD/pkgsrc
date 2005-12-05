@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/15 18:27:52 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:39 rillig Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -9,12 +9,12 @@ MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	ftp://ftp.spa.is.uec.ac.jp/pub/NetBSD/jman/index.html
 COMMENT=	Japanese on-line manual pages of NetBSD
 
-DEPENDS=	ja-less>=332:../../misc/ja-less
+DEPENDS+=	ja-less>=332:../../misc/ja-less
 DEPENDS+=	ja-groff-0.99:../../textproc/ja-groff
 
 JAMANDIR=	ja_JP.EUC
-PLIST_SUBST+=	JAMANDIR=${JAMANDIR}
-MAKE_ENV+=	JAMANDIR=${JAMANDIR}
+PLIST_SUBST+=	JAMANDIR=${JAMANDIR:Q}
+MAKE_ENV+=	JAMANDIR=${JAMANDIR:Q}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 

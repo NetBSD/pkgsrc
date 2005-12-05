@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/08 18:22:09 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:14 rillig Exp $
 
 DISTNAME=	efont-unicode-bdf-0.4.2
 PKGNAME=	${DISTNAME:S/-bdf//}
@@ -14,7 +14,7 @@ USE_X11BASE=	YES
 USE_TOOLS+=	gzip mkfontdir:run
 
 MESSAGE_SUBST+=	FONTDIR=${FONTDIR}
-PLIST_SUBST+=	FONTDIR=${FONTDIR}
+PLIST_SUBST+=	FONTDIR=${FONTDIR:Q}
 
 FONTS=		b10 b10_b b10_bi b10_i\
 		b12 b12_b b12_bi b12_i\

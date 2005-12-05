@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/12 17:43:42 tonio Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:49:57 rillig Exp $
 
 DISTNAME=		lbdb_0.31
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -23,8 +23,8 @@ CONFIGURE_ARGS+=  --without-evolution-addressbook-export
 CONFIGURE_ARGS+=  --without-pgp
 CONFIGURE_ARGS+=  --without-pgpk
 
-CONFIGURE_ENV+=   SH=${TOOLS_SH}
-CONFIGURE_ENV+=   AWK=${TOOLS_AWK}
+CONFIGURE_ENV+=   SH=${TOOLS_SH:Q}
+CONFIGURE_ENV+=   AWK=${TOOLS_AWK:Q}
 
 .include "options.mk"
 

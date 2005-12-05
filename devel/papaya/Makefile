@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:06 rillig Exp $
 #
 
 DISTNAME=	papaya-0.1.7
@@ -17,8 +17,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	# empty
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	sh_command=${TOOLS_SH}
-CONFIGURE_ENV+=	tar_command=${TOOLS_TAR}
+CONFIGURE_ENV+=	sh_command=${TOOLS_SH:Q}
+CONFIGURE_ENV+=	tar_command=${TOOLS_TAR:Q}
 USE_TOOLS+=	sh perl:run tar
 INFO_FILES=	papaya.info
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/08/19 18:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2005/12/05 20:50:59 rillig Exp $
 
 DISTNAME=		apcupsd-3.8.6
 PKGREVISION=		4
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # this breaks .in files that uses @sbindir@
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 
-CONFIGURE_ENV+=		SCRIPTSHELL="${TOOLS_SH}"
+CONFIGURE_ENV+=		SCRIPTSHELL=${TOOLS_SH:Q}
 
 EGDIR=          ${PREFIX}/share/examples/apcupsd
 

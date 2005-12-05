@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.5 2005/06/04 11:20:22 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.6 2005/12/05 20:50:38 rillig Exp $
 #
 
 .if !defined(DIRS_XFREE86_MK)
@@ -35,7 +35,6 @@ PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${dir:S|/|\\/|g}$$/ \
 				{ print "@comment in XFree86-dirs: "$$0; next; }
 .  endfor
-.  undef dir
 .endif
 
 .endif			# !defined(DIRS_XFREE86_MK)

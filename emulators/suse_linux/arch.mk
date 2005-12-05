@@ -1,7 +1,7 @@
-# $NetBSD: arch.mk,v 1.1 2002/11/25 11:01:16 schmonz Exp $
+# $NetBSD: arch.mk,v 1.2 2005/12/05 20:50:12 rillig Exp $
 
-.ifndef SUSE_ARCH_MK
-SUSE_ARCH_MK=1
+.if !defined(SUSE_ARCH_MK)
+SUSE_ARCH_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 

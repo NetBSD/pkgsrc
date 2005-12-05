@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.pkg,v 1.2 2005/06/01 18:02:46 jlam Exp $
+# $NetBSD: Makefile.pkg,v 1.3 2005/12/05 20:50:10 rillig Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(XEMACS_PREFIX)
 XEMACS_PREFIX!=	${MAKE} XEMACS_PREFIX= EVAL_PREFIX=_XEMACS_PREFIX=xemacs \
 		VARNAME=_XEMACS_PREFIX show-var
-MAKEFLAGS+=	XEMACS_PREFIX=${XEMACS_PREFIX}
+MAKEFLAGS+=	XEMACS_PREFIX=${XEMACS_PREFIX:Q}
 .endif
 
 .if (${XEMACS_PREFIX} == ${X11BASE})

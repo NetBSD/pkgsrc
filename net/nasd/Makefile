@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 20:50:47 rillig Exp $
 
 DISTNAME=		repackaged-${PKGNAME}
 PKGNAME=		nasd-1.3
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-* Linux-*-*
 
 USE_IMAKE=		yes
 USE_TOOLS+=		perl
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/include/nasd/netbsd

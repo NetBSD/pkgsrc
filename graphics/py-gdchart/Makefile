@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/16 06:57:58 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:22 rillig Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
@@ -12,12 +12,12 @@ HOMEPAGE=	http://athani.pair.com/msteed/software/gdchart/
 COMMENT=	Python interface to GDChart
 
 USE_TOOLS+=	gmake
-MAKE_ENV=	GD_INCLUDE=${LOCALBASE}/include \
+MAKE_ENV+=	GD_INCLUDE=${LOCALBASE}/include \
 		GDCHART_INCLUDE=${LOCALBASE}/include \
 		PYTHON_INCLUDE=${LOCALBASE}/${PYINC} \
 		HAVE_LIBFREETYPE=1 \
-		LOCALBASE=${LOCALBASE}
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+		LOCALBASE=${LOCALBASE:Q}
+PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
 MODULE_FILES=	chart.py gdchart.so
 EXAMPLE_FILES=	test.html test.py CHANGES
 EXAMPLE_DIR=	${PREFIX}/share/examples/${PYPKGPREFIX}-gdchart

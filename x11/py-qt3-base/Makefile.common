@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/11/22 18:52:45 drochner Exp $
+# $NetBSD: Makefile.common,v 1.4 2005/12/05 20:51:18 rillig Exp $
 #
 
 # XXX: when updating version, be sure to update distinfo for both
@@ -24,13 +24,13 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
-CONFIGURE_ARGS=		-b ${PREFIX}/bin
+CONFIGURE_ARGS+=	-b ${PREFIX}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
 CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \

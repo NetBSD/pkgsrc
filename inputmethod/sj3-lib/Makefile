@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/09/28 18:22:11 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:24 rillig Exp $
 
 DISTNAME=	sj3-2.0.1.20
 PKGNAME=	sj3-lib-2.0.1.20
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_ENV+=	IMDICTDIR=${IMDICTDIR}
+MAKE_ENV+=	IMDICTDIR=${IMDICTDIR:Q}
 
 pre-configure:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig

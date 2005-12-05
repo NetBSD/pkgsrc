@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:52 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 20:51:11 rillig Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 USE_PKGINSTALL=	yes
 
 HTTPD_ROOT?=	share/httpd/htdocs
-PLIST_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT}
+PLIST_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT:Q}
 
 BUILD_DEFS+=	HTTPD_ROOT
 

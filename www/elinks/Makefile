@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/09/04 05:00:36 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:51:12 rillig Exp $
 
 DISTNAME=		elinks-0.10.5
 PKGREVISION=		1
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--enable-256-colors
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

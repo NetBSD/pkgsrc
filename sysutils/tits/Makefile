@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/26 08:16:17 agc Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:01 rillig Exp $
 #
 
 DISTNAME=       tits-1.1.1
@@ -10,7 +10,7 @@ COMMENT=	Server which provides telnet(1) access to one or more tty ports
 
 BINDIR=		${PREFIX}/sbin
 MANDIR=		${PREFIX}/man
-MAKE_ENV+=	BINDIR=${BINDIR} MANDIR=${MANDIR}
+MAKE_ENV+=	BINDIR=${BINDIR:Q} MANDIR=${MANDIR:Q}
 
 MANCOMPRESSED_IF_MANZ=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/11/22 18:50:30 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:51:18 rillig Exp $
 #
 
 DISTNAME=	sip-4.3.2
@@ -19,14 +19,14 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS=		-b ${PREFIX}/bin
+CONFIGURE_ARGS+=	-b ${PREFIX}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
 CONFIGURE_ARGS+=	-e ${PREFIX}/${PYINC}
 CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"

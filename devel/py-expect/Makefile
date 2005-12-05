@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/31 22:44:23 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:07 rillig Exp $
 #
 
 DISTNAME=	ExpectPy-1.9b1
@@ -16,11 +16,11 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-python=${BUILDLINK_PREFIX.${PYPACKAGE}} \
 			--with-expect=${BUILDLINK_PREFIX.tcl-expect} \
 			--with-tcl --enable-shared
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 CONFIGURE_ENV+=	PYTH_CONFIGDIR=${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/config
 INSTALL_TARGET=	installshared
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYLIB=${PYLIB} PYPKGPREFIX=${PYPKGPREFIX}
+PLIST_SUBST+=	PYLIB=${PYLIB:Q} PYPKGPREFIX=${PYPKGPREFIX:Q}
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PYPKGPREFIX}-expect
 EXAMPLESFILES=	ask.py glob.py ping.py telnet.py xping.py

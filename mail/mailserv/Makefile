@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/16 01:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:33 rillig Exp $
 #
 
 DISTNAME=	mailserv
@@ -24,7 +24,6 @@ CONF_FILES=
 	majordomo-share majordomo mlp pmdf smartlist subscribe
 CONF_FILES+=	${EGDIR}/${cf}.cf ${PKG_SYSCONFDIR}/${cf}.cf
 .endfor
-.undef cf
 
 INSTALLATION_DIRS=	libexec/cgi-bin
 
@@ -39,7 +38,6 @@ do-configure:
 		-e "s|/usr/local/bin/perl|${PREFIX}/bin/perl|g"		\
 		-e "s|/usr/bin/perl|${PREFIX}/bin/perl|g"
 .endfor
-.undef file
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/cgi-bin/mailserv
@@ -52,11 +50,9 @@ do-install:
 	cd ${PREFIX}/libexec/cgi-bin/mailserv &&			\
 	${LN} -s mailserv ${cf}
 .endfor
-.undef cf
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mailserv
 .for doc in ChangeLog LICENSE README
 	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/mailserv
 .endfor
-.undef doc
 
 .include "../../mk/bsd.pkg.mk"

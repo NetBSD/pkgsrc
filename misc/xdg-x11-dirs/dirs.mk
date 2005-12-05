@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.4 2005/06/04 11:20:23 jmmv Exp $
+# $NetBSD: dirs.mk,v 1.5 2005/12/05 20:50:41 rillig Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -24,7 +24,6 @@ PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${dir:S|/|\\/|g}$$/ \
 				{ print "@comment in xdg-x11-dirs: " $$0; next; }
 .  endfor
-.  undef dir
 .endif
 
 .endif			# !defined(DIRS_XDG_X11_MK)

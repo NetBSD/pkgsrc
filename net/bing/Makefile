@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/03/24 21:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:44 rillig Exp $
 
 DISTNAME=	bing-1.0.4
 CATEGORIES=	net
@@ -33,4 +33,3 @@ CXXFLAGS:=      ${CXXFLAGS:C/-O[0-9]*//g}
 CFLAGS:=        ${CFLAGS:C/-O[0-9]*//g}
 .  endif
 .endif
-

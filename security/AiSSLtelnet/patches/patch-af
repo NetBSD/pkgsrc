@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2004/03/25 15:23:40 taca Exp $
+$NetBSD: patch-af,v 1.2 2005/12/05 20:50:54 rillig Exp $
 
 --- telnet/commands.c.orig	2001-08-02 22:42:45.000000000 +0900
 +++ telnet/commands.c
-@@ -68,7 +68,7 @@ static char vcid[] = "$Id: commands.c,v 
+@@ -68,7 +68,7 @@
  #include <netdb.h>
  #include <ctype.h>
  #include <pwd.h>

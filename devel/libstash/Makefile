@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 16:43:31 martti Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:05 rillig Exp $
 #
 
 DISTNAME=	libstash_s19990912a
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.sqrl.org/sqrl/
 COMMENT=	Collection of programming support routines and useful algorithms
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--without-pthreads --disable-shared
+CONFIGURE_ARGS+=	--without-pthreads
+CONFIGURE_ARGS+=	--disable-shared
 
 .include "../../mk/bsd.pkg.mk"

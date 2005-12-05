@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/16 11:15:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:05 rillig Exp $
 
 DISTNAME=		nspr-4.4.1
 PKGREVISION=		2
@@ -16,9 +16,9 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--disable-debug
 
-MAKE_ENV=		DIST=${WRKSRC}/dist
+MAKE_ENV+=		DIST=${WRKSRC:Q}/dist
 CONFIGURE_SCRIPT=	../configure
-CONFIGURE_ENV=		LIBRUNPATH=${PREFIX}/lib/nspr
+CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX:Q}/lib/nspr
 
 .include		"../../mk/bsd.prefs.mk"
 
@@ -29,7 +29,7 @@ SO_SUFFIX=		dylib
 .else
 SO_SUFFIX=		so.1.0
 .endif
-PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX}
+PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 INSTALLATION_DIRS=	bin
 

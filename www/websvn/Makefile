@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/09/28 14:31:09 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:51:15 rillig Exp $
 #
 
 DISTNAME=	WebSVN_161
@@ -22,7 +22,7 @@ PKG_SYSCONFDIR.websvn=	${PREFIX}/${HTTPD_ROOT}/websvn/include
 
 MESSAGE_SUBST+=	PKGBASE=${PKGBASE}
 MESSAGE_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT}
-PLIST_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT}
+PLIST_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT:Q}
 
 HTTPD_ROOT?=	share/httpd/htdocs
 

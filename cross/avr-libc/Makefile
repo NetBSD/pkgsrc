@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/15 08:45:54 wennmach Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:49:56 rillig Exp $
 
 DISTNAME=		avr-libc-1.2.5
 CATEGORIES=		cross
@@ -12,7 +12,6 @@ COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 
 BUILD_DEPENDS+=		avr-binutils-*:../../cross/avr-binutils
 BUILD_DEPENDS+=		avr-gcc-*:../../cross/avr-gcc
-BUILD_DEPENDS+=		gmake-*:../../devel/gmake
 BUILD_DEPENDS+=		doxygen-*:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-*:../../graphics/netpbm
@@ -21,7 +20,7 @@ USE_BZIP2=		yes
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		CC=${LOCALBASE}/bin/avr-gcc
-CONFIGURE_ENV+=		PREFIX=${PREFIX}
+CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--disable-versioned-doc
 # avr-libc's method to build the man pages seems to be broken
@@ -34,10 +33,10 @@ do-build:
 
 do-install:
 	(cd ${WRKSRC}; ./domake MAKE=${GMAKE} install)
-	${MKDIR} ${PREFIX}/share/doc/avr-libc
-	${MKDIR} ${PREFIX}/share/doc/avr-libc/examples
-	${MKDIR} ${PREFIX}/share/doc/avr-libc/examples/demo
-	${MKDIR} ${PREFIX}/share/doc/avr-libc/examples/twitest
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avr-libc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avr-libc/examples
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avr-libc/examples/demo
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avr-libc/examples/twitest
 	${INSTALL_DATA} \
 		${WRKSRC}/LICENSE \
 		${WRKSRC}/AUTHORS \

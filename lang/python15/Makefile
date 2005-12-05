@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/03 01:35:36 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:27 rillig Exp $
 #
 
 DISTNAME=	py152
@@ -35,7 +35,7 @@ PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
 .else
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
-PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME}
+PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 post-patch:
 	${RM} -f ${WRKSRC}/Lib/test/test_fcntl.py.orig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/09/26 16:35:05 rpaulo Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:17 rillig Exp $
 
 DISTNAME=	openttd-0.4.0.1-source
 PKGNAME=	openttd-0.4.0.1
@@ -14,14 +14,14 @@ USE_TOOLS+=	gmake pkg-config
 
 DATA_DIR= 	${PREFIX}/share/games/openttd
 
-MAKE_ENV+=	PREFIX=${PREFIX}
+MAKE_ENV+=	PREFIX=${PREFIX:Q}
 MAKE_ENV+=	INSTALL=1
 MAKE_ENV+=	BINARY_DIR=bin
 MAKE_ENV+=	DATA_DIR=share/games/openttd
 MAKE_ENV+=	USE_HOMEDIR=1
 MAKE_ENV+=	PERSONAL_DIR=.openttd
 MAKE_ENV+=	WITH_NETWORK=1
-MAKE_ENV+=	X11BASE=${X11BASE}
+MAKE_ENV+=	X11BASE=${X11BASE:Q}
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 

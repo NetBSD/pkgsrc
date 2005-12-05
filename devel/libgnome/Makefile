@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/10/10 13:42:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.43 2005/12/05 20:50:05 rillig Exp $
 #
 
 DISTNAME=	libgnome-2.12.0.1
@@ -10,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Core GNOME2 library (non-graphical)
 
-DEPENDS=	docbook>=4.2:../../textproc/docbook
+DEPENDS+=	docbook>=4.2:../../textproc/docbook
 BUILD_USES_MSGFMT=	YES
 
 BUILDLINK_DEPENDS.esound+=	esound>=0.2.26

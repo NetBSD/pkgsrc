@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/08/10 01:33:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:17 rillig Exp $
 #
 
 DISTNAME=	quake2-0.3
@@ -25,7 +25,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/README* ${PREFIX}/share/doc/quake2forge
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/quake2forge
 
-SUBST_CLASSES=		snd data
+SUBST_CLASSES+=		snd data
 SUBST_STAGE.snd=	post-patch
 SUBST_FILES.snd=	src/snd.c
 SUBST_SED.snd=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"

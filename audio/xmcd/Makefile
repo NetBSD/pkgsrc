@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/09/21 23:19:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.54 2005/12/05 20:49:50 rillig Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    5
@@ -23,9 +23,9 @@ USE_IMAKE=		yes
 MAKE_ENV+=		BATCH_BINDIR=${PREFIX}/bin
 MAKE_ENV+=		BATCH_LIBDIR=${PREFIX}/lib/X11
 MAKE_ENV+=		BATCH_MANDIR=${PREFIX}/man/man1
-MAKE_ENV+=		SHELL=${SH}
+MAKE_ENV+=		SHELL=${SH:Q}
 
-INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]* NetBSD-1.6[A-S]*
+INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-S]*-*
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
@@ -36,7 +36,7 @@ ARCH=	${OPSYS}
 
 ARCHBIN=	${PREFIX}/lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}
 XMCDDIR=	${PREFIX}/lib/X11/xmcd
-PLIST_SUBST+=	ARCH=${ARCH}
+PLIST_SUBST+=	ARCH=${ARCH:Q}
 
 _SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4711
 SPECIAL_PERMS=	${ARCHBIN}/cda ${_SETUID_ROOT}

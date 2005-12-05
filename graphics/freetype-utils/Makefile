@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2005/06/01 18:02:55 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:19 rillig Exp $
 
-.include "../freetype-lib/Makefile.common"
+.include "../../graphics/freetype-lib/Makefile.common"
 
 PKGNAME=	freetype-utils-${FT_VERS}
 PKGREVISION=	1

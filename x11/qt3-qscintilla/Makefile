@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/06 17:49:13 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:19 rillig Exp $
 #
 
 DISTNAME=		qscintilla-1.65-gpl-1.6
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
-MAKE_ENV+=	QTPREFIX=${QTDIR}
+MAKE_ENV+=	QTPREFIX=${QTDIR:Q}
 
 do-configure:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile qscintilla.pro)
