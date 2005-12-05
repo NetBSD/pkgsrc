@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.28 2005/05/11 02:07:37 jlam Exp $
+# $NetBSD: texinfo.mk,v 1.29 2005/12/05 22:07:07 rillig Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -126,7 +126,7 @@ MAKEINFO_VERSION=
 MAKEINFO_VERSION=	${_i_}
 .       endif
 .    endfor
-MAKEFLAGS+=			MAKEINFO_VERSION=${MAKEINFO_VERSION}
+MAKEFLAGS+=			MAKEINFO_VERSION=${MAKEINFO_VERSION:Q}
 .  endif
 
 # Sort out if the version provided by devel/gtexinfo is needed.
