@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/08/23 11:48:48 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:30 rillig Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	4
@@ -36,7 +36,7 @@ PKG_GROUPS=		${EXIM_GROUP}
 
 USE_TOOLS+=		gzip gzcat perl:run
 FILES_SUBST+=		GZIP_CMD="${GZIP_CMD:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"
-FILES_SUBST+=		GZCAT="${GZCAT}"
+FILES_SUBST+=		GZCAT=${GZCAT:Q}
 
 _LOOKUP_LIBS+=		${LDFLAGS}
 
@@ -61,8 +61,8 @@ BDB_ACCEPTED=	db1 db3 db2	# does not compile with db4
 DBMLIB+=		${LDFLAGS} ${BDB_LIBS}
 
 MAKE_ENV+=		DBMLIB=${DBMLIB:Q}
-MAKE_ENV+=		LOOKUP_INCLUDE="${LOOKUP_INCLUDE}"
-MAKE_ENV+=		LOOKUP_LIBS="${LOOKUP_LIBS}"
+MAKE_ENV+=		LOOKUP_INCLUDE=${LOOKUP_INCLUDE:Q}
+MAKE_ENV+=		LOOKUP_LIBS=${LOOKUP_LIBS:Q}
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local

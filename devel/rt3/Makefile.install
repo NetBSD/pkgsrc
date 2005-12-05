@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.1.1.1 2004/08/03 15:33:50 cube Exp $
+# $NetBSD: Makefile.install,v 1.2 2005/12/05 20:50:07 rillig Exp $
 
 RT_SHARE_DIR=		${PREFIX}/share/rt3
 RT_EXAMPLE_DIR= 	${PREFIX}/share/examples/rt3
@@ -40,7 +40,7 @@ ${ROOT_USER} ${RT_GROUP} 0500
 
 INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
 FILES_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTLOCALDIR=${RT_LOCAL_DIR:Q}
-FILES_SUBST+=		WEBUSER=${APACHE_USER} WEBGROUP=${APACHE_GROUP}
+FILES_SUBST+=		WEBUSER=${APACHE_USER:Q} WEBGROUP=${APACHE_GROUP:Q}
 
 do-install:
 	@${ECHO} "=> Configuration files"

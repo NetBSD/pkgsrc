@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:58 rillig Exp $
 
 MODNAME=		mhash
 CATEGORIES+=		security
-PKGREVISION=		# empty
 COMMENT=		PHP extension for the mhash hash algorithms library
 
 

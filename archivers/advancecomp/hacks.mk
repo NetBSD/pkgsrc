@@ -1,6 +1,6 @@
-# $NetBSD: hacks.mk,v 1.1 2005/01/21 21:48:32 tv Exp $
+# $NetBSD: hacks.mk,v 1.2 2005/12/05 20:49:47 rillig Exp $
 
-.ifndef ADVANCECOMP_HACKS_MK
+.if !defined(ADVANCECOMP_HACKS_MK)
 ADVANCECOMP_HACKS_MK=	# defined
 
 ### [Fri Jan 21 21:44:32 UTC 2005 : tv]

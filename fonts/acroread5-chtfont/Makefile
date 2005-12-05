@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/21 07:00:57 snj Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:13 rillig Exp $
 #
 
 DISTNAME=	chtfont
@@ -12,4 +12,4 @@ DEPENDS+=	acroread5-font-share-5.0:../../fonts/acroread5-font-share
 WRKSRC=		${WRKDIR}/CHTKIT
 TAR_FILE=	${WRKSRC}/LANGCHT.TAR
 
-.include "../acroread5-font-share/Makefile.common"
+.include "../../fonts/acroread5-font-share/Makefile.common"

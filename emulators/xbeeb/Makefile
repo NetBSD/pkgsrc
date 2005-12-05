@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:13 rillig Exp $
 #
 
 DISTNAME=	xbeeb-0.3.6
@@ -18,7 +18,7 @@ MAN_PAGE=	${WRKDIR}/xbeeb.1
 
 XBEEBROOT=	share/xbeeb
 MESSAGE_SUBST+=	XBEEBROOT=${XBEEBROOT}
-PLIST_SUBST+=	XBEEBROOT=${XBEEBROOT}
+PLIST_SUBST+=	XBEEBROOT=${XBEEBROOT:Q}
 
 INSTALLATION_DIRS=	bin man/man1
 

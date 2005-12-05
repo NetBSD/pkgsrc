@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:43 rillig Exp $
 #
 
 DISTNAME=	libogg-1.1.2
@@ -18,7 +18,7 @@ USE_LIBTOOL=	YES
 
 GCC_REQD+=	2.95.3
 
-PLIST_SUBST+=	DISTNAME=${DISTNAME}
+PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 
 PKGCONFIG_OVERRIDE+=	ogg.pc.in
 

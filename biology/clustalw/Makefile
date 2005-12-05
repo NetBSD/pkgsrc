@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/19 15:42:49 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:49:51 rillig Exp $
 
 DISTNAME=	clustalw1.83.UNIX
 PKGNAME=	clustalw-1.83
@@ -16,7 +16,7 @@ MAKEFILE=	makefile
 BUILD_TARGET=	clustalw
 WRKSRC=		${WRKDIR}/clustalw1.83
 
-MAKE_FLAGS+=	CC="${CC}"
+MAKE_FLAGS+=	CC=${CC:Q}
 
 INSTALLATION_DIRS=	bin
 

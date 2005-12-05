@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/11/16 19:18:58 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/05 20:50:27 rillig Exp $
 #
 
 DISTNAME=	Python-2.2.3
@@ -17,7 +17,7 @@ CONFLICTS+=	python-[0-9]*
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
-PTHREAD_OPTS=   require
+PTHREAD_OPTS+=   require
 .include "../../mk/pthread.buildlink3.mk"
 .if ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-pth
@@ -34,7 +34,7 @@ PLIST_SRC+=	${.CURDIR}/../../lang/python22/PLIST.${OPSYS}
 PLIST_SRC+=	${.CURDIR}/../../lang/python22/PLIST.common_end
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
-PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}
+PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS:Q}
 .elif ${OPSYS} == "IRIX"
 PLIST_SUBST+=   PY_PLATNAME=${LOWER_OPSYS:C/\..*//}
 .elif ${OPSYS} == "SunOS"
@@ -43,7 +43,7 @@ PLIST_SUBST+=	PY_PLATNAME=sunos${OS_VERSION:C/\..*//}
 PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 
-PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX}
+PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 
 INSTALL_TARGET=	altinstall
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2005/08/24 08:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.99 2005/12/05 20:50:52 rillig Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--enable-libtool
 CONFIGURE_ARGS+=	--enable-slp
 CONFIGURE_ARGS+=	--enable-ssl
-CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
+CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -74,8 +74,8 @@ PLIST_SUBST+=		PAM="@comment "
 #
 CUPS_USER?=		lp
 CUPS_GROUP?=		sys
-FILES_SUBST+=		CUPS_USER=${CUPS_USER}
-FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP}
+FILES_SUBST+=		CUPS_USER=${CUPS_USER:Q}
+FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP:Q}
 
 BUILD_DEFS+=		CUPS_USER CUPS_GROUP
 

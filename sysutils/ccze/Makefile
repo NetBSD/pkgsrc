@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:31 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:59 rillig Exp $
 
 DISTNAME=	ccze-0.2.1
 CATEGORIES=	sysutils
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://bonehunter.rulez.org/software/ccze/
 COMMENT=	Log coloriser, fast and light on resources
 
-INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6*
+INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

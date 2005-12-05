@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:03 rillig Exp $
 #
 
 DISTNAME=		florist-3.15p-src
@@ -23,7 +23,7 @@ USE_TOOLS+=		autoconf213 gmake
 # 1) lang/gcc34-ada and 2) lang/gcc34 built with Ada option
 # If USE_GCC_34=YES this package will use gcc34. Otherwise,
 # it will use gcc34-ada
-BUILD_DEFS=	USE_GCC_34
+BUILD_DEFS+=	USE_GCC_34
 USE_GCC_34?=	NO
 
 post-extract:

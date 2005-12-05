@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.4 2005/10/03 19:52:04 joerg Exp $
+$NetBSD: patch-ah,v 1.5 2005/12/05 20:51:15 rillig Exp $
 --- src/utmp.c.orig	Thu Jun 27 14:15:53 2002
 +++ src/utmp.c	Sat Dec 14 21:44:17 2002
-@@ -38,7 +38,7 @@ static const char cvs_ident[] = "$Id: ut
+@@ -38,7 +38,7 @@
  # endif
  
  /* don't go off end of ut_id & remember if an entry has been made */

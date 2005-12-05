@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/07/16 01:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:05 rillig Exp $
 
 DISTNAME=	nasm-0.98.39
 PKGREVISION=	1
@@ -21,8 +21,8 @@ INFO_FILES=		nasm.info
 BUILD_TARGET=		everything
 INSTALL_TARGET=		install_everything
 
-MAKE_ENV+=	PERL5="${PERL5}"			\
-		INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"
+MAKE_ENV+=	PERL5=${PERL5:Q}			\
+		INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
 
 INSTALLATION_DIRS=	bin info man/man1 share/doc/html
 

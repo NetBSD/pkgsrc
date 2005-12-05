@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:26 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 20:51:15 rillig Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-server-${XF_VER}
@@ -25,7 +25,7 @@ XINSTALL_MAN_DIRS=	programs/Xserver
 
 REPLACE_PERL=		exports/lib/modules/getconfig*
 
-SUBST_CLASSES=		parser
+SUBST_CLASSES+=		parser
 SUBST_STAGE.parser=	pre-install
 SUBST_FILES.parser=	programs/Xserver/hw/xfree86/parser/Makefile
 SUBST_SED.parser=	-e '/$$(INSTALL).*lib$$(LIBNAME).a/ d'

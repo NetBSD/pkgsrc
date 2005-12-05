@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/01 18:45:32 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:49 rillig Exp $
 
 DISTNAME=	tcpd-tools-0.8
 PKGNAME=	tcpdstat-0.8
@@ -11,6 +11,6 @@ COMMENT=	Analyze tcpdump output
 NOT_FOR_PLATFORM=	Interix-*-*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/tcpdstat
-MAKE_ENV=	BINDIR=${PREFIX}/bin
+MAKE_ENV+=	BINDIR=${PREFIX:Q}/bin
 
 .include "../../mk/bsd.pkg.mk"

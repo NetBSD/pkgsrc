@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/09 20:48:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:49:56 rillig Exp $
 #
 
 DISTVERSION=		1.0.0.0
@@ -32,4 +32,4 @@ post-configure:
 	${CP} ${FILESDIR}/featuretest.h ${CROSS_SYS_INCLUDE}/sys/
 	${CP} ${FILESDIR}/limits.h ${CROSS_SYS_INCLUDE}/
 
-.include "../COMMON/cross.mk"
+.include "../../cross/COMMON/cross.mk"

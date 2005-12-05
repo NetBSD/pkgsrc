@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 20:52:26 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:51:00 rillig Exp $
 
 DISTNAME=	fixelfprot-20040714
 CATEGORIES=	sysutils
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-powerpc
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	# defined - sources are part of pkgsrc entry
+NO_CHECKSUM=	yes	# sources are part of pkgsrc entry
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin

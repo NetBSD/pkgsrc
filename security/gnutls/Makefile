@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/11/14 18:17:49 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2005/12/05 20:50:56 rillig Exp $
 
 DISTNAME=	gnutls-1.2.9
 CATEGORIES=	security devel
@@ -16,7 +16,7 @@ COMMENT=	GNU Transport Layer Security library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
@@ -25,9 +25,9 @@ INFO_FILES=		gnutls.info
 PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libextra/gnutls-extra.pc.in
 
-BUILDLINK_DEPENDS.opencdk=	opencdk>=0.5.5
-BUILDLINK_DEPENDS.libtasn1=	libtasn1>=0.2.11
-BUILDLINK_DEPENDS.libgcrypt=	libgcrypt>=1.2.2
+BUILDLINK_DEPENDS.opencdk+=	opencdk>=0.5.5
+BUILDLINK_DEPENDS.libtasn1+=	libtasn1>=0.2.11
+BUILDLINK_DEPENDS.libgcrypt+=	libgcrypt>=1.2.2
 
 MAKE_ENV+=		RM=${RM:Q}
 MAKE_ENV+=		TZ=UTC

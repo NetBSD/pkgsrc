@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/08/10 20:56:17 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:50:20 rillig Exp $
 #
 
 DISTNAME=		gfract-0.30
@@ -15,7 +15,7 @@ BUILD_TARGET=		gfract
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-SUBST_CLASSES=		prefix
+SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	"Fixing prefix."
 SUBST_STAGE.prefix=	post-extract
 SUBST_FILES.prefix=	main.cpp

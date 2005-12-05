@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:15:17 agc Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:14 rillig Exp $
 #
 
 DISTNAME=	korfont
@@ -12,4 +12,4 @@ DEPENDS+=	acroread5-font-share-5.0:../../fonts/acroread5-font-share
 WRKSRC=		${WRKDIR}/KORKIT
 TAR_FILE=	${WRKSRC}/LANGKOR.TAR
 
-.include "../acroread5-font-share/Makefile.common"
+.include "../../fonts/acroread5-font-share/Makefile.common"

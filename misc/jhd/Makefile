@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:21 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:39 rillig Exp $
 
 DISTNAME=	jhd-2.3
 CATEGORIES=	japanese misc
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.iamas.ac.jp/pub1/UNIX/File/
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Japanese Hexadecimal Dump
 
-BUILD_DEPENDS=	nkf-1.7:../../converters/nkf
+BUILD_DEPENDS+=	nkf-1.7:../../converters/nkf
 
 INSTALLATION_DIRS=	bin man/ja_JP.EUC/man1
 

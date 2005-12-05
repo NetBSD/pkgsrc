@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:59 rillig Exp $
 #
 
 DISTNAME=		asapm-2.11
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.tigr.net/afterstep/detail.pl?applet=asapm
 COMMENT=		Laptop battery status display for X11
 
 .if !exists(/usr/include/machine/apmvar.h)
-PKG_SKIP_REASON=	"APM is not available for ${MACHINE_PLATFORM}"
+PKG_SKIP_REASON+=	"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
 GNU_CONFIGURE=		YES

@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.6 2005/12/05 20:50:46 rillig Exp $
+
 --- kphone/Makefile.in.orig	2005-06-22 09:37:20.000000000 +0100
 +++ kphone/Makefile.in	2005-11-24 16:59:45.000000000 +0000
 @@ -6,7 +6,7 @@

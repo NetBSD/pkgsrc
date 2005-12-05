@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/09/28 20:52:21 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:13 rillig Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-fontsScalable-${XF_VER}
@@ -22,7 +22,6 @@ do-install:
 .for fnt in ${FONT_TYPES}
 	${INSTALL_DATA_DIR} ${X11ROOT}/lib/X11/fonts/${fnt}
 .endfor
-.undef fnt
 	${INSTALL_DATA} ${WRKDIR}/xc/fonts/scaled/Speedo/font0*.spd \
 		${X11ROOT}/lib/X11/fonts/Speedo
 	${INSTALL_DATA} ${WRKDIR}/xc/fonts/scaled/Speedo/COPYRIGHT \
@@ -35,13 +34,11 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/xc/fonts/scaled/Type1/*.${f} \
 		${X11ROOT}/lib/X11/fonts/Type1
 .endfor
-.undef f
 # because fonts.mk does not do this yet
 .for fnt in ${FONT_TYPES}
 	${X11ROOT}/bin/mkfontscale ${X11ROOT}/lib/X11/fonts/${fnt}
 	${X11ROOT}/bin/mkfontdir ${X11ROOT}/lib/X11/fonts/${fnt}
 .endfor
-.undef fnt
 	${X11ROOT}/bin/mkfontdir -e ${X11ROOT}/lib/X11/fonts/encodings \
 		-e ${X11ROOT}/lib/X11/fonts/encodings/large \
 		${X11ROOT}/lib/X11/fonts/Speedo \

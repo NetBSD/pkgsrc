@@ -1,4 +1,4 @@
-# $NetBSD: gap.package.mk,v 1.12 2005/10/23 22:27:07 rillig Exp $
+# $NetBSD: gap.package.mk,v 1.13 2005/12/05 20:50:36 rillig Exp $
 #
 # Set GAP_PKG_NAME in your Makefile. More may appear here later.
 
@@ -11,4 +11,4 @@ GAP_PKG_ROOT=		${GAP_DIRECTORY}/pkg
 GAP_PKG_DIRECTORY=	${GAP_PKG_ROOT}/${GAP_PKG_NAME}
 GAP_PLATFORM=   	${MACHINE_GNU_PLATFORM}-${CC}
 
-PLIST_SUBST+=		GAP_PLATFORM=${GAP_PLATFORM}
+PLIST_SUBST+=		GAP_PLATFORM=${GAP_PLATFORM:Q}

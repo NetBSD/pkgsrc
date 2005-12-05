@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2005/11/25 21:23:16 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2005/12/05 20:50:36 rillig Exp $
 #
 
 DISTNAME=		gnumeric-1.4.3
@@ -19,7 +19,7 @@ USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-python
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_ACCEPTED=	24 23
 GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas

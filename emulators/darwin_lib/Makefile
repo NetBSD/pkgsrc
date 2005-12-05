@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/23 09:29:08 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:11 rillig Exp $
 
 DISTNAME=	darwin_lib-6.6.2
 CATEGORIES=	emulators
@@ -15,7 +15,7 @@ MAINTAINER=	abacau@yahoo.com.au
 HOMEPAGE=	http://www.opendarwin.org/
 COMMENT=	Darwin compatibility libraries (including X11)
 
-BUILD_DEPENDS=	rpm2pkg>=1.3:../../pkgtools/rpm2pkg
+BUILD_DEPENDS+=	rpm2pkg>=1.3:../../pkgtools/rpm2pkg
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6Z*-powerpc NetBSD-1.6Z*-i386 \
 			NetBSD-[2-9]*-powerpc NetBSD-[2-9]*-i386

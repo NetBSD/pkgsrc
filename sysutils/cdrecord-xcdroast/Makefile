@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:08:31 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:59 rillig Exp $
 
 DISTNAME=	cdrtools-2.01a21
 PKGNAME=	cdrecord-xcdroast-0.98a15.2.01a21
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/a.*//}
 USE_TOOLS+=		gmake
 
 .if ${LOCALBASE} != "/opt/schily"
-BUILDLINK_TRANSFORM=	rmdir:/opt/schily
+BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
 .endif
 
 # avoid picking up a bad ${ARCH} during the build

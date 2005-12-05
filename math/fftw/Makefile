@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:08:13 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:36 rillig Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
 DISTNAME=		fftw-3.0.1-fma
@@ -20,7 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	fftw.pc.in
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--enable-shared
+CONFIGURE_ARGS+=	--enable-shared
 USE_LANGUAGES=		fortran
 USE_TOOLS+=		gmake
 INFO_FILES=		fftw3.info

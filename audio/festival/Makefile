@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/12/03 04:14:05 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2005/12/05 20:49:47 rillig Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -44,28 +44,28 @@ PKG_COMPILER=		${PKG_COMPILER_cmd:sh}
 .endif
 
 .if empty(PKG_COMPILER)
-PKG_FAIL_REASON=	"${CC_VERSION} is not currently supported."
+PKG_FAIL_REASON+=	"${CC_VERSION} is not currently supported."
 .endif
 
-MAKE_ENV+=	PKG_EST_HOME="${SPEECHTOOLS}"				\
-		EST_HOME="${SPEECHTOOLS}"				\
-		PKG_FESTIVAL_BUILD_HOME="${FESTIVAL}"			\
-		PKG_FESTIVAL_HOME="${FHOME}"				\
-		PKG_COMPILER="${PKG_COMPILER}"				\
-		PKG_X11BASE="${X11BASE}"				\
-		PKG_PREFIX="${PREFIX}"					\
-		EGCS_CC="${CC}"						\
-		EGCS_CXX="${CXX}"					\
-		GCC295_CC="${CC}"					\
-		GCC295_CXX="${CXX}"					\
-		GCC28_CC="${CC}"					\
-		GCC28_CXX="${CXX}"					\
-		GCC27_CC="${CC}"					\
-		GCC27_CXX="${CXX}"					\
-		GCC26_CC="${CC}"					\
-		GCC26_CXX="${CXX}"					\
-		CC="${CC}"						\
-		CXX="${CXX}"
+MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS:Q}				\
+		EST_HOME=${SPEECHTOOLS:Q}				\
+		PKG_FESTIVAL_BUILD_HOME=${FESTIVAL:Q}			\
+		PKG_FESTIVAL_HOME=${FHOME:Q}				\
+		PKG_COMPILER=${PKG_COMPILER:Q}				\
+		PKG_X11BASE=${X11BASE:Q}				\
+		PKG_PREFIX=${PREFIX:Q}					\
+		EGCS_CC=${CC:Q}						\
+		EGCS_CXX=${CXX:Q}					\
+		GCC295_CC=${CC:Q}					\
+		GCC295_CXX=${CXX:Q}					\
+		GCC28_CC=${CC:Q}					\
+		GCC28_CXX=${CXX:Q}					\
+		GCC27_CC=${CC:Q}					\
+		GCC27_CXX=${CXX:Q}					\
+		GCC26_CC=${CC:Q}					\
+		GCC26_CXX=${CXX:Q}					\
+		CC=${CC:Q}						\
+		CXX=${CXX:Q}
 
 INSTALLATION_DIRS=	bin libexec man/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2005/10/23 23:11:09 rillig Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/12/05 20:50:58 rillig Exp $
 #
 
 DISTNAME=	ssh-3.2.9.1
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.ssh.com/pub/ssh/
 
 MAINTAINER=	seb@NetBSD.org
-HOMEPAGE=	http://www.ssh.com
+HOMEPAGE=	http://www.ssh.com/
 
 CONFLICTS+=	openssh-[0-9]* ssh6-[0-9]* ssh-[0-9]* sftp-[0-9]*
 CONFLICTS+=	openssh+gssapi-[0-9]*
@@ -63,8 +63,8 @@ CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-foreign-etcdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 
-MAKE_ENV+=		PKGBASE=${PKGBASE}
-MAKE_ENV+=		RM="${RM}"
+MAKE_ENV+=		PKGBASE=${PKGBASE:Q}
+MAKE_ENV+=		RM=${RM:Q}
 
 RCD_SCRIPTS=		ssh2_secure_shell
 
@@ -77,7 +77,7 @@ CONF_FILES=		# empty
 .for FILE in ${CONFS}
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
-FILES_SUBST=		SSH_PID_DIR=${SSH_PID_DIR}
+FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR:Q}
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/knownhosts
 OWN_DIRS+=		${PKG_SYSCONFDIR}/hostkeys

@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.9 2004/06/20 20:12:20 jmmv Exp $
+# $NetBSD: modules.mk,v 1.10 2005/12/05 20:51:17 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GTK2 modules.  It takes care of rebuilding the corresponding databases at
@@ -22,8 +22,8 @@ GTK2_LOADERS=		YES
 .endif
 
 .if defined(GTK2_IMMODULES) && !empty(GTK2_IMMODULES:M[Yy][Ee][Ss])
-FILES_SUBST+=		GTK_IMMODULES_DB="${GTK_IMMODULES_DB}"
-FILES_SUBST+=		GTK_QUERY_IMMODULES="${GTK_QUERY_IMMODULES}"
+FILES_SUBST+=		GTK_IMMODULES_DB=${GTK_IMMODULES_DB:Q}
+FILES_SUBST+=		GTK_QUERY_IMMODULES=${GTK_QUERY_IMMODULES:Q}
 GTK_IMMODULES_DB=	${BUILDLINK_PREFIX.gtk2}/libdata/gtk-2.0/gtk.immodules
 INSTALL_EXTRA_TMPL+=	../../x11/gtk2/files/immodules.tmpl
 DEINSTALL_EXTRA_TMPL+=	../../x11/gtk2/files/immodules.tmpl
@@ -31,8 +31,8 @@ USE_PKGINSTALL=		YES
 .endif
 
 .if defined(GTK2_LOADERS) && !empty(GTK2_LOADERS:M[Yy][Ee][Ss])
-FILES_SUBST+=		GDK_PIXBUF_LOADERS_DB="${GDK_PIXBUF_LOADERS_DB}"
-FILES_SUBST+=		GDK_PIXBUF_QUERY_LOADERS="${GDK_PIXBUF_QUERY_LOADERS}"
+FILES_SUBST+=		GDK_PIXBUF_LOADERS_DB=${GDK_PIXBUF_LOADERS_DB:Q}
+FILES_SUBST+=		GDK_PIXBUF_QUERY_LOADERS=${GDK_PIXBUF_QUERY_LOADERS:Q}
 GDK_PIXBUF_LOADERS_DB=	${BUILDLINK_PREFIX.gtk2}/libdata/gtk-2.0/gdk-pixbuf.loaders
 INSTALL_EXTRA_TMPL+=	../../x11/gtk2/files/loaders.tmpl
 DEINSTALL_EXTRA_TMPL+=	../../x11/gtk2/files/loaders.tmpl

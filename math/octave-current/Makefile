@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/07/09 18:39:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.52 2005/12/05 20:50:36 rillig Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGNAME=	octave-current-${OCTAVE_VER}
@@ -30,7 +30,7 @@ USE_MAKEINFO=		yes
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++ fortran
 
 # needed for loading of shared objects such as those in the
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--disable-shared
 .include "options.mk"
 
 GNU_PLATFORM_DIR!=	${.CURDIR}/../../mk/gnu-config/config.sub ${MACHINE_GNU_PLATFORM}
-PLIST_SUBST+=		GNU_PLATFORM_DIR=${GNU_PLATFORM_DIR}
+PLIST_SUBST+=		GNU_PLATFORM_DIR=${GNU_PLATFORM_DIR:Q}
 
 INFO_FILES=	octave.info liboctave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \

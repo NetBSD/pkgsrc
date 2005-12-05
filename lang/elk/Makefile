@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/10/15 23:07:21 tonio Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:25 rillig Exp $
 
 DISTNAME=		elk-3.99.6
 CATEGORIES=		lang
@@ -11,7 +11,7 @@ COMMENT=		Embeddable Scheme interpreter
 GNU_CONFIGURE=yes
 USE_LIBTOOL=  yes
 
-CONFIGURE_ENV= WITH_XAW="${ELK_AWK}"
+CONFIGURE_ENV+=		WITH_XAW=${ELK_AWK:Q}
 
 .include "options.mk"
 

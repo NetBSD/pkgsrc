@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/10 20:56:12 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:49:49 rillig Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -21,10 +21,10 @@ CONFIGURE_ARGS+=	--disable-ncurses
 CONFIGURE_ARGS+=	--disable-lubrify
 CONFIGURE_ARGS+=	--enable-gtk2
 LIBS+=			${LIBOSSAUDIO}
-MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 MAKE_FLAGS+=		docsdir=${PREFIX:Q}/share/doc/MuSE
 
-SUBST_CLASSES=		dsp
+SUBST_CLASSES+=		dsp
 SUBST_STAGE.dsp=	post-patch
 SUBST_FILES.dsp=	src/jmixer.cpp src/libmpeg/fileplayer.cc
 SUBST_SED.dsp=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"

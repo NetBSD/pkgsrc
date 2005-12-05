@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2004/06/16 04:33:51 minskim Exp $
+$NetBSD: patch-ak,v 1.2 2005/12/05 20:49:51 rillig Exp $
 
 --- src/lmhttp.c.orig	1998-07-31 14:55:18.000000000 -0500
 +++ src/lmhttp.c
-@@ -17,6 +17,7 @@ char	*id = "$Id: s.lmhttp.c 1.6 98/06/29
+@@ -17,6 +17,7 @@
  #include <sys/sysmp.h>
  #include <sys/syssgi.h>
  #endif

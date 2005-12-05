@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/06/07 14:31:48 minskim Exp $
+# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:20 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/MesaLib/glut/}
 PKGREVISION=	3
@@ -7,7 +7,7 @@ COMMENT=	GLUT Graphics library similar to SGI's OpenGL
 CONFLICTS+=	Mesa-glx-[0-9]*
 CONFLICTS+=	Mesa<3.2.1
 
-.include "../Mesa/Makefile.common"
+.include "../../graphics/Mesa/Makefile.common"
 
 BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=${MESA_VERSION}
 BUILDLINK_DEPENDS.glu+=		glu>=${MESA_VERSION}

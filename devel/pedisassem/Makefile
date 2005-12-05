@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/30 17:13:21 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:06 rillig Exp $
 
 DISTNAME=	dsasmsrc
 PKGNAME=	pedisassem-0.23
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 # LP64 problems
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64
 
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
+MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
 
 INSTALLATION_DIRS=	bin
 

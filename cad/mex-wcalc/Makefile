@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/02 00:00:18 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 20:49:52 rillig Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -64,7 +64,7 @@ MEX_SUFX?=	${_MEX_SUFX}
 
 MATLAB_MEX?=		${_MATLAB_MEX}
 
-PLIST_SUBST+=		MEX_SUFX=${MEX_SUFX}
+PLIST_SUBST+=		MEX_SUFX=${MEX_SUFX:Q}
 
 .if !empty(PHASES_AFTER_EXTRACT:M${PKG_PHASE})
 MATLAB_DIR!=		${MATLAB_MEX} -v 2>/dev/null | ${AWK} '/[ \t]MATLAB[ \t]/ {print $$NF}'

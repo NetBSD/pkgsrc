@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/05/23 08:43:59 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2005/12/05 20:49:49 rillig Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -36,7 +36,6 @@ post-install:
 .for f in rplay.conf rplay.helpers rplay.hosts rplay.servers
 	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
-.undef f
 
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

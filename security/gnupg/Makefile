@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2005/10/10 20:45:19 reed Exp $
+# $NetBSD: Makefile,v 1.79 2005/12/05 20:50:56 rillig Exp $
 
 DISTNAME=	gnupg-1.4.2
 CATEGORIES=	security
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--disable-gnupg-iconv
 
 # XXX: still needed?
 .if ${OPSYS} == "FreeBSD"
-SUBST_CLASSES=	    fixme
+SUBST_CLASSES+=	    fixme
 SUBST_STAGE.fixme=  post-configure
 SUBST_FILES.fixme=  mpi/i386/mpih-add1.S mpi/i386/mpih-lshift.S \
 		    mpi/i386/mpih-mul1.S mpi/i386/mpih-mul2.S \

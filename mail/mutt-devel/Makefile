@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/10/05 20:08:32 tonio Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/05 20:50:34 rillig Exp $
 
 DISTNAME=		mutt-1.5.11
 PKGREVISION=	2
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}			\
 			--without-included-gettext			\
 			--enable-pop					\
 			--enable-imap
-MAKE_ENV+=		CHGRP=${CHGRP}
+MAKE_ENV+=		CHGRP=${CHGRP:Q}
 
 .if (${OPSYS} == "SunOS")
 CONFIGURE_ARGS+=	--without-wc-funcs
@@ -52,7 +52,7 @@ DOCDIR=			${PREFIX}/share/doc/mutt
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
-FILES_SUBST+=		DOCDIR=${DOCDIR}
+FILES_SUBST+=		DOCDIR=${DOCDIR:Q}
 
 .if exists(${WRKSRC}/mutt_dotlock)
 PLIST_SUBST+=		MUTT_DOTLOCK=

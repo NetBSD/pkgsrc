@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/10 20:56:13 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:49:53 rillig Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -26,8 +26,8 @@ RCD_SCRIPTS=            muc
 BUILD_DEFS+=		JABBERD_USER JABBERD_LOGDIR JABBERD_PIDDIR
 JABBERD_USER?=		jabberd
 
-FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR}
-FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
+FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR:Q}
+FILES_SUBST+=		JABBERD_USER=${JABBERD_USER:Q}
 
 EGDIR=			${PREFIX}/share/examples/jabberd
 CONF_FILES+=		${EGDIR}/muc-jcr.xml ${PKG_SYSCONFDIR}/muc-jcr.xml
@@ -56,4 +56,3 @@ do-install:
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

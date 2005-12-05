@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/07/16 01:19:18 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:53 rillig Exp $
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
@@ -20,7 +20,7 @@ USE_PKGINSTALL=	yes
 
 PAPERSIZE?=	A4
 
-MAKE_ENV+=	PERL5="${PERL5}"
+MAKE_ENV+=	PERL5=${PERL5:Q}
 MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
 MAKEFILE=	Makefile.unix
 

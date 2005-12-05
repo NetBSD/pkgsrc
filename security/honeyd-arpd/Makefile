@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/09/16 14:46:43 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:56 rillig Exp $
 #
 
 DISTNAME=	arpd-0.2
@@ -28,4 +28,3 @@ do-install:
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

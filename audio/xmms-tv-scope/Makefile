@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:00 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:49:50 rillig Exp $
 #
 
 DISTNAME=	tv_scope-0.0.2
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	YES
 
 ONLY_FOR_PLATFORM=	SunOS-*-* Linux-*-* Darwin-*-*
 ONLY_FOR_PLATFORM+=	NetBSD-1.6[N-Z]-* NetBSD-1.6Z[A-Z]-*
-ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-*
 
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

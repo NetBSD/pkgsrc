@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/23 22:58:26 epg Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:07 rillig Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
 COMMENT=	Python bindings and tools for Subversion
@@ -7,7 +7,7 @@ COMMENT=	Python bindings and tools for Subversion
 
 SHLIBTOOL_OVERRIDE=	libtool
 
-CONFIGURE_ENV+=		PYTHON2=${PYTHONBIN}
+CONFIGURE_ENV+=		PYTHON2=${PYTHONBIN:Q}
 
 PY_PATCHPLIST=		YES
 PYBINMODULE=		YES
@@ -16,7 +16,7 @@ PYTHON_PATCH_SCRIPTS=	tools/hook-scripts/mailer/mailer.py
 BUILD_TARGET=		swig-py-lib swig-py
 INSTALL_TARGET=		install-swig-py
 
-MAKE_ENV+=		EXTRA_CPPFLAGS="${BUILDLINK_CPPFLAGS}"
+MAKE_ENV+=		EXTRA_CPPFLAGS=${BUILDLINK_CPPFLAGS:Q}
 MAKE_FLAGS+=		swig_pydir=${LOCALBASE}/${PYSITELIB}/libsvn \
 			swig_pydir_extra=${LOCALBASE}/${PYSITELIB}/svn
 

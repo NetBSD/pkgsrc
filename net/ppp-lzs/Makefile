@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:53 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:48 rillig Exp $
 
 DISTNAME=	ppp-lzs-1.2
 CATEGORIES=	net
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM= 	NetBSD-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_ENV+=	NETBSDSRCDIR="${NETBSDSRCDIR}"
+MAKE_ENV+=	NETBSDSRCDIR=${NETBSDSRCDIR:Q}
 MAKE_ENV+=	S="${NETBSDSRCDIR}/sys"
 MESSAGE_SUBST+= PREFIX="${PREFIX}"
 

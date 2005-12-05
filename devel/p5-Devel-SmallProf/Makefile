@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/06 06:19:10 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:06 rillig Exp $
 #
 
 DISTNAME=		Devel-SmallProf-1.15
@@ -12,7 +12,7 @@ MAINTAINER=		bad@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/~salva/Devel-SmallProf-1.15/
 COMMENT=		Perl5 module for line-by-line profiling perl programs
 
-DEPENDS=		p5-Time-HiRes>=1.20:../../time/p5-Time-HiRes
+DEPENDS+=		p5-Time-HiRes>=1.20:../../time/p5-Time-HiRes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

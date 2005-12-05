@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2005/10/19 09:30:08 adam Exp $
+# $NetBSD: Makefile,v 1.127 2005/12/05 20:50:21 rillig Exp $
 
 DISTNAME=	netpbm-10.30
 CATEGORIES=	graphics
@@ -14,16 +14,16 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=	bash:run gmake lex perl
 
 INSTALL_TARGET=	install-dev install-run
-MAKE_ENV+=	INSTALL="${INSTALL}" STRIPFLAG="${_STRIPFLAG_INSTALL}" \
-		pkgdir="${STAGEDIR}"
+MAKE_ENV+=	INSTALL=${INSTALL:Q} STRIPFLAG=${_STRIPFLAG_INSTALL:Q} \
+		pkgdir=${STAGEDIR:Q}
 MAKEFILE=	GNUmakefile
 PLIST_SRC=	${WRKDIR}/PLIST_STAGE
 REPLACE_PERL=	editor/ppmfade editor/ppmshadow editor/pnmquant \
 		generator/ppmrainbow manweb editor/pnmflip editor/ppmquant
 STAGEDIR=	${WRKDIR}/staging
 
-LIBS.SunOS=	-lsocket -lnsl
-MAKE_ENV+=	NETWORKLD="${LIBS}"
+LIBS.SunOS+=	-lsocket -lnsl
+MAKE_ENV+=	NETWORKLD=${LIBS:M*:Q}
 
 # Several of the netpbm shell scripts use bashisms, so force using
 # bash for all of the shell scripts.
@@ -47,7 +47,7 @@ MAKE_ENV+=	BUILD_FIASCO=N
 .endif
 
 MAKE_ENV+=	JASPERLIB="${LDFLAGS} -ljasper"
-MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:Q}
+MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:M*:Q}
 
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

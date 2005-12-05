@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2005/10/14 08:36:02 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.30 2005/12/05 20:50:35 rillig Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -20,9 +20,9 @@ PATCHDIR?=	${.CURDIR}/../../mail/sendmail/patches
 
 DIST_VERS=	8.13.5
 
-MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
-		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
-		BUILDLINK_DIR="${BUILDLINK_DIR}"
+MAKE_ENV+=	BSD_BINOWN=${BINOWN:Q} BSD_BINGRP=${BINGRP:Q} \
+		BSD_MANOWN=${MANOWN:Q} BSD_MANGRP=${MANGRP:Q} \
+		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    SMRSH_CMDDIR

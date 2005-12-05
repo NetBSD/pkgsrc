@@ -1,7 +1,7 @@
-# $NetBSD: replace.mk,v 1.2 2005/11/02 07:44:33 taca Exp $
+# $NetBSD: replace.mk,v 1.3 2005/12/05 20:50:27 rillig Exp $
 #
 
-.ifndef _RUBY_REPLACE_MK
+.if !defined(_RUBY_REPLACE_MK)
 _RUBY_REPLACE_MK=	# defined
 
 # fix shebang line.

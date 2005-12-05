@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:53 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:52 rillig Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
@@ -25,7 +25,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.neurophys.wisc.edu/~cai/software/index.html
 COMMENT=		Print & convert CJK style text to PostScript
 
-DIST_SUBDIR=		${PKGNAME}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_TOOLS+=		gtar gunzip
 INSTALLATION_DIRS=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:11 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:29 rillig Exp $
 #
 
 DISTNAME=		dbmail-2.0.1
@@ -21,7 +21,7 @@ EGDIR=			${PREFIX}/share/examples/dbmail
 CONF_FILES=		${EGDIR}/dbmail.conf ${PKG_SYSCONFDIR}/dbmail.conf
 RCD_SCRIPTS=		dbmail dbmailimapd dbmaillmtpd dbmailpop3d
 
-PLIST_SUBST+=		SQLDB=${SQLDB}
+PLIST_SUBST+=		SQLDB=${SQLDB:Q}
 
 SUBST_CLASSES+=		sysconf
 SUBST_STAGE.sysconf=	do-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/15 18:27:53 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:51:03 rillig Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
@@ -9,9 +9,9 @@ HOMEPAGE=	http://userpage.fu-berlin.de/~mbayer/tools/html2text.html
 COMMENT=	Advanced HTML-to-text converter
 
 USE_LANGUAGES=		c c++
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 HAS_CONFIGURE=		yes
-CONFIGURE_ENV+=		ECHO="${ECHO}"
+CONFIGURE_ENV+=		ECHO=${ECHO:Q}
 USE_TOOLS+=		gunzip
 INSTALLATION_DIRS=	bin man/man1 man/man5
 

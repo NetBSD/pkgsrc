@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/01 15:39:27 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:27 rillig Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -42,7 +42,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_5_0.zip
 .endif
 
 post-extract:
-	-${MKDIR} ${WRKSRC}/.systemPrefs
+	${MKDIR} ${WRKSRC}/.systemPrefs
 	${TOUCH} ${WRKSRC}/.systemPrefs/.system.lock
 	${TOUCH} ${WRKSRC}/.systemPrefs/.systemRootModFile
 
@@ -54,7 +54,7 @@ do-configure:
 
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
-	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
+	cd ${WRKDIR}/jce ; ${PAX} -rw -pe -v . ${WRKSRC}/lib/security
 	${SED} 's/@SUN_JRE15_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .else
 	${SED} '/@SUN_JRE15_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}

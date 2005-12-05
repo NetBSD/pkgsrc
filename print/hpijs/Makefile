@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2005/09/28 20:52:25 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:53 rillig Exp $
 
 DISTNAME=	hpijs-1.7.1
-PKGREVISION=	# empty
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/19 18:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:18 rillig Exp $
 #
 
 DISTNAME=		xsoldier-0.96
@@ -13,7 +13,7 @@ USE_PKGINSTALL=		YES
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 
-MAKE_ENV+=		BINOWN=${BINOWN}
+MAKE_ENV+=		BINOWN=${BINOWN:Q}
 
 CONF_FILES_PERMS=	${PREFIX}/share/xsoldier/xsoldier.score.dist	\
 			/var/games/xsoldier				\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/06/01 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:16 rillig Exp $
 
 DISTNAME=	lbreakout-010315
 PKGREVISION=	5
@@ -10,7 +10,7 @@ HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	Breakout-style arcade game
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		PTHREAD_LIBS="${PTHREAD_LIBS}"
+CONFIGURE_ENV+=		PTHREAD_LIBS=${PTHREAD_LIBS:Q}
 CONFIGURE_ARGS+=	--disable-sound
 
 .include "../../devel/SDL/buildlink3.mk"

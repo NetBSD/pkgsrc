@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/07/16 19:10:39 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/05 20:50:41 rillig Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -15,7 +15,7 @@ USE_TOOLS+=	perl:run
 USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	YES
 
-INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
+INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-U]-*
 
 DOCDIR=		${PREFIX}/share/doc/vfu
@@ -23,7 +23,7 @@ EGDIR=		${PREFIX}/share/examples/vfu
 
 CONF_FILES=	${EGDIR}/vfu.conf ${PKG_SYSCONFDIR}/vfu.conf
 
-MAKE_ENV+=	PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 do-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${SH} build.netbsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:26 rillig Exp $
 
 DISTNAME=	pnet-0.6.6
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.dotgnu.org/
 COMMENT=	DotGNU Portable.NET (development tools)
 
-BUILD_DEPENDS=	treecc>=0.2.6:../../devel/treecc
+BUILD_DEPENDS+=	treecc>=0.2.6:../../devel/treecc
 
 CONFLICTS=	mono-[0-9]*
 

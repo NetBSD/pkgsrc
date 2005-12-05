@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/20 14:49:05 adam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:49:53 rillig Exp $
 
 DISTNAME=	kadu-0.4.1
 CATEGORIES=	chat
@@ -13,7 +13,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-existing-libgadu=${BUILDLINK_PREFIX.ekg}
-CONFIGURE_ENV+=		X11BASE="${X11BASE}"
+CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 LIBS+=			${LIBOSSAUDIO}
 WRKSRC=			${WRKDIR}/kadu
 

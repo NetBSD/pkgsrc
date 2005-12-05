@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:42 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:51:14 rillig Exp $
 
 DISTNAME=	spfc-0.2.0
 CATEGORIES=	www java
@@ -15,7 +15,7 @@ DEPENDS+=	jsdk-2.0:../../www/jsdk20
 
 WRKSRC=		${WRKDIR}/spfc-0.2.0/src/
 USE_TOOLS+=	gmake
-NO_CONFIGURE=
+NO_CONFIGURE=	yes
 MAKE_ENV+=	CLASSPATH=${CLASSPATH}:${PREFIX}/lib/jsdk.jar
 
 do-install:

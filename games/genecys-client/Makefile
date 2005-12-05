@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/23 04:02:48 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:16 rillig Exp $
 #
 
 DISTNAME=		genecys-0.2
@@ -11,7 +11,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.genecys.org/
 COMMENT=		Client for Genecys MMORPG
 
-DEPENDS=		genecys-data>=0.2:../../games/genecys-data
+DEPENDS+=		genecys-data>=0.2:../../games/genecys-data
 
 GNU_CONFIGURE=		yes
 #CONFIGURE_DIRS=		${WRKSRC}/common ${WRKSRC}/client

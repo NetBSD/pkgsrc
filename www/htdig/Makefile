@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/17 22:00:13 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/05 20:51:12 rillig Exp $
 
 DISTNAME=	htdig-3.1.6
 PKGREVISION=	3
@@ -21,7 +21,7 @@ USE_PKGINSTALL=	YES
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
+CONFIGURE_ARGS+= --with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 		--with-common-dir=${PREFIX}/share/htdig/common \
 		--with-config-dir=${PKG_SYSCONFDIR} \
 		--with-database-dir=${DBDIR} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/17 04:32:16 ben Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:51:01 rillig Exp $
 #
 
 DISTNAME=		su2-1.3
@@ -27,7 +27,7 @@ LDLIBS=			-lcrypt
 LDLIBS+=		-lcompat
 .endif
 
-MAKE_ENV+=		LDLIBS="${LDLIBS}"
+MAKE_ENV+=		LDLIBS=${LDLIBS:Q}
 
 post-extract:
 	${CHMOD} -R og+w ${WRKSRC}

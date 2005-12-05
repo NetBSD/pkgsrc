@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/10/07 18:38:34 reed Exp $
+# $NetBSD: Makefile,v 1.56 2005/12/05 20:50:28 rillig Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -20,7 +20,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/-src//}/unix
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-MAKE_ENV+=		TOUCH="${TOUCH}"
+MAKE_ENV+=		TOUCH=${TOUCH:Q}
 
 INSTALL_TARGET=		install
 

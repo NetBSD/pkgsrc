@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/06/17 03:50:20 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2005/12/05 20:50:37 rillig Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+= --enable-ipv6
 
 .if exists(/usr/include/sys/inttypes.h)
 EXTRA_FLAGS+=	-DHAVE_SYS_INTTYPES_H
-MAKE_FLAGS+=	EXTRA_FLAGS="${EXTRA_FLAGS}"
+MAKE_FLAGS+=	EXTRA_FLAGS=${EXTRA_FLAGS:Q}
 .endif
 
 .if ${OPSYS} == "SunOS"

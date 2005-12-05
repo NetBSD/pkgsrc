@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2005/11/18 16:47:35 reed Exp $
+# $NetBSD: Makefile.common,v 1.32 2005/12/05 20:50:09 rillig Exp $
 #
 
 DISTNAME=		lyx-1.3.6
@@ -61,8 +61,8 @@ CXXFLAGS+=	-fno-exceptions
       || ${MACHINE_ARCH} == "m68k")
 CXXFLAGS:=      ${CXXFLAGS:C/-O[0-9]*/-O/g}
 CFLAGS:=        ${CFLAGS:C/-O[0-9]*/-O/g}
-CONFIGURE_ENV+= CXXFLAGS="${CXXFLAGS}"
-CONFIGURE_ENV+= CFLAGS="${CFLAGS}"
+CONFIGURE_ENV+= CXXFLAGS=${CXXFLAGS:M*:Q}
+CONFIGURE_ENV+= CFLAGS=${CFLAGS:M*:Q}
 .  endif
 .endif
 

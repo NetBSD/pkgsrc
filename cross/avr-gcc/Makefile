@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/07/16 01:19:08 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:49:56 rillig Exp $
 
 DISTNAME=		gcc-3.3.2003.05.11
 PKGNAME=		avr-gcc-3.3.2003.05.11
@@ -25,12 +25,12 @@ USE_BZIP2=		yes
 USE_TOOLS+=		bison gmake lex perl tar
 USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS=		--target=avr --prefix=${PREFIX}
+CONFIGURE_ARGS+=	--target=avr
 
 MAN_AUX=		gcc-man.2003.05.11.gz
 
-MAKE_FLAGS=		LANGUAGES="c c++"
-MAKE_ENV=		MACHINE_ARCH=avr
+MAKE_FLAGS+=		LANGUAGES="c c++"
+MAKE_ENV+=		MACHINE_ARCH=avr
 
 pre-build:
 		if perl -e 'use 1.10 Pod::Man' >/dev/null 2>/dev/null ; \

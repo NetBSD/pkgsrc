@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2005/12/05 20:50:58 rillig Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -24,7 +24,7 @@ USE_GNU_READLINE=	yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-installed-readline
-MAKE_ENV+=		INSTALL_SCRIPT='${INSTALL_SCRIPT}'
+MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 TEST_TARGET=		test
 
 PKG_SHELL=		bin/bash

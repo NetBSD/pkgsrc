@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2005/11/04 11:58:54 rillig Exp $
+# $NetBSD: Makefile,v 1.72 2005/12/05 20:50:22 rillig Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -25,15 +25,15 @@ LIBPNG_SO_MAJOR=	3
 LIBPNG_SO_MINOR=	2
 
 MAKEFILE=	scripts/makefile.std
-MAKE_ENV+=	REALCC="${CC}"
-MAKE_ENV+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR}
-MAKE_ENV+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
+MAKE_ENV+=	REALCC=${CC:Q}
+MAKE_ENV+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR:Q}
+MAKE_ENV+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR:Q}
 
 INSTALLATION_DIRS=	include lib/pkgconfig man/man3 man/man5
 
 PKGCONFIG_OVERRIDE=	scripts/libpng.pc.in
 
-SUBST_CLASSES=		pc
+SUBST_CLASSES+=		pc
 SUBST_STAGE.pc=		post-patch
 SUBST_FILES.pc=		scripts/libpng.pc.in
 SUBST_SED.pc=		-e 's,@PREFIX@,${PREFIX},'

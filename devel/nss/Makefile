@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/10/16 11:15:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:06 rillig Exp $
 
 DISTNAME=		nss-3.9.2
 PKGREVISION=		3
@@ -24,7 +24,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/security/nss
 USE_TOOLS+=		gmake perl
 DIST=			${WRKSRC}/../../dist
 BUILD_TARGET=		nss_build_all
-MAKE_ENV=		LD_LIBS="-L${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/nss"
+MAKE_ENV+=		LD_LIBS="-L${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/nss"
 MAKE_ENV+=		LIBRUNPATH=${PREFIX}/lib BUILD_OPT=1
 
 .include		"../../mk/bsd.prefs.mk"
@@ -36,7 +36,7 @@ SO_SUFFIX=		dylib
 .else
 SO_SUFFIX=		so.1.0
 .endif
-PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX}
+PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 .if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "gcc"
 MAKEFLAGS+=	NS_USE_GCC=YES

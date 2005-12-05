@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2005/07/01 15:32:51 tron Exp $
+# $NetBSD: hacks.mk,v 1.4 2005/12/05 20:49:57 rillig Exp $
 
 ### [Sun Mar 14 19:32:40 UTC 2004 : jlam]
 ### GCC 3.3.x and older versions have an optimization bug on powerpc that's
@@ -15,7 +15,7 @@ _GCC_IS_TOO_OLD!=	\
 	else								\
 		${ECHO} "no";						\
 	fi
-MAKEFLAGS+=	_GCC_IS_TOO_OLD=${_GCC_IS_TOO_OLD}
+MAKEFLAGS+=	_GCC_IS_TOO_OLD=${_GCC_IS_TOO_OLD:Q}
 .    endif
 .    if !empty(_GCC_IS_TOO_OLD:M[yY][eE][sS])
 PKG_HACKS+=		powerpc-codegen

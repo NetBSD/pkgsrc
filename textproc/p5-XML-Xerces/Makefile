@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/03 13:45:46 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:51:07 rillig Exp $
 #
 
 DISTNAME=	XML-Xerces-2.3.0-4
@@ -23,7 +23,7 @@ MAKE_ENV+=	XERCESCROOT="${BUILDLINK_PREFIX.xerces-c}" LANG=""
 # Xerces-C is built unthreaded in pkgsrc (for now).
 BUILDLINK_TRANSFORM+=	rm:-lpthread
 
-BUILDLINK_DEPENDS.xerces-c=     xerces-c>=2.3.0
+BUILDLINK_DEPENDS.xerces-c+=	xerces-c>=2.3.0
 .include "../../textproc/xerces-c/buildlink3.mk"
 
 .include "../../lang/perl5/module.mk"

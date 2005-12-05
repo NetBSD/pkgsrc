@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2005/07/15 18:27:49 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2005/12/05 20:50:10 rillig Exp $
 
 DISTNAME=	xemacs-21.4.17
 CATEGORIES=	editors
@@ -17,7 +17,7 @@ USE_TOOLS+=	gtar
 DIST_SUBDIR=	xemacs
 EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-PLIST_SUBST+=	DISTNAME="${DISTNAME}"
+PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 MESSAGE_SUBST+=	DISTNAME="${DISTNAME}"
 
 .include "options.mk"

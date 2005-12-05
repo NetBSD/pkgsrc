@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/10/24 17:23:33 tonio Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 20:51:09 rillig Exp $
 #
 
 DISTNAME=	fluxbox-0.9.14
@@ -13,7 +13,7 @@ COMMENT=	Window Manager for X based on Blackbox
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.prefs.mk"

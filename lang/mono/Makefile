@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/08/10 20:56:18 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2005/12/05 20:50:26 rillig Exp $
 
 DISTNAME=	mono-1.1.8.3
 PKGREVISION=	1
@@ -29,7 +29,7 @@ EXTRACT_USING=		gtar
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-MAKE_FLAGS+=		PERL=${PERL5}
+MAKE_FLAGS+=		PERL=${PERL5:Q}
 UNLIMIT_RESOURCES=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 UNLIMIT_RESOURCES+=	memorysize

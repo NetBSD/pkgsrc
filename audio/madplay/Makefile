@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/31 16:16:50 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 20:49:48 rillig Exp $
 #
 
 DISTNAME=	madplay-0.15.2b
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 # Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 .include "options.mk"
 

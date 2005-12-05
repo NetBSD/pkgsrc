@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/06/05 09:49:01 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/12/05 20:50:03 rillig Exp $
 
 DISTNAME=	cvsup-snap-16.1h
 PKGREVISION=	1
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=	DragonFly-*-i386 FreeBSD-*-i386 Linux-*-i386 \
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_FLAGS+=	PREFIX=${PREFIX} M3FLAGS="${M3FLAGS}"
+MAKE_FLAGS+=	PREFIX=${PREFIX:Q} M3FLAGS=${M3FLAGS:Q}
 
 M3BIN=		${PREFIX}/ezm3/bin/m3build
 

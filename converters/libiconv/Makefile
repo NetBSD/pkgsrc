@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/10/02 06:09:47 taca Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/05 20:49:55 rillig Exp $
 
 DISTNAME=	libiconv-1.10
 PKGREVISION=	3
@@ -24,7 +24,7 @@ TEST_TARGET=		check
 EGDIR=			${PREFIX}/share/examples/libiconv
 REQD_FILES=		${EGDIR}/charset.alias ${PREFIX}/lib/charset.alias
 
-MAKE_ENV+=		PAX="${PAX}"
+MAKE_ENV+=		PAX=${PAX:Q}
 
 .include "../../mk/compiler.mk"
 

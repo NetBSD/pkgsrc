@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/11/09 21:26:45 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:25 rillig Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		3
@@ -22,7 +22,7 @@ NOT_FOR_PLATFORM+=	Interix-*-*
 
 WRKSRC=			${WRKDIR}/gcc-2.95.3
 USE_TOOLS+=		gmake
-USE_NCURSES=		# defined
+USE_NCURSES=		yes
 PLIST_SRC=		PLIST
 
 .include "../../mk/bsd.prefs.mk"
@@ -41,13 +41,13 @@ GPC_SUBPREFIX=		${_GCC_SUBPREFIX}/
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
-CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--prefix=${GPC_PREFIX}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-languages=pascal
 
-PLIST_SUBST+=		GPC_SUBPREFIX=${GPC_SUBPREFIX}
+PLIST_SUBST+=		GPC_SUBPREFIX=${GPC_SUBPREFIX:Q}
 
 CONFIGURE_DIRS=		${WRKDIR}/objdir
 BUILD_DIRS=		${CONFIGURE_DIRS}

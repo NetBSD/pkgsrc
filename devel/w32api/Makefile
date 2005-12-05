@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/05/24 00:12:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:09 rillig Exp $
 
 DISTNAME=	w32api-2.5-src
 PKGNAME=	w32api-2.5
@@ -19,7 +19,7 @@ PE_CC=		${CROSSBASE}/bin/i386-netbsdpe-cc -I${WRKSRC}/include
 PE_AR=		${CROSSBASE}/bin/i386-netbsdpe-ar
 CRTWRKSRC=	${WRKDIR}/pe-crt-1.2.1
 PE_CPPFLAGS+=	-I${WRKSRC}/include
-MAKE_FLAGS+=	PE_CPPFLAGS="${PE_CPPFLAGS}"
+MAKE_FLAGS+=	PE_CPPFLAGS=${PE_CPPFLAGS:Q}
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

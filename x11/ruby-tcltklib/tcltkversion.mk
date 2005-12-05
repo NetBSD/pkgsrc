@@ -1,6 +1,6 @@
-# $NetBSD: tcltkversion.mk,v 1.1 2004/11/27 14:50:12 taca Exp $
-.ifndef _RUBY_TCLTKVERSION_MK
+# $NetBSD: tcltkversion.mk,v 1.2 2005/12/05 20:51:19 rillig Exp $
 
+.if !defined(_RUBY_TCLTKVERSION_MK)
 _RUBY_TCLTKVERSION_MK=	# defined
 
 TCL_VERSION?=	8.4

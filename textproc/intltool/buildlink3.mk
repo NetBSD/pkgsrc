@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2005/10/08 17:18:47 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2005/12/05 20:51:03 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 INTLTOOL_BUILDLINK3_MK:=	${INTLTOOL_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_DEPMETHOD.intltool?=	build
 USE_TOOLS+=		perl
 
 .if !empty(INTLTOOL_BUILDLINK3_MK:M+)
-CONFIGURE_ENV+=		INTLTOOL_PERL="${PERL5}"
+CONFIGURE_ENV+=		INTLTOOL_PERL=${PERL5:Q}
 INTLTOOLIZE=		${BUILDLINK_PREFIX.intltool}/bin/intltoolize
 INTLTOOL_OVERRIDE?=	intltool-* */intltool-*
 

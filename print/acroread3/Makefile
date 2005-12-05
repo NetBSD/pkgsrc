@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/17 03:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 20:50:52 rillig Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -22,21 +22,21 @@ NO_BUILD=	YES
 
 .if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_libc5>=6.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
-DEPENDS=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=	suse_libc5>=6.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
+DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTNAME=	acroread_linux_301
 PLATFORM=	intellinux
 CHECK_SHLIBS=	no
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
-PKG_FAIL_REASON= "${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
+PKG_FAIL_REASON+=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
 .endif
 DISTNAME=	acroread_osf_301
 PLATFORM=	alphaosf
 LDD?=		${TRUE}
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
-PKG_FAIL_REASON= "${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
+PKG_FAIL_REASON+=	"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
 .endif
 DISTNAME=	acroread_sunos_301
 PLATFORM=	sparcsun
@@ -57,7 +57,7 @@ DISTNAME=	${PKGNAME}
 LDD?=		${TRUE}
 .endif
 
-PLIST_SUBST+=	PLATFORM=${PLATFORM}
+PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
 
 INSTALLATION_DIRS=	bin
 

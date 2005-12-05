@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/10/12 14:48:44 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:22 rillig Exp $
 #
 
 DISTNAME=	Imaging-1.1.5
@@ -12,10 +12,10 @@ COMMENT=	Tk support for the Python Imaging Library (PIL)
 
 DIST_SUBDIR=    python
 PYDISTUTILSPKG=	yes
-BUILDLINK_DEPENDS.python20=	python20>=2.0.1nb4
+BUILDLINK_DEPENDS.python20+=	python20>=2.0.1nb4
 PY_PATCHPLIST=	yes
 
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PYPKGPREFIX}-imaging

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/07/19 10:23:42 grant Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:12 rillig Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -23,7 +23,7 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		binutils.rpm cpp.rpm g77.rpm gcc.rpm gpp.rpm make.rpm
 
-.include "../suse_linux/arch.mk"
+.include "../../emulators/suse_linux/arch.mk"
 
 .if ${SUSE_ARCH} == "i386"
 RPMFILES+=      glibc-devel-2.2.4-78.${SUSE_ARCH}.rpm bin86.rpm
@@ -33,5 +33,5 @@ RPMFILES+=      glibc-devel-2.2.4-69.${SUSE_ARCH}.rpm
 RPMFILES+=      glibc.rpm
 .endif
 
-.include "../suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

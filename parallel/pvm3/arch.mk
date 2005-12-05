@@ -1,4 +1,4 @@
-# $NetBSD: arch.mk,v 1.7 2005/04/28 23:11:14 jlam Exp $
+# $NetBSD: arch.mk,v 1.8 2005/12/05 20:50:51 rillig Exp $
 #
 
 .include "../../mk/bsd.prefs.mk"
@@ -34,5 +34,5 @@ _PVM_ARCH=	# empty
 .endif
 
 PVM_ARCH=	${_PVM_OPSYS}${_PVM_ARCH}
-PLIST_SUBST+=	PVM_ARCH=${PVM_ARCH}
-FILES_SUBST+=	PVM_ARCH=${PVM_ARCH}
+PLIST_SUBST+=	PVM_ARCH=${PVM_ARCH:Q}
+FILES_SUBST+=	PVM_ARCH=${PVM_ARCH:Q}

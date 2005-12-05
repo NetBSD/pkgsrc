@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:48 rillig Exp $
 #
 
 DISTNAME=	qadsl-final-1.2
@@ -10,12 +10,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://qba.linuxsweden.nu/
 COMMENT=	Login software for Swedish Telia ADSL/Comhem cable Internet users
 
-LIBS.SunOS=	-lnsl -lsocket
+LIBS.SunOS+=	-lnsl -lsocket
 
 MANCOMPRESSED=	yes
 
-MAKE_ENV+=	LIBS="${LIBS}"
-MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=	LIBS=${LIBS:M*:Q}
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 INSTALLATION_DIRS=	man/man8 sbin
 

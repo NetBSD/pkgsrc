@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/08/06 06:19:06 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/12/05 20:49:58 rillig Exp $
 #
 
 VER=		1.41
@@ -22,8 +22,8 @@ PGPREFIX=	${PREFIX}/${PGUSER}
 
 POSTGRES_INCLUDE=	${PGSQL_PREFIX}/include/postgresql
 POSTGRES_LIB=		${PGSQL_PREFIX}/lib
-MAKE_ENV+=		POSTGRES_INCLUDE="${POSTGRES_INCLUDE}"
-MAKE_ENV+=		POSTGRES_LIB="${POSTGRES_LIB}"
+MAKE_ENV+=		POSTGRES_INCLUDE=${POSTGRES_INCLUDE:Q}
+MAKE_ENV+=		POSTGRES_LIB=${POSTGRES_LIB:Q}
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

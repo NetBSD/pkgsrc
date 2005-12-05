@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:37 rillig Exp $
 
 DISTNAME=	SNNSv4.2
 PKGNAME=	snns-4.2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www-ra.informatik.uni-tuebingen.de/SNNS/
 COMMENT=	Software simulator for neural networks
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS= --enable-global
+CONFIGURE_ARGS+=	--enable-global
 
 XGUILOADPATH=	${PREFIX}/share/snns
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/14 09:46:54 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:49:54 rillig Exp $
 #
 
 DISTNAME=	POE-Component-IRC-4.71
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~bingos/${DISTNAME}/
-COMMENT=	Fully event-driven IRC client module.
+COMMENT=	Fully event-driven IRC client module
 
 DEPENDS+=	p5-POE>=0.17:../../devel/p5-POE
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate

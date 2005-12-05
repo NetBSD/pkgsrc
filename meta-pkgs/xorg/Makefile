@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/29 18:46:42 reed Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:37 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	xorg-${XORG_VER}
@@ -11,7 +11,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org meta-package
 
-DEPENDS=	xorg-imake>=${XORG_VER}:../../x11/xorg-imake
+DEPENDS+=	xorg-imake>=${XORG_VER}:../../x11/xorg-imake
 DEPENDS+=	xorg-libs>=${XORG_VER}:../../x11/xorg-libs
 DEPENDS+=	xorg-server>=${XORG_VER}:../../x11/xorg-server
 DEPENDS+=	xorg-clients>=${XORG_VER}:../../x11/xorg-clients

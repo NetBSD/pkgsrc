@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/10/05 14:48:56 jwise Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:51:12 rillig Exp $
 
 DISTNAME=	jakarta-servletapi-${TOMCAT_VERSION}-src
 PKGNAME=	${DISTNAME:S/-src$//}
@@ -42,4 +42,4 @@ do-install:
 .include "../../mk/bsd.pkg.mk"
 
 MAKE_PROGRAM=	${LOCALBASE}/bin/ant
-MAKE_FLAGS=
+MAKE_FLAGS=	# empty

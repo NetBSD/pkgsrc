@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/11/05 08:43:44 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/05 20:50:25 rillig Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -40,7 +40,7 @@ AS_VERSION!=	${AS_PATH} --version | ${AWK} '{			\
 		}'
 USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
 .    endif
-MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS}
+MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS:Q}
 .  endif
 .endif
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--with-gnu-ld
 # Optional languages - change as required
 #   If BUILD_ADA is YES, then you'll need to specify
 #   an Ada in the "Ada bootstrap compiler section"
-BUILD_DEFS=	BUILD_ADA BUILD_CXX BUILD_F77 \
+BUILD_DEFS+=	BUILD_ADA BUILD_CXX BUILD_F77 \
 		BUILD_JAVA BUILD_OBJC
 BUILD_ADA?=	NO
 BUILD_CXX?=	YES
@@ -91,15 +91,15 @@ MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 .include "../../devel/gmp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 USE_TOOLS+=		chmod
-MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod="${TOOLS_CHMOD}"
+MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
 .endif
 
 # GNU pth is useless here
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 # ADA tasking strictly requires native threads
-PTHREAD_OPTS=		require native
+PTHREAD_OPTS+=		require native
 .else
-PTHREAD_OPTS=		native
+PTHREAD_OPTS+=		native
 .endif
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "native"
@@ -110,7 +110,7 @@ USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
 CONFIG_SHELL?=		${SH}
-CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
+CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
 USE_MAKEINFO=		YES
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
@@ -129,20 +129,20 @@ ALT_GCC_RTS!=	${ALT_GCC} --print-file-name=adalib
 .        if !empty(ALT_GCC_RTS)
 RALT_GCC_RTS=	${ALT_GCC_RTS:S%${LOCALBASE}%%:S%/%%}
 .        else
-PKG_SKIP_REASON=	"${ALT_GCC} does not appear to be an Ada compiler"
+PKG_SKIP_REASON+=	"${ALT_GCC} does not appear to be an Ada compiler"
 .        endif
 .     else
-PKG_SKIP_REASON=	"Missing bootstrap Ada compiler"
+PKG_SKIP_REASON+=	"Missing bootstrap Ada compiler"
 .     endif
 .  endif
 .  if !defined(USE_GCC34ADA) && !defined(ALT_GCC)
-PKG_SKIP_REASON=	"An Ada bootstrap compiler must be specified to BUILD_ADA"
+PKG_SKIP_REASON+=	"An Ada bootstrap compiler must be specified to BUILD_ADA"
 .  endif
 .endif
 
 GCC_SUBPREFIX=		gcc34
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
-FILES_SUBST+=		PKGNAME=${PKGNAME}
+FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
@@ -152,7 +152,7 @@ CFLAGS+=	-I${BUILDLINK_DIR}/include
 GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 ABI_BASELINE_PAIR=	${GCC_PLATFORM:C/--/-/}
-MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR}
+MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}
 .endif # NetBSD
 
 post-patch:

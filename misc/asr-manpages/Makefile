@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/31 20:53:15 reed Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:38 rillig Exp $
 #
 
 DISTNAME=	asr.pages
@@ -13,7 +13,7 @@ COMMENT=	alt.sysadmin.recovery man page distribution
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 INSTALLATION_DIRS=	man/man1 man/man2 man/man3 man5 man/man8
 
 do-install:

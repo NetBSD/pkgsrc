@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/10/31 09:18:45 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2005/12/05 20:49:53 rillig Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		7
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-terminfo \
 			--sysconfdir=${PKG_SYSCONFDIR}
 
 # Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 EGDIR=		${PREFIX}/share/examples/irssi
 CONF_FILES=	${EGDIR}/irssi.conf ${PKG_SYSCONFDIR}/irssi.conf

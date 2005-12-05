@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/10/31 17:53:26 tv Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:49:51 rillig Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_IMAKE=	YES
 USE_TOOLS+=	gunzip
 
-MAKE_ENV+=	DEPTHDEF="${DEPTHDEF}"
+MAKE_ENV+=	DEPTHDEF=${DEPTHDEF:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,11 +22,11 @@ GCC_REQD+=		2.95.3
 .endif
 
 .if defined(RASMOL_DEPTH)
-.if ${RASMOL_DEPTH} == 32
+.  if ${RASMOL_DEPTH} == 32
 DEPTHDEF=	-DTHIRTYTWOBIT
-.else if ${RASMOL_DEPTH} == 16
+.  elif ${RASMOL_DEPTH} == 16
 DEPTHDEF=	-DSIXTEENBIT
-.endif
+.  endif
 .endif
 DEPTHDEF?=	-DEIGHTBIT
 

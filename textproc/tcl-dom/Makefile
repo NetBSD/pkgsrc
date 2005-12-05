@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:52 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:51:08 rillig Exp $
 #
 
 DISTNAME=	TclDOM-1.6
@@ -15,8 +15,8 @@ DEPENDS+=	tcl-xml-[0-9]*:../../textproc/tcl-xml
 # old name for this package...
 CONFLICTS+=	TclDom-[0-9]*
 
-NO_CONFIGURE=
-NO_BUILD=
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl/TclDOM

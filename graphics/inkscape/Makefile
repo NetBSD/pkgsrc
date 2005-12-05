@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/04 13:51:38 uebayasi Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:20 rillig Exp $
 
 DISTNAME=	inkscape-0.43
 CATEGORIES=	graphics
@@ -13,7 +13,7 @@ COMMENT=	Scalable Vector Graphics (SVG) editor
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 .endif
 
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

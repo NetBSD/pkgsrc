@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/03/24 21:12:57 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:38 rillig Exp $
 
 DISTNAME=	dotfile-2.4.1
 CATEGORIES=	misc tk
@@ -16,7 +16,7 @@ BUILD_DEFS+=	DOTFILE_LANG
 DOTFILE_LANG?=	english
 
 GNU_CONFIGURE=	yes
-NO_BUILD=
+NO_BUILD=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME}

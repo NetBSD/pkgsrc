@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/06/18 11:29:10 kristerw Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:49 rillig Exp $
 
 DISTNAME=		speedtouch-1.3.1
 PKGREVISION=		3
@@ -27,7 +27,7 @@ USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 RCD_SCRIPTS=		adsl
 
 .include "../../mk/pthread.buildlink3.mk"

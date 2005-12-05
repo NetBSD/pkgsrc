@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/10 07:03:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:49:51 rillig Exp $
 
 DISTNAME=	netio123
 PKGNAME=	netio-1.23
@@ -14,7 +14,7 @@ LICENSE=	no-commercial-use
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
-MAKE_FLAGS+=	CC="${CC}" CFLAGS="-DUNIX ${PTHREAD_CFLAGS} ${CFLAGS}" \
+MAKE_FLAGS+=	CC=${CC:Q} CFLAGS="-DUNIX ${PTHREAD_CFLAGS} ${CFLAGS}" \
 		LFLAGS="${PTHREAD_LDFLAGS} ${LDFLAGS}" \
 		LIBS="${PTHREAD_LIBS} ${LIBS}" O=.o OUT=-o X=
 

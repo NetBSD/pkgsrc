@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/09/28 20:52:28 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2005/12/05 20:51:20 rillig Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-lib-3.2.1
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		OpenLook Toolkit libs, includes, and man pages
 
-DEPENDS=		xview-config>=3.2.1nb2:../../x11/xview-config
+DEPENDS+=		xview-config>=3.2.1nb2:../../x11/xview-config
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 # builds, but binaries in../xview-clients all crash

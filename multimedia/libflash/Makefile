@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:42 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:42 rillig Exp $
 #
 
 .include "Makefile.common"
@@ -9,7 +9,7 @@ COMMENT=	Open source Flash(tm) library
 
 USE_LIBTOOL=	yes
 BUILD_DIRS=	${WRKSRC}/Lib
-MAKE_ENV+=	LIBOSSAUDIO="${LIBOSSAUDIO}"
+MAKE_ENV+=	LIBOSSAUDIO=${LIBOSSAUDIO:Q}
 MAKE_ENV+=	LIBSTDCPP=-lstdc++
 
 .include "../../devel/zlib/buildlink3.mk"

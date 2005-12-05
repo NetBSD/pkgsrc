@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:43 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:49:56 rillig Exp $
 #
 
 DISTNAME=	rtf2html
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.45.free.net/~vitus/ice/catdoc/
 COMMENT=	Rich Text to HTML file converter
 
 BUILD_TARGET=	rtf2html
-MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:M*:Q}
 
 INSTALLATION_DIRS=	bin
 

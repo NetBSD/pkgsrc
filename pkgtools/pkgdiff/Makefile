@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2005/08/06 06:19:29 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2005/12/05 20:50:51 rillig Exp $
 #
 
 DISTNAME=	pkgdiff-0.118
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
 USE_TOOLS+=	perl:run
 
-MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}
+MAKE_ENV+=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

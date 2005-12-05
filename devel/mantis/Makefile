@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/03 09:50:56 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:05 rillig Exp $
 
 DISTNAME=	mantis-1.0.0rc3
 CATEGORIES=	devel www
@@ -37,7 +37,7 @@ CONF_FILES+=	${EGDIR}/mantis.conf ${PKG_SYSCONFDIR}/mantis.conf \
 SPECIAL_PERMS=	${MANTIS_HOME}/config_inc.php ${APACHE_USER} ${SHAREGRP} 0400
 MANTIS_EG=	config_inc.php mantis.conf mantis_offline.php.sample
 
-SUBST_CLASSES=		conf
+SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	mantis.conf
 SUBST_SED.conf=		-e "s|@MANTIS_HOME@|${MANTIS_HOME}|g"

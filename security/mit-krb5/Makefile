@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/10/05 13:29:51 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:56 rillig Exp $
 
 DISTNAME=	krb5-1.4.2
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -27,7 +27,7 @@ USE_LIBTOOL=		yes
 
 # The actual KDC databases are stored in ${MIT_KRB5_STATEDIR}/krb5kdc.
 MIT_KRB5_STATEDIR?=	${VARBASE}
-FILES_SUBST+=		MIT_KRB5_STATEDIR=${MIT_KRB5_STATEDIR}
+FILES_SUBST+=		MIT_KRB5_STATEDIR=${MIT_KRB5_STATEDIR:Q}
 
 CONFIGURE_ARGS+=	--localstatedir=${MIT_KRB5_STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--enable-kdc-replay-cache
 CONFIGURE_ARGS+=	--disable-thread-support
 CONFIGURE_ARGS+=	--without-krb4
 CONFIGURE_ARGS+=	--without-tcl
-MAKE_ENV+=		ROOT_USER=${ROOT_USER}
+MAKE_ENV+=		ROOT_USER=${ROOT_USER:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mit-krb5
 PKG_SUPPORTED_OPTIONS=	kerberos-prefix-cmds
@@ -59,7 +59,7 @@ MIT_KRB5_TRANSFORM=	s/^ftp/${KRB5_PREFIX}&/;			\
 KRB5_PREFIX=		# empty
 MIT_KRB5_TRANSFORM=	s/^ftp/k&/
 .endif
-PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX}
+PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX:Q}
 CONFIGURE_ARGS+=	--program-transform-name="${MIT_KRB5_TRANSFORM}"
 
 # Fix some places in the MIT krb5 sources that don't point to the correct

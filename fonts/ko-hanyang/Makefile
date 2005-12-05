@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/08 18:22:09 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:14 rillig Exp $
 #
 
 DISTNAME=	hanyang-font-pcf
@@ -16,7 +16,7 @@ USE_X11BASE=	yes
 USE_TOOLS+=	gzip mkfontdir:run
 EXTRACT_ONLY=	# empty
 
-MAKE_ENV+=	FONTDIR=${FONTDIR} GZIP_CMD="${GZIP_CMD}"
+MAKE_ENV+=	FONTDIR=${FONTDIR:Q} GZIP_CMD=${GZIP_CMD:Q}
 
 # fonts
 EXTRACT_ONLY+=	hanyang-font-pcf.tar.gz

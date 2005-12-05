@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/05 09:47:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:25 rillig Exp $
 
 DISTNAME=	ezm3-1.1
 PKGREVISION=	1
@@ -14,7 +14,7 @@ DIST_SUBDIR=		ezm3
 USE_TOOLS+=		gmake
 INSTALL_TARGET=		all
 MAKE_ARGS+=		M3OPTIONS="-DBUILD_ALL -DSHIP_ALL"
-PLIST_SUBST+=		TARGET=${TARGET} TARGETDIR=${TARGETDIR}
+PLIST_SUBST+=		TARGET=${TARGET:Q} TARGETDIR=${TARGETDIR:Q}
 
 # XXX CFLAGS has to be empty, because if it's not, the build
 # XXX process will fail.

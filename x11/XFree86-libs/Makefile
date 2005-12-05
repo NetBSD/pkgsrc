@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/10/10 17:22:05 reed Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:51:15 rillig Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -16,7 +16,7 @@ CONFLICTS+=		xextensions-[0-9]*
 CONFLICTS+=		libX11-[0-9]*
 CONFLICTS+=		libXau-[0-9]*
 
-BUILD_DEPENDS=		XFree86-imake>=${XF_VER}:../../x11/XFree86-imake
+BUILD_DEPENDS+=		XFree86-imake>=${XF_VER}:../../x11/XFree86-imake
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,7 +35,7 @@ XINSTALL_DIRS=		include lib nls programs/Xserver/include \
 			programs/Xserver/hw/xfree86/parser
 XINSTALL_MAN_DIRS=	${XINSTALL_DIRS}
 
-SUBST_CLASSES=		mkstrs
+SUBST_CLASSES+=		mkstrs
 SUBST_STAGE.mkstrs=	post-patch
 SUBST_FILES.mkstrs=	config/cf/Library.tmpl
 SUBST_SED.mkstrs=	-e 's,@MAKESTRS@,${X11ROOT}/bin/makestrs,g'

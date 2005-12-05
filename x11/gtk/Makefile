@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2005/07/16 01:19:26 jlam Exp $
+# $NetBSD: Makefile,v 1.111 2005/12/05 20:51:17 rillig Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		8
@@ -29,12 +29,12 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xinput=xfree \
 			--with-native-locale=yes \
 			--sysconfdir=${PREFIX}/share
-CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
+CONFIGURE_ENV+=		X_LDFLAGS=${X_LDFLAGS:Q}
 
 INFO_FILES=		gdk.info gtk.info
 
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
-PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}
 
 # The following ensures that `gtk-config --libs' includes the correct linker
 # flags for linking the X11 libs.

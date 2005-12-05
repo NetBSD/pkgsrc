@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/12/01 13:06:07 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/05 20:50:25 rillig Exp $
 
 DISTNAME=	f2c-20001205
 PKGREVISION=	8
@@ -26,10 +26,10 @@ CONFLICTS=	egcs-current-19980608
 
 F2CMAJOR=	0
 F2CMINOR=	0
-MAKE_ENV+=	F2CMAJOR=${F2CMAJOR} F2CMINOR=${F2CMINOR}
-MAKE_ENV+=	LIBOWN=${LIBOWN} LIBGRP=${LIBGRP}
-MAKE_ENV+=	AWK=${AWK}
-MAKE_ENV+=	ECHO=${ECHO}
+MAKE_ENV+=	F2CMAJOR=${F2CMAJOR:Q} F2CMINOR=${F2CMINOR:Q}
+MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q}
+MAKE_ENV+=	AWK=${AWK:Q}
+MAKE_ENV+=	ECHO=${ECHO:Q}
 
 WRKSRC=		${WRKDIR}/f2c
 USE_LIBTOOL=	yes
@@ -40,7 +40,7 @@ USE_TOOLS+=	gunzip
 post-extract:
 	@${RM} ${WRKSRC}/index.html
 	@for f in ${WRKSRC}/*.gz ; do \
-		if test "$$f" = "${WRKSRC}/00lastchange.gz" ; then \
+		if ${TEST} "$$f" = "${WRKSRC}/00lastchange.gz" ; then \
 			${ECHO} "Skipping $$f" ; \
 		else \
 			${GUNZIP_CMD} $$f ; \
@@ -59,7 +59,7 @@ do-configure:
 	@${CP} -f ${WRKSRC}/f2c.h ${WRKSRC}/libI77/f2c.h
 
 .include "../../mk/bsd.prefs.mk"
-MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH}
+MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH:Q}
 
 
 .include "../../mk/bsd.pkg.mk"

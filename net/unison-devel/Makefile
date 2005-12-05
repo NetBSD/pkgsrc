@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/27 12:56:24 tonio Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:50 rillig Exp $
 
 DISTNAME=	unison-2.17.1
 PKGREVISION=	1
@@ -18,7 +18,7 @@ BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.08.2
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
 MAKE_FLAGS+=	CFLAGS="" UISTYLE=text
-MAKE_ENV+=	HOME=${WRKDIR}
+MAKE_ENV+=	HOME=${WRKDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

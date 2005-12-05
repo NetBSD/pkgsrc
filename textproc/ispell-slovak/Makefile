@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/09/12 20:57:41 salo Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:51:03 rillig Exp $
 #
 
 DISTNAME=	ispell-sk-0.2.2
@@ -12,6 +12,6 @@ COMMENT=	Slovak dictionary for ispell
 
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
 
-MAKE_ENV+=	CAT=${CAT} SORT=${SORT}
+MAKE_ENV+=	CAT=${CAT:Q} SORT=${SORT:Q}
 
 .include "../../mk/bsd.pkg.mk"

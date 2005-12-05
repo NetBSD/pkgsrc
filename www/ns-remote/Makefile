@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/07/06 19:13:24 abs Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 20:51:13 rillig Exp $
 
 DISTNAME=	ns-remote
 PKGNAME=	ns-remote-1.11
@@ -12,7 +12,7 @@ COMMENT=	Remote-control of Netscape and Mozilla-based browsers
 
 DIST_SUBDIR=	netscape
 
-LDFLAGS.SunOS=	-lsocket -lnsl
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin
 

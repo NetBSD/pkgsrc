@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/11/11 19:07:40 tonio Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:51:09 rillig Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -10,7 +10,7 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://blackboxwm.sourceforge.net/
 COMMENT=	Small and fast X11R6 window manager
 
-DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
+DEPENDS+=	bsetroot>=0.1nb1:../../wm/bsetroot
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:48:13 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:19 rillig Exp $
 #
 
 PKGNAME=	qt2-examples-${QTVERSION}
@@ -6,9 +6,9 @@ PKGREVISION=	3
 COMMENT=	QT2 Tutorial, example code and HTML documentation
 
 
-.include "../qt2-libs/Makefile.common"
+.include "../../x11/qt2-libs/Makefile.common"
 
-CONFIGURE_ENV+=	QTDIR=${QTPREFIX}
+CONFIGURE_ENV+=	QTDIR=${QTPREFIX:Q}
 
 do-build:
 	@MFS="`${FIND} ${WRKSRC}/examples ${WRKSRC}/tutorial -name Makefile -print`"; \

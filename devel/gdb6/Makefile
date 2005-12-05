@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/17 19:03:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:04 rillig Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -15,7 +15,7 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS=		autoconf213 gmake
+USE_TOOLS+=		autoconf213 gmake
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes
@@ -38,10 +38,10 @@ pre-configure:
 	cd ${WRKSRC}/gdb; autoheader; autoconf
 
 do-test:
-	if `${PKG_INFO} -qe dejagnu` ;then		\
+	if ${PKG_INFO} -qe dejagnu; then		\
 		(cd ${WRKSRC} && ${GMAKE} check);	\
 	else						\
-		${ECHO} dejagnu is required for the test target;	\
+		${ECHO} "dejagnu is required for the test target";	\
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"

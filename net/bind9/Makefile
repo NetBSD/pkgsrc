@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: Makefile,v 1.73 2005/12/05 20:50:44 rillig Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
-PKGNAME=	bind-${BIND_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -33,7 +32,7 @@ PKG_GROUPS=	${BIND_GROUP}
 
 PTHREAD_OPTS+=	native
 
-FILES_SUBST+=	BIND_GROUP=${BIND_GROUP} BIND_USER=${BIND_USER} PAX=${PAX}
+FILES_SUBST+=	BIND_GROUP=${BIND_GROUP:Q} BIND_USER=${BIND_USER:Q} PAX=${PAX:Q}
 MESSAGE_SUBST+=	BIND_DIR=${BIND_DIR} BIND_USER=${BIND_USER}
 # include/isc/ipv6.h is installed on non-ipv6 platforms
 .if defined(USE_INET6) && (${USE_INET6} == "YES")

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/16 06:57:54 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:16 rillig Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
@@ -15,7 +15,7 @@ BUILD_TARGET=		KnightCap
 WRKSRC=			${WRKDIR}/Export
 
 MAKE_ENV+=		MESA=${BUILDLINK_PREFIX.MesaLib}
-MAKE_ENV+=		DEFINES="${DEFINES}"
+MAKE_ENV+=		DEFINES=${DEFINES:Q}
 
 DEFINES=		-DTB_DIR=\\\"${TBDIR}\\\"
 

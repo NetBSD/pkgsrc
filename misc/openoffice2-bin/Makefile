@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/01 13:26:43 mrauch Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:40 rillig Exp $
 
 PKGNAME=		openoffice-bin-2.0.0
 PKGREVISION=		3
@@ -16,9 +16,9 @@ RPM2PKG=		${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=		-d ${PREFIX} -f ${WRKDIR}/PLIST.nouniq -s 1
 
 OO_VER=			2.0
-PLIST_SUBST+=		VER=${OO_VER}
+PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER}
-FILES_SUBST+=		VER=${OO_VER}
+FILES_SUBST+=		VER=${OO_VER:Q}
 
 NO_CONFIGURE=           yes
 NO_BUILD=		yes
@@ -50,7 +50,7 @@ DEINSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 .if ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 .    if !exists(/emul/svr4/usr/lib/ld.so)
-PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
+PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .    endif
 DISTNAME=	OOo_2.0.0_SolarisSparc_install
 WRKSRC=		${WRKDIR}/OOO680_m3_native_packed-1_en-US.8968/packages

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:20 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:53 rillig Exp $
 
 .include "../../print/ja-vflib-lib/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=	ja-vflib-utils-${VFLIB_VERSION}
 PKGREVISION=	1
 COMMENT=	Utilities for manipulating VFlib vector font files
 
-BUILDLINK_DEPENDS.vflib=ja-vflib-lib>=${VFLIB_VERSION}
+BUILDLINK_DEPENDS.vflib+=	ja-vflib-lib>=${VFLIB_VERSION}
 
 CONFIGURE_ARGS+=	--enable-tools --with-x
 

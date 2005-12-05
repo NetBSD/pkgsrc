@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/07/10 16:46:37 recht Exp $
+# $NetBSD: Makefile,v 1.29 2005/12/05 20:50:52 rillig Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.10
@@ -36,18 +36,18 @@ PLATFORM=	unknown
 
 .if ${OPSYS} == "NetBSD"
 . if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTNAME=	linux-5010
 PLATFORM=	intellinux
 . elif (${MACHINE_ARCH} == "sparc")
 .  if !exists(/emul/svr4/usr/lib/ld.so)
-PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
+PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .  endif
 DISTNAME=	solaris-5010
 PLATFORM=	sparcsolaris
 . elif (${MACHINE_ARCH} == "sparc64")
 .  if !exists(/emul/svr4_32/usr/lib/ld.so)
-PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4_32(8)'
+PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4_32(8)'
 .  endif
 DISTNAME=	solaris-5010
 PLATFORM=	sparcsolaris
@@ -60,7 +60,7 @@ DISTNAME=	solaris-5010
 PLATFORM=	sparcsolaris
 .endif
 
-PLIST_SUBST+=	PLATFORM=${PLATFORM}
+PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
 
 BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 

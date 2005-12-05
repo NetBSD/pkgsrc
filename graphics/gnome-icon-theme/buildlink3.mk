@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/07/16 19:10:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2005/12/05 20:50:20 rillig Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME_ICON_THEME_BUILDLINK3_MK:=	${GNOME_ICON_THEME_BUILDLINK3_MK}+
@@ -27,7 +27,6 @@ dirs!=	${GREP} "^@dirrm" ${.CURDIR}/../../graphics/gnome-icon-theme/PLIST | \
 PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
 			{ print "@comment in gnome-icon-theme: " $$0; next; }
 .  endfor
-.  undef d
 .  undef dirs
 .endif	# GNOME_ICON_THEME_BUILDLINK3_MK
 

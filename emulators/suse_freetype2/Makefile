@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/19 10:23:42 grant Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:12 rillig Exp $
 
 DISTNAME=		freetype2
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -22,5 +22,5 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES+=      	freetype2-2.0.4-52.${SUSE_ARCH}.rpm
 
-.include "../suse_linux/Makefile.common"
+.include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

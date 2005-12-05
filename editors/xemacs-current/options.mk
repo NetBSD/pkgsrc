@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/01/22 13:03:06 magick Exp $
+# $NetBSD: options.mk,v 1.5 2005/12/05 20:50:10 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS=	esound ldap xface canna
@@ -31,4 +31,3 @@ CONFIGURE_ARGS+=	--without-canna
 #.else
 CONFIGURE_ARGS+=	--with-sound=none
 #.endif
-

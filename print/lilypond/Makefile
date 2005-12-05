@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/11/28 06:41:22 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/12/05 20:50:53 rillig Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
@@ -30,12 +30,12 @@ CONFIGURE_HAS_INFODIR=	NO
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
 CONFIGURE_ARGS+=--disable-optimising
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_ACCEPTED= 21 23
 # 22 has some regular expression problem
 
 SCRIPTS_DIR=	share/lilypond/${PKGVERSION:S/nb${PKGREVISION}//}/scripts
-PLIST_SUBST+=	SCRIPTS_DIR=${SCRIPTS_DIR}
+PLIST_SUBST+=	SCRIPTS_DIR=${SCRIPTS_DIR:Q}
 MESSAGE_SUBST+=	SCRIPTS_DIR=${SCRIPTS_DIR}
 
 post-install:

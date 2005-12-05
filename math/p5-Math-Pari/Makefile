@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/06 06:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:37 rillig Exp $
 #
 
 DISTNAME=		Math-Pari-2.010501
@@ -15,7 +15,7 @@ COMMENT=		Perl5 interface to the pari math library
 # XXX: to use or not to use...
 #DEPENDS+=		gnuplot-[0-9]*:../../graphics/gnuplot
 
-GCC_REQD=		2.95
+GCC_REQD+=		2.95
 MAKE_ENV+=		MP_NOGNUPLOT=1
 PERL5_PACKLIST=		auto/Math/Pari/.packlist
 #TEST_TARGET=		# the tests need looking at

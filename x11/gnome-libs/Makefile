@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2005/06/01 18:03:28 jlam Exp $
+# $NetBSD: Makefile,v 1.111 2005/12/05 20:51:16 rillig Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		4
@@ -22,13 +22,13 @@ CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--enable-gtk-doc=no \
 			--with-html-dir=${PREFIX}/share/doc/html \
 			--with-kde-datadir=${X11PREFIX}/share/kde
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ENV+=		${CONFIGURE_ENV.db-${BDB_TYPE}}
 
 USE_PKGLOCALEDIR=	YES
 
 LOCALSTATEDIR=		${VARBASE}/gnome
-PLIST_SUBST+=		LOCALSTATEDIR=${LOCALSTATEDIR}
+PLIST_SUBST+=		LOCALSTATEDIR=${LOCALSTATEDIR:Q}
 
 SUBST_CLASSES+=		varbase
 SUBST_MESSAGE.varbase=	"Fixing path to score files."

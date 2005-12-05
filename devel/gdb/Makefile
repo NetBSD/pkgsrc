@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/17 19:03:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:04 rillig Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -20,7 +20,7 @@ REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=	install install-info
 TEST_TARGET=	check
 INFO_FILES=		bfd.info gdb.info gdbint.info mmalloc.info stabs.info
-CONFIGURE_ENV+=         CONFIG_LDFLAGS=${LDFLAGS:Q}
+CONFIGURE_ENV+=         CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

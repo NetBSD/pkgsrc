@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/02 17:56:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:05 rillig Exp $
 #
 
 DISTNAME=	monotone-server-0.24
@@ -46,8 +46,8 @@ SUBST_SED.vars+=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 SUBST_SED.vars+=	-e 's|@SH@|${SH}|g'
 SUBST_SED.vars+=	-e 's|@VARBASE@|${VARBASE}|g'
 
-FILES_SUBST+=		MONOTONE_GROUP=${MONOTONE_GROUP}
-FILES_SUBST+=		MONOTONE_USER=${MONOTONE_USER}
+FILES_SUBST+=		MONOTONE_GROUP=${MONOTONE_GROUP:Q}
+FILES_SUBST+=		MONOTONE_USER=${MONOTONE_USER:Q}
 
 INSTALLATION_DIRS=	sbin
 
@@ -55,7 +55,6 @@ do-extract:
 .for f in branches.conf hooks.conf monotone-server-init.sh
 	${CP} ${FILESDIR}/${f} ${WRKSRC}
 .endfor
-.undef f
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/monotone-server-init.sh \

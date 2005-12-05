@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/28 04:25:30 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:24 rillig Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
@@ -19,21 +19,21 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
 .include "../../mk/emacs.mk"
 .include "options.mk"
 
-DEPENDS=	${EMACS_PKGNAME_PREFIX}apel>=10.6:../../devel/apel
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.6:../../devel/apel
 .if ${EMACS_FLAVOR} == "emacs"
-EMACS_USE_LEIM=	# defined
+EMACS_USE_LEIM=	yes
 BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS-[0-9]*:../../editors/mule-ucs
 .else
 BUILD_DEPENDS+= xemacs-packages>=1.10:../../editors/xemacs-packages
 .endif
 
-MAKEFLAGS=	EMACS=${EMACS_BIN}
+MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 BUILD_TARGET=	elc
 
 INFO_FILES=	skk.info
 
 # SKK-CFG was copied from ${FILESDIR} during post-extract.
-SUBST_CLASSES=		cfg
+SUBST_CLASSES+=		cfg
 SUBST_STAGE.cfg=	do-configure
 SUBST_FILES.cfg=	SKK-CFG
 SUBST_SED.cfg=		-e 's|@PREFIX@|${PREFIX}|g' \

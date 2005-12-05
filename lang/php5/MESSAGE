@@ -1,7 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/10/08 16:51:50 jdolecek Exp $
+$NetBSD: MESSAGE,v 1.5 2005/12/05 20:50:26 rillig Exp $
 
 Note php-openssl has been removed as separate package as of 5.0.5nb1, the
 main PHP5 package has it built-in now.
 ===========================================================================
-

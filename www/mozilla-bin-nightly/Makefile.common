@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2005/09/28 12:22:51 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2005/12/05 20:51:13 rillig Exp $
 
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/nightly/${MOZ_CONTRIB}latest-trunk/ \
 		ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/nightly/${MOZ_CONTRIB}latest-trunk/
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CHECKSUM=	yes
 NO_SRC_ON_FTP=	# defined
 

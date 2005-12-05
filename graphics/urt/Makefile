@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/06/01 18:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:23 rillig Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -19,7 +19,7 @@ EXTRACT_ONLY=	urt-3.1b.tar.Z
 WRKSRC=		${WRKDIR}
 USE_LIBTOOL=	yes
 CONFIGURE_SCRIPT=./Configure
-CONFIGURE_ARGS=	config/urt
+CONFIGURE_ARGS+=	config/urt
 HAS_CONFIGURE=	yes
 MAKEFILE=	makefile
 BUILD_TARGET=

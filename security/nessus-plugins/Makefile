@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2005/08/30 20:46:23 tron Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:57 rillig Exp $
 
-.include	"../nessus/Makefile.common"
+.include	"../../security/nessus/Makefile.common"
 
 DISTNAME=	nessus-plugins-GPL-${VERS}
 PKGREVISION=	2
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=	cat gzip
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ENV+=		CAT="${TOOLS_CAT}" GZIP=${TOOLS_GZIP_CMD:Q}
+CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q} GZIP=${TOOLS_GZIP_CMD:Q}
 
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 

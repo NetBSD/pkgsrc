@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/10/15 16:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/05 20:50:13 rillig Exp $
 
 DISTNAME=	libXft-2.1.7
 PKGNAME=	Xft2-2.1.7
@@ -17,7 +17,7 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pkg-config
 
 PKGCONFIG_OVERRIDE=	xft.pc.in
-MAKE_ENV+=		EGREP="${EGREP}"
+MAKE_ENV+=		EGREP=${EGREP:Q}
 
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8.2
 BUILDLINK_DEPENDS.fontconfig+=	fontconfig>=2.2

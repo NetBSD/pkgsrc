@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/06 06:19:28 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/05 20:50:48 rillig Exp $
 #
 
 DISTNAME=	POE-Component-Client-Ident-0.7
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~bingos/POE-Component-Client-Ident-0.7/
-COMMENT=	Non-blocking ident lookups to your sessions.
+COMMENT=	Non-blocking ident lookups to your sessions
 
 DEPENDS+=	p5-POE-[0-9]*:../../devel/p5-POE
 

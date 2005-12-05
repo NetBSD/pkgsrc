@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/11/02 15:20:51 joerg Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/12/05 20:49:50 rillig Exp $
 #
 
 DISTNAME=	xmms-1.2.10
@@ -23,7 +23,7 @@ PATCHDIR=		${.CURDIR}/../../audio/xmms/patches
 CONFIGURE_ARGS+=	--without-gnome
 SHLIBTOOL_OVERRIDE=	libtool
 
-# Broken configure script assumes that iconv_open lives in libc; work around. 
+# Broken configure script assumes that iconv_open lives in libc; work around.
 CPPFLAGS+=		-DHAVE_ICONV_OPEN=1
 CONFIGURE_ENV+=		ac_cv_func_iconv_open=yes
 LDFLAGS+=		${BUILDLINK_LDADD.iconv}

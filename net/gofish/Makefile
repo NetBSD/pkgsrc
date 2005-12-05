@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/11 21:14:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:46 rillig Exp $
 
 DISTNAME=		gofish-1.1
 PKGREVISION=		1
@@ -33,8 +33,8 @@ RCD_SCRIPTS=		gopherd
 CONF_FILES=	${EGDIR}/gofish.conf ${PKG_SYSCONFDIR}/gofish.conf \
 		${EGDIR}/gofish-www.conf ${PKG_SYSCONFDIR}/gofish-www.conf
 
-FILES_SUBST+=   	RUNTIMEDIR=${RUNTIMEDIR}
-FILES_SUBST+=		PKG_USERS=${PKG_USERS}
+FILES_SUBST+=   	RUNTIMEDIR=${RUNTIMEDIR:Q}
+FILES_SUBST+=		PKG_USERS=${PKG_USERS:Q}
 
 post-configure:
 	${MV} ${WRKSRC}/gofish.conf ${WRKSRC}/gofish.conf.orig

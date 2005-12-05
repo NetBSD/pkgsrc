@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/15 18:27:52 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:44 rillig Exp $
 
 DISTNAME=	cisco-mibs-20050210
 CATEGORIES=	net
@@ -13,7 +13,7 @@ DISTFILES=	v1.tar.gz \
 #
 
 MAINTAINER=	kim@tac.nyc.ny.us
-COMMENT=	Public SNMPv1 and SNMPv2 MIBs from Cisco.
+COMMENT=	Public SNMPv1 and SNMPv2 MIBs from Cisco
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGBASE}

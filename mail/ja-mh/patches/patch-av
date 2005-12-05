@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.1 2004/11/29 05:09:43 taca Exp $
+$NetBSD: patch-av,v 1.2 2005/12/05 20:50:32 rillig Exp $
 
 --- uip/dropsbr.c.orig	1998-04-24 06:02:00.000000000 +0900
 +++ uip/dropsbr.c
-@@ -20,6 +20,9 @@ static char ident[] = "@(#)$Id: dropsbr.
+@@ -20,6 +20,9 @@
  #undef NULLVP
  #include <netinet/in.h>
  #else

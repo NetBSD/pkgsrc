@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/05/22 20:08:07 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:22 rillig Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.14
@@ -22,13 +22,13 @@ BUILDLINK_DEPENDS.SDL_image+=	SDL_image>=1.2.4
 
 CONFLICTS+=		tuxpaint-stamps<2003.12.23
 
-MAKE_ENV+=		CONFDIR="${PKG_SYSCONFDIR}" CP="${CP}" CHMOD="${CHMOD}"
+MAKE_ENV+=		CONFDIR=${PKG_SYSCONFDIR:Q} CP=${CP:Q} CHMOD=${CHMOD:Q}
 EGDIR=			${PREFIX}/share/examples/tuxpaint
 CONF_FILES=		${EGDIR}/tuxpaint.conf ${PKG_SYSCONFDIR}/tuxpaint.conf
 
 # this uses iconv and png functions directly, so link against them
 # explicitly.
-MAKE_ENV+=		LIBS="${LIBS}"
+MAKE_ENV+=		LIBS=${LIBS:M*:Q}
 LIBS+=			-liconv
 LIBS+=			-lpng
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/31 19:57:24 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:05 rillig Exp $
 #
 
 DISTNAME=	libscsi-1.6
@@ -12,7 +12,7 @@ NOT_FOR_PLATFORM=	Interix-*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-MAKE_ENV=	LIBDIR=${PREFIX}/lib MANDIR=${PREFIX}/man NOPIC=1 NOPROFILE=1
+MAKE_ENV+=	LIBDIR=${PREFIX:Q}/lib MANDIR=${PREFIX:Q}/man NOPIC=1 NOPROFILE=1
 
 MANCOMPRESSED_IF_MANZ=	yes
 

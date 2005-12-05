@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/10/26 16:44:24 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2005/12/05 20:50:56 rillig Exp $
 
 DISTNAME=	heimdal-0.7.1
 PKGREVISION=	1
@@ -83,7 +83,7 @@ HEIMDAL_TRANSFORM=	s/^ftp/${KRB5_PREFIX}&/;			\
 KRB5_PREFIX=		# empty
 HEIMDAL_TRANSFORM=	s/^ftp/k&/
 .endif
-PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX}
+PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX:Q}
 CONFIGURE_ARGS+=	--program-transform-name="${HEIMDAL_TRANSFORM}"
 
 USE_PKGINSTALL=		yes

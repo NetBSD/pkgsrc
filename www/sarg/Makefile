@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/07 17:57:59 reed Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 20:51:14 rillig Exp $
 
 DISTNAME=		sarg-1.4.1
 CATEGORIES=		www
@@ -30,8 +30,8 @@ SARG_REPORTSDIR?=	/var/sarg
 
 OWN_DIRS+=		${SARG_REPORTSDIR} ${CFLNG}
 
-FILES_SUBST+=		SQUID_ACCESSLOG=${SQUID_ACCESSLOG}		\
-			SARG_REPORTSDIR=${SARG_REPORTSDIR}
+FILES_SUBST+=		SQUID_ACCESSLOG=${SQUID_ACCESSLOG:Q}		\
+			SARG_REPORTSDIR=${SARG_REPORTSDIR:Q}
 SUBST_CLASSES+=		sargconf
 SUBST_MESSAGE.sargconf=	"[Adjust values in SARG configuration files]"
 SUBST_STAGE.sargconf=	post-configure
@@ -41,7 +41,7 @@ SUBST_SED.sargconf=	${FILES_SUBST_SED}
 BUILD_DEFS+=		SQUID_ACCESSLOG SARG_REPORTSDIR
 MAKE_ENV+=		PKG_FLAGS="-DSQUID_ACCESSLOG='\"${SQUID_ACCESSLOG}\"' \
 			-DSARG_REPORTSDIR='\"${SARG_REPORTSDIR}\"'"	\
-			EGDIR="${EGDIR}"
+			EGDIR=${EGDIR:Q}
 
 CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf	\
 			${EGDIR}/exclude_codes ${PKG_SYSCONFDIR}/exclude_codes \

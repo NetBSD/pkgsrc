@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/05/24 14:25:32 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:51:12 rillig Exp $
 
 PKGNAME=        jakarta-tomcat4-${TOMCAT_VERSION}
 DISTNAME=       jakarta-tomcat-${TOMCAT_VERSION}
@@ -34,7 +34,7 @@ CONF_FILES+=	${SAMPLECONFDIR}/${FILE}.default ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 RCD_SCRIPTS=	tomcat4
 
-FILES_SUBST+=	JAVA_HOME=${PKG_JAVA_HOME} TOMCAT_LIB=${TOMCAT_LIB}
+FILES_SUBST+=	JAVA_HOME=${PKG_JAVA_HOME:Q} TOMCAT_LIB=${TOMCAT_LIB:Q}
 
 .include "../../mk/java-vm.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/11/21 06:17:58 jlam Exp $
+# $NetBSD: Makefile.common,v 1.27 2005/12/05 20:50:52 rillig Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	8.15
@@ -71,7 +71,7 @@ CUPS_EGDIR=		${PREFIX}/share/examples/cups
 CUPS_MODEL_DIR=		${PREFIX}/share/cups/model
 DOCDIR=			${PREFIX}/share/doc/ghostscript
 
-PLIST_SUBST+=		GS_VERS=${BASEGS_VERS}
+PLIST_SUBST+=		GS_VERS=${BASEGS_VERS:Q}
 
 CONF_FILES=	${CUPS_EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/23 11:48:51 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:57 rillig Exp $
 
 DISTNAME=		pflkm-20050511
 CATEGORIES=		security
@@ -92,7 +92,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/usr.sbin/tcpdump/pftcpdump.cat8 ${PREFIX}/man/cat8/pftcpdump.0
 	${INSTALL_MAN} ${WRKSRC}/usr.sbin/tcpdump/pftcpdump.8 ${PREFIX}/man/man8/pftcpdump.8
 
-SUBST_CLASSES=		path
+SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	man/pfsync.4 man/pf.conf.5
 SUBST_FILES.path+=	sbin/pfctl/pfctl.8 sbin/pfctl/pfctl_parser.h

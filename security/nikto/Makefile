@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/09/06 21:11:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:57 rillig Exp $
 
 DISTNAME=	nikto-1.35
 PKGREVISION=	2
-DIST_SUBDIR=    ${PKGNAME}
+DIST_SUBDIR=    ${PKGNAME_NOREV}nb2
 CATEGORIES=	security www
 MASTER_SITES=	http://www.cirt.net/nikto/
 
@@ -21,7 +21,7 @@ USE_PKGINSTALL=	YES
 # NOTE: this package will not work with pkgviews due to a hardcoded
 # location for nmap.
 #
-SUBST_CLASSES=		conf
+SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	config.txt
 SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g"

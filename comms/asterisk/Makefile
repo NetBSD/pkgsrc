@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/10 21:45:08 rh Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:49:54 rillig Exp $
 
 DISTNAME=	asterisk-1.0.9
 CATEGORIES=	comms net audio
@@ -79,7 +79,6 @@ CONF_FILES+=	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
 	telcordia-1.adsi
 CONF_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
 .endfor
-.undef _file_
 
 PTHREAD_OPTS+=	require native
 

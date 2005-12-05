@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/11/28 23:44:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/05 20:50:45 rillig Exp $
 
 DISTNAME=	freeradius-1.0.5
 PKGREVISION=	2
@@ -18,8 +18,8 @@ GNU_CONFIGURE=		YES
 USE_PKGINSTALL=		YES
 LIBTOOLIZE_PLIST=	NO
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-FILES_SUBST+=		ROOT_USER=${ROOT_USER}
-FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
+FILES_SUBST+=		ROOT_USER=${ROOT_USER:Q}
+FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP:Q}
 USE_OLD_DES_API=	YES
 
 BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--without-rlm_sql_iodbc
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 
-SUBST_CLASSES=		make
+SUBST_CLASSES+=		make
 SUBST_STAGE.make=	post-patch
 SUBST_FILES.make=	src/modules/rlm_ldap/Makefile.in \
 			src/modules/rlm_mschap/Makefile \

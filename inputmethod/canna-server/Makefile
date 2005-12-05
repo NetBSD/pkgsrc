@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2005/08/23 11:48:47 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:23 rillig Exp $
 #
-.include "../canna/Makefile.common"
+.include "../../inputmethod/canna/Makefile.common"
 
 PKGREVISION=	1
 
@@ -39,4 +39,4 @@ do-configure:
 .include "../../devel/nbitools/buildlink3.mk"
 .include "../../inputmethod/canna-lib/buildlink3.mk"
 
-.include "../canna/Makefile.include"
+.include "../../inputmethod/canna/Makefile.include"

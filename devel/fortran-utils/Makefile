@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/04/19 18:39:23 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:03 rillig Exp $
 
 DISTNAME=	fortran-utils-1.1
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 WRKSRC=		${WRKDIR}/fortran-utils
 
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}	\
-		MANOWN=${MANOWN} MANGRP=${MANGRP} MANMODE=${MANMODE}
+MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} BINMODE=${BINMODE:Q}	\
+		MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q} MANMODE=${MANMODE:Q}
 
 .include "../../mk/bsd.pkg.mk"

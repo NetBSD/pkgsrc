@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/03/24 21:13:02 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:51:08 rillig Exp $
 
 DISTNAME=	rman
 PKGNAME=	rman-3.0.9
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 .include "../../mk/bsd.prefs.mk"
 
 .if exists(${X11BASE}/bin/rman)
-PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
+PKG_SKIP_REASON+=	"${PKGNAME} is part of your X11 distribution"
 .endif
 
 post-install:

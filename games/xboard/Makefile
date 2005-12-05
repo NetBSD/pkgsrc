@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/09/28 20:52:22 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:18 rillig Exp $
 
 DISTNAME=	xboard-4.2.6
 PKGREVISION=	2
@@ -11,7 +11,7 @@ COMMENT=	Graphical frontend for chess engines and servers
 
 CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
-CONFIGURE_ENV+=		PERLPATH="${PERL5}"
+CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 

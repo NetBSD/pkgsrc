@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/09/11 14:17:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:02 rillig Exp $
 
 DISTNAME=	allegro-4.1.18
 PKGREVISION=	1
@@ -25,14 +25,16 @@ LIBS+=		${LIBOSSAUDIO}
 
 .include "options.mk"
 
-SUBST_CLASSES=		oss path
+SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	src/unix/uoss.c setup/setup.c
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.oss=	"Fixing harcoded audio device."
+
+SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	src/unix/umodules.c src/unix/usystem.c
-SUBST_SED.path=	-e "s,@@PREFIX@@,${PREFIX},g"
+SUBST_SED.path=		-e "s,@@PREFIX@@,${PREFIX},g"
 SUBST_MESSAGE.path=	"Fixing harcoded path"
 
 .include "../../mk/ossaudio.buildlink3.mk"

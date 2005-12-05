@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/22 20:05:01 heinz Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:57 rillig Exp $
 #
 
 DISTNAME=		Net-DNS-SEC-0.12
@@ -20,7 +20,7 @@ DEPENDS+=		p5-Digest-SHA1>=2.04:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Digest-BubbleBabble>=0.01:../../security/p5-Digest-BubbleBabble
 
-BUILDLINK_DEPENDS.perl=	perl>=5.6.1
+BUILDLINK_DEPENDS.perl+=	perl>=5.6.1
 USE_PKGINSTALL=		YES
 
 PERL5_PACKLIST=		auto/Net/DNS/SEC/.packlist

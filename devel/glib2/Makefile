@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2005/11/25 21:30:17 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2005/12/05 20:50:04 rillig Exp $
 
 DISTNAME=		glib-2.8.4
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -34,7 +34,7 @@ PKGCONFIG_OVERRIDE+=	gthread-2.0-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	gthread-2.0.pc.in
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
@@ -43,9 +43,9 @@ CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
 
 # Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+CONFIGURE_ENV+=		F77=${FALSE:Q}
 
-CONFIGURE_ENV+=		PERL_PATH=${PERL5}
+CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
 
 .include "options.mk"
 
@@ -57,7 +57,7 @@ CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 .if ${OPSYS} == "FreeBSD"
 
-SUBST_CLASSES=		thr
+SUBST_CLASSES+=		thr
 SUBST_STAGE.thr=	post-patch
 SUBST_FILES.thr=	gthread/Makefile.in
 .  if ${OS_VERSION:R} >= 5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/06/20 01:46:01 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2005/12/05 20:49:56 rillig Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--target=i386-linux
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
 BUILD_TARGET=		all-binutils all-ld
 
-PLIST_SUBST=		LOCALBASE=${LOCALBASE}
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}
 
 BINDIR=			${PREFIX}/libexec/binutils
 
