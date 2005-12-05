@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2005/10/25 17:52:38 scottr Exp $
+# $NetBSD: options.mk,v 1.14 2005/12/05 23:55:10 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=	inet6 kerberos4 kerberos gssapi ssl
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--enable-inet6
 ### Authentication via GSSAPI (currently only over Kerberos V) support.
 ###
 .if !empty(PKG_OPTIONS:Mgssapi)
-CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE:Q}
 .else
 CONFIGURE_ARGS+=	--with-gssapi=no
 .endif
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--with-kerberos=no
 .if !empty(PKG_OPTIONS:Mkerberos) || !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
 PKG_USE_KERBEROS=	yes
-CONFIGURE_ARGS+=        --with-kerberos5=${KRB5BASE}
+CONFIGURE_ARGS+=        --with-kerberos5=${KRB5BASE:Q}
 .else
 CONFIGURE_ARGS+=        --with-kerberos5=no
 .endif
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=        --with-kerberos5=no
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif

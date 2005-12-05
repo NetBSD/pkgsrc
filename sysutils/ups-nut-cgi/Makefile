@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/06/01 18:03:23 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/12/05 23:55:20 rillig Exp $
 
 DISTNAME=		nut-2.0.1
 PKGNAME=		ups-nut-cgi-2.0.1
@@ -16,12 +16,12 @@ INSTALL_TARGET=		install-cgi
 
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
-			--datadir=${NUT_DATADIR}			\
-			--localstatedir=${NUT_STATEDIR}			\
-			--with-statepath=${NUT_STATEDIR}		\
+CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR:Q}			\
+			--datadir=${NUT_DATADIR:Q}			\
+			--localstatedir=${NUT_STATEDIR:Q}			\
+			--with-statepath=${NUT_STATEDIR:Q}		\
 			--with-cgi					\
-			--with-cgipath=${NUT_CGIDIR}
+			--with-cgipath=${NUT_CGIDIR:Q}
 
 PKG_SYSCONFSUBDIR?=	nut
 NUT_CONFDIR=		${PKG_SYSCONFDIR}

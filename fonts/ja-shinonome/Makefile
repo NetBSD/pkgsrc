@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:14 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 23:55:07 rillig Exp $
 #
 
 DISTNAME=		shinonome-0.9.10-src
@@ -26,9 +26,9 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 FILES_SUBST+=		FONTDIR=${FONTDIR:Q}
 FILES_SUBST+=		ALIAS_SHINONOME=${ALIAS_SHINONOME:Q}
 
-CONFIGURE_ARGS+=	--with-fontdir=${FONTDIR}
+CONFIGURE_ARGS+=	--with-fontdir=${FONTDIR:Q}
 CONFIGURE_ARGS+=	--disable-progressbar
-CONFIGURE_ARGS+=	--with-foundry=${FOUNDRY}
+CONFIGURE_ARGS+=	--with-foundry=${FOUNDRY:Q}
 
 .include "../../mk/x11.buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/16 01:19:07 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:02 rillig Exp $
 
 DISTNAME=	dircproxy-1.1.0
 CATEGORIES=	chat
@@ -16,7 +16,7 @@ CONFLICTS=		dircproxy-1.0.[0-9]*
 
 REPLACE_PERL=		contrib/log.pl contrib/privmsg-log.pl
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=			${PREFIX}/share/examples/dircproxy
 CONF_FILES=		${EGDIR}/dircproxyrc ${PKG_SYSCONFDIR}/dircproxyrc

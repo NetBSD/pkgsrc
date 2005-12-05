@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/12/02 17:28:37 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/12/05 23:55:05 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sqlrelay
 PKG_SUPPORTED_OPTIONS+= mysql pgsql
@@ -18,11 +18,11 @@ PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable SQLRELAY_DATABASES used, u
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmysql)
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_DIR:Q}
 .include "../../mk/mysql.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
-CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_DIR:Q}
 .include "../../mk/pgsql.buildlink3.mk"
 .endif

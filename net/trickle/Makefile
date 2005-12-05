@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/09/16 14:46:43 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 23:55:15 rillig Exp $
 #
 
 DISTNAME=	trickle-1.06
@@ -14,7 +14,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/trickle
 CONF_FILES=	${EGDIR}/trickled.conf ${PKG_SYSCONFDIR}/trickled.conf

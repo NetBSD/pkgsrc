@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/12/05 20:50:29 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2005/12/05 23:55:10 rillig Exp $
 
 DISTNAME=	courier-imap-4.0.6
 CATEGORIES=	mail
@@ -22,7 +22,7 @@ PKGNAME=	${DISTNAME}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/courier
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/courier
 
-CONFIGURE_ARGS+=	--with-mailuser=${ROOT_USER}
+CONFIGURE_ARGS+=	--with-mailuser=${ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 CONFIGURE_ENV+=		OPENSSL=${SSLBASE}/bin/openssl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/11/11 07:34:30 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 23:55:11 rillig Exp $
 
 DISTNAME=	maildrop-2.0.1
 CATEGORIES=     security
@@ -29,12 +29,12 @@ PKGNAME=	${DISTNAME}
 #
 MAILDROP_TRUSTED_USERS?=	${ROOT_USER} ${COURIER_USER} qmaild
 
-CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-maildirquota
-CONFIGURE_ARGS+=	--enable-maildrop-uid=${ROOT_USER}
-CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP}
-CONFIGURE_ARGS+=	--enable-trusted-users='${MAILDROP_TRUSTED_USERS}'
-CONFIGURE_ARGS+=	--enable-trusted-groups='${COURIER_GROUP}'
+CONFIGURE_ARGS+=	--enable-maildrop-uid=${ROOT_USER:Q}
+CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP:Q}
+CONFIGURE_ARGS+=	--enable-trusted-users=${MAILDROP_TRUSTED_USERS:Q}
+CONFIGURE_ARGS+=	--enable-trusted-groups=${COURIER_GROUP:Q}
 CONFIGURE_ARGS+=	--enable-syslog=1
 
 .if !empty(PKG_OPTIONS:Mauthlib)

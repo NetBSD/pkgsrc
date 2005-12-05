@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 21:02:27 seb Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 23:55:18 rillig Exp $
 #
 
 DISTNAME=		rssh-2.2.3
@@ -13,7 +13,7 @@ COMMENT=		Restricted shell allowing only scp and/or sftp
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .if !exists(/usr/include/wordexp.h)
 PKG_SKIP_REASON+=	"${PKGNAME} requires wordexp(3)"
@@ -33,19 +33,19 @@ BUILD_DEFS+=		RSSH_RDIST_PATH
 BUILD_DEFS+=		RSSH_RSYNC_PATH
 
 .if defined(RSSH_SCP_PATH) && !empty(RSSH_SCP_PATH)
-CONFIGURE_ARGS+=	--with-scp=${RSSH_SCP_PATH}
+CONFIGURE_ARGS+=	--with-scp=${RSSH_SCP_PATH:Q}
 .endif
 .if defined(RSSH_SFTP_SERVER_PATH) && !empty(RSSH_SFTP_SERVER_PATH)
-CONFIGURE_ARGS+=	--with-sftp-server=${RSSH_SFTP_SERVER_PATH}
+CONFIGURE_ARGS+=	--with-sftp-server=${RSSH_SFTP_SERVER_PATH:Q}
 .endif
 .if defined(RSSH_CVS_PATH) && !empty(RSSH_CVS_PATH)
-CONFIGURE_ARGS+=	--with-cvs=${RSSH_CVS_PATH}
+CONFIGURE_ARGS+=	--with-cvs=${RSSH_CVS_PATH:Q}
 .endif
 .if defined(RSSH_RDIST_PATH) && !empty(RSSH_RDIST_PATH)
-CONFIGURE_ARGS+=	--with-rdist=${RSSH_RDIST_PATH}
+CONFIGURE_ARGS+=	--with-rdist=${RSSH_RDIST_PATH:Q}
 .endif
 .if defined(RSSH_RSYNC_PATH) && !empty(RSSH_RSYNC_PATH)
-CONFIGURE_ARGS+=	--with-rsync=${RSSH_RSYNC_PATH}
+CONFIGURE_ARGS+=	--with-rsync=${RSSH_RSYNC_PATH:Q}
 .endif
 
 post-install:

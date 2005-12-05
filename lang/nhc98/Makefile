@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/12/05 20:50:26 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/05 23:55:10 rillig Exp $
 
 DISTNAME=		nhc98src-1.18.tar.gz
 PKGNAME=		nhc98-1.18
@@ -21,7 +21,7 @@ INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*-*
 
 HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
+CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX:Q} \
 			+docs --docdir=${PREFIX}/share/doc/nhc98
 
 USE_TOOLS+=		gmake

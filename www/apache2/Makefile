@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2005/12/05 20:51:11 rillig Exp $
+# $NetBSD: Makefile,v 1.88 2005/12/05 23:55:22 rillig Exp $
 
 .include "Makefile.common"
 
@@ -18,8 +18,8 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--enable-so
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
@@ -41,7 +41,7 @@ BUILDLINK_DEPENDS.apr+=	apr>=0.9.7.2.0.55
 #	worker		hybrid multi-threaded multi-process web server
 #
 APACHE_MPM?=		prefork
-CONFIGURE_ARGS+=	--with-mpm=${APACHE_MPM}
+CONFIGURE_ARGS+=	--with-mpm=${APACHE_MPM:Q}
 BUILD_DEFS+=		APACHE_MPM
 .for _mpm_ in prefork worker
 PLIST_SUBST.${_mpm_}?=		MPM_COMMENT.${_mpm_}="@comment "
@@ -62,7 +62,7 @@ DFLT_APACHE_MODULES+=	ldap auth_ldap
 # apache httpd executable.
 #
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
-CONFIGURE_ARGS+=	--enable-modules="${APACHE_MODULES}"
+CONFIGURE_ARGS+=	--enable-modules=${APACHE_MODULES:Q}
 BUILD_DEFS+=		APACHE_MODULES
 
 APACHE_USER?=		www

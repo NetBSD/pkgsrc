@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.16 2005/12/05 20:50:26 rillig Exp $
+# $NetBSD: Makefile.php,v 1.17 2005/12/05 23:55:10 rillig Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -17,7 +17,7 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR:Q}
 
 CONFIGURE_ARGS+=	--with-regex=system
 
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--disable-dom
 CONFIGURE_ARGS+=	--disable-pdo
 
 CONFIGURE_ARGS+=	--enable-xml
-CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
+CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX:Q}
 .include "../../textproc/libxml2/buildlink3.mk"
 
 # Note: This expression is the same as ${PKGBASE}, but the latter is

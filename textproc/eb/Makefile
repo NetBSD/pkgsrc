@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/12/05 20:51:02 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2005/12/05 23:55:20 rillig Exp $
 
 DISTNAME=	eb-4.1.3
 CATEGORIES=	textproc japanese
@@ -57,7 +57,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--with-zlib
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 CONF_FILES=		${EGDIR}/eb.conf.default ${PKG_SYSCONFDIR}/eb.conf
 

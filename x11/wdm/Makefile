@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:51:19 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 23:55:24 rillig Exp $
 
 DISTNAME=		wdm-1.25
 PKGREVISION=		6
@@ -17,7 +17,7 @@ USE_X11BASE=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--with-gfx-incs=${BUILDLINK_DIR}/include/WINGs
 CONFIGURE_ARGS+=	--with-gfx-libs=${BUILDLINK_DIR}/lib
@@ -50,7 +50,7 @@ CONF_FILES+=	${PREFIX}/share/examples/wdm/${f} ${PKG_SYSCONFDIR}/${f}
 # different from WindowMaker. WDM_MANAGERS is a space-separated
 # list of window managers to support.
 .for WMANAGER in ${WDM_MANAGERS}
-CONFIGURE_ARGS+=	--with-winmgr=${WMANAGER}
+CONFIGURE_ARGS+=	--with-winmgr=${WMANAGER:Q}
 .endfor
 
 pre-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2005/12/05 20:50:49 rillig Exp $
+# $NetBSD: Makefile,v 1.152 2005/12/05 23:55:15 rillig Exp $
 
 .include "Makefile.mirrors"
 
@@ -47,14 +47,14 @@ FILES_SUBST+=		SAMBA_STATEDIR=${SAMBA_STATEDIR:Q}
 FILES_SUBST+=		SAMBA_VARDIR=${SAMBA_VARDIR:Q}
 FILES_SUBST+=		WINBINDD_RCD_SCRIPT=${WINBINDD_RCD_SCRIPT:Q}
 
-CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
-CONFIGURE_ARGS+=	--with-libdir=${SAMBA_LIBDIR}
-CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
-CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
-CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
-CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
-CONFIGURE_ARGS+=	--with-statedir=${SAMBA_STATEDIR}
-CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
+CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR:Q}
+CONFIGURE_ARGS+=	--with-libdir=${SAMBA_LIBDIR:Q}
+CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR:Q}
+CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR:Q}
+CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR:Q}
+CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE:Q}
+CONFIGURE_ARGS+=	--with-statedir=${SAMBA_STATEDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR:Q}
 
 CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
 CONFIGURE_ARGS+=	--with-libsmbclient

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/12/05 20:50:28 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2005/12/05 23:55:10 rillig Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -17,10 +17,10 @@ USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-clamav
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-dbdir=${VIRUSDBDIR}
-CONFIGURE_ARGS+=	--with-uid=${CLAMAV_USER}
-CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-dbdir=${VIRUSDBDIR:Q}
+CONFIGURE_ARGS+=	--with-uid=${CLAMAV_USER:Q}
+CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP:Q}
 CONFIGURE_ARGS+=	--with-tcpwrappers
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 

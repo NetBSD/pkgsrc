@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/05/22 20:08:27 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:16 rillig Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGNAME=	gimp-print-cups-4.2.7
@@ -15,10 +15,10 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-escputil=no --enable-libgimpprint=no
-CONFIGURE_ARGS+=	--with-cups=${PREFIX}
+CONFIGURE_ARGS+=	--with-cups=${PREFIX:Q}
 CONFIGURE_ARGS+=	--without-samples --without-user-guide
 CONFIGURE_ARGS+=	--without-gimp --without-translated-ppds
-CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 PKG_SYSCONFSUBDIR=	cups
 
 EGDIR=		${PREFIX}/share/examples/cups

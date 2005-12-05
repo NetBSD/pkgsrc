@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:24 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/05 23:55:09 rillig Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -72,7 +72,7 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 # See comment above.
-CONFIGURE_ARGS+=	--prefix=${PLT_HOME}
+CONFIGURE_ARGS+=	--prefix=${PLT_HOME:Q}
 
 # XXX: Gack.  Ugly hackery to have the install process run with the regular
 #      PATH.

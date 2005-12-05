@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/12/05 20:50:47 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2005/12/05 23:55:14 rillig Exp $
 
 DISTNAME=		lftp-3.3.5
 CATEGORIES=		net
@@ -26,7 +26,7 @@ SHLIBTOOL_OVERRIDE=	libtool
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-modules
 
 CONFIGURE_ENV+=		F77=${FALSE:Q}

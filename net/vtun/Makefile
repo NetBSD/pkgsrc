@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/06/17 03:50:29 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/12/05 23:55:15 rillig Exp $
 
 DISTNAME=	vtun-2.6
 PKGREVISION=	6
@@ -19,8 +19,8 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-ssl-headers=${SSLBASE}/include/openssl
 CONFIGURE_ARGS+=	--with-ssl-lib=${SSLBASE}/lib
 CONFIGURE_ARGS+=	--with-lzo-headers=${BUILDLINK_PREFIX.liblzo}/include

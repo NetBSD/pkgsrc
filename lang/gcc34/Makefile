@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 23:55:09 rillig Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -78,12 +78,12 @@ LANGS+='java'
 .if !empty(BUILD_OBJC:M[Yy][Ee][Ss])
 LANGS+='objc'
 .endif
-CONFIGURE_ARGS+=	--enable-languages="${LANGS}"
+CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-long-long
-CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX}
+CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 
@@ -144,13 +144,13 @@ GCC_SUBPREFIX=		gcc34
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
-CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
+CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
 .if ${OPSYS} == "NetBSD"
 # thread / crtbegin / __cxa_atexit support depend on a "netbsd2" OS name
 GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
-CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
+CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 ABI_BASELINE_PAIR=	${GCC_PLATFORM:C/--/-/}
 MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}
 .endif # NetBSD
