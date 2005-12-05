@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:07 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 23:55:06 rillig Exp $
 #
 
 DISTNAME=		PQueue-0.2
@@ -13,7 +13,7 @@ COMMENT=		Priority-queues using fibonacci heaps
 
 WRKSRC=		${WRKDIR}/PQueue
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN:Q}
 BUILD_TARGET=		default
 
 PY_PATCHPLIST=	yes

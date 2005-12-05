@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/27 00:34:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:13 rillig Exp $
 #
 
 DISTNAME=	httptunnel-3.0.5
@@ -10,6 +10,6 @@ HOMEPAGE=	http://www.nocrew.org/software/httptunnel.html
 COMMENT=	Encapsulate TCP/IP connections in HTTP requests
 
 HAS_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 .include "../../mk/bsd.pkg.mk"

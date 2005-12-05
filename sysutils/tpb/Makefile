@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/15 14:48:13 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:20 rillig Exp $
 #
 
 DISTNAME=	tpb-0.6.1
@@ -16,7 +16,7 @@ USE_PKGINSTALL=	YES
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/tpb
 CONF_FILES=	${EGDIR}/tpbrc ${PKG_SYSCONFDIR}/tpbrc

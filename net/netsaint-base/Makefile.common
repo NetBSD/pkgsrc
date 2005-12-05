@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2005/12/05 23:55:14 rillig Exp $
 #
 
 CATEGORIES=		net sysutils
@@ -20,13 +20,13 @@ USE_TOOLS+=		gmake perl:run
 
 PKG_SYSCONFSUBDIR=	netsaint
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/netsaint
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/netsaint
 CONFIGURE_ARGS+=	--with-lockfile=var/run/netsaint/netsaint.lock
-CONFIGURE_ARGS+=	--with-netsaint-user=${NETSAINT_USER}
-CONFIGURE_ARGS+=	--with-netsaint-grp=${NETSAINT_GROUP}
+CONFIGURE_ARGS+=	--with-netsaint-user=${NETSAINT_USER:Q}
+CONFIGURE_ARGS+=	--with-netsaint-grp=${NETSAINT_GROUP:Q}
 CONFIGURE_ARGS+=	--with-init-dir=${PREFIX}/etc/rc.d
 
 .include "../../mk/x11.buildlink3.mk"

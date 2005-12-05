@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2005/12/05 20:51:15 rillig Exp $
+# $NetBSD: Makefile,v 1.94 2005/12/05 23:55:24 rillig Exp $
 #
 
 DISTNAME=	gdm-2.8.0.5
@@ -32,8 +32,8 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
 PKG_SUPPORTED_OPTIONS=	inet6 pam
 .include "../../mk/bsd.options.mk"
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}

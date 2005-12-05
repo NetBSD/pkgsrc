@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:38 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 23:55:12 rillig Exp $
 #
 
 DISTNAME=	${PKGNAME:S,-,_,}
@@ -27,7 +27,7 @@ ADMIN_DIR=		${PREFIX}/var/db
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-start-stop-daemon=no
 CONFIGURE_ARGS+=	--with-sgml-doc=no
-CONFIGURE_ARGS+=	--with-admindir=${ADMIN_DIR}
+CONFIGURE_ARGS+=	--with-admindir=${ADMIN_DIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 
 .include "../../converters/libiconv/buildlink3.mk"

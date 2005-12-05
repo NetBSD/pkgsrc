@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/09/28 20:52:26 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2005/12/05 23:55:18 rillig Exp $
 
 DISTNAME=		stunnel-4.07
 PKGREVISION=		2
@@ -13,12 +13,12 @@ COMMENT=		Universal SSL tunnel
 
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
-			--with-cert-dir="${SSLCERTS}" \
-			--with-pem-dir="${SSLCERTS}" \
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q} \
+			--with-cert-dir=${SSLCERTS:Q} \
+			--with-pem-dir=${SSLCERTS:Q} \
 			--with-tcp-wrappers \
-			--sysconfdir="${PKG_SYSCONFDIR}" \
-			--localstatedir=${VARBASE}
+			--sysconfdir=${PKG_SYSCONFDIR:Q} \
+			--localstatedir=${VARBASE:Q}
 
 PKG_SYSCONFSUBDIR=	stunnel
 

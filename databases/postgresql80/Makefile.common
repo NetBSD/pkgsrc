@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2005/12/05 20:50:00 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2005/12/05 23:55:05 rillig Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -73,9 +73,9 @@ PG_LOCALE_DIR=		${PG_PREFIX}/${PKGLOCALEDIR}/locale
 PG_ETC_DIR=		${PKG_SYSCONFDIR:S/^${PREFIX}\//${PG_PREFIX}\//}
 
 GNU_CONFIGURE_PREFIX=	${PG_PREFIX}
-CONFIGURE_ARGS+=	--sysconfdir=${PG_ETC_DIR}
-CONFIGURE_ARGS+=	--datadir=${PG_DATA_DIR}
-CONFIGURE_ARGS+=	--with-docdir=${PG_DOC_DIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PG_ETC_DIR:Q}
+CONFIGURE_ARGS+=	--datadir=${PG_DATA_DIR:Q}
+CONFIGURE_ARGS+=	--with-docdir=${PG_DOC_DIR:Q}
 CONFIGURE_ARGS+=	--with-template=${PGSQL_TEMPLATE.${OPSYS}}
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-zlib

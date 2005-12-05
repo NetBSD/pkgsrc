@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/05 23:40:56 taca Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 23:55:14 rillig Exp $
 
 DISTNAME=	netatalk-1.6.4a
 CATEGORIES=	net print
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 			--with-did=last \
 			--with-tcp-wrappers \
 			--sbindir=${PREFIX}/libexec/netatalk \
-			--sysconfdir=${PKG_SYSCONFDIR} \
+			--sysconfdir=${PKG_SYSCONFDIR:Q} \
 			--localstatedir=${VARBASE}/netatalk \
 			--with-nls-dir=${PREFIX}/share/netatalk/nls \
 			--with-uams-path=${PREFIX}/libexec/netatalk/uams

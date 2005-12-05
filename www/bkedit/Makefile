@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:51:11 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 23:55:22 rillig Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
@@ -14,7 +14,7 @@ COMMENT=		Bookmark manager and editor
 USE_TOOLS+=		bison
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 MAKE_ENV+=		PKG_CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		PKG_LDFLAGS=${LDFLAGS:M*:Q}
