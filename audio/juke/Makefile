@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/16 15:05:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:49:48 rillig Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -14,7 +14,7 @@ USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 # halfdelay()
-INCOMPAT_CURSES=	NetBSD-1.[45]*-* NetBSD-1.6[-_.]* NetBSD-1.6[A-L]-*
+INCOMPAT_CURSES=	NetBSD-1.[45]*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-L]-*
 
 EGDIR=		${PREFIX}/share/examples/juke
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/29 22:16:12 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:49:48 rillig Exp $
 #
 
 DISTNAME=	dgguspat
@@ -16,9 +16,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_ONLY=	# empty
-NO_TOOLS=	yes
 NO_BUILD=	yes
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 do-configure:
 	${SED} "s|@PREFIX@|${PREFIX}|" < ${FILESDIR}/gravis.cfg > \

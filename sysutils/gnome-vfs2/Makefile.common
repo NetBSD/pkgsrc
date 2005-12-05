@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/10/09 00:33:20 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/12/05 20:51:00 rillig Exp $
 #
 
 DISTNAME=		gnome-vfs-2.12.1.1
@@ -44,7 +44,6 @@ EGDIR=			${PREFIX}/share/examples/gnome-vfs-2.0
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-.undef f
 
 #
 # The following stuff is to allow easy building of modules distributed within

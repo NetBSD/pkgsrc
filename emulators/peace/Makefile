@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/09 14:25:49 kent Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:12 rillig Exp $
 #
 PEACE_VERSION=	0.0.20050609
 DISTNAME=	peace-${PEACE_VERSION}
@@ -17,17 +17,17 @@ DEPENDS+=	icu>=2.4nb1:../../textproc/icu
 # DEPENDS+=	perl5:../../lang/perl5
 # DEPENDS+=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
 
-BUILD_DEPENDS=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
+BUILD_DEPENDS+=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
 BUILD_DEPENDS+=	w32api>=2.5:../../devel/w32api
 BUILD_DEPENDS+= x11-links-*:../../pkgtools/x11-links
 
 CPPFLAGS+=	-I${WRKDIR}/cross/i386-netbsdpe/include
-LDFLAGS=	-L${WRKSRC}/lib
+LDFLAGS+=	-L${WRKSRC}/lib
 PECOFFDIR=	${PREFIX}/emul/pecoff
-MAKE_FLAGS+=	PECOFFDIR=${PECOFFDIR} \
-		LOCALBASE=${LOCALBASE} \
-		CROSSBASE=${CROSSBASE} \
-		X11BASE=${X11BASE} \
+MAKE_FLAGS+=	PECOFFDIR=${PECOFFDIR:Q} \
+		LOCALBASE=${LOCALBASE:Q} \
+		CROSSBASE=${CROSSBASE:Q} \
+		X11BASE=${X11BASE:Q} \
 		CHECK_DEPENDENTS=NO
 MAKE_COMMAND=	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/04/11 21:46:35 tv Exp $
+# $NetBSD: Makefile,v 1.45 2005/12/05 20:50:39 rillig Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 COMMENT=	Utilities for the KDE integrated X11 desktop
@@ -12,7 +12,7 @@ USE_PKGINSTALL=		YES
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*) || !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)
 CPPFLAGS+=		-DARK_TAR="\"/usr/bin/tar\""

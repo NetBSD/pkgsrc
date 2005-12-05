@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/11/28 06:41:22 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/12/05 20:51:03 rillig Exp $
 #
 
 DISTNAME=	groff-1.19.1
@@ -15,15 +15,15 @@ DEPENDS+=	psutils>=1.17:../../print/psutils
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		PERLPATH="${PERL5}"
+CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
 USE_TOOLS+=		gs:run perl:run
 
 INFO_FILES=	groff
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifdef PAPERSIZE
-CONFIGURE_ENV+=	PAGE=${PAPERSIZE}
+.if defined(PAPERSIZE)
+CONFIGURE_ENV+=	PAGE=${PAPERSIZE:Q}
 .endif
 
 # Usually the mdoc.local "volume-operating-system" definition is for

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/09/08 17:55:52 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:49:57 rillig Exp $
 #
 
 DISTNAME=		gramps-2.0.8
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 # disable gconf schema and mime type processing
 CONFIGURE_ARGS+=	--disable-mime-install --enable-packager-mode
 
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 # i18n support with other python versions appears to not work
 PYTHON_VERSIONS_ACCEPTED=	24 23
 

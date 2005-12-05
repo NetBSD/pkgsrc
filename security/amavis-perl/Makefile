@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/01 12:18:41 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:54 rillig Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -48,7 +48,7 @@ GNU_CONFIGURE=	YES
 PLIST_SRC=	${PKGDIR}/PLIST
 
 USE_TOOLS+=	file
-CONFIGURE_ENV+=	file=${TOOLS_FILE_CMD}
+CONFIGURE_ENV+=	file=${TOOLS_FILE_CMD:Q}
 
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
 

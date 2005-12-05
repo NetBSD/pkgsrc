@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2005/10/05 05:46:54 schmonz Exp $
+# $NetBSD: options.mk,v 1.18 2005/12/05 20:50:35 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -40,7 +40,7 @@ DARWINSUFX=		.doc
 .else
 DARWINSUFX=		# empty
 .endif
-PLIST_SUBST+=		DARWINSUFX=${DARWINSUFX}
+PLIST_SUBST+=		DARWINSUFX=${DARWINSUFX:Q}
 
 .if !empty(PKG_OPTIONS:Mqmail-netqmail)
 NETQMAIL_PATCH=		netqmail-1.05.tar.gz

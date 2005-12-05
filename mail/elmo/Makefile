@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/08/29 17:53:49 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:29 rillig Exp $
 #
 
 DISTNAME=		elmo-1.3.2
-PKGREVISION=		# empty
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=elmo/}
 
@@ -20,7 +19,7 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 # I get segmentation faults when not compiled with debug enabled
 CONFIGURE_ARGS+=	--enable-debug
 
-SUBST_CLASSES=		tux
+SUBST_CLASSES+=		tux
 SUBST_STAGE.tux=	post-patch
 SUBST_FILES.tux=	configure
 SUBST_SED.tux=		-e "s|==|=|"

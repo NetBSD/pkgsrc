@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/06/01 18:02:46 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/05 20:50:10 rillig Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -17,7 +17,7 @@ EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
 MANCOMPRESSED=		yes
 USE_X11BASE=		yes
-MAKE_ENV+=		X11PREFIX=${X11PREFIX}
+MAKE_ENV+=		X11PREFIX=${X11PREFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2005/10/26 08:32:59 adam Exp $
+# $NetBSD: Makefile,v 1.94 2005/12/05 20:50:13 rillig Exp $
 
 DISTNAME=	wine-0.9
 CATEGORIES=	emulators
@@ -13,7 +13,7 @@ COMMENT=	Free implementation of Windows on Unix (still alpha)
 BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386 Darwin*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 Linux-*-i386 SunOS-*-i386 Darwin-*-i386
 
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
 USE_LIBTOOL=		yes
@@ -30,7 +30,7 @@ REPLACE_PERL=		tools/winemaker tools/winedump/function_grep.pl
 # buildlink directory, so prepend all of the LDFLAGS necessary to link
 # against the libraries.
 #
-CONFIGURE_ENV+=		X_LIBS="${LDFLAGS}"
+CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\""
 LIBS+=			${LDFLAGS}
 

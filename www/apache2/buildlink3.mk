@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2005/07/16 01:19:25 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2005/12/05 20:51:11 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APACHE_BUILDLINK3_MK:=	${APACHE_BUILDLINK3_MK}+
@@ -21,8 +21,8 @@ BUILDLINK_DEPMETHOD.apache+=	full
 .endif	# APACHE_BUILDLINK3_MK
 
 USE_TOOLS+=	perl			# for "apxs"
-CONFIGURE_ENV+=	APR_LIBTOOL=${LIBTOOL}	# make apxs use the libtool we specify
-MAKE_ENV+=	APR_LIBTOOL=${LIBTOOL}
+CONFIGURE_ENV+=	APR_LIBTOOL=${LIBTOOL:Q}	# make apxs use the libtool we specify
+MAKE_ENV+=	APR_LIBTOOL=${LIBTOOL:Q}
 APXS?=		${BUILDLINK_PREFIX.apache}/sbin/apxs
 
 .if !empty(APACHE_BUILDLINK3_MK:M+)

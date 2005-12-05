@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/05 03:27:55 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/05 20:51:19 rillig Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -23,7 +23,7 @@ SUBST_FILES.tk834=	unix/tkConfig.sh
 SUBST_SED.tk834+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib|"
 SUBST_SED.tk834+=	-e "s|${WRKSRC}|${PREFIX}/include/tk|"
 
-MAKE_ENV+=		TOUCH="${TOUCH}"
+MAKE_ENV+=		TOUCH=${TOUCH:Q}
 
 USE_LIBTOOL=		yes
 TEST_TARGET=		test

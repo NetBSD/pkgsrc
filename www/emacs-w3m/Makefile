@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:51:12 rillig Exp $
 
 DISTNAME=	emacs-w3m-1.3.3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -44,8 +44,8 @@ ETCDIR=	share/emacs/${EMACS_VERSION:C/[^0-9]*$//}/etc
 ICONDIR=	${ETCDIR}/w3m/icons
 .endif
 DOCDIR=	${ETCDIR}/w3m/doc
-PLIST_SUBST+=	DOCDIR=${DOCDIR}
-PLIST_SUBST+=	ICONDIR=${ICONDIR}
+PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
+PLIST_SUBST+=	ICONDIR=${ICONDIR:Q}
 
 post-install:
 	@${MKDIR} ${PREFIX}/${DOCDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/09/10 10:43:42 adrianp Exp $
+# $NetBSD: Makefile,v 1.44 2005/12/05 20:50:47 rillig Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	perl
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ENV+=	PATH_PERL="${PERL5}" ac_cv_header_sys_soundcard_h=no
+CONFIGURE_ENV+=	PATH_PERL=${PERL5:Q} ac_cv_header_sys_soundcard_h=no
 
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -62,7 +62,7 @@ TIMETRIM=	"@comment "
 NO_TIMETRIM=	""
 .endif
 
-PLIST_SUBST+=	TIMETRIM=${TIMETRIM} NO_TIMETRIM=${NO_TIMETRIM}
+PLIST_SUBST+=	TIMETRIM=${TIMETRIM:Q} NO_TIMETRIM=${NO_TIMETRIM:Q}
 
 .include "../../security/openssl/buildlink3.mk"
 

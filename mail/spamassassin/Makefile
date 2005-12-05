@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/11/22 13:03:22 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2005/12/05 20:50:35 rillig Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.1.0
 PKGNAME=	spamassassin-3.1.0
@@ -111,8 +111,8 @@ _INTERPRETER_SUPPORT=	YES
 .endif
 
 # These variables are substituted in netbsd-rc-script.sh.
-FILES_SUBST+=		_INTERPRETER_SUPPORT="${_INTERPRETER_SUPPORT}"
-FILES_SUBST+=		OPSYS="${OPSYS}"
+FILES_SUBST+=		_INTERPRETER_SUPPORT=${_INTERPRETER_SUPPORT:Q}
+FILES_SUBST+=		OPSYS=${OPSYS:Q}
 
 post-extract:
 	@# correct bad SA permissions

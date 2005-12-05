@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2005/10/23 20:14:43 jlam Exp $
+# $NetBSD: Makefile,v 1.87 2005/12/05 20:51:11 rillig Exp $
 
 .include "Makefile.common"
 
@@ -28,7 +28,7 @@ CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 
-BUILDLINK_DEPENDS.apr=	apr>=0.9.7.2.0.55
+BUILDLINK_DEPENDS.apr+=	apr>=0.9.7.2.0.55
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/apr/buildlink3.mk"

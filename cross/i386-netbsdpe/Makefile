@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/10/24 19:29:57 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 20:49:56 rillig Exp $
 
 DISTVERSION=		3.3.3
 MAINTAINER=		peace-sacrifice@hauN.org
@@ -35,8 +35,8 @@ DISTFILES+=		${GCC_DISTNAME}.tar.gz
 USE_TOOLS+=		gmake
 USE_MAKEINFO=		YES
 GCC_LANGUAGES=		c,c++
-CONFIGURE_ENV=		${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" \
-		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
+CONFIGURE_ENV=		${SETENV} CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} \
+		CXXFLAGS=${CXXFLAGS:M*:Q} LDFLAGS=${LDFLAGS:M*:Q}
 GCC_CONFIGURE_ARGS=	--with-gnu-ld --with-gnu-as -disable-multilib \
 		--enable-threads=posix --disable-shared --with-system-zlib \
 		--enable-languages=${GCC_LANGUAGES} --with-headers=yes \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/04/11 21:46:46 tv Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/12/05 20:50:46 rillig Exp $
 
 DISTNAME=	gftp-${VERSION}
 CATEGORIES=	net
@@ -15,7 +15,7 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-PTHREAD_OPTS=		require
+PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--with-readline
 

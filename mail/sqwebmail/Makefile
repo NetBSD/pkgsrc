@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/11/11 07:45:03 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/05 20:50:35 rillig Exp $
 
 DISTNAME=	sqwebmail-5.0.6
 CATEGORIES=	mail www
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@NetBSD.org
-COMMENT=	webmail CGI for access to maildir-style mailboxes
+COMMENT=	Webmail CGI for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/sqwebmail/
 
 DEPENDS+=	courier-maildir>=0.52.1:../../mail/courier-maildir

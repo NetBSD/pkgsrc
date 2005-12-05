@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:59 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:28 rillig Exp $
 
 DISTNAME=	ucblogo-5.3
 PKGREVISION=	1
@@ -14,7 +14,7 @@ COMMENT=	Brian Harvey's logo language interpreter
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
 # otherwise ./configure guesses -L incorrectly
-LIBS=		-L${X11BASE}/lib
+LIBS+=		-L${X11BASE}/lib
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ucblogo

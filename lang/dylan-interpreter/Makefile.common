@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2005/07/16 19:10:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/12/05 20:50:24 rillig Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -39,8 +39,8 @@ ALT_ARCH=		ppc
 ALT_ARCH=		${MACHINE_ARCH}
 .endif
 
-PLIST_SUBST+=		ALT_ARCH=${ALT_ARCH}
-PLIST_SUBST+=		DYLAN_VERSION=${DYLAN_VERSION}
+PLIST_SUBST+=		ALT_ARCH=${ALT_ARCH:Q}
+PLIST_SUBST+=		DYLAN_VERSION=${DYLAN_VERSION:Q}
 
 post-patch:
 	cd ${WRKSRC};							\

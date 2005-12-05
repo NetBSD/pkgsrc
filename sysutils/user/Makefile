@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:26:16 agc Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 20:51:01 rillig Exp $
 #
 
 # Note to package maintainers:
@@ -16,7 +16,7 @@ COMMENT=		Solaris-compatible {user,group}{add,del,mod} commands
 ONLY_FOR_PLATFORM=	NetBSD-*-* # already in Solaris base system
 
 .if exists(/usr/sbin/user)
-PKG_SKIP_REASON=	"${PKGNAME} is part of your ${OPSYS} distribution"
+PKG_SKIP_REASON+=	"${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 WRKSRC=			${WRKDIR}/user

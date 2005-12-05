@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/09/28 20:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:49:55 rillig Exp $
 
 DISTNAME=	lrzsz-0.12.20
 CATEGORIES=	comms
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifdef (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix")
+.if (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix")
 .  include "../../devel/gettext-lib/buildlink3.mk"
 LOCALE_SUFFIX=		mo
 .else
@@ -23,6 +23,6 @@ CONFIGURE_ARGS+=	--with-catgets
 LOCALE_SUFFIX=		cat
 .endif
 
-PLIST_SUBST+=	LOCALE_SUFFIX=${LOCALE_SUFFIX}
+PLIST_SUBST+=	LOCALE_SUFFIX=${LOCALE_SUFFIX:Q}
 
 .include "../../mk/bsd.pkg.mk"

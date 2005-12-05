@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/08 02:25:37 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:51:11 rillig Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
@@ -16,8 +16,8 @@ USE_TOOLS+=		bison
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-MAKE_ENV+=		PKG_CFLAGS=${CFLAGS:Q}
-MAKE_ENV+=		PKG_LDFLAGS=${LDFLAGS:Q}
+MAKE_ENV+=		PKG_CFLAGS=${CFLAGS:M*:Q}
+MAKE_ENV+=		PKG_LDFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

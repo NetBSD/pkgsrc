@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2005/05/24 13:55:30 rillig Exp $
+# $NetBSD: Makefile.common,v 1.23 2005/12/05 20:49:49 rillig Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -65,7 +65,7 @@ BUILD_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
 CPPFLAGS+=	-DINET6
 .endif
 
-MAKE_FLAGS+=	PREFIX="${PREFIX}"
+MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
 
 pre-patch:
 	${LN} -s . ${WRKSRC}/mpg123

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/10/20 11:47:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/05 20:49:53 rillig Exp $
 #
 
 DISTNAME=		jabberd-2.0s10
@@ -18,7 +18,7 @@ USE_PKGINSTALL=		yes
 BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.6b
 BUILDLINK_TRANSFORM.db4=	-e "s,/db4/,/,g"
 
-SUBST_CLASSES=		path
+SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	configure
 SUBST_MESSAGE.path=	"Fixing configure script."
@@ -42,10 +42,10 @@ PKG_SYSCONFSUBDIR=	jabberd
 RCD_SCRIPTS=		jabberd c2s sm resolver router s2s
 JABBERD_USER?=		jabberd
 JABBERD_GROUP?=		jabberd
-FILES_SUBST+=		JABBERD_USER=${JABBERD_USER}
-FILES_SUBST+=		JABBERD_GROUP=${JABBERD_GROUP}
-FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR}
-FILES_SUBST+=		JABBERD_LOGDIR=${JABBERD_LOGDIR}
+FILES_SUBST+=		JABBERD_USER=${JABBERD_USER:Q}
+FILES_SUBST+=		JABBERD_GROUP=${JABBERD_GROUP:Q}
+FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR:Q}
+FILES_SUBST+=		JABBERD_LOGDIR=${JABBERD_LOGDIR:Q}
 PKG_GROUPS=             ${JABBERD_GROUP}
 PKG_USERS=              ${JABBERD_USER}:${JABBERD_GROUP}
 
@@ -61,20 +61,17 @@ DBFILES=		db-setup.mysql db-setup.pgsql
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 CONF_FILES+=		${EGDIR}/roster.xml ${PKG_SYSCONFDIR}/roster.xml
-.undef f
 
 .include "options.mk"
 
 .for f in ${JABBERD_LOGDIR} ${JABBERD_DBDIR} ${JABBERD_PIDDIR}
 OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 770
 .endfor
-.undef f
 
 post-extract:
 .for f in ${FILES}
 	@${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
-.undef f
 	@${MV} ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
 
 pre-configure:
@@ -88,7 +85,6 @@ pre-configure:
 		-e "s|@DBDIR@|${JABBERD_DBDIR}|g"			\
 		${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
 .endfor
-.undef f
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -99,11 +95,9 @@ post-install:
 .for f in ${DBFILES}
 	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${EGDIR}
 .endfor
-.undef f
 .for f in jabberd.cfg ${FILES}
 	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
-.undef f
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"

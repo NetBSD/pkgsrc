@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/06/03 21:11:07 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/12/05 20:50:33 rillig Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -20,7 +20,7 @@ USE_PKGINSTALL=		YES
 
 CFLAGS.Linux+=	-DLINUX
 CFLAGS.SunOS+=	-DSYSV
-MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} CHMOD=${CHMOD} SED=${SED}
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} CHMOD=${CHMOD:Q} SED=${SED:Q}
 
 EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/10/07 15:42:30 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:51:07 rillig Exp $
 
 DISTNAME=	libxslt-1.1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ PYDISTUTILSPKG=	YES
 PYBINMODULE=	YES
 NO_CONFIGURE=	YES
 
-MAKE_ENV+=		PYLIBXSLTVERSION=${PKGVERSION}
+MAKE_ENV+=		PYLIBXSLTVERSION=${PKGVERSION:Q}
 
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	"Fixing hardcoded paths."
@@ -25,9 +25,9 @@ SUBST_STAGE.setup=	pre-build
 SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e "s,@LIBICONVDIR@,${BUILDLINK_PREFIX.iconv},g" \
 			-e "s,@LIBXML2DIR@,${BUILDLINK_PREFIX.libxml2},g" \
-			-e "s,@LIBXSLTDIR@,${BUILDLINK_PREFIX.libxslt},g" \
+			-e "s,@LIBXSLTDIR@,${BUILDLINK_PREFIX.libxslt},g"
 
-BUILDLINK_DEPENDS.libxslt=	libxslt>=${PKGVERSION}
+BUILDLINK_DEPENDS.libxslt+=	libxslt>=${PKGVERSION}
 .include "../../textproc/libxslt/buildlink3.mk"
 
 .include "../../lang/python/extension.mk"

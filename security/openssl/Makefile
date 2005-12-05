@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2005/10/15 06:29:58 jlam Exp $
+# $NetBSD: Makefile,v 1.109 2005/12/05 20:50:57 rillig Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	irix64-mips4-cc
 .include "../../security/openssl/options.mk"
 
 CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
-CONFIGURE_ENV+=		PERL="${PERL5}"
+CONFIGURE_ENV+=		PERL=${PERL5:Q}
 
 PLIST_OPSYS=		${PKGDIR}/PLIST.${LOWER_OPSYS:C/([.0-9]*)$//}
 .if exists(${PLIST_OPSYS})

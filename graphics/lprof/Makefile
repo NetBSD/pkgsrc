@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/16 12:36:58 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:21 rillig Exp $
 #
 
 DISTNAME=		lprof-1.10.1
@@ -12,8 +12,8 @@ COMMENT=		ICC Profile generation tool (for IT8.7 targets)
 
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	BASEDIR=${PREFIX} QTDIR=${PREFIX}/qt3
-MAKE_ENV+=	LDFLAGS="${LDFLAGS}"
+MAKE_ENV+=	BASEDIR=${PREFIX:Q} QTDIR=${PREFIX}/qt3
+MAKE_ENV+=	LDFLAGS=${LDFLAGS:M*:Q}
 
 BUILDLINK_DEPMETHOD.qt3-tools= build
 

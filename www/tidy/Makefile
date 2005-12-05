@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/10/04 18:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:51:14 rillig Exp $
 #
 
 DISTNAME=	tidy_src_050921
@@ -14,7 +14,7 @@ MAINTAINER=	asmodai@in-nomine.org
 HOMEPAGE=	http://tidy.sourceforge.net/
 COMMENT=	Fixes and tidies up HTML files
 
-BUILD_DEPENDS=	libxslt>=1.1.0:../../textproc/libxslt
+BUILD_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
 
 WRKSRC=		${WRKDIR}/tidy
 NO_CONFIGURE=	yes

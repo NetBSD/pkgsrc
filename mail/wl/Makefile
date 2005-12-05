@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/08/28 04:25:30 uebayasi Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:36 rillig Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb
 # XXX please someone adjust paths and PLIST for XEmacs...
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
 
-MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX}
+MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX:Q}
 MAKE_FLAGS+=	PIXMAPDIR=${PREFIX}/share/wl
 INSTALL_TARGET=	install install-info
 INFO_FILES=	wl.info wl-ja.info

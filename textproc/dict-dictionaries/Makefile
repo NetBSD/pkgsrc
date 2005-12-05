@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:34 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:51:02 rillig Exp $
 
 DISTNAME=       #
 PKGNAME=	dict-data-1.8.0
@@ -15,7 +15,7 @@ MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary data for DICTD
 
-DEPENDS=	dict-server>=1.8.0nb1:../../textproc/dict-server
+DEPENDS+=	dict-server>=1.8.0nb1:../../textproc/dict-server
 
 USE_TOOLS+=	gmake
 

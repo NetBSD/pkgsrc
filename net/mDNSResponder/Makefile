@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/03 22:40:58 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:47 rillig Exp $
 
 DISTNAME=	mDNSResponder-107.1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://developer.apple.com/darwin/projects/bonjour/
 COMMENT=	Apple's mDNS responder
 
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 BUILD_DIRS=	mDNSPosix
 BUILDDIR=	${WRKSRC}/mDNSPosix/build/prod
 
@@ -38,7 +38,7 @@ SO_SUFFIX=	dylib
 .else
 MAKE_ENV+=	os=netbsd
 .endif
-PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
+PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX:Q}
 
 BINARY=		mDNSClientPosix mDNSIdentify mDNSNetMonitor \
 		mDNSProxyResponderPosix mDNSResponderPosix

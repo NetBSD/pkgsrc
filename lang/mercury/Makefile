@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/07/12 21:33:17 kristerw Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 20:50:26 rillig Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -22,7 +22,7 @@ INFO_FILES+=		mercury_user_guide.info
 # Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc
 
-CONFIGURE_ENV+=		HOSTNAMECMD=${TOOLS_HOSTNAME_CMD}
+CONFIGURE_ENV+=		HOSTNAMECMD=${TOOLS_HOSTNAME_CMD:Q}
 USE_TOOLS+=		hostname
 
 MAKE_ENV+=		READLINE_PREFIX=${BUILDLINK_PREFIX.readline}

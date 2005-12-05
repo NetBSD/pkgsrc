@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2005/07/29 16:42:05 tron Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:57 rillig Exp $
 
-.include 	"../nessus/Makefile.common"
+.include 	"../../security/nessus/Makefile.common"
 
 DISTNAME=	nessus-core-${VERS}
 
@@ -14,7 +14,7 @@ CONFIGURE_ENV+=		ac_cv_path_GTKCONFIG="pkg-config gtk+-2.0" \
 			ac_cv_path_GLIBCONFIG="pkg-config glib-2.0"
 
 RCD_SCRIPTS=	nessusd
-PLIST_SUBST+=	VARBASE="${VARBASE}"
+PLIST_SUBST+=	VARBASE=${VARBASE:Q}
 
 .include "../../security/libnasl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

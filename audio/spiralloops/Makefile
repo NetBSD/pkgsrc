@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/11/07 00:19:14 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 20:49:49 rillig Exp $
 #
 
 DISTNAME=		SpiralLoops-2.0.0
@@ -19,7 +19,7 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
+MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:Q}
 CXXFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 CXXFLAGS+=		-DFLTK_1_0_COMPAT
 

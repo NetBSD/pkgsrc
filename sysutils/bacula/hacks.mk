@@ -1,6 +1,6 @@
-# $NetBSD: hacks.mk,v 1.1 2005/11/22 18:35:25 wiz Exp $
+# $NetBSD: hacks.mk,v 1.2 2005/12/05 20:50:59 rillig Exp $
 
-.ifndef BACULA_HACKS_MK
+.if !defined(BACULA_HACKS_MK)
 BACULA_HACKS_MK=	#defined
 
 ### gcc 4.0* has been reported to produce bad code on amd64
