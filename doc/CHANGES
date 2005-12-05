@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12120 2005/12/05 14:13:40 taca Exp $
+$NetBSD: CHANGES,v 1.12121 2005/12/05 15:37:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5501,3 +5501,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/ja-squirrelmail to 1.4.5nb2 [martti 2005-12-05]
 	Updated www/squid to 2.5.12nb3 [taca 2005-12-05]
 	Updated mail/poppassd to 4.0.8nb2 [taca 2005-12-05]
+	Added converters/smbchartool version 2.3a [taca 2005-12-05]
