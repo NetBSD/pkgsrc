@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:55 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:17 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-sql/}
 COMMENT=	Cyrus SASL SQL authentication plugin
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
+CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX:Q}
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/08/06 06:19:31 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 23:55:20 rillig Exp $
 
 DISTNAME=	eperl-2.2.14
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	Interpreter/preprocessor for Perl embedded in text documents
 PERL5_PACKLIST=	auto/Parse/ePerl/.packlist
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 PERL5_CONFIGURE=	NO
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/mod/Parse
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/mod/Parse

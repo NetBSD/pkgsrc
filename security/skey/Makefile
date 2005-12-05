@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 23:55:18 rillig Exp $
 #
 
 DISTNAME=		skey-1.1.5
@@ -14,7 +14,7 @@ COMMENT=		Port of OpenBSD s/key implementation
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONF_FILES+=		${PREFIX}/share/examples/skey/skeykeys \
 			${PKG_SYSCONFDIR}/skeykeys
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 20:51:07 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 23:55:20 rillig Exp $
 
 DISTNAME=	namazu-2.0.14
 PKGREVISION=	3
@@ -25,9 +25,9 @@ USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=     libtool
 TEST_TARGET=		check
 
-CONFIGURE_ARGS+= 	--localstatedir=${DATADIR} \
+CONFIGURE_ARGS+= 	--localstatedir=${DATADIR:Q} \
 			--libexecdir=${PREFIX}/libexec/cgi-bin \
-			--sysconfdir=${PKG_SYSCONFBASE} \
+			--sysconfdir=${PKG_SYSCONFBASE:Q} \
 			--with-chasen
 
 DATADIR=		${PREFIX}/libdata

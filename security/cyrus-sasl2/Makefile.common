@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2005/11/04 19:36:57 tv Exp $
+# $NetBSD: Makefile.common,v 1.31 2005/12/05 23:55:17 rillig Exp $
 #
 # This file is currently included by:
 #
@@ -52,7 +52,7 @@ DOCDIR=			${PREFIX}/share/doc/cyrus-sasl
 PLUGINDIR=		${PREFIX}/lib/sasl2
 _PLUGINDIR=		${VIEWBASE}/lib/sasl2
 
-CONFIGURE_ARGS+=	--with-plugindir=${_PLUGINDIR}
+CONFIGURE_ARGS+=	--with-plugindir=${_PLUGINDIR:Q}
 
 # Authentication mechanisms
 CONFIGURE_ARGS+=	--disable-anon		# ANONYMOUS

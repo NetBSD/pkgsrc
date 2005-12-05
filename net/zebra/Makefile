@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2005/12/05 20:50:50 rillig Exp $
+# $NetBSD: Makefile,v 1.71 2005/12/05 23:55:15 rillig Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 
 DISTNAME=	zebra-0.95
@@ -13,7 +13,7 @@ COMMENT=	Free multithreaded routing daemon software
 
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}
 
 PKG_SYSCONFSUBDIR?=	zebra

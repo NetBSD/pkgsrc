@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2005/10/10 12:15:47 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/12/05 23:55:05 rillig Exp $
 #
 
 ### XXX: See the other 'XXX' comment below when updating this package.
@@ -20,7 +20,7 @@ USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--enable-rfc2553
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 SUBST_CLASSES+=		doc
 SUBST_STAGE.doc=	post-patch

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:37 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2005/12/05 23:55:09 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gauche
 PKG_SUPPORTED_OPTIONS=	gdbm multibyte
@@ -23,7 +23,7 @@ PLIST_SUBST+=	USE_GDBM='@comment '
 ### Multibyte extension.
 ###
 .if !empty(PKG_OPTIONS:Mmultibyte) && defined(GAUCHE_MULTIBYTE)
-CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
+CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE:Q}
 .endif
 
 .if defined(PKG_DEVELOPER)

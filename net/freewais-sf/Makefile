@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:45 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 23:55:13 rillig Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
@@ -19,7 +19,7 @@ USE_TOOLS+=	perl:run
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} \
+CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX:Q} \
 			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS}
 CONFIGURE_ENV+=		PERL5=${PERL5:Q}
 INSTALL_TARGET=	install install.man

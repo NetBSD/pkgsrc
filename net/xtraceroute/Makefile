@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/05 23:55:15 rillig Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+= --with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
 # XXX Actually, Mesa's in X11PREFIX too, but as our tiff is in LOCALBASE
 # and xtraceroute doesn't have a switch to tell it so (yet?), we abuse
 # the --with-GL-prefix switch for this.
-CONFIGURE_ARGS+= --with-GL-prefix=${LOCALBASE}
+CONFIGURE_ARGS+= --with-GL-prefix=${LOCALBASE:Q}
 CONFIGURE_ARGS+= --with-lib-MesaGL
 
 .include "../../mk/bsd.prefs.mk"

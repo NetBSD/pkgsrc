@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/08/28 12:36:42 recht Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:04 rillig Exp $
 
 DISTNAME=	gnats-4.1.0
 PKGREVISION=	1
@@ -19,7 +19,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-gnats-service=service-name=${GNATS_SERVICE}
-CONFIGURE_ARGS+=	--with-gnats-user=${GNATS_USER}
+CONFIGURE_ARGS+=	--with-gnats-user=${GNATS_USER:Q}
 CONFIGURE_ARGS+=	--with-gnatsd-user-access-file=${GNATS_USER_FILE:Q}
 CONFIGURE_ARGS+=	--with-gnatsd-host-access-file=${GNATS_HOST_FILE:Q}
 CONFIGURE_ARGS+=	--with-gnats-dblist-file=${GNATS_DB_FILE:Q}

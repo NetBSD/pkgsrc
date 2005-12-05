@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2005/10/19 04:40:23 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2005/12/05 23:55:10 rillig Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -91,7 +91,7 @@ CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Dcc=${CC:Q}
-CONFIGURE_ARGS+=	-Doptimize=${CFLAGS:Q}
+CONFIGURE_ARGS+=	-Doptimize=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	-Duseshrplib
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc

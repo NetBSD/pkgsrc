@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2005/12/05 20:50:57 rillig Exp $
+# $NetBSD: Makefile,v 1.162 2005/12/05 23:55:18 rillig Exp $
 
 DISTNAME=		openssh-4.2p1
 PKGNAME=		openssh-4.2.1
@@ -60,14 +60,14 @@ PKG_SYSCONFSUBDIR=	ssh
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mantype=man
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
-CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR:Q}
+CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 
 .if ${OPSYS} != "Interix"
-CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT}
-CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
+CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT:Q}
+CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER:Q}
 .endif
 
 # pkgsrc already enforces a "secure" version of zlib via dependencies,

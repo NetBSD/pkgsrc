@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2005/12/05 20:49:57 rillig Exp $
+# $NetBSD: Makefile.common,v 1.48 2005/12/05 23:55:04 rillig Exp $
 
 DISTNAME=		mysql-4.1.15
 CATEGORIES=		databases
@@ -30,7 +30,7 @@ MYSQL_DATADIR?=		${VARBASE}/mysql
 MYSQL_CHARSET?=		latin1
 MYSQL_EXTRA_CHARSET?=	all
 
-CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
+CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR:Q}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--without-libwrap
 CONFIGURE_ARGS+=	--with-named-curses-libs="-lcurses -ltermcap"
@@ -64,8 +64,8 @@ CONFIGURE_ARGS+=	--with-low-memory
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-vio
 
-CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
-CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET}
+CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET:Q}
+CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET:Q}
 
 .if !empty(MACHINE_ARCH:Mi386) && ${OPSYS} != "Interix"
 CONFIGURE_ARGS+=	--enable-assembler

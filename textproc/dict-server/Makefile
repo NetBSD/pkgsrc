@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:34 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 23:55:20 rillig Exp $
 
 DISTNAME=	dictd-1.9.15
 PKGNAME=	dict-server-1.9.15
@@ -13,8 +13,8 @@ COMMENT=	Dictionary Service Protocol server
 USE_TOOLS+=		gmake
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-cflags="${CFLAGS}"
-CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
 
 BUILD_TARGET=	dictd dictzip
 INSTALL_TARGET=	install.dictd install.dictzip install.dictfmt

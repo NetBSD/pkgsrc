@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/01 18:09:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 23:55:03 rillig Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -25,17 +25,17 @@ BUILDLINK_DEPENDS.tre+=	tre-${TRE_NEEDED}
 CONFIGURE_ENV+=	tre_version=${TRE_NEEDED:Q}
 CONFIGURE_ENV+=	TRELIBS="-L${PREFIX}/lib -ltre"
 
-CONFIGURE_ARGS+=	--with-dpath=${UIRCD_HOME}
+CONFIGURE_ARGS+=	--with-dpath=${UIRCD_HOME:Q}
 CONFIGURE_ARGS+=	--with-spath=${PREFIX}/sbin/ircd
 CONFIGURE_ARGS+=	--with-permissions=0660
 CONFIGURE_ARGS+=	--enable-dynamic-linking
 
-CONFIGURE_ARGS+=	--with-hostname=${UIRCD_HOST}
-CONFIGURE_ARGS+=	--with-listen=${UIRCD_LISTEN}
-CONFIGURE_ARGS+=	--with-sendq=${UIRCD_SENDQ}
-CONFIGURE_ARGS+=	--with-bufferpool=${UIRCD_BUFFER}
-CONFIGURE_ARGS+=	--with-fd-setsize=${UIRCD_FDSIZE}
-CONFIGURE_ARGS+=	--with-nick-history=${UIRCD_NICKHIST}
+CONFIGURE_ARGS+=	--with-hostname=${UIRCD_HOST:Q}
+CONFIGURE_ARGS+=	--with-listen=${UIRCD_LISTEN:Q}
+CONFIGURE_ARGS+=	--with-sendq=${UIRCD_SENDQ:Q}
+CONFIGURE_ARGS+=	--with-bufferpool=${UIRCD_BUFFER:Q}
+CONFIGURE_ARGS+=	--with-fd-setsize=${UIRCD_FDSIZE:Q}
+CONFIGURE_ARGS+=	--with-nick-history=${UIRCD_NICKHIST:Q}
 CONFIGURE_ARGS+=	--disable-inet6
 
 .include "options.mk"

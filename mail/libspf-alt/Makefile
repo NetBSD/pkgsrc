@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:46:20 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 23:55:11 rillig Exp $
 
 DISTNAME=	libspf_alt-0.4.0
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	Sender Permitted Framework (SPF) library
 BUILDLINK_DEPENDS.bind+=	bind>=9.2.3nb3
 
 HAS_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-bind=${BUILDLINK_PREFIX.bind} --prefix=${PREFIX}
+CONFIGURE_ARGS+=--with-bind=${BUILDLINK_PREFIX.bind} --prefix=${PREFIX:Q}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../net/bind9/buildlink3.mk"

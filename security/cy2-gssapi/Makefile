@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:55 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 23:55:17 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-gssapi/}
 COMMENT=	Cyrus SASL GSSAPI authentication plugin
@@ -8,8 +8,8 @@ CONFLICTS=	cyrus-sasl<=2.1.19nb1
 
 .include "../../security/cyrus-sasl2/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
-CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE:Q}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit

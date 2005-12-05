@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 20:52:19 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 23:55:05 rillig Exp $
 
 DISTNAME=	yasql-1.81
 CATEGORIES=	databases
@@ -12,7 +12,7 @@ USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 DEPENDS+=	p5-DBD-Oracle-[0-9]*:../../databases/p5-DBD-Oracle
 DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine

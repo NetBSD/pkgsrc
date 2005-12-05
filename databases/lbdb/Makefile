@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:49:57 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 23:55:04 rillig Exp $
 
 DISTNAME=		lbdb_0.31
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake perl:run
 USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/lbdb/
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=  --enable-lbdb_dotlock
 CONFIGURE_ARGS+=  --without-getent
 CONFIGURE_ARGS+=  --without-evolution-addressbook-export

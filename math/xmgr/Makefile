@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:37 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 23:55:12 rillig Exp $
 
 DISTNAME=		xmgr-4.1.2
 PKGREVISION=		1
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 USE_X11BASE=		YES
 USE_LANGUAGES=		fortran
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-acegr-home="${PREFIX}"
+CONFIGURE_ARGS+=	--enable-acegr-home=${PREFIX:Q}
 
 BUILD_TARGET=		# empty
 INSTALL_TARGET=		install

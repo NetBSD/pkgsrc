@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:09 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 23:55:06 rillig Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	5
@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=--with-pop
 BUILD_DEFS+=		EMACS_USE_X EMACS_USE_X_TOOLKIT
 CONFIGURE_ARGS+=	--with-x=yes
 .if defined(EMACS_USE_X_TOOLKIT)
-CONFIGURE_ARGS+=	--with-x-toolkit=${EMACS_USE_X_TOOLKIT}
+CONFIGURE_ARGS+=	--with-x-toolkit=${EMACS_USE_X_TOOLKIT:Q}
 .if ${EMACS_USE_X_TOOLKIT} == "lucid" || ${EMACS_USE_X_TOOLKIT} == "athena"
 .include "../../mk/xaw.buildlink3.mk"
 .elif ${EMACS_USE_X_TOOLKIT} == "motif"

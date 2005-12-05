@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/12/05 20:51:00 rillig Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/12/05 23:55:19 rillig Exp $
 #
 
 # XXX Do not update to 0.30 or above yet.  The API in the 0.2x series is
@@ -37,8 +37,8 @@ CONFIGURE_ARGS+=	--disable-mono-docs
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-selinux
 CONFIGURE_ARGS+=	--enable-checks
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-xml=expat
 CONFIGURE_ARGS+=	--without-x
 

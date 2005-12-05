@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2005/12/05 20:50:38 rillig Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/12/05 23:55:12 rillig Exp $
 
 DISTNAME=	celestia-${CELESTIA_VERS}
 CATEGORIES=	misc x11
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lua --with-glut
 .if defined(CELESTIA_PROGPREFIX)
-CONFIGURE_ARGS+=	--program-prefix=${CELESTIA_PROGPREFIX}
+CONFIGURE_ARGS+=	--program-prefix=${CELESTIA_PROGPREFIX:Q}
 .endif
 
 GCC_REQD+=		3.0

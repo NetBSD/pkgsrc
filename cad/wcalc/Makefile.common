@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/12/05 20:49:52 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/12/05 23:55:02 rillig Exp $
 #
 
 DISTNAME=       wcalc-0.9
@@ -34,9 +34,9 @@ WCALC_CGIPATH?=		/cgi-wcalc/
 
 # setup the directories and URI path
 CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/${WCALC_HTMLDIR}
-CONFIGURE_ARGS+=	--with-htmlpath=${WCALC_HTMLPATH}
+CONFIGURE_ARGS+=	--with-htmlpath=${WCALC_HTMLPATH:Q}
 CONFIGURE_ARGS+=	--with-cgibin=${PREFIX}/${WCALC_CGIDIR}
-CONFIGURE_ARGS+=	--with-cgipath=${WCALC_CGIPATH}
+CONFIGURE_ARGS+=	--with-cgipath=${WCALC_CGIPATH:Q}
 
 # make sure we can refer to these paths in the MESSAGE
 MESSAGE_SUBST+=	WCALC_CGIDIR=${WCALC_CGIDIR}

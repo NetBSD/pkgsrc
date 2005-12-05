@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/02 09:48:33 taca Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 23:55:09 rillig Exp $
 
 DISTNAME=	ruby-GD-${VER}-1
 PKGNAME=	${RUBY_PKGPREFIX}-gd-${VER}.1
@@ -15,11 +15,11 @@ USE_RUBY_EXTCONF=	yes
 WRKSRC=			${WRKDIR}/ruby-GD-${VER}
 VER=			0.7.4
 
-CONFIGURE_ARGS+=	--with-gd-dir=${PREFIX}
+CONFIGURE_ARGS+=	--with-gd-dir=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-ttf
-CONFIGURE_ARGS+=	--with-ttf-dir=${PREFIX}
+CONFIGURE_ARGS+=	--with-ttf-dir=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-freetype
-CONFIGURE_ARGS+=	--with-freetype-dir=${PREFIX}
+CONFIGURE_ARGS+=	--with-freetype-dir=${PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-gd2_0
 
 post-install:

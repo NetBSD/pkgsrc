@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/05 20:50:55 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/12/05 23:55:17 rillig Exp $
 
 COURIER_USER?=		courier
 COURIER_GROUP?=		mail
@@ -10,5 +10,5 @@ PKG_GROUPS=		${COURIER_GROUP}
 PKG_USERS=		${COURIER_USER}:${COURIER_GROUP}::Courier\ user
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-mailuser=${COURIER_USER}
-CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP}
+CONFIGURE_ARGS+=	--with-mailuser=${COURIER_USER:Q}
+CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP:Q}

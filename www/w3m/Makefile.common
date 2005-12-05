@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2005/12/05 20:51:14 rillig Exp $
+# $NetBSD: Makefile.common,v 1.42 2005/12/05 23:55:23 rillig Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -48,9 +48,9 @@ CONFIGURE_ARGS+=	--enable-mouse
 CONFIGURE_ARGS+=	--with-browser=
 CONFIGURE_ARGS+=	--with-editor=vi
 CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc}
-CONFIGURE_ARGS+=	--with-mailer=${MAIL_CMD}
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-mailer=${MAIL_CMD:Q}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 SUBST_CLASSES+=		man-ja
 SUBST_MESSAGE.man-ja=	"Fixing the path to Japanese manual pages."

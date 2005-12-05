@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/12/05 14:06:03 taca Exp $
+# $NetBSD: options.mk,v 1.6 2005/12/05 23:55:23 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	carp icmp pam-helper snmp ssl aufs unlinkd
@@ -84,7 +84,7 @@ CONFIGURE_ARGS+=	--enable-snmp
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE:Q}
 .include "../../security/openssl/buildlink3.mk"
 .endif
 

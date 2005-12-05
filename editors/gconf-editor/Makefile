@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/10/16 12:11:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2005/12/05 23:55:06 rillig Exp $
 #
 
 DISTNAME=		gconf-editor-2.12.0
@@ -18,7 +18,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake pkg-config
 
-CONFIGURE_ARGS+=	--with-gconf-defaults-source=${GCONF2_CONFIG_SOURCE}
+CONFIGURE_ARGS+=	--with-gconf-defaults-source=${GCONF2_CONFIG_SOURCE:Q}
 CONFIGURE_ARGS+=	--with-gconf-mandatory-source=${GCONF2_CONFIG_SOURCE:S/gconf.xml.defaults/gconf.xml.mandatory/g}
 
 GCONF2_SCHEMAS=		gconf-editor.schemas

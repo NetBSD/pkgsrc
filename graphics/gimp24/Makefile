@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/25 21:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 23:55:08 rillig Exp $
 
 DISTNAME=	gimp-2.3.4
 PKGREVISION=	1
@@ -40,7 +40,7 @@ BUILDLINK_DEPENDS.lcms+=	lcms>=1.12
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-gimpprint-prefix=${BUILDLINK_PREFIX.gimp-print-lib}
 

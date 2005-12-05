@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 23:55:13 rillig Exp $
 
 DISTNAME=	flow-tools-0.68
 PKGREVISION=	1
@@ -13,7 +13,7 @@ GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 
 PKG_SYSCONFSUBDIR=	flow-tools
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/flow-tools
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/sym
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 # PostgreSQL support.
 .if !empty(PKG_OPTIONS:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
+CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX:Q}
 .endif
 
 # Python scripts support.

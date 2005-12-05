@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:17 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 23:55:07 rillig Exp $
 #
 
 DISTNAME=	powermanga-0.79
@@ -12,7 +12,7 @@ COMMENT=	Arcade 2D shoot-em-up game
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 MAKE_ENV+=	TOUCH=${TOUCH:Q} WRKSRC=${WRKSRC:Q}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"

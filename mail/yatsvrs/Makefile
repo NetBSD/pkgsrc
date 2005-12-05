@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:36 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 23:55:12 rillig Exp $
 #
 
 DISTNAME=		yatsvrs-5.00p6
@@ -21,9 +21,9 @@ EXAMPLES=		yatrc2 yatsvrrc
 EXAMPLESDIR=		${PREFIX}/share/examples/yatsvr5
 
 CONFIGURE_ARGS+=	--enable-popper-xmit
-CONFIGURE_ARGS+=	--with-log-facility=${YATSVR_LOGFAC}
-CONFIGURE_ARGS+=	--with-yat-sys-dir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-yat-sys-old-dir-v4=${OLDCONFDIR}
+CONFIGURE_ARGS+=	--with-log-facility=${YATSVR_LOGFAC:Q}
+CONFIGURE_ARGS+=	--with-yat-sys-dir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-yat-sys-old-dir-v4=${OLDCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-shadow-password
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL

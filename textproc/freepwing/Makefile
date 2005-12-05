@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:51:03 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 23:55:20 rillig Exp $
 
 DISTNAME=	freepwing-1.4.4
 PKGREVISION=	3
@@ -13,7 +13,7 @@ DEPENDS+=	p5-Jcode-[0-9]*:../../converters/p5-Jcode
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-perllibdir=${PERL5_INSTALLVENDORLIB}
+CONFIGURE_ARGS+=	--with-perllibdir=${PERL5_INSTALLVENDORLIB:Q}
 CONFIGURE_ARGS+=	--with-pkgdocdir=${PREFIX}/share/doc/freepwing
 CONFIGURE_ENV+=		GNUMAKE=${GMAKE:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2005/12/03 04:00:18 adrianp Exp $
+# $NetBSD: options.mk,v 1.7 2005/12/05 23:55:03 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
@@ -30,7 +30,7 @@ CONFIGURE_ENV+= 	ac_cv_ip6=no
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .	include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--enable-ssl=${SSLBASE:Q}
 .endif
 
 ###
@@ -62,7 +62,7 @@ CONFIGURE_ARGS+=		--enable-ziplinks
 ### Compile in support for remote include files.
 ###
 .if !empty(PKG_OPTIONS:Munrealircd-remoteinc)
-CONFIGURE_ARGS+=		--enable-libcurl=${PREFIX}
+CONFIGURE_ARGS+=		--enable-libcurl=${PREFIX:Q}
 .	include "../../www/curl/buildlink3.mk"
 .	include "../../net/libcares/buildlink3.mk"
 .endif

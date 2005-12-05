@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 23:55:11 rillig Exp $
 #
 
 DISTNAME=	mail-notification-1.0
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 GCONF2_SCHEMAS=		mail-notification.schemas
 

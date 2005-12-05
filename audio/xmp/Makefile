@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/10/31 16:52:39 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 23:55:02 rillig Exp $
 
 DISTNAME=	xmp-2.0.4
 PKGREVISION=	2
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-alsa \
 		--disable-oss \
 		--disable-xmms \
-		--sysconfdir=${PKG_SYSCONFDIR}
+		--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 USE_TOOLS+=	gmake
 

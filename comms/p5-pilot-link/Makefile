@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/08/08 21:25:20 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2005/12/05 23:55:03 rillig Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -12,7 +12,7 @@ BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
 USE_TOOLS+=		gmake
 
-CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 PERL5_CONFIGURE=	NO
 PERL5_PACKLIST=         auto/PDA/Pilot/.packlist
 

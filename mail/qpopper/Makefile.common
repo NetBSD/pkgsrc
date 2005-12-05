@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/06/13 16:53:47 taca Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/12/05 23:55:11 rillig Exp $
 
 QPOPPER_MASTER_SITES+=	ftp://ftp.qualcomm.com/eudora/servers/unix/popper/ \
 			http://core.ring.gr.jp/archives/net/mail/qpopper/
@@ -10,6 +10,6 @@ VERSION=		4.0.8
 QPOPPER_FAC?=		LOCAL1
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
 			--enable-log-facility=LOG_${QPOPPER_FAC}
 LIBS+=			${LDFLAGS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:27 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 23:55:10 rillig Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -39,7 +39,7 @@ MAKE_DIRS+=	${RUBY_SITERIDIR}
 .include "../../lang/ruby/rubyversion.mk"
 
 .if !empty(RUBY_SUFFIX)
-CONFIGURE_ARGS+= --program-suffix="${RUBY_SUFFIX}"
+CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX:Q}
 .endif
 
 FILES_SUBST+=	DATE=${DATE:Q}

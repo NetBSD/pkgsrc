@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/05/22 20:07:44 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/05 23:55:03 rillig Exp $
 #
 
 DISTNAME=	plptools-0.12
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	YES
 PTHREAD_OPTS+=		require
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-serial=${DEFAULT_SERIAL_DEVICE}
+CONFIGURE_ARGS+=	--with-serial=${DEFAULT_SERIAL_DEVICE:Q}
 LIBS+=			-ltermcap
 
 .include "../../devel/gettext-lib/buildlink3.mk"

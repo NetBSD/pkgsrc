@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/02 07:48:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 23:55:12 rillig Exp $
 
 DISTNAME=	sylpheed-2.1.8
 CATEGORIES=	mail news x11
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-compface
 
 PKG_SYSCONFSUBDIR=	sylpheed
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/sylpheed
 CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types

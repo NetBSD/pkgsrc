@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/11/03 16:55:46 tv Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 23:55:15 rillig Exp $
 #
 
 DISTNAME=	totd-1.4
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 COMMENT=	DNS proxy that supports IPv6 <==> IPv4 record translation
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/totd

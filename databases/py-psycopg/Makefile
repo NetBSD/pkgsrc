@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/11/11 23:10:19 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:05 rillig Exp $
 #
 
 DISTNAME=	psycopg-1.1.21
@@ -11,7 +11,7 @@ HOMEPAGE=	http://initd.org/software/psycopg
 COMMENT=	PostgreSQL database adapter for Python
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+= --with-python=${PYTHONBIN}
+CONFIGURE_ARGS+= --with-python=${PYTHONBIN:Q}
 CONFIGURE_ARGS+= \
  --with-postgres-includes=${PGSQL_PREFIX}/include/postgresql\
  --with-postgres-libraries=${PGSQL_PREFIX}/lib

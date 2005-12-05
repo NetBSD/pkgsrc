@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2005/12/05 20:49:52 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2005/12/05 23:55:02 rillig Exp $
 #
 
 DISTNAME=	centericq-4.21.0
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=      	--with-gpgme=${BUILDLINK_PREFIX.gpgme}/bin/gpgme-config
 LIBS+=			${LDFLAGS}
 

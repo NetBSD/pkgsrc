@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/11/03 19:09:46 martti Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/05 23:55:14 rillig Exp $
 
 DISTNAME=	proftpd-1.3.0rc3
 #PKGREVISION=	1
@@ -19,8 +19,8 @@ GNU_CONFIGURE=	yes
 USE_PKGINSTALL=	yes
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--disable-sendfile
 CONFIGURE_ARGS+=	--enable-ctrls
 

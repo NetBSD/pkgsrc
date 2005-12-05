@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 20:50:54 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:16 rillig Exp $
 #
 
 DISTNAME=       amap-5.0
@@ -12,7 +12,7 @@ COMMENT=        Applications and Services scanner
 HAS_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 EGDIR=			${PREFIX}/share/examples/amap
 PKG_SYSCONFSUBDIR?=	amap
 

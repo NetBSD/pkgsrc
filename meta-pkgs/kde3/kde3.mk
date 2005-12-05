@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.10 2005/12/05 20:50:37 rillig Exp $
+# $NetBSD: kde3.mk,v 1.11 2005/12/05 23:55:12 rillig Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -54,9 +54,9 @@ KDEDIR?=		${PREFIX}
 QTDIR?=			${PREFIX}/qt3
 
 CONFIGURE_ARGS+=	--datadir="${KDEDIR}/share/kde"
-CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
-CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"
-CONFIGURE_ARGS+=	--with-extra-includes="${_KDE3_EXTRA_INCLUDES}"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
+CONFIGURE_ARGS+=	--with-extra-includes=${_KDE3_EXTRA_INCLUDES:Q}
 CONFIGURE_ARGS+=	--disable-rpath
 CONFIGURE_ARGS+=	--disable-debug
 .if exists(${X11BASE}/lib/libXinerama.so)

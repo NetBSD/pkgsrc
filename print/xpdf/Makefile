@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:54 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/05 23:55:16 rillig Exp $
 
 DISTNAME=	xpdf-3.01
 CATEGORIES=	print
@@ -17,7 +17,7 @@ CONFLICTS=	xpdf-crypto-[0-9]*
 USE_PKGINSTALL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-freetype2-includes=${BUILDLINK_PREFIX.freetype2}/include/freetype2
 CONFIGURE_ARGS+=	--with-t1-includes=${BUILDLINK_PREFIX.t1lib}/include
 CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:Q}

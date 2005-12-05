@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:49:59 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 23:55:05 rillig Exp $
 
 PKGNAME=		postgresql74-client-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
@@ -10,7 +10,7 @@ COMMENT=		PostgreSQL database client programs
 USE_GNU_READLINE=	yes
 
 USE_TOOLS+=		tar
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-readline
 MAKE_ENV+=		INSTALLED_LIBPQ=1

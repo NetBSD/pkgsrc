@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/05/31 21:28:22 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/12/05 23:55:05 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cvs
 PKG_SUPPORTED_OPTIONS=	kerberos
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Mkerberos)
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-encryption
-CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE}
-CONFIGURE_ARGS+=	--with-krb4=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE:Q}
+CONFIGURE_ARGS+=	--with-krb4=${KRB5BASE:Q}
 .  if ${OPSYS} == "Darwin"
 LDFLAGS+=		-framework Kerberos
 .  endif

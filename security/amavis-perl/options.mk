@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/08/01 12:18:41 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2005/12/05 23:55:16 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amavis-perl
 PKG_SUPPORTED_OPTIONS=	milter
@@ -17,6 +17,6 @@ CONFIGURE_ARGS+=--enable-milter
 CONFIGURE_ARGS+=--with-milter-libs=${PREFIX}/lib
 CONFIGURE_ARGS+=--with-milter-includes=${PREFIX}/include
 .else
-CONFIGURE_ARGS+=--enable-smtp --with-smtp-port=${SMTPPORT}
+CONFIGURE_ARGS+=--enable-smtp --with-smtp-port=${SMTPPORT:Q}
 PLIST_SRC+=	${PKGDIR}/PLIST.nomilter
 .endif

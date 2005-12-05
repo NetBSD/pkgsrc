@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:54 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 23:55:16 rillig Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -43,7 +43,7 @@ PLIST_SUBST+=	MV=${MV:Q}
 CFLAGS+=	-Dunix
 MAKEFLAGS+=	PREFIX=${PREFIX:Q}
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--prefix=${PREFIX} \
+CONFIGURE_ARGS+=--prefix=${PREFIX:Q} \
 		--enable-local-texmf=texmf.local \
 		--without-texinfo \
 		--without-dialog \

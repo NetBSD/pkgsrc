@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:23 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:13 rillig Exp $
 #
 
 DISTNAME=	bmon-2.0.1
@@ -21,7 +21,7 @@ USE_PKGINSTALL=	YES
 # 3rd party ncurses library in NetBSD 1.6.x.
 INCOMPAT_CURSES= NetBSD-1.6*-*
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/bmon
 CONF_FILES=	${EGDIR}/bmon.conf ${PKG_SYSCONFDIR}/bmon.conf

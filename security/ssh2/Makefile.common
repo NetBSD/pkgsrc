@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/12/05 23:55:18 rillig Exp $
 #
 
 DISTNAME=	ssh-3.2.9.1
@@ -55,13 +55,13 @@ CONFIGURE_ARGS+=	--without-daemonpam --without-clientpam
 CONFIGURE_ARGS+=	--without-ssh-agent1-compat
 CONFIGURE_ARGS+=	--without-ssh1-compat
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp-wrappers}
-CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
+CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR:Q}
 
 # Setting FOREIGN_ETCDIR to PKG_SYSCONFBASEDIR may seem stupid
 # if PKG_SYSCONFDIR.${PKG_SYSCONFVAR} is set but it does no harm...
 #
-CONFIGURE_ARGS+=	--with-foreign-etcdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-foreign-etcdir=${PKG_SYSCONFBASEDIR:Q}
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
 
 MAKE_ENV+=		PKGBASE=${PKGBASE:Q}
 MAKE_ENV+=		RM=${RM:Q}

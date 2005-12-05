@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2005/11/12 13:59:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.85 2005/12/05 23:55:23 rillig Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--with-ssl
 
 # Note: --enable-{default-colors,scrollbar} are simply ignored
 # for certain settings of --with-screen.
-CONFIGURE_ARGS+=	--with-screen=${SCREENTYPE}
+CONFIGURE_ARGS+=	--with-screen=${SCREENTYPE:Q}
 CONFIGURE_ARGS+=	--enable-default-colors
 CONFIGURE_ARGS+=	--enable-scrollbar
 

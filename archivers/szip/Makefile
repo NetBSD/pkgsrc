@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/24 16:20:25 adam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:01 rillig Exp $
 
 DISTNAME=	szip-2.0
 CATEGORIES=	archivers
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 LICENSE=		no-commercial-use
 
 INSTALLATION_DIRS=	include lib

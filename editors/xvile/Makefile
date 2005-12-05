@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/09/28 20:52:20 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2005/12/05 23:55:07 rillig Exp $
 
 DISTNAME=		vile-9.5
 PKGNAME=		xvile-9.5
@@ -14,8 +14,8 @@ COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-perl
-CONFIGURE_ARGS+=	--datadir=${DATADIR}
-CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR}
+CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
+CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR:Q}
 
 MAKEFILE=		makefile
 INSTALL_TARGET=		install install-perl

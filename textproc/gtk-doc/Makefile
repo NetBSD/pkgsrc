@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/10/08 17:18:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 23:55:20 rillig Exp $
 #
 
 DISTNAME=	gtk-doc-1.4
@@ -16,7 +16,7 @@ DEPENDS+=	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
 
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
-CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG}
+CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG:Q}
 USE_TOOLS+=		perl:run
 
 SGML_CATALOGS=		${PREFIX}/share/sgml/gtk-doc/gtk-doc.cat

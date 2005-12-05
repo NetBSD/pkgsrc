@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/05 20:49:52 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 23:55:02 rillig Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
@@ -15,7 +15,7 @@ USE_GNU_READLINE=	yes	# needs rl_named_function()
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/liboopltconfig
 GNU_CONFIGURE= 		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		PROG_GLIB_CONFIG=${GLIB_CONFIG:Q}
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.rsaref}/include/rsaref

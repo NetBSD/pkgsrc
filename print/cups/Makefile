@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2005/12/05 20:50:52 rillig Exp $
+# $NetBSD: Makefile,v 1.100 2005/12/05 23:55:16 rillig Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -38,13 +38,13 @@ USE_LIBTOOL=		yes
 INSTALL_TARGET=		installcups
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
-CONFIGURE_ARGS+=	--with-rcdir=${RCD_SCRIPTS_DIR}
-CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
-CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
+CONFIGURE_ARGS+=	--with-rcdir=${RCD_SCRIPTS_DIR:Q}
+CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER:Q}
+CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP:Q}
 CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--enable-libtool
 CONFIGURE_ARGS+=	--enable-slp

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/05 20:50:34 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/05 23:55:11 rillig Exp $
 
 DISTNAME=		mimedefang-2.52
 PKGREVISION=		1
@@ -46,12 +46,12 @@ OWN_DIRS_PERMS+=	${DEFANG_SPOOLDIR} ${DEFANG_USER} ${DEFANG_GROUP} 0700
 CONF_FILES+=		${EGDIR}/mimedefang-filter ${PKG_SYSCONFDIR}/mimedefang-filter
 CONF_FILES+=		${EGDIR}/sa-mimedefang.cf ${PKG_SYSCONFDIR}/sa-mimedefang.cf
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-confsubdir=
 CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
 CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
-CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR}
-CONFIGURE_ARGS+=	--with-quarantinedir=${DEFANG_SPOOLDIR}
+CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR:Q}
+CONFIGURE_ARGS+=	--with-quarantinedir=${DEFANG_SPOOLDIR:Q}
 # CONFIGURE_ARGS+=	--disable-anti-virus
 #	list the paths where they _would_ be installed, so they
 #	can be found at runtime. -- they have to be listed

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2005/12/05 20:50:59 rillig Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/12/05 23:55:19 rillig Exp $
 
 DISTNAME=		bacula-1.38.1
 CATEGORIES=		sysutils
@@ -30,11 +30,11 @@ FILES_SUBST+=		BACULA_GROUP=${BACULA_GROUP:Q}
 FILES_SUBST+=		BACULA_DIR_USER=${BACULA_DIR_USER:Q}
 FILES_SUBST+=		BACULA_SD_USER=${BACULA_SD_USER:Q}
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bacula
 CONFIGURE_ARGS+=	--with-sbin-perm=0755
-CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR}
-CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR}
+CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR:Q}
+CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR:Q}
 CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
 
 PKG_GROUPS=		${BACULA_GROUP}

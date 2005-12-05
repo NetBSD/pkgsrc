@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/12/05 20:50:51 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2005/12/05 23:55:16 rillig Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		1
@@ -25,11 +25,11 @@ MPI_RSH?=		ssh
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	-prefix=${PREFIX}
+CONFIGURE_ARGS+=	-prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	-docdir=${PREFIX}/share/doc/mpi-ch
 CONFIGURE_ARGS+=	-htmldir=${PREFIX}/share/doc/html/mpi-ch
 CONFIGURE_ARGS+=	-opt=-O
-CONFIGURE_ARGS+=	-rsh=${MPI_RSH}
+CONFIGURE_ARGS+=	-rsh=${MPI_RSH:Q}
 CONFIGURE_ARGS+=	--with-comm=ch_p4
 CONFIGURE_ARGS+=	--with-mpe
 CONFIGURE_ARGS+=	--disable-devdebug

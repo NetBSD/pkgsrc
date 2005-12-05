@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:48 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 23:55:14 rillig Exp $
 #
 
 DISTNAME=	openvpn-2.0.5
@@ -23,7 +23,7 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 RCD_SCRIPTS=		openvpn
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--enable-password-save
 CONFIGURE_ARGS+=	--disable-dependency-tracking

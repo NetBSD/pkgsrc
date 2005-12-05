@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 23:55:13 rillig Exp $
 #
 
 DISTNAME=		bounce-0.0
@@ -10,7 +10,7 @@ COMMENT=		Tool to forward TCP connection from one IP to another
 
 WRKSRC=			${WRKDIR}/bounce
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 BUILD_TARGET=		bounce
 

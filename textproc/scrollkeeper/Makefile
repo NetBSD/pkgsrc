@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/12/05 20:51:08 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/05 23:55:21 rillig Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -22,9 +22,9 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+= 	--localstatedir=${SCROLLKEEPER_DATADIR}
-CONFIGURE_ARGS+=	--sharedstatedir=${SCROLLKEEPER_DATADIR}
-CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+= 	--localstatedir=${SCROLLKEEPER_DATADIR:Q}
+CONFIGURE_ARGS+=	--sharedstatedir=${SCROLLKEEPER_DATADIR:Q}
+CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+= 	--with-partial-db-dir=db
 CONFIGURE_ARGS+= 	--with-xml-catalog=${BUILDLINK_PREFIX.xmlcatmgr}/share/xml/catalog
 

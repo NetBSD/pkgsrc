@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/03 16:43:38 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/05 23:55:22 rillig Exp $
 #
 
 DISTNAME=		suphp-0.6.0
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.0	# the C++ code uses the .at() method
 CONFIGURE_ARGS+=	APXS=apxs
-CONFIGURE_ARGS+=	--with-apache-user=${APACHE_USER}
+CONFIGURE_ARGS+=	--with-apache-user=${APACHE_USER:Q}
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/httpd/suphp_log
 
 # I don't know why this is necessary, but it is.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2005/12/01 19:17:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.38 2005/12/05 23:55:24 rillig Exp $
 #
 # This Makefile.common is included by:
 #
@@ -66,7 +66,7 @@ XLOCK_AUDIOPLAY?=	${BUILDLINK_PREFIX.oss}/bin/ossplay
 .  else
 XLOCK_AUDIOPLAY?=	/usr/bin/audioplay
 .  endif
-CONFIGURE_ARGS+=	--enable-def-play="${XLOCK_AUDIOPLAY}"
+CONFIGURE_ARGS+=	--enable-def-play=${XLOCK_AUDIOPLAY:Q}
 .endif
 
 .if empty(PKG_OPTIONS:Mxlockmore-dpms)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:00 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:05 rillig Exp $
 
 PKGNAME=		postgresql74-server-${BASE_VERS}
 SVR4_PKGNAME=		pstgs
@@ -16,7 +16,7 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 USE_TOOLS+=		tar
 
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
 

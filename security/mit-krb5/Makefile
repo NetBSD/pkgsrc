@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:56 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/05 23:55:18 rillig Exp $
 
 DISTNAME=	krb5-1.4.2
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -29,8 +29,8 @@ USE_LIBTOOL=		yes
 MIT_KRB5_STATEDIR?=	${VARBASE}
 FILES_SUBST+=		MIT_KRB5_STATEDIR=${MIT_KRB5_STATEDIR:Q}
 
-CONFIGURE_ARGS+=	--localstatedir=${MIT_KRB5_STATEDIR}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${MIT_KRB5_STATEDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
 CONFIGURE_ARGS+=	--enable-dns
@@ -60,7 +60,7 @@ KRB5_PREFIX=		# empty
 MIT_KRB5_TRANSFORM=	s/^ftp/k&/
 .endif
 PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX:Q}
-CONFIGURE_ARGS+=	--program-transform-name="${MIT_KRB5_TRANSFORM}"
+CONFIGURE_ARGS+=	--program-transform-name=${MIT_KRB5_TRANSFORM:Q}
 
 # Fix some places in the MIT krb5 sources that don't point to the correct
 # Kerberized binaries when exec'ing programs.

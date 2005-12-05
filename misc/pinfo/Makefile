@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:40 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/05 23:55:12 rillig Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -20,7 +20,7 @@ INFO_FILES=	pinfo.info
 
 CPPFLAGS+=		-DDFLT_INFOPATH="\"/usr/share/info:${X11BASE}/info:${LOCALBASE}/info:/usr/local/info\""
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 CONF_FILES=	${PREFIX}/share/examples/pinfo/pinforc ${PKG_SYSCONFDIR}/pinforc
 

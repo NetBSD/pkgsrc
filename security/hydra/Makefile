@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:56 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 23:55:17 rillig Exp $
 #
 
 DISTNAME=	${PKGNAME}-src
@@ -31,7 +31,7 @@ SUBST_MESSAGE.build=	"Patching build files."
 
 USE_OLD_DES_API=	YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 BUILDLINK_DEPENDS.libssh+=	libssh-0.1
 
 INSTALLATION_DIRS=	bin
