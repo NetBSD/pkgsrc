@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2005/09/15 15:40:47 taca Exp $
+# $NetBSD: options.mk,v 1.5 2005/12/05 14:06:03 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
-PKG_SUPPORTED_OPTIONS=	icmp pam-helper snmp ssl aufs
+PKG_SUPPORTED_OPTIONS=	carp icmp pam-helper snmp ssl aufs unlinkd
 #
 # most of options are enabled by default except aufs.  aufs backend isn't
 # tested well.
-PKG_SUGGESTED_OPTIONS=	icmp pam-helper snmp ssl
+PKG_SUGGESTED_OPTIONS=	carp icmp pam-helper snmp ssl unlinkd
 
 .if !empty(OPSYS:MLinux)
 PKG_SUPPORTED_OPTIONS+=	linux-netfilter
@@ -66,6 +66,10 @@ CONFIGURE_ARGS+=	--enable-ipf-transparent
 CONFIGURE_ARGS+=	arp-acl
 .endif
 
+.if !empty(PKG_OPTIONS:Mcarp)
+CONFIGURE_ARGS+=	--enable-carp
+.endif
+
 .if !empty(PKG_OPTIONS:Micmp)
 CONFIGURE_ARGS+=	--enable-icmp
 .endif
@@ -86,6 +90,10 @@ CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE}
 
 .if !empty(PKG_OPTIONS:Mdiskd)
 SQUID_BACKENDS+=	diskd
+.endif
+
+.if empty(PKG_OPTIONS:Munlinkd)
+CONFIGURE_ARGS+=	--disable-unlinkd
 .endif
 
 .if !empty(SQUID_BASIC_AUTH_HELPERS)
