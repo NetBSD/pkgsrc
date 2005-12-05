@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.23 2005/11/18 14:44:45 yyamano Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.24 2005/12/05 18:04:39 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -71,7 +71,9 @@
 
     <para>Binary packages for the pkgsrc tools and an initial set of packages is
       available for supported platforms. An up-to-date list of these can be
-      found on <ulink url="http://www.pkgsrc.org/">www.pkgsrc.org</ulink>.</para>
+      found on <ulink url="http://www.pkgsrc.org/">www.pkgsrc.org</ulink>.
+      Note that this only works for privileged builds that install
+      into <filename>/usr/pkg</filename>.</para>
 
     <note>
 	<para>The bootstrap installs a <command>bmake</command> tool.
