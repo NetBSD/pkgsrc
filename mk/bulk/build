@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.90 2005/11/30 18:00:16 rillig Exp $
+# $NetBSD: build,v 1.91 2005/12/05 10:19:14 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -215,6 +215,7 @@ show_config_vars
 #
 # Check that the package tools are up to date.
 #
+echo "build> Checking if the pkgtools are up-to-date"
 ( cd "${pkglint_dir}" \
   && ${BMAKE} fetch >/dev/null 2>&1
 ) || {
@@ -240,95 +241,58 @@ esac
 #
 # Load pkgsrc variables that affect the build process.
 #
-fail=no
-if cd "${pkglint_dir}"; then
-	echo "build> Extracting relevant pkgsrc variables..."
 
-	BULKFILESDIR=`${BMAKE} show-var VARNAME=BULKFILESDIR` || fail=yes
-	BULK_DBFILE=`${BMAKE} show-var VARNAME=BULK_DBFILE` || fail=yes
-	DEPENDSTREEFILE=`${BMAKE} show-var VARNAME=DEPENDSTREEFILE` || fail=yes
-	DEPENDSFILE=`${BMAKE} show-var VARNAME=DEPENDSFILE` || fail=yes
-	SUPPORTSFILE=`${BMAKE} show-var VARNAME=SUPPORTSFILE` || fail=yes
-	INDEXFILE=`${BMAKE} show-var VARNAME=INDEXFILE` || fail=yes
-	ORDERFILE=`${BMAKE} show-var VARNAME=ORDERFILE` || fail=yes
-	BROKENFILE=`${BMAKE} show-var VARNAME=BROKENFILE` || fail=yes
-	BROKENWRKLOG=`${BMAKE} show-var VARNAME=BROKENWRKLOG ` || fail=yes
-	BUILDLOG=`${BMAKE} show-var VARNAME=BUILDLOG` || fail=yes
-	STARTFILE=`${BMAKE} show-var VARNAME=STARTFILE` || fail=yes
-	AWK=`${BMAKE} show-var VARNAME=AWK USE_TOOLS=awk` || fail=yes
-	GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep` || fail=yes
-	SED=`${BMAKE} show-var VARNAME=SED USE_TOOLS=sed` || fail=yes
-	MAIL_CMD=`${BMAKE} show-var VARNAME=MAIL_CMD USE_TOOLS=mail` || fail=yes
-	MKDIR=`${BMAKE} show-var VARNAME=MKDIR USE_TOOLS=mkdir` || fail=yes
-	PERL5=`${BMAKE} show-var VARNAME=PERL5 USE_TOOLS=perl` || fail=yes
-	MACHINE_ARCH=`${BMAKE} show-var VARNAME=MACHINE_ARCH` || fail=yes
-	OPSYS=`${BMAKE} show-var VARNAME=OPSYS` || fail=yes
-	OS_VERSION=`${BMAKE} show-var VARNAME=OS_VERSION` || fail=yes
-	PKG_DELETE=`${BMAKE} show-var VARNAME=PKG_DELETE` || fail=yes
-	PKG_INFO=`${BMAKE} show-var VARNAME=PKG_INFO` || fail=yes
-	BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ` || fail=yes
-else
-	die	"The pkgtools/pkglint directory does not exist." \
-		"Please update your pkgsrc tree in ${pkgsrc_dir}."
-fi
+# usage: load_pkgsrc_var <varname> <bmake-args...>
+load_pkgsrc_var() {
+	case $1 in
+	-z)	lpv_check_nonempty=no; shift;;
+	*)	lpv_check_nonempty=yes;;
+	esac
+
+	lpv_varname="$1"; shift
+
+	if lpv_value=`cd "${pkglint_dir}" && ${BMAKE} show-var VARNAME="${lpv_varname}" "$@"`; then
+		case "$lpv_check_nonempty,$lpv_value" in
+		yes,"")
+			die "${lpv_varname} must not be empty.";;
+		esac
+	else
+		die	"Could not get the value for the ${lpv_varname} pkgsrc variable."
+	fi
+	eval "${lpv_varname}=\${lpv_value}"
+	printf "%-15s = %s\\n" "${lpv_varname}" "${lpv_value}"
+}
 
 echo "+----------------------------------------+"
 echo "| Some variables used in the bulk build: |"
 echo "+----------------------------------------+"
-echo "BULKFILESDIR    = $BULKFILESDIR"
-echo "BULK_DBFILE     = $BULK_DBFILE"
-echo "BULK_PREREQ     = $BULK_PREREQ"
-echo "DEPENDSTREEFILE = $DEPENDSTREEFILE"
-echo "DEPENDSFILE     = $DEPENDSFILE"
-echo "SUPPORTSFILE    = $SUPPORTSFILE"
-echo "INDEXFILE       = $INDEXFILE"
-echo "ORDERFILE       = $ORDERFILE"
-echo "BROKENFILE      = $BROKENFILE"
-echo "BROKENWRKLOG    = $BROKENWRKLOG"
-echo "BUILDLOG        = $BUILDLOG"
-echo "STARTFILE       = $STARTFILE"
-echo "AWK             = $AWK"
-echo "GREP            = $GREP"
-echo "MKDIR           = $MKDIR"
-echo "SED             = $SED"
-echo "MAIL_CMD        = $MAIL_CMD"
-echo "PERL5           = $PERL5"
-echo "MACHINE_ARCH    = $MACHINE_ARCH"
-echo "OPSYS           = $OPSYS"
-echo "OS_VERSION      = $OS_VERSION"
-echo "PKG_DELETE      = $PKG_DELETE"
-echo "PKG_INFO        = $PKG_INFO"
+load_pkgsrc_var OPSYS
+load_pkgsrc_var OS_VERSION
+load_pkgsrc_var MACHINE_ARCH
+load_pkgsrc_var -z BULK_PREREQ
+
+load_pkgsrc_var BULKFILESDIR
+load_pkgsrc_var BULK_DBFILE
+load_pkgsrc_var DEPENDSFILE
+load_pkgsrc_var DEPENDSTREEFILE
+load_pkgsrc_var INDEXFILE
+load_pkgsrc_var ORDERFILE
+load_pkgsrc_var STARTFILE
+load_pkgsrc_var SUPPORTSFILE
+
+load_pkgsrc_var BUILDLOG
+load_pkgsrc_var BROKENFILE
+load_pkgsrc_var BROKENWRKLOG
+
+load_pkgsrc_var AWK		USE_TOOLS=awk
+load_pkgsrc_var GREP		USE_TOOLS=grep
+load_pkgsrc_var MAIL_CMD	USE_TOOLS=mail
+load_pkgsrc_var MKDIR		USE_TOOLS=mkdir
+load_pkgsrc_var PERL5		USE_TOOLS=perl
+load_pkgsrc_var PKG_DELETE
+load_pkgsrc_var PKG_INFO
+load_pkgsrc_var SED		USE_TOOLS=sed
 echo "------------------------------------------"
-
-# make sure we have values for these very important
-# variables; BULK_PREREQ may be empty.
-if [ $fail = "yes" -o \
-	-z "$BULK_DBFILE" -o \
-	-z "$DEPENDSTREEFILE" -o \
-	-z "$DEPENDSFILE" -o \
-	-z "$SUPPORTSFILE" -o \
-	-z "$INDEXFILE" -o \
-	-z "$ORDERFILE" -o \
-	-z "$BROKENFILE" -o \
-	-z "$BROKENWRKLOG" -o \
-	-z "$BUILDLOG" -o \
-	-z "$STARTFILE" -o \
-	-z "$AWK" -o \
-	-z "$GREP" -o \
-	-z "$MKDIR" -o \
-	-z "$SED" -o \
-	-z "$MAIL_CMD" -o \
-	-z "$PERL5" -o \
-	-z "$MACHINE_ARCH" -o \
-	-z "$OPSYS" -o \
-	-z "$PKG_DELETE" -o \
-	-z "$PKG_INFO" -o \
-	-z "$OS_VERSION" \
-	]; then
-
-	die	"Failed to extract certain key variables." \
-		"Please examine the above list and correct the problem."
-fi
 
 #
 # Get the location of commonly used files
