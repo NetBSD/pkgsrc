@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:57 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:22 rillig Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -44,10 +44,10 @@ PKGSRC_ARCH=	3
 PLIST_SUBST+=	USE_GL=""
 .endif
 
-MAKE_ENV+=	MV="${MV}" RM="${RM}" CP="${CP}"			\
-		INSTALL_SCRIPT="${INSTALL_SCRIPT}" 			\
-		INSTALL_PROGRAM="${INSTALL_PROGRAM}"			\
-		RANLIB="${RANLIB}" AR="${AR}"
+MAKE_ENV+=	MV=${MV:Q} RM=${RM:Q} CP=${CP:Q}			\
+		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q} 			\
+		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}			\
+		RANLIB=${RANLIB:Q} AR=${AR:Q}
 
 do-configure:
 .for patchee in ${PATCHEES}

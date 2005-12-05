@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:25 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 20:51:09 rillig Exp $
 #
 
 DISTNAME=	openbox-2.2.3
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://icculus.org/openbox/
 COMMENT=	Window manager based on Blackbox (2.x branch)
 
-DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
+DEPENDS+=	bsetroot>=0.1nb1:../../wm/bsetroot
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/10/15 21:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/05 20:49:50 rillig Exp $
 
 DISTNAME=	vorbis-tools-1.1.1
 CATEGORIES=	audio
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_PREFIX.libogg}	\
 			--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis} \
 			--with-ao-prefix=${BUILDLINK_PREFIX.libao}
 
-PLIST_SUBST+=	DISTNAME="${DISTNAME}"
+PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 
 PTHREAD_OPTS+=	require
 

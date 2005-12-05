@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/09 17:31:06 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:55 rillig Exp $
 
 DISTNAME=	dropbear-0.46
 CATEGORIES=	security
@@ -20,7 +20,7 @@ PKG_SUPPORTED_OPTIONS=	pam
 CONFIGURE_ARGS+=	--enable-pam
 .endif
 
-MAKEFLAGS+=	ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
+MAKEFLAGS+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dropbear

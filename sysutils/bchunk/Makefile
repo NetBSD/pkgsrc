@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:59 rillig Exp $
 
 DISTNAME=	bchunk-1.1.1
 CATEGORIES=	sysutils
@@ -8,7 +8,7 @@ MAINTAINER=	pooka@NetBSD.org
 HOMEPAGE=	http://hes.iki.fi/bchunk/
 COMMENT=	".bin/.cue" CD image converter
 
-MAKE_FLAGS+=	CC="${CC}" LD="${CC}" CFLAGS="${CFLAGS}"
+MAKE_FLAGS+=	CC=${CC:Q} LD=${CC:Q} CFLAGS=${CFLAGS:M*:Q}
 
 INSTALLATION_DIRS=	bin man/man1
 

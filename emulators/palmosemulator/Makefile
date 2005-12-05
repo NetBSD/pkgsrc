@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/16 01:19:10 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:11 rillig Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -36,7 +36,7 @@ USE_TOOLS+=	gmake perl
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-fltk=${BUILDLINK_PREFIX.fltk}
-CONFIGURE_ENV+=		PACKAGE_SKINS_DIR=${POSE_SKINS_DIR}
+CONFIGURE_ENV+=		PACKAGE_SKINS_DIR=${POSE_SKINS_DIR:Q}
 
 # Assumes too much about how to build va_list's from scratch
 NOT_FOR_PLATFORM=	*-*-powerpc

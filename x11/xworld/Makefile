@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/06/20 10:58:16 wennmach Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:20 rillig Exp $
 #
 
 DISTNAME=		xworld-2.0
@@ -12,9 +12,9 @@ COMMENT=		Earth as seen from the direction of the sun
 
 HAS_CONFIGURE=		yes
 
-CONFIGURE_ENV+=		PREFIX="${PREFIX}"
+CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_ENV+=		LDLIBS="-lm ${LDFLAGS} -lX11"
-CONFIGURE_ENV+=		CAT="${CAT}" STRIP=strip INCLUDES="" MORELIBS=""
+CONFIGURE_ENV+=		CAT=${CAT:Q} STRIP=strip INCLUDES="" MORELIBS=""
 
 SUBST_CLASSES+=		x11
 SUBST_MESSAGE.x11=	"Fixing x11 options."

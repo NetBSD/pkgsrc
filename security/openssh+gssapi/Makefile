@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/10/07 17:43:29 reed Exp $
+# $NetBSD: Makefile,v 1.29 2005/12/05 20:50:57 rillig Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -107,8 +107,8 @@ ASKPASS_PROGRAM=	${X11BASE}/bin/ssh-askpass
 .else
 ASKPASS_PROGRAM=	${X11PREFIX}/bin/ssh-askpass
 .endif
-CONFIGURE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM}
-MAKE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM}
+CONFIGURE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM:Q}
+MAKE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM:Q}
 
 CONFS=			ssh_config sshd_config moduli
 
@@ -129,7 +129,7 @@ OWN_DIRS=		${OPENSSH_CHROOT}
 RCD_SCRIPTS=		sshd
 
 PLIST_SRC+=		${.CURDIR}/PLIST
-FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
+FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR:Q}
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 MESSAGE_SUBST+=		OPENSSH_USER=${OPENSSH_USER}
 MESSAGE_SUBST+=		OPENSSH_GROUP=${OPENSSH_GROUP}

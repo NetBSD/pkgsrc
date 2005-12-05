@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/09 21:24:12 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:24 rillig Exp $
 
 DISTNAME=		cint5.15
 PKGNAME=		cint-5.15.174
@@ -11,7 +11,7 @@ HOMEPAGE=		http://root.cern.ch/root/Cint.html
 COMMENT=		C/C++ interpreter
 
 #same distribution file name for minor versions
-DIST_SUBDIR=		${PKGNAME}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 WRKSRC=			${WRKDIR}
 GCC_REQD+=		3.0
 PTHREAD_OPTS+=	native

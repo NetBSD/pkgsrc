@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/16 01:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:38 rillig Exp $
 #
 
 DISTNAME=	${PKGNAME:S,-,_,}
@@ -12,7 +12,7 @@ COMMENT=	Package maintenance system for Debian
 
 BUILD_USES_MSGFMT=	yes
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

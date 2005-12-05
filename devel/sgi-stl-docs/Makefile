@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 20:52:20 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:08 rillig Exp $
 
 DISTNAME=		STL_doc
 PKGNAME=		sgi-stl-docs-3.3
@@ -9,7 +9,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.sgi.com/tech/stl/
 COMMENT=		SGI Standard Template Library Programmer's Guide
 
-DIST_SUBDIR=		${PKGNAME}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2005/10/11 07:23:52 abs Exp $
+# $NetBSD: Makefile.common,v 1.26 2005/12/05 20:50:52 rillig Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	8.15
@@ -55,8 +55,8 @@ CFLAGS+=		-DA4
 .endif
 CFLAGS+=		-DHAVE_MKSTEMP=1
 
-MAKE_FLAGS+=		XCFLAGS="${CFLAGS}"
-MAKE_FLAGS+=		XLDFLAGS="${LDFLAGS}"
+MAKE_FLAGS+=		XCFLAGS=${CFLAGS:M*:Q}
+MAKE_FLAGS+=		XLDFLAGS=${LDFLAGS:M*:Q}
 
 REPLACE_PERL=		lib/fixmswrd.pl
 
@@ -66,7 +66,7 @@ DOCDIR=			${PREFIX}/share/doc/ghostscript
 HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
 LIBDIR=			${GSDATADIR}/lib
 
-PLIST_SUBST+=		GS_VERS=${GS_VERS}
+PLIST_SUBST+=		GS_VERS=${GS_VERS:Q}
 
 .include "../../mk/compiler.mk"
 

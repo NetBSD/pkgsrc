@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/06/16 06:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/05 20:49:50 rillig Exp $
 #
 
 DISTNAME=	xsidplay-1.6.5.1a
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 
 CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 CONFIGURE_ENV+=		DISABLE_ESD_TEST=yes

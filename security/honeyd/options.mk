@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/04/20 14:34:31 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2005/12/05 20:50:56 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.honeyd
 PKG_SUPPORTED_OPTIONS=	python rrdtool
@@ -10,7 +10,7 @@ PKG_SUPPORTED_OPTIONS=	python rrdtool
 ###
 .if !empty(PKG_OPTIONS:Mpython)
 .	include "../../lang/python/extension.mk"
-CONFIGURE_ENV+=		_PATH_PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=		_PATH_PYTHON=${PYTHONBIN:Q}
 .else
 CONFIGURE_ARGS+=	--without-python
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/09/05 17:04:53 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:02 rillig Exp $
 #
 
 DISTNAME=	flyspell-1.7j.el
@@ -11,7 +11,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www-sop.inria.fr/mimosa/personnel/Manuel.Serrano/flyspell/flyspell.html
 COMMENT=	Emacs/Xemacs on-the-fly spell checker
 
-DEPENDS=	${EMACS_PKGNAME_PREFIX}ispell-emacs-[0-9]*:../../textproc/ispell-emacs
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}ispell-emacs-[0-9]*:../../textproc/ispell-emacs
 
 EXTRACT_ONLY=	# None
 

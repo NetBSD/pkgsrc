@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2005/12/03 10:57:48 kristerw Exp $
+# $NetBSD: Makefile,v 1.139 2005/12/05 20:50:13 rillig Exp $
 #
 
 DISTNAME=		xmame-0.102
@@ -28,7 +28,7 @@ SPOOLDIR=		${VARBASE}/games/${TARGET}
 
 MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
 MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
-MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
+MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_FLAGS+=		X11INC= X11LIB=
 
 # Network support is broken since xmame-0.85
@@ -56,7 +56,7 @@ MAME_ARCH.DragonFly?=	dragonfly
 MAME_ARCH.${OPSYS}?=	generic
 .endif
 
-MAKE_FLAGS+=		DISPLAY_METHOD="${MAME_DISP_METHOD}"
+MAKE_FLAGS+=		DISPLAY_METHOD=${MAME_DISP_METHOD:Q}
 MAKE_FLAGS+=		MY_CPU="${MAME_CPU.${MACHINE_ARCH}}"
 MAKE_FLAGS+=		ARCH="${MAME_ARCH.${OPSYS}}"
 

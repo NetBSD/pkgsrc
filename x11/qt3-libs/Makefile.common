@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.57 2005/11/17 04:33:20 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.58 2005/12/05 20:51:19 rillig Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -32,8 +32,8 @@ CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
 
 LIBQT?=			-lqt-mt
 
-MAKE_ENV+=		QTPREFIX=${QTPREFIX}
-MAKE_ENV+=              QTDIR="${WRKSRC}"
+MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
+MAKE_ENV+=              QTDIR=${WRKSRC:Q}
 
 # avoid creating a .qt directory in the users home
 # directory

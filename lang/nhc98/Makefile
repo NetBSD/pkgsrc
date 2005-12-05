@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2005/12/05 20:50:26 rillig Exp $
 
 DISTNAME=		nhc98src-1.18.tar.gz
 PKGNAME=		nhc98-1.18
@@ -17,8 +17,8 @@ NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
+INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*-*
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
@@ -28,7 +28,7 @@ USE_TOOLS+=		gmake
 BUILD_TARGET=		default
 
 HARCH=			`${WRKSRC}/script/harch`
-PLIST_SUBST+=		HARCH=${HARCH}
+PLIST_SUBST+=		HARCH=${HARCH:Q}
 
 post-extract:
 	@${FIND} ${WRKSRC}/docs -type d -name \*CVS\* -print | ${XARGS} ${RM} -rf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/05/02 08:59:08 tron Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/12/05 20:51:13 rillig Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -17,9 +17,9 @@ NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
 PLIST_SRC=		../../www/opera-acroread/PLIST
-PLIST_SUBST+=		ACROREAD=${ACROREAD}
-PLIST_SUBST+=		ACRO_SUBDIR=${ACRO_SUBDIR}
-PLIST_SUBST+=		PLATFORM=${PLATFORM}
+PLIST_SUBST+=		ACROREAD=${ACROREAD:Q}
+PLIST_SUBST+=		ACRO_SUBDIR=${ACRO_SUBDIR:Q}
+PLIST_SUBST+=		PLATFORM=${PLATFORM:Q}
 NS_PLUGINS_DIR=		${PREFIX}/emul/linux/usr/lib/opera/plugins
 
 do-install:

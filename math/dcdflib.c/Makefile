@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/26 22:22:47 reed Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:36 rillig Exp $
 
 DISTNAME=	dcdflib.c-1.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Library of C Routines for Cumulative Distribution Functions
 
 WRKSRC=		${WRKDIR}/dcdflib.c/src
 DIST_SUBDIR=	${PKGNAME_NOREV}
-MAKE_ENV+=	LIBOWN=${LIBOWN} LIBGRP=${LIBGRP}
+MAKE_ENV+=	LIBOWN=${LIBOWN:Q} LIBGRP=${LIBGRP:Q}
 
 INSTALLATION_DIRS=	include share/doc/dcdflib.c
 

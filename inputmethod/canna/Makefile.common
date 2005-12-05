@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2005/05/17 22:22:52 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2005/12/05 20:50:23 rillig Exp $
 #
 # Canna common makefile.
 #
@@ -16,7 +16,7 @@ FILESDIR=	${.CURDIR}/../canna/files
 DISTINFO_FILE=	${.CURDIR}/../canna/distinfo
 PATCHDIR=	${.CURDIR}/../canna/patches
 
-.include "../canna/Makefile.version"
+.include "../../inputmethod/canna/Makefile.version"
 
 USE_TOOLS+=	imake
 CANNA_SPOOL=	${DESTDIR}/var/spool/canna

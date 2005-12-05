@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/11/28 06:41:21 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:52 rillig Exp $
 
 DISTNAME=	dvipdfmx-20050627
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
@@ -16,7 +16,7 @@ CONFLICTS+=	ja-dvipdfm-[0-9]*
 
 USE_TOOLS+=		gs:run
 GNU_CONFIGURE=		YES
-MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
+MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:Q}
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

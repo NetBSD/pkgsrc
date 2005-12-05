@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2005/12/01 23:11:26 joerg Exp $
+# $NetBSD: Makefile,v 1.76 2005/12/05 20:50:36 rillig Exp $
 
 DISTNAME=		R-2.1.1
 PKGREVISION=		1
@@ -49,7 +49,7 @@ CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
 
 CONFIGURE_ENV+=		GETWD=${TOOLS_PWD_CMD:Q}
 CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
-CONFIGURE_ENV+=		lt_cv_path_SED="${TOOLS_SED}"
+CONFIGURE_ENV+=		lt_cv_path_SED=${TOOLS_SED:Q}
 
 # Package assumes it can append to files (specifically DESCRIPTION) that have
 # been installed SHAREMODE
@@ -67,7 +67,7 @@ R_PAPERSIZE?=		A4
 .if (${R_PAPERSIZE} == "Letterdj")
 R_PAPERSIZE=		Letter
 .endif
-CONFIGURE_ENV+=		R_PAPERSIZE="${R_PAPERSIZE}"
+CONFIGURE_ENV+=		R_PAPERSIZE=${R_PAPERSIZE:Q}
 
 # These macros are used during the build, so strip off the -o,-g flags.
 #

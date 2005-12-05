@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 16:05:30 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/12/05 20:49:55 rillig Exp $
 
 SHA1 (modemd-970221.tar.gz) = 104f8e596f711e349203b2da8c4f2ecf40d490c3
 RMD160 (modemd-970221.tar.gz) = ade5d735e5fd07b91006cf1334a41a43dca7e3d9
@@ -13,6 +13,6 @@ SHA1 (patch-ag) = 8d93d4da055170a19336e127017dfe42501a0538
 SHA1 (patch-ah) = 9294419cd64c3b5cc9ebadc3a4c135a0a969262d
 SHA1 (patch-ai) = 8e81c1e522979f616f2f4aafd5dd65400a6330fa
 SHA1 (patch-aj) = 5616eff4fa6bc17377d2a433bbbaf2ca83909b94
-SHA1 (patch-ak) = 94e41ab3462933f3ddfa9ab0a235d39974dc779e
-SHA1 (patch-al) = 926b9ec9af6a7c5a4a460b448f4957913c411fe5
+SHA1 (patch-ak) = 089a0217e119e2f6e1138e35f81661d92e71f780
+SHA1 (patch-al) = a75de09e5df044b66b034a4ca9aa2148d0c68576
 SHA1 (patch-am) = d740f41abf89f760431f32ca7ffa25bf1b3bd4e1

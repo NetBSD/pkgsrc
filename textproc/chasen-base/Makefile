@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/18 15:37:17 taca Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:02 rillig Exp $
 #
 
 DISTNAME=		chasen-${CHASEN_VERSION}
@@ -23,7 +23,7 @@ OWN_DIRS=		${CHASEN_DICDIR}
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../chasen/Makefile.common"
+.include "../../textproc/chasen/Makefile.common"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/darts/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

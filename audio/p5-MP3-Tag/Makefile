@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/06 06:19:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/05 20:49:49 rillig Exp $
 
 DISTNAME=	tagged-0.40
 PKGNAME=	p5-MP3-Tag-0.40
@@ -11,7 +11,7 @@ MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://tagged.sourceforge.net/
 COMMENT=	This is a perl module to read/write tags of mp3-files
 
-DEPENDS=        p5-Compress-Zlib-1.*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-Compress-Zlib-1.*:../../devel/p5-Compress-Zlib
 
 PERL5_PACKLIST=		auto/MP3/Tag/.packlist
 

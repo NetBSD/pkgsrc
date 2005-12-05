@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/10/02 15:07:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/05 20:51:02 rillig Exp $
 #
 
 DISTNAME=	docbook-xml-4.4
@@ -13,7 +13,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.oasis-open.org/docbook/
 COMMENT=	XML DTD designed for computer documentation
 
-BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 

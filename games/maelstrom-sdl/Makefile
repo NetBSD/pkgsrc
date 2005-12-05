@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:17 rillig Exp $
 #
 
 DISTNAME=	Maelstrom-3.0.5
@@ -15,7 +15,7 @@ CONFLICTS=		maelstrom-x11-[0-9]* maelstrom-[0-9]*
 
 GNU_CONFIGURE=		YES
 
-MAKE_ENV+=		CP=${CP}
+MAKE_ENV+=		CP=${CP:Q}
 
 post-install:
 	${RM} ${PREFIX}/share/doc/Maelstrom/Docs/Makefile \

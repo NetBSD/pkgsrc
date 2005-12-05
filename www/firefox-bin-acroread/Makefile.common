@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/08/26 22:18:05 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/12/05 20:51:12 rillig Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -16,8 +16,8 @@ NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
 PLIST_SRC=		../../www/firefox-bin-acroread/PLIST
-PLIST_SUBST+=		ACROREAD=${ACROREAD}
-PLIST_SUBST+=		PLATFORM=${PLATFORM}
+PLIST_SUBST+=		ACROREAD=${ACROREAD:Q}
+PLIST_SUBST+=		PLATFORM=${PLATFORM:Q}
 NS_PLUGINS_DIR=		${PREFIX}/lib/firefox-linux/plugins
 
 BROWSER?=		Browsers

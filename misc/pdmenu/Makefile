@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/16 01:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:40 rillig Exp $
 #
 
 DISTNAME=	pdmenu_1.2.65
@@ -18,8 +18,8 @@ USE_TOOLS+=	gmake perl:run
 REPLACE_PERL=	examples/showdir.pl
 
 
-CONFIGURE_ENV=	SLANG_LIB_LOC="${BUILDLINK_PREFIX.libslang}/lib"	\
-		SLANG_H_LOC="${BUILDLINK_PREFIX.libslang}/include/slang.h"
+CONFIGURE_ENV+=	SLANG_LIB_LOC=${BUILDLINK_PREFIX.libslang:Q}/lib
+CONFIGURE_ENV+=	SLANG_H_LOC=${BUILDLINK_PREFIX.libslang:Q}/include/slang.h
 
 pre-install:
 	${SED} "s,.B /etc/pdmenurc,.B ${PREFIX}/etc/pdmenurc,g"		\

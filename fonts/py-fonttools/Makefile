@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/07/27 16:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:14 rillig Exp $
 #
 
 DISTNAME=		fonttools-2.0b1
@@ -14,7 +14,7 @@ COMMENT=		Library for manipulating fonts
 WRKSRC=			${WRKDIR}/fonttools
 PYDISTUTILSPKG=		yes
 
-PLIST_SUBST+=		FONTTOOLSPTH=${FONTTOOLSPTH}
+PLIST_SUBST+=		FONTTOOLSPTH=${FONTTOOLSPTH:Q}
 
 .include "../../lang/python/extension.mk"
 .if !empty(PYPKGPREFIX:M*pth)
