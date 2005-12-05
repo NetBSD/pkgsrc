@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2005/06/15 05:26:20 taca Exp $
+$NetBSD: patch-ac,v 1.8 2005/12/05 14:12:29 taca Exp $
 
---- password/poppassd.c.orig	2005-06-15 14:14:48.000000000 +0900
+--- password/poppassd.c.orig	Mon Dec  5 10:45:21 2005
 +++ password/poppassd.c
 @@ -171,8 +171,13 @@
  /* LANMAN allows up to 14 char passwords (truncates if longer), but tacacs
@@ -25,6 +25,15 @@ $NetBSD: patch-ac,v 1.7 2005/06/15 05:26:20 taca Exp $
  #if HAVE_SYS_NETINET_IN_H
  #  include <sys/netinet/in.h>
  #endif
+@@ -257,7 +264,7 @@ int     dochild (int master, char *slave
+ int     findpty (char **slave);
+ void    writestring (int fd, char *s);
+ int     talktochild (int master, char *user, char *oldpass, char *newpass,
+-                 char *emess, int asroot);
++                 char *emess);
+ int     match (char *str, char *pat);
+ int     expect (int master, char **expected, char *buf);
+ void    getemess (int master, char **expected, char *buf);
 @@ -274,7 +281,7 @@ void    get_client_info ( POP *p, BOOL n
  char   *sock_ntop ( struct sockaddr *p, int salen );
  int     sock_port ( struct sockaddr *p, int salen );
@@ -280,6 +289,15 @@ $NetBSD: patch-ac,v 1.7 2005/06/15 05:26:20 taca Exp $
    /* fork child process to talk to password program */
  
    pid = fork();
+@@ -665,7 +729,7 @@ void runchild ( char *userid, char *oldp
+ 
+   if ( pid > 0 )   /* Parent */
+   {
+-    if (talktochild (master, userid, oldpass, newpass, emess, smb) == FAILURE)
++    if (talktochild (master, userid, oldpass, newpass, emess) == FAILURE)
+     {
+       logit ( trace_file, LOG_ERR, HERE, 
+               "%s failed for %s", smb ? "smbpasswd" : "passwd", userid );
 @@ -677,10 +741,16 @@ void runchild ( char *userid, char *oldp
      wpid = waitpid ( pid, &wstat, 0 );
      if ( wpid < 0 )
@@ -322,20 +340,39 @@ $NetBSD: patch-ac,v 1.7 2005/06/15 05:26:20 taca Exp $
  /*
   * Become the user and run passwd. Linux shadowed passwd doesn't need
   * to be run as root with the username passed on the command line.
-@@ -885,6 +961,7 @@ void writestring (int fd, char *s)
+@@ -883,20 +959,19 @@ void writestring (int fd, char *s)
+  * that the password wasn't changed).
+  */
  int talktochild (int master, char *userid, char *oldpass, char *newpass,
-                  char *emess, int asroot)
+-                 char *emess, int asroot)
++                 char *emess)
  {
 +     int n;
       char buf[BUFSIZE];
       char pswd[BUFSIZE+1];
  
-@@ -926,6 +1003,8 @@ int talktochild (int master, char *useri
+      *emess = 0;
+ 
+      TRACE ( trace_file, POP_DEBUG, HERE,
+-             "talktochild; master=%d; userid=%s; asroot=%d",
+-             master, userid, asroot );
++             "talktochild; master=%d; userid=%s", master, userid);
+ 
+      /* only get current password if not root */
+-     if (!asroot)
+-     {
++     if (geteuid() == 0) {
+        /* wait for current password prompt */
+        if (!expect(master, P1, buf)) return FAILURE;
+ 
+@@ -926,6 +1001,10 @@ int talktochild (int master, char *useri
       if ( !expect(master, P4, buf) )
          TRACE ( trace_file, POP_DEBUG, HERE, "no response -- assuming OK" );
  
-+     while ((n = read(master, buf, sizeof buf)) > 0)
++     while ((n = read(master, buf, sizeof buf)) > 0) {
++        TRACE ( trace_file, POP_DEBUG, HERE, "reading remained output" );
 +	;
++     }
       return SUCCESS;
  }
  
