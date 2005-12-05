@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:55 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/05 23:55:17 rillig Exp $
 
 .include "Makefile.common"
 
@@ -24,12 +24,12 @@ REPLACE_PERL=		samplepipe.pl sysconftool
 USE_TOOLS+=		cat:run gmake perl:run
 CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q}		# makedat
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--without-stdheaderdir
 
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
-CONFIGURE_ARGS+=	--with-authdaemonvar=${AUTHDAEMONVAR}
+CONFIGURE_ARGS+=	--with-authdaemonvar=${AUTHDAEMONVAR:Q}
 OWN_DIRS_PERMS=		${AUTHDAEMONVAR} ${COURIER_USER} ${COURIER_GROUP} 0750
 FILES_SUBST+=		AUTHDAEMONVAR=${AUTHDAEMONVAR:Q}
 

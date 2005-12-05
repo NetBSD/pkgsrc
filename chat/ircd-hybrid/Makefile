@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 20:49:53 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/05 23:55:03 rillig Exp $
 
 DISTNAME=	ircd-hybrid-7.1.3
 EXTRACT_SUFX=	.tgz
@@ -63,19 +63,19 @@ SUBST_SED.bpaths=	-e "s|etc|etc/ircd-hybrid|g" \
 			-e "s|ETCPATH \"/ircd.pid\"|\"${VARBASE}/run/ircd-hybrid/ircd.pid\"|g" \
 			-e "s|messages|share/ircd-hybrid/messages|g"
 
-CONFIGURE_ARGS+=	--with-nicklen=${IRCD_HYBRID_NICLEN}
-CONFIGURE_ARGS+=	--with-topiclen=${IRCD_HYBRID_TOPICLEN}
-CONFIGURE_ARGS+=	--enable-syslog=${IRCD_HYBRID_SYSLOG_EVENTS}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-nicklen=${IRCD_HYBRID_NICLEN:Q}
+CONFIGURE_ARGS+=	--with-topiclen=${IRCD_HYBRID_TOPICLEN:Q}
+CONFIGURE_ARGS+=	--enable-syslog=${IRCD_HYBRID_SYSLOG_EVENTS:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/ircd-hybrid
 CONFIGURE_ARGS+=	--enable-clobber
 
 .if defined(IRCD_HYBRID_SYSLOG_EVENTS)
-CONFIGURE_ARGS+=	--enable-syslog-facility=${IRCD_HYBRID_SYSLOG_FACILITY}
+CONFIGURE_ARGS+=	--enable-syslog-facility=${IRCD_HYBRID_SYSLOG_FACILITY:Q}
 .endif
 
 .if defined(IRCD_HYBRID_MAXCONN)
-CONFIGURE_ARGS+=	--with-maxconn=${IRCD_HYBRID_MAXCONN}
+CONFIGURE_ARGS+=	--with-maxconn=${IRCD_HYBRID_MAXCONN:Q}
 .endif
 
 .include "options.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:51:14 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 23:55:23 rillig Exp $
 
 DISTNAME=		ruby-fcgi-${VER}
 PKGNAME=		${RUBY_PKGPREFIX}-fcgi-${VER}
@@ -13,7 +13,7 @@ USE_RUBY_SETUP=		yes
 RUBY_SETUP=		install.rb
 RUBY_EXTCONF_SUBDIRS=	ext/fcgi
 VER=			0.8.6
-CONFIGURE_ARGS+=	-- --with-fcgi-dir=${PREFIX}
+CONFIGURE_ARGS+=	-- --with-fcgi-dir=${PREFIX:Q}
 DOCS=			README README.signals
 
 post-install:

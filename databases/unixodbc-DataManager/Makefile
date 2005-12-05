@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:01 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/05 23:55:05 rillig Exp $
 
 PKGNAME=		unixodbc-DataManager-${ODBC_BASE_VERS}
 PKGREVISION=		4
@@ -7,9 +7,9 @@ COMMENT=		GUI tool for unixODBC data source management
 .include "../../databases/unixodbc/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-gui
-CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"
-CONFIGURE_ARGS+=	--with-extra-includes="${_EXTRA_INCLUDES}"
-CONFIGURE_ARGS+=	--with-extra-libs="${_EXTRA_LIBS}"
+CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
+CONFIGURE_ARGS+=	--with-extra-includes=${_EXTRA_INCLUDES:Q}
+CONFIGURE_ARGS+=	--with-extra-libs=${_EXTRA_LIBS:Q}
 CONFIGURE_ARGS+=	--disable-rpath
 
 CONFIGURE_ENV+=		UIC="${QTDIR}/bin/uic"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:59 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/05 23:55:19 rillig Exp $
 #
 
 NO_MTREE=		YES
@@ -17,7 +17,7 @@ PKG_INFO:=		${PKG_INFO}
 PKG_CREATE:=		${PKG_CREATE}
 PREFIX=			/
 NLSDIR=			usr/share/nls
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--bindir=/bin
 CONFIGURE_ARGS+=	--mandir=/usr/share/man
 

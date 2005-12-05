@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 20:51:08 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/05 23:55:21 rillig Exp $
 
 DISTNAME=	ical-2.3.1
 PKGREVISION=	1
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --prefix=${PREFIX} \
+CONFIGURE_ARGS+= --prefix=${PREFIX:Q} \
 		--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib \
 		--with-tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh \
 		--with-tkconfig=${BUILDLINK_PREFIX.tk}/lib

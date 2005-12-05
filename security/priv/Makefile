@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/05 23:55:18 rillig Exp $
 #
 
 DISTNAME=	priv-1.0-beta2
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	YES
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 SUBST_CLASSES+=		sysconfdir
 SUBST_STAGE.sysconfdir=	post-configure
 SUBST_FILES.sysconfdir=	priv.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/05 23:55:09 rillig Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -34,8 +34,8 @@ USE_TOOLS+=		gmake
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
-CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-shared
 
 USE_TOOLS+=		chmod

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/12/05 20:50:44 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2005/12/05 23:55:13 rillig Exp $
 
 DISTNAME=		arla-0.38
 PKGREVISION=		2
@@ -32,8 +32,8 @@ PKG_FAIL_REASON+=	"${PKGNAME} requires kernel sources available under \$$BSDSRCD
 .  endif
 .endif
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE:Q}
 CONFIGURE_ARGS+=	--enable-shared=no
 
 # Enable one or more of the following kernel compile options as required:

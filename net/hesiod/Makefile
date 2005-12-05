@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:46 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/05 23:55:13 rillig Exp $
 
 DISTNAME=	hesiod-3.0.2
 CATEGORIES=	net
@@ -14,7 +14,7 @@ PKG_SKIP_REASON+=	"${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 CFLAGS.Darwin+=		-DBIND_8_COMPAT
 

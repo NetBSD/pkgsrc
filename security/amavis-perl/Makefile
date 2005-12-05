@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:54 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/05 23:55:16 rillig Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -53,8 +53,8 @@ CONFIGURE_ENV+=	file=${TOOLS_FILE_CMD:Q}
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
 
 CONFIGURE_ARGS+=--sysconfdir=${PREFIX}/etc/amavis
-CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR}
-CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO}
+CONFIGURE_ARGS+=--with-virusdir=${VIRUSDIR:Q}
+CONFIGURE_ARGS+=--with-mailto=${VIRUSMAILTO:Q}
 CONFIGURE_ARGS+=--enable-all
 CONFIGURE_ARGS+=--with-amavisuser=amavis
 
