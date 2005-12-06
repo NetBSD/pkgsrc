@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.419 2005/12/06 11:41:14 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.420 2005/12/06 13:16:23 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -893,12 +893,12 @@ sub parse_command_line() {
 # Loading pkglint-specific data from files, part 1.
 #
 
-my $get_make_vars_typemap_result = undef;
-sub get_make_vars_typemap() {
+my $get_vartypes_map_result = undef;
+sub get_vartypes_map() {
 	my ($fname, $vartypes);
 
-	if (defined($get_make_vars_typemap_result)) {
-		return $get_make_vars_typemap_result;
+	if (defined($get_vartypes_map_result)) {
+		return $get_vartypes_map_result;
 	}
 
 	$fname = conf_datadir."/makevars.map";
@@ -939,7 +939,7 @@ if (false) {
 	}
 }
 
-	return ($get_make_vars_typemap_result = $vartypes);
+	return ($get_vartypes_map_result = $vartypes);
 }
 
 my $get_deprecated_map_result = undef;
@@ -1863,6 +1863,64 @@ sub get_vartool_names() {
 # Procedures to check a single line, part 3.
 #
 
+sub checkline_mk_direct_tool_use($$$) {
+	my ($line, $text, $where) = @_;
+	my ($rest, $vartools);
+
+	return unless $opt_warn_directcmd;
+
+	$vartools = get_vartool_names();
+
+	$rest = $text;
+	while ($rest =~ s/^$regex_shellword//) {
+		my ($word) = ($1);
+
+		if (exists($vartools->{$word})) {
+			$line->log_warning("Possible direct use of tool \"${word}\" ${where}. Please use \$\{$vartools->{$word}\} instead.");
+		}
+	}
+}
+
+sub checkline_mk_dollar($$) {
+	my ($line, $text) = @_;
+
+	if ($text =~ qr"^[^#]*[^\$]\$(\w+)") {
+		my ($varname) = ($1);
+		$line->log_warning("\$$varname is ambiguous. Use \${$varname} if you mean a Makefile variable or \$\$$varname if you mean a shell variable.");
+	}
+}
+
+sub checkline_mk_shellcmd($$) {
+	my ($line, $shellcmd) = @_;
+
+	checkline_mk_direct_tool_use($line, $shellcmd, "in shell command");
+	checkline_mk_dollar($line, $shellcmd);
+}
+
+sub checkline_mk_varassign($$$$$) {
+	my ($line, $varname, $op, $value, $comment) = @_;
+	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
+
+	use constant direct_tools_ok_vars => array_to_hash(qw(
+		BUILDLINK_TRANSFORM BUILD_DEPENDS BUILD_TARGET
+		CFLAGS CPPFLAGS COMMENT CONFLICTS
+		DEPENDS DISTNAME
+		EXTRACT_SUFX EXTRACT_USING
+		INSTALL_TARGET INTERACTIVE_STAGE
+		MANSOURCEPATH MASTER_SITES
+		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON
+		SUBST_CLASSES
+		TEST_TARGET
+		USE_TOOLS
+	));
+
+	if (!exists(direct_tools_ok_vars->{$varbase}) && !exists(direct_tools_ok_vars->{$varname})) {
+		checkline_mk_direct_tool_use($line, $value, "in variable ${varname}");
+	}
+	checkline_mk_dollar($line, $value);
+	checkline_mk_vartype($line, $varname, $op, $value, $comment);
+}
+
 sub checkline_basic_vartype($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 	my ($value_novar);
@@ -2189,10 +2247,13 @@ sub checkline_basic_vartype($$$$$) {
 	}
 }
 
-sub checkline_Makefile_vartype($$) {
-	my ($line, $vartypes) = @_;
-	if ($line->text =~ regex_varassign) {
-		my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+sub checkline_mk_vartype($$$$$) {
+	my ($line, $varname, $op, $value, $comment) = @_;
+	my ($vartypes);
+
+	return unless $opt_warn_types;
+
+	$vartypes = get_vartypes_map();
 		my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
 		my $type = exists($vartypes->{$varname}) ? $vartypes->{$varname}
 			: exists($vartypes->{$varbase}) ? $vartypes->{$varbase}
@@ -2206,7 +2267,7 @@ sub checkline_Makefile_vartype($$) {
 
 		if (!defined($type)) {
 			if ($varname !~ qr"_MK$") {
-				$line->log_info("[checkline_Makefile_vartype] Unchecked variable ${varname}.");
+				$line->log_info("[checkline_mk_vartype] Unchecked variable ${varname}.");
 			}
 
 		} elsif ($type =~ qr"^List(!?)(\+?)(?: of (.*))?$") {
@@ -2243,32 +2304,11 @@ sub checkline_Makefile_vartype($$) {
 		} else {
 			checkline_basic_vartype($line, $varname, $type, $value, $comment);
 		}
-	}
 }
 
 #
 # Procedures to check an array of lines, part 3.
 #
-
-sub checklines_Makefile_varuse($) {
-	my ($lines) = @_;
-
-	# Check variable name quoting
-	foreach my $line (@{$lines}) {
-		if ($line->text =~ qr"^[^#]*[^\$]\$(\w+)") {
-			my ($varname) = ($1);
-			$line->log_warning("\$$varname is ambiguous. Use \${$varname} if you mean a Makefile variable or \$\$$varname if you mean a shell variable.");
-		}
-	}
-
-	if ($opt_warn_types) {
-		my $typemap = get_make_vars_typemap();
-
-		foreach my $line (@{$lines}) {
-			checkline_Makefile_vartype($line, $typemap);
-		}
-	}
-}
 
 sub checklines_deprecated_variables($) {
 	my ($lines) = @_;
@@ -2304,72 +2344,27 @@ sub checklines_deprecated_variables($) {
 	}
 }
 
-sub checklines_direct_tools($) {
-	my ($subr) = "checklines_direct_tools";
+sub checklines_mk($) {
 	my ($lines) = @_;
-
-	return if (!$opt_warn_directcmd);
-
-	log_info(NO_FILE, NO_LINE_NUMBER, "Checking direct use of tool names.");
-
-	my @ok_vars = qw(
-		BUILDLINK_TRANSFORM BUILD_DEPENDS
-		CFLAGS CPPFLAGS COMMENT CONFLICTS
-		DEPENDS DISTNAME
-		EXTRACT_SUFX EXTRACT_USING
-		INTERACTIVE_STAGE
-		MANSOURCEPATH MASTER_SITES
-		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON
-		SUBST_CLASSES
-		SUBST_MESSAGE\\..*
-		.*_TARGET
-		USE_TOOLS);
-
-	my $ok_vars = join("|", @ok_vars);
-	my $regex_ok_vars = qr"^(?:${ok_vars})$";
-	my $vartools = get_vartool_names();
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
-		my ($value, $where) = (undef);
 
-		if ($text =~ qr"^#" || $text =~ qr"^\s*$") {
-			# Skip comments and empty lines.
-
-		} elsif ($text =~ regex_varassign) {
-			my ($varname, undef, $varvalue) = ($1, $2, $3);
-
-			if ($varname !~ $regex_ok_vars) {
-				$value = $varvalue;
-				$where = "in variable ${varname}";
-			}
+		if ($text =~ regex_varassign) {
+			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+			checkline_mk_varassign($line, $varname, $op, $value, $comment);
 
 		} elsif ($text =~ regex_shellcmd) {
-			$value = $1;
-			$where = "in shell command";
-
-		} elsif ($text =~ qr"^\.") {
-			# Skip directives.
-
-		} elsif ($text =~ qr"^([-\w.\s]+):") {
-			# Skip dependency specifications.
+			my ($shellcmd) = ($1);
+			checkline_mk_shellcmd($line, $shellcmd);
 
 		} else {
-			$line->log_error("[internal:checklines_direct_tools] unknown line format.");
-		}
-
-		if (defined($value)) {
-			my ($rest) = ($value);
-
-			while ($rest =~ s/^$regex_shellword//) {
-				my ($word) = ($1);
-
-				if (exists($vartools->{$word})) {
-					$line->log_warning("Possible direct use of tool \"${word}\" ${where}. Please use \$\{$vartools->{$word}\} instead.");
-				}
-			}
+			# Ignore for now.
 		}
 	}
+
+	checklines_deprecated_variables($lines);
+	autofix($lines);
 }
 
 sub checklines_package_Makefile_varorder($) {
@@ -2767,6 +2762,7 @@ sub checklines_package_Makefile($) {
 		}
 	}
 
+	checklines_mk($lines);
 	checklines_trailing_empty_lines($lines);
 }
 
@@ -2902,11 +2898,7 @@ sub checkfile_mk($) {
 		return;
 	}
 
-	checklines_deprecated_variables($lines);
-	checklines_direct_tools($lines);
 	checklines_package_Makefile($lines);
-	checklines_Makefile_varuse($lines);
-	autofix($lines);
 }
 
 sub checkfile_package_Makefile($$$) {
@@ -2918,8 +2910,6 @@ sub checkfile_package_Makefile($$$) {
 	checkperms($fname);
 
 	# TODO: "Please use \${VARIABLE} instead of \$(VARIABLE)."
-
-	checklines_deprecated_variables($lines);
 
 	if (!exists($makevar->{"PLIST_SRC"})
 	    && !exists($makevar->{"NO_PKG_REGISTER"})
@@ -2937,8 +2927,6 @@ sub checkfile_package_Makefile($$$) {
 			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "File not found. Please run '".conf_make." makesum'.");
 		}
 	}
-
-	checklines_direct_tools($lines);
 
 	if ($whole =~ /etc\/rc\.d/) {
 		log_warning($fname, NO_LINE_NUMBER, "Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
@@ -2984,7 +2972,6 @@ sub checkfile_package_Makefile($$$) {
 	checklines_package_Makefile($lines);
 	# Disabled, as I don't like the current ordering scheme.
 	#checklines_package_Makefile_varorder($lines);
-	checklines_Makefile_varuse($lines);
 	autofix($lines);
 }
 
