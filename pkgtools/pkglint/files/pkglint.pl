@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.418 2005/12/06 01:07:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.419 2005/12/06 11:41:14 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -666,7 +666,7 @@ my (%checks) = (
 );
 
 my $opt_warn_absname	= true;
-my $opt_warn_directcmd	= true;
+my $opt_warn_directcmd	= false;
 my $opt_warn_order	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
@@ -1800,21 +1800,19 @@ sub get_regex_plurals() {
 	return $get_regex_plurals_value;
 }
 
-my $get_tool_names_value = undef;
-sub get_tool_names() {
+my $load_tool_names_tools = undef;
+my $load_tool_names_vartools = undef;
+sub load_tool_names() {
+	my ($tools, $vartools);
 
-	if (defined($get_tool_names_value)) {
-		return $get_tool_names_value;
-	}
-
-	my $tools = {};
+	$tools = {};
+	$vartools = {};
 	foreach my $file (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
 		my $fname = "${pkgsrcdir}/mk/tools/${file}.mk";
 		my $lines = load_lines($fname, true);
 
 		if (!$lines) {
 			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
-			next;
 		}
 
 		foreach my $line (@{$lines}) {
@@ -1823,7 +1821,11 @@ sub get_tool_names() {
 				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+)$") {
 					$tools->{$value} = true;
 
-				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD|_TOOLS_VARNAME)\.([-\w.]+|\[)$") {
+				} elsif ($varname =~ qr"^(?:_TOOLS_VARNAME)\.([-\w.]+)$") {
+					$tools->{$1} = true;
+					$vartools->{$1} = $value;
+
+				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD)\.([-\w.]+|\[)$") {
 					$tools->{$1} = true;
 
 				} elsif ($varname =~ qr"^_TOOLS\.") {
@@ -1835,9 +1837,26 @@ sub get_tool_names() {
 		}
 	}
 	log_debug(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
+	log_debug(NO_FILE, NO_LINE_NUMBER, "Known vartools: ".join(" ", sort(keys(%{$vartools}))));
 
-	$get_tool_names_value = $tools;
-	return $get_tool_names_value;
+	$load_tool_names_tools = $tools;
+	$load_tool_names_vartools = $vartools;
+}
+
+sub get_tool_names() {
+
+	if (!defined($load_tool_names_tools)) {
+		load_tool_names();
+	}
+	return $load_tool_names_tools;
+}
+
+sub get_vartool_names() {
+
+	if (!defined($load_tool_names_vartools)) {
+		load_tool_names();
+	}
+	return $load_tool_names_vartools;
 }
 
 #
@@ -2057,10 +2076,6 @@ sub checkline_basic_vartype($$$$$) {
 		}
 
 	} elsif ($type eq "Tool") {
-# FIXME: There are two different kinds of tools in pkgsrc.
-# I've asked jlam for appropriate checks. Until I get a
-# definite answer, this check will be disabled.
-if (false) {
 		if ($value =~ qr"^([-\w]+|\[)(?::(\w+))?$") {
 			my ($toolname, $tooldep) = ($1, $2);
 			if (!exists(get_tool_names()->{$toolname})) {
@@ -2072,7 +2087,6 @@ if (false) {
 		} else {
 			$line->log_error("Invalid tool syntax: \"${value}\".");
 		}
-}
 
 	} elsif ($type eq "URL") {
 		if ($value eq "" && defined($comment) && $comment =~ qr"^#") {
@@ -2298,29 +2312,6 @@ sub checklines_direct_tools($) {
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "Checking direct use of tool names.");
 
-	my @tools = qw(
-		awk
-		basename
-		cat chgrp chmod chown cmp cp cut
-		digest dirname
-		echo egrep
-		false file find
-		gmake grep gtar gzcat
-		id ident install
-		ldconfig ln
-		md5 mkdir mtree mv
-		patch pax pkg_add pkg_create pkg_delete pkg_info
-		rm rmdir sed setenv sh sort su
-		tail test touch tr true type
-		wc
-		xmkmf
-	);
-	my @cmd_tools = qw(
-		file gunzip gzip);
-	my $tools = join("|", @tools, @cmd_tools);
-	my $regex_tools = qr"${tools}";
-	my $regex_tools_with_context = qr"(?:^|\s|/)($regex_tools)(?:\s|$)";
-
 	my @ok_vars = qw(
 		BUILDLINK_TRANSFORM BUILD_DEPENDS
 		CFLAGS CPPFLAGS COMMENT CONFLICTS
@@ -2333,90 +2324,50 @@ sub checklines_direct_tools($) {
 		SUBST_MESSAGE\\..*
 		.*_TARGET
 		USE_TOOLS);
-	my @valid_shellcmds = (
-		qr"for file in",
-		qr"[.}]/${regex_tools}\b",
-		qr"(?:\./Build|\$\{(?:BJAM_CMD|JAM_COMMAND)\})\s+(?:install|test)",
-		qr"\$\{(?:GMAKE|MAKE_PROGRAM)\}\s+(?:install)",
-		qr"\"[^\"]*${regex_tools}[^\"]*\"",
-		qr"\'[^\']*${regex_tools}[^\']*\'",
-		qr"#.*",
-	);
-
-	my %toolvar = ();
-	foreach my $tool (@tools) {
-		$toolvar{$tool} = uc($tool);
-	}
-	foreach my $tool (@cmd_tools) {
-		$toolvar{$tool} = uc($tool)."_CMD";
-	}
 
 	my $ok_vars = join("|", @ok_vars);
 	my $regex_ok_vars = qr"^(?:${ok_vars})$";
-	my $valid_shellcmds = join("|", @valid_shellcmds);
-	my $regex_valid_shellcmds = qr"(?:${valid_shellcmds})";
-
-	log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] regex_tools=${regex_tools}");
-	log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] regex_ok_vars=${regex_ok_vars}");
-	log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] regex_valid_shellcmds=${regex_valid_shellcmds}");
+	my $vartools = get_vartool_names();
 
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
+		my ($value, $where) = (undef);
 
-		next unless ($text =~ $regex_tools_with_context);
-		my ($tool) = ($1);
+		if ($text =~ qr"^#" || $text =~ qr"^\s*$") {
+			# Skip comments and empty lines.
 
-		# skip comments
-		if ($text =~ qr"^#") {
-
-		# process variable assignments
 		} elsif ($text =~ regex_varassign) {
 			my ($varname, undef, $varvalue) = ($1, $2, $3);
 
-			if ($varname =~ $regex_ok_vars) {
-				$line->log_info("Legitimate direct use of tool \"${tool}\" in variable ${varname}.");
-			} elsif ($varvalue =~ $regex_tools_with_context) {
-				$line->log_warning("Possible direct use of tool \"${tool}\" in variable ${varname}. Please use \$\{$toolvar{$tool}\} instead.");
-			} else {
-				# the tool name has appeared in the comment
+			if ($varname !~ $regex_ok_vars) {
+				$value = $varvalue;
+				$where = "in variable ${varname}";
 			}
 
-		# process shell commands
 		} elsif ($text =~ regex_shellcmd) {
-			my ($shellcmd) = ($1);
-			my ($short_shellcmd, $remaining_shellcmd) = ($shellcmd, $shellcmd);
+			$value = $1;
+			$where = "in shell command";
 
-			# Remove known legitimate uses from the string
-			$remaining_shellcmd =~ s,$regex_valid_shellcmds,,g;
-
-			# As shell commands tend to become long, extract
-			# the relevant part only.
-			if ($short_shellcmd =~ qr"(.{0,15})\Q${tool}\E(.{0,15})") {
-				my ($before, $after) = ($1, $2);
-
-				if (length($before) == 15) {
-					$before = "...${before}";
-				}
-				if (length($after) == 15) {
-					$after = "${after}...";
-				}
-				$short_shellcmd = "${before}${tool}${after}";
-			}
-
-			if ($remaining_shellcmd =~ $regex_tools_with_context) {
-				$line->log_warning("Possible direct use of tool \"${tool}\" in shell command \"${short_shellcmd}\". Please use \$\{$toolvar{$tool}\} instead.");
-			} else {
-				$line->log_info("Legitimate direct use of tool \"${tool}\" in shell command \"${short_shellcmd}\".");
-			}
-
-		# skip processing directives
 		} elsif ($text =~ qr"^\.") {
+			# Skip directives.
 
-		# skip dependency specifications
-		} elsif ($text =~ qr"^([-\w.]+):") {
+		} elsif ($text =~ qr"^([-\w.\s]+):") {
+			# Skip dependency specifications.
 
 		} else {
 			$line->log_error("[internal:checklines_direct_tools] unknown line format.");
+		}
+
+		if (defined($value)) {
+			my ($rest) = ($value);
+
+			while ($rest =~ s/^$regex_shellword//) {
+				my ($word) = ($1);
+
+				if (exists($vartools->{$word})) {
+					$line->log_warning("Possible direct use of tool \"${word}\" ${where}. Please use \$\{$vartools->{$word}\} instead.");
+				}
+			}
 		}
 	}
 }
@@ -3462,6 +3413,7 @@ sub checkitem($) {
 
 sub main() {
 
+	$| = true;
 	parse_command_line();
 
 	@todo_items = (@ARGV != 0) ? @ARGV : (".");
