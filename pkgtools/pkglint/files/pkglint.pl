@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.427 2005/12/06 17:37:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.428 2005/12/06 22:07:35 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1654,6 +1654,7 @@ sub checkline_mk_shellcmd($$) {
 	checkline_mk_shelltext($line, $shellcmd);
 }
 
+sub checkline_mk_vartype_basic($$$$$);
 sub checkline_mk_vartype_basic($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 	my ($value_novar);
@@ -1796,6 +1797,16 @@ sub checkline_mk_vartype_basic($$$$$) {
 	} elsif ($type eq "PkgName") {
 		if ($value eq $value_novar && $value !~ regex_pkgname) {
 			$line->log_warning("\"${value}\" is not a valid package name. A valid package name has the form packagename-version, where version consists only of digits, letters and dots.");
+		}
+
+	} elsif ($type eq "PkgOptionsVar") {
+		checkline_mk_vartype_basic($line, $varname, "Varname", $value, $comment);
+		if ($value =~ qr"\$\{PKGBASE[:\}]") {
+			$line->log_error("PKGBASE must not be used in PKG_OPTIONS_VAR.");
+			$line->explain(
+				"PKGBASE is defined in bsd.pkg.mk, which is included as the",
+				"very last file, but PKG_OPTIONS_VAR is evaluated earlier.",
+				"Use \${PKGNAME:C/-[0-9].*//} instead.");
 		}
 
 	} elsif ($type eq "PkgRevision") {
@@ -2767,11 +2778,15 @@ sub checkfile_patches_patch($) {
 				__mips
 				__sparc
 
+				__APPLE__
+				__bsdi__
+				__CYGWIN__
 				__DragonFly__
-				__FreeBSD__
+				__FreeBSD__ __FreeBSD_version
 				__INTERIX
 				__linux__
-				__NetBSD__
+				__MINGW32__
+				__NetBSD__ __NetBSD_Version_
 				__OpenBSD__
 				__SVR4
 				__sun
