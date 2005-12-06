@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/06 22:42:25 wiz Exp $
+bin/gate
+man/man1/gate.1
+share/gate.help
