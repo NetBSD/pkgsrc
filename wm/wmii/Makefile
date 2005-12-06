@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 20:51:10 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/06 18:55:32 rillig Exp $
 #
 
-DISTNAME=	wmii-20051031
+DISTNAME=	wmii-20051114
 CATEGORIES=	wm x11
 MASTER_SITES=	http://wmii.de/snaps/
 
@@ -24,8 +24,7 @@ SUBST_SED.vars+=	-e 's|9PREFIX|${PREFIX}|g'
 
 PKG_SYSCONFSUBDIR=	wmii-3
 EGDIR=			${PREFIX}/share/examples/wmii-3
-EGFILES=		_clabel extern progmenu rcmenu status	\
-			wmirc _plabel kmode quit rmpg welcome
+EGFILES=		extern kmode quit status welcome wmirc
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
