@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/06 17:19:21 rillig Exp $
 
 DISTNAME=		convmv-1.08
 CATEGORIES=		converters
@@ -33,7 +33,7 @@ REPLACE_PERL+=		${WRKSRC}/convmv
 SUBST_CLASSES+=		convmv
 SUBST_STAGE.convmv=	pre-configure
 SUBST_FILES.convmv=	${WRKSRC}/suite/dotests.sh
-SUBST_SED.convmv=	1s|/bin/sh|${SH}|
+SUBST_SED.convmv+=	"1s|/bin/sh|${SH}|"
 
 TEST_TARGET=		test
 
