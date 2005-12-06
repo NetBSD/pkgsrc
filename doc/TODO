@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4245 2005/12/06 20:08:33 ben Exp $
+$NetBSD: TODO,v 1.4246 2005/12/06 23:49:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -949,7 +949,6 @@ Suggested package updates
 	o p5-perl-ldap-0.3202
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.41
-	o p7zip-4.30
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
