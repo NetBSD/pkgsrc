@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2005/11/04 22:20:37 dbj Exp $
+$NetBSD: distinfo,v 1.8 2005/12/06 23:56:06 wiz Exp $
 
-SHA1 (cdrtools-2.01.01a01.tar.bz2) = a55443f1ff9419155b403a6cd3dfcbdd2159d199
-RMD160 (cdrtools-2.01.01a01.tar.bz2) = 2f07b2364a966d9950d01a4d138f5e4fd7e9ceab
-Size (cdrtools-2.01.01a01.tar.bz2) = 1403282 bytes
-SHA1 (cdrtools-2.01.01a01-ossdvd.patch.bz2) = f58e6267fd3babbceecdb6484ee74f9f053ac3e9
-RMD160 (cdrtools-2.01.01a01-ossdvd.patch.bz2) = e7472a00ed2f5e08fe43522c1843ffcaf9d57d3f
-Size (cdrtools-2.01.01a01-ossdvd.patch.bz2) = 15843 bytes
+SHA1 (cdrtools-2.01.01a03.tar.bz2) = 165d4f687841a6cd99c72a50c5ee206c50e69a26
+RMD160 (cdrtools-2.01.01a03.tar.bz2) = 9d0f2d7967637af13ade7d3b3cf467196d1aaf71
+Size (cdrtools-2.01.01a03.tar.bz2) = 1423541 bytes
+SHA1 (cdrtools-2.01.01a03-ossdvd.patch.bz2) = ac5f637bb73fdc8fd010dd79919be6154881dc0e
+RMD160 (cdrtools-2.01.01a03-ossdvd.patch.bz2) = 55fc7214221d8808d17ee774b21f1fdd6412b9b2
+Size (cdrtools-2.01.01a03-ossdvd.patch.bz2) = 15638 bytes
 SHA1 (patch-ac) = 0d9217924ed353b1c23bac1ffd8b2ee69eda8f47
 SHA1 (patch-ah) = 34ecab01125bcac2a28e295b198edce0de8b8777
 SHA1 (patch-ai) = 5f705fca108ebe132f6c51590d21f2b7667b1521
