@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.424 2005/12/06 15:47:14 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.425 2005/12/06 16:13:28 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1542,7 +1542,7 @@ sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
 	my ($rest);
 
-	if ($text =~ qr"^[^#]*[^\$]\$(\w+)") {
+	if ($text =~ qr"^(?:[^#]*[^\$])?\$(\w+)") {
 		my ($varname) = ($1);
 		$line->log_warning("\$$varname is ambiguous. Use \${$varname} if you mean a Makefile variable or \$\$$varname if you mean a shell variable.");
 	}
@@ -1558,7 +1558,7 @@ sub checkline_mk_text($$) {
 	}
 
 	$rest = $text;
-	while ($rest =~ s/\$\{([-A-Z0-9a-z_]+)(?::[^\}]+)\}//) {
+	while ($rest =~ s/\$\{([-A-Z0-9a-z_]+)(?::[^\}]+)?\}//) {
 		my ($varname) = ($1);
 
 		if (exists(get_deprecated_map()->{$varname})) {
@@ -2203,30 +2203,11 @@ sub checklines_multiple_patches($) {
 	}
 }
 
-sub checklines_mk($) {
-	my ($lines) = @_;
-
-	foreach my $line (@{$lines}) {
-		my $text = $line->text;
-
-		if ($text =~ regex_varassign) {
-			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
-			checkline_mk_varassign($line, $varname, $op, $value, $comment);
-
-		} elsif ($text =~ regex_shellcmd) {
-			my ($shellcmd) = ($1);
-			checkline_mk_shellcmd($line, $shellcmd);
-
-		} else {
-			# Ignore for now.
-		}
-	}
-
-	autofix($lines);
-}
-
 sub checklines_package_Makefile_varorder($) {
 	my ($lines) = @_;
+
+	# Disabled, as I don't like the current ordering scheme.
+	return;
 
 # TODO: Add support for optional sections with non-optional variables.
 
@@ -2367,7 +2348,7 @@ sub checklines_package_Makefile_varorder($) {
 # This subroutine contains "local" checks that can be made looking only
 # at a single line at a time. The other checks are in
 # checkfile_package_Makefile.
-sub checklines_package_Makefile($) {
+sub checklines_mk($) {
 	my ($lines) = @_;
 	my ($allowed_targets, $for_variables) = ({}, {});
 
@@ -2384,10 +2365,12 @@ sub checklines_package_Makefile($) {
 			# Ignore empty lines and comments
 
 		} elsif ($text =~ regex_varassign) {
-			# Is already checked by checklines_mk().
+			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+			checkline_mk_varassign($line, $varname, $op, $value, $comment);
 
 		} elsif ($text =~ regex_shellcmd) {
-			# Is already checked by checklines_mk().
+			my ($shellcmd) = ($1);
+			checkline_mk_shellcmd($line, $shellcmd);
 
 		} elsif ($text =~ regex_mk_include) {
 			my ($includefile) = ($1);
@@ -2475,7 +2458,6 @@ sub checklines_package_Makefile($) {
 		}
 	}
 
-	checklines_mk($lines);
 	checklines_trailing_empty_lines($lines);
 }
 
@@ -2681,7 +2663,7 @@ sub checkfile_mk($) {
 		return;
 	}
 
-	checklines_package_Makefile($lines);
+	checklines_mk($lines);
 }
 
 sub checkfile_package_Makefile($$$) {
@@ -2752,9 +2734,8 @@ sub checkfile_package_Makefile($$$) {
 		$makevar->{"USE_X11"}->log_note("... USE_X11 superfluous.");
 	}
 
-	checklines_package_Makefile($lines);
-	# Disabled, as I don't like the current ordering scheme.
-	#checklines_package_Makefile_varorder($lines);
+	checklines_mk($lines);
+	checklines_package_Makefile_varorder($lines);
 	autofix($lines);
 }
 
