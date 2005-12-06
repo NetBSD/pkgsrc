@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.426 2005/12/06 17:32:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.427 2005/12/06 17:37:06 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1654,81 +1654,6 @@ sub checkline_mk_shellcmd($$) {
 	checkline_mk_shelltext($line, $shellcmd);
 }
 
-sub checkline_mk_varassign($$$$$) {
-	my ($line, $varname, $op, $value, $comment) = @_;
-	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
-
-	use constant non_shellcode_vars => array_to_hash(qw(
-		BUILDLINK_TRANSFORM BUILD_DEPENDS BUILD_TARGET
-		CATEGORIES CFLAGS CPPFLAGS COMMENT CONFLICTS
-		DEPENDS DISTNAME
-		EXTRACT_SUFX EXTRACT_USING
-		INSTALL_TARGET INTERACTIVE_STAGE
-		MANSOURCEPATH MASTER_SITES
-		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON PKG_SUGGESTED_OPTIONS PKG_SUPPORTED_OPTIONS PRINT_PLIST_AWK
-		REPLACE_INTERPRETER RESTRICTED
-		SUBST_CLASSES SUBST_MESSAGE
-		TEST_TARGET
-		USE_TOOLS
-	));
-
-	checkline_mk_text($line, $value);
-	if (!exists(non_shellcode_vars->{$varbase}) && !exists(non_shellcode_vars->{$varname})) {
-		checkline_mk_shelltext($line, $value);
-	}
-	checkline_mk_vartype($line, $varname, $op, $value, $comment);
-
-			
-	if ($varname =~ qr"^_") {
-		$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
-	}
-
-	if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
-		my ($guess) = ($1);
-		$guess =~ s/-/\//g;
-		$guess = "auto/${guess}/.packlist";
-
-		my ($ucvalue, $ucguess) = (uc($value), uc($guess));
-		if ($ucvalue ne $ucguess && $ucvalue ne "\${PERL5_SITEARCH\}/${ucguess}") {
-			$line->log_warning("Unusual value for PERL5_PACKLIST -- \"${guess}\" expected.");
-		}
-	}
-
-	if ($varname eq "SVR4_PKGNAME") {
-		if ($value =~ regex_unresolved) {
-			$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
-		} elsif (length($value) > 5) {
-			$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
-		}
-	}
-
-	if (defined($comment) && $comment eq "# defined" && $varname !~ qr".*(?:_MK|_COMMON)$") {
-		$line->log_warning("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".");
-	}
-
-	if ($varname =~ qr"^NO_(.*)_ON_(.*)$") {
-		my ($what, $where) = ($1, $2);
-		if (($what ne "SRC" && $what ne "BIN") || ($where ne "FTP" && $where ne "CDROM")) {
-			$line->log_error("Misspelled variable: Valid names are USE_{BIN,SRC}_ON_{FTP,CDROM}.");
-		}
-	}
-
-	if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {
-		my ($pkgvarname) = ($1);
-		if ($varname =~ qr"^PKG_.*_REASON$") {
-			# ok
-		} elsif ($varname =~ qr"^(?:DIST_SUBDIR|WRKSRC)$") {
-			$line->log_warning("${pkgvarname} should not be used in ${varname}, as it sometimes includes the PKGREVISION. Please use ${pkgvarname}_NOREV instead.");
-		} else {
-			$line->log_info("Use of PKGNAME in ${varname}.");
-		}
-	}
-
-	if (exists(get_deprecated_map()->{$varname})) {
-		$line->log_warning("Definition of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
-	}
-}
-
 sub checkline_mk_vartype_basic($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 	my ($value_novar);
@@ -2112,6 +2037,81 @@ sub checkline_mk_vartype($$$$$) {
 		} else {
 			checkline_mk_vartype_basic($line, $varname, $type, $value, $comment);
 		}
+}
+
+sub checkline_mk_varassign($$$$$) {
+	my ($line, $varname, $op, $value, $comment) = @_;
+	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
+
+	use constant non_shellcode_vars => array_to_hash(qw(
+		BUILDLINK_TRANSFORM BUILD_DEPENDS BUILD_TARGET
+		CATEGORIES CFLAGS CPPFLAGS COMMENT CONFLICTS
+		DEPENDS DISTNAME
+		EXTRACT_SUFX EXTRACT_USING
+		INSTALL_TARGET INTERACTIVE_STAGE
+		MANSOURCEPATH MASTER_SITES
+		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON PKG_SUGGESTED_OPTIONS PKG_SUPPORTED_OPTIONS PRINT_PLIST_AWK
+		REPLACE_INTERPRETER RESTRICTED
+		SUBST_CLASSES SUBST_MESSAGE
+		TEST_TARGET
+		USE_TOOLS
+	));
+
+	checkline_mk_text($line, $value);
+	if (!exists(non_shellcode_vars->{$varbase}) && !exists(non_shellcode_vars->{$varname})) {
+		checkline_mk_shelltext($line, $value);
+	}
+	checkline_mk_vartype($line, $varname, $op, $value, $comment);
+
+			
+	if ($varname =~ qr"^_") {
+		$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
+	}
+
+	if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
+		my ($guess) = ($1);
+		$guess =~ s/-/\//g;
+		$guess = "auto/${guess}/.packlist";
+
+		my ($ucvalue, $ucguess) = (uc($value), uc($guess));
+		if ($ucvalue ne $ucguess && $ucvalue ne "\${PERL5_SITEARCH\}/${ucguess}") {
+			$line->log_warning("Unusual value for PERL5_PACKLIST -- \"${guess}\" expected.");
+		}
+	}
+
+	if ($varname eq "SVR4_PKGNAME") {
+		if ($value =~ regex_unresolved) {
+			$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
+		} elsif (length($value) > 5) {
+			$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
+		}
+	}
+
+	if (defined($comment) && $comment eq "# defined" && $varname !~ qr".*(?:_MK|_COMMON)$") {
+		$line->log_warning("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".");
+	}
+
+	if ($varname =~ qr"^NO_(.*)_ON_(.*)$") {
+		my ($what, $where) = ($1, $2);
+		if (($what ne "SRC" && $what ne "BIN") || ($where ne "FTP" && $where ne "CDROM")) {
+			$line->log_error("Misspelled variable: Valid names are USE_{BIN,SRC}_ON_{FTP,CDROM}.");
+		}
+	}
+
+	if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {
+		my ($pkgvarname) = ($1);
+		if ($varname =~ qr"^PKG_.*_REASON$") {
+			# ok
+		} elsif ($varname =~ qr"^(?:DIST_SUBDIR|WRKSRC)$") {
+			$line->log_warning("${pkgvarname} should not be used in ${varname}, as it sometimes includes the PKGREVISION. Please use ${pkgvarname}_NOREV instead.");
+		} else {
+			$line->log_info("Use of PKGNAME in ${varname}.");
+		}
+	}
+
+	if (exists(get_deprecated_map()->{$varname})) {
+		$line->log_warning("Definition of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
+	}
 }
 
 #
