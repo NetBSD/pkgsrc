@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/10/29 01:43:18 grant Exp $
+$NetBSD: distinfo,v 1.8 2005/12/06 17:47:56 joerg Exp $
 
 SHA1 (libmpeg3-1.3.tar.gz) = e7e8b03ab45d5593558b0d19e31f0694cfdfa2b5
 RMD160 (libmpeg3-1.3.tar.gz) = b1751f681d26758873746aa38368150eb0a4bafd
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = 88e1c193bb00056f757830c98f6bbbc58c1b16da
 SHA1 (patch-ab) = 3223b9f7d81dd73eec6767f9e1bb2cb26b4bcd80
 SHA1 (patch-ac) = 68576efb30a0d6f4cfe23fd543a04c4f3ada8936
 SHA1 (patch-ad) = 86edf9af264370bf89050b02e956b5bacc86881e
-SHA1 (patch-ae) = 411443571371b2f964ab6408ee5be217f8ca7896
+SHA1 (patch-ae) = 5418e29f4f5c30f235cfb075d99c0022d0ad2394
 SHA1 (patch-af) = 7e62a236ee0a7398c1b1a3e994261ebb9be50bae
 SHA1 (patch-ag) = bf321ac689b82889ca1a2bb8a96cb6e387280f32
 SHA1 (patch-ah) = 58ffda3df9be3b089de362451ddf249a74fac5be
