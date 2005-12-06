@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4247 2005/12/06 23:53:52 wiz Exp $
+$NetBSD: TODO,v 1.4248 2005/12/06 23:57:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -412,7 +412,6 @@ Suggested package updates
 	o cdlabelgen-3.6.0
 	o cdrdao-1.2.1
 	o cdrtools-2.01.01a03
-	o cdrtools-ossdvd-2.01.01a03
 	o cfengine2-2.1.17
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
