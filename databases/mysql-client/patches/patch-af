@@ -1,8 +1,17 @@
-$NetBSD: patch-af,v 1.10 2004/11/09 06:11:48 xtraeme Exp $
+$NetBSD: patch-af,v 1.11 2005/12/06 19:31:24 joerg Exp $
 
 --- configure.orig	2004-11-08 20:11:05.000000000 +0100
 +++ configure	2004-11-08 20:12:44.000000000 +0100
-@@ -22842,10 +22842,7 @@
+@@ -20819,7 +20819,7 @@ then
+   FIND_PROC="$PS \$\$PID | grep -v grep | grep mysqld > /dev/null"
+ else
+   case $SYSTEM_TYPE in
+-    *freebsd*)
++    *freebsd*|*dragonfly*)
+       FIND_PROC="$PS p \$\$PID | grep -v grep | grep mysqld > /dev/null"
+       ;;
+     *darwin*)
+@@ -23938,10 +23938,7 @@ int main(int argv, char **argc)
    return 0;
  }
  
@@ -13,7 +22,17 @@ $NetBSD: patch-af,v 1.10 2004/11/09 06:11:48 xtraeme Exp $
  
  _ACEOF
  rm -f conftest$ac_exeext
-@@ -32058,34 +32055,10 @@
+@@ -24891,6 +24888,9 @@ case $SYSTEM_TYPE in
+       MAX_C_OPTIMIZE="-O"
+     fi
+     ;;
++  *dragonfly*)
++    CXXFLAGS="$CXXFLAGS -DMYSQLD_NET_RETRY_COUNT=1000000"
++    ;;
+   *freebsd*)
+     echo "Adding fix for interrupted reads"
+     OSVERSION=`sysctl -a | grep osreldate | awk '{ print $2 }'`
+@@ -34070,34 +34070,10 @@ else
    mysqlfs=no
  fi;
  
@@ -48,7 +67,7 @@ $NetBSD: patch-af,v 1.10 2004/11/09 06:11:48 xtraeme Exp $
  
    echo "$as_me:$LINENO: checking if we should build MySQLFS" >&5
  echo $ECHO_N "checking if we should build MySQLFS... $ECHO_C" >&6
-@@ -32358,7 +32331,7 @@
+@@ -34370,7 +34346,7 @@ then
  else
    bench_dirs=""
  fi
