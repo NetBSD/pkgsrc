@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.421 2005/12/06 13:23:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.422 2005/12/06 14:15:02 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1271,507 +1271,35 @@ sub resolve_relative_path($) {
 	return $relpath;
 }
 
-#
-# Subroutines to check a single line.
-#
+sub expand_variable($$) {
+	my ($whole, $varname) = @_;
+	my ($value, $re);
 
-sub checkline_length($$) {
-	my ($line, $maxlength) = @_;
-
-	if (length($line->text) > $maxlength) {
-		$line->log_warning("Line too long (should be no more than $maxlength characters).");
-		$line->explain(
-			"Back in the old time, terminals with 80x25 characters were common.",
-			"And this is still the default size of many terminal emulators.",
-			"Moderately short lines also make reading easier.");
-	}
-}
-
-sub checkline_valid_characters($$) {
-	my ($line, $re_validchars) = @_;
-	my ($rest);
-
-	($rest = $line->text) =~ s/$re_validchars//g;
-	if ($rest ne "") {
-		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
-		$line->log_warning(sprintf("Line contains invalid characters (%s).", join(", ", @chars)));
-	}
-}
-
-sub checkline_valid_characters_in_variable($$) {
-	my ($line, $re_validchars) = @_;
-	my ($varname, $rest);
-
-	$rest = $line->text;
-	if ($rest =~ regex_varassign) {
-		($varname, undef, $rest) = ($1, $2, $3);
-	} else {
-		return;
-	}
-
-	$rest =~ s/$re_validchars//g;
-	if ($rest ne "") {
-		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
-		$line->log_warning(sprintf("${varname} contains invalid characters (%s).", join(", ", @chars)));
-	}
-}
-
-sub checkline_trailing_whitespace($) {
-	my ($line) = @_;
-	if ($line->text =~ /\s+$/) {
-		$line->log_note("Trailing white-space.");
-	}
-}
-
-sub checkline_rcsid_regex($$$) {
-	my ($line, $prefix_regex, $prefix) = @_;
-	my ($id) = ($opt_rcsidstring . ($is_wip ? "|Id" : ""));
-
-	if ($line->text !~ qr"^${prefix_regex}\$(${id})(?::[^\$]*|)\$$") {
-		$line->log_error("\"${prefix}\$${opt_rcsidstring}\$\" expected.");
-		return false;
-	}
-	return true;
-}
-
-sub checkline_rcsid($$) {
-	my ($line, $prefix) = @_;
-	checkline_rcsid_regex($line, quotemeta($prefix), $prefix);
-}
-
-sub checkline_relative_path($$) {
-	my ($line, $path) = @_;
-
-	if (!$is_wip && $path =~ qr"/wip/") {
-		$line->log_error("A pkgsrc package must not depend on any outside package.");
-	}
-	$path = resolve_relative_path($path);
-	if ($path =~ regex_unresolved) {
-		$line->log_info("Unresolved path: \"${path}\".");
-	} elsif (!-e "${current_dir}/${path}") {
-		$line->log_error("\"${path}\" does not exist.");
-	}
-}
-
-#
-# Procedures to check an array of lines, part 1.
-#
-
-sub checklines_trailing_empty_lines($) {
-	my ($lines) = @_;
-	my ($last, $max);
-
-	$max = $#{$lines} + 1;
-	for ($last = $max; $last > 1 && $lines->[$last - 1]->text eq ""; ) {
-		$last--;
-	}
-	if ($last != $max) {
-		$lines->[$last]->log_note("Trailing empty lines.");
-	}
-}
-
-#
-# Procedures to check a file, part 1.
-#
-
-sub checkfile_DESCR($) {
-	my ($fname) = @_;
-	my ($maxchars, $maxlines) = (80, 24);
-	my ($descr);
-
-	log_info($fname, NO_LINE_NUMBER, "[checkfile_DESCR]");
-
-	checkperms($fname);
-	if (!($descr = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
-	if (@{$descr} == 0) {
-		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return;
-	}
-
-	foreach my $line (@{$descr}) {
-		checkline_length($line, $maxchars);
-		checkline_trailing_whitespace($line);
-		checkline_valid_characters($line, regex_validchars);
-	}
-	checklines_trailing_empty_lines($descr);
-
-	if (@{$descr} > $maxlines) {
-		my $line = $descr->[$maxlines];
-
-		$line->log_warning("File too long (should be no more than $maxlines lines).");
-		$line->explain(
-			"A common terminal size is 80x25 characters. The DESCR file should",
-			"fit on one screen. It is also intended to give a _brief_ summary",
-			"about the package's contents.");
-	}
-}
-
-sub checkfile_distinfo($) {
-	my ($fname) = @_;
-	my ($lines, %in_distinfo, %sums);
-
-	log_info($fname, NO_LINE_NUMBER, "[checkfile_distinfo]");
-
-	checkperms($fname);
-	if (!($lines = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
-
-	if (@{$lines} == 0) {
-		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return;
-	}
-
-	checkline_rcsid($lines->[0], "");
-	if (1 <= $#{$lines} && $lines->[1]->text ne "") {
-		$lines->[1]->log_warning("Empty line expected.");
-		$lines->[1]->explain("This is merely for aesthetical purposes.");
-	}
-
-	foreach my $line (@{$lines}[2..$#{$lines}]) {
-		if ($line->text !~ /^(MD5|SHA1|RMD160|Size) \(([^)]+)\) = (.*)(?: bytes)?$/) {
-			$line->log_error("Unknown line type.");
-			next;
-		}
-
-		my ($alg, $file, $sum) = ($1, $2, $3);
-
-		if ($file =~ /^patch-[A-Za-z0-9]+$/) {
-			if (open(PATCH, "< ${current_dir}/${patchdir}/${file}")) {
-				my $data = "";
-				foreach my $patchline (<PATCH>) {
-					$data .= $patchline unless $patchline =~ qr"\$NetBSD.*\$";
-				}
-				close(PATCH);
-				my $chksum = Digest::SHA1::sha1_hex($data);
-				if ($sum ne $chksum) {
-					$line->log_error("${alg} checksum of $file differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
-				}
-			} elsif (!$hack_php_patches) {
-				$line->log_warning("$file does not exist.");
-				$line->explain(
-					"All patches that are mentioned in a distinfo file should actually exist.",
-					"What's the use of a checksum if there is no file to check?");
-			}
-		} else {
-			$sums{$alg}->{$file} = $line;
-		}
-		$in_distinfo{$file} = true;
-	}
-	checklines_trailing_empty_lines($lines);
-
-	# Check for distfiles that have SHA1, but not RMD160 checksums
-	foreach my $sha1_file (sort(keys(%{$sums{"SHA1"}}))) {
-		if (!exists($sums{"RMD160"}->{$sha1_file})) {
-			$sums{"SHA1"}->{$sha1_file}->log_error("RMD160 checksum missing for \"${sha1_file}\".");
+	$re = qr"\n${varname}([+:?]?)=[ \t]*([^\n#]*)";
+	$value = undef;
+	while ($whole =~ m/$re/g) {
+		my ($op, $val) = ($1, $2);
+		if ($op ne "?" || !defined($value)) {
+			$value = $val;
 		}
 	}
-
-	foreach my $patch (<${current_dir}/$patchdir/patch-*>) {
-		$patch = basename($patch);
-		if (!exists($in_distinfo{$patch})) {
-			log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '".conf_make." makepatchsum'.");
-		}
+	if (!defined($value)) {
+		return undef;
 	}
+
+	$value = resolve_relative_path($value);
+	if ($value =~ regex_unresolved) {
+		log_info(NO_FILE, NO_LINE_NUMBER, "[expand_variable] The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
+	}
+	return $value;
 }
 
-sub checkfile_MESSAGE($) {
-	my ($fname) = @_;
-	my ($message);
+sub set_default_value($$) {
+	my ($varref, $value) = @_;
 
-	my @explanation = (
-		"A MESSAGE file should consist of a header line, having 75 \"=\"",
-		"characters, followed by a line containing only the RCS Id, then an",
-		"empty line, your text and finally the footer line, which is the",
-		"same as the header line.");
-
-	log_info($fname, NO_LINE_NUMBER, "[checkfile_MESSAGE]");
-
-	checkperms($fname);
-	if (!($message = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
+	if (!defined(${$varref}) || ${$varref} =~ regex_unresolved) {
+		${$varref} = $value;
 	}
-
-	if (@{$message} < 3) {
-		log_warning($fname, NO_LINE_NUMBER, "File too short.");
-		explain($fname, NO_LINE_NUMBER, @explanation);
-		return;
-	}
-	if ($message->[0]->text ne "=" x 75) {
-		$message->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
-		explain($fname, NO_LINE_NUMBER, @explanation);
-	}
-	checkline_rcsid($message->[1], "");
-	foreach my $line (@{$message}) {
-		checkline_length($line, 80);
-		checkline_trailing_whitespace($line);
-		checkline_valid_characters($line, regex_validchars);
-	}
-	if ($message->[-1]->text ne "=" x 75) {
-		$message->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
-		explain($fname, NO_LINE_NUMBER, @explanation);
-	}
-	checklines_trailing_empty_lines($message);
-}
-
-sub checkfile_PLIST($) {
-	my ($fname) = @_;
-	my ($plist, $last_file_seen);
-
-	log_info($fname, NO_LINE_NUMBER, "[checkfile_PLIST]");
-
-	checkperms($fname);
-	if (!($plist = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
-	if (@{$plist} == 0) {
-		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return;
-	}
-	checkline_rcsid($plist->[0], "\@comment ");
-
-	line:
-	foreach my $line (@{$plist}) {
-		my $text = $line->text;
-
-		checkline_trailing_whitespace($line);
-
-		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
-			my ($cmd, $arg) = ($1, $2);
-
-			if ($cmd eq "unexec" && $arg =~ qr"^(rmdir|\$\{RMDIR\} \%D/)(.*)") {
-				my ($rmdir, $rest) = ($1, $2);
-				if ($rest !~ qr"(?:true|\$\{TRUE\})") {
-					$line->log_warning("Please use \"\@dirrm\" instead of \"\@unexec rmdir\".");
-				}
-
-			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
-				if ($arg =~ /(?:install-info|\$\{INSTALL_INFO\})/) {
-					$line->log_warning("\@exec/unexec install-info is deprecated.");
-
-				} elsif ($arg =~ /ldconfig/ && $arg !~ qr"/usr/bin/true") {
-					$line->log_error("ldconfig must be used with \"||/usr/bin/true\".");
-				}
-
-			} elsif ($cmd eq "comment" || $cmd eq "dirrm") {
-				# nothing to do
-
-			} else {
-				$line->log_warning("Unknown PLIST directive \"\@$cmd\".");
-			}
-
-		} elsif ($text =~ qr"^[A-Za-z0-9\$]") {
-			if ($opt_warn_plist_sort && $text =~ qr"^\w" && $text !~ regex_unresolved) {
-				if (defined($last_file_seen)) {
-					if ($last_file_seen gt $text) {
-						$line->log_warning("${text} should be sorted before ${last_file_seen}.");
-					}
-				}
-				$last_file_seen = $text;
-			}
-
-			if ($text =~ qr"^doc/") {
-				$line->log_error("Documentation must be installed under share/doc, not doc.");
-
-			} elsif ($text =~ qr"^etc/rc\.d/") {
-				$line->log_error("RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.");
-
-			} elsif ($text =~ qr"^etc/") {
-				$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/install/bsd.pkginstall.mk.");
-
-			} elsif ($text eq "info/dir") {
-				$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
-
-			} elsif ($text =~ qr"^lib/locale/") {
-				$line->log_error("\"lib/locale\" must not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
-
-			} elsif ($text =~ qr"^share/locale/") {
-				$line->log_warning("Use of \"share/locale\" is deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
-
-			} elsif ($text =~ qr"^share/man/") {
-				$line->log_warning("Man pages should be installed into man/, not share/man/.");
-			}
-
-			if ($text =~ /\${PKGLOCALEDIR}/ && defined($makevar) && !exists($makevar->{"USE_PKGLOCALEDIR"})) {
-				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
-			}
-
-			if ($text =~ qr"/CVS/") {
-				$line->log_warning("CVS files should not be in the PLIST.");
-			}
-
-		} else {
-			$line->log_error("Unknown line type.");
-		}
-	}
-	checklines_trailing_empty_lines($plist);
-}
-
-sub checkfile_extra($) {
-	my ($fname) = @_;
-	my ($lines);
-
-	log_info($fname, NO_LINE_NUMBER, "[checkfile_extra]");
-
-	$lines = load_file($fname);
-	if (!$lines) {
-		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
-		return;
-	}
-	checklines_trailing_empty_lines($lines);
-	checkperms($fname);
-}
-
-#
-# Procedures to check an array of lines, part 2.
-#
-
-sub checklines_multiple_patches($) {
-	my ($lines) = @_;
-	my ($files_in_patch, $patch_state, $line_type, $dellines);
-
-	$files_in_patch = 0;
-	$patch_state = "";
-	$dellines = 0;
-	foreach my $line (@{$lines}) {
-		my $text = $line->text;
-
-		if ($text =~ qr"^@@ -\d+,(\d+) \+\d+,\d+ @@") {
-			$line_type = "";
-			$dellines = $1;
-
-		} elsif ($dellines == 0 && index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
-			$line_type = "-";
-
-		} elsif (index($text, "*** ") == 0 && $text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
-			$line->log_warning("Please use unified diffs (diff -u) for patches.");
-			$line_type = "*";
-
-		} elsif (index($text, "+++ ") == 0) {
-			$line_type = "+";
-
-		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
-			$line_type = "";
-			$dellines--;
-
-		} else {
-			$line_type = "";
-		}
-
-		if ($patch_state eq "*") {
-			if ($line_type eq "-") {
-				$files_in_patch++;
-				$patch_state = "";
-			} else {
-				$line->log_error("[internal] Unknown patch format.");
-			}
-
-		} elsif ($patch_state eq "-") {
-			if ($line_type eq "+") {
-				$files_in_patch++;
-				$patch_state = "";
-			} else {
-				$line->log_error("[internal] Unknown patch format.");
-			}
-
-		} elsif ($patch_state eq "") {
-			$patch_state = $line_type;
-		}
-	}
-
-	if ($files_in_patch > 1) {
-		log_warning($lines->[0]->file, NO_LINE_NUMBER, "Contains patches for $files_in_patch files, should be only one.");
-
-	} elsif ($files_in_patch == 0) {
-		log_error($lines->[0]->file, NO_LINE_NUMBER, "Contains no patch.");
-	}
-}
-
-#
-# Procedures to check a file, part 2.
-#
-
-sub checkfile_patches_patch($) {
-	my ($fname) = @_;
-	my ($lines);
-
-	log_info($fname, NO_LINE_NUMBER, "[checkfile_patches_patch]");
-
-	checkperms($fname);
-	if (!($lines = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
-		return;
-	}
-	if (@{$lines} == 0) {
-		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
-		return;
-	}
-	checkline_rcsid($lines->[0], "");
-
-	foreach my $line (@{$lines}[1..$#{$lines}]) {
-		if ($line->text =~ qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)[:\$]") {
-			my ($tag) = ($1);
-			if ($line->text =~ qr"^(\@\@.*?\@\@)") {
-				$line->log_warning("Patches should not contain RCS tags.");
-				$line->set_text($1);
-			} else {
-				$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
-			}
-		}
-
-		if ($line->text =~ qr"^\+") {
-			use constant good_macros => PkgLint::Util::array_to_hash(qw(
-				__STDC__
-
-				__GNUC__ __GNUC_MINOR__
-				__SUNPRO_C
-
-				__i386
-				__mips
-				__sparc
-
-				__DragonFly__
-				__FreeBSD__
-				__INTERIX
-				__linux__
-				__NetBSD__
-				__OpenBSD__
-				__SVR4
-				__sun
-
-				__GLIBC__
-			));
-			use constant bad_macros  => {
-				"__sparc__" => "__sparc",
-				"__sun__" => "__sun",
-				"__svr4__" => "__SVR4",
-			};
-			my $rest = $line->text;
-			my $re_ifdef = qr"defined\((__[\w_]+)\)";
-
-			while ($rest =~ s/$re_ifdef//) {
-				my ($macro) = ($1);
-
-				if (exists(good_macros->{$macro})) {
-					$line->log_debug("Found good macro \"${macro}\".");
-				} elsif (exists(bad_macros->{$macro})) {
-					$line->log_warning("The macro \"${macro}\" is unportable. Please use \"".bad_macros->{$macro}."\" instead.");
-					$line->explain("See the pkgsrc guide, section \"CPP defines\" for details.");
-				} else {
-					$line->log_info("Found unknown macro \"${macro}\".");
-				}
-			}
-		}
-	}
-	checklines_trailing_empty_lines($lines);
-
-	checklines_multiple_patches($lines);
 }
 
 #
@@ -1859,9 +1387,138 @@ sub readmakefile($$$$) {
 	return $contents;
 }
 
+sub load_package_Makefile($$$) {
+	my ($subr) = "load_package_Makefile";
+	my ($fname, $ref_whole, $ref_lines) = @_;
+	my ($whole, $lines, $all_lines);
+
+	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
+
+	$whole = readmakefile($fname, $lines = [], $all_lines = [], {});
+	if (!$whole) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return false;
+	}
+
+	if ($opt_dumpmakefile) {
+		print("OK: whole Makefile (with all included files) follows:\n");
+		foreach my $line (@{$all_lines}) {
+			printf("%s\n", $line->to_string());
+		}
+	}
+
+	# HACK
+	if ($whole =~ qr"\nPHPEXT_MK" && $whole !~ qr"\nUSE_PHP_EXT_PATCHES") {
+		log_info($fname, NO_LINE_NUMBER, "[hack] USE_PHP_EXT_PATCHES");
+		$whole =~ s,\nPATCHDIR=.*PHPPKGSRCDIR.*,,;
+		$hack_php_patches = true;
+	}
+	# HACK
+	if ($whole =~ qr"\nPECL_VERSION") {
+		log_info($fname, NO_LINE_NUMBER, "[hack] PECL_VERSION");
+		$whole =~ s,\nDISTINFO_FILE=.*PHPPKGSRCDIR.*,,;
+	}
+
+	$pkgdir = expand_variable($whole, "PKGDIR");
+	set_default_value(\$pkgdir, ".");
+	$distinfo_file = expand_variable($whole, "DISTINFO_FILE");
+	set_default_value(\$distinfo_file, "distinfo");
+	$filesdir = expand_variable($whole, "FILESDIR");
+	set_default_value(\$filesdir, "files");
+	$patchdir = expand_variable($whole, "PATCHDIR");
+	set_default_value(\$patchdir, "patches");
+
+	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] DISTINFO_FILE=$distinfo_file");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] FILESDIR=$filesdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] PATCHDIR=$patchdir");
+	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] PKGDIR=$pkgdir");
+
+	${$ref_whole} = $whole;
+	${$ref_lines} = $lines;
+	return true;
+}
+
 #
-# Procedures to check a single line, part 3.
+# Subroutines to check a single line.
 #
+
+sub checkline_length($$) {
+	my ($line, $maxlength) = @_;
+
+	if (length($line->text) > $maxlength) {
+		$line->log_warning("Line too long (should be no more than $maxlength characters).");
+		$line->explain(
+			"Back in the old time, terminals with 80x25 characters were common.",
+			"And this is still the default size of many terminal emulators.",
+			"Moderately short lines also make reading easier.");
+	}
+}
+
+sub checkline_valid_characters($$) {
+	my ($line, $re_validchars) = @_;
+	my ($rest);
+
+	($rest = $line->text) =~ s/$re_validchars//g;
+	if ($rest ne "") {
+		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
+		$line->log_warning(sprintf("Line contains invalid characters (%s).", join(", ", @chars)));
+	}
+}
+
+sub checkline_valid_characters_in_variable($$) {
+	my ($line, $re_validchars) = @_;
+	my ($varname, $rest);
+
+	$rest = $line->text;
+	if ($rest =~ regex_varassign) {
+		($varname, undef, $rest) = ($1, $2, $3);
+	} else {
+		return;
+	}
+
+	$rest =~ s/$re_validchars//g;
+	if ($rest ne "") {
+		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
+		$line->log_warning(sprintf("${varname} contains invalid characters (%s).", join(", ", @chars)));
+	}
+}
+
+sub checkline_trailing_whitespace($) {
+	my ($line) = @_;
+	if ($line->text =~ /\s+$/) {
+		$line->log_note("Trailing white-space.");
+	}
+}
+
+sub checkline_rcsid_regex($$$) {
+	my ($line, $prefix_regex, $prefix) = @_;
+	my ($id) = ($opt_rcsidstring . ($is_wip ? "|Id" : ""));
+
+	if ($line->text !~ qr"^${prefix_regex}\$(${id})(?::[^\$]*|)\$$") {
+		$line->log_error("\"${prefix}\$${opt_rcsidstring}\$\" expected.");
+		return false;
+	}
+	return true;
+}
+
+sub checkline_rcsid($$) {
+	my ($line, $prefix) = @_;
+	checkline_rcsid_regex($line, quotemeta($prefix), $prefix);
+}
+
+sub checkline_relative_path($$) {
+	my ($line, $path) = @_;
+
+	if (!$is_wip && $path =~ qr"/wip/") {
+		$line->log_error("A pkgsrc package must not depend on any outside package.");
+	}
+	$path = resolve_relative_path($path);
+	if ($path =~ regex_unresolved) {
+		$line->log_info("Unresolved path: \"${path}\".");
+	} elsif (!-e "${current_dir}/${path}") {
+		$line->log_error("\"${path}\" does not exist.");
+	}
+}
 
 sub checkline_mk_direct_tool_use($$$) {
 	my ($line, $text, $where) = @_;
@@ -1921,7 +1578,7 @@ sub checkline_mk_varassign($$$$$) {
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
 }
 
-sub checkline_basic_vartype($$$$$) {
+sub checkline_mk_vartype_basic($$$$$) {
 	my ($line, $varname, $type, $value, $comment) = @_;
 	my ($value_novar);
 
@@ -2293,7 +1950,7 @@ sub checkline_mk_vartype($$$$$) {
 
 			foreach my $word (@words) {
 				if (defined($element_type)) {
-					checkline_basic_vartype($line, $varname, $element_type, $word, $comment);
+					checkline_mk_vartype_basic($line, $varname, $element_type, $word, $comment);
 				}
 			}
 
@@ -2302,15 +1959,89 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 		} else {
-			checkline_basic_vartype($line, $varname, $type, $value, $comment);
+			checkline_mk_vartype_basic($line, $varname, $type, $value, $comment);
 		}
 }
 
 #
-# Procedures to check an array of lines, part 3.
+# Procedures to check an array of lines.
 #
 
-sub checklines_deprecated_variables($) {
+sub checklines_trailing_empty_lines($) {
+	my ($lines) = @_;
+	my ($last, $max);
+
+	$max = $#{$lines} + 1;
+	for ($last = $max; $last > 1 && $lines->[$last - 1]->text eq ""; ) {
+		$last--;
+	}
+	if ($last != $max) {
+		$lines->[$last]->log_note("Trailing empty lines.");
+	}
+}
+
+sub checklines_multiple_patches($) {
+	my ($lines) = @_;
+	my ($files_in_patch, $patch_state, $line_type, $dellines);
+
+	$files_in_patch = 0;
+	$patch_state = "";
+	$dellines = 0;
+	foreach my $line (@{$lines}) {
+		my $text = $line->text;
+
+		if ($text =~ qr"^@@ -\d+,(\d+) \+\d+,\d+ @@") {
+			$line_type = "";
+			$dellines = $1;
+
+		} elsif ($dellines == 0 && index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
+			$line_type = "-";
+
+		} elsif (index($text, "*** ") == 0 && $text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
+			$line->log_warning("Please use unified diffs (diff -u) for patches.");
+			$line_type = "*";
+
+		} elsif (index($text, "+++ ") == 0) {
+			$line_type = "+";
+
+		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
+			$line_type = "";
+			$dellines--;
+
+		} else {
+			$line_type = "";
+		}
+
+		if ($patch_state eq "*") {
+			if ($line_type eq "-") {
+				$files_in_patch++;
+				$patch_state = "";
+			} else {
+				$line->log_error("[internal] Unknown patch format.");
+			}
+
+		} elsif ($patch_state eq "-") {
+			if ($line_type eq "+") {
+				$files_in_patch++;
+				$patch_state = "";
+			} else {
+				$line->log_error("[internal] Unknown patch format.");
+			}
+
+		} elsif ($patch_state eq "") {
+			$patch_state = $line_type;
+		}
+	}
+
+	if ($files_in_patch > 1) {
+		log_warning($lines->[0]->file, NO_LINE_NUMBER, "Contains patches for $files_in_patch files, should be only one.");
+
+	} elsif ($files_in_patch == 0) {
+		log_error($lines->[0]->file, NO_LINE_NUMBER, "Contains no patch.");
+	}
+}
+
+sub checklines_mk_deprecated_variables($) {
 	my ($lines) = @_;
 	my ($vars, $varnames, $regex_varuse);
 
@@ -2363,7 +2094,7 @@ sub checklines_mk($) {
 		}
 	}
 
-	checklines_deprecated_variables($lines);
+	checklines_mk_deprecated_variables($lines);
 	autofix($lines);
 }
 
@@ -2767,97 +2498,7 @@ sub checklines_package_Makefile($) {
 }
 
 #
-# Miscellaneous procedures.
-#
-
-sub expand_variable($$) {
-	my ($whole, $varname) = @_;
-	my ($value, $re);
-
-	$re = qr"\n${varname}([+:?]?)=[ \t]*([^\n#]*)";
-	$value = undef;
-	while ($whole =~ m/$re/g) {
-		my ($op, $val) = ($1, $2);
-		if ($op ne "?" || !defined($value)) {
-			$value = $val;
-		}
-	}
-	if (!defined($value)) {
-		return undef;
-	}
-
-	$value = resolve_relative_path($value);
-	if ($value =~ regex_unresolved) {
-		log_info(NO_FILE, NO_LINE_NUMBER, "[expand_variable] The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
-	}
-	return $value;
-}
-
-sub set_default_value($$) {
-	my ($varref, $value) = @_;
-
-	if (!defined(${$varref}) || ${$varref} =~ regex_unresolved) {
-		${$varref} = $value;
-	}
-}
-
-#
-# Loading data from package-specific files, part 2.
-#
-
-sub load_package_Makefile($$$) {
-	my ($subr) = "load_package_Makefile";
-	my ($fname, $ref_whole, $ref_lines) = @_;
-	my ($whole, $lines, $all_lines);
-
-	log_info($fname, NO_LINE_NUMBER, "Checking package Makefile.");
-
-	$whole = readmakefile($fname, $lines = [], $all_lines = [], {});
-	if (!$whole) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return false;
-	}
-
-	if ($opt_dumpmakefile) {
-		print("OK: whole Makefile (with all included files) follows:\n");
-		foreach my $line (@{$all_lines}) {
-			printf("%s\n", $line->to_string());
-		}
-	}
-
-	# HACK
-	if ($whole =~ qr"\nPHPEXT_MK" && $whole !~ qr"\nUSE_PHP_EXT_PATCHES") {
-		log_info($fname, NO_LINE_NUMBER, "[hack] USE_PHP_EXT_PATCHES");
-		$whole =~ s,\nPATCHDIR=.*PHPPKGSRCDIR.*,,;
-		$hack_php_patches = true;
-	}
-	# HACK
-	if ($whole =~ qr"\nPECL_VERSION") {
-		log_info($fname, NO_LINE_NUMBER, "[hack] PECL_VERSION");
-		$whole =~ s,\nDISTINFO_FILE=.*PHPPKGSRCDIR.*,,;
-	}
-
-	$pkgdir = expand_variable($whole, "PKGDIR");
-	set_default_value(\$pkgdir, ".");
-	$distinfo_file = expand_variable($whole, "DISTINFO_FILE");
-	set_default_value(\$distinfo_file, "distinfo");
-	$filesdir = expand_variable($whole, "FILESDIR");
-	set_default_value(\$filesdir, "files");
-	$patchdir = expand_variable($whole, "PATCHDIR");
-	set_default_value(\$patchdir, "patches");
-
-	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] DISTINFO_FILE=$distinfo_file");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] FILESDIR=$filesdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] PATCHDIR=$patchdir");
-	log_info(NO_FILE, NO_LINE_NUMBER, "[${subr}] PKGDIR=$pkgdir");
-
-	${$ref_whole} = $whole;
-	${$ref_lines} = $lines;
-	return true;
-}
-
-#
-# Procedures to check a file, part 3.
+# Procedures to check a single file.
 #
 
 sub checkfile_ALTERNATIVES($) {
@@ -2873,6 +2514,126 @@ sub checkfile_ALTERNATIVES($) {
 	}
 }
 
+sub checkfile_DESCR($) {
+	my ($fname) = @_;
+	my ($maxchars, $maxlines) = (80, 24);
+	my ($descr);
+
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_DESCR]");
+
+	checkperms($fname);
+	if (!($descr = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+	if (@{$descr} == 0) {
+		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
+		return;
+	}
+
+	foreach my $line (@{$descr}) {
+		checkline_length($line, $maxchars);
+		checkline_trailing_whitespace($line);
+		checkline_valid_characters($line, regex_validchars);
+	}
+	checklines_trailing_empty_lines($descr);
+
+	if (@{$descr} > $maxlines) {
+		my $line = $descr->[$maxlines];
+
+		$line->log_warning("File too long (should be no more than $maxlines lines).");
+		$line->explain(
+			"A common terminal size is 80x25 characters. The DESCR file should",
+			"fit on one screen. It is also intended to give a _brief_ summary",
+			"about the package's contents.");
+	}
+}
+
+sub checkfile_distinfo($) {
+	my ($fname) = @_;
+	my ($lines, %in_distinfo, %sums);
+
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_distinfo]");
+
+	checkperms($fname);
+	if (!($lines = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+
+	if (@{$lines} == 0) {
+		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
+		return;
+	}
+
+	checkline_rcsid($lines->[0], "");
+	if (1 <= $#{$lines} && $lines->[1]->text ne "") {
+		$lines->[1]->log_warning("Empty line expected.");
+		$lines->[1]->explain("This is merely for aesthetical purposes.");
+	}
+
+	foreach my $line (@{$lines}[2..$#{$lines}]) {
+		if ($line->text !~ /^(MD5|SHA1|RMD160|Size) \(([^)]+)\) = (.*)(?: bytes)?$/) {
+			$line->log_error("Unknown line type.");
+			next;
+		}
+
+		my ($alg, $file, $sum) = ($1, $2, $3);
+
+		if ($file =~ /^patch-[A-Za-z0-9]+$/) {
+			if (open(PATCH, "< ${current_dir}/${patchdir}/${file}")) {
+				my $data = "";
+				foreach my $patchline (<PATCH>) {
+					$data .= $patchline unless $patchline =~ qr"\$NetBSD.*\$";
+				}
+				close(PATCH);
+				my $chksum = Digest::SHA1::sha1_hex($data);
+				if ($sum ne $chksum) {
+					$line->log_error("${alg} checksum of $file differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
+				}
+			} elsif (!$hack_php_patches) {
+				$line->log_warning("$file does not exist.");
+				$line->explain(
+					"All patches that are mentioned in a distinfo file should actually exist.",
+					"What's the use of a checksum if there is no file to check?");
+			}
+		} else {
+			$sums{$alg}->{$file} = $line;
+		}
+		$in_distinfo{$file} = true;
+	}
+	checklines_trailing_empty_lines($lines);
+
+	# Check for distfiles that have SHA1, but not RMD160 checksums
+	foreach my $sha1_file (sort(keys(%{$sums{"SHA1"}}))) {
+		if (!exists($sums{"RMD160"}->{$sha1_file})) {
+			$sums{"SHA1"}->{$sha1_file}->log_error("RMD160 checksum missing for \"${sha1_file}\".");
+		}
+	}
+
+	foreach my $patch (<${current_dir}/$patchdir/patch-*>) {
+		$patch = basename($patch);
+		if (!exists($in_distinfo{$patch})) {
+			log_error($fname, NO_LINE_NUMBER, "$patch is not recorded. Rerun '".conf_make." makepatchsum'.");
+		}
+	}
+}
+
+sub checkfile_extra($) {
+	my ($fname) = @_;
+	my ($lines);
+
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_extra]");
+
+	$lines = load_file($fname);
+	if (!$lines) {
+		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
+		return;
+	}
+	checklines_trailing_empty_lines($lines);
+	checkperms($fname);
+}
+
 sub checkfile_INSTALL($) {
 	my ($fname) = @_;
 	my ($lines);
@@ -2884,6 +2645,46 @@ sub checkfile_INSTALL($) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
+}
+
+sub checkfile_MESSAGE($) {
+	my ($fname) = @_;
+	my ($message);
+
+	my @explanation = (
+		"A MESSAGE file should consist of a header line, having 75 \"=\"",
+		"characters, followed by a line containing only the RCS Id, then an",
+		"empty line, your text and finally the footer line, which is the",
+		"same as the header line.");
+
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_MESSAGE]");
+
+	checkperms($fname);
+	if (!($message = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+
+	if (@{$message} < 3) {
+		log_warning($fname, NO_LINE_NUMBER, "File too short.");
+		explain($fname, NO_LINE_NUMBER, @explanation);
+		return;
+	}
+	if ($message->[0]->text ne "=" x 75) {
+		$message->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
+		explain($fname, NO_LINE_NUMBER, @explanation);
+	}
+	checkline_rcsid($message->[1], "");
+	foreach my $line (@{$message}) {
+		checkline_length($line, 80);
+		checkline_trailing_whitespace($line);
+		checkline_valid_characters($line, regex_validchars);
+	}
+	if ($message->[-1]->text ne "=" x 75) {
+		$message->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
+		explain($fname, NO_LINE_NUMBER, @explanation);
+	}
+	checklines_trailing_empty_lines($message);
 }
 
 sub checkfile_mk($) {
@@ -2973,6 +2774,177 @@ sub checkfile_package_Makefile($$$) {
 	# Disabled, as I don't like the current ordering scheme.
 	#checklines_package_Makefile_varorder($lines);
 	autofix($lines);
+}
+
+sub checkfile_patches_patch($) {
+	my ($fname) = @_;
+	my ($lines);
+
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_patches_patch]");
+
+	checkperms($fname);
+	if (!($lines = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
+		return;
+	}
+	if (@{$lines} == 0) {
+		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
+		return;
+	}
+	checkline_rcsid($lines->[0], "");
+
+	foreach my $line (@{$lines}[1..$#{$lines}]) {
+		if ($line->text =~ qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)[:\$]") {
+			my ($tag) = ($1);
+			if ($line->text =~ qr"^(\@\@.*?\@\@)") {
+				$line->log_warning("Patches should not contain RCS tags.");
+				$line->set_text($1);
+			} else {
+				$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
+			}
+		}
+
+		if ($line->text =~ qr"^\+") {
+			use constant good_macros => PkgLint::Util::array_to_hash(qw(
+				__STDC__
+
+				__GNUC__ __GNUC_MINOR__
+				__SUNPRO_C
+
+				__i386
+				__mips
+				__sparc
+
+				__DragonFly__
+				__FreeBSD__
+				__INTERIX
+				__linux__
+				__NetBSD__
+				__OpenBSD__
+				__SVR4
+				__sun
+
+				__GLIBC__
+			));
+			use constant bad_macros  => {
+				"__sparc__" => "__sparc",
+				"__sun__" => "__sun",
+				"__svr4__" => "__SVR4",
+			};
+			my $rest = $line->text;
+			my $re_ifdef = qr"defined\((__[\w_]+)\)";
+
+			while ($rest =~ s/$re_ifdef//) {
+				my ($macro) = ($1);
+
+				if (exists(good_macros->{$macro})) {
+					$line->log_debug("Found good macro \"${macro}\".");
+				} elsif (exists(bad_macros->{$macro})) {
+					$line->log_warning("The macro \"${macro}\" is unportable. Please use \"".bad_macros->{$macro}."\" instead.");
+					$line->explain("See the pkgsrc guide, section \"CPP defines\" for details.");
+				} else {
+					$line->log_info("Found unknown macro \"${macro}\".");
+				}
+			}
+		}
+	}
+	checklines_trailing_empty_lines($lines);
+
+	checklines_multiple_patches($lines);
+}
+
+sub checkfile_PLIST($) {
+	my ($fname) = @_;
+	my ($plist, $last_file_seen);
+
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_PLIST]");
+
+	checkperms($fname);
+	if (!($plist = load_file($fname))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+	if (@{$plist} == 0) {
+		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
+		return;
+	}
+	checkline_rcsid($plist->[0], "\@comment ");
+
+	line:
+	foreach my $line (@{$plist}) {
+		my $text = $line->text;
+
+		checkline_trailing_whitespace($line);
+
+		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
+			my ($cmd, $arg) = ($1, $2);
+
+			if ($cmd eq "unexec" && $arg =~ qr"^(rmdir|\$\{RMDIR\} \%D/)(.*)") {
+				my ($rmdir, $rest) = ($1, $2);
+				if ($rest !~ qr"(?:true|\$\{TRUE\})") {
+					$line->log_warning("Please use \"\@dirrm\" instead of \"\@unexec rmdir\".");
+				}
+
+			} elsif (($cmd eq "exec" || $cmd eq "unexec")) {
+				if ($arg =~ /(?:install-info|\$\{INSTALL_INFO\})/) {
+					$line->log_warning("\@exec/unexec install-info is deprecated.");
+
+				} elsif ($arg =~ /ldconfig/ && $arg !~ qr"/usr/bin/true") {
+					$line->log_error("ldconfig must be used with \"||/usr/bin/true\".");
+				}
+
+			} elsif ($cmd eq "comment" || $cmd eq "dirrm") {
+				# nothing to do
+
+			} else {
+				$line->log_warning("Unknown PLIST directive \"\@$cmd\".");
+			}
+
+		} elsif ($text =~ qr"^[A-Za-z0-9\$]") {
+			if ($opt_warn_plist_sort && $text =~ qr"^\w" && $text !~ regex_unresolved) {
+				if (defined($last_file_seen)) {
+					if ($last_file_seen gt $text) {
+						$line->log_warning("${text} should be sorted before ${last_file_seen}.");
+					}
+				}
+				$last_file_seen = $text;
+			}
+
+			if ($text =~ qr"^doc/") {
+				$line->log_error("Documentation must be installed under share/doc, not doc.");
+
+			} elsif ($text =~ qr"^etc/rc\.d/") {
+				$line->log_error("RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.");
+
+			} elsif ($text =~ qr"^etc/") {
+				$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/install/bsd.pkginstall.mk.");
+
+			} elsif ($text eq "info/dir") {
+				$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
+
+			} elsif ($text =~ qr"^lib/locale/") {
+				$line->log_error("\"lib/locale\" must not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+
+			} elsif ($text =~ qr"^share/locale/") {
+				$line->log_warning("Use of \"share/locale\" is deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+
+			} elsif ($text =~ qr"^share/man/") {
+				$line->log_warning("Man pages should be installed into man/, not share/man/.");
+			}
+
+			if ($text =~ /\${PKGLOCALEDIR}/ && defined($makevar) && !exists($makevar->{"USE_PKGLOCALEDIR"})) {
+				$line->log_warning("PLIST contains \${PKGLOCALEDIR}, but USE_PKGLOCALEDIR was not found.");
+			}
+
+			if ($text =~ qr"/CVS/") {
+				$line->log_warning("CVS files should not be in the PLIST.");
+			}
+
+		} else {
+			$line->log_error("Unknown line type.");
+		}
+	}
+	checklines_trailing_empty_lines($plist);
 }
 
 sub checkfile($) {
