@@ -634,7 +634,8 @@ bookkeeping. However, these can also be set using command-line arguments.
 
 Binary packages for the pkgsrc tools and an initial set of packages is
 available for supported platforms. An up-to-date list of these can be found on
-www.pkgsrc.org.
+www.pkgsrc.org. Note that this only works for privileged builds that install
+into /usr/pkg.
 
 Note
 
@@ -1484,15 +1485,26 @@ See Section 14.16, "Other helpful targets".
 
 If you want to get a full set of precompiled binary packages, this section
 describes how to get them. Beware that the bulk build will remove all currently
-installed packages from your system! Having an FTP server configured either on
-the machine doing the bulk builds or on a nearby NFS server can help to make
-the packages available to everyone. See ftpd(8) for more information. If you
-use a remote NFS server's storage, be sure to not actually compile on NFS
-storage, as this slows things down a lot.
+installed packages from your system!
+
+Having an FTP server configured either on the machine doing the bulk builds or
+on a nearby NFS server can help to make the packages available to other
+machines that can then save time by installing only the binary packages. See
+ftpd(8) for more information. If you use a remote NFS server's storage, be sure
+to not actually compile on NFS storage, as this slows things down a lot.
 
 6.3.1. Configuration
 
-6.3.1.1. /etc/mk.conf
+6.3.1.1. build.conf
+
+The build.conf file is the main configuration file for bulk builds. You can
+configure how your copy of pkgsrc is kept up to date, how the distfiles are
+downloaded, how the packages are built and how the report is generated. You can
+find an annotated example file in pkgsrc/mk/bulk/build.conf-example. To use it,
+copy build.conf-example to build.conf and edit it, following the comments in
+that file.
+
+6.3.1.2. /etc/mk.conf
 
 You may want to set variables in /etc/mk.conf. Look at pkgsrc/mk/defaults/
 mk.conf for details of the default settings. You will want to ensure that
@@ -1508,13 +1520,19 @@ _ACCEPTABLE=yes accepts all licenses.
     PKG_DEVELOPER?= yes
     _ACCEPTABLE=    yes
 
-6.3.1.2. build.conf
+Some options that are especially useful for bulk builds can be found at the top
+lines of the file mk/bulk/bsd.bulk-pkg.mk. The most useful options of these are
+briefly described here.
 
-In pkgsrc/mk/bulk, copy build.conf-example to build.conf and edit it, following
-the comments in that file. This is the config file that determines where log
-files are generated after the build, where to mail the build report to, where
-your pkgsrc tree is located and the user to which user to su(8) to do a cvs
-update.
+  * If you are on a slow machine, you may want to set USE_BULK_BROKEN_CHECK to
+    "no".
+
+  * If you are doing bulk builds from a read-only copy of pkgsrc, you have to
+    set BULKFILESDIR to the directory where all log files are created.
+    Otherwise the log files are created in the pkgsrc directory.
+
+  * Another important variable is BULK_PREREQ, which is a list of packages that
+    should be always available while building other packages.
 
 6.3.1.3. pre-build.local
 
@@ -1677,7 +1695,7 @@ src/etc, be sure the following items are present and properly configured:
 10. Make /usr/sandbox/usr/pkgsrc/packages and .../distfiles point somewhere
     appropriate. NFS- and/or nullfs-mounts may come in handy!
 
-11. Edit /etc/mk.conf, see Section 6.3.1.1, "/etc/mk.conf".
+11. Edit /etc/mk.conf, see Section 6.3.1.2, "/etc/mk.conf".
 
 12. Adjust mk/bulk/build.conf to suit your needs.
 
@@ -2195,7 +2213,7 @@ Table of Contents
     11.2. Writing buildlink3.mk files
 
         11.2.1. Anatomy of a buildlink3.mk file
-        11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
+        11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
 
     11.3. Writing builtin.mk files
 
@@ -3200,8 +3218,8 @@ dependency on pkg is added. Several important variables are set in the section:
     is selected by setting BUILDLINK_DEPMETHOD.pkg to "build". By default, the
     full dependency is used.
 
-  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS. pkg (not shown above) are
-    lists of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
+  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS.pkg (not shown above) are lists
+    of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
     library search paths. These default to "include" and "lib" respectively.
 
   * BUILDLINK_CPPFLAGS.pkg (not shown above) is the list of preprocessor flags
@@ -3240,7 +3258,7 @@ dependencies. Including these buildlink3.mk files means that the headers and
 libraries for these dependencies are also symlinked into ${BUILDLINK_DIR}
 whenever the pkg buildlink3.mk file is included.
 
-11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
+11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
 
 There are two situations that require increasing the dependency listed in
 BUILDLINK_DEPENDS.pkg after a package update:
@@ -3259,9 +3277,9 @@ settle for an older one which will not contain the necessary shared libraries.
 
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
-versions of packages work just fine with older dependencies. See Section
-15.1.4, "Handling dependencies" for more information about dependencies on
-other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
+versions of packages work just fine with older dependencies. See
+Section 15.1.4, "Handling dependencies" for more information about dependencies
+on other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
 definitions.
 
 11.3. Writing builtin.mk files
@@ -3575,9 +3593,9 @@ original copies available.
 Once the required configuration files are in place (i.e., under the examples
 hierarchy), the pkginstall framework can use them as master copies during the
 package installation to update what is in ${PKG_SYSCONFDIR}. To achieve this,
-the variables CONF_FILES and CONF_FILES_PERMS are used. Check out Section
-12.1.2, "File manipulation" for information about their syntax and their
-purpose. Here is an example, taken from the mail/mutt package:
+the variables CONF_FILES and CONF_FILES_PERMS are used. Check out
+Section 12.1.2, "File manipulation" for information about their syntax and
+their purpose. Here is an example, taken from the mail/mutt package:
 
     EGDIR=        ${PREFIX}/share/doc/mutt/samples
     CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
@@ -3753,6 +3771,8 @@ supported by the package, and any default options settings if needed.
 
  1. PKG_OPTIONS_VAR is the name of the make(1) variable that the user can set
     to override the default options. It should be set to PKG_OPTIONS.pkgbase.
+    Do not set it to PKG_OPTIONS.${PKGBASE}, since PKGBASE is set after
+    PKG_OPTIONS_VAR is used.
 
  2. PKG_SUPPORTED_OPTIONS is a list of build options supported by the package.
 
@@ -3774,14 +3794,14 @@ supported by the package, and any default options settings if needed.
  6. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
     default.
 
- 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE: option" pairs that map
+ 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE:option" pairs that map
     legacy /etc/mk.conf variables to their option counterparts. Pairs should be
     added with "+=" to keep the listing of global legacy variables. A warning
     will be issued if the user uses a legacy variable.
 
- 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option: new-option" pairs that
-    map options that have been renamed to their new counterparts. Pairs should
-    be added with "+=" to keep the listing of global legacy options. A warning
+ 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option:new-option" pairs that map
+    options that have been renamed to their new counterparts. Pairs should be
+    added with "+=" to keep the listing of global legacy options. A warning
     will be issued if the user uses a legacy option.
 
  9. PKG_LEGACY_OPTIONS is a list of options implied by deprecated variables
