@@ -1,4 +1,4 @@
-# $Id: parallel.txt,v 1.5 2004/07/10 14:37:36 grant Exp $
+# $Id: parallel.txt,v 1.6 2005/12/06 08:25:18 rillig Exp $
 #
 
 These are my (<dmcmahill>) thoughts on how one would want a parallel
@@ -15,7 +15,7 @@ following manner:
 1)  All installed packages are removed.
 
 2)  Packages listed in the BULK_PREREQ variable are installed.  This
-    must be done before step 2 as some packages (like xpkgwedge) can
+    must be done before step 3 as some packages (like xpkgwedge) can
     affect the dependencies of other packages when installed.
 
 3)  Each package directory is visited and its explicitly listed
