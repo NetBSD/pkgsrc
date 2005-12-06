@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2005/10/29 16:04:38 minskim Exp $
+$NetBSD: patch-ah,v 1.2 2005/12/06 18:50:36 rillig Exp $
 
---- grep/Makefile.orig	2005-10-17 12:08:07.000000000 +0000
+--- grep/Makefile.orig	2005-11-14 10:22:40.000000000 +0000
 +++ grep/Makefile
-@@ -26,12 +26,10 @@ depend:
+@@ -23,12 +23,10 @@ depend:
  	@${YACC} -d ${YFILES}
  
  install: ${TARG}
@@ -18,4 +18,4 @@ $NetBSD: patch-ah,v 1.1.1.1 2005/10/29 16:04:38 minskim Exp $
 +	@${BSD_INSTALL_MAN} ${MANFILES} ${DESTDIR}${MANPREFIX}/man1
  
  uninstall:
- 	@rm -f ${DESTDIR}${PREFIX}/bin/${TARG}
+ 	rm -f ${DESTDIR}${PREFIX}/bin/${TARG}
