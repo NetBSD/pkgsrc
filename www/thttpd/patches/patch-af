@@ -1,11 +1,15 @@
-$NetBSD: patch-af,v 1.3 2004/09/14 08:32:16 wiz Exp $
+$NetBSD: patch-af,v 1.4 2005/12/06 14:09:29 rillig Exp $
 
---- mmc.c.orig	2003-12-25 20:06:35.000000000 +0100
-+++ mmc.c
-@@ -38,6 +38,10 @@
+--- mmc.c.orig	Wed Jun 29 19:50:47 2005
++++ mmc.c	Tue Dec  6 15:06:34 2005
+@@ -38,6 +38,14 @@
  #include <syslog.h>
  #include <errno.h>
  
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#endif
++
 +#if (defined(__NetBSD__) && __NetBSD_Version__ <= 105120000)
 +#undef HAVE_MMAP
 +#endif
