@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2005/12/06 16:12:43 joerg Exp $
 
 --- libguppitank/guppi-object-barchart.c	2003-05-30 21:21:16.000000000 +0200
 +++ libguppitank/guppi-object-barchart.c	2003-05-30 21:21:26.000000000 +0200
-@@ -410,6 +410,7 @@
+@@ -410,6 +410,7 @@ update (GuppiObject *obj) 
    GuppiElementState *left_axis_state = NULL;
    GuppiElementState *frame_state = NULL;
    GuppiColorPalette *color_palette = NULL;
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
    GuppiDataTable *data_table;
    GnomeFont *font;
    
-@@ -446,11 +447,13 @@
+@@ -446,11 +447,13 @@ update (GuppiObject *obj) 
    /* FIXME: check for construction of legends. */
  
    if (obar->legend_view && obar->col_labels) {
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
    }
    
    guppi_element_state_set (barchart_state,
-@@ -497,7 +500,7 @@
+@@ -497,7 +500,7 @@ update (GuppiObject *obj) 
  
      guppi_element_state_set (legend_state,
  			     "labels", data_table,
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
  			     "label_font", font,
  			     NULL);
    }
-@@ -505,6 +508,8 @@
+@@ -505,6 +508,8 @@ update (GuppiObject *obj) 
   
    /* clean up */
    
@@ -43,7 +43,7 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
    guppi_unref (barchart_state);
    guppi_unref (legend_state);			   
    guppi_unref (bottom_axis_state);
-@@ -525,6 +530,7 @@
+@@ -525,6 +530,7 @@ build (GuppiObject *obj, double hsize, d
  
    GuppiDataTable *data_table;
    GuppiColorPalette *color_palette = NULL;
@@ -51,7 +51,7 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
  
    GuppiElementState *barchart_state;
    GuppiElementState *legend_state = NULL;
-@@ -560,7 +566,8 @@
+@@ -560,7 +566,8 @@ build (GuppiObject *obj, double hsize, d
    }
  
    if (obar->col_labels) {
@@ -61,7 +61,7 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
    }
  
  
-@@ -568,6 +575,7 @@
+@@ -568,6 +575,7 @@ build (GuppiObject *obj, double hsize, d
  
    if (obar->col_colors) {
      color_palette = build_bar_colors (obar, FALSE);
@@ -69,7 +69,7 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
    }
  
    barchart_state = guppi_element_state_new ("barchart",
-@@ -620,7 +628,8 @@
+@@ -620,7 +628,8 @@ build (GuppiObject *obj, double hsize, d
  
      legend_state = guppi_element_state_new ("legend",
  					    "labels", data_table,
@@ -79,7 +79,7 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
  					    "label_font", font,
  					    NULL);
  
-@@ -669,6 +678,8 @@
+@@ -669,6 +678,8 @@ build (GuppiObject *obj, double hsize, d
    /* Clean up after ourselves... */
  
    guppi_unref (data_table);
@@ -88,3 +88,19 @@ $NetBSD: patch-ac,v 1.3 2005/10/22 13:25:18 wiz Exp $
  
    guppi_unref (barchart_state);
    guppi_unref (bottom_axis_state);
+@@ -701,6 +712,7 @@ clicked_bar_cb (GuppiCanvasItem *item,
+     break;
+ 
+   default:
++    break;
+   }
+ }
+ 
+@@ -733,6 +745,7 @@ clicked_box_cb (GuppiCanvasItem *item,
+     break;
+ 
+   default:
++    break;
+   }
+ }
+ 
