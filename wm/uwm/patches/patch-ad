@@ -1,8 +1,19 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2005/12/06 15:57:22 joerg Exp $
 
 --- gram.y.orig	Thu Sep 22 22:14:31 1988
 +++ gram.y	Thu Dec 23 22:04:02 1999
-@@ -117,18 +117,18 @@
+@@ -60,7 +60,10 @@ static char *hcolors[4];		/* Color value
+ static char *mcolors[2];		/* Color values used in menus. */
+ MenuLink *menu_link;			/* Temporary menu link pointer. */
+ 
++#ifdef X_NOT_STDC_ENV
+ char *calloc();
++char *malloc();
++#endif
+ 
+ %}
+ 
+@@ -117,18 +120,18 @@ expr:		keyword '=' compexpr
  			        case IsString:
  			            if ($3 == C_STRING) {
  			                strcpy(KeywordTable[$1].sptr,
@@ -25,7 +36,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  			            break;
  			        case IsBoolTrue:
  			        case IsBoolFalse:
-@@ -197,12 +197,12 @@
+@@ -197,12 +200,12 @@ compexpr:	keyexpr ':' contexpr ':' butte
  			    ml_ptr = $3;
  			}
  	|	STRING
@@ -40,7 +51,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  			    switch (KeywordTable[ki].type) {
  			    case IsBoolTrue:
  			        *(KeywordTable[ki].bptr) = TRUE;
-@@ -220,7 +220,7 @@
+@@ -220,7 +223,7 @@ boolvar:	STRING
  	;
  
  keyword:	STRING	{
@@ -49,7 +60,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  			}
  	;
  
-@@ -246,9 +246,9 @@
+@@ -246,9 +249,9 @@ buttexpr:	buttmodexpr
  			{ $$ = CheckButtonState($1); }
  	;
  
@@ -61,7 +72,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  
  buttmodexpr: 	buttmodifier
  			{ $$ = $1; }
-@@ -257,7 +257,7 @@
+@@ -257,7 +260,7 @@ buttmodexpr: 	buttmodifier
  	;
  
  buttmodifier:	STRING
@@ -70,7 +81,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  	;
  
  menuname:	STRING
-@@ -304,7 +304,7 @@
+@@ -304,7 +307,7 @@ menuline:	strings ':' color2 menuaction 
  
  menuaction:	STRING
  			{
@@ -79,7 +90,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  			    if ((ki != -1) &&
  			        (KeywordTable[ki].type != IsFunction) &&
  			        (KeywordTable[ki].type != IsQuitFunction) &&
-@@ -350,7 +350,7 @@
+@@ -350,7 +353,7 @@ menuaction:	STRING
  			}
  	;
  
@@ -88,7 +99,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  	|	strings STRING
  			{ $$ = strconcat($1, $2); }
  	;
-@@ -387,7 +387,7 @@
+@@ -387,7 +390,7 @@ color2:		'(' color ':' color ')' ':'
  			}
  	;
  
@@ -97,7 +108,15 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  	|	/* empty */	{ $$ = NULL; }
  	;
  %%
-@@ -572,6 +572,8 @@
+@@ -503,7 +506,6 @@ char *
+ strconcat(s1, s2)
+ char *s1, *s2;
+ {
+-    char *malloc();
+     char *p;
+ 
+     p = malloc(strlen(s1) + strlen(s2) + 2);
+@@ -572,6 +574,8 @@ char *name;		/* Menu, if needed. */
          setbinding(ICON, index, mask, name);
      if (context & WINDOW)
          setbinding(WINDOW, index, mask, name);
@@ -106,7 +125,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  }
  
  /*
-@@ -599,12 +601,13 @@
+@@ -599,12 +603,13 @@ int m;		/* Key/button/modifier mask. */
  char *mname;		/* Pointer to menu name, if needed. */
  {
      Binding *ptr;
@@ -121,7 +140,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
  
      switch (m & (LeftMask | MiddleMask | RightMask)) {
      case LeftMask:
-@@ -771,9 +774,8 @@
+@@ -771,9 +776,8 @@ MenuLink *link;
      else {
          for(ptr = list; ptr->next; ptr = ptr->next) /* NULL */;
          ptr->next = link;
