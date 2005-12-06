@@ -1,9 +1,9 @@
-$NetBSD: patch-ap,v 1.1.1.1 2005/10/29 16:04:38 minskim Exp $
+$NetBSD: patch-ap,v 1.2 2005/12/06 18:50:36 rillig Exp $
 
---- tr/Makefile.orig	2005-10-17 12:08:07.000000000 +0000
+--- tr/Makefile.orig	2005-11-14 10:22:40.000000000 +0000
 +++ tr/Makefile
-@@ -12,12 +12,10 @@ MANFILES  = tr.1
- all: ${TARG}
+@@ -13,12 +13,10 @@ all: ${TARG}
+ 	@echo built ${TARG}
  
  install: ${TARG}
 -	@mkdir -p ${DESTDIR}${PREFIX}/bin
@@ -18,4 +18,4 @@ $NetBSD: patch-ap,v 1.1.1.1 2005/10/29 16:04:38 minskim Exp $
 +	@${BSD_INSTALL_MAN} ${MANFILES} ${DESTDIR}${MANPREFIX}/man1
  
  uninstall:
- 	@rm -f ${DESTDIR}${PREFIX}/bin/${TARG}
+ 	rm -f ${DESTDIR}${PREFIX}/bin/${TARG}

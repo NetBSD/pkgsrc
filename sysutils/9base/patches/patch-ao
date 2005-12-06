@@ -1,21 +1,16 @@
-$NetBSD: patch-ao,v 1.1.1.1 2005/10/29 16:04:38 minskim Exp $
+$NetBSD: patch-ao,v 1.2 2005/12/06 18:50:36 rillig Exp $
 
---- touch/Makefile.orig	2005-10-17 12:08:07.000000000 +0000
-+++ touch/Makefile
-@@ -12,12 +12,10 @@ MANFILES  = touch.1
- all: ${TARG}
+--- lib9/Makefile.orig	2005-11-14 10:22:41.000000000 +0000
++++ lib9/Makefile
+@@ -189,9 +189,8 @@ all: ${LIB}
+ 	@echo built lib9
  
- install: ${TARG}
--	@mkdir -p ${DESTDIR}${PREFIX}/bin
--	@cp -f ${TARG} ${DESTDIR}${PREFIX}/bin/
--	@chmod 755 ${DESTDIR}${PREFIX}/bin/${TARG}
--	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
--	@cp -f ${MANFILES} ${DESTDIR}${MANPREFIX}/man1
--	@chmod 444 ${DESTDIR}${MANPREFIX}/man1/${MANFILES}
-+	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
-+	@${BSD_INSTALL_PROGRAM} ${TARG} ${DESTDIR}${PREFIX}/bin/
-+	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
-+	@${BSD_INSTALL_MAN} ${MANFILES} ${DESTDIR}${MANPREFIX}/man1
+ install:
+-	@mkdir -p ${DESTDIR}${MANPREFIX}/man7
+-	@cp -f regexp.7 ${DESTDIR}${MANPREFIX}/man7
+-	@chmod 444 ${DESTDIR}${MANPREFIX}/man7/regexp.7
++	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man7
++	@${BSD_INSTALL_MAN} regexp.7 ${DESTDIR}${MANPREFIX}/man7
  
  uninstall:
- 	@rm -f ${DESTDIR}${PREFIX}/bin/${TARG}
+ 	rm -f ${DESTDIR}${MANPREFIX}/man7/regexp.7

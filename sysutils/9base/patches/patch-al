@@ -1,9 +1,9 @@
-$NetBSD: patch-al,v 1.1.1.1 2005/10/29 16:04:38 minskim Exp $
+$NetBSD: patch-al,v 1.2 2005/12/06 18:50:36 rillig Exp $
 
---- sort/Makefile.orig	2005-10-17 12:08:07.000000000 +0000
+--- sort/Makefile.orig	2005-11-14 10:22:40.000000000 +0000
 +++ sort/Makefile
-@@ -12,12 +12,10 @@ MANFILES  = sort.1
- all: ${TARG}
+@@ -13,12 +13,10 @@ all: ${TARG}
+ 	@echo built ${TARG}
  
  install: ${TARG}
 -	@mkdir -p ${DESTDIR}${PREFIX}/bin
@@ -18,4 +18,4 @@ $NetBSD: patch-al,v 1.1.1.1 2005/10/29 16:04:38 minskim Exp $
 +	@${BSD_INSTALL_MAN} ${MANFILES} ${DESTDIR}${MANPREFIX}/man1
  
  uninstall:
- 	@rm -f ${DESTDIR}${PREFIX}/bin/${TARG}
+ 	rm -f ${DESTDIR}${PREFIX}/bin/${TARG}
