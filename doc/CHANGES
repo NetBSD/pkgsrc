@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12129 2005/12/06 23:49:19 wiz Exp $
+$NetBSD: CHANGES,v 1.12130 2005/12/06 23:57:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added editors/gate version 2.06 [wiz 2005-12-06]
 	Added security/p5-Crypt-SmbHash version 0.12 [wiz 2005-12-06]
 	Updated archivers/p7zip to 4.30 [wiz 2005-12-06]
+	Updated sysutils/cdrtools-ossdvd to 2.01.1.35 [wiz 2005-12-06]
