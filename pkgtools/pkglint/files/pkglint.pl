@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.423 2005/12/06 15:22:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.424 2005/12/06 15:47:14 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1540,6 +1540,7 @@ sub checkline_mk_direct_tool_use($$$) {
 
 sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
+	my ($rest);
 
 	if ($text =~ qr"^[^#]*[^\$]\$(\w+)") {
 		my ($varname) = ($1);
@@ -1554,6 +1555,15 @@ sub checkline_mk_text($$) {
 
 	if ($text =~ qr"\$\{WRKSRC\}/\.\./") {
 		$line->log_error("Using \"\${WRKSRC}/..\" is conceptually wrong. Use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
+	}
+
+	$rest = $text;
+	while ($rest =~ s/\$\{([-A-Z0-9a-z_]+)(?::[^\}]+)\}//) {
+		my ($varname) = ($1);
+
+		if (exists(get_deprecated_map()->{$varname})) {
+			$line->log_warning("Use of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
+		}
 	}
 }
 
@@ -1723,6 +1733,10 @@ sub checkline_mk_varassign($$$$$) {
 		} else {
 			$line->log_info("Use of PKGNAME in ${varname}.");
 		}
+	}
+
+	if (exists(get_deprecated_map()->{$varname})) {
+		$line->log_warning("Definition of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
 	}
 }
 
@@ -2189,40 +2203,6 @@ sub checklines_multiple_patches($) {
 	}
 }
 
-sub checklines_mk_deprecated_variables($) {
-	my ($lines) = @_;
-	my ($vars, $varnames, $regex_varuse);
-
-	$vars = get_deprecated_map();
-	$varnames = join("|", sort(keys(%{$vars})));
-	$regex_varuse = qr"\$\{(${varnames})[:}]";
-
-	foreach my $line (@{$lines}) {
-		my ($rest);
-
-		if ($line->text =~ regex_varassign) {
-			my ($varname) = ($1);
-			$rest = $3;
-			if (exists($vars->{$varname})) {
-				$line->log_warning("Definition of ${varname} is deprecated. $vars->{$varname}");
-			}
-
-		} elsif ($line->text =~ regex_shellcmd) {
-			($rest) = ($1);
-		}
-
-		if (defined($rest)) {
-			while ($rest =~ s/$regex_varuse//) {
-				my ($varname) = ($1);
-
-				if (exists($vars->{$varname})) {
-					$line->log_warning("Use of ${varname} is deprecated. $vars->{$varname}");
-				}
-			}
-		}
-	}
-}
-
 sub checklines_mk($) {
 	my ($lines) = @_;
 
@@ -2242,7 +2222,6 @@ sub checklines_mk($) {
 		}
 	}
 
-	checklines_mk_deprecated_variables($lines);
 	autofix($lines);
 }
 
