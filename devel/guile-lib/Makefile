@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:04 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/06 14:14:24 joerg Exp $
 
 DISTNAME=	guile-lib-0.1.2
 CATEGORIES=	devel
@@ -25,6 +25,10 @@ TEST_TARGET=	test
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
+	${RM} ${WRKSRC}/src/build-tools/gnu/config.guess
+	${LN} -s ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/src/build-tools/gnu/config.guess
+	${RM} ${WRKSRC}/src/build-tools/gnu/config.sub
+	${LN} -s ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/src/build-tools/gnu/config.sub
 
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
