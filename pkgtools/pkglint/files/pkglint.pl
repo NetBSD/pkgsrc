@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.420 2005/12/06 13:16:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.421 2005/12/06 13:23:16 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -890,7 +890,87 @@ sub parse_command_line() {
 }
 
 #
-# Loading pkglint-specific data from files, part 1.
+# Caching subroutines.
+#
+
+# The pkglint author thinks that variables containing lists of things
+# should have a name indicating some plural form. Sadly, there are other
+# reasons like backwards compatibility and other developer's
+# expectations that make changes to most of the following variables
+# highly unlikely.
+my $get_regex_plurals_value = undef;
+sub get_regex_plurals() {
+
+	if (defined($get_regex_plurals_value)) {
+		return $get_regex_plurals_value;
+	}
+
+	my @plurals_ok = qw(
+		.*S
+		.*LIST
+		.*_AWK
+		.*_ENV
+		.*_REQD
+		.*_SED
+		.*_SKIP
+		BUILDLINK_LDADD
+		BUILDLINK_RECOMMENDED
+		COMMENT
+		EXTRACT_ONLY
+		GENERATE_PLIST
+		PLIST_CAT
+		PLIST_PRE
+		PREPEND_PATH
+	);
+	my @plurals_missing_an_s = qw(
+		.*_OVERRIDE
+		.*_PREREQ
+		.*_SRC
+		.*_SUBST
+		.*_TARGET
+		.*_TMPL
+		BUILDLINK_DEPMETHOD
+		BUILDLINK_TRANSFORM
+		EVAL_PREFIX
+		INTERACTIVE_STAGE
+		LICENSE
+		MASTER_SITE_.*
+		MASTER_SORT_REGEX
+		NOT_FOR_COMPILER
+		NOT_FOR_PLATFORM
+		ONLY_FOR_COMPILER
+		ONLY_FOR_PLATFORM
+		PERL5_PACKLIST
+		PKG_FAIL_REASON
+		PKG_SKIP_REASON
+	);
+	my @plurals_reluctantly_accepted = qw(
+		CRYPTO
+		FIX_RPATH
+		PYTHON_VERSIONS_INCOMPATIBLE
+		REPLACE_INTERPRETER
+		REPLACE_PERL
+		REPLACE_RUBY
+		RESTRICTED
+		SITES_.*
+		TOOLS_ALIASES\.*
+		TOOLS_BROKEN
+		TOOLS_CREATE
+		TOOLS_GNU_MISSING
+		TOOLS_NOOP
+	);
+	my $plurals = join("|",
+		@plurals_ok,
+		@plurals_missing_an_s,
+		@plurals_reluctantly_accepted
+	);
+
+	$get_regex_plurals_value = qr"^(?:${plurals})$";
+	return $get_regex_plurals_value;
+}
+
+#
+# Loading pkglint-specific data from files.
 #
 
 my $get_vartypes_map_result = undef;
@@ -1038,6 +1118,65 @@ sub get_dist_sites_names() {
 		load_dist_sites();
 	}
 	return $load_dist_sites_names;
+}
+
+my $load_tool_names_tools = undef;
+my $load_tool_names_vartools = undef;
+sub load_tool_names() {
+	my ($tools, $vartools);
+
+	$tools = {};
+	$vartools = {};
+	foreach my $file (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
+		my $fname = "${pkgsrcdir}/mk/tools/${file}.mk";
+		my $lines = load_lines($fname, true);
+
+		if (!$lines) {
+			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+		}
+
+		foreach my $line (@{$lines}) {
+			if ($line->text =~ regex_varassign) {
+				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
+				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+)$") {
+					$tools->{$value} = true;
+
+				} elsif ($varname =~ qr"^(?:_TOOLS_VARNAME)\.([-\w.]+)$") {
+					$tools->{$1} = true;
+					$vartools->{$1} = $value;
+
+				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD)\.([-\w.]+|\[)$") {
+					$tools->{$1} = true;
+
+				} elsif ($varname =~ qr"^_TOOLS\.") {
+					foreach my $tool (split(qr"\s+", $value)) {
+						$tools->{$tool} = true;
+					}
+				}
+			}
+		}
+	}
+	log_debug(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
+	log_debug(NO_FILE, NO_LINE_NUMBER, "Known vartools: ".join(" ", sort(keys(%{$vartools}))));
+
+	$load_tool_names_tools = $tools;
+	$load_tool_names_vartools = $vartools;
+}
+
+sub get_tool_names() {
+
+	if (!defined($load_tool_names_tools)) {
+		load_tool_names();
+	}
+	return $load_tool_names_tools;
+}
+
+sub get_vartool_names() {
+
+	if (!defined($load_tool_names_vartools)) {
+		load_tool_names();
+	}
+	return $load_tool_names_vartools;
 }
 
 #
@@ -1718,145 +1857,6 @@ sub readmakefile($$$$) {
 		}
 	}
 	return $contents;
-}
-
-#
-# Loading data from pkglint-specific files, part 2.
-#
-
-# The pkglint author thinks that variables containing lists of things
-# should have a name indicating some plural form. Sadly, there are other
-# reasons like backwards compatibility and other developer's
-# expectations that make changes to most of the following variables
-# highly unlikely.
-my $get_regex_plurals_value = undef;
-sub get_regex_plurals() {
-
-	if (defined($get_regex_plurals_value)) {
-		return $get_regex_plurals_value;
-	}
-
-	my @plurals_ok = qw(
-		.*S
-		.*LIST
-		.*_AWK
-		.*_ENV
-		.*_REQD
-		.*_SED
-		.*_SKIP
-		BUILDLINK_LDADD
-		BUILDLINK_RECOMMENDED
-		COMMENT
-		EXTRACT_ONLY
-		GENERATE_PLIST
-		PLIST_CAT
-		PLIST_PRE
-		PREPEND_PATH
-	);
-	my @plurals_missing_an_s = qw(
-		.*_OVERRIDE
-		.*_PREREQ
-		.*_SRC
-		.*_SUBST
-		.*_TARGET
-		.*_TMPL
-		BUILDLINK_DEPMETHOD
-		BUILDLINK_TRANSFORM
-		EVAL_PREFIX
-		INTERACTIVE_STAGE
-		LICENSE
-		MASTER_SITE_.*
-		MASTER_SORT_REGEX
-		NOT_FOR_COMPILER
-		NOT_FOR_PLATFORM
-		ONLY_FOR_COMPILER
-		ONLY_FOR_PLATFORM
-		PERL5_PACKLIST
-		PKG_FAIL_REASON
-		PKG_SKIP_REASON
-	);
-	my @plurals_reluctantly_accepted = qw(
-		CRYPTO
-		FIX_RPATH
-		PYTHON_VERSIONS_INCOMPATIBLE
-		REPLACE_INTERPRETER
-		REPLACE_PERL
-		REPLACE_RUBY
-		RESTRICTED
-		SITES_.*
-		TOOLS_ALIASES\.*
-		TOOLS_BROKEN
-		TOOLS_CREATE
-		TOOLS_GNU_MISSING
-		TOOLS_NOOP
-	);
-	my $plurals = join("|",
-		@plurals_ok,
-		@plurals_missing_an_s,
-		@plurals_reluctantly_accepted
-	);
-
-	$get_regex_plurals_value = qr"^(?:${plurals})$";
-	return $get_regex_plurals_value;
-}
-
-my $load_tool_names_tools = undef;
-my $load_tool_names_vartools = undef;
-sub load_tool_names() {
-	my ($tools, $vartools);
-
-	$tools = {};
-	$vartools = {};
-	foreach my $file (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
-		my $fname = "${pkgsrcdir}/mk/tools/${file}.mk";
-		my $lines = load_lines($fname, true);
-
-		if (!$lines) {
-			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
-		}
-
-		foreach my $line (@{$lines}) {
-			if ($line->text =~ regex_varassign) {
-				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
-				if ($varname eq "TOOLS_CREATE" && $value =~ qr"^([-\w.]+)$") {
-					$tools->{$value} = true;
-
-				} elsif ($varname =~ qr"^(?:_TOOLS_VARNAME)\.([-\w.]+)$") {
-					$tools->{$1} = true;
-					$vartools->{$1} = $value;
-
-				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD)\.([-\w.]+|\[)$") {
-					$tools->{$1} = true;
-
-				} elsif ($varname =~ qr"^_TOOLS\.") {
-					foreach my $tool (split(qr"\s+", $value)) {
-						$tools->{$tool} = true;
-					}
-				}
-			}
-		}
-	}
-	log_debug(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
-	log_debug(NO_FILE, NO_LINE_NUMBER, "Known vartools: ".join(" ", sort(keys(%{$vartools}))));
-
-	$load_tool_names_tools = $tools;
-	$load_tool_names_vartools = $vartools;
-}
-
-sub get_tool_names() {
-
-	if (!defined($load_tool_names_tools)) {
-		load_tool_names();
-	}
-	return $load_tool_names_tools;
-}
-
-sub get_vartool_names() {
-
-	if (!defined($load_tool_names_vartools)) {
-		load_tool_names();
-	}
-	return $load_tool_names_vartools;
 }
 
 #
