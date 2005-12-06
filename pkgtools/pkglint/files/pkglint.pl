@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.417 2005/12/05 23:50:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.418 2005/12/06 01:07:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -765,7 +765,7 @@ my $regex_shellword		=  qr"\s*(
 	|	\"(?:\\.|[^\"\\])*\"
 	|	\`[^\`]*\`
 	|	\\.
-	|	\$\{[^}]+\}
+	|	\$\{[^\$}]+\}
 	|	[^'\"\\\s;&\|<>\#]
 	)+ | ;;? | &&? | \|\|? | <<? | >>? | \#.*)"sx;
 
@@ -940,6 +940,34 @@ if (false) {
 }
 
 	return ($get_make_vars_typemap_result = $vartypes);
+}
+
+my $get_deprecated_map_result = undef;
+sub get_deprecated_map() {
+	my ($fname, $lines, $vars);
+
+	if (defined($get_deprecated_map_result)) {
+		return $get_deprecated_map_result;
+	}
+
+	$fname = conf_datadir."/deprecated.map";
+	if (!($lines = load_file($fname))) {
+		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+	}
+
+	$vars = {};
+	foreach my $line (@{$lines}) {
+		if ($line->text =~ qr"^#" || $line->text =~ qr"^\s*$") {
+			# Ignore empty and comment lines.
+
+		} elsif ($line->text =~ qr"^(\S+)\s+(.*)$") {
+			$vars->{$1} = $2;
+
+		} else {
+			$line->log_fatal("Unknown line format.");
+		}
+	}
+	return ($get_deprecated_map_result = $vars);
 }
 
 my $load_dist_sites_url2name = undef;
@@ -2230,39 +2258,33 @@ sub checklines_Makefile_varuse($) {
 
 sub checklines_deprecated_variables($) {
 	my ($lines) = @_;
-	my ($fname) = (conf_datadir."/deprecated.map");
-	my ($deprecated, $varnames, $varuse_regex, %vars);
+	my ($vars, $varnames, $regex_varuse);
 
-	if (!($deprecated = load_file($fname))) {
-		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
-		return;
-	}
-
-	%vars = ();
-	foreach my $line (@{$deprecated}) {
-		if ($line->text =~ qr"^#" || $line->text =~ qr"^\s*$") {
-			next;
-
-		} elsif ($line->text =~ qr"^(\S+)\s+(.*)$") {
-			$vars{$1} = $2;
-
-		} else {
-			$line->log_fatal("Unknown line format.");
-		}
-	}
-	$varnames = join("|", sort(keys(%vars)));
-	$varuse_regex = qr"\$\{(${varnames})[:}]";
+	$vars = get_deprecated_map();
+	$varnames = join("|", sort(keys(%{$vars})));
+	$regex_varuse = qr"\$\{(${varnames})[:}]";
 
 	foreach my $line (@{$lines}) {
+		my ($rest);
+
 		if ($line->text =~ regex_varassign) {
-			my ($varname, undef, $value) = ($1, $2, $3);
-			if (exists($vars{$varname})) {
-				$line->log_warning("${varname} is deprecated. $vars{$varname}");
+			my ($varname) = ($1);
+			$rest = $3;
+			if (exists($vars->{$varname})) {
+				$line->log_warning("Definition of ${varname} is deprecated. $vars->{$varname}");
 			}
 
-			if ($value =~ $varuse_regex) {
-				my ($varuse_name) = ($1);
-				$line->log_warning("Use of ${varuse_name} is deprecated. $vars{$varuse_name}");
+		} elsif ($line->text =~ regex_shellcmd) {
+			($rest) = ($1);
+		}
+
+		if (defined($rest)) {
+			while ($rest =~ s/$regex_varuse//) {
+				my ($varname) = ($1);
+
+				if (exists($vars->{$varname})) {
+					$line->log_warning("Use of ${varname} is deprecated. $vars->{$varname}");
+				}
 			}
 		}
 	}
