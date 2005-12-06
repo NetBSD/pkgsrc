@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/04 06:57:08 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/06 15:41:06 joerg Exp $
 bin/mlvwm
-man/cat1/mlvwm.0
+${IMAKE_MAN_DIR}/mlvwm.${IMAKE_MAN_SUFFIX}
 share/doc/mlvwm/CONFIGURATION
 share/doc/mlvwm/README
 share/examples/mlvwm/Mlvwmrc
