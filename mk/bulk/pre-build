@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.54 2005/12/03 01:00:37 rillig Exp $
+# $NetBSD: pre-build,v 1.55 2005/12/06 09:15:29 rillig Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -66,9 +66,9 @@ mkdir -p "${BULKFILESDIR}"
 # Make sure the pkg-vulnerabilities file is up to date
 echo "Making sure vulnerability-list is upto date:"
 if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = yes ]; then
-       ( cd ${USR_PKGSRC}/security/audit-packages                       \
-         && ${BMAKE} bulk-install                                       \
-         && env PKGVULNDIR=${DISTDIR} download-vulnerability-list )
+       ( cd "${USR_PKGSRC}/security/audit-packages" \
+         && ${BMAKE} bulk-install \
+         && env PKGVULNDIR="${DISTDIR}" download-vulnerability-list )
        echo 'done.'
 else
        echo '(skipped)'
@@ -76,7 +76,7 @@ fi
 
 # On non-NetBSD platforms we need to keep the bootstrap-files!
 if [ x"$BMAKE" = x"bmake" ]; then
-	( cd $LOCALBASE && tar cf /tmp/$$.tar                                \
+	( cd "$LOCALBASE" && tar cf /tmp/$$.tar \
 		sbin/mtree sbin/pkg_add sbin/pkg_admin sbin/pkg_create       \
 		sbin/pkg_delete sbin/pkg_info sbin/pkg_view sbin/linkfarm    \
 		share/mk/sys.mk share/mk/bsd.dep.mk share/mk/bsd.depall.mk   \
@@ -105,19 +105,19 @@ fi
 #
 # Clean out everything and its mother
 #
-PKG_DBDIR=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=PKG_DBDIR)`
-DEPOTBASE=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=DEPOTBASE)`
-PKG_TOOLS_BIN=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=PKG_TOOLS_BIN)`
+PKG_DBDIR=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=PKG_DBDIR)`
+DEPOTBASE=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=DEPOTBASE)`
+PKG_TOOLS_BIN=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=PKG_TOOLS_BIN)`
 
-for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
+for dbdir in "${PKG_DBDIR}" "${DEPOTBASE}"; do
 	echo "Removing all installed packages in ${dbdir}"
-	if [ -d $dbdir ]; then
-		cd $dbdir
+	if [ -d "$dbdir" ]; then
+		cd "$dbdir"
 		for pkg in *
 		do
-			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
+			if ${PKG_TOOLS_BIN}/pkg_info -K "$dbdir" -qe "$pkg"; then
 				echo "${PKG_TOOLS_BIN}/pkg_delete -r ${pkg}"
-				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -r $pkg
+				${PKG_TOOLS_BIN}/pkg_delete -K "$dbdir" -r "$pkg"
 			fi
 		done
 		#
@@ -126,9 +126,9 @@ for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
 		#
 		for pkg in *
 		do
-			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
+			if ${PKG_TOOLS_BIN}/pkg_info -K "$dbdir" -qe "$pkg"; then
 				echo "${PKG_TOOLS_BIN}/pkg_delete -f ${pkg}"
-				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -f $pkg
+				${PKG_TOOLS_BIN}/pkg_delete -K "$dbdir" -f "$pkg"
 			fi
 		done
 	
@@ -139,18 +139,18 @@ for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
 	fi
 done
 
-cd $LOCALBASE && rm -fr * && rm -fr .??*;
+cd "$LOCALBASE" && rm -fr * && rm -fr .??*;
 if [ x"$BMAKE" = x"bmake" ]; then
-	( cd $LOCALBASE && tar xf /tmp/$$.tar )
+	( cd "$LOCALBASE" && tar xf /tmp/$$.tar )
 fi
 
 # Stuff known to be broken
-rm -fr $X11BASE/share/gimp
-rm -fr $X11BASE/share/gnome
-rm -fr $X11BASE/share/kde
-rm -fr $X11BASE/share/netscape
+rm -fr "$X11BASE/share/gimp"
+rm -fr "$X11BASE/share/gnome"
+rm -fr "$X11BASE/share/kde"
+rm -fr "$X11BASE/share/netscape"
 rm -fr /var/tmp/inst*
-rm -fr $X11BASE/lib/libgimp*	# gimp doesn't build with old libs around
+rm -fr "$X11BASE/lib/libgimp"*	# gimp doesn't build with old libs around
 rm -fr /nonexistent		# broken useradd on pop3d
 rm -fr /home/majordom		# mail/majordomo pkg
 rm -fr /home/nut		# sysutils/ups-net
@@ -160,7 +160,7 @@ rm -fr /tmp/mod*
 
 
 # Clean up state files
-cd ${USR_PKGSRC}
+cd "${USR_PKGSRC}"
 echo "Cleaning up leftover state files from previous runs"
 rm -f "${BULKFILESDIR}"/*/*/"$BROKENF" "${BULKFILESDIR}"/*/*/"$BRKWRKLOG" "${BULKFILESDIR}"/*/*/"$BLDLOG"
 rm -f "${BULKFILESDIR}/$BROKENF" "${BULKFILESDIR}/$BRKWRKLOG" "${BULKFILESDIR}/$BLDLOG" "$STARTFILE"
@@ -169,19 +169,19 @@ rm -f "${BULKFILESDIR}/$BROKENF" "${BULKFILESDIR}/$BRKWRKLOG" "${BULKFILESDIR}/$
 #
 # Remove old/broken distfiles and binary packages
 #
-PACKAGES=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=PACKAGES )`;
+PACKAGES=`( cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=PACKAGES )`
 
 case "$LINTPKGSRC_CACHE$PRUNEDISTFILES$PRUNEPACKAGES" in
 *yes*|*YES*)
 	# install pkglint to support any of these options
-	( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} PRECLEAN=yes bulk-install )
+	( cd "${PKGLINT_PKG_DIR}" && ${BMAKE} PRECLEAN=yes bulk-install )
 	;;
 esac
 
 case "$LINTPKGSRC_CACHE" in
 yes|YES)
 	echo "Creating lintpkgsrc cache database."
-	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -E $LINTPKGSRC_DB
+	lintpkgsrc -K "$PACKAGES" -P "$USR_PKGSRC" -M "$DISTDIR" -E "$LINTPKGSRC_DB"
 	lintpkgsrc_cache="-I $LINTPKGSRC_DB"
 	echo "done."
 	;;
@@ -193,7 +193,7 @@ esac
 case "$PRUNEDISTFILES" in
 yes|YES)
 	echo "Removing old/broken distfiles"
-	lintpkgsrc $lintpkgsrc_cache -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
+	lintpkgsrc $lintpkgsrc_cache -K "$PACKAGES" -P "$USR_PKGSRC" -M "$DISTDIR" -o -m -r
 	echo "done."
 	;;
 *)
@@ -204,7 +204,7 @@ esac
 case "$PRUNEPACKAGES" in
 yes|YES)
 	echo "Removing old (out of date) binary packages"
-	lintpkgsrc $lintpkgsrc_cache -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
+	lintpkgsrc $lintpkgsrc_cache -K "$PACKAGES" -P "$USR_PKGSRC" -M "$DISTDIR" -p -r
 	echo "done."
 	;;
 *)
@@ -215,12 +215,12 @@ esac
 case "$PRUNELINKS" in
 yes|YES)
 	echo "Checking for and removing orphaned packages links"
-	find $PACKAGES -type l -print |  \
+	find "$PACKAGES" -type l -print |  \
 	while read f
 	do
-		if [ ! -d $f -a ! -f $f ]; then
-			echo "Removing orphaned link:  \"$f\""
-			rm $f
+		if [ ! -d "$f" -a ! -f "$f" ]; then
+			echo "Removing orphaned link: \"$f\""
+			rm "$f"
 		fi
 	done
 	echo "done."
@@ -232,15 +232,15 @@ esac
 
 # Clean out the packages added above so that the real bulk build
 # is started in a consistent state.
-for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
+for dbdir in "${PKG_DBDIR}" "${DEPOTBASE}"; do
 	echo "Removing all installed packages in ${dbdir}"
-	if [ -d $dbdir ]; then
-		cd $dbdir
+	if [ -d "$dbdir" ]; then
+		cd "$dbdir"
 		for pkg in *
 		do
-			if `${PKG_TOOLS_BIN}/pkg_info -K $dbdir -qe $pkg`; then
+			if ${PKG_TOOLS_BIN}/pkg_info -K "$dbdir" -qe "$pkg"; then
 				echo "${PKG_TOOLS_BIN}/pkg_delete -r ${pkg}"
-				${PKG_TOOLS_BIN}/pkg_delete -K $dbdir -r $pkg
+				${PKG_TOOLS_BIN}/pkg_delete -K "$dbdir" -r "$pkg"
 			fi
 		done
 	fi
@@ -253,20 +253,20 @@ if [ x"$BMAKE" = x"bmake" ]; then
 	for pkg in archivers/pax devel/bmake devel/mk-files net/tnftp \
 	    security/kth-krb4 textproc/nbsed; do
 		mkdir -p "${BULKFILESDIR}/${pkg}"
-		echo "Don't blow away bootstrap-pkgsrc stuff!" > \
-		"${BULKFILESDIR}/${pkg}/${BROKENF}"
+		echo "Don't blow away bootstrap-pkgsrc stuff!" \
+		> "${BULKFILESDIR}/${pkg}/${BROKENF}"
 	done
 fi
 
-cd ${USR_PKGSRC}
+cd "${USR_PKGSRC}"
 
 if [ -f mk/bulk/pre-build.local ]; then
 	export BROKENF
 	. mk/bulk/pre-build.local
 fi
 
-if [ ! -d ${PKG_DBDIR} ]; then
-	mkdir -p ${PKG_DBDIR}
+if [ ! -d "${PKG_DBDIR}" ]; then
+	mkdir -p "${PKG_DBDIR}"
 fi
 
-touch $STARTFILE
+touch "$STARTFILE"
