@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/03 02:47:58 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/12/06 18:55:32 rillig Exp $
 bin/wmibar
 bin/wmifs
 bin/wmii
@@ -15,14 +15,9 @@ man/man1/wmiiwm.1
 man/man1/wmikeys.1
 man/man1/wmimenu.1
 man/man1/wmir.1
-share/examples/wmii-3/_clabel
-share/examples/wmii-3/_plabel
 share/examples/wmii-3/extern
 share/examples/wmii-3/kmode
-share/examples/wmii-3/progmenu
 share/examples/wmii-3/quit
-share/examples/wmii-3/rcmenu
-share/examples/wmii-3/rmpg
 share/examples/wmii-3/status
 share/examples/wmii-3/welcome
 share/examples/wmii-3/wmirc

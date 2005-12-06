@@ -1,45 +1,43 @@
-$NetBSD: patch-aa,v 1.2 2005/11/03 02:47:58 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2005/12/06 18:55:32 rillig Exp $
 
---- config.mk.orig	2005-10-31 12:34:04.000000000 +0000
+--- config.mk.orig	2005-11-14 10:28:57.000000000 +0000
 +++ config.mk
 @@ -1,15 +1,15 @@
  # Customize to fit your system
  
  # paths
--PREFIX      = /usr/local
--CONFPREFIX  = ${PREFIX}/etc
--MANPREFIX   = ${PREFIX}/share/man
--9PREFIX     = ${PREFIX}/9
-+#PREFIX      = /usr/local
-+CONFPREFIX  = ${PREFIX}/share/examples
-+MANPREFIX   = ${PREFIX}/${PKGMANDIR}
-+9PREFIX     = ${PREFIX}
+-PREFIX = /usr/local
+-CONFPREFIX = ${PREFIX}/etc
+-MANPREFIX = ${PREFIX}/share/man
+-9PREFIX = ${PREFIX}/9
++#PREFIX = /usr/local
++CONFPREFIX = ${PREFIX}/share/examples
++MANPREFIX = ${PREFIX}/${PKGMANDIR}
++9PREFIX = ${PREFIX}
  
- INCDIR      = ${PREFIX}/include
- LIBDIR      = ${PREFIX}/lib
--X11INC      = /usr/X11R6/include
--X11LIB      = /usr/X11R6/lib
-+X11INC      = ${X11BASE}/include
-+X11LIB      = ${X11BASE}/lib
+ INCDIR = ${PREFIX}/include
+ LIBDIR = ${PREFIX}/lib
+-X11INC = /usr/X11R6/include
+-X11LIB = /usr/X11R6/lib
++X11INC = ${X11BASE}/include
++X11LIB = ${X11BASE}/lib
  
  # includes and libs
- INCLUDES    = -I. -I${INCDIR} -I/usr/include -I${X11INC}
-@@ -17,14 +17,14 @@ LIBS        = -L${LIBDIR} -L/usr/lib -lc
- VERSION     = 20051031
+ INCLUDES = -I. -I${INCDIR} -I/usr/include -I${X11INC}
+@@ -17,12 +17,12 @@ LIBS = -L${LIBDIR} -L/usr/lib -lc -lm -L
+ VERSION = 20051114
  
  # flags
--CFLAGS      = -O0 -g -Wall ${INCLUDES} -DVERSION=\"${VERSION}\"
--LDFLAGS     = -g ${LIBS}
-+CFLAGS      += ${INCLUDES} -DVERSION=\"${VERSION}\"
-+LDFLAGS     += ${LIBS}
+-CFLAGS = -O0 -g -Wall ${INCLUDES} -DVERSION=\"${VERSION}\"
+-LDFLAGS = -g ${LIBS}
++CFLAGS += ${INCLUDES} -DVERSION=\"${VERSION}\"
++LDFLAGS += ${LIBS}
  
  # compiler
  # Note: - under Solaris add -D__EXTENSIONS__ to CFLAGS
--MAKE		= make
-+#MAKE		= make
- AR          = ar cr
--CC          = cc
-+#CC          = cc
- RANLIB      = ranlib
- 
- # code formatting
+-MAKE = make
++#MAKE = make
+ AR = ar cr
+-CC = cc
++#CC = cc
+ RANLIB = ranlib
