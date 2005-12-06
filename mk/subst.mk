@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.25 2005/11/24 20:02:40 rillig Exp $
+# $NetBSD: subst.mk,v 1.26 2005/12/06 17:17:30 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -80,7 +80,7 @@ ${_SUBST_COOKIE.${_class_}}:
 	cd ${WRKSRC:Q};							\
 	files=${SUBST_FILES.${_class_}:Q};				\
 	for file in $$files; do						\
-		file="./$$file";					\
+		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file"${_SUBST_BACKUP_SUFFIX:Q};		\
 		if ${_SUBST_IS_TEXT_FILE}; then				\
 			${MV} -f "$$file" "$$tmpfile" || exit 1;	\
