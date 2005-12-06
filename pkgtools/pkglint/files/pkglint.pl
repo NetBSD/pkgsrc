@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.425 2005/12/06 16:13:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.426 2005/12/06 17:32:12 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -765,7 +765,7 @@ my $regex_shellword		=  qr"\s*(
 	|	\"(?:\\.|[^\"\\])*\"
 	|	\`[^\`]*\`
 	|	\\.
-	|	\$\{[^\$}]+\}
+	|	\$\{[^{}]+\}
 	|	[^'\"\\\s;&\|<>\#]
 	)+ | ;;? | &&? | \|\|? | <<? | >>? | \#.*)"sx;
 
@@ -1520,27 +1520,9 @@ sub checkline_relative_path($$) {
 	}
 }
 
-sub checkline_mk_direct_tool_use($$$) {
-	my ($line, $text, $where) = @_;
-	my ($rest, $vartools);
-
-	return unless $opt_warn_directcmd;
-
-	$vartools = get_vartool_names();
-
-	$rest = $text;
-	while ($rest =~ s/^$regex_shellword//) {
-		my ($word) = ($1);
-
-		if (exists($vartools->{$word})) {
-			$line->log_warning("Possible direct use of tool \"${word}\" ${where}. Please use \$\{$vartools->{$word}\} instead.");
-		}
-	}
-}
-
 sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
-	my ($rest);
+	my ($rest, $state, $vartools);
 
 	if ($text =~ qr"^(?:[^#]*[^\$])?\$(\w+)") {
 		my ($varname) = ($1);
@@ -1565,11 +1547,12 @@ sub checkline_mk_text($$) {
 			$line->log_warning("Use of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
 		}
 	}
+
 }
 
-sub checkline_mk_shellcmd($$) {
-	my ($line, $shellcmd) = @_;
-	my ($rest, $state, $vartools);
+sub checkline_mk_shelltext($$) {
+	my ($line, $text) = @_;
+	my ($vartools, $state, $rest);
 
 	use constant SCST_START		=>  0;
 	use constant SCST_CONT		=>  1;
@@ -1581,16 +1564,14 @@ sub checkline_mk_shellcmd($$) {
 	use constant SCST_SED		=> 40;
 	use constant SCST_SED_E		=> 41;
 
-	checkline_mk_text($line, $shellcmd);
-
-	if ($shellcmd =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
+	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
 		my ($mkdir_cmd) = ($1);
 
 		$line->log_note("You don't need to use \"-\" before ${mkdir_cmd}.");
 	}
 
 	$vartools = get_vartool_names();
-	$rest = $shellcmd;
+	$rest = $text;
 	$state = SCST_START;
 	while ($rest =~ s/^$regex_shellword//) {
 		my ($shellword) = ($1);
@@ -1662,31 +1643,39 @@ sub checkline_mk_shellcmd($$) {
 	}
 
 	if ($rest !~ qr"^\s*$") {
-		$line->log_warning("Invalid shell word \"${shellcmd}\".");
+		$line->log_warning("Invalid shell word \"${text}\".");
 	}
+}
+
+sub checkline_mk_shellcmd($$) {
+	my ($line, $shellcmd) = @_;
+
+	checkline_mk_text($line, $shellcmd);
+	checkline_mk_shelltext($line, $shellcmd);
 }
 
 sub checkline_mk_varassign($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
 	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
 
-	use constant direct_tools_ok_vars => array_to_hash(qw(
+	use constant non_shellcode_vars => array_to_hash(qw(
 		BUILDLINK_TRANSFORM BUILD_DEPENDS BUILD_TARGET
-		CFLAGS CPPFLAGS COMMENT CONFLICTS
+		CATEGORIES CFLAGS CPPFLAGS COMMENT CONFLICTS
 		DEPENDS DISTNAME
 		EXTRACT_SUFX EXTRACT_USING
 		INSTALL_TARGET INTERACTIVE_STAGE
 		MANSOURCEPATH MASTER_SITES
-		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON
-		SUBST_CLASSES
+		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON PKG_SUGGESTED_OPTIONS PKG_SUPPORTED_OPTIONS PRINT_PLIST_AWK
+		REPLACE_INTERPRETER RESTRICTED
+		SUBST_CLASSES SUBST_MESSAGE
 		TEST_TARGET
 		USE_TOOLS
 	));
 
-	if (!exists(direct_tools_ok_vars->{$varbase}) && !exists(direct_tools_ok_vars->{$varname})) {
-		checkline_mk_direct_tool_use($line, $value, "in variable ${varname}");
-	}
 	checkline_mk_text($line, $value);
+	if (!exists(non_shellcode_vars->{$varbase}) && !exists(non_shellcode_vars->{$varname})) {
+		checkline_mk_shelltext($line, $value);
+	}
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
 
 			
