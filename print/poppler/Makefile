@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 20:50:53 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/06 17:13:50 reed Exp $
 #
 
 DISTNAME=		poppler-0.4.2
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
 
@@ -20,6 +21,7 @@ GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	share/doc/poppler
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # TODO: Later add an option to choose Splash versus Cairo backend.
 ## Don't build the Splash graphics backend.
 #CONFIGURE_ARGS+=	--disable-splash-output
@@ -29,10 +31,14 @@ CONFIGURE_ARGS+=	--disable-cairo-output
 CONFIGURE_ARGS+=	--disable-poppler-qt
 # Don't compile GTK+ test program.
 CONFIGURE_ARGS+=	--disable-gtk-test
-# TODO: check papersize?
-#  --enable-a4-paper       use A4 paper size instead of Letter for PostScript output
 # maybe  glib wrapper is only part needing gtk??
 #  --disable-poppler-glib  Don't compile poppler glib wrapper.
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
+CONFIGURE_ARGS+=	--enable-a4-paper
+.endif
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/poppler/
