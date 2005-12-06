@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.2 2005/12/06 18:50:36 rillig Exp $
+$NetBSD: patch-as,v 1.1 2005/12/06 18:50:36 rillig Exp $
 
---- bc/Makefile.orig	2005-11-14 10:22:40.000000000 +0000
-+++ bc/Makefile
-@@ -23,12 +23,10 @@ depend:
- 	@${YACC} -d ${YFILES}
+--- date/Makefile.orig	2005-11-14 10:22:40.000000000 +0000
++++ date/Makefile
+@@ -13,12 +13,10 @@ all: ${TARG}
+ 	@echo built ${TARG}
  
  install: ${TARG}
 -	@mkdir -p ${DESTDIR}${PREFIX}/bin
