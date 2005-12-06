@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.49 2005/12/02 18:47:58 rillig Exp $
+# $NetBSD: makevars.map,v 1.50 2005/12/06 22:07:35 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -151,7 +151,7 @@ PKG_OPTIONS_NONEMPTY_SETS	List
 PKG_OPTIONS_OPTIONAL_GROUPS	List
 PKG_OPTIONS_REQUIRED_GROUPS	List
 PKG_OPTIONS_SET		List
-PKG_OPTIONS_VAR		Varname
+PKG_OPTIONS_VAR		PkgOptionsVar
 PKG_PRESERVE		Yes
 PKG_SKIP_REASON		List+ of ShellWord
 PKG_SUFX		Userdefined
