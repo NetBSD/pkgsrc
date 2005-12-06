@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:43:53 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/12/06 14:09:39 joerg Exp $
 
 SHA1 (AfterStep-1.8.11.tar.bz2) = 841655ff19df9c5361852a33950183ca6d67b6f0
 RMD160 (AfterStep-1.8.11.tar.bz2) = 450206a888e32d40ac0abeece0ffa0ce4909a54c
@@ -12,3 +12,4 @@ SHA1 (patch-ag) = 3fc5611c74b3f54f27ddb13ce2e9bfd86207b837
 SHA1 (patch-ah) = fa25e141548fff77ea1790a7e5ca22e39008f257
 SHA1 (patch-ai) = e543bfb27d16b49d1844a4fc29dd0cca5e262bfc
 SHA1 (patch-aj) = ceca49e410ec22e5b5fdf8132ab80fa920514eb3
+SHA1 (patch-ak) = 77cb150f9f167767eb5d704d7a7c80bfd9f735fe
