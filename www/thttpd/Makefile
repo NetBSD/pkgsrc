@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2005/11/28 09:48:10 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2005/12/06 14:19:39 rillig Exp $
 
 DISTNAME=	thttpd-2.25b
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
