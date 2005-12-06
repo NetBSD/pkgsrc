@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2003/11/05 22:31:43 dmcmahill Exp $
+$NetBSD: patch-af,v 1.2 2005/12/06 18:25:55 joerg Exp $
 
 --- src/event.c.orig	2002-03-28 01:35:21.000000000 -0500
 +++ src/event.c
@@ -53,3 +53,11 @@ $NetBSD: patch-af,v 1.1 2003/11/05 22:31:43 dmcmahill Exp $
  #define FUNC_NAME s_select_range_xy
  {
  	VALIDATE_ARG_PROC(1, proc);
+@@ -449,6 +449,7 @@ button_release_handler(GtkWidget *widget
+ 		callback_srange();
+ 		break;
+ 	default:
++		break;
+ 	}
+ 	wtable->mstate = M_NONE;
+ 	wtable->button_down = -1;
