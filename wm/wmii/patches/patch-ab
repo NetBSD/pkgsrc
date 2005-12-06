@@ -1,20 +1,20 @@
-$NetBSD: patch-ab,v 1.2 2005/11/03 02:47:58 minskim Exp $
+$NetBSD: patch-ab,v 1.3 2005/12/06 18:55:32 rillig Exp $
 
---- Makefile.orig	2005-10-29 23:41:59.000000000 +0000
+--- Makefile.orig	2005-11-14 10:28:57.000000000 +0000
 +++ Makefile
 @@ -5,7 +5,7 @@ include config.mk
  
- SUBDIRS     = libcext liblitz libixp libixp2 libwmii cmd
+ SUBDIRS = libcext liblitz libixp libixp2 libwmii cmd
  
--BIN         = cmd/wm/wmii cmd/wm/wmiiwm cmd/wmibar cmd/wmifs \
-+BIN         = cmd/wm/wmiiwm cmd/wmibar cmd/wmifs \
-               cmd/wmikeys cmd/wmimenu cmd/wmiplumb cmd/wmir cmd/wmiwarp
+-BIN = cmd/wm/wmii cmd/wm/wmiiwm cmd/wmibar cmd/wmifs \
++BIN = cmd/wm/wmiiwm cmd/wmibar cmd/wmifs \
+ 	cmd/wmikeys cmd/wmimenu cmd/wmiplumb cmd/wmir cmd/wmiwarp
  
- MAN1        = cmd/wm/wmii.1 cmd/wm/wmiiwm.1 cmd/wmibar.1 cmd/wmifs.1 \
-@@ -46,25 +46,15 @@ clean:
+ MAN1 = cmd/wm/wmii.1 cmd/wm/wmiiwm.1 cmd/wmibar.1 cmd/wmifs.1 \
+@@ -38,25 +38,15 @@ clean:
+ 	rm -rf wmii-${VERSION}*
  
  install: all
- 	@echo Installing executable files to ${DESTDIR}${PREFIX}/bin
 -	@mkdir -p ${DESTDIR}${PREFIX}/bin
 -	@cp -f ${BIN} ${DESTDIR}${PREFIX}/bin
 -	@sed 's|CONFPREFIX|${CONFPREFIX}|; s|9PREFIX|${9PREFIX}|' <cmd/wm/wmii >${DESTDIR}${PREFIX}/bin/wmii
@@ -24,7 +24,7 @@ $NetBSD: patch-ab,v 1.2 2005/11/03 02:47:58 minskim Exp $
 +	@${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 +	@${BSD_INSTALL_PROGRAM} ${BIN} ${DESTDIR}${PREFIX}/bin
 +	@${BSD_INSTALL_SCRIPT} cmd/wm/wmii ${DESTDIR}${PREFIX}/bin
- 	@echo Installing rc scripts to ${DESTDIR}${CONFPREFIX}/wmii-3
+ 	@echo installed executable files to ${DESTDIR}${PREFIX}/bin
 -	@mkdir -p ${DESTDIR}${CONFPREFIX}/wmii-3
 -	@cd rc; for i in *; do \
 -		sed 's|9PREFIX|${9PREFIX}|' <$$i >${DESTDIR}${CONFPREFIX}/wmii-3/$$i; \
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.2 2005/11/03 02:47:58 minskim Exp $
 -	done
 +	@${BSD_INSTALL_SCRIPT_DIR} ${DESTDIR}${CONFPREFIX}/wmii-3
 +	@${BSD_INSTALL_SCRIPT} rc/* ${DESTDIR}${CONFPREFIX}/wmii-3
- 	@echo Installing manual pages to ${DESTDIR}${MANPREFIX}/man1
+ 	@echo installed rc scripts to ${DESTDIR}${CONFPREFIX}/wmii-3
 -	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
 -	@cp -f ${MAN1} ${DESTDIR}${MANPREFIX}/man1
 -	@sed 's|CONFPREFIX|${CONFPREFIX}|' <cmd/wm/wmii.1 >${DESTDIR}${MANPREFIX}/man1/wmii.1
@@ -41,6 +41,6 @@ $NetBSD: patch-ab,v 1.2 2005/11/03 02:47:58 minskim Exp $
 -	done
 +	@${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
 +	@${BSD_INSTALL_MAN} ${MAN1} ${DESTDIR}${MANPREFIX}/man1
- 	@echo "wmii successfully installed"
+ 	@echo installed manual pages to ${DESTDIR}${MANPREFIX}/man1
  
  uninstall:
