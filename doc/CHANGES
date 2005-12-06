@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12124 2005/12/06 14:20:57 rillig Exp $
+$NetBSD: CHANGES,v 1.12125 2005/12/06 18:51:39 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5506,3 +5506,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/squirrelmail to 1.4.5nb3 [martti 2005-12-05]
 	Updated mail/ja-squirrelmail to 1.4.5nb3 [martti 2005-12-05]
 	Updated www/thttpd to 2.25bnb5 [rillig 2005-12-06]
+	Updated sysutils/9base to 20051114 [rillig 2005-12-06]
