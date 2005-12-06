@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12127 2005/12/06 22:43:54 wiz Exp $
+$NetBSD: CHANGES,v 1.12128 2005/12/06 22:55:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5509,3 +5509,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/9base to 20051114 [rillig 2005-12-06]
 	Updated wm/wmii to 20051114 [rillig 2005-12-06]
 	Added editors/gate version 2.06 [wiz 2005-12-06]
+	Added security/p5-Crypt-SmbHash version 0.12 [wiz 2005-12-06]
