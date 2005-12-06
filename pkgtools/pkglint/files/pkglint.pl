@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.422 2005/12/06 14:15:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.423 2005/12/06 15:22:28 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -666,7 +666,7 @@ my (%checks) = (
 );
 
 my $opt_warn_absname	= true;
-my $opt_warn_directcmd	= false;
+my $opt_warn_directcmd	= true;
 my $opt_warn_order	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
@@ -1333,7 +1333,7 @@ sub readmakefile($$$$) {
 			$includefile = resolve_relative_path($1);
 			if ($includefile =~ regex_unresolved) {
 				if ($file !~ qr"/mk/") {
-					$line->log_warning("Skipping include file \"${includefile}\". This may result in false warnings.");
+					$line->log_note("Skipping include file \"${includefile}\". This may result in false warnings.");
 				}
 
 			} elsif (exists($seen_Makefile_include->{$includefile})) {
@@ -1538,20 +1538,122 @@ sub checkline_mk_direct_tool_use($$$) {
 	}
 }
 
-sub checkline_mk_dollar($$) {
+sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
 
 	if ($text =~ qr"^[^#]*[^\$]\$(\w+)") {
 		my ($varname) = ($1);
 		$line->log_warning("\$$varname is ambiguous. Use \${$varname} if you mean a Makefile variable or \$\$$varname if you mean a shell variable.");
 	}
+
+	if ($line->lines eq "1") {
+		checkline_rcsid_regex($line, qr"#\s+", "# ");
+	}
+
+	checkline_trailing_whitespace($line);
+
+	if ($text =~ qr"\$\{WRKSRC\}/\.\./") {
+		$line->log_error("Using \"\${WRKSRC}/..\" is conceptually wrong. Use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
+	}
 }
 
 sub checkline_mk_shellcmd($$) {
 	my ($line, $shellcmd) = @_;
+	my ($rest, $state, $vartools);
 
-	checkline_mk_direct_tool_use($line, $shellcmd, "in shell command");
-	checkline_mk_dollar($line, $shellcmd);
+	use constant SCST_START		=>  0;
+	use constant SCST_CONT		=>  1;
+	use constant SCST_INSTALL	=> 10;
+	use constant SCST_INSTALL_D	=> 11;
+	use constant SCST_MKDIR		=> 20;
+	use constant SCST_PAX		=> 30;
+	use constant SCST_PAX_S		=> 31;
+	use constant SCST_SED		=> 40;
+	use constant SCST_SED_E		=> 41;
+
+	checkline_mk_text($line, $shellcmd);
+
+	if ($shellcmd =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
+		my ($mkdir_cmd) = ($1);
+
+		$line->log_note("You don't need to use \"-\" before ${mkdir_cmd}.");
+	}
+
+	$vartools = get_vartool_names();
+	$rest = $shellcmd;
+	$state = SCST_START;
+	while ($rest =~ s/^$regex_shellword//) {
+		my ($shellword) = ($1);
+
+		#
+		# Actions associated with the current state
+		# and the symbol on the "input tape".
+		#
+
+		if ($state == SCST_START && exists($vartools->{$shellword})) {
+			$line->log_warning("Possible direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead.");
+		}
+
+		if (($state != SCST_PAX_S && $state != SCST_SED_E) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
+			$line->log_warning("Found absolute pathname: ${shellword}");
+			$line->explain(
+				"Absolute pathnames are often an indicator for unportable code. As",
+				"pkgsrc aims to be a portable system, absolute pathnames should be",
+				"avoided whenever possible.");
+		}
+
+		if (($state == SCST_INSTALL_D || $state == SCST_MKDIR) && $shellword =~ qr"^\$\{PREFIX\}/") {
+			$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of "
+				. (($state == SCST_MKDIR) ? "\${MKDIR}" : "\${INSTALL} -d")
+				. ".");
+			$line->explain(
+				"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
+				"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
+		}
+
+		#
+		# State transition.
+		#
+
+		if ($shellword =~ qr"^[;&\|]+$") {
+			$state = SCST_START;
+
+		} elsif ($state == SCST_START) {
+			if ($shellword eq "\${INSTALL}") {
+				$state = SCST_INSTALL;
+			} elsif ($shellword eq "\${MKDIR}") {
+				$state = SCST_MKDIR;
+			} elsif ($shellword eq "\${PAX}") {
+				$state = SCST_PAX;
+			} elsif ($shellword eq "\${SED}") {
+				$state = SCST_SED;
+			} else {
+				$state = SCST_CONT;
+			}
+
+		} elsif ($state == SCST_INSTALL && $shellword eq "-d") {
+			$state = SCST_INSTALL_D;
+
+		} elsif (($state == SCST_INSTALL || $state == SCST_INSTALL_D) && $shellword =~ qr"^-[ogm]$") {
+			$state = SCST_START;
+
+		} elsif ($state == SCST_PAX && $shellword eq "-s") {
+			$state = SCST_PAX_S;
+
+		} elsif ($state == SCST_PAX_S) {
+			$state = SCST_PAX;
+
+		} elsif ($state == SCST_SED && $shellword eq "-e") {
+			$state = SCST_SED_E;
+
+		} elsif ($state == SCST_SED_E) {
+			$state = SCST_SED;
+		}
+	}
+
+	if ($rest !~ qr"^\s*$") {
+		$line->log_warning("Invalid shell word \"${shellcmd}\".");
+	}
 }
 
 sub checkline_mk_varassign($$$$$) {
@@ -1574,8 +1676,54 @@ sub checkline_mk_varassign($$$$$) {
 	if (!exists(direct_tools_ok_vars->{$varbase}) && !exists(direct_tools_ok_vars->{$varname})) {
 		checkline_mk_direct_tool_use($line, $value, "in variable ${varname}");
 	}
-	checkline_mk_dollar($line, $value);
+	checkline_mk_text($line, $value);
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
+
+			
+	if ($varname =~ qr"^_") {
+		$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
+	}
+
+	if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
+		my ($guess) = ($1);
+		$guess =~ s/-/\//g;
+		$guess = "auto/${guess}/.packlist";
+
+		my ($ucvalue, $ucguess) = (uc($value), uc($guess));
+		if ($ucvalue ne $ucguess && $ucvalue ne "\${PERL5_SITEARCH\}/${ucguess}") {
+			$line->log_warning("Unusual value for PERL5_PACKLIST -- \"${guess}\" expected.");
+		}
+	}
+
+	if ($varname eq "SVR4_PKGNAME") {
+		if ($value =~ regex_unresolved) {
+			$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
+		} elsif (length($value) > 5) {
+			$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
+		}
+	}
+
+	if (defined($comment) && $comment eq "# defined" && $varname !~ qr".*(?:_MK|_COMMON)$") {
+		$line->log_warning("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".");
+	}
+
+	if ($varname =~ qr"^NO_(.*)_ON_(.*)$") {
+		my ($what, $where) = ($1, $2);
+		if (($what ne "SRC" && $what ne "BIN") || ($where ne "FTP" && $where ne "CDROM")) {
+			$line->log_error("Misspelled variable: Valid names are USE_{BIN,SRC}_ON_{FTP,CDROM}.");
+		}
+	}
+
+	if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {
+		my ($pkgvarname) = ($1);
+		if ($varname =~ qr"^PKG_.*_REASON$") {
+			# ok
+		} elsif ($varname =~ qr"^(?:DIST_SUBDIR|WRKSRC)$") {
+			$line->log_warning("${pkgvarname} should not be used in ${varname}, as it sometimes includes the PKGREVISION. Please use ${pkgvarname}_NOREV instead.");
+		} else {
+			$line->log_info("Use of PKGNAME in ${varname}.");
+		}
+	}
 }
 
 sub checkline_mk_vartype_basic($$$$$) {
@@ -2253,159 +2401,14 @@ sub checklines_package_Makefile($) {
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
-		if ($line->lines eq "1") {
-			checkline_rcsid_regex($line, qr"#\s+", "# ");
-		}
-
-		checkline_trailing_whitespace($line);
-
-		if ($text =~ /^\040{8}/) {
-			$line->log_warning("Please use tab (not spaces) to make indentation.");
-		}
-
-		if ($text =~ qr"\$\{WRKSRC\}/\.\./") {
-			$line->log_error("Using \"\${WRKSRC}/..\" is conceptually wrong. Use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
-		}
-
 		if ($text =~ qr"^\s*$" || $text =~ qr"^#") {
 			# Ignore empty lines and comments
 
 		} elsif ($text =~ regex_varassign) {
-			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
-
-			if ($varname =~ qr"^_") {
-				$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
-			}
-
-			if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
-				my ($guess) = ($1);
-				$guess =~ s/-/\//g;
-				$guess = "auto/${guess}/.packlist";
-
-				my ($ucvalue, $ucguess) = (uc($value), uc($guess));
-				if ($ucvalue ne $ucguess && $ucvalue ne "\${PERL5_SITEARCH\}/${ucguess}") {
-					$line->log_warning("Unusual value for PERL5_PACKLIST -- \"${guess}\" expected.");
-				}
-			}
-
-			if ($varname eq "SVR4_PKGNAME") {
-				if ($value =~ regex_unresolved) {
-					$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
-				} elsif (length($value) > 5) {
-					$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
-				}
-			}
-
-			if (defined($comment) && $comment eq "# defined" && $varname !~ qr".*(?:_MK|_COMMON)$") {
-				$line->log_warning("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".");
-			}
-
-			if ($varname =~ qr"^NO_(.*)_ON_(.*)$") {
-				my ($what, $where) = ($1, $2);
-				if (($what ne "SRC" && $what ne "BIN") || ($where ne "FTP" && $where ne "CDROM")) {
-					$line->log_error("Misspelled variable: Valid names are USE_{BIN,SRC}_ON_{FTP,CDROM}.");
-				}
-			}
-
-			if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {
-				my ($pkgvarname) = ($1);
-				if ($varname =~ qr"^PKG_.*_REASON$") {
-					# ok
-				} elsif ($varname =~ qr"^(?:DIST_SUBDIR|WRKSRC)$") {
-					$line->log_warning("${pkgvarname} should not be used in ${varname}, as it sometimes includes the PKGREVISION. Please use ${pkgvarname}_NOREV instead.");
-				} else {
-					$line->log_info("Use of PKGNAME in ${varname}.");
-				}
-			}
+			# Is already checked by checklines_mk().
 
 		} elsif ($text =~ regex_shellcmd) {
-			my ($shellcmd) = ($1);
-			my ($rest, $state);
-
-			use constant SCST_START		=>  0;
-			use constant SCST_INSTALL	=> 10;
-			use constant SCST_INSTALL_D	=> 11;
-			use constant SCST_MKDIR		=> 20;
-			use constant SCST_PAX		=> 30;
-			use constant SCST_PAX_S		=> 31;
-			use constant SCST_SED		=> 40;
-			use constant SCST_SED_E		=> 41;
-
-			if ($shellcmd =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
-				my ($mkdir_cmd) = ($1);
-
-				$line->log_note("You don't need to use \"-\" before ${mkdir_cmd}.");
-			}
-
-			$rest = $shellcmd;
-			$state = SCST_START;
-			while ($rest =~ s/^$regex_shellword//) {
-				my ($shellword) = ($1);
-
-				#
-				# Actions associated with the current state
-				# and the symbol on the "input tape".
-				#
-
-				if (($state != SCST_PAX_S && $state != SCST_SED_E) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
-					$line->log_warning("Found absolute pathname: ${shellword}");
-					$line->explain(
-						"Absolute pathnames are often an indicator for unportable code. As",
-						"pkgsrc aims to be a portable system, absolute pathnames should be",
-						"avoided whenever possible.");
-				}
-
-				if (($state == SCST_INSTALL_D || $state == SCST_MKDIR) && $shellword =~ qr"^\$\{PREFIX\}/") {
-					$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of "
-						. (($state == SCST_MKDIR) ? "\${MKDIR}" : "\${INSTALL} -d")
-						. ".");
-					$line->explain(
-						"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
-						"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
-				}
-
-				#
-				# State transition.
-				#
-
-				if ($shellword =~ qr"^[;&\|]+$") {
-					$state = SCST_START;
-
-				} elsif ($state == SCST_START) {
-					if ($shellword eq "\${INSTALL}") {
-						$state = SCST_INSTALL;
-					} elsif ($shellword eq "\${MKDIR}") {
-						$state = SCST_MKDIR;
-					} elsif ($shellword eq "\${PAX}") {
-						$state = SCST_PAX;
-					} elsif ($shellword eq "\${SED}") {
-						$state = SCST_SED;
-					}
-
-				} elsif ($state == SCST_INSTALL && $shellword eq "-d") {
-					$state = SCST_INSTALL_D;
-
-				} elsif (($state == SCST_INSTALL || $state == SCST_INSTALL_D) && $shellword =~ qr"^-[ogm]$") {
-					$state = SCST_START;
-
-				} elsif ($state == SCST_PAX && $shellword eq "-s") {
-					$state = SCST_PAX_S;
-
-				} elsif ($state == SCST_PAX_S) {
-					$state = SCST_PAX;
-
-				} elsif ($state == SCST_SED && $shellword eq "-e") {
-					$state = SCST_SED_E;
-
-				} elsif ($state == SCST_SED_E) {
-					$state = SCST_SED;
-
-				}
-			}
-
-			if ($rest !~ qr"^\s*$") {
-				$line->log_warning("Invalid shell word \"${shellcmd}\".");
-			}
+			# Is already checked by checklines_mk().
 
 		} elsif ($text =~ regex_mk_include) {
 			my ($includefile) = ($1);
