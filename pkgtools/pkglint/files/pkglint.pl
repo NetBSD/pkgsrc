@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.430 2005/12/07 19:46:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.431 2005/12/07 21:39:59 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1120,6 +1120,36 @@ sub get_dist_sites_names() {
 	return $load_dist_sites_names;
 }
 
+my $get_pkg_options_result = undef;
+sub get_pkg_options() {
+
+	if (defined($get_pkg_options_result)) {
+		return $get_pkg_options_result;
+	}
+
+	my ($fname) = ("${pkgsrcdir}/mk/defaults/options.description");
+	my ($lines, $options);
+
+	if (!($lines = load_file($fname))) {
+		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+	}
+
+	$options = {};
+	foreach my $line (@{$lines}) {
+		if ($line->text =~ qr"^([-0-9a-z_]+)(?:\s+(.*))?$") {
+			my ($optname, $optdescr) = ($1, $2);
+
+			$options->{$optname} = defined($optdescr)
+			    ? $optdescr
+			    : "";
+		} else {
+			$line->log_error("Unknown line format.");
+		}
+	}
+
+	return ($get_pkg_options_result = $options);
+}
+
 my $load_tool_names_tools = undef;
 my $load_tool_names_vartools = undef;
 sub load_tool_names() {
@@ -1520,6 +1550,21 @@ sub checkline_relative_path($$) {
 	}
 }
 
+sub checkline_relative_pkgdir($$) {
+	my ($line, $path) = @_;
+
+	checkline_relative_path($line, $path);
+	$path = resolve_relative_path($path);
+
+	if ($path !~ qr"^\.\./\.\./[^/]+/[^/]+$") {
+		$line->log_warning("\"${path}\" is not a valid relative package directory.");
+		$line->explain(
+			"A relative pathname always starts with \"../../\", followed",
+			"by a category, a slash and a the directory name of the package.",
+			"For example, \"../../misc/screen\" is a valid relative pathname.");
+	}
+}
+
 sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
 	my ($rest, $state, $vartools);
@@ -1718,7 +1763,7 @@ sub checkline_mk_vartype_basic($$$$$) {
 		} elsif ($value =~ qr":(\.\./\.\./([^/]+)/([^/]+))$") {
 			my ($relpath, $cat, $pkg) = ($1, $2, $3);
 
-			checkline_relative_path($line, $relpath);
+			checkline_relative_pkgdir($line, $relpath);
 
 			if ($pkg eq "msgfmt" || $pkg eq "gettext") {
 				$line->log_warning("Please use BUILD_USES_MSGFMT=yes instead of this dependency.");
@@ -1775,8 +1820,28 @@ sub checkline_mk_vartype_basic($$$$$) {
 		}
 
 	} elsif ($type eq "Option") {
-		if ($value_novar !~ qr"^-?[a-z][-0-9a-z]*$") {
-			$line->log_warning("\"${value}\" is not a valid option name.");
+		if ($value ne $value_novar) {
+			$line->log_info("Skipped check for unresolved \"${value}\" as Option name.");
+
+		} elsif ($value_novar =~ qr"^-?([a-z][-0-9a-z]*)$") {
+			my ($optname) = ($1);
+
+			if (!exists(get_pkg_options()->{$optname})) {
+				$line->log_warning("Unknown option \"${value}\".");
+				$line->explain(
+					"This option is not documented in the mk/defaults/options.description",
+					"file. If this is not a typo, please think of a brief but precise",
+					"description and ask on the tech-pkg\@NetBSD.org for inclusion in the",
+					"database.");
+			}
+
+		} elsif ($value_novar =~ qr"^-?([a-z][-0-9a-z_]*)$") {
+			my ($optname) = ($1);
+
+			$line->log_warning("Use of the underscore character in option names is deprecated.");
+
+		} else {
+			$line->log_error("\"${value}\" is not a valid option name.");
 		}
 
 	} elsif ($type eq "Pathname") {
@@ -1842,17 +1907,7 @@ sub checkline_mk_vartype_basic($$$$$) {
 		$line->log_error("\"${varname}\" is a read-only variable and therefore must not be modified.");
 
 	} elsif ($type eq "RelativePkgDir") {
-		if ($value =~ qr"^\.\./\.\./[^/]+/[^/]+$") {
-			if (!-d "${current_dir}/${value}") {
-				$line->log_error("The directory \"${value}\" does not exist.");
-			}
-		} else {
-			$line->log_warning("\"${value}\" is not a valid relative package directory.");
-			$line->explain(
-				"A relative package directory always starts with \"../../\", followed",
-				"by a category, a slash and a the directory name of the package.",
-				"For example, \"../../misc/screen\" is a relative package directory.");
-		}
+		checkline_relative_pkgdir($line, $value);
 
 	} elsif ($type eq "ShellWord") {
 		if ($value =~ qr"^([\w_\-]+)=(([\"']?)\$\{([\w_]+)\}\3)$") {
