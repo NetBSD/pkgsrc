@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.429 2005/12/07 18:46:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.430 2005/12/07 19:46:51 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -598,10 +598,10 @@ package main;
 # The checkdir_*() procedures check the files of a directory and call
 # checkfile_*() on them.
 #
-# Note: The order of subroutines in the file is mostly historical. One
-# important property is that there are no back-references, that is, if
-# you start reading the code from the top to the bottom you won't find a
-# call to a subroutine you haven't yet seen.
+# Note: I have tried to order the subroutines so that there are no
+# back-references, that is, if you start reading the code from the top to
+# the bottom you should not find a call to a subroutine you haven't yet
+# seen.
 #==========================================================================
 use strict;
 use warnings;
