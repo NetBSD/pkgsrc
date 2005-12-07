@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:57 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/07 12:03:16 peter Exp $
 
 DISTNAME=		pflkm-20050511
 CATEGORIES=		security
@@ -8,7 +8,7 @@ MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://nedbsd.nl/~ppostma/pf/
 COMMENT=		OpenBSD Packet Filter as loadable kernel module for NetBSD
 
-ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-2.[0-9]*-*
 
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
