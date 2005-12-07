@@ -1,0 +1,12 @@
+$NetBSD: patch-an,v 1.1 2005/12/07 15:21:34 joerg Exp $
+
+--- mail/message-browser.c.orig	2005-12-06 23:22:49.000000000 +0000
++++ mail/message-browser.c
+@@ -345,6 +345,7 @@ on_key_press (GtkWidget *widget, GdkEven
+ 		message_browser_close (NULL, mb, NULL);
+ 		return TRUE;	
+ 	default:
++		break;
+ 	}
+ 	
+ 	return FALSE;
