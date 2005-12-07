@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12131 2005/12/07 03:02:11 uebayasi Exp $
+$NetBSD: CHANGES,v 1.12132 2005/12/07 09:27:54 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5513,3 +5513,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated archivers/p7zip to 4.30 [wiz 2005-12-06]
 	Updated sysutils/cdrtools-ossdvd to 2.01.1.35 [wiz 2005-12-06]
 	Updated shells/zsh to 4.2.6 [uebayasi 2005-12-07]
+	Updated print/xpdf to 3.01pl1 [uebayasi 2005-12-07]
