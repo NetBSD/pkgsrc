@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 20:39:51 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/12/07 17:35:37 joerg Exp $
 
 SHA1 (rioutil-1.4.7.tar.gz) = 956a75ce2f23fa0dfd62a4c1facbd1994b88cde6
 RMD160 (rioutil-1.4.7.tar.gz) = 8578338b2b77d3cc9477bc92a6bb8c28b4cf434e
 Size (rioutil-1.4.7.tar.gz) = 406844 bytes
+SHA1 (patch-aa) = 6932aee6f2fe76209e65d90e5dd5afb61bb5428b
+SHA1 (patch-ab) = 903135b95b821af8b056805f46e801ef37236e1e
+SHA1 (patch-ac) = 21c13d418b10c173e893365a10de40b4b1f5cc16
+SHA1 (patch-ad) = 3f92420ad40f48953ed3b313dc9452e6d31c9533
+SHA1 (patch-ae) = e803dca42db9f6ebf7af436d722646a223ed0b7b
+SHA1 (patch-af) = 1fc20cbf82272fbdc44f6dd909f64347d9927ea4

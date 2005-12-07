@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.3 2005/12/07 17:35:37 joerg Exp $
+
+--- src/main.c.orig	2005-12-07 17:12:51.000000000 +0000
++++ src/main.c
+@@ -893,10 +893,10 @@ void usage(void){
+   printf("  -d, --delete=<int>     delete a track(s)\n\n");
+ 
+   printf(" options:\n");
+-#if !defined(__FreeBSD__) || !defined(__NetBSD__)
+-  printf("  -o, --device=<int>     minor number of rio (assigned by driver), /dev/usb/rio?\n");
+-#else
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+   printf("  -o, --device=<int>     minor number of rio (assigned by driver), /dev/urio?\n");
++#else
++  printf("  -o, --device=<int>     minor number of rio (assigned by driver), /dev/usb/rio?\n");
+ #endif
+   printf("  -k, --nocolor          supress ansi color\n");
+   printf("  -m, --memory=<int>     memory unit to upload/download/delete/format to/from\n");
