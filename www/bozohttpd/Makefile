@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/04/25 14:29:07 mrg Exp $
+# $NetBSD: Makefile,v 1.50 2005/12/07 17:01:22 bad Exp $
 #
 
 DISTNAME=	bozohttpd-20050410
@@ -14,6 +14,8 @@ BUILD_DEFS+=	USE_INET6
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.bozohttpd
+PKG_SUPPORTED_OPTIONS=	do_htpasswd
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,6 +24,12 @@ CPPFLAGS+=	-DINET6
 .endif
 CPPFLAGS+=	-Wno-error
 MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdo_htpasswd)
+CPPFLAGS+=	-DDO_HTPASSWD
+.endif
 
 INSTALLATION_DIRS=	libexec man/cat8 man/man8
 
