@@ -1,14 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2005/12/02 12:25:24 peter Exp $
+$NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
 
-This patch fixes the following:
-* compile problem on NetBSD.
-* compile problem with PF > 3.5.
-* fixes at least two segfaults in batch mode.
-* implements a better (less buggy) screen refresh method.
-* changes some errx/warnx to err/warn for better errors.
-
---- pftop.c.orig	2003-08-05 03:20:39.000000000 +0200
-+++ pftop.c	2005-11-16 13:58:27.000000000 +0100
+--- pftop.c.orig	2003-08-05 01:20:39.000000000 +0000
++++ pftop.c
 @@ -31,6 +31,11 @@
   */
  #include "config.h"
@@ -21,15 +14,17 @@ This patch fixes the following:
  #include <sys/types.h>
  #include <sys/ioctl.h>
  #include <sys/socket.h>
-@@ -55,6 +60,7 @@
+@@ -54,7 +59,9 @@
+ #include <err.h>
  #include <errno.h>
  #include <fcntl.h>
++#include <limits.h>
  #include <netdb.h>
 +#include <poll.h>
  #include <signal.h>
  #include <stdio.h>
  #include <stdlib.h>
-@@ -192,9 +198,6 @@
+@@ -192,9 +199,6 @@ int cachestates = 0;
  
  volatile sig_atomic_t gotsig_close = 0;
  volatile sig_atomic_t gotsig_resize = 0;
@@ -39,7 +34,7 @@ This patch fixes the following:
  
  #define FLD_ALIGN_LEFT   0
  #define FLD_ALIGN_RIGHT  1
-@@ -506,7 +509,6 @@
+@@ -506,7 +510,6 @@ tb_end(void)
  
  int
  tbprintf(char *format, ...)
@@ -47,7 +42,18 @@ This patch fixes the following:
  {
  	int len;
  	va_list arg;
-@@ -758,7 +760,6 @@
+@@ -543,6 +546,10 @@ move_horiz(int offset)
+ 	}
+ }
+ 
++#ifndef MIN
++#define MIN(x,y) ((x) < (y) ? (x) : (y))
++#endif
++
+ void
+ print_str(int len, const char *str)
+ {
+@@ -758,7 +765,6 @@ set_curr_view(field_view *v)
  	}
  
  	if ((curr_view != NULL) && (curr_view->mgr != v->mgr)) {
@@ -55,7 +61,7 @@ This patch fixes the following:
  		if (v->mgr != NULL && v->mgr->select_fn != NULL)
  			v->mgr->select_fn();
  	}
-@@ -766,7 +767,6 @@
+@@ -766,7 +772,6 @@ set_curr_view(field_view *v)
  	curr_view = v;
  	curr_mgr = v->mgr;
  	field_setup();
@@ -63,7 +69,7 @@ This patch fixes the following:
  }
  
  void
-@@ -849,11 +849,9 @@
+@@ -849,11 +854,9 @@ update_cache()
  	if (cachestates) {
  		show_field(FLD_SI);
  		show_field(FLD_SP);
@@ -75,7 +81,7 @@ This patch fixes the following:
  	}
  	field_setup();
  }
-@@ -1212,7 +1210,7 @@
+@@ -1212,7 +1215,7 @@ read_states(int dev)
  		ps.ps_buf = (char *) state_buf;
  
  		if (ioctl(dev, DIOCGETSTATES, &ps) < 0) {
@@ -84,7 +90,7 @@ This patch fixes the following:
  		}
  		num_states = ps.ps_len / sizeof(struct pf_state);
  
-@@ -1303,7 +1301,7 @@
+@@ -1303,7 +1306,7 @@ print_header(struct pf_status *status)
  		tbprintf(" PAUSED");
  
  	if (rawmode)
@@ -93,7 +99,7 @@ This patch fixes the following:
  	else
  		mvprintw(0, 0, "%s", tmp_buf);
  
-@@ -1319,7 +1317,10 @@
+@@ -1319,7 +1322,10 @@ print_header(struct pf_status *status)
  		len = columns - strlen(tmp_buf);
  		if (len < 0)
  			len = 0;
@@ -105,7 +111,7 @@ This patch fixes the following:
  	}
  
  	tb_end();
-@@ -1645,7 +1646,7 @@
+@@ -1645,7 +1651,7 @@ disp_update(int dev)
  		dispstart = 0;
  
  	if (ioctl(dev, DIOCGETSTATUS, &status)) {
@@ -114,7 +120,7 @@ This patch fixes the following:
  		return (-1);
  	}
  
-@@ -1681,7 +1682,7 @@
+@@ -1681,7 +1687,7 @@ read_rules(int dev)
  
  	memset(&pr, 0, sizeof(pr));
  	if (ioctl(dev, DIOCGETRULES, &pr)) {
@@ -123,7 +129,7 @@ This patch fixes the following:
  		return (-1);
  	}
  
-@@ -1704,7 +1705,7 @@
+@@ -1704,7 +1710,7 @@ read_rules(int dev)
  	for (nr = 0; nr < num_rules; ++nr) {
  		pr.nr = nr;
  		if (ioctl(dev, DIOCGETRULE, &pr)) {
@@ -132,7 +138,7 @@ This patch fixes the following:
  			return (-1);
  		}
  		rules[nr] = pr.rule;
-@@ -1802,7 +1803,11 @@
+@@ -1802,7 +1808,11 @@ tb_print_fromto(struct pf_rule_addr *src
  			 PF_AZERO(PT_MASK(src), AF_INET6))
  			tbprintf("any ");
  		else {
@@ -144,7 +150,7 @@ This patch fixes the following:
  				tbprintf("! ");
  #ifdef HAVE_ADDR_WRAP
  			tb_print_addrw(&src->addr, PT_MASK(src), af);
-@@ -1823,7 +1828,11 @@
+@@ -1823,7 +1833,11 @@ tb_print_fromto(struct pf_rule_addr *src
  			 PF_AZERO(PT_MASK(dst), AF_INET6))
  			tbprintf("any ");
  		else {
@@ -156,7 +162,7 @@ This patch fixes the following:
  				tbprintf("! ");
  #ifdef HAVE_ADDR_WRAP
  			tb_print_addrw(&dst->addr, PT_MASK(dst), af);
-@@ -1890,8 +1899,13 @@
+@@ -1890,8 +1904,13 @@ print_rule(struct pf_rule *pr)
  #ifdef HAVE_RULE_STATES
  	print_fld_size(FLD_STATS, pr->states);
  #endif
@@ -170,7 +176,7 @@ This patch fixes the following:
  	print_fld_uint(FLD_RULE, pr->nr);
  	print_fld_str(FLD_DIR, pr->direction == PF_OUT ? "Out" : "In");
  	if (pr->quick)
-@@ -2486,12 +2500,6 @@
+@@ -2486,12 +2505,6 @@ sig_resize(int signal)
  }
  
  void
@@ -183,7 +189,7 @@ This patch fixes the following:
  usage()
  {
  	extern char *__progname;
-@@ -2544,7 +2552,9 @@
+@@ -2544,7 +2557,9 @@ show_help(void)
  	line++;
  	mvprintw(line++, 6, "press any key to continue ...");
  
@@ -193,7 +199,7 @@ This patch fixes the following:
  }
  
  void
-@@ -2577,8 +2587,9 @@
+@@ -2577,8 +2592,9 @@ setup_term(int maxstates)
  		keypad(stdscr, TRUE);
  		intrflush(stdscr, FALSE);
  
@@ -204,7 +210,7 @@ This patch fixes the following:
  	}
  
  	if (maxstates == 0)
-@@ -2597,7 +2608,6 @@
+@@ -2597,7 +2613,6 @@ command_set(struct command *cmd)
  		cmdbuf[0] = 0;
  	}
  	curr_cmd = cmd;
@@ -212,7 +218,7 @@ This patch fixes the following:
  	return prev;
  }
  
-@@ -2618,10 +2628,8 @@
+@@ -2618,10 +2633,8 @@ cmd_delay(void)
  {
  	int del;
  	del = atoi(cmdbuf);
@@ -224,7 +230,7 @@ This patch fixes the following:
  }
  
  void
-@@ -2646,7 +2654,6 @@
+@@ -2646,7 +2659,6 @@ cmd_keyboard(int ch)
  		if (cmd_len < sizeof(cmdbuf) - 1) {
  			cmdbuf[cmd_len++] = ch;
  			cmdbuf[cmd_len] = 0;
@@ -232,7 +238,7 @@ This patch fixes the following:
  		} else
  			beep();
  	}
-@@ -2663,10 +2670,9 @@
+@@ -2663,10 +2675,9 @@ cmd_keyboard(int ch)
  	case KEY_BACKSPACE:
  	case KEY_DC:
  	case CTRL_H:
@@ -245,7 +251,7 @@ This patch fixes the following:
  			beep();
  		break;
  	default:
-@@ -2687,9 +2693,6 @@
+@@ -2687,9 +2698,6 @@ keyboard(void)
  	}
  
  	switch (ch) {
@@ -255,7 +261,7 @@ This patch fixes the following:
  	case 'c':
  		cachestates = !cachestates;
  		update_cache();
-@@ -2698,25 +2701,21 @@
+@@ -2698,25 +2706,21 @@ keyboard(void)
  		/* FALLTHROUGH */
  	case 'h':
  		show_help();
@@ -281,7 +287,7 @@ This patch fixes the following:
  		break;
  	case 's':
  		command_set(&cm_delay);
-@@ -2737,49 +2736,40 @@
+@@ -2737,49 +2741,40 @@ keyboard(void)
  		/* FALLTHROUGH */
  	case CTRL_N:
  		dispstart++;
@@ -332,7 +338,7 @@ This patch fixes the following:
  		set_view_hotkey(ch);
  }
  
-@@ -2790,6 +2780,7 @@
+@@ -2790,6 +2785,7 @@ main(int argc, char *argv[])
  	extern int optind;
  
  	struct pf_status status;
@@ -340,7 +346,7 @@ This patch fixes the following:
  
  	char *orderstr = NULL;
  	char *viewstr = NULL;
-@@ -2872,7 +2863,6 @@
+@@ -2872,7 +2868,6 @@ main(int argc, char *argv[])
  	signal(SIGINT, sig_close);
  	signal(SIGQUIT, sig_close);
  	signal(SIGWINCH, sig_resize);
@@ -348,7 +354,7 @@ This patch fixes the following:
  
  #ifdef HAVE_DEVICE_RO
  	dev = open("/dev/pf", O_RDONLY);
-@@ -2884,7 +2874,7 @@
+@@ -2884,7 +2879,7 @@ main(int argc, char *argv[])
  
  	/* preallocate existing states if possible */
  	if (ioctl(dev, DIOCGETSTATUS, &status)) {
@@ -357,7 +363,7 @@ This patch fixes the following:
  		alloc_buf(0);
  	} else
  		alloc_buf(status.states);
-@@ -2910,36 +2900,7 @@
+@@ -2910,36 +2905,7 @@ main(int argc, char *argv[])
  	if (rawmode && countmax == 0)
  		countmax = 1;
  
@@ -394,7 +400,7 @@ This patch fixes the following:
  		if (gotsig_close)
  			break;
  		if (gotsig_resize) {
-@@ -2947,12 +2908,30 @@
+@@ -2947,12 +2913,30 @@ main(int argc, char *argv[])
  				endwin();
  			setup_term(maxstates);
  			gotsig_resize = 0;
