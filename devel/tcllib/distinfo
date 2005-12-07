@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:34 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/12/07 14:16:26 peter Exp $
 
-SHA1 (tcllib-1.7.tar.bz2) = 7eb56e0958f66b97a880f9c24bc1ac35955b05df
-RMD160 (tcllib-1.7.tar.bz2) = 08c0bcc1cbb91caa93cb073b27c54a9f7305192f
-Size (tcllib-1.7.tar.bz2) = 1544908 bytes
+SHA1 (tcllib-1.8.tar.bz2) = fa6b3889428ea7f7f7dcaa1bee1dea1ca83882ad
+RMD160 (tcllib-1.8.tar.bz2) = cf7bf0b061df261871e640f75a1a2d964e2b4c1a
+Size (tcllib-1.8.tar.bz2) = 2064714 bytes
