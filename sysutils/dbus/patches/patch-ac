@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2005/12/07 15:18:33 joerg Exp $
+
+--- dbus/dbus-sysdeps.c.orig	2005-12-03 01:22:01.000000000 +0000
++++ dbus/dbus-sysdeps.c
+@@ -862,8 +862,8 @@ _dbus_read_credentials_unix_socket  (int
+ #ifdef HAVE_CMSGCRED
+   if (cmsg->cmsg_len < sizeof (cmsgmem) || cmsg->cmsg_type != SCM_CREDS)
+     {
+-      dbus_set_error (error, DBUS_ERROR_FAILED);
+-      _dbus_verbose ("Message from recvmsg() was not SCM_CREDS\n");
++      dbus_set_error (error, DBUS_ERROR_FAILED,
++    		      "Message from recvmsg() was not SCM_CREDS");
+       return FALSE;
+     }
+ #endif
