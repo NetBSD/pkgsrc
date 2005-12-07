@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/12/07 17:35:37 joerg Exp $
+
+--- librioutil/driver_standard.c.orig	2005-12-07 17:14:39.000000000 +0000
++++ librioutil/driver_standard.c
+@@ -33,7 +33,7 @@
+ #ifdef linux
+ #include <linux/usb.h>
+ #define RIODEVICE  "/dev/usb/rio"
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ #define RIODEVICE "/dev/urio"
+ #elif defined(__NetBSD__)
+ #define RIODEVICE "/dev/urio"
