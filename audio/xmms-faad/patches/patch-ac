@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/05/21 03:16:23 grant Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/07 18:09:04 joerg Exp $
 
 --- plugins/xmms/src/Makefile.am.orig	2004-02-07 03:05:07.000000000 +1100
 +++ plugins/xmms/src/Makefile.am
-@@ -5,8 +5,8 @@ libmp4_la_CFLAGS = `$(XMMS_CONFIG) --cfl
+@@ -5,9 +5,9 @@ libmp4_la_CFLAGS = `$(XMMS_CONFIG) --cfl
         `$(GTK_CONFIG) --cflags` -DHAVE_GLIB_H=1 \
         -I$(top_srcdir)/include -I$(top_srcdir)/common/mp4v2
  
@@ -12,4 +12,6 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/05/21 03:16:23 grant Exp $
 +CFLAGS = `$(XMMS_CONFIG) --cflags` `$(GTK_CONFIG) --cflags` -DHAVE_GLIB_H=1
  
  libmp4_la_LDFLAGS = -module -avoid-version `$(XMMS_CONFIG) --libs` \
-        `$(GTK_CONFIG) --libs` -lpthread -lstdc++
+-       `$(GTK_CONFIG) --libs` -lpthread -lstdc++
++       `$(GTK_CONFIG) --libs` -lstdc++ ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ libmp4_la_SOURCES = libmp4.c mp4_utils.c aac_utils.c
