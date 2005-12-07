@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12130 2005/12/06 23:57:02 wiz Exp $
+$NetBSD: CHANGES,v 1.12131 2005/12/07 03:02:11 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5512,3 +5512,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added security/p5-Crypt-SmbHash version 0.12 [wiz 2005-12-06]
 	Updated archivers/p7zip to 4.30 [wiz 2005-12-06]
 	Updated sysutils/cdrtools-ossdvd to 2.01.1.35 [wiz 2005-12-06]
+	Updated shells/zsh to 4.2.6 [uebayasi 2005-12-07]
