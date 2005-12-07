@@ -25,7 +25,3 @@
 * check that all values used for the PKG_OPTIONS are documented in
   mk/defaults/options.description. Requested by Antoine Reilles via
   private mail.
-* kannst du bitte eine Warnung fuer IMAKE_MANNEWSUFFIX in PLISTs etc. in
-  pkglint einbauen? Das sollte durch IMAKE_MAN_SUFFIX ersetzt werden.
-  Letzteres ist konsistenter mit den anderen Variablen und das neue Suffix
-  sollte ausschlisslich intern benutzt werden. (joerg)
