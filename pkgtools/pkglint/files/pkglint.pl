@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.428 2005/12/06 22:07:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.429 2005/12/07 18:46:28 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1842,7 +1842,11 @@ sub checkline_mk_vartype_basic($$$$$) {
 		$line->log_error("\"${varname}\" is a read-only variable and therefore must not be modified.");
 
 	} elsif ($type eq "RelativePkgDir") {
-		if ($value !~ qr"^\.\./\.\./[^/]+/[^/]+$") {
+		if ($value =~ qr"^\.\./\.\./[^/]+/[^/]+$") {
+			if (!-d "${current_dir}/${value}") {
+				$line->log_error("The directory \"${value}\" does not exist.");
+			}
+		} else {
 			$line->log_warning("\"${value}\" is not a valid relative package directory.");
 			$line->explain(
 				"A relative package directory always starts with \"../../\", followed",
