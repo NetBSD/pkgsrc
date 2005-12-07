@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.15 2005/12/07 16:45:47 joerg Exp $
+
+--- src/af/util/xp/ut_endian.h.orig	2005-12-06 22:03:57.000000000 +0000
++++ src/af/util/xp/ut_endian.h
+@@ -47,6 +47,13 @@
+ 	#else
+ 		#define UT_BIG_ENDIAN
+ 	#endif
++#elif defined(__DragonFly__)
++	#include <sys/endian.h>
++	#if _BYTE_ORDER == _LITTLE_ENDIAN		
++		#define UT_LITTLE_ENDIAN
++	#else
++		#define UT_BIG_ENDIAN
++	#endif
+ #elif defined(__sgi)
+ 	#include <sys/endian.h>
+ 	#if BYTE_ORDER == LITTLE_ENDIAN
