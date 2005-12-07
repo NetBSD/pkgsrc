@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:50 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/07 17:48:29 wiz Exp $
 #
 
-DISTNAME=		rinfo23
-PKGNAME=		ROMInfo-2.3
+DISTNAME=		rinfo24
+PKGNAME=		ROMInfo-2.4
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/ROMInfo/
 EXTRACT_SUFX=		.zip
@@ -17,6 +17,8 @@ MAKEFILE=		makefile
 BUILD_TARGET=		rominfo
 EXTRACT_CMD_OPTS.zip=	-Laaqo
 INSTALLATION_DIRS=	bin
+
+BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.10
 
 post-extract:
 	${MKDIR} ${WRKSRC}/obj
