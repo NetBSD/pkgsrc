@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/07 15:02:31 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/07 15:05:36 joerg Exp $
 
 DISTNAME=	Blursk-1.3
 PKGNAME=	xmms-blursk-1.3
@@ -15,8 +15,6 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-
-.include "../../mk/bsd.prefs.mk"
 
 post-install:
 	${INSTALL_DATA} ${DISTDIR}/blursk-presets ${PREFIX}/share/xmms/blursk-presets
