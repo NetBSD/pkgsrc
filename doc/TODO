@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4249 2005/12/07 03:02:34 uebayasi Exp $
+$NetBSD: TODO,v 1.4250 2005/12/07 17:40:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -521,7 +521,7 @@ Suggested package updates
 	o fetchmail-6.3.0
 	o fhist-1.14
 	o file-4.15
-	o findutils-4.2.26
+	o findutils-4.2.27
 	o flac123-0.0.9
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -689,7 +689,7 @@ Suggested package updates
 	o leafpad-0.8.5
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
-	o libextractor-0.5.7
+	o libextractor-0.5.8
 	o libflash-0.4.13
 	o libgdiplus-1.1.9.2
 	o libggi-2.1.2
