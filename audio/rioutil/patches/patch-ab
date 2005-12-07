@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/12/07 17:35:37 joerg Exp $
+
+--- linux_driver/rio_usb.h.orig	2005-12-07 17:17:16.000000000 +0000
++++ linux_driver/rio_usb.h
+@@ -59,7 +59,7 @@ struct RioCommand {
+ 	int timeout;
+ };
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #define RIO_SEND_COMMAND       _IOWR('U', 200, struct RioCommand)
+ #define RIO_RECV_COMMAND       _IOWR('U', 201, struct RioCommand)
+ #else
