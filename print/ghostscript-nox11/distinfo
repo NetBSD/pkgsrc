@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2005/11/27 17:08:31 adrianp Exp $
+$NetBSD: distinfo,v 1.13 2005/12/07 15:48:55 joerg Exp $
 
 SHA1 (ghostscript/ghostscript-6.01.tar.bz2) = 405a8ab16453a8c3f846eae2aa4abbea6a093300
 RMD160 (ghostscript/ghostscript-6.01.tar.bz2) = cbf5a1774726ba0b165ab539cb7ef16f2596f210
@@ -48,6 +48,8 @@ Size (ghostscript/samsung-gdi-driver.tar.gz) = 8909 bytes
 SHA1 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 21f427a4c80871edab8c4d748b1fe1b7796cd876
 RMD160 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 0a99facc1c9b0868dc7e72261d5cc353a64f4044
 Size (ghostscript/gs6.01-jpdf-exp.patch.gz) = 59034 bytes
+SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6
+SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6
 SHA1 (patch-ab) = 26cea522dbe2e2cc57a5fdc60130f309c76c6991
 SHA1 (patch-ac) = 576e0bc659d771f9d634921a0cc6752ab9739a92
 SHA1 (patch-ad) = 9b6e66132583a698ebef277caf343c6919f42f72
@@ -76,4 +78,5 @@ SHA1 (patch-ba) = df97981a9582d542be77532d0dcd407e4000c8d7
 SHA1 (patch-bb) = c5cbc6db2948f7b3e81d7a23c6f5fa93e1053d84
 SHA1 (patch-bc) = 26ac5cb13ee57f9bdcf71fc07dfe033020ebb59c
 SHA1 (patch-bd) = 88a00f51b624c0758ef80ce2dd7a13963fce42f8
+SHA1 (patch-be) = 5af8fe2eb0d62a6a233df4f21742aaf8172cf1a8
 SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6
