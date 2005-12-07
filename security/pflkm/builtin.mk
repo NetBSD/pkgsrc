@@ -1,9 +1,10 @@
-# $NetBSD: builtin.mk,v 1.6 2005/12/02 12:23:45 peter Exp $
+# $NetBSD: builtin.mk,v 1.7 2005/12/07 12:06:26 peter Exp $
 
 BUILTIN_PKG:=	pflkm
 
 BUILTIN_FIND_FILES_VAR:=	H_PFLKM
 BUILTIN_FIND_FILES.H_PFLKM=	/usr/include/net/pfvar.h
+BUILTIN_FIND_FILES.H_PFLKM+=	/usr/include/net/pf/pfvar.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
