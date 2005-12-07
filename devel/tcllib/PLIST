@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/18 17:53:18 peter Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/07 14:16:26 peter Exp $
+bin/dtplite
+bin/page
+bin/tcldocstrip
+lib/tcllib${PKGVERSION}/aes/aes.tcl
+lib/tcllib${PKGVERSION}/aes/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/asn/asn.tcl
 lib/tcllib${PKGVERSION}/asn/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/base64/base64.tcl
@@ -8,6 +13,10 @@ lib/tcllib${PKGVERSION}/base64/uuencode.tcl
 lib/tcllib${PKGVERSION}/base64/yencode.tcl
 lib/tcllib${PKGVERSION}/bee/bee.tcl
 lib/tcllib${PKGVERSION}/bee/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/bibtex/bibtex.tcl
+lib/tcllib${PKGVERSION}/bibtex/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/blowfish/blowfish.tcl
+lib/tcllib${PKGVERSION}/blowfish/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/cmdline/cmdline.tcl
 lib/tcllib${PKGVERSION}/cmdline/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/cmdline/typedCmdline.tcl
@@ -32,11 +41,19 @@ lib/tcllib${PKGVERSION}/csv/csv.tcl
 lib/tcllib${PKGVERSION}/csv/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/des/des.tcl
 lib/tcllib${PKGVERSION}/des/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/des/tcldes.tcl
+lib/tcllib${PKGVERSION}/des/tcldesjr.tcl
 lib/tcllib${PKGVERSION}/dns/dns.tcl
 lib/tcllib${PKGVERSION}/dns/ip.tcl
+lib/tcllib${PKGVERSION}/dns/ipMore.tcl
+lib/tcllib${PKGVERSION}/dns/ipMoreC.tcl
+lib/tcllib${PKGVERSION}/dns/msgs/en.msg
 lib/tcllib${PKGVERSION}/dns/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/dns/resolv.tcl
 lib/tcllib${PKGVERSION}/dns/spf.tcl
+lib/tcllib${PKGVERSION}/docstrip/docstrip.tcl
+lib/tcllib${PKGVERSION}/docstrip/docstrip_util.tcl
+lib/tcllib${PKGVERSION}/docstrip/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/doctools/api.tcl
 lib/tcllib${PKGVERSION}/doctools/api_idx.tcl
 lib/tcllib${PKGVERSION}/doctools/api_toc.tcl
@@ -58,6 +75,7 @@ lib/tcllib${PKGVERSION}/doctools/mpformats/_xml.tcl
 lib/tcllib${PKGVERSION}/doctools/mpformats/c.msg
 lib/tcllib${PKGVERSION}/doctools/mpformats/de.msg
 lib/tcllib${PKGVERSION}/doctools/mpformats/en.msg
+lib/tcllib${PKGVERSION}/doctools/mpformats/fmt.desc
 lib/tcllib${PKGVERSION}/doctools/mpformats/fmt.html
 lib/tcllib${PKGVERSION}/doctools/mpformats/fmt.latex
 lib/tcllib${PKGVERSION}/doctools/mpformats/fmt.list
@@ -88,11 +106,25 @@ lib/tcllib${PKGVERSION}/ftp/ftp_geturl.tcl
 lib/tcllib${PKGVERSION}/ftp/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/ftpd/ftpd.tcl
 lib/tcllib${PKGVERSION}/ftpd/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/fumagic/cfront.tcl
+lib/tcllib${PKGVERSION}/fumagic/cgen.tcl
+lib/tcllib${PKGVERSION}/fumagic/filetypes.tcl
+lib/tcllib${PKGVERSION}/fumagic/mimetypes.tcl
+lib/tcllib${PKGVERSION}/fumagic/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/fumagic/rtcore.tcl
 lib/tcllib${PKGVERSION}/grammar_fa/dacceptor.tcl
 lib/tcllib${PKGVERSION}/grammar_fa/dexec.tcl
 lib/tcllib${PKGVERSION}/grammar_fa/fa.tcl
 lib/tcllib${PKGVERSION}/grammar_fa/faop.tcl
 lib/tcllib${PKGVERSION}/grammar_fa/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/grammar_me/me_cpu.tcl
+lib/tcllib${PKGVERSION}/grammar_me/me_cpucore.tcl
+lib/tcllib${PKGVERSION}/grammar_me/me_tcl.tcl
+lib/tcllib${PKGVERSION}/grammar_me/me_util.tcl
+lib/tcllib${PKGVERSION}/grammar_me/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/grammar_peg/peg.tcl
+lib/tcllib${PKGVERSION}/grammar_peg/peg_interp.tcl
+lib/tcllib${PKGVERSION}/grammar_peg/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/html/html.tcl
 lib/tcllib${PKGVERSION}/html/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/htmlparse/htmlparse.tcl
@@ -113,8 +145,12 @@ lib/tcllib${PKGVERSION}/ldap/ldap.tcl
 lib/tcllib${PKGVERSION}/ldap/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/log/log.tcl
 lib/tcllib${PKGVERSION}/log/logger.tcl
+lib/tcllib${PKGVERSION}/log/loggerAppender.tcl
+lib/tcllib${PKGVERSION}/log/loggerUtils.tcl
+lib/tcllib${PKGVERSION}/log/msgs/en.msg
 lib/tcllib${PKGVERSION}/log/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/math/bessel.tcl
+lib/tcllib${PKGVERSION}/math/bigfloat.tcl
 lib/tcllib${PKGVERSION}/math/bignum.tcl
 lib/tcllib${PKGVERSION}/math/calculus.tcl
 lib/tcllib${PKGVERSION}/math/classic_polyns.tcl
@@ -126,6 +162,7 @@ lib/tcllib${PKGVERSION}/math/fourier.tcl
 lib/tcllib${PKGVERSION}/math/fuzzy.tcl
 lib/tcllib${PKGVERSION}/math/geometry.tcl
 lib/tcllib${PKGVERSION}/math/interpolate.tcl
+lib/tcllib${PKGVERSION}/math/linalg.tcl
 lib/tcllib${PKGVERSION}/math/liststat.tcl
 lib/tcllib${PKGVERSION}/math/math.tcl
 lib/tcllib${PKGVERSION}/math/misc.tcl
@@ -136,6 +173,7 @@ lib/tcllib${PKGVERSION}/math/plotstat.tcl
 lib/tcllib${PKGVERSION}/math/polynomials.tcl
 lib/tcllib${PKGVERSION}/math/qcomplex.tcl
 lib/tcllib${PKGVERSION}/math/rational_funcs.tcl
+lib/tcllib${PKGVERSION}/math/romannumerals.tcl
 lib/tcllib${PKGVERSION}/math/special.tcl
 lib/tcllib${PKGVERSION}/math/statistics.tcl
 lib/tcllib${PKGVERSION}/math/tclIndex
@@ -161,13 +199,51 @@ lib/tcllib${PKGVERSION}/nntp/nntp.tcl
 lib/tcllib${PKGVERSION}/nntp/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/ntp/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/ntp/time.tcl
+lib/tcllib${PKGVERSION}/page/analysis_peg_emodes.tcl
+lib/tcllib${PKGVERSION}/page/analysis_peg_minimize.tcl
+lib/tcllib${PKGVERSION}/page/analysis_peg_reachable.tcl
+lib/tcllib${PKGVERSION}/page/analysis_peg_realizable.tcl
+lib/tcllib${PKGVERSION}/page/gen_peg_canon.tcl
+lib/tcllib${PKGVERSION}/page/gen_peg_cpkg.tcl
+lib/tcllib${PKGVERSION}/page/gen_peg_hb.tcl
+lib/tcllib${PKGVERSION}/page/gen_peg_me.tcl
+lib/tcllib${PKGVERSION}/page/gen_peg_ser.tcl
+lib/tcllib${PKGVERSION}/page/gen_tree_text.tcl
+lib/tcllib${PKGVERSION}/page/parse_lemon.tcl
+lib/tcllib${PKGVERSION}/page/parse_peg.tcl
+lib/tcllib${PKGVERSION}/page/parse_peghb.tcl
+lib/tcllib${PKGVERSION}/page/parse_pegser.tcl
+lib/tcllib${PKGVERSION}/page/peg_grammar.tcl
+lib/tcllib${PKGVERSION}/page/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/page/pluginmgr.tcl
+lib/tcllib${PKGVERSION}/page/plugins/config_peg.tcl
+lib/tcllib${PKGVERSION}/page/plugins/reader_hb.tcl
+lib/tcllib${PKGVERSION}/page/plugins/reader_lemon.tcl
+lib/tcllib${PKGVERSION}/page/plugins/reader_peg.tcl
+lib/tcllib${PKGVERSION}/page/plugins/reader_ser.tcl
+lib/tcllib${PKGVERSION}/page/plugins/reader_treeser.tcl
+lib/tcllib${PKGVERSION}/page/plugins/transform_reachable.tcl
+lib/tcllib${PKGVERSION}/page/plugins/transform_realizable.tcl
+lib/tcllib${PKGVERSION}/page/plugins/writer_hb.tcl
+lib/tcllib${PKGVERSION}/page/plugins/writer_identity.tcl
+lib/tcllib${PKGVERSION}/page/plugins/writer_me.tcl
+lib/tcllib${PKGVERSION}/page/plugins/writer_null.tcl
+lib/tcllib${PKGVERSION}/page/plugins/writer_peg.tcl
+lib/tcllib${PKGVERSION}/page/plugins/writer_ser.tcl
+lib/tcllib${PKGVERSION}/page/plugins/writer_tpc.tcl
+lib/tcllib${PKGVERSION}/page/plugins/writer_tree.tcl
+lib/tcllib${PKGVERSION}/page/util_flow.tcl
+lib/tcllib${PKGVERSION}/page/util_norm_lemon.tcl
+lib/tcllib${PKGVERSION}/page/util_norm_peg.tcl
+lib/tcllib${PKGVERSION}/page/util_peg.tcl
+lib/tcllib${PKGVERSION}/page/util_quote.tcl
 lib/tcllib${PKGVERSION}/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/pluginmgr/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/pluginmgr/pluginmgr.tcl
 lib/tcllib${PKGVERSION}/png/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/png/png.tcl
-lib/tcllib${PKGVERSION}/pop3/clnt.tcl
 lib/tcllib${PKGVERSION}/pop3/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/pop3/pop3.tcl
-lib/tcllib${PKGVERSION}/pop3/srv.tcl
 lib/tcllib${PKGVERSION}/pop3d/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/pop3d/pop3d.tcl
 lib/tcllib${PKGVERSION}/pop3d/pop3d_dbox.tcl
@@ -177,17 +253,27 @@ lib/tcllib${PKGVERSION}/profiler/profiler.tcl
 lib/tcllib${PKGVERSION}/rc4/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/rc4/rc4.tcl
 lib/tcllib${PKGVERSION}/rc4/rc4c.tcl
+lib/tcllib${PKGVERSION}/rcs/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/rcs/rcs.tcl
 lib/tcllib${PKGVERSION}/report/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/report/report.tcl
 lib/tcllib${PKGVERSION}/ripemd/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/ripemd/ripemd128.tcl
 lib/tcllib${PKGVERSION}/ripemd/ripemd160.tcl
+lib/tcllib${PKGVERSION}/sasl/ntlm.tcl
+lib/tcllib${PKGVERSION}/sasl/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/sasl/sasl.tcl
 lib/tcllib${PKGVERSION}/sha1/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/sha1/sha1.tcl
+lib/tcllib${PKGVERSION}/sha1/sha1c.tcl
+lib/tcllib${PKGVERSION}/sha1/sha256.tcl
 lib/tcllib${PKGVERSION}/smtpd/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/smtpd/smtpd.tcl
 lib/tcllib${PKGVERSION}/snit/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/snit/snit.tcl
+lib/tcllib${PKGVERSION}/snit/snit2.tcl
+lib/tcllib${PKGVERSION}/snit/snit83.tcl
+lib/tcllib${PKGVERSION}/snit/snit_tcl83_utils.tcl
 lib/tcllib${PKGVERSION}/soundex/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/soundex/soundex.tcl
 lib/tcllib${PKGVERSION}/stooop/mkpkgidx.tcl
@@ -213,6 +299,8 @@ lib/tcllib${PKGVERSION}/struct/struct.tcl
 lib/tcllib${PKGVERSION}/struct/struct1.tcl
 lib/tcllib${PKGVERSION}/struct/tree.tcl
 lib/tcllib${PKGVERSION}/struct/tree1.tcl
+lib/tcllib${PKGVERSION}/struct/tree_c.tcl
+lib/tcllib${PKGVERSION}/struct/tree_tcl.tcl
 lib/tcllib${PKGVERSION}/tar/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/tar/tar.tcl
 lib/tcllib${PKGVERSION}/textutil/adjust.tcl
@@ -235,22 +323,29 @@ lib/tcllib${PKGVERSION}/tie/tie_rarray.tcl
 lib/tcllib${PKGVERSION}/treeql/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/treeql/treeql.tcl
 lib/tcllib${PKGVERSION}/treeql/treeql84.tcl
+lib/tcllib${PKGVERSION}/units/pkgIndex.tcl
+lib/tcllib${PKGVERSION}/units/units.tcl
 lib/tcllib${PKGVERSION}/uri/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/uri/uri.tcl
 lib/tcllib${PKGVERSION}/uri/urn-scheme.tcl
 lib/tcllib${PKGVERSION}/uuid/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/uuid/uuid.tcl
+man/mann/aes.n
 man/mann/asn.n
 man/mann/autoproxy.n
 man/mann/base64.n
 man/mann/bee.n
+man/mann/bibtex.n
+man/mann/bigfloat.n
 man/mann/bignum.n
+man/mann/blowfish.n
 man/mann/calculus.n
 man/mann/changelog.n
 man/mann/cksum.n
 man/mann/cmdline.n
 man/mann/combinatorics.n
 man/mann/comm.n
+man/mann/comm_wire.n
 man/mann/constants.n
 man/mann/control.n
 man/mann/counter.n
@@ -264,6 +359,8 @@ man/mann/dexec.n
 man/mann/docidx.n
 man/mann/docidx_api.n
 man/mann/docidx_fmt.n
+man/mann/docstrip.n
+man/mann/docstrip_util.n
 man/mann/doctoc.n
 man/mann/doctoc_api.n
 man/mann/doctoc_fmt.n
@@ -275,6 +372,7 @@ man/mann/exif.n
 man/mann/expander.n
 man/mann/fa.n
 man/mann/faop.n
+man/mann/filetypes.n
 man/mann/fileutil.n
 man/mann/fourier.n
 man/mann/ftp.n
@@ -292,21 +390,36 @@ man/mann/irc.n
 man/mann/javascript.n
 man/mann/jpeg.n
 man/mann/ldap.n
+man/mann/linalg.n
 man/mann/log.n
 man/mann/logger.n
+man/mann/loggerAppender.n
+man/mann/loggerUtils.n
 man/mann/math.n
 man/mann/matrix.n
 man/mann/matrix1.n
 man/mann/md4.n
 man/mann/md5.n
 man/mann/md5crypt.n
+man/mann/me_ast.n
+man/mann/me_cpu.n
+man/mann/me_cpucore.n
+man/mann/me_intro.n
+man/mann/me_tcl.n
+man/mann/me_util.n
+man/mann/me_vm.n
 man/mann/mime.n
+man/mann/mimetypes.n
 man/mann/mpexpand.n
 man/mann/multiplexer.n
 man/mann/ncgi.n
 man/mann/nntp.n
 man/mann/ntp_time.n
 man/mann/optimize.n
+man/mann/page.n
+man/mann/peg.n
+man/mann/peg_interp.n
+man/mann/pluginmgr.n
 man/mann/png.n
 man/mann/polynomials.n
 man/mann/pool.n
@@ -318,12 +431,16 @@ man/mann/prioqueue.n
 man/mann/profiler.n
 man/mann/qcomplex.n
 man/mann/queue.n
+man/mann/rational_funcs.n
 man/mann/rc4.n
+man/mann/rcs.n
 man/mann/record.n
 man/mann/report.n
 man/mann/ripemd128.n
 man/mann/ripemd160.n
+man/mann/roman.n
 man/mann/romberg.n
+man/mann/sasl.n
 man/mann/sha1.n
 man/mann/skiplist.n
 man/mann/smtp.n
@@ -341,17 +458,20 @@ man/mann/struct_tree.n
 man/mann/struct_tree1.n
 man/mann/sum.n
 man/mann/tar.n
+man/mann/tcldocstrip.n
 man/mann/tcllib_dns.n
 man/mann/tcllib_ip.n
 man/mann/textutil.n
 man/mann/tie.n
 man/mann/treeql.n
+man/mann/units.n
 man/mann/uri.n
 man/mann/uuencode.n
 man/mann/uuid.n
 man/mann/yencode.n
 @dirrm lib/tcllib${PKGVERSION}/uuid
 @dirrm lib/tcllib${PKGVERSION}/uri
+@dirrm lib/tcllib${PKGVERSION}/units
 @dirrm lib/tcllib${PKGVERSION}/treeql
 @dirrm lib/tcllib${PKGVERSION}/tie
 @dirrm lib/tcllib${PKGVERSION}/textutil
@@ -362,13 +482,18 @@ man/mann/yencode.n
 @dirrm lib/tcllib${PKGVERSION}/snit
 @dirrm lib/tcllib${PKGVERSION}/smtpd
 @dirrm lib/tcllib${PKGVERSION}/sha1
+@dirrm lib/tcllib${PKGVERSION}/sasl
 @dirrm lib/tcllib${PKGVERSION}/ripemd
 @dirrm lib/tcllib${PKGVERSION}/report
+@dirrm lib/tcllib${PKGVERSION}/rcs
 @dirrm lib/tcllib${PKGVERSION}/rc4
 @dirrm lib/tcllib${PKGVERSION}/profiler
 @dirrm lib/tcllib${PKGVERSION}/pop3d
 @dirrm lib/tcllib${PKGVERSION}/pop3
 @dirrm lib/tcllib${PKGVERSION}/png
+@dirrm lib/tcllib${PKGVERSION}/pluginmgr
+@dirrm lib/tcllib${PKGVERSION}/page/plugins
+@dirrm lib/tcllib${PKGVERSION}/page
 @dirrm lib/tcllib${PKGVERSION}/ntp
 @dirrm lib/tcllib${PKGVERSION}/nntp
 @dirrm lib/tcllib${PKGVERSION}/ncgi
@@ -378,6 +503,7 @@ man/mann/yencode.n
 @dirrm lib/tcllib${PKGVERSION}/md5
 @dirrm lib/tcllib${PKGVERSION}/md4
 @dirrm lib/tcllib${PKGVERSION}/math
+@dirrm lib/tcllib${PKGVERSION}/log/msgs
 @dirrm lib/tcllib${PKGVERSION}/log
 @dirrm lib/tcllib${PKGVERSION}/ldap
 @dirrm lib/tcllib${PKGVERSION}/jpeg
@@ -388,13 +514,18 @@ man/mann/yencode.n
 @dirrm lib/tcllib${PKGVERSION}/http
 @dirrm lib/tcllib${PKGVERSION}/htmlparse
 @dirrm lib/tcllib${PKGVERSION}/html
+@dirrm lib/tcllib${PKGVERSION}/grammar_peg
+@dirrm lib/tcllib${PKGVERSION}/grammar_me
 @dirrm lib/tcllib${PKGVERSION}/grammar_fa
+@dirrm lib/tcllib${PKGVERSION}/fumagic
 @dirrm lib/tcllib${PKGVERSION}/ftpd
 @dirrm lib/tcllib${PKGVERSION}/ftp
 @dirrm lib/tcllib${PKGVERSION}/fileutil
 @dirrm lib/tcllib${PKGVERSION}/exif
 @dirrm lib/tcllib${PKGVERSION}/doctools/mpformats
 @dirrm lib/tcllib${PKGVERSION}/doctools
+@dirrm lib/tcllib${PKGVERSION}/docstrip
+@dirrm lib/tcllib${PKGVERSION}/dns/msgs
 @dirrm lib/tcllib${PKGVERSION}/dns
 @dirrm lib/tcllib${PKGVERSION}/des
 @dirrm lib/tcllib${PKGVERSION}/csv
@@ -403,7 +534,10 @@ man/mann/yencode.n
 @dirrm lib/tcllib${PKGVERSION}/control
 @dirrm lib/tcllib${PKGVERSION}/comm
 @dirrm lib/tcllib${PKGVERSION}/cmdline
+@dirrm lib/tcllib${PKGVERSION}/blowfish
+@dirrm lib/tcllib${PKGVERSION}/bibtex
 @dirrm lib/tcllib${PKGVERSION}/bee
 @dirrm lib/tcllib${PKGVERSION}/base64
 @dirrm lib/tcllib${PKGVERSION}/asn
+@dirrm lib/tcllib${PKGVERSION}/aes
 @dirrm lib/tcllib${PKGVERSION}
