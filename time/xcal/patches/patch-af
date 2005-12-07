@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2005/12/07 15:49:46 joerg Exp $
+
+--- xcalpr/xcalpr.c.orig	2005-12-06 13:21:40.000000000 +0000
++++ xcalpr/xcalpr.c
+@@ -86,7 +86,7 @@ static char	*daynames[]	= {"Sun", "Mon",
+ 
+ static char	*dayfiles[7];		/* connected contents of any dayfiles */
+ 
+-static FILE	*fout = stdout;
++static FILE	*fout;
+ 	
+ static int mon[] = { 
+     31, 28, 31, 30,
+@@ -132,6 +132,8 @@ main(argc, argv)
+ 	int		ac;
+ 	int		yr;
+ 
++	fout = stdout;
++
+ 	while ((c = getopt(argc, argv, "d:u:f:cxv")) != EOF) {
+ 
+ 		switch (c) {
