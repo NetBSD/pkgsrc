@@ -1,19 +1,9 @@
-$NetBSD: distinfo,v 1.24 2005/10/23 15:36:48 rillig Exp $
+$NetBSD: distinfo,v 1.25 2005/12/07 03:00:50 uebayasi Exp $
 
-SHA1 (zsh-4.2.5.tar.bz2) = 4dc142eb37c4dadae29ed7fb51756ed89ba64263
-RMD160 (zsh-4.2.5.tar.bz2) = 10e2319b30d5791d39c0a4488e297d451adbdbe5
-Size (zsh-4.2.5.tar.bz2) = 2074535 bytes
+SHA1 (zsh-4.2.6.tar.bz2) = e00c3eda3f52c9514bb625bb56e4480358170d39
+RMD160 (zsh-4.2.6.tar.bz2) = e4400fc6311bf6996128ecf7899592d6d8cdb310
+Size (zsh-4.2.6.tar.bz2) = 2098671 bytes
 SHA1 (patch-aa) = 5e5fde0f21a64c2e0579958868b05737ef0c6afb
 SHA1 (patch-ab) = 815de90c379035dbc02b251cee148f6df47f9a65
-SHA1 (patch-ac) = 821c6f60ddfddb72e14d5a33b1b448b2c5c0a036
-SHA1 (patch-ad) = fdd1e0c337e3efec5f94d363d93128e8a7dc5af3
+SHA1 (patch-ac) = 965b56e5ae39d6523416752c1390f01315c5d758
 SHA1 (patch-ae) = 7d4514d0bad6553d3c0cf115874bf50ed0da3d48
-SHA1 (patch-af) = 2389809b3933104be4db45a3d00036d44072056f
-SHA1 (patch-ag) = 2e99c91e7acaa4e1e0eb90f36ca739c0737473e8
-SHA1 (patch-ah) = c25246d0067afaa8fc17c25a803ca68e6de0846e
-SHA1 (patch-ai) = 6065726a9ddbe04a2c43a88b09cbb6fe3937d094
-SHA1 (patch-aj) = dc53a299185bd2549ae390e5fd665dfb609d47b9
-SHA1 (patch-ak) = 8ceabf360b684c01f6eccc8b569c09e7cc41984d
-SHA1 (patch-al) = e762398c8f44c1a2e759db29c124aa1050baf744
-SHA1 (patch-am) = a271782ccb1ccad1db6c03405055bb30ff05c420
-SHA1 (patch-an) = adbf96233d3d1cb6b8a1637cb4ae4e5747838fba

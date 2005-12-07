@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.19 2005/10/11 12:43:00 joerg Exp $
+$NetBSD: patch-ac,v 1.20 2005/12/07 03:00:50 uebayasi Exp $
 
 --- configure.orig	2005-04-04 11:49:26.000000000 +0200
 +++ configure	2005-05-10 00:02:26.000000000 +0200
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.19 2005/10/11 12:43:00 joerg Exp $
      esac
    fi
    case "$host_os" in
--    freebsd*|linux*|irix*|osf*|gnu*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
+-    freebsd*|linux*|irix*|osf*|gnu*|dragonfly*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
 +    freebsd*|linux*|irix*|osf*|gnu*|interix*|dragonfly*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
      sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
      sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
