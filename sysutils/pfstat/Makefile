@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:34 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/07 12:50:53 peter Exp $
 
 DISTNAME=	pfstat-1.7
 CATEGORIES=	sysutils net
@@ -11,6 +11,12 @@ COMMENT=	Utility to render graphical statistics for PF
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin man/man8
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	pfstat.c
+SUBST_SED.path=		-e 's,net/pfvar.h,${H_PFLKM:S/\/usr\/include\///},g'
+SUBST_MESSAGE.path=	"Fixing include path."
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pfstat ${PREFIX}/bin
