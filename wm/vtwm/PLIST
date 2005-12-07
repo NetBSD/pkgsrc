@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/06 00:43:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/07 15:54:00 joerg Exp $
 bin/vtwm
 lib/X11/vtwm/system.vtwmrc
-man/cat1/vtwm.0.gz
+${IMAKE_MAN_DIR}/vtwm.${IMAKE_MAN_SUFFIX}
 @dirrm lib/X11/vtwm
