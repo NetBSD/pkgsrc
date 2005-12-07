@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:43 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/07 17:50:00 wiz Exp $
 #
 
-DISTNAME=	libogg-1.1.2
-PKGREVISION=	1
+DISTNAME=	libogg-1.1.3
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ogg/
 
@@ -23,6 +22,5 @@ PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 PKGCONFIG_OVERRIDE+=	ogg.pc.in
 
 TEST_TARGET=	check
-
 
 .include "../../mk/bsd.pkg.mk"
