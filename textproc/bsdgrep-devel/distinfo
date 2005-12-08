@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 14:48:40 agc Exp $
+$NetBSD: distinfo,v 1.8 2005/12/08 17:24:32 joerg Exp $
 
 SHA1 (bsdgrep-200405051607.tar.gz) = 0a50caa04dab9ee576bb30f4abf62e03378d4f0e
 RMD160 (bsdgrep-200405051607.tar.gz) = 50b188e6f47d90491300a6310167dec17a5b927b
 Size (bsdgrep-200405051607.tar.gz) = 12972 bytes
 SHA1 (patch-aa) = c147bb05387e01b6f7e0ec8a918b09e77da2103c
-SHA1 (patch-ab) = c7fa54dedb0925d342549cbc56197bf2d8e4e47b
-SHA1 (patch-ac) = e5b3d3a2bc069f123a7f568f72ded291f3ac49ea
-SHA1 (patch-ad) = 8080d6fa8f5faa40055ad1f067c1669d682956d2
-SHA1 (patch-ae) = 2907cd5e82f6c6721afd470099ccf9f2b2f392c4
+SHA1 (patch-ab) = b58c0439b6406e4a50ee26f4763d3dfb6830319e
+SHA1 (patch-ac) = 8c6cbf34711938f84df112663bfe3fa99e61fe18
+SHA1 (patch-ad) = a94ea4611ad82cdd4dfcf709b0e5734f253428d1
+SHA1 (patch-ae) = e01d52d055abada35479e14ed331112622b17d22
 SHA1 (patch-af) = 64e270f9c8d3df2994af83044de7ab3e47dc6415
+SHA1 (patch-ag) = e99328b3f66bc33f3c01c7a3d5e14434a4cd822e
