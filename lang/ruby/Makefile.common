@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/12/05 20:50:27 rillig Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/12/08 09:14:50 rillig Exp $
 #
 # Ruby base distribution common definition
 
@@ -38,7 +38,7 @@ DIST_SUBDIR?=		${RUBY_DIST_SUBDIR}
 #
 PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 			RUBY_SHLIBMAJOR=${RUBY_SHLIBMAJOR:Q} \
-			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR:Q} \
+			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
 			RUBY_NAME=${RUBY_NAME:Q}
 
 # Common macros.
