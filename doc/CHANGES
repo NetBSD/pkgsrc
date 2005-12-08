@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12138 2005/12/08 06:52:00 uebayasi Exp $
+$NetBSD: CHANGES,v 1.12139 2005/12/08 10:07:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5528,3 +5528,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/bacula-doc to 1.38.2 [wiz 2005-12-08]
 	Updated net/libpcap to 0.9.4 [uebayasi 2005-12-08]
 	Updated chat/riece to 2.0.2 [uebayasi 2005-12-08]
+	Updated audio/faad2 to 2.0nb4 [wiz 2005-12-08]
