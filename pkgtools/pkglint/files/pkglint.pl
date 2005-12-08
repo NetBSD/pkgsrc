@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.431 2005/12/07 21:39:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.432 2005/12/08 09:01:08 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2181,6 +2181,21 @@ sub checkline_mk_varassign($$$$$) {
 
 	if (exists(get_deprecated_map()->{$varname})) {
 		$line->log_warning("Definition of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
+	}
+
+	if ($value =~ qr"^[^=]\@comment") {
+		$line->log_warning("Please don't use \@comment in variables.");
+		$line->explain(
+			"Here you are defining a variable containing \@comment. As this value",
+			"typically includes a space as the last character you probably also used",
+			"quotes around the variable. This can lead to confusion when adding this",
+			"variable to PLIST_SUBST, as all other variables are quoted using the :Q",
+			"operator when they are appended. As it is hard to check whether a",
+			"variable that is appended to PLIST_SUBST is already quoted or not, you",
+			"should not have pre-quoted variables at all. To solve this, you should",
+			"directly use SUBST_PLIST+= ${varname}=${value} or use any other",
+			"variable for collecting the list of PLIST substitutions and later",
+			"append that variable with SUBST_PLIST+= \${MY_SUBST_PLIST}.");
 	}
 }
 
