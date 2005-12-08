@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/10/11 17:56:25 tv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/12/08 12:20:02 wiz Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -79,51 +79,51 @@ java/sun-1.5/lib/fonts/LucidaSansRegular.ttf
 java/sun-1.5/lib/fonts/LucidaTypewriterBold.ttf
 java/sun-1.5/lib/fonts/LucidaTypewriterRegular.ttf
 java/sun-1.5/lib/fonts/fonts.dir
-java/sun-1.5/lib/${MACHINE_ARCH}/awt_robot
-java/sun-1.5/lib/${MACHINE_ARCH}/client/Xusage.txt
-java/sun-1.5/lib/${MACHINE_ARCH}/client/libjsig.so
-java/sun-1.5/lib/${MACHINE_ARCH}/client/libjvm.so
-java/sun-1.5/lib/${MACHINE_ARCH}/gtkhelper
-java/sun-1.5/lib/${MACHINE_ARCH}/headless/libmawt.so
-java/sun-1.5/lib/${MACHINE_ARCH}/jvm.cfg.default
-java/sun-1.5/lib/${MACHINE_ARCH}/libJdbcOdbc.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libawt.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libcmm.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libdcpr.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libdeploy.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libdt_socket.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libfontmanager.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libhprof.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libinstrument.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libioser12.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libj2pkcs11.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjaas_unix.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjava.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjava_crw_demo.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjavaplugin_jni.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjavaplugin_nscp.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjavaplugin_nscp_gcc29.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjawt.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjdwp.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjpeg.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjsig.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjsound.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libjsoundalsa.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libmanagement.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libmlib_image.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libnative_chmod.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libnet.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libnio.so
-java/sun-1.5/lib/${MACHINE_ARCH}/librmi.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libunpack.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libverify.so
-java/sun-1.5/lib/${MACHINE_ARCH}/libzip.so
-java/sun-1.5/lib/${MACHINE_ARCH}/motif21/libmawt.so
-java/sun-1.5/lib/${MACHINE_ARCH}/native_threads/libhpi.so
-java/sun-1.5/lib/${MACHINE_ARCH}/server/Xusage.txt
-java/sun-1.5/lib/${MACHINE_ARCH}/server/libjsig.so
-java/sun-1.5/lib/${MACHINE_ARCH}/server/libjvm.so
-java/sun-1.5/lib/${MACHINE_ARCH}/xawt/libmawt.so
+java/sun-1.5/lib/i386/awt_robot
+java/sun-1.5/lib/i386/client/Xusage.txt
+java/sun-1.5/lib/i386/client/libjsig.so
+java/sun-1.5/lib/i386/client/libjvm.so
+java/sun-1.5/lib/i386/gtkhelper
+java/sun-1.5/lib/i386/headless/libmawt.so
+java/sun-1.5/lib/i386/jvm.cfg.default
+java/sun-1.5/lib/i386/libJdbcOdbc.so
+java/sun-1.5/lib/i386/libawt.so
+java/sun-1.5/lib/i386/libcmm.so
+java/sun-1.5/lib/i386/libdcpr.so
+java/sun-1.5/lib/i386/libdeploy.so
+java/sun-1.5/lib/i386/libdt_socket.so
+java/sun-1.5/lib/i386/libfontmanager.so
+java/sun-1.5/lib/i386/libhprof.so
+java/sun-1.5/lib/i386/libinstrument.so
+java/sun-1.5/lib/i386/libioser12.so
+java/sun-1.5/lib/i386/libj2pkcs11.so
+java/sun-1.5/lib/i386/libjaas_unix.so
+java/sun-1.5/lib/i386/libjava.so
+java/sun-1.5/lib/i386/libjava_crw_demo.so
+java/sun-1.5/lib/i386/libjavaplugin_jni.so
+java/sun-1.5/lib/i386/libjavaplugin_nscp.so
+java/sun-1.5/lib/i386/libjavaplugin_nscp_gcc29.so
+java/sun-1.5/lib/i386/libjawt.so
+java/sun-1.5/lib/i386/libjdwp.so
+java/sun-1.5/lib/i386/libjpeg.so
+java/sun-1.5/lib/i386/libjsig.so
+java/sun-1.5/lib/i386/libjsound.so
+java/sun-1.5/lib/i386/libjsoundalsa.so
+java/sun-1.5/lib/i386/libmanagement.so
+java/sun-1.5/lib/i386/libmlib_image.so
+java/sun-1.5/lib/i386/libnative_chmod.so
+java/sun-1.5/lib/i386/libnet.so
+java/sun-1.5/lib/i386/libnio.so
+java/sun-1.5/lib/i386/librmi.so
+java/sun-1.5/lib/i386/libunpack.so
+java/sun-1.5/lib/i386/libverify.so
+java/sun-1.5/lib/i386/libzip.so
+java/sun-1.5/lib/i386/motif21/libmawt.so
+java/sun-1.5/lib/i386/native_threads/libhpi.so
+java/sun-1.5/lib/i386/server/Xusage.txt
+java/sun-1.5/lib/i386/server/libjsig.so
+java/sun-1.5/lib/i386/server/libjvm.so
+java/sun-1.5/lib/i386/xawt/libmawt.so
 java/sun-1.5/lib/im/indicim.jar
 java/sun-1.5/lib/im/thaiim.jar
 java/sun-1.5/lib/images/cursors/cursors.properties.default
@@ -183,8 +183,8 @@ java/sun-1.5/lib/plugin.jar
 java/sun-1.5/lib/psfont.properties.ja.default
 java/sun-1.5/lib/psfontj2d.properties.default
 java/sun-1.5/lib/rt.jar
-@SUN_JRE15_USE_JCE@java/sun-1.5/lib/security/COPYRIGHT.html
-@SUN_JRE15_USE_JCE@java/sun-1.5/lib/security/README.txt
+${SUN_JRE15_USE_JCE}java/sun-1.5/lib/security/COPYRIGHT.html
+${SUN_JRE15_USE_JCE}java/sun-1.5/lib/security/README.txt
 java/sun-1.5/lib/security/US_export_policy.jar
 java/sun-1.5/lib/security/cacerts
 java/sun-1.5/lib/security/java.policy
@@ -240,7 +240,6 @@ java/sun-1.5/lib/zi/Africa/Nouakchott
 java/sun-1.5/lib/zi/Africa/Ouagadougou
 java/sun-1.5/lib/zi/Africa/Porto-Novo
 java/sun-1.5/lib/zi/Africa/Sao_Tome
-java/sun-1.5/lib/zi/Africa/Timbuktu
 java/sun-1.5/lib/zi/Africa/Tripoli
 java/sun-1.5/lib/zi/Africa/Tunis
 java/sun-1.5/lib/zi/Africa/Windhoek
@@ -251,7 +250,6 @@ java/sun-1.5/lib/zi/America/Antigua
 java/sun-1.5/lib/zi/America/Araguaina
 java/sun-1.5/lib/zi/America/Argentina/Buenos_Aires
 java/sun-1.5/lib/zi/America/Argentina/Catamarca
-java/sun-1.5/lib/zi/America/Argentina/ComodRivadavia
 java/sun-1.5/lib/zi/America/Argentina/Cordoba
 java/sun-1.5/lib/zi/America/Argentina/Jujuy
 java/sun-1.5/lib/zi/America/Argentina/La_Rioja
@@ -277,6 +275,7 @@ java/sun-1.5/lib/zi/America/Cayenne
 java/sun-1.5/lib/zi/America/Cayman
 java/sun-1.5/lib/zi/America/Chicago
 java/sun-1.5/lib/zi/America/Chihuahua
+java/sun-1.5/lib/zi/America/Coral_Harbour
 java/sun-1.5/lib/zi/America/Costa_Rica
 java/sun-1.5/lib/zi/America/Cuiaba
 java/sun-1.5/lib/zi/America/Curacao
@@ -302,19 +301,19 @@ java/sun-1.5/lib/zi/America/Guyana
 java/sun-1.5/lib/zi/America/Halifax
 java/sun-1.5/lib/zi/America/Havana
 java/sun-1.5/lib/zi/America/Hermosillo
+java/sun-1.5/lib/zi/America/Indiana/Indianapolis
 java/sun-1.5/lib/zi/America/Indiana/Knox
 java/sun-1.5/lib/zi/America/Indiana/Marengo
 java/sun-1.5/lib/zi/America/Indiana/Vevay
-java/sun-1.5/lib/zi/America/Indianapolis
 java/sun-1.5/lib/zi/America/Inuvik
 java/sun-1.5/lib/zi/America/Iqaluit
 java/sun-1.5/lib/zi/America/Jamaica
 java/sun-1.5/lib/zi/America/Juneau
+java/sun-1.5/lib/zi/America/Kentucky/Louisville
 java/sun-1.5/lib/zi/America/Kentucky/Monticello
 java/sun-1.5/lib/zi/America/La_Paz
 java/sun-1.5/lib/zi/America/Lima
 java/sun-1.5/lib/zi/America/Los_Angeles
-java/sun-1.5/lib/zi/America/Louisville
 java/sun-1.5/lib/zi/America/Maceio
 java/sun-1.5/lib/zi/America/Managua
 java/sun-1.5/lib/zi/America/Manaus
@@ -468,6 +467,7 @@ java/sun-1.5/lib/zi/Atlantic/Stanley
 java/sun-1.5/lib/zi/Australia/Adelaide
 java/sun-1.5/lib/zi/Australia/Brisbane
 java/sun-1.5/lib/zi/Australia/Broken_Hill
+java/sun-1.5/lib/zi/Australia/Currie
 java/sun-1.5/lib/zi/Australia/Darwin
 java/sun-1.5/lib/zi/Australia/Hobart
 java/sun-1.5/lib/zi/Australia/Lindeman
@@ -509,7 +509,6 @@ java/sun-1.5/lib/zi/Etc/UTC
 java/sun-1.5/lib/zi/Europe/Amsterdam
 java/sun-1.5/lib/zi/Europe/Andorra
 java/sun-1.5/lib/zi/Europe/Athens
-java/sun-1.5/lib/zi/Europe/Belfast
 java/sun-1.5/lib/zi/Europe/Belgrade
 java/sun-1.5/lib/zi/Europe/Berlin
 java/sun-1.5/lib/zi/Europe/Brussels
@@ -600,7 +599,6 @@ java/sun-1.5/lib/zi/Pacific/Tongatapu
 java/sun-1.5/lib/zi/Pacific/Truk
 java/sun-1.5/lib/zi/Pacific/Wake
 java/sun-1.5/lib/zi/Pacific/Wallis
-java/sun-1.5/lib/zi/Pacific/Yap
 java/sun-1.5/lib/zi/WET
 java/sun-1.5/lib/zi/ZoneInfoMappings
 java/sun-1.5/man/ja
@@ -634,11 +632,11 @@ java/sun-1.5/man/man1/tnameserv.1
 java/sun-1.5/man/man1/unpack200.1
 java/sun-1.5/plugin/desktop/sun_java.desktop
 java/sun-1.5/plugin/desktop/sun_java.png
-java/sun-1.5/plugin/${MACHINE_ARCH}/ns7-gcc29/libjavaplugin_oji.so
-java/sun-1.5/plugin/${MACHINE_ARCH}/ns7/libjavaplugin_oji.so
-@dirrm java/sun-1.5/plugin/${MACHINE_ARCH}/ns7-gcc29
-@dirrm java/sun-1.5/plugin/${MACHINE_ARCH}/ns7
-@dirrm java/sun-1.5/plugin/${MACHINE_ARCH}
+java/sun-1.5/plugin/i386/ns7-gcc29/libjavaplugin_oji.so
+java/sun-1.5/plugin/i386/ns7/libjavaplugin_oji.so
+@dirrm java/sun-1.5/plugin/i386/ns7-gcc29
+@dirrm java/sun-1.5/plugin/i386/ns7
+@dirrm java/sun-1.5/plugin/i386
 @dirrm java/sun-1.5/plugin/desktop
 @dirrm java/sun-1.5/plugin
 @dirrm java/sun-1.5/man/man1
@@ -695,13 +693,13 @@ java/sun-1.5/plugin/${MACHINE_ARCH}/ns7/libjavaplugin_oji.so
 @dirrm java/sun-1.5/lib/images/cursors
 @dirrm java/sun-1.5/lib/images
 @dirrm java/sun-1.5/lib/im
-@dirrm java/sun-1.5/lib/${MACHINE_ARCH}/xawt
-@dirrm java/sun-1.5/lib/${MACHINE_ARCH}/server
-@dirrm java/sun-1.5/lib/${MACHINE_ARCH}/native_threads
-@dirrm java/sun-1.5/lib/${MACHINE_ARCH}/motif21
-@dirrm java/sun-1.5/lib/${MACHINE_ARCH}/headless
-@dirrm java/sun-1.5/lib/${MACHINE_ARCH}/client
-@dirrm java/sun-1.5/lib/${MACHINE_ARCH}
+@dirrm java/sun-1.5/lib/i386/xawt
+@dirrm java/sun-1.5/lib/i386/server
+@dirrm java/sun-1.5/lib/i386/native_threads
+@dirrm java/sun-1.5/lib/i386/motif21
+@dirrm java/sun-1.5/lib/i386/headless
+@dirrm java/sun-1.5/lib/i386/client
+@dirrm java/sun-1.5/lib/i386
 @dirrm java/sun-1.5/lib/fonts
 @dirrm java/sun-1.5/lib/ext
 @dirrm java/sun-1.5/lib/cmm
