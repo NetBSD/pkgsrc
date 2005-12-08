@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/05 09:14:11 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/12/08 06:51:22 uebayasi Exp $
+${EMACS_LISPPREFIX}/riece/aproxy.rb
 ${EMACS_LISPPREFIX}/riece/riece-000.el
 ${EMACS_LISPPREFIX}/riece/riece-000.elc
 ${EMACS_LISPPREFIX}/riece/riece-200.el
@@ -9,6 +10,8 @@ ${EMACS_LISPPREFIX}/riece/riece-400.el
 ${EMACS_LISPPREFIX}/riece/riece-400.elc
 ${EMACS_LISPPREFIX}/riece/riece-500.el
 ${EMACS_LISPPREFIX}/riece/riece-500.elc
+${EMACS_LISPPREFIX}/riece/riece-addon-modules.el
+${EMACS_LISPPREFIX}/riece/riece-addon-modules.elc
 ${EMACS_LISPPREFIX}/riece/riece-addon.el
 ${EMACS_LISPPREFIX}/riece/riece-addon.elc
 ${EMACS_LISPPREFIX}/riece/riece-alias.el
@@ -19,6 +22,8 @@ ${EMACS_LISPPREFIX}/riece/riece-biff.el
 ${EMACS_LISPPREFIX}/riece/riece-biff.elc
 ${EMACS_LISPPREFIX}/riece/riece-button.el
 ${EMACS_LISPPREFIX}/riece/riece-button.elc
+${EMACS_LISPPREFIX}/riece/riece-cache.el
+${EMACS_LISPPREFIX}/riece/riece-cache.elc
 ${EMACS_LISPPREFIX}/riece/riece-channel.el
 ${EMACS_LISPPREFIX}/riece/riece-channel.elc
 ${EMACS_LISPPREFIX}/riece/riece-coding.el
@@ -43,6 +48,8 @@ ${EMACS_LISPPREFIX}/riece/riece-doctor.el
 ${EMACS_LISPPREFIX}/riece/riece-doctor.elc
 ${EMACS_LISPPREFIX}/riece/riece-emacs.el
 ${EMACS_LISPPREFIX}/riece/riece-emacs.elc
+${EMACS_LISPPREFIX}/riece/riece-eval-ruby.el
+${EMACS_LISPPREFIX}/riece/riece-eval-ruby.elc
 ${EMACS_LISPPREFIX}/riece/riece-eval.el
 ${EMACS_LISPPREFIX}/riece/riece-eval.elc
 ${EMACS_LISPPREFIX}/riece/riece-filter.el
@@ -99,8 +106,12 @@ ${EMACS_LISPPREFIX}/riece/riece-options.el
 ${EMACS_LISPPREFIX}/riece/riece-options.elc
 ${EMACS_LISPPREFIX}/riece/riece-rdcc.el
 ${EMACS_LISPPREFIX}/riece/riece-rdcc.elc
+${EMACS_LISPPREFIX}/riece/riece-ruby.el
+${EMACS_LISPPREFIX}/riece/riece-ruby.elc
 ${EMACS_LISPPREFIX}/riece/riece-server.el
 ${EMACS_LISPPREFIX}/riece/riece-server.elc
+${EMACS_LISPPREFIX}/riece/riece-shrink-buffer.el
+${EMACS_LISPPREFIX}/riece/riece-shrink-buffer.elc
 ${EMACS_LISPPREFIX}/riece/riece-signal.el
 ${EMACS_LISPPREFIX}/riece/riece-signal.elc
 ${EMACS_LISPPREFIX}/riece/riece-skk-kakutei.el
@@ -120,8 +131,11 @@ ${EMACS_LISPPREFIX}/riece/riece-version.elc
 @comment ${EMACS_LISPPREFIX}/riece/riece-xemacs.elc
 ${EMACS_LISPPREFIX}/riece/riece-xface.el
 ${EMACS_LISPPREFIX}/riece/riece-xface.elc
+${EMACS_LISPPREFIX}/riece/riece-xfaceb.el
+${EMACS_LISPPREFIX}/riece/riece-xfaceb.elc
 ${EMACS_LISPPREFIX}/riece/riece-yank.el
 ${EMACS_LISPPREFIX}/riece/riece-yank.elc
 ${EMACS_LISPPREFIX}/riece/riece.el
 ${EMACS_LISPPREFIX}/riece/riece.elc
+${EMACS_LISPPREFIX}/riece/server.rb
 @dirrm ${EMACS_LISPPREFIX}/riece
