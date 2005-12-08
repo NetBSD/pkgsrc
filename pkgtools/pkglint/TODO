@@ -1,14 +1,9 @@
-* --autofix
 * fix false positive warnings
 * quoting check for Makefile variables
-* check for direct use of /usr/pkgsrc etc.
-* check for direct use of *DIR
 * ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
 * -Wl,-rpath
 * include "../../mk/bsd.prefs.mk" before using "+=".
 * include "../../mk/bsd.prefs.mk" before any .if
-* check Makefile directives
-* check _every_ line of the Makefiles
 * warn about the use of ${SED} in {pre,do,post}-install
 * check for direct use of user names and group names
 * Find a reliable, secure way to delete all CVS directories inside
