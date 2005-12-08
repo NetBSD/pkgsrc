@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/12/05 23:55:14 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2005/12/08 09:19:22 rillig Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -62,7 +62,7 @@ TIMETRIM=	"@comment "
 NO_TIMETRIM=	""
 .endif
 
-PLIST_SUBST+=	TIMETRIM=${TIMETRIM:Q} NO_TIMETRIM=${NO_TIMETRIM:Q}
+PLIST_SUBST+=	TIMETRIM=${TIMETRIM} NO_TIMETRIM=${NO_TIMETRIM}
 
 .include "../../security/openssl/buildlink3.mk"
 

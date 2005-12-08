@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2005/12/05 20:51:13 rillig Exp $
+# $NetBSD: Makefile.common,v 1.66 2005/12/08 09:19:49 rillig Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
@@ -121,7 +121,7 @@ SUNOSLIB=
 .else
 SUNOSLIB=	"@comment "
 .endif
-PLIST_SUBST+=	SUNOSLIB=${SUNOSLIB:Q}
+PLIST_SUBST+=	SUNOSLIB=${SUNOSLIB}
 
 SCRIPTS_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
 SCRIPTS_ENV+=	PLIST_SRC=${PLIST_SRC:Q}
