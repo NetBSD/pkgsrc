@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.5 2005/12/08 19:14:47 joerg Exp $
+
+--- p0f.c.orig	2005-12-08 19:10:32.000000000 +0000
++++ p0f.c
+@@ -36,7 +36,9 @@
+ #include <pcap.h>
+ #include <signal.h>
+ 
++#ifndef __DragonFly__
+ #include <net/bpf.h>
++#endif
+ #include <time.h>
+ #include <ctype.h>
+ 
