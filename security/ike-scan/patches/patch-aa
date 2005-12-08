@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2005/12/08 18:21:16 joerg Exp $
+
+--- configure.orig	2005-12-08 18:17:07.000000000 +0000
++++ configure
+@@ -5571,6 +5571,7 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++#include <sys/types.h>
+ #include <openssl/md5.h>
+ #include <openssl/sha.h>
+ 
