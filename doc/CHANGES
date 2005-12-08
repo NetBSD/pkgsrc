@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12143 2005/12/08 21:10:21 bouyer Exp $
+$NetBSD: CHANGES,v 1.12144 2005/12/08 22:01:50 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5534,3 +5534,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/koffice to 1.4.2nb2 [markd 2005-12-08]
 	Updated lang/sun-jre15 to 5.0.6nb1 [wiz 2005-12-08]
 	Updated mail/mailman to 2.1.6nb1 [bouyer 2005-12-08]
+	Updated net/nmap to 3.95 [salo 2005-12-08]
+	Updated net/nmapfe to 0.9.5nb22 [salo 2005-12-08]
