@@ -1,0 +1,56 @@
+$NetBSD: patch-ac,v 1.4.4.1 2005/12/08 22:44:48 salo Exp $
+
+Fix for http://secunia.com/advisories/17511/ adapted from
+http://ftp.debian.org/debian/pool/main/m/mailman/mailman_2.1.5-10.diff.gz
+
+--- Mailman/Handlers/Scrubber.py.orig	2005-05-22 22:55:08.000000000 +0300
++++ Mailman/Handlers/Scrubber.py	2005-12-05 12:58:43.000000000 +0200
+@@ -195,7 +195,10 @@ def process(mlist, msg, msgdata=None):
+                     url = save_attachment(mlist, part, dir)
+                 finally:
+                     os.umask(omask)
+-                filename = part.get_filename(_('not available'))
++                try:
++                    filename = part.get_filename(_('not available'))
++                except UnicodeDecodeError:
++                    filename = _('not available')
+                 filename = Utils.oneline(filename, lcset)
+                 del part['content-type']
+                 del part['content-transfer-encoding']
+@@ -300,7 +303,10 @@ Url: %(url)s
+             finally:
+                 os.umask(omask)
+             desc = part.get('content-description', _('not available'))
+-            filename = part.get_filename(_('not available'))
++            try:
++                filename = part.get_filename(_('not available'))
++            except UnicodeDecodeError:
++                filename = _('not available')
+             filename = Utils.oneline(filename, lcset)
+             del part['content-type']
+             del part['content-transfer-encoding']
+@@ -408,7 +414,11 @@ def save_attachment(mlist, msg, dir, fil
+     ctype = msg.get_content_type()
+     # i18n file name is encoded
+     lcset = Utils.GetCharSet(mlist.preferred_language)
+-    filename = Utils.oneline(msg.get_filename(''), lcset)
++    try:
++        filename = msg.get_filename('')
++    except UnicodeDecodeError:
++        filename = ''
++    filename = Utils.oneline(filename, lcset)
+     fnext = os.path.splitext(filename)[1]
+     # For safety, we should confirm this is valid ext for content-type
+     # but we can use fnext if we introduce fnext filtering
+@@ -434,7 +444,10 @@ def save_attachment(mlist, msg, dir, fil
+     try:
+         # Now base the filename on what's in the attachment, uniquifying it if
+         # necessary.
+-        filename = msg.get_filename()
++        try:
++            filename = msg.get_filename()
++        except UnicodeDecodeError:
++            filename = None
+         if not filename or mm_cfg.SCRUBBER_DONT_USE_ATTACHMENT_FILENAME:
+             filebase = 'attachment'
+         else:
