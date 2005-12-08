@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:48 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/08 08:24:15 rillig Exp $
 #
 
 DISTNAME=	email-2.5
@@ -24,4 +24,4 @@ NOT21=	"@comment "
 .else
 NOT21=	#empty
 .endif
-PLIST_SUBST+=	NOT21=${NOT21:Q}
+PLIST_SUBST+=	NOT21=${NOT21}
