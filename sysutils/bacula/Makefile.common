@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/12/08 01:04:44 wiz Exp $
 
 DISTNAME=		bacula-1.38.1
 CATEGORIES=		sysutils
@@ -12,7 +12,6 @@ USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-MANCOMPRESSED=		yes
 
 BACULA_GROUP?=		bacula
 BACULA_DIR_USER?=	bacula-dir
@@ -30,6 +29,17 @@ FILES_SUBST+=		BACULA_GROUP=${BACULA_GROUP:Q}
 FILES_SUBST+=		BACULA_DIR_USER=${BACULA_DIR_USER:Q}
 FILES_SUBST+=		BACULA_SD_USER=${BACULA_SD_USER:Q}
 
+SUBST_CLASSES+=		egdir
+SUBST_STAGE.egdir=	post-patch
+SUBST_FILES.egdir=	src/dird/Makefile.in
+SUBST_FILES.egdir+=	src/console/Makefile.in
+SUBST_FILES.egdir+=	src/filed/Makefile.in
+SUBST_FILES.egdir+=	src/stored/Makefile.in
+SUBST_FILES.egdir+=	src/gnome2-console/Makefile.in
+SUBST_FILES.egdir+=	src/wx-console/Makefile.in
+SUBST_FILES.egdir+=	src/tray-monitor/Makefile.in
+SUBST_SED.egdir=	-e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bacula
 CONFIGURE_ARGS+=	--with-sbin-perm=0755
@@ -44,12 +54,37 @@ PKG_GROUPS=		${BACULA_GROUP}
 CONFIGURE_ARGS+=	--enable-smartalloc
 .endif
 
+# keep these three blocks here as they are common to bacula and bacula-clientonly
+#
+# optional gnome-console
+.if !empty(PKG_OPTIONS:Mgnome-console)
+.include "../../devel/libgnomeui/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gnome
+PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.gnome-console
+.endif
+
+# optional wx-console
+.if !empty(PKG_OPTIONS:Mwx-console)
+.include "../../x11/wxGTK/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-wx-console
+PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.wx-console
+.endif
+
+# optional tray-monitor
+.if !empty(PKG_OPTIONS:Mtray-monitor)
+.include "../../x11/gtk2/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-tray-monitor
+PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.tray-monitor
+.endif
+
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
 EXAMPLESDIR=		${PREFIX}/share/examples/bacula
 CONF_FILES+=		${EXAMPLESDIR}/bacula-fd.conf ${PKG_SYSCONFDIR}/bacula-fd.conf
 CONF_FILES+=		${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
+
+PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.common_end
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
