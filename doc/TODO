@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4252 2005/12/08 01:29:01 uebayasi Exp $
+$NetBSD: TODO,v 1.4253 2005/12/08 01:33:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -376,7 +376,6 @@ Suggested package updates
 	o avl-2.0.1
 	o avr-libc-1.4.0
 	o baci-20040415
-	o bacula-1.38.2
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
