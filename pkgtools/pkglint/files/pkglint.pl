@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.433 2005/12/08 10:07:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.434 2005/12/08 21:13:49 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -316,9 +316,9 @@ sub show_source($$) {
 	my ($self, $out) = @_;
 
 	if (PkgLint::Logging::get_show_source_flag()) {
-		printf $out ("\n");
+		print $out ("\n");
 		foreach my $line (@{$self->physlines}) {
-			printf $out ("> %s", $line->[1]);
+			print $out ("> " . $line->[1]);
 		}
 	}
 }
@@ -364,7 +364,7 @@ sub explain($@) {
 
 sub to_string($) {
 	my ($self) = @_;
-	return sprintf("%s:%s: %s", $self->[FILE], $self->[LINES], $self->[TEXT]);
+	return $self->[FILE] . ":" . $self->[LINES] . ": " . $self->[TEXT];
 }
 
 sub prepend_before($$) {
@@ -701,7 +701,7 @@ my (@options) = (
 	[ "-V|--version", "print the version number of pkglint",
 	  "version|V",
 	  sub {
-		printf("%s\n", conf_distver);
+		print(conf_distver . "\n");
 		exit(0);
 	  } ],
 	[ "-W{warn,...}", "enable or disable specific warnings",
@@ -774,9 +774,9 @@ my $regex_shellword		=  qr"\s*(
 #
 
 use constant expl_relative_dirs	=> (
-	"Directories in the form \"category/package\" make it easier to move",
-	"a package around in pkgsrc, for example from pkgsrc-wip to the main",
-	"pkgsrc repository.");
+	"Directories in the form \"../../category/package\" make it easier to",
+	"move a package around in pkgsrc, for example from pkgsrc-wip to the",
+	"main pkgsrc repository.");
 
 #
 # Global variables.
@@ -868,7 +868,7 @@ sub parse_multioption($$) {
 			if (exists($optdefs->{$opt})) {
 				${$optdefs->{$opt}->[0]} = $value;
 			} else {
-				printf STDERR ("Invalid option: ${opt}\n");
+				print STDERR ("Invalid option: ${opt}\n");
 				help(*STDERR, 1, 0);
 			}
 		}
@@ -1101,7 +1101,7 @@ sub load_dist_sites() {
 	$names->{"MASTER_SITE_SUSE_UPD"} = true;
 	$names->{"MASTER_SITE_LOCAL"} = true;
 
-	log_info($fname, NO_LINE_NUMBER, sprintf("Loaded %d MASTER_SITE_* definitions.", scalar(keys(%{$url2name}))));
+	log_info($fname, NO_LINE_NUMBER, "Loaded " . scalar(keys(%{$url2name})) . " MASTER_SITE_* definitions.");
 	$load_dist_sites_url2name = $url2name;
 	$load_dist_sites_names = $names;
 }
@@ -1433,7 +1433,7 @@ sub load_package_Makefile($$$) {
 	if ($opt_dumpmakefile) {
 		print("OK: whole Makefile (with all included files) follows:\n");
 		foreach my $line (@{$all_lines}) {
-			printf("%s\n", $line->to_string());
+			print($line->to_string() . "\n");
 		}
 	}
 
@@ -1491,7 +1491,7 @@ sub checkline_valid_characters($$) {
 	($rest = $line->text) =~ s/$re_validchars//g;
 	if ($rest ne "") {
 		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
-		$line->log_warning(sprintf("Line contains invalid characters (%s).", join(", ", @chars)));
+		$line->log_warning("Line contains invalid characters (" . join(", ", @chars) . ").");
 	}
 }
 
@@ -1509,7 +1509,7 @@ sub checkline_valid_characters_in_variable($$) {
 	$rest =~ s/$re_validchars//g;
 	if ($rest ne "") {
 		my @chars = map { $_ = sprintf("0x%02x", ord($_)); } split(//, $rest);
-		$line->log_warning(sprintf("${varname} contains invalid characters (%s).", join(", ", @chars)));
+		$line->log_warning("${varname} contains invalid characters (" . join(", ", @chars) . ").");
 	}
 }
 
@@ -2390,7 +2390,7 @@ sub checklines_package_Makefile_varorder($) {
 				$next_section = true;
 
 			} elsif ($varname ne $vars->[$varindex]->[0]) {
-				$line->log_warning(sprintf("Expected %s, but found %s.", $vars->[$varindex]->[0], $varname));
+				$line->log_warning("Expected " . $vars->[$varindex]->[0] . ", but found " . $varname . ".");
 				$lineno++;
 
 			} else {
@@ -2405,7 +2405,7 @@ sub checklines_package_Makefile_varorder($) {
 		} else {
 			while ($varindex <= $#{$vars}) {
 				if ($vars->[$varindex]->[1] == once) {
-					$line->log_warning(sprintf("%s should be set here.", $vars->[$varindex]->[0]));
+					$line->log_warning($vars->[$varindex]->[0] . " should be set here.");
 				}
 				$below->{$vars->[$varindex]->[0]} = $below_what;
 				$varindex++;
@@ -3398,7 +3398,7 @@ sub checkitem($) {
 			checkdir_root();
 		}
 	} else {
-		log_error($item, NO_LINE_NUMBER, sprintf("Don't know how to check this %s.", ($is_dir) ? "directory" : "file"));
+		log_error($item, NO_LINE_NUMBER, "Don't know how to check this " . (($is_dir) ? "directory" : "file") . ".");
 		return;
 	}
 
