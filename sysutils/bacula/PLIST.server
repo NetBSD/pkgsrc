@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/11 07:23:15 wiz Exp $
-libexec/bacula/bacula
-libexec/bacula/bconsole
-libexec/bacula/btraceback.dbx
-libexec/bacula/btraceback.gdb
+@comment $NetBSD: PLIST.server,v 1.1 2005/12/08 01:04:44 wiz Exp $
 libexec/bacula/create_${BACULA_DB}_database
 libexec/bacula/create_bacula_database
 libexec/bacula/delete_catalog_backup
@@ -10,39 +6,25 @@ libexec/bacula/drop_${BACULA_DB}_database
 libexec/bacula/drop_${BACULA_DB}_tables
 libexec/bacula/drop_bacula_database
 libexec/bacula/drop_bacula_tables
-libexec/bacula/dvd-handler
-libexec/bacula/gconsole
 libexec/bacula/grant_${BACULA_DB}_privileges
 libexec/bacula/grant_bacula_privileges
 libexec/bacula/make_${BACULA_DB}_tables
 libexec/bacula/make_bacula_tables
 libexec/bacula/make_catalog_backup
-libexec/bacula/mtx-changer
 libexec/bacula/query.sql
-libexec/bacula/startmysql
-libexec/bacula/stopmysql
 libexec/bacula/update_${BACULA_DB}_tables
 libexec/bacula/update_bacula_tables
-man/man8/bacula.8
 sbin/bacula-dir
-sbin/bacula-fd
 sbin/bacula-sd
-sbin/bconsole
 sbin/bcopy
 sbin/bextract
 sbin/bls
 sbin/bscan
 sbin/bsmtp
 sbin/btape
-sbin/btraceback
 sbin/dbcheck
 share/examples/bacula/bacula-dir.conf
-share/examples/bacula/bacula-fd.conf
 share/examples/bacula/bacula-sd.conf
-share/examples/bacula/bconsole.conf
 share/examples/rc.d/bacula
 share/examples/rc.d/bacula-dir
-share/examples/rc.d/bacula-fd
 share/examples/rc.d/bacula-sd
-@dirrm share/examples/bacula
-@dirrm libexec/bacula
