@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:27 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/08 12:20:02 wiz Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
 DISTNAME=	jre-1_5_0_06-linux-i586
 PKGNAME=	sun-jre15-5.0.6
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 SHORT_NAME=	JRE
@@ -35,10 +36,11 @@ DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL.tmpl
 FILES_SUBST+=		JAVA_HOME=${JAVA_HOME:Q}
 FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 
-PLIST_SRC=      	${WRKDIR}/PLIST
-
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_5_0.zip
+PLIST_SUBST+=	SUN_JRE15_USE_JCE=""
+.else
+PLIST_SUBST+=	SUN_JRE15_USE_JCE="@comment "
 .endif
 
 post-extract:
@@ -55,9 +57,6 @@ do-configure:
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 	cd ${WRKDIR}/jce ; ${PAX} -rw -pe -v . ${WRKSRC}/lib/security
-	${SED} 's/@SUN_JRE15_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
-.else
-	${SED} '/@SUN_JRE15_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .endif
 
 #
