@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/08 17:24:32 joerg Exp $
 
---- file.c.orig	Wed Aug 27 12:59:52 2003
-+++ file.c	Wed Aug 27 13:00:09 2003
-@@ -34,10 +34,10 @@
+--- file.c.orig	2004-01-02 15:00:27.000000000 +0000
++++ file.c
+@@ -34,10 +34,10 @@ __RCSID("$NetBSD: file.c,v 1.1.1.2 2004/
  
  #include <sys/param.h>
  
@@ -13,4 +13,22 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
 -#include <zlib.h>
  
  #include "grep.h"
+ 
+@@ -122,7 +122,7 @@ gzfgetln(gzFile *f, size_t *len)
+ }
+ 
+ file_t *
+-grep_fdopen(int fd, char *mode)
++grep_fdopen(int fd, const char *mode)
+ {
+ 	file_t *f;
+ 
+@@ -148,7 +148,7 @@ grep_fdopen(int fd, char *mode)
+ }
+ 
+ file_t *
+-grep_open(char *path, char *mode)
++grep_open(const char *path, const char *mode)
+ {
+ 	file_t *f;
  
