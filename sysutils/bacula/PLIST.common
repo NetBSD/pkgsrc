@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/11 21:34:03 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2005/12/08 01:04:44 wiz Exp $
 libexec/bacula/bacula
 libexec/bacula/bconsole
 libexec/bacula/btraceback.dbx
@@ -15,5 +15,3 @@ sbin/btraceback
 share/examples/bacula/bacula-fd.conf
 share/examples/bacula/bconsole.conf
 share/examples/rc.d/bacula-fd
-@dirrm share/examples/bacula
-@dirrm libexec/bacula

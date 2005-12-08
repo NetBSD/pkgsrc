@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/08 01:04:44 wiz Exp $
 
 CONFLICTS+=		bacula-client-[0-9]*
 
 .include "options.mk"
+
+PLIST_SRC=		PLIST.common
+PLIST_SRC+=		PLIST.server
 
 PLIST_SUBST+=		BACULA_DB=${BACULA_DB:Q}
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
