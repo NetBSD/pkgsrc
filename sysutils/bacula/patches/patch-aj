@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.3 2005/12/08 01:04:45 wiz Exp $
+
+--- scripts/Makefile.in.orig	2005-10-18 00:07:57.000000000 +0200
++++ scripts/Makefile.in
+@@ -51,9 +51,7 @@ install: installdirs
+ 	$(INSTALL_DATA)   btraceback.gdb $(DESTDIR)$(scriptdir)/btraceback.gdb
+ 	$(INSTALL_DATA)   btraceback.dbx $(DESTDIR)$(scriptdir)/btraceback.dbx
+ 	$(INSTALL_SCRIPT) btraceback $(DESTDIR)$(sbindir)/btraceback
+-	gzip <bacula.man >bacula.8.gz
+-	$(INSTALL_DATA)   bacula.8.gz $(DESTDIR)$(mandir)/bacula.8.gz
++	$(INSTALL_DATA)   bacula.man $(DESTDIR)$(mandir)/bacula.8
+-	@rm -f bacula.8.gz
+ 
+ 
+ uninstall:
