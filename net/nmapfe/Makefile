@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2005/09/15 14:12:19 salo Exp $
+# $NetBSD: Makefile,v 1.34 2005/12/08 22:00:22 salo Exp $
 #
 
-DISTNAME=	nmap-3.93
+DISTNAME=	nmap-3.95
 PKGNAME=	nmapfe-0.9.5
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,7 @@ COMMENT=	Graphical front end to the nmap port scanner
 DEPENDS+=	nmap-[23].*:../../net/nmap
 
 GNU_CONFIGURE=	YES
+USE_TOOLS+=	pkg-config
 
 PATCHDIR=	${.CURDIR}/../../net/nmap/patches
 DISTINFO_FILE=	${.CURDIR}/../../net/nmap/distinfo
@@ -28,6 +29,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nmapfe/nmapfe ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/docs/nmapfe.1 ${PREFIX}/man/man1
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
