@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.432 2005/12/08 09:01:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.433 2005/12/08 10:07:20 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2193,9 +2193,9 @@ sub checkline_mk_varassign($$$$$) {
 			"operator when they are appended. As it is hard to check whether a",
 			"variable that is appended to PLIST_SUBST is already quoted or not, you",
 			"should not have pre-quoted variables at all. To solve this, you should",
-			"directly use SUBST_PLIST+= ${varname}=${value} or use any other",
+			"directly use PLIST_SUBST+= ${varname}=${value} or use any other",
 			"variable for collecting the list of PLIST substitutions and later",
-			"append that variable with SUBST_PLIST+= \${MY_SUBST_PLIST}.");
+			"append that variable with PLIST_SUBST+= \${MY_PLIST_SUBST}.");
 	}
 }
 
