@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.55 2005/12/06 09:15:29 rillig Exp $
+# $NetBSD: pre-build,v 1.56 2005/12/08 21:21:15 rillig Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -26,32 +26,32 @@ PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
 # /etc/mk.conf
 BULKFILESDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BULKFILESDIR )`;
 if [ "$BULKFILESDIR" = "" ]; then
-	echo "Had problems determining the directory of .broken* files"
+	echo "pre-build> Had problems determining the directory of .broken* files"
 	exit 1
 fi
 BROKENF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENFILE )`;
 if [ "$BROKENF" = "" ]; then
-	echo "Had problems determining the name of the .broken files"
+	echo "pre-build> Had problems determining the name of the .broken files"
 	exit 1
 fi
 BRKWRKLOG=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENWRKLOG )`;
 if [ "$BRKWRKLOG" = "" ]; then
-	echo "Had problems determining the name of the .broken.work files"
+	echo "pre-build> Had problems determining the name of the .broken.work files"
 	exit 1
 fi
 BLDLOG=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BUILDLOG )`;
 if [ "$BLDLOG" = "" ]; then
-	echo "Had problems determining the name of the .make files"
+	echo "pre-build> Had problems determining the name of the .make files"
 	exit 1
 fi
 LINTPKGSRC_DB=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=LINTPKGSRC_DB )`;
 if [ "$LINTPKGSRC_DB" = "" ]; then
-	echo "Had problems determining the name of the .lintpkgsrc.db file"
+	echo "pre-build> Had problems determining the name of the .lintpkgsrc.db file"
 	exit 1
 fi
 STARTFILE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=STARTFILE )`;
 if [ "$STARTFILE" = "" ]; then
-	echo "Had problems determining the name of the .start file"
+	echo "pre-build> Had problems determining the name of the .start file"
 	exit 1
 fi
 
@@ -60,11 +60,11 @@ X11BASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=X11BASE )`;
 DISTDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=DISTDIR )`;
 
 # Create ${BULKFILESDIR} if necessary
-echo "Creating ${BULKFILESDIR} if necessary"
+echo "pre-build> Creating ${BULKFILESDIR} if necessary"
 mkdir -p "${BULKFILESDIR}"
 
 # Make sure the pkg-vulnerabilities file is up to date
-echo "Making sure vulnerability-list is upto date:"
+echo "pre-build> Making sure vulnerability-list is upto date:"
 if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = yes ]; then
        ( cd "${USR_PKGSRC}/security/audit-packages" \
          && ${BMAKE} bulk-install \
@@ -110,13 +110,13 @@ DEPOTBASE=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=DEPOTBASE)`
 PKG_TOOLS_BIN=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=PKG_TOOLS_BIN)`
 
 for dbdir in "${PKG_DBDIR}" "${DEPOTBASE}"; do
-	echo "Removing all installed packages in ${dbdir}"
+	echo "pre-build> Removing all installed packages in ${dbdir}"
 	if [ -d "$dbdir" ]; then
 		cd "$dbdir"
 		for pkg in *
 		do
 			if ${PKG_TOOLS_BIN}/pkg_info -K "$dbdir" -qe "$pkg"; then
-				echo "${PKG_TOOLS_BIN}/pkg_delete -r ${pkg}"
+				echo "pre-build> ${PKG_TOOLS_BIN}/pkg_delete -r ${pkg}"
 				${PKG_TOOLS_BIN}/pkg_delete -K "$dbdir" -r "$pkg"
 			fi
 		done
@@ -127,7 +127,7 @@ for dbdir in "${PKG_DBDIR}" "${DEPOTBASE}"; do
 		for pkg in *
 		do
 			if ${PKG_TOOLS_BIN}/pkg_info -K "$dbdir" -qe "$pkg"; then
-				echo "${PKG_TOOLS_BIN}/pkg_delete -f ${pkg}"
+				echo "pre-build> ${PKG_TOOLS_BIN}/pkg_delete -f ${pkg}"
 				${PKG_TOOLS_BIN}/pkg_delete -K "$dbdir" -f "$pkg"
 			fi
 		done
@@ -161,7 +161,7 @@ rm -fr /tmp/mod*
 
 # Clean up state files
 cd "${USR_PKGSRC}"
-echo "Cleaning up leftover state files from previous runs"
+echo "pre-build> Cleaning up leftover state files from previous runs"
 rm -f "${BULKFILESDIR}"/*/*/"$BROKENF" "${BULKFILESDIR}"/*/*/"$BRKWRKLOG" "${BULKFILESDIR}"/*/*/"$BLDLOG"
 rm -f "${BULKFILESDIR}/$BROKENF" "${BULKFILESDIR}/$BRKWRKLOG" "${BULKFILESDIR}/$BLDLOG" "$STARTFILE"
 
@@ -180,10 +180,10 @@ esac
 
 case "$LINTPKGSRC_CACHE" in
 yes|YES)
-	echo "Creating lintpkgsrc cache database."
+	echo "pre-build> Creating lintpkgsrc cache database."
 	lintpkgsrc -K "$PACKAGES" -P "$USR_PKGSRC" -M "$DISTDIR" -E "$LINTPKGSRC_DB"
 	lintpkgsrc_cache="-I $LINTPKGSRC_DB"
-	echo "done."
+	echo "pre-build> done."
 	;;
 *)
 	lintpkgsrc_cache=''
@@ -192,54 +192,54 @@ esac
 
 case "$PRUNEDISTFILES" in
 yes|YES)
-	echo "Removing old/broken distfiles"
+	echo "pre-build> Removing old/broken distfiles"
 	lintpkgsrc $lintpkgsrc_cache -K "$PACKAGES" -P "$USR_PKGSRC" -M "$DISTDIR" -o -m -r
-	echo "done."
+	echo "pre-build> done."
 	;;
 *)
-	echo "Skipping distfile pruning."
+	echo "pre-build> Skipping distfile pruning."
 	;;
 esac
 
 case "$PRUNEPACKAGES" in
 yes|YES)
-	echo "Removing old (out of date) binary packages"
+	echo "pre-build> Removing old (out of date) binary packages"
 	lintpkgsrc $lintpkgsrc_cache -K "$PACKAGES" -P "$USR_PKGSRC" -M "$DISTDIR" -p -r
-	echo "done."
+	echo "pre-build> done."
 	;;
 *)
-	echo "Skipping packages pruning."
+	echo "pre-build> Skipping packages pruning."
 	;;
 esac
 
 case "$PRUNELINKS" in
 yes|YES)
-	echo "Checking for and removing orphaned packages links"
+	echo "pre-build> Checking for and removing orphaned packages links"
 	find "$PACKAGES" -type l -print |  \
 	while read f
 	do
 		if [ ! -d "$f" -a ! -f "$f" ]; then
-			echo "Removing orphaned link: \"$f\""
+			echo "pre-build> Removing orphaned link: \"$f\""
 			rm "$f"
 		fi
 	done
-	echo "done."
+	echo "pre-build> done."
 	;;
 *)
-	echo "Skipping pruning of packages links."
+	echo "pre-build> Skipping pruning of packages links."
 	;;
 esac
 
 # Clean out the packages added above so that the real bulk build
 # is started in a consistent state.
 for dbdir in "${PKG_DBDIR}" "${DEPOTBASE}"; do
-	echo "Removing all installed packages in ${dbdir}"
+	echo "pre-build> Removing all installed packages in ${dbdir}"
 	if [ -d "$dbdir" ]; then
 		cd "$dbdir"
 		for pkg in *
 		do
 			if ${PKG_TOOLS_BIN}/pkg_info -K "$dbdir" -qe "$pkg"; then
-				echo "${PKG_TOOLS_BIN}/pkg_delete -r ${pkg}"
+				echo "pre-build> ${PKG_TOOLS_BIN}/pkg_delete -r ${pkg}"
 				${PKG_TOOLS_BIN}/pkg_delete -K "$dbdir" -r "$pkg"
 			fi
 		done
