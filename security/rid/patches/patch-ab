@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2004/06/27 12:21:21 grant Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/08 17:41:16 joerg Exp $
 
---- pinger.c.orig	2000-02-25 15:33:24.000000000 +1100
+--- pinger.c.orig	2000-02-25 04:33:24.000000000 +0000
 +++ pinger.c
-@@ -141,7 +141,7 @@ void process_alive(int num_hosts)
+@@ -23,7 +23,6 @@ extern fd_set RawFD;
+ extern u_long NumToPing;
+ extern u_long TO;
+ extern pid_t PidSender;
+-extern int errno;
+ 
+ 
+ /*
+@@ -141,7 +140,7 @@ void process_alive(int num_hosts)
  }
  
  /* Standard checksum routine */
