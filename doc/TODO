@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4253 2005/12/08 01:33:01 wiz Exp $
+$NetBSD: TODO,v 1.4254 2005/12/08 06:14:08 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -774,7 +774,6 @@ Suggested package updates
 	o nagios-2.0b3 [replacing netsaint]
 	o nano-1.3.8
 	o nap-1.5.3
-	o navi2ch-1.7.5
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
