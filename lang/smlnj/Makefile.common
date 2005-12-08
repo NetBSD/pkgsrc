@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/05 20:50:27 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/12/08 09:15:37 rillig Exp $
 
 # smlnj also supports hppa, sparc, ppc, mlrisc & alpha
 # pkg support for those platforms, and say, solaris-x86
@@ -28,4 +28,4 @@ NLFFI=		"@comment "
 BOX=		${MACHINE_ARCH}
 .endif
 
-PLIST_SUBST+=	BOX=${BOX:Q} OS=${OS:Q} NLFFI=${NLFFI:Q}
+PLIST_SUBST+=	BOX=${BOX:Q} OS=${OS:Q} NLFFI=${NLFFI}
