@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/08 17:24:32 joerg Exp $
 
---- grep.c.orig	Wed Aug 27 13:00:48 2003
-+++ grep.c	Wed Aug 27 13:01:03 2003
-@@ -37,6 +37,7 @@
+--- grep.c.orig	2004-05-05 14:34:55.000000000 +0000
++++ grep.c
+@@ -37,6 +37,7 @@ __RCSID("$NetBSD: grep.c,v 1.2 2004/05/0
  #include <sys/types.h>
  #include <sys/stat.h>
  
@@ -10,3 +10,21 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
  #include <err.h>
  #include <errno.h>
  #include <getopt.h>
+@@ -111,7 +112,7 @@ int binbehave = BIN_FILE_BIN;
+ int dirbehave = GREP_READ;
+ int devbehave = GREP_READ;
+ /*int linkbehave = LINK_FOLLOW;*/
+-char *stdin_label;
++const char *stdin_label;
+ 
+ enum {
+ 	BIN_OPT = CHAR_MAX + 1,
+@@ -137,7 +138,7 @@ usage(void)
+ 	exit(2);
+ }
+ 
+-static char *optstr = "0123456789A:B:C:D:EFGHILUVZabcd:e:f:hilm:noqrsuvwxyz";
++static const char optstr[] = "0123456789A:B:C:D:EFGHILUVZabcd:e:f:hilm:noqrsuvwxyz";
+ 
+ struct option long_options[] =
+ {
