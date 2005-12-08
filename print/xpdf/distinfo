@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.21 2005/09/07 15:19:08 adam Exp $
+$NetBSD: distinfo,v 1.21.2.1 2005/12/08 09:03:11 seb Exp $
 
 SHA1 (xpdf-3.01.tar.gz) = 472cbf0f3df4e20a3ab7ada2e704b4e10d1d385b
 RMD160 (xpdf-3.01.tar.gz) = d734065ce12db8d0c37d9d0ac0ca7c287be59442
 Size (xpdf-3.01.tar.gz) = 599778 bytes
+SHA1 (xpdf-3.01pl1.patch) = b8906e23b8de6c49f9e50aedaa160f17ea040f08
+RMD160 (xpdf-3.01pl1.patch) = 123403a98df5d8191ac1f7b3780fb6c6e0bf344f
+Size (xpdf-3.01pl1.patch) = 4936 bytes
 SHA1 (patch-aa) = 6664207f59076a2612cf4141b7ab4b072b404e3a
 SHA1 (patch-ab) = fd4205c477ee4ac7660b8c1a707ea7b528ac4f90
 SHA1 (patch-ac) = 6fa74df05e01510c792eb2b20f670e6903f30aa2
