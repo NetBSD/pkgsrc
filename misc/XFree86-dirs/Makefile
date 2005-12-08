@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/09/28 19:24:49 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/08 09:52:15 rillig Exp $
 #
 
 DISTNAME=	XFree86-dirs-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	# empty
 DISTFILES=	# empty
