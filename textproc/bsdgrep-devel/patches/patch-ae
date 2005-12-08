@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2004/12/21 16:09:44 agc Exp $
+$NetBSD: patch-ae,v 1.3 2005/12/08 17:24:32 joerg Exp $
 
---- util.c.orig	Wed Aug 27 13:01:54 2003
-+++ util.c	Wed Aug 27 13:02:02 2003
-@@ -36,6 +36,7 @@
+--- util.c.orig	2004-01-02 15:00:34.000000000 +0000
++++ util.c
+@@ -36,6 +36,7 @@ __RCSID("$NetBSD: util.c,v 1.1.1.2 2004/
  #include <sys/stat.h>
  
  #include <ctype.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.2 2004/12/21 16:09:44 agc Exp $
  #include <err.h>
  #include <errno.h>
  #include <fts.h>
-@@ -44,7 +45,6 @@
+@@ -44,7 +45,6 @@ __RCSID("$NetBSD: util.c,v 1.1.1.2 2004/
  #include <stdlib.h>
  #include <string.h>
  #include <unistd.h>
@@ -18,7 +18,16 @@ $NetBSD: patch-ae,v 1.2 2004/12/21 16:09:44 agc Exp $
  
  #include "grep.h"
  
-@@ -228,8 +228,8 @@
+@@ -99,7 +99,7 @@ grep_tree(char **argv)
+ }
+ 
+ int
+-procfile(char *fn)
++procfile(const char *fn)
+ {
+ 	str_t ln;
+ 	file_t *f;
+@@ -228,8 +228,8 @@ procline(str_t *l, int nottext)
  				continue;
  			if (r == 0) {
  				if (wflag) {

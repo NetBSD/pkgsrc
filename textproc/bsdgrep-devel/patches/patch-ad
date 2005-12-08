@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+$NetBSD: patch-ad,v 1.2 2005/12/08 17:24:32 joerg Exp $
 
---- mmfile.c.orig	Wed Aug 27 13:01:21 2003
-+++ mmfile.c	Wed Aug 27 13:01:42 2003
-@@ -36,6 +36,7 @@
+--- mmfile.c.orig	2004-01-02 15:00:34.000000000 +0000
++++ mmfile.c
+@@ -36,6 +36,7 @@ __RCSID("$NetBSD: mmfile.c,v 1.1.1.2 200
  #include <sys/mman.h>
  #include <sys/stat.h>
  
@@ -10,3 +10,12 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
  #include <err.h>
  #include <fcntl.h>
  #include <stdlib.h>
+@@ -46,7 +47,7 @@ __RCSID("$NetBSD: mmfile.c,v 1.1.1.2 200
+ #define MAX_MAP_LEN 1048576
+ 
+ mmf_t *
+-mmopen(char *fn, char *mode)
++mmopen(const char *fn, const char *mode)
+ {
+ 	mmf_t *mmf;
+ 	struct stat st;
