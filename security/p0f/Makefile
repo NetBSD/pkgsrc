@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:57 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/08 19:14:47 joerg Exp $
 #
 
 DISTNAME=	p0f-2.0.5
@@ -26,6 +26,9 @@ SUBST_SED.paths=	-e "s|/etc/p0f|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.paths=	"Fixing paths."
 
 INSTALLATION_DIRS=	bin man/man1
+
+post-patch:
+	${LN} -s NetBSD ${WRKSRC}/mk/DragonFly
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/p0f ${PREFIX}/bin
