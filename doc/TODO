@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4255 2005/12/08 06:38:43 uebayasi Exp $
+$NetBSD: TODO,v 1.4256 2005/12/08 06:52:35 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -1064,7 +1064,6 @@ Suggested package updates
 	o rep-gtk-0.18
 	o resize_image-0.7
 	o rhythmbox-0.9.0
-	o riece-2.0.2
 	o rio500-0.8.1
 	o ripmime-1.4.0.4
 	o rman-3.2
