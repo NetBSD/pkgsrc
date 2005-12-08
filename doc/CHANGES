@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12135 2005/12/07 17:59:21 wiz Exp $
+$NetBSD: CHANGES,v 1.12136 2005/12/08 01:33:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5523,3 +5523,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/libvorbis to 1.1.2 [wiz 2005-12-07]
 	Updated textproc/groff to 1.19.2 [wiz 2005-12-07]
 	Updated games/wesnoth to 1.0.2 [wiz 2005-12-07]
+	Updated sysutils/bacula to 1.38.2 [wiz 2005-12-08]
+	Updated sysutils/bacula-clientonly to 1.38.2 [wiz 2005-12-08]
+	Updated sysutils/bacula-doc to 1.38.2 [wiz 2005-12-08]
