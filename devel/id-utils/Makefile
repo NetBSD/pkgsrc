@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:04 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/08 09:03:50 rillig Exp $
 
 DISTNAME=	id-utils-3.2
 PKGREVISION=	6
@@ -32,12 +32,12 @@ BUILD_DEPENDS+=		emacs-[0-9]*:../../editors/emacs
 # install byte-compiled file here whenever we use emacs or xemacs...
 .if defined(USE_EMACS) || defined(USE_XEMACS)
 # we end-up installing .el file there whenever we use emacs or xemacs
-LISPDIR?=		share/emacs/site-lisp
-CLISPDIR=		${LISPDIR}
+PLIST_SUBST+=		LISPDIR=share/emacs/site-lisp
+PLIST_SUBST+=		CLISPDIR=share/emacs/site-lisp
 .else
 # ...or don't install it at all
-LISPDIR?=		'@comment '
-CLISPDIR?=		'@comment '
+PLIST_SUBST+=		LISPDIR='@comment '
+PLIST_SUBST+=		CLISPDIR='@comment '
 .endif
 # if not already, set this to the *full* pathname to false command
 # so configure won't search further for emacs
@@ -46,9 +46,6 @@ EMACS?=			${FALSE:S|^false$|/usr/bin/false|}
 CONFIGURE_ENV+=		EMACS=${EMACS:Q}
 BUILD_DEFS+=		EMACS
 MAKE_ENV+=		BSD_SETENV=${SETENV:Q}
-
-PLIST_SUBST+=		LISPDIR=${LISPDIR:Q}
-PLIST_SUBST+=		CLISPDIR=${CLISPDIR:Q}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
