@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.88 2005/12/04 23:57:44 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.89 2005/12/08 09:04:24 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -195,3 +195,5 @@ Pullup ticket 937 - requested by Lubomir Sedlacik
 sync archivers/unalz with HEAD, including a security update
 Pullup ticket 938 - requested by Lubomir Sedlacik
 sync graphics/inkscape with HEAD, including a security update
+Pullup ticket 943 - requested by Masao Uebayashi
+sync print/xpdf with HEAD, including a security fix
