@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.13 2005/09/15 14:12:18 salo Exp $
+$NetBSD: patch-aa,v 1.14 2005/12/08 21:59:17 salo Exp $
 
---- Makefile.in.orig	2005-09-12 12:36:16.000000000 +0200
-+++ Makefile.in	2005-09-15 14:13:00.000000000 +0200
+--- Makefile.in.orig	2005-12-08 09:14:08.000000000 +0100
++++ Makefile.in	2005-12-08 22:30:47.000000000 +0100
 @@ -1,4 +1,4 @@
--export NMAP_VERSION = 3.93
-+NMAP_VERSION = 3.93
- NMAP_NAME= nmap
+-export NMAP_VERSION = 3.95
++NMAP_VERSION = 3.95
+ NMAP_NAME= Nmap
  NMAP_URL= http://www.insecure.org/nmap/
  NMAP_PLATFORM=@host@
 @@ -11,14 +11,14 @@
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.13 2005/09/15 14:12:18 salo Exp $
  
 -export NBASEDIR=@NBASEDIR@
 -export NSOCKDIR=@NSOCKDIR@
-+NBASEDIR = @NBASEDIR@
-+NSOCKDIR = @NSOCKDIR@
++NBASEDIR=@NBASEDIR@
++NSOCKDIR=@NSOCKDIR@
  CC = @CC@
  CXX = @CXX@
  CCOPT = 
