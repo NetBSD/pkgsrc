@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2005/09/20 13:19:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.57.2.1 2005/12/09 16:20:16 salo Exp $
 
 DISTNAME=	squirrelmail-1.4.5
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -45,7 +45,7 @@ OWN_DIRS+=		${SMDIR} ${SMDIR}/config
 OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} ${APACHE_GROUP} 730
 OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
-post-patch:
+pre-configure:
 	cd ${WRKSRC};							\
 	for file in config/config_default.php; do			\
 		${SED}	-e "s|@ATTACHMENTS_DIR@|${ATTACHMENTS_DIR}|g"	\
@@ -54,7 +54,7 @@ post-patch:
 		${MV} -f $${file}.fixed $${file};			\
 	done;								\
 	cd ${WRKSRC};							\
-	${FIND} . \( -name "*.orig" -o -name ".cvsignore" \) -print	\
+	${FIND} . \( -name "*.orig*" -o -name ".cvsignore" \) -print	\
 		| ${XARGS} ${RM} -f
 
 pre-install:
