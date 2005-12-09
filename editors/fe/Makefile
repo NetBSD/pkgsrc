@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/23 12:00:42 agc Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/09 14:17:44 joerg Exp $
 
 DISTNAME=	fe-1.6
 CATEGORIES=	editors
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.moria.de/~michael/fe/
 COMMENT=	Folding editor
 
 GNU_CONFIGURE=	yes
+BUILD_USES_MSGFMT=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fe
