@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/12/05 20:50:50 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/12/09 17:04:51 joerg Exp $
 #
 
 DISTNAME=	wistumbler2-2.0pre10
@@ -14,7 +14,7 @@ PATCHDIR=		${.CURDIR}/../../net/wistumbler2/patches
 PLIST_SRC=		${.CURDIR}/../../net/wistumbler2/PLIST
 
 NOT_FOR_PLATFORM=	NetBSD-[01].[012345]*-*
-ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-* DragonFly-*-*
 CONFLICTS+=		wistumbler-[0-9]*
 
 HAS_CONFIGURE=		YES
