@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/03 13:41:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/12/09 16:01:10 gdt Exp $
 lib/guile/site/database/libpostgres.la
 lib/guile/site/database/postgres-col-defs.scm
+lib/guile/site/database/postgres-gxrepl.scm
 lib/guile/site/database/postgres-meta.scm
+lib/guile/site/database/postgres-qcons.scm
+lib/guile/site/database/postgres-resdisp.scm
 lib/guile/site/database/postgres-resx.scm
 lib/guile/site/database/postgres-table.scm
 lib/guile/site/database/postgres-types.scm
