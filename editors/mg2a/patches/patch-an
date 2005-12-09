@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2003/09/22 20:22:37 tron Exp $
+$NetBSD: patch-an,v 1.2 2005/12/09 15:26:52 joerg Exp $
 
---- def.h.orig	1988-07-03 19:50:05.000000000 +0200
-+++ def.h	2003-09-22 21:31:40.000000000 +0200
-@@ -288,7 +288,7 @@
+--- def.h.orig	1988-07-03 17:50:05.000000000 +0000
++++ def.h
+@@ -288,7 +288,7 @@ extern	WINDOW	*popbuf();
  extern	WINDOW	*wpopup();
  extern	LINE	*lalloc();
  extern	LINE	*lallocx();
@@ -11,3 +11,8 @@ $NetBSD: patch-an,v 1.1 2003/09/22 20:22:37 tron Exp $
  extern	int	nrow;
  extern	int	ncol;
  extern	int	ttrow;
+@@ -308,4 +308,3 @@ extern	VOID	lchange();
+  */
+ extern	char	*strcpy();
+ extern	char	*strcat();
+-extern	char	*malloc();
