@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.2.2 2005/12/09 16:20:16 salo Exp $
+
+--- class/mime/Rfc822Header.class.php.orig	2005-02-06 19:33:29.000000000 -0500
++++ class/mime/Rfc822Header.class.php
+@@ -505,8 +505,9 @@ class Rfc822Header {
+      * functions/imap_messages. I'm not sure if it's ok here to call
+      * that function?
+      */
+-    function parsePriority($value) {
+-        $value = strtolower(array_shift(split('/\w/',trim($value))));
++    function parsePriority($sValue) {
++	$aValue = split('/\w/',trim($sValue));
++        $value = strtolower(array_shift($aValue));
+         if ( is_numeric($value) ) {
+             return $value;
+         }
