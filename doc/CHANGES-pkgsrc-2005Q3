@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.91 2005/12/09 00:30:46 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.92 2005/12/09 16:21:07 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -201,3 +201,5 @@ Pullup ticket 947 - requested by Manuel Bouyer
 security fix for mailman
 Pullup ticket 933 - requested by Adrian Portelli
 sendmail update and build fixes
+Pullup tickets 939, 941 - requested by Martti Kuparinen
+various squirrelmail bug and compatibility fixes
