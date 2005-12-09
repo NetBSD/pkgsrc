@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.8 2005/12/09 15:04:19 joerg Exp $
+
+--- b.c.orig	2005-12-09 14:54:06.000000000 +0000
++++ b.c
+@@ -47,7 +47,6 @@ static int selinux_enabled = -1;
+ 
+ unsigned char stdbuf[stdsiz];
+ 
+-extern int errno;
+ int guesscrlf = 0;
+ int guessindent = 0;
+ 
