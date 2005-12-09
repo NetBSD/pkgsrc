@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12151 2005/12/09 20:31:39 wiz Exp $
+$NetBSD: CHANGES,v 1.12152 2005/12/09 20:41:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5546,3 +5546,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed print/ghostscript-gnu-nox11 [wiz 2005-12-09]
 	Removed print/ghostscript-gnu-x11 [wiz 2005-12-09]
 	Removed print/ghostscript-nox11 [wiz 2005-12-09]
+	Updated textproc/groff to 1.19.2nb1 [wiz 2005-12-09]
