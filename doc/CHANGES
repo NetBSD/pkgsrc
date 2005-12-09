@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12144 2005/12/08 22:01:50 salo Exp $
+$NetBSD: CHANGES,v 1.12145 2005/12/09 00:47:01 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5536,3 +5536,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/mailman to 2.1.6nb1 [bouyer 2005-12-08]
 	Updated net/nmap to 3.95 [salo 2005-12-08]
 	Updated net/nmapfe to 0.9.5nb22 [salo 2005-12-08]
+	Updated chat/silc-server to 1.0.1 [salo 2005-12-09]
