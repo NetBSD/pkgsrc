@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2005/08/12 20:21:29 tv Exp $
+$NetBSD: distinfo,v 1.22 2005/12/09 16:19:46 joerg Exp $
 
 SHA1 (pine4.63.tar.bz2) = ad235c1fad7cc8adfff5c69cea8eb267afa648c9
 RMD160 (pine4.63.tar.bz2) = b04a6f5134aeae6b0a5663acbfa4e812c3fc7762
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = dc29440e0e6625dc9674d8498eedfe730a4c0520
 SHA1 (patch-af) = 50559e76706fd1107b96979b2aedcb760abf9f88
 SHA1 (patch-ag) = 88a8a8ca456355165726425de7cf18a13435a3a2
 SHA1 (patch-ah) = 2c18b4fb1b57a0bdd1e164c7eefe0bd684f26764
+SHA1 (patch-ai) = 7e2a70ee4322aa85de80089c2e4470ec12bfe110
