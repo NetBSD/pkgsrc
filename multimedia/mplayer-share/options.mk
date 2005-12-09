@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2005/11/26 01:31:50 ben Exp $
+# $NetBSD: options.mk,v 1.13 2005/12/09 17:54:25 salo Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -13,7 +13,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 # -------------------------------------------------------------------------
 
 # Options supported by both mplayer* or mencoder*.
-PKG_SUPPORTED_OPTIONS=	gif jpeg mad dv dvdread oss png theora vorbis
+PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread oss png theora vorbis
 
 # Set options based on the specific package being built.
 .if !empty(PKGNAME:M*mplayer*)
@@ -83,6 +83,13 @@ CONFIGURE_ARGS+=	--with-cdparanoiaincdir="${BUILDLINK_PREFIX.cdparanoia}/include
 .  include "../../audio/cdparanoia/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-cdparanoia
+.endif
+
+.if !empty(PKG_OPTIONS:Mdts)
+CONFIGURE_ARGS+=	--enable-libdts
+.  include "../../audio/libdca/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libdts
 .endif
 
 .if !empty(PKG_OPTIONS:Mdv)
