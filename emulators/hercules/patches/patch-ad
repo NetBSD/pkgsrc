@@ -1,14 +1,12 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/02/19 12:35:21 agc Exp $
+$NetBSD: patch-ad,v 1.2 2005/12/09 10:46:43 joerg Exp $
 
-Linux tape handling.
-
---- hercifc.c	2001/02/19 12:08:31	1.1
-+++ hercifc.c	2001/02/19 12:08:42
-@@ -64,7 +64,11 @@
+--- hercifc.c.orig	2001-01-28 18:05:40.000000000 +0000
++++ hercifc.c
+@@ -64,7 +64,11 @@ struct sockaddr_in *sin;                
      sin = (struct sockaddr_in*)
              (oper == SIOCSIFADDR ? &ifreq.ifr_addr
              :oper == SIOCSIFDSTADDR ? &ifreq.ifr_dstaddr
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +            :oper == SIOCSIFNETMASK ? &ifreq.ifr_broadaddr
 +#else
              :oper == SIOCSIFNETMASK ? &ifreq.ifr_netmask
