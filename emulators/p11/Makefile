@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:07 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/09 09:37:32 joerg Exp $
 #
 
 DISTNAME=	p11-2.10a
@@ -12,6 +12,12 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-begemot=${PREFIX:Q}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ENV+=	ac_cv_epp_bpf=yes ac_cv_epp_tun=yes ac_cv_epp_tap=yes
+.endif
 
 # override MAKEFLAGS in the build and install stages
 do-build:
