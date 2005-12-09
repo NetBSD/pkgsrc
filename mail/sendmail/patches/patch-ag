@@ -1,12 +1,42 @@
-$NetBSD: patch-ag,v 1.8 2004/08/30 20:16:28 adrianp Exp $
+$NetBSD: patch-ag,v 1.8.10.1 2005/12/09 00:30:18 salo Exp $
 
---- include/sm/conf.h.orig	Sun Aug  1 15:38:42 2004
-+++ include/sm/conf.h	Sun Aug  1 15:40:01 2004
-@@ -916,6 +916,7 @@
+--- include/sm/conf.h.orig	2005-06-30 01:12:13.000000000 +0000
++++ include/sm/conf.h	2005-10-24 04:26:55.000000000 +0000
+@@ -799,7 +799,11 @@
+ #  ifndef LA_TYPE
+ #   define LA_TYPE	LA_SUBR
+ #  endif /* ! LA_TYPE */
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 299000900)
++#  define SFS_TYPE	SFS_STATVFS	/* use <sys/statvfs.h> statfs() impl */
++#else
+ #  define SFS_TYPE	SFS_MOUNT	/* use <sys/mount.h> statfs() impl */
++#endif
+ #  define SPT_TYPE	SPT_PSSTRINGS	/* use PS_STRINGS pointer */
+ # endif /* defined(BSD4_4) && !defined(__bsdi__) && !defined(__GNU__) && !defined(DARWIN)*/
+ 
+@@ -914,9 +918,9 @@
+ #  ifndef LA_TYPE
+ #   define LA_TYPE	LA_SUBR
+ #  endif /* ! LA_TYPE */
+-#  if defined(__NetBSD__) && defined(__NetBSD_Version__) && __NetBSD_Version__ >= 200040000
++#  if defined(__NetBSD__) && defined(__NetBSD_Version__) && __NetBSD_Version__ >= 299000900
+ #   undef SFS_TYPE
+-#   define SFS_TYPE	SFS_STATVFS
++#   define SFS_TYPE	SFS_STATVFS	/* use <sys/statvfs.h> statfs() impl */
+ #  else
+ #   define SFS_TYPE	SFS_MOUNT	/* use <sys/mount.h> statfs() impl */
+ #  endif
+@@ -930,11 +934,12 @@
+ #  if defined(__NetBSD__) && defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104170000
+ #   define HASSETUSERCONTEXT	1	/* BSDI-style login classes */
+ #  endif
+-#  if defined(__NetBSD__) && defined(__NetBSD_Version__) && __NetBSD_Version__ >= 200060000
++#  if defined(__NetBSD__) && defined(__NetBSD_Version__) && __NetBSD_Version__ >= 299000900
+ #   define HASCLOSEFROM	1	/* closefrom(3) added in 2.0F */
  #  endif
  #  if defined(__NetBSD__)
  #   define USESYSCTL		1	/* use sysctl(3) for getting ncpus */
-+#   define SMRSH_CMDDIR                "@@SMRSH_CMDDIR@@"
++#   define SMRSH_CMDDIR		"@@SMRSH_CMDDIR@@"
  #   include <sys/param.h>
  #   include <sys/sysctl.h>
  #  endif
