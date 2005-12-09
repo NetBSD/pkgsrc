@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4258 2005/12/09 15:41:02 uebayasi Exp $
+$NetBSD: TODO,v 1.4259 2005/12/09 16:18:03 gdt Exp $
 
 Suggested new packages
 ======================
@@ -594,7 +594,6 @@ Suggested package updates
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o guile-oops-1.0.2
-	o guile-pg-0.29
 	o gworkspace-0.7.2
 	o gxine-0.5.1
 	o gzrecover-0.3
