@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4259 2005/12/09 16:18:03 gdt Exp $
+$NetBSD: TODO,v 1.4260 2005/12/09 20:28:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -333,6 +333,7 @@ Suggested package updates
 	o aliados-0.2.0
 	o allegro-4.2.0
 	o amanda-*-2.4.5p1
+	o amarok-1.3.7
 	o amavis-0.3.12
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
@@ -427,7 +428,7 @@ Suggested package updates
 	o classpath-gui-0.19
 	o clisp-2.35 (also see PR misc/31094)
 	o clisp-2.36
-	o cmake-2.2.1
+	o cmake-2.2.3
 	o cocoon-2.1.7
 	o columba-1.0RC1
 	o common-mml-1.2.16
@@ -435,6 +436,7 @@ Suggested package updates
 	o conglomerate-0.9.1
 	o conserver-8.1.12
 	o coreutils-5.93
+	o courier-authlib-0.58
 	o cqcam-0.91
 	o crafty-19.5
 	o criticalmass-0.9.12
@@ -444,6 +446,7 @@ Suggested package updates
 	o cstream-2.6.0
 	o cue-20050808
 	o cuetools-1.3
+	o curl-7.15.1
 	o cvs-1.11.21
 	o cvs2svn-1.2.1 [pkg/30386]
 	o cvsgraph-1.5.2
@@ -470,6 +473,7 @@ Suggested package updates
 	o devhelp-0.10
 	o devtodo-0.1.19
 	o diffstat-1.41
+	o digikam-0.8.0
 	o dirac-0.5.4
 	o dirdiff-2.1
 	o dmalloc-5.4.2
@@ -494,7 +498,7 @@ Suggested package updates
 	o elf-0.5.4p1
 	o elfsh-0.65rc1
 	o elinks-0.10.6 [pkg/31441]
-	o elm-me-2.4pl122
+	o elm-me-2.4pl122f
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
@@ -605,6 +609,7 @@ Suggested package updates
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hot-babe-0.2.2
+	o hpijs-2.1.4
 	o html2ps-1.0b4
 	o html2wml-0.4.11
 	o htmldoc-1.8.24
@@ -625,6 +630,7 @@ Suggested package updates
 	o idesk-0.7.3
 	o ifile-1.3.5
 	o ijs-0.35
+	o ike-scan-1.8
 	o imap-uw-2004g
 	o imapfilter-1.1
 	o inn-2.4.2
@@ -649,7 +655,8 @@ Suggested package updates
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
 	o java-lang-spec-3.0
-	o jdbc-postgresql-7.3.9
+	o jdbc-postgresql-7.3.11
+	o jdbc-postgresql74-7.4.9
 	o jessie-1.0.0
 	o jftpgw-0.13.5
 	o jgrasp-183
@@ -660,7 +667,7 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kajaani-kombat-0.7
 	o kapooka-0.3
-	o kazehakase-0.3.3
+	o kazehakase-0.3.3 [pkg/32272]
 	o kbiff-3.8
 	o kdbg-2.0.2
 	o kde-3.5.0 [markd]
@@ -746,7 +753,9 @@ Suggested package updates
 	o minivmac-2.6.1
 	o mjpegtools-1.8.0
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.6.0
+	o mkvtoolnix-1.6.5
+	o mldonkey-2.7.1
+	o mldonkey-gui-2.7.1
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
@@ -760,7 +769,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpfr-2.2.0
 	o mpich-1.2.7
-	o mplayer-plugin-firefox-3.16
+	o mplayer-plugin-firefox-3.17
 	o mrproject-0.9.1
 	o mserv-devel-0.41
 	o mtail-1.1.1
@@ -957,7 +966,6 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o phpldapadmin-0.9.7
-	o phpmyadmin-2.7.0
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o pico-4.64
@@ -1157,6 +1165,7 @@ Suggested package updates
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.1
 	o sysinfo-4.2.2
+	o tcl-8.4.12
 	o tcl-postgresql74-7.4.9
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
@@ -1174,6 +1183,7 @@ Suggested package updates
 	o tfmxplay-1.1.6
 	o tidy-20051006
 	o tinyproxy-1.7.0
+	o tk-8.4.12
 	o tk83-8.3.5
 	o tkcvs-7.2.4
 	o tkdiff-4.1
@@ -1287,7 +1297,7 @@ Suggested package updates
 	o xmms-wma-1.0.5
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmule-1.12.1
+	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorp-1.1
 	o xpad-2.9
