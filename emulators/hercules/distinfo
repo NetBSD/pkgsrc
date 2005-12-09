@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 18:49:19 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/12/09 10:46:43 joerg Exp $
 
 SHA1 (hercules-2.11.tar.gz) = ec84388e29cfd070055afa5fc11a33c896f2333a
 RMD160 (hercules-2.11.tar.gz) = 113647be0bd80ecc52331319902a1140a81b56aa
 Size (hercules-2.11.tar.gz) = 616554 bytes
-SHA1 (patch-aa) = b2b9b1685730ab0ffb74c9d4a6dd027b925d0080
+SHA1 (patch-aa) = 8e9aa1bf76fabf80af76dec0686892d20f2becba
 SHA1 (patch-ab) = ea2802d8752411e964ba150d3a54f64a40fc2e70
 SHA1 (patch-ac) = 454ac972ad54f19f139033abe8ccabdbb0c3f88b
-SHA1 (patch-ad) = dab44fa2ee216a8250c40675211126f61039abf3
+SHA1 (patch-ad) = 51fa93cb9fbc8382de1da52748dffa4ec2bcbf9c
 SHA1 (patch-ae) = 14aafa5462a858e44c00ea6d43efd0f1cfef190e
 SHA1 (patch-af) = 759ad1ee2737ed8021b5a5fd956851677e99879a
 SHA1 (patch-ag) = 6dcec345641bdde0c617da10f57b6f2dd6b702ac

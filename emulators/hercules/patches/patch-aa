@@ -1,17 +1,23 @@
-$NetBSD: patch-aa,v 1.6 2004/05/29 23:32:19 kristerw Exp $
+$NetBSD: patch-aa,v 1.7 2005/12/09 10:46:43 joerg Exp $
 
-Set up compilation flags for NetBSD
-
---- makefile.orig	Sat Feb 10 22:21:58 2001
-+++ makefile	Tue May  8 18:57:45 2001
-@@ -9,5 +9,5 @@
+--- makefile.orig	2001-02-11 03:21:58.000000000 +0000
++++ makefile
+@@ -8,11 +8,11 @@ VERSION  = 2.11
+ #   besides /usr/bin. The $PREFIX (which defaults to nothing) can be
  #   overridden in the make command line, as in "PREFIX=/foo make install"
  #   (the directory is only used when installing).
 -DESTDIR  = $(PREFIX)/usr/bin
 +DESTDIR  = $(PREFIX)/bin
  
  # Standard flags for all architectures
-@@ -22,24 +22,26 @@
+ CFLAGS	 = -Wall -fomit-frame-pointer -DVERSION=$(VERSION) -DNO_BYTESWAP_H
+-LFLAGS	 = -lpthread
++LFLAGS	 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ 
+ # Add default flags for Pentium compilations
+ ifndef HOST_ARCH
+@@ -21,26 +21,28 @@ endif
+ 
  # Handle host architecture if specified
  ifeq ($(HOST_ARCH),i386)
 -CFLAGS	 += -O3 -malign-double -DNO_ASM_BYTESWAP
@@ -50,3 +56,4 @@ Set up compilation flags for NetBSD
 +LFLAGS	 += -L${PREFIX}/lib
  
  # Reverse the comments below to disable Compressed CKD Dasd support
+ #CFLAGS  += -DNO_CCKD
