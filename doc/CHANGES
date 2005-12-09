@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12150 2005/12/09 17:22:52 salo Exp $
+$NetBSD: CHANGES,v 1.12151 2005/12/09 20:31:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5542,3 +5542,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Added graphics/TiffIO version 1.1.0.3 [gdt 2005-12-09]
 	Updated databases/guile-pg to 0.29 [gdt 2005-12-09]
 	Added audio/libdca version 0.0.2 [salo 2005-12-09]
+	Removed print/ghostscript-esp-nox11 [wiz 2005-12-09]
+	Removed print/ghostscript-gnu-nox11 [wiz 2005-12-09]
+	Removed print/ghostscript-gnu-x11 [wiz 2005-12-09]
+	Removed print/ghostscript-nox11 [wiz 2005-12-09]
