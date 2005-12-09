@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:50 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/09 17:04:51 joerg Exp $
 #
 
 DISTNAME=	wimon-0.3
@@ -12,7 +12,7 @@ COMMENT=	Tool that shows a real-time graph of your wireless connection
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
+ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-* DragonFly-*-*
 # Needs net80211/*.h header files which appeared in 1.6ZD.
 NOT_FOR_PLATFORM=	NetBSD-0*-* NetBSD-1.[012345]*-* NetBSD-1.6[-_.]*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*-*
