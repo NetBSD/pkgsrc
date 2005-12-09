@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/02/10 22:17:24 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9.6.1 2005/12/09 00:30:18 salo Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -172,6 +172,7 @@ share/sendmail/ostype/dragonfly.m4
 share/sendmail/ostype/dynix3.2.m4
 share/sendmail/ostype/freebsd4.m4
 share/sendmail/ostype/freebsd5.m4
+share/sendmail/ostype/freebsd6.m4
 share/sendmail/ostype/gnu.m4
 share/sendmail/ostype/hpux10.m4
 share/sendmail/ostype/hpux11.m4
