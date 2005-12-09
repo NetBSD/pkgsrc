@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/10/23 17:04:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/12/09 21:33:54 erh Exp $
 share/examples/rc.d/tomcat4
 tomcat4/LICENSE
 tomcat4/README.txt
@@ -541,7 +541,6 @@ tomcat4/webapps/examples/servlets/reqinfo.html
 tomcat4/webapps/examples/servlets/reqparams.html
 tomcat4/webapps/examples/servlets/sessions.html
 tomcat4/webapps/manager.xml
-tomcat4/webapps/to
 tomcat4/webapps/tomcat-docs/BUILDING.txt
 tomcat4/webapps/tomcat-docs/README.txt
 tomcat4/webapps/tomcat-docs/RUNNING.txt
@@ -1156,8 +1155,10 @@ tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.JspT
 tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.Nodes.html
 tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.PageDirective.html
 tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.ParamAction.html
+tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.ParamsAction.html
 tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.PlugIn.html
 tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.Root.html
+tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.ScriptingElement.html
 tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.Scriptlet.html
 tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.SetProperty.html
 tomcat4/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.TaglibDirective.html
@@ -1325,6 +1326,7 @@ tomcat4/webapps/tomcat-docs/servletapi/javax/servlet/class-use/Servlet.html
 tomcat4/webapps/tomcat-docs/servletapi/javax/servlet/class-use/ServletConfig.html
 tomcat4/webapps/tomcat-docs/servletapi/javax/servlet/class-use/ServletContext.html
 tomcat4/webapps/tomcat-docs/servletapi/javax/servlet/class-use/ServletContextAttributeEvent.html
+tomcat4/webapps/tomcat-docs/servletapi/javax/servlet/class-use/ServletContextAttributeListener.html
 tomcat4/webapps/tomcat-docs/servletapi/javax/servlet/class-use/ServletContextEvent.html
 tomcat4/webapps/tomcat-docs/servletapi/javax/servlet/class-use/ServletContextListener.html
 tomcat4/webapps/tomcat-docs/servletapi/javax/servlet/class-use/ServletException.html
