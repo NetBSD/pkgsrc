@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/07 03:16:46 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/12/09 15:38:54 uebayasi Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -7,6 +7,7 @@ bin/gosh
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/auxsys.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/binary.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/fcntl.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/file-util-lib.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-cesconv
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-config
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-install
@@ -21,9 +22,17 @@ lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/md5.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/mt-random.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/ndbm.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sha1.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/srfi-1-lib.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/srfi-13-lib.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/srfi-19-lib.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/srfi-43-lib.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sxml-ssax.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sxml-sxpath.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sxml-tools.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/syslog.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/termios.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/threads.so
+lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/util-match-lib.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/vport.so
 lib/gauche/${PKGVERSION}/include/gauche.h
 lib/gauche/${PKGVERSION}/include/gauche/arch.h
@@ -34,9 +43,11 @@ lib/gauche/${PKGVERSION}/include/gauche/char_sjis.h
 lib/gauche/${PKGVERSION}/include/gauche/char_utf_8.h
 lib/gauche/${PKGVERSION}/include/gauche/class.h
 lib/gauche/${PKGVERSION}/include/gauche/config.h
+lib/gauche/${PKGVERSION}/include/gauche/code.h
 lib/gauche/${PKGVERSION}/include/gauche/exception.h
 lib/gauche/${PKGVERSION}/include/gauche/extend.h
 lib/gauche/${PKGVERSION}/include/gauche/int64.h
+lib/gauche/${PKGVERSION}/include/gauche/mingw-compat.h
 lib/gauche/${PKGVERSION}/include/gauche/net.h
 lib/gauche/${PKGVERSION}/include/gauche/pthread.h
 lib/gauche/${PKGVERSION}/include/gauche/scmconst.h
@@ -44,9 +55,12 @@ lib/gauche/${PKGVERSION}/include/gauche/uthread.h
 lib/gauche/${PKGVERSION}/include/gauche/uvector.h
 lib/gauche/${PKGVERSION}/include/gauche/vm.h
 lib/gauche/${PKGVERSION}/include/gauche/vminsn.h
+lib/gauche/${PKGVERSION}/include/gc.h
+lib/gauche/${PKGVERSION}/include/gc_config_macros.h
+lib/gauche/${PKGVERSION}/include/gc_pthread_redirects.h
+lib/libgauche.so
 lib/libgauche.so.${PKGVERSION}
 lib/libgauche.so.0
-lib/libgauche.so
 man/man1/gauche-config.1
 man/man1/gosh.1
 share/aclocal/gauche.m4
@@ -56,6 +70,8 @@ share/gauche/${PKGVERSION}/lib/binary/pack.scm
 share/gauche/${PKGVERSION}/lib/cesconv
 share/gauche/${PKGVERSION}/lib/compat/jfilter.scm
 share/gauche/${PKGVERSION}/lib/compat/stk.scm
+share/gauche/${PKGVERSION}/lib/dbd/null.scm
+share/gauche/${PKGVERSION}/lib/dbi.scm
 share/gauche/${PKGVERSION}/lib/dbm.scm
 share/gauche/${PKGVERSION}/lib/dbm/fsdbm.scm
 ${USE_GDBM}share/gauche/${PKGVERSION}/lib/dbm/gdbm.scm
@@ -82,7 +98,6 @@ share/gauche/${PKGVERSION}/lib/gauche/interpolate.scm
 share/gauche/${PKGVERSION}/lib/gauche/let-opt.scm
 share/gauche/${PKGVERSION}/lib/gauche/libutil.scm
 share/gauche/${PKGVERSION}/lib/gauche/listener.scm
-share/gauche/${PKGVERSION}/lib/gauche/listutil.scm
 share/gauche/${PKGVERSION}/lib/gauche/logger.scm
 share/gauche/${PKGVERSION}/lib/gauche/logical.scm
 share/gauche/${PKGVERSION}/lib/gauche/macroutil.scm
@@ -94,9 +109,9 @@ share/gauche/${PKGVERSION}/lib/gauche/mop/singleton.scm
 share/gauche/${PKGVERSION}/lib/gauche/mop/validator.scm
 share/gauche/${PKGVERSION}/lib/gauche/net.scm
 share/gauche/${PKGVERSION}/lib/gauche/numerical.scm
-share/gauche/${PKGVERSION}/lib/gauche/object.scm
 share/gauche/${PKGVERSION}/lib/gauche/package.scm
 share/gauche/${PKGVERSION}/lib/gauche/package/build.scm
+share/gauche/${PKGVERSION}/lib/gauche/package/compile.scm
 share/gauche/${PKGVERSION}/lib/gauche/package/fetch.scm
 share/gauche/${PKGVERSION}/lib/gauche/package/util.scm
 share/gauche/${PKGVERSION}/lib/gauche/parameter.scm
@@ -123,10 +138,10 @@ share/gauche/${PKGVERSION}/lib/gauche/time.scm
 share/gauche/${PKGVERSION}/lib/gauche/uvector.scm
 share/gauche/${PKGVERSION}/lib/gauche/validator.scm
 share/gauche/${PKGVERSION}/lib/gauche/version.scm
-share/gauche/${PKGVERSION}/lib/gauche/vport.scm
 share/gauche/${PKGVERSION}/lib/gauche/vm/debugger.scm
-share/gauche/${PKGVERSION}/lib/gauche/vm/disasm.scm
-share/gauche/${PKGVERSION}/lib/gauche/with.scm
+share/gauche/${PKGVERSION}/lib/gauche/vm/insn.scm
+share/gauche/${PKGVERSION}/lib/gauche/vm/profiler.scm
+share/gauche/${PKGVERSION}/lib/gauche/vport.scm
 share/gauche/${PKGVERSION}/lib/genstub
 share/gauche/${PKGVERSION}/lib/math/const.scm
 share/gauche/${PKGVERSION}/lib/math/mt-random.scm
@@ -144,42 +159,12 @@ share/gauche/${PKGVERSION}/lib/slib.scm
 share/gauche/${PKGVERSION}/lib/slibcat
 share/gauche/${PKGVERSION}/lib/srfi-0.scm
 share/gauche/${PKGVERSION}/lib/srfi-1.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/cat.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/filter.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/finder.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/folder.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/generator.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/mapper.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/nary.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/nth.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/pred.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/selector.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/set.scm
-share/gauche/${PKGVERSION}/lib/srfi-1/zipper.scm
 share/gauche/${PKGVERSION}/lib/srfi-11.scm
 share/gauche/${PKGVERSION}/lib/srfi-13.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/casemap.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/comparer.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/filter.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/folder.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/generator.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/hash.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/internal.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/kmp.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/misc.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/pred.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/prefix.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/revapp.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/rotator.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/searcher.scm
-share/gauche/${PKGVERSION}/lib/srfi-13/selector.scm
 share/gauche/${PKGVERSION}/lib/srfi-14.scm
 share/gauche/${PKGVERSION}/lib/srfi-14/query.scm
 share/gauche/${PKGVERSION}/lib/srfi-14/set.scm
 share/gauche/${PKGVERSION}/lib/srfi-19.scm
-share/gauche/${PKGVERSION}/lib/srfi-19/format.scm
-share/gauche/${PKGVERSION}/lib/srfi-19/read-tai.scm
-share/gauche/${PKGVERSION}/lib/srfi-2.scm
 share/gauche/${PKGVERSION}/lib/srfi-26.scm
 share/gauche/${PKGVERSION}/lib/srfi-27.scm
 share/gauche/${PKGVERSION}/lib/srfi-29.scm
@@ -188,7 +173,10 @@ share/gauche/${PKGVERSION}/lib/srfi-29/format.scm
 share/gauche/${PKGVERSION}/lib/srfi-31.scm
 share/gauche/${PKGVERSION}/lib/srfi-37.scm
 share/gauche/${PKGVERSION}/lib/srfi-4.scm
+share/gauche/${PKGVERSION}/lib/srfi-42.scm
+share/gauche/${PKGVERSION}/lib/srfi-43.scm
 share/gauche/${PKGVERSION}/lib/srfi-5.scm
+share/gauche/${PKGVERSION}/lib/srfi-55.scm
 share/gauche/${PKGVERSION}/lib/srfi-7.scm
 share/gauche/${PKGVERSION}/lib/srfi-9.scm
 share/gauche/${PKGVERSION}/lib/sxml/adaptor.scm
@@ -203,6 +191,7 @@ share/gauche/${PKGVERSION}/lib/text/gettext.scm
 share/gauche/${PKGVERSION}/lib/text/html-lite.scm
 share/gauche/${PKGVERSION}/lib/text/info.scm
 share/gauche/${PKGVERSION}/lib/text/parse.scm
+share/gauche/${PKGVERSION}/lib/text/sql.scm
 share/gauche/${PKGVERSION}/lib/text/tr.scm
 share/gauche/${PKGVERSION}/lib/text/tree.scm
 share/gauche/${PKGVERSION}/lib/util/combinations.scm
@@ -213,10 +202,20 @@ share/gauche/${PKGVERSION}/lib/util/list.scm
 share/gauche/${PKGVERSION}/lib/util/match.scm
 share/gauche/${PKGVERSION}/lib/util/queue.scm
 share/gauche/${PKGVERSION}/lib/util/record.scm
+share/gauche/${PKGVERSION}/lib/util/relation.scm
+share/gauche/${PKGVERSION}/lib/util/stream.scm
 share/gauche/${PKGVERSION}/lib/util/toposort.scm
 share/gauche/${PKGVERSION}/lib/util/tree.scm
 share/gauche/${PKGVERSION}/lib/www/cgi-test.scm
 share/gauche/${PKGVERSION}/lib/www/cgi.scm
+share/gauche/${PKGVERSION}/template.DIST
+share/gauche/${PKGVERSION}/template.Makefile.in
+share/gauche/${PKGVERSION}/template.configure.ac
+share/gauche/${PKGVERSION}/template.extension.c
+share/gauche/${PKGVERSION}/template.extension.h
+share/gauche/${PKGVERSION}/template.extensionlib.stub
+share/gauche/${PKGVERSION}/template.module.scm
+share/gauche/${PKGVERSION}/template.test.scm
 @exec ${MKDIR} %D/lib/gauche/site 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/lib/gauche/site/${PKGVERSION} 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM} 2>/dev/null || ${TRUE}
@@ -227,10 +226,7 @@ share/gauche/${PKGVERSION}/lib/www/cgi.scm
 @dirrm share/gauche/${PKGVERSION}/lib/text
 @dirrm share/gauche/${PKGVERSION}/lib/sxml
 @dirrm share/gauche/${PKGVERSION}/lib/srfi-29
-@dirrm share/gauche/${PKGVERSION}/lib/srfi-19
 @dirrm share/gauche/${PKGVERSION}/lib/srfi-14
-@dirrm share/gauche/${PKGVERSION}/lib/srfi-13
-@dirrm share/gauche/${PKGVERSION}/lib/srfi-1
 @dirrm share/gauche/${PKGVERSION}/lib/rfc
 @dirrm share/gauche/${PKGVERSION}/lib/math
 @dirrm share/gauche/${PKGVERSION}/lib/gauche/vm
@@ -241,6 +237,7 @@ share/gauche/${PKGVERSION}/lib/www/cgi.scm
 @dirrm share/gauche/${PKGVERSION}/lib/gauche
 @dirrm share/gauche/${PKGVERSION}/lib/file
 @dirrm share/gauche/${PKGVERSION}/lib/dbm
+@dirrm share/gauche/${PKGVERSION}/lib/dbd
 @dirrm share/gauche/${PKGVERSION}/lib/compat
 @dirrm share/gauche/${PKGVERSION}/lib/binary
 @dirrm share/gauche/${PKGVERSION}/lib
