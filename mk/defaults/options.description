@@ -50,6 +50,7 @@ djbfft-sparc		Optimize for UltraSPARC-{I,II} processors.
 djbware-errno-hack	Patch to #include <errno.h> for correctness.
 domainscale	
 drac			Enable DRAC support.
+dts			Enable DTS Coherent Acoustics support.
 dv			Enable usage of the libdv library.
 dvdread			Enable reproduction of DVDs.
 dynamic	
