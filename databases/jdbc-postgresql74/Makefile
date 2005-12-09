@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/09 20:34:08 wiz Exp $
 #
 
 DIST_VERS=		7.4.6
 DISTNAME=		postgresql-${DIST_VERS}
 PKGNAME=		jdbc-${DISTNAME}
 CATEGORIES=		databases java
-MASTER_SITES?=		http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
-			ftp://ftp.postgresql.org/pub/source/v${DIST_VERS}/ \
-			ftp://ftp.de.postgresql.org/pub/source/v${DIST_VERS}/ \
-			ftp://ch.postgresql.org/mirror/postgresql/source/v${DIST_VERS}/ \
-			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/source/v${DIST_VERS}/ \
-			ftp://looking-glass.usask.ca/pub/postgresql/source/v${DIST_VERS}/ \
-			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/v${DIST_VERS}/ \
-			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${DIST_VERS}/
+MASTER_SITES?=		http://www.postgresql.org/ftpsite/source/OLD/v${DIST_VERS}/ \
+			ftp://ftp.postgresql.org/pub/source/OLD/v${DIST_VERS}/ \
+			ftp://ftp.de.postgresql.org/pub/source/OLD/v${DIST_VERS}/ \
+			ftp://ch.postgresql.org/mirror/postgresql/source/OLD/v${DIST_VERS}/ \
+			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/source/OLD/v${DIST_VERS}/ \
+			ftp://looking-glass.usask.ca/pub/postgresql/source/OLD/v${DIST_VERS}/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/OLD/v${DIST_VERS}/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/OLD/v${DIST_VERS}/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jwise@NetBSD.org
