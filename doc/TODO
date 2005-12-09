@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4257 2005/12/09 00:47:02 salo Exp $
+$NetBSD: TODO,v 1.4258 2005/12/09 15:41:02 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -537,8 +537,6 @@ Suggested package updates
 	o gap-4r4p3
 	o garmin-utils-2.2
 	o gated-3.6
-	o gauche-0.8.4 [pkg/30535; does not work with boehm-gc-6.4]
-	o gauche-0.8.6 [does not work with boehm-gc-6.4]
 	o gcc-3.3.6
 	o gcc-4.0.2
 	o gcdmaster-1.2.1
