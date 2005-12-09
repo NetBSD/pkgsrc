@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.434 2005/12/08 21:13:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.435 2005/12/09 08:40:40 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2184,7 +2184,7 @@ sub checkline_mk_varassign($$$$$) {
 	}
 
 	if ($value =~ qr"^[^=]\@comment") {
-		$line->log_warning("Please don't use \@comment in variables.");
+		$line->log_warning("Please don't use \@comment in ${varname}.");
 		$line->explain(
 			"Here you are defining a variable containing \@comment. As this value",
 			"typically includes a space as the last character you probably also used",
