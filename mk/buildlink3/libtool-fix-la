@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.6 2005/06/22 21:08:37 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.7 2005/12/09 16:16:41 hira Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -60,8 +60,10 @@ basename="@BASENAME@"
 dirname="@DIRNAME@"
 egrep="@EGREP@"
 mv="@MV@"
+pwd="@PWD@"
 rm="@RM@"
 
+wrksrc_physical=`cd ${WRKSRC}; $pwd`
 labase=`$basename $lafile .la`
 ladir=`$dirname $lafile`
 latimestamp=${ladir}/.${labase}.la.timestamp
@@ -216,7 +218,7 @@ if $test -f $lafile; then
 	fi
 	$echo >> $lafile
 	$echo "# Directory that this library was built in:" >> $lafile
-	$echo "buildlibdir='"`cd $ladir; $pwd`"'" >> $lafile
+	$echo "buildlibdir='"`cd $ladir; $pwd | $sed -e "s,^${wrksrc_physical},${WRKSRC},"`"'" >> $lafile
 	$echo >> $lafile
 	$echo "# This file has been modified by buildlink3." >> $lafile
 	$rm ${lafile}.tmp
