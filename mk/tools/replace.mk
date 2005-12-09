@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.142 2005/12/03 21:03:47 joerg Exp $
+# $NetBSD: replace.mk,v 1.143 2005/12/09 20:32:22 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -863,12 +863,6 @@ _TOOLS_DEP.ghostscript:=	ghostscript
 _TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-afpl
 _TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-esp
 _TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-gnu
-_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-gnu-x11
-.  if !defined(USE_X11)
-_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-esp-nox11
-_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-gnu-nox11
-_TOOLS_DEP.ghostscript:=	${_TOOLS_DEP.ghostscript},ghostscript-nox11
-.  endif
 #
 # Determine the default Ghostscript package to build based on the
 # PKG_OPTIONS for the current package.
@@ -887,11 +881,7 @@ MAKEVARS+=			${TOOLS_DEPENDS.ghostscript}
 .    if !empty(PKGPATH:Mprint/ghostscript) || \
         !empty(PKGPATH:Mprint/ghostscript-afpl) || \
         !empty(PKGPATH:Mprint/ghostscript-esp) || \
-        !empty(PKGPATH:Mprint/ghostscript-esp-nox11) || \
-        !empty(PKGPATH:Mprint/ghostscript-gnu) || \
-        !empty(PKGPATH:Mprint/ghostscript-gnu-nox11) || \
-        !empty(PKGPATH:Mprint/ghostscript-gnu-x11) || \
-        !empty(PKGPATH:Mprint/ghostscript-nox11)
+        !empty(PKGPATH:Mprint/ghostscript-gnu)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	${TOOLS_DEPENDS.ghostscript}
