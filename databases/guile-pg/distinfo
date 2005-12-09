@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 16:33:06 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/12/09 16:01:10 gdt Exp $
 
-SHA1 (guile-pg-0.23.tar.gz) = b2c2e8ff72f905171babbdaac9ad9fd2ead56ce5
-RMD160 (guile-pg-0.23.tar.gz) = c972e5e9e99aae16dd1f547299774df0124b1460
-Size (guile-pg-0.23.tar.gz) = 451283 bytes
-SHA1 (patch-aa) = 35b3585f7452adbe42d9a57c670db40da441f2f2
+SHA1 (guile-pg-0.29.tar.gz) = 114b9c248d9d023602725fe768297dfc87e503eb
+RMD160 (guile-pg-0.29.tar.gz) = 557fe24a69500b4a517fd5472c56c36911ec7db7
+Size (guile-pg-0.29.tar.gz) = 495270 bytes

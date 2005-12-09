@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2005/08/10 19:01:23 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/09 16:01:10 gdt Exp $
 #
 
-DISTNAME=	guile-pg-0.23
+DISTNAME=	guile-pg-0.29
 CATEGORIES=	databases
 MASTER_SITES=	http://www.glug.org/people/ttn/software/guile-pg/
 
