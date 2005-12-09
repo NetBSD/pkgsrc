@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/09 15:47:34 gdt Exp $
+qt3/plugins/imageformats/libTiffIO.la
