@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.2.2 2005/12/09 16:20:16 salo Exp $
+
+--- src/download.php.orig	2004-12-27 17:03:59.000000000 +0200
++++ src/download.php	2005-12-05 11:08:51.000000000 +0200
+@@ -55,7 +55,7 @@
+ }
+ $subject = $message->rfc822_header->subject;
+ if ($ent_id) {
+-    $message = &$message->getEntity($ent_id);
++    $message = $message->getEntity($ent_id);
+     $header = $message->header;
+ 
+     if ($message->rfc822_header) {

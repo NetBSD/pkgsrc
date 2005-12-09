@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.2.2 2005/12/09 16:20:16 salo Exp $
+
+--- functions/imap_general.php.orig	2005-05-20 13:37:34.000000000 +0300
++++ functions/imap_general.php	2005-12-05 22:08:12.000000000 +0200
+@@ -888,7 +888,7 @@
+  * Saves a message to a given folder -- used for saving sent messages
+  */
+ function sqimap_append ($imap_stream, $sent_folder, $length) {
+-    fputs ($imap_stream, sqimap_session_id() . " APPEND \"$sent_folder\" (\\Seen) \{$length}\r\n");
++    fputs ($imap_stream, sqimap_session_id() . " APPEND \"$sent_folder\" (\\Seen) {".$length."}\r\n");
+     $tmp = fgets ($imap_stream, 1024);
+     sqimap_append_checkresponse($tmp, $sent_folder);
+ }

@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/12/09 16:20:16 salo Exp $
+
+--- plugins/listcommands/setup.php.orig	2005-02-28 05:20:12.000000000 -0500
++++ plugins/listcommands/setup.php
+@@ -51,8 +51,9 @@ function plugin_listcommands_menu() {
+         }
+ 
+         /* proto = {mailto,href} */
+-	$proto = array_shift(array_keys($actions));
+-	$act   = array_shift($actions);
++	$aActionKeys = array_keys($actions);
++	$proto = array_shift($aActionKeys);
++	$act   = array_shift($aActionKeys);
+ 
+         if ($proto == 'mailto') {
+ 

@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.2.2 2005/12/09 16:20:16 salo Exp $
+
+--- functions/imap_messages.php.orig	2005-04-16 13:45:38.000000000 -0400
++++ functions/imap_messages.php
+@@ -476,8 +476,9 @@ function parseArray($read,&$i) {
+  * NOTE: this is actually a duplicate from the function in
+  * class/mime/Rfc822Header.php.
+  */
+-function parsePriority($value) {
+-    $value = strtolower(array_shift(split('/\w/',trim($value))));
++function parsePriority($sValue) {
++    $aValue=split('/\w/',trim($sValue));
++    $value = strtolower(array_shift($aValue));
+     if ( is_numeric($value) ) {
+         return $value;
+     }
+@@ -915,4 +916,4 @@ function sqimap_get_small_header($imap_s
+     return $res[0];
+ }
+ 
+-?>
+\ No newline at end of file
++?>
