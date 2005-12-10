@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.93 2005/12/09 16:46:28 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.94 2005/12/10 22:36:01 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -205,3 +205,5 @@ Pullup tickets 939, 941 - requested by Martti Kuparinen
 various squirrelmail bug and compatibility fixes
 Pullup ticket 948 - requested by Matthias Scheler
 security update for phpmyadmin
+Pullup ticket 949 - requested by Lubomir Sedlacik
+security update for curl
