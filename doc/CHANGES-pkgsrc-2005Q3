@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.94 2005/12/10 22:36:01 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.95 2005/12/10 22:47:13 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -207,3 +207,5 @@ Pullup ticket 948 - requested by Matthias Scheler
 security update for phpmyadmin
 Pullup ticket 949 - requested by Lubomir Sedlacik
 security update for curl
+Pullup ticket 951 - requested by Lubomir Sedlacik
+security fix for webmin
