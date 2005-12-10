@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/09/02 08:13:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.17.2.1 2005/12/10 22:35:41 snj Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -9,6 +9,7 @@ include/curl/multi.h
 include/curl/stdcheaders.h
 include/curl/types.h
 lib/libcurl.la
+lib/pkgconfig/libcurl.pc
 man/man1/curl-config.1
 man/man1/curl.1
 man/man3/curl_easy_cleanup.3
