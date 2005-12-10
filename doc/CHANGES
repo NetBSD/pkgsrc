@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12156 2005/12/10 16:01:29 darcy Exp $
+$NetBSD: CHANGES,v 1.12157 2005/12/10 17:59:11 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5553,3 +5553,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/firefox to 1.5 [taya 2005-12-10]
 	Updated www/firefox-gtk1 to 1.5 [taya 2005-12-10]
 	Updated textproc/py-docutils to 0.3.9 [darcy 2005-12-10]
+	Updated www/curl to 7.15.1 [salo 2005-12-10]
