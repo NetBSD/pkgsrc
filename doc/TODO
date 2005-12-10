@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4262 2005/12/10 16:05:40 darcy Exp $
+$NetBSD: TODO,v 1.4263 2005/12/10 17:59:11 salo Exp $
 
 Suggested new packages
 ======================
@@ -446,7 +446,6 @@ Suggested package updates
 	o cstream-2.6.0
 	o cue-20050808
 	o cuetools-1.3
-	o curl-7.15.1
 	o cvs-1.11.21
 	o cvs2svn-1.2.1 [pkg/30386]
 	o cvsgraph-1.5.2
