@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/12/05 20:49:49 rillig Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/12/10 21:31:41 heinz Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -11,7 +11,6 @@ PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz
 
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.mpg123.de/
-BUILD_DEFS+=	USE_INET6 MPG123_ARM_FIXED64
 DIST_SUBDIR=	mpg123
 PATCHDIR=	${.CURDIR}/../../audio/mpg123/patches
 FILESDIR=	${.CURDIR}/../../audio/mpg123/files
@@ -22,6 +21,20 @@ LICENSE=	no-commercial-use
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
+
+# PKG_OPTIONS_VAR must be set in the including Makefile
+PKG_SUPPORTED_OPTIONS=	inet6 mpg123-arm-fixed64
+PKG_SUGGESTED_OPTIONS=	inet6
+PKG_OPTIONS_LEGACY_VARS+= MPG123_ARM_FIXED64:mpg123-arm-fixed64
+.include "../../mk/bsd.options.mk"
+
+###
+### IPv6 support
+###
+.if !empty(PKG_OPTIONS:Minet6)
+CPPFLAGS+=	-DINET6
+.endif
+
 .include "../../mk/compiler.mk"
 .if ${OPSYS} == "SunOS"
 .  if !empty(PKGSRC_COMPILER:Msunpro)
@@ -47,11 +60,14 @@ BUILD_TARGET=	netbsd-i386-elf${TARGET_SUFFIX}
 BUILD_TARGET=	netbsd-i386${TARGET_SUFFIX}
 .    endif # ELF
 .  elif ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-.    if defined(MPG123_ARM_FIXED64) && ${MPG123_ARM_FIXED64} == "YES"
+###
+### Optionally enable 64-bit calculations to avoid glitches on ARM.
+###
+.    if !empty(PKG_OPTIONS:Mmpg123-arm-fixed64)
 BUILD_TARGET=	netbsd-arm-64${TARGET_SUFFIX}
 .    else
 BUILD_TARGET=	netbsd-arm${TARGET_SUFFIX}
-.    endif # MPG123_ARM_FIXED64
+.    endif
 .  elif ${MACHINE_ARCH} == "m68k"
 BUILD_TARGET=	netbsd-m68k${TARGET_SUFFIX}
 .  else
@@ -59,10 +75,6 @@ BUILD_TARGET=	netbsd
 .  endif
 .else
 BUILD_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
-.endif
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-CPPFLAGS+=	-DINET6
 .endif
 
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}

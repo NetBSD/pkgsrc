@@ -164,6 +164,7 @@ modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
 modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 motif			Enable motif support.
 mozilla			Use mozilla as gecko rendering engine.
+mpg123-arm-fixed64	Enable 64-bit calculations to avoid glitches on ARM.
 mplayer-menu		Enable support for user-defined menus.
 mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
