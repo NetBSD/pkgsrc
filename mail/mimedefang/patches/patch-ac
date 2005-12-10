@@ -1,24 +1,26 @@
-$NetBSD: patch-ac,v 1.2 2004/11/10 10:48:33 markd Exp $
+$NetBSD: patch-ac,v 1.3 2005/12/10 22:14:15 markd Exp $
 
---- mimedefang.pl.in.orig	2004-11-10 01:09:25.000000000 +1300
+--- mimedefang.pl.in.orig	2005-12-11 08:49:06.000000000 +1300
 +++ mimedefang.pl.in
-@@ -100,26 +100,26 @@ $VirusScannerRoutinesInitialized = 0;
+@@ -126,27 +126,27 @@ $VirusScannerRoutinesInitialized = 0;
  $SALocalTestsOnly = 1;
  $DoStatusTags = 0;
  
 -$Features{'Virus:AVP'}      = ('@AVP@' ne '/bin/false' ? '@AVP@' : 0);
 -$Features{'Virus:AVP5'}      = ('@AVP5@' ne '/bin/false' ? '@AVP5@' : 0);
+-$Features{'Virus:KAVSCANNER'} = ('@KAVSCANNER@' ne '/bin/false' ? '@KAVSCANNER@' : 0);
 -$Features{'Virus:CLAMAV'}   = ('@CLAMSCAN@' ne '/bin/false' ? '@CLAMSCAN@' : 0);
 -$Features{'Virus:CLAMD'}    = ('@CLAMD@' ne '/bin/false' ? '@CLAMD@' : 0);
 -$Features{'Virus:FPROT'}    = ('@FPROT@' ne '/bin/false' ? '@FPROT@' : 0);
 -$Features{'Virus:FSAV'}     = ('@FSAV@' ne '/bin/false' ? '@FSAV@' : 0);
 +$Features{'Virus:AVP'}      = ((('@AVP@' ne '/bin/false') and (-x '@AVP@')) ? '@AVP@' : 0);
 +$Features{'Virus:AVP5'}      = ((('@AVP5@' ne '/bin/false') and (-x '@AVP5@')) ? '@AVP5@' : 0);
++$Features{'Virus:KAVSCANNER'} = ((('@KAVSCANNER@' ne '/bin/false') and (-x '@KAVSCANNER@')) ? '@KAVSCANNER@' : 0);
 +$Features{'Virus:CLAMAV'}   = ((('@CLAMSCAN@' ne '/bin/false') and (-x '@CLAMSCAN@')) ? '@CLAMSCAN@' : 0);
 +$Features{'Virus:CLAMD'}    = ((('@CLAMD@' ne '/bin/false') and (-x '@CLAMD@')) ? '@CLAMD@' : 0);
 +$Features{'Virus:FPROT'}    = ((('@FPROT@' ne '/bin/false') and (-x '@FPROT@')) ? '@FPROT@' : 0);
 +$Features{'Virus:FSAV'}     = ((('@FSAV@' ne '/bin/false') and (-x '@FSAV@')) ? '@FSAV@' : 0);
- $Features{'Virus:FileScan'} = $Features{'File::Scan'};
+ $Features{'Virus:FileScan'} = 0; # Will be set by detect_and_load_perl_modules
 -$Features{'Virus:HBEDV'}    = ('@HBEDV@' ne '/bin/false' ? '@HBEDV@' : 0);
 -$Features{'Virus:VEXIRA'}   = ('@VEXIRA@' ne '/bin/false' ? '@VEXIRA@' : 0);
 -$Features{'Virus:NAI'}      = ('@NAI@' ne '/bin/false' ? '@NAI@' : 0);
