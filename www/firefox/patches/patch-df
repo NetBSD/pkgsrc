@@ -1,8 +1,9 @@
-$NetBSD: patch-df,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-df,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- nsprpub/pr/include/md/_freebsd.h.orig	2003-11-16 00:36:13.000000000 +0100
-+++ nsprpub/pr/include/md/_freebsd.h	2004-11-17 10:19:00.000000000 +0100
-@@ -72,7 +76,7 @@
+diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_freebsd.h ./nsprpub/pr/include/md/_freebsd.h
+--- ../Orig/mozilla/nsprpub/pr/include/md/_freebsd.h	2004-11-24 06:22:35.000000000 +0900
++++ ./nsprpub/pr/include/md/_freebsd.h	2005-12-04 19:44:37.000000000 +0900
+@@ -79,7 +79,7 @@
  #define _PR_NO_LARGE_FILES
  
  #if defined(_PR_PTHREADS)
@@ -11,7 +12,7 @@ $NetBSD: patch-df,v 1.1 2005/10/12 16:39:25 joerg Exp $
  /*
   * libc_r before this version of FreeBSD doesn't have poll().
   * Although libc has poll(), it is not thread-safe so we can't
-@@ -81,7 +85,7 @@
+@@ -88,7 +88,7 @@
  #define _PR_POLL_AVAILABLE
  #endif
  #else
@@ -20,7 +21,7 @@ $NetBSD: patch-df,v 1.1 2005/10/12 16:39:25 joerg Exp $
  #define _PR_POLL_AVAILABLE
  #define _PR_USE_POLL
  #endif
-@@ -90,7 +94,7 @@
+@@ -97,7 +97,7 @@
  #define _PR_HAVE_SYSV_SEMAPHORES
  #define PR_HAVE_SYSV_NAMED_SHARED_MEMORY
  

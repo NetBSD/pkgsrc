@@ -1,8 +1,9 @@
-$NetBSD: patch-du,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-du,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- config/rules.mk.orig	2005-06-03 21:08:53.000000000 +0200
-+++ config/rules.mk
-@@ -444,6 +444,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+diff -ruN ../Orig/mozilla/config/rules.mk ./config/rules.mk
+--- ../Orig/mozilla/config/rules.mk	2005-10-11 08:16:39.000000000 +0900
++++ ./config/rules.mk	2005-12-04 19:45:31.000000000 +0900
+@@ -447,6 +447,12 @@
  endif
  endif
  

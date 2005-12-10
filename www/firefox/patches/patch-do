@@ -1,7 +1,8 @@
-$NetBSD: patch-do,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-do,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- /dev/null	2005-05-24 23:07:26.000000000 +0200
-+++ directory/c-sdk/config/DragonFly.mk	2005-05-25 00:01:24.000000000 +0200
+diff -ruN ../Orig/mozilla/directory/c-sdk/config/DragonFly.mk ./directory/c-sdk/config/DragonFly.mk
+--- ../Orig/mozilla/directory/c-sdk/config/DragonFly.mk	1970-01-01 09:00:00.000000000 +0900
++++ ./directory/c-sdk/config/DragonFly.mk	2005-12-04 19:44:55.000000000 +0900
 @@ -0,0 +1,82 @@
 +# 
 +# The contents of this file are subject to the Mozilla Public

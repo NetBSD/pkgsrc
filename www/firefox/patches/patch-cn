@@ -1,0 +1,86 @@
+$NetBSD: patch-cn,v 1.1 2005/12/10 13:47:22 taya Exp $
+
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/xpath/XFormsFunctionCall.cpp ./extensions/transformiix/source/xpath/XFormsFunctionCall.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/xpath/XFormsFunctionCall.cpp	2005-08-05 06:15:37.000000000 +0900
++++ ./extensions/transformiix/source/xpath/XFormsFunctionCall.cpp	2005-12-04 21:35:33.000000000 +0900
+@@ -104,7 +104,7 @@
+         res = (res/i);
+       }
+       else {
+-        res = Double::NaN;
++        res = Double::NaN();
+       }
+       return aContext->recycler()->getNumberResult(res, aResult);
+     }
+@@ -159,7 +159,7 @@
+       NS_ENSURE_SUCCESS(rv, rv);
+ 
+       PRInt32 result = 0;
+-      double res = Double::NaN;
++      double res = Double::NaN();
+       nsresult rv = xformsService->GetDaysFromDateTime(date, &result);
+       if (NS_SUCCEEDED(rv)) {
+         res = result;
+@@ -345,7 +345,7 @@
+                                       getter_AddRefs(nodes));
+       NS_ENSURE_SUCCESS(rv, rv);
+    
+-      double res = Double::NaN;
++      double res = Double::NaN();
+       PRInt32 i;
+       for (i = 0; i < nodes->size(); ++i) {
+         double test;
+@@ -353,7 +353,7 @@
+         txXPathNodeUtils::appendNodeValue(nodes->get(i), resultStr);
+         test = Double::toDouble(resultStr);
+         if (Double::isNaN(test)) {
+-          res = Double::NaN;
++          res = Double::NaN();
+           break;
+         }
+         if (test > res || i == 0) {
+@@ -373,7 +373,7 @@
+                                       getter_AddRefs(nodes));
+       NS_ENSURE_SUCCESS(rv, rv);
+    
+-      double res = Double::NaN;
++      double res = Double::NaN();
+       PRInt32 i;
+       for (i = 0; i < nodes->size(); ++i) {
+         double test;
+@@ -381,7 +381,7 @@
+         txXPathNodeUtils::appendNodeValue(nodes->get(i), resultStr);
+         test = Double::toDouble(resultStr);
+         if (Double::isNaN(test)) {
+-          res = Double::NaN;
++          res = Double::NaN();
+           break;
+         }
+         if ((test < res) || (i==0)) {
+@@ -404,7 +404,7 @@
+       NS_ENSURE_SUCCESS(rv, rv);
+ 
+       PRInt32 result = 0;
+-      double res = Double::NaN;
++      double res = Double::NaN();
+       nsresult rv = xformsService->GetMonths(duration, &result);
+       if (NS_SUCCEEDED(rv)) {
+         res = result;
+@@ -480,7 +480,7 @@
+           // up the chain
+           return rv;
+         }
+-        res = Double::NaN;
++        res = Double::NaN();
+       }
+ 
+       return aContext->recycler()->getNumberResult(res, aResult);
+@@ -505,7 +505,7 @@
+           // up the chain
+           return rv;
+         }
+-        res = Double::NaN;
++        res = Double::NaN();
+       }
+ 
+       return aContext->recycler()->getNumberResult(res, aResult);
