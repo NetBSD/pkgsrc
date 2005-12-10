@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2003/04/28 12:47:12 markd Exp $
+$NetBSD: patch-ab,v 1.4 2005/12/10 22:14:15 markd Exp $
 
---- Makefile.in.orig	2003-04-22 03:53:14.000000000 +1200
+--- Makefile.in.orig	2005-09-15 05:14:59.000000000 +1200
 +++ Makefile.in
-@@ -110,7 +110,7 @@ mimedefang-multiplexor.o: mimedefang-mul
+@@ -134,7 +134,7 @@ mimedefang-multiplexor.o: mimedefang-mul
  	@CC@ @CFLAGS@ $(DEFS) $(MINCLUDE) -c -o mimedefang-multiplexor.o mimedefang-multiplexor.c
  
  mimedefang: mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o
--	@CC@ @CFLAGS@ @PTHREAD_FLAG@ -o mimedefang mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o @LIBMILTER@ @LIBS@
-+	@CC@ @CFLAGS@ @PTHREAD_FLAG@ -o mimedefang mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o @LDFLAGS@ @LIBMILTER@ @LIBS@
+-	@CC@ @CFLAGS@ @PTHREAD_FLAG@ -o mimedefang mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o @LIBMILTERACTUAL@ @LIBS@
++	@CC@ @CFLAGS@ @PTHREAD_FLAG@ -o mimedefang mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o @LDFLAGS@ @LIBMILTERACTUAL@ @LIBS@
  	-test "$(DONT_STRIP)" != "1" && strip mimedefang
  
  mimedefang.o: mimedefang.c mimedefang.h
