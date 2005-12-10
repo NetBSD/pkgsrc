@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4261 2005/12/09 20:45:56 wiz Exp $
+$NetBSD: TODO,v 1.4262 2005/12/10 16:05:40 darcy Exp $
 
 Suggested new packages
 ======================
@@ -1020,7 +1020,6 @@ Suggested package updates
 	o py-ZODB-3.2.9
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.15
-	o py-docutils-0.3.9
 	o py-gnutls-0.2.1
 	o py-kenosis-0.95
 	o py-logging-0.4.9.6
