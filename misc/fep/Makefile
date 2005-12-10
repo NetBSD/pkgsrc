@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/09/29 14:31:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/10 22:10:47 christos Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/fep/
 
