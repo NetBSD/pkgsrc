@@ -1,0 +1,112 @@
+$NetBSD: patch-ab,v 1.1.2.2 2005/12/10 22:47:02 snj Exp $
+
+--- miniserv.pl.orig	2005-12-03 14:36:50.000000000 +0000
++++ miniserv.pl
+@@ -216,11 +216,11 @@ if ($use_syslog) {
+ 		}
+ 	else {
+ 		local $msg = ucfirst($config{'pam'})." starting";
+-		eval { syslog("info", $msg); };
++		eval { syslog("info", "%s", $msg); };
+ 		if ($@) {
+ 			eval {
+ 				setlogsock("inet");
+-				syslog("info", $msg);
++				syslog("info", "%s", $msg);
+ 				};
+ 			if ($@) {
+ 				# All attempts to use syslog have failed..
+@@ -543,7 +543,7 @@ while(1) {
+ 				&run_logout_script($s, $sdb[0]);
+ 				delete($sessiondb{$s});
+ 				if ($use_syslog) {
+-					syslog("info", "Timeout of $sdb[0]");
++					syslog("info", "%s", "Timeout of $sdb[0]");
+ 					}
+ 				}
+ 			}
+@@ -709,7 +709,7 @@ while(1) {
+ 							local $logtext = "Security alert: Host $2 ".
+ 							  "blocked after $config{'blockhost_failures'} ".
+ 							  "failed logins for user $1";
+-							syslog("crit", $logtext);
++							syslog("crit", "%s", $logtext);
+ 							}
+ 						}
+ 					else {
+@@ -1043,12 +1043,12 @@ if (%users) {
+ 			if ($certs{$u} eq $peername) {
+ 				$authuser = $u;
+ 				$validated = 2;
+-				#syslog("info", "SSL login as $authuser from $acpthost") if ($use_syslog);
++				#syslog("info", "%s", "SSL login as $authuser from $acpthost") if ($use_syslog);
+ 				last;
+ 				}
+ 			}
+ 		if ($use_syslog && !$validated) {
+-			syslog("crit",
++			syslog("crit", "%s",
+ 			       "Unknown SSL certificate $peername");
+ 			}
+ 		}
+@@ -1081,7 +1081,7 @@ if (%users) {
+ 			$validated = 0;
+ 			}
+ 		if ($use_syslog && !$validated) {
+-			syslog("crit",
++			syslog("crit", "%s",
+ 			       ($nonexist ? "Non-existent" :
+ 				$expired ? "Expired" : "Invalid").
+ 			       " login as $authuser from $acpthost");
+@@ -1118,7 +1118,7 @@ if (%users) {
+ 			$authuser = $baseauthuser = undef;
+ 			if ($louser) {
+ 				if ($use_syslog) {
+-					syslog("info", "Logout by $louser from $acpthost");
++					syslog("info", "%s", "Logout by $louser from $acpthost");
+ 					}
+ 				&run_logout_script($louser, $sid,
+ 						   $acptip, $localip);
+@@ -1208,7 +1208,7 @@ if (%users) {
+ 				&write_keep_alive(0);
+ 				&write_data("\r\n");
+ 				&log_request($acpthost, $authuser, $reqline, 302, 0);
+-				syslog("info", "Successful login as $authuser from $acpthost") if ($use_syslog);
++				syslog("info", "%s", "Successful login as $authuser from $acpthost") if ($use_syslog);
+ 				return 0;
+ 				}
+ 			elsif ($ok && $expired &&
+@@ -1224,7 +1224,7 @@ if (%users) {
+ 				$page = $config{'password_form'};
+ 				$logged_code = 401;
+ 				$miniserv_internal = 2;
+-				syslog("crit",
++				syslog("crit", "%s",
+ 					"Expired login as $in{'user'} ".
+ 					"from $acpthost") if ($use_syslog);
+ 				}
+@@ -1236,7 +1236,7 @@ if (%users) {
+ 				$already_session_id = undef;
+ 				$method = "GET";
+ 				$authuser = $baseauthuser = undef;
+-				syslog("crit",
++				syslog("crit", "%s",
+ 					($nonexist ? "Non-existent" :
+ 					 $expired ? "Expired" : "Invalid").
+ 					" login as $in{'user'} from $acpthost")
+@@ -1289,13 +1289,13 @@ if (%users) {
+ 			# Local user exists in webmin users file
+ 			$validated = 1;
+ 			$authuser = $localauth_user;
+-			# syslog("info", "Local login as $authuser from $acpthost") if ($use_syslog);
++			# syslog("info", "%s", "Local login as $authuser from $acpthost") if ($use_syslog);
+ 			}
+ 		elsif ($config{'unixauth'}) {
+ 			# Local user must exist
+ 			$validated = 2;
+ 			$authuser = $localauth_user;
+-			# syslog("info", "Local login as $authuser from $acpthost") if ($use_syslog);
++			# syslog("info", "%s", "Local login as $authuser from $acpthost") if ($use_syslog);
+ 			}
+ 		else {
+ 			$localauth_user = undef;
