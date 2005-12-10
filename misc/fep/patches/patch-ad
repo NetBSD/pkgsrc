@@ -1,15 +1,21 @@
-$NetBSD: patch-ad,v 1.4 2003/11/11 10:42:32 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2005/12/10 22:10:47 christos Exp $
 
---- fep_defs.h.orig	Mon May 10 07:23:33 1993
-+++ fep_defs.h
-@@ -6,5 +6,5 @@
- #endif lint
+--- fep_defs.h.orig	1993-05-10 01:23:33.000000000 -0400
++++ fep_defs.h	2005-12-10 16:59:27.000000000 -0500
+@@ -3,9 +3,9 @@
+ #ifndef lint
+ # define FEP_DEFS \
+     "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ad,v 1.5 2005/12/10 22:10:47 christos Exp $ (SRA)"
+-#endif lint
++#endif /* lint */
  
 -#define	MAXCOMLEN		512	/* maximum command length */
 +#define	MAXCMDLEN		512	/* maximum command length */
  #define MAXARGS			64	/* maximum number of arguments */
  #define ON			1	/* on switch */
-@@ -32,9 +32,9 @@
+ #define OFF			0	/* off switch */
+@@ -31,21 +31,21 @@
+ # define isctlchar(c)	(c && !iskanji(c) && (!(c&0140) || c=='\177'))
  # define iswordchar(c)	(c && (iskanji(c) || isalnum(c) || iscntrl(c)))
  # define isWordchar(c)	((c) && !isspace((c)))
 -#else KANJI
@@ -21,7 +27,23 @@ $NetBSD: patch-ad,v 1.4 2003/11/11 10:42:32 wiz Exp $
 +#endif /* KANJI */
  #define unctl(c)	(((c)=='\177') ? '?' : ((c) >= 040) ? (c) : (c)|0100)
  #define toctrl(c)	((c)&~0100)
-@@ -54,8 +54,8 @@
+ #define ctrl(c)		((c)&037)
+ 
+-#define	INDIRECTED	(1<<(sizeof(char*)*8-1))
++#define	INDIRECTED	(((intptr_t)1)<<(sizeof(char*)*8-1))
+ 			/* this is actually 0x80000000 on 32 bit machine,
+ 			that addresses kernel address space */
+-#define isIndirect(f)	((u_int)(f)&(u_int)INDIRECTED)
+-#define setIndirect(f)	(FUNC)((u_int)(f)|(u_int)INDIRECTED)
+-#define	maskIndirect(f)	(FUNC *)((u_int)(f)&~(u_int)INDIRECTED)
++#define isIndirect(f)	((intptr_t)(f)&(intptr_t)INDIRECTED)
++#define setIndirect(f)	(FUNC)((intptr_t)(f)|(intptr_t)INDIRECTED)
++#define	maskIndirect(f)	(FUNC *)((intptr_t)(f)&~(intptr_t)INDIRECTED)
+ 
+ /*
+  * Type of character
+@@ -53,17 +53,17 @@
+ #ifdef KANJI
  # define CHAR		unsigned char
  # define CHARMASK	0377
 -#else KANJI
@@ -32,10 +54,12 @@ $NetBSD: patch-ad,v 1.4 2003/11/11 10:42:32 wiz Exp $
 +#endif /* KANJI */
  
  /*
-@@ -64,5 +64,5 @@
+  * Only one machine I know alloca() works is vax.
+  */
  #ifdef vax
  # define ALLOCA
 -#endif vax
 +#endif /* vax */
  
  /*
+  * Typedef's
