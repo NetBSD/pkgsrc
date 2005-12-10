@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2005/09/13 19:25:57 christos Exp $
+$NetBSD: patch-aa,v 1.8 2005/12/10 22:10:47 christos Exp $
 
 --- Makefile.orig	1993-06-09 22:51:22.000000000 -0400
-+++ Makefile	2004-02-20 09:37:24.000000000 -0500
-@@ -15,17 +15,24 @@
++++ Makefile	2005-12-10 17:00:00.000000000 -0500
+@@ -15,17 +15,30 @@
  DISTRIBUTION\
  	= Makefile fep.1 $(HEADER) $(SRC) feprc.sample README
  
@@ -23,15 +23,21 @@ $NetBSD: patch-aa,v 1.7 2005/09/13 19:25:57 christos Exp $
 +.if exists(/dev/ptmx)
 +CFLAGS	+= -DHAVE_PTMX
 +.endif
++.if exists(/usr/lib/libtermcap.a)
 +.if exists(/usr/lib/libcompat.a)
 +LDFLAGS = -ltermcap -lcompat
 +.else
  LDFLAGS = -ltermcap
 +.endif
++.elif exists(/usr/lib/libncurses.a)
++LDFLAGS = -lncurses
++.else
++LDFLAGS = -lcurses
++.endif
  
  all: $(TARGET)
  
-@@ -37,7 +44,7 @@
+@@ -37,7 +50,7 @@
  
  install: $(TARGET)
  	install -s $(TARGET) $(INSTDIR)

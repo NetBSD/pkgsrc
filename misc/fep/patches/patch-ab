@@ -1,8 +1,21 @@
-$NetBSD: patch-ab,v 1.3 2003/11/11 10:42:32 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2005/12/10 22:10:47 christos Exp $
 
---- fep_alias.c.orig	Sun Nov 13 07:50:58 1988
-+++ fep_alias.c
-@@ -18,7 +18,7 @@ typedef struct _alias {
+--- fep_alias.c.orig	1988-11-13 01:50:58.000000000 -0500
++++ fep_alias.c	2005-12-10 16:59:27.000000000 -0500
+@@ -3,10 +3,11 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ab,v 1.4 2005/12/10 22:10:47 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
+ 
+ #include <stdio.h>
+ #include <ctype.h>
++#include <stdlib.h>
+ #include "fep_defs.h"
+ #include "fep_glob.h"
+ 
+@@ -18,7 +19,7 @@
  
  ALIAS	alias_top = {"top", "top", (ALIAS *)0};
  ALIAS	*alias_list = &alias_top;
@@ -11,7 +24,7 @@ $NetBSD: patch-ab,v 1.3 2003/11/11 10:42:32 wiz Exp $
  
  /*
   * Functions
-@@ -44,7 +44,7 @@ check_alias (comline)
+@@ -44,7 +45,7 @@
  
      while (isspace (*comline))
  	++comline;
@@ -20,3 +33,16 @@ $NetBSD: patch-ab,v 1.3 2003/11/11 10:42:32 wiz Exp $
  	return ((CHAR *)0);
  
      argc = mkargv (comline, argv, MAXARGS);
+@@ -214,9 +215,9 @@
+     if (alloc == 0)
+ 	return (0);
+ 
+-    vp = (ALIAS *) calloc (sizeof (ALIAS), 1);
+-    vp->al_value = (char *)0;
+-    vp->al_next = (ALIAS *) 0;
++    vp = calloc (sizeof (ALIAS), 1);
++    vp->al_value = NULL;
++    vp->al_next = NULL;
+     vp->al_name = allocAndCopyThere (name);
+ 
+     vp->al_next = last->al_next;

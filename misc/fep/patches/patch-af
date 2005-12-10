@@ -1,16 +1,20 @@
-$NetBSD: patch-af,v 1.3 2003/11/11 10:42:32 wiz Exp $
+$NetBSD: patch-af,v 1.4 2005/12/10 22:10:47 christos Exp $
 
---- fep_funcs.c.orig	Wed May 29 07:31:18 1991
-+++ fep_funcs.c
-@@ -6,6 +6,7 @@ static char rcsid[]=
- #endif lint
+--- fep_funcs.c.orig	1991-05-29 01:31:18.000000000 -0400
++++ fep_funcs.c	2005-12-10 16:59:27.000000000 -0500
+@@ -3,9 +3,10 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-af,v 1.4 2005/12/10 22:10:47 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
  
  #include <stdio.h>
 +#include "fep_defs.h"
  #include "fep_funcs.h"
  
  /*
-@@ -94,7 +95,7 @@ FunctionTableEnt FunctionNameTable[] = {
+@@ -94,7 +95,7 @@
  	 "Expand file name"},
  	{list_file_name,		"list-file-name",
  	 "List file name"},
@@ -19,7 +23,7 @@ $NetBSD: patch-af,v 1.3 2003/11/11 10:42:32 wiz Exp $
  	 "Terminate fep"},
  	{suspend,			"suspend",
  	 "Suspend fep"},
-@@ -193,7 +194,7 @@ FunctionTableEnt BuiltinFuncTable[] = {
+@@ -193,7 +194,7 @@
  	 "Operation \"else\""},
  	{fep_endif,			"fep-endif",
  	 "Operation \"endif\""},
