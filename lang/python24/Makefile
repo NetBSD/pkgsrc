@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/09 07:12:28 recht Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/10 14:36:46 recht Exp $
 #
 
 DISTNAME=	Python-2.4.2
@@ -49,7 +49,7 @@ PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
 .else
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
-PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME}
+PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 # the dl module isn't built for 64 bit archs and Darwin
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "amd64" \
@@ -106,7 +106,7 @@ PLIST_SUBST+=	NISMODULE=
 MAKE_ENV+=	PY_BDB_TRANSFORM=${BUILDLINK_TRANSFORM:Q}
 .endif
 
-PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX}
+PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall
