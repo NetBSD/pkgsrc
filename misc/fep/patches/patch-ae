@@ -1,12 +1,19 @@
-$NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
+$NetBSD: patch-ae,v 1.5 2005/12/10 22:10:47 christos Exp $
 
---- fep_edit.c.orig	Fri Jan 20 09:16:37 1995
-+++ fep_edit.c
-@@ -8,7 +8,17 @@ static char rcsid[]=
+--- fep_edit.c.orig	1995-01-20 03:16:37.000000000 -0500
++++ fep_edit.c	2005-12-10 16:59:27.000000000 -0500
+@@ -3,13 +3,25 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Id: patch-ae,v 1.5 2005/12/10 22:10:47 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
+ 
  #include <stdio.h>
  #include <sys/types.h>
  #include <sys/stat.h>
 +#include <sys/ioctl.h>
++#include <inttypes.h>
 +#ifdef TERMIOS
 +#include <termios.h>
 +#ifdef __linux__
@@ -18,9 +25,11 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  #include <sgtty.h>
 +#endif
  #include <sys/time.h>
++#include <stdlib.h>
  #include <ctype.h>
  #include <sys/dir.h>
-@@ -25,7 +35,7 @@ int		MarkPosition = -1;	/* Marked positi
+ #include <sys/file.h>
+@@ -25,7 +37,7 @@
  EDITMODE	editmode = NOTYET;	/* edtimode EMACS, VI */
  EDITSTATUS	editstatus = NOTEDITING;/* EDITING, NOTEDITING */
  
@@ -29,7 +38,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  int	NeedNewLine;			/* add new line flag */
  int	NeedSave;			/* need to save to history */
  int	Transparency = OFF;		/* transparent flag */
-@@ -86,7 +96,7 @@ BINDENT emacsBindings[] = {
+@@ -86,7 +98,7 @@
  	/* ^X-^V	*/	{"\\^X\\^V",	view_buffer},
  	/* ^X-^K	*/	{"\\^X\\^K",	kill_to_top_of_line},
  	/* ^X-^L	*/	{"\\^X\\^L",	fep_repaint},
@@ -38,7 +47,33 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	/* ^X-^D	*/	{"\\^X\\^D",	send_eof},
  	/* ^X-(		*/	{"\\^X(",	fep_start_script},
  	/* ^X-)		*/	{"\\^X)",	fep_end_script},
-@@ -192,6 +202,30 @@ initEmacsBindings (cft, aft)
+@@ -99,9 +111,9 @@
+ init_bind_table ()
+ {
+ 
+-    curFuncTab = (FUNC *) calloc (sizeof (FUNC), 256);
+-    altFuncTab = (FUNC *) calloc (sizeof (FUNC), 256);
+-    if (curFuncTab == 0 || altFuncTab == 0) {
++    curFuncTab = calloc (sizeof (FUNC), 256);
++    altFuncTab = calloc (sizeof (FUNC), 256);
++    if (curFuncTab == NULL || altFuncTab == NULL) {
+ 	printf ("Can't allocate space for function table\n");
+ 	exit (1);
+     }
+@@ -167,9 +179,9 @@
+     /*
+      * Initialize command line buffer
+      */
+-    CommandLine = (CHAR *) calloc (maxline, 1);
+-    KillBuffer = (CHAR *) calloc (maxline, 1);
+-    if (CommandLine == 0 || KillBuffer == 0) {
++    CommandLine = calloc (maxline, 1);
++    KillBuffer = calloc (maxline, 1);
++    if (CommandLine == NULL || KillBuffer == NULL) {
+ 	perror ("Edit line buffer");
+ 	exit (1);
+     }
+@@ -192,6 +204,30 @@
  
  #define import(table,key,fn) if((int)key>0)table[(int)key]=fn
  
@@ -69,7 +104,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      /* Now, using cbreak mode
      import (cft, tchars_buf.t_startc, ignore);
      import (cft, tchars_buf.t_stopc, ignore);
-@@ -212,6 +246,7 @@ initEmacsBindings (cft, aft)
+@@ -212,6 +248,7 @@
      import (cft, ltchars_buf.t_lnextc, literal_next);
      import (cft, initial_ttymode.sg_erase, delete_previous_character);
      import (cft, initial_ttymode.sg_kill, delete_line);
@@ -77,7 +112,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
  #undef import
  
-@@ -257,7 +292,7 @@ RETRY:
+@@ -257,7 +294,7 @@
  	 */
  	swallow_output();
  
@@ -86,7 +121,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	    ++redirect_line;
  	    execute_command = CommandLine;
  	    goto RETURN;	    
-@@ -301,7 +336,11 @@ RETRY:
+@@ -301,7 +338,11 @@
  	 * call send_eof
  	 */
  	if (
@@ -98,7 +133,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	    && curFuncTab[c] != send_eof
  	    && ! look_var ("ignore-eof")
  	    && CommandLine [0] == '\0'
-@@ -422,11 +461,11 @@ self_insert(c)
+@@ -422,11 +463,11 @@
      register int i, nbyte = 1, currentNull;
  #ifdef KANJI
      CHAR byte2;
@@ -112,7 +147,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
          errorBell();
  	return (0);
      }
-@@ -441,7 +480,7 @@ self_insert(c)
+@@ -441,7 +482,7 @@
  	nbyte = 2;
      }
      else
@@ -121,7 +156,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	putChar (c);
      reverse_strcpy (
  	&CommandLine[CurrentPosition] + nbyte,
-@@ -453,7 +492,7 @@ self_insert(c)
+@@ -453,7 +494,7 @@
      if (nbyte > 1) {
  	CommandLine[CurrentPosition - 1] = byte2;
      }
@@ -130,7 +165,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      printS (&CommandLine [CurrentPosition]);
  
      if (CommandLine[CurrentPosition] != '\0') {
-@@ -557,7 +596,7 @@ moveto (position)
+@@ -557,7 +598,7 @@
  #ifdef KANJI
  	    && !(CurrentPosition + 1 == position
  		    && iskanji (CommandLine[CurrentPosition]))
@@ -139,7 +174,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	)
  	    (void) forward_n_character (1);
  }
-@@ -581,10 +620,10 @@ beginning_of_line()
+@@ -581,10 +622,10 @@
  #ifdef KANJI
  #define INC(i) if(iskanji(CommandLine[i])) i+=2; else i++;
  #define DEC(i) if(i>=2 && iskanji_in_string(CommandLine, i-2)) i-=2; else i--;
@@ -152,7 +187,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
  /*
   * Move cursor to end of line
-@@ -642,7 +681,7 @@ backward_n_character(n)
+@@ -642,7 +683,7 @@
  	    i--;
  	}
  	else
@@ -161,7 +196,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	putchar (BS);
  	i--;
      }
-@@ -697,7 +736,7 @@ backward_n_word (n)
+@@ -697,7 +738,7 @@
  	    nchars++;
  	}
      }
@@ -170,7 +205,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      while (n--) {
  	i--, nchars++;
  	while (i > 0 && !iswordchar (CommandLine [i])) {
-@@ -707,7 +746,7 @@ backward_n_word (n)
+@@ -707,7 +748,7 @@
  	    i--, nchars++;
  	}
      }
@@ -179,7 +214,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      return (backward_n_character (nchars));
  }
  
-@@ -758,7 +797,7 @@ backward_n_Word (n)
+@@ -758,7 +799,7 @@
  	    nchars++;
  	}
      }
@@ -188,7 +223,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      while (n--) {
  	i--, nchars++;
  	while (i > 0 && !isWordchar (CommandLine [i]))
-@@ -766,7 +805,7 @@ backward_n_Word (n)
+@@ -766,7 +807,7 @@
  	while (i > 0 && isWordchar (CommandLine [i - 1]))
  	    i--, nchars++;
      }
@@ -197,7 +232,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      return (backward_n_character (nchars));
  }
  
-@@ -804,7 +843,7 @@ forward_n_character(n)
+@@ -804,7 +845,7 @@
  	(void) putchar (CommandLine[i++]);
      }
      else
@@ -206,7 +241,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      if (isctlchar(CommandLine[i])) {
  	(void) putchar (unctl (CommandLine [i]));
  	i++;
-@@ -819,7 +858,7 @@ forward_n_character(n)
+@@ -819,7 +860,7 @@
  	    (void) putchar (CommandLine[i++]);
  	}
  	else
@@ -215,7 +250,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	putChar (CommandLine [i++]);
      }
  
-@@ -1000,9 +1039,9 @@ delete_previous_n_character(n)
+@@ -1000,9 +1041,9 @@
  	    i -= 2, nbyte += 2;
  	else
  	    i -= 1, nbyte += 1;
@@ -227,7 +262,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
      deleteArea = howlong (&CommandLine[CurrentPosition - nbyte], nbyte);
      restArea = howlong (&CommandLine[CurrentPosition], 0);
-@@ -1075,7 +1114,7 @@ delete_previous_n_word(n)
+@@ -1075,7 +1116,7 @@
  	    nchars++;
  	}
      }
@@ -236,7 +271,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      while (n--) {
  	i--, nchars++;
  	while (i > 0 && !iswordchar (CommandLine [i]))
-@@ -1083,7 +1122,7 @@ delete_previous_n_word(n)
+@@ -1083,7 +1124,7 @@
  	while (i > 0 && iswordchar (CommandLine [i - 1]))
  	    i--, nchars++;
      }
@@ -245,7 +280,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
      return (delete_previous_n_character (nchars));
  }
-@@ -1136,7 +1175,7 @@ delete_previous_n_Word(n)
+@@ -1136,7 +1177,7 @@
  	    nchars++;
  	}
      }
@@ -254,7 +289,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      while (n--) {
  	i--, nchars++;
  	while (i > 0 && !isWordchar (CommandLine [i]))
-@@ -1144,7 +1183,7 @@ delete_previous_n_Word(n)
+@@ -1144,7 +1185,7 @@
  	while (i > 0 && isWordchar (CommandLine [i - 1]))
  	    i--, nchars++;
      }
@@ -263,7 +298,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
      return (delete_previous_n_character (nchars));
  }
-@@ -1183,9 +1222,9 @@ delete_next_n_character (n)
+@@ -1183,9 +1224,9 @@
  	    else
  		cp++, nbyte++;
      }
@@ -275,7 +310,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
      deleteArea = howlong (&CommandLine[CurrentPosition], nbyte);
      restArea = howlong (&CommandLine[CurrentPosition + nbyte], 0);
-@@ -1481,7 +1520,11 @@ insert_and_flush(c)
+@@ -1481,7 +1522,11 @@
   */
  send_eof()
  {
@@ -287,19 +322,24 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
      (void) self_insert (c);
      if (isctlchar (c))
-@@ -1738,9 +1781,9 @@ expand_file_name ()
+@@ -1737,11 +1782,11 @@
+ 	    char *fcp;
  
  # ifdef ALLOCA
-   	    fcp = (char *) alloca (strlen (dp->d_name) + 1);
+-  	    fcp = (char *) alloca (strlen (dp->d_name) + 1);
 -# else ALLOCA
-+# else /* ALLOCA */
-   	    fcp = (char *) malloc (strlen (dp->d_name) + 1);
+-  	    fcp = (char *) malloc (strlen (dp->d_name) + 1);
 -# endif ALLOCA
+-	    if (fcp == 0) {
++  	    fcp = alloca (strlen (dp->d_name) + 1);
++# else /* ALLOCA */
++  	    fcp = malloc (strlen (dp->d_name) + 1);
 +# endif /* ALLOCA */
- 	    if (fcp == 0) {
++	    if (fcp == NULL) {
  		fputs ("\r\n", stdout);
  		perror ("alloca:");
-@@ -1754,7 +1797,7 @@ expand_file_name ()
+ 		reprint ();
+@@ -1754,7 +1799,7 @@
      fileList [i] = (char *) 0;
  
      if (*start_expand == '~' && look_var ("expand-tilde")) {
@@ -308,7 +348,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
  	strcpy (buf, start_expand);
  	p = x_dirname (buf);
-@@ -1801,7 +1844,7 @@ expand_file_name ()
+@@ -1801,7 +1846,7 @@
  # ifndef ALLOCA
      for (i = 0; fileList [i]; i++)
  	free (fileList [i]);
@@ -317,19 +357,24 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
      closedir(dirp);
      return (0);
-@@ -1929,9 +1972,9 @@ ls (dirp, prefixstring)
+@@ -1928,11 +1973,11 @@
+ 	    continue;
  	if (prefix (prefixstring, dp->d_name)) {
  # ifdef ALLOCA
-   	    fcp = (char *) alloca (strlen (dp->d_name) + 1);
+-  	    fcp = (char *) alloca (strlen (dp->d_name) + 1);
 -# else ALLOCA
-+# else /* ALLOCA */
-   	    fcp = (char *) malloc (strlen (dp->d_name) + 1);
+-  	    fcp = (char *) malloc (strlen (dp->d_name) + 1);
 -# endif ALLOCA
+-	    if (fcp == 0) {
++  	    fcp = alloca (strlen (dp->d_name) + 1);
++# else /* ALLOCA */
++  	    fcp = malloc (strlen (dp->d_name) + 1);
 +# endif /* ALLOCA */
- 	    if (fcp == 0) {
++	    if (fcp == NULL) {
  		fputs ("\r\n", stdout);
  		perror ("alloca:");
-@@ -1975,7 +2018,7 @@ BACK:
+ 		reprint ();
+@@ -1975,7 +2020,7 @@
  # ifndef ALLOCA
      for (i = 0; fileList [i]; i++)
  	free (fileList [i]);
@@ -338,7 +383,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
      return;
  }
  
-@@ -2022,7 +2065,7 @@ list_remote_file (host, pattern)
+@@ -2022,7 +2067,7 @@
  	fputs ("\n", stdout);
      }
  }
@@ -347,7 +392,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  
  bind_key (ft, func, s, dfunc)
      FUNC ft[];		/* Function table */
-@@ -2032,7 +2075,7 @@ bind_key (ft, func, s, dfunc)
+@@ -2032,7 +2077,7 @@
  {
      char tmps[16];
  
@@ -356,7 +401,7 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	tmps[0] = toctrl (s[2]);
  	strcpy (&tmps[1], &s[3]);
  	s = tmps;
-@@ -2042,7 +2085,7 @@ bind_key (ft, func, s, dfunc)
+@@ -2042,7 +2087,7 @@
       * If the string contain only one character, put the function to
       * appropriate position in the table.
       */
@@ -365,3 +410,17 @@ $NetBSD: patch-ae,v 1.4 2003/11/11 10:42:32 wiz Exp $
  	if (isIndirect (ft[(int) *s]))
  	    free (maskIndirect (ft[(int) *s]));
  
+@@ -2059,11 +2104,11 @@
+ 	if (! (isIndirect (ft[(int) *s]))) {
+ 	    register int i;
+ 
+-	    nft = (FUNC *) calloc (sizeof (FUNC), 256);
++	    nft = calloc (sizeof (FUNC), 256);
+ 	    /*
+ 	     * If failed in allocating, return 0.
+ 	     */
+-	    if (nft == 0)
++	    if (nft == NULL)
+ 		return (0);
+ 
+ 	    /*
