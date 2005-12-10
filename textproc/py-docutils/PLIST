@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/09/22 01:54:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/12/10 15:59:28 darcy Exp $
 bin/rst2html.py
 bin/rst2latex.py
 ${PYSITELIB}/docutils/__init__.py
@@ -22,6 +22,9 @@ ${PYSITELIB}/docutils/languages/__init__.pyo
 ${PYSITELIB}/docutils/languages/af.py
 ${PYSITELIB}/docutils/languages/af.pyc
 ${PYSITELIB}/docutils/languages/af.pyo
+${PYSITELIB}/docutils/languages/ca.py
+${PYSITELIB}/docutils/languages/ca.pyc
+${PYSITELIB}/docutils/languages/ca.pyo
 ${PYSITELIB}/docutils/languages/cs.py
 ${PYSITELIB}/docutils/languages/cs.pyc
 ${PYSITELIB}/docutils/languages/cs.pyo
@@ -46,6 +49,9 @@ ${PYSITELIB}/docutils/languages/fr.pyo
 ${PYSITELIB}/docutils/languages/it.py
 ${PYSITELIB}/docutils/languages/it.pyc
 ${PYSITELIB}/docutils/languages/it.pyo
+${PYSITELIB}/docutils/languages/nl.py
+${PYSITELIB}/docutils/languages/nl.pyc
+${PYSITELIB}/docutils/languages/nl.pyo
 ${PYSITELIB}/docutils/languages/pt_br.py
 ${PYSITELIB}/docutils/languages/pt_br.pyc
 ${PYSITELIB}/docutils/languages/pt_br.pyo
@@ -214,6 +220,12 @@ ${PYSITELIB}/docutils/writers/html4css1.pyo
 ${PYSITELIB}/docutils/writers/latex2e.py
 ${PYSITELIB}/docutils/writers/latex2e.pyc
 ${PYSITELIB}/docutils/writers/latex2e.pyo
+${PYSITELIB}/docutils/writers/newlatex2e.py
+${PYSITELIB}/docutils/writers/newlatex2e.pyc
+${PYSITELIB}/docutils/writers/newlatex2e.pyo
+${PYSITELIB}/docutils/writers/null.py
+${PYSITELIB}/docutils/writers/null.pyc
+${PYSITELIB}/docutils/writers/null.pyo
 ${PYSITELIB}/docutils/writers/pep_html.py
 ${PYSITELIB}/docutils/writers/pep_html.pyc
 ${PYSITELIB}/docutils/writers/pep_html.pyo
