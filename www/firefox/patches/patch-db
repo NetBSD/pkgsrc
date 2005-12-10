@@ -1,7 +1,8 @@
-$NetBSD: patch-db,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-db,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- gc/boehm/gcconfig.h.orig	2004-11-17 10:31:05.000000000 +0100
-+++ gc/boehm/gcconfig.h	2004-11-17 10:31:15.000000000 +0100
+diff -ruN ../Orig/mozilla/gc/boehm/gcconfig.h ./gc/boehm/gcconfig.h
+--- ../Orig/mozilla/gc/boehm/gcconfig.h	2000-08-11 09:13:36.000000000 +0900
++++ ./gc/boehm/gcconfig.h	2005-12-04 19:44:25.000000000 +0900
 @@ -183,7 +183,7 @@
  #   define OPENBSD
  #   define mach_type_known

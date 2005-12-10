@@ -1,8 +1,9 @@
-$NetBSD: patch-ao,v 1.3 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-ao,v 1.4 2005/12/10 13:47:22 taya Exp $
 
---- gfx/src/x11shared/nsFontFreeType.cpp.orig	2003-12-25 08:24:52.000000000 +0000
-+++ gfx/src/x11shared/nsFontFreeType.cpp
-@@ -177,7 +177,7 @@ nsFreeTypeFont::getFTFace()
+diff -ruN ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp ./gfx/src/x11shared/nsFontFreeType.cpp
+--- ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.cpp	2004-04-18 06:52:34.000000000 +0900
++++ ./gfx/src/x11shared/nsFontFreeType.cpp	2005-12-04 19:07:49.000000000 +0900
+@@ -177,7 +177,7 @@
    FTC_Manager mgr;
    nsresult rv;
    mFt2->GetFTCacheManager(&mgr);
@@ -11,7 +12,7 @@ $NetBSD: patch-ao,v 1.3 2005/09/22 14:14:04 jlam Exp $
    NS_ASSERTION(NS_SUCCEEDED(rv), "failed to get face/size");
    if (NS_FAILED(rv))
      return nsnull;
-@@ -191,22 +191,15 @@ nsFreeTypeFont::nsFreeTypeFont(nsITrueTy
+@@ -191,22 +191,15 @@
    PRBool embedded_bimap = PR_FALSE;
    mFaceID = aFaceID;
    mPixelSize = aPixelSize;
@@ -38,7 +39,7 @@ $NetBSD: patch-ao,v 1.3 2005/09/22 14:14:04 jlam Exp $
    PRUint32  num_embedded_bitmaps, i;
    PRInt32*  embedded_bitmapheights;
    mFaceID->GetEmbeddedBitmapHeights(&num_embedded_bitmaps,
-@@ -218,7 +211,6 @@ nsFreeTypeFont::nsFreeTypeFont(nsITrueTy
+@@ -218,7 +211,6 @@
          if (embedded_bitmapheights[i] == aPixelSize) {
            embedded_bimap = PR_TRUE;
            // unhinted must be set for embedded bitmaps to be used
@@ -46,7 +47,7 @@ $NetBSD: patch-ao,v 1.3 2005/09/22 14:14:04 jlam Exp $
            break;
          }
        }
-@@ -312,7 +304,7 @@ nsFreeTypeFont::doGetBoundingMetrics(con
+@@ -312,7 +304,7 @@
    if (!face)
      return NS_ERROR_FAILURE;
  
@@ -55,7 +56,7 @@ $NetBSD: patch-ao,v 1.3 2005/09/22 14:14:04 jlam Exp $
    mFt2->GetImageCache(&icache);
    if (!icache)
      return NS_ERROR_FAILURE;
-@@ -401,7 +393,7 @@ nsFreeTypeFont::GetWidth(const PRUnichar
+@@ -401,7 +393,7 @@
    if (!face)
      return 0;
  
@@ -64,7 +65,7 @@ $NetBSD: patch-ao,v 1.3 2005/09/22 14:14:04 jlam Exp $
    mFt2->GetImageCache(&icache);
    if (!icache)
      return 0;
-@@ -723,7 +715,7 @@ nsFreeTypeXImage::DrawString(nsRendering
+@@ -723,7 +715,7 @@
      if (y%4==0) (*blendPixelFunc)(sub_image, y, ascent-1, black, 255/2);
  #endif
  

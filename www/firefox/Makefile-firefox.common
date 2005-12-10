@@ -1,7 +1,7 @@
-# $NetBSD: Makefile-firefox.common,v 1.23 2005/12/05 23:55:22 rillig Exp $
+# $NetBSD: Makefile-firefox.common,v 1.24 2005/12/10 13:47:22 taya Exp $
 
 MOZILLA_BIN=	firefox-bin
-MOZ_VER=	1.0.7
+MOZ_VER=	1.5
 EXTRACT_SUFX=	.tar.bz2
 
 DISTNAME=	firefox-${MOZ_VER}-source
@@ -17,27 +17,21 @@ HOMEPAGE=	http://www.mozilla.org/projects/firefox/
 DISTINFO_FILE=	${.CURDIR}/../../www/firefox/distinfo
 PATCHDIR=	${.CURDIR}/../../www/firefox/patches
 
-CONFIGURE_ENV+=	MOZ_PHOENIX=1
-MAKE_ENV+=	MOZ_PHOENIX=1
-
-CONFIGURE_ARGS+=	--disable-mailnews
-CONFIGURE_ARGS+=	--disable-composer
+CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--enable-single-profile
 CONFIGURE_ARGS+=	--without-gssapi
 
-MOZILLA_EXTENSIONS=	cookie,gnomevfs,inspector,negotiateauth,pref,transformiix,universalchardet,webservices,xml-rpc,xmlextras
+CONFIGURE_ARGS+=	--enable-canvas
+
+MOZILLA_EXTENSIONS=	default
 CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS:Q}
 
 USE_LANGUAGES+=		c++
+BUILD_SVG=		# defined
 BUILD_MATHML=		# defined
 MESSAGE=		${.CURDIR}/../../www/firefox/MESSAGE
 
-.include "../../www/mozilla/Makefile.common"
+# 
+.include "../../www/firefox/Makefile.common"
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../www/firefox/INSTALL
-
-pre-install:
-	cd ${WRKSRC}/dist/bin/defaults/profile/ && \
-		${PAX} -Lrw extensions ${WRKSRC}/dist/bin
-	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
-		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt

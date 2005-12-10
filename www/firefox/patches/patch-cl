@@ -1,8 +1,9 @@
-$NetBSD: patch-cl,v 1.4 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-cl,v 1.5 2005/12/10 13:47:22 taya Exp $
 
---- extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp.orig	2004-01-29 22:04:29.000000000 +0000
-+++ extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp
-@@ -258,7 +258,7 @@ getNumberAttr(txStylesheetAttr* aAttribu
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp ./extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp	2005-01-24 19:50:39.000000000 +0900
++++ ./extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp	2005-12-04 19:44:00.000000000 +0900
+@@ -279,7 +279,7 @@
                txStylesheetCompilerState& aState,
                double& aNumber)
  {
@@ -11,16 +12,16 @@ $NetBSD: patch-cl,v 1.4 2005/09/22 14:14:04 jlam Exp $
      txStylesheetAttr* attr = nsnull;
      nsresult rv = getStyleAttr(aAttributes, aAttrCount, kNameSpaceID_None,
                                 aName, aRequired, &attr);
-@@ -479,7 +479,7 @@ txFnStartLREStylesheet(PRInt32 aNamespac
+@@ -500,7 +500,7 @@
      NS_ENSURE_SUCCESS(rv, rv);
  
      txExpandedName nullExpr;
 -    double prio = Double::NaN;
 +    double prio = Double::NaN();
-     nsAutoPtr<txPattern> match(new txRootPattern(MB_TRUE));
-     NS_ENSURE_TRUE(match, NS_ERROR_OUT_OF_MEMORY);
  
-@@ -1038,7 +1038,7 @@ txFnStartTemplate(PRInt32 aNamespaceID,
+     nsAutoPtr<txPattern> match(new txRootPattern());
+     NS_ENSURE_TRUE(match, NS_ERROR_OUT_OF_MEMORY);
+@@ -1060,7 +1060,7 @@
                        aState, mode);
      NS_ENSURE_SUCCESS(rv, rv);
  

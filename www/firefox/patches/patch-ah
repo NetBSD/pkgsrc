@@ -1,8 +1,9 @@
-$NetBSD: patch-ah,v 1.3 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-ah,v 1.4 2005/12/10 13:47:22 taya Exp $
 
---- gfx/idl/nsIFreeType2.idl.orig	2004-04-16 01:09:33.000000000 +0000
-+++ gfx/idl/nsIFreeType2.idl
-@@ -76,10 +76,11 @@ native FT_Pointer(FT_Pointer);
+diff -ruN ../Orig/mozilla/gfx/idl/nsIFreeType2.idl ./gfx/idl/nsIFreeType2.idl
+--- ../Orig/mozilla/gfx/idl/nsIFreeType2.idl	2004-04-16 08:30:02.000000000 +0900
++++ ./gfx/idl/nsIFreeType2.idl	2005-12-04 19:06:04.000000000 +0900
+@@ -76,10 +76,11 @@
  native FT_Sfnt_Tag(FT_Sfnt_Tag);
  native FT_Size(FT_Size);
  
@@ -16,7 +17,7 @@ $NetBSD: patch-ah,v 1.3 2005/09/22 14:14:04 jlam Exp $
  native FTC_Manager(FTC_Manager);
  
  // #ifdef MOZ_SVG
-@@ -99,7 +100,7 @@ interface nsIFreeType2 : nsISupports
+@@ -99,7 +100,7 @@
  
      readonly attribute FT_Library library;
      readonly attribute FTC_Manager FTCacheManager;
@@ -25,7 +26,7 @@ $NetBSD: patch-ah,v 1.3 2005/09/22 14:14:04 jlam Exp $
  
      void    doneFace(in FT_Face face);
      void    doneFreeType(in FT_Library lib);
-@@ -115,16 +116,16 @@ interface nsIFreeType2 : nsISupports
+@@ -115,16 +116,16 @@
      void    outlineDecompose(in FT_Outline_p outline,
                               in const_FT_Outline_Funcs_p funcs, in voidPtr p);
      void    setCharmap(in FT_Face face, in FT_CharMap charmap);

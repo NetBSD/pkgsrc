@@ -1,17 +1,18 @@
-$NetBSD: patch-bo,v 1.5 2005/10/12 16:39:24 joerg Exp $
+$NetBSD: patch-bo,v 1.6 2005/12/10 13:47:22 taya Exp $
 
---- nsprpub/configure.in.orig	2004-09-14 22:59:41.000000000 +0200
-+++ nsprpub/configure.in
-@@ -56,7 +56,7 @@ USE_CPLUS=
+diff -ruN ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
+--- ../Orig/mozilla/nsprpub/configure.in	2005-09-16 07:37:52.000000000 +0900
++++ ./nsprpub/configure.in	2005-12-04 19:17:56.000000000 +0900
+@@ -57,7 +57,7 @@
  USE_IPV6=
  USE_MDUPDATE=
- MACOS_DEPLOYMENT_TARGET=
+ _MACOSX_DEPLOYMENT_TARGET=
 -_OPTIMIZE_FLAGS=-O
 +_OPTIMIZE_FLAGS=
  _DEBUG_FLAGS=-g
  MOZ_DEBUG=1
  MOZ_OPTIMIZE=
-@@ -933,6 +933,34 @@ case "$target" in
+@@ -1045,6 +1045,34 @@
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
@@ -46,7 +47,7 @@ $NetBSD: patch-bo,v 1.5 2005/10/12 16:39:24 joerg Exp $
      ;;
  
  *-hpux*)
-@@ -1417,6 +1445,7 @@ mips-nec-sysv*)
+@@ -1544,6 +1572,7 @@
      AC_DEFINE(XP_UNIX)
      AC_DEFINE(NETBSD)
      AC_DEFINE(HAVE_BSD_FLOCK)
@@ -54,7 +55,7 @@ $NetBSD: patch-bo,v 1.5 2005/10/12 16:39:24 joerg Exp $
      USE_NSPR_THREADS=1
      MDCPUCFG_H=_netbsd.cfg
      PR_MD_CSRCS=netbsd.c
-@@ -2149,7 +2178,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2307,7 +2336,7 @@
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
  		case "$target_os" in
@@ -63,7 +64,7 @@ $NetBSD: patch-bo,v 1.5 2005/10/12 16:39:24 joerg Exp $
  # Freebsd doesn't use -pthread for compiles, it uses them for linking
              ;;
  	    *)
-@@ -2187,7 +2216,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2345,7 +2374,7 @@
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -72,7 +73,7 @@ $NetBSD: patch-bo,v 1.5 2005/10/12 16:39:24 joerg Exp $
  	    AC_DEFINE(_REENTRANT)
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2269,7 +2298,7 @@ case "$target" in
+@@ -2426,7 +2455,7 @@
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;

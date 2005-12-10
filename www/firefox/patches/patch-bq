@@ -1,8 +1,9 @@
-$NetBSD: patch-bq,v 1.5 2005/10/12 16:39:24 joerg Exp $
+$NetBSD: patch-bq,v 1.6 2005/12/10 13:47:22 taya Exp $
 
---- xpcom/io/nsLocalFileUnix.h.orig	2004-01-15 06:14:13.000000000 +0000
-+++ xpcom/io/nsLocalFileUnix.h
-@@ -57,7 +57,7 @@
+diff -ruN ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h ./xpcom/io/nsLocalFileUnix.h
+--- ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h	2004-04-18 23:18:14.000000000 +0900
++++ ./xpcom/io/nsLocalFileUnix.h	2005-12-04 19:18:04.000000000 +0900
+@@ -73,7 +73,7 @@
  #endif
  
  // so we can statfs on freebsd

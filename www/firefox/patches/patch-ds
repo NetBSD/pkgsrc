@@ -1,8 +1,9 @@
-$NetBSD: patch-ds,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-ds,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- security/coreconf/arch.mk.orig	2005-06-03 20:57:46.000000000 +0200
-+++ security/coreconf/arch.mk
-@@ -141,7 +141,7 @@ endif
+diff -ruN ../Orig/mozilla/security/coreconf/arch.mk ./security/coreconf/arch.mk
+--- ../Orig/mozilla/security/coreconf/arch.mk	2005-10-11 08:30:12.000000000 +0900
++++ ./security/coreconf/arch.mk	2005-12-04 19:45:28.000000000 +0900
+@@ -145,7 +145,7 @@
  # IRIX 6.5-ALPHA-1289139620.
  #
  

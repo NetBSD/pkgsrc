@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2005/07/20 23:33:30 taya Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2005/12/10 13:47:22 taya Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FIREFOX_GTK2_BUILDLINK3_MK:=	${FIREFOX_GTK2_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfirefox-gtk1}
 BUILDLINK_PACKAGES+=	firefox-gtk1
 
 .if !empty(FIREFOX_GTK2_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.firefox-gtk1+=	firefox-gtk1>=1.0
-BUILDLINK_RECOMMENDED.firefox-gtk1+=	firefox-gtk1>=1.0.6
+BUILDLINK_DEPENDS.firefox-gtk1+=	firefox-gtk1>=1.5
+BUILDLINK_RECOMMENDED.firefox-gtk1+=	firefox-gtk1>=1.5
 BUILDLINK_PKGSRCDIR.firefox-gtk1?=	../../www/firefox-gtk1
 .endif	# FIREFOX_GTK2_BUILDLINK3_MK
 
