@@ -1,7 +1,8 @@
-$NetBSD: patch-dh,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-dh,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h.orig	2004-11-17 11:30:31.000000000 +0100
-+++ xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h	2004-11-17 11:30:50.000000000 +0100
+diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h ./xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h	2004-04-18 23:18:18.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h	2005-12-04 19:44:41.000000000 +0900
 @@ -77,6 +77,13 @@
  #define THUNK_BASED_THIS_ADJUST
  #endif

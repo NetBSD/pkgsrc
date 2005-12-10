@@ -1,0 +1,198 @@
+# $NetBSD: Makefile.common,v 1.1 2005/12/10 13:47:22 taya Exp $
+
+MOZ_DIST_VER?=	${MOZ_VER}
+DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
+PKGNAME=	${MOZILLA}-${MOZ_VER}
+MASTER_SITES?=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_DIST_VER}/source/}
+CATEGORIES=	www
+
+MAINTAINER=	taya@NetBSD.org
+HOMEPAGE?=	http://www.mozilla.org/
+
+FILESDIR=	${.CURDIR}/../../www/mozilla/files
+
+BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
+
+WRKSRC=		${WRKDIR}/mozilla
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	autoconf213 gmake perl pkg-config
+GNU_CONFIGURE=	yes
+
+USE_PKGINSTALL=		yes
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../www/mozilla/INSTALL
+
+CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
+CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
+CONFIG_GUESS_OVERRIDE+=	directory/c-sdk/config/autoconf/config.guess
+CONFIG_SUB_OVERRIDE=	build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=	nsprpub/build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
+CONFIG_STATUS_OVERRIDE=		build/config.status
+CONFIG_STATUS_OVERRIDE+=	nsprpub/config.status
+CONFIG_STATUS_OVERRIDE+=	directory/c-sdk/config.status
+
+# Some .pc files are filled in by the build process, so we can't fix the
+# rpaths until this has happened.
+PKGCONFIG_OVERRIDE_STAGE=	post-build
+PKGCONFIG_OVERRIDE=		build/unix/*.pc
+
+CONFIGURE_ARGS+= --disable-tests \
+		--disable-pedantic \
+		--with-system-jpeg=${BUILDLINK_PREFIX.jpeg} \
+		--with-system-png=${BUILDLINK_PREFIX.png} \
+		--enable-crypto
+
+SHAREMODE?=	644
+BUILD_TARGET=	# empty
+
+UNLIMIT_RESOURCES=	datasize memorysize stacksize
+
+.include	"../../graphics/jpeg/buildlink3.mk"
+.include	"../../graphics/png/buildlink3.mk"
+.ifdef _MOZILLA_USE_GTK2
+.include	"../../net/libIDL/buildlink3.mk"
+.include	"../../x11/gtk2/buildlink3.mk"
+CONFIGURE_ARGS+= --enable-default-toolkit=gtk2 --disable-gnomevfs
+.else
+.include	"../../graphics/freetype2/buildlink3.mk"
+.include	"../../graphics/gdk-pixbuf/buildlink3.mk"
+.include	"../../net/ORBit/buildlink3.mk"
+.include	"../../x11/gtk/buildlink3.mk"
+CONFIGURE_ARGS+= --enable-default-toolkit=gtk
+.endif
+
+# NetBSD-*-m68k builds, but "regchrome" dumps core.
+NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
+
+MAKE_ENV+=	MOZILLA_PKG_NAME=${MOZILLA}
+
+MOZ_LIBDIR=	${PREFIX}/lib/${MOZILLA}
+MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
+CONFIGURE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${MOZ_LIBDIR}
+
+.ifdef BUILD_SVG
+CONFIGURE_ARGS+=	--enable-svg
+CONFIGURE_ARGS+=	--enable-svg-renderer=cairo
+.include	"../../graphics/cairo/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-system-cairo
+.endif
+
+.ifdef BUILD_CALENDAR
+CONFIGURE_ARGS+=	--enable-calendar
+.endif
+
+.ifdef BUILD_MATHML
+CONFIGURE_ARGS+=	--enable-mathml
+.endif
+
+.if exists(${X11BASE}/include/X11/extensions/Xinerama.h) && \
+	exists(${X11BASE}/lib/libXinerama.so)
+CONFIGURE_ARGS+=	--enable-xinerama
+.endif
+
+# avoid creating a .mozilla directory in the users home
+# directory
+SCRIPTS_ENV+=	HOME="${WRKDIR}"
+
+PLIST_SUBST+=	MOZILLA=${MOZILLA}
+PLIST_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
+FILES_SUBST+=	MOZILLA=${MOZILLA}
+FILES_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
+.if ${OBJECT_FMT} == "ELF"
+SO_SUFFIX=	so
+SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
+.elif ${OBJECT_FMT} == "Mach-O"
+SO_SUFFIX=	dylib
+SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_LIB}"
+.else
+SO_SUFFIX=	so.1.0
+SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
+.endif
+PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
+
+.if (${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc")
+SUNOSLIB=
+.else
+SUNOSLIB=	"@comment "
+.endif
+PLIST_SUBST+=	SUNOSLIB=${SUNOSLIB}
+
+SCRIPTS_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
+SCRIPTS_ENV+=	PLIST_SRC=${PLIST_SRC:Q}
+SCRIPTS_ENV+=	SED=${SED:Q}
+SCRIPTS_ENV+=	RM=${RM:Q}
+SCRIPTS_ENV+=	EGREP=${EGREP:Q}
+SCRIPTS_ENV+=	CHOWN=${CHOWN:Q}
+SCRIPTS_ENV+=	CHGRP=${CHGRP:Q}
+SCRIPTS_ENV+=	CHMOD=${CHMOD:Q}
+SCRIPTS_ENV+=	BINOWN=${BINOWN:Q}
+SCRIPTS_ENV+=	BINGRP=${BINGRP:Q}
+SCRIPTS_ENV+=	BINMODE=${BINMODE:Q}
+SCRIPTS_ENV+=	SETENV=${SETENV:Q}
+SCRIPTS_ENV+=   MOZILLA=${MOZILLA:Q}
+SCRIPTS_ENV+=   MOZILLA_BIN=${MOZILLA_BIN:Q}
+SCRIPTS_ENV+=	SO_SUFFIX=${SO_SUFFIX:Q}
+SCRIPTS_ENV+=	SUNOSLIB=${SUNOSLIB}
+
+PTHREAD_OPTS+=	native optional
+
+.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
+GCC_REQD+=	3.4
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc*)
+COPTS?=			-O2
+.endif
+CONFIGURE_ARGS+=	--enable-optimize=${COPTS:Q}
+
+XPTCFILES+=	xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
+XPTCFILES+=	xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_PASSTHRU_DIRS+=/Developer
+.endif
+
+post-extract:
+.for F in ${XPTCFILES}
+	${CP} ${FILESDIR}/${F} ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/${F}
+.endfor
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC}/nsprpub && autoconf
+	cd ${WRKSRC}/directory/c-sdk && autoconf
+
+post-build:
+	${ECHO} skin,install,select,classic/1.0 >> \
+		${WRKSRC}/dist/bin/chrome/installed-chrome.txt
+	${ECHO} locale,install,select,en-US >> \
+		${WRKSRC}/dist/bin/chrome/installed-chrome.txt
+
+do-install:
+	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
+
+.include "../../mk/pthread.buildlink3.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+CONFIGURE_ARGS+= --without-pthreads
+.else
+CONFIGURE_ARGS+= --with-pthreads
+.endif
+
+.if ${MOZILLA_USE_XFT} == "YES" && exists(${X11BASE}/include/X11/Xdefs.h)
+CONFIGURE_ARGS+=	--enable-xft
+# pkgconfig defaults to a "build" dependency, which is what we want.
+.include "../../fonts/Xft2/buildlink3.mk"
+.endif
+
+# Fix for firefox* packages.
+SUBST_CLASSES=		pc
+SUBST_STAGE.pc=		post-extract
+SUBST_FILES.pc=		build/unix/*.pc.in
+SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
+			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
+SUBST_MESSAGE.pc=	"Fixing pkgconfig files."
+
+.include "../../www/mozilla/options.mk"

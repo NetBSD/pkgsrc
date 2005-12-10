@@ -1,8 +1,9 @@
-$NetBSD: patch-by,v 1.3 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-by,v 1.4 2005/12/10 13:47:22 taya Exp $
 
---- layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp.orig	2004-03-19 01:36:16.000000000 +0000
-+++ layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp
-@@ -155,15 +155,15 @@ void NS_InitSVGLibartGlyphMetricsFTGloba
+diff -ruN ../Orig/mozilla/layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp ./layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp
+--- ../Orig/mozilla/layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp	2004-11-24 03:01:01.000000000 +0900
++++ ./layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp	2005-12-04 19:34:45.000000000 +0900
+@@ -155,15 +155,15 @@
  
    static NS_NAMED_LITERAL_STRING(arial, "arial");
    nsSVGLibartGlyphMetricsFT::sFontAliases.Put(NS_LITERAL_STRING("helvetica"),
@@ -21,7 +22,7 @@ $NetBSD: patch-by,v 1.3 2005/09/22 14:14:04 jlam Exp $
  }
  
  void NS_FreeSVGLibartGlyphMetricsFTGlobals()
-@@ -440,19 +440,19 @@ nsSVGLibartGlyphMetricsFT::InitializeFac
+@@ -440,19 +440,19 @@
      return;
    }
  

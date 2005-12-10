@@ -1,8 +1,9 @@
-$NetBSD: patch-cj,v 1.4 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-cj,v 1.5 2005/12/10 13:47:22 taya Exp $
 
---- extensions/transformiix/source/xpath/MultiplicativeExpr.cpp.orig	2003-11-19 23:06:14.000000000 +0000
-+++ extensions/transformiix/source/xpath/MultiplicativeExpr.cpp
-@@ -71,22 +71,22 @@ MultiplicativeExpr::evaluate(txIEvalCont
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/xpath/MultiplicativeExpr.cpp ./extensions/transformiix/source/xpath/MultiplicativeExpr.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/xpath/MultiplicativeExpr.cpp	2004-06-17 09:12:43.000000000 +0900
++++ ./extensions/transformiix/source/xpath/MultiplicativeExpr.cpp	2005-12-04 19:43:04.000000000 +0900
+@@ -79,22 +79,22 @@
  #if defined(XP_WIN)
                  /* XXX MSVC miscompiles such that (NaN == 0) */
                  if (Double::isNaN(rightDbl))

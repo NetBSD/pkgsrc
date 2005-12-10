@@ -1,8 +1,9 @@
-$NetBSD: patch-cm,v 1.4 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-cm,v 1.5 2005/12/10 13:47:22 taya Exp $
 
---- extensions/transformiix/source/xslt/txXSLTPatterns.cpp.orig	2003-11-18 22:56:46.000000000 +0000
-+++ extensions/transformiix/source/xslt/txXSLTPatterns.cpp
-@@ -99,7 +99,7 @@ nsresult txUnionPattern::addPattern(txPa
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/xslt/txXSLTPatterns.cpp ./extensions/transformiix/source/xslt/txXSLTPatterns.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/xslt/txXSLTPatterns.cpp	2005-01-16 06:30:39.000000000 +0900
++++ ./extensions/transformiix/source/xslt/txXSLTPatterns.cpp	2005-12-04 19:44:15.000000000 +0900
+@@ -98,7 +98,7 @@
  double txUnionPattern::getDefaultPriority()
  {
      NS_ASSERTION(0, "Don't call getDefaultPriority on txUnionPattern");

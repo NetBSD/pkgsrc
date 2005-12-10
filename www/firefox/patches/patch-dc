@@ -1,7 +1,8 @@
-$NetBSD: patch-dc,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-dc,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- gc/boehm/mach_dep.c.orig	2004-11-17 10:30:03.000000000 +0100
-+++ gc/boehm/mach_dep.c	2004-11-17 10:30:50.000000000 +0100
+diff -ruN ../Orig/mozilla/gc/boehm/mach_dep.c ./gc/boehm/mach_dep.c
+--- ../Orig/mozilla/gc/boehm/mach_dep.c	1999-09-30 11:25:45.000000000 +0900
++++ ./gc/boehm/mach_dep.c	2005-12-04 19:44:28.000000000 +0900
 @@ -206,7 +206,7 @@
  	&& !defined(SCO) && !defined(SCO_ELF) \
   	&& !(defined(LINUX)       && defined(__ELF__)) \

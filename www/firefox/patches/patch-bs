@@ -1,7 +1,8 @@
-$NetBSD: patch-bs,v 1.4 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-bs,v 1.5 2005/12/10 13:47:22 taya Exp $
 
---- config/mkdepend/imakemdep.h.orig	1998-09-05 06:22:25.000000000 +0200
-+++ config/mkdepend/imakemdep.h	2004-11-17 10:33:27.000000000 +0100
+diff -ruN ../Orig/mozilla/config/mkdepend/imakemdep.h ./config/mkdepend/imakemdep.h
+--- ../Orig/mozilla/config/mkdepend/imakemdep.h	2004-04-21 06:38:14.000000000 +0900
++++ ./config/mkdepend/imakemdep.h	2005-12-04 19:21:01.000000000 +0900
 @@ -235,7 +235,7 @@
  #ifdef _CRAY
  #define DEFAULT_CPP "/lib/pcpp"
@@ -11,7 +12,7 @@ $NetBSD: patch-bs,v 1.4 2005/10/12 16:39:25 joerg Exp $
  #define DEFAULT_CPP "/usr/libexec/cpp"
  #endif
  #ifdef	MACH
-@@ -273,10 +273,13 @@
+@@ -273,7 +273,7 @@
  #ifdef unix
  	"-Uunix",	/* remove unix symbol so that filename unix.c okay */
  #endif
@@ -20,13 +21,7 @@ $NetBSD: patch-bs,v 1.4 2005/10/12 16:39:25 joerg Exp $
  # ifdef __i386__
  	"-D__i386__",
  # endif
-+# if defined(__amd64__) || defined(__x86_64__)
-+	"-D__amd64__ -D__x86_64__",
-+# endif
- # ifdef __GNUC__
- 	"-traditional",
- # endif
-@@ -710,6 +713,9 @@
+@@ -713,6 +713,9 @@
  #ifdef __sgi
  	{"__sgi", "1"},
  #endif

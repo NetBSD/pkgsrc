@@ -1,11 +1,12 @@
-$NetBSD: patch-aw,v 1.3 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-aw,v 1.4 2005/12/10 13:47:22 taya Exp $
 
---- widget/src/gtksuperwin/Makefile.in.orig	2004-01-07 13:36:54.000000000 +0000
-+++ widget/src/gtksuperwin/Makefile.in
-@@ -25,6 +25,7 @@ include $(DEPTH)/config/autoconf.mk
- MODULE		= widget
+diff -ruN ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in ./widget/src/gtksuperwin/Makefile.in
+--- ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in	2004-12-15 14:52:41.000000000 +0900
++++ ./widget/src/gtksuperwin/Makefile.in	2005-12-04 19:08:57.000000000 +0900
+@@ -46,6 +46,7 @@
  LIBRARY_NAME	= gtksuperwin
  EXPORT_LIBRARY = 1
+ LIBXUL_LIBRARY = 1
 +MKSHLIB		= $(MKCSHLIB)
  
  PACKAGE_FILE = gtksuperwin.pkg

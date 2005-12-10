@@ -1,8 +1,9 @@
-$NetBSD: patch-ak,v 1.3 2005/09/22 14:14:04 jlam Exp $
+$NetBSD: patch-ak,v 1.4 2005/12/10 13:47:22 taya Exp $
 
---- gfx/src/freetype/nsFreeType.cpp.orig	2004-02-07 15:22:30.000000000 +0000
-+++ gfx/src/freetype/nsFreeType.cpp
-@@ -110,11 +110,11 @@ FtFuncList nsFreeType2::FtFuncs [] = {
+diff -ruN ../Orig/mozilla/gfx/src/freetype/nsFreeType.cpp ./gfx/src/freetype/nsFreeType.cpp
+--- ../Orig/mozilla/gfx/src/freetype/nsFreeType.cpp	2005-07-14 03:21:10.000000000 +0900
++++ ./gfx/src/freetype/nsFreeType.cpp	2005-12-04 19:06:15.000000000 +0900
+@@ -110,11 +110,11 @@
    {"FT_New_Face",             NS_FT2_OFFSET(nsFT_New_Face),             PR_TRUE},
    {"FT_Outline_Decompose",    NS_FT2_OFFSET(nsFT_Outline_Decompose),    PR_TRUE},
    {"FT_Set_Charmap",          NS_FT2_OFFSET(nsFT_Set_Charmap),          PR_TRUE},
@@ -17,7 +18,7 @@ $NetBSD: patch-ak,v 1.3 2005/09/22 14:14:04 jlam Exp $
  // #ifdef MOZ_SVG
    {"FT_Glyph_Transform",      NS_FT2_OFFSET(nsFT_Glyph_Transform),      PR_TRUE},
    {"FT_Get_Kerning",          NS_FT2_OFFSET(nsFT_Get_Kerning),          PR_TRUE},
-@@ -282,7 +282,7 @@ nsFreeType2::SetCharmap(FT_Face face, FT
+@@ -288,7 +288,7 @@
  } 
   
  NS_IMETHODIMP
@@ -26,7 +27,7 @@ $NetBSD: patch-ak,v 1.3 2005/09/22 14:14:04 jlam Exp $
                                FT_UInt glyphID, FT_Glyph *glyph)
  { 
    // call the FreeType2 function via the function pointer
-@@ -291,11 +291,11 @@ nsFreeType2::ImageCacheLookup(FTC_Image_
+@@ -297,11 +297,11 @@
  } 
   
  NS_IMETHODIMP
@@ -41,7 +42,7 @@ $NetBSD: patch-ak,v 1.3 2005/09/22 14:14:04 jlam Exp $
    return error ? NS_ERROR_FAILURE : NS_OK;
  } 
   
-@@ -320,7 +320,7 @@ nsFreeType2::ManagerNew(FT_Library libra
+@@ -326,7 +326,7 @@
  } 
   
  NS_IMETHODIMP
@@ -50,7 +51,7 @@ $NetBSD: patch-ak,v 1.3 2005/09/22 14:14:04 jlam Exp $
  { 
    // call the FreeType2 function via the function pointer
    FT_Error error = nsFTC_Image_Cache_New(manager, cache);
-@@ -389,7 +389,7 @@ nsFreeType2::SupportsExtFunc(PRBool *res
+@@ -395,7 +395,7 @@
  } 
   
  NS_IMETHODIMP

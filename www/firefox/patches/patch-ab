@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2005/10/12 16:39:24 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2005/12/10 13:47:22 taya Exp $
 
-diff -ru ../Orig/mozilla/configure.in ./configure.in
---- ../Orig/mozilla/configure.in	2004-05-14 06:57:46.000000000 +0900
-+++ ./configure.in	2004-06-15 23:55:39.000000000 +0900
-@@ -1008,7 +1008,7 @@
+diff -ruN ../Orig/mozilla/configure.in ./configure.in
+--- ../Orig/mozilla/configure.in	2005-10-04 14:53:49.000000000 +0900
++++ ./configure.in	2005-12-04 19:02:51.000000000 +0900
+@@ -1360,7 +1360,7 @@
      esac
      ;;
  
@@ -12,7 +12,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1017,6 +1017,9 @@
+@@ -1374,6 +1374,9 @@
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -22,7 +22,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;; 
  
  *-hpux*)
-@@ -1308,6 +1311,13 @@
+@@ -1768,6 +1771,13 @@
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -36,7 +36,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;;
  
  *-nto*) 
-@@ -1531,7 +1541,7 @@
+@@ -1993,7 +2003,7 @@
         MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
@@ -45,9 +45,9 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
-@@ -4280,7 +4290,7 @@ dnl = Enable code optimization. OFF by d
+@@ -5205,7 +5215,7 @@
+ dnl = Enable code optimization. ON by default.
  dnl ========================================================
- MOZ_OPTIMIZE=
  if test -z "$MOZ_OPTIMIZE_FLAGS"; then
 -	MOZ_OPTIMIZE_FLAGS="-O"
 +	MOZ_OPTIMIZE_FLAGS=""

@@ -1,7 +1,8 @@
-$NetBSD: patch-dl,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-dl,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- /dev/null	2005-05-24 01:23:34.000000000 +0200
-+++ security/coreconf/DragonFly.mk	2005-05-24 01:23:34.000000000 +0200
+diff -ruN ../Orig/mozilla/security/coreconf/DragonFly.mk ./security/coreconf/DragonFly.mk
+--- ../Orig/mozilla/security/coreconf/DragonFly.mk	1970-01-01 09:00:00.000000000 +0900
++++ ./security/coreconf/DragonFly.mk	2005-12-04 19:44:48.000000000 +0900
 @@ -0,0 +1,83 @@
 +#
 +# The contents of this file are subject to the Mozilla Public
