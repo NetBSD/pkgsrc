@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:33 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/10 22:07:01 markd Exp $
 
-DISTNAME=	kbiff-3.7.1
-PKGREVISION=	1
+DISTNAME=	kbiff-3.8
 CATEGORIES=	devel kde
-MASTER_SITES=	http://devel-home.kde.org/~granroth/kbiff/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kbiff/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
