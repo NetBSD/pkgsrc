@@ -1,7 +1,8 @@
-$NetBSD: patch-dd,v 1.1 2005/10/12 16:39:25 joerg Exp $
+$NetBSD: patch-dd,v 1.2 2005/12/10 13:47:22 taya Exp $
 
---- mailnews/movemail/src/movemail.c.orig	2004-11-17 10:29:29.000000000 +0100
-+++ mailnews/movemail/src/movemail.c	2004-11-17 10:29:43.000000000 +0100
+diff -ruN ../Orig/mozilla/mailnews/movemail/src/movemail.c ./mailnews/movemail/src/movemail.c
+--- ../Orig/mozilla/mailnews/movemail/src/movemail.c	2004-04-18 03:33:14.000000000 +0900
++++ ./mailnews/movemail/src/movemail.c	2005-12-04 19:44:32.000000000 +0900
 @@ -52,7 +52,7 @@
  #define LINUX_GLIBC_2
  
