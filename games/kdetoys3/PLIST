@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/03/23 22:29:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/12/11 11:49:32 markd Exp $
 bin/amor
 bin/kodo
 bin/kteatime
@@ -499,13 +499,13 @@ share/kde/apps/kmoon/pics/moon8.png
 share/kde/apps/kmoon/pics/moon9.png
 share/kde/apps/kodo/numbers.png
 share/kde/apps/kteatime/eventsrc
-share/kde/apps/kteatime/icons/crystalsvg/16x16/apps/kteatime.png
 share/kde/apps/kteatime/icons/crystalsvg/22x22/actions/mug.png
 share/kde/apps/kteatime/icons/crystalsvg/22x22/actions/tea_anim1.png
 share/kde/apps/kteatime/icons/crystalsvg/22x22/actions/tea_anim2.png
 share/kde/apps/kteatime/icons/crystalsvg/22x22/actions/tea_not_ready.png
-share/kde/apps/kteatime/icons/crystalsvg/32x32/apps/kteatime.png
-share/kde/apps/kteatime/icons/crystalsvg/48x48/apps/kteatime.png
+share/kde/apps/kteatime/icons/hicolor/16x16/apps/kteatime.png
+share/kde/apps/kteatime/icons/hicolor/32x32/apps/kteatime.png
+share/kde/apps/kteatime/icons/hicolor/48x48/apps/kteatime.png
 share/kde/apps/ktux/sprites/anim0001.png
 share/kde/apps/ktux/sprites/anim0002.png
 share/kde/apps/ktux/sprites/anim0003.png
@@ -577,32 +577,38 @@ share/kde/apps/kworldclock/pics/flag-mask.xpm
 share/kde/apps/kworldclock/pics/flag-red.png
 share/kde/apps/kworldclock/pics/flag.png
 share/kde/apps/kworldclock/zone.tab
-share/kde/icons/crystalsvg/16x16/apps/amor.png
-share/kde/icons/crystalsvg/16x16/apps/kmoon.png
-share/kde/icons/crystalsvg/16x16/apps/kodo.png
-share/kde/icons/crystalsvg/16x16/apps/kteatime.png
-share/kde/icons/crystalsvg/16x16/apps/kweather.png
-share/kde/icons/crystalsvg/16x16/apps/kworldclock.png
-share/kde/icons/crystalsvg/32x32/apps/amor.png
-share/kde/icons/crystalsvg/32x32/apps/kmoon.png
-share/kde/icons/crystalsvg/32x32/apps/kodo.png
-share/kde/icons/crystalsvg/32x32/apps/kteatime.png
-share/kde/icons/crystalsvg/32x32/apps/kweather.png
-share/kde/icons/crystalsvg/32x32/apps/kworldclock.png
-share/kde/icons/crystalsvg/48x48/apps/amor.png
-share/kde/icons/crystalsvg/48x48/apps/kmoon.png
-share/kde/icons/crystalsvg/48x48/apps/kodo.png
-share/kde/icons/crystalsvg/48x48/apps/kteatime.png
-share/kde/icons/crystalsvg/48x48/apps/kweather.png
-share/kde/icons/crystalsvg/48x48/apps/kworldclock.png
-share/kde/icons/locolor/16x16/apps/ktux.png
-share/kde/icons/locolor/32x32/apps/ktux.png
+share/kde/icons/hicolor/16x16/apps/amor.png
+share/kde/icons/hicolor/16x16/apps/kmoon.png
+share/kde/icons/hicolor/16x16/apps/kodo.png
+share/kde/icons/hicolor/16x16/apps/kteatime.png
+share/kde/icons/hicolor/16x16/apps/ktux.png
+share/kde/icons/hicolor/16x16/apps/kweather.png
+share/kde/icons/hicolor/16x16/apps/kworldclock.png
+share/kde/icons/hicolor/22x22/apps/amor.png
+share/kde/icons/hicolor/22x22/apps/kworldclock.png
+share/kde/icons/hicolor/32x32/apps/amor.png
+share/kde/icons/hicolor/32x32/apps/kmoon.png
+share/kde/icons/hicolor/32x32/apps/kodo.png
+share/kde/icons/hicolor/32x32/apps/kteatime.png
+share/kde/icons/hicolor/32x32/apps/ktux.png
+share/kde/icons/hicolor/32x32/apps/kweather.png
+share/kde/icons/hicolor/32x32/apps/kworldclock.png
+share/kde/icons/hicolor/48x48/apps/amor.png
+share/kde/icons/hicolor/48x48/apps/kmoon.png
+share/kde/icons/hicolor/48x48/apps/kodo.png
+share/kde/icons/hicolor/48x48/apps/kteatime.png
+share/kde/icons/hicolor/48x48/apps/kweather.png
+share/kde/icons/hicolor/48x48/apps/kworldclock.png
 share/kde/services/kcmweather.desktop
 share/kde/services/kcmweatherservice.desktop
 share/kde/services/kweatherservice.desktop
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
@@ -615,14 +621,15 @@ share/kde/services/kweatherservice.desktop
 @dirrm share/kde/apps/kweather
 @dirrm share/kde/apps/ktux/sprites
 @dirrm share/kde/apps/ktux
-@dirrm share/kde/apps/kteatime/icons/crystalsvg/48x48/apps
-@dirrm share/kde/apps/kteatime/icons/crystalsvg/48x48
-@dirrm share/kde/apps/kteatime/icons/crystalsvg/32x32/apps
-@dirrm share/kde/apps/kteatime/icons/crystalsvg/32x32
+@dirrm share/kde/apps/kteatime/icons/hicolor/48x48/apps
+@dirrm share/kde/apps/kteatime/icons/hicolor/48x48
+@dirrm share/kde/apps/kteatime/icons/hicolor/32x32/apps
+@dirrm share/kde/apps/kteatime/icons/hicolor/32x32
+@dirrm share/kde/apps/kteatime/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/kteatime/icons/hicolor/16x16
+@dirrm share/kde/apps/kteatime/icons/hicolor
 @dirrm share/kde/apps/kteatime/icons/crystalsvg/22x22/actions
 @dirrm share/kde/apps/kteatime/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kteatime/icons/crystalsvg/16x16/apps
-@dirrm share/kde/apps/kteatime/icons/crystalsvg/16x16
 @dirrm share/kde/apps/kteatime/icons/crystalsvg
 @dirrm share/kde/apps/kteatime/icons
 @dirrm share/kde/apps/kteatime
