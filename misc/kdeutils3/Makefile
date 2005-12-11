@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2005/12/05 20:50:39 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2005/12/11 11:45:44 markd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 COMMENT=	Utilities for the KDE integrated X11 desktop
@@ -30,7 +30,11 @@ CPPFLAGS+=		-DARK_TAR="\"${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar\""
 CPPFLAGS+=             -D__NetBSD_APM__
 .endif
 
+CONFIGURE_ARGS+=	--with-pythondir=${LOCALBASE}
+
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 
