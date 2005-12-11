@@ -1,0 +1,28 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/12/11 13:36:27 markd Exp $
+#
+
+PKGNAME=	acroread7-${DISTNAME}-7.0
+MASTER_SITES=	ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/7.0/misc/
+
+HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep.html
+
+DEPENDS+=	acroread7-7.*:../../print/acroread7
+
+DIST_SUBDIR=	acrobat7-fonts
+LICENSE=	adobe-acrobat-license
+
+RESTRICTED=	Redistribution not permitted
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+USE_TOOLS+=	tar
+
+do-install:
+	@${TAR} xf ${TAR_FILE} -C ${PREFIX}/Acrobat7/Resource
+
+.include "../../mk/bsd.pkg.mk"
