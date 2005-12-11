@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/02/06 23:10:09 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/12/11 22:46:50 dillo Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -32,7 +32,9 @@ share/doc/html/vice/vice_toc.html
 share/doc/vice/64doc.txt
 share/doc/vice/BUGS
 share/doc/vice/COPYING
+share/doc/vice/MSDOS-Ethernet-Howto.txt
 share/doc/vice/MSDOS-Howto.txt
+share/doc/vice/MinixVmd-Howto.txt
 share/doc/vice/NEWS
 share/doc/vice/NLS-Howto.txt
 share/doc/vice/PETdoc.txt
@@ -52,6 +54,7 @@ share/doc/vice/vice-logo.jpg
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vice.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vice.mo
 share/vice/C128/basic64

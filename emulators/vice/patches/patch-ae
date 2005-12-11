@@ -1,7 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2003/06/23 19:05:11 kristerw Exp $
---- src/Makefile.in.orig	Mon Jun 23 20:03:19 2003
-+++ src/Makefile.in	Mon Jun 23 20:04:28 2003
-@@ -18,7 +18,7 @@
+$NetBSD: patch-ae,v 1.6 2005/12/11 22:46:50 dillo Exp $
+
+--- src/Makefile.in.orig	2005-11-20 20:43:07.000000000 +0100
++++ src/Makefile.in
+@@ -18,7 +18,7 @@ srcdir = @srcdir@
  top_srcdir = @top_srcdir@
  VPATH = @srcdir@
  pkgdatadir = $(datadir)/@PACKAGE@
@@ -10,12 +11,3 @@ $NetBSD: patch-ae,v 1.5 2003/06/23 19:05:11 kristerw Exp $
  pkgincludedir = $(includedir)/@PACKAGE@
  top_builddir = ..
  
-@@ -220,7 +220,7 @@
- 
- # We have to override the automake default, because we need to use
- # $(CXX) instead of $(CC) when compiling with reSID.
--LINK = @LINKCC@ $(CFLAGS) $(INCLUDES) $(CPPFLAGS) -o $@
-+LINK = @LINKCC@ $(CFLAGS) $(INCLUDES) $(CPPFLAGS) $(LDFLAGS) -o $@
- 
- SUBDIRS = \
- 	@RESID_DIR@ \
