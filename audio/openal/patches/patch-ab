@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/12/01 13:59:43 adam Exp $
+$NetBSD: patch-ab,v 1.3 2005/12/11 21:42:02 joerg Exp $
 
 --- configure.orig	2004-08-16 15:27:18.000000000 +0000
 +++ configure
@@ -70,6 +70,24 @@ $NetBSD: patch-ab,v 1.2 2004/12/01 13:59:43 adam Exp $
  else
  
  cat >>confdefs.h <<\_ACEOF
+@@ -3214,7 +3273,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+     OS_OBJS="\$(LIN_OBJS)" ;;
+-    *bsd*)
++    *bsd* | *dragonfly*)
+     BROKEN_PTHREAD_FLAG=yes
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -3301,7 +3360,7 @@ case "$target" in
+     *linux*)
+     # No extra libs needed
+     ;;
+-    *bsd*)
++    *bsd* | *dragonfly*)
+     # No extra libs needed
+     ;;
+     *solaris*)
 @@ -5749,9 +5808,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
