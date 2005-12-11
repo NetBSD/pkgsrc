@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2005/12/05 20:51:17 rillig Exp $
+# $NetBSD: Makefile,v 1.96 2005/12/11 10:53:54 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -43,6 +43,7 @@ SUBST_STAGE.kdelibsfix=		pre-configure
 SUBST_MESSAGE.kdelibsfix=	"Fixing hardcoded paths."
 SUBST_FILES.kdelibsfix= \
 	kdecore/kstandarddirs.cpp \
+	kdecore/ktimezones.cpp \
 	kdeui/ksconfig.cpp \
 	kio/kssl/kopenssl.cc
 SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
@@ -80,8 +81,10 @@ PLIST_SUBST+=		KDED_WORKAROUND="@comment "
 .  else
 PLIST_SUBST+=		KDED_WORKAROUND=""
 .  endif
+PLIST_SUBST+=		NEED_ZONETAB=""
 .else
 PLIST_SUBST+=		KDED_WORKAROUND=""
+PLIST_SUBST+=		NEED_ZONETAB="@comment "
 .endif
 
 .include "../../mk/krb5.buildlink3.mk"
@@ -89,6 +92,7 @@ CONFIGURE_ARGS+=	--with-gssapi=yes
 
 post-install:
 .if ${OPSYS} == "NetBSD"
+	${INSTALL_DATA} ${FILESDIR}/zone.tab ${PREFIX}/share
 .  if ${OS_VERSION:M1.5.[12]*} || ${OS_VERSION:M1.[0-4]*}
 	@${RM} ${PREFIX}/lib/kded.*
 .  endif
