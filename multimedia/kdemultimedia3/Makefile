@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2005/12/11 09:40:45 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/11 11:20:51 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -54,6 +53,7 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/tunepimp/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
