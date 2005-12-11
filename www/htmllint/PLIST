@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/07/19 13:18:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/12/11 13:30:58 taca Exp $
 bin/htmllint
 libexec/cgi-bin/htmllint.cgi
 libexec/cgi-bin/htmllint.env
@@ -57,6 +57,8 @@ share/httpd/htdocs/htmllint/htmllint.pm
 share/httpd/htdocs/htmllint/htmllint2.css
 share/httpd/htdocs/htmllint/htmllinte.html
 share/httpd/htdocs/htmllint/htmllintl.html
+share/httpd/htdocs/htmllint/htmlplus.dtd
+share/httpd/htdocs/htmllint/htmlplus.rul
 share/httpd/htdocs/htmllint/httpreq.pl
 share/httpd/htdocs/htmllint/i18n.dtd
 share/httpd/htdocs/htmllint/i18n.rul
@@ -89,6 +91,8 @@ share/httpd/htdocs/htmllint/imode30.dtd
 share/httpd/htdocs/htmllint/imode30.rul
 share/httpd/htdocs/htmllint/imode40.dtd
 share/httpd/htdocs/htmllint/imode40.rul
+share/httpd/htdocs/htmllint/imode50.dtd
+share/httpd/htdocs/htmllint/imode50.rul
 share/httpd/htdocs/htmllint/index.html
 share/httpd/htdocs/htmllint/introduction.html
 share/httpd/htdocs/htmllint/jpo.dtd
