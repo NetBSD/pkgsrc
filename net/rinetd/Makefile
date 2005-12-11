@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:49 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/11 21:49:06 rillig Exp $
 #
 
 DISTNAME=		rinetd
@@ -21,7 +21,7 @@ CPPFLAGS+=		-DRINETD_CONF="\"${PKG_SYSCONFDIR}/rinetd.conf\""
 RCD_SCRIPTS=		rinetd
 
 post-extract:
-	@cd ${WRKDIR} && ${MV} -f rinetd ${PKGNAME:S|nb*||}
+	@cd ${WRKDIR} && ${MV} -f rinetd ${PKGNAME_NOREV}
 
 pre-build:
 	@${MV} -f ${WRKSRC}/rinetd.8 ${WRKSRC}/rinetd.8.pre
