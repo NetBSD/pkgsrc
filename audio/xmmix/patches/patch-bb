@@ -1,8 +1,25 @@
-$NetBSD: patch-bb,v 1.1 2000/11/02 14:24:32 mjl Exp $
+$NetBSD: patch-bb,v 1.2 2005/12/11 20:35:41 joerg Exp $
 
---- ../xmmix-1.2/main.c	Thu Nov  7 17:01:43 1996
-+++ ./main.c	Mon Aug 11 23:12:51 1997
-@@ -159,7 +159,7 @@
+--- main.c.orig	1996-11-07 16:01:43.000000000 +0000
++++ main.c
+@@ -33,7 +33,7 @@ static char *_main_c_ident_ = "@(#)main.
+ bool_t			exit_flag;	/* Flag indicating end of application */
+ appdata_t		app_data;	/* Options data */
+ widgets_t		widgets;	/* Holder of all widgets */
+-FILE			*errfp = stderr;/* Error message stream */
++FILE			*errfp;/* Error message stream */
+ 
+ 
+ /***********************
+@@ -103,6 +103,7 @@ main(int argc, char **argv)
+ 
+ 	/* Initialize variables */
+ 	exit_flag = FALSE;
++	errfp = stderr;
+ 
+ 	/* Handle some signals */
+ 	signal(SIGINT, onsig);
+@@ -159,7 +160,7 @@ main(int argc, char **argv)
  	post_realize_config(&widgets);
  
  	/* Register callback routines */
