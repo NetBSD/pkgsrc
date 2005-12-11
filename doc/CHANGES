@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12165 2005/12/11 13:21:13 markd Exp $
+$NetBSD: CHANGES,v 1.12166 2005/12/11 13:32:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5659,3 +5659,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/kdevelop-base to 3.3.0 [markd 2005-12-11]
 	Updated devel/kdevelop to 3.3.0 [markd 2005-12-11]
 	Removed misc/kgeography [markd 2005-12-11]
+	Updated www/htmllint to 20050924 [taca 2005-12-11]
