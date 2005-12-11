@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/11 19:21:36 joerg Exp $
 
 --- configure.orig	2005-02-16 15:53:57.000000000 +0000
 +++ configure
-@@ -35,7 +35,8 @@ echo
+@@ -13,10 +13,6 @@ if [ "$1" = "--help" ]; then
+   exit 0
+ fi
+ 
+-cd pcre-3.9 || exit 1
+-./configure || exit 1
+-cd ..
+-
+ echo
+ echo
+ echo "Starting amap auto configuration ..."
+@@ -35,7 +31,8 @@ echo
  echo "Checking for openssl ..."
  for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib \
  /*ssl /usr/*ssl /opt/*ssl /usr/local/*ssl /opt/local/*ssl \
@@ -12,7 +23,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
  do
      if [ "X" = "X$SSL_PATH" ]; then
          if [ -f "$i/libssl.so" -o -f "$i/libssl.dylib" ]; then
-@@ -62,7 +63,7 @@ do
+@@ -62,7 +59,7 @@ do
  done
  
  for i in /usr/local/include /*ssl/include /usr/include \
@@ -21,7 +32,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
  do
      if [ "X" = "X$SSL_IPATH" ]; then
          if [ -f "$i/openssl/ssl.h" ]; then
-@@ -89,7 +90,7 @@ if [ "$SSL_IPATH" = "/usr/include" ]; th
+@@ -89,7 +86,7 @@ if [ "$SSL_IPATH" = "/usr/include" ]; th
      SSL_IPATH=""
  fi
  
@@ -30,7 +41,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
  if [ "$SYS" = "SunOS" ]; then
      echo "Checking for Solaris libraries ..."
      for i in  /lib /usr/lib /usr/local/lib $LIBDIRS
-@@ -152,7 +153,7 @@ if [ -n "$RESOLV_PATH" ]; then
+@@ -152,7 +149,7 @@ if [ -n "$RESOLV_PATH" ]; then
      XLIBS="$XLIBS -lresolv"
  fi
  
@@ -39,7 +50,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
    if [ -d $i ]; then
      MANDIR=$i
    fi
-@@ -168,9 +169,9 @@ if [ -d /usr/kerberos/include ]; then
+@@ -168,9 +165,9 @@ if [ -d /usr/kerberos/include ]; then
  fi
  
  if [ -n "$PREFIX" ]; then
@@ -51,7 +62,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
  fi
  echo "Amap will be installed into .../bin and .../etc of: $PREFIX"
  echo "  (change this by running ./configure --prefix=path)"
-@@ -178,7 +179,7 @@ echo
+@@ -178,7 +175,7 @@ echo
  
  echo "Writing Makefile.in ..."
  echo "XDEFINES=$XDEFINES" >> Makefile.in
