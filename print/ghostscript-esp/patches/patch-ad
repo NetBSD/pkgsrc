@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.2.16.1 2005/12/11 12:04:26 seb Exp $
+
+--- lib/ps2epsi.orig	2005-04-20 20:09:25.000000000 +0100
++++ lib/ps2epsi
+@@ -5,12 +5,7 @@ if test ! -x "$gs"; then
+ 	gs=gs
+ fi
+ 
+-tmpfile=/tmp/ps2epsi$$
+-rm -f $tmpfile
+-if test -e $tmpfile; then
+-	echo "$0: Our temporary file $tmpfile already exists." 1>&2
+-	exit 1
+-fi
++tmpfile=`mktemp -t ps2epsiXXXXXX` || exit 1
+ trap "rm -rf $tmpfile" 0 1 2 3 7 13 15
+ 
+ export outfile

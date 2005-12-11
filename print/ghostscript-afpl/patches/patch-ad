@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/12/11 12:04:26 seb Exp $
+
+--- lib/pv.sh.orig	2004-08-04 01:55:46.000000000 +0100
++++ lib/pv.sh
+@@ -34,9 +34,10 @@ TEMPDIR=.
+ PAGE=$1
+ shift
+ FILE=$1
++TEMPFILE=`mktemp -t ${FILE}XXXXXX` || exit 1
+ shift
+-trap "rm -rf $TEMPDIR/$FILE.$$.pv" 0 1 2 15
++trap "rm -rf $TEMPFILE" 0 1 2 15
+ #dvips -D$RESOLUTION -p $PAGE -n 1 $FILE $* -o $FILE.$$.pv
+-dvips -p $PAGE -n 1 $FILE $* -o $FILE.$$.pv
+-$GS_EXECUTABLE $FILE.$$.pv
++dvips -p $PAGE -n 1 $FILE $* -o $TEMPFILE
++gs $TEMPFILE
+ exit 0
