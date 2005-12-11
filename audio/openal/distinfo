@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 20:39:50 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/12/11 21:42:02 joerg Exp $
 
 SHA1 (openal-20040816.tar.gz) = 0a7939c30176aace28170ce2aa96f19efa00110a
 RMD160 (openal-20040816.tar.gz) = ec02d6b918d9d6d7f2387fd3d14cfe0a47e034ef
 Size (openal-20040816.tar.gz) = 388952 bytes
 SHA1 (patch-aa) = cbb97881e7c60b227663cba6cf61bc3e585e3ade
-SHA1 (patch-ab) = 3bf26efb5c41f2dd867fdfc9a089b2ba0d0e6457
+SHA1 (patch-ab) = 5a700f94869a975e8253c708eef5401ff2165b58
 SHA1 (patch-ac) = 36169f2b1d95d06102a777dbe2bea2a2d9db2b86
 SHA1 (patch-ad) = 5590a7754f3d149e6b52bb0176fd07eed52a880d
