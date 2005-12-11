@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2005/03/23 22:38:45 markd Exp $
+$NetBSD: patch-ab,v 1.7 2005/12/11 12:01:11 markd Exp $
 
---- Makefile.in.orig	2005-03-05 01:47:58.000000000 +1300
+--- Makefile.in.orig	2005-11-21 09:28:20.000000000 +1300
 +++ Makefile.in
-@@ -413,7 +413,7 @@ x_libraries = @x_libraries@
- xdg_appsdir = @xdg_appsdir@
- xdg_directorydir = @xdg_directorydir@
- xdg_menudir = @xdg_menudir@
--SUBDIRS = bdb lib parts languages buildtools editors vcs src pics doc mimetypes embedded kdevdesigner
-+SUBDIRS = lib parts languages buildtools editors vcs src pics doc mimetypes embedded kdevdesigner
- EXTRA_DIST = AUTHORS COPYING COPYING.LIB NEWS ChangeLog INSTALL README TODO HACKING HACKING.language admin configure.in.bot
- xdg_apps_DATA = kdevelop.desktop kdevassistant.desktop kdevelop_ruby.desktop \
- 	kdevelop_c_cpp.desktop  kdevelop_kde_cpp.desktop  kdevelop_scripting.desktop
+@@ -1022,7 +1022,7 @@ $(top_srcdir)/configure.files: $(top_src
+ $(top_srcdir)/Makefile.am: $(top_srcdir)/Makefile.am.in $(top_srcdir)/subdirs $(top_srcdir)/admin/cvs.sh
+ 	@cd $(top_srcdir) && $(SHELL) admin/cvs.sh Makefile_am
+ 
+-$(top_srcdir)/subdirs: $(top_srcdir)/Makefile.am.in $(top_srcdir)/admin/cvs.sh
++$(top_srcdir)/subdirs: $(top_srcdir)/admin/cvs.sh
+ 	@cd $(top_srcdir) && $(SHELL) admin/cvs.sh subdirs
+ 
+ # defining default rules for files that may not be present
