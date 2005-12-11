@@ -17,3 +17,4 @@
   - security holes,
   - coding style violations,
   - possible unportable constructs
+* check quoting in CFLAGS+= -DPREFIX=\"${PREFIX:Q}\"
