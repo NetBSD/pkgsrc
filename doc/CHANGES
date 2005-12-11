@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12170 2005/12/11 18:57:27 wiz Exp $
+$NetBSD: CHANGES,v 1.12171 2005/12/11 19:12:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5672,3 +5672,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/mmg to 1.6.5 [salo 2005-12-11]
 	Updated www/links to 2.1.0.20 [wiz 2005-12-11]
 	Updated www/links-gui to 2.1.0.20 [wiz 2005-12-11]
+	Updated x11/gtk2 to 2.8.9 [wiz 2005-12-11]
