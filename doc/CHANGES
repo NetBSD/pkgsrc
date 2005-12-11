@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12159 2005/12/10 22:17:18 markd Exp $
+$NetBSD: CHANGES,v 1.12160 2005/12/11 05:11:09 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5557,3 +5557,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ethereal to 0.10.13nb2 [salo 2005-12-10]
 	Updated mail/kbiff to 3.8 [markd 2005-12-10]
 	Updated mail/mimedefang to 2.54 [markd 2005-12-10]
+	Updated print/poppler to 0.4.2nb2 [salo 2005-12-11]
