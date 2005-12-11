@@ -1,81 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2005/11/18 15:04:57 joerg Exp $
+$NetBSD: patch-aa,v 1.15 2005/12/11 11:12:50 markd Exp $
 
---- configure.orig	2005-10-05 21:04:45.000000000 +0000
+--- configure.orig	2005-11-21 09:19:40.000000000 +1300
 +++ configure
-@@ -27460,72 +27460,6 @@ _ACEOF
- 
- 
- 
--  echo "$as_me:$LINENO: checking sizeof size_t == sizeof unsigned long" >&5
--echo $ECHO_N "checking sizeof size_t == sizeof unsigned long... $ECHO_C" >&6
--  cat >conftest.$ac_ext <<_ACEOF
--/* confdefs.h.  */
--_ACEOF
--cat confdefs.h >>conftest.$ac_ext
--cat >>conftest.$ac_ext <<_ACEOF
--/* end confdefs.h.  */
--
--int
--main ()
--{
--
--    #if SIZEOF_SIZE_T != SIZEOF_UNSIGNED_LONG
--       choke me
--    #endif
--
--  ;
--  return 0;
--}
--_ACEOF
--rm -f conftest.$ac_objext
--if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>conftest.er1
--  ac_status=$?
--  grep -v '^ *+' conftest.er1 >conftest.err
--  rm -f conftest.er1
--  cat conftest.err >&5
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"
--			 || test ! -s conftest.err'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; } &&
--	 { ac_try='test -s conftest.$ac_objext'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; }; then
--  echo "$as_me:$LINENO: result: yes" >&5
--echo "${ECHO_T}yes" >&6
--else
--  echo "$as_me: failed program was:" >&5
--sed 's/^/| /' conftest.$ac_ext >&5
--
--
--      echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6
--      { { echo "$as_me:$LINENO: error:
--       Apparently on your system our assumption sizeof size_t == sizeof unsigned long
--       does not apply. Please mail kde-devel@kde.org with a description of your system!
--      " >&5
--echo "$as_me: error:
--       Apparently on your system our assumption sizeof size_t == sizeof unsigned long
--       does not apply. Please mail kde-devel@kde.org with a description of your system!
--      " >&2;}
--   { (exit 1); exit 1; }; }
--
--fi
--rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
--
--
- # darwin needs this to initialize the environment
- 
- for ac_header in crt_externs.h
-@@ -41114,7 +41048,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -42014,7 +42014,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #endif
  #include <unistd.h>
  #include <arpa/inet.h>
@@ -87,7 +14,7 @@ $NetBSD: patch-aa,v 1.14 2005/11/18 15:04:57 joerg Exp $
  #include <netinet/in.h>
  
  #ifdef __svr4__
-@@ -41130,6 +41068,8 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -42030,6 +42034,8 @@ cat >>conftest.$ac_ext <<_ACEOF
  
      #if defined(linux)
        #include <linux/if_ppp.h>
