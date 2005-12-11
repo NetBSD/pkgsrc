@@ -1,15 +1,18 @@
-# $NetBSD: Makefile.common,v 1.23 2005/05/30 14:52:52 dillo Exp $
+# $NetBSD: Makefile.common,v 1.23.4.1 2005/12/11 12:04:26 seb Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
-BASEGS_VERS=	7.07
+BASEGS_VERS=	8.15
 GS_VERS=	${BASEGS_VERS}.1
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.easysw.com/pub/ghostscript/ \
+ESP_SITES=	http://ftp.easysw.com/pub/ghostscript/ \
+		ftp://ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp2.easysw.com/pub/ghostscript/ \
+		ftp://ftp3.easysw.com/pub/ghostscript/ \
+		http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/ghostscript/ \
-		ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/ghostscript/ \
-		ftp://ftp.ntua.gr/pub/gnu/ghostscript/ \
-		ftp://ftp.fisek.com.tr/pub/ghostscript/
+		ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/ghostscript/ \
+		http://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/ghostscript/
+MASTER_SITES=   ${ESP_SITES:=${GS_VERS}/}
 EXTRACT_SUFX=   .tar.bz2
 
 MAINTAINER=	jlam@NetBSD.org
@@ -23,11 +26,12 @@ DEPENDS+=	ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_PKGINSTALL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-cups
 CONFIGURE_ARGS+=	--with-ijs
-CONFIGURE_ARGS+=	--with-gimp-print
 CONFIGURE_ARGS+=	--without-omni
+CONFIGURE_ARGS+=	--with-drivers=ALL
 
 DIST_SUBDIR=		ghostscript
 GS_SRCS=		${DISTNAME}${EXTRACT_SUFX}
@@ -65,11 +69,16 @@ CUPS_CONFDIR?=		${PKG_SYSCONFBASEDIR}/cups
 CUPS_EGDIR=		${PREFIX}/share/examples/cups
 CUPS_MODEL_DIR=		${PREFIX}/share/cups/model
 DOCDIR=			${PREFIX}/share/doc/ghostscript
-HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
 
 PLIST_SUBST+=		GS_VERS=${BASEGS_VERS}
 
 CONF_FILES=	${CUPS_EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
+
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
+.include "../../print/gimp-print-lib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
@@ -77,15 +86,16 @@ post-extract:
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
 
-# Reinstall the gs binary so that it's properly stripped.
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/gs ${PREFIX}/bin/gs
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/cups/filter
 	${INSTALL_SCRIPT} ${WRKSRC}/pstoraster/pstopxl			\
 		${PREFIX}/libexec/cups/filter
 	${INSTALL_SCRIPT} ${WRKSRC}/pstoraster/pstoraster		\
 		${PREFIX}/libexec/cups/filter
+	${INSTALL_DATA_DIR} ${CUPS_MODEL_DIR}
 	${INSTALL_DATA} ${WRKSRC}/pstoraster/pxlcolor.ppd ${CUPS_MODEL_DIR}
 	${INSTALL_DATA} ${WRKSRC}/pstoraster/pxlmono.ppd ${CUPS_MODEL_DIR}
+	${INSTALL_DATA_DIR} ${CUPS_EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/pstoraster/pstoraster.convs ${CUPS_EGDIR}
 
 SUBST_CLASSES+=         ps2epsi-sh
@@ -93,11 +103,3 @@ SUBST_MESSAGE.ps2epsi-sh=   "Fixing ps2epsi shell."
 SUBST_FILES.ps2epsi-sh=     lib/ps2epsi
 SUBST_SED.ps2epsi-sh=       -e 's|/bin/sh|${SH}|'
 SUBST_STAGE.ps2epsi-sh=     post-patch
-
-.include "../../security/openssl/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
-.include "../../print/gimp-print-lib/buildlink3.mk"
-
-.include "../../mk/bsd.pkg.mk"

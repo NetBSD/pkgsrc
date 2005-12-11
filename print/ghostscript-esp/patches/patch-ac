@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/09/18 22:28:16 jlam Exp $
+$NetBSD: patch-ac,v 1.1.1.1.18.1 2005/12/11 12:04:26 seb Exp $
 
---- src/unixinst.mak.orig	Sat Jul 20 14:03:21 2002
+--- src/unixinst.mak.orig	2005-09-22 13:03:45.000000000 -0400
 +++ src/unixinst.mak
-@@ -134,7 +134,7 @@ install-man: $(PSMANDIR)/gs.1
+@@ -147,7 +147,7 @@ install-man: $(PSMANDIR)/gs.1
  			  ln -s ps2pdf.$(man1ext) $$f.$(man1ext) ) ;\
  	      done ;\
  	    fi ;\
@@ -11,3 +11,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/09/18 22:28:16 jlam Exp $
  	      then for f in $(MAN1_LINKS_GSLP) ;\
  	        do ( cd $$man1dir; rm -f $$f.$(man1ext) ;\
  			  ln -s gslp.$(man1ext) $$f.$(man1ext) ) ;\
+@@ -167,6 +167,7 @@ ridt91.eps ;\
+ 	done
+ 
+ install-shared: $(GS_SHARED_OBJS)
+-	-mkdir -p $(gssharedir)
++	$(SH) -c 'echo $(GS_SHARED_OBJS) | while read obj ; do \
++	    test -z $$obj || mkdir -p $(gssharedir); break; done'
+ 	$(SH) -c 'echo $(GS_SHARED_OBJS) | while read obj ; do \
+ 	    test -z $$obj || $(INSTALL_PROGRAM) $$obj $(gssharedir)/; done'
