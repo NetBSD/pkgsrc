@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:08:22 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/11 09:40:46 wiz Exp $
 #
 
 DISTNAME=	smpeg-xmms-0.3.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/plugins/smpeg-xmms/
 

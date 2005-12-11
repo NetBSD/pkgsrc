@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/09/28 14:31:07 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/11 09:40:43 wiz Exp $
 #
 
 DISTNAME=	starfighter-1.1-1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/xtraeme/
 DISTFILES=	${DISTNAME}.tar.gz starfighter-1.0-1.music.zip

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/06/01 18:02:47 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/11 09:40:39 wiz Exp $
 
 DISTNAME=	gnuboy-1.0.3
 PKGNAME=	${DISTNAME:S/-/-sdl-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	http://gnuboy.unix-fu.org/src/
 

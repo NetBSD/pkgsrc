@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.404 2005/12/09 15:49:34 gdt Exp $
+# $NetBSD: Makefile,v 1.405 2005/12/11 09:40:44 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -25,12 +25,10 @@ SUBDIR+=	SDLKit
 SUBDIR+=	SDL_image
 SUBDIR+=	TiffIO
 SUBDIR+=	aalib
-SUBDIR+=	aalib-x11
 SUBDIR+=	aqsis
 SUBDIR+=	artist
 SUBDIR+=	autotrace
 SUBDIR+=	aview
-SUBDIR+=	aview-x11
 SUBDIR+=	barcode
 SUBDIR+=	bktr2jpeg
 SUBDIR+=	blender

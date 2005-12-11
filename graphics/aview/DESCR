@@ -15,5 +15,3 @@ dT     8  8     Tb  aview features:
  * Hidden "bonus" features :)
  * Inversion
  * Support for bright, dim, inverse attributes/extended character set
-
-This package is built without X11 support.

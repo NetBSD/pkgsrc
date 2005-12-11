@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/11 09:40:41 wiz Exp $
 #
 
 DISTNAME=	foobillard-3.0a
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://foobillard.sunsite.dk/dnl/
 
