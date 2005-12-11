@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/11 09:40:45 wiz Exp $
 #
 
 DISTNAME=		stellarium-0.6.0
-PKGREVISION=	2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		http://stellarium.free.fr/download/
 
