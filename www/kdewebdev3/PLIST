@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/31 14:30:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/12/11 11:09:40 markd Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -8,6 +8,7 @@ bin/kmdr-plugins
 bin/kxsldbg
 bin/quanta
 bin/xsldbg
+include/kommander_export.h
 include/kommanderfactory.h
 include/kommanderplugin.h
 include/kommanderwidget.h
@@ -15,6 +16,7 @@ lib/kde3/libkfilereplacepart.la
 lib/kde3/libkimagemapeditor.la
 lib/kde3/libklinkstatuspart.la
 lib/kde3/libkxsldbgpart.la
+lib/kde3/quantadebuggerdbgp.la
 lib/kde3/quantadebuggergubed.la
 lib/libkommanderplugin.la
 lib/libkommanderwidget.la
@@ -666,6 +668,7 @@ share/kde/apps/quanta/dtep/php/ifx.tag
 share/kde/apps/quanta/dtep/php/iisfunc.tag
 share/kde/apps/quanta/dtep/php/image.tag
 share/kde/apps/quanta/dtep/php/imap.tag
+share/kde/apps/quanta/dtep/php/includes.tag
 share/kde/apps/quanta/dtep/php/info.tag
 share/kde/apps/quanta/dtep/php/ingres-ii.tag
 share/kde/apps/quanta/dtep/php/ircg.tag
@@ -1313,6 +1316,7 @@ share/kde/apps/quanta/templates/scripts/php/demo.php
 share/kde/apps/quanta/templates/text/.dirinfo
 share/kde/apps/quanta/templates/text/html/demo.html
 share/kde/apps/quanta/templates/text/others/demo.txt
+share/kde/apps/quanta/templates/text/scripts/demo.php
 share/kde/apps/quanta/tips
 share/kde/apps/quanta/toolbar/ball.png
 share/kde/apps/quanta/toolbar/check.png
@@ -1546,9 +1550,14 @@ share/kde/apps/quanta/toolbars/wml-1-2/table.toolbar.tgz
 share/kde/apps/quanta/toolbars/wml-1-2/tasks.toolbar.tgz
 share/kde/apps/quanta/toolbars/wml-1-2/text.toolbar.tgz
 share/kde/apps/quanta/toolbars/xml/fonts.toolbar.tgz
-share/kde/apps/templates/text/scripts/demo.php
 share/kde/config.kcfg/klinkstatus.kcfg
+share/kde/icons/crystalsvg/128x128/apps/kommander.png
 share/kde/icons/crystalsvg/16x16/actions/bug.png
+share/kde/icons/crystalsvg/16x16/apps/kommander.png
+share/kde/icons/crystalsvg/22x22/apps/kommander.png
+share/kde/icons/crystalsvg/32x32/apps/kommander.png
+share/kde/icons/crystalsvg/64x64/apps/kommander.png
+share/kde/icons/hicolor/128x128/apps/klinkstatus.png
 share/kde/icons/hicolor/16x16/actions/1downarrow.png
 share/kde/icons/hicolor/16x16/actions/configure.png
 share/kde/icons/hicolor/16x16/actions/exit.png
@@ -1595,6 +1604,7 @@ share/kde/icons/hicolor/22x22/actions/xsldbg_source.png
 share/kde/icons/hicolor/22x22/actions/xsldbg_stepdown.png
 share/kde/icons/hicolor/22x22/actions/xsldbg_stepup.png
 share/kde/icons/hicolor/22x22/apps/kfilereplace.png
+share/kde/icons/hicolor/22x22/apps/klinkstatus.png
 share/kde/icons/hicolor/22x22/apps/quanta.png
 share/kde/icons/hicolor/32x32/apps/kfilereplace.png
 share/kde/icons/hicolor/32x32/apps/kimagemapeditor.png
@@ -1602,7 +1612,9 @@ share/kde/icons/hicolor/32x32/apps/klinkstatus.png
 share/kde/icons/hicolor/32x32/apps/quanta.png
 share/kde/icons/hicolor/48x48/apps/kfilereplace.png
 share/kde/icons/hicolor/48x48/apps/kimagemapeditor.png
+share/kde/icons/hicolor/48x48/apps/klinkstatus.png
 share/kde/icons/hicolor/48x48/apps/quanta.png
+share/kde/icons/hicolor/64x64/apps/klinkstatus.png
 share/kde/icons/locolor/16x16/apps/kimagemapeditor.png
 share/kde/icons/locolor/32x32/apps/kimagemapeditor.png
 share/kde/mimelnk/application/x-kommander.desktop
@@ -1612,6 +1624,7 @@ share/kde/services/kimagemapeditorpart.desktop
 share/kde/services/klinkstatus_part.desktop
 share/kde/services/kxsldbg_part.desktop
 share/kde/services/quanta_preview_config.desktop
+share/kde/services/quantadebuggerdbgp.desktop
 share/kde/services/quantadebuggergubed.desktop
 share/kde/servicetypes/quantadebugger.desktop
 @comment in kde: @dirrm share/kde/servicetypes
@@ -1619,17 +1632,21 @@ share/kde/servicetypes/quantadebugger.desktop
 @comment in kde: @dirrm share/kde/mimelnk/application
 @comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
-@dirrm share/kde/apps/templates/text/scripts
-@dirrm share/kde/apps/templates/text
-@dirrm share/kde/apps/templates
 @dirrm share/kde/apps/quanta/toolbars/xml
 @dirrm share/kde/apps/quanta/toolbars/wml-1-2
 @dirrm share/kde/apps/quanta/toolbars/tagxml
@@ -1641,6 +1658,7 @@ share/kde/servicetypes/quantadebugger.desktop
 @dirrm share/kde/apps/quanta/toolbars/cfml
 @dirrm share/kde/apps/quanta/toolbars
 @dirrm share/kde/apps/quanta/toolbar
+@dirrm share/kde/apps/quanta/templates/text/scripts
 @dirrm share/kde/apps/quanta/templates/text/others
 @dirrm share/kde/apps/quanta/templates/text/html
 @dirrm share/kde/apps/quanta/templates/text
@@ -1713,9 +1731,6 @@ share/kde/servicetypes/quantadebugger.desktop
 @dirrm share/kde/apps/kafkapart/pics
 @dirrm share/kde/apps/kafkapart
 @comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Utilities
-@comment in kde: @dirrm share/kde/applnk/Editors
-@comment in kde: @dirrm share/kde/applnk/Development
 @comment in kde: @dirrm share/kde/applnk/.hidden
 @dirrm share/doc/kde/HTML/en/xsldbg
 @dirrm share/doc/kde/HTML/en/quanta
