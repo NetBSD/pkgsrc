@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.27 2005/10/20 00:23:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2005/12/11 18:56:30 wiz Exp $
 
-DISTNAME=	links-2.1pre19
+DISTNAME=	links-2.1pre20
 CATEGORIES=	www
 MASTER_SITES=	http://links.twibright.com/download/
 EXTRACT_SUFX=  .tar.bz2
