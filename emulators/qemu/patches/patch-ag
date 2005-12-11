@@ -1,17 +1,8 @@
-$NetBSD: patch-ag,v 1.3 2004/12/14 01:02:19 dbj Exp $
+$NetBSD: patch-ag,v 1.4 2005/12/11 09:40:39 wiz Exp $
 
---- configure.orig	Sun Nov 14 15:51:33 2004
+--- configure.orig	2005-09-04 17:11:31.000000000 +0000
 +++ configure
-@@ -259,7 +259,7 @@ aa="no"
- `$sdl_config --static-libs | grep \\\-laa > /dev/null` && aa="yes"
- sdl_static_libs=`$sdl_config --static-libs`
- if [ "$aa" = "yes" ] ; then
--  sdl_static_libs="$sdl_static_libs `aalib-config --static-libs`"
-+  sdl_static_libs="$sdl_static_libs `aalib-x11-config --static-libs`"
- fi
- 
- if $cc -o $TMPE `$sdl_config --cflags 2> /dev/null` $TMPC $sdl_static_libs 2> /dev/null; then
-@@ -314,7 +314,7 @@ else
+@@ -366,7 +366,7 @@ else
  if test -z "$prefix" ; then
      prefix="/usr/local"
  fi
@@ -20,7 +11,7 @@ $NetBSD: patch-ag,v 1.3 2004/12/14 01:02:19 dbj Exp $
  datadir="$prefix/share/qemu"
  docdir="$prefix/share/doc/qemu"
  bindir="$prefix/bin"
-@@ -423,6 +423,8 @@ if test "$mingw32" = "yes" ; then
+@@ -539,6 +539,8 @@ if test "$mingw32" = "yes" ; then
    echo "#define CONFIG_WIN32 1" >> $config_h
  elif test -f "/usr/include/byteswap.h" ; then
    echo "#define HAVE_BYTESWAP_H 1" >> $config_h
@@ -29,12 +20,3 @@ $NetBSD: patch-ag,v 1.3 2004/12/14 01:02:19 dbj Exp $
  fi
  if test "$darwin" = "yes" ; then
    echo "CONFIG_DARWIN=yes" >> $config_mak
-@@ -566,7 +568,7 @@ if test "$target_user_only" = "no"; then
-         fi
-         echo -n "SDL_CFLAGS=`$sdl_config --cflags`" >> $config_mak
-         if [ "${aa}" = "yes" ] ; then
--            echo -n " `aalib-config --cflags`" >> $config_mak ;
-+            echo -n " `aalib-x11-config --cflags`" >> $config_mak ;
-         fi
-         echo "" >> $config_mak
-     fi

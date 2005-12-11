@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:44:59 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/11 09:40:38 wiz Exp $
 #
 
 DISTNAME=	infinity-0.2
 PKGNAME=	xmms-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://julien.carme.free.fr/
 

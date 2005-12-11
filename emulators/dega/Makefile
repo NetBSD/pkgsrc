@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/10/23 14:34:41 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/11 09:40:39 wiz Exp $
 #
 
 DISTNAME=	dega-1.07
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.emulinks.de/emus/
 

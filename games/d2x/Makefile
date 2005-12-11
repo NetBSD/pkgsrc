@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:07 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/11 09:40:40 wiz Exp $
 #
 
 DISTNAME=	d2x-0.2.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games x11
 MASTER_SITES=	http://icculus.org/d2x/src/
 

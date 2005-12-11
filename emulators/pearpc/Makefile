@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:12 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/11 09:40:39 wiz Exp $
 #
 
 DISTNAME=		pearpc-0.3.1
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pearpc/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/10/30 11:47:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/11 09:40:39 wiz Exp $
 #
 
 DISTNAME=		fceu-0.98.13.src
 PKGNAME=		${DISTNAME:S/.src//}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://pdaxrom.theinternet.nl/fceu/
 EXTRACT_SUFX=		.tar.bz2

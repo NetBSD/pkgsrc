@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/05/25 21:07:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/11 09:40:45 wiz Exp $
 #
 
 GST_PLUGINS_NAME=	mpeg2dec
 GST_PLUGINS_DIR=	ext/mpeg2dec
+PKGREVISION=		1
 
 .include "../../multimedia/gst-plugins/Makefile.common"
 

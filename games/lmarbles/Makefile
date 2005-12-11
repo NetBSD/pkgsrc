@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/09/23 20:06:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/11 09:40:42 wiz Exp $
 
 DISTNAME=	lmarbles-1.0.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 
