@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2005/12/05 20:50:01 rillig Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/12/11 09:40:38 wiz Exp $
 
 DISTNAME=	SDL-1.2.9
 CATEGORIES=	devel games
@@ -63,7 +63,7 @@ MAKE_ENV+=		AM_CFLAGS=${AM_CFLAGS:Q}
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .endif
-.include "../../graphics/aalib-x11/buildlink3.mk"
+.include "../../graphics/aalib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"

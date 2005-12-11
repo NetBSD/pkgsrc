@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2005/05/06 20:58:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2005/12/11 09:40:46 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PARAGUI_BUILDLINK3_MK:=	${PARAGUI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	paragui
 
 .if !empty(PARAGUI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.paragui+=	paragui>=1.0.4nb3
-BUILDLINK_RECOMMENDED.paragui+=	paragui>=1.0.4nb6
+BUILDLINK_RECOMMENDED.paragui+=	paragui>=1.0.4nb8
 BUILDLINK_PKGSRCDIR.paragui?=	../../x11/paragui
 .endif	# PARAGUI_BUILDLINK3_MK
 
