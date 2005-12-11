@@ -1,16 +1,33 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/04/24 12:10:48 adrianp Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/11 19:21:36 joerg Exp $
 
 --- Makefile.am.orig	2005-02-18 18:01:26.000000000 +0000
 +++ Makefile.am
-@@ -1,7 +1,8 @@
+@@ -1,16 +1,14 @@
 -CC=gcc
-+#CC=gcc
- LIB=-lpcre -L./pcre-3.9/ -I./pcre-3.9/
+-LIB=-lpcre -L./pcre-3.9/ -I./pcre-3.9/
 -OPT=-O2
 -OPT_DEBUG=-ggdb -Wall -lefence
++#CC=gcc
++LIB=-lpcre
 +SHAREDIR=${PREFIX}/share/amap
 +OPT=${CFLAGS} -DSHAREDIR="\"$(SHAREDIR)/\""
 +#OPT_DEBUG=-ggdb -Wall -lefence
  BINDIR=/bin
  DATADIR=/etc
  MANDIR=/man/man1
+ SCRIPTS=appdefs.trig appdefs.resp appdefs.rpc
+ MANPAGE=amap.1
+-all:	pcre strip
+-
+-pcre:
+-	cd pcre-3.9 && make
++all:	strip
+ 
+ amap-lib.o:	amap-lib.c
+ 	$(CC) $(OPT) -c -o amap-lib.o amap-lib.c $(XIPATHS) $(XDEFINES)
+@@ -43,5 +41,4 @@ install:	all
+ 	-cp -f $(MANPAGE) $(PREFIX)$(MANDIR)
+ 
+ clean:	
+-	cd pcre-3.9 && make clean
+ 	rm -f amap amapcrap amap.exe amapcrap.exe amap6 amap-lib.o Makefile.in core *~ Makefile

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:16 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/11 19:21:36 joerg Exp $
 #
 
 DISTNAME=       amap-5.0
+PKGREVISION=	1
 CATEGORIES=     net security
 MASTER_SITES=   http://www.thc.org/releases/
 
@@ -34,8 +35,6 @@ SUBST_MESSAGE.conf=	"Fixing configure script."
 
 INSTALLATION_DIRS=	bni man/man1
 
-.include "../../security/openssl/buildlink3.mk"
-
 post-extract:
 	@${CHMOD} 0700 ${WRKSRC}
 
@@ -49,4 +48,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/appdefs.resp ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/appdefs.rpc ${EGDIR}
 
+
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
