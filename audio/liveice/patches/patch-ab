@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2001/05/05 10:05:34 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2005/12/11 22:24:03 joerg Exp $
 
---- streams.c.orig	Tue May 23 20:08:00 2000
+--- streams.c.orig	2000-05-23 18:08:00.000000000 +0000
 +++ streams.c
 @@ -36,7 +36,11 @@
  #ifdef HAVE_SYS_SOUNDCARD_H
@@ -14,7 +14,16 @@ $NetBSD: patch-ab,v 1.2 2001/05/05 10:05:34 wiz Exp $
  #endif
  #endif
  #include <sys/ioctl.h>
-@@ -77,11 +81,23 @@
+@@ -44,8 +48,6 @@
+ #define BUF_SIZE BUF_LENGTH*2
+ #define BUFLEN 1024*32
+ 
+-extern int errno;
+-
+ FILE *ds;
+ 
+ /* suggested legal sample rates */
+@@ -77,11 +79,23 @@ void check_soundcard(void)
  {
          int format,stereo,speed,caps;
  #ifdef SOUNDCARD_SUPPORT
@@ -38,12 +47,12 @@ $NetBSD: patch-ab,v 1.2 2001/05/05 10:05:34 wiz Exp $
          /* see if the card can do full_duplex */
          if(g_conf.full_duplex){
                  ioctl(g_conf.audio_fd, SNDCTL_DSP_GETCAPS, &caps);
-@@ -97,7 +113,33 @@
+@@ -97,7 +111,33 @@ void check_soundcard(void)
  			g_conf.full_duplex=0;
  		}
  	}
 +#endif /* __NetBSD__ */
- 
++
 +#ifdef __NetBSD__
 +	if(ioctl(g_conf.audioctl_fd, AUDIO_GETINFO, &(g_conf.ctlrestore)) < 0)
 +		fatal("ioctl(AUDIO_GETINFO) failed");
@@ -65,14 +74,14 @@ $NetBSD: patch-ab,v 1.2 2001/05/05 10:05:34 wiz Exp $
 +	ctlinfo.record.precision = 16;
 +	ctlinfo.record.encoding = AUDIO_ENCODING_SLINEAR_LE;
 +	ctlinfo.mode = AUMODE_RECORD;
-+
+ 
 +	if(ioctl(g_conf.audioctl_fd, AUDIO_SETINFO, &ctlinfo) < 0)
 +		fatal("ioctl(AUDIO_SETINFO) failed");
 +#else
  	ioctl(g_conf.audio_fd, SNDCTL_DSP_GETFMTS, &format);
  	if(!(format&AFMT_S16_LE))
  		fatal("16bit mode not supported by driver");
-@@ -113,6 +155,7 @@
+@@ -113,6 +153,7 @@ void check_soundcard(void)
  	speed=g_conf.sample_rate;
  	if(ioctl(g_conf.audio_fd,SNDCTL_DSP_SPEED,&speed)==-1)
  		fatal("Speed Setting failed\n");
@@ -80,7 +89,7 @@ $NetBSD: patch-ab,v 1.2 2001/05/05 10:05:34 wiz Exp $
  
  	
  	fprintf(stderr,"16Bit %dHz ",g_conf.sample_rate);
-@@ -121,8 +164,10 @@
+@@ -121,8 +162,10 @@ void check_soundcard(void)
  	if(g_conf.full_duplex)
  	 	  fprintf(stderr,"Full Duplex ");
  	fprintf(stderr,"\n");
@@ -91,7 +100,7 @@ $NetBSD: patch-ab,v 1.2 2001/05/05 10:05:34 wiz Exp $
  #else
  	write_message("This executable Doesn't Support Soundcards",0);
  #endif
-@@ -136,9 +181,10 @@
+@@ -136,9 +179,10 @@ void open_soundcard(int flags){
  #ifdef SOUNDCARD_SUPPORT
         write_message("Opening Soundcard",1);
          
@@ -103,7 +112,7 @@ $NetBSD: patch-ab,v 1.2 2001/05/05 10:05:34 wiz Exp $
          if(g_conf.full_duplex)
  #ifdef HAVE_SYS_SOUNDCARD_H
  	        ioctl(g_conf.audio_fd, SNDCTL_DSP_SETDUPLEX, 0);  
-@@ -157,6 +203,7 @@
+@@ -157,6 +201,7 @@ void open_soundcard(int flags){
  	speed=g_conf.sample_rate;
  	if(ioctl(g_conf.audio_fd,SNDCTL_DSP_SPEED,&speed)==-1)
  		fatal("Speed Setting failed\n");
@@ -111,7 +120,7 @@ $NetBSD: patch-ab,v 1.2 2001/05/05 10:05:34 wiz Exp $
  #else
  	write_message("This executable Doesn't Support Soundcards",0);
  #endif
-@@ -166,8 +213,21 @@
+@@ -166,8 +211,21 @@ void close_soundcard(void)
  {
  #ifdef SOUNDCARD_SUPPORT
  	write_message("Closing Soundcard",1);
