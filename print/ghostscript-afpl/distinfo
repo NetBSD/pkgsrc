@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/12 19:20:20 drochner Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.1 2005/12/11 12:04:26 seb Exp $
 
 SHA1 (ghostscript-8.51.tar.bz2) = 2230c8cc565ab2fbff669ae4118937b07727cad6
 RMD160 (ghostscript-8.51.tar.bz2) = 2e4e4e72d00ce84914910136dafa702fa28d8174
@@ -8,3 +8,5 @@ RMD160 (jpegsrc.v6b.tar.gz) = 18892206014fbb8cae2a44e281f4ed53feaf7882
 Size (jpegsrc.v6b.tar.gz) = 613261 bytes
 SHA1 (patch-aa) = f9d706b19430c32f568316c0b02eee792e311236
 SHA1 (patch-ab) = ee1cad8503700d088e2a4dcf4c3d14237cb84b0e
+SHA1 (patch-ac) = 2d320ff00f77c8a62c549e0e3288a55af63fd7aa
+SHA1 (patch-ad) = ed75f35c19ae2b19bc8902522b5d4828dfa278fe
