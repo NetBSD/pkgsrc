@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4271 2005/12/11 19:17:49 wiz Exp $
+$NetBSD: TODO,v 1.4272 2005/12/11 19:20:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -721,7 +721,7 @@ Suggested package updates
 	o lout-3.31
 	o lucy-1.19p
 	o lwp-2.1
-	o m1-0.7.7
+	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mail-notification-2.0
