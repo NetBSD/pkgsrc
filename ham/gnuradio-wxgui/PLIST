@@ -1,13 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/07 23:11:02 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/11 11:47:27 wulf Exp $
 ${PYSITELIB}/gnuradio/wxgui/__init__.py
 ${PYSITELIB}/gnuradio/wxgui/__init__.pyc
 ${PYSITELIB}/gnuradio/wxgui/__init__.pyo
 ${PYSITELIB}/gnuradio/wxgui/fftsink.py
 ${PYSITELIB}/gnuradio/wxgui/fftsink.pyc
 ${PYSITELIB}/gnuradio/wxgui/fftsink.pyo
+${PYSITELIB}/gnuradio/wxgui/form.py
+${PYSITELIB}/gnuradio/wxgui/form.pyo
+${PYSITELIB}/gnuradio/wxgui/form.pyc
 ${PYSITELIB}/gnuradio/wxgui/plot.py
 ${PYSITELIB}/gnuradio/wxgui/plot.pyc
 ${PYSITELIB}/gnuradio/wxgui/plot.pyo
+${PYSITELIB}/gnuradio/wxgui/powermate.py
+${PYSITELIB}/gnuradio/wxgui/powermate.pyc
+${PYSITELIB}/gnuradio/wxgui/powermate.pyo
 ${PYSITELIB}/gnuradio/wxgui/scopesink.py
 ${PYSITELIB}/gnuradio/wxgui/scopesink.pyc
 ${PYSITELIB}/gnuradio/wxgui/scopesink.pyo
