@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2005/12/05 20:50:36 rillig Exp $
+# $NetBSD: Makefile,v 1.77 2005/12/11 14:37:12 markd Exp $
 
-DISTNAME=		R-2.1.1
-PKGREVISION=		1
+DISTNAME=		R-2.2.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -31,9 +30,9 @@ CONFIGURE_ARGS+=	--with-tcltk
 CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 CONFIGURE_ARGS+=	--without-gnome		# not yet stable
-CONFIGURE_ARGS+=	--with-zlib
-CONFIGURE_ARGS+=	--with-bzlib
-CONFIGURE_ARGS+=	--with-pcre
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--with-system-bzlib
+CONFIGURE_ARGS+=	--with-system-pcre
 
 # Use BLAS (math/blas)
 #
