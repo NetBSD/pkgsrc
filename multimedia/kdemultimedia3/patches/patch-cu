@@ -1,8 +1,19 @@
-$NetBSD: patch-cu,v 1.4 2004/10/14 11:10:00 markd Exp $
+$NetBSD: patch-cu,v 1.5 2005/12/11 11:20:51 markd Exp $
 
---- kioslave/audiocd/audiocd.cpp.orig	2004-08-05 19:25:33.000000000 +0000
-+++ kioslave/audiocd/audiocd.cpp	2004-10-10 19:38:46.000000000 +0000
-@@ -1092,7 +1092,7 @@
+--- kioslave/audiocd/audiocd.cpp.orig	2005-11-09 11:26:44.000000000 +1300
++++ kioslave/audiocd/audiocd.cpp
+@@ -26,8 +26,8 @@
+ 
+ extern "C"
+ {
+-	#include <cdda_interface.h>
+-	#include <cdda_paranoia.h>
++	#include <cdparanoia/cdda_interface.h>
++	#include <cdparanoia/cdda_paranoia.h>
+ 	void paranoiaCallback(long, int);
+ 	
+ 	#include <kdemacros.h>
+@@ -827,7 +827,7 @@ void AudioCDProtocol::paranoiaRead(
  		 * 2) Only increase in size unless the decrease is %5 of last estimate.
  		 * This prevents continues small changes which is just annoying.
  		 */
