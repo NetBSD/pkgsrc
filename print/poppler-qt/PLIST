@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/11 10:07:31 markd Exp $
+include/poppler/poppler-qt.h
+lib/libpoppler-qt.la
+lib/pkgconfig/poppler-qt.pc
