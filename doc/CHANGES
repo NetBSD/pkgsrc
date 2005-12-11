@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12160 2005/12/11 05:11:09 salo Exp $
+$NetBSD: CHANGES,v 1.12161 2005/12/11 09:44:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5558,3 +5558,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/kbiff to 3.8 [markd 2005-12-10]
 	Updated mail/mimedefang to 2.54 [markd 2005-12-10]
 	Updated print/poppler to 0.4.2nb2 [salo 2005-12-11]
+	Updated graphics/aalib to 1.4.0.5nb1 [wiz 2005-12-11]
+	Updated graphics/aview to 1.3.0.1nb5 [wiz 2005-12-11]
+	Removed graphics/aalib-x11 [wiz 2005-12-11]
+	Removed graphics/aview-x11 [wiz 2005-12-11]
