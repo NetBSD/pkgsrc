@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/10/13 13:22:55 markd Exp $
+# $NetBSD: Makefile,v 1.40 2005/12/11 11:52:33 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -71,6 +71,7 @@ CONFIGURE_ARGS+=	--with-svn-include="${BUILDLINK_PREFIX.subversion-base}/include
 CONFIGURE_ARGS+=	--with-svn-lib="${BUILDLINK_PREFIX.subversion-base}/lib"
 PLIST_SUBST+=		HAVE_SVN=""
 .else
+CONFIGURE_ARGS+=	--with-subversion=no
 PLIST_SUBST+=		HAVE_SVN="@comment "
 .endif
 
