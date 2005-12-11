@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.pkg.dist,v 1.7 2005/11/16 01:36:46 seb Exp $
+# $NetBSD: OSF1.pkg.dist,v 1.8 2005/12/11 12:49:41 markd Exp $
 #
 
 /set type=dir uname=root gname=system mode=0755
@@ -740,6 +740,10 @@
                 ..
             ..
             kl
+                LC_MESSAGES
+                ..
+            ..
+            km
                 LC_MESSAGES
                 ..
             ..
