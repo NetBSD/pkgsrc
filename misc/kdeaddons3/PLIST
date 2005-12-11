@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2005/03/27 21:23:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/12/11 11:26:25 markd Exp $
 bin/atlantikdesigner
 bin/exif.py
 bin/fsview
 bin/jpegorient
+bin/kio_media_realfolder
 bin/ksig
 bin/lnkforward
 bin/noatunsynaescope.bin
@@ -11,7 +12,6 @@ bin/noatuntyler.bin
 bin/orient.py
 lib/kde3/katecppsymbolviewerplugin.la
 lib/kde3/katefiletemplates.la
-lib/kde3/katefll_initplugin.la
 lib/kde3/katefll_plugin.la
 lib/kde3/katehtmltoolsplugin.la
 lib/kde3/katemodelineplugin.la
@@ -23,7 +23,6 @@ lib/kde3/katexmlcheckplugin.la
 lib/kde3/katexmltoolsplugin.la
 lib/kde3/kbinaryclock_panelapplet.la
 lib/kde3/kcm_kuick.la
-lib/kde3/kcm_vim.la
 lib/kde3/kfile_cert.la
 lib/kde3/kfile_desktop.la
 lib/kde3/kfile_folder.la
@@ -33,7 +32,9 @@ lib/kde3/kfile_mhtml.la
 lib/kde3/kfile_txt.la
 lib/kde3/kolourpicker_panelapplet.la
 lib/kde3/konq_sidebarnews.la
+lib/kde3/konqsidebar_delicious.la
 lib/kde3/konqsidebar_mediaplayer.la
+lib/kde3/konqsidebar_metabar.la
 lib/kde3/ktimemon_panelapplet.la
 lib/kde3/libakregatorkonqfeedicon.la
 lib/kde3/libakregatorkonqplugin.la
@@ -50,6 +51,7 @@ lib/kde3/libkatetabbarextensionplugin.la
 lib/kde3/libkhtmlsettingsplugin.la
 lib/kde3/libkimgallery.la
 lib/kde3/libkuickplugin.la
+lib/kde3/libmfkonqmficon.la
 lib/kde3/libminitoolsplugin.la
 lib/kde3/librellinksplugin.la
 lib/kde3/librenaudioplugin.la
@@ -57,7 +59,6 @@ lib/kde3/librenimageplugin.la
 lib/kde3/libsearchbarplugin.la
 lib/kde3/libuachangerplugin.la
 lib/kde3/libvalidatorsplugin.la
-lib/kde3/libvimpart.la
 lib/kde3/libwebarchiverplugin.la
 lib/kde3/math_panelapplet.la
 lib/kde3/mediacontrol_panelapplet.la
@@ -76,9 +77,7 @@ lib/kde3/noatuntyler.la
 lib/kde3/noatunwakeup.la
 lib/kde3/noatunwavecapture.la
 lib/kde3/webarchivethumbnail.la
-lib/libxvim.la
 share/applications/kde/atlantikdesigner.desktop
-share/applications/kde/kcmvim.desktop
 share/applications/kde/ksig.desktop
 share/doc/kde/HTML/en/kate-plugins/common
 share/doc/kde/HTML/en/kate-plugins/filetemplates.docbook
@@ -144,7 +143,6 @@ share/doc/kde/HTML/en/konq-plugins/webarchiver/index.docbook
 share/kde/applnk/.hidden/arkplugin.desktop
 share/kde/applnk/.hidden/katefll.desktop
 share/kde/applnk/.hidden/kcmkuick.desktop
-share/kde/applnk/.hidden/kimgalleryplugin.desktop
 share/kde/applnk/.hidden/kuickplugin.desktop
 share/kde/applnk/.hidden/lnkforward.desktop
 share/kde/applnk/.hidden/mediaplayerplugin.desktop
@@ -188,7 +186,6 @@ share/kde/apps/katexmltools/xhtml1-frameset.dtd.xml
 share/kde/apps/katexmltools/xhtml1-strict.dtd.xml
 share/kde/apps/katexmltools/xhtml1-transitional.dtd.xml
 share/kde/apps/katexmltools/xslt-1.0.dtd.xml
-share/kde/apps/kcontrol/pics/kvim.png
 share/kde/apps/khtml/kpartplugins/akregator_konqfeedicon.desktop
 share/kde/apps/khtml/kpartplugins/akregator_konqfeedicon.rc
 share/kde/apps/khtml/kpartplugins/autorefresh.desktop
@@ -199,6 +196,8 @@ share/kde/apps/khtml/kpartplugins/crashesplugin.rc
 share/kde/apps/khtml/kpartplugins/domtreeviewerplugin.desktop
 share/kde/apps/khtml/kpartplugins/khtmlsettingsplugin.desktop
 share/kde/apps/khtml/kpartplugins/khtmlsettingsplugin.rc
+share/kde/apps/khtml/kpartplugins/mf_konqmficon.desktop
+share/kde/apps/khtml/kpartplugins/mf_konqmficon.rc
 share/kde/apps/khtml/kpartplugins/minitoolsplugin.desktop
 share/kde/apps/khtml/kpartplugins/minitoolsplugin.rc
 share/kde/apps/khtml/kpartplugins/plugin_babelfish.desktop
@@ -229,18 +228,26 @@ share/kde/apps/knewsticker/scripts/fyensget.py
 share/kde/apps/knewsticker/scripts/newsrss.pl
 share/kde/apps/knewsticker/scripts/sportscores.py
 share/kde/apps/knewsticker/scripts/stock.pl
+share/kde/apps/konqiconview/kpartplugins/dirfilterplugin.desktop
 share/kde/apps/konqiconview/kpartplugins/dirfilterplugin.rc
+share/kde/apps/konqiconview/kpartplugins/kimgalleryplugin.desktop
 share/kde/apps/konqiconview/kpartplugins/kimgalleryplugin.rc
+share/kde/apps/konqlistview/kpartplugins/dirfilterplugin.desktop
 share/kde/apps/konqlistview/kpartplugins/dirfilterplugin.rc
+share/kde/apps/konqlistview/kpartplugins/kimgalleryplugin.desktop
 share/kde/apps/konqlistview/kpartplugins/kimgalleryplugin.rc
+share/kde/apps/konqsidebartng/add/delicious_add.desktop
+share/kde/apps/konqsidebartng/add/metabar_add.desktop
 share/kde/apps/konqsidebartng/add/mplayer_add.desktop
 share/kde/apps/konqsidebartng/add/news_add.desktop
+share/kde/apps/konqsidebartng/entries/metabar.desktop
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/google.png
 share/kde/apps/konqueror/kpartplugins/searchbar.desktop
 share/kde/apps/konqueror/kpartplugins/searchbar.rc
 share/kde/apps/konqueror/kpartplugins/searchbarplugin.desktop
 share/kde/apps/konqueror/servicemenus/imageconverter.desktop
 share/kde/apps/konqueror/servicemenus/jpegorient.desktop
+share/kde/apps/konqueror/servicemenus/media_realfolder.desktop
 share/kde/apps/ksig/ksigui.rc
 share/kde/apps/mediacontrol/blueish/next.png
 share/kde/apps/mediacontrol/blueish/pause.png
@@ -257,6 +264,10 @@ share/kde/apps/mediacontrol/fulldecent/pause.png
 share/kde/apps/mediacontrol/fulldecent/play.png
 share/kde/apps/mediacontrol/fulldecent/prev.png
 share/kde/apps/mediacontrol/fulldecent/stop.png
+share/kde/apps/metabar/iconsrc
+share/kde/apps/metabar/themes/default/default.css
+share/kde/apps/metabar/themes/default/layout.html
+share/kde/apps/microformat/pics/microformat.png
 share/kde/apps/noatun/alsaplayerui.plugin
 share/kde/apps/noatun/blurscope.plugin
 share/kde/apps/noatun/charlatanui.plugin
@@ -273,10 +284,6 @@ share/kde/apps/noatun/tyler.plugin
 share/kde/apps/noatun/tylerstates
 share/kde/apps/noatun/wakeup.plugin
 share/kde/apps/noatun/wavecapture.plugin
-share/kde/apps/vimpart/kvim.vim
-share/kde/apps/vimpart/vimpartui.rc
-share/kde/apps/vimpart/vimpartuibrowser.rc
-share/kde/apps/vimpart/vimpartuireadonly.rc
 share/kde/config.kcfg/kbinaryclock.kcfg
 share/kde/config.kcfg/konq_sidebarnews.kcfg
 share/kde/config/translaterc
@@ -285,9 +292,10 @@ share/kde/icons/crystalsvg/16x16/actions/cssvalidator.png
 share/kde/icons/crystalsvg/16x16/actions/domtreeviewer.png
 share/kde/icons/crystalsvg/16x16/actions/htmlvalidator.png
 share/kde/icons/crystalsvg/16x16/actions/imagegallery.png
+share/kde/icons/crystalsvg/16x16/actions/minitools.png
 share/kde/icons/crystalsvg/16x16/actions/validators.png
 share/kde/icons/crystalsvg/16x16/actions/webarchiver.png
-share/kde/icons/crystalsvg/16x16/apps/atlantikdesigner.png
+share/kde/icons/crystalsvg/16x16/apps/konqsidebar_delicious.png
 share/kde/icons/crystalsvg/16x16/apps/konqsidebar_mediaplayer.png
 share/kde/icons/crystalsvg/16x16/apps/konqsidebar_news.png
 share/kde/icons/crystalsvg/16x16/apps/ktimemon.png
@@ -297,17 +305,27 @@ share/kde/icons/crystalsvg/22x22/actions/cssvalidator.png
 share/kde/icons/crystalsvg/22x22/actions/domtreeviewer.png
 share/kde/icons/crystalsvg/22x22/actions/htmlvalidator.png
 share/kde/icons/crystalsvg/22x22/actions/imagegallery.png
+share/kde/icons/crystalsvg/22x22/actions/minitools.png
 share/kde/icons/crystalsvg/22x22/actions/validators.png
 share/kde/icons/crystalsvg/22x22/actions/webarchiver.png
 share/kde/icons/crystalsvg/22x22/apps/konqsidebar_mediaplayer.png
-share/kde/icons/crystalsvg/32x32/apps/atlantikdesigner.png
+share/kde/icons/crystalsvg/32x32/actions/minitools.png
 share/kde/icons/crystalsvg/32x32/apps/konqsidebar_mediaplayer.png
 share/kde/icons/crystalsvg/32x32/apps/ktimemon.png
+share/kde/icons/crystalsvg/48x48/actions/minitools.png
 share/kde/icons/crystalsvg/48x48/apps/konqsidebar_mediaplayer.png
+share/kde/icons/hicolor/128x128/apps/metabar.png
+share/kde/icons/hicolor/16x16/apps/atlantikdesigner.png
 share/kde/icons/hicolor/16x16/apps/ksig.png
+share/kde/icons/hicolor/16x16/apps/metabar.png
 share/kde/icons/hicolor/22x22/apps/fsview.png
+share/kde/icons/hicolor/32x32/apps/atlantikdesigner.png
 share/kde/icons/hicolor/32x32/apps/fsview.png
 share/kde/icons/hicolor/32x32/apps/ksig.png
+share/kde/icons/hicolor/32x32/apps/metabar.png
+share/kde/icons/hicolor/48x48/apps/metabar.png
+share/kde/icons/hicolor/64x64/apps/metabar.png
+share/kde/icons/hicolor/scalable/apps/metabar.svgz
 share/kde/icons/locolor/16x16/apps/autorefresh.png
 share/kde/icons/locolor/16x16/apps/ktimemon.png
 share/kde/icons/locolor/32x32/apps/konqsidebar_mediaplayer.png
@@ -315,13 +333,11 @@ share/kde/icons/locolor/32x32/apps/ktimemon.png
 share/kde/mimelnk/application/x-win-lnk.desktop
 share/kde/services/akregator_konqplugin.desktop
 share/kde/services/ark_plugin.desktop
-share/kde/services/dirfilterplugin.desktop
 share/kde/services/fsview_part.desktop
 share/kde/services/kaddressbook/geo_xxport.desktop
 share/kde/services/kaddressbook/gmx_xxport.desktop
 share/kde/services/katecppsymbolviewer.desktop
 share/kde/services/katefiletemplates.desktop
-share/kde/services/katefll_initplugin.desktop
 share/kde/services/katefll_plugin.desktop
 share/kde/services/katehtmltools.desktop
 share/kde/services/katemodeline.desktop
@@ -342,25 +358,35 @@ share/kde/services/kfile_txt.desktop
 share/kde/services/kuick_plugin.desktop
 share/kde/services/renaudiodlg.desktop
 share/kde/services/renimagedlg.desktop
-share/kde/services/vimpart.desktop
 share/kde/services/webarchivethumbnail.desktop
 @comment in kde: @dirrm share/kde/services/kaddressbook
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/application
 @comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/actions
 @comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
 @comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/vimpart
+@dirrm share/kde/apps/noatun
+@dirrm share/kde/apps/microformat/pics
+@dirrm share/kde/apps/microformat
+@dirrm share/kde/apps/metabar/themes/default
+@dirrm share/kde/apps/metabar/themes
+@dirrm share/kde/apps/metabar
 @dirrm share/kde/apps/mediacontrol/fulldecent
 @dirrm share/kde/apps/mediacontrol/default
 @dirrm share/kde/apps/mediacontrol/blueish
@@ -369,6 +395,7 @@ share/kde/services/webarchivethumbnail.desktop
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @comment in kde: @dirrm share/kde/apps/konqueror/kpartplugins
 @comment in kdebase: @dirrm share/kde/apps/konqueror/icons/crystalsvg/16x16/actions
+@comment in kdebase: @dirrm share/kde/apps/konqsidebartng/entries
 @comment in kdebase: @dirrm share/kde/apps/konqsidebartng/add
 @comment in kdebase: @dirrm share/kde/apps/konqlistview/kpartplugins
 @comment in kdebase: @dirrm share/kde/apps/konqiconview/kpartplugins

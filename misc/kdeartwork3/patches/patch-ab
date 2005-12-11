@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2004/08/21 13:01:33 markd Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/11 11:31:45 markd Exp $
 
 --- kscreensaver/kdesavers/rotation.h.orig	2004-04-17 11:42:39.000000000 +1200
 +++ kscreensaver/kdesavers/rotation.h
@@ -9,9 +9,9 @@ $NetBSD: patch-ab,v 1.1 2004/08/21 13:01:33 markd Exp $
 -      const double &_A,
 -      const double &_B,
 -      const double &_C,
-+      const double &_AA,
-+      const double &_BB,
-+      const double &_CC,
++      const double &A_,
++      const double &B_,
++      const double &C_,
        std::valarray<double> &_y,
        const double &eps);
  

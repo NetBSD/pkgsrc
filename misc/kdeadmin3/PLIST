@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2005/07/30 11:44:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/12/11 11:28:15 markd Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
 bin/secpolicy
+lib/kde3/kcm_knetworkconfmodule.la
 lib/kde3/kfile_deb.la
 lib/kde3/kfile_rpm.la
+lib/pkgconfig/system-tools-backends.pc
+share/applications/kde/kcm_knetworkconfmodule.desktop
 share/applications/kde/kcron.desktop
 share/applications/kde/kpackage.desktop
 share/applications/kde/kuser.desktop
@@ -19,6 +22,20 @@ share/doc/kde/HTML/en/kcron/print.png
 share/doc/kde/HTML/en/kdat/common
 share/doc/kde/HTML/en/kdat/index.cache.bz2
 share/doc/kde/HTML/en/kdat/index.docbook
+share/doc/kde/HTML/en/knetworkconf/01.png
+share/doc/kde/HTML/en/knetworkconf/02.png
+share/doc/kde/HTML/en/knetworkconf/03.png
+share/doc/kde/HTML/en/knetworkconf/04.png
+share/doc/kde/HTML/en/knetworkconf/05.png
+share/doc/kde/HTML/en/knetworkconf/06.png
+share/doc/kde/HTML/en/knetworkconf/07.png
+share/doc/kde/HTML/en/knetworkconf/08.png
+share/doc/kde/HTML/en/knetworkconf/09.png
+share/doc/kde/HTML/en/knetworkconf/11.png
+share/doc/kde/HTML/en/knetworkconf/about1.png
+share/doc/kde/HTML/en/knetworkconf/common
+share/doc/kde/HTML/en/knetworkconf/index.cache.bz2
+share/doc/kde/HTML/en/knetworkconf/index.docbook
 share/doc/kde/HTML/en/kpackage/bsdloc.png
 share/doc/kde/HTML/en/kpackage/common
 share/doc/kde/HTML/en/kpackage/debaptloc.png
@@ -31,6 +48,7 @@ share/doc/kde/HTML/en/kpackage/left.png
 share/doc/kde/HTML/en/kpackage/right-change.png
 share/doc/kde/HTML/en/kpackage/right-files.png
 share/doc/kde/HTML/en/kpackage/right-prop.png
+share/doc/kde/HTML/en/kpackage/root-prompt.png
 share/doc/kde/HTML/en/kpackage/rpmloc.png
 share/doc/kde/HTML/en/kpackage/search.png
 share/doc/kde/HTML/en/kpackage/searchf.png
@@ -44,7 +62,42 @@ share/doc/kde/HTML/en/kuser/common
 share/doc/kde/HTML/en/kuser/index.cache.bz2
 share/doc/kde/HTML/en/kuser/index.docbook
 share/doc/kde/HTML/en/kuser/kuser.png
+share/doc/kde/HTML/en/lilo-config/common
+share/doc/kde/HTML/en/lilo-config/index.cache.bz2
+share/doc/kde/HTML/en/lilo-config/index.docbook
 share/kde/apps/kcron/kcronui.rc
+share/kde/apps/knetworkconf/backends/debug.pl
+share/kde/apps/knetworkconf/backends/file.pl
+share/kde/apps/knetworkconf/backends/general.pl
+share/kde/apps/knetworkconf/backends/network-conf
+share/kde/apps/knetworkconf/backends/network.pl
+share/kde/apps/knetworkconf/backends/parse.pl
+share/kde/apps/knetworkconf/backends/platform.pl
+share/kde/apps/knetworkconf/backends/process.pl
+share/kde/apps/knetworkconf/backends/replace.pl
+share/kde/apps/knetworkconf/backends/report.pl
+share/kde/apps/knetworkconf/backends/service-list.pl
+share/kde/apps/knetworkconf/backends/service.pl
+share/kde/apps/knetworkconf/backends/util.pl
+share/kde/apps/knetworkconf/backends/xml.pl
+share/kde/apps/knetworkconf/pixmaps/ark.png
+share/kde/apps/knetworkconf/pixmaps/blackpanther.png
+share/kde/apps/knetworkconf/pixmaps/conectiva.png
+share/kde/apps/knetworkconf/pixmaps/debian.png
+share/kde/apps/knetworkconf/pixmaps/fedora.png
+share/kde/apps/knetworkconf/pixmaps/freebsd.png
+share/kde/apps/knetworkconf/pixmaps/gentoo.png
+share/kde/apps/knetworkconf/pixmaps/kubuntu.png
+share/kde/apps/knetworkconf/pixmaps/mandrake.png
+share/kde/apps/knetworkconf/pixmaps/openna.png
+share/kde/apps/knetworkconf/pixmaps/pld.png
+share/kde/apps/knetworkconf/pixmaps/redhat.png
+share/kde/apps/knetworkconf/pixmaps/slackware.png
+share/kde/apps/knetworkconf/pixmaps/specifix.png
+share/kde/apps/knetworkconf/pixmaps/suse.png
+share/kde/apps/knetworkconf/pixmaps/turbolinux.png
+share/kde/apps/knetworkconf/pixmaps/vine.png
+share/kde/apps/knetworkconf/pixmaps/yoper.png
 share/kde/apps/kpackage/kpackageui.rc
 share/kde/apps/kpackage/pics/bnew.png
 share/kde/apps/kpackage/pics/bsd.png
@@ -79,26 +132,38 @@ share/kde/apps/kuser/kuserui.rc
 share/kde/apps/kuser/pics/group.png
 share/kde/apps/kuser/pics/user.png
 share/kde/config.kcfg/kuser.kcfg
-share/kde/icons/crystalsvg/128x128/apps/kpackage.png
-share/kde/icons/crystalsvg/128x128/apps/kuser.png
-share/kde/icons/crystalsvg/16x16/apps/kcron.png
-share/kde/icons/crystalsvg/16x16/apps/kpackage.png
-share/kde/icons/crystalsvg/16x16/apps/kuser.png
-share/kde/icons/crystalsvg/32x32/apps/kcron.png
-share/kde/icons/crystalsvg/32x32/apps/kpackage.png
-share/kde/icons/crystalsvg/32x32/apps/kuser.png
-share/kde/icons/crystalsvg/48x48/apps/kpackage.png
-share/kde/icons/crystalsvg/48x48/apps/kuser.png
-share/kde/icons/crystalsvg/64x64/apps/kpackage.png
-share/kde/icons/crystalsvg/64x64/apps/kuser.png
+share/kde/icons/hicolor/128x128/apps/kpackage.png
+share/kde/icons/hicolor/128x128/apps/kuser.png
+share/kde/icons/hicolor/16x16/apps/kcron.png
+share/kde/icons/hicolor/16x16/apps/knetworkconf.png
+share/kde/icons/hicolor/16x16/apps/kpackage.png
+share/kde/icons/hicolor/16x16/apps/kuser.png
+share/kde/icons/hicolor/22x22/actions/network_connected_lan_knc.png
+share/kde/icons/hicolor/22x22/actions/network_disconnected_lan.png
+share/kde/icons/hicolor/22x22/actions/network_disconnected_wlan.png
+share/kde/icons/hicolor/22x22/actions/network_traffic_wlan.png
+share/kde/icons/hicolor/22x22/apps/kcron.png
+share/kde/icons/hicolor/22x22/apps/knetworkconf.png
+share/kde/icons/hicolor/22x22/apps/kpackage.png
+share/kde/icons/hicolor/22x22/apps/kuser.png
+share/kde/icons/hicolor/32x32/apps/kcron.png
+share/kde/icons/hicolor/32x32/apps/knetworkconf.png
+share/kde/icons/hicolor/32x32/apps/kpackage.png
+share/kde/icons/hicolor/32x32/apps/kuser.png
+share/kde/icons/hicolor/48x48/apps/kpackage.png
+share/kde/icons/hicolor/48x48/apps/kuser.png
+share/kde/icons/hicolor/64x64/apps/kpackage.png
+share/kde/icons/hicolor/64x64/apps/kuser.png
 share/kde/services/kfile_deb.desktop
 share/kde/services/kfile_rpm.desktop
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/kuser/pics
 @dirrm share/kde/apps/kuser/icons/crystalsvg/22x22/actions
@@ -108,11 +173,16 @@ share/kde/services/kfile_rpm.desktop
 @dirrm share/kde/apps/kuser
 @dirrm share/kde/apps/kpackage/pics
 @dirrm share/kde/apps/kpackage
+@dirrm share/kde/apps/knetworkconf/pixmaps
+@dirrm share/kde/apps/knetworkconf/backends
+@dirrm share/kde/apps/knetworkconf
 @dirrm share/kde/apps/kcron
 @comment in kde: @dirrm share/kde/apps
+@dirrm share/doc/kde/HTML/en/lilo-config
 @dirrm share/doc/kde/HTML/en/kuser
 @dirrm share/doc/kde/HTML/en/ksysv
 @dirrm share/doc/kde/HTML/en/kpackage
+@dirrm share/doc/kde/HTML/en/knetworkconf
 @dirrm share/doc/kde/HTML/en/kdat
 @dirrm share/doc/kde/HTML/en/kcron
 @comment in kde: @dirrm share/doc/kde/HTML/en

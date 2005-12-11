@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2005/10/13 12:57:39 markd Exp $
+$NetBSD: distinfo,v 1.25 2005/12/11 11:26:25 markd Exp $
 
-SHA1 (kdeaddons-3.4.3.tar.bz2) = 5509f515904b857304e78b077d79fd2d9d437314
-RMD160 (kdeaddons-3.4.3.tar.bz2) = 1c11919ecbf1cfc31423e9fcda21e3c223ec1b28
-Size (kdeaddons-3.4.3.tar.bz2) = 1593317 bytes
+SHA1 (kdeaddons-3.5.0.tar.bz2) = c3ccd6d54f46c8164480a17956e11033908d03ff
+RMD160 (kdeaddons-3.5.0.tar.bz2) = 1c6522752697ab4f54fa877767dae6714bcb6afe
+Size (kdeaddons-3.5.0.tar.bz2) = 1618786 bytes
 SHA1 (patch-aa) = 68cea80eaf8f9c457f9d4a74a32f0da549699878
