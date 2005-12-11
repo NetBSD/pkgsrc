@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2005/12/01 19:02:45 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/11 11:16:35 wulf Exp $
 
---- src/lib/runtime/gr_error_handler.cc.orig	2005-12-01 18:18:08.000000000 +0000
-+++ src/lib/runtime/gr_error_handler.cc
-@@ -48,6 +48,10 @@
- #include <assert.h>
- #include <stdexcept>
+--- src/lib/runtime/gr_error_handler.cc.orig	2005-06-24 13:01:16.000000000 +0930
++++ src/lib/runtime/gr_error_handler.cc	2005-12-11 05:15:23.000000000 +1030
+@@ -53,6 +53,10 @@
+ #include <io.h>
+ #endif
  
 +#ifdef HAVE_UNISTD_H
 +#include <unistd.h>
