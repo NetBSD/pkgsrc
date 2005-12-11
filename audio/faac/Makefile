@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/06/01 20:07:59 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/11 11:09:06 hira Exp $
 #
 
 DISTNAME=	faac-1.24
@@ -21,5 +21,7 @@ pre-configure:
 	cd ${WRKSRC};						\
 	${LIBTOOLIZE} --automake;				\
 	aclocal; autoheader; automake -a --foreign -i; autoconf
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
