@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2005/12/11 05:08:50 salo Exp $
+
+Security fix for CVE-2005-3192.
+
+--- poppler/Stream.h.orig	2005-04-27 22:56:18.000000000 +0200
++++ poppler/Stream.h	2005-12-11 05:51:36.000000000 +0100
+@@ -231,6 +231,8 @@ public:
+ 
+   ~StreamPredictor();
+ 
++  GBool isOk() { return ok; }
++
+   int lookChar();
+   int getChar();
+ 
+@@ -248,6 +250,7 @@ private:
+   int rowBytes;			// bytes per line
+   Guchar *predLine;		// line buffer
+   int predIdx;			// current index in predLine
++  GBool ok;
+ };
+ 
+ //------------------------------------------------------------------------
