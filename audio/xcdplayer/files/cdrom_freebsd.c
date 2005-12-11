@@ -1,4 +1,4 @@
-/* $NetBSD: cdrom_freebsd.c,v 1.5 1998/09/07 18:56:54 garbled Exp $ */
+/* $NetBSD: cdrom_freebsd.c,v 1.6 2005/12/11 20:48:46 joerg Exp $ */
 /*
  * Copyright (C) 1990 Regents of the University of California.
  *
@@ -22,7 +22,9 @@ static int c;
 # include <sys/param.h>
 # include <sys/stat.h>
 # include <string.h>
+#ifndef __DragonFly__
 # include <sys/buf.h>
+#endif
 # include <sys/time.h>
 
 #include <sys/ioctl.h>
