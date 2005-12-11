@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2005/10/02 12:19:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.43 2005/12/11 19:11:32 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -292,6 +292,7 @@ share/doc/gdk-pixbuf/gdk-pixbuf-refcounting.html
 share/doc/gdk-pixbuf/gdk-pixbuf-scaling.html
 share/doc/gdk-pixbuf/gdk-pixbuf-util.html
 share/doc/gdk-pixbuf/gdk-pixbuf.devhelp
+share/doc/gdk-pixbuf/gdk-pixbuf.devhelp2
 share/doc/gdk-pixbuf/home.png
 share/doc/gdk-pixbuf/index.html
 share/doc/gdk-pixbuf/index.sgml
@@ -364,6 +365,7 @@ share/doc/gdk/gdk-Visuals.html
 share/doc/gdk/gdk-Windows.html
 share/doc/gdk/gdk-X-Window-System-Interaction.html
 share/doc/gdk/gdk.devhelp
+share/doc/gdk/gdk.devhelp2
 share/doc/gdk/gobbler.png
 share/doc/gdk/gumby.png
 share/doc/gdk/hand1.png
@@ -656,6 +658,7 @@ share/doc/gtk/gtk-update-icon-cache.html
 share/doc/gtk/gtk-windows.html
 share/doc/gtk/gtk-x11.html
 share/doc/gtk/gtk.devhelp
+share/doc/gtk/gtk.devhelp2
 share/doc/gtk/gtk.html
 share/doc/gtk/gtkbase.html
 share/doc/gtk/gtkfilechooser-installing-extra-widgets.html
