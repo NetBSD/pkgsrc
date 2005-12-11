@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2005/10/13 13:27:21 markd Exp $
+# $NetBSD: Makefile,v 1.47 2005/12/11 12:01:11 markd Exp $
 
-DISTNAME=	kdevelop-3.2.3
-PKGNAME=	kdevelop-base-3.2.3
+DISTNAME=	kdevelop-3.3.0
+PKGNAME=	kdevelop-base-3.3.0
 CATEGORIES=	devel kde
 
 HOMEPAGE=       http://www.kdevelop.org/
@@ -40,15 +40,15 @@ EVAL_PREFIX+=	\
 	KDELIBDIR=kdelibs
 
 CONFIGURE_ARGS+= \
+	--with-db-includedir=${BUILDLINK_PREFIX.db4}/include/db4 \
+	--with-db-libdir=${BUILDLINK_PREFIX.db4}/lib \
+	--with-db-lib=db4 \
 	--with-qtdoc-dir=${QT3DIR}/qt3/doc/html \
 	--with-kdelibsdoxy-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs-apidocs
 
-.include "../../databases/db3/buildlink3.mk"
-CPPFLAGS+= -I${BUILDLINK_PREFIX.db3}/include/db3
-MAKE_ENV+= BDB_LIBS="${BUILDLINK_LDADD.db3}"
-
 .include "../../meta-pkgs/kde3/kde3.mk"
 
+.include "../../databases/db4/buildlink3.mk"
 .include "../../devel/kdesdk3/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
