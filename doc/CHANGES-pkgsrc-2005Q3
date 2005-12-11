@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.96 2005/12/10 23:41:11 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.97 2005/12/11 12:08:35 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -211,3 +211,5 @@ Pullup ticket 951 - requested by Lubomir Sedlacik
 security fix for webmin
 Pullup ticket 950 - requested by Lubomir Sedlacik
 security fix for ethereal
+Pullup ticket 946 - requested by Tracy Di Marco White
+update print/ghostscript*, including a security fix
