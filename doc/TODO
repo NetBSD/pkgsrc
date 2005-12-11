@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4272 2005/12/11 19:20:07 wiz Exp $
+$NetBSD: TODO,v 1.4273 2005/12/11 22:50:38 dillo Exp $
 
 Suggested new packages
 ======================
@@ -1221,7 +1221,6 @@ Suggested package updates
 	o vcdimager-devel-0.7.23
 	o verilog-0.8.2
 	o vfu-4.03
-	o vice-1.18
 	o vifm-0.3a
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
 	o vlc-0.8.4
