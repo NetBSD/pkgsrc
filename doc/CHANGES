@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12163 2005/12/11 10:27:30 hira Exp $
+$NetBSD: CHANGES,v 1.12164 2005/12/11 12:03:34 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5564,3 +5564,12 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed graphics/aview-x11 [wiz 2005-12-11]
 	Added print/poppler-qt version 0.4.2 [markd 2005-12-11]
 	Updated www/firefox-bin-flash to 7.0r61 [hira 2005-12-11]
+	Update ham/gnuradio-core to 2.6 [wulf 2005-12-11]
+	Update ham/gnuradio-audio-oss to 0.7 [wulf 2005-12-11]
+	Update ham/gnuradio-gsm to 0.2 [wulf 2005-12-11]
+	Update ham/usrp to 0.9 [wulf 2005-12-11]
+	Update ham/gnuradio-usrp to 0.6 [wulf 2005-12-11]
+	Update ham/gnuradio-wxgui to 0.4 [wulf 2005-12-11]
+	Update ham/gnuradio-examples to 0.5 [wulf 2005-12-11]
+	Update ham/gnuradio-howto to 0.4 [wulf 2005-12-11]
+	Update meta-pkgs/gnuradio to 2.6 [wulf 2005-12-11]
