@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/12/16 13:22:23 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/12/11 13:33:26 taca Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RUBY_ERUBY_BUILDLINK3_MK:=	${RUBY_ERUBY_BUILDLINK3_MK}+
@@ -11,13 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:N${RUBY_PKGPREFIX}-eruby}
 BUILDLINK_PACKAGES+=	${RUBY_PKGPREFIX}-eruby
 
 .if !empty(RUBY_ERUBY_BUILDLINK3_MK:M+)
-.if ${RUBY_VER} == "16"
-BUILDLINK_DEPENDS.ruby16-eruby+=	${RUBY_PKGPREFIX}-eruby>=0.9.7
-BUILDLINK_PKGSRCDIR.ruby16-eruby?=	../../textproc/ruby-eruby
-.elif ${RUBY_VER} == "18"
 BUILDLINK_DEPENDS.ruby18-eruby+=	${RUBY_PKGPREFIX}-eruby>=0.9.7
 BUILDLINK_PKGSRCDIR.ruby18-eruby?=	../../textproc/ruby-eruby
-.endif
 .endif	# RUBY_ERUBY_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
