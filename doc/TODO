@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4266 2005/12/11 14:39:29 markd Exp $
+$NetBSD: TODO,v 1.4267 2005/12/11 18:08:45 salo Exp $
 
 Suggested new packages
 ======================
@@ -747,7 +747,6 @@ Suggested package updates
 	o minivmac-2.6.1
 	o mjpegtools-1.8.0
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.6.5
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
