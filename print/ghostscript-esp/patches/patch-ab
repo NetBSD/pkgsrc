@@ -1,24 +1,15 @@
-$NetBSD: patch-ab,v 1.2 2002/10/24 20:08:23 bouyer Exp $
+$NetBSD: patch-ab,v 1.2.18.1 2005/12/11 12:04:26 seb Exp $
 
---- src/Makefile.in.orig	Fri Jul 19 00:19:50 2002
-+++ src/Makefile.in	Thu Oct 24 21:22:40 2002
-@@ -63,8 +63,8 @@
- gsdir = $(datadir)/ghostscript
+--- src/Makefile.in.orig	2005-03-08 15:26:09.000000000 -0500
++++ src/Makefile.in
+@@ -84,8 +84,8 @@ gsdir = @datadir@/ghostscript
  gsdatadir = $(gsdir)/$(GS_DOT_VERSION)
+ gssharedir = @libdir@/ghostscript/$(GS_DOT_VERSION)
  
 -docdir=$(gsdatadir)/doc
 -exdir=$(gsdatadir)/examples
-+docdir=$(datadir)/doc/html/ghostscript
++docdir=$(datadir)/doc/ghostscript
 +exdir=$(datadir)/examples/ghostscript
  GS_DOCDIR=$(docdir)
  
  # Define the default directory/ies for the runtime
-@@ -280,7 +280,7 @@
- # on most modern platforms.
- XLIBDIRS=@X_LIBS@
- XLIBDIR=
--XLIBS=Xt Xext X11
-+XLIBS=Xt Xext X11 SM ICE
- 
- # Define whether this platform has floating point hardware:
- #	FPU_TYPE=2 means floating point is faster than fixed point.
