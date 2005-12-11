@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2005/12/09 17:54:25 salo Exp $
+# $NetBSD: options.mk,v 1.14 2005/12/11 09:40:46 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -67,7 +67,7 @@ PKG_SUGGESTED_OPTIONS+=	${_o_}
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Maalib)
-.  include "../../graphics/aalib-x11/buildlink3.mk"
+.  include "../../graphics/aalib/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Marts)

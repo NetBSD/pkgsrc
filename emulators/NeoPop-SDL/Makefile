@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:45:42 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/11 09:40:39 wiz Exp $
 #
 
 DISTNAME=		NeoPop-SDL-0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.nih.at/NeoPop-SDL/
 EXTRACT_SUFX=		.tar.bz2

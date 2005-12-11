@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/11 09:40:41 wiz Exp $
 #
 
 DISTNAME=		dd2-0.2.1
-PKGREVISION=	2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		http://www.usebox.net/jjm/dd2/releases/
 
