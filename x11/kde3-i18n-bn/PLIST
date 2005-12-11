@@ -1,20 +1,16 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/13 13:35:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/12/11 12:36:14 markd Exp $
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/atlantik.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/childpanelextension.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/clockapplet.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/devicesapplet.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/display.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/dockbarextension.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/drkonqi.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/extensionproxy.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/filetypes.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/fontinst.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/htmlsearch.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/juk.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kabc_dir.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kabc_file.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kabc_ldap.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kabc_ldapkio.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kabc_net.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kabc_sql.mo
@@ -25,7 +21,6 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kalzium.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kappfinder.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kasteroids.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kate.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/katedefaultproject.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/katepart.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/katomic.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kbackgammon.mo
@@ -38,7 +33,6 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmaccessibility.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmarts.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmbackground.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmcgi.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmemail.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmenergy.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmfonts.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmicons.mo
@@ -51,11 +45,9 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmkio.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmkonq.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmkonqhtml.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmkonsole.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmkwintheme.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmkwm.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmlocale.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmmidi.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmnic.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmnotify.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kcmprintmgr.mo
@@ -75,14 +67,12 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdeprint_part.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdeprintfax.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdesktop.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdesud.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdmchooser.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdmconfig.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdmgreet.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/keduca.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kenolaba.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_avi.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_drgeo.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_font.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_kig.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_m3u.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_mp3.mo
@@ -117,7 +107,6 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/klettres.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/klipper.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmahjongg.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmail.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmathtool.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmcop.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmenuapplet.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmenuedit.mo
@@ -128,7 +117,6 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/knode.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/knotify.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/konsole.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kpartapp.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kpersonalizer.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kreadconfig.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kreversi.mo
@@ -161,7 +149,6 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kwordquiz.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kwriteconfig.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kxkb.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libkdegames.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libkdehighscores.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libkicker.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libkickermenu_kdeprint.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libkickermenu_konsole.mo
@@ -171,11 +158,10 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libkonq.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libkscreensaver.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libtaskbar.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/lockout.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/mediaapplet.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/naughtyapplet.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/passwords.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/privacy.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/quicklauncher.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/taskbarextension.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/timezones.mo
 ${PKGLOCALEDIR}/locale/bn/charset
 ${PKGLOCALEDIR}/locale/bn/entry.desktop
