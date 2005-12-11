@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2005/11/17 04:33:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.97 2005/12/11 11:01:48 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -33,7 +33,9 @@ REPLACE_PERL=		kcontrol/fileshare/fileshareset \
 			khelpcenter/searchhandlers/khc_htsearch.pl \
 			khelpcenter/searchhandlers/khc_docbookdig.pl \
 			khelpcenter/searchhandlers/khc_mansearch.pl \
-			kicker/kicker-3.1-properSizeSetting.pl \
+			kicker/kicker/kicker-3.1-properSizeSetting.pl \
+			kicker/kicker/kicker-3.5-kconfigXTize.pl \
+			kicker/kicker/kicker-3.5-taskbarEnums.pl \
 			kioslave/finger/kio_finger.pl \
 			kioslave/info/kde-info2html \
 			klipper/klipper-1-2.pl \
