@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/03 21:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/11 09:40:40 wiz Exp $
 #
 
 DISTNAME=		blobwars-1.04-1
 PKGNAME=		blobwars-1.04.1
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		# real site produces wrong filename, use default
 # http://www.parallelrealities.co.uk/download.php?type=zip&file=
