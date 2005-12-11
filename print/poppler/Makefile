@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/12/06 17:13:50 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/11 05:08:50 salo Exp $
 #
 
 DISTNAME=		poppler-0.4.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
 
