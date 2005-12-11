@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4270 2005/12/11 19:12:08 wiz Exp $
+$NetBSD: TODO,v 1.4271 2005/12/11 19:17:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -936,7 +936,6 @@ Suggested package updates
 	o p5-glib2-1.100
 	o p5-gtk2-1.110
 	o p5-ispman-1.2
-	o p5-libwww-5.805
 	o p5-perl-ldap-0.3202
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.41
