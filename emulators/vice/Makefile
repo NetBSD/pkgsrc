@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2005/12/04 00:51:36 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2005/12/11 22:46:50 dillo Exp $
 #
 
-DISTNAME=		vice-1.16
+DISTNAME=		vice-1.18
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
 			http://www.nic.funet.fi/pub/cbm/crossplatform/emulators/VICE/
@@ -31,12 +31,12 @@ INFO_FILES=		vice.info
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vice
-PKG_SUPPORTED_OPTIONS=	esound ffmpeg gnome
+PKG_SUPPORTED_OPTIONS=	esound ffmpeg lame gnome
 
 .include "../../mk/bsd.options.mk"
 
 .if (${OPSYS} == NetBSD)
-CONFIGURE_ENV+=		ac_cv_header_sys_soundcard_h=no
+CONFIGURE_ARGS+=	--without-oss
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
@@ -72,6 +72,9 @@ post-install:
 .include "../../graphics/xpm/buildlink3.mk"
 .if !empty(PKG_OPTIONS:Mffmpeg)
 .include "../../multimedia/ffmpeg/buildlink3.mk"
+.  if !empty(PKG_OPTIONS:Mlame)
+.include "../../audio/lame/buildlink3.mk"
+.  endif
 .endif
 .if !empty(PKG_OPTIONS:Mgnome)
 .include "../../x11/gnome-libs/buildlink3.mk"
