@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2005/03/27 15:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/11 09:40:44 wiz Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/3DKit/SDLKit/}
-PKGREVISION=	10
+PKGREVISION=	11
 
 COMMENT=	3DKit SDL backend
 
