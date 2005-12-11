@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.dist,v 1.15 2005/10/23 20:15:07 rillig Exp $
+# $NetBSD: Makefile.dist,v 1.16 2005/12/11 18:05:43 salo Exp $
 
-DISTNAME=	mkvtoolnix-1.4.2
+DISTNAME=	mkvtoolnix-1.6.5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/
 EXTRACT_SUFX=	.tar.bz2
