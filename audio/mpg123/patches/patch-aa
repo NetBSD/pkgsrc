@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
+$NetBSD: patch-aa,v 1.26 2005/12/11 21:59:29 joerg Exp $
 
---- Makefile.orig	2005-10-03 17:03:06.000000000 +0200
-+++ Makefile	2005-10-03 17:03:06.000000000 +0200
-@@ -54,6 +54,23 @@
+--- Makefile.orig	2005-12-11 21:33:57.000000000 +0000
++++ Makefile
+@@ -54,6 +54,23 @@ nothing-specified:
  	@echo "make aix-tk3play    IBM AIX"
  	@echo "make os2            IBM OS/2"
  	@echo "make netbsd         NetBSD"
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
  	@echo "make bsdos          BSDI BSD/OS"
  	@echo "make bsdos4         BSDI BSD/OS 4.0"
  	@echo "make bsdos-nas      BSDI BSD/OS with NAS support"
-@@ -300,7 +317,7 @@
+@@ -300,7 +317,7 @@ linux-nas:
  #CFLAGS='$(CFLAGS) -DI386_ASSEM -O2 -DREAL_IS_FLOAT -DLINUX -Wall -g'
  #CFLAGS='$(CFLAGS) -DI386_ASSEM -DREAL_IS_FLOAT -DLINUX -Wall -O2 -m486 -fomit-frame-pointer -funroll-all-loops -finline-functions -ffast-math -malign-loops=2 -malign-jumps=2 -malign-functions=2'
  
@@ -35,16 +35,22 @@ $NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
  	$(MAKE) CC=cc LDFLAGS= \
  		OBJECTS='decode_i386.o dct64_i386.o audio_oss.o' \
  		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
-@@ -309,7 +326,7 @@
+@@ -309,11 +326,11 @@ freebsd:
  			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DOSS' \
  		mpg123-make
  
 -freebsd-esd:
 +dragonfly-esd freebsd-esd:
  	$(MAKE) CC=cc LDFLAGS= \
- 		AUDIO_LIB='-lesd -laudiofile' \
+-		AUDIO_LIB='-lesd -laudiofile' \
++                AUDIO_LIB="`esd-config --libs`" \
  		OBJECTS='decode_i386.o dct64_i386.o $(GETBITS) audio_esd.o' \
-@@ -321,7 +338,7 @@
+-		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
++		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
+ 			-funroll-all-loops -ffast-math -DROT_I386 \
+ 			-DREAD_MMAP \
+ 			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DOSS \
+@@ -321,7 +338,7 @@ freebsd-esd:
  			$(CFLAGS)' \
  		mpg123-make
  
@@ -53,7 +59,7 @@ $NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
  	$(MAKE) CC=cc LDFLAGS= \
  		OBJECTS='decode_i386.o dct64_i386.o audio_oss.o \
  			control_sajber.o control_tk3play.o' \
-@@ -398,7 +415,7 @@
+@@ -398,7 +415,7 @@ solaris-x86-gcc-oss:
  
  solaris-gcc-nas:
  	$(MAKE) CC=gcc LDFLAGS='-lsocket -lnsl' \
@@ -62,7 +68,7 @@ $NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
  		OBJECTS='decode.o dct64.o audio_nas.o' \
  		CFLAGS='$(CFLAGS) -O2 -I/usr/openwin/include -Wall \
  			-DSOLARIS -DREAL_IS_FLOAT -DUSE_MMAP \
-@@ -496,18 +513,184 @@
+@@ -496,18 +513,194 @@ os2:
  
  netbsd:
  	$(MAKE) CC=cc LDFLAGS= \
@@ -90,7 +96,8 @@ $NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_sun.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
-+			-funroll-all-loops -ffast-math -DROT_I386 \
+ 			-funroll-all-loops -ffast-math -DROT_I386 \
+-			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
 +			-DREAD_MMAP -DNETBSD -DTERM_CONTROL' \
 +		mpg123-make
@@ -197,6 +204,16 @@ $NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
 +			-DNAS' \
 +		mpg123-make
 +
++dragonfly-nas freebsd-nas:
++	$(MAKE) CC=cc LDFLAGS= \
++	         AUDIO_LIB="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -laudio -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lXt -lXau" \
++	         OBJECTS='decode_i386.o dct64_i386.o $(GETBITS) audio_nas.o' \
++	         CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
++	                 -funroll-all-loops -ffast-math -DROT_I386 \
++	                 -DREAD_MMAP \
++	                 -DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNAS' \
++	         mpg123-make
++
 +netbsd-i386-nas:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		AUDIO_LIB="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -laudio -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lXt -lXau" \
@@ -213,8 +230,7 @@ $NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_nas.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
- 			-funroll-all-loops -ffast-math -DROT_I386 \
--			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++			-funroll-all-loops -ffast-math -DROT_I386 \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
 +			-DREAD_MMAP -DNETBSD -DTERM_CONTROL \
 +			-DNAS' \
@@ -253,7 +269,7 @@ $NetBSD: patch-aa,v 1.25 2005/10/03 15:25:14 joerg Exp $
  		mpg123-make
  
  bsdos:
-@@ -556,6 +739,16 @@
+@@ -556,6 +749,16 @@ generic:
  		CFLAGS='$(CFLAGS) -O -DGENERIC -DNOXFERMEM' \
  		mpg123-make
  
