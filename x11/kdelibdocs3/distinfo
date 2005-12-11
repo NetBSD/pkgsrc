@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2005/10/13 12:40:52 markd Exp $
+$NetBSD: distinfo,v 1.27 2005/12/11 11:06:12 markd Exp $
 
-SHA1 (kdelibs-3.4.3.tar.bz2) = ab701b90efc9cfe29e8e9c461d8b8c82357d8ef7
-RMD160 (kdelibs-3.4.3.tar.bz2) = 3bf89c0694f0fbabe46ae75d49f3eaf651fc2a90
-Size (kdelibs-3.4.3.tar.bz2) = 16877867 bytes
+SHA1 (kdelibs-3.5.0.tar.bz2) = c03bc6b09add3c487b3e28a5fb1d89efd30a9723
+RMD160 (kdelibs-3.5.0.tar.bz2) = a170428a7166f322ab86d1c0280f12e23a8f6df3
+Size (kdelibs-3.5.0.tar.bz2) = 15379557 bytes

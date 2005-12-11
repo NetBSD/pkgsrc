@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/10/13 12:40:51 markd Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/11 11:06:12 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	kdelibdocs-${_KDE_VERSION}
@@ -17,19 +17,12 @@ INSTALL_TARGET=		install-data-local
 
 UNLIMIT_RESOURCES+=	datasize
 
-pre-install:
-	${MV} ${PREFIX}/share/doc/kde/HTML/en/kdelibs-apidocs/common \
-	${PREFIX}/share/doc/kde/HTML/en/kdelibs-apidocs/common.save
-
 post-install:
 	cd ${WRKSRC};							\
 	DOCDIRS="arts dcop dnssd interfaces kabc kate kdecore kdefx kdeprint kdeui khtml kio kjs kmdi knewstuff kparts kresources kutils kwallet libkmid"; \
 	for d in $${DOCDIRS}; do					\
 		(cd $${d}; ${GMAKE} install-apidox);			\
 	done
-	${RM} ${PREFIX}/share/doc/kde/HTML/en/kdelibs-apidocs/common
-	${MV} ${PREFIX}/share/doc/kde/HTML/en/kdelibs-apidocs/common.save \
-	${PREFIX}/share/doc/kde/HTML/en/kdelibs-apidocs/common
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
