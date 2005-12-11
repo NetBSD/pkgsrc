@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12169 2005/12/11 18:08:44 salo Exp $
+$NetBSD: CHANGES,v 1.12170 2005/12/11 18:57:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5670,3 +5670,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/libmatroska to 0.8.0 [salo 2005-12-11]
 	Updated multimedia/mkvtoolnix to 1.6.5 [salo 2005-12-11]
 	Updated multimedia/mmg to 1.6.5 [salo 2005-12-11]
+	Updated www/links to 2.1.0.20 [wiz 2005-12-11]
+	Updated www/links-gui to 2.1.0.20 [wiz 2005-12-11]
