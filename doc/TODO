@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4265 2005/12/11 13:21:14 markd Exp $
+$NetBSD: TODO,v 1.4266 2005/12/11 14:39:29 markd Exp $
 
 Suggested new packages
 ======================
@@ -311,7 +311,6 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o PAM-0.80
-	o R-2.2.0
 	o REminiscence-0.1.8
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.6
