@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/09/28 12:24:17 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/11 13:30:58 taca Exp $
 #
 
 DISTNAME=	htmllint
-PKGNAME=	htmllint-20050220
+PKGNAME=	htmllint-20050924
 CATEGORIES=	www japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/k16/htmllint/archives/
 EXTRACT_SUFX=	.zip
@@ -12,6 +12,7 @@ HOMEPAGE=	http://openlab.ring.gr.jp/k16/htmllint/
 COMMENT=	Another HTML-Lint program
 
 DEPENDS+=	p5-Jcode>=0.68:../../converters/p5-Jcode
+DEPENDS+=	p5-libwww>=5.8:../../www/p5-libwww
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
