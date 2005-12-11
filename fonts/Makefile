@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2005/11/29 22:39:48 minskim Exp $
+# $NetBSD: Makefile,v 1.87 2005/12/11 13:40:07 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -22,6 +22,11 @@ SUBDIR+=	acroread5-chtfont
 SUBDIR+=	acroread5-font-share
 SUBDIR+=	acroread5-jpnfont
 SUBDIR+=	acroread5-korfont
+SUBDIR+=	acroread7-chsfont
+SUBDIR+=	acroread7-chtfont
+SUBDIR+=	acroread7-font-share
+SUBDIR+=	acroread7-jpnfont
+SUBDIR+=	acroread7-korfont
 SUBDIR+=	adobe-cidfonts
 SUBDIR+=	adobe-cmaps
 SUBDIR+=	alee-ttf
