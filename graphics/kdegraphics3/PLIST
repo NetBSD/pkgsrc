@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.24 2005/10/13 13:17:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2005/12/11 13:00:12 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
 bin/kfax
+bin/kfaxview
 bin/kghostview
 bin/kiconedit
 bin/kolourpaint
@@ -168,6 +169,7 @@ include/dom/SVGViewSpec.h
 include/dom/SVGWindow.h
 include/dom/SVGZoomAndPan.h
 include/dom/SVGZoomEvent.h
+include/kfaximage.h
 include/kmultipageInterface.h
 include/ksvg/CanvasFactory.h
 include/ksvg/CanvasItem.h
@@ -175,9 +177,30 @@ include/ksvg/CanvasItems.h
 include/ksvg/DocumentFactory.h
 include/ksvg/KSVGCanvas.h
 include/ksvg/ksvg_plugin.h
+include/kviewshell/anchor.h
+include/kviewshell/bookmark.h
+include/kviewshell/documentPageCache.h
+include/kviewshell/documentRenderer.h
+include/kviewshell/documentWidget.h
+include/kviewshell/history.h
+include/kviewshell/hyperlink.h
+include/kviewshell/kmultipage.h
+include/kviewshell/length.h
+include/kviewshell/pageNumber.h
+include/kviewshell/pageSize.h
+include/kviewshell/pageView.h
+include/kviewshell/renderedDocumentPage.h
+include/kviewshell/renderedDocumentPagePixmap.h
+include/kviewshell/renderedDocumentPagePrinter.h
+include/kviewshell/selection.h
+include/kviewshell/simplePageSize.h
+include/kviewshell/textBox.h
+include/kviewshell/zoom.h
+include/kviewshell/zoomlimits.h
 include/libtext2path-0.1/BezierPath.h
 include/libtext2path-0.1/Glyph.h
 include/libtext2path-0.1/GlyphTracer.h
+lib/kde3/djvuviewpart.la
 lib/kde3/emptymultipagepart.la
 lib/kde3/gsthumbnail.la
 lib/kde3/kcm_kamera.la
@@ -189,11 +212,12 @@ lib/kde3/kcm_kviewpluginsconfig.la
 lib/kde3/kcm_kviewviewerpluginsconfig.la
 lib/kde3/kded_daemonwatcher.la
 lib/kde3/kdvipart.la
-lib/kde3/kfaxpart.la
+lib/kde3/kfaxviewpart.la
 lib/kde3/kfile_bmp.la
 lib/kde3/kfile_dds.la
 lib/kde3/kfile_dvi.la
 lib/kde3/kfile_exr.la
+lib/kde3/kfile_gif.la
 lib/kde3/kfile_ico.la
 lib/kde3/kfile_jpeg.la
 lib/kde3/kfile_pcx.la
@@ -201,6 +225,7 @@ lib/kde3/kfile_pdf.la
 lib/kde3/kfile_png.la
 lib/kde3/kfile_pnm.la
 lib/kde3/kfile_ps.la
+lib/kde3/kfile_raw.la
 lib/kde3/kfile_rgb.la
 lib/kde3/kfile_tga.la
 lib/kde3/kfile_tiff.la
@@ -215,6 +240,7 @@ lib/kde3/kview_effectsplugin.la
 lib/kde3/kview_presenterplugin.la
 lib/kde3/kview_scannerplugin.la
 lib/kde3/kviewerpart.la
+lib/kde3/libdjvu.la
 lib/kde3/libkghostviewpart.la
 lib/kde3/libkmrmlpart.la
 lib/kde3/libkpdfpart.la
@@ -229,6 +255,7 @@ lib/kde3/svgthumbnail.la
 lib/libkdeinit_kuickshow.la
 lib/libkdeinit_kview.la
 lib/libkdeinit_mrmlsearch.la
+lib/libkfaximage.la
 lib/libkghostviewlib.la
 lib/libkimageviewer.la
 lib/libkmultipage.la
@@ -242,6 +269,7 @@ share/applications/kde/kcolorchooser.desktop
 share/applications/kde/kcoloredit.desktop
 share/applications/kde/kdvi.desktop
 share/applications/kde/kfax.desktop
+share/applications/kde/kfaxview.desktop
 share/applications/kde/kgamma.desktop
 share/applications/kde/kghostview.desktop
 share/applications/kde/kiconedit.desktop
@@ -411,26 +439,18 @@ share/doc/kde/HTML/en/kuickshow/screenshot.png
 share/doc/kde/HTML/en/kview/common
 share/doc/kde/HTML/en/kview/index.cache.bz2
 share/doc/kde/HTML/en/kview/index.docbook
-share/doc/kde/HTML/en/kview/snapshot1.png
-share/doc/kde/HTML/en/kview/snapshot2.png
-share/doc/kde/HTML/en/kview/snapshot3.png
-share/doc/kde/HTML/en/kview/snapshot4.png
-share/doc/kde/HTML/en/kview/snapshot5.png
-share/doc/kde/HTML/en/kview/snapshot6.png
-share/doc/kde/HTML/en/kview/snapshot7.png
-share/doc/kde/HTML/en/kview/snapshot8.png
-share/doc/kde/HTML/en/kview/snapshot9.png
 share/kde/applnk/Graphics/kruler.desktop
+share/kde/apps/djvumultipage.rc
 share/kde/apps/kcoloredit/kcoloreditui.rc
 share/kde/apps/kconf_update/kghostview.upd
 share/kde/apps/kconf_update/update-to-xt-names.pl
 share/kde/apps/kdvi/kdvi_part.rc
 share/kde/apps/kdvi/kviewshell.rc
 share/kde/apps/kdvi/tips
-share/kde/apps/kfax/kfax_part.rc
 share/kde/apps/kfax/kfaxui.rc
 share/kde/apps/kfax/pics/kfax.tif
 share/kde/apps/kfax/pics/kfaxlogo.xpm
+share/kde/apps/kfaxview/kviewshell.rc
 share/kde/apps/kgamma/pics/background.png
 share/kde/apps/kgamma/pics/cmyscale.png
 share/kde/apps/kgamma/pics/darkgrey.png
@@ -469,27 +489,101 @@ share/kde/apps/kiconedit/pics/source.png
 share/kde/apps/kiconedit/pics/standard.png
 share/kde/apps/kiconedit/pics/transform.png
 share/kde/apps/kiconedit/pics/window_new.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_brush.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_color_picker.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_color_washer.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_curve.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_ellipse.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_elliptical_selection.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_eraser.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_flood_fill.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_free_form_selection.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_line.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_pen.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_polygon.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_polyline.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rect_selection.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rectangle.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rounded_rectangle.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_spraycan.png
-share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_color_washer.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_color_washer.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_color_washer.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_color_washer.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_brush.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_color_picker.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_color_washer.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_curve.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_ellipse.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_elliptical_selection.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_eraser.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_flood_fill.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_free_form_selection.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_line.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_pen.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_polygon.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_polyline.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_rect_selection.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_rectangle.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_rounded_rectangle.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_spraycan.svgz
+share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions/tool_text.svgz
 share/kde/apps/kolourpaint/icons/hicolor/16x16/apps/kolourpaint.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/apps/kolourpaint.png
 share/kde/apps/kolourpaint/icons/hicolor/32x32/apps/kolourpaint.png
 share/kde/apps/kolourpaint/icons/hicolor/48x48/apps/kolourpaint.png
+share/kde/apps/kolourpaint/icons/hicolor/scalable/apps/kolourpaint.svgz
 share/kde/apps/kolourpaint/kolourpaintui.rc
 share/kde/apps/kolourpaint/pics/color_transparent_26x26.png
 share/kde/apps/kolourpaint/pics/colorbutton_swap_16x16.png
@@ -905,6 +999,13 @@ share/kde/apps/kview/kpartplugins/kviewscanner.desktop
 share/kde/apps/kview/kpartplugins/kviewscanner.rc
 share/kde/apps/kview/kview.setdlg
 share/kde/apps/kview/kviewui.rc
+share/kde/apps/kview/photobookui.rc
+share/kde/apps/kviewerpart/icons/hicolor/16x16/actions/movetool.png
+share/kde/apps/kviewerpart/icons/hicolor/16x16/actions/selectiontool.png
+share/kde/apps/kviewerpart/icons/hicolor/22x22/actions/movetool.png
+share/kde/apps/kviewerpart/icons/hicolor/22x22/actions/selectiontool.png
+share/kde/apps/kviewerpart/icons/hicolor/32x32/actions/movetool.png
+share/kde/apps/kviewerpart/icons/hicolor/48x48/actions/movetool.png
 share/kde/apps/kviewerpart/kviewerpart.rc
 share/kde/apps/kviewshell/kviewshell.rc
 share/kde/apps/kviewviewer/kpartplugins/kviewbrowser.desktop
@@ -912,97 +1013,115 @@ share/kde/apps/kviewviewer/kpartplugins/kviewbrowser.rc
 share/kde/apps/kviewviewer/kviewpopup.rc
 share/kde/apps/kviewviewer/kviewviewer.rc
 share/kde/apps/kviewviewer/kviewviewer_ro.rc
-share/kde/apps/photobookui.rc
+share/kde/config.kcfg/djvumultipage.kcfg
 share/kde/config.kcfg/kdvi.kcfg
 share/kde/config.kcfg/kghostview.kcfg
 share/kde/config.kcfg/kpdf.kcfg
 share/kde/config.kcfg/kviewshell.kcfg
 share/kde/config/kookarc
-share/kde/icons/crystalsvg/128x128/apps/kghostview.png
-share/kde/icons/crystalsvg/128x128/apps/kpdf.png
+share/kde/config/magic/x-image-raw.magic
 share/kde/icons/crystalsvg/16x16/actions/camera_test.png
 share/kde/icons/crystalsvg/16x16/actions/palette_color.png
 share/kde/icons/crystalsvg/16x16/actions/palette_gray.png
 share/kde/icons/crystalsvg/16x16/actions/palette_halftone.png
 share/kde/icons/crystalsvg/16x16/actions/palette_lineart.png
 share/kde/icons/crystalsvg/16x16/apps/camera.png
-share/kde/icons/crystalsvg/16x16/apps/kcolorchooser.png
-share/kde/icons/crystalsvg/16x16/apps/kcoloredit.png
-share/kde/icons/crystalsvg/16x16/apps/kdvi.png
-share/kde/icons/crystalsvg/16x16/apps/kfax.png
-share/kde/icons/crystalsvg/16x16/apps/kghostview.png
-share/kde/icons/crystalsvg/16x16/apps/kiconedit.png
-share/kde/icons/crystalsvg/16x16/apps/kpdf.png
-share/kde/icons/crystalsvg/16x16/apps/kpovmodeler.png
-share/kde/icons/crystalsvg/16x16/apps/kruler.png
-share/kde/icons/crystalsvg/16x16/apps/ksnapshot.png
-share/kde/icons/crystalsvg/16x16/apps/kuickshow.png
-share/kde/icons/crystalsvg/16x16/apps/kview.png
 share/kde/icons/crystalsvg/16x16/apps/kviewshell.png
 share/kde/icons/crystalsvg/16x16/apps/photobook.png
 share/kde/icons/crystalsvg/16x16/devices/camera.png
 share/kde/icons/crystalsvg/16x16/mimetypes/kpovmodeler_doc.png
-share/kde/icons/crystalsvg/22x22/apps/kcolorchooser.png
-share/kde/icons/crystalsvg/22x22/apps/kpdf.png
 share/kde/icons/crystalsvg/22x22/apps/photobook.png
 share/kde/icons/crystalsvg/22x22/devices/camera.png
 share/kde/icons/crystalsvg/22x22/filesystems/camera.png
-share/kde/icons/crystalsvg/32x32/apps/kcoloredit.png
-share/kde/icons/crystalsvg/32x32/apps/kdvi.png
-share/kde/icons/crystalsvg/32x32/apps/kfax.png
-share/kde/icons/crystalsvg/32x32/apps/kghostview.png
-share/kde/icons/crystalsvg/32x32/apps/kiconedit.png
-share/kde/icons/crystalsvg/32x32/apps/kpdf.png
-share/kde/icons/crystalsvg/32x32/apps/kpovmodeler.png
-share/kde/icons/crystalsvg/32x32/apps/kruler.png
-share/kde/icons/crystalsvg/32x32/apps/ksnapshot.png
-share/kde/icons/crystalsvg/32x32/apps/kuickshow.png
-share/kde/icons/crystalsvg/32x32/apps/kview.png
 share/kde/icons/crystalsvg/32x32/apps/kviewshell.png
 share/kde/icons/crystalsvg/32x32/devices/camera.png
 share/kde/icons/crystalsvg/32x32/filesystems/camera.png
 share/kde/icons/crystalsvg/32x32/mimetypes/kpovmodeler_doc.png
-share/kde/icons/crystalsvg/48x48/apps/kdvi.png
-share/kde/icons/crystalsvg/48x48/apps/kfax.png
-share/kde/icons/crystalsvg/48x48/apps/kghostview.png
-share/kde/icons/crystalsvg/48x48/apps/kiconedit.png
-share/kde/icons/crystalsvg/48x48/apps/kpdf.png
-share/kde/icons/crystalsvg/48x48/apps/kpovmodeler.png
-share/kde/icons/crystalsvg/48x48/apps/kruler.png
-share/kde/icons/crystalsvg/48x48/apps/ksnapshot.png
-share/kde/icons/crystalsvg/48x48/apps/kview.png
 share/kde/icons/crystalsvg/48x48/apps/kviewshell.png
 share/kde/icons/crystalsvg/48x48/mimetypes/kpovmodeler_doc.png
-share/kde/icons/crystalsvg/64x64/apps/kghostview.png
-share/kde/icons/crystalsvg/64x64/apps/kpdf.png
-share/kde/icons/crystalsvg/scalable/apps/kdvi.svgz
-share/kde/icons/crystalsvg/scalable/apps/ksnapshot.svgz
+share/kde/icons/hicolor/128x128/apps/kghostview.png
+share/kde/icons/hicolor/128x128/apps/kpdf.png
+share/kde/icons/hicolor/16x16/apps/kcolorchooser.png
+share/kde/icons/hicolor/16x16/apps/kcoloredit.png
+share/kde/icons/hicolor/16x16/apps/kdvi.png
+share/kde/icons/hicolor/16x16/apps/kfax.png
+share/kde/icons/hicolor/16x16/apps/kfaxview.png
 share/kde/icons/hicolor/16x16/apps/kgamma.png
+share/kde/icons/hicolor/16x16/apps/kghostview.png
+share/kde/icons/hicolor/16x16/apps/kiconedit.png
 share/kde/icons/hicolor/16x16/apps/kolourpaint.png
+share/kde/icons/hicolor/16x16/apps/kpdf.png
+share/kde/icons/hicolor/16x16/apps/kpovmodeler.png
+share/kde/icons/hicolor/16x16/apps/kruler.png
+share/kde/icons/hicolor/16x16/apps/ksnapshot.png
+share/kde/icons/hicolor/16x16/apps/kuickshow.png
+share/kde/icons/hicolor/16x16/apps/kview.png
+share/kde/icons/hicolor/22x22/apps/kcolorchooser.png
+share/kde/icons/hicolor/22x22/apps/kdvi.png
+share/kde/icons/hicolor/22x22/apps/kfax.png
+share/kde/icons/hicolor/22x22/apps/kfaxview.png
+share/kde/icons/hicolor/22x22/apps/kghostview.png
+share/kde/icons/hicolor/22x22/apps/kiconedit.png
+share/kde/icons/hicolor/22x22/apps/kolourpaint.png
+share/kde/icons/hicolor/22x22/apps/kpdf.png
+share/kde/icons/hicolor/22x22/apps/kpovmodeler.png
+share/kde/icons/hicolor/22x22/apps/kruler.png
+share/kde/icons/hicolor/22x22/apps/ksnapshot.png
+share/kde/icons/hicolor/22x22/apps/kuickshow.png
+share/kde/icons/hicolor/22x22/apps/kview.png
+share/kde/icons/hicolor/32x32/apps/kcoloredit.png
+share/kde/icons/hicolor/32x32/apps/kdvi.png
+share/kde/icons/hicolor/32x32/apps/kfax.png
+share/kde/icons/hicolor/32x32/apps/kfaxview.png
 share/kde/icons/hicolor/32x32/apps/kgamma.png
+share/kde/icons/hicolor/32x32/apps/kghostview.png
+share/kde/icons/hicolor/32x32/apps/kiconedit.png
 share/kde/icons/hicolor/32x32/apps/kolourpaint.png
+share/kde/icons/hicolor/32x32/apps/kpdf.png
+share/kde/icons/hicolor/32x32/apps/kpovmodeler.png
+share/kde/icons/hicolor/32x32/apps/kruler.png
+share/kde/icons/hicolor/32x32/apps/ksnapshot.png
+share/kde/icons/hicolor/32x32/apps/kuickshow.png
+share/kde/icons/hicolor/32x32/apps/kview.png
+share/kde/icons/hicolor/48x48/apps/kdvi.png
+share/kde/icons/hicolor/48x48/apps/kfax.png
+share/kde/icons/hicolor/48x48/apps/kfaxview.png
 share/kde/icons/hicolor/48x48/apps/kgamma.png
+share/kde/icons/hicolor/48x48/apps/kghostview.png
+share/kde/icons/hicolor/48x48/apps/kiconedit.png
 share/kde/icons/hicolor/48x48/apps/kolourpaint.png
-share/kde/icons/locolor/16x16/apps/kcoloredit.png
-share/kde/icons/locolor/16x16/apps/kpovmodeler.png
-share/kde/icons/locolor/16x16/apps/kuickshow.png
-share/kde/icons/locolor/32x32/apps/kcoloredit.png
-share/kde/icons/locolor/32x32/apps/kpovmodeler.png
-share/kde/icons/locolor/32x32/apps/kuickshow.png
+share/kde/icons/hicolor/48x48/apps/kpdf.png
+share/kde/icons/hicolor/48x48/apps/kpovmodeler.png
+share/kde/icons/hicolor/48x48/apps/kruler.png
+share/kde/icons/hicolor/48x48/apps/ksnapshot.png
+share/kde/icons/hicolor/48x48/apps/kview.png
+share/kde/icons/hicolor/64x64/apps/kghostview.png
+share/kde/icons/hicolor/64x64/apps/kpdf.png
+share/kde/icons/hicolor/scalable/apps/kdvi.svgz
+share/kde/icons/hicolor/scalable/apps/kfax.svgz
+share/kde/icons/hicolor/scalable/apps/kfaxview.svgz
+share/kde/icons/hicolor/scalable/apps/kolourpaint.svgz
+share/kde/icons/hicolor/scalable/apps/kpdf.svgz
+share/kde/icons/hicolor/scalable/apps/ksnapshot.svgz
+share/kde/mimelnk/image/x-image-raw.desktop
 share/kde/mimelnk/text/mrml.desktop
+share/kde/services/camera.protocol
+share/kde/services/djvumultipage.desktop
 share/kde/services/emptymultipage.desktop
 share/kde/services/gsthumbnail.desktop
-share/kde/services/kamera.protocol
 share/kde/services/kconfiguredialog/kviewcanvasconfig.desktop
 share/kde/services/kconfiguredialog/kviewgeneralconfig.desktop
 share/kde/services/kconfiguredialog/kviewpluginsconfig.desktop
 share/kde/services/kconfiguredialog/kviewviewerpluginsconfig.desktop
 share/kde/services/kded/daemonwatcher.desktop
 share/kde/services/kdvimultipage.desktop
+share/kde/services/kfaxmultipage.desktop
+share/kde/services/kfaxmultipage_tiff.desktop
 share/kde/services/kfile_bmp.desktop
 share/kde/services/kfile_dds.desktop
 share/kde/services/kfile_dvi.desktop
 share/kde/services/kfile_exr.desktop
+share/kde/services/kfile_gif.desktop
 share/kde/services/kfile_ico.desktop
 share/kde/services/kfile_jpeg.desktop
 share/kde/services/kfile_pcx.desktop
@@ -1010,6 +1129,7 @@ share/kde/services/kfile_pdf.desktop
 share/kde/services/kfile_png.desktop
 share/kde/services/kfile_pnm.desktop
 share/kde/services/kfile_ps.desktop
+share/kde/services/kfile_raw.desktop
 share/kde/services/kfile_rgb.desktop
 share/kde/services/kfile_tga.desktop
 share/kde/services/kfile_tiff.desktop
@@ -1034,11 +1154,16 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @comment in kde: @dirrm share/kde/services/kconfiguredialog
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/mimelnk/text
+@comment in kde: @dirrm share/kde/mimelnk/image
 @comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/mimetypes
@@ -1055,11 +1180,22 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/config/magic
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/kviewviewer/kpartplugins
 @dirrm share/kde/apps/kviewviewer
 @dirrm share/kde/apps/kviewshell
+@dirrm share/kde/apps/kviewerpart/icons/hicolor/48x48/actions
+@dirrm share/kde/apps/kviewerpart/icons/hicolor/48x48
+@dirrm share/kde/apps/kviewerpart/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kviewerpart/icons/hicolor/32x32
+@dirrm share/kde/apps/kviewerpart/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kviewerpart/icons/hicolor/22x22
+@dirrm share/kde/apps/kviewerpart/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kviewerpart/icons/hicolor/16x16
+@dirrm share/kde/apps/kviewerpart/icons/hicolor
+@dirrm share/kde/apps/kviewerpart/icons
 @dirrm share/kde/apps/kviewerpart
 @dirrm share/kde/apps/kview/kpartplugins
 @dirrm share/kde/apps/kview
@@ -1095,14 +1231,28 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/kde/apps/kooka
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/kolourpaint/pics
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/scalable/apps
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/scalable
 @dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48/apps
 @dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48
 @dirrm share/kde/apps/kolourpaint/icons/hicolor/32x32/apps
 @dirrm share/kde/apps/kolourpaint/icons/hicolor/32x32
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/22x22/apps
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/22x22
 @dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16
 @dirrm share/kde/apps/kolourpaint/icons/hicolor
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/scalable/actions
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/scalable
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/48x48/actions
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/48x48
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/32x32/actions
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/32x32
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/22x22/actions
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/22x22
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/16x16/actions
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg/16x16
+@dirrm share/kde/apps/kolourpaint/icons/crystalsvg
 @dirrm share/kde/apps/kolourpaint/icons
 @dirrm share/kde/apps/kolourpaint
 @dirrm share/kde/apps/kiconedit/pics
@@ -1110,14 +1260,21 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @dirrm share/kde/apps/kghostview
 @dirrm share/kde/apps/kgamma/pics
 @dirrm share/kde/apps/kgamma
+@dirrm share/kde/apps/kfaxview
 @dirrm share/kde/apps/kfax/pics
 @dirrm share/kde/apps/kfax
 @dirrm share/kde/apps/kdvi
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcoloredit
 @comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Settings
 @comment in kde: @dirrm share/kde/applnk/Graphics
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kviewshell/html
+@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kviewshell/html
+@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kviewshell
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kfaxview/html
+@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kfaxview/html
+@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs/kfaxview
+@dirrm share/doc/kde/HTML/en/libtext2path-0.1-apidocs
 @dirrm share/doc/kde/HTML/en/kview
 @dirrm share/doc/kde/HTML/en/kuickshow
 @dirrm share/doc/kde/HTML/en/ksnapshot
@@ -1136,5 +1293,6 @@ share/kde/servicetypes/ksvgrenderer.desktop
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3
 @dirrm include/libtext2path-0.1
+@dirrm include/kviewshell
 @dirrm include/ksvg
 @comment in kde: @dirrm include/dom
