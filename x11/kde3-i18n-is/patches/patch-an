@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1 2005/07/12 12:17:33 markd Exp $
+$NetBSD: patch-an,v 1.2 2005/12/11 12:36:16 markd Exp $
 
---- messages/kdepim/multisynk.po.orig	Tue May 24 01:51:25 2005
+--- messages/kdepim/multisynk.po.orig	2005-12-04 07:44:04.000000000 +1300
 +++ messages/kdepim/multisynk.po
 @@ -1,17 +1,16 @@
  # SOME DESCRIPTIVE TITLE.
@@ -11,11 +11,11 @@ $NetBSD: patch-an,v 1.1 2005/07/12 12:17:33 markd Exp $
  msgstr ""
 -"Project-Id-Version: PACKAGE VERSION\n"
 +"Project-Id-Version: unknown PACKAGE VERSION\n"
- "POT-Creation-Date: 2005-01-24 01:35+0100\n"
+ "POT-Creation-Date: 2005-09-21 03:03+0200\n"
 -"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 -"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 -"Language-Team: LANGUAGE <LL@li.org>\n"
-+"PO-Revision-Date: 2005-01-24 01:35+0100\n"
++"PO-Revision-Date: 2005-09-21 03:03+0200\n"
 +"Last-Translator: Not Known <EMAIL@ADDRESS>\n"
 +"Language-Team: is <LL@li.org>\n"
  "MIME-Version: 1.0\n"
