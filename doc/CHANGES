@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12183 2005/12/12 21:45:56 joerg Exp $
+$NetBSD: CHANGES,v 1.12184 2005/12/12 22:49:32 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5728,3 +5728,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/XmHTML to 1.1.7nb4 [joerg 2005-12-12]
 	Updated x11/mxterm to 129nb1 [joerg 2005-12-12]
 	Updated x11/xephem to 3.6.4nb1 [joerg 2005-12-12]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2005Q4 branch [agc 2005-12-12]
