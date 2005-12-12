@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:45:45 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/12 14:43:24 joerg Exp $
 
 DISTNAME=		audiofile
 PKGNAME=		suse_audio-${SUSE_VERSION}
@@ -11,8 +11,6 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for audio libraries
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse_base
-
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES

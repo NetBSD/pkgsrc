@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/16 06:57:37 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/12 14:43:23 joerg Exp $
 #
 
 DISTNAME=	linunace22
@@ -17,14 +17,13 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives (2.2 linux binary)
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.6*-i386 \
-			NetBSD-[2-9]*-i386 Linux-*-i[3-6]86
+ONLY_FOR_PLATFORM=	*-*-i386
 
 WRKSRC=		${WRKDIR}
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} == "NetBSD"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/04/11 21:45:45 tv Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/12 14:43:25 joerg Exp $
 
 DISTNAME=		libpng
 PKGREVISION=		1
@@ -13,8 +13,6 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for the PNG library
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse_base
-
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES

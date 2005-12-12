@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.application,v 1.16 2005/04/28 22:33:36 jlam Exp $
+# $NetBSD: Makefile.application,v 1.17 2005/12/12 14:43:25 joerg Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && \
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly") && \
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc")
 
 .  if !empty(SUSE_PREFER:M9.1)
@@ -17,6 +17,7 @@
 
 .elif ${OPSYS} == "Linux"
 # No Linux emulation is needed
+USE_NATIVE_LINUX=		# empty
 .else
 # we put a value here so that the creation of the bulk
 # build cache files works correctly on non-i386 machines.

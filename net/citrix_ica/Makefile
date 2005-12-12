@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:44 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/12 14:43:26 joerg Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -13,7 +13,8 @@ COMMENT=	Citrix(R) client for the Microsoft Windows Terminal Server
 
 .include "../../mk/bsd.prefs.mk"
 
-ONLY_FOR_PLATFORM=      Linux-*-i[3-6]86 NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
+ONLY_FOR_PLATFORM=      Linux-*-i[3-6]86 NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc 
+ONLY_FOR_PLATFORM=	DragonFly-*-i386
 
 .if ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
@@ -28,13 +29,13 @@ EXTRACT_SUFX=   .tar.Z
 DISTNAME=	solaris
 PKGNAME=	citrix_ica-7.02.78662
 EXTRACT_SUFX=	.tar.Z
-.elif ${OPSYS} == "Linux"
+.elif ${OPSYS} == "Linux" || ${OPSYS} == "DragonFly"
 DISTNAME=	linuxx86
 PKGNAME=	citrix_ica-7.00.77757
 .endif
 
 # see http://www.citrix.com/download/unix-downloads.htm
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && ${MACHINE_ARCH} == "i386"
 DEPENDS+=        suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
@@ -89,7 +90,7 @@ do-install:
 		< ${CDIR}/util/icalicense.sh > ${CDIR}/util/icalicense.sh.fixed
 	${MV} ${CDIR}/util/icalicense.sh.fixed ${CDIR}/util/icalicense.sh
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && ${MACHINE_ARCH} == "i386"
 .  include "../../emulators/suse_linux/Makefile.application"
 .endif
 

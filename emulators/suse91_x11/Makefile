@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/06 14:52:44 salo Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/12 14:43:24 joerg Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		3
@@ -11,9 +11,6 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for X11 binaries
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse91_base
-
-ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386 NetBSD-[3-9]*-x86_64 \
-			FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:12 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/12 14:43:24 joerg Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
 PKGREVISION=		4
@@ -16,8 +16,6 @@ DEPENDS+=		suse_libjpeg>=${SUSE_VERSION}:../../emulators/suse91_libjpeg
 DEPENDS+=		suse_libpng>=${SUSE_VERSION}:../../emulators/suse91_libpng
 DEPENDS+=		suse_libtiff>=${SUSE_VERSION}:../../emulators/suse91_libtiff
 DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse91_x11
-
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 USE_PKGINSTALL=		YES

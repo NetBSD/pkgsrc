@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/12 14:43:26 joerg Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -11,10 +11,15 @@ HOMEPAGE=		http://opensource.adaptec.com/
 COMMENT=		Adaptec Storage Management software
 
 BUILD_DEPENDS+=		rpm>=2.5.4:../../misc/rpm
+
+.include "../../emulators/suse_linux/Makefile.application"
+
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=		suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
+.endif
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -87,5 +92,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/dpteng ${PREFIX}/etc/rc.d/dpteng
 	${INSTALL_SCRIPT} ${WRKDIR}/dptelog ${PREFIX}/etc/rc.d/dptelog
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

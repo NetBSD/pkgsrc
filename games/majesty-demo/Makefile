@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 18:27:50 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/12 14:43:25 joerg Exp $
 #
 
 DISTNAME=	majesty_demo
@@ -19,8 +19,12 @@ ONLY_FOR_PLATFORM=*-*-i386
 
 WRKSRC=		${WRKDIR}
 
+.include "../../emulators/suse_linux/Makefile.application"
+
+.if !defined(USE_NATIVE_LINUX)
 .if (${MACHINE_ARCH} == "i386")
 DEPENDS+=       suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+.endif
 .endif
 
 BINNAME=	maj_demo

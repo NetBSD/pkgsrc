@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:24 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/12 14:43:26 joerg Exp $
 #
 
 DISTNAME=	donkey
@@ -11,11 +11,11 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.edonkey2000.com/
 COMMENT=	Yet another P2P file sharing tool
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} == "NetBSD"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif
