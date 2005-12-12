@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2005/12/12 13:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/12 21:41:15 seb Exp $
 
 DISTNAME=		amarok-1.3.7
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amarok/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		seb@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://amarok.kde.org/
 COMMENT=		KDE audio player
 
