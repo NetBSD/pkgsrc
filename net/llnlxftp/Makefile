@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/06/17 03:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/12 21:36:55 joerg Exp $
 #
 
 DISTNAME=		llnlxftp2.1
 PKGNAME=		llnlxftp-2.1
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.llnl.gov/pub/ia/llnlxftp/
 EXTRACT_SUFX=		.tar.Z
