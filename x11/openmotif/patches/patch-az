@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.1 2004/03/16 23:59:42 danw Exp $
+$NetBSD: patch-az,v 1.2 2005/12/12 19:55:41 joerg Exp $
 
---- lib/Xm/Scale.c.orig	Sat Mar 13 22:17:01 2004
+--- lib/Xm/Scale.c.orig	2005-12-02 18:31:33.000000000 +0100
 +++ lib/Xm/Scale.c
-@@ -82,6 +82,9 @@ static char rcsid[] = "$TOG: Scale.c /ma
+@@ -87,6 +87,9 @@ static char rcsid[] = "$TOG: Scale.c /ma
  extern "C" { /* some 'locale.h' do not have prototypes (sun) */
  #endif
  #include <X11/Xlocale.h>

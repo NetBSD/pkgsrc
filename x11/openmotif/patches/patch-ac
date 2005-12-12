@@ -1,13 +1,15 @@
-$NetBSD: patch-ac,v 1.2 2001/09/08 20:03:44 jlam Exp $
+$NetBSD: patch-ac,v 1.3 2005/12/12 19:55:41 joerg Exp $
 
---- clients/mwm/Imakefile.orig	Fri Sep  7 22:06:54 2001
-+++ clients/mwm/Imakefile
-@@ -217,7 +217,7 @@
- CppFileTarget(sys.mwmrc,sys.mwmrc.src,$(LOCAL_CPP_DEFINES),)
- */
+--- lib/Xm/Xmos.c.orig	2005-11-25 05:50:57.000000000 +0100
++++ lib/Xm/Xmos.c
+@@ -91,6 +91,10 @@ extern int regex();
  
--InstallNonExecFile(system.mwmrc,$(XPROJECTROOT)/lib/X11)
-+InstallNonExecFile(system.mwmrc,$(LIBDIR))
- InstallAppDefaults(Mwm)
+ #include <sys/stat.h>
  
- MessageCatalogRule(Mwm)
++#if defined(__NetBSD__) && !defined(_POSIX_THREAD_SAFE_FUNCTIONS)
++#define _POSIX_THREAD_SAFE_FUNCTIONS 200112L
++#endif
++
+ #define X_INCLUDE_PWD_H
+ #define X_INCLUDE_DIRENT_H
+ #define XOS_USE_XT_LOCKING

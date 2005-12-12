@@ -1,10 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2001/09/08 20:03:44 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2005/12/12 19:55:41 joerg Exp $
 
---- bitmaps/Imakefile.orig	Fri Sep  7 22:06:54 2001
-+++ bitmaps/Imakefile
-@@ -56,4 +56,4 @@
- 
- all::
- 
--InstallMultipleFlags($(HEADERS),$(XPROJECTROOT)/include/X11/bitmaps/,$(INSTINCFLAGS))
-+InstallMultipleFlags($(HEADERS),$(INCDIR)/X11/bitmaps,$(INSTINCFLAGS))
+--- lib/Xm/Xmos_r.h.orig	2005-11-25 05:31:24.000000000 +0100
++++ lib/Xm/Xmos_r.h
+@@ -248,7 +248,7 @@ typedef struct {
+  * fields.
+  */
+    
+-#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ __inline__ void _Xpw_copyPasswd(_Xgetpwparams p)
+ {
+    memcpy(&(p).pws, (p).pwp, sizeof(struct passwd));
