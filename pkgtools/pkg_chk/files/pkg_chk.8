@@ -1,16 +1,16 @@
-.\"	$NetBSD: pkg_chk.8,v 1.14 2005/12/12 13:36:37 dillo Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.15 2005/12/12 14:03:20 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd September 27, 2005
+.Dd December 12, 2005
 .Dt PKG_CHK 1
 .Sh NAME
 .Nm pkg_chk
 .Nd check, and optionally update, installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl aBbcfhiklNnrsSuv
+.Op Fl aBbcfhiklNnrSsuv
 .Op Fl C Ar conf
 .Op Fl D Ar tags
 .Op Fl L Ar file
@@ -127,8 +127,9 @@ Recursively delete any mismatched packages found.
 Use with care, this does not record which packages were installed
 for later update.
 .It Fl S
-Create summary file of binary packages.  If you are using binary
-packages remotely, this file has to be created on the server.
+Create summary file of binary packages.
+If you are using binary packages remotely, this file has to be
+created on the server.
 .It Fl s
 Building missing packages from source.
 If DEPENDS_TARGET=package is set in
