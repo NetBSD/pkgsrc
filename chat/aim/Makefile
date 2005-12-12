@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/12 20:30:00 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/12 21:32:20 joerg Exp $
 
 DISTNAME=	aim-1.5.286
 CATEGORIES=	chat
@@ -15,10 +15,10 @@ COMMENT=	AOL Instant Messenger (SM)
 BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 
 do-install:
-        ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-        ${LOCALBASE}/sbin/rpm2pkg -d ${PREFIX} -f ${PLIST_SRC} \
-                -p ${EMULSUBDIR} ${DISTDIR}/${DISTFILES}
-        ${LN} -fs ../${EMULSUBDIR}/usr/bin/aim ${PREFIX}/bin/aim
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${LOCALBASE}/sbin/rpm2pkg -d ${PREFIX} -f ${PLIST_SRC} \
+	        -p ${EMULSUBDIR} ${DISTDIR}/${DISTFILES}
+	${LN} -fs ../${EMULSUBDIR}/usr/bin/aim ${PREFIX}/bin/aim
 
 .include "../../emulators/suse_linux/Makefile.application"
 
