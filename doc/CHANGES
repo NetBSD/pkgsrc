@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12178 2005/12/12 18:50:58 salo Exp $
+$NetBSD: CHANGES,v 1.12179 2005/12/12 19:53:12 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5680,3 +5680,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audio/amarok to 1.3.7 [wiz 2005-12-12]
 	Updated www/lighttpd to 1.4.8 [joerg 2005-12-12]
 	Updated www/firefox-bin to 1.5 [salo 2005-12-12]
+	Updated x11/xorg-libs to 6.8.2nb5 [joerg 2005-12-12]
