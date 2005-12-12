@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 20:51:18 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/12 14:56:07 joerg Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -29,8 +29,14 @@ PKG_SUPPORTED_OPTIONS=	gif
 .include "../../mk/bsd.options.mk"
 .include "../../mk/x11.buildlink3.mk"
 
+.if ${OPSYS} == "DragonFly"
+QT1_PLATFORM=	netbsd-g++-static
+.else
+QT1_PLATFORM=	${LOWER_OPSYS}-g++-static
+.endif
+
 do-configure:
-	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${LOWER_OPSYS}-g++-static
+	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${QT1_PLATFORM}
 
 .if !empty(PKG_OPTIONS:Mgif)
 post-patch:
