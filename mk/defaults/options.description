@@ -24,6 +24,7 @@ bdb
 bktr	
 blender-exppython	Enable the Experimental Python support.
 bpf	
+bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
 buffy-size	
 canna			Use Canna as Japanese conversion program.
 catalog-mysql		Store Bacula catalog in MySQL database.
