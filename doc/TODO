@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4275 2005/12/12 14:02:25 wiz Exp $
+$NetBSD: TODO,v 1.4276 2005/12/12 20:08:27 joerg Exp $
 
 Suggested new packages
 ======================
@@ -714,7 +714,6 @@ Suggested package updates
 	o libtorrent-0.7.6
 	o libwpd-0.8.3
 	o licq-core-1.3.0
-	o lighttpd-1.4.8
 	o lilypond-2.6.3
 	o linuxsms-0.77
 	o liquidwar-5.6.3
@@ -813,7 +812,6 @@ Suggested package updates
 	o openal-20050401
 	o opencobol-0.31
 	o openh323-1.17.2
-	o openmotif-2.2.3 [http://www.openmotif.org/]
 	o openpam-20050616
 	o openssl-0.9.8a
 	o oroborus-2.0.15
