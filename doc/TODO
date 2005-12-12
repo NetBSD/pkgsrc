@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4273 2005/12/11 22:50:38 dillo Exp $
+$NetBSD: TODO,v 1.4274 2005/12/12 12:42:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,7 @@ Suggested package updates
 	o audacity-1.2.4
 	o autogen-5.7.3
 	o avcheck-0.91
-	o avidemux-2.0.42
+	o avidemux-2.1.0
 	o avl-2.0.1
 	o avr-libc-1.4.0
 	o baci-20040415
@@ -391,7 +391,7 @@ Suggested package updates
 	o bioperl-1.5.0
 	o bitlbee-1.0
 	o bittorrent-4.2.1
-	o bittorrent-gui-4.1.7
+	o bittorrent-gui-4.2.1
 	o blackbox-0.70
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -405,6 +405,7 @@ Suggested package updates
 	o c4-1.10
 	o cal3d-0.10.0
 	o camlimages-2.12
+	o capc-calc-2.11.11
 	o catdoc-0.94
 	o catdoc-tk-0.94
 	o cbmconvert-2.1.2
@@ -611,6 +612,7 @@ Suggested package updates
 	o hatari-0.80
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
+	o horde3-3.0.8
 	o hot-babe-0.2.2
 	o hpijs-2.1.4
 	o html2ps-1.0b4
@@ -623,7 +625,7 @@ Suggested package updates
 	o hugs-200503 [pkg/30071]
 	o hydra-5.0
 	o hydrogen-0.9.2
-	o hyperestraier-1.0.6
+	o hyperestraier-1.1.1
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -639,13 +641,14 @@ Suggested package updates
 	o inn-2.4.2
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
-	o ion3-20051029
+	o ion3-20051210
 	o ion3-devel-20050820 [pkg/31132]
 	o iozone-3.257
 	o ipcheck-0.219
 	o ircu-2.10.12.0
 	o iroffer-1.3b10 [pkg/31859]
 	o irrd-2.2.8
+	o irssi-0.8.10
 	o iselect-1.3.0
 	o ispell-gaeilge-4.0
 	o ispell-russian-0.99f8
@@ -653,7 +656,7 @@ Suggested package updates
 	o ispman-1.2
 	o ja-ptex-bin-3.1.8.1
 	o ja-ptex-share-2.2
-	o ja-vflib-lib-2.25.6
+	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
@@ -692,7 +695,7 @@ Suggested package updates
 	o libextractor-0.5.8
 	o libflash-0.4.13
 	o libgdiplus-1.1.9.2
-	o libggi-2.1.2
+	o libggi-2.2
 	o libggimisc-2.1.2
 	o libgii-0.9.2
 	o libhydrogen-0.9.2
@@ -744,7 +747,7 @@ Suggested package updates
 	o memtest86-3.2
 	o mergeant-0.62
 	o metakit-2.4.9.4
-	o mftrace-1.1.16
+	o mftrace-1.1.17
 	o mgetty-1.1.33
 	o micro_httpd-20050629
 	o milter-regex-1.6
@@ -1038,6 +1041,7 @@ Suggested package updates
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
+	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qbrew-0.3.5
 	o qcad-2.0.4.0 [pkgsrc-wip]
@@ -1065,7 +1069,7 @@ Suggested package updates
 	o resize_image-0.7
 	o rhythmbox-0.9.0
 	o rio500-0.8.1
-	o ripmime-1.4.0.4
+	o ripmime-1.4.0.6
 	o rman-3.2
 	o robodoc-4.99.6
 	o root-5.04.00
@@ -1152,6 +1156,7 @@ Suggested package updates
 	o sun-jdk14-2.10
 	o sun-jre14-2.10
 	o suse_base-10.0
+	o svk-1.06
 	o sweep-0.8.4
 	o swfdec-0.3.5
 	o swi-prolog-5.5.33
@@ -1202,6 +1207,7 @@ Suggested package updates
 	o tsclient-0.140
 	o tspc-2.1.1
 	o ttyrec-1.0.6
+	o turba-2.0.5
 	o tuxpaint-0.9.15
 	o tuxpaint-stamps-20051125
 	o twelf-1.5
@@ -1241,7 +1247,7 @@ Suggested package updates
 	o weechat-0.1.6
 	o weewm-0.01
 	o winbind-3.0.13
-	o wine-0.9.2
+	o wine-0.9.3
 	o wmctrl-1.07
 	o wmweather-2.4.3
 	o wv-1.2.0
