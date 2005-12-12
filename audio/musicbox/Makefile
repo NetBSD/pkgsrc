@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:49:49 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/12 15:03:45 joerg Exp $
 
 DISTNAME=	musicbox-1.01p2
 CATEGORIES=	audio
@@ -22,4 +22,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/musicbox/README
 
 .include "../../x11/qt1/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
