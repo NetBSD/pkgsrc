@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12180 2005/12/12 19:56:40 joerg Exp $
+$NetBSD: CHANGES,v 1.12181 2005/12/12 20:34:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5682,3 +5682,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/firefox-bin to 1.5 [salo 2005-12-12]
 	Updated x11/xorg-libs to 6.8.2nb5 [joerg 2005-12-12]
 	Updated x11/openmotif to 2.2.3 [joerg 2005-12-12]
+	Updated net/nsd to 2.3.3 [joerg 2005-12-12]
