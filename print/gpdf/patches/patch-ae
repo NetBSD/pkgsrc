@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1.2.1 2005/12/12 23:04:02 seb Exp $
+
+Security fix for CVE-2005-3192.
+
+--- xpdf/Stream.h.orig	2004-05-17 21:37:57.000000000 +0200
++++ xpdf/Stream.h	2005-12-11 05:10:04.000000000 +0100
+@@ -233,6 +233,8 @@ public:
+ 
+   ~StreamPredictor();
+ 
++  GBool isOk() { return ok; }
++
+   int lookChar();
+   int getChar();
+ 
+@@ -250,6 +252,7 @@ private:
+   int rowBytes;			// bytes per line
+   Guchar *predLine;		// line buffer
+   int predIdx;			// current index in predLine
++  GBool ok;
+ };
+ 
+ //------------------------------------------------------------------------
