@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/12/07 17:01:22 bad Exp $
+# $NetBSD: Makefile,v 1.51 2005/12/12 21:38:55 bad Exp $
 #
 
 DISTNAME=	bozohttpd-20050410
@@ -15,7 +15,7 @@ BUILD_DEFS+=	USE_INET6
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bozohttpd
-PKG_SUPPORTED_OPTIONS=	do_htpasswd
+PKG_SUPPORTED_OPTIONS=	bozohttpd-do-htpasswd
 
 .include "../../mk/bsd.prefs.mk"
 
