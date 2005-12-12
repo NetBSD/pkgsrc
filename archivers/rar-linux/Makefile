@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/30 13:10:38 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/12 14:43:23 joerg Exp $
 #
 
 DISTNAME=		rarlinux-3.5.1
@@ -13,16 +13,15 @@ COMMENT=		RAR command line archiver (Linux binary)
 
 LICENSE=		rar-license
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.6*-i386 \
-			NetBSD-[2-9]*-i386 Linux-*-i[3-6]86
+ONLY_FOR_PLATFORM=	*-*-i386
 WRKSRC=			${WRKDIR}/rar
 
 # old name of the package
 CONFLICTS=		rarlinux-[0-9]*
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} == "NetBSD"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif
@@ -41,5 +40,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/rar-linux
 	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${PREFIX}/share/doc/rar-linux
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

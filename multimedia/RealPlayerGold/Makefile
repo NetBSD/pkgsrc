@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/10/04 15:28:25 rpaulo Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/12 14:43:26 joerg Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
@@ -20,7 +20,7 @@ DIST_SUBDIR=		${PKGNAME_NOREV}
 
 .include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} != "Linux"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=		suse_base>=9.1:../../emulators/suse91_base
 DEPENDS+=		suse_fontconfig>=9.1:../../emulators/suse91_fontconfig
 DEPENDS+=		suse_freetype2>=9.1:../../emulators/suse91_freetype2

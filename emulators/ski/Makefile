@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2005/10/05 11:58:50 skrll Exp $
+#	$NetBSD: Makefile,v 1.2 2005/12/12 14:43:23 joerg Exp $
 
 DISTNAME=		ski-0.9.81-l6-i686
 CATEGORIES=		emulators
@@ -16,9 +16,9 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} != "Linux"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
@@ -42,5 +42,4 @@ do-install:
 	${INSTALL_MAN} ${WRKDIR}/nue/usr/man/man1/*ski*.1 ${PREFIX}/man/man1
 	${INSTALL_DATA} ${WRKDIR}/nue/usr/X11R6/lib/X11/app-defaults/XSki ${PREFIX}/lib/X11/app-defaults/XSki
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

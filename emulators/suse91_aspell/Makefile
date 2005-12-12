@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/06 14:52:43 salo Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/12 14:43:23 joerg Exp $
 
 DISTNAME=		suse_aspell-${SUSE_VERSION}
 PKGREVISION=		1
@@ -10,15 +10,18 @@ MAINTAINER=		jdolecek@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for Aspell library
 
-DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse91_base
+RPMFILES=		aspell-0.50.5-38.4.${SUSE_ARCH}.rpm
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
+.include "../../emulators/suse_linux/Makefile.application"
+
+.if !defined(USE_NATIVE_LINUX)
+DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse91_base
+.endif
+
+ONLY_FOR_PLATFORM=      *-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		aspell-0.50.5-38.4.${SUSE_ARCH}.rpm
-
-.include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

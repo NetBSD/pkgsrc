@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/09/28 20:52:24 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/12 14:43:26 joerg Exp $
 #
 
 DISTNAME=	overnetclc-1.0.1
@@ -22,13 +22,13 @@ CHECK_SHLIBS=	no
 
 EVAL_PREFIX=	RPM2PKGDIR=rpm2pkg
 
-ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
+.include "../../emulators/suse_linux/Makefile.application"
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif
+
+ONLY_FOR_PLATFORM=	*-*-i386
 
 INSTALLATION_DIRS=	bin
 
@@ -47,5 +47,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/usr/share/overnetclc/contact.dat	\
 		${PREFIX}/share/overnetclc
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

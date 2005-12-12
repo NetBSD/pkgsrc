@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/10/27 22:57:27 tv Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/12/12 14:43:25 joerg Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -35,8 +35,16 @@ EXTRACT_ENV.bin+= UNPACK200_FLAGS=-Htrue
 NO_MTREE=	yes	# since we change PREFIX
 LDD=		${TRUE}
 
-ONLY_FOR_PLATFORM=	NetBSD-1.6[U-Z]*-i386 NetBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
+.include "../../emulators/suse_linux/Makefile.application"
+
+.if !defined(USE_NATIVE_LINUX)
+ONLY_FOR_PLATFORM=	*-*-i386
+.  if ${SUSE_DIR_PREFIX} == "suse91"
+DEPENDS+=	suse_locale-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_locale
+.  endif
+DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
+.endif
 
 _FETCH_MESSAGE= 							\
 	${ECHO} "======================================================================"; \
@@ -63,15 +71,6 @@ do-build:	# nothing
 do-install:
 	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
 	cd ${WRKSRC} && ${PAX} -rwp ma . ${JAVA_HOME}
-
-.if ${OPSYS} == "NetBSD"
-.  include "../../emulators/suse_linux/Makefile.application"
-.  if ${SUSE_DIR_PREFIX} == "suse91"
-DEPENDS+=	suse_locale-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_locale
-.  endif
-DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
 
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"

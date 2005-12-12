@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/10 06:24:49 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/12 14:43:25 joerg Exp $
 #
 
 DISTNAME=	adom-111-elf
@@ -17,9 +17,9 @@ NO_BUILD=	YES
 NO_CONFIGURE=	YES
 CHECK_SHLIBS=	NO
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} == "NetBSD"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
@@ -30,5 +30,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.* ${PREFIX}/share/doc/adom
 	${INSTALL_PROGRAM} ${WRKSRC}/adom ${PREFIX}/bin
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
