@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.435 2005/12/09 08:40:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.436 2005/12/12 21:36:45 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -1599,6 +1599,7 @@ sub checkline_mk_shelltext($$) {
 	my ($line, $text) = @_;
 	my ($vartools, $state, $rest);
 
+	# Note: SCST is the abbreviation for [S]hell [C]ommand [ST]ate.
 	use constant SCST_START		=>  0;
 	use constant SCST_CONT		=>  1;
 	use constant SCST_INSTALL	=> 10;
@@ -2451,6 +2452,15 @@ sub checklines_mk($) {
 
 			$line->log_debug("includefile=${includefile}");
 			checkline_relative_path($line, $includefile);
+
+			if ($includefile =~ qr"../Makefile$") {
+				$line->log_error("Other Makefiles must not be included.");
+				$line->explain(
+					"If you want to include portions of another Makefile, extract",
+					"the common parts and put them into a Makefile.common. After",
+					"that, both this one and the other package should include the",
+					"Makefile.common.");
+			}
 
 		} elsif ($text =~ qr"^\.\s*(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$") {
 			my ($directive, $args) = ($1, $2);
