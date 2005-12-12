@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/03 20:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/12 14:43:26 joerg Exp $
 
 DISTNAME=		vlnx424e
 PKGNAME=		uvscan-4.24.1
@@ -12,9 +12,13 @@ COMMENT=		Evaluation version of a DOS/Windows file virus scanner
 
 CONFLICTS=		uvscan-dat-[0-9]*
 
-DEPENDS+=		suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
+.include "../../emulators/suse_linux/Makefile.application"
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+.if !defined(USE_NATIVE_LINUX)
+DEPENDS+=		suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
+.endif
+
+ONLY_FOR_PLATFORM=	*-*-i386
 CHECK_SHLIBS=		NO
 
 WRKSRC=			${WRKDIR}
@@ -78,5 +82,4 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
 	done
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
