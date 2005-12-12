@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.5 2004/05/11 12:18:37 wiz Exp $
+$NetBSD: patch-ai,v 1.6 2005/12/12 15:32:56 joerg Exp $
 
---- configure.orig	1997-10-26 15:55:34.000000000 +0100
+--- configure.orig	1997-10-26 14:55:34.000000000 +0000
 +++ configure
 @@ -970,7 +970,7 @@ fi
  #try to guess qt locations
@@ -11,6 +11,15 @@ $NetBSD: patch-ai,v 1.5 2004/05/11 12:18:37 wiz Exp $
  
  qt_incdir=NO
  for i in $qt_incdirs;
+@@ -1700,7 +1700,7 @@ case "$OS_TYPE" in
+     CFLAGS="-O3 -ffast-math -funroll-loops"
+     ;;
+ 
+-  Linux|FreeBSD)
++  Linux|FreeBSD|DragonFly)
+     CC="gcc"
+     if test "$ARCH_TYPE" = "i486" ; then
+       CFLAGS_ARCH="-m486"
 @@ -1714,6 +1714,11 @@ case "$OS_TYPE" in
      CFLAGS="-O6 -ffast-math -fomit-frame-pointer -DNO_BYTE_SWAPPING ${CFLAGS_ARCH}"
      ;;

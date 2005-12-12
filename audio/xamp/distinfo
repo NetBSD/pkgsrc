@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 20:39:53 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/12/12 15:32:56 joerg Exp $
 
 SHA1 (xamp/xamp-0.8-10.tgz) = 65f83c41091184432d64baf1d74aef880733fbd5
 RMD160 (xamp/xamp-0.8-10.tgz) = 9141bbcbfae0d7ea2a04939b4fee7edfd1403d04
@@ -12,19 +12,19 @@ Size (xamp/chrome.tar.gz) = 32636 bytes
 SHA1 (xamp/mmxamp.tar.gz) = f703dfe3040bd72db35bb05e26a8eb7841b54887
 RMD160 (xamp/mmxamp.tar.gz) = a4a509ecf2c36e65369e70364281486ab491b8e3
 Size (xamp/mmxamp.tar.gz) = 41405 bytes
-SHA1 (patch-aa) = a178fc8dee38f4e55eff7289577f2f4b36806574
+SHA1 (patch-aa) = 50574884e35679ad425b25c5886ef96661288964
 SHA1 (patch-ab) = 96c0e3db7637c035345cbf2df7d2ee195b538bcb
 SHA1 (patch-ac) = de83b1fd7b170438f818d76d025838f8aa07c752
 SHA1 (patch-ad) = 3595460ae4f848b60d1c829ebfecff92cd2a8e58
 SHA1 (patch-ae) = 348aff7b4cef04198359c4ea5d7e06cc2b63fd08
-SHA1 (patch-af) = be56e4d380045d0be4c90c88b263cacd611d0eab
+SHA1 (patch-af) = 45568633714f7fbea443001b0af252e6d3310223
 SHA1 (patch-ag) = c17579b095485510bc5dc99d0c22da2f44e152b8
 SHA1 (patch-ah) = 2460dd3cc32f18847f99cdc3f5cefa87601a4c85
-SHA1 (patch-ai) = 9c128048fdb8bed0fb7abd15758a197bd3e35487
+SHA1 (patch-ai) = cea0ed01b293457d5660cf6ecff95e616f608eb5
 SHA1 (patch-aj) = ab841128854cdacceb54b6c7726d07e5f4fb1140
 SHA1 (patch-ak) = 0d32700aad4cdf232bc1c48376ddcbd762b41852
 SHA1 (patch-al) = 38760f05d5ca7b4557c6d8ddfb0b08cbc4b0dd9b
-SHA1 (patch-am) = 1847c96306c21514adb4f2825bf17c9ea6fd3f0f
+SHA1 (patch-am) = 6930ab1879789ee4c762da345d5bccb862f06c8a
 SHA1 (patch-an) = 19fdd266a633afccf7ec4de18a8fc5aa7975354f
 SHA1 (patch-ao) = c3d125d0498052c1f37ce3a3597ca50827779aca
 SHA1 (patch-ap) = 4b4429e3c4a9e8324808cf7b1443db4dddc14cb9
