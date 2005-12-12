@@ -1,8 +1,18 @@
-$NetBSD: patch-bc,v 1.1 2005/05/23 19:14:15 xtraeme Exp $
+$NetBSD: patch-bc,v 1.2 2005/12/12 19:52:17 joerg Exp $
 
---- include/Xos_r.h.orig	2005-04-30 23:18:21.000000000 +0200
-+++ include/Xos_r.h	2005-04-30 23:17:52.000000000 +0200
-@@ -257,7 +257,7 @@
+--- include/Xos_r.h.orig	2005-12-12 19:16:02.000000000 +0000
++++ include/Xos_r.h
+@@ -205,6 +205,9 @@ extern void XtProcessUnlock(
+ # undef _POSIX_THREAD_SAFE_FUNCTIONS
+ #endif
+ 
++#if defined(__DragonFly__)
++#define XNO_MTSAFE_PWDAPI 1
++#endif
+ 
+ /***** <pwd.h> wrappers *****/
+ 
+@@ -257,7 +260,7 @@ typedef struct {
   */
  
  #if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
@@ -11,7 +21,7 @@ $NetBSD: patch-bc,v 1.1 2005/05/23 19:14:15 xtraeme Exp $
  static __inline__ void _Xpw_copyPasswd(_Xgetpwparams p)
  {
     memcpy(&(p).pws, (p).pwp, sizeof(struct passwd));
-@@ -427,7 +427,7 @@
+@@ -427,7 +430,7 @@ typedef int _Xgetservbynameparams; /* du
  /* UnixWare 2.0, or other systems with thread support but no _r API. */
  /* WARNING:  The h_addr_list and s_aliases values are *not* copied! */
  
@@ -20,3 +30,19 @@ $NetBSD: patch-bc,v 1.1 2005/05/23 19:14:15 xtraeme Exp $
  #include <sys/param.h>
  #endif
  
+@@ -652,6 +655,15 @@ extern int _Preaddir_r(DIR *, struct dir
+ # elif defined(SVR4)
+ /* Pre-POSIX API, returns non-NULL on success. */
+ #  define _XReaddir(d,p)	(readdir_r((d), &(p).dir_entry))
++#elif defined(__DragonFly__)
++#  define _XReaddir(d,p)        \
++    ( (_Xos_processLock),                                               \
++      (((p).result = readdir((d))) ?                                    \
++       (memcpy(&((p).dir_entry), (p).result, _DIRENT_MINSIZ((p).result)),     \
++        ((p).result = &(p).dir_entry), 0) :                             \
++       0),                                                              \
++      (_Xos_processUnlock),                                             \
++      (p).result )
+ # else
+ /* We have no idea what is going on.  Fake it all using process locks. */
+ #  define _XReaddir(d,p)	\
