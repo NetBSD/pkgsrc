@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2004/12/08 08:57:56 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2005/12/12 00:11:52 joerg Exp $
 
---- src/cpu_perc.c.orig	2002-05-06 21:50:10.000000000 -0500
+--- src/cpu_perc.c.orig	2002-05-07 02:50:10.000000000 +0000
 +++ src/cpu_perc.c
 @@ -45,6 +45,9 @@
    #include <fcntl.h>
@@ -16,7 +16,7 @@ $NetBSD: patch-ad,v 1.1 2004/12/08 08:57:56 minskim Exp $
  	/* find where the proc fs is mounted, some strange people could mount it
  	   in another place than /proc, it can even be not mounted at all */
  	{
-+#ifdef HAVE_SYS_STATVFS_H
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__DragonFly__)
 +	  struct statvfs *mntbufp;
 +#else
  	  struct statfs *mntbufp;
