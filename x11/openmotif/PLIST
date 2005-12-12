@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/02 23:10:29 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/12/12 19:55:41 joerg Exp $
 bin/mwm
 bin/uil
 bin/xmbind
@@ -27,10 +27,11 @@ include/Xm/ArrowBG.h
 include/Xm/ArrowBGP.h
 include/Xm/ArrowBP.h
 include/Xm/AtomMgr.h
-include/Xm/BaseClassI.h
 include/Xm/BaseClassP.h
 include/Xm/BulletinB.h
 include/Xm/BulletinBP.h
+include/Xm/ButtonBox.h
+include/Xm/ButtonBoxP.h
 include/Xm/CacheP.h
 include/Xm/CareVisualT.h
 include/Xm/CascadeB.h
@@ -40,7 +41,13 @@ include/Xm/CascadeBP.h
 include/Xm/ClipWindowP.h
 include/Xm/ColorObjP.h
 include/Xm/ColorP.h
+include/Xm/ColorS.h
+include/Xm/ColorSP.h
+include/Xm/Column.h
+include/Xm/ColumnP.h
 include/Xm/ComboBox.h
+include/Xm/ComboBox2.h
+include/Xm/ComboBox2P.h
 include/Xm/ComboBoxP.h
 include/Xm/Command.h
 include/Xm/CommandP.h
@@ -49,6 +56,9 @@ include/Xm/Container.h
 include/Xm/ContainerP.h
 include/Xm/ContainerT.h
 include/Xm/CutPaste.h
+include/Xm/DataF.h
+include/Xm/DataFP.h
+include/Xm/DataFSelP.h
 include/Xm/DesktopP.h
 include/Xm/DialogS.h
 include/Xm/DialogSEP.h
@@ -64,17 +74,26 @@ include/Xm/DragIconP.h
 include/Xm/DragOverS.h
 include/Xm/DragOverSP.h
 include/Xm/DrawP.h
+include/Xm/DrawUtils.h
 include/Xm/DrawingA.h
 include/Xm/DrawingAP.h
 include/Xm/DrawnB.h
 include/Xm/DrawnBP.h
+include/Xm/DropDown.h
+include/Xm/DropDownP.h
 include/Xm/DropSMgr.h
 include/Xm/DropSMgrP.h
 include/Xm/DropTrans.h
 include/Xm/DropTransP.h
+include/Xm/Ext.h
+include/Xm/Ext18List.h
+include/Xm/Ext18ListP.h
 include/Xm/ExtObjectP.h
+include/Xm/ExtP.h
 include/Xm/FileSB.h
 include/Xm/FileSBP.h
+include/Xm/FontS.h
+include/Xm/FontSP.h
 include/Xm/Form.h
 include/Xm/FormP.h
 include/Xm/Frame.h
@@ -83,6 +102,12 @@ include/Xm/Gadget.h
 include/Xm/GadgetP.h
 include/Xm/GrabShell.h
 include/Xm/GrabShellP.h
+include/Xm/Hierarchy.h
+include/Xm/HierarchyP.h
+include/Xm/IconBox.h
+include/Xm/IconBoxP.h
+include/Xm/IconButton.h
+include/Xm/IconButtonP.h
 include/Xm/IconFile.h
 include/Xm/IconFileP.h
 include/Xm/IconG.h
@@ -109,12 +134,20 @@ include/Xm/MenuT.h
 include/Xm/MenuUtilP.h
 include/Xm/MessageB.h
 include/Xm/MessageBP.h
+include/Xm/MultiList.h
+include/Xm/MultiListP.h
 include/Xm/MwmUtil.h
 include/Xm/NavigatorT.h
 include/Xm/Notebook.h
 include/Xm/NotebookP.h
+include/Xm/Outline.h
+include/Xm/OutlineP.h
+include/Xm/Paned.h
+include/Xm/PanedP.h
 include/Xm/PanedW.h
 include/Xm/PanedWP.h
+include/Xm/Picture.h
+include/Xm/PictureP.h
 include/Xm/PointInT.h
 include/Xm/Primitive.h
 include/Xm/PrimitiveP.h
@@ -150,9 +183,16 @@ include/Xm/SeparatoGP.h
 include/Xm/Separator.h
 include/Xm/SeparatorP.h
 include/Xm/ShellEP.h
+include/Xm/SlideC.h
+include/Xm/SlideCP.h
 include/Xm/SpecRenderT.h
 include/Xm/SpinB.h
 include/Xm/SpinBP.h
+include/Xm/TabBox.h
+include/Xm/TabBoxP.h
+include/Xm/TabList.h
+include/Xm/TabStack.h
+include/Xm/TabStackP.h
 include/Xm/TakesDefT.h
 include/Xm/TearOffBP.h
 include/Xm/TearOffP.h
@@ -175,6 +215,8 @@ include/Xm/TransferP.h
 include/Xm/TransferT.h
 include/Xm/TransltnsP.h
 include/Xm/TravConT.h
+include/Xm/Tree.h
+include/Xm/TreeP.h
 include/Xm/TxtPropCv.h
 include/Xm/UnhighlightT.h
 include/Xm/UnitTypeT.h
@@ -189,17 +231,19 @@ include/Xm/XmAll.h
 include/Xm/XmIm.h
 include/Xm/XmP.h
 include/Xm/XmStrDefs.h
+include/Xm/XmStrDefs22.h
 include/Xm/Xmfuncs.h
 include/Xm/XmosP.h
+include/Xm/Xmos_r.h
+include/Xm/Xmpoll.h
 include/Xm/XpmP.h
+include/Xm/xmlist.h
 include/uil/Uil.h
 include/uil/UilDBDef.h
 include/uil/UilDef.h
 include/uil/UilSymDef.h
 include/uil/UilSymGl.h
 include/uil/XmAppl.uil
-lib/X11/app-defaults/Mwm
-lib/X11/bindings/CDE
 lib/X11/bindings/acorn
 lib/X11/bindings/apollo
 lib/X11/bindings/dec
@@ -226,28 +270,17 @@ lib/X11/bindings/sun
 lib/X11/bindings/sun_at
 lib/X11/bindings/tek
 lib/X11/bindings/xmbind.alias
-lib/X11/config/OpenMotif.def
-lib/X11/config/OpenMotif.rules
-lib/X11/config/OpenMotif.tmpl
 lib/X11/system.mwmrc
-lib/libMrm.a
-lib/libMrm.so
-lib/libMrm.so.2
-${AVAILABLE}lib/libMrm.so.2.1
-lib/libUil.a
-lib/libUil.so
-lib/libUil.so.2
-${AVAILABLE}lib/libUil.so.2.1
-lib/libXm.a
-lib/libXm.so
-lib/libXm.so.2
-${AVAILABLE}lib/libXm.so.2.1
+lib/libMrm.la
+lib/libUil.la
+lib/libXm.la
 man/man1/mwm.1
 man/man1/uil.1
 man/man1/xmbind.1
 man/man3/ApplicationShell.3
 man/man3/Composite.3
 man/man3/Constraint.3
+man/man3/XCore.3
 man/man3/MrmCloseHierarchy.3
 man/man3/MrmFetchBitmapLiteral.3
 man/man3/MrmFetchColorLiteral.3
@@ -263,8 +296,10 @@ man/man3/MrmOpenHierarchyPerDisplay.3
 man/man3/MrmRegisterClass.3
 man/man3/MrmRegisterNames.3
 man/man3/MrmRegisterNamesInHierarchy.3
+man/man3/XObject.3
 man/man3/OverrideShell.3
 man/man3/RectObj.3
+man/man3/XShell.3
 man/man3/TopLevelShell.3
 man/man3/TransientShell.3
 man/man3/Uil.3
@@ -272,9 +307,6 @@ man/man3/UilDumpSymbolTable.3
 man/man3/VendorShell.3
 man/man3/VirtualBindings.3
 man/man3/WMShell.3
-man/man3/XCore.3
-man/man3/XObject.3
-man/man3/XShell.3
 man/man3/XmActivateProtocol.3
 man/man3/XmActivateWMProtocol.3
 man/man3/XmAddProtocolCallback.3
@@ -286,6 +318,7 @@ man/man3/XmAddWMProtocols.3
 man/man3/XmArrowButton.3
 man/man3/XmArrowButtonGadget.3
 man/man3/XmBulletinBoard.3
+man/man3/XmButtonBox.3
 man/man3/XmCascadeButton.3
 man/man3/XmCascadeButtonGadget.3
 man/man3/XmCascadeButtonGadgetHighlight.3
@@ -308,6 +341,8 @@ man/man3/XmClipboardStartRetrieve.3
 man/man3/XmClipboardUndoCopy.3
 man/man3/XmClipboardUnlock.3
 man/man3/XmClipboardWithdrawFormat.3
+man/man3/XmColorSelector.3
+man/man3/XmColumn.3
 man/man3/XmComboBox.3
 man/man3/XmComboBoxAddItem.3
 man/man3/XmComboBoxDeletePos.3
@@ -344,6 +379,7 @@ man/man3/XmCreateDialogShell.3
 man/man3/XmCreateDragIcon.3
 man/man3/XmCreateDrawingArea.3
 man/man3/XmCreateDrawnButton.3
+man/man3/XmCreateDropDown.3
 man/man3/XmCreateDropDownComboBox.3
 man/man3/XmCreateDropDownList.3
 man/man3/XmCreateErrorDialog.3
@@ -362,6 +398,7 @@ man/man3/XmCreateMenuBar.3
 man/man3/XmCreateMenuShell.3
 man/man3/XmCreateMessageBox.3
 man/man3/XmCreateMessageDialog.3
+man/man3/XmCreateMultiList.3
 man/man3/XmCreateNotebook.3
 man/man3/XmCreateOptionMenu.3
 man/man3/XmCreatePanedWindow.3
@@ -405,6 +442,7 @@ man/man3/XmCvtTextPropertyToXmStringTable.3
 man/man3/XmCvtXmStringTableToTextProperty.3
 man/man3/XmCvtXmStringToByteStream.3
 man/man3/XmCvtXmStringToCT.3
+man/man3/XmDataField.3
 man/man3/XmDeactivateProtocol.3
 man/man3/XmDeactivateWMProtocol.3
 man/man3/XmDestroyPixmap.3
@@ -420,6 +458,12 @@ man/man3/XmDragIcon.3
 man/man3/XmDragStart.3
 man/man3/XmDrawingArea.3
 man/man3/XmDrawnButton.3
+man/man3/XmDropDown.3
+man/man3/XmDropDownGetArrow.3
+man/man3/XmDropDownGetLabel.3
+man/man3/XmDropDownGetList.3
+man/man3/XmDropDownGetText.3
+man/man3/XmDropDownGetValue.3
 man/man3/XmDropSite.3
 man/man3/XmDropSiteConfigureStackingOrder.3
 man/man3/XmDropSiteEndUpdate.3
@@ -452,6 +496,7 @@ man/man3/XmFontListGetNextFont.3
 man/man3/XmFontListInitFontContext.3
 man/man3/XmFontListNextEntry.3
 man/man3/XmFontListRemoveEntry.3
+man/man3/XmFontSelector.3
 man/man3/XmForm.3
 man/man3/XmFrame.3
 man/man3/XmGadget.3
@@ -472,6 +517,8 @@ man/man3/XmGetTearOffControl.3
 man/man3/XmGetVisibility.3
 man/man3/XmGetXmDisplay.3
 man/man3/XmGetXmScreen.3
+man/man3/XmIconBox.3
+man/man3/XmIconButton.3
 man/man3/XmIconGadget.3
 man/man3/XmImCloseXIM.3
 man/man3/XmImFreeXIC.3
@@ -541,6 +588,18 @@ man/man3/XmMenuPosition.3
 man/man3/XmMenuShell.3
 man/man3/XmMessageBox.3
 man/man3/XmMessageBoxGetChild.3
+man/man3/XmMultiList.3
+man/man3/XmMultiListDeselectAllItems.3
+man/man3/XmMultiListDeselectItem.3
+man/man3/XmMultiListDeselectItems.3
+man/man3/XmMultiListDeselectRow.3
+man/man3/XmMultiListGetSelectedRowArray.3
+man/man3/XmMultiListGetSelectedRows.3
+man/man3/XmMultiListMakeRowVisible.3
+man/man3/XmMultiListSelectAllItems.3
+man/man3/XmMultiListSelectItems.3
+man/man3/XmMultiListSelectRow.3
+man/man3/XmMultiListToggleRow.3
 man/man3/XmNotebook.3
 man/man3/XmNotebookGetPageInfo.3
 man/man3/XmObjectAtPoint.3
@@ -621,6 +680,7 @@ man/man3/XmSimpleSpinBox.3
 man/man3/XmSimpleSpinBoxAddItem.3
 man/man3/XmSimpleSpinBoxDeletePos.3
 man/man3/XmSimpleSpinBoxSetItem.3
+man/man3/XmSlideContext.3
 man/man3/XmSpinBox.3
 man/man3/XmSpinBoxValidatePosition.3
 man/man3/XmString.3
@@ -687,6 +747,7 @@ man/man3/XmTabListRemoveTabs.3
 man/man3/XmTabListReplacePositions.3
 man/man3/XmTabListTabCount.3
 man/man3/XmTabSetValue.3
+man/man3/XmTabStack.3
 man/man3/XmTargetsAreCompatible.3
 man/man3/XmText.3
 man/man3/XmTextClearSelection.3
@@ -784,6 +845,7 @@ man/man3/XmTransferSetParameters.3
 man/man3/XmTransferStartRequest.3
 man/man3/XmTransferValue.3
 man/man3/XmTranslateKey.3
+man/man3/XmTree.3
 man/man3/XmUninstallImage.3
 man/man3/XmUpdateDisplay.3
 man/man3/XmVaCreateSimpleCheckBox.3
@@ -794,11 +856,12 @@ man/man3/XmVaCreateSimplePulldownMenu.3
 man/man3/XmVaCreateSimpleRadioBox.3
 man/man3/XmWidgetGetBaselines.3
 man/man3/XmWidgetGetDisplayRect.3
+man/man5/mwmrc.5
 man/man5/Traits.5
 man/man5/UIL.5
 man/man5/WML.5
-man/man5/mwmrc.5
-@dirrm lib/X11/bindings
-@dirrm include/uil
-@dirrm include/Xm
 @dirrm include/Mrm
+@dirrm include/X11/bitmaps
+@dirrm include/Xm
+@dirrm include/uil
+@dirrm lib/X11/bindings
