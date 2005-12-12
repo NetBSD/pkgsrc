@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/11/16 01:40:15 seb Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/12/12 13:58:54 wiz Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
@@ -359,24 +359,6 @@ share/kde/apps/amarok/scripts/playlist2html/Playlist.py
 share/kde/apps/amarok/scripts/playlist2html/PlaylistServer.py
 share/kde/apps/amarok/scripts/playlist2html/README
 share/kde/apps/amarok/scripts/playlist2html/playlist2html.py
-share/kde/apps/amarok/scripts/shouter/Amarok.py
-share/kde/apps/amarok/scripts/shouter/ChangeLog
-share/kde/apps/amarok/scripts/shouter/Globals.py
-share/kde/apps/amarok/scripts/shouter/Playlist.py
-share/kde/apps/amarok/scripts/shouter/README
-share/kde/apps/amarok/scripts/shouter/Services.py
-share/kde/apps/amarok/scripts/shouter/Shouter.py
-share/kde/apps/amarok/scripts/shouter/ShouterConfig.py
-share/kde/apps/amarok/scripts/shouter/ShouterExceptions.py
-share/kde/apps/amarok/scripts/shouter/SocketErrors.py
-share/kde/apps/amarok/scripts/shouter/StreamConfig.py
-share/kde/apps/amarok/scripts/shouter/StreamController.py
-share/kde/apps/amarok/scripts/shouter/StreamPublisher.py
-share/kde/apps/amarok/scripts/shouter/binfuncs.py
-share/kde/apps/amarok/scripts/shouter/debug.py
-share/kde/apps/amarok/scripts/shouter/propfind-req.xml
-share/kde/apps/amarok/scripts/shouter/silence/silence-48.mp3
-share/kde/apps/amarok/scripts/shouter/test/client.py
 share/kde/apps/amarok/scripts/templates/amarok.rb
 share/kde/apps/amarok/scripts/templates/python_qt_template.py
 share/kde/apps/amarok/scripts/templates/ruby_qt_template.rb
@@ -406,7 +388,6 @@ share/kde/apps/konqsidebartng/entries/amarok.desktop
 share/kde/apps/konqsidebartng/kicker_entries/amarok.desktop
 share/kde/apps/konqueror/servicemenus/amarok_append.desktop
 share/kde/apps/profiles/amarok.profile.xml
-share/kde/apps/zeroconf/_shoutcast._tcp
 share/kde/config.kcfg/amarok.kcfg
 share/kde/config.kcfg/gstconfig.kcfg
 share/kde/config.kcfg/xinecfg.kcfg
@@ -424,7 +405,6 @@ share/kde/servicetypes/amarok_plugin.desktop
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/amarok.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/br/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/amarok.mo
@@ -438,7 +418,6 @@ ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/amarok.mo
-${PKGLOCALEDIR}/locale/fy/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/amarok.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/amarok.mo
@@ -500,9 +479,6 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/amarok.mo
 @dirrm share/kde/apps/amarok/themes
 @dirrm share/kde/apps/amarok/scripts/webcontrol
 @dirrm share/kde/apps/amarok/scripts/templates
-@dirrm share/kde/apps/amarok/scripts/shouter/test
-@dirrm share/kde/apps/amarok/scripts/shouter/silence
-@dirrm share/kde/apps/amarok/scripts/shouter
 @dirrm share/kde/apps/amarok/scripts/playlist2html
 @dirrm share/kde/apps/amarok/scripts/graphequalizer
 @dirrm share/kde/apps/amarok/scripts/common
