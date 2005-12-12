@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12181 2005/12/12 20:34:50 joerg Exp $
+$NetBSD: CHANGES,v 1.12182 2005/12/12 21:40:34 bad Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5683,3 +5683,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/xorg-libs to 6.8.2nb5 [joerg 2005-12-12]
 	Updated x11/openmotif to 2.2.3 [joerg 2005-12-12]
 	Updated net/nsd to 2.3.3 [joerg 2005-12-12]
+	Updated security/libfwbuilder to 2.0.10 [bad 2005-12-12]
+	Updated security/fwbuilder to 2.0.10 [bad 2005-12-12]
