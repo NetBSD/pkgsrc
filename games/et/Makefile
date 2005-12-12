@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/15 18:27:50 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/12 14:43:25 joerg Exp $
 #
 
 DISTNAME=       et-linux-2.56-2.x86
@@ -13,18 +13,17 @@ COMMENT=        Wolfenstein: Enemy Territory for Linux
 
 NO_BUILD=	yes
 USE_PKGINSTALL=	yes
-ONLY_FOR_PLATFORM=	FreeBSD-*-i386 Linux-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 USE_TOOLS+=	gtar
 ETDIR=		${PREFIX}/lib/lokigames/et
 EXTRACT_CMD=	${TAIL} +356 ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
 		-C ${WRKSRC}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-DEPENDS+=       suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .include "../../emulators/suse_linux/Makefile.application"
+
+.if !defined(USE_NATIVE_LINUX)
+DEPENDS+=       suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
 INSTALLATION_DIRS=	bin

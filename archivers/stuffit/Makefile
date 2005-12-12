@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/10/09 18:35:25 ben Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/12 14:43:23 joerg Exp $
 
 DISTNAME=		stuffit520.611linux-i386
 PKGNAME=		stuffit-5.2.0.611
@@ -9,9 +9,9 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.stuffit.com/unix/stuffit/
 COMMENT=		Stuffit Archive Creator and Expander
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} == "NetBSD"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=		suse_base>=6:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
@@ -21,7 +21,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 WRKSRC=			${WRKDIR}
 CHECK_SHLIBS=		NO
@@ -41,5 +41,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/unstuff/* \
 		${PREFIX}/share/doc/stuffit/unstuff/
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

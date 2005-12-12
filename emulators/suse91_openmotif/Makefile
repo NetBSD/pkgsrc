@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/06 14:52:44 salo Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/12 14:43:24 joerg Exp $
 
 DISTNAME=		suse_openmotif-${SUSE_VERSION}
 PKGREVISION=		2
@@ -11,8 +11,6 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for the Motif library
 
 DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse91_x11
-
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
