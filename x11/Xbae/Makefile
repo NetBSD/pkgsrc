@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/12 21:36:56 joerg Exp $
 #
 
 DISTNAME=	xbae-4.51.01
 PKGNAME=	Xbae-4.51.01
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xbae/}
 
