@@ -1,8 +1,15 @@
-$NetBSD: patch-ab,v 1.2 1999/06/10 08:42:43 tron Exp $
+$NetBSD: patch-ab,v 1.3 2005/12/12 15:03:45 joerg Exp $
 
---- ListView.h.orig	Fri Feb 12 07:13:07 1999
-+++ ListView.h	Fri Feb 12 07:34:19 1999
-@@ -18,6 +18,10 @@
+--- ListView.h.orig	1997-11-16 13:56:31.000000000 +0000
++++ ListView.h
+@@ -12,12 +12,16 @@
+ #include <qdialog.h>
+ #include "MultiListBox.h"
+ 
+-#ifdef FreeBSD
++#if defined(FreeBSD) || defined(__DragonFly__)
+ #include <machine/soundcard.h>
+ #endif
  #ifdef Linux
  #include <sys/soundcard.h>
  #endif

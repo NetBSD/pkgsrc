@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 20:39:49 agc Exp $
+$NetBSD: distinfo,v 1.9 2005/12/12 15:03:45 joerg Exp $
 
 SHA1 (musicbox-1.01p2.tgz) = 7dd8b192349783746918b0d3074bec11f3aaf9d8
 RMD160 (musicbox-1.01p2.tgz) = d203bc9ef749ad425785ce5bf667fc204dccdebd
 Size (musicbox-1.01p2.tgz) = 44119 bytes
-SHA1 (patch-aa) = 8cd4a1224d6ca6a5f0367d34cc3a7e13d832f0c7
-SHA1 (patch-ab) = a59f798aebc8df7b61cfb3036add624c385a3884
+SHA1 (patch-aa) = f1d397ac8e83a8fd9a2da17a088c545cff1b458a
+SHA1 (patch-ab) = 7ec8774288810e824d65a910bb2794c107b5eff7
 SHA1 (patch-ac) = 3341b7bb5f265f5df000e3593a2a0493d32edec1
 SHA1 (patch-ad) = 890faa63701b85766320cf654d1d858c03227a41
 SHA1 (patch-ae) = c8c6c17dad38c705eba931f11cbbb1a515def9f0
