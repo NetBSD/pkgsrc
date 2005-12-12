@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/25 17:45:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/12/12 15:40:44 joerg Exp $
 bin/xephem
 lib/X11/app-defaults/XEphem
-man/cat1/xephem.0
+${IMAKE_MAN_DIR}/xephem.${IMAKE_MAN_SUFFIX}
 share/xephem/auxil/README
 share/xephem/auxil/SOHO_512_20030809_0719_eit_304.gif
 share/xephem/auxil/analemma.plt
