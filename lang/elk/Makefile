@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/12 21:36:55 joerg Exp $
 
 DISTNAME=		elk-3.99.6
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://sam.zoy.org/elk/
 

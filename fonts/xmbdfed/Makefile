@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:14 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/12 21:36:55 joerg Exp $
 
 DISTNAME=	xmbdfed-4.5
+PKGREVISION=	1
 CATEGORIES=	fonts graphics x11
 MASTER_SITES=	ftp://crl.nmsu.edu/CLR/multiling/General/
 
