@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 20:50:12 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/12 14:43:24 joerg Exp $
 
 DISTNAME=		suse_vmware-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -11,8 +11,6 @@ COMMENT=		Linux compatibility package to support running VMware
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse91_base
 DEPENDS+= 		suse_x11>=${SUSE_VERSION}:../../emulators/suse91_x11
-
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 FreeBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES

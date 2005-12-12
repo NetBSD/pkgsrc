@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/12 14:43:23 joerg Exp $
 #
 
 DISTNAME=		eagle-lin-eng-4.14
@@ -11,13 +11,13 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.cadsoft.de/
 COMMENT=		Easy to use printed circuit board editor
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} != "Linux"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 CHECK_SHLIBS=		NO		# this is Linux software
 
 RESTRICTED=		"Redistribution not permitted"
@@ -38,5 +38,4 @@ do-install:
 	cd ${WRKSRC} && ${CP} -R ${WRKSRC}/* ${PREFIX}/eagle
 	${INSTALL_SCRIPT} ${WRKDIR}/eagle ${PREFIX}/bin
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

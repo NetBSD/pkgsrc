@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:49 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/12 14:43:26 joerg Exp $
 #
 
 DISTNAME=		skype_staticQT-1.2.0.18
@@ -11,15 +11,14 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.skype.com/
 COMMENT=		P2P VoIP software
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} != "Linux"
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_base>=9.1:../../emulators/suse91_base
 DEPENDS+=	suse_glx>=9.1:../../emulators/suse91_glx
 DEPENDS+=	suse_fontconfig>=9.1:../../emulators/suse91_fontconfig
 DEPENDS+=	suse_freetype2>=9.1:../../emulators/suse91_freetype2
 DEPENDS+=	suse_x11>=9.1:../../emulators/suse91_x11
-.include "../../emulators/suse_linux/Makefile.application"
 .else
 .include "../../mk/x11.buildlink3.mk"
 .endif

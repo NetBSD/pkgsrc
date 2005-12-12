@@ -1,7 +1,14 @@
-# $NetBSD: Makefile.common,v 1.21 2005/04/03 21:23:15 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.22 2005/12/12 14:43:25 joerg Exp $
 
 .include "../../emulators/suse_linux/vars.mk"
 .include "../../emulators/suse_linux/arch.mk"
+
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-1.6[L-Z]-powerpc NetBSD-1.6Z[A-Z]-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
+ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
+ONLY_FOR_PLATFORM+=	DragonFly-*-i386
 
 MASTER_SITE_SUSE?=	ftp://ftp.suse.com/pub/suse/discontinued/${SUSE_ARCH}/${SUSE_VERSION}/suse/
 #			ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/suse/discontinued/${SUSE_ARCH}/${SUSE_VERSION}/suse/
