@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:49:54 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/12 14:43:23 joerg Exp $
 
 DISTNAME=		ymessenger-0.93.0
 CATEGORIES=		chat
@@ -9,11 +9,16 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://messenger.yahoo.com/
 COMMENT=		Yahoo! instant messaging client
 
+RPMFILES=		${DISTFILES}
+
+.include "../../emulators/suse_linux/Makefile.application"
+
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=		suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_gtk>=6.4:../../emulators/${SUSE_DIR_PREFIX}_gtk
+.endif
 
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
-			NetBSD-1.[5-9]*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 CHECK_SHLIBS=		no
 
@@ -30,10 +35,7 @@ NO_BUILD=		yes
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
 
-RPMFILES=		${DISTFILES}
-
 post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/local/bin/ymessenger ${PREFIX}/bin
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
