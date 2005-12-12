@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/11 13:30:58 taca Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/12 03:16:05 taca Exp $
 #
 
 DISTNAME=	htmllint
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Jcode>=0.68:../../converters/p5-Jcode
 DEPENDS+=	p5-libwww>=5.8:../../www/p5-libwww
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=	${PKGNAME_NOREV}-20051212
 
 REPLACE_PERL=	htmllint.cgi htmllint parsedtd.pl tagslist.cgi
 USE_TOOLS+=	perl:run
