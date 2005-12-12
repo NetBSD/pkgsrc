@@ -1,13 +1,34 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.21 2005/10/02 02:05:29 heas Exp $
+# $Id: pkg_chk.sh,v 1.22 2005/12/12 13:36:38 dillo Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
 # TODO: List top level packages installed but not in config
-# TODO: Generate list files so -u can work against a remote URL
 
 PATH=/usr/sbin:/usr/bin:${PATH}
+
+SUMMARY_FILE=pkg_chk-summary
+
+is_binary_available()
+    {
+    if [ -n "$PKGDB" ]; then
+	for iba_pkg in $PKGDB; do
+	    case $iba_pkg in
+		*:"$1")
+		    return 0;
+		;;
+	    esac
+        done
+	return 1;
+    else
+	if [ -f "$PACKAGES/$1.tgz" ]; then
+	    return 0;
+	else
+	    return 1;
+	fi
+    fi
+    }
 
 check_packages_installed()
     {
@@ -37,7 +58,7 @@ check_packages_installed()
 		msg_n "missing"
 		MISSING_TODO="$MISSING_TODO $PKGNAME $pkgdir"
 	    fi
-	    if [ -f $PACKAGES/$PKGNAME.tgz ] ;then
+	    if is_binary_available $PKGNAME ;then
 		msg_n " (binary package available)"
 	    fi
 	    msg
@@ -191,7 +212,7 @@ generate_conf_from_installed()
 get_build_ver()
     {
     if [ -n "$opt_b" -a -z "$opt_s" ] ; then
-	${PKG_INFO} -. -b $PACKAGES/$PKGNAME.tgz | tail +4 | ${SED} "s|^[^:]*/[^:]*:||" | ${GREP} .
+	${PKG_INFO} -. -q -b $PACKAGES/$PKGNAME.tgz | ${SED} "s|^[^:]*/[^:]*:||" | ${GREP} .
 	return
     fi
     files=""
@@ -227,7 +248,9 @@ list_packages()
 	if [ -z "$PKGNAME" ]; then
 	    continue
 	fi
-	if [ ! -f $PACKAGES/$PKGNAME.tgz ] ;then
+	if is_binary_available $PKGNAME; then
+	    :
+	else
 	    fatal_maybe " ** $PKGNAME - binary package missing"
 	    continue
 	fi
@@ -240,16 +263,20 @@ list_packages()
     while [ "$CHECKLIST" != ' ' ]; do
 	NEXTCHECK=' '
 	for pkg in $CHECKLIST ; do
-	    if [ ! -f $PACKAGES/$pkg.tgz ] ; then
+	    if is_binary_available $pkg; then
+		:
+	    else
 		fatal_maybe " ** $pkg.tgz - binary package dependency missing"
 		continue
 	    fi
-	    DEPLIST="$(${PKG_INFO} -. -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} .. || true)"
+	    DEPLIST="$(${PKG_INFO} -. -q -N $PACKAGES/$pkg.tgz | ${GREP} .. || true)"
 	    if [ -z "$DEPLIST" ] ; then
 		PAIRLIST="${PAIRLIST}$pkg.tgz $pkg.tgz\n"
 	    fi
 	    for dep in $DEPLIST ; do
-		if [ ! -f $PACKAGES/$dep.tgz ] ; then
+		if is_binary_available $pkg; then
+		    :
+		else
 		    fatal_maybe " ** $dep.tgz - dependency missing for $pkg"
 		    break 2
 		fi
@@ -433,12 +460,11 @@ pkg_install()
 
     if [ -d $PKG_DBDIR/$PKGNAME ];then
 	msg "$PKGNAME installed in previous stage"
-    elif [ -n "$opt_b" -a -f $PACKAGES/$PKGNAME.tgz ] ; then
+    elif [ -n "$opt_b" ] && is_binary_available $PKGNAME; then
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    export PKG_PATH=$saved_PKG_PATH
 	fi
-	cd $PACKAGES
-	run_cmd "${PKG_ADD} $PKGNAME.tgz"
+	run_cmd "${PKG_ADD} $PACKAGES/$PKGNAME.tgz"
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    unset PKG_PATH
 	fi
@@ -499,7 +525,8 @@ set_path()
     {
     arg=$1
     case $arg in
-	/*)	echo $arg ;;
+	http://*|ftp://*|/*)
+		echo $arg ;;
 	*)	echo $basedir/$arg ;;
     esac
     }
@@ -528,6 +555,7 @@ usage()
 	-n	Display actions that would be taken, but do not perform them
 	-P dir  Set PACKAGES dir (overrides any other setting)
 	-r	Recursively remove mismatches (use with care) (implies -i)
+	-S	Create summary of binary packages
 	-s      Install packages by building from source
 	-U tags Comma separated list of pkgchk.conf tags to unset
 	-u      Update all mismatched packages (implies -i)
@@ -551,7 +579,7 @@ verbose()
     fi
     }
 
-args=$(getopt BC:D:L:P:U:abcfghiklNnrsuv $*)
+args=$(getopt BC:D:L:P:U:abcfghiklNnrsSuv $*)
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -575,6 +603,7 @@ while [ $# != 0 ]; do
 	-n )	opt_n=1 ;;
 	-P )	opt_P="$2" ; shift;;
 	-r )	opt_r=1 ; opt_i=1 ;;
+	-S )	opt_S=1 ;;
 	-s )	opt_s=1 ;;
 	-U )	opt_U="$2" ; shift;;
 	-u )	opt_u=1 ; opt_i=1 ;;
@@ -588,9 +617,9 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_N" -a -z "$opt_l" ];
+if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_N" -a -z "$opt_l" -a -z "$opt_S" ];
 then
-    usage "Must specify at least one of -a, -c, -g, -i, -l, -N, or -u";
+    usage "Must specify at least one of -a, -c, -g, -i, -l, -N, -S, or -u";
 fi
 
 if [ -n "$opt_h" -o $# != 0 ];then
@@ -665,15 +694,27 @@ if [ -n "$opt_N" ]; then
 	done
 fi
 
-if [ -n "$opt_b" -a -z "$opt_s" -a -d $PACKAGES ] ; then
-    msg_progress Scan $PACKAGES
-    cd $PACKAGES
-    for f in `ls -t *.tgz` ; do # Sort by time to pick up newest first
-	PKGDIR=`${PKG_INFO} -. -B $PACKAGES/$f|${AWK} -F= '$1=="PKGPATH"{print $2}'`
-	PKGNAME=`echo $f | ${SED} 's/\.tgz$//'`
-	PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
-    done
-    PKGSRCDIR=NONE
+if [ -n "$opt_b" -o -n "$opt_S" -a -z "$opt_s" ] ; then
+    case $PACKAGES in
+	http://*|ftp://*)
+	    PKGDB=`ftp -o - $PACKAGES/$SUMMARY_FILE`;;
+	*)
+	    if [ -d "$PACKAGES" ] ; then
+		msg_progress Scan $PACKAGES
+		cd $PACKAGES
+		for f in `ls -t *.tgz` ; do # Sort by time to pick up newest first
+		    PKGDIR=`${PKG_INFO} -. -B $PACKAGES/$f|${AWK} -F= '$1=="PKGPATH"{print $2}'`
+		    PKGNAME=`echo $f | ${SED} 's/\.tgz$//'`
+		    PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
+		done
+		PKGSRCDIR=NONE
+	    fi;;
+    esac
+fi
+
+if [ -n "$opt_S" ]; then
+    msg_progress "Write $PACKGES/$SUMMARY_FILE"
+    echo "$PKGDB" | tr ' ' '\012' > $PACKAGES/$SUMMARY_FILE
 fi
 
 if [ -n "$opt_g" ]; then
