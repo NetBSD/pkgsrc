@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/07/15 18:27:51 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/12 14:43:25 joerg Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	1
@@ -14,14 +14,12 @@ COMMENT=	Quake 3 Arena -- first person shooter (binary only, no data files)
 
 CONFLICTS=	quake3arena-demo-[0-9]*
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
-.if ${OPSYS} != Linux
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
-.include "../../emulators/suse_linux/Makefile.application"
-.else
 .endif
 
 NO_SRC_ON_FTP=	no

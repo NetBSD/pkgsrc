@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:41 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/12 14:43:26 joerg Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
@@ -9,10 +9,14 @@ MAINTAINER=	david@silicium.ath.cx
 HOMEPAGE=	http://www.divx.com/
 COMMENT=	DivX(TM) Video Player for Linux from DivX.com
 
+.include "../../emulators/suse_linux/Makefile.application"
+
+.if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_linux>=7.3:../../emulators/suse_linux
 DEPENDS+=	suse_x11>=7.3:../../emulators/suse_linux
+.endif
 
-ONLY_FOR_PLATFORM= NetBSD-*-i386
+ONLY_FOR_PLATFORM= *-*-i386
 
 WRKSRC=		${WRKDIR}/divx-player-installer
 CHECK_SHLIBS=	NO
@@ -39,5 +43,4 @@ do-install:
 		${PREFIX}/bin/${BINARY:S/.bin$//}
 
 .include "../../mk/x11.buildlink3.mk"
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
