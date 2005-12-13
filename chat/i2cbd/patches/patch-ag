@@ -1,0 +1,28 @@
+$NetBSD: patch-ag,v 1.1 2005/12/13 16:26:39 joerg Exp $
+
+--- src/main.c.orig	2005-12-13 16:11:25.000000000 +0000
++++ src/main.c
+@@ -4,4 +4,5 @@
+ 
+ #include <sys/param.h>
++#include <sys/time.h>
+ #include <sys/resource.h>
+ #include <sys/types.h>
+@@ -14,9 +15,17 @@
+ #include <string.h>
+ #include <unistd.h>
++#if defined(__DragonFly__)
++#include <libutil.h>
++#else
+ #include <util.h>
++#endif
+ #include "externs.h"
+ #include "userdb.h"
+ #include "version.h"
+ 
++#if defined(__DragonFly__) && !defined(O_SYNC)
++#define O_SYNC O_FSYNC
++#endif
++
+ static void	open_logs (void);
+ void	close_logs (void);
