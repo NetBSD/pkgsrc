@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12185 2005/12/13 15:31:28 dillo Exp $
+$NetBSD: CHANGES,v 1.12186 2005/12/13 23:23:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5730,3 +5730,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/xephem to 3.6.4nb1 [joerg 2005-12-12]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2005Q4 branch [agc 2005-12-12]
 	Updated pkgtools/pkg_chk to 1.63.1 [dillo 2005-12-13]
+	Updated net/ethereal to 0.10.13nb3 [tron 2005-12-13]
