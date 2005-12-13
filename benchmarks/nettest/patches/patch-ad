@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2004/08/22 23:27:16 jschauma Exp $
+$NetBSD: patch-ad,v 1.4 2005/12/13 15:12:59 joerg Exp $
 
---- nettestd.c.orig	1992-11-05 16:52:58.000000000 -0500
-+++ nettestd.c	2004-08-22 19:25:48.000000000 -0400
-@@ -107,7 +107,12 @@
+--- nettestd.c.orig	1992-11-05 21:52:58.000000000 +0000
++++ nettestd.c
+@@ -107,7 +107,12 @@ union {
  } name;
  int namesize;
  
@@ -16,7 +16,7 @@ $NetBSD: patch-ad,v 1.3 2004/08/22 23:27:16 jschauma Exp $
  int (*rfunc)() = read;
  
  main(argc, argv)
-@@ -271,7 +276,11 @@
+@@ -271,7 +276,11 @@ char **argv;
  # endif
  #endif
  	if (daemon) {
@@ -28,7 +28,7 @@ $NetBSD: patch-ad,v 1.3 2004/08/22 23:27:16 jschauma Exp $
  			perror("setpgrp");
  		if ((c = open(_PATH_TTY, O_RDWR)) >= 0) {
  			(void)ioctl(c, TIOCNOTTY, (char *)0);
-@@ -416,7 +425,7 @@
+@@ -416,7 +425,7 @@ char **argv;
  			    )
  			error("setsockopt (IP_OPTIONS)");
  #endif
@@ -37,7 +37,7 @@ $NetBSD: patch-ad,v 1.3 2004/08/22 23:27:16 jschauma Exp $
  			error("bind");
  			exit(1);
  		}
-@@ -447,10 +456,10 @@
+@@ -447,12 +456,11 @@ register int s;
  #endif
  	listen(s, 5);
  
@@ -48,9 +48,11 @@ $NetBSD: patch-ad,v 1.3 2004/08/22 23:27:16 jschauma Exp $
 -		s2 = accept(s, (char *)&name, &namesize);
 +		s2 = accept(s, (struct sockaddr *)&name, &namesize);
  		if (s2 < 0) {
- 			extern int errno;
+-			extern int errno;
  			if (errno == EINTR)
-@@ -707,7 +716,9 @@
+ 				continue;
+ 			error("accept");
+@@ -707,7 +715,9 @@ int s;
  		inmsg.msg_iovlen = 1;
  		inmsg.msg_name = (caddr_t)&name.d_inet;
  		inmsg.msg_control = (caddr_t)control;
@@ -60,7 +62,7 @@ $NetBSD: patch-ad,v 1.3 2004/08/22 23:27:16 jschauma Exp $
  		errmsg = "recvmsg";
  	} else
  #endif /* CMSG_DATA */
-@@ -723,7 +734,7 @@
+@@ -723,7 +733,7 @@ int s;
  #endif
  		{
  			namesize = sizeof(name.d_inet);
