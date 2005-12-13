@@ -1,7 +1,19 @@
-$NetBSD: patch-as,v 1.1 2004/04/13 21:19:48 hubertf Exp $
+$NetBSD: patch-as,v 1.2 2005/12/13 21:30:11 joerg Exp $
 
---- src/main.c.orig	Wed Mar 15 23:13:28 2000
+--- src/main.c.orig	2000-03-15 22:13:28.000000000 +0000
 +++ src/main.c
+@@ -2,9 +2,9 @@
+ /* Portions copyright (c) 1990-1993, 1994 Mark J. Reed */
+ /* For copying and distribution information, see the file COPYING. */
+ 
+-
++#include <sys/types.h>
+ #include <sys/wait.h>
+-#include <sys/dir.h>
++#include <dirent.h>
+ #include <pwd.h>
+ #include <stdlib.h>
+ #include <string.h>
 @@ -19,6 +19,7 @@ static void	usage (char *name, int ret);
  
  char *optv[] = { "clear", "list", "who", "restricted", "nickname:", "group:",
