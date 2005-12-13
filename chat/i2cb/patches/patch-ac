@@ -1,19 +1,17 @@
-$NetBSD: patch-ac,v 1.2 2004/04/13 21:19:48 hubertf Exp $
+$NetBSD: patch-ac,v 1.3 2005/12/13 21:30:11 joerg Exp $
 
---- src/externs.h.orig	Wed Mar 15 23:28:13 2000
+--- src/externs.h.orig	2000-03-15 22:28:13.000000000 +0000
 +++ src/externs.h
-@@ -1,6 +1,10 @@
+@@ -1,6 +1,8 @@
  /* Copyright (c) 1989 by Carrick Sean Casey. All rights reserved. */
  /* For copying and distribution information, see the file "copyright.h." */
  
-+#ifdef __NetBSD__
 +#include <sys/types.h>		/* for time_t etc. */
-+#endif
 +
  /* external definitions for "icb" global variables */
  
  /* defined in port.c */
-@@ -25,6 +29,7 @@ extern char *mygroup;		/* requested grou
+@@ -25,6 +27,7 @@ extern char *mygroup;		/* requested grou
  extern char *myserver;		/* server name */
  extern char *myhost;		/* server host */
  extern int myport;		/* server port */
@@ -21,7 +19,7 @@ $NetBSD: patch-ac,v 1.2 2004/04/13 21:19:48 hubertf Exp $
  extern char *mbuf;		/* message buffer */
  extern char *mbuf2;		/* message buffer */
  extern int connected;		/* whether we are validated or not */
-@@ -69,7 +74,7 @@ void	clearargs (int argc, char **argv);
+@@ -69,7 +72,7 @@ void	clearargs (int argc, char **argv);
  int	clientserve (void);
  void	closesessionlog (void);
  void	cmdoutmsg (char *pkt);
