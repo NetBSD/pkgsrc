@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/10/31 18:30:49 tv Exp $
+$NetBSD: distinfo,v 1.8 2005/12/13 16:26:39 joerg Exp $
 
 SHA1 (i2cbd-2.0_BETA1.tar.gz) = d3578637f834a8628c270e1e9fd6db7683d1603c
 RMD160 (i2cbd-2.0_BETA1.tar.gz) = 911296c8f69100cc2366345eb3a9e1b443e1510b
@@ -9,3 +9,5 @@ SHA1 (patch-ac) = ca8e6b7324a22fb9ecabf2374e34febb55196e28
 SHA1 (patch-ad) = 3cf3cc389861f38fe6d12a896717f3716fa85bdf
 SHA1 (patch-ae) = 52c7d65cfb4c453d9e3d135d903373f99a15131a
 SHA1 (patch-af) = 7b5257dc24f0b34a3205bd1accd83a068210a5fc
+SHA1 (patch-ag) = b354e4ed7dce00e13f87579b252650d7b921b1aa
+SHA1 (patch-ah) = 94ee816e45d2f26e94a22678cc090fa4fb4f0daa

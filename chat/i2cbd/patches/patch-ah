@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1 2005/12/13 16:26:39 joerg Exp $
+
+--- src/signals.c.orig	2005-12-13 16:15:36.000000000 +0000
++++ src/signals.c
+@@ -40,10 +40,17 @@ icbdump (int sig)
+ 	return /* -1 */;
+     }
+ 
++#if defined(__DragonFly__)
+     for (i = 0; i < 8; i++)
+-	fprintf (dump, "%d\n", fdset.fds_bits[i]);
++	fprintf (dump, "%lu\n", fdset.fds_bits[i]);
+     for (i = 0; i < 8; i++)
+-	fprintf (dump, "%d\n", serversocks.fds_bits[i]);
++	fprintf (dump, "%lu\n", serversocks.fds_bits[i]);
++#else
++    for (i = 0; i < 8; i++)
++        fprintf (dump, "%d\n", fdset.fds_bits[i]);
++    for (i = 0; i < 8; i++)
++        fprintf (dump, "%d\n", serversocks.fds_bits[i]);
++#endif
+ 
+     fprintf (dump, "%d\n", highestfd);
+ 
