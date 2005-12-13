@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/12/11 09:40:46 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/13 12:19:37 ghen Exp $
 
 DISTNAME=	mjpegtools-1.6.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
@@ -11,6 +11,7 @@ COMMENT=	Programs for compressing video streams
 
 DEPENDS+=		toolame>=02l:../../audio/toolame
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+DEPENDS+=		bash>=2:../../shells/bash
 
 USE_TOOLS+=		gmake
 
@@ -23,6 +24,13 @@ CONFIGURE_ARGS+=	--enable-large-file
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 
 .include "options.mk"
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	post-patch
+SUBST_FILES.bash=	scripts/mpegtranscode
+SUBST_FILES.bash+=	scripts/lav2avi.sh
+SUBST_FILES.bash+=	scripts/lav2mpeg
+SUBST_SED.bash=		-e 's,^\#!/bin/bash,\#!${PREFIX}/bin/bash,'
 
 INFO_FILES=		mjpeg-howto.info
 
