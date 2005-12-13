@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4277 2005/12/12 20:36:50 joerg Exp $
+$NetBSD: TODO,v 1.4278 2005/12/13 17:24:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -380,6 +380,7 @@ Suggested package updates
 	o avl-2.0.1
 	o avr-libc-1.4.0
 	o baci-20040415
+	o bash-3.1
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
@@ -643,6 +644,7 @@ Suggested package updates
 	o ion3-20051210
 	o ion3-devel-20050820 [pkg/31132]
 	o iozone-3.257
+	o ipa-2.0
 	o ipcheck-0.219
 	o ircu-2.10.12.0
 	o iroffer-1.3b10 [pkg/31859]
@@ -802,6 +804,7 @@ Suggested package updates
 	o nut-11.0
 	o obexftp-0.10.6
 	o objc-3.2.7
+	o ocaml-3.09.0
 	o odbc-postgresql-8.0.4
 	o offlineimap-4.0.11
 	o ogre-0.12.3
@@ -1059,6 +1062,7 @@ Suggested package updates
 	o rc-1.7.1
 	o rdiff-backup-1.0.3
 	o rdp-1.6
+	o readline-5.1
 	o regionset-0.2
 	o remind-3.00.23
 	o rep-gtk-0.18
@@ -1132,7 +1136,7 @@ Suggested package updates
 	o snes9x-1.43
 	o socat-1.4.3.0
 	o sope-4.5.5
-	o source-highlight-2.2
+	o source-highlight-2.3
 	o sox-12.17.9
 	o spamass-milter-1.0
 	o spim-7.2.1
