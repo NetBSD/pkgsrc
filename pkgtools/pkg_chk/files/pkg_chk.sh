@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.22 2005/12/12 13:36:38 dillo Exp $
+# $Id: pkg_chk.sh,v 1.23 2005/12/13 15:26:05 dillo Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -694,7 +694,7 @@ if [ -n "$opt_N" ]; then
 	done
 fi
 
-if [ -n "$opt_b" -o -n "$opt_S" -a -z "$opt_s" ] ; then
+if [ \( -n "$opt_b" -o -n "$opt_S" \) -a -z "$opt_s" ] ; then
     case $PACKAGES in
 	http://*|ftp://*)
 	    PKGDB=`ftp -o - $PACKAGES/$SUMMARY_FILE`;;
