@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2005/12/13 18:27:00 joerg Exp $
+
+--- src/defines.h.orig	2005-12-13 18:18:04.000000000 +0000
++++ src/defines.h
+@@ -186,7 +186,8 @@ typedef unsigned long long int   uint64;
+     defined(_OS_NetBSD)      || \
+     defined(_OS_BSDI)        || \
+     defined(_OS_BSD_OS)      || \
+-    defined(_OS_Darwin)
++    defined(_OS_Darwin)      || \
++    defined(_OS_DragonFly)
+ #define _OS_BSD_ANY
+ 
+ /* sunos */
