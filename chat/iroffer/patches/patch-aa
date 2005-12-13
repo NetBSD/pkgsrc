@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/12/13 18:27:00 joerg Exp $
+
+--- Configure.orig	2005-12-13 18:12:12.000000000 +0000
++++ Configure
+@@ -17,7 +17,7 @@ rm -f config.error.* config.temp*
+ 
+ case "$ostype" in
+  Linux | FreeBSD | OpenBSD | NetBSD | IRIX | IRIX64 | \
+- OSF1 | Rhapsody | Darwin | AIX )
++ OSF1 | Rhapsody | Darwin | AIX | DragonFly)
+   # nothing fancy
+   ;;
+  SunOS )
