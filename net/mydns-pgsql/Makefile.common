@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2005/12/05 23:55:14 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/12/13 12:15:16 ghen Exp $
 
 DISTNAME=	mydns-1.0.0
 CATEGORIES=	net
 MASTER_SITES=	http://mydns.bboy.net/download/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	geert.hendrickx@ua.ac.be
+MAINTAINER=	ghen@NetBSD.org
 HOMEPAGE=	http://mydns.bboy.net/
 
 GNU_CONFIGURE=	YES
