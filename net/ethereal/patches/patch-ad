@@ -1,0 +1,20 @@
+--- epan/radius_dict.c.orig	2005-10-19 17:23:28.000000000 +0100
++++ epan/radius_dict.c	2005-12-13 23:10:30.000000000 +0000
+@@ -1181,6 +1181,8 @@
+ 	
+ 	fullpaths[include_stack_ptr] = g_strdup_printf("%s%c%s",directory,DIR_SEPARATOR,yytext);
+ 
++	if (yyin != NULL)
++		(void) fclose(yyin);
+ 	yyin = fopen( fullpaths[include_stack_ptr], "r" );
+ 	
+ 	if (!yyin) {
+@@ -2286,6 +2288,8 @@
+ 	BEGIN OUT;
+ 
+ 	yylex();
++	(void) fclose(yyin);
++	yyin = NULL;
+
+ 	for (i=0; i < 10; i++) {
+ 		if (fullpaths[i]) g_free(fullpaths[i]);
