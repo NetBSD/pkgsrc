@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.11 2004/10/10 09:56:37 dillo Exp $
+# $NetBSD: mkpatches.pl,v 1.12 2005/12/13 12:05:08 wiz Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -13,8 +13,8 @@
 #   It retains the naming and header (RCS Id and comment) from the
 #   patches directory.
 #
-# Copyright (c) 2000 by Thomas Klausner <wiz@netbsd.org>
-#               2004 by Dieter Baron <dillo@netbsd.org>
+# Copyright (c) 2000 by Thomas Klausner <wiz@NetBSD.org>
+#               2004 by Dieter Baron <dillo@NetBSD.org>
 # All Rights Reserved.  Absolutely no warranty.
 #
 
