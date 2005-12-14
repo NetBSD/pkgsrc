@@ -1,9 +1,8 @@
-$NetBSD: patch-an,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+$NetBSD: patch-an,v 1.2 2005/12/14 13:53:24 joerg Exp $
 
-diff -x *.orig -urN ./readline/readline.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/readline/readline.c
---- ./readline/readline.c	Fri Feb 24 22:20:03 1995
-+++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/readline/readline.c	Fri Nov 26 22:56:30 1999
-@@ -48,7 +48,11 @@
+--- readline/readline.c.orig	1995-02-24 21:20:03.000000000 +0000
++++ readline/readline.c
+@@ -48,7 +48,11 @@ static char *xmalloc (), *xrealloc ();
  #  include <unistd.h>
  #endif
  
@@ -15,7 +14,7 @@ diff -x *.orig -urN ./readline/readline.c /usr/pkgsrc/net/icb/work.i386.unpatche
  #define HAVE_BSD_SIGNALS
  /* #define USE_XON_XOFF */
  
-@@ -80,6 +84,10 @@
+@@ -80,6 +84,10 @@ static char *xmalloc (), *xrealloc ();
  #  if !defined (O_NDELAY)
  #    define O_NDELAY O_NONBLOCK	/* Posix-style non-blocking i/o */
  #  endif /* O_NDELAY */
@@ -26,7 +25,15 @@ diff -x *.orig -urN ./readline/readline.c /usr/pkgsrc/net/icb/work.i386.unpatche
  #endif /* _POSIX_VERSION */
  
  /* Other (BSD) machines use sgtty. */
-@@ -133,7 +141,7 @@
+@@ -104,7 +112,6 @@ static char *xmalloc (), *xrealloc ();
+ #endif /* !NEW_TTY_DRIVER && !_POSIX_VDISABLE */
+ 
+ #include <errno.h>
+-extern int errno;
+ 
+ #include <setjmp.h>
+ #if defined (SHELL)
+@@ -133,7 +140,7 @@ struct passwd *getpwuid (), *getpwent ()
  #  endif /* USGr3 */
  #endif /* USG && hpux */
  
@@ -35,7 +42,7 @@ diff -x *.orig -urN ./readline/readline.c /usr/pkgsrc/net/icb/work.i386.unpatche
  #  include <dirent.h>
  #  define direct dirent
  #  if defined (_POSIX_VERSION)
-@@ -280,7 +288,7 @@
+@@ -280,7 +287,7 @@ static jmp_buf readline_top_level;
  static FILE *in_stream, *out_stream;
  
  /* The names of the streams that we do input and output to. */
@@ -44,7 +51,7 @@ diff -x *.orig -urN ./readline/readline.c /usr/pkgsrc/net/icb/work.i386.unpatche
  
  /* Non-zero means echo characters as they are read. */
  int readline_echoing_p = 1;
-@@ -1152,6 +1160,8 @@
+@@ -1152,6 +1159,8 @@ readline_initialize_everything ()
  {
    /* Find out if we are running in Emacs. */
    running_in_emacs = getenv ("EMACS");
@@ -53,7 +60,7 @@ diff -x *.orig -urN ./readline/readline.c /usr/pkgsrc/net/icb/work.i386.unpatche
  
    /* Allocate data structures. */
    if (!rl_line_buffer)
-@@ -2505,7 +2515,11 @@
+@@ -2505,7 +2514,11 @@ rl_prep_terminal ()
  
    tio.c_lflag &= ~(ICANON | ECHO);
  
