@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:55 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/14 18:00:12 reed Exp $
 
 DISTNAME=	dropbear-0.46
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
 EXTRACT_SUFX=	.tar.bz2
