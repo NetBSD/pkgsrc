@@ -1,20 +1,22 @@
---- epan/radius_dict.c.orig	2005-10-19 17:23:28.000000000 +0100
-+++ epan/radius_dict.c	2005-12-13 23:10:30.000000000 +0000
-@@ -1181,6 +1181,8 @@
- 	
- 	fullpaths[include_stack_ptr] = g_strdup_printf("%s%c%s",directory,DIR_SEPARATOR,yytext);
+$NetBSD: patch-ad,v 1.4 2005/12/14 16:53:06 tron Exp $
+
+--- epan/radius_dict.l.orig	2005-10-10 14:23:08.000000000 +0100
++++ epan/radius_dict.l	2005-12-14 14:09:32.000000000 +0000
+@@ -192,6 +192,8 @@
  
-+	if (yyin != NULL)
-+		(void) fclose(yyin);
- 	yyin = fopen( fullpaths[include_stack_ptr], "r" );
+ <<EOF>> {
  	
- 	if (!yyin) {
-@@ -2286,6 +2288,8 @@
- 	BEGIN OUT;
++    fclose(yyin);
++    
+ 	if ( --include_stack_ptr < 0 ) {
+ 		yyterminate();
+ 	} else {
+@@ -375,6 +377,8 @@
  
  	yylex();
-+	(void) fclose(yyin);
-+	yyin = NULL;
-
+ 
++    fclose(yyin);
++    
  	for (i=0; i < 10; i++) {
  		if (fullpaths[i]) g_free(fullpaths[i]);
+ 	}
