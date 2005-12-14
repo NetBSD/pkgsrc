@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/13 15:53:53 ghen Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/14 18:18:07 ghen Exp $
 
 DISTNAME=	mjpegtools-1.6.2
 PKGREVISION=	7
@@ -11,9 +11,9 @@ COMMENT=	Programs for compressing video streams
 
 DEPENDS+=		toolame>=02l:../../audio/toolame
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
-DEPENDS+=		bash>=2:../../shells/bash
 
 USE_TOOLS+=		gmake
+USE_TOOLS+=		bash:run
 
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
@@ -25,15 +25,12 @@ CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 
 .include "options.mk"
 
-EVAL_PREFIX+=		PREFIX.bash=bash
-PREFIX.bash_DEFAULT=	${LOCALBASE}
-
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	post-patch
 SUBST_FILES.bash=	scripts/mpegtranscode
 SUBST_FILES.bash+=	scripts/lav2avi.sh
 SUBST_FILES.bash+=	scripts/lav2mpeg
-SUBST_SED.bash=		-e 's,^\#!/bin/bash,\#!${PREFIX.bash}/bin/bash,'
+SUBST_SED.bash=		-e 's,^\#!/bin/bash,\#!${TOOLS_PATH.bash},'
 
 INFO_FILES=		mjpeg-howto.info
 
