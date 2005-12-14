@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12186 2005/12/13 23:23:46 tron Exp $
+$NetBSD: CHANGES,v 1.12187 2005/12/14 13:46:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5659,7 +5659,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/kdevelop-base to 3.3.0 [markd 2005-12-11]
 	Updated devel/kdevelop to 3.3.0 [markd 2005-12-11]
 	Removed misc/kgeography [markd 2005-12-11]
-	Updated www/htmllint to 20050924 [taca 2005-12-11]
+	Updated www/htmllint to 20051019 [taca 2005-12-11]
 	Added fonts/acroread7-font-share version 7.0 [markd 2005-12-11]
 	Added fonts/acroread7-chsfont version 7.0 [markd 2005-12-11]
 	Added fonts/acroread7-chtfont version 7.0 [markd 2005-12-11]
