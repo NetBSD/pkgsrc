@@ -1,8 +1,59 @@
-$NetBSD: patch-ad,v 1.6 2003/03/19 17:56:39 jmmv Exp $
+$NetBSD: patch-ad,v 1.7 2005/12/14 13:42:45 christos Exp $
 
---- module/aperture.c.orig	2003-03-19 18:52:51.000000000 +0100
-+++ module/aperture.c
-@@ -117,8 +117,17 @@ xf86close(dev, cflags, devtype, p)
+--- aperture.c.orig	2005-12-14 08:34:23.000000000 -0500
++++ aperture.c	2005-12-14 08:41:10.000000000 -0500
+@@ -71,6 +71,10 @@
+ /* open counter */
+ static int xf86_open_count = 0;
+ 
++#if !defined(__NetBSD_Version__) || __NetBSD_Version__ < 399001400
++#define PROC
++#endif
++
+ /* mem range descriptors */
+ struct mem_range_softc mem_range_softc;
+ 
+@@ -78,12 +82,15 @@
+  * Open the device
+  */
+ int
+-xf86open(dev, oflags, devtype, p)
+-	dev_t dev;
+-	int oflags;
+-	int devtype;
+-	struct proc *p;
++xf86open(dev_t dev, int oflags, int devtype, 
++#ifdef PROC
++    struct proc *p)
++{
++#else
++    struct lwp *l)
+ {
++	struct proc *p = l->l_proc;
++#endif
+ 
+ 	if (suser(p->p_ucred, &p->p_acflag) != 0) {
+ 		return(EPERM);
+@@ -101,11 +108,13 @@
+  * Close the device
+  */
+ int
+-xf86close(dev, cflags, devtype, p)
+-	dev_t dev;
+-	int cflags;
+-	int devtype;
+-	struct proc *p;
++xf86close(dev_t dev, int cflags, int devtype,
++#ifdef PROC
++    struct proc *p
++#else
++    struct lwp *l
++#endif
++)
+ {
+ 	xf86_open_count--;
+ 	return(0);
+@@ -117,19 +126,22 @@
   * allow only section in the vga framebuffer and above main memory 
   * to be mapped
   */
@@ -19,9 +70,22 @@ $NetBSD: patch-ad,v 1.6 2003/03/19 17:56:39 jmmv Exp $
 +     ((__NetBSD_Version__ < 105000000) || \
 +      (__NetBSD_Version__ >= 105010000) && (__NetBSD_Version__ < 105020000)))
  int
- xf86mmap(dev, offset, length)
- 	dev_t dev;
-@@ -144,7 +153,11 @@ xf86mmap(dev, offset, length)
+-xf86mmap(dev, offset, length)
+-	dev_t dev;
+-	int offset;
+-	int length;
++xf86mmap(dev_t dev, int offset, int length)
+ #else
+ paddr_t
+-xf86mmap(dev, offset, length)
+-	dev_t dev;
+-	off_t offset;
+-	int length;
++xf86mmap(dev_t dev, off_t offset, int length)
+ #endif /* __NetBSD_Version__ */
+ {
+ 
+@@ -144,19 +156,24 @@
  		     && (unsigned)offset <= HOLE16M_END)
  #endif
  		     )) {
@@ -33,3 +97,44 @@ $NetBSD: patch-ad,v 1.6 2003/03/19 17:56:39 jmmv Exp $
  	} else {
  		return(-1);
  	}
+ }
+        
+ int
+-xf86ioctl(dev, cmd, data, flags, p)
+-	dev_t dev;
+-	u_long cmd;
+-	caddr_t data;
+-	int flags;
+-	struct proc *p;
++xf86ioctl(dev_t dev, u_long cmd, caddr_t data, int flags,
++#ifdef PROC
++	struct proc *p
++#else
++	struct lwp *l
++#endif
++)
+ {
+ 	int nd, error = 0;
+ 	struct mem_range_op *mo = (struct mem_range_op *)data;
+@@ -212,9 +229,7 @@
+  * memory range attributes.
+  */
+ int
+-mem_range_attr_get(mrd, arg)
+-	struct mem_range_desc *mrd;
+-	int *arg;
++mem_range_attr_get(struct mem_range_desc *mrd, int *arg)
+ {
+ 	/* can we handle this? */
+ 	if (mem_range_softc.mr_op == NULL)
+@@ -229,9 +244,7 @@
+ }
+ 
+ int
+-mem_range_attr_set(mrd, arg)
+-	struct mem_range_desc *mrd;
+-	int *arg;
++mem_range_attr_set(struct mem_range_desc *mrd, int *arg)
+ {
+ 	/* can we handle this? */
+ 	if (mem_range_softc.mr_op == NULL)
