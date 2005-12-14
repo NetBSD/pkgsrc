@@ -1,9 +1,13 @@
-$NetBSD: patch-am,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+$NetBSD: patch-am,v 1.2 2005/12/14 13:53:24 joerg Exp $
 
-diff -x *.orig -urN ./murgil/serverserve.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/murgil/serverserve.c
---- ./murgil/serverserve.c	Fri Feb 24 22:19:44 1995
-+++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/murgil/serverserve.c	Fri Nov 26 22:56:30 1999
-@@ -20,6 +20,9 @@
+--- murgil/serverserve.c.orig	1995-02-24 21:19:44.000000000 +0000
++++ murgil/serverserve.c
+@@ -15,11 +15,13 @@
+ #include "ipcf.h"
+ #include "externs.h"
+  
+-extern int errno;
+ fd_set fdr;	
  int timeisup;
  
  sighandler gotalarm();
@@ -13,7 +17,7 @@ diff -x *.orig -urN ./murgil/serverserve.c /usr/pkgsrc/net/icb/work.i386.unpatch
  
  serverserve()
  {
-@@ -81,9 +84,9 @@
+@@ -81,9 +83,9 @@ sdoinput()
  
  	/* examine set of file descriptors */
  	for (b = 0, y = 0; b <= (howmany(highestfd, 32) - 1); b++, y += 32) {
