@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.42 2005/11/24 10:53:44 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.43 2005/12/14 23:55:17 minskim Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1559,6 +1559,13 @@
             at <varname>PKG_LOCALTEXMFPREFIX</varname>,
             set <varname>TEXMFDIRS</varname> to the list of all texmf
             trees that need database update.</para>
+	  <para>If your package also installs font map files that need
+	    to be registered using <command>updmap</command>,
+	    set <varname>TEX_FONTMAPS</varname> to the list of all
+	    such font map files.  Then <command>updmap</command> will
+	    be run automatically at installation/deinstallation to
+	    enable/disable font map files for TeX output
+	    drivers.</para>
 	</listitem>
       
 	<listitem><para>Make sure that none of <filename>ls-R</filename>
