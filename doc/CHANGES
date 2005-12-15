@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12189 2005/12/15 11:33:32 tron Exp $
+$NetBSD: CHANGES,v 1.12190 2005/12/15 12:59:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5733,3 +5733,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/ethereal to 0.10.13nb3 [tron 2005-12-13]
 	Updated chat/silc-server to 1.0.2 [salo 2005-12-15]
 	Updated www/apache2 to 2.0.55nb3 [tron 2005-12-15]
+	Updated www/apache to 1.3.34nb1 [tron 2005-12-15]
