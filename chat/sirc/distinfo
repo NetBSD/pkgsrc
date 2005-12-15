@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 15:59:13 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/12/15 23:05:59 joerg Exp $
 
 SHA1 (sirc/sirc-2.211.tar.gz) = 1daa365c44b1358964e7d7ba92d3ae3132ea0979
 RMD160 (sirc/sirc-2.211.tar.gz) = 3d6ef05fe9471158e5329ad1e1cd08304e00211d
@@ -61,3 +61,4 @@ SHA1 (sirc/yiff.pl) = 087097801ee33938f0a074f858d799e76cd60b72
 RMD160 (sirc/yiff.pl) = 4081afcb84c71ba138fd5ca4b8780a0d1b81394e
 Size (sirc/yiff.pl) = 13320 bytes
 SHA1 (patch-aa) = 0f9dd1bf6f81ca75bb80f19ab44306f26568614a
+SHA1 (patch-ab) = f684fc7dab964e0aebb8cb7538b082bb9b0947b0
