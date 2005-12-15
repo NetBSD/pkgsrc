@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.4 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: patch-af,v 1.5 2005/12/15 21:28:47 wennmach Exp $
 
 Use correct defaults for pkgsrc.
 
---- conf/Makefile.in.orig	2003-02-12 07:43:36.000000000 -0500
-+++ conf/Makefile.in	2004-12-22 20:24:49.000000000 -0500
-@@ -14,7 +14,9 @@
+--- conf/Makefile.in.orig	2005-10-28 16:33:38.000000000 +0200
++++ conf/Makefile.in	2005-12-14 09:49:20.000000000 +0100
+@@ -14,7 +14,8 @@
  CHMOD		= @chmod@
  
  prefix 		= @prefix@
 -sysconfdir	= @sysconfdir@
-+#sysconfdir	= @sysconfdir@
 +exampledir	= $(prefix)/share/examples/arla
 +sysconfdir	= $(exampledir)
  
- CONF_FILES	= CellServDB ThisCell SuidCells
+ CONF_FILES	= CellServDB ThisCell SuidCells DynRootDB
+ 
  
