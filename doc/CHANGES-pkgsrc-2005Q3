@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.99 2005/12/12 23:05:56 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.100 2005/12/15 01:01:34 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -217,3 +217,5 @@ Pullup ticket 952 - requested by Lubomir Sedlacik
 security fix via patch for mplayer, gmplayer and mencoder
 Pullup ticket 953 - requested by Lubomir Sedlacik
 security fix via patch for print/gpdf
+Pullup ticket 955 - requested by Lubomir Sedlacik
+security fix via patch for print/poppler
