@@ -1,0 +1,78 @@
+$NetBSD: patch-ac,v 1.1.2.2 2005/12/15 01:00:51 seb Exp $
+
+Security fix for CVE-2005-3191 and CVE-2005-3192.
+
+--- poppler/Stream.cc.orig	2005-04-28 17:23:34.000000000 +0200
++++ poppler/Stream.cc	2005-12-11 06:14:45.000000000 +0100
+@@ -415,18 +415,33 @@ void ImageStream::skipLine() {
+ 
+ StreamPredictor::StreamPredictor(Stream *strA, int predictorA,
+ 				 int widthA, int nCompsA, int nBitsA) {
++  int totalBits;
++
+   str = strA;
+   predictor = predictorA;
+   width = widthA;
+   nComps = nCompsA;
+   nBits = nBitsA;
++  predLine = NULL;
++  ok = gFalse;
+ 
+   nVals = width * nComps;
++  totalBits = nVals * nBits;
++  if (totalBits == 0 ||
++      (totalBits / nBits) / nComps != width ||
++      totalBits + 7 < 0) {
++    return;
++  }
+   pixBytes = (nComps * nBits + 7) >> 3;
+-  rowBytes = ((nVals * nBits + 7) >> 3) + pixBytes;
++  rowBytes = ((totalBits + 7) >> 3) + pixBytes;
++  if (rowBytes < 0) {
++    return;
++  }
+   predLine = (Guchar *)gmalloc(rowBytes);
+   memset(predLine, 0, rowBytes);
+   predIdx = rowBytes;
++
++  ok = gTrue;
+ }
+ 
+ StreamPredictor::~StreamPredictor() {
+@@ -1020,6 +1035,10 @@ LZWStream::LZWStream(Stream *strA, int p
+     FilterStream(strA) {
+   if (predictor != 1) {
+     pred = new StreamPredictor(this, predictor, columns, colors, bits);
++    if (!pred->isOk()) {
++      delete pred;
++      pred = NULL;
++    }
+   } else {
+     pred = NULL;
+   }
+@@ -2907,6 +2926,14 @@ GBool DCTStream::readBaselineSOF() {
+   height = read16();
+   width = read16();
+   numComps = str->getChar();
++  if (numComps <= 0 || numComps > 4) {
++    error(getPos(), "Bad number of components in DCT stream", prec);
++    return gFalse;
++  }
++  if (numComps <= 0 || numComps > 4) {
++    error(getPos(), "Bad number of components in DCT stream", prec);
++    return gFalse;
++  }
+   if (prec != 8) {
+     error(getPos(), "Bad DCT precision %d", prec);
+     return gFalse;
+@@ -3268,6 +3295,10 @@ FlateStream::FlateStream(Stream *strA, i
+     FilterStream(strA) {
+   if (predictor != 1) {
+     pred = new StreamPredictor(this, predictor, columns, colors, bits);
++    if (!pred->isOk()) {
++      delete pred;
++      pred = NULL;
++    }
+   } else {
+     pred = NULL;
+   }
