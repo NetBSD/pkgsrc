@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4278 2005/12/13 17:24:12 wiz Exp $
+$NetBSD: TODO,v 1.4279 2005/12/15 20:51:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -586,6 +586,7 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o grace-5.1.19
 	o gramofile-1.6P
+	o gramps-2.0.9
 	o grap-1.36
 	o grep-2.5.1a
 	o grepmail-5.3032
@@ -612,7 +613,7 @@ Suggested package updates
 	o hatari-0.80
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
-	o horde3-3.0.8
+	o horde3-3.0.9
 	o hot-babe-0.2.2
 	o hpijs-2.1.4
 	o html2ps-1.0b4
@@ -646,6 +647,7 @@ Suggested package updates
 	o iozone-3.257
 	o ipa-2.0
 	o ipcheck-0.219
+	o ipsec-tools-0.6.4
 	o ircu-2.10.12.0
 	o iroffer-1.3b10 [pkg/31859]
 	o irrd-2.2.8
@@ -776,6 +778,7 @@ Suggested package updates
 	o multitail-3.6.0
 	o muse-0.9.1
 	o nagios-2.0b3 [replacing netsaint]
+	o naim-0.11.8.1
 	o nano-1.3.8
 	o nap-1.5.3
 	o nawk-20041222
@@ -1163,6 +1166,7 @@ Suggested package updates
 	o swish-e-2.4.3
 	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
+	o sylpheed-devel-2.1.9
 	o sympa-5.1
 	o sysinfo-4.2.2
 	o tcl-8.4.12
@@ -1278,6 +1282,7 @@ Suggested package updates
 	o xine-ui-0.99.4
 	o xkbset-0.5
 	o xlispstat-3.52.20
+	o xlog-1.3
 	o xm7-303
 	o xmahjongg-3.7
 	o xmbdfed-4.6
