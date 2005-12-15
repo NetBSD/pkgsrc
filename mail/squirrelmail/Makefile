@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57.2.1 2005/12/09 16:20:16 salo Exp $
+# $NetBSD: Makefile,v 1.57.2.2 2005/12/15 13:55:25 seb Exp $
 
 DISTNAME=	squirrelmail-1.4.5
 PKGREVISION=	3
@@ -40,8 +40,9 @@ CONF_FILES=	${SMDIR}/config/config_default.php ${SMDIR}/config/config.php
 CONF_FILES+=	${SMDIR}/data/default_pref ${DATADIR}/data/default_pref
 CONF_FILES+=	${EGDIR}/squirrelmail.conf ${PKG_SYSCONFDIR}/squirrelmail.conf
 
+REQD_DIRS=		${SMDIR} ${SMDIR}/config
+
 OWN_DIRS=		${DATADIR}
-OWN_DIRS+=		${SMDIR} ${SMDIR}/config
 OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} ${APACHE_GROUP} 730
 OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
