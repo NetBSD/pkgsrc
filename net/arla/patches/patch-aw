@@ -1,7 +1,7 @@
-$NetBSD: patch-aw,v 1.3 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: patch-aw,v 1.4 2005/12/15 21:28:48 wennmach Exp $
 
 Don't build tests that won't compile (they're not installed anyway).
-Reorder libs: put libroken at the end.
+Fiddle with libs.
 
 --- tests/Makefile.in.orig	2005-03-11 10:03:00.000000000 +0100
 +++ tests/Makefile.in	2005-03-11 10:06:47.000000000 +0100
@@ -18,14 +18,14 @@ Reorder libs: put libroken at the end.
  		  ../lib/ko/libko.la ../util/libarlautil.la
  
  
-@@ -30,15 +30,14 @@
+@@ -30,17 +30,15 @@
  		mmap-and-read large-dir large-dir2 large-dir3 mountpoint \
  		test-setgroups test-setpag hardlink1 hardlink2 mkdir2	 \
  		create-files create-symlinks create-dirs dup2-and-unlog	 \
 -		readdir-vs-lstat read-write ga-test create-remove	 \
 -		symlink echo-n test-parallel1 test-parallel2 create-stat \
 -		kill-softly kill-softer rm-rf apwd exit-wo-close	 \
-+		readdir-vs-lstat read-write create-remove \
++		readdir-vs-lstat read-write create-remove	 \
 +		symlink echo-n test-parallel1 test-parallel2 \
  		mmap-vs-read mmap-vs-read2 strange-characters-c pine	 \
  		append-over-page write-ucc utime-dir mmap-shared-write	 \
@@ -34,254 +34,11 @@ Reorder libs: put libroken at the end.
 -		invalidate-file write3 still-there-p			 \
 -		intr-read asu truncate-files mmap-cat blocks-new-file	 \
 +		rename5 rename-under-feet write-closed \
-+		truncate fchmod make-page utime-file \
-+		write3 still-there-p \
-+		intr-read asu blocks-new-file \
++		truncate fchmod make-page utime-file		 \
++		write3 still-there-p			 \
++		intr-read asu blocks-new-file	 \
  		read-past-eof						 \
+-		write-6G-file						 \
  		mmap-and-fork
  
-@@ -88,176 +87,176 @@
- 	@chmod +x run-tests
- 
- write-ro-file: write-ro-file.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write-ro-file.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write-ro-file.o $(LIBS) $(ROKEN_LIBS)
- 
- read-vs-mmap: read-vs-mmap.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ read-vs-mmap.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ read-vs-mmap.o $(LIBS) $(ROKEN_LIBS)
- 
- read-vs-mmap2: read-vs-mmap2.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ read-vs-mmap2.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ read-vs-mmap2.o $(LIBS) $(ROKEN_LIBS)
- 
- mmap-vs-read: mmap-vs-read.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-vs-read.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-vs-read.o $(LIBS) $(ROKEN_LIBS)
- 
- mmap-vs-read2: mmap-vs-read2.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-vs-read2.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-vs-read2.o $(LIBS) $(ROKEN_LIBS)
- 
- mmap-and-fork: mmap-and-fork.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-and-fork.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-and-fork.o $(LIBS) $(ROKEN_LIBS)
- 
- read-write: read-write.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ read-write.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ read-write.o $(LIBS) $(ROKEN_LIBS)
- 
- mmap-and-read: mmap-and-read.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-and-read.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-and-read.o $(LIBS) $(ROKEN_LIBS)
- 
- large-dir: large-dir.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ large-dir.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ large-dir.o $(LIBS) $(ROKEN_LIBS)
- 
- large-dir2: large-dir2.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ large-dir2.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ large-dir2.o $(LIBS) $(ROKEN_LIBS)
- 
- large-dir3: large-dir3.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ large-dir3.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ large-dir3.o $(LIBS) $(ROKEN_LIBS)
- 
- fchmod: fchmod.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ fchmod.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ fchmod.o $(LIBS) $(ROKEN_LIBS)
- 
- read-past-eof: read-past-eof.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ read-past-eof.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ read-past-eof.o $(LIBS) $(ROKEN_LIBS)
- 
- truncate: truncate.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ truncate.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ truncate.o $(LIBS) $(ROKEN_LIBS)
- 
- make-page: make-page.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ make-page.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ make-page.o $(LIBS) $(ROKEN_LIBS)
- 
- still-there-p: still-there-p.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ still-there-p.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ still-there-p.o $(LIBS) $(ROKEN_LIBS)
- 
- intr-read: intr-read.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ intr-read.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ intr-read.o $(LIBS) $(ROKEN_LIBS)
- 
- blocks-new-file: blocks-new-file.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ blocks-new-file.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ blocks-new-file.o $(LIBS) $(ROKEN_LIBS)
- 
--ga-test: ga-test.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ ga-test.o $(APPL_LIB) $(ROKEN_LIBS) $(LIBS)
-+#ga-test: ga-test.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ ga-test.o $(APPL_LIB) $(ROKEN_LIBS) $(LIBS)
- 
- asu: asu.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ asu.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ asu.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- test-setgroups: test-setgroups.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ test-setgroups.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ test-setgroups.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- test-setpag: test-setpag.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ test-setpag.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ test-setpag.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- hardlink1: hardlink1.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ hardlink1.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ hardlink1.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- hardlink2: hardlink2.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ hardlink2.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ hardlink2.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- mkdir2: mkdir2.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mkdir2.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mkdir2.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- create-files: create-files.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-files.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-files.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- create-symlinks: create-symlinks.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-symlinks.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-symlinks.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- create-dirs: create-dirs.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-dirs.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-dirs.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- create-remove: create-remove.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-remove.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-remove.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- 
- dup2-and-unlog: dup2-and-unlog.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ dup2-and-unlog.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ dup2-and-unlog.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- readdir-vs-lstat: readdir-vs-lstat.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ readdir-vs-lstat.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ readdir-vs-lstat.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- symlink: symlink.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ symlink.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ symlink.o $(KAFS_LIBS) $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- echo-n: echo-n.o
- 	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ echo-n.o
- 
- test-parallel1: test-parallel1.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ test-parallel1.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ test-parallel1.o $(LIBS) $(ROKEN_LIBS)
- 
- test-parallel2: test-parallel2.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ test-parallel2.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ test-parallel2.o $(LIBS) $(ROKEN_LIBS)
- 
--create-stat: create-stat.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-stat.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#create-stat: create-stat.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ create-stat.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--kill-softly: kill-softly.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ kill-softly.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#kill-softly: kill-softly.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ kill-softly.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--kill-softer: kill-softer.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ kill-softer.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#kill-softer: kill-softer.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ kill-softer.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--rm-rf: rm-rf.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ rm-rf.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#rm-rf: rm-rf.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ rm-rf.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--apwd: apwd.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ apwd.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#apwd: apwd.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ apwd.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--invalidate-file: invalidate-file.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ invalidate-file.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#invalidate-file: invalidate-file.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ invalidate-file.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--exit-wo-close: exit-wo-close.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ exit-wo-close.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#exit-wo-close: exit-wo-close.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ exit-wo-close.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
- strange-characters-c: strange-characters-c.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ strange-characters-c.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ strange-characters-c.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- pine: pine.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ pine.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ pine.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- append-over-page: append-over-page.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ append-over-page.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ append-over-page.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- write-ucc: write-ucc.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write-ucc.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write-ucc.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- utime-dir: utime-dir.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ utime-dir.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ utime-dir.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- utime-file: utime-file.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ utime-file.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ utime-file.o $(LIBS) $(ROKEN_LIBS)
- 
- mmap-shared-write: mmap-shared-write.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-shared-write.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-shared-write.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- rename5: rename5.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ rename5.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ rename5.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- write3: write3.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write3.o $(ROKEN_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write3.o $(LIBS) $(ROKEN_LIBS)
- 
- rename-under-feet: rename-under-feet.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ rename-under-feet.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ rename-under-feet.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
- write-closed: write-closed.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write-closed.o $(ROKEN_LIBS) $(KRB_LIBS) $(LIBS)
-+	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write-closed.o $(KRB_LIBS) $(LIBS) $(ROKEN_LIBS)
- 
--write-closed2: write-closed2.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write-closed2.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#write-closed2: write-closed2.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ write-closed2.o $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--fhbench: fhbench.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ fhbench.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#fhbench: fhbench.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ fhbench.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--truncate-files: truncate-files.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ truncate-files.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#truncate-files: truncate-files.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ truncate-files.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
--mmap-cat: mmap-cat.o
--	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-cat.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
-+#mmap-cat: mmap-cat.o
-+#	$(top_builddir)/libtool --mode=link $(CC) $(LDFLAGS) -o $@ mmap-cat.o $(APPL_LIB) $(ROKEN_LIBS) $(KAFS_LIBS) $(KRB_LIBS) $(LIBS)
- 
- .c.o:
- 	$(top_builddir)/libtool --mode=compile $(CC) -c $(CPPFLAGS) $(DEFS) -I$(srcdir) -I. $(REALCFLAGS) $<
+ TEST_OBJS     = write-ro-file.o read-vs-mmap.o read-vs-mmap2.o		   \

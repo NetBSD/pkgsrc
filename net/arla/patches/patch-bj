@@ -1,23 +1,13 @@
-$NetBSD: patch-bj,v 1.5 2005/03/26 16:50:59 wennmach Exp $
+$NetBSD: patch-bj,v 1.6 2005/12/15 21:28:48 wennmach Exp $
 
-From Love.  Still cast "size" to (unsigned long long) to avoid a
-compiler warning on amd64.
+Cast "size" to (unsigned long long) to avoid a compiler warning on amd64.
 
---- tools/release-tools/tar-rootify.c.orig	2005-03-23 11:07:28.000000000 +0100
-+++ tools/release-tools/tar-rootify.c	2005-03-23 11:23:11.000000000 +0100
-@@ -108,6 +108,7 @@
- 	    if (i < 148 || 155 < i)
- 		cksum += (u_long)(buf[i] & 0xff);
- 
-+	size = estrntoll(p->size, 12, 8);
- 	if (verbose) {
- 	    fprintf(stderr, "rec #%d\n", rec);
- 	    fprintf(stderr, "name = %.*s\n", (int)sizeof(p->name), p->name);
-@@ -117,8 +118,7 @@
+--- tools/release-tools/tar-rootify.c.orig	2005-12-14 11:21:11.000000000 +0100
++++ tools/release-tools/tar-rootify.c	2005-12-14 11:22:34.000000000 +0100
+@@ -118,7 +118,7 @@
  	    fprintf(stderr, "gname = %.*s\n", (int)sizeof(p->gname), p->gname);
  	    fprintf(stderr, "type =     %c\n", p->typeflag);
  	    fprintf(stderr, "size = %.*s\n", (int)sizeof(p->size), p->size);
--	    size = estrntoll(p->size, 12, 8);
 -	    fprintf(stderr, "size = %llo\n", size);
 +	    fprintf(stderr, "size = %llo\n", (unsigned long long)size);
  	}
