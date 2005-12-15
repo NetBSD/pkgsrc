@@ -1,19 +1,20 @@
-$NetBSD: patch-ah,v 1.4 2005/03/15 15:58:52 wennmach Exp $
+$NetBSD: patch-ah,v 1.5 2005/12/15 21:28:47 wennmach Exp $
 
 Install nnpfs_mod.o into $(lkmdir), not $(bindir).
-Do not strip nnpfs_mod.o while installing it.
+Don't strip  nnpfs_mod.o while installing.
 
---- nnpfs/bsd/Makefile.in.orig	2004-07-20 07:28:23.000000000 -0400
-+++ nnpfs/bsd/Makefile.in	2004-12-22 20:32:06.000000000 -0500
-@@ -20,6 +20,7 @@
+--- nnpfs/bsd/Makefile.in.orig	2005-11-22 17:53:54.000000000 +0100
++++ nnpfs/bsd/Makefile.in	2005-12-15 12:55:27.000000000 +0100
+@@ -19,7 +19,7 @@
  
  INSTALL		= @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
-+INSTALL_LKMD   = ${INSTALL_PROGRAM:C/-s//}
+-INSTALL_LKM_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_LKM_PROGRAM = ${INSTALL_PROGRAM:C/-s//}
  INSTALL_DATA	= @INSTALL_DATA@
  MKINSTALLDIRS 	= @top_srcdir@/mkinstalldirs
  
-@@ -28,7 +29,7 @@
+@@ -28,7 +28,7 @@
  libdir 		= @libdir@
  libexecdir 	= @libexecdir@
  bindir 		= @bindir@
@@ -22,12 +23,3 @@ Do not strip nnpfs_mod.o while installing it.
  transform	= @program_transform_name@
  EXECSUFFIX	= @EXECSUFFIX@
  VARDB		= /var/db
-@@ -136,7 +137,7 @@
- install-bsd:
- 	$(MKINSTALLDIRS) $(DESTDIR)$(lkmdir)
- 	LKM_BIN='$(NNPFS_BIN)'; for x in $$LKM_BIN; do \
--		$(INSTALL_PROGRAM) $$x $(DESTDIR)$(lkmdir)/$$x; \
-+		$(INSTALL_LKMD) $$x $(DESTDIR)$(lkmdir)/$$x; \
- 	done
- 
- install: all $(INSTALL_LKM)

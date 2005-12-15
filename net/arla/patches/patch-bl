@@ -1,18 +1,9 @@
-$NetBSD: patch-bl,v 1.4 2005/04/05 15:00:10 agc Exp $
+$NetBSD: patch-bl,v 1.5 2005/12/15 21:28:48 wennmach Exp $
 
---- nnpfs/bsd/nnpfs_vfsops-netbsd.c	2005/04/05 12:43:51	1.1
-+++ nnpfs/bsd/nnpfs_vfsops-netbsd.c	2005/04/05 13:03:41
-@@ -170,7 +168,7 @@
-     nnpfs_unmount,
-     nnpfs_root,
-     (void *)nnpfs_quotactl,
--    nnpfs_statfs,
-+    (void *)nnpfs_statfs,
-     nnpfs_sync,
-     nnpfs_vget,
-     nnpfs_fhtovp,
-@@ -191,7 +189,7 @@
-     nnpfs_snapshot,
+--- nnpfs/bsd/nnpfs_vfsops-netbsd.c.orig	2005-12-14 11:25:41.000000000 +0100
++++ nnpfs/bsd/nnpfs_vfsops-netbsd.c	2005-12-14 11:26:39.000000000 +0100
+@@ -198,7 +198,7 @@
+     vfs_stdextattrctl,
  #endif
  #ifdef HAVE_STRUCT_VFSOPS_VFS_OPV_DESCS
 -    nnpfs_vnodeopv_descs
