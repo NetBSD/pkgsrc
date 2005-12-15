@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2005/12/15 21:55:31 joerg Exp $
+
+--- trio.c.orig	2005-12-15 21:49:33.000000000 +0000
++++ trio.c
+@@ -536,9 +536,6 @@ typedef struct _userdef_T {
+  * Internal variables
+  */
+ 
+-#if defined(PLATFORM_UNIX)
+-extern int errno;
+-#endif
+ static const char null[] = "(nil)";
+ 
+ #if defined(USE_LOCALE)
