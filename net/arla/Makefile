@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2005/12/05 23:55:13 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2005/12/15 21:28:47 wennmach Exp $
 
-DISTNAME=		arla-0.38
-PKGREVISION=		2
+DISTNAME=		arla-0.41
+#PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
@@ -45,12 +45,14 @@ PLIST_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 FILES_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 
 EGDIR=		${PREFIX}/share/examples/arla
-RCD_SCRIPTS=	arlad
 
-CONF_FILES=	${EGDIR}/CellServDB ${PKG_SYSCONFDIR}/CellServDB
-CONF_FILES+=	${EGDIR}/SuidCells ${PKG_SYSCONFDIR}/SuidCells
-CONF_FILES+=	${EGDIR}/ThisCell ${PKG_SYSCONFDIR}/ThisCell
-CONF_FILES+=	${EGDIR}/arla.conf ${PKG_SYSCONFDIR}/arla.conf
+EGFILES=	CellServDB DynRootDB SuidCells ThisCell arla.conf
+
+.for f in ${EGFILES}
+CONF_FILES+=    ${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+
+RCD_SCRIPTS=	arlad
 OWN_DIRS_PERMS=	${ARLA_CACHE} ${ROOT_USER} ${ROOT_GROUP} 0700
 
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
