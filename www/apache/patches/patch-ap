@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.6.8.1 2005/12/15 13:36:32 salo Exp $
+
+--- src/modules/standard/mod_imap.c.orig	2004-11-24 20:10:19.000000000 +0100
++++ src/modules/standard/mod_imap.c	2005-12-15 13:02:18.000000000 +0100
+@@ -328,7 +328,7 @@
+     if (!strcasecmp(value, "referer")) {
+         referer = ap_table_get(r->headers_in, "Referer");
+         if (referer && *referer) {
+-	    return ap_pstrdup(r->pool, referer);
++	    return ap_escape_html(r->pool, referer);
+         }
+         else {
+ 	    /* XXX:  This used to do *value = '\0'; ... which is totally bogus
