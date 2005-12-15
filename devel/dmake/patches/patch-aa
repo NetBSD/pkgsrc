@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 12:46:22 rh Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/15 21:58:25 joerg Exp $
 
---- unix/runargv.c.orig	Tue Jul 15 18:02:34 1997
+--- unix/runargv.c.orig	1997-07-15 16:02:34.000000000 +0000
 +++ unix/runargv.c
 @@ -24,6 +24,8 @@
  */
@@ -11,10 +11,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/10/15 12:46:22 rh Exp $
  #include "extern.h"
  #include "sysintf.h"
  
-@@ -68,7 +70,9 @@
+@@ -67,8 +69,9 @@ int	last;
+ int     shell;
  char	*cmd;
  {
-    extern  int  errno;
+-   extern  int  errno;
 +#if (!defined(BSD) || BSD < 199306)
     extern  char *sys_errlist[];
 +#endif
