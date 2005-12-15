@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.102 2005/12/15 11:56:29 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.103 2005/12/15 13:37:04 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -223,3 +223,5 @@ Pullup ticket 956 - requested by Lubomir Sedlacik
 security fix via patch for chat/centericq
 Pullup ticket 959 - requested by Matthias Scheler
 security fix for apache2
+Pullup ticket 960 - requested by Matthias Scheler
+security fix for apache
