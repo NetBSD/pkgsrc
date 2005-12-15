@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4279 2005/12/15 20:51:07 wiz Exp $
+$NetBSD: TODO,v 1.4280 2005/12/15 23:50:38 wennmach Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,6 @@ Suggested package updates
 	o argtable-2.3
 	o argus-3.4
 	o arj-3.10.22
-	o arla-0.41
 	o arnold-20040104
 	o asapm-3.1
 	o asc-1.16.2
