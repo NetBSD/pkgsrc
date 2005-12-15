@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/20 12:43:44 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/15 22:19:19 joerg Exp $
 #
 
 DISTNAME=		uno_v28
@@ -12,6 +12,8 @@ COMMENT=		Tool for source code analysis
 
 WRKSRC=			${WRKDIR}/Uno/src
 MAKEFILE=		makefile
+
+USE_TOOLS+=		bison
 
 .include "../../mk/bsd.prefs.mk"
 
