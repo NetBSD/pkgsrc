@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.104 2005/12/15 13:56:33 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q3,v 1.1.2.105 2005/12/16 17:17:26 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q3 branch:
@@ -227,3 +227,5 @@ Pullup ticket 960 - requested by Matthias Scheler
 security fix for apache
 Pullup ticket 957 - requested by Martti Kuparinen
 bulk build fix for mail/ja-squirrelmail and mail/squirrelmail
+Pullup ticket 961 - requested by Lubomir Sedlacik
+security fix for devel/libextractor
