@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/12/05 23:55:10 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2005/12/16 00:13:30 rillig Exp $
 
 DISTNAME=		nhc98src-1.18.tar.gz
 PKGNAME=		nhc98-1.18
@@ -27,8 +27,7 @@ CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX:Q} \
 USE_TOOLS+=		gmake
 BUILD_TARGET=		default
 
-HARCH=			`${WRKSRC}/script/harch`
-PLIST_SUBST+=		HARCH=${HARCH:Q}
+PLIST_SUBST+=		HARCH=`${WRKSRC}/script/harch`
 
 post-extract:
 	@${FIND} ${WRKSRC}/docs -type d -name \*CVS\* -print | ${XARGS} ${RM} -rf
