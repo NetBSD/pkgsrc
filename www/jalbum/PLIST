@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/16 06:51:27 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/12/16 06:05:20 martti Exp $
 bin/jalbum
 share/jalbum/JAlbum.jar
 share/jalbum/StartJAlbum.bat
@@ -1215,6 +1215,7 @@ share/jalbum/skins/Chameleon/styles/World/stop1.gif
 share/jalbum/skins/Chameleon/styles/World/up.gif
 share/jalbum/skins/Chameleon/styles/World/up1.gif
 share/jalbum/skins/Chameleon/texts/texts.properties
+share/jalbum/skins/Chameleon/texts/texts_da.properties
 share/jalbum/skins/Chameleon/texts/texts_de.properties
 share/jalbum/skins/Chameleon/texts/texts_en.properties
 share/jalbum/skins/Chameleon/texts/texts_es.properties
@@ -1222,7 +1223,10 @@ share/jalbum/skins/Chameleon/texts/texts_fr.properties
 share/jalbum/skins/Chameleon/texts/texts_hu.properties
 share/jalbum/skins/Chameleon/texts/texts_it.properties
 share/jalbum/skins/Chameleon/texts/texts_nl.properties
+share/jalbum/skins/Chameleon/texts/texts_pl.properties
 share/jalbum/skins/Chameleon/texts/texts_sk.properties
+share/jalbum/skins/Chameleon/texts/texts_sr.properties
+share/jalbum/skins/Chameleon/texts/texts_sr_latin.properties
 share/jalbum/skins/Chameleon/texts/texts_sv.properties
 share/jalbum/skins/Colorful/defs.jap
 share/jalbum/skins/Colorful/index.htt
@@ -1910,6 +1914,7 @@ share/jalbum/skins/Simple/init.bsh
 share/jalbum/skins/Simple/onload.bsh
 share/jalbum/skins/Simple/res/au.gif
 share/jalbum/skins/Simple/res/b_pil.gif
+share/jalbum/skins/Simple/res/blank.html
 share/jalbum/skins/Simple/res/f_pil.gif
 share/jalbum/skins/Simple/res/folder.gif
 share/jalbum/skins/Simple/res/la.gif
@@ -2103,7 +2108,9 @@ share/jalbum/texts/texts_no.properties
 share/jalbum/texts/texts_pl.properties
 share/jalbum/texts/texts_pt.properties
 share/jalbum/texts/texts_ru.properties
+share/jalbum/texts/texts_sh.properties
 share/jalbum/texts/texts_sk.properties
+share/jalbum/texts/texts_sr.properties
 share/jalbum/texts/texts_sv.properties
 share/jalbum/texts/texts_th.properties
 share/jalbum/texts/texts_tr.properties
