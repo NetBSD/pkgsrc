@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.99 2005/12/05 20:50:36 rillig Exp $
+# $NetBSD: Makefile,v 1.100 2005/12/17 20:49:45 wiz Exp $
 #
 
-DISTNAME=		gnumeric-1.4.3
-PKGREVISION=		2
+DISTNAME=		gnumeric-1.6.1
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -44,7 +43,11 @@ BUILDLINK_DEPENDS.libgsf+=	libgsf>=1.12.2
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 # guile is currently not supported in gnumeric
 #.include "../../lang/guile/buildlink3.mk"
+.include "../../misc/goffice/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+BUILDLINK_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
 .include "../../print/libgnomeprint/buildlink3.mk"
+BUILDLINK_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.8.2
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
