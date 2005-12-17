@@ -1,0 +1,6 @@
+This is a library for common operations for document centric
+applications that are conceptually simple, but complex to implement
+fully. Supported operations include:
+    - plugins
+    - load/save documents
+    - undo/redo
