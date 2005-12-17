@@ -1,0 +1,19 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2005/12/17 18:41:43 jlam Exp $
+
+CUPS_DATADIR="@CUPS_DATADIR@"
+
+case ${STAGE} in
+POST-INSTALL)
+	${TEST} ! -d ${CUPS_DATADIR} ||
+	${TEST} -d ${CUPS_DATADIR}/foomatic-ppds ||
+	{ ${ECHO} "Adding Foomatic PPDs to CUPS PPD database.";
+	  ${LN} -fs ${PKG_PREFIX}/share/foomatic/ppd			\
+		${CUPS_DATADIR}/foomatic-ppds; }
+	  
+	;;
+
+DEINSTALL)
+	${ECHO} "Removing Foomatic PPDs from CUPS PPD database."
+	${RM} -f ${CUPS_DATADIR}/foomatic-ppds
+	;;
+esac
