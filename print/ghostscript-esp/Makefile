@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/09 20:30:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/17 05:20:23 jlam Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 PKGNAME=	ghostscript-esp-${GS_VERS}
@@ -17,7 +17,7 @@ ESP_SITES=	http://ftp.easysw.com/pub/ghostscript/ \
 MASTER_SITES=   ${ESP_SITES:=${GS_VERS}/}
 EXTRACT_SUFX=   .tar.bz2
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	ESP/CUPS Postscript interpreter
 HOMEPAGE=	http://www.cups.org/ghostscript.html
 
