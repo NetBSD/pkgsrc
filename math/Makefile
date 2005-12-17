@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2005/12/17 20:11:58 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2005/12/17 20:19:49 wiz Exp $
 #
 
 COMMENT=	Mathematics
@@ -60,7 +60,6 @@ SUBDIR+=	gcalctool
 SUBDIR+=	geg
 SUBDIR+=	glpk
 SUBDIR+=	gnumeric
-SUBDIR+=	goffice
 SUBDIR+=	gp-autpgrp
 SUBDIR+=	gp-factint
 SUBDIR+=	gp-fplsa
