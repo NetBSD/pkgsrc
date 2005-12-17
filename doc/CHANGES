@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12195 2005/12/17 04:22:59 jlam Exp $
+$NetBSD: CHANGES,v 1.12196 2005/12/17 08:16:50 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5739,3 +5739,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/libhfs to 3.2.6nb2 [joerg 2005-12-15]
 	Updated www/jalbum to 6.1 [martti 2005-12-16]
 	Updated print/cups to 1.1.23nb4 [jlam 2005-12-17]
+	Updated ham/gnuradio-core to 2.6nb1 [wulf 2005-12-17]
