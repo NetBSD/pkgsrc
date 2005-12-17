@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12201 2005/12/17 20:20:17 wiz Exp $
+$NetBSD: CHANGES,v 1.12202 2005/12/17 20:50:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5751,3 +5751,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added www/htdig-devel version 3.2.0b6 [markd 2005-12-17]
 	Updated x11/kdebase3 version 3.5.0nb1 [markd 2005-12-17]
 	Added misc/goffice version 0.1.2 [wiz 2005-12-17]
+	Updated math/gnumeric to 1.6.1 [wiz 2005-12-17]
