@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/12/17 23:44:25 salo Exp $
+
+security patch from http://lists.ucc.gu.uwa.edu.au/pipermail/dropbear/2005q4/000312.html
+
+--- svr-chansession.c.orig	2005-12-14 09:32:29.056688256 -0800
++++ svr-chansession.c	2005-12-14 09:33:13.361952832 -0800
+@@ -810,7 +810,7 @@
+ 	/* need to increase size */
+ 	if (i == svr_ses.childpidsize) {
+ 		svr_ses.childpids = (struct ChildPid*)m_realloc(svr_ses.childpids,
+-				sizeof(struct ChildPid) * svr_ses.childpidsize+1);
++				sizeof(struct ChildPid) * (svr_ses.childpidsize+1));
+ 		svr_ses.childpidsize++;
+ 	}
+ 	
