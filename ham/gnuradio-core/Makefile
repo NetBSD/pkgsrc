@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/12/11 11:16:35 wulf Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/17 07:37:25 wulf Exp $
 
 DISTNAME=	gnuradio-core-2.6
 COMMENT=        Runtime system and DSP blocks for GNU Radio
+PKGREVISION=	1
 
 PYTHON_PATCH_SCRIPTS+=		src/lib/filter/generate_all.py
 PYTHON_PATCH_SCRIPTS+=		src/lib/general/generate_all.py
@@ -12,6 +13,9 @@ PYTHON_PATCH_SCRIPTS+=		src/python/gnuradio/blksimpl/gmsk2.py
 PYTHON_PATCH_SCRIPTS+=		src/python/gnuradio/gruimpl/lmx2306.py
 PYTHON_PATCH_SCRIPTS+=		src/python/gnuradio/gruimpl/gnuplot_freqz.py
 PYTHON_PATCH_SCRIPTS+=		src/python/gnuradio/gr_unittest.py
+
+pre-install:
+	cd ${WRKSRC}/doc && ${GMAKE} docs
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
