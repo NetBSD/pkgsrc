@@ -1,0 +1,11 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/12/17 18:39:24 jlam Exp $
+#
+# This Makefile.common file is included by the following Makefiles:
+#
+#	print/foomatic-ppds/Makefile
+#	print/foomatic-ppds-cups/Makefile
+#
+
+FOOMATIC_PPDS_VERSION=	20051217
+CATEGORIES=		print
+HOMEPAGE=		http://www.linuxprinting.org/foomatic.html
