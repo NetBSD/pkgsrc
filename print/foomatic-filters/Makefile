@@ -1,42 +1,53 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 23:55:16 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/17 18:35:10 jlam Exp $
 
-DISTNAME=	foomatic-filters-3.0.2
-PKGREVISION=	1
-CATEGORIES=	print
+.include "Makefile.common"
+
+DISTNAME=	foomatic-filters-${FOOMATIC_FILTERS_VERSION}
+PKGREVISION=	2
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.linuxprinting.org/foomatic.html
-COMMENT=	Spooler independent postscript printing filter
-
-# You may choose from any of the following, if you wish
-DEPENDS+=	mpage-[0-9]*:../../print/mpage
-#DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
-#DEPENDS+=	enscript-[0-9]*:../../print/enscript
+MAINTAINER=	jlam@pkgsrc.org
+COMMENT=	Spooler-independent PostScript printing filter
 
 CONFLICTS+=	foomatic-gswrapper-[0-9]
 
-GNU_CONFIGURE=		YES
-CONFIG_GUESS_OVERRIDE=  ${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=    ${WRKSRC}/config.sub
-
-# Rather than wrestle with the maintainer's horribly broken configure
-# scripts, we just override everything here
-CONFIGURE_ENV+= 	CUPS=${LOCALBASE}/share/cups
-CONFIGURE_ENV+= 	CUPS_FILTERS=${LOCALBASE}/lib/cups/filter
-CONFIGURE_ENV+= 	PRINTCAP=/etc/printcap
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
-
 USE_TOOLS+=	gmake gs:run perl:run
-USE_PKGINSTALL=	yes
 INSTALL_TARGET=	install-bin install-man
 
-PKG_SYSCONFSUBDIR=	foomatic
-EGDIR=			${PREFIX}/share/examples/foomatic-filters/
-CONF_FILES=		${EGDIR}/filter.conf ${PKG_SYSCONFDIR}/filter.conf
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--disable-file-converter-check
+
+EVAL_PREFIX+=		CUPS_PREFIX=cups
+CUPS_FILTERDIR=		${CUPS_PREFIX:Q}/libexec/cups/filter
+CONFIGURE_ENV+= 	CUPS_FILTERS=${CUPS_FILTERDIR}
+FILES_SUBST+=		CUPS_FILTERDIR=${CUPS_FILTERDIR}
+
+TEXTTOPS_DEPENDS=	{a2ps,enscript,mpage}-[0-9]*
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.foomatic
+PKG_SUPPORTED_OPTIONS=	cups
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcups)
+DEPENDS+=	{cups>=1.0,${TEXTTOPS_DEPENDS}}:../../print/cups
+.else
+DEPENDS+=	${TEXTTOPS_DEPENDS}:../../print/mpage
+.endif
+
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/../../print/foomatic-filters-cups/INSTALL
+INSTALL_EXTRA_TMPL=	${DEINSTALL_EXTRA_TMPL}
+
+EGDIR=		${PREFIX}/share/examples/foomatic
+CONFDIR=	${PKG_SYSCONFDIR}/foomatic
+
+REQD_DIRS=	${EGDIR}
+OWN_DIRS=	${CONFDIR}
+CONF_FILES=	${EGDIR}/filter.conf ${CONFDIR}/filter.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/filter.conf ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
