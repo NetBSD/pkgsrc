@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4281 2005/12/16 17:43:56 wiz Exp $
+$NetBSD: TODO,v 1.4282 2005/12/17 16:56:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1205,7 +1205,6 @@ Suggested package updates
 	o totd-1.5.1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.9.2
 	o transcode-1.0.1
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
