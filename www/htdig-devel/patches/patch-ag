@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/12/17 19:26:26 markd Exp $
+
+--- htfuzzy/htfuzzy.cc.orig	2004-05-29 01:15:20.000000000 +1200
++++ htfuzzy/htfuzzy.cc
+@@ -127,8 +127,7 @@ main(int ac, char **av)
+     config->Defaults(&defaults[0]);
+     if (access((char*)configFile, R_OK) < 0)
+     {
+-	reportError(form("Unable to find configuration file '%s'",
+-			 configFile.get()));
++	reportError(form("Unable to find configuration file."));
+     }
+     config->Read(configFile);
+ 
