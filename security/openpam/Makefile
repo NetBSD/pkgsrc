@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:18 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/17 05:20:23 jlam Exp $
 
 DISTNAME=	openpam-20050201
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openpam/}
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.openpam.org/
 COMMENT=	Open-source PAM library
 
