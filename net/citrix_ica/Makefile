@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/12 14:43:26 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/17 10:52:53 rillig Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -14,7 +14,7 @@ COMMENT=	Citrix(R) client for the Microsoft Windows Terminal Server
 .include "../../mk/bsd.prefs.mk"
 
 ONLY_FOR_PLATFORM=      Linux-*-i[3-6]86 NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc 
-ONLY_FOR_PLATFORM=	DragonFly-*-i386
+ONLY_FOR_PLATFORM+=	DragonFly-*-i386
 
 .if ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
