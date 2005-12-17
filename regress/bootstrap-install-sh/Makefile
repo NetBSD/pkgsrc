@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/08 09:51:26 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/17 05:20:23 jlam Exp $
 
 DISTNAME=	bootstrap-install-sh-0.0
 CATEGORIES=	regress
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Test functionality of bootstrap install-sh
 
 EXTRACT_ONLY=	# empty

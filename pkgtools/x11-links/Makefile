@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2005/12/05 20:50:51 rillig Exp $
+# $NetBSD: Makefile,v 1.74 2005/12/17 05:20:22 jlam Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
@@ -9,7 +9,7 @@ CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Shadow tree of links to native X11 headers and libraries
 

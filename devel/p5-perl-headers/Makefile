@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/08/06 23:29:36 cube Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/17 05:20:22 jlam Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=		devel perl5
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		jlam@pkgsrc.org
 HOMEPAGE=		http://language.perl.com/index.html
 COMMENT=		Perl header files
 
