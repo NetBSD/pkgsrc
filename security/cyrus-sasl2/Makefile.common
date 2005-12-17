@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2005/12/05 23:55:17 rillig Exp $
+# $NetBSD: Makefile.common,v 1.32 2005/12/17 05:20:23 jlam Exp $
 #
 # This file is currently included by:
 #
@@ -21,7 +21,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://asg.web.cmu.edu/sasl/
 
 DISTINFO_FILE=		${.CURDIR}/../cyrus-sasl2/distinfo
