@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/12/17 19:26:26 markd Exp $
+
+--- htsearch/htsearch.cc.orig	2004-05-29 01:15:24.000000000 +1200
++++ htsearch/htsearch.cc
+@@ -211,8 +211,7 @@ main(int ac, char **av)
+ 	}
+ 	if (access((char*)configFile, R_OK) < 0)
+ 	{
+-	    reportError(form("Unable to read configuration file '%s'",
+-			     configFile.get()));
++	    reportError(form("Unable to read configuration file."));
+ 	}
+ 	config->Read(configFile);
+ 
