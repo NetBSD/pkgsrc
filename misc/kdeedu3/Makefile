@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/10/13 13:06:27 markd Exp $
+# $NetBSD: Makefile,v 1.35 2005/12/17 14:51:23 joerg Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -15,4 +15,5 @@ USE_DIRS+=		xdg-1.1
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
