@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2005/12/11 11:01:48 markd Exp $
+# $NetBSD: Makefile,v 1.98 2005/12/17 19:36:27 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -29,9 +30,9 @@ CONFIGURE_ARGS+=	--without-java
 
 REPLACE_PERL=		kcontrol/fileshare/fileshareset \
 			kcontrol/keys/convertShortcuts.pl \
-			khelpcenter/searchhandlers/khc_htdig.pl \
+			khelpcenter/searchhandlers/khc_docbookdig.pl.in \
+			khelpcenter/searchhandlers/khc_htdig.pl.in \
 			khelpcenter/searchhandlers/khc_htsearch.pl \
-			khelpcenter/searchhandlers/khc_docbookdig.pl \
 			khelpcenter/searchhandlers/khc_mansearch.pl \
 			kicker/kicker/kicker-3.1-properSizeSetting.pl \
 			kicker/kicker/kicker-3.5-kconfigXTize.pl \
@@ -88,6 +89,8 @@ PKG_SUGGESTED_OPTIONS=	sasl
 BUILDLINK_DEPENDS.Xrandr+=	Xrandr>=1.0
 BUILDLINK_DEPENDS.kdelibs+=	kdelibs>=${_KDE_VERSION}
 
+DEPENDS+=		htdig>=3.2.0:../../www/htdig-devel
+
 .if !empty(PKG_OPTIONS:Msamba)
 .include "../../net/samba/buildlink3.mk"
 LIBS+=			-L${BUILDLINK_PREFIX.samba}/lib/samba -Wl,-R${BUILDLINK_PREFIX.samba}/lib/samba
@@ -127,6 +130,12 @@ SUBST_SED.varlock=	s:/var/lock:/var/spool/locks:
 SUBST_SED.varlock=	s:/var/lock:/var/spool/lock:
 .endif
 .endif
+
+SUBST_CLASSES+=		htdig
+SUBST_STAGE.htdig=	post-patch
+SUBST_MESSAGE.htdig=	"Fix htdig paths."
+SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
+SUBST_SED.htdig=	s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
 
 pre-configure:
 	${LN} -s FreeBSD ${WRKSRC}/ksysguard/ksysguardd/DragonFly
