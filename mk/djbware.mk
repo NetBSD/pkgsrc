@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.12 2005/11/11 07:19:40 rillig Exp $
+# $NetBSD: djbware.mk,v 1.13 2005/12/18 20:25:35 joerg Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -85,7 +85,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 .if !empty(PKG_OPTIONS:Mdjbware-errno-hack)
 SUBST_CLASSES+=		djbware
 SUBST_STAGE.djbware=	do-configure
-SUBST_FILES.djbware=	error.h
+SUBST_FILES.djbware+=	error.h
 SUBST_SED.djbware=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
 SUBST_MESSAGE.djbware=	"Correcting definition of errno."
 .endif
