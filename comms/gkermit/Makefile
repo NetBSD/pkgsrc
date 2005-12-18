@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:49:54 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/18 23:18:40 joerg Exp $
 #
 
 DISTNAME=	gku100
@@ -17,6 +17,10 @@ WRKSRC=		${WRKDIR}
 BUILD_TARGET=	posix
 MAKEFILE=	makefile
 MAKE_ENV+=	KFLAGS=${CFLAGS:M*:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+CFLAGS+=	-DERRNO_H
 
 INSTALLATION_DIRS=	bin man/man1
 
