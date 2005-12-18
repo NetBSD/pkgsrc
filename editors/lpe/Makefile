@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/11 21:16:46 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/18 20:57:26 rillig Exp $
 #
 
 DISTNAME=	lpe-1.2.6
@@ -21,9 +21,11 @@ GNU_CONFIGURE=		YES
 
 SHLIBTOOL_OVERRIDE=	libtool
 
-CONFIGURE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
-MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
-CFLAGS+=		-DPREFIX=\"${PREFIX:Q}\"
+# Note: pkglint warns about the following three lines, but they must not
+# be changed because this package uses autoconf2.13.
+CONFIGURE_ENV=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+MAKE_ENV=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+CFLAGS=			-DPREFIX="\"${PREFIX}\""
 
 post-patch:
 	@cd ${WRKSRC}/man &&				\
