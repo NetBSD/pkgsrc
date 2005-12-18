@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/23 00:51:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/18 20:28:34 joerg Exp $
 #
 
 DISTNAME=		publicfile-0.52
@@ -14,6 +14,8 @@ DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 DJB_RESTRICTED=		YES
 DJB_CONFIG_PREFIX=	${PREFIX}/publicfile
+
+SUBST_FILES.djbware+=	leapsecs_read.c
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
