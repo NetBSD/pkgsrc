@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/01 14:56:14 dillo Exp $
+$NetBSD: distinfo,v 1.2 2005/12/18 20:26:03 dillo Exp $
 
 SHA1 (Level9_4.0_Source.zip) = 7bbd0a675aa66067745b2d850d07eaa2b08fd452
 RMD160 (Level9_4.0_Source.zip) = 224b2b3414da53e8dd7c3a253468b078c09a0e4f
 Size (Level9_4.0_Source.zip) = 294428 bytes
 SHA1 (patch-aa) = 304bcbbac41d95e93ead470bbb2d67234c0a2f76
+SHA1 (patch-ab) = 1944199a06221641f0aa3bf32fb8d3aee4206837
