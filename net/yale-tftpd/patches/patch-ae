@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2002/04/01 00:04:43 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.2 2005/12/18 18:37:16 joerg Exp $
 
---- classes/access.c.orig	Wed Oct  5 01:20:44 1994
+--- classes/access.c.orig	1994-10-05 05:20:44.000000000 +0000
 +++ classes/access.c
 @@ -1,4 +1,6 @@
  #include <stdio.h>
@@ -9,3 +9,11 @@ $NetBSD: patch-ae,v 1.1 2002/04/01 00:04:43 dmcmahill Exp $
  #include <ctype.h>
  #include <sys/types.h>
  #include <sys/stat.h>
+@@ -92,7 +94,6 @@ AccessGroup
+ accessGroup_new ()
+ {
+ 	AccessGroup self;
+-	extern char* calloc();
+ 
+ 	self = (AccessGroup)calloc (1, sizeof (*self));
+ 	return self;
