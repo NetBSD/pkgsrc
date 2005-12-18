@@ -1,0 +1,28 @@
+$NetBSD: patch-at,v 1.1 2005/12/18 20:05:32 dillo Exp $
+
+--- xpdf/Stream.cc.orig	2005-12-15 22:53:25.000000000 -0500
++++ xpdf/Stream.cc
+@@ -2919,11 +2919,7 @@ GBool DCTStream::readBaselineSOF() {
+   width = read16();
+   numComps = str->getChar();
+   if (numComps <= 0 || numComps > 4) {
+-    error(getPos(), "Bad number of components in DCT stream", prec);
+-    return gFalse;
+-  }
+-  if (numComps <= 0 || numComps > 4) {
+-    error(getPos(), "Bad number of components in DCT stream", prec);
++    error(getPos(), "Bad number of components %d in DCT stream", numComps);
+     return gFalse;
+   }
+   if (prec != 8) {
+@@ -2952,6 +2948,10 @@ GBool DCTStream::readProgressiveSOF() {
+   height = read16();
+   width = read16();
+   numComps = str->getChar();
++  if (numComps <= 0 || numComps > 4) {
++    error(getPos(), "Bad number of components %d in DCT stream", numComps);
++    return gFalse;
++  }
+   if (prec != 8) {
+     error(getPos(), "Bad DCT precision %d", prec);
+     return gFalse;
