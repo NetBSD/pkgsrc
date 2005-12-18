@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.437 2005/12/13 12:03:47 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.438 2005/12/18 14:25:40 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by:
@@ -2632,7 +2632,7 @@ sub checkfile_distinfo($) {
 			if (open(PATCH, "< ${current_dir}/${patchdir}/${file}")) {
 				my $data = "";
 				foreach my $patchline (<PATCH>) {
-					$data .= $patchline unless $patchline =~ qr"\$NetBSD.*\$";
+					$data .= $patchline unless $patchline =~ qr"\$NetBSD";
 				}
 				close(PATCH);
 				my $chksum = Digest::SHA1::sha1_hex($data);
