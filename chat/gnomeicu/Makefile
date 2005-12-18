@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/12/05 23:55:02 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2005/12/18 15:52:19 joerg Exp $
 
 DISTNAME=	gnomeicu-0.99.5
 CATEGORIES=	chat gnome
@@ -14,6 +14,8 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake pkg-config
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
+USE_LIBTOOL=		YES
+BUILD_USES_MSGFMT=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 
