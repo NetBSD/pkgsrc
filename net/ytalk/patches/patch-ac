@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2005/12/18 18:23:19 joerg Exp $
+
+--- header.h.orig	2005-12-18 18:16:38.000000000 +0000
++++ header.h
+@@ -261,10 +261,6 @@ extern int    io_len;		/* user input cou
+ 
+ extern int running_process;	/* flag: is process running? */
+ 
+-/* ---- some machine compatibility definitions ---- */
+-
+-extern int errno;
+-
+ /* aliases -- added by Roger Espel Llima (borrowed from utalk) */
+ 
+ struct alias {
