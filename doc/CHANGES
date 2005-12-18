@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12203 2005/12/18 15:25:32 jlam Exp $
+$NetBSD: CHANGES,v 1.12204 2005/12/18 20:19:38 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5753,3 +5753,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added misc/goffice version 0.1.2 [wiz 2005-12-17]
 	Updated math/gnumeric to 1.6.1 [wiz 2005-12-17]
 	Updated lang/perl5 to 5.8.7nb5 [jlam 2005-12-18]
+	Updated print/xpdf to 3.01pl1nb2 [dillo 2005-12-18]
