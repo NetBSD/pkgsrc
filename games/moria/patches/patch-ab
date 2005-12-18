@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
---- unix/unix.c.orig	Fri Jul 22 08:37:08 1994
-+++ unix/unix.c	Wed Dec  2 23:17:35 1998
-@@ -43,6 +43,11 @@
+$NetBSD: patch-ab,v 1.2 2005/12/18 23:27:29 joerg Exp $
+
+--- unix/unix.c.orig	1994-07-21 22:37:08.000000000 +0000
++++ unix/unix.c
+@@ -43,6 +43,11 @@ typedef struct { int stuff; } fpvmach;
  #include <sys/param.h>
  #endif
  
@@ -13,7 +14,16 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
  #ifdef __linux__
  #include <sys/time.h>
  #include <sys/types.h>
-@@ -276,7 +281,9 @@
+@@ -73,7 +78,7 @@ typedef struct { int stuff; } fpvmach;
+ #include "externs.h"
+ 
+ #include <pwd.h>
+-#include <sys/errno.h>
++#include <errno.h>
+ 
+ #ifdef USG
+ struct passwd *getpwuid();
+@@ -276,7 +281,9 @@ int getuid();
  void user_name(buf)
  char *buf;
  {
@@ -23,7 +33,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
    struct passwd *pwline;
    register char *p;
  
-@@ -314,7 +321,10 @@
+@@ -314,7 +321,10 @@ char *file, *exp;
  	  user[i] = '\0';
  	  if (i == 0)
  	    {
@@ -35,3 +45,19 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/01/23 17:00:15 simonb Exp $
  
  	      if (login != NULL)
  		(void) strcpy (user, login);
+@@ -342,7 +352,6 @@ char *file;
+ char *mode;
+ {
+   char buf[1024];
+-  extern int errno;
+ 
+   if (tilde(file, buf))
+     return (fopen(buf, mode));
+@@ -357,7 +366,6 @@ char *file;
+ int flags, mode;
+ {
+   char buf[1024];
+-  extern int errno;
+ 
+   if (tilde(file, buf))
+     return (open(buf, flags, mode));
