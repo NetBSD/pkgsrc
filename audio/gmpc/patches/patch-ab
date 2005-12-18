@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1 2005/12/18 20:24:46 rillig Exp $
+
+Keywords: c90
+
+--- src/main.c.orig	Sun Aug 14 18:43:45 2005
++++ src/main.c	Sun Dec 18 21:01:32 2005
+@@ -333,6 +333,7 @@ int update_interface ()
+ void playlist_changed(MpdObj *mi, int old_playlist_id, int new_playlist_id)
+ {
+ 	MpdData *data = NULL;
++	char *string;
+ 
+ 	/*
+ 	 * so I don't have to check all the time 
+@@ -342,7 +343,7 @@ void playlist_changed(MpdObj *mi, int ol
+ 	gchar buffer[1024];
+ 	debug_printf(DEBUG_INFO, "playlist_changed_callback: playlist changed\n");
+ 	old_length = info.playlist_length;
+-	char *string = cfg_get_single_value_as_string_with_default(config, "playlist","markup", DEFAULT_PLAYLIST_MARKUP);
++	string = cfg_get_single_value_as_string_with_default(config, "playlist","markup", DEFAULT_PLAYLIST_MARKUP);
+ 
+ 	data = mpd_ob_playlist_get_changes(mi,info.playlist_id);
+ 
+@@ -608,8 +609,9 @@ void error_callback(MpdObj *mi, int erro
+ 	if (xml_error_window == NULL)
+ 	{
+ 		gchar *str = g_strdup_printf("error code %i: %s", error_id, error_msg);
++		GtkWidget *dialog;
+ 		xml_error_window = glade_xml_new(GLADE_PATH"gmpc.glade", "error_dialog",NULL);
+-		GtkWidget *dialog = glade_xml_get_widget(xml_error_window, "error_dialog");
++		dialog = glade_xml_get_widget(xml_error_window, "error_dialog");
+ 		gtk_label_set_markup(GTK_LABEL(glade_xml_get_widget(xml_error_window,"em_label")), str); 
+ 		gtk_widget_show_all(dialog);
+ 		g_signal_connect(G_OBJECT(dialog), "response", G_CALLBACK(error_window_destroy), GINT_TO_POINTER(autoconnect));
