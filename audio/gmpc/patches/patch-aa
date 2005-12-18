@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.3 2005/12/18 20:24:46 rillig Exp $
+
+Keywords: c90
+
+--- src/edit_markup.c.orig	Sun Jun 19 11:58:50 2005
++++ src/edit_markup.c	Sun Dec 18 21:11:14 2005
+@@ -121,8 +121,10 @@ char * edit_song_markup(char *format)
+ {
+ 	char *str_format = NULL;
+ 	GtkTextIter start_iter, stop_iter;				
++	GtkWidget *dialog;
++
+ 	xml_esf= glade_xml_new(GLADE_PATH"gmpc.glade", "esf_dialog",NULL);
+-	GtkWidget *dialog = glade_xml_get_widget(xml_esf, "esf_dialog");
++	dialog = glade_xml_get_widget(xml_esf, "esf_dialog");
+ 	buffer= gtk_text_view_get_buffer(GTK_TEXT_VIEW(glade_xml_get_widget(xml_esf, "textview_markup")));
+ 	glade_xml_signal_autoconnect (xml_esf);
+ 	g_signal_connect(G_OBJECT(buffer), "changed", G_CALLBACK(esf_render_example), NULL);
