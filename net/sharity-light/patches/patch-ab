@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2005/09/06 08:10:59 abs Exp $
+$NetBSD: patch-ab,v 1.4 2005/12/18 20:14:03 joerg Exp $
 
---- nfs/syscalls.c.orig	1998-06-30 07:24:56.000000000 -0500
+--- nfs/syscalls.c.orig	1998-06-30 12:24:56.000000000 +0000
 +++ nfs/syscalls.c
 @@ -19,6 +19,13 @@
  #include <arpa/inet.h>
@@ -16,3 +16,21 @@ $NetBSD: patch-ab,v 1.3 2005/09/06 08:10:59 abs Exp $
  /* --------------------------- general constants --------------------------- */
  
  #define NFS_TIMEOUT_SECONDS		10	/* nfs timeout in seconds */
+@@ -62,7 +69,7 @@ int	syscall_mount(char *dir, void *root_
+ 									struct sockaddr_in *socket, char *mntfrom)
+ {
+ struct nfs_args		nfs_args;
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #	ifdef _NEW_VFSCONF
+ 		struct vfsconf vfc;
+ 		int error;
+@@ -93,7 +100,7 @@ struct nfs_args		nfs_args;
+ #else
+ #	define NFSNAME MOUNT_NFS
+ #endif
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #	ifdef _NEW_VFSCONF
+ #		define GETVFSBYNAME	error = getvfsbyname("nfs", &vfc)
+ #		define VFCERROR		error
