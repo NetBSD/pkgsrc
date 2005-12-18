@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2000/10/03 01:35:43 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/18 21:45:29 joerg Exp $
 
---- bounce.c.orig	Mon Oct  2 21:31:42 2000
+--- bounce.c.orig	2000-02-18 21:58:52.000000000 +0000
 +++ bounce.c
 @@ -11,6 +11,9 @@
  #ifdef _AIX
@@ -12,3 +12,19 @@ $NetBSD: patch-aa,v 1.1 2000/10/03 01:35:43 hubertf Exp $
  
  #include <fcntl.h>
  #include <errno.h>
+@@ -27,7 +30,6 @@
+ #define    DEFAULT_PORT   1523
+ 
+ char sbuf[16384], cbuf[16384];
+-extern int errno;
+ /* extern char *sys_errlist[]; */
+ 
+ void sigchld() {
+@@ -39,7 +41,6 @@ void communicate(int sfd, int cfd) {
+     char *chead, *ctail, *shead, *stail;
+     int num, nfd, spos, cpos;
+ 
+-    extern int errno;
+     fd_set rd, wr;
+ 
+     struct itimerval itime;
