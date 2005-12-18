@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2005/12/18 22:01:33 rillig Exp $
+
+std::auto_ptr needs <memory>.
+
+--- Src/DasherCore/DasherInterface.cpp.orig	Fri Aug 19 15:41:53 2005
++++ Src/DasherCore/DasherInterface.cpp	Sun Dec 18 22:50:11 2005
+@@ -11,6 +11,7 @@
+ #include "CustomColours.h"
+ #include "DasherViewSquare.h"
+ 
++#include <memory>
+ #include <iostream>
+ 
+ #include "DasherInterface.h"
