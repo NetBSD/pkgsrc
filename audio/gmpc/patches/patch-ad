@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1 2005/12/18 20:24:46 rillig Exp $
+
+Keywords: c90
+
+--- src/player.c.orig	Sat Aug  6 22:25:32 2005
++++ src/player.c	Sun Dec 18 21:03:56 2005
+@@ -273,9 +273,11 @@ void msg_pop_popup()
+ 
+ int update_player()
+ {
++	GtkRange *scale;
++
+ 	if(!mpd_ob_check_connected(connection)) return FALSE;
+ 	/* update the volume slider */
+-	GtkRange *scale = (GtkRange *)glade_xml_get_widget(xml_main_window, "volume_slider");
++	scale = (GtkRange *)glade_xml_get_widget(xml_main_window, "volume_slider");
+ 	if((int)gtk_range_get_value(scale) != mpd_ob_status_get_volume(connection))
+ 	{
+ 		gtk_range_set_value(scale, (double)mpd_ob_status_get_volume(connection));
