@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1 2005/12/18 20:24:46 rillig Exp $
+
+Keywords: c90
+
+--- src/playlist3.c.orig	Sun Aug 14 15:01:07 2005
++++ src/playlist3.c	Sun Dec 18 21:09:30 2005
+@@ -193,7 +193,7 @@ unsigned long pl3_find_view_browser()
+ 				if(loop)
+ 				{
+ 					GtkTreeIter piter;
+-					int id = 0, ttime = 0;;
++					int id = 0, ttime = 0;
+ 					char *icon;
+ 					gtk_tree_model_get(GTK_TREE_MODEL(pl2_store), &iter, SONG_ID, &id, SONG_STOCK_ID, &icon, -1);
+ 					gtk_list_store_append(pl3_store, &piter);
+@@ -1239,9 +1239,12 @@ void pl3_playlist_row_activated(GtkTreeV
+  */
+ void pl3_reinitialize_tree()
+ {
++	GtkTreePath *path;
++	GtkTreeSelection *sel;
++
+ 	if(pl3_xml == NULL) return;
+-	GtkTreePath *path = gtk_tree_path_new_from_string("0");
+-	GtkTreeSelection *sel = gtk_tree_view_get_selection(GTK_TREE_VIEW(glade_xml_get_widget(pl3_xml, "cat_tree")));
++	path = gtk_tree_path_new_from_string("0");
++	sel = gtk_tree_view_get_selection(GTK_TREE_VIEW(glade_xml_get_widget(pl3_xml, "cat_tree")));
+ 	gtk_tree_store_clear(pl3_tree);
+ 	/* add the current playlist */
+ 	pl3_current_playlist_add();
