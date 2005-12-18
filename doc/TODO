@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4284 2005/12/18 09:51:25 xtraeme Exp $
+$NetBSD: TODO,v 1.4285 2005/12/18 18:10:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -459,6 +459,7 @@ Suggested package updates
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.18.1
 	o cyrus-sasl-2.1.22
+	o cyrus-sasl2-2.1.22
 	o dact-0.8.37
 	o dante-1.1.18
 	o dap-2.1.5
@@ -475,6 +476,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
+	o dialog-1.0.20051207
 	o diffstat-1.41
 	o digikam-0.8.0
 	o dirac-0.5.4
@@ -515,6 +517,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
+	o evolution-data-server-1.4.2.1
 	o exim-4.60
 	o exmh-2.7.2
 	o f2c-20031025
@@ -531,6 +534,7 @@ Suggested package updates
 	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
+	o fontconfig-2.3.92
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
@@ -573,10 +577,14 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnocatan-0.8.1.30
+	o gnome-desktop-2.12.2
+	o gnome-keyring-0.4.6
 	o gnome-pilot-2.0.13
 	o gnupg-devel-1.9.19
 	o gnustep-1.11.1
 	o gnustep-objc-1.4.0
+	o gnutls-1.3.1
+	o gob2-2.0.13
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
 	o gpsdrive-2.09
@@ -691,14 +699,17 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.4
 	o leafpad-0.8.5
+	o libbonobo-2.13.0
+	o libcdio-0.76
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
+	o libesmtp-1.0.4
 	o libextractor-0.5.8
 	o libflash-0.4.13
 	o libgdiplus-1.1.9.2
 	o libggi-2.2
 	o libggimisc-2.1.2
-	o libgii-0.9.2
+	o libgii-1.0.0
 	o libhydrogen-0.9.2
 	o libksba-0.9.9
 	o liblive-2005.10.05
@@ -725,6 +736,7 @@ Suggested package updates
 	o lucy-1.19p
 	o lwp-2.1
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
+	o mDNSResponder-107.3
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mail-notification-2.0
@@ -738,7 +750,7 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.0.35
 	o matchbox-0.9.5
-	o mathomatic-12.5.3
+	o mathomatic-12.5.4
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -775,12 +787,14 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.6.0
 	o muse-0.9.1
+	o musicbrainz-2.1.2
 	o mysql4-client-4.1.6
 	o mysql4-server-4.1.6
 	o nagios-2.0b3 [replacing netsaint]
 	o naim-0.11.8.1
 	o nano-1.3.8
 	o nap-1.5.3
+	o nautilus-2.12.2
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -801,7 +815,7 @@ Suggested package updates
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
 	o nslint-2.1a3
-	o nss-3.10
+	o nss-3.11
 	o nss_ldap-243
 	o nulib2-210
 	o nut-11.0
@@ -817,6 +831,7 @@ Suggested package updates
 	o openal-20050401
 	o opencobol-0.31
 	o openh323-1.17.2
+	o openldap-2.3.13
 	o openpam-20050616
 	o openssl-0.9.8a
 	o oroborus-2.0.15
@@ -827,6 +842,7 @@ Suggested package updates
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookie-3.09.01
 	o p5-Apache-AuthCookieDBI-2.02
+	o p5-Apache-DBI-0.99.01
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.26
 	o p5-Audio-Wav-0.04
@@ -853,6 +869,7 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-postgresql-1.32
 	o p5-DBIx-ContextualFetch-1.03
+	o p5-DBIx-SearchBuilder-1.36
 	o p5-DB_File-1.810
 	o p5-Data-FormValidator-4.02
 	o p5-Data-TemporaryBag-0.08
@@ -863,7 +880,9 @@ Suggested package updates
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
+	o p5-Digest-1.14
 	o p5-Digest-Hashcash-0.03
+	o p5-Digest-MD5-2.36
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
@@ -872,18 +891,23 @@ Suggested package updates
 	o p5-FileHandle-Unget-0.16.2.1
 	o p5-Font-TTF-0.35
 	o p5-Graph-0.20105
+	o p5-HTML-Element-Extended-1.14
 	o p5-HTML-FillInForm-1.05
+	o p5-HTML-Parser-3.48
+	o p5-HTML-Tree-3.19.03
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
+	o p5-IO-String-1.08
 	o p5-Ima-DBI-0.34
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
 	o p5-Log-Agent-0.307
 	o p5-MARC-1.38
+	o p5-MIME-Base64-3.07
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
@@ -914,6 +938,7 @@ Suggested package updates
 	o p5-SVN-Web-0.38
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
+	o p5-Scalar-List-Utils-1.18
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-Scalar-1.20
 	o p5-String-Approx-3.25
@@ -988,6 +1013,7 @@ Suggested package updates
 	o pnet-0.7.2 [pkg/31950]
 	o pnetC-0.7.2 [pkg/31950]
 	o pnetlib-0.7.2 [pkg/31950]
+	o poppler-0.4.3
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
@@ -1139,7 +1165,7 @@ Suggested package updates
 	o snes9x-1.43
 	o socat-1.4.3.0
 	o sope-4.5.5
-	o source-highlight-2.3
+	o source-highlight-2.3 [pkg/32325]
 	o sox-12.17.9
 	o spamass-milter-1.0
 	o spim-7.2.1
@@ -1220,6 +1246,7 @@ Suggested package updates
 	o ucarp-1.1 [pkg/29785]
 	o ucblogo-5.5
 	o ucl-1.03
+	o uim-0.5.0.1
 	o unix2dos-1.3
 	o unixodbc-2.2.11
 	o userppp-030706
@@ -1309,6 +1336,7 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xrmap-2.33
 	o xrn-9.02
+	o xsane-0.98b
 	o xscreensaver-4.23
 	o xskat-4.0
 	o xtide-2.8.2
@@ -1327,6 +1355,7 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.9
 	o zircon-1.18.256
+	o zope-2.8.4
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-1.5.4
