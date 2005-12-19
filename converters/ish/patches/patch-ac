@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2005/03/24 16:14:03 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/19 00:06:47 joerg Exp $
 
---- ish.c.orig	1990-08-05 06:04:08.000000000 -0500
+--- ish.c.orig	1990-08-05 11:04:08.000000000 +0000
 +++ ish.c
-@@ -48,7 +48,7 @@ int  path = 0, size;
+@@ -32,7 +32,6 @@
+ #define	rindex	strrchr
+ #endif
+ 
+-extern int errno;
+ extern char *rindex();
+ 
+ void help(), puttitle();
+@@ -48,7 +47,7 @@ int  path = 0, size;
  long lsize;
  char *filename = "file.ish";
  
@@ -11,7 +19,7 @@ $NetBSD: patch-ac,v 1.1 2005/03/24 16:14:03 minskim Exp $
  FILE *ipath;
  char name[NAMLEN];
  
-@@ -69,6 +69,7 @@ char **argv;
+@@ -69,6 +68,7 @@ char **argv;
      char *p;
      FILE *fopen();
  
