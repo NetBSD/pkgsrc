@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.1 1998/09/13 20:39:44 garbled Exp $
---- c_scores.c.orig	Sun Sep 13 13:18:36 1998
-+++ c_scores.c	Sun Sep 13 13:19:04 1998
-@@ -124,7 +124,7 @@
+$NetBSD: patch-ad,v 1.2 2005/12/19 16:22:25 joerg Exp $
+
+--- c_scores.c.orig	1992-08-02 13:10:12.000000000 +0000
++++ c_scores.c
+@@ -41,7 +41,6 @@
+  *  else print to X screen.
+  */
+   
+-extern int errno;
+ int x, y, ydelta;
+ 
+ 
+@@ -124,7 +123,7 @@ int scores(score)
    y = 100;
    ydelta = 15;
  
