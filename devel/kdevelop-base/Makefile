@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/12/11 12:01:11 markd Exp $
+# $NetBSD: Makefile,v 1.48 2005/12/19 08:34:11 markd Exp $
 
 DISTNAME=	kdevelop-3.3.0
 PKGNAME=	kdevelop-base-3.3.0
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=		automake>=1.7:../../devel/automake
 DEPENDS+=		doxygen>=1.3.5:../../devel/doxygen
 DEPENDS+=		graphviz>=1.10nb1:../../graphics/graphviz
-DEPENDS+=		htdig>=3.1.6:../../www/htdig
+DEPENDS+=		htdig>=3.2.0:../../www/htdig-devel
 DEPENDS+=		a2ps>=4.12:../../print/a2ps
 DEPENDS+=		kdelibdocs>=3.2:../../x11/kdelibdocs3
 DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs
