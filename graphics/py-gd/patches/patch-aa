@@ -1,8 +1,14 @@
-$NetBSD: patch-aa,v 1.1 1999/11/01 03:34:32 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/19 16:01:34 joerg Exp $
 
---- gdmodule.c.orig	Sun Oct 31 20:13:48 1999
-+++ gdmodule.c	Sun Oct 31 20:14:43 1999
-@@ -34,8 +34,8 @@
+--- gdmodule.c.orig	2005-12-19 15:53:23.000000000 +0000
++++ gdmodule.c
+@@ -28,14 +28,13 @@ version 0.22
+ #include <errno.h>
+ 
+ static PyObject *ErrorObject;
+-extern int errno;
+ 
+ /* DOCSTRING */
  static char *gdModuleDocString = "GD module is an interface to the GD library written by Thomas Bouttel.\n\
  \'It allows your code to quickly draw images complete with lines, arcs,\n\
  text, multiple colors, cut and paste from other images, and flood fills,\n\
@@ -13,7 +19,7 @@ $NetBSD: patch-aa,v 1.1 1999/11/01 03:34:32 jlam Exp $
  It has been extended in some ways from the original GD library.";
  
  /*
-@@ -84,7 +84,7 @@
+@@ -84,7 +83,7 @@ static imageobject *newimageobject();
  /*
  ** Methods for the image type
  */
@@ -22,7 +28,7 @@ $NetBSD: patch-aa,v 1.1 1999/11/01 03:34:32 jlam Exp $
  	imageobject *self;
  	PyObject *args;
  {
-@@ -94,11 +94,11 @@
+@@ -94,11 +93,11 @@ static PyObject *image_writegif(self, ar
  
  	if (PyArg_ParseTuple(args, "O!", &PyFile_Type, &fileobj))
  	{
@@ -36,7 +42,7 @@ $NetBSD: patch-aa,v 1.1 1999/11/01 03:34:32 jlam Exp $
  		else
  		{
  			PyErr_SetFromErrno(PyExc_IOError);
-@@ -662,8 +662,8 @@
+@@ -662,8 +661,8 @@ static PyObject *image_getorigin(self)
  }
  
  static struct PyMethodDef image_methods[] = {
@@ -47,7 +53,7 @@ $NetBSD: patch-aa,v 1.1 1999/11/01 03:34:32 jlam Exp $
   file name."},
   {"writeGd",	(PyCFunction)image_writegd,	1, "writeGd(f)\n\
   write the image to f as a GD file, where f is either an open file object\n\
-@@ -802,7 +802,7 @@
+@@ -802,7 +801,7 @@ static imageobject *newimageobject(args)
  		{
  			if (!(ext = strrchr(filename,'.')))
  			{
@@ -56,7 +62,7 @@ $NetBSD: patch-aa,v 1.1 1999/11/01 03:34:32 jlam Exp $
  				Py_DECREF(self);
  				return NULL;
  			}
-@@ -814,7 +814,7 @@
+@@ -814,7 +813,7 @@ static imageobject *newimageobject(args)
  			Py_DECREF(self);
  			return(NULL);
  		}
@@ -65,7 +71,7 @@ $NetBSD: patch-aa,v 1.1 1999/11/01 03:34:32 jlam Exp $
  			fclose(fp);
  			Py_DECREF(self);
  			return(NULL);
-@@ -923,7 +923,7 @@
+@@ -923,7 +922,7 @@ static PyObject *gd_fontSSize(self, args
  
  static struct PyMethodDef gd_methods[] = {
  	{"image", gd_image, 1, "image(image[,(w,h)] | file | file,type | (w,h))\n\
