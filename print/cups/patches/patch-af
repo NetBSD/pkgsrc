@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.16 2005/12/19 16:04:48 joerg Exp $
+
+--- backend/usb.c.orig	2005-12-19 13:59:03.000000000 +0000
++++ backend/usb.c
+@@ -71,7 +71,7 @@ int	print_device(const char *uri, const 
+ 
+ #ifdef __APPLE__
+ #  include "usb-darwin.c"
+-#elif defined(__linux) || defined(__sun) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#elif defined(__linux) || defined(__sun) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #  include "usb-unix.c"
+ #else
+ /*
