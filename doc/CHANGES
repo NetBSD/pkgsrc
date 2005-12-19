@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12206 2005/12/19 11:47:11 salo Exp $
+$NetBSD: CHANGES,v 1.12207 2005/12/19 11:55:06 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5756,3 +5756,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/xpdf to 3.01pl1nb2 [dillo 2005-12-18]
 	Updated multimedia/ns-flash to 7.0.61 [salo 2005-12-19]
 	Updated multimedia/moz-bin-flash to 7.0.61 [salo 2005-12-19]
+	Removed math/R-VR [markd 2005-12-19]
