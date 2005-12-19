@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.18 2005/12/19 16:04:48 joerg Exp $
+
+--- backend/usb-unix.c.orig	2005-12-19 13:59:35.000000000 +0000
++++ backend/usb-unix.c
+@@ -544,7 +544,7 @@ list_devices(void)
+   }
+ #elif defined(__hpux)
+ #elif defined(__osf)
+-#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+   int   i;                      /* Looping var */
+   char  device[255];            /* Device filename */
+ 
