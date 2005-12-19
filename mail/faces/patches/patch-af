@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.5 2005/03/15 03:59:38 tv Exp $
+$NetBSD: patch-af,v 1.6 2005/12/19 15:15:47 joerg Exp $
 
---- compface/uncmain.c.orig	Wed Oct 23 22:28:07 1991
+--- compface/uncmain.c.orig	1991-10-24 02:28:07.000000000 +0000
 +++ compface/uncmain.c
 @@ -18,6 +18,8 @@
  #include <fcntl.h>
@@ -11,14 +11,16 @@ $NetBSD: patch-af,v 1.5 2005/03/15 03:59:38 tv Exp $
  /* the buffer is longer than needed to handle sparse input formats */
  #define FACEBUFLEN 2048
  char fbuf[FACEBUFLEN];
-@@ -33,12 +35,20 @@ char *cmdname;
+@@ -33,12 +35,21 @@ char *cmdname;
  
  /* error handling definitions follow */
  
-+#if defined(__NetBSD__) || defined(__INTERIX)
+-extern int errno, sys_nerr;
 +#include <errno.h>
-+#else
- extern int errno, sys_nerr;
++#include <stdio.h>
++
++#if !defined(__NetBSD__) && !defined(__INTERIX) && !defined(__DragonFly__) && !defined(__FreeBSD__)
++extern int sys_nerr;
  extern char *sys_errlist[];
 +#endif
  
@@ -32,17 +34,17 @@ $NetBSD: patch-af,v 1.5 2005/03/15 03:59:38 tv Exp $
  #define INITERR(s) {(void)strcpy(fbuf, cmdname); (void)strcat(fbuf, ": ");\
  					(void)strcat(fbuf, (s));}
  #define ADDERR(s) (void)strcat(fbuf, (s));
-@@ -59,6 +69,13 @@ char *argv[];
-   while (**argv)
+@@ -60,6 +71,13 @@ char *argv[];
      if (*((*argv)++) == '/')
        cmdname = *argv;               /* find the command's basename */
-+
+ 
 +  if (argc > 1 && !strcmp(argv[1], "-X"))
 +    {
 +      xbitmap++;
 +      argc--;
 +      argv++;
 +    }
- 
++
    if (argc > 3)
      {
+       INITERR("usage: ")

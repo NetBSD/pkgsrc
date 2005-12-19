@@ -1,15 +1,17 @@
-$NetBSD: patch-av,v 1.2 2005/03/15 03:59:38 tv Exp $
+$NetBSD: patch-av,v 1.3 2005/12/19 15:15:47 joerg Exp $
 
---- compface/cmain.c.orig	Wed Oct 23 22:28:07 1991
+--- compface/cmain.c.orig	1991-10-24 02:28:07.000000000 +0000
 +++ compface/cmain.c
-@@ -33,12 +33,20 @@ char *cmdname;
+@@ -33,12 +33,21 @@ char *cmdname;
  
  /* error handling definitions follow */
  
-+#if defined(__NetBSD__) || defined(__INTERIX)
+-extern int errno, sys_nerr;
 +#include <errno.h>
-+#else
- extern int errno, sys_nerr;
++#include <stdio.h>
++
++#if !defined(__NetBSD__) && !defined(__INTERIX) && !defined(__DragonFly__) && !defined(__FreeBSD__)
++extern int sys_nerr;
  extern char *sys_errlist[];
 +#endif
  
