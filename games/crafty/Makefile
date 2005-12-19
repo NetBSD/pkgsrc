@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/12/18 21:11:11 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/19 16:41:39 joerg Exp $
 
 DISTNAME=		crafty-18.15
 CATEGORIES=		games
@@ -40,6 +40,8 @@ BUILD_TARGET=		linux
 .  endif
 .elif !empty(MACHINE_PLATFORM:MSunOS-*-*)
 BUILD_TARGET=		solaris-gcc
+.elif !empty(MACHINE_PLATFORM:MDragonFly-*-i386)
+BUILD_TARGET=		freebsd
 .else
 BUILD_TARGET=		generic
 .endif
