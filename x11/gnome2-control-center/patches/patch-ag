@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1 2005/12/19 00:20:35 rillig Exp $
+
+Keywords: c90
+
+--- capplets/mouse/gnome-mouse-properties.c.orig	Fri Sep 16 14:43:01 2005
++++ capplets/mouse/gnome-mouse-properties.c	Mon Dec 19 01:09:51 2005
+@@ -665,6 +665,7 @@ populate_tree_model(GtkTreeModelSort* mo
+ 
+ 	gchar **iterator = NULL;
+ 	gchar **paths = NULL;
++	const gchar *xpaths;
+ 
+ 	GConfClient* client = gconf_client_get_default();
+ 	GtkListStore* store = GTK_LIST_STORE(gtk_tree_model_sort_get_model(model));
+@@ -673,7 +674,7 @@ populate_tree_model(GtkTreeModelSort* mo
+ 	g_object_unref(client);
+ 	client = NULL;
+ 
+-	const gchar *xpaths = g_getenv ("XCURSOR_PATH");
++	xpaths = g_getenv ("XCURSOR_PATH");
+ 
+ 	if (xpaths != NULL) {
+ 		paths = g_strsplit (xpaths, ":", 0);
