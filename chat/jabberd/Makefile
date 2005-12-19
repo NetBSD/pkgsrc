@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 20:49:53 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/19 18:27:54 joerg Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -65,6 +65,8 @@ pre-configure:
 		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g" \
 		-e "s|@SPOOLDIR@|${JABBERD_SPOOLDIR}|g" \
 		${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/jabberd/pth-1.4.0
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/jabberd/pth-1.4.0
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR} ${LIBDIR} ${INCDIR} ${INCDIR}/lib
