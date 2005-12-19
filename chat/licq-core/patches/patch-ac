@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2005/12/19 19:38:55 joerg Exp $
+
+--- src/user.cpp.orig	2005-12-19 18:37:05.000000000 +0000
++++ src/user.cpp
+@@ -2544,7 +2544,11 @@ ICQOwner::ICQOwner()
+   m_fConf.ReadBool("HideIP", m_bHideIp, false);
+   m_fConf.ReadNum("RCG", m_nRandomChatGroup, ICQ_RANDOMxCHATxGROUP_NONE);
+   m_fConf.ReadStr("AutoResponse", szTemp, "");
++#if defined(__DragonFly__)
++  { unsigned long tmp; m_fConf.ReadNum("SSTime", tmp, 0L); m_nSSTime = tmp; }
++#else
+   m_fConf.ReadNum("SSTime", (unsigned long)m_nSSTime, 0L);
++#endif
+   m_fConf.ReadNum("SSCount", m_nSSCount, 0);
+   SetAutoResponse(szTemp);
+ 
