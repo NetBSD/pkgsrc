@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2005/12/19 19:38:55 joerg Exp $
+
+--- configure.orig	2003-03-23 22:21:31.000000000 +0000
++++ configure
+@@ -4244,6 +4244,12 @@ case "$host" in
+ 		CXXFLAGS="$CXXFLAGS -pthread"
+ 		echo "Setting FreeBSD compilation options"
+ 		;;
++	*-*-dragonfly*)
++		CFLAGS="$CFLAGS -pthread"
++		CPPFLAGS="$CPPFLAGS -D_THREAD_SAFE"
++		CXXFLAGS="$CXXFLAGS -pthread"
++		echo "Setting DragonFly compilation options"
++		;;
+ 	*-*-solaris*)
+ 		CPPFLAGS="$CPPFLAGS -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS -DUSE_SOLARIS -DPIC -fPIC"
+ 		LDFLAGS="$LDFLAGS -mimpure-text"
