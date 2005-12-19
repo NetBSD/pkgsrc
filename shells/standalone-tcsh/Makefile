@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/19 14:12:31 abs Exp $
 #
 
 NO_MTREE=		YES
@@ -13,8 +13,6 @@ PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
 COMMENT:=		Standalone version of the Extended C-shell
 MAINTAINER=		agc@NetBSD.org
 
-PKG_INFO:=		${PKG_INFO}
-PKG_CREATE:=		${PKG_CREATE}
 PREFIX=			/
 NLSDIR=			usr/share/nls
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
