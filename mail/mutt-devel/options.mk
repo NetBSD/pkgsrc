@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2005/12/05 23:55:11 rillig Exp $
+# $NetBSD: options.mk,v 1.12 2005/12/20 17:23:11 tonio Exp $
 
 # Global and legacy options
 
@@ -44,17 +44,16 @@ CONFIGURE_ARGS+=	--without-ssl
 ### Header cache
 ###
 .if !empty(PKG_OPTIONS:Mmutt-hcache)
-BDB_ACCEPTED=		db4
-.  include "../../mk/bdb.buildlink3.mk"
+.  include "../../databases/db4/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hcache
 CONFIGURE_ARGS+=	--without-gdbm
 #
 # BDB_INCLUDE_DIR_ and BDB_LIB_DIR don't have to be particularly accurate
 # since the real -I and -L flags are added by buildlink already.
 #
-CONFIGURE_ENV+=		BDB_INCLUDE_DIR=${BDBBASE}/include
-CONFIGURE_ENV+=		BDB_LIB_DIR=${BDBBASE}/lib
-CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//}
+CONFIGURE_ENV+=		BDB_INCLUDE_DIR=${BUILDLINK_PREFIX.db4}/include
+CONFIGURE_ENV+=		BDB_LIB_DIR=${BUILDLINK_PREFIX.db4}/lib
+CONFIGURE_ENV+=		BDB_LIB=${BUILDLINK_LDADD.db4:S/^-l//}
 .else
 CONFIGURE_ARGS+=	--disable-hcache
 .endif
