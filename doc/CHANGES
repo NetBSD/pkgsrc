@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12208 2005/12/19 16:05:50 joerg Exp $
+$NetBSD: CHANGES,v 1.12209 2005/12/20 10:19:54 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5758,3 +5758,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated multimedia/moz-bin-flash to 7.0.61 [salo 2005-12-19]
 	Removed math/R-VR [markd 2005-12-19]
 	Updated print/cups to 1.1.23nb5 [joerg 2005-12-19]
+	Updated comms/fidogate to 4.4.10nb1 [rillig 2005-12-20]
