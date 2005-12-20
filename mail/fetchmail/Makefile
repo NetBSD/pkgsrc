@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.154 2005/10/21 20:56:50 tonio Exp $
+# $NetBSD: Makefile,v 1.155 2005/12/20 14:27:53 frueauf Exp $
 
-DISTNAME=	fetchmail-6.2.5
-PKGREVISION=	6
+DISTNAME=	fetchmail-6.2.5.5
 CATEGORIES=	mail
-MASTER_SITES=	http://www.catb.org/~esr/fetchmail/ \
-		http://sunsite.unc.edu/pub/Linux/system/mail/pop/
+MASTER_SITES=	http://download.berlios.de/fetchmail/
 
 MAINTAINER=	frueauf@NetBSD.org
-HOMEPAGE=	http://catb.org/~esr/fetchmail/
+HOMEPAGE=	http://fetchmail.berlios.de/
 COMMENT=	Batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
