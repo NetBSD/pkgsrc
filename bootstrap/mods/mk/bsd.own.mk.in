@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk.in,v 1.3 2004/04/07 12:05:38 jmmv Exp $
+#	$NetBSD: bsd.own.mk.in,v 1.4 2005/12/20 16:15:37 joerg Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -245,11 +245,7 @@ MKPICINSTALL=no
 MKPROFILE=no
 .endif
 
-.if defined(NOLINT)
-MKLINT=no
-.else
-MKLINT?=yes
-.endif
+MKLINT?=no
 
 .if defined(NOMAN)
 MKMAN=no
