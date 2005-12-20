@@ -1,0 +1,17 @@
+$NetBSD: patch-db,v 1.3 2005/12/20 19:58:04 rillig Exp $
+
+For some reason, g++-2.95 on NetBSD 1.6.2/i386 did not accept the ==
+operator here. The QT documentation says that using QString::compare is
+equivalent.
+
+--- khtml/rendering/font.h.orig	Mon Oct 10 17:06:06 2005
++++ khtml/rendering/font.h	Tue Dec 20 20:24:55 2005
+@@ -43,7 +43,7 @@ public:
+     FontDef()
+         : size( 0 ), italic( false ), smallCaps( false ), weight( 50 ), hasNbsp( true ) {}
+     bool operator == ( const FontDef &other ) const {
+-        return ( family == other.family &&
++        return ( QString::compare(family, other.family) == 0 &&
+                  size == other.size &&
+                  italic == other.italic &&
+                  smallCaps == other.smallCaps &&
