@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12211 2005/12/20 16:15:13 ghen Exp $
+$NetBSD: CHANGES,v 1.12212 2005/12/20 16:44:39 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5762,3 +5762,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/fetchmail to 6.2.5.5 [frueauf 2005-12-20]
 	Updated mail/fetchmailconf to 6.2.5.5 [frueauf 2005-12-20]
 	Updated print/xpdf to 3.01pl1nb3 [ghen 2005-12-20]
+	Updated multimedia/mjpegtools to 1.6.2nb7 [ghen 2005-12-13]
+	Updated geography/gpsdrive to 1.31nb8 [ghen 2005-12-13]
