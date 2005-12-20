@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2005/12/20 16:32:16 joerg Exp $
+
+--- src/pop3.c.orig	2005-12-20 16:25:21.000000000 +0000
++++ src/pop3.c
+@@ -34,7 +34,6 @@
+ #include <strings.h>
+ #include <ctype.h>
+ #include <errno.h>
+-extern int errno;
+ 
+ #ifdef USE_GSASL
+ #include <gsasl.h>
