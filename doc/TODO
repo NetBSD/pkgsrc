@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4287 2005/12/19 23:02:40 wiz Exp $
+$NetBSD: TODO,v 1.4288 2005/12/20 17:22:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -528,7 +528,7 @@ Suggested package updates
 	o fakeroot-1.5.4
 	o fd-2.07b
 	o fdgw-20040609
-	o fetchmail-6.3.0
+	o fetchmail-6.3.1
 	o fhist-1.14
 	o file-4.15
 	o findutils-4.2.27
@@ -725,7 +725,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libssh-0.11 [test security/hydra after update]
 	o libtcl-nothread-8.4.9
-	o libtool-1.5.20
+	o libtool-1.5.22
 	o libtorrent-0.7.6
 	o libwpd-0.8.3
 	o licq-core-1.3.0
@@ -1299,7 +1299,6 @@ Suggested package updates
 	o xboard-4.2.7
 	o xcb-2.4
 	o xchat-2.6.0
-	o xchat-gnome-0.7
 	o xcircuit-3.4.0
 	o xdaliclock-2.20
 	o xdesktopwaves-1.3
