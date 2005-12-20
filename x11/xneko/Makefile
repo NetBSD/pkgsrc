@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:03:33 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/20 20:55:08 rillig Exp $
 
 DISTNAME=	xneko
 PKGNAME=	xneko-4.4
@@ -19,6 +19,9 @@ PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
 .include "../../mk/x11.buildlink3.mk"
+
+MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
+MAKE_ENV+=	MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
