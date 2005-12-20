@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2005/12/20 16:32:16 joerg Exp $
+
+--- src/mpop.c.orig	2005-12-20 16:23:42.000000000 +0000
++++ src/mpop.c
+@@ -32,7 +32,6 @@
+ #include <string.h>
+ #include <ctype.h>
+ #include <errno.h>
+-extern int errno;
+ #include <time.h>
+ #include <getopt.h>
+ extern char *optarg;

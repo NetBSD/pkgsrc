@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2005/12/20 16:32:16 joerg Exp $
+
+--- src/tls.c.orig	2005-12-20 16:27:32.000000000 +0000
++++ src/tls.c
+@@ -33,7 +33,6 @@
+ #include <limits.h>
+ #include <time.h>
+ #include <errno.h>
+-extern int errno;
+ 
+ #ifdef HAVE_GNUTLS
+ #include <gnutls/gnutls.h>
