@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12210 2005/12/20 14:31:30 frueauf Exp $
+$NetBSD: CHANGES,v 1.12211 2005/12/20 16:15:13 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5761,3 +5761,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated comms/fidogate to 4.4.10nb1 [rillig 2005-12-20]
 	Updated mail/fetchmail to 6.2.5.5 [frueauf 2005-12-20]
 	Updated mail/fetchmailconf to 6.2.5.5 [frueauf 2005-12-20]
+	Updated print/xpdf to 3.01pl1nb3 [ghen 2005-12-20]
