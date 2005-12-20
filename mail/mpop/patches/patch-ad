@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2005/12/20 16:32:16 joerg Exp $
+
+--- src/os_env.c.orig	2005-12-20 16:24:52.000000000 +0000
++++ src/os_env.c
+@@ -29,7 +29,6 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <errno.h>
+-extern int errno;
+ #include <fcntl.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>

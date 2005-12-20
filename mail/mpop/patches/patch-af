@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2005/12/20 16:32:16 joerg Exp $
+
+--- src/uidls.c.orig	2005-12-20 16:26:58.000000000 +0000
++++ src/uidls.c
+@@ -30,7 +30,6 @@
+ #include <limits.h>
+ #include <string.h>
+ #include <errno.h>
+-extern int errno;
+ 
+ #include "gettext.h"
+ #include "xalloc.h"
