@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.65 2005/11/01 19:17:41 adrianp Exp $
+# $NetBSD: Makefile,v 1.66 2005/12/20 14:29:18 frueauf Exp $
 
-DISTNAME=	fetchmail-6.2.5
+DISTNAME=	fetchmail-6.2.5.5
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
-PKGREVISION=	3
 CATEGORIES=	mail
-MASTER_SITES=	http://www.catb.org/~esr/fetchmail/ \
-		http://sunsite.unc.edu/pub/Linux/system/mail/pop/
+MASTER_SITES=	http://download.berlios.de/fetchmail/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://catb.org/~esr/fetchmail/
+HOMEPAGE=	http://fetchmail.berlios.de/
 COMMENT=	Configuration tool for fetchmail
 
 DEPENDS+=	${DISTNAME}{,nb*}:../../mail/fetchmail
