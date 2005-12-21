@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2005/12/17 05:20:21 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2005/12/21 03:54:23 jlam Exp $
 
 DISTNAME=	openldap-2.3.11
 PKGREVISION=	1
@@ -93,6 +93,18 @@ PTHREAD_OPTS+=		require
 CONFIGURE_ARGS+=	--with-threads
 .elif ${PTHREAD_TYPE} == "pth"
 CONFIGURE_ARGS+=	--with-threads=pth
+#
+# Don't use a larger FD_SETSIZE than GNU Pth can handle (value taken from
+# pth.h header).
+#
+PTH_FDSETSIZE_cmd=	\
+	if ${TEST} -f ${BUILDLINK_PREFIX.pth:Q}/include/pth.h; then	\
+		${AWK} '/if FD_SETSIZE >/ { print $$4 }'		\
+			${BUILDLINK_PREFIX.pth}/include/pth.h;		\
+	else								\
+		${ECHO} 0;						\
+	fi
+CPPFLAGS+=		-DOPENLDAP_FD_SETSIZE=${PTH_FDSETSIZE_cmd:sh:Q}
 .endif
 RCD_SCRIPTS+=		slurpd
 
