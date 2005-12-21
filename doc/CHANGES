@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12216 2005/12/21 06:14:58 adrianp Exp $
+$NetBSD: CHANGES,v 1.12217 2005/12/21 10:48:37 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5767,3 +5767,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/latex2html to 2002.2.1nb5 [rillig 2005-12-20]
 	Updated mail/turba to 2.0.5 [adrianp 2005-12-20]
 	Updated devel/mantis to 1.0.0rc4 [adrianp 2005-12-20]
+	Updated www/horde3 to 3.0.9 [adrianp 2005-12-21]
