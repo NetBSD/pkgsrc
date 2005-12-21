@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2005/10/04 09:55:05 adam Exp $
+# $NetBSD: Makefile,v 1.93 2005/12/21 22:04:59 reed Exp $
 
 .include "Makefile.common"
 PKGNAME=	abiword-${ABIWORD_VERSION}
+PKGREVISION=	1
 COMMENT=	Open Source cross-platform word processor
 
 # GTK1 version and previous name of the GTK2 version
@@ -31,14 +32,25 @@ CONFIGURE_ARGS+=	--disable-Cocoa
 CONFIGURE_ARGS+=	--enable-threads --with-libxml2
 CONFIGURE_ARGS+=	--with-libjpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+
 USE_GNU_ICONV=		yes
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+post-build:
+	cd ${WRKDIR}/${DISTNAME}/abiword-docs/ && env \
+		ABI_DOC_DEST=${WRKDIR} \
+		ABI_DOC_PROG=${WRKSRC}/src/wp/main/unix/AbiWord-2.4 \
+		./make-html.sh
+	${FIND} ${WRKDIR}/help -type d -exec ${CHMOD} ${PKGDIRMODE} "{}" \;
+	${FIND} ${WRKDIR}/help \( -name "*.abw.orig" -or -name "*.abw"	\
+		-or -name "*.info" -or -name "*.xhtml" \) -exec ${RM} "{}" \;
 
 post-install:
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.1 \
-		${PREFIX}/man/man1/abiword.1
-	cd ${WRKDIR}/${DISTNAME}/abiword-docs/ && env \
-		ABI_DOC_DEST=${PREFIX}/share/AbiSuite-2.4/AbiWord \
-		ABI_DOC_PROG=AbiWord-2.4 ./make-html.sh
+		${PREFIX}/${PKGMANDIR}/man1/abiword.1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/AbiSuite-2.4/AbiWord
+	${CP} -R ${WRKDIR}/help ${PREFIX}/share/AbiSuite-2.4/AbiWord/
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
