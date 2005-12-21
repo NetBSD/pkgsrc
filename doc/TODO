@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4288 2005/12/20 17:22:32 wiz Exp $
+$NetBSD: TODO,v 1.4289 2005/12/21 04:41:13 ben Exp $
 
 Suggested new packages
 ======================
@@ -623,7 +623,7 @@ Suggested package updates
 	o hobbitmon-4.0.4 [pkg/30484]
 	o horde3-3.0.9
 	o hot-babe-0.2.2
-	o hpijs-2.1.4
+	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b4
 	o html2wml-0.4.11
 	o htmldoc-1.8.24
