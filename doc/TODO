@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4289 2005/12/21 04:41:13 ben Exp $
+$NetBSD: TODO,v 1.4290 2005/12/21 14:29:42 ghen Exp $
 
 Suggested new packages
 ======================
@@ -991,6 +991,7 @@ Suggested package updates
 	o pear-Net_SMTP-1.2.7
 	o pear-Net_Socket-1.0.6
 	o pear-SOAP-0.9.1
+	o pearpc-0.4
 	o pfqueue-0.5.0
 	o pfstat-1.8
 	o pgpool-2.6.3
