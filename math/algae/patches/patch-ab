@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2003/07/02 20:32:02 jtb Exp $
+$NetBSD: patch-ab,v 1.4 2005/12/21 17:56:10 joerg Exp $
 
 --- configure.orig
 +++ configure
@@ -69,7 +69,7 @@ $NetBSD: patch-ab,v 1.3 2003/07/02 20:32:02 jtb Exp $
  
  cat >> confdefs.h <<\EOF
 -#if linux
-+#if linux || defined(__NetBSD__)
++#if linux || defined(__NetBSD__) || defined(__DragonFly__)
  void MAIN__ (void) {abort();}
  #endif
  EOF
