@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.143 2005/12/09 20:32:22 wiz Exp $
+# $NetBSD: replace.mk,v 1.144 2005/12/22 14:49:10 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -414,28 +414,6 @@ TOOLS_CREATE+=			gzip
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gzip=gzip-base
 TOOLS_PATH.gzip=		${TOOLS_PREFIX.gzip}/bin/gzip
 TOOLS_ARGS.gzip=		-nf ${GZIP}
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.imake) && !empty(_USE_TOOLS:Mimake)
-.  if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
-MAKEFLAGS+=			TOOLS_IGNORE.imake=
-.  elif !empty(_TOOLS_USE_PKGSRC.imake:M[yY][eE][sS])
-TOOLS_CREATE+=			imake
-.    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.imake?=		XFree86-imake>=4.4.0:../../x11/XFree86-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.imake=imake
-TOOLS_PATH.imake=		${TOOLS_PREFIX.imake}/${X11ROOT_PREFIX}/bin/imake
-.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.imake?=		xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.imake=xorg-imake
-TOOLS_PATH.imake=		${TOOLS_PREFIX.imake}/${X11ROOT_PREFIX}/bin/imake
-# !empty(X11_TYPE:Mnative)
-.    elif defined(IMAKE)
-TOOLS_PATH.imake=		${IMAKE}
-.    else
-TOOLS_PATH.imake=		${X11BASE}/bin/imake
-.    endif
 .  endif
 .endif
 
@@ -916,6 +894,35 @@ TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-clients
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
 .      else # !empty(X11_TYPE:Mnative)
 TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
+.      endif
+.    endif
+.  endif
+.endfor
+
+######################################################################
+
+# These tools are all supplied by an X11 imake package if there is no
+# native tool available.
+#
+_TOOLS.x11-imake=	imake mkdirhier
+
+.for _t_ in ${_TOOLS.x11-imake}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_CREATE+=			${_t}
+.      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+TOOLS_DEPENDS.${_t_}?=		XFree86-imake>=4.4.0:../../x11/XFree86-imake
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=imake
+TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+.      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
+TOOLS_DEPENDS.${_t_}?=		xorg-imake>=6.8:../../x11/xorg-imake
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=xorg-imake
+TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+# !empty(X11_TYPE:Mnative)
+.      else
+TOOLS_PATH.${_t_}=		${X11BASE}/bin/${_t_}
 .      endif
 .    endif
 .  endif
