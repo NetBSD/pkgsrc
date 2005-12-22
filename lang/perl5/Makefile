@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2005/12/18 15:25:29 jlam Exp $
+# $NetBSD: Makefile,v 1.109 2005/12/22 15:23:17 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
-PKGREVISION=	5
+PKGREVISION=	6
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -196,11 +196,6 @@ LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
 LOCLIBRPATHFLAGS=	# empty
 .endif
 
-PERL5_HINTS_LDFLAGS=	# empty
-PERL5_HINTS_LDDLFLAGS=	# empty
-
-PERL5_HINTS_LDFLAGS+=	${LOCLIBRPATHFLAGS}
-
 .include "../../mk/dlopen.buildlink3.mk"
 
 CHECK_BUILTIN.pthread:=	yes
@@ -237,8 +232,6 @@ PKG_SUGGESTED_OPTIONS=		threads
 .  include "../../mk/pthread.buildlink3.mk"
 CONFIGURE_ARGS+=	-Duseithreads
 CFLAGS+=		${PTHREAD_CFLAGS}
-PERL5_HINTS_LDFLAGS+=	${PTHREAD_LDFLAGS}
-PERL5_HINTS_LDDLFLAGS+=	${PTHREAD_LDFLAGS}
 LIBSWANTED+=		${PTHREAD_LIBS:M-l*:S/^-l//}
 .else
 CONFIGURE_ARGS+=	-Uuseithreads
@@ -271,19 +264,43 @@ SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
 #
+# - Add the pkgsrc-derived LDFLAGS for linking against pthreads to the
+#   usethreads.cbu call-back script.
+#
+# - Generate a pkgsrc.cbu call-back script that sets the correct LDFLAGS
+#   for linking against pkgsrc-installed libraries.
+#
 # - Explicitly set the local compiler search paths to contain only the
 #   pkgsrc-controlled directories.
+#
+# - Perl has no dependencies, so force library searches to start in the
+#   system directories instead of in the pkgsrc-controlled directories.
+#   XXX
+#   XXX This breaks building perl on a platform that has native pthreads
+#   XXX with PREFER_NATIVE_PTHREADS=no, but that's not really worthwhile
+#   XXX to fix.
 #
 pre-configure:
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
 		${CHMOD} +w $${hints};					\
 		{ ${ECHO} "";						\
+		  ${ECHO} "cat >> UU/usethreads.cbu <<'EOCBU'";		\
+		  ${ECHO} "";						\
+		  ${ECHO} "# Add pkgsrc-derived ldflags to link with thread support."; \
+		  ${ECHO} 'ldflags="'${PTHREAD_LDFLAGS:Q}' $$ldflags"';	\
+		  ${ECHO} 'lddlflags="'${PTHREAD_LDFLAGS:Q}' $$lddlflags"'; \
+		  ${ECHO} "EOCBU";					\
+		} >> $${hints};						\
+	done
+	hintdir="${WRKSRC}/hints";					\
+	for hints in $${hintdir}/*.sh; do				\
+		{ ${ECHO} "";						\
 		  ${ECHO} "cat > UU/pkgsrc.cbu <<'EOCBU'";		\
 		  ${ECHO} "# This script UU/pkgsrc.cbu will get 'called-back' by Configure to set"; \
 		  ${ECHO} '# linker options after all other call-back scripts have been invoked.'; \
-		  ${ECHO} 'ldflags="${PERL5_HINTS_LDFLAGS} $$ldflags"';	\
-		  ${ECHO} 'lddlflags="${PERL5_HINTS_LDFLAGS} $$lddlflags"'; \
+		  ${ECHO} 'ldflags="'${LOCLIBRPATHFLAGS:Q}' $$ldflags"'; \
+		  ${ECHO} 'lddlflags="'${LOCLIBRPATHFLAGS:Q}' $$lddlflags"'; \
 		  ${ECHO} "EOCBU";					\
 		} >> $${hints};						\
 	done
@@ -291,16 +308,20 @@ pre-configure:
 	for hints in $${hintdir}/*.sh; do				\
 		{ ${ECHO} "";						\
 		  ${ECHO} "# Set pkgsrc defaults for library and header search paths."; \
-		  ${ECHO} 'locincpth="${LOCINCPATH}"';			\
-		  ${ECHO} 'loclibpth="${LOCLIBPATH}"';			\
+		  ${ECHO} 'locincpth="'${LOCINCPATH:Q}'"';		\
+		  ${ECHO} 'loclibpth="'${LOCLIBPATH:Q}'"';		\
 		} >> $${hints};						\
 	done
 .if !empty(SYSLIBPATH)
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
-		{ ${ECHO} "glibpth='${SYSLIBPATH}'"; } >> $${hints};	\
+		${ECHO} 'glibpth="'${SYSLIBPATH:Q}'"' >> $${hints};	\
 	done
 .endif
+	hintdir="${WRKSRC}/hints";					\
+	for hints in $${hintdir}/*.sh; do				\
+		${ECHO} 'libpth="$$glibpth $$loclibpth"' >> $${hints};	\
+	done
 
 INSTALLATION_DIRS=	bin man/man1
 PERL5_PACKLIST_DIR_cmd=	eval `${PERL5} -V:installarchlib 2>/dev/null`;	\
