@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.144 2005/12/22 14:49:10 joerg Exp $
+# $NetBSD: replace.mk,v 1.145 2005/12/22 18:55:41 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -741,6 +741,13 @@ TOOLS_CREATE+=			yacc
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.yacc=bison
 TOOLS_PATH.yacc=		${TOOLS_PREFIX.yacc}/bin/bison
 TOOLS_ARGS.yacc=		-y
+#
+# bison/yacc is typically a build tool whose path is not embedded in
+# any scripts or config files.  In this case, pass the full command
+# line (path and arguments) of the tool to the GNU configure script
+# so that bison will be correctly invoked in yacc-compatilility mode.
+#
+TOOLS_VALUE_GNU.yacc=		${TOOLS_CMDLINE.yacc}
 .  endif
 .endif
 
