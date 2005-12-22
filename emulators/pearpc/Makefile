@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2005/12/11 09:40:39 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2005/12/22 19:27:36 ghen Exp $
 
-DISTNAME=		pearpc-0.3.1
-PKGREVISION=		2
+DISTNAME=		pearpc-0.4
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pearpc/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://pearpc.sourceforge.net/
 COMMENT=		PowerPC emulator
 
@@ -45,17 +43,7 @@ SUBST_FILES.conf=	ppccfg.example
 SUBST_SED.conf=		-e "s|\"nvram\"|\"/tmp/nvram\"|"
 SUBST_MESSAGE.conf=	"Fixing configuration file."
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.pearpc
-PKG_SUPPORTED_OPTIONS=	sdl
-
-.include "../../mk/bsd.options.mk"
-
-.if empty(PKG_OPTIONS:Msdl)
-CONFIGURE_ARGS+=	--enable-ui=x11
-.else
-CONFIGURE_ARGS+=	--enable-ui=sdl
-.  include "../../devel/SDL/buildlink3.mk"
-.endif
+.include "options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
