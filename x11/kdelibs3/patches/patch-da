@@ -1,9 +1,9 @@
-$NetBSD: patch-da,v 1.3 2005/12/20 19:58:04 rillig Exp $
+$NetBSD: patch-da,v 1.4 2005/12/22 14:31:08 joerg Exp $
 
 NetBSD 1.6.2 does not know ENOTSUP.
 
---- kioslave/file/file.cpp.orig	Tue Dec 20 12:15:37 2005
-+++ kioslave/file/file.cpp	Tue Dec 20 19:09:58 2005
+--- kioslave/file/file.cc.orig	Tue Dec 20 12:15:37 2005
++++ kioslave/file/file.cc	Tue Dec 20 19:09:58 2005
 @@ -193,9 +193,11 @@ void FileProtocol::chmod( const KURL& ur
              case EACCES:
                  error( KIO::ERR_ACCESS_DENIED, url.path() );
