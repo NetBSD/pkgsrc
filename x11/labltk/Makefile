@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/14 21:00:41 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/22 23:23:17 joerg Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 
@@ -10,7 +10,7 @@ COMMENT=		Tk bindings for ocaml
 CONFIGURE_ARGS+=	-x11include ${X11BASE}/include
 CONFIGURE_ARGS+=	-x11lib ${X11BASE}/lib
 CONFIGURE_ARGS+=	-tkdefs "-I${BUILDLINK_PREFIX.tk}/include  -I${BUILDLINK_PREFIX.tcl}/include"
-CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LIBS $$TCL_LIBS'`"
+CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LD_FLAGS $$TCL_LD_FLAGS $$TK_LIBS $$TCL_LIBS'`"
 
 BUILD_TARGET=		world
 INSTALL_DIRS=		${WRKSRC}/otherlibs/labltk
