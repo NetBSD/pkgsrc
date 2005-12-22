@@ -1,4 +1,4 @@
-$NetBSD: patch-bh,v 1.1 2004/04/22 09:18:43 tron Exp $
+$NetBSD: patch-bh,v 1.2 2005/12/22 14:37:17 joerg Exp $
 
 --- otherlibs/labltk/lib/Makefile.orig	Fri Aug  9 02:46:30 2002
 +++ otherlibs/labltk/lib/Makefile	Thu Apr 22 10:34:37 2004
@@ -15,7 +15,7 @@ $NetBSD: patch-bh,v 1.1 2004/04/22 09:18:43 tron Exp $
 -	chmod 755 $(BINDIR)/$(LIBNAME)
 +	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALLDIR); fi
 +	${BSD_INSTALL_DATA} $(LIBNAME).cma $(INSTALLDIR)
-+	${BSD_INSTALL_PROGRAM} $(LIBNAME)top$(EXE) $(INSTALLDIR)
++	${BSD_INSTALL_SCRIPT} $(LIBNAME)top$(EXE) $(INSTALLDIR)
 +	@if test -d $(BINDIR); then : ; else ${BSD_INSTALL_PROGRAM_DIR} $(BINDIR); fi
 +	${BSD_INSTALL_SCRIPT} $(LIBNAME) $(BINDIR)
  
