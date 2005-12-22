@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12218 2005/12/22 14:38:32 joerg Exp $
+$NetBSD: CHANGES,v 1.12219 2005/12/22 19:31:48 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5769,3 +5769,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/mantis to 1.0.0rc4 [adrianp 2005-12-20]
 	Updated www/horde3 to 3.0.9 [adrianp 2005-12-21]
 	Updated lang/ocaml to 3.08.4nb1 [joerg 2005-12-22]
+	Updated ghen/pearpc to 0.4 [ghen 2005-12-22]
