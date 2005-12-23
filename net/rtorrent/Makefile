@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/24 08:41:59 adam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/23 23:03:31 heinz Exp $
 
 DISTNAME=	rtorrent-0.3.5
 CATEGORIES=	net
@@ -12,6 +12,7 @@ USE_LIBTOOL=		yes
 USE_NCURSES=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+GCC_REQD+=		3.3
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rtorrent
