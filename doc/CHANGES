@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12223 2005/12/23 00:38:12 reed Exp $
+$NetBSD: CHANGES,v 1.12224 2005/12/23 13:42:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed lang/python24-pth [joerg 2005-12-22]
 	Updated www/firefox to 1.5nb1 [joerg 2005-12-23]
 	Updated www/firefox-gtk1 to 1.5nb1 [joerg 2005-12-23]
+	Updated wm/fluxbox to 0.9.14nb3 [jmmv 2005-12-23]
