@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4293 2005/12/22 23:44:15 wiz Exp $
+$NetBSD: TODO,v 1.4294 2005/12/23 16:29:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,7 @@ Suggested package updates
 	o asc-1.16.2
 	o aspell-0.60.4
 	o aspell-danish-1.4.49
-	o aspell-faroese-0.2.22
+	o aspell-faroese-0.2.24
 	o aspell-ukrainian-1.1
 	o ast-ksh-20040229
 	o asterisk-1.2.0
@@ -395,6 +395,7 @@ Suggested package updates
 	o bittorrent-4.2.2
 	o bittorrent-gui-4.2.2
 	o blackbox-0.70
+	o blender-2.40
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o boaconstructor-0.4.4
@@ -629,14 +630,13 @@ Suggested package updates
 	o html2ps-1.0b4
 	o html2wml-0.4.11
 	o htmldoc-1.8.24
-	o htmllint-20050424 [pkg/30181]
 	o http_load-20050629
 	o httperf-0.8
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
 	o hydra-5.0
 	o hydrogen-0.9.2
-	o hyperestraier-1.1.2
+	o hyperestraier-1.1.2 [pkg/32365]
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -836,11 +836,13 @@ Suggested package updates
 	o opencobol-0.31
 	o openh323-1.17.2
 	o openldap-2.3.13
+	o openoffice-2.0.1
+	o openoffice-bin-2.0.1
 	o openpam-20050616
 	o openssl-0.9.8a
 	o oroborus-2.0.15
 	o osh-050219
-	o oss-3.99.3c
+	o oss-3.99.3d
 	o otpCalc-0.97
 	o p11-2.10c
 	o p5-Apache-ASP-2.59
@@ -1081,6 +1083,7 @@ Suggested package updates
 	o qDecoder-7.1.1
 	o qbrew-0.3.5
 	o qcad-2.0.4.0 [pkgsrc-wip]
+	o qdbm-1.8.36 [pkg/32364]
 	o qemu-0.8.0
 	o qt1-1.45
 	o qt2-designer-2.3.2
@@ -1158,7 +1161,7 @@ Suggested package updates
 	o siag-3.6.0
 	o sign-1.0.7
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
-	o silc-toolkit-1.0.1
+	o silc-toolkit-1.0.2
 	o simh-3.5.0
 	o sipsak-0.9.5
 	o sitecopy-0.16.1
@@ -1291,7 +1294,7 @@ Suggested package updates
 	o weechat-0.1.6
 	o weewm-0.01
 	o winbind-3.0.13
-	o wine-0.9.3
+	o wine-0.9.4
 	o wmctrl-1.07
 	o wmweather-2.4.3
 	o wv-1.2.0
