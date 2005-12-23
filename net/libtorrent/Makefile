@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/24 08:41:11 adam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/23 22:51:37 heinz Exp $
 
 DISTNAME=	libtorrent-0.7.5
 CATEGORIES=	net
@@ -13,6 +13,7 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+GCC_REQD+=		3.3
 
 .include "../../devel/libsigc++2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
