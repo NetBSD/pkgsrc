@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2005/12/23 16:19:12 wiz Exp $
+
+--- various/util/src/pseudo.c.orig	2003-04-28 02:04:04.000000000 +0200
++++ various/util/src/pseudo.c
+@@ -327,6 +327,7 @@ int pty_open(int *masterfd, int *slavefd
+ 
+ #ifndef HAVE_CYGWIN 
+ #ifndef HAVE_LINUX /* linux does not use the streams module */
++#ifdef I_PUSH
+ 	/*
+ 	 * Push the appropriate streams modules, as described in Solaris pts(7).
+ 	 * HP-UX pts(7) doesn't have ttcompat module.
+@@ -355,6 +356,7 @@ int pty_open(int *masterfd, int *slavefd
+ #endif
+ #endif
+ #endif
++#endif
+ 
+ #else /* HAVE_DEV_PTMX */
+ #ifdef HAVE_DEV_PTS_AND_PTC
