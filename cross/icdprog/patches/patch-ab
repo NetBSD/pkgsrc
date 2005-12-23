@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.1 2003/06/25 15:12:17 tsarna Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/23 18:21:40 joerg Exp $
 
---- icd.c.orig	Sat Jun 21 17:05:22 2003
-+++ icd.c	Sat Jun 21 17:30:45 2003
-@@ -278,7 +278,7 @@
+--- icd.c.orig	2001-03-29 10:29:01.000000000 +0000
++++ icd.c
+@@ -12,6 +12,10 @@
+ 
+ #define BAUDRATE B57600
+ 
++#if defined(__DragonFly__) && !defined(O_SYNC)
++#define O_SYNC O_FSYNC
++#endif
++
+ int icd_fd;  /* file descriptor for serial port */
+ int controller_type=-1;
+ 
+@@ -278,7 +282,7 @@ int icd_init(char *port)
  {
  	struct termios oldtio, newtio;
  
@@ -11,7 +22,7 @@ $NetBSD: patch-ab,v 1.1 2003/06/25 15:12:17 tsarna Exp $
  		perror("Error opening device:");
  		return -1;
  	}
-@@ -286,10 +286,11 @@
+@@ -286,10 +290,11 @@ int icd_init(char *port)
  	tcgetattr(icd_fd, &oldtio);
  
  	memset(&newtio,0, sizeof(newtio));
@@ -24,7 +35,7 @@ $NetBSD: patch-ab,v 1.1 2003/06/25 15:12:17 tsarna Exp $
  
  	newtio.c_cc[VTIME] = 20;
          newtio.c_cc[VMIN] = 0;
-@@ -297,6 +298,8 @@
+@@ -297,6 +302,8 @@ int icd_init(char *port)
  	tcflush(icd_fd, TCIFLUSH);
  	tcsetattr(icd_fd, TCSANOW, &newtio);
  
