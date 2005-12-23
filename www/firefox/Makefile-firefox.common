@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.24 2005/12/10 13:47:22 taya Exp $
+# $NetBSD: Makefile-firefox.common,v 1.25 2005/12/23 00:29:57 joerg Exp $
 
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	1.5
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--enable-canvas
 
 MOZILLA_EXTENSIONS=	default
 CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS:Q}
+CONFIGURE_ENV+=	ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 
 USE_LANGUAGES+=		c++
 BUILD_SVG=		# defined
