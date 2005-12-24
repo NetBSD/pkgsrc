@@ -1280,7 +1280,7 @@ PKGSRC_COMPILER:
 
       * mipspro: Silicon Graphics, Inc. MIPSpro (o32)
 
-      * sunpro: Microsystems, Inc. WorkShip/Forte/Sun ONE Studio
+      * sunpro: Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio
 
     The default is "gcc". You can use ccache and/or distcc with an appropriate
     PKGSRC_COMPILER setting, e.g. "ccache gcc". This variable should always be
@@ -5400,6 +5400,11 @@ into PKG_LOCALTEXMFPREFIX, not PKG_TEXMFPREFIX.
  2. If your package installs files into a texmf tree other than the one at
     PKG_LOCALTEXMFPREFIX, set TEXMFDIRS to the list of all texmf trees that
     need database update.
+
+    If your package also installs font map files that need to be registered
+    using updmap, set TEX_FONTMAPS to the list of all such font map files. Then
+    updmap will be run automatically at installation/deinstallation to enable/
+    disable font map files for TeX output drivers.
 
  3. Make sure that none of ls-R databases are included in PLIST, as they will
     be removed only by the teTeX-bin package.
