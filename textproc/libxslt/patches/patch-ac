@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.4 2005/12/24 20:34:55 kim Exp $
+
+--- configure.in.orig	2005-09-05 01:19:44.000000000 +0300
++++ configure.in	2005-12-24 22:32:02.000000000 +0200
+@@ -469,7 +469,7 @@
+ fi
+ 
+ AC_SUBST(WITH_MODULES)
+-AM_CONDITIONAL(WITH_MODULES, test "$WITH_MODULES" == "1")
++AM_CONDITIONAL(WITH_MODULES, test "$WITH_MODULES" = "1")
+ 
+ dnl
+ dnl setup default module path
