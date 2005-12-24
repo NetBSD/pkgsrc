@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/12/24 20:34:55 kim Exp $
+
+--- configure.orig	2005-09-05 01:28:05.000000000 +0300
++++ configure	2005-12-24 22:33:33.000000000 +0200
+@@ -22590,7 +22590,7 @@
+ 
+ 
+ 
+-if test "$WITH_MODULES" == "1"; then
++if test "$WITH_MODULES" = "1"; then
+   WITH_MODULES_TRUE=
+   WITH_MODULES_FALSE='#'
+ else
