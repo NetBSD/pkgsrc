@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4297 2005/12/24 12:54:12 taca Exp $
+$NetBSD: TODO,v 1.4298 2005/12/24 17:19:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -589,6 +589,7 @@ Suggested package updates
 	o gnome-pilot-2.0.13
 	o gnupg-devel-1.9.20
 	o gnustep-1.11.1
+	o gnustep-gui-0.10.2
 	o gnustep-objc-1.4.0
 	o gnutls-1.3.1
 	o gob2-2.0.13
@@ -710,7 +711,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libesmtp-1.0.4
-	o libextractor-0.5.8
+	o libextractor-0.5.9
 	o libflash-0.4.13
 	o libgdiplus-1.1.9.2
 	o libggi-2.2
@@ -733,6 +734,7 @@ Suggested package updates
 	o libtorrent-0.8.1
 	o libwpd-0.8.3
 	o licq-core-1.3.0
+	o liferea-1.0
 	o lilypond-2.6.3
 	o linuxsms-0.77
 	o liquidwar-5.6.3
@@ -947,7 +949,7 @@ Suggested package updates
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
 	o p5-SQL-Abstract-1.20
-	o p5-SVN-Web-0.38
+	o p5-SVN-Web-0.42
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
 	o p5-Scalar-List-Utils-1.18
@@ -1137,7 +1139,7 @@ Suggested package updates
 	o rtorrent-0.4.1
 	o ruby18-1.8.4 [taca]
 	o ruby-cmd-0.8.0
-	o rxvt-unicode-5.9
+	o rxvt-unicode-6.0
 	o sablecc-2.18.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
@@ -1214,7 +1216,7 @@ Suggested package updates
 	o swish-e-2.4.3
 	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
-	o sylpheed-devel-2.1.9
+	o sylpheed-devel-2.2.0beta1
 	o sympa-5.1
 	o sysinfo-4.2.2
 	o tcl-8.4.12
