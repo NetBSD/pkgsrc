@@ -3472,7 +3472,7 @@ alink="#0000FF">
                       </li>
 
                       <li>
-                        <p><code class="varname">sunpro</code>:
+                        <p><code class="varname">sunpro</code>: Sun
                         Microsystems, Inc. WorkShip/Forte/Sun ONE
                         Studio</p>
                       </li>
@@ -14036,6 +14036,18 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                   <code class="varname">TEXMFDIRS</code> to the
                   list of all texmf trees that need database
                   update.</p>
+
+                  <p>If your package also installs font map files
+                  that need to be registered using
+                  <span><strong class=
+                  "command">updmap</strong></span>, set
+                  <code class="varname">TEX_FONTMAPS</code> to the
+                  list of all such font map files. Then
+                  <span><strong class=
+                  "command">updmap</strong></span> will be run
+                  automatically at installation/deinstallation to
+                  enable/disable font map files for TeX output
+                  drivers.</p>
                 </li>
 
                 <li>
