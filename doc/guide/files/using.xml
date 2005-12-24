@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.13 2005/09/15 00:04:59 reed Exp $ -->
+<!-- $NetBSD: using.xml,v 1.14 2005/12/24 10:11:07 kim Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
@@ -281,7 +281,7 @@
               </listitem>
 
               <listitem><para><varname>sunpro</varname>:
-                Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</para>
+                Sun Microsystems, Inc. WorkShip/Forte/Sun ONE Studio</para>
               </listitem>
             </itemizedlist>
 
