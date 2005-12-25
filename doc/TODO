@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4298 2005/12/24 17:19:21 wiz Exp $
+$NetBSD: TODO,v 1.4299 2005/12/25 16:00:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,6 +308,7 @@ Suggested package updates
 	o Chinput-3.0.1
 	o DatLib-2.13
 	o DatUtil-2.25
+	o GConf-2.12.1
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
@@ -482,7 +483,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
-	o dialog-1.0.20051207
+	o dialog-1.0.20051219
 	o diffstat-1.41
 	o digikam-0.8.0
 	o dirac-0.5.4
@@ -539,9 +540,10 @@ Suggested package updates
 	o findutils-4.2.27
 	o flac123-0.0.9
 	o flashplayer-0.4.13
+	o flyspell-1.7k
 	o fmsx-3.0
 	o fondu-040927
-	o fontconfig-2.3.92
+	o fontconfig-2.3.93
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
@@ -609,7 +611,8 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6
 	o gss-0.0.16
-	o gstreamer-0.10.0
+	o gst-plugins-0.10.1
+	o gstreamer-0.10.1
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.6
 	o gtk-systrace-20030623
@@ -840,7 +843,7 @@ Suggested package updates
 	o openal-20050401
 	o opencobol-0.31
 	o openh323-1.17.2
-	o openldap-2.3.13
+	o openldap-2.3.14
 	o openoffice-2.0.1
 	o openoffice-bin-2.0.1
 	o openpam-20050616
@@ -865,6 +868,7 @@ Suggested package updates
 	o p5-CDDB-1.16
 	o p5-CGI-Application-4.04.02
 	o p5-CGI-Minimal-1.24
+	o p5-Class-Autouse-1.22
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03
 	o p5-Compress-Bzip2-2.09
@@ -879,6 +883,7 @@ Suggested package updates
 	o p5-Crypt-Random-1.25
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
+	o p5-DBD-mysql-3.0002
 	o p5-DBD-postgresql-1.32
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-DBIx-SearchBuilder-1.36
@@ -921,6 +926,7 @@ Suggested package updates
 	o p5-Log-Agent-0.307
 	o p5-MARC-1.38
 	o p5-MIME-Base64-3.07
+	o p5-MIME-tools-5.419
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
@@ -1270,7 +1276,7 @@ Suggested package updates
 	o ucarp-1.1 [pkg/29785]
 	o ucblogo-5.5
 	o ucl-1.03
-	o uim-0.5.0.1
+	o uim-1.0.1
 	o unix2dos-1.3
 	o unixodbc-2.2.11
 	o userppp-030706
