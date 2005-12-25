@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/17 19:26:26 markd Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/25 10:23:37 markd Exp $
 
 DISTNAME=	htdig-3.2.0b6
 CATEGORIES=	www databases
@@ -18,6 +18,7 @@ COMMENT=	WWW indexing and searching system
 
 USE_PKGINSTALL=	YES
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	YES
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
@@ -28,7 +29,6 @@ CONFIGURE_ARGS+= --with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 		--with-search-dir=${PREFIX}/share/examples/htdig
 CONFIGURE_ENV+=	PDF_PARSER="${LOCALBASE}/bin/acroread"
 CXXFLAGS+=	-Wno-deprecated
-CPPFLAGS+=	${CXXFLAGS}
 
 INSTALL_EXTRA_TMPL=     ${PKGDIR}/INSTALL
 PKG_SYSCONFSUBDIR=	htdig
