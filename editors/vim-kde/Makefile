@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/09/11 12:07:53 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/26 23:39:31 schmonz Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
@@ -12,6 +12,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.freehackers.org/kvim
 COMMENT=	Vim editor (vi clone) with X11 KDE3 GUI
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 KVIM_VERSION=	6.2.14
 

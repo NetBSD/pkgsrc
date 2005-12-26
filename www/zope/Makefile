@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/17 03:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/26 23:39:35 schmonz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -11,6 +11,9 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.zope.org/
 COMMENT=	Zope, the Z Object Publishing Environment
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DEPENDS+=	py-extclass>=2.2.2:../../lang/py-extclass
 DEPENDS+=	py-dtml>=2.2.2:../../textproc/py-dtml

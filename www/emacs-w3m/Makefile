@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 23:55:22 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/26 23:39:34 schmonz Exp $
 
 DISTNAME=	emacs-w3m-1.3.3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -8,6 +8,9 @@ MASTER_SITES=	${HOMEPAGE}
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Simple w3m interface for Emacs
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DEPENDS+=	{w3m,w3m-img}>=0.3.1:../../www/w3m
 BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/10/18 09:57:00 seb Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/26 23:39:32 schmonz Exp $
 
 DISTNAME=		digikamimageplugins-0.7.4
 CATEGORIES=		graphics kde
@@ -8,6 +8,9 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		seb@NetBSD.org
 HOMEPAGE=		http://digikam.sourceforge.net/
 COMMENT=		Plugins for Digikam's ImageEditor
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake

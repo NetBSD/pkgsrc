@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/10/14 21:47:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.43 2005/12/26 23:39:34 schmonz Exp $
 #
 
 DISTNAME=	epiphany-1.8.2
@@ -9,6 +9,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 BUILD_USES_MSGFMT=	YES
 

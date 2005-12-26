@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:45 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/26 23:39:35 schmonz Exp $
 
 DISTNAME=		xdm3d-1.0
 CATEGORIES=		x11
@@ -7,6 +7,9 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.spade.com/linux/XBanner/
 COMMENT=		Replacement for xdm with 3D effects
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 WRKSRC=			${WRKDIR}/xdm
 NO_INSTALL_MANPAGES=	yes

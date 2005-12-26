@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/26 23:39:30 schmonz Exp $
 #
 
 DISTNAME=	kmess-1.1
@@ -9,6 +9,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmess/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://kmess.sourceforge.net/
 COMMENT=	MSN Messenger Client for KDE3
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 BUILD_USES_MSGFMT=	yes
 

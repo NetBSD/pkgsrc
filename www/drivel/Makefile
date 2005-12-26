@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/23 10:02:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/26 23:39:34 schmonz Exp $
 #
 
 DISTNAME=	drivel-2.0.2
@@ -9,6 +9,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.dropline.net/drivel/
 COMMENT=	LiveJournal client for the GNOME Desktop
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5

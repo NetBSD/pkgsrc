@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/09 20:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/26 23:39:31 schmonz Exp $
 #
 
 DISTNAME=		postgresql-${DIST_VERS}
@@ -17,6 +17,9 @@ DIST_VERS=		7.3.8
 MAINTAINER=		jwise@NetBSD.org
 HOMEPAGE=		http://www.postgresql.org/
 COMMENT=		100% Java JDBC driver for PostgreSQL
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 # No, we don't depend on postgresql.  This code base stands alone.
 BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant

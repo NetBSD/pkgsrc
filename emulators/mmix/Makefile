@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/26 23:39:31 schmonz Exp $
 
 DISTNAME=	mmix-20030622
 PKGREVISION=	1
@@ -8,6 +8,9 @@ MASTER_SITES=	http://www-cs-faculty.stanford.edu/~knuth/programs/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www-cs-faculty.stanford.edu/~knuth/mmix.html
 COMMENT=	Simulators for Knuth's MMIX RISC architecture
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 BUILD_DEPENDS+= cweb-[0-9]*:../../devel/cweb
 

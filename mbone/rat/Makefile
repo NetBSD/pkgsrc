@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/17 03:50:20 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/26 23:39:32 schmonz Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/3.0.28/
 MAINTAINER=	mycroft@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/
 COMMENT=	Robust Audio Tool - multicast audioconferencing
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 CRYPTO=		yes
 USE_TOOLS+=	gmake

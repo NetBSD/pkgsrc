@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/05 23:55:21 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/26 23:39:34 schmonz Exp $
 
 DISTNAME=	jakarta-tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	ap-jk-${JK_VERSION}
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/jk-
 MAINTAINER=	erh@NetBSD.org
 HOMEPAGE=	http://jakarta.apache.org/tomcat/connectors-doc/
 COMMENT=	Apache connector for accessing Jakarta Tomcat
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/jk/native
 APACHE_MODULE=	YES
