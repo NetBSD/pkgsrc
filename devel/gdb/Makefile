@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:04 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/26 23:39:31 schmonz Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -9,6 +9,9 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
