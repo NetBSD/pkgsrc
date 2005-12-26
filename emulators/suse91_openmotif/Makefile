@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/12 14:43:24 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/26 23:39:31 schmonz Exp $
 
 DISTNAME=		suse_openmotif-${SUSE_VERSION}
 PKGREVISION=		2
@@ -9,6 +9,9 @@ DISTFILES=		${RPMFILES}
 MAINTAINER=		jdolecek@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for the Motif library
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse91_x11
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:12 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/26 23:39:31 schmonz Exp $
 #
 PEACE_VERSION=	0.0.20050609
 DISTNAME=	peace-${PEACE_VERSION}
@@ -8,6 +8,9 @@ CATEGORIES=	emulators
 MAINTAINER=	kent@NetBSD.org
 HOMEPAGE=	http://chiharu.hauN.org/peace/
 COMMENT=	Enable to run Win32 executables
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DISTFILES+=	peace-${PEACE_VERSION}.tar.gz
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=peace/}

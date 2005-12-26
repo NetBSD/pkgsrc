@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/26 23:39:33 schmonz Exp $
 #
 
 DISTNAME=	tct-1.09
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.porcupine.org/forensics/
 MAINTAINER=	frazee.23@osu.edu
 HOMEPAGE=	http://www.porcupine.org/forensics/tct.html
 COMMENT=	Programs to aid post-mortem after a break-in
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
