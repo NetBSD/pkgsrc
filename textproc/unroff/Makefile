@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/03/30 19:44:54 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/26 23:39:34 schmonz Exp $
 
 DISTNAME=		unroff-1.0
 PKGNAME=		unroff-1.0.2
@@ -12,6 +12,9 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/unroff/
 COMMENT=		Programmable troff translator with backend for HTML
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DIST_SUBDIR=		unroff
 

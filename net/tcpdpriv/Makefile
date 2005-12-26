@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/26 23:39:33 schmonz Exp $
 
 DISTNAME=	tcpd-tools-0.8
 PKGNAME=	tcpdpriv-0.8
@@ -7,6 +7,9 @@ MASTER_SITES=	ftp://tracer.csl.sony.co.jp/pub/mawi/tools/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Anonymize tcpdump traces
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/wide-tcpdpriv
 

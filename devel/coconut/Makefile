@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/08/10 20:56:14 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/26 23:39:31 schmonz Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -10,6 +10,9 @@ MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/coconut/		\
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/coconut-lib/
 COMMENT=	Objective-C library for Unix-like systems
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 BUILD_DEPENDS+=	papaya>=0.1.7:../../devel/papaya
 

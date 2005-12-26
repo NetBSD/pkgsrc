@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/26 23:39:33 schmonz Exp $
 #
 
 DISTNAME=		nocol-4.3.1
@@ -9,6 +9,9 @@ MASTER_SITES= 		http://www.netplex-tech.com/software/nocol/downloads/
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.netplex-tech.com/software/nocol/
 COMMENT=		Extensible network and system monitoring utility
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
