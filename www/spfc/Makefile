@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:51:14 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/26 23:39:35 schmonz Exp $
 
 DISTNAME=	spfc-0.2.0
 CATEGORIES=	www java
@@ -7,6 +7,9 @@ MASTER_SITES=	http://java.apache.org/spfc/dist/
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://java.apache.org/
 COMMENT=	Apache.org's Server Page Foundation Classes
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 # yes, this needs _exactly_ version 2.0
 DEPENDS+=	jsdk-2.0:../../www/jsdk20

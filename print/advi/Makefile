@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/28 06:41:21 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/26 23:39:33 schmonz Exp $
 
 DISTNAME=		advi-1.6.0
 CATEGORIES=		print
@@ -8,6 +8,9 @@ EXTRACT_SUFX=           .tgz
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://pauillac.inria.fr/advi/
 COMMENT=		Active-DVI Presenter
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 BUILD_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
 

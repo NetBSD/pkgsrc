@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/08 09:52:15 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/26 23:39:32 schmonz Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -28,6 +28,9 @@ DISTFILES=	MLRISC.tgz			\
 MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 SML_VERSION=	110.42
 

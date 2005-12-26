@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/26 23:39:34 schmonz Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -8,6 +8,9 @@ MASTER_SITES=	ftp://ftp.noge.com/pub/EmiClock/X11/
 
 MAINTAINER=	minoura@NetBSD.org
 COMMENT=	Analog clock with image in the middle
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 LICENSE=	emiclock-license
 RESTRICTED=	"Do not distribute"
