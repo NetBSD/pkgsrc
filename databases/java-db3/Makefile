@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:49:57 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/26 23:39:30 schmonz Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.sleepycat.com/update/3.3.11/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Java interface to Sleepycat Software's Berkeley DB version 3
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		patch.3.3.11.1 patch.3.3.11.2

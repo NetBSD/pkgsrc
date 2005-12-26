@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/15 22:16:45 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/26 23:39:33 schmonz Exp $
 
 DISTNAME=	HLaTeX-1.0.1
 PKGNAME=	tex-hlatex-${DISTNAME:S/HLaTeX-//}
@@ -9,6 +9,9 @@ MASTER_SITES=	ftp://ftp.ktug.or.kr/pub/ktug/hlatex/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/hlatex/
 COMMENT=	LaTeX package to typeset Hangul
+
+PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
+PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DEPENDS+=	tex-uhc-fonts-base>=1.0:../../fonts/tex-uhc-fonts-base
 
