@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/10/09 10:30:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/27 17:36:41 reed Exp $
 #
 
 DISTNAME=	verifypc-1.3
@@ -23,7 +23,7 @@ SUBST_FILES.vars=	*
 SUBST_SED.vars=		-e 's|@MAKE@|${MAKE}|g'
 SUBST_SED.vars+=	-e 's|@SH@|${SH}|g'
 
-INSTALLATION_DIRS=	man/man1 bin
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 bin
 
 do-extract:
 	${CP} ${FILESDIR}/verifypc.sh ${WRKSRC}
@@ -32,6 +32,6 @@ do-extract:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/verifypc.sh \
 		${PREFIX}/bin/verifypc
-	${INSTALL_MAN} ${WRKSRC}/verifypc.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/verifypc.1 ${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"
