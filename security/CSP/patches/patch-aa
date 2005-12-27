@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/12/27 20:56:17 cube Exp $
+
+--- csp.orig	2005-06-02 18:40:20.000000000 +0200
++++ csp
+@@ -167,14 +167,16 @@ die $usage{_nocmd_} unless @ARGV > 0;
+ 
+ my $name = shift @ARGV;
+ 
++my $home = $ENV{CSPHOME} || '@@CSPHOME@@';
++
+ warn "Warning: \$CSPHOME unset. This may prevent CSP from working properly.\n"
+-  unless $ENV{CSPHOME};
++  unless -d $home;
++
++$ENV{OPENSSL} = '@@OPENSSL@@' unless defined($ENV{OPENSSL});
+ 
+ die "Panic: \$OPENSSL does not point to a executable.\n"
+   unless -x $ENV{OPENSSL};
+ 
+-my $home = $ENV{CSPHOME} || 'ca';
+-
+ mkdir "$home/csp",00755 unless -d "$home/csp";
+ 
+ $name eq '--list' and
