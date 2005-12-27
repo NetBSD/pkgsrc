@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4301 2005/12/27 14:34:39 schmonz Exp $
+$NetBSD: TODO,v 1.4302 2005/12/27 16:08:14 recht Exp $
 
 Suggested new packages
 ======================
@@ -303,7 +303,6 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
-	o ArX2-2.2.4
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o DatLib-2.13
