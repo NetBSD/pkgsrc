@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/12/01 16:41:29 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/27 20:37:41 reed Exp $
 #
 
 DISTNAME=	bzip2-1.0.3
@@ -21,7 +21,7 @@ CFLAGS+=		${CPPFLAGS}
 CFLAGS+=		-Wall -Winline -fomit-frame-pointer -fno-strength-reduce
 .endif
 
-INSTALLATION_DIRS=	bin include lib man/man1
+INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libbz2.la ${PREFIX}/lib
@@ -29,11 +29,11 @@ do-install:
 	${LN} -f ${PREFIX}/bin/bzip2 ${PREFIX}/bin/bunzip2
 	${LN} -f ${PREFIX}/bin/bzip2 ${PREFIX}/bin/bzcat
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bzip2recover ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/bzip2.1 ${PREFIX}/man/man1
-	${RM} -f ${PREFIX}/man/man1/bunzip2.1 ${PREFIX}/man/man1/bzcat.1 ${PREFIX}/man/man1/bzip2recover.1
-	${LN} -s ${PREFIX}/man/man1/bzip2.1 ${PREFIX}/man/man1/bunzip2.1
-	${LN} -s ${PREFIX}/man/man1/bzip2.1 ${PREFIX}/man/man1/bzcat.1
-	${LN} -s ${PREFIX}/man/man1/bzip2.1 ${PREFIX}/man/man1/bzip2recover.1
+	${INSTALL_MAN} ${WRKSRC}/bzip2.1 ${PREFIX}/${PKGMANDIR}/man1
+	${RM} -f ${PREFIX}/${PKGMANDIR}/man1/bunzip2.1 ${PREFIX}/${PKGMANDIR}/man1/bzcat.1 ${PREFIX}/${PKGMANDIR}/man1/bzip2recover.1
+	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/bzip2.1 ${PREFIX}/${PKGMANDIR}/man1/bunzip2.1
+	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/bzip2.1 ${PREFIX}/${PKGMANDIR}/man1/bzcat.1
+	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/bzip2.1 ${PREFIX}/${PKGMANDIR}/man1/bzip2recover.1
 	${INSTALL_DATA} ${WRKSRC}/bzlib.h ${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
