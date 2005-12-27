@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12231 2005/12/27 11:46:44 taca Exp $
+$NetBSD: CHANGES,v 1.12232 2005/12/27 14:34:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5788,3 +5788,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated editors/vim-share to 6.4.6 [martti 2005-12-27]
 	Updated sysutils/vobcopy to 0.5.14 [martti 2005-12-27]
 	Updated lang/ruby18-base to 1.8.3nb2 [taca 2005-12-27]
+	Updated textproc/py-feedparser to 4.0 [schmonz 2005-12-27]
