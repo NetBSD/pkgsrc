@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/10/04 18:19:16 reed Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/27 21:20:49 reed Exp $
 #
 
 DISTNAME=       mawk-1.3.3
@@ -9,7 +9,7 @@ MASTER_SITES=   ftp://ftp.whidbey.net/pub/brennan/ \
 MAINTAINER=	agc@NetBSD.org
 COMMENT=	Mike Brennan's fast awk clone
 
-INSTALLATION_DIRS=	man/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 GNU_CONFIGURE=	yes
 CONFIGURE_HAS_MANDIR=	no
