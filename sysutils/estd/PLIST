@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/24 10:50:53 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/27 09:58:56 dillo Exp $
 sbin/estd
+share/examples/rc.d/estd
 man/man1/estd.1
