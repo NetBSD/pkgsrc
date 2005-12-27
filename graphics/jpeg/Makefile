@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/04/11 21:46:05 tv Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/27 17:30:50 reed Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-static
 
 INSTALL_TARGET=		install install-lib
-INSTALLATION_DIRS=	bin lib include man/man1
+INSTALLATION_DIRS=	bin lib include ${PKGMANDIR}/man1
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jpeg
