@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.2 2005/12/05 20:50:45 rillig Exp $
+$NetBSD: patch-ba,v 1.3 2005/12/27 14:00:53 joerg Exp $
 
 --- server/waisserver.c.orig	1999-04-16 09:59:45.000000000 +0000
 +++ server/waisserver.c
-@@ -44,6 +44,9 @@
+@@ -44,6 +44,9 @@ static char *PRCSid = "$Id: waisserver.c
  #ifdef I_SYS_SELECT
  #include <sys/select.h>
  #endif
@@ -12,10 +12,11 @@ $NetBSD: patch-ba,v 1.2 2005/12/05 20:50:45 rillig Exp $
  #include "cdialect.h"
  #include "panic.h"
  #include "ustubs.h"
-@@ -314,8 +317,10 @@ srcfiles(e)
+@@ -313,9 +316,10 @@ srcfiles(e)
+ /*---------------------------------------------------------------------------*/
  
  #ifdef HAS_SYS_ERRLIST
- extern int      errno;
+-extern int      errno;
 +#if !(defined(BSD) && BSD >= 199306)
  extern int      sys_nerr;
  #endif
