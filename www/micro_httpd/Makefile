@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/07 02:15:12 reed Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/27 17:56:09 reed Exp $
 
 DISTNAME=	micro_httpd_14dec2001
 PKGNAME=	micro_httpd-20011214
@@ -14,10 +14,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 WRKSRC=			${WRKDIR}/micro_httpd
 NO_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/micro_httpd ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/micro_httpd.8 ${PREFIX}/man/man8/
+	${INSTALL_MAN} ${WRKSRC}/micro_httpd.8 ${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../mk/bsd.pkg.mk"

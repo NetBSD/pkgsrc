@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:51:13 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/27 17:56:09 reed Exp $
 
 DISTNAME=	mini_httpd-1.19
 PKGREVISION=	2
@@ -21,7 +21,7 @@ LDFLAGS+=	-lssl -lcrypto -lcrypt
 LDFLAGS+=	-lutil
 .endif
 
-INSTALLATION_DIRS=	man/man1 man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8 sbin
 
 do-install:
 	for FILE in mini_httpd.8 htpasswd.1; do \
@@ -32,8 +32,8 @@ do-install:
 	done
 	${INSTALL_PROGRAM} ${WRKSRC}/mini_httpd ${PREFIX}/sbin/
 	${INSTALL_PROGRAM} ${WRKSRC}/htpasswd ${PREFIX}/sbin/mhtpasswd
-	${INSTALL_MAN} ${WRKSRC}/mini_httpd.8 ${PREFIX}/man/man8/
-	${INSTALL_MAN} ${WRKSRC}/htpasswd.1 ${PREFIX}/man/man1/mhtpasswd.1
+	${INSTALL_MAN} ${WRKSRC}/mini_httpd.8 ${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/htpasswd.1 ${PREFIX}/${PKGMANDIR}/man1/mhtpasswd.1
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
