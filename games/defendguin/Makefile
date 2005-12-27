@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/11 09:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/27 21:13:34 reed Exp $
 
 DISTNAME=	defendguin-0.0.10
 PKGREVISION=	5
@@ -11,6 +11,8 @@ COMMENT=	Clone of the arcade game Defender
 
 
 USE_TOOLS+=	gmake
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man6
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
