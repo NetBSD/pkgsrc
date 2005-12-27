@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:42 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/27 14:33:22 schmonz Exp $
 #
 
-DISTNAME=		feedparser-3.3
+DISTNAME=		feedparser-4.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=feedparser/}
