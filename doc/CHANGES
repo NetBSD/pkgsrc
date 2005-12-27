@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12230 2005/12/27 10:20:27 martti Exp $
+$NetBSD: CHANGES,v 1.12231 2005/12/27 11:46:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5787,3 +5787,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/estd to 0.4nb1 [dillo 2005-12-27]
 	Updated editors/vim-share to 6.4.6 [martti 2005-12-27]
 	Updated sysutils/vobcopy to 0.5.14 [martti 2005-12-27]
+	Updated lang/ruby18-base to 1.8.3nb2 [taca 2005-12-27]
