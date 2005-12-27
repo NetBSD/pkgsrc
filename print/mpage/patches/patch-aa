@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2002/02/16 01:21:53 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2005/12/27 23:50:07 reed Exp $
 
---- Makefile.orig	Wed Nov 26 00:16:06 1997
+--- Makefile.orig	1997-11-25 15:16:06.000000000 -0800
 +++ Makefile
 @@ -30,7 +30,6 @@
  # Set this to an ANSI compatible C compiler (preferably gcc)
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.4 2002/02/16 01:21:53 wiz Exp $
  
  ############################################################################
  #
-@@ -45,7 +44,7 @@
+@@ -45,7 +44,7 @@ CC=gcc
  #          PAGE_A4 for European A4
  #
  # PAGESIZE=PAGE_LETTER
@@ -19,18 +19,20 @@ $NetBSD: patch-aa,v 1.4 2002/02/16 01:21:53 wiz Exp $
  
  #
  # Define your spooler type
-@@ -55,9 +54,8 @@
+@@ -55,10 +54,9 @@ PAGESIZE=PAGE_A4
  SPOOL_TYPE=BSD_SPOOLER
  
  # PREFIX=e:/usr		# OS/2 type
 -PREFIX=/usr/local
  BINDIR=$(PREFIX)/bin
 -LIBDIR=$(PREFIX)/lib
+-MANDIR=$(PREFIX)/man/man1
 +LIBDIR=$(PREFIX)/share
- MANDIR=$(PREFIX)/man/man1
++MANDIR=$(PREFIX)/${PKGMANDIR}/man1
  
  #
-@@ -110,8 +108,8 @@
+ # A default encoding is given in encoding.h. Setting ENCODING=1 will
+@@ -110,8 +108,8 @@ DEF_FILE =
  # Choose one of the following CFLAGS/CC definitions:
  # If you are using gcc, you probably don't need to change anything here.
  
@@ -41,7 +43,7 @@ $NetBSD: patch-aa,v 1.4 2002/02/16 01:21:53 wiz Exp $
  
  # AIX (xlC on aix 4):
  #CFLAGS = -O2 -s $(DEFS)
-@@ -168,10 +166,10 @@
+@@ -168,10 +166,10 @@ mpage.ps:	mpage.1
  
  
  #
