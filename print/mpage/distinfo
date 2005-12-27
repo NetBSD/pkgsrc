@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:51:44 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/12/27 23:50:07 reed Exp $
 
 SHA1 (mpage-2.5.tgz) = 84253fe3551b37ca857e487a93cca7532608ed29
 RMD160 (mpage-2.5.tgz) = cf035f5f3c8fbe9ad448e94ab3f3f6d3811b5bc5
 Size (mpage-2.5.tgz) = 59386 bytes
-SHA1 (patch-aa) = aaf640f11ac2a48d021cc868854b067c3dd20e7d
+SHA1 (patch-aa) = 6c704d0621356936a9bcc1b1a13c179def078d47
