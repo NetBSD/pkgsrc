@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12227 2005/12/24 12:49:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.12228 2005/12/27 09:28:19 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5783,3 +5783,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed textproc/eperl [jlam 2005-12-23]
 	Removed devel/guile14-slib [wiz 2005-12-23]
 	Updated multimedia/xine-lib to 1.0.3anb3 [jmmv 2005-12-24]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2005Q4 branch [agc 2005-12-27]
