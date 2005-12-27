@@ -3,8 +3,8 @@ megs ram and no hard disk was fruitless, so Matt Johnston decided to
 write his own, and Dropbear is the result.  It implements various
 features of the SSH 2 protocol, including X11 and Authentication Agent
 forwarding.  Dropbear is Open Source software, distributed under a
-MIT-style license.
-
+MIT-style license. It includes a server, client and tools to
+generate server keys and to convert OpenSSH keys for Dropbear.
 
 Features
 
