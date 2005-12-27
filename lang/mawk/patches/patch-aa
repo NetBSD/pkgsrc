@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2000/03/24 17:56:51 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2005/12/27 21:20:49 reed Exp $
 
---- Makefile.in.orig	Wed Jan 31 21:05:40 1996
-+++ Makefile.in	Fri Mar 24 09:50:06 2000
-@@ -11,10 +11,11 @@
+--- Makefile.in.orig	1996-01-31 21:05:40.000000000 -0800
++++ Makefile.in
+@@ -11,10 +11,11 @@ MATHLIB = @MATHLIB@
  
  YACC = @YACC@ 
  
@@ -12,11 +12,11 @@ $NetBSD: patch-aa,v 1.3 2000/03/24 17:56:51 jlam Exp $
 +BINDIR = $(prefix)/bin
  # where to put the man pages
 -MANDIR = @MANDIR@
-+MANDIR = $(prefix)/man/man1
++MANDIR = $(prefix)/${PKGMANDIR}/man1
  MANEXT = @MANEXT@
  #######################################
  
-@@ -32,6 +33,7 @@
+@@ -32,6 +33,7 @@ REXP_C=rexp/rexp.c rexp/rexp0.c rexp/rex
      rexp/rexp3.c 
  
  
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.3 2000/03/24 17:56:51 jlam Exp $
  mawk_and_test :  mawk  mawk_test  fpe_test
  
  mawk : $(O)  rexp/.done
-@@ -74,10 +76,8 @@
+@@ -74,10 +76,8 @@ scancode.c :  makescan.c  scan.h
  
  MAWKMAN = $(MANDIR)/mawk.$(MANEXT)
  install :  mawk
