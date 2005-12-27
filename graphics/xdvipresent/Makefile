@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/08 19:51:57 tonio Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/27 21:17:57 reed Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
@@ -19,7 +19,6 @@ NO_CONFIGURE=	yes
 
 STYDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/other
 EXAMPLES_DIR=	${PREFIX}/share/examples/xdvipresent
-MAN_DIR=	${PREFIX}/man/
 HTML_DIR=	${PREFIX}/share/doc/html/xdvipresent
 
 INSTALLATION_DIRS=	bin man/man1
@@ -31,7 +30,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/xdvipresent ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xdvipresent
 	${INSTALL_DATA} ${WRKSRC}/example.tex ${EXAMPLES_DIR}
-	${INSTALL_MAN} ${WRKSRC}/doc/xdvipresent.manl ${MAN_DIR}/man1/xdvipresent.1
+	${INSTALL_MAN} ${WRKSRC}/doc/xdvipresent.manl ${PKGMANDIR}/man1/xdvipresent.1
 	${INSTALL_DATA_DIR} ${HTML_DIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/xdvipresent_html/* ${HTML_DIR}
 	${PREFIX}/bin/texconfig rehash
