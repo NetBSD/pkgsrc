@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/07/16 19:10:41 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/27 22:19:12 reed Exp $
 #
 
 DISTNAME=	weblint-1.020
@@ -16,6 +16,6 @@ COMMENT=	HTML validator and sanity checker
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		perl:run
-INSTALLATION_DIRS+=	bin man/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
