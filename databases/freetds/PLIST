@@ -1,31 +1,31 @@
-@comment $NetBSD: PLIST,v 1.12 2005/11/25 23:44:08 agc Exp $
-freetds/bin/bsqldb
-freetds/bin/defncopy
-freetds/bin/freebcp
-freetds/bin/tdspool
-freetds/bin/tsql
-freetds/include/bkpublic.h
-freetds/include/cspublic.h
-freetds/include/cstypes.h
-freetds/include/ctpublic.h
-freetds/include/sqldb.h
-freetds/include/sqlfront.h
-freetds/include/sybdb.h
-freetds/include/syberror.h
-freetds/include/sybfront.h
-freetds/include/tds.h
-freetds/include/tds_sysdep_public.h
-freetds/include/tdsconvert.h
-freetds/include/tdssrv.h
-freetds/include/tdsver.h
-freetds/lib/libct.la
-freetds/lib/libsybdb.la
-freetds/lib/libtds.la
-freetds/lib/libtdssrv.la
-freetds/man/man1/bsqldb.1
-freetds/man/man1/defncopy.1
-freetds/man/man1/freebcp.1
-freetds/man/man1/tsql.1
+@comment $NetBSD: PLIST,v 1.13 2005/12/27 21:04:23 reed Exp $
+bin/bsqldb
+bin/defncopy
+bin/freebcp
+bin/tdspool
+bin/tsql
+include/bkpublic.h
+include/cspublic.h
+include/cstypes.h
+include/ctpublic.h
+include/sqldb.h
+include/sqlfront.h
+include/sybdb.h
+include/syberror.h
+include/sybfront.h
+include/tds.h
+include/tds_sysdep_public.h
+include/tdsconvert.h
+include/tdssrv.h
+include/tdsver.h
+lib/libct.la
+lib/libsybdb.la
+lib/libtds.la
+lib/libtdssrv.la
+man/man1/bsqldb.1
+man/man1/defncopy.1
+man/man1/freebcp.1
+man/man1/tsql.1
 share/doc/${PKGNAME}/images/important.gif
 share/doc/${PKGNAME}/images/note.gif
 share/doc/${PKGNAME}/images/tip.gif
@@ -201,9 +201,3 @@ share/examples/freetds/pool.conf
 @dirrm share/doc/${PKGNAME}/reference
 @dirrm share/doc/${PKGNAME}/images
 @dirrm share/doc/${PKGNAME}
-@dirrm freetds/man/man1
-@dirrm freetds/man
-@dirrm freetds/lib
-@dirrm freetds/include
-@dirrm freetds/bin
-@dirrm freetds
