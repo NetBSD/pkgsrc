@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2005/04/10 17:43:27 schwarz Exp $
+$NetBSD: patch-aa,v 1.9 2005/12/27 17:27:58 reed Exp $
 
 --- Makefile.in.orig	2004-09-15 16:27:20.000000000 +0200
 +++ Makefile.in	2005-04-10 12:48:19.000000000 +0200
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.8 2005/04/10 17:43:27 schwarz Exp $
  
  install: $(LIBS)
 +	${BSD_INSTALL_DATA} zconf.h zlib.h ${PREFIX}/include
-+	${BSD_INSTALL_DATA} zlib.3 ${PREFIX}/man/man3
++	${BSD_INSTALL_DATA} zlib.3 ${PREFIX}/${PKGMANDIR}/man3
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libz.la ${PREFIX}/lib
 +
 +installold: $(LIBS)
