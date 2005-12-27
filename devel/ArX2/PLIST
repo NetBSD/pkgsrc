@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/19 17:39:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/27 16:06:04 recht Exp $
 bin/arx
-share/doc/ArX/ArX.html
-share/doc/ArX/ArX.pdf
-share/doc/ArX/ArX001.png
-share/doc/ArX/ArX002.png
-share/doc/ArX/ArX003.png
-share/doc/ArX/ArX004.png
-@dirrm share/doc/ArX
+man/man1/arx.1
+share/doc/arx/ArX.html
+share/doc/arx/ArX.pdf
+share/doc/arx/ArX001.png
+share/doc/arx/ArX002.png
+share/doc/arx/ArX003.png
+share/doc/arx/ArX004.png
+@dirrm share/doc/arx
