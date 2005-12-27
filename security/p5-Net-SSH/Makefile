@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/13 20:14:18 seb Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/27 13:54:59 seb Exp $
 #
 
 DISTNAME=		Net-SSH-Perl-1.29
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5nsh
 CATEGORIES=		security net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=		seb@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Net-SSH-Perl/
 COMMENT=		Perl implementations of SSH1 and SSH2 protocols
 
