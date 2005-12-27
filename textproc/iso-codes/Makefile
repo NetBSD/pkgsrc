@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/14 21:54:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/27 15:55:06 joerg Exp $
 #
 
 DISTNAME=	iso-codes_0.48-1
@@ -23,6 +23,8 @@ REPLACE_PERL=		tab2h.pl
 PYTHON_FOR_BUILD_ONLY=		yes
 BUILDLINK_DEPMETHOD.perl5=	build
 BUILDLINK_DEPMETHOD.py-xml=	build
+BUILDLINK_DEPMETHOD.gettext=	build
+BUILD_USES_MSGFMT=		yes
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/AUTHORS
@@ -34,6 +36,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGNAME_NOREV}
 	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/${PKGNAME_NOREV}
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
