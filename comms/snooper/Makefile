@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/11/03 20:01:20 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/27 13:51:27 joerg Exp $
 
 DISTNAME=	snooper-19991202
 PKGREVISION=	1
@@ -13,6 +13,9 @@ WRKSRC=		${WRKDIR}/snooper
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	build
 BUILD_DIRS=	build
+
+post-extract:
+	${RM} ${WRKSRC}/build/.depend
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snooper
