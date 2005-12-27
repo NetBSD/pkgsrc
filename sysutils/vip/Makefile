@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/28 20:59:08 seb Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/27 13:54:59 seb Exp $
 
 DISTNAME=	vip-19971113
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.cs.duke.edu/~des/scripts/
 DISTFILES=	vip vip.man
 
-MAINTAINER=	seb@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.duke.edu/~des/vip.html
 COMMENT=	Script to edit the data at any point in a pipeline
 
