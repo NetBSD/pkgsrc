@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/12/05 20:51:03 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/27 18:27:16 reed Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -41,7 +41,9 @@ do-configure:
 	${ECHO} "#define MASKBITS 64" >>local.h;			\
 	${ECHO} "#undef WORDS"  >> local.h ;				\
 	${ECHO} '#define WORDS   "${EXTRADICT}"'  >> local.h ;		\
-	${ECHO} "#define CFLAGS \"${CFLAGS}\"" >> local.h
+	${ECHO} "#define CFLAGS \"${CFLAGS}\"" >> local.h ;		\
+	${ECHO} "#define MAN1DIR \"${PREFIX}/${PKGMANDIR}/man1\"" >> local.h ; \
+	${ECHO} "#define MAN45DIR \"${PREFIX}/${PKGMANDIR}/man5\"" >> local.h ;
 .if ${OPSYS} == "SunOS"
 	cd ${WRKSRC};							\
 	${ECHO} "#define USG" >> local.h;
