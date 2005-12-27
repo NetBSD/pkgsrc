@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/12/01 16:41:30 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2005/12/27 20:41:33 reed Exp $
 
 DISTNAME=	zip231
 PKGNAME=	zip-2.31
@@ -39,15 +39,15 @@ CFLAGS+=	-O
 CFLAGS+=	-DHAVE_DIRENT_H
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	cd ${WRKSRC} && \
 	    ${INSTALL_PROGRAM} zip zipnote zipsplit zipcloak ${PREFIX}/bin
 	cd ${WRKSRC}/man && \
-	    ${INSTALL_MAN} zip.1 ${PREFIX}/man/man1
-	${LN} -f -s zip.1 ${PREFIX}/man/man1/zipcloak.1
-	${LN} -f -s zip.1 ${PREFIX}/man/man1/zipnote.1
-	${LN} -f -s zip.1 ${PREFIX}/man/man1/zipsplit.1
+	    ${INSTALL_MAN} zip.1 ${PREFIX}/${PKGMANDIR}/man1
+	${LN} -f -s zip.1 ${PREFIX}/${PKGMANDIR}/man1/zipcloak.1
+	${LN} -f -s zip.1 ${PREFIX}/${PKGMANDIR}/man1/zipnote.1
+	${LN} -f -s zip.1 ${PREFIX}/${PKGMANDIR}/man1/zipsplit.1
 
 .include "../../mk/bsd.pkg.mk"
