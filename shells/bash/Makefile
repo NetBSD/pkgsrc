@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/27 21:32:59 reed Exp $
 
 DISTNAME=	bash-3.0
 PKGNAME=	bash-3.0pl16
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
@@ -26,6 +26,7 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+CPPFLAGS+=		-DDEFAULT_PATH_VALUE="\"/usr/bin:/bin:/usr/pkg/bin:/usr/local/bin\""
 TEST_TARGET=		test
 
 INFO_FILES=		bash.info

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2005/12/27 21:32:59 reed Exp $
 #
 
 DISTNAME=	bash-2.05b
 PKGNAME=	bash-2.05.2.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
@@ -25,6 +25,7 @@ USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-installed-readline
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+CPPFLAGS+=		-DDEFAULT_PATH_VALUE="\"/usr/bin:/bin:${LOCALBASE}/bin:/usr/local/bin\""
 TEST_TARGET=		test
 
 PKG_SHELL=		bin/bash
