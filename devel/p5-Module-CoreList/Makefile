@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/12 16:08:58 seb Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/27 13:54:57 seb Exp $
 #
 
 DISTNAME=	Module-CoreList-2.02
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5mcl
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
-MAINTAINER=	seb@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Module-CoreList/
 COMMENT=	Perl 5 module inventorying modules shipped with core Perl
 

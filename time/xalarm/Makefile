@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:27:16 agc Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/27 13:54:59 seb Exp $
 
 DISTNAME=	xalarm-3.03
 PKGNAME=	xalarm-3.05
@@ -11,7 +11,7 @@ PATCH_SITES=	${MASTER_SITE_XCONTRIB:=R5contrib-fixes/xalarm/}
 PATCHFILES=	xalarm-3.03-04.patch.Z xalarm-3.04-05.patch.Z
 PATCH_DIST_STRIP=-p1
 
-MAINTAINER=	seb@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	X11 interactive alarm clock
 
 DEPENDS+=	skill>=4.0:../../sysutils/skill

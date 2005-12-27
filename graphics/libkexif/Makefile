@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2005/10/18 09:29:38 seb Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/27 13:54:58 seb Exp $
 
 DISTNAME=	libkexif-0.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	seb@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://extragear.kde.org/apps/kipi/
 COMMENT=	Image EXIF information library manipulation
 

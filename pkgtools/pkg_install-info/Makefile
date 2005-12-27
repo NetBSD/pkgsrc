@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:51 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/27 13:54:59 seb Exp $
 #
 
 DISTNAME=		pkg_install-info-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		seb@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		Standalone GNU info file installation utility
 

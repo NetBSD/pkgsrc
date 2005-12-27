@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/13 10:54:30 seb Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/27 13:54:58 seb Exp $
 #
 
 DISTNAME=		Math-GMP-2.04
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5mgp
 CATEGORIES=		math perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Math/}
 
-MAINTAINER=		seb@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Math-GMP/
 COMMENT=		Perl 5 module for high speed arbitrary size integer math
 

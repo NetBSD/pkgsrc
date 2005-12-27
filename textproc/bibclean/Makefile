@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/12 07:10:57 seb Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/27 13:54:59 seb Exp $
 #
 
 DISTNAME=	bibclean-2.11.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.math.utah.edu/pub/tex/bib/
 
-MAINTAINER=	seb@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.math.utah.edu/pub/bibclean/
 COMMENT=	Prettyprinter and syntax checker for BibTeX bibliography databases
 

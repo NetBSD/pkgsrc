@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/09/28 20:52:19 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/27 13:54:57 seb Exp $
 #
 
 DISTNAME=	ctags-5.5.4
@@ -6,7 +6,7 @@ PKGNAME=	ex${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ctags/}
 
-MAINTAINER=	seb@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://ctags.sourceforge.net/
 COMMENT=	Exuberant (feature-filled) tagfile generator for vi, emacs and clones
 
