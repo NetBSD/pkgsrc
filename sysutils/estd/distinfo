@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/10/07 08:52:14 adam Exp $
+$NetBSD: distinfo,v 1.5 2005/12/27 09:58:56 dillo Exp $
 
 SHA1 (estd-netbsd-r4.tar.gz) = 253a26c1ea8ac155e83a7c4eb7e2fa9075ff950d
 RMD160 (estd-netbsd-r4.tar.gz) = f08dbcc5f83e0895e9716f8c90650f5a3163d71e
 Size (estd-netbsd-r4.tar.gz) = 6402 bytes
-SHA1 (patch-aa) = ce7d3c0f46a574db302f4ae7b36462bcfa6d288f
+SHA1 (patch-aa) = ad1165906b90dbd5b51fba1ba3b003fac2a8a9d8
+SHA1 (patch-ab) = 4bccff3c93aee1a29e6d29ddc21703b26e8cf433
