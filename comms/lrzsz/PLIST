@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/02 01:52:48 salo Exp $
-bin/lrz
-bin/lrx
+@comment $NetBSD: PLIST,v 1.4 2005/12/27 18:05:44 reed Exp $
 bin/lrb
-bin/lsz
-bin/lsx
+bin/lrx
+bin/lrz
 bin/lsb
+bin/lsx
+bin/lsz
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lrzsz.${LOCALE_SUFFIX}
 man/man1/lrz.1
 man/man1/lsz.1
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lrzsz.${LOCALE_SUFFIX}
