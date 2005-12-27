@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 23:55:20 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/27 08:56:47 kim Exp $
 #
 
 DISTNAME=	rsnapshot-1.2.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.rsnapshot.org/downloads/
 
@@ -10,6 +11,7 @@ HOMEPAGE=	http://www.rsnapshot.org/
 COMMENT=	Filesystem snapshot utility
 
 DEPENDS+=	rsync>=2.3.1:../../net/rsync
+DEPENDS+=	p5-Lchown>=0.07:../../sysutils/p5-Lchown
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
@@ -18,6 +20,7 @@ USE_PKGINSTALL=	yes
 .include "../../mk/bsd.prefs.mk"
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
 CONF_FILES+=	${EGDIR}/rsnapshot.conf.default \
 		${PKG_SYSCONFDIR}/rsnapshot.conf
@@ -33,5 +36,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/rsnapshot.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rsnapshot.conf.default ${EGDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
