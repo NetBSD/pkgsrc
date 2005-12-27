@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/12/26 23:39:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/27 13:47:11 joerg Exp $
 #
 
 DISTNAME=		nocol-4.3.1
@@ -17,7 +17,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	< ${WRKSRC}/answers
 
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run mkdirhier
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/cmu-snmp/snmp/libtool \
 			${WRKSRC}/cmu-snmp/snmpapps/libtool
@@ -40,6 +40,13 @@ post-patch:
 	fqdn=`$$dir/host $$hostname | ${AWK} '{ print $$1; exit }'`;	\
 	${SED} -e 's|@prefix@|${PREFIX}|g' -e "s|@FQDN@|$$fqdn|g" 	\
 			${FILESDIR}/answers > ${WRKSRC}/answers)
+
+pre-configure:
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/cmu-snmp/snmp
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/cmu-snmp/snmpapps
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/cmu-snmp/snmp
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/cmu-snmp/snmpapps
+
 
 post-install:
 	# Ensure webnocol audio and images files are available if needed
