@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
+$NetBSD: patch-aa,v 1.8 2005/12/27 13:48:56 joerg Exp $
 
---- Makefile.orig	Wed Sep  6 22:24:02 1995
+--- Makefile.orig	1995-09-07 02:24:02.000000000 +0000
 +++ Makefile
 @@ -3,9 +3,11 @@
  
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
  # If the second definition of SOCKS is used, you MUST also
  # define SHORTENED_RBIND
  
-@@ -19,7 +21,7 @@
+@@ -19,7 +21,7 @@ SHORTENED_RBIND=-DSHORTENED_RBIND
  # It should be this current directory.
  
  # If your system has getcwd() but no getwd(), uncomment the next line:
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
  
  #If your system doesn't have waitpid(), uncomment the nextline:
  #NO_WAITPID=-DNO_WAITPID
-@@ -43,15 +45,15 @@
+@@ -43,15 +45,15 @@ TRY_PASV=-DTRY_PASV
  
  # Define RCMD and SUPPORT_RCMD if you want to support Rrcmd, which is required
  # for SOCKSified rlogin, rsh, and rcp.
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
  #OPTIMIZE=-O
  # Be careful with the OPTIMIZE flag. SunPro's SC2.0.1, for example, is
  # knwon to produce incorrect code when -O is used.
-@@ -73,13 +75,13 @@
+@@ -73,13 +75,13 @@ OPTIMIZE=-g
  #BIND_RESOLVER=-DBIND_RESOLVER
  
  # Directory into which to install the man pages
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
  
  # SunOS 4.1.x should use
  #CC=cc
-@@ -103,13 +105,13 @@
+@@ -103,13 +105,13 @@ CLIENTS_BIN_DIR = /usr/local/bin
  #GETPASS=getpass.o
  
  # IRIX 5 should use
@@ -81,7 +81,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
  
  # Ultrix 4.0 should use
  #CC=cc
-@@ -156,13 +158,15 @@
+@@ -156,13 +158,15 @@ GETPASS=getpass.o
  #GETPASS=
  
  # SOLARIS should use
@@ -103,7 +103,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
  
  # Interactive Systems Unix should use
  #OTHER_CFLAGS = -DISC -DSVR3 -Dindex=strchr -Drindex=strrchr -D_XOPEN_SOURCE -DGETCWD $(FASCIST) $(SHORTENED_RBIND) -DCOMPAT $(TRY_PASV)
-@@ -174,13 +178,15 @@
+@@ -174,13 +178,15 @@ GETPASS=getpass.o
  #RESOLV_LIB=-linet -lc_s
  
  # netBSD should use
@@ -114,7 +114,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
 -#INSTALL=install
 -#GETPASS=
 -#RESOLV_LIB=
-+.if ${OPSYS} == "NetBSD"
++.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 +OTHER_CFLAGS = $(GETCWD) $(SHORTENED_RBIND) $(FASCIST) $(TRY_PASV) -Dunix=1
 +CC=cc
 +RANLIB=ranlib
@@ -126,7 +126,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
  
  # FreeBSD should use:
  #CC=cc
-@@ -413,3 +419,11 @@
+@@ -413,3 +419,11 @@ clean:
  		( cd $$i ; $(MAKE) clean) done
  
  
