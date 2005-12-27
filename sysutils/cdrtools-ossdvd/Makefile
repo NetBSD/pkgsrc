@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/06 23:56:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/27 18:44:54 reed Exp $
 
 DISTNAME=	cdrtools-2.01.01a03
 PKGNAME=	cdrtools-ossdvd-2.01.1.35
@@ -79,21 +79,21 @@ post-build:
 do-install:
 	cd ${WRKSRC}/cdda2wav;						\
 		${INSTALL_PROGRAM} OBJ/*/cdda2wav ${PREFIX}/bin;	\
-		${INSTALL_MAN} cdda2wav.1 ${PREFIX}/man/man1
+		${INSTALL_MAN} cdda2wav.1 ${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/cdrecord;						\
 		${INSTALL_PROGRAM} OBJ/*/cdrecord ${PREFIX}/bin;	\
-		${INSTALL_MAN} cdrecord.1 ${PREFIX}/man/man1
+		${INSTALL_MAN} cdrecord.1 ${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/mkisofs;						\
 		${INSTALL_PROGRAM} OBJ/*/mkisofs ${PREFIX}/bin;		\
-		${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
+		${INSTALL_MAN} mkisofs.8 ${PREFIX}/${PKGMANDIR}/man8
 	cd ${WRKSRC}/mkisofs/diag;					\
 		for f in devdump isodump isoinfo isovfy; do		\
 			${INSTALL_PROGRAM} OBJ/*/$$f ${PREFIX}/bin;	\
-			${INSTALL_MAN} isoinfo.8 ${PREFIX}/man/man8/$$f.8; \
+			${INSTALL_MAN} isoinfo.8 ${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
 		done
 	cd ${WRKSRC}/readcd;						\
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
-		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
+		${INSTALL_MAN} readcd.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
