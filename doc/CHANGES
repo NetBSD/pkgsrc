@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12236 2005/12/27 20:53:52 reed Exp $
+$NetBSD: CHANGES,v 1.12237 2005/12/27 20:58:26 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5793,3 +5793,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/libart2 to 2.3.17nb1 [reed 2005-12-27]
 	Added local/p5-Term-Prompt version 1.03 [cube 2005-12-27]
 	Updated benchmarks/ubench to 0.32nb1 [reed 2005-12-27]
+	Added security/CSP version 0.32 [cube 2005-12-27]
