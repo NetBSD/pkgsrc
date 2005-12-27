@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/12 17:55:26 seb Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/27 13:54:59 seb Exp $
 #
 
 DISTNAME=		Crypt-DH-0.06
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5cdh
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
-MAINTAINER=		seb@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-DH/
 COMMENT=		Perl5 module for the Diffie-Hellman key exchange system
 
