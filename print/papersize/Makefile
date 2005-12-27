@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/06/17 03:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/27 23:51:51 reed Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -16,7 +16,7 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_PKGINSTALL=	yes
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	@for f in setpapersize getpapersize; do			\
@@ -27,7 +27,7 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/setpapersize ${PREFIX}/bin/setpapersize
 	${INSTALL_SCRIPT} ${WRKSRC}/getpapersize ${PREFIX}/bin/getpapersize
-	${INSTALL_MAN} ${FILESDIR}/getpapersize.1 ${PREFIX}/man/man1/getpapersize.1
-	${INSTALL_MAN} ${FILESDIR}/setpapersize.1 ${PREFIX}/man/man1/setpapersize.1
+	${INSTALL_MAN} ${FILESDIR}/getpapersize.1 ${PREFIX}/${PKGMANDIR}/man1/getpapersize.1
+	${INSTALL_MAN} ${FILESDIR}/setpapersize.1 ${PREFIX}/${PKGMANDIR}/man1/setpapersize.1
 
 .include "../../mk/bsd.pkg.mk"
