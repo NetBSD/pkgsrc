@@ -1,8 +1,27 @@
-$NetBSD: patch-aa,v 1.2 2005/06/23 22:12:44 kristerw Exp $
+$NetBSD: patch-aa,v 1.3 2005/12/27 14:00:53 joerg Exp $
 
---- Configure.orig	1999-04-16 11:59:11.000000000 +0200
-+++ Configure	2005-06-24 00:07:51.000000000 +0200
-@@ -2407,7 +2407,7 @@
+--- Configure.orig	1999-04-16 09:59:11.000000000 +0000
++++ Configure
+@@ -1659,6 +1659,9 @@ EOM
+ 			;;
+ 		freebsd) osname=freebsd 
+ 			osvers="$3" ;;
++		dragonfly)
++			osname=dragonfly
++			osvers="$3" ;;
+ 		genix) osname=genix ;;
+ 		hp*) osname=hpux 
+ 			case "$3" in
+@@ -1730,7 +1733,7 @@ EOM
+ 			;;
+ 		$2) case "$osname" in
+ 			*isc*) ;;
+-			*freebsd*) ;;
++			*freebsd* | dragonfly*) ;;
+ 			svr*)
+ 				: svr4.x or possibly later
+ 				case "svr$3" in	
+@@ -2407,7 +2410,7 @@ case "$mansrc" in
  esac
  
  : determine where private executables go
@@ -11,7 +30,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/23 22:12:44 kristerw Exp $
  eval $prefixit
  $cat <<EOM
  
-@@ -4673,7 +4673,7 @@
+@@ -4673,7 +4676,7 @@ main()
  }
  EOCP
  if $cc $ccflags try.c -o try >/dev/null 2>&1; then
@@ -20,7 +39,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/23 22:12:44 kristerw Exp $
      cont=x
      case "$d_myregexp" in
          $define) d_myregexp='n';;
-@@ -4695,7 +4695,7 @@
+@@ -4695,7 +4698,7 @@ if $cc $ccflags try.c -o try >/dev/null 
      done
  
  else
@@ -29,7 +48,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/23 22:12:44 kristerw Exp $
      d_myregexp='n';
  fi
  
-@@ -7088,7 +7088,7 @@
+@@ -7088,7 +7091,7 @@ osvers='$osvers'
  package='$package'
  passcat='$passcat'
  patchlevel='$patchlevel'
