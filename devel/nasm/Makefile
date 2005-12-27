@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/05 20:50:05 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/27 18:10:58 reed Exp $
 
 DISTNAME=	nasm-0.98.39
 PKGREVISION=	1
@@ -24,7 +24,7 @@ INSTALL_TARGET=		install_everything
 MAKE_ENV+=	PERL5=${PERL5:Q}			\
 		INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
 
-INSTALLATION_DIRS=	bin info man/man1 share/doc/html
+INSTALLATION_DIRS=	bin info ${PKGMANDIR}/man1 share/doc/html
 
 .include "../../mk/compiler.mk"
 
