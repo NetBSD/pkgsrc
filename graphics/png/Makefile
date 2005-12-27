@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2005/12/05 20:50:22 rillig Exp $
+# $NetBSD: Makefile,v 1.73 2005/12/27 17:34:53 reed Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -29,7 +29,7 @@ MAKE_ENV+=	REALCC=${CC:Q}
 MAKE_ENV+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR:Q}
 MAKE_ENV+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR:Q}
 
-INSTALLATION_DIRS=	include lib/pkgconfig man/man3 man/man5
+INSTALLATION_DIRS=	include lib/pkgconfig ${PKGMANDIR}/man3 ${PKGMANDIR}/man5
 
 PKGCONFIG_OVERRIDE=	scripts/libpng.pc.in
 
@@ -40,9 +40,9 @@ SUBST_SED.pc=		-e 's,@PREFIX@,${PREFIX},'
 SUBST_MESSAGE.pc=	"Fixing libpng.pc.in."
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/man/man3
-	${INSTALL_MAN} ${WRKSRC}/libpngpf.3 ${PREFIX}/man/man3
-	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_MAN} ${WRKSRC}/libpngpf.3 ${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKSRC}/scripts/libpng.pc.in \
 		${PREFIX}/lib/pkgconfig/libpng12.pc
 
