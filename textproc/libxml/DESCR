@@ -1,4 +1,4 @@
-This is an XML parsing library provided in the GNOME framework.
+This is the old XML parsing library provided in the GNOME framework.
 XML is a standard to build tag based structured documents.  The
 internal document repesentation is as close as possible to the
 DOM interfaces.  The interfaces of the XML library are by principle
