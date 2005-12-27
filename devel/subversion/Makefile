@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/05/23 22:58:26 epg Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/27 18:19:42 reed Exp $
 
 PKGNAME=	subversion-${SVNVER}
 COMMENT=	Version control system, meta-package
@@ -10,6 +10,8 @@ DEPENDS+=	${PYPKGPREFIX}-subversion-${SVNVER}{,nb[0-9]*}:../../devel/py-subversi
 DEPENDS+=	${RUBY_PKGPREFIX}-subversion-${SVNVER}{,nb[0-9]*}:../../devel/ruby-subversion
 
 .include "Makefile.common"
+
+CATEGORIES+=	meta-pkgs
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
