@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12228 2005/12/27 09:28:19 agc Exp $
+$NetBSD: CHANGES,v 1.12229 2005/12/27 10:01:18 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5784,3 +5784,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed devel/guile14-slib [wiz 2005-12-23]
 	Updated multimedia/xine-lib to 1.0.3anb3 [jmmv 2005-12-24]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2005Q4 branch [agc 2005-12-27]
+	Updated sysutils/estd to 0.4nb1 [dillo 2005-12-27]
