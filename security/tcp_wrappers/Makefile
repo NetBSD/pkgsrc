@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/05/26 02:25:22 markd Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/27 23:44:25 reed Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -45,7 +45,7 @@ MAKE_ENV+=	IPV6=-DHAVE_IPV6
 PKG_SYSCONFDIR.tcp_wrappers?=	/etc
 MAKE_ENV+=	PKGSYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
-INSTALLATION_DIRS=	bin include lib libexec man/man3 man/man5 man/man8
+INSTALLATION_DIRS=	bin include lib libexec ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 post-build:
 	cd ${WRKSRC}; for file in *.[0-9]; do				\
@@ -63,9 +63,9 @@ do-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} tcpd.h ${PREFIX}/include
 	cd ${WRKSRC}; ${LIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec
-	cd ${WRKSRC}; ${INSTALL_DATA} *.3 ${PREFIX}/man/man3
-	cd ${WRKSRC}; ${INSTALL_DATA} *.5 ${PREFIX}/man/man5
-	cd ${WRKSRC}; ${INSTALL_DATA} *.8 ${PREFIX}/man/man8
+	cd ${WRKSRC}; ${INSTALL_DATA} *.3 ${PREFIX}/${PKGMANDIR}/man3
+	cd ${WRKSRC}; ${INSTALL_DATA} *.5 ${PREFIX}/${PKGMANDIR}/man5
+	cd ${WRKSRC}; ${INSTALL_DATA} *.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcp_wrappers
 	cd ${WRKSRC}; ${INSTALL_DATA} README README.NIS README.ipv6 \
 		${PREFIX}/share/doc/tcp_wrappers
