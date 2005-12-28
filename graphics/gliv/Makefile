@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/26 23:39:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/28 08:35:24 garbled Exp $
 
 DISTNAME=	gliv-1.9.3
 CATEGORIES=	graphics
@@ -8,9 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://guichaz.free.fr/gliv/
 COMMENT=	OpenGL image viewer
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 BUILD_USES_MSGFMT=	yes
 
