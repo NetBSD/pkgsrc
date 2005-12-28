@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 15:49:41 ghen Exp $
+bin/nc6
+man/man1/nc6.1
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nc6.mo
