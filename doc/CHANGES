@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12250 2005/12/28 17:57:46 seb Exp $
+$NetBSD: CHANGES,v 1.12251 2005/12/28 18:13:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5810,3 +5810,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added audio/cripple version 0.06b [ghen 2005-12-28]
 	Updated misc/screen to 4.0.2nb4 [reed 2005-12-28]
 	Updated shells/rssh to 2.3.0 [seb 2005-12-28]
+	Updated www/firefox to 1.5nb2 [jmmv 2005-12-28]
