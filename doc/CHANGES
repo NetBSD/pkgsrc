@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12243 2005/12/28 11:09:32 ghen Exp $
+$NetBSD: CHANGES,v 1.12244 2005/12/28 12:11:52 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5800,3 +5800,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/sun-jdk13 to 1.0.17 [abs 2005-12-28]
 	Updated lang/sun-jre13 to 1.0.17 [abs 2005-12-28]
 	Updated x11/qt3-libs to 3.3.5nb1 [ghen 2005-12-28]
+	Updated net/tspc to 2.1.1 [ghen 2005-12-28]
