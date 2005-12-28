@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/26 23:39:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/28 01:04:11 abs Exp $
 #
 
 DIST_VERS=		7.4.6
@@ -18,9 +18,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jwise@NetBSD.org
 HOMEPAGE=		http://www.postgresql.org/
 COMMENT=		Pure Java JDBC driver for PostgreSQL 7.4.x
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 # No, we don't depend on postgresql.  This code base stands alone.
 BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
