@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1 2002/12/23 13:13:05 grant Exp $
+$NetBSD: patch-ap,v 1.2 2005/12/28 17:53:24 reed Exp $
 
---- doc/screen.1.orig	Thu Sep  5 22:08:06 2002
-+++ doc/screen.1
-@@ -576,7 +576,7 @@ Show a listing of all currently attached
+--- doc/screen.1.orig	2003-12-05 05:51:57.000000000 -0800
++++ doc/screen.1	2005-12-27 13:54:30.000000000 -0800
+@@ -581,7 +581,7 @@
  
  .SH CUSTOMIZATION
  The \*Qsocket directory\*U defaults either to $HOME/.screen or simply to
@@ -11,7 +11,7 @@ $NetBSD: patch-ap,v 1.1 2002/12/23 13:13:05 grant Exp $
  .I screen
  is installed setuid-root, then the administrator
  should compile
-@@ -589,7 +589,7 @@ in the environment variable $SCREENDIR.
+@@ -594,7 +594,7 @@
  When
  .I screen
  is invoked, it executes initialization commands from the files
@@ -20,7 +20,16 @@ $NetBSD: patch-ap,v 1.1 2002/12/23 13:13:05 grant Exp $
  \*Q.screenrc\*U in the user's home directory. These are the \*Qprogrammer's
  defaults\*U that can be overridden in the following ways: for the
  global screenrc file 
-@@ -4298,14 +4298,14 @@ Examples in the 
+@@ -624,7 +624,7 @@
+ protected from variable substitution.
+ .PP
+ Two configuration files are shipped as examples with your screen distribution:
+-\*Qetc/screenrc\*U and \*Qetc/etcscreenrc\*U. They contain a number of
++\*Q@EXAMPLES@/screenrc\*U and \*Q@EXAMPLES@/etcscreenrc\*U. They contain a number of
+ useful examples for various commands.
+ .PP
+ Customization can also be done 'on-line'. To enter the command mode type
+@@ -4416,14 +4416,14 @@
  .I screen
  distribution package for private and global initialization files.
  .IP $SYSSCREENRC 
