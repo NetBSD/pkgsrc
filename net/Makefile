@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.592 2005/12/01 17:27:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.593 2005/12/28 15:51:08 ghen Exp $
 #
 
 COMMENT=	Networking tools
@@ -84,6 +84,7 @@ SUBDIR+=	etherape
 SUBDIR+=	ethereal
 SUBDIR+=	ettercap
 SUBDIR+=	ettercap-NG
+SUBDIR+=	ez-ipupdate
 SUBDIR+=	fair-identd
 SUBDIR+=	firewalk
 SUBDIR+=	flan
@@ -207,6 +208,7 @@ SUBDIR+=	netatalk
 SUBDIR+=	netatalk1
 SUBDIR+=	netbsd-tap
 SUBDIR+=	netcat
+SUBDIR+=	netcat6
 SUBDIR+=	netdisco
 SUBDIR+=	netgroup
 SUBDIR+=	netname
