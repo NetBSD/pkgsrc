@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/28 04:56:42 reed Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/28 05:05:44 reed Exp $
 #
 
 DISTNAME=	jadetex-3.13
@@ -17,8 +17,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/jadetex \
 			share/sgml/jade
 NO_BUILD=	yes
 TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
-
-INSTALLATION_DIRS=	bin
 
 .include "../../print/teTeX/module.mk"
 
