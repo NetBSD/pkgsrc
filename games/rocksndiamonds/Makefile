@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/11 09:40:43 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/28 04:53:36 reed Exp $
 
 DISTNAME=	rocksndiamonds-3.1.1
 PKGREVISION=	1
@@ -12,8 +12,8 @@ COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban (X11 build)
 USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake
 
-INSTALLATION_DIRS=	man/man6
-
+INSTALLATION_DIRS=	${PKGMANDIR}/man6
+ 
 PLIST_SRC=	${WRKDIR}/PLIST ../rocksndiamonds/PLIST
 PLIST_SUBST+=	SCORE_PATH=${SCORE_PATH:Q}
 PLIST_SUBST+=	ROCK_INSTALL_DIR="${INSTALL} -d -o ${RND_USER} -g ${RND_GROUP} -m 775"
@@ -48,7 +48,7 @@ do-install:
 	${INSTALL_PROGRAM} -o ${RND_USER} -g ${RND_GROUP} -m 2755 \
 		${WRKSRC}/rocksndiamonds ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 \
-		${PREFIX}/man/man6/rocksndiamonds.6
+		${PREFIX}/${PKGMANDIR}/man6/rocksndiamonds.6
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rocksndiamonds
 	cd ${WRKSRC} && ${PAX} -rw sounds graphics levels music \
 		${PREFIX}/share/rocksndiamonds/
