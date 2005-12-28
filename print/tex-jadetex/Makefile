@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/14 21:57:00 tonio Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/28 04:56:42 reed Exp $
 #
 
 DISTNAME=	jadetex-3.13
@@ -8,10 +8,13 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jadetex/}
 
 MAINTAINER=	hubertf@NetBSD.org
+HOMEPAGE=	http://jadetex.sourceforge.net/
 COMMENT=	Process tex files produced by the TeX backend of Jade
 
 DEPENDS+=	tex-hugelatex>=1.0nb1:../../print/tex-hugelatex
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/jadetex \
+			share/sgml/jade
 NO_BUILD=	yes
 TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
 
@@ -33,9 +36,8 @@ do-install:
 	${LN} -s ${TEX} ${PREFIX}/bin/jadetex
 	${RM} -f ${PREFIX}/bin/pdfjadetex
 	${LN} -s ${PDFTEX} ${PREFIX}/bin/pdfjadetex
-	${INSTALL_MAN} ${WRKSRC}/jadetex.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/pdfjadetex.1 ${PREFIX}/man/man1
-	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/jadetex
+	${INSTALL_MAN} ${WRKSRC}/jadetex.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/pdfjadetex.1 ${PREFIX}/${PKGMANDIR}/man1
 	for i in ${WRKSRC}/doc/* ; do \
 		${INSTALL_MAN} $$i ${PREFIX}/share/doc/jadetex; \
 	done
@@ -43,7 +45,6 @@ do-install:
 	: Complete the set that the textproc/jade pkg started. We
 	: use our files here as that is what the jadetex.fmt file is
 	: really made from:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/jadetex.dtx ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/jadetex.ini ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/jadetex.ins ${PREFIX}/share/sgml/jade
