@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.2 2005/12/28 22:00:49 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.3 2005/12/28 22:09:12 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -7,3 +7,5 @@ Created pkgsrc-2005Q4 branch [agc 2005-12-27 09:15 GMT]
 
 Pullup ticket 971 - requested by Martti Kuparinen
 sync editors/vim-share, hence editors/vim-* except editors/vim-kde, with HEAD
+Pullup ticket 977 - requested by Soren Jacobsen
+security update for shells/scponly
