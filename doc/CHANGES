@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12241 2005/12/28 07:07:45 cube Exp $
+$NetBSD: CHANGES,v 1.12242 2005/12/28 09:25:20 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5797,3 +5797,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added audio/solfege version 3.0.5 [schmonz 2005-12-28]
 	Added mail/p5-Mail-Ezmlm version 0.05.1 [schmonz 2005-12-28]
 	Updated textproc/py-feedparser to 4.0.2 [schmonz 2005-12-28]
+	Updated lang/sun-jdk13 to 1.0.17 [abs 2005-12-28]
+	Updated lang/sun-jre13 to 1.0.17 [abs 2005-12-28]
