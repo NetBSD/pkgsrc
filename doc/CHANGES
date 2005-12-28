@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12239 2005/12/28 06:11:34 schmonz Exp $
+$NetBSD: CHANGES,v 1.12240 2005/12/28 06:59:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5796,3 +5796,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added security/CSP version 0.32 [cube 2005-12-27]
 	Added audio/solfege version 3.0.5 [schmonz 2005-12-28]
 	Added mail/p5-Mail-Ezmlm version 0.05.1 [schmonz 2005-12-28]
+	Updated textproc/py-feedparser to 4.0.2 [schmonz 2005-12-28]
