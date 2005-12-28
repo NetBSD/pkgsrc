@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/28 18:55:07 snj Exp $
 
-DISTNAME=	scponly-4.1
+DISTNAME=	scponly-4.3
 CATEGORIES=	shells security
 MASTER_SITES=	http://www.sublimation.org/scponly/
 EXTRACT_SUFX=	.tgz
