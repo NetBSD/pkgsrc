@@ -1,0 +1,8 @@
+Cripple is a simple command line CD ripper wrapper.  It uses audio/cdparanoia,
+misc/libcdio or sysutils/cdrecord to rip, and audio/lame or audio/bladeenc to
+encode tracks from a CD.
+
+Cripple retrieves naming information for filenames and ID3 tags from the freedb
+(CDDB) or local xmcd/CDDB format files, which it can write.  CDDB access is
+implemented via HTTP and works through proxies.  There is built-in support for
+writing ID3v1.1 tags to output files.

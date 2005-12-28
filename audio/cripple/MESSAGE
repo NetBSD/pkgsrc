@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/12/28 15:52:01 ghen Exp $
+
+To use this package you will need at least one of the following rippers:
+
+audio/cdparanoia
+misc/libcdio
+sysutils/cdrecord
+
+and one of the following encoders:
+
+audio/lame
+audio/bladeenc
+
+It will use cdparanoia and lame by default.
+===========================================================================
