@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.147 2005/12/28 16:46:38 reed Exp $
+# $NetBSD: replace.mk,v 1.148 2005/12/28 22:21:19 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -704,34 +704,6 @@ TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.xmkmf) && !empty(_USE_TOOLS:Mxmkmf)
-.  if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
-MAKEFLAGS+=			TOOLS_IGNORE.xmkmf=
-.  elif !empty(_TOOLS_USE_PKGSRC.xmkmf:M[yY][eE][sS])
-TOOLS_CREATE+=			xmkmf
-.    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.xmkmf?=		XFree86-imake>=4.4.0:../../x11/XFree86-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmkmf=imake
-TOOLS_PATH.xmkmf=		${TOOLS_PREFIX.xmkmf}/${X11ROOT_PREFIX}/bin/xmkmf
-.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.xmkmf?=		xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmkmf=xorg-imake
-TOOLS_PATH.xmkmf=		${TOOLS_PREFIX.xmkmf}/${X11ROOT_PREFIX}/bin/xmkmf
-.    else # !empty(X11_TYPE:Mnative)
-TOOLS_PATH.xmkmf=		${X11BASE}/bin/xmkmf
-.    endif
-#
-# If we're using xpkgwedge, then we need to invoke the special xmkmf
-# script that will find imake config files in both ${PREFIX} and in
-# ${X11BASE}.
-#
-.    if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xpkgwedge=xpkgwedge
-TOOLS_PATH.xmkmf=		${TOOLS_PREFIX.xpkgwedge}/bin/pkgxmkmf
-.    endif
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.yacc) && !empty(_USE_TOOLS:Myacc)
 .  if !empty(PKGPATH:Mdevel/bison)
 MAKEFLAGS+=			TOOLS_IGNORE.yacc=
@@ -912,7 +884,7 @@ TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 # These tools are all supplied by an X11 imake package if there is no
 # native tool available.
 #
-_TOOLS.x11-imake=	imake mkdirhier
+_TOOLS.x11-imake=	imake mkdirhier xmkmf
 
 .for _t_ in ${_TOOLS.x11-imake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
@@ -935,6 +907,17 @@ TOOLS_PATH.${_t_}=		${X11BASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
+#
+# If we're using xpkgwedge, then we need to invoke the special xmkmf
+# script that will find imake config files in both ${PREFIX} and in
+# ${X11BASE}.
+#
+.if !defined(TOOLS_IGNORE.xmkmf) && !empty(_USE_TOOLS:Mxmkmf)
+.  if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.xpkgwedge=xpkgwedge
+TOOLS_PATH.xmkmf=	${TOOLS_PREFIX.xpkgwedge}/bin/pkgxmkmf
+.  endif
+.endif
 
 ######################################################################
 
