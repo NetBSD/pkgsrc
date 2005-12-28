@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/12/05 03:04:28 snj Exp $
+$NetBSD: distinfo,v 1.4.2.1 2005/12/28 22:08:20 seb Exp $
 
-SHA1 (scponly-4.1.tgz) = 416ec072c2dc584358152ca4a3c0660b28399d4c
-RMD160 (scponly-4.1.tgz) = ea4a119a05a23ff18870701d964c72ab7c9ce1c1
-Size (scponly-4.1.tgz) = 93138 bytes
+SHA1 (scponly-4.3.tgz) = 1aa08715d49c76ca0e78685b027e977acdd563c8
+RMD160 (scponly-4.3.tgz) = 780baf0a2be4b3042d721953c109c06ff0d9d1a2
+Size (scponly-4.3.tgz) = 94889 bytes
 SHA1 (patch-aa) = a09c070db3c46d776d57bf16354604b295f2f749
