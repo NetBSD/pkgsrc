@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12246 2005/12/28 13:46:53 joerg Exp $
+$NetBSD: CHANGES,v 1.12247 2005/12/28 14:04:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5803,3 +5803,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated net/tspc to 2.1.1 [ghen 2005-12-28]
 	Added devel/lincvs version 1.4.3 [ghen 2005-12-28]
 	Updated biology/phylip to 3.61nb1 [joerg 2005-12-28]
+	Updated biology/rasmol to 2.7.3nb1 [joerg 2005-12-28]
