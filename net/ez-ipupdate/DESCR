@@ -1,0 +1,19 @@
+ez-ipupdate is a small utility for updating your host name for the any
+of the dynamic DNS service offered at:
+
+* http://www.ez-ip.net
+* http://www.justlinux.com
+* http://www.dhs.org
+* http://www.dyndns.org
+* http://www.ods.org
+* http://gnudip.cheapnet.net (GNUDip)
+* http://www.dyn.ca (GNUDip)
+* http://www.tzo.com
+* http://www.easydns.com
+* http://www.dyns.cx
+* http://www.hn.org
+* http://www.zoneedit.com
+
+The key features are: support for multiple service types, daemon mode
+that monitors your IP address and only sends updates when your IP
+address changes.
