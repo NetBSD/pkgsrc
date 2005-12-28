@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/12/28 15:49:41 ghen Exp $
+
+NetBSD/DragonFly/*BSD/Linux/Solaris have alloca defined in either <stdlib.h>
+or <alloca.h>, so drop this test because it breaks on DragonFly.  
+
+--- src/filter.c.orig	2003-04-14 09:00:50.000000000 +0000
++++ src/filter.c
+@@ -37,10 +37,6 @@
+ #else
+ #ifdef _AIX
+ #pragma alloca
+-#else
+-#ifndef alloca /* predefined by HP cc +Olibcalls */
+-char *alloca();
+-#endif
+ #endif
+ #endif
+ 

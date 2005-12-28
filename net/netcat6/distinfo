@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/28 15:49:41 ghen Exp $
+
+SHA1 (nc6-0.5.tar.bz2) = e9a7350012ee04dff70d2c6f715d322c790976c5
+RMD160 (nc6-0.5.tar.bz2) = a840829c7bc0d2f9b7cb0d26e5de138207e1c2dd
+Size (nc6-0.5.tar.bz2) = 200077 bytes
+SHA1 (patch-aa) = 003961ddf49cc78e229581c781186514f35146cb
