@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.7 2005/12/05 22:07:07 rillig Exp $
+# $NetBSD: fonts.mk,v 1.8 2005/12/28 17:54:20 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # fonts (most of them in the fonts category).  It takes care of updating the
@@ -53,6 +53,7 @@ FONTS_X11_DIRS+=	${FONTS_TYPE1_DIRS}
 FILES_SUBST+=		FONTS_X11="YES"
 FILES_SUBST+=		FONTS_X11_DIRS=${FONTS_X11_DIRS:Q}
 FILES_SUBST+=		MKFONTDIR="${X11BASE}/bin/mkfontdir"
+USE_TOOLS+=		mkfontdir
 .endif
 
 .endif
