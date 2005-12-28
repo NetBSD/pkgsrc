@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.146 2005/12/28 04:24:37 reed Exp $
+# $NetBSD: replace.mk,v 1.147 2005/12/28 16:46:38 reed Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -894,7 +894,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 TOOLS_CREATE+=		${_t_}
 .      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
 TOOLS_DEPENDS.${_t_}?=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=XFree86-clients
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
 .      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
 TOOLS_DEPENDS.${_t_}?=	xorg-clients>=6.8:../../x11/xorg-clients
