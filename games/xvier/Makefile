@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/09/19 16:37:26 reed Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/28 04:52:23 reed Exp $
 
 DISTNAME=	xvier
 PKGNAME=	xvier-1.0
@@ -14,11 +14,11 @@ COMMENT=	Four-in-a-row game
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_IMAKE=	YES
 
-INSTALLATION_DIRS+=	bin libexec man/man6
+INSTALLATION_DIRS+=	bin libexec ${PKGMANDIR}/man6
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xvier ${PREFIX}/bin/xvier
 	${INSTALL_PROGRAM} ${WRKSRC}/xvier_prog ${PREFIX}/libexec/xvier_prog
-	${INSTALL_MAN} ${WRKSRC}/xvier._man ${PREFIX}/man/man6/xvier.6
+	${INSTALL_MAN} ${WRKSRC}/xvier._man ${PREFIX}/${PKGMANDIR}/man6/xvier.6
 
 .include "../../mk/bsd.pkg.mk"
