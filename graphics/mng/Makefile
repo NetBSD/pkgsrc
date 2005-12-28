@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/28 04:54:17 reed Exp $
 
 DISTNAME=	lm1009
 PKGNAME=	mng-1.0.9
@@ -30,7 +30,7 @@ CPPFLAGS+=		${BUILDLINK_CPPFLAGS.lcms}
 
 DOCDIR=			${PREFIX}/share/doc/mng
 
-INSTALLATION_DIRS=	man/man3 man/man5
+INSTALLATION_DIRS=	${PKGMANDIR}/man3 ${PKGMANDIR}/man5
 
 pre-configure:
 	cd ${WRKSRC};							\
@@ -46,9 +46,9 @@ post-install:
 	cd ${WRKSRC}/doc && \
 		${INSTALL_DATA} Plan1.png Plan2.png libmng.txt ${DOCDIR}
 	cd ${WRKSRC}/doc/man && \
-		${INSTALL_MAN} libmng.3 ${PREFIX}/man/man3
+		${INSTALL_MAN} libmng.3 ${PREFIX}/${PKGMANDIR}/man3
 	cd ${WRKSRC}/doc/man && \
-		${INSTALL_MAN} jng.5 mng.5 ${PREFIX}/man/man5
+		${INSTALL_MAN} jng.5 mng.5 ${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
