@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
+
+--- te_exec2.c.orig	1993-08-06 00:29:34.000000000 +0200
++++ te_exec2.c
+@@ -42,7 +42,7 @@ VOID update_header();
+ 
+ do_e()
+ {
+-	char c;							/* temps */
++	int c;							/* temps */
+ 	int old_var;
+ 	FILE *t_eisw;
+ 	struct stat statbuff;					/* buffer to fetch file stat (mode) of open file for EB */
+@@ -609,7 +609,7 @@ int do_glob(gbuff, sbuff)
+ {
+ 	char glob_cmd[CELLSIZE+5];			/* "glob filespec" command string */
+ 	int t;
+-	char c;
++	int c;
+ 	int glob_pipe[2];					/* pipe to forked shell for expanding filenames */
+ 	struct qp glob_ptr;					/* pointer for loading result buffer */
+ 	FILE *xx_out;						/* stream for reading chars from pipe */
+@@ -825,7 +825,7 @@ int read_stream(file, ff_found, rbuff, n
+ 	struct qp *rbuff;
+ 	int *ff_found, *nchars, endsw, crlf_sw, ff_sw;
+ {
+-	char chr;
++	int chr;
+ 	int crflag;
+ 	register struct buffcell *p;
+ 	register int c;

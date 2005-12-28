@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2005/12/06 22:43:03 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2005/12/28 22:33:36 is Exp $
 #
 
 COMMENT=	Editors
@@ -49,6 +49,7 @@ SUBDIR+=	lyx-qt
 SUBDIR+=	lyx-xforms
 SUBDIR+=	manedit
 SUBDIR+=	matlab-mode
+SUBDIR+=	mflteco
 SUBDIR+=	mg2a
 SUBDIR+=	mined
 SUBDIR+=	mlview

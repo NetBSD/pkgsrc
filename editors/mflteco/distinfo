@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
+
+SHA1 (mflteco.tar.gz) = d32206d961fa7068afa5a36cf9e688a018622c11
+RMD160 (mflteco.tar.gz) = 993ea515f87c17bafc763e3d7dcd55130cf7e83e
+Size (mflteco.tar.gz) = 80566 bytes
+SHA1 (patch-aa) = 3ee2c99f1a14c8f155faf866d29d070face206ab
+SHA1 (patch-ab) = bdeaa25511e11a8e39516eb2aa4c2dbea9f1cf9e
+SHA1 (patch-ac) = 052cf6f4ec6d03948543248f7bb9a872b00fb9f8
