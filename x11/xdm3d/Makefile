@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/26 23:39:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/28 17:51:58 garbled Exp $
 
 DISTNAME=		xdm3d-1.0
 CATEGORIES=		x11
@@ -8,9 +8,6 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.spade.com/linux/XBanner/
 COMMENT=		Replacement for xdm with 3D effects
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
-
 WRKSRC=			${WRKDIR}/xdm
 NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes
@@ -18,27 +15,38 @@ USE_IMAKE=		yes
 PLIST_SRC=		${WRKDIR}/PLIST-src
 INSTALLATION_DIRS=	bin
 
+.include "../../mk/bsd.prefs.mk"
+
+.if exists(${X11BASE}/lib/X11/xdm)
+XDMDIR=${X11BASE}/lib/X11/xdm
+.elif exists(/etc/X11/xdm)
+XDMDIR=/etc/X11/xdm
+.else
+PKG_FAIL_REASON+=	"Cannot find xdm directory."
+.endif
+
 do-install:
+	echo "${X11BASE} ${XDMDIR}"
 	${INSTALL_PROGRAM} ${WRKSRC}/xdm ${PREFIX}/bin/xdm3d
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xdm3d
-	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/GiveConsole ${PREFIX}/share/xdm3d
-	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/TakeConsole ${PREFIX}/share/xdm3d
-	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xaccess ${PREFIX}/share/xdm3d
-	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xservers ${PREFIX}/share/xdm3d
-	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsession ${PREFIX}/share/xdm3d
-	@if [ -r ${X11BASE}/lib/X11/xdm/Xsetup ]; then			\
-		${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsetup ${PREFIX}/share/xdm3d; \
+	${INSTALL_DATA} ${XDMDIR}/GiveConsole ${PREFIX}/share/xdm3d
+	${INSTALL_DATA} ${XDMDIR}/TakeConsole ${PREFIX}/share/xdm3d
+	${INSTALL_DATA} ${XDMDIR}/Xaccess ${PREFIX}/share/xdm3d
+	${INSTALL_DATA} ${XDMDIR}/Xservers ${PREFIX}/share/xdm3d
+	${INSTALL_DATA} ${XDMDIR}/Xsession ${PREFIX}/share/xdm3d
+	@if [ -r ${XDMDIR}/Xsetup ]; then			\
+		${INSTALL_DATA} ${XDMDIR}/Xsetup ${PREFIX}/share/xdm3d; \
 		sedexpr='-e s|^share/xdm3d/Xsetup_0$$|@comment\ &|';	\
-	elif [ -r ${X11BASE}/lib/X11/xdm/Xsetup_0 ]; then		\
-		${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xsetup_0 ${PREFIX}/share/xdm3d; \
+	elif [ -r ${XDMDIR}/Xsetup_0 ]; then		\
+		${INSTALL_DATA} ${XDMDIR}/Xsetup_0 ${PREFIX}/share/xdm3d; \
 		sedexpr='-e s|^share/xdm3d/Xsetup$$|@comment\ &|';	\
 	fi;								\
 	${SED} "$$sedexpr" ${PKGDIR}/PLIST > ${PLIST_SRC}
-	${INSTALL_PROGRAM} ${X11BASE}/lib/X11/xdm/chooser ${PREFIX}/share/xdm3d
+	${INSTALL_PROGRAM} ${XDMDIR}/chooser ${PREFIX}/share/xdm3d
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xdm3d/authdir
 	${CHMOD} 700 ${PREFIX}/share/xdm3d/authdir
-	${SED} -e 's@/usr/X11R6/lib/X11/xdm@${PREFIX}/share/xdm3d@' < \
-		${X11BASE}/lib/X11/xdm/xdm-config > \
+	${SED} -e 's@${XDMDIR}@${PREFIX}/share/xdm3d@' < \
+		${XDMDIR}/xdm-config > \
 		${PREFIX}/share/xdm3d/xdm-config
 	${INSTALL_DATA} ${WRKSRC}/Xresources.3D ${PREFIX}/share/xdm3d/Xresources
 	${ECHO} 'DisplayManager*loginmoveInterval:		10' >> \
