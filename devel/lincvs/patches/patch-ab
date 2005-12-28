@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/12/28 13:07:14 ghen Exp $
+
+--- src/AnnotateDialog.ui.orig	2005-07-25 22:12:46.000000000 +0200
++++ src/AnnotateDialog.ui
+@@ -153,7 +153,4 @@
+     <slot>enterWhatsThisMode()</slot>
+ </slots>
+ <layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>cvsfileviewer.h</includehint>
+-</includehints>
+ </UI>

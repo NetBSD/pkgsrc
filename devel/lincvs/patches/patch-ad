@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/12/28 13:07:14 ghen Exp $
+
+--- src/settingsdialog.ui.orig	2005-07-25 22:15:30.000000000 +0200
++++ src/settingsdialog.ui
+@@ -4445,18 +4445,4 @@ It's helpful if you attach a bug report 
+ </slots>
+ <pixmapinproject/>
+ <layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-    <includehint>ccolorbutton.h</includehint>
+-</includehints>
+ </UI>

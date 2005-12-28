@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/28 13:07:14 ghen Exp $
+
+SHA1 (lincvs-1.4.3-0-generic-src.tgz) = a7c4598bf3cc892bd104fbeaf059eb9b80c8171d
+RMD160 (lincvs-1.4.3-0-generic-src.tgz) = da7a821148797b69062aac0c7704605796c62141
+Size (lincvs-1.4.3-0-generic-src.tgz) = 1231514 bytes
+SHA1 (patch-aa) = 386b98a60c614a467932768709b9772160e328f4
+SHA1 (patch-ab) = 1019eade14ed46f111aa1e1a6a5b32f7193cb171
+SHA1 (patch-ac) = d5f4c14925f291090c6f56413275b0afd934a217
+SHA1 (patch-ad) = d528e9ba6bf60cdc30c456117566567d94e3827d
+SHA1 (patch-ae) = 5e9df370b50c9652ec12d75ab579390be5c64727
+SHA1 (patch-af) = 611568aaf919ca08caa2c9fd7c5563d4551b149a
+SHA1 (patch-ag) = 07c6d57f36ac88d789abb7d62e676d1f49b91ab9
+SHA1 (patch-ah) = 781ddbcbbd310f1db3d2dfbc3b3f0042dd5e4bcb
+SHA1 (patch-ai) = 4a748fd61e552f3503f025027a9c9e50e3d79e64
+SHA1 (patch-aj) = 5c39c28df7a4723bd1d10341b38ecaff70d7bf21

@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2005/12/28 13:07:14 ghen Exp $
+
+--- src/lincvs.cpp.orig	2005-07-25 22:15:04.000000000 +0200
++++ src/lincvs.cpp
+@@ -2980,8 +2980,8 @@ void ApplicationWindow::slot_help()
+    
+    QString lang = QString(QTextCodec::locale()).left(2);  //maybe it's useful without left(2)
+ 
+-   helpDir    = APPDIR + "/" + LC_HELP_DIR + "/" + LC_TRANSLATIONS_SUBDIR + "/" + lang;
+-   helpDirDef = APPDIR + "/" + LC_HELP_DIR;
++   helpDir    = "%%PREFIX%%/share/doc/lincvs/translations/" + lang;
++   helpDirDef = "%%PREFIX%%/share/doc/lincvs";
+ 
+    filename = helpDir + tr("/README.html");
+    f.setName(filename);
