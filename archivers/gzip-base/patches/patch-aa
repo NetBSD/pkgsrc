@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2004/05/07 21:41:43 reed Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/28 04:36:31 reed Exp $
 
---- Makefile.in.orig	Fri May  7 14:26:18 2004
+--- Makefile.in.orig	1993-08-17 13:12:00.000000000 -0700
 +++ Makefile.in
-@@ -104,7 +104,7 @@ mandir = $(prefix)/man/man$(manext)
+@@ -100,11 +100,11 @@ infodir = $(prefix)/info
+ # Extension (not including `.') for the installed manual page filenames.
+ manext = 1
+ # Where to install the manual pages.
+-mandir = $(prefix)/man/man$(manext)
++mandir = $(prefix)/$(PKGMANDIR)/man$(manext)
  # Use manlinks=so to use the .so method instead of hard links
  manlinks = ln
  
