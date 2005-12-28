@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4303 2005/12/28 17:26:18 wiz Exp $
+$NetBSD: TODO,v 1.4304 2005/12/28 17:47:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1141,6 +1141,7 @@ Suggested package updates
 	o rpc2-1.28
 	o rpm-4.1
 	o rsnapshot-1.2.3
+	o rssh-2.3.0
 	o rt-3.4.4
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
@@ -1168,6 +1169,7 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scilab-3.1
+	o scponly-4.3
 	o scrollz-1.9.5
 	o sdig-0.40
 	o semantic-1.4.4
