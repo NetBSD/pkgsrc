@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2004/11/03 11:17:53 grant Exp $
+$NetBSD: patch-aa,v 1.11 2005/12/28 04:58:01 reed Exp $
 
 --- Makefile.orig	2004-10-04 08:32:26.000000000 +1000
 +++ Makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.10 2004/11/03 11:17:53 grant Exp $
  
  DOC_PREFIX=$(PREFIX)/share/doc/tuxpaint/
 -MAN_PREFIX=$(PREFIX)/share/man/
-+MAN_PREFIX=$(PREFIX)/man/
++MAN_PREFIX=$(PREFIX)/$(PKGMANDIR)
  
  
 -# 'System-wide' Config file:
