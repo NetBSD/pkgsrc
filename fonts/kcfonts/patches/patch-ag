@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/07/18 16:19:08 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2005/12/28 19:50:45 joerg Exp $
 
---- kc24f.c.orig	Sat Dec 16 18:19:42 1995
+--- kc24f.c.orig	1995-12-16 17:19:42.000000000 +0000
 +++ kc24f.c
-@@ -11,22 +11,29 @@
+@@ -11,26 +11,33 @@
  char head[]=
  "STARTFONT 2.1\n"
  "COMMENT 24x24 Font\n"
@@ -40,3 +40,16 @@ $NetBSD: patch-ag,v 1.1.1.1 2002/07/18 16:19:08 wiz Exp $
  "ENDPROPERTIES\n"
  "CHARS 13867\n";
  
+-FILE *fp,*fr1, *fr2, *fw=stdout;
++FILE *fp,*fr1, *fr2, *fw;
+ 
+ int count, ofs;
+ 
+@@ -61,6 +68,7 @@ fprintf(fw,"ENDCHAR\n");
+ 
+ main()
+ {
++  fw = stdout;
+ 
+ if ((fp=fopen("spcfont.24","r"))==NULL) {
+   fprintf(stderr,"kc24 Error 1:Can't open spcfont.24\n"); exit(2); 
