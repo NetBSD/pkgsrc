@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/01 18:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/28 17:58:53 joerg Exp $
 
 DISTNAME=	intlfonts-1.2.1
 PKGREVISION=	2
@@ -15,6 +15,8 @@ FONT_SETS=	Asian		\
 		European	\
 		Japanese	\
 		Misc
+
+USE_TOOLS+=	bdftopcf
 
 # Use the X font set for Korean, as there isn't anything better
 FONT_SETS+=	Korean.X
