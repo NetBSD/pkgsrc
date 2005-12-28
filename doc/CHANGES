@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12248 2005/12/28 15:59:33 ghen Exp $
+$NetBSD: CHANGES,v 1.12249 2005/12/28 17:55:59 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5808,3 +5808,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added net/ez-ipupdate version 3.0.11b7 [ghen 2005-12-28]
 	Added net/netcat6 version 0.5 [ghen 2005-12-28]
 	Added audio/cripple version 0.06b [ghen 2005-12-28]
+	Updated misc/screen to 4.0.2nb4 [reed 2005-12-28]
