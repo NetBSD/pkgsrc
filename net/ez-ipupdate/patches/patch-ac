@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/12/28 15:50:35 ghen Exp $
+
+--- cache_file.c.orig	2001-04-04 19:12:02.000000000 +0200
++++ cache_file.c
+@@ -29,6 +29,7 @@
+ #  include <config.h>
+ #endif
+ 
++#include <errno.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -36,18 +37,13 @@
+ #if HAVE_SYS_STAT_H
+ #  include <sys/stat.h>
+ #endif
+-#if HAVE_ERRNO_H
+-#  include <errno.h>
+-#endif
+ 
+ #include <cache_file.h>
+ 
+ #if HAVE_STRERROR
+-extern int errno;
+ #  define error_string strerror(errno)
+ #elif HAVE_SYS_ERRLIST
+ extern const char *const sys_errlist[];
+-extern int errno;
+ #  define error_string (sys_errlist[errno])
+ #else
+ #  define error_string "error message not found"
+@@ -63,11 +59,9 @@ extern int errno;
+ #  define dprintf(x)
+ #endif
+ #if HAVE_STRERROR
+-extern int errno;
+ #  define error_string strerror(errno)
+ #elif HAVE_SYS_ERRLIST
+ extern const char *const sys_errlist[];
+-extern int errno;
+ #  define error_string (sys_errlist[errno])
+ #else
+ #  define error_string "error message not found"

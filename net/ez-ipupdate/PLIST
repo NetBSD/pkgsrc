@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 15:50:35 ghen Exp $
+bin/ez-ipupdate
+share/examples/ez-ipupdate/example-dhs.conf
+share/examples/ez-ipupdate/example-dyndns.conf
+share/examples/ez-ipupdate/example-dyns.conf
+share/examples/ez-ipupdate/example-easydns.conf
+share/examples/ez-ipupdate/example-gnudip.conf
+share/examples/ez-ipupdate/example-heipv6tb.conf
+share/examples/ez-ipupdate/example-justlinux.conf
+share/examples/ez-ipupdate/example-ods.conf
+share/examples/ez-ipupdate/example-pgpow.conf
+share/examples/ez-ipupdate/example-tzo.conf
+share/examples/ez-ipupdate/ez-ipupdate.conf
+share/examples/rc.d/ez-ipupdate
+@dirrm share/examples/ez-ipupdate

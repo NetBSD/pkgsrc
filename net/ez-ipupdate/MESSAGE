@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/12/28 15:50:35 ghen Exp $
+
+Due to restrictions on the naming of environment variables (they cannot
+contain dashes), the rc.d script for this package is called ez_ipupdate,
+and the according rc.conf variables are ez_ipupdate and ez_ipupdate_flags.
+===========================================================================
