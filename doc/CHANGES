@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12253 2005/12/28 21:44:50 wiz Exp $
+$NetBSD: CHANGES,v 1.12254 2005/12/28 22:38:05 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5813,3 +5813,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated www/firefox to 1.5nb2 [jmmv 2005-12-28]
 	Updated shells/scponly to 4.3 [snj 2005-12-28]
 	Updated emulators/ckmame to 0.7 [wiz 2005-12-28]
+	Added editors/mflteco version 19920331 [is 2005-12-28]
