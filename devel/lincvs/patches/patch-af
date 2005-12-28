@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/12/28 13:07:14 ghen Exp $
+
+--- src/ResolvDialog.ui.orig	2005-07-25 22:14:03.000000000 +0200
++++ src/ResolvDialog.ui
+@@ -347,9 +347,4 @@
+     <slot>enterWhatsThisMode()</slot>
+ </slots>
+ <layoutdefaults spacing="0" margin="0"/>
+-<includehints>
+-    <includehint>filetableimpl.h</includehint>
+-    <includehint>filetableimpl.h</includehint>
+-    <includehint>filetableimpl.h</includehint>
+-</includehints>
+ </UI>
