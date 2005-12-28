@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.295 2005/12/09 17:22:02 salo Exp $
+# $NetBSD: Makefile,v 1.296 2005/12/28 06:09:43 schmonz Exp $
 #
 
 COMMENT=	Audio tools
@@ -223,6 +223,7 @@ SUBDIR+=	rsynth
 SUBDIR+=	shorten
 SUBDIR+=	sidplay
 SUBDIR+=	snd
+SUBDIR+=	solfege
 SUBDIR+=	sox
 SUBDIR+=	speex
 SUBDIR+=	spiralloops
