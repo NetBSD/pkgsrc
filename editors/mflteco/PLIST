@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
+bin/te
+share/doc/mflteco/00README
+share/doc/mflteco/teco.doc
+share/doc/mflteco/teco.doc.1
+share/examples/mflteco/.tecorc
+share/examples/mflteco/pi.tec
+share/examples/mflteco/sample_tecorc.old
+share/examples/mflteco/tecorc.mch
+@dirrm share/examples/mflteco
+@dirrm share/doc/mflteco
