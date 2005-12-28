@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:49:51 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/28 14:03:51 joerg Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://www.bernstein-plus-sons.com/software/
 
@@ -11,7 +12,7 @@ COMMENT=	Molecular Graphics Visualisation Tool
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_IMAKE=	YES
-USE_TOOLS+=	gunzip
+USE_TOOLS+=	gunzip mkdirhier
 
 MAKE_ENV+=	DEPTHDEF=${DEPTHDEF:Q}
 
@@ -38,7 +39,6 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/NOTICE ${PREFIX}/share/doc/rasmol
-	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/doc/rasmol.1 ${PREFIX}/man/man1
 	for doc in manualA4.pdf.gz manualA4.ps.gz manualA4.rtf.gz	\
 			manualUS.pdf.gz manualUS.ps.gz manualUS.rtf.gz	\
 			refcardA4.pdf.gz refcardA4.ps.gz		\

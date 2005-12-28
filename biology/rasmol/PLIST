@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/07 15:13:21 perry Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/12/28 14:03:51 joerg Exp $
 bin/rasmol
-man/cat1/rasmol.0
-man/man1/rasmol.1
+${IMAKE_MAN_DIR}/rasmol.${IMAKE_MAN_SUFFIX}
 share/doc/rasmol/NOTICE
 share/doc/rasmol/manualA4.pdf.gz
 share/doc/rasmol/manualA4.ps.gz
