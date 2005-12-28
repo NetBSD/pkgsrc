@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.18 2005/12/05 20:50:27 rillig Exp $
+# $NetBSD: rubyversion.mk,v 1.19 2005/12/28 09:27:13 abs Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -27,8 +27,8 @@ RUBY_VERSION?=		${RUBY18_VERSION}
 .endif
 
 # RUBY_VERSION_SUPPORTED defines the list of ${RUBY_VER} which is
-#	supported by the package.  It should be defined by The pacakges
-#	for specific version Ruby.
+#	supported by the package.  It should be defined by the packages
+#	for specific Ruby versions.
 #
 RUBY_VERSION_SUPPORTED?= 18
 
