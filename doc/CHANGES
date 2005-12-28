@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12237 2005/12/27 20:58:26 cube Exp $
+$NetBSD: CHANGES,v 1.12238 2005/12/28 02:09:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5794,3 +5794,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added local/p5-Term-Prompt version 1.03 [cube 2005-12-27]
 	Updated benchmarks/ubench to 0.32nb1 [reed 2005-12-27]
 	Added security/CSP version 0.32 [cube 2005-12-27]
+	Added audio/solfege version 3.0.5 [schmonz 2005-12-28]
