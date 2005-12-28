@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST.common,v 1.7 2005/11/18 16:47:35 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2005/12/28 02:04:00 reed Exp $
+bin/lyx
+bin/noweb2lyx
+bin/reLyX
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/lyx.mo
@@ -15,9 +18,6 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/lyx.mo
-bin/lyx
-bin/noweb2lyx
-bin/reLyX
 man/man1/lyx.1
 man/man1/reLyX.1
 share/lyx/CREDITS
@@ -846,6 +846,7 @@ share/lyx/layouts/svjog.layout
 share/lyx/layouts/svjour.inc
 share/lyx/layouts/svprobth.layout
 share/lyx/lyx2lyx/LyX.py
+share/lyx/lyx2lyx/lyx2lyx
 share/lyx/lyx2lyx/lyx_0_12.py
 share/lyx/lyx2lyx/lyx_1_0_0.py
 share/lyx/lyx2lyx/lyx_1_0_1.py
@@ -856,7 +857,6 @@ share/lyx/lyx2lyx/lyx_1_1_6fix3.py
 share/lyx/lyx2lyx/lyx_1_2.py
 share/lyx/lyx2lyx/lyx_1_3.py
 share/lyx/lyx2lyx/lyx_1_4.py
-share/lyx/lyx2lyx/lyx2lyx
 share/lyx/lyx2lyx/parser_tools.py
 share/lyx/lyx2lyx/profiling.py
 share/lyx/lyxrc.defaults
@@ -906,12 +906,6 @@ share/lyx/templates/linuxdoc_article.lyx
 share/lyx/templates/revtex.lyx
 share/lyx/templates/revtex4.lyx
 share/lyx/templates/slides.lyx
-${PKG_TEXMFPREFIX}/tex/latex/lyx/broadway.cls
-${PKG_TEXMFPREFIX}/tex/latex/lyx/cv.cls
-${PKG_TEXMFPREFIX}/tex/latex/lyx/hollywood.cls
-${PKG_TEXMFPREFIX}/tex/latex/lyx/lyxchess.sty
-${PKG_TEXMFPREFIX}/tex/latex/lyx/lyxskak.sty
-${PKG_TEXMFPREFIX}/tex/latex/lyx/revtex.cls
 share/lyx/textclass.lst
 share/lyx/ui/default.ui
 share/lyx/xfonts/PSres.upr
@@ -925,9 +919,15 @@ share/lyx/xfonts/fonts.scale
 share/lyx/xfonts/msam10.pfb
 share/lyx/xfonts/msbm10.pfb
 share/lyx/xfonts/wasy10.pfb
+${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/broadway.cls
+${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/cv.cls
+${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/hollywood.cls
+${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/lyxchess.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/lyxskak.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/revtex.cls
+@dirrm ${PKG_TEXMFPREFIX}/tex/latex/lyx
 @dirrm share/lyx/xfonts
 @dirrm share/lyx/ui
-@dirrm ${PKG_TEXMFPREFIX}/tex/latex/lyx
 @dirrm share/lyx/templates
 @dirrm share/lyx/scripts
 @dirrm share/lyx/reLyX/Text
