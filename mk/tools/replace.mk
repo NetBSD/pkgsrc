@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.148 2005/12/28 22:21:19 jlam Exp $
+# $NetBSD: replace.mk,v 1.149 2005/12/28 22:26:50 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -889,20 +889,19 @@ _TOOLS.x11-imake=	imake mkdirhier xmkmf
 .for _t_ in ${_TOOLS.x11-imake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
-MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
-TOOLS_CREATE+=			${_t}
+TOOLS_CREATE+=		${_t}
 .      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.${_t_}?=		XFree86-imake>=4.4.0:../../x11/XFree86-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=imake
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+TOOLS_DEPENDS.${_t_}?=	XFree86-imake>=4.4.0:../../x11/XFree86-imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
 .      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.${_t_}?=		xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=xorg-imake
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
-# !empty(X11_TYPE:Mnative)
-.      else
-TOOLS_PATH.${_t_}=		${X11BASE}/bin/${_t_}
+TOOLS_DEPENDS.${_t_}?=	xorg-imake>=6.8:../../x11/xorg-imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-imake
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+.      else # !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 .      endif
 .    endif
 .  endif
