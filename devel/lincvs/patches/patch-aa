@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/12/28 13:07:14 ghen Exp $
+
+--- lincvs.pro.orig	2005-07-31 14:32:58.000000000 +0200
++++ lincvs.pro
+@@ -22,7 +22,7 @@ unix {
+ # check timezone functions (Unix only)
+ !mac:unix {
+    message( "Check for timezone function..." )
+-   system(cd test && qmake -o Makefile check_tz.pro && make)
++   system(cd test && %%QTDIR%%/bin/qmake -o Makefile check_tz.pro && make)
+    exists(test/check_tz) {
+       # use gmtoff member of tm structure
+       message("Use gmtoff member of tm structure")
+@@ -42,7 +42,7 @@ mac {
+ # check for standard compliant compiler (Unix only)
+ !mac:unix {
+    message( "Check for standard compliant compiler..." )
+-   system(cd test && qmake -o Makefile check_std.pro && make)
++   system(cd test && %%QTDIR%%/bin/qmake -o Makefile check_std.pro && make)
+    exists(test/check_std) {
+       # compiler knows std
+       message("Use std namespace")
+@@ -59,7 +59,7 @@ mac {
+ # check for working exception handling (Unix only)
+ !mac:unix {
+    message( "Check for working exception handling..." )
+-   system(cd test && qmake -o Makefile check_exc.pro && make)
++   system(cd test && %%QTDIR%%/bin/qmake -o Makefile check_exc.pro && make)
+    exists(test/check_exc) {
+       # exception handling works
+       message("Exception handling works")
+@@ -76,7 +76,7 @@ mac {
+ # check for nanosleep (Unix only)
+ !mac:unix {
+    message( "Check for nanosleep..." )
+-   system(cd test && qmake -o Makefile check_nano.pro && make)
++   system(cd test && %%QTDIR%%/bin/qmake -o Makefile check_nano.pro && make)
+    exists(test/check_nano) {
+       # use nanosleep
+       message("Use nanosleep")
