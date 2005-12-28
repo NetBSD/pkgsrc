@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2005/12/08 09:52:15 rillig Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2005/12/28 22:42:52 seb Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -46,7 +46,14 @@ CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX:Q}
 FILES_SUBST+=	DATE=${DATE:Q}
 
 #
-# IRIX work around should be fixed.
+# Use Berkley DB unless a system has real ndbm(3).
+#
+.if !exists(/usr/include/ndbm.h)
+.include "../../mk/bdb.buildlink3.mk"
+.endif
+
+#
+# IRIX work around which should be fixed.
 #
 .if ${OPSYS} == "IRIX"
 PLIST_SUBST+=  HAS_IO="@comment "
@@ -129,15 +136,6 @@ post-install:
 .for f in ${PTY_EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${RUBY_EXAMPLESDIR}/pty
 .endfor
-
-#
-# XXX:	Ruby extconf shuld select native ndbm(3) or Berkley DB's
-#	ndbm(3) compatible support.
-#
-.if ${OPSYS} != "IRIX" && ${OPSYS} != "SunOS"
-BDB_ACCEPTED?=		db1
-.include "../../mk/bdb.buildlink3.mk"
-.endif
 
 .include "../../lang/ruby/Makefile.common"
 .include "../../devel/zlib/buildlink3.mk"
