@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.149 2005/12/28 22:26:50 jlam Exp $
+# $NetBSD: replace.mk,v 1.150 2005/12/28 22:41:27 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -645,6 +645,28 @@ TOOLS_DEPENDS.tclsh?=		tcl>=8.4:../../lang/tcl
 TOOLS_CREATE+=			tclsh
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tclsh=tcl
 TOOLS_PATH.tclsh=		${TOOLS_PREFIX.tclsh}/bin/tclsh
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.ttmkfdir) && !empty(_USE_TOOLS:Mttmkfdir)
+.  if !empty(PKGPATH:Mfonts/ttmkfdir2)
+MAKEFLAGS+=			TOOLS_IGNORE.ttmkfdir=
+.  elif !empty(_TOOLS_USE_PKGSRC.ttmkfdir:M[yY][eE][sS])
+TOOLS_DEPENDS.ttmkfdir?=	ttmkfdir2>=20021109:../../fonts/ttmkfdir2
+TOOLS_CREATE+=			ttmkfdir
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ttmkfdir=ttmkfdir2
+TOOLS_PATH.ttmkfdir=		${TOOLS_PREFIX.ttmkfdir}/bin/ttmkfdir
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.type1inst) && !empty(_USE_TOOLS:Mtype1inst)
+.  if !empty(PKGPATH:Mfonts/type1inst)
+MAKEFLAGS+=			TOOLS_IGNORE.type1inst=
+.  elif !empty(_TOOLS_USE_PKGSRC.type1inst:M[yY][eE][sS])
+TOOLS_DEPENDS.type1inst?=	type1inst2>=0.6.1:../../fonts/type1inst
+TOOLS_CREATE+=			type1inst
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.type1inst=type1inst
+TOOLS_PATH.type1inst=		${TOOLS_PREFIX.type1inst}/bin/type1inst
 .  endif
 .endif
 
