@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2005/01/12 19:52:37 reed Exp $
+$NetBSD: patch-ae,v 1.2 2005/12/28 16:52:25 joerg Exp $
 
---- src/Makefile.in.orig	Sat Feb 14 12:06:20 2004
+--- src/Makefile.in.orig	2004-02-14 20:06:20.000000000 +0000
 +++ src/Makefile.in
+@@ -177,7 +177,7 @@ target_alias = @target_alias@
+ 
+ AM_CFLAGS = @X_CFLAGS@ -DVERSION=\"@PACKAGE_VERSION@\"  $(am__append_1)
+ 
+-AM_LDFLAGS = @X_LIBS@ -lpthread $(am__append_2) $(am__append_3)
++AM_LDFLAGS = @X_LIBS@ ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $(am__append_2) $(am__append_3)
+ 
+ 
+ # specific xvidcap / gvidcap
 @@ -195,14 +195,14 @@ xvidcap_LDADD = ../Xw/libXw.a  $(am__app
  @WITHGTK2_TRUE@gvidcap_LDFLAGS = $(AM_LDFLAGS) `pkg-config --libs gtk+-2.0`
  @WITHGTK2_TRUE@@WITHGT_TRUE@gvidcap_LDADD = ../gt/libgt.a
