@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.SunOS,v 1.10 2004/01/06 16:30:40 wiz Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.11 2005/12/28 17:53:24 reed Exp $
 bin/screen
 bin/${DISTNAME}
 man/man1/screen.1
 @unexec if [ -f %D/bin/screen.old ]; then ${RM} -f %D/bin/screen.old ; fi
+share/examples/screen/etcscreenrc
 share/examples/screen/screenrc
 share/lib/terminfo/s/screen
 share/lib/terminfo/s/screen-bce
