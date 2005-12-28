@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2004/12/01 04:47:53 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/28 14:17:57 joerg Exp $
 
---- src/graph/graphunixx11.c.orig	Fri Jul 16 01:59:53 2004
+--- src/graph/graphunixx11.c.orig	2004-07-16 01:59:53.000000000 +0000
 +++ src/graph/graphunixx11.c
 @@ -3085,11 +3085,30 @@ void ewait(INTBIG process)
  /*
@@ -8,7 +8,7 @@ $NetBSD: patch-ac,v 1.1 2004/12/01 04:47:53 dmcmahill Exp $
   */
 +
 +/* XXX there should really be some sort of autoconf test here... */
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
 +#endif
@@ -17,7 +17,7 @@ $NetBSD: patch-ac,v 1.1 2004/12/01 04:47:53 dmcmahill Exp $
  {
  	INTBIG numproc;
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +	int mib[2], ncpu;
 +	size_t len;
 +
