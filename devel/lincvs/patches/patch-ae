@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/12/28 13:07:14 ghen Exp $
+
+--- src/CheckoutDialog.ui.orig	2005-07-25 22:12:54.000000000 +0200
++++ src/CheckoutDialog.ui
+@@ -1020,7 +1020,4 @@ This is recommended, since you can use t
+     <slot>enterWhatsThisMode()</slot>
+ </slots>
+ <layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>revisionwidgetimpl.h</includehint>
+-</includehints>
+ </UI>
