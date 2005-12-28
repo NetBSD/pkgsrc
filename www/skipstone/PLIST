@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.5 2005/12/28 15:47:30 ghen Exp $
+bin/skipdownload
+bin/skipstone
+bin/skipstone-bin
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/skipstone.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/skipstone.mo
+share/skipstone/pixmaps/default/back.png
+share/skipstone/pixmaps/default/config.png
+share/skipstone/pixmaps/default/forward.png
+share/skipstone/pixmaps/default/home.png
+share/skipstone/pixmaps/default/logo.png
+share/skipstone/pixmaps/default/mini_folder.png
+share/skipstone/pixmaps/default/mini_link.png
+share/skipstone/pixmaps/default/reload.png
+share/skipstone/pixmaps/default/skipstone.png
+share/skipstone/pixmaps/default/stop.png
+share/skipstone/pixmaps/default/tab_loading.gif
+share/skipstone/pixmaps/default/tab_loading_alternative.gif
+share/skipstone/pixmaps/default/up.png
+@dirrm share/skipstone/pixmaps/default
+@dirrm share/skipstone/pixmaps
+@dirrm share/skipstone
