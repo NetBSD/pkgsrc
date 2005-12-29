@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 13:33:42 joerg Exp $
 
 PKGNAME=	postgresql80-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -67,19 +67,6 @@ USE_GNU_READLINE=	yes
 post-wrapper:
 	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
 .endif
-
-pre-configure:
-	${TOUCH} ${WRKSRC}/src/template/dragonfly
-	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c \
-		${WRKSRC}/src/backend/port/dynloader/dragonfly.c
-	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
-		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
-	${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h \
-		${WRKSRC}/src/backend/port/dynloader/dragonfly.h
-	${CP} ${WRKSRC}/src/include/port/freebsd.h \
-		${WRKSRC}/src/include/port/dragonfly.h
-	${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd \
-		${WRKSRC}/src/makefiles/Makefile.dragonfly
 
 pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\

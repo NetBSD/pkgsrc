@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2005/12/17 05:20:21 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2005/12/29 13:33:42 joerg Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -135,6 +135,23 @@ post-extract:
 			 >${WRKSRC}/src/backend/port/dynloader/$$template.c
 	fi
 .endif
+	if ${TEST} -d ${WRKSRC}/src/template; then			\
+		${TOUCH} ${WRKSRC}/src/template/dragonfly;		\
+	fi
+	if ${TEST} -d ${WRKSRC}/src/backend/port/dynloader; then	\
+		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c	\
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.c; \
+		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h	\
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
+	fi
+	if ${TEST} -d ${WRKSRC}/src/include/port; then			\
+		${CP} ${WRKSRC}/src/include/port/freebsd.h		\
+			${WRKSRC}/src/include/port/dragonfly.h;		\
+	fi
+	if ${TEST} -d ${WRKSRC}/src/makefiles; then			\
+		${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd		\
+			${WRKSRC}/src/makefiles/Makefile.dragonfly;	\
+	fi
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
 # This also limits the size of a tuple.  The valid values are powers
