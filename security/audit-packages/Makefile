@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/11/21 10:39:50 agc Exp $
+# $NetBSD: Makefile,v 1.64 2005/12/29 23:47:55 agc Exp $
 
 DISTNAME=	audit-packages-1.41
 CATEGORIES=	security pkgtools
@@ -23,6 +23,12 @@ INSTALLATION_DIRS=	man/cat8 man/man8 sbin
 SKIP_AUDIT_PACKAGES=	yes
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+MESSAGE_SRC=	${PKGDIR}/MESSAGE.DragonFly
+.else
+MESSAGE_SRC=	${PKGDIR}/MESSAGE
+.endif
 
 do-build:
 	@for f in audit-packages audit-packages.0 audit-packages.8 	\
