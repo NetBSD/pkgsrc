@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/05 23:55:20 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/29 06:22:19 jlam Exp $
 
 DISTNAME=	namazu-2.0.14
 PKGREVISION=	3
@@ -17,7 +17,6 @@ DEPENDS+=	p5-Text-ChaSen>=1.0:../../textproc/p5-Text-ChaSen
 CONFLICTS+=	namazu-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
 USE_LANGUAGE=		c

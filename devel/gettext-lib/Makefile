@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:04 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/29 06:21:37 jlam Exp $
 
 DISTNAME=		gettext-0.11.5
 PKGNAME=		gettext-lib-0.11.5
@@ -31,7 +31,6 @@ BUILD_DIRS=		${WRKSRC}/intl
 EGDIR=			${PREFIX}/share/examples/gettext
 LOCALEDIR=		${PREFIX}/${PKGLOCALEDIR}/locale
 
-USE_PKGINSTALL=		yes
 REQD_DIRS+=		${LOCALEDIR}
 REQD_FILES+=		${EGDIR}/locale.alias ${LOCALEDIR}/locale.alias
 

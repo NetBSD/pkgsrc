@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/19 18:27:54 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/29 06:21:33 jlam Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -17,7 +17,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--enable-ssl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/08 18:13:13 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:54 jlam Exp $
 #
 
 DISTNAME=	beacon-1.1-0
@@ -12,7 +12,6 @@ HOMEPAGE=	http://dast.nlanr.net/Projects/Beacon/
 COMMENT=	Multicast supervision tool
 
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples/beacon
 
 PERL5_CONFIGURE=	NO

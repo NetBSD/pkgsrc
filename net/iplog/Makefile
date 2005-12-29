@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/08 14:04:36 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/29 06:21:59 jlam Exp $
 #
 
 DISTNAME=	iplog-2.2.3
@@ -11,7 +11,6 @@ HOMEPAGE=	http://ojnk.sourceforge.net/
 COMMENT=	Iplog is a tool using pcap to log IP traffic
 
 USE_TOOLS+=		gmake
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
 RCD_SCRIPTS=	iplog

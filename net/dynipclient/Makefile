@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:24 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/29 06:21:58 jlam Exp $
 #
 
 DISTNAME=	dynip_3.00
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.dynip.com/
 COMMENT=	Client for the dynip.com dynamic DNS service
 
-USE_PKGINSTALL=	YES
 
 RCD_SCRIPTS=	dynipclient
 

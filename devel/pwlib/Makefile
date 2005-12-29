@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/12/26 23:39:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.47 2005/12/29 06:21:38 jlam Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -20,7 +20,6 @@ WRKSRC=			${WRKDIR}/pwlib
 USE_TOOLS+=		gmake tar
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-sasl --disable-openldap
 CONFIGURE_ARGS+=	--disable-expat --disable-video --disable-qos

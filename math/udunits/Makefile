@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 23:55:12 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/29 06:21:54 jlam Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.12.1
@@ -14,7 +14,6 @@ COMMENT=		Library and program for manipulating units of physical quantities
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

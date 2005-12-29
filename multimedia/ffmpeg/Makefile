@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 23:55:12 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/29 06:21:56 jlam Exp $
 
 DISTNAME=	ffmpeg-0.4.8
 PKGREVISION=	3
@@ -12,7 +12,6 @@ COMMENT=	MPEG decoding, encoding and streaming software
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
-USE_PKGINSTALL=	YES
 
 CONF_FILES=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf

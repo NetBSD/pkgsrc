@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/12/05 23:55:11 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2005/12/29 06:21:51 jlam Exp $
 
 DISTNAME=		nmh-1.0.4
 PKGREVISION=		6
@@ -26,7 +26,6 @@ CONFLICTS+=		ja-mh6-[0-9]*
 NMH_MTA?=		smtp
 
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec/nmh
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

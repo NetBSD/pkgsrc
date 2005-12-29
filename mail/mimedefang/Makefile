@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/10 22:14:14 markd Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/29 06:21:51 jlam Exp $
 
 DISTNAME=		mimedefang-2.54
 CATEGORIES=		mail
@@ -21,7 +21,6 @@ USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR?=	mimedefang
 
-USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 DEFANG_SPOOLDIR?=	${VARBASE}/spool/MIMEDefang

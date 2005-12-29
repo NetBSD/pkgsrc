@@ -1,4 +1,4 @@
-# $NetBSD: catalogs.mk,v 1.13 2005/12/05 20:51:08 rillig Exp $
+# $NetBSD: catalogs.mk,v 1.14 2005/12/29 06:22:20 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # catalog files or DTDs.  It takes care of registering them into the right
@@ -54,7 +54,6 @@ FILES_SUBST+=	SGML_ENTRIES=${SGML_ENTRIES:Q}
 FILES_SUBST+=	XML_ENTRIES=${XML_ENTRIES:Q}
 INSTALL_EXTRA_TMPL+=	../../textproc/xmlcatmgr/files/install.tmpl
 DEINSTALL_EXTRA_TMPL+=	../../textproc/xmlcatmgr/files/deinstall.tmpl
-USE_PKGINSTALL=	YES
 .endif # !empty(SGML_ENTRIES) || !empty(XML_ENTRIES)
 
 PRINT_PLIST_AWK+=	/^share\/(sgml|xml)\/catalog$$/ \

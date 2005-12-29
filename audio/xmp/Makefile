@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 23:55:02 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/29 06:21:32 jlam Exp $
 
 DISTNAME=	xmp-2.0.4
 PKGREVISION=	2
@@ -10,7 +10,6 @@ MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://xmp.sourceforge.net/
 COMMENT=	Player for many different Amiga and PC module formats
 
-USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-alsa \
 		--disable-oss \

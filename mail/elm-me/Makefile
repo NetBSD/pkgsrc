@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:29 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/29 06:21:48 jlam Exp $
 
 DISTNAME=		elm-2.4ME+93
 PKGNAME=		elm-me-2.4.93
@@ -15,7 +15,6 @@ COMMENT=		ELM Mail User Agent with ME extensions
 CONFLICTS=		elm-[0-9]*
 
 WRKSRC=			${WRKDIR}/elm2.4.ME+.93
-USE_PKGINSTALL=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	ksh ./Configure
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q} RUN_AS_BATCH=yes

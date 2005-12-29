@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/12/05 23:55:03 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2005/12/29 06:21:34 jlam Exp $
 
 VERS=		4.2.2
 DISTNAME=	hylafax-${VERS}
@@ -16,7 +16,6 @@ DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 
 CONFLICTS=	hylafax-devel-[0-9]* mgetty-[0-9]*
 
-USE_PKGINSTALL=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gs:run
 HAS_CONFIGURE=		yes
