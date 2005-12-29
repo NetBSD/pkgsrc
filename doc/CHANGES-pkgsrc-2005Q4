@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.5 2005/12/28 22:43:56 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.6 2005/12/29 00:02:48 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -13,3 +13,5 @@ Pullup ticket 973 - requested by Amitai Schlair
 remove errant PKG_FAIL_REASON from suse91_openmotif
 Pullup ticket 972 - requested by Takahiro Kambe
 fix build problem for lang/ruby18-base
+Pullup ticket 974 - requested by Julio M. Merino Vidal
+build fix for www/drivel
