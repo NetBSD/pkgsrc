@@ -1,8 +1,8 @@
-$NetBSD: patch-ca,v 1.2 2001/04/29 09:47:03 skrll Exp $
+$NetBSD: patch-ca,v 1.3 2005/12/29 22:50:53 joerg Exp $
 
---- interface/Makefile.in.orig	Tue Dec 14 04:27:59 1999
+--- interface/Makefile.in.orig	1999-12-14 04:27:59.000000000 +0000
 +++ interface/Makefile.in
-@@ -21,9 +21,7 @@
+@@ -21,9 +21,7 @@ CPPFLAGS+=-D_REENTRANT
  OFILES = scan_devices.o	common_interface.o cooked_interface.o interface.o\
  	scsi_interface.o smallft.o toc.o test_interface.o
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ca,v 1.2 2001/04/29 09:47:03 skrll Exp $
  
  debug: 
  	$(MAKE) libcdda_interface.a CFLAGS="$(DEBUG)"
-@@ -32,26 +30,24 @@
+@@ -32,26 +30,24 @@ lib:	
  	$(MAKE) libcdda_interface.a CFLAGS="$(OPT)" 
  
  slib:	
@@ -31,7 +31,7 @@ $NetBSD: patch-ca,v 1.2 2001/04/29 09:47:03 skrll Exp $
 +
 +libcdda_interface.la: 	$(OFILES)	
 +	$(LIBTOOL) --mode=link $(CC) -o libcdda_interface.la $(OFILES:.o=.lo) \
-+	    -version-info 0:$(VERSION) -rpath $(PREFIX)/lib
++	    -version-info 0:$(VERSION) -rpath $(PREFIX)/lib $(LDFLAGS)
 +
 +libcdda_interface.a: 	libcdda_interface.la
  
