@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/29 06:22:24 jlam Exp $
 
 DISTNAME=		sarg-1.4.1
 CATEGORIES=		www
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--with-gcc					\
 			--enable-mandir=${PREFIX}/${PKGMANDIR}/man1	\
 			--enable-sysconfdir=${PKG_SYSCONFDIR:Q}
 
-USE_PKGINSTALL=		yes
 
 DIST_SUBDIR=		${DISTNAME}
 PKG_SYSCONFSUBDIR=	sarg

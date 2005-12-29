@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/09/20 04:23:49 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/29 06:22:13 jlam Exp $
 
 DISTNAME=		scsh-0.6.6
 PKGREVISION=		1
@@ -16,7 +16,6 @@ GNU_CONFIGURE=		yes
 BUILD_TARGET=		enough
 TEST_TARGET=		check
 
-USE_PKGINSTALL=		yes
 PKG_SHELL=		bin/scsh
 
 # Build references from dumped environment variables is not a problem.

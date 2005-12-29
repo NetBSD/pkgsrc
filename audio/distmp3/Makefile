@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/15 20:14:02 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:30 jlam Exp $
 #
 
 DISTNAME=		distmp3-0.1.9
@@ -11,7 +11,6 @@ COMMENT=		Distributed mp3 encoding across multiple hosts
 
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl:run
-USE_PKGINSTALL=		yes
 NO_BUILD=		yes
 
 EGDIR=			${PREFIX}/share/examples/distmp3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/10/12 11:39:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/29 06:22:08 jlam Exp $
 #
 
 DISTNAME=	xpdf-korean-2005-jul-07
@@ -14,7 +14,6 @@ COMMENT=	Xpdf support files for Korean
 DEPENDS+=	xpdf>=2.02:../../print/xpdf
 DEPENDS+=	baekmuk-ttf>=1.0:../../fonts/baekmuk-ttf
 
-USE_PKGINSTALL=	yes
 
 WRKSRC=		${WRKDIR}/xpdf-korean
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/10/23 15:26:30 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/29 06:22:12 jlam Exp $
 #
 
 DISTNAME=	pdksh-5.2.14
@@ -20,7 +20,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=pd
 
-USE_PKGINSTALL=	yes
 PKG_SHELL=	bin/pdksh
 
 .include "../../mk/bsd.pkg.mk"

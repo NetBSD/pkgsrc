@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2005/09/20 04:23:49 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2005/12/29 06:22:13 jlam Exp $
 #
 
 DISTNAME=	tcsh-6.14.00
@@ -18,7 +18,6 @@ COMMENT=	Extended C-shell with many useful features
 
 CONFLICTS=	static-tcsh-[0-9]*
 
-USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	all catalogs
 INSTALL_TARGET=	install install.man

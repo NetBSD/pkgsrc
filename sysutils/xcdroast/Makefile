@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/12/05 23:55:20 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2005/12/29 06:22:19 jlam Exp $
 
 DISTNAME=	xcdroast-0.98alpha15
 PKGNAME=	xcdroast-0.98a15
@@ -15,7 +15,6 @@ BUILD_USES_MSGFMT=	YES
 DEPENDS+=		cdrecord-xcdroast-0.98a15.*:../../sysutils/cdrecord-xcdroast
 
 USE_TOOLS+=		gmake pkg-config
-USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 

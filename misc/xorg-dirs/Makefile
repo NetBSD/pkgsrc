@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/08 09:52:16 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:56 jlam Exp $
 #
 
 DISTNAME=	xorg-dirs-1.1
@@ -16,7 +16,6 @@ NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_EXTRACT=		yes
 NO_XORG_TARGETS=	yes
-USE_PKGINSTALL=		yes
 WRKSRC=			${WRKDIR}
 
 XORG_ONLY_DIRS=		# defined

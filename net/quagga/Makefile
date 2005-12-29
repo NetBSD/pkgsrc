@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 23:55:15 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/29 06:22:02 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -29,7 +29,6 @@ PLIST_CAT=		# empty
 
 INFO_FILES=	quagga.info
 
-USE_PKGINSTALL=	YES
 RCD_SCRIPTS=	zebra bgpd ospfd ripd
 PKG_GROUPS=	quagga
 PKG_USERS=	quagga:quagga

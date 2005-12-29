@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/07 01:14:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:40 jlam Exp $
 #
 
 DISTNAME=	artwiz-aleczapka-1.3
@@ -14,7 +14,6 @@ COMMENT=	Set of free fonts for X11 desktops
 
 WRKSRC=		${WRKDIR}/artwiz-aleczapka
 USE_X11BASE=	yes
-USE_PKGINSTALL=	yes
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/12/05 20:50:43 rillig Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/12/29 06:21:56 jlam Exp $
 #
 
 DISTNAME=		mplayerplug-in-2.70
@@ -16,7 +16,6 @@ WRKSRC=			${WRKDIR}/mplayerplug-in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES+=		c++
-USE_PKGINSTALL=		yes
 
 FILESDIR=	${.CURDIR}/../../multimedia/mplayer-plugin-firefox/files
 PATCHDIR=	${.CURDIR}/../../multimedia/mplayer-plugin-firefox/patches

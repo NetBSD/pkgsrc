@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/05 20:50:21 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/12/29 06:21:45 jlam Exp $
 
 DISTNAME=	nvtv-0.4.7
 CATEGORIES=	graphics
@@ -12,7 +12,6 @@ ONLY_FOR_PLATFORM=      *-*-i386
 
 GNU_CONFIGURE=		YES
 RCD_SCRIPTS=		nvtvd
-USE_PKGINSTALL=		YES
 
 post-patch:
 	${CP} ${WRKSRC}/man/nvtv.1x ${WRKSRC}/man/nvtv.1

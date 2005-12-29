@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/12 14:43:24 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/29 06:21:39 jlam Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
 PKGREVISION=		4
@@ -18,7 +18,6 @@ DEPENDS+=		suse_libtiff>=${SUSE_VERSION}:../../emulators/suse91_libtiff
 DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse91_x11
 
 EXTRACT_ONLY=		# empty
-USE_PKGINSTALL=		YES
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/21 05:54:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/29 06:21:50 jlam Exp $
 #
 
 DISTNAME=		mailfront-0.98
@@ -17,7 +17,6 @@ DEPENDS+=		${DEPENDS_QMAIL}
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
 
-USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		smtpfront
 
 .include "../../mk/bsd.prefs.mk"

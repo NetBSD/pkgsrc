@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:05 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:38 jlam Exp $
 #
 
 DISTNAME=	monotone-server-0.24
@@ -15,7 +15,6 @@ DEPENDS+=	monotone>=0.24:../../devel/monotone
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 NO_CHECKSUM=	yes
-USE_PKGINSTALL=	yes
 WRKSRC=		${WRKDIR}
 
 RCD_SCRIPTS=		monotone

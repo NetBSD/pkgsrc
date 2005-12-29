@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/29 06:22:16 jlam Exp $
 #
 
 DISTNAME=	adtool-1.2
@@ -13,7 +13,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 PTHREAD_OPTS+=		require
 

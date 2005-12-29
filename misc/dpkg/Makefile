@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 23:55:12 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:54 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME:S,-,_,}
@@ -18,7 +18,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl
 USE_NCURSES=		# tigetstr()
-USE_PKGINSTALL=		yes
 
 REPLACE_PERL=		${WRKSRC}/scripts/*.pl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/09/16 04:17:40 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:20 jlam Exp $
 #
 
 DISTNAME=	pwm-20030617
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	ion<=20040729nb2
 
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	gmake
 
 CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""

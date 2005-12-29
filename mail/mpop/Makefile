@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/13 03:09:20 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/29 06:21:51 jlam Exp $
 #
 
 DISTNAME=	mpop-0.8.2
@@ -12,7 +12,6 @@ HOMEPAGE=	http://mpop.sourceforge.net/
 COMMENT=	Small, fast and portable POP3 client
 
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 

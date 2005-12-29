@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/17 03:50:45 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/29 06:22:26 jlam Exp $
 #
 
 DISTNAME=		xfstt-1.6
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://developer.berlios.de/projects/xfstt/
 COMMENT=		TrueType font server for X11
 
-USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/23 11:48:48 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/29 06:21:50 jlam Exp $
 #
 
 DISTNAME=		gld-1.5.2
@@ -10,7 +10,6 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.gasmi.net/
 COMMENT=		Standalone greylisting server for Postfix
 
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}

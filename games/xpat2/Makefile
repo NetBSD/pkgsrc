@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/08/19 18:12:37 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/29 06:21:42 jlam Exp $
 
 DISTNAME=	xpat2-1.07
 CATEGORIES=	games
@@ -10,7 +10,6 @@ COMMENT=	X11 solitaire game with 14 variations
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PKGINSTALL=	YES
 USE_X11BASE=	YES
 USE_TOOLS+=	imake
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/29 06:22:17 jlam Exp $
 #
 
 DISTNAME=	desktop-file-utils-0.10
@@ -13,7 +13,6 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
-USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

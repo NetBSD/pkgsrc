@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2005/12/29 06:22:17 jlam Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -21,7 +21,6 @@ NOT_FOR_PLATFORM=	IRIX-*-*
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/12/05 20:50:33 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2005/12/29 06:21:51 jlam Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -16,7 +16,6 @@ CONFLICTS+=	elm>=2.5.5 mm-2.7
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-USE_PKGINSTALL=		YES
 
 CFLAGS.Linux+=	-DLINUX
 CFLAGS.SunOS+=	-DSYSV

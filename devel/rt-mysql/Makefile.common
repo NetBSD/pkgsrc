@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/02/04 22:19:09 abs Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/12/29 06:21:38 jlam Exp $
 
 DISTNAME=      	rt-2-0-15
 CATEGORIES=	devel
@@ -24,7 +24,6 @@ RT_DB_PASS?=	changemeplease
 RT_WEB_USER?=	nobody
 RT_WEB_GROUP?=	nobody
 
-USE_PKGINSTALL=	yes
 
 PKGDIR=		${.CURDIR}/../../devel/rt-mysql
 DISTINFO_FILE=	${PKGDIR}/distinfo

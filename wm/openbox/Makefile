@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/12/05 23:55:21 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/29 06:22:20 jlam Exp $
 
 DISTNAME=	openbox-3.2
 PKGREVISION=	1
@@ -16,7 +16,6 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
-USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 
 PKGCONFIG_OVERRIDE=	parser/obparser-3.0.pc.in

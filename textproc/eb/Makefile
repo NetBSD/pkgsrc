@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/12/05 23:55:20 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2005/12/29 06:22:19 jlam Exp $
 
 DISTNAME=	eb-4.1.3
 CATEGORIES=	textproc japanese
@@ -51,7 +51,6 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake gtar perl
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

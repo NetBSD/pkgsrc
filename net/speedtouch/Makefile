@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 23:55:15 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/29 06:22:04 jlam Exp $
 
 DISTNAME=		speedtouch-1.3.1
 PKGREVISION=		3
@@ -23,7 +23,6 @@ COMMENT=		Alcatel SpeedTouch USB ADSL modem driver
 
 DEPENDS+=		userppp>=001107:../../net/userppp
 
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

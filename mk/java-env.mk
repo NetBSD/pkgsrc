@@ -1,4 +1,4 @@
-# $NetBSD: java-env.mk,v 1.6 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: java-env.mk,v 1.7 2005/12/29 06:22:26 jlam Exp $
 #
 # This Makefile fragment handles Java wrappers and is meant to be included
 # by packages that provide a Java build-time and/or run-time environment.
@@ -80,7 +80,6 @@ install-java-wrapper-${w}:
 .endif
 
 # Handle the ${PREFIX}/java shared directory automatically.
-USE_PKGINSTALL=		YES
 REQD_DIRS+=		${PREFIX}/java
 PRINT_PLIST_AWK+=	/^@dirrm java$$/ { next; }
 

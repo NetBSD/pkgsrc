@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/12/05 23:55:16 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/29 06:22:07 jlam Exp $
 #
 
 DISTNAME=		enscript-1.6.3
@@ -14,7 +14,6 @@ DEPENDS+=		papersize-[0-9]*:../../print/papersize
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

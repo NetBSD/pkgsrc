@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:14 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/29 06:21:40 jlam Exp $
 
 DISTNAME=	ghostscript-cmaps-20020913
 PKGREVISION=	1
@@ -20,7 +20,6 @@ EXTRACT_ONLY=		# empty
 USE_TOOLS+=		gs:run
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
-USE_PKGINSTALL=		yes
 
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL

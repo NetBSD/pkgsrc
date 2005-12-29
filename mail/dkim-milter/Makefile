@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/05 20:50:29 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/29 06:21:48 jlam Exp $
 
 DISTNAME=	dkim-milter-0.1.1
 CATEGORIES=	mail
@@ -15,7 +15,6 @@ MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dkim-milter
 USE_BUILTIN.libmilter=	no
 USE_TOOLS+=		gm4
-USE_PKGINSTALL=		YES
 
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure

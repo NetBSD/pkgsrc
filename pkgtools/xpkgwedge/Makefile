@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2005/12/17 05:20:22 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2005/12/29 06:22:06 jlam Exp $
 
 DISTNAME=	xpkgwedge-1.14
 CATEGORIES=	pkgtools devel x11
@@ -26,7 +26,6 @@ PKG_SKIP_REASON+=	"xpkgwedge is not needed when X11BASE is LOCALBASE"
 CONFLICTS+=	mkfontscale-[0-9]*
 .endif
 
-USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 INSTALLATION_DIRS=	bin lib/X11/config

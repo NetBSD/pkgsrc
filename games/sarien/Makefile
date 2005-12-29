@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/11 09:40:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/29 06:21:41 jlam Exp $
 #
 
 DISTNAME=	sarien-0.7.0
@@ -11,7 +11,6 @@ HOMEPAGE=	http://sarien.sourceforge.net/
 COMMENT=	Adventure Game Interpreter (AGI) for Sierra On-Line Titles
 
 GNU_CONFIGURE=		YES
-USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--with-sdl

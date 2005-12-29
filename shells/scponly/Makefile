@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/28 18:55:07 snj Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 06:22:13 jlam Exp $
 
 DISTNAME=	scponly-4.3
 CATEGORIES=	shells security
@@ -28,7 +28,6 @@ CONFIGURE_ENV+=		PROG_RM=${TOOLS_RM:Q}
 CONFIGURE_ENV+=		scponly_PROG_RM=${TOOLS_RM:Q}
 CONFIGURE_ENV+=		scponly_PROG_RMDIR=${TOOLS_RMDIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-USE_PKGINSTALL=		yes
 PKG_SHELL=		bin/scponly
 PKG_SYSCONFSUBDIR=	scponly
 

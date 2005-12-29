@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:33 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:50 jlam Exp $
 #
 
 DISTNAME=	mailgraph-1.12
@@ -13,7 +13,6 @@ COMMENT=	RRDtool frontend for mail statistics
 DEPENDS+=	rrdtool-1*:../../databases/rrdtool
 DEPENDS+=	p5-File-Tail-[0-9]*:../../misc/p5-File-Tail
 
-USE_PKGINSTALL=	yes
 USE_TOOLS+=	perl:run
 
 .include "../../mk/bsd.prefs.mk"

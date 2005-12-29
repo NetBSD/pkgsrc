@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:51:12 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/29 06:22:23 jlam Exp $
 
 DISTNAME=       jakarta-tomcat-${TOMCAT_VERSION}
 PKGREVISION=	1
@@ -31,7 +31,6 @@ EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKDIR}/tar.gz && ${GUNZIP_CMD} ${WR
 PKG_SYSCONFDIR.jakarta-tomcat=	${TOMCAT_LIB}/conf
 MAKE_DIRS=	${PKG_SYSCONFDIR.jakarta-tomcat}/${CATALINA_DIR}
 
-USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	tomcat
 CFILES=		server.xml web.xml tomcat-users.xml
 CFILES+=	catalina.policy catalina.properties jk2.properties

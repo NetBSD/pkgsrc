@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:50 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/29 06:22:04 jlam Exp $
 #
 
 DISTNAME=		whoson-2.03
@@ -21,7 +21,6 @@ WHOSOND_CHROOT?=	${VARBASE}/chroot/whosond
 CONFIGURE_ARGS+=	--with-config="${PKG_SYSCONFDIR}/whoson.conf"
 
 FILES_SUBST+=		CHROOTDIR=${WHOSOND_CHROOT:Q}
-USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 

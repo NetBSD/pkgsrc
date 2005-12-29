@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:52 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/29 06:21:40 jlam Exp $
 #
 
 DISTNAME=	profontlinux
@@ -14,7 +14,6 @@ COMMENT=	Monospaced bitmap font readable in very small sizes
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_X11BASE=		yes
-USE_PKGINSTALL=		yes
 
 FONTS_X11_DIRS=		${PREFIX}/lib/X11/fonts/misc
 INSTALLATION_DIRS=	lib/X11/fonts/misc

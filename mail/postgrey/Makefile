@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:35 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 06:21:52 jlam Exp $
 #
 
 DISTNAME=	postgrey-1.21
@@ -15,7 +15,6 @@ DEPENDS+=	p5-IO-Multiplex-[0-9]*:../../devel/p5-IO-Multiplex
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 
 NO_CONFIGURE=	yes
-USE_PKGINSTALL=	yes
 USE_TOOLS+=	perl:run
 
 .include "../../mk/bsd.prefs.mk"

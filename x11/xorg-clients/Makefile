@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/08 09:52:17 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/29 06:22:26 jlam Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-clients-${XORG_VER}
@@ -13,7 +13,6 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org client programs and related files
 
-USE_PKGINSTALL=		yes
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 

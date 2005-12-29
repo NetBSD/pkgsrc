@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/12/05 23:55:10 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/29 06:21:47 jlam Exp $
 
 DISTNAME=	bogofilter-0.96.6
 CATEGORIES=	mail
@@ -12,7 +12,6 @@ COMMENT=	Bayesian spam filter written in C
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

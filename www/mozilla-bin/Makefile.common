@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2005/12/05 20:51:13 rillig Exp $
+# $NetBSD: Makefile.common,v 1.32 2005/12/29 06:22:23 jlam Exp $
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -14,7 +14,6 @@ USE_LANGUAGES=		# empty
 FILESDIR=		${.CURDIR}/../../www/mozilla-bin/files
 MOZILLA_SCRIPT?=	${FILESDIR}/mozilla.sh
 
-USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
 

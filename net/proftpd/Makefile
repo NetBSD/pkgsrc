@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/05 23:55:14 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2005/12/29 06:22:01 jlam Exp $
 
 DISTNAME=	proftpd-1.3.0rc3
 #PKGREVISION=	1
@@ -16,7 +16,6 @@ COMMENT=	FTP server with Apache like configuration
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=	yes
-USE_PKGINSTALL=	yes
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

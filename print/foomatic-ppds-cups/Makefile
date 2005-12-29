@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/17 18:41:43 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/29 06:22:07 jlam Exp $
 
 .include "../../print/foomatic-ppds/Makefile.common"
 
@@ -21,7 +21,6 @@ EVAL_PREFIX+=		CUPS_PREFIX=cups
 CUPS_DATADIR=		${CUPS_PREFIX:Q}/share/cups/model
 FILES_SUBST+=		CUPS_DATADIR=${CUPS_DATADIR}
 
-USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 

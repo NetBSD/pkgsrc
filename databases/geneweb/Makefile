@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/12/05 20:49:57 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2005/12/29 06:21:35 jlam Exp $
 #
 
 DISTNAME=	geneweb-4.10
@@ -11,7 +11,6 @@ HOMEPAGE=	http://cristal.inria.fr/~ddr/GeneWeb/
 COMMENT=	GeneWeb is a comprehensive genealogy database application
 
 DIST_SUBDIR=	${PKGNAME_NOREV}nb1
-USE_PKGINSTALL=	yes
 USE_TOOLS+=	gmake
 
 RCD_SCRIPTS=	geneweb

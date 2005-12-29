@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2005/12/05 20:50:13 rillig Exp $
+# $NetBSD: Makefile,v 1.80 2005/12/29 06:21:40 jlam Exp $
 #
 
 DISTNAME=		xmame-0.102
@@ -15,7 +15,6 @@ RESTRICTED=		"selling is not allowed"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 MAKEFILE=		makefile.unix
 TARGET=			${PKGBASE}

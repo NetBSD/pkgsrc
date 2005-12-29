@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/12/17 05:20:21 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2005/12/29 06:21:31 jlam Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -29,7 +29,6 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
-USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

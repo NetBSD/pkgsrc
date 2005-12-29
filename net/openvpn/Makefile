@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 23:55:14 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 06:22:01 jlam Exp $
 #
 
 DISTNAME=	openvpn-2.0.5
@@ -13,7 +13,6 @@ COMMENT=	Easy-to-use SSL VPN daemon
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		grep:run
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 USE_OLD_DES_API=	yes
 TEST_TARGET=		check
 

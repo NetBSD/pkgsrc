@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:06 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/29 06:21:34 jlam Exp $
 
 DISTNAME=	efax-0.9
 CATEGORIES=	comms
@@ -11,7 +11,6 @@ COMMENT=	Collection of small programs for sending and receiving faxes
 CONFLICTS=	kdeutils<3.1
 
 
-USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 

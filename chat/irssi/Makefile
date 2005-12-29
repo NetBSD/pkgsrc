@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/12/05 23:55:03 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/29 06:21:33 jlam Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		7
@@ -14,7 +14,6 @@ COMMENT=                Secure and modular IRC client with text mode user interf
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--with-terminfo \

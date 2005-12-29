@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/09/22 02:08:14 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/29 06:22:17 jlam Exp $
 #
 
 PKGREVISION=	3
@@ -15,7 +15,6 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
-USE_PKGINSTALL=		YES
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
 pre-configure:

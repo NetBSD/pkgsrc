@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/17 18:35:10 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/29 06:22:07 jlam Exp $
 
 .include "Makefile.common"
 
@@ -36,7 +36,6 @@ DEPENDS+=	{cups>=1.0,${TEXTTOPS_DEPENDS}}:../../print/cups
 DEPENDS+=	${TEXTTOPS_DEPENDS}:../../print/mpage
 .endif
 
-USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/../../print/foomatic-filters-cups/INSTALL
 INSTALL_EXTRA_TMPL=	${DEINSTALL_EXTRA_TMPL}
 

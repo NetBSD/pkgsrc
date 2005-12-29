@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2005/12/05 23:55:15 rillig Exp $
+# $NetBSD: Makefile.common,v 1.30 2005/12/29 06:22:03 jlam Exp $
 #
 
 DISTNAME=		snort-2.4.3
@@ -10,7 +10,6 @@ MASTER_SITES=		http://www.snort.org/dl/current/ \
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://www.snort.org/
 
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

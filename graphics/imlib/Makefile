@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2005/12/05 23:55:08 rillig Exp $
+# $NetBSD: Makefile,v 1.97 2005/12/29 06:21:44 jlam Exp $
 
 DISTNAME=	imlib-1.9.15
 PKGREVISION=	2
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 PKG_SYSCONFSUBDIR=	imlib
 EGDIR=			${PREFIX}/share/examples/imlib
 
-USE_PKGINSTALL=		yes
 CONF_FILES=		${EGDIR}/imrc ${PKG_SYSCONFDIR}/imrc
 CONF_FILES+=		${EGDIR}/im_palette.pal \
 			${PKG_SYSCONFDIR}/im_palette.pal

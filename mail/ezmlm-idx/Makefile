@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/09/02 01:08:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/29 06:21:49 jlam Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -20,7 +20,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 # ezmlm-idx is a modification of the ezmlm source.
 DJB_RESTRICTED=		YES
 
-USE_PKGINSTALL=		YES
 
 PKG_SYSCONFSUBDIR=	ezmlm
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""

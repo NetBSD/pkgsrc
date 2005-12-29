@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2005/12/27 21:26:05 reed Exp $
+# $NetBSD: Makefile,v 1.62 2005/12/29 06:22:02 jlam Exp $
 
 DISTNAME=	rsync-2.6.6
 PKGREVISION=	1
@@ -18,7 +18,6 @@ COMMENT=	Network file distribution/synchronisation utility
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/doc/rsync
 
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-included-popt \
 			--with-rsyncd-conf=${PKG_SYSCONFDIR}/rsyncd.conf

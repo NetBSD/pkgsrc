@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:51:14 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:22:24 jlam Exp $
 #
 
 DISTNAME=	screws-0.56
@@ -10,7 +10,6 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.nopcode.org/?t=screws
 COMMENT=	SCRipt Enhanced Web Server
 
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	perl:run
 
 BUILD_DEFS+=	SCREWS_USER SCREWS_GROUP

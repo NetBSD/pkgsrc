@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/18 15:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/29 06:21:45 jlam Exp $
 #
 
 DISTNAME=		libggiwmh-0.2.1.src
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.ggi-project.org/packages/libggiwmh.html
 COMMENT=		Windows Manager hints library for GGI
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/12/29 06:22:12 jlam Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -25,7 +25,6 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 ASTKSH_VERSION=	2003-07-24
 
 WRKSRC=		${WRKDIR}
-USE_PKGINSTALL=	YES
 MAKE_FLAGS+=	CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"

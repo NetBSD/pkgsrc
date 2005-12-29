@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/17 18:39:24 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/29 06:22:07 jlam Exp $
 
 .include "Makefile.common"
 
@@ -19,7 +19,6 @@ COMMENT=	Foomatic PPDs collection
 
 DEPENDS=	foomatic-filters>=3.0.2:../../print/foomatic-filters
 
-USE_PKGINSTALL=	yes
 REQD_DIRS=	share/foomatic
 PLIST_SRC=	${WRKDIR}/PLIST_SRC
 

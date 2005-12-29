@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/06 18:55:32 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/29 06:22:20 jlam Exp $
 #
 
 DISTNAME=	wmii-20051114
@@ -11,7 +11,6 @@ COMMENT=	Modular and keyboard-friendly window manager
 
 DEPENDS+=		9base-[0-9]*:../../sysutils/9base
 
-USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/26 23:39:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/29 06:22:23 jlam Exp $
 #
 
 DISTNAME=		kazehakase-0.3.0
@@ -19,7 +19,6 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
 LIBTOOL_OVERRIDE=	libtool

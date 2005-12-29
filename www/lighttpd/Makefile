@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/12 17:56:51 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/29 06:22:23 jlam Exp $
 
 DISTNAME=	lighttpd-1.4.8
 CATEGORIES=	www
@@ -19,7 +19,6 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
-USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		lighttpd
 CONF_FILES=		${EGDIR}/lighttpd.conf ${PKG_SYSCONFDIR}/lighttpd.conf
 

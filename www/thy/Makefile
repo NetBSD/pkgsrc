@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 06:22:24 jlam Exp $
 
 DISTNAME=	thy-0.9.4
 CATEGORIES=	www
@@ -11,7 +11,6 @@ COMMENT=	Tiny and fast HTTP daemon
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		USE_INET6
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		bison gmake lex
 GNU_CONFIGURE=		yes
 

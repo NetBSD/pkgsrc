@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/09 17:04:51 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/12/29 06:22:04 jlam Exp $
 #
 
 DISTNAME=	wistumbler2-2.0pre10
@@ -18,7 +18,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-* DragonFly-*-*
 CONFLICTS+=		wistumbler-[0-9]*
 
 HAS_CONFIGURE=		YES
-USE_PKGINSTALL=		YES
 
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/24 04:47:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/29 06:21:53 jlam Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.1
@@ -13,7 +13,6 @@ DEPENDS+=		qmail>=1.03nb9:../../mail/qmail
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PKGINSTALL=		yes
 OWN_DIRS_PERMS+=	${QMAIL_QFILTER_TMPDIR} qmaild ${ROOT_GROUP} 700
 
 REPLACE_PERL=		samples/block-long-dates			\

@@ -1,4 +1,4 @@
-# $NetBSD: desktopdb.mk,v 1.2 2005/03/24 22:42:58 jlam Exp $
+# $NetBSD: desktopdb.mk,v 1.3 2005/12/29 06:22:17 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # desktop entries.  It takes care of registering them in the global database.
@@ -9,7 +9,6 @@ DESKTOP_FILE_UTILS_MIMEDB_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../sysutils/desktop-file-utils/files/install.tmpl
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../sysutils/desktop-file-utils/files/install.tmpl
 

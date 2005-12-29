@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/12/05 23:55:06 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2005/12/29 06:21:37 jlam Exp $
 
 DISTNAME=		libbonobo-2.10.1
 CATEGORIES=		devel gnome
@@ -12,7 +12,6 @@ COMMENT=		GNOME2 Object activation framework library
 CONFLICTS=		bonobo-activation-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		bison gmake perl:run pkg-config

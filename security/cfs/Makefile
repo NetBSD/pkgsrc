@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:55 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/29 06:22:09 jlam Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		5
@@ -9,7 +9,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.crypto.com/software/
 COMMENT=		Encrypting file system, using NFS as its interface
 
-USE_PKGINSTALL=		YES
 
 CRYPTO=			# defined
 

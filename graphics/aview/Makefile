@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/11 09:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 06:21:42 jlam Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
@@ -18,7 +18,6 @@ PLIST_SRC=	${WRKDIR}/PLIST
 WRKSRC=		${WRKDIR}/aview-1.3.0
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

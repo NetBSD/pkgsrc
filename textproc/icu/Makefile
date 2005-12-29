@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/12/05 23:55:20 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2005/12/29 06:22:19 jlam Exp $
 #
 
 DISTNAME=	icu-3.2
@@ -13,7 +13,6 @@ COMMENT=	Robust and full-featured Unicode services
 
 WRKSRC=			${WRKDIR}/${PKGBASE}/source
 USE_TOOLS+=		gmake
-USE_PKGINSTALL=		YES
 USE_LANGUAGES=		c c++
 TEST_TARGET=		check
 

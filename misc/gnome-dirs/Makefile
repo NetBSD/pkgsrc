@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/09/28 19:51:27 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/29 06:21:54 jlam Exp $
 #
 
 DISTNAME=	gnome-dirs-1.5
@@ -13,7 +13,6 @@ COMMENT=	Shared GTK/GNOME (v1 and v2) directories
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
-USE_PKGINSTALL=	yes
 USE_X11BASE=	yes
 NO_CHECKSUM=	yes
 NO_EXTRACT=	yes

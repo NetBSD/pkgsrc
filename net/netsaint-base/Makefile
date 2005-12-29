@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 20:50:47 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/29 06:22:00 jlam Exp $
 #
 
 DISTNAME=		netsaint-0.0.7
@@ -10,7 +10,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.netsaint.org/
 COMMENT=		Network monitor
 
-USE_PKGINSTALL=		yes
 
 .include "../../net/netsaint-base/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 20:51:02 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/29 06:22:19 jlam Exp $
 #
 
 DISTNAME=		xen-2.0.7-src
@@ -14,7 +14,6 @@ COMMENT=		Userland Tools for Xen
 
 DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
-USE_PKGINSTALL=		yes
 PKG_SYSCONFSUBDIR=	xen
 
 ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
