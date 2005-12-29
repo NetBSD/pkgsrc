@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2005/12/21 04:17:53 jlam Exp $
+# $NetBSD: Makefile,v 1.155 2005/12/29 06:22:02 jlam Exp $
 
 .include "Makefile.mirrors"
 
@@ -94,7 +94,6 @@ FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
-USE_PKGINSTALL=		yes
 CONF_FILES=		${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 MAKE_DIRS=		${SAMBA_VARDIR} ${SAMBA_LOGDIR} ${SAMBA_PIDDIR}
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR} ${SAMBA_STATEDIR}

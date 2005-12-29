@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2005/12/29 06:22:25 jlam Exp $
 
 DISTNAME=	Eterm-0.9.3
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -21,7 +21,6 @@ PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
 USE_LIBTOOL=		YES
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

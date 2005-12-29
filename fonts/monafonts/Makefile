@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/28 18:28:48 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:40 jlam Exp $
 
 DISTNAME=	monafont-2.90
 PKGNAME=	${DISTNAME:S/font/fonts/}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://monafont.sourceforge.net/
 COMMENT=	Japanese fonts for "Mona" seen at 2ch.net
 
 USE_X11BASE=	yes
-USE_PKGINSTALL=	yes
 BUILD_TARGET=	bdf
 USE_TOOLS+=	bdftopcf gzip mkfontdir perl sed
 MAKE_FLAGS+=	SED_CMD=${SED:Q}

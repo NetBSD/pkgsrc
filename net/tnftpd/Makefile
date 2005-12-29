@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 23:55:15 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:22:04 jlam Exp $
 #
 
 DISTNAME=		tnftpd-20040810
@@ -14,7 +14,6 @@ CONFLICTS+=		lukemftpd-[0-9]*
 
 GNU_CONFIGURE=		YES
 MANCOMPRESSED_IF_MANZ=	YES
-USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

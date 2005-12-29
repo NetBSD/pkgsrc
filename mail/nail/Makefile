@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/11/20 11:08:39 cjep Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/29 06:21:51 jlam Exp $
 
 DISTNAME=	nail-11.25
 CATEGORIES=	mail
@@ -9,7 +9,6 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://nail.sourceforge.net/
 COMMENT=	BSD mail utility with MIME extensions
 
-USE_PKGINSTALL=	yes
 BUILD_DEFS+=	USE_INET6
 
 MAKE_ENV+=	"SYSCONFDIR=${PKG_SYSCONFDIR}"

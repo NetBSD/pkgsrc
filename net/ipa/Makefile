@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/12/09 16:55:43 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/29 06:21:59 jlam Exp $
 #
 
 DISTNAME=	ipa-1.3.6
@@ -20,7 +20,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_PACKAGE=		${RESTRICTED}
 
-USE_PKGINSTALL=		YES
 BUILD_TARGET=		# empty
 
 CFLAGS+=		-DCFGFILE="\"${PKG_SYSCONFDIR}/ipa.conf\""

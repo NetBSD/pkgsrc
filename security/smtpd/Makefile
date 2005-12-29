@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/29 06:22:11 jlam Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -14,7 +14,6 @@ COMMENT=	Store and forward SMTP proxy
 
 SPOOL=		/var/spool/smtpd
 
-USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	smtpfwdd
 FILES_SUBST+=	SPOOL=${SPOOL:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:00 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/29 06:21:36 jlam Exp $
 
 PKGNAME=	postgresql80-server-${BASE_VERS}
 COMMENT=	PostgreSQL database server programs
@@ -12,7 +12,6 @@ NOT_FOR_PLATFORM=	*-*-mips
 USE_LIBTOOL=		yes
 PKG_LIBTOOL=		${PKG_SHLIBTOOL}
 
-USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 

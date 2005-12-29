@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.26 2005/12/29 06:22:18 jlam Exp $
 #
 
 DISTNAME=		gnome-vfs-2.12.1.1
@@ -22,7 +22,6 @@ USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_MSGFMT_PLURALS=	YES
-USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--disable-cdda
 CONFIGURE_ARGS+= 	--disable-fam

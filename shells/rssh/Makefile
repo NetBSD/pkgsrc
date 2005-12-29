@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/28 17:55:39 seb Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:13 jlam Exp $
 #
 
 DISTNAME=		rssh-2.3.0
@@ -10,7 +10,6 @@ HOMEPAGE=		http://rssh.sourceforge.net/
 COMMENT=		Restricted shell allowing only scp and/or sftp
 
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

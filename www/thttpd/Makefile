@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/12/19 21:10:52 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2005/12/29 06:22:24 jlam Exp $
 
 DISTNAME=	thttpd-2.25b
 PKGREVISION=	5
@@ -18,7 +18,6 @@ NETBSD_LOGO=		sitedrivenby.gif
 SITES_${NETBSD_LOGO}=	http://www.NetBSD.org/images/logos/
 
 GNU_CONFIGURE=	yes
-USE_PKGINSTALL=	yes
 
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
 BUILD_DEFS+=	USE_INET6

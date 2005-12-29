@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/11/03 07:20:56 taca Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/29 06:21:58 jlam Exp $
 #
 
 DISTNAME=	dtcp-20050521
@@ -14,7 +14,6 @@ COMMENT=	Dynamic Tunnel Configuration Protocol daemon and client
 DEPENDS+=	qpopper-[0-9]*:../../mail/qpopper
 
 RCD_SCRIPTS=	dtcpc dtcps
-USE_PKGINSTALL=	YES
 
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
