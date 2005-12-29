@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/11/23 05:49:59 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 07:04:27 jlam Exp $
 #
 
 DISTNAME=	ttf-alee_6.0
@@ -15,14 +15,13 @@ NO_CONFIGURE=   YES
 NO_BUILD=       YES
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
-FONTS_TTF_DIRS= ${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=         ${PREFIX}/share/doc/alee-ttf
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
-	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTS_TTF_DIRS}
+	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTS_DIRS.ttf}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/12/28 14:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/29 07:04:28 jlam Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -32,7 +32,7 @@ CABEXTRACT_PREFIX_DEFAULT=${LOCALBASE}
 EXTRACT_CMD=	${CABEXTRACT_PREFIX}/bin/cabextract -q $${extract_file}
 FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/ms-ttf
-FONTS_TTF_DIRS=	${FONTDIR}
+FONTS_DIRS.ttf=	${FONTDIR}
 
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -48,5 +48,4 @@ do-install:
 	done
 	${INSTALL_DATA} ${.CURDIR}/../../licenses/${LICENSE} ${DOCDIR}
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

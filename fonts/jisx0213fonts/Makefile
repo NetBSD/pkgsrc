@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/15 18:27:50 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 07:04:28 jlam Exp $
 #
 
 DISTNAME=	jisx0213fonts-0.0
@@ -15,7 +15,7 @@ USE_TOOLS+=	gzip
 
 FONTS=		K14-1 K14-2 jiskan16-2000-1 jiskan16-2000-2
 FONTDIR=	${PREFIX}/lib/X11/fonts/local
-FONTS_X11_DIRS=	${FONTDIR}
+FONTS_DIRS.x11=	${FONTDIR}
 
 WRKSRC=		${WRKDIR}
 
@@ -37,5 +37,4 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$${f}.pcf.gz ${FONTDIR}; \
 	done
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

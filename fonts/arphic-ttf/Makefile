@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/07/15 18:27:49 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 07:04:27 jlam Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
@@ -24,19 +24,18 @@ NO_BUILD=	YES
 
 USE_TOOLS+=	gunzip
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/arphic-ttf
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
+	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
 	for f in ${FONT_FILES}; do \
-		${INSTALL_DATA} ${_DISTDIR}/$$f ${FONTS_TTF_DIRS}; \
-		${GUNZIP_CMD} ${FONTS_TTF_DIRS}/$$f; \
+		${INSTALL_DATA} ${_DISTDIR}/$$f ${FONTS_DIRS.ttf}; \
+		${GUNZIP_CMD} ${FONTS_DIRS.ttf}/$$f; \
 	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for f in ${MISC_FILES}; do \
 		${INSTALL_DATA} ${_DISTDIR}/$$f ${DOCDIR}; \
 	done
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

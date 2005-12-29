@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/07 22:40:23 reed Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/29 07:04:27 jlam Exp $
 
 DISTNAME=	dejavu-ttf-1.13
 CATEGORIES=	fonts
@@ -12,7 +12,7 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 
 INSTALLATION_DIRS=	lib/X11/fonts/TTF share/doc/dejavu-ttf
 
@@ -21,5 +21,4 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS LICENSE NEWS README \
 		${PREFIX}/share/doc/dejavu-ttf
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
