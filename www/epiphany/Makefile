@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/12/26 23:39:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.43.2.1 2005/12/29 18:15:50 seb Exp $
 #
 
 DISTNAME=	epiphany-1.8.2
@@ -9,9 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 BUILD_USES_MSGFMT=	YES
 
@@ -31,6 +28,9 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.epiphany
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mfirefox)
+# Require a version that has the .pc files in it.
+BUILDLINK_DEPENDS.firefox+=	firefox>=1.5nb2
+
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
 CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/necko

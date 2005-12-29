@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/12/26 23:39:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.37.2.1 2005/12/29 18:15:50 seb Exp $
 #
 
 DISTNAME=		yelp-2.12.1
@@ -9,9 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Help browser for GNOME 2 desktop
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DEPENDS+=		docbook>=4.2:../../textproc/docbook
 BUILD_USES_MSGFMT=	yes
@@ -31,6 +28,11 @@ GCONF2_SCHEMAS=		yelp.schemas
 PKG_OPTIONS_VAR=	PKG_OPTIONS.yelp
 .include "../../www/mozilla/gecko-options.mk"
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mfirefox)
+# Require a version that has the .pc files in it.
+BUILDLINK_DEPENDS.firefox+=     firefox>=1.5nb2
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
