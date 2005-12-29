@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/05 19:01:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/29 18:17:21 jlam Exp $
 ${FONTDIR}/b10.pcf.gz
 ${FONTDIR}/b10_b.pcf.gz
 ${FONTDIR}/b10_bi.pcf.gz
@@ -39,6 +39,3 @@ ${FONTDIR}/h24.pcf.gz
 ${FONTDIR}/h24_b.pcf.gz
 ${FONTDIR}/h24_bi.pcf.gz
 ${FONTDIR}/h24_i.pcf.gz
-@exec cd %D/${FONTDIR} && ${X11BASE}/bin/mkfontdir
-@unexec rm -f %D/${FONTDIR}/fonts.dir
-@dirrm ${FONTDIR}
