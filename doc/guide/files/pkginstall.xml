@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.7 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.8 2005/12/29 14:59:03 jlam Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -30,15 +30,13 @@
     <para>Registration of system shells.</para>
   </listitem>
 
+  <listitem>
+    <para>Automatic updating of fonts databases.</para>
+  </listitem>
+
 </itemizedlist>
 
-<para>The following sections inspect each of the above points in detail.
-Note that in order to use any of the described functionalities, you must
-add the following to your package's <filename>Makefile</filename>:</para>
-
-<programlisting>
-    USE_PKGINSTALL= YES
-</programlisting>
+<para>The following sections inspect each of the above points in detail.</para>
 
 <para>You may be thinking that many of the things described here could be
 easily done with simple code in the package's post-installation target
@@ -475,7 +473,6 @@ add some hooks to the installation scripts to handle it.  Consider the
 following example, taken from <filename role="pkg">shells/zsh</filename>:</para>
 
 <programlisting>
-    USE_PKGINSTALL= YES
     PKG_SHELL=      ${PREFIX}/bin/zsh
 </programlisting>
 
@@ -488,6 +485,45 @@ following example, taken from <filename role="pkg">shells/zsh</filename>:</para>
 
 <para>The automatic registration of shell interpreters can be disabled by
 the administrator by setting the <filename>PKG_REGISTER_SHELLS</filename>
+environment variable to <literal>NO</literal>.</para>
+
+</sect2>
+
+</sect1>
+
+<!-- ================================================================== -->
+
+<sect1 id="fonts">
+<title>Fonts</title>
+
+<para>Packages that install X11 fonts should update the database files
+that index the fonts within each fonts directory.  This can easily be
+accomplished within the pkginstall framework.</para>
+
+<para>When a package installs X11 fonts, it must list the directories in
+which fonts are installed in the
+<varname>FONTS_DIRS.<replaceable>type</replaceable></varname> variables,
+where <replaceable>type</replaceable> can be one of <quote>ttf</quote>,
+<quote>type1</quote> or <quote>x11</quote>.  This will add hooks to the
+installation scripts to run the appropriate commands to update the fonts
+database files within each of those directories.  For convenience, if the
+directory path is relative, it is taken to be relative to the package's
+installation prefix.  Consider the following example, taken from <filename
+role="pkg">fonts/dbz-ttf</filename>:</para>
+
+<programlisting>
+    FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
+</programlisting>
+
+<!-- ================================================================== -->
+
+<sect2 id="fonts-disable">
+<title>Disabling automatic update of the fonts databases</title>
+
+<!-- XXX This doesn't really belong here -->
+
+<para>The automatic update of fonts databases can be disabled by
+the administrator by setting the <filename>PKG_UPDATE_FONTS_DB</filename>
 environment variable to <literal>NO</literal>.</para>
 
 </sect2>
