@@ -1,4 +1,4 @@
-# $NetBSD: pkginstall.mk,v 1.1 2005/12/29 06:18:53 jlam Exp $
+# $NetBSD: pkginstall.mk,v 1.2 2005/12/29 13:47:43 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and determines whether
 # or not the bsd.pkginstall.mk implementation file should be included.
@@ -37,7 +37,7 @@ _PKGINSTALL_VARS+=	CONF_DEPENDS
 
 _USE_PKGINSTALL=	no
 .for _var_ in ${_PKGINSTALL_VARS}
-.  if !empty(${_var_})
+.  if defined(${_var_}) && !empty(${_var_}:M*)
 _USE_PKGINSTALL=	yes
 .  endif
 .endfor
