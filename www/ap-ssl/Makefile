@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2005/12/05 23:55:22 rillig Exp $
+# $NetBSD: Makefile,v 1.95 2005/12/29 06:22:21 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.25-1.3.34
 PKGNAME=		ap-ssl-2.8.25
@@ -15,7 +15,6 @@ CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
 BUILDLINK_DEPENDS.apache+=	apache>=1.3.33
 
-USE_PKGINSTALL=		yes
 APACHE_MODULE=		yes
 
 GNU_CONFIGURE=		yes

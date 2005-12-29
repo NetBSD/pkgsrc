@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 23:55:13 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 06:21:59 jlam Exp $
 #
 
 DISTNAME=		gopher_3.0.11
@@ -16,7 +16,6 @@ EGDIR=			${PREFIX}/share/examples/gopher
 MAKE_ENV+=		EGDIR=${EGDIR:Q}
 
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--disable-auth

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:56 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:22:10 jlam Exp $
 #
 
 DISTNAME=	honeyd-1.0
@@ -14,7 +14,6 @@ DEPENDS+=       honeyd-arpd>=0.2:../../security/honeyd-arpd
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR=	honeyd
 RCD_SCRIPTS=		honeyd
 USE_BUILTIN.libevent=	NO

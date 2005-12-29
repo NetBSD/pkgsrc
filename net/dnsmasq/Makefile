@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/18 04:41:59 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/29 06:21:58 jlam Exp $
 #
 
 DISTNAME=		dnsmasq-2.23
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.thekelleys.org.uk/dnsmasq/doc.html
 COMMENT=		Lightweight, easy to configure DNS forwarder
 
 USE_TOOLS+=		gmake
-USE_PKGINSTALL= 	yes
 
 RCD_SCRIPTS=	dnsmasq
 CONF_FILES=	${PREFIX}/share/examples/dnsmasq/dnsmasq.conf.example \

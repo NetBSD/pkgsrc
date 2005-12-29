@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/20 19:16:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:06 jlam Exp $
 #
 
 DISTNAME=	pkg_alternatives-1.3
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		YES
 NO_BUILD=		YES
-USE_PKGINSTALL=		YES
 WRKSRC=			${WRKDIR}
 
 DATADIR=		${PREFIX}/share/pkg_alternatives

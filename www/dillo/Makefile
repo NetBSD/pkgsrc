@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/12/05 23:55:22 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/29 06:22:22 jlam Exp $
 
 DISTNAME=	dillo-0.8.5
 CATEGORIES=	www
@@ -9,7 +9,6 @@ MAINTAINER=	Benjamin.Wong@cc.gatech.edu
 HOMEPAGE=	http://www.dillo.org/
 COMMENT=	Very small and fast graphical web-browser
 
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

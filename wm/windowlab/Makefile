@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/19 06:44:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:22:20 jlam Exp $
 #
 
 DISTNAME=	windowlab-1.33
@@ -12,7 +12,6 @@ COMMENT=	Small and simple window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	gmake pkg-config
 
 EGDIR=		${PREFIX}/share/examples/windowlab

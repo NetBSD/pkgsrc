@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/29 06:21:37 jlam Exp $
 
 DISTNAME=	gdbada-6.3
 #PKGREVISION=	1
@@ -19,7 +19,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GDB_SUBPREFIX=	gdbada
 GDB_PREFIX=	${PREFIX}/${GDB_SUBPREFIX}
 GNU_CONFIGURE=          YES
-USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 TEST_TARGET=    	check
 INFO_DIR=		${GDB_PREFIX}/info

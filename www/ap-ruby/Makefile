@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/05 20:51:10 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/29 06:22:21 jlam Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -14,7 +14,6 @@ COMMENT=	Apache module that embeds Ruby interpreter within
 CONFLICTS+=		ap2-ruby*
 
 RUBY_HAS_ARCHLIB=	yes
-USE_PKGINSTALL=		yes
 APACHE_MODULE=		yes
 VERSION=		1.2.4
 HAS_CONFIGURE=  	yes

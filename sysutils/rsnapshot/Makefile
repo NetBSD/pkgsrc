@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/27 08:56:47 kim Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:18 jlam Exp $
 #
 
 DISTNAME=	rsnapshot-1.2.1
@@ -15,7 +15,6 @@ DEPENDS+=	p5-Lchown>=0.07:../../sysutils/p5-Lchown
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
-USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

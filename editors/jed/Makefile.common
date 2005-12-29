@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/04/11 21:45:40 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/12/29 06:21:38 jlam Exp $
 #
 DISTNAME=		jed-0.99-16
 CATEGORIES=		editors
@@ -12,7 +12,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@gmx.net
 HOMEPAGE=		http://www.jedsoft.org/jed/
 
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/jed
