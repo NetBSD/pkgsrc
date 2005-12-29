@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/12/29 14:53:52 ghen Exp $
+
+Patch from https://noc.sixxs.net/forum/?msg=setup-219655
+This will be included in the next aiccu release.
+
+--- common/common.h.orig	2005-01-31 21:32:50.000000000 +0100
++++ common/common.h
+@@ -24,6 +24,10 @@
+ #endif
+ #define __STRICT_ANSI__
+ 
++#ifdef __NetBSD__
++#define _NETBSD_SOURCE
++#endif
++
+ #include <stdio.h>
+ #include <errno.h>
+ #include <stdarg.h>

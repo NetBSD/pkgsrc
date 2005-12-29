@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/29 14:53:52 ghen Exp $
+
+SHA1 (aiccu_2005.01.31.tar.gz) = 2d3e9e1844e7e2b2ae144b00974a9d1022b45396
+RMD160 (aiccu_2005.01.31.tar.gz) = 48f9508bb62984acc8cde8419765c5003a7200f4
+Size (aiccu_2005.01.31.tar.gz) = 45672 bytes
+SHA1 (patch-aa) = 0fcff412c044961724d227bdfdd91f81b1b0c059
+SHA1 (patch-ab) = f1c48fd4698ee203ac3c2d7685b0b853abb4e54b
+SHA1 (patch-ac) = 8c35c669e05e9100489126ad8d0ebd164d5ad09a
