@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/17 14:17:44 skrll Exp $
-@exec ${MKDIR} %D/lib/X11/fonts/biznet/100dpi
-@exec ${MKDIR} %D/lib/X11/fonts/biznet/75dpi
-@exec ${MKDIR} %D/lib/X11/fonts/biznet/misc
+@comment $NetBSD: PLIST,v 1.2 2005/12/29 07:31:31 jlam Exp $
 lib/X11/fonts/biznet/100dpi/UTI___10.pcf.gz
 lib/X11/fonts/biznet/100dpi/UTI___12.pcf.gz
 lib/X11/fonts/biznet/100dpi/UTI___14.pcf.gz
