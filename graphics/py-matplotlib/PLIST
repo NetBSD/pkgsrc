@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/31 18:09:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/12/29 20:29:35 markd Exp $
 ${PYSITELIB}/dateutil/__init__.py
 ${PYSITELIB}/dateutil/__init__.pyc
 ${PYSITELIB}/dateutil/__init__.pyo
@@ -30,8 +30,7 @@ ${PYSITELIB}/matplotlib/_image.pyo
 ${PYSITELIB}/matplotlib/_mathtext_data.py
 ${PYSITELIB}/matplotlib/_mathtext_data.pyc
 ${PYSITELIB}/matplotlib/_mathtext_data.pyo
-${PYSITELIB}/matplotlib/_nc_backend_gdk.so
-${PYSITELIB}/matplotlib/_nc_contour.so
+${PYSITELIB}/matplotlib/_nc_cntr.so
 ${PYSITELIB}/matplotlib/_nc_image.so
 ${PYSITELIB}/matplotlib/_nc_transforms.so
 ${PYSITELIB}/matplotlib/_pylab_helpers.py
@@ -63,13 +62,20 @@ ${PYSITELIB}/matplotlib/backends/__init__.pyc
 ${PYSITELIB}/matplotlib/backends/__init__.pyo
 ${PYSITELIB}/matplotlib/backends/_gtkagg.so
 ${PYSITELIB}/matplotlib/backends/_nc_backend_agg.so
+${PYSITELIB}/matplotlib/backends/_nc_backend_gdk.so
 ${PYSITELIB}/matplotlib/backends/_tkagg.so
 ${PYSITELIB}/matplotlib/backends/backend_agg.py
 ${PYSITELIB}/matplotlib/backends/backend_agg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_agg.pyo
+${PYSITELIB}/matplotlib/backends/backend_agg2.py
+${PYSITELIB}/matplotlib/backends/backend_agg2.pyc
+${PYSITELIB}/matplotlib/backends/backend_agg2.pyo
 ${PYSITELIB}/matplotlib/backends/backend_cairo.py
 ${PYSITELIB}/matplotlib/backends/backend_cairo.pyc
 ${PYSITELIB}/matplotlib/backends/backend_cairo.pyo
+${PYSITELIB}/matplotlib/backends/backend_cocoaagg.py
+${PYSITELIB}/matplotlib/backends/backend_cocoaagg.pyc
+${PYSITELIB}/matplotlib/backends/backend_cocoaagg.pyo
 ${PYSITELIB}/matplotlib/backends/backend_fltkagg.py
 ${PYSITELIB}/matplotlib/backends/backend_fltkagg.pyc
 ${PYSITELIB}/matplotlib/backends/backend_fltkagg.pyo
@@ -339,6 +345,9 @@ ${PYSITELIB}/matplotlib/pyparsing.pyo
 ${PYSITELIB}/matplotlib/table.py
 ${PYSITELIB}/matplotlib/table.pyc
 ${PYSITELIB}/matplotlib/table.pyo
+${PYSITELIB}/matplotlib/texmanager.py
+${PYSITELIB}/matplotlib/texmanager.pyc
+${PYSITELIB}/matplotlib/texmanager.pyo
 ${PYSITELIB}/matplotlib/text.py
 ${PYSITELIB}/matplotlib/text.pyc
 ${PYSITELIB}/matplotlib/text.pyo
@@ -348,6 +357,9 @@ ${PYSITELIB}/matplotlib/ticker.pyo
 ${PYSITELIB}/matplotlib/transforms.py
 ${PYSITELIB}/matplotlib/transforms.pyc
 ${PYSITELIB}/matplotlib/transforms.pyo
+${PYSITELIB}/matplotlib/widgets.py
+${PYSITELIB}/matplotlib/widgets.pyc
+${PYSITELIB}/matplotlib/widgets.pyo
 ${PYSITELIB}/matplotlib/windowing.py
 ${PYSITELIB}/matplotlib/windowing.pyc
 ${PYSITELIB}/matplotlib/windowing.pyo
@@ -2069,7 +2081,6 @@ ${PYSITELIB}/pytz/zoneinfo/__init__.pyo
 ${PYSITELIB}/pytz/zoneinfo/posixrules.py
 ${PYSITELIB}/pytz/zoneinfo/posixrules.pyc
 ${PYSITELIB}/pytz/zoneinfo/posixrules.pyo
-share/matplotlib/.matplotlibrc
 share/matplotlib/Vera.ttf
 share/matplotlib/VeraBI.ttf
 share/matplotlib/VeraBd.ttf
@@ -2111,6 +2122,7 @@ share/matplotlib/home.ppm
 share/matplotlib/home.svg
 share/matplotlib/home.xpm
 share/matplotlib/matplotlib.svg
+share/matplotlib/matplotlibrc
 share/matplotlib/move.png
 share/matplotlib/move.ppm
 share/matplotlib/move.svg
@@ -2174,6 +2186,9 @@ share/matplotlib/stock_zoom-in.ppm
 share/matplotlib/stock_zoom-in.xpm
 share/matplotlib/stock_zoom-out.ppm
 share/matplotlib/stock_zoom-out.xpm
+share/matplotlib/subplots.png
+share/matplotlib/subplots.ppm
+share/matplotlib/subplots.xpm
 share/matplotlib/zoom_to_rect.png
 share/matplotlib/zoom_to_rect.ppm
 share/matplotlib/zoom_to_rect.svg
