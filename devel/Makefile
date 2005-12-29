@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.702 2005/12/28 13:08:02 ghen Exp $
+# $NetBSD: Makefile,v 1.703 2005/12/29 15:49:38 cube Exp $
 #
 
 COMMENT=	Development utilities
@@ -296,6 +296,7 @@ SUBDIR+=	newmkdep
 SUBDIR+=	newt
 SUBDIR+=	noweb
 SUBDIR+=	nqc
+SUBDIR+=	nsis
 SUBDIR+=	nspr
 SUBDIR+=	nspr-reference
 SUBDIR+=	nss
@@ -580,6 +581,7 @@ SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sablecc
 SUBDIR+=	scons
+SUBDIR+=	scons-devel
 SUBDIR+=	sdcc
 SUBDIR+=	semantic
 SUBDIR+=	semi
