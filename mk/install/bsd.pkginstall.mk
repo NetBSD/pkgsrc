@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.32 2005/12/29 06:18:53 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.33 2005/12/29 14:10:01 jlam Exp $
 #
 # This Makefile fragment is included by mk/install/pkginstall.mk and is
 # the implemenation file for the common INSTALL/DEINSTALL scripts
@@ -639,6 +639,10 @@ ${INSTALL_FONTS_FILE}: ../../mk/install/fonts
 # PKG_REGISTER_SHELLS indicates whether to automatically register shells
 #	in /etc/shells.  It is either YES or NO and defaults to YES.
 #
+# PKG_UPDATE_FONTS_DB indicates whether to automatically update the fonts
+#	databases in directories where fonts have been installed or
+#	removed.  It is either YES or NO and defaults to YES.
+#
 # These values merely set the defaults for INSTALL/DEINSTALL scripts, but
 # they may be overridden by resetting them in the environment.
 #
@@ -646,10 +650,12 @@ PKG_CREATE_USERGROUP?=	YES
 PKG_CONFIG?=		YES
 PKG_RCD_SCRIPTS?=	NO
 PKG_REGISTER_SHELLS?=	YES
+PKG_UPDATE_FONTS_DB?=	YES
 FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP:Q}
 FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG:Q}
 FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS:Q}
 FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS:Q}
+FILES_SUBST+=		PKG_UPDATE_FONTS_DB=${PKG_UPDATE_FONTS_DB:Q}
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts and
 # in the rc.d scripts.
