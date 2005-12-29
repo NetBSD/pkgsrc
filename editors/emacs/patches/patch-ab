@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.20 2005/10/06 11:08:39 markd Exp $
+$NetBSD: patch-ab,v 1.21 2005/12/29 13:56:51 joerg Exp $
 
 --- configure.orig	2003-03-19 02:19:12.000000000 +1200
 +++ configure
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.20 2005/10/06 11:08:39 markd Exp $
        *-sysv4.2uw* )	  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
        *-386bsd* )	        opsys=386bsd ;;
        *-freebsd* )	        opsys=freebsd ;;
-+      *-dragonfly* )	        opsys=freebsd ;;
++      *-dragonfly* )	        opsys=dragonfly ;;
        *-nextstep* )             opsys=nextstep ;;
        ## Otherwise, we'll fall through to the generic opsys code at the bottom.
      esac
