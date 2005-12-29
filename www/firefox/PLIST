@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/12/10 13:47:22 taya Exp $
+@comment $NetBSD: PLIST,v 1.19.2.1 2005/12/29 18:15:50 seb Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -91,6 +91,14 @@ lib/${MOZILLA}/libxpcom_core.${SO_SUFFIX}
 lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
 lib/${MOZILLA}/plugins/libunixprintplugin.${SO_SUFFIX}
 @comment end DSO
+@comment begin PKGCONFIG
+lib/pkgconfig/firefox-gtkmozembed.pc
+lib/pkgconfig/firefox-js.pc
+lib/pkgconfig/firefox-nspr.pc
+lib/pkgconfig/firefox-nss.pc
+lib/pkgconfig/firefox-plugin.pc
+lib/pkgconfig/firefox-xpcom.pc
+@comment end PKGCONFIG
 @comment begin DATA
 lib/${MOZILLA}/LICENSE
 lib/${MOZILLA}/README.txt
