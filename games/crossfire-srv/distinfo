@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 23:11:56 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/12/29 17:41:27 joerg Exp $
 
 SHA1 (crossfire-1.0.0.tar.bz2) = 2ec13e71591d245726e19aa10de7619a2e113b0d
 RMD160 (crossfire-1.0.0.tar.bz2) = 6935c8896d133de8f1f28f8ebfbbe4c2bbfa510b
@@ -9,3 +9,5 @@ Size (crossfire-1.0.0-maps.tar.bz2) = 3066588 bytes
 SHA1 (patch-aa) = 48b06c6db01ed17a0cc1c7263ae74d5559cff8ca
 SHA1 (patch-ab) = c702d3432ee2481175c3b6f863cd1f1357a6f7ed
 SHA1 (patch-ac) = f5e2103dfd33e993a8ed8dc8fd78198d51801dc1
+SHA1 (patch-ad) = 9d902f3fae2acc5cf87d367c8b2669a746006b4b
+SHA1 (patch-ae) = 2d55dfbf1c6c9c979ac9fd6aa0d83c3af7603fa7
