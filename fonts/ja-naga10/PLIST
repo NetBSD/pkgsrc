@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:43:09 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/12/29 18:17:21 jlam Exp $
 lib/X11/fonts/local/5x10B.pcf.gz
 lib/X11/fonts/local/5x10a.pcf.gz
 lib/X11/fonts/local/5x10rk.pcf.gz
@@ -11,5 +11,3 @@ lib/X11/fonts/local/maru10.pcf.gz
 lib/X11/fonts/local/min10.pcf.gz
 share/doc/README.6x12
 share/doc/README.naga10
-@exec mkfontdir %D/lib/X11/fonts/local
-@unexec mkfontdir %D/lib/X11/fonts/local
