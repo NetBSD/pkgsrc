@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.2.12.1 2005/12/29 00:01:31 seb Exp $
+
+--- src/drivel.h.orig	2005-05-30 05:25:35.000000000 +0200
++++ src/drivel.h
+@@ -27,6 +27,7 @@
+ #include "utils.h"
+ 
+ #define _XOPEN_SOURCE /* glibc2 needs this */
++#define _XOPEN_SOURCE_EXTENDED /* to make the above one work under NetBSD */
+ #include <time.h>
+ #include <gtk/gtk.h>
+ #include <libgnomevfs/gnome-vfs.h>
