@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:17 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:06 jlam Exp $
 #
 
 DISTNAME=	pkg_notify-0.4.2
@@ -16,7 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
-USE_PKGINSTALL=		yes
 WRKSRC=			${WRKDIR}/pkg_notify
 
 EXAMPLEDIR=		${PREFIX}/share/examples/${PKGBASE}

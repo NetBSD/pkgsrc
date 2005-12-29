@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2005/12/29 06:22:04 jlam Exp $
 #
 
 DISTNAME=	vsftpd-1.2.2
@@ -10,7 +10,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://vsftpd.beasts.org/
 COMMENT=	FTP server that aims to be very secure
 
-USE_PKGINSTALL=	YES
 
 PKG_SYSCONFSUBDIR=	vsftpd
 

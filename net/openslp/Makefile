@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/17 05:20:22 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/29 06:22:01 jlam Exp $
 
 DISTNAME=	openslp-1.2.1
 CATEGORIES=	net
@@ -12,7 +12,6 @@ COMMENT=	Open-source implementation of the Service Location Protocol
 # PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		automake bison lex
-USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

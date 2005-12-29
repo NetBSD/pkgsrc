@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/12/05 23:55:14 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2005/12/29 06:22:00 jlam Exp $
 
 DISTNAME=	netatalk-2.0.3
 PKGREVISION=	1
@@ -16,7 +16,6 @@ USE_LIBTOOL=	YES
 USE_OLD_DES_API=YES
 BUILDLINK_TRANSFORM+=	l:db-4.2:db4
 
-USE_PKGINSTALL=	YES
 PKG_SYSCONFSUBDIR=	netatalk
 EG_DIR=		${PREFIX}/share/examples/netatalk
 CONF_FILES=	${EG_DIR}/AppleVolumes.default ${PKG_SYSCONFDIR}/AppleVolumes.default \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2005/12/05 23:55:02 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2005/12/29 06:21:30 jlam Exp $
 
 DISTNAME=		esound-0.2.36
 CATEGORIES=		audio
@@ -11,7 +11,6 @@ COMMENT=		The Enlightened sound daemon
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	esound.pc.in
 

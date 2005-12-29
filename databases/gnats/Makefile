@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:04 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/29 06:21:35 jlam Exp $
 
 DISTNAME=	gnats-4.1.0
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.gnu.org/software/gnats/
 COMMENT=	GNATS bug tracking system
 
 USE_PKGLOCALEDIR=	yes
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		gm4 gmake
 USE_BISON=		yes
 USE_MAKEINFO=		yes

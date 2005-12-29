@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/15 18:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/29 06:21:32 jlam Exp $
 #
 
 DISTNAME=	arka-0.11
@@ -13,7 +13,6 @@ COMMENT=	Graphic interface for the programs from the GP package
 DEPENDS+=	gp-[0-9]*:../../biology/gp
 
 USE_DIRS+=	xdg-1.1
-USE_PKGINSTALL=	YES
 
 CONF_FILES=	${PREFIX}/share/examples/arka/arkarc ${PKG_SYSCONFDIR}/arkarc
 CPPFLAGS+=	-DARKA_GLOBAL=\"${PKG_SYSCONFDIR}/arkarc\"

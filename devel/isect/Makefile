@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/04/11 21:45:25 tv Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/29 06:21:37 jlam Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://isectd.sourceforge.net/
 COMMENT=	Open source middleware daemon
 
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		require
 INFO_FILES=		isect.info

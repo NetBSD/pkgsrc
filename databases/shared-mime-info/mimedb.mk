@@ -1,4 +1,4 @@
-# $NetBSD: mimedb.mk,v 1.2 2005/03/24 22:42:58 jlam Exp $
+# $NetBSD: mimedb.mk,v 1.3 2005/12/29 06:21:36 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # mime customization files.  It takes care of registering them in the global
@@ -10,7 +10,6 @@ SHARED_MIME_INFO_MIMEDB_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../databases/shared-mime-info/files/install.tmpl
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../databases/shared-mime-info/files/install.tmpl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/12/05 20:51:13 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2005/12/29 06:22:24 jlam Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=	www
@@ -84,7 +84,6 @@ PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION:C/u.*//}
 
 .if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
 NO_BUILD=               YES
-USE_PKGINSTALL=		YES
 
 SUBST_CLASSES+=		opera
 SUBST_STAGE.opera=	post-build

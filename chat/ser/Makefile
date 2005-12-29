@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:49:54 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/29 06:21:33 jlam Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
@@ -13,7 +13,6 @@ COMMENT=	SIP express router
 WRKSRC=		${WRKDIR}/ser-0.8.14
 
 USE_TOOLS+=	flex gmake yacc
-USE_PKGINSTALL=	yes
 
 PKG_SYSCONFSUBDIR=	ser
 EGDIR=			${PREFIX}/share/examples/ser

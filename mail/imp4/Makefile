@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:32 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:50 jlam Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -27,7 +27,6 @@ PAXDIRS=	lib locale po scripts templates themes
 MESSAGE_SUBST+=	IMPDIR=${IMPDIR}
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR?=	httpd
 
 CONF_FILES=		${EGDIR}/imp.conf ${PKG_SYSCONFDIR}/imp.conf

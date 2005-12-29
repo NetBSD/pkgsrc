@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 23:55:12 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2005/12/29 06:21:53 jlam Exp $
 
 DISTNAME=	sylpheed-2.1.8
 CATEGORIES=	mail news x11
@@ -15,7 +15,6 @@ DEPENDS+=		metamail>=2.7:../../mail/metamail
 
 CONFLICTS=		sylpheed-claws-[0-9]* sylpheed-gtk2-[0-9]*
 
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=            yes
 USE_TOOLS+=		gmake

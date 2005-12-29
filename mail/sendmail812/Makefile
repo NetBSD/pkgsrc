@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/23 11:48:49 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:53 jlam Exp $
 
 .include "options.mk"
 .include "../../mail/sendmail812/Makefile.common"
@@ -12,7 +12,6 @@ CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
-USE_PKGINSTALL=	yes
 PKG_GROUPS=	smmsp
 PKG_USERS=	smmsp:smmsp::Sendmail\ Message\ Submission\ Program
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:18 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:11 jlam Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	3
@@ -16,7 +16,6 @@ MAINTAINER=	burgess@neonramp.com
 HOMEPAGE=	http://www.mit.edu/people/marc/pks/
 COMMENT=	PGP Public Key Server
 
-USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 PKS_USER=	pks

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/10/27 07:22:16 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:36 jlam Exp $
 
 PKGNAME=	postgresql80-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -44,7 +44,6 @@ BUILD_DIRS+=	${WRKSRC}/src/backend
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql80-client
 .include "../../databases/postgresql80/options.mk"
 
-USE_PKGINSTALL=	yes
 .for _file_ in pg_service.conf psqlrc
 CONF_FILES+=	${PG_DATA_DIR}/${_file_}.sample ${PG_ETC_DIR}/${_file_}
 .endfor

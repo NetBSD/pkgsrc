@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:59 jlam Exp $
 #
 
 DISTNAME=		hf6to4-1.3
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.NetBSD.org/packages/net/hf6to4/files/hf6to4.html
 COMMENT=		Enables 6to4 IPv6 automatic tunnels
 
 WRKSRC=			${WRKDIR}
-USE_PKGINSTALL=		YES
 
 NOT_FOR_PLATFORM+=	Interix-*-* # no IPv6 support or ifconfig command
 
