@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 23:11:56 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/12/29 22:43:40 joerg Exp $
 
 SHA1 (crossfire-client-1.0.0.tar.gz) = d6861684a40884efe6411d413b9273fa52314236
 RMD160 (crossfire-client-1.0.0.tar.gz) = 1ec910b9244f9a1d6d0a4328c2037b48b3d7db73
@@ -11,3 +11,8 @@ RMD160 (client-0.95.2-raw-sounds.tgz) = aea5d7093f4b2037294020491c8b883f4f5938bf
 Size (client-0.95.2-raw-sounds.tgz) = 326199 bytes
 SHA1 (patch-aa) = 2b06d2b09e00b118b6e516102aa8860c72fc5094
 SHA1 (patch-ab) = 27d4a550f4f630d9f19c6b81a7aa208a3580e8b1
+SHA1 (patch-ac) = 14e8165a1e1e67228a4db1b82f2c45f86b305d64
+SHA1 (patch-ad) = e8827a48461c2fe7ceaf902768544b548ef771bb
+SHA1 (patch-ae) = 7fee24e6787329414b4a417fd08b97411634f2c5
+SHA1 (patch-af) = c032ff53608e9d24a6d2afdfe552b1a43dfde4e9
+SHA1 (patch-ag) = 088fec4dc9a554b4d16f54c0d97b9c3225c6db84
