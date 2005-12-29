@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: do-install,v 1.1 2001/10/26 12:54:24 agc Exp $
+# $NetBSD: do-install,v 1.2 2005/12/29 03:26:28 reed Exp $
 #
 
 cd $WRKSRC
@@ -15,22 +15,22 @@ mkdir -p $PREFIX/share/hbench/Results
 for basedir in $DIRS; do
 	OSDIR=`basename $basedir`
 	mkdir -p $PREFIX/bin/hbench/$OSDIR
-	/usr/bin/install -c -s -o bin -g bin -m 0755 bin/$OSDIR/* $PREFIX/bin/hbench/$OSDIR
+	$BSD_INSTALL_PROGRAM bin/$OSDIR/* $PREFIX/bin/hbench/$OSDIR
 done
 
 for files in $SCRIPTS; do
-	/usr/bin/install -c -o bin -g bin -m 0755 scripts/$files $PREFIX/bin/hbench
+	$BSD_INSTALL_SCRIPT scripts/$files $PREFIX/bin/hbench
 done
 mkdir -p $PREFIX/share/doc/hbench
 for files in $DOCS; do
-	/usr/bin/install -c -o bin -g bin -m 0444 doc/$files $PREFIX/share/doc/hbench
+	$BSD_INSTALL_DATA doc/$files $PREFIX/share/doc/hbench
 done
 cat <<EOF >$PREFIX/bin/run-hbench
 #!/bin/sh
 ${PREFIX}/bin/hbench/interactive-setup
 ${PREFIX}/bin/hbench/maindriver ${PREFIX}/share/hbench/conf/`hostname`.run
 EOF
-chown bin:bin ${PREFIX}/bin/run-hbench
+chown $BINOWN:$BINGRP ${PREFIX}/bin/run-hbench
 chmod 0755 ${PREFIX}/bin/run-hbench
 cp Results/Makefile $PREFIX/share/hbench/Results
 cp -R conf $PREFIX/share/hbench

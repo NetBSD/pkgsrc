@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2005/07/16 19:10:37 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/29 03:26:28 reed Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
-PKGREVISION=	2
+PKGREVISION=		3
 CATEGORIES=		benchmarks
 MASTER_SITES=	http://www.eecs.harvard.edu/vino/perf/hbench/
 
@@ -22,7 +22,7 @@ USE_TOOLS+=		perl:run
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 post-configure:
-	@cd ${WRKSRC};							\
+	cd ${WRKSRC};							\
 	for f in scripts/create-all-analyses				\
 		scripts/create-all-latgraphs				\
 		scripts/create-all-summaries scripts/gen-analysis	\
@@ -32,10 +32,11 @@ post-configure:
 		${MV} $$f $$f.in;					\
 		${SED} -e 's|@PREFIX@|${PREFIX}|g' $$f.in > $$f;	\
 	done
-	@ ${CHMOD} 0755 ${WRKSRC}/scripts/*
+	${CHMOD} 0755 ${WRKSRC}/scripts/*
 
 do-install:
-	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} ${FILESDIR}/do-install
+	${SETENV} ${MAKE_ENV} WRKSRC=${WRKSRC} BINOWN=${BINOWN} \
+		BINGRP=${BINGRP} ${FILESDIR}/do-install
 
 benchmark:
 	@if [ `id -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi
