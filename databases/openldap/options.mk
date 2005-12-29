@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.14 2005/12/05 20:49:58 rillig Exp $
+# $NetBSD: options.mk,v 1.15 2005/12/29 20:10:23 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap
 PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp
+PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc
+PKG_OPTIONS_GROUP.odbc=	iodbc unixodbc
 PKG_SUGGESTED_OPTIONS=	bdb
 
 .include "../../mk/bsd.options.mk"
@@ -22,6 +24,27 @@ BDB_TYPE?=		none
 CONFIGURE_ARGS+=	--enable-bdb --enable-hdb
 .else
 CONFIGURE_ARGS+=	--disable-bdb --disable-hdb
+.endif
+
+###
+### Whether to build with iODBC to enable SQL based slapd backends
+###
+.if !empty(PKG_OPTIONS:Miodbc)
+.  include "../../databases/iodbc/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-sql
+.endif
+
+###
+### Whether to build with unixODBC to enable SQL based slapd backends
+###
+.if !empty(PKG_OPTIONS:Munixodbc)
+.  include "../../databases/unixodbc/buildlink3.mk"
+.  include "../../devel/libltdl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-sql
+.endif
+
+.if empty(PKG_OPTIONS:Miodbc) && empty(PKG_OPTIONS:Munixodbc)
+CONFIGURE_ARGS+=	--disable-sql
 .endif
 
 ###
