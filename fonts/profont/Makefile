@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/29 06:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2005/12/29 07:04:28 jlam Exp $
 #
 
 DISTNAME=	profontlinux
@@ -15,11 +15,10 @@ NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_X11BASE=		yes
 
-FONTS_X11_DIRS=		${PREFIX}/lib/X11/fonts/misc
+FONTS_DIRS.x11=		${PREFIX}/lib/X11/fonts/misc
 INSTALLATION_DIRS=	lib/X11/fonts/misc
 
 do-install:
-	for i in ${WRKDIR}/*.pcf; do ${INSTALL_DATA} $$i ${FONTS_X11_DIRS}; done
+	for i in ${WRKDIR}/*.pcf; do ${INSTALL_DATA} $$i ${FONTS_DIRS.x11}; done
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
