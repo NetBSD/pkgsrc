@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:07 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/12/29 16:09:42 kim Exp $
 
 SHA1 (libgpg-error-1.0.tar.gz) = 1c91787f208c30a91678ebb2f173308f8fab3d36
 RMD160 (libgpg-error-1.0.tar.gz) = 382eda8abd94eaad9964350f20135305de2adad9
@@ -7,3 +7,8 @@ SHA1 (patch-aa) = 04f2918c2b61250693a279cd30a94a22fa4cad0a
 SHA1 (patch-ab) = 43ccbcfc284735255111438a015837bc69dac938
 SHA1 (patch-ac) = add7f9971bd3a087db518d5e1ce12a14f2d84d6a
 SHA1 (patch-ad) = ddb86ddf354cc9228eec28154d41f1fa62f474f3
+SHA1 (patch-ae) = 0865909ebfc7594bb5854e9ef6f7da3718d034bf
+SHA1 (patch-af) = 47b27ae134a98d933697ef6de40348ab685eb9fd
+SHA1 (patch-ag) = 5cc03cb3745d366d348a0a2e495a112728b11a37
+SHA1 (patch-ah) = 4e648d5f42bd0253e0e6259fcbcca14c2de22491
+SHA1 (patch-ai) = 9db7b50cc98c5a4956a390cb721c51ef5f3e3a4f
