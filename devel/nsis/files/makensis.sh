@@ -1,0 +1,3 @@
+#!@@SH@@
+
+exec @@MAKENSIS@@ "$@"
