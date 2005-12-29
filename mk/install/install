@@ -1,7 +1,7 @@
 # -*- sh -*-
 # start of install
 #
-# $NetBSD: install,v 1.41 2005/08/19 22:24:10 jlam Exp $
+# $NetBSD: install,v 1.42 2005/12/29 03:44:38 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -50,6 +50,11 @@ POST-INSTALL)
 	#
 	${TEST} ! -x ./+PERMS ||
 		./+PERMS ${PKG_METADATA_DIR}
+	#
+	# Update any fonts databases.
+	#
+	${TEST} ! -x ./+FONTS ||
+		./+FONTS ${PKG_METADATA_DIR}
 
 	# Check for any missing bits after we're finished installing.
 	#
