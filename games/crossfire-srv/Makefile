@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/07/16 01:19:10 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/29 17:41:27 joerg Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -33,7 +33,7 @@ REPLACE_PERL+=	doc/spoiler-html/makeps.pl
 
 post-install:
 	cd ${PREFIX}/share/crossfire && \
-	    ${GZCAT} ${DISTDIR}/${CF_MAPS} | ${GTAR} xmf -
+	    ${BZCAT} ${DISTDIR}/${CF_MAPS} | ${GTAR} xmf -
 	@${CHOWN} ${ROOT_USER}:games ${PREFIX}/bin/crossfire
 	@${CHMOD} 2755 ${PREFIX}/bin/crossfire
 	@${CHOWN} -R ${ROOT_USER}:games ${PREFIX}/share/crossfire
