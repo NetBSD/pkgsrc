@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/06/01 19:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/29 06:22:25 jlam Exp $
 #
 
 DISTNAME=	aterm-0.4.2
@@ -12,7 +12,6 @@ COMMENT=	Aterm (Afterstep XVT) - a VT102 emulator for the X window system
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=--enable-background-image \

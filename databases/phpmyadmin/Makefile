@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/12/09 13:49:21 tron Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/29 06:21:36 jlam Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -32,7 +32,6 @@ CONF_FILES=	${EXDIR}/config.inc.php ${PKG_SYSCONFDIR}/config.inc.php
 SPECIAL_PERMS=	${PKG_SYSCONFDIR}/config.inc.php ${APACHE_USER} wheel 0600
 BUILD_DEFS+=	APACHE_USER
 
-USE_PKGINSTALL=		YES
 PKG_SYSCONFSUBDIR?=	phpmyadmin
 
 NO_BUILD=		yes

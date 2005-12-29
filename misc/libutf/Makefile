@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 23:55:12 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2005/12/29 06:21:55 jlam Exp $
 #
 
 DISTNAME=	libutf-2.10
@@ -10,7 +10,6 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	UTF-8 character set support library, including regular expressions
 
-USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 BUILD_TARGET=	tst

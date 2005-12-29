@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 20:51:11 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 06:22:21 jlam Exp $
 
 DISTNAME=	apc_gui-1.0.3
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -16,7 +16,6 @@ DEPENDS+=	php-apc>=1.1.0.1:../../www/php4-apc
 DEPENDS+=	php-gd-4.[0-9]*:../../graphics/php-gd
 
 NO_BUILD=	YES
-USE_PKGINSTALL=	YES
 
 PKG_SYSCONFSUBDIR?=	httpd
 APC_GUI_DIR=		${PREFIX}/share/${PKGBASE}

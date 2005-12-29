@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/09/06 21:47:09 adrianp Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/29 06:21:36 jlam Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 PKGREVISION=	5
@@ -13,7 +13,6 @@ DEPENDS+=	php-ldap>=4.1.2:../../databases/php-ldap
 
 VERSION=	0.9.6c
 NO_BUILD=	YES
-USE_PKGINSTALL=	YES
 BUILD_DEFS+=	WWW_USER
 
 CONF_FILES=	${PREFIX}/share/examples/phpldapadmin/config.php.example \

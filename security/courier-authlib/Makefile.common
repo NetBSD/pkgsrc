@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.6 2005/12/05 23:55:17 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/12/29 06:22:09 jlam Exp $
 
 COURIER_USER?=		courier
 COURIER_GROUP?=		mail
 FILES_SUBST+=		COURIER_USER=${COURIER_USER:Q}
 FILES_SUBST+=		COURIER_GROUP=${COURIER_GROUP:Q}
 
-USE_PKGINSTALL=		yes
 PKG_GROUPS=		${COURIER_GROUP}
 PKG_USERS=		${COURIER_USER}:${COURIER_GROUP}::Courier\ user
 

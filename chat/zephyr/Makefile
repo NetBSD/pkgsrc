@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:49:54 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 06:21:33 jlam Exp $
 #
 
 DISTNAME=	zephyr-20010518
@@ -11,7 +11,6 @@ HOMEPAGE=	http://web.mit.edu/olh/Zephyr/index.html
 COMMENT=	Project Athena's original Instant Messaging system
 
 WRKSRC=		${WRKDIR}/zephyr
-USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 CPPFLAGS.NetBSD+=	-I/usr/include/kerberosIV -I/usr/include/krb5

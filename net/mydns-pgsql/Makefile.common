@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/13 12:15:16 ghen Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/12/29 06:22:00 jlam Exp $
 
 DISTNAME=	mydns-1.0.0
 CATEGORIES=	net
@@ -10,7 +10,6 @@ HOMEPAGE=	http://mydns.bboy.net/
 
 GNU_CONFIGURE=	YES
 USE_PKGLOCALEDIR=	YES
-USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
 

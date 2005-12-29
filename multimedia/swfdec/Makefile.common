@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/08/10 20:56:21 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/12/29 06:21:56 jlam Exp $
 #
 
 DISTNAME=		swfdec-0.2.2
@@ -14,7 +14,6 @@ PATCHDIR=		${.CURDIR}/../../multimedia/swfdec/patches
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 

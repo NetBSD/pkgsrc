@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/23 11:48:50 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/29 06:21:59 jlam Exp $
 
 DISTNAME=		howl-0.9.10
 CATEGORIES=		net
@@ -10,7 +10,6 @@ COMMENT=		Zeroconf (Rendezvous) implementation
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 PTHREAD_AUTO_VARS=	yes
 

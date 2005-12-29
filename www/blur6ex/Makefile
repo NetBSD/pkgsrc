@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 20:51:11 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/29 06:22:22 jlam Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
@@ -15,7 +15,6 @@ DEPENDS+=	mysql{,4}-server>=4.0:../../databases/mysql4-server
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_PKGINSTALL=	yes
 
 HTTPD_ROOT?=	share/httpd/htdocs
 PLIST_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT:Q}

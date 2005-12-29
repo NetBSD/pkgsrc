@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/07/25 10:55:44 adam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 06:22:19 jlam Exp $
 
 DISTNAME=	xfe-0.84
 CATEGORIES=	sysutils
@@ -11,7 +11,6 @@ COMMENT=	Fast MS-Explorer like filemanager for X
 BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		xdg-1.1
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

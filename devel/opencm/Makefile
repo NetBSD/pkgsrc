@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/05/22 20:07:54 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2005/12/29 06:21:38 jlam Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.opencm.org/
 COMMENT=	Secure, high-integrity replacement for CVS
 
 WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	gmake gzip
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}

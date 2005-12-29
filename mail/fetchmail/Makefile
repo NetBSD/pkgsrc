@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2005/12/20 14:27:53 frueauf Exp $
+# $NetBSD: Makefile,v 1.156 2005/12/29 06:21:50 jlam Exp $
 
 DISTNAME=	fetchmail-6.2.5.5
 CATEGORIES=	mail
@@ -14,7 +14,6 @@ BUILD_USES_MSGFMT=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod

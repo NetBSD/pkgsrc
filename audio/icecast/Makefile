@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/10/12 22:26:59 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2005/12/29 06:21:31 jlam Exp $
 #
 
 DISTNAME=		icecast-2.3.0
@@ -11,7 +11,6 @@ COMMENT=		Live streaming audio server
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 PTHREAD_AUTO_VARS=	yes
 

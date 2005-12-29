@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/12/05 23:55:06 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2005/12/29 06:21:38 jlam Exp $
 #
 
 DISTNAME=	libgnome-2.12.0.1
@@ -19,7 +19,6 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_PKGINSTALL=		YES
 
 PKGCONFIG_OVERRIDE=	libgnome/libgnome-2.0.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/12/27 13:54:59 seb Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/12/29 06:22:12 jlam Exp $
 #
 
 DISTNAME=	ssh-3.2.9.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.ssh.com/
 CONFLICTS+=	openssh-[0-9]* ssh6-[0-9]* ssh-[0-9]* sftp-[0-9]*
 CONFLICTS+=	openssh+gssapi-[0-9]*
 
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
 BUILD_DEFS+=		USE_INET6

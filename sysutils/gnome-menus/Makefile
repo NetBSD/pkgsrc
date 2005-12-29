@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/10/16 20:39:57 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 06:22:18 jlam Exp $
 #
 
 DISTNAME=	gnome-menus-2.12.0
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.2
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-python

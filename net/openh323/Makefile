@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/12/05 20:50:47 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2005/12/29 06:22:01 jlam Exp $
 
 DISTNAME=	openh323-v1_15_2-src
 PKGNAME=	openh323-1.15.2
@@ -13,7 +13,6 @@ COMMENT=	Open H.323 library
 WRKSRC=			${WRKDIR}/openh323
 USE_TOOLS+=		gmake tar
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	PWLIBDIR=${PREFIX:Q}
 

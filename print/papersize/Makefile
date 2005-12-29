@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/12/27 23:51:51 reed Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/29 06:22:07 jlam Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -14,7 +14,6 @@ EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
-USE_PKGINSTALL=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

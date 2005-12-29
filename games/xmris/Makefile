@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/08 06:30:37 jdc Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:41 jlam Exp $
 
 DISTNAME=		xmris.4.0.5
 PKGNAME=		xmris-4.05
@@ -10,11 +10,9 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.planetfall.pwp.blueyonder.co.uk/xmris/
 COMMENT=		Version of the Mr Do video arcade game for X
 
-USE_PKGINSTALL=		yes
 USE_IMAKE=		yes
 NO_INSTALL_MANPAGES=	yes
 
-USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
 
 post-patch:
