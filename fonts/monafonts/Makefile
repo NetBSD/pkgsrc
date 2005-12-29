@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 22:20:00 jlam Exp $
 
 DISTNAME=	monafont-2.90
 PKGNAME=	${DISTNAME:S/font/fonts/}
@@ -12,14 +12,20 @@ COMMENT=	Japanese fonts for "Mona" seen at 2ch.net
 
 USE_X11BASE=	yes
 BUILD_TARGET=	bdf
-USE_TOOLS+=	bdftopcf gzip mkfontdir perl sed
+USE_TOOLS+=	bdftopcf gzip mkdirhier mkfontdir perl sed
+
+# X11BINDIR is just the path to the X11 tools listed above.
+MAKE_FLAGS+=	X11BINDIR=${TOOLS_DIR:Q}/bin
+
+MAKE_FLAGS+=	X11FONTDIR=${PREFIX:Q}/${FONTS_SUBDIR:Q}
 MAKE_FLAGS+=	SED_CMD=${SED:Q}
 MAKE_FLAGS+=	PERL_CMD=${PERL5:Q}
 MAKE_FLAGS+=	GZIP_CMD=${GZIP_CMD:Q}
 
-FILES_SUBST+=	X11FONTSSUBDIR=local
+FONTS_SUBDIR=	lib/X11/fonts/local
+FONTS_DIRS.x11=	${FONTS_SUBDIR}
 
-post-extract:
+pre-build:
 	${MKDIR} ${WRKSRC}/dist
 
 .include "../../mk/bsd.pkg.mk"
