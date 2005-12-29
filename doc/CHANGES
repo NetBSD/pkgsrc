@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12260 2005/12/29 21:13:48 garbled Exp $
+$NetBSD: CHANGES,v 1.12261 2005/12/29 22:52:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5821,3 +5821,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/py-matplotlib to 0.83 [markd 2005-12-29]
 	Updated lang/erlang to 10.1.9 [ghen 2005-12-29]
 	Added time/gchore version 1.0 [garbled 2005-12-29]
+	Updated audio/cdparanoia to 3.0.9.8nb3 [joerg 2005-12-29]
