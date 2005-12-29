@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1774 2005/12/05 22:07:07 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1775 2005/12/29 06:18:53 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -505,18 +505,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 #
 .include "../../mk/alternatives.mk"
 
-# CONF_DEPENDS notes a dependency where the config directory for the
-# package matches the dependency's config directory.  CONF_DEPENDS is
-# only meaningful if ${PKG_INSTALLATION_TYPE} == "pkgviews".
-#
-CONF_DEPENDS?=		# empty
-.if !empty(CONF_DEPENDS)
-USE_PKGINSTALL=		yes
-.endif
-
-.if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
-.  include "../../mk/install/bsd.pkginstall.mk"
-.endif
+.include "../../mk/install/pkginstall.mk"
 
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
