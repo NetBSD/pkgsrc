@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2005/12/29 22:43:40 joerg Exp $
+
+--- client.c.orig	2001-05-13 22:03:07.000000000 +0000
++++ client.c
+@@ -16,6 +16,7 @@
+  */
+ 
+ 
++#include <errno.h>
+ #include <client.h>
+ 
+ /* actually declare the globals */
