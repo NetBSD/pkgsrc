@@ -1,0 +1,15 @@
+NSIS (Nullsoft Scriptable Install System) is a professional open-source tool
+for the development of Windows installers.  It is designed to be as small and
+flexible as possible and is therefore highly suitable for Internet
+distribution.
+
+An installer is not only the first experience of a user has with your product,
+many software problems can also be solved by providing reliable installation
+tools.  NSIS allows you to create stable, quick and user friendly installers
+that are capable of installing, uninstalling, setting system settings,
+extracting files and more.  With the NSIS scripting language you can implement
+any custom logic you want.
+
+The large collection of plug-ins, scripts and software in the Developer Center
+helps you to build full featured installers and provides a solution for almost
+every scenario.
