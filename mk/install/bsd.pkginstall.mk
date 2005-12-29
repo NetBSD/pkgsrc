@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.30 2005/12/05 22:07:07 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.31 2005/12/29 03:44:38 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -537,6 +537,87 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${ECHO} "esac";							\
 	${ECHO} "";							\
 	${ECHO} "# end of install-shell";				\
+	exec 1>/dev/null;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
+.endif
+
+# FONTS_DIRS.<type> are lists of directories in which the font databases
+#	are updated.  If this is non-empty, then the appropriate tools is
+#	used to update the fonts database for the font type.  The supported
+#	types are:
+#
+#	    ttf		TrueType fonts
+#	    type1	Type1 fonts
+#	    x11		Generic X fonts, e.g. PCF, SNF, BDF, etc.
+#
+FONTS_DIRS.ttf?=	# empty
+FONTS_DIRS.type1?=	# empty
+FONTS_DIRS.x11?=	# empty
+
+INSTALL_FONTS_FILE=	${WRKDIR}/.install-fonts
+INSTALL_FONTS_MEMBERS=	${FONTS_DIRS.ttf} ${FONTS_DIRS.type1} ${FONTS_DIRS.x11}
+INSTALL_UNPACK_TMPL+=	${INSTALL_FONTS_FILE}
+
+# Directories with TTF and Type1 fonts also need to run mkfontdir, so
+# list them as "x11" font directories as well.
+#
+.if !empty(FONTS_DIRS.ttf:M*)
+USE_TOOLS+=		ttmkfdir:run
+FILES_SUBST+=		TTMKFDIR=${TOOLS_PATH.ttmkfdir:Q}
+FONTS_DIRS.x11+=	${FONTS_DIRS.ttf}
+.endif
+.if !empty(FONTS_DIRS.type1:M*)
+USE_TOOLS+=		type1inst:run
+FILES_SUBST+=		TYPE1INST=${TOOLS_PATH.type1inst:Q}
+FONTS_DIRS.x11+=	${FONTS_DIRS.type1}
+.endif
+.if !empty(FONTS_DIRS.x11:M*)
+USE_TOOLS+=		mkfontdir:run
+FILES_SUBST+=		MKFONTDIR=${TOOLS_PATH.mkfontdir:Q}
+.endif
+
+.if empty(INSTALL_FONTS_MEMBERS:M*)
+${INSTALL_FONTS_FILE}:
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
+${INSTALL_FONTS_FILE}: ../../mk/install/fonts
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_FUNC_STRIP_PREFIX};						\
+	exec 1>>${.TARGET}.tmp;						\
+	${ECHO} "# start of install-fonts";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +FONTS script that updates fonts databases."; \
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
+	${ECHO} "	\$${CAT} > ./+FONTS << 'EOF_FONTS'";		\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/fonts;		\
+	${ECHO} "";							\
+	set -- dummy ${FONTS_DIRS.ttf}; shift;				\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; shift;					\
+		dir=`strip_prefix "$$dir"`;				\
+		${ECHO} "# FONTS: $$dir ttf";				\
+	done;								\
+	set -- dummy ${FONTS_DIRS.type1}; shift;			\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; shift;					\
+		dir=`strip_prefix "$$dir"`;				\
+		${ECHO} "# FONTS: $$dir type1";				\
+	done;								\
+	set -- dummy ${FONTS_DIRS.x11}; shift;				\
+	while ${TEST} $$# -gt 0; do					\
+		dir="$$1"; shift;					\
+		dir=`strip_prefix "$$dir"`;				\
+		${ECHO} "# FONTS: $$dir x11";				\
+	done;								\
+	${ECHO} "EOF_FONTS";						\
+	${ECHO} "	\$${CHMOD} +x ./+FONTS";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-fonts";				\
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 .endif
