@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2005/12/29 22:43:40 joerg Exp $
+
+--- client.h.orig	2005-12-29 16:30:10.000000000 +0000
++++ client.h
+@@ -199,8 +199,6 @@ extern int nosound, updatekeycodes;
+ /* WE need to declare most of the structs before we can include this */
+ #include <proto.h>
+ 
+-extern int errno;
+-
+ /* translation of the STAT_RES names into printable names,
+  * in matching order.
+  */
