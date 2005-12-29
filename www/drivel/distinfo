@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2005/08/23 10:02:12 jmmv Exp $
+$NetBSD: distinfo,v 1.13.4.1 2005/12/29 00:01:30 seb Exp $
 
 SHA1 (drivel-2.0.2.tar.bz2) = 34a0585c95b37e0b1f0ffcc96ae028a9f0108ebb
 RMD160 (drivel-2.0.2.tar.bz2) = dfcd230d2d28984ef297305a988d2887d4c29dd0
 Size (drivel-2.0.2.tar.bz2) = 684729 bytes
 SHA1 (patch-aa) = 7b52acd05ecfc12d1c376f766b070af2a9939a37
+SHA1 (patch-ab) = dbc09dc3b8038570109547bad66b731761da289e
