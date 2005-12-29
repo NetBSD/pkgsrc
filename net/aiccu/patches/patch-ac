@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/12/29 14:53:52 ghen Exp $
+
+--- doc/aiccu.conf.orig	2005-01-09 17:15:19.000000000 +0100
++++ doc/aiccu.conf
+@@ -6,7 +6,7 @@
+ 
+ # Interface names to use
+ ipv4_interface eth0
+-ipv6_interface sixxs
++ipv6_interface gif0
+ 
+ # The tunnel_id to use
+ # (only required when there are multiple tunnels in the list)
