@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.43 2005/12/14 23:55:17 minskim Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.44 2005/12/29 14:59:03 jlam Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1357,14 +1357,12 @@
       <para>If a package installs font files, you will need to rebuild
         the fonts database in the directory where they get installed at
         installation and deinstallation time.  This can be automatically
-        done by using <filename>mk/fonts.mk</filename>, which you need to
-        include in your <filename>Makefile</filename>.</para>
+        done by using the pkginstall framework.</para>
     
-      <para>When the file is included, you can list the directories where
-        fonts are installed in the
-        <varname>FONTS_<replaceable>type</replaceable>_DIRS</varname>
+      <para>You can list the directories where fonts are installed in the
+        <varname>FONTS_DIRS.<replaceable>type</replaceable></varname>
         variables, where <replaceable>type</replaceable> can be one of
-        <quote>TTF</quote>, <quote>TYPE1</quote> or <quote>X11</quote>.
+        <quote>ttf</quote>, <quote>type1</quote> or <quote>x11</quote>.
         Also make sure that the database file
         <filename>fonts.dir</filename> is not listed in the PLIST.</para>
     
