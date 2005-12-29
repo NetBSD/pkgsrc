@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12255 2005/12/29 14:03:05 joerg Exp $
+$NetBSD: CHANGES,v 1.12256 2005/12/29 14:57:15 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5815,3 +5815,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated emulators/ckmame to 0.7 [wiz 2005-12-28]
 	Added editors/mflteco version 19920331 [is 2005-12-28]
 	Updated graphics/inkscape to 0.43nb1 [joerg 2005-12-29]
+	Added net/aiccu version 20050131 [ghen 2005-12-29]
