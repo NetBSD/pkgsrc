@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 23:55:18 rillig Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2005/12/29 00:31:19 salo Exp $
 #
 
-DISTNAME=		rssh-2.2.3
-PKGREVISION=		1
+DISTNAME=		rssh-2.3.0
 CATEGORIES=		shells security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rssh/}
 
