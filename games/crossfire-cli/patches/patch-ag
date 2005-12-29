@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2005/12/29 22:43:40 joerg Exp $
+
+--- x11.c.orig	2005-12-29 16:39:09.000000000 +0000
++++ x11.c
+@@ -93,6 +93,7 @@
+  */
+ 
+ 
++#include <errno.h>
+ #include <client.h>
+ #include <clientbmap.h>
+ #include <item.h>
