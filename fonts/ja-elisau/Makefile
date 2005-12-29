@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/08 18:22:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 18:17:21 jlam Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
@@ -18,10 +18,11 @@ SITES_elisau10${EXTRACT_SUFX}=	\
 SITES_clR5x8.bdf=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/
 
 WRKSRC=			${WRKDIR}
-USE_TOOLS+=		gzip mkfontdir:run patch
+USE_TOOLS+=		bdftopcf gzip patch
 USE_X11BASE=		YES
 DOCDIR=			${PREFIX}/share/doc/elisau
 FONTDIR=		${PREFIX}/lib/X11/fonts/local
+FONTS_DIRS.x11=		${FONTDIR}
 DISTPATCH=		${WRKSRC}/clR5x8-s5x8.diff
 
 LICENSE=		no-commercial-use
@@ -44,13 +45,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.doc ${WRKSRC}/*.txt ${DOCDIR}; \
 	${INSTALL_DATA_DIR} ${FONTDIR}; \
 	${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${FONTDIR}
-
-post-install:
-	cd ${FONTDIR}; \
-	mkfontdir
-
-post-deinstall:
-	cd ${FONTDIR}; \
-	mkfontdir
 
 .include "../../mk/bsd.pkg.mk"
