@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/11/04 21:20:50 garbled Exp $
---- xworm.c.orig	Wed May  7 09:25:57 1997
-+++ xworm.c	Wed Nov  4 13:52:07 1998
+$NetBSD: patch-ab,v 1.2 2005/12/29 20:27:14 joerg Exp $
+
+--- xworm.c.orig	1997-05-07 16:25:57.000000000 +0000
++++ xworm.c
 @@ -3,13 +3,20 @@
   
  #include <X11/Xlib.h>
  #include <X11/Xutil.h>
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 +#include <sys/time.h>
 +#endif
  #include <time.h>
@@ -25,7 +26,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/11/04 21:20:50 garbled Exp $
  
  #define maxQ 5000    /* max queue */
  #define NCOLORS 15   /* number of colours */
-@@ -551,16 +558,24 @@
+@@ -551,16 +558,24 @@ void AllocColours(void){
   colormap = DefaultColormap(display, screen);
    if (!XAllocColorCells(display, colormap, True, NULL, 0, pixels, npixels)) {
      fprintf(stderr, "failed to allocate all %d colours\n", NCOLORS);
@@ -59,7 +60,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/11/04 21:20:50 garbled Exp $
  }
  
  Bool predproc (display,event,arg)
-@@ -773,7 +788,7 @@
+@@ -773,7 +788,7 @@ float rnd(int x) { /* This routine retur
  void rgrid(void){
   FILE *fpg;
   if ((fpg=fopen(gridfile,"rb")) == NULL) {
