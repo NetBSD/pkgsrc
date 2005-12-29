@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12258 2005/12/29 20:31:41 markd Exp $
+$NetBSD: CHANGES,v 1.12259 2005/12/29 20:49:27 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5819,3 +5819,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added devel/nsis version 2.12 [cube 2005-12-29]
 	Added devel/scons-devel version 0.96.91 [cube 2005-12-29]
 	Updated graphics/py-matplotlib to 0.83 [markd 2005-12-29]
+	Updated lang/erlang to 10.1.9 [ghen 2005-12-29]
