@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:17 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/29 07:04:28 jlam Exp $
 #
 
 .include "../../games/nethack-lib/Makefile.common"
@@ -16,7 +16,7 @@ BUILD_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-x11
 
-FONTS_X11_DIRS+=	${PREFIX}/lib/X11/fonts/misc
+FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc
 
 INSTALLATION_DIRS=	lib/X11/app-defaults lib/X11/fonts/misc
 
@@ -29,5 +29,4 @@ post-install:
 	    ${PREFIX}/share/${NETHACK_DIR}/nethack.x11.rc
 
 .include "../../graphics/xpm/buildlink3.mk"
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

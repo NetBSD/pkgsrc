@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/29 06:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/29 07:04:28 jlam Exp $
 
 DISTNAME=	kochi-substitute-${KOCHI_VERSION}
 PKGNAME=	kochi-ttf-${KOCHI_VERSION}
@@ -15,7 +15,7 @@ KOCHI_VERSION=	20030809
 
 NO_BUILD=	yes
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TTF
@@ -24,5 +24,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/kochi-mincho-subst.ttf \
 	    ${PREFIX}/lib/X11/fonts/TTF/kochi-mincho.ttf
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

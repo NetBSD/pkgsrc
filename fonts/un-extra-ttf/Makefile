@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/28 14:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/29 07:04:28 jlam Exp $
 
 DISTNAME=	un-fonts-extra-${UN_EXTRA_VER}
 PKGNAME=	un-extra-ttf-${UN_EXTRA_VER}
@@ -19,11 +19,10 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
-	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTS_TTF_DIRS}
+	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/*.ttf ${FONTS_DIRS.ttf}
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"

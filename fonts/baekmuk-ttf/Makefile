@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/12/28 14:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 07:04:27 jlam Exp $
 
 DISTNAME=	baekmuk-ttf-2.2
 PKGREVISION=	1
@@ -13,14 +13,13 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/baekmuk-ttf
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
-	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf ${FONTS_TTF_DIRS}
+	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf ${FONTS_DIRS.ttf}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT* ${DOCDIR}
 
-.include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
