@@ -1,7 +1,7 @@
 # -*- sh -*-
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.36 2005/08/19 22:24:10 jlam Exp $
+# $NetBSD: deinstall,v 1.37 2005/12/29 03:44:38 jlam Exp $
 
 case ${STAGE} in
 VIEW-DEINSTALL)
@@ -47,6 +47,11 @@ POST-DEINSTALL)
 		fi
 		${RMDIR} -p `${DIRNAME} ${PKG_SYSCONFDIR}` 2>/dev/null || ${TRUE}
 	fi
+	#
+	# Update any fonts databases.
+	#
+	${TEST} ! -x ./+FONTS ||
+		./+FONTS ${PKG_METADATA_DIR}
 	#
 	# Remove empty directories and unused users/groups.
 	#

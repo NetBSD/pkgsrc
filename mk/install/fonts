@@ -1,47 +1,77 @@
-# $NetBSD: fonts,v 1.6 2004/12/28 14:38:03 wiz Exp $
+#!@SH@
 #
-# Handle font databases; used by fonts.mk.
+# $NetBSD: fonts,v 1.7 2005/12/29 03:44:38 jlam Exp $
+#
+# +FONTS - font database management script
+#
+# Usage: ./+FONTS [metadatadir]
+#
+# This scripts rebuilds font databases needed by the package associated
+# with <metadatadir>.
+#
+# Lines starting with "# FONTS: " are data read by this script that name
+# the directories in which the font database will be rebuilt.
+#
+#	# FONTS: /usr/pkg/lib/X11/fonts/TTF ttf
+#	# FONTS: /usr/pkg/lib/X11/fonts/Type1 type1
+#	# FONTS: /usr/pkg/lib/X11/fonts/misc x11
+#
+# For each FONTS entry, if the path is relative, that it is taken to be
+# relative to ${PKG_PREFIX}.
 #
 
-FONTS_TTF="@FONTS_TTF@"
-FONTS_TTF_DIRS="@FONTS_TTF_DIRS@"
-FONTS_TYPE1="@FONTS_TYPE1@"
-FONTS_TYPE1_DIRS="@FONTS_TYPE1_DIRS@"
-FONTS_X11="@FONTS_X11@"
-FONTS_X11_DIRS="@FONTS_X11_DIRS@"
+ECHO="@ECHO@"
+GREP="@GREP@"
+LS="@LS@"
+MKFONTDIR="@MKFONTDIR@"
+PWD_CMD="@PWD_CMD@"
+RM="@RM@"
+SED="@SED@"
+SORT="@SORT@"
+TEST="@TEST@"
+TRUE="@TRUE@"
 TTMKFDIR="@TTMKFDIR@"
 TYPE1INST="@TYPE1INST@"
-MKFONTDIR="@MKFONTDIR@"
 
-case ${STAGE} in
-POST-INSTALL|POST-DEINSTALL)
-	${ECHO} "===> Updating font databases"
-	if [ "${FONTS_TTF}" = "YES" ]; then
-		for d in ${FONTS_TTF_DIRS}; do
-			if [ -z "`cd $d ; ${LS} | ${GREP} -v .pkgsrc | ${GREP} -v ^fonts | ${GREP} -v ^Fontmap`" ]; then
-				${RM} -f $d/fonts* $d/Fontmap*
-			else
-				( cd $d && ${TTMKFDIR} >/dev/null 2>&1 )
-			fi
-		done
-	fi
-	if [ "${FONTS_TYPE1}" = "YES" ]; then
-		for d in ${FONTS_TYPE1_DIRS}; do
-			if [ -z "`cd $d ; ${LS} | ${GREP} -v .pkgsrc | ${GREP} -v ^fonts | ${GREP} -v ^Fontmap`" ]; then
-				${RM} -f $d/fonts* $d/Fontmap*
-			else
-				( cd $d && ${TYPE1INST} >/dev/null 2>&1 )
-			fi
-		done
-	fi
-	if [ "${FONTS_X11}" = "YES" ]; then
-		for d in ${FONTS_X11_DIRS}; do
-			if [ -z "`cd $d ; ${LS} | ${GREP} -v .pkgsrc | ${GREP} -v ^fonts | ${GREP} -v ^Fontmap`" ]; then
-				${RM} -f $d/fonts* $d/Fontmap*
-			else
-				${MKFONTDIR} $d >/dev/null 2>&1
-			fi
-		done
-	fi
+SELF=$0
+PKG_METADATA_DIR="${1-`${PWD_CMD}`}"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKG_PREFIX=@PREFIX@}
+
+${SED} -n "/^\# FONTS: /{s/^\# FONTS: //;p;}" ${SELF} | ${SORT} -u |
+{ while read dir font_type; do
+	case $dir in
+	"")	continue ;;
+	[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
+	esac
+	${TEST} -d "$dir" || continue
+	case "$printed_header" in
+	yes)	;;
+	*)	printed_header=yes
+		${ECHO} "==========================================================================="
+		${ECHO} "Updating font databases in the following directories:"
+		${ECHO} ""
+		;;
+	esac
+	( ${ECHO} "	$dir ($font_type)"
+	  cd $dir
+	  case $font_type in
+	  [tT][tT][fF])		update_cmd="${TTMKFDIR}" ;;
+	  [tT][yY][pP][eE]1)	update_cmd="${TYPE1INST}" ;;
+	  [xX]11)		update_cmd="${MKFONTDIR}" ;;
+	  esac
+	  ${TEST} -f "$update_cmd" || update_cmd="${TRUE}"
+	  $update_cmd >/dev/null
+	  #
+	  # Remove fonts databases if there are no fonts in the directory.
+	  # We filter out the encodings.dir, fonts.{alias,dirs,scale}, and
+	  # Fontmap database files from the directory listing.
+	  #
+	  ${LS} | ${GREP} -v "^encodings.dir" | ${GREP} -v "^fonts\." | ${GREP} -v "^Fontmap" >/dev/null || ${RM} -f fonts.* Fontmap*
+	)
+done
+case "$printed_header" in
+yes)	${ECHO} ""
+	${ECHO} "==========================================================================="
 	;;
-esac
+esac; }
