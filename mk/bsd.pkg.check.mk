@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.18 2005/09/30 21:36:45 kristerw Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.19 2005/12/29 22:32:20 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -53,19 +53,35 @@ USE_TOOLS+=		awk cat cmp diff echo find grep rm sed test	\
 # analyzing file lists in the check-files target.  This is useful to
 # avoid getting errors triggered by changes in directories not really
 # handled by pkgsrc.
-#
+
+# Info index files updated when a new info file is added.
 .if defined(INFO_DIR)
 CHECK_FILES_SKIP+=	${PREFIX}/${INFO_DIR}/dir
 .endif
+
+# Perl's perllocal.pod index that is regenerated when a local module
+# is added.
+#
 CHECK_FILES_SKIP+=	${PERL5_INSTALLARCHLIB}/perllocal.pod
+
+# We don't care about what's under /proc in Linux emulation, which is
+# just holds run-time generated data.
+#
 CHECK_FILES_SKIP+=	${PREFIX}/emul/linux/proc.*
+
+# The reference-count meta-data directory used by the pkginstall framework.
 CHECK_FILES_SKIP+=	${PKG_DBDIR}.refcount.*
+
+# File that are outside of ${PREFIX} in directories we already know we'll
+# be using for mutable data.
+#
 .for d in ${MAKE_DIRS} ${OWN_DIRS}
 CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}.*
 .endfor
 .for d o g m in ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
 CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}.*
 .endfor
+
 _CHECK_FILES_SKIP_FILTER=	${GREP} -vx ${CHECK_FILES_SKIP:@f@-e ${f:Q}@}
 
 ###########################################################################
