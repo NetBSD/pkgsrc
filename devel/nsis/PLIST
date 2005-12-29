@@ -1,0 +1,371 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/29 15:47:44 cube Exp $
+bin/makensis
+share/nsis/Bin/LibraryLocal.exe
+share/nsis/Bin/GenPat.exe
+share/nsis/Bin/MakeLangId.exe
+share/nsis/Bin/RegTool.bin
+share/nsis/Bin/zip2exe.exe
+share/nsis/Contrib/Graphics/Checks/classic.bmp
+share/nsis/Contrib/Graphics/Checks/big.bmp
+share/nsis/Contrib/Graphics/Checks/classic-cross.bmp
+share/nsis/Contrib/Graphics/Checks/colorful.bmp
+share/nsis/Contrib/Graphics/Checks/grey-cross.bmp
+share/nsis/Contrib/Graphics/Checks/grey.bmp
+share/nsis/Contrib/Graphics/Checks/modern.bmp
+share/nsis/Contrib/Graphics/Checks/red-round.bmp
+share/nsis/Contrib/Graphics/Checks/red.bmp
+share/nsis/Contrib/Graphics/Checks/simple-round.bmp
+share/nsis/Contrib/Graphics/Checks/simple-round2.bmp
+share/nsis/Contrib/Graphics/Checks/simple.bmp
+share/nsis/Contrib/Graphics/Header/orange-nsis.bmp
+share/nsis/Contrib/Graphics/Header/nsis-r.bmp
+share/nsis/Contrib/Graphics/Header/nsis.bmp
+share/nsis/Contrib/Graphics/Header/orange-uninstall-nsis.bmp
+share/nsis/Contrib/Graphics/Header/orange-r-nsis.bmp
+share/nsis/Contrib/Graphics/Header/orange-r.bmp
+share/nsis/Contrib/Graphics/Header/win.bmp
+share/nsis/Contrib/Graphics/Header/orange-uninstall-r-nsis.bmp
+share/nsis/Contrib/Graphics/Header/orange-uninstall-r.bmp
+share/nsis/Contrib/Graphics/Header/orange-uninstall.bmp
+share/nsis/Contrib/Graphics/Header/orange.bmp
+share/nsis/Contrib/Graphics/Icons/classic-uninstall.ico
+share/nsis/Contrib/Graphics/Icons/arrow-install.ico
+share/nsis/Contrib/Graphics/Icons/arrow-uninstall.ico
+share/nsis/Contrib/Graphics/Icons/arrow2-install.ico
+share/nsis/Contrib/Graphics/Icons/arrow2-uninstall.ico
+share/nsis/Contrib/Graphics/Icons/box-install.ico
+share/nsis/Contrib/Graphics/Icons/box-uninstall.ico
+share/nsis/Contrib/Graphics/Icons/classic-install.ico
+share/nsis/Contrib/Graphics/Icons/modern-install-blue.ico
+share/nsis/Contrib/Graphics/Icons/llama-blue.ico
+share/nsis/Contrib/Graphics/Icons/llama-grey.ico
+share/nsis/Contrib/Graphics/Icons/modern-uninstall-blue.ico
+share/nsis/Contrib/Graphics/Icons/modern-install-blue-full.ico
+share/nsis/Contrib/Graphics/Icons/modern-install-colorful.ico
+share/nsis/Contrib/Graphics/Icons/modern-install-full.ico
+share/nsis/Contrib/Graphics/Icons/modern-install.ico
+share/nsis/Contrib/Graphics/Icons/modern-uninstall-blue-full.ico
+share/nsis/Contrib/Graphics/Icons/modern-uninstall-colorful.ico
+share/nsis/Contrib/Graphics/Icons/modern-uninstall-full.ico
+share/nsis/Contrib/Graphics/Icons/modern-uninstall.ico
+share/nsis/Contrib/Graphics/Icons/nsis1-install.ico
+share/nsis/Contrib/Graphics/Icons/nsis1-uninstall.ico
+share/nsis/Contrib/Graphics/Icons/orange-install-nsis.ico
+share/nsis/Contrib/Graphics/Icons/orange-install.ico
+share/nsis/Contrib/Graphics/Icons/orange-uninstall-nsis.ico
+share/nsis/Contrib/Graphics/Icons/orange-uninstall.ico
+share/nsis/Contrib/Graphics/Icons/pixel-install.ico
+share/nsis/Contrib/Graphics/Icons/pixel-uninstall.ico
+share/nsis/Contrib/Graphics/Icons/win-install.ico
+share/nsis/Contrib/Graphics/Icons/win-uninstall.ico
+share/nsis/Contrib/Graphics/Wizard/orange-nsis.bmp
+share/nsis/Contrib/Graphics/Wizard/arrow.bmp
+share/nsis/Contrib/Graphics/Wizard/llama.bmp
+share/nsis/Contrib/Graphics/Wizard/nsis.bmp
+share/nsis/Contrib/Graphics/Wizard/nullsoft.bmp
+share/nsis/Contrib/Graphics/Wizard/win.bmp
+share/nsis/Contrib/Graphics/Wizard/orange-uninstall-nsis.bmp
+share/nsis/Contrib/Graphics/Wizard/orange-uninstall.bmp
+share/nsis/Contrib/Graphics/Wizard/orange.bmp
+share/nsis/Contrib/Language files/Belarusian.nlf
+share/nsis/Contrib/Language files/Albanian.nlf
+share/nsis/Contrib/Language files/Arabic.nlf
+share/nsis/Contrib/Language files/Bulgarian.nlf
+share/nsis/Contrib/Language files/Bosnian.nlf
+share/nsis/Contrib/Language files/Breton.nlf
+share/nsis/Contrib/Language files/Hungarian.nlf
+share/nsis/Contrib/Language files/Catalan.nlf
+share/nsis/Contrib/Language files/Croatian.nlf
+share/nsis/Contrib/Language files/Czech.nlf
+share/nsis/Contrib/Language files/Danish.nlf
+share/nsis/Contrib/Language files/Dutch.nlf
+share/nsis/Contrib/Language files/English.nlf
+share/nsis/Contrib/Language files/Estonian.nlf
+share/nsis/Contrib/Language files/Farsi.nlf
+share/nsis/Contrib/Language files/Finnish.nlf
+share/nsis/Contrib/Language files/French.nlf
+share/nsis/Contrib/Language files/German.nlf
+share/nsis/Contrib/Language files/Greek.nlf
+share/nsis/Contrib/Language files/Hebrew.nlf
+share/nsis/Contrib/Language files/Luxembourgish.nlf
+share/nsis/Contrib/Language files/Icelandic.nlf
+share/nsis/Contrib/Language files/Indonesian.nlf
+share/nsis/Contrib/Language files/Italian.nlf
+share/nsis/Contrib/Language files/Japanese.nlf
+share/nsis/Contrib/Language files/Korean.nlf
+share/nsis/Contrib/Language files/Kurdish.nlf
+share/nsis/Contrib/Language files/Latvian.nlf
+share/nsis/Contrib/Language files/Lithuanian.nlf
+share/nsis/Contrib/Language files/Macedonian.nlf
+share/nsis/Contrib/Language files/Malay.nlf
+share/nsis/Contrib/Language files/Mongolian.nlf
+share/nsis/Contrib/Language files/Norwegian.nlf
+share/nsis/Contrib/Language files/Polish.nlf
+share/nsis/Contrib/Language files/Portuguese.nlf
+share/nsis/Contrib/Language files/PortugueseBR.nlf
+share/nsis/Contrib/Language files/Romanian.nlf
+share/nsis/Contrib/Language files/Russian.nlf
+share/nsis/Contrib/Language files/Serbian.nlf
+share/nsis/Contrib/Language files/SerbianLatin.nlf
+share/nsis/Contrib/Language files/SimpChinese.nlf
+share/nsis/Contrib/Language files/Slovak.nlf
+share/nsis/Contrib/Language files/Slovenian.nlf
+share/nsis/Contrib/Language files/Spanish.nlf
+share/nsis/Contrib/Language files/Swedish.nlf
+share/nsis/Contrib/Language files/Thai.nlf
+share/nsis/Contrib/Language files/TradChinese.nlf
+share/nsis/Contrib/Language files/Turkish.nlf
+share/nsis/Contrib/Language files/Ukrainian.nlf
+share/nsis/Contrib/Modern UI/Language files/Belarusian.nsh
+share/nsis/Contrib/Modern UI/Language files/Albanian.nsh
+share/nsis/Contrib/Modern UI/Language files/Arabic.nsh
+share/nsis/Contrib/Modern UI/Language files/Bulgarian.nsh
+share/nsis/Contrib/Modern UI/Language files/Bosnian.nsh
+share/nsis/Contrib/Modern UI/Language files/Breton.nsh
+share/nsis/Contrib/Modern UI/Language files/Hungarian.nsh
+share/nsis/Contrib/Modern UI/Language files/Catalan.nsh
+share/nsis/Contrib/Modern UI/Language files/Croatian.nsh
+share/nsis/Contrib/Modern UI/Language files/Czech.nsh
+share/nsis/Contrib/Modern UI/Language files/Danish.nsh
+share/nsis/Contrib/Modern UI/Language files/Default.nsh
+share/nsis/Contrib/Modern UI/Language files/Dutch.nsh
+share/nsis/Contrib/Modern UI/Language files/English.nsh
+share/nsis/Contrib/Modern UI/Language files/Estonian.nsh
+share/nsis/Contrib/Modern UI/Language files/Farsi.nsh
+share/nsis/Contrib/Modern UI/Language files/Finnish.nsh
+share/nsis/Contrib/Modern UI/Language files/French.nsh
+share/nsis/Contrib/Modern UI/Language files/German.nsh
+share/nsis/Contrib/Modern UI/Language files/Greek.nsh
+share/nsis/Contrib/Modern UI/Language files/Hebrew.nsh
+share/nsis/Contrib/Modern UI/Language files/Luxembourgish.nsh
+share/nsis/Contrib/Modern UI/Language files/Icelandic.nsh
+share/nsis/Contrib/Modern UI/Language files/Italian.nsh
+share/nsis/Contrib/Modern UI/Language files/Indonesian.nsh
+share/nsis/Contrib/Modern UI/Language files/Japanese.nsh
+share/nsis/Contrib/Modern UI/Language files/Korean.nsh
+share/nsis/Contrib/Modern UI/Language files/Kurdish.nsh
+share/nsis/Contrib/Modern UI/Language files/Latvian.nsh
+share/nsis/Contrib/Modern UI/Language files/Lithuanian.nsh
+share/nsis/Contrib/Modern UI/Language files/Macedonian.nsh
+share/nsis/Contrib/Modern UI/Language files/Malay.nsh
+share/nsis/Contrib/Modern UI/Language files/Mongolian.nsh
+share/nsis/Contrib/Modern UI/Language files/Norwegian.nsh
+share/nsis/Contrib/Modern UI/Language files/Polish.nsh
+share/nsis/Contrib/Modern UI/Language files/Portuguese.nsh
+share/nsis/Contrib/Modern UI/Language files/PortugueseBR.nsh
+share/nsis/Contrib/Modern UI/Language files/Romanian.nsh
+share/nsis/Contrib/Modern UI/Language files/Russian.nsh
+share/nsis/Contrib/Modern UI/Language files/Serbian.nsh
+share/nsis/Contrib/Modern UI/Language files/SerbianLatin.nsh
+share/nsis/Contrib/Modern UI/Language files/SimpChinese.nsh
+share/nsis/Contrib/Modern UI/Language files/Slovak.nsh
+share/nsis/Contrib/Modern UI/Language files/Slovenian.nsh
+share/nsis/Contrib/Modern UI/Language files/Spanish.nsh
+share/nsis/Contrib/Modern UI/Language files/Swedish.nsh
+share/nsis/Contrib/Modern UI/Language files/Thai.nsh
+share/nsis/Contrib/Modern UI/Language files/TradChinese.nsh
+share/nsis/Contrib/Modern UI/Language files/Turkish.nsh
+share/nsis/Contrib/Modern UI/Language files/Ukrainian.nsh
+share/nsis/Contrib/Modern UI/ioSpecial.ini
+share/nsis/Contrib/Modern UI/System.nsh
+share/nsis/Contrib/UIs/modern_nodesc.exe
+share/nsis/Contrib/UIs/default.exe
+share/nsis/Contrib/UIs/modern.exe
+share/nsis/Contrib/UIs/modern_headerbmpr.exe
+share/nsis/Contrib/UIs/modern_headerbmp.exe
+share/nsis/Contrib/UIs/modern_smalldesc.exe
+share/nsis/Contrib/UIs/sdbarker_tiny.exe
+share/nsis/Contrib/zip2exe/Classic.nsh
+share/nsis/Contrib/zip2exe/Base.nsh
+share/nsis/Contrib/zip2exe/Modern.nsh
+share/nsis/Docs/AdvSplash/advsplash.txt
+share/nsis/Docs/Banner/Readme.txt
+share/nsis/Docs/BgImage/BgImage.txt
+share/nsis/Docs/Dialer/Dialer.txt
+share/nsis/Docs/InstallOptions/Changelog.txt
+share/nsis/Docs/InstallOptions/Readme.html
+share/nsis/Docs/makensisw/License.txt
+share/nsis/Docs/makensisw/Readme.txt
+share/nsis/Docs/Math/Math.txt
+share/nsis/Docs/Modern UI/images/closed.gif
+share/nsis/Docs/Modern UI/images/header.gif
+share/nsis/Docs/Modern UI/images/open.gif
+share/nsis/Docs/Modern UI/images/screen1.png
+share/nsis/Docs/Modern UI/images/screen2.png
+share/nsis/Docs/Modern UI/Changelog.txt
+share/nsis/Docs/Modern UI/License.txt
+share/nsis/Docs/Modern UI/Readme.html
+share/nsis/Docs/nsExec/nsExec.txt
+share/nsis/Docs/NSISdl/License.txt
+share/nsis/Docs/NSISdl/ReadMe.txt
+share/nsis/Docs/Splash/splash.txt
+share/nsis/Docs/StartMenu/Readme.txt
+share/nsis/Docs/StrFunc/StrFunc.txt
+share/nsis/Docs/System/System.html
+share/nsis/Docs/System/WhatsNew.txt
+share/nsis/Docs/VPatch/Readme.html
+share/nsis/Examples/FileFuncTest.nsi
+share/nsis/Examples/bigtest.nsi
+share/nsis/Examples/example1.nsi
+share/nsis/Examples/example2.nsi
+share/nsis/Examples/FileFunc.ini
+share/nsis/Examples/FileFunc.nsi
+share/nsis/Examples/languages.nsi
+share/nsis/Examples/gfx.nsi
+share/nsis/Examples/one-section.nsi
+share/nsis/Examples/Library.nsi
+share/nsis/Examples/LogicLib.nsi
+share/nsis/Examples/makensis.ini
+share/nsis/Examples/makensis.nsi
+share/nsis/Examples/AdvSplash/Example.nsi
+share/nsis/Examples/primes.nsi
+share/nsis/Examples/rtest.nsi
+share/nsis/Examples/silent.nsi
+share/nsis/Examples/StrFunc.nsi
+share/nsis/Examples/TextFunc.ini
+share/nsis/Examples/TextFunc.nsi
+share/nsis/Examples/TextFuncTest.nsi
+share/nsis/Examples/UserVars.nsi
+share/nsis/Examples/VersionInfo.nsi
+share/nsis/Examples/viewhtml.nsi
+share/nsis/Examples/waplugin.nsi
+share/nsis/Examples/WordFunc.ini
+share/nsis/Examples/WordFunc.nsi
+share/nsis/Examples/WordFuncTest.nsi
+share/nsis/Examples/Banner/Example.nsi
+share/nsis/Examples/BgImage/Example.nsi
+share/nsis/Examples/InstallOptions/testimgs.ini
+share/nsis/Examples/InstallOptions/test.ini
+share/nsis/Examples/InstallOptions/test.nsi
+share/nsis/Examples/InstallOptions/testnotify.ini
+share/nsis/Examples/InstallOptions/testimgs.nsi
+share/nsis/Examples/InstallOptions/testlink.ini
+share/nsis/Examples/InstallOptions/testlink.nsi
+share/nsis/Examples/InstallOptions/testnotify.nsi
+share/nsis/Examples/Math/mathtest.ini
+share/nsis/Examples/Math/math.nsi
+share/nsis/Examples/Math/mathtest.nsi
+share/nsis/Examples/Math/mathtest.txt
+share/nsis/Examples/Modern UI/HeaderBitmap.nsi
+share/nsis/Examples/Modern UI/Basic.nsi
+share/nsis/Examples/Modern UI/InstallOptions.nsi
+share/nsis/Examples/Modern UI/ioA.ini
+share/nsis/Examples/Modern UI/ioB.ini
+share/nsis/Examples/Modern UI/ioC.ini
+share/nsis/Examples/Modern UI/MultiLanguage.nsi
+share/nsis/Examples/Modern UI/StartMenu.nsi
+share/nsis/Examples/Modern UI/WelcomeFinish.nsi
+share/nsis/Examples/nsExec/test.nsi
+share/nsis/Examples/Splash/Example.nsi
+share/nsis/Examples/StartMenu/Example.nsi
+share/nsis/Examples/System/Resource.dll
+share/nsis/Examples/System/SysFunc.nsh
+share/nsis/Examples/System/System.nsh
+share/nsis/Examples/System/System.nsi
+share/nsis/Examples/UserInfo/UserInfo.nsi
+share/nsis/Examples/VPatch/example.nsi
+share/nsis/Examples/VPatch/newfile.txt
+share/nsis/Examples/VPatch/oldfile.txt
+share/nsis/Examples/VPatch/patch.pat
+share/nsis/Include/UpgradeDLL.nsh
+share/nsis/Include/Colors.nsh
+share/nsis/Include/FileFunc.nsh
+share/nsis/Include/Library.nsh
+share/nsis/Include/LogicLib.nsh
+share/nsis/Include/MUI.nsh
+share/nsis/Include/Sections.nsh
+share/nsis/Include/StrFunc.nsh
+share/nsis/Include/TextFunc.nsh
+share/nsis/Include/VPatchLib.nsh
+share/nsis/Include/WinMessages.nsh
+share/nsis/Include/WordFunc.nsh
+share/nsis/Menu/notinstalled.html
+share/nsis/Menu/compiler.html
+share/nsis/Menu/docs.html
+share/nsis/Menu/index.html
+share/nsis/Menu/intro.html
+share/nsis/Menu/websites.html
+share/nsis/Menu/update.html
+share/nsis/Menu/images/clear.gif
+share/nsis/Menu/images/header.gif
+share/nsis/Menu/images/line.gif
+share/nsis/Menu/images/menu.gif
+share/nsis/Menu/images/menud.gif
+share/nsis/Menu/images/site.gif
+share/nsis/NSIS.chm
+share/nsis/NSIS.exe
+share/nsis/Plugins/InstallOptions.dll
+share/nsis/Plugins/AdvSplash.dll
+share/nsis/Plugins/Banner.dll
+share/nsis/Plugins/BgImage.dll
+share/nsis/Plugins/Dialer.dll
+share/nsis/Plugins/StartMenu.dll
+share/nsis/Plugins/LangDLL.dll
+share/nsis/Plugins/Math.dll
+share/nsis/Plugins/nsExec.dll
+share/nsis/Plugins/NSISdl.dll
+share/nsis/Plugins/Splash.dll
+share/nsis/Plugins/System.dll
+share/nsis/Plugins/TypeLib.dll
+share/nsis/Plugins/UserInfo.dll
+share/nsis/Plugins/VPatch.dll
+share/nsis/Stubs/bzip2_solid
+share/nsis/Stubs/bzip2
+share/nsis/Stubs/lzma_solid
+share/nsis/Stubs/lzma
+share/nsis/Stubs/zlib_solid
+share/nsis/Stubs/uninst
+share/nsis/Stubs/zlib
+share/nsis/license.txt
+share/nsis/makensis
+share/nsis/makensis.exe
+share/nsis/makensisw.exe
+share/nsis/nsisconf.nsh
+@dirrm share/nsis/Stubs
+@dirrm share/nsis/Plugins
+@dirrm share/nsis/Menu/images
+@dirrm share/nsis/Menu
+@dirrm share/nsis/Include
+@dirrm share/nsis/Examples/nsExec
+@dirrm share/nsis/Examples/VPatch
+@dirrm share/nsis/Examples/UserInfo
+@dirrm share/nsis/Examples/System
+@dirrm share/nsis/Examples/StartMenu
+@dirrm share/nsis/Examples/Splash
+@dirrm share/nsis/Examples/Modern UI
+@dirrm share/nsis/Examples/Math
+@dirrm share/nsis/Examples/InstallOptions
+@dirrm share/nsis/Examples/BgImage
+@dirrm share/nsis/Examples/Banner
+@dirrm share/nsis/Examples/AdvSplash
+@dirrm share/nsis/Examples
+@dirrm share/nsis/Docs/nsExec
+@dirrm share/nsis/Docs/makensisw
+@dirrm share/nsis/Docs/VPatch
+@dirrm share/nsis/Docs/System
+@dirrm share/nsis/Docs/StrFunc
+@dirrm share/nsis/Docs/StartMenu
+@dirrm share/nsis/Docs/Splash
+@dirrm share/nsis/Docs/NSISdl
+@dirrm share/nsis/Docs/Modern UI/images
+@dirrm share/nsis/Docs/Modern UI
+@dirrm share/nsis/Docs/Math
+@dirrm share/nsis/Docs/InstallOptions
+@dirrm share/nsis/Docs/Dialer
+@dirrm share/nsis/Docs/BgImage
+@dirrm share/nsis/Docs/Banner
+@dirrm share/nsis/Docs/AdvSplash
+@dirrm share/nsis/Docs
+@dirrm share/nsis/Contrib/zip2exe
+@dirrm share/nsis/Contrib/UIs
+@dirrm share/nsis/Contrib/Modern UI/Language files
+@dirrm share/nsis/Contrib/Modern UI
+@dirrm share/nsis/Contrib/Language files
+@dirrm share/nsis/Contrib/Graphics/Wizard
+@dirrm share/nsis/Contrib/Graphics/Icons
+@dirrm share/nsis/Contrib/Graphics/Header
+@dirrm share/nsis/Contrib/Graphics/Checks
+@dirrm share/nsis/Contrib/Graphics
+@dirrm share/nsis/Contrib
+@dirrm share/nsis/Bin
+@dirrm share/nsis
