@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/08/06 06:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2005/12/29 06:22:00 jlam Exp $
 
 DISTNAME=	mrtg-2.12.2
 PKGREVISION=	1
@@ -28,7 +28,6 @@ COMMENT=	The Multi-Router Traffic Grapher
 
 USE_TOOLS+=	perl
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 
 BUILD_DEFS+=	USE_INET6
 LDFLAGS+=	-lgd -lttf -lintl -ljpeg

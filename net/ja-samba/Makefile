@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/12/05 23:55:14 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/29 06:21:59 jlam Exp $
 
 DISTNAME=		samba-${SAMBA_VERSION}-ja-${JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_VERSION}.${JA_PKG_VERSION}
@@ -111,7 +111,6 @@ USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
-USE_PKGINSTALL=		YES
 CONF_FILES=		${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 CONF_FILES_PERMS+=	${EGDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser \
 			${ROOT_USER} ${ROOT_GROUP} 0555

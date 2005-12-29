@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:51:12 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 06:22:23 jlam Exp $
 
 .include "../../www/iasp/Makefile.common"
 
@@ -27,7 +27,6 @@ PKG_USERS=	${IASP_USER}:${IASP_GROUP}
 PKG_GROUPS=	${IASP_GROUP}
 
 WRKSRC=		${WRKDIR}/${IASP_DIR}
-USE_PKGINSTALL=	yes
 OWN_DIRS=	${IASP_DESTDIR}
 OWN_DIRS_PERMS=	${IASP_DESTDIR}/logs ${IASP_USER} ${IASP_GROUP} 0750
 CONFDIR=	${IASP_DESTDIR}/properties

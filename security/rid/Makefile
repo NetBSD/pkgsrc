@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:32 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/29 06:22:11 jlam Exp $
 #
 
 DISTNAME=	rid-1.11
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.theorygroup.com/Software/RID/
 COMMENT=	Remote Intrusion Detection to track down compromised hosts
 
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 
 CONF_FILES=	${PREFIX}/share/examples/rid/rid.conf ${PKG_SYSCONFDIR}/rid.conf
 

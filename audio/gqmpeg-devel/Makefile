@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/10 20:56:11 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 06:21:30 jlam Exp $
 
 DISTNAME=		gqmpeg-0.91.1
 PKGREVISION=		2
@@ -17,7 +17,6 @@ DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 USE_TOOLS+=		pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_DIRS+=		xdg-1.2
-USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 

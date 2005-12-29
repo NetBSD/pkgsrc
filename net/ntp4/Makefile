@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/12/08 09:52:16 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2005/12/29 06:22:00 jlam Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -17,7 +17,6 @@ CONFLICTS+=	openntpd-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	perl
-USE_PKGINSTALL=	YES
 
 CONFIGURE_ENV+=	PATH_PERL=${PERL5:Q} ac_cv_header_sys_soundcard_h=no
 

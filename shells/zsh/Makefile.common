@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.32 2005/12/29 06:22:13 jlam Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -13,7 +13,6 @@ MAINTAINER=	${ZSH_MAINTAINER}
 HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR:Q}

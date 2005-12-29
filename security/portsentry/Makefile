@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/29 06:22:11 jlam Exp $
 #
 
 DISTNAME=	portsentry-1.2
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/sentrytools/
 COMMENT=	Detects and respond to port scans against a target host in real-time
 
-USE_PKGINSTALL=	YES
 WRKSRC=		${WRKDIR}/portsentry_beta
 
 BUILD_TARGET=	${LOWER_OPSYS}

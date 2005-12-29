@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.12 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: schemas.mk,v 1.13 2005/12/29 06:21:36 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GConf2 schema files.  It takes care of registering them in the GConf2
@@ -49,7 +49,6 @@ FILES_SUBST+=		GCONF2_SCHEMAS=${GCONF2_SCHEMAS:Q}
 FILES_SUBST+=		GCONF2_SCHEMAS_DIR=${GCONF2_SCHEMAS_DIR:Q}
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../devel/GConf2/files/install.tmpl
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../devel/GConf2/files/deinstall.tmpl
-USE_PKGINSTALL=		YES
 .endif
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/gconf$$/ { next; }

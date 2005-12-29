@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.6 2005/12/05 20:50:41 rillig Exp $
+# $NetBSD: plugins.mk,v 1.7 2005/12/29 06:21:56 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GStreamer modules.  It takes care of rebuilding the corresponding databases
@@ -17,7 +17,6 @@ FILES_SUBST+=		GST_COMPPREP=${GST_COMPPREP:Q}
 FILES_SUBST+=		GST_REGISTER=${GST_REGISTER:Q}
 INSTALL_EXTRA_TMPL+=	../../multimedia/gstreamer/files/plugins.tmpl
 DEINSTALL_EXTRA_TMPL+=	../../multimedia/gstreamer/files/plugins.tmpl
-USE_PKGINSTALL=		YES
 
 PRINT_PLIST_AWK+=	/^libdata\/gstreamer-0.8/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm libdata\/gstreamer-0.8/ { next; }

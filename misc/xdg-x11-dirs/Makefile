@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/09/28 19:51:27 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/29 06:21:56 jlam Exp $
 #
 
 DISTNAME=	xdg-x11-dirs-1.2
@@ -18,7 +18,6 @@ NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 NO_EXTRACT=	yes
 USE_LANGUAGES=	# empty
-USE_PKGINSTALL=	yes
 USE_X11BASE=	yes
 WRKSRC=		${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/05 23:55:15 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/29 06:22:05 jlam Exp $
 
 DISTNAME=		leafnode-1.11.3.rel
 PKGNAME=		${DISTNAME:S/.rel//}
@@ -13,7 +13,6 @@ COMMENT=		NNTP server for small (dialup) sites
 CONFLICTS+=		cyrus-imapd<2.2.10nb2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 

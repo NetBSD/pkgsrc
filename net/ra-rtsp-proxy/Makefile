@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/08/09 22:30:13 tron Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:02 jlam Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
@@ -17,7 +17,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		rtspd
 
 WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a

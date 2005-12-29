@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/17 05:20:22 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2005/12/29 06:21:48 jlam Exp $
 
 DISTNAME=	courier-0.52.1
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -40,7 +40,6 @@ EXTRACT_ELEMENTS+=	${WRKSRC_SUBDIRS:S/^/${DISTNAME}\//}
 BUILD_DIRS=		${WRKSRC_SUBDIRS:S/^/${WRKSRC}\//}
 INSTALLATION_DIRS=	bin man/man1 man/man5 man/man5 man/man7 man/man8 sbin
 
-USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
 OWN_DIRS=		${PKG_SYSCONFDIR}/shared
 OWN_DIRS+=		${PKG_SYSCONFDIR}/shared.tmp

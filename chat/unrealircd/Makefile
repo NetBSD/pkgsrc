@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/08 10:07:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:33 jlam Exp $
 
 DISTNAME=	Unreal3.2.3
 PKGNAME=	unrealircd-3.2.3
@@ -15,7 +15,6 @@ COMMENT=	Advanced IRC server with IPv6 and SSL support
 CONFLICTS+=	ircu-[0-9]*
 
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/Unreal3.2
 TRE_NEEDED=	0.7.2

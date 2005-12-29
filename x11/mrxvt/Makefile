@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/01 18:03:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/29 06:22:26 jlam Exp $
 #
 
 DISTNAME=	mrxvt-0.4.1
@@ -12,7 +12,6 @@ COMMENT=	Multi-tabbed terminal emulator with Xft support
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_PKGINSTALL=		YES
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--enable-xft

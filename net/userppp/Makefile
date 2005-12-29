@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:50 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2005/12/29 06:22:04 jlam Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -33,7 +33,6 @@ USERPPP_GROUP?=	network
 BUILD_DEFS+=	USERPPP_GROUP
 MAKE_ENV+=	USERPPP_GROUP=${USERPPP_GROUP:Q}
 
-USE_PKGINSTALL=	yes
 PKG_GROUPS=	${USERPPP_GROUP}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:45 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/29 06:21:58 jlam Exp $
 
 DISTNAME=	${PKGNAME_NOREV:S/-//}
 PKGNAME=	delegate-8.9.6
@@ -21,7 +21,6 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.delegate.org/
 COMMENT=	General purpose TCP/IP proxy system
 
-USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/07 12:03:16 peter Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:22:11 jlam Exp $
 
 DISTNAME=		pflkm-20050511
 CATEGORIES=		security
@@ -10,7 +10,6 @@ COMMENT=		OpenBSD Packet Filter as loadable kernel module for NetBSD
 
 ONLY_FOR_PLATFORM=	NetBSD-2.[0-9]*-*
 
-USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
 PKG_USERS=		_pflogd:nogroup::pflogd\ pseudo-user:${VARBASE}/chroot/pflogd:${NOLOGIN}

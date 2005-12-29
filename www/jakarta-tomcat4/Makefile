@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:51:12 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:23 jlam Exp $
 
 PKGNAME=        jakarta-tomcat4-${TOMCAT_VERSION}
 DISTNAME=       jakarta-tomcat-${TOMCAT_VERSION}
@@ -24,7 +24,6 @@ TOMCAT_LIB=     ${PREFIX}/tomcat4
 SAMPLECONFDIR=			${TOMCAT_LIB}/conf
 PKG_SYSCONFDIR.jakarta-tomcat4=	${SAMPLECONFDIR}
 
-USE_PKGINSTALL=	yes
 CFILES=		server.xml web.xml tomcat-users.xml
 CFILES+=	catalina.policy jk2.properties
 

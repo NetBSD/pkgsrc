@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/22 20:08:33 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/12/29 06:22:18 jlam Exp $
 #
 
 DISTNAME=	swapd-1.0.3
@@ -12,7 +12,6 @@ COMMENT=	Swap daemon for POSIX-compliant operating systems
 ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-* Linux-*-*
 
 USE_TOOLS+=	gmake
-USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 
 RCD_SCRIPTS=	swapd

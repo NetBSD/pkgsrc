@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/12 21:36:55 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2005/12/29 06:22:05 jlam Exp $
 #
 
 DISTNAME=		sge-5.3p6
@@ -23,7 +23,6 @@ PLIST_SUBST+=		SGE_ARCH=${SGE_ARCH:Q}
 MESSAGE_SUBST+=		SGE_ROOT=${SGE_ROOT}
 MAKE_ENV+=		PERL5=${PERL5:Q}
 
-USE_PKGINSTALL=		YES
 SGE_USER?=		sgeadmin
 SGE_GROUP?=		sgeadmin
 PKG_GROUPS=		${SGE_GROUP}

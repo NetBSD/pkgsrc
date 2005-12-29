@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/12/05 23:55:21 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/29 06:22:20 jlam Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -19,7 +19,6 @@ DEPENDS+=		docbook-xml>=4.2nb7:../../textproc/docbook-xml
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+= 	--localstatedir=${SCROLLKEEPER_DATADIR:Q}

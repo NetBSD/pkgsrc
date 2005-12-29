@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:33 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:50 jlam Exp $
 #
 
 DISTNAME=	mailserv
@@ -14,7 +14,6 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_TOOLS+=	perl:run
-USE_PKGINSTALL=	YES
 NO_BUILD=	YES
 
 PKG_SYSCONFSUBDIR=	mailserv

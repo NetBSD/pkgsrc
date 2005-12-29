@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/18 15:46:24 taca Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/29 06:22:19 jlam Exp $
 #
 
 DISTNAME=	ipadic-2.7.0
@@ -11,7 +11,6 @@ HOMEPAGE=      	http://chasen.aist-nara.ac.jp/
 COMMENT=	Japanese Morphological Dictionary for ChaSen
 
 GNU_CONFIGURE=	yes
-USE_PKGINSTALL=	yes
 CONF_FILES=	${CHASEN_DICDIR}/ipadic/chasenrc.example \
 		${PKG_SYSCONFDIR}/chasenrc
 

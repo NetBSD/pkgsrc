@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:33 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:50 jlam Exp $
 #
 
 DISTNAME=		MailScanner-4.30.3-2
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.mailscanner.info/
 COMMENT=		Powerful spam/virus filter with many options
 
 WRKSRC=			${WRKDIR}/MailScanner-4.30.3
-USE_PKGINSTALL=		YES
 
 PKG_SYSCONFSUBDIR=	MailScanner
 

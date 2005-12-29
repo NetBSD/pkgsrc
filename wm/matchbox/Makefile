@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:21 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:20 jlam Exp $
 #
 
 DISTNAME=		matchbox-window-manager-0.9.3
@@ -12,7 +12,6 @@ COMMENT=		Window manager designed for computers with small displays
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2005/12/10 19:23:01 martti Exp $
+# $NetBSD: Makefile,v 1.64 2005/12/29 06:21:53 jlam Exp $
 
 DISTNAME=	squirrelmail-1.4.5
 PKGREVISION=	3
@@ -17,7 +17,6 @@ CONFLICTS+=	ja-squirrelspell-[0-9]*
 DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
 
 USE_LANGUAGES=	# empty
-USE_PKGINSTALL=	yes
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	config/conf.pl config/ri_once.pl

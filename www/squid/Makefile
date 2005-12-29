@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile,v 1.167 2005/12/29 06:22:24 jlam Exp $
 
 DISTNAME=	squid-2.5.STABLE12
 PKGNAME=	squid-2.5.12
@@ -29,7 +29,6 @@ DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 # Configuration directory location which can be overwritten by the user.
 PKG_SYSCONFSUBDIR?=	squid
 
-USE_PKGINSTALL=		yes
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \

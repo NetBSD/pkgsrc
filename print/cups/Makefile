@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2005/12/19 16:04:48 joerg Exp $
+# $NetBSD: Makefile,v 1.104 2005/12/29 06:22:06 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -31,7 +31,6 @@ CONFLICTS+=	LPRng-[0-9]* LPRng-core-[0-9]*
 WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
 UNLIMIT_RESOURCES=	datasize memorysize
 USE_LANGUAGES=		c c++	# pdftops is a C++ application
-USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf gmake
 USE_LIBTOOL=		yes

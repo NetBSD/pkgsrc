@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 23:55:13 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2005/12/29 06:21:58 jlam Exp $
 
 DISTNAME=	flow-tools-0.68
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.splintered.net/sw/flow-tools/
 COMMENT=	Collect and store NetFlow data
 
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 
 PKG_SYSCONFSUBDIR=	flow-tools
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

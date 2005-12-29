@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/12/05 20:50:41 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2005/12/29 06:21:55 jlam Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -13,7 +13,6 @@ COMMENT=	Small, handy, easy-to-use file manager
 
 USE_TOOLS+=	perl:run
 USE_LANGUAGES=	c c++
-USE_PKGINSTALL=	YES
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-U]-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/12/05 23:55:03 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2005/12/29 06:21:33 jlam Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -17,7 +17,6 @@ COMMENT=                Client for the Secure Internet Live Conferencing (SILC) 
 
 .include "../../chat/silc-client/Makefile.common"
 
-USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 23:55:16 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:06 jlam Exp $
 #
 
 DISTNAME=	apsfilter-7.2.5
@@ -21,7 +21,6 @@ DEPENDS+=	psutils-[0-9]*:../../print/psutils
 WRKSRC=		${WRKDIR}/apsfilter
 HAS_CONFIGURE=	YES
 USE_BZIP2=	YES
-USE_PKGINSTALL=	YES
 USE_TOOLS+=	awk gs:run
 
 CONFIGURE_ARGS+=--prefix=${PREFIX:Q}

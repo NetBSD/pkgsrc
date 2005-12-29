@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/10/28 11:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/29 06:22:08 jlam Exp $
 #
 
 DISTNAME=	xpdf-turkish-2002-apr-10
@@ -13,7 +13,6 @@ COMMENT=	Xpdf support files for Turkish
 
 DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
-USE_PKGINSTALL=	yes
 
 WRKSRC=		${WRKDIR}/xpdf-turkish
 NO_CONFIGURE=	yes

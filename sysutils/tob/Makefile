@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/19 18:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/29 06:22:18 jlam Exp $
 
 DISTNAME=	tob-0.25
 CATEGORIES=	sysutils
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tinyplanet.ca/projects/tob/
 COMMENT=	General driver for making and maintaining backups
 
-USE_PKGINSTALL=	yes
 
 EGDIR=		${PREFIX}/share/examples/tob
 CONF_FILES=	${EGDIR}/tob.rc ${PKG_SYSCONFDIR}/tob/tob.rc

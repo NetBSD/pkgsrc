@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2005/12/05 23:55:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2005/12/29 06:22:17 jlam Exp $
 #
 
 # XXX Do not update to 0.30 or above yet.  The API in the 0.2x series is
@@ -20,7 +20,6 @@ PATCHDIR=	${.CURDIR}/../../sysutils/dbus/patches
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
-USE_PKGINSTALL=		YES
 
 PKGCONFIG_OVERRIDE=	dbus-1.pc
 PKGCONFIG_OVERRIDE+=	dbus-glib-1.pc

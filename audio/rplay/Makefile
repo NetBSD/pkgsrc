@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/12/05 23:55:02 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2005/12/29 06:21:31 jlam Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://rplay.doit.org/
 COMMENT=	Network audio player
 
-USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

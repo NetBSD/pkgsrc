@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/01 03:34:22 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/12/29 06:22:17 jlam Exp $
 #
 
 DISTNAME=		detox-1.2.0-rc1
@@ -14,7 +14,6 @@ COMMENT=		Removes non-standard characters from filenames
 GNU_CONFIGURE=		yes
 INSTALL_TARGET=		install-base install-unsafe-config
 
-USE_PKGINSTALL=		yes
 EGDIR=			${PREFIX}/share/examples/detox
 CONF_FILES=		${EGDIR}/detoxrc ${PKG_SYSCONFDIR}/detoxrc
 

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:47 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/29 06:22:00 jlam Exp $
 #
 
 .include "Makefile.common"
 
-USE_PKGINSTALL=		YES
 
 RCD_SCRIPTS=		mldonkey
 

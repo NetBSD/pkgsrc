@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:51:02 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/29 06:22:19 jlam Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -18,7 +18,6 @@ ONLY_FOR_PLATFORM=	*-*-i386
 WRKSRC=			${WRKDIR}/xeno-1.2/tools
 
 PKG_SYSCONFSUBDIR?=	xc12
-USE_PKGINSTALL=		yes
 EGDIR=			${PREFIX}/share/examples/${PKGNAME_NOREV}
 CONF_FILES=		${EGDIR}/defaults ${PKG_SYSCONFDIR}/defaults
 CONF_FILES+=		${EGDIR}/democd ${PKG_SYSCONFDIR}/democd

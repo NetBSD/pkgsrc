@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/17 05:20:23 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/29 06:22:10 jlam Exp $
 
 DISTNAME=	openpam-20050201
 CATEGORIES=	security
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=	--without-pam-su
 CONFIGURE_ARGS+=	--with-pam-unix
 CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/lib/security
 
-USE_PKGINSTALL=		yes
 OWN_DIRS=		${PKG_SYSCONFDIR}/pam.d
 
 .include "../../mk/dlopen.buildlink3.mk"

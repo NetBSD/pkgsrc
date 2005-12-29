@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/05 20:50:54 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2005/12/29 06:22:08 jlam Exp $
 
 TETEX_BIN_VERS=		3.0
 DIST_SUBDIR=		teTeX
@@ -7,7 +7,6 @@ INSTALL_TARGET=		install strip
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_PKGINSTALL=		yes
 CFLAGS+=		-Dunix
 
 GNU_CONFIGURE=		yes

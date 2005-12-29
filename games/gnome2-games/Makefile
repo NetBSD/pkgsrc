@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/12/05 23:55:07 rillig Exp $
+# $NetBSD: Makefile,v 1.56 2005/12/29 06:21:41 jlam Exp $
 
 DISTNAME=		gnome-games-2.12.1
 PKGREVISION=		1
@@ -22,7 +22,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_MSGFMT_PLURALS=	yes
 
-USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 GNU_CONFIGURE=		yes

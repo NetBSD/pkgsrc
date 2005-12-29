@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/15 20:14:03 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:56 jlam Exp $
 #
 
 DISTNAME=	argus-3.3
@@ -19,7 +19,6 @@ DEPENDS+=	p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 
 USE_TOOLS+=		perl:run
-USE_PKGINSTALL=		yes
 HAS_CONFIGURE= 		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
 

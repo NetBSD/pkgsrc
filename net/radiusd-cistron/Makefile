@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:48 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2005/12/29 06:22:02 jlam Exp $
 
 DISTNAME=	radiusd-cistron-1.6.7
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	RADIUS-compliant remote authentication and accounting server
 
 CONFLICTS+=	freeradius-[0-9]*
 
-USE_PKGINSTALL=	YES
 
 MAKEFILE=	Makefile.BSD
 BUILD_DIRS=	${WRKSRC}/src

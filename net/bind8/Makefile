@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/12/05 20:50:44 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2005/12/29 06:21:57 jlam Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGREVISION=	1
@@ -16,7 +16,6 @@ DIST_SUBDIR=	bind/${BIND_VERSION}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	named
 
 BUILD_DIRS=	src doc/man

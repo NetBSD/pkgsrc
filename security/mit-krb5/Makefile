@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2005/12/17 05:20:23 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2005/12/29 06:22:10 jlam Exp $
 
 DISTNAME=	krb5-1.4.2
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -72,7 +72,6 @@ SUBST_SED.mit-krb5=	-e "/KRB5_PATH_RLOGIN/s,/rlogin,/${KRB5_PREFIX}rlogin,g"
 
 INFO_FILES=	krb425.info krb5-admin.info krb5-install.info krb5-user.info
 
-USE_PKGINSTALL=		yes
 OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 			${ROOT_USER} ${ROOT_GROUP} 0700
 RCD_SCRIPTS=		kadmind kdc

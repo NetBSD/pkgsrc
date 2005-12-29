@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/12 14:43:25 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:41 jlam Exp $
 #
 
 DISTNAME=       et-linux-2.56-2.x86
@@ -12,7 +12,6 @@ HOMEPAGE=       http://games.activision.com/games/wolfenstein/
 COMMENT=        Wolfenstein: Enemy Territory for Linux
 
 NO_BUILD=	yes
-USE_PKGINSTALL=	yes
 ONLY_FOR_PLATFORM=	*-*-i386
 
 USE_TOOLS+=	gtar

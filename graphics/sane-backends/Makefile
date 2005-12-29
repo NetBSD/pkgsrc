@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/02 23:40:36 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/29 06:21:45 jlam Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
@@ -22,7 +22,6 @@ PLIST_SUBST+=	SANE_PINT=""
 PLIST_SUBST+=	SANE_SM3600=""
 .endif
 
-USE_PKGINSTALL=	YES
 OWN_DIRS+=	${PKG_SYSCONFDIR}/sane.d
 EGDIR=		${PREFIX}/share/examples/sane
 .for f in abaton.conf agfafocus.conf apple.conf artec.conf \

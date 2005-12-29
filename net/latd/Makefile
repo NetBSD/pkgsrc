@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/07 21:35:47 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/12/29 06:22:00 jlam Exp $
 #
 
 DISTNAME=       latd-1.18
@@ -11,7 +11,6 @@ COMMENT=	The linux-decnet project's LAT protocol suite
 
 NOT_FOR_PLATFORM=	Interix-*-* # no direct ethernet support
 
-USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-DPREFIX="\"${PREFIX}\""

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/11/30 22:36:43 bouyer Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/29 06:21:57 jlam Exp $
 #
 
 DISTNAME=	arpwatch-2.1a13
@@ -8,7 +8,6 @@ MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Monitor ARP activity on a network, maintaining a database
 
-USE_PKGINSTALL=	YES
 RCD_SCRIPTS=	arpwatch
 
 GNU_CONFIGURE=	yes
@@ -25,7 +24,6 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	arpsnmp.8 arpwatch.8
 SUBST_SED.paths=	-e 's,/usr/operator/arpwatch,${VARBASE}/db/arpwatch,g'
 
-USE_PKGINSTALL=	yes
 OWN_DIRS=	${VARBASE:Q}/db/arpwatch
 
 pre-patch:

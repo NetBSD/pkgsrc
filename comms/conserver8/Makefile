@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 23:55:03 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/29 06:21:34 jlam Exp $
 #
 
 DISTNAME=	conserver-8.1.11
@@ -16,7 +16,6 @@ CONFLICTS=	conserver-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	YES
-USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-master=${CONSERVER_DEFAULTHOST:Q}

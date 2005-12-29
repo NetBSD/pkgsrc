@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/08/23 11:48:51 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2005/12/29 06:22:16 jlam Exp $
 
 PKGNAME=		amanda-common-${VERS}
 PKGREVISION=		2
@@ -6,7 +6,6 @@ SVR4_PKGNAME=		amaco
 
 COMMENT=		Common libraries and binaries for Amanda
 
-USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
