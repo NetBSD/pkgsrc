@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2005/12/29 22:43:40 joerg Exp $
+
+--- newsocket.c.orig	2005-12-29 16:24:27.000000000 +0000
++++ newsocket.c
+@@ -108,7 +108,6 @@ short GetShort_String(unsigned char *dat
+ int SockList_ReadPacket(int fd, SockList *sl, int len)
+ {
+     int stat,toread,readsome=0;
+-    extern int errno;
+ 
+     /* We already have a partial packet */
+     if (sl->len<2) {
