@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.8 2005/12/29 14:59:03 jlam Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.9 2005/12/29 15:00:10 jlam Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -479,7 +479,7 @@ following example, taken from <filename role="pkg">shells/zsh</filename>:</para>
 <!-- ================================================================== -->
 
 <sect2 id="shells-disable">
-<title>Disabling handling of configuration files</title>
+<title>Disabling shell registration</title>
 
 <!-- XXX This doesn't really belong here -->
 
