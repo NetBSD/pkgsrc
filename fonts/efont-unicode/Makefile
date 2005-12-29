@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:14 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/29 18:17:21 jlam Exp $
 
 DISTNAME=	efont-unicode-bdf-0.4.2
 PKGNAME=	${DISTNAME:S/-bdf//}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://openlab.ring.gr.jp/efont/unicode/
 COMMENT=	Free unicode BDF font
 
 USE_X11BASE=	YES
-USE_TOOLS+=	gzip mkfontdir:run
+USE_TOOLS+=	bdftopcf gzip
 
 MESSAGE_SUBST+=	FONTDIR=${FONTDIR}
 PLIST_SUBST+=	FONTDIR=${FONTDIR:Q}
@@ -27,12 +27,14 @@ FONTS=		b10 b10_b b10_bi b10_i\
 		h16 h16_b h16_bi h16_i\
 		h24 h24_b h24_bi h24_i
 FONTDIR=	lib/X11/fonts/efont
+REQD_DIRS=	${FONTDIR}
+FONTS_DIRS.x11=	${FONTDIR}
 
 do-build:
 	@cd ${WRKSRC};						\
 	for FONT in ${FONTS}; do				\
 	  ${ECHO} -n "Compiling font $${FONT} ... ";		\
-	  ${X11BASE}/bin/bdftopcf $${FONT}.bdf |		\
+	  bdftopcf $${FONT}.bdf |				\
 	    ${GZIP_CMD} -c >$${FONT}.pcf.gz;			\
 	  ${ECHO} "done";					\
 	done
@@ -45,6 +47,5 @@ do-install:
 	    ${PREFIX}/${FONTDIR};				\
 	  ${ECHO} "done";					\
 	done
-	@cd ${PREFIX}/${FONTDIR}; ${X11BASE}/bin/mkfontdir
 
 .include "../../mk/bsd.pkg.mk"
