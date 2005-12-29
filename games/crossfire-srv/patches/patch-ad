@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1 2005/12/29 17:41:27 joerg Exp $
+
+--- include/includes.h.orig	2005-12-29 16:56:01.000000000 +0000
++++ include/includes.h
+@@ -72,14 +72,14 @@
+ #include <fcntl.h>
+ #endif
+ 
+-#ifdef HAVE_LIBDMALLOC
+-#include <dmalloc.h>
+-#endif
+-
+ #ifdef HAVE_UNISTD_H
+ #include <unistd.h>
+ #endif
+ 
++#ifdef HAVE_LIBDMALLOC
++#include <dmalloc.h>
++#endif
++
+ #ifdef HAVE_SYS_TIME_H 
+ #include <sys/time.h>
+ #endif
