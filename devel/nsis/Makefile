@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/29 15:47:43 cube Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/30 09:53:07 cube Exp $
 #
 
-DISTNAME=	nsis-2.12
+DISTNAME=	nsis-${NSIS_VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsis/}
 EXTRACT_SUFX=	.zip .tar.bz2
@@ -15,6 +16,7 @@ COMMENT=	Scriptable system to build Windows installers
 DEPENDS+=	scons>=0.96.91:../../local/scons-devel
 
 NSIS_SRC=	${DISTNAME:=-src}
+NSIS_VER=	2.12
 WRKSRC=		${WRKDIR}/${NSIS_SRC}
 NO_CONFIGURE=	yes
 EXTRACT_CMD_OPTS.zip=	-qo
@@ -37,7 +39,7 @@ post-extract:
 do-build:
 	cd ${WRKSRC} &&					\
 	    ${SCONS_BIN} SKIPSTUBS=all SKIPPLUGINS=all	\
-	        SKIPUTILS=all SKIPMISC=all
+	        SKIPUTILS=all SKIPMISC=all VERSION=${NSIS_VER}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/release/makensis/makensis	\
