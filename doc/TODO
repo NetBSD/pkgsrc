@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4307 2005/12/29 23:25:17 markd Exp $
+$NetBSD: TODO,v 1.4308 2005/12/30 00:33:35 dillo Exp $
 
 Suggested new packages
 ======================
@@ -923,6 +923,7 @@ Suggested package updates
 	o p5-Heap-0.71
 	o p5-IO-String-1.08
 	o p5-Ima-DBI-0.34
+	o p5-Image-ExifTool-5.87
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
