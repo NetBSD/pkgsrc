@@ -1,0 +1,17 @@
+$NetBSD: patch-de,v 1.1 2005/12/30 21:35:58 joerg Exp $
+
+--- config/rules.mk.orig	2005-12-29 17:05:40.000000000 +0000
++++ config/rules.mk
+@@ -444,6 +444,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),DragonFly)
++ifdef IS_COMPONENT
++EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
++endif
++endif
++
+ ifeq ($(OS_ARCH),NetBSD)
+ ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
+ ifeq ($(MODULE),layout)
