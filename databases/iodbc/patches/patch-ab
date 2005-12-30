@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2005/12/30 21:03:59 jlam Exp $
+
+By inspection, driverbuf is meant to be a character buffer.
+
+--- iodbc/connect.c.orig	2005-11-04 08:14:52.000000000 -0500
++++ iodbc/connect.c
+@@ -398,7 +398,7 @@ _iodbcdm_driverload (
+   HPROC hproc;
+   SQLRETURN retcode = SQL_SUCCESS;
+   sqlstcode_t sqlstat = en_00000;
+-  char *driverbuf[1024];
++  char driverbuf[1024];
+ 
+   if (path == NULL || ((char *) path)[0] == '\0')
+     {

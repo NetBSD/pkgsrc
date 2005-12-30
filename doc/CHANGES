@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12269 2005/12/30 15:29:53 ben Exp $
+$NetBSD: CHANGES,v 1.12270 2005/12/30 21:04:03 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5831,3 +5831,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/nsis to 2.12nb1 [cube 2005-12-30]
 	Added editors/jave version 6.0m7 [martti 2005-12-30]
 	Updated graphics/cdlabelgen to 3.6.0 [ben 2005-12-30]
+	Updated databases/iodbc to 3.52.3 [jlam 2005-12-30]
