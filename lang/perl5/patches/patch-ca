@@ -1,4 +1,4 @@
-$NetBSD: patch-ca,v 1.3 2005/08/06 06:18:45 jlam Exp $
+$NetBSD: patch-ca,v 1.3.4.1 2005/12/30 13:40:15 seb Exp $
 
 --- Configure.orig	2005-04-20 12:34:37.000000000 -0400
 +++ Configure
@@ -37,6 +37,15 @@ $NetBSD: patch-ca,v 1.3 2005/08/06 06:18:45 jlam Exp $
  		os2)	osname=os2
  			osvers="$4"
  			;;
+@@ -4426,7 +4428,7 @@ case "$plibpth" in
+ esac
+ case "$libpth" in
+ ' ') dlist='';;
+-'') dlist="$loclibpth $plibpth $glibpth";;
++'') dlist="$plibpth $glibpth $loclibpth";;
+ *) dlist="$libpth";;
+ esac
+ 
 @@ -7856,7 +7858,7 @@ if "$useshrplib"; then
  	solaris)
  		xxx="-R $shrpdir"
