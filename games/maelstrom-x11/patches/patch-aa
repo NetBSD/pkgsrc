@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/11 13:26:13 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2005/12/30 22:41:27 joerg Exp $
 
 --- Makeflags.orig	Mon Jul 14 14:32:13 1997
 +++ Makeflags	Sun Jul 30 01:32:07 2000
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/11 13:26:13 wiz Exp $
 +X11LIBS = -lX11 -lXext -lXpm
 +CSUMLIB =
 +LIBS = $(EXTRALIBS) $(XPMLINKDIR) $(X11LINKDIR) $(X11LIBS) $(CSUMLIB)
-+SOUNDLIBS = -lossaudio
++SOUNDLIBS = ${LIBOSSAUDIO}
 +
 +INSTALL = /usr/bin/install
 +
