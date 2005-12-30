@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.51 2005/12/30 14:49:49 ghen Exp $
 
 DISTNAME=	TeXmacs-1.0.5.12-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -40,7 +40,7 @@ SUBST_FILES.bash+=	plugins/xypic/bin/tm_xypic
 SUBST_SED.bash=		-e 's,^\#!/bin/bash,\#!/bin/sh,'
 
 pre-install:
-	${FIND} ${WRKSRC}/plugins/ . -name '*.orig' | xargs ${RM}
+	${FIND} ${WRKSRC}/plugins/ . -name '*.orig' | ${XARGS} ${RM}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
