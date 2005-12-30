@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2005/12/30 10:32:16 ghen Exp $
 
-DISTNAME=		otp_src_R9C-0
-PKGNAME=		erlang-9.2
-PKGREVISION=		3
+DISTNAME=		otp_src_R10B-9
+PKGNAME=		erlang-10.1.9
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
@@ -14,8 +13,6 @@ DIST_SUBDIR=		erlang
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run
-USE_JAVA=		yes
-USE_JAVA2=		yes
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
@@ -25,9 +22,14 @@ SUBST_FILES.target=	make/target.mk
 SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	"Fixing target name."
 
+PLIST_SRC=		PLIST.common
+
+.include "options.mk"
+
+PLIST_SRC+=		PLIST.common_end
+
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/java-vm.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
