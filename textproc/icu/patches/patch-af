@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.6 2005/12/30 23:49:08 joerg Exp $
+
+--- runConfigureICU.orig	2005-12-30 22:46:43.000000000 +0000
++++ runConfigureICU
+@@ -284,7 +284,7 @@ case $platform in
+         RELEASE_CFLAGS='-O2'
+         RELEASE_CXXFLAGS='-O2'
+         ;;
+-    *BSD)
++    *BSD | DragonFly)
+         THE_OS="BSD"
+         THE_COMP="the GNU C++"
+         CC=gcc; export CC
