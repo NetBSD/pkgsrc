@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/09/04 14:05:44 taca Exp $
+$NetBSD: patch-ab,v 1.2 2005/12/30 13:13:40 joerg Exp $
 
---- install.rb.orig	2005-04-02 16:29:08.000000000 +0900
+--- install.rb.orig	2005-04-02 07:29:08.000000000 +0000
 +++ install.rb
 @@ -22,9 +22,9 @@ end
  Dir.chdir("lib")
@@ -14,3 +14,4 @@ $NetBSD: patch-ab,v 1.1 2005/09/04 14:05:44 taca Exp $
      File::makedirs(File.join($sitedir, *f.split(/\//)))
    end
  }
+\ No newline at end of file
