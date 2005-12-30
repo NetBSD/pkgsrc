@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.20 2005/12/29 22:39:09 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.21 2005/12/30 23:11:55 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -86,6 +86,9 @@ CHECK_FILES_SKIP+=	${d:C/^([^\/])/${PREFIX}\/\1/}.*
 CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.alias
 CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.dir
 CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.scale
+
+# Mutable charset.alias file
+CHECK_FILES_SKIP+=	${PREFIX}/lib/charset.alias
 
 _CHECK_FILES_SKIP_FILTER=	${GREP} -vx ${CHECK_FILES_SKIP:@f@-e ${f:Q}@}
 
