@@ -18,3 +18,4 @@
   - coding style violations,
   - possible unportable constructs
 * check quoting in CFLAGS+= -DPREFIX=\"${PREFIX:Q}\"
+* check that Index: entries match the rest of the patch
