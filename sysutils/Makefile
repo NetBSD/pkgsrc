@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2005/12/01 03:56:01 minskim Exp $
+# $NetBSD: Makefile,v 1.325 2005/12/30 23:03:57 agc Exp $
 #
 
 COMMENT=	System utilities
@@ -250,6 +250,7 @@ SUBDIR+=	xfce4-systray
 SUBDIR+=	xfce4-xkb-plugin
 SUBDIR+=	xfe
 SUBDIR+=	xfm
+SUBDIR+=	xfsprogs
 SUBDIR+=	xhfs
 SUBDIR+=	xmbmon
 SUBDIR+=	xmeter
