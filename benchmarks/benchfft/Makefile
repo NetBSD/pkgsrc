@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/26 23:39:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.27.2.1 2005/12/30 21:24:23 salo Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=	1
@@ -10,9 +10,6 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} fftw-2.0.1${EXTRACT_SUFX}
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.fftw.org/benchfft/
 COMMENT=		Benchmark your machine with a number of FFT algorithms
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
