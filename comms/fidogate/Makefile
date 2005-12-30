@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.45 2005/12/26 23:39:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.45.2.1 2005/12/30 16:35:58 seb Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fidogate/}
 
 MAINTAINER=	tv@duh.org
 HOMEPAGE=	http://www.fidogate.org/
 COMMENT=	FidoNet (FTN) <-> Internet mail and news gateway
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 USE_PKGINSTALL=		yes
 USE_TOOLS+=		gmake perl:run
