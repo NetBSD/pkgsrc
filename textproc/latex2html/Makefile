@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/12/26 23:39:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2005/12/30 14:50:51 seb Exp $
 
 DISTNAME=	latex2html-2002-2-1
 PKGNAME=	latex2html-2002.2.1
@@ -9,9 +9,6 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/latex2html/}
 MAINTAINER=	wennmach@NetBSD.org
 HOMEPAGE=	http://www.latex2html.org/
 COMMENT=	LaTeX to HTML converter
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DEPENDS+=	netpbm>=10.29nb2:../../graphics/netpbm
 
