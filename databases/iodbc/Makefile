@@ -1,31 +1,30 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:45:11 tv Exp $
-#
+# $NetBSD: Makefile,v 1.12 2005/12/30 21:03:59 jlam Exp $
 
-DISTNAME=		libiodbc-2.50.3
-PKGNAME=		iodbc-2.50.3
-PKGREVISION=		1
-CATEGORIES=		databases
-MASTER_SITES=		http://www.iodbc.org/dist/
+DISTNAME=	libiodbc-3.52.3
+PKGNAME=	${DISTNAME:S/^lib//}
+CATEGORIES=	databases
+MASTER_SITES=	http://www.iodbc.org/downloads/iODBC/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.iodbc.org/
-COMMENT=		ODBC 2.x driver manager
+MAINTAINER=	jlam@pkgsrc.org
+HOMEPAGE=	http://www.iodbc.org/
+COMMENT=	ODBC 2.x driver manager
 
-CONFLICTS+=		unixodbc-[0-9]*
+CONFLICTS+=	unixodbc-[0-9]*
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-gui
+CONFIGURE_ARGS+=	--with-iodbc-inidir=${PKG_SYSCONFDIR}
+LIBADD_DL=		${DL_LDFLAGS} ${DL_LIBS}
+MAKE_FLAGS+=		LIBADD_DL=${LIBADD_DL:Q}
 
-CONFIGURE_ARGS+=	--with-iodbc-inidir=/etc
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=	${EGDIR}/odbc.ini ${PKG_SYSCONFDIR}/odbc.ini
+
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/iodbc
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/iodbc
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/iodbc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/iodbc
-	${INSTALL_DATA} ${WRKSRC}/odbc.ini.sample \
-		${PREFIX}/share/examples/iodbc/odbc.ini
-	${INSTALL_PROGRAM} ${WRKSRC}/samples/odbctest ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/etc/odbc.ini.sample ${EGDIR}/odbc.ini
 
 .include "../../mk/bsd.pkg.mk"
