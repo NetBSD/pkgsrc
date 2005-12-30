@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/12/30 23:03:05 agc Exp $
+
+--- include/Makefile	2005/12/29 13:56:15	1.1
++++ include/Makefile	2005/12/29 14:00:07
+@@ -45,7 +45,7 @@
+ 	xfs_rtalloc.h xfs_sb.h xfs_trans.h xfs_trans_space.h xfs_types.h
+ 
+ HFILES += $(PKG_PLATFORM).h xfs.h
+-PHFILES = darwin.h freebsd.h irix.h linux.h
++PHFILES = darwin.h freebsd.h irix.h linux.h netbsd.h
+ DKHFILES = volume.h fstyp.h dvh.h
+ LSRCFILES = $(shell echo $(PHFILES) | sed -e "s/$(PKG_PLATFORM).h//g")
+ LSRCFILES += platform_defs.h.in builddefs.in buildmacros buildrules $(DKHFILES)

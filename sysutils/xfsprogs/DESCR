@@ -1,0 +1,20 @@
+XFS combines advanced journaling technology with full 64-bit
+addressing and scalable structures and algorithms.
+
++ Journaled 64-bit filesystem with guaranteed filesystem consistency.
+
++ XFS supports filesystem growth for mounted volumes, allows
+filesystem "freeze" and "thaw" operations to support volume level
+snapshots, and provides an online file defragmentation utility.
+
++ XFS supports user and group quotas.  XFS considers quota information
+as filesystem metadata and uses journaling to avoid the need for
+lengthy quota consistency checks after a crash.
+
++ For Linux 2.6 and beyond, when using 64 bit addressing in the block
+devices layer (CONFIG_LBD) and a 64 bit platform, filesystem size
+limit increases to 9 million terabytes (or the device limits).  For
+these later kernels on 32 bit platforms, 16TB is the current limit
+even with 64 bit addressing enabled in the block layer.
+
+This package contains filesystem manipulation and support programs.

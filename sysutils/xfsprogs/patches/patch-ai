@@ -1,0 +1,27 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/12/30 23:03:06 agc Exp $
+
+--- include/input.h.orig	2005-10-07 17:51:34.000000000 +0100
++++ include/input.h	2005-12-30 10:45:15.000000000 +0000
+@@ -62,18 +62,12 @@
+ extern gid_t	gid_from_string(char *group);
+ extern prid_t	prid_from_string(char *project);
+ 
++#ifdef __NetBSD__
++#undef HAVE_FTW_H
++#else
+ #define HAVE_FTW_H 1	/* TODO: configure me */
++#endif
+ 
+-#ifdef HAVE_FTW_H
+ #include <ftw.h>
+-#else
+-struct FTW;
+-struct stat;
+-extern int nftw(
+-	char	*dir,
+-	int	(*fn)(const char *, const struct stat *, int, struct FTW *),
+-	int	depth,
+-	int	flags);
+-#endif
+ 
+ #endif	/* __INPUT_H__ */

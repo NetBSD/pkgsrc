@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/30 23:03:05 agc Exp $
+
+SHA1 (xfsprogs-2.7.3.src.tar.gz) = abfe3ea13475810a0ef854f48b9ca9912ee7fbc5
+RMD160 (xfsprogs-2.7.3.src.tar.gz) = 7a4f6b0d5da640041334cef4b4aa2e60ba43af53
+Size (xfsprogs-2.7.3.src.tar.gz) = 895400 bytes
+SHA1 (patch-aa) = c2d7667d5f4d7cf027ef0c41b774852cc28638e5
+SHA1 (patch-ab) = beb412afa8904af887ba237f356bd29ac3327755
+SHA1 (patch-ac) = 417f9e94d22f39947932bf38147aab90384f308c
+SHA1 (patch-ad) = 3ecf2ef5eb280fc36d68ed6b8ed348faae32d9ff
+SHA1 (patch-ae) = 5224f9a7aaa31e25e15ad1706da076fdda21b0c0
+SHA1 (patch-af) = 92acf0b8ffe373570750f7a3dcb86c219a4f880d
+SHA1 (patch-ag) = 01b6470feea8536756ca0f48ccdfc106e6a17402
+SHA1 (patch-ah) = 2a28a644eac5284443fc843485cf3ded08a9ed7b
+SHA1 (patch-ai) = 42e07792f0c4bb816a772c789cbca387cefbb528
+SHA1 (patch-aj) = 2d7e3e05bff6951a22b2df13193db758a509a732
+SHA1 (patch-ak) = d6f9027a339fe3607003b4fe34062936868f47da
+SHA1 (patch-al) = 832d5d90b9314f5aea312908df16ff3c74449d00
