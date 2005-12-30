@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/26 23:39:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2005/12/30 13:24:34 joerg Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -12,10 +12,6 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.zope.org/
 COMMENT=	Zope, the Z Object Publishing Environment
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
-
-DEPENDS+=	py-extclass>=2.2.2:../../lang/py-extclass
 DEPENDS+=	py-dtml>=2.2.2:../../textproc/py-dtml
 
 DIST_SUBDIR=	python
@@ -52,5 +48,6 @@ do-install:
 		<${FILESDIR}/zope-shutdown.py >${PREFIX}/sbin/zope-shutdown
 	${CHMOD} 755 ${PREFIX}/sbin/zope-install ${PREFIX}/sbin/zope-shutdown
 
+.include "../../lang/py-extclass/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
