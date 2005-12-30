@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.10 2005/03/27 10:27:20 recht Exp $
+$NetBSD: distinfo,v 1.11 2005/12/30 23:49:08 joerg Exp $
 
 SHA1 (icu-3.2.tgz) = 23fa1feb893a562408e6f13fcf968a6177d8aa6e
 RMD160 (icu-3.2.tgz) = 69720d12c5076de4f7ff865a6709d405ce3f1bb5
 Size (icu-3.2.tgz) = 9587961 bytes
 SHA1 (patch-aa) = 108ac871bfbf72c97ef2241e2d7294f3084f9c8b
 SHA1 (patch-ab) = 86ca3d2cd4ba2e71132b41f3a1d26fb2778448cf
+SHA1 (patch-ad) = 4080b584553446485084b34f177131edecce9ba9
 SHA1 (patch-ae) = 39ea97c492859e09386dde595004927a2d4537c8
+SHA1 (patch-af) = cbf5c84b69c6a02d33d61f63c55838cda4ed5c17
