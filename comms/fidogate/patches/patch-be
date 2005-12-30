@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1.2.2 2005/12/30 16:35:58 seb Exp $
+
+--- src/gate/rfc2ftn.c.orig	2005-12-30 00:26:00.000000000 +0100
++++ src/gate/rfc2ftn.c
+@@ -619,7 +619,7 @@ void cvt_user_name(char *s)
+      * capitalized.  If no '_' chars are found, '.' are converted to
+      * spaces (User.Name@p.f.n.z.fidonet.org addressing style).
+      */
+-    convert_flag = isupper(*s) ? -1 : 1;
++    convert_flag = isupper((unsigned char)*s) ? -1 : 1;
+     us_flag      = strchr(s, '_') || strchr(s, ' ') || strchr(s, '@');
+     
+     for(; *s; s++) {
