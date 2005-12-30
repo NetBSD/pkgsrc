@@ -1,0 +1,201 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/12/30 23:03:05 agc Exp $
+
+--- /dev/null	2005-12-29 13:42:11.000000000 +0000
++++ include/netbsd.h	2005-12-29 14:07:41.000000000 +0000
+@@ -0,0 +1,196 @@
++/*
++ * Copyright (c) 2004 Silicon Graphics, Inc.  All Rights Reserved.
++ *
++ * This program is free software; you can redistribute it and/or modify it
++ * under the terms of version 2 of the GNU General Public License as
++ * published by the Free Software Foundation.
++ *
++ * This program is distributed in the hope that it would be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
++ *
++ * Further, this software is distributed without any warranty that it is
++ * free of the rightful claim of any third person regarding infringement
++ * or the like.  Any license provided herein, whether implied or
++ * otherwise, applies only to this software file.  Patent licenses, if
++ * any, provided herein do not apply to combinations of this program with
++ * other software, or any other product whatsoever.
++ *
++ * You should have received a copy of the GNU General Public License along
++ * with this program; if not, write the Free Software Foundation, Inc., 59
++ * Temple Place - Suite 330, Boston MA 02111-1307, USA.
++ *
++ * Contact information: Silicon Graphics, Inc., 1600 Amphitheatre Pkwy,
++ * Mountain View, CA  94043, or:
++ *
++ * http://www.sgi.com
++ *
++ * For further information regarding this notice, see:
++ *
++ * http://oss.sgi.com/projects/GenInfo/SGIGPLNoticeExplan/
++ *
++ */
++#ifndef __XFS_NetBSD_H__
++#define __XFS_NetBSD_H__
++
++#include <sys/stat.h>
++#include <sys/param.h>
++#include <sys/ioctl.h>
++#include <sys/ioccom.h>
++#include <sys/mount.h>
++#if (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
++#  include <sys/statvfs.h>
++#else
++#  include <sys/statfs.h>
++#endif
++#include <ctype.h>
++#include <libgen.h>
++#include <paths.h>
++#include <uuid.h>
++
++#include <sys/endian.h>
++
++#define __bswap16	htobe16
++#define __bswap32	htobe32
++#define __bswap64	htobe64
++
++/* NetBSD file API is 64-bit aware */
++#define	fstat64		fstat
++#define	ftruncate64	ftruncate
++#define lseek64		lseek
++#define	stat64		stat
++#define	pwrite64	pwrite
++#define	pread64		pread
++#define	fdatasync	fsync
++#define memalign(a,size)	valloc(size)
++
++typedef u_int8_t	__u8;
++typedef int8_t		__s8;
++typedef u_int16_t	__u16;
++typedef int16_t		__s16;
++typedef u_int32_t	__u32;
++typedef int32_t		__s32;
++typedef u_int64_t	__u64;
++typedef int64_t		__s64;
++
++#define constpp	char * const *
++
++#define EFSCORRUPTED	990	/* Filesystem is corrupted */
++
++typedef off_t		xfs_off_t;
++typedef off_t		off64_t;
++typedef __uint64_t	xfs_ino_t;
++typedef __uint32_t	xfs_dev_t;
++typedef __int64_t	xfs_daddr_t;
++typedef char*		xfs_caddr_t;
++typedef off_t		loff_t;
++
++#ifndef	_UCHAR_T_DEFINED
++typedef unsigned char	uchar_t;
++#define	_UCHAR_T_DEFINED	1
++#endif
++typedef enum { B_FALSE,B_TRUE }	boolean_t;
++
++#define	O_LARGEFILE	0
++
++#ifndef O_DIRECT
++#define O_DIRECT        0
++#endif
++
++#define HAVE_FID	1
++#define HAVE_SWABMACROS	1
++#define INT_SWAP16(type,var) ((typeof(type))(__bswap16((__u16)(var))))
++#define INT_SWAP32(type,var) ((typeof(type))(__bswap32((__u32)(var))))
++#define INT_SWAP64(type,var) ((typeof(type))(__bswap64((__u64)(var))))
++
++static __inline__ int xfsctl(const char *path, int fd, int cmd, void *p)
++{
++	return ioctl(fd, cmd, p);
++}
++
++static __inline__ int platform_test_xfs_fd(int fd)
++{
++#if (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
++	struct statvfs buf;
++	if (fstatvfs(fd, &buf) < 0)
++		return 0;
++#else
++	struct statvfs buf;
++	if (fstatvfs(fd, &buf) < 0)
++		return 0;
++#endif
++	return strcpy(buf.f_fstypename, "xfs") == 0;
++}
++
++static __inline__ int platform_test_xfs_path(const char *path)
++{
++#if (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
++	struct statvfs buf;
++	if (statvfs(path, &buf) < 0)
++		return 0;
++#else
++	struct statvfs buf;
++	if (statvfs(path, &buf) < 0)
++		return 0;
++#endif
++	return strcpy(buf.f_fstypename, "xfs") == 0;
++}
++
++#if (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
++static __inline__ int platform_fstatfs(int fd, struct statvfs *buf)
++{
++	return fstatvfs(fd, buf);
++}
++#else
++static __inline__ int platform_fstatfs(int fd, struct statfs *buf)
++{
++	return fstatfs(fd, buf);
++}
++#endif
++
++static __inline__ void platform_getoptreset(void)
++{
++	extern int optind;
++	optind = 0;
++}
++
++/*
++ * Implement Linux libuuid functions in terms of DEC DCE's uuid
++ * functions from NetBSD libc.
++ */
++
++static __inline__ int gnu_uuid_compare(uuid_t a, uuid_t b)
++{
++	return uuid_compare(&a, &b, NULL);
++}
++#define	uuid_compare	gnu_uuid_compare
++
++static __inline__ int uuid_is_null(uuid_t uid)
++{
++	return uuid_is_nil(&uid, NULL);
++}
++
++static __inline__ void uuid_unparse(uuid_t uid, char *buf)
++{
++	uint32_t status;
++	char *str;
++	uuid_to_string(&uid, &str, &status);
++	if (status == uuid_s_ok)
++		strcpy(buf, str);
++	else *buf = '\0';
++	free(str);
++}
++
++static __inline__ int gnu_uuid_parse(const char *buf, uuid_t *uid)
++{
++	uint32_t status;
++	uuid_from_string(buf, uid, &status);
++	return (status == uuid_s_ok);
++}
++#define	uuid_parse(s,u)	gnu_uuid_parse((s), &(u))
++
++#define uuid_generate(uid)  uuid_create(&(uid), NULL)
++#define uuid_clear(uid)  uuid_create_nil(&(uid), NULL)
++#define uuid_copy(dst, src)  memcpy(&(dst), &(src), sizeof(uuid_t))
++
++#endif	/* __XFS_NetBSD_H__ */
