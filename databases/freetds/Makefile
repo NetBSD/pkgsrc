@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/29 06:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/30 16:39:39 jlam Exp $
 
 DISTNAME=	freetds-0.63
 PKGREVISION=	2
@@ -21,16 +21,12 @@ CONFIGURE_ARGS+=	--with-tdsver=7.0
 # no thread-safe resolver functions on NetBSD
 CONFIGURE_ARGS+=	--disable-threadsafe
 
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} ETC=${EGDIR:Q}
+
 EGDIR=		${PREFIX}/share/examples/freetds
 CONF_FILES=	${EGDIR}/freetds.conf ${PKG_SYSCONFDIR}/freetds.conf
 CONF_FILES+=	${EGDIR}/locales.conf ${PKG_SYSCONFDIR}/locales.conf
 CONF_FILES+=	${EGDIR}/pool.conf ${PKG_SYSCONFDIR}/pool.conf
-
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/freetds.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/locales.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/src/pool/pool.conf ${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
