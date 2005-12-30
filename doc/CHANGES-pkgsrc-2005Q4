@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.10 2005/12/30 13:41:32 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.11 2005/12/30 13:58:53 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -23,3 +23,5 @@ Pullup ticket 980 - requested by Mark Davies
 unbreak fonts/acroread7-chtfont
 Pullup ticket 981 - requested by Johnny C. Lam
 build fix for lang/perl5
+Pullup ticket 982 - requested by Martti Kuparinen
+improve rc script usability of mail/postfix and mail/postfix-current
