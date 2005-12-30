@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.40 2005/12/05 23:55:16 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2005/12/30 04:16:17 garbled Exp $
 
 DISTNAME=		mpich-1.2.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		parallel
 MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.mcs.anl.gov/mpi/mpich/index.html
+HOMEPAGE=		http://www-unix.mcs.anl.gov/mpi/mpich/index.html
 COMMENT=		Free implementation of the Message Passing Interface
 
 .if !exists(/usr/bin/ssh)
@@ -96,7 +96,7 @@ post-install:
 	@${ECHO} "exit" >> ${PREFIX}/sbin/mpiuninstall
 	@${CHMOD} 755 ${PREFIX}/sbin/mpiuninstall
 
-.include "../../x11/tk83/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if exists(${WRKDIR}/with-java)
