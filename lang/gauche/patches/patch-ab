@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2005/12/30 14:18:52 joerg Exp $
+
+--- gc/include/private/gcconfig.h.orig	2005-12-30 13:34:26.000000000 +0000
++++ gc/include/private/gcconfig.h
+@@ -55,7 +55,7 @@
+ # endif
+ 
+ /* And one for FreeBSD: */
+-# if defined(__FreeBSD__) && !defined(FREEBSD)
++# if (defined(__FreeBSD__) || defined(__DragonFly__)) && !defined(FREEBSD)
+ #    define FREEBSD
+ # endif
+ 
