@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2005/11/28 06:41:21 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2005/12/30 04:00:01 garbled Exp $
 
 DISTNAME=	gv-3.6.1
 CATEGORIES=	print
@@ -15,6 +15,13 @@ USE_MAKEINFO=		yes
 TEXINFO_REQD=		4.2
 INFO_FILES=		gv.info
 
+# this pkg does not work with std xaw, but xpm and xaw3d work
+XAW_TYPE?=		3d
+.include "../../mk/bsd.prefs.mk"
+.if ${XAW_TYPE} == "standard"
+XAW_TYPE=		3d
+.endif
+
 .if !exists(/usr/include/getopt.h)
 .  include "../../pkgtools/libnbcompat/buildlink3.mk"
 post-extract:
@@ -22,5 +29,5 @@ post-extract:
 
 .endif
 
-.include "../../x11/Xaw3d/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
