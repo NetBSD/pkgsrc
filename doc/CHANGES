@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12268 2005/12/30 15:04:27 ben Exp $
+$NetBSD: CHANGES,v 1.12269 2005/12/30 15:29:53 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5783,6 +5783,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed textproc/eperl [jlam 2005-12-23]
 	Removed devel/guile14-slib [wiz 2005-12-23]
 	Updated multimedia/xine-lib to 1.0.3anb3 [jmmv 2005-12-24]
+	Updated mail/mutt to 1.4.2.1nb5 [ben 2005-12-26]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2005Q4 branch [agc 2005-12-27]
 	Updated sysutils/estd to 0.4nb1 [dillo 2005-12-27]
 	Updated editors/vim-share to 6.4.6 [martti 2005-12-27]
@@ -5829,5 +5830,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mail/postfix-current to 2.3-20051128nb1 [martti 2005-12-30]
 	Updated devel/nsis to 2.12nb1 [cube 2005-12-30]
 	Added editors/jave version 6.0m7 [martti 2005-12-30]
-	Updated mail/mutt to 1.4.2.1nb5 [ben 2005-12-26]
 	Updated graphics/cdlabelgen to 3.6.0 [ben 2005-12-30]
