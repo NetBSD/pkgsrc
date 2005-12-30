@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3 2005/12/30 21:03:59 jlam Exp $
+
+Rip out a completely non-standard and hokey way to determine if wchar_t
+is a valid type.
+
+--- include/sqltypes.h.orig	2005-10-08 07:42:02.000000000 -0400
++++ include/sqltypes.h
+@@ -388,16 +388,7 @@ SQLGUID;
+ typedef unsigned short SQLWCHAR;
+ #else
+ #  include <stdlib.h>
+-
+-#  if defined(__cplusplus)		|| \
+-      defined(_WCHAR_T)			|| \
+-      defined(_WCHAR_T_DEFINED)		|| \
+-      defined(_WCHAR_T_DECLARED)        || \
+-      defined(_BSD_WCHAR_T_DEFINED_)
+ typedef wchar_t SQLWCHAR;
+-#  else
+-#    error Please make sure your system supports the wchar_t type
+-#  endif
+ #endif /* WIN32 */
+ 
+ 
