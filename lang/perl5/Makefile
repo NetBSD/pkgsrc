@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2005/12/22 15:23:17 jlam Exp $
+# $NetBSD: Makefile,v 1.109.2.1 2005/12/30 13:40:15 seb Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -273,14 +273,8 @@ SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 # - Explicitly set the local compiler search paths to contain only the
 #   pkgsrc-controlled directories.
 #
-# - Perl has no dependencies, so force library searches to start in the
-#   system directories instead of in the pkgsrc-controlled directories.
-#   XXX
-#   XXX This breaks building perl on a platform that has native pthreads
-#   XXX with PREFER_NATIVE_PTHREADS=no, but that's not really worthwhile
-#   XXX to fix.
-#
 pre-configure:
+.if defined(PTHREAD_LDFLAGS) && !empty(PTHREAD_LDFLAGS)
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
 		${CHMOD} +w $${hints};					\
@@ -293,6 +287,7 @@ pre-configure:
 		  ${ECHO} "EOCBU";					\
 		} >> $${hints};						\
 	done
+.endif
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
 		{ ${ECHO} "";						\
@@ -318,10 +313,6 @@ pre-configure:
 		${ECHO} 'glibpth="'${SYSLIBPATH:Q}'"' >> $${hints};	\
 	done
 .endif
-	hintdir="${WRKSRC}/hints";					\
-	for hints in $${hintdir}/*.sh; do				\
-		${ECHO} 'libpth="$$glibpth $$loclibpth"' >> $${hints};	\
-	done
 
 INSTALLATION_DIRS=	bin man/man1
 PERL5_PACKLIST_DIR_cmd=	eval `${PERL5} -V:installarchlib 2>/dev/null`;	\
