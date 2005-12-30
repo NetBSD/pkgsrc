@@ -1,0 +1,47 @@
+$NetBSD: patch-ae,v 1.10 2005/12/30 14:18:52 joerg Exp $
+
+--- gc/configure.orig	2005-11-05 01:00:49.000000000 +0000
++++ gc/configure
+@@ -4030,7 +4030,7 @@ _ACEOF
+ 	fi
+ 	THREADDLLIBS="-lpthread -lrt"
+ 	;;
+-     *-*-freebsd*)
++     *-*-freebsd* | *-*-dragonfly*)
+ 	{ echo "$as_me:$LINENO: WARNING: \"FreeBSD does not yet fully support threads with Boehm GC.\"" >&5
+ echo "$as_me: WARNING: \"FreeBSD does not yet fully support threads with Boehm GC.\"" >&2;}
+ 	cat >>confdefs.h <<\_ACEOF
+@@ -4698,13 +4698,13 @@ darwin* | rhapsody*)
+   esac
+   ;;
+ 
+-freebsd*)
++freebsd* | dragonfly*)
+   if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
+     case $host_cpu in
+     i*86 )
+       # Not sure whether the presence of OpenBSD here was a mistake.
+       # Let's accept both of them until this is cleared up.
+-      lt_cv_deplibs_check_method='file_magic (FreeBSD|OpenBSD)/i[3-9]86 (compact )?demand paged shared library'
++      lt_cv_deplibs_check_method='file_magic (DragonFly|FreeBSD|OpenBSD)/i[3-9]86 (compact )?demand paged shared library'
+       lt_cv_file_magic_cmd=/usr/bin/file
+       lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
+       ;;
+@@ -7200,7 +7200,7 @@ else
+     ;;
+ 
+   # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
+-  freebsd*)
++  freebsd* | dragonfly*)
+     archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
+     hardcode_libdir_flag_spec='-R$libdir'
+     hardcode_direct=yes
+@@ -7659,7 +7659,7 @@ freebsd1*)
+   dynamic_linker=no
+   ;;
+ 
+-freebsd*)
++freebsd* | dragonfly*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+   version_type=freebsd-$objformat
+   case $version_type in
