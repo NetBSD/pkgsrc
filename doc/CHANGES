@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12271 2005/12/30 23:04:54 agc Exp $
+$NetBSD: CHANGES,v 1.12272 2005/12/30 23:39:28 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5833,3 +5833,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated graphics/cdlabelgen to 3.6.0 [ben 2005-12-30]
 	Updated databases/iodbc to 3.52.3 [jlam 2005-12-30]
 	Added sysutils/xfsprogs version 2.7.3 [agc 2005-12-30]
+	Updated graphics/jpegpixi to 1.1.0nb1 [joerg 2005-12-30]
