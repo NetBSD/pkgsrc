@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/12/27 21:04:23 reed Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/12/30 21:07:42 jlam Exp $
 bin/bsqldb
 bin/defncopy
 bin/freebcp
@@ -21,6 +21,7 @@ include/tdsver.h
 lib/libct.la
 lib/libsybdb.la
 lib/libtds.la
+${ODBC}lib/libtdsodbc.la
 lib/libtdssrv.la
 man/man1/bsqldb.1
 man/man1/defncopy.1
