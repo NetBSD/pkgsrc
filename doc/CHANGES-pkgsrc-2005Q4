@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.8 2005/12/29 18:17:44 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.9 2005/12/30 10:09:04 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -19,3 +19,5 @@ Pullup ticket 975 - requested by Stoned Elipot
 security update for rssh
 Pullup ticket 976 - requested by Julio M. Merino Vidal
 fix firefox installation hence unbreak epiphany, yelp and fix meta-pkg/gnome
+Pullup ticket 980 - requested by Mark Davies
+unbreak fonts/acroread7-chtfont
