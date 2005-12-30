@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2005/07/25 15:46:02 adam Exp $
+$NetBSD: patch-ab,v 1.6 2005/12/30 21:35:58 joerg Exp $
 
 --- configure.in.orig	2004-10-31 07:17:58.000000000 +0000
 +++ configure.in
-@@ -1001,7 +1001,6 @@ case "$target" in
+@@ -1001,14 +1001,13 @@ case "$target" in
      powerpc*)
          _PLATFORM_DEFAULT_TOOLKIT='mac'
          DSO_LDOPTS="$DSO_LDOPTS -arch ppc"
@@ -10,6 +10,14 @@ $NetBSD: patch-ab,v 1.5 2005/07/25 15:46:02 adam Exp $
          # set MACOSX to generate lib/mac/MoreFiles/Makefile
          MACOSX=1
          ;;
+     esac
+     ;;
+ 
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
 @@ -1022,6 +1021,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
@@ -43,6 +51,15 @@ $NetBSD: patch-ab,v 1.5 2005/07/25 15:46:02 adam Exp $
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
+@@ -2181,7 +2190,7 @@ then
+     fi
+ 
+ 	case "$target" in
+-	    *-*-freebsd*)
++	    *-*-freebsd* | *-*-dragonfly*)
+ 			AC_DEFINE(_REENTRANT)
+ 			AC_DEFINE(_THREAD_SAFE)
+ 			dnl -pthread links in -lc_r, so don't specify it explicitly.
 @@ -4280,7 +4289,7 @@ dnl = Enable code optimization. OFF by d
  dnl ========================================================
  MOZ_OPTIMIZE=
