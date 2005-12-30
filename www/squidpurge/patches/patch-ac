@@ -1,11 +1,24 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/10/11 00:45:39 gdt Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/30 14:52:17 joerg Exp $
 
---- Makefile.~1~	2000-09-21 09:05:31.000000000 -0400
-+++ Makefile	2005-10-09 19:59:19.000000000 -0400
-@@ -77,6 +77,11 @@
+--- Makefile.orig	2000-09-21 13:05:31.000000000 +0000
++++ Makefile
+@@ -17,7 +17,7 @@
+ #
+ CXX	= g++ -ffor-scope -DHAS_BOOL -DHAS_PSIGNAL
+ CC	= gcc
+-LD	= $(CC)		# yes, I do mean gcc and not g++
++LD	= $(CXX)	# yes, I do mean gcc and not g++ # and yes, this is clueless
+ CXXFLAGS = # -pg -g # -fprofile-arcs -ftest-coverage
+ SYSTEM  = $(shell uname -s | tr '[a-z]' '[A-Z]' | tr -d '_ -/')
+ CPU	= $(shell uname -p)
+@@ -77,6 +77,15 @@ ifeq (FREEBSD,${SYSTEM})
  SOCKLEN	= socklen_t
  endif
  
++ifeq (DRAGONFLY,${SYSTEM})
++SOCKLEN	= socklen_t
++endif
++
 +ifeq (NETBSD,${SYSTEM})
 +SOCKLEN	= socklen_t
 +LD	= $(CXX)
