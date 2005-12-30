@@ -1,0 +1,22 @@
+$NetBSD: patch-ba,v 1.1.2.2 2005/12/30 16:35:58 seb Exp $
+
+--- src/common/parsedate.y.orig	2005-12-30 00:13:31.000000000 +0100
++++ src/common/parsedate.y
+@@ -41,7 +41,7 @@ typedef char        *STRING;
+ typedef char        *CSTRING;
+ #endif  /* defined(__STDC__) */
+ 
+-#define CTYPE(isXXXXX, c)   ((isascii((c)) && isXXXXX((c))))
++#define CTYPE(isXXXXX, c)   ((isascii((unsigned char)(c)) && isXXXXX((unsigned char)(c))))
+ 
+ /* Stuff from inn macros.h */
+ #define SIZEOF(array)  ((int)(sizeof array / sizeof array[0]))
+@@ -738,7 +738,7 @@ date_lex(void)
+ 	if (CTYPE(isalpha, c)) {
+ 	    for (p = buff; (c = *yyInput++) == '.' || CTYPE(isalpha, c); )
+ 		if (p < &buff[sizeof buff - 1])
+-		    *p++ = CTYPE(isupper, c) ? tolower(c) : c;
++		    *p++ = CTYPE(isupper, c) ? tolower((unsigned char)c) : c;
+ 	    *p = '\0';
+ 	    yyInput--;
+ 	    return LookupWord(buff, p - buff);
