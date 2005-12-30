@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/12/30 16:39:39 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2005/12/30 21:07:42 jlam Exp $
 
 DISTNAME=	freetds-0.63
 PKGREVISION=	2
@@ -11,6 +11,8 @@ COMMENT=	LGPL'd implementation of Sybase's db-lib/ct-lib/ODBC libs
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+
+.include "options.mk"
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
