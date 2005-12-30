@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.7 2005/12/30 12:39:43 joerg Exp $
+
+--- unix.d.orig	2005-12-30 12:22:01.000000000 +0000
++++ unix.d
+@@ -25,7 +25,6 @@
+ 
+ /* the table of the system error messages */
+ #include <errno.h>
+-extern int errno; /* last error code */
+ /* NB: errno may be a macro which expands to a function call.
+    Therefore access and assignment to errno must be wrapped in
+    begin_system_call()/end_system_call() */
