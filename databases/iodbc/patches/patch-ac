@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2005/12/30 21:03:59 jlam Exp $
+
+--- samples/Makefile.in.orig	2005-11-07 05:27:44.000000000 -0500
++++ samples/Makefile.in
+@@ -566,9 +566,9 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ 
+ install-exec-hook:
+-	$(mkinstalldirs) ${DESTDIR}${pkgdatadir}/samples
+-	cp $(srcdir)/iodbctest.c ${DESTDIR}${pkgdatadir}/samples/iodbctest.c
+-	cp $(srcdir)/Makefile.sample ${DESTDIR}${pkgdatadir}/samples/Makefile
++	$(mkinstalldirs) ${DESTDIR}${datadir}/examples/iodbc
++	cp $(srcdir)/iodbctest.c ${DESTDIR}${datadir}/examples/iodbc/iodbctest.c
++	cp $(srcdir)/Makefile.sample ${DESTDIR}${datadir}/examples/iodbc/Makefile
+ 
+ uninstall-hook:
+ 	rm -f ${DESTDIR}${pkgdatadir}/samples/iodbctest.c
