@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/12/30 23:03:06 agc Exp $
+
+--- quota/free.c	2005/12/30 11:12:11	1.1
++++ quota/free.c	2005/12/30 11:13:16
+@@ -70,7 +70,11 @@
+ {
+ 	struct xfs_fsop_counts	fscounts;
+ 	struct xfs_fsop_geom	fsgeo;
++#if (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
++	struct statvfs		st;
++#else
+ 	struct statfs		st;
++#endif
+ 	__uint64_t		logsize, count, free;
+ 	int			fd;
+ 
