@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12281 2005/12/31 14:59:09 peter Exp $
+$NetBSD: CHANGES,v 1.12282 2005/12/31 20:43:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5861,3 +5861,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added x11/matchbox-themes-extra version 0.3 [peter 2005-12-31]
 	Updated pkgtools/pkglint to 4.50 [rillig 2005-12-31]
 	Added meta-pkgs/matchbox version 0.9.5 [peter 2005-12-31]
+	Updated audio/timidity to 2.13.2nb2 [schmonz 2005-12-31]
