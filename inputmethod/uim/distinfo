@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/11/25 22:17:15 wiz Exp $
+$NetBSD: distinfo,v 1.7 2005/12/31 00:04:28 wiz Exp $
 
-SHA1 (uim-0.4.9.1.tar.gz) = 9037499c47187aeee758ee2bfd60ba9d7d4f40ec
-RMD160 (uim-0.4.9.1.tar.gz) = a610157a3aabdd9c1f35718fd8dddce27ffc8831
-Size (uim-0.4.9.1.tar.gz) = 1602849 bytes
-SHA1 (patch-aa) = 15c80df9ab4c9c799be22c31a223cacd7b6389f0
+SHA1 (uim-1.0.1.tar.gz) = a81e208856793edb6bfe748f6a5400ac03bf07b2
+RMD160 (uim-1.0.1.tar.gz) = fa0e0057a554382c06dc1f8c7287617db203bcee
+Size (uim-1.0.1.tar.gz) = 1924484 bytes
