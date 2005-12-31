@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4314 2005/12/31 00:09:17 wiz Exp $
+$NetBSD: TODO,v 1.4315 2005/12/31 00:10:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -583,7 +583,6 @@ Suggested package updates
 	o gnetman-20050429
 	o gnocatan-0.8.1.30
 	o gnome-desktop-2.12.2
-	o gnome-keyring-0.4.6
 	o gnome-pilot-2.0.13
 	o gnupg-devel-1.9.20
 	o gnustep-1.11.1
