@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/31 13:34:26 peter Exp $
+bin/matchbox-panel-manager
+share/applications/mb-panel-manager.desktop
+share/pixmaps/mbpanelmgr.png
