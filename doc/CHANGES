@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12277 2005/12/31 09:09:42 ghen Exp $
+$NetBSD: CHANGES,v 1.12278 2005/12/31 11:34:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5848,3 +5848,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated print/poppler-qt to 0.4.3 [wiz 2005-12-31]
 	Updated databases/metakit-lib to 2.4.9.3nb2 [joerg 2005-12-31]
 	Updated devel/lincvs to 1.4.4 [ghen 2005-12-31]
+	Updated devel/monotone to 0.25 [jmmv 2005-12-31]
+	Updated devel/monotone-server to 0.25 [jmmv 2005-12-31]
