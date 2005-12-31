@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1778 2005/12/31 08:18:34 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1779 2005/12/31 15:20:59 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1391,7 +1391,7 @@ do-fetch:
 .PHONY: show-depends-dirs
 .if !target(show-depends-dirs)
 _ALL_DEPENDS=		${DEPENDS} ${BUILD_DEPENDS}
-show-depends-dirs: do-check-pkg-fail-reason
+show-depends-dirs:
 	@set -e;							\
 	dlist="";							\
 	depends=${_ALL_DEPENDS:C/^[^:]*://:O:u:Q};			\
