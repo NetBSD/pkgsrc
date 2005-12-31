@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.50 2005/12/06 22:07:35 rillig Exp $
+# $NetBSD: makevars.map,v 1.51 2005/12/31 14:02:28 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -34,6 +34,7 @@ USE_INET6		YesNo
 
 # some other variables, sorted alphabetically
 
+ALL_ENV			List+ of ShellWord
 ALTERNATIVES_FILE	Filename
 BDB185_DEFAULT		Userdefined
 BDBBASE			Readonly
@@ -48,20 +49,22 @@ BUILDLINK_TRANSFORM	List+
 BUILD_DEFS		List+ of Varname
 BUILD_DEPENDS		List!+ of DependencyWithPath
 BUILD_DIRS		List of WrksrcSubdirectory
+BUILD_ENV		List+ of ShellWord
 BUILD_USES_MSGFMT	Yes
 BUILTIN_X11_TYPE	Readonly
 BUILTIN_X11_VERSION	Readonly
 CATEGORIES		List of Category
 CC_VERSION		Readonly
 CC			Readonly
-CFLAGS			List+
+CFLAGS			List+ of CFlag
 COMMENT			Comment
 CONFIGURE_ARGS		List+ of ShellWord
 CONFIGURE_DIRS		List of WrksrcSubdirectory
 CONFIGURE_ENV		List+ of ShellWord
 CONFLICTS		List of Dependency
-CPPFLAGS		List+
+CPPFLAGS		List+ of CFlag
 CXX			Readonly
+CXXFLAGS		List+ of CFlag
 DEPENDS			List!+ of DependencyWithPath
 DISTFILES		List of Filename
 DISTNAME		Filename
@@ -88,6 +91,7 @@ GNU_CONFIGURE		Yes
 HOMEPAGE		URL
 INCOMPAT_CURSES		List of PlatformTriple
 INSTALL_DIRS		List of WrksrcSubdirectory
+INSTALL_SCRIPTS_ENV	List+ of ShellWord
 INSTALL_UNSTRIPPED	YesNo
 KRB5BASE		Readonly
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
@@ -128,6 +132,7 @@ PKGREPOSITORY		Userdefined
 PKGREPOSITORY		Userdefined
 PKGREVISION		PkgRevision
 PKGSRC_COMPILER		Userdefined
+PKGTOOLS_ENV		List+ of ShellWord
 PKGVERSION		Readonly
 PKGWILDCARD		Readonly
 PKG_APACHE		Readonly
@@ -164,11 +169,13 @@ PTHREAD_AUTO_VARS	YesNo
 PTHREAD_OPTS		List+ of { native optional require }
 PTHREAD_TYPE		Readonly
 REPLACE_EMACS		List+ of Pathname
+SCRIPTS_ENV		List+ of ShellWord
 SUBST_CLASSES		List+
 SUBST_FILES		List of Pathmask
-SUBST_SED		List
+SUBST_SED		List of ShellWord
 # ^^ This may be changed to a List+ later.
 SUBST_STAGE		Stage
+TEST_ENV		List+ of ShellWord
 TOOLS_ALIASES		List+ of Filename
 TOOLS_BROKEN		List+ of Tool
 TOOLS_CREATE		List+ of Tool
