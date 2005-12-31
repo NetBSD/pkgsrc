@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12278 2005/12/31 11:34:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.12279 2005/12/31 13:44:28 peter Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5850,3 +5850,12 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/lincvs to 1.4.4 [ghen 2005-12-31]
 	Updated devel/monotone to 0.25 [jmmv 2005-12-31]
 	Updated devel/monotone-server to 0.25 [jmmv 2005-12-31]
+	Updated devel/libmatchbox to 1.7 [peter 2005-12-31]
+	Updated wm/matchbox to 0.9.5 [peter 2005-12-31]
+	Renamed wm/matchbox to wm/matchbox-wm [peter 2005-12-31]
+	Added x11/matchbox-common version 0.9.1 [peter 2005-12-31]
+	Added x11/matchbox-desktop version 0.9.1 [peter 2005-12-31]
+	Added x11/matchbox-nest version 0.3 [peter 2005-12-31]
+	Added x11/matchbox-panel version 0.9.2 [peter 2005-12-31]
+	Added x11/matchbox-panel-manager version 0.1 [peter 2005-12-31]
+	Added x11/matchbox-themes-extra version 0.3 [peter 2005-12-31]
