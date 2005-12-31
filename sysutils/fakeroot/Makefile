@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:14 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/12/31 20:00:56 kristerw Exp $
 #
 
 DISTNAME=	fakeroot_0.5.8
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/f/fakeroot/}
 
-MAINTAINER=	lonewolf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Creates a fake root environment
 
 WRKSRC=		${WRKDIR}/fakeroot-0.5.8
