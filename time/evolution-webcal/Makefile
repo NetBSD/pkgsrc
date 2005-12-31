@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/10/16 12:14:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2005/12/31 12:32:46 wiz Exp $
 #
 
 DISTNAME=	evolution-webcal-2.4.1
+PKGREVISION=	1
 CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-webcal/2.4/}
 EXTRACT_SUFX=	.tar.bz2

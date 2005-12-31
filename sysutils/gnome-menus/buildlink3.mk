@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/10/12 21:52:30 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/12/31 12:32:45 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_MENUS_BUILDLINK3_MK:=	${GNOME_MENUS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gnome-menus
 
 .if !empty(GNOME_MENUS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnome-menus+=		gnome-menus>=2.12.0
+BUILDLINK_RECOMMENDED.gnome-menus?=	gnome-menus>=2.12.0nb1
 BUILDLINK_PKGSRCDIR.gnome-menus?=	../../sysutils/gnome-menus
 .endif	# GNOME_MENUS_BUILDLINK3_MK
 

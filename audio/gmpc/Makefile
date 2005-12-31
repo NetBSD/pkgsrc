@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/11/22 19:27:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2005/12/31 12:32:31 wiz Exp $
 #
 
 DISTNAME=		gmpc-0.12.0
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://download.qballcow.nl/programs/gmpc/
 
