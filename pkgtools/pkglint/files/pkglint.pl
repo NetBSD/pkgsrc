@@ -1,26 +1,26 @@
 #! @PERL@ -w
+# $NetBSD: pkglint.pl,v 1.439 2005/12/31 14:01:47 rillig Exp $
 #
-# pkglint - lint for package directory
+
+# pkglint - static analyzer and checker for pkgsrc packages
 #
-# implemented by:
+# Written by:
+#	Roland Illig <rillig@NetBSD.org>
+#
+# Based on work by:
+#	Hubert Feyrer <hubertf@NetBSD.org>
+#	Thorsten Frueauf <frueauf@NetBSD.org>
+#	Thomas Klausner <wiz@NetBSD.org>
+#	and others.
+#
+# Based on FreeBSD's portlint by:
 #	Jun-ichiro itojun Hagino <itojun@itojun.org>
 #	Yoshishige Arai <ryo2@on.rim.or.jp>
 #
-# Copyright(c) 1997 by Jun-ichiro Hagino <itojun@itojun.org>.
-# All rights reserved.
-# Freely redistributable.  Absolutely no warranty.
-#
-# From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.438 2005/12/18 14:25:40 rillig Exp $
-#
-# This version contains lots of changes necessary for NetBSD packages
-# done by:
-#	Hubert Feyrer <hubertf@NetBSD.org>,
-#	Thorsten Frueauf <frueauf@NetBSD.org>,
-#	Thomas Klausner <wiz@NetBSD.org>,
-#	Roland Illig <rillig@NetBSD.org>
-#	and others.
-#
+#	FreeBSD Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
+#	Copyright(c) 1997 by Jun-ichiro Hagino <itojun@itojun.org>.
+#	All rights reserved.
+#	Freely redistributable.  Absolutely no warranty.
 
 #==========================================================================
 # Some comments on the overall structure: The @EXPORT clauses in the pack-
@@ -125,16 +125,26 @@ BEGIN {
 use constant NO_FILE		=> undef;
 use constant NO_LINE_NUMBER	=> undef;
 
+use constant LL_FATAL		=> 0;
+use constant LL_ERROR		=> 1;
+use constant LL_WARNING		=> 2;
+use constant LL_INFO		=> 3;
+use constant LL_NOTE		=> 4;
+use constant LL_DEBUG		=> 5;
+
+use constant traditional_type	=> ["FATAL", "ERROR", "WARN", "OK", "NOTE", "DEBUG"];
+use constant gcc_type		=> ["fatal", "error", "warning", "info", "note", "debug"];
+	
 my $errors		= 0;
 my $warnings		= 0;
 my $verbosity		= 0;
 my $gcc_output_format	= false;
 my $explain_flag	= false;
 my $show_source_flag	= false;
-my $indent		= "";	# The width of the last diagnostics type.
+my $frequency		= {};	# Frequencies of the messages.
 
-sub log_message($$$$$) {
-	my ($out, $file, $lineno, $type, $message) = @_;
+sub log_message($$$$) {
+	my ($level, $file, $lineno, $message) = @_;
 	my ($text, $sep);
 
 	if (defined($file)) {
@@ -150,10 +160,9 @@ sub log_message($$$$$) {
 
 	$text = "";
 	$sep = "";
-	if (!$gcc_output_format && defined($type)) {
-		$text .= "${sep}${type}:";
+	if (!$gcc_output_format) {
+		$text .= "${sep}" . traditional_type->[$level] . ":";
 		$sep = " ";
-		$indent = " " x length($type);
 	}
 	if (defined($file)) {
 		$text .= defined($lineno)
@@ -161,48 +170,56 @@ sub log_message($$$$$) {
 		    : "${sep}${file}";
 		$sep = ": ";
 	}
-	if ($gcc_output_format && defined($type)) {
-		$text .= "${sep}${type}:";
+	if ($gcc_output_format) {
+		$text .= "${sep}" . gcc_type->[$level] . ":";
 		$sep = " ";
 	}
 	if (defined($message)) {
 		$text .= "${sep}${message}";
 		$sep = "";
+
+		if ($level == LL_ERROR || $level == LL_WARNING) {
+			$frequency->{$message}++;
+		}
 	}
 
-	print $out ("${text}\n");
+	if ($level == LL_FATAL) {
+		print STDERR ("${text}\n");
+	} else {
+		print STDOUT ("${text}\n");
+	}
 }
 
 sub log_fatal($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message(*STDERR, $file, $lineno, $gcc_output_format ? "fatal" : "FATAL", $msg);
+	log_message(LL_FATAL, $file, $lineno, $msg);
 	exit(1);
 }
 
 sub log_error($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "error" : "ERROR", $msg);
+	log_message(LL_ERROR, $file, $lineno, $msg);
 	$errors++;
 }
 sub log_warning($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "warning" : "WARN", $msg);
+	log_message(LL_WARNING, $file, $lineno, $msg);
 	$warnings++;
 }
 sub log_note($$$) {
 	my ($file, $lineno, $msg) = @_;
-	log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "note" : "NOTE", $msg);
+	log_message(LL_NOTE, $file, $lineno, $msg);
 }
 sub log_info($$$) {
 	my ($file, $lineno, $msg) = @_;
 	if ($verbosity >= 1) {
-		log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "info" : "OK", $msg);
+		log_message(LL_INFO, $file, $lineno, $msg);
 	}
 }
 sub log_debug($$$) {
 	my ($file, $lineno, $msg) = @_;
 	if ($verbosity >= 2) {
-		log_message(*STDOUT, $file, $lineno, $gcc_output_format ? "debug" : "DEBUG", $msg);
+		log_message(LL_DEBUG, $file, $lineno, $msg);
 	}
 }
 
@@ -211,7 +228,7 @@ sub explain($$@) {
 
 	if ($explain_flag) {
 		foreach my $text (@texts) {
-			print STDOUT ("${indent}  ${text}\n");
+			print STDOUT ("\t${text}\n");
 		}
 	}
 }
@@ -225,6 +242,13 @@ sub print_summary_and_exit($) {
 
 	if (!$quiet) {
 		if ($errors != 0 || $warnings != 0) {
+			if ($verbosity >= 1) {
+				print("Statistics of issued diagnostics:\n");
+				foreach my $msg (sort { $frequency->{$b} <=> $frequency->{$a} } (keys(%{$frequency}))) {
+					printf("%8d: %s\n", $frequency->{$msg}, $msg);
+				}
+			}
+
 			print("$errors errors and $warnings warnings found.\n");
 		} else {
 			print "looks fine.\n";
@@ -667,12 +691,14 @@ my (%checks) = (
 
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
+my $opt_warn_extra	= false;
 my $opt_warn_order	= true;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_types	= true;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
+	"extra"		=> [\$opt_warn_extra, "enable some extra warnings"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
@@ -766,8 +792,9 @@ my $regex_shellword		=  qr"\s*(
 	|	\`[^\`]*\`
 	|	\\.
 	|	\$\{[^{}]+\}
-	|	[^'\"\\\s;&\|<>\#]
-	)+ | ;;? | &&? | \|\|? | <<? | >>? | \#.*)"sx;
+	|	[^\(\)'\"\\\s;&\|<>\#]
+	)+ | ;;? | &&? | \|\|? | \( | \) | <<? | >>? | \#.*)"sx;
+my $regex_varname		= qr"[-*+.0-9A-Z_a-z{}\[]+";
 
 #
 # Commonly used explanations for diagnostics.
@@ -784,8 +811,10 @@ use constant expl_relative_dirs	=> (
 
 my $current_dir;		# The currently checked directory.
 my $is_wip;			# Is the current directory from pkgsrc-wip?
+my $is_internal;		# Is the current item from the infrastructure?
 
-my $pkgsrcdir;			# The pkgsrc root directory
+my $pkgsrcdir;			# The pkgsrc root directory, relative to
+				# current_dir
 my $pkgdir;			# PKGDIR from the package Makefile
 my $filesdir;			# FILESDIR from the package Makefile
 my $patchdir;			# PATCHDIR from the package Makefile
@@ -1005,7 +1034,7 @@ if (false) {
 	# Additionally, scan mk/defaults/mk.conf for variable
 	# definitions. All these variables are reserved for the user and
 	# must not be set within packages.
-	$fname = "${pkgsrcdir}/mk/defaults/mk.conf";
+	$fname = "${current_dir}/${pkgsrcdir}/mk/defaults/mk.conf";
 	if ((my $lines = load_file($fname))) {
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ qr"^#?([\w_]+)\?=") {
@@ -1053,7 +1082,7 @@ sub get_deprecated_map() {
 my $load_dist_sites_url2name = undef;
 my $load_dist_sites_names = undef;
 sub load_dist_sites() {
-	my ($fname) = ("${pkgsrcdir}/mk/bsd.sites.mk");
+	my ($fname) = ("${current_dir}/${pkgsrcdir}/mk/bsd.sites.mk");
 	my ($lines) = load_file($fname);
 	my ($varname) = undef;
 	my ($ignoring) = false;
@@ -1127,7 +1156,7 @@ sub get_pkg_options() {
 		return $get_pkg_options_result;
 	}
 
-	my ($fname) = ("${pkgsrcdir}/mk/defaults/options.description");
+	my ($fname) = ("${current_dir}/${pkgsrcdir}/mk/defaults/options.description");
 	my ($lines, $options);
 
 	if (!($lines = load_file($fname))) {
@@ -1158,7 +1187,7 @@ sub load_tool_names() {
 	$tools = {};
 	$vartools = {};
 	foreach my $file (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
-		my $fname = "${pkgsrcdir}/mk/tools/${file}.mk";
+		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/${file}.mk";
 		my $lines = load_lines($fname, true);
 
 		if (!$lines) {
@@ -1289,11 +1318,12 @@ sub checkperms($) {
 sub resolve_relative_path($) {
 	my ($relpath) = @_;
 
-	$relpath =~ s,\$\{PKGSRCDIR\},$pkgsrcdir,;
+	$relpath =~ s,\$\{PKGSRCDIR\},$current_dir/$pkgsrcdir,;
 	$relpath =~ s,\$\{\.CURDIR\},.,;
 	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,;
 	$relpath =~ s,\$\{SUSE_DIR_PREFIX\},suse91,;
 	$relpath =~ s,\$\{PYPKGSRCDIR\},../../lang/python23,;
+	$relpath =~ s,\.\./\.\.,$pkgsrcdir,;
 	if (defined($pkgdir)) {
 		$relpath =~ s,\$\{PKGDIR\},$pkgdir,g;
 	}
@@ -1565,6 +1595,15 @@ sub checkline_relative_pkgdir($$) {
 	}
 }
 
+sub checkline_spellcheck($) {
+	my ($line) = @_;
+
+	if ($line->text =~ qr"existant") {
+		$line->log_warning("The word \"existant\" is nonexistent in the m-w dictionary.");
+		$line->explain("Please use \"existent\" instead.");
+	}
+}
+
 sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
 	my ($rest, $state, $vartools);
@@ -1597,7 +1636,7 @@ sub checkline_mk_text($$) {
 
 sub checkline_mk_shelltext($$) {
 	my ($line, $text) = @_;
-	my ($vartools, $state, $rest);
+	my ($vartools, $state, $rest, $set_e_mode);
 
 	# Note: SCST is the abbreviation for [S]hell [C]ommand [ST]ate.
 	use constant SCST_START		=>  0;
@@ -1609,6 +1648,8 @@ sub checkline_mk_shelltext($$) {
 	use constant SCST_PAX_S		=> 31;
 	use constant SCST_SED		=> 40;
 	use constant SCST_SED_E		=> 41;
+	use constant SCST_SET		=> 50;
+	use constant SCST_FOR_IF_WHILE	=> 60;
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
 		my ($mkdir_cmd) = ($1);
@@ -1617,10 +1658,13 @@ sub checkline_mk_shelltext($$) {
 	}
 
 	$vartools = get_vartool_names();
-	$rest = $text;
+	($rest = $text) =~ s/^[-@]*(?:\$\{_PKG_SILENT\})?(?:\$\{_PKG_DEBUG\})?//;
 	$state = SCST_START;
+	$set_e_mode = false;
 	while ($rest =~ s/^$regex_shellword//) {
 		my ($shellword) = ($1);
+
+		$line->log_debug("shellword=$shellword");
 
 		#
 		# Actions associated with the current state
@@ -1648,6 +1692,27 @@ sub checkline_mk_shelltext($$) {
 				"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
 		}
 
+		if ($opt_warn_extra && $shellword eq "|") {
+			$line->log_warning("The exitcode of the left-hand-side command of the pipe operator is ignored.");
+			$line->explain(
+				"If you need to detect the failure of the left-hand-side command, use",
+				"temporary files to save the output of the command.");
+		}
+
+		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_FOR_IF_WHILE && !$set_e_mode) {
+			$line->log_warning("A semicolon should only be used to separate commands after switching to \"set -e\" mode.");
+			$line->explain(
+				"Older versions of the NetBSD make(1) had run the shell commands using",
+				"the \"-e\" option of /bin/sh. In 2004, this behavior has been changed to",
+				"follow the POSIX conventions, which is to not use the \"-e\" option.",
+				"The consequence of this change is that shell programs don't terminate",
+				"as soon as an error occurs, but try to continue with the next command.",
+				"Imagine what would happen for these commands:",
+				"    cd \"\$HOME\"; cd /nonexistant; rm -rf *",
+				"To fix this warning, either insert \"set -e\" at the beginning of this",
+				"line or use the \"&&\" operator instead of the semicolon.");
+		}
+
 		#
 		# State transition.
 		#
@@ -1664,6 +1729,12 @@ sub checkline_mk_shelltext($$) {
 				$state = SCST_PAX;
 			} elsif ($shellword eq "\${SED}") {
 				$state = SCST_SED;
+			} elsif ($shellword eq "set") {
+				$state = SCST_SET;
+			} elsif ($shellword =~ qr"^(?:for|if|elif|while)$") {
+				$state = SCST_FOR_IF_WHILE;
+			} elsif ($shellword =~ qr"^(?:then|else|do)$") {
+				$state = SCST_START;
 			} else {
 				$state = SCST_CONT;
 			}
@@ -1685,6 +1756,10 @@ sub checkline_mk_shelltext($$) {
 
 		} elsif ($state == SCST_SED_E) {
 			$state = SCST_SED;
+
+		} elsif ($state == SCST_SET && $shellword eq "-e") {
+			$set_e_mode = true;
+			$state = SCST_CONT;
 		}
 	}
 
@@ -1734,6 +1809,41 @@ sub checkline_mk_vartype_basic($$$$$) {
 		));
 		if ($value !~ qr"^(?:${allowed_categories})$") {
 			$line->log_error("Invalid category \"${value}\".");
+		}
+
+	} elsif ($type eq "CFlag") {
+		if ($value =~ qr"^-D([0-9A-Z_a-z]+)=(.*)") {
+			my ($macname, $macval) = ($1, $2);
+
+			if ($macval =~ qr"^\\\"(?:\$\{[A-Z0-9_]+:Q\}|[^\$])*\\\"") {
+				# Everything's fine.
+
+			} elsif ($macval =~ regex_unresolved && $macval =~ qr"[\"']") {
+				$line->log_warning("Unusual macro value ${macval}.");
+				$line->explain(
+					"String macro definitions should start and end with an escaped quote",
+					"(\\\"). Between these quotes, there should be quoted variables in the",
+					"form \${VARNAME:Q} or arbitrary non-dollar characters.");
+			}
+		} elsif ($value =~ qr"^-[DU]([0-9A-Z_a-z]+)") {
+			my ($macname) = ($1);
+
+			# TODO: Check for invalid macro names.
+
+		} elsif ($value =~ qr"^-I(.*)") {
+			my ($dirname) = ($1);
+
+			# TODO: Check for invalid directory names.
+
+		} elsif ($value =~ qr"^-[OWfgm]") {
+			# TODO: Discuss which compiler flags should be allowed
+			# to be set by the package author.
+
+		} elsif ($value =~ qr"^-.*") {
+			$line->log_warning("Unknown compiler flag \"${value}\".");
+
+		} else {
+			$line->log_warning("Compiler flag \"${value}\" does not start with a dash.");
 		}
 
 	} elsif ($type eq "Comment") {
@@ -2120,22 +2230,28 @@ sub checkline_mk_varassign($$$$$) {
 		DEPENDS DISTNAME
 		EXTRACT_SUFX EXTRACT_USING
 		INSTALL_TARGET INTERACTIVE_STAGE
-		MANSOURCEPATH MASTER_SITES
+		MANSOURCEPATH MASTER_SITES MASTER_SORT_AWK
 		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON PKG_SUGGESTED_OPTIONS PKG_SUPPORTED_OPTIONS PRINT_PLIST_AWK
 		REPLACE_INTERPRETER RESTRICTED
 		SUBST_CLASSES SUBST_MESSAGE
 		TEST_TARGET
 		USE_TOOLS
 	));
+	use constant regex_non_shellcode_vars => qr"^(?:
+		  .*_AWK
+		| .*_AWK_.*
+		)$"x;
 
 	checkline_mk_text($line, $value);
-	if (!exists(non_shellcode_vars->{$varbase}) && !exists(non_shellcode_vars->{$varname})) {
+	if (!exists(non_shellcode_vars->{$varbase}) &&
+	    !exists(non_shellcode_vars->{$varname}) &&
+	    $varname !~ regex_non_shellcode_vars) {
 		checkline_mk_shelltext($line, $value);
 	}
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
 
 			
-	if ($varname =~ qr"^_") {
+	if (!$is_internal && $varname =~ qr"^_") {
 		$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
 	}
 
@@ -2436,6 +2552,8 @@ sub checklines_mk($) {
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
+		checkline_spellcheck($line);
+
 		if ($text =~ qr"^\s*$" || $text =~ qr"^#") {
 			# Ignore empty lines and comments
 
@@ -2493,7 +2611,19 @@ sub checklines_mk($) {
 				if ($args =~ qr"^(\S+(?:\s*\S+)*?)\s+in\s+(.*)$") {
 					my ($vars, $values) = ($1, $2);
 
-					foreach my $var ($vars) {
+					foreach my $var (split(qr"\s+", $vars)) {
+						if (!$is_internal && $var =~ qr"^_") {
+							$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
+						}
+
+						if ($var =~ qr"^[_a-z][_a-z0-9]*$") {
+							# Fine.
+						} elsif ($var =~ qr"[A-Z]") {
+							$line->log_warning(".for variable names should not contain uppercase letters.");
+						} else {
+							$line->log_error("Invalid variable name \"${var}\".");
+						}
+
 						$for_variables->{$var} = true;
 					}
 				}
@@ -2515,6 +2645,9 @@ sub checklines_mk($) {
 					foreach my $dep (split(qr"\s+", $dependencies)) {
 						$allowed_targets->{$dep} = true;
 					}
+
+				} elsif ($target eq ".ORDER") {
+					# TODO: Check for spelling mistakes.
 
 				} elsif (!exists($allowed_targets->{$target})) {
 					$line->log_warning("Unusual target \"${target}\".");
@@ -2583,6 +2716,7 @@ sub checkfile_DESCR($) {
 		checkline_length($line, $maxchars);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, regex_validchars);
+		checkline_spellcheck($line);
 	}
 	checklines_trailing_empty_lines($descr);
 
@@ -2727,6 +2861,7 @@ sub checkfile_MESSAGE($) {
 		checkline_length($line, 80);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, regex_validchars);
+		checkline_spellcheck($line);
 	}
 	if ($message->[-1]->text ne "=" x 75) {
 		$message->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
@@ -2897,6 +3032,8 @@ sub checkfile_patches_patch($) {
 					$line->log_info("Found unknown macro \"${macro}\".");
 				}
 			}
+
+			checkline_spellcheck($line);
 		}
 	}
 	checklines_trailing_empty_lines($lines);
@@ -3388,22 +3525,30 @@ sub checkitem($) {
 	$hack_php_patches	= false;
 
 	$current_dir = $is_dir ? $item : dirname($item);
-	$is_wip = !$opt_import && (Cwd::abs_path($current_dir) =~ qr"/wip(?:/|$)");
+	my $abs_current_dir = Cwd::abs_path($current_dir);
+	$is_wip = !$opt_import && ($abs_current_dir =~ qr"/wip(?:/|$)");
+	$is_internal = ($abs_current_dir =~ qr"/mk(?:/|$)");
 
-	if (-f "${current_dir}/../../mk/bsd.pkg.mk") {
-		$pkgsrcdir = "${current_dir}/../..";
+	if (-f "${current_dir}/../../../mk/bsd.pkg.mk") {
+		$pkgsrcdir = "../../..";
+		if ($is_dir) {
+			log_error($item, NO_LINE_NUMBER, "Don't know how to check this directory.");
+		}
+
+	} elsif (-f "${current_dir}/../../mk/bsd.pkg.mk") {
+		$pkgsrcdir = "../..";
 		if ($is_dir) {
 			checkdir_package();
 		}
 
 	} elsif (-f "${current_dir}/../mk/bsd.pkg.mk") {
-		$pkgsrcdir = "${current_dir}/..";
+		$pkgsrcdir = "..";
 		if ($is_dir) {
 			checkdir_category();
 		}
 
 	} elsif (-f "${current_dir}/mk/bsd.pkg.mk") {
-		$pkgsrcdir = $current_dir;
+		$pkgsrcdir = ".";
 		if ($is_dir) {
 			checkdir_root();
 		}
