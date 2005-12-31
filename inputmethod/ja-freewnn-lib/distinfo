@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/12/30 21:51:23 joerg Exp $
+$NetBSD: distinfo,v 1.7 2005/12/31 00:51:27 joerg Exp $
 
 SHA1 (freewnn/FreeWnn-1.10.tar.gz) = 66a0640d4632d82b7012c4aa2239bc1d69d45034
 RMD160 (freewnn/FreeWnn-1.10.tar.gz) = 8644371c258b1f32c36d5f0318032a0a50c5f640
@@ -14,3 +14,7 @@ SHA1 (patch-ae) = 5227329133667d5bdc9f519ddc219263c9bbb820
 SHA1 (patch-af) = 26d45af3c65df5af5299c837a123129ec5919bd4
 SHA1 (patch-ag) = bf3d35e2499a602862758b322970c765ffea4052
 SHA1 (patch-ah) = 1795d35ffc0bdbc3d082c46afb86d616bef52d68
+SHA1 (patch-ai) = ecba683c308c4acf69f0e5835ee241dfbab5b71a
+SHA1 (patch-aj) = 33420feacb29abd59882672dfeb254527aa99fe6
+SHA1 (patch-ak) = d85b3ebd34e583f935ae517f338d522d21ebb44b
+SHA1 (patch-al) = bdfb622211d7fcc9d18ee33a545bec876664f3a4
