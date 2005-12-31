@@ -1,0 +1,44 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/12/31 22:42:31 markd Exp $
+
+--- configure.orig	2005-12-31 09:43:48.000000000 +1300
++++ configure
+@@ -1783,6 +1783,8 @@ case $build in
+     powerpc-apple-darwin*) d2c_build=ppc-darwin-gcc ;;
+     mips-sgi-irix*) d2c_build=mips-irix-gcc ;;
+     i*86-*-netbsd*) d2c_build=x86-netbsd-gcc ;;
++    powerpc-*-netbsd*) d2c_build=ppc-netbsd-gcc ;;
++    sparc-*-netbsd*) d2c_build=sparc-netbsd-gcc ;;
+     *) d2c_build=unknown-unix ;;
+ esac
+ echo "$as_me:$LINENO: result: $d2c_build" >&5
+@@ -1830,6 +1832,8 @@ case $host in
+     powerpc-apple-darwin*) d2c_host=ppc-darwin-gcc ;;
+     mips-sgi-irix*) d2c_host=mips-irix-gcc ;;
+     i*86-*-netbsd*) d2c_host=x86-netbsd-gcc ;;
++    powerpc-*-netbsd*) d2c_host=ppc-netbsd-gcc ;;
++    sparc-*-netbsd*) d2c_host=sparc-netbsd-gcc ;;
+     *) d2c_host=unknown-unix ;;
+ esac
+ echo "$as_me:$LINENO: result: $d2c_host" >&5
+@@ -1897,6 +1901,8 @@ case $target in
+     powerpc-apple-darwin*) d2c_target=ppc-darwin-gcc ;;
+     mips-sgi-irix*) d2c_target=mips-irix-gcc ;;
+     i*86-*-netbsd*) d2c_target=x86-netbsd-gcc ;;
++    powerpc-*-netbsd*) d2c_target=ppc-netbsd-gcc ;;
++    sparc-*-netbsd*) d2c_target=sparc-netbsd-gcc ;;
+     *) d2c_target=unknown-unix ;;
+ esac
+ echo "$as_me:$LINENO: result: $d2c_target" >&5
+@@ -28800,8 +28806,10 @@ esac
+   { echo "$as_me:$LINENO: executing $ac_dest commands" >&5
+ echo "$as_me: executing $ac_dest commands" >&6;}
+   case $ac_dest in
+-    default ) ${INSTALL} -m uog+rx $buildroot/tools/shared-misc/mk-build-tree ./
+-	  ${INSTALL} -m uog+rx $buildroot/tools/shared-misc/gen-makefile ./
++    default ) cp $buildroot/tools/shared-misc/mk-build-tree ./
++	  cp $buildroot/tools/shared-misc/gen-makefile ./
++	  chmod uog+rx ./mk-build-tree
++	  chmod uog+rx ./gen-makefile
+ 	  (PATH=$buildroot:$PATH; export PATH; perl mk-build-tree -p$srcdir/d2c/compiler/platforms.descr)
+ 	  touch $buildroot/force.timestamp
+ 	   ;;

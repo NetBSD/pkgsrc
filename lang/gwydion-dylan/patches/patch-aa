@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/12/31 22:42:31 markd Exp $
+
+--- d2c/compiler/platforms.descr.orig	2004-10-18 08:17:02.000000000 +1300
++++ d2c/compiler/platforms.descr
+@@ -590,6 +590,18 @@ inherit-from:			gcc netbsd x86
+ default-c-compiler-flags:       -I. -I%s -I/usr/X11R6/include -fomit-frame-pointer -fno-strict-aliasing
+ link-shared-library-command:    $(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
+ 
++platform-name:			ppc-netbsd-gcc
++inherit-from:			gcc netbsd ppc
++link-shared-library-command:	$(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++long-long-size:			8
++long-long-alignment:		4
++
++platform-name:			sparc-netbsd-gcc
++inherit-from:			gcc netbsd sparc
++link-shared-library-command:	$(LIBTOOL) --mode=link gcc -o %s %s -rpath %s
++long-long-size:			8
++long-long-alignment:		4
++
+ platform-name:			x86-beos-gcc
+ // Note:  These rules depend on the presence of the MingW utilities in your
+ // system PATH.  You may elect to build using Microsoft's compiler, but

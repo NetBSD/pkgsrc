@@ -1,0 +1,21 @@
+Dylan is an object-oriented, dynamic, infix, garbage-collected
+programming language with support for multiple inheritence, multiple
+dispatch (an advanced form of polymorphism), typed and untyped
+variables, closures and exceptions.  Dylan also supports pattern-based
+hygenic macros.  These allow you to define new control constructs and
+fully integrate them with the language.
+
+Dylan (theoretically) combines the performance of C or C++ with the
+rapid development of Perl and the expressiveness of LISP.  It looks
+similar to C or Pascal, so experienced programmers can learn to write
+simple programs quickly.
+
+Gwydion Dylan provides two implementations of the Dylan programming
+language:  Mindy and d2c.  Mindy is bytecode compiler and interpreter,
+and d2c is a Dylan-to-C compiler.  Mindy compiles programs quickly,
+but the resulting executables run slowly.  On the other hand, d2c
+compiles programs slowly, but they run quickly.
+
+Gwydion Dylan was originally written by the Gwydion Group at CMU as
+part of a research project studying advanced hypercode development
+environments.  It is now maintained by a group of volunteers.
