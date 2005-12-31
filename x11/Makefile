@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.420 2005/12/11 12:42:27 markd Exp $
+# $NetBSD: Makefile,v 1.421 2005/12/31 13:40:00 peter Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -161,6 +161,12 @@ SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
 SUBDIR+=	libxklavier
 SUBDIR+=	libzvt
+SUBDIR+=	matchbox-common
+SUBDIR+=	matchbox-desktop
+SUBDIR+=	matchbox-nest
+SUBDIR+=	matchbox-panel
+SUBDIR+=	matchbox-panel-manager
+SUBDIR+=	matchbox-themes-extra
 SUBDIR+=	mlterm
 SUBDIR+=	modeline
 SUBDIR+=	mowitz
