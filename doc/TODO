@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4315 2005/12/31 00:10:45 wiz Exp $
+$NetBSD: TODO,v 1.4316 2005/12/31 00:15:43 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -709,6 +709,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libesmtp-1.0.4
+	o libexif-0.6.13
 	o libextractor-0.5.9
 	o libflash-0.4.13
 	o libgdiplus-1.1.9.2
