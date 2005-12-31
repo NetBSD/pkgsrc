@@ -1,0 +1,10 @@
+Matchbox is a GPL'd X11 window manager designed for computers with little
+screen real estate, limited input devices and low CPU/storage resources.
+Touchscreen PDAs, phones, set top boxes and even watches fit well into this
+category.  Children or people with disabilities may also find matchbox useful
+on desktop machines, due to the way it simplifies window operation.
+
+Matchbox is small, fast, flexible, dependent only on xlib and very usable.
+
+The Distribution also include various themes and utility programs, including
+a dock (or tray) and various simple dock apps useful for PDAs.
