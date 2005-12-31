@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.9 2005/09/27 09:29:56 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2005/12/31 00:03:24 wiz Exp $
 
---- include/sane/sanei_backend.h.orig	2004-11-13 21:50:48.000000000 +0100
-+++ include/sane/sanei_backend.h
-@@ -16,7 +16,7 @@
-  * Compiler related options
-  */
+--- backend/Makefile.in.orig	2005-12-18 14:32:31.000000000 +0100
++++ backend/Makefile.in
+@@ -25,7 +25,7 @@ infodir = @infodir@
+ mandir = @mandir@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+-configdir = ${sysconfdir}/sane.d
++configdir = ${PREFIX}/share/examples/sane
+ BEOS_ADDONDIR = @BEOS_ADDONDIR@
  
--#ifdef __GNUC__
-+#if defined(__GNUC__) && !defined(__NetBSD__)
- 
- /* __unused tells the compiler a variable is unused, so the
-  * compiler doesn't spit a warning. */
+ V_MAJOR = @V_MAJOR@
