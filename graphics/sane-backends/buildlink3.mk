@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:14:57 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/12/31 12:04:15 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SANE_BACKENDS_BUILDLINK3_MK:=	${SANE_BACKENDS_BUILDLINK3_MK}+
@@ -15,6 +15,8 @@ BUILDLINK_DEPENDS.sane-backends+=	sane-backends>=1.0.3
 BUILDLINK_RECOMMENDED.sane-backends+=	sane-backends>=1.0.14nb1
 BUILDLINK_PKGSRCDIR.sane-backends?=	../../graphics/sane-backends
 .endif	# SANE_BACKENDS_BUILDLINK3_MK
+
+.include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} != "SunOS")
 . include "../../devel/libusb/buildlink3.mk"
