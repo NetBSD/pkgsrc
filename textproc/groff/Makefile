@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/12/31 14:40:38 ben Exp $
+# $NetBSD: Makefile,v 1.33 2005/12/31 16:28:40 ben Exp $
 #
 
 DISTNAME=	groff-1.19.2
@@ -23,10 +23,6 @@ INFO_FILES=	groff
 .include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-CONFIGURE_ENV+=		X_EXTRA_LIBS=-lXext
-.endif
 
 .if defined(PAPERSIZE)
 CONFIGURE_ENV+=	PAGE=${PAPERSIZE:Q}
