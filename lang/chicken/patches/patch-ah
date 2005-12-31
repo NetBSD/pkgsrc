@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2005/12/31 00:39:01 joerg Exp $
+
+--- chicken.h.orig	2005-12-30 23:53:55.000000000 +0000
++++ chicken.h
+@@ -210,7 +210,7 @@ int strncasecmp(const char *one, const c
+ # define isatty            _isatty
+ #endif
+ 
+-#if defined(__linux__) || defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ # define C_GNU_ENV
+ #endif
+ 
