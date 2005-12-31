@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/11 10:07:31 markd Exp $
+# $NetBSD: Makefile,v 1.2 2005/12/31 00:35:56 wiz Exp $
 #
 
 DISTNAME=		poppler-${POPPLER_VERS}
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-qt.pc.in
 
 INCS=-I. `pkg-config poppler --cflags` -I${QTDIR}/include
-POPPLER_VERS=0.4.2
+POPPLER_VERS=0.4.3
 
 do-build:
 	(cd ${WRKSRC}/qt; \
