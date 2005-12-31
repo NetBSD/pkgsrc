@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2005/12/05 23:55:02 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2005/12/31 20:41:41 schmonz Exp $
 
 DISTNAME=	TiMidity++-2.13.2
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=timidity/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=	--with-libFLAC="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-ogg="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-vorbis="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-default-path=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},vorbis,flac,speex
 
 SUBST_CLASSES+=		confdir
 SUBST_MESSAGE.confdir=	"Configuring to use PKG_SYSCONFDIR."
@@ -29,12 +30,14 @@ SUBST_SED.confdir=	-e 's,/usr/local/share/timidity,${PKG_SYSCONFDIR},g'
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--enable-audio=sun,vorbis,flac,speex
-.endif
+TIMIDITY_NATIVE_AUDIO=	# empty
 
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-audio=oss,vorbis,flac,speex
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+TIMIDITY_NATIVE_AUDIO=	sun
+.elif ${OPSYS} == "Linux"
+TIMIDITY_NATIVE_AUDIO=	oss
+.elif ${OPSYS} == "Darwin"
+TIMIDITY_NATIVE_AUDIO=	darwin
 .endif
 
 .include "../../audio/flac/buildlink3.mk"
