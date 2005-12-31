@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/12/31 00:53:22 joerg Exp $
+
+--- unix/Makefile.in.orig	2005-12-30 18:07:35.000000000 +0000
++++ unix/Makefile.in
+@@ -147,7 +147,7 @@ $(srcdir)/configure: $(srcdir)/configure
+ 
+ libmk4.la: $(LOBJS) $(LINK_SPECIAL_FILES)
+ 	$L --mode=link $(CXX) -o $@ $(CXX_SWITCHES) $(LIBTOOL_SHLIB_FLAGS) \
+-		-avoid-version $(SHLOBJS) $(LINK_SPECIAL_FLAGS)
++		-avoid-version -rpath $(libdir) $(SHLOBJS) $(LINK_SPECIAL_FLAGS)
+ 
+ Mk4tcl@SHLIB_SUFFIX@: libmk4tcl.la
+ 	cp .libs/libmk4tcl@SHLIB_SUFFIX@ $@
