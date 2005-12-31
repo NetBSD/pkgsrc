@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/12/31 13:26:20 peter Exp $
+
+To customize what is run at startup in a matchbox session system-wide,
+create the following:
+
+	${PKG_SYSCONFDIR}/session
+
+When matchbox-session is run, it will exec this instead of starting a
+default set of apps. To get an idea of what to put, see:
+
+	${PREFIX}/bin/matchbox-session
+
+===========================================================================
