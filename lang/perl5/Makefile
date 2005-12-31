@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109.2.1 2005/12/30 13:40:15 seb Exp $
+# $NetBSD: Makefile,v 1.109.2.2 2005/12/31 19:47:07 seb Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -290,6 +290,7 @@ pre-configure:
 .endif
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
+		${CHMOD} +w $${hints};					\
 		{ ${ECHO} "";						\
 		  ${ECHO} "cat > UU/pkgsrc.cbu <<'EOCBU'";		\
 		  ${ECHO} "# This script UU/pkgsrc.cbu will get 'called-back' by Configure to set"; \
@@ -301,6 +302,7 @@ pre-configure:
 	done
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
+		${CHMOD} +w $${hints};					\
 		{ ${ECHO} "";						\
 		  ${ECHO} "# Set pkgsrc defaults for library and header search paths."; \
 		  ${ECHO} 'locincpth="'${LOCINCPATH:Q}'"';		\
@@ -310,6 +312,7 @@ pre-configure:
 .if !empty(SYSLIBPATH)
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
+		${CHMOD} +w $${hints};					\
 		${ECHO} 'glibpth="'${SYSLIBPATH:Q}'"' >> $${hints};	\
 	done
 .endif
