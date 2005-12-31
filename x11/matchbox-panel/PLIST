@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/31 13:32:30 peter Exp $
+bin/matchbox-panel
+bin/mb-applet-battery
+bin/mb-applet-clock
+bin/mb-applet-launcher
+bin/mb-applet-menu-launcher
+bin/mb-applet-system-monitor
+bin/mb-applet-xterm-wrapper.sh
+share/applications/mb-applet-battery.desktop
+share/applications/mb-applet-clock.desktop
+share/applications/mb-applet-menu-launcher.desktop
+share/applications/mb-applet-system-monitor.desktop
+share/applications/mb-launcher-term.desktop
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/matchbox-panel.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/matchbox-panel.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/matchbox-panel.mo
+${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/matchbox-panel.mo
+${PKGLOCALEDIR}/locale/fi_FI/LC_MESSAGES/matchbox-panel.mo
+${PKGLOCALEDIR}/locale/fr_FR/LC_MESSAGES/matchbox-panel.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/matchbox-panel.mo
+share/pixmaps/broken-0.png
+share/pixmaps/mbmenu.png
+share/pixmaps/mbterm.png
+share/pixmaps/miniapm-power.png
+share/pixmaps/miniapm.png
+share/pixmaps/minisys.png
+share/pixmaps/minitime.png
+share/pixmaps/no-link-0.png
+share/pixmaps/signal-1-40.png
+share/pixmaps/signal-41-60.png
+share/pixmaps/signal-61-80.png
+share/pixmaps/signal-81-100.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
