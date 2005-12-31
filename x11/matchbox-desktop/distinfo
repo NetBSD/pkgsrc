@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/12/31 13:29:26 peter Exp $
+
+SHA1 (matchbox-desktop-0.9.1.tar.bz2) = 47302f2b0f6034ec5a2c6da2366a807d7d509dc8
+RMD160 (matchbox-desktop-0.9.1.tar.bz2) = 75a2368a261e44b1734bcdb3efd278da479a35af
+Size (matchbox-desktop-0.9.1.tar.bz2) = 231962 bytes
+SHA1 (patch-aa) = dbc22ecc107858c2419de41e14d60c6b9592fe5d
+SHA1 (patch-ab) = 98f0fb93af2a4f8067a2e9956c6b2a2190f83032
