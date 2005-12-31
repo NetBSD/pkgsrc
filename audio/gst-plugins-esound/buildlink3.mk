@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/06/20 20:30:49 agc Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2005/12/31 12:32:31 wiz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GST_PLUGINS_ESOUND_BUILDLINK3_MK:=	${GST_PLUGINS_ESOUND_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gst-plugins-esound
 
 .if !empty(GST_PLUGINS_ESOUND_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gst-plugins-esound+=	gst-plugins-esound>=0.8.1
+BUILDLINK_RECOMMENDED.gst-plugins-esound?=	gst-plugins-esound>=0.8.11nb1
 BUILDLINK_PKGSRCDIR.gst-plugins-esound?=	../../audio/gst-plugins-esound
 .endif	# GST_PLUGINS_ESOUND_BUILDLINK3_MK
 
