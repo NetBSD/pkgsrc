@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12272 2005/12/30 23:39:28 joerg Exp $
+$NetBSD: CHANGES,v 1.12273 2005/12/31 00:09:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5834,3 +5834,12 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated databases/iodbc to 3.52.3 [jlam 2005-12-30]
 	Added sysutils/xfsprogs version 2.7.3 [agc 2005-12-30]
 	Updated graphics/jpegpixi to 1.1.0nb1 [joerg 2005-12-30]
+	Updated devel/readline to 5.1pl1 [wiz 2005-12-31]
+	Updated shells/bash to 3.1pl1 [wiz 2005-12-31]
+	Updated graphics/sane-backends to 1.0.17 [wiz 2005-12-31]
+	Updated graphics/xsane to 0.98b [wiz 2005-12-31]
+	Updated inputmethod/uim to 1.0.1 [wiz 2005-12-31]
+	Updated devel/GConf2 to 2.12.1 [wiz 2005-12-31]
+	Updated devel/GConf2-ui to 2.12.1 [wiz 2005-12-31]
+	Updated misc/dialog to 1.0.20051219 [wiz 2005-12-31]
+	Updated graphics/tiff to 3.8.0 [wiz 2005-12-31]
