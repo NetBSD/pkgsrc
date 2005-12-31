@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.10 2005/02/23 22:24:32 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/12/31 00:01:45 wiz Exp $
 
-SHA1 (readline-5.0.tar.gz) = 9b9959c3f62e3e82d3edd604c0bf6124d5256c9e
-RMD160 (readline-5.0.tar.gz) = 17b38d5cafab6dbc663aba4fbba5a2e282bb4876
-Size (readline-5.0.tar.gz) = 1808946 bytes
+SHA1 (readline-5.1.tar.gz) = 4b2ee2bc9c6dd1d238c84a58f7e6db173600b850
+RMD160 (readline-5.1.tar.gz) = e7e755bcde7a38740dd0ef6fc10d66614b74ea21
+Size (readline-5.1.tar.gz) = 2030276 bytes
+SHA1 (readline51-001) = 2d369ad65a8751d0a9721002c06e139afe35265b
+RMD160 (readline51-001) = 93dd36106f68682c4dc73a9b1ecf62bf7943fae4
+Size (readline51-001) = 2042 bytes
 SHA1 (patch-ae) = 92a6249e51d8e0cb0e159862a383ba7b785a33c0
