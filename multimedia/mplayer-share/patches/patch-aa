@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2005/07/21 14:24:48 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2005/12/31 01:09:56 kristerw Exp $
 
 --- configure.orig	2005-04-13 13:46:35.000000000 +0200
-+++ configure
-@@ -408,7 +408,7 @@ for ac_option do
++++ configure	2005-12-31 02:02:59.000000000 +0100
+@@ -408,7 +408,7 @@
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-extralibdir=*)
@@ -11,7 +11,12 @@ $NetBSD: patch-aa,v 1.12 2005/07/21 14:24:48 wiz Exp $
      ;;
    --enable-runtime-cpudetection)
      _runtime_cpudetection=yes
-@@ -596,7 +596,7 @@ if test "$_skip_cc_check" != yes ; then
+@@ -592,11 +592,11 @@
+   esac
+   echores "$cc_version"
+  else
+- for _cc in "$_cc" gcc gcc-3.4 gcc-3.3 gcc-3.2 gcc-3.1 gcc3 gcc-3.0 cc ; do
++ for _cc in "$_cc" gcc cc ; do
    echocheck "$_cc version"
    cc_vendor=gnu
    cc_name=`( $_cc -v ) 2>&1 | _tail 1 | cut -d ' ' -f 1`
@@ -20,7 +25,7 @@ $NetBSD: patch-aa,v 1.12 2005/07/21 14:24:48 wiz Exp $
    if test "$?" -gt 0; then
      cc_version="not found"
    fi
-@@ -743,7 +743,7 @@ case "$host_arch" in
+@@ -743,7 +743,7 @@
  
    pname=`$_cpuinfo | grep 'model name' | cut -d ':' -f 2 | _head 1`
    pvendor=`$_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | _head 1`
@@ -29,7 +34,7 @@ $NetBSD: patch-aa,v 1.12 2005/07/21 14:24:48 wiz Exp $
    pmodel=`$_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
    pstepping=`$_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | _head 1`
  
-@@ -1797,7 +1797,8 @@ for ac_option do
+@@ -1797,7 +1797,8 @@
      _inc_x11=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-x11libdir=*)
@@ -39,7 +44,7 @@ $NetBSD: patch-aa,v 1.12 2005/07/21 14:24:48 wiz Exp $
      ;;
    --with-dxr2incdir=*)
      _inc_dxr2=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
-@@ -2382,7 +2383,7 @@ echores "$_posix4"
+@@ -2382,7 +2383,7 @@
  echocheck "lrintf"
  cat > $TMPC << EOF
  #include <math.h>
@@ -48,7 +53,7 @@ $NetBSD: patch-aa,v 1.12 2005/07/21 14:24:48 wiz Exp $
  EOF
  _lrintf=no
  cc_check $_ld_lm && _lrintf=yes
-@@ -3788,7 +3789,7 @@ fi
+@@ -3788,7 +3789,7 @@
  if test "$_aa" = yes ; then
    _def_aa='#define HAVE_AA 1'
    if cygwin ; then

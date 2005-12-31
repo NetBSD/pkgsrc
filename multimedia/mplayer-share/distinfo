@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2005/12/10 23:34:42 salo Exp $
+$NetBSD: distinfo,v 1.26 2005/12/31 01:09:56 kristerw Exp $
 
 SHA1 (mplayer-1.0rc7/MPlayer-1.0pre7.tar.bz2) = df1e8d4f2f44d72c6f7989932f3b272e815ecb80
 RMD160 (mplayer-1.0rc7/MPlayer-1.0pre7.tar.bz2) = a4bac10df287c4b134ea49b3bc9bf7fb0126cae6
@@ -12,7 +12,7 @@ Size (mplayer-1.0rc7/font-arial-iso-8859-2.tar.bz2) = 222208 bytes
 SHA1 (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = ccf11dce5d0fb72fd3af97f788b7471cd0cd0b68
 RMD160 (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = a2fc7ae07b0d80936ea58e168e1047efccb9eb91
 Size (mplayer-1.0rc7/font-arial-cp1250.tar.bz2) = 249705 bytes
-SHA1 (patch-aa) = d77cd903d735d7a88336e0aff309f8508cafed94
+SHA1 (patch-aa) = 708128dde21b8de799aa26d75335da76543e2373
 SHA1 (patch-ab) = 1a08f717e326d83b355eee26e1be9c0636b735c5
 SHA1 (patch-ac) = 3b9ae32e6e656ec4b58b7e51a1c2eaa280384f3e
 SHA1 (patch-ad) = d705dd315e913593223b83e533c60a9620d34cc8
