@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2004/10/23 07:48:03 minskim Exp $
+$NetBSD: patch-ae,v 1.2 2005/12/31 00:02:28 wiz Exp $
 
---- configure.orig	2004-07-21 15:18:56.000000000 -0500
+--- configure.orig	2005-12-01 15:44:38.000000000 +0100
 +++ configure
-@@ -18508,6 +18508,74 @@ fi
+@@ -17937,6 +17937,74 @@ fi
  
  
  
