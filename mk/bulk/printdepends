@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.21 2005/11/28 01:22:53 rillig Exp $
+# $NetBSD: printdepends,v 1.22 2005/12/31 02:06:10 minskim Exp $
 #
 
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -151,7 +151,7 @@ for pkgdir in $list; do
 			esac
 
 			${mkbulkdir} "${bulkfilesdir}/${pkgdir}"
-			{ echo "[printdepends] command failed: ${BMAKE} show-depends-dir"
+			{ echo "[printdepends] command failed: ${BMAKE} show-depends-dirs"
 			  ( ${BMAKE} show-depends-dirs
 			  ) || true
 			} >> "${bulkfilesdir}/${pkgdir}/${brokenfile}" 2>&1
