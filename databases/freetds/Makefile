@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2005/12/30 21:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2005/12/31 04:05:31 jlam Exp $
 
 DISTNAME=	freetds-0.63
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/stable/
 
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-tdsver=7.0
 # no thread-safe resolver functions on NetBSD
 CONFIGURE_ARGS+=	--disable-threadsafe
 
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} ETC=${EGDIR:Q}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} ETC=${EGDIR:Q} DOCDIR=doc/${PKGBASE:Q}
 
 EGDIR=		${PREFIX}/share/examples/freetds
 CONF_FILES=	${EGDIR}/freetds.conf ${PKG_SYSCONFDIR}/freetds.conf
@@ -31,4 +31,30 @@ CONF_FILES+=	${EGDIR}/locales.conf ${PKG_SYSCONFDIR}/locales.conf
 CONF_FILES+=	${EGDIR}/pool.conf ${PKG_SYSCONFDIR}/pool.conf
 
 .include "../../converters/libiconv/buildlink3.mk"
+
+PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/.PLIST.doc
+
+# Workaround a weird problem in the source Makefiles that prevents
+# easily changing the installation directory for the documentation.
+#
+pre-build:
+	cd ${WRKSRC}/doc/doc && ln -s ${PKGNAME_NOREV:Q} ${PKGBASE:Q}
+
+# Dynamically generate PLIST entries for the documentation.  This target
+# may need to be modified for future FreeTDS releases.
+#
+${WRKDIR}/.PLIST.doc:
+	{ cd ${WRKSRC}/doc/doc/${PKGNAME_NOREV};			\
+	  find reference userguide \( -type f -o -type l \) -print;	\
+	  cd ${WRKSRC}/doc;						\
+	  find images -name \*.gif -print;				\
+	} | sed "s,^,share/doc/"${PKGBASE:Q}"/," | sort -u		\
+	> ${.TARGET}
+	{ cd ${WRKSRC}/doc/doc/${PKGNAME_NOREV};			\
+	  find reference userguide -type d -print;			\
+	  ${ECHO} "images";						\
+	} | sed "s,^,@dirrm share/doc/"${PKGBASE:Q}"/," | sort -ur	\
+	>> ${.TARGET}
+	${ECHO} "@dirrm share/doc/"${PKGBASE:Q} >> ${.TARGET}
+
 .include "../../mk/bsd.pkg.mk"
