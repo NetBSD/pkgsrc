@@ -106,6 +106,9 @@ DDEESSCCRRIIPPTTIIOONN
            [[nnoo--]]ddiirreeccttccmmdd      Warn if a system command name is used instead
                                of a variable (e.g. sed instead of ${SED}).
 
+           [[nnoo--]]eexxttrraa          Emit some additional warnings that are not
+                               enabled by default, for whatever reason.
+
            [[nnoo--]]oorrddeerr          Warn if Makefile variables are not in the pre-
                                ferred order.
 
