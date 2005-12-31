@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2005/10/15 17:11:51 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2005/12/31 00:07:36 wiz Exp $
 
-DISTNAME=	tiff-3.7.4
+DISTNAME=	tiff-3.8.0
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
 		http://libtiff.maptools.org/dl/
@@ -19,6 +19,9 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
+# next line shouldn't be necessary, but 3.8.0 doesn't
+# compile correctly without it
+CONFIGURE_ARGS+=	--with-default-strip-size=8192
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
 
 .include "options.mk"
