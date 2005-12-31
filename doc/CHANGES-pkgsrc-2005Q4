@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.14 2005/12/30 21:25:14 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.15 2005/12/31 18:34:32 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -31,3 +31,5 @@ Pullup ticket 984 - requested by Joerg Sonnenberger
 unbreak comms/fidogate and fix a possible security issue
 Pullup ticket 986 - requested by Joerg Sonnenberger
 remove PKG_FAIL_REASON from benchfft
+Pullup ticket 985 - requested by Joerg Sonnenberger
+plist fix for graphics/inkscape
