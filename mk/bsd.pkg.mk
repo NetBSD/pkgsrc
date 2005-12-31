@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1776 2005/12/31 07:53:11 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1777 2005/12/31 08:05:00 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1017,7 +1017,7 @@ DEPENDS_TARGET=	${UPDATE_TARGET}
 .    else
 DEPENDS_TARGET=	update
 .    endif
-.  elif make(bin-install)
+.  elif make(bin-install) || make(real-su-bin-install)
 DEPENDS_TARGET=	bin-install
 .  else
 DEPENDS_TARGET=	reinstall
