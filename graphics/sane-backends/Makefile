@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/29 06:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2005/12/31 00:03:24 wiz Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
@@ -10,6 +10,8 @@ USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--with-gphoto2=no
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/sane-${SANE_VERSION}
+
+.include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "SunOS")
 PLIST_SUBST+=	SANE_PINT="@comment "
@@ -28,7 +30,8 @@ EGDIR=		${PREFIX}/share/examples/sane
 artec_eplus48u.conf avision.conf bh.conf canon.conf canon630u.conf \
 coolscan.conf coolscan2.conf dc210.conf dc240.conf dc25.conf dll.conf \
 dmc.conf epson.conf fujitsu.conf genesys.conf gt68xx.conf hp.conf \
-hp5400.conf ibm.conf leo.conf ma1509.conf matsushita.conf \
+hp4200.conf hp5400.conf ibm.conf leo.conf lexmark.conf \
+ma1509.conf matsushita.conf \
 microtek.conf microtek2.conf mustek.conf mustek_usb.conf nec.conf \
 net.conf pie.conf plustek.conf plustek_pp.conf ricoh.conf s9036.conf \
 saned.conf sceptre.conf sharp.conf sm3840.conf snapscan.conf \

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/09/27 09:29:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/12/31 00:03:24 wiz Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -28,15 +28,18 @@ lib/sane/libsane-fujitsu.la
 lib/sane/libsane-genesys.la
 lib/sane/libsane-gt68xx.la
 lib/sane/libsane-hp.la
+lib/sane/libsane-hp4200.la
 lib/sane/libsane-hp5400.la
 lib/sane/libsane-ibm.la
 lib/sane/libsane-leo.la
+lib/sane/libsane-lexmark.la
 lib/sane/libsane-ma1509.la
 lib/sane/libsane-matsushita.la
 lib/sane/libsane-microtek.la
 lib/sane/libsane-microtek2.la
 lib/sane/libsane-mustek.la
 lib/sane/libsane-mustek_usb.la
+lib/sane/libsane-mustek_usb2.la
 lib/sane/libsane-nec.la
 lib/sane/libsane-net.la
 lib/sane/libsane-niash.la
@@ -63,6 +66,9 @@ lib/sane/libsane-umax.la
 lib/sane/libsane-umax1220u.la
 lib/sane/libsane-umax_pp.la
 man/man1/gamma4scanimage.1
+man/man5/sane-hp4200.5
+man/man5/sane-lexmark.5
+man/man5/sane-mustek_usb2.5
 man/man1/sane-config.1
 man/man1/sane-find-scanner.1
 man/man1/scanimage.1
@@ -167,6 +173,8 @@ share/doc/sane-${SANE_VERSION}/matsushita/matsushita.txt
 share/doc/sane-${SANE_VERSION}/mustek/mustek.CHANGES
 share/doc/sane-${SANE_VERSION}/mustek_usb/mustek_usb.CHANGES
 share/doc/sane-${SANE_VERSION}/mustek_usb/mustek_usb.TODO
+share/doc/sane-${SANE_VERSION}/mustek_usb2/mustek_usb2.CHANGES
+share/doc/sane-${SANE_VERSION}/mustek_usb2/mustek_usb2.TODO
 share/doc/sane-${SANE_VERSION}/niash/niash.TODO
 share/doc/sane-${SANE_VERSION}/plustek/FAQ
 share/doc/sane-${SANE_VERSION}/plustek/MakeModule.sh
@@ -236,9 +244,11 @@ share/examples/sane/fujitsu.conf
 share/examples/sane/genesys.conf
 share/examples/sane/gt68xx.conf
 share/examples/sane/hp.conf
+share/examples/sane/hp4200.conf
 share/examples/sane/hp5400.conf
 share/examples/sane/ibm.conf
 share/examples/sane/leo.conf
+share/examples/sane/lexmark.conf
 share/examples/sane/ma1509.conf
 share/examples/sane/matsushita.conf
 share/examples/sane/microtek.conf
@@ -255,8 +265,8 @@ share/examples/sane/s9036.conf
 share/examples/sane/saned.conf
 share/examples/sane/sceptre.conf
 share/examples/sane/sharp.conf
-share/examples/sane/snapscan.conf
 share/examples/sane/sm3840.conf
+share/examples/sane/snapscan.conf
 share/examples/sane/sp15c.conf
 share/examples/sane/st400.conf
 share/examples/sane/tamarack.conf
@@ -282,8 +292,12 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sane-backends.mo
+@exec ${MKDIR} %D/share/sane/snapscan
+@dirrm share/sane/snapscan
 @exec ${MKDIR} %D/share/sane/gt68xx
 @dirrm share/sane/gt68xx
+@exec ${MKDIR} %D/share/sane/artec_eplus48u
+@dirrm share/sane/artec_eplus48u
 @dirrm share/sane
 @dirrm share/examples/sane
 @dirrm share/doc/sane-${SANE_VERSION}/umax
@@ -292,6 +306,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sane-backends.mo
 @dirrm share/doc/sane-${SANE_VERSION}/sceptre
 @dirrm share/doc/sane-${SANE_VERSION}/plustek
 @dirrm share/doc/sane-${SANE_VERSION}/niash
+@dirrm share/doc/sane-${SANE_VERSION}/mustek_usb2
 @dirrm share/doc/sane-${SANE_VERSION}/mustek_usb
 @dirrm share/doc/sane-${SANE_VERSION}/mustek
 @dirrm share/doc/sane-${SANE_VERSION}/matsushita
