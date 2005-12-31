@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.108 2005/11/20 12:32:17 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.109 2005/12/31 09:07:22 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -577,8 +577,6 @@ sub list_installed_packages
 	}
     close(PKG_INFO);
 
-    # pkg_install is not in the pkg_info -a output, add it manually
-    push(@pkgs, "pkg_install-$pkg_installver");
     @pkgs;
     }
 
