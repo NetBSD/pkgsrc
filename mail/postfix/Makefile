@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2005/12/30 06:29:41 martti Exp $
+# $NetBSD: Makefile,v 1.173 2005/12/31 15:16:18 martti Exp $
 
 DISTNAME=	postfix-2.2.6
 PKGREVISION=	1
@@ -84,7 +84,7 @@ MAKE_ENV+=		CC=${CC:Q} OPT=${CFLAGS:M*:Q}
 MAKE_ENV+=		AUXLIBS=${AUXLIBS:Q} CCARGS=${CCARGS:Q}
 
 RCD_SCRIPTS=		postfix
-OWN_DIRS+=		${POSTFIX_QUEUE_DIR}
+OWN_DIRS+=		${POSTFIX_QUEUE_DIR} ${POSTFIX_QUEUE_DIR}/etc
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
 
 PKG_GROUPS?=		postfix maildrop
