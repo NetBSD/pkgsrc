@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/09/27 09:31:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/12/31 00:04:03 wiz Exp $
 bin/xsane
 man/man1/xsane.1
 share/sane/xsane/Mustek-logo.xpm
@@ -54,7 +54,7 @@ share/sane/xsane/doc/xsane-fax.jpg
 share/sane/xsane/doc/xsane-gamma.jpg
 share/sane/xsane/doc/xsane-gimp.jpg
 share/sane/xsane/doc/xsane-histogram.jpg
-share/sane/xsane/doc/xsane-logo2.jpg
+share/sane/xsane/doc/xsane-logo.jpg
 share/sane/xsane/doc/xsane-mail-project.jpg
 share/sane/xsane/doc/xsane-mail.jpg
 share/sane/xsane/doc/xsane-medium.jpg
@@ -130,6 +130,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xsane.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xsane.mo
