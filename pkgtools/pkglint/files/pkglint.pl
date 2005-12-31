@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.439 2005/12/31 14:01:47 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.440 2005/12/31 15:00:15 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1634,6 +1634,37 @@ sub checkline_mk_text($$) {
 
 }
 
+sub checkline_mk_shellword($$) {
+	my ($line, $shellword) = @_;
+	my ($rest);
+
+	if ($shellword =~ qr"^\$\{${regex_varname}(?::.+)?\}$") {
+		# TODO: Check whether the variable needs quoting or not.
+		return;
+	}
+
+	if ($shellword =~ qr"^([\w_\-]+)=(([\"']?)\$\{([\w_]+)\}\3)$") {
+		my ($key, $vexpr, undef, $vname) = ($1, $2, $3, $4);
+		my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
+		my $fixed_vexpr = "\${${vname}${mod}}";
+		$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
+		$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
+		$line->replace($shellword, "${key}=${fixed_vexpr}");
+
+	} elsif ($shellword =~ qr"^([\w_\-]+)=(\$\{([\w_]+):Q\})$") {
+		my ($key, $vexpr, $vname) = ($1, $2, $3);
+		my $fixed_vexpr = "\${${vname}:M*:Q}";
+		if ($vname =~ regex_gnu_configure_volatile_vars) {
+			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
+			$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
+			$line->replace($shellword, "${key}=${fixed_vexpr}");
+		}
+
+	} elsif ($shellword ne "" && $shellword !~ qr"^${regex_shellword}$") {
+		$line->log_warning("Invalid shell word \"${shellword}\".");
+	}
+}
+
 sub checkline_mk_shelltext($$) {
 	my ($line, $text) = @_;
 	my ($vartools, $state, $rest, $set_e_mode);
@@ -2021,26 +2052,7 @@ sub checkline_mk_vartype_basic($$$$$) {
 		checkline_relative_pkgdir($line, $value);
 
 	} elsif ($type eq "ShellWord") {
-		if ($value =~ qr"^([\w_\-]+)=(([\"']?)\$\{([\w_]+)\}\3)$") {
-			my ($key, $vexpr, undef, $vname) = ($1, $2, $3, $4);
-			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
-			my $fixed_vexpr = "\${${vname}${mod}}";
-			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
-			$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
-			$line->replace($value, "${key}=${fixed_vexpr}");
-
-		} elsif ($value =~ qr"^([\w_\-]+)=(\$\{([\w_]+):Q\})$") {
-			my ($key, $vexpr, $vname) = ($1, $2, $3);
-			my $fixed_vexpr = "\${${vname}:M*:Q}";
-			if ($vname =~ regex_gnu_configure_volatile_vars) {
-				$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
-				$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
-				$line->replace($value, "${key}=${fixed_vexpr}");
-			}
-
-		} elsif ($value ne "" && $value !~ qr"^${regex_shellword}$") {
-			$line->log_warning("Invalid shell word \"${value}\".");
-		}
+		checkline_mk_shellword($line, $value);
 
 	} elsif ($type eq "Stage") {
 		if ($value !~ qr"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
