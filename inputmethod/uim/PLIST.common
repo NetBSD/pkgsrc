@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST.common,v 1.3 2005/09/30 12:43:35 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2005/12/31 00:04:28 wiz Exp $
 bin/uim-fep
 bin/uim-fep-tick
-bin/uim-helper-server
 bin/uim-input-pad-ja
 bin/uim-module-manager
 bin/uim-sh
@@ -19,26 +18,32 @@ lib/libuim.la
 lib/pkgconfig/uim.pc
 lib/uim/plugin/libuim-custom-enabler.la
 lib/uim/plugin/libuim-skk.la
+libexec/uim-helper-server
 man/man1/uim-xim.1
 share/applications/uim.desktop
+share/doc/uim/DOT-UIM
 share/doc/uim/HELPER-CANDWIN
 share/doc/uim/HELPER-PROTOCOL
 share/doc/uim/KEY
 share/doc/uim/PLUGIN
 share/doc/uim/README
-share/doc/uim/README.ja
 share/doc/uim/UIM-SCM
 share/doc/uim/UIM-SH
-share/doc/uim/XIM-SERVER
 share/doc/uim/uim-fep/README
 share/doc/uim/uim-fep/README.ja
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/uim.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/uim-chardict-qt.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/uim.mo
-share/uim/PY.scm
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/uim.mo
 share/uim/action.scm
 share/uim/anthy-custom.scm
 share/uim/anthy-key-custom.scm
 share/uim/anthy.scm
+share/uim/byeoru-custom.scm
+share/uim/byeoru-dic.scm
+share/uim/byeoru-key-custom.scm
+share/uim/byeoru-symbols.scm
+share/uim/byeoru.scm
 share/uim/canna-custom.scm
 share/uim/canna-key-custom.scm
 share/uim/canna.scm
@@ -67,6 +72,9 @@ share/uim/lazy-load.scm
 share/uim/load-action.scm
 share/uim/loader.scm
 share/uim/m17nlib.scm
+share/uim/mana-custom.scm
+share/uim/mana-key-custom.scm
+share/uim/mana.scm
 share/uim/manage-modules.scm
 share/uim/pinyin-big5.scm
 share/uim/pixmaps/configure-qt.png
@@ -76,6 +84,7 @@ share/uim/plugin.scm
 share/uim/prime-custom.scm
 share/uim/prime-key-custom.scm
 share/uim/prime.scm
+share/uim/py.scm
 share/uim/pyload.scm
 share/uim/pyunihan.scm
 share/uim/rk.scm
@@ -88,13 +97,6 @@ share/uim/skk-key-custom.scm
 share/uim/skk.scm
 share/uim/spellcheck-custom.scm
 share/uim/spellcheck.scm
-share/uim/tables/japanese-azik.table
-share/uim/tables/japanese-kana.table
-share/uim/tables/japanese-roma.table
-share/uim/tables/japanese-tcode.table
-share/uim/tables/japanese-tutcode.table
-share/uim/tables/korean-hangul2.table
-share/uim/tables/korean-hangul3.table
 share/uim/tcode.scm
 share/uim/tutcode-key-custom.scm
 share/uim/tutcode.scm
@@ -105,7 +107,6 @@ share/uim/ustr.scm
 share/uim/util.scm
 share/uim/viqr.scm
 share/uim/zaurus.scm
-@dirrm share/uim/tables
 @dirrm share/uim/pixmaps
 @dirrm share/uim
 @dirrm share/doc/uim/uim-fep

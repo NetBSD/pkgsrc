@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/11/25 22:17:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/12/31 00:04:28 wiz Exp $
 #
 
-DISTNAME=		uim-0.4.9.1
-PKGREVISION=		1
+DISTNAME=		uim-1.0.1
 CATEGORIES=		inputmethod
 MASTER_SITES=		http://uim.freedesktop.org/releases/
 
@@ -17,20 +16,20 @@ USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/uim.pc.in
 GNU_CONFIGURE=		YES
 GTK2_IMMODULES=		YES
+CONFIGURE_ARGS+=	--disable-emacs
 
 .include "options.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/uim
-	${INSTALL_DATA} ${WRKSRC}/README.ja ${PREFIX}/share/doc/uim
+	${INSTALL_DATA} ${WRKSRC}/doc/DOT-UIM ${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/HELPER-CANDWIN ${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/HELPER-PROTOCOL ${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/KEY ${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/PLUGIN ${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/UIM-SCM ${PREFIX}/share/doc/uim
 	${INSTALL_DATA} ${WRKSRC}/doc/UIM-SH ${PREFIX}/share/doc/uim
-	${INSTALL_DATA} ${WRKSRC}/doc/XIM-SERVER ${PREFIX}/share/doc/uim
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uim/uim-fep
 	${INSTALL_DATA} ${WRKSRC}/fep/README ${PREFIX}/share/doc/uim/uim-fep
 	${INSTALL_DATA} ${WRKSRC}/fep/README.ja ${PREFIX}/share/doc/uim/uim-fep
