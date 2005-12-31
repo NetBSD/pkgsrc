@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1 2005/12/31 00:56:42 joerg Exp $
+
+--- util/XercesDefs.hpp.orig	2005-12-31 00:13:13.000000000 +0000
++++ util/XercesDefs.hpp
+@@ -280,6 +280,10 @@
+ #include    <xercesc/util/Platforms/FreeBSD/FreeBSDDefs.hpp>
+ #endif
+ 
++#if defined(XML_DRAGONFLY)
++#include    <xercesc/util/Platforms/DragonFly/DragonFlyDefs.hpp>
++#endif
++
+ #if defined(XML_OS390)
+ #include    <xercesc/util/Platforms/OS390/OS390Defs.hpp>
+ #endif
