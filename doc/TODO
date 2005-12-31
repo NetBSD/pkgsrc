@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4320 2005/12/31 11:34:41 jmmv Exp $
+$NetBSD: TODO,v 1.4321 2005/12/31 13:45:22 peter Exp $
 
 Suggested new packages
 ======================
@@ -721,7 +721,6 @@ Suggested package updates
 	o libhydrogen-0.9.2
 	o libksba-0.9.9
 	o liblive-2005.10.05
-	o libmatchbox-1.7
 	o libmatheval-1.1.2
 	o libmilter-8.13.5
 	o libmpeg3-1.6
@@ -758,7 +757,6 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.2.00
-	o matchbox-0.9.5
 	o mathomatic-12.5.5
 	o md-whois-4.7.8
 	o mdd-20050318
