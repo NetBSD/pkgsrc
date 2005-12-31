@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12273 2005/12/31 00:09:17 wiz Exp $
+$NetBSD: CHANGES,v 1.12274 2005/12/31 00:10:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5843,3 +5843,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated devel/GConf2-ui to 2.12.1 [wiz 2005-12-31]
 	Updated misc/dialog to 1.0.20051219 [wiz 2005-12-31]
 	Updated graphics/tiff to 3.8.0 [wiz 2005-12-31]
+	Updated security/gnome-keyring to 0.4.6 [wiz 2005-12-31]
