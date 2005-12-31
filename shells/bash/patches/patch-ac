@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2004/10/23 07:48:03 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2005/12/31 00:02:28 wiz Exp $
 
---- configure.in.orig	2004-07-21 15:06:54.000000000 -0500
+--- configure.in.orig	2005-12-01 15:36:03.000000000 +0100
 +++ configure.in
-@@ -756,6 +756,16 @@ AC_CHECK_SIZEOF([long long], 8)
+@@ -826,6 +826,16 @@ AC_CHECK_SIZEOF([long long], 8)
  
  AC_CHECK_TYPE(u_int, [unsigned int])
  AC_CHECK_TYPE(u_long, [unsigned long])
