@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12275 2005/12/31 00:38:45 wiz Exp $
+$NetBSD: CHANGES,v 1.12276 2005/12/31 00:54:12 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -5846,3 +5846,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated security/gnome-keyring to 0.4.6 [wiz 2005-12-31]
 	Updated print/poppler to 0.4.3 [wiz 2005-12-31]
 	Updated print/poppler-qt to 0.4.3 [wiz 2005-12-31]
+	Updated databases/metakit-lib to 2.4.9.3nb2 [joerg 2005-12-31]
