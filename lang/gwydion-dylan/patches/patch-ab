@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/12/31 22:42:31 markd Exp $
+
+--- configure.in.orig	2004-10-18 12:14:45.000000000 +1300
++++ configure.in
+@@ -128,6 +128,8 @@ case $1 in
+     powerpc-apple-darwin*) $2=ppc-darwin-gcc ;;
+     mips-sgi-irix*) $2=mips-irix-gcc ;;
+     i*86-*-netbsd*) $2=x86-netbsd-gcc ;;
++    powerpc-*-netbsd*) $2=ppc-netbsd-gcc ;;
++    sparc-*-netbsd*) $2=sparc-netbsd-gcc ;;
+     *) $2=unknown-unix ;;
+ esac])
+ 
+@@ -1103,8 +1105,10 @@ $srcdir/mkinstalldirs mindy tools
+ # in and of itself) and configure tries to create the *.dylan files before
+ # we build our buildroot tree causing things to flame out horribly.
+ AC_OUTPUT(Defaults gwydion-dylan.spec mindy/comp/Makefile mindy/interp/Makefile mindy/compat/Makefile mindy/etc/Makefile mindy/etc/generate-depends mindy/interp/make-init.pl tools/shared-misc/gen-makefile tools/shared-misc/mk-build-tree tools/shared-misc/line-count tools/shared-misc/make-dylan-app tools/shared-misc/make-dylan-lib tools/shared-misc/update-libdirs tools/unix-misc/mk-rcs-links doc/Makefile doc/dylan.7 doc/gwydion.7 doc/d2c.1 doc/dybug.1 doc/mindy.1 doc/mindycomp.1 doc/mindyexec.1 doc/melange.1 doc/parsergen.1 doc/make-dylan-app.1 doc/gobject-tool.1 doc/platforms.descr.4,
+-	 [${INSTALL} -m uog+rx $buildroot/tools/shared-misc/mk-build-tree ./
+-	  ${INSTALL} -m uog+rx $buildroot/tools/shared-misc/gen-makefile ./
++	 [cp $buildroot/tools/shared-misc/mk-build-tree ./
++	  cp $buildroot/tools/shared-misc/gen-makefile ./
++	  chmod uog+rx ./mk-build-tree
++	  chmod uog+rx ./gen-makefile
+ 	  (PATH=$buildroot:$PATH; export PATH; perl mk-build-tree -p$srcdir/d2c/compiler/platforms.descr)
+ 	  touch $buildroot/force.timestamp
+ 	  ], [
