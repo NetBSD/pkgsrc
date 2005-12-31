@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 20:50:20 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2005/12/31 12:32:37 wiz Exp $
 
 DISTNAME=	warp-sharp
 PKGNAME=	gimp-${DISTNAME}-1.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.home.unix-ag.org/simon/gimp/
 EXTRACT_SUFX=	.scm
