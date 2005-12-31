@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.4 2005/12/31 00:56:42 joerg Exp $
+
+--- ../../tests/ThreadTest/ThreadTest.cpp.orig	2005-12-30 23:56:17.000000000 +0000
++++ ../../tests/ThreadTest/ThreadTest.cpp
+@@ -122,7 +122,7 @@ void ThreadFuncs::startThread(ThreadFunc
+ }
+ 
+ 
+-#elif defined (AIX) || defined(SOLARIS) || defined(LINUX) || defined(HPUX) || defined (OS390) || defined(FREEBSD) || defined(__CYGWIN__) || defined(__QNXNTO__)
++#elif defined (AIX) || defined(SOLARIS) || defined(LINUX) || defined(HPUX) || defined (OS390) || defined(FREEBSD) || defined(__CYGWIN__) || defined(__QNXNTO__) || defined(DRAGONFLY)
+ #include <pthread.h>
+ #include <unistd.h>
+ #include <errno.h>

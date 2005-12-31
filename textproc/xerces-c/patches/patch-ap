@@ -1,0 +1,14 @@
+$NetBSD: patch-ap,v 1.3 2005/12/31 00:56:42 joerg Exp $
+
+--- util/AutoSense.hpp.orig	2005-12-31 00:01:35.000000000 +0000
++++ util/AutoSense.hpp
+@@ -222,6 +222,9 @@
+ #elif defined(__FreeBSD__)
+     #define XML_FREEBSD
+     #define XML_UNIX
++#elif defined(__DragonFly__)
++    #define XML_DRAGONFLY
++    #define XML_UNIX
+ #elif defined(IRIX) || defined(__sgi)
+     #define XML_IRIX
+     #define XML_UNIX

@@ -1,0 +1,28 @@
+$NetBSD: patch-an,v 1.3 2005/12/31 00:56:42 joerg Exp $
+
+--- configure.orig	2005-12-31 00:00:01.000000000 +0000
++++ configure
+@@ -1309,6 +1309,7 @@ case "${host}" in
+         *-*-nto*)       platform=QNX ;;
+         *-*-linux*)     platform=LINUX ;;
+         *-*-freebsd*)   platform=FREEBSD ;;
++        *-*-dragonfly*)  platform=DRAGONFLY ;;
+         *-*-netbsd*)    platform=NETBSD ;;
+         *-*-irix*)      platform=IRIX ;;
+         *-*-aix*)       platform=AIX
+@@ -1512,6 +1513,7 @@ util/Platforms/AIX/Makefile \
+ util/Platforms/BeOS/Makefile \
+ util/Platforms/QNX/Makefile \
+ util/Platforms/Linux/Makefile \
++util/Platforms/DragonFly/Makefile \
+ util/Platforms/FreeBSD/Makefile \
+ util/Platforms/NetBSD/Makefile \
+ util/Platforms/HPUX/Makefile \
+@@ -1669,6 +1671,7 @@ util/Platforms/BeOS/Makefile \
+ util/Platforms/QNX/Makefile \
+ util/Platforms/Linux/Makefile \
+ util/Platforms/FreeBSD/Makefile \
++util/Platforms/DragonFly/Makefile \
+ util/Platforms/NetBSD/Makefile \
+ util/Platforms/HPUX/Makefile \
+ util/Platforms/OS390/Makefile \
