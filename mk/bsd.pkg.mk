@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1777 2005/12/31 08:05:00 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1778 2005/12/31 08:18:34 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3602,8 +3602,8 @@ install-depends: pre-install-depends
 .    else	# !DEPENDS
 .      for dep in ${DEPENDS} ${BUILD_DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	pkg="${dep:C/:.*//}";						\
-	dir="${dep:C/[^:]*://:C/:.*$//}";				\
+	pkg=${dep:C/:.*//:Q};						\
+	dir=${dep:C/[^:]*://:C/:.*$//:Q};				\
 	found=`${PKG_BEST_EXISTS} "$$pkg" || ${TRUE}`;			\
 	if [ "X$$REBUILD_DOWNLEVEL_DEPENDS" != "X" ]; then		\
 		pkgname=`cd $$dir ; ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKGNAME`; \
@@ -3636,7 +3636,7 @@ install-depends: pre-install-depends
 			exit 1;						\
 		else							\
 			cd $$dir ;					\
-			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD=\'$$pkg\' ${MAKE} ${MAKEFLAGS} _AUTOMATIC=YES $$target || exit 1; \
+			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pkg" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=YES $$target || exit 1; \
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
