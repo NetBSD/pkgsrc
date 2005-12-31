@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/26 23:39:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2005/12/31 10:12:58 rillig Exp $
 
 PSI_VERSION=	0.9.3
 DISTNAME=	psi-${PSI_VERSION}
@@ -17,9 +17,6 @@ FETCH_BEFORE_ARGS+=	${FETCH_OUTPUT_ARGS} "${DISTDIR}/${DIST_SUBDIR}/$$bfile"
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi.affinix.com/
 COMMENT=	PSI Jabber Client
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
 
