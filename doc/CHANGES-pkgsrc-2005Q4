@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.15 2005/12/31 18:34:32 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.16 2005/12/31 19:47:42 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -33,3 +33,5 @@ Pullup ticket 986 - requested by Joerg Sonnenberger
 remove PKG_FAIL_REASON from benchfft
 Pullup ticket 985 - requested by Joerg Sonnenberger
 plist fix for graphics/inkscape
+Pullup ticket 987 - requested by Johnny C. Lam
+build fix for lang/perl5
