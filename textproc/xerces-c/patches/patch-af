@@ -1,8 +1,30 @@
-$NetBSD: patch-af,v 1.4 2004/09/18 02:46:13 minskim Exp $
+$NetBSD: patch-af,v 1.5 2005/12/31 00:56:42 joerg Exp $
 
---- Makefile.incl.orig	Tue May 27 15:04:46 2003
-+++ Makefile.incl	Fri Sep 17 00:36:28 2004
-@@ -579,6 +579,11 @@
+--- Makefile.incl.orig	2003-05-27 15:04:46.000000000 +0000
++++ Makefile.incl
+@@ -373,6 +373,21 @@ SHLIBSUFFIX=.so
+ LD_SONAME = -Wl,-soname,${SO_NAME}
+ endif
+ 
++#=============== DRAGONFLY SPECIFIC OPTIONS =========================
++ifeq (${PLATFORM}, DRAGONFLY)
++MAKE_SHARED = ${CXX} -D${PLATFORM} -shared -fPIC ${LDFLAGS}
++MAKE_SHARED_C = ${CC} -D${PLATFORM} -shared -fPIC ${LDFLAGS}
++ifeq (${TRANSCODER}, ICU)
++    PLATFORM_COMPILE_OPTIONS = -fPIC -D${PLATFORM} -I/usr/local/include
++    ALLLIBS = ${LIBS} -L/usr/local/lib -licuuc -L${ICUROOT} -licudata -lgcc
++else
++    PLATFORM_COMPILE_OPTIONS = -fPIC -D${PLATFORM}
++    ALLLIBS = ${LIBS}
++endif
++SHLIBSUFFIX=.so
++## Compiler switch to embed a library name
++LD_SONAME = -Wl,-soname,${SO_NAME}
++endif
+ #=============== NETBSD SPECIFIC OPTIONS =========================
+ ifeq (${PLATFORM}, NETBSD)
+ MAKE_SHARED = ${CXX} -D${PLATFORM} -shared -fPIC ${LDFLAGS}
+@@ -579,6 +594,11 @@ ifeq (${PLATFORM}, CYGWIN)
  endif
  
  
