@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/12/31 13:29:26 peter Exp $
+
+--- data/Makefile.am.orig	2004-12-01 03:22:33.000000000 -0800
++++ data/Makefile.am
+@@ -1,10 +1,10 @@
+ EXTRA_DIST = mbdesktop_modules.in mbdesktop.png mb-show-desktop.desktop
+ 
+-moduleconfdir = $(sysconfdir)/matchbox
++moduleconfdir = $(datadir)/examples/@PACKAGE@
+ moduleconf_DATA = mbdesktop_modules
+ 
+ desktopdir = $(datadir)/applications/
+ desktop_DATA = mb-show-desktop.desktop    
+ 
+ pixmapsdir = $(datadir)/pixmaps/
+-pixmaps_DATA = mbdesktop.png
+\ No newline at end of file
++pixmaps_DATA = mbdesktop.png
