@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/12/31 13:32:30 peter Exp $
+
+--- applets/Makefile.am.orig	2004-12-01 03:22:22.000000000 -0800
++++ applets/Makefile.am
+@@ -14,7 +14,7 @@ bin_PROGRAMS =                          
+   mb-applet-launcher mb-applet-system-monitor 
+ 
+   mb_applet_battery_SOURCES =        mb-applet-battery.c
+-  mb_applet_battery_LDADD   =        $(LIBMB_LIBS) $(SN_LIBS) -lapm  
++  mb_applet_battery_LDADD   =        $(LIBMB_LIBS) $(SN_LIBS)
+ 
+ else
+ bin_PROGRAMS =                                 \
+@@ -34,4 +34,4 @@ mb_applet_wireless_SOURCES =       mb-ap
+ mb_applet_launcher_SOURCES =       mb-applet-launcher.c  
+ mb_applet_system_monitor_SOURCES = mb-applet-system-monitor.c 
+ 
+-bin_SCRIPTS = mb-applet-xterm-wrapper.sh
+\ No newline at end of file
++bin_SCRIPTS = mb-applet-xterm-wrapper.sh
