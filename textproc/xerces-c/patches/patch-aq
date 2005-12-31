@@ -1,0 +1,14 @@
+$NetBSD: patch-aq,v 1.1 2005/12/31 00:56:42 joerg Exp $
+
+--- util/Platforms/Makefile.in.orig	2005-12-31 00:12:22.000000000 +0000
++++ util/Platforms/Makefile.in
+@@ -172,6 +172,9 @@ endif
+ ifeq (${PLATFORM}, FREEBSD)
+     SUBMODULE = FreeBSD
+ endif
++ifeq (${PLATFORM}, DRAGONFLY)
++    SUBMODULE = DragonFly
++endif
+ ifeq (${PLATFORM}, NETBSD)
+     SUBMODULE = NetBSD
+ endif
