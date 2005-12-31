@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/12/11 05:08:50 salo Exp $
+# $NetBSD: Makefile,v 1.6 2005/12/31 00:35:55 wiz Exp $
 #
 
-DISTNAME=		poppler-0.4.2
-PKGREVISION=		2
+DISTNAME=		poppler-0.4.3
 CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
 
@@ -21,7 +20,7 @@ GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	share/doc/poppler
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 # TODO: Later add an option to choose Splash versus Cairo backend.
 ## Don't build the Splash graphics backend.
 #CONFIGURE_ARGS+=	--disable-splash-output
