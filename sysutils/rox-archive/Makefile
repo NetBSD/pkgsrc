@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/07/16 01:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2005/12/31 12:32:46 wiz Exp $
 #
 
 DISTNAME=	Archive-0.1.2
 PKGNAME=	rox-archive-0.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz

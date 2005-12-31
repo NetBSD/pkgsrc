@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2005/12/28 18:19:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2005/12/31 12:32:42 wiz Exp $
 #
 
 DISTNAME=		yelp-2.12.1
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.12/}
 EXTRACT_SUFX=		.tar.bz2
