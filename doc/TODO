@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4313 2005/12/30 23:53:51 wiz Exp $
+$NetBSD: TODO,v 1.4314 2005/12/31 00:09:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -307,7 +307,6 @@ Suggested package updates
 	o Chinput-3.0.1
 	o DatLib-2.13
 	o DatUtil-2.25
-	o GConf-2.12.1
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
@@ -381,7 +380,6 @@ Suggested package updates
 	o avl-2.0.1
 	o avr-libc-1.4.0
 	o baci-20040415
-	o bash-3.1
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
@@ -480,7 +478,6 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
-	o dialog-1.0.20051219
 	o diffstat-1.41
 	o digikam-0.8.0
 	o dirac-0.5.4
@@ -540,7 +537,6 @@ Suggested package updates
 	o flyspell-1.7k
 	o fmsx-3.0
 	o fondu-040927
-	o fontconfig-2.3.93
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
@@ -593,7 +589,6 @@ Suggested package updates
 	o gnustep-1.11.1
 	o gnustep-gui-0.10.2
 	o gnustep-objc-1.4.0
-	o gnutls-1.3.1
 	o gob2-2.0.13
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
@@ -1119,7 +1114,6 @@ Suggested package updates
 	o rc-1.7.1
 	o rdiff-backup-1.0.3
 	o rdp-1.6
-	o readline-5.1
 	o regionset-0.2
 	o remind-3.00.23
 	o rep-gtk-0.18
@@ -1159,7 +1153,6 @@ Suggested package updates
 	o samba-3.0.21a [See also http://www.samba.org/samba/patches/]
 	o same-1.8
 	o same-1.8 [don't update; same-1.3 is small and nice]
-	o sane-backends-1.0.17
 	o sather-1.2.2
 	o sawfish-1.3
 	o sawfish-replibs-1.3
@@ -1247,7 +1240,6 @@ Suggested package updates
 	o tet3-3.6b
 	o tfmxplay-1.1.6
 	o tidy-20051006
-	o tiff-3.8.0
 	o tin-1.8.0
 	o tinyproxy-1.7.0
 	o tk-8.4.12
@@ -1283,7 +1275,6 @@ Suggested package updates
 	o ucarp-1.1 [pkg/29785]
 	o ucblogo-5.5
 	o ucl-1.03
-	o uim-1.0.1
 	o unix2dos-1.3
 	o unixodbc-2.2.11
 	o userppp-030706
@@ -1372,7 +1363,6 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xrmap-2.33
 	o xrn-9.02
-	o xsane-0.98b
 	o xscreensaver-4.23
 	o xskat-4.0
 	o xtide-2.8.2
