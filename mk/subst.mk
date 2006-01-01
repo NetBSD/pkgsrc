@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.27 2006/01/01 22:30:35 rillig Exp $
+# $NetBSD: subst.mk,v 1.28 2006/01/01 22:52:16 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -76,7 +76,7 @@ subst-${_class_}-cookie:
 	${TOUCH} ${TOUCH_FLAGS} ${_SUBST_COOKIE.${_class_}}
 
 ${_SUBST_COOKIE.${_class_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
 	cd ${WRKSRC:Q};							\
 	files=${SUBST_FILES.${_class_}:Q};				\
 	for file in $$files; do						\
@@ -84,8 +84,8 @@ ${_SUBST_COOKIE.${_class_}}:
 		tmpfile="$$file"${_SUBST_BACKUP_SUFFIX:Q};		\
 		if ${_SUBST_IS_TEXT_FILE}; then				\
 			${MV} -f "$$file" "$$tmpfile" || exit 1;	\
-			${CAT} "$$tmpfile"				\
-			| ${SUBST_FILTER_CMD.${_class_}}		\
+			${SUBST_FILTER_CMD.${_class_}}			\
+			< "$$tmpfile"					\
 			> "$$file";					\
 			if ${TEST} -x "$$tmpfile"; then			\
 				${CHMOD} +x "$$file";			\
