@@ -1,41 +1,46 @@
-$NetBSD: patch-aa,v 1.8 2005/10/11 12:20:57 tonio Exp $
+$NetBSD: patch-aa,v 1.9 2006/01/01 18:32:01 tron Exp $
 
---- makefile.orig	2004-09-08 03:17:58.000000000 +0200
-+++ makefile
-@@ -2,7 +2,7 @@
+--- makefile.orig	2005-01-04 23:18:48.000000000 +0000
++++ makefile	2006-01-01 18:17:40.000000000 +0000
+@@ -1,6 +1,6 @@
+ # configure daapd here
  
- HOWL_ENABLE = 1
+-HOWL_ENABLE = 0
++HOWL_ENABLE = 1
  ZLIB_ENABLE = 1
--MPEG4_ENABLE = 1
-+MPEG4_ENABLE = $(WITH_FAAD)
+ MPEG4_ENABLE = 0
  
- 
+@@ -8,22 +8,22 @@
  # no need to touch anything below this line
-@@ -13,17 +13,17 @@ MAKE = $(MAKE_COMMAND)
+ # -----------------------------------------
+ 
+-CC = g++
++CC = $(CXX)
+ MAKE = $(MAKE_COMMAND)
  TARGET = daapd
  DEPS = daaplib_ libhttpd_
- OBJS = daapd.o db.o dboutput.o songcache.o parsemp3.o
--LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz -lpthread 
+ OBJS = daapd.o db.o dboutput.o songcache.o parsemp3.o util.o
+ LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz
 -LIBPATH = -L. -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
-+LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
-+LIBPATH = -L. ${LDFLAGS} -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
- INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I/usr/local/include
+-INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I/usr/local/include
 -DEPLOY = /usr/local
 -CFLAGS = -Wall -Wno-multichar
-+DEPLOY = ${PREFIX}
++LIBPATH = -L. -L./daaplib/src -L./libhttpd/src  -L$(PREFIX)/lib $(LDFLAGS)
++INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I$(PREFIX)/include
++DEPLOY = $(PREFIX)
 +CFLAGS += -Wall -Wno-multichar
  
  # HOWL
  ifeq ($(HOWL_ENABLE),1)
 -	HOWLDIRS := $(sort $(wildcard /usr/local/include/howl*) )
-+ 	HOWLDIRS := $(sort $(wildcard ${PREFIX}/include/howl*) )
++	HOWLDIRS := $(sort $(wildcard $(PREFIX)/include/howl*) )
  ifeq ($(words $(HOWLDIRS) ), 0)
 -$(error howl not found in /usr/local/include. Install howl or disable it in the makefile)
-+$(error howl not found in ${PREFIX}/include. Install howl or disable it in the makefile)
++$(error howl not found in $(PREFIX)/include. Install howl or disable it in the makefile)
  endif
  	HOWLRECENT := $(word $(words $(HOWLDIRS)),$(HOWLDIRS) )
  	INCPATH := $(INCPATH) -I$(HOWLRECENT)
-@@ -74,8 +74,6 @@ clean:
+@@ -80,8 +80,6 @@
  	rm $(OBJS) $(TARGET)
  
  install: $(DEPS) $(TARGET)
