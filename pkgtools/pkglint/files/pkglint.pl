@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.442 2006/01/01 19:07:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.443 2006/01/01 19:58:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2442,67 +2442,6 @@ sub checklines_trailing_empty_lines($) {
 	}
 }
 
-sub checklines_multiple_patches($) {
-	my ($lines) = @_;
-	my ($files_in_patch, $patch_state, $line_type, $dellines);
-
-	$files_in_patch = 0;
-	$patch_state = "";
-	$dellines = 0;
-	foreach my $line (@{$lines}) {
-		my $text = $line->text;
-
-		if ($text =~ qr"^@@ -\d+,(\d+) \+\d+,\d+ @@") {
-			$line_type = "";
-			$dellines = $1;
-
-		} elsif ($dellines == 0 && index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
-			$line_type = "-";
-
-		} elsif (index($text, "*** ") == 0 && $text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
-			$line->log_warning("Please use unified diffs (diff -u) for patches.");
-			$line_type = "*";
-
-		} elsif (index($text, "+++ ") == 0) {
-			$line_type = "+";
-
-		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
-			$line_type = "";
-			$dellines--;
-
-		} else {
-			$line_type = "";
-		}
-
-		if ($patch_state eq "*") {
-			if ($line_type eq "-") {
-				$files_in_patch++;
-				$patch_state = "";
-			} else {
-				$line->log_error("[internal] Unknown patch format.");
-			}
-
-		} elsif ($patch_state eq "-") {
-			if ($line_type eq "+") {
-				$files_in_patch++;
-				$patch_state = "";
-			} else {
-				$line->log_error("[internal] Unknown patch format.");
-			}
-
-		} elsif ($patch_state eq "") {
-			$patch_state = $line_type;
-		}
-	}
-
-	if ($files_in_patch > 1) {
-		log_warning($lines->[0]->file, NO_LINE_NUMBER, "Contains patches for $files_in_patch files, should be only one.");
-
-	} elsif ($files_in_patch == 0) {
-		log_error($lines->[0]->file, NO_LINE_NUMBER, "Contains no patch.");
-	}
-}
-
 sub checklines_package_Makefile_varorder($) {
 	my ($lines) = @_;
 
@@ -3069,7 +3008,7 @@ sub checkfile_package_Makefile($$$) {
 
 sub checkfile_patches_patch($) {
 	my ($fname) = @_;
-	my ($lines);
+	my ($lines, $files_in_patch, $patch_state, $line_type, $dellines);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_patches_patch]");
 
@@ -3084,8 +3023,56 @@ sub checkfile_patches_patch($) {
 	}
 	checkline_rcsid($lines->[0], "");
 
-	foreach my $line (@{$lines}[1..$#{$lines}]) {
-		if ($line->text =~ qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)[:\$]") {
+	$files_in_patch = 0;
+	$patch_state = "";
+	$dellines = 0;
+
+	foreach my $line (@{$lines}) {
+		my $text = $line->text;
+
+		if ($text =~ qr"^@@ -\d+,(\d+) \+\d+,\d+ @@") {
+			$line_type = "";
+			$dellines = $1;
+
+		} elsif ($dellines == 0 && index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
+			$line_type = "-";
+
+		} elsif (index($text, "*** ") == 0 && $text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
+			$line->log_warning("Please use unified diffs (diff -u) for patches.");
+			$line_type = "*";
+
+		} elsif (index($text, "+++ ") == 0) {
+			$line_type = "+";
+
+		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
+			$line_type = "";
+			$dellines--;
+
+		} else {
+			$line_type = "";
+		}
+
+		if ($patch_state eq "*") {
+			if ($line_type eq "-") {
+				$files_in_patch++;
+				$patch_state = "";
+			} else {
+				$line->log_error("[internal] Unknown patch format.");
+			}
+
+		} elsif ($patch_state eq "-") {
+			if ($line_type eq "+") {
+				$files_in_patch++;
+				$patch_state = "";
+			} else {
+				$line->log_error("[internal] Unknown patch format.");
+			}
+
+		} elsif ($patch_state eq "") {
+			$patch_state = $line_type;
+		}
+
+		if ($text =~ qr".\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)[:\$]") {
 			my ($tag) = ($1);
 			if ($line->text =~ qr"^(\@\@.*?\@\@)") {
 				$line->log_warning("Patches should not contain RCS tags.");
@@ -3095,7 +3082,7 @@ sub checkfile_patches_patch($) {
 			}
 		}
 
-		if ($line->text =~ qr"^\+") {
+		if ($text =~ qr"^\+") {
 			use constant good_macros => PkgLint::Util::array_to_hash(qw(
 				__STDC__
 
@@ -3145,9 +3132,15 @@ sub checkfile_patches_patch($) {
 			checkline_spellcheck($line);
 		}
 	}
-	checklines_trailing_empty_lines($lines);
 
-	checklines_multiple_patches($lines);
+	if ($files_in_patch > 1) {
+		log_warning($lines->[0]->file, NO_LINE_NUMBER, "Contains patches for $files_in_patch files, should be only one.");
+
+	} elsif ($files_in_patch == 0) {
+		log_error($lines->[0]->file, NO_LINE_NUMBER, "Contains no patch.");
+	}
+
+	checklines_trailing_empty_lines($lines);
 }
 
 sub checkfile_PLIST($) {
