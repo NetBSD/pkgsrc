@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2005/12/29 06:21:59 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/01 18:27:53 tron Exp $
 
-DISTNAME=		howl-0.9.10
+DISTNAME=		howl-1.0.0
 CATEGORIES=		net
 MASTER_SITES=		http://www.porchdogsoft.com/download/
 
@@ -14,8 +14,13 @@ GNU_CONFIGURE=		yes
 PTHREAD_AUTO_VARS=	yes
 
 RCD_SCRIPTS=		howl
-PKG_GROUPS+=		howl
-PKG_USERS+=		howl:howl::Zeroconf\ user
+PKG_GROUPS+=		${HOWL_GROUP}
+PKG_USERS+=		${HOWL_USER}:${HOWL_GROUP}::Zeroconf\ user
+
+BUILD_DEFS+=		HOWL_GROUP HOWL_USER
+
+FILES_SUBST+=		HOWL_GROUP=${HOWL_GROUP:Q}
+FILES_SUBST+=		HOWL_USER=${HOWL_USER:Q}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

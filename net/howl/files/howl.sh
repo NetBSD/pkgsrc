@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: howl.sh,v 1.1 2005/01/08 06:24:41 schmonz Exp $
+# $NetBSD: howl.sh,v 1.2 2006/01/01 18:27:53 tron Exp $
 #
 
 # PROVIDE: howl
@@ -11,8 +11,8 @@
 name="howl"
 rcvar=$name
 command="@PREFIX@/bin/mDNSResponder"
-stop_cmd=":"
-howl_user="howl"
+howl_user="@HOWL_USER@"
+sig_stop=KILL
 
 load_rc_config $name
 run_rc_command "$1"
