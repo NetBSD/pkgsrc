@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.444 2006/01/01 21:55:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.445 2006/01/01 21:58:12 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2245,8 +2245,7 @@ sub checkline_mk_vartype_basic($$$$$) {
 	} elsif ($type eq "WrksrcSubdirectory") {
 		if ($value =~ qr"^(\$\{WRKSRC\}(?:/|$))") {
 			my ($prefix) = ($1);
-			# TODO: uncomment after 2005Q4
-			#$line->log_note("The \"${prefix}\" prefix is not needed here.");
+			$line->log_note("The \"${prefix}\" prefix is not needed here.");
 
 		} elsif ($value ne "" && $value_novar eq "") {
 			# The value of another variable
