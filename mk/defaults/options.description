@@ -35,7 +35,7 @@ charset
 charts	
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
-curses	
+curses			Enable curses support.
 darwin			Build and/or run on Darwin and Mac OS X.
 db	
 db2	
@@ -251,6 +251,7 @@ tcpd
 tcpwrappers	
 tdb	
 theora			Use the theora codecs.
+tin-use-inn-spool	Use the INN spool directories.
 tls			Enable TLS support.
 trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
