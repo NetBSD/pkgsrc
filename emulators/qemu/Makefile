@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2005/12/13 08:39:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2006/01/01 13:48:45 xtraeme Exp $
 #
 
-DISTNAME=		qemu-0.7.2
-PKGREVISION=		4
+DISTNAME=		qemu-0.8.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
 
 MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://fabrice.bellard.free.fr/qemu/
+HOMEPAGE=		http://www.qemu.org/
 COMMENT=		CPU emulator using dynamic translation
 
 CONFLICTS+=		qemu-bin-*
