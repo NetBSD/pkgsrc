@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4332 2006/01/01 22:11:41 wiz Exp $
+$NetBSD: TODO,v 1.4333 2006/01/01 22:20:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -888,7 +888,6 @@ Suggested package updates
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-Digest-1.14
 	o p5-Digest-Hashcash-0.03
 	o p5-Digest-MD5-2.36
 	o p5-ExtUtils-Depends-0.205
