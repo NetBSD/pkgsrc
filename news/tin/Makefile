@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:47:03 tv Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/01 16:10:29 wiz Exp $
 #
 
-DISTNAME=	tin-1.6.2
-PKGREVISION=	1
+DISTNAME=	tin-1.8.0
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/current/ \
 		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/current/ \
@@ -22,37 +21,25 @@ RESTRICTED=	"Profit from use, sale, trade, or reproduction disallowed"
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=yes
-
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(TIN_USE_INN_SPOOL) && ${TIN_USE_INN_SPOOL} == YES
-INN_DATA_DIR?=	/var/news
-.endif
-
-# Curses support too buggy to activate
-#                 --enable-curses \
-#                 --with-ncurses \
-#
-CONFIGURE_ARGS+= --with-nntp-default-server=news  \
-		--with-mime-default-charset=ISO-8859-1 \
-		--enable-forgery \
-		--enable-break-long-lines \
-		--with-ispell=${PREFIX}/bin/ispell \
-		--with-metamail=${PREFIX}/bin/metamail \
-		--disable-mime-strict-charset \
-		--with-defaults-dir=${PREFIX}/etc \
-		--enable-mh-mail-handling \
-		--with-coffee
-.if defined(TIN_USE_INN_SPOOL) && ${TIN_USE_INN_SPOOL} == YES
-CONFIGURE_ARGS+= --with-inews-dir=${PREFIX}/inn/bin \
-		--with-libdir=${INN_DATA_DIR}/db \
-		--with-spooldir=${INN_DATA_DIR}/spool/articles \
-		--with-nov-dir=${INN_DATA_DIR}/spool/overview
-.else
-CONFIGURE_ARGS+= --enable-nntp-only
-.endif
-
+# for tinews.pl
+USE_TOOLS+=	perl:run
+REPLACE_PERL=	tools/tinews.pl
 BUILD_TARGET=	build
+
+.include "options.mk"
+
+CONFIGURE_ARGS+=	--with-nntp-default-server=news
+CONFIGURE_ARGS+=	--with-mime-default-charset=ISO-8859-1
+CONFIGURE_ARGS+=	--enable-forgery
+CONFIGURE_ARGS+=	--enable-break-long-lines
+CONFIGURE_ARGS+=	--with-gpg=${PREFIX}/bin/gpg
+CONFIGURE_ARGS+=	--with-ispell=${PREFIX}/bin/ispell
+CONFIGURE_ARGS+=	--with-metamail=${PREFIX}/bin/metamail
+CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
+CONFIGURE_ARGS+=	--disable-mime-strict-charset
+CONFIGURE_ARGS+=	--with-defaults-dir=${PREFIX}/etc
+CONFIGURE_ARGS+=	--enable-mh-mail-handling
+CONFIGURE_ARGS+=	--with-coffee
 
 post-patch:
 	@${MV} ${WRKSRC}/doc/tin.1 ${WRKSRC}/doc/tin.1.dist
@@ -67,4 +54,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tin
 	${INSTALL_DATA} ${WRKSRC}/doc/WHATSNEW ${PREFIX}/share/doc/tin
 
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../converters/uulib/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
