@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:30 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/01 18:32:01 tron Exp $
 
-DISTNAME=		daapd-0.2.3d
-PKGREVISION=		3
+DISTNAME=		daapd-0.2.4a
 CATEGORIES=		audio
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tgz
@@ -19,16 +18,15 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=    		${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
 
-PKG_OPTIONS_VAR=PKG_OPTIONS.daapd
-PKG_SUPPORTED_OPTIONS=faad
-.include "../../mk/bsd.options.mk"
+MAKE_ENV+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
-.if !empty(PKG_OPTIONS:Mfaad)
-.include "../../audio/faad2/buildlink3.mk"
-MAKE_ENV+=		WITH_FAAD=1
-.else
-MAKE_ENV+=		WITH_FAAD=0
-.endif
+FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	daapd.8 daapd.cc
+SUBST_SED.paths=	-e 's,/etc/,${PKG_SYSCONFDIR}/,g'
 
 post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
