@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4334 2006/01/01 22:30:22 wiz Exp $
+$NetBSD: TODO,v 1.4335 2006/01/01 22:40:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -898,7 +898,6 @@ Suggested package updates
 	o p5-FileHandle-Unget-0.16.2.1
 	o p5-Font-TTF-0.35
 	o p5-Graph-0.20105
-	o p5-HTML-Element-Extended-1.14
 	o p5-HTML-FillInForm-1.05
 	o p5-HTML-Parser-3.48
 	o p5-HTML-Tree-3.19.03
