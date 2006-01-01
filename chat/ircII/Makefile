@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/12/05 23:55:03 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2006/01/01 16:17:15 ben Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -41,6 +41,10 @@ CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+.if ${OPSYS} == "Interix"
+CONFIGURE_ARGS+=	--with-non-blocking=none
+.endif
 
 pre-install:
 	@(if [ "X${MANZ}" != X"" ]; then \
