@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2005/12/29 06:22:25 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/01 12:58:00 xtraeme Exp $
 #
 
-DISTNAME=	aterm-0.4.2
-PKGREVISION=	7
+DISTNAME=	aterm-1.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://aterm.sourceforge.net/
@@ -38,8 +38,8 @@ CONFIGURE_ARGS+=--enable-background-image \
 # Make aterm setuid root so that tty ownership setting and utmp logging
 # function correctly.
 #
-CONFIGURE_ARGS+=--enable-ttygid
-SPECIAL_PERMS=	${PREFIX}/bin/aterm ${SETUID_ROOT_PERMS}
+CONFIGURE_ARGS+=	--enable-ttygid
+SPECIAL_PERMS=		${PREFIX}/bin/aterm ${SETUID_ROOT_PERMS}
 .endif
 
 .include "../../graphics/jpeg/buildlink3.mk"
