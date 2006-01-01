@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.440 2005/12/31 15:00:15 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.441 2006/01/01 18:40:12 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1362,6 +1362,14 @@ sub set_default_value($$) {
 	}
 }
 
+sub strip_mk_comment($) {
+	my ($text) = @_;
+
+	$text =~ s/(^|[^\\])#.*/$1/;
+	$text =~ s/\\#/#/g;
+	return $text;
+}
+
 #
 # Loading package-specific data from files.
 #
@@ -1636,7 +1644,7 @@ sub checkline_mk_text($$) {
 
 sub checkline_mk_shellword($$) {
 	my ($line, $shellword) = @_;
-	my ($rest);
+	my ($rest, $state);
 
 	if ($shellword =~ qr"^\$\{${regex_varname}(?::.+)?\}$") {
 		# TODO: Check whether the variable needs quoting or not.
@@ -1662,6 +1670,94 @@ sub checkline_mk_shellword($$) {
 
 	} elsif ($shellword ne "" && $shellword !~ qr"^${regex_shellword}$") {
 		$line->log_warning("Invalid shell word \"${shellword}\".");
+	}
+
+	# Note: SWST means [S]hell[W]ord [ST]ate
+	use constant SWST_PLAIN		=> 0;
+	use constant SWST_SQUOT		=> 1;
+	use constant SWST_DQUOT		=> 2;
+	use constant SWST_DQUOT_BACKT	=> 3;
+	use constant SWST_BACKT		=> 4;
+	use constant SWST_BACKT_DQUOT	=> 5;
+	use constant SWST_BACKT_SQUOT	=> 6;
+	use constant statename		=> [
+		"SWST_PLAIN", "SWST_SQUOT", "SWST_DQUOT",
+		"SWST_DQUOT_BACKT", "SWST_BACKT",
+		"SWST_BACKT_DQUOT", "SWST_BACKT_SQUOT"
+	];
+
+	$rest = ($shellword =~ qr"^#") ? "" : $shellword;
+	$state = SWST_PLAIN;
+	while ($rest ne "") {
+
+		# make variables have the same syntax, no matter in which
+		# state we are currently.
+		if ($rest =~ s/^\$\{(${regex_varname})(:[^\{]+)?\}//) {
+			my ($varname, $mod) = ($1, $2);
+
+			$line->log_debug("[checkline_mk_shellword] " . statename->[$state] . ": varname=${varname}" . (defined($mod) ? ", mod=${mod}" : ""));
+
+		} elsif ($state == SWST_PLAIN) {
+			if ($rest =~ s/^[!&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]_a-z|~]+//) {
+			} elsif ($rest =~ s/^\'//) {
+				$state = SWST_SQUOT;
+			} elsif ($rest =~ s/^\"//) {
+				$state = SWST_DQUOT;
+			} elsif ($rest =~ s/^\`//) {
+				$state = SWST_BACKT;
+			} elsif ($rest =~ s/^\\[ "'\(\)*;]//) {
+			} elsif ($rest =~ s/^\$\$([0-9A-Z_a-z]+)//
+			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+)\}//) {
+				my ($shvarname) = ($1);
+				$line->log_debug("[checkline_mk_shellword] Unquoted shell variable \"${shvarname}\".");
+			} else {
+				last;
+			}
+
+		} elsif ($state == SWST_SQUOT) {
+			if ($rest =~ s/^\'//) {
+				$state = SWST_PLAIN;
+			} elsif ($rest =~ s/^[^\$\']+//) {
+			} elsif ($rest =~ s/^\$\$//) {
+			} else {
+				last;
+			}
+
+		} elsif ($state == SWST_DQUOT) {
+			if ($rest =~ s/^\"//) {
+				$state = SWST_PLAIN;
+			} elsif ($rest =~ s/^[^\$"\\\`]//) {
+			} elsif ($rest =~ s/^\\[\\\"\`\$]//) {
+			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
+			    || $rest =~ s/^\$\$([0-9A-Za-z_]+)//) {
+				my ($varname) = ($1);
+				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${varname}.");
+			} elsif ($rest =~ s/^(\\[\(\)n])//) {
+				my ($paren) = ($1);
+				$line->log_warning("Please use \"\\${paren}\" instead of \"${paren}\".");
+				$line->explain(
+					"Although the current code may work, it is not good style to rely on",
+					"the shell passing \"\\${paren}\" exactly as is, and not discarding the",
+					"backslash. Alternatively you can use single quotes instead of double",
+					"quotes.");
+			} else {
+				last;
+			}
+
+		} elsif ($state == SWST_BACKT) {
+			if ($rest =~ s/^\`//) {
+				$state = SWST_PLAIN;
+			} elsif ($rest =~ s/^[^\\\"\'\`\$]+//) {
+			} else {
+				last;
+			}
+
+		} else {
+			last;
+		}
+	}
+	if ($rest ne "") {
+		$line->log_debug("[checkline_mk_shellword] " . statename->[$state] . ": rest=${rest}");
 	}
 }
 
@@ -1696,6 +1792,7 @@ sub checkline_mk_shelltext($$) {
 		my ($shellword) = ($1);
 
 		$line->log_debug("shellword=$shellword");
+		checkline_mk_shellword($line, $shellword);
 
 		#
 		# Actions associated with the current state
@@ -2258,7 +2355,7 @@ sub checkline_mk_varassign($$$$$) {
 	if (!exists(non_shellcode_vars->{$varbase}) &&
 	    !exists(non_shellcode_vars->{$varname}) &&
 	    $varname !~ regex_non_shellcode_vars) {
-		checkline_mk_shelltext($line, $value);
+		checkline_mk_shelltext($line, strip_mk_comment($value));
 	}
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
 
