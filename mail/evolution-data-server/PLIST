@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/10/12 21:55:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/01/01 23:56:01 wiz Exp $
 include/evolution-data-server-1.4/camel/broken-date-parser.h
 include/evolution-data-server-1.4/camel/camel-address.h
 include/evolution-data-server-1.4/camel/camel-arg.h
@@ -404,7 +404,6 @@ share/doc/libedataserver/libedataserver-e-trie.html
 share/doc/libedataserver/libedataserver-e-uid.html
 share/doc/libedataserver/libedataserver-e-url.html
 share/doc/libedataserver/libedataserver-e-util.html
-share/doc/libedataserver/libedataserver-e-xml-hash-utils.html
 share/doc/libedataserver/libedataserver-md5-utils.html
 share/doc/libedataserver/libedataserver.devhelp
 share/doc/libedataserver/right.png
