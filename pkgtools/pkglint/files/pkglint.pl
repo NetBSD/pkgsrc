@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.441 2006/01/01 18:40:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.442 2006/01/01 19:07:20 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3114,7 +3114,7 @@ sub checkfile_patches_patch($) {
 				__INTERIX
 				__linux__
 				__MINGW32__
-				__NetBSD__ __NetBSD_Version_
+				__NetBSD__ __NetBSD_Version__
 				__OpenBSD__
 				__SVR4
 				__sun
