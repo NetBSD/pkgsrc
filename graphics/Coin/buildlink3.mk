@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/04 07:21:24 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/01 13:34:05 peter Exp $
 #
 # This Makefile fragment is included by packages that use Coin.
 #
@@ -15,7 +15,7 @@ BUILDLINK_DEPENDS+=	Coin
 .if !empty(COIN_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			Coin
 BUILDLINK_DEPENDS.Coin+=		Coin>=2.2.1
-BUILDLINK_PKGSRCDIR.Coin?=		../../wip/Coin
+BUILDLINK_PKGSRCDIR.Coin?=		../../graphics/Coin
 
 .include "../../graphics/simage/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
