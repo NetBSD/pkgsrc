@@ -1,4 +1,4 @@
-# $NetBSD: obsolete.mk,v 1.25 2005/12/02 17:29:42 wiz Exp $
+# $NetBSD: obsolete.mk,v 1.26 2006/01/01 18:53:03 wiz Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -23,25 +23,3 @@ PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable KERBEROS used, use PKG_DEF
 .endif
 
 PKG_OPTIONS_LEGACY_VARS+=	USE_INET6:inet6
-
-# remove everything below this line after 2005Q4
-.if defined(USE_SOCKS)
-.  if ${USE_SOCKS} == "4" && !empty(PKG_SUPPORTED_OPTIONS:Msocks4)
-PKG_LEGACY_OPTIONS+=	socks4
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable SOCKS used, use PKG_DEFAULT_OPTIONS+=socks4 instead."
-.  elif ${USE_SOCKS} == "5" && !empty(PKG_SUPPORTED_OPTIONS:Msocks5)
-PKG_LEGACY_OPTIONS+=	socks5
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable SOCKS used, use PKG_DEFAULT_OPTIONS+=socks5 instead."
-.  endif
-.endif
-PKG_OPTIONS_LEGACY_VARS+=	USE_CANNA:canna
-PKG_OPTIONS_LEGACY_VARS+=	USE_CUPS:cups
-PKG_OPTIONS_LEGACY_VARS+=	USE_I586:i586
-PKG_OPTIONS_LEGACY_VARS+=	USE_OPENLDAP:ldap
-PKG_OPTIONS_LEGACY_VARS+=	USE_OSS:oss
-PKG_OPTIONS_LEGACY_VARS+=	USE_RSAREF2:rsaref
-PKG_OPTIONS_LEGACY_VARS+=	USE_SASL:sasl
-PKG_OPTIONS_LEGACY_VARS+=	USE_SASL2:sasl
-PKG_OPTIONS_LEGACY_VARS+=	USE_SJ3:sj3
-PKG_OPTIONS_LEGACY_VARS+=	USE_WNN4:wnn4
-PKG_OPTIONS_LEGACY_VARS+=	USE_XFACE:xface
