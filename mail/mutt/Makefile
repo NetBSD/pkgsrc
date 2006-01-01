@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2005/12/29 06:21:51 jlam Exp $
+# $NetBSD: Makefile,v 1.133 2006/01/01 13:28:02 ben Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -35,6 +35,14 @@ CONFIGURE_ARGS+=	--without-wc-funcs
 
 .if ${LOWER_OPSYS} == "irix5.3"
 CONFIGURE_ENV+=		ac_cv_header_inttypes_h=no
+.endif
+
+.if ${OPSYS} == "Interix"
+SUBST_CLASSES+=		mgroup
+SUBST_MESSAGE.mgroup=	"Configuring mail group."
+SUBST_STAGE.mgroup=	post-patch
+SUBST_FILES.mgroup=	configure
+SUBST_SED.mgroup=	-e "s,DOTLOCK_GROUP='mail',DOTLOCK_GROUP='+Administrators',"
 .endif
 
 # There is a problem using /bin/sh on old NetBSD releases, so use /bin/ksh
