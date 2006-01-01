@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12293 2006/01/01 22:11:39 wiz Exp $
+$NetBSD: CHANGES,v 1.12294 2006/01/01 22:20:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -17,3 +17,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/ROMInfo to 2.6 [wiz 2006-01-01]
 	Updated emulators/ZIPIdent to 2.7 [wiz 2006-01-01]
 	Updated converters/p5-MIME-Base64 to 3.07 [wiz 2006-01-01]
+	Updated security/p5-Digest to 1.14 [wiz 2006-01-01]
