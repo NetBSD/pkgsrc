@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4328 2006/01/01 16:12:55 wiz Exp $
+$NetBSD: TODO,v 1.4329 2006/01/01 18:30:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -864,10 +864,11 @@ Suggested package updates
 	o p5-CDDB-1.16
 	o p5-CGI-Application-4.04.02
 	o p5-CGI-Minimal-1.24
-	o p5-Class-Autouse-1.22
+	o p5-Class-Autouse-1.23
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03
 	o p5-Compress-Bzip2-2.09
+	o p5-Config-Tiny-2.04
 	o p5-Convert-ASN1-0.19
 	o p5-Convert-BER-1.3101
 	o p5-Convert-PEM-0.07
@@ -882,7 +883,7 @@ Suggested package updates
 	o p5-DBD-mysql-3.0002
 	o p5-DBD-postgresql-1.32
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-DBIx-SearchBuilder-1.36
+	o p5-DBIx-SearchBuilder-1.38
 	o p5-DB_File-1.810
 	o p5-Data-FormValidator-4.02
 	o p5-Data-TemporaryBag-0.08
@@ -901,6 +902,7 @@ Suggested package updates
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-ExtUtils-XSBuilder-0.27
 	o p5-File-DirSync-1.12
+	o p5-File-Remove-0.31
 	o p5-FileHandle-Unget-0.16.2.1
 	o p5-Font-TTF-0.35
 	o p5-Graph-0.20105
@@ -1364,6 +1366,7 @@ Suggested package updates
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
+	o xvidcore-1.1.0
 	o xwrits-2.22
 	o xzip-182
 	o yaesu-0.13
