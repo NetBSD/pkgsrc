@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2006/01/01 18:59:04 ben Exp $
+
+--- src/msmtp.c.orig	Sun Aug 14 13:13:02 2005
++++ src/msmtp.c
+@@ -3382,5 +3382,5 @@ exit:
+ 	list_xfree(errmsg, free);
+     }
+ 
+-    return error_code;
++    return (error_code == EX_OK) ? 0 : error_code;
+ }
