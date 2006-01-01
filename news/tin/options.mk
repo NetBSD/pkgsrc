@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2006/01/01 16:10:51 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2006/01/01 18:52:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tin
 PKG_SUPPORTED_OPTIONS=	curses inet6 tin-use-inn-spool
 # untested
 #PKG_SUPPORTED_OPTIONS+=	icu socks
-# remove after 2005Q1
+# remove after 2006Q1
 PKG_OPTIONS_LEGACY_VARS=	TIN_USE_INN_SPOOL:tin-use-inn-spool
 
 .include "../../mk/bsd.options.mk"
