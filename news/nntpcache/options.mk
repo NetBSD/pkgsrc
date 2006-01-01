@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/12/01 20:10:41 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2006/01/01 18:53:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nntpcache
 PKG_SUPPORTED_OPTIONS=	nntpcache-pgp
@@ -7,8 +7,6 @@ PKG_SUPPORTED_OPTIONS=	nntpcache-pgp
 # authinfo_ldap.c:81: error: dereferencing pointer to incomplete type
 # authinfo_ldap.c:47: warning: unused variable `dom'
 # PKG_SUPPORTED_OPTIONS+=	openldap
-# remove after 2005Q4
-PKG_OPTIONS_LEGACY_VARS+=	NNTP_USE_PGP:nntpcache-pgp
 
 .include "../../mk/bsd.options.mk"
 
