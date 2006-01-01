@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/12/29 06:22:18 jlam Exp $
+# $NetBSD: Makefile.common,v 1.27 2006/01/01 17:31:53 jmmv Exp $
 #
 
 DISTNAME=		gnome-vfs-2.12.1.1
@@ -43,6 +43,16 @@ EGDIR=			${PREFIX}/share/examples/gnome-vfs-2.0
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+# XXX Work-around for a problem in the configure script which checks for
+# statvfs(2) having SVR4 in mind.  Solving this in the script itself could
+# be the right way to go, but it is out of the scope of a local patch; it
+# could require changing the code a lot, which is already very... complex.
+.if !exists(/usr/include/fstyp.h)
+post-wrapper:
+	${MKDIR} -p ${BUILDLINK_DIR}/include/sys
+	${TOUCH} ${BUILDLINK_DIR}/include/sys/fstyp.h
+.endif
 
 #
 # The following stuff is to allow easy building of modules distributed within
