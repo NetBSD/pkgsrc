@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.26 2005/12/06 17:17:30 rillig Exp $
+# $NetBSD: subst.mk,v 1.27 2006/01/01 22:30:35 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -64,14 +64,14 @@ ${SUBST_STAGE.${_class_}}: subst-${_class_}
 subst-${_class_}: ${_SUBST_TARGETS.${_class_}}
 
 .PHONY: subst-${_class_}-message
- subst-${_class_}-message:
+subst-${_class_}-message:
 .  if defined(SUBST_MESSAGE.${_class_})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_SUBST_MSG} "=> "${SUBST_MESSAGE.${_class_}}
 .  endif
 
 .PHONY: subst-${_class_}-cookie
- subst-${_class_}-cookie:
+subst-${_class_}-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TOUCH} ${TOUCH_FLAGS} ${_SUBST_COOKIE.${_class_}}
 
@@ -99,7 +99,7 @@ ${_SUBST_COOKIE.${_class_}}:
 		elif ${TEST} -f "$$file"; then				\
 			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-text file \"$$file\"." 1>&2; \
 		else							\
-			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-existant file \"$$file\"." 1>&2; \
+			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-existent file \"$$file\"." 1>&2; \
 		fi;							\
 	done
 .endfor
