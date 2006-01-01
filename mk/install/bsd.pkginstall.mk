@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.33 2005/12/29 14:10:01 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.34 2006/01/01 18:53:03 wiz Exp $
 #
 # This Makefile fragment is included by mk/install/pkginstall.mk and is
 # the implemenation file for the common INSTALL/DEINSTALL scripts
@@ -118,11 +118,6 @@ _PKG_USER_HOME?=	/nonexistent
 _PKG_USER_SHELL?=	${NOLOGIN}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME:Q}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL:Q}
-
-# REMOVE: after 2005Q4
-.if !empty(PKG_USERS:M*\\\\*)
-PKG_FAIL_REASON+=	"[bsd.pkginstall.mk] PKG_USERS must not contain double backslashes."
-.endif
 
 # Interix is very special in that users are groups cannot have the
 # same name.  Interix.mk tries to work around this by overriding

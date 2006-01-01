@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/11/24 19:04:34 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2006/01/01 18:53:03 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -11,10 +11,6 @@ PKG_SUPPORTED_OPTIONS+=		kerberos
 PKG_OPTIONS_VAR=	PKG_OPTIONS.imap-uw
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl imapuw-cleartextpwd imapuw-whoson
 PKG_SUGGESTED_OPTIONS+=	ssl imapuw-cleartextpwd
-# remove after 2005q4
-PKG_OPTIONS_LEGACY_VARS+=	IMAP_UW_NO_SSL:-ssl
-PKG_OPTIONS_LEGACY_VARS+=	IMAP_UW_USE_WHOSON:imapuw-whoson
-PKG_OPTIONS_LEGACY_VARS+=	IMAP_UW_NO_CLEARTEXT:-imapuw-cleartextpwd
 
 .include "../../mk/bsd.options.mk"
 
