@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.445 2006/01/01 21:58:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.446 2006/01/01 22:08:22 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1780,8 +1780,9 @@ sub checkline_mk_shelltext($$) {
 	use constant SCST_SED		=> 40;
 	use constant SCST_SED_E		=> 41;
 	use constant SCST_SET		=> 50;
-	use constant SCST_FOR_IF_WHILE	=> 60;
+	use constant SCST_IF_WHILE	=> 60;
 	use constant SCST_CASE		=> 70;
+	use constant SCST_FOR		=> 80;
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
 		my ($mkdir_cmd) = ($1);
@@ -1798,7 +1799,7 @@ sub checkline_mk_shelltext($$) {
 
 		$line->log_debug("shellword=$shellword");
 
-		checkline_mk_shellword($line, $shellword, ($state != SCST_CASE));
+		checkline_mk_shellword($line, $shellword, ($state != SCST_CASE && $state != SCST_FOR));
 
 		#
 		# Actions associated with the current state
@@ -1833,7 +1834,7 @@ sub checkline_mk_shelltext($$) {
 				"temporary files to save the output of the command.");
 		}
 
-		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_FOR_IF_WHILE && !$set_e_mode) {
+		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_IF_WHILE && $state != SCST_FOR && !$set_e_mode) {
 			$line->log_warning("A semicolon should only be used to separate commands after switching to \"set -e\" mode.");
 			$line->explain(
 				"Older versions of the NetBSD make(1) had run the shell commands using",
@@ -1865,12 +1866,14 @@ sub checkline_mk_shelltext($$) {
 				$state = SCST_SED;
 			} elsif ($shellword eq "set") {
 				$state = SCST_SET;
-			} elsif ($shellword =~ qr"^(?:for|if|elif|while)$") {
-				$state = SCST_FOR_IF_WHILE;
+			} elsif ($shellword =~ qr"^(?:if|elif|while)$") {
+				$state = SCST_IF_WHILE;
 			} elsif ($shellword =~ qr"^(?:then|else|do)$") {
 				$state = SCST_START;
 			} elsif ($shellword eq "case") {
 				$state = SCST_CASE;
+			} elsif ($shellword eq "for") {
+				$state = SCST_FOR;
 			} else {
 				$state = SCST_CONT;
 			}
