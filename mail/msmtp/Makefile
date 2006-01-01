@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/16 10:59:08 adam Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/01 17:02:21 ben Exp $
 
 DISTNAME=	msmtp-1.4.4
 CATEGORIES=	mail
@@ -14,6 +14,11 @@ GNU_CONFIGURE=		yes
 EGDIR=		${PREFIX}/share/examples/msmtp
 
 INFO_FILES=	msmtp.info
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Interix"
+CPPFLAGS+=	-D__WINSOCK
+.endif
 
 .include "options.mk"
 
