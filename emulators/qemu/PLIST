@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2005/10/23 19:56:42 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/01/01 13:48:45 xtraeme Exp $
 bin/qemu
 bin/qemu-img
+bin/qemu-system-arm
 bin/qemu-system-mips
 bin/qemu-system-ppc
 bin/qemu-system-sparc

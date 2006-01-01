@@ -1,13 +1,13 @@
-$NetBSD: patch-am,v 1.1 2004/11/15 11:35:30 xtraeme Exp $
+$NetBSD: patch-am,v 1.2 2006/01/01 13:48:45 xtraeme Exp $
 
---- audio/ossaudio.c.orig	2004-11-15 12:07:01.000000000 +0100
-+++ audio/ossaudio.c	2004-11-15 12:07:55.000000000 +0100
-@@ -164,7 +164,7 @@
+--- audio/ossaudio.c.orig	2005-12-19 17:51:53.000000000 -0500
++++ audio/ossaudio.c
+@@ -229,7 +229,7 @@ static int oss_open (int in, struct oss_
          goto err;
      }
  
 -    if (ioctl (fd, SNDCTL_DSP_NONBLOCK)) {
 +    if (ioctl (fd, SNDCTL_DSP_NONBLOCK, NULL)) {
-         dolog ("Could not initialize audio hardware\n"
-                "Failed to set non-blocking mode\n"
-                "Reason: %s\n",
+         oss_logerr2 (errno, typ, "Failed to set non-blocking mode\n");
+         goto err;
+     }
