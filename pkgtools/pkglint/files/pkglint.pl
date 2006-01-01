@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.443 2006/01/01 19:58:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.444 2006/01/01 21:55:44 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1642,8 +1642,8 @@ sub checkline_mk_text($$) {
 
 }
 
-sub checkline_mk_shellword($$) {
-	my ($line, $shellword) = @_;
+sub checkline_mk_shellword($$$) {
+	my ($line, $shellword, $check_quoting) = @_;
 	my ($rest, $state);
 
 	if ($shellword =~ qr"^\$\{${regex_varname}(?::.+)?\}$") {
@@ -1695,7 +1695,9 @@ sub checkline_mk_shellword($$) {
 		if ($rest =~ s/^\$\{(${regex_varname})(:[^\{]+)?\}//) {
 			my ($varname, $mod) = ($1, $2);
 
-			$line->log_debug("[checkline_mk_shellword] " . statename->[$state] . ": varname=${varname}" . (defined($mod) ? ", mod=${mod}" : ""));
+			if ($opt_warn_extra && $state != SWST_PLAIN) {
+				$line->log_debug("Possibly misquoted make variable \"${varname}\".");
+			}
 
 		} elsif ($state == SWST_PLAIN) {
 			if ($rest =~ s/^[!&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]_a-z|~]+//) {
@@ -1709,7 +1711,9 @@ sub checkline_mk_shellword($$) {
 			} elsif ($rest =~ s/^\$\$([0-9A-Z_a-z]+)//
 			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+)\}//) {
 				my ($shvarname) = ($1);
-				$line->log_debug("[checkline_mk_shellword] Unquoted shell variable \"${shvarname}\".");
+				if ($opt_warn_extra and $check_quoting) {
+					$line->log_warning("Unquoted shell variable \"${shvarname}\".");
+				}
 			} else {
 				last;
 			}
@@ -1777,6 +1781,7 @@ sub checkline_mk_shelltext($$) {
 	use constant SCST_SED_E		=> 41;
 	use constant SCST_SET		=> 50;
 	use constant SCST_FOR_IF_WHILE	=> 60;
+	use constant SCST_CASE		=> 70;
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
 		my ($mkdir_cmd) = ($1);
@@ -1792,7 +1797,8 @@ sub checkline_mk_shelltext($$) {
 		my ($shellword) = ($1);
 
 		$line->log_debug("shellword=$shellword");
-		checkline_mk_shellword($line, $shellword);
+
+		checkline_mk_shellword($line, $shellword, ($state != SCST_CASE));
 
 		#
 		# Actions associated with the current state
@@ -1863,6 +1869,8 @@ sub checkline_mk_shelltext($$) {
 				$state = SCST_FOR_IF_WHILE;
 			} elsif ($shellword =~ qr"^(?:then|else|do)$") {
 				$state = SCST_START;
+			} elsif ($shellword eq "case") {
+				$state = SCST_CASE;
 			} else {
 				$state = SCST_CONT;
 			}
@@ -1888,6 +1896,12 @@ sub checkline_mk_shelltext($$) {
 		} elsif ($state == SCST_SET && $shellword eq "-e") {
 			$set_e_mode = true;
 			$state = SCST_CONT;
+
+		} elsif ($state == SCST_CASE) {
+			$state = SCST_CONT;
+
+		} else {
+			# Keep the current state.
 		}
 	}
 
@@ -2149,7 +2163,7 @@ sub checkline_mk_vartype_basic($$$$$) {
 		checkline_relative_pkgdir($line, $value);
 
 	} elsif ($type eq "ShellWord") {
-		checkline_mk_shellword($line, $value);
+		checkline_mk_shellword($line, $value, true);
 
 	} elsif ($type eq "Stage") {
 		if ($value !~ qr"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
@@ -2342,7 +2356,7 @@ sub checkline_mk_varassign($$$$$) {
 		MANSOURCEPATH MASTER_SITES MASTER_SORT_AWK
 		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON PKG_SUGGESTED_OPTIONS PKG_SUPPORTED_OPTIONS PRINT_PLIST_AWK
 		REPLACE_INTERPRETER RESTRICTED
-		SUBST_CLASSES SUBST_MESSAGE
+		SUBST_CLASSES SUBST_MESSAGE SUBST_SED
 		TEST_TARGET
 		USE_TOOLS
 	));
