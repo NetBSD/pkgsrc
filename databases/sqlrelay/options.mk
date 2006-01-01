@@ -1,19 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2006/01/01 18:53:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sqlrelay
 PKG_SUPPORTED_OPTIONS+= mysql pgsql
-
-# remove legacy handling after 2005Q4
-.if defined(SQLRELAY_DATABASES)
-.if !empty(SQLRELAY_DATABASES:Mmysql)
-PKG_LEGACY_OPTIONS+=	mysql
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable SQLRELAY_DATABASES used, use PKG_OPTIONS.sqlrelay+=mysql instead."
-.endif
-.if !empty(SQLRELAY_DATABASES:Mpostgresql)
-PKG_LEGACY_OPTIONS+=	pgsql
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable SQLRELAY_DATABASES used, use PKG_OPTIONS.sqlrelay+=pqsql instead."
-.endif
-.endif
 
 .include "../../mk/bsd.options.mk"
 
