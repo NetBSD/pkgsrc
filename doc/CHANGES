@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12290 2006/01/01 18:36:51 tron Exp $
+$NetBSD: CHANGES,v 1.12291 2006/01/01 18:38:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -10,3 +10,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/nautilus to 2.12.1nb2 [jmmv 2006-01-01]
 	Updated net/howl to 1.0.0 [tron 2006-01-01]
 	Updated audio/daapd to 0.2.4a [tron 2006-01-01]
+	Updated textproc/flyspell to 1.7k [wiz 2006-01-01]
