@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4325 2006/01/01 11:13:39 wiz Exp $
+$NetBSD: TODO,v 1.4326 2006/01/01 12:59:00 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -370,7 +370,6 @@ Suggested package updates
 	o ast-ksh-20040229
 	o asterisk-1.2.0
 	o astyle-1.15.3
-	o aterm-1.0.0 [xtraeme]
 	o auctex-11.82
 	o audacity-1.2.4
 	o autogen-5.7.3
