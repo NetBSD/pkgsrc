@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4327 2006/01/01 13:49:35 xtraeme Exp $
+$NetBSD: TODO,v 1.4328 2006/01/01 16:12:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1237,7 +1237,6 @@ Suggested package updates
 	o tet3-3.6b
 	o tfmxplay-1.1.6
 	o tidy-20051006
-	o tin-1.8.0
 	o tinyproxy-1.7.0
 	o tk-8.4.12
 	o tk83-8.3.5
