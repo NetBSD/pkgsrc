@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.446 2006/01/01 22:08:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.447 2006/01/02 01:20:31 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2308,6 +2308,7 @@ sub checkline_mk_vartype($$$$$) {
 			if ($varname !~ qr"_MK$") {
 				$line->log_info("[checkline_mk_vartype] Unchecked variable ${varname}.");
 			}
+			checkline_mk_text($line, $value);
 
 		} elsif ($type =~ qr"^List(!?)(\+?)(?: of (.*))?$") {
 			my ($internal_list, $append_only, $element_type) = ($1 eq "!", $2 eq "+", $3);
@@ -2349,33 +2350,8 @@ sub checkline_mk_varassign($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
 	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
 
-	use constant non_shellcode_vars => array_to_hash(qw(
-		BUILDLINK_TRANSFORM BUILD_DEPENDS BUILD_TARGET
-		CATEGORIES CFLAGS CPPFLAGS COMMENT CONFLICTS
-		DEPENDS DISTNAME
-		EXTRACT_SUFX EXTRACT_USING
-		INSTALL_TARGET INTERACTIVE_STAGE
-		MANSOURCEPATH MASTER_SITES MASTER_SORT_AWK
-		PKGNAME PKGSRC_USE_TOOLS PKG_FAIL_REASON PKG_SUGGESTED_OPTIONS PKG_SUPPORTED_OPTIONS PRINT_PLIST_AWK
-		REPLACE_INTERPRETER RESTRICTED
-		SUBST_CLASSES SUBST_MESSAGE SUBST_SED
-		TEST_TARGET
-		USE_TOOLS
-	));
-	use constant regex_non_shellcode_vars => qr"^(?:
-		  .*_AWK
-		| .*_AWK_.*
-		)$"x;
-
-	checkline_mk_text($line, $value);
-	if (!exists(non_shellcode_vars->{$varbase}) &&
-	    !exists(non_shellcode_vars->{$varname}) &&
-	    $varname !~ regex_non_shellcode_vars) {
-		checkline_mk_shelltext($line, strip_mk_comment($value));
-	}
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
 
-			
 	if (!$is_internal && $varname =~ qr"^_") {
 		$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
 	}
@@ -2616,6 +2592,7 @@ sub checklines_mk($) {
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
+		checkline_trailing_whitespace($line);
 		checkline_spellcheck($line);
 
 		if ($text =~ qr"^\s*$" || $text =~ qr"^#") {
