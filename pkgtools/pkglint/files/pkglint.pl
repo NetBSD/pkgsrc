@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.448 2006/01/02 03:02:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.449 2006/01/02 10:09:03 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1695,8 +1695,10 @@ sub checkline_mk_shellword($$$) {
 		if ($rest =~ s/^\$\{(${regex_varname})(:[^\{]+)?\}//) {
 			my ($varname, $mod) = ($1, $2);
 
+			# TODO: Make lists of variables that may appear
+			# in other quoting states than SWST_PLAIN.
 			if ($opt_warn_extra && $state != SWST_PLAIN) {
-				$line->log_debug("Possibly misquoted make variable \"${varname}\".");
+				$line->log_debug("Possibly misquoted make variable \"${varname}\" in " . statename->[$state] . ".");
 			}
 
 		} elsif ($state == SWST_PLAIN) {
