@@ -19,30 +19,501 @@ RA_LOCAL_LINK = ../../subversion/libsvn_ra_local/libsvn_ra_local-1.la
 RA_SVN_DEPS = subversion/libsvn_ra_svn/libsvn_ra_svn-1.la
 RA_SVN_LINK = ../../subversion/libsvn_ra_svn/libsvn_ra_svn-1.la
 
-BUILD_DIRS = subversion/tests/libsvn_fs_base subversion/tests/libsvn_subr subversion/tests/libsvn_diff subversion/bindings/java/javahl/src/org/tigris/subversion/javahl subversion/bindings/java/javahl/classes subversion/bindings/java/javahl/include subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests subversion/libsvn_client subversion/libsvn_delta subversion/libsvn_diff subversion/libsvn_fs subversion/libsvn_fs_base subversion/libsvn_fs_base/bdb subversion/libsvn_fs_base/util subversion/libsvn_fs_fs subversion/libsvn_ra subversion/libsvn_ra_dav subversion/libsvn_ra_local subversion/libsvn_ra_svn subversion/libsvn_repos subversion/libsvn_subr subversion/bindings/swig/perl/libsvn_swig_perl subversion/bindings/swig/python/libsvn_swig_py subversion/bindings/swig/ruby/libsvn_swig_ruby subversion/tests subversion/libsvn_wc subversion/bindings/java/javahl/native subversion/po subversion/tests/libsvn_fs subversion/mod_authz_svn subversion/mod_dav_svn subversion/tests/libsvn_ra_local subversion/tests/libsvn_delta subversion/tests/libsvn_repos subversion/clients/cmdline contrib/client-side/svn-push subversion/svnadmin subversion/svndumpfilter subversion/svnlook subversion/svnserve subversion/svnversion subversion/tests/libsvn_wc subversion/tests/clients/cmdline subversion/bindings/swig/python subversion/bindings/swig/perl subversion/bindings/swig/ruby
+BUILD_DIRS = subversion/tests/libsvn_fs_base subversion/tests/libsvn_subr tools/diff subversion/tests/libsvn_diff subversion/tests/libsvn_fs subversion/bindings/java/javahl/src/org/tigris/subversion/javahl subversion/bindings/java/javahl/classes subversion/bindings/java/javahl/include subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests subversion/libsvn_client subversion/libsvn_delta subversion/libsvn_diff subversion/libsvn_fs subversion/libsvn_fs_base subversion/libsvn_fs_base/bdb subversion/libsvn_fs_base/util subversion/libsvn_fs_fs subversion/libsvn_ra subversion/libsvn_ra_dav subversion/libsvn_ra_local subversion/libsvn_ra_svn subversion/libsvn_repos subversion/libsvn_subr subversion/bindings/swig/perl/libsvn_swig_perl subversion/bindings/swig/python/libsvn_swig_py subversion/bindings/swig/ruby/libsvn_swig_ruby subversion/tests subversion/libsvn_wc subversion/bindings/java/javahl/native subversion/po subversion/mod_authz_svn subversion/mod_dav_svn contrib/client-side subversion/tests/libsvn_ra_local subversion/tests/libsvn_delta subversion/tests/libsvn_repos subversion/clients/cmdline contrib/client-side/svn-push subversion/svnadmin subversion/svndumpfilter subversion/svnlook subversion/svnserve subversion/svnversion subversion/bindings/swig subversion/tests/libsvn_wc subversion/tests/clients/cmdline subversion/bindings/swig/python subversion/bindings/swig/perl subversion/bindings/swig/ruby subversion/bindings/swig/proxy
 
-BDB_TEST_DEPS = subversion/tests/libsvn_fs_base/changes-test$(EXEEXT) subversion/tests/libsvn_fs_base/fs-test$(EXEEXT) subversion/tests/libsvn_fs_base/key-test$(EXEEXT) subversion/tests/libsvn_fs_base/skel-test$(EXEEXT) subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT)
+BDB_TEST_DEPS = subversion/tests/libsvn_fs_base/changes-test$(EXEEXT) subversion/tests/libsvn_fs_base/fs-base-test$(EXEEXT) subversion/tests/libsvn_fs_base/key-test$(EXEEXT) subversion/tests/libsvn_fs_base/skel-test$(EXEEXT) subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT)
 
-BDB_TEST_PROGRAMS = subversion/tests/libsvn_fs_base/changes-test$(EXEEXT) subversion/tests/libsvn_fs_base/fs-test$(EXEEXT) subversion/tests/libsvn_fs_base/key-test$(EXEEXT) subversion/tests/libsvn_fs_base/skel-test$(EXEEXT) subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT)
+BDB_TEST_PROGRAMS = subversion/tests/libsvn_fs_base/changes-test$(EXEEXT) subversion/tests/libsvn_fs_base/fs-base-test$(EXEEXT) subversion/tests/libsvn_fs_base/key-test$(EXEEXT) subversion/tests/libsvn_fs_base/skel-test$(EXEEXT) subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT)
 
-TEST_DEPS = subversion/tests/libsvn_subr/compat-test$(EXEEXT) subversion/tests/libsvn_subr/config-test$(EXEEXT) subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT) subversion/tests/libsvn_diff/diff-test$(EXEEXT) subversion/tests/libsvn_diff/diff3-test$(EXEEXT) subversion/tests/libsvn_diff/diff4-test$(EXEEXT) subversion/tests/libsvn_subr/hashdump-test$(EXEEXT) subversion/tests/libsvn_fs/locks-test$(EXEEXT) subversion/tests/libsvn_subr/opt-test$(EXEEXT) subversion/tests/libsvn_subr/path-test$(EXEEXT) subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT) subversion/tests/libsvn_delta/random-test$(EXEEXT) subversion/tests/libsvn_repos/repos-test$(EXEEXT) subversion/tests/libsvn_subr/stream-test$(EXEEXT) subversion/tests/libsvn_subr/string-test$(EXEEXT) subversion/tests/libsvn_delta/svndiff-test$(EXEEXT) subversion/tests/libsvn_subr/target-test$(EXEEXT) subversion/tests/libsvn_subr/time-test$(EXEEXT) subversion/tests/libsvn_wc/translate-test$(EXEEXT) subversion/tests/libsvn_subr/utf-test$(EXEEXT) subversion/tests/libsvn_delta/vdelta-test$(EXEEXT) subversion/tests/libsvn_subr/target-test.py subversion/tests/clients/cmdline/getopt_tests.py subversion/tests/clients/cmdline/basic_tests.py subversion/tests/clients/cmdline/commit_tests.py subversion/tests/clients/cmdline/update_tests.py subversion/tests/clients/cmdline/switch_tests.py subversion/tests/clients/cmdline/prop_tests.py subversion/tests/clients/cmdline/schedule_tests.py subversion/tests/clients/cmdline/log_tests.py subversion/tests/clients/cmdline/copy_tests.py subversion/tests/clients/cmdline/diff_tests.py subversion/tests/clients/cmdline/export_tests.py subversion/tests/clients/cmdline/externals_tests.py subversion/tests/clients/cmdline/merge_tests.py subversion/tests/clients/cmdline/revert_tests.py subversion/tests/clients/cmdline/stat_tests.py subversion/tests/clients/cmdline/trans_tests.py subversion/tests/clients/cmdline/autoprop_tests.py subversion/tests/clients/cmdline/blame_tests.py subversion/tests/clients/cmdline/special_tests.py subversion/tests/clients/cmdline/svnadmin_tests.py subversion/tests/clients/cmdline/svnlook_tests.py subversion/tests/clients/cmdline/svnversion_tests.py subversion/tests/clients/cmdline/utf8_tests.py subversion/tests/clients/cmdline/history_tests.py subversion/tests/clients/cmdline/lock_tests.py subversion/tests/clients/cmdline/cat_tests.py subversion/tests/clients/cmdline/import_tests.py
+TEST_DEPS = subversion/tests/libsvn_subr/compat-test$(EXEEXT) subversion/tests/libsvn_subr/config-test$(EXEEXT) subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT) subversion/tests/libsvn_fs/fs-test$(EXEEXT) subversion/tests/libsvn_subr/hashdump-test$(EXEEXT) subversion/tests/libsvn_fs/locks-test$(EXEEXT) subversion/tests/libsvn_subr/opt-test$(EXEEXT) subversion/tests/libsvn_subr/path-test$(EXEEXT) subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT) subversion/tests/libsvn_delta/random-test$(EXEEXT) subversion/tests/libsvn_repos/repos-test$(EXEEXT) subversion/tests/libsvn_subr/stream-test$(EXEEXT) subversion/tests/libsvn_subr/string-test$(EXEEXT) subversion/tests/libsvn_delta/svndiff-test$(EXEEXT) subversion/tests/libsvn_subr/target-test$(EXEEXT) subversion/tests/libsvn_subr/time-test$(EXEEXT) subversion/tests/libsvn_wc/translate-test$(EXEEXT) subversion/tests/libsvn_subr/utf-test$(EXEEXT) subversion/tests/libsvn_delta/vdelta-test$(EXEEXT) subversion/tests/libsvn_subr/target-test.py subversion/tests/clients/cmdline/getopt_tests.py subversion/tests/clients/cmdline/basic_tests.py subversion/tests/clients/cmdline/commit_tests.py subversion/tests/clients/cmdline/update_tests.py subversion/tests/clients/cmdline/switch_tests.py subversion/tests/clients/cmdline/prop_tests.py subversion/tests/clients/cmdline/schedule_tests.py subversion/tests/clients/cmdline/log_tests.py subversion/tests/clients/cmdline/copy_tests.py subversion/tests/clients/cmdline/diff_tests.py subversion/tests/clients/cmdline/export_tests.py subversion/tests/clients/cmdline/externals_tests.py subversion/tests/clients/cmdline/merge_tests.py subversion/tests/clients/cmdline/revert_tests.py subversion/tests/clients/cmdline/stat_tests.py subversion/tests/clients/cmdline/trans_tests.py subversion/tests/clients/cmdline/autoprop_tests.py subversion/tests/clients/cmdline/blame_tests.py subversion/tests/clients/cmdline/special_tests.py subversion/tests/clients/cmdline/svnadmin_tests.py subversion/tests/clients/cmdline/svnlook_tests.py subversion/tests/clients/cmdline/svnversion_tests.py subversion/tests/clients/cmdline/utf8_tests.py subversion/tests/clients/cmdline/history_tests.py subversion/tests/clients/cmdline/lock_tests.py subversion/tests/clients/cmdline/cat_tests.py subversion/tests/clients/cmdline/import_tests.py
 
-TEST_PROGRAMS = subversion/tests/libsvn_subr/compat-test$(EXEEXT) subversion/tests/libsvn_subr/config-test$(EXEEXT) subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT) subversion/tests/libsvn_subr/hashdump-test$(EXEEXT) subversion/tests/libsvn_fs/locks-test$(EXEEXT) subversion/tests/libsvn_subr/opt-test$(EXEEXT) subversion/tests/libsvn_subr/path-test$(EXEEXT) subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT) subversion/tests/libsvn_delta/random-test$(EXEEXT) subversion/tests/libsvn_repos/repos-test$(EXEEXT) subversion/tests/libsvn_subr/stream-test$(EXEEXT) subversion/tests/libsvn_subr/string-test$(EXEEXT) subversion/tests/libsvn_subr/time-test$(EXEEXT) subversion/tests/libsvn_wc/translate-test$(EXEEXT) subversion/tests/libsvn_subr/utf-test$(EXEEXT) subversion/tests/libsvn_subr/target-test.py subversion/tests/clients/cmdline/getopt_tests.py subversion/tests/clients/cmdline/basic_tests.py subversion/tests/clients/cmdline/commit_tests.py subversion/tests/clients/cmdline/update_tests.py subversion/tests/clients/cmdline/switch_tests.py subversion/tests/clients/cmdline/prop_tests.py subversion/tests/clients/cmdline/schedule_tests.py subversion/tests/clients/cmdline/log_tests.py subversion/tests/clients/cmdline/copy_tests.py subversion/tests/clients/cmdline/diff_tests.py subversion/tests/clients/cmdline/export_tests.py subversion/tests/clients/cmdline/externals_tests.py subversion/tests/clients/cmdline/merge_tests.py subversion/tests/clients/cmdline/revert_tests.py subversion/tests/clients/cmdline/stat_tests.py subversion/tests/clients/cmdline/trans_tests.py subversion/tests/clients/cmdline/autoprop_tests.py subversion/tests/clients/cmdline/blame_tests.py subversion/tests/clients/cmdline/special_tests.py subversion/tests/clients/cmdline/svnadmin_tests.py subversion/tests/clients/cmdline/svnlook_tests.py subversion/tests/clients/cmdline/svnversion_tests.py subversion/tests/clients/cmdline/utf8_tests.py subversion/tests/clients/cmdline/history_tests.py subversion/tests/clients/cmdline/lock_tests.py subversion/tests/clients/cmdline/cat_tests.py subversion/tests/clients/cmdline/import_tests.py
+TEST_PROGRAMS = subversion/tests/libsvn_subr/compat-test$(EXEEXT) subversion/tests/libsvn_subr/config-test$(EXEEXT) subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT) subversion/tests/libsvn_fs/fs-test$(EXEEXT) subversion/tests/libsvn_subr/hashdump-test$(EXEEXT) subversion/tests/libsvn_fs/locks-test$(EXEEXT) subversion/tests/libsvn_subr/opt-test$(EXEEXT) subversion/tests/libsvn_subr/path-test$(EXEEXT) subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT) subversion/tests/libsvn_delta/random-test$(EXEEXT) subversion/tests/libsvn_repos/repos-test$(EXEEXT) subversion/tests/libsvn_subr/stream-test$(EXEEXT) subversion/tests/libsvn_subr/string-test$(EXEEXT) subversion/tests/libsvn_subr/time-test$(EXEEXT) subversion/tests/libsvn_wc/translate-test$(EXEEXT) subversion/tests/libsvn_subr/utf-test$(EXEEXT) subversion/tests/libsvn_subr/target-test.py subversion/tests/clients/cmdline/getopt_tests.py subversion/tests/clients/cmdline/basic_tests.py subversion/tests/clients/cmdline/commit_tests.py subversion/tests/clients/cmdline/update_tests.py subversion/tests/clients/cmdline/switch_tests.py subversion/tests/clients/cmdline/prop_tests.py subversion/tests/clients/cmdline/schedule_tests.py subversion/tests/clients/cmdline/log_tests.py subversion/tests/clients/cmdline/copy_tests.py subversion/tests/clients/cmdline/diff_tests.py subversion/tests/clients/cmdline/export_tests.py subversion/tests/clients/cmdline/externals_tests.py subversion/tests/clients/cmdline/merge_tests.py subversion/tests/clients/cmdline/revert_tests.py subversion/tests/clients/cmdline/stat_tests.py subversion/tests/clients/cmdline/trans_tests.py subversion/tests/clients/cmdline/autoprop_tests.py subversion/tests/clients/cmdline/blame_tests.py subversion/tests/clients/cmdline/special_tests.py subversion/tests/clients/cmdline/svnadmin_tests.py subversion/tests/clients/cmdline/svnlook_tests.py subversion/tests/clients/cmdline/svnversion_tests.py subversion/tests/clients/cmdline/utf8_tests.py subversion/tests/clients/cmdline/history_tests.py subversion/tests/clients/cmdline/lock_tests.py subversion/tests/clients/cmdline/cat_tests.py subversion/tests/clients/cmdline/import_tests.py
 
 MANPAGES = subversion/clients/cmdline/svn.1 subversion/svnadmin/svnadmin.1 subversion/svndumpfilter/svndumpfilter.1 subversion/svnlook/svnlook.1 subversion/svnserve/svnserve.8 subversion/svnserve/svnserve.conf.5 subversion/svnversion/svnversion.1
 
-CLEAN_FILES = contrib/client-side/svn-push/svn-push$(EXEEXT) subversion/clients/cmdline/svn$(EXEEXT) subversion/svnadmin/svnadmin$(EXEEXT) subversion/svndumpfilter/svndumpfilter$(EXEEXT) subversion/svnlook/svnlook$(EXEEXT) subversion/svnserve/svnserve$(EXEEXT) subversion/svnversion/svnversion$(EXEEXT) subversion/tests/libsvn_delta/random-test$(EXEEXT) subversion/tests/libsvn_delta/svndiff-test$(EXEEXT) subversion/tests/libsvn_delta/vdelta-test$(EXEEXT) subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT) subversion/tests/libsvn_diff/diff-test$(EXEEXT) subversion/tests/libsvn_diff/diff3-test$(EXEEXT) subversion/tests/libsvn_diff/diff4-test$(EXEEXT) subversion/tests/libsvn_fs/locks-test$(EXEEXT) subversion/tests/libsvn_fs_base/changes-test$(EXEEXT) subversion/tests/libsvn_fs_base/fs-test$(EXEEXT) subversion/tests/libsvn_fs_base/key-test$(EXEEXT) subversion/tests/libsvn_fs_base/skel-test$(EXEEXT) subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT) subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT) subversion/tests/libsvn_repos/repos-test$(EXEEXT) subversion/tests/libsvn_subr/compat-test$(EXEEXT) subversion/tests/libsvn_subr/config-test$(EXEEXT) subversion/tests/libsvn_subr/hashdump-test$(EXEEXT) subversion/tests/libsvn_subr/opt-test$(EXEEXT) subversion/tests/libsvn_subr/path-test$(EXEEXT) subversion/tests/libsvn_subr/stream-test$(EXEEXT) subversion/tests/libsvn_subr/string-test$(EXEEXT) subversion/tests/libsvn_subr/target-test$(EXEEXT) subversion/tests/libsvn_subr/time-test$(EXEEXT) subversion/tests/libsvn_subr/utf-test$(EXEEXT) subversion/tests/libsvn_wc/translate-test$(EXEEXT)
+CLEAN_FILES = contrib/client-side/mucc$(EXEEXT) contrib/client-side/svn-push/svn-push$(EXEEXT) subversion/clients/cmdline/svn$(EXEEXT) subversion/svnadmin/svnadmin$(EXEEXT) subversion/svndumpfilter/svndumpfilter$(EXEEXT) subversion/svnlook/svnlook$(EXEEXT) subversion/svnserve/svnserve$(EXEEXT) subversion/svnversion/svnversion$(EXEEXT) subversion/tests/libsvn_delta/random-test$(EXEEXT) subversion/tests/libsvn_delta/svndiff-test$(EXEEXT) subversion/tests/libsvn_delta/vdelta-test$(EXEEXT) subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT) subversion/tests/libsvn_fs/fs-test$(EXEEXT) subversion/tests/libsvn_fs/locks-test$(EXEEXT) subversion/tests/libsvn_fs_base/changes-test$(EXEEXT) subversion/tests/libsvn_fs_base/fs-base-test$(EXEEXT) subversion/tests/libsvn_fs_base/key-test$(EXEEXT) subversion/tests/libsvn_fs_base/skel-test$(EXEEXT) subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT) subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT) subversion/tests/libsvn_repos/repos-test$(EXEEXT) subversion/tests/libsvn_subr/compat-test$(EXEEXT) subversion/tests/libsvn_subr/config-test$(EXEEXT) subversion/tests/libsvn_subr/hashdump-test$(EXEEXT) subversion/tests/libsvn_subr/opt-test$(EXEEXT) subversion/tests/libsvn_subr/path-test$(EXEEXT) subversion/tests/libsvn_subr/stream-test$(EXEEXT) subversion/tests/libsvn_subr/string-test$(EXEEXT) subversion/tests/libsvn_subr/target-test$(EXEEXT) subversion/tests/libsvn_subr/time-test$(EXEEXT) subversion/tests/libsvn_subr/utf-test$(EXEEXT) subversion/tests/libsvn_wc/translate-test$(EXEEXT) tools/diff/diff$(EXEEXT) tools/diff/diff3$(EXEEXT) tools/diff/diff4$(EXEEXT)
 
 
 ########################################
-# Section 2: Individual target build rules
+# Section 2: SWIG header wrappers
+########################################
+
+swig-headers: subversion/bindings/swig/proxy/svn_error_codes_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_error_codes_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_error_codes_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_error_codes_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_error_codes_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_error_codes_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_error_codes_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_version_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_version_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_version_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_version_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_version_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_version_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_version_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_diff_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_diff_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_diff_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_diff_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_diff_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_diff_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_diff_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_fs_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_fs_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_fs_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_fs_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_fs_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_fs_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_fs_h.swg
+swig-headers: subversion/bindings/swig/proxy/mod_dav_svn_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/mod_dav_svn_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/mod_dav_svn_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/mod_dav_svn_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/mod_dav_svn_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/mod_dav_svn_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/mod_dav_svn_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_sorts_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_sorts_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_sorts_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_sorts_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_sorts_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_sorts_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_sorts_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_dav_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_dav_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_dav_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_dav_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_dav_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_dav_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_dav_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_base64_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_base64_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_base64_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_base64_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_base64_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_base64_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_base64_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_ctype_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_ctype_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_ctype_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_ctype_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_ctype_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_ctype_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_ctype_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_ra_svn_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_ra_svn_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_ra_svn_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_ra_svn_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_ra_svn_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_ra_svn_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_ra_svn_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_repos_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_repos_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_repos_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_repos_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_repos_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_repos_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_repos_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_delta_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_delta_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_delta_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_delta_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_delta_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_delta_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_delta_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_path_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_path_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_path_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_path_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_path_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_path_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_path_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_subst_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_subst_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_subst_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_subst_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_subst_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_subst_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_subst_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_xml_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_xml_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_xml_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_xml_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_xml_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_xml_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_xml_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_props_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_props_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_props_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_props_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_props_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_props_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_props_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_types_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_types_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_types_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_types_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_types_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_types_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_types_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_config_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_config_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_config_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_config_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_config_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_config_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_config_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_string_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_string_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_string_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_string_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_string_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_string_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_string_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_io_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_io_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_io_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_io_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_io_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_io_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_io_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_wc_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_wc_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_wc_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_wc_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_wc_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_wc_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_wc_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_cmdline_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_cmdline_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_cmdline_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_cmdline_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_cmdline_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_cmdline_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_cmdline_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_client_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_client_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_client_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_client_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_client_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_client_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_client_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_quoprint_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_quoprint_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_quoprint_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_quoprint_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_quoprint_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_quoprint_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_quoprint_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_hash_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_hash_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_hash_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_hash_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_hash_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_hash_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_hash_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_md5_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_md5_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_md5_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_md5_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_md5_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_md5_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_md5_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_error_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_error_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_error_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_error_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_error_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_error_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_error_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_pools_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_pools_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_pools_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_pools_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_pools_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_pools_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_pools_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_nls_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_nls_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_nls_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_nls_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_nls_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_nls_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_nls_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_time_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_time_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_time_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_time_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_time_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_time_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_time_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_utf_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_utf_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_utf_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_utf_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_utf_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_utf_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_utf_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_auth_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_auth_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_auth_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_auth_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_auth_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_auth_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_auth_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_opt_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_opt_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_opt_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_opt_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_opt_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_opt_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_opt_h.swg
+swig-headers: subversion/bindings/swig/proxy/svn_ra_h.swg
+extraclean-swig-headers-subversion/bindings/swig/proxy/svn_ra_h.swg:
+	rm -f $(abs_srcdir)/subversion/bindings/swig/proxy/svn_ra_h.swg
+clean-swig-headers-subversion/bindings/swig/proxy/svn_ra_h.swg:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/proxy/svn_ra_h.swg; fi
+clean-swig-headers: clean-swig-headers-subversion/bindings/swig/proxy/svn_ra_h.swg
+extraclean-swig-headers: extraclean-swig-headers-subversion/bindings/swig/proxy/svn_ra_h.swg
+
+
+########################################
+# Section 3: SWIG external runtime
+########################################
+
+
+########################################
+# Section 4: SWIG autogeneration rules
+########################################
+
+extraclean-swig-subversion/bindings/swig/perl/native/core.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/core.c $(abs_srcdir)/subversion/bindings/swig/perl/native/core.c
+extraclean-swig-pl: extraclean-swig-subversion/bindings/swig/perl/native/core.c
+clean-swig-subversion/bindings/swig/perl/native/core.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/core.c; rm -f $(abs_builddir)/subversion/bindings/swig/core.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/perl/native/core.c
+extraclean-swig-subversion/bindings/swig/perl/native/svn_client.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_client.c $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_client.c
+extraclean-swig-pl: extraclean-swig-subversion/bindings/swig/perl/native/svn_client.c
+clean-swig-subversion/bindings/swig/perl/native/svn_client.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_client.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_client.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/perl/native/svn_client.c
+extraclean-swig-subversion/bindings/swig/perl/native/svn_delta.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_delta.c $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_delta.c
+extraclean-swig-pl: extraclean-swig-subversion/bindings/swig/perl/native/svn_delta.c
+clean-swig-subversion/bindings/swig/perl/native/svn_delta.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_delta.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_delta.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/perl/native/svn_delta.c
+extraclean-swig-subversion/bindings/swig/perl/native/svn_fs.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_fs.c $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_fs.c
+extraclean-swig-pl: extraclean-swig-subversion/bindings/swig/perl/native/svn_fs.c
+clean-swig-subversion/bindings/swig/perl/native/svn_fs.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_fs.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_fs.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/perl/native/svn_fs.c
+extraclean-swig-subversion/bindings/swig/perl/native/svn_ra.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_ra.c $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_ra.c
+extraclean-swig-pl: extraclean-swig-subversion/bindings/swig/perl/native/svn_ra.c
+clean-swig-subversion/bindings/swig/perl/native/svn_ra.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_ra.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_ra.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/perl/native/svn_ra.c
+extraclean-swig-subversion/bindings/swig/perl/native/svn_repos.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_repos.c $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_repos.c
+extraclean-swig-pl: extraclean-swig-subversion/bindings/swig/perl/native/svn_repos.c
+clean-swig-subversion/bindings/swig/perl/native/svn_repos.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_repos.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_repos.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/perl/native/svn_repos.c
+extraclean-swig-subversion/bindings/swig/perl/native/svn_wc.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_wc.c $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_wc.c
+extraclean-swig-pl: extraclean-swig-subversion/bindings/swig/perl/native/svn_wc.c
+clean-swig-subversion/bindings/swig/perl/native/svn_wc.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/perl/native/svn_wc.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_wc.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/perl/native/svn_wc.c
+extraclean-swig-subversion/bindings/swig/python/core.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/python/core.c $(abs_srcdir)/subversion/bindings/swig/python/core.c
+extraclean-swig-py: extraclean-swig-subversion/bindings/swig/python/core.c
+clean-swig-subversion/bindings/swig/python/core.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/python/core.c; rm -f $(abs_builddir)/subversion/bindings/swig/core.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/python/core.c
+extraclean-swig-subversion/bindings/swig/python/svn_client.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_client.c $(abs_srcdir)/subversion/bindings/swig/python/svn_client.c
+extraclean-swig-py: extraclean-swig-subversion/bindings/swig/python/svn_client.c
+clean-swig-subversion/bindings/swig/python/svn_client.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_client.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_client.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/python/svn_client.c
+extraclean-swig-subversion/bindings/swig/python/svn_delta.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_delta.c $(abs_srcdir)/subversion/bindings/swig/python/svn_delta.c
+extraclean-swig-py: extraclean-swig-subversion/bindings/swig/python/svn_delta.c
+clean-swig-subversion/bindings/swig/python/svn_delta.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_delta.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_delta.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/python/svn_delta.c
+extraclean-swig-subversion/bindings/swig/python/svn_fs.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_fs.c $(abs_srcdir)/subversion/bindings/swig/python/svn_fs.c
+extraclean-swig-py: extraclean-swig-subversion/bindings/swig/python/svn_fs.c
+clean-swig-subversion/bindings/swig/python/svn_fs.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_fs.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_fs.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/python/svn_fs.c
+extraclean-swig-subversion/bindings/swig/python/svn_ra.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_ra.c $(abs_srcdir)/subversion/bindings/swig/python/svn_ra.c
+extraclean-swig-py: extraclean-swig-subversion/bindings/swig/python/svn_ra.c
+clean-swig-subversion/bindings/swig/python/svn_ra.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_ra.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_ra.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/python/svn_ra.c
+extraclean-swig-subversion/bindings/swig/python/svn_repos.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_repos.c $(abs_srcdir)/subversion/bindings/swig/python/svn_repos.c
+extraclean-swig-py: extraclean-swig-subversion/bindings/swig/python/svn_repos.c
+clean-swig-subversion/bindings/swig/python/svn_repos.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_repos.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_repos.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/python/svn_repos.c
+extraclean-swig-subversion/bindings/swig/python/svn_wc.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_wc.c $(abs_srcdir)/subversion/bindings/swig/python/svn_wc.c
+extraclean-swig-py: extraclean-swig-subversion/bindings/swig/python/svn_wc.c
+clean-swig-subversion/bindings/swig/python/svn_wc.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/python/svn_wc.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_wc.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/python/svn_wc.c
+extraclean-swig-subversion/bindings/swig/ruby/core.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/ruby/core.c $(abs_srcdir)/subversion/bindings/swig/ruby/core.c
+extraclean-swig-rb: extraclean-swig-subversion/bindings/swig/ruby/core.c
+clean-swig-subversion/bindings/swig/ruby/core.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/ruby/core.c; rm -f $(abs_builddir)/subversion/bindings/swig/core.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/ruby/core.c
+extraclean-swig-subversion/bindings/swig/ruby/svn_client.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_client.c $(abs_srcdir)/subversion/bindings/swig/ruby/svn_client.c
+extraclean-swig-rb: extraclean-swig-subversion/bindings/swig/ruby/svn_client.c
+clean-swig-subversion/bindings/swig/ruby/svn_client.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_client.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_client.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/ruby/svn_client.c
+extraclean-swig-subversion/bindings/swig/ruby/svn_delta.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_delta.c $(abs_srcdir)/subversion/bindings/swig/ruby/svn_delta.c
+extraclean-swig-rb: extraclean-swig-subversion/bindings/swig/ruby/svn_delta.c
+clean-swig-subversion/bindings/swig/ruby/svn_delta.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_delta.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_delta.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/ruby/svn_delta.c
+extraclean-swig-subversion/bindings/swig/ruby/svn_fs.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_fs.c $(abs_srcdir)/subversion/bindings/swig/ruby/svn_fs.c
+extraclean-swig-rb: extraclean-swig-subversion/bindings/swig/ruby/svn_fs.c
+clean-swig-subversion/bindings/swig/ruby/svn_fs.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_fs.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_fs.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/ruby/svn_fs.c
+extraclean-swig-subversion/bindings/swig/ruby/svn_ra.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_ra.c $(abs_srcdir)/subversion/bindings/swig/ruby/svn_ra.c
+extraclean-swig-rb: extraclean-swig-subversion/bindings/swig/ruby/svn_ra.c
+clean-swig-subversion/bindings/swig/ruby/svn_ra.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_ra.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_ra.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/ruby/svn_ra.c
+extraclean-swig-subversion/bindings/swig/ruby/svn_repos.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_repos.c $(abs_srcdir)/subversion/bindings/swig/ruby/svn_repos.c
+extraclean-swig-rb: extraclean-swig-subversion/bindings/swig/ruby/svn_repos.c
+clean-swig-subversion/bindings/swig/ruby/svn_repos.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_repos.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_repos.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/ruby/svn_repos.c
+extraclean-swig-subversion/bindings/swig/ruby/svn_wc.c:
+	rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_wc.c $(abs_srcdir)/subversion/bindings/swig/ruby/svn_wc.c
+extraclean-swig-rb: extraclean-swig-subversion/bindings/swig/ruby/svn_wc.c
+clean-swig-subversion/bindings/swig/ruby/svn_wc.c:
+	if test $(abs_srcdir) != $(abs_builddir); then rm -f $(abs_builddir)/subversion/bindings/swig/ruby/svn_wc.c; rm -f $(abs_builddir)/subversion/bindings/swig/svn_wc.i; fi
+clean-swig-headers: clean-swig-subversion/bindings/swig/ruby/svn_wc.c
+autogen-swig-py: swig-headers subversion/bindings/swig/python/core.c subversion/bindings/swig/python/svn_client.c subversion/bindings/swig/python/svn_delta.c subversion/bindings/swig/python/svn_fs.c subversion/bindings/swig/python/svn_ra.c subversion/bindings/swig/python/svn_repos.c subversion/bindings/swig/python/svn_wc.c
+swig-py: autogen-swig-py
+autogen-swig: autogen-swig-py
+extraclean-swig-py: extraclean-swig-headers
+clean-swig-py: clean-swig-headers
+extraclean-swig-py: clean-swig-py
+extraclean: extraclean-swig-py
+autogen-swig-pl: swig-headers subversion/bindings/swig/perl/native/core.c subversion/bindings/swig/perl/native/svn_client.c subversion/bindings/swig/perl/native/svn_delta.c subversion/bindings/swig/perl/native/svn_fs.c subversion/bindings/swig/perl/native/svn_ra.c subversion/bindings/swig/perl/native/svn_repos.c subversion/bindings/swig/perl/native/svn_wc.c
+swig-pl: autogen-swig-pl
+autogen-swig: autogen-swig-pl
+extraclean-swig-pl: extraclean-swig-headers
+clean-swig-pl: clean-swig-headers
+extraclean-swig-pl: clean-swig-pl
+extraclean: extraclean-swig-pl
+autogen-swig-rb: swig-headers subversion/bindings/swig/ruby/core.c subversion/bindings/swig/ruby/svn_client.c subversion/bindings/swig/ruby/svn_delta.c subversion/bindings/swig/ruby/svn_fs.c subversion/bindings/swig/ruby/svn_ra.c subversion/bindings/swig/ruby/svn_repos.c subversion/bindings/swig/ruby/svn_wc.c
+swig-rb: autogen-swig-rb
+autogen-swig: autogen-swig-rb
+extraclean-swig-rb: extraclean-swig-headers
+clean-swig-rb: clean-swig-headers
+extraclean-swig-rb: clean-swig-rb
+extraclean: extraclean-swig-rb
+
+
+########################################
+# Section 5: Rules to build SWIG .c files from .i files
+########################################
+
+autogen-swig-pl: copy-swig-subversion/bindings/swig/perl/native/core.c
+copy-swig-subversion/bindings/swig/perl/native/core.c: subversion/bindings/swig/perl/native/core.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/perl/native/core.c -a ! -r $(abs_builddir)/subversion/bindings/swig/perl/native/core.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/perl/native/core.c $(abs_builddir)/subversion/bindings/swig/perl/native/core.c; fi
+autogen-swig-pl: copy-swig-subversion/bindings/swig/perl/native/svn_client.c
+copy-swig-subversion/bindings/swig/perl/native/svn_client.c: subversion/bindings/swig/perl/native/svn_client.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_client.c -a ! -r $(abs_builddir)/subversion/bindings/swig/perl/native/svn_client.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_client.c $(abs_builddir)/subversion/bindings/swig/perl/native/svn_client.c; fi
+autogen-swig-pl: copy-swig-subversion/bindings/swig/perl/native/svn_delta.c
+copy-swig-subversion/bindings/swig/perl/native/svn_delta.c: subversion/bindings/swig/perl/native/svn_delta.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_delta.c -a ! -r $(abs_builddir)/subversion/bindings/swig/perl/native/svn_delta.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_delta.c $(abs_builddir)/subversion/bindings/swig/perl/native/svn_delta.c; fi
+autogen-swig-pl: copy-swig-subversion/bindings/swig/perl/native/svn_fs.c
+copy-swig-subversion/bindings/swig/perl/native/svn_fs.c: subversion/bindings/swig/perl/native/svn_fs.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_fs.c -a ! -r $(abs_builddir)/subversion/bindings/swig/perl/native/svn_fs.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_fs.c $(abs_builddir)/subversion/bindings/swig/perl/native/svn_fs.c; fi
+autogen-swig-pl: copy-swig-subversion/bindings/swig/perl/native/svn_ra.c
+copy-swig-subversion/bindings/swig/perl/native/svn_ra.c: subversion/bindings/swig/perl/native/svn_ra.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_ra.c -a ! -r $(abs_builddir)/subversion/bindings/swig/perl/native/svn_ra.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_ra.c $(abs_builddir)/subversion/bindings/swig/perl/native/svn_ra.c; fi
+autogen-swig-pl: copy-swig-subversion/bindings/swig/perl/native/svn_repos.c
+copy-swig-subversion/bindings/swig/perl/native/svn_repos.c: subversion/bindings/swig/perl/native/svn_repos.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_repos.c -a ! -r $(abs_builddir)/subversion/bindings/swig/perl/native/svn_repos.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_repos.c $(abs_builddir)/subversion/bindings/swig/perl/native/svn_repos.c; fi
+autogen-swig-pl: copy-swig-subversion/bindings/swig/perl/native/svn_wc.c
+copy-swig-subversion/bindings/swig/perl/native/svn_wc.c: subversion/bindings/swig/perl/native/svn_wc.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_wc.c -a ! -r $(abs_builddir)/subversion/bindings/swig/perl/native/svn_wc.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/perl/native/svn_wc.c $(abs_builddir)/subversion/bindings/swig/perl/native/svn_wc.c; fi
+autogen-swig-py: copy-swig-subversion/bindings/swig/python/core.c
+copy-swig-subversion/bindings/swig/python/core.c: subversion/bindings/swig/python/core.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/python/core.c -a ! -r $(abs_builddir)/subversion/bindings/swig/python/core.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/python/core.c $(abs_builddir)/subversion/bindings/swig/python/core.c; fi
+autogen-swig-py: copy-swig-subversion/bindings/swig/python/svn_client.c
+copy-swig-subversion/bindings/swig/python/svn_client.c: subversion/bindings/swig/python/svn_client.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/python/svn_client.c -a ! -r $(abs_builddir)/subversion/bindings/swig/python/svn_client.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/python/svn_client.c $(abs_builddir)/subversion/bindings/swig/python/svn_client.c; fi
+autogen-swig-py: copy-swig-subversion/bindings/swig/python/svn_delta.c
+copy-swig-subversion/bindings/swig/python/svn_delta.c: subversion/bindings/swig/python/svn_delta.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/python/svn_delta.c -a ! -r $(abs_builddir)/subversion/bindings/swig/python/svn_delta.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/python/svn_delta.c $(abs_builddir)/subversion/bindings/swig/python/svn_delta.c; fi
+autogen-swig-py: copy-swig-subversion/bindings/swig/python/svn_fs.c
+copy-swig-subversion/bindings/swig/python/svn_fs.c: subversion/bindings/swig/python/svn_fs.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/python/svn_fs.c -a ! -r $(abs_builddir)/subversion/bindings/swig/python/svn_fs.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/python/svn_fs.c $(abs_builddir)/subversion/bindings/swig/python/svn_fs.c; fi
+autogen-swig-py: copy-swig-subversion/bindings/swig/python/svn_ra.c
+copy-swig-subversion/bindings/swig/python/svn_ra.c: subversion/bindings/swig/python/svn_ra.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/python/svn_ra.c -a ! -r $(abs_builddir)/subversion/bindings/swig/python/svn_ra.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/python/svn_ra.c $(abs_builddir)/subversion/bindings/swig/python/svn_ra.c; fi
+autogen-swig-py: copy-swig-subversion/bindings/swig/python/svn_repos.c
+copy-swig-subversion/bindings/swig/python/svn_repos.c: subversion/bindings/swig/python/svn_repos.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/python/svn_repos.c -a ! -r $(abs_builddir)/subversion/bindings/swig/python/svn_repos.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/python/svn_repos.c $(abs_builddir)/subversion/bindings/swig/python/svn_repos.c; fi
+autogen-swig-py: copy-swig-subversion/bindings/swig/python/svn_wc.c
+copy-swig-subversion/bindings/swig/python/svn_wc.c: subversion/bindings/swig/python/svn_wc.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/python/svn_wc.c -a ! -r $(abs_builddir)/subversion/bindings/swig/python/svn_wc.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/python/svn_wc.c $(abs_builddir)/subversion/bindings/swig/python/svn_wc.c; fi
+autogen-swig-rb: copy-swig-subversion/bindings/swig/ruby/core.c
+copy-swig-subversion/bindings/swig/ruby/core.c: subversion/bindings/swig/ruby/core.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/ruby/core.c -a ! -r $(abs_builddir)/subversion/bindings/swig/ruby/core.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/ruby/core.c $(abs_builddir)/subversion/bindings/swig/ruby/core.c; fi
+autogen-swig-rb: copy-swig-subversion/bindings/swig/ruby/svn_client.c
+copy-swig-subversion/bindings/swig/ruby/svn_client.c: subversion/bindings/swig/ruby/svn_client.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/ruby/svn_client.c -a ! -r $(abs_builddir)/subversion/bindings/swig/ruby/svn_client.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/ruby/svn_client.c $(abs_builddir)/subversion/bindings/swig/ruby/svn_client.c; fi
+autogen-swig-rb: copy-swig-subversion/bindings/swig/ruby/svn_delta.c
+copy-swig-subversion/bindings/swig/ruby/svn_delta.c: subversion/bindings/swig/ruby/svn_delta.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/ruby/svn_delta.c -a ! -r $(abs_builddir)/subversion/bindings/swig/ruby/svn_delta.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/ruby/svn_delta.c $(abs_builddir)/subversion/bindings/swig/ruby/svn_delta.c; fi
+autogen-swig-rb: copy-swig-subversion/bindings/swig/ruby/svn_fs.c
+copy-swig-subversion/bindings/swig/ruby/svn_fs.c: subversion/bindings/swig/ruby/svn_fs.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/ruby/svn_fs.c -a ! -r $(abs_builddir)/subversion/bindings/swig/ruby/svn_fs.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/ruby/svn_fs.c $(abs_builddir)/subversion/bindings/swig/ruby/svn_fs.c; fi
+autogen-swig-rb: copy-swig-subversion/bindings/swig/ruby/svn_ra.c
+copy-swig-subversion/bindings/swig/ruby/svn_ra.c: subversion/bindings/swig/ruby/svn_ra.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/ruby/svn_ra.c -a ! -r $(abs_builddir)/subversion/bindings/swig/ruby/svn_ra.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/ruby/svn_ra.c $(abs_builddir)/subversion/bindings/swig/ruby/svn_ra.c; fi
+autogen-swig-rb: copy-swig-subversion/bindings/swig/ruby/svn_repos.c
+copy-swig-subversion/bindings/swig/ruby/svn_repos.c: subversion/bindings/swig/ruby/svn_repos.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/ruby/svn_repos.c -a ! -r $(abs_builddir)/subversion/bindings/swig/ruby/svn_repos.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/ruby/svn_repos.c $(abs_builddir)/subversion/bindings/swig/ruby/svn_repos.c; fi
+autogen-swig-rb: copy-swig-subversion/bindings/swig/ruby/svn_wc.c
+copy-swig-subversion/bindings/swig/ruby/svn_wc.c: subversion/bindings/swig/ruby/svn_wc.c
+	@if test $(abs_srcdir) != $(abs_builddir) -a -r $(abs_srcdir)/subversion/bindings/swig/ruby/svn_wc.c -a ! -r $(abs_builddir)/subversion/bindings/swig/ruby/svn_wc.c; then cp -pf $(abs_srcdir)/subversion/bindings/swig/ruby/svn_wc.c $(abs_builddir)/subversion/bindings/swig/ruby/svn_wc.c; fi
+
+
+########################################
+# Section 6: Individual target build rules
 ########################################
 
 changes_test_PATH = subversion/tests/libsvn_fs_base
-changes_test_DEPS =  subversion/tests/libsvn_fs_base/changes-test.o subversion/tests/libsvn_test-1.la subversion/tests/libsvn_test_fs-1.la subversion/libsvn_fs_base/libsvn_fs_base-1.la
+changes_test_DEPS =  subversion/tests/libsvn_fs_base/changes-test.o subversion/tests/libsvn_test-1.la subversion/libsvn_fs_base/libsvn_fs_base-1.la
 changes_test_OBJECTS = changes-test.o
 subversion/tests/libsvn_fs_base/changes-test$(EXEEXT): $(changes_test_DEPS)
-	cd subversion/tests/libsvn_fs_base && $(LINK) -o changes-test$(EXEEXT)  $(changes_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/tests/libsvn_test_fs-1.la ../../../subversion/libsvn_fs_base/libsvn_fs_base-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/tests/libsvn_fs_base && $(LINK) -o changes-test$(EXEEXT)  $(changes_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/libsvn_fs_base/libsvn_fs_base-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 compat_test_PATH = subversion/tests/libsvn_subr
 compat_test_DEPS =  subversion/tests/libsvn_subr/compat-test.o subversion/tests/libsvn_test-1.la
@@ -56,35 +527,41 @@ config_test_OBJECTS = config-test.o
 subversion/tests/libsvn_subr/config-test$(EXEEXT): $(config_test_DEPS)
 	cd subversion/tests/libsvn_subr && $(LINK) -o config-test$(EXEEXT)  $(config_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
+diff_PATH = tools/diff
+diff_DEPS =  tools/diff/diff.o
+diff_OBJECTS = diff.o
+tools/diff/diff$(EXEEXT): $(diff_DEPS)
+	cd tools/diff && $(LINK) -o diff$(EXEEXT)  $(diff_OBJECTS) -lsvn_diff-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+
 diff_diff3_test_PATH = subversion/tests/libsvn_diff
 diff_diff3_test_DEPS =  subversion/tests/libsvn_diff/diff-diff3-test.o subversion/tests/libsvn_test-1.la
 diff_diff3_test_OBJECTS = diff-diff3-test.o
 subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT): $(diff_diff3_test_DEPS)
 	cd subversion/tests/libsvn_diff && $(LINK) -o diff-diff3-test$(EXEEXT)  $(diff_diff3_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la -lsvn_diff-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
-diff_test_PATH = subversion/tests/libsvn_diff
-diff_test_DEPS =  subversion/tests/libsvn_diff/diff-test.o
-diff_test_OBJECTS = diff-test.o
-subversion/tests/libsvn_diff/diff-test$(EXEEXT): $(diff_test_DEPS)
-	cd subversion/tests/libsvn_diff && $(LINK) -o diff-test$(EXEEXT)  $(diff_test_OBJECTS) -lsvn_diff-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+diff3_PATH = tools/diff
+diff3_DEPS =  tools/diff/diff3.o
+diff3_OBJECTS = diff3.o
+tools/diff/diff3$(EXEEXT): $(diff3_DEPS)
+	cd tools/diff && $(LINK) -o diff3$(EXEEXT)  $(diff3_OBJECTS) -lsvn_diff-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
-diff3_test_PATH = subversion/tests/libsvn_diff
-diff3_test_DEPS =  subversion/tests/libsvn_diff/diff3-test.o
-diff3_test_OBJECTS = diff3-test.o
-subversion/tests/libsvn_diff/diff3-test$(EXEEXT): $(diff3_test_DEPS)
-	cd subversion/tests/libsvn_diff && $(LINK) -o diff3-test$(EXEEXT)  $(diff3_test_OBJECTS) -lsvn_diff-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+diff4_PATH = tools/diff
+diff4_DEPS =  tools/diff/diff4.o
+diff4_OBJECTS = diff4.o
+tools/diff/diff4$(EXEEXT): $(diff4_DEPS)
+	cd tools/diff && $(LINK) -o diff4$(EXEEXT)  $(diff4_OBJECTS) -lsvn_diff-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
-diff4_test_PATH = subversion/tests/libsvn_diff
-diff4_test_DEPS =  subversion/tests/libsvn_diff/diff4-test.o
-diff4_test_OBJECTS = diff4-test.o
-subversion/tests/libsvn_diff/diff4-test$(EXEEXT): $(diff4_test_DEPS)
-	cd subversion/tests/libsvn_diff && $(LINK) -o diff4-test$(EXEEXT)  $(diff4_test_OBJECTS) -lsvn_diff-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+fs_base_test_PATH = subversion/tests/libsvn_fs_base
+fs_base_test_DEPS =  subversion/tests/libsvn_fs_base/fs-base-test.o subversion/tests/libsvn_test-1.la subversion/libsvn_fs_base/libsvn_fs_base-1.la
+fs_base_test_OBJECTS = fs-base-test.o
+subversion/tests/libsvn_fs_base/fs-base-test$(EXEEXT): $(fs_base_test_DEPS)
+	cd subversion/tests/libsvn_fs_base && $(LINK) -o fs-base-test$(EXEEXT)  $(fs_base_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/libsvn_fs_base/libsvn_fs_base-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
-fs_test_PATH = subversion/tests/libsvn_fs_base
-fs_test_DEPS =  subversion/tests/libsvn_fs_base/fs-test.o subversion/tests/libsvn_test-1.la subversion/tests/libsvn_test_fs-1.la subversion/libsvn_fs_base/libsvn_fs_base-1.la
+fs_test_PATH = subversion/tests/libsvn_fs
+fs_test_DEPS =  subversion/tests/libsvn_fs/fs-test.o subversion/tests/libsvn_test-1.la
 fs_test_OBJECTS = fs-test.o
-subversion/tests/libsvn_fs_base/fs-test$(EXEEXT): $(fs_test_DEPS)
-	cd subversion/tests/libsvn_fs_base && $(LINK) -o fs-test$(EXEEXT)  $(fs_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/tests/libsvn_test_fs-1.la ../../../subversion/libsvn_fs_base/libsvn_fs_base-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+subversion/tests/libsvn_fs/fs-test$(EXEEXT): $(fs_test_DEPS)
+	cd subversion/tests/libsvn_fs && $(LINK) -o fs-test$(EXEEXT)  $(fs_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 hashdump_test_PATH = subversion/tests/libsvn_subr
 hashdump_test_DEPS =  subversion/tests/libsvn_subr/hashdump-test.o subversion/tests/libsvn_test-1.la
@@ -94,31 +571,31 @@ subversion/tests/libsvn_subr/hashdump-test$(EXEEXT): $(hashdump_test_DEPS)
 
 javahl_java_PATH = subversion/bindings/java/javahl/classes
 javahl_java_HEADERS = 
-javahl_java_OBJECTS = subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ScheduleKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/DirEntry.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClient.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Status.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNInputStream.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyAction.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNOutputStream.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientSynchronized.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword3.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyInformation.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitItemStateFlags.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyStatus.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LockStatus.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Lock.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/JNIError.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ClientException.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitItem.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/RevisionKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNAdmin.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NodeKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LogMessage.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Info.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PropertyData.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/StatusKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Revision.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientLogLevel.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/OutputInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ChangePath.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Info2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/InputInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/BlameCallback.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitMessage.class
+javahl_java_OBJECTS = subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitItemStateFlags.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitMessage.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LogMessage.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNOutputStream.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyAction.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyStatus.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PropertyData.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/OutputInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientSynchronized.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Lock.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/StatusKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/JNIError.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientLogLevel.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/BlameCallback.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ChangePath.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/DirEntry.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNInputStream.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ScheduleKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/RevisionKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyInformation.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClient.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitItem.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Info2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/InputInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNAdmin.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword3.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NativeResources.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Status.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NodeKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ClientException.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Info.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LockStatus.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Revision.class
 javahl_java_DEPS = $(javahl_java_HEADERS) $(javahl_java_OBJECTS)  
 javahl-java: $(javahl_java_DEPS)
-javahl_java_SRC = $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/ScheduleKind.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/DirEntry.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNClient.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Status.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNInputStream.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/PromptUserPassword2.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NotifyAction.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Notify2.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNOutputStream.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNClientSynchronized.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/PromptUserPassword3.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NotifyInformation.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/CommitItemStateFlags.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NotifyStatus.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNClientInterface.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/LockStatus.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Lock.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/JNIError.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/PromptUserPassword.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/ClientException.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Notify.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/CommitItem.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/RevisionKind.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNAdmin.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NodeKind.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/LogMessage.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Info.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/PropertyData.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/StatusKind.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Revision.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNClientLogLevel.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/OutputInterface.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/ChangePath.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Info2.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/InputInterface.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/BlameCallback.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/CommitMessage.java
+javahl_java_SRC = $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/CommitItemStateFlags.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/CommitMessage.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/LogMessage.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNOutputStream.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NotifyAction.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NotifyStatus.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/PropertyData.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/OutputInterface.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNClientSynchronized.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/PromptUserPassword2.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNClientInterface.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Lock.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/StatusKind.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/JNIError.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNClientLogLevel.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/BlameCallback.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/ChangePath.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/DirEntry.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNInputStream.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/ScheduleKind.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/PromptUserPassword.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/RevisionKind.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NotifyInformation.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNClient.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/CommitItem.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Notify.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Info2.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/InputInterface.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/SVNAdmin.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/PromptUserPassword3.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NativeResources.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Status.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NodeKind.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Notify2.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/ClientException.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Info.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/LockStatus.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/Revision.java
 $(javahl_java_OBJECTS): $(javahl_java_SRC)
 	$(COMPILE_JAVAHL_JAVAC) -d subversion/bindings/java/javahl/classes -classpath subversion/bindings/java/javahl/classes:$(javahl_java_CLASSPATH) $(javahl_java_SRC)
 
 
 javahl_javah_PATH = subversion/bindings/java/javahl/include
-javahl_javah_HEADERS = subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_ScheduleKind.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_DirEntry.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNClient.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Status.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNInputStream.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_PromptUserPassword2.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NotifyAction.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Notify2.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNOutputStream.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNClientSynchronized.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_PromptUserPassword3.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NotifyInformation.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_CommitItemStateFlags.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NotifyStatus.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNClientInterface.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_LockStatus.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Lock.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_JNIError.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_PromptUserPassword.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_ClientException.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Notify.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_CommitItem.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_RevisionKind.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNAdmin.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NodeKind.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_LogMessage.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Info.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_PropertyData.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_StatusKind.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Revision.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNClientLogLevel.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_OutputInterface.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_ChangePath.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Info2.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_InputInterface.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_BlameCallback.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_CommitMessage.h
+javahl_javah_HEADERS = subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_CommitItemStateFlags.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_CommitMessage.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_LogMessage.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNOutputStream.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NotifyAction.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NotifyStatus.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_PropertyData.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_OutputInterface.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNClientSynchronized.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_PromptUserPassword2.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNClientInterface.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Lock.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_StatusKind.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_JNIError.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNClientLogLevel.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_BlameCallback.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_ChangePath.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_DirEntry.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNInputStream.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_ScheduleKind.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_PromptUserPassword.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_RevisionKind.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NotifyInformation.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNClient.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_CommitItem.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Notify.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Info2.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_InputInterface.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_SVNAdmin.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_PromptUserPassword3.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NativeResources.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Status.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_NodeKind.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Notify2.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_ClientException.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Info.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_LockStatus.h subversion/bindings/java/javahl/include/org_tigris_subversion_javahl_Revision.h
 javahl_javah_OBJECTS = 
 javahl_javah_DEPS = $(javahl_javah_HEADERS) $(javahl_javah_OBJECTS) $(javahl_java_DEPS) 
 javahl-javah: $(javahl_javah_DEPS)
-javahl_javah_CLASS_FILENAMES = subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ScheduleKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/DirEntry.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClient.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Status.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNInputStream.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyAction.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNOutputStream.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientSynchronized.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword3.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyInformation.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitItemStateFlags.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyStatus.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LockStatus.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Lock.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/JNIError.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ClientException.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitItem.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/RevisionKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNAdmin.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NodeKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LogMessage.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Info.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PropertyData.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/StatusKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Revision.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientLogLevel.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/OutputInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ChangePath.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Info2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/InputInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/BlameCallback.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitMessage.class
-javahl_javah_CLASSES = org.tigris.subversion.javahl.ScheduleKind org.tigris.subversion.javahl.DirEntry org.tigris.subversion.javahl.SVNClient org.tigris.subversion.javahl.Status org.tigris.subversion.javahl.SVNInputStream org.tigris.subversion.javahl.PromptUserPassword2 org.tigris.subversion.javahl.NotifyAction org.tigris.subversion.javahl.Notify2 org.tigris.subversion.javahl.SVNOutputStream org.tigris.subversion.javahl.SVNClientSynchronized org.tigris.subversion.javahl.PromptUserPassword3 org.tigris.subversion.javahl.NotifyInformation org.tigris.subversion.javahl.CommitItemStateFlags org.tigris.subversion.javahl.NotifyStatus org.tigris.subversion.javahl.SVNClientInterface org.tigris.subversion.javahl.LockStatus org.tigris.subversion.javahl.Lock org.tigris.subversion.javahl.JNIError org.tigris.subversion.javahl.PromptUserPassword org.tigris.subversion.javahl.ClientException org.tigris.subversion.javahl.Notify org.tigris.subversion.javahl.CommitItem org.tigris.subversion.javahl.RevisionKind org.tigris.subversion.javahl.SVNAdmin org.tigris.subversion.javahl.NodeKind org.tigris.subversion.javahl.LogMessage org.tigris.subversion.javahl.Info org.tigris.subversion.javahl.PropertyData org.tigris.subversion.javahl.StatusKind org.tigris.subversion.javahl.Revision org.tigris.subversion.javahl.SVNClientLogLevel org.tigris.subversion.javahl.OutputInterface org.tigris.subversion.javahl.ChangePath org.tigris.subversion.javahl.Info2 org.tigris.subversion.javahl.InputInterface org.tigris.subversion.javahl.BlameCallback org.tigris.subversion.javahl.CommitMessage
+javahl_javah_CLASS_FILENAMES = subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitItemStateFlags.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitMessage.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LogMessage.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNOutputStream.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyAction.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyStatus.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PropertyData.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/OutputInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientSynchronized.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Lock.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/StatusKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/JNIError.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClientLogLevel.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/BlameCallback.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ChangePath.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/DirEntry.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNInputStream.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ScheduleKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/RevisionKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NotifyInformation.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNClient.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/CommitItem.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Info2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/InputInterface.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/SVNAdmin.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/PromptUserPassword3.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NativeResources.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Status.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NodeKind.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify2.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/ClientException.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Info.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LockStatus.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Revision.class
+javahl_javah_CLASSES = org.tigris.subversion.javahl.CommitItemStateFlags org.tigris.subversion.javahl.CommitMessage org.tigris.subversion.javahl.LogMessage org.tigris.subversion.javahl.SVNOutputStream org.tigris.subversion.javahl.NotifyAction org.tigris.subversion.javahl.NotifyStatus org.tigris.subversion.javahl.PropertyData org.tigris.subversion.javahl.OutputInterface org.tigris.subversion.javahl.SVNClientSynchronized org.tigris.subversion.javahl.PromptUserPassword2 org.tigris.subversion.javahl.SVNClientInterface org.tigris.subversion.javahl.Lock org.tigris.subversion.javahl.StatusKind org.tigris.subversion.javahl.JNIError org.tigris.subversion.javahl.SVNClientLogLevel org.tigris.subversion.javahl.BlameCallback org.tigris.subversion.javahl.ChangePath org.tigris.subversion.javahl.DirEntry org.tigris.subversion.javahl.SVNInputStream org.tigris.subversion.javahl.ScheduleKind org.tigris.subversion.javahl.PromptUserPassword org.tigris.subversion.javahl.RevisionKind org.tigris.subversion.javahl.NotifyInformation org.tigris.subversion.javahl.SVNClient org.tigris.subversion.javahl.CommitItem org.tigris.subversion.javahl.Notify org.tigris.subversion.javahl.Info2 org.tigris.subversion.javahl.InputInterface org.tigris.subversion.javahl.SVNAdmin org.tigris.subversion.javahl.PromptUserPassword3 org.tigris.subversion.javahl.NativeResources org.tigris.subversion.javahl.Status org.tigris.subversion.javahl.NodeKind org.tigris.subversion.javahl.Notify2 org.tigris.subversion.javahl.ClientException org.tigris.subversion.javahl.Info org.tigris.subversion.javahl.LockStatus org.tigris.subversion.javahl.Revision
 $(javahl_javah_HEADERS): $(javahl_javah_CLASS_FILENAMES)
 	$(COMPILE_JAVAHL_JAVAH) -force -d subversion/bindings/java/javahl/include -classpath subversion/bindings/java/javahl/classes:$(javahl_javah_CLASSPATH) $(javahl_javah_CLASSES)
 
 
 javahl_tests_PATH = subversion/bindings/java/javahl/classes
 javahl_tests_HEADERS = 
-javahl_tests_OBJECTS = subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/tests/SVNAdminTests.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/tests/BasicTests.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/tests/SVNTests.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/tests/WC.class
+javahl_tests_OBJECTS = subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/tests/BasicTests.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/tests/WC.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/tests/SVNAdminTests.class subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/tests/SVNTests.class
 javahl_tests_DEPS = $(javahl_tests_HEADERS) $(javahl_tests_OBJECTS)  
 javahl-tests: $(javahl_tests_DEPS)
-javahl_tests_SRC = $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests/SVNAdminTests.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests/BasicTests.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests/SVNTests.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests/WC.java
+javahl_tests_SRC = $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests/BasicTests.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests/WC.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests/SVNAdminTests.java $(abs_srcdir)/subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/tests/SVNTests.java
 $(javahl_tests_OBJECTS): $(javahl_tests_SRC)
 	$(COMPILE_JAVAHL_JAVAC) -d subversion/bindings/java/javahl/classes -classpath subversion/bindings/java/javahl/classes:$(javahl_tests_CLASSPATH) $(javahl_tests_SRC)
 
@@ -130,8 +607,8 @@ subversion/tests/libsvn_fs_base/key-test$(EXEEXT): $(key_test_DEPS)
 	cd subversion/tests/libsvn_fs_base && $(LINK) -o key-test$(EXEEXT)  $(key_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/libsvn_fs_base/libsvn_fs_base-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 libsvn_client_PATH = subversion/libsvn_client
-libsvn_client_DEPS =  subversion/libsvn_client/add.lo subversion/libsvn_client/blame.lo subversion/libsvn_client/cat.lo subversion/libsvn_client/checkout.lo subversion/libsvn_client/cleanup.lo subversion/libsvn_client/commit.lo subversion/libsvn_client/commit_util.lo subversion/libsvn_client/copy.lo subversion/libsvn_client/ctx.lo subversion/libsvn_client/delete.lo subversion/libsvn_client/diff.lo subversion/libsvn_client/export.lo subversion/libsvn_client/externals.lo subversion/libsvn_client/info.lo subversion/libsvn_client/locking_commands.lo subversion/libsvn_client/log.lo subversion/libsvn_client/ls.lo subversion/libsvn_client/prop_commands.lo subversion/libsvn_client/ra.lo subversion/libsvn_client/relocate.lo subversion/libsvn_client/repos_diff.lo subversion/libsvn_client/resolved.lo subversion/libsvn_client/revert.lo subversion/libsvn_client/revisions.lo subversion/libsvn_client/simple_providers.lo subversion/libsvn_client/ssl_client_cert_providers.lo subversion/libsvn_client/ssl_client_cert_pw_providers.lo subversion/libsvn_client/ssl_server_trust_providers.lo subversion/libsvn_client/status.lo subversion/libsvn_client/switch.lo subversion/libsvn_client/update.lo subversion/libsvn_client/url.lo subversion/libsvn_client/username_providers.lo subversion/libsvn_client/version.lo
-libsvn_client_OBJECTS = add.lo blame.lo cat.lo checkout.lo cleanup.lo commit.lo commit_util.lo copy.lo ctx.lo delete.lo diff.lo export.lo externals.lo info.lo locking_commands.lo log.lo ls.lo prop_commands.lo ra.lo relocate.lo repos_diff.lo resolved.lo revert.lo revisions.lo simple_providers.lo ssl_client_cert_providers.lo ssl_client_cert_pw_providers.lo ssl_server_trust_providers.lo status.lo switch.lo update.lo url.lo username_providers.lo version.lo
+libsvn_client_DEPS =  subversion/libsvn_client/add.lo subversion/libsvn_client/blame.lo subversion/libsvn_client/cat.lo subversion/libsvn_client/checkout.lo subversion/libsvn_client/cleanup.lo subversion/libsvn_client/commit.lo subversion/libsvn_client/commit_util.lo subversion/libsvn_client/copy.lo subversion/libsvn_client/ctx.lo subversion/libsvn_client/delete.lo subversion/libsvn_client/diff.lo subversion/libsvn_client/export.lo subversion/libsvn_client/externals.lo subversion/libsvn_client/info.lo subversion/libsvn_client/locking_commands.lo subversion/libsvn_client/log.lo subversion/libsvn_client/ls.lo subversion/libsvn_client/prop_commands.lo subversion/libsvn_client/ra.lo subversion/libsvn_client/relocate.lo subversion/libsvn_client/repos_diff.lo subversion/libsvn_client/resolved.lo subversion/libsvn_client/revert.lo subversion/libsvn_client/revisions.lo subversion/libsvn_client/simple_providers.lo subversion/libsvn_client/ssl_client_cert_providers.lo subversion/libsvn_client/ssl_client_cert_pw_providers.lo subversion/libsvn_client/ssl_server_trust_providers.lo subversion/libsvn_client/status.lo subversion/libsvn_client/switch.lo subversion/libsvn_client/update.lo subversion/libsvn_client/url.lo subversion/libsvn_client/username_providers.lo subversion/libsvn_client/util.lo subversion/libsvn_client/version.lo
+libsvn_client_OBJECTS = add.lo blame.lo cat.lo checkout.lo cleanup.lo commit.lo commit_util.lo copy.lo ctx.lo delete.lo diff.lo export.lo externals.lo info.lo locking_commands.lo log.lo ls.lo prop_commands.lo ra.lo relocate.lo repos_diff.lo resolved.lo revert.lo revisions.lo simple_providers.lo ssl_client_cert_providers.lo ssl_client_cert_pw_providers.lo ssl_server_trust_providers.lo status.lo switch.lo update.lo url.lo username_providers.lo util.lo version.lo
 subversion/libsvn_client/libsvn_client-1.la: $(libsvn_client_DEPS)
 	cd subversion/libsvn_client && $(LINK) -o libsvn_client-1.la $(LT_NO_UNDEFINED) $(libsvn_client_OBJECTS) -lsvn_wc-1 -lsvn_ra-1 -lsvn_delta-1 -lsvn_diff-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
@@ -192,14 +669,14 @@ subversion/libsvn_ra_svn/libsvn_ra_svn-1.la: $(libsvn_ra_svn_DEPS)
 	cd subversion/libsvn_ra_svn && $(LINK) -o libsvn_ra_svn-1.la $(LT_NO_UNDEFINED) $(libsvn_ra_svn_OBJECTS) -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 libsvn_repos_PATH = subversion/libsvn_repos
-libsvn_repos_DEPS =  subversion/libsvn_repos/commit.lo subversion/libsvn_repos/delta.lo subversion/libsvn_repos/dump.lo subversion/libsvn_repos/fs-wrap.lo subversion/libsvn_repos/hooks.lo subversion/libsvn_repos/load.lo subversion/libsvn_repos/log.lo subversion/libsvn_repos/node_tree.lo subversion/libsvn_repos/replay.lo subversion/libsvn_repos/reporter.lo subversion/libsvn_repos/repos.lo subversion/libsvn_repos/rev_hunt.lo
-libsvn_repos_OBJECTS = commit.lo delta.lo dump.lo fs-wrap.lo hooks.lo load.lo log.lo node_tree.lo replay.lo reporter.lo repos.lo rev_hunt.lo
+libsvn_repos_DEPS =  subversion/libsvn_repos/authz.lo subversion/libsvn_repos/commit.lo subversion/libsvn_repos/delta.lo subversion/libsvn_repos/dump.lo subversion/libsvn_repos/fs-wrap.lo subversion/libsvn_repos/hooks.lo subversion/libsvn_repos/load.lo subversion/libsvn_repos/log.lo subversion/libsvn_repos/node_tree.lo subversion/libsvn_repos/replay.lo subversion/libsvn_repos/reporter.lo subversion/libsvn_repos/repos.lo subversion/libsvn_repos/rev_hunt.lo
+libsvn_repos_OBJECTS = authz.lo commit.lo delta.lo dump.lo fs-wrap.lo hooks.lo load.lo log.lo node_tree.lo replay.lo reporter.lo repos.lo rev_hunt.lo
 subversion/libsvn_repos/libsvn_repos-1.la: $(libsvn_repos_DEPS)
 	cd subversion/libsvn_repos && $(LINK) -o libsvn_repos-1.la $(LT_NO_UNDEFINED) $(libsvn_repos_OBJECTS) -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 libsvn_subr_PATH = subversion/libsvn_subr
-libsvn_subr_DEPS =  subversion/libsvn_subr/auth.lo subversion/libsvn_subr/cmdline.lo subversion/libsvn_subr/config.lo subversion/libsvn_subr/config_auth.lo subversion/libsvn_subr/config_file.lo subversion/libsvn_subr/config_win.lo subversion/libsvn_subr/ctype.lo subversion/libsvn_subr/date.lo subversion/libsvn_subr/error.lo subversion/libsvn_subr/hash.lo subversion/libsvn_subr/io.lo subversion/libsvn_subr/lock.lo subversion/libsvn_subr/md5.lo subversion/libsvn_subr/opt.lo subversion/libsvn_subr/path.lo subversion/libsvn_subr/pool.lo subversion/libsvn_subr/quoprint.lo subversion/libsvn_subr/sorts.lo subversion/libsvn_subr/stream.lo subversion/libsvn_subr/subst.lo subversion/libsvn_subr/svn_base64.lo subversion/libsvn_subr/svn_string.lo subversion/libsvn_subr/target.lo subversion/libsvn_subr/time.lo subversion/libsvn_subr/utf.lo subversion/libsvn_subr/utf_validate.lo subversion/libsvn_subr/validate.lo subversion/libsvn_subr/version.lo subversion/libsvn_subr/xml.lo
-libsvn_subr_OBJECTS = auth.lo cmdline.lo config.lo config_auth.lo config_file.lo config_win.lo ctype.lo date.lo error.lo hash.lo io.lo lock.lo md5.lo opt.lo path.lo pool.lo quoprint.lo sorts.lo stream.lo subst.lo svn_base64.lo svn_string.lo target.lo time.lo utf.lo utf_validate.lo validate.lo version.lo xml.lo
+libsvn_subr_DEPS =  subversion/libsvn_subr/auth.lo subversion/libsvn_subr/cmdline.lo subversion/libsvn_subr/config.lo subversion/libsvn_subr/config_auth.lo subversion/libsvn_subr/config_file.lo subversion/libsvn_subr/config_win.lo subversion/libsvn_subr/constructors.lo subversion/libsvn_subr/ctype.lo subversion/libsvn_subr/date.lo subversion/libsvn_subr/error.lo subversion/libsvn_subr/hash.lo subversion/libsvn_subr/io.lo subversion/libsvn_subr/lock.lo subversion/libsvn_subr/md5.lo subversion/libsvn_subr/nls.lo subversion/libsvn_subr/opt.lo subversion/libsvn_subr/path.lo subversion/libsvn_subr/pool.lo subversion/libsvn_subr/quoprint.lo subversion/libsvn_subr/sorts.lo subversion/libsvn_subr/stream.lo subversion/libsvn_subr/subst.lo subversion/libsvn_subr/svn_base64.lo subversion/libsvn_subr/svn_string.lo subversion/libsvn_subr/target.lo subversion/libsvn_subr/time.lo subversion/libsvn_subr/utf.lo subversion/libsvn_subr/utf_validate.lo subversion/libsvn_subr/validate.lo subversion/libsvn_subr/version.lo subversion/libsvn_subr/xml.lo
+libsvn_subr_OBJECTS = auth.lo cmdline.lo config.lo config_auth.lo config_file.lo config_win.lo constructors.lo ctype.lo date.lo error.lo hash.lo io.lo lock.lo md5.lo nls.lo opt.lo path.lo pool.lo quoprint.lo sorts.lo stream.lo subst.lo svn_base64.lo svn_string.lo target.lo time.lo utf.lo utf_validate.lo validate.lo version.lo xml.lo
 subversion/libsvn_subr/libsvn_subr-1.la: $(libsvn_subr_DEPS)
 	cd subversion/libsvn_subr && $(LINK) -o libsvn_subr-1.la $(LT_NO_UNDEFINED) $(libsvn_subr_OBJECTS) $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
@@ -207,31 +684,25 @@ libsvn_swig_perl_PATH = subversion/bindings/swig/perl/libsvn_swig_perl
 libsvn_swig_perl_DEPS =  subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.lo
 libsvn_swig_perl_OBJECTS = swigutil_pl.lo
 subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la: $(libsvn_swig_perl_DEPS)
-	cd subversion/bindings/swig/perl/libsvn_swig_perl && $(LINK) -o libsvn_swig_perl-1.la $(LT_NO_UNDEFINED) $(libsvn_swig_perl_OBJECTS) $(LSWIGPL) -lsvn_subr-1 -lsvn_delta-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/bindings/swig/perl/libsvn_swig_perl && $(LINK) -o libsvn_swig_perl-1.la $(LT_NO_UNDEFINED) $(libsvn_swig_perl_OBJECTS) -lsvn_subr-1 -lsvn_delta-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 libsvn_swig_py_PATH = subversion/bindings/swig/python/libsvn_swig_py
 libsvn_swig_py_DEPS =  subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.lo
 libsvn_swig_py_OBJECTS = swigutil_py.lo
 subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la: $(libsvn_swig_py_DEPS)
-	cd subversion/bindings/swig/python/libsvn_swig_py && $(LINK) $(SWIG_LDFLAGS) $(SWIG_PY_LIBS) -o libsvn_swig_py-1.la $(LT_NO_UNDEFINED) $(libsvn_swig_py_OBJECTS) $(LSWIGPY) -lsvn_subr-1 -lsvn_delta-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/bindings/swig/python/libsvn_swig_py && $(LINK) $(SWIG_PY_LIBS) -o libsvn_swig_py-1.la $(LT_NO_UNDEFINED) $(libsvn_swig_py_OBJECTS) -lsvn_subr-1 -lsvn_delta-1 -lsvn_wc-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 libsvn_swig_ruby_PATH = subversion/bindings/swig/ruby/libsvn_swig_ruby
 libsvn_swig_ruby_DEPS =  subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.lo
 libsvn_swig_ruby_OBJECTS = swigutil_rb.lo
 subversion/bindings/swig/ruby/libsvn_swig_ruby/libsvn_swig_ruby-1.la: $(libsvn_swig_ruby_DEPS)
-	cd subversion/bindings/swig/ruby/libsvn_swig_ruby && $(LINK) -o libsvn_swig_ruby-1.la $(LT_NO_UNDEFINED) $(libsvn_swig_ruby_OBJECTS) -lsvn_subr-1 -lsvn_delta-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/bindings/swig/ruby/libsvn_swig_ruby && $(LINK) -o libsvn_swig_ruby-1.la $(LT_NO_UNDEFINED) $(libsvn_swig_ruby_OBJECTS) -lsvn_client-1 -lsvn_wc-1 -lsvn_subr-1 -lsvn_delta-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 libsvn_test_PATH = subversion/tests
-libsvn_test_DEPS =  subversion/tests/svn_test_editor.lo subversion/tests/svn_tests_main.lo
-libsvn_test_OBJECTS = svn_test_editor.lo svn_tests_main.lo
+libsvn_test_DEPS =  subversion/tests/svn_test_editor.lo subversion/tests/svn_test_fs.lo subversion/tests/svn_test_main.lo
+libsvn_test_OBJECTS = svn_test_editor.lo svn_test_fs.lo svn_test_main.lo
 subversion/tests/libsvn_test-1.la: $(libsvn_test_DEPS)
-	cd subversion/tests && $(LINK) -o libsvn_test-1.la  $(libsvn_test_OBJECTS) -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
-
-libsvn_test_fs_PATH = subversion/tests
-libsvn_test_fs_DEPS =  subversion/tests/fs-helpers.lo subversion/tests/libsvn_test-1.la
-libsvn_test_fs_OBJECTS = fs-helpers.lo
-subversion/tests/libsvn_test_fs-1.la: $(libsvn_test_fs_DEPS)
-	cd subversion/tests && $(LINK) -o libsvn_test_fs-1.la  $(libsvn_test_fs_OBJECTS) -lsvn_fs-1 -lsvn_repos-1 -lsvn_delta-1 -lsvn_subr-1 ../../subversion/tests/libsvn_test-1.la $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/tests && $(LINK) -o libsvn_test-1.la  $(libsvn_test_OBJECTS) -lsvn_repos-1 -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 libsvn_wc_PATH = subversion/libsvn_wc
 libsvn_wc_DEPS =  subversion/libsvn_wc/adm_crawler.lo subversion/libsvn_wc/adm_files.lo subversion/libsvn_wc/adm_ops.lo subversion/libsvn_wc/copy.lo subversion/libsvn_wc/diff.lo subversion/libsvn_wc/entries.lo subversion/libsvn_wc/lock.lo subversion/libsvn_wc/log.lo subversion/libsvn_wc/merge.lo subversion/libsvn_wc/props.lo subversion/libsvn_wc/questions.lo subversion/libsvn_wc/relocate.lo subversion/libsvn_wc/status.lo subversion/libsvn_wc/translate.lo subversion/libsvn_wc/update_editor.lo subversion/libsvn_wc/util.lo
@@ -250,22 +721,28 @@ locale_DEPS =  subversion/po/de.mo subversion/po/es.mo subversion/po/fr.mo subve
 locale: $(locale_DEPS)
 
 locks_test_PATH = subversion/tests/libsvn_fs
-locks_test_DEPS =  subversion/tests/libsvn_fs/locks-test.o subversion/tests/libsvn_test-1.la subversion/tests/libsvn_test_fs-1.la
+locks_test_DEPS =  subversion/tests/libsvn_fs/locks-test.o subversion/tests/libsvn_test-1.la
 locks_test_OBJECTS = locks-test.o
 subversion/tests/libsvn_fs/locks-test$(EXEEXT): $(locks_test_DEPS)
-	cd subversion/tests/libsvn_fs && $(LINK) -o locks-test$(EXEEXT)  $(locks_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/tests/libsvn_test_fs-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/tests/libsvn_fs && $(LINK) -o locks-test$(EXEEXT)  $(locks_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 mod_authz_svn_PATH = subversion/mod_authz_svn
 mod_authz_svn_DEPS =  subversion/mod_authz_svn/mod_authz_svn.lo subversion/mod_dav_svn/mod_dav_svn.la
 mod_authz_svn_OBJECTS = mod_authz_svn.lo
 subversion/mod_authz_svn/mod_authz_svn.la: $(mod_authz_svn_DEPS)
-	cd subversion/mod_authz_svn && $(LINK_APACHE_MOD) -o mod_authz_svn.la $(LT_NO_UNDEFINED) $(mod_authz_svn_OBJECTS) -lsvn_subr-1 $(LIBS)
+	cd subversion/mod_authz_svn && $(LINK_APACHE_MOD) -o mod_authz_svn.la $(LT_NO_UNDEFINED) $(mod_authz_svn_OBJECTS) -lsvn_subr-1 -lsvn_repos-1 $(LIBS)
 
 mod_dav_svn_PATH = subversion/mod_dav_svn
 mod_dav_svn_DEPS =  subversion/mod_dav_svn/activity.lo subversion/mod_dav_svn/deadprops.lo subversion/mod_dav_svn/file_revs.lo subversion/mod_dav_svn/liveprops.lo subversion/mod_dav_svn/lock.lo subversion/mod_dav_svn/log.lo subversion/mod_dav_svn/merge.lo subversion/mod_dav_svn/mod_dav_svn.lo subversion/mod_dav_svn/repos.lo subversion/mod_dav_svn/update.lo subversion/mod_dav_svn/util.lo subversion/mod_dav_svn/version.lo
 mod_dav_svn_OBJECTS = activity.lo deadprops.lo file_revs.lo liveprops.lo lock.lo log.lo merge.lo mod_dav_svn.lo repos.lo update.lo util.lo version.lo
 subversion/mod_dav_svn/mod_dav_svn.la: $(mod_dav_svn_DEPS)
 	cd subversion/mod_dav_svn && $(LINK_APACHE_MOD) -o mod_dav_svn.la $(LT_NO_UNDEFINED) $(mod_dav_svn_OBJECTS) -lsvn_repos-1 -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(LIBS)
+
+mucc_PATH = contrib/client-side
+mucc_DEPS =  contrib/client-side/mucc.o
+mucc_OBJECTS = mucc.o
+contrib/client-side/mucc$(EXEEXT): $(mucc_DEPS)
+	cd contrib/client-side && $(LINK) -o mucc$(EXEEXT)  $(mucc_OBJECTS) -lsvn_client-1 -lsvn_ra-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(NEON_LIBS) $(LIBS)
 
 opt_test_PATH = subversion/tests/libsvn_subr
 opt_test_DEPS =  subversion/tests/libsvn_subr/opt-test.o subversion/tests/libsvn_test-1.la
@@ -279,95 +756,95 @@ path_test_OBJECTS = path-test.o
 subversion/tests/libsvn_subr/path-test$(EXEEXT): $(path_test_DEPS)
 	cd subversion/tests/libsvn_subr && $(LINK) -o path-test$(EXEEXT)  $(path_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
-perl_client_PATH = subversion/bindings/swig/perl
-perl_client_DEPS =  subversion/bindings/swig/perl/svn_client.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/_Core.la
+perl_client_PATH = subversion/bindings/swig/perl/native
+perl_client_DEPS =  subversion/bindings/swig/perl/native/svn_client.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/native/_Core.la
 perl_client_OBJECTS = svn_client.lo
-subversion/bindings/swig/perl/_Client.la: $(perl_client_DEPS)
-	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o _Client.la $(LT_NO_UNDEFINED) $(perl_client_OBJECTS) $(LSWIGPL) ../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_client-1 -lsvn_subr-1 $(SVN_APR_LIBS) $(LIBS)
+subversion/bindings/swig/perl/native/_Client.la: $(perl_client_DEPS)
+	cd subversion/bindings/swig/perl/native && $(LINK_PL_WRAPPER) -o _Client.la $(LT_NO_UNDEFINED) $(perl_client_OBJECTS) ../../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_client-1 -lsvn_subr-1 $(SVN_APR_LIBS) $(LIBS)
 
-perl_core_PATH = subversion/bindings/swig/perl
-perl_core_DEPS =  subversion/bindings/swig/perl/core.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la
+perl_core_PATH = subversion/bindings/swig/perl/native
+perl_core_DEPS =  subversion/bindings/swig/perl/native/core.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la
 perl_core_OBJECTS = core.lo
-subversion/bindings/swig/perl/_Core.la: $(perl_core_DEPS)
-	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o _Core.la $(LT_NO_UNDEFINED) $(perl_core_OBJECTS) $(LSWIGPL) ../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_delta-1 -lsvn_diff-1 -lsvn_subr-1 $(SVN_APR_LIBS) $(LIBS)
+subversion/bindings/swig/perl/native/_Core.la: $(perl_core_DEPS)
+	cd subversion/bindings/swig/perl/native && $(LINK_PL_WRAPPER) -o _Core.la $(LT_NO_UNDEFINED) $(perl_core_OBJECTS) ../../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_delta-1 -lsvn_diff-1 -lsvn_subr-1 $(SVN_APR_LIBS) $(LIBS)
 
-perl_delta_PATH = subversion/bindings/swig/perl
-perl_delta_DEPS =  subversion/bindings/swig/perl/svn_delta.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/_Core.la
+perl_delta_PATH = subversion/bindings/swig/perl/native
+perl_delta_DEPS =  subversion/bindings/swig/perl/native/svn_delta.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/native/_Core.la
 perl_delta_OBJECTS = svn_delta.lo
-subversion/bindings/swig/perl/_Delta.la: $(perl_delta_DEPS)
-	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o _Delta.la $(LT_NO_UNDEFINED) $(perl_delta_OBJECTS) $(LSWIGPL) ../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_delta-1 -lsvn_subr-1 $(LIBS)
+subversion/bindings/swig/perl/native/_Delta.la: $(perl_delta_DEPS)
+	cd subversion/bindings/swig/perl/native && $(LINK_PL_WRAPPER) -o _Delta.la $(LT_NO_UNDEFINED) $(perl_delta_OBJECTS) ../../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_delta-1 -lsvn_subr-1 $(LIBS)
 
-perl_fs_PATH = subversion/bindings/swig/perl
-perl_fs_DEPS =  subversion/bindings/swig/perl/svn_fs.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/_Core.la
+perl_fs_PATH = subversion/bindings/swig/perl/native
+perl_fs_DEPS =  subversion/bindings/swig/perl/native/svn_fs.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/native/_Core.la
 perl_fs_OBJECTS = svn_fs.lo
-subversion/bindings/swig/perl/_Fs.la: $(perl_fs_DEPS)
-	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o _Fs.la $(LT_NO_UNDEFINED) $(perl_fs_OBJECTS) $(LSWIGPL) ../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_fs-1 -lsvn_subr-1 $(LIBS)
+subversion/bindings/swig/perl/native/_Fs.la: $(perl_fs_DEPS)
+	cd subversion/bindings/swig/perl/native && $(LINK_PL_WRAPPER) -o _Fs.la $(LT_NO_UNDEFINED) $(perl_fs_OBJECTS) ../../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_fs-1 -lsvn_subr-1 $(LIBS)
 
-perl_ra_PATH = subversion/bindings/swig/perl
-perl_ra_DEPS =  subversion/bindings/swig/perl/svn_ra.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/_Core.la
+perl_ra_PATH = subversion/bindings/swig/perl/native
+perl_ra_DEPS =  subversion/bindings/swig/perl/native/svn_ra.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/native/_Core.la
 perl_ra_OBJECTS = svn_ra.lo
-subversion/bindings/swig/perl/_Ra.la: $(perl_ra_DEPS)
-	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o _Ra.la $(LT_NO_UNDEFINED) $(perl_ra_OBJECTS) $(LSWIGPL) ../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_ra-1 -lsvn_subr-1 $(LIBS)
+subversion/bindings/swig/perl/native/_Ra.la: $(perl_ra_DEPS)
+	cd subversion/bindings/swig/perl/native && $(LINK_PL_WRAPPER) -o _Ra.la $(LT_NO_UNDEFINED) $(perl_ra_OBJECTS) ../../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_ra-1 -lsvn_subr-1 $(LIBS)
 
-perl_repos_PATH = subversion/bindings/swig/perl
-perl_repos_DEPS =  subversion/bindings/swig/perl/svn_repos.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/_Core.la
+perl_repos_PATH = subversion/bindings/swig/perl/native
+perl_repos_DEPS =  subversion/bindings/swig/perl/native/svn_repos.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/native/_Core.la
 perl_repos_OBJECTS = svn_repos.lo
-subversion/bindings/swig/perl/_Repos.la: $(perl_repos_DEPS)
-	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o _Repos.la $(LT_NO_UNDEFINED) $(perl_repos_OBJECTS) $(LSWIGPL) ../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_repos-1 -lsvn_subr-1 $(LIBS)
+subversion/bindings/swig/perl/native/_Repos.la: $(perl_repos_DEPS)
+	cd subversion/bindings/swig/perl/native && $(LINK_PL_WRAPPER) -o _Repos.la $(LT_NO_UNDEFINED) $(perl_repos_OBJECTS) ../../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_repos-1 -lsvn_subr-1 $(LIBS)
 
-perl_wc_PATH = subversion/bindings/swig/perl
-perl_wc_DEPS =  subversion/bindings/swig/perl/svn_wc.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/_Core.la
+perl_wc_PATH = subversion/bindings/swig/perl/native
+perl_wc_DEPS =  subversion/bindings/swig/perl/native/svn_wc.lo subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la subversion/bindings/swig/perl/native/_Core.la
 perl_wc_OBJECTS = svn_wc.lo
-subversion/bindings/swig/perl/_Wc.la: $(perl_wc_DEPS)
-	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o _Wc.la $(LT_NO_UNDEFINED) $(perl_wc_OBJECTS) $(LSWIGPL) ../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_wc-1 -lsvn_subr-1 $(LIBS)
+subversion/bindings/swig/perl/native/_Wc.la: $(perl_wc_DEPS)
+	cd subversion/bindings/swig/perl/native && $(LINK_PL_WRAPPER) -o _Wc.la $(LT_NO_UNDEFINED) $(perl_wc_OBJECTS) ../../../../../subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_perl-1.la -lsvn_wc-1 -lsvn_subr-1 $(LIBS)
 
 python_client_PATH = subversion/bindings/swig/python
 python_client_DEPS =  subversion/bindings/swig/python/svn_client.lo subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la subversion/bindings/swig/python/_core.la
 python_client_OBJECTS = svn_client.lo
 subversion/bindings/swig/python/_client.la: $(python_client_DEPS)
-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _client.la $(LT_NO_UNDEFINED) $(python_client_OBJECTS) $(LSWIGPY) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_client-1 -lsvn_subr-1 $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _client.la $(LT_NO_UNDEFINED) $(python_client_OBJECTS) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_client-1 -lsvn_subr-1 $(SVN_APR_LIBS) $(LIBS)
 
 python_core_PATH = subversion/bindings/swig/python
 python_core_DEPS =  subversion/bindings/swig/python/core.lo subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la
 python_core_OBJECTS = core.lo
 subversion/bindings/swig/python/_core.la: $(python_core_DEPS)
-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _core.la $(LT_NO_UNDEFINED) $(python_core_OBJECTS) $(LSWIGPY) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_delta-1 -lsvn_diff-1 -lsvn_subr-1 $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _core.la $(LT_NO_UNDEFINED) $(python_core_OBJECTS) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_delta-1 -lsvn_diff-1 -lsvn_subr-1 $(SVN_APR_LIBS) $(LIBS)
 
 python_delta_PATH = subversion/bindings/swig/python
 python_delta_DEPS =  subversion/bindings/swig/python/svn_delta.lo subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la subversion/bindings/swig/python/_core.la
 python_delta_OBJECTS = svn_delta.lo
 subversion/bindings/swig/python/_delta.la: $(python_delta_DEPS)
-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _delta.la $(LT_NO_UNDEFINED) $(python_delta_OBJECTS) $(LSWIGPY) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_delta-1 -lsvn_subr-1 $(LIBS)
+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _delta.la $(LT_NO_UNDEFINED) $(python_delta_OBJECTS) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_delta-1 -lsvn_subr-1 $(LIBS)
 
 python_fs_PATH = subversion/bindings/swig/python
 python_fs_DEPS =  subversion/bindings/swig/python/svn_fs.lo subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la subversion/bindings/swig/python/_core.la
 python_fs_OBJECTS = svn_fs.lo
 subversion/bindings/swig/python/_fs.la: $(python_fs_DEPS)
-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _fs.la $(LT_NO_UNDEFINED) $(python_fs_OBJECTS) $(LSWIGPY) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_fs-1 -lsvn_subr-1 $(LIBS)
+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _fs.la $(LT_NO_UNDEFINED) $(python_fs_OBJECTS) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_fs-1 -lsvn_subr-1 $(LIBS)
 
 python_ra_PATH = subversion/bindings/swig/python
 python_ra_DEPS =  subversion/bindings/swig/python/svn_ra.lo subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la subversion/bindings/swig/python/_core.la
 python_ra_OBJECTS = svn_ra.lo
 subversion/bindings/swig/python/_ra.la: $(python_ra_DEPS)
-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _ra.la $(LT_NO_UNDEFINED) $(python_ra_OBJECTS) $(LSWIGPY) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_ra-1 -lsvn_subr-1 $(LIBS)
+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _ra.la $(LT_NO_UNDEFINED) $(python_ra_OBJECTS) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_ra-1 -lsvn_subr-1 $(LIBS)
 
 python_repos_PATH = subversion/bindings/swig/python
 python_repos_DEPS =  subversion/bindings/swig/python/svn_repos.lo subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la subversion/bindings/swig/python/_core.la
 python_repos_OBJECTS = svn_repos.lo
 subversion/bindings/swig/python/_repos.la: $(python_repos_DEPS)
-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _repos.la $(LT_NO_UNDEFINED) $(python_repos_OBJECTS) $(LSWIGPY) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_repos-1 -lsvn_subr-1 $(LIBS)
+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _repos.la $(LT_NO_UNDEFINED) $(python_repos_OBJECTS) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_repos-1 -lsvn_subr-1 $(LIBS)
 
 python_wc_PATH = subversion/bindings/swig/python
 python_wc_DEPS =  subversion/bindings/swig/python/svn_wc.lo subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la subversion/bindings/swig/python/_core.la
 python_wc_OBJECTS = svn_wc.lo
 subversion/bindings/swig/python/_wc.la: $(python_wc_DEPS)
-	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _wc.la $(LT_NO_UNDEFINED) $(python_wc_OBJECTS) $(LSWIGPY) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_wc-1 -lsvn_subr-1 $(LIBS)
+	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _wc.la $(LT_NO_UNDEFINED) $(python_wc_OBJECTS) ../../../../subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la -lsvn_wc-1 -lsvn_subr-1 $(LIBS)
 
 ra_local_test_PATH = subversion/tests/libsvn_ra_local
-ra_local_test_DEPS =  subversion/tests/libsvn_ra_local/ra-local-test.o subversion/tests/libsvn_test-1.la subversion/tests/libsvn_test_fs-1.la subversion/libsvn_ra_local/libsvn_ra_local-1.la
+ra_local_test_DEPS =  subversion/tests/libsvn_ra_local/ra-local-test.o subversion/tests/libsvn_test-1.la subversion/libsvn_ra_local/libsvn_ra_local-1.la
 ra_local_test_OBJECTS = ra-local-test.o
 subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT): $(ra_local_test_DEPS)
-	cd subversion/tests/libsvn_ra_local && $(LINK) -o ra-local-test$(EXEEXT)  $(ra_local_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/tests/libsvn_test_fs-1.la ../../../subversion/libsvn_ra_local/libsvn_ra_local-1.la -lsvn_ra-1 -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/tests/libsvn_ra_local && $(LINK) -o ra-local-test$(EXEEXT)  $(ra_local_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/libsvn_ra_local/libsvn_ra_local-1.la -lsvn_ra-1 -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 random_test_PATH = subversion/tests/libsvn_delta
 random_test_DEPS =  subversion/tests/libsvn_delta/random-test.o subversion/tests/libsvn_test-1.la
@@ -376,10 +853,10 @@ subversion/tests/libsvn_delta/random-test$(EXEEXT): $(random_test_DEPS)
 	cd subversion/tests/libsvn_delta && $(LINK) -o random-test$(EXEEXT)  $(random_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 repos_test_PATH = subversion/tests/libsvn_repos
-repos_test_DEPS =  subversion/tests/libsvn_repos/dir-delta-editor.o subversion/tests/libsvn_repos/repos-test.o subversion/tests/libsvn_test-1.la subversion/tests/libsvn_test_fs-1.la
+repos_test_DEPS =  subversion/tests/libsvn_repos/dir-delta-editor.o subversion/tests/libsvn_repos/repos-test.o subversion/tests/libsvn_test-1.la
 repos_test_OBJECTS = dir-delta-editor.o repos-test.o
 subversion/tests/libsvn_repos/repos-test$(EXEEXT): $(repos_test_DEPS)
-	cd subversion/tests/libsvn_repos && $(LINK) -o repos-test$(EXEEXT)  $(repos_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/tests/libsvn_test_fs-1.la -lsvn_repos-1 -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/tests/libsvn_repos && $(LINK) -o repos-test$(EXEEXT)  $(repos_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la -lsvn_repos-1 -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 ruby_client_PATH = subversion/bindings/swig/ruby
 ruby_client_DEPS =  subversion/bindings/swig/ruby/svn_client.lo subversion/bindings/swig/ruby/libsvn_swig_ruby/libsvn_swig_ruby-1.la subversion/bindings/swig/ruby/core.la
@@ -442,10 +919,10 @@ subversion/tests/libsvn_subr/string-test$(EXEEXT): $(string_test_DEPS)
 	cd subversion/tests/libsvn_subr && $(LINK) -o string-test$(EXEEXT)  $(string_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 strings_reps_test_PATH = subversion/tests/libsvn_fs_base
-strings_reps_test_DEPS =  subversion/tests/libsvn_fs_base/strings-reps-test.o subversion/tests/libsvn_test-1.la subversion/tests/libsvn_test_fs-1.la subversion/libsvn_fs_base/libsvn_fs_base-1.la
+strings_reps_test_DEPS =  subversion/tests/libsvn_fs_base/strings-reps-test.o subversion/tests/libsvn_test-1.la subversion/libsvn_fs_base/libsvn_fs_base-1.la
 strings_reps_test_OBJECTS = strings-reps-test.o
 subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT): $(strings_reps_test_DEPS)
-	cd subversion/tests/libsvn_fs_base && $(LINK) -o strings-reps-test$(EXEEXT)  $(strings_reps_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/tests/libsvn_test_fs-1.la ../../../subversion/libsvn_fs_base/libsvn_fs_base-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+	cd subversion/tests/libsvn_fs_base && $(LINK) -o strings-reps-test$(EXEEXT)  $(strings_reps_test_OBJECTS) ../../../subversion/tests/libsvn_test-1.la ../../../subversion/libsvn_fs_base/libsvn_fs_base-1.la -lsvn_fs-1 -lsvn_delta-1 -lsvn_subr-1 $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
 
 svn_PATH = subversion/clients/cmdline
 svn_DEPS =  subversion/clients/cmdline/add-cmd.o subversion/clients/cmdline/blame-cmd.o subversion/clients/cmdline/cat-cmd.o subversion/clients/cmdline/checkout-cmd.o subversion/clients/cmdline/cleanup-cmd.o subversion/clients/cmdline/commit-cmd.o subversion/clients/cmdline/copy-cmd.o subversion/clients/cmdline/delete-cmd.o subversion/clients/cmdline/diff-cmd.o subversion/clients/cmdline/export-cmd.o subversion/clients/cmdline/help-cmd.o subversion/clients/cmdline/import-cmd.o subversion/clients/cmdline/info-cmd.o subversion/clients/cmdline/lock-cmd.o subversion/clients/cmdline/log-cmd.o subversion/clients/cmdline/ls-cmd.o subversion/clients/cmdline/main.o subversion/clients/cmdline/merge-cmd.o subversion/clients/cmdline/mkdir-cmd.o subversion/clients/cmdline/move-cmd.o subversion/clients/cmdline/notify.o subversion/clients/cmdline/prompt.o subversion/clients/cmdline/propdel-cmd.o subversion/clients/cmdline/propedit-cmd.o subversion/clients/cmdline/propget-cmd.o subversion/clients/cmdline/proplist-cmd.o subversion/clients/cmdline/props.o subversion/clients/cmdline/propset-cmd.o subversion/clients/cmdline/resolved-cmd.o subversion/clients/cmdline/revert-cmd.o subversion/clients/cmdline/status-cmd.o subversion/clients/cmdline/status.o subversion/clients/cmdline/switch-cmd.o subversion/clients/cmdline/unlock-cmd.o subversion/clients/cmdline/update-cmd.o subversion/clients/cmdline/util.o
@@ -527,18 +1004,18 @@ subversion/tests/libsvn_delta/vdelta-test$(EXEEXT): $(vdelta_test_DEPS)
 
 
 ########################################
-# Section 3: Install-Group build targets
+# Section 7: Install-Group build targets
 ########################################
 
 apache-mod: subversion/mod_authz_svn/mod_authz_svn.la subversion/mod_dav_svn/mod_dav_svn.la
 
 bdb-lib: subversion/libsvn_fs_base/libsvn_fs_base-1.la
 
-bdb-test: subversion/tests/libsvn_fs_base/changes-test$(EXEEXT) subversion/tests/libsvn_fs_base/fs-test$(EXEEXT) subversion/tests/libsvn_fs_base/key-test$(EXEEXT) subversion/tests/libsvn_fs_base/skel-test$(EXEEXT) subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT)
+bdb-test: subversion/tests/libsvn_fs_base/changes-test$(EXEEXT) subversion/tests/libsvn_fs_base/fs-base-test$(EXEEXT) subversion/tests/libsvn_fs_base/key-test$(EXEEXT) subversion/tests/libsvn_fs_base/skel-test$(EXEEXT) subversion/tests/libsvn_fs_base/strings-reps-test$(EXEEXT)
 
 bin: subversion/clients/cmdline/svn$(EXEEXT) subversion/svnadmin/svnadmin$(EXEEXT) subversion/svndumpfilter/svndumpfilter$(EXEEXT) subversion/svnlook/svnlook$(EXEEXT) subversion/svnserve/svnserve$(EXEEXT) subversion/svnversion/svnversion$(EXEEXT)
 
-contrib: contrib/client-side/svn-push/svn-push$(EXEEXT)
+contrib: tools/diff/diff$(EXEEXT) tools/diff/diff3$(EXEEXT) tools/diff/diff4$(EXEEXT) contrib/client-side/mucc$(EXEEXT) contrib/client-side/svn-push/svn-push$(EXEEXT)
 
 dav-lib: subversion/libsvn_ra_dav/libsvn_ra_dav-1.la
 
@@ -568,18 +1045,18 @@ swig-rb: subversion/bindings/swig/ruby/client.la subversion/bindings/swig/ruby/c
 
 swig-rb-lib: subversion/bindings/swig/ruby/libsvn_swig_ruby/libsvn_swig_ruby-1.la
 
-test: subversion/tests/libsvn_subr/compat-test$(EXEEXT) subversion/tests/libsvn_subr/config-test$(EXEEXT) subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT) subversion/tests/libsvn_diff/diff-test$(EXEEXT) subversion/tests/libsvn_diff/diff3-test$(EXEEXT) subversion/tests/libsvn_diff/diff4-test$(EXEEXT) subversion/tests/libsvn_subr/hashdump-test$(EXEEXT) subversion/tests/libsvn_test-1.la subversion/tests/libsvn_test_fs-1.la subversion/tests/libsvn_fs/locks-test$(EXEEXT) subversion/tests/libsvn_subr/opt-test$(EXEEXT) subversion/tests/libsvn_subr/path-test$(EXEEXT) subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT) subversion/tests/libsvn_delta/random-test$(EXEEXT) subversion/tests/libsvn_repos/repos-test$(EXEEXT) subversion/tests/libsvn_subr/stream-test$(EXEEXT) subversion/tests/libsvn_subr/string-test$(EXEEXT) subversion/tests/libsvn_delta/svndiff-test$(EXEEXT) subversion/tests/libsvn_subr/target-test$(EXEEXT) subversion/tests/libsvn_subr/time-test$(EXEEXT) subversion/tests/libsvn_wc/translate-test$(EXEEXT) subversion/tests/libsvn_subr/utf-test$(EXEEXT) subversion/tests/libsvn_delta/vdelta-test$(EXEEXT)
+test: subversion/tests/libsvn_subr/compat-test$(EXEEXT) subversion/tests/libsvn_subr/config-test$(EXEEXT) subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT) subversion/tests/libsvn_fs/fs-test$(EXEEXT) subversion/tests/libsvn_subr/hashdump-test$(EXEEXT) subversion/tests/libsvn_test-1.la subversion/tests/libsvn_fs/locks-test$(EXEEXT) subversion/tests/libsvn_subr/opt-test$(EXEEXT) subversion/tests/libsvn_subr/path-test$(EXEEXT) subversion/tests/libsvn_ra_local/ra-local-test$(EXEEXT) subversion/tests/libsvn_delta/random-test$(EXEEXT) subversion/tests/libsvn_repos/repos-test$(EXEEXT) subversion/tests/libsvn_subr/stream-test$(EXEEXT) subversion/tests/libsvn_subr/string-test$(EXEEXT) subversion/tests/libsvn_delta/svndiff-test$(EXEEXT) subversion/tests/libsvn_subr/target-test$(EXEEXT) subversion/tests/libsvn_subr/time-test$(EXEEXT) subversion/tests/libsvn_wc/translate-test$(EXEEXT) subversion/tests/libsvn_subr/utf-test$(EXEEXT) subversion/tests/libsvn_delta/vdelta-test$(EXEEXT)
 
 
 ########################################
-# Section 4: Install-Group install targets
+# Section 8: Install-Group install targets
 ########################################
 
 install-mods-shared: subversion/mod_dav_svn/mod_dav_svn.la subversion/mod_authz_svn/mod_authz_svn.la
 	cd subversion/mod_dav_svn ; $(MKDIR) "$(APACHE_LIBEXECDIR)" ; $(INSTALL_MOD_SHARED) -n dav_svn mod_dav_svn.la
 	cd subversion/mod_authz_svn ; $(MKDIR) "$(APACHE_LIBEXECDIR)" ; $(INSTALL_MOD_SHARED) -n authz_svn mod_authz_svn.la
 
-install-mods-static: subversion/libsvn_delta/libsvn_delta-1.la-a subversion/libsvn_fs/libsvn_fs-1.la-a subversion/libsvn_repos/libsvn_repos-1.la-a subversion/libsvn_subr/libsvn_subr-1.la-a subversion/mod_authz_svn/mod_authz_svn.la-a subversion/mod_dav_svn/mod_dav_svn.la-a subversion/mod_dav_svn/static/config.m4 subversion/mod_dav_svn/static/Makefile.in
+install-mods-static: subversion/libsvn_delta/libsvn_delta-1.la-a subversion/libsvn_fs/libsvn_fs-1.la-a subversion/libsvn_repos/libsvn_repos-1.la-a subversion/libsvn_subr/libsvn_subr-1.la-a subversion/mod_authz_svn/mod_authz_svn.la-a subversion/mod_dav_svn/mod_dav_svn.la-a subversion/mod_dav_svn/static/Makefile.in subversion/mod_dav_svn/static/config.m4
 	$(MKDIR) $(DESTDIR)$(APACHE_TARGET)/.libs
 	$(INSTALL_MOD_STATIC) subversion/libsvn_delta/.libs/libsvn_delta-1.a $(DESTDIR)$(APACHE_TARGET)/.libs/libsvn_delta-1.a
 	$(INSTALL_MOD_STATIC) subversion/libsvn_delta/libsvn_delta-1.la-a $(DESTDIR)$(APACHE_TARGET)/libsvn_delta-1.la
@@ -593,8 +1070,8 @@ install-mods-static: subversion/libsvn_delta/libsvn_delta-1.la-a subversion/libs
 	$(INSTALL_MOD_STATIC) subversion/mod_authz_svn/mod_authz_svn.la-a $(DESTDIR)$(APACHE_TARGET)/mod_authz_svn.la
 	$(INSTALL_MOD_STATIC) subversion/mod_dav_svn/.libs/mod_dav_svn.a $(DESTDIR)$(APACHE_TARGET)/.libs/mod_dav_svn.a
 	$(INSTALL_MOD_STATIC) subversion/mod_dav_svn/mod_dav_svn.la-a $(DESTDIR)$(APACHE_TARGET)/mod_dav_svn.la
-	$(INSTALL_MOD_STATIC) subversion/mod_dav_svn/static/config.m4 $(DESTDIR)$(APACHE_TARGET)/config.m4
 	$(INSTALL_MOD_STATIC) subversion/mod_dav_svn/static/Makefile.in $(DESTDIR)$(APACHE_TARGET)/Makefile.in
+	$(INSTALL_MOD_STATIC) subversion/mod_dav_svn/static/config.m4 $(DESTDIR)$(APACHE_TARGET)/config.m4
 
 install-bdb-lib: subversion/libsvn_fs_base/libsvn_fs_base-1.la
 	$(MKDIR) $(DESTDIR)$(bdb_libdir)
@@ -609,8 +1086,12 @@ install-bin: subversion/clients/cmdline/svn$(EXEEXT) subversion/svnadmin/svnadmi
 	cd subversion/svnserve ; $(INSTALL_BIN) svnserve$(EXEEXT) $(DESTDIR)$(bindir)/svnserve$(EXEEXT)
 	cd subversion/svnversion ; $(INSTALL_BIN) svnversion$(EXEEXT) $(DESTDIR)$(bindir)/svnversion$(EXEEXT)
 
-install-contrib: contrib/client-side/svn-push/svn-push$(EXEEXT)
+install-contrib: tools/diff/diff$(EXEEXT) tools/diff/diff3$(EXEEXT) tools/diff/diff4$(EXEEXT) contrib/client-side/mucc$(EXEEXT) contrib/client-side/svn-push/svn-push$(EXEEXT)
 	$(MKDIR) $(DESTDIR)$(contribdir)
+	cd tools/diff ; $(INSTALL_CONTRIB) diff$(EXEEXT) $(DESTDIR)$(contribdir)/diff$(EXEEXT)
+	cd tools/diff ; $(INSTALL_CONTRIB) diff3$(EXEEXT) $(DESTDIR)$(contribdir)/diff3$(EXEEXT)
+	cd tools/diff ; $(INSTALL_CONTRIB) diff4$(EXEEXT) $(DESTDIR)$(contribdir)/diff4$(EXEEXT)
+	cd contrib/client-side ; $(INSTALL_CONTRIB) mucc$(EXEEXT) $(DESTDIR)$(contribdir)/mucc$(EXEEXT)
 	cd contrib/client-side/svn-push ; $(INSTALL_CONTRIB) svn-push$(EXEEXT) $(DESTDIR)$(contribdir)/svn-push$(EXEEXT)
 
 install-dav-lib: subversion/libsvn_ra_dav/libsvn_ra_dav-1.la
@@ -705,58 +1186,59 @@ install-swig-rb-lib: subversion/bindings/swig/ruby/libsvn_swig_ruby/libsvn_swig_
 
 
 ########################################
-# Section 5: The install-include rule
+# Section 9: The install-include rule
 ########################################
 
-install-include: subversion/include/mod_dav_svn.h subversion/include/svn_props.h subversion/include/svn_delta.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_ra.h subversion/include/svn_wc.h subversion/include/svn_repos.h subversion/include/svn_ctype.h subversion/include/svn_version.h subversion/include/svn_cmdline.h subversion/include/svn_base64.h subversion/include/svn_error.h subversion/include/svn_sorts.h subversion/include/svn_string.h subversion/include/svn_auth.h subversion/include/svn_diff.h subversion/include/svn_subst.h subversion/include/svn_client.h subversion/include/svn_hash.h subversion/include/svn_dav.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_utf.h subversion/include/svn_xml.h subversion/include/svn_path.h subversion/include/svn_quoprint.h subversion/include/svn_test.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_error_codes.h subversion/include/svn_ra_svn.h subversion/include/svn_pools.h subversion/include/svn_config.h
+install-include: subversion/include/svn_error_codes.h subversion/include/svn_version.h subversion/include/svn_diff.h subversion/include/svn_fs.h subversion/include/mod_dav_svn.h subversion/include/svn_sorts.h subversion/include/svn_dav.h subversion/include/svn_base64.h subversion/include/svn_ctype.h subversion/include/svn_ra_svn.h subversion/include/svn_repos.h subversion/include/svn_delta.h subversion/include/svn_path.h subversion/include/svn_subst.h subversion/include/svn_xml.h subversion/include/svn_props.h subversion/include/svn_types.h subversion/include/svn_config.h subversion/include/svn_string.h subversion/include/svn_io.h subversion/include/svn_wc.h subversion/include/svn_cmdline.h subversion/include/svn_client.h subversion/include/svn_quoprint.h subversion/include/svn_hash.h subversion/include/svn_md5.h subversion/include/svn_error.h subversion/include/svn_pools.h subversion/include/svn_nls.h subversion/include/svn_time.h subversion/include/svn_utf.h subversion/include/svn_auth.h subversion/include/svn_opt.h subversion/include/svn_ra.h
 	$(MKDIR) $(DESTDIR)$(includedir)/subversion-1
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/mod_dav_svn.h $(DESTDIR)$(includedir)/subversion-1/mod_dav_svn.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_props.h $(DESTDIR)$(includedir)/subversion-1/svn_props.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_delta.h $(DESTDIR)$(includedir)/subversion-1/svn_delta.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_fs.h $(DESTDIR)$(includedir)/subversion-1/svn_fs.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_io.h $(DESTDIR)$(includedir)/subversion-1/svn_io.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_ra.h $(DESTDIR)$(includedir)/subversion-1/svn_ra.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_wc.h $(DESTDIR)$(includedir)/subversion-1/svn_wc.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_repos.h $(DESTDIR)$(includedir)/subversion-1/svn_repos.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_ctype.h $(DESTDIR)$(includedir)/subversion-1/svn_ctype.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_version.h $(DESTDIR)$(includedir)/subversion-1/svn_version.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_cmdline.h $(DESTDIR)$(includedir)/subversion-1/svn_cmdline.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_base64.h $(DESTDIR)$(includedir)/subversion-1/svn_base64.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_error.h $(DESTDIR)$(includedir)/subversion-1/svn_error.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_sorts.h $(DESTDIR)$(includedir)/subversion-1/svn_sorts.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_string.h $(DESTDIR)$(includedir)/subversion-1/svn_string.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_auth.h $(DESTDIR)$(includedir)/subversion-1/svn_auth.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_diff.h $(DESTDIR)$(includedir)/subversion-1/svn_diff.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_subst.h $(DESTDIR)$(includedir)/subversion-1/svn_subst.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_client.h $(DESTDIR)$(includedir)/subversion-1/svn_client.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_hash.h $(DESTDIR)$(includedir)/subversion-1/svn_hash.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_dav.h $(DESTDIR)$(includedir)/subversion-1/svn_dav.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_md5.h $(DESTDIR)$(includedir)/subversion-1/svn_md5.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_opt.h $(DESTDIR)$(includedir)/subversion-1/svn_opt.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_utf.h $(DESTDIR)$(includedir)/subversion-1/svn_utf.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_xml.h $(DESTDIR)$(includedir)/subversion-1/svn_xml.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_path.h $(DESTDIR)$(includedir)/subversion-1/svn_path.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_quoprint.h $(DESTDIR)$(includedir)/subversion-1/svn_quoprint.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_test.h $(DESTDIR)$(includedir)/subversion-1/svn_test.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_time.h $(DESTDIR)$(includedir)/subversion-1/svn_time.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_types.h $(DESTDIR)$(includedir)/subversion-1/svn_types.h
 	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_error_codes.h $(DESTDIR)$(includedir)/subversion-1/svn_error_codes.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_version.h $(DESTDIR)$(includedir)/subversion-1/svn_version.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_diff.h $(DESTDIR)$(includedir)/subversion-1/svn_diff.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_fs.h $(DESTDIR)$(includedir)/subversion-1/svn_fs.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/mod_dav_svn.h $(DESTDIR)$(includedir)/subversion-1/mod_dav_svn.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_sorts.h $(DESTDIR)$(includedir)/subversion-1/svn_sorts.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_dav.h $(DESTDIR)$(includedir)/subversion-1/svn_dav.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_base64.h $(DESTDIR)$(includedir)/subversion-1/svn_base64.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_ctype.h $(DESTDIR)$(includedir)/subversion-1/svn_ctype.h
 	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_ra_svn.h $(DESTDIR)$(includedir)/subversion-1/svn_ra_svn.h
-	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_pools.h $(DESTDIR)$(includedir)/subversion-1/svn_pools.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_repos.h $(DESTDIR)$(includedir)/subversion-1/svn_repos.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_delta.h $(DESTDIR)$(includedir)/subversion-1/svn_delta.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_path.h $(DESTDIR)$(includedir)/subversion-1/svn_path.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_subst.h $(DESTDIR)$(includedir)/subversion-1/svn_subst.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_xml.h $(DESTDIR)$(includedir)/subversion-1/svn_xml.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_props.h $(DESTDIR)$(includedir)/subversion-1/svn_props.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_types.h $(DESTDIR)$(includedir)/subversion-1/svn_types.h
 	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_config.h $(DESTDIR)$(includedir)/subversion-1/svn_config.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_string.h $(DESTDIR)$(includedir)/subversion-1/svn_string.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_io.h $(DESTDIR)$(includedir)/subversion-1/svn_io.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_wc.h $(DESTDIR)$(includedir)/subversion-1/svn_wc.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_cmdline.h $(DESTDIR)$(includedir)/subversion-1/svn_cmdline.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_client.h $(DESTDIR)$(includedir)/subversion-1/svn_client.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_quoprint.h $(DESTDIR)$(includedir)/subversion-1/svn_quoprint.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_hash.h $(DESTDIR)$(includedir)/subversion-1/svn_hash.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_md5.h $(DESTDIR)$(includedir)/subversion-1/svn_md5.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_error.h $(DESTDIR)$(includedir)/subversion-1/svn_error.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_pools.h $(DESTDIR)$(includedir)/subversion-1/svn_pools.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_nls.h $(DESTDIR)$(includedir)/subversion-1/svn_nls.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_time.h $(DESTDIR)$(includedir)/subversion-1/svn_time.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_utf.h $(DESTDIR)$(includedir)/subversion-1/svn_utf.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_auth.h $(DESTDIR)$(includedir)/subversion-1/svn_auth.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_opt.h $(DESTDIR)$(includedir)/subversion-1/svn_opt.h
+	$(INSTALL_INCLUDE) $(abs_srcdir)/subversion/include/svn_ra.h $(DESTDIR)$(includedir)/subversion-1/svn_ra.h
 
 ########################################
-# Section 6: Shortcut targets for manual builds of specific items
+# Section 10: Shortcut targets for manual builds of specific items
 ########################################
 
 changes-test: subversion/tests/libsvn_fs_base/changes-test$(EXEEXT)
 compat-test: subversion/tests/libsvn_subr/compat-test$(EXEEXT)
 config-test: subversion/tests/libsvn_subr/config-test$(EXEEXT)
+diff: tools/diff/diff$(EXEEXT)
 diff-diff3-test: subversion/tests/libsvn_diff/diff-diff3-test$(EXEEXT)
-diff-test: subversion/tests/libsvn_diff/diff-test$(EXEEXT)
-diff3-test: subversion/tests/libsvn_diff/diff3-test$(EXEEXT)
-diff4-test: subversion/tests/libsvn_diff/diff4-test$(EXEEXT)
-fs-test: subversion/tests/libsvn_fs_base/fs-test$(EXEEXT)
+diff3: tools/diff/diff3$(EXEEXT)
+diff4: tools/diff/diff4$(EXEEXT)
+fs-base-test: subversion/tests/libsvn_fs_base/fs-base-test$(EXEEXT)
+fs-test: subversion/tests/libsvn_fs/fs-test$(EXEEXT)
 hashdump-test: subversion/tests/libsvn_subr/hashdump-test$(EXEEXT)
 key-test: subversion/tests/libsvn_fs_base/key-test$(EXEEXT)
 libsvn_client: subversion/libsvn_client/libsvn_client-1.la
@@ -775,21 +1257,21 @@ libsvn_swig_perl: subversion/bindings/swig/perl/libsvn_swig_perl/libsvn_swig_per
 libsvn_swig_py: subversion/bindings/swig/python/libsvn_swig_py/libsvn_swig_py-1.la
 libsvn_swig_ruby: subversion/bindings/swig/ruby/libsvn_swig_ruby/libsvn_swig_ruby-1.la
 libsvn_test: subversion/tests/libsvn_test-1.la
-libsvn_test_fs: subversion/tests/libsvn_test_fs-1.la
 libsvn_wc: subversion/libsvn_wc/libsvn_wc-1.la
 libsvnjavahl: subversion/bindings/java/javahl/native/libsvnjavahl-1.la
 locks-test: subversion/tests/libsvn_fs/locks-test$(EXEEXT)
 mod_authz_svn: subversion/mod_authz_svn/mod_authz_svn.la
 mod_dav_svn: subversion/mod_dav_svn/mod_dav_svn.la
+mucc: contrib/client-side/mucc$(EXEEXT)
 opt-test: subversion/tests/libsvn_subr/opt-test$(EXEEXT)
 path-test: subversion/tests/libsvn_subr/path-test$(EXEEXT)
-perl_client: subversion/bindings/swig/perl/_Client.la
-perl_core: subversion/bindings/swig/perl/_Core.la
-perl_delta: subversion/bindings/swig/perl/_Delta.la
-perl_fs: subversion/bindings/swig/perl/_Fs.la
-perl_ra: subversion/bindings/swig/perl/_Ra.la
-perl_repos: subversion/bindings/swig/perl/_Repos.la
-perl_wc: subversion/bindings/swig/perl/_Wc.la
+perl_client: subversion/bindings/swig/perl/native/_Client.la
+perl_core: subversion/bindings/swig/perl/native/_Core.la
+perl_delta: subversion/bindings/swig/perl/native/_Delta.la
+perl_fs: subversion/bindings/swig/perl/native/_Fs.la
+perl_ra: subversion/bindings/swig/perl/native/_Ra.la
+perl_repos: subversion/bindings/swig/perl/native/_Repos.la
+perl_wc: subversion/bindings/swig/perl/native/_Wc.la
 python_client: subversion/bindings/swig/python/_client.la
 python_core: subversion/bindings/swig/python/_core.la
 python_delta: subversion/bindings/swig/python/_delta.la
@@ -826,56 +1308,10 @@ utf-test: subversion/tests/libsvn_subr/utf-test$(EXEEXT)
 vdelta-test: subversion/tests/libsvn_delta/vdelta-test$(EXEEXT)
 
 ########################################
-# Section 7: Rules to build SWIG .c files from .i files
+# Section 11: Rules to build all other kinds of object-like files
 ########################################
 
-subversion/bindings/swig/perl/core.c: subversion/bindings/swig/core.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PL) $(abs_srcdir)/subversion/bindings/swig/core.i
-subversion/bindings/swig/perl/svn_client.c: subversion/bindings/swig/svn_client.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PL) $(abs_srcdir)/subversion/bindings/swig/svn_client.i
-subversion/bindings/swig/perl/svn_delta.c: subversion/bindings/swig/svn_delta.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PL) $(abs_srcdir)/subversion/bindings/swig/svn_delta.i
-subversion/bindings/swig/perl/svn_fs.c: subversion/bindings/swig/svn_fs.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PL) $(abs_srcdir)/subversion/bindings/swig/svn_fs.i
-subversion/bindings/swig/perl/svn_ra.c: subversion/bindings/swig/svn_ra.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PL) $(abs_srcdir)/subversion/bindings/swig/svn_ra.i
-subversion/bindings/swig/perl/svn_repos.c: subversion/bindings/swig/svn_repos.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PL) $(abs_srcdir)/subversion/bindings/swig/svn_repos.i
-subversion/bindings/swig/perl/svn_wc.c: subversion/bindings/swig/svn_wc.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PL) $(abs_srcdir)/subversion/bindings/swig/svn_wc.i
-subversion/bindings/swig/python/core.c: subversion/bindings/swig/core.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PY) $(abs_srcdir)/subversion/bindings/swig/core.i
-subversion/bindings/swig/python/svn_client.c: subversion/bindings/swig/svn_client.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PY) $(abs_srcdir)/subversion/bindings/swig/svn_client.i
-subversion/bindings/swig/python/svn_delta.c: subversion/bindings/swig/svn_delta.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PY) $(abs_srcdir)/subversion/bindings/swig/svn_delta.i
-subversion/bindings/swig/python/svn_fs.c: subversion/bindings/swig/svn_fs.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PY) $(abs_srcdir)/subversion/bindings/swig/svn_fs.i
-subversion/bindings/swig/python/svn_ra.c: subversion/bindings/swig/svn_ra.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PY) $(abs_srcdir)/subversion/bindings/swig/svn_ra.i
-subversion/bindings/swig/python/svn_repos.c: subversion/bindings/swig/svn_repos.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PY) $(abs_srcdir)/subversion/bindings/swig/svn_repos.i
-subversion/bindings/swig/python/svn_wc.c: subversion/bindings/swig/svn_wc.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_PY) $(abs_srcdir)/subversion/bindings/swig/svn_wc.i
-subversion/bindings/swig/ruby/core.c: subversion/bindings/swig/core.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_RB) $(abs_srcdir)/subversion/bindings/swig/core.i
-subversion/bindings/swig/ruby/svn_client.c: subversion/bindings/swig/svn_client.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_RB) $(abs_srcdir)/subversion/bindings/swig/svn_client.i
-subversion/bindings/swig/ruby/svn_delta.c: subversion/bindings/swig/svn_delta.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_RB) $(abs_srcdir)/subversion/bindings/swig/svn_delta.i
-subversion/bindings/swig/ruby/svn_fs.c: subversion/bindings/swig/svn_fs.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_RB) $(abs_srcdir)/subversion/bindings/swig/svn_fs.i
-subversion/bindings/swig/ruby/svn_ra.c: subversion/bindings/swig/svn_ra.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_RB) $(abs_srcdir)/subversion/bindings/swig/svn_ra.i
-subversion/bindings/swig/ruby/svn_repos.c: subversion/bindings/swig/svn_repos.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_RB) $(abs_srcdir)/subversion/bindings/swig/svn_repos.i
-subversion/bindings/swig/ruby/svn_wc.c: subversion/bindings/swig/svn_wc.i subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
-	$(RUN_SWIG_RB) $(abs_srcdir)/subversion/bindings/swig/svn_wc.i
-
-
-########################################
-# Section 8: Rules to build all other kinds of object-like files
-########################################
+contrib/client-side/mucc.o: contrib/client-side/mucc.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
 contrib/client-side/svn-push/svn-push.o: contrib/client-side/svn-push/svn-push.c subversion/include/svn_auth.h subversion/include/svn_cmdline.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h
 
@@ -906,6 +1342,8 @@ subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Lock.class:
 subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LockStatus.class: subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/LockStatus.java
 
 subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LogMessage.class: subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/LogMessage.java
+
+subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NativeResources.class: subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NativeResources.java
 
 subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NodeKind.class: subversion/bindings/java/javahl/src/org/tigris/subversion/javahl/NodeKind.java
 
@@ -989,6 +1427,8 @@ subversion/bindings/java/javahl/include/LockStatus.h: subversion/bindings/java/j
 
 subversion/bindings/java/javahl/include/LogMessage.h: subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/LogMessage.class
 
+subversion/bindings/java/javahl/include/NativeResources.h: subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NativeResources.class
+
 subversion/bindings/java/javahl/include/NodeKind.h: subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/NodeKind.class
 
 subversion/bindings/java/javahl/include/Notify.h: subversion/bindings/java/javahl/classes/org/tigris/subversion/javahl/Notify.class
@@ -1056,7 +1496,7 @@ subversion/bindings/java/javahl/native/JNICriticalSection.lo: subversion/binding
 subversion/bindings/java/javahl/native/JNIMutex.lo: subversion/bindings/java/javahl/native/JNIMutex.cpp subversion/bindings/java/javahl/native/JNIMutex.h subversion/bindings/java/javahl/native/JNIUtil.h
 	$(COMPILE_JAVAHL_CXX) $(abs_srcdir)/subversion/bindings/java/javahl/native/JNIMutex.cpp
 
-subversion/bindings/java/javahl/native/JNIStackElement.lo: subversion/bindings/java/javahl/native/JNIStackElement.cpp subversion/bindings/java/javahl/native/JNIStackElement.h subversion/bindings/java/javahl/native/JNIStringHolder.h subversion/bindings/java/javahl/native/JNIUtil.h
+subversion/bindings/java/javahl/native/JNIStackElement.lo: subversion/bindings/java/javahl/native/JNIStackElement.cpp subversion/bindings/java/javahl/native/JNIStackElement.h subversion/bindings/java/javahl/native/JNIStringHolder.h subversion/bindings/java/javahl/native/JNIThreadData.h subversion/bindings/java/javahl/native/JNIUtil.h
 	$(COMPILE_JAVAHL_CXX) $(abs_srcdir)/subversion/bindings/java/javahl/native/JNIStackElement.cpp
 
 subversion/bindings/java/javahl/native/JNIStringHolder.lo: subversion/bindings/java/javahl/native/JNIStringHolder.cpp subversion/bindings/java/javahl/native/JNIStringHolder.h subversion/bindings/java/javahl/native/JNIUtil.h
@@ -1065,7 +1505,7 @@ subversion/bindings/java/javahl/native/JNIStringHolder.lo: subversion/bindings/j
 subversion/bindings/java/javahl/native/JNIThreadData.lo: subversion/bindings/java/javahl/native/JNIThreadData.cpp subversion/bindings/java/javahl/native/JNIThreadData.h subversion/bindings/java/javahl/native/JNIUtil.h
 	$(COMPILE_JAVAHL_CXX) $(abs_srcdir)/subversion/bindings/java/javahl/native/JNIThreadData.cpp
 
-subversion/bindings/java/javahl/native/JNIUtil.lo: subversion/bindings/java/javahl/native/JNIUtil.cpp subversion/bindings/java/javahl/native/JNICriticalSection.h subversion/bindings/java/javahl/native/JNIMutex.h subversion/bindings/java/javahl/native/JNIStringHolder.h subversion/bindings/java/javahl/native/JNIThreadData.h subversion/bindings/java/javahl/native/JNIUtil.h subversion/bindings/java/javahl/native/SVNBase.h subversion/include/svn_config.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h
+subversion/bindings/java/javahl/native/JNIUtil.lo: subversion/bindings/java/javahl/native/JNIUtil.cpp subversion/bindings/java/javahl/native/JNICriticalSection.h subversion/bindings/java/javahl/native/JNIMutex.h subversion/bindings/java/javahl/native/JNIStringHolder.h subversion/bindings/java/javahl/native/JNIThreadData.h subversion/bindings/java/javahl/native/JNIUtil.h subversion/bindings/java/javahl/native/SVNBase.h subversion/include/svn_auth.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 	$(COMPILE_JAVAHL_CXX) $(abs_srcdir)/subversion/bindings/java/javahl/native/JNIUtil.cpp
 
 subversion/bindings/java/javahl/native/MessageReceiver.lo: subversion/bindings/java/javahl/native/MessageReceiver.cpp subversion/bindings/java/javahl/native/JNIUtil.h subversion/bindings/java/javahl/native/MessageReceiver.h
@@ -1113,34 +1553,34 @@ subversion/bindings/java/javahl/native/org_tigris_subversion_javahl_SVNAdmin.lo:
 subversion/bindings/java/javahl/native/org_tigris_subversion_javahl_SVNClient.lo: subversion/bindings/java/javahl/native/org_tigris_subversion_javahl_SVNClient.cpp subversion/bindings/java/javahl/native/BlameCallback.h subversion/bindings/java/javahl/native/CommitMessage.h subversion/bindings/java/javahl/native/JNIByteArray.h subversion/bindings/java/javahl/native/JNIStackElement.h subversion/bindings/java/javahl/native/JNIStringHolder.h subversion/bindings/java/javahl/native/JNIUtil.h subversion/bindings/java/javahl/native/Notify.h subversion/bindings/java/javahl/native/Notify2.h subversion/bindings/java/javahl/native/Outputer.h subversion/bindings/java/javahl/native/Path.h subversion/bindings/java/javahl/native/Pool.h subversion/bindings/java/javahl/native/Prompter.h subversion/bindings/java/javahl/native/Revision.h subversion/bindings/java/javahl/native/SVNBase.h subversion/bindings/java/javahl/native/SVNClient.h subversion/bindings/java/javahl/native/Targets.h subversion/bindings/java/javahl/native/version.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 	$(COMPILE_JAVAHL_CXX) $(abs_srcdir)/subversion/bindings/java/javahl/native/org_tigris_subversion_javahl_SVNClient.cpp
 
-subversion/bindings/swig/perl/core.lo: subversion/bindings/swig/perl/core.c
-	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/core.c
-
-subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.lo: subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.c subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.lo: subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.c subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.h subversion/bindings/swig/proxy/swig_perl_external_runtime.swg subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 	$(COMPILE_SWIG_PL) $(abs_srcdir)/subversion/bindings/swig/perl/libsvn_swig_perl/swigutil_pl.c
 
-subversion/bindings/swig/perl/svn_client.lo: subversion/bindings/swig/perl/svn_client.c
-	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/svn_client.c
+subversion/bindings/swig/perl/native/core.lo: subversion/bindings/swig/perl/native/core.c
+	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/native/core.c
 
-subversion/bindings/swig/perl/svn_delta.lo: subversion/bindings/swig/perl/svn_delta.c
-	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/svn_delta.c
+subversion/bindings/swig/perl/native/svn_client.lo: subversion/bindings/swig/perl/native/svn_client.c
+	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/native/svn_client.c
 
-subversion/bindings/swig/perl/svn_fs.lo: subversion/bindings/swig/perl/svn_fs.c
-	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/svn_fs.c
+subversion/bindings/swig/perl/native/svn_delta.lo: subversion/bindings/swig/perl/native/svn_delta.c
+	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/native/svn_delta.c
 
-subversion/bindings/swig/perl/svn_ra.lo: subversion/bindings/swig/perl/svn_ra.c
-	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/svn_ra.c
+subversion/bindings/swig/perl/native/svn_fs.lo: subversion/bindings/swig/perl/native/svn_fs.c
+	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/native/svn_fs.c
 
-subversion/bindings/swig/perl/svn_repos.lo: subversion/bindings/swig/perl/svn_repos.c
-	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/svn_repos.c
+subversion/bindings/swig/perl/native/svn_ra.lo: subversion/bindings/swig/perl/native/svn_ra.c
+	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/native/svn_ra.c
 
-subversion/bindings/swig/perl/svn_wc.lo: subversion/bindings/swig/perl/svn_wc.c
-	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/svn_wc.c
+subversion/bindings/swig/perl/native/svn_repos.lo: subversion/bindings/swig/perl/native/svn_repos.c
+	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/native/svn_repos.c
+
+subversion/bindings/swig/perl/native/svn_wc.lo: subversion/bindings/swig/perl/native/svn_wc.c
+	$(COMPILE_PL_WRAPPER) subversion/bindings/swig/perl/native/svn_wc.c
 
 subversion/bindings/swig/python/core.lo: subversion/bindings/swig/python/core.c
 	$(COMPILE_PY_WRAPPER) subversion/bindings/swig/python/core.c
 
-subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.lo: subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.c subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.lo: subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.c subversion/bindings/swig/proxy/swig_python_external_runtime.swg subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 	$(COMPILE_SWIG_PY) $(abs_srcdir)/subversion/bindings/swig/python/libsvn_swig_py/swigutil_py.c
 
 subversion/bindings/swig/python/svn_client.lo: subversion/bindings/swig/python/svn_client.c
@@ -1164,7 +1604,7 @@ subversion/bindings/swig/python/svn_wc.lo: subversion/bindings/swig/python/svn_w
 subversion/bindings/swig/ruby/core.lo: subversion/bindings/swig/ruby/core.c
 	$(COMPILE_RB_WRAPPER) subversion/bindings/swig/ruby/core.c
 
-subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.lo: subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.lo: subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c subversion/bindings/swig/proxy/swig_ruby_external_runtime.swg subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 	$(COMPILE_SWIG_RB) $(abs_srcdir)/subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c
 
 subversion/bindings/swig/ruby/svn_client.lo: subversion/bindings/swig/ruby/svn_client.c
@@ -1187,7 +1627,7 @@ subversion/bindings/swig/ruby/svn_wc.lo: subversion/bindings/swig/ruby/svn_wc.c
 
 subversion/clients/cmdline/add-cmd.o: subversion/clients/cmdline/add-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
-subversion/clients/cmdline/blame-cmd.o: subversion/clients/cmdline/blame-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/clients/cmdline/blame-cmd.o: subversion/clients/cmdline/blame-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h
 
 subversion/clients/cmdline/cat-cmd.o: subversion/clients/cmdline/cat-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
@@ -1199,9 +1639,9 @@ subversion/clients/cmdline/commit-cmd.o: subversion/clients/cmdline/commit-cmd.c
 
 subversion/clients/cmdline/copy-cmd.o: subversion/clients/cmdline/copy-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
-subversion/clients/cmdline/delete-cmd.o: subversion/clients/cmdline/delete-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/clients/cmdline/delete-cmd.o: subversion/clients/cmdline/delete-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
-subversion/clients/cmdline/diff-cmd.o: subversion/clients/cmdline/diff-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/clients/cmdline/diff-cmd.o: subversion/clients/cmdline/diff-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
 subversion/clients/cmdline/export-cmd.o: subversion/clients/cmdline/export-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
@@ -1209,7 +1649,7 @@ subversion/clients/cmdline/help-cmd.o: subversion/clients/cmdline/help-cmd.c sub
 
 subversion/clients/cmdline/import-cmd.o: subversion/clients/cmdline/import-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
-subversion/clients/cmdline/info-cmd.o: subversion/clients/cmdline/info-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/clients/cmdline/info-cmd.o: subversion/clients/cmdline/info-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h
 
 subversion/clients/cmdline/lock-cmd.o: subversion/clients/cmdline/lock-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
@@ -1221,7 +1661,7 @@ subversion/clients/cmdline/main.o: subversion/clients/cmdline/main.c subversion/
 
 subversion/clients/cmdline/merge-cmd.o: subversion/clients/cmdline/merge-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
-subversion/clients/cmdline/mkdir-cmd.o: subversion/clients/cmdline/mkdir-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/clients/cmdline/mkdir-cmd.o: subversion/clients/cmdline/mkdir-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
 subversion/clients/cmdline/move-cmd.o: subversion/clients/cmdline/move-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
@@ -1245,9 +1685,9 @@ subversion/clients/cmdline/resolved-cmd.o: subversion/clients/cmdline/resolved-c
 
 subversion/clients/cmdline/revert-cmd.o: subversion/clients/cmdline/revert-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
-subversion/clients/cmdline/status-cmd.o: subversion/clients/cmdline/status-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/clients/cmdline/status-cmd.o: subversion/clients/cmdline/status-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h
 
-subversion/clients/cmdline/status.o: subversion/clients/cmdline/status.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/clients/cmdline/status.o: subversion/clients/cmdline/status.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h
 
 subversion/clients/cmdline/switch-cmd.o: subversion/clients/cmdline/switch-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
@@ -1255,7 +1695,7 @@ subversion/clients/cmdline/unlock-cmd.o: subversion/clients/cmdline/unlock-cmd.c
 
 subversion/clients/cmdline/update-cmd.o: subversion/clients/cmdline/update-cmd.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
-subversion/clients/cmdline/util.o: subversion/clients/cmdline/util.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/clients/cmdline/util.o: subversion/clients/cmdline/util.c subversion/clients/cmdline/cl.h subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h
 
 subversion/libsvn_client/add.lo: subversion/libsvn_client/add.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
 
@@ -1263,7 +1703,7 @@ subversion/libsvn_client/blame.lo: subversion/libsvn_client/blame.c subversion/i
 
 subversion/libsvn_client/cat.lo: subversion/libsvn_client/cat.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
 
-subversion/libsvn_client/checkout.lo: subversion/libsvn_client/checkout.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
+subversion/libsvn_client/checkout.lo: subversion/libsvn_client/checkout.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
 
 subversion/libsvn_client/cleanup.lo: subversion/libsvn_client/cleanup.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
 
@@ -1289,7 +1729,7 @@ subversion/libsvn_client/locking_commands.lo: subversion/libsvn_client/locking_c
 
 subversion/libsvn_client/log.lo: subversion/libsvn_client/log.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
 
-subversion/libsvn_client/ls.lo: subversion/libsvn_client/ls.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
+subversion/libsvn_client/ls.lo: subversion/libsvn_client/ls.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
 
 subversion/libsvn_client/prop_commands.lo: subversion/libsvn_client/prop_commands.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_ctype.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_client/client.h
 
@@ -1323,6 +1763,8 @@ subversion/libsvn_client/url.lo: subversion/libsvn_client/url.c subversion/inclu
 
 subversion/libsvn_client/username_providers.lo: subversion/libsvn_client/username_providers.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
+subversion/libsvn_client/util.lo: subversion/libsvn_client/util.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+
 subversion/libsvn_client/version.lo: subversion/libsvn_client/version.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
 subversion/libsvn_delta/cancel.lo: subversion/libsvn_delta/cancel.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
@@ -1349,7 +1791,7 @@ subversion/libsvn_diff/diff3.lo: subversion/libsvn_diff/diff3.c subversion/inclu
 
 subversion/libsvn_diff/diff4.lo: subversion/libsvn_diff/diff4.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_diff/diff.h
 
-subversion/libsvn_diff/diff_file.lo: subversion/libsvn_diff/diff_file.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_diff/diff.h
+subversion/libsvn_diff/diff_file.lo: subversion/libsvn_diff/diff_file.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/libsvn_diff/diff.h
 
 subversion/libsvn_diff/lcs.lo: subversion/libsvn_diff/lcs.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_diff/diff.h
 
@@ -1361,59 +1803,59 @@ subversion/libsvn_fs/access.lo: subversion/libsvn_fs/access.c subversion/include
 
 subversion/libsvn_fs/fs-loader.lo: subversion/libsvn_fs/fs-loader.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_xml.h subversion/libsvn_fs/fs-loader.h
 
-subversion/libsvn_fs_base/bdb/bdb-err.lo: subversion/libsvn_fs_base/bdb/bdb-err.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/bdb/bdb-err.lo: subversion/libsvn_fs_base/bdb/bdb-err.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h
 
 subversion/libsvn_fs_base/bdb/bdb_compat.lo: subversion/libsvn_fs_base/bdb/bdb_compat.c subversion/libsvn_fs_base/bdb/bdb_compat.h
 
-subversion/libsvn_fs_base/bdb/changes-table.lo: subversion/libsvn_fs_base/bdb/changes-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/id.h
+subversion/libsvn_fs_base/bdb/changes-table.lo: subversion/libsvn_fs_base/bdb/changes-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/id.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/copies-table.lo: subversion/libsvn_fs_base/bdb/copies-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/key-gen.h
+subversion/libsvn_fs_base/bdb/copies-table.lo: subversion/libsvn_fs_base/bdb/copies-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/dbt.lo: subversion/libsvn_fs_base/bdb/dbt.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/id.h
+subversion/libsvn_fs_base/bdb/dbt.lo: subversion/libsvn_fs_base/bdb/dbt.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/id.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/lock-tokens-table.lo: subversion/libsvn_fs_base/bdb/lock-tokens-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/lock-tokens-table.h subversion/libsvn_fs_base/bdb/locks-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/bdb/lock-tokens-table.lo: subversion/libsvn_fs_base/bdb/lock-tokens-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/lock-tokens-table.h subversion/libsvn_fs_base/bdb/locks-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/locks-table.lo: subversion/libsvn_fs_base/bdb/locks-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/lock-tokens-table.h subversion/libsvn_fs_base/bdb/locks-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/bdb/locks-table.lo: subversion/libsvn_fs_base/bdb/locks-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/lock-tokens-table.h subversion/libsvn_fs_base/bdb/locks-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/nodes-table.lo: subversion/libsvn_fs_base/bdb/nodes-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/id.h subversion/libsvn_fs_fs/key-gen.h
+subversion/libsvn_fs_base/bdb/nodes-table.lo: subversion/libsvn_fs_base/bdb/nodes-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/id.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/reps-table.lo: subversion/libsvn_fs_base/bdb/reps-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/key-gen.h
+subversion/libsvn_fs_base/bdb/reps-table.lo: subversion/libsvn_fs_base/bdb/reps-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/rev-table.lo: subversion/libsvn_fs_base/bdb/rev-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/bdb/rev-table.lo: subversion/libsvn_fs_base/bdb/rev-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/strings-table.lo: subversion/libsvn_fs_base/bdb/strings-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/key-gen.h
+subversion/libsvn_fs_base/bdb/strings-table.lo: subversion/libsvn_fs_base/bdb/strings-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/txn-table.lo: subversion/libsvn_fs_base/bdb/txn-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/key-gen.h
+subversion/libsvn_fs_base/bdb/txn-table.lo: subversion/libsvn_fs_base/bdb/txn-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/bdb/uuids-table.lo: subversion/libsvn_fs_base/bdb/uuids-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/uuids-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/bdb/uuids-table.lo: subversion/libsvn_fs_base/bdb/uuids-table.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/dbt.h subversion/libsvn_fs_base/bdb/uuids-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/dag.lo: subversion/libsvn_fs_base/dag.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/node-rev.h subversion/libsvn_fs_base/reps-strings.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/dag.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/id.h subversion/libsvn_fs_fs/key-gen.h subversion/libsvn_fs_fs/revs-txns.h
+subversion/libsvn_fs_base/dag.lo: subversion/libsvn_fs_base/dag.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/dag.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/id.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/node-rev.h subversion/libsvn_fs_base/reps-strings.h subversion/libsvn_fs_base/revs-txns.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/err.lo: subversion/libsvn_fs_base/err.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/id.h
+subversion/libsvn_fs_base/err.lo: subversion/libsvn_fs_base/err.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/id.h
 
-subversion/libsvn_fs_base/fs.lo: subversion/libsvn_fs_base/fs.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/lock-tokens-table.h subversion/libsvn_fs_base/bdb/locks-table.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/bdb/uuids-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/uuid.h subversion/libsvn_fs_fs/dag.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/id.h subversion/libsvn_fs_fs/lock.h subversion/libsvn_fs_fs/revs-txns.h subversion/libsvn_fs_fs/tree.h
+subversion/libsvn_fs_base/fs.lo: subversion/libsvn_fs_base/fs.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/lock-tokens-table.h subversion/libsvn_fs_base/bdb/locks-table.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/bdb/uuids-table.h subversion/libsvn_fs_base/dag.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/id.h subversion/libsvn_fs_base/lock.h subversion/libsvn_fs_base/revs-txns.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/tree.h subversion/libsvn_fs_base/uuid.h
 
-subversion/libsvn_fs_base/id.lo: subversion/libsvn_fs_base/id.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_fs/id.h
+subversion/libsvn_fs_base/id.lo: subversion/libsvn_fs_base/id.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/id.h
 
-subversion/libsvn_fs_base/key-gen.lo: subversion/libsvn_fs_base/key-gen.c subversion/include/svn_types.h subversion/libsvn_fs_fs/key-gen.h
+subversion/libsvn_fs_base/key-gen.lo: subversion/libsvn_fs_base/key-gen.c subversion/include/svn_types.h subversion/libsvn_fs_base/key-gen.h
 
-subversion/libsvn_fs_base/lock.lo: subversion/libsvn_fs_base/lock.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/lock-tokens-table.h subversion/libsvn_fs_base/bdb/locks-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/lock.h subversion/libsvn_fs_fs/tree.h
+subversion/libsvn_fs_base/lock.lo: subversion/libsvn_fs_base/lock.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/lock-tokens-table.h subversion/libsvn_fs_base/bdb/locks-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/lock.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/tree.h
 
-subversion/libsvn_fs_base/node-rev.lo: subversion/libsvn_fs_base/node-rev.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/node-rev.h subversion/libsvn_fs_base/reps-strings.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/node-rev.lo: subversion/libsvn_fs_base/node-rev.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/node-rev.h subversion/libsvn_fs_base/reps-strings.h subversion/libsvn_fs_base/trail.h
 
-subversion/libsvn_fs_base/reps-strings.lo: subversion/libsvn_fs_base/reps-strings.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_delta/delta.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/reps-strings.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/reps-strings.lo: subversion/libsvn_fs_base/reps-strings.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_delta/delta.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/reps-strings.h subversion/libsvn_fs_base/trail.h
 
-subversion/libsvn_fs_base/revs-txns.lo: subversion/libsvn_fs_base/revs-txns.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_fs/dag.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/id.h subversion/libsvn_fs_fs/key-gen.h subversion/libsvn_fs_fs/revs-txns.h subversion/libsvn_fs_fs/tree.h
+subversion/libsvn_fs_base/revs-txns.lo: subversion/libsvn_fs_base/revs-txns.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/dag.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/id.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/revs-txns.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/tree.h
 
-subversion/libsvn_fs_base/trail.lo: subversion/libsvn_fs_base/trail.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/trail.lo: subversion/libsvn_fs_base/trail.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/bdb-err.h subversion/libsvn_fs_base/bdb/bdb_compat.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h
 
-subversion/libsvn_fs_base/tree.lo: subversion/libsvn_fs_base/tree.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_sorts.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/node-rev.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_fs/dag.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/id.h subversion/libsvn_fs_fs/key-gen.h subversion/libsvn_fs_fs/lock.h subversion/libsvn_fs_fs/revs-txns.h subversion/libsvn_fs_fs/tree.h
+subversion/libsvn_fs_base/tree.lo: subversion/libsvn_fs_base/tree.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_sorts.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/bdb/copies-table.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/bdb/rev-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/dag.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/id.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/lock.h subversion/libsvn_fs_base/node-rev.h subversion/libsvn_fs_base/revs-txns.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/tree.h
 
-subversion/libsvn_fs_base/util/fs_skels.lo: subversion/libsvn_fs_base/util/fs_skels.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/id.h
+subversion/libsvn_fs_base/util/fs_skels.lo: subversion/libsvn_fs_base/util/fs_skels.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/id.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/util/skel.lo: subversion/libsvn_fs_base/util/skel.c subversion/include/svn_string.h subversion/include/svn_types.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/key-gen.h
+subversion/libsvn_fs_base/util/skel.lo: subversion/libsvn_fs_base/util/skel.c subversion/include/svn_string.h subversion/include/svn_types.h subversion/libsvn_fs_base/key-gen.h subversion/libsvn_fs_base/util/skel.h
 
-subversion/libsvn_fs_base/uuid.lo: subversion/libsvn_fs_base/uuid.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/uuids-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/uuid.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h
+subversion/libsvn_fs_base/uuid.lo: subversion/libsvn_fs_base/uuid.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_base/bdb/uuids-table.h subversion/libsvn_fs_base/err.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/uuid.h
 
 subversion/libsvn_fs_fs/dag.lo: subversion/libsvn_fs_fs/dag.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs/fs-loader.h subversion/libsvn_fs_fs/dag.h subversion/libsvn_fs_fs/err.h subversion/libsvn_fs_fs/fs.h subversion/libsvn_fs_fs/fs_fs.h subversion/libsvn_fs_fs/id.h subversion/libsvn_fs_fs/key-gen.h subversion/libsvn_fs_fs/revs-txns.h
 
@@ -1469,6 +1911,8 @@ subversion/libsvn_ra_svn/marshal.lo: subversion/libsvn_ra_svn/marshal.c subversi
 
 subversion/libsvn_ra_svn/version.lo: subversion/libsvn_ra_svn/version.c subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_props.h subversion/include/svn_ra_svn.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
 
+subversion/libsvn_repos/authz.lo: subversion/libsvn_repos/authz.c subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
+
 subversion/libsvn_repos/commit.lo: subversion/libsvn_repos/commit.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
 
 subversion/libsvn_repos/delta.lo: subversion/libsvn_repos/delta.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_repos/repos.h
@@ -1491,11 +1935,11 @@ subversion/libsvn_repos/reporter.lo: subversion/libsvn_repos/reporter.c subversi
 
 subversion/libsvn_repos/repos.lo: subversion/libsvn_repos/repos.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/libsvn_repos/repos.h
 
-subversion/libsvn_repos/rev_hunt.lo: subversion/libsvn_repos/rev_hunt.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_sorts.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_repos/repos.h
+subversion/libsvn_repos/rev_hunt.lo: subversion/libsvn_repos/rev_hunt.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_sorts.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_repos/repos.h
 
 subversion/libsvn_subr/auth.lo: subversion/libsvn_subr/auth.c subversion/include/svn_auth.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h
 
-subversion/libsvn_subr/cmdline.lo: subversion/libsvn_subr/cmdline.c subversion/include/svn_cmdline.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/libsvn_subr/utf_impl.h
+subversion/libsvn_subr/cmdline.lo: subversion/libsvn_subr/cmdline.c subversion/include/svn_cmdline.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_nls.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/libsvn_subr/utf_impl.h
 
 subversion/libsvn_subr/config.lo: subversion/libsvn_subr/config.c subversion/include/svn_config.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/libsvn_subr/config_impl.h
 
@@ -1504,6 +1948,8 @@ subversion/libsvn_subr/config_auth.lo: subversion/libsvn_subr/config_auth.c subv
 subversion/libsvn_subr/config_file.lo: subversion/libsvn_subr/config_file.c subversion/include/svn_auth.h subversion/include/svn_config.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/libsvn_subr/config_impl.h
 
 subversion/libsvn_subr/config_win.lo: subversion/libsvn_subr/config_win.c subversion/include/svn_config.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/libsvn_subr/config_impl.h
+
+subversion/libsvn_subr/constructors.lo: subversion/libsvn_subr/constructors.c subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h
 
 subversion/libsvn_subr/ctype.lo: subversion/libsvn_subr/ctype.c subversion/include/svn_ctype.h
 
@@ -1519,6 +1965,8 @@ subversion/libsvn_subr/lock.lo: subversion/libsvn_subr/lock.c subversion/include
 
 subversion/libsvn_subr/md5.lo: subversion/libsvn_subr/md5.c subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_md5.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h
 
+subversion/libsvn_subr/nls.lo: subversion/libsvn_subr/nls.c subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_nls.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h
+
 subversion/libsvn_subr/opt.lo: subversion/libsvn_subr/opt.c subversion/include/svn_auth.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
 subversion/libsvn_subr/path.lo: subversion/libsvn_subr/path.c subversion/include/svn_ctype.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h
@@ -1529,7 +1977,7 @@ subversion/libsvn_subr/quoprint.lo: subversion/libsvn_subr/quoprint.c subversion
 
 subversion/libsvn_subr/sorts.lo: subversion/libsvn_subr/sorts.c subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_sorts.h subversion/include/svn_string.h subversion/include/svn_types.h
 
-subversion/libsvn_subr/stream.lo: subversion/libsvn_subr/stream.c subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h
+subversion/libsvn_subr/stream.lo: subversion/libsvn_subr/stream.c subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h
 
 subversion/libsvn_subr/subst.lo: subversion/libsvn_subr/subst.c subversion/include/svn_cmdline.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_utf.h
 
@@ -1553,19 +2001,19 @@ subversion/libsvn_subr/xml.lo: subversion/libsvn_subr/xml.c subversion/include/s
 
 subversion/libsvn_wc/adm_crawler.lo: subversion/libsvn_wc/adm_crawler.c subversion/include/svn_auth.h subversion/include/svn_base64.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/props.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
 
-subversion/libsvn_wc/adm_files.lo: subversion/libsvn_wc/adm_files.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/wc.h
+subversion/libsvn_wc/adm_files.lo: subversion/libsvn_wc/adm_files.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/lock.h subversion/libsvn_wc/wc.h
 
-subversion/libsvn_wc/adm_ops.lo: subversion/libsvn_wc/adm_ops.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/adm_ops.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/log.h subversion/libsvn_wc/props.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
+subversion/libsvn_wc/adm_ops.lo: subversion/libsvn_wc/adm_ops.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/adm_ops.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/lock.h subversion/libsvn_wc/log.h subversion/libsvn_wc/props.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
 
 subversion/libsvn_wc/copy.lo: subversion/libsvn_wc/copy.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/props.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
 
 subversion/libsvn_wc/diff.lo: subversion/libsvn_wc/diff.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/props.h subversion/libsvn_wc/wc.h
 
-subversion/libsvn_wc/entries.lo: subversion/libsvn_wc/entries.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/adm_ops.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/wc.h
+subversion/libsvn_wc/entries.lo: subversion/libsvn_wc/entries.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/adm_ops.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/lock.h subversion/libsvn_wc/wc.h
 
-subversion/libsvn_wc/lock.lo: subversion/libsvn_wc/lock.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/questions.h subversion/libsvn_wc/wc.h
+subversion/libsvn_wc/lock.lo: subversion/libsvn_wc/lock.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/lock.h subversion/libsvn_wc/questions.h subversion/libsvn_wc/wc.h
 
-subversion/libsvn_wc/log.lo: subversion/libsvn_wc/log.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/log.h subversion/libsvn_wc/props.h subversion/libsvn_wc/questions.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
+subversion/libsvn_wc/log.lo: subversion/libsvn_wc/log.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/lock.h subversion/libsvn_wc/log.h subversion/libsvn_wc/props.h subversion/libsvn_wc/questions.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
 
 subversion/libsvn_wc/merge.lo: subversion/libsvn_wc/merge.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/questions.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
 
@@ -1573,17 +2021,17 @@ subversion/libsvn_wc/props.lo: subversion/libsvn_wc/props.c subversion/include/s
 
 subversion/libsvn_wc/questions.lo: subversion/libsvn_wc/questions.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/questions.h subversion/libsvn_wc/wc.h
 
-subversion/libsvn_wc/relocate.lo: subversion/libsvn_wc/relocate.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/props.h subversion/libsvn_wc/wc.h
+subversion/libsvn_wc/relocate.lo: subversion/libsvn_wc/relocate.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/lock.h subversion/libsvn_wc/props.h subversion/libsvn_wc/wc.h
 
-subversion/libsvn_wc/status.lo: subversion/libsvn_wc/status.c subversion/include/svn_auth.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/props.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
+subversion/libsvn_wc/status.lo: subversion/libsvn_wc/status.c subversion/include/svn_auth.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/lock.h subversion/libsvn_wc/props.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
 
 subversion/libsvn_wc/translate.lo: subversion/libsvn_wc/translate.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/translate.h subversion/libsvn_wc/wc.h
 
-subversion/libsvn_wc/update_editor.lo: subversion/libsvn_wc/update_editor.c subversion/include/svn_auth.h subversion/include/svn_base64.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/adm_ops.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/log.h subversion/libsvn_wc/props.h subversion/libsvn_wc/wc.h
+subversion/libsvn_wc/update_editor.lo: subversion/libsvn_wc/update_editor.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/include/svn_xml.h subversion/libsvn_wc/adm_files.h subversion/libsvn_wc/adm_ops.h subversion/libsvn_wc/entries.h subversion/libsvn_wc/lock.h subversion/libsvn_wc/log.h subversion/libsvn_wc/props.h subversion/libsvn_wc/wc.h
 
 subversion/libsvn_wc/util.lo: subversion/libsvn_wc/util.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_wc/wc.h
 
-subversion/mod_authz_svn/mod_authz_svn.lo: subversion/mod_authz_svn/mod_authz_svn.c subversion/include/mod_dav_svn.h subversion/include/svn_config.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h
+subversion/mod_authz_svn/mod_authz_svn.lo: subversion/mod_authz_svn/mod_authz_svn.c subversion/include/mod_dav_svn.h subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
 	$(COMPILE_APACHE_MOD) $(abs_srcdir)/subversion/mod_authz_svn/mod_authz_svn.c
 
 subversion/mod_dav_svn/activity.lo: subversion/mod_dav_svn/activity.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/mod_dav_svn/dav_svn.h
@@ -1658,62 +2106,65 @@ subversion/svnserve/serve.o: subversion/svnserve/serve.c subversion/include/svn_
 
 subversion/svnversion/main.o: subversion/svnversion/main.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_cmdline.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h
 
-subversion/tests/fs-helpers.lo: subversion/tests/fs-helpers.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/fs-helpers.h
-
-subversion/tests/libsvn_delta/random-test.o: subversion/tests/libsvn_delta/random-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_delta/delta.h subversion/tests/libsvn_delta/delta-window-test.h subversion/tests/libsvn_delta/range-index-test.h
+subversion/tests/libsvn_delta/random-test.o: subversion/tests/libsvn_delta/random-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_delta/delta.h subversion/tests/libsvn_delta/delta-window-test.h subversion/tests/libsvn_delta/range-index-test.h subversion/tests/svn_test.h
 
 subversion/tests/libsvn_delta/svndiff-test.o: subversion/tests/libsvn_delta/svndiff-test.c subversion/include/svn_base64.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_quoprint.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
 
 subversion/tests/libsvn_delta/vdelta-test.o: subversion/tests/libsvn_delta/vdelta-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_delta/delta.h subversion/tests/libsvn_delta/delta-window-test.h
 
-subversion/tests/libsvn_diff/diff-diff3-test.o: subversion/tests/libsvn_diff/diff-diff3-test.c subversion/include/svn_delta.h subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_diff/diff-diff3-test.o: subversion/tests/libsvn_diff/diff-diff3-test.c subversion/include/svn_delta.h subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_diff/diff-test.o: subversion/tests/libsvn_diff/diff-test.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_fs/fs-test.o: subversion/tests/libsvn_fs/fs-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_delta/delta.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
 
-subversion/tests/libsvn_diff/diff3-test.o: subversion/tests/libsvn_diff/diff3-test.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_fs/locks-test.o: subversion/tests/libsvn_fs/locks-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
 
-subversion/tests/libsvn_diff/diff4-test.o: subversion/tests/libsvn_diff/diff4-test.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_fs_base/changes-test.o: subversion/tests/libsvn_fs_base/changes-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
 
-subversion/tests/libsvn_fs/locks-test.o: subversion/tests/libsvn_fs/locks-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/fs-helpers.h
+subversion/tests/libsvn_fs_base/fs-base-test.o: subversion/tests/libsvn_fs_base/fs-base-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_delta/delta.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
 
-subversion/tests/libsvn_fs_base/changes-test.o: subversion/tests/libsvn_fs_base/changes-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/bdb/changes-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/fs.h subversion/tests/fs-helpers.h
+subversion/tests/libsvn_fs_base/key-test.o: subversion/tests/libsvn_fs_base/key-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/key-gen.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_fs_base/fs-test.o: subversion/tests/libsvn_fs_base/fs-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_md5.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_delta/delta.h subversion/libsvn_fs_base/bdb/nodes-table.h subversion/libsvn_fs_base/bdb/txn-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_fs/fs.h subversion/tests/fs-helpers.h
+subversion/tests/libsvn_fs_base/skel-test.o: subversion/tests/libsvn_fs_base/skel-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/util/skel.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
 
-subversion/tests/libsvn_fs_base/key-test.o: subversion/tests/libsvn_fs_base/key-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_fs/key-gen.h
+subversion/tests/libsvn_fs_base/strings-reps-test.o: subversion/tests/libsvn_fs_base/strings-reps-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/fs.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
 
-subversion/tests/libsvn_fs_base/skel-test.o: subversion/tests/libsvn_fs_base/skel-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/fs.h
+subversion/tests/libsvn_ra_local/ra-local-test.o: subversion/tests/libsvn_ra_local/ra-local-test.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_ra_local/ra_local.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
 
-subversion/tests/libsvn_fs_base/strings-reps-test.o: subversion/tests/libsvn_fs_base/strings-reps-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_fs_base/bdb/reps-table.h subversion/libsvn_fs_base/bdb/strings-table.h subversion/libsvn_fs_base/trail.h subversion/libsvn_fs_base/util/fs_skels.h subversion/libsvn_fs_base/util/skel.h subversion/libsvn_fs_fs/fs.h subversion/tests/fs-helpers.h
+subversion/tests/libsvn_repos/dir-delta-editor.o: subversion/tests/libsvn_repos/dir-delta-editor.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/libsvn_repos/dir-delta-editor.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_ra_local/ra-local-test.o: subversion/tests/libsvn_ra_local/ra-local-test.c subversion/include/svn_auth.h subversion/include/svn_client.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_utf.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/libsvn_ra_local/ra_local.h subversion/tests/fs-helpers.h
+subversion/tests/libsvn_repos/repos-test.o: subversion/tests/libsvn_repos/repos-test.c subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/libsvn_repos/dir-delta-editor.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
 
-subversion/tests/libsvn_repos/dir-delta-editor.o: subversion/tests/libsvn_repos/dir-delta-editor.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/libsvn_repos/dir-delta-editor.h
+subversion/tests/libsvn_subr/compat-test.o: subversion/tests/libsvn_subr/compat-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_repos/repos-test.o: subversion/tests/libsvn_repos/repos-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/fs-helpers.h subversion/tests/libsvn_repos/dir-delta-editor.h
+subversion/tests/libsvn_subr/config-test.o: subversion/tests/libsvn_subr/config-test.c subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_subr/compat-test.o: subversion/tests/libsvn_subr/compat-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_subr/hashdump-test.o: subversion/tests/libsvn_subr/hashdump-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_hash.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_subr/config-test.o: subversion/tests/libsvn_subr/config-test.c subversion/include/svn_config.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_subr/opt-test.o: subversion/tests/libsvn_subr/opt-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_subr/hashdump-test.o: subversion/tests/libsvn_subr/hashdump-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_hash.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_subr/path-test.o: subversion/tests/libsvn_subr/path-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_subr/opt-test.o: subversion/tests/libsvn_subr/opt-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_subr/stream-test.o: subversion/tests/libsvn_subr/stream-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_subr/path-test.o: subversion/tests/libsvn_subr/path-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
-
-subversion/tests/libsvn_subr/stream-test.o: subversion/tests/libsvn_subr/stream-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
-
-subversion/tests/libsvn_subr/string-test.o: subversion/tests/libsvn_subr/string-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_subr/string-test.o: subversion/tests/libsvn_subr/string-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
 subversion/tests/libsvn_subr/target-test.o: subversion/tests/libsvn_subr/target-test.c subversion/include/svn_cmdline.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_utf.h
 
-subversion/tests/libsvn_subr/time-test.o: subversion/tests/libsvn_subr/time-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/libsvn_subr/time-test.o: subversion/tests/libsvn_subr/time-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_time.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_subr/utf-test.o: subversion/tests/libsvn_subr/utf-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_subr/utf_impl.h
+subversion/tests/libsvn_subr/utf-test.o: subversion/tests/libsvn_subr/utf-test.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/libsvn_subr/utf_impl.h subversion/tests/svn_test.h
 
-subversion/tests/libsvn_wc/translate-test.o: subversion/tests/libsvn_wc/translate-test.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h
+subversion/tests/libsvn_wc/translate-test.o: subversion/tests/libsvn_wc/translate-test.c subversion/include/svn_auth.h subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_opt.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_ra.h subversion/include/svn_string.h subversion/include/svn_subst.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/include/svn_wc.h subversion/tests/svn_test.h
 
-subversion/tests/svn_test_editor.lo: subversion/tests/svn_test_editor.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/svn_test_editor.lo: subversion/tests/svn_test_editor.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
 
-subversion/tests/svn_tests_main.lo: subversion/tests/svn_tests_main.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_test.h subversion/include/svn_types.h subversion/include/svn_version.h
+subversion/tests/svn_test_fs.lo: subversion/tests/svn_test_fs.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_fs.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_repos.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h subversion/tests/svn_test_fs.h
+
+subversion/tests/svn_test_main.lo: subversion/tests/svn_test_main.c subversion/include/svn_delta.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_path.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h subversion/tests/svn_test.h
+
+tools/diff/diff.o: tools/diff/diff.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
+
+tools/diff/diff3.o: tools/diff/diff3.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
+
+tools/diff/diff4.o: tools/diff/diff4.c subversion/include/svn_diff.h subversion/include/svn_error.h subversion/include/svn_error_codes.h subversion/include/svn_io.h subversion/include/svn_pools.h subversion/include/svn_props.h subversion/include/svn_string.h subversion/include/svn_types.h subversion/include/svn_version.h
+
