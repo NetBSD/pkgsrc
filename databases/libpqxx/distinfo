@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/06/27 01:57:26 markd Exp $
+$NetBSD: distinfo,v 1.4 2006/01/02 17:20:18 joerg Exp $
 
 SHA1 (libpqxx-2.5.4.tar.gz) = 257465032ea8b2301c284847fc9372de3dd451d8
 RMD160 (libpqxx-2.5.4.tar.gz) = 23f428d818aa7df9c302e7a486c8a47d2523a418
 Size (libpqxx-2.5.4.tar.gz) = 1564221 bytes
 SHA1 (patch-aa) = fbf80bd805bedf094a79e0ab76e9a7f543e67117
+SHA1 (patch-ab) = dbfd4f1769d428edeb43a64346f150daf0352924
