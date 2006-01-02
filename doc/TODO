@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4341 2006/01/02 21:16:36 epg Exp $
+$NetBSD: TODO,v 1.4342 2006/01/02 21:52:16 veego Exp $
 
 Suggested new packages
 ======================
@@ -970,7 +970,6 @@ Suggested package updates
 	o p5-glib2-1.100
 	o p5-gtk2-1.110
 	o p5-ispman-1.2
-	o p5-perl-ldap-0.3202
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.41
 	o pam-mysql-0.6.2
