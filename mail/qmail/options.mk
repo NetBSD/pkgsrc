@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2005/12/05 20:50:35 rillig Exp $
+# $NetBSD: options.mk,v 1.19 2006/01/02 21:13:43 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -30,12 +30,6 @@ DARWIN_PATCH=		panther.patch
 PATCHFILES+=		${DARWIN_PATCH}
 SITES_${DARWIN_PATCH}=	http://http.netdevice.com:9080/qmail/patch/
 PATCH_DIST_STRIP.${DARWIN_PATCH}=	-p1
-post-wrapper:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	nameser8_compat_h="include/nameser8_compat.h";			\
-	if [ ! -e /usr/$${nameser8_compat_h} ]; then			\
-		${TOUCH} ${BUILDLINK_DIR}/$${nameser8_compat_h};	\
-	fi
 DARWINSUFX=		.doc
 .else
 DARWINSUFX=		# empty
