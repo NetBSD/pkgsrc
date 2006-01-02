@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1779 2005/12/31 15:20:59 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1780 2006/01/02 23:24:58 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -3747,16 +3747,16 @@ describe:
 		cd ${.CURDIR} && ${ECHO_N} `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`; \
 	fi;								\
 	${ECHO_N} "|";							\
-	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
+	if [ "${ONLY_FOR_PLATFORM}" = "" ]; then			\
 		${ECHO_N} "any";					\
 	else								\
-		${ECHO_N} "${ONLY_FOR_ARCHS}";				\
+		${ECHO_N} "${ONLY_FOR_PLATFORM}";			\
 	fi;								\
 	${ECHO_N} "|";							\
-	if [ "${NOT_FOR_OPSYS}" = "" ]; then				\
+	if [ "${NOT_FOR_PLATFORM}" = "" ]; then				\
 		${ECHO_N} "any";					\
 	else								\
-		${ECHO_N} "not ${NOT_FOR_OPSYS}";			\
+		${ECHO_N} "not ${NOT_FOR_PLATFORM}";			\
 	fi;								\
 	${ECHO} ""
 .endif
@@ -3915,15 +3915,15 @@ print-summary-data:
 	@${ECHO} wildcard ${PKGPATH} ${PKGWILDCARD:Q}
 	@${ECHO} comment ${PKGPATH} ${COMMENT:Q}
 	@${ECHO} license ${PKGPATH} ${LICENSE:Q}
-	@if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
+	@if [ "${ONLY_FOR_PLATFORM}" = "" ]; then			\
 		${ECHO} "onlyfor ${PKGPATH} any";			\
 	else								\
-		${ECHO} "onlyfor ${PKGPATH} ${ONLY_FOR_ARCHS}";		\
-	fi;
-	@if [ "${NOT_FOR_OPSYS}" = "" ]; then				\
+		${ECHO} "onlyfor ${PKGPATH} ${ONLY_FOR_PLATFORM}";	\
+	fi
+	@if [ "${NOT_FOR_PLATFORM}" = "" ]; then			\
 		${ECHO} "notfor ${PKGPATH} any";			\
 	else								\
-		${ECHO} "notfor ${PKGPATH} not ${NOT_FOR_OPSYS}";	\
+		${ECHO} "notfor ${PKGPATH} not ${NOT_FOR_PLATFORM}";	\
 	fi;
 	@${ECHO} "maintainer ${PKGPATH} ${MAINTAINER}"
 	@${ECHO} "categories ${PKGPATH} ${CATEGORIES}"
