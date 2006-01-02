@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2002/10/19 03:51:03 jlam Exp $
+$NetBSD: patch-ac,v 1.3 2006/01/02 18:08:35 joerg Exp $
 
---- configure.orig	Mon Sep 30 23:34:27 2002
+--- configure.orig	2002-10-01 03:34:27.000000000 +0000
 +++ configure
 @@ -19,6 +19,8 @@ ac_help="$ac_help
  ac_help="$ac_help
@@ -20,7 +20,15 @@ $NetBSD: patch-ac,v 1.2 2002/10/19 03:51:03 jlam Exp $
    --with-java             build JDBC interface and Java tools"
  ac_help="$ac_help
    --with-krb4[=DIR]       build with Kerberos 4 support [/usr/athena]"
-@@ -817,6 +821,32 @@ fi
+@@ -694,6 +698,7 @@ case $host_os in
+   darwin*) template=darwin ;;
+     dgux*) template=dgux ;;
+  freebsd*) template=freebsd ;;
++dragonfly*) template=dragonfly ;;
+     hpux*) template=hpux ;;
+     irix*) template=irix5 ;;
+    linux*) template=linux ;;
+@@ -817,6 +822,32 @@ fi
  
  
  #
@@ -53,7 +61,7 @@ $NetBSD: patch-ac,v 1.2 2002/10/19 03:51:03 jlam Exp $
  # Locale (--enable-locale)
  #
  echo $ac_n "checking whether to build with locale support""... $ac_c" 1>&6
-@@ -1859,6 +1889,35 @@ fi
+@@ -1859,6 +1890,35 @@ fi
  echo "$ac_t""$with_python" 1>&6
  
  
@@ -89,7 +97,15 @@ $NetBSD: patch-ac,v 1.2 2002/10/19 03:51:03 jlam Exp $
  #
  # Optionally build the Java/JDBC tools
  #
-@@ -3282,9 +3341,10 @@ fi
+@@ -2287,6 +2347,7 @@ fi
+ case $host_os in
+     freebsd1*|freebsd2*) elf=no;;
+     freebsd3*|freebsd4*) elf=yes;;
++    dragonfly*) elf=yes;;
+ esac
+ 
+ cat > conftest.$ac_ext <<EOF
+@@ -3282,9 +3343,10 @@ fi
  ## Libraries
  ##
  
@@ -101,7 +117,7 @@ $NetBSD: patch-ac,v 1.2 2002/10/19 03:51:03 jlam Exp $
  
  if eval "test \"`echo '$''{'pgac_cv_check_readline'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -3408,6 +3468,7 @@ EOF
+@@ -3408,6 +3470,7 @@ EOF
  else :
    
  fi
@@ -109,7 +125,7 @@ $NetBSD: patch-ac,v 1.2 2002/10/19 03:51:03 jlam Exp $
  
  if test "$PORTNAME" != "aix" -a "$PORTNAME" != "alpha"
  then
-@@ -9007,6 +9068,7 @@ s%@with_tcl@%$with_tcl%g
+@@ -9007,6 +9070,7 @@ s%@with_tcl@%$with_tcl%g
  s%@with_tk@%$with_tk%g
  s%@with_perl@%$with_perl%g
  s%@with_python@%$with_python%g
