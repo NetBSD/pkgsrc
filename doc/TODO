@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4343 2006/01/02 23:58:21 wiz Exp $
+$NetBSD: TODO,v 1.4344 2006/01/02 23:58:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -427,7 +427,6 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
-	o cksfv-1.3.8
 	o classpath-0.19
 	o classpath-gui-0.19
 	o clisp-2.35 (also see PR misc/31094)
