@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2006/01/02 20:52:09 joerg Exp $
+
+--- auth_ldap.c.orig	2006-01-02 20:47:58.000000000 +0000
++++ auth_ldap.c
+@@ -169,7 +169,6 @@ auth_ldap_connect_to_server(request_rec 
+ 		  "{%d} LDAP OP: init", (int)getpid());
+     
+     if ((sec->ldc->ldap = ldap_init(sec->host, sec->port)) == NULL) {
+-      extern int errno;
+       auth_ldap_log_reason(r, "Could not connect to LDAP server: %s", strerror(errno));
+       return 0;
+     }
