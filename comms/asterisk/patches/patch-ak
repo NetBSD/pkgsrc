@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1 2006/01/02 16:02:10 joerg Exp $
+
+--- channels/chan_oss.c.orig	2006-01-02 15:34:15.000000000 +0000
++++ channels/chan_oss.c
+@@ -37,7 +37,7 @@
+ 
+ #if defined( __OpenBSD__ )
+ #  include <sys/endian.h>
+-#elif defined( __FreeBSD__ ) || defined( __NetBSD__ )
++#elif defined( __FreeBSD__ ) || defined( __NetBSD__ ) || defined(__DragonFly__)
+ #  include <sys/endian.h>   
+ #elif defined( BSD ) && ( BSD >= 199103 ) || defined(__APPLE__)
+ #  include <machine/endian.h>
+@@ -54,7 +54,7 @@
+ 
+ #ifdef __linux
+ #include <linux/soundcard.h>
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <sys/soundcard.h>
+ #else
+ #include <soundcard.h>

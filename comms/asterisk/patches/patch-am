@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2006/01/02 16:02:10 joerg Exp $
+
+--- apps/app_intercom.c.orig	2006-01-02 15:39:06.000000000 +0000
++++ apps/app_intercom.c
+@@ -29,7 +29,7 @@
+ 
+ #if defined(__linux__)
+ #include <linux/soundcard.h>
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <sys/soundcard.h>
+ #else
+ #include <soundcard.h>
