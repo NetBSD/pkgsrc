@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.51 2005/12/31 14:02:28 rillig Exp $
+# $NetBSD: makevars.map,v 1.52 2006/01/02 01:18:24 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -106,6 +106,7 @@ MAKE_ENV		List+ of ShellWord
 MAKE_FLAGS		List+ of ShellWord
 MANZ			Yes
 MASTER_SITES		List of URL
+MESSAGE_SUBST		List+ of ShellWord
 MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 }
 MYSQL_VERSION_DEFAULT	Userdefined
 NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
@@ -141,6 +142,7 @@ PKG_APACHE_DEFAULT	Userdefined
 PKG_DEBUG_LEVEL		Userdefined
 PKG_DEFAULT_OPTIONS	Userdefined
 PKG_FAIL_REASON		List+ of ShellWord
+PKG_GROUPS		List of ShellWord
 PKG_INSTALLATION_TYPES	List of { overwrite pkgviews }
 PKG_JAVA_HOME		Readonly
 PKG_JVM			Readonly
@@ -162,6 +164,7 @@ PKG_SKIP_REASON		List+ of ShellWord
 PKG_SUFX		Userdefined
 PKG_SUGGESTED_OPTIONS	List of Option
 PKG_SUPPORTED_OPTIONS	List of Option
+PKG_USERS		List of ShellWord
 PLIST_SRC		List of Pathname
 PLIST_SUBST		List+ of ShellWord
 PLIST_TYPE		{ dynamic static }
