@@ -1,8 +1,18 @@
-$NetBSD: patch-ae,v 1.4 2003/09/28 15:09:50 tron Exp $
+$NetBSD: patch-ae,v 1.5 2006/01/02 16:14:04 joerg Exp $
 
---- src/pilot-debug.c.orig	2002-12-02 15:32:47.000000000 +0100
-+++ src/pilot-debug.c	2003-09-28 17:08:23.000000000 +0200
-@@ -1549,526 +1549,524 @@
+--- src/pilot-debug.c.orig	2002-12-02 14:32:47.000000000 +0000
++++ src/pilot-debug.c
+@@ -60,7 +60,9 @@ int usetk;
+ 
+ /* The following variable is a special hack that is needed in order for Sun
+    shared libraries to be used for Tcl. */
++#if !defined(__DragonFly__)
+ int *tclDummyMathPtr = (int *) matherr;
++#endif
+ 
+ int done 	= 0;
+ int Interactive = 1;
+@@ -1549,526 +1551,524 @@ static int proc_inittkdbg(ClientData cli
      return TCL_OK;
    }
  
@@ -1047,7 +1057,7 @@ $NetBSD: patch-ae,v 1.4 2003/09/28 15:09:50 tron Exp $
    puts(interp->result);
    
    created = 1;
-@@ -2080,25 +2078,24 @@
+@@ -2080,25 +2080,24 @@ proc Say {text} {
  
  static int proc_help(ClientData clientData, Tcl_Interp *interp, int argc, char *argv[])
  {
@@ -1091,7 +1101,7 @@ $NetBSD: patch-ae,v 1.4 2003/09/28 15:09:50 tron Exp $
    return TCL_OK;
  }
  
-@@ -2151,55 +2148,53 @@
+@@ -2151,55 +2150,53 @@ Tcl_AppInit(myinterp)
      Tcl_CreateCommand(interp, cmds[i].name, cmds[i].proc, 0, NULL);
    }
  
@@ -1194,7 +1204,7 @@ $NetBSD: patch-ae,v 1.4 2003/09/28 15:09:50 tron Exp $
  
    Tcl_LinkVar(interp, "Interactive", (char*)&Interactive, TCL_LINK_INT);
  
-@@ -2216,44 +2211,36 @@
+@@ -2216,44 +2213,36 @@ proc checkupin {time} {
         Type 'exit' to quit the application\n\n");
    
  #if 0
@@ -1269,7 +1279,7 @@ $NetBSD: patch-ae,v 1.4 2003/09/28 15:09:50 tron Exp $
  #endif
  
      /* Specify a user-specific startup file to invoke if the application is
-@@ -2263,26 +2250,23 @@
+@@ -2263,26 +2252,23 @@ currently implemented.\n\n\ "); 
  
      Tcl_SetVar(interp, "tcl_rcFileName", "~/.pdebugrc", TCL_GLOBAL_ONLY);
  
