@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/02 23:19:41 veego Exp $
 
-DISTNAME=	ezm3-1.1
-PKGREVISION=	1
+DISTNAME=	ezm3-1.2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.FreeBSD.org/pub/FreeBSD/development/CVSup/ezm3/
 DISTFILES=	${DISTNAME}-src.tar.bz2 ${BOOTSTRAP}
@@ -25,16 +24,21 @@ EZM3ROOT=		${PREFIX}/ezm3
 BUILDLINK_PASSTHRU_DIRS+=	${EZM3ROOT}
 
 # XXX: This may well work for some others.
-ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386 Linux-*-i386 DragonFly-*-i386
+ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386 \
+			Linux-*-i386 DragonFly-*-i386
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 BOOTSTRAP=	${DISTNAME}-FreeBSD4-boot.tar.bz2
 TARGET=		FreeBSD4
-TARGETDIR=	freebsd-1
+TARGETDIR=	freebsd-4
 .elif ${OPSYS} == "NetBSD"
 BOOTSTRAP=      ${DISTNAME}-NetBSDi386-boot.tar.bz2
 TARGET=         NetBSDi386
 TARGETDIR=      netbsd-1
+.elif ${OPSYS} == "OpenBSD"
+BOOTSTRAP=      ${DISTNAME}-OpenBSD_386-boot.tar.bz2
+TARGET=         OpenBSD_386
+TARGETDIR=      openbsd-2
 .elif ${OPSYS} == "Linux"
 BOOTSTRAP=	${DISTNAME}-LINUXLIBC6-boot.tar.bz2
 TARGET=		LINUXLIBC6
