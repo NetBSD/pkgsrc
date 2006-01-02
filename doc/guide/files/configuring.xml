@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.8 2005/11/16 22:07:04 erh Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.9 2006/01/02 22:30:52 jschauma Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -211,12 +211,15 @@
       options is selected, and building the package will fail.</para>
 
     <para>Before the options framework was introduced, build options were
-      selected by setting a variable in <filename>/etc/mk.conf</filename>
-      for each option.  To ease transition to the options framework for the
-      user, these legacy variables are converted to the appropriate options
-      setting automatically.  A warning is issued to prompt the user to
+      selected by setting a variable (often named
+      <varname>USE_<replaceable>FOO</replaceable></varname>) in
+      <filename>/etc/mk.conf</filename> for each option.  To ease transition
+      to the options framework for the user, these legacy variables are
+      converted to the appropriate options setting
+      (<varname>PKG_OPTIONS.<replaceable>pkgbase</replaceable></varname>)
+      automatically.  A warning is issued to prompt the user to
       update <filename>/etc/mk.conf</filename> to use the options framework
-      directly.  Support for these legacy variables will be removed
+      directly.  Support for the legacy variables will be removed
       eventually.</para>
   </sect1>
 
