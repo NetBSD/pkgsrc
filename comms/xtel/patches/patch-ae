@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/01/12 18:34:56 bouyer Exp $
+$NetBSD: patch-ae,v 1.2 2006/01/02 16:17:09 joerg Exp $
 
---- mdmdetect.c.orig	Sat Jan 12 17:57:18 2002
-+++ mdmdetect.c	Sat Jan 12 17:59:39 2002
-@@ -37,7 +37,11 @@
+--- mdmdetect.c.orig	2001-02-11 00:02:58.000000000 +0000
++++ mdmdetect.c
+@@ -37,18 +37,20 @@ static char rcsid[] = "$Id: mdmdetect.c,
  #include <sys/types.h>
  #include <sys/socket.h>
  #include <netinet/in.h>
@@ -14,20 +14,19 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/01/12 18:34:56 bouyer Exp $
  #ifdef SVR4
  #include <sys/mkdev.h>
  #endif /* SVR4 */
-@@ -45,10 +49,12 @@
+ 
  #define TIMEOUT_READ		5
  
- #ifndef __FreeBSD__
-+#ifndef __NetBSD__
- #ifndef __GLIBC__
+-#ifndef __FreeBSD__
+-#ifndef __GLIBC__
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__GLIBC__)
  extern char *sys_errlist[];
  #endif
- #endif
-+#endif
+-#endif
  extern char *xtel_basename (), *next_token ();
  
  static int fdl;
-@@ -290,7 +296,11 @@
+@@ -290,7 +292,11 @@ char **av;
      check_and_lock (cp);
  
      sprintf (buf, "/dev/%s", cp);
