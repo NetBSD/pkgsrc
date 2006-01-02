@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2006/01/02 23:26:47 joerg Exp $
+
+--- killfile.c.orig	2006-01-02 23:24:47.000000000 +0000
++++ killfile.c
+@@ -55,7 +55,9 @@ int check_a_group(PMaster, POneKill, cha
+ void print_debug(PKillStruct, const char *);
+ void debug_one_kill(POneKill);
+ void add_to_linkedlist(pmy_regex *, pmy_regex);
++#if !definedr(__DragonFly__)
+ const char *strnstr(const char *, const char *);
++#endif
+ pmy_regex regex_scan(char *, char, int, int, char);
+ int regex_check(char *, pmy_regex, int);
+ 
