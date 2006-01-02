@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:15 tv Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/02 16:31:34 joerg Exp $
 #
 
 DISTNAME=	metakit-2.4.9.3
@@ -14,6 +14,9 @@ COMMENT=	Embedded database library
 WRKSRC=		${WRKDIR}/metakit-2.4.9.3/builds
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT= ../unix/configure
+CONFIG_GUESS_OVERRIDE=	../unix/scripts/config.guess
+CONFIG_SUB_OVERRIDE=	../unix/scripts/config.sub
+CONFIG_STATUS_OVERRIDE=	../unix/scripts/config.status
 CONFIGURE_ARGS+= --with-python=${LOCALBASE}/${PYINC},${LOCALBASE}/${PYSITELIB}
 USE_LIBTOOL=	yes
 BUILD_TARGET=	python
