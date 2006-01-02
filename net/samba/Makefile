@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.155 2005/12/29 06:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.156 2006/01/02 22:33:36 jlam Exp $
 
 .include "Makefile.mirrors"
 
-DISTNAME=		samba-3.0.20b
-PKGNAME=		samba-3.0.20.2
-PKGREVISION=		3
+DISTNAME=		samba-3.0.21a
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 DIST_SUBDIR=		${DISTNAME}
@@ -100,18 +98,41 @@ OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR} ${SAMBA_STATEDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0700
 RCD_SCRIPTS+=		samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
 
+# Get the shared library major and minors for the installed shared
+# libraries.  We'll need these to create the versioned symlinks for
+# the shared libraries because samba Makefile doesn't do it on its
+# own.
+#
+.for LIB in LIBSMBCLIENT LIBMSRPC
+.  for NUM in MAJOR MINOR
+${LIB}_${NUM}_cmd=	${AWK} -F= '/^${LIB}_${NUM}/ { print $$2; }'	\
+				${WRKSRC}/Makefile.in
+${LIB}_${NUM}=		${${LIB}_${NUM}_cmd:sh}
+PLIST_SUBST+=		${LIB}_${NUM}=${${LIB}_${NUM}}
+.  endfor
+.endfor
+
+install-samba-lib-symlinks:
+	cd ${SAMBA_LIBDIR} && ${LN} -s libmsrpc.so			\
+		libmsrpc.so.${LIBMSRPC_MAJOR}
+	cd ${SAMBA_LIBDIR} && ${LN} -s libmsrpc.so			\
+		libmsrpc.so.${LIBMSRPC_MAJOR}.${LIBMSRPC_MINOR}
+	cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so			\
+		libsmbclient.so.${LIBSMBCLIENT_MAJOR}
+	cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so			\
+		libsmbclient.so.${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT_MINOR}
+
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adduser.sh > ${WRKDIR}/adduser.sh
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
 
-post-install:
+post-install: install-samba-lib-symlinks
 	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/include
 	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/images
 	${RMDIR} ${PREFIX}/share/samba/swat/lang/tr/include
-	for d in auth idmap pdb rpc; do					\
+	for d in idmap pdb rpc; do					\
 		${RMDIR} ${SAMBA_LIBDIR}/$$d;				\
 	done
-	-cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so libsmbclient.so.0
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}/../docs/registry; for f in *.reg; do		\
 		${INSTALL_DATA} $${f} ${DOCDIR}/$${f};			\

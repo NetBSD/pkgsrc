@@ -1,17 +1,17 @@
-$NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
+$NetBSD: patch-at,v 1.4 2006/01/02 22:33:36 jlam Exp $
 
---- configure.orig	2005-10-12 22:20:04.000000000 -0400
+--- configure.orig	2005-12-29 18:50:51.000000000 -0500
 +++ configure
 @@ -310,7 +310,7 @@ ac_includes_default="\
  # include <unistd.h>
  #endif"
  
--ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS configdir lockdir piddir logfilebase privatedir swatdir LDSHFLAGS SONAMEFLAG SHLD HOST_OS PICFLAGS PICSUFFIX libc_cv_fpie PIE_CFLAGS PIE_LDFLAGS SHLIBEXT INSTALLCLIENT INSTALLCLIENTCMD_SH INSTALLCLIENTCMD_A LIBSMBCLIENT_SHARED LIBSMBCLIENT LIBSMBSHAREMODES_SHARED LIBSMBSHAREMODES PRINT_LIBS AUTH_LIBS ACL_LIBS PASSDB_LIBS IDMAP_LIBS KRB5_LIBS LDAP_LIBS SHLIB_PROGS SMBWRAPPER SMBWRAP_OBJS SMBWRAP_INC EXTRA_BIN_PROGS EXTRA_SBIN_PROGS EXTRA_ALL_TARGETS SOCKWRAP CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA AWK PERL AR ac_ct_AR BROKEN_CC build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os EGREP CUPS_CONFIG LIBOBJS TERMLIBS TERMLDFLAGS ROFF DYNEXP SMBLDAP SMBLDAPUTIL KRB5CONFIG XML2_CONFIG XML_CFLAGS XML_LIBS MYSQL_CONFIG MYSQL_CFLAGS MYSQL_LIBS PGSQL_CONFIG PGSQL_CFLAGS PGSQL_LIBS WINBIND_NSS WINBIND_WINS_NSS WINBIND_NSS_LDSHFLAGS WINBIND_NSS_EXTRA_OBJS WINBIND_NSS_EXTRA_LIBS BUILD_POPT POPTLIBS FLAGS1 PYTHON PDB_STATIC PDB_MODULES RPC_STATIC RPC_MODULES IDMAP_STATIC IDMAP_MODULES CHARSET_STATIC CHARSET_MODULES AUTH_STATIC AUTH_MODULES VFS_STATIC VFS_MODULES builddir LTLIBOBJS'
-+ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS configdir lockdir statedir piddir logfilebase privatedir swatdir LDSHFLAGS SONAMEFLAG SHLD HOST_OS PICFLAGS PICSUFFIX libc_cv_fpie PIE_CFLAGS PIE_LDFLAGS SHLIBEXT INSTALLCLIENT INSTALLCLIENTCMD_SH INSTALLCLIENTCMD_A LIBSMBCLIENT_SHARED LIBSMBCLIENT LIBSMBSHAREMODES_SHARED LIBSMBSHAREMODES PRINT_LIBS AUTH_LIBS ACL_LIBS PASSDB_LIBS IDMAP_LIBS KRB5_LIBS LDAP_LIBS SHLIB_PROGS SMBWRAPPER SMBWRAP_OBJS SMBWRAP_INC EXTRA_BIN_PROGS EXTRA_SBIN_PROGS EXTRA_ALL_TARGETS SOCKWRAP CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA AWK PERL AR ac_ct_AR BROKEN_CC build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os EGREP CUPS_CONFIG LIBOBJS TERMLIBS TERMLDFLAGS ROFF DYNEXP SMBLDAP SMBLDAPUTIL KRB5CONFIG XML2_CONFIG XML_CFLAGS XML_LIBS MYSQL_CONFIG MYSQL_CFLAGS MYSQL_LIBS PGSQL_CONFIG PGSQL_CFLAGS PGSQL_LIBS WINBIND_NSS WINBIND_WINS_NSS WINBIND_NSS_LDSHFLAGS WINBIND_NSS_EXTRA_OBJS WINBIND_NSS_EXTRA_LIBS BUILD_POPT POPTLIBS FLAGS1 PYTHON PDB_STATIC PDB_MODULES RPC_STATIC RPC_MODULES IDMAP_STATIC IDMAP_MODULES CHARSET_STATIC CHARSET_MODULES AUTH_STATIC AUTH_MODULES VFS_STATIC VFS_MODULES builddir LTLIBOBJS'
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS configdir lockdir piddir logfilebase privatedir swatdir LDSHFLAGS SONAMEFLAG SHLD HOST_OS PICFLAGS PICSUFFIX libc_cv_fpie PIE_CFLAGS PIE_LDFLAGS SHLIBEXT INSTALLLIBCMD_SH INSTALLLIBCMD_A INSTALL_LIBMSRPC LIBMSRPC_SHARED LIBMSRPC INSTALL_LIBSMBCLIENT LIBSMBCLIENT_SHARED LIBSMBCLIENT INSTALL_LIBSMBSHAREMODES LIBSMBSHAREMODES_SHARED LIBSMBSHAREMODES PRINT_LIBS AUTH_LIBS ACL_LIBS PASSDB_LIBS IDMAP_LIBS KRB5_LIBS LDAP_LIBS SHLIB_PROGS SMBWRAPPER SMBWRAP_OBJS SMBWRAP_INC EXTRA_BIN_PROGS EXTRA_SBIN_PROGS EXTRA_ALL_TARGETS CONFIG_LIBS SOCKWRAP CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA AWK PERL AR ac_ct_AR BROKEN_CC build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os EGREP CUPS_CONFIG LIBOBJS TERMLIBS TERMLDFLAGS ROFF DYNEXP SMBLDAP SMBLDAPUTIL KRB5CONFIG XML2_CONFIG XML_CFLAGS XML_LIBS MYSQL_CONFIG MYSQL_CFLAGS MYSQL_LIBS PGSQL_CONFIG PGSQL_CFLAGS PGSQL_LIBS WINBIND_NSS WINBIND_WINS_NSS WINBIND_NSS_LDSHFLAGS WINBIND_NSS_EXTRA_OBJS WINBIND_NSS_EXTRA_LIBS BUILD_POPT POPTLIBS FLAGS1 PYTHON PDB_STATIC PDB_MODULES RPC_STATIC RPC_MODULES IDMAP_STATIC IDMAP_MODULES CHARSET_STATIC CHARSET_MODULES AUTH_STATIC AUTH_MODULES VFS_STATIC VFS_MODULES builddir LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS configdir lockdir statedir piddir logfilebase privatedir swatdir LDSHFLAGS SONAMEFLAG SHLD HOST_OS PICFLAGS PICSUFFIX libc_cv_fpie PIE_CFLAGS PIE_LDFLAGS SHLIBEXT INSTALLLIBCMD_SH INSTALLLIBCMD_A INSTALL_LIBMSRPC LIBMSRPC_SHARED LIBMSRPC INSTALL_LIBSMBCLIENT LIBSMBCLIENT_SHARED LIBSMBCLIENT INSTALL_LIBSMBSHAREMODES LIBSMBSHAREMODES_SHARED LIBSMBSHAREMODES PRINT_LIBS AUTH_LIBS ACL_LIBS PASSDB_LIBS IDMAP_LIBS KRB5_LIBS LDAP_LIBS SHLIB_PROGS SMBWRAPPER SMBWRAP_OBJS SMBWRAP_INC EXTRA_BIN_PROGS EXTRA_SBIN_PROGS EXTRA_ALL_TARGETS CONFIG_LIBS SOCKWRAP CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT CPP INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA AWK PERL AR ac_ct_AR BROKEN_CC build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os EGREP CUPS_CONFIG LIBOBJS TERMLIBS TERMLDFLAGS ROFF DYNEXP SMBLDAP SMBLDAPUTIL KRB5CONFIG XML2_CONFIG XML_CFLAGS XML_LIBS MYSQL_CONFIG MYSQL_CFLAGS MYSQL_LIBS PGSQL_CONFIG PGSQL_CFLAGS PGSQL_LIBS WINBIND_NSS WINBIND_WINS_NSS WINBIND_NSS_LDSHFLAGS WINBIND_NSS_EXTRA_OBJS WINBIND_NSS_EXTRA_LIBS BUILD_POPT POPTLIBS FLAGS1 PYTHON PDB_STATIC PDB_MODULES RPC_STATIC RPC_MODULES IDMAP_STATIC IDMAP_MODULES CHARSET_STATIC CHARSET_MODULES AUTH_STATIC AUTH_MODULES VFS_STATIC VFS_MODULES builddir LTLIBOBJS'
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -863,6 +863,7 @@ Optional Packages:
+@@ -864,6 +864,7 @@ Optional Packages:
    --with-fhs              Use FHS-compliant paths (default=no)
    --with-privatedir=DIR   Where to put smbpasswd ($ac_default_prefix/private)
    --with-lockdir=DIR      Where to put lock files ($ac_default_prefix/var/locks)
@@ -19,7 +19,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
    --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)
    --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)
    --with-configdir=DIR    Where to put configuration files ($libdir)
-@@ -1424,6 +1425,7 @@ fi
+@@ -1426,6 +1427,7 @@ fi
  
  
  lockdir="\${VARDIR}/locks"
@@ -27,7 +27,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
  piddir="\${VARDIR}/locks"
  mandir="\${prefix}/man"
  logfilebase="\${VARDIR}"
-@@ -1438,7 +1440,8 @@ if test "${with_fhs+set}" = set; then
+@@ -1440,7 +1442,8 @@ if test "${with_fhs+set}" = set; then
    withval="$with_fhs"
     case "$withval" in
    yes)
@@ -37,7 +37,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
      piddir="\${VARDIR}/run"
      mandir="\${prefix}/share/man"
      logfilebase="\${VARDIR}/log/samba"
-@@ -1491,6 +1494,26 @@ echo "$as_me: WARNING: --with-lockdir ca
+@@ -1493,6 +1496,26 @@ echo "$as_me: WARNING: --with-lockdir ca
  fi;
  
  #################################################
@@ -64,7 +64,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
  # set pid directory location
  
  # Check whether --with-piddir or --without-piddir was given.
-@@ -16912,6 +16935,107 @@ done
+@@ -16939,6 +16962,107 @@ done
  
  
  
@@ -172,7 +172,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
  for ac_func in syslog vsyslog timegm
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
-@@ -31314,9 +31438,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -32635,9 +32759,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
@@ -185,7 +185,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -31332,11 +31456,11 @@ extern "C"
+@@ -32653,11 +32777,11 @@ extern "C"
  #endif
  /* We use char because int might match the return type of a gcc2
     builtin and then its argument prototype would still apply.  */
@@ -199,7 +199,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
    ;
    return 0;
  }
-@@ -31363,22 +31487,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -32684,22 +32808,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -227,7 +227,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
    cat >>confdefs.h <<_ACEOF
  #define HAVE_DES_SET_KEY 1
  _ACEOF
-@@ -41304,13 +41428,37 @@ case "$host_os" in
+@@ -44140,13 +44264,37 @@ case "$host_os" in
  	*linux*)
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -272,7 +272,7 @@ $NetBSD: patch-at,v 1.3 2005/11/14 08:05:27 jlam Exp $
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
-@@ -44539,6 +44687,7 @@ s,@ECHO_T@,$ECHO_T,;t t
+@@ -47561,6 +47709,7 @@ s,@ECHO_T@,$ECHO_T,;t t
  s,@LIBS@,$LIBS,;t t
  s,@configdir@,$configdir,;t t
  s,@lockdir@,$lockdir,;t t
