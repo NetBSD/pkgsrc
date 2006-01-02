@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/01/12 18:34:56 bouyer Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/02 16:17:09 joerg Exp $
 
---- Imakefile.orig	Mon Feb 12 17:33:01 2001
-+++ Imakefile	Sat Jan 12 18:28:55 2002
-@@ -26,7 +26,7 @@
+--- Imakefile.orig	2001-02-12 16:33:01.000000000 +0000
++++ Imakefile
+@@ -26,7 +26,7 @@ NETWORKCFLAGS = -DNO_NETWORK
  #ifdef NO_TERMIO
  TERMIOCFLAGS = -DNO_TERMIO
  #else
 -#if defined(USE_TERMIOS) || defined(__FreeBSD__)
-+#if defined(USE_TERMIOS) || defined(__FreeBSD__) || defined (NetBSDArchitecture)
++#if defined(USE_TERMIOS) || defined(__FreeBSD__) || defined (NetBSDArchitecture) || defined(DragonFlyArchitecture)
  TERMIOCFLAGS = -DUSE_TERMIOS
  #endif
  #endif
-@@ -71,7 +71,7 @@
+@@ -71,7 +71,7 @@ SYSLOGCFLAGS= -DUSE_SYSLOG
  #ifdef NO_TVR
    TVRCFLAGS= -DNO_TVR
  #else
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/01/12 18:34:56 bouyer Exp $
  #endif
  
  #ifdef WINDAUBE
-@@ -103,7 +103,7 @@
+@@ -103,7 +103,7 @@ CONF_DEFINES  = '-DFICHIER_DEFINITION_LI
  
  TELE_DEFINES  = '-DXTERM_PATH="$(BINDIR)/xterm"'
  
