@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12302 2006/01/02 14:04:54 christos Exp $
+$NetBSD: CHANGES,v 1.12303 2006/01/02 15:04:20 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -26,3 +26,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkglint to 4.51 [rillig 2006-01-02]
 	Updated mail/sylpheed-devel to 2.2.0beta2 [chris 2006-01-02]
 	Updated games/neverball to 1.4.0 [christos 2006-01-02]
+	Updated chat/ircservices to 5.0.56nb1 [adrianp 2006-01-02]
