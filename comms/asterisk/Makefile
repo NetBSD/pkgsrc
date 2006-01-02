@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/29 06:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/02 16:02:10 joerg Exp $
 
 DISTNAME=	asterisk-1.0.9
 CATEGORIES=	comms net audio
@@ -85,6 +85,10 @@ PTHREAD_OPTS+=	require native
 post-patch:
 	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
 .endif
+
+pre-configure:
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/editline
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/editline
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

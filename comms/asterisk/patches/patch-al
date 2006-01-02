@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2006/01/02 16:02:10 joerg Exp $
+
+--- apps/app_sms.c.orig	2006-01-02 15:36:41.000000000 +0000
++++ apps/app_sms.c
+@@ -208,7 +208,7 @@ static void
+ packdate (unsigned char *o, time_t w)
+ {
+   struct tm *t = localtime (&w);
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined( __NetBSD__ ) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined( __NetBSD__ ) || defined(__APPLE__) || defined(__DragonFly__)
+   int z = - t->tm_gmtoff / 3600 / 15;
+ #else
+   int z = timezone / 3600 / 15;
