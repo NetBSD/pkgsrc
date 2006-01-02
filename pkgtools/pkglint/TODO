@@ -19,3 +19,5 @@
   - possible unportable constructs
 * check quoting in CFLAGS+= -DPREFIX=\"${PREFIX:Q}\"
 * check that Index: entries match the rest of the patch
+* record with each substring its source location to be able to make
+  even more precise diagnostics
