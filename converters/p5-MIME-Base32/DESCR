@@ -1,0 +1,4 @@
+Encode data similar way like MIME::Base64 does.
+
+Main purpose is to create encrypted text used as id or key entry
+typed-or-submitted by user. It is upper/lowercase safe (not sensitive).
