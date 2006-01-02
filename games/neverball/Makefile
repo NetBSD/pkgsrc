@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/12/11 09:40:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/02 14:01:09 christos Exp $
 #
 
-DISTNAME=	neverball-1.2.2
-PKGREVISION=	3
+DISTNAME=	neverball-1.4.0
 CATEGORIES=	games
 MASTER_SITES=	http://www.icculus.org/neverball/
 
@@ -23,7 +22,7 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_DATA_DIR} ${SHAREDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/MAPPING \
+	${INSTALL_DATA} ${WRKSRC}/README \
 	    ${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_PROGRAM} ${WRKSRC}/neverball ${WRKSRC}/neverputt ${SHAREDIR}
 	cd ${WRKSRC} && ${PAX} -rwppm data ${SHAREDIR}
