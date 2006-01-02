@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 19:14:56 wiz Exp $
+$NetBSD: distinfo,v 1.4 2006/01/02 22:34:10 joerg Exp $
 
 SHA1 (xalarm-3.03.tar.Z) = 29e684cdfc05a09c9be313f29dc2482a13ef9f95
 RMD160 (xalarm-3.03.tar.Z) = 9208d0cefc0c53b57d36c7f1129a3b4b83821ab2
@@ -11,3 +11,4 @@ RMD160 (xalarm-3.04-05.patch.Z) = 78225fad50d0d0f8b4225031b20b0eaff32a87fe
 Size (xalarm-3.04-05.patch.Z) = 13014 bytes
 SHA1 (patch-aa) = ce6ae4709df573f276055cbc1a576fb382e47ecd
 SHA1 (patch-ab) = 750b887285c62124d792973696a459e3ac9dd007
+SHA1 (patch-ac) = c053df3ac2503a03233e076b590e6387b04f6faa
