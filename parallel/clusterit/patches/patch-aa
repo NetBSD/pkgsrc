@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.5 2006/01/02 22:51:45 joerg Exp $
+
+--- common/common.c.orig	2006-01-02 22:42:24.000000000 +0000
++++ common/common.c
+@@ -121,7 +121,6 @@ parse_cluster(char **exclude)
+     char *clusterfile, *p, *nodename;
+     int i, j, g, fail, gfail, lumping, n, ging;
+     char buf[MAXBUF];
+-    extern int errno;
+     group_t *grouptemp;
+     node_t *nodeptr;
+     char **lumptemp;
+@@ -383,8 +382,6 @@ int test_node_connection(int rshport, in
+ void
+ _bailout(int line, char *file)
+ {
+-    extern int errno;
+-	
+     (void)fprintf(stderr, "%s: Failed in %s line %d: %s %d\n",
+ 	progname, file, line, strerror(errno), errno);
+ 
