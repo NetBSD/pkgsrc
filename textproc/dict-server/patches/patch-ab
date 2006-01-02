@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.5 2006/01/02 10:55:24 joerg Exp $
+
+--- libmaa/maaP.h.orig	2006-01-02 10:42:04.000000000 +0000
++++ libmaa/maaP.h
+@@ -41,8 +41,10 @@
+ #  pragma alloca
+ # else
+ #  ifndef alloca /* predefined by HP cc +Olibcalls */
++#  if !defined(__DragonFly__) && !defined(__FreeBSD__)
+     char *alloca ();
+ #  endif
++#  endif
+ # endif
+ #endif
+ 
