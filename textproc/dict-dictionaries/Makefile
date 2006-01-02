@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:51:02 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/02 11:06:34 joerg Exp $
 
 DISTNAME=       #
 PKGNAME=	dict-data-1.8.0
@@ -40,6 +40,14 @@ WEB1913=	web1913.dict.dz \
 		web1913.index
 WN=		wn.dict.dz \
 		wn.index
+
+pre-configure:
+	@for d in ${WRKDIR}/*/config.guess ${WRKDIR}/*/*/config.guess; do \
+		${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess $${d}; \
+	done
+	@for d in ${WRKDIR}/*/config.sub ${WRKDIR}/*/*/config.sub; do \
+		${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub $${d}; \
+	done
 
 do-configure:
 	@for d in ${DICTIONARIES}; do \
