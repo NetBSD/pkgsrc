@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.32 2005/11/14 08:05:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.33 2006/01/02 22:33:36 jlam Exp $
+bin/eventlogadm
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -10,6 +11,7 @@ bin/smbcacls
 bin/smbclient
 bin/smbcontrol
 bin/smbcquotas
+bin/smbget
 ${SMBMOUNT}bin/smbmnt
 ${SMBMOUNT}bin/smbmount
 bin/smbpasswd
@@ -23,9 +25,11 @@ bin/tdbdump
 bin/tdbtool
 bin/testparm
 ${WINBIND}bin/wbinfo
+include/libmsrpc.h
 include/libsmbclient.h
 ${NSS_WINBIND}
 ${NSS_WINS}
+lib/samba/auth/script.so
 lib/samba/charset/CP437.so
 lib/samba/charset/CP850.so
 lib/samba/de.msg
@@ -33,8 +37,12 @@ lib/samba/en.msg
 lib/samba/fr.msg
 lib/samba/it.msg
 lib/samba/ja.msg
+lib/samba/libmsrpc.so
+lib/samba/libmsrpc.so.${LIBMSRPC_MAJOR}
+lib/samba/libmsrpc.so.${LIBMSRPC_MAJOR}.${LIBMSRPC_MINOR}
 lib/samba/libsmbclient.so
-lib/samba/libsmbclient.so.0
+lib/samba/libsmbclient.so.${LIBSMBCLIENT_MAJOR}
+lib/samba/libsmbclient.so.${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT_MINOR}
 lib/samba/lowcase.dat
 lib/samba/nl.msg
 lib/samba/pl.msg
@@ -55,7 +63,6 @@ lib/samba/vfs/shadow_copy.so
 ${PAM_SMBPASS}
 ${PAM_WINBIND}
 ${CUPS}libexec/cups/backend/smb
-man/man1/editreg.1
 man/man1/findsmb.1
 man/man1/log2pcap.1
 man/man1/nmblookup.1
@@ -67,12 +74,10 @@ man/man1/smbclient.1
 man/man1/smbcontrol.1
 man/man1/smbcquotas.1
 man/man1/smbget.1
-man/man1/smbsh.1
 man/man1/smbstatus.1
 man/man1/smbtar.1
 man/man1/smbtree.1
 man/man1/testparm.1
-man/man1/testprns.1
 man/man1/vfstest.1
 man/man1/wbinfo.1
 man/man5/lmhosts.5
@@ -80,11 +85,11 @@ man/man5/smb.conf.5
 man/man5/smbgetrc.5
 man/man5/smbpasswd.5
 man/man7/samba.7
-man/man8/libsmbclient.8
+man/man7/libsmbclient.7
+man/man7/pam_winbind.7
 man/man8/mount.cifs.8
 man/man8/net.8
 man/man8/nmbd.8
-man/man8/pam_winbind.8
 man/man8/pdbedit.8
 man/man8/smbd.8
 man/man8/smbmnt.8
@@ -113,7 +118,6 @@ share/doc/samba/Win98_PlainPassword.reg
 share/doc/samba/Win9X-CacheHandling.reg
 share/doc/samba/WinME_PlainPassword.reg
 share/doc/samba/WinXP_PlainPassword.reg
-share/doc/samba/WinXP_SignOrSeal.reg
 share/doc/samba/WindowsTerminalServer.reg
 share/examples/rc.d/nmbd
 share/examples/rc.d/samba
@@ -334,10 +338,9 @@ share/samba/swat/help/Samba3-HOWTO/type.html
 share/samba/swat/help/Samba3-HOWTO/unicode.html
 share/samba/swat/help/Samba3-HOWTO/upgrading-to-3.0.html
 share/samba/swat/help/Samba3-HOWTO/winbind.html
-share/samba/swat/help/manpages/editreg.1.html
 share/samba/swat/help/manpages/findsmb.1.html
 share/samba/swat/help/manpages/index.html
-share/samba/swat/help/manpages/libsmbclient.8.html
+share/samba/swat/help/manpages/libsmbclient.7.html
 share/samba/swat/help/manpages/lmhosts.5.html
 share/samba/swat/help/manpages/log2pcap.1.html
 share/samba/swat/help/manpages/mount.cifs.8.html
@@ -345,7 +348,7 @@ share/samba/swat/help/manpages/net.8.html
 share/samba/swat/help/manpages/nmbd.8.html
 share/samba/swat/help/manpages/nmblookup.1.html
 share/samba/swat/help/manpages/ntlm_auth.1.html
-share/samba/swat/help/manpages/pam_winbind.8.html
+share/samba/swat/help/manpages/pam_winbind.7.html
 share/samba/swat/help/manpages/pdbedit.8.html
 share/samba/swat/help/manpages/profiles.1.html
 share/samba/swat/help/manpages/rpcclient.1.html
@@ -372,7 +375,6 @@ share/samba/swat/help/manpages/swat.8.html
 share/samba/swat/help/manpages/tdbbackup.8.html
 share/samba/swat/help/manpages/tdbdump.8.html
 share/samba/swat/help/manpages/testparm.1.html
-share/samba/swat/help/manpages/testprns.1.html
 share/samba/swat/help/manpages/umount.cifs.8.html
 share/samba/swat/help/manpages/vfstest.1.html
 share/samba/swat/help/manpages/wbinfo.1.html
@@ -586,4 +588,5 @@ ${PAM}@dirrm share/examples/samba/pam_smbpass
 @dirrm share/doc/samba
 @dirrm lib/samba/vfs
 @dirrm lib/samba/charset
+@dirrm lib/samba/auth
 @dirrm lib/samba
