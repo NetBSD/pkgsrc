@@ -1,5 +1,4 @@
 * fix false positive warnings
-* quoting check for Makefile variables
 * ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
 * -Wl,-rpath
 * include "../../mk/bsd.prefs.mk" before using "+=".
@@ -13,11 +12,6 @@
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
 * mention the SUBST framework whenever ${SED} is used.
-* extract the DISTFILES if they exist and check all files in them for:
-  - security holes,
-  - coding style violations,
-  - possible unportable constructs
-* check quoting in CFLAGS+= -DPREFIX=\"${PREFIX:Q}\"
 * check that Index: entries match the rest of the patch
 * record with each substring its source location to be able to make
   even more precise diagnostics
