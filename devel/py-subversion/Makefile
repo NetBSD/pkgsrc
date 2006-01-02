@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:07 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/02 21:13:45 epg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
 COMMENT=	Python bindings and tools for Subversion
@@ -20,7 +20,7 @@ MAKE_ENV+=		EXTRA_CPPFLAGS=${BUILDLINK_CPPFLAGS:Q}
 MAKE_FLAGS+=		swig_pydir=${LOCALBASE}/${PYSITELIB}/libsvn \
 			swig_pydir_extra=${LOCALBASE}/${PYSITELIB}/svn
 
-TEST_TARGET=		all check
+TEST_TARGET=		all check check-swig-py
 
 post-patch:
 	${RM} ${WRKSRC}/build-outputs.mk
@@ -36,7 +36,6 @@ post-install:
 		${SVNEXAMPLES}/hook-scripts
 
 .include "../../devel/subversion/buildlink3.mk"
-.include "../../devel/swig13/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
