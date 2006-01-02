@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/05/23 21:32:01 seb Exp $
+$NetBSD: patch-aa,v 1.3 2006/01/02 11:28:30 joerg Exp $
 
 --- configure.orig	2005-03-14 01:32:18.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.2 2005/05/23 21:32:01 seb Exp $
    LIBXML_PREFIX=$withval
          LIBXML_CFLAGS="-I$withval/include/libxml2 -I$withval/include/libxml"
 -        LIBXML_LIBS="$withval/lib/libxml2.a -lz -lm -lpthread -ldl"
-+        LIBXML_LIBS="-L$withval/lib -lxml2 -lz -lm -lpthread"
++        LIBXML_LIBS="-L$withval/lib -lxml2 -lz -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
  
  fi
  
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.2 2005/05/23 21:32:01 seb Exp $
    LIBXSLT_PREFIX=$withval
          LIBXSLT_CFLAGS="-I$withval/include/libxslt -I$withval/include/libexslt"
 -        LIBXSLT_LIBS="$withval/lib/libxslt.a $withval/lib/libexslt.a -lz -lm -lpthread"
-+        LIBXSLT_LIBS="-L$withval/lib -lxslt -lexslt -lz -lm -lpthread"
++        LIBXSLT_LIBS="-L$withval/lib -lxslt -lexslt -lz -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
  
  fi
  
