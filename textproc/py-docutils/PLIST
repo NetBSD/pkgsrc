@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/12/10 15:59:28 darcy Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/03 19:06:48 darcy Exp $
 bin/rst2html.py
 bin/rst2latex.py
 ${PYSITELIB}/docutils/__init__.py
@@ -109,6 +109,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/__init__.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/af.py
 ${PYSITELIB}/docutils/parsers/rst/languages/af.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/af.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/ca.py
+${PYSITELIB}/docutils/parsers/rst/languages/ca.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/ca.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/cs.py
 ${PYSITELIB}/docutils/parsers/rst/languages/cs.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/cs.pyo
@@ -133,6 +136,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/fr.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/it.py
 ${PYSITELIB}/docutils/parsers/rst/languages/it.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/it.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/nl.py
+${PYSITELIB}/docutils/parsers/rst/languages/nl.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/nl.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/pt_br.py
 ${PYSITELIB}/docutils/parsers/rst/languages/pt_br.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/pt_br.pyo
