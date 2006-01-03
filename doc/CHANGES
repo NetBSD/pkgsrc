@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12338 2006/01/03 18:06:18 wiz Exp $
+$NetBSD: CHANGES,v 1.12339 2006/01/03 18:15:40 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -75,3 +75,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added databases/jdbc-postgresql80 version 314 [abs 2006-01-03]
 	Updated devel/p5-capitalization to 0.03nb1 [wiz 2006-01-03]
 	Updated databases/p5-DBIx-SearchBuilder to 1.38 [wiz 2006-01-03]
+	Removed www/jakarta-tomcat55 [abs 2006-01-03]
+	Added www/apache-tomcat55 [abs 2006-01-03]
