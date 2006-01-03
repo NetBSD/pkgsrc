@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/11/02 08:57:04 taca Exp $
+$NetBSD: distinfo,v 1.5 2006/01/03 14:25:50 taca Exp $
 
-SHA1 (ruby/ruby-1.8.3.tar.gz) = 407e70377214fcb812cdbb86a3e1b735e69b7cff
-RMD160 (ruby/ruby-1.8.3.tar.gz) = b4244a288d04fca29556144636b5e093b78a8cd5
-Size (ruby/ruby-1.8.3.tar.gz) = 4227276 bytes
+SHA1 (ruby-1.8.4.tar.gz) = 93999577c7fc4decc6b2fe8fefa96e743f278fbf
+RMD160 (ruby-1.8.4.tar.gz) = 1c0572a4ee369af57a3db68027b2566052eac944
+Size (ruby-1.8.4.tar.gz) = 4312965 bytes
 SHA1 (patch-aa) = 8c98c46b88e90f70b171d9e909653239ff9fe68e
