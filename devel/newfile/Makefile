@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/03 07:18:32 taca Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/03 14:25:49 taca Exp $
 #
 
 DISTNAME=	newfile-1.0.14
@@ -12,7 +12,6 @@ COMMENT=	Tool for creating starter files in various languages
 
 NO_BUILD=	yes
 GNU_CONFIGURE=	yes
-USE_RUBY_DIST_SUBDIR=	yes
 REPLACE_RUBY=	src/newfile.rb.in
 
 post-install:

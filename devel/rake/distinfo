@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/11/02 13:54:45 taca Exp $
+$NetBSD: distinfo,v 1.4 2006/01/03 14:25:49 taca Exp $
 
-SHA1 (ruby/rake-0.6.2.tgz) = 7d6d61bfa65aa99cf906980be2b32da1f98340a9
-RMD160 (ruby/rake-0.6.2.tgz) = b7e77aaf89ac2c86006ad7498435e8dc115c01f6
-Size (ruby/rake-0.6.2.tgz) = 62292 bytes
+SHA1 (rake-0.6.2.tgz) = 7d6d61bfa65aa99cf906980be2b32da1f98340a9
+RMD160 (rake-0.6.2.tgz) = b7e77aaf89ac2c86006ad7498435e8dc115c01f6
+Size (rake-0.6.2.tgz) = 62292 bytes

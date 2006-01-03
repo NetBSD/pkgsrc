@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/11/03 05:41:39 taca Exp $
+$NetBSD: distinfo,v 1.4 2006/01/03 14:25:51 taca Exp $
 
-SHA1 (ruby/actionwebservice-0.9.1.tgz) = 37ca30fded8770f96905e6f10aec1bc06609f6dc
-RMD160 (ruby/actionwebservice-0.9.1.tgz) = cc1d107b45b51f4cdb3fa5e416d5cd2191d8eb43
-Size (ruby/actionwebservice-0.9.1.tgz) = 60930 bytes
+SHA1 (actionwebservice-0.9.1.tgz) = 37ca30fded8770f96905e6f10aec1bc06609f6dc
+RMD160 (actionwebservice-0.9.1.tgz) = cc1d107b45b51f4cdb3fa5e416d5cd2191d8eb43
+Size (actionwebservice-0.9.1.tgz) = 60930 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:28 wiz Exp $
+$NetBSD: distinfo,v 1.5 2006/01/03 14:25:51 taca Exp $
 
-SHA1 (ruby/mod_ruby-1.2.4.tar.gz) = 758e1706944ab77a1547c88ceb0aadd69131d732
-RMD160 (ruby/mod_ruby-1.2.4.tar.gz) = 720058d331207dcc79531fdb3bf9c4080834b2cc
-Size (ruby/mod_ruby-1.2.4.tar.gz) = 107797 bytes
+SHA1 (mod_ruby-1.2.4.tar.gz) = 758e1706944ab77a1547c88ceb0aadd69131d732
+RMD160 (mod_ruby-1.2.4.tar.gz) = 720058d331207dcc79531fdb3bf9c4080834b2cc
+Size (mod_ruby-1.2.4.tar.gz) = 107797 bytes
 SHA1 (patch-ac) = 675f906fc5a08347a83eef440ee41d64381d23fe

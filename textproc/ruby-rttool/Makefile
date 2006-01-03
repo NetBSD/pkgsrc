@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/11/09 04:26:07 taca Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/03 14:25:51 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -12,13 +12,11 @@ COMMENT=	RT to HTML (and hopefully LaTeX in future) table converter
 
 CONFLICTS+=	ruby[1-9][0-9]-rttool-*
 
-USE_RUBY_DIST_SUBDIR=	yes
 .include "../../lang/ruby/rubyversion.mk"
 # install a library file to rdtool's directory, too
 BUILDLINK_DEPMETHOD.${RUBY_PKGPREFIX}-rdtool= full
 
 VERSION=		1.0.1
-USE_RUBY_DIST_SUBDIR=	yes
 USE_RUBY_SETUP=		yes
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin/rt ${WRKSRC}/lib/rt
 HTMLDOCS=		rttool.en.html rttool.ja.html

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/10/20 18:01:05 wiz Exp $
+$NetBSD: distinfo,v 1.9 2006/01/03 14:25:50 taca Exp $
 
-SHA1 (ruby/racc-1.4.4.tar.gz) = 05ec265568fcf22d83b810c0377ea9edb0ca9999
-RMD160 (ruby/racc-1.4.4.tar.gz) = 73941f14ed0cc95ef8d34793f4d02ce286a92040
-Size (ruby/racc-1.4.4.tar.gz) = 115343 bytes
+SHA1 (racc-1.4.4.tar.gz) = 05ec265568fcf22d83b810c0377ea9edb0ca9999
+RMD160 (racc-1.4.4.tar.gz) = 73941f14ed0cc95ef8d34793f4d02ce286a92040
+Size (racc-1.4.4.tar.gz) = 115343 bytes
