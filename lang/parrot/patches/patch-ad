@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2006/01/03 19:25:06 wiz Exp $
+
+--- tools/dev/install_files.pl.orig	Tue Jan  3 15:03:48 2006
++++ tools/dev/install_files.pl	Tue Jan  3 15:04:31 2006
+@@ -175,6 +175,7 @@
+         $dest = File::Spec->catdir($options{libdir}, $dest);
+     } elsif ($meta{bin}) {
+ 	$dest =~ s/^installable_//;	# parrot with different config
++	$dest =~ s/_shared$//;		# shared binaries shouldn't be named _shared
+         $dest = File::Spec->catdir($options{bindir}, $dest);
+         if ($exe) {
+            $src .= $exe;

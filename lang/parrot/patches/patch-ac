@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2006/01/03 19:25:06 wiz Exp $
+
+--- config/init/hints/freebsd.pm.orig	Sun Nov 13 23:34:12 2005
++++ config/init/hints/freebsd.pm	Tue Dec 27 09:27:08 2005
+@@ -22,8 +22,7 @@
+     $libs .= ' -pthread';
+ }
+ else {
+-    $libs =~ s/-lc\b\s*//;
+-    $libs .= ' -lc_r';
++    $libs .= ' -lpthread';
+ }
+ 
+ Parrot::Configure::Data->set(
