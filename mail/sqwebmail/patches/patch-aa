@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2005/08/11 00:03:51 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2006/01/03 05:59:12 jlam Exp $
 
---- Makefile.in.orig	2005-07-23 10:00:11.000000000 -0400
+--- Makefile.in.orig	2005-12-25 17:02:47.000000000 -0500
 +++ Makefile.in
-@@ -236,19 +236,18 @@ EXTRA_DIST = INSTALL.html README NEWS RE
+@@ -237,19 +237,18 @@ EXTRA_DIST = INSTALL.html README NEWS RE
  	pgpkeys.txt
  
  scriptbindir = $(sbindir)
