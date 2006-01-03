@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4347 2006/01/03 14:33:02 sketch Exp $
+$NetBSD: TODO,v 1.4348 2006/01/03 15:12:14 taca Exp $
 
 Suggested new packages
 ======================
@@ -1123,7 +1123,6 @@ Suggested package updates
 	o rt3-3.4.4
 	o rtcw-1.41.3
 	o rtorrent-0.4.1
-	o ruby18-1.8.4 [taca]
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-6.1
 	o sablecc-3.2
