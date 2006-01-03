@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/08/03 13:36:05 adam Exp $
+$NetBSD: patch-aa,v 1.3 2006/01/03 20:54:15 joerg Exp $
 
 --- libqalculate/Calculator.cc.orig	2004-10-18 12:30:49.000000000 +0000
 +++ libqalculate/Calculator.cc
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.2 2005/08/03 13:36:05 adam Exp $
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <dirent.h>
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#include <sys/wait.h>
 +#else
  #include <wait.h>
