@@ -1,0 +1,5 @@
+With Numbers_Words class you can convert numbers
+written in arabic digits to words in several languages.
+You can convert an integer between -infinity and infinity.
+If your system does not support such long numbers you can
+call Numbers_Words::toWords() with just a string.
