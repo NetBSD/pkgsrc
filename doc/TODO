@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4360 2006/01/03 18:25:16 wiz Exp $
+$NetBSD: TODO,v 1.4361 2006/01/03 18:30:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -898,7 +898,6 @@ Suggested package updates
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
-	o p5-Locale-Maketext-Lexicon-0.53
 	o p5-Log-Agent-0.307
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
