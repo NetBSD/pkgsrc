@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2005/12/31 12:32:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/03 15:50:07 rxg Exp $
 #
 
-DISTNAME=	rox-lib-1.9.17
-PKGREVISION=	1
+DISTNAME=	rox-lib-2.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -12,28 +11,31 @@ HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	Shared code for ROX applications
 
 DEPENDS+=	rox>=2.2.0:../../sysutils/rox
+DEPENDS+=	${PYPKGPREFIX}-expat-0nb2:../../textproc/py-expat
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Lib2
 DIST_SUBDIR=	rox
 
-NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 PYTHON_PATCH_SCRIPTS=	AppRun MakeDist
-INSTALLATION_DIRS=	share/rox
+PYTHON_PATCH_SCRIPTS+=	python/make_docs.py
+PYTHON_PATCH_SCRIPTS+=	tests/python/*.py
 
-post-patch:
-	${SED} -e s:"/usr/local/lib":"${PREFIX}/share/rox":g	\
-		< ${WRKSRC}/Help/findrox.py			\
-		> ${WRKSRC}/Help/findrox.py.1
-	${MV} -f ${WRKSRC}/Help/findrox.py.1 ${WRKSRC}/Help/findrox.py
+INSTALLATION_DIRS=	share/rox/ROX-Lib2
 
-pre-install:
-	${RM} -f ${WRKSRC}/AppRun.tmp
-	${RM} -f ${WRKSRC}/MakeDist.tmp
+SUBST_CLASSES+=		path
+SUBST_MESSAGE.path=	"Fixing hardcoded paths."
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	Help/findrox.py
+SUBST_FILES.path+=	python/rox/basedir.py
+SUBST_FILES.path+=	python/rox/choices.py
+SUBST_FILES.path+=	tests/python/testbasedir.py
+SUBST_FILES.path+=	tests/python/testchoices.py
+SUBST_SED.path=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
 do-install:
-	${CP} -Rf ${WRKSRC} ${PREFIX}/share/rox
+	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}/share/rox/ROX-Lib2
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
