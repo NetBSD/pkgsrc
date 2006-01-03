@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/26 23:39:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/03 18:16:10 joerg Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0
@@ -8,9 +8,6 @@ MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/fep/
 
 MAINTAINER=	nobu@psrc.isac.co.jp
 COMMENT=	General purpose front end for command line editing
-
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
 
 LICENSE=	fep-license
 RESTRICTED=	Do not redistribute for a fee.
