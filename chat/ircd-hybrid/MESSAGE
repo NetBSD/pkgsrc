@@ -1,13 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/11/13 22:40:00 adrianp Exp $
+$NetBSD: MESSAGE,v 1.5 2006/01/03 13:09:25 adrianp Exp $
 
-ircd-hybrid is now installed.  Do note that three programs have changed
+ircd-hybrid is now installed.  Do note some programs have changed
 names to more readily reflect their ircd-hybrid function;
 make sure to prefix them with "ircd-hybrid":
 
-    convertconf -> ircd-hybrid-convertconf
     mkpasswd -> ircd-hybrid-mkpasswd
-    viconf -> ircd-hybrid-viconf
 
 The documentation can be found at ${PREFIX}/share/doc/ircd-hybrid.
 
