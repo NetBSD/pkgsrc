@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4362 2006/01/03 18:39:27 wiz Exp $
+$NetBSD: TODO,v 1.4363 2006/01/03 19:14:28 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -813,7 +813,6 @@ Suggested package updates
 	o nss-3.11
 	o nss_ldap-243
 	o nulib2-210
-	o nullmailer-1.01 [schmonz]
 	o nut-11.1
 	o obexftp-0.10.6
 	o objc-3.2.7
