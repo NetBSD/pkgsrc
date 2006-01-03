@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12317 2006/01/03 05:33:09 jlam Exp $
+$NetBSD: CHANGES,v 1.12318 2006/01/03 05:59:12 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -41,3 +41,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/icu to 3.4 [wiz 2006-01-03]
 	Updated security/courier-authlib to 0.58 [jlam 2006-01-03]
 	Updated mail/courier-maildir to 0.52.2 [jlam 2006-01-03]
+	Updated mail/sqwebmail to 5.0.7 [jlam 2006-01-03]
