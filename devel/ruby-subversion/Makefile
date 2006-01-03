@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/02 21:13:45 epg Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/03 14:47:42 taca Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-subversion-${SVNVER}
 COMMENT=	Ruby bindings for Subversion
@@ -7,7 +7,6 @@ COMMENT=	Ruby bindings for Subversion
 
 SHLIBTOOL_OVERRIDE=	libtool
 
-USE_RUBY_DIST_SUBDIR=	no
 REPLACE_RUBY_DIRS=	${WRKSRC}/tools
 
 CONFIGURE_ENV+=		RUBY=${RUBY:Q}
