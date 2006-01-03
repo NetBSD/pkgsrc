@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2005,v 1.1 2006/01/01 11:13:21 wiz Exp $
+$NetBSD: CHANGES-2005,v 1.2 2006/01/03 15:00:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -4959,8 +4959,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated textproc/hyperestraier to 1.0.3 [minskim 2005-11-02]
 	Added chat/gaim-icb version 20050918 [jlam 2005-11-02]
 	Updated lang/ruby to 1.8.3 [taca 2005-11-02]
-	Updated lang/ruby18 to 1.8.3 [taca 2005-01-02]
-	Updated lang/ruby18-base to 1.8.3 [taca 2005-01-02]
+	Updated lang/ruby18 to 1.8.3 [taca 2005-11-02]
+	Updated lang/ruby18-base to 1.8.3 [taca 2005-11-02]
 	Updated converters/ruby-iconv to 1.8.3 [taca 2005-11-02]
 	Updated databases/ruby-gdbm to 1.8.3 [taca 2005-11-02]
 	Updated devel/ruby-curses to 1.8.3 [taca 2005-11-02]
@@ -4970,7 +4970,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated x11/ruby-tk to 1.8.3 [taca 2005-11-02]
 	Removed devel/ruby-zlib [taca 2005-11-02]
 	Removed security/ruby-digest [taca 2005-11-02]
-	Removed security/ruby-openssl [taca 2005-10-02]
+	Removed security/ruby-openssl [taca 2005-11-02]
 	Updated www/php4 to 4.4.1nb1 [tron 2005-11-02]
 	Updated mail/imap-uw to 2004enb2 [adrianp 2005-11-02]
 	Updated devel/bugzilla to 2.20nb1 [adrianp 2005-11-02]
