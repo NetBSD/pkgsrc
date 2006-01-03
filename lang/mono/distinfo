@@ -1,21 +1,19 @@
-$NetBSD: distinfo,v 1.23 2005/07/31 15:26:58 recht Exp $
+$NetBSD: distinfo,v 1.24 2006/01/03 08:03:53 recht Exp $
 
-SHA1 (mono-1.1.8.3.tar.gz) = f6aaf1021c4ac58a768abc36e7f95f8195554cc2
-RMD160 (mono-1.1.8.3.tar.gz) = a012252c76797c230cb9a62ee713314a44325932
-Size (mono-1.1.8.3.tar.gz) = 15348432 bytes
-SHA1 (patch-aa) = 72796e338f1aaace559f18b7e71903008b3c6dc4
-SHA1 (patch-ab) = 88cfdd6adc177a925f21372e4c965718e1d741f5
-SHA1 (patch-ac) = b555271abc48eea013e8e5e8a43034b384e31c15
-SHA1 (patch-ad) = ed4fcf6b112f5ec833df4b3f8a9d43c42f691e5e
-SHA1 (patch-ae) = 02d14e8e18888d3759daaf2081e18042b1ae7241
-SHA1 (patch-af) = d5817526249ac367bbec00703e00427173f23ab8
+SHA1 (mono-1.1.12.1.tar.gz) = 9cf8fcbbe3f133328ba3555c3763536780e7314f
+RMD160 (mono-1.1.12.1.tar.gz) = 4e008bb159549e964e4ea8937ed95d731fb6453f
+Size (mono-1.1.12.1.tar.gz) = 17899010 bytes
+SHA1 (patch-ab) = a4338be0acf17b212dbb33bd90400ba31802d462
+SHA1 (patch-ac) = 57139cd9312461db0665bd9f1cfa716f4f6ba6ef
+SHA1 (patch-ae) = f0654c3103e3d69c44158456f481e5a357350cb1
+SHA1 (patch-af) = b74d8401e9e0213a7c4418b9d989365af2f3ae30
 SHA1 (patch-ag) = 8fbe737e05ea8051ff95b2cac6ed6b702a3e13b4
 SHA1 (patch-ah) = 6f05a2a7460ea243fa9d294dc8bde4db6dbed55b
 SHA1 (patch-ai) = ef4aedc6f6e200704b3754be7277e8d3a047624c
-SHA1 (patch-aj) = 2826047d73981594bc19834896b14d4753bfe5ae
-SHA1 (patch-ak) = 812a02811003cc1bad84ee900cf7d4d558d69fe8
+SHA1 (patch-aj) = 14131eb3ee9e827955091412cce59b62da0a6832
+SHA1 (patch-ak) = f053c9f38fecde2ff3f81d8d3668330a333496a2
 SHA1 (patch-al) = 96e7125b2e9046784e3cf1b1c094de26d55d073e
-SHA1 (patch-am) = d2cf278efc2fd67b134358e28e992273814500b3
-SHA1 (patch-an) = 35ddf59316e222f7a25ab4b9f1cbf824d233d9ba
-SHA1 (patch-ba) = 396940ffa910fcb76b196a6ec38385d4e6fd72f4
-SHA1 (patch-bc) = f5a81ff506ae14f764ceab14acc38ebc2b604257
+SHA1 (patch-am) = 07b004da1bf0cda00b79f731fd46b440cdff01ba
+SHA1 (patch-an) = 9ebaf8024e1a5b9581e5fdf20899331308074db4
+SHA1 (patch-ba) = 1aee2cf3dce0d2d378941b6cbff5600640c4d564
+SHA1 (patch-bc) = bbf1a903cf7fee1dbd3a070b0ef0d5aecbdf67e2

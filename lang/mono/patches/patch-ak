@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.6 2005/07/31 15:26:58 recht Exp $
+$NetBSD: patch-ak,v 1.7 2006/01/03 08:03:53 recht Exp $
 
---- libgc/pthread_support.c.orig	2005-06-19 11:59:53.000000000 +0200
+--- libgc/pthread_support.c.orig	2005-12-07 06:42:46.000000000 +0100
 +++ libgc/pthread_support.c
 @@ -68,7 +68,7 @@
  # endif
@@ -23,7 +23,7 @@ $NetBSD: patch-ak,v 1.6 2005/07/31 15:26:58 recht Exp $
  
  #if defined(GC_DGUX386_THREADS)
  # include <sys/dg_sys_info.h>
-@@ -956,7 +959,7 @@ void GC_thr_init()
+@@ -978,7 +981,7 @@ void GC_thr_init()
  #       if defined(GC_FREEBSD_THREADS)
            GC_nprocs = 1;
  #       endif
@@ -32,7 +32,7 @@ $NetBSD: patch-ak,v 1.6 2005/07/31 15:26:58 recht Exp $
  	  int ncpus = 1;
  	  size_t len = sizeof(ncpus);
  	  sysctl((int[2]) {CTL_HW, HW_NCPU}, 2, &ncpus, &len, NULL, 0);
-@@ -1093,8 +1096,24 @@ void GC_end_blocking(void) {
+@@ -1115,8 +1118,24 @@ void GC_end_blocking(void) {
  #define __d10_sleep sleep
  #endif /* GC_DGUX386_THREADS */
  
@@ -58,7 +58,7 @@ $NetBSD: patch-ak,v 1.6 2005/07/31 15:26:58 recht Exp $
  {
      int result;
  
-@@ -1104,6 +1123,19 @@ int WRAP_FUNC(sleep) (unsigned int secon
+@@ -1126,6 +1145,19 @@ int WRAP_FUNC(sleep) (unsigned int secon
      return result;
  }
  
