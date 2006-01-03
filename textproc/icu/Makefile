@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2005/12/30 23:49:08 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/01/03 00:04:42 wiz Exp $
 #
 
-DISTNAME=	icu-3.2
-PKGREVISION=	2
+DISTNAME=	icu-3.4
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.software.ibm.com/software/globalization/icu/${PKGVERSION}/
 EXTRACT_SUFX=	.tgz
@@ -23,11 +22,6 @@ CONFIGURE_ENV+=		U_MAKE=${TOOLS_GMAKE:Q}
 # ICU's configure script will automatically append "/icu" to the sysconfdir.
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 PKG_SYSCONFSUBDIR=	icu
-
-CONVRTRS_EG=		${CONVRTRS_EG_DIR}/convrtrs.txt
-CONVRTRS_EG_DIR=	${PREFIX}/share/examples/icu
-
-CONF_FILES+=		${CONVRTRS_EG} ${PKG_SYSCONFDIR}/convrtrs.txt
 
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -56,9 +50,5 @@ PLIST_SUBST+=		MH_NAME=mh-darwin
 # gets a warning about missing files.
 PLIST_SUBST+=		MH_NAME=mh-unknown
 .endif
-
-post-install:
-	${INSTALL_DATA_DIR} ${CONVRTRS_EG_DIR}
-	${INSTALL_DATA} ${WRKSRC}/data/mappings/convrtrs.txt ${CONVRTRS_EG}
 
 .include "../../mk/bsd.pkg.mk"
