@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12330 2006/01/03 17:34:25 wiz Exp $
+$NetBSD: CHANGES,v 1.12331 2006/01/03 17:35:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -65,3 +65,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/rox to 2.4 [rxg 2006-01-03]
 	Updated devel/p5-Config-Tiny to 2.04 [wiz 2006-01-03]
 	Updated devel/p5-Scalar-List-Utils to 1.18 [wiz 2006-01-03]
+	Updated devel/p5-Class-Autouse to 1.23 [wiz 2006-01-03]
