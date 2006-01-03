@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/03 15:39:45 rxg Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/01/03 16:57:34 rxg Exp $
 bin/rox
 libexec/rox/ROX-Filer
 man/man1/rox.1
@@ -33,6 +33,7 @@ share/rox/ROX-Filer/Messages/nl.gmo
 share/rox/ROX-Filer/Messages/no.gmo
 share/rox/ROX-Filer/Messages/pl.gmo
 share/rox/ROX-Filer/Messages/pt_BR.gmo
+share/rox/ROX-Filer/Messages/pt_PT.gmo
 share/rox/ROX-Filer/Messages/ro.gmo
 share/rox/ROX-Filer/Messages/ru.gmo
 share/rox/ROX-Filer/Messages/sv.gmo
@@ -140,6 +141,7 @@ share/rox/ROX-Filer/images/rox-show-hidden.png
 share/rox/ROX-Filer/images/rox-xattr.png
 share/rox/ROX-Filer/images/symlink.png
 share/rox/ROX-Filer/style.css
+share/rox/ROX-Filer/subclasses
 @dirrm share/rox/ROX-Filer/images
 @dirrm share/rox/ROX-Filer/ROX/MIME
 @dirrm share/rox/ROX-Filer/ROX
