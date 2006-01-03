@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4350 2006/01/03 17:33:08 wiz Exp $
+$NetBSD: TODO,v 1.4351 2006/01/03 17:33:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -855,7 +855,6 @@ Suggested package updates
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03
 	o p5-Compress-Bzip2-2.09
-	o p5-Config-Tiny-2.04
 	o p5-Convert-ASN1-0.19
 	o p5-Convert-BER-1.3101
 	o p5-Convert-PEM-0.07
