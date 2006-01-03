@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12324 2006/01/03 14:53:40 taca Exp $
+$NetBSD: CHANGES,v 1.12325 2006/01/03 14:59:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -42,7 +42,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/courier-authlib to 0.58 [jlam 2006-01-03]
 	Updated mail/courier-maildir to 0.52.2 [jlam 2006-01-03]
 	Updated mail/sqwebmail to 5.0.7 [jlam 2006-01-03]
-	Removed devel/ruby-cmd [taca 2006-01-03]
 	Removed devel/ruby-filelock [taca 2006-01-03]
 	Removed math/ruby-bitvector [taca 2006-01-03]
 	Updated lang/mono to 1.1.12.1 [recht 2006-01-03]
