@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.12 2005/07/31 15:26:58 recht Exp $
+$NetBSD: patch-ac,v 1.13 2006/01/03 08:03:53 recht Exp $
 
---- data/Makefile.in.orig	2005-07-27 02:08:24.000000000 +0200
+--- data/Makefile.in.orig	2005-12-22 18:35:08.000000000 +0100
 +++ data/Makefile.in
-@@ -264,7 +264,7 @@ target_cpu = @target_cpu@
+@@ -271,7 +271,7 @@ target_cpu = @target_cpu@
  target_os = @target_os@
  target_vendor = @target_vendor@
  SUBDIRS = net_1_1 net_2_0
