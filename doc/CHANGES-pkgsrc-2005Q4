@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.17 2006/01/03 00:38:28 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.18 2006/01/03 01:09:56 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -37,3 +37,5 @@ Pullup ticket 987 - requested by Johnny C. Lam
 build fix for lang/perl5
 Pullup ticket 992 - requested by Martti Kuparinen
 run-time directory handling fix for mail/{postfix,postfix-current}
+Pullup ticket 995 - requested by Lubomir Sedlacik
+update net/ethereal, including security fixes
