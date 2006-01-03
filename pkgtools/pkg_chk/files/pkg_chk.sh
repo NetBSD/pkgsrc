@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.23 2005/12/13 15:26:05 dillo Exp $
+# $Id: pkg_chk.sh,v 1.24 2006/01/03 19:00:09 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -347,7 +347,8 @@ pkgdirs_from_conf()
 	for (tag in tmp) { taglist[tmp[tag]] = 1; }
 
 	split(unsetlist, tmp, ",");
-	for (tag in tmp) { skip[tmp[tag]] = 1; delete taglist[tmp[tag]] }
+	for (tag in tmp) { skip[tmp[tag]] = 1; nofile[tmp[tag]] = 1 ;
+			delete taglist[tmp[tag]] }
 
 	taglist["*"] = "*"
     }
@@ -355,7 +356,7 @@ pkgdirs_from_conf()
 	split(expr,ary,/\+/);
 	r = 1;
 	for (i in ary) {
-		if (ary[i] ~ /^\//) {
+		if (ary[i] ~ /^\// && ! nofile[ary[i]]) {
 			if (getline d < ary[i] == -1)
 			    { r = 0; break ;}
 		}
