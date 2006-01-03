@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4344 2006/01/02 23:58:58 wiz Exp $
+$NetBSD: TODO,v 1.4345 2006/01/03 00:06:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -640,7 +640,6 @@ Suggested package updates
 	o icecast-2.3.1
 	o icepref-2.3
 	o icsi-finger-1.0.29
-	o icu-3.4
 	o id-utils-4.0
 	o idesk-0.7.3
 	o ifile-1.3.5
