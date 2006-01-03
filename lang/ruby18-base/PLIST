@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/02 08:56:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/03 14:37:24 taca Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -976,8 +976,11 @@ ${RUBY_SYSRIDIR}/Bignum/divmod-i.yaml
 ${RUBY_SYSRIDIR}/Bignum/eql%3f-i.yaml
 ${RUBY_SYSRIDIR}/Bignum/hash-i.yaml
 ${RUBY_SYSRIDIR}/Bignum/modulo-i.yaml
+${RUBY_SYSRIDIR}/Bignum/power%21-i.yaml
 ${RUBY_SYSRIDIR}/Bignum/quo-i.yaml
+${RUBY_SYSRIDIR}/Bignum/rdiv-i.yaml
 ${RUBY_SYSRIDIR}/Bignum/remainder-i.yaml
+${RUBY_SYSRIDIR}/Bignum/rpower-i.yaml
 ${RUBY_SYSRIDIR}/Bignum/size-i.yaml
 ${RUBY_SYSRIDIR}/Bignum/to_f-i.yaml
 ${RUBY_SYSRIDIR}/Bignum/to_s-i.yaml
@@ -1238,6 +1241,14 @@ ${RUBY_SYSRIDIR}/DateTime/parse-c.yaml
 ${RUBY_SYSRIDIR}/DateTime/strptime-c.yaml
 ${RUBY_SYSRIDIR}/DateTime/valid_time%3f-c.yaml
 @dirrm ${RUBY_SYSRIDIR}/DateTime
+${RUBY_SYSRIDIR}/Delegator/__getobj__-i.yaml
+${RUBY_SYSRIDIR}/Delegator/cdesc-Delegator.yaml
+${RUBY_SYSRIDIR}/Delegator/marshal_dump-i.yaml
+${RUBY_SYSRIDIR}/Delegator/marshal_load-i.yaml
+${RUBY_SYSRIDIR}/Delegator/method_missing-i.yaml
+${RUBY_SYSRIDIR}/Delegator/new-c.yaml
+${RUBY_SYSRIDIR}/Delegator/respond_to%3f-i.yaml
+@dirrm ${RUBY_SYSRIDIR}/Delegator
 ${RUBY_SYSRIDIR}/Dir/%5b%5d-c.yaml
 ${RUBY_SYSRIDIR}/Dir/cdesc-Dir.yaml
 ${RUBY_SYSRIDIR}/Dir/chdir-c.yaml
@@ -1261,17 +1272,60 @@ ${RUBY_SYSRIDIR}/Dir/rewind-i.yaml
 ${RUBY_SYSRIDIR}/Dir/rmdir-c.yaml
 ${RUBY_SYSRIDIR}/Dir/seek-i.yaml
 ${RUBY_SYSRIDIR}/Dir/tell-i.yaml
+${RUBY_SYSRIDIR}/Dir/tmpdir-c.yaml
 ${RUBY_SYSRIDIR}/Dir/unlink-c.yaml
 @dirrm ${RUBY_SYSRIDIR}/Dir
 ${RUBY_SYSRIDIR}/EOFError/cdesc-EOFError.yaml
 @dirrm ${RUBY_SYSRIDIR}/EOFError
+${RUBY_SYSRIDIR}/ERB/Compiler/Buffer/cdesc-Buffer.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler/Buffer
+${RUBY_SYSRIDIR}/ERB/Compiler/ExplicitScanner/cdesc-ExplicitScanner.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler/ExplicitScanner
+${RUBY_SYSRIDIR}/ERB/Compiler/PercentLine/cdesc-PercentLine.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler/PercentLine
+${RUBY_SYSRIDIR}/ERB/Compiler/PercentScanner/cdesc-PercentScanner.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler/PercentScanner
+${RUBY_SYSRIDIR}/ERB/Compiler/Scanner/cdesc-Scanner.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler/Scanner
+${RUBY_SYSRIDIR}/ERB/Compiler/SimpleScanner/cdesc-SimpleScanner.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler/SimpleScanner
+${RUBY_SYSRIDIR}/ERB/Compiler/SimpleScanner2/cdesc-SimpleScanner2.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler/SimpleScanner2
+${RUBY_SYSRIDIR}/ERB/Compiler/TrimScanner/cdesc-TrimScanner.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler/TrimScanner
+${RUBY_SYSRIDIR}/ERB/Compiler/cdesc-Compiler.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Compiler
+${RUBY_SYSRIDIR}/ERB/DefMethod/cdesc-DefMethod.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/DefMethod
+${RUBY_SYSRIDIR}/ERB/Util/cdesc-Util.yaml
+${RUBY_SYSRIDIR}/ERB/Util/h-i.yaml
+${RUBY_SYSRIDIR}/ERB/Util/html_escape-i.yaml
+${RUBY_SYSRIDIR}/ERB/Util/u-i.yaml
+${RUBY_SYSRIDIR}/ERB/Util/url_encode-i.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB/Util
+${RUBY_SYSRIDIR}/ERB/cdesc-ERB.yaml
+${RUBY_SYSRIDIR}/ERB/new-c.yaml
+${RUBY_SYSRIDIR}/ERB/result-i.yaml
+${RUBY_SYSRIDIR}/ERB/run-i.yaml
+${RUBY_SYSRIDIR}/ERB/set_eoutvar-i.yaml
+${RUBY_SYSRIDIR}/ERB/version-c.yaml
+@dirrm ${RUBY_SYSRIDIR}/ERB
+${RUBY_SYSRIDIR}/Enumerable/Enumerator/cdesc-Enumerator.yaml
+${RUBY_SYSRIDIR}/Enumerable/Enumerator/each-i.yaml
+${RUBY_SYSRIDIR}/Enumerable/Enumerator/new-c.yaml
+@dirrm ${RUBY_SYSRIDIR}/Enumerable/Enumerator
 ${RUBY_SYSRIDIR}/Enumerable/all%3f-i.yaml
 ${RUBY_SYSRIDIR}/Enumerable/any%3f-i.yaml
 ${RUBY_SYSRIDIR}/Enumerable/cdesc-Enumerable.yaml
 ${RUBY_SYSRIDIR}/Enumerable/collect-i.yaml
 ${RUBY_SYSRIDIR}/Enumerable/detect-i.yaml
+${RUBY_SYSRIDIR}/Enumerable/each_cons-i.yaml
+${RUBY_SYSRIDIR}/Enumerable/each_slice-i.yaml
 ${RUBY_SYSRIDIR}/Enumerable/each_with_index-i.yaml
 ${RUBY_SYSRIDIR}/Enumerable/entries-i.yaml
+${RUBY_SYSRIDIR}/Enumerable/enum_cons-i.yaml
+${RUBY_SYSRIDIR}/Enumerable/enum_slice-i.yaml
+${RUBY_SYSRIDIR}/Enumerable/enum_with_index-i.yaml
 ${RUBY_SYSRIDIR}/Enumerable/find-i.yaml
 ${RUBY_SYSRIDIR}/Enumerable/find_all-i.yaml
 ${RUBY_SYSRIDIR}/Enumerable/grep-i.yaml
@@ -1383,6 +1437,7 @@ ${RUBY_SYSRIDIR}/File/fnmatch%3f-c.yaml
 ${RUBY_SYSRIDIR}/File/fnmatch-c.yaml
 ${RUBY_SYSRIDIR}/File/ftype-c.yaml
 ${RUBY_SYSRIDIR}/File/grpowned%3f-c.yaml
+${RUBY_SYSRIDIR}/File/identical%3f-c.yaml
 ${RUBY_SYSRIDIR}/File/join-c.yaml
 ${RUBY_SYSRIDIR}/File/lchmod-c.yaml
 ${RUBY_SYSRIDIR}/File/lchown-c.yaml
@@ -1428,6 +1483,7 @@ ${RUBY_SYSRIDIR}/FileTest/exist%3f-i.yaml
 ${RUBY_SYSRIDIR}/FileTest/exists%3f-i.yaml
 ${RUBY_SYSRIDIR}/FileTest/file%3f-i.yaml
 ${RUBY_SYSRIDIR}/FileTest/grpowned%3f-i.yaml
+${RUBY_SYSRIDIR}/FileTest/identical%3f-i.yaml
 ${RUBY_SYSRIDIR}/FileTest/owned%3f-i.yaml
 ${RUBY_SYSRIDIR}/FileTest/pipe%3f-i.yaml
 ${RUBY_SYSRIDIR}/FileTest/readable%3f-i.yaml
@@ -1541,7 +1597,10 @@ ${RUBY_SYSRIDIR}/Fixnum/divmod-i.yaml
 ${RUBY_SYSRIDIR}/Fixnum/id2name-i.yaml
 ${RUBY_SYSRIDIR}/Fixnum/induced_from-c.yaml
 ${RUBY_SYSRIDIR}/Fixnum/modulo-i.yaml
+${RUBY_SYSRIDIR}/Fixnum/power%21-i.yaml
 ${RUBY_SYSRIDIR}/Fixnum/quo-i.yaml
+${RUBY_SYSRIDIR}/Fixnum/rdiv-i.yaml
+${RUBY_SYSRIDIR}/Fixnum/rpower-i.yaml
 ${RUBY_SYSRIDIR}/Fixnum/size-i.yaml
 ${RUBY_SYSRIDIR}/Fixnum/to_f-i.yaml
 ${RUBY_SYSRIDIR}/Fixnum/to_s-i.yaml
@@ -1584,6 +1643,12 @@ ${RUBY_SYSRIDIR}/Float/zero%3f-i.yaml
 @dirrm ${RUBY_SYSRIDIR}/Float
 ${RUBY_SYSRIDIR}/FloatDomainError/cdesc-FloatDomainError.yaml
 @dirrm ${RUBY_SYSRIDIR}/FloatDomainError
+${RUBY_SYSRIDIR}/Forwardable/cdesc-Forwardable.yaml
+${RUBY_SYSRIDIR}/Forwardable/def_delegator-i.yaml
+${RUBY_SYSRIDIR}/Forwardable/def_delegators-i.yaml
+${RUBY_SYSRIDIR}/Forwardable/def_instance_delegator-i.yaml
+${RUBY_SYSRIDIR}/Forwardable/def_instance_delegators-i.yaml
+@dirrm ${RUBY_SYSRIDIR}/Forwardable
 ${RUBY_SYSRIDIR}/GC/cdesc-GC.yaml
 ${RUBY_SYSRIDIR}/GC/disable-c.yaml
 ${RUBY_SYSRIDIR}/GC/enable-c.yaml
@@ -1715,6 +1780,8 @@ ${RUBY_SYSRIDIR}/IO/write-i.yaml
 @dirrm ${RUBY_SYSRIDIR}/IO
 ${RUBY_SYSRIDIR}/IOError/cdesc-IOError.yaml
 @dirrm ${RUBY_SYSRIDIR}/IOError
+${RUBY_SYSRIDIR}/Iconv/BrokenLibrary/cdesc-BrokenLibrary.yaml
+@dirrm ${RUBY_SYSRIDIR}/Iconv/BrokenLibrary
 ${RUBY_SYSRIDIR}/Iconv/Failure/cdesc-Failure.yaml
 ${RUBY_SYSRIDIR}/Iconv/Failure/failed-i.yaml
 ${RUBY_SYSRIDIR}/Iconv/Failure/inspect-i.yaml
@@ -1743,22 +1810,96 @@ ${RUBY_SYSRIDIR}/IndexError/cdesc-IndexError.yaml
 ${RUBY_SYSRIDIR}/Integer/cdesc-Integer.yaml
 ${RUBY_SYSRIDIR}/Integer/ceil-i.yaml
 ${RUBY_SYSRIDIR}/Integer/chr-i.yaml
+${RUBY_SYSRIDIR}/Integer/denominator-i.yaml
 ${RUBY_SYSRIDIR}/Integer/downto-i.yaml
 ${RUBY_SYSRIDIR}/Integer/floor-i.yaml
+${RUBY_SYSRIDIR}/Integer/gcd-i.yaml
+${RUBY_SYSRIDIR}/Integer/gcd2-i.yaml
+${RUBY_SYSRIDIR}/Integer/gcdlcm-i.yaml
 ${RUBY_SYSRIDIR}/Integer/induced_from-c.yaml
 ${RUBY_SYSRIDIR}/Integer/integer%3f-i.yaml
+${RUBY_SYSRIDIR}/Integer/lcm-i.yaml
 ${RUBY_SYSRIDIR}/Integer/next-i.yaml
+${RUBY_SYSRIDIR}/Integer/numerator-i.yaml
 ${RUBY_SYSRIDIR}/Integer/round-i.yaml
 ${RUBY_SYSRIDIR}/Integer/succ-i.yaml
 ${RUBY_SYSRIDIR}/Integer/times-i.yaml
 ${RUBY_SYSRIDIR}/Integer/to_i-i.yaml
 ${RUBY_SYSRIDIR}/Integer/to_int-i.yaml
+${RUBY_SYSRIDIR}/Integer/to_r-i.yaml
 ${RUBY_SYSRIDIR}/Integer/truncate-i.yaml
 ${RUBY_SYSRIDIR}/Integer/upto-i.yaml
 @dirrm ${RUBY_SYSRIDIR}/Integer
 ${RUBY_SYSRIDIR}/Interrupt/cdesc-Interrupt.yaml
 @dirrm ${RUBY_SYSRIDIR}/Interrupt
+${RUBY_SYSRIDIR}/Kernel/%60-i.yaml
 ${RUBY_SYSRIDIR}/Kernel/cdesc-Kernel.yaml
+${RUBY_SYSRIDIR}/Kernel/Array-i.yaml
+${RUBY_SYSRIDIR}/Kernel/Float-i.yaml
+${RUBY_SYSRIDIR}/Kernel/Integer-i.yaml
+${RUBY_SYSRIDIR}/Kernel/String-i.yaml
+${RUBY_SYSRIDIR}/Kernel/URI-i.yaml
+${RUBY_SYSRIDIR}/Kernel/abort-i.yaml
+${RUBY_SYSRIDIR}/Kernel/at_exit-i.yaml
+${RUBY_SYSRIDIR}/Kernel/autoload%3f-i.yaml
+${RUBY_SYSRIDIR}/Kernel/autoload-i.yaml
+${RUBY_SYSRIDIR}/Kernel/binding-i.yaml
+${RUBY_SYSRIDIR}/Kernel/block_given%3f-i.yaml
+${RUBY_SYSRIDIR}/Kernel/callcc-i.yaml
+${RUBY_SYSRIDIR}/Kernel/caller-i.yaml
+${RUBY_SYSRIDIR}/Kernel/catch-i.yaml
+${RUBY_SYSRIDIR}/Kernel/chomp%21-i.yaml
+${RUBY_SYSRIDIR}/Kernel/chomp-i.yaml
+${RUBY_SYSRIDIR}/Kernel/chop%21-i.yaml
+${RUBY_SYSRIDIR}/Kernel/chop-i.yaml
+${RUBY_SYSRIDIR}/Kernel/eval-i.yaml
+${RUBY_SYSRIDIR}/Kernel/exec-i.yaml
+${RUBY_SYSRIDIR}/Kernel/exit%21-i.yaml
+${RUBY_SYSRIDIR}/Kernel/exit-i.yaml
+${RUBY_SYSRIDIR}/Kernel/fail-i.yaml
+${RUBY_SYSRIDIR}/Kernel/fork-i.yaml
+${RUBY_SYSRIDIR}/Kernel/format-i.yaml
+${RUBY_SYSRIDIR}/Kernel/getc-i.yaml
+${RUBY_SYSRIDIR}/Kernel/gets-i.yaml
+${RUBY_SYSRIDIR}/Kernel/global_variables-i.yaml
+${RUBY_SYSRIDIR}/Kernel/gsub%21-i.yaml
+${RUBY_SYSRIDIR}/Kernel/gsub-i.yaml
+${RUBY_SYSRIDIR}/Kernel/iterator%3f-i.yaml
+${RUBY_SYSRIDIR}/Kernel/lambda-i.yaml
+${RUBY_SYSRIDIR}/Kernel/load-i.yaml
+${RUBY_SYSRIDIR}/Kernel/local_variables-i.yaml
+${RUBY_SYSRIDIR}/Kernel/loop-i.yaml
+${RUBY_SYSRIDIR}/Kernel/method_missing-i.yaml
+${RUBY_SYSRIDIR}/Kernel/open-i.yaml
+${RUBY_SYSRIDIR}/Kernel/p-i.yaml
+${RUBY_SYSRIDIR}/Kernel/print-i.yaml
+${RUBY_SYSRIDIR}/Kernel/printf-i.yaml
+${RUBY_SYSRIDIR}/Kernel/proc-i.yaml
+${RUBY_SYSRIDIR}/Kernel/putc-i.yaml
+${RUBY_SYSRIDIR}/Kernel/puts-i.yaml
+${RUBY_SYSRIDIR}/Kernel/raise-i.yaml
+${RUBY_SYSRIDIR}/Kernel/rand-i.yaml
+${RUBY_SYSRIDIR}/Kernel/readline-i.yaml
+${RUBY_SYSRIDIR}/Kernel/readlines-i.yaml
+${RUBY_SYSRIDIR}/Kernel/require-i.yaml
+${RUBY_SYSRIDIR}/Kernel/scan-i.yaml
+${RUBY_SYSRIDIR}/Kernel/select-i.yaml
+${RUBY_SYSRIDIR}/Kernel/set_trace_func-i.yaml
+${RUBY_SYSRIDIR}/Kernel/sleep-i.yaml
+${RUBY_SYSRIDIR}/Kernel/split-i.yaml
+${RUBY_SYSRIDIR}/Kernel/sprintf-i.yaml
+${RUBY_SYSRIDIR}/Kernel/srand-i.yaml
+${RUBY_SYSRIDIR}/Kernel/sub%21-i.yaml
+${RUBY_SYSRIDIR}/Kernel/sub-i.yaml
+${RUBY_SYSRIDIR}/Kernel/syscall-i.yaml
+${RUBY_SYSRIDIR}/Kernel/system-i.yaml
+${RUBY_SYSRIDIR}/Kernel/test-i.yaml
+${RUBY_SYSRIDIR}/Kernel/throw-i.yaml
+${RUBY_SYSRIDIR}/Kernel/trace_var-i.yaml
+${RUBY_SYSRIDIR}/Kernel/trap-i.yaml
+${RUBY_SYSRIDIR}/Kernel/untrace_var-i.yaml
+${RUBY_SYSRIDIR}/Kernel/warn-i.yaml
+${RUBY_SYSRIDIR}/Kernel/y-i.yaml
 @dirrm ${RUBY_SYSRIDIR}/Kernel
 ${RUBY_SYSRIDIR}/LoadError/cdesc-LoadError.yaml
 @dirrm ${RUBY_SYSRIDIR}/LoadError
@@ -2090,6 +2231,7 @@ ${RUBY_SYSRIDIR}/Object/class-i.yaml
 ${RUBY_SYSRIDIR}/Object/clone-i.yaml
 ${RUBY_SYSRIDIR}/Object/display-i.yaml
 ${RUBY_SYSRIDIR}/Object/dup-i.yaml
+${RUBY_SYSRIDIR}/Object/enum_for-i.yaml
 ${RUBY_SYSRIDIR}/Object/eql%3f-i.yaml
 ${RUBY_SYSRIDIR}/Object/equal%3f-i.yaml
 ${RUBY_SYSRIDIR}/Object/extend-i.yaml
@@ -2123,6 +2265,7 @@ ${RUBY_SYSRIDIR}/Object/singleton_methods-i.yaml
 ${RUBY_SYSRIDIR}/Object/taint-i.yaml
 ${RUBY_SYSRIDIR}/Object/tainted%3f-i.yaml
 ${RUBY_SYSRIDIR}/Object/to_a-i.yaml
+${RUBY_SYSRIDIR}/Object/to_enum-i.yaml
 ${RUBY_SYSRIDIR}/Object/to_s-i.yaml
 ${RUBY_SYSRIDIR}/Object/type-i.yaml
 ${RUBY_SYSRIDIR}/Object/untaint-i.yaml
@@ -2147,6 +2290,24 @@ ${RUBY_SYSRIDIR}/Observable/delete_observer-i.yaml
 ${RUBY_SYSRIDIR}/Observable/delete_observers-i.yaml
 ${RUBY_SYSRIDIR}/Observable/notify_observers-i.yaml
 @dirrm ${RUBY_SYSRIDIR}/Observable
+${RUBY_SYSRIDIR}/PStore/%5b%5d%3d-i.yaml
+${RUBY_SYSRIDIR}/PStore/%5b%5d-i.yaml
+${RUBY_SYSRIDIR}/PStore/Error/cdesc-Error.yaml
+@dirrm ${RUBY_SYSRIDIR}/PStore/Error
+${RUBY_SYSRIDIR}/PStore/abort-i.yaml
+${RUBY_SYSRIDIR}/PStore/cdesc-PStore.yaml
+${RUBY_SYSRIDIR}/PStore/commit-i.yaml
+${RUBY_SYSRIDIR}/PStore/commit_new-i.yaml
+${RUBY_SYSRIDIR}/PStore/delete-i.yaml
+${RUBY_SYSRIDIR}/PStore/fetch-i.yaml
+${RUBY_SYSRIDIR}/PStore/in_transaction-i.yaml
+${RUBY_SYSRIDIR}/PStore/in_transaction_wr-i.yaml
+${RUBY_SYSRIDIR}/PStore/new-c.yaml
+${RUBY_SYSRIDIR}/PStore/path-i.yaml
+${RUBY_SYSRIDIR}/PStore/root%3f-i.yaml
+${RUBY_SYSRIDIR}/PStore/roots-i.yaml
+${RUBY_SYSRIDIR}/PStore/transaction-i.yaml
+@dirrm ${RUBY_SYSRIDIR}/PStore
 ${RUBY_SYSRIDIR}/Pathname/%2b-i.yaml
 ${RUBY_SYSRIDIR}/Pathname/%3c%3d%3e-i.yaml
 ${RUBY_SYSRIDIR}/Pathname/%3d%3d%3d-i.yaml
@@ -2391,6 +2552,28 @@ ${RUBY_SYSRIDIR}/Range/to_s-i.yaml
 @dirrm ${RUBY_SYSRIDIR}/Range
 ${RUBY_SYSRIDIR}/RangeError/cdesc-RangeError.yaml
 @dirrm ${RUBY_SYSRIDIR}/RangeError
+${RUBY_SYSRIDIR}/Rational/%25-i.yaml
+${RUBY_SYSRIDIR}/Rational/%2a%2a-i.yaml
+${RUBY_SYSRIDIR}/Rational/%2a-i.yaml
+${RUBY_SYSRIDIR}/Rational/%2b-i.yaml
+${RUBY_SYSRIDIR}/Rational/%2d-i.yaml
+${RUBY_SYSRIDIR}/Rational/%2f-i.yaml
+${RUBY_SYSRIDIR}/Rational/%3c%3d%3e-i.yaml
+${RUBY_SYSRIDIR}/Rational/%3d%3d-i.yaml
+${RUBY_SYSRIDIR}/Rational/abs-i.yaml
+${RUBY_SYSRIDIR}/Rational/cdesc-Rational.yaml
+${RUBY_SYSRIDIR}/Rational/coerce-i.yaml
+${RUBY_SYSRIDIR}/Rational/divmod-i.yaml
+${RUBY_SYSRIDIR}/Rational/hash-i.yaml
+${RUBY_SYSRIDIR}/Rational/inspect-i.yaml
+${RUBY_SYSRIDIR}/Rational/new%21-c.yaml
+${RUBY_SYSRIDIR}/Rational/new-c.yaml
+${RUBY_SYSRIDIR}/Rational/reduce-c.yaml
+${RUBY_SYSRIDIR}/Rational/to_f-i.yaml
+${RUBY_SYSRIDIR}/Rational/to_i-i.yaml
+${RUBY_SYSRIDIR}/Rational/to_r-i.yaml
+${RUBY_SYSRIDIR}/Rational/to_s-i.yaml
+@dirrm ${RUBY_SYSRIDIR}/Rational
 ${RUBY_SYSRIDIR}/Regexp/%3d%3d%3d-i.yaml
 ${RUBY_SYSRIDIR}/Regexp/%3d%3d-i.yaml
 ${RUBY_SYSRIDIR}/Regexp/%3d%7e-i.yaml
@@ -2467,12 +2650,25 @@ ${RUBY_SYSRIDIR}/Set/union-i.yaml
 ${RUBY_SYSRIDIR}/Shellwords/cdesc-Shellwords.yaml
 ${RUBY_SYSRIDIR}/Shellwords/shellwords-i.yaml
 @dirrm ${RUBY_SYSRIDIR}/Shellwords
+${RUBY_SYSRIDIR}/SimpleDelegator/__getobj__-i.yaml
+${RUBY_SYSRIDIR}/SimpleDelegator/__setobj__-i.yaml
+${RUBY_SYSRIDIR}/SimpleDelegator/cdesc-SimpleDelegator.yaml
+${RUBY_SYSRIDIR}/SimpleDelegator/clone-i.yaml
+${RUBY_SYSRIDIR}/SimpleDelegator/dup-i.yaml
+${RUBY_SYSRIDIR}/SimpleDelegator/new-c.yaml
+@dirrm ${RUBY_SYSRIDIR}/SimpleDelegator
 ${RUBY_SYSRIDIR}/Signal/cdesc-Signal.yaml
 ${RUBY_SYSRIDIR}/Signal/list-i.yaml
 ${RUBY_SYSRIDIR}/Signal/trap-i.yaml
 @dirrm ${RUBY_SYSRIDIR}/Signal
 ${RUBY_SYSRIDIR}/SignalException/cdesc-SignalException.yaml
 @dirrm ${RUBY_SYSRIDIR}/SignalException
+${RUBY_SYSRIDIR}/SingleForwardable/cdesc-SingleForwardable.yaml
+${RUBY_SYSRIDIR}/SingleForwardable/def_delegator-i.yaml
+${RUBY_SYSRIDIR}/SingleForwardable/def_delegators-i.yaml
+${RUBY_SYSRIDIR}/SingleForwardable/def_singleton_delegator-i.yaml
+${RUBY_SYSRIDIR}/SingleForwardable/def_singleton_delegators-i.yaml
+@dirrm ${RUBY_SYSRIDIR}/SingleForwardable
 ${RUBY_SYSRIDIR}/Singleton/_dump-i.yaml
 ${RUBY_SYSRIDIR}/Singleton/cdesc-Singleton.yaml
 ${RUBY_SYSRIDIR}/Singleton/clone-i.yaml
@@ -2887,6 +3083,11 @@ ${RUBY_SYSRIDIR}/Time/zone_utc%3f-c.yaml
 @dirrm ${RUBY_SYSRIDIR}/Time
 ${RUBY_SYSRIDIR}/TimeExtentionTest/cdesc-TimeExtentionTest.yaml
 @dirrm ${RUBY_SYSRIDIR}/TimeExtentionTest
+${RUBY_SYSRIDIR}/Timeout/Error/cdesc-Error.yaml
+@dirrm ${RUBY_SYSRIDIR}/Timeout/Error
+${RUBY_SYSRIDIR}/Timeout/cdesc-Timeout.yaml
+${RUBY_SYSRIDIR}/Timeout/timeout-i.yaml
+@dirrm ${RUBY_SYSRIDIR}/Timeout
 ${RUBY_SYSRIDIR}/TrueClass/%26-i.yaml
 ${RUBY_SYSRIDIR}/TrueClass/%5e-i.yaml
 ${RUBY_SYSRIDIR}/TrueClass/%7c-i.yaml
