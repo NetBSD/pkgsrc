@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/12/05 23:55:10 rillig Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/01/03 05:33:11 jlam Exp $
 #
 # Package Makefiles should include this file after setting PKGNAME and
 # PKG_SUPPORTED_OPTIONS.
@@ -30,9 +30,13 @@ CONFIGURE_ENV+=		SYSCONFTOOL_PERL=${PERL5:Q}
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
-PKG_SUPPORTED_OPTIONS+=	fam
 .include "../../mk/bsd.options.mk"
 
+# The maildir subdirectory can be built with a "fam" option, but it's only
+# useful for the imap server and the webmail client.  Handle the option
+# here, but the corresponding package Makefiles should note that "fam" is
+# a supported option on their own.
+#
 .if !empty(PKG_OPTIONS:Mfam)
 .  include "../../mk/fam.buildlink3.mk"
 .endif
