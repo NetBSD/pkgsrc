@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.196 2006/01/03 17:54:30 abs Exp $
+# $NetBSD: Makefile,v 1.197 2006/01/03 21:14:38 adrianp Exp $
 #
 
 COMMENT=	Databases
 
 SUBDIR+=	abook
-SUBDIR+=	acid
 SUBDIR+=	adodb
 SUBDIR+=	bdb-xml
 SUBDIR+=	cdb
