@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12343 2006/01/03 19:00:52 abs Exp $
+$NetBSD: CHANGES,v 1.12344 2006/01/03 19:08:11 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -81,3 +81,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.53 [wiz 2006-01-03]
 	Updated textproc/p5-XML-LibXSLT to 1.57 [wiz 2006-01-03]
 	Updated pkgtools/pkg_chk to 1.64 [abs 2006-01-03]
+	Updated math/xlife to 5.0nb4 [joerg 2006-01-03]
