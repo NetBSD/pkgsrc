@@ -1,0 +1,10 @@
+OroboROX is a lightweight Window Manager for the ROX Desktop.
+
+Features and Requirements
+
+* Uses Fontconfig, freetype2
+* Nice and easy configuration interface
+* Basic EWMH compliance
+* Fully themable
+* Configurable behaviour
+* Small memory footprint
