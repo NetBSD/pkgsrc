@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/01/03 14:25:51 taca Exp $
 
-SHA1 (ruby/nqxml-1.1.3p1.tar.gz) = abac255fdfd09dfc269bf7488029b41081cff44e
-RMD160 (ruby/nqxml-1.1.3p1.tar.gz) = 62d48b8f35062de3816dd6177c9739a5d2ebb33a
-Size (ruby/nqxml-1.1.3p1.tar.gz) = 63165 bytes
+SHA1 (nqxml-1.1.3p1.tar.gz) = abac255fdfd09dfc269bf7488029b41081cff44e
+RMD160 (nqxml-1.1.3p1.tar.gz) = 62d48b8f35062de3816dd6177c9739a5d2ebb33a
+Size (nqxml-1.1.3p1.tar.gz) = 63165 bytes
