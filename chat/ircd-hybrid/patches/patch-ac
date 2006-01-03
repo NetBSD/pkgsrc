@@ -1,15 +1,36 @@
-$NetBSD: patch-ac,v 1.2 2005/11/13 22:40:00 adrianp Exp $
+$NetBSD: patch-ac,v 1.3 2006/01/03 13:09:25 adrianp Exp $
 
---- contrib/Makefile.in.orig	2005-11-13 18:12:26.000000000 +0000
-+++ contrib/Makefile.in
-@@ -29,8 +29,8 @@ IRCDLIBS	= @LIBS@ $(SSL_LIBS)
- INCLUDES	= -I../include $(SSL_INCLUDES)
- CPPFLAGS	= ${INCLUDES} @CPPFLAGS@
+--- contrib/help/Makefile.in.orig	2005-12-09 05:52:54.000000000 +0000
++++ contrib/help/Makefile.in
+@@ -7,8 +7,8 @@ RM=		@RM@
  
--uhelpdir	= ${prefix}/help/users
--ohelpdir	= ${prefix}/help/opers
-+uhelpdir	= ${prefix}/share/ircd-hybrid/help/users
-+ohelpdir	= ${prefix}/share/ircd-hybrid/help/opers
+ prefix=		@prefix@
+ exec_prefix=	@execprefix@
+-uhelpdir=	${prefix}/help/users
+-ohelpdir=	${prefix}/help/opers
++uhelpdir=	${prefix}/share/ircd-hybrid/help/users
++ohelpdir=	${prefix}/share/ircd-hybrid/help/opers
  
- SYMLINKS	= topic accept cmode admin names links away whowas \
- 		  version kick who invite quit join list nick oper part \
+ SYMLINKS=   topic accept cmode admin names links away whowas \
+ 		version kick who invite quit join list nick oper part \
+@@ -21,13 +21,13 @@ depend:
+ 
+ install: 
+ 	@echo installing help files...
+-	-@if test ! -d $(prefix)/help; then \
+-		echo "mkdir $(prefix)/help"; \
+-		mkdir $(prefix)/help; \
+-		echo "mkdir $(prefix)/help/users"; \
+-		mkdir $(prefix)/help/users; \
+-		echo "mkdir $(prefix)/help/opers"; \
+-		mkdir $(prefix)/help/opers; \
++	-@if test ! -d $(prefix)/share/ircd-hybrid/help; then \
++		echo "mkdir $(prefix)/share/ircd-hybrid/help"; \
++		mkdir $(prefix)/share/ircd-hybrid/help; \
++		echo "mkdir $(prefix)/share/ircd-hybrid/help/users"; \
++		mkdir $(prefix)/share/ircd-hybrid/help/users; \
++		echo "mkdir $(prefix)/share/ircd-hybrid/help/opers"; \
++		mkdir $(prefix)/share/ircd-hybrid/help/opers; \
+ 	fi
+ 	@for help in opers/*; do \
+ 	if [ -f $$help ]; then \

@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2005/11/13 22:58:05 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2006/01/03 13:09:25 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ircd-hybrid
 PKG_SUPPORTED_OPTIONS=	efnet ssl halfops small-net ziplinks
-
 PKG_SUGGESTED_OPTIONS=	ssl ziplinks
 
 .include "../../mk/bsd.options.mk"
