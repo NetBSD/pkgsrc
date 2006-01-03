@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/23 10:07:34 rxg Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/03 15:39:45 rxg Exp $
 bin/rox
 libexec/rox/ROX-Filer
 man/man1/rox.1
+share/Choices/MIME-types/application_postscript
+share/Choices/MIME-types/text
+share/Choices/MIME-types/text_html
 share/mime/packages/rox.xml
-share/rox/Choices/MIME-types/application_postscript
-share/rox/Choices/MIME-types/text
-share/rox/Choices/MIME-types/text_html
 share/rox/ROX-Filer/.DirIcon
 share/rox/ROX-Filer/AppInfo.xml
 share/rox/ROX-Filer/AppRun
@@ -22,6 +22,8 @@ share/rox/ROX-Filer/Messages/cs.gmo
 share/rox/ROX-Filer/Messages/da.gmo
 share/rox/ROX-Filer/Messages/de.gmo
 share/rox/ROX-Filer/Messages/es.gmo
+share/rox/ROX-Filer/Messages/et_EE.gmo
+share/rox/ROX-Filer/Messages/eu.gmo
 share/rox/ROX-Filer/Messages/fi.gmo
 share/rox/ROX-Filer/Messages/fr.gmo
 share/rox/ROX-Filer/Messages/hu.gmo
@@ -81,7 +83,6 @@ share/rox/ROX-Filer/ROX/MIME/mime-application:x-java.png
 share/rox/ROX-Filer/ROX/MIME/mime-application:x-lyx.png
 share/rox/ROX-Filer/ROX/MIME/mime-application:x-object.png
 share/rox/ROX-Filer/ROX/MIME/mime-application:x-perl.png
-share/rox/ROX-Filer/ROX/MIME/mime-application:x-python.png
 share/rox/ROX-Filer/ROX/MIME/mime-application:x-rpm.png
 share/rox/ROX-Filer/ROX/MIME/mime-application:x-sharedlib.png
 share/rox/ROX-Filer/ROX/MIME/mime-application:x-shellscript.png
@@ -111,6 +112,7 @@ share/rox/ROX-Filer/ROX/MIME/mime-inode:directory.png
 share/rox/ROX-Filer/ROX/MIME/mime-inode:fifo.png
 share/rox/ROX-Filer/ROX/MIME/mime-inode:mount-point.png
 share/rox/ROX-Filer/ROX/MIME/mime-inode:socket.png
+share/rox/ROX-Filer/ROX/MIME/mime-message.png
 share/rox/ROX-Filer/ROX/MIME/mime-text.png
 share/rox/ROX-Filer/ROX/MIME/mime-text:html.png
 share/rox/ROX-Filer/ROX/MIME/mime-text:x-c++src.png
@@ -119,6 +121,7 @@ share/rox/ROX-Filer/ROX/MIME/mime-text:x-csrc.png
 share/rox/ROX-Filer/ROX/MIME/mime-text:x-diff.png
 share/rox/ROX-Filer/ROX/MIME/mime-text:x-java.png
 share/rox/ROX-Filer/ROX/MIME/mime-text:x-makefile.png
+share/rox/ROX-Filer/ROX/MIME/mime-text:x-python.png
 share/rox/ROX-Filer/ROX/MIME/mime-text:x-tcl.png
 share/rox/ROX-Filer/ROX/MIME/mime-text:x-tex.png
 share/rox/ROX-Filer/ROX/MIME/mime-text:xml.png
@@ -143,7 +146,7 @@ share/rox/ROX-Filer/style.css
 @dirrm share/rox/ROX-Filer/Messages
 @dirrm share/rox/ROX-Filer/Help
 @dirrm share/rox/ROX-Filer
-@dirrm share/rox/Choices/MIME-types
-@dirrm share/rox/Choices
 @dirrm share/rox
+@dirrm share/Choices/MIME-types
+@dirrm share/Choices
 @dirrm libexec/rox
