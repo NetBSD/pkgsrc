@@ -1,54 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2005/07/31 15:26:58 recht Exp $
+$NetBSD: patch-ae,v 1.8 2006/01/03 08:03:53 recht Exp $
 
---- libgc/configure.orig	2005-07-27 02:08:52.000000000 +0200
+--- libgc/configure.orig	2005-12-22 18:35:37.000000000 +0100
 +++ libgc/configure
-@@ -465,7 +465,7 @@ ac_includes_default="\
- # include <unistd.h>
- #endif"
- 
--ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar build build_cpu build_vendor build_os host host_cpu host_vendor host_os GC_VERSION CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CCAS CCASFLAGS AR ac_ct_AR RANLIB ac_ct_RANLIB MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT GC_CFLAGS THREADLIBS POWERPC_DARWIN_TRUE POWERPC_DARWIN_FALSE EXTRA_TEST_LIBS target_all CPLUSPLUS_TRUE CPLUSPLUS_FALSE INCLUDES CXXINCLUDES addobjs addincludes addlibs addtests EGREP LN_S ECHO CPP CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL MY_CFLAGS UNWINDLIBS USE_LIBDIR_TRUE USE_LIBDIR_FALSE LIBOBJS LTLIBOBJS'
-+ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar build build_cpu build_vendor build_os host host_cpu host_vendor host_os GC_VERSION CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE AR ac_ct_AR RANLIB ac_ct_RANLIB MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT GC_CFLAGS THREADLIBS POWERPC_DARWIN_TRUE POWERPC_DARWIN_FALSE EXTRA_TEST_LIBS target_all CPLUSPLUS_TRUE CPLUSPLUS_FALSE INCLUDES CXXINCLUDES addobjs addincludes addlibs addtests EGREP LN_S ECHO CPP CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL MY_CFLAGS UNWINDLIBS USE_LIBDIR_TRUE USE_LIBDIR_FALSE LIBOBJS LTLIBOBJS'
- ac_subst_files=''
- 
- # Initialize some variables set by options.
-@@ -930,14 +930,6 @@ ac_env_CXXFLAGS_set=${CXXFLAGS+set}
- ac_env_CXXFLAGS_value=$CXXFLAGS
- ac_cv_env_CXXFLAGS_set=${CXXFLAGS+set}
- ac_cv_env_CXXFLAGS_value=$CXXFLAGS
--ac_env_CCAS_set=${CCAS+set}
--ac_env_CCAS_value=$CCAS
--ac_cv_env_CCAS_set=${CCAS+set}
--ac_cv_env_CCAS_value=$CCAS
--ac_env_CCASFLAGS_set=${CCASFLAGS+set}
--ac_env_CCASFLAGS_value=$CCASFLAGS
--ac_cv_env_CCASFLAGS_set=${CCASFLAGS+set}
--ac_cv_env_CCASFLAGS_value=$CCASFLAGS
- ac_env_CPP_set=${CPP+set}
- ac_env_CPP_value=$CPP
- ac_cv_env_CPP_set=${CPP+set}
-@@ -1074,8 +1066,6 @@ Some influential environment variables:
-               headers in a nonstandard directory <include dir>
-   CXX         C++ compiler command
-   CXXFLAGS    C++ compiler flags
--  CCAS        assembler compiler command (defaults to CC)
--  CCASFLAGS   assembler compiler flags (defaults to CFLAGS)
-   CPP         C preprocessor
-   CXXCPP      C++ preprocessor
-   F77         Fortran 77 compiler command
-@@ -3588,12 +3578,6 @@ fi
- 
- 
- 
--# By default we simply use the C compiler to build assembly code.
--
--test "${CCAS+set}" = set || CCAS=$CC
--test "${CCASFLAGS+set}" = set || CCASFLAGS=$CFLAGS
--
--
- 
- if test -n "$ac_tool_prefix"; then
-   # Extract the first word of "${ac_tool_prefix}ar", so it can be a program name with args.
-@@ -3933,7 +3917,27 @@ _ACEOF
+@@ -3940,7 +3940,27 @@ _ACEOF
  _ACEOF
  
  	;;
@@ -77,12 +31,3 @@ $NetBSD: patch-ae,v 1.7 2005/07/31 15:26:58 recht Exp $
  	cat >>confdefs.h <<\_ACEOF
  #define GC_AIX_THREADS 1
  _ACEOF
-@@ -21287,8 +21291,6 @@ s,@ac_ct_CXX@,$ac_ct_CXX,;t t
- s,@CXXDEPMODE@,$CXXDEPMODE,;t t
- s,@am__fastdepCXX_TRUE@,$am__fastdepCXX_TRUE,;t t
- s,@am__fastdepCXX_FALSE@,$am__fastdepCXX_FALSE,;t t
--s,@CCAS@,$CCAS,;t t
--s,@CCASFLAGS@,$CCASFLAGS,;t t
- s,@AR@,$AR,;t t
- s,@ac_ct_AR@,$ac_ct_AR,;t t
- s,@RANLIB@,$RANLIB,;t t
