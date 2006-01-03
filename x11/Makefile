@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.421 2005/12/31 13:40:00 peter Exp $
+# $NetBSD: Makefile,v 1.422 2006/01/03 14:42:13 taca Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -218,7 +218,6 @@ SUBDIR+=	randrext
 SUBDIR+=	renderext
 SUBDIR+=	rep-gtk
 SUBDIR+=	ruby-gtk
-SUBDIR+=	ruby-tcltklib
 SUBDIR+=	ruby-tk
 SUBDIR+=	rxvt
 SUBDIR+=	rxvt-unicode
