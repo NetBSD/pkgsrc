@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2005/10/20 17:19:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23.2.1 2006/01/03 01:09:27 seb Exp $
 bin/capinfos
 bin/dftest
 bin/editcap
@@ -18,6 +18,7 @@ lib/ethereal/plugins/${PKGVERSION}/cosnaming.la
 lib/ethereal/plugins/${PKGVERSION}/docsis.la
 lib/ethereal/plugins/${PKGVERSION}/enttec.la
 lib/ethereal/plugins/${PKGVERSION}/gryphon.la
+lib/ethereal/plugins/${PKGVERSION}/h223.la
 lib/ethereal/plugins/${PKGVERSION}/irda.la
 lib/ethereal/plugins/${PKGVERSION}/lwres.la
 lib/ethereal/plugins/${PKGVERSION}/mate.la
@@ -49,6 +50,8 @@ share/ethereal/capinfos.html
 share/ethereal/cfilters
 share/ethereal/colorfilters
 share/ethereal/dfilters
+share/ethereal/diameter/TGPPSh.xml
+share/ethereal/diameter/chargecontrol.xml
 share/ethereal/diameter/dictionary.dtd
 share/ethereal/diameter/dictionary.xml
 share/ethereal/diameter/imscxdx.xml

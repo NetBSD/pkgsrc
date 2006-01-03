@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.48 2005/12/14 16:53:06 tron Exp $
+$NetBSD: distinfo,v 1.48.2.1 2006/01/03 01:09:27 seb Exp $
 
-SHA1 (ethereal-0.10.13.tar.bz2) = 4ed2014a1ede6bdb05fbe99b0469a030c7794a13
-RMD160 (ethereal-0.10.13.tar.bz2) = 54f6431ac2d807e0d7dd896af71463d340c66107
-Size (ethereal-0.10.13.tar.bz2) = 8029087 bytes
+SHA1 (ethereal-0.10.14.tar.bz2) = 95f63a8ebb93056f7e107ad1343754c43fae643c
+RMD160 (ethereal-0.10.14.tar.bz2) = 1c11c43a1ceebb5a82dc920ca30b370ec73a1d23
+Size (ethereal-0.10.14.tar.bz2) = 8583324 bytes
 SHA1 (patch-aa) = 0513b971c0af032fc64fc181fbd64d78aef0d044
-SHA1 (patch-ab) = bfbefb0ae66607068e21d0912a15a72606ab8ea8
-SHA1 (patch-ac) = 101cbc6315b2ad9732b70d697295ad8e4a389dcd
-SHA1 (patch-ad) = 7024e51dbcfd9e68e78541c549e3b4a44edf0870
-SHA1 (patch-ae) = 23cd8b2dab8c84137fbcf2018dd3416dcdcc56a5
