@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/08/18 05:43:32 jlam Exp $
+$NetBSD: distinfo,v 1.3 2006/01/03 14:25:50 taca Exp $
 
-SHA1 (ruby/rubygems-0.8.11.tgz) = 6a7d047349a073f24621e589f50a6a6548f943be
-RMD160 (ruby/rubygems-0.8.11.tgz) = 381ef7f088b3b439f28797d6d7a3257b3e28d6e4
-Size (ruby/rubygems-0.8.11.tgz) = 160265 bytes
+SHA1 (rubygems-0.8.11.tgz) = 6a7d047349a073f24621e589f50a6a6548f943be
+RMD160 (rubygems-0.8.11.tgz) = 381ef7f088b3b439f28797d6d7a3257b3e28d6e4
+Size (rubygems-0.8.11.tgz) = 160265 bytes
