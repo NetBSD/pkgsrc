@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.405 2005/12/11 09:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.406 2006/01/03 21:03:03 adrianp Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -216,6 +216,9 @@ SUBDIR+=	p5-Image-Info
 SUBDIR+=	p5-Image-Size
 SUBDIR+=	p5-PerlMagick
 SUBDIR+=	p5-SWF-File
+SUBDIR+=	pear-Image_Canvas
+SUBDIR+=	pear-Image_Color
+SUBDIR+=	pear-Image_Graph
 SUBDIR+=	pgraf
 SUBDIR+=	photopc
 SUBDIR+=	php-exif
