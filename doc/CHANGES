@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12347 2006/01/03 21:19:26 adrianp Exp $
+$NetBSD: CHANGES,v 1.12348 2006/01/03 21:48:09 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -90,3 +90,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added math/pear-Numbers_Roman version 0.2.0 [adrianp 2006-01-03]
 	Added math/pear-Numbers_Words version 0.14.0 [adrianp 2006-01-03]
 	Added security/base version 1.2.1 [adrianp 2006-01-03]
+	Updated net/vpnc to 0.3.3 [hubertf 2006-01-03]
