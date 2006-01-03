@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2005/12/31 13:39:20 peter Exp $
+# $NetBSD: Makefile,v 1.80 2006/01/03 16:05:52 rxg Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -47,6 +47,7 @@ SUBDIR+=	obconf
 SUBDIR+=	olvwm
 SUBDIR+=	openbox
 SUBDIR+=	openbox2
+SUBDIR+=	oroborox
 SUBDIR+=	oroborus
 SUBDIR+=	pekwm
 SUBDIR+=	piewm
