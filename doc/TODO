@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4358 2006/01/03 17:41:12 wiz Exp $
+$NetBSD: TODO,v 1.4359 2006/01/03 18:06:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -868,7 +868,6 @@ Suggested package updates
 	o p5-DBD-mysql-3.0002
 	o p5-DBD-postgresql-1.32
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-DBIx-SearchBuilder-1.38
 	o p5-DB_File-1.810
 	o p5-Data-FormValidator-4.02
 	o p5-Data-TemporaryBag-0.08

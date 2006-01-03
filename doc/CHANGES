@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12337 2006/01/03 18:01:44 wiz Exp $
+$NetBSD: CHANGES,v 1.12338 2006/01/03 18:06:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/snort-pgsql to 2.4.3nb1 [adrianp 2006-01-03]
 	Added databases/jdbc-postgresql80 version 314 [abs 2006-01-03]
 	Updated devel/p5-capitalization to 0.03nb1 [wiz 2006-01-03]
+	Updated databases/p5-DBIx-SearchBuilder to 1.38 [wiz 2006-01-03]
