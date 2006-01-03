@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2006/01/03 19:12:52 schmonz Exp $
+
+--- lib/fdbuf/fdobuf.h.orig	2005-11-10 11:10:23.000000000 -0500
++++ lib/fdbuf/fdobuf.h
+@@ -17,6 +17,8 @@
+ #ifndef FDBUF__FDOBUF__H__
+ #define FDBUF__FDOBUF__H__
+ 
++#include <unistd.h>
++
+ class fdobuf : protected fdbuf
+ {
+ public:
