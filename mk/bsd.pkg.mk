@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1780 2006/01/02 23:24:58 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1781 2006/01/03 00:41:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -690,13 +690,11 @@ CONFIG_SUB_OVERRIDE?=		\
 	config.sub */config.sub */*/config.sub
 CONFIG_RPATH_OVERRIDE?=		# set by platform file as needed
 #
-# By default, override config.status for GNU configure packages.  We
-# never want it to execute after the configure phase has ended as it
-# might overwrite any post-configure changes we might have made to the
-# generated files.
+# By default, override GNU configure scripts so that the generated
+# config.status scripts never do anything on "recheck".
 #
-CONFIG_STATUS_OVERRIDE?=	\
-	config.status */config.status */*/config.status
+CONFIGURE_SCRIPTS_OVERRIDE?=	\
+	configure */configure */*/configure
 .endif
 
 #
@@ -1761,6 +1759,28 @@ do-config-star-override:
 .  endif
 .endif
 
+.if defined(CONFIGURE_SCRIPTS_OVERRIDE)
+_CONFIGURE_PREREQ+=	do-configure-scripts-override
+.PHONY: do-configure-scripts-override
+do-configure-scripts-override:
+.  for _pattern_ in ${CONFIGURE_SCRIPTS_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
+	for file in ${_pattern_}; do					\
+		if ${TEST} -f "$$file"; then				\
+			${AWK} '/ *-recheck *\| *--recheck.*\)/ {	\
+					print;				\
+					print "    # Avoid regenerating for rechecks on pkgsrc"; \
+					print "    exit 0";		\
+					next;				\
+				}					\
+				{ print }' $$file > $$file.override &&	\
+			${CHMOD} +x $$file.override &&			\
+			${MV} -f $$file.override $$file;		\
+		fi;							\
+	done
+.  endfor
+.endif
+
 PKGCONFIG_OVERRIDE_SED= \
 	'/^Libs:.*[ 	]/s|-L\([ 	]*[^ 	]*\)|${COMPILER_RPATH_FLAG}\1 -L\1|g'
 PKGCONFIG_OVERRIDE_STAGE?=	pre-configure
@@ -1846,28 +1866,6 @@ do-libtool-override:
 	done
 .    endfor
 .  endif
-.endif
-
-.if defined(CONFIG_STATUS_OVERRIDE)
-_CONFIGURE_POSTREQ+=	do-config-status-override
-.PHONY: do-config-status-override
-do-config-status-override:
-.  for _pattern_ in ${CONFIG_STATUS_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
-	for file in ${_pattern_}; do					\
-		if [ -f "$$file" ]; then				\
-			${MV} -f $$file $$file.overridden;		\
-			${AWK} '/ *-recheck *\| *--recheck.*\)/ {	\
-					print;				\
-					print "    exit 0";		\
-					next;				\
-				}					\
-				{ print }				\
-			       ' $$file.overridden > $$file;		\
-			${CHMOD} +x $$file;				\
-		fi;							\
-	done
-.  endfor
 .endif
 
 .PHONY: post-configure
