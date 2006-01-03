@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/23 06:42:38 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/03 14:44:54 taca Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -16,7 +16,6 @@ CONFIGURE_DIRS=	${MY_SUBDIR}
 
 GNU_CONFIGURE=		yes
 TEST_TARGET=            check
-USE_RUBY_DIST_SUBDIR=	no
 #USE_RUBY_EXTCONF=	yes
 #RUBY_EXTCONF_SUBDIRS=	${MY_SUBDIR}/curia ${MY_SUBDIR}/depot ${MY_SUBDIR}/villa
 RUBY_HAS_ARCHLIB=	yes
