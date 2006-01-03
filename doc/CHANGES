@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12346 2006/01/03 19:25:47 wiz Exp $
+$NetBSD: CHANGES,v 1.12347 2006/01/03 21:19:26 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -84,3 +84,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/xlife to 5.0nb4 [joerg 2006-01-03]
 	Updated mail/nullmailer to 1.01 [schmonz 2006-01-03]
 	Updated lang/parrot to 0.4.0 [wiz 2006-01-03]
+	Added graphics/pear-Image_Canvas version 0.2.4 [adrianp 2006-01-03]
+	Added graphics/pear-Image_Color version 1.0.2 [adrianp 2006-01-03]
+	Added graphics/pear-Image_Graph version 0.3.0dev4 [adrianp 2006-01-03]
+	Added math/pear-Numbers_Roman version 0.2.0 [adrianp 2006-01-03]
+	Added math/pear-Numbers_Words version 0.14.0 [adrianp 2006-01-03]
+	Added security/base version 1.2.1 [adrianp 2006-01-03]
