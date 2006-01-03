@@ -1,11 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2005/12/10 22:10:47 christos Exp $
+$NetBSD: patch-ad,v 1.6 2006/01/03 18:16:10 joerg Exp $
 
 --- fep_defs.h.orig	1993-05-10 01:23:33.000000000 -0400
 +++ fep_defs.h	2005-12-10 16:59:27.000000000 -0500
-@@ -3,9 +3,9 @@
- #ifndef lint
- # define FEP_DEFS \
-     "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ad,v 1.5 2005/12/10 22:10:47 christos Exp $ (SRA)"
+@@ -6,6 +6,6 @@
 -#endif lint
 +#endif /* lint */
  
