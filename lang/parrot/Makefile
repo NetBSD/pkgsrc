@@ -1,31 +1,44 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:11 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/03 19:25:06 wiz Exp $
 #
 
-DISTNAME=       parrot-0.0.1
-CATEGORIES=	lang
-MASTER_SITES=	http://www.netthink.co.uk/downloads/
+DISTNAME=		parrot-0.4.0
+CATEGORIES=		lang
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LT/LTOETSCH/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.python.org/parrot.html
-COMMENT=	Bytecode language possibly to be used by Perl/Python
+MAINTAINER=		debolaz@gmail.com
+HOMEPAGE=		http://www.parrotcode.org/
+COMMENT=		Virtual machine made to run Perl 6 and other languages
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=		gmake perl
 
-BUILD_TARGET=	test_prog
+BUILD_TARGET=		world_shared
 
-INSTALLATION_DIRS=	bin
+.include "../../mk/bsd.prefs.mk"
 
-do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/include/parrot
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/doc/parrot
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/parrot
-	${INSTALL_PROGRAM} ${WRKSRC}/test_prog ${PREFIX}/bin/parrot
-	${INSTALL_SCRIPT} ${WRKSRC}/assemble.pl ${PREFIX}/share/parrot
-	${INSTALL_SCRIPT} ${WRKSRC}/disassemble.pl ${PREFIX}/share/parrot
-	${INSTALL_SCRIPT} ${WRKSRC}/t/test*.pasm ${PREFIX}/share/parrot
-	${INSTALL_DATA} ${WRKSRC}/opcode_table	${PREFIX}/include/parrot
-	${INSTALL_DATA} ${WRKSRC}/interp_guts.h	${PREFIX}/include/parrot
-	${INSTALL_DATA} ${WRKSRC}/README	${PREFIX}/share/doc/parrot
-	${INSTALL_DATA} ${WRKSRC}/TODO	${PREFIX}/share/doc/parrot
+CONFIGURE_ARGS+=	--prefix=${PREFIX}/parrot \
+			--icu-config=${PREFIX}/bin/icu-config \
+			--verbose
 
+# If you have another architecture, please test if it can compile
+# with jit support and report status to the maintainer.
+
+.if ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--jitcapable \
+			--execcapable
+.endif
+
+do-configure:
+	cd ${WRKSRC} && ${PERL5} Configure.pl ${CONFIGURE_ARGS}
+
+post-configure:
+	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.orig
+	${SED}	-e '/^BIN_DIR/s|$$(EXEC_PREFIX)|${PREFIX}|' \
+		-e '/^INCLUDE_DIR/s|$$(EXEC_PREFIX)/include|${PREFIX}|' \
+		< ${WRKSRC}/Makefile.orig \
+		> ${WRKSRC}/Makefile
+
+post-install:
+	${INSTALL_LIB} ${WRKSRC}/blib/lib/libparrot.* ${PREFIX}/lib
+
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
