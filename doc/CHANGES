@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12333 2006/01/03 17:36:19 wiz Exp $
+$NetBSD: CHANGES,v 1.12334 2006/01/03 17:37:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -68,3 +68,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Class-Autouse to 1.23 [wiz 2006-01-03]
 	Updated devel/p5-IO-String to 1.08 [wiz 2006-01-03]
 	Updated textproc/p5-XML-NamespaceSupport to 1.09 [wiz 2006-01-03]
+	Updated sysutils/p5-File-Remove to 0.31 [wiz 2006-01-03]
