@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12340 2006/01/03 18:25:15 wiz Exp $
+$NetBSD: CHANGES,v 1.12341 2006/01/03 18:30:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -78,3 +78,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed www/jakarta-tomcat55 [abs 2006-01-03]
 	Added www/apache-tomcat55 version 5.5.14 [abs 2006-01-03]
 	Updated mail/p5-MIME-tools to 5.419 [wiz 2006-01-03]
+	Updated misc/p5-Locale-Maketext-Lexicon to 0.53 [wiz 2006-01-03]
