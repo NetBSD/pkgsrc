@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4353 2006/01/03 17:35:11 wiz Exp $
+$NetBSD: TODO,v 1.4354 2006/01/03 17:35:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -895,7 +895,6 @@ Suggested package updates
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
-	o p5-IO-String-1.08
 	o p5-Ima-DBI-0.34
 	o p5-Image-ExifTool-5.87
 	o p5-Jcode-2.03
