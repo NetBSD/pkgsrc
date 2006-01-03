@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 23:55:12 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/03 20:48:01 joerg Exp $
 #
 
 DISTNAME=		mpfr-2.0.3
@@ -15,6 +15,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gmp-include=${GMP_DIR:Q}
 CONFIGURE_DIRS=		${GMP_DIR} ${WRKSRC}
+CONFIG_GUESS_OVERRIDE=	${GMP_DIR}/config.guess ${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE=	${GMP_DIR}/config.sub ${WRKSRC}/config.sub
 BUILD_DIRS=		${WRKSRC}
 
 INFO_FILES=		mpfr.info
