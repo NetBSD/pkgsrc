@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/08/20 19:27:11 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/03 19:07:31 joerg Exp $
 #
 
 DISTNAME=	xlife-5.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math games
 MASTER_SITES=	http://www.tuxedo.org/~esr/
 
@@ -19,9 +19,6 @@ pre-build:
 	${TOUCH} ${WRKSRC}/collect.man ${WRKSRC}/lifesearchdumb.man
 
 post-install:
-.for m in lifeconv lifesearch xlife
-	${INSTALL_MAN} ${WRKSRC}/${m}.man ${PREFIX}/man/man1/${m}.1
-.endfor
 .for d in codd life misc wireworld
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xlife/${d}
 	cd ${WRKSRC}/${d}; for l in *.l; do				\

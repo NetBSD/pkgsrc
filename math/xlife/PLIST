@@ -1,17 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/20 19:27:11 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/01/03 19:07:31 joerg Exp $
 bin/collect
 bin/lifeconv
 bin/lifesearch
 bin/lifesearchdumb
 bin/xlife
-man/cat1/collect.0
-man/cat1/lifeconv.0
-man/cat1/lifesearch.0
-man/cat1/lifesearchdumb.0
-man/cat1/xlife.0
-man/man1/lifeconv.1
-man/man1/lifesearch.1
-man/man1/xlife.1
+${IMAKE_MAN_DIR}/collect.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/lifeconv.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/lifesearch.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/lifesearchdumb.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/xlife.${IMAKE_MAN_SUFFIX}
 share/xlife/codd/echodisc.l
 share/xlife/codd/emitter.l
 share/xlife/codd/oneway.l
