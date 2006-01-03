@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/01/03 07:27:54 taca Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/03 14:25:50 taca Exp $
 
 DISTNAME=	amrita-1.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ CONFLICTS+=	ruby[1-9][0-9]-amrita-*
 NO_BUILD=	yes
 DOCS=		ChangeLog README README_ja
 REPLACE_RUBY=	bin/ams bin/amshandler bin/amx
-USE_RUBY_DIST_SUBDIR=	yes
 
 INSTALLATION_DIRS=	bin
 

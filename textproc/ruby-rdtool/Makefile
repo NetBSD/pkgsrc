@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/29 06:22:19 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/03 14:25:51 taca Exp $
 
 DISTNAME=	rdtool-0.6.18
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	RD (Ruby Document) converter to HTML/man/etc
 # Since rd2 commands depends its name and it can't rename, we cannot
 # install multiple ruby??-rd2 package (unless supported by pkgview.
 CONFLICTS+=	ruby[1-9][0-9]-rdtool-*
-
-USE_RUBY_DIST_SUBDIR=	yes
 
 USE_RUBY_SETUP=	yes
 REPLACE_RUBY=	bin/rd2 bin/rdswap.rb
