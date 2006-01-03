@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/01/03 18:12:37 abs Exp $
+
+For detailed instructions on how to run Tomcat, either as a
+standalone server or in conjunction with Apache (using the
+www/ap-jk package), see:
+
+	http://localhost:8080/tomcat-docs/index.html
+
+For more information on application development with Tomcat, see
+
+	http://localhost:8080/tomcat-docs/appdev/index.html
+
+Note that tomcat may be started with the following command:
+
+	${RCD_SCRIPTS_DIR}/tomcat start
+
+===========================================================================
