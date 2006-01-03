@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/23 10:20:10 rxg Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/03 15:50:07 rxg Exp $
 share/rox/ROX-Lib2/.DirIcon
 share/rox/ROX-Lib2/AppInfo.xml
 share/rox/ROX-Lib2/AppRun
@@ -6,6 +6,7 @@ share/rox/ROX-Lib2/Help/COPYING
 share/rox/ROX-Lib2/Help/Changes
 share/rox/ROX-Lib2/Help/Errors
 share/rox/ROX-Lib2/Help/README
+share/rox/ROX-Lib2/Help/TODO
 share/rox/ROX-Lib2/Help/findrox.py
 share/rox/ROX-Lib2/Help/python/rox.AppInfo.html
 share/rox/ROX-Lib2/Help/python/rox.InfoWin.html
@@ -32,11 +33,15 @@ share/rox/ROX-Lib2/Help/python/rox.su.html
 share/rox/ROX-Lib2/Help/python/rox.suchild.html
 share/rox/ROX-Lib2/Help/python/rox.tasks.html
 share/rox/ROX-Lib2/MakeDist
+share/rox/ROX-Lib2/Messages/de.gmo
+share/rox/ROX-Lib2/Messages/de.po
 share/rox/ROX-Lib2/Messages/dist
 share/rox/ROX-Lib2/Messages/fr.gmo
 share/rox/ROX-Lib2/Messages/fr.po
 share/rox/ROX-Lib2/Messages/it.gmo
 share/rox/ROX-Lib2/Messages/it.po
+share/rox/ROX-Lib2/Messages/pt_BR.gmo
+share/rox/ROX-Lib2/Messages/pt_BR.po
 share/rox/ROX-Lib2/Messages/update-po
 share/rox/ROX-Lib2/Messages/zh_CN.gmo
 share/rox/ROX-Lib2/Messages/zh_CN.po
@@ -68,11 +73,15 @@ share/rox/ROX-Lib2/python/rox/su.py
 share/rox/ROX-Lib2/python/rox/suchild.py
 share/rox/ROX-Lib2/python/rox/suchild.sh
 share/rox/ROX-Lib2/python/rox/tasks.py
+share/rox/ROX-Lib2/tests/python/testall.py
 share/rox/ROX-Lib2/tests/python/testbasedir.py
 share/rox/ROX-Lib2/tests/python/testchoices.py
+share/rox/ROX-Lib2/tests/python/testicon_theme.py
 share/rox/ROX-Lib2/tests/python/testmenu.py
 share/rox/ROX-Lib2/tests/python/testoptions.py
+share/rox/ROX-Lib2/tests/python/testprocesses.py
 share/rox/ROX-Lib2/tests/python/testproxy.py
+share/rox/ROX-Lib2/tests/python/testrox.py
 share/rox/ROX-Lib2/tests/python/testsu.py
 share/rox/ROX-Lib2/tests/python/testtasks.py
 @dirrm share/rox/ROX-Lib2/tests/python
