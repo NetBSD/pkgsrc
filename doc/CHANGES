@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12320 2006/01/03 08:09:07 recht Exp $
+$NetBSD: CHANGES,v 1.12321 2006/01/03 13:10:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed devel/ruby-filelock [taca 2006-01-03]
 	Removed math/ruby-bitvector [taca 2006-01-03]
 	Updated lang/mono to 1.1.12.1 [recht 2006-01-03]
+	Updated chat/ircd-hybrid to 7.2.0 [adrianp 2006-01-03]
