@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.1 2006/01/03 19:25:06 wiz Exp $
+
+--- MANIFEST.generated.orig	Sun Dec  4 13:23:09 2005
++++ MANIFEST.generated	Tue Jan  3 15:19:45 2006
+@@ -1,16 +1,9 @@
+ installable_parrot                                [main]bin
+-pdump                                             [main]bin
+ pdump_shared                                      [main]bin
+-pdb                                               [main]bin
+ pdb_shared                                        [main]bin
+-pbc_info                                          [main]bin
+ pbc_info_shared                                   [main]bin
+-pbc_merge                                         [main]bin
+ pbc_merge_shared                                  [main]bin
+-disassemble                                       [main]bin
+ disassemble_shared                                [main]bin
+-blib/lib/libparrot.a                              [main]lib
+-blib/lib/libparrot.so.0.4.0                       [main]lib
+ runtime/parrot/library/Data/Dumper/Base.pbc       [main]
+ runtime/parrot/library/Data/Dumper/Default.pbc    [main]
+ runtime/parrot/library/Data/Dumper.pbc            [main]
+@@ -60,22 +53,22 @@
+ runtime/parrot/include/tm.pasm                    [main]
+ runtime/parrot/include/vtable_methods.pasm        [main]
+ runtime/parrot/include/warnings.pasm              [main]
+-include/parrot/config.h                           [main]
+-include/parrot/core_pmcs.h                        [main]
+-include/parrot/exec_dep.h                         [main]
+-include/parrot/extend_vtable.h                    [main]
+-include/parrot/feature.h                          [main]
+-include/parrot/has_header.h                       [main]
+-include/parrot/jit_emit.h                         [main]
+-include/parrot/platform.h                         [main]
+-include/parrot/platform_interface.h               [main]
+-include/parrot/string_private_cstring.h           [main]
+-include/parrot/vtable.h                           [main]
+-include/parrot/oplib/core_ops.h                   [main]
+-include/parrot/oplib/core_ops_cg.h                [main]
+-include/parrot/oplib/core_ops_cgp.h               [main]
+-include/parrot/oplib/core_ops_switch.h            [main]
+-include/parrot/oplib/ops.h                        [main]
++include/parrot/config.h                           [main]include
++include/parrot/core_pmcs.h                        [main]include
++include/parrot/exec_dep.h                         [main]include
++include/parrot/extend_vtable.h                    [main]include
++include/parrot/feature.h                          [main]include
++include/parrot/has_header.h                       [main]include
++include/parrot/jit_emit.h                         [main]include
++include/parrot/platform.h                         [main]include
++include/parrot/platform_interface.h               [main]include
++include/parrot/string_private_cstring.h           [main]include
++include/parrot/vtable.h                           [main]include
++include/parrot/oplib/core_ops.h                   [main]include
++include/parrot/oplib/core_ops_cg.h                [main]include
++include/parrot/oplib/core_ops_cgp.h               [main]include
++include/parrot/oplib/core_ops_switch.h            [main]include
++include/parrot/oplib/ops.h                        [main]include
+ docs/ops/bit.pod                                  [main]doc
+ docs/ops/cmp.pod                                  [main]doc
+ docs/ops/core.pod                                 [main]doc
