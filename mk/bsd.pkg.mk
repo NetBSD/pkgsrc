@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1781 2006/01/03 00:41:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1782 2006/01/03 17:26:56 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3463,6 +3463,8 @@ _BIN_INSTALL_FLAGS+=	-A
 .endif
 _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 
+_SHORT_UNAME_R=	${:!${UNAME} -r!:C@\.([0-9]*)[_.].*@.\1@} # n.n[_.]anything => n.n
+
 # Install binary pkg, without strict uptodate-check first
 .PHONY: real-su-bin-install
 real-su-bin-install:
@@ -3474,32 +3476,24 @@ real-su-bin-install:
 		${SHCOMMENT} ${ECHO_MSG} "*** or use \`\`${MAKE} bin-update'' to upgrade it and all of its dependencies."; \
 		exit 1;							\
 	fi
-	@if [ -f ${PKGFILE} ] ; then 					\
-		${ECHO_MSG} "Installing from binary pkg ${PKGFILE}" ;	\
-		${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGFILE} ;		\
-	else 				 				\
-		rel=`${UNAME} -r | ${SED} 's@\.\([0-9]*\)[\._].*@\.\1@'`; \
-		arch=${MACHINE_ARCH}; 					\
-		for site in ${BINPKG_SITES} ; do 			\
-			${ECHO} Trying `eval ${ECHO} $$site`/All ; 	\
-			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
-			if ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
-				${ECHO} "${PKGNAME} successfully installed."; \
-				break ; 				\
-			fi ; 						\
-		done ; 							\
-		if ! ${PKG_INFO} -qe "${PKGNAME}" ; then 		\
-			${SHCOMMENT} Cycle through some FTP server here ;\
-			${ECHO_MSG} "Installing from source" ;		\
-			${MAKE} ${MAKEFLAGS} package 			\
-				DEPENDS_TARGET=${DEPENDS_TARGET:Q} &&	\
-			${MAKE} ${MAKEFLAGS} clean ;			\
-		fi ; \
+	@rel=${_SHORT_UNAME_R:Q} ; \
+	arch=${MACHINE_ARCH:Q} ; \
+	pkgpath=${PKGREPOSITORY:Q} ; \
+	for i in ${BINPKG_SITES} ; do pkgpath="$$pkgpath;$$i/All" ; done ; \
+	${ECHO} "Trying $$pkgpath" ; 	\
+	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX} ; then \
+		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:U${PKGNAME}:Q}` successfully installed."; \
+	else 				 			\
+		${SHCOMMENT} Cycle through some FTP server here ;\
+		${ECHO_MSG} "Installing from source" ;		\
+		${MAKE} ${MAKEFLAGS} package 			\
+			DEPENDS_TARGET=${DEPENDS_TARGET:Q} &&	\
+		${MAKE} ${MAKEFLAGS} clean ;			\
 	fi
 
 .PHONY: bin-install
 bin-install:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Binary install for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-bin-install";				\
 	action="binary install";					\
