@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2005/12/05 20:50:02 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2006/01/03 22:15:22 reed Exp $
 
 DISTNAME=	gc6.6
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
@@ -16,7 +16,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-cplusplus
-INSTALLATION_DIRS=	man/man3
+INSTALLATION_DIRS=	${PKGMANDIR}/man3
 
 MAKE_ENV+=		COPTS=${CFLAGS:M*:Q}
 
@@ -44,7 +44,7 @@ pre-build:
 		${WRKSRC}/doc/gc.man.in > ${WRKSRC}/doc/gc.man
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${PREFIX}/man/man3/gc.3
+	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${PREFIX}/${PKGMANDIR}/man3/gc.3
 
 do-test:
 	@cd ${WRKSRC}; \
