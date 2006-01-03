@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2005/12/29 06:22:03 jlam Exp $
+# $NetBSD: Makefile.common,v 1.31 2006/01/03 17:34:40 adrianp Exp $
 #
 
 DISTNAME=		snort-2.4.3
@@ -66,11 +66,16 @@ post-install:
 			${WRKSRC}/etc/threshold.conf \
 			${WRKSRC}/etc/snort.conf.default ${EGDIR}/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort/schemas
 	cd ${WRKSRC}/doc ; \
 	for i in `${LS} | ${EGREP} -v "(Makefile|signatures)"` ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/snort ; \
 	done
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKSRC}/schemas/create_mysql \
+		${PREFIX}/share/doc/snort/schemas
+	${INSTALL_DATA} ${WRKSRC}/schemas/create_postgresql \
+		${PREFIX}/share/doc/snort/schemas
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
