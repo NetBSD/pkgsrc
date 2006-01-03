@@ -1,24 +1,22 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/02/24 21:47:25 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/03 14:20:41 joerg Exp $
 
---- libpnmrw.c.orig	Thu Aug 17 00:24:26 1995
+--- libpnmrw.c.orig	1995-08-16 22:24:26.000000000 +0000
 +++ libpnmrw.c
-@@ -28,6 +28,9 @@
+@@ -28,6 +28,7 @@
  #endif
  
  #include <stdio.h>
-+#ifdef __NetBSD__
-+#  include <errno.h>
-+#endif
++#include <errno.h>
  #include "libpnmrw.h"
  
  /* if don't have string.h, try strings.h */
-@@ -126,8 +129,10 @@
+@@ -126,8 +127,9 @@ static void
    pm_perror( reason )
  char* reason;
  {
-+#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
    extern char* sys_errlist[];
-   extern int errno;
+-  extern int errno;
 +#endif
    char* e;
  
