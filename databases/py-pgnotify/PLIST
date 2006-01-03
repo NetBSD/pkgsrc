@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/21 16:03:37 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/03 18:58:58 darcy Exp $
 ${PYSITELIB}/pgnotify.py
+${PYSITELIB}/pgnotify.pyc
+${PYSITELIB}/pgnotify.pyo
