@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4356 2006/01/03 17:37:02 wiz Exp $
+$NetBSD: TODO,v 1.4357 2006/01/03 17:40:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,7 @@ Suggested package updates
 	o bmon-2.1.0
 	o boaconstructor-0.4.4
 	o bochs-2.2.5
-	o bogofilter-1.0.0
+	o bogofilter-1.0.1
 	o boolean-6.8
 	o boson-0.11
 	o browser-bookmarks-menu-0.4
@@ -430,7 +430,7 @@ Suggested package updates
 	o classpath-0.19
 	o classpath-gui-0.19
 	o clisp-2.35 (also see PR misc/31094)
-	o clisp-2.36
+	o clisp-2.37
 	o cmake-2.2.3
 	o cocoon-2.1.7
 	o columba-1.0RC1
@@ -965,6 +965,7 @@ Suggested package updates
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
 	o parrot-0.2.1 [pkg/30586]
+	o parrot-0.4.0 [pkg/32448]
 	o patchutils-0.2.31
 	o pcal-4.8
 	o pchar-1.5
@@ -1113,7 +1114,7 @@ Suggested package updates
 	o rtcw-1.41.3
 	o rtorrent-0.4.1
 	o ruby-cmd-0.8.0
-	o rxvt-unicode-6.1
+	o rxvt-unicode-6.2
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
@@ -1341,7 +1342,7 @@ Suggested package updates
 	o yaz-2.1.8
 	o yencode-0.46
 	o yodl-2.01.02
-	o ysm-2.9.6
+	o ysm-2.9.7
 	o ytalk-3.2.0 [pkg/28840]
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
