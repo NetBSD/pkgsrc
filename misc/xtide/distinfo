@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 11:02:59 agc Exp $
+$NetBSD: distinfo,v 1.6 2006/01/03 15:33:22 joerg Exp $
 
 SHA1 (xtide-2.4.tar.gz) = bbd97d1b11ea75bfb09df1c9ddd3e0bc5d3f3a35
 RMD160 (xtide-2.4.tar.gz) = fab0267c3bce260db36d190ab026da1caccdfcac
@@ -11,4 +11,4 @@ RMD160 (offsets.xml.gz) = d91a900450be1a1773c0fdecab3b8fee449bf9b0
 Size (offsets.xml.gz) = 150845 bytes
 SHA1 (patch-aa) = 48b0c37ba2f664f14508c2096184e75784958205
 SHA1 (patch-ab) = 889c68bce0bd78cfc1b5f7410364e8c39182cfec
-SHA1 (patch-ac) = 142aac6372e02639a185ba1e99fa994df4e0d899
+SHA1 (patch-ac) = 4ccbdc0585fea1cdeb5514c77519e450b718f477
