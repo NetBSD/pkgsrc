@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/04 04:35:42 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/03 15:07:29 taca Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://madscientist.jp/~ikegami/sources/
 
