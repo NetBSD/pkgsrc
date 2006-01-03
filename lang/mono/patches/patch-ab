@@ -1,23 +1,23 @@
-$NetBSD: patch-ab,v 1.11 2005/07/31 15:26:58 recht Exp $
+$NetBSD: patch-ab,v 1.12 2006/01/03 08:03:53 recht Exp $
 
---- configure.orig	2005-07-27 02:08:41.000000000 +0200
+--- configure.orig	2005-12-22 18:35:26.000000000 +0100
 +++ configure
-@@ -2224,6 +2224,18 @@ _ACEOF
+@@ -2232,13 +2232,15 @@ _ACEOF
  		;;
  	*-*-*netbsd*)
  		platform_win32=no
+-		CPPFLAGS="$CPPFLAGS -D_REENTRANT"
 +		CPPFLAGS="$CPPFLAGS -D_REENTRANT -DGC_NETBSD_THREADS -D_GNU_SOURCE"
-+		libmono_cflags="-D_REENTRANT"
-+		LDFLAGS="$LDFLAGS -pthread"
-+		libmono_ldflags="-pthread"
-+		need_link_unlink=yes
+ 		libmono_cflags="-D_REENTRANT"
+ 		LDFLAGS="$LDFLAGS -pthread"
+ 		libmono_ldflags="-pthread"
+ 		need_link_unlink=yes
+-		libdl=
+-		libgc_threads=no
 +		libdl="-ldl /libexec/ld.elf_so"
 +		libgc_threads=pthreads
 +		with_tls=__thread
 +		with_sigaltstack=yes
-+		;;
-+	*-*-*netbsd*)
-+		platform_win32=no
- 		CPPFLAGS="$CPPFLAGS -D_REENTRANT"
- 		libmono_cflags="-D_REENTRANT"
- 		LDFLAGS="$LDFLAGS -pthread"
+ 		;;
+ # these flags will work for all versions of -STABLE
+ #

@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2005/07/31 15:26:58 recht Exp $
+$NetBSD: patch-an,v 1.2 2006/01/03 08:03:53 recht Exp $
 
---- mono/mini/exceptions-x86.c.orig	2005-04-11 16:16:27.000000000 +0200
+--- mono/mini/exceptions-x86.c.orig	2005-09-15 13:21:13.000000000 +0200
 +++ mono/mini/exceptions-x86.c
-@@ -563,7 +563,17 @@ mono_arch_sigctx_to_monoctx (void *sigct
+@@ -688,7 +688,17 @@ mono_arch_sigctx_to_monoctx (void *sigct
  	mctx->esi = ctx->uc_mcontext.mc_esi;
  	mctx->edi = ctx->uc_mcontext.mc_edi;
  	mctx->eip = ctx->uc_mcontext.mc_eip;
@@ -21,7 +21,7 @@ $NetBSD: patch-an,v 1.1 2005/07/31 15:26:58 recht Exp $
  	mctx->eax = ctx->uc_mcontext.gregs [REG_EAX];
  	mctx->ebx = ctx->uc_mcontext.gregs [REG_EBX];
  	mctx->ecx = ctx->uc_mcontext.gregs [REG_ECX];
-@@ -600,12 +610,21 @@ mono_arch_monoctx_to_sigctx (MonoContext
+@@ -725,12 +735,21 @@ mono_arch_monoctx_to_sigctx (MonoContext
  	ctx->uc_mcontext.mc_ebx = mctx->ebx;
  	ctx->uc_mcontext.mc_ecx = mctx->ecx;
  	ctx->uc_mcontext.mc_edx = mctx->edx;
@@ -45,7 +45,7 @@ $NetBSD: patch-an,v 1.1 2005/07/31 15:26:58 recht Exp $
  #else
  	ctx->uc_mcontext.gregs [REG_EAX] = mctx->eax;
  	ctx->uc_mcontext.gregs [REG_EBX] = mctx->ebx;
-@@ -639,6 +658,8 @@ mono_arch_ip_from_context (void *sigctx)
+@@ -764,6 +783,8 @@ mono_arch_ip_from_context (void *sigctx)
  	ucontext_t *ctx = (ucontext_t*)sigctx;
  #if defined(__FreeBSD__)
  	return (gpointer)ctx->uc_mcontext.mc_eip;

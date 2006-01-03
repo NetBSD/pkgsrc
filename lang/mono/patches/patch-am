@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2005/07/31 15:26:58 recht Exp $
+$NetBSD: patch-am,v 1.2 2006/01/03 08:03:53 recht Exp $
 
---- mono/io-layer/collection.c.orig	2005-04-21 13:46:55.000000000 +0200
+--- mono/io-layer/collection.c.orig	2005-10-19 13:24:08.000000000 +0200
 +++ mono/io-layer/collection.c
-@@ -53,7 +53,7 @@ void _wapi_collection_init (void)
+@@ -60,7 +60,7 @@ void _wapi_collection_init (void)
  	g_assert (ret == 0);
  	
  #ifdef HAVE_PTHREAD_ATTR_SETSTACKSIZE

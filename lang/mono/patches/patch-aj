@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.4 2005/07/31 15:26:58 recht Exp $
+$NetBSD: patch-aj,v 1.5 2006/01/03 08:03:53 recht Exp $
 
---- libgc/pthread_stop_world.c.orig	2005-07-05 20:46:03.000000000 +0200
+--- libgc/pthread_stop_world.c.orig	2005-07-05 20:42:42.000000000 +0200
 +++ libgc/pthread_stop_world.c
 @@ -99,6 +99,7 @@ word GC_stop_count;	/* Incremented at th
  #  endif
