@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4346 2006/01/03 08:09:07 recht Exp $
+$NetBSD: TODO,v 1.4347 2006/01/03 14:33:02 sketch Exp $
 
 Suggested new packages
 ======================
@@ -517,7 +517,6 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
-	o evilwm-0.99.19
 	o exim-4.60
 	o exmh-2.7.2
 	o f2c-20031025
