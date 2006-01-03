@@ -15,3 +15,5 @@
 * check that Index: entries match the rest of the patch
 * record with each substring its source location to be able to make
   even more precise diagnostics
+* check wether CONFIG* override match, e.g. CONFIGURE_DIRS most likely
+  needs matching CNOFIG_GUESS_OVERRIDE and CONFIG_SUB_OVERRIDE as well
