@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2005/11/24 18:47:32 wiz Exp $
+# $NetBSD: Makefile,v 1.196 2006/01/03 17:54:30 abs Exp $
 #
 
 COMMENT=	Databases
@@ -30,6 +30,7 @@ SUBDIR+=	java-db3
 SUBDIR+=	jdb
 SUBDIR+=	jdbc-postgresql
 SUBDIR+=	jdbc-postgresql74
+SUBDIR+=	jdbc-postgresql80
 SUBDIR+=	kmysqladmin
 SUBDIR+=	krecipes
 SUBDIR+=	lbdb
