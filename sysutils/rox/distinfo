@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2006/01/03 15:39:45 rxg Exp $
+$NetBSD: distinfo,v 1.7 2006/01/03 16:57:34 rxg Exp $
 
-SHA1 (rox/rox-2.3.tgz) = 44a2879d77bb101cbe29d6a372a45b7acfbc3d53
-RMD160 (rox/rox-2.3.tgz) = 073227bf60046e325e6b414c19db62fa1be3d43d
-Size (rox/rox-2.3.tgz) = 2246715 bytes
+SHA1 (rox/rox-2.4.tgz) = e3fa56fbb82400ca32f365aa3bdc73d4fbe4eaf4
+RMD160 (rox/rox-2.4.tgz) = 9c37779b62e8b235db473a4f62b5f9e190962bd2
+Size (rox/rox-2.4.tgz) = 2344632 bytes
