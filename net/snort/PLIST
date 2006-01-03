@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2005/08/13 19:56:47 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/01/03 17:34:40 adrianp Exp $
 bin/snort
 man/man8/snort.8
 share/doc/snort/AUTHORS
@@ -32,6 +32,8 @@ share/doc/snort/USAGE
 share/doc/snort/WISHLIST
 share/doc/snort/faq.pdf
 share/doc/snort/faq.tex
+share/doc/snort/schemas/create_mysql
+share/doc/snort/schemas/create_postgresql
 share/doc/snort/snort_manual.pdf
 share/doc/snort/snort_manual.tex
 share/doc/snort/snort_schema_v106.pdf
@@ -46,4 +48,5 @@ share/examples/snort/snort.conf.default
 share/examples/snort/threshold.conf
 share/examples/snort/unicode.map
 @dirrm share/examples/snort
+@dirrm share/doc/snort/schemas
 @unexec ${RMDIR} %D/share/doc/snort 2>/dev/null || ${TRUE}
