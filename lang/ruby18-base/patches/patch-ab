@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2005/11/02 08:56:40 taca Exp $
+$NetBSD: patch-ab,v 1.4 2006/01/03 14:37:24 taca Exp $
 
---- configure.orig	2005-09-21 09:10:31.000000000 +0900
+--- configure.orig	2005-12-24 21:36:33.000000000 +0900
 +++ configure
-@@ -9295,6 +9295,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
+@@ -9356,6 +9356,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
  		ac_cv_func_getpgrp_void=yes
  		ac_cv_func_setitimer=no
  		;;
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.3 2005/11/02 08:56:40 taca Exp $
  freebsd*)	LIBS="-lm $LIBS"
  		echo "$as_me:$LINENO: checking whether -lxpg4 has to be linked" >&5
  echo $ECHO_N "checking whether -lxpg4 has to be linked... $ECHO_C" >&6
-@@ -14305,6 +14308,13 @@ echo $ECHO_N "checking whether OS depend
+@@ -14368,6 +14371,13 @@ echo $ECHO_N "checking whether OS depend
  			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
  			fi
  			rb_cv_dlopen=yes ;;
@@ -26,20 +26,7 @@ $NetBSD: patch-ab,v 1.3 2005/11/02 08:56:40 taca Exp $
  	interix*) 	: ${LDSHARED="$CC -shared"}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
  			LIBPATHFLAG=" -L'%1\$-s'"
-@@ -14390,7 +14400,11 @@ else
- fi;
-   if test "$enable_rpath" = yes; then
-     LIBPATHFLAG=" -L'%1\$-s'"
--    RPATHFLAG=" -Wl,-R'%1\$-s'"
-+    if test "$GCC" = yes; then
-+       RPATHFLAG=" -Wl,-R'%1\$-s'"
-+    else
-+       RPATHFLAG=" -R'%1\$-s'"
-+    fi
-   fi
- fi
- 
-@@ -15088,6 +15102,14 @@ if test "$enable_shared" = 'yes'; then
+@@ -15155,6 +15165,14 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
  	;;

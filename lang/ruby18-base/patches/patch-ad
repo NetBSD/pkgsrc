@@ -1,189 +1,70 @@
-$NetBSD: patch-ad,v 1.3 2005/11/02 08:56:40 taca Exp $
+$NetBSD: patch-ad,v 1.4 2006/01/03 14:37:24 taca Exp $
 
---- eval.c.orig	2005-09-20 18:26:35.000000000 +0900
+--- eval.c.orig	2005-12-20 22:41:47.000000000 +0900
 +++ eval.c
-@@ -1837,7 +1837,7 @@ ev_const_get(cref, id, self)
- 	if (NIL_P(klass)) return rb_const_get(CLASS_OF(self), id);
- 	while (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, &result)) {
- 	    if (result == Qundef) {
--		rb_autoload_load(klass, id);
-+		if (!RTEST(rb_autoload_load(klass, id))) break;
- 		continue;
+@@ -1810,12 +1810,13 @@ ev_const_defined(cref, id, self)
+     while (cbase && cbase->nd_next) {
+ 	struct RClass *klass = RCLASS(cbase->nd_clss);
+ 
+-	if (NIL_P(klass)) return rb_const_defined(CLASS_OF(self), id);
+-	if (klass->iv_tbl && st_lookup(klass->iv_tbl, id, &result)) {
+-	    if (result == Qundef && NIL_P(rb_autoload_p((VALUE)klass, id))) {
+-		return Qfalse;
++	if (!NIL_P(klass)) {
++	    if (klass->iv_tbl && st_lookup(klass->iv_tbl, id, &result)) {
++		if (result == Qundef && NIL_P(rb_autoload_p((VALUE)klass, id))) {
++		    return Qfalse;
++		}
++		return Qtrue;
  	    }
- 	    return result;
-@@ -2545,6 +2545,7 @@ set_trace_func(obj, trace)
- {
-     rb_event_hook_t *hook;
- 
-+    rb_secure(4);
-     if (NIL_P(trace)) {
- 	trace_func = 0;
- 	rb_remove_event_hook(call_trace_func);
-@@ -2814,7 +2815,15 @@ unknown_node(node)
-     NODE *volatile node;
- {
-     ruby_current_node = 0;
--    rb_bug("unknown node type %d", nd_type(node));
-+    if (node->flags == 0) {
-+        rb_bug("terminated node (0x%lx)", node);
-+    }
-+    else if (BUILTIN_TYPE(node) != T_NODE) {
-+        rb_bug("not a node 0x%02lx (0x%lx)", BUILTIN_TYPE(node), node);
-+    }
-+    else {
-+        rb_bug("unknown node type %d (0x%lx)", nd_type(node), node);
-+    }
- }
- 
- static VALUE
-@@ -4091,21 +4100,32 @@ module_setup(module, n)
- static NODE *basic_respond_to = 0;
- 
- int
--rb_respond_to(obj, id)
-+rb_obj_respond_to(obj, id, priv)
-     VALUE obj;
-     ID id;
-+    int priv;
- {
-     VALUE klass = CLASS_OF(obj);
--    if (rb_method_node(klass, respond_to) == basic_respond_to &&
--	rb_method_boundp(klass, id, 0)) {
--	return Qtrue;
-+
-+    if (rb_method_node(klass, respond_to) == basic_respond_to) {
-+	return rb_method_boundp(klass, id, !priv);
+-	    return Qtrue;
+ 	}
+ 	cbase = cbase->nd_next;
      }
--    else{
--	return rb_funcall(obj, respond_to, 1, ID2SYM(id));
-+    else {
-+	VALUE args[2];
-+	int n = 0;
-+	args[n++] = ID2SYM(id);
-+	if (priv) args[n++] = Qtrue;
-+	return rb_funcall2(obj, respond_to, n, args);
-     }
--    return Qfalse;
- }
+@@ -1834,13 +1835,15 @@ ev_const_get(cref, id, self)
+     while (cbase && cbase->nd_next) {
+ 	VALUE klass = cbase->nd_clss;
  
-+int
-+rb_respond_to(obj, id)
-+    VALUE obj;
-+    ID id;
-+{
-+    return rb_obj_respond_to(obj, id, Qfalse);
-+}
- 
- /*
-  *  call-seq:
-@@ -4117,7 +4137,7 @@ rb_respond_to(obj, id)
-  */
- 
- static VALUE
--rb_obj_respond_to(argc, argv, obj)
-+obj_respond_to(argc, argv, obj)
-     int argc;
-     VALUE *argv;
-     VALUE obj;
-@@ -5921,7 +5941,7 @@ rb_apply(recv, mid, args)
-  *     obj.__send__(symbol [, args...])    => obj
-  *  
-  *  Invokes the method identified by _symbol_, passing it any
-- *  arguments specified. You can use <code>__send__</code> if the name
-+ *  arguments specified. You can use <code>\_\_send__</code> if the name
-  *  +send+ clashes with an existing method in _obj_.
-  *     
-  *     class Klass
-@@ -6060,6 +6080,9 @@ rb_call_super(argc, argv)
- 
-     self = ruby_frame->self;
-     klass = ruby_frame->last_class;
-+    if (RCLASS(klass)->super == 0) {
-+	return method_missing(self, ruby_frame->last_func, argc, argv, CSTAT_SUPER);
-+    }
- 
-     PUSH_ITER(ruby_iter->iter ? ITER_PRE : ITER_NOT);
-     result = rb_call(RCLASS(klass)->super, self, ruby_frame->orig_func, argc, argv, 3);
-@@ -6419,14 +6442,16 @@ exec_under(func, under, cbase, args)
-     VALUE val = Qnil;		/* OK */
-     int state;
-     int mode;
-+    struct FRAME *f = ruby_frame->prev;
- 
-     PUSH_CLASS(under);
-     PUSH_FRAME();
--    ruby_frame->self = _frame.prev->self;
--    ruby_frame->last_func = _frame.prev->last_func;
--    ruby_frame->last_class = _frame.prev->last_class;
--    ruby_frame->argc = _frame.prev->argc;
--    ruby_frame->argv = _frame.prev->argv;
-+    ruby_frame->self = f->self;
-+    ruby_frame->last_func = f->last_func;
-+    ruby_frame->orig_func = f->orig_func;
-+    ruby_frame->last_class = f->last_class;
-+    ruby_frame->argc = f->argc;
-+    ruby_frame->argv = f->argv;
-     if (cbase) {
- 	PUSH_CREF(cbase);
-     }
-@@ -6844,19 +6869,19 @@ rb_provide(feature)
-     rb_provide_feature(rb_str_new2(feature));
- }
- 
--static void
-+static int
- load_wait(ftptr)
-     char *ftptr;
- {
-     st_data_t th;
- 
--    if (!loading_tbl) return;
--    if (!st_lookup(loading_tbl, (st_data_t)ftptr, &th)) return;
--    if ((rb_thread_t)th == curr_thread) return;
-+    if (!loading_tbl) return Qfalse;
-+    if (!st_lookup(loading_tbl, (st_data_t)ftptr, &th)) return Qfalse;
-     do {
-+	if ((rb_thread_t)th == curr_thread) return Qtrue;
- 	CHECK_INTS;
--	rb_thread_schedule();
-     } while (st_lookup(loading_tbl, (st_data_t)ftptr, &th));
-+    return Qtrue;
- }
- 
- /*
-@@ -6987,8 +7012,7 @@ rb_require_safe(fname, safe)
- 	ruby_safe_level = safe;
- 	found = search_required(fname, &feature, &path);
- 	if (found) {
--	    if (!path) {
--		load_wait(RSTRING(feature)->ptr);
-+	    if (!path || load_wait(RSTRING(path)->ptr)) {
- 		result = Qfalse;
+-	if (NIL_P(klass)) return rb_const_get(CLASS_OF(self), id);
+-	while (RCLASS(klass)->iv_tbl && st_lookup(RCLASS(klass)->iv_tbl, id, &result)) {
+-	    if (result == Qundef) {
+-		if (!RTEST(rb_autoload_load(klass, id))) break;
+-		continue;
++	if (!NIL_P(klass)) {
++	    while (RCLASS(klass)->iv_tbl &&
++		   st_lookup(RCLASS(klass)->iv_tbl, id, &result)) {
++		if (result == Qundef) {
++		    if (!RTEST(rb_autoload_load(klass, id))) break;
++		    continue;
++		}
++		return result;
  	    }
- 	    else {
-@@ -7751,7 +7775,7 @@ Init_eval()
-     rb_define_global_function("method_missing", rb_method_missing, -1);
-     rb_define_global_function("loop", rb_f_loop, 0);
- 
--    rb_define_method(rb_mKernel, "respond_to?", rb_obj_respond_to, -1);
-+    rb_define_method(rb_mKernel, "respond_to?", obj_respond_to, -1);
-     respond_to   = rb_intern("respond_to?");
-     basic_respond_to = rb_method_node(rb_cObject, respond_to);
-     rb_global_variable((VALUE*)&basic_respond_to);
-@@ -9383,6 +9407,7 @@ rb_mod_define_method(argc, argv, mod)
- 	noex = NOEX_PUBLIC;
+-	    return result;
+ 	}
+ 	cbase = cbase->nd_next;
      }
-     rb_add_method(mod, id, node, noex);
-+    rb_define_method(rb_cBinding, "dup", proc_dup, 0);
-     return body;
- }
+@@ -3886,7 +3889,7 @@ rb_eval(self, n)
+ 	if (NIL_P(ruby_class)) {
+ 	    rb_raise(rb_eTypeError, "no class to undef method");
+ 	}
+-	rb_undef(ruby_class, node->nd_mid);
++	rb_undef(ruby_class, rb_to_id(rb_eval(self, node->u2.node)));
+ 	result = Qnil;
+ 	break;
  
-@@ -12549,7 +12574,7 @@ thgroup_list(group)
-  *     ThreadError: can't move from the enclosed thread group
-  */
+@@ -3894,12 +3897,13 @@ rb_eval(self, n)
+ 	if (NIL_P(ruby_class)) {
+ 	    rb_raise(rb_eTypeError, "no class to make alias");
+ 	}
+-	rb_alias(ruby_class, node->nd_new, node->nd_old);
++	rb_alias(ruby_class, rb_to_id(rb_eval(self, node->u1.node)),
++		             rb_to_id(rb_eval(self, node->u2.node)));
+ 	result = Qnil;
+ 	break;
  
--VALUE
-+static VALUE
- thgroup_enclose(group)
-     VALUE group;
- {
+       case NODE_VALIAS:
+-	rb_alias_variable(node->nd_new, node->nd_old);
++	rb_alias_variable(node->u1.id, node->u2.id);
+ 	result = Qnil;
+ 	break;
+ 

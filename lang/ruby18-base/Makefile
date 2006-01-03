@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/12/29 06:21:47 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/03 14:37:24 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	2
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -15,7 +14,8 @@ RUBY_VERSION=		${RUBY18_VERSION}
 
 CONFLICTS=		${RUBY_PKGPREFIX}-dbm-[0-9]* \
 			${RUBY_PKGPREFIX}-digest-[0-9]* \
-			${RUBY_PKGPREFIX}-openssl-[0-9]*
+			${RUBY_PKGPREFIX}-openssl-[0-9]* \
+			${RUBY_PKGPREFIX}-tcltk-[0-9]*
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		yacc
