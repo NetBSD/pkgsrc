@@ -1,5 +1,0 @@
-cmd is a library for building line-oriented command interpreters in
-Ruby. Simply inherit from cmd's Cmd class, and methods whose names
-start with do_ become interactive commands.  cmd is inspired by the
-Python library of the same name, but offers a distinctive Ruby feel
-and several additional features.
