@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/11/02 09:48:34 taca Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/03 15:07:29 taca Exp $
 
 DISTNAME=	ruby-tcpwrap-0.6
 PKGNAME=	${RUBY_PKGPREFIX}-tcpwrap-0.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security ruby
 MASTER_SITES=	http://www.shugo.net/archive/ruby-tcpwrap/
 
