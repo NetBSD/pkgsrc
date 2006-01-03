@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2005/03/27 10:27:21 recht Exp $
+$NetBSD: patch-ab,v 1.8 2006/01/03 00:04:42 wiz Exp $
 
---- config/mh-darwin.orig	Wed Mar 23 21:28:45 2005
-+++ config/mh-darwin	Wed Mar 23 21:28:48 2005
-@@ -25,7 +25,7 @@
+--- config/mh-darwin.orig	2004-05-18 23:54:24.000000000 +0200
++++ config/mh-darwin
+@@ -25,7 +25,7 @@ SHLIB.c=	$(CC) -dynamiclib -dynamic $(CF
  SHLIB.cc=	$(CXX) -dynamiclib -dynamic $(CXXFLAGS) $(LDFLAGS)
  
  ## Compiler switches to embed a library name and version information
