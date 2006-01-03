@@ -1,0 +1,13 @@
+Image_Graph provides a set of classes that creates graphs/plots/charts based on
+(numerical) data.
+
+Many different plot types are supported: Bar, line, area, step, impulse,
+scatter, radar, pie, map, candlestick, band, box & whisker and smoothed line,
+area and radar plots.
+
+The graph is highly customizable, making it possible to get the exact look
+and feel that is required.
+
+The output is controlled by a Image_Canvas, which facilitates easy output to
+many different output formats, amongst others, GD (PNG, JPEG, GIF, WBMP), PDF
+(using PDFLib), Scalable Vector Graphics (SVG).
