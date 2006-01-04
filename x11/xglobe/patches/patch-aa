@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2004/07/06 22:08:17 hubertf Exp $
+$NetBSD: patch-aa,v 1.9 2006/01/04 14:54:17 joerg Exp $
 
 --- Makefile.orig	1999-07-19 07:56:27.000000000 -0500
 +++ Makefile	2003-11-14 12:31:20.000000000 -0600
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.8 2004/07/06 22:08:17 hubertf Exp $
 +LIB_DIRS     = -L$(QT_LIB_DIR) -Wl,-R${QT_LIB_DIR} -L$(X11_LIB_DIR) -Wl,-R$(X11_LIB_DIR)
  
 -LIBS         = -lX11 -lqt -lm
-+LIBS         = -lqt-mt -lm -lXext -lX11
++LIBS         = -lqt-mt -lm -lXext -lX11 ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  # If you want to use the QImageIO lib (to support jpg and png maps) use the
  # next two lines and comment the one above
  #WITH_QIMGIO  = -DWITH_QIMAGEIO
