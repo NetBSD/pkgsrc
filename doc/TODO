@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4367 2006/01/04 15:07:24 adrianp Exp $
+$NetBSD: TODO,v 1.4368 2006/01/04 15:33:09 ghen Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ Suggested package updates
 	o enscript-1.6.4
 	o epstool-3.08
 	o eric3-3.8.1
-	o erlang-10b-7 [pkg/31555]
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
@@ -828,7 +827,6 @@ Suggested package updates
 	o openh323-1.17.2
 	o openldap-2.3.14
 	o openoffice-2.0.1
-	o openoffice-bin-2.0.1
 	o openpam-20050616
 	o openssl-0.9.8a
 	o oroborus-2.0.15
