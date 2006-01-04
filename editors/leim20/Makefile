@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/01/04 16:58:13 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/04 16:58:58 joerg Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGREVISION=	5
@@ -17,6 +17,9 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
 VERSION=	20.7
+
+CONFIG_GUESS_OVERRIDE=	../config.guess
+CONFIG_SUB_OVERRIDE=	../config.sub
 
 post-extract:
 	@${ECHO} '#!/bin/sh' >${WRKSRC}/configure
