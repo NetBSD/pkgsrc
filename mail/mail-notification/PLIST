@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/05 08:44:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/04 20:28:01 gdt Exp $
 bin/mail-notification
-lib/bonobo/servers/GNOME_MailNotification_Automation.server
+lib/bonobo/servers/GNOME_MailNotification.server
+share/applications/mail-notification-properties.desktop
 share/applications/mail-notification.desktop
-share/control-center-2.0/capplets/mail-notification-properties.desktop
 share/examples/mail-notification/sound/events/mail-notification.soundlist
 share/gconf/schemas/mail-notification.schemas
 share/gnome/help/mail-notification/C/documentation-license.xml
 share/gnome/help/mail-notification/C/figures/mail.png
+share/gnome/help/mail-notification/C/figures/mailbox-emblem-error.png
+share/gnome/help/mail-notification/C/figures/mailbox-emblem-polled.png
+share/gnome/help/mail-notification/C/figures/mailbox-emblem-unknown.png
 share/gnome/help/mail-notification/C/mail-notification.xml
 share/gnome/help/mail-notification/C/software-license.xml
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/mail-notification.mo
@@ -17,16 +20,16 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/mail-notification.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mail-notification.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/mail-notification.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/mail-notification.mo
-share/mail-notification/ui/authentication.glade
+share/mail-notification/ui/edit-toolbars-dialog.glade
 share/mail-notification/ui/gmail.png
+share/mail-notification/ui/hand-open.png
 share/mail-notification/ui/logo.png
-share/mail-notification/ui/mail-notification.png
-share/mail-notification/ui/mailbox-properties.glade
-share/mail-notification/ui/properties.glade
-share/mail-notification/ui/summary-dialog.glade
-share/mail-notification/ui/summary-popup.glade
-share/mail-notification/ui/unsupported.png
-share/mail-notification/ui/welcome.glade
+share/mail-notification/ui/mail-summary-popup.glade
+share/mail-notification/ui/mailbox-properties-dialog.glade
+share/mail-notification/ui/main-window.png
+share/mail-notification/ui/menus.xml
+share/mail-notification/ui/properties-dialog.glade
+share/mail-notification/ui/toolbars.xml
 share/omf/mail-notification/mail-notification-C.omf
 share/pixmaps/mail-notification.png
 @comment in xdg-dirs: @dirrm share/pixmaps
@@ -42,6 +45,5 @@ share/pixmaps/mail-notification.png
 @dirrm share/examples/mail-notification/sound/events
 @dirrm share/examples/mail-notification/sound
 @dirrm share/examples/mail-notification
-@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in xdg-dirs: @dirrm share/applications
 @comment in libbonobo: @dirrm lib/bonobo/servers
