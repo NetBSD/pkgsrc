@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/29 06:21:47 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/01/04 17:44:24 reed Exp $
 #
 
 PKGNAME=		php-${PHP_BASE_VERS}
@@ -38,7 +38,7 @@ post-install:
 	${SED} -e 's,\(-d output_buffering=1\) \(\$$INCDIR/pearcmd.php\),\1 -n \2,' ${PREFIX}/bin/pear > ${PREFIX}/bin/pear.new && \
 		${MV} ${PREFIX}/bin/pear.new ${PREFIX}/bin/pear
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
-	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/man/man1/php.1
+	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/${PKGMANDIR}/man1/php.1
 	${INSTALL_DATA_DIR} ${CGIDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php ${CGIDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
