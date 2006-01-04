@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/26 23:39:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/04 04:29:05 schmonz Exp $
 
 DISTNAME=	madman-0.93
 PKGREVISION=	2
@@ -9,8 +9,7 @@ MAINTAINER=	ove@elektro-eel.org
 HOMEPAGE=	http://madman.sourceforge.net/
 COMMENT=	Powerful audio manager for large collections
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 

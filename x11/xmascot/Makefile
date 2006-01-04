@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/26 23:39:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/04 04:29:09 schmonz Exp $
 
 DISTNAME=	xmascot2.5p2
 PKGNAME=        xmascot-2.5p2
@@ -10,8 +10,7 @@ MAINTAINER=	Nakai@Mlab.t.u-tokyo.ac.jp
 HOMEPAGE=	http://cclub.cc.tut.ac.jp/xmascot/
 COMMENT=	Moving mascot on your X-Window screen
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 USE_IMAKE=	yes
 
