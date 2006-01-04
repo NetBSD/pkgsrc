@@ -1,11 +1,12 @@
-$NetBSD: patch-an,v 1.1 2004/01/13 21:58:51 kristerw Exp $
+$NetBSD: patch-an,v 1.2 2006/01/04 17:00:32 joerg Exp $
 
---- src/emacs.c.orig	Tue Jan 13 22:28:51 2004
-+++ src/emacs.c	Tue Jan 13 22:30:08 2004
-@@ -602,7 +602,6 @@
+--- src/emacs.c.orig	2000-05-24 13:58:54.000000000 +0000
++++ src/emacs.c
+@@ -601,8 +601,6 @@ main (argc, argv, envp)
+ {
    char stack_bottom_variable;
    int skip_args = 0;
-   extern int errno;
+-  extern int errno;
 -  extern int sys_nerr;
  #ifdef HAVE_SETRLIMIT
    struct rlimit rlim;

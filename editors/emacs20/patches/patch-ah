@@ -1,8 +1,19 @@
-$NetBSD: patch-ah,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-ah,v 1.2 2006/01/04 17:00:32 joerg Exp $
 
---- src/fileio.c.orig	Tue May 16 20:02:13 2000
-+++ src/fileio.c	Sun Jun 18 09:19:08 2000
-@@ -3252,8 +3252,11 @@
+--- src/fileio.c.orig	2000-05-16 11:02:13.000000000 +0000
++++ src/fileio.c
+@@ -61,10 +61,6 @@ Boston, MA 02111-1307, USA.  */
+ 
+ #include <errno.h>
+ 
+-#ifndef vax11c
+-extern int errno;
+-#endif
+-
+ extern char *strerror ();
+ 
+ #ifdef APOLLO
+@@ -3252,8 +3248,11 @@ The value is an integer.")
    return value;
  }
  

@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-aj,v 1.2 2006/01/04 17:00:32 joerg Exp $
 
---- src/process.c.orig	Wed May 24 04:10:16 2000
-+++ src/process.c	Mon Sep  4 14:15:19 2000
+--- src/process.c.orig	2000-05-23 19:10:16.000000000 +0000
++++ src/process.c
 @@ -1,7 +1,18 @@
 +/*
 + * Locally hacked process.c to add ipv6 support. -wsr
@@ -21,7 +21,15 @@ $NetBSD: patch-aj,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  This file is part of GNU Emacs.
  
  GNU Emacs is free software; you can redistribute it and/or modify
-@@ -1810,15 +1821,21 @@
+@@ -147,7 +158,6 @@ Lisp_Object Qlast_nonmenu_event;
+ 
+ #include "syswait.h"
+ 
+-extern int errno;
+ extern char *strerror ();
+ #ifdef VMS
+ extern char *sys_errlist[];
+@@ -1810,15 +1820,21 @@ Fourth arg SERVICE is name of the servic
  {
    Lisp_Object proc;
    register int i;
@@ -46,7 +54,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
    struct gcpro gcpro1, gcpro2, gcpro3, gcpro4;
    int retry = 0;
    int count = specpdl_ptr - specpdl;
-@@ -1831,6 +1848,22 @@
+@@ -1831,6 +1847,22 @@ Fourth arg SERVICE is name of the servic
    GCPRO4 (name, buffer, host, service);
    CHECK_STRING (name, 0);
    CHECK_STRING (host, 0);
@@ -69,7 +77,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
    if (INTEGERP (service))
      port = htons ((unsigned short) XINT (service));
    else
-@@ -1841,6 +1874,7 @@
+@@ -1841,6 +1873,7 @@ Fourth arg SERVICE is name of the servic
  	error ("Unknown service \"%s\"", XSTRING (service)->data);
        port = svc_info->s_port;
      }
@@ -77,7 +85,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  
    /* Slow down polling to every ten seconds.
       Some kernels have a bug which causes retrying connect to fail
-@@ -1850,6 +1884,75 @@
+@@ -1850,6 +1883,75 @@ Fourth arg SERVICE is name of the servic
  #endif
  
  #ifndef TERM
@@ -153,7 +161,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
    while (1)
      {
  #ifdef TRY_AGAIN
-@@ -1940,6 +2043,7 @@
+@@ -1940,6 +2042,7 @@ Fourth arg SERVICE is name of the servic
        report_file_error ("connection failed",
  			 Fcons (host, Fcons (name, Qnil)));
      }
