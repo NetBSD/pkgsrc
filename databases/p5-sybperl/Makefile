@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:49:58 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/04 19:39:33 reed Exp $
 #
 
 DISTNAME=	sybperl-2.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases perl5
 MASTER_SITES=	http://www.peppler.org/downloads/
 
@@ -24,7 +24,7 @@ _SYBASE=		${SYBASE}
 PKG_FAIL_REASON+=	"You must define SYBASE to the base directory of your Open Client."
 .  endif
 .else
-_SYBASE=		${BUILDLINK_PREFIX.freetds}/freetds
+_SYBASE=		${BUILDLINK_PREFIX.freetds}
 .endif
 
 PERL5_LDFLAGS+=		${COMPILER_RPATH_FLAG}${_SYBASE}/lib
@@ -34,5 +34,6 @@ MAKE_ENV+=		SYBASE=${_SYBASE:Q}
 .  include "../../databases/freetds/buildlink3.mk"
 .endif
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
