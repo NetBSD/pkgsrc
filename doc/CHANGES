@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12353 2006/01/04 15:07:24 adrianp Exp $
+$NetBSD: CHANGES,v 1.12354 2006/01/04 15:30:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -96,3 +96,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added databases/jdbc-postgresql81 version 404 [abs 2006-01-04]
 	Updated misc/udfclient to 0.5.1 [reinoud 2006-01-04]
 	Updated devel/cvsgraph to 1.6.0 [adrianp 2006-01-04]
+	Updated misc/openoffice2-bin to 2.0.1 [ghen 2006-01-04]
