@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2005/12/29 06:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/01/04 18:06:17 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-${GCC_VERSION}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 
 BUILD_USES_MSGFMT=	YES
-GCC_VERSION=		3.4.4
+GCC_VERSION=		3.4.5
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
