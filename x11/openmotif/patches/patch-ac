@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2006/01/04 15:20:45 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2006/01/04 15:53:15 joerg Exp $
 
 --- lib/Xm/Xmos.c.orig	2005-11-25 05:50:57.000000000 +0100
 +++ lib/Xm/Xmos.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.4 2006/01/04 15:20:45 joerg Exp $
  
  #include <sys/stat.h>
  
-+#if defined(__NetBSD__) && __NetBSD_Version >= 299001000 && !defined(_POSIX_THREAD_SAFE_FUNCTIONS) /* NetBSD 2.99.10 */
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 299001000 && !defined(_POSIX_THREAD_SAFE_FUNCTIONS) /* NetBSD 2.99.10 */
 +#define _POSIX_THREAD_SAFE_FUNCTIONS 200112L
 +#endif
 +
