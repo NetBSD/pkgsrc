@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/26 23:39:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/04 04:29:06 schmonz Exp $
 
 DISTNAME=		Coin-2.4.4
 CATEGORIES=		graphics
@@ -8,8 +8,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.coin3d.org/
 COMMENT=		Free, portable, Open Inventor API implementation
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=		pkgsrc-2005Q4
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-3ds-import

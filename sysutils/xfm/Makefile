@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/26 23:39:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/04 04:29:08 schmonz Exp $
 
 DISTNAME=	xfm-1.4.3
 PKGREVISION=	1
@@ -9,8 +9,7 @@ MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/
 COMMENT=	The X File Manager
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 WRKSRC=		${WRKDIR}/xfm-1.4.3
 USE_IMAKE=	YES

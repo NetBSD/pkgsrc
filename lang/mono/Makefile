@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/01/03 08:03:53 recht Exp $
+# $NetBSD: Makefile,v 1.48 2006/01/04 04:29:07 schmonz Exp $
 
 DISTNAME=	mono-1.1.12.1
 CATEGORIES=	lang
@@ -8,8 +8,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 

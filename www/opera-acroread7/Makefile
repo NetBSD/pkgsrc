@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/12/26 23:39:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/04 04:29:09 schmonz Exp $
 
 DISTNAME= 		opera-acroread7-1.0
 
 MAINTAINER=		jschauma@NetBSD.org
 COMMENT=		Acrobat Reader 7 plugin for opera
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=		pkgsrc-2005Q4
 
 DEPENDS+=		acroread7-7.[0-9]*:../../print/acroread7
 CONFLICTS+=		opera-acroread-[0-9]*

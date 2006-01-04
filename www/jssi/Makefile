@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/12/26 23:39:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2006/01/04 04:29:09 schmonz Exp $
 
 DISTNAME=	ApacheJSSI-1.1.2
 PKGNAME=	jssi-1.1.2
@@ -9,8 +9,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://java.apache.org/
 COMMENT=	Java Server-Side Include engine as a JSDK-2.0 servlet
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 # yes, this needs _exactly_ version 2.0
 DEPENDS+=	jsdk-2.0:../../www/jsdk20

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/26 23:39:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/04 04:29:07 schmonz Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -13,8 +13,7 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 WRKSRC=		${WRKDIR}/ray
 
