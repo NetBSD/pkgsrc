@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/09/05 16:05:40 wiz Exp $
+$NetBSD: distinfo,v 1.8 2006/01/04 22:37:38 wiz Exp $
 
-SHA1 (pbzip2-0.9.4.tar.gz) = 66b5daf7483e989f1e8e5485980e96b7067d8916
-RMD160 (pbzip2-0.9.4.tar.gz) = f1e9c65b36cafafc8e4d6e10c1a9d844753a49b6
-Size (pbzip2-0.9.4.tar.gz) = 18765 bytes
+SHA1 (pbzip2-0.9.5.tar.gz) = 5a0ee72509abd127d449fca87fcf177dda3dd3f6
+RMD160 (pbzip2-0.9.5.tar.gz) = f675ba080468e69d17649684c1e2e3d6abe2a166
+Size (pbzip2-0.9.5.tar.gz) = 20145 bytes

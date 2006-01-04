@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/09/05 16:05:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/04 22:37:38 wiz Exp $
 #
 
-DISTNAME=		pbzip2-0.9.4
+DISTNAME=		pbzip2-0.9.5
 CATEGORIES=		archivers
 MASTER_SITES=		http://compression.ca/pbzip2/
 
@@ -16,7 +16,7 @@ CPPFLAGS+=		-D_LARGEFILE_SOURCE=1
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
 LIBS+=			-lbz2
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	cd ${WRKSRC}; \
@@ -24,7 +24,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pbzip2 ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/pbzip2.1 ${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/pbzip2.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pbzip2
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/pbzip2
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pbzip2
