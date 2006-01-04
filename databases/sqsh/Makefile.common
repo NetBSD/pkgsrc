@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2005/12/29 06:21:36 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2006/01/04 18:30:16 reed Exp $
 
 DISTNAME=	sqsh-2.1-src
 CATEGORIES=	databases
@@ -27,7 +27,7 @@ _SYBASE=		${SYBASE}
 PKG_FAIL_REASON+=	"You must define SYBASE to the base directory of Open Client."
 .  endif
 .else
-_SYBASE=		${BUILDLINK_PREFIX.freetds}/freetds
+_SYBASE=		${BUILDLINK_PREFIX.freetds}
 CONFIGURE_ENV+=		SYBASE_LIBS=-lct
 MAKE_FLAGS+=		SYBASE_LIBS=-lct
 .endif
@@ -37,11 +37,11 @@ CONFIGURE_ENV+=		SYBASE=${_SYBASE:Q}
 CONFIGURE_ENV+=		INCDIRS="${BUILDLINK_PREFIX.readline}/include"
 CONFIGURE_ENV+=		LIBDIRS="${BUILDLINK_PREFIX.readline}/lib"
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/sqsh ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/sqsh.1 ${PREFIX}/man/man1/sqsh.1
+	${INSTALL_MAN} ${WRKSRC}/doc/sqsh.1 ${PREFIX}/${PKGMANDIR}/man1/sqsh.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sqsh
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.sqshrc ${PREFIX}/share/examples/sqsh
 
