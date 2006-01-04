@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/12/19 16:09:57 taca Exp $
+# $NetBSD: Makefile,v 1.36 2006/01/04 21:22:06 joerg Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040401
@@ -53,7 +53,8 @@ CONFIGURE_ENV+=         vi_cv_sys5_pty=no
 .endif
 
 post-patch:
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || \
+    ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 	${RM} -f ${WRKSRC}/include/sys/queue.h
 .endif
 
