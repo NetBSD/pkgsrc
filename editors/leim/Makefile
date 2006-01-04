@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/28 04:25:29 uebayasi Exp $
+# $NetBSD: Makefile,v 1.20 2006/01/04 17:05:02 joerg Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -17,6 +17,9 @@ USE_TOOLS+=	gmake
 VERSION=	21.4
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox
+
+CONFIG_GUESS_OVERRIDE=	../config.guess
+CONFIG_SUB_OVERRIDE=	../config.sub
 
 post-extract:
 	@${ECHO} '#!/bin/sh' >${WRKSRC}/configure
