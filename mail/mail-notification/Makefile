@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2005/12/31 12:32:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/04 20:28:01 gdt Exp $
 #
 
-DISTNAME=	mail-notification-1.0
-PKGREVISION=	3
+DISTNAME=	mail-notification-2.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/mailnotify/
 COMMENT=	Status icon that provides new mail notifications
 
@@ -55,7 +54,7 @@ CONFIGURE_ARGS+=	--disable-ssl
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../mail/gmime/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
