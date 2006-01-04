@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/01/04 04:29:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/04 20:58:56 reed Exp $
 #
 
 DISTNAME=	sybase-0.36
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases python
 MASTER_SITES=	http://object-craft.com.au/projects/sybase/download/
 
@@ -15,11 +15,10 @@ BROKEN_IN=	pkgsrc-2005Q4
 
 PYTHON_VERSIONS_ACCEPTED=	21 22 23 24
 
-BUILDLINK_DEPENDS.freetds=	freetds-0.61*
 PYSETUPBUILDARGS=	build_ext -D HAVE_FREETDS=61 -U WANT_BULKCOPY
 PYDISTUTILSPKG=		yes
 
-SYBASE=		${BUILDLINK_PREFIX.freetds}/freetds
+SYBASE=		${BUILDLINK_PREFIX.freetds}
 MAKE_ENV+=	SYBASE=${SYBASE:Q}
 
 post-patch:
