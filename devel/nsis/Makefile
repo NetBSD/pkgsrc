@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/30 09:53:07 cube Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/04 22:36:24 wiz Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -13,7 +13,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://nsis.sourceforge.net/Main_Page
 COMMENT=	Scriptable system to build Windows installers
 
-DEPENDS+=	scons>=0.96.91:../../local/scons-devel
+DEPENDS+=	scons>=0.96.91:../../devel/scons-devel
 
 NSIS_SRC=	${DISTNAME:=-src}
 NSIS_VER=	2.12
