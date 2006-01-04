@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/07/19 10:18:59 grant Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/04 14:11:13 joerg Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGREVISION=	5
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods
 
-DEPENDS+=	emacs-${VERSION}nb5:../../editors/emacs20
+DEPENDS+=	emacs-${VERSION}:../../editors/emacs20
 
 WRKSRC=		${WRKDIR}/emacs-20.7/leim
 GNU_CONFIGURE=	yes
