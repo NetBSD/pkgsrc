@@ -1,0 +1,7 @@
+This is a pure Java (Type IV) JDBC driver for the PostgreSQL
+database.  It allows Java programs to connect to a PostgreSQL
+database using standard, database independent Java code.
+
+The driver provides a reasonably complete implementation of the
+JDBC 3 specification in addition to some PostgreSQL specific
+extensions.
