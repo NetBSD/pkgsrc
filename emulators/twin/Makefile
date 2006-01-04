@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/26 23:39:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/04 04:29:06 schmonz Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -11,8 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.willows.com/
 COMMENT=		Cross-platform implementation of the win32 api
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=		pkgsrc-2005Q4
 
 WRKSRC=			${WRKDIR}/twin
 GNU_CONFIGURE=		yes

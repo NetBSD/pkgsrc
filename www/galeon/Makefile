@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2005/12/31 12:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2006/01/04 04:29:08 schmonz Exp $
 #
 
 DISTNAME=	galeon-1.3.21
@@ -11,8 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://galeon.sourceforge.net/
 COMMENT=	GNOME2 Web browser based on gecko
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 BUILD_USES_MSGFMT=	yes
 

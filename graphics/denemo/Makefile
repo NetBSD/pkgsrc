@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/26 23:39:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/04 04:29:06 schmonz Exp $
 #
 
 DISTNAME=	denemo-0.5.4
@@ -10,8 +10,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://denemo.sourceforge.net/
 COMMENT=	GUI musical score editor written in C/GTK+
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 
