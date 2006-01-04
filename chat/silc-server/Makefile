@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/12/29 06:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2006/01/04 18:04:12 joerg Exp $
 #
 
 DISTNAME=		silc-server-1.0.2
@@ -71,8 +71,15 @@ CONFIGURE_ARGS+=	--disable-asm
 
 .include "options.mk"
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	motd.txt
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
+
+post-extract:
+	@${CP} ${FILESDIR}/motd.txt ${WRKSRC}
+
 post-install:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
-		> ${EGDIR}/motd.txt.default
+	${INSTALL_DATA} ${WRKSRC}/motd.txt ${EGDIR}/motd.txt.default
 
 .include "../../mk/bsd.pkg.mk"
