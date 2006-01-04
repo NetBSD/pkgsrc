@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2006/01/03 21:14:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.198 2006/01/04 11:49:54 abs Exp $
 #
 
 COMMENT=	Databases
@@ -29,7 +29,6 @@ SUBDIR+=	java-db3
 SUBDIR+=	jdb
 SUBDIR+=	jdbc-postgresql
 SUBDIR+=	jdbc-postgresql74
-SUBDIR+=	jdbc-postgresql80
 SUBDIR+=	kmysqladmin
 SUBDIR+=	krecipes
 SUBDIR+=	lbdb
@@ -133,10 +132,12 @@ SUBDIR+=	postgresql74-plpython
 SUBDIR+=	postgresql74-server
 SUBDIR+=	postgresql80
 SUBDIR+=	postgresql80-client
+SUBDIR+=	postgresql80-jdbc
 SUBDIR+=	postgresql80-plperl
 SUBDIR+=	postgresql80-plpython
 SUBDIR+=	postgresql80-pltcl
 SUBDIR+=	postgresql80-server
+SUBDIR+=	postgresql81-jdbc
 SUBDIR+=	pxtools
 SUBDIR+=	py-IndexedCatalog
 SUBDIR+=	py-PgSQL
