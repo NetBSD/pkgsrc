@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/12/01 18:12:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/04 20:35:08 joerg Exp $
 bin/any2ps
 bin/b2m
 bin/coco
@@ -104,22 +104,22 @@ lib/mule/19.28/etc/tom.xbm
 lib/mule/19.28/etc/ulimit.hack
 lib/mule/19.28/etc/vipcard.tex
 lib/mule/19.28/etc/yow.lines
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/cvtmail
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/digest-doc
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/emacsserver
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/fakemail
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/hexl
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/make-docfile
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/make-path
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/movemail
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/profile
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/rcs2log
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/sorted-doc
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/test-distrib
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/timer
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/vcdiff
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/wakeup
-lib/mule/19.28/${MACHINE_ARCH}--netbsd/yow
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/cvtmail
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/digest-doc
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/emacsserver
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/fakemail
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/hexl
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/make-docfile
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/make-path
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/movemail
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/profile
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/rcs2log
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/sorted-doc
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/test-distrib
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/timer
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/vcdiff
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/wakeup
+lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}/yow
 lib/mule/19.28/lisp/COPYING
 lib/mule/19.28/lisp/ChangeLog
 lib/mule/19.28/lisp/ChangeLog.1
@@ -922,6 +922,6 @@ lib/mule/19.28/lisp/yow.elc
 @dirrm lib/mule/19.28/lisp/term
 @dirrm lib/mule/19.28/lisp
 @dirrm lib/mule/19.28/etc
-@dirrm lib/mule/19.28/${MACHINE_ARCH}--netbsd
+@dirrm lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}
 @dirrm lib/mule/19.28
 @dirrm lib/mule

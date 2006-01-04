@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.3 2005/12/01 18:13:24 wiz Exp $
+$NetBSD: patch-ad,v 1.4 2006/01/04 20:35:08 joerg Exp $
 
---- configure.orig	1995-06-05 03:11:38.000000000 +0200
+--- configure.orig	1995-06-05 01:11:38.000000000 +0000
 +++ configure
 @@ -581,12 +581,14 @@ case "${canonical}" in
    *-*-netbsd* )
@@ -17,3 +17,11 @@ $NetBSD: patch-ad,v 1.3 2005/12/01 18:13:24 wiz Exp $
        sparc-*-netbsd*)	machine=sparc ;;
      esac
    ;;
+@@ -1177,6 +1179,7 @@ case "${canonical}" in
+       *-bsd386* | *-bsdi* )	opsys=bsd386 ;;
+       *-386bsd* )	        opsys=386bsd ;;
+       *-freebsd* )	        opsys=freebsd ;;
++      *-dragonfly* )		opsys=dragonfly ;;
+       *-nextstep* )             opsys=mach2 ;;
+       ## Otherwise, we'll fall through to the generic opsys code at the bottom.
+     esac
