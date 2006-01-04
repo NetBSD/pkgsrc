@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4369 2006/01/04 22:34:23 wiz Exp $
+$NetBSD: TODO,v 1.4370 2006/01/04 22:37:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ Suggested package updates
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
 	o patchutils-0.2.31
-	o pbzip2-0.9.5
 	o pcal-4.8
 	o pchar-1.5
 	o pciutils-2.2.0
