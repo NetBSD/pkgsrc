@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
+$NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
 
---- configure.orig	2004-12-28 04:45:03.000000000 +0000
+--- configure.orig	2005-08-08 19:38:08.000000000 +0000
 +++ configure
 @@ -37,23 +37,23 @@
  #
@@ -66,7 +66,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  PROTOTYPES
  PSPACKAGE	PS
  PWDCMD
-@@ -287,7 +287,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
+@@ -288,7 +288,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
  test -d /usr/ucb && PATH=$PATH:/usr/ucb			# Sun and others
  test -d /usr/contrib/bin && PATH=$PATH:/usr/contrib/bin	# BSDi
  test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
@@ -75,7 +75,16 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  PATH=$PATH:$OPATH
  
  POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
-@@ -3086,13 +3086,7 @@ main()
+@@ -2399,7 +2399,7 @@ EOF
+ 	if [ ${header_ver} -ge 19960307 ]; then
+ 	    if [ "${lib_ver}" = "3.4" ]; then
+ 		tiff_runlen_t="uint16"
+-	    elif [ "${lib_ver}" = "3.5" -o "${lib_ver}" = "3.6" -o "${lib_ver}" = "3.7" ]; then
++	    elif [ "${lib_ver}" = "3.5" -o "${lib_ver}" = "3.6" -o "${lib_ver}" = "3.7"  -o "${lib_ver}" = "3.8" ]; then
+ 		tiff_runlen_t="uint32"
+ 	    fi
+ 	fi
+@@ -3127,13 +3127,7 @@ main()
          printf("old include files: version %u\n", ZLIB_VERSION);
          exit(-1);
      }
@@ -89,7 +98,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  }
  EOF
  capture cat t.c
-@@ -3154,7 +3148,7 @@ Note "Checking TIFF support."
+@@ -3195,7 +3189,7 @@ Note "Checking TIFF support."
  # Location of TIFF binaries
  #
  if [ -z "$TIFFBIN" ]; then
@@ -98,7 +107,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
      for i in $DIRS; do
          test -x $i/tiff2ps && { TIFFBIN=$i; break; }
      done
-@@ -3775,7 +3769,7 @@ fi
+@@ -3818,7 +3812,7 @@ fi
  if [ -z "$PATH_VGETTY" ]; then
      PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_VGETTY" ]; then
@@ -107,7 +116,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
      else
  	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
-@@ -3788,7 +3782,7 @@ fi
+@@ -3831,7 +3825,7 @@ fi
  if [ -z "$PATH_EGETTY" ]; then
      PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_EGETTY" ]; then
@@ -116,7 +125,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  	Note "WARNING, no egetty program found, using $PATH_EGETTY."
      else
  	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
-@@ -3859,6 +3853,7 @@ PickRIP()
+@@ -3902,6 +3896,7 @@ PickRIP()
  {
      if [ -z "$PATH_GSRIP" ]; then
  	GSLOCS="
@@ -124,7 +133,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  	    /usr/local/bin/gs
  	    /usr/contrib/bin/gs
  	    /usr/gnu/bin/gs
-@@ -3906,7 +3901,7 @@ fax software to operate correctly.  See 
+@@ -3949,7 +3944,7 @@ fax software to operate correctly.  See 
  on building Ghostscript with the necessary TIFF driver.
  
  EOF
@@ -133,7 +142,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  	PATH_GSRIP=$PATH_PSRIP
      fi
  }
-@@ -3973,9 +3968,9 @@ if [ -z "$PATH_AFM" ]; then
+@@ -4016,9 +4011,9 @@ if [ -z "$PATH_AFM" ]; then
      else
          DIR_AFMS="
  	    /usr/lib/afm
@@ -146,7 +155,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  	    /usr/share/ghostscript/fonts
  	    /usr/gnu/lib/ghostscript/fonts
  	    /opt/gnu/lib/ghostscript/fonts
-@@ -3995,7 +3990,7 @@ if [ -z "$PATH_AFM" ]; then
+@@ -4038,7 +4033,7 @@ if [ -z "$PATH_AFM" ]; then
  fi
  if [ -z "$PATH_AFM" ]; then
      # put it where ghostscript normally puts things
@@ -155,7 +164,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
      Note "WARNING, could not locate a directory with font metric information,"
      Note "guessing that font metric information goes in $PATH_AFM."
  else
-@@ -4014,6 +4009,7 @@ fi
+@@ -4057,6 +4052,7 @@ fi
  #
  if [ -z "$DIR_MAN" ]; then
      MANPATH="
@@ -163,7 +172,7 @@ $NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
  	$MANPATH
  	/usr/local/man
  	/usr/contrib/man
-@@ -4023,7 +4019,7 @@ if [ -z "$DIR_MAN" ]; then
+@@ -4066,7 +4062,7 @@ if [ -z "$DIR_MAN" ]; then
      for i in $MANPATH; do
  	test -d $i && { DIR_MAN=$i; break; }
      done
