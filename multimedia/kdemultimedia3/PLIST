@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/12/11 11:20:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/01/04 22:35:42 wiz Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -1172,7 +1172,7 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/doc/kde/HTML/en/krec
 @dirrm share/doc/kde/HTML/en/kmix
 @dirrm share/doc/kde/HTML/en/kmid
-@dirrm share/doc/kde/HTML/en/kioslave
+@comment in kdelibs3: @dirrm share/doc/kde/HTML/en/kioslave
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdemultimedia-apidocs/libkcddb/html
 @dirrm share/doc/kde/HTML/en/kdemultimedia-apidocs/libkcddb/html
 @dirrm share/doc/kde/HTML/en/kdemultimedia-apidocs/libkcddb
