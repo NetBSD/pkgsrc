@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/06/17 04:49:49 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/04 14:54:17 joerg Exp $
 #
 
 DISTNAME=	xglobe-0.5
@@ -36,4 +36,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/getcloudmap.sh ${PREFIX}/bin/xglobe-getcloudmap.sh
 
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
