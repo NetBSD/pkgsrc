@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/04 11:48:06 abs Exp $
+lib/java/${JARFILE}
+${DOCDIR}/README
+${EXAMPLEDIR}/ImageViewer.java
+${EXAMPLEDIR}/Unicode.java
+${EXAMPLEDIR}/basic.java
+${EXAMPLEDIR}/blobtest.java
+${EXAMPLEDIR}/datestyle.java
+${EXAMPLEDIR}/metadata.java
+${EXAMPLEDIR}/psql.java
+${EXAMPLEDIR}/threadsafe.java
+@dirrm ${EXAMPLEDIR}
+@dirrm ${DOCDIR}
