@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/29 06:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/04 17:11:03 joerg Exp $
 #
 
 DISTNAME=	lpe-1.2.6
@@ -26,12 +26,10 @@ CONFIGURE_ENV=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 MAKE_ENV=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 CFLAGS=			-DPREFIX="\"${PREFIX}\""
 
-post-patch:
-	@cd ${WRKSRC}/man &&				\
-	for f in cs de en es; do			\
-		${MV} lpe.1.$${f} lpe.1.$${f}.orig;	\
-		${SED} ${FILES_SUBST_SED} lpe.1.$${f}.orig > lpe.1.$${f}; \
-	done
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	man/lpe.1.cs man/lpe.1.de man/lpe.1.en man/lpe.1.es
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},'
 
 .include "../../devel/libslang/buildlink3.mk"
 
