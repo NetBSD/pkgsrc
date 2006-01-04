@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1782 2006/01/03 17:26:56 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1783 2006/01/04 04:25:47 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -2643,6 +2643,11 @@ PKG_ERROR_MSG.configure+=						\
 	"     * ${WRKLOG}"						\
 	""
 .endif
+.if defined(BROKEN_IN)
+PKG_ERROR_MSG.configure+=						\
+	"     * This package is broken in ${BROKEN_IN}."		\
+	"     * It may be removed in the next branch unless fixed."
+.endif
 ${_CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
 	@${ECHO} "*** The configuration stage of this package requires user interaction"
@@ -2661,6 +2666,11 @@ PKG_ERROR_MSG.build=	\
 	"     * log of the build"					\
 	"     * ${WRKLOG}"						\
 	""
+.if defined(BROKEN_IN)
+PKG_ERROR_MSG.build+=							\
+	"     * This package is broken in ${BROKEN_IN}."		\
+	"     * It may be removed in the next branch unless fixed."
+.endif
 ${_BUILD_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mbuild} == "build" && defined(BATCH)
 	@${ECHO} "*** The build stage of this package requires user interaction"
