@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/12/01 18:13:24 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2006/01/04 20:35:08 joerg Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	2
@@ -22,8 +22,10 @@ USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-x --with-x-toolkit=lucid
-CONFIGURE_ARGS+=	--terminal-face --mcpath
+CFLAGS+=-g
+
+CONFIGURE_ARGS+=	${MACHINE_ARCH}--${LOWER_OPSYS} --with-x --with-x-toolkit=lucid
+CONFIGURE_ARGS+=	--terminal-face --mcpath --canna-libraries=${PREFIX}/lib
 .if ${MACHINE_ARCH} != "alpha" && ${MACHINE_ARCH} != "sparc64"
 CONFIGURE_ARGS+=	--valbits=26
 .endif
