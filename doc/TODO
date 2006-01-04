@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4366 2006/01/04 00:10:58 recht Exp $
+$NetBSD: TODO,v 1.4367 2006/01/04 15:07:24 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -452,7 +452,6 @@ Suggested package updates
 	o cvs-1.11.21
 	o cvs2p4-2.5.5 [schmonz]
 	o cvs2svn-1.2.1 [pkg/30386]
-	o cvsgraph-1.5.2
 	o cvsweb-3.0.6
 	o cweb-3.64a
 	o cxref-1.6a
