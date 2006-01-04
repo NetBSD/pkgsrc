@@ -1,8 +1,17 @@
-$NetBSD: patch-ai,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-ai,v 1.2 2006/01/04 17:00:32 joerg Exp $
 
---- src/sysdep.c.orig	Wed May 24 22:59:14 2000
-+++ src/sysdep.c	Sun Jun 18 09:19:44 2000
-@@ -2134,6 +2134,7 @@
+--- src/sysdep.c.orig	2000-05-24 13:59:14.000000000 +0000
++++ src/sysdep.c
+@@ -104,8 +104,6 @@ extern unsigned start __asm__ ("start");
+ #endif
+ #endif
+ 
+-extern int errno;
+-
+ #ifdef VMS
+ #include <rms.h>
+ #include <ttdef.h>
+@@ -2134,6 +2132,7 @@ unrequest_sigio ()
   *
   */
  
@@ -10,7 +19,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  #ifndef HAVE_TEXT_START
  char *
  start_of_text ()
-@@ -2151,6 +2152,7 @@
+@@ -2151,6 +2150,7 @@ start_of_text ()
  #endif /* TEXT_START */
  }
  #endif /* not HAVE_TEXT_START */
