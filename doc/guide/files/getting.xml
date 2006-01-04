@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.7 2006/01/03 21:48:09 hubertf Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.8 2006/01/04 06:37:59 hubertf Exp $ -->
 
 <chapter id="getting">
   <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -9,9 +9,9 @@
   <sect1 id="as-tar-file">
     <title>As tar file</title>
     
-    <para>To get pkgsrc going, you need to get the &filename.pkgsrc.current.tarball; file
+    <para>To get pkgsrc going, you need to get the pkgsrc.tar.gz file
       from <ulink
-      url="&url.pkgsrc.current.tarball;">ftp.NetBSD.org</ulink>
+      url="ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-current/tar_files/pkgsrc.tar.gz">ftp.NetBSD.org</ulink>
       and unpack it into <filename>/usr/pkgsrc</filename>.</para> 
   
   </sect1>
