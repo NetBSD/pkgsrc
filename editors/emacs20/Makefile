@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/12 21:36:54 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/01/04 17:00:32 joerg Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	6
@@ -37,12 +37,13 @@ CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs-20.7
 .include "../../mk/bsd.prefs.mk"
 
 # This matches NetBSD <1.7 releases and 1.6A-1.6P, where ld is <2.13.2.1.
-.if ${OPSYS} == "NetBSD" && \
+.if (${OPSYS} == "NetBSD" && \
     (empty(OS_VERSION:M1.[0-5]*) && \
      empty(OS_VERSION:M1.6_*) && \
      empty(OS_VERSION:M1.6) && \
      empty(OS_VERSION:M1.6.[0-9]*) && \
-     empty(OS_VERSION:M1.6[A-P]*))
+     empty(OS_VERSION:M1.6[A-P]*))) || \
+    (${OPSYS} == "DragonFly")
 # If using GNU ld 2.13.2.1 or later, avoid creating combined reloc
 # sections and .data reloc sections, both of which Emacs can't handle
 # properly.  Analyzed by Stephen Ma.

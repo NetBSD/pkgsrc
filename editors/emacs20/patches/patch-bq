@@ -1,8 +1,8 @@
-$NetBSD: patch-bq,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-bq,v 1.2 2006/01/04 17:00:32 joerg Exp $
 
---- src/callproc.c.orig	Wed May 24 13:58:24 2000
-+++ src/callproc.c	Fri Jul 19 02:40:39 2002
-@@ -24,6 +24,9 @@
+--- src/callproc.c.orig	2006-01-04 16:05:18.000000000 +0000
++++ src/callproc.c
+@@ -24,8 +24,10 @@ Boston, MA 02111-1307, USA.  */
  
  #include <config.h>
  #include <stdio.h>
@@ -10,5 +10,7 @@ $NetBSD: patch-bq,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
 +#include <unistd.h>
 +#endif
  
- extern int errno;
+-extern int errno;
  extern char *strerror ();
+ 
+ /* Define SIGCHLD as an alias for SIGCLD.  */
