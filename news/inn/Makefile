@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2005/12/29 06:22:05 jlam Exp $
+# $NetBSD: Makefile,v 1.77 2006/01/04 10:32:40 tron Exp $
 
 DISTNAME=		inn-2.4.1
 PKGREVISION=		8
@@ -52,11 +52,11 @@ INN_SPOOLDIRS=		archive articles overview incoming incoming/bad	\
 
 OWN_DIRS=		${PREFIX}/etc/nntp
 OWN_DIRS_PERMS=		${INN_DATA_DIR}			${INN_USER} ${INN_GROUP} 0775
-.for DIR in ${INN_DATADIRS}
-MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/${DIR}		${INN_USER} ${INN_GROUP} 0775
+.for dir in ${INN_DATADIRS}
+MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/${dir}		${INN_USER} ${INN_GROUP} 0775
 .endfor
-.for DIR in ${INN_SPOOLDIRS}
-MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/spool/${DIR}	${INN_USER} ${INN_GROUP} 0775
+.for dir in ${INN_SPOOLDIRS}
+MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/spool/${dir}	${INN_USER} ${INN_GROUP} 0775
 .endfor
 
 CFILES=			actsync.cfg actsync.ign buffindexed.conf \
@@ -66,8 +66,8 @@ CFILES=			actsync.cfg actsync.ign buffindexed.conf \
 			motd.news news2mail.cf newsfeeds nnrpd.track \
 			nntpsend.ctl ovdb.conf overview.fmt passwd.nntp \
 			radius.conf readers.conf sasl.conf storage.conf
-.for FILE in ${CFILES}
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE} \
+.for file in ${CFILES}
+CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
 			${INN_USER} ${INN_GROUP} 0664
 .endfor
 
@@ -88,6 +88,8 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
 .endif
+
+.include "options.mk"
 
 post-patch:
 	${RM} -f ${WRKSRC}/samples/inn.conf.in.orig_dist
