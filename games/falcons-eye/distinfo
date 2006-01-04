@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2005/03/30 19:59:13 wiz Exp $
+$NetBSD: distinfo,v 1.11 2006/01/04 08:58:47 joerg Exp $
 
 SHA1 (falcons-eye-1.9.3-20050216-2/nethack_source_331_jtp_193.zip) = f25a3b77925d247762d18b6f022500aac7c42b29
 RMD160 (falcons-eye-1.9.3-20050216-2/nethack_source_331_jtp_193.zip) = a94c3bbdec7a0c034acbe431071342b872c7acc5
@@ -8,12 +8,14 @@ SHA1 (patch-ab) = 4ab97753aacedfbfd6823600723f01d55043855f
 SHA1 (patch-ac) = 3a88954c950854350938fbec1fef195baaacb2cf
 SHA1 (patch-ad) = dc8de40956abdea203814868c4344b7676dee82d
 SHA1 (patch-ae) = b6d0cca1e3d781a2a1f1d4b244e944eaedfec716
+SHA1 (patch-af) = f7ad4c58a5b37346f86976473ec9136188a4e628
 SHA1 (patch-ag) = 6aeae6bde079b9c9081f6e32523687010c9bc674
+SHA1 (patch-ah) = f7cd2d43bfa991e1b1d759db519bdaf1a48357bf
 SHA1 (patch-ba) = 8fb7c3ad5fdc5f35e34b1ac87bc60e1a22a91c03
 SHA1 (patch-bb) = 899a966ec39b749618cad9c6e420cfd865eb7d5e
 SHA1 (patch-bc) = ef228db9215e8c4d0e03a079ede1a7a195ecde58
 SHA1 (patch-bd) = 8294b1e7a16edbd8b05c453984b22f1fbda3d7f1
-SHA1 (patch-be) = 632a256780e80c8127635080df5112ce7678d4df
+SHA1 (patch-be) = 0a1dfb5fea7ae7e92701dcd2065e35a98dabe924
 SHA1 (patch-bf) = b58009fe635389483c34b50afca6aba9cb75fc72
 SHA1 (patch-bh) = 65bf424d1e60b0ee9b9acc8b04359f2f4621e605
 SHA1 (patch-bi) = 6b3d0d1eca3a23c3086155c1da3c2965d7092d5f
