@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/11/29 10:03:39 adam Exp $
+# $NetBSD: Makefile,v 1.32 2006/01/04 06:05:44 recht Exp $
 
 DISTNAME=	hdf5-1.6.5
 CATEGORIES=	devel
@@ -29,7 +29,7 @@ post-install:
 		release_docs/RELEASE.txt ${PREFIX}/share/doc/hdf5
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/hdf5
 	# avoid installing the Makefile and Makefile.in's  They are not needed
-	cd ${WRKSRC}/doc/html && ${PAX} -s '/.*Makefile.*//' -rw . ${PREFIX}/share/doc/html/hdf5
+	cd ${WRKSRC}/doc/html && ${PAX} -s '/.*Makefile.*//' -rwpm . ${PREFIX}/share/doc/html/hdf5
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/doc/html/hdf5
 	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/doc/html/hdf5
 

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2005/11/29 10:03:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/01/04 06:05:44 recht Exp $
 bin/gif2h5
 bin/h52gif
+${CXX}bin/h5c++
 bin/h5cc
 bin/h5debug
 bin/h5diff
@@ -13,11 +14,27 @@ bin/h5repack
 bin/h5repart
 bin/h5unjam
 include/H5ACpublic.h
+${CXX}include/H5AbstractDs.h
 include/H5Apublic.h
+${CXX}include/H5ArrayType.h
+${CXX}include/H5AtomType.h
+${CXX}include/H5Attribute.h
 include/H5Bpublic.h
+${CXX}include/H5Classes.h
+${CXX}include/H5CommonFG.h
+${CXX}include/H5CompType.h
+${CXX}include/H5Cpp.h
+${CXX}include/H5CppDoc.h
 include/H5Cpublic.h
+${CXX}include/H5DataSet.h
+${CXX}include/H5DataSpace.h
+${CXX}include/H5DataType.h
+${CXX}include/H5DcreatProp.h
 include/H5Dpublic.h
+${CXX}include/H5DxferProp.h
+${CXX}include/H5EnumType.h
 include/H5Epublic.h
+${CXX}include/H5Exception.h
 include/H5FDcore.h
 include/H5FDfamily.h
 include/H5FDgass.h
@@ -31,20 +48,34 @@ include/H5FDsec2.h
 include/H5FDsrb.h
 include/H5FDstdio.h
 include/H5FDstream.h
+${CXX}include/H5FaccProp.h
+${CXX}include/H5FcreatProp.h
+${CXX}include/H5File.h
+${CXX}include/H5FloatType.h
 include/H5Fpublic.h
 include/H5Gpublic.h
+${CXX}include/H5Group.h
 include/H5HGpublic.h
 include/H5HLpublic.h
 include/H5IM.h
+${CXX}include/H5IdComponent.h
+${CXX}include/H5Include.h
+${CXX}include/H5IntType.h
 include/H5Ipublic.h
 include/H5LT.h
+${CXX}include/H5Library.h
 include/H5MMpublic.h
+${CXX}include/H5Object.h
 include/H5Opublic.h
 include/H5Ppublic.h
+${CXX}include/H5PredType.h
+${CXX}include/H5PropList.h
 include/H5Rpublic.h
 include/H5Spublic.h
+${CXX}include/H5StrType.h
 include/H5TA.h
 include/H5Tpublic.h
+${CXX}include/H5VarLenType.h
 include/H5Zpublic.h
 include/H5api_adpt.h
 include/H5pubconf.h
@@ -52,6 +83,8 @@ include/H5public.h
 include/hdf5.h
 lib/libhdf5.la
 lib/libhdf5.settings
+${CXX}lib/libhdf5_cpp.la
+${CXX}lib/libhdf5_cpp.settings
 lib/libhdf5_hl.la
 share/doc/hdf5/COPYING
 share/doc/hdf5/HISTORY.txt
@@ -556,6 +589,7 @@ share/doc/html/hdf5/cpplus_RM/functions_0x75.html
 share/doc/html/hdf5/cpplus_RM/functions_0x76.html
 share/doc/html/hdf5/cpplus_RM/functions_0x77.html
 share/doc/html/hdf5/cpplus_RM/functions_0x7e.html
+share/doc/html/hdf5/cpplus_RM/functions_func.html
 share/doc/html/hdf5/cpplus_RM/functions_func_0x63.html
 share/doc/html/hdf5/cpplus_RM/functions_func_0x64.html
 share/doc/html/hdf5/cpplus_RM/functions_func_0x65.html
@@ -575,7 +609,6 @@ share/doc/html/hdf5/cpplus_RM/functions_func_0x75.html
 share/doc/html/hdf5/cpplus_RM/functions_func_0x76.html
 share/doc/html/hdf5/cpplus_RM/functions_func_0x77.html
 share/doc/html/hdf5/cpplus_RM/functions_func_0x7e.html
-share/doc/html/hdf5/cpplus_RM/functions_func.html
 share/doc/html/hdf5/cpplus_RM/functions_vars.html
 share/doc/html/hdf5/cpplus_RM/h5group_8cpp-example.html
 share/doc/html/hdf5/cpplus_RM/header.html
@@ -639,6 +672,13 @@ share/doc/html/hdf5/pipe3.gif
 share/doc/html/hdf5/pipe4.gif
 share/doc/html/hdf5/pipe5.gif
 share/doc/html/hdf5/version.gif
+${CXX}share/examples/hdf5/c++/chunks.cpp
+${CXX}share/examples/hdf5/c++/compound.cpp
+${CXX}share/examples/hdf5/c++/create.cpp
+${CXX}share/examples/hdf5/c++/extend_ds.cpp
+${CXX}share/examples/hdf5/c++/h5group.cpp
+${CXX}share/examples/hdf5/c++/readdata.cpp
+${CXX}share/examples/hdf5/c++/writedata.cpp
 share/examples/hdf5/c/h5_attribute.c
 share/examples/hdf5/c/h5_chunk_read.c
 share/examples/hdf5/c/h5_compound.c
@@ -651,6 +691,7 @@ share/examples/hdf5/c/h5_reference.c
 share/examples/hdf5/c/h5_select.c
 share/examples/hdf5/c/h5_write.c
 share/examples/hdf5/c/ph5example.c
+${CXX}@dirrm share/examples/hdf5/c++
 @dirrm share/examples/hdf5/c
 @dirrm share/examples/hdf5
 @dirrm share/doc/html/hdf5/fortran
