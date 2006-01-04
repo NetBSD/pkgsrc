@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/12/12 21:36:54 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/04 18:30:17 reed Exp $
 
 PKGNAME=		sqsh-motif-2.1
-PKGREVISION=		2
+PKGREVISION=		3
 
 CONFLICTS+=		sqsh-[0-9]*
 CONFLICTS+=		sqsh-x11-[0-9]*
