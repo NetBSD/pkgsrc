@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/26 23:39:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/04 04:29:07 schmonz Exp $
 #
 
 DISTNAME=		vs233
@@ -11,8 +11,7 @@ MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.cs.arizona.edu/sr/
 COMMENT=		The SR language compiler and run time system
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=		pkgsrc-2005Q4
 
 WRKSRC= ${WRKDIR}
 

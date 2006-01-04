@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/26 23:39:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/04 04:29:08 schmonz Exp $
 #
 
 DISTNAME=		jessie-0.9.7
@@ -9,8 +9,7 @@ MAINTAINER=		tv@duh.org
 HOMEPAGE=		http://www.nongnu.org/jessie/
 COMMENT=		GPL implementation of the Java Secure Sockets Extension
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=		pkgsrc-2005Q4
 
 DEPENDS+=		gnu-crypto>=2.0:../../security/gnu-crypto
 

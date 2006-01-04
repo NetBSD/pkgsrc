@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/29 06:22:23 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/04 04:29:09 schmonz Exp $
 #
 
 DISTNAME=		kazehakase-0.3.0
@@ -10,8 +10,7 @@ MAINTAINER=		lems@gmx.net
 HOMEPAGE=		http://kazehakase.sourceforge.jp/
 COMMENT=		Web browser with multiple layout engines support
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=		pkgsrc-2005Q4
 
 BUILD_USES_MSGFMT=	yes
 

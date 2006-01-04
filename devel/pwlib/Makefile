@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2005/12/29 06:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2006/01/04 04:29:06 schmonz Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -11,8 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/openh323/
 COMMENT=	Portable Windows Libary
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 

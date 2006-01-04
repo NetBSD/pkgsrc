@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/26 23:39:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/04 04:29:07 schmonz Exp $
 #
 
 DISTNAME=	ghostscript-viewer-0.6
@@ -12,8 +12,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://reboot.animeirc.de/sylpheed/ghostscript_viewer/
 COMMENT=	Plugin to make Sylpheed-claws display PostScript and PDF attachments
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 USE_TOOLS+=		gs:run pkg-config
 GNU_CONFIGURE=		YES

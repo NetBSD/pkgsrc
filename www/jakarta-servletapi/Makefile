@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/26 23:39:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/04 04:29:08 schmonz Exp $
 
 DISTNAME=	jakarta-servletapi-${TOMCAT_VERSION}-src
 PKGNAME=	${DISTNAME:S/-src$//}
@@ -10,8 +10,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	The Apache project's implementation of the JSP and Java Servlet APIs
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 BUILD_DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 

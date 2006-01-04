@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/26 23:39:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/04 04:29:06 schmonz Exp $
 #
 
 DISTNAME=		simulavr-0.1.2.1
@@ -10,8 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/simulavr/
 COMMENT=		Simulator for Atmel AVR microcontrollers
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=		pkgsrc-2005Q4
 
 BUILD_DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 BUILD_DEPENDS+=		avr-gcc-[0-9]*:../../cross/avr-gcc

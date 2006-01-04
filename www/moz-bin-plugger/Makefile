@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/26 23:39:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/04 04:29:09 schmonz Exp $
 #
 
 DISTNAME=	${PLUGGER}-linux-x86-glibc
@@ -10,8 +10,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://fredrik.hubbe.net/plugger.html
 COMMENT=	Streaming multimedia plugin for Mozilla (Linux version)
 
-PKG_FAIL_REASON+=	"Broken on NetBSD/i386 3.0 in pkgsrc-2005Q4"
-PKG_FAIL_REASON+=	"Will be removed in pkgsrc-2006Q1 unless fixed"
+BROKEN_IN=	pkgsrc-2005Q4
 
 DEPENDS+=	mozilla-bin-[0-9]*:../../www/mozilla-bin
 
