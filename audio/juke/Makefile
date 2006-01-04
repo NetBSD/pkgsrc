@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/29 06:21:31 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/04 17:31:28 joerg Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -19,12 +19,10 @@ EGDIR=		${PREFIX}/share/examples/juke
 
 CONF_FILES=	${EGDIR}/juke.conf.default ${PKG_SYSCONFDIR}/juke.conf
 
-post-configure:
-	@cd ${WRKSRC} && \
-	for f in MANUAL doc/juke.1 src/conf.c; do		\
-		${MV} $$f $$f.orig;				\
-		${SED} ${FILES_SUBST_SED} $$f.orig > $$f;	\
-	done
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	doc/juke.1 MANUAL src/conf.c
+SUBST_STAGE.paths=	post-patch
+SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
