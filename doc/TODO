@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4365 2006/01/03 21:20:24 schmonz Exp $
+$NetBSD: TODO,v 1.4366 2006/01/04 00:10:58 recht Exp $
 
 Suggested new packages
 ======================
@@ -706,7 +706,6 @@ Suggested package updates
 	o libexif-0.6.13
 	o libextractor-0.5.9
 	o libflash-0.4.13
-	o libgdiplus-1.1.9.2
 	o libggi-2.2
 	o libggimisc-2.1.2
 	o libgii-1.0.0
