@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/11 17:43:10 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/04 23:59:40 reed Exp $
 bin/kazehakase
 man/man1/kazehakase.1
 share/applications/kazehakase.desktop
@@ -58,6 +58,7 @@ share/kazehakase/icons/kz-yellow.png
 share/kazehakase/kz-no-thumbnail.png
 share/kazehakase/search-result.css
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kazehakase.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kazehakase.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/kazehakase.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kazehakase.mo
 share/pixmaps/kazehakase-icon.png
