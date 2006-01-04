@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/05/09 05:52:59 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/04 17:05:02 joerg Exp $
 
---- ../configure.orig	2005-05-09 00:44:03.000000000 -0500
+--- ../configure.orig	2003-03-18 14:19:12.000000000 +0000
 +++ ../configure
 @@ -822,9 +822,13 @@ case "${canonical}" in
        sparc*-*-netbsd*)	machine=sparc ;;
@@ -16,3 +16,11 @@ $NetBSD: patch-ab,v 1.1 2005/05/09 05:52:59 minskim Exp $
    ## OpenBSD ports
    *-*-openbsd* )
      opsys=openbsd
+@@ -1659,6 +1663,7 @@ case "${canonical}" in
+       *-sysv4.2uw* )	  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
+       *-386bsd* )	        opsys=386bsd ;;
+       *-freebsd* )	        opsys=freebsd ;;
++      *-dragonfly* )		opsys=dragonfly ;;
+       *-nextstep* )             opsys=nextstep ;;
+       ## Otherwise, we'll fall through to the generic opsys code at the bottom.
+     esac
