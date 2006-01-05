@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2005/12/29 06:22:21 jlam Exp $
+# $NetBSD: Makefile,v 1.96 2006/01/05 21:21:54 joerg Exp $
 
 DISTNAME=		mod_ssl-2.8.25-1.3.34
 PKGNAME=		ap-ssl-2.8.25
@@ -49,21 +49,18 @@ CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/apache/buildlink3.mk"
 
+SUBST_CLASSES+=		paths perl
+SUBST_FILES.paths=	README.mkcert pkg.sslsup/mkcert.sh
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.perl=	pkg.contrib/loadcacert.cgi
+SUBST_SED.perl=		-e 's,^\#!/.*,\#!${PERL5},g'
+SUBST_STAGE.perl=	post-patch
+
 post-extract:
-	cd ${WRKSRC}/pkg.contrib; ${MV} -f loadcacert.cgi loadcacert.cgi.in
-	cd ${WRKSRC}/pkg.sslsup; ${MV} -f mkcert.sh mkcert.sh.in
-
-post-build:
-	@${SED}	-e "s|^#!/.*|#!${PERL5}|g"				\
-		${WRKSRC}/pkg.contrib/loadcacert.cgi.in 		\
-		> ${WRKSRC}/pkg.contrib/loadcacert.cgi
-	@${SED} ${FILES_SUBST_SED}					\
-		${WRKSRC}/pkg.sslsup/mkcert.sh.in			\
-		> ${WRKSRC}/pkg.sslsup/mkcert.sh
-
-pre-install:
-	@${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/README.mkcert > ${WRKDIR}/README.mkcert
+	${CP} ${FILESDIR}/README.mkcert ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -84,7 +81,7 @@ post-install:
 	cd ${WRKSRC}/pkg.contrib; ${INSTALL_SCRIPT} *.sh *.cgi		\
 		${PREFIX}/share/mod_ssl
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_ssl
-	${INSTALL_DATA} ${WRKDIR}/README.mkcert ${PREFIX}/share/doc/mod_ssl
+	${INSTALL_DATA} ${WRKSRC}/README.mkcert ${PREFIX}/share/doc/mod_ssl
 
 	cd ${WRKSRC}/pkg.sslcfg; ${RM} -f server.*
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.CRL *.crl	\
