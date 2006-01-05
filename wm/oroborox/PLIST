@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/05 16:02:39 rxg Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/05 16:58:49 rxg Exp $
+bin/oroborox
 libexec/rox/OroboROX
-sbin/oroborox
 share/rox/OroboROX/.DirIcon
 share/rox/OroboROX/AppInfo.xml
 share/rox/OroboROX/AppRun
