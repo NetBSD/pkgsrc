@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.20 2006/01/03 14:31:17 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.21 2006/01/05 07:04:47 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -171,14 +171,6 @@ RUBY_RIDIR?=		${PREFIX}/share/ri
 RUBY_BASERIDIR?=	${RUBY_RIDIR}/${RUBY_VER_DIR}
 RUBY_SYSRIDIR?=		${RUBY_BASERIDIR}/system
 RUBY_SITERIDIR?=	${RUBY_BASERIDIR}/site
-
-#
-# set ruby reletaed package to common DIST_SUBDIR
-#
-_RUBY_DIST_SUBDIR?=	ruby
-.if defined(USE_RUBY_DIST_SUBDIR) && !empty(USE_RUBY_DIST_SUBDIR:M[yY][eE][sS])
-DIST_SUBDIR?=		${_RUBY_DIST_SUBDIR}
-.endif
 
 #
 # MAKE_ENV
