@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.35 2006/01/05 17:32:50 xtraeme Exp $
+# $NetBSD: url2pkg,v 1.36 2006/01/05 17:42:24 xtraeme Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -234,6 +234,10 @@ ls -la $wsrcdir
 if [ ! -f DESCR ]; then
 	touch DESCR
 fi
+
+# GNU Autoconf scripts will create this file... remove it.
+[ -f configure.lineno ] && rm configure.lineno
+
 echo ""
 echo "Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!"
 echo ""
