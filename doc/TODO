@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4373 2006/01/05 23:32:03 wiz Exp $
+$NetBSD: TODO,v 1.4374 2006/01/05 23:36:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1197,7 +1197,6 @@ Suggested package updates
 	o tcpdump-3.9.4
 	o tcpick-0.2.1
 	o tcpillust-1.00b
-	o tcpreplay-2.3.5
 	o tcpslice-1.2a2
 	o tct-1.15
 	o tdir-1.67
