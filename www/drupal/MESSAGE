@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/01/05 00:02:43 adrianp Exp $
+
+To complete the setup you will need to read the INSTALL.txt in order
+to setup MySQL/PostreSQL properly.
+
+You will need to make Drupal accessible through your HTTP server.
+If you are running Apache then you may add the following lines to httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/drupal.conf
+
+to make Drupal accessible through:
+
+	http://localhost/drupal/
+
+===========================================================================
