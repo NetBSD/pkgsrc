@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2005/12/29 06:22:23 jlam Exp $
+# $NetBSD: Makefile.common,v 1.33 2006/01/05 23:58:23 joerg Exp $
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -95,14 +95,21 @@ DEPENDS+=	gtk+>=1.2:../../x11/gtk
 
 INSTALLATION_DIRS=	bin
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/${MOZILLA}.sh
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_SED.paths+=	-e 's,@MOZILLA@,${MOZILLA},g'
+SUBST_SED.paths+=	-e 's,@MOZ_EXTRA@,${MOZ_EXTRA},g'
+SUBST_SED.paths+=	-e 's,@MOZ_PLATFORM@,${MOZ_PLATFORM},g'
+SUBST_STAGE.paths=	post-patch
+
 # we don't want libnullplugin.
 post-extract:
 	@${RM} -f ${WRKSRC}/plugins/libnullplugin.so
+	${CP} ${MOZILLA_SCRIPT} ${WRKDIR}/${MOZILLA}.sh
 
 do-build:
-
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${MOZILLA_SCRIPT} > ${WRKDIR}/${MOZILLA}.sh
 
 do-install:
 	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
