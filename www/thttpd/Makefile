@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/12/29 06:22:24 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/01/05 22:46:12 joerg Exp $
 
 DISTNAME=	thttpd-2.25b
 PKGREVISION=	5
@@ -32,6 +32,14 @@ RCD_SCRIPTS=	thttpd
 
 INSTALLATION_DIRS=	share/thttpd
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	thttpd.conf
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/thttpd.conf ${WRKSRC}
+
 pre-configure:
 	${MV} ${WRKSRC}/extras/htpasswd.1 ${WRKSRC}/extras/thtpasswd.1
 	${MV} ${WRKSRC}/extras/htpasswd.c ${WRKSRC}/extras/thtpasswd.c
@@ -44,14 +52,8 @@ pre-configure:
 	${SED} -e "s/LOG_DAEMON/${THTTPD_LOG_FACILITY}/" ${WRKSRC}/config.h.bak \
 			> ${WRKSRC}/config.h
 
-post-build:
-	@for FILE in thttpd.conf; do					\
-		${SED}	${FILES_SUBST_SED}				\
-			${FILESDIR}/$${FILE} > ${WRKDIR}/$${FILE};	\
-	done
-
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/thttpd.conf ${PREFIX}/share/examples
+	${INSTALL_DATA} ${WRKSRC}/thttpd.conf ${PREFIX}/share/examples
 	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/thttpd
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/sitedrivenby.gif ${PREFIX}/share/thttpd
 
