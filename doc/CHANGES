@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12362 2006/01/05 10:31:50 markd Exp $
+$NetBSD: CHANGES,v 1.12363 2006/01/05 15:22:34 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -108,3 +108,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/apache2 to 2.0.55nb4 [ghen 2006-01-05]
 	Updated graphics/kdegraphics to 3.5.0nb1 [markd 2006-01-05]
 	Updated misc/koffice to 1.4.2nb4 [markd 2006-01-05]
+	Updated audio/xine-esound to 1.0.3anb2 [joerg 2006-01-05]
