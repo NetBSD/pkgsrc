@@ -1,0 +1,20 @@
+$NetBSD: patch-ba,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
+
+--- readcd/readcd.c.orig	2004-09-08 19:24:14.000000000 +0200
++++ readcd/readcd.c
+@@ -398,12 +398,12 @@ main(ac, av)
+ 	/*
+ 	 * We don't need root privilleges anymore.
+ 	 */
+-#ifdef	HAVE_SETREUID
+-	if (setreuid(-1, getuid()) < 0)
+-#else
+ #ifdef	HAVE_SETEUID
+ 	if (seteuid(getuid()) < 0)
+ #else
++#ifdef	HAVE_SETREUID
++	if (setreuid(-1, getuid()) < 0)
++#else
+ 	if (setuid(getuid()) < 0)
+ #endif
+ #endif
