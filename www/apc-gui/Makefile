@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/12/29 06:22:21 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/05 23:33:22 joerg Exp $
 
 DISTNAME=	apc_gui-1.0.3
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://apc.neuropeans.com/download/
 
@@ -27,9 +27,14 @@ CONF_FILES=	${EGDIR}/apc_gui.conf ${PKG_SYSCONFDIR}/apc_gui.conf
 CONF_FILES+=	/dev/null ${APC_GUI_DIR}/apc_config_local.php
 OWN_DIRS=	${APC_GUI_DIR}
 
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/apc_gui.conf.dist		\
-		> ${WRKDIR}/apc_gui.conf.dist
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/apc_gui.conf.dist
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@APC_GUI_DIR@,${APC_GUI_DIR},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/apc_gui.conf.dist ${WRKDIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${APC_GUI_DIR} ${EGDIR}
