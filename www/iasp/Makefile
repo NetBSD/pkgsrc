@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/29 06:22:23 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/05 23:42:32 joerg Exp $
 
 .include "../../www/iasp/Makefile.common"
 
@@ -42,6 +42,11 @@ CONF_FILES+=	${CONFDIR}/${FILE}.default ${CONFDIR}/${FILE}
 CONF_FILES+=	/dev/null ${IASP_DESTDIR}/properties/license
 RCD_SCRIPTS=	iasp iasp_admin
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	mod_iasp.conf
+SUBST_SED.paths+=	-e 's,@IASP@,${IASP_DESTDIR},g'
+SUBST_STAGE.paths=	post-patch
+
 post-extract:
 	cd ${WRKDIR}; ${GTAR} -xf ${IASP_TARFILE}
 	cd ${WRKSRC}; ${RM} -rf bin logs
@@ -49,13 +54,12 @@ post-extract:
 	cd ${WRKSRC}; for file in properties/*.properties; do		\
 		${MV} -f $$file $$file.default;				\
 	done
+	${CP} ${FILESDIR}/mod_iasp.conf ${WRKSRC}
 
 do-build:
 	@${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/gen-scripts.sh
 	${MKDIR} ${WRKSRC}/WEB-INF
 	${CP} ${FILESDIR}/web.xml ${WRKSRC}/WEB-INF
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mod_iasp.conf		\
-		> ${WRKSRC}/mod_iasp.conf
 
 do-install:
 	${MKDIR} ${IASP_DESTDIR:H}
