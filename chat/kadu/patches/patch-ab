@@ -1,13 +1,41 @@
-$NetBSD: patch-ab,v 1.6 2005/08/05 21:42:54 salo Exp $
+$NetBSD: patch-ab,v 1.7 2006/01/05 16:36:38 joerg Exp $
 
 --- configure.orig	2005-07-19 19:52:02.000000000 +0000
-+++ configure	2005-08-05 21:18:36.000000000 +0000
-@@ -9494,12 +9494,12 @@
++++ configure
+@@ -4259,13 +4259,13 @@ done
+ ##################
+ 
+ 
+-	echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
++	echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+ if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -4326,8 +4326,8 @@ echo "${ECHO_T}$ac_cv_lib_pthread_pthrea
+ if test $ac_cv_lib_pthread_pthread_create = yes; then
+ 
+ 		PTHREAD_CPPFLAGS=
+-		PTHREAD_LDFLAGS=
+-		PTHREAD_LIBS=-lpthread
++		PTHREAD_LDFLAGS=${PTHREAD_LDFLAGS}
++		PTHREAD_LIBS=${PTHREAD_LIBS}
+ 
+ else
+ 
+@@ -9494,12 +9494,12 @@ echo "$as_me: error: libgadu.h not found
  fi
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  
 -	GADU_LIBS=-lgadu
-+	GADU_LIBS="-lgadu -lssl -lcrypto -lpthread"
++	GADU_LIBS="-lgadu -lssl -lcrypto ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
  
  	echo "$as_me:$LINENO: checking if libgadu is in system directories" >&5
  echo $ECHO_N "checking if libgadu is in system directories... $ECHO_C" >&6
@@ -17,7 +45,7 @@ $NetBSD: patch-ab,v 1.6 2005/08/05 21:42:54 salo Exp $
  	cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -9858,7 +9858,11 @@
+@@ -9858,7 +9858,11 @@ echo "$as_me: error: $mod download faile
  	echo "$as_me:$LINENO: checking if lib$lib is in system directories" >&5
  echo $ECHO_N "checking if lib$lib is in system directories... $ECHO_C" >&6
  	save_CFLAGS="$CFLAGS"
@@ -29,7 +57,7 @@ $NetBSD: patch-ab,v 1.6 2005/08/05 21:42:54 salo Exp $
  	cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -9992,7 +9996,7 @@
+@@ -9992,7 +9996,7 @@ fi
  rm -f conftest.err conftest.$ac_objext \
        conftest$ac_exeext conftest.$ac_ext
   \
