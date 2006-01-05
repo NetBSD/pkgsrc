@@ -1,0 +1,22 @@
+$NetBSD: patch-ch,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
+
+--- cdda2wav/cdda2wav.c.orig	2004-08-24 17:06:14.000000000 +0200
++++ cdda2wav/cdda2wav.c
+@@ -970,7 +970,7 @@ prio_done:
+ 	dontneedroot();
+ }
+ #else
+-#if      defined _POSIX_PRIORITY_SCHEDULING
++#if      defined _POSIX_PRIORITY_SCHEDULING && (_POSIX_PRIORITY_SCHEDULING != -1)
+ #include <sched.h>
+ 
+ static void
+@@ -2616,7 +2616,7 @@ Rate   Divider      Rate   Divider      
+   if ( global.verbose != 0 ) {
+     fputs( "#Cdda2wav version ", stderr );
+     fputs( VERSION, stderr );
+-#if defined _POSIX_PRIORITY_SCHEDULING || defined HAVE_SYS_PRIOCNTL_H
++#if (defined _POSIX_PRIORITY_SCHEDULING && (_POSIX_PRIORITY_SCHEDULING != -1)) || defined HAVE_SYS_PRIOCNTL_H
+     fputs( ", real time sched.", stderr );
+ #endif
+ #if defined ECHO_TO_SOUNDCARD

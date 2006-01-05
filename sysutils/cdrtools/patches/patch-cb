@@ -1,0 +1,24 @@
+$NetBSD: patch-cb,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
+
+--- cdrecord/cdrecord.1.orig	2004-07-11 01:28:23.000000000 +0200
++++ cdrecord/cdrecord.1
+@@ -2016,8 +2016,8 @@ login shell.
+ 
+ .SH FILES
+ .TP
+-/etc/default/cdrecord
+-Default values can be set for the following options in /etc/default/cdrecord.
++@CDRECORD_CONF@
++Default values can be set for the following options in @CDRECORD_CONF@.
+ For example:
+ .SM CDR_FIFOSIZE=8m
+ or
+@@ -2026,7 +2026,7 @@ or
+ .TP
+ CDR_DEVICE
+ This may either hold a device identifier that is suitable to the open
+-call of the SCSI transport library or a label in the file /etc/default/cdrecord 
++call of the SCSI transport library or a label in the file @CDRECORD_CONF@
+ that allows to identify a specific drive on the system.
+ .TP
+ CDR_SPEED

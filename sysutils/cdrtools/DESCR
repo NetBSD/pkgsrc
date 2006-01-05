@@ -1,0 +1,11 @@
+Cdrecord allows you to burn CDs with a CD-R/CD-RW recorder. It
+works as a burn engine for several applications. Cdrecord supports
+CD recorders from many different vendors; all SCSI-3/mmc and
+ATAPI/mmc compliant drives should also work.  Supported features
+include: IDE/ATAPI, parallel-port, and SCSI drives; audio CDs, data
+CDs, and mixed CDs; full multi-session support, CD-RWs (rewritable),
+TAO, DAO, and human-readable error messages.
+
+This package also provides tools for retrieving audio tracks,
+reading and writing CDs, creating ISO9660/JOLIET/HFS filesystems,
+and verifying ISO9660 images.
