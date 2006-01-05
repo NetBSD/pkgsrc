@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.109 2006/01/05 23:16:01 joerg Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.110 2006/01/05 23:18:27 joerg Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -181,7 +181,6 @@ _ESCPKGPATH=	${PKGPATH:C@\/@\\/@g:C@\+@\\+@g:C@\.@\\.@g:Q}
 
 # The directory where package-specific log files are saved.
 _BULK_PKGLOGDIR=	${BULKFILESDIR}/${PKGPATH}
-_INTERACTIVE_COOKIE_DIR= ${BULK_PKGLOGDIR}
 
 # Package-specific log files.
 _BROKENFILE=		${_BULK_PKGLOGDIR}/${BROKENFILE}
