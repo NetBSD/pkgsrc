@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/29 06:22:24 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/05 22:16:40 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -55,16 +55,15 @@ OWN_DIRS_PERMS+=	/var/log/privoxy ${USER_GROUP} 0775
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
-FILES_SUBST+=		EGDIR=${EGDIR:Q}
 FILES_SUBST+=		PRIVOXY_USER=${PRIVOXY_USER:Q}
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	config
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_STAGE.paths=	post-patch
+
 pre-configure:
-	@cd ${WRKSRC} &&					\
-	(   autoheader && autoconf ;				\
-	    ${MV} config config.bak &&				\
-	    ${SED} ${FILES_SUBST_SED} <config.bak >config &&	\
-	    ${RM} -f config.bak					\
-	)
+	@cd ${WRKSRC} && autoheader && autoconf
 
 post-install:
 	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${EGDIR}
