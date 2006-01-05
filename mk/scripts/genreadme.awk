@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.19 2005/05/22 01:37:31 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.20 2006/01/05 22:19:42 dmcmahill Exp $
 #
-# Copyright (c) 2002, 2003, 2005 The NetBSD Foundation, Inc.
+# Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -206,17 +206,25 @@ END {
 	if (debug) printf("\nExecute:  %s\n",cmd);
 	rc = system(cmd);
 
-	if (rc != 0) {
+	if (rc != 0 && rc != 2) {
 	  printf("\n**** WARNING ****\n") > "/dev/stderr";
 	  printf("Command: %s\nfailed.", cmd) > "/dev/stderr";
 	  printf("**** ------- ****\n") > "/dev/stderr";
 	  exit(1);
 	}
 	
-	printf("Loading binary package cache file...\n");
-	load_cache_file( PACKAGES "/.pkgcache" );
-        if(pkg_count["unknown"] > 0 ) {
-		printf("    Loaded %d binary packages with unknown PKGPATH\n", pkg_count["unknown"]);
+	if (rc == 2) {
+	  printf("\n**** WARNING ****\n") > "/dev/stderr";
+	  printf("* No binary packages directory found\n") > "/dev/stderr";
+	  printf("* List of binary packages will not be generated\n") > "/dev/stderr";
+	  printf("**** ------- ****\n") > "/dev/stderr";
+	} else {
+
+		printf("Loading binary package cache file...\n");
+		load_cache_file( PACKAGES "/.pkgcache" );
+       	 if(pkg_count["unknown"] > 0 ) {
+			printf("    Loaded %d binary packages with unknown PKGPATH\n", pkg_count["unknown"]);
+		}
 	}
 
 	printf("Flattening dependencies\n");
