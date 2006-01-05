@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/12/28 15:52:01 ghen Exp $
+$NetBSD: MESSAGE,v 1.2 2006/01/05 23:29:04 wiz Exp $
 
 To use this package you will need at least one of the following rippers:
 
 audio/cdparanoia
 misc/libcdio
-sysutils/cdrecord
+sysutils/cdrtools
 
 and one of the following encoders:
 
