@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12369 2006/01/05 23:32:03 wiz Exp $
+$NetBSD: CHANGES,v 1.12370 2006/01/05 23:34:57 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -116,3 +116,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xfstt to 1.6nb3 [joerg 2006-01-05]
 	Added sysutils/cdrtools version 2.01 [wiz 2006-01-05]
 	Removed sysutils/cdrecord [wiz 2006-01-05]
+	Updated www/apc-gui to 1.0.3nb2 [joerg 2006-01-05]
