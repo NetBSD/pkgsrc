@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2001/12/28 14:58:02 tron Exp $
+$NetBSD: patch-ab,v 1.4 2006/01/05 18:33:49 joerg Exp $
 
 --- cmdtool/Imakefile.orig	Tue Jun 29 07:12:08 1993
 +++ cmdtool/Imakefile	Fri Dec 28 15:55:42 2001
@@ -10,3 +10,12 @@ $NetBSD: patch-ab,v 1.3 2001/12/28 14:58:02 tron Exp $
  DEFINES = -DSTANDALONE  $(XVCLIENTDEFINES)
  INCLUDES = -I$(HEADER_DEST) -I$(TOP) $(XVCLIENTINCLUDES)
  SYS_LIBRARIES = $(SYSV_CLIENT_LIB)
+@@ -18,6 +19,8 @@ SRCS = cmdtool.c
+ OBJS = cmdtool.o
+ ALLFILES = ${HEADERS} ${INFOFILES} ${MANPAGES} ${ICONS} ${SRCS}
+ 
++EXTRA_LDOPTIONS = ${LINKER_RPATH_FLAG}${PREFIX}/lib
++
+ ComplexProgramTarget(cmdtool)
+ 
+ LinkToFile(install,./cmdtool,shelltool,$(BINDIR))
