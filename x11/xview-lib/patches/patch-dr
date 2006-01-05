@@ -1,8 +1,8 @@
-$NetBSD: patch-dr,v 1.1 2001/12/20 09:20:08 tron Exp $
+$NetBSD: patch-dr,v 1.2 2006/01/05 18:25:57 joerg Exp $
 
 --- lib/libxview/notify/ndet_read.c.orig	Tue Jun 29 07:18:04 1993
 +++ lib/libxview/notify/ndet_read.c	Thu Dec 20 10:09:16 2001
-@@ -15,6 +15,7 @@
+@@ -15,12 +15,12 @@ static char     sccsid[] = "@(#)ndet_rea
   * not already in the middle of it.
   */
  
@@ -10,7 +10,13 @@ $NetBSD: patch-dr,v 1.1 2001/12/20 09:20:08 tron Exp $
  #include <xview_private/ntfy.h>
  #include <xview_private/ndet.h>
  #include <xview_private/ndis.h>	/* For ndis_client == NTFY_CLIENT_NULL check */
-@@ -29,11 +30,16 @@
+ #include <errno.h>
+ 
+-extern          errno;
+ extern int      notify_exclude_fd;
+ 
+ static Notify_value ndet_read_in_func();
+@@ -29,11 +29,16 @@ static int      ndet_read_done;
  
  static Notify_client ndet_read_nclient = (Notify_client) & ndet_read_done;
  

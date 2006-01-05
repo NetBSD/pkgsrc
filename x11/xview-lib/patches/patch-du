@@ -1,4 +1,4 @@
-$NetBSD: patch-du,v 1.1 2001/12/20 09:20:08 tron Exp $
+$NetBSD: patch-du,v 1.2 2006/01/05 18:25:57 joerg Exp $
 
 --- lib/libxview/notify/ntfyclient.c.orig	Tue Jun 29 07:18:11 1993
 +++ lib/libxview/notify/ntfyclient.c	Thu Dec 20 10:09:16 2001
@@ -6,7 +6,7 @@ $NetBSD: patch-du,v 1.1 2001/12/20 09:20:08 tron Exp $
  #include <xview_private/ntfy.h>
  #include <xview_private/ndis.h>	/* For ndis_default_prioritizer */
  #include <xview_private/ndet.h>	
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
  #include <search.h>
 +#endif
  #include <xview_private/portable.h>
@@ -16,7 +16,7 @@ $NetBSD: patch-du,v 1.1 2001/12/20 09:20:08 tron Exp $
      if (*client_latest && (*client_latest)->nclient == nclient)
  	return (*client_latest);
  
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
      if(( client_list == ndet_clients ) && ndet_clients ) {
         dummy_client.nclient = nclient;
         /* Find client */
@@ -35,7 +35,7 @@ $NetBSD: patch-du,v 1.1 2001/12/20 09:20:08 tron Exp $
      register NTFY_CLIENT *client;
      static NTFY_CLIENT *new_client;
  
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
      if( client_list == &ndet_clients ) {
          if( new_client  == NTFY_CLIENT_NULL ) {
              if ((new_client = ntfy_alloc_client()) == NTFY_CLIENT_NULL)
@@ -54,7 +54,7 @@ $NetBSD: patch-du,v 1.1 2001/12/20 09:20:08 tron Exp $
  	ntfy_remove_condition(client, condition, who);
      }
      /* Remove & free client from client_list */
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
      if( client_list == &ndet_clients )
          tdelete( client, ndet_root, ndet_compar );
 +#endif
