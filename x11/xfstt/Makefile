@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2005/12/29 06:22:26 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/01/05 20:26:48 joerg Exp $
 #
 
 DISTNAME=		xfstt-1.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 net fonts
 MASTER_SITES=		http://download.berlios.de/xfstt/
 
@@ -24,15 +24,11 @@ INSTALLATION_DIRS=	bin man/man1
 
 .include "../../mk/x11.buildlink3.mk"
 
-post-patch:
-	@( \
-	cd ${WRKSRC} ; \
-	for f in src/perftest.cc src/xfstt.cc doc/xfstt.1x; \
-	do \
-	    ${MV} $$f $$f.orig ; \
-	    ${SED} ${FILES_SUBST_SED} $$f.orig > $$f ; \
-	done ; \
-	)
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	doc/FAQ doc/xfstt.1x
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_STAGE.paths=	post-patch
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xfstt ${PREFIX}/bin
