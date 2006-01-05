@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/05 19:12:35 garbled Exp $
+
+SHA1 (ffproxy-1.6.tar.gz) = 89c78f47f38caf8f88e9cfd0c4d71c81284f0f24
+RMD160 (ffproxy-1.6.tar.gz) = ee04548d22a5d9dd12d6ffc6a36a638b59dc46a5
+Size (ffproxy-1.6.tar.gz) = 77535 bytes
+SHA1 (patch-aa) = e5e0cc7c822470c78e95f3703b3a579f8ec39585

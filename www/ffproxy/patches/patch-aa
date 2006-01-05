@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/05 19:12:35 garbled Exp $
+--- Makefile.in.orig	2006-01-05 11:50:45.000000000 -0700
++++ Makefile.in	2006-01-05 11:51:59.000000000 -0700
+@@ -62,7 +62,7 @@
+ 		$(DESTDIR)$(mandir)/man7 \
+ 		$(DESTDIR)$(mandir)/man8
+ 
+-install: installdirs install_bin install_man install_config install_sample install_data
++install: installdirs install_bin install_man install_sample install_data
+ 
+ install_bin: ffproxy
+ 	$(INSTALL_PROGRAM) ffproxy $(DESTDIR)$(bindir)
