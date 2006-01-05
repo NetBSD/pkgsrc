@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/12/29 06:21:41 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/01/05 20:13:34 joerg Exp $
 
 DISTNAME=	t1lib-5.1.0
 PKGREVISION=	4
@@ -24,6 +24,15 @@ CONF_FILES+=	${EGDIR}/FontDataBase ${DATADIR}/FontDataBase
 
 .include "../../graphics/xpm/buildlink3.mk"
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	t1lib.config.sample
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/t1lib.config.sample ${WRKSRC}
+
 pre-build:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM}
 
@@ -35,9 +44,8 @@ post-install:
 	${PAX} -rw -s "/doc/${PKGBASE}/" doc ${PREFIX}/share/doc
 
 	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/t1lib.config.sample ${EGDIR}
 	cd ${WRKSRC}/examples;						\
 	${PAX} -rw FontDataBase t1example1.c t1lib.config ${EGDIR}
-	${SED}	${FILES_SUBST_SED}					\
-		${FILESDIR}/t1lib.config.sample > ${EGDIR}/t1lib.config.sample
 
 .include "../../mk/bsd.pkg.mk"
