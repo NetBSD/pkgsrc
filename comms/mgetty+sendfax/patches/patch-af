@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.6 2005/03/07 11:29:28 wiz Exp $
+$NetBSD: patch-af,v 1.7 2006/01/05 17:32:52 joerg Exp $
 
 --- logfile.c.orig	2003-01-14 22:30:20.000000000 +0100
 +++ logfile.c
@@ -6,7 +6,7 @@ $NetBSD: patch-af,v 1.6 2005/03/07 11:29:28 wiz Exp $
  /* Most systems have these variables but do not declare them. On many
     of those systems that _do_ declare them, it won't hurt */
  
-+#if !defined(__NetBSD__)
++#if !defined(__NetBSD__) && !defined(__DragonFly__)
  extern int sys_nerr;
 -#if !defined(__NetBSD__) && !defined( __FreeBSD__ ) && !defined(__OpenBSD__) && !defined(__GLIBC__) && !defined(__MACH__)
 +# if !defined( __FreeBSD__ ) && !defined(__OpenBSD__) && !defined(__GLIBC__) && !defined(__MACH__)
