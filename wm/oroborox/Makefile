@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/03 16:03:19 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/05 16:02:39 rxg Exp $
 #
 
 DISTNAME=	OroboROX-0.9.7.9
 PKGNAME=	oroborox-0.9.7.9
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://roxos.sunsite.dk/dev-contrib/guido/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +12,7 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://roxos.sunsite.dk/dev-contrib/guido/
 COMMENT=	The lightweight Window Manager for the ROX Desktop
 
-DEPENDS+=	rox-lib>=2.0.2:../../sysutils/rox-lib
+DEPENDS+=	rox-lib>=2.0.2nb1:../../sysutils/rox-lib
 
 WRKSRC=		${WRKDIR}/OroboROX
 DIST_SUBDIR=	rox
@@ -41,11 +42,16 @@ SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	"Fixing hardcoded paths."
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	AppRun
-SUBST_FILES.path+=	Configure/Keybindings/findrox.py
-SUBST_FILES.path+=	Configure/Windows/findrox.py
-SUBST_FILES.path+=	Configure/Workspaces/findrox.py
-SUBST_FILES.path+=	Configure/OroboScheme/findrox.py
-SUBST_SED.path=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
+SUBST_SED.path=		-e 's,/usr/local,${PREFIX},g'
+
+SUBST_CLASSES+=		lib
+SUBST_MESSAGE.lib=	"Fixing hardcoded paths for ROX-Lib."
+SUBST_STAGE.lib=	post-patch
+SUBST_FILES.lib=	Configure/Keybindings/findrox.py
+SUBST_FILES.lib+=	Configure/Windows/findrox.py
+SUBST_FILES.lib+=	Configure/Workspaces/findrox.py
+SUBST_FILES.lib+=	Configure/OroboScheme/findrox.py
+SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
 SUBST_CLASSES+=		py
 SUBST_MESSAGE.py=	"Replace shell magic by python version."
@@ -72,7 +78,7 @@ do-install:
 		-s ',^\./${PLATFORM}$$,,' -s ',^\./${PLATFORM}/.*,,'	\
 		-s ',^\./src$$,,' -s ',^\./src/.*,,'	\
 		. ${PREFIX}/share/rox/OroboROX
-	${INSTALL_SCRIPT} ${WRKDIR}/oroborox ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/oroborox ${PREFIX}/sbin
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
