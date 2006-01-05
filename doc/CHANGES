@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12365 2006/01/05 18:34:54 joerg Exp $
+$NetBSD: CHANGES,v 1.12366 2006/01/05 19:20:09 garbled Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -110,4 +110,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/koffice to 1.4.2nb4 [markd 2006-01-05]
 	Updated audio/xine-esound to 1.0.3anb2 [joerg 2006-01-05]
 	Updated pkgtools/url2pkg to 1.32 [xtraeme 2006-01-05]
-	Updated x11/xview-lib to 3.2.1nb5 [root 2006-01-05]
+	Updated x11/xview-lib to 3.2.1nb5 [joerg 2006-01-05]
+	Added www/ffproxy version 1.6 [garbled 2006-01-05]
