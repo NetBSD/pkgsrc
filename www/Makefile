@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.426 2006/01/03 18:13:20 abs Exp $
+# $NetBSD: Makefile,v 1.427 2006/01/05 00:03:57 adrianp Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -81,6 +81,7 @@ SUBDIR+=	cvsweb
 SUBDIR+=	dillo
 SUBDIR+=	drivel
 SUBDIR+=	drraw
+SUBDIR+=	drupal
 SUBDIR+=	elinks
 SUBDIR+=	elinks04
 SUBDIR+=	emacs-w3m
