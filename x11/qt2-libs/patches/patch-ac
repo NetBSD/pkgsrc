@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.6 2002/10/25 10:56:05 bouyer Exp $
+$NetBSD: patch-ac,v 1.7 2006/01/05 21:22:14 joerg Exp $
 
---- configs/solaris-g++-static.in.orig	Wed Jun 13 10:56:50 2001
-+++ configs/solaris-g++-static.in	Thu Oct 17 18:28:26 2002
+--- configs/solaris-g++-static.orig	Wed Jun 13 10:56:50 2001
++++ configs/solaris-g++-static	Thu Oct 17 18:28:26 2002
 @@ -2,24 +2,25 @@
  INTERFACE_DECL_PATH 	= .
  SYSCONF_CXX		= g++
