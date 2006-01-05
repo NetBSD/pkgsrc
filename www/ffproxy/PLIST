@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/05 19:12:35 garbled Exp $
+bin/ffproxy
+man/man5/ffproxy.conf.5
+man/man7/ffproxy.quick.7
+man/man8/ffproxy.8
+share/ffproxy/db/access.dyndns
+share/ffproxy/db/access.host
+share/ffproxy/db/access.ip
+share/ffproxy/db/filter.header.add
+share/ffproxy/db/filter.header.drop
+share/ffproxy/db/filter.header.entry
+share/ffproxy/db/filter.header.match
+share/ffproxy/db/filter.host.match
+share/ffproxy/db/filter.rheader.drop
+share/ffproxy/db/filter.rheader.entry
+share/ffproxy/db/filter.rheader.match
+share/ffproxy/db/filter.url.match
+share/ffproxy/html/connect
+share/ffproxy/html/filtered
+share/ffproxy/html/invalid
+share/ffproxy/html/post
+share/ffproxy/html/resolve
+share/ffproxy/sample.config
+@dirrm share/ffproxy/html
+@dirrm share/ffproxy/db
+@dirrm share/ffproxy
