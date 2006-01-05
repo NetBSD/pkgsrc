@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/12 20:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/05 10:09:00 ghen Exp $
 #
 
 DISTNAME=		pyqt_memaid_0.2.4
@@ -36,4 +36,8 @@ post-install:
 .include "../../lang/python/extension.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../x11/py-qt3-base/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/bsd.pkg.mk"
