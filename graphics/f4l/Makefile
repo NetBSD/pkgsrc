@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/20 16:58:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/05 10:08:59 ghen Exp $
 #
 
 DISTNAME=	f4l-0.2
@@ -20,4 +20,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/f4l ${PREFIX}/bin
 
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/bsd.pkg.mk"
