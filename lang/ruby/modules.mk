@@ -1,12 +1,7 @@
-# $NetBSD: modules.mk,v 1.15 2006/01/03 14:24:32 taca Exp $
+# $NetBSD: modules.mk,v 1.16 2006/01/05 07:04:47 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
-
-#
-# default DIST_SUBDIR of ruby based packages
-#
-USE_RUBY_DIST_SUBDIR?=	no
 
 .include "../../lang/ruby/rubyversion.mk"
 
