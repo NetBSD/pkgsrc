@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/12/29 06:22:24 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/01/05 23:03:37 joerg Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.9.1
@@ -38,8 +38,6 @@ AG_DOCDIR=		${PREFIX}/share/doc/${AG}
 AG_EGDIR=		${PREFIX}/share/examples/${AG}
 AG_SHAREDIR=		${PREFIX}/share/${AG}
 
-FILES_SUBST+=		AG=${AG:Q}
-FILES_SUBST+=		AG_SHAREDIR=${AG_SHAREDIR:Q}
 FILES_SUBST+=		LDFLAGS=${LDFLAGS:M*:Q}
 
 MESSAGE_SUBST+=		AG=${AG}
@@ -53,11 +51,16 @@ PLIST_SUBST+=		AG_SHAREDIR=${AG_SHAREDIR:S,${PREFIX}/,,}
 
 CONF_FILES=		${AG_EGDIR}/${AG}.conf ${PKG_SYSCONFDIR}/${AG}.conf
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	ag.conf
+SUBST_SED.paths+=	-e 's,@AG@,${AG},g'
+SUBST_SED.paths+=	-e 's,@AG_SHAREDIR@,${AG_SHAREDIR},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/ag.conf ${WRKSRC}
+
 post-patch:
-	@cd ${WRKSRC}/lib/Apache && \
-	${CP} -p Gallery.pm Gallery.pm.orig && \
-	${SED} ${FILES_SUBST_SED} Gallery.pm.orig > Gallery.pm && \
-	${RM} -f Gallery.pm.orig
 	@${MV} -f ${WRKSRC}/templates/default/gallery.css \
 	    ${WRKSRC}/htdocs/gallery-default.css
 	@${MV} -f ${WRKSRC}/templates/new/gallery.css \
@@ -76,7 +79,6 @@ post-build:
 		${RM} -f $$i.orig; \
 	    done; \
 	done
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/ag.conf > ${WRKDIR}/${AG}.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${AG_SHAREDIR}
@@ -93,7 +95,7 @@ post-install:
 	done
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${AG_SHAREDIR}; \
 	${INSTALL_DATA_DIR} ${AG_EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/${AG}.conf ${AG_EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/${AG}.conf ${AG_EGDIR}
 
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
