@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/01/03 15:50:07 rxg Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/05 15:40:37 rxg Exp $
 #
 
 DISTNAME=	rox-lib-2.0.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -27,12 +28,17 @@ INSTALLATION_DIRS=	share/rox/ROX-Lib2
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	"Fixing hardcoded paths."
 SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	Help/findrox.py
-SUBST_FILES.path+=	python/rox/basedir.py
+SUBST_FILES.path=	python/rox/basedir.py
 SUBST_FILES.path+=	python/rox/choices.py
 SUBST_FILES.path+=	tests/python/testbasedir.py
 SUBST_FILES.path+=	tests/python/testchoices.py
-SUBST_SED.path=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
+SUBST_SED.path=		-e 's,/usr/local,${PREFIX},g'
+
+SUBST_CLASSES+=		lib
+SUBST_MESSAGE.lib=	"Fixing hardcoded paths for ROX-Lib."
+SUBST_STAGE.lib=	post-patch
+SUBST_FILES.lib=	Help/findrox.py
+SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}/share/rox/ROX-Lib2
