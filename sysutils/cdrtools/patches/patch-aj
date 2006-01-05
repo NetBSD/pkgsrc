@@ -1,0 +1,25 @@
+$NetBSD: patch-aj,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
+
+--- cdrecord/scsi_cdr.c.orig	2004-05-25 00:36:01.000000000 +0200
++++ cdrecord/scsi_cdr.c
+@@ -319,7 +319,11 @@ request_sense(scgp)
+ 		char	sensebuf[CCS_SENSE_LEN];
+ 	register struct	scg_cmd	*scmd = scgp->scmd;
+ 
+-
++#ifdef __NetBSD__
++	/* request sense already done by kernel */
++	scg_prsense((Uchar *)scgp->scmd->u_sense.cmd_sense,
++	    scgp->scmd->sense_count);
++#else	
+ 	fillbytes((caddr_t)scmd, sizeof (*scmd), '\0');
+ 	scmd->addr = sensebuf;
+ 	scmd->size = sizeof (sensebuf);
+@@ -335,6 +339,7 @@ request_sense(scgp)
+ 	if (scg_cmd(scgp) < 0)
+ 		return (-1);
+ 	scg_prsense((Uchar *)sensebuf, CCS_SENSE_LEN - scg_getresid(scgp));
++#endif
+ 	return (0);
+ }
+ 

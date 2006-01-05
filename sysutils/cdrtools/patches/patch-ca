@@ -1,0 +1,13 @@
+$NetBSD: patch-ca,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
+
+--- cdrecord/defaults.c.orig	2004-03-02 02:10:32.000000000 +0100
++++ cdrecord/defaults.c
+@@ -54,7 +54,7 @@ open_cdrdefaults()
+ 	 * don't contribute work and don't give support, they are causing extra
+ 	 * work for me and this way slow down the cdrecord development.
+ 	 */
+-	return (defltopen("/etc/default/cdrecord"));
++	return (defltopen("@CDRECORD_CONF@"));
+ }
+ 
+ EXPORT void
