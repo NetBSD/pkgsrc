@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/01/05 16:03:25 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/05 17:46:49 gdt Exp $
 #
 
 DISTNAME=	mail-notification-2.0
@@ -48,9 +48,11 @@ CONFIGURE_ARGS+=	--disable-sasl
 CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
-# Gettext 0.14.4 is ok, and 0.10.35 is not.
-# BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.14.4
-DEPENDS+=   gettext>=0.11.5:../../devel/gettext
+# The build requires msgfmt (gettext, not gettext-lib).
+# Gettext 0.14.4 and 0.11.5 are ok, and 0.10.35 is not.
+# Upstream maintainer indicates that 0.10.36 should suffice.
+# BUILD_USES_MSGFMT has no wasy to require newer gettext.
+BUILD_DEPENDS+=   gettext>=0.11.5:../../devel/gettext
 
 .include "../../devel/eel2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
