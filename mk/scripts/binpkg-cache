@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.6 2005/05/24 21:48:22 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.7 2006/01/05 22:19:42 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
 #
-# Copyright (c) 2005 The NetBSD Foundation, Inc.
+# Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -95,6 +95,9 @@ usage(){
 	echo " "
 	echo "  -v|--version          Displays the version of this script and exits."
 	echo " "
+	echo "Returns 0 on success, 1 on errors, 2 if the packages"
+	echo "directory does not exist."
+	echo " "
 	echo "Example:    $prog -v --packages /usr/pkgsrc/packages"
 	echo " "
 }
@@ -107,6 +110,11 @@ clean_and_exit0(){
 clean_and_exit1(){
 	rm -fr ${tmpd}
 	exit 1
+}
+
+clean_and_exit2(){
+	rm -fr ${tmpd}
+	exit 2
 }
 
 all_cache_files=""
@@ -326,7 +334,7 @@ fi
 
 if test ! -d ${PACKAGES} ; then
 	echo "Packages directory ${PACKAGES} seems to be missing"
-	clean_and_exit1
+	clean_and_exit2
 fi
 
 # put a trailing / after ${PACKAGES} in case ${PACKAGES} is 
