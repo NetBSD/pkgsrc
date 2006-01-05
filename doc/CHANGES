@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12359 2006/01/05 00:05:14 adrianp Exp $
+$NetBSD: CHANGES,v 1.12360 2006/01/05 04:40:15 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -102,3 +102,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/kdemultimedia3 to 3.5.0nb1 [wiz 2006-01-04]
 	Updated archivers/pbzip2 to 0.9.5 [wiz 2006-01-04]
 	Added www/drupal version 4.6.5 [adrianp 2006-01-04]
+	Updated misc/libcdio to 0.76 [uebayasi 2006-01-06]
+	Updated graphics/dcraw to 7.94 [uebayasi 2006-01-06]
