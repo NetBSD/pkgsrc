@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2005/10/08 23:20:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/05 23:29:05 wiz Exp $
 
-DISTNAME=	mklivecd-0.13.2
+DISTNAME=	mklivecd-0.13.3
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 MAINTAINER=	xtraeme@NetBSD.org
 COMMENT=	Make your own NetBSD/i386 Live CD-ROM/DVD-ROM
 
-DEPENDS+=	{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
+DEPENDS+=	{cdcrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 DEPENDS+=	grub>=0.97:../../sysutils/grub
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
