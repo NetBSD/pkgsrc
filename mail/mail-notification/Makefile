@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/01/04 20:28:01 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/05 16:03:25 gdt Exp $
 #
 
 DISTNAME=	mail-notification-2.0
+PKGREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 
@@ -47,9 +48,13 @@ CONFIGURE_ARGS+=	--disable-sasl
 CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
+# Gettext 0.14.4 is ok, and 0.10.35 is not.
+# BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.14.4
+DEPENDS+=   gettext>=0.11.5:../../devel/gettext
+
 .include "../../devel/eel2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+#.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
