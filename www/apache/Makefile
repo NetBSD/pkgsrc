@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.177 2005/12/29 06:22:21 jlam Exp $
+# $NetBSD: Makefile,v 1.178 2006/01/05 10:01:20 ghen Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_1.3.34
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/}
@@ -144,6 +144,19 @@ OWN_DIRS+=		${PREFIX}/lib/httpd
 OWN_DIRS+=		${VARBASE}/httpd
 OWN_DIRS+=		${VARBASE}/log/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
+
+#
+# Fix paths in the apache manpages.
+#
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	post-patch
+SUBST_FILES.man=	src/support/*.1 src/support/*.8
+SUBST_SED.man=		-e 's,/usr/local/apache/conf,${PKG_SYSCONFDIR},'
+SUBST_SED.man+=		-e 's,/usr/local/etc/apache,${PKG_SYSCONFDIR},'
+SUBST_SED.man+=		-e 's,/path/to/apache/etc,${PKG_SYSCONFDIR},'
+SUBST_SED.man+=		-e 's,/usr/local/apache/logs,${VARBASE}/log/httpd,'
+SUBST_SED.man+=		-e 's,/usr/local/apache,${PREFIX}/share/httpd/htdocs,'
+SUBST_SED.man+=		-e 's,/usr/web,${PREFIX}/share/httpd/htdocs,'
 
 PKG_GROUPS=		${APACHE_GROUP}
 PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\ user
