@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/01/05 10:08:58 ghen Exp $
+# $NetBSD: Makefile,v 1.32 2006/01/05 16:24:37 joerg Exp $
 
 DISTNAME=		qcad-1.5.4-src
 PKGNAME=		qcad-1.5.4
@@ -52,4 +52,5 @@ do-install:
 # If it is, then remove this comment.  If it is not, then remove
 # this comment and the line below, and bump PKGREVISION.
 BUILDLINK_DEPMETHOD.qt3-tools=	full
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
