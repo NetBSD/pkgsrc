@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/01/05 10:09:00 ghen Exp $
+# $NetBSD: Makefile,v 1.25 2006/01/05 12:00:39 ghen Exp $
 #
 
 DISTNAME=	sip-4.3.2
@@ -52,11 +52,6 @@ SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
-
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
