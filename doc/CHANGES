@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12368 2006/01/05 20:27:33 joerg Exp $
+$NetBSD: CHANGES,v 1.12369 2006/01/05 23:32:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -114,3 +114,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xview-lib to 3.2.1nb5 [joerg 2006-01-05]
 	Added www/ffproxy version 1.6 [garbled 2006-01-05]
 	Updated x11/xfstt to 1.6nb3 [joerg 2006-01-05]
+	Added sysutils/cdrtools version 2.01 [wiz 2006-01-05]
+	Removed sysutils/cdrecord [wiz 2006-01-05]
