@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2004/11/25 17:24:27 ben Exp $
+$NetBSD: patch-aa,v 1.6 2006/01/05 15:33:00 joerg Exp $
 
 --- Makefile.in.orig	Thu Jun 13 14:56:01 2002
 +++ Makefile.in
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 2004/11/25 17:24:27 ben Exp $
 +LINK	=	g++ ${LDFLAGS}
  LFLAGS	=	
 -LIBS	=   -L/usr/X11R6/lib -lfltk -lGL -lXext -lX11 -lm -lpthread
-+LIBS	=   -lfltk -lGL -lXext -lX11 -lm -lpthread ${LIBOSSAUDIO}
++LIBS	=   -lfltk -lGL -lXext -lX11 -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} ${LIBOSSAUDIO}
  MOC	=	moc
  UIC	=	
  
