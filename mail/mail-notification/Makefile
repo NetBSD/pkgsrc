@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/01/05 17:46:49 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/05 18:33:27 gdt Exp $
 #
 
 DISTNAME=	mail-notification-2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	YES
+BUILD_USES_MSGFMT=	YES
+USE_MSGFMT_PLURALS=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
@@ -48,15 +50,9 @@ CONFIGURE_ARGS+=	--disable-sasl
 CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
-# The build requires msgfmt (gettext, not gettext-lib).
-# Gettext 0.14.4 and 0.11.5 are ok, and 0.10.35 is not.
-# Upstream maintainer indicates that 0.10.36 should suffice.
-# BUILD_USES_MSGFMT has no wasy to require newer gettext.
-BUILD_DEPENDS+=   gettext>=0.11.5:../../devel/gettext
-
 .include "../../devel/eel2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-#.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-lib/builtin.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
