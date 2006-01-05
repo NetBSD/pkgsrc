@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2005/12/29 06:22:25 jlam Exp $
+# $NetBSD: Makefile,v 1.100 2006/01/05 20:57:05 joerg Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	1
@@ -130,20 +130,19 @@ SUBST_SED.varlock=	s:/var/lock:/var/spool/lock:
 .endif
 .endif
 
-SUBST_CLASSES+=		htdig
+SUBST_CLASSES+=		htdig paths
 SUBST_STAGE.htdig=	post-patch
 SUBST_MESSAGE.htdig=	"Fix htdig paths."
 SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
 SUBST_SED.htdig=	s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
 
+SUBST_FILES.paths=	kcontrol/kdm/main.cpp kioslave/info/kde-info2html.conf
+SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_STAGE.paths=	post-patch
+
 pre-configure:
 	${LN} -s FreeBSD ${WRKSRC}/ksysguard/ksysguardd/DragonFly
-	cd ${WRKSRC};							\
-	files="kcontrol/kdm/main.cpp kioslave/info/kde-info2html.conf";	\
-	for file in $${files}; do					\
-		${SED} ${FILES_SUBST_SED} $${file} > $${file}.new;	\
-		${MV} -f $${file}.new $${file};				\
-	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/templates/.source/emptydir
