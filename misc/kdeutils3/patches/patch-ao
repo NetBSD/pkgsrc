@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.11 2005/12/11 11:45:44 markd Exp $
+$NetBSD: patch-ao,v 1.12 2006/01/05 20:25:16 joerg Exp $
 
---- configure.orig	2004-04-06 02:55:31.000000000 +1200
+--- configure.orig	2005-11-26 07:19:12.000000000 +0000
 +++ configure
-@@ -32333,6 +32267,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -34076,6 +34076,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  
@@ -10,3 +10,28 @@ $NetBSD: patch-ao,v 1.11 2005/12/11 11:45:44 markd Exp $
  #include <sys/mount.h>
  
  
+@@ -34785,19 +34786,18 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++#include <math.h>
++
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-/* We use char because int might match the return type of a gcc2
+-   builtin and then its argument prototype would still apply.  */
+-char isinf ();
++
++double d = 0.0;
+ int
+ main ()
+ {
+-isinf ();
+-  ;
+-  return 0;
++  return isinf (d);
+ }
+ _ACEOF
+ rm -f conftest.$ac_objext conftest$ac_exeext
