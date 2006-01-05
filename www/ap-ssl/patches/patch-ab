@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2002/12/03 14:31:33 grant Exp $
+$NetBSD: patch-ab,v 1.5 2006/01/05 21:21:55 joerg Exp $
 
---- pkg.sslsup/mkcert.sh.in.orig	Sun Apr 16 19:21:24 2000
-+++ pkg.sslsup/mkcert.sh.in
+--- pkg.sslsup/mkcert.sh.orig	Sun Apr 16 19:21:24 2000
++++ pkg.sslsup/mkcert.sh
 @@ -1,39 +1,57 @@
 -#!/bin/sh
 +#!@SH@

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2005/12/05 20:51:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.26 2006/01/05 21:22:13 joerg Exp $
 #
 
 DISTNAME=	qt-x11-${QTVERSION}
@@ -41,28 +41,15 @@ CONFIGURE_ARGS+=	-platform solaris-g++
 CONFIGURE_ARGS+=	-xft -platform freebsd-g++
 .endif
 
-FILES_SUBST=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
-FILES_SUBST+=		BUILDLINK_X11_DIR=${BUILDLINK_X11_DIR:Q}
-FILES_SUBST+=		LOCALBASE=${LOCALBASE:Q}
-FILES_SUBST+=		QTDIR=${QTPREFIX:Q}
-FILES_SUBST+=		X11BASE=${X11BASE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	configs/netbsd-g++-static configs/solaris-g++-static
+SUBST_FILES.paths+=	configs/freebsd-g++-static
+SUBST_SED.paths=	-e 's,@X11BASE@,${X11BASE},g'
+SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_SED.paths+=	-e 's,@QTDIR@,${QTPREFIX},g'
+SUBST_STAGE.paths=	post-patch
 
 .include "../../mk/x11.buildlink3.mk"
-
-post-extract:
-	cd ${WRKSRC}/configs;						\
-	for file in netbsd-g++-static solaris-g++-static 		\
-	    freebsd-g++-static; do					\
-		${MV} -f $${file} $${file}.in;				\
-	done
-
-post-patch:
-	cd ${WRKSRC}/configs;						\
-	for file in netbsd-g++-static solaris-g++-static		\
-	    freebsd-g++-static; do					\
-		${SED} ${FILES_SUBST_SED} $${file}.in > $${file};	\
-	done
 
 pre-build:
 	@${TOUCH} ${WRKSRC}/.buildopts
