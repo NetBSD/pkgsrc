@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/13 12:15:16 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/05 10:08:58 ghen Exp $
 
 DISTNAME=	texmaker-1.12
 CATEGORIES=	editors
@@ -17,5 +17,4 @@ post-configure:
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../mk/bsd.pkg.mk"

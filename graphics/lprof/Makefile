@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:21 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/05 10:08:59 ghen Exp $
 #
 
 DISTNAME=		lprof-1.10.1
@@ -14,8 +14,6 @@ USE_TOOLS+=	gmake
 
 MAKE_ENV+=	BASEDIR=${PREFIX:Q} QTDIR=${PREFIX}/qt3
 MAKE_ENV+=	LDFLAGS=${LDFLAGS:M*:Q}
-
-BUILDLINK_DEPMETHOD.qt3-tools= build
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"

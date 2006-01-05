@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/05 10:08:59 ghen Exp $
 
 DISTNAME=	qca-1.0
 CATEGORIES=	security
@@ -21,6 +21,5 @@ do-install:
 	libtool --mode=install ${INSTALL_LIB} libqca.la ${PREFIX}/lib
 
 .include "../../x11/qt3-libs/buildlink3.mk"
-BUILDLINK_DEPMETHOD.qt3-tools= build
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/22 20:07:38 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/05 10:08:58 ghen Exp $
 
 DISTNAME=	hydrogen-0.8.0
 PKGREVISION=	1
@@ -23,4 +23,8 @@ CONFIGURE_ARGS+=	--with-xinerama
 .include "../../audio/libhydrogen/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/bsd.pkg.mk"

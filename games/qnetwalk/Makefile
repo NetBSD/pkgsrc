@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:17 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/05 10:08:59 ghen Exp $
 #
 
 DISTNAME=	qnetwalk-1.2
@@ -9,9 +9,6 @@ MASTER_SITES=	http://qt.osdn.org.ua/
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://qt.osdn.org.ua/qnetwalk.html
 COMMENT=	QNetwalk is a Qt-version of the popular NetWalk game
-
-# We need qmake to build package's Makefile
-BUILDLINK_DEPMETHOD.qt3-tools=	build
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
