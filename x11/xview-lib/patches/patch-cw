@@ -1,8 +1,8 @@
-$NetBSD: patch-cw,v 1.2 2001/12/20 09:22:04 tron Exp $
+$NetBSD: patch-cw,v 1.3 2006/01/05 18:25:57 joerg Exp $
 
 --- lib/libxview/textsw/txt_again.c.orig	Tue Jun 29 07:17:32 1993
 +++ lib/libxview/textsw/txt_again.c	Thu Dec 20 10:11:57 2001
-@@ -28,6 +28,8 @@
+@@ -28,6 +28,8 @@ Pkg_private CHAR    *STRNCPY();
  Pkg_private Es_index textsw_do_input();
  Pkg_private Es_index textsw_do_pending_delete();
  
@@ -11,18 +11,33 @@ $NetBSD: patch-cw,v 1.2 2001/12/20 09:22:04 tron Exp $
  string_t        null_string = {0, 0, 0};
  
  #define	TEXT_DELIMITER	"\\"
-@@ -182,6 +184,7 @@
+@@ -182,6 +184,7 @@ textsw_string_min_free(ptr_to_string, mi
   * Following is stolen from 3.2ALPHA sprintf(str, fmt, va_alist) SIDE_EFFECT:
   * TXTSW_STRING_FREE(ptr_to_string) is modified by this routine.
   */
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
  #ifndef SVR4
  
  /* VARARGS2 */
-@@ -325,6 +328,31 @@
+@@ -325,6 +328,46 @@ va_dcl
  
  #endif /* SVR4 */
  
++#elif defined(__DragonFly__)
++static int
++textsw_printf(register string_t *ptr_to_string, char  *fmt, ...)
++{
++    int result;
++    va_list args;
++
++    VA_START(args, fmt);
++    result = vsnprintf(TXTSW_STRING_FREE(ptr_to_string), ptr_to_string->max_length - TXTSW_STRING_LENGTH(ptr_to_string), fmt, args);
++    if (result >=0)
++	TXTSW_STRING_FREE(ptr_to_string) += result;
++    return(result);
++}
++
++
 +#else /* __FreeBSD__ */
 +/*inspiration taken from sprintf.c */
 +
@@ -51,19 +66,38 @@ $NetBSD: patch-cw,v 1.2 2001/12/20 09:22:04 tron Exp $
  static	void
  textsw_record_buf(again, buffer, buffer_length)
      register string_t *again;
-@@ -619,6 +647,8 @@
+@@ -619,6 +662,8 @@ textsw_record_trash_insert(textsw)
   */
  /* VARARGS2 */
  
-+#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
 +
  static int
  #ifdef ANSI_FUNC_PROTO
  textsw_scanf(register string_t *ptr_to_string, register char  *fmt, ...)
-@@ -705,6 +735,38 @@
+@@ -705,6 +750,57 @@ va_dcl
  
  #endif /* OW_I18N */
  }
++#elif defined(__DragonFly__)
++static int
++textsw_scanf(register string_t *ptr_to_string, char  *fmt, ...)
++{
++	va_list args;
++	int result;
++	size_t len = TXTSW_STRING_LENGTH(ptr_to_string);
++	char *str = malloc(len + 1);
++	if (str == NULL)
++	    return -1;
++	memcpy(str, TXTSW_STRING_BASE(ptr_to_string), len);
++	str[len] = '\0';
++	VA_START(args, fmt);
++	result = vsscanf(str, fmt, args);
++	va_end(args);
++	free(str);
++	return(result);
++}
++
 +#else /* __FreeBSD__ */
 +/*inspiration/code taken from sscanf.c */
 +
