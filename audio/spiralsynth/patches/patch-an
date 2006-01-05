@@ -1,8 +1,19 @@
-$NetBSD: patch-an,v 1.2 2005/04/24 14:41:28 ben Exp $
+$NetBSD: patch-an,v 1.3 2006/01/05 15:33:00 joerg Exp $
 
---- SpiralSound/Midi.C.orig	2002-06-11 15:08:56.000000000 -0700
+--- SpiralSound/Midi.C.orig	2002-06-11 22:08:56.000000000 +0000
 +++ SpiralSound/Midi.C
-@@ -76,12 +76,12 @@ MidiDevice::~MidiDevice() 
+@@ -27,6 +27,10 @@
+ #include <FL/Fl.h>
+ #endif
+ 
++#if defined(__DragonFly__) && !defined(O_SYNC)
++#define O_SYNC O_FSYNC
++#endif
++
+ static const int MIDI_SCANBUFSIZE=256;
+ static const int MIDI_KEYOFFSET=0;
+ 
+@@ -76,12 +80,12 @@ MidiDevice::~MidiDevice() 
  void MidiDevice::Close()
  {
  	pthread_mutex_lock(m_Mutex);
@@ -17,7 +28,7 @@ $NetBSD: patch-an,v 1.2 2005/04/24 14:41:28 ben Exp $
  	cerr<<"Closed midi device"<<endl;
  }
  
-@@ -90,24 +90,19 @@ void MidiDevice::Open()
+@@ -90,24 +94,19 @@ void MidiDevice::Open()
  {
  	//if (!SpiralInfo::WANTMIDI) return;
  	
