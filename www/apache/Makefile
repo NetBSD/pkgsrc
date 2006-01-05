@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2006/01/05 10:01:20 ghen Exp $
+# $NetBSD: Makefile,v 1.179 2006/01/05 22:32:40 joerg Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -34,7 +34,7 @@ EXTRACT_ONLY=		${DISTFILES:N*.gif}
 # objects constructed properly.
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
+CONFIGURE_ARGS+=	--with-layout="${WRKSRC}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most				\
 			--enable-module=auth_db				\
 			--disable-module=auth_dbm
@@ -148,7 +148,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 #
 # Fix paths in the apache manpages.
 #
-SUBST_CLASSES+=		man
+SUBST_CLASSES+=		man paths
 SUBST_STAGE.man=	post-patch
 SUBST_FILES.man=	src/support/*.1 src/support/*.8
 SUBST_SED.man=		-e 's,/usr/local/apache/conf,${PKG_SYSCONFDIR},'
@@ -157,6 +157,12 @@ SUBST_SED.man+=		-e 's,/path/to/apache/etc,${PKG_SYSCONFDIR},'
 SUBST_SED.man+=		-e 's,/usr/local/apache/logs,${VARBASE}/log/httpd,'
 SUBST_SED.man+=		-e 's,/usr/local/apache,${PREFIX}/share/httpd/htdocs,'
 SUBST_SED.man+=		-e 's,/usr/web,${PREFIX}/share/httpd/htdocs,'
+
+SUBST_FILES.paths=	config.layout
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
+SUBST_STAGE.paths=	post-patch
 
 PKG_GROUPS=		${APACHE_GROUP}
 PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\ user
@@ -175,6 +181,7 @@ post-extract:
 	@${CP} ${MODSSL_SRC}/pkg.addon/*.html ${WRKSRC}/htdocs/manual/mod
 	@${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
 	@${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
+	@${CP} ${FILESDIR}/config.layout ${WRKSRC}
 
 pre-patch:
 	@cd ${WRKSRC} && ${CAT}						\
@@ -194,10 +201,6 @@ post-patch:
 	${SED}	-e "s|@INSTALL@|"`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`" -c -o ${LIBOWN} -g ${LIBGRP}|" \
 		apxs.pl > apxs.pl.sed;					\
 	${MV} apxs.pl.sed apxs.pl
-
-pre-configure:
-	@${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
 	@${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
