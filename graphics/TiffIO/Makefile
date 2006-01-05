@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/09 15:47:34 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/05 10:08:59 ghen Exp $
 #
 
 DISTNAME=		TiffIO-110c
@@ -10,9 +10,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		gdt@ir.bbn.com
 HOMEPAGE=		http://artis.imag.fr/Software/TiffIO/
 COMMENT=		Tiff support for QT image loader
-
-# We need qmake to build package's Makefile
-BUILDLINK_DEPMETHOD.qt3-tools=  build
 
 USE_TOOLS+=     gmake
 USE_LANGUAGES=  c c++

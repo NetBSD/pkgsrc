@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.11 2005/12/05 23:55:12 rillig Exp $
+# $NetBSD: kde3.mk,v 1.12 2006/01/05 10:08:59 ghen Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -96,7 +96,6 @@ BUILDLINK_DEPENDS.qt3-libs+=	qt3-libs>=3.3.3nb1
 .include "../../x11/qt3-libs/buildlink3.mk"
 .endif
 
-BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../x11/qt3-tools/buildlink3.mk"
 
 .endif	# KDE3_MK

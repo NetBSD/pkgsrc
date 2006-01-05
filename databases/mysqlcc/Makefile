@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/27 16:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/05 10:08:58 ghen Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
@@ -36,5 +36,9 @@ do-install:
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

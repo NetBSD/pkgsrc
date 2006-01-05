@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/19 15:13:38 adam Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/05 10:08:58 ghen Exp $
 
 DISTNAME=	qsynth-0.2.4
 CATEGORIES=	audio
@@ -26,4 +26,8 @@ do-install:
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/bsd.pkg.mk"

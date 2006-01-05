@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:51:09 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/05 10:08:59 ghen Exp $
 
 DISTNAME=	ptimetracker-1.7.3
 CATEGORIES=	time kde
@@ -19,9 +19,6 @@ do-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ptimetracker ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/ptimetracker.1 ${PREFIX}/man/man1/
-
-# need only qmake during build
-BUILDLINK_DEPMETHOD.qt3-tools=	build
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"

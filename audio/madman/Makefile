@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/01/04 04:29:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/05 10:08:58 ghen Exp $
 
 DISTNAME=	madman-0.93
 PKGREVISION=	2
@@ -38,6 +38,10 @@ do-install:
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+# XXX Please verify whether qt3-tools is really needed at run-time.
+# If it is, then remove this comment.  If it is not, then remove
+# this comment and the line below, and bump PKGREVISION.
+BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../devel/glib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
