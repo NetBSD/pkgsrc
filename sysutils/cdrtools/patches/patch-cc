@@ -1,0 +1,13 @@
+$NetBSD: patch-cc,v 1.1.1.1 2006/01/05 23:27:59 wiz Exp $
+
+--- readcd/readcd.1.orig	Wed Dec 25 02:28:41 2002
++++ readcd/readcd.1
+@@ -186,7 +186,7 @@ If the argument to the
+ .B dev=
+ option does not contain the characters ',', '/', '@' or ':',
+ it is interpreted as an label name that may be found in the file
+-/etc/default/cdrecord (see FILES section).
++@CDRECORD_CONF@ (see FILES section).
+ .TP
+ .BI timeout= #
+ Set the default SCSI command timeout value to 
