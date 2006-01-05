@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.5 2006/01/05 15:55:26 joerg Exp $
+
+--- src/error.c.orig	2006-01-05 15:49:45.000000000 +0000
++++ src/error.c
+@@ -66,7 +66,6 @@ RCSID("$Id: error.c,v 1.8 2005/03/12 02:
+ /* ----------------------------------------------------------------------
+  * some external identifiers
+  */
+-extern int errno;		/* system error code */
+ 
+ #if !defined(HAVE_STRERROR)
+ extern int sys_nerr;		/* number of messages available from array */
+@@ -74,7 +73,7 @@ extern int sys_nerr;		/* number of messa
+ #endif
+ 
+ /* the list is already defined for some OS */
+-#if !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__linux__)
++#if !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__linux__) && !defined(__DragonFly__)
+ #ifdef USE_SYS_ERRLIST
+ extern char *sys_errlist[];	/* array of error messages */
+ #endif
