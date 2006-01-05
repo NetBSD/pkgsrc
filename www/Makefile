@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.427 2006/01/05 00:03:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.428 2006/01/05 19:15:18 garbled Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -88,6 +88,7 @@ SUBDIR+=	emacs-w3m
 SUBDIR+=	epiphany
 SUBDIR+=	epiphany-extensions
 SUBDIR+=	fcgi
+SUBDIR+=	ffproxy
 SUBDIR+=	firefox
 SUBDIR+=	firefox-bin
 SUBDIR+=	firefox-bin-acroread
