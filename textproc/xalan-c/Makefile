@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/01/03 00:05:39 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/05 20:43:20 joerg Exp $
 #
 
 DISTNAME=	Xalan-C_1_6-src
@@ -36,6 +36,10 @@ CONFIGURE_ARGS+=	-r pthread
 
 CONFIGURE_ENV+=	${XALAN_ENV}
 MAKE_ENV+=	${XALAN_ENV}
+
+pre-configure:
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
