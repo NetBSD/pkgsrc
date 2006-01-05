@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/04 07:23:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/05 23:14:35 wiz Exp $
 #
 
 DISTNAME=		elementtree-1.2.6-20050316
@@ -11,7 +11,7 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://effbot.org/zone/element.htm
 COMMENT=		Read XML and HTML files into trees of Element objects
 
-DEPENDS+=		py-xml-[0-9]*:../../textproc/py-xml
+DEPENDS+=		${PYPKGPREFIX}-xml-[0-9]*:../../textproc/py-xml
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
