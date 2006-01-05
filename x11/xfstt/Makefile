@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/01/05 20:26:48 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/05 20:35:12 joerg Exp $
 #
 
 DISTNAME=		xfstt-1.6
@@ -27,7 +27,6 @@ INSTALLATION_DIRS=	bin man/man1
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	doc/FAQ doc/xfstt.1x
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_STAGE.paths=	post-patch
 
 do-install:
