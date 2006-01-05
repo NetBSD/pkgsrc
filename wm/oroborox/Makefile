@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/01/05 16:02:39 rxg Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/05 16:58:49 rxg Exp $
 #
 
 DISTNAME=	OroboROX-0.9.7.9
 PKGNAME=	oroborox-0.9.7.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	http://roxos.sunsite.dk/dev-contrib/guido/
 EXTRACT_SUFX=	.tar.bz2
@@ -78,7 +78,7 @@ do-install:
 		-s ',^\./${PLATFORM}$$,,' -s ',^\./${PLATFORM}/.*,,'	\
 		-s ',^\./src$$,,' -s ',^\./src/.*,,'	\
 		. ${PREFIX}/share/rox/OroboROX
-	${INSTALL_SCRIPT} ${WRKDIR}/oroborox ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKDIR}/oroborox ${PREFIX}/bin
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
