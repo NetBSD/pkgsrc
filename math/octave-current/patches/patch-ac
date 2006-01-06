@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2005/04/27 14:31:05 adam Exp $
+$NetBSD: patch-ac,v 1.7 2006/01/06 22:41:48 adam Exp $
 
---- Makeconf.in.orig	2005-04-21 14:55:16.000000000 +0000
+--- Makeconf.in.orig	2005-11-11 20:47:12.000000000 +0100
 +++ Makeconf.in
-@@ -73,7 +73,7 @@ SHLBIN = @SHLBIN@
+@@ -78,7 +78,7 @@ SHLBIN = @SHLBIN@
  SHLBIN_VER = @SHLBIN_VER@
  SHLLINKEXT=
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.6 2005/04/27 14:31:05 adam Exp $
  
  # Fortran to C translator and associated flags.
  
-@@ -165,7 +165,7 @@ BUILD_LDFLAGS = @BUILD_LDFLAGS@
+@@ -171,7 +171,7 @@ BUILD_LDFLAGS = @BUILD_LDFLAGS@
  SH_LD = @SH_LD@
  SH_LDFLAGS = @SH_LDFLAGS@
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.6 2005/04/27 14:31:05 adam Exp $
  DL_LDFLAGS = @DL_LDFLAGS@
  
  SONAME_FLAGS = @SONAME_FLAGS@
-@@ -347,10 +347,10 @@ NO_OCT_FILE_STRIP = @NO_OCT_FILE_STRIP@
+@@ -361,10 +361,10 @@ NO_OCT_FILE_STRIP = @NO_OCT_FILE_STRIP@
  # How to make .o files:
  
  %.o : %.c
