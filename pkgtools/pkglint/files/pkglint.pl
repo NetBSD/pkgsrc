@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.449 2006/01/02 10:09:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.450 2006/01/06 13:42:47 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3256,6 +3256,11 @@ sub checkfile($) {
 
 		} elsif (!is_emptydir($fname)) {
 			log_warning($fname, NO_LINE_NUMBER, "Unknown directory name.");
+		}
+
+	} elsif (S_ISLNK($st->mode)) {
+		if ($basename !~ qr"^work") {
+			log_warning($fname, NO_LINE_NUMBER, "Unknown symlink name.");
 		}
 
 	} elsif (!S_ISREG($st->mode)) {
