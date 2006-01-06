@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.13 2005/11/09 14:41:38 tv Exp $
+$NetBSD: patch-ab,v 1.14 2006/01/06 15:08:47 wiz Exp $
 
---- dist/configure.orig	2005-09-06 03:44:24.000000000 -0400
+--- dist/configure.orig	2005-11-12 18:42:56.000000000 +0100
 +++ dist/configure
-@@ -5417,6 +5417,7 @@ db_cv_gxx_except=no;
+@@ -5498,6 +5498,7 @@ db_cv_gxx_except=no;
  if test "$GXX" = "yes"; then
  	GXX_VERSION=`${MAKEFILE_CXX} --version`
  	case ${GXX_VERSION} in
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.13 2005/11/09 14:41:38 tv Exp $
  	1.*|2.[01234567].*|*-1.*|*-2.[01234567].*)
  		db_cv_gxx_except=yes;;
  	esac
-@@ -20774,7 +20775,6 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
+@@ -21564,7 +21565,6 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
  
  
  SOFLAGS="-rpath \$(libdir)"
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.13 2005/11/09 14:41:38 tv Exp $
  
  # Set SOSUFFIX and friends
  
-@@ -20866,7 +20866,7 @@ echo "${ECHO_T}$JMODSUFFIX" >&6
+@@ -21656,7 +21656,7 @@ echo "${ECHO_T}$JMODSUFFIX" >&6
  INSTALLER="\$(LIBTOOL) --mode=install cp -p"
  
  MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.13 2005/11/09 14:41:38 tv Exp $
  MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
  MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
  MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
-@@ -21614,7 +21614,7 @@ if test "$_JTOPDIR" != "/usr"; then
+@@ -22412,7 +22412,7 @@ if test "$_JTOPDIR" != "/usr"; then
  	case "$host_os" in
  	aix*)		_JNI_INC_SUBDIRS="aix";;
  	bsdi*)		_JNI_INC_SUBDIRS="bsdos";;
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.13 2005/11/09 14:41:38 tv Exp $
  	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
  	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
  	osf*)		_JNI_INC_SUBDIRS="alpha";;
-@@ -30025,7 +30025,7 @@ fi
+@@ -30835,7 +30835,7 @@ fi
  #
  # If the user specified we use POSIX pthreads mutexes, and we fail to find the
  # full interface, try and configure for just intra-process support.
