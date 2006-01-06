@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2005/12/29 06:22:12 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/01/06 16:44:04 joerg Exp $
 
 DISTNAME=		vlnx424e
 PKGNAME=		uvscan-4.24.1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.24/intel/
 EXTRACT_SUFX=		.tar.Z
@@ -22,6 +23,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 CHECK_SHLIBS=		NO
 
 WRKSRC=			${WRKDIR}
+NO_BUILD=		yes
 LICENSE=		uvscan-license
 RESTRICTED=		"restrictive 30 day evaluation license"
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -46,9 +48,22 @@ OWN_DIRS=		${UVSCANDIR}
 
 INSTALLATION_DIRS=	bin man/man1 sbin
 
-do-build:
-	@${SED}	${FILES_SUBST_SED}					\
-		${FILESDIR}/update_dat.sh > ${WRKDIR}/update_dat
+USE_TOOLS+=		gtar:run
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/update_dat
+SUBST_SED.paths+=	-e 's,@UVSCANDIR@,${UVSCANDIR},g'
+SUBST_SED.paths+=	-e 's,@DATFILES@,${DATFILES},g'
+SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g' -e 's,@CP@,${CP},g'
+SUBST_SED.paths+=	-e 's,@BASENAME@,${BASENAME},g'
+SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},g' -e 's,@GREP@,${GREP},g'
+SUBST_SED.paths+=	-e 's,@GTAR@,${GTAR},g' -e 's,@MKDIR@,${MKDIR},g'
+SUBST_SED.paths+=	-e 's,@MV@,${MV},g' -e 's,@RM@,${RM},g'
+SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/update_dat.sh ${WRKDIR}/update_dat
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/update_dat ${PREFIX}/sbin
