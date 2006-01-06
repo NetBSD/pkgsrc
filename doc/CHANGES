@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12394 2006/01/06 22:48:01 adam Exp $
+$NetBSD: CHANGES,v 1.12395 2006/01/06 23:10:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -142,3 +142,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/xpaint to 2.7.8.1 [adam 2006-01-06]
 	Updated math/octave-current to 2.9.4 [adam 2006-01-06]
 	Updated www/cgic to 2.05 [adam 2006-01-06]
+	Updated pkgtools/pkg_comp to 1.25 [seb 2006-01-06]
