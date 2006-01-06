@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/12/05 20:50:04 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2006/01/06 13:02:00 joerg Exp $
 
 DISTNAME=		gettext-0.11.5
 PKGREVISION=		5
@@ -30,6 +30,7 @@ MAKE_ENV+=  		OPSYS=${OPSYS:Q}
 TEST_TARGET=		check
 
 USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
+BROKEN_GETTEXT_DETECTION=	yes
 
 post-install:
 	cd ${WRKSRC}/intl; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-data
