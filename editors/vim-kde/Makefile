@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/01/04 04:29:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2006/01/06 15:10:03 wiz Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors kde
 MASTER_SITES=	ftp://ftp.rutgers.edu/pub/kde/stable/apps/KDE3.x/utils/ \
 		ftp://ftp.kde.org/pub/kde/stable/apps/KDE3.x/utils/ \

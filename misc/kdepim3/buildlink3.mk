@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2005/05/11 22:08:18 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/01/06 15:10:06 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEPIM_BUILDLINK3_MK:=	${KDEPIM_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdepim}
 BUILDLINK_PACKAGES+=	kdepim
 
 .if !empty(KDEPIM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.kdepim+=	kdepim>=3.2.2
-BUILDLINK_RECOMMENDED.kdepim+=	kdepim>=3.4.0
+BUILDLINK_DEPENDS.kdepim+=	kdepim>=3.5.0nb1
 BUILDLINK_PKGSRCDIR.kdepim?=	../../misc/kdepim3
 .endif	# KDEPIM_BUILDLINK3_MK
 
