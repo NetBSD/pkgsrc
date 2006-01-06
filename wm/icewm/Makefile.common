@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.47 2005/12/29 06:22:20 jlam Exp $
+# $NetBSD: Makefile.common,v 1.48 2006/01/06 20:49:20 rillig Exp $
 
-DISTNAME=		icewm-1.2.20
+DISTNAME=		icewm-1.2.23
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://icewm.sourceforge.net/
+HOMEPAGE=		http://www.icewm.org/
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
