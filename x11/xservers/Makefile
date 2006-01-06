@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:51:20 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/06 17:20:21 tron Exp $
 
-DISTNAME=	xservers-3.3.6.4
+DISTNAME=	xservers-3.3.6.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,9 +26,6 @@ PKG_SKIP_REASON+=	"${PKGNAME} is part of your X11 distribution"
 .endif
 
 X11_SUBDIR=	X11R6.3
-X11_SRCS=	Imakefile Makefile config fonts include lib nls \
-		programs/Imakefile programs/Xserver programs/bdftopcf \
-		programs/mkfontdir programs/xkbcomp
 
 MESSAGE_SUBST+=	X11_SUBDIR=${X11_SUBDIR}
 
@@ -45,7 +42,6 @@ post-install:
 	${FIND} ${X11_SUBDIR} -type d -print | ${SORT} -r | \
 	${AWK} '{print("@dirrm "$$1)}' >>${PLIST_SRC}
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 print-x11-release:
