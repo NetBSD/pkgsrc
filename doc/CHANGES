@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12390 2006/01/06 18:14:44 joerg Exp $
+$NetBSD: CHANGES,v 1.12391 2006/01/06 20:49:52 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -138,3 +138,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mDNSResponder to 107.3 [wiz 2006-01-06]
 	Updated x11/gnome-desktop to 2.12.2 [wiz 2006-01-06]
 	Updated cad/magic to 7.1nb2 [joerg 2006-01-06]
+	Updated wm/icewm to 1.2.23 [rillig 2006-01-06]
