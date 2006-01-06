@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.451 2006/01/06 17:43:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.452 2006/01/06 18:02:05 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1845,7 +1845,7 @@ sub checkline_mk_shelltext($$) {
 				"The consequence of this change is that shell programs don't terminate",
 				"as soon as an error occurs, but try to continue with the next command.",
 				"Imagine what would happen for these commands:",
-				"    cd \"\$HOME\"; cd /nonexistant; rm -rf *",
+				"    cd \"\$HOME\"; cd /nonexistent; rm -rf *",
 				"To fix this warning, either insert \"set -e\" at the beginning of this",
 				"line or use the \"&&\" operator instead of the semicolon.");
 		}
