@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2006/01/06 18:14:06 joerg Exp $
+
+--- textio/txCommands.c.orig	2005-12-20 16:51:34.000000000 +0000
++++ textio/txCommands.c
+@@ -46,8 +46,6 @@ static char rcsid[]="$Header: /ufs/repos
+ #include "utils/utils.h"
+ #include "lisp/lisp.h"
+ 
+-extern int errno;
+-
+ /* Turning this flag on prints out input events and commands as they
+  * are processed.
+  */
