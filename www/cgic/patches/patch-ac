@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/07/20 21:44:29 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/06 22:46:51 adam Exp $
 
---- cgic.c.orig	Sun Jan 12 13:59:43 2003
+--- cgic.c.orig	2004-11-15 17:57:59.000000000 +0100
 +++ cgic.c
-@@ -124,8 +124,9 @@ static int cgiStrBeginsNc(char *s1, char
- 
- static int firstCookie = 1;
+@@ -119,8 +119,9 @@ static void cgiFreeResources();
+ static int cgiStrEqNc(char *s1, char *s2);
+ static int cgiStrBeginsNc(char *s1, char *s2);
  
 -int main(int argc, char *argv[]) {
 -	int result;
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/07/20 21:44:29 jmmv Exp $
  	char *cgiContentLengthString;
  	char *e;
  	cgiSetupConstants();
-@@ -211,17 +212,6 @@ int main(int argc, char *argv[]) {
+@@ -206,17 +207,6 @@ int main(int argc, char *argv[]) {
  	cgiOut = stdout;
  	cgiRestored = 0;
  
@@ -32,25 +32,15 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/07/20 21:44:29 jmmv Exp $
  	if (cgiStrEqNc(cgiRequestMethod, "post")) {
  #ifdef CGICDEBUG
  		CGICDEBUGSTART
-@@ -290,9 +280,9 @@ int main(int argc, char *argv[]) {
+@@ -284,9 +274,8 @@ int main(int argc, char *argv[]) {
+ #endif /* CGICDEBUG */
  		}
  	}
- 	firstCookie = 1;
 -	result = cgiMain();
 -	cgiFreeResources();
 -	return result;
-+
-+        atexit(cgiFreeResources);
-+        return(0);
++	atexit(cgiFreeResources);
++	return 0;
  }
  
  static void cgiGetenv(char **s, char *var){
-@@ -1995,7 +1985,7 @@ cgiEnvironmentResultType cgiReadEnvironm
- 	FILE *in;
- 	cgiFormEntry *e = 0, *p;
- 	char *version;
--	cgiEnvironmentResultType result;
-+	cgiEnvironmentResultType result = cgiEnvironmentSuccess;
- 	/* Free any existing data first */
- 	cgiFreeResources();
- 	/* Be sure to open in binary mode */

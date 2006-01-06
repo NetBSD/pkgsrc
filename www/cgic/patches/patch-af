@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/07/20 21:44:29 jmmv Exp $
+$NetBSD: patch-af,v 1.2 2006/01/06 22:46:51 adam Exp $
 
---- cgictest.c.orig	Sun Jan 12 13:59:43 2003
+--- cgictest.c.orig	2004-04-22 22:49:47.000000000 +0200
 +++ cgictest.c
-@@ -33,7 +33,13 @@ void Cookies();
+@@ -42,7 +42,13 @@ void Cookies();
  void LoadEnvironment();
  void SaveEnvironment();
  
