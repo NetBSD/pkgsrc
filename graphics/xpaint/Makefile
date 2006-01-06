@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2005/12/05 20:50:23 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2006/01/06 22:36:19 adam Exp $
 
-DISTNAME=       xpaint-2.7.8
+DISTNAME=       xpaint-2.7.8.1
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,6 @@ COMMENT=	Simple paint program
 USE_IMAKE=      	yes
 USE_TOOLS+=		gmake
 MAKE_ENV+=		XMKMF=${XMKMF:Q}
-BUILD_TARGET=		xaw3dg
 
 SUBST_CLASSES+=		foo
 SUBST_STAGE.foo=	pre-configure
@@ -21,6 +20,9 @@ SUBST_SED.foo=		-e "s|@LOCALBASE@|${LOCALBASE}|g" \
 			-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|@XAWDIR@|${BUILDLINK_PREFIX.Xaw3d}|g" \
 			-e "s|@XPMDIR@|${BUILDLINK_PREFIX.xpm}|g"
+
+pre-configure:
+	cd ${WRKSRC} && ./configure xaw3dg
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
