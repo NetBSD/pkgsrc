@@ -1,5 +1,5 @@
---- common/common.h.orig	Tue Apr 24 08:46:55 2001
-+++ common/common.h	Sat Jan  7 01:36:53 2006
+--- ../common/common.h.orig	Tue Apr 24 08:46:55 2001
++++ ../common/common.h	Sat Jan  7 01:36:53 2006
 @@ -16,6 +16,11 @@
  #include <sys/queue.h>
  #include <bitstring.h>
