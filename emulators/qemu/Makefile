@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/01/06 09:17:03 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/06 09:24:00 xtraeme Exp $
 #
 
 DISTNAME=		qemu-0.8.0
@@ -32,7 +32,7 @@ SUBST_MESSAGE.smbd=	"Fixing hardcoded paths."
 
 # Remove -march/-mcpu from CFLAGS, otherwise it will fail
 # to build in the SSE code.
-#BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
+BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
 
 .include "../../mk/compiler.mk"
 
