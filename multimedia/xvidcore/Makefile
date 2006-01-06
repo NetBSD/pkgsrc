@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:43 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/06 17:12:18 wiz Exp $
 #
 
-DISTNAME=	xvidcore-1.0.3
-PKGREVISION=	1
+DISTNAME=	xvidcore-1.1.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xvid.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xvid.org/
 COMMENT=	ISO MPEG-4 compliant video codec
 
-ONLY_FOR_PLATFORM+=	*-*-i386
+ONLY_FOR_PLATFORM+=	*-*-i386 *-*-powerpc *-*-x86_64
 
 BUILD_DEPENDS+=	nasm>=0.98.34:../../devel/nasm
 

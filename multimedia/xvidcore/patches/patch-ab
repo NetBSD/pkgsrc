@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/05/20 12:54:54 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/06 17:12:18 wiz Exp $
 
---- configure.orig	2005-05-19 22:22:30.000000000 +0200
-+++ configure	2005-05-19 22:22:54.000000000 +0200
-@@ -3776,7 +3776,7 @@
+--- configure.orig	2005-12-30 15:45:30.000000000 +0100
++++ configure
+@@ -3782,7 +3782,7 @@ SHARED_EXTENSION=""
  STATIC_EXTENSION=""
  OBJECT_EXTENSION=""
  case "$target_os" in
@@ -11,21 +11,21 @@ $NetBSD: patch-ab,v 1.1 2005/05/20 12:54:54 drochner Exp $
  	echo "$as_me:$LINENO: result: .so .a .o" >&5
  echo "${ECHO_T}.so .a .o" >&6
  	STATIC_EXTENSION="a"
-@@ -3819,7 +3819,7 @@
- SPECIFIC_CFLAGS=""
- PRE_SHARED_LIB=""
- case "$target_os" in
--     *bsd*|linux*|irix*|solaris*)
-+     *bsd*|linux*|irix*|solaris*|dragonfly*)
+@@ -3833,7 +3833,7 @@ echo "${ECHO_T}ok" >&6
+ 	SPECIFIC_LDFLAGS="-Wl,-soname,libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR) -shared -Wl,--version-script=libxvidcore.ld -lc -lm"
+ 	SPECIFIC_CFLAGS="-fPIC"
+ 	;;
+-     *bsd*|irix*)
++     *bsd*|dragonfly*|irix*)
  	echo "$as_me:$LINENO: result: ok" >&5
  echo "${ECHO_T}ok" >&6
  	STATIC_LIB="libxvidcore.\$(STATIC_EXTENSION)"
-@@ -3957,7 +3957,7 @@
-                                     echo "$as_me:$LINENO: checking for nasm object format" >&5
- echo $ECHO_N "checking for nasm object format... $ECHO_C" >&6
-          case "$target_os" in
--              *bsd*|linux*|beos|irix*|solaris*)
-+              *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
-                   echo "$as_me:$LINENO: result: elf" >&5
+@@ -4038,7 +4038,7 @@ echo "$as_me: WARNING: nasm patch versio
+        echo "$as_me:$LINENO: checking for asm object format" >&5
+ echo $ECHO_N "checking for asm object format... $ECHO_C" >&6
+        case "$target_os" in
+-           *bsd*|linux*|beos|irix*|solaris*)
++           *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
+                echo "$as_me:$LINENO: result: elf" >&5
  echo "${ECHO_T}elf" >&6
-                   NASM_FORMAT="elf"
+                NASM_FORMAT="elf"
