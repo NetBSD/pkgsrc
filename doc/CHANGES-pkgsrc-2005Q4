@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.19 2006/01/05 23:57:48 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.20 2006/01/06 16:57:52 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -41,3 +41,5 @@ Pullup ticket 995 - requested by Lubomir Sedlacik
 update net/ethereal, including security fixes
 Pullup ticket 999 - requested by Mark Davies
 security fix for kdegraphics3
+Pullup ticket 1002 - requested by Joerg Sonnenberger
+PLIST fix for py-pgnotify
