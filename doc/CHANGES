@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12375 2006/01/06 11:08:00 shannonjr Exp $
+$NetBSD: CHANGES,v 1.12376 2006/01/06 11:14:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -122,3 +122,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libksba to 0.9.13 [shannonjr 2006-01-06]
 	Updated security/dirmngr to 0.9.3 [shannonjr 2006-01-06]
 	Updated security/gnupg-devel to 1.9.20 [shannonjr 2006-01-06]
+	Updated devel/glib2 to 2.8.5 [wiz 2006-01-06]
