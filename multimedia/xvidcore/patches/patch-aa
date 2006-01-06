@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/10/21 07:41:53 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2006/01/06 17:12:18 wiz Exp $
 
---- Makefile.orig	2004-12-19 12:38:46.000000000 +0100
-+++ Makefile	2005-10-21 08:26:37.000000000 +0200
-@@ -82,7 +82,7 @@
+--- Makefile.orig	2005-12-30 14:45:30.000000000 +0000
++++ Makefile
+@@ -83,7 +83,7 @@ $(OBJECTS): platform.inc
  
  $(BUILD_DIR):
  	@echo "  D: $(BUILD_DIR)"
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2005/10/21 07:41:53 xtraeme Exp $
  
  #-----------------------------------------------------------------------------
  # Generic assembly rule
-@@ -90,7 +90,7 @@
+@@ -91,7 +91,7 @@ $(BUILD_DIR):
  
  .$(ASSEMBLY_EXTENSION).$(OBJECT_EXTENSION):
  	@echo "  A: $(@D)/$(<F)"
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2005/10/21 07:41:53 xtraeme Exp $
  	@$(AS) $(AFLAGS) $< -o $(BUILD_DIR)/$@
  
  #-----------------------------------------------------------------------------
-@@ -99,7 +99,7 @@
+@@ -100,7 +100,7 @@ $(BUILD_DIR):
  
  .c.$(OBJECT_EXTENSION):
  	@echo "  C: $(@D)/$(<F)"
@@ -29,21 +29,25 @@ $NetBSD: patch-aa,v 1.2 2005/10/21 07:41:53 xtraeme Exp $
  	@$(CC) -c $(ARCHITECTURE) $(BUS) $(ENDIANNESS) $(FEATURES) $(SPECIFIC_CFLAGS) $(CFLAGS) $< -o $(BUILD_DIR)/$@
  
  #-----------------------------------------------------------------------------
-@@ -127,7 +127,7 @@
+@@ -128,8 +128,8 @@ $(STATIC_LIB): $(BUILD_DIR) $(OBJECTS)
  
  $(SHARED_LIB): $(BUILD_DIR) $(OBJECTS)
  	@echo "  L: $(@F)"
 -	@$(INSTALL) -m 644 libxvidcore.def $(BUILD_DIR)/libxvidcore.def
+-	@$(INSTALL) -m 644 libxvidcore.ld $(BUILD_DIR)/libxvidcore.ld
 +	@$(BSD_INSTALL) -m 644 libxvidcore.def $(BUILD_DIR)/libxvidcore.def
++	@$(BSD_INSTALL) -m 644 libxvidcore.ld $(BUILD_DIR)/libxvidcore.ld
  	@cd $(BUILD_DIR) && $(CC) $(LDFLAGS) $(OBJECTS) -o $(PRE_SHARED_LIB) $(SPECIFIC_LDFLAGS)
  
  #-----------------------------------------------------------------------------
-@@ -139,6 +139,8 @@
- 	@$(INSTALL) -d $(libdir)
+@@ -140,7 +140,9 @@ install: $(BUILD_DIR)/$(STATIC_LIB) $(BU
+ 	@echo "  D: $(libdir)"
+ 	@$(INSTALL) -d $(DESTDIR)$(libdir)
  	@echo "  I: $(libdir)/$(SHARED_LIB)"
- 	@$(INSTALL) -m 755 $(BUILD_DIR)/$(SHARED_LIB) $(libdir)/$(SHARED_LIB)
+-	@$(INSTALL) -m 644 $(BUILD_DIR)/$(SHARED_LIB) $(DESTDIR)$(libdir)/$(SHARED_LIB)
++	@$(BSD_INSTALL_LIB) $(BUILD_DIR)/$(SHARED_LIB) $(DESTDIR)$(libdir)/$(SHARED_LIB)
 +	@ln -s $(libdir)/$(SHARED_LIB) $(libdir)/libxvidcore.so
 +	@ln -s $(libdir)/$(SHARED_LIB) $(libdir)/libxvidcore.so.$(API_MAJOR)
  	@echo "  I: $(libdir)/$(STATIC_LIB)"
- 	@$(INSTALL) -m 755 $(BUILD_DIR)/$(STATIC_LIB) $(libdir)/$(STATIC_LIB)
+ 	@$(INSTALL) -m 644 $(BUILD_DIR)/$(STATIC_LIB) $(DESTDIR)$(libdir)/$(STATIC_LIB)
  	@echo "  D: $(includedir)"
