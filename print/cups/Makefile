@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2005/12/29 06:22:06 jlam Exp $
+# $NetBSD: Makefile,v 1.105 2006/01/06 00:19:44 joerg Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -112,11 +112,16 @@ OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1770
 .include "../../net/openslp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/cups.pam
+SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_STAGE.paths=	post-patch
+
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
+post-extract:
+	${CP} ${FILESDIR}/cups.pam ${WRKDIR}/cups.pam
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
