@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/29 06:22:06 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/06 17:10:58 joerg Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
@@ -27,11 +27,23 @@ INSTALLATION_DIRS=	bin man/man1 man/man5
 
 .include "../../mk/bdb.buildlink3.mk"
 
-do-build:
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	builddb.pl builddb.1 pkg_filecheck.conf
+SUBST_FILES.paths+=	pkg_filecheck.conf.5 pkg_filecheck.c pkg_filecheck.1
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
+SUBST_SED.paths+=	-e 's,@X11PREFIX@,${X11PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_DBDIR@,${PKG_DBDIR},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
 .for f in builddb.pl builddb.1 pkg_filecheck.conf pkg_filecheck.conf.5 \
 	pkg_filecheck.c pkg_filecheck.1
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/${f} > ${WRKSRC}/${f}
+	${CP} ${FILESDIR}/${f} ${WRKSRC}/${f}
 .endfor
+
+do-build:
 	cd ${WRKSRC} \
 	    && ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} ${BDB_LIBS} \
 		-o pkg_filecheck pkg_filecheck.c \
