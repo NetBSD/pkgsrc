@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.19 2005/12/04 01:44:30 joerg Exp $
+# $NetBSD: Linux.mk,v 1.20 2006/01/06 22:47:24 christos Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -91,3 +91,6 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 #GAMEGRP=		games
 #GAMEMODE=		2555
 #.endif
+.if (${MACHINE_ARCH} == "x86_64")
+LIBABISUFFIX?=          64
+.endif
