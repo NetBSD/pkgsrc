@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.20 2006/01/06 16:57:52 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.21 2006/01/06 18:25:34 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -43,3 +43,5 @@ Pullup ticket 999 - requested by Mark Davies
 security fix for kdegraphics3
 Pullup ticket 1002 - requested by Joerg Sonnenberger
 PLIST fix for py-pgnotify
+Pullup ticket 1003 - requested by Joerg Sonnenberger
+PLIST fixes for py-table
