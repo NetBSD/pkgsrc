@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/12/24 02:55:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/06 14:51:19 wiz Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -25,6 +25,7 @@ lib/libaspell.la
 lib/libpspell.la
 man/man1/aspell-import.1
 man/man1/aspell.1
+man/man1/prezip-bin.1
 man/man1/pspell-config.1
 man/man1/run-with-aspell.1
 man/man1/word-list-compress.1
