@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2005/12/31 12:32:48 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2006/01/06 17:53:06 wiz Exp $
 #
 
-DISTNAME=		gnome-desktop-2.12.1
-PKGREVISION=		1
+DISTNAME=		gnome-desktop-2.12.2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.12/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,7 +18,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		yes
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
