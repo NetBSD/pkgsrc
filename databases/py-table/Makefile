@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/01/03 19:10:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/06 17:53:11 salo Exp $
 #
 
 DISTNAME=	pytable-0.8.3a
 PKGNAME=	${PYPKGPREFIX}-table-0.8.3a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytable/}
 
