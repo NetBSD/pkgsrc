@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4374 2006/01/05 23:36:00 wiz Exp $
+$NetBSD: TODO,v 1.4375 2006/01/06 11:12:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -578,7 +578,6 @@ Suggested package updates
 	o gnocatan-0.8.1.30
 	o gnome-desktop-2.12.2
 	o gnome-pilot-2.0.13
-	o gnupg-devel-1.9.20
 	o gnustep-1.11.1
 	o gnustep-gui-0.10.2
 	o gnustep-objc-1.4.0
@@ -680,7 +679,6 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kajaani-kombat-0.7
 	o kapooka-0.3
-	o kazehakase-0.3.3 [pkg/32272]
 	o kdbg-2.0.2
 	o kdrill-6.4
 	o kinput2-3.1
@@ -697,7 +695,6 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.11.4
 	o leafpad-0.8.6
-	o libcdio-0.76
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libesmtp-1.0.4
@@ -708,7 +705,6 @@ Suggested package updates
 	o libggimisc-2.1.2
 	o libgii-1.0.0
 	o libhydrogen-0.9.2
-	o libksba-0.9.9
 	o liblive-2005.10.05
 	o libmatheval-1.1.2
 	o libmilter-8.13.5
@@ -737,7 +733,6 @@ Suggested package updates
 	o mDNSResponder-107.3
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
-	o mail-notification-2.0
 	o mailman-2.1.7
 	o mailscanner-4.49
 	o makeself-2.1.4
@@ -897,7 +892,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
 	o p5-Ima-DBI-0.34
-	o p5-Image-ExifTool-5.87
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
@@ -1256,7 +1250,6 @@ Suggested package updates
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnc2swf-0.8.1
 	o vp-1.6
-	o vpnc-0.3.3
 	o vsftpd-2.01 [pkg/26811]
 	o vsftpd-2.0.3
 	o w32api-3.2
