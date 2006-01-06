@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12371 2006/01/05 23:36:00 wiz Exp $
+$NetBSD: CHANGES,v 1.12372 2006/01/06 02:53:30 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed sysutils/cdrecord [wiz 2006-01-05]
 	Updated www/apc-gui to 1.0.3nb2 [joerg 2006-01-05]
 	Updated net/tcpreplay to 2.3.5 [wiz 2006-01-05]
+	Updated print/enscript to 1.6.3nb2 [reed 2006-01-06]
