@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/01/06 17:39:17 wiz Exp $
+
+--- mDNSShared/PlatformCommon.c.orig	2005-02-01 19:33:30.000000000 +0000
++++ mDNSShared/PlatformCommon.c
+@@ -44,7 +44,7 @@ Move ReadDDNSSettingsFromConfFile() from
+ #include <stdio.h>				// Needed for fopen() etc.
+ #include <unistd.h>				// Needed for close()
+ #include <string.h>				// Needed for strlen() etc.
+-#include <sys/errno.h>			// Needed for errno etc.
++#include <errno.h>			// Needed for errno etc.
+ #include <sys/socket.h>			// Needed for socket() etc.
+ #include <netinet/in.h>			// Needed for sockaddr_in
+ 

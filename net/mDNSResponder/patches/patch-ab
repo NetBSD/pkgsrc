@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2006/01/06 17:39:17 wiz Exp $
+
+--- mDNSPosix/PosixDaemon.c.orig	2005-02-04 00:39:59.000000000 +0000
++++ mDNSPosix/PosixDaemon.c
+@@ -143,14 +143,14 @@ extern const char mDNSResponderVersionSt
+ static void Reconfigure(mDNS *m)
+ 	{
+ 	mDNSAddr DynDNSIP;
+-	mDNS_SetPrimaryInterfaceInfo(m, NULL, NULL);
++	mDNS_SetPrimaryInterfaceInfo(m, NULL, NULL, NULL);
+ 	mDNS_DeleteDNSServers(m);
+ 	if (ParseDNSServers(m, uDNS_SERVERS_FILE) < 0)
+ 		LogMsg("Unable to parse DNS server list. Unicast DNS-SD unavailable");
+ 	ReadDDNSSettingsFromConfFile(m, CONFIG_FILE, &DynDNSHostname, &DynDNSZone, NULL);
+ 	FindDefaultRouteIP(&DynDNSIP);
+ 	if (DynDNSHostname.c[0]) mDNS_AddDynDNSHostName(m, &DynDNSHostname, NULL, NULL);
+-	if (DynDNSIP.type)       mDNS_SetPrimaryInterfaceInfo(m, &DynDNSIP, NULL);
++	if (DynDNSIP.type)       mDNS_SetPrimaryInterfaceInfo(m, &DynDNSIP, NULL, NULL);
+ 	}
+ 
+ // Do appropriate things at startup with command line arguments. Calls exit() if unhappy.

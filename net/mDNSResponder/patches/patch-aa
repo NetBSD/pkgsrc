@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2005/11/03 22:40:58 rillig Exp $
+$NetBSD: patch-aa,v 1.4 2006/01/06 17:39:17 wiz Exp $
 
---- mDNSPosix/Makefile.orig	Sat Jun 11 22:44:40 2005
+--- mDNSPosix/Makefile.orig	2005-02-02 02:25:21.000000000 +0000
 +++ mDNSPosix/Makefile
-@@ -233,7 +233,7 @@ RM = rm
+@@ -221,7 +221,7 @@ RM = rm
  LN = ln -s -f
  CFLAGS_COMMON = -I. -I$(COREDIR) -I$(SHAREDDIR) -W -Wall -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\"
  LIBFLAGS =
