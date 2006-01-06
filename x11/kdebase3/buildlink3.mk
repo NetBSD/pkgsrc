@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2005/12/11 11:01:48 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/01/06 15:10:08 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEBASE_BUILDLINK3_MK:=	${KDEBASE_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdebase}
 BUILDLINK_PACKAGES+=	kdebase
 
 .if !empty(KDEBASE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.kdebase+=	kdebase>=3.2.0
-BUILDLINK_RECOMMENDED.kdebase?=	kdebase>=3.5.0
+BUILDLINK_DEPENDS.kdebase+=	kdebase>=3.5.0nb2
 BUILDLINK_PKGSRCDIR.kdebase?=	../../x11/kdebase3
 .endif	# KDEBASE_BUILDLINK3_MK
 
