@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.12 2005/04/20 12:40:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/01/06 15:19:18 wiz Exp $
 include/libexif/_stdint.h
 include/libexif/exif-byte-order.h
 include/libexif/exif-content.h
+include/libexif/exif-data-type.h
 include/libexif/exif-data.h
 include/libexif/exif-entry.h
 include/libexif/exif-format.h
@@ -14,7 +15,16 @@ include/libexif/exif-tag.h
 include/libexif/exif-utils.h
 lib/libexif.la
 lib/pkgconfig/libexif.pc
+share/doc/libexif/ABOUT-NLS
+share/doc/libexif/AUTHORS
+share/doc/libexif/COPYING
+share/doc/libexif/ChangeLog
+share/doc/libexif/NEWS
+share/doc/libexif/README
+share/doc/libexif/README.apidocs
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libexif-12.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libexif-12.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libexif-12.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libexif-12.mo
+@dirrm share/doc/libexif
 @dirrm include/libexif
