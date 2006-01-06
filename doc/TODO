@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4381 2006/01/06 16:54:30 wiz Exp $
+$NetBSD: TODO,v 1.4382 2006/01/06 17:01:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -755,8 +755,6 @@ Suggested package updates
 	o minivmac-2.6.1
 	o mjpegtools-1.8.0
 	o mknmz-wwwoffle-0.7.2
-	o mldonkey-2.7.2
-	o mldonkey-gui-2.7.2
 	o mlview-0.9.0
 	o mmix-20050922
 	o moc-2.3.3
