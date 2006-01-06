@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.450 2006/01/06 13:42:47 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.451 2006/01/06 17:43:18 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3001,11 +3001,11 @@ sub checkfile_package_Makefile($$$) {
 	autofix($lines);
 }
 
-sub checkfile_patches_patch($) {
+sub checkfile_patch($) {
 	my ($fname) = @_;
 	my ($lines, $files_in_patch, $patch_state, $line_type, $dellines);
 
-	log_info($fname, NO_LINE_NUMBER, "[checkfile_patches_patch]");
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_patch]");
 
 	checkperms($fname);
 	if (!($lines = load_file($fname))) {
@@ -3288,7 +3288,7 @@ sub checkfile($) {
 		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
 
 	} elsif ($basename =~ qr"^patch-[A-Za-z0-9]*$") {
-		$opt_check_patches and checkfile_patches_patch($fname);
+		$opt_check_patches and checkfile_patch($fname);
 
 	} elsif ($fname =~ qr"(?:^|/)patches/[^/]*$") {
 		log_warning($fname, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
