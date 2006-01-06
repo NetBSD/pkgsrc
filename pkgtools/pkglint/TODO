@@ -1,3 +1,8 @@
+$NetBSD: TODO,v 1.39 2006/01/06 17:24:38 rillig Exp $
+
+Please add your own entries at the bottom of this file. If possible,
+include the name of an example package where a warning should occur.
+
 * fix false positive warnings
 * ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
 * -Wl,-rpath
