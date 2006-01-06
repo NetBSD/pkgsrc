@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2006/01/02 22:33:36 jlam Exp $
+# $NetBSD: Makefile,v 1.157 2006/01/06 00:15:21 joerg Exp $
 
 .include "Makefile.mirrors"
 
@@ -98,6 +98,13 @@ OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR} ${SAMBA_STATEDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0700
 RCD_SCRIPTS+=		samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
+SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g' -e 's,@CAT@,${CAT},g'
+SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g' -e 's,@RM@,${RM},g'
+SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g' -e 's,@SH@,${SH},g'
+SUBST_STAGE.paths=	post-patch
+
 # Get the shared library major and minors for the installed shared
 # libraries.  We'll need these to create the versioned symlinks for
 # the shared libraries because samba Makefile doesn't do it on its
@@ -122,9 +129,8 @@ install-samba-lib-symlinks:
 	cd ${SAMBA_LIBDIR} && ${LN} -s libsmbclient.so			\
 		libsmbclient.so.${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT_MINOR}
 
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adduser.sh > ${WRKDIR}/adduser.sh
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
+post-extract:
+	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
 
 post-install: install-samba-lib-symlinks
 	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/include
