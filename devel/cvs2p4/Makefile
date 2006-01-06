@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/29 06:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/06 18:56:08 joerg Exp $
 #
 
 DISTNAME=	cvs2p4-2.3.3
@@ -25,13 +25,17 @@ LIBDIR=		lib/perl5
 PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 PLIST_SUBST+=	EGDIR=${EGDIR:Q}
 
-FILES_SUBST+=	P4ROOT=${P4ROOT:Q}
-FILES_SUBST+=	P4PORT=${P4PORT:Q}
-
 CVS2P4_INLIB=	$$Mydir/lib/util\.pl
 CVS2P4_OUTLIB=	${LIBDIR}/${PKGBASE}-util.pl
 
 INSTALLATION_DIRS=	bin ${LIBDIR}
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	test/config
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@P4PORT@,${P4PORT},g'
+SUBST_SED.paths+=	-e 's,@P4ROOT@,${P4ROOT},g'
+SUBST_STAGE.paths=	post-patch
 
 do-configure:
 	for f in ${WRKSRC}/bin/*; do \
@@ -40,9 +44,6 @@ do-configure:
 			> $${f}.new; \
 		${MV} -f $${f}.new $${f}; \
 	done
-	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/test/config \
-		> ${WRKSRC}/test/config.new
-	@${MV} -f ${WRKSRC}/test/config.new ${WRKSRC}/test/config
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/util.pl ${PREFIX}/${CVS2P4_OUTLIB}
