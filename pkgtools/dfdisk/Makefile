@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/29 06:22:05 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/06 17:28:20 joerg Exp $
 #
 
 DISTNAME=	dfdisk-1.0
@@ -16,8 +16,6 @@ NO_CONFIGURE=	yes
 EGDIR=		${PREFIX}/share/examples/dfdisk
 CONF_FILES=	${EGDIR}/dfdisk.conf ${PKG_SYSCONFDIR}/dfdisk.conf
 
-FILES_SUBST+=	PKGVERSION=${PKGVERSION:Q}
-
 .include "../../mk/bsd.prefs.mk"
 
 .if exists(${ZOULARISBASE}/bin/ftp)
@@ -28,10 +26,19 @@ FILES_SUBST+=	FTP="/usr/bin/ftp -p"
 
 INSTALLATION_DIRS=	bin man/man1
 
-do-build:
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	dfdisk.sh dfdisk.1 dfdisk.conf
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@PKGVERSION@,${PKGVERSION},g'
+SUBST_SED.paths+=	-e 's,@PKGBASE@,${PKGBASE},g'
+SUBST_SED.paths+=	-e 's,@FTP@,${FTP},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
 .for f in dfdisk.sh dfdisk.1 dfdisk.conf
-	@${ECHO} "Generating ${f}..."
-	@${SED} ${FILES_SUBST_SED} < ${FILESDIR}/${f} > ${WRKDIR}/${f}
+	${CP} ${FILESDIR}/${f} ${WRKDIR}/${f}
 .endfor
 
 do-install:
