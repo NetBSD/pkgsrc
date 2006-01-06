@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2005/12/29 06:22:00 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2006/01/06 17:01:12 wiz Exp $
 #
 
 .include "Makefile.common"
-
 
 RCD_SCRIPTS=		mldonkey
 
