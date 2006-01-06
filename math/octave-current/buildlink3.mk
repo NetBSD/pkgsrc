@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/05/21 16:29:31 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/01/06 22:41:48 adam Exp $
 #
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -26,6 +26,7 @@ BUILDLINK_PKGSRCDIR.octave-current?=	../../math/octave-current
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
