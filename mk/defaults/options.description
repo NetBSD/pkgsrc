@@ -132,6 +132,8 @@ kermit-suid-uucp	Install kermit setuid uucp.
 kqueue	
 krb4	
 krb5	
+lablgtk			Use lablgtk (GTK1).
+lablgtk2		Use lablgtk2 (GTK2).
 lame			Use the lame encoder to create MP3 files.
 largefile	
 largescale	
