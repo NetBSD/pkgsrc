@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:47 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/06 17:39:16 wiz Exp $
 
-DISTNAME=	mDNSResponder-107.1
-PKGREVISION=	1
+DISTNAME=	mDNSResponder-107.3
 CATEGORIES=	net
 MASTER_SITES=	http://darwinsource.opendarwin.org/tarballs/apsl/
 
