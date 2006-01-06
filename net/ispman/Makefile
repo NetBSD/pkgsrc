@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/06 15:10:06 wiz Exp $
 #
 
 DISTNAME=	ispman-0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ispman/}
 
