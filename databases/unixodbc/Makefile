@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/29 06:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/06 18:36:52 joerg Exp $
 
 PKGNAME=		unixodbc-${ODBC_BASE_VERS}
 PKGREVISION=		5
@@ -22,9 +22,14 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/ODBCDataSources
 
 post-patch: fix-driver-installation
 
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/odbcinst.ini.in		\
-		> ${WRKDIR}/odbcinst.ini
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/odbcinst.ini
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@UNIXODBC_DRIVERS_DIR@,${UNIXODBC_DRIVERS_DIR},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/odbcinst.ini.in ${WRKDIR}/odbcinst.ini
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
