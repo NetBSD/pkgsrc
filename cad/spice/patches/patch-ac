@@ -1,22 +1,47 @@
-$NetBSD: patch-ac,v 1.4 2002/02/27 17:14:28 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2006/01/06 18:21:44 joerg Exp $
 
---- src/include/misc.h.orig	Sun Apr 25 17:37:48 1993
+--- src/include/misc.h.orig	1993-04-25 21:37:48.000000000 +0000
 +++ src/include/misc.h
-@@ -86,7 +86,9 @@
- extern char *realloc();
- extern char *getenv();
- extern int errno;
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__))
+@@ -5,6 +5,8 @@ Copyright 1990 Regents of the University
+ #ifndef MISC_H
+ #define MISC_H
+ 
++#include <stdlib.h>
++
+ #define BSIZE_SP      512
+ 
+ #ifdef HAS_EXIT1
+@@ -81,23 +83,12 @@ extern void srandom();
+ #    define srandom	srand
+ #  endif
+ 
+-extern char *calloc();
+-extern char *malloc();
+-extern char *realloc();
+-extern char *getenv();
+-extern int errno;
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__))
  extern char *sys_errlist[];
+-extern char *getenv();
 +#endif
- extern char *getenv();
  extern char *getwd();
- extern int rand();
-@@ -109,12 +111,14 @@
+-extern int rand();
+-extern int srand();
+-extern int atoi();
+ extern int kill();
+ extern int getpid();
+-extern int qsort();
+-#  ifdef notdef
+-extern void exit();
+-#  endif
+ 
+ #  ifdef HAS_GETCWD
+ extern char *getcwd( );
+@@ -109,12 +100,14 @@ extern void clearerr();
  #    endif /* clearerr */
  #  endif /* HAS_CLEARERR */
  
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__))
  #  ifndef bzero
  extern int bzero();
  #  endif
@@ -27,18 +52,25 @@ $NetBSD: patch-ac,v 1.4 2002/02/27 17:14:28 jlam Exp $
  
  #  ifndef index
  #    ifdef HAS_INDEX
-@@ -144,12 +148,14 @@
+@@ -144,6 +137,7 @@ extern char *strrchr();
  extern void perror();
  #endif
  
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__))
  #ifdef HAS_TIME_
  #  ifdef HAS_BSDTIME
  extern char *timezone();
- #  endif
+@@ -151,10 +145,13 @@ extern char *timezone();
  extern char *asctime();
  extern struct tm *localtime();
-+#endif
  #endif
++#endif
  
  #ifndef HAS_MEMAVL
+ #  ifdef HAS_RLIMIT_
++#if !defined(__DragonFly__)
+ extern char *sbrk();
++#endif
+ #  endif
+ #endif
+ 

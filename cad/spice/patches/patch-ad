@@ -1,11 +1,12 @@
-$NetBSD: patch-ad,v 1.3 2005/01/11 22:26:01 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.4 2006/01/06 18:21:44 joerg Exp $
 
---- src/include/os_bsd.h.orig	Sat Apr 24 19:09:46 1993
-+++ src/include/os_bsd.h	Thu Sep 30 12:02:51 1999
-@@ -9,10 +9,14 @@
+--- src/include/os_bsd.h.orig	1993-04-24 23:09:46.000000000 +0000
++++ src/include/os_bsd.h
+@@ -8,12 +8,16 @@ Copyright 1990 Regents of the University
+ 
  #include "os_unix.h"
  
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__))
  #define HAS_NO_ATRIGH_DECL	/* if asinh( ) is not in math.h		*/
 -#define HAS_ATRIGH		/* acosh( ), asinh( ), atanh( )         */
  #define HAS_FTIME		/* ftime( ), <times.h>			*/
@@ -19,12 +20,15 @@ $NetBSD: patch-ad,v 1.3 2005/01/11 22:26:01 dmcmahill Exp $
 -#define HAS_INDEX		/* index( ) instead of strchr( )	*/
  #define HAS_BCOPY		/* bcopy( ), bzero( )			*/
  #define HAS_BSDRANDOM		/* srandom( ) and random( )		*/
-@@ -23,3 +27,12 @@
+ #define HAS_BSDTTY		/* <sgtty.h>				*/
+@@ -22,4 +26,14 @@ Copyright 1990 Regents of the University
+ #define HAS_BSDRLIMIT		/* getrlimit( )				*/
  #define HAS_DUP2
  #define HAS_GETWD		/* getwd(buf)				*/
 -#define HAS_STRINGS		/* use <strings.h> instead of <string.h> */
 +
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#define HAS_STDLIB
 +#define HAS_BSDSOCKETS		/* <net/inet.h>, socket( ), etc.	*/
 +#define HAS_BSDTIME		/* gettimeofday( ) return time		*/
 +#define HAS_FLOAT_H		/* float.h				*/
