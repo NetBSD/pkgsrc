@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2006/01/05 10:28:27 markd Exp $
+# $NetBSD: Makefile,v 1.72 2006/01/06 15:10:06 wiz Exp $
 
 DISTNAME=	koffice-1.4.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc kde
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.4.2/src/ \
 		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.4.2/src/ \
