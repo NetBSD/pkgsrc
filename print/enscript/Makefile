@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/01/06 02:51:12 reed Exp $
+# $NetBSD: Makefile,v 1.34 2006/01/06 06:23:55 reed Exp $
 #
 
 DISTNAME=		enscript-1.6.3
@@ -7,7 +7,7 @@ CATEGORIES=		print
 MASTER_SITES=		http://www.iki.fi/mtr/genscript/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://people.ssh.fi/mtr/genscript/
+HOMEPAGE=		http://www.codento.com/people/mtr/genscript/
 COMMENT=		ASCII-to-PostScript filter
 
 GNU_CONFIGURE=		yes
