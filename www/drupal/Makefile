@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/05 00:02:43 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/06 12:06:35 adrianp Exp $
 
 DISTNAME=	drupal-4.6.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -11,6 +12,7 @@ COMMENT=	Open source content management system
 DEPENDS+=	ap-php>=4.3.3:../../www/ap-php
 DEPENDS+=	php-gd>=4.3.3:../../graphics/php-gd
 
+DIST_SUBDIR=    ${PKGNAME}
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
 DRUPAL=		${PREFIX}/share/drupal
