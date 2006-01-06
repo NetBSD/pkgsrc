@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/09/01 11:08:46 recht Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/01/06 20:49:20 rillig Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -342,10 +342,12 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/icewm.mo
@@ -357,6 +359,7 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
 @dirrm share/icewm/themes/yellowmotif
