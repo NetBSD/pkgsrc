@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.452 2006/01/06 18:02:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.453 2006/01/06 21:06:06 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1612,6 +1612,56 @@ sub checkline_spellcheck($) {
 	}
 }
 
+sub checkline_cpp_macro_names($$) {
+	my ($line, $text) = @_;
+	my ($rest);
+
+	use constant good_macros => PkgLint::Util::array_to_hash(qw(
+		__STDC__
+
+		__GNUC__ __GNUC_MINOR__
+		__SUNPRO_C
+
+		__i386
+		__mips
+		__sparc
+
+		__APPLE__
+		__bsdi__
+		__CYGWIN__
+		__DragonFly__
+		__FreeBSD__ __FreeBSD_version
+		__INTERIX
+		__linux__
+		__MINGW32__
+		__NetBSD__ __NetBSD_Version__
+		__OpenBSD__
+		__SVR4
+		__sun
+
+		__GLIBC__
+	));
+	use constant bad_macros  => {
+		"__sparc__" => "__sparc",
+		"__sun__" => "__sun",
+		"__svr4__" => "__SVR4",
+	};
+
+	$rest = $text;
+	while ($rest =~ s/defined\((__[\w_]+)\)//) {
+		my ($macro) = ($1);
+
+		if (exists(good_macros->{$macro})) {
+			$line->log_debug("Found good macro \"${macro}\".");
+		} elsif (exists(bad_macros->{$macro})) {
+			$line->log_warning("The macro \"${macro}\" is unportable. Please use \"".bad_macros->{$macro}."\" instead.");
+			$line->explain("See the pkgsrc guide, section \"CPP defines\" for details.");
+		} else {
+			$line->log_info("Found unknown macro \"${macro}\".");
+		}
+	}
+}
+
 sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
 	my ($rest, $state, $vartools);
@@ -3078,52 +3128,7 @@ sub checkfile_patch($) {
 		}
 
 		if ($text =~ qr"^\+") {
-			use constant good_macros => PkgLint::Util::array_to_hash(qw(
-				__STDC__
-
-				__GNUC__ __GNUC_MINOR__
-				__SUNPRO_C
-
-				__i386
-				__mips
-				__sparc
-
-				__APPLE__
-				__bsdi__
-				__CYGWIN__
-				__DragonFly__
-				__FreeBSD__ __FreeBSD_version
-				__INTERIX
-				__linux__
-				__MINGW32__
-				__NetBSD__ __NetBSD_Version__
-				__OpenBSD__
-				__SVR4
-				__sun
-
-				__GLIBC__
-			));
-			use constant bad_macros  => {
-				"__sparc__" => "__sparc",
-				"__sun__" => "__sun",
-				"__svr4__" => "__SVR4",
-			};
-			my $rest = $line->text;
-			my $re_ifdef = qr"defined\((__[\w_]+)\)";
-
-			while ($rest =~ s/$re_ifdef//) {
-				my ($macro) = ($1);
-
-				if (exists(good_macros->{$macro})) {
-					$line->log_debug("Found good macro \"${macro}\".");
-				} elsif (exists(bad_macros->{$macro})) {
-					$line->log_warning("The macro \"${macro}\" is unportable. Please use \"".bad_macros->{$macro}."\" instead.");
-					$line->explain("See the pkgsrc guide, section \"CPP defines\" for details.");
-				} else {
-					$line->log_info("Found unknown macro \"${macro}\".");
-				}
-			}
-
+			checkline_cpp_macro_names($line, substr($text, 1));
 			checkline_spellcheck($line);
 		}
 	}
