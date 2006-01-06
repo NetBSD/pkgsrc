@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/12/09 13:49:21 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/01/06 16:37:13 tron Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -183,6 +183,11 @@ share/phpmyadmin/libraries/display_import.lib.php
 share/phpmyadmin/libraries/display_tbl.lib.php
 share/phpmyadmin/libraries/display_tbl_links.lib.php
 share/phpmyadmin/libraries/dom-drag.js
+share/phpmyadmin/libraries/engines/bdb.lib.php
+share/phpmyadmin/libraries/engines/berkeleydb.lib.php
+share/phpmyadmin/libraries/engines/innobase.lib.php
+share/phpmyadmin/libraries/engines/innodb.lib.php
+share/phpmyadmin/libraries/engines/myisam.lib.php
 share/phpmyadmin/libraries/export/csv.php
 share/phpmyadmin/libraries/export/htmlexcel.php
 share/phpmyadmin/libraries/export/htmlword.php
@@ -219,6 +224,10 @@ share/phpmyadmin/libraries/grab_globals.lib.php
 share/phpmyadmin/libraries/header_http.inc.php
 share/phpmyadmin/libraries/header_meta_style.inc.php
 share/phpmyadmin/libraries/import.lib.php
+share/phpmyadmin/libraries/import/README
+share/phpmyadmin/libraries/import/csv.php
+share/phpmyadmin/libraries/import/ldi.php
+share/phpmyadmin/libraries/import/sql.php
 share/phpmyadmin/libraries/indexes.js
 share/phpmyadmin/libraries/information_schema_relations.lib.php
 share/phpmyadmin/libraries/ip_allow_deny.lib.php
@@ -570,9 +579,11 @@ share/phpmyadmin/user_password.php
 @dirrm share/phpmyadmin/themes
 @dirrm share/phpmyadmin/scripts
 @dirrm share/phpmyadmin/libraries/transformations
+@dirrm share/phpmyadmin/libraries/import
 @dirrm share/phpmyadmin/libraries/fpdf/font
 @dirrm share/phpmyadmin/libraries/fpdf
 @dirrm share/phpmyadmin/libraries/export
+@dirrm share/phpmyadmin/libraries/engines
 @dirrm share/phpmyadmin/libraries/dbi
 @dirrm share/phpmyadmin/libraries/dbg
 @dirrm share/phpmyadmin/libraries/auth
