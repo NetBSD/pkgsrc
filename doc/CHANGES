@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12384 2006/01/06 16:54:30 wiz Exp $
+$NetBSD: CHANGES,v 1.12385 2006/01/06 17:01:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -131,3 +131,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/phpmyadmin to 2.7.0pl1nb1 [tron 2006-01-06]
 	Updated security/uvscan to 4.24.1nb1 [joerg 2006-01-06]
 	Updated sysutils/nautilus to 2.12.2 [wiz 2006-01-06]
+	Updated net/mldonkey to 2.7.2 [wiz 2006-01-06]
+	Updated net/mldonkey-gui to 2.7.2 [wiz 2006-01-06]
