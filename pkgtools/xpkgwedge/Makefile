@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2005/12/29 06:22:06 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2006/01/06 16:58:32 joerg Exp $
 
 DISTNAME=	xpkgwedge-1.14
 CATEGORIES=	pkgtools devel x11
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
+NO_BUILD=	yes
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 
@@ -42,11 +43,17 @@ USE_TOOLS+=		${IMAKE_TOOLS}
 
 .include "../../mk/x11.buildlink3.mk"
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/pkgxmkmf
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},g'
+SUBST_SED.paths+=	-e 's,@VIEWBASE@,${VIEWBASE},g'
+SUBST_SED.paths+=	-e 's,@MAKE@,${MAKE},g'
+SUBST_STAGE.paths=	post-patch
+
 post-extract:
 	@${CP} ${FILESDIR}/xpkgwedge.def ${WRKSRC}
-
-do-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/pkgxmkmf.in > ${WRKDIR}/pkgxmkmf
+	@${CP} ${FILESDIR}/pkgxmkmf.in ${WRKDIR}/pkgxmkmf
 
 .if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg) || \
     defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
