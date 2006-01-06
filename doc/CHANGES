@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12386 2006/01/06 17:12:40 wiz Exp $
+$NetBSD: CHANGES,v 1.12387 2006/01/06 17:21:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -134,3 +134,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mldonkey to 2.7.2 [wiz 2006-01-06]
 	Updated net/mldonkey-gui to 2.7.2 [wiz 2006-01-06]
 	Updated multimedia/xvidcore to 1.1.0 [wiz 2006-01-06]
+	Updated x11/xservers to 3.3.6.5 [tron 2006-01-06]
