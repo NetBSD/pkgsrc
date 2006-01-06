@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2005/07/02 03:29:07 minskim Exp $
+$NetBSD: patch-ag,v 1.3 2006/01/06 14:13:23 joerg Exp $
 
 --- real.c.orig	1996-01-21 16:15:52.000000000 -0600
 +++ real.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.2 2005/07/02 03:29:07 minskim Exp $
  functions.  */
  
 +#include <limits.h>
-+#ifdef __APPLE__
++#if defined(__APPLE__) || defined(__DragonFly__)
 +#include <float.h>
 +#endif
  #include "portable.h"
