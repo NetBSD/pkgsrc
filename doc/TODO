@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4378 2006/01/06 14:52:34 wiz Exp $
+$NetBSD: TODO,v 1.4379 2006/01/06 15:09:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,6 @@ Suggested package updates
 	o dante-1.1.18
 	o dap-2.1.5
 	o darkice-0.15
-	o db4-4.4.16
 	o dbus-0.31 [0.2x API more common -- new package?]
 	o dbus-0.50
 	o dbxml-2.1.8
