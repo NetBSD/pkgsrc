@@ -1,11 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/06 22:15:44 jlam Exp $
-sbin/linkfarm
-sbin/pkg_add
-sbin/pkg_admin
-sbin/pkg_create
-sbin/pkg_delete
-sbin/pkg_info
-sbin/pkg_view
+@comment $NetBSD: PLIST,v 1.7 2006/01/06 19:46:26 rillig Exp $
 man/cat1/linkfarm.0
 man/cat1/pkg_add.0
 man/cat1/pkg_admin.0
@@ -20,3 +13,10 @@ man/man1/pkg_create.1
 man/man1/pkg_delete.1
 man/man1/pkg_info.1
 man/man1/pkg_view.1
+sbin/linkfarm
+sbin/pkg_add
+sbin/pkg_admin
+sbin/pkg_create
+sbin/pkg_delete
+sbin/pkg_info
+sbin/pkg_view
