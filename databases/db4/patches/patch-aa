@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2005/10/25 06:26:48 jlam Exp $
+$NetBSD: patch-aa,v 1.10 2006/01/06 15:08:47 wiz Exp $
 
---- dist/Makefile.in.orig	2004-11-04 12:26:52.000000000 -0500
+--- dist/Makefile.in.orig	2005-11-08 13:47:22.000000000 +0100
 +++ dist/Makefile.in
 @@ -11,7 +11,7 @@ exec_prefix=@exec_prefix@
  bindir=	@bindir@
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.9 2005/10/25 06:26:48 jlam Exp $
  LIBVERSION=	@DB_VERSION_MAJOR@.@DB_VERSION_MINOR@
 @@ -60,7 +60,7 @@ LIBS=		@LIBS@
  TEST_LIBS=	@TEST_LIBS@
- LIBSO_LIBS=	@LIBSO_LIBS@
+ LIBCSO_LIBS=	@LIBCSO_LIBS@ @LIBSO_LIBS@
  
 -libdb_base=	libdb
 +libdb_base=	libdb4
@@ -31,14 +31,14 @@ $NetBSD: patch-aa,v 1.9 2005/10/25 06:26:48 jlam Exp $
  libso=		$(libdb_base)-$(LIBVERSION)@SOSUFFIX@
 @@ -79,7 +79,7 @@ CXXLINK=	@MAKEFILE_CXXLINK@ @CXXFLAGS@
  XSOLINK=	@MAKEFILE_XSOLINK@ @CXXFLAGS@
- LIBXSO_LIBS=	@LIBXSO_LIBS@
+ LIBXSO_LIBS=	@LIBXSO_LIBS@ @LIBSO_LIBS@
  
 -libcxx_base=	libdb_cxx
 +libcxx_base=	libdb4_cxx
  libcxx=		$(libcxx_base).a
  libcxx_version=	$(libcxx_base)-$(LIBVERSION).a
  libxso=		$(libcxx_base)-$(LIBVERSION)@SOSUFFIX@
-@@ -109,10 +109,10 @@ JAVA_EXDIR=	$(srcdir)/examples_java/src/
+@@ -107,10 +107,10 @@ JAVA_EXDIR=	$(srcdir)/examples_java/src
  JAVA_RPCDIR=	$(srcdir)/rpc_server/java
  JAVA_SLEEPYCAT=	$(srcdir)/java/src/com/sleepycat
  
@@ -51,16 +51,16 @@ $NetBSD: patch-aa,v 1.9 2005/10/25 06:26:48 jlam Exp $
  libjso=		$(libjso_base)-$(LIBVERSION)@JMODSUFFIX@
  libjso_static=	$(libjso_base)-$(LIBVERSION).a
  libjso_target=	$(libjso_base)-$(LIBVERSION).la
-@@ -127,7 +127,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
+@@ -125,7 +125,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
  ##################################################
- TCFLAGS=	@TCFLAGS@
- LIBTSO_LIBS=	@LIBTSO_LIBS@
+ TCL_INCLUDE_SPEC=	@TCL_INCLUDE_SPEC@
+ LIBTSO_LIBS=	@LIBTSO_LIBS@ @LIBSO_LIBS@
 -libtso_base=	libdb_tcl
 +libtso_base=	libdb4_tcl
  libtso=		$(libtso_base)-$(LIBVERSION)@MODSUFFIX@
  libtso_static=	$(libtso_base)-$(LIBVERSION).a
  libtso_target=	$(libtso_base)-$(LIBVERSION).la
-@@ -883,11 +883,10 @@ install_utilities:
+@@ -903,11 +903,10 @@ install_utilities:
  	    ($(mkdir) -p $(DESTDIR)$(bindir) && \
  	    $(chmod) $(dmode) $(DESTDIR)$(bindir))
  	@for i in $(UTIL_PROGS); do \
