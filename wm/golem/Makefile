@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/29 06:22:20 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/06 16:21:53 joerg Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -37,14 +37,14 @@ CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 EGDIR=		${PREFIX}/share/examples/golem
 CONF_FILES=	${EGDIR}/golemrc.default ${PKG_SYSCONFDIR}/golemrc
 
-post-patch:
-	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/sample.golem/golemrc > \
-		${WRKSRC}/golemrc
-	${RM} -f ${WRKSRC}/sample.golem/golemrc*
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	sample.golem/golemrc
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	post-patch
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/golemrc ${EGDIR}/golemrc.default
+	${INSTALL_DATA} ${WRKSRC}/sample.golem/golemrc ${EGDIR}/golemrc.default
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
