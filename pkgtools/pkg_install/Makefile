@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2005/11/17 17:05:30 erh Exp $
+# $NetBSD: Makefile,v 1.122 2006/01/06 19:46:26 rillig Exp $
 
 # Notes to package maintainers:
 #
@@ -18,24 +18,24 @@ HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
+CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
 CONFIGURE_ARGS+=	--with-ftp="\"${FETCH_CMD}"\"
 CONFIGURE_ARGS+=	--with-mtree="\"${MTREE}"\"
 CONFIGURE_ARGS+=	--with-pax="\"${PAX}"\"
 CONFIGURE_ARGS+=	--with-tar="\"${TAR}"\"
-USE_TOOLS=		mtree pax tar
+USE_TOOLS+=		mtree pax tar
 
 # The following tools are needed by pkg_view and linkfarm.
 USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
 			sed sort touch
 
 SKIP_AUDIT_PACKAGES=	yes
-NO_PKGTOOLS_REQD_CHECK=	# defined
+NO_PKGTOOLS_REQD_CHECK=	yes
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
-PKG_PRESERVE=		# defined
+PKG_PRESERVE=		yes
 INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
-INSTALL_SCRIPTS_ENV+=	PKG_PREFIX=${PREFIX}
+INSTALL_SCRIPTS_ENV+=	PKG_PREFIX=${PREFIX:Q}
 
 # These are needed to solve a chicken-and-egg problem where pkgsrc uses
 # newer features of pkg_install, but older NetBSD installations won't
@@ -53,14 +53,14 @@ PKG_DELETE=		${WRKSRC}/delete/pkg_delete
 
 CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
 
-MAKE_ENV+=		MACHINE_ARCH="${MACHINE_ARCH}"
-MAKE_ENV+=		OPSYS="${OPSYS}"
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
+MAKE_ENV+=		OPSYS=${OPSYS:Q}
 
 PKG_DBDIR?=		/var/db/pkg
-PKG_INFO=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
-PKG_ADMIN=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADMIN_CMD}
+PKG_INFO=		PKG_DBDIR=${PKG_DBDIR:Q} ${PKG_INFO_CMD}
+PKG_ADMIN=		PKG_DBDIR=${PKG_DBDIR:Q} ${PKG_ADMIN_CMD}
 
-PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR}
+PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
