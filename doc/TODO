@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4387 2006/01/06 22:48:01 adam Exp $
+$NetBSD: TODO,v 1.4388 2006/01/07 04:53:17 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -298,6 +298,9 @@ Suggested new packages
 	The FreeBSD port homepage is http://fuse4bsd.creo.hu/
 	The port is in sysutils/fuse-*.
 
+	GnomeMeeting
+	http://www.gnomemeeting.org/
+	GNOME H323 audio/video conferencing (a la NetMeeting)
 
 Suggested package updates
 =========================
