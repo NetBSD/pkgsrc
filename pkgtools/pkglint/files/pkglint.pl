@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.453 2006/01/06 21:06:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.454 2006/01/07 20:00:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1735,6 +1735,12 @@ sub checkline_mk_shellword($$$) {
 		"SWST_DQUOT_BACKT", "SWST_BACKT",
 		"SWST_BACKT_DQUOT", "SWST_BACKT_SQUOT"
 	];
+	use constant user_statename	=> [
+		"unquoted string", "single quoted string",
+		"double quoted string", "backticks inside double quoted string",
+		"backticks", "double quoted string inside backticks",
+		"single quoted string inside backticks"
+	];
 
 	$rest = ($shellword =~ qr"^#") ? "" : $shellword;
 	$state = SWST_PLAIN;
@@ -1748,7 +1754,7 @@ sub checkline_mk_shellword($$$) {
 			# TODO: Make lists of variables that may appear
 			# in other quoting states than SWST_PLAIN.
 			if ($opt_warn_extra && $state != SWST_PLAIN) {
-				$line->log_debug("Possibly misquoted make variable \"${varname}\" in " . statename->[$state] . ".");
+				$line->log_warning("Possibly misquoted make variable ${varname} in " . user_statename->[$state] . ".");
 			}
 
 		} elsif ($state == SWST_PLAIN) {
@@ -2224,6 +2230,16 @@ sub checkline_mk_vartype_basic($$$$$) {
 		if ($value !~ qr"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
 			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{extract,patch,configure,build,install}.");
 		}
+
+	} elsif ($type eq "SubstMessage") {
+
+# TODO: Enable this code when there is a :Q operator on the statement
+# that prints the ${SUBST_MESSAGE} in subst.mk.
+if (false) {
+		if ($value =~ qr"^\".*\"$") {
+			$line->log_warning("${varname} should not be quoted.");
+		}
+}
 
 	} elsif ($type eq "Tool") {
 		if ($value =~ qr"^([-\w]+|\[)(?::(\w+))?$") {
