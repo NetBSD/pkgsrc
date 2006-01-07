@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: zope3.sh,v 1.1.1.1 2005/10/24 02:25:29 minskim Exp $
+# $NetBSD: zope3.sh,v 1.2 2006/01/07 13:13:28 wiz Exp $
 #
 # PROVIDE: zope3
 # REQUIRE: DAEMON
