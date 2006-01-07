@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/12/31 12:32:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2006/01/07 14:40:52 salo Exp $
 #
 
 DISTNAME=	libgsf-1.13.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 structured file library
+
+BUILD_DEPENDS+=	p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
 
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		YES
