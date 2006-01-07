@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.21 2005/12/30 23:11:55 jlam Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.22 2006/01/07 19:51:42 markd Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -63,6 +63,12 @@ CHECK_FILES_SKIP+=	${PREFIX}/${INFO_DIR}/dir
 # is added.
 #
 CHECK_FILES_SKIP+=	${PERL5_INSTALLARCHLIB}/perllocal.pod
+
+# R's index files that are regenerated when a local module
+# is added.
+#
+CHECK_FILES_SKIP+=	${PREFIX}/lib/R/doc/html/packages.html
+CHECK_FILES_SKIP+=	${PREFIX}/lib/R/doc/html/search/index.txt
 
 # We don't care about what's under /proc in Linux emulation, which is
 # just holds run-time generated data.
