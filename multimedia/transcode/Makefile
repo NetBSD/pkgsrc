@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2005/12/11 09:40:46 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/07 11:03:24 wiz Exp $
 
 DISTNAME=	transcode-0.6.12
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	http://dl.fkb.wormulon.net/transcode/ \
 		http://dl.kel.wormulon.net/transcode/
@@ -37,7 +37,7 @@ post-patch:
 
 .if ${MACHINE_ARCH} == "i386"
 post-install:
-	${LN} -sf ../libxvidcore.so.4.0  ${PREFIX}/lib/transcode/libxvidcore.so.4
+	${LN} -sf ../libxvidcore.so.4.[0-9]*  ${PREFIX}/lib/transcode/libxvidcore.so.4
 .endif
 
 .include "../../archivers/liblzo/buildlink3.mk"
