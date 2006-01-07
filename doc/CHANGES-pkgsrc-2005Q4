@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.22 2006/01/07 14:21:45 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.23 2006/01/07 19:27:03 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -47,3 +47,5 @@ Pullup ticket 1003 - requested by Joerg Sonnenberger
 PLIST fixes for py-table
 Pullup ticket 1004 - requested by Stoned Elipot
 bugfix update for pkg_comp
+Pullup ticket 1005 - requested by Lubomir Sedlacik
+build fix for devel/libgsf
