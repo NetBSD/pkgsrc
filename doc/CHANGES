@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12397 2006/01/07 10:27:59 hubertf Exp $
+$NetBSD: CHANGES,v 1.12398 2006/01/07 10:36:41 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -145,3 +145,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkg_comp to 1.25 [seb 2006-01-06]
 	Added databases/tinycdb version 0.75 [schmonz 2006-01-07]
 	Updated mail/spamprobe to 1.4 [hubertf 2006-01-07]
+	Removed databases/mysql-server [ghen 2006-01-07]
+	Removed databases/mysql-client [ghen 2006-01-07]
