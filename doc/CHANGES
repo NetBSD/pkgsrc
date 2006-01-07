@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12402 2006/01/07 13:16:31 wiz Exp $
+$NetBSD: CHANGES,v 1.12403 2006/01/07 21:08:36 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -154,3 +154,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xlockmore to 5.20.1nb1 [tron 2006-01-07]
 	Updated x11/xlockmore-lite to 5.20.1nb1 [tron 2006-01-07]
 	Updated www/zope3 to 3.2.0 [wiz 2006-01-07]
+	Updated x11/openmotif to 2.2.3nb1 [joerg 2006-01-07]
