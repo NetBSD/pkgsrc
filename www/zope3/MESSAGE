@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/10/24 02:25:20 minskim Exp $
+$NetBSD: MESSAGE,v 1.2 2006/01/07 13:13:28 wiz Exp $
 
 To run Zope, you need to make a new Zope instance home.
 
@@ -7,6 +7,9 @@ To run Zope, you need to make a new Zope instance home.
      please run the following command:
 
     ${PREFIX}/bin/mkzopeinstance --dir=${VARBASE}/zope3
+
+    Additionally, you need to edit ${VARBASE}/zope3/etc/zope.conf
+    if you want to run ZEO client.
 
   2) If you want to run ZEO storage server,
      please run the following command:
@@ -28,5 +31,11 @@ and edit /etc/rc.conf.
 
     chown -R ${ZOPE3_USER}:${ZOPE3_GROUP} ${VARBASE}/zss3
     echo 'zss3_user="${ZOPE3_USER}"' >> /etc/rc.conf
+
+If you want to run Zope with following protocols, you need to
+install corresponding packages.
+
+  HTTPS: security/py-OpsnSSL
+  SFTP: security/py-amkCrypto
 
 ===========================================================================

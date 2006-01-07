@@ -1,12 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/10/24 02:25:29 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/07 13:13:28 wiz Exp $
 
---- Dependencies/zdaemon-Zope-3.1.0/zdaemon/zdctl.py.orig	2005-10-03 03:48:12.000000000 +0900
-+++ Dependencies/zdaemon-Zope-3.1.0/zdaemon/zdctl.py
-@@ -60,2 +60,13 @@
+--- Dependencies/zdaemon-Zope-3.2.0/zdaemon/zdctl.py.orig	2006-01-06 05:04:52.000000000 +0900
++++ Dependencies/zdaemon-Zope-3.2.0/zdaemon/zdctl.py
+@@ -60,2 +60,10 @@
          sys.path.append(dirname(scriptdir))
-+    # Add the zope3 library directory to the module search path
-+    import os
-+    import sys
 +    here = os.path.dirname(os.path.realpath(__file__))
 +    swhome = os.path.dirname(here)
 +    for parts in [("src",), ("lib", "python"), ("Lib", "site-packages")]:
