@@ -1,12 +1,12 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.4 2005/10/31 09:25:00 xtraeme Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.5 2006/01/07 10:47:39 xtraeme Exp $
 
 .if !defined(MYSQL_VERSION_MK)
 MYSQL_VERSION_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-MYSQL_VERSION_DEFAULT?=		41
-MYSQL_VERSIONS_ACCEPTED?=	50 41 40
+MYSQL_VERSION_DEFAULT?=		50
+MYSQL_VERSIONS_ACCEPTED?=	50 41
 
 # transform the list into individual variables
 .for mv in ${MYSQL_VERSIONS_ACCEPTED}
@@ -67,8 +67,6 @@ _MYSQL_VERSION=	${_MYSQL_VERSION_FIRSTACCEPTED}
 MYSQL_PKGSRCDIR=	../../databases/mysql5-client
 .elif ${_MYSQL_VERSION} == "41"
 MYSQL_PKGSRCDIR=	../../databases/mysql4-client
-.elif ${_MYSQL_VERSION} == "40"
-MYSQL_PKGSRCDIR=	../../databases/mysql-client
 .else
 # force an error
 PKG_SKIP_REASON+=	"${_MYSQL_VERSION} is not a valid mysql package."
