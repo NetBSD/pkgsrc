@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/29 06:22:23 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/07 20:25:20 markd Exp $
 
 DISTNAME=	htdig-3.2.0b6
 CATEGORIES=	www databases
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+= --with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 CONFIGURE_ENV+=	PDF_PARSER="${LOCALBASE}/bin/acroread"
 CXXFLAGS+=	-Wno-deprecated
 
-INSTALL_EXTRA_TMPL=     ${PKGDIR}/INSTALL
 PKG_SYSCONFSUBDIR=	htdig
 
 DBDIR?=		${VARBASE}/db/htdig
@@ -44,6 +43,10 @@ CONF_FILES+=	${PREFIX}/share/examples/htdig/htdig.conf \
 		${PKG_SYSCONFDIR}/htdig.conf
 CONF_FILES+=	${PREFIX}/share/examples/htdig/mime.types \
 		${PKG_SYSCONFDIR}/mime.types
+
+post-install:
+	${PREFIX}/bin/htfuzzy -v synonyms
+	${PREFIX}/bin/htfuzzy -v endings
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
