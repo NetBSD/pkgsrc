@@ -1,4 +1,4 @@
-# $NetBSD: post-build-conf,v 1.9 2005/12/03 01:00:37 rillig Exp $
+# $NetBSD: post-build-conf,v 1.10 2006/01/07 22:27:56 rillig Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
@@ -77,14 +77,31 @@ pbc_checkyesno() {
 	esac
 }
 
-# usage: pbc_checkexistingfile varname
-pbc_checkexistingfile() {
+# usage: pbc_checkpathname varname
+pbc_checkpathname() {
 	eval "pbc_val=\${$1-}"
 
 	case $pbc_val in
 	/*)	;;
 	*)	pbc_die "$1 must be an absolute pathname.";;
 	esac
+}
+
+# usage: pbc_checkbasename varname
+pbc_checkbasename() {
+	eval "pbc_val=\${$1-}"
+
+	case $pbc_val in
+	*/*)	pbc_die "$1 must not contain slashes.";;
+	esac
+}
+
+# usage: pbc_checkexistingfile varname
+pbc_checkexistingfile() {
+
+	pbc_checkpathname "$1"
+
+	eval "pbc_val=\${$1-}"
 
 	test -f "${pbc_val}" \
 	|| pbc_die "$1 must be the name of an existing file."
@@ -92,15 +109,24 @@ pbc_checkexistingfile() {
 
 # usage: pbc_checkexistingdir varname
 pbc_checkexistingdir() {
-	eval "pbc_val=\${$1-}"
 
-	case $pbc_val in
-	/*)	;;
-	*)	pbc_die "$1 must be an absolute pathname.";;
-	esac
+	pbc_checkpathname "$1"
+
+	eval "pbc_val=\${$1-}"
 
 	test -d "${pbc_val}" \
 	|| pbc_die "$1 must be the name of an existing directory."
+}
+
+# usage: pbc_checkurl varname
+pbc_checkurl() {
+	eval "pbc_val=\${$1-}"
+
+	case $pbc_val in
+	file:///*|ftp://*|http://*)
+		;;
+	*)	pbc_die "$1 is not a valid URL.";;
+	esac
 }
 
 # usage: pbc_checknonempty varname
