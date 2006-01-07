@@ -1,0 +1,12 @@
+# $NetBSD: Makefile.common,v 1.1 2006/01/07 13:13:28 wiz Exp $
+#
+
+PYTHON_VERSIONS_ACCEPTED=	24
+
+ZOPE3_DIR=		${PREFIX}/share/zope3
+ZOPE3_DOCDIR=		${PREFIX}/share/doc/zope3
+
+ZOPE3_GROUP?=		zope3
+ZOPE3_USER?=		zope3
+
+.include "../../lang/python/application.mk"
