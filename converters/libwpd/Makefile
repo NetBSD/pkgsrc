@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/25 21:23:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2006/01/07 19:45:59 seb Exp $
 
 DISTNAME=	libwpd-0.8.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Library for importing and exporting WordPerfect(tm) documents
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	libwpd-0.8.pc.in libwpd-stream-0.8.pc.in
 
 CONFIGURE_ARGS+=	--without-docs
