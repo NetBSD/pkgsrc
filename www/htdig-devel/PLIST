@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/17 19:26:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/07 20:26:13 markd Exp $
 bin/HtFileType
 bin/htdb_dump
 bin/htdb_load
@@ -190,13 +190,13 @@ share/htdig/common/footer.html
 share/htdig/common/header.html
 share/htdig/common/long.html
 share/htdig/common/nomatch.html
+share/htdig/common/root2word.db
 share/htdig/common/short.html
 share/htdig/common/synonyms
 share/htdig/common/synonyms.db
 share/htdig/common/syntax.html
+share/htdig/common/word2root.db
 share/htdig/common/wrapper.html
-@unexec ${RM} %D/share/htdig/common/root2word.db
-@unexec ${RM} %D/share/htdig/common/word2root.db
 @dirrm share/htdig/common
 @dirrm share/htdig
 @dirrm share/examples/htdig
