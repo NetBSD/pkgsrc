@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 13:14:41 agc Exp $
+$NetBSD: distinfo,v 1.8 2006/01/07 16:15:46 wiz Exp $
 
 SHA1 (INIT.2003-07-24.tgz) = 92946d1b522345b6c8ac25cb11e4b621a95a9150
 RMD160 (INIT.2003-07-24.tgz) = 27a6713f239632dbc35dacd1c41c050141fdc14a
@@ -8,3 +8,4 @@ RMD160 (ast-ksh.2003-07-24.tgz) = 6ed4f9dbfaf0d57b785029c98c2b4a163c9d782e
 Size (ast-ksh.2003-07-24.tgz) = 1459120 bytes
 SHA1 (patch-aa) = dd3e5cc9b80ae6e24faed3f15af354cf34fb16a0
 SHA1 (patch-ab) = adbbdb5deeb15c1eeb38bec5685d9e6331b2b964
+SHA1 (patch-ac) = 1bb9683cb3a652c9e13d7626d4e6558464209a44
