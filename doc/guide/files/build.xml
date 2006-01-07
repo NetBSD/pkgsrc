@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.17 2005/11/04 11:55:31 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.18 2006/01/07 21:42:34 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -12,19 +12,17 @@ built. Building a package is separated into different
 <varname>build</varname>, <varname>install</varname>), all of which are
 described in the following sections. Each phase is splitted into
 so-called <emphasis>stages</emphasis>, which take the name of the
-containing stage, prefixed by one of <varname>pre-</varname>,
+containing phase, prefixed by one of <varname>pre-</varname>,
 <varname>do-</varname> or <varname>post-</varname>. (Examples are
 <varname>pre-configure</varname>, <varname>post-build</varname>.) Most
 of the actual work is done in the <varname>do-*</varname> stages.</para>
 
-  <para>The basic steps for building a program are always the same.  First the
-    program's source (<emphasis>distfile</emphasis>) must be brought to the
-    local system and then extracted. After any patches to compile properly
-    on &os; are applied, the software can be configured, then built
-    (usually by compiling), and finally the generated binaries, etc. can be
-    put into place on the system. These are exactly the steps performed by
-    the &os; package system, which is implemented as a series of targets
-    in a central Makefile, <filename>pkgsrc/mk/bsd.pkg.mk</filename>.</para>
+<para>The basic steps for building a program are always the same.  First
+the program's source (<emphasis>distfile</emphasis>) must be brought to
+the local system and then extracted. After any pkgsrc-specific patches
+to compile properly are applied, the software can be configured, then
+built (usually by compiling), and finally the generated binaries, etc.
+can be put into place on the system.</para>
 
 </sect1>
 
@@ -159,33 +157,33 @@ directories are explained here.</para>
 are two common base directories for these relative directories:
 <varname>PKGSRCDIR/PKGPATH</varname> is used for directories that are
 pkgsrc-specific. <varname>WRKSRC</varname> is used for directories
-inside the package itself. The permissions after each variable indicate
-whether the variable may be changed by the package Makefile.</para>
+inside the package itself.</para>
 
 <variablelist>
 
-<varlistentry><term><varname>PKGSRCDIR</varname> (read-only)</term>
+<varlistentry><term><varname>PKGSRCDIR</varname></term>
 <listitem><para>This is an absolute pathname that points to the pkgsrc
 root directory. Generally, you don't need
 it.</para></listitem></varlistentry>
 
-<varlistentry><term><varname>PKGPATH</varname> (read-only)</term>
+<varlistentry><term><varname>PKGPATH</varname></term>
 <listitem><para>This is a pathname relative to
 <varname>PKGSRCDIR</varname> that points to the current
 package.</para></listitem></varlistentry>
 
-<varlistentry><term><varname>WRKDIR</varname> (read-only)</term>
+<varlistentry><term><varname>WRKDIR</varname></term>
 <listitem><para>This is an absolute pathname pointing to the directory
 where all work takes place. The distfiles are extraced to this
 directory. It also contains temporary directories and log files used by
 the various pkgsrc frameworks, like <emphasis>buildlink</emphasis> or
 the <emphasis>wrappers</emphasis>.</para></listitem></varlistentry>
 
-<varlistentry><term><varname>WRKSRC</varname> (read-write)</term>
+<varlistentry><term><varname>WRKSRC</varname></term>
 <listitem><para>This is an absolute pathname pointing to the directory
 where the distfiles are extracted. It is usually a direct subdirectory
 of <varname>WRKDIR</varname>, and often it's the only directory entry
-that isn't hidden.</para></listitem></varlistentry>
+that isn't hidden. This variable may be changed by a package
+<filename>Makefile</filename>.</para></listitem></varlistentry>
 
 </variablelist>
 </sect1>
