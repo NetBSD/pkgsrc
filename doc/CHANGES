@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12400 2006/01/07 11:07:49 wiz Exp $
+$NetBSD: CHANGES,v 1.12401 2006/01/07 12:07:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -151,3 +151,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/bacula-clientonly to 1.38.3 [ghen 2006-01-07]
 	Updated sysutils/bacula-doc to 1.38.3 [ghen 2006-01-07]
 	Updated multimedia/transcode to 0.6.12nb8 [wiz 2006-01-07]
+	Updated x11/xlockmore to 5.20.1nb1 [tron 2006-01-07]
+	Updated x11/xlockmore-lite to 5.20.1nb1 [tron 2006-01-07]
