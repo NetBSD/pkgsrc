@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/01/07 14:40:52 salo Exp $
+# $NetBSD: Makefile,v 1.31 2006/01/07 15:49:11 wiz Exp $
 #
 
 DISTNAME=	libgsf-1.13.3
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 structured file library
-
-BUILD_DEPENDS+=	p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
 
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		YES
@@ -29,6 +27,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/libgsf
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../mk/bsd.pkg.mk"
