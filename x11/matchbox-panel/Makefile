@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/31 13:32:30 peter Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/07 12:47:55 peter Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -20,13 +20,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-small-icons
 CONFIGURE_ARGS+=	--enable-startup-notification
 CONFIGURE_ARGS+=	--enable-nls
-
-BUILD_USES_MSGFMT=	yes
-
-CONFIGURE_ENV+=		XGETTEXT=${LOCALBASE}/bin/xgettext
-CONFIGURE_ENV+=		GMSGFMT=${LOCALBASE}/bin/msgfmt
-CONFIGURE_ENV+=		MSGFMT=${LOCALBASE}/bin/msgfmt
-CONFIGURE_ENV+=		MSGMERGE=${LOCALBASE}/bin/msgmerge
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
