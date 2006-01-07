@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.454 2006/01/07 20:00:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.455 2006/01/07 23:29:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2232,14 +2232,9 @@ sub checkline_mk_vartype_basic($$$$$) {
 		}
 
 	} elsif ($type eq "SubstMessage") {
-
-# TODO: Enable this code when there is a :Q operator on the statement
-# that prints the ${SUBST_MESSAGE} in subst.mk.
-if (false) {
 		if ($value =~ qr"^\".*\"$") {
 			$line->log_warning("${varname} should not be quoted.");
 		}
-}
 
 	} elsif ($type eq "Tool") {
 		if ($value =~ qr"^([-\w]+|\[)(?::(\w+))?$") {
