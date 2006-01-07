@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4389 2006/01/07 13:16:46 wiz Exp $
+$NetBSD: TODO,v 1.4390 2006/01/07 16:04:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -995,6 +995,7 @@ Suggested package updates
 	o posh-0.4.3
 	o postfix-2.2.8
 	o postfix-current-2.3.20051220
+	o postgresql-8.1.1
 	o postgresql74-7.4.9
 	o postgresql73-7.3.11
 	o postgresql81-8.1.0
@@ -1114,6 +1115,7 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scilab-3.1
+	o scribus-1.2.4.1
 	o scrollz-1.9.5
 	o sdig-0.40
 	o semantic-1.4.4
@@ -1123,6 +1125,7 @@ Suggested package updates
 	o shmux-1.0b6
 	o siag-3.6.0
 	o sign-1.0.7
+	o silc-client-1.0.3
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
 	o silc-toolkit-1.0.2
 	o simh-3.5.0
@@ -1241,6 +1244,7 @@ Suggested package updates
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnc2swf-0.8.1
+	o vobcopy-0.5.16
 	o vp-1.6
 	o vsftpd-2.01 [pkg/26811]
 	o vsftpd-2.0.3
