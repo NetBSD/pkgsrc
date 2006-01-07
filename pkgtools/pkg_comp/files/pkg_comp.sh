@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.26 2005/11/16 01:31:35 seb Exp $
+# $NetBSD: pkg_comp.sh,v 1.26.2.1 2006/01/07 14:21:15 salo Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -42,7 +42,8 @@ ProgName="`basename $0`"
 _MKCONF_VARS="WRKDIR_BASENAME MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
               PKG_DEVELOPER CLEANDEPENDS LOCALBASE PKG_SYSCONFBASE \
               CFLAGS CPPFLAGS CXXFLAGS USE_AUDIT_PACKAGES PKGVULNDIR \
-              USE_XPKGWEDGE PKGSRC_COMPILER"
+              USE_XPKGWEDGE PKGSRC_COMPILER \
+              LIBKVER_STANDALONE_PREFIX"
 
 _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 SETS_X11 REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
@@ -117,6 +118,7 @@ env_setdefaults()
     : ${REAL_PACKAGES_OPTS:=-t null -o rw}
     : ${REAL_PKGVULNDIR:=/usr/pkgsrc/distfiles}
     : ${NETBSD_RELEASE:=no}
+    : ${LIBKVER_STANDALONE_PREFIX:=/libkver}
     : ${MOUNT_HOOKS:=}
     : ${UMOUNT_HOOKS:=}
     : ${SYNC_UMOUNT:=no}
@@ -517,8 +519,8 @@ makeroot()
     # signals to umount them.
     trap "echo \"*** Process aborted ***\" ; fsumount ; exit 1" INT QUIT
 
-    makeroot_digest
     makeroot_libkver
+    makeroot_digest
 
     if [ "$USE_GCC3" = "yes" ]; then
         if [ -z "`echo $BUILD_PACKAGES $INSTALL_PACKAGES | grep gcc3`" ]; then
@@ -613,28 +615,6 @@ makeroot_libkver()
         BUILD_TARGET="standalone-install"
         pkg_build pkgtools/libkver
         BUILD_TARGET="$_BUILD_TARGET"
-        prefix=`mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXX`
-        rm $prefix
-        script="$prefix.sh"
-        statfile="$prefix.stat"
-        init_script $script
-        cat >> $script <<EOF
-cd /usr/pkgsrc/pkgtools/libkver
-make show-var VARNAME=LIBKVER_STANDALONE_PREFIX
-if [ \$? != 0 ]; then
-    touch /pkg_comp/tmp/`basename $statfile`
-fi
-EOF
-        chmod +x $script
-        fsmount
-        LIBKVER_STANDALONE_PREFIX=$(chroot $DESTDIR /pkg_comp/tmp/`basename $script`)
-        fsumount
-        rm $script
-        if [ -f $statfile ]; then
-            rm $statfile
-            err "Failed to get libkver standalone prefix"
-        fi
-        rm $script
         echo "LD_PRELOAD=${LIBKVER_STANDALONE_PREFIX}/lib/libkver.so; export LD_PRELOAD" >> $DESTDIR/etc/shrc
         echo "setenv LD_PRELOAD ${LIBKVER_STANDALONE_PREFIX}/lib/libkver.so" >> $DESTDIR/etc/csh.login
         echo "setenv LD_PRELOAD ${LIBKVER_STANDALONE_PREFIX}/lib/libkver.so" >> $DESTDIR/etc/csh.cshrc
