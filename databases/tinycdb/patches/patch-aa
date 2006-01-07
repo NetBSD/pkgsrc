@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/07 06:47:10 schmonz Exp $
+
+--- Makefile.orig	2005-08-23 12:22:03.000000000 -0400
++++ Makefile
+@@ -6,14 +6,14 @@
+ 
+ VERSION = 0.75
+ 
+-prefix=/usr/local
++prefix=@PREFIX@
+ exec_prefix=$(prefix)
+ bindir=$(exec_prefix)/bin
+ libdir=$(exec_prefix)/lib
+ syslibdir=$(libdir)
+-sysconfdir=/etc
++sysconfdir=@PKG_SYSCONFDIR@
+ includedir=$(prefix)/include
+-mandir=$(prefix)/man
++mandir=$(prefix)/@PKGMANDIR@
+ DESTDIR=
+ 
+ CC = cc
