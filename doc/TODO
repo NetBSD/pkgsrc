@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4388 2006/01/07 04:53:17 schmonz Exp $
+$NetBSD: TODO,v 1.4389 2006/01/07 13:16:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1330,7 +1330,6 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.9
 	o zircon-1.18.256
-	o zope-2.8.4
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-1.5.4
@@ -1341,9 +1340,8 @@ Suggested package updates
 	o zope25-RenderableCharts-0.14.3
 	o zope25-Silva-1.0.1
 	o zope25-XMLWidgets-0.10
-	o zope25-ZWiki-0.39.0
-	o zope-2.8.1
 	o zope25-ZWiki-0.46.0
+	o zope-2.8.4
 	o zopeedit-0.8
 	o zziplib-0.13.38
 
