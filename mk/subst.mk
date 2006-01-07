@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.29 2006/01/05 23:16:01 joerg Exp $
+# $NetBSD: subst.mk,v 1.30 2006/01/07 18:43:05 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -33,13 +33,6 @@
 #	$$file${_SUBST_BACKUP_SUFFIX}. For debugging, set it to ${DO_NADA}.
 
 ECHO_SUBST_MSG?=	${ECHO}
-
-# _SUBST_IS_TEXT_FILE returns 0 if $${file} is a text file.
-_SUBST_IS_TEXT_FILE?= \
-	{ ${TEST} -f "$$file"						\
-	  && ${FILE_CMD} "$$file"					\
-	     | ${EGREP} "(executable .* script|shell script|text)";	\
-	} >/dev/null 2>&1
 
 _SUBST_BACKUP_SUFFIX=	.subst.sav
 
@@ -82,7 +75,7 @@ ${_SUBST_COOKIE.${_class_}}:
 	for file in $$files; do						\
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file"${_SUBST_BACKUP_SUFFIX:Q};		\
-		if ${_SUBST_IS_TEXT_FILE}; then				\
+		if ${TEST} -f "$$file"; then				\
 			${MV} -f "$$file" "$$tmpfile" || exit 1;	\
 			${SUBST_FILTER_CMD.${_class_}}			\
 			< "$$tmpfile"					\
@@ -96,8 +89,6 @@ ${_SUBST_COOKIE.${_class_}}:
 				${SUBST_POSTCMD.${_class_}};		\
 				${ECHO} "$$file" >> ${.TARGET};		\
 			fi;						\
-		elif ${TEST} -f "$$file"; then				\
-			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-text file \"$$file\"." 1>&2; \
 		else							\
 			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-existent file \"$$file\"." 1>&2; \
 		fi;							\
