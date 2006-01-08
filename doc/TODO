@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4391 2006/01/08 00:09:30 wiz Exp $
+$NetBSD: TODO,v 1.4392 2006/01/08 19:17:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -473,6 +473,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
+	o dialog-1.0.20060101
 	o diffstat-1.41
 	o digikam-0.8.0
 	o dirac-0.5.4
@@ -725,6 +726,7 @@ Suggested package updates
 	o lucy-1.19p
 	o lwp-2.1
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
+	o mDNSResponder-107.5
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mailman-2.1.7
@@ -815,7 +817,7 @@ Suggested package updates
 	o openal-20050401
 	o opencobol-0.31
 	o openh323-1.17.2
-	o openldap-2.3.14
+	o openldap-2.3.15
 	o openoffice-2.0.1
 	o openpam-20050616
 	o openssl-0.9.8a
@@ -893,6 +895,7 @@ Suggested package updates
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Mbox-MessageParser-1.4001
 	o p5-Mail-Sendmail-0.79
+	o p5-MailTools-1.71
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
@@ -1333,6 +1336,7 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.9
 	o zircon-1.18.256
+	o zope-2.9.0
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-1.5.4
