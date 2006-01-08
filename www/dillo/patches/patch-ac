@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.8 2006/01/08 06:46:59 garbled Exp $
+--- src/dns.c.orig      2006-01-08 00:26:22.000000000 +0000
++++ src/dns.c   2006-01-08 00:27:16.000000000 +0000
+@@ -38,7 +38,14 @@
+ /*
+  * Note: comment the following line for debugging or gprof profiling.
+  */
+-#define G_DNS_THREADED
++#ifdef __NetBSD__
++#  include <sys/param.h>
++#  if __NetBSD_Version__ >= 299000900
++#    define G_DNS_THREADED
++#  endif
++#else
++#  define G_DNS_THREADED
++#endif
+ 
+ /*
+  * Uncomment the following line for libc5 optimization
