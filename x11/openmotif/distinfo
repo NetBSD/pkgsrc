@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2005/12/12 19:55:41 joerg Exp $
+$NetBSD: distinfo,v 1.19.2.1 2006/01/08 05:33:48 salo Exp $
 
 SHA1 (openMotif-2.2.3.tar.gz) = c463653d9f8e24b35522c3ba6363ddf7a282eab4
 RMD160 (openMotif-2.2.3.tar.gz) = b99230d508da57bca72b6920d28fce4187bf5179
@@ -23,3 +23,5 @@ SHA1 (patch-bf) = 211d84bccf91ed474634658a75af5d8977b052d4
 SHA1 (patch-bg) = 582f455b066bd4f12160d719c885e9d8423632e5
 SHA1 (patch-bh) = 09401eb3e5e6e7e911a9268f2ba0cd6ddaeed3b4
 SHA1 (patch-bi) = 4dced20ce293f8635f121f77e9112e93766b9723
+SHA1 (patch-bj) = ac2b1d9fc09ff1bc712e776a3e2e469c1993c385
+SHA1 (patch-bk) = 3d8c264c8060616878dec5a7a21a479aa801e95d
