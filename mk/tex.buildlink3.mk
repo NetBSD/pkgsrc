@@ -1,9 +1,9 @@
-# $NetBSD: tex.buildlink3.mk,v 1.8 2005/12/05 22:07:07 rillig Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.9 2006/01/08 14:00:11 tonio Exp $
 #
 # A Makefile fragment for TeX and LaTeX packages
 #
 # 	* Determine the version of teTeX to be used.
-#     Modify TEX_DEFAULT to change the default version (default to teTeX2)
+#     Modify TEX_DEFAULT to change the default version (default to teTeX3)
 #
 #	* tex files are installed...
 #	  	teTeX[1-2]
@@ -34,7 +34,7 @@
 #   Possible values:
 #     teTeX1, teTeX2, teTeX3
 #   Default value:
-#     teTeX2
+#     teTeX3
 #
 # Variables tex packages can provide:
 #
@@ -112,23 +112,26 @@ TEX_TYPE=	none
 .if ${TEX_TYPE} == "teTeX3"
 _TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX3}
 _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX3}
-#PKG_TEXMFPREFIX=	${PREFIX}/share/texmf-dist
-PKG_TEXMFPREFIX=	${PREFIX}/share/texmf
-#PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf-local
-PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf
 .elif ${TEX_TYPE} == "teTeX2"
 _TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX2}
 _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX2}
-PKG_TEXMFPREFIX=	${PREFIX}/share/texmf
-PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf
 .elif ${TEX_TYPE} == "teTeX1"
 _TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX1}
 _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX1}
-PKG_TEXMFPREFIX=	${PREFIX}/share/texmf
-PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf
 .endif
 
+.endif	# TEX_BUILDLINK3_MK
+
+.if ${TEX_TYPE} == "none"
+PKG_FAIL_REASON=	\
+	"${_TEX_TYPE} is not an acceptable TeX version for ${PKGNAME}."
+.else
 PLIST_SUBST+=	TEX_TYPE=${TEX_TYPE:Q}
+.if (${TEX_DEPMETHOD} == "build")
+BUILD_DEPENDS+=	${_TEX_DEPENDENCY}:${_TEX_PKGSRCDIR}
+.else
+TEX_DEPMETHOD:= run
+.  include "${_TEX_PKGSRCDIR}/buildlink3.mk"
 PLIST_SUBST+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:C|^${PREFIX}/||}
 
@@ -138,16 +141,5 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/ 
 			{ gsub(/${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, "$${PKG_LOCALTEXMFPREFIX}"); \
 			print; next; }
 
-.endif	# TEX_BUILDLINK3_MK
-
-.if ${TEX_TYPE} == "none"
-PKG_FAIL_REASON=	\
-	"${_TEX_TYPE} is not an acceptable TeX version for ${PKGNAME}."
-.else
-.if (${TEX_DEPMETHOD} == "build")
-BUILD_DEPENDS+=	${_TEX_DEPENDENCY}:${_TEX_PKGSRCDIR}
-.else
-TEX_DEPMETHOD:= run
-.  include "${_TEX_PKGSRCDIR}/buildlink3.mk"
 .endif
 .endif
