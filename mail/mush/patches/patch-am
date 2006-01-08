@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1 2000/01/03 21:25:45 kim Exp $
+$NetBSD: patch-am,v 1.2 2006/01/08 17:04:58 joerg Exp $
 
 --- makefile.solaris.orig	Mon Jan  3 16:19:32 2000
 +++ makefile.solaris	Mon Jan  3 16:20:50 2000
@@ -19,10 +19,10 @@ $NetBSD: patch-am,v 1.1 2000/01/03 21:25:45 kim Exp $
 -LIBDIR= /usr/local/lib
 -MRCDIR= /usr/local/lib
 -MANDIR= /usr/local/man/man1
-+BINDIR= __PREFIX/bin
-+LIBDIR= __PREFIX/share/misc
-+MRCDIR= __PREFIX/share/misc
-+MANDIR= __PREFIX/man/man1
++BINDIR= @PREFIX@/bin
++LIBDIR= @PREFIX@/share/misc
++MRCDIR= @PREFIX@/share/misc
++MANDIR= @MANDIR@/man1
  MANEXT= 1
  
  install: mush
