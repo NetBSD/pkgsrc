@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12417 2006/01/08 12:59:47 minskim Exp $
+$NetBSD: CHANGES,v 1.12418 2006/01/08 13:29:14 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -180,3 +180,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/postgresql80-client to 8.0.5 [abs 2006-01-08]
 	Updated databases/postgresql80-server to 8.0.5 [abs 2006-01-08]
 	Updated math/mathomatic to 12.5.3 [minskim 2006-01-08]
+	Updated net/chrony to 1.20nb2 [joerg 2006-01-08]
