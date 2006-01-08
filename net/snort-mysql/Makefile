@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/01/03 17:34:40 adrianp Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/08 18:35:11 xtraeme Exp $
 
 .include "../../net/snort/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-mysql-/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Network Intrusion Detection System (with MySQL support)
 

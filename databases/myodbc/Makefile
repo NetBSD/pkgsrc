@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/01/07 21:41:48 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/08 18:35:08 xtraeme Exp $
 #
 
 DISTNAME=		MyODBC-2.50.36
 PKGNAME=		myodbc-2.50.36
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		http://www.mysql.com/Downloads/MyODBC/
 
