@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.705 2006/01/08 02:56:03 minskim Exp $
+# $NetBSD: Makefile,v 1.706 2006/01/08 03:12:38 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -569,6 +569,7 @@ SUBDIR+=	ruby-amstd
 SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-curses
+SUBDIR+=	ruby-gnome2-atk
 SUBDIR+=	ruby-gnome2-glib
 SUBDIR+=	ruby-mode
 SUBDIR+=	ruby-racc
