@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12409 2006/01/08 03:28:32 minskim Exp $
+$NetBSD: CHANGES,v 1.12410 2006/01/08 03:38:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -161,3 +161,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/ruby-gnome2-atk version 0.14.1 [minskim 2006-01-08]
 	Added graphics/ruby-gnome2-gdkpixbuf version 0.14.1 [minskim 2006-01-08]
 	Added devel/ruby-gnome2-pango version 0.14.1 [minskim 2006-01-08]
+	Added graphics/ruby-gnome2-libart version 0.14.1 [minskim 2006-01-08]
