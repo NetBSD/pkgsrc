@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/12/29 06:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2006/01/08 14:25:35 joerg Exp $
 
 DISTNAME=		arla-0.41
 #PKGREVISION=		1
@@ -43,6 +43,11 @@ MESSAGE_SUBST+=		ARLA_CACHE=${ARLA_CACHE}
 PLIST_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 FILES_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/lkm.conf
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	post-patch
+
 EGDIR=		${PREFIX}/share/examples/arla
 
 EGFILES=	CellServDB DynRootDB SuidCells ThisCell arla.conf
@@ -59,10 +64,11 @@ DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
 .include "../../mk/x11.buildlink3.mk"
 
+post-extract:
+	${CP} ${FILESDIR}/lkm.conf ${WRKDIR}/lkm.conf
+
 post-install:
 	${RM} -f ${EGDIR}/*.default
-	${SED}	${FILES_SUBST_SED}					\
-		< ${FILESDIR}/lkm.conf > ${WRKDIR}/lkm.conf
 	${INSTALL_DATA} ${WRKDIR}/lkm.conf ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/fstab ${EGDIR}
 
