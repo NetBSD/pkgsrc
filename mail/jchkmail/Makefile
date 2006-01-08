@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/08 16:26:22 joerg Exp $
 #
 
 DISTNAME=		jchkmail-1.3.1a
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-rc-dir=${PREFIX}/etc/rc.d		\
 			--with-conf-dir=${PREFIX}/etc/jchkmail
+
+PTHREAD_AUTO_VARS=	yes
 
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
