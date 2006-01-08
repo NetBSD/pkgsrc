@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/03 20:11:40 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/08 14:00:12 tonio Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	5
@@ -27,7 +27,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST_SRC
-TEX_ACCEPTED=	teTeX1 # teTeX2 teTeX3
+#TEX_ACCEPTED=	teTeX1 # teTeX2 teTeX3
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/texmf.local
@@ -66,5 +66,5 @@ post-install:
 	 	${ECHO} "@dirrm $$DIR" >>${PLIST_SRC}; \
 	 done
 
-.include "../../mk/tex.buildlink3.mk"
+.include "../../print/teTeX1-bin/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

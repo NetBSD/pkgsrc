@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/11/14 22:10:54 tonio Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/08 14:00:12 tonio Exp $
 
 DISTNAME=	base
 PKGNAME=	tex-xmltex-1.9
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/base
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/xmltex/}

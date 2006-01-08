@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/01/04 22:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/08 14:00:11 tonio Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
 PKGNAME=	xdvipresent-0.6.1.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics textproc print x11
 MASTER_SITES=	http://clip.dia.fi.upm.es/Software/
 
@@ -33,7 +33,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/xdvipresent.manl ${PREFIX}/${PKGMANDIR}/man1/xdvipresent.1
 	${INSTALL_DATA_DIR} ${HTML_DIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/xdvipresent_html/* ${HTML_DIR}
-	${PREFIX}/bin/texconfig rehash
 
-.include "../../mk/tex.buildlink3.mk"
+.include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"
