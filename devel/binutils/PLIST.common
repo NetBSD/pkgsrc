@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.common,v 1.9 2004/09/22 08:09:24 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.9.10.1 2006/01/08 04:36:48 salo Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
 ${MACHINE_GNU_PLATFORM}/bin/nm
+${MACHINE_GNU_PLATFORM}/bin/objdump
 ${MACHINE_GNU_PLATFORM}/bin/ranlib
 ${MACHINE_GNU_PLATFORM}/bin/strip
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/bfd.mo
@@ -32,6 +33,7 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/opcodes.mo
 ${NO_GPROF}${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gprof.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/bfd.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/binutils.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/binutils.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bfd.mo
@@ -47,6 +49,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/ld.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/binutils.mo
+${NO_GPROF}${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gprof.mo
 bin/addr2line
 bin/ar
 bin/as
