@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12413 2006/01/08 05:00:27 joerg Exp $
+$NetBSD: CHANGES,v 1.12414 2006/01/08 06:33:44 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -165,3 +165,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/ruby-gnome2-gtk version 0.14.1 [minskim 2006-01-08]
 	Added graphics/ruby-gnome2-gnomecanvas version 0.14.1 [minskim 2006-01-08]
 	Updated devel/pwlib to 1.8.3nb2 [joerg 2006-01-08]
+	Updated cad/cgi-wcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/gtk1-wcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/gtk2-wcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/libwcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/mex-wcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/oct-wcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/sci-wcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/stdio-wcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/wcalc to 1.0 [dmcmahill 2006-01-08]
+	Updated cad/wcalc-docs to 1.0 [dmcmahill 2006-01-08]
