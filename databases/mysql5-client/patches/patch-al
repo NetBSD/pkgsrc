@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1 2006/01/08 17:45:23 xtraeme Exp $
+
+--- include/Makefile.in.orig	2006-01-08 18:09:19.000000000 +0100
++++ include/Makefile.in	2006-01-08 18:11:16.000000000 +0100
+@@ -349,7 +349,8 @@
+ 			errmsg.h my_global.h my_net.h my_alloc.h \
+ 			my_getopt.h sslopt-longopts.h my_dir.h typelib.h \
+ 			sslopt-vars.h sslopt-case.h sql_common.h keycache.h \
+-			mysql_time.h $(BUILT_SOURCES)
++			mysql_time.h $(BUILT_SOURCES) mysqld_ername.h \
++			mysqld_error.h sql_state.h
+ 
+ noinst_HEADERS = config-win.h config-os2.h config-netware.h \
+ 			heap.h my_bitmap.h\

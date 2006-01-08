@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/31 09:21:40 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/08 17:45:23 xtraeme Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
@@ -45,8 +45,11 @@ include/mysql/mysql_com.h
 include/mysql/mysql_embed.h
 include/mysql/mysql_time.h
 include/mysql/mysql_version.h
+include/mysql/mysqld_ername.h
+include/mysql/mysqld_error.h
 include/mysql/raid.h
 include/mysql/sql_common.h
+include/mysql/sql_state.h
 include/mysql/sslopt-case.h
 include/mysql/sslopt-longopts.h
 include/mysql/sslopt-vars.h
