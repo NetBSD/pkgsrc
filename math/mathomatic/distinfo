@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.51 2005/11/23 05:26:10 minskim Exp $
+$NetBSD: distinfo,v 1.52 2006/01/08 12:58:55 minskim Exp $
 
-SHA1 (mathomatic-12.5.2.tgz) = c7330e9acf4d8c836813e33e41f96a42f7af7bf5
-RMD160 (mathomatic-12.5.2.tgz) = bf58d707967f69eeb8245c1f0e7bb145b21a607b
-Size (mathomatic-12.5.2.tgz) = 130070 bytes
+SHA1 (mathomatic-12.5.3.tar.bz2) = 6afe8089fb769b6060325cf6b72fe335316cf397
+RMD160 (mathomatic-12.5.3.tar.bz2) = a69d2211cbb38970ae8a4a286776fe1c4b1d8e72
+Size (mathomatic-12.5.3.tar.bz2) = 103018 bytes
 SHA1 (patch-aa) = 3543edb07b77f401623953be57d06784684fbb30
