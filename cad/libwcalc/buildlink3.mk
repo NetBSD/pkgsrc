@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/01 03:49:19 dmcmahill Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/08 06:31:54 dmcmahill Exp $
 #
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibwcalc}
 BUILDLINK_PACKAGES+=	libwcalc
 
 .if !empty(LIBWCALC_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libwcalc+=	libwcalc-0.9*
+BUILDLINK_DEPENDS.libwcalc+=	libwcalc-1.0*
 BUILDLINK_PKGSRCDIR.libwcalc?=	../../cad/libwcalc
 .endif	# LIBWCALC_BUILDLINK3_MK
 

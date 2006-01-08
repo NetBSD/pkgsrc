@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 20:49:52 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/08 06:31:54 dmcmahill Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -45,24 +45,24 @@ ONLY_FOR_PLATFORM=	Linux-*-i386 SunOS-*-sparc*
 
 .include "../../mk/bsd.prefs.mk"
 
-_MATLAB_ARCH=	unknown
-_MATLAB_MEX=	mex
-_MEX_SUFX=	unknown
+DEF_MATLAB_ARCH=	unknown
+DEF_MATLAB_MEX=	mex
+DEF_MEX_SUFX=	unknown
 .if ${OPSYS} == "Linux"
 . if (${MACHINE_ARCH} == "i386")
-_MATLAB_ARCH=	glnx86
-_MEX_SUFX=	mexglx
+DEF_MATLAB_ARCH=	glnx86
+DEF_MEX_SUFX=	mexglx
 . endif
 .elif ${OPSYS} == "SunOS"
 . if (${MACHINE_ARCH} == "sparc")
-_MATLAB_ARCH=	sol2
-_MEX_SUFX=	mexsol
+DEF_MATLAB_ARCH=	sol2
+DEF_MEX_SUFX=	mexsol
 . endif
 .endif
-MATLAB_ARCH?=	${_MATLAB_ARCH}
-MEX_SUFX?=	${_MEX_SUFX}
+MATLAB_ARCH?=	${DEF_MATLAB_ARCH}
+MEX_SUFX?=	${DEF_MEX_SUFX}
 
-MATLAB_MEX?=		${_MATLAB_MEX}
+MATLAB_MEX?=		${DEF_MATLAB_MEX}
 
 PLIST_SUBST+=		MEX_SUFX=${MEX_SUFX:Q}
 
