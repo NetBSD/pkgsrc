@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 1998/10/25 17:10:57 christos Exp $
+$NetBSD: patch-ak,v 1.2 2006/01/08 17:04:58 joerg Exp $
 *** old/folders.c	Sun Oct 25 11:59:14 1998
 --- folders.c	Sun Oct 25 11:58:30 1998
 ***************
@@ -123,18 +123,6 @@ $NetBSD: patch-ak,v 1.1 1998/10/25 17:10:57 christos Exp $
   %i	the message-id (may not be present)
   %n	name of the author
   %s	subject of the message
-*** old/mush.h	Sun Oct 25 11:59:14 1998
---- mush.h	Sun Oct 25 11:58:29 1998
-***************
-*** 578,583 ****
---- 578,584 ----
-      long   m_offset;	/* offset in tempfile of msg */
-      long   m_size;	/* number of bytes in msg */
-      int    m_lines;	/* number of lines in msg */
-+     int    m_headers;	/* number of header lines in msg */
-      char   *m_date_recv;/* Date user received msg (see dates.c for fmt) */
-      char   *m_date_sent;/* Date author sent msg (see dates.c for fmt) */
-      char   *m_to;	/* Cached To: field */
 *** old/pick.c	Sun Oct 25 11:59:14 1998
 --- pick.c	Sun Oct 25 11:58:28 1998
 ***************
