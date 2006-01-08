@@ -1,8 +1,51 @@
-$NetBSD: patch-ba,v 1.2 2004/10/09 14:01:03 mjl Exp $
+$NetBSD: patch-ba,v 1.3 2006/01/08 04:57:55 joerg Exp $
 
 --- src/ptclib/pssl.cxx.orig	2004-10-09 13:31:30.000000000 +0200
 +++ src/ptclib/pssl.cxx	2004-10-09 13:33:39.000000000 +0200
-@@ -743,7 +743,7 @@
+@@ -297,14 +297,14 @@ PSSLPrivateKey::PSSLPrivateKey(const PFi
+ 
+ PSSLPrivateKey::PSSLPrivateKey(const BYTE * keyData, PINDEX keySize)
+ {
+-  key = d2i_AutoPrivateKey(NULL, (BYTE **)&keyData, keySize);
++  key = d2i_AutoPrivateKey(NULL, &keyData, keySize);
+ }
+ 
+ 
+ PSSLPrivateKey::PSSLPrivateKey(const PBYTEArray & keyData)
+ {
+   const BYTE * keyPtr = keyData;
+-  key = d2i_AutoPrivateKey(NULL, (BYTE **)&keyPtr, keyData.GetSize());
++  key = d2i_AutoPrivateKey(NULL, &keyPtr, keyData.GetSize());
+ }
+ 
+ 
+@@ -472,14 +472,14 @@ PSSLCertificate::PSSLCertificate(const P
+ 
+ PSSLCertificate::PSSLCertificate(const BYTE * certData, PINDEX certSize)
+ {
+-  certificate = d2i_X509(NULL, (unsigned char **)&certData, certSize);
++  certificate = d2i_X509(NULL, &certData, certSize);
+ }
+ 
+ 
+ PSSLCertificate::PSSLCertificate(const PBYTEArray & certData)
+ {
+   const BYTE * certPtr = certData;
+-  certificate = d2i_X509(NULL, (unsigned char **)&certPtr, certData.GetSize());
++  certificate = d2i_X509(NULL, &certPtr, certData.GetSize());
+ }
+ 
+ 
+@@ -489,7 +489,7 @@ PSSLCertificate::PSSLCertificate(const P
+   PBase64::Decode(certStr, certData);
+   if (certData.GetSize() > 0) {
+     const BYTE * certPtr = certData;
+-    certificate = d2i_X509(NULL, (unsigned char **)&certPtr, certData.GetSize());
++    certificate = d2i_X509(NULL, &certPtr, certData.GetSize());
+   }
+   else
+     certificate = NULL;
+@@ -743,7 +743,7 @@ PSSLDiffieHellman::~PSSLDiffieHellman()
      DH_free(dh);
  }
  
