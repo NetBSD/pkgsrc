@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/29 06:21:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/08 18:20:30 joerg Exp $
 
 DISTNAME=	dkim-milter-0.1.1
 CATEGORIES=	mail
@@ -24,6 +24,9 @@ SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g' \
 			-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g' \
 			-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
 SUBST_MESSAGE.libs=	"Fixing makefile references."
+
+post-extract:
+	${LN} -s FreeBSD ${WRKSRC}/devtools/OS/DragonFly
 
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
