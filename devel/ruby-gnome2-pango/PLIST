@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/08 03:26:02 minskim Exp $
+${RUBY_SITELIBDIR}/${MACHINE_ARCH}-${LOWER_OPSYS}elf/pango.so
+${RUBY_SITELIBDIR}/${MACHINE_ARCH}-${LOWER_OPSYS}elf/rbpango.h
+${RUBY_SITELIBDIR}/${MACHINE_ARCH}-${LOWER_OPSYS}elf/rbpangoversion.h
+${RUBY_SITELIBDIR}/pango.rb
