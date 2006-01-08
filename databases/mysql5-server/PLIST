@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/02 08:13:26 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/08 17:43:58 xtraeme Exp $
 bin/comp_err
 bin/innochecksum
 bin/my_print_defaults
@@ -17,9 +17,6 @@ bin/perror
 bin/replace
 bin/resolve_stack_dump
 bin/resolveip
-include/mysql/mysqld_ername.h
-include/mysql/mysqld_error.h
-include/mysql/sql_state.h
 lib/mysql/libdbug.a
 lib/mysql/libheap.a
 lib/mysql/libmyisam.a
