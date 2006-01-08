@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.456 2006/01/08 14:14:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.457 2006/01/08 15:55:13 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1838,20 +1838,22 @@ sub checkline_mk_shelltext($$) {
 	use constant SCST_SED		=>  7;
 	use constant SCST_SED_E		=>  8;
 	use constant SCST_SET		=>  9;
-	use constant SCST_IF_WHILE	=> 10;
+	use constant SCST_COND_CONT	=> 10;
 	use constant SCST_CASE		=> 11;
 	use constant SCST_CASE_IN	=> 12;
 	use constant SCST_CASE_LABEL	=> 13;
 	use constant SCST_CASE_LABEL_CONT => 14;
 	use constant SCST_CASE_PAREN	=> 15;
 	use constant SCST_FOR		=> 16;
+	use constant SCST_FOR_IN	=> 17;
 
 	use constant scst_statename => [
 		"SCST_START", "SCST_CONT", "SCST_INSTALL", "SCST_INSTALL_D",
 		"SCST_MKDIR", "SCST_PAX", "SCST_PAX_S", "SCST_SED",
-		"SCST_SED_E", "SCST_SET", "SCST_IF_WHILE", "SCST_CASE",
+		"SCST_SED_E", "SCST_SET", "SCST_COND_CONT", "SCST_CASE",
 		"SCST_CASE_IN", "SCST_CASE_LABEL", "SCST_CASE_LABEL_CONT",
-		"SCST_CASE_PAREN", "SCST_FOR"
+		"SCST_CASE_PAREN", "SCST_FOR", "SCST_FOR_IN",
+		"SCST_COND_CONT",
 	];
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
@@ -1904,7 +1906,7 @@ sub checkline_mk_shelltext($$) {
 				"temporary files to save the output of the command.");
 		}
 
-		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_IF_WHILE && $state != SCST_FOR && !$set_e_mode) {
+		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_COND_CONT && $state != SCST_FOR && !$set_e_mode) {
 			$line->log_warning("A semicolon should only be used to separate commands after switching to \"set -e\" mode.");
 			$line->explain(
 				"Older versions of the NetBSD make(1) had run the shell commands using",
@@ -1922,78 +1924,53 @@ sub checkline_mk_shelltext($$) {
 		# State transition.
 		#
 
-		if ($shellword eq ";;") {
-			$state = SCST_CASE_LABEL;
-
-		} elsif ($shellword =~ qr"^[;&\|]+$") {
-			$state = SCST_START;
-
-		} elsif ($state == SCST_START) {
-			if ($shellword eq "\${INSTALL}") {
-				$state = SCST_INSTALL;
-			} elsif ($shellword eq "\${MKDIR}") {
-				$state = SCST_MKDIR;
-			} elsif ($shellword eq "\${PAX}") {
-				$state = SCST_PAX;
-			} elsif ($shellword eq "\${SED}") {
-				$state = SCST_SED;
-			} elsif ($shellword eq "set") {
-				$state = SCST_SET;
-			} elsif ($shellword =~ qr"^(?:if|elif|while)$") {
-				$state = SCST_IF_WHILE;
-			} elsif ($shellword =~ qr"^(?:then|else|do)$") {
-				$state = SCST_START;
-			} elsif ($shellword eq "case") {
-				$state = SCST_CASE;
-			} elsif ($shellword eq "for") {
-				$state = SCST_FOR;
-			} else {
-				$state = SCST_CONT;
-			}
-
-		} elsif ($state == SCST_INSTALL && $shellword eq "-d") {
-			$state = SCST_INSTALL_D;
-
-		} elsif (($state == SCST_INSTALL || $state == SCST_INSTALL_D) && $shellword =~ qr"^-[ogm]$") {
-			$state = SCST_START;
-
-		} elsif ($state == SCST_PAX && $shellword eq "-s") {
-			$state = SCST_PAX_S;
-
-		} elsif ($state == SCST_PAX_S) {
-			$state = SCST_PAX;
-
-		} elsif ($state == SCST_SED && $shellword eq "-e") {
-			$state = SCST_SED_E;
-
-		} elsif ($state == SCST_SED_E) {
-			$state = SCST_SED;
-
-		} elsif ($state == SCST_SET && $shellword eq "-e") {
+		if ($state == SCST_SET && $shellword eq "-e") {
 			$set_e_mode = true;
-			$state = SCST_CONT;
-
-		} elsif ($state == SCST_CASE) {
-			$state = SCST_CASE_IN;
-
-		} elsif ($state == SCST_CASE_IN && $shellword eq "in") {
-			$state = SCST_CASE_LABEL;
-
-		} elsif ($state == SCST_CASE_LABEL && $shellword eq "esac") {
-			$state = SCST_CONT;
-
-		} elsif ($state == SCST_CASE_LABEL) {
-			$state = SCST_CASE_LABEL_CONT;
-
-		} elsif ($state == SCST_CASE_LABEL_CONT && $shellword eq "|") {
-			$state = SCST_CASE_LABEL;
-
-		} elsif ($state == SCST_CASE_LABEL_CONT && $shellword eq ")") {
-			$state = SCST_START;
-
-		} else {
-			$line->log_debug("[" . scst_statename->[$state] . "] Keeping the current state.");
 		}
+
+		$state =  ($shellword eq ";;") ? SCST_CASE_LABEL
+			: ($shellword =~ qr"^[;&\|]+$") ? SCST_START
+			: ($state == SCST_START) ? (
+				  ($shellword eq "\${INSTALL}") ? SCST_INSTALL
+				: ($shellword eq "\${MKDIR}") ? SCST_MKDIR
+				: ($shellword eq "\${PAX}") ? SCST_PAX
+				: ($shellword eq "\${SED}") ? SCST_SED
+				: ($shellword eq "set") ? SCST_SET
+				: ($shellword =~ qr"^(?:if|elif|while)$") ? SCST_COND_CONT
+				: ($shellword =~ qr"^(?:then|else|do)$") ? SCST_START
+				: ($shellword eq "case") ? SCST_CASE
+				: ($shellword eq "for") ? SCST_FOR
+				: SCST_CONT)
+			: ($state == SCST_MKDIR) ? SCST_MKDIR
+			: ($state == SCST_INSTALL && $shellword eq "-d") ? SCST_INSTALL_D
+			: ($state == SCST_INSTALL || $state == SCST_INSTALL_D) ? (
+				  ($shellword =~ qr"^-[ogm]$") ? SCST_START
+				: $state)
+			: ($state == SCST_PAX) ? (
+				  ($shellword eq "-s") ? SCST_PAX_S
+				: ($shellword =~ qr"^-") ? SCST_PAX
+				: SCST_CONT)
+			: ($state == SCST_PAX_S) ? SCST_PAX
+			: ($state == SCST_SED) ? (
+				  ($shellword eq "-e") ? SCST_SED_E
+				: ($shellword =~ qr"^-") ? SCST_SED
+				: SCST_CONT)
+			: ($state == SCST_SED_E) ? SCST_SED
+			: ($state == SCST_SET) ? SCST_CONT
+			: ($state == SCST_CASE) ? SCST_CASE_IN
+			: ($state == SCST_CASE_IN && $shellword eq "in") ? SCST_CASE_LABEL
+			: ($state == SCST_CASE_LABEL && $shellword eq "esac") ? SCST_CONT
+			: ($state == SCST_CASE_LABEL) ? SCST_CASE_LABEL_CONT
+			: ($state == SCST_CASE_LABEL_CONT && $shellword eq "|") ? SCST_CASE_LABEL
+			: ($state == SCST_CASE_LABEL_CONT && $shellword eq ")") ? SCST_START
+			: ($state == SCST_CONT) ? SCST_CONT
+			: ($state == SCST_COND_CONT) ? SCST_COND_CONT
+			: ($state == SCST_FOR) ? SCST_FOR_IN
+			: ($state == SCST_FOR_IN && $shellword eq "in") ? SCST_CONT
+			: do {
+				$line->log_warning("[" . scst_statename->[$state] . " ${shellword}] Keeping the current state.");
+				$state;
+			};
 	}
 
 	if ($rest !~ qr"^\s*$") {
