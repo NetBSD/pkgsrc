@@ -1,0 +1,105 @@
+$NetBSD: patch-an,v 1.2.18.1 2006/01/08 04:23:08 salo Exp $
+
+Index: filters/kword/pdf/xpdf/xpdf/JBIG2Stream.cc
+===================================================================
+--- filters/kword/pdf/xpdf/xpdf/JBIG2Stream.cc	(revision 409205)
++++ filters/kword/pdf/xpdf/xpdf/JBIG2Stream.cc	(revision 488720)
+@@ -7,6 +7,7 @@
+ //========================================================================
+ 
+ #include <aconf.h>
++#include <limits.h>
+ 
+ #ifdef USE_GCC_PRAGMAS
+ #pragma implementation
+@@ -977,7 +978,15 @@ JBIG2Bitmap::JBIG2Bitmap(Guint segNumA, 
+   w = wA;
+   h = hA;
+   line = (wA + 7) >> 3;
+-  data = (Guchar *)gmalloc(h * line);
++
++  if (h < 0 || line <= 0 || h >= (INT_MAX - 1)/ line) {
++    error(-1, "invalid width/height");
++    data = NULL;
++    return;
++  }
++
++  // need to allocate one extra guard byte for use in combine()
++  data = (Guchar *)gmalloc(h * line + 1);
+ }
+ 
+ JBIG2Bitmap::JBIG2Bitmap(Guint segNumA, JBIG2Bitmap *bitmap):
+@@ -986,7 +995,15 @@ JBIG2Bitmap::JBIG2Bitmap(Guint segNumA, 
+   w = bitmap->w;
+   h = bitmap->h;
+   line = bitmap->line;
+-  data = (Guchar *)gmalloc(h * line);
++
++  if (h < 0 || line <= 0 || h >= (INT_MAX - 1) / line) {
++    error(-1, "invalid width/height");
++    data = NULL;
++    return;
++  }
++
++  // need to allocate one extra guard byte for use in combine()
++  data = (Guchar *)gmalloc(h * line + 1);
+   memcpy(data, bitmap->data, h * line);
+ }
+ 
+@@ -1012,10 +1029,14 @@ JBIG2Bitmap *JBIG2Bitmap::getSlice(Guint
+ }
+ 
+ void JBIG2Bitmap::expand(int newH, Guint pixel) {
+-  if (newH <= h) {
++  if (newH <= h || line <= 0 || newH >= (INT_MAX-1) / line) {
++    error(-1, "invalid width/height");
++    gfree(data);
++    data = NULL;
+     return;
+   }
+-  data = (Guchar *)grealloc(data, newH * line);
++  /* need to allocate one extra guard byte for use in combine() */
++  data = (Guchar *)grealloc(data, newH * line + 1);
+   if (pixel) {
+     memset(data + h * line, 0xff, (newH - h) * line);
+   } else {
+@@ -2239,6 +2260,11 @@ JBIG2Bitmap *JBIG2Stream::readTextRegion
+ 
+   strips = 1 << logStrips;
+ 
++  if (w < 0 || h <= 0 || w >= INT_MAX / h) {
++     error(-1, "invalid width/height");
++     return NULL;
++  }
++
+   // allocate the bitmap
+   bitmap = new JBIG2Bitmap(0, w, h);
+   if (defPixel) {
+@@ -2505,6 +2531,15 @@ void JBIG2Stream::readHalftoneRegionSeg(
+     error(getPos(), "Bad symbol dictionary reference in JBIG2 halftone segment");
+     return;
+   }
++  if (gridH == 0 || gridW >= INT_MAX / gridH) {
++    error(getPos(), "Bad size in JBIG2 halftone segment");
++    return;
++  }
++  if (w == 0 || h >= INT_MAX / w) {
++     error(getPos(), "Bad size in JBIG2 bitmap segment");
++    return;
++  }
++
+   patternDict = (JBIG2PatternDict *)seg;
+   bpp = 0;
+   i = 1;
+@@ -3078,6 +3113,11 @@ JBIG2Bitmap *JBIG2Stream::readGenericRef
+   Guint ltpCX, cx, cx0, cx2, cx3, cx4, tpgrCX0, tpgrCX1, tpgrCX2;
+   int x, y, pix;
+ 
++  if (w < 0 || h <= 0 || w >= INT_MAX / h) {
++    error(-1, "invalid width/height");
++    return NULL;
++  }
++
+   bitmap = new JBIG2Bitmap(0, w, h);
+   bitmap->clearToZero();
+ 

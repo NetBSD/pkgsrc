@@ -1,0 +1,22 @@
+$NetBSD: patch-ap,v 1.1.2.2 2006/01/08 04:23:08 salo Exp $
+
+Index: filters/kword/pdf/xpdf/xpdf/Stream.h
+===================================================================
+--- filters/kword/pdf/xpdf/xpdf/Stream.h	(revision 409205)
++++ filters/kword/pdf/xpdf/xpdf/Stream.h	(revision 488720)
+@@ -227,6 +227,7 @@ public:
+ 
+   int lookChar();
+   int getChar();
++  GBool isOk() { return ok; }
+ 
+ private:
+ 
+@@ -242,6 +243,7 @@ private:
+   int rowBytes;			// bytes per line
+   Guchar *predLine;		// line buffer
+   int predIdx;			// current index in predLine
++  GBool ok;
+ };
+ 
+ //------------------------------------------------------------------------
