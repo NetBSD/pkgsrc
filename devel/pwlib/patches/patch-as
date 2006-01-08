@@ -1,0 +1,22 @@
+$NetBSD: patch-as,v 1.1 2006/01/08 04:57:55 joerg Exp $
+
+--- include/ptlib/unix/ptlib/pmachdep.h.orig	2006-01-08 03:44:23.000000000 +0000
++++ include/ptlib/unix/ptlib/pmachdep.h
+@@ -217,7 +217,7 @@ typedef size_t socklen_t;
+ #endif
+ 
+ ///////////////////////////////////////////////////////////////////////////////
+-#elif defined(P_FREEBSD)
++#elif defined(P_FREEBSD) || defined(P_DRAGONFLY)
+ 
+ #if defined(P_PTHREADS)
+ #ifndef _THREAD_SAFE
+@@ -241,7 +241,7 @@ typedef size_t socklen_t;
+ #include <netinet/tcp.h>
+ 
+ /* socklen_t is defined in FreeBSD 3.4-STABLE, 4.0-RELEASE and above */
+-#if (P_FREEBSD <= 340000)
++#if defined(P_FREEBSD) && (P_FREEBSD <= 340000)
+ typedef int socklen_t;
+ #endif
+ 

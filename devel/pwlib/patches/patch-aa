@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2004/11/30 16:44:47 adam Exp $
+$NetBSD: patch-aa,v 1.8 2006/01/08 04:57:55 joerg Exp $
 
 --- make/unix.mak.orig	2004-11-16 00:32:34.000000000 +0000
 +++ make/unix.mak
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.7 2004/11/30 16:44:47 adam Exp $
  
  ifndef PWLIBDIR
 -PWLIBDIR = $(HOME)/pwlib
-+PWLIBDIR = /usr/pkg
++PWLIBDIR = @PREFIX@
  endif
  
  ####################################################
@@ -18,6 +18,15 @@ $NetBSD: patch-aa,v 1.7 2004/11/30 16:44:47 adam Exp $
  
  ###############################################################################
  #
+@@ -309,7 +309,7 @@ release tagbuild
+ .PHONY: all $(STANDARD_TARGETS)
+ 
+ 
+-ifeq (,$(findstring $(OSTYPE),linux FreeBSD OpenBSD NetBSD solaris beos Darwin Carbon AIX Nucleus VxWorks rtems QNX cygwin))
++ifeq (,$(findstring $(OSTYPE),linux DragonFly FreeBSD OpenBSD NetBSD solaris beos Darwin Carbon AIX Nucleus VxWorks rtems QNX cygwin))
+ 
+ default_target :
+ 	@echo
 @@ -433,9 +433,9 @@ endif # FreeBSD
  
  ifeq ($(OSTYPE),OpenBSD)
