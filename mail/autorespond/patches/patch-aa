@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2006/01/08 17:55:31 joerg Exp $
+
+--- autorespond.c.orig	2006-01-08 17:51:50.000000000 +0000
++++ autorespond.c
+@@ -372,7 +372,7 @@ void read_headers( FILE *fp )
+ }
+ 
+ 
+-
++#if !defined(__DragonFly__)
+ /*********************************************************
+ ** find string in string - ignore case **/
+ 
+@@ -398,7 +398,7 @@ char *strcasestr( char *_s1, char *_s2 )
+ 	else
+ 		return _s1 + (ptr - s1);
+ }
+-
++#endif
+ 
+ 
+ 
