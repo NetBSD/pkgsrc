@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12404 2006/01/07 23:48:19 veego Exp $
+$NetBSD: CHANGES,v 1.12405 2006/01/08 00:09:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -156,3 +156,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/zope3 to 3.2.0 [wiz 2006-01-07]
 	Updated x11/openmotif to 2.2.3nb1 [joerg 2006-01-07]
 	Updated multimedia/transcode to 0.6.12nb9 [veego 2006-01-07]
+	Updated devel/binutils to 2.16.1 [wiz 2006-01-08]
