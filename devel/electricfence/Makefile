@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:46 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/08 20:25:34 joerg Exp $
 
 DISTNAME=		ElectricFence-2.1
 PKGREVISION=		1
@@ -11,7 +11,7 @@ COMMENT=		Different kind of malloc() debugger
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "mipsel"
+.if ${MACHINE_ARCH} == "mipsel" || ${OPSYS} == "DragonFly"
 CFLAGS+=		-g -DPAGE_PROTECTION_VIOLATED_SIGNAL=SIGBUS
 .else
 CFLAGS+=		-g
