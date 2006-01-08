@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/11/15 03:15:45 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/08 14:00:12 tonio Exp $
 
 DISTNAME=	# empty
 PKGNAME=	tex-foiltex-2.1.4a
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/supported/foiltex/}
 DISTFILES=	foiltex.dtx foiltex.ins
