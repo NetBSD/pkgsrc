@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.12 2005/03/15 03:59:38 tv Exp $
+$NetBSD: patch-ab,v 1.13 2006/01/08 14:30:01 tron Exp $
 
---- Makefile.dist.orig	Sun Nov 24 18:55:28 1991
-+++ Makefile.dist
+--- Makefile.dist.orig	1991-11-24 23:55:28.000000000 +0000
++++ Makefile.dist	2006-01-08 14:13:23.000000000 +0000
 @@ -22,15 +22,18 @@
  #  uncommented and set accordingly, if needed.
  #
@@ -107,7 +107,7 @@ $NetBSD: patch-ab,v 1.12 2005/03/15 03:59:38 tv Exp $
  MAKEOPTS	= $(MFLAGS) BINDIR=$(BINDIR) LIBDIR=$(LIBDIR) \
 -			    MANDIR=$(MANDIR) CC=$(CC) \
 -			    NOINDEX=$(NOINDEX) SYSV=$(SYSV)
-+			    INCDIR=$(INCDIR) MANDIR=$(MANDIR) CC=$(CC) \
++			    INCDIR=$(INCDIR) MANDIR=$(MANDIR) CC="$(CC)" \
 +			    NOINDEX=$(NOINDEX) SYSV=$(SYSV) PREFIX=$(PREFIX) \
 +			    CCOMP="$(CCOMP)"
  
