@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/08 03:57:14 minskim Exp $
+${RUBY_SITELIBDIR}/gnomecanvas2.rb
+${RUBY_SITELIBDIR}/${MACHINE_ARCH}-${LOWER_OPSYS}elf/gnomecanvas2.so
