@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/01/05 02:57:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.42 2006/01/08 17:48:14 joerg Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -34,7 +34,6 @@ USE_TOOLS+=		expr nroff
 DJB_BUILD_TARGETS= 	man
 
 DJB_RESTRICTED=		YES
-NO_PACKAGE=		"needs work to function properly as a binary package"
 
 DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
@@ -86,6 +85,8 @@ SUBST_SED.logging=	-e 's|0|${QUEUE_EXTRALEN_cmd:sh}|g'
 SUBST_SED.logging+=	-e 's|""|${QUEUE_EXTRA}|g'
 SUBST_MESSAGE.logging=	"Setting QUEUE_EXTRA."
 .endif
+
+SUBST_FILES.djbware+=	cdb_seek.c dns.c
 
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}extract_file=${PKGNAME_NOREV}.tar.gz;\
