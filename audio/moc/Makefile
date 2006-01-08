@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/11/19 10:55:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/08 20:14:52 xtraeme Exp $
 
 DISTNAME=		moc-2.3.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.daper.net/pub/soft/moc/stable/
 EXTRACT_SUFX=		.tar.bz2
@@ -18,6 +18,12 @@ USE_NCURSES=		yes
 # We require ncurses because with curses arrow key navigation is buggy
 CONFIGURE_ARGS+=        --with-ncurses
 
+SUBST_CLASSES=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_FILES.oss=	config.example options.c
+SUBST_SED.oss=		s,/dev/dsp,${DEVOSSAUDIO},g
+SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
+
 .include "options.mk"
 
 .include "../../audio/libid3tag/buildlink3.mk"
@@ -25,5 +31,6 @@ CONFIGURE_ARGS+=        --with-ncurses
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
