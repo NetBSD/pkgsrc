@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/06 17:28:20 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/08 21:00:22 joerg Exp $
 #
 
 DISTNAME=	dfdisk-1.0
@@ -12,6 +12,7 @@ COMMENT=	Fetch distfiles from multiple locations
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 EGDIR=		${PREFIX}/share/examples/dfdisk
 CONF_FILES=	${EGDIR}/dfdisk.conf ${PKG_SYSCONFDIR}/dfdisk.conf
