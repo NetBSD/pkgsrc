@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2005/12/12 19:55:41 joerg Exp $
+# $NetBSD: Makefile,v 1.39.2.1 2006/01/08 05:33:48 salo Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
 PKGNAME=	openmotif-${PKGVER}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.motifzone.com/src/
 

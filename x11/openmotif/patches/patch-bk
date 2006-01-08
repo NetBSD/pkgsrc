@@ -1,0 +1,16 @@
+$NetBSD: patch-bk,v 1.1.2.2 2006/01/08 05:33:48 salo Exp $
+
+--- clients/uil/UilSrcSrc.c.orig	2006-01-06 20:50:23.000000000 +0100
++++ clients/uil/UilSrcSrc.c
+@@ -629,8 +629,10 @@ open_source_file( XmConst char          
+     char			buffer[256];
+ 
+ 
+-    /* place the file name in the expanded_name buffer */
++    if (strlen(c_file_name) >= sizeof(buffer + 1))
++	return src_k_open_error;
+ 
++    /* place the file name in the expanded_name buffer */
+     strcpy(buffer, c_file_name);
+ 
+ /*    Determine if this is the main file or an include file.  */
