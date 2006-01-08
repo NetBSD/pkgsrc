@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/08 03:18:51 minskim Exp $
+${RUBY_SITELIBDIR}/gdk_pixbuf2.rb
+${RUBY_SITELIBDIR}/${MACHINE_ARCH}-${LOWER_OPSYS}elf/gdk_pixbuf2.so
