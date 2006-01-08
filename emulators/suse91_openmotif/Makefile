@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/27 23:07:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/08 16:53:22 salo Exp $
 
 DISTNAME=		suse_openmotif-${SUSE_VERSION}
 PKGREVISION=		2
@@ -16,8 +16,9 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		openmotif-libs-2.2.2-519.4.${SUSE_ARCH}.rpm \
-			openmotif21-libs-2.1.30MLI4-119.4.${SUSE_ARCH}.rpm
+.if exists(Makefile.${MACHINE_ARCH})
+.include "Makefile.${MACHINE_ARCH}"
+.endif
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

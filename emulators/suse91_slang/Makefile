@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/12 14:43:24 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/08 16:53:22 salo Exp $
 
 DISTNAME=		suse_slang-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -15,7 +15,9 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		slang-1.4.9-121.${SUSE_ARCH}.rpm
+.if exists(Makefile.${MACHINE_ARCH})
+.include "Makefile.${MACHINE_ARCH}"
+.endif
 
 post-install:
 	${LN} -sf ${PREFIX}/${EMULSUBDIR}/usr/lib/libslang-utf8.so.1 \

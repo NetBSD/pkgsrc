@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/12 14:43:23 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/08 16:53:21 salo Exp $
 
 DISTNAME=		suse_fontconfig-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -15,7 +15,9 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		fontconfig-2.2.92.20040221-28.${SUSE_ARCH}.rpm
+.if exists(Makefile.${MACHINE_ARCH})
+.include "Makefile.${MACHINE_ARCH}"
+.endif
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
