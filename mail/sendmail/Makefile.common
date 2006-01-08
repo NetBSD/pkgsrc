@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2005/12/05 20:50:35 rillig Exp $
+# $NetBSD: Makefile.common,v 1.31 2006/01/08 16:16:00 joerg Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -40,7 +40,7 @@ make-sendmail-siteconfig:
 
 .if !empty(PKG_OPTIONS:Minet6)
 	@${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
-.if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS"
+.if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS" && ${OPSYS} != "DragonFly"
 	@${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
 .endif
 .endif
