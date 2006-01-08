@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/29 06:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/08 05:07:05 joerg Exp $
 #
 
 DISTNAME=	vsftpd-1.2.2
@@ -38,12 +38,10 @@ BUILD_DEFS+=	USE_INET6
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 
-post-patch:
-	@cd ${WRKSRC} && \
-		for f in vsftpd.8 vsftpd.conf.5 vsftpd.conf; do		\
-			${MV} $${f} $${f}.orig;				\
-			${SED} ${FILES_SUBST_SED} $${f}.orig > $${f};	\
-		done
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	vsftpd.8 vsftpd.conf.5 vsftpd.conf
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_STAGE.paths=	post-patch
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vsftpd ${PREFIX}/libexec
