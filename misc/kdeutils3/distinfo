@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2006/01/05 20:25:16 joerg Exp $
+$NetBSD: distinfo,v 1.37 2006/01/08 12:07:52 markd Exp $
 
 SHA1 (kdeutils-3.5.0.tar.bz2) = 194d20c78d61b41dda6c3a6f55f0e10b4718d0a8
 RMD160 (kdeutils-3.5.0.tar.bz2) = 0638cc14a1db465a05eaf915da62d1993a44f461
@@ -9,6 +9,6 @@ SHA1 (patch-ac) = 9b31039b0e3cc05dc4fb288ee8f66ebf3e440f6e
 SHA1 (patch-ad) = 3504496bf4b0957e74ae999f16bc03ed3499371d
 SHA1 (patch-ae) = b4067b7e23253d51ed5d0bf545ee7044943a1721
 SHA1 (patch-an) = e13957a9fa0d23aebbe149ecaca7b9dacde5c9fb
-SHA1 (patch-ao) = 06b87e5e2ad5c20f14a993949bc57c3a64225e56
+SHA1 (patch-ao) = 0ffece64199b090608feb5457fbdfce576691999
 SHA1 (patch-ap) = 7f8a89156f6d419ca708bf5e55a57d30e5f94756
 SHA1 (patch-aq) = a76ff5042c3dec821026f512f6e83f5a3eaa3d91
