@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2006/01/04 04:29:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.49 2006/01/08 04:57:55 joerg Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES+=	http://www.voxgratia.org/releases/
 EXTRACT_SUFX=	-tar.gz
@@ -27,19 +27,20 @@ PTHREAD_OPTS+=		require
 BUILD_TARGET=		opt
 MAKE_ENV+=		PWLIBDIR=${WRKSRC:Q} CC=${CC:Q} CPLUS=${CXX:Q}
 
-FILES_SUBST+=		LIBTOOL=${LIBTOOL:Q}
-FILES_SUBST+=		PTHREADS_PREFIX="${BUILDLINK_PREFIX.pthread}"
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	make/unix.mak make/lib.mak make/common.mak make/pwlib.mak
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@LIBTOOL@,${LIBTOOL},g'
+SUBST_SED.paths+=	-e 's,@BSD_INSTALL_LIB@,${INSTALL_LIB},g'
+SUBST_SED.paths+=	-e 's,@BSD_INSTALL_PROGRAM@,${INSTALL_PROGRAM},g'
+SUBST_SED.paths+=	-e 's,@PTHREAD_FLAGS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
+SUBST_SED.paths+=	-e 's,@LIBOSSAUDIO@,${LIBOSSAUDIO},g'
+SUBST_STAGE.paths=	post-patch
 
 post-extract:
 	cd ${WRKDIR}; ${TAR} -xf ${DISTNAME:S/$/-tar/}
-
-post-patch:
-	${_PKG_SILENT}cd ${WRKSRC}/make;				\
-	for f in unix.mak lib.mak common.mak; do			\
-		${SED} ${FILES_SUBST_SED} $$f > $$f.sed;		\
-		${MV} -f $$f.sed $$f;					\
-	done
-	${LN} -sf ${WRKDIR} ${WRKSRC}/share
+	mkdir ${WRKSRC}/share
+	${LN} -s ../../pwlib ${WRKSRC}/share/pwlib
 
 do-install:
 	cd ${WRKSRC}/src/ptlib/unix && ${MAKE_ENV} ${GMAKE} install
@@ -57,5 +58,6 @@ do-install:
 	done
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
