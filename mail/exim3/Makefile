@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/01/08 18:35:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2006/01/08 19:38:54 joerg Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	5
@@ -62,6 +62,10 @@ DBMLIB+=		${LDFLAGS} ${BDB_LIBS}
 MAKE_ENV+=		DBMLIB=${DBMLIB:Q}
 MAKE_ENV+=		LOOKUP_INCLUDE=${LOOKUP_INCLUDE:Q}
 MAKE_ENV+=		LOOKUP_LIBS=${LOOKUP_LIBS:Q}
+
+post-extract:
+	${CP} ${FILESDIR}/Makefile-DragonFly ${FILESDIR}/os.h-DragonFly \
+		${WRKSRC}/OS/
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
