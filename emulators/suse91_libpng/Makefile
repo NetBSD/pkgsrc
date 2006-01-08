@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/08 14:39:12 salo Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/08 16:53:21 salo Exp $
 
 DISTNAME=		suse_libpng-${SUSE_VERSION}
 PKGREVISION=		3
@@ -16,7 +16,9 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		libpng-1.2.5-182.10.${SUSE_ARCH}.rpm
+.if exists(Makefile.${MACHINE_ARCH})
+.include "Makefile.${MACHINE_ARCH}"
+.endif
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

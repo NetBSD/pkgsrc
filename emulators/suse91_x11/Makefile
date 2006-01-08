@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/12 14:43:24 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/08 16:53:22 salo Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		3
@@ -16,7 +16,9 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		XFree86-libs-4.3.99.902-43.42.5.${SUSE_ARCH}.rpm
+.if exists(Makefile.${MACHINE_ARCH})
+.include "Makefile.${MACHINE_ARCH}"
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 

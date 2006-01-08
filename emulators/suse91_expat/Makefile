@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/12 14:43:23 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/08 16:53:21 salo Exp $
 
 DISTNAME=		suse_expat-${SUSE_VERSION}
 PKGREVISION=		1
@@ -17,7 +17,9 @@ NO_BUILD=		YES
 LIBTOOLIZE_PLIST=	NO
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		expat-1.95.7-37.${SUSE_ARCH}.rpm
+.if exists(Makefile.${MACHINE_ARCH})
+.include "Makefile.${MACHINE_ARCH}"
+.endif
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
