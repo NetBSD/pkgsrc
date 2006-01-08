@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:01 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/01/08 18:35:09 xtraeme Exp $
 #
 
 DISTNAME=	xmysqladmin-1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases x11
 MASTER_SITES=	http://gd.tuwien.ac.at/db/mysql/Downloads/Contrib/ \
 		http://mysql-mirror.free.fr/Downloads/Contrib/ \
@@ -13,8 +13,6 @@ MASTER_SITES=	http://gd.tuwien.ac.at/db/mysql/Downloads/Contrib/ \
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://www.mysql.com/
 COMMENT=	Graphical front end for administering MySQL databases
-
-BUILDLINK_DEPENDS.mysql-client=	mysql-client>=3.23.35
 
 MAKE_ENV+=	X11PREFIX=${X11PREFIX:Q}
 
