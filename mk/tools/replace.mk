@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.150 2005/12/28 22:41:27 jlam Exp $
+# $NetBSD: replace.mk,v 1.151 2006/01/08 22:09:05 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -492,17 +492,6 @@ TOOLS_PATH.mtree=		${TOOLS_PREFIX.mtree}/bin/mtree
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.nroff) && !empty(_USE_TOOLS:Mnroff)
-.  if !empty(PKGPATH:Mtextproc/groff)
-MAKEFLAGS+=			TOOLS_IGNORE.nroff=
-.  elif !empty(_TOOLS_USE_PKGSRC.nroff:M[yY][eE][sS])
-TOOLS_DEPENDS.nroff?=		groff>=1.19nb4:../../textproc/groff
-TOOLS_CREATE+=			nroff
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.nroff=groff
-TOOLS_PATH.nroff=		${TOOLS_PREFIX.nroff}/bin/nroff
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.patch) && !empty(_USE_TOOLS:Mpatch)
 .  if !empty(PKGPATH:Mdevel/patch)
 MAKEFLAGS+=			TOOLS_IGNORE.patch=
@@ -600,17 +589,6 @@ TOOLS_PATH.shlock=		${TOOLS_PREFIX.shlock}/bin/shlock
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.soelim) && !empty(_USE_TOOLS:Msoelim)
-.  if !empty(PKGPATH:Mtextproc/groff)
-MAKEFLAGS+=			TOOLS_IGNORE.soelim=
-.  elif !empty(_TOOLS_USE_PKGSRC.soelim:M[yY][eE][sS])
-TOOLS_DEPENDS.soelim?=		groff>=1.19nb4:../../textproc/groff
-TOOLS_CREATE+=			soelim
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.soelim=groff
-TOOLS_PATH.soelim=		${TOOLS_PREFIX.soelim}/bin/soelim
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.tar) && !empty(_USE_TOOLS:Mtar)
 .  if !empty(PKGPATH:Marchivers/pax)
 MAKEFLAGS+=			TOOLS_IGNORE.tar=
@@ -623,17 +601,6 @@ MAKEFLAGS+=			TOOLS_IGNORE.tar=
 TOOLS_CREATE+=			tar
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tar=pax
 TOOLS_PATH.tar=			${TOOLS_PREFIX.tar}/bin/tar
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.tbl) && !empty(_USE_TOOLS:Mtbl)
-.  if !empty(PKGPATH:Mtextproc/groff)
-MAKEFLAGS+=			TOOLS_IGNORE.tbl=
-.  elif !empty(_TOOLS_USE_PKGSRC.tbl:M[yY][eE][sS])
-TOOLS_DEPENDS.tbl?=		groff>=1.19nb4:../../textproc/groff
-TOOLS_CREATE+=			tbl
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tbl=groff
-TOOLS_PATH.tbl=			${TOOLS_PREFIX.tbl}/bin/tbl
 .  endif
 .endif
 
@@ -798,6 +765,26 @@ TOOLS_DEPENDS.${_t_}?=	grep>=2.5.1:../../textproc/grep
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=grep
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+.    endif
+.  endif
+.endfor
+
+######################################################################
+
+# These tools are all supplied by the textproc/groff package if there is
+# no native tool available.
+#
+_TOOLS.groff=	nroff soelim tbl
+
+.for _t_ in ${_TOOLS.groff}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mtextproc/groff)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=	groff>=1.19nb4:../../textproc/groff
+TOOLS_CREATE+=		${_t_}
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=groff
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .    endif
 .  endif
 .endfor
