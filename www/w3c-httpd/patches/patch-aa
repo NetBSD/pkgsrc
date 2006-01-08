@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.2 1999/05/09 21:12:33 tron Exp $
+$NetBSD: patch-aa,v 1.3 2006/01/08 20:45:45 joerg Exp $
 
 --- BUILD.orig	Sat Sep 24 11:28:46 1994
 +++ BUILD	Sat Mar  8 10:08:38 1997
-@@ -56,6 +56,9 @@
+@@ -56,6 +56,10 @@
  if ($UNAME == "AIX")    	setenv WWW_MACH	rs6000
  if ($UNAME == "OSF1")   	setenv WWW_MACH	osf1
  if ($UNAME == "BSD/386")	setenv WWW_MACH	unix
 +if ($UNAME == "FreeBSD")	setenv WWW_MACH	freebsd
++if ($UNAME == "DragonFly")	setenv WWW_MACH	freebsd
 +if ($UNAME == "OpenBSD")	setenv WWW_MACH	netbsd
 +if ($UNAME == "NetBSD")	setenv WWW_MACH	netbsd
  if ($UNAME == "Linux")		setenv WWW_MACH	linux
