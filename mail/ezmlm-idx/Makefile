@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2005/12/29 06:21:49 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/08 18:35:10 xtraeme Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
 
 DISTNAME=		ezmlm-idx-0.443
+PKGREVISION=		1
 SITES_${DISTNAME}.tar.gz=	http://www.ezmlm.org/archive/${PKGVERSION}/
 
 MAINTAINER=		schmonz@NetBSD.org
