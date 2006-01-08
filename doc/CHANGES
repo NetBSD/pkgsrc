@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12414 2006/01/08 06:33:44 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.12415 2006/01/08 11:47:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -175,3 +175,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/stdio-wcalc to 1.0 [dmcmahill 2006-01-08]
 	Updated cad/wcalc to 1.0 [dmcmahill 2006-01-08]
 	Updated cad/wcalc-docs to 1.0 [dmcmahill 2006-01-08]
+	Updated net/hlfl to 0.60.1nb1 [wiz 2006-01-08]
