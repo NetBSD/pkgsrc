@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/05/29 05:16:27 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/08 17:04:58 joerg Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -27,8 +27,22 @@ WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	mush
 BUILD_TARGET=	mush
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+PLAT_MAKEFILE=	makefile.netbsd
+.else
+PLAT_MAKEFILE=	makefile.${LOWER_OPSYS}
+.endif
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	config.h-dist ${PLAT_MAKEFILE}
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@MANDIR@,${PREFIX}/${PKGMANDIR},g'
+SUBST_STAGE.paths=	post-patch
+
 pre-configure:
-	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/config.h-dist > ${WRKSRC}/config.h
-	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/makefile.${LOWER_OPSYS} > ${WRKSRC}/Makefile
+	${CP} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h
+	${CP} ${WRKSRC}/${PLAT_MAKEFILE} ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"
