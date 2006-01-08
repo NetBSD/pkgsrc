@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12412 2006/01/08 03:58:46 minskim Exp $
+$NetBSD: CHANGES,v 1.12413 2006/01/08 05:00:27 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -164,3 +164,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/ruby-gnome2-libart version 0.14.1 [minskim 2006-01-08]
 	Added x11/ruby-gnome2-gtk version 0.14.1 [minskim 2006-01-08]
 	Added graphics/ruby-gnome2-gnomecanvas version 0.14.1 [minskim 2006-01-08]
+	Updated devel/pwlib to 1.8.3nb2 [joerg 2006-01-08]
