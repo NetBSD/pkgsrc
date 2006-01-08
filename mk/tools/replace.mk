@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.151 2006/01/08 22:09:05 jlam Exp $
+# $NetBSD: replace.mk,v 1.152 2006/01/08 23:00:00 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -118,6 +118,9 @@ _USE_TOOLS:=	${_USE_TOOLS:Nm4}
 .  if !empty(_USE_TOOLS:Mgsed)		# gsed > sed
 _USE_TOOLS:=	${_USE_TOOLS:Nsed}
 .  endif
+.  if !empty(_USE_TOOLS:Mgsoelim)	# gsoelim > soelim
+_USE_TOOLS:=	${_USE_TOOLS:Nsoelim}
+.  endif
 .endif
 MAKEVARS+=	_USE_TOOLS
 
@@ -169,6 +172,12 @@ _TOOLS_DEPMETHOD.gm4=		${_TOOLS_DEPMETHOD.m4}
 .  if (${_TOOLS_DEPMETHOD.gsed} == "BUILD_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.sed)
 _TOOLS_DEPMETHOD.gsed=		${_TOOLS_DEPMETHOD.sed}
+.  endif
+.endif
+.if !empty(_USE_TOOLS:Mgsoelim)		# gsoelim > soelim
+.  if (${_TOOLS_DEPMETHOD.gsoelim} == "BUILD_DEPENDS") && \
+      defined(_TOOLS_DEPMETHOD.soelim)
+_TOOLS_DEPMETHOD.gsoelim=	${_TOOLS_DEPMETHOD.soelim}
 .  endif
 .endif
 
@@ -788,6 +797,21 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .    endif
 .  endif
 .endfor
+
+# The ``gsoelim'' tool is special because there's actually no tool named
+# ``gsoelim'' -- the real tool is called just ``soelim''.
+#
+.if !defined(TOOLS_IGNORE.gsoelim) && !empty(_USE_TOOLS:Mgsoelim)
+.  if !empty(PKGPATH:Mtextproc/groff)
+MAKEFLAGS+=		TOOLS_IGNORE.gsoelim=
+.  elif !empty(_TOOLS_USE_PKGSRC.gsoelim:M[yY][eE][sS])
+TOOLS_DEPENDS.gsoelim?=	groff>=1.19nb4:../../textproc/groff
+TOOLS_CREATE+=		gsoelim
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.gsoelim=groff
+TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/soelim
+.  endif
+TOOLS_ALIASES.gsoelim=	soelim
+.endif
 
 ######################################################################
 
