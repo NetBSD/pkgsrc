@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.455 2006/01/07 23:29:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.456 2006/01/08 14:14:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1830,17 +1830,29 @@ sub checkline_mk_shelltext($$) {
 	# Note: SCST is the abbreviation for [S]hell [C]ommand [ST]ate.
 	use constant SCST_START		=>  0;
 	use constant SCST_CONT		=>  1;
-	use constant SCST_INSTALL	=> 10;
-	use constant SCST_INSTALL_D	=> 11;
-	use constant SCST_MKDIR		=> 20;
-	use constant SCST_PAX		=> 30;
-	use constant SCST_PAX_S		=> 31;
-	use constant SCST_SED		=> 40;
-	use constant SCST_SED_E		=> 41;
-	use constant SCST_SET		=> 50;
-	use constant SCST_IF_WHILE	=> 60;
-	use constant SCST_CASE		=> 70;
-	use constant SCST_FOR		=> 80;
+	use constant SCST_INSTALL	=>  2;
+	use constant SCST_INSTALL_D	=>  3;
+	use constant SCST_MKDIR		=>  4;
+	use constant SCST_PAX		=>  5;
+	use constant SCST_PAX_S		=>  6;
+	use constant SCST_SED		=>  7;
+	use constant SCST_SED_E		=>  8;
+	use constant SCST_SET		=>  9;
+	use constant SCST_IF_WHILE	=> 10;
+	use constant SCST_CASE		=> 11;
+	use constant SCST_CASE_IN	=> 12;
+	use constant SCST_CASE_LABEL	=> 13;
+	use constant SCST_CASE_LABEL_CONT => 14;
+	use constant SCST_CASE_PAREN	=> 15;
+	use constant SCST_FOR		=> 16;
+
+	use constant scst_statename => [
+		"SCST_START", "SCST_CONT", "SCST_INSTALL", "SCST_INSTALL_D",
+		"SCST_MKDIR", "SCST_PAX", "SCST_PAX_S", "SCST_SED",
+		"SCST_SED_E", "SCST_SET", "SCST_IF_WHILE", "SCST_CASE",
+		"SCST_CASE_IN", "SCST_CASE_LABEL", "SCST_CASE_LABEL_CONT",
+		"SCST_CASE_PAREN", "SCST_FOR"
+	];
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
 		my ($mkdir_cmd) = ($1);
@@ -1855,7 +1867,7 @@ sub checkline_mk_shelltext($$) {
 	while ($rest =~ s/^$regex_shellword//) {
 		my ($shellword) = ($1);
 
-		$line->log_debug("shellword=$shellword");
+		$line->log_debug("[" . scst_statename->[$state] . "] shellword=${shellword}");
 
 		checkline_mk_shellword($line, $shellword, ($state != SCST_CASE && $state != SCST_FOR));
 
@@ -1868,7 +1880,7 @@ sub checkline_mk_shelltext($$) {
 			$line->log_warning("Possible direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead.");
 		}
 
-		if (($state != SCST_PAX_S && $state != SCST_SED_E) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
+		if (($state != SCST_PAX_S && $state != SCST_SED_E && $state != SCST_CASE_LABEL) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
 			$line->log_warning("Found absolute pathname: ${shellword}");
 			$line->explain(
 				"Absolute pathnames are often an indicator for unportable code. As",
@@ -1910,7 +1922,10 @@ sub checkline_mk_shelltext($$) {
 		# State transition.
 		#
 
-		if ($shellword =~ qr"^[;&\|]+$") {
+		if ($shellword eq ";;") {
+			$state = SCST_CASE_LABEL;
+
+		} elsif ($shellword =~ qr"^[;&\|]+$") {
 			$state = SCST_START;
 
 		} elsif ($state == SCST_START) {
@@ -1959,10 +1974,25 @@ sub checkline_mk_shelltext($$) {
 			$state = SCST_CONT;
 
 		} elsif ($state == SCST_CASE) {
+			$state = SCST_CASE_IN;
+
+		} elsif ($state == SCST_CASE_IN && $shellword eq "in") {
+			$state = SCST_CASE_LABEL;
+
+		} elsif ($state == SCST_CASE_LABEL && $shellword eq "esac") {
 			$state = SCST_CONT;
 
+		} elsif ($state == SCST_CASE_LABEL) {
+			$state = SCST_CASE_LABEL_CONT;
+
+		} elsif ($state == SCST_CASE_LABEL_CONT && $shellword eq "|") {
+			$state = SCST_CASE_LABEL;
+
+		} elsif ($state == SCST_CASE_LABEL_CONT && $shellword eq ")") {
+			$state = SCST_START;
+
 		} else {
-			# Keep the current state.
+			$line->log_debug("[" . scst_statename->[$state] . "] Keeping the current state.");
 		}
 	}
 
