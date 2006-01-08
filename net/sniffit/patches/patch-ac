@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.8 2002/08/25 21:50:16 jlam Exp $
+$NetBSD: patch-ac,v 1.9 2006/01/08 11:02:10 wiz Exp $
 
---- sn_data.h.orig	Fri Apr 18 05:33:58 1997
-+++ sn_data.h	Sat May 25 15:04:03 2002
-@@ -26,4 +26,38 @@
+--- sn_data.h.orig	1997-04-18 09:33:58.000000000 +0000
++++ sn_data.h
+@@ -25,6 +25,40 @@ char *ETH_DEV[]={"et"};
+ char *ETH_DEV[]={"ed"};
  #endif
  
 +#ifdef NETBSD
@@ -13,7 +14,7 @@ $NetBSD: patch-ac,v 1.8 2002/08/25 21:50:16 jlam Exp $
 +#define ETH_DEV_NR 18
 +/* XXX This list may not be complete; cs tested on a DNARD	*/
 +char *ETH_DEV[]={"cs", "de", "ea", "eb", "en", "ep", "ex", "fpa", "fxp", "ie", "le", "lmc", "ne", "rtk", "sip", "tl", "tlp", "vr"};
-+#elif defined(__i386__)
++#elif defined(__i386__) || defined(__x86_64__)
 +#define ETH_DEV_NR      20
 +char *ETH_DEV[]={"ai","de","ec","ef","eg","el","en","ep","fe","fea","fpa","fxp","ix","iy","lc","le","ne","sm","tl","we"};
 +#elif defined(__m68k__)
@@ -41,3 +42,4 @@ $NetBSD: patch-ac,v 1.8 2002/08/25 21:50:16 jlam Exp $
 +
  #ifdef BSDI
  #define ETH_DEV_NR      1
+ char *ETH_DEV[]={"ef"};
