@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/01/05 02:57:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/08 18:27:11 joerg Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -19,6 +19,8 @@ USE_TOOLS+=		nroff
 DJB_BUILD_TARGETS=	install instcheck
 
 DJB_RESTRICTED=		YES
+
+SUBST_FILES.djbware+=	cdb_seek.c
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
