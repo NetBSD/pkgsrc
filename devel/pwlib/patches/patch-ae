@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.4 2006/01/08 04:57:55 joerg Exp $
+
+--- configure.orig	2006-01-08 03:13:16.000000000 +0000
++++ configure
+@@ -2059,6 +2059,14 @@ case "$target_os" in
+                    need_pragma=yes ;
+ 		   ;;
+ 
++  dragonfly* )     OSTYPE=DragonFly ;
++		   OS_TAG="P_DRAGONFLY" ;
++                   if test "x$OSRELEASE" = "x"; then
++                     OSRELEASE="`sysctl -n kern.osreldate`" ;
++                   fi
++                   need_pragma=yes ;
++		   ;;
++
+   openbsd* )       OSTYPE=OpenBSD ;
+ 		   OS_TAG="P_OPENBSD" ;
+                    OSRELEASE="`sysctl -n kern.osrevision`" ;
