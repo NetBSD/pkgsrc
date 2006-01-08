@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2005/10/31 19:24:03 tv Exp $
+$NetBSD: patch-aa,v 1.8 2006/01/08 20:16:27 joerg Exp $
 
---- cdecl.c.orig	1996-01-15 22:54:46.000000000 -0500
+--- cdecl.c.orig	1996-01-16 03:54:46.000000000 +0000
 +++ cdecl.c
 @@ -59,7 +59,9 @@
   */
@@ -27,18 +27,24 @@ $NetBSD: patch-aa,v 1.7 2005/10/31 19:24:03 tv Exp $
  #  define strrchr rindex
  #  define NOTMPFILE
  # else
-@@ -87,6 +90,10 @@ void free(), exit(), perror();
+@@ -87,13 +90,12 @@ void free(), exit(), perror();
  # endif /* NOVOID */
  #endif /* __STDC__ || DOS */
  
-+#if (defined(__svr4__) && defined(__sun__)) || defined(__NetBSD__) || defined(__APPLE__) || defined(__sgi) || defined(__INTERIX)
 +#include <errno.h>
-+#endif
 +
  #ifdef USE_READLINE
  # include <readline/readline.h>
    /* prototypes for functions related to readline() */
-@@ -124,7 +131,11 @@ char real_prompt[MAX_NAME+3];
+-  char * getline();
+-  char ** attempt_completion(char *, int, int);
+-  char * keyword_completion(char *, int);
+-  char * command_completion(char *, int);
++char * command_completion(const char *, int);
+ #endif
+ 
+ /* maximum # of chars from progname to display in prompt */
+@@ -124,7 +126,11 @@ char real_prompt[MAX_NAME+3];
  
  #if __STDC__
    char *ds(char *), *cat(char *, ...), *visible(int);
@@ -50,7 +56,7 @@ $NetBSD: patch-aa,v 1.7 2005/10/31 19:24:03 tv Exp $
    int main(int, char **);
    int yywrap(void);
    int dostdin(void);
-@@ -138,7 +149,7 @@ char real_prompt[MAX_NAME+3];
+@@ -138,7 +144,7 @@ char real_prompt[MAX_NAME+3];
    void docast(char*, char*, char*, char*);
    void dodexplain(char*, char*, char*, char*);
    void docexplain(char*, char*, char*, char*);
@@ -59,7 +65,7 @@ $NetBSD: patch-aa,v 1.7 2005/10/31 19:24:03 tv Exp $
    int dotmpfile(int, char**), dofileargs(int, char**);
  #else
    char *ds(), *cat(), *visible();
-@@ -148,7 +159,7 @@ char real_prompt[MAX_NAME+3];
+@@ -148,7 +154,7 @@ char real_prompt[MAX_NAME+3];
    void unsupp(), notsupported();
    void yyerror();
    void doset(), dodeclare(), docast(), dodexplain(), docexplain();
@@ -68,7 +74,31 @@ $NetBSD: patch-aa,v 1.7 2005/10/31 19:24:03 tv Exp $
    int dotmpfile(), dofileargs();
  #endif /* __STDC__ */
    FILE *tmpfile();
-@@ -803,7 +814,7 @@ void prompt()
+@@ -399,12 +405,12 @@ char ** attempt_completion(char *text, i
+ {
+   char **matches = NULL;
+ 
+-  if (start == 0) matches = completion_matches(text, command_completion);
++  if (start == 0) matches = rl_completion_matches(text, command_completion);
+ 
+   return matches;
+ }
+ 
+-char * command_completion(char *text, int flag)
++char * command_completion(const char *text, int flag)
+ {
+   static int index, len;
+   char *command;
+@@ -421,7 +427,7 @@ char * command_completion(char *text, in
+   return NULL;
+ }
+ 
+-char * keyword_completion(char *text, int flag)
++char * keyword_completion(const char *text, int flag)
+ {
+   static int index, len, set, into;
+   char *keyword, *option;
+@@ -803,7 +809,7 @@ void prompt()
  }
  
  /* Save away the name of the program from argv[0] */
@@ -77,8 +107,12 @@ $NetBSD: patch-aa,v 1.7 2005/10/31 19:24:03 tv Exp $
  char *argv0;
  {
  #ifdef DOS
-@@ -1255,7 +1266,7 @@ char **argv;
-     rl_completion_entry_function = (Function *)keyword_completion;
+@@ -1252,10 +1258,10 @@ char **argv;
+ #ifdef USE_READLINE
+     /* install completion handlers */
+     rl_attempted_completion_function = (CPPFunction *)attempt_completion;
+-    rl_completion_entry_function = (Function *)keyword_completion;
++    rl_completion_entry_function = keyword_completion;
  #endif
  
 -    setprogname(argv[0]);
