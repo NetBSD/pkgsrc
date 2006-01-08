@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/11/30 11:26:59 hannken Exp $
+$NetBSD: patch-ab,v 1.3 2006/01/08 13:27:53 joerg Exp $
 
 --- chrony.conf.5.orig	2002-11-04 00:32:08.000000000 +0100
 +++ chrony.conf.5
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.2 2004/11/30 11:26:59 hannken Exp $
  
  .SH SYNOPSIS
 -.B /etc/chrony.conf
-+.B @PREFIX@/etc/chrony.conf
++.B @PKG_SYSCONFDIR@/chrony.conf
  
  .SH DESCRIPTION
  \fIchrony\fR is a pair of programs for maintaining the accuracy of computer
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.2 2004/11/30 11:26:59 hannken Exp $
  Assuming that you have found some servers, you need to set up a
  configuration file to run \fIchrony\fR.  The (compiled-in) default location
 -for this file is \fB/etc/chrony.conf\fR.  Assuming that your ntp servers
-+for this file is \fB@PREFIX@/etc/chrony.conf\fR.  Assuming that your ntp servers
++for this file is \fB@PKG_SYSCONFDIR@/chrony.conf\fR.  Assuming that your ntp servers
  are called `a.b.c' and `d.e.f', your \fBchrony.conf\fR file could contain
  as a minimum
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.2 2004/11/30 11:26:59 hannken Exp $
       server d.e.f
       server g.h.i
 -     keyfile /etc/chrony.keys
-+     keyfile @PREFIX@/etc/chrony.keys
++     keyfile @PKG_SYSCONFDIR@/chrony.keys
       commandkey 1
 -     driftfile /etc/chrony.drift
 +     driftfile /var/db/chrony.drift

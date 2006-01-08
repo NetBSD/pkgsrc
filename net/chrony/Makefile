@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2005/12/29 06:21:58 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/08 13:27:53 joerg Exp $
 
 DISTNAME=	chrony-1.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://chrony.sunsite.dk/projects/chrony/
 
@@ -21,17 +21,16 @@ MAKE_ENV+=		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 MAKE_ENV+=		INSTALL_DATA=${INSTALL_DATA:Q}
 MAKE_ENV+=		INSTALL_MAN=${INSTALL_MAN:Q}
 
-pre-install:
-	for file in ${EGFILES}; do				\
-		${SED} ${FILES_SUBST_SED}			\
-			${WRKSRC}/examples/$${file} >		\
-			${WRKDIR}/$${file};			\
-	done
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${EGFILES:S/^/examples\//} chrony.conf.5 chronyd.8
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_STAGE.paths=	post-patch
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	for file in ${EGFILES}; do				\
-		${INSTALL_DATA} ${WRKDIR}/$${file}		\
+		${INSTALL_DATA} ${WRKSRC}/examples/$${file}	\
 			${EGDIR}/$${file};			\
 	done
 
