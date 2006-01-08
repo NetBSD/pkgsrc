@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.3 2004/09/10 10:42:00 agc Exp $
+$NetBSD: patch-as,v 1.4 2006/01/08 19:30:02 joerg Exp $
 
---- yatd/dfree.c.orig	2001-07-09 12:32:52.000000000 +0900
+--- yatd/dfree.c.orig	2001-07-09 03:32:52.000000000 +0000
 +++ yatd/dfree.c
-@@ -72,12 +72,6 @@
+@@ -72,12 +72,6 @@ quota_get_inode_current __P(( struct dqb
  
  #define DEBUG_LOCAL
  
@@ -15,7 +15,7 @@ $NetBSD: patch-as,v 1.3 2004/09/10 10:42:00 agc Exp $
  int DFreeCheck(pPath, pSizFree, pNodFree)
       char   * pPath;    /* ユーザーのホームディレクトリの位置 */
       OFF_T  * pSizFree; /* 空きブロック数 */
-@@ -99,7 +93,7 @@
+@@ -99,7 +93,7 @@ int DFreeCheck(pPath, pSizFree, pNodFree
    nodLimit = *pNodFree; /* リミットのノード数を指定する */
  
  #ifdef DEBUG_LOCAL
@@ -24,7 +24,7 @@ $NetBSD: patch-as,v 1.3 2004/09/10 10:42:00 agc Exp $
  	   sizLimit, nodLimit, sizeof (OFF_T));
  #endif /* DEBUG_LOCAL */
  
-@@ -122,23 +116,30 @@
+@@ -122,23 +116,30 @@ int DFreeCheck(pPath, pSizFree, pNodFree
  #ifdef DEBUG_LOCAL
  # ifdef BSD44 
    LogDEBUG("statfs() returns:");
@@ -67,7 +67,7 @@ $NetBSD: patch-as,v 1.3 2004/09/10 10:42:00 agc Exp $
  #ifdef STRUCT_STATFS_HAVE_F_FSTYPENAME
    LogDEBUG("  fstypename: %.256s", statfsBuf.f_fstypename);
  #endif
-@@ -311,7 +312,7 @@
+@@ -311,7 +312,7 @@ int FuncDFree()
    nodFree = SysData.nodLimitFree;
  
  #ifdef DEBUG_LOCAL
@@ -76,7 +76,7 @@ $NetBSD: patch-as,v 1.3 2004/09/10 10:42:00 agc Exp $
  	     sizFree, nodFree);
  #endif
      
-@@ -325,7 +326,7 @@
+@@ -325,7 +326,7 @@ int FuncDFree()
      if (DFreeCheck(SysData.szUserFldrDir, &sizFree, &nodFree)){
        return FAILURE;
      }
@@ -85,7 +85,7 @@ $NetBSD: patch-as,v 1.3 2004/09/10 10:42:00 agc Exp $
  #endif /* DONT_CHECKDFREE */
    return SUCCESS;
  }
-@@ -427,7 +428,7 @@
+@@ -427,7 +428,7 @@ static inline quota_size_t quota_get_ino
  
  #ifdef STRUCT_DQBLK_CURRENT_FILES
    retval = (quota_size_t)quota_block->dqb_curfiles;
@@ -94,7 +94,7 @@ $NetBSD: patch-as,v 1.3 2004/09/10 10:42:00 agc Exp $
  
    return retval;
  }
-@@ -449,12 +450,12 @@
+@@ -449,12 +450,12 @@ static int quotactl_wrapper(pPath,quota_
    switch( status ){
    case SUCCESS:
      LogDEBUG("quotactl() returns:");
@@ -113,3 +113,12 @@ $NetBSD: patch-as,v 1.3 2004/09/10 10:42:00 agc Exp $
      return SUCCESS;
    case FAILURE:
      return FAILURE;
+@@ -494,7 +495,7 @@ static int quotactl_systemcall_support( 
+   status = quotactl(QCMD(Q_GETQUOTA, USRQUOTA),SysData.szMntFrom,
+ 		    SysData.pPwd->pw_uid, (caddr_t)quota_block);
+   
+-#elif defined(__bsdi__) || defined(__FreeBSD__) || defined(__NetBSD__)
++#elif defined(__bsdi__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ 
+   /* Get disk quota limits and current usage for the user or group
+      (as determined by the command type) with identifier id.  addr

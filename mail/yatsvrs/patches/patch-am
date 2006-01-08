@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.3 2006/01/08 19:30:02 joerg Exp $
+
+--- config.h.in.orig	2006-01-08 19:26:58.000000000 +0000
++++ config.h.in
+@@ -186,8 +186,10 @@
+ /* Define if you have the <sys/quota.h> header file.  */
+ #undef HAVE_SYS_QUOTA_H
+ 
++#if !defined(__DragonFly__)
+ /* Define if you have the <sys/statvfs.h> header file.  */
+ #undef HAVE_SYS_STATVFS_H
++#endif
+ 
+ /* Define if you have the <sys/time.h> header file.  */
+ #undef HAVE_SYS_TIME_H
