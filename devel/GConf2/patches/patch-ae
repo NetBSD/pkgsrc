@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.7 2006/01/09 01:28:05 rillig Exp $
+
+Keywords: c90
+
+--- gconf/gconf-listeners.c.orig	2005-11-03 15:53:04.000000000 +0100
++++ gconf/gconf-listeners.c	2006-01-09 02:21:13.000000000 +0100
+@@ -366,9 +366,9 @@ ltable_insert(LTable* lt, const gchar* w
+ 
+       while (across != NULL)
+         {
+-          lte = across->data;
+           int cmp;
+ 
++          lte = across->data;
+           cmp = strcmp(lte->name, dirnames[i]);
+ 
+           if (cmp == 0)
