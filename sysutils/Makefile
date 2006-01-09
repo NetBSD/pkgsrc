@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.326 2006/01/05 23:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.327 2006/01/09 12:47:19 manu Exp $
 #
 
 COMMENT=	System utilities
@@ -135,6 +135,7 @@ SUBDIR+=	mtscan
 SUBDIR+=	nautilus
 SUBDIR+=	nautilus-cd-burner
 SUBDIR+=	news
+SUBDIR+=	nvnet
 SUBDIR+=	nrg2iso
 SUBDIR+=	ntfsprogs
 SUBDIR+=	osname
