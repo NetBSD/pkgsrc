@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12425 2006/01/09 15:54:33 cube Exp $
+$NetBSD: CHANGES,v 1.12426 2006/01/09 15:56:59 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -188,3 +188,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/teTeX3-bin to 3.0nb5 [tron 2006-01-09]
 	Added sysutils/nvnet-20050620nb1 [manu 2006-01-09]
 	Updated security/sudo to 1.6.8pl12 [cube 2006-01-09]
+	Updated databases/p5-BerkeleyDB to 0.27 [cube 2006-01-09]
