@@ -1,9 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/06/17 17:39:03 agc Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/09 15:55:02 joerg Exp $
 
---- ../configure	2003/06/16 14:59:00	1.1
-+++ ../configure	2003/06/16 14:59:20
-@@ -230,6 +230,9 @@
- *-freebsd)
+--- ../configure.orig	2000-03-07 02:12:40.000000000 +0000
++++ ../configure
+@@ -227,9 +227,12 @@ CRAY*)
+ *-sgi-irix*)
+ 	fname=irix.mk
+ 	;;
+-*-freebsd)
++*-freebsd | *-dragonfly*)
  	fname=freebsd.mk
  	;;
 +*-netbsd)
