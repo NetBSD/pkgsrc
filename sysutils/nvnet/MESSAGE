@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/01/09 12:44:15 manu Exp $
+
+The module can be loaded manually by typing
+modload ${PREFIX}/lkm/nv.o
+
+In order to load it automatically at boot time,
+- Add to your /etc/rc.conf file:
+lkm=YES
+
+- Add to your /etc/lkm.conf:
+${PREFIX}/lkm/nv.o   -        -          -          -       BEFORENET
+
+===========================================================================
