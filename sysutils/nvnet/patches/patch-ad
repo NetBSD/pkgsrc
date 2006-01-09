@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/01/09 12:44:15 manu Exp $
+--- module/nvnet_drv.c.orig	2005-06-21 02:18:41.000000000 +0000
++++ module/nvnet_drv.c	2006-01-05 13:07:32.000000000 +0000
+@@ -153,8 +153,12 @@
+ 		NFORCE_MCPNET11_DEVICEID,
+ 		"NVIDIA nForce MCP11 Networking Adapter"
+ 	},
+ 	{
++		NFORCE_MCPNET51_DEVICEID,
++		"NVIDIA nForce MCP51 Networking Adapter"
++	},
++	{
+ 		0, NULL
+ 	}
+ };
+ /* if_media interface */
+@@ -685,9 +690,9 @@
+ 			sc->tx_errors++;
+ 			return;
+ 		}
+ 		/* Set watchdog timer. */
+-		ifp->if_timer = 8;
++		ifp->if_timer = 64;
+ 
+ 		/* Copy packet to BPF tap */
+ 		BPF_MTAP(ifp, m0);
+ 	}
