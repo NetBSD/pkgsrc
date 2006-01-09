@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.459 2006/01/09 03:22:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.460 2006/01/09 23:14:45 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1758,9 +1758,13 @@ sub checkline_mk_shellword($$$) {
 		if ($rest =~ s/^\$\{(${regex_varname})(:[^\{]+)?\}//) {
 			my ($varname, $mod) = ($1, $2);
 
-			# TODO: Make lists of variables that may appear
-			# in other quoting states than SWST_PLAIN.
-			if ($opt_warn_extra && $state != SWST_PLAIN) {
+			if (!$opt_warn_extra) {
+				# Skip the following checks.
+
+			} elsif ($state == SWST_PLAIN && defined($mod) && $mod eq ":Q") {
+				# Fine.
+
+			} else {
 				$line->log_warning("Possibly misquoted make variable ${varname} in " . user_statename->[$state] . ".");
 			}
 
@@ -1853,6 +1857,7 @@ sub checkline_mk_shelltext($$) {
 	use constant SCST_CASE_PAREN	=> 15;
 	use constant SCST_FOR		=> 16;
 	use constant SCST_FOR_IN	=> 17;
+	use constant SCST_FOR_CONT	=> 18;
 
 	use constant scst_statename => [
 		"SCST_START", "SCST_CONT", "SCST_INSTALL", "SCST_INSTALL_D",
@@ -1860,7 +1865,7 @@ sub checkline_mk_shelltext($$) {
 		"SCST_SED_E", "SCST_SET", "SCST_COND_CONT", "SCST_CASE",
 		"SCST_CASE_IN", "SCST_CASE_LABEL", "SCST_CASE_LABEL_CONT",
 		"SCST_CASE_PAREN", "SCST_FOR", "SCST_FOR_IN",
-		"SCST_COND_CONT",
+		"SCST_FOR_CONT",
 	];
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
@@ -1913,7 +1918,7 @@ sub checkline_mk_shelltext($$) {
 				"temporary files to save the output of the command.");
 		}
 
-		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_COND_CONT && $state != SCST_FOR && !$set_e_mode) {
+		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_COND_CONT && $state != SCST_FOR_CONT && !$set_e_mode) {
 			$line->log_warning("A semicolon should only be used to separate commands after switching to \"set -e\" mode.");
 			$line->explain(
 				"Older versions of the NetBSD make(1) had run the shell commands using",
@@ -1973,7 +1978,8 @@ sub checkline_mk_shelltext($$) {
 			: ($state == SCST_CONT) ? SCST_CONT
 			: ($state == SCST_COND_CONT) ? SCST_COND_CONT
 			: ($state == SCST_FOR) ? SCST_FOR_IN
-			: ($state == SCST_FOR_IN && $shellword eq "in") ? SCST_CONT
+			: ($state == SCST_FOR_IN && $shellword eq "in") ? SCST_FOR_CONT
+			: ($state == SCST_FOR_CONT) ? SCST_FOR_CONT
 			: do {
 				$line->log_warning("[" . scst_statename->[$state] . " ${shellword}] Keeping the current state.");
 				$state;
