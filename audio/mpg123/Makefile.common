@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2006/01/09 17:52:07 tron Exp $
+# $NetBSD: Makefile.common,v 1.27 2006/01/09 22:04:38 tron Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -45,7 +45,9 @@ BUILD_TARGET=	solaris-gcc${TARGET_SUFFIX}
 .elif ${OPSYS} == "IRIX"
 BUILD_TARGET=	sgi
 .elif ${OPSYS} == "Linux"
-.  if ${MACHINE_ARCH} == "i386"
+.  if ${TARGET_SUFFIX} == "-nas"
+BUILD_TARGET=	linux-nas
+.  elif ${MACHINE_ARCH} == "i386"
 BUILD_TARGET=	linux
 .  elif ${MACHINE_ARCH} == "powerpc"
 BUILD_TARGET=	linux-ppc
