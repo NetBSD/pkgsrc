@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.7 2006/01/09 00:51:03 joerg Exp $
+$NetBSD: patch-al,v 1.8 2006/01/09 13:40:34 joerg Exp $
 
 --- src/Configure.orig	2005-08-22 08:43:51.000000000 -0700
 +++ src/Configure	2005-08-22 08:46:05.000000000 -0700
@@ -6,7 +6,7 @@ $NetBSD: patch-al,v 1.7 2006/01/09 00:51:03 joerg Exp $
  	DBM_LIB=""
  	DB_LIB=""
  	;;
-+    *-DragonFly*)
++    *-dragonfly*)
 +	OS="DragonFly"
 +	DEF_WANTHSREGEX=no
 +	CFLAGS="$CFLAGS -funsigned-char"
