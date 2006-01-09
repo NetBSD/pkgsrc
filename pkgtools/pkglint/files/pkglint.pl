@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.457 2006/01/08 15:55:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.458 2006/01/09 02:47:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1690,6 +1690,13 @@ sub checkline_mk_text($$) {
 		}
 	}
 
+	$rest = $text;
+	while ($rest =~ s/\$\(([-A-Z0-9a-z_]+)(?::[^\}]+)?\)//) {
+		my ($varname) = ($1);
+
+		$line->log_warning("Please use \${${varname}\} instead of \$(${varname}).");
+	}
+
 }
 
 sub checkline_mk_shellword($$$) {
@@ -2057,6 +2064,9 @@ sub checkline_mk_vartype_basic($$$$$) {
 		}
 
 	} elsif ($type eq "Comment") {
+		if ($value eq "SHORT_DESCRIPTION_OF_THE_PACKAGE") {
+			$line->log_error("COMMENT must be set.");
+		}
 		if ($value =~ qr"^(a|an)\s+"i) {
 			$line->log_warning("COMMENT should not begin with '$1'.");
 		}
@@ -3003,8 +3013,6 @@ sub checkfile_package_Makefile($$$) {
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_package_Makefile]");
 
 	checkperms($fname);
-
-	# TODO: "Please use \${VARIABLE} instead of \$(VARIABLE)."
 
 	if (!exists($makevar->{"PLIST_SRC"})
 	    && !exists($makevar->{"NO_PKG_REGISTER"})
