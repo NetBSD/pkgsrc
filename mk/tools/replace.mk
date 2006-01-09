@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.152 2006/01/08 23:00:00 jlam Exp $
+# $NetBSD: replace.mk,v 1.153 2006/01/09 18:32:52 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -423,6 +423,17 @@ TOOLS_CREATE+=			gzip
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gzip=gzip-base
 TOOLS_PATH.gzip=		${TOOLS_PREFIX.gzip}/bin/gzip
 TOOLS_ARGS.gzip=		-nf ${GZIP}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.ksh) && !empty(_USE_TOOLS:Mksh)
+.  if !empty(PKGPATH:Mshells/pdksh)
+MAKEFLAGS+=			TOOLS_IGNORE.ksh=
+.  elif !empty(_TOOLS_USE_PKGSRC.ksh:M[yY][eE][sS])
+TOOLS_DEPENDS.ksh?=		pdksh>=5.2.14:../../shells/pdksh
+TOOLS_CREATE+=			ksh
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ksh=pdksh
+TOOLS_PATH.ksh=			${TOOLS_PREFIX.ksh}/bin/pdksh
 .  endif
 .endif
 
