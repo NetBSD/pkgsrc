@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/01/03 14:25:49 taca Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/09 18:50:57 joerg Exp $
 #
 
 DISTNAME=	newfile-1.0.14
@@ -13,6 +13,7 @@ COMMENT=	Tool for creating starter files in various languages
 NO_BUILD=	yes
 GNU_CONFIGURE=	yes
 REPLACE_RUBY=	src/newfile.rb.in
+USE_TOOLS+=	ksh
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/newfile.rb ${PREFIX}/bin/newfile
