@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/01/03 19:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/09 17:47:07 wiz Exp $
 #
 
-DISTNAME=		parrot-0.4.0
+DISTNAME=		parrot-0.4.1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LT/LTOETSCH/}
 
@@ -9,18 +9,19 @@ MAINTAINER=		debolaz@gmail.com
 HOMEPAGE=		http://www.parrotcode.org/
 COMMENT=		Virtual machine made to run Perl 6 and other languages
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		perl
+PTHREAD_OPTS+=		require
+BUILD_TARGET=		world
+TEST_TARGET=		test
 
-BUILD_TARGET=		world_shared
-
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}/parrot \
-			--icu-config=${PREFIX}/bin/icu-config \
-			--verbose
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
+			--icu-config=${PREFIX}/bin/icu-config
 
 # If you have another architecture, please test if it can compile
-# with jit support and report status to the maintainer.
+# with (working) jit support and report status to the maintainer.
 
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--jitcapable \
@@ -32,13 +33,19 @@ do-configure:
 
 post-configure:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.orig
-	${SED}	-e '/^BIN_DIR/s|$$(EXEC_PREFIX)|${PREFIX}|' \
-		-e '/^INCLUDE_DIR/s|$$(EXEC_PREFIX)/include|${PREFIX}|' \
+	${SED}	-e 's|-pthread||g' \
+		-e 's|-lpthread||g' \
+		-e 's|-lc_r||g' \
+		-e '/^CFLAGS /s|$$|${PTHREAD_CFLAGS}|' \
+		-e '/^LINKFLAGS /s|$$|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|' \
+		-e '/^LDFLAGS /s|$$|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|' \
 		< ${WRKSRC}/Makefile.orig \
 		> ${WRKSRC}/Makefile
 
 post-install:
-	${INSTALL_LIB} ${WRKSRC}/blib/lib/libparrot.* ${PREFIX}/lib
+	if [ -e ${PREFIX}/lib/libparrot.so.${PKGVERSION} ]; then \
+		${LN} -s libparrot.so.${PKGVERSION} ${PREFIX}/lib/libparrot.so ; \
+	fi
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
