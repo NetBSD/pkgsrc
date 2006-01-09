@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4393 2006/01/09 03:59:55 uebayasi Exp $
+$NetBSD: TODO,v 1.4394 2006/01/09 15:54:33 cube Exp $
 
 Suggested new packages
 ======================
@@ -1166,7 +1166,6 @@ Suggested package updates
 	o strace-4.5.8
 	o stunnel-4.14
 	o subtitleripper-0.3.4
-	o sudo-1.6.8p12 [pkg/32378]
 	o sun-jdk14-2.10
 	o sun-jre14-2.10
 	o suse_base-10.0
