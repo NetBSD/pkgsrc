@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.22 2006/01/07 19:51:42 markd Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.23 2006/01/09 18:00:04 schmonz Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -328,7 +328,7 @@ ${_CHECK_FILES_COOKIE.varbase}:
 	fi;								\
 	if ! ${CMP} -s ${_CHECK_FILES_PRE.varbase}			\
 		       ${_CHECK_FILES_POST.varbase};			\
-	then
+	then								\
 		{ ${ECHO} "*** The package has modified ${VARBASE}"	\
 			  "contents directly!";				\
 		  ${ECHO} "    The offending files/directories are:";	\
