@@ -1,15 +1,16 @@
-$NetBSD: patch-bb,v 1.3 2005/07/29 13:27:26 drochner Exp $
+$NetBSD: patch-bb,v 1.4 2006/01/09 21:22:57 joerg Exp $
 
---- Lib/test/test_fcntl.py.orig	2002-08-23 18:06:46.000000000 +0200
-+++ Lib/test/test_fcntl.py	2004-08-28 12:01:15.000000000 +0200
-@@ -16,11 +16,11 @@
+--- Lib/test/test_fcntl.py.orig	2002-08-23 16:06:46.000000000 +0000
++++ Lib/test/test_fcntl.py
+@@ -16,11 +16,11 @@ except AttributeError:
  else:
      start_len = "qq"
  
 -if sys.platform in ('netbsd1', 'Darwin1.2', 'darwin',
 +if sys.platform in ('netbsd1', 'netbsd2', 'netbsd3', 'Darwin1.2', 'darwin',
                      'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5',
-                     'bsdos2', 'bsdos3', 'bsdos4',
+-                    'bsdos2', 'bsdos3', 'bsdos4',
++                    'bsdos2', 'bsdos3', 'bsdos4', 'netbsd4', 'dragonfly1',
                      'openbsd', 'openbsd2', 'openbsd3'):
 -    lockdata = struct.pack('lxxxxlxxxxlhh', 0, 0, 0, fcntl.F_WRLCK, 0)
 +    lockdata = struct.pack('qqihh', 0, 0, 0, fcntl.F_WRLCK, 0)
