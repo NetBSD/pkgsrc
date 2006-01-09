@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/08 21:17:17 agc Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/09 02:48:55 rillig Exp $
 #
 
 DISTNAME=		tex2page
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--dialect=guile
 do-build:
 
 do-install:
-	$(INSTALL_SCRIPT) ${WRKSRC}/my-tex2page $(PREFIX)/bin/tex2page
+	${INSTALL_SCRIPT} ${WRKSRC}/my-tex2page ${PREFIX}/bin/tex2page
 
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
