@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12424 2006/01/09 12:49:14 manu Exp $
+$NetBSD: CHANGES,v 1.12425 2006/01/09 15:54:33 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -187,3 +187,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added print/pdfjam version 1.2.0 [uebayasi 2006-01-09]
 	Updated print/teTeX3-bin to 3.0nb5 [tron 2006-01-09]
 	Added sysutils/nvnet-20050620nb1 [manu 2006-01-09]
+	Updated security/sudo to 1.6.8pl12 [cube 2006-01-09]
