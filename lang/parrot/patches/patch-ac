@@ -1,14 +1,12 @@
-$NetBSD: patch-ac,v 1.1 2006/01/03 19:25:06 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/09 17:47:07 wiz Exp $
 
---- config/init/hints/freebsd.pm.orig	Sun Nov 13 23:34:12 2005
-+++ config/init/hints/freebsd.pm	Tue Dec 27 09:27:08 2005
-@@ -22,8 +22,7 @@
-     $libs .= ' -pthread';
- }
- else {
--    $libs =~ s/-lc\b\s*//;
--    $libs .= ' -lc_r';
-+    $libs .= ' -lpthread';
- }
- 
- Parrot::Configure::Data->set(
+--- MANIFEST.generated.orig	Sun Jan  8 19:48:16 2006
++++ MANIFEST.generated	Sun Jan  8 19:48:32 2006
+@@ -10,7 +10,6 @@
+ pbc_info                                          [main]bin
+ pbc_merge                                         [main]bin
+ blib/lib/libparrot.a                              [main]lib
+-blib/lib/libparrot.so                             [main]lib
+ blib/lib/libparrot.so.0.4.1                       [main]lib
+ docs/ops/bit.pod                                  [main]doc
+ docs/ops/cmp.pod                                  [main]doc
