@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2005/12/05 23:55:04 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/01/09 16:25:01 xtraeme Exp $
 
-DISTNAME=		mysql-5.0.16
+DISTNAME=		mysql-5.0.18
 CATEGORIES=		databases
 MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-5.0/ \
 			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-5.0/ \
@@ -61,7 +61,8 @@ CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
+CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib:Q}
 CONFIGURE_ARGS+=	--with-vio
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET:Q}
@@ -73,6 +74,7 @@ CONFIGURE_ARGS+=	--enable-assembler
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
+CONFIGURE_ENV+=		mysql_cv_compress="yes"
 
 CPPFLAGS+=		-Dunix
 CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
@@ -110,6 +112,14 @@ SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
 SUBST_SED.scripts=	-e "s,chown,${CHOWN},g" \
 			-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scripts=	"Fixing scripts."
+
+# Detect correctly sem_init(3) on NetBSD.
+.if !empty(OPSYS:MNetBSD)
+SUBST_CLASSES+=		sem
+SUBST_STAGE.sem=	post-patch
+SUBST_FILES.sem=	configure
+SUBST_SED.sem=		"s|-lposix4|-lrt|g"
+.endif
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
