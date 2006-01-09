@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.319 2006/01/02 08:29:55 rillig Exp $
+# $NetBSD: Makefile,v 1.320 2006/01/09 23:39:55 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.51
@@ -42,24 +42,22 @@ SUBST_SED.pkglint+=	-e 's|@DATADIR@|${PREFIX}/share/pkglint|g'
 .include "../../mk/bsd.prefs.mk"
 
 do-extract:
-.for f in lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl
-	@${CP} ${FILESDIR}/${f} ${WRKSRC}/${f}
-.endfor
+	cd ${FILESDIR:Q} && ${CP} lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC:Q}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkglint.pl ${PREFIX}/bin/pkglint
-	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${PREFIX}/bin/lintpkgsrc
-	${INSTALL_SCRIPT} ${WRKSRC}/plist-clash.pl ${PREFIX}/bin/plist-clash
-	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${PREFIX}/man/cat1
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/pkglint.pl ${PREFIX:Q}/bin/pkglint
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/lintpkgsrc.pl ${PREFIX:Q}/bin/lintpkgsrc
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/plist-clash.pl ${PREFIX:Q}/bin/plist-clash
+	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.0 ${PREFIX:Q}/man/cat1
 .if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.1 ${PREFIX:Q}/man/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.1 ${PREFIX:Q}/man/man1
 .endif
-	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${PREFIX}/man/cat1
-	${INSTALL_DATA} ${FILESDIR}/makevars.map ${PREFIX}/share/pkglint/
-	${INSTALL_DATA} ${FILESDIR}/deprecated.map ${PREFIX}/share/pkglint/
+	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.0 ${PREFIX:Q}/man/cat1
+	${INSTALL_DATA} ${FILESDIR:Q}/makevars.map ${PREFIX:Q}/share/pkglint/
+	${INSTALL_DATA} ${FILESDIR:Q}/deprecated.map ${PREFIX:Q}/share/pkglint/
 
 post-install:
-	${PREFIX}/bin/pkglint -q 1>&2
+	${PREFIX:Q}/bin/pkglint -q 1>&2
 
 .include "../../mk/bsd.pkg.mk"
