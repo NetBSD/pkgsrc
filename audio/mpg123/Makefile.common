@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2006/01/09 17:43:58 tron Exp $
+# $NetBSD: Makefile.common,v 1.26 2006/01/09 17:52:07 tron Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -71,7 +71,7 @@ BUILD_TARGET=	netbsd-arm${TARGET_SUFFIX}
 .  elif ${MACHINE_ARCH} == "m68k"
 BUILD_TARGET=	netbsd-m68k${TARGET_SUFFIX}
 .  else
-BUILD_TARGET=	netbsd
+BUILD_TARGET=	netbsd${TARGET_SUFFIX}
 .  endif
 .else
 BUILD_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
