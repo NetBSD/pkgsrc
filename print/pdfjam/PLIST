@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/09 10:10:08 uebayasi Exp $
+bin/pdf90
+bin/pdfjoin
+bin/pdfnup
+man/man1/pdf90.1
+man/man1/pdfjoin.1
+man/man1/pdfnup.1
