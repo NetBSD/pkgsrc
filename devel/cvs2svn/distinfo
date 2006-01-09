@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/09/28 12:44:00 rillig Exp $
+$NetBSD: distinfo,v 1.8 2006/01/09 03:45:32 uebayasi Exp $
 
-SHA1 (cvs2svn-1.2.1.tar.gz) = af3f1a2a74e97448fb40f5b6ddc2751586297262
-RMD160 (cvs2svn-1.2.1.tar.gz) = 16dcb85cdbe586a8c3e3e98f7b207a6d6da58bfb
-Size (cvs2svn-1.2.1.tar.gz) = 205214 bytes
+SHA1 (cvs2svn-1.3.0.tar.gz) = 75527ef18726d48d69ccd26e63bae99bce13c77c
+RMD160 (cvs2svn-1.3.0.tar.gz) = ad698bc27db407bc3a6cf6260509e37e52f3b0b9
+Size (cvs2svn-1.3.0.tar.gz) = 211310 bytes
