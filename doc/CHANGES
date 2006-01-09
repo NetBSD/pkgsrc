@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12428 2006/01/09 16:28:20 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12429 2006/01/09 17:47:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/p5-BerkeleyDB to 0.27 [cube 2006-01-09]
 	Updated databases/mysql5-client to 5.0.18 [xtraeme 2006-01-09]
 	Updated databases/mysql5-server to 5.0.18 [xtraeme 2006-01-09]
+	Updated lang/parrot to 0.4.1 [wiz 2006-01-09]
