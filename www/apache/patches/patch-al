@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.6 2005/08/22 16:19:00 reed Exp $
+$NetBSD: patch-al,v 1.7 2006/01/09 00:51:03 joerg Exp $
 
 --- src/Configure.orig	2005-08-22 08:43:51.000000000 -0700
 +++ src/Configure	2005-08-22 08:46:05.000000000 -0700
-@@ -465,6 +465,14 @@
+@@ -465,6 +465,14 @@ case "$PLAT" in
  	DBM_LIB=""
  	DB_LIB=""
  	;;
@@ -17,3 +17,18 @@ $NetBSD: patch-al,v 1.6 2005/08/22 16:19:00 reed Exp $
      *-openbsd*)
  	OS='OpenBSD'
  	DBM_LIB=""
+@@ -1110,6 +1118,14 @@ if [ "x$using_shlib" = "x1" ] ; then
+ 	    esac
+ 	    LDFLAGS_MOD_SHLIB=$LDFLAGS_SHLIB
+ 	    ;;
++	*-dragonfly*)
++	    LD_SHLIB="gcc"
++	    CFLAGS_SHLIB="-fPIC -DPIC"
++	    LDFLAGS_SHLIB="-shared"
++	    LDFLAGS_SHLIB_EXPORT="-Wl,-E"
++	    LDFLAGS_MOD_SHLIB=$LDFLAGS_SHLIB
++	    SHLIB_SUFFIX_DEPTH=2
++	    ;;
+ 	*-netbsd*)
+ 	    CFLAGS_SHLIB="-fPIC -DPIC"
+ 	    if echo __ELF__ | ${CC} -E - | grep -q __ELF__; then
