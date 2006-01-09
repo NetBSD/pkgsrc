@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/01/06 15:10:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/09 03:45:32 uebayasi Exp $
 
-DISTNAME=	cvs2svn-1.2.1
-PKGREVISION=	1
+DISTNAME=	cvs2svn-1.3.0
 CATEGORIES=	devel
-MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/20727/
+MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/25036/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://cvs2svn.tigris.org/
