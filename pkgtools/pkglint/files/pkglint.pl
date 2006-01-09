@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.458 2006/01/09 02:47:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.459 2006/01/09 03:22:45 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1682,7 +1682,7 @@ sub checkline_mk_text($$) {
 	}
 
 	$rest = $text;
-	while ($rest =~ s/\$\{([-A-Z0-9a-z_]+)(?::[^\}]+)?\}//) {
+	while ($rest =~ s/(?:^|[^\$])\$\{([-A-Z0-9a-z_]+)(?::[^\}]+)?\}//) {
 		my ($varname) = ($1);
 
 		if (exists(get_deprecated_map()->{$varname})) {
@@ -1691,7 +1691,7 @@ sub checkline_mk_text($$) {
 	}
 
 	$rest = $text;
-	while ($rest =~ s/\$\(([-A-Z0-9a-z_]+)(?::[^\}]+)?\)//) {
+	while ($rest =~ s/(?:^|[^\$])\$\(([-A-Z0-9a-z_]+)(?::[^\}]+)?\)//) {
 		my ($varname) = ($1);
 
 		$line->log_warning("Please use \${${varname}\} instead of \$(${varname}).");
