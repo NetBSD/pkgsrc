@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2006/01/09 15:55:02 joerg Exp $
+
+--- tet3/apilib/remtime.c.orig	2006-01-09 15:47:17.000000000 +0000
++++ tet3/apilib/remtime.c
+@@ -53,6 +53,7 @@ MODIFICATIONS:
+ 
+ #ifndef TET_LITE /* -START-LITE-CUT- */
+ 
++#include <sys/types.h>
+ #include <time.h>
+ #include "dtmac.h"
+ #include "dtthr.h"
