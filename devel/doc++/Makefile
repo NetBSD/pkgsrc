@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:50 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/09 19:30:09 joerg Exp $
 
 DISTNAME=		doc++-3.4.10
 PKGREVISION=	1
@@ -12,6 +12,7 @@ COMMENT=		Documentation system for C, C++ and Java
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+BUILD_USES_MSGFMT=	yes
 
 #post-extract:
 #	${RM} ${WRKSRC}/src/getopt.h
