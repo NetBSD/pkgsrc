@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/29 06:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/09 23:39:09 joerg Exp $
 #
 
 DISTNAME=		rinetd
@@ -19,12 +19,13 @@ CPPFLAGS+=		-DRINETD_CONF="\"${PKG_SYSCONFDIR}/rinetd.conf\""
 
 RCD_SCRIPTS=		rinetd
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	rinetd.8
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_STAGE.paths=	post-patch
+
 post-extract:
 	@cd ${WRKDIR} && ${MV} -f rinetd ${PKGNAME_NOREV}
-
-pre-build:
-	@${MV} -f ${WRKSRC}/rinetd.8 ${WRKSRC}/rinetd.8.pre
-	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/rinetd.8.pre \
-		> ${WRKSRC}/rinetd.8
 
 .include "../../mk/bsd.pkg.mk"
