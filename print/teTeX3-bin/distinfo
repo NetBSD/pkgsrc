@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.2 2005/05/25 13:35:26 wiz Exp $
+$NetBSD: distinfo,v 1.3 2006/01/09 11:59:55 tron Exp $
 
 SHA1 (teTeX/tetex-src-3.0.tar.gz) = 7637789f7f4929694aed1b89820f5bad4753e8fc
 RMD160 (teTeX/tetex-src-3.0.tar.gz) = 15a139f5f36993e4ed3583260e175cfb13ce7bcc
 Size (teTeX/tetex-src-3.0.tar.gz) = 12749314 bytes
 SHA1 (patch-aa) = 77feabef32c612ac5d0250b1e4db50a3fc497990
 SHA1 (patch-ab) = af4e90102afeb6e6dbd46ffbec51e14dd6d4fed5
+SHA1 (patch-ac) = af7d8c65cece55b7f37e7cf3c99c85e75cb911a1
 SHA1 (patch-ad) = 23d8e8729bc10748cceba5be3272484ab50f34e6
 SHA1 (patch-ae) = 68825699db129b82f476c37ba3b6e20a8831ad6e
 SHA1 (patch-af) = d5fd0e1b30b1ea9fd96fe5983088df5a723f04b7
