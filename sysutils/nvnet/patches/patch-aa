@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/09 12:44:15 manu Exp $
+--- Makefile.orig	2005-06-21 02:18:41.000000000 +0000
++++ Makefile	2006-01-05 11:25:04.000000000 +0000
+@@ -3,9 +3,9 @@
+ # doc directory is not being made ...
+ 
+ .include <Makefile.inc>
+ 
+-NFORCE=../nforce
++NFORCE=../NFORCE-Linux-x86-1.0-0310-pkg1
+ 
+ .if ${OSTYPE} == "NetBSD"
+ .if ${OSVERSION} < 299000000
+ 

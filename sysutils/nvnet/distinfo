@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/09 12:44:15 manu Exp $
+
+SHA1 (nvnet-netbsd-src-20050620.tgz) = d5299c739fa94c6030349119648be4fd96c818cb
+RMD160 (nvnet-netbsd-src-20050620.tgz) = fbcdd95f9acfe273cff5d7a799813af88d95a14d
+Size (nvnet-netbsd-src-20050620.tgz) = 24995 bytes
+SHA1 (NFORCE-Linux-x86-1.0-0310-pkg1.run) = d99f0f7f3a100833a8f1f81073c4edc35b9c400e
+RMD160 (NFORCE-Linux-x86-1.0-0310-pkg1.run) = 9fc1a7503876ba5a90fb062ec17c9411d7841fcb
+Size (NFORCE-Linux-x86-1.0-0310-pkg1.run) = 6031508 bytes
+SHA1 (patch-aa) = 0a4df7a2f84347cc14eb2ccda649b9685e8f7d03
+SHA1 (patch-ab) = e926aebb2a7307b9eeebfdcd4034ec95a514708c
+SHA1 (patch-ac) = 8a79c254d1145aaa5c628170ce61a5826d0c239a
+SHA1 (patch-ad) = 60ebc00fc100f0a1a6615b4af9aa7bed5c3d2fb4
+SHA1 (patch-ae) = 5d1111d465f9949f4410d724c073d534c260bcf7
