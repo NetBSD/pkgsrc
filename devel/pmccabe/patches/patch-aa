@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/24 11:19:00 agc Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/09 18:37:26 joerg Exp $
 
 --- Makefile	2005/02/24 10:53:19	1.1
 +++ Makefile	2005/02/24 10:55:17
-@@ -10,7 +10,7 @@
+@@ -10,7 +10,7 @@ INCLUDES=config.h dmain.h getopt.h pmcca
  ###############{
  
  # On HP-UX you will have to change this
@@ -11,8 +11,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/24 11:19:00 agc Exp $
  
  DESTDIR = 
  
-@@ -30,7 +30,7 @@
- all:		$(PROGS) test
+@@ -27,10 +27,10 @@ PMOBJS	      = cparse.o \
+ 		nmain.o \
+ 		pmccabe.o
+ 
+-all:		$(PROGS) test
++all:		$(PROGS)
  
  test:		$(PROGS)
 -		./testsuite
@@ -20,7 +24,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/24 11:19:00 agc Exp $
  
  pmccabe:	$(PMOBJS)
  	$(CC) $(CFLAGS) -o pmccabe $(PMOBJS)
-@@ -39,12 +39,10 @@
+@@ -39,12 +39,10 @@ clean:
  	rm -f *.[oa] pmccabe decomment *.out */*.out
  
  install: $(PROGS) $(MANPGS) $(DOCS)
