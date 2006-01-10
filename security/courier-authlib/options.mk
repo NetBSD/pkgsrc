@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/11/07 16:43:49 jlam Exp $
+# $NetBSD: options.mk,v 1.8 2006/01/10 12:39:04 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -84,7 +84,7 @@ CONFIGURE_ARGS+=	--without-authldap
 ### MySQL authentication
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../databases/mysql4-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-authmysql
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthmysql.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authmysqlrc.dist
