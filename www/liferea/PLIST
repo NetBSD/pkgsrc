@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/10/20 17:40:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/01/10 22:44:07 wiz Exp $
 bin/liferea
 bin/liferea-bin
 lib/liferea/liblihtmlg.la
@@ -10,6 +10,7 @@ share/liferea/css/liferea.css
 share/liferea/css/liferea2.css
 share/liferea/doc/html/about_en.html
 share/liferea/doc/html/enclosures_en.html
+share/liferea/doc/html/faq_en.html
 share/liferea/doc/html/folders_en.html
 share/liferea/doc/html/headlines_en.html
 share/liferea/doc/html/help_feed_available.png
@@ -73,6 +74,7 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/liferea.mo
 share/pixmaps/liferea.png
