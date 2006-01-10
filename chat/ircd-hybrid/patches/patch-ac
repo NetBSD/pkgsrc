@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2006/01/03 13:09:25 adrianp Exp $
+$NetBSD: patch-ac,v 1.4 2006/01/10 22:26:32 adrianp Exp $
 
---- contrib/help/Makefile.in.orig	2005-12-09 05:52:54.000000000 +0000
-+++ contrib/help/Makefile.in
+--- help/Makefile.in.orig	2005-12-09 05:52:54.000000000 +0000
++++ help/Makefile.in
 @@ -7,8 +7,8 @@ RM=		@RM@
  
  prefix=		@prefix@
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.3 2006/01/03 13:09:25 adrianp Exp $
 +uhelpdir=	${prefix}/share/ircd-hybrid/help/users
 +ohelpdir=	${prefix}/share/ircd-hybrid/help/opers
  
- SYMLINKS=   topic accept cmode admin names links away whowas \
+ SYMLINKS=	topic accept cmode admin names links away whowas \
  		version kick who invite quit join list nick oper part \
 @@ -21,13 +21,13 @@ depend:
  
