@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12440 2006/01/10 10:12:44 tron Exp $
+$NetBSD: CHANGES,v 1.12441 2006/01/10 12:42:17 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -205,3 +205,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix to 2.2.8 [martti 20060110]
 	Updated mail/postfix-current to 2.3-20060103 [martti 20060110]
 	Updated print/apsfilter to 7.2.6 [martti 20060110]
+	Updated mail/dbmail to 2.0.1nb2 [ghen 2006-01-10]
+	Updated mail/dovecot to 0.99.14nb2 [ghen 2006-01-10]
+	Updated security/courier-authlib to 0.58nb1 [ghen 2006-01-10]
+	Updated security/cy2-sql to 2.1.20nb1 [ghen 2006-01-10]
