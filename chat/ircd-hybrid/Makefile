@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/01/03 13:09:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.27 2006/01/10 22:26:32 adrianp Exp $
 
 DISTNAME=	ircd-hybrid-7.2.0
 EXTRACT_SUFX=	.tgz
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ircd-hybrid/}
 
@@ -69,11 +70,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/log/ircd-hybrid
 CONFIGURE_ARGS+=	--enable-clobber
 
-.if defined(IRCD_HYBRID_SYSLOG_EVENTS)
+.if defined(IRCD_HYBRID_SYSLOG_EVENTS) && !empty(IRCD_HYBRID_SYSLOG_EVENTS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-syslog-facility=${IRCD_HYBRID_SYSLOG_FACILITY:Q}
 .endif
 
-.if defined(IRCD_HYBRID_MAXCONN)
+.if defined(IRCD_HYBRID_MAXCONN) && !empty(IRCD_HYBRID_MAXCONN:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-maxconn=${IRCD_HYBRID_MAXCONN:Q}
 .endif
 
@@ -96,16 +97,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.FIRST ${HYBRID_DOC}
 	${INSTALL_DATA} ${WRKSRC}/README.PLATFORMS ${HYBRID_DOC}
 	${INSTALL_DATA} ${WRKSRC}/RELNOTES ${HYBRID_DOC}
-	${INSTALL_DATA} ${WRKSRC}/messages/README ${HYBRID_DOC}/README.messages
+	${INSTALL_DATA} ${WRKSRC}/messages/README \
+		${HYBRID_DOC}/README.messages
 	${INSTALL_DATA} ${WRKSRC}/tools/README.mkpasswd \
 		${HYBRID_DOC}/README.ircd-hybrid-mkpasswd
 
 	@${RM} ${WRKSRC}/doc/Makefile
 	@${RM} ${WRKSRC}/doc/Makefile.in
 	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${HYBRID_DOC}/doc
-
-	cd ${WRKSRC}/contrib && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install_help
 
 	cd ${WRKSRC}/messages && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install
