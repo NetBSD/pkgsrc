@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:41 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/10 20:51:08 joerg Exp $
 #
 
 DISTNAME=       et-linux-2.56-2.x86
@@ -27,8 +27,18 @@ DEPENDS+=       suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 
 INSTALLATION_DIRS=	bin
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/et ${WRKDIR}/etded
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_STAGE.paths=	post-patch
+
 pre-extract:
 	${MKDIR} ${WRKSRC}
+
+post-extract:
+	${CP} ${FILESDIR}/et.sh ${WRKDIR}/et
+	${CP} ${FILESDIR}/etded.sh ${WRKDIR}/etded
 
 do-install:
 	${INSTALL_DATA_DIR} ${ETDIR}
@@ -45,9 +55,7 @@ do-install:
 	cd ${WRKSRC}/pb && ${PAX} -rw -p am . ${ETDIR}/pb
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/Linux/x86/et.x86 ${ETDIR}/
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/Linux/x86/etded.x86 ${ETDIR}/
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/et.sh >${WRKDIR}/et
 	${INSTALL_SCRIPT} ${WRKDIR}/et ${PREFIX}/bin
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/etded.sh >${WRKDIR}/etded
 	${INSTALL_SCRIPT} ${WRKDIR}/etded ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

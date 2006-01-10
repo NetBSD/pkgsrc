@@ -1,5 +1,5 @@
-#!/bin/sh
-# $NetBSD: et.sh,v 1.1.1.1 2004/07/08 14:28:37 xtraeme Exp $
+#!@SH@
+# $NetBSD: et.sh,v 1.2 2006/01/10 20:51:08 joerg Exp $
 
 cd @PREFIX@/lib/lokigames/et
 exec ./et.x86 "$@"
