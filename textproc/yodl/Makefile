@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/05/22 20:08:43 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/10 17:23:14 joerg Exp $
 
 DISTNAME=	yodl-1.31.18
 PKGREVISION=	3
@@ -14,9 +14,7 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 MAKEFILE=	GNUmakefile
-
-do-build:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} LDFLAGS="${LDFLAGS}"
+CONFIGURE_ENV+=	ILDFLAGS=${LDFLAGS:Q}
 
 .include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
