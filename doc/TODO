@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4398 2006/01/10 07:17:59 martti Exp $
+$NetBSD: TODO,v 1.4399 2006/01/10 14:34:38 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -548,7 +548,6 @@ Suggested package updates
 	o gcdmaster-1.2.1
 	o gcombust-0.1.55
 	o gcpio-2.6
-	o gcube-0.4
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
 	o gettext-0.14.5
