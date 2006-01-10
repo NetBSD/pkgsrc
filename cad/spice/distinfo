@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2006/01/06 18:21:44 joerg Exp $
+$NetBSD: distinfo,v 1.8 2006/01/10 10:59:05 joerg Exp $
 
 SHA1 (sp3f4.kit.tar.Z) = bded1e078d0acfef090117490a7ac8a57887f39e
 RMD160 (sp3f4.kit.tar.Z) = 0bd293298c41791a9a452648f5c6a936175e220c
@@ -23,4 +23,4 @@ SHA1 (patch-aq) = 87739a58999dc7027468ff46c04a65c75cf853e3
 SHA1 (patch-ar) = 7bfa494147b26f7b330498d9c64ae66a79cebd27
 SHA1 (patch-as) = b1c077eb64eb1a4401604283cfc1534a0ee4269b
 SHA1 (patch-at) = cf0156a20f3fdadca74434d1ee26f023f7d40bac
-SHA1 (patch-au) = be680cf2cd75b7735eeb072fc1b9b59ef7553ea4
+SHA1 (patch-au) = 5b69fde30ec2cc301b970e2c40d83fac1b00c874
