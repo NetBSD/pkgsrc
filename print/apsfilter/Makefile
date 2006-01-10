@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:06 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/01/10 07:17:41 martti Exp $
 #
 
-DISTNAME=	apsfilter-7.2.5
-PKGREVISION=	1
+DISTNAME=	apsfilter-7.2.6
+#PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.apsfilter.org/download/
 
