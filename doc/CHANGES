@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12442 2006/01/10 12:53:22 joerg Exp $
+$NetBSD: CHANGES,v 1.12443 2006/01/10 13:42:52 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/courier-authlib to 0.58nb1 [ghen 2006-01-10]
 	Updated security/cy2-sql to 2.1.20nb1 [ghen 2006-01-10]
 	Updated chat/icqlib to 1.0.0nb2 [joerg 2006-01-10]
+	Updated devel/pthread-sem to 1.0nb1 [joerg 2006-01-10]
