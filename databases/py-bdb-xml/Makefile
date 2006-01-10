@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/01/06 15:10:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/10 20:14:55 wiz Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases python
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.sleepycat.com/products/xml.shtml
 COMMENT=	Python wrapper for Berkeley DB XML C++ API
 
 CONFLICTS=	${PYPKGPREFIX}-dbxml<=1.2.1
-
-BUILDLINK_DEPENDS.db4+=	db4>=4.3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/python
 PYDISTUTILSPKG=	YES
