@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:37 tv Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/10 13:42:29 joerg Exp $
 #
 
 DISTNAME=	pthread-sem-1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cit.gu.edu.au/teaching/2105CIT/software/
 
@@ -10,17 +11,8 @@ COMMENT=	Semaphore implementation for (PTH) pthreads
 
 PTHREAD_OPTS+=	require
 
-TEST_TARGET=	test
-
-MAKE_ENV+=	LIBDIR=${PREFIX}/lib
-MAKE_ENV+=	MANDIR=${PREFIX}/man
-MAKE_ENV+=	DESTDIR=/	# trick bsd.lib.mk into adding -R
-MAKE_ENV+=	NOPROFILE=1
-
-MANCOMPRESSED_IF_MANZ=	yes
-
-post-install:
-	${INSTALL_DATA}	${WRKSRC}/semaphore.h ${PREFIX}/include
+post-extract:
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
