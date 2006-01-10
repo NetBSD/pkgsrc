@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2005/08/29 13:15:34 tv Exp $
+# $NetBSD: options.mk,v 1.10 2006/01/10 12:39:04 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql pam pgsql sasl ssl
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-ssl
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
 CONFIGURE_ARGS+=	--with-mysql
-.  include "../../databases/mysql4-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 .endif
 
 ###
