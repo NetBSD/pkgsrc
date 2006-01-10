@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/12/16 06:05:20 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/01/10 06:37:11 martti Exp $
 bin/jalbum
 share/jalbum/JAlbum.jar
 share/jalbum/StartJAlbum.bat
@@ -1911,7 +1911,6 @@ share/jalbum/skins/Simple/frameset.htt
 share/jalbum/skins/Simple/hints.jap
 share/jalbum/skins/Simple/index.htt
 share/jalbum/skins/Simple/init.bsh
-share/jalbum/skins/Simple/onload.bsh
 share/jalbum/skins/Simple/res/au.gif
 share/jalbum/skins/Simple/res/b_pil.gif
 share/jalbum/skins/Simple/res/blank.html
