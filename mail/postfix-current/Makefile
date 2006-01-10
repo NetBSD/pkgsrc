@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/01/10 06:39:00 martti Exp $
+# $NetBSD: Makefile,v 1.56 2006/01/10 20:21:32 joerg Exp $
 
 DISTNAME=	postfix-2.3-20060103
 #PKGREVISION=	1
@@ -109,14 +109,20 @@ CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 
 MAKE_ENV+=		DEBUG= # empty
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/mailer.conf
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+
 do-configure:
 	cd ${WRKSRC} &&							\
 	${SETENV} ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles	\
 		'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}'
 
 post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
-		> ${WRKDIR}/mailer.conf
 .if !empty(PKG_OPTIONS:Msasl)
 	${ECHO} "pwcheck_method: ${PWCHECK_METHOD}" > ${WRKDIR}/smtpd.conf
 .endif
