@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/01/10 20:22:48 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/10 21:06:31 wiz Exp $
 #
 
 DISTNAME=	bsddb3-4.3.3
@@ -16,8 +16,6 @@ PYSETUPINSTALLARGS=	--berkeley-db=${BUILDLINK_PREFIX.db4}
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
-
-BROKEN=		Does not compile with db4-4.4 API.
 
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
