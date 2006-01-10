@@ -1,16 +1,24 @@
-$NetBSD: patch-ae,v 1.3 2005/12/12 19:55:41 joerg Exp $
+$NetBSD: patch-ae,v 1.3.2.1 2006/01/10 15:02:18 salo Exp $
 
 --- clients/uil/UilDB.c.orig	2005-11-25 10:43:27.000000000 +0100
 +++ clients/uil/UilDB.c
-@@ -79,8 +79,9 @@ static char rcsid[] = "$XConsortium: Uil
+@@ -79,8 +79,17 @@ static char rcsid[] = "$XConsortium: Uil
  #include <unistd.h>
  #endif
  
 -
 -
-+#if defined(__NetBSD__) && !defined(_POSIX_THREAD_SAFE_FUNCTIONS)
-+#define _POSIX_THREAD_SAFE_FUNCTIONS 200112L
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#  if __NetBSD_Version__ >= 299001000 /* NetBSD 2.99.10 has getpw*_r*/
++#    if !defined(_POSIX_THREAD_SAFE_FUNCTIONS)
++#      define _POSIX_THREAD_SAFE_FUNCTIONS 200112L
++#    endif
++#  else
++#    define XNO_MTSAFE_PWDAPI
++#  endif
 +#endif
++
  
  #include "UilDefI.h"
  
