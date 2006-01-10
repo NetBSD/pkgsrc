@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2005/12/29 06:22:01 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/01/10 21:06:08 joerg Exp $
 
 DISTNAME=	openh323-v1_15_2-src
 PKGNAME=	openh323-1.15.2
@@ -25,11 +25,6 @@ post-extract:
 
 post-patch:
 	cd ${WRKSRC}/include; ${LN} -s . openh323
-	${_PKG_SILENT}cd ${WRKSRC};			\
-	for f in openh323u.mak.in; do			\
-		${SED} ${FILES_SUBST_SED} $$f > $$f.sed;\
-		${MV} -f $$f.sed $$f;			\
-	done
 
 # override the openh323 install - it uses cp -d, and isn't libtool-aware
 do-install:
