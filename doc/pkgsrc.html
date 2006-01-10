@@ -652,8 +652,19 @@ alink="#0000FF">
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#shells-disable">12.5.1. Disabling handling of
-                    configuration files</a></span></dt>
+                    "#shells-disable">12.5.1. Disabling shell
+                    registration</a></span></dt>
+                  </dl>
+                </dd>
+
+                <dt><span class="sect1"><a href="#fonts">12.6.
+                Fonts</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#fonts-disable">12.6.1. Disabling automatic
+                    update of the fonts databases</a></span></dt>
                   </dl>
                 </dd>
               </dl>
@@ -3872,17 +3883,22 @@ alink="#0000FF">
           fail.</p>
 
           <p>Before the options framework was introduced, build
-          options were selected by setting a variable in
+          options were selected by setting a variable (often named
+          <code class="varname">USE_<em class=
+          "replaceable"><code>FOO</code></em></code>) in
           <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
           class="filename">/etc/mk.conf</code> for each option. To
           ease transition to the options framework for the user,
           these legacy variables are converted to the appropriate
-          options setting automatically. A warning is issued to
-          prompt the user to update <code xmlns=
+          options setting (<code class=
+          "varname">PKG_OPTIONS.<em class=
+          "replaceable"><code>pkgbase</code></em></code>)
+          automatically. A warning is issued to prompt the user to
+          update <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">/etc/mk.conf</code> to use the options
-          framework directly. Support for these legacy variables
-          will be removed eventually.</p>
+          framework directly. Support for the legacy variables will
+          be removed eventually.</p>
         </div>
       </div>
 
@@ -5844,7 +5860,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           "quote">audit-packages</span>&#8221; is installed, please
           read the package's message, which you can get by running
           <strong class="userinput"><code>pkg_info -D
-          audit-package</code></strong>.</p>
+          audit-packages</code></strong>.</p>
 
           <p>If this package is installed, pkgsrc builds will use
           it to perform a security check before building any
@@ -6121,8 +6137,19 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#shells-disable">12.5.1. Disabling handling of
-                  configuration files</a></span></dt>
+                  "#shells-disable">12.5.1. Disabling shell
+                  registration</a></span></dt>
+                </dl>
+              </dd>
+
+              <dt><span class="sect1"><a href="#fonts">12.6.
+              Fonts</a></span></dt>
+
+              <dd>
+                <dl>
+                  <dt><span class="sect2"><a href=
+                  "#fonts-disable">12.6.1. Disabling automatic
+                  update of the fonts databases</a></span></dt>
                 </dl>
               </dd>
             </dl>
@@ -9147,8 +9174,19 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#shells-disable">12.5.1. Disabling handling of
-                configuration files</a></span></dt>
+                "#shells-disable">12.5.1. Disabling shell
+                registration</a></span></dt>
+              </dl>
+            </dd>
+
+            <dt><span class="sect1"><a href="#fonts">12.6.
+            Fonts</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#fonts-disable">12.6.1. Disabling automatic update
+                of the fonts databases</a></span></dt>
               </dl>
             </dd>
           </dl>
@@ -9184,18 +9222,15 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <li>
               <p>Registration of system shells.</p>
             </li>
+
+            <li>
+              <p>Automatic updating of fonts databases.</p>
+            </li>
           </ul>
         </div>
 
         <p>The following sections inspect each of the above points
-        in detail. Note that in order to use any of the described
-        functionalities, you must add the following to your
-        package's <code xmlns=
-        "http://www.w3.org/TR/xhtml1/transitional" class=
-        "filename">Makefile</code>:</p>
-        <pre class="programlisting">
-    USE_PKGINSTALL= YES
-</pre>
+        in detail.</p>
 
         <p>You may be thinking that many of the things described
         here could be easily done with simple code in the package's
@@ -9816,7 +9851,6 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           target="_top"><code xmlns="" class=
           "filename">shells/zsh</code></a>:</p>
           <pre class="programlisting">
-    USE_PKGINSTALL= YES
     PKG_SHELL=      ${PREFIX}/bin/zsh
 </pre>
 
@@ -9825,8 +9859,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "shells-disable"></a>12.5.1.&nbsp;Disabling
-                  handling of configuration files</h3>
+                  "shells-disable"></a>12.5.1.&nbsp;Disabling shell
+                  registration</h3>
                 </div>
               </div>
             </div>
@@ -9835,6 +9869,62 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             be disabled by the administrator by setting the
             <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
             class="filename">PKG_REGISTER_SHELLS</code> environment
+            variable to <code class="literal">NO</code>.</p>
+          </div>
+        </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "fonts"></a>12.6.&nbsp;Fonts</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>Packages that install X11 fonts should update the
+          database files that index the fonts within each fonts
+          directory. This can easily be accomplished within the
+          pkginstall framework.</p>
+
+          <p>When a package installs X11 fonts, it must list the
+          directories in which fonts are installed in the
+          <code class="varname">FONTS_DIRS.<em class=
+          "replaceable"><code>type</code></em></code> variables,
+          where <em class="replaceable"><code>type</code></em> can
+          be one of &#8220;<span class="quote">ttf</span>&#8221;,
+          &#8220;<span class="quote">type1</span>&#8221; or
+          &#8220;<span class="quote">x11</span>&#8221;. This will
+          add hooks to the installation scripts to run the
+          appropriate commands to update the fonts database files
+          within each of those directories. For convenience, if the
+          directory path is relative, it is taken to be relative to
+          the package's installation prefix. Consider the following
+          example, taken from <a xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" href=
+          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/fonts/dbz-ttf/README.html"
+          target="_top"><code xmlns="" class=
+          "filename">fonts/dbz-ttf</code></a>:</p>
+          <pre class="programlisting">
+    FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
+</pre>
+
+          <div class="sect2" lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name=
+                  "fonts-disable"></a>12.6.1.&nbsp;Disabling
+                  automatic update of the fonts databases</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>The automatic update of fonts databases can be
+            disabled by the administrator by setting the
+            <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+            class="filename">PKG_UPDATE_FONTS_DB</code> environment
             variable to <code class="literal">NO</code>.</p>
           </div>
         </div>
@@ -13706,23 +13796,19 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <p>If a package installs font files, you will need to
             rebuild the fonts database in the directory where they
             get installed at installation and deinstallation time.
-            This can be automatically done by using <code xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">mk/fonts.mk</code>, which you need to
-            include in your <code xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">Makefile</code>.</p>
+            This can be automatically done by using the pkginstall
+            framework.</p>
 
-            <p>When the file is included, you can list the
-            directories where fonts are installed in the
-            <code class="varname">FONTS_<em class=
-            "replaceable"><code>type</code></em>_DIRS</code>
-            variables, where <em class=
-            "replaceable"><code>type</code></em> can be one of
-            &#8220;<span class="quote">TTF</span>&#8221;,
-            &#8220;<span class="quote">TYPE1</span>&#8221; or
-            &#8220;<span class="quote">X11</span>&#8221;. Also make
-            sure that the database file <code xmlns=
+            <p>You can list the directories where fonts are
+            installed in the <code class=
+            "varname">FONTS_DIRS.<em class=
+            "replaceable"><code>type</code></em></code> variables,
+            where <em class="replaceable"><code>type</code></em>
+            can be one of &#8220;<span class=
+            "quote">ttf</span>&#8221;, &#8220;<span class=
+            "quote">type1</span>&#8221; or &#8220;<span class=
+            "quote">x11</span>&#8221;. Also make sure that the
+            database file <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">fonts.dir</code> is not listed in the
             PLIST.</p>
