@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.20 2006/01/06 22:47:24 christos Exp $
+# $NetBSD: Linux.mk,v 1.21 2006/01/10 16:58:04 christos Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -92,5 +92,6 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 #GAMEMODE=		2555
 #.endif
 .if (${MACHINE_ARCH} == "x86_64")
+ABI?=	64
 LIBABISUFFIX?=          64
 .endif
