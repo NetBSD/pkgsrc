@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/29 06:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/10 20:40:23 joerg Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -27,26 +27,16 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/ssmtp.conf ${PKG_SYSCONFDIR}/ssmtp.conf
 CONF_FILES+=	${EGDIR}/revaliases ${PKG_SYSCONFDIR}/revaliases
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/mailer.conf ssmtp.c ssmtp.conf ssmtp.8
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,/etc/ssl/certs,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,/etc/ssmtp,${PKG_SYSCONFDIR},g'
+SUBST_STAGE.paths=	post-patch
+
 post-extract:
 	@${RM} -rf ${WRKSRC}/RCS
-
-post-patch:
-	for f in ${WRKSRC}/ssmtp.c ${WRKSRC}/ssmtp.conf ; do		\
-		${MV} -f $$f $$f.orig ;					\
-		${SED} "s,/etc/ssl/certs/,${PKG_SYSCONFDIR}/,g"		\
-			$${f}.orig > $${f} ;				\
-		${RM} -f $$f.orig ;					\
-	done
-	for f in ${WRKSRC}/ssmtp.8 ; do					\
-		${MV} -f $$f $$f.orig ;					\
-		${SED} "s,/etc/ssmtp/,${PKG_SYSCONFDIR}/,g"		\
-			$$f.orig > $$f ; 				\
-		${RM} -f $$f.orig ;					\
-	done
-
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
-		> ${WRKDIR}/mailer.conf
+	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
