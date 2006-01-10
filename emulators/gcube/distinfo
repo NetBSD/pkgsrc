@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:49:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/01/10 14:33:26 jmmv Exp $
 
-SHA1 (gcube-v0.2-src.tar.bz2) = 0681f1bf3f64208616984a5352d9ebeaff5ed8c6
-RMD160 (gcube-v0.2-src.tar.bz2) = 92e7c7a4f985413951ca5d4e60674282a3bb43ff
-Size (gcube-v0.2-src.tar.bz2) = 297817 bytes
-SHA1 (patch-aa) = 1bb0e7b6429bc0df0694bf9cbd7b41975f727f73
-SHA1 (patch-ab) = 119d81c03a38bfc76a9fe063e6cb347b8fddd60d
+SHA1 (gcube-0.4-src.tar.bz2) = dae967f8aedfc2115c3720dfe2c523128fddc8b6
+RMD160 (gcube-0.4-src.tar.bz2) = 9a7c13ed611da22705f960686eea225e30b61dc6
+Size (gcube-0.4-src.tar.bz2) = 803503 bytes
+SHA1 (patch-aa) = 285ae801f3e000420713e4e9b22d20fb55b12e3c
+SHA1 (patch-ab) = 8907f650214bec5cdbf032464a1be39cccea5d81
+SHA1 (patch-ac) = 24e52c1b863d858863317de1c34fe9a917f83599

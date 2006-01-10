@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/12/11 09:40:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/10 14:33:26 jmmv Exp $
 #
 
-DISTNAME=		gcube-v0.2-src
-PKGNAME=		gcube-0.2
-PKGREVISION=		3
+DISTNAME=		gcube-0.4-src
+PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		emulators
 MASTER_SITES=		http://gcube.exemu.net/downloads/
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +14,7 @@ COMMENT=		Opensource Nintendo GameCube(TM) emulator
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
-WRKSRC=			${WRKDIR}
+WRKSRC=			${WRKDIR}/0.4
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,4 +35,5 @@ do-install:
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
