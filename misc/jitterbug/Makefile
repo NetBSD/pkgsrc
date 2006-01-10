@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:39 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/10 18:50:09 rillig Exp $
 
 DISTNAME=	jitterbug-1.6.2
 PKGREVISION=	1
@@ -19,7 +19,6 @@ ADDGROUP=		${LOCALBASE}/sbin/groupadd
 .endif
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
-PLIST_SRC=	${WRKDIR}/PLIST-src
 INSTALL_FILE=	${WRKDIR}/INSTALL
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 CONFIGDIR=	${WRKDIR}/${PKGNAME_NOREV}/config
@@ -54,6 +53,12 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 MESSAGE_SUBST+=	JB_USER=${JB_USER:Q}		\
 		JB_PACKAGE=${JB_PACKAGE:Q}	\
 		JB_LOCALMAIL=${JB_LOCALMAIL:Q}
+
+PLIST_SUBST+=	JB_DATADIR=${JB_DATADIR:Q}
+PLIST_SUBST+=	CGIBINDIR=${CGIBINDIR:Q}
+PLIST_SUBST+=	JB_PACKAGE=${JB_PACKAGE:Q}
+PLIST_SUBST+=	JB_USER=${JB_USER:Q}
+PLIST_SUBST+=	JB_GROUP=${JB_GROUP:Q}
 
 pre-extract:
 	@(if [ "X${JB_HOSTNAME}" = "X${JB_LONGNAME}" ]; then                  \
@@ -136,14 +141,6 @@ pre-install:
 		-e 's|@RM@|${RM}|g'                                           \
 			<${PKGDIR}/INSTALL                                    \
 			>${INSTALL_FILE}
-	@${SED}                                                               \
-		-e 's|@JB_DATADIR@|${JB_DATADIR}|g'                           \
-		-e 's|@CGIBINDIR@|${CGIBINDIR}|g'                             \
-		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
-		-e 's|@JB_USER@|${JB_USER}|g'                                 \
-		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
-			<${PKGDIR}/PLIST                                      \
-			>${PLIST_SRC}
 	@${SED}                                                               \
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 			<${FILESDIR}/jitterbug.auth                           \
