@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/02 04:15:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/11 18:26:59 wiz Exp $
 bin/estcall
 bin/estcmd
 bin/estconfig
@@ -11,8 +11,8 @@ include/estnode.h
 include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
-lib/libestraier.so.6
-lib/libestraier.so.6.3.0
+lib/libestraier.so.8
+lib/libestraier.so.8.1.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estseek.cgi
 share/hyperestraier/COPYING
@@ -207,6 +207,7 @@ share/hyperestraier/filter/estfxasis
 share/hyperestraier/filter/estfxmantotxt
 share/hyperestraier/filter/estfxmsotohtml
 share/hyperestraier/filter/estfxpdftohtml
+share/hyperestraier/filter/estwnetxpnd
 share/hyperestraier/increm/estseek-form.html
 share/hyperestraier/increm/estseek-frame.html
 share/hyperestraier/locale/ja/estseek.conf
