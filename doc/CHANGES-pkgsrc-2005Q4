@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.30 2006/01/10 15:56:21 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.31 2006/01/11 15:15:10 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -61,3 +61,5 @@ Pullup ticket 1009 - requested by Joerg Sonnenberger
 build fix for openmotif
 Pullup ticket 1012 - requested by Martti Kuparinen
 postfix packages bugfix update
+Pullup ticket 1015 - requested by Juan Romero Pardines
+security update for clamav
