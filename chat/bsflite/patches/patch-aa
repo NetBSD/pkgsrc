@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2005/07/29 04:50:39 grant Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/11 18:13:25 wiz Exp $
 
---- Makefile.orig	2005-04-14 02:23:06.000000000 +1000
+--- Makefile.orig	2006-01-09 12:10:53.000000000 -0600
 +++ Makefile
 @@ -2,7 +2,7 @@ EXEC=bsflite
  #EXEC=bsflite.exe
@@ -9,27 +9,18 @@ $NetBSD: patch-aa,v 1.1 2005/07/29 04:50:39 grant Exp $
 -CC=gcc
 +#CC=gcc
  #
- # Remove -DTIMESTAMPS to remove timestamps on messages/events
- #
-@@ -23,10 +23,10 @@ CFLAGS=-O -DTIMESTAMPS
- #
- # Add -lsocket -lnsl for Solaris
+ # Add -DCOLOR for ANSI color support
+ # Add also -DCOLOR_DARKBG if you have a xterm/screen with
+@@ -20,10 +20,10 @@ CFLAGS=-Os -Wall -pipe
+ # Add -lsocket -lbind for Zeta R1 (and potentially BeOS)
+ #     (thanks, Brennan Cleveland)
  #
 -LIBS=-limcomm
-+#LIBS=-limcomm
++LIBS+=-limcomm
  #LIBS+=-lwatt
  #LIBS+=-lwsock32
 -LDFLAGS=-Limcomm/ -s
-+#LDFLAGS=-Limcomm/ -s
++LDFLAGS+=-Limcomm/ -s
  #LDFLAGS+=-L/usr/local/djgpp/watt/lib
+ SOURCES=aim.c away.c bsf.c cleaner.c config.c conn.c input.c log.c out.c queue.c util.c
  OBJECTS=aim.o away.o bsf.o cleaner.o config.o conn.o input.o log.o out.o queue.o util.o
- 
-@@ -35,7 +35,7 @@ all:
- 	$(MAKE) $(MFLAGS) $(EXEC)
- 
- $(EXEC):$(OBJECTS)
--	$(CC) $(CFLAGS) $(LDFLAGS) -o $(EXEC) $(OBJECTS) $(LIBS)
-+	$(CC) $(CFLAGS) -Limcomm $(LDFLAGS) -o $(EXEC) $(OBJECTS) -limcomm $(LIBS)
- 
- clean:
- 	rm -f *.o *~ $(EXEC)
