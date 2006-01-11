@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.13 2005/12/18 20:25:35 joerg Exp $
+# $NetBSD: djbware.mk,v 1.14 2006/01/11 09:26:52 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -30,6 +30,12 @@ DJB_RESTRICTED?=	YES
 DJB_MAKE_TARGETS?=	YES
 DJB_BUILD_TARGETS?=	# empty
 DJB_INSTALL_TARGETS?=	# empty
+DJB_SLASHPACKAGE?=	NO
+.if !empty(DJB_SLASHPACKAGE:M[yY][eE][sS])
+DJB_CONFIG_DIR?=	${WRKSRC}/src
+.else
+DJB_CONFIG_DIR?=	${WRKSRC}
+.endif
 DJB_CONFIG_PREFIX?=	${PREFIX}
 DJB_CONFIG_HOME?=	conf-home
 DJB_CONFIG_CMDS?=	${DO_NADA}
@@ -47,7 +53,7 @@ INSTALL_TARGET?=	setup check ${DJB_INSTALL_TARGETS}
 
 .if !defined(NO_CONFIGURE) && !target(do-configure)
 do-configure:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${DJB_CONFIG_DIR};		\
 	for i in conf-*; do ${CP} $${i} $${i}.orig_dist; done;		\
 	[ -f ${DJB_CONFIG_HOME} ] && \
 		${ECHO} ${DJB_CONFIG_PREFIX} > ${DJB_CONFIG_HOME};	\
@@ -66,6 +72,11 @@ do-configure:
 	[ -f conf-bglibs ] && \
 		${ECHO} ${LOCALBASE}/lib/bglibs > conf-bglibs;		\
 	${DJB_CONFIG_CMDS}
+.endif
+
+.if !target(do-build) && !empty(DJB_SLASHPACKAGE:M[yY][eE][sS])
+do-build:
+	cd ${WRKSRC} && package/compile
 .endif
 
 PKG_SUPPORTED_OPTIONS+=	djbware-errno-hack
