@@ -1,16 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2006/01/11 16:10:11 reed Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/11 17:49:35 reed Exp $
 #
 
-DISTNAME=		poppler-0.4.4
-CATEGORIES=		print
-MASTER_SITES=		http://poppler.freedesktop.org/
+.include "../../print/poppler/Makefile.common"
 
-MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://poppler.freedesktop.org/
 COMMENT=		PDF rendering library
 
-USE_TOOLS+=		gmake pkg-config
-USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 #PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cairo.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-glib.pc.in
