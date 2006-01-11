@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2006/01/09 12:47:19 manu Exp $
+# $NetBSD: Makefile,v 1.328 2006/01/11 15:20:48 xtraeme Exp $
 #
 
 COMMENT=	System utilities
@@ -30,7 +30,6 @@ SUBDIR+=	ccd2iso
 SUBDIR+=	ccze
 SUBDIR+=	cdbkup
 SUBDIR+=	cdrdao
-SUBDIR+=	cdrecord-xcdroast
 SUBDIR+=	cdrtools
 SUBDIR+=	cdrtools-ossdvd
 SUBDIR+=	cfengine2
