@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4400 2006/01/10 22:46:48 wiz Exp $
+$NetBSD: TODO,v 1.4401 2006/01/11 02:25:06 ben Exp $
 
 Suggested new packages
 ======================
@@ -1233,8 +1233,6 @@ Suggested package updates
 	o uvscan-4.40 [pkg/30290]
 	o valgrind-3.0.1
 	o vba-1.7.2
-	o vcdimager-0.7.23
-	o vcdimager-devel-0.7.23
 	o verilog-0.8.2
 	o vfu-4.03
 	o vifm-0.3a
