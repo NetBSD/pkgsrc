@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 20:50:37 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/11 19:36:59 joerg Exp $
 #
 
 DISTNAME=		Math-Pari-2.010501
@@ -26,7 +26,7 @@ post-extract:
 	  cd ${PKGSRCDIR}/math/pari && ${MAKE} configure; \
 	fi
 	${RM} -f ${WRKSRC}/pari-*
-	${LN} -sf ${PKGSRCDIR}/math/pari/${WRKDIR_BASENAME}/pari-* ${WRKSRC}/
+	${LN} -sf ${WRKSRC}/../../../../math/pari/${WRKDIR_BASENAME}/pari-* ${WRKSRC}/
 
 pre-clean:
 	cd ${PKGSRCDIR}/math/pari && ${MAKE} clean
