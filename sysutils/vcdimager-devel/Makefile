@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2005/10/29 06:17:20 grant Exp $
+# $NetBSD: Makefile,v 1.31 2006/01/11 02:23:19 ben Exp $
 #
 
-DISTNAME=	vcdimager-0.7.22
-PKGREVISION=	1
+DISTNAME=	vcdimager-0.7.23
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/
+PKGREVISION=	1
 
 MAINTAINER=	ben@NetBSD.org
 HOMEPAGE=	http://www.vcdimager.org/
