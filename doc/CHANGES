@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12449 2006/01/11 02:25:05 ben Exp $
+$NetBSD: CHANGES,v 1.12450 2006/01/11 03:12:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -217,3 +217,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/ircd-hybrid to 7.2.0nb1 [adrianp 2006-01-10]
 	Updated www/liferea to 1.0 [wiz 2006-01-10]
 	Updated sysutils/vcdimager-devel to 0.7.23nb1 [ben 2006-01-10]
+	Added devel/cqual version 0.991 [rillig 2006-01-11]
