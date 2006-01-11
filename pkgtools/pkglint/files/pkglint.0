@@ -19,7 +19,7 @@ DDEESSCCRRIIPPTTIIOONN
            --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list
                                of checks, see below.
 
-           --FF| ----aauuttooffiixx       Repair trivial things automatically.  Currently
+           --FF|----aauuttooffiixx        Repair trivial things automatically.  Currently
                                this only works for the synchronization of cat-
                                egory _M_a_k_e_f_i_l_es.
 
