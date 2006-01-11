@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2006/01/11 23:19:56 joerg Exp $
+
+--- src/libsablevm/Makefile.in.orig	2006-01-11 23:05:18.000000000 +0000
++++ src/libsablevm/Makefile.in
+@@ -341,7 +341,7 @@ noinst_HEADERS = \
+ 	util.m4.c \
+ 	vm_args.m4.c
+ 
+-libsablevm_la_LIBADD = -lpthread -lm -lffi -lltdl -lrt
++libsablevm_la_LIBADD = -lm -lffi -lltdl ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ libsablevm_la_LDFLAGS = -release @LIBRELEASE@
+ INCLUDES = \
+ 	-I$(srcdir)/include -I$(srcdir)/inlinability \
