@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.462 2006/01/11 12:25:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.463 2006/01/11 22:57:10 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1958,7 +1958,7 @@ sub checkline_mk_shelltext($$) {
 			: ($state == SCST_MKDIR) ? SCST_MKDIR
 			: ($state == SCST_INSTALL && $shellword eq "-d") ? SCST_INSTALL_D
 			: ($state == SCST_INSTALL || $state == SCST_INSTALL_D) ? (
-				  ($shellword =~ qr"^-[ogm]$") ? SCST_START
+				  ($shellword =~ qr"^-[ogm]$") ? SCST_CONT
 				: $state)
 			: ($state == SCST_PAX) ? (
 				  ($shellword eq "-s") ? SCST_PAX_S
@@ -2066,6 +2066,9 @@ sub checkline_mk_vartype_basic($$$$$) {
 
 		} elsif ($value =~ qr"^-.*") {
 			$line->log_warning("Unknown compiler flag \"${value}\".");
+
+		} elsif ($value =~ regex_unresolved) {
+			$line->log_debug("Unresolved CFLAG: ${value}\n");
 
 		} else {
 			$line->log_warning("Compiler flag \"${value}\" does not start with a dash.");
