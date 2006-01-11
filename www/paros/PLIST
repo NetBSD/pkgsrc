@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/11 18:59:36 salo Exp $
+bin/paros
+lib/paros/db/def.txt
+lib/paros/db/parosdb.backup
+lib/paros/db/parosdb.data
+lib/paros/db/parosdb.properties
+lib/paros/db/parosdb.script
+lib/paros/db/startmanager.bat
+lib/paros/db/startserver.bat
+lib/paros/filter/dummy.txt
+lib/paros/ieembed.exe
+lib/paros/jdic.dll
+lib/paros/libjdic.so
+lib/paros/libmozembed-linux-gtk1.2.so
+lib/paros/libmozembed-linux-gtk2.so
+lib/paros/libtray.so
+lib/paros/license/apachelicense-2.0.txt
+lib/paros/license/copying
+lib/paros/license/hsqldb_lic.txt
+lib/paros/license/hypersonic_lic.txt
+lib/paros/license/theclarifiedartisticlicense.htm
+lib/paros/license/theclarifiedartisticlicense.rtf
+lib/paros/log/dummy.txt
+lib/paros/mozembed-linux-gtk1.2
+lib/paros/mozembed-linux-gtk2
+lib/paros/mozembed.exe
+lib/paros/paros.jar
+lib/paros/paros_logo.ico
+lib/paros/plugin/dummy.txt
+lib/paros/release.txt
+lib/paros/session/dummy.txt
+lib/paros/startserver.bat
+lib/paros/startserver.sh
+lib/paros/tray.dll
+lib/paros/xml/alert.dtd
+lib/paros/xml/alert.xml
+lib/paros/xml/alertdef.dtd
+lib/paros/xml/alertdef.xml
+lib/paros/xml/config.dtd
+lib/paros/xml/config.xml
+lib/paros/xml/copy of reportlatestscan.xsl
+lib/paros/xml/log4j.properties
+lib/paros/xml/reportlatestscan.xsl
+lib/paros/xml/scanpolicy.xml
+lib/paros/xml/session.dtd
+lib/paros/xml/session.xml
+lib/paros/xml/test.xml
+lib/paros/xml/untitledsession.xml
+@dirrm lib/paros/xml
+@dirrm lib/paros/session
+@dirrm lib/paros/plugin
+@dirrm lib/paros/log
+@dirrm lib/paros/license
+@dirrm lib/paros/filter
+@dirrm lib/paros/db
+@dirrm lib/paros
