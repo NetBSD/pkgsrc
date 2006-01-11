@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/12/05 20:50:28 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2006/01/11 21:06:37 joerg Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -29,7 +29,11 @@ TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 
-PKGSRC_TCL_SRC_DIR=	${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl${TCL_VERSION}
+PKGSRCDIR.tcl=		${.CURDIR}/../../lang/tcl
+WRKSRC.tcl_cmd=		\
+	cd ${PKGSRCDIR.tcl} && ${MAKE} show-var VARNAME=WRKSRC
+
+PKGSRC_TCL_SRC_DIR=	${WRKSRC.tcl_cmd:sh}/../
 CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR=${PKGSRC_TCL_SRC_DIR:Q}
 
 MAKE_ENV+=		GTAR=${GTAR:Q} CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} \
@@ -44,7 +48,7 @@ INSTALLATION_DIRS=	bin include
 post-extract:
 	@${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
 	@if [ ! -r ${PKGSRC_TCL_SRC_DIR} ]; then	\
-		cd ../../lang/tcl && ${MAKE} extract;			\
+		cd ${PKGSRCDIR.tcl} && ${MAKE} extract;			\
 	fi
 
 post-build:
@@ -60,6 +64,6 @@ post-install:
 # so...
 
 pre-clean:
-	@cd ../../lang/tcl && ${MAKE} clean
+	@cd ${PKGSRCDIR.tcl} && ${MAKE} clean
 
 .include "../../mk/bsd.pkg.mk"
