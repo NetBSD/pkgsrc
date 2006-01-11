@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.461 2006/01/11 04:29:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.462 2006/01/11 12:25:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1315,15 +1315,17 @@ sub checkperms($) {
 	}
 }
 
-sub resolve_relative_path($) {
-	my ($relpath) = @_;
+sub resolve_relative_path($$) {
+	my ($relpath, $adjust_depth) = @_;
 
 	$relpath =~ s,\$\{PKGSRCDIR\},$current_dir/$pkgsrcdir,;
 	$relpath =~ s,\$\{\.CURDIR\},.,;
 	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,;
 	$relpath =~ s,\$\{SUSE_DIR_PREFIX\},suse91,;
 	$relpath =~ s,\$\{PYPKGSRCDIR\},../../lang/python23,;
-	$relpath =~ s,\.\./\.\.,$pkgsrcdir,;
+	if ($adjust_depth) {
+		$relpath =~ s,\.\./\.\.,$pkgsrcdir,;
+	}
 	if (defined($pkgdir)) {
 		$relpath =~ s,\$\{PKGDIR\},$pkgdir,g;
 	}
@@ -1347,7 +1349,7 @@ sub expand_variable($$) {
 		return undef;
 	}
 
-	$value = resolve_relative_path($value);
+	$value = resolve_relative_path($value, true);
 	if ($value =~ regex_unresolved) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "[expand_variable] The variable ${varname} could not be resolved completely. Its value is \"${value}\".");
 	}
@@ -1398,7 +1400,7 @@ sub readmakefile($$$$) {
 		# try to get any included file
 		my $is_include_line = false;
 		if ($text =~ qr"^\.\s*include\s+\"(.*)\"$") {
-			$includefile = resolve_relative_path($1);
+			$includefile = resolve_relative_path($1, true);
 			if ($includefile =~ regex_unresolved) {
 				if ($file !~ qr"/mk/") {
 					$line->log_note("Skipping include file \"${includefile}\". This may result in false warnings.");
@@ -1580,7 +1582,7 @@ sub checkline_relative_path($$) {
 	if (!$is_wip && $path =~ qr"/wip/") {
 		$line->log_error("A pkgsrc package must not depend on any outside package.");
 	}
-	$path = resolve_relative_path($path);
+	$path = resolve_relative_path($path, true);
 	if ($path =~ regex_unresolved) {
 		$line->log_info("Unresolved path: \"${path}\".");
 	} elsif (!-e "${current_dir}/${path}") {
@@ -1592,7 +1594,7 @@ sub checkline_relative_pkgdir($$) {
 	my ($line, $path) = @_;
 
 	checkline_relative_path($line, $path);
-	$path = resolve_relative_path($path);
+	$path = resolve_relative_path($path, false);
 
 	if ($path !~ qr"^\.\./\.\./[^/]+/[^/]+$") {
 		$line->log_warning("\"${path}\" is not a valid relative package directory.");
