@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.18 2006/01/07 21:42:34 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.19 2006/01/11 22:35:31 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -399,15 +399,52 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
 <sect1 id="build.install">
 <title>The <emphasis>install</emphasis> phase</title>
 
-	  <para>Once the build stage has completed, the final step is to install
-	    the software in public directories, so users can access
-	    the programs and files.  As in the
-	    build-target, <varname>$MAKE_PROGRAM</varname> is invoked on
-	    <varname>$MAKEFILE</varname> here, but with the
-	    <varname>$INSTALL_TARGET</varname> instead, the latter defaulting to
-	    <quote>install</quote> (plus <quote>install.man</quote>, if
-	    <varname>USE_IMAKE</varname> is set).</para>
+	<para>Once the build stage has completed, the final step is to
+	install the software in public directories, so users can access
+	the programs and files.  As in the build-target,
+	<varname>MAKE_PROGRAM</varname> is invoked on
+	<varname>MAKEFILE</varname> here, but with the
+	<varname>INSTALL_TARGET</varname> instead, the latter defaulting
+	to <quote>install</quote> (plus <quote>install.man</quote>, if
+	<varname>USE_IMAKE</varname> is set).</para>
 
+	<para>In the <emphasis>install</emphasis> phase, the following
+	variables are useful. They are all variations of the
+	&man.install.1; command that have the owner, group and
+	permissions preset. <varname>INSTALL</varname> is the plain
+	install command. The specialized variants, together with their
+	intended use, are:</para>
+
+	<variablelist>
+<!-- template:
+	<varlistentry><term><varname></varname></term>
+		<listitem><para></para></listitem></varlistentry>
+-->
+	<varlistentry><term><varname>INSTALL_PROGRAM_DIR</varname></term>
+		<listitem><para>directories that contain binaries</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_SCRIPT_DIR</varname></term>
+		<listitem><para>directories that contain scripts</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_LIB_DIR</varname></term>
+		<listitem><para>directories that contain shared and static libraries</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_DATA_DIR</varname></term>
+		<listitem><para>directories that contain data files</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_MAN_DIR</varname></term>
+		<listitem><para>directories that contain man pages</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_PROGRAM</varname></term>
+		<listitem><para>binaries that can be stripped from debugging symbols</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_SCRIPT</varname></term>
+		<listitem><para>binaries that cannot be unstripped</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_GAME</varname></term>
+		<listitem><para>game binaries</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_LIB</varname></term>
+		<listitem><para>shared and static libraries</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_DATA</varname></term>
+		<listitem><para>data files</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_GAME_DATA</varname></term>
+		<listitem><para>data files for games</para></listitem></varlistentry>
+	<varlistentry><term><varname>INSTALL_MAN</varname></term>
+		<listitem><para>man pages</para></listitem></varlistentry>
+	</variablelist>
 </sect1>
 
 <sect1 id="build.package">
