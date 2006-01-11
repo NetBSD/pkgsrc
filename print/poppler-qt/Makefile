@@ -1,21 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2005/12/31 00:35:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/11 17:49:35 reed Exp $
 #
 
-DISTNAME=		poppler-${POPPLER_VERS}
-PKGNAME=		poppler-qt-${POPPLER_VERS}
-CATEGORIES=		print
-MASTER_SITES=		http://poppler.freedesktop.org/
+.include "../../print/poppler/Makefile.common"
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://poppler.freedesktop.org/
+PKGNAME=		poppler-qt-${POPPLER_VERS}
 COMMENT=		PDF rendering library (QT wrapper)
 
-USE_TOOLS+=		pkg-config
-USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-qt.pc.in
 
 INCS=-I. `pkg-config poppler --cflags` -I${QTDIR}/include
-POPPLER_VERS=0.4.3
 
 do-build:
 	(cd ${WRKSRC}/qt; \
@@ -34,6 +27,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/qt/poppler-qt.h ${PREFIX}/include/poppler
 	${INSTALL_DATA} ${WRKSRC}/poppler-qt.pc ${PREFIX}/lib/pkgconfig
 
+BUILDLINK_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
 .include "../../print/poppler/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
