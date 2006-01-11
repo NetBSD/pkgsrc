@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.460 2006/01/09 23:14:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.461 2006/01/11 04:29:12 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -280,7 +280,7 @@ sub set_show_source_flag() {
 
 #== End of PkgLint::Logging ===============================================
 
-package PkgLint::FileUtil::Line;
+package PkgLint::Line;
 #==========================================================================
 # When files are read in by pkglint, they are interpreted in terms of
 # lines. For Makefiles, line continuations are handled properly, allowing
@@ -431,7 +431,7 @@ sub set_text($$) {
 	$self->[CHANGED] = true;
 }
 
-#== End of PkgLint::FileUtil::Line ========================================
+#== End of PkgLint::Line ==================================================
 
 package PkgLint::FileUtil;
 #==========================================================================
@@ -517,7 +517,7 @@ sub get_logical_line($$$) {
 	$lastlineno = $lines->[$lineno]->[0];
 	${$ref_lineno} = $lineno + 1;
 
-	return PkgLint::FileUtil::Line->new($fname,
+	return PkgLint::Line->new($fname,
 	    $firstlineno == $lastlineno
 		? $firstlineno
 		: "$firstlineno--$lastlineno",
@@ -545,7 +545,7 @@ sub load_lines($$) {
 			my $text = $physline->[1];
 
 			$text =~ s/\n$//;
-			push(@{$loglines}, PkgLint::FileUtil::Line->new($fname, $physline->[0], $text, [$physline]));
+			push(@{$loglines}, PkgLint::Line->new($fname, $physline->[0], $text, [$physline]));
 		}
 	}
 
