@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/11 18:36:11 wiz Exp $
+
+SHA1 (replex-0.1.4.tar.gz) = 9d381da25aac0406791e290bff3f27b78ec034ed
+RMD160 (replex-0.1.4.tar.gz) = 4fc8b1e19ca9dd0b362eeac57a797d76b556b250
+Size (replex-0.1.4.tar.gz) = 43292 bytes
+SHA1 (patch-aa) = 11d1835f90742170e204bf3f877359d8508b60af
+SHA1 (patch-ab) = e1d8876ed8db03599c3e92de157401defc0cd893
