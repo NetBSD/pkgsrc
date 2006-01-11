@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: id3lib_strings.h,v 1.2 2004/06/07 19:36:40 shannonjr Exp $
+// $Id: id3lib_strings.h,v 1.3 2006/01/11 16:41:45 joerg Exp $
 
 // id3lib: a software library for creating and manipulating id3v1/v2 tags
 // Copyright 1999, 2000  Scott Thomas Haug
@@ -117,7 +117,8 @@ namespace std
       { return eq_int_type(__c, eof()) ? int_type(0) : __c; }
     };
 
-#ifndef _GLIBCPP_USE_WCHAR_T
+/* gcc-3.4 defines _GLIBCXX_USE_WCHAR_T instead of _GLIBCPP_USE_WCHAR_T */
+#if !defined(_GLIBCPP_USE_WCHAR_T) && !defined(_GLIBCXX_USE_WCHAR_T)
 #if (defined(ID3_NEED_WCHAR_TEMPLATE))
    template<>
      struct char_traits<wchar_t>
@@ -197,7 +198,7 @@ namespace dami
   typedef std::basic_string<char>           String;
   typedef std::basic_string<unsigned char> BString;
   typedef std::basic_string<wchar_t>       WString;
-}
+};
 
 #endif /* _ID3LIB_STRINGS_H_ */
 
