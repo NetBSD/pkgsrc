@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2005/11/23 06:20:36 minskim Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/01/11 18:23:01 wiz Exp $
 #
 
 DISTNAME=	qdbm-${QDBM_VERSION}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qdbm/}
-QDBM_VERSION=	1.8.34
+QDBM_VERSION=	1.8.40
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://qdbm.sourceforge.net/
