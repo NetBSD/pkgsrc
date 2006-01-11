@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/11 03:12:38 rillig Exp $
+
+Removed C++-style comments.
+
+--- src/qtype.c.orig	2003-10-06 23:28:57.000000000 +0200
++++ src/qtype.c	2006-01-11 03:26:12.000000000 +0100
+@@ -1156,7 +1156,7 @@ qtype get_fdecl_qtype(const char *tag_na
+   type lifted_t;
+   struct ctq_info ctqi;
+   const char *fname;
+-  char *name = NULL;// = field_decl_name(fdecl);
++  char *name = NULL;
+   qtype result;
+ 
+   fname = field_decl_name(fdecl) ? field_decl_name(fdecl) : "(anonymous)";
+@@ -3352,8 +3352,6 @@ static bool mkXeq_qtype(location loc, qu
+ 	      new_link = t1;
+ 	    }
+ 	      
+-	  //new_ecr->u.tag.defined |= new_link->u.tag.defined;
+-	  //new_ecr->u.tag.transparent_union |= new_link->u.tag.transparent_union;
+ 	  ecr_fields = new_ecr->u.tag.fields;
+ 	  ecr_name = new_ecr->u.tag.name;
+ 	  kind = (t1->kind == tk_struct) ? "struct" : "union";
