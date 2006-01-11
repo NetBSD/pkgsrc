@@ -1,13 +1,21 @@
-$NetBSD: patch-ab,v 1.1 2005/07/29 04:50:39 grant Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/11 18:13:25 wiz Exp $
 
---- imcomm/Makefile.orig	2005-04-14 02:22:49.000000000 +1000
+--- imcomm/Makefile.orig	2006-01-09 12:37:59.000000000 -0600
 +++ imcomm/Makefile
-@@ -8,7 +8,7 @@ RANLIB=ranlib
+@@ -8,14 +8,14 @@ RANLIB=ranlib
  LIB=libimcomm.a
  #CC=i386-pc-msdosdjgpp-gcc
  #CC=mingw32-gcc
 -CC=gcc
 +#CC=gcc
- CFLAGS=-O
+ CFLAGS=-Os -Wall -pipe
  RM=rm -f
  #CFLAGS+=-I/usr/local/djgpp/watt/inc
+ #
+ # Add -lsocket -lnsl for Solaris
+ #
+-LIBS=-limcomm 
++LIBS+=-limcomm 
+ #LIBS+=-lwatt -L/usr/local/djgpp/watt/lib
+ LDFLAGS=-L.
+ SRCS=misc.c packet.c flap.c bos_signon.c imcomm.c snac.c md5.c proxy.c
