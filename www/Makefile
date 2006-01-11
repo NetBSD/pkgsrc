@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.428 2006/01/05 19:15:18 garbled Exp $
+# $NetBSD: Makefile,v 1.429 2006/01/11 19:01:08 salo Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -245,6 +245,7 @@ SUBDIR+=	p5-WWW-Mechanize
 SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libapreq2
 SUBDIR+=	p5-libwww
+SUBDIR+=	paros
 SUBDIR+=	pear-HTML_Common
 SUBDIR+=	pear-HTML_Select
 SUBDIR+=	pear-HTTP_Request
