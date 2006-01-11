@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2005/11/23 06:20:36 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2006/01/11 18:23:02 wiz Exp $
 
 --- java/Makefile.in.orig	2005-08-18 05:18:37.000000000 +0900
 +++ java/Makefile.in
@@ -11,3 +11,21 @@ $NetBSD: patch-ad,v 1.1 2005/11/23 06:20:36 minskim Exp $
  DESTDIR =
  
  # Building binaries
+@@ -50,7 +50,7 @@ JAVAH = @JAVAH@
+ JAVADOC = @JAVADOC@
+ JAVARUN = @JAVARUN@
+ CC = @CC@
+-RELCFLAGS = -O2 -DNDEBUG
++RELCFLAGS = -O2 -DNDEBUG ${PTHREAD_CFLAGS}
+ CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I$(HOME)/include -I/usr/local/include \
+   -I$(MYJAVAHOME)/include -I$(MYJAVAHOME)/include/$(JVMPLATFORM) -I$(MYJAVAHOME)/Headers \
+   @MYDEFS@ -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D__EXTENSIONS__=1 -D_HPUX_SOURCE=1 \
+@@ -59,7 +59,7 @@ CPPFLAGS = -I$(srcdir) -I$(srcdir)/.. -I
+ CFLAGS = -Wall -fPIC -fsigned-char $(RELCFLAGS)
+ LD = @LD@
+ LIBS = -lqdbm @LIBS@
+-LIBLDFLAGS = -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
++LIBLDFLAGS = @LDFLAGS@ -L. -L$(srcdir)/.. -L$(HOME)/lib -L/usr/local/lib $(LIBS)
+ RUNENV = LD_LIBRARY_PATH=.:..:/lib:/usr/lib:$(HOME)/lib:/usr/local/lib
+ 
+ 
