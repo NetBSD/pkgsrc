@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12450 2006/01/11 03:12:46 rillig Exp $
+$NetBSD: CHANGES,v 1.12451 2006/01/11 15:22:11 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/liferea to 1.0 [wiz 2006-01-10]
 	Updated sysutils/vcdimager-devel to 0.7.23nb1 [ben 2006-01-10]
 	Added devel/cqual version 0.991 [rillig 2006-01-11]
+	Removed sysutils/cdrecord-xcdroast [xtraeme 2006-01-11] 
