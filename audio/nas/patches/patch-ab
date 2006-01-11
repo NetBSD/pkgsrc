@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.11 2005/06/04 23:43:51 markd Exp $
+$NetBSD: patch-ab,v 1.12 2006/01/11 11:32:38 markd Exp $
 
 --- server/Imakefile.orig	2005-06-04 16:40:58.000000000 +1200
 +++ server/Imakefile
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.11 2005/06/04 23:43:51 markd Exp $
  # define CanBuildAuServer	YES
  
  # if defined(cygwinArchitecture)
-@@ -213,6 +213,7 @@ clean::
+@@ -213,14 +213,19 @@ clean::
  	$(RM) $(ALL)
  
   ETCDIR = NasConfigSearchPath
@@ -28,11 +28,15 @@ $NetBSD: patch-ab,v 1.11 2005/06/04 23:43:51 markd Exp $
  
  InstallManPage(nasd,$(MANDIR))
  #ifdef InstallGenManPage
-@@ -220,7 +221,7 @@ InstallGenManPage(nasd.conf,$(FILEMANDIR
+ InstallGenManPage(nasd.conf,$(FILEMANDIR),$(FILEMANSUFFIX))
  #else
++#ifdef InstallNamedTarget
++InstallNamedTarget(install.man,nasd.conf.man,$(INSTMANFLAGS),$(FILEMANDIR),nasd.conf.$(FILEMANSUFFIX))
++#else
  InstallManPage(nasd.conf,$(FILEMANDIR))
  #endif
 -InstallNonExecFile(nasd.conf.eg,$(ETCDIR))
++#endif
 +InstallNonExecFile(nasd.conf.eg,$(EGDIR))
  
  #else /* CanBuildAuServer */
