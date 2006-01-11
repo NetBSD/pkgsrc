@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/11 18:36:11 wiz Exp $
+
+--- Makefile.orig	2005-03-27 21:54:24.000000000 +0200
++++ Makefile
+@@ -1,16 +1,17 @@
+ VERSION = 0.1.4
+ DISTNAME = replex-$(VERSION)
+ TARNAME = $(DISTNAME).tar.gz	
+-INCS   = -I..
++INCS   =
+ CFLAGS =  -g -Wall -O2 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+-LIBS   = -L. 
++LIBS   =
+ MFLAG  = -M
+ OBJS = element.o pes.o mpg_common.o ts.o ringbuffer.o avi.o multiplex.o
+ 
+ SRC  =  avi.c  element.c mpg_common.c pes.c replex.c ringbuffer.c ts.c multiplex.c
+ HEADERS = element.h pes.h mpg_common.h ts.h ringbuffer.h avi.h replex.h multiplex.h
+ EXTRA = COPYING README TODO CHANGES
+-DESTDIR = /usr/local
++#DESTDIR =
++#PREFIX = /usr/local
+ 
+ 
+ .PHONY: depend clean install uninstall
+@@ -37,13 +38,15 @@ dist: $(SRC) $(HEADERS) Makefile
+ %.o:    %.c %.h
+ 	$(CC) -c $(CFLAGS) $(INCS) $(DEFINES) $<
+ 
+-install: libreplex.a replex
+-	install -m 644 libreplex.a $(DESTDIR)/lib/
+-	install -m 755 replex $(DESTDIR)/bin/
++install: README replex
++	$(BSD_INSTALL_PROGRAM) replex $(PREFIX)/bin/
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/doc/replex/
++	$(BSD_INSTALL_DATA) README $(PREFIX)/share/doc/replex/
+ 
+ uninstall:
+-	rm -f $(DESTDIR)/lib/libreplex.a
+-	rm -f $(DESTDIR)/bin/replex
++	rm -f $(PREFIX)/share/doc/replex/README
++	rmdir $(PREFIX)/share/doc/replex
++	rm -f $(PREFIX)/bin/replex
+ 
+ 
+ .depend: 
