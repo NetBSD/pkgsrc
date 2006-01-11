@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/11 03:12:38 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/11 22:50:21 rillig Exp $
 bin/cqual
 bin/gcqual
 bin/iquals
@@ -14,6 +14,7 @@ share/cqual/lattice
 share/cqual/linux-syscalls.cq
 share/cqual/prelude.cq
 share/cqual/proto-noderef.cq
+share/doc/cqual/user-guide.pdf
 share/emacs/site-lisp/cqual/avltree.el
 share/emacs/site-lisp/cqual/cqual-pam.el
 share/emacs/site-lisp/cqual/elib-node.el
@@ -28,6 +29,29 @@ share/emacs/site-lisp/cqual/pam-util.el
 share/emacs/site-lisp/cqual/pam-vars.el
 share/emacs/site-lisp/cqual/pam-window.el
 share/emacs/site-lisp/cqual/stack-m.el
+share/examples/cqual/README
+share/examples/cqual/linux-lock.c
+share/examples/cqual/linux-lock.i
+share/examples/cqual/linux-lock2.c
+share/examples/cqual/linux-lock2.i
+share/examples/cqual/lock.c
+share/examples/cqual/lock2.c
+share/examples/cqual/lock3.c
+share/examples/cqual/rcs1.c
+share/examples/cqual/rcs2.c
+share/examples/cqual/rcs3.c
+share/examples/cqual/taint-cast.c
+share/examples/cqual/taint-const-subtyping.c
+share/examples/cqual/taint-poly.c
+share/examples/cqual/taint-varargs.c
+share/examples/cqual/taint0.c
+share/examples/cqual/taint1.c
+share/examples/cqual/taint2.c
+share/examples/cqual/user0.c
+share/examples/cqual/user1.c
+share/examples/cqual/y2k1.c
+share/examples/cqual/y2k2.c
+share/examples/cqual/y2k3.c
+share/examples/cqual/y2k4.c
 @dirrm share/emacs/site-lisp/cqual
-@dirrm share/emacs/site-lisp
 @dirrm share/cqual
