@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.8 2005/10/05 05:46:54 schmonz Exp $
+# $NetBSD: options.mk,v 1.9 2006/01/11 17:20:32 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=	inet6 djbdns-ignoreip2 djbdns-tinydns64
 
 .if ${MACHINE_ARCH} == "sparc64" || \
 	${MACHINE_ARCH} == "alpha" || \
-	${MACHINE_ARCH} == "amd64"
+	${MACHINE_ARCH} == "x86_64"
 PKG_SUGGESTED_OPTIONS+=   djbdns-tinydns64
 .endif
 
@@ -26,7 +26,6 @@ SITES_${IGNOREIP2_PATCH}=	http://www.tinydns.org/
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-tinydns64)
-TINYDNS64_PATCH=		tinydns64.diff
-PATCHFILES+=			${TINYDNS64_PATCH}
-SITES_${TINYDNS64_PATCH}=	http://www.pwrlock.de/br/
+post-patch:
+	@cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-tinydns64
 .endif
