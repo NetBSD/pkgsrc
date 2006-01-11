@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/11 03:12:38 rillig Exp $
+
+SHA1 (cqual-0.991.tar.gz) = f559af6947465ca242f19c1f499c7cb004e713e4
+RMD160 (cqual-0.991.tar.gz) = e3837a11c75f750196ec4be7f991ec519c1260f6
+Size (cqual-0.991.tar.gz) = 1197696 bytes
+SHA1 (patch-aa) = bf21f9d9213beb54847a79fdf1213c7378ac062d

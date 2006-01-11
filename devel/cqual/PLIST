@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/11 03:12:38 rillig Exp $
+bin/cqual
+bin/gcqual
+bin/iquals
+bin/kqual
+bin/oldcqual
+bin/oldiquals
+bin/parser
+bin/remblanks
+bin/remquals
+bin/rinf
+info/pam-mode.info
+share/cqual/lattice
+share/cqual/linux-syscalls.cq
+share/cqual/prelude.cq
+share/cqual/proto-noderef.cq
+share/emacs/site-lisp/cqual/avltree.el
+share/emacs/site-lisp/cqual/cqual-pam.el
+share/emacs/site-lisp/cqual/elib-node.el
+share/emacs/site-lisp/cqual/pam-3.el
+share/emacs/site-lisp/cqual/pam-blob.el
+share/emacs/site-lisp/cqual/pam-copyright.el
+share/emacs/site-lisp/cqual/pam-executions.el
+share/emacs/site-lisp/cqual/pam-faces.el
+share/emacs/site-lisp/cqual/pam-hyper.el
+share/emacs/site-lisp/cqual/pam-overlays.el
+share/emacs/site-lisp/cqual/pam-util.el
+share/emacs/site-lisp/cqual/pam-vars.el
+share/emacs/site-lisp/cqual/pam-window.el
+share/emacs/site-lisp/cqual/stack-m.el
+@dirrm share/emacs/site-lisp/cqual
+@dirrm share/emacs/site-lisp
+@dirrm share/cqual
