@@ -1,0 +1,4 @@
+A Java based HTTP/HTTPS proxy for assessing web application vulnerabilities.
+It supports editing/viewing HTTP messages on-the-fly. Other features include
+spiders, client certificate, proxy-chaining, intelligent scanning for XSS
+and SQL injections and more.
