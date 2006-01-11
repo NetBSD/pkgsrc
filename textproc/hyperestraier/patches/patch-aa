@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/23 19:13:44 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/11 18:26:59 wiz Exp $
 
---- configure.orig	2005-10-21 15:21:58.000000000 +0900
+--- configure.orig	2005-12-16 11:48:26.000000000 +0900
 +++ configure
-@@ -2660,7 +2660,7 @@ if test "${ac_cv_lib_pthread_main+set}" 
+@@ -2743,7 +2743,7 @@ if test "${ac_cv_lib_pthread_main+set}" 
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/10/23 19:13:44 minskim Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -2713,7 +2713,9 @@ fi
+@@ -2796,7 +2796,9 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_main" >&5
  echo "${ECHO_T}$ac_cv_lib_pthread_main" >&6
  if test $ac_cv_lib_pthread_main = yes; then
