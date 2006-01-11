@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12452 2006/01/11 16:04:01 joerg Exp $
+$NetBSD: CHANGES,v 1.12453 2006/01/11 16:11:25 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -220,3 +220,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/cqual version 0.991 [rillig 2006-01-11]
 	Removed sysutils/cdrecord-xcdroast [xtraeme 2006-01-11] 
 	Updated converters/cn2jp to 1.4bnb2 [joerg 2006-01-11]
+	Updated print/poppler to 0.4.4 [reed 2006-01-11]
