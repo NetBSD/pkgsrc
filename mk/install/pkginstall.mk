@@ -1,4 +1,4 @@
-# $NetBSD: pkginstall.mk,v 1.2 2005/12/29 13:47:43 jlam Exp $
+# $NetBSD: pkginstall.mk,v 1.3 2006/01/11 04:42:12 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and determines whether
 # or not the bsd.pkginstall.mk implementation file should be included.
@@ -7,6 +7,9 @@
 #	that the pkginstall framework should be used.  These variables
 #	should be extracted from bsd.pkginstall.mk and are typically the
 #	variables named in the INSTALL_<SCRIPT>_MEMBERS lists.
+#
+# USE_PKGINSTALL may be set to "yes" to force the pkginstall framework
+#	to be used.
 #
 # The variables listed in _PKGINSTALL_VARS are documented in
 # mk/install/bsd.pkginstall.mk.
@@ -35,12 +38,19 @@ _PKGINSTALL_VARS+=	FONTS_DIRS.ttf FONTS_DIRS.type1 FONTS_DIRS.x11
 #
 _PKGINSTALL_VARS+=	CONF_DEPENDS
 
-_USE_PKGINSTALL=	no
-.for _var_ in ${_PKGINSTALL_VARS}
-.  if defined(${_var_}) && !empty(${_var_}:M*)
+.if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
 _USE_PKGINSTALL=	yes
-.  endif
-.endfor
+.else
+_USE_PKGINSTALL=	no
+.endif
+
+.if !empty(_USE_PKGINSTALL:M[nN][oO])
+.  for _var_ in ${_PKGINSTALL_VARS}
+.    if defined(${_var_}) && !empty(${_var_}:M*)
+_USE_PKGINSTALL=	yes
+.    endif
+.  endfor
+.endif
 
 .if !empty(_USE_PKGINSTALL:M[yY][eE][sS])
 .  include "../../mk/install/bsd.pkginstall.mk"
