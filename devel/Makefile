@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.708 2006/01/08 03:29:40 minskim Exp $
+# $NetBSD: Makefile,v 1.709 2006/01/11 03:15:15 rillig Exp $
 #
 
 COMMENT=	Development utilities
@@ -80,6 +80,7 @@ SUBDIR+=	codeville
 SUBDIR+=	cook
 SUBDIR+=	cppunit
 SUBDIR+=	cpuflags
+SUBDIR+=	cqual
 SUBDIR+=	cscope
 SUBDIR+=	cssc
 SUBDIR+=	cvs
