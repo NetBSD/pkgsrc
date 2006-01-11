@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/01/11 19:36:59 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/01/11 21:24:09 joerg Exp $
 #
 
 DISTNAME=		Math-Pari-2.010501
@@ -21,15 +21,17 @@ PERL5_PACKLIST=		auto/Math/Pari/.packlist
 #TEST_TARGET=		# the tests need looking at
 
 # XXX: could be improved...
+PKGSRCDIR.pari=		${.CURDIR}/../../math/pari
+WRKSRC.pari_cmd=		\
+	cd ${PKGSRCDIR.pari} && ${MAKE} show-var VARNAME=WRKSRC
+
 post-extract:
-	if [ ! -d ${PKGSRCDIR}/math/pari/${WRKDIR_BASENAME} ]; then \
-	  cd ${PKGSRCDIR}/math/pari && ${MAKE} configure; \
-	fi
+	cd ${PKGSRCDIR.pari:Q} && ${MAKE} configure;		\
 	${RM} -f ${WRKSRC}/pari-*
-	${LN} -sf ${WRKSRC}/../../../../math/pari/${WRKDIR_BASENAME}/pari-* ${WRKSRC}/
+	${LN} -sf ${WRKSRC.pari_cmd:sh:Q} ${WRKSRC}
 
 pre-clean:
-	cd ${PKGSRCDIR}/math/pari && ${MAKE} clean
+	cd ${PKGSRCDIR.pari:Q} && ${MAKE} clean
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
