@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/11 18:36:11 wiz Exp $
+bin/replex
+share/doc/replex/README
+@dirrm share/doc/replex
