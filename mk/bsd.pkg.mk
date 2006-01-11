@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1785 2006/01/05 23:18:26 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1786 2006/01/11 05:48:19 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -498,7 +498,6 @@ PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 		RMDIR=${RMDIR:Q}					\
 		RM=${RM:Q}						\
 		TRUE=${TRUE:Q}						\
-		QMAILDIR=${QMAILDIR:Q}					\
 		PKGMANDIR=${PKGMANDIR:Q}
 
 # Handle alternatives
@@ -552,8 +551,7 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 		X11BASE=${X11BASE}					\
 		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}			\
 		ROOT_GROUP=${ROOT_GROUP}				\
-		ROOT_USER=${ROOT_USER}					\
-		QMAILDIR=${QMAILDIR}
+		ROOT_USER=${ROOT_USER}
 
 MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 .endif
