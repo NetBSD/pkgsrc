@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/12/05 20:51:00 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2006/01/11 09:27:27 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
 CATEGORIES=		sysutils
@@ -16,11 +16,8 @@ DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-.if defined(PKG_PHASE) && ${PKG_PHASE} == "configure"
-WRKSRC=			${WRKDIR}/admin/${DISTNAME}/src
-.else
 WRKSRC=			${WRKDIR}/admin/${DISTNAME}
-.endif
+DJB_SLASHPACKAGE=	YES
 
 SAMPLERC=		svscan.sh.sample
 SERVICEDIR?=		${VARBASE}/spool/service
@@ -30,9 +27,6 @@ PLIST_SUBST+=		SERVICEDIR=${SERVICEDIR:Q}
 DEINSTALL_FILE=		${WRKDIR}/.DEINSTALL
 
 INSTALLATION_DIRS=	bin man man/man8 share/examples/daemontools
-
-do-build:
-	cd ${WRKSRC} && package/compile
 
 post-build:
 	${SED}	-e "s,@@PREFIX@@,${PREFIX},"				\
