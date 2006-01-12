@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2005/09/06 08:10:58 abs Exp $
+$NetBSD: patch-ac,v 1.6 2006/01/12 19:48:02 joerg Exp $
 
---- mfs.c.orig	1994-06-22 09:24:51.000000000 -0500
+--- mfs.c.orig	1994-06-22 14:24:51.000000000 +0000
 +++ mfs.c
 @@ -319,17 +319,24 @@ TODO:
  #include <errno.h>
@@ -39,3 +39,12 @@ $NetBSD: patch-ac,v 1.5 2005/09/06 08:10:58 abs Exp $
      struct statvfs fsbuf;
      if (statvfs(cwd, &fsbuf) >= 0)
  #else
+@@ -1182,8 +1189,6 @@ _get_dir(char *name, char *mname, char *
+   (void) find_file(name, &sbuf);
+ 
+   if ((cur_dir = opendir(name)) == NULL) {
+-    extern int errno;
+-
+     Debug0((dbg_fd, "get_dir(): couldn't open '%s' errno = %s\n", name, strerror(errno)));
+     return (NULL);
+   }
