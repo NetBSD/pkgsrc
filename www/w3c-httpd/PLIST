@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:19:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/12 17:37:17 rillig Exp $
 bin/htadm
-etc/w3c-httpd/all.conf
-etc/w3c-httpd/caching.conf
-etc/w3c-httpd/httpd.conf
-etc/w3c-httpd/prot.conf
-etc/w3c-httpd/proxy.conf
-sbin/htimage
-sbin/w3c-httpd
 sbin/cgiparse
 sbin/cgiutils
+sbin/htimage
+sbin/w3c-httpd
+share/examples/w3c-httpd/all.conf
+share/examples/w3c-httpd/caching.conf
+share/examples/w3c-httpd/httpd.conf
+share/examples/w3c-httpd/prot.conf
+share/examples/w3c-httpd/proxy.conf
 share/w3c-httpd/icons/back.xbm
 share/w3c-httpd/icons/binary.xbm
 share/w3c-httpd/icons/binhex.xbm
@@ -33,6 +33,6 @@ share/w3c-httpd/icons/unknown.doc.xbm
 share/w3c-httpd/icons/unknown.old.xbm
 share/w3c-httpd/icons/unknown.xbm
 share/w3c-httpd/icons/uu.xbm
-@dirrm etc/w3c-httpd
 @dirrm share/w3c-httpd/icons
 @dirrm share/w3c-httpd
+@dirrm share/examples/w3c-httpd
