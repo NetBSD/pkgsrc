@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.53 2006/01/07 20:00:00 rillig Exp $
+# $NetBSD: makevars.map,v 1.54 2006/01/12 13:59:42 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -36,6 +36,7 @@ USE_INET6		YesNo
 
 ALL_ENV			List+ of ShellWord
 ALTERNATIVES_FILE	Filename
+APACHE_MODULE		Yes
 BDB185_DEFAULT		Userdefined
 BDBBASE			Readonly
 BDB_ACCEPTED		List of { db1 db2 db3 db4 }
