@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/03/06 12:01:32 grant Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/12 19:57:00 wiz Exp $
 
 .include "../../net/ytalk/Makefile.common"
 
-PKGREVISION=	2
 COMMENT=	Multi-user replacement for UNIX talk
 
 CONFIGURE_ARGS+=--without-x
