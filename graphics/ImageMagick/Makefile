@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2005/12/05 20:50:18 rillig Exp $
+# $NetBSD: Makefile,v 1.134 2006/01/12 04:01:14 jschauma Exp $
 
 .include "Makefile.common"
 
@@ -37,6 +37,12 @@ CFLAGS+=		-O
 
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--without-perl
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro*)
+CFLAGS+=		-c99
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
