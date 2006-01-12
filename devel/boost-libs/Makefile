@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/08/12 20:58:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/12 22:48:46 joerg Exp $
 #
+
+PKGREVISION=	1
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)

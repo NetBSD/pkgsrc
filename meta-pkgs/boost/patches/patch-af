@@ -1,0 +1,62 @@
+$NetBSD: patch-af,v 1.1 2006/01/12 22:48:46 joerg Exp $
+
+--- boost/config/platform/bsd.hpp.orig	2005-12-30 15:54:15.000000000 +0000
++++ boost/config/platform/bsd.hpp
+@@ -9,11 +9,13 @@
+ 
+ //  generic BSD config options:
+ 
+-#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
+ #error "This platform is not BSD"
+ #endif
+ 
+-#ifdef __FreeBSD__
++#ifdef __DragonFly__
++#define BOOST_PLATFORM "DragonFly " BOOST_STRINGIZE(__DragonFly__)
++#elif defined(__FreeBSD__)
+ #define BOOST_PLATFORM "FreeBSD " BOOST_STRINGIZE(__FreeBSD__)
+ #elif defined(__NetBSD__)
+ #define BOOST_PLATFORM "NetBSD " BOOST_STRINGIZE(__NetBSD__)
+@@ -21,12 +23,16 @@
+ #define BOOST_PLATFORM "OpenBSD " BOOST_STRINGIZE(__OpenBSD__)
+ #endif
+ 
++#if defined(__DragonFly__)
++#define _REENTRANT 1
++#endif
++
+ //
+ // is this the correct version check?
+ // FreeBSD has <nl_types.h> but does not
+ // advertise the fact in <unistd.h>:
+ //
+-#if defined(__FreeBSD__) && (__FreeBSD__ >= 3)
++#if defined(__DragonFly__) || (defined(__FreeBSD__) && (__FreeBSD__ >= 3))
+ #  define BOOST_HAS_NL_TYPES_H
+ #endif
+ 
+@@ -34,20 +40,20 @@
+ // FreeBSD 3.x has pthreads support, but defines _POSIX_THREADS in <pthread.h>
+ // and not in <unistd.h>
+ //
+-#if defined(__FreeBSD__) && (__FreeBSD__ <= 3)
++#if defined(__DragonFly__) || defined(__FreeBSD__) && (__FreeBSD__ <= 3)
+ #  define BOOST_HAS_PTHREADS
+ #endif
+ 
+ //
+ // No wide character support in the BSD header files:
+ //
+-#if !(defined(__FreeBSD__) && (__FreeBSD__ >= 5))
++#if !((defined(__FreeBSD__) && (__FreeBSD__ >= 5))) && !defined(__DragonFly__)
+ #  define BOOST_NO_CWCHAR
+ #endif
+ //
+ // The BSD <ctype.h> has macros only, no functions:
+ //
+-#if !defined(__OpenBSD__)
++#if !defined(__OpenBSD__) && !defined(__DragonFly__)
+ #  define BOOST_NO_CTYPE_FUNCTIONS
+ #endif
+ 
