@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.18 2005/12/31 00:03:24 wiz Exp $
+$NetBSD: distinfo,v 1.19 2006/01/12 01:21:27 joerg Exp $
 
 SHA1 (sane-backends-1.0.17.tar.gz) = a73e01575458a5fb7dc265cea50c6740555e1711
 RMD160 (sane-backends-1.0.17.tar.gz) = 43e440712e9da676e235dc6148c5dda347c30e22
 Size (sane-backends-1.0.17.tar.gz) = 3588993 bytes
 SHA1 (patch-aa) = fe4f9771d72512ac6a6c246971cb5940fba184cb
+SHA1 (patch-ab) = e9ed0b400458308a5c6a2631bda475c59e9a4abd
