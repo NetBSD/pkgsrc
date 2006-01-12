@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2005/10/20 14:18:24 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2006/01/12 17:32:16 wiz Exp $
 
 DISTNAME=		gnucash-1.8.12
+PKGREVISION=		1
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -46,11 +47,11 @@ post-install:
 .include "../../devel/g-wrap/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../devel/swig/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../math/guppi/buildlink3.mk"
 .include "../../net/ORBit/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml/buildlink3.mk"
 .include "../../www/gtkhtml/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
