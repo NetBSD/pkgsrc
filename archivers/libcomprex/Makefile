@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/08/10 20:56:10 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/12 13:25:14 joerg Exp $
 
 DISTNAME=	libcomprex-0.3.3
 CATEGORIES=	archivers
@@ -15,6 +15,7 @@ USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE=	libcomprex.pc.in
 GNU_CONFIGURE=		yes
+BROKEN_GETTEXT_DETECTION=	yes
 CONFIGURE_ENV+=		ac_cv_lib_curl_curl_formparse=yes
 
 .include "../../archivers/bzip2/buildlink3.mk"
