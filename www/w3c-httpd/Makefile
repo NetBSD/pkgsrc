@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/01/12 17:37:17 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/12 17:41:35 rillig Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
@@ -18,7 +18,7 @@ SUBST_FILES.strcasestr=	Daemon/Implementation/HTWild.c \
 	Library/Implementation/HTString.c \
 	Library/Implementation/HTString.h \
 	Library/Implementation/HTString.h
-SUBST_SED.strcasestr=	-e "s,\([[:blank:]]\)\(strcasestr\),\1x\2,g"
+SUBST_SED.strcasestr=	-e 's,\([[:blank:]]\)\(strcasestr\),\1x\2,g'
 
 EGDIR=			${PREFIX}/share/examples/w3c-httpd
 INSTALLATION_DIRS=	bin sbin share/examples/w3c-httpd
@@ -34,18 +34,18 @@ pre-configure:
 	@${ECHO} "Set the environment variable MD5_PW if you want MD5 encrypted passwords."
 	@${ECHO} ""
 .else
-	@${ECHO} "CFLAGS += -DMD5_PW" >> ${WRKDIR}/All/${OSNAME}/Makefile.include
+	@${ECHO} "CFLAGS += -DMD5_PW" >> ${WRKDIR:Q}/All/${OSNAME:Q}/Makefile.include
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/w3c-httpd ${PREFIX}/share/w3c-httpd
-	${CP} -R ${WRKSRC}/server_root/icons ${PREFIX}/share/w3c-httpd
-	${CP} ${WRKSRC}/server_root/config/*.conf ${EGDIR:Q}
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/httpd ${PREFIX}/sbin/w3c-httpd
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/htadm ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/htimage ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiparse ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiutils ${PREFIX}/sbin
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/etc/w3c-httpd ${PREFIX:Q}/share/w3c-httpd
+	${CP} -R ${WRKSRC:Q}/server_root/icons ${PREFIX:Q}/share/w3c-httpd
+	${CP} ${WRKSRC:Q}/server_root/config/*.conf ${EGDIR:Q}
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/httpd ${PREFIX:Q}/sbin/w3c-httpd
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/htadm ${PREFIX:Q}/bin
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/htimage ${PREFIX:Q}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/cgiparse ${PREFIX:Q}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/cgiutils ${PREFIX:Q}/sbin
 
 .include "../../mk/bsd.pkg.mk"
 
