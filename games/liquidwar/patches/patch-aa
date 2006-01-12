@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/06/04 11:18:12 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/12 22:34:15 joerg Exp $
 
---- Makefile.in.orig	2004-02-11 21:43:58.000000000 +0100
+--- Makefile.in.orig	2004-02-11 20:43:58.000000000 +0000
 +++ Makefile.in
 @@ -7,7 +7,7 @@ mandir =          @mandir@
  infodir =         @infodir@
@@ -22,6 +22,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/06/04 11:18:12 wiz Exp $
  # We don't use the autoconf default infodir=$(prefix)/info info
  # directory since the FHS (File Hierarchy Standard recommends
  # to place info pages in $(datadir)/info (ie /usr/share/info).
+@@ -90,7 +90,7 @@ build_data:
+ build_doc:	
+ 	@$(GMAKE) -C $(MAKE_DOC_DIR)
+ 
+-install: install_link install_nolink
++install: install_nolink
+ 
+ # the install_nolink is for distribs where $(prefix)/games is in the PATH,
+ # for instance Debian, where a link in $(prefix)/bin is pretty much useless
 @@ -105,9 +105,9 @@ install_nolink: install_bin install_data
  install_bin: src/liquidwar src/liquidwar-server src/liquidwar-mapgen
  	@echo "Installing liquidwar binaries in $(GAMEDIR)."
