@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:48:06 tv Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/12 13:32:47 joerg Exp $
 #
 
 DISTNAME=		ggiterm-0.7.0
@@ -12,6 +12,8 @@ COMMENT=		Libggi-based terminal emulator
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+PTHREAD_AUTO_VARS=	yes
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ggiterm
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ggiterm
@@ -20,4 +22,5 @@ post-install:
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libggiwmh/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
