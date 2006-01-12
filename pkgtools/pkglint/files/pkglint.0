@@ -103,6 +103,9 @@ DDEESSCCRRIIPPTTIIOONN
 
            [[nnoo--]]aabbssnnaammee        Warn if a file contains an absolute pathname.
 
+           [[nnoo--]]ddeebbuugg          Enable some warnings that are only useful for
+                               debugging pkglint itself.
+
            [[nnoo--]]ddiirreeccttccmmdd      Warn if a system command name is used instead
                                of a variable (e.g. sed instead of ${SED}).
 
@@ -115,6 +118,12 @@ DDEESSCCRRIIPPTTIIOONN
            [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted
                                alphabetically.  This warning is disabled by
                                default.
+
+           [[nnoo--]]qquuoottiinngg        Warn for possibly invalid quoting of make vari-
+                               ables in shell programs and shell variables
+                               themselves.
+
+           [[nnoo--]]ssppaaccee          Emit notes for inconsistent use of white-space.
 
            [[nnoo--]]ttyyppeess          Warn for some Makefile variables if their
                                assigned values do not match their type.
