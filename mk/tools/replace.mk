@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.153 2006/01/09 18:32:52 jlam Exp $
+# $NetBSD: replace.mk,v 1.154 2006/01/12 18:29:03 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -950,6 +950,12 @@ TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
+#
+# If IMAKE is defined, then use that as the path to the imake binary.
+#
+.if !defined(TOOLS_IGNORE.imake) && !empty(_USE_TOOLS:Mimake) && defined(IMAKE)
+TOOLS_PATH.xmkmf=	${IMAKE}
+.endif
 #
 # If we're using xpkgwedge, then we need to invoke the special xmkmf
 # script that will find imake config files in both ${PREFIX} and in
