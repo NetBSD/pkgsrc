@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.24 2006/01/03 19:00:09 abs Exp $
+# $Id: pkg_chk.sh,v 1.25 2006/01/12 21:17:16 joerg Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -703,7 +703,7 @@ if [ \( -n "$opt_b" -o -n "$opt_S" \) -a -z "$opt_s" ] ; then
 	    if [ -d "$PACKAGES" ] ; then
 		msg_progress Scan $PACKAGES
 		cd $PACKAGES
-		for f in `ls -t *.tgz` ; do # Sort by time to pick up newest first
+		for f in `ls -t | grep '\.tgz$'` ; do # Sort by time to pick up newest first
 		    PKGDIR=`${PKG_INFO} -. -B $PACKAGES/$f|${AWK} -F= '$1=="PKGPATH"{print $2}'`
 		    PKGNAME=`echo $f | ${SED} 's/\.tgz$//'`
 		    PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
