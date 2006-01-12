@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/23 06:57:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/12 17:37:04 joerg Exp $
 bin/xdptest
 bin/xcrtest
 bin/xvltest
@@ -72,7 +72,6 @@ share/doc/qdbm/plus/xapidoc/ftv2pnode.png
 share/doc/qdbm/plus/xapidoc/ftv2vertline.png
 share/doc/qdbm/plus/xapidoc/functions.html
 share/doc/qdbm/plus/xapidoc/functions_func.html
-share/doc/qdbm/plus/xapidoc/functions_rela.html
 share/doc/qdbm/plus/xapidoc/functions_vars.html
 share/doc/qdbm/plus/xapidoc/hierarchy.html
 share/doc/qdbm/plus/xapidoc/index.html
