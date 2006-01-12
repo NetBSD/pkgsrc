@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2005/10/28 16:32:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2006/01/12 23:45:16 salo Exp $
 #
 
-DISTNAME=		rxvt-unicode-5.8
+DISTNAME=		rxvt-unicode-6.3
 CATEGORIES=		x11
 MASTER_SITES=		http://dist.schmorp.de/rxvt-unicode/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		lems@gmx.net
-HOMEPAGE=		http://software.schmorp.de/#rxvt-unicode
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://software.schmorp.de/pkg/rxvt-unicode
 COMMENT=		rxvt clone supporting Xft fonts and Unicode
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c++
-USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES+=		c++
+USE_TOOLS+=		gmake perl pkg-config
 
 CONFIGURE_ARGS+=	--enable-transparency	\
-			--enable-menubar		\
+			--enable-menubar	\
 			--enable-xpm-background	\
-			--enable-xgetdefault		\
+			--enable-xgetdefault	\
 			--with-term=rxvt	\
 			--enable-24bit
 
