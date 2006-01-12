@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2003/05/10 00:26:34 jtb Exp $
+$NetBSD: patch-ac,v 1.4 2006/01/12 15:04:18 joerg Exp $
 
---- configure.orig
+--- configure.orig	1999-09-26 15:02:14.000000000 +0000
 +++ configure
-@@ -565,7 +565,11 @@
+@@ -565,7 +565,11 @@ echo "#define STK_VERSION \"$VERSION\"" 
  # determine the kind of the machine which is running this script
  os=`uname -s`
  version=`uname -r`
@@ -15,16 +15,28 @@ $NetBSD: patch-ac,v 1.3 2003/05/10 00:26:34 jtb Exp $
  
  case $os in
    Linux*) 
-@@ -691,7 +695,7 @@
+@@ -580,6 +584,9 @@ case $os in
+  	  case $machine in
+  	    i*86) machine=ix86;;
+  	  esac;;
++  DragonFly*)
++	  version=${OS_VERSION}
++	  ;;
+   SunOS*)
+ 	  case $version in
+ 	    4.1.*) version=4.1.X;;
+@@ -691,8 +698,9 @@ case $MACHINE in
    ULTRIX*)   OS=ULTRIX;;
    HP*)	     OS=HPUX; DFLGS="$DFLGS -Dhpux";;
    Linux*)    OS=LINUX;;
 -  NetBSD-1*) OS=NETBSD1;;
 +  NetBSD*)   OS=NETBSD;;
    FreeBSD*)  OS=FREEBSD;;
++  DragonFly*) OS=DRAGONFLY;;
    IRIX-5*)   OS=IRIX5;;
    IRIX*-6*)  OS=IRIX5;;
-@@ -1874,7 +1878,7 @@
+   CYGWIN32*) OS=WIN32; FLAVOR=win; DFLGS="$DFLGS -DCYGWIN32";;
+@@ -1878,7 +1886,7 @@ fi
  
  if test "$x_libraries" != ""
  then
@@ -33,7 +45,7 @@ $NetBSD: patch-ac,v 1.3 2003/05/10 00:26:34 jtb Exp $
  fi
  
  XLIBSW="$XLIBSW $X_PRE_LIBS -lX11 $X_EXTRA_LIBS"
-@@ -2269,11 +2273,12 @@
+@@ -2273,11 +2281,12 @@ case $OS in 
       SH_LDFLAGS="-shared -o"
       SH_LOADER="ld"
       SH_SUFFIX='so' ;;
@@ -42,7 +54,7 @@ $NetBSD: patch-ac,v 1.3 2003/05/10 00:26:34 jtb Exp $
 -     SH_LDFLAGS="-Bshareable -o"
 -     SH_LOADER="ld"
 -     SH_SUFFIX='so';;
-+   NETBSD) 
++   NETBSD | DRAGONFLY) 
 +     SH_CCFLAGS="-fPIC"
 +     SH_LDFLAGS="-shared -o"
 +     SH_LOADER="cc"
