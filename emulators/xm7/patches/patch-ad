@@ -1,12 +1,16 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/12/13 17:12:19 kei Exp $
+$NetBSD: patch-ad,v 1.2 2006/01/12 21:05:19 joerg Exp $
 
---- xw_snd.cpp.orig	Sat Aug 12 12:33:21 2000
-+++ xw_snd.cpp	Sat Aug 12 12:36:19 2000
-@@ -24,6 +24,8 @@
+--- xw_snd.cpp.orig	2000-03-22 16:01:00.000000000 +0000
++++ xw_snd.cpp
+@@ -22,8 +22,10 @@
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
  #include <sys/time.h>
- #ifdef __FreeBSD__
- #include <machine/soundcard.h>
-+#elif defined(__NetBSD__)
+-#ifdef __FreeBSD__
+-#include <machine/soundcard.h>
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++#include <sys/soundcard.h>
++#elif defined(__NetBSD__) || defined(__OpenBSD__)
 +#include <soundcard.h>
  #else
  #include <linux/soundcard.h>
