@@ -1,5 +1,5 @@
-#! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.467 2006/01/12 13:01:47 rillig Exp $
+#! @PERL@
+# $NetBSD: pkglint.pl,v 1.468 2006/01/12 13:19:57 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -27,6 +27,8 @@
 # ages must be in a BEGIN block, because otherwise the names starting with
 # an uppercase letter are not recognized as subroutines but as file handles.
 #==========================================================================
+use strict;
+use warnings;
 
 package PkgLint::Util;
 #==========================================================================
@@ -2045,9 +2047,11 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^[^\$"\\\`]//) {
 			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
-			    || $rest =~ s/^\$\$([0-9A-Za-z_]+)//) {
+			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[!#?])//) {
 				my ($varname) = ($1);
 				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${varname}.");
+			} elsif ($rest =~ s/^\$\$//) {
+				$line->log_warning("Unquoted \$ or strange shell variable found.");
 			} elsif ($rest =~ s/^\\([\(\)*.0-9n])//) {
 				my ($char) = ($1);
 				$line->log_warning("Please use \"\\\\${char}\" instead of \"\\${char}\".");
