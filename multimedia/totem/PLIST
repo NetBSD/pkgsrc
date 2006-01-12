@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/10/16 12:14:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/12 16:57:49 jmmv Exp $
 bin/totem
 bin/totem-video-thumbnailer
 include/totem/1/plparser/totem-disc.h
@@ -57,6 +57,16 @@ share/gnome/help/totem/ru/figures/totem_screenshot.png
 share/gnome/help/totem/ru/figures/totem_start_window.png
 share/gnome/help/totem/ru/legal.xml
 share/gnome/help/totem/ru/totem.xml
+share/gnome/help/totem/uk/figures/totem_next_button.png
+share/gnome/help/totem/uk/figures/totem_pause_button.png
+share/gnome/help/totem/uk/figures/totem_play_button.png
+share/gnome/help/totem/uk/figures/totem_previous_button.png
+share/gnome/help/totem/uk/figures/totem_show_playlist_button.png
+share/gnome/help/totem/uk/figures/totem_start_window.png
+share/gnome/help/totem/uk/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/uk/figures/totem_volume_mute_button.png
+share/gnome/help/totem/uk/legal.xml
+share/gnome/help/totem/uk/totem.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/totem.mo
@@ -125,6 +135,7 @@ share/omf/totem/totem-de.omf
 share/omf/totem/totem-es.omf
 share/omf/totem/totem-fr.omf
 share/omf/totem/totem-ru.omf
+share/omf/totem/totem-uk.omf
 share/pixmaps/media-player-48.png
 share/pixmaps/vanity.png
 share/totem/filmholes-big-left.png
@@ -154,6 +165,8 @@ share/totem/vanity.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/totem
 @comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/totem/uk/figures
+@dirrm share/gnome/help/totem/uk
 @dirrm share/gnome/help/totem/ru/figures
 @dirrm share/gnome/help/totem/ru
 @dirrm share/gnome/help/totem/fr/figures
