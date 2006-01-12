@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.321 2006/01/10 00:52:00 rillig Exp $
+# $NetBSD: Makefile,v 1.322 2006/01/12 04:27:58 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.52
@@ -28,6 +28,7 @@ SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
 SUBST_FILES.pkglint+=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl
 SUBST_FILES.pkglint+=	pkglint.0 pkglint.1 pkglint.pl
+SUBST_FILES.pkglint+=	plist-clash.pl
 .if defined(BATCH)
 SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|/usr/pkgsrc|g'
 .else
