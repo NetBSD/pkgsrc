@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.465 2006/01/12 10:32:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.466 2006/01/12 10:39:30 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2676,7 +2676,7 @@ sub checkline_mk_varassign($$$$$) {
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
 
 	if (!$is_internal && $varname =~ qr"^_") {
-		$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
+		$line->log_warning("Variable names starting with an underscore are reserved for internal pkgsrc use.");
 	}
 
 	if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
@@ -2981,7 +2981,7 @@ sub checklines_mk($) {
 
 					foreach my $var (split(qr"\s+", $vars)) {
 						if (!$is_internal && $var =~ qr"^_") {
-							$line->log_error("Variable names starting with an underscore are reserved for internal pkgsrc use.");
+							$line->log_warning("Variable names starting with an underscore are reserved for internal pkgsrc use.");
 						}
 
 						if ($var =~ qr"^[_a-z][_a-z0-9]*$") {
