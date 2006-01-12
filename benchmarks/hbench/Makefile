@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/12/29 03:26:28 reed Exp $
+# $NetBSD: Makefile,v 1.33 2006/01/12 15:10:29 joerg Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -20,6 +20,10 @@ BUILD_TARGET=		build
 USE_TOOLS+=		perl:run
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
+
+pre-configure:
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/scripts
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/scripts
 
 post-configure:
 	cd ${WRKSRC};							\
