@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2005/12/29 06:21:52 jlam Exp $
+# $NetBSD: Makefile,v 1.108 2006/01/12 21:02:54 adam Exp $
 
-DISTNAME=	pine4.63
-PKGNAME=	pine-4.63
+DISTNAME=	pine4.64
+PKGNAME=	pine-4.64
 CATEGORIES=	mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
