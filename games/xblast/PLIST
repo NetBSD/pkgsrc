@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/26 04:07:48 jschauma Exp $
-${IMAKE_MAN_DIR}/xblast.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/tkXBlast.${IMAKE_MANNEWSUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2006/01/12 23:49:58 joerg Exp $
+${IMAKE_MAN_DIR}/xblast.${IMAKE_MAN_SUFFIX}
+${IMAKE_MAN_DIR}/tkXBlast.${IMAKE_MAN_SUFFIX}
 lib/X11/app-defaults/XBlast
 share/xblast/bitmap/block/air_pump.pbm
 share/xblast/bitmap/block/bomb.pbm
