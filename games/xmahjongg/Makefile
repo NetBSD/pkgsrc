@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/01 18:02:53 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/01/12 20:50:01 jdc Exp $
 #
 
 DISTNAME=	xmahjongg-3.6.1
@@ -11,6 +11,12 @@ COMMENT=	The Chinese game of Mah Jongg for X11
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+# XXX: hack - work round an ICE with GCC 3.3 on sparc
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
+GCC_REQD+=              3.4
+.endif
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
