@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1786 2006/01/11 05:48:19 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1787 2006/01/12 00:40:19 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -2178,6 +2178,9 @@ real-su-install: ${MESSAGE}
 .endif
 .if empty(CHECK_FILES:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-files
+.endif
+.if empty(CHECK_INTERPRETER:M[nN][oO])
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-interpreter
 .endif
 
 
