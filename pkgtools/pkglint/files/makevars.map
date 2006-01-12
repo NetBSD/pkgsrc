@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.54 2006/01/12 13:59:42 rillig Exp $
+# $NetBSD: makevars.map,v 1.55 2006/01/12 22:28:06 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -43,15 +43,30 @@ BDB_ACCEPTED		List of { db1 db2 db3 db4 }
 BDB_DEFAULT		Userdefined
 BDB_LIBS		Readonly
 BDB_TYPE		Readonly
+BROKEN_GETTEXT_DETECTION	Yes
+BROKEN_IN		List of { pkgsrc-2005Q4 }
 BUILDLINK_DEPENDS	List!+ of Dependency
+BUILDLINK_DEPMETHOD	BuildlinkDepmethod
+BUILDLINK_DEPTH		BuildlinkDepth
+BUILDLINK_FILES		List+ of Pathmask
+BUILDLINK_INCDIRS	List of Pathname
+BUILDLINK_LIBDIRS	List of Pathname
+BUILDLINK_PACKAGES	BuildlinkPackages
 BUILDLINK_PKGSRCDIR	RelativePkgDir
 BUILDLINK_RECOMMENDED	List!+ of Dependency
+BUILDLINK_RPATHDIRS	List of Pathname
+BUILDLINK_TARGETS	List+ of Identifier
 BUILDLINK_TRANSFORM	List+
 BUILD_DEFS		List+ of Varname
 BUILD_DEPENDS		List!+ of DependencyWithPath
 BUILD_DIRS		List of WrksrcSubdirectory
 BUILD_ENV		List+ of ShellWord
+BUILD_TARGET		List of Identifier
 BUILD_USES_MSGFMT	Yes
+BUILTIN_PKG		Identifier
+BUILTIN_FIND_FILES_VAR	Varname
+BUILTIN_FIND_FILES	List of Pathname
+BUILTIN_FIND_GREP	List
 BUILTIN_X11_TYPE	Readonly
 BUILTIN_X11_VERSION	Readonly
 CATEGORIES		List of Category
@@ -62,13 +77,18 @@ COMMENT			Comment
 CONFIGURE_ARGS		List+ of ShellWord
 CONFIGURE_DIRS		List of WrksrcSubdirectory
 CONFIGURE_ENV		List+ of ShellWord
+CONFIGURE_SCRIPT	Pathname
 CONFLICTS		List of Dependency
+CONF_FILES		List of ShellWord
+CONF_FILES_PERMS	List of ShellWord
 CPPFLAGS		List+ of CFlag
 CXX			Readonly
 CXXFLAGS		List+ of CFlag
 DEPENDS			List!+ of DependencyWithPath
 DISTFILES		List of Filename
+DISTINFO_FILE		RelativePkgPath
 DISTNAME		Filename
+DIST_SUBDIR		Filename
 EMACS_BIN		Readonly
 EMACS_ETCPREFIX		Readonly
 EMACS_FLAVOR		Readonly
@@ -86,23 +106,33 @@ FAMBASE			Readonly
 FAM_ACCEPTED		List of { fam gamin }
 FAM_DEFAULT		Userdefined
 FAM_TYPE		Readonly
+FILESDIR		RelativePkgPath
 FILES_SUBST		List+ of ShellWord
 GCC_REQD		List+
 GNU_CONFIGURE		Yes
+HAS_CONFIGURE		Yes
 HOMEPAGE		URL
 INCOMPAT_CURSES		List of PlatformTriple
+INFO_FILES		List of Pathmask
+INSTALLATION_DIRS	List of Pathname
 INSTALL_DIRS		List of WrksrcSubdirectory
 INSTALL_SCRIPTS_ENV	List+ of ShellWord
+INSTALL_TARGET		List of Identifier
 INSTALL_UNSTRIPPED	YesNo
+IS_BUILTIN		YesNoFromCommand
 KRB5BASE		Readonly
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		Userdefined
 KRB5_TYPE		Readonly
 LDFLAGS			List+
 LIBS			List+
+LICENSE			Identifier
+LTCONFIG_OVERRIDE	List+ of Pathmask
 MAINTAINER		Mail_Address
+MAKEFILE		Pathname
 MAKEFLAGS		List+ of ShellWord
 MAKEVARS		List+ of Varname
+MAKE_DIRS_PERMS		List of ShellWord
 MAKE_ENV		List+ of ShellWord
 MAKE_FLAGS		List+ of ShellWord
 MANZ			Yes
@@ -112,22 +142,31 @@ MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 }
 MYSQL_VERSION_DEFAULT	Userdefined
 NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
 NOT_FOR_PLATFORM	List of PlatformTriple
+NO_BIN_ON_CDROM		Message
+NO_BIN_ON_FTP		Message
 NO_BUILD		Yes
 NO_CHECKSUM		Yes
 NO_CONFIGURE		Yes
 NO_MTREE		Yes
 NO_PKGTOOLS_REQD_CHECK	Yes
 NO_PKG_REGISTER		Yes
+NO_SRC_ON_CDROM		Message
+NO_SRC_ON_FTP		Message
 ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
 ONLY_FOR_PLATFORM	List of PlatformTriple
+OWN_DIRS_PERMS		List of ShellWord
 PAMBASE			Readonly
 PAM_ACCEPTED		List of { linux-pam openpam solaris-pam }
 PAM_DEFAULT		Userdefined
 PAM_TYPE		Readonly
+PATCHDIR		RelativePkgPath
+PATCHFILES		List of Filename
+PATCH_SITES		List of URL
 PERL5_PACKLIST		Perl5Packlist
 PGSQL_VERSIONS_ACCEPTED	List of { 73 74 80 }
 PGSQL_VERSION_DEFAULT	Userdefined
 PKGBASE			Readonly
+PKGCONFIG_OVERRIDE	List of Pathmask
 PKGNAME			PkgName
 PKGNAME_NOREV		Readonly
 PKGREPOSITORY		Userdefined
@@ -144,6 +183,7 @@ PKG_DEBUG_LEVEL		Userdefined
 PKG_DEFAULT_OPTIONS	Userdefined
 PKG_FAIL_REASON		List+ of ShellWord
 PKG_GROUPS		List of ShellWord
+PKG_HACKS		List+ of Identifier
 PKG_INSTALLATION_TYPES	List of { overwrite pkgviews }
 PKG_JAVA_HOME		Readonly
 PKG_JVM			Readonly
@@ -166,31 +206,42 @@ PKG_SUFX		Userdefined
 PKG_SUGGESTED_OPTIONS	List of Option
 PKG_SUPPORTED_OPTIONS	List of Option
 PKG_USERS		List of ShellWord
-PLIST_SRC		List of Pathname
+PLIST_SRC		List of RelativePkgPath
 PLIST_SUBST		List+ of ShellWord
 PLIST_TYPE		{ dynamic static }
+PRINT_PLIST_AWK		AwkCommand
 PTHREAD_AUTO_VARS	YesNo
 PTHREAD_OPTS		List+ of { native optional require }
 PTHREAD_TYPE		Readonly
-REPLACE_EMACS		List+ of Pathname
+REPLACE_EMACS		List+ of Pathmask
+REPLACE_PERL		List+ of Pathmask
+RESTRICTED		Message
 SCRIPTS_ENV		List+ of ShellWord
+SPECIAL_PERMS		List of ShellWord
+SHLIBTOOL_OVERRIDE	List+ of Pathmask
 SUBST_CLASSES		List+
 SUBST_FILES		List of Pathmask
 SUBST_MESSAGE		SubstMessage
 SUBST_SED		List of ShellWord
 # ^^ This may be changed to a List+ later.
 SUBST_STAGE		Stage
+SVR4_PKGNAME		SVR4PkgName
 TEST_ENV		List+ of ShellWord
+TEST_TARGET		List of Identifier
 TOOLS_ALIASES		List+ of Filename
 TOOLS_BROKEN		List+ of Tool
 TOOLS_CREATE		List+ of Tool
 TOOLS_GNU_MISSING	List+ of Tool
 TOOLS_NOOP		List+ of Tool
 TOOLS_PATH		Pathname
+UNLIMIT_RESOURCES	List of { datasize stacksize memorysize }
+USE_BUILTIN		YesNoFromCommand
+USE_IMAKE		Yes
 USE_JAVA		{ run yes }
 USE_JAVA2		{ YES yes 1.4 1.5 }
 USE_LANGUAGES		List of { c c++ fortran java objc }
 USE_LIBTOOL		Yes
+USE_MAKEINFO		Yes
 USE_PKGINSTALL		Yes
 USE_PKGLOCALEDIR	YesNo
 USE_PKGSRC_GCC		Userdefined

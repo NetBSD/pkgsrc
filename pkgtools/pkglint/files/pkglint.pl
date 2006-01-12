@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.469 2006/01/12 13:51:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.470 2006/01/12 22:28:06 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1824,6 +1824,10 @@ sub checkline_relative_path($$) {
 		$line->log_info("Unresolved path: \"${path}\".");
 	} elsif (!-e "${current_dir}/${path}") {
 		$line->log_error("\"${path}\" does not exist.");
+	} elsif ($path =~ qr"^\.\./\.\./([^/]+)/([^/]+)(.*)") {
+		my ($cat, $pkg, $rest) = ($1, $2, $3);
+	} elsif ($path =~ qr"^\.\.") {
+		$line->log_warning("Invalid relative path \"${path}\".");
 	}
 }
 
@@ -2015,7 +2019,7 @@ sub checkline_mk_shellword($$$) {
 				$state = SWST_DQUOT;
 			} elsif ($rest =~ s/^\`//) {
 				$state = SWST_BACKT;
-			} elsif ($rest =~ s/^\\[ !"#'\(\)*;^{}]//) {
+			} elsif ($rest =~ s/^\\[ !"#'\(\)*;\\^{}]//) {
 			} elsif ($rest =~ s/^\$\$([0-9A-Z_a-z]+)//
 			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+)\}//) {
 				my ($shvarname) = ($1);
@@ -2052,7 +2056,7 @@ sub checkline_mk_shellword($$$) {
 				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${varname}.");
 			} elsif ($rest =~ s/^\$\$//) {
 				$line->log_warning("Unquoted \$ or strange shell variable found.");
-			} elsif ($rest =~ s/^\\([\(\)*.0-9n])//) {
+			} elsif ($rest =~ s/^\\([\(\)*\-.0-9n])//) {
 				my ($char) = ($1);
 				$line->log_warning("Please use \"\\\\${char}\" instead of \"\\${char}\".");
 				$line->explain(
@@ -2262,16 +2266,37 @@ sub checkline_mk_shellcmd($$) {
 	checkline_mk_shelltext($line, $shellcmd);
 }
 
-sub checkline_mk_vartype_basic($$$$$);
-sub checkline_mk_vartype_basic($$$$$) {
-	my ($line, $varname, $type, $value, $comment) = @_;
+sub checkline_mk_vartype_basic($$$$$$);
+sub checkline_mk_vartype_basic($$$$$$) {
+	my ($line, $varname, $type, $op, $value, $comment) = @_;
 	my ($value_novar);
 
 	$value_novar = $value;
 	while ($value_novar =~ s/\$\{[^{}]*\}//g) {
 	}
 
-	if ($type eq "Category") {
+	if ($type eq "AwkCommand") {
+		$opt_warn_debug and $line->log_warning("Unchecked AWK command: ${value}");
+
+	} elsif ($type eq "BuildlinkDepmethod") {
+		if ($value ne $value_novar) {
+			# No checks yet.
+		} elsif ($value ne "build" && $value ne "full") {
+			$line->log_warning("Invalid dependency method \"${value}\". Valid methods are \"build\" or \"full\".");
+		}
+
+	} elsif ($type eq "BuildlinkDepth") {
+		if ($value ne "\${BUILDLINK_DEPTH}+"
+		    && $value ne "\${BUILDLINK_DEPTH:S/+\$//}") {
+			$line->log_warning("Invalid value for ${varname}.");
+		}
+
+	} elsif ($type eq "BuildlinkPackages") {
+		if ($value !~ qr"^(?:\$\{BUILDLINK_PACKAGES:N[-0-9A-Z_a-z]+\}|[-0-9A-Z_a-z]+)$") {
+			$line->log_warning("Invalid value for ${varname}.");
+		}
+
+	} elsif ($type eq "Category") {
 		my $allowed_categories = join("|", qw(
 			archivers audio
 			benchmarks biology
@@ -2412,6 +2437,13 @@ sub checkline_mk_vartype_basic($$$$$) {
 			$line->log_warning("\"${value}\" is not a valid filename mask.");
 		}
 
+	} elsif ($type eq "Identifier") {
+		if ($value ne $value_novar) {
+			#$line->log_warning("Identifiers should be given directly.");
+		} elsif ($value !~ qr"^[+\-.0-9A-Z_a-z]+$") {
+			$line->log_warning("Invalid identifier \"${value}\".");
+		}
+
 	} elsif ($type eq "Mail_Address") {
 		if ($value =~ qr"^([-\w\d_.]+)\@([-\w\d.]+)$") {
 			my (undef, $domain) = ($1, $2);
@@ -2421,6 +2453,11 @@ sub checkline_mk_vartype_basic($$$$$) {
 
 		} else {
 			$line->log_warning("\"${value}\" is not a valid mail address.");
+		}
+
+	} elsif ($type eq "Message") {
+		if ($value =~ qr"^[\"'].*[\"']$") {
+			$line->log_warning("${varname} should not be quoted.");
 		}
 
 	} elsif ($type eq "Option") {
@@ -2469,7 +2506,7 @@ sub checkline_mk_vartype_basic($$$$$) {
 		}
 
 	} elsif ($type eq "PkgOptionsVar") {
-		checkline_mk_vartype_basic($line, $varname, "Varname", $value, $comment);
+		checkline_mk_vartype_basic($line, $varname, "Varname", $op, $value, $comment);
 		if ($value =~ qr"\$\{PKGBASE[:\}]") {
 			$line->log_error("PKGBASE must not be used in PKG_OPTIONS_VAR.");
 			$line->explain(
@@ -2512,6 +2549,19 @@ sub checkline_mk_vartype_basic($$$$$) {
 
 	} elsif ($type eq "RelativePkgDir") {
 		checkline_relative_pkgdir($line, $value);
+
+	} elsif ($type eq "RelativePkgPath") {
+		checkline_relative_path($line, $value);
+
+	} elsif ($type eq "SVR4PkgName") {
+		if ($value =~ regex_unresolved) {
+			$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
+		} elsif (length($value) > 5) {
+			$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
+		}
+
+	} elsif ($type eq "ShellCommand") {
+		checkline_mk_shellcmd($line, $value);
 
 	} elsif ($type eq "ShellWord") {
 		checkline_mk_shellword($line, $value, true);
@@ -2584,6 +2634,13 @@ sub checkline_mk_vartype_basic($$$$$) {
 			$line->log_warning("\"${value}\" is not a valid URL.");
 		}
 
+	} elsif ($type eq "UserGroupName") {
+		if ($value ne $value_novar) {
+			# No checks for now.
+		} elsif ($value !~ qr"^[0-9_a-z]+$") {
+			$line->log_warning("Invalid user or group name \"${value}\".");
+		}
+
 	} elsif ($type eq "Userdefined") {
 		$line->log_error("\"${varname}\" may only be set by the user, not the package.");
 
@@ -2618,6 +2675,11 @@ sub checkline_mk_vartype_basic($$$$$) {
 	} elsif ($type eq "YesNo") {
 		if ($value !~ qr"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
 			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
+		}
+
+	} elsif ($type eq "YesNoFromCommand") {
+		if ($op ne "!=") {
+			checkline_mk_vartype_basic($line, $varname, "YesNo", $op, $value, $comment);
 		}
 
 	} elsif ($type =~ qr"^\{\s*(.*?)\s*\}$") {
@@ -2658,8 +2720,27 @@ sub checkline_mk_vartype($$$$$) {
 		}
 
 		if (!defined($type)) {
+			# Guess the datatype of the variable based on
+			# naming conventions.
+			$type =	  ($varname =~ qr"DIRS$") ? "List of Pathname"
+				: ($varname =~ qr"DIR$") ? "Pathname"
+				: ($varname =~ qr"FILES$") ? "List of Pathname"
+				: ($varname =~ qr"FILE$") ? "Pathname"
+				: ($varname =~ qr"_USER$") ? "UserGroupName"
+				: ($varname =~ qr"_GROUP$") ? "UserGroupName"
+				: ($varname =~ qr"_ENV$") ? "List+ of ShellWord"
+				: ($varname =~ qr"_CMD$") ? "ShellCommand"
+				: ($varname =~ qr"_ARGS$") ? "List+ of ShellWord"
+				: ($varname =~ qr"_FLAGS$") ? "List+ of ShellWord"
+				: $type;
+			if (defined($type)) {
+				$line->log_info("The guessed type of ${varname} is \"${type}\".");
+			}
+		}
+
+		if (!defined($type)) {
 			if ($varname !~ qr"_MK$") {
-				$line->log_info("[checkline_mk_vartype] Unchecked variable ${varname}.");
+				$opt_warn_debug and $line->log_warning("[checkline_mk_vartype] Unchecked variable ${varname}.");
 			}
 			checkline_mk_text($line, $value);
 
@@ -2686,7 +2767,7 @@ sub checkline_mk_vartype($$$$$) {
 
 			foreach my $word (@words) {
 				if (defined($element_type)) {
-					checkline_mk_vartype_basic($line, $varname, $element_type, $word, $comment);
+					checkline_mk_vartype_basic($line, $varname, $element_type, $op, $word, $comment);
 				}
 			}
 
@@ -2695,7 +2776,7 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 		} else {
-			checkline_mk_vartype_basic($line, $varname, $type, $value, $comment);
+			checkline_mk_vartype_basic($line, $varname, $type, $op, $value, $comment);
 		}
 }
 
@@ -2717,14 +2798,6 @@ sub checkline_mk_varassign($$$$$) {
 		my ($ucvalue, $ucguess) = (uc($value), uc($guess));
 		if ($ucvalue ne $ucguess && $ucvalue ne "\${PERL5_SITEARCH\}/${ucguess}") {
 			$line->log_warning("Unusual value for PERL5_PACKLIST -- \"${guess}\" expected.");
-		}
-	}
-
-	if ($varname eq "SVR4_PKGNAME") {
-		if ($value =~ regex_unresolved) {
-			$line->log_error("SVR4_PKGNAME must not contain references to other variables.");
-		} elsif (length($value) > 5) {
-			$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
 		}
 	}
 
