@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 17:23:36 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/12 23:12:06 joerg Exp $
 bin/spider
-man/cat1/spider.0
+${IMAKE_MAN_DIR}/spider.${IMAKE_MAN_SUFFIX}
 share/doc/spider/doc.intro
 share/doc/spider/doc.rules
 share/doc/spider/doc.controls
