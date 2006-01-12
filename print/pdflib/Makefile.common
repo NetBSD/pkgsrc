@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.16 2005/05/22 20:08:28 jlam Exp $
+# $NetBSD: Makefile.common,v 1.17 2006/01/12 18:30:23 rillig Exp $
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
-PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		http://www.pdflib.com/pdflib/download/
 
