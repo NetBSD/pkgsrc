@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2005/08/12 20:21:30 tv Exp $
+$NetBSD: patch-af,v 1.6 2006/01/12 21:00:52 adam Exp $
 
 --- pico/makefile.osx.orig	Fri Sep 20 14:23:15 2002
 +++ pico/makefile.osx
@@ -35,7 +35,7 @@ $NetBSD: patch-af,v 1.5 2005/08/12 20:21:30 tv Exp $
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
 +		$(CC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
-+			-version-info 5:1
++			-version-info 6:0
  
  clean:
  		rm -f *.a *.o *~ pico_os.c os.h pico pilot
