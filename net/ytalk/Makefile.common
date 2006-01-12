@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.3 2005/12/29 06:22:04 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/01/12 19:57:00 wiz Exp $
 
-DISTNAME=       ytalk-3.1.1
+DISTNAME=       ytalk-3.3.0
 CATEGORIES=	net
-MASTER_SITES=   ${MASTER_SITE_SUNSITE:=system/network/chat/}
+MASTER_SITES=   http://www.impul.se/ytalk/
 
 MAINTAINER=	mike@ethmoid.org
-HOMEPAGE=	http://www.iagora.com/~espel/ytalk/ytalk.html
+HOMEPAGE=	http://www.impul.se/ytalk/index.php
 COMMENT=	Multi-user replacement for UNIX talk
 
 GNU_CONFIGURE=	yes
@@ -14,3 +14,5 @@ CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/ytalk
 CONF_FILES=	${EGDIR}/ytalkrc ${PKG_SYSCONFDIR}/ytalkrc
+
+.include "../../mk/curses.buildlink3.mk"
