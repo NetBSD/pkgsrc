@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/03 13:44:27 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/12 17:36:01 wiz Exp $
 #
 
 DISTNAME=		pylibpcap-0.5
@@ -17,6 +17,6 @@ pre-build:
 	(cd ${WRKSRC} && ${PYTHONBIN} mk-constants.py)
 
 .include "../../lang/python/extension.mk"
-#.include "../../devel/swig13/buildlink3.mk"
+#.include "../../devel/swig/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
