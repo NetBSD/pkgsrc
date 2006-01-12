@@ -1,12 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
---- xbsndsrv.c.orig	Mon Nov  9 23:01:52 1998
-+++ xbsndsrv.c	Mon Nov  9 23:02:26 1998
-@@ -100,7 +100,7 @@
+$NetBSD: patch-ab,v 1.2 2006/01/12 23:49:59 joerg Exp $
+
+--- xbsndsrv.c.orig	1997-10-16 08:48:27.000000000 +0000
++++ xbsndsrv.c
+@@ -100,7 +100,11 @@
  #include <sys/stat.h>
  #include <sys/ioctl.h>
  #include <sys/time.h>
 -#include <linux/soundcard.h>
++#if defined(__DragonFly__) || defined(__FreeBSD__)
++#include <sys/soundcard.h>
++#else
 +#include <soundcard.h>
++#endif
  #include <signal.h>
  #include "sound.h"
  
