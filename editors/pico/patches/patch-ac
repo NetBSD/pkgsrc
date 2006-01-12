@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2005/01/25 10:07:56 adam Exp $
+$NetBSD: patch-ac,v 1.11 2006/01/12 21:00:52 adam Exp $
 
---- build.orig	2004-12-27 17:36:53.000000000 +0000
+--- build.orig	2005-05-04 23:22:22.000000000 +0200
 +++ build
-@@ -393,63 +393,6 @@ case $maketarg in
+@@ -394,63 +394,6 @@ case $maketarg in
  	  echo "Including SSL functionality"
  	fi
  
@@ -66,7 +66,7 @@ $NetBSD: patch-ac,v 1.10 2005/01/25 10:07:56 adam Exp $
          echo "Making Pico and Pilot"
          cd "$PHOME/pico"
          eval echo make "$makeargs" -f makefile.$picotarg
-@@ -458,50 +401,8 @@ case $maketarg in
+@@ -459,50 +402,8 @@ case $maketarg in
  	if [ $rc != "0" ] ; then exit $rc ; fi
          echo ''
  
