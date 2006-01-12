@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.20 2005/12/08 01:12:56 jschauma Exp $
+# $NetBSD: IRIX.mk,v 1.21 2006/01/12 23:43:57 jlam Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -40,8 +40,13 @@ IMAKE_LIBMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}3/X11
 IMAKE_FILEMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}5/X11
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6/X11
 IMAKE_MANNEWSUFFIX?=	z
+.if defined(_USE_PLIST_MODULE)
+IMAKE_MANINSTALL?=	maninstall
+.endif
 
+.if !defined(_USE_PLIST_MODULE)
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
+.endif
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard
 .else
@@ -60,7 +65,9 @@ _PATCH_BACKUP_ARG?=	-b -V simple -z # switch to patch(1) for backup suffix
 .else
 _PATCH_CAN_BACKUP=	no		# native patch(1) can make backups
 .endif
+.if !defined(_USE_PLIST_MODULE)
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
+.endif
 _USE_GNU_GETTEXT=	no		# Don't use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
 
