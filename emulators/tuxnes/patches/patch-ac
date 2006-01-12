@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/07/19 20:29:37 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/12 21:03:20 joerg Exp $
 
---- sound.c.orig	2001-04-11 23:45:47.000000000 +0200
+--- sound.c.orig	2001-04-11 21:45:47.000000000 +0000
 +++ sound.c
-@@ -104,6 +104,7 @@
+@@ -104,11 +104,12 @@
  #include <math.h>
  #include <stdio.h>
  #include <stdlib.h>
@@ -10,6 +10,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/07/19 20:29:37 wiz Exp $
  #include <unistd.h>
  #include <sys/ioctl.h>
  #if defined(__FreeBSD__)
+ #include <machine/endian.h>
+-#elif defined(__NetBSD__) || defined(__OpenBSD__)
++#elif defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #include <sys/endian.h>
+ #else /* Linux */
+ #include <endian.h>
 @@ -411,7 +412,7 @@ InitAudio(int argc, char **argv)
          {
            int desired_fragmentsize = 0; 
