@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12477 2006/01/12 21:18:09 joerg Exp $
+$NetBSD: CHANGES,v 1.12478 2006/01/12 22:44:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -251,3 +251,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/pico to 4.10nb1 [adam 2006-01-12]
 	Updated mail/pine to 4.64 [adam 2006-01-12]
 	Updated pkgtools/pkg_chk to 1.65 [joerg 2006-01-12]
+	Updated www/trac to 0.9.3 [wiz 2006-01-12]

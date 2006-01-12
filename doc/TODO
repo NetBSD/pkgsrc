@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4412 2006/01/12 21:04:30 adam Exp $
+$NetBSD: TODO,v 1.4413 2006/01/12 22:44:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1213,7 +1213,6 @@ Suggested package updates
 	o totd-1.5.1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.9.3 [pkg/32507]
 	o transcode-1.0.1
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1455,7 +1454,7 @@ Suggested cleanups in pkgsrc
 	o Fix packages installing manual pages under share/man to install
 	  them directly under man.
 	  Affects: emulators/peace, net/tsclient, print/scribus,
-	  security/fwbuilder, www/trac
+	  security/fwbuilder
 
 	o Convert packages to use generic install scripts where possible
 	  (for example, mail/majordomo).
