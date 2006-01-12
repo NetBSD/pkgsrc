@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.15 2005/12/04 01:44:30 joerg Exp $
+# $NetBSD: Darwin.mk,v 1.16 2006/01/12 23:43:57 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -52,8 +52,13 @@ IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
+.if defined(_USE_PLIST_MODULE)
+IMAKE_MANINSTALL?=	maninstall catinstall
+.endif
 
+.if !defined(_USE_PLIST_MODULE)
 _DO_SHLIB_CHECKS=	yes	# on installation, fixup PLIST for shared libs
+.endif
 .if ${OS_VERSION:R} >= 6
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
@@ -69,7 +74,9 @@ _OPSYS_COMPILER_RPATH_FLAG=	-L	# compiler flag to pass rpaths to linker
 _OPSYS_SHLIB_TYPE=	dylib	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b -z	# switch to patch(1) for backup suffix
+.if !defined(_USE_PLIST_MODULE)
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
+.endif
 _USE_GNU_GETTEXT=	no	# Don't use GNU gettext
 _USE_RPATH=		no	# don't add rpath to LDFLAGS
 

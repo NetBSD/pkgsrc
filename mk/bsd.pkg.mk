@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1787 2006/01/12 00:40:19 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1788 2006/01/12 23:43:56 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -93,6 +93,7 @@ PKGNAME?=		${DISTNAME}
 PKGNAME_NOREV=		${PKGNAME}
 .endif
 
+.if !defined(_USE_PLIST_MODULE)
 ##### PLIST
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -120,6 +121,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 .  endif
 .endif # !PLIST_SRC
+.endif # !_USE_PLIST_MODULE
 
 ##### Others
 
@@ -173,7 +175,9 @@ PKG_DB_TMPDIR=		${WRKDIR}/.pkgdb
 DDIR=			${WRKDIR}/.DDIR
 DESCR=			${PKG_DB_TMPDIR}/+DESC
 DLIST=			${WRKDIR}/.DLIST
+.if !defined(_USE_PLIST_MODULE)
 PLIST=			${WRKDIR}/.PLIST
+.endif # !_USE_PLIST_MODULE
 
 # Files to create for versioning and build information
 BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
@@ -210,6 +214,7 @@ PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite
 PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
 .endif
 
+.if !defined(_USE_PLIST_MODULE)
 .if (${PLIST_TYPE} != "dynamic") && (${PLIST_TYPE} != "static")
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 .endif
@@ -217,6 +222,7 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 .if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
 .endif
+.endif # !_USE_PLIST_MODULE
 
 # Check that we are using up-to-date pkg_* tools with this file.
 .if !defined(NO_PKGTOOLS_REQD_CHECK)
@@ -351,6 +357,7 @@ BUILD_DEFS+=            PKG_OPTIONS
 PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
 
+.if !defined(_USE_PLIST_MODULE)
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 #
 # _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
@@ -366,6 +373,7 @@ _PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v # scratch config files
 _PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
 .endif
 BUILD_DEFS+=		_PLIST_IGNORE_FILES
+.endif # !_USE_PLIST_MODULE
 
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=		${UNLIMIT_RESOURCES:@_lim_@${ULIMIT_CMD_${_lim_}};@}
@@ -472,6 +480,7 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .  undef NO_PACKAGE
 .endif
 
+.if !defined(_USE_PLIST_MODULE)
 # Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
 PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 		OS_VERSION=${OS_VERSION:Q}				\
@@ -499,6 +508,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 		RM=${RM:Q}						\
 		TRUE=${TRUE:Q}						\
 		PKGMANDIR=${PKGMANDIR:Q}
+.endif # !_USE_PLIST_MODULE
 
 # Handle alternatives
 #
@@ -708,9 +718,11 @@ PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
       !empty(PKG_SYSCONFBASE:M${PREFIX}/*)
 PKG_SYSCONFDEPOTBASE=	# empty
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
+.    if !defined(_USE_PLIST_MODULE)
 .    if !empty(CONF_DEPENDS)
 _PLIST_IGNORE_FILES+=	${PKG_SYSCONFDIR:S,^${PREFIX}/,,}
 .    endif
+.    endif # !_USE_PLIST_MODULE
 .  else
 PKG_SYSCONFDEPOTBASE=	${PKG_SYSCONFBASE}/${DEPOT_SUBDIR}
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDEPOTBASE}/${PKGNAME}
@@ -1995,6 +2007,26 @@ delete-package:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PKGFILE}
 .endif
 
+.if defined(_USE_PLIST_MODULE)
+_PLIST_REGEXP.info=	\
+	^${INFO_DIR}/[^/]*\.info(-[0-9]+)?(\.gz)$$
+_PLIST_REGEXP.man=	\
+	^([^/]*/)+(man[1-9ln]/[^/]*\.[1-9ln]|cat[1-9ln]/[^/]*\.[0-9])(\.gz)?$$
+
+_DOC_COMPRESS=								\
+	${SETENV} ECHO=${TOOLS_ECHO:Q}					\
+		EXPR=${TOOLS_EXPR:Q}					\
+		GZIP_CMD=${TOOLS_GZIP_CMD:Q}				\
+		GUNZIP_CMD=${TOOLS_GUNZIP_CMD:Q}			\
+		LN=${TOOLS_LN:Q}					\
+		LS=${TOOLS_LS:Q}					\
+		MANZ=${_MANZ:Q}						\
+		PKG_VERBOSE=${PKG_VERBOSE:Q}				\
+		RM=${TOOLS_RM:Q}					\
+		TEST=${TOOLS_TEST:Q}					\
+	${SH} ${.CURDIR}/../../mk/plist/doc-compress ${PREFIX:Q}
+.endif # _USE_PLIST_MODULE
+
 .PHONY: real-su-install
 real-su-install: ${MESSAGE}
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER) &&	\
@@ -2099,6 +2131,12 @@ real-su-install: ${MESSAGE}
 		# listed in the PLIST.					\
 		#
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
+.if defined(_USE_PLIST_MODULE)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
+	${CAT} ${PLIST} | ${GREP} -v "^@" |				\
+	${EGREP} ${_PLIST_REGEXP.man:Q} | ${_DOC_COMPRESS}
+.else # !_USE_PLIST_MODULE
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.[0-9])(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
@@ -2140,16 +2178,19 @@ real-su-install: ${MESSAGE}
 			fi;						\
 		done;							\
 	fi
+.endif # _USE_PLIST_MODULE
 .if empty(CHECK_FILES:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} check-files-post
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
+.if !defined(_USE_PLIST_MODULE)
 .if ${_DO_SHLIB_CHECKS} == "yes"
 .  if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
 .  endif
 .endif
+.endif # !_USE_PLIST_MODULE
 .if defined(MESSAGE)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
 	@${ECHO_MSG} ""
@@ -2184,7 +2225,7 @@ real-su-install: ${MESSAGE}
 .endif
 
 
-
+.if !defined(_USE_PLIST_MODULE)
 # Do handling of shared libs for two cases:
 #
 # SHLIB_PLIST_MODE=1: when first called via the ${PLIST} target,
@@ -2425,7 +2466,7 @@ do-shlib-handling:
 		esac;							\
 	fi
 .endif # SHLIB_HANDLING == "YES"
-
+.endif !_USE_PLIST_MODULE
 
 # Check if all binaries and shlibs find their needed libs
 # Must be run after "make install", so that files are installed, and
@@ -2468,7 +2509,7 @@ check-shlibs:
 	fi
 .endif # NO_PKG_REGISTER
 
-
+.if !defined(_USE_PLIST_MODULE)
 .if !target(show-shlib-type)
 # Show the shared lib type being built: one of ELF, a.out, dylib, or none
 .PHONY: show-shlib-type
@@ -2497,7 +2538,7 @@ show-shlib-type:
 	@${ECHO} ${_OPSYS_SHLIB_TYPE}
 .  endif   # USE_LANGUAGES
 .endif
-
+.endif # !_USE_PLIST_MODULE
 
 .PHONY: acquire-extract-lock acquire-patch-lock acquire-tools-lock
 .PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
@@ -3997,7 +4038,7 @@ print-pkg-size-depends:
 		${ECHO} "0";						\
 	fi
 
-
+.if !defined(_USE_PLIST_MODULE)
 ###
 ### Automatic PLIST generation
 ###  - files & symlinks first
@@ -4171,6 +4212,7 @@ print-PLIST:
 	done								\
 	| ${AWK} '${_PRINT_PLIST_AWK_SUBST} { print $$0; }'
 .endif # target(print-PLIST)
+.endif # !_USE_PLIST_MODULE
 
 # By default, all packages attempt to link into the views.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -4484,6 +4526,7 @@ depend:
 tags:
 .endif
 
+.if !defined(_USE_PLIST_MODULE)
 # generate ${PLIST} from ${PLIST_SRC} by:
 # - substituting for PLIST_SUBST entries
 # - fixing list of man-pages according to PKGMANDIR, MANZ, MANINSTALL.
@@ -4661,6 +4704,7 @@ ${PLIST}:
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
 		SHLIB_PLIST_MODE=1
+.endif # !_USE_PLIST_MODULE
 
 # generate ${MESSAGE} from ${MESSAGE_SRC} by substituting
 # for MESSAGE_SUBST entries
@@ -4693,6 +4737,10 @@ ${DESCR}: ${DESCR_SRC}
 	${ECHO} "Homepage:"	>>${DESCR} ; \
 	${ECHO} '${HOMEPAGE}'	>>${DESCR}
 .endif
+
+.if defined(_USE_PLIST_MODULE)
+.include "../../mk/plist/bsd.plist.mk"
+.endif # _USE_PLIST_MODULE
 
 .include "../../mk/subst.mk"
 
