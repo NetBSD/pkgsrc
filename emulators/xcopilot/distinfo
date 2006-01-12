@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 18:49:22 agc Exp $
+$NetBSD: distinfo,v 1.5 2006/01/12 20:58:56 joerg Exp $
 
 SHA1 (xcopilot-0.6.6.tar.gz) = 91f76d1fd8fc19b6fea18853425aa3076e945d5d
 RMD160 (xcopilot-0.6.6.tar.gz) = e267495db384070e7e192043f23290f0004ecd4a
@@ -13,3 +13,4 @@ SHA1 (patch-ag) = 68a22072946811f9cc97434f532081a07fda567f
 SHA1 (patch-ah) = fa166c5ecf7458c91f89b216aee5acb6de270292
 SHA1 (patch-ai) = 255d997e2ef340a8d4b91ce25c2a3071df5c4520
 SHA1 (patch-aj) = 560a3dd902323ec1d07c292b6e8f95acb6c1c939
+SHA1 (patch-ak) = dfb717cb81f797b85d84274f14fc0d36926ccb5d
