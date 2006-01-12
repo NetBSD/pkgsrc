@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4413 2006/01/12 22:44:17 wiz Exp $
+$NetBSD: TODO,v 1.4414 2006/01/12 22:59:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1097,7 +1097,6 @@ Suggested package updates
 	o rt3-3.4.4
 	o rtcw-1.41.3
 	o ruby-cmd-0.8.0
-	o rxvt-unicode-6.3 [pkg/32510]
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
