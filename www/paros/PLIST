@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/11 18:59:36 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/12 18:17:19 salo Exp $
 bin/paros
 lib/paros/db/def.txt
 lib/paros/db/parosdb.backup
@@ -18,7 +18,7 @@ lib/paros/license/apachelicense-2.0.txt
 lib/paros/license/copying
 lib/paros/license/hsqldb_lic.txt
 lib/paros/license/hypersonic_lic.txt
-lib/paros/license/theclarifiedartisticlicense.htm
+lib/paros/license/TheClarifiedArtisticLicense.htm
 lib/paros/license/theclarifiedartisticlicense.rtf
 lib/paros/log/dummy.txt
 lib/paros/mozembed-linux-gtk1.2
