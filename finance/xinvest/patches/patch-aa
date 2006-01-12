@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2004/11/23 17:21:54 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2006/01/12 21:46:13 joerg Exp $
 
---- Imakefile.orig	2004-05-01 20:57:42.000000000 +0200
+--- Imakefile.orig	2004-05-01 18:57:42.000000000 +0000
 +++ Imakefile
+@@ -15,7 +15,7 @@ XCOMM
+ 
+ DEFINES = -DSHAPE
+ INCLUDES = -I$(INCROOT)/X11
+-SYS_LIBRARIES = -lXm -lXpm $(XTOOLLIB) -lXext $(XLIB) -lm
++SYS_LIBRARIES = -Wl,-R${PREFIX}/lib -lXm -lXpm $(XTOOLLIB) -lXext $(XLIB) -lm
+ DEPLIBS = 
+ 
+ SRCS =	account.c askuser.c calendar.c color.c drawing.c \
 @@ -29,5 +29,5 @@ OBJS =	account.o askuser.o calendar.o co
  	status.o tooltips.o trans.o util.o xinvest.o xutil.o
  
