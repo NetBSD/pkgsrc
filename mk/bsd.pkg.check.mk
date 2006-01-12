@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.24 2006/01/12 00:40:19 rillig Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.25 2006/01/12 11:13:13 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -17,6 +17,9 @@
 #	${WRKDIR} or ${TOOLS_DIR} in the package's installed files.
 #	Valid values are "work", which checks for ${WRKDIR}, and
 #	"tools", which checks for ${TOOLS_DIR}.  Defaults to "no".
+#
+#    CHECK_INTERPRETER can be set to "yes" to check that installed
+#	#!-scripts will find their interpreter.
 #
 # The following targets are defined by bsd.pkg.check.mk:
 #
