@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.468 2006/01/12 13:19:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.469 2006/01/12 13:51:54 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2008,7 +2008,7 @@ sub checkline_mk_shellword($$$) {
 			}
 
 		} elsif ($state == SWST_PLAIN) {
-			if ($rest =~ s/^[!\%&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]_a-z{|}~]+//) {
+			if ($rest =~ s/^[!\%&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]^_a-z{|}~]+//) {
 			} elsif ($rest =~ s/^\'//) {
 				$state = SWST_SQUOT;
 			} elsif ($rest =~ s/^\"//) {
@@ -2047,7 +2047,7 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^[^\$"\\\`]//) {
 			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
-			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[!#?])//) {
+			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[!#?\@])//) {
 				my ($varname) = ($1);
 				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${varname}.");
 			} elsif ($rest =~ s/^\$\$//) {
@@ -2163,6 +2163,16 @@ sub checkline_mk_shelltext($$) {
 			$line->explain(
 				"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
 				"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
+		}
+
+		if ($state == SCST_PAX_S || $state == SCST_SED_E) {
+			if ($shellword !~ qr"^[\"\'].*[\"\']$") {
+				$line->log_warning("Substitution commands like \"${shellword}\" should always be quoted.");
+				$line->explain(
+					"Usually these substitution commands contain characters like '*' or",
+					"other shell metacharacters that might lead to lookup of matching",
+					"filenames and then expand to more than one word.");
+			}
 		}
 
 		if ($opt_warn_extra && $shellword eq "|") {
