@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/01/12 19:11:55 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/12 19:30:15 rillig Exp $
 
 DISTNAME=	asterisk-1.0.9
+PKGREVISION=	1
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://ftp.digium.com/pub/asterisk/ \
 		http://ftp.digium.com/pub/asterisk/old-releases
@@ -12,6 +13,8 @@ COMMENT=	The Asterisk Software PBX
 USE_TOOLS+=	bison gmake
 
 MANCOMPRESSED=	yes
+
+REPLACE_PERL+=	agi/agi-test.agi
 
 INSTALL_TARGET=	install samples
 
