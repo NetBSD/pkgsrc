@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 20:50:19 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/12 12:59:15 rillig Exp $
 
 PKGNAME=	MesaDemos-${MESA_VERSION}
 COMMENT=	OpenGL examples and Demos
@@ -16,9 +16,13 @@ pre-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
-	cd ${WRKSRC}/progs && ${PAX} -s ,^./.*Makefile.*,, -s ,^./CVS.*,, \
-		-s ,^./.*\\.o$$,, -s ,^./\\.libs.*,, -s ,^./\\.deps.*,,	   \
-		-s ,^./.*\\.orig$$,,					\
+	cd ${WRKSRC}/progs && ${PAX}		\
+		-s ',^./.*Makefile.*,,'	\
+		-s ',^./CVS.*,,'		\
+		-s ',^./.*\.o$$,,'		\
+		-s ',^./\.libs.*,,'		\
+		-s ',^./\.deps.*,,'		\
+		-s ',^./.*\.orig$$,,'		\
 		-rw . ${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
 	${CHMOD} -R a+rX ${PREFIX}/share/examples/${PKGNAME_NOREV}
 
