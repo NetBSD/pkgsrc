@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/14 15:56:05 drochner Exp $
-lib/zope/lib/python/Products/MetaPublisher/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/CVS/Root
+@comment $NetBSD: PLIST,v 1.2 2006/01/12 23:53:19 rillig Exp $
 lib/zope/lib/python/Products/MetaPublisher/Config.py
 lib/zope/lib/python/Products/MetaPublisher/Config.pyc
 lib/zope/lib/python/Products/MetaPublisher/Container.py
@@ -24,67 +21,40 @@ lib/zope/lib/python/Products/MetaPublisher/Support.py
 lib/zope/lib/python/Products/MetaPublisher/Support.pyc
 lib/zope/lib/python/Products/MetaPublisher/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/__init__.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/SimpleField.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/SimpleField.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/__init__.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/main.py
-lib/zope/lib/python/Products/MetaPublisher/ftypes/date/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/date/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/date/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/date/CVS/Root
+lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/main.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/date/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/date/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/date/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/date/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/date/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/date/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/email/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/email/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/email/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/email/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/email/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/email/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/email/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/email/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/email/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/email/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/file/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/file/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/file/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/file/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/file/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/file/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/file/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/file/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/file/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/file/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/float/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/float/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/float/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/float/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/float/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/float/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/float/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/float/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/float/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/float/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/image/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/image/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/image/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/image/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/image/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/image/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/image/add.dtml
@@ -93,68 +63,40 @@ lib/zope/lib/python/Products/MetaPublisher/ftypes/image/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/image/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/image/main.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/image/makeThumbnail.txt
-lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/select/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/select/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/select/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/select/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/select/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/select/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/select/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/select/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/select/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/select/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/text/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/text/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/text/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/text/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/text/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/text/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/text/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/text/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/text/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/text/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/add.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/edit.dtml
 lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/main.py
 lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/help/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/help/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/help/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/help/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/help/Config.stx
 lib/zope/lib/python/Products/MetaPublisher/help/FTypes.stx
 lib/zope/lib/python/Products/MetaPublisher/help/Interfaces.stx
 lib/zope/lib/python/Products/MetaPublisher/help/Presets.stx
-lib/zope/lib/python/Products/MetaPublisher/images/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/images/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/images/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/images/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/images/arrow_left.gif
 lib/zope/lib/python/Products/MetaPublisher/images/arrow_right.gif
 lib/zope/lib/python/Products/MetaPublisher/images/button_bottom.gif
@@ -191,7 +133,6 @@ lib/zope/lib/python/Products/MetaPublisher/images/menu_undo.gif
 lib/zope/lib/python/Products/MetaPublisher/images/menu_undo_b.gif
 lib/zope/lib/python/Products/MetaPublisher/images/menu_view.gif
 lib/zope/lib/python/Products/MetaPublisher/images/menu_view_b.gif
-lib/zope/lib/python/Products/MetaPublisher/interfaces/.cvsignore
 lib/zope/lib/python/Products/MetaPublisher/interfaces/AddForm.py
 lib/zope/lib/python/Products/MetaPublisher/interfaces/AddForm.pyc
 lib/zope/lib/python/Products/MetaPublisher/interfaces/AddFormAdd.dtml
@@ -204,9 +145,6 @@ lib/zope/lib/python/Products/MetaPublisher/interfaces/BaseObject.py
 lib/zope/lib/python/Products/MetaPublisher/interfaces/BaseObject.pyc
 lib/zope/lib/python/Products/MetaPublisher/interfaces/BaseObjectAdd.dtml
 lib/zope/lib/python/Products/MetaPublisher/interfaces/BaseObjectEdit.dtml
-lib/zope/lib/python/Products/MetaPublisher/interfaces/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/interfaces/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/interfaces/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/interfaces/Document.py
 lib/zope/lib/python/Products/MetaPublisher/interfaces/Document.pyc
 lib/zope/lib/python/Products/MetaPublisher/interfaces/DocumentAdd.dtml
@@ -261,10 +199,6 @@ lib/zope/lib/python/Products/MetaPublisher/interfaces/ViewFormAdd.dtml
 lib/zope/lib/python/Products/MetaPublisher/interfaces/ViewFormEdit.dtml
 lib/zope/lib/python/Products/MetaPublisher/interfaces/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/interfaces/__init__.pyc
-lib/zope/lib/python/Products/MetaPublisher/manage/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/manage/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/manage/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/manage/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/manage/about.dtml
 lib/zope/lib/python/Products/MetaPublisher/manage/about_formulator.dtml
 lib/zope/lib/python/Products/MetaPublisher/manage/about_legal.dtml
@@ -297,47 +231,23 @@ lib/zope/lib/python/Products/MetaPublisher/manage/tabs2.dtml
 lib/zope/lib/python/Products/MetaPublisher/manage/tabs3.dtml
 lib/zope/lib/python/Products/MetaPublisher/manage/tabs4.dtml
 lib/zope/lib/python/Products/MetaPublisher/manage/undo.dtml
-lib/zope/lib/python/Products/MetaPublisher/rdbs/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/rdbs/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/rdbs/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/rdbs/CVS/Root
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/main.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/main.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/main.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/main.pyc
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/main.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/main.pyc
 lib/zope/lib/python/Products/MetaPublisher/rdbs/README.txt
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase/.cvsignore
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase/CVS/Entries
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase/CVS/Repository
-lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase/CVS/Root
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase/README.txt
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase/__init__.pyc
@@ -347,49 +257,26 @@ lib/zope/lib/python/Products/MetaPublisher/rdbs/__init__.py
 lib/zope/lib/python/Products/MetaPublisher/rdbs/__init__.pyc
 lib/zope/lib/python/Products/MetaPublisher/refresh.txt
 lib/zope/lib/python/Products/MetaPublisher/version.txt
-@dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/Sybase
-@dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/Oracle
-@dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/ODBC
-@dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/MySQL
-@dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/Gadfly
-@dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/rdbs
-@dirrm lib/zope/lib/python/Products/MetaPublisher/manage/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/manage
-@dirrm lib/zope/lib/python/Products/MetaPublisher/interfaces/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/interfaces
-@dirrm lib/zope/lib/python/Products/MetaPublisher/images/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/images
-@dirrm lib/zope/lib/python/Products/MetaPublisher/help/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/help
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/textarea
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/text/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/text
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/select/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/select
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/radio/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/radio
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/integer/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/integer
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/image/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/image
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/float/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/float
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/file/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/file
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/email/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/email
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/date/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/date
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/broken/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/broken
-@dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher/ftypes
-@dirrm lib/zope/lib/python/Products/MetaPublisher/CVS
 @dirrm lib/zope/lib/python/Products/MetaPublisher
