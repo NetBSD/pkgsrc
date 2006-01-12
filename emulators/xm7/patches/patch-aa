@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2002/06/15 07:31:19 cjep Exp $
+$NetBSD: patch-aa,v 1.6 2006/01/12 21:05:19 joerg Exp $
 
---- makefile.x11.orig	Thu Mar 23 01:01:00 2000
-+++ makefile.x11	Sat Aug 12 12:54:54 2000
+--- makefile.x11.orig	2000-03-22 16:01:00.000000000 +0000
++++ makefile.x11
 @@ -6,21 +6,29 @@
  
  COMMONSRC = \
@@ -34,19 +34,20 @@ $NetBSD: patch-aa,v 1.5 2002/06/15 07:31:19 cjep Exp $
  LOCALOBJ = \
  	xw_disp.o xw_key.o xw_main.o xw_file.o xw_snd.o
  
-@@ -29,22 +37,27 @@
+@@ -29,22 +37,27 @@ LOCALOBJ = \
  SRCS =	${COMMONSRC} ${LOCALSRC}
  OBJS =	${COMMONOBJ} ${LOCALOBJ}
  #LIBS = -L/usr/X11R6/lib -lX11 -lXt -lXext -lm -lc
 -LIBS = -L/usr/X11R6/lib -lX11 -lXt -lXext -lm -lc -lstdc++
-+LIBS = -L/usr/X11R6/lib -Wl,-R/usr/X11R6/lib -lX11 -lXt -lXext -lm -lc -lstdc++ \
-+       -lossaudio
++LIBS = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lX11 -lXt -lXext -lm -lc -lstdc++ \
++       ${LIBOSSAUDIO}
  
  #CFLAGS = 	-D_XWIN -DNDEBUG -O3 -funroll-loops -I/usr/X11R6/include -I.
 +.if defined(__i386__)
- CFLAGS = 	-D_XWIN -DNDEBUG -DCPU_ASM -O3 -I/usr/X11R6/include -I.
+-CFLAGS = 	-D_XWIN -DNDEBUG -DCPU_ASM -O3 -I/usr/X11R6/include -I.
++CFLAGS = 	-D_XWIN -DNDEBUG -DCPU_ASM -O3 -I${X11BASE}/include -I.
 +.else
-+CFLAGS = 	-D_XWIN -DNDEBUG -O3 -I/usr/X11R6/include -I.
++CFLAGS = 	-D_XWIN -DNDEBUG -O3 -I${X11BASE}/include -I.
 +.endif
  ASFLAGS =	-f elf -d _XWIN
  
@@ -66,7 +67,7 @@ $NetBSD: patch-aa,v 1.5 2002/06/15 07:31:19 cjep Exp $
  
  .asm.o:
  	nasm ${ASFLAGS} $<
-@@ -56,7 +69,7 @@
+@@ -56,7 +69,7 @@ linkclean:
  	find . -type l -exec rm -f {} \;
  
  convert:
@@ -75,4 +76,5 @@ $NetBSD: patch-aa,v 1.5 2002/06/15 07:31:19 cjep Exp $
  
  symlink:
 -	./symlink.sh
+\ No newline at end of file
 +	sh ./symlink.sh
