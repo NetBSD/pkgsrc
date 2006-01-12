@@ -1,17 +1,73 @@
-$NetBSD: patch-aa,v 1.2 2000/12/28 00:03:20 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2006/01/12 13:28:57 joerg Exp $
 
---- batchftp.c.orig	Tue Oct 23 21:12:42 1990
+--- batchftp.c.orig	1990-10-23 20:12:42.000000000 +0000
 +++ batchftp.c
-@@ -66,7 +66,7 @@
+@@ -5,10 +5,16 @@
+   requests, and execute all other ftp commands.  A user has the option to run
+   the program in either the background or the foreground. */
+ 
++#include <limits.h>
++
+ #define         _DIR_PATH       200                     /* directory path name length -- can be set to MAXPATHNAMELEN */
+ #define         _NULL           0
+ #define         _HOSTLEN        MAXHOSTNAMELEN + 80     /* local hostname + domain + network */
++#if defined(NAME_MAX)
++#define         _PATHLEN        _DIR_PATH + NAME_MAX    /* file path length -- directory + filename */
++#else
+ #define         _PATHLEN        _DIR_PATH + MAXNAMLEN   /* file path length -- directory + filename */
++#endif
+ 
+ #define         _TRUE            1
+ #define         _FALSE           0
+@@ -47,7 +53,8 @@
+ #include <sys/file.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+-#include <sys/dir.h>
++#include <dirent.h>
++#include <string.h>
+ 
+ #include <sys/socket.h>
+ #include <netdb.h>
+@@ -65,11 +72,7 @@ typedef char    boolean;
+ 
  /* All string functions used in Batchftp are user-defined */
  
- char *strcpy ();
+-char *strcpy ();
 -int  strlen ();
-+size_t  strlen ();
- int   strncmp ();
+-int   strncmp ();
  char  *substr ();
- char  *strcat ();
-@@ -129,7 +129,7 @@
+-char  *strcat ();
+ int   strpos ();
+ 
+ int     process_entry ();
+@@ -100,7 +103,11 @@ int     argc;
+ char    *argv[];
+ {
+ 	char    msgfile[_PATHLEN];                      /* file containing output for all ftp transfer sessions */
++#if defined(NAME_MAX)
++	char    ftp_script[NAME_MAX + 1];              /* file containing ftp commands */
++#else
+ 	char    ftp_script[MAXNAMLEN + 1];              /* file containing ftp commands */
++#endif
+ 	char    user_name[_LOGIN_LENGTH + 1];           /* user's login name */
+ 	char    pass_word[_PASS_LENGTH + 1];            /* password used for ftp login */
+ 	char    local_dir[_DIR_PATH];                   /* local directory for ftp session */
+@@ -108,8 +115,13 @@ char    *argv[];
+ 	char    remote_dir[_DIR_PATH];                  /* remote directory for ftp session */
+ 	char    input_file[_PATHLEN];                   /* user supplied file containing ftp commands and/or shorthand notation */
+ 	char    remote_host[_HOSTLEN];                  /* remote hostname */
++#if defined(NAME_MAX)
++	char    f_stdout[NAME_MAX + 1];               /* file containing output for a single transfer session */
++	char    sh_name[NAME_MAX + 1];                 /* name of exec'd sh script -- 1 line ftp command */
++#else
+ 	char    f_stdout[MAXNAMLEN  + 1];               /* file containing output for a single transfer session */
+ 	char    sh_name[MAXNAMLEN + 1];                 /* name of exec'd sh script -- 1 line ftp command */
++#endif
+ 	char     linebuf[_LBUF];                        /* one line of user's input file */
+ 
+ 	boolean  start_flag = _FALSE;                   /* indicates whether ftp attempt should begin */
+@@ -129,7 +141,7 @@ char    *argv[];
  
  
  	parent_pid = (int) getpid();                    /* sprintf does not always support type "long" */
@@ -20,7 +76,7 @@ $NetBSD: patch-aa,v 1.2 2000/12/28 00:03:20 wiz Exp $
  	sprintf(msgfile, "%s/msg%d",home_dir, parent_pid);      /*construct full pathname for ftp output file */
  
  	/* Parse command line switches and assign other arguments */
-@@ -729,7 +729,7 @@
+@@ -729,7 +741,7 @@ char	*ftp_script;
  	FILE            *fs_ptr;                /* pointer to f_stdout */
  	FILE            *msg_ptr;               /* pointer to ftp output file */
  	int		monitor_flag;		/* return value of monitor_ftp () */
@@ -29,7 +85,7 @@ $NetBSD: patch-aa,v 1.2 2000/12/28 00:03:20 wiz Exp $
  	char            *sh_args[3];            /* arguments for execv */
  
  	*alarm_flag = _FALSE;                   /* alarm has not been called */
-@@ -755,7 +755,7 @@
+@@ -755,7 +767,7 @@ char	*ftp_script;
  	sh_args[1] = sh_name;
  	sh_args[2] = 0;
  
@@ -38,12 +94,94 @@ $NetBSD: patch-aa,v 1.2 2000/12/28 00:03:20 wiz Exp $
  		fprintf(*mptr, "\nSYSTEM ERROR -- Unable to establish timer");
  		return;
  		}
-@@ -986,7 +986,7 @@
+@@ -986,69 +998,6 @@ char	*msgfile;
  }
  /*------------------------------------------------------- */
  
 -int  strlen (s)
-+size_t  strlen (s)
+-
+-register char  *s;
+-{
+-     register int   n = 0;
+-
+-     while (*s++)
+-	  ++n;
+-
+-     return (n);
+-}
+-/* -------------------------------------------------- */
+-
+-int  strncmp (s1, s2, n)
+-
+-register char  *s1, *s2;
+-register int   n;
+-{
+-	  if (n < 1)
+-	       return (_INVARG);
+-
+-     {
+-	  register int   char_count = -1;
+-
+-	  while ((++char_count < n) && (*s1) && (*s2)) {
+-	       if (*s1 > *s2)
+-		    return (_GREATER);
+-
+-	       if (*s1++ < *s2++)
+-		    return (_LESS);
+-	}
+-
+-	if (char_count == n)
+-	    return (_EQUAL);
+-
+-
+-    if (*s1 > *s2)
+-	return (_GREATER);
+-
+-    if (*s1 < *s2)
+-	return (_LESS);
+-
+-     }
+-
+-     return (_EQUAL);
+-}
+-
+-/*--------------------------------------------------- */
+-
+-char  *strcpy (s1, s2)
+-
+-register char  *s1, *s2;
+-{
+-
+-     register char  *ptr;
+-
+-     ptr = s1;
+-     while (*ptr++ = *s2++)
+-	  ;
+-
+-     return (s1);
+-}
+-/*---------------------------------------------------------- */
+ char   *substr (s1, s2)
  
- register char  *s;
- {
+ register char  *s1, *s2;
+@@ -1068,20 +1017,6 @@ register char  *s1, *s2;
+ }
+ /* -------------------------------------------------- */
+ 
+-char  *strcat (s1, s2)
+-
+-register char   *s1, *s2;
+-{
+-     register char  *p;
+-
+-     p = s1;
+-     while (*p++)
+-	  ;
+-
+-     --p;
+-     strcpy (p, s2);
+-     return (s1);
+-}
+ /*--------------------------------------------------------- */
+ 
+ int   strpos (s, c)
