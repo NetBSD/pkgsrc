@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.464 2006/01/12 04:31:30 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.465 2006/01/12 10:32:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -916,17 +916,23 @@ my (%checks) = (
 );
 
 my $opt_warn_absname	= true;
+my $opt_warn_debug	= false;
 my $opt_warn_directcmd	= true;
 my $opt_warn_extra	= false;
 my $opt_warn_order	= true;
 my $opt_warn_plist_sort	= false;
+my $opt_warn_quoting	= false;
+my $opt_warn_space	= false;
 my $opt_warn_types	= true;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
+	"debug"		=> [\$opt_warn_debug, "enable some warnings that are useful for debugging pkglint"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"extra"		=> [\$opt_warn_extra, "enable some extra warnings"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
+	"quoting"	=> [\$opt_warn_quoting, "warn about quoting issues"],
+	"space"		=> [\$opt_warn_space, "warn about inconsistent use of white-space"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 );
 
@@ -1986,7 +1992,7 @@ sub checkline_mk_shellword($$$) {
 		if ($rest =~ s/^\$\{(${regex_varname})(:[^\{]+)?\}//) {
 			my ($varname, $mod) = ($1, $2);
 
-			if (!$opt_warn_extra) {
+			if (!$opt_warn_quoting) {
 				# Skip the following checks.
 
 			} elsif ($state == SWST_PLAIN && defined($mod) && $mod eq ":Q") {
@@ -2008,7 +2014,7 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^\$\$([0-9A-Z_a-z]+)//
 			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+)\}//) {
 				my ($shvarname) = ($1);
-				if ($opt_warn_extra and $check_quoting) {
+				if ($opt_warn_quoting and $check_quoting) {
 					$line->log_warning("Unquoted shell variable \"${shvarname}\".");
 				}
 			} else {
@@ -2058,7 +2064,7 @@ sub checkline_mk_shellword($$$) {
 		}
 	}
 	if ($rest ne "") {
-		$line->log_debug("[checkline_mk_shellword] " . statename->[$state] . ": rest=${rest}");
+		$opt_warn_debug && $line->log_error("[checkline_mk_shellword] " . statename->[$state] . ": rest=${rest}");
 	}
 }
 
@@ -2917,6 +2923,10 @@ sub checklines_mk($) {
 
 		} elsif ($text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+			my $align = substr($text, $+[2], $-[3] - $+[2]);
+			if ($align !~ qr"^\t*$") {
+				$opt_warn_space && $line->log_note("Alignment of variable values should be done with tabs, not spaces.");
+			}
 			checkline_mk_varassign($line, $varname, $op, $value, $comment);
 
 		} elsif ($text =~ regex_shellcmd) {
