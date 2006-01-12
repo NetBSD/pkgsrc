@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2005/04/15 16:36:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/01/12 21:02:54 adam Exp $
 bin/pine
 bin/rpdump
 bin/rpload
 man/man1/pine.1
 man/man1/rpdump.1
 man/man1/rpload.1
-share/pine/tech-notes.txt
+share/examples/pine/pine.conf
+share/examples/pine/pine.conf.fixed
 share/pine/contrib/krb5-setup
 share/pine/contrib/ldap-setup
 share/pine/contrib/utils/ansiprt.c
@@ -15,8 +16,7 @@ share/pine/contrib/utils/pwd2pine
 share/pine/contrib/utils/sendit.sh
 share/pine/contrib/utils/sendtoall
 share/pine/contrib/utils/txtcc.sh
-share/examples/pine/pine.conf
-share/examples/pine/pine.conf.fixed
+share/pine/tech-notes.txt
 @dirrm share/pine/contrib/utils
 @dirrm share/pine/contrib
 @dirrm share/pine
