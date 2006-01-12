@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/11/03 01:55:04 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2006/01/12 03:00:45 jschauma Exp $
 
 DISTNAME=	cairo-1.0.2
 PKGREVISION=	1
@@ -35,6 +35,12 @@ BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 BUILDLINK_DEPENDS.glitz+=	glitz>=0.4.4
 BUILDLINK_DEPENDS.libpixman+=	libpixman>=0.1.5
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro*)
+CFLAGS+=			-c99
+.endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
