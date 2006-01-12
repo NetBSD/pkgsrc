@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.23 2006/01/09 18:00:04 schmonz Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.24 2006/01/12 00:40:19 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -31,6 +31,8 @@
 #    check-wrkref checks whether a package's installed files contain
 #	references to ${WRKDIR}.
 #
+#    check-interpreter checks whether a script's interpreter exists.
+#
 
 # For PKG_DEVELOPERs, cause some checks to be run automatically by default.
 .if defined(PKG_DEVELOPER)
@@ -40,6 +42,7 @@ CHECK_WRKREF?=		tools
 CHECK_FILES?=		no
 CHECK_FILES_STRICT?=	no
 CHECK_WRKREF?=		no
+CHECK_INTERPRETER?=	no
 
 USE_TOOLS+=		awk cat cmp diff echo find grep rm sed test	\
 			touch true
@@ -407,3 +410,45 @@ check-wrkref:
 		exit 1;							\
 	  fi; }
 .endif
+
+###########################################################################
+### check-interpreter #####################################################
+###########################################################################
+
+###########################################################################
+# CHECK_INTERPRETER_SKIP is a list of shell globs.  Installed files that
+# match these globs are skipped when running the check-interpreter target.
+#
+_CHECK_INTERP_SKIP_FILTER=	case $$file in
+.for _pattern_ in ${CHECK_INTERPRETER_SKIP:U}
+_CHECK_INTERP_SKIP_FILTER+=	${_pattern_}) continue ;;
+.endfor
+_CHECK_INTERP_SKIP_FILTER+=	*) ;;
+_CHECK_INTERP_SKIP_FILTER+=	esac
+
+###########################################################################
+# check-interpreter target
+#
+.PHONY: check-interpreter
+check-interpreter:
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
+		"${_PKGSRC_IN}> Checking for non-existent script interpreters in ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${PKG_INFO} -qL ${PKGNAME:Q} | ${SORT} | ${SED} 's,\\,\\\\,g' |	\
+	{ exitcode=0;							\
+	  while read file; do						\
+		${_CHECK_INTERP_SKIP_FILTER};				\
+		${SHCOMMENT} "[$$file]";				\
+		interp=`${SED} -n -e '1s/^#! *\([^ ]*\).*/\1/p' -e '2q' < "$$file"` \
+		|| {	${ECHO} "[bsd.pkg.check.mk] WARNING: sed(1) failed for \"$$file\"." 1>&2; \
+			continue;					\
+		};							\
+		case $$interp in					\
+		"") continue;						\
+		esac;							\
+		if ${TEST} ! -f "$$interp"; then			\
+			${ECHO} "[bsd.pkg.check.mk] ERROR: File \"$$file\"'s interpreter \"$$interp\" does not exist." 1>&2; \
+			exitcode=1;					\
+		fi;							\
+	  done;								\
+	  exit $$exitcode; }
