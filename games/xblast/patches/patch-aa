@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/12 23:49:59 joerg Exp $
 --- Imakefile.orig	Thu Oct 16 02:54:01 1997
 +++ Imakefile	Tue Nov 10 00:41:26 1998
 @@ -12,9 +12,9 @@
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
  OBJS2  = xbsndsrv.o
  
 -ComplexProgramTarget_2(xbsndsrv,NullParameter,NullParameter)
-+ComplexProgramTarget_2(xbsndsrv,-lossaudio,NullParameter)
++ComplexProgramTarget_2(xbsndsrv,${LIBOSSAUDIO},NullParameter)
  
  /*
   * Part 3: install Application Defaults

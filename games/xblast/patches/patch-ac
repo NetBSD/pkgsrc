@@ -1,12 +1,17 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/11/10 08:32:36 garbled Exp $
---- sound.c.orig	Mon Nov  9 23:01:48 1998
-+++ sound.c	Mon Nov  9 23:02:10 1998
-@@ -80,7 +80,7 @@
+$NetBSD: patch-ac,v 1.2 2006/01/12 23:49:59 joerg Exp $
+
+--- sound.c.orig	1997-10-16 08:48:27.000000000 +0000
++++ sound.c
+@@ -80,7 +80,11 @@
  #include <sys/fcntl.h>
  #include <sys/stat.h>
  #include <sys/wait.h>
 -#include <linux/soundcard.h>
++#if defined(__DragonFly__) || defined(__FreeBSD__)
++#include <sys/soundcard.h>
++#else
 +#include <soundcard.h>
++#endif
  #include <signal.h>
  #include "sound.h"
  
