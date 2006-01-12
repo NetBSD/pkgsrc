@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2004/07/09 12:45:03 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2006/01/12 19:48:02 joerg Exp $
 
---- mfs.h.orig	1994-06-22 16:24:51.000000000 +0200
+--- mfs.h.orig	1994-06-22 14:24:51.000000000 +0000
 +++ mfs.h
-@@ -45,7 +45,9 @@ typedef unsigned char boolean_t;
+@@ -45,9 +45,11 @@ typedef unsigned char boolean_t;
  
  #include "mfs_link.h"
  
@@ -10,5 +10,8 @@ $NetBSD: patch-ai,v 1.1 2004/07/09 12:45:03 wiz Exp $
  extern char *sys_errlist[];
 +#endif
  
- #if !defined(__hpux) && !defined(SOLARIS) && !defined(SGI) && !defined(RS6000)
+-#if !defined(__hpux) && !defined(SOLARIS) && !defined(SGI) && !defined(RS6000)
++#if !defined(__hpux) && !defined(SOLARIS) && !defined(SGI) && !defined(RS6000) && !defined(BSD)
  #define strerror(x) sys_errlist[x]
+ #endif
+ 
