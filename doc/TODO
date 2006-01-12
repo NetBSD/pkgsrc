@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4410 2006/01/12 20:33:38 adam Exp $
+$NetBSD: TODO,v 1.4411 2006/01/12 20:42:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -1099,7 +1099,6 @@ Suggested package updates
 	o rt-pgsql-3.4.1
 	o rt3-3.4.4
 	o rtcw-1.41.3
-	o rtorrent-0.4.2
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-6.3 [pkg/32510]
 	o sablecc-3.2
