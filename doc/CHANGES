@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12470 2006/01/12 18:36:52 joerg Exp $
+$NetBSD: CHANGES,v 1.12471 2006/01/12 19:05:56 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -239,3 +239,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gtk2 to 2.8.10 [wiz 2006-01-12]
 	Updated finance/gnucash to 1.8.12nb1 [wiz 2006-01-12]
 	Updated devel/gnustep-make to 1.11.1nb1 [joerg 2006-01-12]
+	Updated pkgtools/xpkgwedge to 1.15 [joerg 2006-01-12]
