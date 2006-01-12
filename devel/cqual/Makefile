@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/01/11 22:50:21 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/12 00:44:44 rillig Exp $
 #
 
 DISTNAME=		cqual-0.991
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cqual/}
 
@@ -12,7 +12,9 @@ COMMENT=		Tool for adding type qualifiers to C
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl:run
+
+REPLACE_PERL+=		bin/*
 
 INSTALLATION_DIRS=	share/doc/cqual share/examples/cqual
 
