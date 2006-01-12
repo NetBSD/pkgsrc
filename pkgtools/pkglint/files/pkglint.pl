@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.463 2006/01/11 22:57:10 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.464 2006/01/12 04:31:30 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -336,6 +336,14 @@ sub is_changed($) {
 	return shift(@_)->[CHANGED];
 }
 
+# Only for PkgLint::String support
+sub substr($$$$) {
+	my ($self, $line, $start, $end) = @_;
+	my ($text, $physlines);
+
+	return substr($self->[PHYSLINES]->[$line]->[1], $start, $end);
+}
+
 sub show_source($$) {
 	my ($self, $out) = @_;
 
@@ -432,6 +440,136 @@ sub set_text($$) {
 }
 
 #== End of PkgLint::Line ==================================================
+
+package PkgLint::String;
+#==========================================================================
+# In pkglint, a String is a part of a Line that contains exact references
+# to the locations of its substrings in the physical lines of the file from
+# which it has been read. This makes it possible for diagnostics to be
+# marked at character level instead of logical line level.
+#
+# A String itself consists of zero or more Parts, which, when concatenated,
+# form the text of the String. A Part is either a literal string or an
+# array of the form [$line, $startcol, $endcol].
+#==========================================================================
+
+BEGIN {
+	import PkgLint::Util qw(
+		false true
+	);
+}
+
+use constant LINE	=> 0;
+use constant PARTS	=> 1;
+
+use constant P_LINE	=> 0;
+use constant P_STARTCOL	=> 1;
+use constant P_ENDCOL	=> 2;
+
+sub new($$@) {
+	my ($class, $line, @parts) = @_;
+	my ($self) = ([$line, \@parts]);
+	bless($self, $class);
+	$self->compress();
+	return $self;
+}
+sub line($) {
+	return shift(@_)->[LINE];
+}
+sub parts($) {
+	return shift(@_)->[PARTS];
+}
+
+sub text($) {
+	my ($self) = @_;
+	my ($text);
+
+	$text = "";
+	foreach my $part (@{$self->[PARTS]}) {
+		if (ref($part) eq "") {
+			$text .= $part;
+		} else {
+			$text .= $self->line->subtext($part->[P_LINE], $part->[P_STARTCOL], $part->[P_ENDCOL]);
+		}
+	}
+	return $text;
+}
+
+sub substr($$$) {
+	my ($self, $from, $len) = @_;
+	my (@nparts, $skip, $take, $physlines);
+
+	# XXX: This code is slow, but simple.
+
+	$physlines = $self->[LINE]->[PkgLint::Line::PHYSLINES];
+
+	$skip = $from;
+	$take = $len;
+	foreach my $part (@{$self->[PARTS]}) {
+		if (ref($part) eq "") {
+			my $p = "";
+
+			while ($skip > 0 && $part ne "") {
+				$skip--;
+				$part = substr($part, 1);
+			}
+			while ($take > 0 && $part ne "") {
+				$take--;
+				$p .= substr($part, 0, 1);
+				$part = substr($part, 1);
+			}
+			push(@nparts, $p);
+		} else {
+			my ($toline, $tocol, $tolen, $line, $linelen, $col);
+			my ($start, $end);
+
+			$line = $part->[P_LINE];
+			$col = $part->[P_STARTCOL];
+			$tocol = $part->[P_ENDCOL];
+
+			$linelen = length($physlines->[$line]->[1]);
+			while ($skip > 0 && $col < $tocol) {
+				last if ($col == $linelen);
+				$skip--;
+				$col++;
+			}
+			$start = $col;
+			while ($take > 0 && $col < $tocol) {
+				last if ($col == $linelen);
+				$take--;
+				$col++;
+			}
+			$end = $col;
+			push(@nparts, [$line, $start, $end]);
+		}
+	}
+	return PkgLint::String->new($self->[LINE], @nparts);
+}
+
+sub compress($) {
+	my ($self) = @_;
+	my ($parts, @nparts);
+
+	$parts = $self->[PARTS];
+
+	# Copy all but empty parts into nparts.
+	foreach my $part (@{$parts}) {
+		if (ref($part) eq "") {
+			if ($part ne "") {
+				push(@nparts, $part);
+			}
+		} else {
+			if ($part->[P_STARTCOL] != $part->[P_ENDCOL]) {
+				push(@nparts, $part);
+			}
+		}
+	}
+	$self->[PARTS] = \@nparts;
+
+	# TODO: Merge adjacent parts
+}
+
+#== End of PkgLint::String ================================================
 
 package PkgLint::FileUtil;
 #==========================================================================
@@ -560,6 +698,94 @@ sub load_file($) {
 	my ($fname) = @_;
 
 	return load_lines($fname, false);
+}
+
+sub get_folded_string($$$) {
+	my ($fname, $lines, $ref_lineno) = @_;
+	my ($value, $lineno, $first, $firstlineno, $lastlineno, $physline, $physlines, @parts);
+
+	$value = "";
+	$first = true;
+	$lineno = ${$ref_lineno};
+	$firstlineno = $lines->[$lineno]->[0];
+	$physlines = [];
+	$physline = 0;
+
+	for (; $lineno <= $#{$lines}; $lineno++) {
+		if ($lines->[$lineno]->[1] =~ qr"^([ \t]*)(.*?)([ \t]*)(\\?)\n?$") {
+			my ($indent, $text, $outdent, $cont) = ($1, $2, $3, $4);
+			my (@start) = (@-);
+			my (@end) = (@+);
+
+			if ($first) {
+				$value .= $indent;
+				push(@parts, [$physline, $start[1], $end[1]]);
+				$first = false;
+			}
+
+			$value .= $text;
+			push(@parts, [$physline, $start[2], $end[2]]);
+
+			push(@{$physlines}, $lines->[$lineno]);
+			$physline++;
+
+			if ($cont eq "\\") {
+				$value .= " ";
+				push(@parts, " ");
+			} else {
+				$value .= $outdent;
+				push(@parts, [$physline, $start[3], $end[3]]);
+				last;
+			}
+		}
+	}
+
+	if ($lineno > $#{$lines}) {
+		# The last line in the file is a continuation line
+		$lineno--;
+	}
+	$lastlineno = $lines->[$lineno]->[0];
+	${$ref_lineno} = $lineno + 1;
+
+	my $line = PkgLint::Line->new($fname,
+	    $firstlineno == $lastlineno
+		? $firstlineno
+		: "$firstlineno--$lastlineno",
+	    $value,
+	    $physlines);
+	return PkgLint::String->new($line, @parts);
+}
+
+sub load_strings($$) {
+	my ($fname, $fold_backslash_lines) = @_;
+	my ($physlines, $seen_newline, $strings) = @_;
+
+	$physlines = load_physical_lines($fname);
+	if (!$physlines) {
+		return false;
+	}
+
+	$seen_newline = true;
+	$strings = [];
+	if ($fold_backslash_lines) {
+		for (my $lineno = 0; $lineno <= $#{$physlines}; ) {
+			push(@{$strings}, get_folded_string($fname, $physlines, \$lineno));
+		}
+	} else {
+		foreach my $physline (@{$physlines}) {
+			my ($text, $line);
+
+			($text = $physline->[1]) =~ s/\n$//;
+			$line = PkgLint::Line->new($fname, $physline->[0], $text, [$physline]);
+			push(@{$strings}, PkgLint::String->new($line, [0, 0, length($text)]));
+		}
+	}
+
+	if (0 <= $#{$physlines} && $physlines->[-1]->[1] !~ qr"\n$") {
+		log_error($fname, $physlines->[-1]->[0], "File must end with a newline.");
+	}
+
+	return $strings;
 }
 
 sub save_autofix_changes($) {
