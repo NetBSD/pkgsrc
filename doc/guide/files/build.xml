@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.19 2006/01/11 22:35:31 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.20 2006/01/12 21:46:33 wiz Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -433,7 +433,7 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
 	<varlistentry><term><varname>INSTALL_PROGRAM</varname></term>
 		<listitem><para>binaries that can be stripped from debugging symbols</para></listitem></varlistentry>
 	<varlistentry><term><varname>INSTALL_SCRIPT</varname></term>
-		<listitem><para>binaries that cannot be unstripped</para></listitem></varlistentry>
+		<listitem><para>binaries that cannot be stripped</para></listitem></varlistentry>
 	<varlistentry><term><varname>INSTALL_GAME</varname></term>
 		<listitem><para>game binaries</para></listitem></varlistentry>
 	<varlistentry><term><varname>INSTALL_LIB</varname></term>
