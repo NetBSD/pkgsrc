@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/07/29 12:57:14 adam Exp $
+$NetBSD: patch-ac,v 1.5 2006/01/12 18:36:22 joerg Exp $
 
---- target.make.orig	2005-07-13 14:56:18.000000000 +0000
+--- target.make.orig	2005-09-19 03:37:15.000000000 +0000
 +++ target.make
-@@ -671,9 +671,9 @@ endif
+@@ -674,9 +674,9 @@ endif
  
  ####################################################
  #
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.4 2005/07/29 12:57:14 adam Exp $
  # This is disabled temporarily, because I don't know exactly how
  # to link shared libs. Everything seems to link correctly now but
  # constructor functions in the shared lib failed to get called
-@@ -705,7 +705,7 @@ endif
+@@ -708,7 +708,7 @@ endif
  #
  # NetBSD ELF
  #
@@ -23,3 +23,43 @@ $NetBSD: patch-ac,v 1.4 2005/07/29 12:57:14 adam Exp $
  HAVE_SHARED_LIBS    = yes
  SHARED_LD_POSTFLAGS = -Wl,-R/usr/pkg/lib -L/usr/pkg/lib
  SHARED_LIB_LINK_CMD = \
+@@ -739,6 +739,39 @@ endif
+ 
+ ####################################################
+ #
++# DragonFly
++#
++ifeq ($(findstring dragonfly, $(GNUSTEP_TARGET_OS)), dragonfly)
++HAVE_SHARED_LIBS    = yes
++SHARED_LD_POSTFLAGS = -Wl,-R/usr/pkg/lib -L/usr/pkg/lib
++SHARED_LIB_LINK_CMD = \
++	$(CC) -shared -Wl,-soname,$(LIB_LINK_VERSION_FILE) \
++              $(ALL_LDFLAGS) -o $(LIB_LINK_OBJ_DIR)/$(LIB_LINK_VERSION_FILE) \
++                 $^ $(INTERNAL_LIBRARIES_DEPEND_UPON) \
++                 $(SHARED_LD_POSTFLAGS); \
++	(cd $(LIB_LINK_OBJ_DIR); \
++	  $(RM_LN_S) $(LIB_LINK_FILE); \
++	  $(LN_S) $(LIB_LINK_VERSION_FILE) $(LIB_LINK_FILE))
++OBJ_MERGE_CMD		= \
++	$(CC) -nostdlib -r $(ALL_LDFLAGS) -o $(GNUSTEP_OBJ_DIR)/$(SUBPROJECT_PRODUCT) $^ ;
++
++SHARED_CFLAGS	+= -fPIC
++SHARED_LIBEXT	= .so
++
++HAVE_BUNDLES	= yes
++BUNDLE_LD	= $(CC)
++BUNDLE_LDFLAGS	+= -shared
++ADDITIONAL_LDFLAGS += -rdynamic -Wl,-R/usr/pkg/lib -L/usr/pkg/lib -Wl,-R/usr/X11R6/lib -L/usr/X11R6/lib
++ADDITIONAL_INCLUDE_DIRS += -I/usr/pkg/include
++STATIC_LDFLAGS += -static
++endif
++#
++# end DragonFly
++#
++####################################################
++
++####################################################
++#
+ # OpenBSD 3.x (though set for 3.3)
+ #
+ ifeq ($(findstring openbsd, $(GNUSTEP_TARGET_OS)), openbsd)
