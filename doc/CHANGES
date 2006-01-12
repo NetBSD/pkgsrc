@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12479 2006/01/12 22:50:07 joerg Exp $
+$NetBSD: CHANGES,v 1.12480 2006/01/12 22:59:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -255,3 +255,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/boost-libs to 1.33.0nb1 [joerg 2006-01-12]
 	Updated devel/boost-headers to 1.33.0nb1 [joerg 2006-01-12]
 	Updated devel/boost-build to 1.33.0nb1 [joerg 2006-01-12]
+	Updated x11/rxvt-unicode to 6.3 [wiz 2006-01-12]
