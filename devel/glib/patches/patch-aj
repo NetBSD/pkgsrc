@@ -1,8 +1,21 @@
-$NetBSD: patch-aj,v 1.1 2004/06/01 08:03:10 shannonjr Exp $
+$NetBSD: patch-aj,v 1.2 2006/01/12 19:49:15 joerg Exp $
 
---- glib.h.orig	2001-02-26 20:44:38.000000000 -0700
+--- glib.h.orig	2001-02-27 03:44:38.000000000 +0000
 +++ glib.h
-@@ -271,14 +271,18 @@ extern "C" {
+@@ -119,8 +119,12 @@ extern "C" {
+  *  defined then the current definition is correct.
+  */
+ #ifndef	NULL
++#ifdef		__cplusplus
++#define	NULL	(0L)
++#else
+ #define	NULL	((void*) 0)
+ #endif
++#endif
+ 
+ #ifndef	FALSE
+ #define	FALSE	(0)
+@@ -271,14 +275,18 @@ extern "C" {
  
  /* Wrap the gcc __PRETTY_FUNCTION__ and __FUNCTION__ variables with
   * macros, so we can refer to them as strings unconditionally.
