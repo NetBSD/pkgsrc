@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/07/18 00:50:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/12 21:18:50 joerg Exp $
 #
 
 DISTNAME=	xtrs-4.9
@@ -19,7 +19,7 @@ SUBST_FILES.mf=		Makefile.local
 SUBST_SED.mf=		-e 's|/usr/local|${PREFIX}|g' \
 			-e 's|/usr/X11/|${X11PREFIX}/|g' \
 			-e 's|/usr/include/X11|${X11BASE}/include|g' \
-			-e 's|^\(LDFLAGS = \)-L\(/usr/X11R6/lib\)|\1-Wl,-R\2 -L\2|g' \
+			-e 's|^\(LDFLAGS = \)-L/usr/X11R6/lib|\1-Wl,-R${X11BASE} -L${X11BASE}|g' \
 			-e 's|/share/man|/man|g'
 
 post-install:
