@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4409 2006/01/12 20:05:50 wiz Exp $
+$NetBSD: TODO,v 1.4410 2006/01/12 20:33:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -714,7 +714,6 @@ Suggested package updates
 	o libssh-0.11 [test security/hydra after update]
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.22
-	o libtorrent-0.8.2
 	o libwpd-0.8.3
 	o libxml2-2.6.23
 	o licq-core-1.3.0
