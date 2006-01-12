@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.31 2005/12/05 20:50:34 rillig Exp $
+$NetBSD: distinfo,v 1.32 2006/01/12 21:02:54 adam Exp $
 
-SHA1 (pine4.63.tar.bz2) = ad235c1fad7cc8adfff5c69cea8eb267afa648c9
-RMD160 (pine4.63.tar.bz2) = b04a6f5134aeae6b0a5663acbfa4e812c3fc7762
-Size (pine4.63.tar.bz2) = 3083721 bytes
+SHA1 (pine4.64.tar.bz2) = b88aeb64ec2fa30bbb38fda3a051d98dc0e19c5e
+RMD160 (pine4.64.tar.bz2) = 8661cd3c0875e46c8cd5eafa7c7c964f79a3b3fd
+Size (pine4.64.tar.bz2) = 3110790 bytes
 SHA1 (patch-aa) = 800f84f3c868e6d17798e9f98d8151bb734143b6
 SHA1 (patch-ab) = cfac4d24763dbd4285e03c6c25891469c5ac1953
 SHA1 (patch-ac) = 870d7d414e25b37e47c5f62447210fe7800c733b
