@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/02 16:02:10 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/12 19:11:55 rillig Exp $
 
 DISTNAME=	asterisk-1.0.9
 CATEGORIES=	comms net audio
@@ -9,11 +9,11 @@ MAINTAINER=	riz@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 
-USE_TOOLS+= 		bison gmake
+USE_TOOLS+=	bison gmake
 
-MANCOMPRESSED= 		yes
+MANCOMPRESSED=	yes
 
-INSTALL_TARGET= 	install samples
+INSTALL_TARGET=	install samples
 
 # Running as non-root will come later
 #ASTERISK_USER?= 	asterisk
@@ -37,36 +37,36 @@ ASTMANDIR?=${PREFIX}/man
 ASTEXAMPLEDIR?=${PREFIX}/share/examples/asterisk
 
 # Override default paths in Makefile
-SUBST_CLASSES+= 	asterisk
-SUBST_STAGE.asterisk= 	pre-configure
+SUBST_CLASSES+=		asterisk
+SUBST_STAGE.asterisk=	pre-configure
 SUBST_FILES.asterisk=	Makefile
-SUBST_SED.asterisk= 	\
-	-e "s|^\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|"		\
-	-e "s|^\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|"	\
-	-e "s|^\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|"		\
-	-e "s|^\(ASTSPOOLDIR\)=.*|\1 = ${ASTSPOOLDIR}|"		\
-	-e "s|^\(ASTLOGDIR\)=.*|\1 = ${ASTLOGDIR}|"		\
-	-e "s|^\(ASTHEADERDIR\)=.*|\1 = ${ASTHEADERDIR}|"	\
-	-e "s|^\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH}|"		\
-	-e "s|^\(ASTBINDIR\)=.*|\1 = ${ASTBINDIR}|"		\
-	-e "s|^\(ASTSBINDIR\)=.*|\1 = ${ASTSBINDIR}|"		\
-	-e "s|^\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|"	\
-	-e "s|^\(ASTMANDIR\)=.*|\1 = ${ASTMANDIR}|"		\
-	-e "s|^\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|"
+SUBST_SED.asterisk=	\
+	-e 's|^\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|'		\
+	-e 's|^\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|'	\
+	-e 's|^\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|'		\
+	-e 's|^\(ASTSPOOLDIR\)=.*|\1 = ${ASTSPOOLDIR}|'		\
+	-e 's|^\(ASTLOGDIR\)=.*|\1 = ${ASTLOGDIR}|'		\
+	-e 's|^\(ASTHEADERDIR\)=.*|\1 = ${ASTHEADERDIR}|'	\
+	-e 's|^\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH}|'		\
+	-e 's|^\(ASTBINDIR\)=.*|\1 = ${ASTBINDIR}|'		\
+	-e 's|^\(ASTSBINDIR\)=.*|\1 = ${ASTSBINDIR}|'		\
+	-e 's|^\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|'	\
+	-e 's|^\(ASTMANDIR\)=.*|\1 = ${ASTMANDIR}|'		\
+	-e 's|^\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|'
 
 .include "options.mk"
 
-RCD_SCRIPTS= 		asterisk
-OWN_DIRS+= 		${ASTSPOOLDIR} ${ASTLOGDIR} ${ASTVARRUNDIR}
+RCD_SCRIPTS=		asterisk
+OWN_DIRS+=		${ASTSPOOLDIR} ${ASTLOGDIR} ${ASTVARRUNDIR}
 OWN_DIRS+=		${ASTLOGDIR}/cdr-csv
 
 CONF_FILES=		# empty
-.for _file_ in asterisk.conf extensions.conf
-CONF_FILES+=	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
+.for f in asterisk.conf extensions.conf
+CONF_FILES+=	${ASTEXAMPLEDIR}/${f} ${ASTETCDIR}/${f}
 .endfor
 
 # if we put all the files in $CONF_FILES, the message is _way_ too long.
-.for _file_ in adsi.conf adtranvofr.conf agents.conf alarmreceiver.conf \
+.for f in adsi.conf adtranvofr.conf agents.conf alarmreceiver.conf	\
 	alsa.conf cdr_manager.conf cdr_odbc.conf 			\
 	cdr_pgsql.conf cdr_tds.conf enum.conf extconfig.conf 		\
 	features.conf festival.conf iax.conf 				\
@@ -76,19 +76,19 @@ CONF_FILES+=	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
 	res_config_odbc.conf res_odbc.conf rpt.conf rtp.conf sip.conf 	\
 	skinny.conf voicemail.conf vpb.conf zapata.conf asterisk.adsi 	\
 	telcordia-1.adsi
-CONF_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
+CONF_FILES+=	${ASTEXAMPLEDIR}/${f} ${ASTETCDIR}/${f}
 .endfor
 
 PTHREAD_OPTS+=	require native
 
 .if (${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h))
 post-patch:
-	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
+	${ECHO} "#include <sys/poll.h>" > ${WRKSRC:Q}/include/asterisk/poll-compat.h
 .endif
 
 pre-configure:
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/editline
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/editline
+	@${CP} ${PKGSRCDIR:Q}/mk/gnu-config/config.guess ${WRKSRC:Q}/editline
+	@${CP} ${PKGSRCDIR:Q}/mk/gnu-config/config.sub ${WRKSRC:Q}/editline
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
