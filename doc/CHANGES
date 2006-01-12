@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12475 2006/01/12 20:42:26 adam Exp $
+$NetBSD: CHANGES,v 1.12476 2006/01/12 21:04:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -247,3 +247,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed net/ytalk-x11 [wiz 2006-01-12]
 	Updated net/libtorrent to 0.7.6 [adam 2006-01-12]
 	Updated net/rtorrent to 0.3.6 [adam 2006-01-12]
+	Updated mail/imap-uw to 2004g [adam 2006-01-12]
+	Updated editors/pico to 4.10nb1 [adam 2006-01-12]
+	Updated mail/pine to 4.64 [adam 2006-01-12]
