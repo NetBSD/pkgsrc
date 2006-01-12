@@ -1,14 +1,9 @@
-Simplified Wrapper and Interface Generator.
+SWIG (Simplified Wrapper and Interface Generator)
 
-From the web page (http://www.swig.org):
+SWIG is a compiler that integrates C and C++ with languages including
+Perl, Python, Tcl, Guile, Mzscheme, Java, Ruby, PHP, and Ocaml.
 
-SWIG is a software development tool that connects programs written
-in C, C++, and Objective-C with a variety of high-level programming
-languages. SWIG is primarily used with common scripting languages
-such as Perl, Python, and Tcl/Tk, but has also been extended to
-include languages such as Java, Eiffel, and Guile. SWIG is most
-commonly used to create high-level interpreted programming
-environments, systems integration, and as a tool for building user
-interfaces. SWIG is distributed as OpenSource and may be freely
-used, distributed, and modified for commercial or noncommercial
-use.
+SWIG reads annotated C/C++ header files and creates wrapper code (glue
+code) in order to make the corresponding C/C++ libraries available to
+the listed languages, or to extend C/C++ programs with a scripting
+language.
