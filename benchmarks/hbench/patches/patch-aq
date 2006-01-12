@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2006/01/12 15:10:29 joerg Exp $
+
+--- src/Makefile.orig	1997-06-27 14:50:31.000000000 +0000
++++ src/Makefile
+@@ -89,7 +89,7 @@ COMPILE=$(CC) $(CFLAGS) $(CPPFLAGS) $(LD
+ #####################################
+ 
+ # The following don't need special handling.
+-freebsd netbsd openbsd sunos linux:
++dragonfly freebsd netbsd openbsd sunos linux:
+ 	@$(MAKE) binaries
+ 
+ bsdi:
