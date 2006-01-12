@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/11 18:59:36 salo Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/12 18:17:19 salo Exp $
 #
 
 DISTNAME=	paros-3.2.8-unix
 PKGNAME=	${DISTNAME:S/-unix//}
+PKGREVISION=	1
 CATEGORIES=	games java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paros/}
 EXTRACT_SUFX=	.zip
@@ -28,6 +29,9 @@ do-configure:
 		${ECHO} cd ${PREFIX}/lib/${PKGBASE} &&	\
 		${CAT} ${WRKSRC}/startserver.sh &&	\
 		${ECHO}) > ${WRKDIR}/paros.sh
+	@${MV} ${WRKSRC}/license/theclarifiedartisticlicense.htm	\
+		 ${WRKSRC}/license/TheClarifiedArtisticLicense.htm
+
 do-install:
 	@cd ${WRKDIR} && ${PAX} -rw -pm ${PKGBASE} ${PREFIX}/lib/
 	${INSTALL_SCRIPT} ${WRKDIR}/paros.sh ${PREFIX}/bin/paros
