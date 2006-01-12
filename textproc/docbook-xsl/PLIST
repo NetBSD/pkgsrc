@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/08/13 15:21:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/01/12 17:12:52 jmmv Exp $
 share/examples/docbook-xsl/ChangeLog
 share/examples/docbook-xsl/README
 share/examples/docbook-xsl/biblioentry.xsl
@@ -6,7 +6,7 @@ share/examples/docbook-xsl/testtemplate.xml
 share/examples/docbook-xsl/titlepage.xsl
 @comment in xmlcatmgr: share/xml/catalog
 share/xsl/docbook/VERSION
-share/xsl/docbook/catalog
+share/xsl/docbook/catalog.xml
 share/xsl/docbook/common/ChangeLog
 share/xsl/docbook/common/af.xml
 share/xsl/docbook/common/am.xml
