@@ -1149,6 +1149,11 @@ manual page about the inherent dangers of installing binary packages which you
 did not create yourself, and the security holes that can be introduced onto
 your system by indiscriminate adding of such files.
 
+The same warning of course applies to every package you install from source
+when you haven't completely read and understood the source code of the package,
+the compiler that is used to build the package and all the other tools that are
+involved.
+
 4.2. Building packages from source
 
 This assumes that the package is already in pkgsrc. If it is not, see Part II,
@@ -1538,6 +1543,14 @@ briefly described here.
 
   * Another important variable is BULK_PREREQ, which is a list of packages that
     should be always available while building other packages.
+
+Some other options are scattered in the pkgsrc infrastructure:
+
+  * CHECK_FILES can be set to "yes" to check that the installed set of files
+    matches the PLIST.
+
+  * CHECK_INTERPRETER can be set to "yes" to check that the installed "#!
+    "-scripts will find their interpreter.
 
 6.3.1.3. pre-build.local
 
@@ -2218,7 +2231,7 @@ Table of Contents
     11.2. Writing buildlink3.mk files
 
         11.2.1. Anatomy of a buildlink3.mk file
-        11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
+        11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
 
     11.3. Writing builtin.mk files
 
@@ -3227,8 +3240,8 @@ dependency on pkg is added. Several important variables are set in the section:
     is selected by setting BUILDLINK_DEPMETHOD.pkg to "build". By default, the
     full dependency is used.
 
-  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS.pkg (not shown above) are lists
-    of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
+  * BUILDLINK_INCDIRS.pkg and BUILDLINK_LIBDIRS. pkg (not shown above) are
+    lists of subdirectories of ${BUILDLINK_PREFIX.pkg} to add to the header and
     library search paths. These default to "include" and "lib" respectively.
 
   * BUILDLINK_CPPFLAGS.pkg (not shown above) is the list of preprocessor flags
@@ -3267,7 +3280,7 @@ dependencies. Including these buildlink3.mk files means that the headers and
 libraries for these dependencies are also symlinked into ${BUILDLINK_DIR}
 whenever the pkg buildlink3.mk file is included.
 
-11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
+11.2.2. Updating BUILDLINK_DEPENDS. pkg in buildlink3.mk files
 
 There are two situations that require increasing the dependency listed in
 BUILDLINK_DEPENDS.pkg after a package update:
@@ -3286,9 +3299,9 @@ settle for an older one which will not contain the necessary shared libraries.
 
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
-versions of packages work just fine with older dependencies. See
-Section 15.1.4, "Handling dependencies" for more information about dependencies
-on other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
+versions of packages work just fine with older dependencies. See Section
+15.1.4, "Handling dependencies" for more information about dependencies on
+other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
 definitions.
 
 11.3. Writing builtin.mk files
@@ -3825,14 +3838,14 @@ supported by the package, and any default options settings if needed.
  6. PKG_SUGGESTED_OPTIONS is a list of build options which are enabled by
     default.
 
- 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE:option" pairs that map
+ 7. PKG_OPTIONS_LEGACY_VARS is a list of "USE_VARIABLE: option" pairs that map
     legacy /etc/mk.conf variables to their option counterparts. Pairs should be
     added with "+=" to keep the listing of global legacy variables. A warning
     will be issued if the user uses a legacy variable.
 
- 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option:new-option" pairs that map
-    options that have been renamed to their new counterparts. Pairs should be
-    added with "+=" to keep the listing of global legacy options. A warning
+ 8. PKG_OPTIONS_LEGACY_OPTS is a list of "old-option: new-option" pairs that
+    map options that have been renamed to their new counterparts. Pairs should
+    be added with "+=" to keep the listing of global legacy options. A warning
     will be issued if the user uses a legacy option.
 
  9. PKG_LEGACY_OPTIONS is a list of options implied by deprecated variables
@@ -3910,17 +3923,15 @@ Table of Contents
 This chapter gives a detailed description on how a package is built. Building a
 package is separated into different phases (for example fetch, build, install),
 all of which are described in the following sections. Each phase is splitted
-into so-called stages, which take the name of the containing stage, prefixed by
+into so-called stages, which take the name of the containing phase, prefixed by
 one of pre-, do- or post-. (Examples are pre-configure, post-build.) Most of
 the actual work is done in the do-* stages.
 
 The basic steps for building a program are always the same. First the program's
 source (distfile) must be brought to the local system and then extracted. After
-any patches to compile properly on NetBSD are applied, the software can be
-configured, then built (usually by compiling), and finally the generated
-binaries, etc. can be put into place on the system. These are exactly the steps
-performed by the NetBSD package system, which is implemented as a series of
-targets in a central Makefile, pkgsrc/mk/bsd.pkg.mk.
+any pkgsrc-specific patches to compile properly are applied, the software can
+be configured, then built (usually by compiling), and finally the generated
+binaries, etc. can be put into place on the system.
 
 14.2. Program location
 
@@ -4006,31 +4017,31 @@ explained here.
 Some of the directory variables contain relative pathnames. There are two
 common base directories for these relative directories: PKGSRCDIR/PKGPATH is
 used for directories that are pkgsrc-specific. WRKSRC is used for directories
-inside the package itself. The permissions after each variable indicate whether
-the variable may be changed by the package Makefile.
+inside the package itself.
 
-PKGSRCDIR (read-only)
+PKGSRCDIR
 
     This is an absolute pathname that points to the pkgsrc root directory.
     Generally, you don't need it.
 
-PKGPATH (read-only)
+PKGPATH
 
     This is a pathname relative to PKGSRCDIR that points to the current
     package.
 
-WRKDIR (read-only)
+WRKDIR
 
     This is an absolute pathname pointing to the directory where all work takes
     place. The distfiles are extraced to this directory. It also contains
     temporary directories and log files used by the various pkgsrc frameworks,
     like buildlink or the wrappers.
 
-WRKSRC (read-write)
+WRKSRC
 
     This is an absolute pathname pointing to the directory where the distfiles
     are extracted. It is usually a direct subdirectory of WRKDIR, and often
-    it's the only directory entry that isn't hidden.
+    it's the only directory entry that isn't hidden. This variable may be
+    changed by a package Makefile.
 
 14.4. Running a phase
 
@@ -4163,9 +4174,62 @@ defaults to "all".
 
 Once the build stage has completed, the final step is to install the software
 in public directories, so users can access the programs and files. As in the
-build-target, $MAKE_PROGRAM is invoked on $MAKEFILE here, but with the
-$INSTALL_TARGET instead, the latter defaulting to "install" (plus
-"install.man", if USE_IMAKE is set).
+build-target, MAKE_PROGRAM is invoked on MAKEFILE here, but with the
+INSTALL_TARGET instead, the latter defaulting to "install" (plus "install.man",
+if USE_IMAKE is set).
+
+In the install phase, the following variables are useful. They are all
+variations of the install(1) command that have the owner, group and permissions
+preset. INSTALL is the plain install command. The specialized variants,
+together with their intended use, are:
+
+INSTALL_PROGRAM_DIR
+
+    directories that contain binaries
+
+INSTALL_SCRIPT_DIR
+
+    directories that contain scripts
+
+INSTALL_LIB_DIR
+
+    directories that contain shared and static libraries
+
+INSTALL_DATA_DIR
+
+    directories that contain data files
+
+INSTALL_MAN_DIR
+
+    directories that contain man pages
+
+INSTALL_PROGRAM
+
+    binaries that can be stripped from debugging symbols
+
+INSTALL_SCRIPT
+
+    binaries that cannot be unstripped
+
+INSTALL_GAME
+
+    game binaries
+
+INSTALL_LIB
+
+    shared and static libraries
+
+INSTALL_DATA
+
+    data files
+
+INSTALL_GAME_DATA
+
+    data files for games
+
+INSTALL_MAN
+
+    man pages
 
 14.15. The package phase
 
