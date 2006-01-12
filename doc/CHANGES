@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12474 2006/01/12 20:33:37 adam Exp $
+$NetBSD: CHANGES,v 1.12475 2006/01/12 20:42:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -246,3 +246,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/ytalk to 3.3.0 [wiz 2006-01-12]
 	Removed net/ytalk-x11 [wiz 2006-01-12]
 	Updated net/libtorrent to 0.7.6 [adam 2006-01-12]
+	Updated net/rtorrent to 0.3.6 [adam 2006-01-12]
