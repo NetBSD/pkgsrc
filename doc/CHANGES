@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12462 2006/01/11 20:22:14 schmonz Exp $
+$NetBSD: CHANGES,v 1.12463 2006/01/12 01:43:23 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -230,3 +230,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/MAMEDiff to 2.24 [wiz 2006-01-11]
 	Added www/paros version 3.2.8 [salo 2006-01-11]
 	Added net/ucspi-ssl version 0.70 [schmonz 2006-01-11]
+	Updated math/R to 2.2.1nb1 [markd 2006-01-12]
