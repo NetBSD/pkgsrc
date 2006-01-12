@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/17 07:37:25 wulf Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/12 17:36:01 wiz Exp $
 
 DISTNAME=	gnuradio-core-2.6
 COMMENT=        Runtime system and DSP blocks for GNU Radio
@@ -19,7 +19,7 @@ pre-install:
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
-.include "../../devel/swig13/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
