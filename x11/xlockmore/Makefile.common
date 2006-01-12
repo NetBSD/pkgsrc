@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2006/01/09 21:18:31 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.41 2006/01/12 19:37:44 joerg Exp $
 #
 # This Makefile.common is included by:
 #
@@ -57,7 +57,6 @@ CONFIGURE_ARGS+=        --without-dtsaver
 CONFIGURE_ARGS+=        --without-rplay
 CONFIGURE_ARGS+=        --without-nas
 CONFIGURE_ARGS+=        --without-gtk
-CONFIGURE_ARGS+=	--enable-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .if ${OPSYS} == "NetBSD"
 .if !empty(PKG_OPTIONS:Moss)
