@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2004/12/27 22:11:31 minskim Exp $
+$NetBSD: patch-aa,v 1.9 2006/01/12 23:49:45 joerg Exp $
 
---- Imakefile.orig	1996-11-21 19:28:46.000000000 -0600
+--- Imakefile.orig	1996-11-22 01:28:46.000000000 +0000
 +++ Imakefile
 @@ -24,23 +24,23 @@ XCOMM ==================================
  XCOMM This is the directory where the highscore, level & sound data will be 
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.8 2004/12/27 22:11:31 minskim Exp $
  #endif /* HPArchitecture */
  
 -#if defined(LinuxArchitecture) && defined(COMPILE_IN_AUDIO)
-+#if defined(NetBSDArchitecture) && defined(COMPILE_IN_AUDIO)
++#if (defined(NetBSDArchitecture) || defined(DragonFlyArchitecture)) && defined(COMPILE_IN_AUDIO)
      AUDIO_AVAILABLE = True
      AUDIO_SRC 		= audio/LINUXaudio.c
      AUDIO_INCLUDE 	=
