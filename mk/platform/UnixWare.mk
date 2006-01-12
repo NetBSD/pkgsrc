@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.18 2005/12/04 01:44:30 joerg Exp $
+# $NetBSD: UnixWare.mk,v 1.19 2006/01/12 23:43:57 jlam Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -39,8 +39,13 @@ IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
+.if defined(_USE_PLIST_MODULE)
+IMAKE_MANINSTALL?=	maninstall
+.endif
 
+.if !defined(_USE_PLIST_MODULE)
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
+.endif
 .if exists(/usr/include/netinet/in6.h)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard
 .else
@@ -54,7 +59,9 @@ _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF		# shared lib type
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
 _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
+.if !defined(_USE_PLIST_MODULE)
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
+.endif
 _USE_GNU_GETTEXT=	yes		# Use GNU gettext
 #
 # The native linker for UnixWare doesn't really support an option to pass

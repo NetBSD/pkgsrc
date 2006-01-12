@@ -1,0 +1,54 @@
+# /bin/sh
+#
+# $NetBSD: shlib-type,v 1.1 2006/01/12 23:43:57 jlam Exp $
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Alistair Crooks.
+#
+# This script returns the the library format for the platform.  If the
+# library format is "ELF/a.out", then a small program is cmopiled to
+# determine the correct object format (either ELF or a.out).
+#
+
+: ${CC=cc}
+: ${ECHO=echo}
+: ${FILE_CMD=file}
+: ${RM=rm}
+: ${MKDIR=mkdir}
+: ${TEST=test}
+: ${TMPDIR=/tmp}
+
+self="${0##*/}"
+
+usage() {
+	${ECHO} 1>&2 "usage: $self libformat"
+}
+
+${TEST} $# -gt 0 || { usage; exit 1; }
+
+sotype=none
+case "$1" in
+ELF/a.out)
+	tmpdir="${TMPDIR}/shlib-type.$$"
+	umask 077 && ${MKDIR} "$tmpdir"
+	if ${TEST} -d "$tmpdir"; then
+		cd $tmpdir
+		${ECHO} "int main() { return(0); }" > a.c
+		${CC} ${CFLAGS} a.c -o a.out >/dev/null 2>&1
+		if ${TEST} -f "a.out"; then
+			case `${FILE_CMD} a.out` in
+			*ELF*dynamically*)	sotype="ELF" ;;
+			*shared*library*)	sotype="a.out" ;;
+			*dynamically*)		sotype="a.out" ;;
+			esac
+		fi
+		${RM} -fr "$tmpdir"
+	fi
+	;;
+*)
+	sotype="$1"
+	;;
+esac
+${ECHO} $sotype
+
+exit 0

@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.20 2005/12/04 01:44:30 joerg Exp $
+# $NetBSD: OpenBSD.mk,v 1.21 2006/01/12 23:43:57 jlam Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -46,8 +46,13 @@ IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
 IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
+.if defined(_USE_PLIST_MODULE)
+IMAKE_MANINSTALL?=	maninstall catinstall
+.endif
 
+.if !defined(_USE_PLIST_MODULE)
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
+.endif
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
@@ -65,7 +70,9 @@ _PATCH_BACKUP_ARG?=	-V simple -z 	# switch to patch(1) for backup suffix
 .else
 _PATCH_BACKUP_ARG?=	-V simple -b 	# switch to patch(1) for backup suffix
 .endif
+.if !defined(_USE_PLIST_MODULE)
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
+.endif
 _USE_GNU_GETTEXT=	no	# Don't use GNU gettext
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 

@@ -1,0 +1,104 @@
+#!/bin/sh
+#
+# $NetBSD: doc-compress,v 1.1 2006/01/12 23:43:57 jlam Exp $
+#
+# This script is derived from software contributed to The NetBSD Foundation
+# by Alistair Crooks.
+#
+# This script compresses or decompresses files listed in standard input.
+# It handles symlinks by recreating the symlinks to point to the
+# compressed or uncompressed targets.
+#
+
+: ${ECHO=echo}
+: ${EXPR=expr}
+: ${GZIP_CMD=gzip}
+: ${GUNZIP_CMD=gunzip}
+: ${LN=ln}
+: ${LS=ls}
+: ${RM=rm}
+: ${TEST=test}
+
+self="${0##*/}"
+
+usage() {
+	${ECHO} 1>&2 "usage: $self [-v] [-z] prefix"
+}
+
+case "$MANZ" in
+[yY][eE][sS])	compress=yes ;;
+*)		compress=no ;;
+esac
+case "$PKG_VERBOSE" in
+"")		verbose=no ;;
+*)		verbose=yes ;;
+esac
+prefix=/nonexistent
+
+# Process optional arguments
+while ${TEST} $# -gt 0; do
+	case "$1" in
+	-v)	verbose=yes; shift ;;
+	-z)	compress=yes; shift ;;
+	--)	shift; break ;;
+	-*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
+		usage
+		exit 1
+		;;
+	*)	break ;;
+	esac
+done
+
+${TEST} $# -gt 0 || { usage; exit 1; }
+
+# Process required arguments
+prefix="$1"
+
+while read file; do
+	file="${file%.gz}"
+	path="$prefix/$file"
+	pathgz="$path.gz"
+	case "$compress" in
+	yes)
+		# If compressed pages were requested and we find an
+		# uncompressed page, then compress it, but if it was
+		# a symlink, then remove it and create a "compressed"
+		# symlink by symlinking to the compressed target.
+		#
+		if ${TEST} -h "$path"; then
+			target=`${LS} -l $path`
+			target="${target##*-> }"
+			${RM} -f $pathgz
+			${LN} -s $target.gz $pathgz
+			${RM} -f $path
+			${TEST} "$verbose" = no ||
+				${ECHO} "Symlinking:    $file"
+		elif ${TEST} -f "$path"; then
+			${GZIP_CMD} $path
+			${TEST} "$verbose" = no ||
+				${ECHO} "Compressing:   $file"
+		fi
+		;;
+	no)
+		# If uncompressed pages were requested and we find a
+		# compressed page, then decompress it, but if it was
+		# a symlink, then remove it and create an "uncompressed"
+		# symlink by symlinking to the uncompressed target.
+		#
+		if ${TEST} -h "$pathgz"; then
+			target=`${LS} -l $pathgz`
+			target="${target##*-> }"
+			target="${target%.gz}"
+			${RM} -f $path
+			${LN} -s $target $path
+			${RM} -f $pathgz
+			${TEST} "$verbose" = no ||
+				${ECHO} "Symlinking:    $file.gz"
+		elif ${TEST} -f "$pathgz"; then
+			${GUNZIP_CMD} $pathgz
+			${TEST} "$verbose" = no ||
+				${ECHO} "Decompressing: $file.gz"
+		fi
+		;;
+	esac
+done
