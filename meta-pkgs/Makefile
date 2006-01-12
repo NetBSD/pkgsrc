@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/01/12 13:56:24 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2006/01/12 21:28:19 rillig Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -20,7 +20,7 @@ SUBDIR+=	netbsd-www
 SUBDIR+=	php4-extensions
 SUBDIR+=	php5-extensions
 SUBDIR+=	pkgsrc-guide-tools
-SUBDIR+=	ruby-gnome2
+#SUBDIR+=	ruby-gnome2		# Just helper files
 SUBDIR+=	suse9
 SUBDIR+=	web-server
 SUBDIR+=	windowmaker-desktop
