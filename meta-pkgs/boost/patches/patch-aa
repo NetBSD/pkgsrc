@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2005/02/26 22:48:34 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/12 22:48:46 joerg Exp $
 
 --- tools/build/v1/gcc-tools.jam.orig	2004-10-19 17:12:58.000000000 +0200
 +++ tools/build/v1/gcc-tools.jam
@@ -15,12 +15,34 @@ $NetBSD: patch-aa,v 1.1 2005/02/26 22:48:34 jmmv Exp $
      case *BSD :
          {
          flags gcc CFLAGS <threading>multi : -pthread ;
-@@ -175,7 +181,7 @@ if $(UNIX)
+@@ -175,7 +181,11 @@ if $(UNIX)
          SONAME = -Wl,-soname, ;
          flags gcc OBJCOPY_FLAGS <debug-symbols>on : "--set-section-flags .debug_str=contents,debug" ;
          }
 -    case OpenBSD :
 +    case *BSD :
++        {
++        SONAME = -Wl,-soname, ;
++        }
++    case DragonFly :
          {
          SONAME = -Wl,-soname, ;
          }
+@@ -416,7 +426,7 @@ rule Link-action
+         LNOPT on $(<) = "" ;
+     }
+     # do we use sonames or not?
+-    if $(DLLVERSION) && $(TARGET_TYPE) in $(SHARED_TYPES) && ( $(OS) = LINUX || $(OS) = OPENBSD ) && ! $(NO_GNU_LN)
++    if $(DLLVERSION) && $(TARGET_TYPE) in $(SHARED_TYPES) && ( $(OS) = DRAGONFLY || $(OS) = FREEBSD || $(OS) = LINUX || $(OS) = NETBSD || $(OS) = OPENBSD ) && ! $(NO_GNU_LN)
+     {
+         OUTTAG on $(<) = ".$(DLLVERSION)" ;
+         SOTAG on $(<) = ".$(DLLVERSION)" ;
+@@ -462,7 +472,7 @@ rule Link-action
+     gcc-spawn $(<) ;
+     gcc-Link-action $(<) : $(>) ;
+ 
+-    if $(DLLVERSION) && $(TARGET_TYPE) in $(SHARED_TYPES) && ( $(OS) = LINUX || $(OS) = OPENBSD ) && ! $(NO_GNU_LN)
++    if $(DLLVERSION) && $(TARGET_TYPE) in $(SHARED_TYPES) && ( $(OS) = DRAGONFLY || $(OS) = FREEBSD || $(OS) = LINUX || $(OS) = NETBSD || $(OS) = OPENBSD ) && ! $(NO_GNU_LN)
+     {
+         return "$(<[1]).$(DLLVERSION)" ;
+     }
