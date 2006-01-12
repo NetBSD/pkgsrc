@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/10/24 08:41:59 adam Exp $
+$NetBSD: distinfo,v 1.4 2006/01/12 20:41:37 adam Exp $
 
-SHA1 (rtorrent-0.3.5.tar.gz) = b876350f807beea0df6476ce2ebc188fa7ee475a
-RMD160 (rtorrent-0.3.5.tar.gz) = 3ce27a08ff2832898106a85a6d36face8b05c92d
-Size (rtorrent-0.3.5.tar.gz) = 222197 bytes
+SHA1 (rtorrent-0.3.6.tar.gz) = ec19c75250c064666cd656ca88d11f764f95f536
+RMD160 (rtorrent-0.3.6.tar.gz) = 19bf3ed28e92f0dc1eb940a4cce122635e26c4f0
+Size (rtorrent-0.3.6.tar.gz) = 223419 bytes
