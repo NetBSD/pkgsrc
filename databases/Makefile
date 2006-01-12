@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2006/01/07 10:56:34 ghen Exp $
+# $NetBSD: Makefile,v 1.201 2006/01/12 13:55:40 rillig Exp $
 #
 
 COMMENT=	Databases
@@ -184,6 +184,7 @@ SUBDIR+=	tcl-gdbm
 SUBDIR+=	tcl-postgresql73
 SUBDIR+=	tcl-postgresql74
 SUBDIR+=	tdb
+SUBDIR+=	tinycdb
 SUBDIR+=	tk-postgresql73
 SUBDIR+=	unixodbc
 SUBDIR+=	unixodbc-DataManager
