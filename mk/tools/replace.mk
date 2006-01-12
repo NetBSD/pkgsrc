@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.154 2006/01/12 18:29:03 jlam Exp $
+# $NetBSD: replace.mk,v 1.155 2006/01/12 19:26:02 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -935,7 +935,7 @@ _TOOLS.x11-imake=	imake mkdirhier xmkmf
 .    if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
-TOOLS_CREATE+=		${_t}
+TOOLS_CREATE+=		${_t_}
 .      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
 TOOLS_DEPENDS.${_t_}?=	XFree86-imake>=4.4.0:../../x11/XFree86-imake
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
