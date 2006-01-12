@@ -1,5 +1,5 @@
 #! @PERL@ -w
-# $NetBSD: pkglint.pl,v 1.466 2006/01/12 10:39:30 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.467 2006/01/12 13:01:47 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1019,12 +1019,15 @@ use constant regex_varassign	=> qr"^([-*+A-Z_a-z0-9.\${}\[]+?)\s*(=|\?=|\+=|:=|!
 # it cannot parse all kinds of shell programs, but this pattern will
 # catch all shell programs that are portable enough to be used in pkgsrc.
 my $regex_shellword		=  qr"\s*(
-	(?:	'[^']*'
-	|	\"(?:\\.|[^\"\\])*\"
-	|	\`[^\`]*\`
-	|	\\.
-	|	\$\{[^{}]+\}
-	|	[^\(\)'\"\\\s;&\|<>\#]
+	(?:	'[^']*'			# single quoted string
+	|	\"(?:\\.|[^\"\\])*\"	# double quoted string
+	|	\`[^\`]*\`		# backticks string
+	|	\\.			# any escaped character
+	|	\$\{[^{}]+\}		# make(1) variable
+	|	\$\$[0-9A-Z_a-z]+	# shell variable
+	|	\$\$\{[0-9A-Z_a-z]+\}	# shell variable in braces
+	|	\$\$\(			# POSIX-style backticks replacement
+	|	[^\(\)'\"\\\s;&\|<>\#\`\$] # non-special character
 	)+ | ;;? | &&? | \|\|? | \( | \) | <<? | >>? | \#.*)"sx;
 my $regex_varname		= qr"[-*+.0-9A-Z_a-z{}\[]+";
 
@@ -2003,20 +2006,26 @@ sub checkline_mk_shellword($$$) {
 			}
 
 		} elsif ($state == SWST_PLAIN) {
-			if ($rest =~ s/^[!&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]_a-z|~]+//) {
+			if ($rest =~ s/^[!\%&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]_a-z{|}~]+//) {
 			} elsif ($rest =~ s/^\'//) {
 				$state = SWST_SQUOT;
 			} elsif ($rest =~ s/^\"//) {
 				$state = SWST_DQUOT;
 			} elsif ($rest =~ s/^\`//) {
 				$state = SWST_BACKT;
-			} elsif ($rest =~ s/^\\[ "'\(\)*;]//) {
+			} elsif ($rest =~ s/^\\[ !"#'\(\)*;^{}]//) {
 			} elsif ($rest =~ s/^\$\$([0-9A-Z_a-z]+)//
 			    || $rest =~ s/^\$\$\{([0-9A-Z_a-z]+)\}//) {
 				my ($shvarname) = ($1);
-				if ($opt_warn_quoting and $check_quoting) {
+				if ($opt_warn_quoting && $check_quoting) {
 					$line->log_warning("Unquoted shell variable \"${shvarname}\".");
 				}
+			} elsif ($rest =~ s/\$\$\(/(/) {
+				$line->log_warning("Unportable subshell call via \$(...\).");
+				$line->explain(
+					"The Solaris /bin/sh does not know this way to execute a command in a",
+					"subshell. Please use backticks (\`...\`) as a replacement.");
+
 			} else {
 				last;
 			}
@@ -2034,17 +2043,17 @@ sub checkline_mk_shellword($$$) {
 			if ($rest =~ s/^\"//) {
 				$state = SWST_PLAIN;
 			} elsif ($rest =~ s/^[^\$"\\\`]//) {
-			} elsif ($rest =~ s/^\\[\\\"\`\$]//) {
+			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
 			    || $rest =~ s/^\$\$([0-9A-Za-z_]+)//) {
 				my ($varname) = ($1);
 				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${varname}.");
-			} elsif ($rest =~ s/^(\\[\(\)n])//) {
-				my ($paren) = ($1);
-				$line->log_warning("Please use \"\\${paren}\" instead of \"${paren}\".");
+			} elsif ($rest =~ s/^\\([\(\)*.0-9n])//) {
+				my ($char) = ($1);
+				$line->log_warning("Please use \"\\\\${char}\" instead of \"\\${char}\".");
 				$line->explain(
 					"Although the current code may work, it is not good style to rely on",
-					"the shell passing \"\\${paren}\" exactly as is, and not discarding the",
+					"the shell passing \"\\${char}\" exactly as is, and not discarding the",
 					"backslash. Alternatively you can use single quotes instead of double",
 					"quotes.");
 			} else {
@@ -2055,6 +2064,13 @@ sub checkline_mk_shellword($$$) {
 			if ($rest =~ s/^\`//) {
 				$state = SWST_PLAIN;
 			} elsif ($rest =~ s/^[^\\\"\'\`\$]+//) {
+			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
+			    || $rest =~ s/^\$\$([0-9A-Za-z_]+)//) {
+				my ($shvarname) = ($1);
+				if ($opt_warn_quoting && $check_quoting) {
+					$line->log_warning("Unquoted shell variable \$${shvarname}.");
+				}
+
 			} else {
 				last;
 			}
@@ -2220,8 +2236,8 @@ sub checkline_mk_shelltext($$) {
 			};
 	}
 
-	if ($rest !~ qr"^\s*$") {
-		$line->log_warning("Invalid shell word \"${text}\".");
+	if ($rest ne "") {
+		$opt_warn_debug && $line->log_error("[checkline_mk_shelltext] " . scst_statename->[$state] . ": rest=${rest}");
 	}
 }
 
@@ -2661,7 +2677,7 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 			if ($rest !~ qr"^\s*$") {
-				$line->log_warning("Invalid shell word \"${value}\" at the end.");
+				$opt_warn_debug and $line->log_warning("Invalid shell word \"${value}\" at the end.");
 			}
 
 		} else {
