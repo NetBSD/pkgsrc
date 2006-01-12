@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/06/30 14:55:03 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2006/01/12 00:05:04 joerg Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		5
@@ -25,7 +25,7 @@ SUBST_FILES.sather-configure=			\
 	Boot/sacomp.code/Makefile		\
 	Library/System/unix.sa			\
 	System/Common/CONFIG.proto		\
-	System/Platforms/netbsd/CONFIG		\
+	System/Platforms/${LOWER_OPSYS}/CONFIG	\
 	System/Platforms/X/Platform.module	\
 	debian/bin-wrapper			\
 	Browser/Web/convert-1.1			\
@@ -50,6 +50,9 @@ SUBST_SED.sather-configure=					\
 
 INSTALLATION_DIRS=	man/man1
 
+post-patch:
+	cd ${WRKSRC}/System/Platforms && ${CP} -r netbsd dragonfly
+
 post-build:
 	cd ${WRKSRC}/Emacs; ${MAKEINFO} sather.texinfo; 		\
 		${MAKEINFO} sather-tutorial.texinfo; 			\
@@ -72,7 +75,7 @@ do-install:
 		System/Debug						\
 		System/Common/*.c System/Common/*.h			\
 		System/Common/*.module System/Common/CONFIG		\
-		System/Platforms/f77 System/Platforms/netbsd		\
+		System/Platforms/f77 System/Platforms/${LOWER_OPSYS}	\
 		System/Platforms/X System/Platforms/dualgui		\
 		System/Platforms/gui System/Platforms/tcltk		\
 		Browser	${PREFIX}/lib/sather
