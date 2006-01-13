@@ -1,10 +1,25 @@
-# $NetBSD: Makefile,v 1.113 2006/01/13 19:15:11 jlam Exp $
+# $NetBSD: Makefile,v 1.114 2006/01/13 20:04:48 jlam Exp $
 
 DISTNAME=	perl-5.8.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 EXTRACT_SUFX=	.tar.bz2
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
+
+# Vendor patch to fix the security vulnerability CVE-2005-3962 regarding
+# an sprintf buffer overflow attack.
+#
+PATCHFILES=	sprintf-5.8.7.patch
+PATCH_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NW/NWCLARK/}
+PATCH_DIST_STRIP= -p1
+
+# Update the base Sys-Syslog package to a version which fixes a security
+# vulnerabilty CVE-2005-3912 regarding the proper arguments for syslog().
+#
+SYS_SYSLOG=	Sys-Syslog-0.13
+SITES_${SYS_SYSLOG}.tar.gz=	${MASTER_SITE_PERL_CPAN:=Sys/}
+DISTFILES+=	${SYS_SYSLOG}.tar.gz
 
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.perl.org/
@@ -234,6 +249,11 @@ SUBST_STAGE.dirmode=	post-patch
 SUBST_FILES.dirmode=	installhtml installman installperl		\
 			lib/ExtUtils/Install.pm
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
+
+# Replace the base Sys-Syslog module with the fixed version.
+post-extract:
+	${RM} -fr ${WRKSRC}/ext/Sys/Syslog
+	${CP} -r ${WRKDIR}/${SYS_SYSLOG} ${WRKSRC}/ext/Sys/Syslog
 
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
