@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/17 16:17:22 tonio Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/13 22:59:44 tonio Exp $
 ${EMACS_LISPPREFIX}/auctex.el
 ${EMACS_LISPPREFIX}/auctex/bib-cite.el
 ${EMACS_LISPPREFIX}/auctex/bib-cite.elc
@@ -42,6 +42,8 @@ ${EMACS_LISPPREFIX}/auctex/latex.elc
 ${EMACS_LISPPREFIX}/auctex/multi-prompt.el
 ${EMACS_LISPPREFIX}/auctex/multi-prompt.elc
 ${EMACS_LISPPREFIX}/auctex/style/.nosearch
+${EMACS_LISPPREFIX}/auctex/style/MinionPro.el
+${EMACS_LISPPREFIX}/auctex/style/MinionPro.elc
 ${EMACS_LISPPREFIX}/auctex/style/alltt.el
 ${EMACS_LISPPREFIX}/auctex/style/alltt.elc
 ${EMACS_LISPPREFIX}/auctex/style/alphanum.el
@@ -82,6 +84,8 @@ ${EMACS_LISPPREFIX}/auctex/style/danish.el
 ${EMACS_LISPPREFIX}/auctex/style/danish.elc
 ${EMACS_LISPPREFIX}/auctex/style/dinbrief.el
 ${EMACS_LISPPREFIX}/auctex/style/dinbrief.elc
+${EMACS_LISPPREFIX}/auctex/style/dk-bib.el
+${EMACS_LISPPREFIX}/auctex/style/dk-bib.elc
 ${EMACS_LISPPREFIX}/auctex/style/dk.el
 ${EMACS_LISPPREFIX}/auctex/style/dk.elc
 ${EMACS_LISPPREFIX}/auctex/style/doc.el
@@ -96,6 +100,10 @@ ${EMACS_LISPPREFIX}/auctex/style/fancyref.el
 ${EMACS_LISPPREFIX}/auctex/style/fancyref.elc
 ${EMACS_LISPPREFIX}/auctex/style/foils.el
 ${EMACS_LISPPREFIX}/auctex/style/foils.elc
+${EMACS_LISPPREFIX}/auctex/style/francais.el
+${EMACS_LISPPREFIX}/auctex/style/francais.elc
+${EMACS_LISPPREFIX}/auctex/style/frenchb.el
+${EMACS_LISPPREFIX}/auctex/style/frenchb.elc
 ${EMACS_LISPPREFIX}/auctex/style/german.el
 ${EMACS_LISPPREFIX}/auctex/style/german.elc
 ${EMACS_LISPPREFIX}/auctex/style/graphics.el
@@ -106,6 +114,8 @@ ${EMACS_LISPPREFIX}/auctex/style/harvard.el
 ${EMACS_LISPPREFIX}/auctex/style/harvard.elc
 ${EMACS_LISPPREFIX}/auctex/style/index.el
 ${EMACS_LISPPREFIX}/auctex/style/index.elc
+${EMACS_LISPPREFIX}/auctex/style/inputenc.el
+${EMACS_LISPPREFIX}/auctex/style/inputenc.elc
 ${EMACS_LISPPREFIX}/auctex/style/italian.el
 ${EMACS_LISPPREFIX}/auctex/style/italian.elc
 ${EMACS_LISPPREFIX}/auctex/style/j-article.el
