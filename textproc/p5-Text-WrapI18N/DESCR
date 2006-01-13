@@ -1,0 +1,12 @@
+This is a module which intends to substitute Text::Wrap,
+which supports internationalized texts including:
+ - multibyte encodings such as UTF-8, EUC-JP, EUC-KR, GB2312, and Big5,
+ - fullwidth characters like east Asian characters which appear in
+   UTF-8, EUC-JP, EUC-KR, GB2312, Big5, and so on,
+ - combining characters like diacritical marks which appear in UTF-8,
+   ISO-8859-11 (aka TIS-620), and so on, and
+ - languages which don't use whitespaces between words, like Chinese
+   and Japanese.
+
+The text is to be given in locale encoding, not always in UTF-8.
+(Of course locale encoding is UTF-8 in UTF-8 locales.)
