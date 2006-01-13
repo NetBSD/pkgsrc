@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: doc-compress,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: doc-compress,v 1.2 2006/01/13 20:03:26 jlam Exp $
 #
 # This script is derived from software contributed to The NetBSD Foundation
 # by Alistair Crooks.
@@ -74,7 +74,7 @@ while read file; do
 			${TEST} "$verbose" = no ||
 				${ECHO} "Symlinking:    $file"
 		elif ${TEST} -f "$path"; then
-			${GZIP_CMD} $path
+			${GZIP_CMD} -nf $path
 			${TEST} "$verbose" = no ||
 				${ECHO} "Compressing:   $file"
 		fi
@@ -95,7 +95,7 @@ while read file; do
 			${TEST} "$verbose" = no ||
 				${ECHO} "Symlinking:    $file.gz"
 		elif ${TEST} -f "$pathgz"; then
-			${GUNZIP_CMD} $pathgz
+			${GUNZIP_CMD} -f $pathgz
 			${TEST} "$verbose" = no ||
 				${ECHO} "Decompressing: $file.gz"
 		fi
