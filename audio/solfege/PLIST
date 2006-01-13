@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 02:08:19 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/13 21:23:42 schmonz Exp $
 bin/lessonfile_editor
 bin/solfege
 man/man1/lessonfile_editor.1
 man/man1/solfege.1
 share/applications/solfege.desktop
+share/examples/solfege/system.rc
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/solfege.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/solfege.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/solfege.mo
@@ -508,3 +509,4 @@ share/solfege/ui.xml
 @dirrm share/solfege/feta
 @dirrm share/solfege/example-lesson-files
 @dirrm share/solfege
+@dirrm share/examples/solfege
