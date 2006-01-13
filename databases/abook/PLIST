@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 01:15:34 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/13 21:20:45 tonio Exp $
 bin/abook
 man/man1/abook.1
 man/man5/abookrc.5
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/abook.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/abook.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/abook.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/abook.mo
