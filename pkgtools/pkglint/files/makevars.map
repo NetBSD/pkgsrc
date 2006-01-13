@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.55 2006/01/12 22:28:06 rillig Exp $
+# $NetBSD: makevars.map,v 1.56 2006/01/13 00:59:39 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -126,6 +126,7 @@ KRB5_DEFAULT		Userdefined
 KRB5_TYPE		Readonly
 LDFLAGS			List+
 LIBS			List+
+LIBTOOL_OVERRIDE	List+ of Pathmask
 LICENSE			Identifier
 LTCONFIG_OVERRIDE	List+ of Pathmask
 MAINTAINER		Mail_Address
