@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.20 2006/01/12 21:46:33 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.21 2006/01/13 17:55:27 reed Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -306,7 +306,9 @@ the package will be built, but not installed.</para>
 <sect1 id="build.tools">
 <title>The <emphasis>tools</emphasis> phase</title>
 
-<para>[TODO]</para>
+<para>This is covered in
+<xref linkend="tools"/>.
+</para>
 
 </sect1>
 
