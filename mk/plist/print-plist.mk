@@ -116,7 +116,7 @@ print-PLIST:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${ECHO} '@comment $$'NetBSD'$$'
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
+	shlib_type=${SHLIB_TYPE:Q};					\
 	case $$shlib_type in 						\
 	"a.out")	genlinks=1 ;;					\
 	*)		genlinks=0 ;;					\
