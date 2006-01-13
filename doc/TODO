@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4421 2006/01/13 18:26:25 wiz Exp $
+$NetBSD: TODO,v 1.4422 2006/01/13 18:43:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1221,7 +1221,6 @@ Suggested package updates
 	o txt2html-2.43
 	o txt2man-1.4.8
 	o ubs-0.20
-	o ucarp-1.1 [pkg/29785]
 	o ucblogo-5.5
 	o ucl-1.03
 	o unix2dos-1.3
