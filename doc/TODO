@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4420 2006/01/13 18:13:54 wiz Exp $
+$NetBSD: TODO,v 1.4421 2006/01/13 18:26:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -517,8 +517,6 @@ Suggested package updates
 	o exmh-2.7.2
 	o f2c-20031025
 	o faces-1.7.7
-	o fakeroot-1.3 [pkg/30015]
-	o fakeroot-1.5.4
 	o fd-2.07b
 	o fdgw-20040609
 	o fetchmail-6.3.1
