@@ -1,39 +1,17 @@
-# $NetBSD: Makefile,v 1.111 2005/12/30 23:16:33 jlam Exp $
-
-# The following two variables should have empty values unless we're
-# building a perl snapshot or release candidate.
-#
-PERL5_SNAPSHOT=	# empty
-PERL5_RC_VERS=	# empty
+# $NetBSD: Makefile,v 1.112 2006/01/13 16:48:11 jlam Exp $
 
 PERL5_VERS=	5.8.7
 CATEGORIES=	lang devel perl5
 EXTRACT_SUFX=	.tar.bz2
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-.if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
 PKGREVISION=	6
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
-.else
-.  if !empty(PERL5_SNAPSHOT)
-DISTNAME=	perl@${PERL5_SNAPSHOT}
-PKGNAME=	perl-${PERL5_VERS}beta${PERL5_SNAPSHOT}
-MASTER_SITES=	http://www.iki.fi/jhi/
-EXTRACT_SUFX=	.tbz
-WRKSRC=		${WRKDIR}/perl
-.  else # !empty(PERL5_RC_VERS)
-DISTNAME=	perl-${PERL5_VERS}-RC${PERL5_RC_VERS}
-PKGNAME=	perl-${PERL5_VERS}rc${PERL5_RC_VERS}
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/${MODULE_DIR}/${AUTHOR_DIR}/}
-MODULE_DIR=	modules/by-module
-AUTHOR_DIR=	authors/id/J/JH/JHI
-.  endif
-.endif
 
 MAINTAINER=	jlam@pkgsrc.org
-HOMEPAGE=	http://www.perl.com/
+HOMEPAGE=	http://www.perl.org/
 COMMENT=	Practical Extraction and Report Language
 
 CONFLICTS=	perl-base-[0-9]* perl-thread-[0-9]*			\
