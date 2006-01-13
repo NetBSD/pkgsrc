@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4418 2006/01/13 17:40:43 wiz Exp $
+$NetBSD: TODO,v 1.4419 2006/01/13 18:13:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -333,7 +333,7 @@ Suggested package updates
 	o aewm++-1.0.27
 	o afterstep-2.2.0
 	o album-3.10
-	o ald-0.1.6 [pkg/26431]
+	o ald-0.1.6 [pkg/26552]
 	o alee-ttf-6.3 [pkg/32505]
 	o algae-4.3.6
 	o aliados-0.2.0
