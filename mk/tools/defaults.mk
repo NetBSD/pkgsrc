@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.42 2005/11/08 23:06:38 jlam Exp $
+# $NetBSD: defaults.mk,v 1.42.2.1 2006/01/13 01:01:00 salo Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -82,6 +82,7 @@ _TOOLS_VARNAME.gm4=		M4
 _TOOLS_VARNAME.gmake=		GMAKE
 _TOOLS_VARNAME.grep=		GREP
 _TOOLS_VARNAME.gsed=		SED
+_TOOLS_VARNAME.gsoelim=		SOELIM
 _TOOLS_VARNAME.gtar=		GTAR
 _TOOLS_VARNAME.gunzip=		GUNZIP_CMD
 _TOOLS_VARNAME.gzcat=		GZCAT
