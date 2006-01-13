@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/13 18:21:56 wiz Exp $
+
+--- Build.PL.orig	2005-12-09 17:24:46.000000000 +0000
++++ Build.PL
+@@ -164,8 +164,6 @@ my $builder = Module::Build->subclass
+ 		    if (-e "blib/man/$file") {
+ 			system("mkdir -p blib/man/$lang/man1") && die;
+ 			$parser->parse_from_file ("blib/man/$file", "blib/man/$lang/man1/$file.1p");
+-			system("gzip -9 blib/man/$lang/man1/$file.1p") && die;
+-			system("rm -f blib/man/$file")&& die;
+ 		    }
+ 		}
+ 	    }
+@@ -186,9 +184,6 @@ my $builder = Module::Build->subclass
+ 			system ("mkdir -p blib/man/$lang/man3") && die;
+ 			$parser->parse_from_file ("blib/man/$filename", 
+ 			    "blib/man/$lang/man3/Locale::Po4a::$filename.3pm") || die;
+-			system ("gzip -9 blib/man/$lang/man3/Locale::Po4a::$filename.3pm") 
+-			  && die "Cannot gzip blib/man/$lang/man3/Locale::Po4a::$filename.3pm";
+-			system ("rm -f blib/man/$filename") && die;
+ 		    }
+ 		}
+ 	    }
+@@ -203,7 +198,6 @@ my $builder = Module::Build->subclass
+ 		print "X Generate the man version of $file\n";
+ 		system("mkdir -p blib/man/man7") && die;
+ 		$parser->parse_from_file ($file, "blib/man/man7/$filename");
+-		system ("gzip -9 -f blib/man/man7/$filename") && die;
+ 		foreach $lang (@langs) {
+ 	            my $charset = defined $charsets{$lang} ? $charsets{$lang} : $charsets{'default'};
+ 		    print "X Translate $file to $lang\n";
+@@ -212,8 +206,6 @@ my $builder = Module::Build->subclass
+ 		    if (-e "blib/man/$filename") {
+ 			`mkdir -p blib/man/$lang/man7`;
+ 			$parser->parse_from_file ("blib/man/$filename", "blib/man/$lang/man7/$filename");
+-			`gzip -9 blib/man/$lang/man7/$filename`;
+-			`rm -f blib/man/$filename`;
+ 		    }
+ 		}
+ 	    }
