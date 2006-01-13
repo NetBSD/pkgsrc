@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2006/01/13 17:58:25 wiz Exp $
+
+--- src/dlg-jpegtran.c.orig	2005-09-21 07:56:17.000000000 +0000
++++ src/dlg-jpegtran.c
+@@ -31,10 +31,10 @@
+ #include <glade/glade.h>
+ 
+ #ifdef HAVE_LIBEXIF
+-#include <exif-data.h>
+-#include <exif-content.h>
+-#include <exif-entry.h>
+-#include <exif-utils.h>
++#include <libexif/exif-data.h>
++#include <libexif/exif-content.h>
++#include <libexif/exif-entry.h>
++#include <libexif/exif-utils.h>
+ #include "jpegutils/jpeg-data.h"
+ #endif /* HAVE_LIBEXIF */
+ 
