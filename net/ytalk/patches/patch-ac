@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2005/12/18 18:23:19 joerg Exp $
+$NetBSD: patch-ac,v 1.1.2.1 2006/01/13 00:54:38 salo Exp $
 
---- header.h.orig	2005-12-18 18:16:38.000000000 +0000
-+++ header.h
-@@ -261,10 +261,6 @@ extern int    io_len;		/* user input cou
- 
+--- src/header.h.orig	2005-02-13 14:48:53.000000000 +0100
++++ src/header.h
+@@ -290,10 +290,6 @@ extern int io_len;		/* user input count 
  extern int running_process;	/* flag: is process running? */
+ extern ylong myuid;		/* stores your uid */
  
 -/* ---- some machine compatibility definitions ---- */
 -

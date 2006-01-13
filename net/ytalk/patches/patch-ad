@@ -1,0 +1,143 @@
+$NetBSD: patch-ad,v 1.1.2.2 2006/01/13 00:54:38 salo Exp $
+
+--- configure.orig	2005-02-13 15:20:16.000000000 +0100
++++ configure
+@@ -4331,13 +4331,13 @@ if test "${with_curses+set}" = set; then
+ 	fi
+ fi;
+ 
+-echo "$as_me:$LINENO: checking for initscr in -lncurses" >&5
+-echo $ECHO_N "checking for initscr in -lncurses... $ECHO_C" >&6
+-if test "${ac_cv_lib_ncurses_initscr+set}" = set; then
++echo "$as_me:$LINENO: checking for initscr in -lcurses" >&5
++echo $ECHO_N "checking for initscr in -lcurses... $ECHO_C" >&6
++if test "${ac_cv_lib_curses_initscr+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lncurses  $LIBS"
++LIBS="-lcurses  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -4382,26 +4382,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_ncurses_initscr=yes
++  ac_cv_lib_curses_initscr=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_lib_ncurses_initscr=no
++ac_cv_lib_curses_initscr=no
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_ncurses_initscr" >&5
+-echo "${ECHO_T}$ac_cv_lib_ncurses_initscr" >&6
+-if test $ac_cv_lib_ncurses_initscr = yes; then
+-  LIBS="$LIBS -lncurses"
+-	if test x$ytalk_cv_curses = x/usr -a -d /usr/include/ncurses; then
+-		CPPFLAGS="$CPPFLAGS -I/usr/include/ncurses"
+-	fi
++echo "$as_me:$LINENO: result: $ac_cv_lib_curses_initscr" >&5
++echo "${ECHO_T}$ac_cv_lib_curses_initscr" >&6
++if test $ac_cv_lib_curses_initscr = yes; then
++  LIBS="$LIBS -lcurses"
+ 
+-for ac_header in ncurses.h
++for ac_header in curses.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
+@@ -5297,13 +5294,13 @@ fi
+ fi
+ 
+ 
+-echo "$as_me:$LINENO: checking for keypad in -lncurses" >&5
+-echo $ECHO_N "checking for keypad in -lncurses... $ECHO_C" >&6
+-if test "${ac_cv_lib_ncurses_keypad+set}" = set; then
++echo "$as_me:$LINENO: checking for keypad in -lcurses" >&5
++echo $ECHO_N "checking for keypad in -lcurses... $ECHO_C" >&6
++if test "${ac_cv_lib_curses_keypad+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lncurses  $LIBS"
++LIBS="-lcurses  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5348,33 +5345,33 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_ncurses_keypad=yes
++  ac_cv_lib_curses_keypad=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_lib_ncurses_keypad=no
++ac_cv_lib_curses_keypad=no
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_ncurses_keypad" >&5
+-echo "${ECHO_T}$ac_cv_lib_ncurses_keypad" >&6
+-if test $ac_cv_lib_ncurses_keypad = yes; then
++echo "$as_me:$LINENO: result: $ac_cv_lib_curses_keypad" >&5
++echo "${ECHO_T}$ac_cv_lib_curses_keypad" >&6
++if test $ac_cv_lib_curses_keypad = yes; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_KEYPAD 1
+ _ACEOF
+ 
+ else
+-  echo "$as_me:$LINENO: checking for keypad in -lcurses" >&5
+-echo $ECHO_N "checking for keypad in -lcurses... $ECHO_C" >&6
+-if test "${ac_cv_lib_curses_keypad+set}" = set; then
++  echo "$as_me:$LINENO: checking for keypad in -lncurses" >&5
++echo $ECHO_N "checking for keypad in -lncurses... $ECHO_C" >&6
++if test "${ac_cv_lib_ncurses_keypad+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcurses  $LIBS"
++LIBS="-lncurses  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5419,20 +5416,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_lib_curses_keypad=yes
++  ac_cv_lib_ncurses_keypad=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-ac_cv_lib_curses_keypad=no
++ac_cv_lib_ncurses_keypad=no
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_curses_keypad" >&5
+-echo "${ECHO_T}$ac_cv_lib_curses_keypad" >&6
+-if test $ac_cv_lib_curses_keypad = yes; then
++echo "$as_me:$LINENO: result: $ac_cv_lib_ncurses_keypad" >&5
++echo "${ECHO_T}$ac_cv_lib_ncurses_keypad" >&6
++if test $ac_cv_lib_ncurses_keypad = yes; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_KEYPAD 1
