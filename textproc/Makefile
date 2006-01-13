@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2005/12/23 16:01:38 jlam Exp $
+# $NetBSD: Makefile,v 1.312 2006/01/13 18:24:00 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -153,6 +153,7 @@ SUBDIR+=	p5-Pod-Simple
 SUBDIR+=	p5-Pod-Tests
 SUBDIR+=	p5-Pod-Tree
 SUBDIR+=	p5-Regexp-Common
+SUBDIR+=	p5-SGMLS
 SUBDIR+=	p5-String-Approx
 SUBDIR+=	p5-String-CRC32
 SUBDIR+=	p5-String-ShellQuote
@@ -163,6 +164,7 @@ SUBDIR+=	p5-Text-BibTeX
 SUBDIR+=	p5-Text-CSV-Hash
 SUBDIR+=	p5-Text-CSV_XS
 SUBDIR+=	p5-Text-ChaSen
+SUBDIR+=	p5-Text-CharWidth
 SUBDIR+=	p5-Text-DelimMatch
 SUBDIR+=	p5-Text-Diff
 SUBDIR+=	p5-Text-Diff-HTML
@@ -178,6 +180,7 @@ SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Text-Template
 SUBDIR+=	p5-Text-Unaccent
 SUBDIR+=	p5-Text-WikiFormat
+SUBDIR+=	p5-Text-WrapI18N
 SUBDIR+=	p5-Text-Wrapper
 SUBDIR+=	p5-XML-Checker
 SUBDIR+=	p5-XML-DOM
@@ -225,6 +228,7 @@ SUBDIR+=	php4-domxml
 SUBDIR+=	php4-xslt
 SUBDIR+=	php5-dom
 SUBDIR+=	php5-xsl
+SUBDIR+=	po4a
 SUBDIR+=	postgresql-autodoc
 SUBDIR+=	psgml-mode
 SUBDIR+=	py-FourSuite
