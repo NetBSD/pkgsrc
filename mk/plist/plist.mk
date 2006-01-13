@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.2 2006/01/13 22:37:02 jlam Exp $
+# $NetBSD: plist.mk,v 1.3 2006/01/13 23:09:39 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -226,4 +226,4 @@ ${PLIST}:
 	{ ${_GENERATE_PLIST} } |					\
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} |		\
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK}		\
-		> ${PLIST}
+		> ${.TARGET}
