@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: plist.mk,v 1.2 2006/01/13 22:37:02 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -149,12 +149,6 @@ _SHLIB_TYPE_cmd=							\
 		FILE_CMD=${TOOLS_FILE_CMD:Q} MKDIR=${TOOLS_MKDIR:Q}	\
 		RM=${TOOLS_RM:Q} TEST=${TOOLS_TEST:Q}			\
 	${SH} ${.CURDIR}/../../mk/plist/shlib-type ${_OPSYS_SHLIB_TYPE:Q}
-
-.if !target(show-shlib-type)
-.PHONY: show-shlib-type
-show-shlib-type:
-	@${ECHO} ${SHLIB_TYPE:Q}
-.endif
 
 ######################################################################
 
