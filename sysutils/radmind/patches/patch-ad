@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 2006/01/13 19:16:06 joerg Exp $
+
+--- connect.c.orig	2006-01-13 19:03:13.000000000 +0000
++++ connect.c
+@@ -11,6 +11,7 @@
+ #include <netinet/in.h>
+ #include <netinet/tcp.h>
+ #include <arpa/inet.h>
++#include <errno.h>
+ #include <netdb.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -30,7 +31,6 @@
+ extern void            (*logger)( char * );
+ extern int              verbose;
+ struct timeval          timeout = { 60, 0 };
+-extern int		errno;
+ extern SSL_CTX  	*ctx;
+ 
+     static SNET *
