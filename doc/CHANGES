@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12485 2006/01/13 09:29:04 tonio Exp $
+$NetBSD: CHANGES,v 1.12486 2006/01/13 10:12:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -261,3 +261,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/xgalaga to 2.0.34nb3 [joerg 2006-01-13]
 	Updated converters/bibtex2html to 1.78 [tonio 2006-01-13]
 	Updated textproc/hevea to 1.08nb1 [tonio 2006-01-13]
+	Updated editors/ce to 4.6 [schmonz 2006-01-13]
+	Updated editors/ce-x11 to 4.6 [schmonz 2006-01-13]
+	Updated editors/ce-doc to 4.6 [schmonz 2006-01-13]
