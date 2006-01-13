@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4414 2006/01/12 22:59:36 wiz Exp $
+$NetBSD: TODO,v 1.4415 2006/01/13 10:12:09 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,6 @@ Suggested package updates
 	o ccd2iso-0.2
 	o cdl3-1.2.6
 	o cdrdao-1.2.1
-	o ce-4.6 [schmonz]
 	o cfengine2-2.1.17
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
