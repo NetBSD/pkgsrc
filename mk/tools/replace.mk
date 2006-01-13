@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.145 2005/12/22 18:55:41 jlam Exp $
+# $NetBSD: replace.mk,v 1.145.2.1 2006/01/13 01:01:00 salo Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -118,6 +118,9 @@ _USE_TOOLS:=	${_USE_TOOLS:Nm4}
 .  if !empty(_USE_TOOLS:Mgsed)		# gsed > sed
 _USE_TOOLS:=	${_USE_TOOLS:Nsed}
 .  endif
+.  if !empty(_USE_TOOLS:Mgsoelim)	# gsoelim > soelim
+_USE_TOOLS:=	${_USE_TOOLS:Nsoelim}
+.  endif
 .endif
 MAKEVARS+=	_USE_TOOLS
 
@@ -169,6 +172,12 @@ _TOOLS_DEPMETHOD.gm4=		${_TOOLS_DEPMETHOD.m4}
 .  if (${_TOOLS_DEPMETHOD.gsed} == "BUILD_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.sed)
 _TOOLS_DEPMETHOD.gsed=		${_TOOLS_DEPMETHOD.sed}
+.  endif
+.endif
+.if !empty(_USE_TOOLS:Mgsoelim)		# gsoelim > soelim
+.  if (${_TOOLS_DEPMETHOD.gsoelim} == "BUILD_DEPENDS") && \
+      defined(_TOOLS_DEPMETHOD.soelim)
+_TOOLS_DEPMETHOD.gsoelim=	${_TOOLS_DEPMETHOD.soelim}
 .  endif
 .endif
 
@@ -417,6 +426,17 @@ TOOLS_ARGS.gzip=		-nf ${GZIP}
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.ksh) && !empty(_USE_TOOLS:Mksh)
+.  if !empty(PKGPATH:Mshells/pdksh)
+MAKEFLAGS+=			TOOLS_IGNORE.ksh=
+.  elif !empty(_TOOLS_USE_PKGSRC.ksh:M[yY][eE][sS])
+TOOLS_DEPENDS.ksh?=		pdksh>=5.2.14:../../shells/pdksh
+TOOLS_CREATE+=			ksh
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ksh=pdksh
+TOOLS_PATH.ksh=			${TOOLS_PREFIX.ksh}/bin/pdksh
+.  endif
+.endif
+
 .if !defined(TOOLS_IGNORE.lex) && !empty(_USE_TOOLS:Mlex)
 .  if !empty(PKGPATH:Mdevel/flex)
 MAKEFLAGS+=			TOOLS_IGNORE.lex=
@@ -489,17 +509,6 @@ MAKEFLAGS+=			TOOLS_IGNORE.mtree=
 TOOLS_CREATE+=			mtree
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mtree=mtree
 TOOLS_PATH.mtree=		${TOOLS_PREFIX.mtree}/bin/mtree
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.nroff) && !empty(_USE_TOOLS:Mnroff)
-.  if !empty(PKGPATH:Mtextproc/groff)
-MAKEFLAGS+=			TOOLS_IGNORE.nroff=
-.  elif !empty(_TOOLS_USE_PKGSRC.nroff:M[yY][eE][sS])
-TOOLS_DEPENDS.nroff?=		groff>=1.19nb4:../../textproc/groff
-TOOLS_CREATE+=			nroff
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.nroff=groff
-TOOLS_PATH.nroff=		${TOOLS_PREFIX.nroff}/bin/nroff
 .  endif
 .endif
 
@@ -600,17 +609,6 @@ TOOLS_PATH.shlock=		${TOOLS_PREFIX.shlock}/bin/shlock
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.soelim) && !empty(_USE_TOOLS:Msoelim)
-.  if !empty(PKGPATH:Mtextproc/groff)
-MAKEFLAGS+=			TOOLS_IGNORE.soelim=
-.  elif !empty(_TOOLS_USE_PKGSRC.soelim:M[yY][eE][sS])
-TOOLS_DEPENDS.soelim?=		groff>=1.19nb4:../../textproc/groff
-TOOLS_CREATE+=			soelim
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.soelim=groff
-TOOLS_PATH.soelim=		${TOOLS_PREFIX.soelim}/bin/soelim
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.tar) && !empty(_USE_TOOLS:Mtar)
 .  if !empty(PKGPATH:Marchivers/pax)
 MAKEFLAGS+=			TOOLS_IGNORE.tar=
@@ -626,17 +624,6 @@ TOOLS_PATH.tar=			${TOOLS_PREFIX.tar}/bin/tar
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.tbl) && !empty(_USE_TOOLS:Mtbl)
-.  if !empty(PKGPATH:Mtextproc/groff)
-MAKEFLAGS+=			TOOLS_IGNORE.tbl=
-.  elif !empty(_TOOLS_USE_PKGSRC.tbl:M[yY][eE][sS])
-TOOLS_DEPENDS.tbl?=		groff>=1.19nb4:../../textproc/groff
-TOOLS_CREATE+=			tbl
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tbl=groff
-TOOLS_PATH.tbl=			${TOOLS_PREFIX.tbl}/bin/tbl
-.  endif
-.endif
-
 .if !defined(TOOLS_IGNORE.tclsh) && !empty(_USE_TOOLS:Mtclsh)
 .  if !empty(PKGPATH:Mlang/tcl)
 MAKEFLAGS+=			TOOLS_IGNORE.tclsh=
@@ -645,6 +632,28 @@ TOOLS_DEPENDS.tclsh?=		tcl>=8.4:../../lang/tcl
 TOOLS_CREATE+=			tclsh
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tclsh=tcl
 TOOLS_PATH.tclsh=		${TOOLS_PREFIX.tclsh}/bin/tclsh
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.ttmkfdir) && !empty(_USE_TOOLS:Mttmkfdir)
+.  if !empty(PKGPATH:Mfonts/ttmkfdir2)
+MAKEFLAGS+=			TOOLS_IGNORE.ttmkfdir=
+.  elif !empty(_TOOLS_USE_PKGSRC.ttmkfdir:M[yY][eE][sS])
+TOOLS_DEPENDS.ttmkfdir?=	ttmkfdir2>=20021109:../../fonts/ttmkfdir2
+TOOLS_CREATE+=			ttmkfdir
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ttmkfdir=ttmkfdir2
+TOOLS_PATH.ttmkfdir=		${TOOLS_PREFIX.ttmkfdir}/bin/ttmkfdir
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.type1inst) && !empty(_USE_TOOLS:Mtype1inst)
+.  if !empty(PKGPATH:Mfonts/type1inst)
+MAKEFLAGS+=			TOOLS_IGNORE.type1inst=
+.  elif !empty(_TOOLS_USE_PKGSRC.type1inst:M[yY][eE][sS])
+TOOLS_DEPENDS.type1inst?=	type1inst2>=0.6.1:../../fonts/type1inst
+TOOLS_CREATE+=			type1inst
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.type1inst=type1inst
+TOOLS_PATH.type1inst=		${TOOLS_PREFIX.type1inst}/bin/type1inst
 .  endif
 .endif
 
@@ -701,34 +710,6 @@ TOOLS_CREATE+=			xargs
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xargs=findutils
 TOOLS_PATH.xargs=		${TOOLS_PREFIX.xargs}/bin/${GNU_PROGRAM_PREFIX}xargs
 TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
-.  endif
-.endif
-
-.if !defined(TOOLS_IGNORE.xmkmf) && !empty(_USE_TOOLS:Mxmkmf)
-.  if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
-MAKEFLAGS+=			TOOLS_IGNORE.xmkmf=
-.  elif !empty(_TOOLS_USE_PKGSRC.xmkmf:M[yY][eE][sS])
-TOOLS_CREATE+=			xmkmf
-.    if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.xmkmf?=		XFree86-imake>=4.4.0:../../x11/XFree86-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmkmf=imake
-TOOLS_PATH.xmkmf=		${TOOLS_PREFIX.xmkmf}/${X11ROOT_PREFIX}/bin/xmkmf
-.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.xmkmf?=		xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmkmf=xorg-imake
-TOOLS_PATH.xmkmf=		${TOOLS_PREFIX.xmkmf}/${X11ROOT_PREFIX}/bin/xmkmf
-.    else # !empty(X11_TYPE:Mnative)
-TOOLS_PATH.xmkmf=		${X11BASE}/bin/xmkmf
-.    endif
-#
-# If we're using xpkgwedge, then we need to invoke the special xmkmf
-# script that will find imake config files in both ${PREFIX} and in
-# ${X11BASE}.
-#
-.    if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xpkgwedge=xpkgwedge
-TOOLS_PATH.xmkmf=		${TOOLS_PREFIX.xpkgwedge}/bin/pkgxmkmf
-.    endif
 .  endif
 .endif
 
@@ -810,6 +791,41 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
 
 ######################################################################
 
+# These tools are all supplied by the textproc/groff package if there is
+# no native tool available.
+#
+_TOOLS.groff=	nroff soelim tbl
+
+.for _t_ in ${_TOOLS.groff}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mtextproc/groff)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=	groff>=1.19nb4:../../textproc/groff
+TOOLS_CREATE+=		${_t_}
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=groff
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+.    endif
+.  endif
+.endfor
+
+# The ``gsoelim'' tool is special because there's actually no tool named
+# ``gsoelim'' -- the real tool is called just ``soelim''.
+#
+.if !defined(TOOLS_IGNORE.gsoelim) && !empty(_USE_TOOLS:Mgsoelim)
+.  if !empty(PKGPATH:Mtextproc/groff)
+MAKEFLAGS+=		TOOLS_IGNORE.gsoelim=
+.  elif !empty(_TOOLS_USE_PKGSRC.gsoelim:M[yY][eE][sS])
+TOOLS_DEPENDS.gsoelim?=	groff>=1.19nb4:../../textproc/groff
+TOOLS_CREATE+=		gsoelim
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.gsoelim=groff
+TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/soelim
+.  endif
+TOOLS_ALIASES.gsoelim=	soelim
+.endif
+
+######################################################################
+
 # These tools are all supplied by the devel/diffutils package if there is
 # no native tool available.
 #
@@ -882,7 +898,8 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 # These tools are all supplied by an X11 clients package if there is no
 # native tool available.
 #
-_TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale xmessage
+_TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale \
+			makepsres xmessage
 
 .for _t_ in ${_TOOLS.x11-clients}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
@@ -893,7 +910,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 TOOLS_CREATE+=		${_t_}
 .      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
 TOOLS_DEPENDS.${_t_}?=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=XFree86-clients
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
 .      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
 TOOLS_DEPENDS.${_t_}?=	xorg-clients>=6.8:../../x11/xorg-clients
@@ -911,29 +928,45 @@ TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 # These tools are all supplied by an X11 imake package if there is no
 # native tool available.
 #
-_TOOLS.x11-imake=	imake mkdirhier
+_TOOLS.x11-imake=	imake mkdirhier xmkmf
 
 .for _t_ in ${_TOOLS.x11-imake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
-MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
-TOOLS_CREATE+=			${_t}
+TOOLS_CREATE+=		${_t_}
 .      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
-TOOLS_DEPENDS.${_t_}?=		XFree86-imake>=4.4.0:../../x11/XFree86-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=imake
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+TOOLS_DEPENDS.${_t_}?=	XFree86-imake>=4.4.0:../../x11/XFree86-imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
 .      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.${_t_}?=		xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=xorg-imake
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
-# !empty(X11_TYPE:Mnative)
-.      else
-TOOLS_PATH.${_t_}=		${X11BASE}/bin/${_t_}
+TOOLS_DEPENDS.${_t_}?=	xorg-imake>=6.8:../../x11/xorg-imake
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-imake
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
+.      else # !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 .      endif
 .    endif
 .  endif
 .endfor
+#
+# If IMAKE is defined, then use that as the path to the imake binary.
+#
+.if !defined(TOOLS_IGNORE.imake) && !empty(_USE_TOOLS:Mimake) && defined(IMAKE)
+TOOLS_PATH.xmkmf=	${IMAKE}
+.endif
+#
+# If we're using xpkgwedge, then we need to invoke the special xmkmf
+# script that will find imake config files in both ${PREFIX} and in
+# ${X11BASE}.
+#
+.if !defined(TOOLS_IGNORE.xmkmf) && !empty(_USE_TOOLS:Mxmkmf)
+.  if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.xpkgwedge=xpkgwedge
+TOOLS_PATH.xmkmf=	${TOOLS_PREFIX.xpkgwedge}/bin/pkgxmkmf
+.  endif
+.endif
 
 ######################################################################
 
