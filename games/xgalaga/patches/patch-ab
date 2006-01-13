@@ -1,8 +1,14 @@
-$NetBSD: patch-ab,v 1.1 2001/09/10 01:03:28 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/13 02:02:50 joerg Exp $
 
---- configure.orig	Mon May 11 09:02:12 1998
+--- configure.orig	1998-05-11 07:02:12.000000000 +0000
 +++ configure
-@@ -1813,6 +1813,9 @@
+@@ -1810,9 +1810,15 @@ if test -n "$sound-type"; then
+     *linux*) 
+ 	sound_type=native
+ 	;;
++    *dragonfly*)
++	sound_type=native
++	;;
      *freebsd*)
          sound_type=native
  	;;
@@ -12,12 +18,19 @@ $NetBSD: patch-ab,v 1.1 2001/09/10 01:03:28 hubertf Exp $
      *sunos*)
          sound_type=native
          ;;
-@@ -1848,6 +1851,16 @@
- 	cat >> confdefs.h <<\EOF
- #define SOUND 1
+@@ -1839,7 +1845,7 @@ EOF
  EOF
-+
-+	;;
+ 
+ 	;;
+-      *freebsd*)
++      *freebsd* | *dragonfly*)
+         SOUNDSERVER=xgal.sndsrv.freebsd
+ 	cat >> confdefs.h <<\EOF
+ #define SOUNDDEV "/dev/dsp"
+@@ -1850,6 +1856,16 @@ EOF
+ EOF
+ 
+ 	;;
 +      *netbsd*)
 +	SOUNDSERVER=xgal.sndsrv.linux
 +	cat >> confdefs.h <<\EOF
@@ -26,6 +39,8 @@ $NetBSD: patch-ab,v 1.1 2001/09/10 01:03:28 hubertf Exp $
 +	cat >> confdefs.h <<\EOF
 +#define SOUND 1
 +EOF
- 
- 	;;
++
++	;;
        *sunos*)
+         SOUNDSERVER=xgal.sndsrv.sun.c
+ 	cat >> confdefs.h <<\EOF
