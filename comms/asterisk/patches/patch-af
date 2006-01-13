@@ -1,20 +1,37 @@
-$NetBSD: patch-af,v 1.2 2005/09/02 12:58:34 adam Exp $
+$NetBSD: patch-af,v 1.3 2006/01/13 20:32:38 riz Exp $
 
---- codecs/gsm/Makefile.orig	2005-06-21 14:27:28.000000000 +0000
-+++ codecs/gsm/Makefile
-@@ -44,6 +44,7 @@ ifneq ($(shell uname -m),ppc)
- ifneq ($(shell uname -m),alpha)
- ifneq ($(shell uname -m),armv4l)
- ifneq (${PROC},sparc64)
-+ifneq (${PROC},powerpc)
- ifneq (${PROC},ppc)
- ifneq (${PROC},ppc64)
- OPTIMIZE+=-march=$(PROC)
-@@ -56,6 +57,7 @@ endif
- endif
- endif
- endif
-+endif
+--- codecs/gsm/Makefile.orig	2005-11-29 19:24:39.000000000 +0100
++++ codecs/gsm/Makefile	2005-12-25 12:55:32.000000000 +0100
+@@ -37,32 +37,6 @@ WAV49	= -DWAV49
+ ######### ppro's, etc, as well as the AMD K6 and K7.  The compile will
+ ######### probably require gcc. 
  
+-ifneq (${OSARCH},Darwin)
+-ifneq (${OSARCH},SunOS)
+-ifneq (${PROC},x86_64)
+-ifneq (${PROC},ultrasparc)
+-ifneq ($(shell uname -m),ppc)
+-ifneq ($(shell uname -m),ppc64)
+-ifneq ($(shell uname -m),alpha)
+-ifneq ($(shell uname -m),armv4l)
+-ifneq (${PROC},sparc64)
+-ifneq (${PROC},arm)
+-ifneq (${PROC},ppc)
+-ifneq (${PROC},ppc64)
+-OPTIMIZE+=-march=$(PROC)
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-endif
+-
  #The problem with sparc is the best stuff is in newer versions of gcc (post 3.0) only.
  #This works for even old (2.96) versions of gcc and provides a small boost either way.
+ #A ultrasparc cpu is really v9 but the stock debian stable 3.0 gcc doesn't support it.
