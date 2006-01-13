@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.9 2006/01/02 22:30:52 jschauma Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.10 2006/01/13 17:21:07 hubertf Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -187,7 +187,13 @@
       which can be used to select or disable options specifically for
       package <replaceable>pkgbase</replaceable>.  Options listed in these
       variables are selected, options preceded by <quote>-</quote> are
-      disabled.</para>
+      disabled. A few examples:</para>
+
+    <screen>
+&uprompt; <command>grep "PKG.*OPTION" /etc/mk.conf</command>
+PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound 
+PKG_OPTIONS.kdebase=    debug -sasl
+PKG_OPTIONS.apache=     suexec </screen>
 
     <para>The following settings are consulted in the order given, and the
       last setting that selects or disables an option is used:</para>
