@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2003/05/29 20:08:42 salo Exp $
+$NetBSD: patch-ad,v 1.3 2006/01/13 18:12:46 wiz Exp $
 
---- tunables.c.orig	2003-05-28 00:30:06.000000000 +0200
-+++ tunables.c	2003-05-29 19:39:20.000000000 +0200
-@@ -76,19 +76,19 @@
+--- tunables.c.orig	2006-01-07 20:32:44.000000000 +0100
++++ tunables.c
+@@ -92,19 +92,19 @@ unsigned int tunable_file_open_mode = 06
  unsigned int tunable_max_per_ip = 0;
  unsigned int tunable_trans_chunk_size = 0;
  
