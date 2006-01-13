@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2004/01/01 04:39:22 salo Exp $
+$NetBSD: patch-ae,v 1.4 2006/01/13 18:12:46 wiz Exp $
 
 --- vsftpd.8.orig	2003-08-29 00:34:54.000000000 +0200
-+++ vsftpd.8	2004-01-01 05:30:02.000000000 +0100
-@@ -21,7 +21,7 @@
++++ vsftpd.8
+@@ -21,7 +21,7 @@ itself will listen on the network. This 
  recommended. It is activated by setting
  .Pa listen=YES
  in
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.3 2004/01/01 04:39:22 salo Exp $
  Direct execution of the
  .Nm vsftpd
  binary will then launch the FTP service ready for immediate client connections.
-@@ -29,6 +29,6 @@
+@@ -29,6 +29,6 @@ binary will then launch the FTP service 
  An optional
  .Op configuration file
  may be given on the command line.  The default configuration file is

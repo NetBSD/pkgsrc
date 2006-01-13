@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 12:14:06 agc Exp $
+$NetBSD: distinfo,v 1.8 2006/01/13 18:12:46 wiz Exp $
 
-SHA1 (vsftpd-1.2.2.tar.gz) = 02ba37eb26021bb5650d78541072b210f8d3937e
-RMD160 (vsftpd-1.2.2.tar.gz) = 7c2a033ccc7f651200abff6f57cb34f8e8ee1ec9
-Size (vsftpd-1.2.2.tar.gz) = 136669 bytes
+SHA1 (vsftpd-2.0.4.tar.gz) = 6ffbcc08a91300664d527b3ac7c515421d5cd764
+RMD160 (vsftpd-2.0.4.tar.gz) = e8f07c125c0c3a8f0d457b47fd0062d6431c480b
+Size (vsftpd-2.0.4.tar.gz) = 154857 bytes
 SHA1 (patch-aa) = 7e42db098d0d2261d5f02b36f7cba4ec6d91c6a0
 SHA1 (patch-ab) = 18431ae27f53270ad4c19b0530e55348397fe143
-SHA1 (patch-ac) = 46ff47e7d8b510ccc89905726e4a63a18d678318
-SHA1 (patch-ad) = d6bec600b2833acdacecd33d7d52b5ac0d918d6c
-SHA1 (patch-ae) = 993ccc36055d3c4b18534a9db2446e317c2614c2
-SHA1 (patch-af) = b9c86b53568a9a4ea1f9f3f63c086e1dc4bc8a2d
-SHA1 (patch-ag) = d780ab4fef3e2997d4e57c4dbb3e64be8d6768df
+SHA1 (patch-ac) = 49269d863fd232d1e78cda039ae1a67368acfe1e
+SHA1 (patch-ad) = dd22f355216685fe0089addc5b1acf3b11490b06
+SHA1 (patch-ae) = 373edb952206871b0b5c3e06fd5b90e25000f284
+SHA1 (patch-af) = 895496296cfa867653f05c6f475fd5d69f21811b
