@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:50 tv Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/13 00:36:29 rillig Exp $
 
 DISTNAME=	rivet_0.4.0-1
 PKGNAME=	ap-rivet-0.4.0.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=tcl/rivet/}
 
@@ -9,19 +10,27 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://tcl.apache.org/rivet/
 COMMENT=	System for creating dynamic web content via Tcl
 
-WRKSRC=		${WRKDIR}/tcl-rivet/src
+WRKSRC=		${WRKDIR}/tcl-rivet
 HAS_CONFIGURE=	yes
+CONFIGURE_DIRS=	src
 
-CONFIGURE_SCRIPT=	./configure.tcl
-CONFIGURE_ARGS+=	-prefix ${PREFIX}/lib				\
-			-with-apxs ${APXS}				\
-			-with-tclconfig ${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ENV+=		LANG=C
+CONFIGURE_SCRIPT=	./configure.tcl
+CONFIGURE_ARGS+=	-prefix ${PREFIX:Q}/lib
+CONFIGURE_ARGS+=	-with-apxs ${APXS:Q}
+CONFIGURE_ARGS+=	-with-tclconfig ${BUILDLINK_PREFIX.tcl:Q}/lib/tclConfig.sh
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../www/apache/buildlink3.mk"
 
+pre-install:
+	set -e;								\
+	cd ${WRKSRC:Q};							\
+	for i in "*" "*/*" "*/*/*"; do					\
+		eval ${RM:Q}" -rf $$i/.OLDEntries $$i/CVS";		\
+	done
+
 do-install:
-	cd ${WRKSRC}; ./make.tcl install
+	cd ${WRKSRC:Q}/src && ./make.tcl install
 
 .include "../../mk/bsd.pkg.mk"
