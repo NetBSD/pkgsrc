@@ -1,0 +1,20 @@
+This is a module to provide equivalent feature as wcwidth(3) and
+wcswidth(3).  This also provides mblen(3) equivalent subroutine.
+
+mbwidth() and mbswidth() are provided subroutines corresponding
+wcwidth(3) and wcswidth(3) in C language.  The prefix "mb" expresses
+that they handles "multibyte character" in C meaning, i.e., character
+encoding specified by LC_CTYPE locale.
+
+These subroutines are used to get the width of characters on terminal.
+Though most characters have width of 1, there are exceptions.
+Fullwidth characters are characters with width of 2.  Most of east
+Asian characters such as Hiragana, Katakana, Hangul, Han Ideogram
+are fullwidth.  Combining characters are characters with width of 0.
+Unicode has many combining characters like diacritical marks.  There
+are languages which need combining characters such as Thai and
+Vietnamese.
+
+Thus, if you would like to format international texts on terminal,
+you will have to be aware of variation of character width and will
+want to use this module.
