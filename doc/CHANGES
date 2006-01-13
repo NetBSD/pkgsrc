@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12482 2006/01/13 00:37:15 rillig Exp $
+$NetBSD: CHANGES,v 1.12483 2006/01/13 02:03:42 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -258,3 +258,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/rxvt-unicode to 6.3 [wiz 2006-01-12]
 	Updated www/zope25-MetaPublisher to 1.2.8nb2 [rillig 2006-01-12]
 	Updated www/ap-rivet to 0.4.0.1nb1 [rillig 2006-01-13]
+	Updated games/xgalaga to 2.0.34nb3 [joerg 2006-01-13]
