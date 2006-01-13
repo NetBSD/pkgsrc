@@ -1,13 +1,22 @@
-$NetBSD: patch-al,v 1.1 2006/01/02 16:02:10 joerg Exp $
+$NetBSD: patch-al,v 1.2 2006/01/13 20:32:38 riz Exp $
 
---- apps/app_sms.c.orig	2006-01-02 15:36:41.000000000 +0000
-+++ apps/app_sms.c
-@@ -208,7 +208,7 @@ static void
- packdate (unsigned char *o, time_t w)
- {
-   struct tm *t = localtime (&w);
--#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined( __NetBSD__ ) || defined(__APPLE__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined( __NetBSD__ ) || defined(__APPLE__) || defined(__DragonFly__)
-   int z = - t->tm_gmtoff / 3600 / 15;
- #else
-   int z = timezone / 3600 / 15;
+--- pbx/pbx_dundi.c.orig	2006-01-13 00:45:18.000000000 +0000
++++ pbx/pbx_dundi.c
+@@ -30,7 +30,7 @@
+ #include <sys/socket.h>
+ #include <string.h>
+ #include <errno.h>
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(SOLARIS) || defined(__Darwin__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(SOLARIS) || defined(__Darwin__) || defined(__DragonFly__)
+ #include <sys/types.h>
+ #include <netinet/in_systm.h>
+ #endif
+@@ -38,7 +38,7 @@
+ #include <sys/ioctl.h>
+ #include <netinet/in.h>
+ #include <net/if.h>
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__Darwin__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__Darwin__) || defined(__DragonFly__)
+ #include <net/if_dl.h>
+ #include <ifaddrs.h>
+ #endif
