@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.33 2006/01/13 00:23:26 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.34 2006/01/13 00:55:07 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -67,3 +67,5 @@ Pullup ticket 1020 - requested by Thomas Klausner
 security update for rxvt-unicode
 Pullup ticket 1021 - requested by Thomas Klausner
 security update for trac
+Pullup ticket 1022 - requested by Thomas Klausner
+security update for ytalk
