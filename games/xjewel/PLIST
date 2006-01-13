@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/26 16:37:12 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/13 00:16:13 joerg Exp $
 bin/xjewel
-${IMAKE_MAN_SOURCE_PATH}6/xjewel.${IMAKE_MANNEWSUFFIX}
+${IMAKE_GAMEMAN_DIR}/xjewel.${IMAKE_GAMEMAN_SUFFIX}
 @exec touch /var/games/xjewel.scores && ${CHOWN} games:games /var/games/xjewel.scores && ${CHMOD} 664 /var/games/xjewel.scores
