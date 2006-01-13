@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12493 2006/01/13 20:04:50 jlam Exp $
+$NetBSD: CHANGES,v 1.12494 2006/01/13 21:23:00 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -274,3 +274,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/fakeroot to 1.5.6 [wiz 2006-01-13]
 	Updated net/ucarp to 1.1 [wiz 2006-01-13]
 	Updated lang/perl5 to 5.8.7nb7 [jlam 2006-01-13]
+	Updated databases/abook to 0.5.5 [tonio 2006-01-13]
