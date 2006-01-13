@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:21 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/01/13 21:43:54 schmonz Exp $
 
-SHA1 (dbmail-2.0.1.tgz) = fbe5e0b2ab13257a78e9226e5e416b7d745d3c2c
-RMD160 (dbmail-2.0.1.tgz) = 8710480ada52d3ae131adb8b2785cd352a55aba2
-Size (dbmail-2.0.1.tgz) = 537346 bytes
+SHA1 (dbmail-2.0.7.tar.gz) = 36736997c259900e060dd48c6972ff2cb1dd6590
+RMD160 (dbmail-2.0.7.tar.gz) = f23d83c5adeb47f84d366ea147a4ce7f654f0508
+Size (dbmail-2.0.7.tar.gz) = 584457 bytes

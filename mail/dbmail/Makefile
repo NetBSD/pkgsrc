@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2006/01/10 12:39:03 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/13 21:43:54 schmonz Exp $
 #
 
-DISTNAME=		dbmail-2.0.1
-PKGREVISION=		2
+DISTNAME=		dbmail-2.0.7
 CATEGORIES=		mail
-MASTER_SITES=		http://www.dbmail.org/download/
-EXTRACT_SUFX=		.tgz
+MASTER_SITES=		http://www.dbmail.org/download/2.0/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.dbmail.org/
 COMMENT=		Store and retrieve mail messages in a database
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-${SQLDB}
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -31,6 +30,7 @@ SUBST_SED.sysconf=	-e 's|/etc/dbmail\.conf|${PKG_SYSCONFDIR}/dbmail.conf|g'
 SUBST_MESSAGE.sysconf=	"Fixing sysconf paths."
 
 INSTALLATION_DIRS=	lib man man/man1 man/man8 sbin share/examples/dbmail
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dbmail.conf ${EGDIR}
 
