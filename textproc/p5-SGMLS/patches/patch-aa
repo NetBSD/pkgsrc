@@ -1,0 +1,50 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/13 18:15:09 wiz Exp $
+
+--- Makefile.orig	1995-12-05 12:26:11.000000000 +0000
++++ Makefile
+@@ -13,13 +13,13 @@ DIST = SGMLSpm-1.03ii.tar.gz
+ #
+ 
+ # Where is the binary for perl5 located on your system?
+-PERL = /usr/bin/perl
++PERL = ${PERL5}
+ 
+ # Where do you want the sgmlspl executable script to be installed?
+-BINDIR = /usr/local/bin
++BINDIR = ${PREFIX}/bin
+ 
+ # Where do you put local perl5 libaries?
+-PERL5DIR = /usr/local/lib/perl5
++PERL5DIR = ${PREFIX}/${PERL5_SUB_INSTALLVENDORLIB}
+ MODULEDIR = ${PERL5DIR}/SGMLS
+ 
+ # Where do you want to put sgmlspl specifications?
+@@ -29,7 +29,7 @@ SPECDIR = ${PERL5DIR}
+ # do you intend to put it?  'make html' will create two
+ # subdirectories, ${HTMLDIR}/SGMLSpm and ${HTMLDIR}/sgmlspl, and place
+ # its files there.
+-HTMLDIR = /usr/local/lib/www/docs
++HTMLDIR = ${PREFIX}/share/doc/p5-SGMLS
+ 
+ 
+ #
+@@ -44,7 +44,7 @@ FILES =	${BINDIR}/sgmlspl \
+ 	${MODULEDIR}/Refs.pm \
+ 	${SPECDIR}/skel.pl
+ 
+-all: install docs
++all: docs
+ 
+ install: install_system # install_html
+ 
+@@ -80,6 +80,10 @@ ${SPECDIR}/skel.pl: skel.pl
+ 
+ install_html: ${HTML_SOURCES}
+ 	cd DOC; make html
++	if [ ! -d ${HTMLDIR} ]; then\
++	  mkdir ${HTMLDIR}; \
++	  chmod a+x ${HTMLDIR}; \
++	fi
+ 	rm -rf ${HTMLDIR}/SGMLSpm ${HTMLDIR}/sgmlspl
+ 	cp -r ${HTML_SOURCES} ${HTMLDIR}
+ 	chmod a+x,a+r ${HTMLDIR}/SGMLSpm ${HTMLDIR}/sgmlspl
