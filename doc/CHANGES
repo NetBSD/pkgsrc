@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12484 2006/01/13 09:12:17 tonio Exp $
+$NetBSD: CHANGES,v 1.12485 2006/01/13 09:29:04 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -260,3 +260,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/ap-rivet to 0.4.0.1nb1 [rillig 2006-01-13]
 	Updated games/xgalaga to 2.0.34nb3 [joerg 2006-01-13]
 	Updated converters/bibtex2html to 1.78 [tonio 2006-01-13]
+	Updated textproc/hevea to 1.08nb1 [tonio 2006-01-13]
