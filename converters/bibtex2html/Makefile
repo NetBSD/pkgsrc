@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/13 09:10:41 tonio Exp $
 
-DISTNAME=	bibtex2html-1.76
+DISTNAME=	bibtex2html-1.78
 CATEGORIES=	converters
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 
@@ -15,7 +15,7 @@ USE_TOOLS+=	perl:run
 TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	aux2bib.1
 SUBST_SED.paths=	-e 's,/usr/share,${PREFIX}/share,g'
