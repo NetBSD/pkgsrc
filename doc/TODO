@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4415 2006/01/13 10:12:09 schmonz Exp $
+$NetBSD: TODO,v 1.4416 2006/01/13 10:28:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -557,7 +557,6 @@ Suggested package updates
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
 	o gift-openft-0.2.1.4
-	o gimp24-2.3.5
 	o git-4.3.20
 	o gkrellm-multiping-2.0.10
 	o gkrellm-weather-2.0.7
