@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4417 2006/01/13 13:04:55 tonio Exp $
+$NetBSD: TODO,v 1.4418 2006/01/13 17:40:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -535,6 +535,7 @@ Suggested package updates
 	o fox-1.4.27
 	o fprot-workstation-bin-4.6.5
 	o freeglut-2.4.0
+	o freeradius-1.1.0
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
@@ -773,7 +774,7 @@ Suggested package updates
 	o msmtp-1.4.5
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.8.3
+	o multitail-3.8.4
 	o muse-0.9.1
 	o mysql4-client-4.1.6
 	o mysql4-server-4.1.6
@@ -967,6 +968,7 @@ Suggested package updates
 	o pgpool-2.6.3
 	o phoon-20050629
 	o photopc-3.05
+	o php-5.1.2
 	o phpldapadmin-0.9.7
 	o phpmyadmin-2.7.0pl2
 	o phppgadmin-4.0.1
@@ -1077,6 +1079,7 @@ Suggested package updates
 	o ripmime-1.4.0.6
 	o rman-3.2
 	o robodoc-4.99.6
+	o rocksndiamonds-3.1.2
 	o root-5.04.00
 	o root-tail-1.2
 	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
