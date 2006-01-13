@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/13 18:45:06 cube Exp $
 
 DISTNAME=		rt-3.2.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -63,7 +63,6 @@ DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
 
 # Back-end dependencies
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	mysql-client>=4.0.9:../../databases/mysql4-client
 DEPENDS+=	p5-DBD-mysql>=2.1018:../../databases/p5-DBD-mysql
 _RT_DB_TYPE=		mysql
 .elif !empty(PKG_OPTIONS:Mpgsql)
