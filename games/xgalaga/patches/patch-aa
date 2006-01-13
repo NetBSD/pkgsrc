@@ -1,8 +1,14 @@
-$NetBSD: patch-aa,v 1.5 2005/06/14 17:56:41 minskim Exp $
+$NetBSD: patch-aa,v 1.6 2006/01/13 02:02:50 joerg Exp $
 
---- Makefile.in.orig	1998-05-11 01:52:59.000000000 -0500
+--- Makefile.in.orig	1998-05-11 06:52:59.000000000 +0000
 +++ Makefile.in
-@@ -25,7 +25,7 @@ SOUNDDEFS = -DSOUNDSERVER=\"@prefix@/@SO
+@@ -20,12 +20,12 @@ SOUNDSRV = @SOUNDSERVER@
+ SOUNDOBJS = @SOUNDSERVER@.o
+ SOUNDSRCS = @SOUNDSERVER@.c
+ 
+-SOUNDDEFS = -DSOUNDSERVER=\"@prefix@/@SOUNDSERVER@\"
++SOUNDDEFS = -DSOUNDSERVER=\"${PREFIX}/libexec/xgalaga.sndsrv\"
+ 
  RM = rm -f
  CC = @CC@
  CFLAGS = -I. @CFLAGS@ @DEFS@ @X_CFLAGS@ -DXGALAGADIR=\"@prefix@/\" $(SOUNDDEFS)
@@ -11,7 +17,7 @@ $NetBSD: patch-aa,v 1.5 2005/06/14 17:56:41 minskim Exp $
  LIBS = @LIBS@ libsprite/libsprite.a @X_LIBS@
  INSTALL = @INSTALL@
  
-@@ -40,7 +40,7 @@ SUBDIRS = libsprite
+@@ -40,19 +40,22 @@ SUBDIRS = libsprite
  all: $(TARGET) $(SOUNDSRV)
  
  $(SOUNDSRV): $(SOUNDOBJS)
@@ -20,7 +26,12 @@ $NetBSD: patch-aa,v 1.5 2005/06/14 17:56:41 minskim Exp $
  
  install: all
  	./mkinstalldirs $(bindir)
-@@ -52,7 +52,10 @@ install: all
+ 	./mkinstalldirs $(prefix)
+ 	$(INSTALL) $(TARGET) $(bindir)/$(TARGET)
+-	$(INSTALL) $(SOUNDSRV) $(prefix)/$(SOUNDSRV)
++	$(INSTALL) $(SOUNDSRV) ${PREFIX}/libexec/xgalaga.sndsrv
+ 	./mkinstalldirs $(prefix)/sounds
+ 	./mkinstalldirs $(prefix)/levels
  	for i in levels/*.xgl; do $(INSTALL) $$i $(prefix)/$$i ; done
  	for i in sounds/*.raw; do $(INSTALL) $$i $(prefix)/$$i ; done
  	touch $(prefix)/scores
