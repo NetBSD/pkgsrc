@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.470 2006/01/12 22:28:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.471 2006/01/13 00:42:08 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2722,9 +2722,9 @@ sub checkline_mk_vartype($$$$$) {
 		if (!defined($type)) {
 			# Guess the datatype of the variable based on
 			# naming conventions.
-			$type =	  ($varname =~ qr"DIRS$") ? "List of Pathname"
+			$type =	  ($varname =~ qr"DIRS$") ? "List of Pathmask"
 				: ($varname =~ qr"DIR$") ? "Pathname"
-				: ($varname =~ qr"FILES$") ? "List of Pathname"
+				: ($varname =~ qr"FILES$") ? "List of Pathmask"
 				: ($varname =~ qr"FILE$") ? "Pathname"
 				: ($varname =~ qr"_USER$") ? "UserGroupName"
 				: ($varname =~ qr"_GROUP$") ? "UserGroupName"
