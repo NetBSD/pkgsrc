@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:18 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/13 02:02:50 joerg Exp $
 
 DISTNAME=		xgalaga-2.0.34
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
