@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2005/12/05 23:55:02 rillig Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2006/01/13 15:22:02 salo Exp $
 #
 
-DISTNAME=		bitlbee-0.99
+DISTNAME=		bitlbee-1.0
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--etcdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
 CONFIGURE_ARGS+=	--config=${STATEDIR:Q}
-CONFIGURE_ARGS+=	--flood=1
+CONFIGURE_ARGS+=	--flood=0
 CONFIGURE_ARGS+=	--ssl=openssl
 
 PKG_SYSCONFSUBDIR=	bitlbee
@@ -34,7 +34,7 @@ OWN_DIRS_PERMS=		${STATEDIR} bitlbee nobody 700
 
 PKG_USERS=		bitlbee:nobody::Bitlbee\ user:${VARBASE}/db/bitlbee
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	man/man5 man/man8 sbin
 
 do-install:
 	${INSTALL_DATA_DIR} ${DATADIR}
@@ -45,7 +45,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/user-guide/help.txt ${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/motd.txt ${DATADIR}
 	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.8 ${PREFIX}/man/man8
-.for f in AUTHORS FAQ README TODO
+	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.conf.5 ${PREFIX}/man/man5
+.for f in AUTHORS FAQ README CREDITS user-guide/user-guide.txt user-guide/user-guide.html
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCDIR}
 .endfor
 
