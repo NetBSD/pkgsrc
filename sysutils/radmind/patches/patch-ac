@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.3 2006/01/13 19:16:06 joerg Exp $
+
+--- libsnet/snet.c.orig	2006-01-13 19:00:00.000000000 +0000
++++ libsnet/snet.c
+@@ -430,7 +430,6 @@ snet_readread( sn, buf, len, tv )
+ #endif /* linux */
+     fd_set		fds;
+     ssize_t		rc;
+-    extern int		errno;
+ 
+     if ( tv ) {
+ 	FD_ZERO( &fds );
+@@ -557,7 +556,6 @@ snet_getline( sn, tv )
+ {
+     char		*eol, *line;
+     ssize_t		rc;
+-    extern int		errno;
+ 
+     for ( eol = sn->sn_rcur; ; eol++ ) {
+ 	if ( eol >= sn->sn_rend ) {				/* fill */
