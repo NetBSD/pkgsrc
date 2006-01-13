@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/13 21:23:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/13 23:34:53 schmonz Exp $
 #
 
 DISTNAME=		solfege-3.0.5
@@ -22,10 +22,11 @@ USE_MAKEINFO=		yes
 PYTHON_VERSIONS_ACCEPTED=	24 23
 PYTHON_PATCH_SCRIPTS=	*.py *.py.in */*.py */*.py.in
 
-CONF_FILES=		${PREFIX}/share/examples/solfege/system.rc
-CONF_FILES+=		${PKG_SYSCONFDIR}/solfege
+EGDIR=			${PREFIX}/share/examples/solfege
+CONF_FILES=		${EGDIR}/${PKGBASE}/solfege ${PKG_SYSCONFDIR}/solfege
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
-INSTALLATION_DIRS=	share/examples/solfege
+INSTALLATION_DIRS=	${EGDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
